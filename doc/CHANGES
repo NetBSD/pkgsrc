@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8643 2005/01/07 09:02:16 peter Exp $
+$NetBSD: CHANGES,v 1.8644 2005/01/07 09:38:21 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -162,3 +162,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated vim-xaw to 6.3.045 [adrianp 2005-01-06]
 	Updated ggv2 to 2.8.2 [jmmv 2005-01-06]
 	Updated openntpd to 3.6.1p1 [peter 2005-01-07]
+	Updated curl to 7.12.3nb1 [cube 2005-01-07]
