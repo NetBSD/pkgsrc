@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2484 2003/06/10 20:23:22 seb Exp $
+$NetBSD: CHANGES,v 1.2485 2003/06/10 20:48:56 jdc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2432,3 +2432,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mergeant to 0.12.1 [jmmv 2003-06-10]
 	Updated cvsync to 0.23.1 [gehenna 2003-06-10]
 	Updated pkg_install-info to 4.5nb2 [seb 2003-06-10]
+	Updated xmcd to 3.0.2nb2 [jdc 2003-06-10]
