@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2001/09/27 23:18:51 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2001/10/17 19:17:11 jlam Exp $
 
-DISTNAME=		mod_ssl-2.8.4-1.3.20
-PKGNAME=		ap-ssl-2.8.4
+DISTNAME=		mod_ssl-2.8.5-1.3.22
+PKGNAME=		ap-ssl-2.8.5
 CATEGORIES=		www security
 MASTER_SITES=		http://www.modssl.org/source/
 
@@ -9,19 +9,20 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.modssl.org/
 COMMENT=		SSL/TLS protocols module for Apache
 
-DEPENDS+=		apache>=1.3.20:../../www/apache
+DEPENDS+=		apache>=1.3.22:../../www/apache
 # For "apxs":
 BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 
 CONFLICTS=		apache-1.3.[0-9] apache-*modssl-[0-9]* apache6-[0-9]*
 
-HAS_CONFIGURE=		# defined
-USE_SSL=		# defined
+HAS_CONFIGURE=		YES
+USE_BUILDLINK_ONLY=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
+MAKE_ENV+=		SSL_RPATH_LDFLAGS="-R${SSLBASE}/lib"
 
 APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
 BUILD_DEFS+=		APACHE_SYSCONFDIR
@@ -97,4 +98,5 @@ post-install:
 
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
