@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.14 2004/01/04 01:49:38 hubertf Exp $	*/
+/*	$NetBSD: perform.c,v 1.15 2004/01/14 23:55:29 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.14 2004/01/04 01:49:38 hubertf Exp $");
+__RCSID("$NetBSD: perform.c,v 1.15 2004/01/14 23:55:29 jlam Exp $");
 #endif
 #endif
 
@@ -288,23 +288,23 @@ pkg_do(const char *pkg)
 		goto bomb;
 	}
 
-	if (uname(&host_uname) == 0) {
+	if (uname(&host_uname) < 0) {
+		warnx("uname() failed.");
+		if (!Force) {
+			warnx("aborting.");
+			goto bomb;
+		}
+	} else {
 		int	osbad = 0;
 
-		/* handle Darwin's uname(3) on powerpc writing
-		 * "Power Macintosh" in struct uname.machine.
-		 */
-		if (strcmp(host_uname.machine, "Power Macintosh") == 0)
-			strcpy(host_uname.machine, "powerpc"); /* it fits */
-
 		/* If either the OS or arch are different, bomb */
-		if (strcmp(host_uname.sysname, buildinfo[BI_OPSYS]) != 0 ||
-		strcmp(host_uname.machine, buildinfo[BI_MACHINE_ARCH]) != 0)
+		if (strcmp(OPSYS_NAME, buildinfo[BI_OPSYS]) != 0 ||
+		strcmp(MACHINE_ARCH, buildinfo[BI_MACHINE_ARCH]) != 0)
 			osbad = 2;
 
 		/* If OS and arch are the same, warn if version differs */
-		if (strcmp(host_uname.sysname, buildinfo[BI_OPSYS]) == 0 &&
-		    strcmp(host_uname.machine, buildinfo[BI_MACHINE_ARCH]) == 0) {
+		if (strcmp(OPSYS_NAME, buildinfo[BI_OPSYS]) == 0 &&
+		    strcmp(MACHINE_ARCH, buildinfo[BI_MACHINE_ARCH]) == 0) {
 			if (strcmp(host_uname.release, buildinfo[BI_OS_VERSION]) != 0)
 				osbad = 1;
 		} else
@@ -316,19 +316,13 @@ pkg_do(const char *pkg)
 			    buildinfo[BI_OPSYS],
 			    buildinfo[BI_MACHINE_ARCH],
 			    buildinfo[BI_OS_VERSION],
-			    host_uname.sysname,
-			    host_uname.machine,
+			    OPSYS_NAME,
+			    MACHINE_ARCH,
 			    host_uname.release);
 		}
 		if (!Force && (osbad >= 2)) {
 			    warnx("aborting.");
 			    goto bomb;
-		}
-	} else {
-		warnx("uname() failed.");
-		if (!Force) {
-			warnx("aborting.");
-			goto bomb;
 		}
 	}
 
@@ -516,7 +510,7 @@ ignore_replace_depends_check:
 							installed);
 					}
 					fexec(BINDIR "/pkg_delete", "-K", dbdir, installed, NULL);
-				} else {
+				} else if (!is_depoted_pkg) {
 					warnx("other version '%s' already installed", installed);
 
 					errc = 1;

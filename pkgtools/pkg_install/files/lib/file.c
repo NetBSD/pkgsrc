@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.11 2003/12/20 04:23:05 grant Exp $	*/
+/*	$NetBSD: file.c,v 1.12 2004/01/14 23:55:29 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: file.c,v 1.29 1997/10/08 07:47:54 charnier Exp";
 #else
-__RCSID("$NetBSD: file.c,v 1.11 2003/12/20 04:23:05 grant Exp $");
+__RCSID("$NetBSD: file.c,v 1.12 2004/01/14 23:55:29 jlam Exp $");
 #endif
 #endif
 
@@ -584,7 +584,7 @@ unpack(const char *pkg, const char *flist)
 {
 	char args[10] = "-";
 	char cmd[FILENAME_MAX];
-	const char *decompress_cmd;
+	const char *decompress_cmd = NULL;
 	const char *suf;
 
 	if (!IS_STDIN(pkg)) {
