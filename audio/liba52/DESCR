@@ -1,0 +1,4 @@
+liba52 is a free library for decoding ATSC A/52 streams. It is
+released under the terms of the GPL license.
+The A/52 standard is used in a variety of applications, including
+digital television and DVD. It is also known as AC-three.

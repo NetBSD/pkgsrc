@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/12/10 19:49:46 veego Exp $
+
+--- Makefile.in-orig	Fri Aug 31 11:40:06 2001
++++ Makefile.in	Thu Oct 11 00:15:42 2001
+@@ -72,7 +72,7 @@
+ RANLIB = @RANLIB@
+ VERSION = @VERSION@
+ 
+-SUBDIRS = autotools include doc liba52 libao src test
++SUBDIRS = autotools include liba52
+ 
+ EXTRA_DIST = bootstrap
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4

@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/10 19:49:46 veego Exp $
+include/a52dec/a52.h
+include/a52dec/audio_out.h
+include/a52dec/mm_accel.h
+lib/liba52.a
+lib/liba52.la
+lib/liba52.so
+lib/liba52.so.0
+lib/liba52.so.0.0
+@dirrm include/a52dec

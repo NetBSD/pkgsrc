@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/12/10 19:49:46 veego Exp $
+
+--- configure-orig	Fri Aug 31 11:39:53 2001
++++ configure	Thu Oct 11 00:13:56 2001
+@@ -2857,7 +2857,7 @@
+ ac_given_srcdir=$srcdir
+ ac_given_INSTALL="$INSTALL"
+ 
+-trap 'rm -fr `echo "Makefile autotools/Makefile include/Makefile test/Makefile doc/Makefile src/Makefile liba52/Makefile libao/Makefile include/config.h" | sed "s/:[^ ]*//g"` conftest*; exit 1' 1 2 15
++trap 'rm -fr `echo "Makefile autotools/Makefile include/Makefile liba52/Makefile include/config.h" | sed "s/:[^ ]*//g"` conftest*; exit 1' 1 2 15
+ EOF
+ cat >> $CONFIG_STATUS <<EOF
+ 
+@@ -2967,7 +2967,7 @@
+ 
+ cat >> $CONFIG_STATUS <<EOF
+ 
+-CONFIG_FILES=\${CONFIG_FILES-"Makefile autotools/Makefile include/Makefile test/Makefile doc/Makefile src/Makefile liba52/Makefile libao/Makefile"}
++CONFIG_FILES=\${CONFIG_FILES-"Makefile autotools/Makefile include/Makefile liba52/Makefile"}
+ EOF
+ cat >> $CONFIG_STATUS <<\EOF
+ for ac_file in .. $CONFIG_FILES; do if test "x$ac_file" != x..; then
