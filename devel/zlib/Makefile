@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/01/21 20:42:17 tron Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/03 06:42:17 hubertf Exp $
 
 DISTNAME=	zlib-1.1.3
 CATEGORIES=	devel
@@ -9,9 +9,23 @@ HOMEPAGE=	ftp://ftp.freesoftware.com/pub/infozip/zlib/index.html
 
 ONLY_FOR_PLATFORM=	SunOS-*-* # in base NetBSD system
 
-MAKEFILE=	bsd.mk
-MAKE_ENV+=	NOLINT=yes
+.include "../../mk/bsd.prefs.mk"
+.if exists(${LOCALBASE}/bin/libtool)
+USE_LIBTOOL=	yes
+MAKEFILE=	lt.mk
+PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
-INSTALL_TARGET=	install includes
+post-extract:
+	${CP} ${FILESDIR}/lt.mk ${WRKSRC}
+	${SED} \
+		-e '/libz_pic.a/d' \
+		-e '/libz_p.a/d' \
+		<${PKGDIR}/PLIST >${PLIST_SRC}
+
+.else
+MAKEFILE=	bsd.mk
+.endif
+
+MAKE_ENV+=	NOLINT=yes
 
 .include "../../mk/bsd.pkg.mk"
