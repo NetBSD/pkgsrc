@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:18:16 agc Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/08 19:52:51 minskim Exp $
 #
 
 DISTNAME=	imp1.1b9
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.ntlug.org/~ccox/impress/
 COMMENT=	WYSIWYG vector graphics application
 
 DEPENDS+=	pstoedit>=3.19:../../graphics/pstoedit
-DEPENDS+=	tcl>=8.3.2nb2:../../lang/tcl
+DEPENDS+=	tcl>=8.3.2nb2:../../lang/tcl83
 DEPENDS+=	tk>=8.3.2nb1:../../x11/tk
 
 WRKSRC=		${WRKDIR}/impress-1.1b9

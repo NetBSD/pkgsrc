@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/10/25 09:13:49 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/03/08 19:52:51 minskim Exp $
 #
 
 .if !defined(TCL_ITCL_BUILDLINK2_MK)
@@ -339,7 +339,7 @@ BUILDLINK_FILES.tcl-itcl+=	lib/tcl/iwidgets3.0.1/scripts/toolbar.itk
 BUILDLINK_FILES.tcl-itcl+=	lib/tcl/iwidgets3.0.1/scripts/unknownimage.gif
 BUILDLINK_FILES.tcl-itcl+=	lib/tcl/iwidgets3.0.1/scripts/watch.itk
 
-.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl83/buildlink2.mk"
 .include "../../x11/tk/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	tcl-itcl-buildlink
