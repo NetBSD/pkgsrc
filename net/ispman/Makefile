@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/03/26 02:27:48 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/05 13:47:02 wiz Exp $
 #
 
 DISTNAME=	ispman-0.5
@@ -12,7 +12,7 @@ COMMENT=	ISP management software written in perl
 
 DEPENDS+=	pam-ldap>=77:../../security/pam-ldap
 DEPENDS+=	apache>=1.3.14nb1:../../www/apache
-DEPENDS+=	p5-${DISTNAME}:../../net/p5-ispman
+DEPENDS+=	p5-ispman>=0.5:../../net/p5-ispman
 
 .if !exists(/usr/sbin/postfix)
 DEPENDS+=	{postfix>=20010228,postfix-1.*,postfix-2.*}:../../mail/postfix
