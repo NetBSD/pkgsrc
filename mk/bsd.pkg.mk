@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.930 2002/02/25 05:07:45 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.931 2002/02/25 12:06:48 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1211,6 +1211,7 @@ _FETCH_FILE=								\
 		fi; 							\
 		for site in $$sites; do					\
 			${ECHO_MSG} "=> Attempting to fetch $$bfile from $${site}."; \
+			${AWK} 'NF == 5 && $$1 == "Size" && $$2 == "('$$bfile')" { printf("=> [%s %s]\n", $$4, $$5) }' ${DISTINFO_FILE}; \
 			if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
 				if [ -n "${FAILOVER_FETCH}" -a -f ${DISTINFO_FILE} -a -f ${_DISTDIR}/$$bfile ]; then \
 					alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DISTINFO_FILE}`; \
