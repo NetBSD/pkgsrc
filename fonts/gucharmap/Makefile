@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2004/10/28 19:15:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2005/03/22 16:18:59 jmmv Exp $
 #
 
-DISTNAME=	gucharmap-1.4.2
+DISTNAME=	gucharmap-1.4.3
 CATEGORIES=	fonts gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gucharmap/1.4/}
 EXTRACT_SUFX=	.tar.bz2
@@ -25,6 +25,7 @@ PKGCONFIG_OVERRIDE+=    gucharmap.pc.in
 GTK2_IMMODULES=		yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
