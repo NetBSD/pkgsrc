@@ -1,24 +1,66 @@
-$NetBSD: README,v 1.2 1998/01/13 13:13:59 agc Exp $
+$NetBSD: README,v 1.3 1998/04/24 13:55:58 agc Exp $
 
-Welcome to the NetBSD Packages System
-=====================================
+Welcome to the NetBSD Packages Collection
+=========================================
 
-Below this directory, you will find packages to build (compiled) programs
-from sources. To do so, cd into one of the sub-directories, and enter:
+In brief, the NetBSD Packages Collection is a set of software
+utilities and libraries which have been ported to NetBSD.
 
-	make
-	make install
+The packages collection software can retrieve the software from its
+home site, assuming you are connected in some way to the Internet,
+verify its integrity, apply any patches, configure the software for
+NetBSD, and build it.  Any prerequisite software will also be built
+and installed for you.  Installation and de-installation of software
+is managed by the packaging utilities.
 
-To make a precompiled binary package that can be installed on another
-system, enter
+The packages collection is made weekly into a tar_file: 
 
-	make package
+	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-current/tar_files/pkgsrc.tar.gz
 
-after that. The precompiled package will be placed in the "packages" 
-subdirectory. A collection of precompiled binary packages can be found
-on ftp.netbsd.org in /pub/NetBSD/packages. To install a precompiled 
-binary package, hand its filename or an ftp://-URL pointing to it to
-pkg_add(1).
+and you can sup the pkgsrc tree using the `pkgsrc' name for the
+collection.
 
-See http://www.netbsd.org/Documentation/netbsd/Packages.txt for more
-information on the packages system.
+The pkgsrc tree is laid out in various categories, and, within that,
+the various packages themselves.
+
+You need to have root privileges to install packages.  We are looking
+at ways to remove this restriction.
+
++ To install a package on your system, you need to change into the
+directory of the package, and type "make && make install".
+
++ If you've made a mistake, and decided that you don't want that
+package on your system, then type "pkg_delete <pkg-name>", or "make
+deinstall".
+
++ To find out all the packages that you have installed on your system,
+type "pkg_info".
+
++ To remove the work directory, type "make clean", and "make
+clean-depends" will clean up any working directories for other
+packages that are built in the process of making your package.
+
+The best way to find out what packages are in the collection is to
+move to the top-level pkgsrc directory (this will usually be
+/usr/pkgsrc), and type "make readme".  This will create a file called
+README.html in the top-level pkgsrc directory, and also in all
+category and package directories.  You can then see what packages are
+available, along with a short (one-line) comment about the function of
+the package, and a pointer to a fuller description, by using a browser
+like lynx (see pkgsrc/www/lynx) or something like Mozilla
+(pkgsrc/www/mozilla), or Communicator.
+
+It is also possible to use the packaging software to install
+pre-compiled binary packages by typing "pkg_add <URL-of-binary-pkg>". 
+To see what binary packages are available, see:
+
+	ftp://ftp.netbsd.org/pub/NetBSD/packages/<release>/<arch>/All/
+
+where <release> is the NetBSD release, and <arch> is the hardware
+architecture.
+
+See:
+
+	http://www.netbsd.org/Documentation/netbsd/Packages.txt
+
+for more information on the packages collection.
