@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6027 2004/05/26 09:42:53 dillo Exp $
+$NetBSD: CHANGES,v 1.6028 2004/05/26 12:01:21 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2651,3 +2651,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dillo to 0.8.1 [adam 2004-05-26]
 	Updated xmame to 0.82.1nb1 [dillo 2004-05-26]
 	Updated xmess to 0.82.1nb1 [dillo 2004-05-26]
+	Updated py-twisted to 1.3.0 [recht 2004-05-26]
