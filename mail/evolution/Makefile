@@ -1,13 +1,21 @@
-# $NetBSD: Makefile,v 1.33 2003/03/13 02:37:58 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.34 2003/03/22 04:35:09 rh Exp $
 
-DISTNAME=		evolution-1.2.1
-PKGREVISION=		1
+DISTNAME=		evolution-1.2.3
 CATEGORIES=		mail time gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/1.2/}
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		ftp://ftp.ximian.com/pub/ximian-evolution/source/ \
+			ftp://ximian.netnitco.net/pub/mirrors/ximian/ximian-evolution/source/ \
+			http://public.planetmirror.com/pub/ximian/ximian-evolution/source/ \
+			ftp://mirror.pa.msu.edu/ximian/ximian-evolution/source/ \
+			ftp://titan.pcis.net/mirrors/ximian/ximian-evolution/source/ \
+			ftp://www.linux.org.ar/pub/ximian/ximian-evolution/source/ \
+			ftp://www.mirror.ac.uk/sites/ftp.ximian.com/pub/ximian-evolution/source/ \
+			ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.ximian.com/ximian-evolution/source/ \
+			ftp://ftp.tux.is/ximian/ximian-evolution/source/ \
+			ftp://sunsite.cnlab-switch.ch/mirror/ximian/ximian-evolution/source/ \
+			${MASTER_SITE_GNOME:=sources/evolution/1.2/}
 
 MAINTAINER=		rh@netbsd.org
-HOMEPAGE=		http://www.ximian.com/products/ximian_evolution/
+HOMEPAGE=		http://ximian.com/products/evolution/
 COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
