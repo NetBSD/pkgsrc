@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/10/01 09:06:03 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/10/01 16:23:44 abs Exp $
 #
 
 DISTNAME=	Apache-ASP-2.21
@@ -13,7 +13,7 @@ COMMENT=	perl5/Apache module of Perl-coded Active Server Pages
 DEPENDS+=	ap-perl>=1.25:../../www/ap-perl
 DEPENDS+=	p5-Apache-Filter>=1.019:../../www/p5-Apache-Filter
 DEPENDS+=	p5-Apache-SSI>=2.16:../../www/p5-Apache-SSI
-DEPENDS+=	p5-Compress-Zlib>=1.14:../../archivers/p5-Compress-Zlib
+DEPENDS+=	p5-Compress-Zlib>=1.14:../../devel/p5-Compress-Zlib
 DEPENDS+=	p5-Devel-Symdump>=2.00:../../devel/p5-Devel-Symdump
 DEPENDS+=	p5-HTML-Clean>=0.8:../../www/p5-HTML-Clean
 DEPENDS+=	p5-HTML-FillInForm>=0.8:../../www/p5-HTML-FillInForm
