@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.25 2000/01/08 19:11:26 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.26 2000/02/05 17:19:06 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -945,7 +945,7 @@ EOF
 			"discouraged. distribution filename should be set by ".
 			"DISTNAME and EXTRACT_SUFX.");
 		if ($distfiles eq $distname . $extractsufx) {
-			&perror("WARN: definition of DISTFILES not necessery. ".
+			&perror("WARN: definition of DISTFILES not necessary. ".
 				"DISTFILES is \${DISTNAME}/\${EXTRACT_SUFX} ".
 				"by default.");
 		}
@@ -1195,7 +1195,7 @@ EOF
 		print "OK: seen NO_WRKSUBDIR, checking value of WRKSRC.\n"
 			if ($verbose);
 		if ($wrksrc eq 'work' || $wrksrc =~ /^$[\{\(]WRKDIR[\}\)]/) {
-			&perror("WARN: definition of WRKSRC not necessery. ".
+			&perror("WARN: definition of WRKSRC not necessary. ".
 				"WRKSRC is \${WRKDIR} by default.");
 		}
 	}
@@ -1241,7 +1241,7 @@ EOF
 							"$i should be listed in ".
 							"MAN\U$i\E, ".
 							"even if compression is ".
-							"not necessery.");
+							"not necessary.");
 					}
 				}
 				if ($mancompress && $plistman{$i}) {
