@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.netbsd,v 1.1 2002/09/24 18:06:25 tsarna Exp $
+lib/python2.2/lib-dynload/bsddb.so
