@@ -1,0 +1,5 @@
+This program has been written in frustration because some constructs in LaTeX
+are sometimes non-intuitive, and easy to forget. It is _not_ a replacement
+for the built-in checker in LaTeX; however it catches some typographic errors
+LaTeX oversees. In other words, it is Lint for LaTeX. Filters are also 
+provided for checking the LaTeX parts of CWEB documents.

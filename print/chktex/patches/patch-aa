@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/06 14:37:38 wiz Exp $
+
+--- Makefile.in.orig	2003-04-01 18:13:16.000000000 +0200
++++ Makefile.in	2003-04-01 18:13:50.000000000 +0200
+@@ -192,8 +192,9 @@
+ 
+ install: chktex ChkTeX.dvi
+ 	$(INSTALL) -d $(bindir)
+-	for program in chktex $(SCRIPTS); do \
+-		$(INSTALL_PROGRAM) $$program  $(bindir); \
++	$(INSTALL_PROGRAM) chktex  $(bindir);
++	for program in $(SCRIPTS); do \
++		$(INSTALL_SCRIPT) $$program  $(bindir); \
+ 	done
+ 	$(INSTALL) -d $(datadir)
+ 	$(INSTALL_DATA) chktexrc $(datadir)
