@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2004/09/15 16:33:38 agc Exp $
+$NetBSD: patch-af,v 1.2 2004/09/18 15:45:13 wiz Exp $
 
 --- filesys.c	2004/09/15 16:24:57	1.1
 +++ filesys.c	2004/09/15 16:24:21
@@ -6,7 +6,7 @@ $NetBSD: patch-af,v 1.1 2004/09/15 16:33:38 agc Exp $
  
  #if defined(__linux__) || defined(__NetBSD__)
  
-+#if defined(__NetBSD__) && (__NetBSD_Version__ < 200040000)
++#if defined(__NetBSD__) && (__NetBSD_Version__ >= 200040000)
 +#include <sys/statvfs.h>
 +#endif
 +
