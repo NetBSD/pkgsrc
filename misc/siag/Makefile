@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/09/03 22:40:37 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2003/01/07 03:56:28 uebayasi Exp $
 #
 
 DISTNAME=       siag-3.1.20
@@ -25,7 +25,7 @@ _STRIPFLAG_INSTALL=
 XAW_TYPE?=	3d
 
 .include "../../devel/ncurses/buildlink2.mk"
-.include "../../lang/guile/buildlink2.mk"
+.include "../../lang/guile14/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/xaw.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

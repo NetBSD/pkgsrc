@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/09/24 09:53:18 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/07 03:56:20 uebayasi Exp $
 
 DISTNAME=	g-wrap-1.2.1
 CATEGORIES=	devel
@@ -19,5 +19,5 @@ CONFIGURE_ENV+=		ac_cv_path_RSCHEME="nope"
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.include "../../lang/guile/buildlink2.mk"
+.include "../../lang/guile14/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
