@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/23 22:11:24 zuntum Exp $
+
+--- Makefile.orig	Sun Mar  4 18:16:16 2001
++++ Makefile
+@@ -2,8 +2,6 @@
+ # przez mkmake - (c) Mikolaj Rydzewski, <miki@ceti.pl>
+ 
+ TARGET=sms
+-CC=g++
+-C=gcc
+ 
+ # jesli masz klopoty z wysylaniem wiadomosci na komorki sieci Plus mozesz
+ # wymusic na programie wysylanie mali na bramke text.plusgsm.pl zamiast
+@@ -23,7 +21,7 @@
+ #
+ # wszystkie ww opcje nalezy dodawac do zmiennej CFLAGS
+ 
+-CFLAGS=-O2
++CFLAGS+=-DPLUS_MAIL
+ 
+ # dla starszych wersji Solarisa (tam gdzie nie ma snprintf, getdomainname,
+ # itd.) odkomentuj ponizsze dwie linie:
+@@ -44,12 +42,12 @@
+ 
+ # nw katalogi nie sa przeszukiwane automatycznie na FreeBSD oraz NetBSD.
+ # Odkomentuj ponizsze linie jesli kompilujesz program na tych systemach
+-# BSD_INC=-I/usr/local/include -I/usr/pkg/include
+-# BSD_LIB=-L/usr/local/lib -L/usr/pkg/lib
++BSD_INC=-I$(LOCALBASE)/include
++BSD_LIB=-L$(LOCALBASE)/lib -Wl,-R$(LOCALBASE)/lib
+ 
+ # katalog pod ktorym program zostanie zainstalowany po make install - binaria
+ # ida do $DIR/$BIN, reszta do $DIR/$DOC
+-INSTALL_PREFIX=/usr/local
++INSTALL_PREFIX=$(PREFIX)
+ INSTALL_BIN=$(INSTALL_PREFIX)/bin
+ INSTALL_DOC=$(INSTALL_PREFIX)/doc/sms
+ 
