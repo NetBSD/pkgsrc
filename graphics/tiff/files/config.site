@@ -1,4 +1,4 @@
-# $NetBSD: config.site,v 1.7 2001/06/11 02:05:11 jlam Exp $
+# $NetBSD: config.site,v 1.8 2001/06/18 21:32:24 jlam Exp $
 
 DIR_BIN=${PREFIX}/bin			# destination for applications
 DIR_LIB=${PREFIX}/lib			# destination for library
@@ -10,14 +10,14 @@ DIRS_LIBINC=${BUILDLINK_DIR}/include	# dirs to search for ancillary includes
 # JPEG support
 #
 JPEG=yes
-DIR_JPEGLIB=${LOCALBASE}/lib
-LIBJPEG="-Wl,-R${DIR_JPEGLIB} -L${BUILDLINK_DIR}/lib -ljpeg"
+DIR_JPEGLIB=${BUILDLINK_DIR}/lib
+LIBJPEG="${LDFLAGS} -ljpeg"
 
 # ZLIB compression support
 #
 ZIP=yes
-DIR_GZLIB=${ZLIBDIR}
-LIBGZ="-Wl,-R${DIR_GZLIB} -L${BUILDLINK_DIR}/lib -lz"
+DIR_GZLIB=${BUILDLINK_DIR}/lib
+LIBGZ="${LDFLAGS} -lz"
 
 DSO=no				# don't use libtiff's shared lib mechanism
 
