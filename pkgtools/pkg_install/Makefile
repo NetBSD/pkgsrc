@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2003/08/31 11:11:20 jlam Exp $
+# $NetBSD: Makefile,v 1.77 2003/08/31 11:55:09 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -34,6 +34,7 @@ VERSION!=		${AWK} -F '"' '/PKGTOOLS_VERSION/ {print $$2}' \
 			${FILESDIR}/lib/version.h
 
 PKG_DBDIR?=		/var/db/pkg
+PKG_ADMIN=		${SETENV} PKG_DBDIR=${PKG_DBDIR} ${PKG_ADMIN_CMD}
 
 .if ${OPSYS} == "NetBSD" && !exists(/usr/share/tmac/tmac.andoc)
 PKG_FAIL_REASON+= "You need to have the 'text' set installed to build this package!"
@@ -47,8 +48,7 @@ post-install:
 		if [ ! -d ${PKG_DBDIR} ]; then				\
 			${INSTALL_DATA_DIR} ${PKG_DBDIR};		\
 		fi;							\
-		${SETENV} PKG_DBDIR=${PKG_DBDIR}			\
-			${PKG_ADMIN_CMD} rebuild;			\
+		${PKG_ADMIN} rebuild;					\
 	fi
 
 .include "../../mk/bsd.pkg.mk"
