@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/03 03:21:13 sekiya Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/03 13:24:10 fredb Exp $
 bin/gqmpeg
 bin/gqmpeg-shoutcast-plugin.sh
 man/man1/gqmpeg.1
+share/applications/gqmpeg.desktop
 share/gqmpeg/skins/README
 share/gqmpeg/skins/SKIN-SPECS
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gqmpeg.mo
@@ -79,4 +80,3 @@ share/gqmpeg/skins/mrclean/skindata_submenu
 share/pixmaps/gqmpeg.png
 @dirrm share/gqmpeg/skins/mrclean
 @unexec ${RMDIR} -p %D/share/gqmpeg/skins 2> /dev/null || ${TRUE}
-@comment in gnome-dirs: @dirrm share/gnome/apps/Multimedia
