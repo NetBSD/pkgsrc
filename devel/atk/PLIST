@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/12/24 03:44:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/01/04 19:58:00 jmmv Exp $
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
 include/atk-1.0/atk/atkaction.h
@@ -31,32 +31,32 @@ lib/libatk-1.0.so
 lib/libatk-1.0.so.200
 lib/libatk-1.0.so.200.0
 lib/pkgconfig/atk.pc
-share/gtk-doc/html/atk/atk-atkaction.html
-share/gtk-doc/html/atk/atk-atkcomponent.html
-share/gtk-doc/html/atk/atk-atkdocument.html
-share/gtk-doc/html/atk/atk-atkeditabletext.html
-share/gtk-doc/html/atk/atk-atkhypertext.html
-share/gtk-doc/html/atk/atk-atkimage.html
-share/gtk-doc/html/atk/atk-atkselection.html
-share/gtk-doc/html/atk/atk-atkstate.html
-share/gtk-doc/html/atk/atk-atkstreamablecontent.html
-share/gtk-doc/html/atk/atk-atktable.html
-share/gtk-doc/html/atk/atk-atktext.html
-share/gtk-doc/html/atk/atk-atkvalue.html
-share/gtk-doc/html/atk/atkgobjectaccessible.html
-share/gtk-doc/html/atk/atkhyperlink.html
-share/gtk-doc/html/atk/atknoopobject.html
-share/gtk-doc/html/atk/atknoopobjectfactory.html
-share/gtk-doc/html/atk/atkobject.html
-share/gtk-doc/html/atk/atkobjectfactory.html
-share/gtk-doc/html/atk/atkregistry.html
-share/gtk-doc/html/atk/atkrelation.html
-share/gtk-doc/html/atk/atkrelationset.html
-share/gtk-doc/html/atk/atkstateset.html
-share/gtk-doc/html/atk/atkutil.html
-share/gtk-doc/html/atk/atk.html
-share/gtk-doc/html/atk/book1.html
-share/gtk-doc/html/atk/index.sgml
+share/doc/html/atk/atk-atkaction.html
+share/doc/html/atk/atk-atkcomponent.html
+share/doc/html/atk/atk-atkdocument.html
+share/doc/html/atk/atk-atkeditabletext.html
+share/doc/html/atk/atk-atkhypertext.html
+share/doc/html/atk/atk-atkimage.html
+share/doc/html/atk/atk-atkselection.html
+share/doc/html/atk/atk-atkstate.html
+share/doc/html/atk/atk-atkstreamablecontent.html
+share/doc/html/atk/atk-atktable.html
+share/doc/html/atk/atk-atktext.html
+share/doc/html/atk/atk-atkvalue.html
+share/doc/html/atk/atk.html
+share/doc/html/atk/atkgobjectaccessible.html
+share/doc/html/atk/atkhyperlink.html
+share/doc/html/atk/atknoopobject.html
+share/doc/html/atk/atknoopobjectfactory.html
+share/doc/html/atk/atkobject.html
+share/doc/html/atk/atkobjectfactory.html
+share/doc/html/atk/atkregistry.html
+share/doc/html/atk/atkrelation.html
+share/doc/html/atk/atkrelationset.html
+share/doc/html/atk/atkstateset.html
+share/doc/html/atk/atkutil.html
+share/doc/html/atk/book1.html
+share/doc/html/atk/index.sgml
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/atk10.mo
@@ -72,8 +72,6 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/atk10.mo
-@dirrm share/gtk-doc/html/atk
-@unexec ${RMDIR} %D/share/gtk-doc/html 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gtk-doc 2>/dev/null || ${TRUE}
+@dirrm share/doc/html/atk
 @dirrm include/atk-1.0/atk
 @dirrm include/atk-1.0
