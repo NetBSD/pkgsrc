@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/16 12:19:06 abs Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/17 11:12:37 abs Exp $
 #
 
-DISTNAME=		if-psprint-1.0
+DISTNAME=		if-psprint-1.1
 CATEGORIES=		print
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -23,8 +23,10 @@ do-build:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		< ${FILESDIR}/if-psprint.pl		\
 		> ${WRKSRC}/if-psprint
+	pod2man ${WRKSRC}/if-psprint > ${WRKSRC}/if-psprint.1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/if-psprint ${PREFIX}/libexec/if-psprint
+	${INSTALL_MAN} ${WRKSRC}/if-psprint.1 ${PREFIX}/man/man1/if-psprint.1
 
 .include "../../mk/bsd.pkg.mk"
