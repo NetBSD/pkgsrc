@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/02/14 18:26:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2004/02/15 12:03:59 jlam Exp $
 
 DISTNAME=		audiofile-0.2.5
 PKGNAME=		lib${DISTNAME}
@@ -18,16 +18,12 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	audiofile.pc.in
 
+LDFLAGS.SunOS+=		-Wl,${RPATH_FLAG}/usr/ucblib -L/usr/ucblib
+
 DOCDIR=			${PREFIX}/share/doc/libaudiofile
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC}/docs; ${INSTALL_DATA} af* sf* ${DOCDIR}
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-LDFLAGS+=	-Wl,${RPATH_FLAG}/usr/ucblib -L/usr/ucblib
-.endif
 
 .include "../../mk/bsd.pkg.mk"
