@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2001/04/21 10:13:37 wiz Exp $
+$NetBSD: distinfo,v 1.4 2001/09/02 21:26:01 hubertf Exp $
 
 SHA1 (TeXfamily/texfam-1.2.tar.gz) = 510ef7048c1353a75d84d548738e8e2a94d83be9
 Size (TeXfamily/texfam-1.2.tar.gz) = 154286 bytes
@@ -20,12 +20,13 @@ SHA1 (TeXfamily/dvipsk-jpatch-p1.5d.tar.gz) = 3e19438d7519fedc81229a7fc248484c89
 Size (TeXfamily/dvipsk-jpatch-p1.5d.tar.gz) = 22818 bytes
 SHA1 (TeXfamily/mendexk2.4f.tar.gz) = aa65a16a2bc965877fb19e8798ee80790917c588
 Size (TeXfamily/mendexk2.4f.tar.gz) = 22371 bytes
-SHA1 (patch-aa) = e018a38610782ee0be7d87fd9b5535b52f178c97
+SHA1 (patch-aa) = 420ce2595e42d35818244b67ee41f8358df2b1d7
 SHA1 (patch-ab) = 6dc92be09afbce61d62468873c21add1564ac02c
 SHA1 (patch-ac) = eeb266e3fc5a6b646ffc498c08107a9dd76c6660
 SHA1 (patch-ad) = 3292baba0f31f191c13a12dd3cd39e8bd2e091f7
 SHA1 (patch-ae) = 2f21e4c6fbe327159d3abd65e501ee440f0c3657
-SHA1 (patch-af) = 75866c0f57eec6f7ba8f690dd8afb47ed32dede4
-SHA1 (patch-ag) = 7187fcde6937bbb35af90f77f88c98817f427122
+SHA1 (patch-af) = 8a2fdc955bfca8773147d6bb7752ed3532261540
+SHA1 (patch-ag) = d24593acc4768e421836f4f3a70c8d961d74e1f8
 SHA1 (patch-ah) = 08b0d94c7347693da7fe024eb0ab81916a598529
 SHA1 (patch-ai) = 9f62fe1d16f4004997718fbc7b6f9ad3bef607c6
+SHA1 (patch-aj) = e2dcd12c337757e45b34b99a1252d411dbc0252c

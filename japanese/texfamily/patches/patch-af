@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/04/14 12:58:56 kei Exp $
+$NetBSD: patch-af,v 1.2 2001/09/02 21:26:01 hubertf Exp $
 
---- texk/web2c/Makefile.in.orig	Wed Mar 28 08:05:10 2001
-+++ texk/web2c/Makefile.in	Wed Mar 28 08:05:17 2001
+--- texk/web2c/Makefile.in.orig	Tue Apr 18 09:28:32 2000
++++ texk/web2c/Makefile.in
 @@ -5,7 +5,7 @@
  # install-fmts/install-bases/install-mems will install. plain.* is
  # created automatically (as a link).  See the Formats node in
@@ -11,3 +11,116 @@ $NetBSD: patch-af,v 1.1.1.1 2001/04/14 12:58:56 kei Exp $
  @ETEX@efmts = #elatex.efmt
  @CTEX@cfmts = #latex.efmt
  @PTEX@pdffmts = #pdflatex.fmt
+@@ -439,75 +439,75 @@
+ 
+ tex.fmt: tex
+ 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=tex plain.tex cmr10.tfm" prereq-check
+-	$(dumpenv) ./tex --fmt=tex --ini \\input plain \\dump </dev/null
++	$(dumpenv) ./tex --fmt=tex --ini \\input plain \\dump </dev/null || true
+ 
+ latex.fmt: tex
+ 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=latex latex.ltx" prereq-check
+-	$(dumpenv) ./tex --progname=latex --ini \\input latex.ltx </dev/null
++	$(dumpenv) ./tex --progname=latex --ini \\input latex.ltx </dev/null || true
+ 
+ latex209.fmt: tex
+ 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=latex209 lplain.tex" prereq-check
+-	$(dumpenv) ./tex --fmt=latex209 --ini \\input lplain \\dump </dev/null
++	$(dumpenv) ./tex --fmt=latex209 --ini \\input lplain \\dump </dev/null || true
+ 
+ etex.efmt: etex
+ 	$(dumpenv) $(MAKE) files="--progname=etex etex.src plain.tex cmr10.tfm" prereq-check
+-	$(dumpenv) ./etex --efmt=etex --ini \*\\input etex.src \\dump </dev/null
++	$(dumpenv) ./etex --efmt=etex --ini \*\\input etex.src \\dump </dev/null || true
+ 
+ elatex.efmt: etex
+ 	$(dumpenv) $(MAKE) files="--progname=elatex latex.ltx" prereq-check
+-	$(dumpenv) ./etex --efmt=elatex --ini \*\\input latex.ltx </dev/null
++	$(dumpenv) ./etex --efmt=elatex --ini \*\\input latex.ltx </dev/null || true
+ 
+ tex.efmt: etex
+ 	$(dumpenv) $(MAKE) files="--progname=tex plain.tex cmr10.tfm" prereq-check
+-	$(dumpenv) ./etex --efmt=tex --ini \\input plain \\dump </dev/null
++	$(dumpenv) ./etex --efmt=tex --ini \\input plain \\dump </dev/null || true
+ 
+ latex.efmt: etex
+ 	$(dumpenv) $(MAKE) files="--progname=latex latex.ltx" prereq-check
+-	$(dumpenv) ./etex --progname=latex --ini \\input latex.ltx </dev/null
++	$(dumpenv) ./etex --progname=latex --ini \\input latex.ltx </dev/null || true
+ 
+ omega.fmt: omega
+ 	$(dumpenv) $(MAKE) files="--progname=omega omega.tex" prereq-check
+-	$(dumpenv) ./omega --ini \\input omega.tex \\dump </dev/null
++	$(dumpenv) ./omega --ini \\input omega.tex \\dump </dev/null || true
+ 
+ lambda.fmt: omega
+ 	$(dumpenv) $(MAKE) files="--progname=lambda lambda.tex" prereq-check
+-	$(dumpenv) ./omega --ini --progname=lambda \\input lambda.tex </dev/null
++	$(dumpenv) ./omega --ini --progname=lambda \\input lambda.tex </dev/null || true
+ 
+ pdftex.fmt: pdftex
+ 	$(dumpenv) $(MAKE) files="--progname=pdftex plain.tex cmr10.tfm" prereq-check
+-	$(dumpenv) ./pdftex --fmt=pdftex --ini \\pdfoutput=1 \\input plain \\dump </dev/null
++	$(dumpenv) ./pdftex --fmt=pdftex --ini \\pdfoutput=1 \\input plain \\dump </dev/null || true
+ 
+ pdflatex.fmt: pdftex
+ 	$(dumpenv) $(MAKE) files="--progname=pdflatex latex.ltx" prereq-check
+-	$(dumpenv) ./pdftex --fmt=pdflatex --ini \\pdfoutput=1 \\input latex.ltx </dev/null
++	$(dumpenv) ./pdftex --fmt=pdflatex --ini \\pdfoutput=1 \\input latex.ltx </dev/null || true
+ 
+ pdftexinfo.fmt: pdftex
+ 	$(dumpenv) $(MAKE) files="--progname=pdftexinfo pdftexinfo.ini" prereq-check
+-	$(dumpenv) ./pdftex --progname=pdftexinfo --ini pdftexinfo.ini </dev/null
++	$(dumpenv) ./pdftex --progname=pdftexinfo --ini pdftexinfo.ini </dev/null || true
+ 
+ pdfetex.efmt: pdfetex
+ 	$(dumpenv) $(MAKE) files="--progname=pdfetex etex.src plain.tex cmr10.tfm" prereq-check
+-	$(dumpenv) ./pdfetex --efmt=pdfetex --ini \*\\pdfoutput=1\\input etex.src \\dump </dev/null
++	$(dumpenv) ./pdfetex --efmt=pdfetex --ini \*\\pdfoutput=1\\input etex.src \\dump </dev/null || true
+ 
+ pdfelatex.efmt: pdfetex
+ 	$(dumpenv) $(MAKE) files="--progname=pdfelatex latex.ltx" prereq-check
+-	$(dumpenv) ./pdfetex --efmt=pdfelatex --ini \*\\pdfoutput=1\\input latex.ltx </dev/null
++	$(dumpenv) ./pdfetex --efmt=pdfelatex --ini \*\\pdfoutput=1\\input latex.ltx </dev/null || true
+ 
+ mltex.fmt: tex
+ 	$(dumpenv) $(MAKE) files="--progname=mltex plain.tex cmr10.tfm" prereq-check
+-	$(dumpenv) ./tex --mltex --fmt=mltex --ini \\input plain \\dump </dev/null
++	$(dumpenv) ./tex --mltex --fmt=mltex --ini \\input plain \\dump </dev/null || true
+ 
+ mllatex.fmt: tex
+ 	$(dumpenv) $(MAKE) files="--progname=mllatex latex.ltx" prereq-check
+-	$(dumpenv) ./tex --mltex --fmt=mllatex --ini \\input latex.ltx </dev/null
++	$(dumpenv) ./tex --mltex --fmt=mllatex --ini \\input latex.ltx </dev/null || true
+ 
+ mf.base: mf
+ 	$(dumpenv) $(MAKE) $(makeargs) files="plain.mf cmr10.mf $(localmodes).mf" prereq-check
+-	$(dumpenv) ./mf --base=mf --ini \\input plain input $(localmodes) dump </dev/null
++	$(dumpenv) ./mf --base=mf --ini \\input plain input $(localmodes) dump </dev/null || true
+ 
+ mpost.mem: mpost
+ 	$(dumpenv) $(MAKE) $(makeargs) files=plain.mp prereq-check
+-	$(dumpenv) ./mpost --mem=mpost --ini \\input plain dump </dev/null
++	$(dumpenv) ./mpost --mem=mpost --ini \\input plain dump </dev/null || true
+ 
+ # This is meant to be called recursively, with $(files) set.
+ prereq-check: $(kpathsea_dir)/kpsewhich
+@@ -529,15 +529,15 @@
+ $(kpathsea_dir)/kpsewhich: $(kpathsea)
+ 
+ amstex.fmt: tex
+-	$(dumpenv) ./tex --progname=amstex --ini amstex.ini </dev/null
++	$(dumpenv) ./tex --progname=amstex --ini amstex.ini </dev/null || true
+ 
+ # Texinfo changes the escape character from `\' to `@'.
+ texinfo.fmt: tex.fmt
+-	$(dumpenv) ./tex --progname=texinfo --ini texinfo @dump </dev/null
++	$(dumpenv) ./tex --progname=texinfo --ini texinfo @dump </dev/null || true
+ 
+ eplain.fmt: tex.fmt
+ 	touch eplain.aux # Makes cross-reference warnings work right.
+-	$(dumpenv) ./tex --progname=eplain --ini \&./tex eplain \\dump </dev/null
++	$(dumpenv) ./tex --progname=eplain --ini \&./tex eplain \\dump </dev/null || true
+ 
+ # 
+ install: install-exec install-data

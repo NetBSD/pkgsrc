@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/04/14 12:58:56 kei Exp $
+$NetBSD: patch-aa,v 1.2 2001/09/02 21:26:01 hubertf Exp $
 
---- texk/web2c/ptex-src-2.1.10/Makefile.in.orig	Tue Feb 29 18:09:41 2000
-+++ texk/web2c/ptex-src-2.1.10/Makefile.in	Tue May  2 05:04:25 2000
-@@ -5,8 +5,13 @@
+--- texk/web2c/ptex-src-2.1.10/Makefile.in.orig	Thu Feb  8 09:56:34 2001
++++ texk/web2c/ptex-src-2.1.10/Makefile.in
+@@ -4,10 +4,15 @@
+ 
  default: programs formats
  
 -programs=ptex tftopl pltotf pdvitype jbibtex
@@ -17,7 +18,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/14 12:58:56 kei Exp $
 +texpool_lcl_dir = $(web2c_lcl_dir)
  
  # Used for triptrap.
-@@ -106,4 +111,7 @@
+ DIFF = diff
+@@ -105,6 +110,9 @@
+ 	fi
  
  ### TFtoPL
 +ptftopl: tftopl
@@ -25,7 +28,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/14 12:58:56 kei Exp $
 +	$(LN) tftopl ptftopl
  tftopl: tftopl.o $(plib_o) $(kpathsea) $(proglib)
  	$(kpathsea_link) tftopl.o $(plib_o) $(LOADLIBES)
-@@ -116,4 +124,7 @@
+ tftopl.o: tftopl.c kanji.h maintain.h ptexhelp.h
+@@ -115,6 +123,9 @@
+ 	$(srcdir)/tie -m tftopl.web $(srcdir)/tftopl.web $(srcdir)/tftopl.ch
  
  ### PLtoTF
 +ppltotf: pltotf
@@ -33,7 +38,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/14 12:58:56 kei Exp $
 +	$(LN) pltotf ppltotf
  pltotf: pltotf.o $(plib_o) $(kpathsea) $(proglib)
  	$(kpathsea_link) pltotf.o $(plib_o) $(LOADLIBES)
-@@ -136,4 +147,7 @@
+ pltotf.o: pltotf.c kanji.h maintain.h ptexhelp.h
+@@ -135,6 +146,9 @@
+ 	$(LN) $(srcdir)/dvitype.web pdvitype.web
  
  ### jBibTeX
 +pjbibtex: jbibtex
@@ -41,7 +48,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/14 12:58:56 kei Exp $
 +	$(LN) jbibtex pjbibtex
  jbibtex: jbibtex.o jbibextra.o $(plib_o) $(kpathsea) $(proglib)
  	$(kpathsea_link) jbibtex.o jbibextra.o $(plib_o) $(LOADLIBES)
-@@ -176,5 +190,10 @@
+ jbibtex.o: jbibtex.c jbibextra.h kanji.h maintain.h ptexhelp.h
+@@ -175,15 +189,20 @@
+ texmf.cnf: $(kpathsea_dir)/texmf.cnf
  	$(SHELL) $(thisdir)/mkconf $< > texmf.cnf
  
 -dumpenv = TEXMFCNF=$(thisdir) TEXMF=$(texmf)
@@ -53,14 +62,26 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/14 12:58:56 kei Exp $
 +dumpenv = TEXMFCNF=../../kpathsea TEXINPUTS=.:$(texin): TEXFONTS=$(texfonts):
  
  ptex.fmt: ptex texmf.cnf
-@@ -213,5 +232,5 @@
+ 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=ptex ptex.tex min10.tfm" prereq-check
+-	$(dumpenv) ./ptex -ini \\input ptex \\dump </dev/null
++	$(dumpenv) ./ptex -ini \\input ptex \\dump </dev/null || true
+ 
+ platex.fmt: ptex texmf.cnf
+ 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=platex platex.ltx" prereq-check
+-	$(dumpenv) ./ptex -ini --progname=platex \\input platex.ltx </dev/null
++	$(dumpenv) ./ptex -ini --progname=platex \\input platex.ltx </dev/null || true
+ 
+ # This is meant to be called recursively, with $(files) set.
+ prereq-check: $(kpathsea_dir)/kpsewhich
+@@ -212,31 +231,31 @@
+ 
  # The actual binary executables and pool files.
  install-programs: $(programs)
 -	$(SHELL) $(top_srcdir)/mkinstalldirs $(bindir) $(texpooldir)
 +	$(SHELL) $(top_srcdir)/mkinstalldirs $(bindir) $(texpool_lcl_dir)
  	for p in $(programs); do $(INSTALL_LIBTOOL_PROG) $(bindir) $$p; done
  
-@@ -219,23 +238,23 @@
+ # The links to ptex for each format and for {ini,vir}ptex.
  install-links: install-programs
  	cd $(bindir) && \
 -	(rm -f iniptex virptex; $(LN) ptex iniptex; $(LN) ptex virptex)
@@ -93,3 +114,22 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/14 12:58:56 kei Exp $
 +#	for f in *.tcx; do $(INSTALL_DATA) $$f $(web2c_lcl_dir)/$$f; done
  # map files are not provided with pTeX
  #	cd $(thisdir)/share && \
+ #	for f in *.map; do $(INSTALL_DATA) $$f $(fontnamedir)/$$f; done
+@@ -258,7 +277,7 @@
+ 	./tftopl ./trip.tfm trip.pl
+ 	-diff $(tripdir)/trip.pl trip.pl
+ 	rm -f trip.tex; $(LN) $(tripdir)/trip.tex . # get same filename in log
+-	-$(SHELL) -c '$(testenv) ./ptex -ini <$(tripdir)/trip1.in >tripin.fot'
++	-$(SHELL) -c '$(testenv) ./ptex -ini <$(tripdir)/trip1.in >tripin.fot' || true
+ 	mv trip.log tripin.log
+ 	-diff $(tripdir)/tripin.log tripin.log
+ # May as well test non-ini second time through.
+@@ -298,7 +317,7 @@
+ # tcx files are a bad idea.
+ #	./ptex -translate-file=$(srcdir)/share/isol1-t1.tcx $(testdir)/eight \
+ #	  && ./pdvitype eight.dvi >eigh.typ
+-	./ptex -mltex -ini $(testdir)/mltextst
++	./ptex -mltex -ini $(testdir)/mltextst || true
+ 	-./ptex </dev/null
+ 	-PATH=$(kpathsea_dir):$$PATH ./ptex '\nonstopmode\font\foo=nonesuch\end'
+ 
