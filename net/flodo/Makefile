@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/30 00:13:53 mrg Exp $
+# $NetBSD: Makefile,v 1.2 2004/09/30 05:09:39 grant Exp $
 #
 
 DISTNAME=		flodo-v3
@@ -9,16 +9,17 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://arctic.org/~dean/flodo/
-COMMENT=		simple network flow sampling tool
+COMMENT=		Simple network flow sampling tool
 
 USE_BUILDLINK3=		yes
-USE_BUILTIN.libpcap=	no # NetBSD's libpcap is very old.
+USE_BUILTIN.libpcap=	no
+BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.8
 
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.libpcap}/include
 LDFLAGS+=		-L${BUILDLINK_PREFIX.libpcap}/lib
 
 do-build:
-	cd ${WRKSRC}; ${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} -o flodo flodo.c -lpcap
+	cd ${WRKSRC} && ${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} -o flodo flodo.c -lpcap
 	
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/flodo ${PREFIX}/sbin
