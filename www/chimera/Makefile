@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/05/22 09:32:26 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/06/26 14:14:53 zuntum Exp $
 #
 
 DISTNAME=	chimera-2.0a19
@@ -8,9 +8,6 @@ MASTER_SITES=	ftp://ftp.cs.unlv.edu/pub/chimera-alpha/
 MAINTAINER=	fredb@netbsd.org
 HOMEPAGE=	http://www.chimera.org/
 COMMENT=	World Wide Web Browser for X Windows
-
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.0.11:../../graphics/png
 
 USE_IMAKE=	yes
 
@@ -26,4 +23,6 @@ post-install:
 	cd ${WRKSRC}/doc && ${INSTALL_DATA}			\
 	    HINTS INFO LICENSE ${X11PREFIX}/share/doc/chimera
 
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
