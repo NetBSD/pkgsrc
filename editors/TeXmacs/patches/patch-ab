@@ -1,19 +1,15 @@
-$NetBSD: patch-ab,v 1.1 2002/10/02 22:47:36 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2002/12/02 21:34:08 jmmv Exp $
 
---- configure.orig	Mon Aug 19 09:41:32 2002
+--- configure.orig	Thu Nov 28 00:56:25 2002
 +++ configure
-@@ -2804,12 +2753,12 @@ case "${host}" in
-     CONFIG_CXXOPTIMIZE="-O2"
-     CONFIG_LFLAGS=""
-     CONFIG_LSTATIC="-static"
--    CONFIG_LSHARED="-shared"
-+    CONFIG_LSHARED="-shared ${LDFLAGS}"
-     CONFIG_LPATH="-Wl,-rpath,"
-     CONFIG_LX="$X_LIBS -lXext -lX11"
-     CONFIG_BFLAGS=""
-     CONFIG_BSTATIC="-Wl,-Bstatic"
--    CONFIG_BSHARED="-Wl,-Bdynamic"
-+    CONFIG_BSHARED="-Wl,-Bdynamic ${LDFLAGS}"
-     CONFIG_BPATH="-Wl,-rpath,"
-     CONFIG_BX="$X_LIBS -lXext -lX11"
-     CONFIG_WORD_LENGTH="4"
+@@ -2966,6 +2966,10 @@ case "${host}" in
+   ;;
+ esac
+ 
++CONFIG_CXXFLAGS="${PKG_CXXFLAGS}"
++CONFIG_LSHARED="${CONFIG_LSHARED} ${LDFLAGS}"
++CONFIG_BSHARED="${CONFIG_BSHARED} ${LDFLAGS}"
++
+ #--------------------------------------------------------------------
+ # Enable debug and optimizations
+ #--------------------------------------------------------------------
