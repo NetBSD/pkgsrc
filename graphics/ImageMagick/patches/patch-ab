@@ -1,42 +1,51 @@
---- Imakefile~	Sun Jan  4 05:24:10 1998
-+++ Imakefile	Sat Jan 24 19:17:11 1998
-@@ -68,28 +68,28 @@
+--- Imakefile.orig	Sun Feb  1 07:41:50 1998
++++ Imakefile	Thu Feb  5 02:12:14 1998
+@@ -61,7 +61,7 @@
+   combine xtp
+ #endif
+ 
+-SUBDIRS = magick
++SUBDIRS = magick xtp
+ 
+ AllTarget($(PROGRAMS))
+ DependTarget()
+@@ -76,28 +76,28 @@
  NormalProgramTarget(display,display.o,$(DEPLIBS),$(LOCAL_LIBRARIES),$(XLIB) -lm)
  NormalLintTarget($(LINTSRCS))
  InstallProgram(display,$(LOCALDIR))
 -InstallMultipleMan(display.1,$(LOCALMAN))
-+InstallMultipleMan(display,$(LOCALMAN1))
++InstallMultipleMan(display.1,$(LOCALMAN1))
  NormalProgramTarget(montage,montage.o,$(DEPLIBS),$(LOCAL_LIBRARIES),$(XLIB) -lm)
  InstallProgram(montage,$(LOCALDIR))
 -InstallMultipleMan(montage.1,$(LOCALMAN))
-+InstallMultipleMan(montage,$(LOCALMAN1))
++InstallMultipleMan(montage.1,$(LOCALMAN1))
  NormalProgramTarget(import,import.o,$(DEPLIBS),$(LOCAL_LIBRARIES),$(XLIB) -lm)
  InstallProgram(import,$(LOCALDIR))
 -InstallMultipleMan(import.1,$(LOCALMAN))
-+InstallMultipleMan(import,$(LOCALMAN1))
++InstallMultipleMan(import.1,$(LOCALMAN1))
  NormalProgramTarget(animate,animate.o,$(DEPLIBS),$(LOCAL_LIBRARIES),$(XLIB) -lm)
  InstallProgram(animate,$(LOCALDIR))
 -InstallMultipleMan(animate.1,$(LOCALMAN))
-+InstallMultipleMan(animate,$(LOCALMAN1))
++InstallMultipleMan(animate.1,$(LOCALMAN1))
  NormalProgramTarget(convert,convert.o,$(DEPLIBS),$(LOCAL_LIBRARIES),$(XLIB) -lm)
  InstallProgram(convert,$(LOCALDIR))
 -InstallMultipleMan(convert.1,$(LOCALMAN))
-+InstallMultipleMan(convert,$(LOCALMAN1))
++InstallMultipleMan(convert.1,$(LOCALMAN1))
  NormalProgramTarget(identify,identify.o,$(DEPLIBS),$(LOCAL_LIBRARIES),$(XLIB) -lm)
  InstallProgram(identify,$(LOCALDIR))
 -InstallMultipleMan(identify.1,$(LOCALMAN))
-+InstallMultipleMan(identify,$(LOCALMAN1))
++InstallMultipleMan(identify.1,$(LOCALMAN1))
  NormalProgramTarget(mogrify,mogrify.o,$(DEPLIBS),$(LOCAL_LIBRARIES),$(XLIB) -lm)
  InstallProgram(mogrify,$(LOCALDIR))
 -InstallMultipleMan(mogrify.1,$(LOCALMAN))
-+InstallMultipleMan(mogrify,$(LOCALMAN1))
++InstallMultipleMan(mogrify.1,$(LOCALMAN1))
  NormalProgramTarget(combine,combine.o,$(DEPLIBS),$(LOCAL_LIBRARIES),$(XLIB) -lm)
  InstallProgram(combine,$(LOCALDIR))
 -InstallMultipleMan(combine.1,$(LOCALMAN))
 -InstallMultipleMan(ImageMagick.1,$(LOCALMAN))
 -InstallMultipleMan(miff.4,$(LOCALMAN))
 -InstallMultipleMan(quantize.5,$(LOCALMAN))
-+InstallMultipleMan(combine,$(LOCALMAN1))
-+InstallMultipleMan(ImageMagick,$(LOCALMAN1))
-+InstallMultipleMan(miff,$(LOCALMAN4))
-+InstallMultipleMan(quantize,$(LOCALMAN5))
++InstallMultipleMan(combine.1,$(LOCALMAN1))
++InstallMultipleMan(ImageMagick.1,$(LOCALMAN1))
++InstallMultipleMan(miff.4,$(LOCALMAN4))
++InstallMultipleMan(quantize.5,$(LOCALMAN5))
