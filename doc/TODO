@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2256 2004/10/25 17:15:58 adrianp Exp $
+$NetBSD: TODO,v 1.2257 2004/10/26 05:06:28 snj Exp $
 
 Suggested new packages
 ======================
@@ -409,6 +409,7 @@ Suggested package updates
 	o snd-7.7
 	o snes9x-1.42
 	o snownews-1.5.4
+	o spamassassin-3.0.1
 	o sqlite-3.0.7
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
