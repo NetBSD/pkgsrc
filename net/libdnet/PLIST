@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/26 21:48:00 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/02 08:50:11 seb Exp $
 bin/dnet-config
 include/dnet.h
 include/dnet/addr.h
@@ -9,6 +9,7 @@ include/dnet/fw.h
 include/dnet/icmp.h
 include/dnet/intf.h
 include/dnet/ip.h
+include/dnet/ip6.h
 include/dnet/os.h
 include/dnet/rand.h
 include/dnet/route.h
