@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.12 2000/11/26 11:22:40 mycroft Exp $
+$NetBSD: patch-ab,v 1.13 2001/01/09 18:37:46 bad Exp $
 
---- ltmain.in.orig	Sat May 27 01:53:15 2000
-+++ ltmain.in	Sun Nov 26 11:19:57 2000
+--- ltmain.in.orig0	Sat May 27 03:53:15 2000
++++ ltmain.in	Tue Jan  9 19:21:17 2001
 @@ -819,6 +819,7 @@
      old_convenience=
      deplibs=
@@ -55,11 +55,21 @@ $NetBSD: patch-ab,v 1.12 2000/11/26 11:22:40 mycroft Exp $
  	*)
  	  # Add libc to deplibs on all other systems.
  	  deplibs="$deplibs -lc"
-@@ -2146,6 +2169,7 @@
+@@ -2146,6 +2169,17 @@
  	if test "$thread_safe" = yes && test -n "$thread_safe_flag_spec"; then
  	  eval flag=\"$thread_safe_flag_spec\"
  	  linkopts="$linkopts $flag"
 +          wllinkopts="$wllinkopts $wl$flag"
++	fi
++
++	# Check whether we need to link in c++rt0.o on a.out because of
++	# constructors/destructors
++	if test -n "$ctor_check_cmd"; then
++	  eval cmd=\"$ctor_check_cmd\"
++	  #$show "$cmd"
++	  if $run eval "$cmd" ; then
++	    cppopts="$cpprt0"
++	  fi
  	fi
  
  	# Do each of the archive commands.
