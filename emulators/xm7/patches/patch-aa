@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2002/01/24 12:16:15 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2002/06/15 07:31:19 cjep Exp $
 
 --- makefile.x11.orig	Thu Mar 23 01:01:00 2000
 +++ makefile.x11	Sat Aug 12 12:54:54 2000
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.4 2002/01/24 12:16:15 wiz Exp $
  OBJS =	${COMMONOBJ} ${LOCALOBJ}
  #LIBS = -L/usr/X11R6/lib -lX11 -lXt -lXext -lm -lc
 -LIBS = -L/usr/X11R6/lib -lX11 -lXt -lXext -lm -lc -lstdc++
-+LIBS = -L/usr/X11R6/lib -R/usr/X11R6/lib -lX11 -lXt -lXext -lm -lc -lstdc++ \
++LIBS = -L/usr/X11R6/lib -Wl,-R/usr/X11R6/lib -lX11 -lXt -lXext -lm -lc -lstdc++ \
 +       -lossaudio
  
  #CFLAGS = 	-D_XWIN -DNDEBUG -O3 -funroll-loops -I/usr/X11R6/include -I.
