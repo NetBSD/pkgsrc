@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/06/21 03:37:22 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2000/07/20 15:41:01 tron Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -22,7 +22,7 @@ CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=	-I${LOCALBASE}/include	# for gsm.h and rxposix.h
 
 .if !exists(/usr/include/readline.h)
-DEPENDS+=	readline-4.0:../../devel/readline
+DEPENDS+=	readline>=4.0:../../devel/readline
 .endif
 
 INFO_FILES=	RPLAY.info RPLAY.info librplay.info rplay.info
