@@ -1,0 +1,57 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/01 19:14:30 jmmv Exp $
+lib/epiphany/extensions/libcertificatesextension.a
+lib/epiphany/extensions/libcertificatesextension.la
+lib/epiphany/extensions/libcertificatesextension.so
+lib/epiphany/extensions/libcertificatesextension.so.0
+lib/epiphany/extensions/libcertificatesextension.so.0.0
+lib/epiphany/extensions/liberrorviewerextension.a
+lib/epiphany/extensions/liberrorviewerextension.la
+lib/epiphany/extensions/liberrorviewerextension.so
+lib/epiphany/extensions/liberrorviewerextension.so.0
+lib/epiphany/extensions/liberrorviewerextension.so.0.0
+lib/epiphany/extensions/libgesturesextension.a
+lib/epiphany/extensions/libgesturesextension.la
+lib/epiphany/extensions/libgesturesextension.so
+lib/epiphany/extensions/libgesturesextension.so.0
+lib/epiphany/extensions/libgesturesextension.so.0.0
+lib/epiphany/extensions/libpopupblockerextension.a
+lib/epiphany/extensions/libpopupblockerextension.la
+lib/epiphany/extensions/libpopupblockerextension.so
+lib/epiphany/extensions/libpopupblockerextension.so.0
+lib/epiphany/extensions/libpopupblockerextension.so.0.0
+lib/epiphany/extensions/libtabsmenuextension.a
+lib/epiphany/extensions/libtabsmenuextension.la
+lib/epiphany/extensions/libtabsmenuextension.so
+lib/epiphany/extensions/libtabsmenuextension.so.0
+lib/epiphany/extensions/libtabsmenuextension.so.0.0
+share/epiphany-extensions/ephy-gestures.xml
+share/epiphany-extensions/glade/error-viewer.glade
+share/epiphany-extensions/icons/popup-blocker.svg
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/epiphany-extensions-1.0.mo
+@dirrm share/epiphany-extensions/icons
+@dirrm share/epiphany-extensions/glade
+@dirrm share/epiphany-extensions
+@dirrm lib/epiphany/extensions
+@comment in epiphany: @dirrm lib/epiphany
