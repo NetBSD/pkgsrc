@@ -1,0 +1,8 @@
+$NetBSD: patch-fd,v 1.1 2001/12/04 20:35:37 skrll Exp $
+
+--- ksysguard/ksysguardd/FreeBSD/ksysguardd.c.orig	Sat Nov 10 05:17:04 2001
++++ ksysguard/ksysguardd/FreeBSD/ksysguardd.c
+@@ -21,2 +21,3 @@
+ */
++#include "config.h"
+ 
