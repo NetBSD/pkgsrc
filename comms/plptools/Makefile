@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/06/12 14:30:53 skrll Exp $
+# $NetBSD: Makefile,v 1.9 2000/07/20 15:41:02 tron Exp $
 #
 
 DISTNAME=	plptools-0.6
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.to.com/pub/psion/tarballs/
 
 MAINTAINER=	sakamoto@netbsd.org
 
-DEPENDS=	readline-4.0:../../devel/readline
+DEPENDS=	readline>=4.0:../../devel/readline
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 

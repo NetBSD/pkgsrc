@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/07/15 20:39:28 agc Exp $
+# $NetBSD: Makefile,v 1.15 2000/07/20 15:41:10 tron Exp $
 #
 
 DISTNAME=	scwm-0.9
@@ -11,7 +11,7 @@ HOMEPAGE=	http://scwm.mit.edu/
 DEPENDS+=	guile>=1.3.2:../../lang/guile
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	gtar-1.12:../../archivers/gtar
-DEPENDS+=	readline-4.0:../../devel/readline
+DEPENDS+=	readline>=4.0:../../devel/readline
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 EVAL_PREFIX+=	GTKDIR=gtk+
