@@ -1,8 +1,15 @@
-$NetBSD: patch-ae,v 1.2 1998/08/07 10:40:21 agc Exp $
-
---- ld/table.c.orig	Thu Jul 16 14:14:41 1998
-+++ ld/table.c	Thu Jul 16 14:14:54 1998
-@@ -48,7 +48,7 @@
+$NetBSD: patch-ae,v 1.3 2004/01/02 15:30:04 cjep Exp $
+--- ld/table.c.orig	1994-02-19 22:36:05.000000000 +0000
++++ ld/table.c	2004-01-02 15:25:50.000000000 +0000
+@@ -13,6 +13,7 @@
+ #else
+ #undef NULL
+ #include <stdlib.h>
++#include <string.h>
+ #endif
+ 
+ #define GOLDEN		157	/* GOLDEN/HASHTABSIZE approx golden ratio */
+@@ -48,7 +49,7 @@
  char *name;
  {
      struct symstruct **hashptr;
