@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2003/01/28 01:18:20 uebayasi Exp $
+# $NetBSD: Makefile,v 1.13 2003/05/22 16:48:31 jmmv Exp $
 
 DISTNAME=		rlab-2.1.05
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rlab/}
 
