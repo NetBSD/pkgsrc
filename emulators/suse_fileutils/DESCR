@@ -1,0 +1,5 @@
+Linux compatibility package based on the SuSE Linux distribution, take a
+look at "http://www.suse.com/" for more information about it.
+
+This package contains the GNU fileutils package in ELF binary
+format, linked with glibc2.
