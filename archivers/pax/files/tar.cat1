@@ -161,7 +161,9 @@ DDEESSCCRRIIPPTTIIOONN
      ----aattiimmee--pprreesseerrvvee
                    Preserve file access times.
 
-     ----uunnlliinnkk      Remove files before creating them.
+     ----uunnlliinnkk      Ignored, only accepted for compatibility with other ttaarr
+                   implementations.  ttaarr always unlinks files before creating
+                   them.
 
      ----uussee--ccoommpprreessss--pprrooggrraamm _p_r_o_g_r_a_m
                    Use the named program as the program to decompress the
@@ -215,4 +217,4 @@ HHIISSTTOORRYY
 AAUUTTHHOORRSS
      Keith Muller at the University of California, San Diego.
 
-NetBSD 1.6                       July 8, 2003                       NetBSD 1.6
+NetBSD 2.0                        May 4, 2004                       NetBSD 2.0

@@ -4,7 +4,7 @@ NNAAMMEE
      ppaaxx - read and write file archives and copy directory hierarchies
 
 SSYYNNOOPPSSIISS
-     ppaaxx [--ccddjjnnvvzzOO] [--EE _l_i_m_i_t] [--ff _a_r_c_h_i_v_e] [--NN _d_b_d_i_r] [--ss _r_e_p_l_s_t_r] _._._.
+     ppaaxx [--00ccddjjnnvvzzOO] [--EE _l_i_m_i_t] [--ff _a_r_c_h_i_v_e] [--NN _d_b_d_i_r] [--ss _r_e_p_l_s_t_r] _._._.
          [--UU _u_s_e_r] _._._. [--GG _g_r_o_u_p] _._._. [--TT [_f_r_o_m___d_a_t_e] [,_t_o___d_a_t_e]] _._._.
          [_p_a_t_t_e_r_n _._._.]
      ppaaxx --rr [--ccddiijjkknnuuvvzzAADDOOYYZZ] [--EE _l_i_m_i_t] [--ff _a_r_c_h_i_v_e] [--NN _d_b_d_i_r] [--oo _o_p_t_i_o_n_s]
@@ -319,10 +319,10 @@ OOPPTTIIOONNSS
                     blocksize for this format is 10240 bytes.  Pathnames
                     stored by this format must be 100 characters or less in
                     length.  Only _r_e_g_u_l_a_r files, _h_a_r_d _l_i_n_k_s, _s_o_f_t _l_i_n_k_s, and
-                    _d_i_r_e_c_t_o_r_i_e_s will be archived (other file system types are
-                    not supported).  For backwards compatibility with even
-                    older tar formats, a --oo option can be used when writing an
-                    archive to omit the storage of directories.  This option
+                    _d_i_r_e_c_t_o_r_i_e_s will be archived (other file types are not
+                    supported).  For backward compatibility with even older
+                    tar formats, a --oo option can be used when writing an ar-
+                    chive to omit the storage of directories.  This option
                     takes the form:
                           --oo wwrriittee__oopptt==nnooddiirr
 
@@ -482,6 +482,9 @@ OOPPTTIIOONNSS
            tion time is checked using the pathname created after all the file
            name modifications have completed.
 
+     --00    Use the nul character instead of \n as the file separator when
+           reading files from standard input.
+
      ----ffoorrccee--llooccaall
            Do not interpret filenames that contain a `:' as remote files.
 
@@ -598,4 +601,4 @@ AAUUTTHHOORRSS
      Keith Muller at the University of California, San Diego.  Luke Mewburn
      implemented --MM.
 
-NetBSD 1.6                      March 31, 2003                      NetBSD 1.6
+NetBSD 2.0                       June 18, 2004                      NetBSD 2.0
