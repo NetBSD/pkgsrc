@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.74 2002/12/10 12:42:40 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.75 2002/12/10 14:30:36 schmonz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -782,6 +782,11 @@ sub checkmakefile {
 	if ($whole =~ /\nNO_PACKAGE/) {
 		&perror("WARN: use of NO_PACKAGE to enforce license ".
 			"restrictions is deprecated.");
+	}
+	print "OK: checking IGNORE.\n" if ($verbose);
+	if ($whole =~ /\nIGNORE/) {
+		&perror("FATAL: use of IGNORE deprecated, ".
+			"use PKG_FAIL_REASON or PKG_SKIP_REASON instead.");
 	}
 	print "OK: checking for MKDIR.\n" if ($verbose);
 	if ($whole =~ m|\${MKDIR}.*(\${PREFIX}[/0-9a-zA-Z\${}]*)|) {
