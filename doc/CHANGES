@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6064 2004/05/29 12:21:59 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6065 2004/05/29 13:10:54 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2691,3 +2691,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pnet to 0.6.6 [xtraeme 2004-05-29]
 	Updated pnetlib to 0.6.6 [xtraeme 2004-05-29]
 	Updated pnetC to 0.6.6 [xtraeme 2004-05-29]
+	Updated kile to 1.6.3 [markd 2004-05-29]
+	Updated kdbg to 1.2.10 [markd 2004-05-29]
+	Updated ivtools to 1.1.3 [markd 2004-05-29]

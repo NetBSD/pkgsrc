@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1794 2004/05/29 08:07:36 dillo Exp $
+$NetBSD: TODO,v 1.1795 2004/05/29 13:10:54 markd Exp $
 
 Suggested new packages
 ======================
@@ -258,15 +258,12 @@ Suggested package updates
 	o inform-6.30 [pkg/24631]
 	o inn-2.4.1
 	o intercal-0.24 [dillo]
-	o ivtools-1.1.3
 	o jakarta-tomcat-3.3.1a
 	o jam-2.5
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o joe-3.0
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
-	o kdbg-1.2.10
-	o kile-1.6.3
 	o larswm-7.3.6
 	o latex2rtf-1.9.15
 	o lavaps-2.4
