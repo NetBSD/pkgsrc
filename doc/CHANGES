@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9212 2005/02/19 18:27:09 wiz Exp $
+$NetBSD: CHANGES,v 1.9213 2005/02/19 18:44:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -958,3 +958,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-Test-Taint-1.04 [wiz 2005-02-19]
 	Updated p5-WWW-Mechanize to 1.10 [wiz 2005-02-19]
 	Updated p5-XML-NamespaceSupport to 1.08 [wiz 2005-02-19]
+	Updated p5-Test-Simple to 0.54 [wiz 2005-02-19]
