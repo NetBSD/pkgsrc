@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1 2003/11/18 16:10:55 jschauma Exp $
+
+--- src/GGI/Makefile.am.orig	2003-11-13 21:47:55.000000000 -0500
++++ src/GGI/Makefile.am	2003-11-13 21:48:04.000000000 -0500
+@@ -7,10 +7,10 @@
+ ggimesaconfdatadir = ${sysconfdir}/ggi
+ ggimesaconfdata_DATA = ggimesa.conf
+ 
+-INCLUDES += -I$(top_srcdir)/include -I$(top_srcdir)/src/GGI/include \
++INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/src/GGI/include \
+ 	-I$(top_srcdir)/src $(GGI_CFLAGS)
+ 
+-DEFS += -DGGIMESACONFFILE=\"$(ggimesaconfdatadir)/ggimesa.conf\"
++DEFS = -DGGIMESACONFFILE=\"$(ggimesaconfdatadir)/ggimesa.conf\"
+ 
+ if HAVE_GGI
+ # Build a libtool convenience library.
