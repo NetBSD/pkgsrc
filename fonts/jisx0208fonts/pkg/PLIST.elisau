@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.elisau,v 1.1 2001/01/12 15:00:10 itojun Exp $
-lib/X11/fonts/local/elisau10.pcf.gz
-lib/X11/fonts/local/clR5x8.pcf.gz

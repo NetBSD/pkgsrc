@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1999/12/24 02:58:31 sakamoto Exp $
-bin/xipdump
-lib/X11/app-defaults/Xipdump
-man/man8/xipdump.8

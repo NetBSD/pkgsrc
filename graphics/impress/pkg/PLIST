@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/13 14:38:05 manu Exp $
-bin/impress
-bin/transeps
-bin/font3d

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/22 05:55:05 simonb Exp $
-bin/qsubst
-man/cat1/qsubst.0
-man/man1/qsubst.1

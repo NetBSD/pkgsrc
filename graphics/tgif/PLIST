@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:07 zuntum Exp $
+bin/tgif
+lib/X11/tgif/eq4-2x.sym
+lib/X11/tgif/eq4-epstool.sym
+lib/X11/tgif/eq4-ps2epsi.sym
+lib/X11/tgif/eq4.sym
+lib/X11/tgif/keys.obj
+lib/X11/tgif/tangram.sym
+lib/X11/tgif/tgif.Xdefaults
+lib/X11/tgif/tgificon.eps
+lib/X11/tgif/tgificon.obj
+lib/X11/tgif/tgificon.xbm
+lib/X11/tgif/tgificon.xpm
+man/cat1/tgif.0
+@dirrm lib/X11/tgif

@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:03 zuntum Exp $
+include/libmng.h
+include/libmng_conf.h
+include/libmng_types.h
+lib/libmng.a
+lib/libmng.la
+lib/libmng.so
+lib/libmng.so.1
+lib/libmng.so.1.0

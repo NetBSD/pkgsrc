@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:42 zuntum Exp $
+${RUBY_SITEARCHLIBDIR}/syslog.so
+${RUBY_DOCDIR}/syslog/0README
+@dirrm ${RUBY_DOCDIR}/syslog

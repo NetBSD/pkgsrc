@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:29:14 zuntum Exp $
+bin/atoc_conv
+bin/kakasi
+bin/kakasi-config
+bin/mkkanwa
+bin/rdic_conv
+bin/wx2_conv
+include/libkakasi.h
+lib/libkakasi.a
+lib/libkakasi.la
+lib/libkakasi.so
+lib/libkakasi.so.3
+lib/libkakasi.so.3.0
+man/ja_JP.EUC/cat1/kakasi.0
+man/ja_JP.EUC/man1/kakasi.1
+share/kakasi/itaijidict
+share/kakasi/kanwadict
+@dirrm share/kakasi

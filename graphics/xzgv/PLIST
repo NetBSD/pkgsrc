@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:51 zuntum Exp $
+bin/xzgv
+@unexec install-info --delete --info-dir=%D/info %D/info/xzgv
+info/xzgv
+info/xzgv-1
+info/xzgv-2
+info/xzgv-3
+@exec install-info --info-dir=%D/info %D/info/xzgv
+man/man1/xzgv.1

@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:43 zuntum Exp $
+bin/rt2
+bin/rdrt2
+${RUBY_SITELIBDIR}/rt/rt2html-lib.rb
+${RUBY_SITELIBDIR}/rt/rt2txt-lib.rb
+${RUBY_SITELIBDIR}/rt/rtparser-test.rb
+${RUBY_SITELIBDIR}/rt/rtparser.rb
+${RUBY_SITELIBDIR}/rt/rtvisitor.rb
+${RUBY_SITELIBDIR}/rt/w3m.rb
+@dirrm ${RUBY_SITELIBDIR}/rt
+${RUBY_DOCDIR}/rt/ja/rt.html
+${RUBY_DOCDIR}/rt/ja/rt.rd
+@dirrm ${RUBY_DOCDIR}/rt/ja
+@dirrm ${RUBY_DOCDIR}/rt
+${RUBY_EXAMPLESDIR}/rt/dot.rt.rd2rc
+@dirrm ${RUBY_EXAMPLESDIR}/rt

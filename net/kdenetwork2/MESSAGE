@@ -1,0 +1,12 @@
+=============================================================================
+$NetBSD: MESSAGE,v 1.1 2001/10/31 22:55:57 zuntum Exp $
+
+Add the following to /etc/inetd.conf:
+
+ talk    dgram   udp     wait    root    ${PREFIX}/bin/kotalkd	kotalkd
+ ntalk   dgram   udp     wait    root    ${PREFIX}/bin/ktalkd	ktalkd
+
+To put the changes into effect, reboot the machine or "kill -HUP"
+your inetd.
+
+=============================================================================

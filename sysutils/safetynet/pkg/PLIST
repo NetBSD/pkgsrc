@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/27 19:14:44 zuntum Exp $
-bin/safetynet
-etc/safetynet.conf.sample
-share/doc/safetynet/README
-@dirrm share/doc/safetynet

@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:57 zuntum Exp $
+bin/nmap
+share/nmap/nmap-os-fingerprints
+share/nmap/nmap-services
+share/nmap/nmap-rpc
+@dirrm share/nmap
+man/man1/nmap.1

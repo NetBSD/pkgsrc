@@ -1,0 +1,16 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2001/10/31 22:55:11 zuntum Exp $
+
+Now copy the sample script in ${PREFIX}/etc/rc.d/delegated.sh.sample
+to ${PREFIX}/etc/rc.d/delegated.sh and edit it according to your
+needs.
+
+Don't forget to specify a correct e-mail address for ADMIN.
+
+You can also run an interactive configuration session by executing 
+delegated with no argument.
+
+For more configuration information, consult
+${PREFIX}/share/doc/delegate/manual.html
+
+======================================================================

@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.post,v 1.1 2001/10/31 23:10:38 zuntum Exp $
+@dirrm lib/ICAClient/.config
+@dirrm lib/ICAClient/config
+@dirrm lib/ICAClient/cache
+@dirrm lib/ICAClient/help
+@dirrm lib/ICAClient/icons
+@dirrm lib/ICAClient/keyboard
+@dirrm lib/ICAClient/pkginf
+@dirrm lib/ICAClient/util
+@dirrm lib/ICAClient
