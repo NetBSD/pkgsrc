@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2002/09/13 08:41:49 itojun Exp $
+# $NetBSD: Makefile,v 1.55 2002/10/02 19:36:55 wiz Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -11,10 +11,9 @@ MAINTAINER=	itojun@itojun.org
 HOMEPAGE=	http://www.zebra.org/
 COMMENT=	Free multithreaded routing daemon software
 
-BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
-
 .include "../../mk/bsd.prefs.mk"
 
+AUTOMAKE_REQD=		1.4
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 PKG_SYSCONFSUBDIR?=	zebra
@@ -49,8 +48,8 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 LIBS+=			${LDFLAGS}
 
 pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf --force
-#	cd ${WRKSRC} && ${LOCALBASE}/bin/automake
+	cd ${WRKSRC} && ${AUTORECONF} --force
+#	cd ${WRKSRC} && ${AUTOMAKE}
 
 #post-build:
 #	cd ${WRKSRC}/doc ; \
@@ -60,5 +59,6 @@ pre-configure:
 post-install:
 	@${CHMOD} a+r ${PREFIX}/share/examples/zebra/*
 
+.include "../../mk/automake.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
