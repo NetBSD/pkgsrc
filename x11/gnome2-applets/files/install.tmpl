@@ -1,0 +1,13 @@
+# $NetBSD: install.tmpl,v 1.1 2003/12/29 12:05:20 xtraeme Exp $
+#
+# Set default list of macros.
+#
+
+case ${STAGE} in
+POST-INSTALL)
+	GCONF_CONFIG_SOURCE="${GCONF2_CONFIG_SOURCE}" \
+		${LOCALBASE}/libexec/gnome-applets/mc-install-default-macros
+	;;
+*)
+	;;
+esac
