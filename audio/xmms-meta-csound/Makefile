@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/12 02:36:09 snj Exp $
+# $NetBSD: Makefile,v 1.6 2004/11/28 17:18:43 ben Exp $
 #
 
 DISTNAME=		xmms-meta-csound-0.2
@@ -10,7 +10,7 @@ MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		# empty
 COMMENT=		XMMS meta input script for csound
 
-DEPENDS+=		csound-[bd]*-[0-9]*:../../audio/csound-dev
+DEPENDS+=		csound4-[0-9]*:../../audio/csound4
 DEPENDS+=		sox-[0-9]*:../../audio/sox
 DEPENDS+=		xmms-meta-input-[0-9]*:../../audio/xmms-meta-input
 
