@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2003/01/04 22:19:31 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/05 03:31:25 dsainty Exp $
 #
 
-DISTNAME=	emulator_src_${PKGVERSION}
-PKGNAME=	palmosemulator-3.5
+DISTNAME=	emulator_src_${POSE_VERSION}
+PKGNAME=	palmosemulator-${POSE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	emulators x11
 MASTER_SITES=	http://www.palmos.com/dev/tools/emulator/sources/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -12,6 +13,8 @@ MAINTAINER=	dsainty@netbsd.org
 HOMEPAGE=	http://www.palmos.com/dev/tools/emulator/
 COMMENT=	Palm OS Emulator
 
+POSE_VERSION=	3.5
+
 DIST_SUBDIR=	${PKGBASE}
 
 # Source is under sources/ directory, skins are not...
@@ -19,7 +22,7 @@ SITES_emulator-skins-19.tar.gz=	http://www.palmos.com/dev/tools/emulator/
 
 #LICENSE=       GPL
 
-WRKSRC=         ${WRKDIR}/Emulator_Src_3.5
+WRKSRC=         ${WRKDIR}/Emulator_Src_${POSE_VERSION}
 POSE_BUILD_DIR=	${WRKSRC}/BuildUnix
 POSE_SHARE_DIR=	${PREFIX}/share/palmosemulator
 POSE_SKINS_DIR=	${POSE_SHARE_DIR}/skins
@@ -41,10 +44,22 @@ do-install:
 	${INSTALL_PROGRAM} ${POSE_BUILD_DIR}/pose ${PREFIX}/bin/pose
 	${INSTALL_DATA_DIR} ${POSE_SHARE_DIR}
 	${INSTALL_DATA_DIR} ${POSE_SHARE_DIR}/docs
+	${INSTALL_DATA_DIR} ${POSE_SHARE_DIR}/scripting
 	${FIND} ${WRKSRC}/Docs -type f -print | \
 		while read i; do \
 			${INSTALL_DATA} "$$i" ${POSE_SHARE_DIR}/docs; \
 		done
+	for lang in Python Perl; do \
+		ddir="${POSE_SHARE_DIR}/scripting/$$lang"; \
+		${INSTALL_SCRIPT_DIR} "$$ddir"; \
+		${FIND} "${WRKSRC}/Scripting/$$lang" -type f -print | \
+		while read i; do \
+			case "$$i" in \
+				*.pl) ${INSTALL_SCRIPT} "$$i" "$$ddir";; \
+				*) ${INSTALL_DATA} "$$i" "$$ddir";; \
+			esac; \
+		done; \
+	done
 	${INSTALL_DATA} ${WRKSRC_SKINS}/ReadMe.txt ${POSE_SHARE_DIR}/docs/ReadMe_skins.txt
 	${INSTALL_DATA_DIR} ${POSE_SHARE_DIR}/prc
 	${INSTALL_DATA} ${WRKSRC}/ROMTransfer/Source/ROM_Transfer.prc ${POSE_SHARE_DIR}/prc
@@ -54,6 +69,7 @@ do-install:
 			${INSTALL_DATA} "$$i" ${POSE_SKINS_DIR}; \
 		done
 
+.include "../../graphics/jpeg/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../x11/fltk/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
