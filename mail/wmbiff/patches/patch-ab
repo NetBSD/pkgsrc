@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/05/29 05:45:40 tron Exp $
+
+--- wmbiff.c.orig	Wed May 16 12:14:08 2001
++++ wmbiff.c	Tue May 29 07:35:38 2001
+@@ -17,6 +17,10 @@
+ #include <X11/Xlib.h>
+ #include <X11/xpm.h>
+ 
++#ifdef __NetBSD__
++#include <paths.h>
++#endif
++
+ #include "../wmgeneral/wmgeneral.h"
+ #include "../wmgeneral/misc.h"
+ 
+@@ -76,7 +80,11 @@
+ 	if ((m = getenv("MAIL")) != NULL) {
+ 		strcpy(mbox[0].path, m);
+ 	} else if ((m = getenv("USER")) != NULL) {
++#ifdef  _PATH_MAILDIR
++		strcpy(mbox[0].path, _PATH_MAILDIR "/");
++#else
+ 		strcpy(mbox[0].path, "/var/spool/mail/");
++#endif
+ 		strcat(mbox[0].path, m);
+ 	}
+ 
