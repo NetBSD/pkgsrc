@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/09/18 16:25:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/05 11:12:46 jlam Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
@@ -34,6 +34,16 @@ CONFIGURE_ARGS=		--enable-ltdl-install
 
 BUILD_SHLIBTOOL?=	YES
 BUILDING_SHLIBTOOL?=	NO
+
+.PHONY: fix-libtool
+fix-libtool:
+	cd ${WRKSRC}; for f in libtool; do				\
+		${SED}	-e "s,-L${BUILDLINK_DIR}/lib,," $$f > $$f.new;	\
+		if [ -x $$f ]; then ${CHMOD} +x $$f.new; fi;		\
+		${MV} -f $$f.new $$f;					\
+	done
+
+post-build: fix-libtool
 
 .if ${BUILDING_SHLIBTOOL} == "YES"
 CONFIGURE_ARGS+=	--disable-static
