@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/24 22:30:25 cube Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/25 08:41:56 cube Exp $
 .include "../../sysutils/gkrellm/Makefile.common"
 
 GKRELLM_PKGBASE=	gkrellm-server
@@ -24,10 +24,10 @@ MAKE_ENV+=		MODULES=server
 # Define this to use glib-1.2 instead of glib-2
 BUILD_DEFS+=		GKRELLMSERVER_USE_GLIB12
 
-pre-build:
-	${SED} -e s,@@PREFIX@@,${PREFIX}, \
-	    <${WRKSRC}/server/gkrellmd.h >${WRKSRC}/server/gkrellmd.h.sed
-	${MV} ${WRKSRC}/server/gkrellmd.h.sed ${WRKSRC}/server/gkrellmd.h
+SUBST_STAGE.gkprefix=	post-patch
+SUBST_FILES.gkprefix=	${WRKSRC}/server/gkrellmd.h
+SUBST_SED.gkprefix=	-e '/GKRELLMD_SYS_ETC/{s!/etc!${PREFIX}&!;}'
+SUBST_CLASSES+=		gkprefix
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gkrellm-server
