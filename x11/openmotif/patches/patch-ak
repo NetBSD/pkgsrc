@@ -1,4 +1,4 @@
-$NetBSD: patch-lib-Xm-TextF.c,v 1.1.1.1 2000/10/29 16:17:13 mjl Exp $
+$NetBSD: patch-ak,v 1.1 2001/04/05 14:06:58 wiz Exp $
 
 --- lib/Xm/TextF.c.orig	Sun Oct 29 15:43:15 2000
 +++ lib/Xm/TextF.c	Sun Oct 29 15:45:35 2000
