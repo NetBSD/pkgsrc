@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.16 2001/11/23 16:09:24 kim Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.17 2001/11/25 19:29:56 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -385,13 +385,6 @@ APACHE_SUEXEC_DOCROOT?=	${LOCALBASE}/share/httpd/htdocs
 # Specifies the document space in which suexec will be allowed to work.      
 # Possible: Any valid directory                                              
 # Default: ${LOCALBASE}/share/httpd/htdocs                                   
-
-APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
-# Specifies the location for Apache configuration files.
-# If your ${LOCALBASE} is shared between machines use /etc/httpd
-# or a similar directory that is local to each machine.
-# Possible: Any valid directory
-# Default: ${LOCALBASE}/etc/httpd
 
 APACHE_USER?=	www
 # Used in the apache package to specify the user allowed to execute
@@ -950,13 +943,6 @@ PGHOME?=	${PREFIX}/${PGUSER}
 #	LATIN1, LATIN2, LATIN3, LATIN4, LATIN5, KOI8, WIN, ALT
 # Default: undefined
 
-PHP_CONFDIR?=	${LOCALBASE}/etc
-# Specifies the location for PHP configuration files.
-# If your ${LOCALBASE} is shared between machines use /etc or a similar
-# directory that is local to each machine.
-# Possible: Any valid directory
-# Default: ${LOCALBASE}/etc
-
 PILRC_USE_GTK?=	YES
 # Use gtk+ in pilrc, needed for the UI previewer.
 # Possible: YES, NO
@@ -1215,13 +1201,6 @@ USE_WNN4?= YES
 # Possible: not defined, YES
 # Default: not defined
 
-VTUN_SYSCONFDIR?=	${LOCALBASE}/etc
-# Specifies the location for vtund.conf, the configuration file.
-# If your ${LOCALBASE} is shared between machines use /etc or
-# a similar directory that is local to each machine.
-# Possible: Any valid directory
-# Default: ${LOCALBASE}/etc
-
 WINDOWMAKER_OPTIONS?= gnome kde openlook
 # Options for building windowmaker package. Used to add support for
 # GNOME, KDE or OPEN LOOK(tm) and to avoid redundancies with KDE.
@@ -1325,3 +1304,4 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_BACKUP=	ftp://sunsite.org.uk/packages/NetBSD/packages/distfiles/ \
 #	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
 
+.include "../../mk/bsd.pkg.obsolete.mk"
