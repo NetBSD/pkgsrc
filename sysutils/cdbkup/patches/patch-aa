@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/07/11 11:37:52 tron Exp $
+--- src/cdcat.in	Wed Feb 13 01:20:57 2002
++++ src/cdcat.in	Tue Feb 19 22:09:50 2002
+@@ -98,7 +98,7 @@
+ 
+ sub mount {
+ 	return if( $test);
+-	if( system("@MOUNT@ -t iso9660 ".esc_shell($device)." $mntpt") != 0)
++	if( system("@MOUNT@ -t cd9660 ".esc_shell($device)." $mntpt") != 0)
+ 	{
+ 		die "Can't mount $device: $!\n";
+ 	}
