@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2003/12/03 13:23:28 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.22 2003/12/19 09:43:39 jmmv Exp $
 bin/gaim
 bin/gaim-remote
 include/gaim-remote/remote-socket.h
@@ -66,9 +66,6 @@ lib/gaim/ssl-gnutls.so
 lib/gaim/ssl-nss.a
 lib/gaim/ssl-nss.la
 lib/gaim/ssl-nss.so
-lib/gaim/ssl-openssl.a
-lib/gaim/ssl-openssl.la
-lib/gaim/ssl-openssl.so
 lib/gaim/ssl.a
 lib/gaim/ssl.la
 lib/gaim/ssl.so
