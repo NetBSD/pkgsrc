@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2004/04/20 16:26:01 jmmv Exp $
+$NetBSD: patch-ab,v 1.6 2005/02/24 19:17:10 drochner Exp $
 
---- Makefile.in.orig	2004-04-18 21:19:38.000000000 +0200
+--- Makefile.in.orig	2004-12-28 14:29:27.000000000 +0100
 +++ Makefile.in
-@@ -213,7 +213,7 @@ target_alias = @target_alias@
- @BUILD_WITH_GNOME_TRUE@GNOME_DIRECTORY = control-center components monikers
- 
- @ENABLE_GTK_DOC_TRUE@DOC_DIRECTORY = doc
+@@ -261,7 +261,7 @@ DISTCHECK_CONFIGURE_FLAGS = --enable-gtk
+ @HAVE_LIBGLADE_TRUE@LIBGLADE_DIRECTORY = glade
+ @BUILD_WITH_GNOME_FALSE@GNOME_DIRECTORY = 
+ @BUILD_WITH_GNOME_TRUE@GNOME_DIRECTORY = control-center
 -@ENABLE_GTK_DOC_FALSE@DOC_DIRECTORY = 
 +@ENABLE_GTK_DOC_FALSE@DOC_DIRECTORY = doc
- 
+ @ENABLE_GTK_DOC_TRUE@DOC_DIRECTORY = doc
  SUBDIRS = \
  	po \
