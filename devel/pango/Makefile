@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/02/15 13:43:41 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2004/02/27 14:30:04 jmmv Exp $
 #
 
 DISTNAME=		pango-1.2.5
@@ -31,6 +31,8 @@ CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 CONFIGURE_ARGS+=	--with-qt=no
+
+BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
