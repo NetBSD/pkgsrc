@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2002/09/25 06:35:48 cjep Exp $
+$NetBSD: distinfo,v 1.4 2002/12/16 23:21:06 grant Exp $
 
-SHA1 (star-1.4.1.tar.gz) = 8f8b0ee1c7c83040de9607db0ae63da221957f69
-Size (star-1.4.1.tar.gz) = 496283 bytes
+SHA1 (star-1.4.2.tar.gz) = 93c19b4ce38fcbd8a0412c8fdba5c9dabec0c6cb
+Size (star-1.4.2.tar.gz) = 515619 bytes
 SHA1 (patch-aa) = 4fe4af396adf23eb7ac071b02a7bf726ab1e4318
