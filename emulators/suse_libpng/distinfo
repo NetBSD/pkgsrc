@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:45 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 10:49:58 agc Exp $
 
-MD5 (suse64/libpng.rpm) = ca61a7ac5451b317c9eb5f4c3da905a1
+SHA1 (suse64/libpng.rpm) = d7a1e08d995837f5949b7e9e60c13521eca394d1
+Size (suse64/libpng.rpm) = 215006 bytes

@@ -1,9 +1,16 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:02 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 10:49:53 agc Exp $
 
-MD5 (compat13-alpha.tar.gz) = 23b714b7322be77f8c10dcc8e650aaa6
-MD5 (compat13-arm32.tar.gz) = 4e1ff9e826a6e05dc9fe7f9140301d69
-MD5 (compat13-i386.tar.gz) = 50268aedf2b9f7c34ee8f65d657d2761
-MD5 (compat13-m68k.tar.gz) = 97364f4ba54a163a53452a17d375253a
-MD5 (compat13-mipsel.tar.gz) = 9c3ecf4bbd7379d3c0063d8bbc02e787
-MD5 (compat13-ns32k.tar.gz) = a1fd9df53df4a7f25fe196ce87957193
-MD5 (compat13-sparc.tar.gz) = 1b6d0e4be3b36e59976bd8d1b4aaf656
+SHA1 (compat13-alpha.tar.gz) = 18d84bf2be1b1f39cd6205c7b57194014d46a93a
+Size (compat13-alpha.tar.gz) = 446139 bytes
+SHA1 (compat13-arm32.tar.gz) = 0dcae05d5ec15968665a71ab0a058f3b2a3d2f87
+Size (compat13-arm32.tar.gz) = 247143 bytes
+SHA1 (compat13-i386.tar.gz) = 4a33dd2381e790e3e71fccf4bb9f65a7d0859b9a
+Size (compat13-i386.tar.gz) = 236494 bytes
+SHA1 (compat13-m68k.tar.gz) = a438a2d5f11106e431a8bba3061727069c5ec360
+Size (compat13-m68k.tar.gz) = 231047 bytes
+SHA1 (compat13-mipsel.tar.gz) = 6dc5fefcd47db2d967b250ec628ac00495c35117
+Size (compat13-mipsel.tar.gz) = 411250 bytes
+SHA1 (compat13-ns32k.tar.gz) = 98068ed599e6ac2e79ea3ce1b7fb3df4510fc171
+Size (compat13-ns32k.tar.gz) = 223997 bytes
+SHA1 (compat13-sparc.tar.gz) = 67797480c5828792b434c5b06ab1ea02be3ad6b5
+Size (compat13-sparc.tar.gz) = 244099 bytes
