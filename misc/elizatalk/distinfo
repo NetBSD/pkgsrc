@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/01 13:02:10 jlam Exp $
+
+SHA1 (elizatalk-0.4.tar.gz) = 8d5d1931fcd3d014b63d27d1c893661941800f84
+Size (elizatalk-0.4.tar.gz) = 116369 bytes
+SHA1 (patch-aa) = 4c8e1702707636cc3ef516b1a9a26f743d8b5f39
+SHA1 (patch-ab) = e3eac085d8a410771b8ce97079decaa0a656cc45
