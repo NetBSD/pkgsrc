@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.898 2003/09/24 08:16:02 grant Exp $
+$NetBSD: TODO,v 1.899 2003/09/24 09:14:29 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -178,7 +178,6 @@ Suggested package updates
 	o latd-1.18 [pkg/22735]
 	o lavaps-2.3
 	o lcms-1.0.9
-	o libesmtp-1.0.1
 	o libgcrypt-1.1.42
 	o libgphoto2-2.1.2
 	o libxml-2.5.11
