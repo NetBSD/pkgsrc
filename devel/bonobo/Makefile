@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2004/02/14 18:26:27 jmmv Exp $
-#
+# $NetBSD: Makefile,v 1.45 2004/03/29 18:20:13 tron Exp $
 
 DISTNAME=		bonobo-1.0.18
 PKGREVISION=		7
@@ -14,7 +13,7 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 BUILDLINK_DEPENDS.libxml=	libxml>1.8.15
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
@@ -32,11 +31,11 @@ post-install:
 	-@${RMDIR} ${PREFIX}/share/libefs/html
 	-@${RMDIR} ${PREFIX}/share/libefs
 
-.include "../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../print/gnome-print/buildlink2.mk"
-.include "../../textproc/libxml/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../devel/oaf/buildlink2.mk"
+.include "../../graphics/gdk-pixbuf-gnome/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../print/gnome-print/buildlink3.mk"
+.include "../../textproc/libxml/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../devel/oaf/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
