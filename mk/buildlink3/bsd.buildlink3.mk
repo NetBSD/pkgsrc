@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.7 2003/09/08 09:18:15 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.8 2003/09/09 09:15:03 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -290,7 +290,7 @@ buildlink-directories:
 	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11_DIR}
 .  if empty(USE_X11_LINKS:M[nN][oO])
 .    if exists(${_BLNK_X11_LINKS_DIR})
-	${_PKG_SILENT}${_PKG_DEBUG}${CP} -R ${_BLNK_X11_LINKS_DIR}/* ${BUILDLINK_X11_DIR}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${_BLNK_X11_LINKS_DIR} && ${PAX} -rwpp . ${BUILDLINK_X11_DIR}
 .    else
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "x11-links doesn't seem to be installed."
 	${_PKG_SILENT}${_PKG_DEBUG}${FALSE}
