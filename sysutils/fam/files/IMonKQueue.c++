@@ -1,4 +1,4 @@
-//  $NetBSD: IMonKQueue.c++,v 1.1 2004/10/17 19:20:53 jmmv Exp $
+//  $NetBSD: IMonKQueue.c++,v 1.2 2004/10/19 17:00:56 jmmv Exp $
 //
 //  Copyright (c) 2004 Julio M. Merino Vidal.
 //  
@@ -207,13 +207,9 @@ IMon::Status
 IMon::imon_express(const char *name, struct stat *status)
 {
     // Get file information.
-    if (status == NULL) {
-        // XXX This leaks memory.  AFAICT, the code calling this function
-        // expects status to be filled if it was NULL.  If this is true,
-        // the code in IMonLinux does worse than us, because it returns a
-        // pointer to a local variable...
-        status = new struct stat;
-    }
+    struct stat sb;
+    if (status == NULL)
+        status = &sb;
     if (lstat(name, status) == -1)
         return BAD;
 
