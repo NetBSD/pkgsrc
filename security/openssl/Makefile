@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2002/08/09 14:45:05 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2002/08/10 04:50:31 fredb Exp $
 
-DISTNAME=		openssl-0.9.6e
+DISTNAME=		openssl-0.9.6g
 SVR4_PKGNAME=		ossl
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssl.org/source/
@@ -48,8 +48,7 @@ test: all
 
 .if ${OPSYS} == "NetBSD"
 PATCH_SITES=		${MASTER_SITE_LOCAL}
-PATCHFILES=		openssl-0.9.6e-20020804-netbsd.patch.gz
-PATCH_DIST_STRIP=	-p1
+PATCHFILES=		openssl-0.9.6g-20020810-netbsd.patch.gz
 
 PKG_SYSCONFDIR.${PKGBASE}?=	/etc/openssl
 .endif
