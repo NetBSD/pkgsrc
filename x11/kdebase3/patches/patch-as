@@ -1,0 +1,14 @@
+$NetBSD: patch-as,v 1.4 2003/08/02 19:33:22 mrg Exp $
+
+--- kcontrol/kfontinst/kfontinst/StarOfficeConfig.cpp.orig	2003-05-07 21:44:02.000000000 +1000
++++ kcontrol/kfontinst/kfontinst/StarOfficeConfig.cpp	2003-08-03 04:04:00.000000000 +1000
+@@ -34,7 +34,8 @@
+ #include "BufferedFile.h"
+ #include "KfiGlobal.h"
+ #include "Config.h"
+-#include <fstream.h>
++#include <fstream>
++using namespace std;
+ #include <stdlib.h>
+ #include <string.h>
+ #include <qstring.h>
