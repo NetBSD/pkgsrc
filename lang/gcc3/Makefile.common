@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2005/01/21 15:08:14 drochner Exp $
+# $NetBSD: Makefile.common,v 1.15 2005/03/05 01:19:30 garbled Exp $
 
 GCC_VERSION=	3.3.5
 DISTNAME=	gcc-${GCC_VERSION}
@@ -59,6 +59,10 @@ GCC_PLATFORM=		${MACHINE_GNU_PLATFORM}
 .endif
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
 PLIST_SUBST+=		GCC_PLATFORM=${GCC_PLATFORM}
+
+.if ${OPSYS} == "AIX"
+CONFIGURE_ARGS+=    --disable-aix64
+.endif
 
 .if ${OPSYS} == "NetBSD"
 .  if !defined(USE_BINUTILS)
