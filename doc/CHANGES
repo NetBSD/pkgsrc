@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3249 2003/09/05 09:11:12 wiz Exp $
+$NetBSD: CHANGES,v 1.3250 2003/09/05 10:04:00 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3541,3 +3541,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mtree to 20030905 [grant 2003-09-05]
 	Added p5-Net-Telnet-Cisco-1.10 [grant 2003-09-05]
 	Updated wu-ftpd to 2.6.2nb1 [wiz 2003-09-05]
+	Updated xine-lib to 1rc0a [drochner 2003-09-05]
+	Updated xine-ui to 0.9.22 [drochner 2003-09-05]
