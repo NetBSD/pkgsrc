@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/06/01 11:23:37 rh Exp $
+# $NetBSD: Makefile,v 1.20 2000/08/14 23:48:24 wiz Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
@@ -18,9 +18,10 @@ HOMEPAGE=	http://ucd-snmp.ucdavis.edu/
 BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
 
 BUILD_DEFS+=	USE_INET6
+
 .include "../../mk/bsd.prefs.mk"
 
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-defaults --with-libwrap --with-logfile="/var/log/snmpd"
