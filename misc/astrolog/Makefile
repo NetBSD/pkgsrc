@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/05/09 15:24:44 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/06/18 11:12:02 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/08/10 22:31:15 fenner Exp
 #
 
@@ -14,12 +14,14 @@ MAINTAINER=     packages@netbsd.org
 
 EPHEM=          LRZ5_24 CHI_24 CPJV_24
 
+USE_X11=	yes
+
 EXTRACT_ONLY=   ${DISTNAME}.shr
 EXTRACT_CMD=    ${SH}
 EXTRACT_ARGS=
 DIST_SUBDIR=    astrolog
 ALL_TARGET=     astrolog
-NO_WRKSUBDIR=   Yes
+NO_WRKSUBDIR=   yes
 
 do-install:
 	-@${MKDIR} ${PREFIX}/lib/astrolog
@@ -39,8 +41,8 @@ do-install:
 		${INSTALL_DATA} Update.530 ${PREFIX}/share/doc/astrolog
 	cd ${WRKSRC} && \
 		${INSTALL_DATA} README.530 ${PREFIX}/share/doc/astrolog
-	@echo
-	@echo "See the file ${PREFIX}/share/doc/astrolog/Helpfile.530 for help"
-	@echo "and tune ${PREFIX}/lib/astrolog/astrolog.dat"
+	@${ECHO}
+	@${ECHO} "See the file ${PREFIX}/share/doc/astrolog/Helpfile.530 for"
+	@${ECHO} "help and tune ${PREFIX}/lib/astrolog/astrolog.dat"
 
 .include "../../mk/bsd.pkg.mk"
