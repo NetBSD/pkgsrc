@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/29 19:44:15 tv Exp $
+
+SHA1 (sredird-2.0.0.tar.gz) = 2eae6fb41b46ebf9f704dd997ef0a096e5084721
+Size (sredird-2.0.0.tar.gz) = 24053 bytes
+SHA1 (patch-aa) = 7300bf886b07e290f11cd7fae8792ddacf1a5634
