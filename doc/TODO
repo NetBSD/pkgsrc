@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1262 2004/01/01 17:41:36 cjep Exp $
+$NetBSD: TODO,v 1.1263 2004/01/01 18:50:30 cjep Exp $
 
 Suggested new packages
 ======================
@@ -158,7 +158,6 @@ Suggested package updates
 	o freeciv-1.14.1
 	o freetype-2.1.7 [breaks compatibility with other packages]
 	o fsviewer-0.2.5
-	o gap-4.3.5 [cjep has package, will test and commit asap]
 	o gauche-0.7.3 [kei]
 	o gcc-3.3.2 [gcc3 package]
 	o gcpio-2.5 [pkg/20799]
