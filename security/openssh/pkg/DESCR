@@ -1,0 +1,68 @@
+This is the port of OpenBSD's excellent OpenSSH to Linux and other
+Unices.
+
+OpenSSH is based on the last free version of Tatu Ylonen's SSH with
+all patent-encumbered algorithms removed (to external libraries), all
+known security bugs fixed, new features reintroduced and many other
+clean-ups. More information about SSH itself can be found in the file
+README.Ylonen. OpenSSH has been created by Aaron Campbell, Bob Beck,
+Markus Friedl, Niels Provos, Theo de Raadt, and Dug Song. It has a
+homepage at http://www.openssh.com/
+
+This port consists of the re-introduction of autoconf support, PAM
+support (for Linux and Solaris), EGD[1] support, SOCKS support (using
+the Dante [6] libraries and replacements for OpenBSD library functions
+that are (regrettably) absent from other unices. This port has been
+best tested on Linux, Solaris, HPUX, NetBSD and Irix. Support for AIX,
+SCO, NeXT and other Unices is underway. This version actively tracks
+changes in the OpenBSD CVS repository.
+
+The PAM support is now more functional than the popular packages of
+commercial ssh-1.2.x. It checks "account" and "session" modules for
+all logins, not just when using password authentication.
+
+All new code is released under a XFree style license, which is very
+liberal. Please refer to the source files for details. The code in
+bsd-*.[ch] is from the OpenBSD project and has its own license (again,
+see the source files for details).
+
+OpenSSH depends on Zlib[2], OpenSSL[3] and optionally PAM[4] and
+Dante[6]. To build the GNOME[5] pass-phrase requester
+(--with-gnome-askpass), you will need the GNOME libraries installed.
+If you are building OpenSSH on a Unix which lacks a kernel random
+number pool (/dev/random), you will need to install EGD[1]. 
+
+There is now several mailing lists for this port of OpenSSH. Please
+refer to http://violet.ibs.com.au/openssh/list.html for details on how
+to join.
+
+Please send bug reports and patches to the mailing list
+openssh-unix-dev@mindrot.org. The list is currently open to posting by
+unsubscribed users.
+
+Please refer to the INSTALL document for information on how to install
+OpenSSH on your system. The UPGRADING document details differences 
+between this port of OpenSSH and F-Secure SSH 1.x.
+
+Damien Miller <djm@ibs.com.au>
+Internet Business Solutions
+
+Miscellania - 
+
+This version of SSH is based upon code retrieved from the OpenBSD CVS
+repository which in turn was based on the last free 
+version of SSH released by Tatu Ylonen.
+
+Code in bsd-misc.[ch] and gnome-ssh-askpass.c is Copyright 1999 Damien
+Miller & Internet Business Solutions and is released under a X11-style
+license (see source files for details).
+
+References -
+
+[1] http://www.lothar.com/tech/crypto/
+[2] http://www.cdrom.com/pub/infozip/zlib/
+[3] http://www.openssl.org/
+[4] http://www.kernel.org/pub/linux/libs/pam/ (PAM is standard on Solaris)
+[5] http://www.gnome.org/
+[6] http://www.inet.no/dante
+
