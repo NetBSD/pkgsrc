@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/06/10 15:08:40 taca Exp $
+# $NetBSD: Makefile,v 1.29 2001/07/26 15:43:28 taca Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -16,15 +16,18 @@ COMMENT=		Qualcomm's POP server for Eudora
 
 VERSION=		4.0.3
 
+DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+INSTALL_FILE=		${WRKDIR}/INSTALL
+
 .include "Makefile.common"
 
 .if exists(/usr/sbin/user)
-USER_CMD=	/usr/sbin/user
-GROUP_CMD=	/usr/sbin/group
+USER_CMD=		/usr/sbin/user
+GROUP_CMD=		/usr/sbin/group
 .else
-DEPENDS+=	user>=20000313:../../sysutils/user
-USER_CMD=	${LOCALBASE}/sbin/user
-GROUP_CMD=	${LOCALBASE}/sbin/group
+DEPENDS+=		user>=20000313:../../sysutils/user
+USER_CMD=		${LOCALBASE}/sbin/user
+GROUP_CMD=		${LOCALBASE}/sbin/group
 .endif
 
 pre-build:
@@ -32,19 +35,27 @@ pre-build:
 		${WRKSRC}/man/popper.8 > ${WRKSRC}/man/popper.8.$$ && \
 	${MV} -f ${WRKSRC}/man/popper.8.$$ ${WRKSRC}/man/popper.8
 
+post-build:
+	for FILE in DEINSTALL INSTALL; do \
+		${SED}	-e 's|@BINGRP@|${BINGRP}|g' \
+			-e 's|@CHGRP@|${CHGRP}|g' \
+			-e 's|@CHOWN@|${CHOWN}|g' \
+			-e 's|@DB_SUFFIX@|${DB_SUFFIX}|g' \
+			-e 's|@USER_CMD@|${USER_CMD}|g' \
+			-e 's|@QPOPPER_USER@|${QPOPPER_USER}|g' \
+			-e 's|@PKG_PREFIX@|${PREFIX}|g' \
+			-e 's|@QPOPPER_APOP_AUTH@|${QPOPPER_APOP_AUTH}|g' \
+			-e 's|@INSTALL_DATA@|${INSTALL_DATA}|g' \
+			< ${PKGDIR}/$${FILE} > ${WRKDIR}/$${FILE}; \
+	done
+
 pre-install:
-	@${USER_CMD} info -e ${QPOPPER_USER} || \
-		${USER_CMD} add -g ${BINGRP} \
-			-d /nonexistent -s /sbin/nologin ${QPOPPER_USER}
+	PKG_PREFIX=${LOCALBASE} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
-	@if [ -f ${DESTDIR}/etc/apop.auth.db ]; then \
-		${CHOWN} ${QPOPPER_USER} ${DESTDIR}/etc/apop.auth.db; \
-		${CHGRP} ${BINGRP} ${DESTDIR}/etc/apop.auth.db; \
-	fi
 	${INSTALL_DATA} ${WRKSRC}/License.txt ${LOCALBASE}/share/doc/qpopper.License
 	${INSTALL_DATA} ${WRKSRC}/samples/qpopper.config \
 		 ${LOCALBASE}/share/examples
-	@${SETENV} PKG_PREFIX=${LOCALBASE} ${SH} ${INSTALL_FILE}
+	PKG_PREFIX=${LOCALBASE} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
