@@ -1,19 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:32:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/25 11:33:32 drochner Exp $
 #
 
-DISTNAME=	pcal_4_7_tar_Z
-PKGNAME=	pcal-4.7
-WRKSRC=		${WRKDIR}/pcal.4.7
+DISTNAME=	pcal-4.7
 CATEGORIES=	time
-MASTER_SITES=	http://www.geocities.com/SunsetStrip/Palms/5555/PS/
-EXTRACT_SUFX=	.txt
+MASTER_SITES=	http://membled.com/work/mirror/pcal/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kei@netbsd.org
-HOMEPAGE=	http://www.geocities.com/SunsetStrip/Palms/5555/PS/index.html
+# pcal's home used to be http://www.geocities.com/SunsetStrip/Palms/5555/PS/
+HOMEPAGE=	http://membled.com/work/mirror/pcal/
 COMMENT=	PostScript calendar program
-
-UUDECODE?=	uudecode -p
-EXTRACT_CMD=	${CAT} ${DOWNLOADED_DISTFILE} | ${UUDECODE} | ${PAX} -rz
 
 HTDOCS=		${PREFIX}/share/httpd/htdocs
 CGIBINDIR=	${PREFIX}/libexec/cgi-bin
