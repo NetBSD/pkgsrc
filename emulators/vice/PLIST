@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/12/04 00:42:04 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/01/31 00:51:39 kristerw Exp $
 bin/c1541
 bin/petcat
 bin/vsid
@@ -8,13 +8,6 @@ bin/xcbm2
 bin/xpet
 bin/xplus4
 bin/xvic
-info/vice.info
-info/vice.info-1
-info/vice.info-2
-info/vice.info-3
-info/vice.info-4
-info/vice.info-5
-info/vice.info-6
 man/man1/c1541.1
 man/man1/petcat.1
 man/man1/vice.1
@@ -39,15 +32,18 @@ share/doc/html/vice/vice_toc.html
 share/doc/vice/64doc.txt
 share/doc/vice/BUGS
 share/doc/vice/COPYING
+share/doc/vice/MSDOS-Howto.txt
 share/doc/vice/NEWS
 share/doc/vice/NLS-Howto.txt
 share/doc/vice/PETdoc.txt
 share/doc/vice/Readme.beos
 share/doc/vice/Readme.dos
 share/doc/vice/TODO
+share/doc/vice/Walkthrough-Howto.txt
 share/doc/vice/Win32-Howto.txt
 share/doc/vice/cbm_basic_tokens.txt
 share/doc/vice/drive_info.txt
+share/doc/vice/iec-bus.txt
 share/doc/vice/mon.txt
 share/doc/vice/new.gif
 share/doc/vice/serial.txt
@@ -146,9 +142,11 @@ share/vice/CBM-II/win_bukp.vkm
 share/vice/CBM-II/win_buks.vkm
 share/vice/CBM-II/x11_buks.vkm
 share/vice/DRIVES/d1541II
+share/vice/DRIVES/d1571cr
 share/vice/DRIVES/dos1001
 share/vice/DRIVES/dos1541
 share/vice/DRIVES/dos1551
+share/vice/DRIVES/dos1570
 share/vice/DRIVES/dos1571
 share/vice/DRIVES/dos1581
 share/vice/DRIVES/dos2031
@@ -210,6 +208,7 @@ share/vice/PRINTER/cbm1526
 share/vice/PRINTER/mps801
 share/vice/PRINTER/mps803
 share/vice/PRINTER/mps803.vpl
+share/vice/PRINTER/nl10-cbm
 share/vice/VIC20/basic
 share/vice/VIC20/beos_pos.vkm
 share/vice/VIC20/beos_sym.vkm
@@ -224,6 +223,10 @@ share/vice/VIC20/win_pos.vkm
 share/vice/VIC20/win_sym.vkm
 share/vice/VIC20/x11_pos.vkm
 share/vice/VIC20/x11_sym.vkm
+share/vice/fonts/cbm-directory-charset.fon
+share/vice/fonts/fonts.dir
+share/vice/fonts/vice-cbm.pcf
+@dirrm share/vice/fonts
 @dirrm share/vice/VIC20
 @dirrm share/vice/PRINTER
 @dirrm share/vice/PLUS4
