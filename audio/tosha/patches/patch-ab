@@ -1,0 +1,12 @@
+--- tosha.c.orig	Thu Jul 16 12:22:42 1998
++++ tosha.c	Thu Jul 16 12:23:05 1998
+@@ -183,7 +183,8 @@
+ 
+ char *tracklstr	= "1-100";
+ char *outname 	= "track%02d.pcm";
+-char device[256];
++char device_store[256];
++char *device = device_store;
+ int indexonly	= FALSE;
+ int quiet	= FALSE;
+ int verbose	= FALSE;
