@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3275 2005/03/23 15:59:02 wiz Exp $
+$NetBSD: TODO,v 1.3276 2005/03/23 16:31:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -52,7 +52,7 @@ Suggested new packages
 	Digital video recorder
 	http://www.mythtv.org/
 
-	Asterisk [grant, itojun/PR22585 (0.4 release), wip/asterisk]
+	Asterisk [wip/asterisk]
 	PBX-in-a-box for Linux
 	http://www.asterisk.org/
 
@@ -589,9 +589,8 @@ Suggested package updates
 	o libggigcp-0.9.0
 	o libggiwmh-0.2.0
 	o libgii-0.9.0
-	o libgnomecanvasmm26-2.8.0?
-	o libgnomemm26-2.8.0?
-	o libgnomeuimm26-2.8.0?
+	o libgnomemm26-2.10.0
+	o libgnomeuimm26-2.10.0
 	o libhydrogen-0.9.0
 	o libjit-0.0.4
 	o libksba-0.9.9
