@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 1999/10/22 23:48:45 tron Exp $
+@comment $NetBSD: PLIST,v 1.21 2000/01/20 13:40:13 tron Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -409,7 +409,6 @@ share/gnome/help/gnome-dev-info/C/gnome-client.html
 share/gnome/help/gnome-dev-info/C/gnome-color-selector.html
 share/gnome/help/gnome-dev-info/C/gnome-defs.html
 share/gnome/help/gnome-dev-info/C/gnome-dentry.html
-share/gnome/help/gnome-dev-info/C/gnome-dev-info.html
 share/gnome/help/gnome-dev-info/C/gnome-dialog.html
 share/gnome/help/gnome-dev-info/C/gnome-dns.html
 share/gnome/help/gnome-dev-info/C/gnome-fileconvert.html
@@ -440,7 +439,6 @@ share/gnome/help/gnome-dev-info/C/gnomeappbar.html
 share/gnome/help/gnome-dev-info/C/graphics-contexts.html
 share/gnome/help/gnome-dev-info/C/gtk-clock.html
 share/gnome/help/gnome-dev-info/C/gtk-ted.html
-share/gnome/help/gnome-dev-info/C/index.html
 share/gnome/help/gnome-dev-info/C/intro.html
 share/gnome/help/gnome-dev-info/C/libgnome.html
 share/gnome/help/gnome-dev-info/C/libgnomeui.html
@@ -471,15 +469,14 @@ share/gnome/html/gnorba/gnorba-gnorba.html
 share/gnome/html/gnorba/gnorba-goad.html
 share/gnome/html/gnorba/libgnorba.html
 share/gnome/html/zvt/book1.html
-share/gnome/html/zvt/x1025.html
-share/gnome/html/zvt/x1055.html
-share/gnome/html/zvt/x1076.html
-share/gnome/html/zvt/x1096.html
 share/gnome/html/zvt/x119.html
-share/gnome/html/zvt/x977.html
+share/gnome/html/zvt/x144.html
+share/gnome/html/zvt/x152.html
+share/gnome/html/zvt/x192.html
+share/gnome/html/zvt/x222.html
+share/gnome/html/zvt/x243.html
+share/gnome/html/zvt/x263.html
 share/gnome/html/zvt/x98.html
-share/gnome/html/zvt/x985.html
-share/gnome/html/zvt/zvt-zvtterm.html
 share/gnome/html/zvt/zvtterm-future.html
 share/gnome/html/zvt/zvtterm-input-output.html
 share/gnome/html/zvt/zvtterm-notes.html
@@ -575,10 +572,10 @@ share/type-convert/type.convert
 @dirrm share/gnome/html/gnorba
 @dirrm share/gnome/html/zvt
 @dirrm share/gnome/html
-@dirrm share/gnome
+@unexec rmdir %D/etc/httpd 2>/dev/null || true
 @dirrm share/idl
 @dirrm share/mime-info
 @dirrm share/pixmaps
 @dirrm share/type-convert
-@exec mkdir -p @@LOCALSTATEDIR@@
-@unexec rm -rf @@LOCALSTATEDIR@@
+@exec mkdir -p ${LOCALSTATEDIR}
+@unexec rm -rf ${LOCALSTATEDIR}
