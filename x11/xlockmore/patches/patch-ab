@@ -1,0 +1,11 @@
+--- modes/Makefile.in.orig	Thu Oct  2 17:58:33 1997
++++ modes/Makefile.in	Mon Oct 13 10:07:43 1997
+@@ -204,7 +204,7 @@
+ 
+ DEFINES = -DDEF_FILESEARCHPATH=\"$(xapploaddir)/%N%S\"
+ DEFS = @DEFS@ $(DEFINES)
+-XLOCKINC = @XLOCKINC@ -I. -I.. -I$(UTILDIR) -I../..
++XLOCKINC = -I. -I.. -I$(UTILDIR) -I../.. @XLOCKINC@
+ CFLAGS = @CFLAGS@
+ #CFLAGS = -O
+ #CFLAGS = -g
