@@ -3,7 +3,8 @@
 # Date created:		18 Februar 1995
 # Whom:			Gennady Sorokopud <gena@netvision.net.il>
 #
-# $Id: Makefile,v 1.1.1.1 1997/11/23 22:21:02 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/11/23 22:26:53 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.21 1997/08/27 23:01:53 cwt Exp
 #
 
 DISTNAME=	scotty-2.1.6
@@ -15,8 +16,8 @@ MAINTAINER=	phk@freebsd.org
 LIB_DEPENDS=	tk80\\.1\\.:${PORTSDIR}/x11/tk80
 
 GNU_CONFIGURE=  yes
-CONFIGURE_ARGS= --with-tcl-config=/usr/local/lib/tcl8.0 \
-		--with-tk-config=/usr/local/lib/tk8.0
+CONFIGURE_ARGS= --with-tcl-config=${PREFIX}/lib/tcl8.0 \
+		--with-tk-config=${PREFIX}/lib/tk8.0
 
 WRKSRC=${WRKDIR}/${DISTNAME}/unix
 MAN1=		tkined.1 scotty.1
@@ -29,13 +30,8 @@ PLIST=		${PKGDIR}/PLIST.tmp
 pre-install:
 	@cd ${WRKSRC};make sinstall
 	@${CP} ${WRKSRC}/../tnm/ntping/ntping.8 ${WRKSRC}/../doc
-	@sed "s,@FREEBSD_VERSION@,$$(uname -m)-$$(uname)-$$(uname -r)," pkg/PLIST >/tmp/PLIST
-.if defined(NOMANCOMPRESS)
-	@sed "s,@GZIP@,," /tmp/PLIST >pkg/PLIST.tmp
-.else
-	@sed "s,@GZIP@,.gz," /tmp/PLIST >pkg/PLIST.tmp
-.endif
-	@${RM} /tmp/PLIST
+	@sed "s,@NETBSD_VERSION@,$$(uname -m)-$$(uname)-$$(uname -r)," ${PKGDIR}/PLIST >${PLIST}.tmp
+PLIST_SRC=${PLIST}.tmp
 
 pre-clean:
 	@${RM} -f pkg/PLIST.tmp
