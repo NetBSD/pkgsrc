@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 1998/12/05 00:00:09 tv Exp $
+
+--- src/os/unix/os.c.orig	Fri Dec  4 18:53:48 1998
++++ src/os/unix/os.c	Fri Dec  4 18:54:00 1998
+@@ -119,7 +119,7 @@
+ #elif defined(RHAPSODY)
+     NSUnLinkModule(handle,FALSE);
+ 
+-#else
++#elif 0
+     dlclose(handle);
+ #endif
+ 
