@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2001/03/19 11:14:15 skrll Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/05/17 12:33:05 hubertf Exp $
 bin/glmovie
 bin/gtv
 bin/plaympeg
@@ -14,12 +14,13 @@ include/smpeg/MPEGstream.h
 include/smpeg/MPEGsystem.h
 include/smpeg/MPEGvideo.h
 include/smpeg/smpeg.h
-lib/libsmpeg.so
 lib/libsmpeg-0.4.so
 lib/libsmpeg-0.4.so.1
-lib/libsmpeg-0.4.so.1.0
+lib/libsmpeg-0.4.so.1.2
 lib/libsmpeg.a
 lib/libsmpeg.la
+lib/libsmpeg.so
 man/man1/gtv.1
 man/man1/plaympeg.1
+share/aclocal/smpeg.m4
 @dirrm include/smpeg
