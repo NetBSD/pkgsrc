@@ -1,0 +1,41 @@
+$NetBSD: patch-ae,v 1.3 2003/09/25 16:05:21 recht Exp $
+
+--- mono/mini/mini-x86.c.orig	2003-08-05 12:32:07.000000000 +0200
++++ mono/mini/mini-x86.c	2003-09-25 01:55:36.000000000 +0200
+@@ -7,6 +7,10 @@
+  *
+  * (C) 2003 Ximian, Inc.
+  */
++
++#include <sys/types.h>
++#include <sys/mman.h>
++
+ #include "mini.h"
+ #include <string.h>
+ #include <math.h>
+@@ -19,6 +23,13 @@
+ #include "inssel.h"
+ #include "cpu-pentium.h"
+ 
++/* XXX OpenBSD port.  */
++extern int    OPENBSD__signbitd(double);
++extern int    OPENBSD__signbitf(float);
++#undef signbit
++#define signbit(x) (sizeof(x) == sizeof(float) ? \
++    OPENBSD__signbitf(x) : OPENBSD__signbitd(x))
++
+ const char*
+ mono_arch_regname (int reg) {
+ 	switch (reg) {
+@@ -400,7 +411,11 @@
+ 
+ 	if (have_cpuid) {
+ 		CpuidFunc func = (CpuidFunc)cpuid_impl;
++		if (mprotect (func, sizeof(cpuid_impl), PROT_EXEC | PROT_READ) == -1)
++			g_error ("mprotect failed\n");
+ 		func (id, p_eax, p_ebx, p_ecx, p_edx);
++		/*if (mprotect (func, sizeof(cpuid_impl), PROT_WRITE | PROT_READ) == -1)
++		  g_error ("mprotect failed\n");*/
+ 		/*
+ 		 * We use this approach because of issues with gcc and pic code, see:
+ 		 * http://gcc.gnu.org/cgi-bin/gnatsweb.pl?cmd=view%20audit-trail&database=gcc&pr=7329

@@ -1,0 +1,88 @@
+$NetBSD: patch-ag,v 1.1 2003/09/25 16:05:21 recht Exp $
+
+--- /dev/null	2003-09-25 01:52:37.000000000 +0200
++++ mono/mini/OPENBSD_signbit.c	2003-09-25 01:55:36.000000000 +0200
+@@ -0,0 +1,83 @@
++/*
++ * Copyright 2003 Marius Aamodt Eriksen <marius@monkey.org>
++ * All rights reserved.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions
++ * are met:
++ * 1. Redistributions of source code must retain the above copyright
++ *    notice, this list of conditions and the following disclaimer.
++ * 2. Redistributions in binary form must reproduce the above copyright
++ *    notice, this list of conditions and the following disclaimer in the
++ *    documentation and/or other materials provided with the distribution.
++ * 3. The name of the author may not be used to endorse or promote products
++ *    derived from this software without specific prior written permission.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
++ * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
++ * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
++ * IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
++ * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
++ * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
++ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
++ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
++ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
++ * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
++ */
++
++/* XXX this is for little endian machines */
++
++#include <sys/types.h>
++
++int OPENBSD__signbitd(double);
++int OPENBSD__signbitf(float);
++
++typedef union 
++{
++  double value;
++  struct 
++  {
++    u_int32_t lsw;
++    u_int32_t msw;
++  } parts;
++} ieee_double_shape_type;
++
++typedef union
++{
++  float value;
++  u_int32_t word;
++} ieee_float_shape_type;
++
++#define GET_HIGH_WORD(i,d)                                      \
++do {                                                            \
++  ieee_double_shape_type gh_u;                                  \
++  gh_u.value = (d);                                             \
++  (i) = gh_u.parts.msw;                                         \
++} while (0)
++
++#define GET_FLOAT_WORD(i,d)                                     \
++do {                                                            \
++  ieee_float_shape_type gf_u;                                   \
++  gf_u.value = (d);                                             \
++  (i) = gf_u.word;                                              \
++} while (0)
++
++int
++OPENBSD__signbitd(double d)
++{
++	int32_t hw;
++
++	GET_HIGH_WORD(hw, d);
++
++ 	return (hw >> 31);
++}
++
++int
++OPENBSD__signbitf(float f)
++{
++	int32_t hw;
++
++	GET_FLOAT_WORD(hw, f);
++
++	return (hw >> 31);
++}
