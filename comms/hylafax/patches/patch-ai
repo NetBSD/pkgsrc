@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.5 2001/04/23 15:06:15 abs Exp $
+$NetBSD: patch-ai,v 1.6 2001/07/08 13:32:15 bad Exp $
 
---- etc/faxsetup.sh.in.orig	Tue Feb  6 04:54:07 2001
-+++ etc/faxsetup.sh.in
+--- etc/faxsetup.sh.in.orig	Thu Jun 14 07:36:16 2001
++++ etc/faxsetup.sh.in	Sun Jul  8 01:25:48 2001
 @@ -41,7 +41,9 @@
  # This script interactively prepares and verifies 
  # a HylaFAX client and/or server machine for use.
@@ -37,19 +37,32 @@ $NetBSD: patch-ai,v 1.5 2001/04/23 15:06:15 abs Exp $
  MKFIFO
  MV
  PATH
-@@ -747,6 +751,48 @@
+@@ -747,6 +751,61 @@
      bitch "Sorry, but you must run this script as the super-user!"
      boom
  fi
 +
 +createspool()
 +{
++    old_spool="`dirname ${DIR_SPOOL}`/fax"
++    if [ -d "${old_spool}" ]; then
++	cat <<EOF
++=================================================================
++
++  Found an existing ${old_spool}, probably from an older version
++  of the HylaFax package.
++  You might want to copy you customizations to @SPOOL@ after
++  faxsetup is done.
++
++=================================================================
++EOF
++    fi
 +    if [ -d "${DIR_SPOOL}" ]; then
 +	cat <<EOF
 +=================================================================
 +
 +  @SPOOL@ already exists, probably from a previous run of
-+  faxsetup.sh --  I'm not touching it!
++  faxsetup  --  I'm not touching it!
 +
 +  If you encounter problems, deinstall the HylaFax package,
 +  remove @SPOOL@ and reinstall the package.

@@ -1,7 +1,7 @@
-$NetBSD: patch-an,v 1.4 2001/04/23 15:06:18 abs Exp $
+$NetBSD: patch-an,v 1.5 2001/07/08 13:32:15 bad Exp $
 
---- util/Makefile.in.orig	Sun Sep  3 04:39:34 2000
-+++ util/Makefile.in
+--- util/Makefile.in.orig	Wed May 30 04:04:39 2001
++++ util/Makefile.in	Sun Jul  8 01:12:54 2001
 @@ -154,7 +154,7 @@
  PUTCLIENT	= ${INSTALL} -idb ${PRODUCT}.sw.client
  PUTSERVER	= ${INSTALL} -idb ${PRODUCT}.sw.server
@@ -16,13 +16,13 @@ $NetBSD: patch-an,v 1.4 2001/04/23 15:06:18 abs Exp $
  	${PUTSBIN} -m 755 -src recvstats.sh -O recvstats
  	${PUTSBIN} -m 755 -idb "config(update)" -src faxcron.sh -O faxcron
 +	-${MKDIR} -m 755 ${LIBEXEC}/hylafax
- 	${PUTSUPD} -m 755 -src ${SRCDIR}/ps2fax.gs.sh -O ps2fax.gs
- 	${PUTSUPD} -m 755 -src ${SRCDIR}/ps2fax.dps.sh -O ps2fax.dps
- 	${PUTSUPD} -m 755 -src ${SRCDIR}/ps2fax.imp.sh -O ps2fax.imp
-@@ -182,9 +183,11 @@
- 	${PUTSUPD} -m 755 -src ${SRCDIR}/pollrcvd.sh -O pollrcvd
- 	${PUTSUPD} -m 755 -src ${SRCDIR}/mkcover.sh -O mkcover
- 	${PUTSUPD} -m 755 -src ${SRCDIR}/wedged.sh -O wedged
+ 	${PUTSUPD} -m 755 -src ps2fax.gs.sh -O ps2fax.gs
+ 	${PUTSUPD} -m 755 -src ps2fax.dps.sh -O ps2fax.dps
+ 	${PUTSUPD} -m 755 -src ps2fax.imp.sh -O ps2fax.imp
+@@ -183,9 +184,11 @@
+ 	${PUTSUPD} -m 755 -src pollrcvd.sh -O pollrcvd
+ 	${PUTSUPD} -m 755 -src mkcover.sh -O mkcover
+ 	${PUTSUPD} -m 755 -src wedged.sh -O wedged
 -	${PUTSERVER} -F ${SPOOL}/etc -m 444 -idb "config(update)" \
 +	-${MKDIR} -m 755 ${PREFIX}/share/hylafax
 +	-${MKDIR} -m 755 ${PREFIX}/share/hylafax/etc_template
