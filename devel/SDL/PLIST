@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/14 00:39:45 wiz Exp $
 bin/sdl-config
 include/SDL/SDL.h
 include/SDL/SDL_active.h
@@ -16,6 +16,7 @@ include/SDL/SDL_keysym.h
 include/SDL/SDL_main.h
 include/SDL/SDL_mouse.h
 include/SDL/SDL_mutex.h
+include/SDL/SDL_opengl.h
 include/SDL/SDL_quit.h
 include/SDL/SDL_rwops.h
 include/SDL/SDL_syswm.h
@@ -30,7 +31,7 @@ lib/libSDL.a
 lib/libSDL.la
 lib/libSDL.so
 lib/libSDL.so.0
-lib/libSDL.so.0.2
+lib/libSDL.so.0.3
 lib/libSDLmain.a
 man/man3/SDLKey.3
 man/man3/SDL_ActiveEvent.3
@@ -79,6 +80,7 @@ man/man3/SDL_EnableKeyRepeat.3
 man/man3/SDL_EnableUNICODE.3
 man/man3/SDL_Event.3
 man/man3/SDL_EventState.3
+man/man3/SDL_ExposeEvent.3
 man/man3/SDL_FillRect.3
 man/man3/SDL_Flip.3
 man/man3/SDL_FreeCursor.3
@@ -95,6 +97,7 @@ man/man3/SDL_GetAppState.3
 man/man3/SDL_GetAudioStatus.3
 man/man3/SDL_GetClipRect.3
 man/man3/SDL_GetCursor.3
+man/man3/SDL_GetError.3
 man/man3/SDL_GetEventFilter.3
 man/man3/SDL_GetGamma.3
 man/man3/SDL_GetGammaRamp.3

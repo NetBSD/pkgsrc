@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.8 2001/09/24 14:28:56 rh Exp $
+$NetBSD: patch-aj,v 1.9 2002/02/14 00:39:46 wiz Exp $
 
---- configure.in.orig	Mon Jul 23 21:54:03 2001
+--- configure.in.orig	Mon Jul 23 15:54:03 2001
 +++ configure.in
 @@ -366,10 +366,7 @@
                    , enable_nas=yes)
@@ -34,7 +34,7 @@ $NetBSD: patch-aj,v 1.8 2001/09/24 14:28:56 rh Exp $
              ;;
          *-*-openbsd*)
              pthread_cflags="-D_REENTRANT"
-@@ -1348,6 +1345,7 @@
+@@ -1348,11 +1345,13 @@
          CheckDummyVideo
          CheckDiskAudio
          CheckNASM
@@ -42,7 +42,13 @@ $NetBSD: patch-aj,v 1.8 2001/09/24 14:28:56 rh Exp $
          CheckOSS
          CheckARTSC
          CheckESD
-@@ -1642,7 +1640,11 @@
+         CheckNAS
+         CheckX11
++        CheckDGA
+         CheckAAlib
+         CheckOpenGL
+         CheckPTHREAD
+@@ -1642,7 +1641,11 @@
              COPY_ARCH_SRC(src/thread, linux, SDL_systhread_c.h)
              COPY_ARCH_SRC(src/thread, linux, SDL_sysmutex.c)
              COPY_ARCH_SRC(src/thread, linux, SDL_sysmutex_c.h)
@@ -55,7 +61,7 @@ $NetBSD: patch-aj,v 1.8 2001/09/24 14:28:56 rh Exp $
              COPY_ARCH_SRC(src/thread, generic, SDL_syssem_c.h)
              COPY_ARCH_SRC(src/thread, linux, SDL_syscond.c)
              COPY_ARCH_SRC(src/thread, generic, SDL_syscond_c.h)
-@@ -2021,6 +2023,10 @@
+@@ -2021,6 +2024,10 @@
  
  if test $ARCH = solaris; then
    SDL_RLD_FLAGS="-R\${exec_prefix}/lib"
