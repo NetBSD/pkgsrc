@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/04/03 09:25:35 martin Exp $
+# $NetBSD: Makefile,v 1.2 2000/04/03 17:37:51 tron Exp $
 #
 
 DISTNAME=	stunnel-3.8
@@ -19,6 +19,8 @@ DEPENDS+=       openssl>=0.9.4:../openssl
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=-with-ssl=${OPENSSL_DIR}
+
+BUILD_DEFS+=	OPENSSL_DIR
 
 pre-configure:
 	(cd ${WRKSRC}; autoreconf)
