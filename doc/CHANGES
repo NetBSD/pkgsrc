@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9002 2005/02/02 03:09:15 epg Exp $
+$NetBSD: CHANGES,v 1.9003 2005/02/02 09:11:41 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -707,3 +707,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mencvcd to 0.3nb1 [tron 2005-02-01]
 	Updated p5-SVN-Mirror to 0.55 [epg 2005-02-02]
 	Updated svk to 0.29 [epg 2005-02-02]
+	Updated mencvcd to 0.3nb2 [tron 2005-02-02]
