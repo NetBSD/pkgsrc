@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4528 2004/01/21 00:54:43 abs Exp $
+$NetBSD: CHANGES,v 1.4529 2004/01/21 05:05:42 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -366,8 +366,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Added pthread-sem-1.0 [rh 2004-01-20]
 	Updated elvis to 2.2.0nb1 [recht 2004-01-20]
 	Updated elvis-x11 to 2.2.0nb1 [recht 2004-01-20]
-	Update cpuflags to 0.60 [abs 2004-01-20]
+	Updated cpuflags to 0.60 [abs 2004-01-20]
 	Updated spamprobe to 0.9g2 [hubertf 2004-01-21]
 	Updated evolution to 1.4.5nb2 [rh 2004-01-21]
-	Update cpuflags to 0.61 [abs 2004-01-21]
-
+	Updated cpuflags to 0.61 [abs 2004-01-21]
+	Added fastfs-19940614 [grant 2004-01-21]
