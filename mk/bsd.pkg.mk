@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1114 2002/12/25 12:24:57 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1115 2002/12/25 12:32:32 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -503,6 +503,9 @@ PLIST=			${WRKDIR}/.PLIST
 PLIST_SRC=		${PKGDIR}/PLIST.common
 .    if exists(${PKGDIR}/PLIST.${OPSYS})
 PLIST_SRC+=		${PKGDIR}/PLIST.${OPSYS}
+.    endif
+.    if exists(${PKGDIR}/PLIST.common_end)
+PLIST_SRC+=		${PKGDIR}/PLIST.common_end
 .    endif
 .  elif exists(${PKGDIR}/PLIST.${OPSYS})
 PLIST_SRC=		${PKGDIR}/PLIST.${OPSYS}
