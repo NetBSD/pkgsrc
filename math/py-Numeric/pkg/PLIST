@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/12/05 10:05:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/07/11 10:32:01 drochner Exp $
 PYINC/Numeric/arrayobject.h
 PYINC/Numeric/f2c.h
 PYINC/Numeric/ranlib.h
@@ -8,12 +8,12 @@ PYSITELIB/FFT/FFT.pyc
 PYSITELIB/FFT/__init__.py
 PYSITELIB/FFT/__init__.pyc
 PYSITELIB/FFT/fftpack.so
+PYSITELIB/MA/MA.py
+PYSITELIB/MA/MA.pyc
 PYSITELIB/MA/MA_version.py
 PYSITELIB/MA/MA_version.pyc
 PYSITELIB/MA/__init__.py
 PYSITELIB/MA/__init__.pyc
-PYSITELIB/MA/activeattr.py
-PYSITELIB/MA/activeattr.pyc
 PYSITELIB/Numeric/ArrayPrinter.py
 PYSITELIB/Numeric/ArrayPrinter.pyc
 PYSITELIB/Numeric/LinearAlgebra.py
@@ -38,14 +38,29 @@ PYSITELIB/Numeric/numeric_version.py
 PYSITELIB/Numeric/numeric_version.pyc
 PYSITELIB/Numeric/ranlib.so
 PYSITELIB/Numeric/umath.so
+PYSITELIB/PropertiedClasses/Properties.py
+PYSITELIB/PropertiedClasses/Properties.pyc
+PYSITELIB/PropertiedClasses/Properties_version.py
+PYSITELIB/PropertiedClasses/Properties_version.pyc
+PYSITELIB/PropertiedClasses/__init__.py
+PYSITELIB/PropertiedClasses/__init__.pyc
 PYSITELIB/RNG/RNG.so
 PYSITELIB/RNG/Statistics.py
 PYSITELIB/RNG/Statistics.pyc
 PYSITELIB/RNG/__init__.py
 PYSITELIB/RNG/__init__.pyc
 PYSITELIB/Numeric.pth
+PYSITELIB/kinds/__init__.py
+PYSITELIB/kinds/__init__.pyc
+PYSITELIB/kinds/_kinds.so
+PYSITELIB/kinds/kinds.py
+PYSITELIB/kinds/kinds.pyc
+PYSITELIB/kinds/kinds_version.py
+PYSITELIB/kinds/kinds_version.pyc
 @dirrm PYINC/Numeric
 @dirrm PYSITELIB/FFT
 @dirrm PYSITELIB/Numeric
 @dirrm PYSITELIB/MA
+@dirrm PYSITELIB/PropertiedClasses
 @dirrm PYSITELIB/RNG
+@dirrm PYSITELIB/kinds
