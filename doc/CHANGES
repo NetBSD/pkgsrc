@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5080 2004/03/03 22:43:03 minskim Exp $
+$NetBSD: CHANGES,v 1.5081 2004/03/03 23:17:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1145,3 +1145,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Deleted lynx-current [ben 2004-03-03]
 	Updated bvi to 1.3.2 [ben 2004-03-03]
 	Updated xchm to 0.9 [minskim 2004-03-03]
+	Updated sylpheed-gtk2 to 0.9.9 [minskim 2004-03-03]
