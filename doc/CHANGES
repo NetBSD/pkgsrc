@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7011 2004/08/27 05:28:13 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7012 2004/08/27 05:57:47 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4062,3 +4062,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added rcorder-20040826 [schmonz 2004-08-27]
 	Updated rss2email to 2.53 [schmonz 2004-08-27]
 	Updated clamsmtp to 0.6 [xtraeme 2004-08-27]
+	Added ipw-firmware-1.0 [lukem 2004-08-27]
