@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/09 20:36:51 agc Exp $
+# $NetBSD: Makefile,v 1.4 2002/01/21 20:39:21 agc Exp $
 #
 
 DISTNAME=	olvwm4.src4
@@ -14,9 +14,9 @@ DEPENDS+=	xview-lib>=3.2.1nb1:../../x11/xview-lib
 DEPENDS+=	xview-clients>=3.2.1:../../x11/xview-clients
 
 USE_X11BASE=	# defined
-USE_XPM=	# defined
 USE_IMAKE=	# defined
 
 WRKSRC=		${WRKDIR}
 
+.include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
