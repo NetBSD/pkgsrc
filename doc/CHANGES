@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8984 2005/01/31 00:28:54 wiz Exp $
+$NetBSD: CHANGES,v 1.8985 2005/01/31 04:55:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -688,3 +688,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xemacs to 21.4.15nb3 [minskim 2005-01-31]
 	Updated xemacs-current to 21.5.18nb3 [minskim 2005-01-31]
 	Updated wesnoth to 0.8.9 [wiz 2005-01-31]
+	Updated instiki to 0.9.2nb1 [minskim 2005-01-31]
