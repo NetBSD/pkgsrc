@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.101 2004/04/15 09:41:22 jmmv Exp $
+# $NetBSD: pkglint.pl,v 1.102 2004/04/17 17:26:40 seb Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -22,6 +22,7 @@
 use Getopt::Std;
 use File::Basename;
 use FileHandle;
+use Cwd;
 
 $err = $warn = 0;
 $extrafile = $parenwarn = $committer = 1;	# -abc
@@ -84,7 +85,7 @@ if (-e <$portdir/../Packages.txt>) {
 
 if (-e <$portdir/../../Packages.txt>) {
 	if ($portdir eq ".") {
-		$category = basename(dirname($ENV{'PWD'}));
+		$category = basename(dirname(cwd()));
 	} else {
 		$category = basename(dirname($portdir));
 	}
