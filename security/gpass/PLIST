@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/29 08:01:24 jmmv Exp $
+bin/gpass
+share/applications/gpass.desktop
+share/doc/gpass/ABOUT-NLS
+share/doc/gpass/AUTHORS
+share/doc/gpass/COPYING
+share/doc/gpass/ChangeLog
+share/doc/gpass/INSTALL
+share/doc/gpass/NEWS
+share/doc/gpass/README
+share/doc/gpass/TODO
+share/gpass/change-password-dialog.glade
+share/gpass/create-password-dialog.glade
+share/gpass/dirty-close-dialog.glade
+share/gpass/generate-password-dialog.glade
+share/gpass/main-window.glade
+share/gpass/master-password-dialog.glade
+share/gpass/password-entry-dialog.glade
+share/gpass/remove-dialog.glade
+share/gpass/stock_edit.png
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gpass.mo
+@dirrm share/gpass
+@dirrm share/doc/gpass
+@comment in xdg-dirs: @dirrm share/applications
