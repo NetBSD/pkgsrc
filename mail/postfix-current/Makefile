@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/14 04:39:59 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/14 11:26:14 itojun Exp $
 
 DISTNAME=	snapshot-20000531
 PKGNAME=	postfix-20000531
@@ -60,6 +60,7 @@ pre-install:
 	    ${PREFIX}/share/doc/postfix ${PREFIX}/libexec/postfix
 	${CHOWN} root:wheel ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 	${CHMOD} 755 ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
+	${RM} ${WRKSRC}/conf/*.orig
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${PREFIX}/etc
