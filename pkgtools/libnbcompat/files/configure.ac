@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.36 2004/02/14 04:47:13 simonb Exp $
+dnl $NetBSD: configure.ac,v 1.37 2004/03/11 13:28:45 grant Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -114,6 +114,16 @@ AC_CHECK_TYPES([long long, int8_t, int16_t, int32_t, int64_t, u_int8_t, u_int16_
 #if HAVE_SYS_BITYPES_H
 #include <sys/bitypes.h>
 #endif])
+AC_CHECK_TYPES([fsid_t],[],[],
+[#if HAVE_SYS_TYPES_H
+#include <sys/types.h>
+#endif
+#if HAVE_SYS_PARAM_H
+#include <sys/param.h>
+#endif
+#if HAVE_SYS_MOUNT_H
+#include <sys/mount.h>
+#endif])
 AC_C_BIGENDIAN
 AC_CHECK_SIZEOF(off_t, 0)
 
@@ -125,7 +135,7 @@ AC_FUNC_VPRINTF
 AC_REPLACE_FUNCS([err fgetln fparseln fseeko getenv inet_ntop \
 	inet_pton isblank lchflags lchmod lchown lutimes mkstemp mkdtemp \
 	poll setprogname snprintf strdup strerror strlcat strlcpy \
-	strmode strptime strsep strtoll timegm usleep])
+	strmode strptime strsep strtoll timegm usleep utimes])
 
 AC_CHECK_FUNCS([setgroupent setgrent setpassent setpwent])
 AC_CHECK_FUNCS([bcopy bzero memset memcpy setlocale])
@@ -219,6 +229,7 @@ if test $pkg_use_nbcompat_statfs = yes; then
 		Define to 1 if the `statfs' function is built into the library.
 	])
 	AC_LIBOBJ(statfs)
+	AC_CHECK_MEMBERS([struct statvfs.f_basetype],[],[],[#include <sys/statvfs.h>])
 fi
 
 if test $ac_cv_type_long_long = yes; then
