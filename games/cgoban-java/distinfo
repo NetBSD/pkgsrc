@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/04/07 19:19:58 mason Exp $
+$NetBSD: distinfo,v 1.4 2003/05/08 10:44:07 rh Exp $
 
-SHA1 (cgoban-unix-2.4.59.tar.bz2) = 45c8a25fda8a37d9cbd7d0b1723c904b64abde48
-Size (cgoban-unix-2.4.59.tar.bz2) = 863012 bytes
+SHA1 (cgoban-unix-2.4.60.tar.bz2) = 72693014c51aab56ffad336d0365f89d62e9b7a3
+Size (cgoban-unix-2.4.60.tar.bz2) = 865119 bytes
