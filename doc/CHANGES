@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7582 2004/10/28 01:22:30 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7583 2004/10/28 03:18:19 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4909,3 +4909,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Moved mysql4-server to mysql-server [xtraeme 2004-10-28]
 	Updated mysql-client to 4.1.7 [xtraeme 2004-10-28]
 	Updated mysql-server to 4.1.7 [xtraeme 2004-10-28]
+	Updated cue to 20041025 [itojun 2004-10-28]
