@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 1999/10/17 23:47:37 simonb Exp $
+# $NetBSD: Makefile,v 1.40 1999/11/15 11:36:04 rh Exp $
 #
 
 DISTNAME=	ghostscript-5.50
@@ -6,9 +6,10 @@ CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.cs.wisc.edu/ghost/aladdin/gs550/ \
 		ftp://ftp.cs.wisc.edu/ghost/aladdin/fonts/ \
 		http://www.erdw.ethz.ch/~bonk/ftp/gs-driver-distrib/ \
-		http://www.ozemail.com.au/~geoffk/pdfencrypt/
+		http://www.ozemail.com.au/~geoffk/pdfencrypt/ \
+		ftp://ftp.sbs.de/pub/graphics/ghostscript/pcl3/
 DISTFILES=	${GS_SOURCES} ${GS_FONTS_STD} ${GS_FONTS_OTHER} \
-		${HP850_DRV} ${PDF_SEC}
+		${HP850_DRV} ${HPDJ_DRV} ${PDF_SEC}
 
 PATCH_SITES=	http://www.cs.wisc.edu/~ghost/aladdin/relnotes/gs550/
 PATCHFILES=	990524.txt 990220c.txt 990220b.txt 990220a.txt 990220.txt \
@@ -26,7 +27,7 @@ DEPENDS=	png-1.0.3:../../graphics/png
 
 USE_X11=	yes
 DIST_SUBDIR=	${DISTNAME:C/-.*$//}
-EXTRACT_ONLY=	${GS_SOURCES}
+EXTRACT_ONLY=	${GS_SOURCES} ${HPDJ_DRV}
 WRKSRC=		${WRKDIR}/gs5.50
 MAKEFILE=	unix-gcc.mak
 ALL_TARGET=	std
@@ -51,6 +52,10 @@ GS_FONTS_OTHER=	ghostscript-fonts-other-5.10.tar.gz
 # Additional driver HP 850, see http://www.erdw.ethz.ch/~bonk/hp850/hp850.html
 HP850_DRV=	hp8xxs13.zip
 
+# Additional driver for several HP deskjets
+HPDJ_VER=	2.6
+HPDJ_DRV=	hpdj-${HPDJ_VER}.tar.gz
+
 # PostScript source to decode encrypted PDF files
 PDF_SEC=	pdf_sec.ps
 
@@ -61,6 +66,7 @@ PAPERSIZE_DEF=	-DA4
 SCRIPT_SUFFIX=	.batch
 
 post-extract:
+	${GTAR} -xf ${WRKDIR}/hpdj-${HPDJ_VER}/hpdj.tar -C ${WRKSRC}
 	${RM} -f ${WRKSRC}/jpeg
 	${LN} -s ${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ${WRKSRC}/jpeg
 	cd ${WRKSRC} && unzip -uLa ${_DISTDIR}/${HP850_DRV}
@@ -71,6 +77,8 @@ pre-patch:
 	@${RM} -f ${WRKSRC}/lib ${WRKSRC}/src
 	@${LN} -s . ${WRKSRC}/lib
 	@${LN} -s . ${WRKSRC}/src
+	@${PATCH} ${PATCH_ARGS} < ${WRKSRC}/zmedia2.c-5.50.diff
+	@${CAT} ${WRKSRC}/contrib.mak-5.50.add >>${WRKSRC}/contrib.mak
 
 post-patch:
 	@${RM} -f ${WRKSRC}/lib ${WRKSRC}/src
