@@ -1,27 +1,42 @@
-$NetBSD: patch-ag,v 1.3 2000/06/20 21:50:20 jlam Exp $
+$NetBSD: patch-ag,v 1.4 2000/11/16 10:42:24 abs Exp $
 
---- mach_dep.c.orig	Sat Apr 15 05:57:14 2000
-+++ mach_dep.c	Sat May  6 04:59:30 2000
-@@ -220,8 +220,10 @@
- #       if defined(I386) &&!defined(OS2) &&!defined(SVR4) \
- 	&& (defined(__MINGW32__) || !defined(MSWIN32)) \
- 	&& !defined(SCO) && !defined(SCO_ELF) \
-- 	&& !(defined(LINUX)       && defined(__ELF__)) \
-+ 	&& !(defined(LINUX) && defined(__ELF__)) \
- 	&& !(defined(FREEBSD) && defined(__ELF__)) \
-+	&& !(defined(NETBSD) && defined(__ELF__)) \
-+	&& !(defined(OPENBSD) && defined(__ELF__)) \
- 	&& !defined(DOS4GW)
- 	/* I386 code, generic code does not appear to work */
- 	/* It does appear to work under OS2, and asms dont */
-@@ -236,7 +238,9 @@
- #       endif
+--- os_dep.c.orig	Mon Apr 17 14:57:52 2000
++++ os_dep.c
+@@ -161,6 +161,19 @@
+   }
+ #endif
  
- #	if ( defined(I386) && defined(LINUX) && defined(__ELF__) ) \
--	|| ( defined(I386) && defined(FREEBSD) && defined(__ELF__) )
-+	|| ( defined(I386) && defined(FREEBSD) && defined(__ELF__) ) \
-+	|| ( defined(I386) && defined(NETBSD) && defined(__ELF__) ) \
-+	|| ( defined(I386) && defined(OPENBSD) && defined(__ELF__) )
++#if defined(NETBSD) && defined(__ELF__)
++  ptr_t GC_data_start;
++
++  void GC_init_netbsd_elf()
++  {
++    extern ptr_t GC_find_limit();
++    extern char **environ;
++	/* This may need to be environ, without the underscore, for	*/
++	/* some versions.						*/
++    GC_data_start = GC_find_limit((ptr_t)&environ, FALSE);
++  }
++#endif
++
+ # ifdef OS2
  
- 	/* This is modified for Linux with ELF (Note: _ELF_ only) */
- 	/* This section handles FreeBSD with ELF. */
+ # include <stddef.h>
+@@ -2554,7 +2567,7 @@
+ #     if defined (DRSNX)
+ #	include <sys/sparc/frame.h>
+ #     else
+-#        if defined(OPENBSD)
++#        if defined(OPENBSD) || defined(NETBSD)
+ #          include <frame.h>
+ #        else
+ #          include <sys/frame.h>
+@@ -2569,7 +2582,7 @@
+ /* Fill in the pc and argument information for up to NFRAMES of my	*/
+ /* callers.  Ignore my frame and my callers frame.			*/
+ 
+-#ifdef OPENBSD
++#if defined(OPENBSD) || defined(NETBSD)
+ #  define FR_SAVFP fr_fp
+ #  define FR_SAVPC fr_pc
+ #else

@@ -1,42 +1,14 @@
-$NetBSD: patch-af,v 1.2 1999/11/04 15:21:58 minoura Exp $
+$NetBSD: patch-af,v 1.3 2000/11/16 10:42:24 abs Exp $
 
---- os_dep.c.orig	Fri Jul  9 05:01:06 1999
-+++ os_dep.c	Tue Oct 26 11:14:37 1999
-@@ -156,6 +156,19 @@
-   }
- #endif
- 
-+#if defined(NETBSD) && defined(__ELF__)
-+  ptr_t GC_data_start;
-+
-+  void GC_init_netbsd_elf()
-+  {
-+    extern ptr_t GC_find_limit();
-+    extern char **environ;
-+	/* This may need to be environ, without the underscore, for	*/
-+	/* some versions.						*/
-+    GC_data_start = GC_find_limit((ptr_t)&environ, FALSE);
-+  }
-+#endif
-+
- # ifdef OS2
- 
- # include <stddef.h>
-@@ -2407,7 +2420,7 @@
- #     if defined (DRSNX)
- #	include <sys/sparc/frame.h>
- #     else
--#        if defined(OPENBSD)
-+#        if defined(OPENBSD) || defined(NETBSD)
- #          include <frame.h>
- #        else
- #          include <sys/frame.h>
-@@ -2422,7 +2435,7 @@
- /* Fill in the pc and argument information for up to NFRAMES of my	*/
- /* callers.  Ignore my frame and my callers frame.			*/
- 
--#ifdef OPENBSD
-+#if defined(OPENBSD) || defined(NETBSD)
- #  define FR_SAVFP fr_fp
- #  define FR_SAVPC fr_pc
- #else
+--- misc.c.orig	Tue Apr  4 17:37:29 2000
++++ misc.c
+@@ -453,6 +453,9 @@
+ 	/* This doesn't really work if the collector is in a shared library. */
+ 	GC_init_linux_data_start();
+ #   endif
++#   if defined(NETBSD) && defined(__ELF__)
++	GC_init_netbsd_elf();
++#   endif
+ #   ifdef SOLARIS_THREADS
+ 	GC_thr_init();
+ 	/* We need dirty bits in order to find live stack sections.	*/
