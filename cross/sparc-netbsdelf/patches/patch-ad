@@ -1,8 +1,18 @@
-$NetBSD: patch-ad,v 1.2 2000/05/07 02:46:42 mycroft Exp $
+$NetBSD: patch-ad,v 1.3 2000/05/07 12:21:24 mycroft Exp $
 
 --- ../egcs-1.1.1/gcc/config/sparc/netbsdelf.h.orig	Sat May  6 21:59:07 2000
 +++ ../egcs-1.1.1/gcc/config/sparc/netbsdelf.h	Sat May  6 21:59:59 2000
-@@ -22,10 +22,10 @@
+@@ -5,6 +5,9 @@
+ 
+ /* ok, clean up after <sparc/elf.h> */
+ 
++#undef INIT_SUBTARGET_OPTABS
++#define INIT_SUBTARGET_OPTABS
++
+ #undef CPP_PREDEFINES
+ #define CPP_PREDEFINES "-D__sparc__ -D__NetBSD__ -D__ELF__ -D__KPRINTF_ATTRIBUTE__"
+ 
+@@ -22,10 +25,10 @@
  #include <netbsd.h>
  
  #undef SIZE_TYPE
