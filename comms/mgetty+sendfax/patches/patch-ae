@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 1998/11/15 20:45:30 tron Exp $
+$NetBSD: patch-ae,v 1.2 2002/03/09 17:17:06 fredb Exp $
 
---- doc/mgetty.texi-in.orig	Sun Jul  5 23:02:13 1998
-+++ doc/mgetty.texi-in	Sun Nov 15 21:05:27 1998
+--- doc/mgetty.texi-in.orig	Sun Jan  6 11:40:55 2002
++++ doc/mgetty.texi-in
 @@ -7,6 +7,10 @@
  @finalout
  
@@ -13,3 +13,12 @@ $NetBSD: patch-ae,v 1.1 1998/11/15 20:45:30 tron Exp $
  This is the online documentation for the mgetty + sendfax
  package.
  
+@@ -3718,7 +3722,7 @@
+ @code{man ttys} (there is no @file{/etc/inittab}).
+ 
+ Open issues:
+-@itemize
++@itemize @bullet
+ @c @item how to access external serial ports?
+ @item is it better to use @file{/dev/cu.*} or @file{/dev/tty.*}?
+ @item how is tty locking done?  Couldn't find UUCP lock files
