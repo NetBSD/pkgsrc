@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.4 2002/06/01 13:18:02 itojun Exp $
+$NetBSD: patch-ah,v 1.5 2002/06/18 23:58:07 itojun Exp $
 
---- support/apachectl.in.orig	Mon Apr 15 02:41:25 2002
-+++ support/apachectl.in
-@@ -32,8 +32,8 @@
+--- support/apachectl.in.orig	Mon May 27 20:46:01 2002
++++ support/apachectl.in	Wed Jun 19 07:40:07 2002
+@@ -31,8 +31,8 @@
  HTTPD='@exp_sbindir@/@progname@'
  #
  # pick up any necessary environment variables
