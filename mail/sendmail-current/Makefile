@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/05/05 16:16:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/29 03:39:56 itojun Exp $
 
-DISTNAME=	sendmail.8.12.0.Beta7
-PKGNAME=	sendmail-8.11.99.7
+DISTNAME=	sendmail.8.12.0.Beta10
+PKGNAME=	sendmail-8.11.99.10
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
@@ -27,7 +27,7 @@ NO_CONFIGURE=	yes
 MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}"
 
-WRKSRC=		${WRKDIR}/sendmail-8.12.0.Beta7
+WRKSRC=		${WRKDIR}/sendmail-8.12.0.Beta10
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
 BUILD_DEFS+=    USE_INET6
