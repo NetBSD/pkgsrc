@@ -1,0 +1,58 @@
+# $NetBSD: Makefile.common,v 1.1 2002/01/02 22:19:38 jlam Exp $
+
+DISTNAME=	courier-imap-${DIST_VERS}
+CATEGORIES+=	mail
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
+
+MAINTAINER=	jlam@netbsd.org
+HOMEPAGE=	http://www.inter7.com/courierimap/
+
+# Version numbering scheme:
+#
+# DIST_VERS	version number on the distfile
+# BASE_BERS	pkgsrc-manged version number
+#
+DIST_VERS=	1.4.0
+BASE_VERS=	${DIST_VERS}
+
+USE_GMAKE=		yes
+
+PKG_SYSCONFSUBDIR?=	courier
+
+DISTINFO_FILE=		${.CURDIR}/../../scratch/courier-imap/distinfo
+PATCHDIR=		${.CURDIR}/../../scratch/courier-imap/patches
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/courier
+CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/courier
+CONFIGURE_ARGS+=	--localstatedir=/var
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+CONFIGURE_ARGS+=	--enable-unicode
+CONFIGURE_ARGS+=	--with-authchangepwdir=${PREFIX}/libexec/courier
+CONFIGURE_ARGS+=	--with-db=db
+CONFIGURE_ARGS+=	--with-userdb=${PKG_SYSCONFDIR}/userdb
+CONFIGURE_ARGS+=	--disable-root-check
+
+CONFIGURE_ARGS+=	--with-authdaemon
+CONFIGURE_ARGS+=	--without-authcustom
+CONFIGURE_ARGS+=	--without-authldap
+CONFIGURE_ARGS+=	--without-authmysql
+CONFIGURE_ARGS+=	--without-authpgsql
+
+CONFIGURE_ENV+=		OPENSSL=${BUILDLINK_PREFIX.openssl}/bin/openssl
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+.include "../../databases/db/buildlink.mk"
+CPPFLAGS+=	-I${BUILDLINK_DIR}/include/db2
+.endif
+
+.if defined(USE_PAM)
+.include "../../security/PAM/buildlink.mk"
+.endif
+
+AUTHLIBDIR=	${PREFIX}/libexec/courier/authlib
+DOCDIR=		${PREFIX}/share/doc/courier
+EGDIR=		${PREFIX}/share/examples/courier

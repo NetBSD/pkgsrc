@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1 2002/01/02 22:19:42 jlam Exp $
+
+--- configure.in.orig	Wed Dec  5 08:16:41 2001
++++ configure.in
+@@ -162,9 +162,6 @@
+ AC_ARG_WITH(authchangepwdir, [], ,
+ 	ac_configure_args="$ac_configure_args --with-authchangepwdir=/var/tmp/dev/null")
+ 
+-INSTALL_DATA='${INSTALL} -m 0600'
+-INSTALL_SCRIPT='${INSTALL}'
+-
+ #
+ # autoconf bug
+ #
