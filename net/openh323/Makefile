@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/01/24 14:50:06 grant Exp $
+# $NetBSD: Makefile,v 1.22 2004/05/08 06:41:33 snj Exp $
 #
 
 DISTNAME=	openh323_1.10.4
@@ -19,7 +19,7 @@ COMMENT=	Open H.323 library
 MAKE_ENV+=	PWLIBDIR=${PREFIX} OPENH323DIR=${WRKSRC}
 
 WRKSRC=		${WRKDIR}/openh323
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
@@ -45,6 +45,6 @@ do-install:
 		-${INSTALL_DATA_DIR} ${PREFIX}/share/openh323
 		cd ${WRKSRC}; ${INSTALL_DATA} openh323u.mak ${PREFIX}/share/openh323
 
-.include "../../devel/pwlib/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../devel/pwlib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
