@@ -1,4 +1,4 @@
-$NetBSD: patch-ay,v 1.1 1998/10/28 18:18:09 bad Exp $
+$NetBSD: patch-ay,v 1.2 1998/12/28 16:17:12 bad Exp $
 
 --- /dev/null	Sun Oct 25 03:15:17 1998
 +++ mit-pthreads/machdep/syscall-arm32-netbsd-1.3.S	Sun Oct 25 18:49:24 1998
@@ -50,7 +50,7 @@ $NetBSD: patch-ay,v 1.1 1998/10/28 18:18:09 bad Exp $
 +
 +#ifndef lint
 +	.text
-+	.asciz "$Id: patch-ay,v 1.1 1998/10/28 18:18:09 bad Exp $";
++	.asciz "$Id: patch-ay,v 1.2 1998/12/28 16:17:12 bad Exp $";
 +#endif
 + 
 +#if defined(SYSLIBC_SCCS) && !defined(lint)
@@ -99,7 +99,7 @@ $NetBSD: patch-ay,v 1.1 1998/10/28 18:18:09 bad Exp $
 +
 +_machdep_sys___syscall:;				
 +
-+	swi     0x00000000
++	swi     SYS___syscall
 +	bcs     1f
 +	mov     r15, r14
 +
