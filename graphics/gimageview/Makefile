@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/12/13 00:45:23 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/12/18 14:19:49 adam Exp $
 
 DISTNAME=	gimageview-0.2.24
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkmmviewer/}
 
@@ -23,10 +23,11 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS+=	--disable-xinetest
 CONFIGURE_ARGS+=	--with-gtk2
 
-.include "../../mk/pthread.buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
-.include "../../graphics/mng/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
 .include "../../graphics/librsvg2/buildlink2.mk"
 .include "../../graphics/libwmf/buildlink2.mk"
+.include "../../graphics/mng/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
+
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
