@@ -1,8 +1,8 @@
-$NetBSD: patch-bm,v 1.5 2003/08/20 10:37:38 markd Exp $
+$NetBSD: patch-bm,v 1.6 2003/12/12 10:11:39 adam Exp $
 
---- lib/config/Makefile.in.orig	Fri Jul 18 11:04:27 2003
+--- lib/config/Makefile.in.orig	2003-11-27 19:29:53.000000000 +0000
 +++ lib/config/Makefile.in
-@@ -150,12 +150,12 @@ xmVer = @xmVer@
+@@ -223,13 +223,13 @@ xmVer = @xmVer@
  MAINTAINERCLEANFILES = Makefile.in
  bin_SCRIPTS = mxmkmf
  
@@ -10,10 +10,11 @@ $NetBSD: patch-bm,v 1.5 2003/08/20 10:37:38 markd Exp $
 +configdir = $(libdir)/X11/config
  
  EXTRA_DIST = LessTif.rules LessTif.tmpl host.def Imake.tmpl
- 
  # so being R5 
+ @XIsR6_FALSE@config_DATA = Imake.tmpl LessTif.rules LessTif.tmpl
+ 
 -@XIsR6_TRUE@config_DATA = LessTif.rules LessTif.tmpl host.def
 +@XIsR6_TRUE@config_DATA = LessTif.rules LessTif.tmpl LessTif.def
- @XIsR6_FALSE@config_DATA = Imake.tmpl LessTif.rules LessTif.tmpl
  subdir = lib/config
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs

@@ -1,26 +1,20 @@
-# $NetBSD: Makefile,v 1.66 2003/08/20 10:37:37 markd Exp $
+# $NetBSD: Makefile,v 1.67 2003/12/12 10:11:39 adam Exp $
 
-DISTNAME=		lesstif-0.93.46
-PKGREVISION=		1
-CATEGORIES=		x11
-MASTER_SITES=		ftp://ftp.hungry.com/pub/hungry/lesstif/srcdist/ \
-			ftp://ftp.unicamp.br/pub/X11/lesstif/srcdist/ \
-			ftp://ftp.kddlabs.co.jp/X11/lesstif/srcdist/ \
-			ftp://linux.mathematik.tu-darmstadt.de/pub/linux/mirrors/misc/lesstif/srcdist/ \
-			http://gd.tuwien.ac.at/hci/lesstif/srcdist/ \
-			http://www.damtp.cam.ac.uk/mirror/ftp.hungry.com/pub/hungry/lesstif/srcdist/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	lesstif-0.93.94
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lesstif/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		jlam@NetBSD.org
-HOMEPAGE=		http://www.lesstif.org/
+MAINTAINER=	jlam@NetBSD.org
+HOMEPAGE=	http://www.lesstif.org/
 COMMENT=	API compatible clone of the OSF/Motif toolkit
 
 CONFLICTS+=	openmotif-[0-9]*
 
-USE_BUILDLINK2=	# defined
-USE_X11BASE=		# defined
-USE_GMAKE=		# defined
-USE_LIBTOOL=		# defined
+USE_BUILDLINK2=		YES
+USE_X11BASE=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/test/libtool
 GNU_CONFIGURE=		# defined
