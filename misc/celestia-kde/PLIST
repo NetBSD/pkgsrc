@@ -1,2 +1,24 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/08 23:50:11 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/27 13:45:25 markd Exp $
 bin/kcelestia
+share/doc/kde/HTML/en/celestia/index.docbook
+share/kde/applnk/Edutainment/Science/celestia.desktop
+share/kde/apps/celestia/bookmarks.xml
+share/kde/apps/celestia/celestiaui.rc
+share/kde/apps/celestia/favicons/celestia_20020830192652097.png
+share/kde/apps/celestia/favicons/celestia_20020830192655186.png
+share/kde/apps/celestia/favicons/celestia_20021210223316001.png
+share/kde/apps/celestia/favicons/celestia_20021212191412299.png
+share/kde/apps/celestia/favicons/celestia_20021215164511359.png
+share/kde/apps/celestia/favicons/celestia_20021215164726547.png
+share/kde/apps/celestia/favicons/celestia_20021215170159036.png
+share/kde/apps/celestia/favicons/celestia_20030106235954721.png
+share/kde/config/celestiarc
+share/kde/icons/hicolor/16x16/apps/celestia.png
+share/kde/icons/hicolor/22x22/apps/celestia.png
+share/kde/icons/hicolor/32x32/apps/celestia.png
+share/kde/icons/hicolor/48x48/apps/celestia.png
+share/kde/mimelnk/application/x-celestia-script.desktop
+share/kde/services/celestia.protocol
+@dirrm share/kde/apps/celestia/favicons
+@dirrm share/kde/apps/celestia
+@dirrm share/doc/kde/HTML/en/celestia
