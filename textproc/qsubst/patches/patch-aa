@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/22 05:55:05 simonb Exp $
+
+--- Makefile.orig	Sun Sep  5 03:07:22 1999
++++ Makefile	Sun Apr 22 15:48:13 2001
+@@ -1,6 +1,9 @@
+ #	$NetBSD: patch-aa,v 1.1.1.1 2001/04/22 05:55:05 simonb Exp $
+ 
+ PROG=	qsubst
++BINDIR=	${PREFIX}/bin
++MANDIR=	${PREFIX}/man
++WARNS?=	1
+ DPADD+=	$(LIBTERMCAP}
+ LDADD+=	-ltermcap
+ 
