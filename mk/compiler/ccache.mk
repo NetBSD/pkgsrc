@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.7 2004/02/05 03:35:20 jlam Exp $
+# $NetBSD: ccache.mk,v 1.8 2004/02/05 03:39:17 jlam Exp $
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	one
@@ -52,7 +52,7 @@ _CCACHE_LINKS+=	CXX
 # The following section is included only if we're not being included by
 # bsd.prefs.mk.
 #
-.if empty(BSD_PREFS_MK:M+*)
+.if empty(BSD_PREFS_MK)
 .  if empty(COMPILER_CCACHE_MK:Mtwo)
 COMPILER_CCACHE_MK+=	two
 

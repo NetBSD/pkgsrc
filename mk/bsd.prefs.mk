@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.147 2004/02/05 03:37:47 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.148 2004/02/05 03:39:17 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -6,8 +6,8 @@
 # to make sure any variables defined in /etc/mk.conf, $MAKECONF, or
 # the system defaults (sys.mk and bsd.own.mk) are used.
 
-# If empty(BSD_PREFS_MK:M+*), then we are _not_ being included from
-# within bsd.prefs.mk.
+# If empty(BSD_PREFS_MK), then we are _not_ being included from within
+# bsd.prefs.mk.
 #
 BSD_PREFS_MK:=	${BSD_PREFS_MK}+
 
