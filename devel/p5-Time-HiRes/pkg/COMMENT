@@ -1,1 +1,1 @@
-perl5 module for profiling perl programs
+perl5 module for high resolution time, sleep, and alarm
