@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/11/12 05:19:40 cube Exp $
+# $NetBSD: Makefile,v 1.23 2003/11/12 05:25:45 cube Exp $
 
 DISTNAME=	ppp-2.3.9
 PKGNAME=	ppp-mppe-2.3.9
@@ -51,7 +51,7 @@ pre-install:
 pre-clean:
 	cd ../../security/openssl && ${MAKE} clean
 
-SYSDIR?=	/sys
+SYSDIR?=	${BSDSRCDIR}/sys
 MAKE_ENV+=	SYSDIR="${SYSDIR}"
 
 # until PR 5377 is addressed, we need kernel src around to build lkm's
