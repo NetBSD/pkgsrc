@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/11/29 01:12:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2002/12/24 18:55:42 wiz Exp $
 #
 
 DISTNAME=		RTF-1.10
@@ -8,7 +8,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		http://www.primate.wisc.edu/software/RTF/
 EXTRACT_SUFX=		.tar.Z
 
-MAINTAINER=		collver@linuxfreemail.com
+MAINTAINER=		collver1@attbi.com
 HOMEPAGE=		http://www.primate.wisc.edu/software/RTF/
 COMMENT=		RTF to troff/groff/text converter
 
