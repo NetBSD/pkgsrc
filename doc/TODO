@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1005 2003/11/08 06:33:45 xtraeme Exp $
+$NetBSD: TODO,v 1.1006 2003/11/08 07:51:57 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -279,8 +279,6 @@ Suggested package updates
 	o napshare-1.2
 	o nasm-0.98.38
 	o neon-0.24.2
-	o nessus-2.0.8a [pkg/23159]
-	o nessus-2.0.9
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
 	o ngrep-1.41
