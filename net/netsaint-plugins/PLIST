@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/25 12:58:46 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/10/25 10:21:34 wiz Exp $
 libexec/netsaint/check_breeze
 libexec/netsaint/check_by_ssh
 libexec/netsaint/check_dig
@@ -23,6 +23,7 @@ libexec/netsaint/check_ntp
 libexec/netsaint/check_nwstat
 libexec/netsaint/check_oracle
 libexec/netsaint/check_overcr
+libexec/netsaint/check_pgsql
 libexec/netsaint/check_ping
 libexec/netsaint/check_pop
 libexec/netsaint/check_procs
