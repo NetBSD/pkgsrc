@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2001/09/09 03:37:02 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2002/05/03 15:09:51 taca Exp $
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libexecdir=${LOCALBASE}/libexec \
@@ -10,8 +10,10 @@ CONFIGURE_ARGS+=	--libexecdir=${LOCALBASE}/libexec \
 
 QPOPPER_USER?=		pop
 QPOPPER_FAC?=		LOCAL1
-QPOPPER_APOP_AUTH?=	/etc/apop.auth
+QPOPPER_APOP_AUTH?=	${PKG_SYSCONFDIR}/apop.auth
 DB_SUFFIX?=		db
+
+VERSION=		4.0.4
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,5 +32,3 @@ CONFIGURE_ARGS+=	--enable-servermode
 .if defined(USE_INET6) && ${USE_INET6} == YES
 CONFIGURE_ENV+=		O_DEFS="${O_DEFS}" CFLAGS="-DINET6"
 .endif
-
-.include "../../security/openssl/buildlink.mk"
