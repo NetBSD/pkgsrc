@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/02/26 17:24:55 jmmv Exp $
 bin/gnome-about
 include/gnome-desktop-2.0/libgnome/gnome-desktop-item.h
 include/gnome-desktop-2.0/libgnomeui/gnome-ditem-edit.h
@@ -88,6 +88,7 @@ ${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-desktop-2.0.mo
+${PKGLOCALEDIR}/locale/nso/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-desktop-2.0.mo
@@ -111,6 +112,7 @@ ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/yo/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-desktop-2.0.mo
+${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/gnome-desktop-2.0.mo
 share/omf/gnome-desktop/fdl-C.omf
 share/omf/gnome-desktop/fdl-eu.omf
 share/omf/gnome-desktop/gnome-feedback-C.omf
@@ -137,7 +139,6 @@ share/omf/gnome-desktop/lgpl-eu.omf
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/gnome-about/headers
 @dirrm share/gnome-about
-@comment in gnome2-dirs: @dirrm share/gnome
 @dirrm include/gnome-desktop-2.0/libgnomeui
 @dirrm include/gnome-desktop-2.0/libgnome
 @dirrm include/gnome-desktop-2.0
