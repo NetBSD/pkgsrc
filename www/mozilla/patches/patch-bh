@@ -1,0 +1,14 @@
+$NetBSD: patch-bh,v 1.1 2002/03/13 16:13:49 taya Exp $
+
+diff -ru ../Orig/mozilla/security/nss/lib/ssl/sslmutex.c ./security/nss/lib/ssl/sslmutex.c
+--- ../Orig/mozilla/security/nss/lib/ssl/sslmutex.c	Thu Feb 28 06:48:53 2002
++++ ./security/nss/lib/ssl/sslmutex.c	Sun Mar  3 12:11:13 2002
+@@ -83,7 +83,7 @@
+     return SECSuccess;
+ }
+ 
+-#if defined(LINUX) || defined(AIX) || defined(VMS) || defined(BEOS) || defined(BSDI)
++#if defined(LINUX) || defined(AIX) || defined(VMS) || defined(BEOS) || defined(BSDI) || defined(NETBSD)
+ 
+ #include <unistd.h>
+ #include <fcntl.h>
