@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2004/12/28 23:18:17 reed Exp $
+# $NetBSD: Makefile,v 1.14 2005/03/27 10:29:20 recht Exp $
 #
 
-DISTNAME=	libgdiplus-1.0.1
-PKGREVISION=	2
+DISTNAME=	libgdiplus-1.1.5
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.go-mono.com/archive/1.0.1/
+MASTER_SITES=	http://www.go-mono.com/archive/1.1.5/
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
@@ -17,19 +16,26 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libgdiplus.pc.in
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-glitz
 
 pre-configure:
 	cd ${WRKSRC};			\
 	${AUTOHEADER};			\
 	${AUTOCONF}
 
+BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.5
+BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2
+BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
+
 .include "../../devel/pkgconfig/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+#.include "../../graphics/glitz/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../lang/mono/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
