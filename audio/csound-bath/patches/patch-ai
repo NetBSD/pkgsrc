@@ -1,0 +1,35 @@
+$NetBSD: patch-ai,v 1.1.1.1 2001/04/27 17:17:18 wiz Exp $
+
+--- anal/adsyn/makef.orig	Sun Dec 17 06:18:36 2000
++++ anal/adsyn/makef	Sun Dec 17 06:18:45 2000
+@@ -6,7 +6,7 @@
+ 
+ OBJS =  main.o $T/hetro.o $T/filopen.o $T/sfheader.o $T/soundin.o \
+ 	$T/ulaw.o $T/aiff.o $T/ieee80.o $T/memalloc.o $T/wave.o \
+-	$T/window.o $T/winX11.o $T/winEPS.o $T/aifc.o $T/winascii.o \
++	$T/window.o $T/winEPS.o $T/aifc.o $T/winascii.o \
+         $T/sdif.o $T/sdif-mem.o $T/getstring.o
+ 
+ adsyns:	hetro
+--- anal/lpc/makef.orig	Sun Dec 17 06:19:25 2000
++++ anal/lpc/makef	Sun Dec 17 06:19:40 2000
+@@ -6,7 +6,7 @@
+ 
+ OBJS =   main.o $T/lpanal.o $T/lptrkfns.o $T/filopen.o $T/sfheader.o \
+ 	$T/soundin.o $T/ulaw.o $T/aiff.o $T/wave.o $T/ieee80.o \
+-        $T/memalloc.o $T/window.o $T/winX11.o $T/winascii.o $T/winEPS.o \
++        $T/memalloc.o $T/window.o $T/winascii.o $T/winEPS.o \
+         $T/aifc.o $T/getstring.o
+ 
+ lpcs:		lpanal
+--- anal/pvoc/makef.orig	Sun Dec 17 06:21:30 2000
++++ anal/pvoc/makef	Sun Dec 17 06:21:42 2000
+@@ -6,7 +6,7 @@
+ 
+ OBJS =  main.o $T/pvanal.o $T/filopen.o $T/sfheader.o \
+ 	$T/soundin.o $T/ulaw.o $T/aiff.o $T/wave.o $T/ieee80.o $T/memalloc.o \
+-	$T/pvoc.o $T/fft.o $T/dsputil.o $T/window.o $T/winX11.o $T/winascii.o \
++	$T/pvoc.o $T/fft.o $T/dsputil.o $T/window.o $T/winascii.o \
+ 	$T/winEPS.o $T/aifc.o $T/getstring.o
+ 
+ pvocs:	pvanal
