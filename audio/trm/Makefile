@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/09 00:17:05 chris Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/21 06:27:17 snj Exp $
 
 DISTNAME=	trm-0.2.1
 CATEGORIES=	audio
@@ -6,7 +6,7 @@ MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/
 
 MAINTAINER=	chris@NetBSD.org
 HOMEPAGE=	http://www.musicbrainz.org/products/trmgen/download.html
-COMMENT=	Accoustic signature generator
+COMMENT=	Acoustic signature generator
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
