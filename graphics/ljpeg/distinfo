@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/21 21:30:14 wiz Exp $
+
+SHA1 (ljpg-1.0/ljpg.tar.Z) = 47071fad1f11a3b9241a34b188ab07d54dcd13bc
+Size (ljpg-1.0/ljpg.tar.Z) = 334459 bytes
+SHA1 (patch-aa) = 562ce4a8f82c6ed59b4b730f59822d4749e925a3
