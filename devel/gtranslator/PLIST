@@ -1,0 +1,97 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/05 17:00:36 xtraeme Exp $
+bin/gtranslator
+bin/pozilla.sh
+man/man1/gtranslator.1.gz
+man/man1/pozilla.sh.1.gz
+share/applications/gtranslator.desktop
+share/gnome/help/gtranslator/C/figures/mainwindow.png
+share/gnome/help/gtranslator/C/figures/prefs.png
+share/gnome/help/gtranslator/C/figures/toolbar.png
+share/gnome/help/gtranslator/C/gtranslator.xml
+share/gnome/help/gtranslator/C/legal.xml
+share/gtranslator/colorschemes/arek.xml
+share/gtranslator/colorschemes/boom-boom.xml
+share/gtranslator/colorschemes/clean.xml
+share/gtranslator/colorschemes/curlymonster.xml
+share/gtranslator/colorschemes/default.xml
+share/gtranslator/colorschemes/extremely-kabalak.xml
+share/gtranslator/colorschemes/kabalak.xml
+share/gtranslator/colorschemes/kbabel.xml
+share/gtranslator/colorschemes/menesis.xml
+share/gtranslator/colorschemes/mmc.xml
+share/gtranslator/colorschemes/nizuu.xml
+share/gtranslator/colorschemes/pdmc.xml
+share/gtranslator/colorschemes/sepia.xml
+share/gtranslator/colorschemes/spiffE.xml
+share/gtranslator/colorschemes/thinice.xml
+share/gtranslator/colorschemes/toyfactory.xml
+share/gtranslator/colorschemes/tuey.xml
+share/gtranslator/colorschemes/vim.xml
+share/gtranslator/colorschemes/waliays.xml
+share/gtranslator/colorschemes/yef.xml
+share/gtranslator/colorschemes/zuper.xml
+share/gtranslator/dtd/umtf.dtd
+share/gtranslator/scripts/build-gtranslator-learn-buffer.sh
+share/gtranslator/scripts/cleanup-gtranslator-settings.sh
+share/gtranslator/scripts/my-update.sh
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gtranslator.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gtranslator.mo
+share/mime-info/gtranslator.keys
+share/mime-info/gtranslator.mime
+share/omf/gtranslator/gtranslator-C.omf
+share/pixmaps/gnome-application-x-gmo.png
+share/pixmaps/gnome-application-x-po.png
+share/pixmaps/gtranslator.png
+share/pixmaps/gtranslator/fuzzy.png
+share/pixmaps/gtranslator/fuzzy_small.png
+share/pixmaps/gtranslator/untranslated.png
+share/pixmaps/gtranslator/untranslated_small.png
+@exec ${MKDIR} %D/share/gnome/help/gtranslator/C/figures
+@dirrm share/gnome/help/gtranslator/C/figures
+@dirrm share/gnome/help/gtranslator/C
+@dirrm share/gnome/help/gtranslator
+@dirrm share/pixmaps/gtranslator
+@dirrm share/omf/gtranslator
+@dirrm share/gtranslator/scripts
+@dirrm share/gtranslator/dtd
+@dirrm share/gtranslator/colorschemes
+@dirrm share/gtranslator
