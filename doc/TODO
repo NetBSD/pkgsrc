@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1660 2004/04/22 03:26:41 fredb Exp $
+$NetBSD: TODO,v 1.1661 2004/04/22 14:50:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -241,7 +241,6 @@ Suggested package updates
 	o libmpeg3-1.5.4
 	o libnet-1.1.1
 	o libole2-2.2.8
-	o libtool-1.5.6
 	o licq-1.2.7
 	o liferea-0.4.7b
 	o lilypond-2.2
