@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.274 2003/02/17 12:50:28 wiz Exp $
+$NetBSD: TODO,v 1.275 2003/02/17 12:54:44 grant Exp $
 
 Suggested new packages
 ======================
@@ -170,7 +170,6 @@ Suggested package updates
 	o lbreakout2-2.4
 	o lcms-1.0.9
 	o leafnode-1.9.33
-	o less-381
 	o lesstif-0.93.40
 	o libbonobo-2.0.1
 	o libdvdcss-1.2.5
