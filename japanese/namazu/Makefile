@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/02/15 09:26:21 agc Exp $
+# $NetBSD: Makefile,v 1.8 2000/09/14 11:17:34 wiz Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/03/31 11:52:07 flathill Exp $
 
 DISTNAME=	namazu-1.3.0.10
@@ -8,7 +8,7 @@ MASTER_SITES=	http://openlab.ring.gr.jp/namazu/release/
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://openlab.ring.gr.jp/namazu/
 
-DEPENDS=	kakasi-2.3.1:../../japanese/kakasi
+DEPENDS=	kakasi>=2.3.1:../../japanese/kakasi
 DEPENDS+=	nkf-1.7:../../japanese/nkf
 
 USE_PERL5=	yes
