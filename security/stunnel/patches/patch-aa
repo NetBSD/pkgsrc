@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.3 2000/04/03 17:23:12 tron Exp $
+
+--- Makefile.in.orig	Tue Feb 22 13:08:16 2000
++++ Makefile.in	Mon Apr  3 19:18:33 2000
+@@ -7,9 +7,9 @@
+ sbindir=@sbindir@
+ libdir=@libdir@
+ man8dir=@mandir@/man8
+-piddir=@localstatedir@/stunnel
++piddir=/var/run
+ ssldir=@ssldir@
+-certdir=$(ssldir)/certs
++certdir=@prefix@/certs
+ @SET_MAKE@
+ VERSION=stunnel-@VERSION@
+ RANDOM_OPT=@RANDOM_OPT@
