@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/11/12 01:31:51 salo Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/24 14:50:06 grant Exp $
 #
 
 DISTNAME=	pyorbit-2.0.0
@@ -14,7 +14,7 @@ COMMENT=	Python bindings for ORBit2
 
 PY_PATCHPLIST=	YES
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/pyorbit-2.pc.in
