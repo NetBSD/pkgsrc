@@ -1,23 +1,30 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/05 22:54:11 xtraeme Exp $
-include/soup-2.0/libsoup/soup-address.h
-include/soup-2.0/libsoup/soup-context.h
-include/soup-2.0/libsoup/soup-error.h
-include/soup-2.0/libsoup/soup-headers.h
-include/soup-2.0/libsoup/soup-message.h
-include/soup-2.0/libsoup/soup-method.h
-include/soup-2.0/libsoup/soup-misc.h
-include/soup-2.0/libsoup/soup-ntlm.h
-include/soup-2.0/libsoup/soup-server-auth.h
-include/soup-2.0/libsoup/soup-server.h
-include/soup-2.0/libsoup/soup-socket.h
-include/soup-2.0/libsoup/soup-uri.h
-include/soup-2.0/libsoup/soup.h
-lib/libsoup-2.0.a
-lib/libsoup-2.0.la
-lib/libsoup-2.0.so
-lib/libsoup-2.0.so.0
-lib/libsoup-2.0.so.0.0
-lib/pkgconfig/soup-2.0.pc
-libexec/libsoup-ssl-proxy
-@dirrm include/soup-2.0/libsoup
-@dirrm include/soup-2.0
+@comment $NetBSD: PLIST,v 1.2 2004/04/01 18:32:03 jmmv Exp $
+include/libsoup-2.2/libsoup/soup-address.h
+include/libsoup-2.2/libsoup/soup-connection.h
+include/libsoup-2.2/libsoup/soup-headers.h
+include/libsoup-2.2/libsoup/soup-message-filter.h
+include/libsoup-2.2/libsoup/soup-message-queue.h
+include/libsoup-2.2/libsoup/soup-message.h
+include/libsoup-2.2/libsoup/soup-method.h
+include/libsoup-2.2/libsoup/soup-misc.h
+include/libsoup-2.2/libsoup/soup-server-auth.h
+include/libsoup-2.2/libsoup/soup-server-message.h
+include/libsoup-2.2/libsoup/soup-server.h
+include/libsoup-2.2/libsoup/soup-session-async.h
+include/libsoup-2.2/libsoup/soup-session-sync.h
+include/libsoup-2.2/libsoup/soup-session.h
+include/libsoup-2.2/libsoup/soup-soap-message.h
+include/libsoup-2.2/libsoup/soup-soap-response.h
+include/libsoup-2.2/libsoup/soup-socket.h
+include/libsoup-2.2/libsoup/soup-status.h
+include/libsoup-2.2/libsoup/soup-types.h
+include/libsoup-2.2/libsoup/soup-uri.h
+include/libsoup-2.2/libsoup/soup.h
+lib/libsoup-2.2.a
+lib/libsoup-2.2.la
+lib/libsoup-2.2.so
+lib/libsoup-2.2.so.3
+lib/libsoup-2.2.so.3.0
+lib/pkgconfig/libsoup-2.2.pc
+@dirrm include/libsoup-2.2/libsoup
+@dirrm include/libsoup-2.2
