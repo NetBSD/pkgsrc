@@ -1,0 +1,2 @@
+Net::Telnet::Cisco adds additional functionality to Net::Telnet that
+helps automate Cisco router management and statistic gathering.
