@@ -1,11 +1,9 @@
-$NetBSD: patch-aa,v 1.2 1999/04/16 06:27:41 tsarna Exp $
+$NetBSD: patch-aa,v 1.3 1999/12/08 07:27:55 rh Exp $
 
-Our Python package includes a suitable zlib module already.
-
---- lib/python/Setup.orig	Fri Apr 16 01:04:29 1999
-+++ lib/python/Setup	Fri Apr 16 01:04:38 1999
-@@ -19,4 +19,4 @@
- intSet         ../Components/BTree/intSet.c   -I../Components/ExtensionClass  -I../Components/BTree -I./BoboPOS
+--- lib/python/Setup.orig	Tue Jul 20 00:55:11 1999
++++ lib/python/Setup	Wed Dec  8 08:25:10 1999
+@@ -20,4 +20,4 @@
+ intSet         ../Components/BTree/intSet.c   -I../Components/ExtensionClass  -I../Components/BTree -I./ZODB
  
  
 -zlib ../Components/zlib/zlib.c -I../Components/zlib ../Components/zlib/adler32.c ../Components/zlib/compress.c ../Components/zlib/crc32.c ../Components/zlib/gzio.c ../Components/zlib/uncompr.c ../Components/zlib/deflate.c ../Components/zlib/trees.c ../Components/zlib/zutil.c ../Components/zlib/inflate.c ../Components/zlib/infblock.c ../Components/zlib/inftrees.c ../Components/zlib/infcodes.c ../Components/zlib/infutil.c ../Components/zlib/inffast.c
