@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2001/08/22 14:21:46 mjl Exp $
+# $NetBSD: Makefile,v 1.17 2001/10/23 01:55:44 lukem Exp $
 #
 
 DISTNAME=	slrn-0.9.7.2
+PKGNAME=	${DISTNAME}nb1
 CATEGORIES=	news
 MASTER_SITES=	ftp://slrn.sourceforge.net/pub/slrn/ \
 		ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/slrn/ \
@@ -12,6 +13,10 @@ MASTER_SITES=	ftp://slrn.sourceforge.net/pub/slrn/ \
 MAINTAINER=	mjl@netbsd.org
 HOMEPAGE=	http://slrn.sourceforge.net/
 COMMENT=	Highly customizable threaded newsreader
+
+PATCH_SITES=		http://slrn.sourceforge.net/patches/
+PATCHFILES=		slrn-0.9.7.2-decode.diff
+PATCH_DIST_STRIP=	-p1
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
