@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6923 2004/08/17 11:11:35 wiz Exp $
+$NetBSD: CHANGES,v 1.6924 2004/08/17 11:13:29 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3882,3 +3882,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added monotone-0.14 [drochner 2004-08-17]
 	Updated kanjidic2 to 2004.2 [wiz 2004-08-17]
 	Updated kanjidic to 20040814 [wiz 2004-08-17]
+	Updated tcptrace to 6.6.1 [adrianp 2004-08-17]
