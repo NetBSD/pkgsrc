@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.69 2001/10/24 09:47:46 agc Exp $
+$NetBSD: TODO,v 1.70 2001/10/25 17:56:10 jwise Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -32,6 +32,7 @@ packages TODO (Suggested new packages)
 
 	resin
 	Fast JSP server
+	I will import this when we have a native java 2 -- it can't be built with our native jdk [jwise]
 	http://www.caucho.com/products/resin/index.xtp
 
 	squirm
@@ -53,7 +54,6 @@ packages TODO (Suggested new packages)
 
 package update TODO (Suggested package updates)
 ^^^^^^^^^^^^^^^^^^^
-	o update x11/xfce to 3.8.3
 	o update/add openldap 2.0.8
 		(skrll has a new package)
 	o update print/ghostscript to 6.51/7.00
@@ -77,4 +77,3 @@ pksgrc TODO (Suggested pkgsrc features and enhancements)
 	  modifications for bsd.pkg.mk and will commit them after freeze.  The
 	  remaining and harder part is to make the cross-environment for HP-UX.
 	  [kei]
-
