@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/12 04:46:33 reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/08 01:27:03 reed Exp $
 
 DISTNAME=		ed-0.2
 PKGREVISION=		1
@@ -10,9 +10,10 @@ HOMEPAGE=		http://www.gnu.org/software/ed/ed.html
 COMMENT=		GNU version of line-oriented text editor
 
 GNU_CONFIGURE=		YES
-INFO_FILES=		ed.info
 
 .include "../../mk/bsd.prefs.mk"
+
+INFO_FILES=		${GNU_PROGRAM_PREFIX}ed.info
 
 .if defined(GNU_PROGRAM_PREFIX)
 # the ./configure accepts --program-prefix, but doesn't use
