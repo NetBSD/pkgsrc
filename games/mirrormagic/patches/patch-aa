@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 1998/11/09 21:20:18 garbled Exp $
+$NetBSD: patch-aa,v 1.4 2000/01/02 03:22:11 wiz Exp $
 --- Makefile.orig	Wed Sep  6 04:56:17 1995
 +++ Makefile	Mon Nov  9 12:35:14 1998
 @@ -8,11 +8,11 @@
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.3 1998/11/09 21:20:18 garbled Exp $
  # LIBS = -lXpm -lX11 -lm
  # LIBS = -L/usr/lib/X11R5 -lXpm -lX11 -lm # for HP-UX and others
 -LIBS = -lXpm -lXpm -lXpm -lX11 -lm	# triple "-lXpm" because of Xpm error
-+LIBS = -L${X11BASE}/lib -lXpm -lX11 -lm	-lossaudio # triple "-lXpm" because of Xpm error
++LIBS = -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -lXpm -lX11 -lm	-lossaudio # triple "-lXpm" because of Xpm error
  
  # CFLAGS = -O2 $(CONFIG) $(SYSTEM)
  CFLAGS = $(DEBUG) $(CONFIG) $(SYSTEM) $(INCL)
