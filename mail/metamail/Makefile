@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2002/09/23 21:01:43 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2003/03/23 13:39:25 jmmv Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://thumper.bellcore.com/pub/nsb/
 EXTRACT_SUFX=	.tar.Z
@@ -13,7 +14,14 @@ CONFLICTS+=	elm>=2.5.5 mm-2.7
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_X11=		YES
+
+CFLAGS+=	-DPKG_SYSCONFDIR='\\\"${PKG_SYSCONFDIR}\\\"'
+MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+
+EGDIR=		${PREFIX}/share/examples/metamail
+CONF_FILES=	${EGDIR}/mailcap ${PKG_SYSCONFDIR}/mailcap
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,5 +31,8 @@ CFLAGS=		-DSYSV
 
 post-patch:
 	${RM} -f ${WRKDIR}/mm2.7/src/bin/*.orig
+
+pre-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

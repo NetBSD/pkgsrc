@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 1999/09/03 08:19:14 agc Exp $
+$NetBSD: patch-aa,v 1.4 2003/03/23 13:39:26 jmmv Exp $
 
---- Makefile.orig	Wed Jan 26 17:32:33 1994
-+++ Makefile	Fri Sep  3 09:14:34 1999
-@@ -26,7 +26,7 @@
+--- Makefile.orig	1994-01-26 18:32:33.000000000 +0100
++++ Makefile
+@@ -26,7 +26,7 @@ MAKE = make
  CP = cp
  
  # How to compile C programs
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.3 1999/09/03 08:19:14 agc Exp $
  
  # You may also want to change the CFLAGS variable, which will be passed on 
  # to all subdirectories.    If you do that, the changes will only work right if you
-@@ -38,7 +38,7 @@
+@@ -38,7 +38,7 @@ FOOBAR-sun4=-Bstatic
  
  STATICFLAG=FOOBAR${HOST_ARCH}
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.3 1999/09/03 08:19:14 agc Exp $
  # The following is better if you want to make sure you run with SYSV defined
  # CFLAGS = -g -I.  ${$(STATICFLAG)}  -DSYSV
  # Also, for SGI Irix, compile in K&R mode
-@@ -49,9 +49,12 @@
+@@ -49,9 +49,12 @@ CFLAGS = -g -I.  ${$(STATICFLAG)} 
  # LDLIBS variable.
  #
  # For Sun and BSD systems, the following should work...
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.3 1999/09/03 08:19:14 agc Exp $
  # On SGI machines, we need -lsun for getpw...(), and -lc_s saves some space.
  # LDLIBS = -lsun -lc_s
  # ISC SysVr3.2.2 has a shared C library and requires libinet.a to resolve
-@@ -72,10 +75,10 @@
+@@ -72,10 +75,10 @@ CONFIGDIR = .
  #	install -s -c $(LOCALBINDIR) $$file
  #
  #INSTALL = cp
@@ -48,7 +48,13 @@ $NetBSD: patch-aa,v 1.3 1999/09/03 08:19:14 agc Exp $
  #
  # This is where binaries should be copied
  LOCALBINDIR = ${INSTROOT}/bin
-@@ -96,9 +99,9 @@
+@@ -91,14 +94,14 @@ MAN4EXT = 4
+ FONTSUFFIX=pcf
+ 
+ # This is where the mailcap file should be put
+-MAILCAPDIR = ${INSTROOT}/etc
++MAILCAPDIR = ${INSTROOT}/share/examples/metamail
+ 
  # This helps with the "for" constructs below on some platforms:
  SHELL=/bin/sh
  
@@ -60,7 +66,7 @@ $NetBSD: patch-aa,v 1.3 1999/09/03 08:19:14 agc Exp $
  	(cd metamail ; $(MAKE)  CONFIGDIR=../${CONFIGDIR}  CFLAGS="${CFLAGS}" CC="${CC}"  LDLIBS="${LDLIBS}")
  	-${RM} bin/metamail
  	(cd bin; ${LN} ../metamail/metamail metamail)
-@@ -117,7 +120,7 @@
+@@ -117,7 +120,7 @@ basics::
  	(cd bin; ${LN} ../richmail/richtext richtext)
  	-${RM} bin/richtoatk
  	(cd bin; ${LN} ../richmail/richtoatk richtoatk)
@@ -69,7 +75,7 @@ $NetBSD: patch-aa,v 1.3 1999/09/03 08:19:14 agc Exp $
  	-${RM} bin/shownonascii
  	(cd bin; ${LN} ../fonts/shownonascii shownonascii)
  	-${RM} bin/mailto-hebrew
-@@ -149,6 +152,7 @@
+@@ -149,6 +152,7 @@ install-all: basics 
  	-mv $(MAILCAPDIR)/mailcap $(MAILCAPDIR)/mailcap.old
  	@echo "installing file $(MAILCAPDIR)/mailcap"
  	${CP} mailcap $(MAILCAPDIR)
