@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1735 2004/05/12 15:12:51 minskim Exp $
+$-devNetBSD: TODO,v 1.1735 2004/05/12 15:12:51 minskim Exp $
 
 Suggested new packages
 ======================
@@ -148,7 +148,6 @@ Suggested package updates
 	o LPRng-3.8.26
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
-	o amanda-2.4.4p2 [pkg/24550, bouyer]
 	o anjuta-1.2.2
 	o ap-python-2.7.10
 	o apcupsd-3.10.13
