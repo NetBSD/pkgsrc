@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/10/15 01:01:46 hubertf Exp $
+
+--- Makefile.in.orig	Fri Oct 15 02:30:18 1999
++++ Makefile.in	Fri Oct 15 02:31:37 1999
+@@ -74,7 +74,7 @@
+ LIBS = -lX11 -lXext -lXpm
+ man_MANS = xteddy.1
+ 
+-pixmapdir = $(prefix)/include/X11
++pixmapdir = $(prefix)/share/xteddy
+ 
+ pixmap_DATA = pixmaps/xteddy_bw.xbm      \
+               pixmaps/xteddy_color.xpm   \
+@@ -108,8 +108,8 @@
+ xteddy_DEPENDENCIES = 
+ xteddy_LDFLAGS = 
+ CFLAGS = @CFLAGS@
+-COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+-LINK = $(CC) $(CFLAGS) $(LDFLAGS) -o $@
++COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) ${X_CFLAGS}
++LINK = $(CC) $(CFLAGS) $(LDFLAGS) -o $@ ${X_LIBS} ${X_EXTRA_LIBS} ${X_PRE_LIBS}
+ man1dir = $(mandir)/man1
+ MANS = $(man_MANS)
+ 
