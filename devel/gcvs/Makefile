@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/22 08:24:29 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/03/08 19:52:51 minskim Exp $
 
 DISTNAME=		gcvs-1.0a7
 PKGREVISION=		2
@@ -21,7 +21,7 @@ INFO_FILES=		cvs.info cvsclient.info
 CONFIGURE_ARGS+=	--with-tclinclude="${BUILDLINK_PREFIX.tcl}/include" \
 			--with-tcllib="${BUILDLINK_PREFIX.tcl}/lib"
 
-.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl83/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/02/09 23:19:27 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2004/03/08 19:52:52 minskim Exp $
 
 DISTNAME=	tk8.3.4
 PKGNAME=	tk-8.3.4
@@ -85,5 +85,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/../unix/tkUnixInt.h ${PREFIX}/include/tk/unix
 	${INSTALL_DATA} ${WRKSRC}/../unix/tkUnixPort.h ${PREFIX}/include/tk/unix
 
-.include "../../lang/tcl/buildlink3.mk"
+.include "../../lang/tcl83/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

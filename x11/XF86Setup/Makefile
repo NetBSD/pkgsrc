@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/02/06 19:04:25 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2004/03/08 19:52:52 minskim Exp $
 
 DISTNAME=		XF86Setup-3.3.6
 PKGREVISION=		1
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.xfree86.org/
 COMMENT=		Graphical configuration tool for XFree86
 
-BUILD_DEPENDS= 		tcl>=8.3.2:../../lang/tcl
+BUILD_DEPENDS= 		tcl>=8.3.2:../../lang/tcl83
 BUILD_DEPENDS+=		tk>=8.3.2:../../x11/tk
 
 ONLY_FOR_PLATFORM=	*-*-i386

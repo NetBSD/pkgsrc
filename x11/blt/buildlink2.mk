@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2004/03/08 01:48:54 kristerw Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/03/08 19:52:52 minskim Exp $
 #
 # This Makefile fragment is included by packages that use blt.
 #
@@ -25,7 +25,7 @@ BUILDLINK_FILES.blt+=	include/bltVector.h
 BUILDLINK_FILES.blt+=	lib/libBLT.*
 BUILDLINK_FILES.blt+=	lib/libBLT24.*
 
-.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl83/buildlink2.mk"
 .include "../../x11/tk/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	blt-buildlink

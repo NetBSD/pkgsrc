@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/14 05:09:45 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.12 2004/03/08 19:52:51 minskim Exp $
 #
 
 DISTNAME=		libstroke-0.3
@@ -19,5 +19,5 @@ USE_BUILDLINK3=		YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-.include "../../lang/tcl/buildlink3.mk"
+.include "../../lang/tcl83/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

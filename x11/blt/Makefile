@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/06 06:26:21 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/08 19:52:52 minskim Exp $
 #
 
 DISTNAME=	BLT2.4z
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
 CONFIGURE_ENV+=		X11BASE=${X11BASE}
 MAKE_ENV+=		CP=${CP}
 
-.include "../../lang/tcl/buildlink3.mk"
+.include "../../lang/tcl83/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

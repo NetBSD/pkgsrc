@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/20 12:27:58 agc Exp $
+# $NetBSD: Makefile,v 1.20 2004/03/08 19:52:52 minskim Exp $
 
 DISTNAME=	mod_dtcl-0.11.6
 PKGNAME=	ap-dtcl-0.11.2
@@ -10,7 +10,7 @@ HOMEPAGE=	http://tcl.apache.org/
 COMMENT=	Simple, fast Tcl server side scripting for apache
 
 DEPENDS+=	apache{,6}-1.3.*:../../www/apache
-DEPENDS+=	tcl>=8.3.2nb2:../../lang/tcl
+DEPENDS+=	tcl>=8.3.2nb2:../../lang/tcl83
 
 WRKSRC=		${WRKDIR}/mod_dtcl
 TCLSH=		${LOCALBASE}/bin/tclsh
