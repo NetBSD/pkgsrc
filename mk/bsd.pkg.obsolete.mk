@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.obsolete.mk,v 1.14 2004/07/21 16:19:26 jlam Exp $
+# $NetBSD: bsd.pkg.obsolete.mk,v 1.15 2004/07/30 21:05:41 jlam Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -50,45 +50,77 @@ ELK_GUI=	xaw
 PKG_SYSCONFDIR.priv?=	${PRIV_CONF_DIR}
 .endif
 
-##
-## The following Postfix-related section will be removed after the
-## pkgsrc-2004Q3 branch is released.
-##
-.if defined(POSTFIX_USE_INET6) || defined(POSTFIX_USE_TLS) || \
-    defined(POSTFIX_USE_PCRE) || defined(POSTFIX_USE_MYSQL) || \
-    defined(POSTFIX_USE_PGSQL) || defined(POSTFIX_USE_VERP) || \
-    defined(POSTFIX_USE_SASL_AUTH) || defined(USE_SASL) || \
-    defined(USE_SASL2) || defined(USE_OPENLDAP)
-.  if !defined(POSTFIX_OPTIONS)
-.    if defined(POSTFIX_USE_INET6) && !empty(POSTFIX_USE_INET6:M[yY][eE][sS])
-POSTFIX_OPTIONS+=	inet6
-.    endif
-.    if defined(POSTFIX_USE_TLS) && !empty(POSTFIX_USE_TLS:M[yY][eE][sS])
-POSTFIX_OPTIONS+=	tls
-.    endif
-.    if defined(POSTFIX_USE_PCRE) && !empty(POSTFIX_USE_PCRE:M[yY][eE][sS])
-POSTFIX_OPTIONS+=	pcre 
-.    endif
-.    if defined(POSTFIX_USE_MYSQL) && !empty(POSTFIX_USE_MYSQL:M[yY][eE][sS])
-POSTFIX_OPTIONS+=	mysql
-.    endif
-.    if defined(POSTFIX_USE_PGSQL) && !empty(POSTFIX_USE_PGSQL:M[yY][eE][sS])
-POSTFIX_OPTIONS+=	pgsql
-.    endif
-.    if defined(POSTFIX_USE_VERP) && !empty(POSTFIX_USE_VERP:M[yY][eE][sS])
-POSTFIX_OPTIONS+=	verp
-.    endif
-.    if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[yY][eE][sS])
-POSTFIX_OPTIONS+=	ldap
-.    endif
-.    if defined(POSTFIX_USE_SASL_AUTH) && defined(POSTFIX_USE_SASL_AUTH)
-USE_SASL=		YES
-.    endif
-.    if defined(USE_SASL) && !empty(USE_SASL:M[yY][eE][sS])
-POSTFIX_OPTIONS+=	sasl
-.    endif
-.    if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
-POSTFIX_OPTIONS+=	sasl
-.    endif
+###
+### Set PKG_DEFAULT_OPTIONS based on global variable settings.
+###
+.if defined(KERBEROS)
+.  if ${KERBEROS} == "4"
+PKG_DEFAULT_OPTIONS+=	kerberos4
+.  else
+PKG_DEFAULT_OPTIONS+=	kerberos
 .  endif
+.endif
+.if defined(USE_CANNA) && !empty(USE_CANNA:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	canna
+.endif
+.if defined(USE_CUPS) && !empty(USE_CUPS:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	cups
+.endif
+.if defined(USE_DB4) && !empty(USE_DB4:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	db4
+.endif
+.if defined(USE_ESOUND) && !empty(USE_ESOUND:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	esound
+.endif
+.if defined(USE_GIF)
+PKG_DEFAULT_OPTIONS+=	gif
+.endif
+.if defined(USE_I586) && !empty(USE_I586:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	i586
+.endif
+.if defined(USE_IDEA) && !empty(USE_IDEA:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	idea
+.endif
+.if defined(USE_INN) && !empty(USE_INN:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	inn
+.endif
+.if defined(USE_LIBCRACK) && !empty(USE_LIBCRACK:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	libcrack
+.endif
+.if defined(USE_MMX) && !empty(USE_MMX:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	mmx
+.endif
+.if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	openldap
+.endif
+.if defined(USE_OSS)
+PKG_DEFAULT_OPTIONS+=	oss
+.endif
+.if defined(USE_PAM)
+PKG_DEFAULT_OPTIONS+=	pam
+.endif
+.if defined(USE_RSAREF2)
+PKG_DEFAULT_OPTIONS+=	rsaref
+.endif
+.if defined(USE_SASL) && !empty(USE_SASL:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	sasl
+.endif
+.if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	sasl
+.endif
+.if defined(USE_SJ3) && !empty(USE_SJ3:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	sj3
+.endif
+.if defined(USE_SOCKS)
+.  if ${USE_SOCKS} == "4"
+PKG_DEFAULT_OPTIONS+=	socks4
+.  elif ${USE_SOCKS} == "5"
+PKG_DEFAULT_OPTIONS+=	socks5
+.  endif
+.endif
+.if defined(USE_WNN4) && !empty(USE_WNN4:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	wnn4
+.endif
+.if defined(USE_XFACE) && !empty(USE_XFACE:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	xface
 .endif

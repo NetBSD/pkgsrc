@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/07/24 14:01:20 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/07/30 21:05:42 jlam Exp $
 
 DISTNAME=	heimdal-0.6.1
 PKGREVISION=	1
@@ -34,19 +34,33 @@ BUILDLINK_INCDIRS.readline=	include/readline
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 LIBS.SunOS=		-ltermcap
 
-BUILD_DEFS+=		USE_DB4
-.if defined(USE_DB4) && !empty(USE_DB4:M[yY][eE][sS])
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+.include "../../security/openssl/buildlink3.mk"
+
+# Global and legacy options
+.if defined(USE_DB4) || defined(KERBEROS_PREFIX_CMDS)
+.  if !defined(PKG_OPTIONS.mit-krb5)
+.    if defined(USE_DB4) && !empty(USE_DB4:M[yY][eE][sS])     
+PKG_OPTIONS.mit-krb5+=  db4
+.    endif
+.    if defined(KERBEROS_PREFIX_CMDS) && !empty(KERBEROS_PREFIX_CMDS:M[yY][eE][sS])     
+PKG_OPTIONS.mit-krb5+=  prefix-cmds
+.    endif
+.  endif
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.heimdal
+PKG_SUPPORTED_OPTIONS=	db4 prefix-cmds #ldap
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mdb4)
 .  include "../../databases/db4/buildlink3.mk"
 .else
 .  include "../../mk/bdb.buildlink3.mk"
 .endif
 
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
-.include "../../security/openssl/buildlink3.mk"
-
 # XXX Using Heimdal with an LDAP backend isn't supported yet.
-#BUILD_DEFS+=		HEIMDAL_USE_LDAP
-#.if defined(HEIMDAL_USE_LDAP) && !empty(HEIMDAL_USE_LDAP:M[yY][eE][sS])
+#.if !empty(PKG_OPTIONS:Mldap)
 #.  include "../../databases/openldap/buildlink3.mk"
 #CONFIGURE_ARGS+=	--with-openldap=${BUILDLINK_PREFIX.openldap}
 #.endif
@@ -54,8 +68,7 @@ CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 # Rename some of Heimdal's applications so they won't conflict with
 # other packages.
 #
-BUILD_DEFS+=	KERBEROS_PREFIX_CMDS
-.if !empty(KERBEROS_PREFIX_CMDS:M[yY][eE][sS])
+.if !empty(PKG_OPTIONS:Mprefix-cmds)
 KRB5_PREFIX=		k
 HEIMDAL_TRANSFORM=	s/^ftp/${KRB5_PREFIX}&/;			\
 			s/^login/${KRB5_PREFIX}&/;			\

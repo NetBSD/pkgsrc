@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2004/06/23 11:04:37 recht Exp $
+# $NetBSD: Makefile,v 1.78 2004/07/30 21:05:41 jlam Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -54,18 +54,27 @@ CONFIGURE_ENV+=		DSOFLAGS="${LDFLAGS}"
 
 .include "../../mk/bsd.prefs.mk"
 
+# Global and legacy options
 .if defined(USE_PAM)
+.  if !defined(PKG_OPTIONS.cups)
+PKG_OPTIONS.cups+=	PAM
+.  endif
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
+PKG_SUPPORTED_OPTIONS=	PAM
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:MPAM)
 .  include "../../security/PAM/buildlink3.mk"
-BUILD_DEFS+=		USE_PAM
 CONFIGURE_ARGS+=	--enable-pam
-PLIST_SRC=		${PKGDIR}/PLIST.pam
-PLIST_SRC+=		${PKGDIR}/PLIST
 MESSAGE_SRC=		${PKGDIR}/MESSAGE
 MESSAGE_SRC+=		${PKGDIR}/MESSAGE.pam
+PLIST_SUBST+=		PAM=
 .else
 CONFIGURE_ARGS+=	--disable-pam
 MESSAGE_SRC=		${.CURDIR}/MESSAGE
-PLIST_SRC=		${PKGDIR}/PLIST
+PLIST_SUBST+=		PAM="@comment "
 .endif
 
 # CUPS_USER	username of the CUPS administrator
@@ -108,7 +117,7 @@ OWN_DIRS_PERMS+=	${CUPS_REQUESTS}/tmp ${CUPS_USER} ${CUPS_GROUP} 1770
 pre-configure:
 	cd ${WRKSRC} && ${AUTOCONF}
 
-pre-install:
+post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam
 
 post-install:
@@ -126,7 +135,7 @@ post-install:
 			;;						\
 		esac;							\
 	done
-.if defined(USE_PAM)
+.if !empty(PKG_OPTIONS:MPAM)
 	${INSTALL_DATA} ${WRKDIR}/cups.pam ${EGDIR}
 .endif
 
