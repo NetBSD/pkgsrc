@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2000/01/05 15:43:36 abs Exp $
+# $NetBSD: Makefile,v 1.26 2000/05/09 07:12:57 tron Exp $
 #
 
 BINNAME=	communicator
 DIST_SDIR_NAME=	complete_install
-NS_ENCRYPTION?=	export
-#
+
 .include "../navigator/Makefile.common"
