@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/07/13 14:34:49 dillo Exp $
+$NetBSD: distinfo,v 1.6 2003/08/18 05:31:03 jmc Exp $
 
 SHA1 (clisp-2.30.tar.bz2) = 7335116934d30cb327f4724047a1362498b85520
 Size (clisp-2.30.tar.bz2) = 5652698 bytes
@@ -11,3 +11,5 @@ SHA1 (patch-af) = a7c13cf848c370b676458a5b2e46a8fdcf4caa7f
 SHA1 (patch-ag) = 5ad9fe11abdea49780bdd0a01bf697d8ad07123c
 SHA1 (patch-ah) = ab42e8107d24a6ac86992aad5aa335ad33cfac62
 SHA1 (patch-ai) = 89f19718514b813b008ed92de8b538c76d341a53
+SHA1 (patch-aj) = 529b11e3cc3a3f72d4428d6f69bdce7bb9b33b97
+SHA1 (patch-ak) = f9152d73ddb74d4190ca6a91439a9173fbab5274
