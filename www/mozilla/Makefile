@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2001/01/17 15:04:21 taya Exp $
+# $NetBSD: Makefile,v 1.54 2001/02/05 09:01:06 tron Exp $
 
 DISTNAME=	mozilla-source-0.7
 PKGNAME=	mozilla-0.7
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mozilla.org/
 
 BUILD_DEPENDS+=	${PERL5}:../../lang/perl5-base
-BUILD_DEPENDS+=	autoconf:../../devel/autoconf
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=	zip:../../archivers/zip
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 DEPENDS+=	ORBit>=0.5.3:../../net/ORBit
@@ -67,7 +67,7 @@ post-extract:
 .include "../../mk/bsd.prefs.mk"
 
 pre-configure:
-	(cd ${WRKSRC} && autoconf)
+	(cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf)
 
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}

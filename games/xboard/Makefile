@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/10/15 02:14:20 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/05 09:00:57 tron Exp $
 #
 
 DISTNAME=		xboard-4.1.0
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=xboard/}
 MAINTAINER=		simonb@NetBSD.ORG
 HOMEPAGE=		http://www.research.compaq.com/SRC/personal/mann/xboard.html
 
-BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoremake:../../devel/autoconf
 
 USE_PERL5=		# defined
 USE_X11=		# defined
@@ -30,6 +30,6 @@ CONFIGURE_ARGS+=	--with-Xaw3d
 .endif
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoremake
 
 .include "../../mk/bsd.pkg.mk"
