@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/05/27 14:37:13 agc Exp $
+# $NetBSD: Makefile,v 1.9 2000/05/27 14:53:11 agc Exp $
 #
 
     SUBDIR += Xg
@@ -11,6 +11,7 @@
     SUBDIR += jisx0208fonts
     SUBDIR += jisx0212fonts
     SUBDIR += jisx0213fonts
+    SUBDIR += jmk-fonts
     SUBDIR += watanabe_vfont
 
 .include "../mk/bsd.pkg.subdir.mk"
