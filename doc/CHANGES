@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5248 2004/03/12 22:36:27 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.5249 2004/03/12 22:57:46 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1457,3 +1457,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tcl-fbsql to 1.05nb1 [minskim 2004-03-12]
 	Updated crimsonfields to 0.4.1 [wiz 2004-03-12]
 	Updated covered-current to 20040211 [dmcmahill 2004-03-12]
+	Updated p5-razor-agents to 2.40 [heinz 2004-03-12]
