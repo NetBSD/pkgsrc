@@ -1,3 +1,5 @@
+$NetBSD: patch-ak,v 1.2 2003/11/01 08:28:47 grant Exp $
+
 --- src/test_libFLAC++/Makefile.in.orig	2003-10-31 15:00:53.000000000 +1100
 +++ src/test_libFLAC++/Makefile.in	2003-10-31 15:01:19.000000000 +1100
 @@ -142,8 +142,8 @@

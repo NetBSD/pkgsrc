@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 2003/11/01 08:28:47 grant Exp $
+
 --- src/share/gain_analysis/Makefile.in.orig	2003-10-31 14:09:30.000000000 +1100
 +++ src/share/gain_analysis/Makefile.in	2003-10-31 14:14:51.000000000 +1100
 @@ -90,6 +90,7 @@
