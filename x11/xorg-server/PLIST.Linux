@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.4 2005/01/24 10:57:27 hira Exp $
+@comment $NetBSD: PLIST.Linux,v 1.5 2005/01/24 11:32:28 hira Exp $
 ${X11ROOT_PREFIX}/etc/init.d/xprint
 ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/models/CANONBJ10E-GS/fonts
 ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/models/CANONBJ10E-GS/model-config
@@ -7,9 +7,9 @@ ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/models/PS2PDFspooldir-GS/model-config
 ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/models/PS2PDFspooldir-GS/ps2pdf_spooltodir.sh
 ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/models/GSdefault/fonts
 ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/models/GSdefault/model-config
-${DRIVER.fbdev}${X11ROOT_PREFIX}/lib/modules/drivers/fbdev_drv.o
+${CARDDRIVER.fbdev}${X11ROOT_PREFIX}/lib/modules/drivers/fbdev_drv.o
 ${X11ROOT_PREFIX}/lib/modules/extensions/libdri.a
-${DRIVER.v4l}${X11ROOT_PREFIX}/lib/modules/drivers/linux/v4l_drv.o
+${CARDDRIVER.v4l}${X11ROOT_PREFIX}/lib/modules/drivers/linux/v4l_drv.o
 ${X11ROOT_PREFIX}/lib/modules/input/aiptek_drv.o
 ${X11ROOT_PREFIX}/lib/modules/input/linux/ur98_drv.o
 ${X11ROOT_PREFIX}/lib/modules/linux/libdrm.a
@@ -17,7 +17,7 @@ ${X11ROOT_PREFIX}/lib/modules/linux/libfbdevhw.a
 ${X11ROOT_PREFIX}/lib/modules/linux/libint10.a
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/aiptek.${KERNMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${KERNMAN_DIR}/ur98.${KERNMAN_SUFFIX}
-${DRIVER.v4l}${X11ROOT_PREFIX}/${KERNMAN_DIR}/v4l.${KERNMAN_SUFFIX}
+${CARDDRIVER.v4l}${X11ROOT_PREFIX}/${KERNMAN_DIR}/v4l.${KERNMAN_SUFFIX}
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/models/CANONBJ10E-GS
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/models/GSdefault
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/models/PS2PDFspooldir-GS
