@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2002/01/01 06:12:38 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2002/02/01 16:05:15 jlam Exp $
 
-DISTNAME=		mod_ssl-2.8.5-1.3.22
-PKGNAME=		ap-ssl-2.8.5
+DISTNAME=		mod_ssl-2.8.6-1.3.23
+PKGNAME=		ap-ssl-2.8.6
 CATEGORIES=		www security
 MASTER_SITES=		http://www.modssl.org/source/
 
@@ -9,18 +9,13 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.modssl.org/
 COMMENT=		SSL/TLS protocols module for Apache
 
-DEPENDS+=		apache>=1.3.22:../../www/apache
-# For "apxs":
-BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
-
 CONFLICTS=		apache-1.3.[0-9] apache-*modssl-[0-9]* apache6-[0-9]*
 
-HAS_CONFIGURE=		YES
+DEPENDS+=		apache-1.3.23:../../www/apache
+
+GNU_CONFIGURE=		YES
 USE_BUILDLINK_ONLY=	YES
 
-.include "../../mk/bsd.prefs.mk"
-
-CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
 MAKE_ENV+=		SSL_RPATH_LDFLAGS="-R${SSLBASE}/lib"
 
@@ -58,7 +53,7 @@ post-build:
 		> ${WRKSRC}/pkg.sslsup/mkcert.sh
 
 pre-install:
-	${SED} ${FILES_SUBST_SED}					\
+	@${SED} ${FILES_SUBST_SED}					\
 		${FILESDIR}/README.mkcert > ${WRKDIR}/README.mkcert
 
 post-install:
@@ -96,5 +91,6 @@ post-install:
 		${EGDIR}/ssl.prm
 
 .include "../../security/openssl/buildlink.mk"
+.include "../../www/apache/buildlink.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
