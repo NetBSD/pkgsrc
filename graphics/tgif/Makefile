@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2002/08/01 05:48:14 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2002/10/09 19:08:58 wiz Exp $
 #
 
 DISTNAME=		tgif-4.1.42
@@ -9,6 +9,7 @@ MAINTAINER=		dmcmahill@netbsd.org
 HOMEPAGE=		http://bourbon.usc.edu:8001/tgif/tgif.html
 COMMENT=		Fully-featured X11 drawing program
 
+USE_BUILDLINK2=		yes
 USE_IMAKE=		yes
 USE_X11=		yes
 
@@ -18,6 +19,6 @@ post-patch::
 	@${RM} -f ${WRKSRC}/Tgif.tmpl
 	@${CP} ${WRKSRC}/Tgif.tmpl-netbsd ${WRKSRC}/Tgif.tmpl
 
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
