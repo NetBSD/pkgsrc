@@ -1,6 +1,18 @@
-$NetBSD: distinfo,v 1.2 2004/10/23 13:54:46 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2004/11/24 22:35:25 kristerw Exp $
 
 SHA1 (gnotime-2.2.0.tar.gz) = 895a516a52b0cc7745183c0c8c909896dbda60ab
 Size (gnotime-2.2.0.tar.gz) = 1197945 bytes
-SHA1 (patch-aa) = e54c704d3089587e4dd6a6f474088b22c809ffe4
+SHA1 (patch-aa) = a1332ebd600c4611533f5337dbc729af92f2d8d3
 SHA1 (patch-ab) = 8ce9db0b1059ac45aab9681116ac86c331818847
+SHA1 (patch-ac) = d9523a1561cf7a57056a3670b1ebac4e28629fed
+SHA1 (patch-ad) = 060bddad8f1807823b6e2f65bec1bf12d4940fd9
+SHA1 (patch-ae) = 4ed3ab60c71caf8f078657a5bbac9caed3dc4e4a
+SHA1 (patch-af) = adc0c63aab58c5ac15be9c194b7d76ac7a37736c
+SHA1 (patch-ag) = 4816d594079adfdef51a7471b587db62167c9d57
+SHA1 (patch-ah) = 8683366be0995489347cb7f72e4a3ce3ac1204cb
+SHA1 (patch-ai) = 440941dfaa4454f7d5dee90c43e79c950704d3ad
+SHA1 (patch-aj) = 0494c00b312ac73ee4107ef8d761f2d1047559bb
+SHA1 (patch-ak) = c198f95978471a946e0008d4d80f5630716ac991
+SHA1 (patch-al) = 36e08dfe8ee0a38a27db99f1edcb05669a57f29c
+SHA1 (patch-am) = d23fb795a5f2c6774e11cd7ac22f478b8f7266a8
+SHA1 (patch-an) = 120164b440724278e4bb4d4bc97404b3e4e76481

@@ -1,0 +1,28 @@
+$NetBSD: patch-aj,v 1.1 2004/11/24 22:35:25 kristerw Exp $
+
+--- src/proj.c.orig	Wed Nov 24 22:40:26 2004
++++ src/proj.c	Wed Nov 24 22:41:13 2004
+@@ -2306,10 +2306,10 @@
+ gtt_task_get_secs_earliest (GttTask *tsk)
+ {
+ 	GList *node;
+-	if (NULL == tsk->interval_list) return 0;
+-
+ 	time_t earliest = INT_MAX;
+ 
++	if (NULL == tsk->interval_list) return 0;
++
+ 	for (node=tsk->interval_list; node; node=node->next)
+ 	{
+ 		GttInterval * ivl = node->data;
+@@ -2322,9 +2322,8 @@
+ gtt_task_get_secs_latest (GttTask *tsk)
+ {
+ 	GList *node;
+-	if (NULL == tsk->interval_list) return 0;
+-
+ 	time_t latest = INT_MIN;
++	if (NULL == tsk->interval_list) return 0;
+ 
+ 	for (node=tsk->interval_list; node; node=node->next)
+ 	{
