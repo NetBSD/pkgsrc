@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/11/11 09:56:37 wiz Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2003/12/07 12:20:07 agc Exp $
 #
 
 DISTNAME=	xjdic23
@@ -44,8 +44,10 @@ do-install:
 			${WRKSRC}/xjdic23.install \
 			${PREFIX}/share/doc/xjdic
 		${INSTALL_MAN} ${WRKSRC}/xjdic.1 ${PREFIX}/man/man1
-		${GZIP_CMD} -cd ${DISTDIR}/kanjidic.gz >${PREFIX}/share/xjdic/kanjidic
-		${GZIP_CMD} -cd ${DISTDIR}/edict.gz >${PREFIX}/share/xjdic/edict
+		${GZIP_CMD} -cd ${DISTDIR}/${DIST_SUBDIR}/kanjidic.gz \
+			>${PREFIX}/share/xjdic/kanjidic
+		${GZIP_CMD} -cd ${DISTDIR}/${DIST_SUBDIR}/edict.gz \
+			>${PREFIX}/share/xjdic/edict
 		${PREFIX}/bin/xjdxgen ${PREFIX}/share/xjdic/edict
 		${PREFIX}/bin/xjdxgen ${PREFIX}/share/xjdic/kanjidic
 		${SED} \
