@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/12 10:08:25 zuntum Exp $
+
+--- Makefile.orig	Thu Jan  4 22:22:16 2001
++++ Makefile
+@@ -1,13 +1,12 @@
+ PACKAGE=loco
+ VERSION=0.32
+-PREFIX=/usr/local
+ MANDIR=$(PREFIX)/man/man1
+-DOCDIR=$(PREFIX)/doc/$(PACKAGE)-$(VERSION)
++DOCDIR=$(PREFIX)/share/doc/$(PACKAGE)
+ 
+ check:
+-	perl -e 'eval "use Term::ANSIColor; 1" || die "Module not found!\n";'
+-	pod2html $(PACKAGE) > $(PACKAGE).html
+-	pod2man  $(PACKAGE) | gzip - > $(PACKAGE).1.gz
++	${LOCALBASE}/bin/perl -e 'eval "use Term::ANSIColor; 1" || die "Module not found!\n";'
++	${LOCALBASE}/bin/pod2html $(PACKAGE) > $(PACKAGE).html
++	${LOCALBASE}/bin/pod2man  $(PACKAGE) > $(PACKAGE).1
+ 	#
+ 	# Checks finished. Everything looks fine
+ 	#
+@@ -15,18 +14,18 @@
+ install: installdoc installman installprogram
+ 
+ installdoc:
+-	install -m 755 -d $(DOCDIR)
+-	install -m 644 $(PACKAGE).html $(DOCDIR)
+-	install -m 644 README $(DOCDIR)
+-	install -m 644 COPYRIGHT $(DOCDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DOCDIR)
++	$(BSD_INSTALL_DATA) $(PACKAGE).html $(DOCDIR)
++	$(BSD_INSTALL_DATA) README $(DOCDIR)
++	$(BSD_INSTALL_DATA) COPYRIGHT $(DOCDIR)
+ 
+ installman:
+-	install -m 755 -d $(MANDIR)
+-	install -m 644 $(PACKAGE).1.gz $(MANDIR)
++	$(BSD_INSTALL_MAN_DIR) $(MANDIR)
++	$(BSD_INSTALL_MAN) $(PACKAGE).1 $(MANDIR)
+ 
+ installprogram:
+-	install -m 755 -d $(PREFIX)/bin
+-	install -m 755 $(PACKAGE) $(PREFIX)/bin
++	$(BSD_INSTALL_SCRIPT_DIR) $(PREFIX)/bin
++	$(BSD_INSTALL_SCRIPT) $(PACKAGE) $(PREFIX)/bin
+ 
+ clean:
+ 	rm -f *~ $(PACKAGE).1.gz $(PACKAGE).html pod2html-*

@@ -1,0 +1,4 @@
+Loco is a Perl script which gives the messages file (usually /var/log/messages)
+some color, so the output is easier to read. It uses a Perl module called
+Term::ANSIColor to produce the colors. The Perl script is very readable
+and customizable.
