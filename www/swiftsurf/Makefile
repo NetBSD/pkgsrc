@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/03/10 18:35:13 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/03 22:25:28 snj Exp $
 
 DISTNAME=		swiftsurf-1.2.5
 CATEGORIES=		www
@@ -8,7 +8,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://swiftsurf.sourceforge.net/
 COMMENT=		Web proxy that can handle http and https
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc")
@@ -35,5 +35,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/swiftsurf
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/swiftsurf
 
-.include "../../lang/ocaml/buildlink2.mk"
+.include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
