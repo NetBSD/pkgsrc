@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/11 11:47:54 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/01/17 01:13:46 wiz Exp $
 bin/cube3d
 bin/monitest
 etc/ggi/libggi.conf
@@ -216,8 +216,7 @@ man/man7/libggi.7
 @dirrm lib/ggi/display
 @dirrm lib/ggi/default
 @comment in libgii: @dirrm lib/ggi
-@dirrm include/ggi/internal
-@comment in libgii: @dirrm include/ggi/display
+@comment in libgii: @dirrm include/ggi/internal
+@dirrm include/ggi/display
 @comment in libgii: @dirrm include/ggi
 @comment in libgii: @dirrm etc/ggi
-
