@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5488 2004/04/09 03:46:04 garbled Exp $
+$NetBSD: CHANGES,v 1.5489 2004/04/09 10:43:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1848,5 +1848,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Added columba-1.0M2 [xtraeme 2004-04-08]
 	Updated pkg_chk to 1.46 [abs 2004-04-08]
 	Updated snownews to 1.5.1 [wiz 2004-04-09]
-    Updated genecys-client to 0.2 [garbled 2004-04-09]
-    Updated genecys-data to 0.2 [garbled 2004-04-09]
+	Updated genecys-client to 0.2 [garbled 2004-04-09]
+	Updated genecys-data to 0.2 [garbled 2004-04-09]
+	Updated icewm to 1.2.13nb1 [wiz 2004-04-09]
+	Updated icewm-gnome to 1.2.13nb2 [wiz 2004-04-09]
+	Updated icewm-imlib to 1.2.13nb2 [wiz 2004-04-09]
