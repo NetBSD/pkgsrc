@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgchk.8,v 1.19 2003/10/04 21:07:53 agc Exp $
+.\"	$NetBSD: pkgchk.8,v 1.20 2004/02/15 16:22:27 wiz Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -136,7 +136,9 @@ tags.
 Tags are checked against the current machine's set:
 .Bl -bullet
 .It
-If a matched tag starts with a hyphen '-', the package is always excluded.
+If a matched tag starts with a hyphen
+.Sq - ,
+the package is always excluded.
 .It
 Otherwise if any tags match the package will be included.
 .It
@@ -146,17 +148,24 @@ An asterisk
 .Em *
 matches any tag.
 .It
-Tags cannot contain a hypen '-' or plus '+'.
+Tags cannot contain a hypen
+.Sq -
+or plus
+.Sq + .
 .It
-Tags separated by spaces are treated as 'or'.
-'taga tagb' means if
+Tags separated by spaces are treated as
+.Dq or .
+.Dq taga tagb
+means if
 .Em tag_a
 or
 .Em tag_b
 match the current machine.
 .It
-Tags separated by a plus are treated as 'and'.
-'taga+tagb' means if
+Tags separated by a plus are treated as
+.Dq and .
+.Dq taga+tagb
+means if
 .Em tag_a
 and
 .Em tag_b
@@ -258,7 +267,9 @@ www/navigator                	x11+i386
 x11/xlockmore                   x11 -wopr
 .Ed
 .Sh AUTHORS
-David Brownlee <abs@netbsd.org>, plus much from Stoned Elipot.
+.An David Brownlee
+.Aq abs@netbsd.org ,
+plus much from Stoned Elipot.
 .Sh BUGS
 Updating packages on which other packages depend can currently only be done
 via source (not binary packages).
