@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2000/02/17 22:44:19 jlam Exp $
+
+case $2 in
+POST-INSTALL)
+	cat << EOF
+==============================================================
+
+Please be sure to read ${PKG_PREFIX}/lib/RealPlayerG2/LICENSE.
+
+==============================================================
+EOF
+	;;
+*)
+	;;
+esac
+exit 0
