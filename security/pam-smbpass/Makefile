@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/26 02:27:53 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/24 22:46:11 jlam Exp $
 
 .include "../../net/samba2/Makefile.common"
 
@@ -6,7 +6,7 @@ PKGNAME=		pam-smbpass-${SAMBA_DIST_VERS}
 PKGREVISION=		1
 CATEGORIES=		security
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		PAM authentication against a Samba password database
 
 CONFLICTS+=		samba>=3.0

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2004/04/20 19:19:23 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.36 2004/04/24 22:46:13 jlam Exp $
 
 DISTNAME?=		php-${PHP_DIST_VERS}
 CATEGORIES+=		www php4
@@ -7,7 +7,7 @@ MASTER_SITES?=		http://www.php.net/distributions/ \
 			ftp://ftp.php.net/pub/distributions/
 EXTRACT_SUFX?=		.tar.bz2
 
-MAINTAINER?=		jlam@NetBSD.org
+MAINTAINER?=		tech-pkg@NetBSD.org
 HOMEPAGE?=		http://www.php.net/
 
 # Version numbering scheme:

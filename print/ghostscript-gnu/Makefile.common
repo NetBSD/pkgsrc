@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2004/03/25 15:35:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/04/24 22:46:11 jlam Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 GS_VERS=	7.07
@@ -7,7 +7,7 @@ MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=ghostscript/} \
 		ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/gnu/gs${GS_VERS:S/.//}/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cs.wisc.edu/~ghost/index.html
 
 CONFLICTS+=	ghostscript{,-nox11}-[0-9]*

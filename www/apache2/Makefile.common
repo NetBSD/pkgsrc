@@ -4,4 +4,4 @@ APR_VERSION=            0.9.5
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
 			${MASTER_SITE_APACHE:=httpd/old/} \
 			http://www.NetBSD.org/images/logos/
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/03/26 02:27:36 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/24 22:46:09 jlam Exp $
 #
 
 DISTNAME=	pgaccess-0.98.8
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.pgaccess.org/download/
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.pgaccess.org/
 COMMENT=	Graphical database management tool for PostgreSQL
 

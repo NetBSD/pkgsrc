@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:48:21 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/24 22:46:11 jlam Exp $
 # FreeBSD Id: Makefile,v 1.7 1998/08/20 07:35:21 asami Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=		math lang
 MASTER_SITES=		http://lib.stat.cmu.edu/xlispstat/Src/3-52/ \
 			ftp://ftp.stat.umn.edu/pub/xlispstat/3-52/
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.stat.umn.edu/~luke/xls/xlsinfo/xlsinfo.html
 COMMENT=		Statistics/X11-based LISP interpreter
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/04/18 22:58:12 snj Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/24 22:46:09 jlam Exp $
 
 DISTNAME=	slib2d6
 #
@@ -11,7 +11,7 @@ MASTER_SITES=	http://swissnet.ai.mit.edu/ftpdir/scm/ \
 		${MASTER_SITE_GNU:=jacal/}
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://swissnet.ai.mit.edu/~jaffer/SLIB.html
 COMMENT=	Portable Scheme library of compatibility and utility functions
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/04/11 18:10:28 snj Exp $
+# $NetBSD: Makefile,v 1.27 2004/04/24 22:46:10 jlam Exp $
 
 DISTNAME=		crafty-18.15
 CATEGORIES=		games
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/v18/ \
 DISTFILES=		${CRAFTY_DISTFILES}
 DISTFILES+=		${CRAFTY_STARTPGN} ${CRAFTY_DOCFILES}
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Chess engine
 
 USE_BUILDLINK3=		YES

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2004/03/23 04:41:00 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/24 22:46:09 jlam Exp $
 
 DISTNAME=		libPropList-0.10.1
 PKGNAME=		libproplist-0.10.1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/libs/
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		GNUstep/OPENSTEP property lists compatibility library
 
 GNU_CONFIGURE=		# defined

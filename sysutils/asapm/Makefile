@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/07/17 22:53:27 grant Exp $
+# $NetBSD: Makefile,v 1.25 2004/04/24 22:46:11 jlam Exp $
 #
 
 DISTNAME=		asapm-2.11
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.tigr.net/afterstep/download/asapm/ \
 			ftp://ftp.afterstep.org/apps/asapm/ \
 			ftp://fuf.sh.cvut.cz/pub/AfterStep/apps/asapm/
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.tigr.net/afterstep/detail.pl?applet=asapm
 COMMENT=		Laptop battery status display for X11
 

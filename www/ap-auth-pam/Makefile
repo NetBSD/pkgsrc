@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2003/07/22 04:14:19 martti Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/24 22:46:12 jlam Exp $
 
 DISTNAME=	mod_auth_pam-1.0a
 PKGNAME=	ap-auth-pam-1.0a
 CATEGORIES=	www
 MASTER_SITES=	http://pam.sourceforge.net/mod_auth_pam/dist/
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://pam.sourceforge.net/mod_auth_pam/
 COMMENT=	Module to allow Apache authentication using PAM
 

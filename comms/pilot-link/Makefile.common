@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/02/14 17:21:35 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/04/24 22:46:09 jlam Exp $
 
 DISTNAME=		pilot-link-${PILOT_LINK_VERS}
 CATEGORIES=		comms
@@ -7,7 +7,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 PILOT_LINK_VERS=	0.11.7
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE?=		http://www.pilot-link.org/
 
 USE_LIBTOOL=		# defined

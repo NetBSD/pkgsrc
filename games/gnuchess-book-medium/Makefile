@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/03/08 06:05:31 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/24 22:46:10 jlam Exp $
 
 DISTNAME=		medium
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/common/${DISTNAME}/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Chess opening book for GNU Chess (medium)
 
 DEPENDS+=		gnuchess>=5.07:../../games/gnuchess
