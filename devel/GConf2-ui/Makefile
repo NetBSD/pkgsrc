@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2004/12/03 15:14:53 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2005/03/22 15:55:26 jmmv Exp $
 #
 
 .include "../../devel/GConf2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/GConf/GConf2-ui/}
 
-BUILDLINK_DEPENDS.GConf2+=	GConf2>=2.8.1
+BUILDLINK_DEPENDS.GConf2+=	GConf2>=2.10.0
 
 CONFIGURE_ARGS+=	--enable-gtk
 
@@ -17,5 +17,8 @@ do-install:
 		${PREFIX}/libexec
 
 .include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
