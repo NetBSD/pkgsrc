@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.55 2002/04/29 04:17:04 lukem Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.56 2002/05/04 01:22:03 jtb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -947,7 +947,7 @@ NMH_MTA?=	smtp
 
 NMH_PAGER?= more
 # default pager for use in nmh.
-# Possible: any editor.
+# Possible: any pager.
 # Default: more
 
 #NS_PREFERRED=
