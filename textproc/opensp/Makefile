@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/07/25 10:02:09 agc Exp $
+# $NetBSD: Makefile,v 1.13 2002/08/01 06:57:25 jlam Exp $
 #
 
 DISTNAME=	OpenSP-1.4
@@ -10,19 +10,24 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://openjade.sourceforge.net/doc-1.4/index.htm
 COMMENT=	SGML parser, successor to "sp"
 
-DEPENDS+=	unproven-pthreads-[0-9]*:../../devel/unproven-pthreads
-USE_PERL5=	build
-
 CONFLICTS+=     sp-[0-9]*
 
-GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=--enable-http \
-		--enable-default-catalog=${PREFIX}/share/sgml/catalog
-CONFIGURE_ENV+= CC="${LOCALBASE}/pthreads/bin/pgcc" \
-		CXX="${LOCALBASE}/pthreads/bin/pg++"
+USE_BUILDLINK_ONLY=	yes
+USE_PERL5=		build
+PTHREAD_OPTS+=		native
 
-USE_LIBTOOL=	yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-http \
+			--enable-default-catalog=${PREFIX}/share/sgml/catalog
+
+USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-USE_LIBINTL=	yes
+
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
+
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
+.  include "../../devel/unproven-pthreads/buildlink.mk"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
