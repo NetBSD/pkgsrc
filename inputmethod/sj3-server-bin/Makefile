@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/07/29 21:35:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/31 12:33:03 jmmv Exp $
 #
 
 DISTNAME=	sj3-2.0.1.20
 PKGNAME=	sj3-server-bin-2.0.1.20
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	ftp://ftp.sony.co.jp/pub/unsupported/src/	\
 		ftp://ftp.cs.titech.ac.jp/pub/japanese/sj3/
@@ -11,7 +11,6 @@ MASTER_SITES=	ftp://ftp.sony.co.jp/pub/unsupported/src/	\
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 COMMENT=	Japanese input method (server binary)
 
-FILESDIR=	${.CURDIR}/../sj3-lib/files
 DISTINFO_FILE=	${.CURDIR}/../sj3-lib/distinfo
 PATCHDIR=	${.CURDIR}/../sj3-lib/patches
 
@@ -43,17 +42,6 @@ pre-configure:
 
 do-configure:
 	@(cd ${WRKSRC}; ${XMKMF_CMD}; ${MAKE} Makefiles)
-
-post-build:
-	@${ECHO} '#!${RCD_SCRIPTS_SHELL}'		 > ${WRKDIR}/sj3
-	@${ECHO} 'sj3=${PREFIX}/bin/sj3serv'		>> ${WRKDIR}/sj3
-	@${ECHO} 'if [ -f $$sj3 ]; then'		>> ${WRKDIR}/sj3
-	@${ECHO} "    echo -n ' sj3'"			>> ${WRKDIR}/sj3
-	@${ECHO} '	$$sj3'				>> ${WRKDIR}/sj3
-	@${ECHO} 'fi'					>> ${WRKDIR}/sj3
-
-post-install:
-	@${INSTALL_SCRIPT} ${WRKDIR}/sj3 ${PREFIX}/etc/rc.d/sj3
 
 .include "../../devel/nbitools/nbitools.mk"
 .include "../../inputmethod/sj3-lib/buildlink2.mk"
