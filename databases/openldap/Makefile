@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2004/02/20 13:56:15 jlam Exp $
+# $NetBSD: Makefile,v 1.71 2004/02/21 01:48:38 jlam Exp $
 
 DISTNAME=		openldap-2.1.25
 SVR4_PKGNAME=		oldap
@@ -28,6 +28,7 @@ PKG_SYSCONFSUBDIR=	openldap
 #
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var/openldap
+CONFIGURE_ARGS+=	--enable-dynamic	# link against shared libs
 CONFIGURE_ARGS+=	--enable-bdb
 CONFIGURE_ARGS+=	--enable-crypt
 CONFIGURE_ARGS+=	--enable-dnssrv
@@ -54,6 +55,8 @@ CONFIGURE_ARGS+=	--enable-spasswd
 
 .if defined(KERBEROS)
 .  include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ENV+=		ol_with_kerberos=yes
+CONFIGURE_ENV+=		ol_enable_kpasswd=yes
 CONFIGURE_ARGS+=	--with-kerberos
 CONFIGURE_ARGS+=	--enable-kpasswd
 .else
