@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/09/14 07:58:03 rh Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/16 03:42:39 rh Exp $
 #
 
 DISTNAME=		GConf-1.2.1
@@ -26,7 +26,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
-.include "../../devel/ptl2/buildlink2.mk"
 .include "../../net/ORBit2/buildlink2.mk"
 .include "../../net/linc/buildlink2.mk"
 .include "../../textproc/gtk-doc/buildlink2.mk"
