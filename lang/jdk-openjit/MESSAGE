@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/07/01 19:02:34 jlam Exp $
+
+To use OpenJIT, either add the option
+
+    -Djava.compiler=OpenJIT
+
+to the Java command line, or put the following in the environment:
+
+    JAVA_COMPILER=OpenJIT
+
+===========================================================================

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/01 19:02:34 jlam Exp $
+
+SHA1 (OpenJIT-1.1.16.tar.gz) = fbe44c43db12f57b7f39b3f3f6f604f7a5486aee
+Size (OpenJIT-1.1.16.tar.gz) = 139609 bytes
+SHA1 (patch-aa) = 39caec6dfca4a595514824d19d891bb0ede04ea1
+SHA1 (patch-ab) = 11a66f1b84388e332030c4b0b8d0db218524fcc7
+SHA1 (patch-ac) = 37e247f4a55c03f79380254c54cdf89487b2f8f9

@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/01 19:02:34 jlam Exp $
+
+--- configure.orig	Mon Feb 17 17:09:31 2003
++++ configure
+@@ -822,6 +822,7 @@ case $host_os in
+     solaris*)	PLATFORM=solaris;;
+     linux-*)	PLATFORM=linux;;
+     freebsd*)	PLATFORM=freebsd;;
++    netbsd*)	PLATFORM=netbsd;;
+ esac
+ 
+ 

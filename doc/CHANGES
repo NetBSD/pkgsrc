@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2649 2003/07/01 16:20:37 jschauma Exp $
+$NetBSD: CHANGES,v 1.2650 2003/07/01 19:03:27 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2642,3 +2642,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated groff to 1.19nb3 [wiz 2003-07-01]
 	Update mined to 2000.7 [agc 2003-07-01]
 	Updated netscape7 to 7.1 [jschauma 2003-07-01]
+	Added jdk-openjit-1.1.16 [jlam 2003-07-01]
