@@ -1,0 +1,24 @@
+--- sn_data.h.BAK	Mon Mar 30 09:33:53 1998
++++ sn_data.h	Mon Mar 30 09:33:57 1998
+@@ -25,6 +25,21 @@
+ char *ETH_DEV[]={"ed"};
+ #endif
+ 
++#ifdef NETBSD
++#ifdef i386
++#define ETH_DEV_NR      20
++char *ETH_DEV[]={"ai","de","ec","ef","eg","el","en","ep","fe","fea","fpa","fxp","ix","iy","lc","le","ne","sm","tl","we"};
++#elif defined(sparc)
++#define ETH_DEV_NR      2
++char *ETH_DEV[]={"le","ie"};
++#elif defined(amiga)
++#define ETH_DEV_NR      5
++char *ETH_DEV[]={"bah","ed","es","le","qn"};
++#else
++#error Unknown network devices for this NetBSD architecture.
++#endif
++#endif
++
+ #ifdef BSDI
+ #define ETH_DEV_NR      1
+ char *ETH_DEV[]={"ef"};
