@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/07/08 20:27:56 heinz Exp $
+# $NetBSD: Makefile,v 1.38 2004/08/29 16:49:58 recht Exp $
 #
 
 DISTNAME=	hylafax-4.1.8
@@ -28,6 +28,8 @@ RCD_SCRIPTS=	hylafax
 HAS_CONFIGURE=	YES
 CONFIGURE_ENV=	PREFIX="${PREFIX}" FAXUID="${FAXUSER}" FAXGID="${FAXGROUP}"
 CONFIGURE_ARGS=	--with-MAKE=${MAKE_PROGRAM} --with-INSTALL="" --nointeractive
+CONFIGURE_ARGS+=	--with-ZLIBINC=-I${BUILDLINK_PREFIX.zlib}/include
+CONFIGURE_ARGS+=	--with-LIBZ="-L${BUILDLINK_PREFIX.zlib}/lib -lz"
 MANCOMPRESSED=	yes
 
 SUID_EXES=	${PREFIX}/libexec/faxgetty ${PREFIX}/sbin/faxq \
@@ -37,6 +39,7 @@ post-install:
 	${CHOWN} ${FAXUSER} ${SUID_EXES}
 	${CHMOD} 4555 ${SUID_EXES}
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/ghostscript.mk"
