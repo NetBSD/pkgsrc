@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2001/12/21 21:26:05 atatat Exp $
+# $NetBSD: Makefile,v 1.50 2002/01/23 01:34:36 atatat Exp $
 #
 
-DISTNAME=		lsof_4.60_W
-PKGNAME=		lsof-4.60
-WRKSRC=			${WRKDIR}/${SRCBALL_NAME}
+DISTNAME=		lsof_4.61
+PKGNAME=		lsof-4.61
+TMPWRK=			${WRKDIR}/${DISTNAME}
+WRKSRC=			${WRKDIR}/${DISTNAME}/${SRCBALL_NAME}
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/NEW/ \
@@ -23,7 +24,7 @@ CONFIGURE_ENV+=		LSOF_CC="${CC} ${CFLAGS}"
 MAKE_FLAGS+=		LSOF_BLDCMT="NetBSD pkgsrc rocks!"
 CPPFLAGS+=		-DLSOF_MORE_SECURE=${LSOF_MORE_SECURE}
 
-SRCBALL_NAME=		${DISTNAME:S/_W$//}
+SRCBALL_NAME=		${DISTNAME}_src
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,8 +37,8 @@ MAKE_ENV+=		CPPFLAGS=
 LSOF_MORE_SECURE?= 0
 
 post-extract:
-	@(cd ${WRKDIR} ; \
-	EXPMD5=`${GREP} MD5 README.${SRCBALL_NAME} | ${SED} 's/^[ ]*//'` ; \
+	@(cd ${TMPWRK} ; \
+	EXPMD5=`${GREP} MD5 README.${DISTNAME} | ${SED} 's/^[ ]*//'` ; \
 	CALCMD5=`${DIGEST} MD5 ${SRCBALL_NAME}.tar` ; \
 	if [ "$${EXPMD5}"X != "$${CALCMD5}"X ]; then \
 		${ECHO} "Expected and calculated MD5 signatures don't agree." ; \
