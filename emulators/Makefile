@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2004/11/09 13:08:24 xtraeme Exp $
+# $NetBSD: Makefile,v 1.121 2004/11/30 14:41:19 xtraeme Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -37,6 +37,9 @@ SUBDIR+=	gens
 SUBDIR+=	gnuboy
 SUBDIR+=	gnuboy-sdl
 SUBDIR+=	gpsim
+SUBDIR+=	gpsim-devel
+SUBDIR+=	gpsim-oscilloscope
+SUBDIR+=	gpsim-ptyusart
 SUBDIR+=	hatari
 SUBDIR+=	hercules
 SUBDIR+=	hercules-images
