@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/07/25 04:57:24 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2000/12/06 17:14:12 jlam Exp $
 #
 
 DISTNAME=		giflib-4.1.0
@@ -19,6 +19,7 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS=		--without-x
 
 DOCDIR=			${PREFIX}/share/doc/giflib
+HTMLDIR=		${PREFIX}/share/doc/html/giflib
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,6 +36,7 @@ pre-configure:
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} COPYING PATENT_PROBLEMS ${DOCDIR}
-	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.txt *.png ${DOCDIR}
+	${INSTALL_DATA_DIR} ${HTMLDIR}
+	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.txt *.png ${HTMLDIR}
 
 .include "../../mk/bsd.pkg.mk"
