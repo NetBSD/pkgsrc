@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/11/17 21:42:11 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/01/20 18:49:33 jmmv Exp $
 bin/dia
 lib/dia/libbondgraph_objects.la
 lib/dia/libcairo_filter.la
@@ -20,7 +20,6 @@ lib/dia/libmisc_objects.la
 lib/dia/libnetwork_objects.la
 lib/dia/libpixbuf_filter.la
 lib/dia/libpstricks_filter.la
-${PYTHON_OPTION}lib/dia/libpython_plugin.la
 lib/dia/libsadt_objects.la
 lib/dia/libshape_filter.la
 lib/dia/libstandard_objects.la
@@ -43,15 +42,6 @@ share/dia/images/selectable.png
 share/dia/images/unbroken-chain.xpm
 share/dia/images/visible-empty.png
 share/dia/images/visible.png
-${PYTHON_OPTION}share/dia/python-startup.py
-${PYTHON_OPTION}share/dia/python/diasvg.py
-${PYTHON_OPTION}share/dia/python/diasvg_import.py
-${PYTHON_OPTION}share/dia/python/group_props.py
-${PYTHON_OPTION}share/dia/python/gtkcons.py
-${PYTHON_OPTION}share/dia/python/otypes.py
-${PYTHON_OPTION}share/dia/python/pydiadoc.py
-${PYTHON_OPTION}share/dia/python/scascale.py
-${PYTHON_OPTION}share/dia/python/select_by.py
 share/dia/shapes/Assorted/arrow-chevron.png
 share/dia/shapes/Assorted/arrow-chevron.shape
 share/dia/shapes/Assorted/arrow-down.png
@@ -1421,7 +1411,6 @@ ${GNOME_OPTION}@comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/dia/shapes/ChemEng
 @dirrm share/dia/shapes/Assorted
 @dirrm share/dia/shapes
-${PYTHON_OPTION}@dirrm share/dia/python
 @dirrm share/dia/images
 @dirrm share/dia
 @comment in xdg-dirs: @dirrm share/applications
