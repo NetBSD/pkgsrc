@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/11/27 11:17:04 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/02/07 15:02:25 wiz Exp $
 share/doc/phppgadmin/CREDITS
 share/doc/phppgadmin/DEVELOPERS
 share/doc/phppgadmin/FAQ
@@ -41,7 +41,6 @@ share/phppgadmin/classes/database/Postgres72.php
 share/phppgadmin/classes/database/Postgres73.php
 share/phppgadmin/classes/database/Postgres74.php
 share/phppgadmin/classes/database/Postgres80.php
-share/phppgadmin/conf/.pkgsrc
 share/phppgadmin/constraints.php
 share/phppgadmin/conversions.php
 share/phppgadmin/database.php
