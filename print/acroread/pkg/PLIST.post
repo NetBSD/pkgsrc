@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST.post,v 1.1 2000/04/18 01:46:18 dmcmahill Exp $
+@exec mkdir -p %D/lib/netscape/plugins
+@unexec rmdir %D/lib/netscape/plugins 2>/dev/null || true
+@unexec rmdir %D/lib/netscape 2>/dev/null || true
+@exec ln -sf ../../Resource/Font/ %D/Acrobat4/Reader/${PLATFORM}/fonts
+@unexec rm -f %D/Acrobat4/Reader/${PLATFORM}/fonts
+@exec ln -sf ../../res %D/Acrobat4/Reader/${PLATFORM}/res
+@unexec rm -f %D/Acrobat4/Reader/${PLATFORM}/res
+@dirrm Acrobat4/Browsers/${PLATFORM}
+@dirrm Acrobat4/Browsers
+@dirrm Acrobat4/Reader/res
+@dirrm Acrobat4/Reader/${PLATFORM}/plug_ins/JavaScripts
+@dirrm Acrobat4/Reader/${PLATFORM}/plug_ins
+@dirrm Acrobat4/Reader/${PLATFORM}/lib
+@dirrm Acrobat4/Reader/${PLATFORM}/bin
+@dirrm Acrobat4/Reader/${PLATFORM}/app-defaults
+@dirrm Acrobat4/Reader/${PLATFORM}
+@dirrm Acrobat4/Reader/help
+@dirrm Acrobat4/Reader
+@dirrm Acrobat4/Resource/Font
+@dirrm Acrobat4/Resource
+@dirrm Acrobat4/bin
+@dirrm Acrobat4

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/03/03 02:30:44 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2000/04/18 01:46:16 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/04/08 07:49:18 dima Exp $
 
 PKGNAME=	acroread-4.05
@@ -20,23 +20,27 @@ NO_BUILD=	YES
 .if (${MACHINE_ARCH} == "i386")
 DEPENDS=	suse_linux>=6.1:../../emulators/suse_linux
 DISTNAME=	linux-ar-405
-#.elif (${MACHINE_ARCH} == "alpha")
-#.if !exists(/emul/osf1/sbin/loader)
-#IGNORE=	requires Digital UNIX libraries - see compat_osf1(8)
-#.endif
-#DISTNAME=	dec-arws-40
-#.elif (${MACHINE_ARCH} == "sparc")
-#.if !exists(/emul/sunos/usr/lib/ld.so)
-#IGNORE=	requires SunOS libraries - see compat_sunos(8)
-#.endif
-#DISTNAME=	sunsparc-rs-405
+PLATFORM=	intellinux
+WRKSRC=		${WRKDIR}/ILINXR.install
+.elif (${MACHINE_ARCH} == "alpha")
+.if !exists(/emul/osf1/sbin/loader)
+IGNORE=	'requires Digital UNIX libraries - see compat_osf1(8)'
+.endif
+DISTNAME=	fdec-rs-405
+PLATFORM=       alphaosf
+WRKSRC=		${WRKDIR}/AOSFRS.install
+.elif (${MACHINE_ARCH} == "sparc")
+.if !exists(/emul/svr4/usr/lib/ld.so)
+IGNORE=		'requires Solaris libraries - see compat_svr4(8)'
+.endif
+DISTNAME=	sunsparc-rs-405
+WRKSRC=		${WRKDIR}/SSOLRS.install
+PLATFORM=	sparcsolaris
 .else
 DISTNAME=	${PKGNAME}
 .endif
-ONLY_FOR_PLATFORM=	*-*-i386
-PLATFORM=	intellinux
-# *-*-alpha *-*-sparc
-WRKSRC=		${WRKDIR}/ILINXR.install
+ONLY_FOR_PLATFORM=	*-*-i386 *-1.4[L-Z]-sparc *-1.[5-9]*-sparc *-[2-9]*-sparc
+# *-*-alpha 
 .elif ${OPSYS} == "SunOS"
 DISTNAME=	sunsparc-rs-405
 WRKSRC=		${WRKDIR}/SSOLRS.install
@@ -46,6 +50,10 @@ post-patch:
 .endif
 
 PLIST_SUBST+=	PLATFORM=${PLATFORM}
+
+PLIST_SRC=	${PKGDIR}/PLIST.pre \
+		${PKGDIR}/PLIST.${MACHINE_ARCH} \
+		${PKGDIR}/PLIST.post
 
 NS_PLUGINS_DIR=	${PREFIX}/lib/netscape/plugins
 
