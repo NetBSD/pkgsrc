@@ -1,30 +1,32 @@
-# $NetBSD: Makefile,v 1.13 2005/01/28 23:35:59 adrianp Exp $
+# $NetBSD: Makefile,v 1.14 2005/02/09 20:49:02 adrianp Exp $
 #
 
-DISTNAME=	LaBrea2_3
-PKGNAME=	LaBrea-2.3
-PKGREVISION=	1
+DISTNAME=	labrea-2.5-stable-1
+PKGNAME=	LaBrea-2.5
 CATEGORIES=	net security
-MASTER_SITES=	http://www.hackbusters.net/LaBrea/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=labrea/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.hackbusters.net/LaBrea/
+HOMEPAGE=	http://labrea.sourceforge.net/labrea-info.html
 COMMENT=	Builds tarpits/honeypots for scanners
 
-WRKSRC=		${WRKDIR}/LaBrea
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_BUILDLINK3=	YES
-BUILDLINK_DEPENDS.libnet+=	libnet<=1.0.1b
+GNU_CONFIGURE=	YES
+USE_PKGINSTALL=	YES
 
-post-extract:
-	cd ${WRKSRC};							\
-		${MV} LaBrea.c LaBrea.c.in &&				\
-		${SED} -e 's/.$$//' -e 's|LaBrea.README|${PREFIX}/share/doc/LaBrea|g' LaBrea.c.in > LaBrea.c
+CONF_FILES=	${PREFIX}/share/examples/LaBrea/labrea.conf \
+		${PKG_SYSCONFDIR}/labrea.conf
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/LaBrea ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/LaBrea.README ${PREFIX}/share/doc/LaBrea
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/LaBrea
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/LaBrea
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/LaBrea
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/LaBrea
+	${INSTALL_DATA} ${WRKSRC}/misc/labrea.conf \
+		${PREFIX}/share/examples/LaBrea
 
-.include "../../devel/libnet/buildlink3.mk"
+.include "../../net/libdnet/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
