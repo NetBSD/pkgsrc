@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2004/02/09 19:57:55 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/03/05 14:24:30 bouyer Exp $
 
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
@@ -20,7 +20,7 @@ DISTINFO_FILE=	${.CURDIR}/../../audio/mpg123/distinfo
 USE_BUILDLINK2=	# defined
 
 .include "../../mk/bsd.prefs.mk"
-
+.include "../../mk/compiler.mk"
 .if ${OPSYS} == "SunOS"
 .  if !empty(PKGSRC_COMPILER:Msunpro)
 ALL_TARGET=	solaris
