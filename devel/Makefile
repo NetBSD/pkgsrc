@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 1998/11/02 14:44:23 agc Exp $
+# $NetBSD: Makefile,v 1.41 1998/11/11 12:50:10 agc Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -10,6 +10,7 @@
     SUBDIR += bison
     SUBDIR += boehm-gc
 #    SUBDIR += cflow
+    SUBDIR += chkpt
 #    SUBDIR += crossgo32
 #    SUBDIR += crossgo32-djgpp2
 #    SUBDIR += crossgo32-djgpp2-pdcurses
