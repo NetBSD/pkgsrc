@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/11/06 04:09:25 jlam Exp $
+
+--- ODBCConfig/Makefile.in.orig	Sat Oct 20 13:54:02 2001
++++ ODBCConfig/Makefile.in
+@@ -26,7 +26,7 @@
+ sysconfdir = @sysconfdir@
+ sharedstatedir = @sharedstatedir@
+ localstatedir = @localstatedir@
+-libdir = @libdir@
++libdir = /usr/pkg/lib/ODBCConfig
+ infodir = @infodir@
+ mandir = @mandir@
+ includedir = @includedir@
+@@ -185,9 +185,9 @@
+ 
+ @QT_TRUE@bin_PROGRAMS = ODBCConfig
+ 
+-@QT_TRUE@INCLUDES = -I../include @QT_INCLUDES@     -DSYSTEM_FILE_PATH=\"@sysconfdir@\" -DDEFLIB_PATH=\"@libdir@\" $(INCLTDL)
++@QT_TRUE@INCLUDES = -I../include @QT_INCLUDES@     -DSYSTEM_FILE_PATH=\"@sysconfdir@\" -DDEFLIB_PATH=\"$(libdir)\" $(INCLTDL)
+ 
+-@QT_TRUE@ODBCConfig_LDADD = @X_LDFLAGS@ 	@QT_LDFLAGS@ 	@USER_LDFLAGS@ 	@LIB_QT@ 	../odbcinst/libodbcinst.la 	../extras/libodbcextraslc.la 	../DriverManager/libodbc.la
++@QT_TRUE@ODBCConfig_LDADD = $(X_LDFLAGS) 	$(QT_LDFLAGS) 	$(USER_LDFLAGS) 	$(LIB_QT) 	-lodbcinst 	-lodbcextras 	-lodbc $(PTH_LIBS) $(LIBLTDL)
+ 
+ @QT_TRUE@ODBCConfig_DEPENDANCIES = ../odbcinst/libodbcinst.la ../extras/libodbcextraslc.la ../DriverManager/libodbc.la
+ 
