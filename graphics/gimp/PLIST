@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/01/04 15:20:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2005/01/10 15:32:57 adam Exp $
 bin/gimp
 bin/gimp-2.2
 bin/gimp-remote
@@ -347,7 +347,7 @@ lib/libgimpwidgets-2.0.la
 lib/pkgconfig/gimp-2.0.pc
 lib/pkgconfig/gimpthumb-2.0.pc
 lib/pkgconfig/gimpui-2.0.pc
-man/man1/${PKGNAME}
+man/man1/gimp-2.2.1
 man/man1/gimp-remote-2.2.1
 man/man1/gimp-remote.1
 man/man1/gimp.1
