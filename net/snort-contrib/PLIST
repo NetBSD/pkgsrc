@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/22 15:01:36 adrianp Exp $
+share/snort/Guardian.tar.gz
+share/snort/Net-SnortLog-0.1.tar.gz
+share/snort/S99snort
+share/snort/Spade-092200.1.tar.gz
+share/snort/address_config.sh
+share/snort/ms_unicode_generator.c
+share/snort/mysql.php3
+share/snort/passiveOS.tar.gz
+share/snort/perfstats.c
+share/snort/pgsql.php3
+share/snort/regen-sidmap
+share/snort/snort-sort.pl
+share/snort/snort2html.pl
+share/snort/snort_stat.pl
+share/snort/snortdb-extra.gz
+share/snort/snortlog
+share/snort/snortnet.tar.gz
+share/snort/snortpp.c
+share/snort/snortwatch-0.7.tar.gz
+@unexec ${RMDIR} %D/share/snort 2>/dev/null || ${TRUE}
