@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/06/25 12:48:43 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2004/12/04 20:35:09 wiz Exp $
 
-SHA1 (xmms-musepack-1.00.tar.gz) = 6bff3e603cfa8aad3f39839d9dc810dbb2da7235
-Size (xmms-musepack-1.00.tar.gz) = 126468 bytes
+SHA1 (xmms-musepack-1.1.tar.bz2) = 450b296c72f6e6b402846826504ce7ea2a385519
+Size (xmms-musepack-1.1.tar.bz2) = 207369 bytes
