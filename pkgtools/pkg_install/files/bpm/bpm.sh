@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: bpm.sh,v 1.1 2004/01/14 23:55:29 jlam Exp $
+# $NetBSD: bpm.sh,v 1.2 2004/03/30 15:28:08 tv Exp $
 #
 # Copyright (c) 2003 Alistair G. Crooks.  All rights reserved.
 #
@@ -81,7 +81,7 @@ tmpcategories=/tmp/categories.$$
 tmppackages=/tmp/packages.$$
 
 # some base parameters
-base=ftp://ftp.netbsd.org/pub/NetBSD/packages
+base=ftp://ftp.NetBSD.org/pub/NetBSD/packages
 release=`${unameprog} -r | ${sedprog} -e 's/_STABLE//'`
 machine=`${unameprog} -m`
 
