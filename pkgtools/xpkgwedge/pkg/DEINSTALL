@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.7 2001/06/18 05:17:15 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.8 2001/07/10 00:57:11 hubertf Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -26,6 +26,7 @@ POST-DEINSTALL)
 	( ${GREP} -v xpkgwedge ${HOSTDEF}.bak || ${TRUE} ) > ${HOSTDEF}
 	${RM} -f ${HOSTDEF}.bak
 	if [ ${PKG_PREFIX} != ${X11BASE} ] && \
+		[ -f ${X11_HOSTDEF} ] && \
 		${DIFF} -q ${X11_HOSTDEF} ${HOSTDEF} >/dev/null
 	then
 		${RM} -f ${HOSTDEF}
