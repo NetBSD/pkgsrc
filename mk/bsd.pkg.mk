@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.301 1999/07/23 21:35:20 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.302 1999/07/24 23:23:04 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1007,12 +1007,26 @@ do-patch:
 						calcsum=`${SED} -e '/\$$NetBSD.*/d' $$i | ${MD5}`; \
 						recorded=`${AWK} '$$1 == "MD5" && $$2 == "('$$filename')" { print $$4; }' ${PATCH_SUM_FILE} || ${TRUE}`; \
 						if [ "X$$recorded" = "X" ]; then \
-							${ECHO_MSG} ">> Ignoring \"unofficial\" patch file $$i"; \
-							continue;	\
+							case "$$filename" in \
+							patch-local-*)	\
+								${ECHO_MSG} ">> Ignoring \"unofficial\" patch file $$i"; \
+								continue \
+								;;	\
+							*)		\
+								${ECHO_MSG} ">> Unknown patch file: $$i"; \
+								${ECHO_MSG} ">> If this is an obsolete patch, please delete it to build"; \
+								${ECHO_MSG} ">> this package (or run 'make makepatchsum' if you are working"; \
+								${ECHO_MSG} ">> on this package)."; \
+								exit 1;	\
+								;;	\
+							esac ; \
 						fi;			\
 						if [ "X$$calcsum" != "X$$recorded" ]; then \
-							${ECHO_MSG} ">> Patch file $$i has been modified - ignoring it"; \
-							continue;	\
+							${ECHO_MSG} ">> Patch file $$i has been modified"; \
+								${ECHO_MSG} ">> If this is an obsolete patch, please delete it to build"; \
+								${ECHO_MSG} ">> this package (or run 'make makepatchsum' if you are working"; \
+								${ECHO_MSG} ">> on this package)."; \
+							exit 1;		\
 						fi;			\
 					fi;				\
 					if [ ${PATCH_DEBUG_TMP} = yes ]; then \
