@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2003/12/03 15:40:02 epg Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/17 12:36:03 bad Exp $
 #
 # NOTE: This package is *BETA*.  If it doesn't work, then check the
 #	modperl-2.0 mailing lists for help.
 
-DISTNAME=		mod_perl-1.99_08
-PKGNAME=		ap2-perl-1.99.8
+DISTNAME=		mod_perl-1.99_12
+PKGNAME=		ap2-perl-1.99.12
 PKGREVISION=		1
 CATEGORIES=		www perl5
 MASTER_SITES=		http://perl.apache.org/dist/
@@ -17,7 +17,7 @@ CONFLICTS=		ap-perl-[0-9]*
 
 USE_BUILDLINK2=		# defined
 APACHE_MODULE=		# defined
-PERL5_REQD=		5.6.0
+PERL5_REQD?=		5.6.0
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/mod_perl/.packlist
 
 MAKE_PARAMS+=		MP_APXS=${APXS}
