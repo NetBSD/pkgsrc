@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/10/22 06:41:29 martti Exp $
+# $NetBSD: Makefile,v 1.10 2001/10/22 07:01:50 martti Exp $
 #
 
 DISTNAME=	amavis-0.2.1
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.amavis.org/dist/ \
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.amavis.org/
 COMMENT=	mail virus scanner
+
+CONFLICTS+=	amavis-perl-[0-9]*
 
 DEPENDS+=	uvscan-[0-9]*:../../security/uvscan
 DEPENDS+=	maildrop-[0-9]*:../../mail/maildrop
