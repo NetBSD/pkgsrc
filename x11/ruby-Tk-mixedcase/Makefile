@@ -1,71 +1,47 @@
-# New ports collection makefile for:    rubytk
-# Version required:     1.4.0
-# Date created:         15 March 1999
-# Whom:                 Yasuhiro Fukuma <yasuf@big.or.jp>
-#
-# $FreeBSD: ports/x11-toolkits/rubytk/Makefile,v 1.3 1999/08/31 02:59:34 peter Exp $
-#
+# $NetBSD: Makefile,v 1.2 1999/09/17 04:57:54 sakamoto Exp $
+# FreeBSD Id: ports/x11-toolkits/rubytk/Makefile,v 1.3 1999/08/31 02:59:34 peter Exp
 
-DISTNAME=	ruby-${VERSION}
-PKGNAME?=	rubytk-${VERSION}
-CATEGORIES?=	x11-toolkits
-MASTER_SITES=	ftp://ftp.netlab.co.jp/pub/lang/ruby/${BRANCH_NAME}/ \
-		ftp://ftp.TokyoNet.AD.JP/pub/misc/ruby/${BRANCH_NAME}/ \
-		ftp://ftp.iij.ad.jp/pub/lang/ruby/${BRANCH_NAME}/ \
-		ftp://blade.nagaokaut.ac.jp/pub/lang/ruby/${BRANCH_NAME}/ \
-		ftp://ftp.krnet.ne.jp/pub/ruby/${BRANCH_NAME}/ \
-		ftp://mirror.nucba.ac.jp/mirror/ruby/${BRANCH_NAME}/
+DISTNAME=	ruby-1.4.2
+PKGNAME=	${DISTNAME:S/-/-Tk-/}
+CATEGORIES=	x11
+MASTER_SITES=	ftp://ftp.TokyoNet.AD.JP/pub/misc/ruby/ \
+		ftp://ftp.iij.ad.jp/pub/lang/ruby/ \
+		ftp://ftp.netlab.co.jp/pub/lang/ruby/ \
+		ftp://blade.nagaokaut.ac.jp/pub/lang/ruby/ \
+		ftp://ftp.krnet.ne.jp/pub/ruby/ \
+		ftp://ftp.mirror.nucba.ac.jp/mirror/ruby/ \
+		http://mirror.nucba.ac.jp/mirror/ruby/
 
-MAINTAINER?=	yasuf@big.or.jp
+MAINTAINER=	sakamoto@netbsd.org
+HOMEPAGE=	http://www.netlab.co.jp/ruby/index.html
 
-BUILD_DEPENDS=	ruby:${PORTSDIR}/lang/ruby
-RUN_DEPENDS=	ruby:${PORTSDIR}/lang/ruby
-LIB_DEPENDS=	${TCL_LIB}.1:${PORTSDIR}/${TCL_CATEGORY}/tcl${TCL_VERSION} \
-		${TK_LIB}.1:${PORTSDIR}/${TK_CATEGORY}/tk${TK_VERSION}
+DEPENDS+=	ruby-1.4.2:../../lang/ruby
+DEPENDS+=	tcl-8.0.5:../../lang/tcl80
+DEPENDS+=	tk-8.0.5:../../x11/tk80
 
-USE_XLIB=	yes
+TCL_LIB=	tcl80
+TK_LIB=		tk80
+TCL_DIR=	tcl8.0
+TK_DIR=		tk8.0
+
+USE_X11=	YES
 WRKSRC=		${WRKDIR}/${DISTNAME}/ext
-CONFIGURE_ARGS+= --with-tcllib="${TCL_LIB}" --with-tklib="${TK_LIB}" \
-		--with-tcl-lib="${PREFIX}/lib/${TCL_DIR}" \
-		--with-tk-lib="${PREFIX}/lib/${TK_DIR}" \
-		--with-tcl-include="${PREFIX}/include/${TCL_DIR}" \
-		--with-tk-include="${PREFIX}/include/${TK_DIR}" \
+CONFIGURE_ARGS+=--with-tcllib="${TCL_LIB}" --with-tklib="${TK_LIB}" \
+		--with-tcl-lib="${LOCALBASE}/lib/${TCL_DIR}" \
+		--with-tk-lib="${LOCALBASE}/lib/${TK_DIR}" \
+		--with-tcl-include="${LOCALBASE}/include/${TCL_DIR}" \
+		--with-tk-include="${LOCALBASE}/include/${TK_DIR}" \
 		--with-X11-dir="${X11BASE}"
-PLIST_SUB+=	RUBY_VER="${RUBY_VER}" RUBY_ARCH="${RUBY_ARCH}"
 
-VERSION=	1.4.0
-BRANCH_NAME=	.
+RUBY=		${LOCALBASE}/bin/ruby
+PLIST_SUBST=	RUBY_VERSION=1.4
 
-RUBY_VER=	1.4
-RUBY_ARCH=	${ARCH}-freebsd${OSREL}
-
-# Set these vars as the version numbers (without decimal points) of Tcl/Tk
-# you want to use with Ruby/Tk.
-# e.g.: make TCL_VERSION=42 TK_VERSION=76 WITH_TCL_JP=yes build
-TCL_VERSION?=	80
-TK_VERSION?=	80
-.if defined(WITH_TCL_JP)
-TCL_CATEGORY=	japanese
-TK_CATEGORY=	japanese
-TCL_JP=		jp
-.else
-TCL_CATEGORY=	lang
-TK_CATEGORY=	x11-toolkits
-TCL_JP=		# empty
-.endif
-
-TCL_LIB=	tcl${TCL_VERSION}${TCL_JP}
-TK_LIB=		tk${TK_VERSION}${TCL_JP}
-TCL_DIR=	`echo "${TCL_LIB}" | ${SED} 's/\([0-9]\)\([0-9]\)/\1.\2/'`
-TK_DIR=		`echo "${TK_LIB}"  | ${SED} 's/\([0-9]\)\([0-9]\)/\1.\2/'`
-
-RUBY=		${PREFIX}/bin/ruby
 EXTS=		tcltklib tk
 
 do-configure:
 .for dir in ${EXTS}
 	@${ECHO_MSG} "Configuring in ${dir}..."
-	@cd ${WRKSRC}/${dir}; ${SETENV} ${CONFIGURE_ENV} ${RUBY} extconf.rb ${CONFIGURE_ARGS}
+	@(cd ${WRKSRC}/${dir}; ${SETENV} ${CONFIGURE_ENV} ${RUBY} extconf.rb ${CONFIGURE_ARGS})
 .endfor
 
 do-build:
@@ -82,4 +58,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${dir}/sample/* ${PREFIX}/share/examples/ruby/${dir}
 .endfor
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
