@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1 2003/03/19 21:02:00 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/03/19 21:07:54 jlam Exp $
+#
+# This Makefile fragment should be included _below_ and SASL_PLUGIN
+# definition and _above_ any CONFIGURE_ARGS definitions.
 
 DISTNAME=	cyrus-sasl-1.5.27
 CATEGORIES=	security
@@ -8,11 +11,13 @@ MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://asg.web.cmu.edu/sasl/
 
-PLUGIN_DEPENDS=		cyrus-sasl>=1.5.27
-
 DISTINFO_FILE=		${.CURDIR}/../cyrus-sasl/distinfo
 FILESDIR=		${.CURDIR}/../cyrus-sasl/files
 PATCHDIR=		${.CURDIR}/../cyrus-sasl/patches
+
+.if defined(SASL_PLUGIN) && !empty(SASL_PLUGIN:M[yY][eE][sS])
+DEPENDS+=		cyrus-sasl>=1.5.27
+.endif
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
