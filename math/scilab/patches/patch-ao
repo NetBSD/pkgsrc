@@ -1,0 +1,36 @@
+$NetBSD: patch-ao,v 1.4 2000/04/14 17:52:40 dmcmahill Exp $
+
+This is a big fix provided by INRIA (scilab authors)
+
+--- ./macros/mtlb/mtlb_load.sci.orig	Fri Nov  5 11:21:16 1999
++++ ./macros/mtlb/mtlb_load.sci	Fri Apr 14 11:49:00 2000
+@@ -36,9 +36,10 @@
+   while %t 
+     offset=mtell(fd)
+-    mopt=mget(1,'ull',fd)
++    mopt=mget(1,'uil',fd)
+     if meof(fd)<>0 then break,end
+     if mopt>5000 then
+       mseek(offset,fd)
+-      mopt=mget(1,'ubl',fd)
++      mopt=mget(1,'uib',fd)
++
+       if mopt>5000 then
+ 	Error('Incorrect file')
+@@ -53,8 +54,8 @@
+     select MOPT(1)
+     case 0
+-      fl='ull'
++      fl='uil'
+       flag=l_flags(MOPT(3)+1)
+     case 1
+-      fl='ubl'
++      fl='uib'
+       flag=b_flags(MOPT(3)+1)
+     case 2
+@@ -70,5 +71,4 @@
+     if meof(fd)<>0 then Error('Incorrect file'),end
+     m=t(1);n=t(2);it=t(3),namelen=t(4)
+-    
+     name=mget(namelen,"c",fd);
+     if meof(fd)<>0 then Error('Incorrect file'),end
