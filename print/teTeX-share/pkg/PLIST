@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/08/12 21:11:29 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/08/17 21:20:40 tron Exp $
 share/texmf/xdvi/XDvi
 @dirrm share/texmf/xdvi
 share/texmf/web2c/cp8bit.tcx
@@ -16,15 +16,12 @@ share/texmf/web2c/cp1250pl.tcx
 share/texmf/web2c/cp1250cs.tcx
 share/texmf/web2c/amiga-pl.tcx
 share/texmf/web2c/pdfetex.pool
-share/texmf/web2c/mktex.cnf
 share/texmf/web2c/mp.pool
 share/texmf/web2c/mf.pool
 share/texmf/web2c/pdftex.pool
 share/texmf/web2c/omega.pool
 share/texmf/web2c/etex.pool
-share/texmf/web2c/fmtutil.cnf
 share/texmf/web2c/tex.pool
-share/texmf/web2c/texmf.cnf
 share/texmf/web2c/mktexupd
 share/texmf/web2c/mktexnam.opt
 share/texmf/web2c/mktexnam
@@ -1866,7 +1863,6 @@ share/texmf/makeindex/misc/nomencl.ist
 @dirrm share/texmf/makeindex/misc
 share/texmf/makeindex/nomencl.ist
 @dirrm share/texmf/makeindex
-share/texmf/ls-R
 share/texmf/fonts/pfm/public/xypic/xyeubt10.pfm
 share/texmf/fonts/pfm/public/xypic/xyeuat10.pfm
 share/texmf/fonts/pfm/public/xypic/xydash10.pfm
@@ -7800,4 +7796,4 @@ share/texmf/bibtex/bib/README
 @dirrm share/texmf/bibtex
 share/texmf/aliases
 share/texmf/ChangeLog
-@unexec rmdir %D/share/texmf || true
+@dirrm share/texmf
