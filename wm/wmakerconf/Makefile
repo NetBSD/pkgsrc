@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/08/03 17:49:40 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/08/23 21:00:07 jlam Exp $
 #
 
 DISTNAME=	wmakerconf-2.8.1
@@ -11,10 +11,8 @@ HOMEPAGE=	http://ulli.on.openave.net/wmakerconf/
 COMMENT=	Gtk+ based configuration tool for Window Maker
 
 USE_BUILDLINK_ONLY=	yes
-USE_BUILDLINK_X11=	yes
 USE_X11BASE=		yes
 USE_PERL5=		yes
-#USE_LIBINTL=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../devel/gettext-lib/buildlink.mk"
