@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.3 2002/03/14 07:44:23 jmc Exp $
+
+--- lispbibl.d.orig	Tue Mar  5 20:53:41 2002
++++ lispbibl.d	Tue Mar  5 20:55:32 2002
+@@ -1400,7 +1400,7 @@
+     #define intBWsize intBsize
+     #define intWLsize intWsize
+     #define intBWLsize intBsize
+-  #elif (defined(MC680X0) && defined(HPUX_ASSEMBLER)) || defined(SPARC) || defined(HPPA) || defined(MIPS) || defined(M88000) || defined(RS6000) || defined(CONVEX) || defined(S390)
++  #elif (defined(MC680X0) && defined(HPUX_ASSEMBLER)) || defined(SPARC) || defined(HPPA) || defined(MIPS) || defined(M88000) || defined(RS6000) || defined(CONVEX) || defined(S390) || defined(__powerpc__)
+     # Der Sparc-Prozessor kann mit uintB und uintW schlecht rechnen.
+     # Anderen 32-Bit-Prozessoren geht es genauso.
+     #define intBWsize intWsize
+@@ -1593,7 +1593,7 @@
+     #define intDsize 16
+     #define intDDsize 32  # = 2*intDsize
+     #define log2_intDsize  4  # = log2(intDsize)
+-  #elif defined(MC680Y0) || defined(I80386) || defined(SPARC) || defined(HPPA) || defined(MIPS) || defined(M88000) || defined(RS6000) || defined(VAX) || defined(CONVEX) || defined(ARM) || defined(DECALPHA) || defined(IA64) || defined(S390)
++  #elif defined(MC680Y0) || defined(I80386) || defined(SPARC) || defined(HPPA) || defined(MIPS) || defined(M88000) || defined(RS6000) || defined(VAX) || defined(CONVEX) || defined(ARM) || defined(DECALPHA) || defined(IA64) || defined(S390) || defined(__powerpc__)
+     #define intDsize 32
+     #define intDDsize 64  # = 2*intDsize
+     #define log2_intDsize  5  # = log2(intDsize)

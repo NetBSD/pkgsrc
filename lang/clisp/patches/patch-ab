@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.4 2002/03/14 07:44:23 jmc Exp $
+
+--- .././ffcall/avcall/Makefile.in.orig	Tue Jun 12 07:31:01 2001
++++ .././ffcall/avcall/Makefile.in	Wed Mar  6 05:38:16 2002
+@@ -117,12 +117,12 @@
+ 	case "$(OS)" in \
+ 	  aix3*) syntax=aix.old;; \
+ 	  aix*) syntax=aix.new;; \
+-	  linux*) syntax=linux;; \
++	  linux* | netbsd*) syntax=linux;; \
+ 	  *) syntax=sysv4;; \
+ 	esac; \
+ 	$(LIBTOOL_COMPILE) $(CC) @GCC_X_NONE@ -c $(srcdir)/avcall-rs6000-$${syntax}.s ; \
+-	cp avcall-rs6000-$${syntax}.lo avcall-rs6000.lo ; rm -f avcall-rs6000-$${syntax}.lo ; \
+-	if test -f avcall-rs6000-$${syntax}.o; then mv avcall-rs6000-$${syntax}.o avcall-rs6000.o; fi
++	cp avcall-rs6000-$${syntax}.lo avcall-rs6000.lo ; \
++	if test -f avcall-rs6000-$${syntax}.o; then cp avcall-rs6000-$${syntax}.o avcall-rs6000.o; fi
+ 
+ avcall-m88k.lo : $(srcdir)/avcall-m88k.s
+ 	$(LIBTOOL_COMPILE) $(CC) @GCC_X_NONE@ -c $(srcdir)/avcall-m88k.s
