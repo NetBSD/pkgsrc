@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/12/09 00:33:25 jmc Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/09 22:54:14 jmc Exp $
 #
 
 DISTNAME=		mod_aolserver-1.1
@@ -15,8 +15,6 @@ DEPENDS+=		libmm>=1.1.3:../../devel/libmm
 DEPENDS+=		tcl>=8.3:../../lang/tcl
 DEPENDS+=		apache{,6}-1.3.*:../../www/apache
 
-# Requires a manual fetch
-IS_INTERACTIVE=		yes
 HAS_CONFIGURE=	# yes
 GNU_CONFIGURE=	# yes
 
