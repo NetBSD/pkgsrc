@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/04/23 02:08:53 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/09/04 14:47:36 agc Exp $
 
 DISTNAME=	dx-4.1.3
 PKGREVISION=	1
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--without-javadx
 CONFIGURE_ENV+=		LEX="flex -l"
 
 # Ensure we export symbols in the linked shared object.
-LDFLAGS+=		-Wl,--export-dynamic
+LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 CPPFLAGS+=		-I${BUILDLINK_DIR}/include/freetype	# freetype.h
 
