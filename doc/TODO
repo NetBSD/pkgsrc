@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2635 2004/12/03 12:39:56 adam Exp $
+$NetBSD: TODO,v 1.2636 2004/12/03 12:52:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -278,7 +278,7 @@ Suggested package updates
 	o abiword1-1.0.7
 	o acpi-iasl-20040715
 	o adzap-20041124
-	o afterstep-2.00.00
+	o afterstep-2.00.01
 	o aiksaurus-1.2.1
 	o aim-1.5.286
 	o ald-0.1.6 [pkg/26431]
@@ -410,6 +410,7 @@ Suggested package updates
 	o dict-server-1.9.11
 	o diction-1.06
 	o diffstat-1.35
+	o dirac-0.5.0
 	o dirdiff-2.0
 	o distcc-2.18.3
 	o dmalloc-5.4.2
@@ -481,7 +482,7 @@ Suggested package updates
 	o gap-4r4p3
 	o gated-3.6
 	o gattrib-20041120
-	o gauche-0.8.2
+	o gauche-0.8.3
 	o gbib-0.1.2
 	o gcombust-0.1.55
 	o gconfmm26-2.8.0?
@@ -507,6 +508,7 @@ Suggested package updates
 	o gkrellm1-moon-0.6
 	o gkrellm1-snmp-0.21
 	o gkrellm1-xmms-0.5.8
+	o glib-2.4.8
 	o gnet1-1.1.9
 	o gnetman-20041117
 	o gnocatan-0.8.1.30
@@ -536,6 +538,7 @@ Suggested package updates
 	o gss-0.0.15
 	o gst-plugins-0.8.6
 	o gtk-systrace-2003.06.23
+	o gtk2-2.4.14
 	o gtksee-0.5.6 [pkg/26372]
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -706,7 +709,6 @@ Suggested package updates
 	o namazu2-2.0.13
 	o nano-1.3.5
 	o nap-1.5.3
-	o napshare-1.2
 	o nautilus-2.8.2
 	o nautilus-cd-burner-2.8.5
 	o navi2ch-1.7.5
@@ -1078,7 +1080,6 @@ Suggested package updates
 	o smokeping-1.31
 	o snd-7.8
 	o snes9x-1.42
-	o spamass-milter-0.2.0
 	o speedtouch-1.2beta3
 	o spim-7.0
 	o splint-3.1.1
@@ -1173,7 +1174,7 @@ Suggested package updates
 	o webware-0.8.1 [http://www.webwareforpython.org/]
 	o weechat-0.0.8
 	o windowlab-1.24
-	o wine-20041019 [nmap problem on NetBSD]
+	o wine-20041201 [mmap problem on NetBSD]
 	o wmbiff-0.4.26
 	o wmweather-2.4.3
 	o wol-0.7.1
@@ -1215,7 +1216,7 @@ Suggested package updates
 	o xmon-1.5.6
 	o xnap-2.5r3
 	o xpad-2.0
-	o xpat2-1.0.7
+	o xpat2-1.0.7 [pkg/28519]
 	o xpuyopuyo-0.9.5
 	o xskat-4.0
 	o xtide-2.7.1
