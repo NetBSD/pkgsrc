@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/06/20 18:21:05 tron Exp $
+# $NetBSD: Makefile,v 1.16 1999/08/26 19:30:37 tron Exp $
 
 DISTNAME=	magicfilter-1.2
 CATEGORIES=	print
@@ -9,7 +9,7 @@ MAINTAINER=	tron@netbsd.org
 DEPENDS+=	a2ps-4.12:../../print/a2ps			\
 		ghostscript-5.50:../../print/ghostscript5	\
 		netpbm-19940301:../../graphics/netpbm		\
-		teTeX-0.4p8:../../print/teTeX			\
+		teTeX-1.0.6:../../print/teTeX			\
 		papersize-1.0.1:../../print/papersize
 
 USE_GMAKE=	yes
