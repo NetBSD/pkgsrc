@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/09/27 17:07:38 grant Exp $
+# $NetBSD: Makefile,v 1.25 2003/09/28 09:13:58 jlam Exp $
 
 DISTNAME=		apcupsd-3.8.6
 PKGREVISION=		1
@@ -23,7 +23,7 @@ PKG_SYSCONFSUBDIR= apcupsd
 # which has a curses interface
 #
 #CONFIGURE_ARGS+=	--enable-http		# include http support
-#.include "../../mk/curses.buildlink2.mk"
+#.include "../../devel/ncurses/buildlink2.mk"
 #CONFIGURE_ARGS+=	--enable-threads	# compile threading code
 #CONFIGURE_ARGS+=	--enable-powerflute	# compile powerflute program
 

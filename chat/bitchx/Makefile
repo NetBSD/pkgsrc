@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/09/27 17:07:35 grant Exp $
+# $NetBSD: Makefile,v 1.23 2003/09/28 09:13:55 jlam Exp $
 #
 
 DISTNAME=	ircii-pana-1.0c19
@@ -38,7 +38,7 @@ post-patch:
 		${WRKSRC}/doc/BitchX.1.orig > ${WRKSRC}/doc/BitchX.1
 
 .include "../../archivers/bzip2/buildlink2.mk"
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
