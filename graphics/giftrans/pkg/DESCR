@@ -1,0 +1,4 @@
+giftrans converts any GIF file into a GIF89a.  Allows  for
+setting the transparent or background color, changing col-
+ors, adding or removing comments. Also code to analyze GIF
+contents.
