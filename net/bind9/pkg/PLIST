@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2000/06/19 13:54:08 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/07/26 08:46:25 rh Exp $
+bin/dig
+bin/host
+bin/isc-config.sh
+bin/nsupdate
 include/dns/a6.h
 include/dns/acl.h
 include/dns/aclconf.h
@@ -92,6 +96,8 @@ include/isc/error.h
 include/isc/event.h
 include/isc/eventclass.h
 include/isc/file.h
+include/isc/formatcheck.h
+include/isc/fsaccess.h
 include/isc/heap.h
 include/isc/int.h
 include/isc/interfaceiter.h
@@ -113,6 +119,7 @@ include/isc/netdb.h
 include/isc/offset.h
 include/isc/once.h
 include/isc/ondestroy.h
+include/isc/os.h
 include/isc/platform.h
 include/isc/print.h
 include/isc/quota.h
@@ -157,17 +164,16 @@ include/omapi/result.h
 include/omapi/types.h
 lib/libdns.a
 lib/libdns.la
-lib/libdns.so.0.0
+lib/libdns.so.1.0
 lib/libisc.a
 lib/libisc.la
-lib/libisc.so.0.0
+lib/libisc.so.1.0
 lib/liblwres.a
 lib/liblwres.la
-lib/liblwres.so.0.0
+lib/liblwres.so.1.0
 lib/libomapi.a
 lib/libomapi.la
-lib/libomapi.so.0.0
-sbin/dig
+lib/libomapi.so.1.0
 sbin/dnssec-keygen
 sbin/dnssec-makekeyset
 sbin/dnssec-signkey
@@ -184,22 +190,24 @@ share/doc/bind9/arm/Bv9ARM.5.html
 share/doc/bind9/arm/Bv9ARM.6.html
 share/doc/bind9/arm/Bv9ARM.7.html
 share/doc/bind9/arm/Bv9ARM.8.html
+share/doc/bind9/arm/Bv9ARM.9.html
 share/doc/bind9/arm/Bv9ARM.css
 share/doc/bind9/arm/Bv9ARM.html
+share/doc/bind9/arm/Bv9ARM.txt
 share/doc/bind9/arm/isc.color.gif
-share/doc/bind9/draft/draft-costanzo-dns-gl-02.txt
+share/doc/bind9/draft/draft-costanzo-dns-gl-03.txt
 share/doc/bind9/draft/draft-ietf-dhc-dhcp-dns-12.txt
-share/doc/bind9/draft/draft-ietf-dnsext-apl-rr-00.txt
+share/doc/bind9/draft/draft-ietf-dnsext-apl-rr-01.txt
 share/doc/bind9/draft/draft-ietf-dnsext-axfr-clarify-00.txt
 share/doc/bind9/draft/draft-ietf-dnsext-edns0dot5-00.txt
-share/doc/bind9/draft/draft-ietf-dnsext-iana-dns-00.txt
+share/doc/bind9/draft/draft-ietf-dnsext-iana-dns-01.txt
 share/doc/bind9/draft/draft-ietf-dnsext-ixfr-01.txt
 share/doc/bind9/draft/draft-ietf-dnsext-sig-zero-02.txt
 share/doc/bind9/draft/draft-ietf-dnsext-signing-auth-01.txt
 share/doc/bind9/draft/draft-ietf-dnsext-simple-secure-update-01.txt
 share/doc/bind9/draft/draft-ietf-dnsext-tkey-03.txt
 share/doc/bind9/draft/draft-ietf-dnsext-zone-status-01.txt
-share/doc/bind9/draft/draft-ietf-enum-rqmts-00.txt
+share/doc/bind9/draft/draft-ietf-enum-rqmts-01.txt
 share/doc/bind9/draft/draft-ietf-idn-requirment-00.txt
 share/doc/bind9/draft/draft-ietf-ipngwg-default-addr-select-00.txt
 share/doc/bind9/draft/draft-ietf-ipngwg-dns-lookups-08.txt
@@ -208,6 +216,7 @@ share/doc/bind9/draft/draft-skwan-utf8-dns-03.txt
 share/doc/bind9/draft/draft-whr-dnsext-secure-online-update-00.txt
 share/doc/bind9/misc/dnssec
 share/doc/bind9/misc/ipv6
+share/doc/bind9/misc/migration
 share/doc/bind9/misc/options
 share/doc/bind9/rfc/rfc1032.txt
 share/doc/bind9/rfc/rfc1033.txt
