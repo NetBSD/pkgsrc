@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:09:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/16 14:41:01 kei Exp $
 #
 
-DISTNAME=	tds-1.3.2
-CATEGORIES=	misc www
-MASTER_SITES=	http://www.morito.mgmt.waseda.ac.jp/~tom/TomSoft/TsDiary/dist/current/
+DISTNAME=	tds-1.4.2
+CATEGORIES=	misc www japanese
+MASTER_SITES=	http://tds.dive-in.to/dist/stable/
 
 MAINTAINER=	kei@netbsd.org
-HOMEPAGE=	http://www.morito.mgmt.waseda.ac.jp/~tom/TomSoft/TsDiary/
+HOMEPAGE=	http://tds.dive-in.to/
 COMMENT=	web diary system
 
 USE_PERL=	YES

@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2001/01/25 02:43:42 kei Exp $
+$NetBSD: md5,v 1.2 2001/04/16 14:41:02 kei Exp $
 
-MD5 (tds-1.3.2.tar.gz) = 0c4dbceda827736957ad6ac961dc36fc
+SHA1 (tds-1.4.2.tar.gz) = 043ccbe8d3ec24faac791418b4590c5f842a59c6
