@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2001/09/25 23:47:30 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/07 20:16:43 veego Exp $
 
-DISTNAME=	x11-links-0.3
+DISTNAME=	x11-links-0.4
 CATEGORIES=	pkgtools x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
