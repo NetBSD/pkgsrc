@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 1999/12/02 22:00:02 tron Exp $
+# $NetBSD: Makefile,v 1.9 2000/01/18 20:41:11 tron Exp $
 
-DISTNAME=	pilotmgr-1.107
-PKGNAME=	${DISTNAME}p1
+DISTNAME=	pilotmgr-1.107p2
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
