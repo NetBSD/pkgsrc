@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2004/10/03 00:12:53 tv Exp $
+# $NetBSD: Makefile,v 1.16 2004/11/16 18:56:46 adrianp Exp $
 #
 
-DISTNAME=	mailsync_4.4.4-1
-PKGNAME=	mailsync-4.4.4
-PKGREVISION=	1
+DISTNAME=	mailsync_5.2.1.orig
+PKGNAME=	mailsync-5.2.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailsync/}
 
@@ -11,27 +10,39 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mailsync.sourceforge.net/
 COMMENT=	Mailsync is a way of synchronizing a collection of mailboxes
 
-WRKSRC=		${WRKDIR}/${PKGBASE}
+WRKSRC=		${WRKDIR}/${PKGNAME}
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_LANGUAGES+=	c c++
-ALL_TARGET=	default
+GNU_CONFIGURE=	yes
+
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}/include
+CONFIGURE_ARGS+=	--with-c-client=${BUILDLINK_DIR}/include/c-client
+CONFIGURE_ARGS+=	--without-krb5
+
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_FILES.conf=	configure doc/examples/mailsync doc/mailsync.1
+SUBST_SED.conf=		-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g" \
+			-e "s|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g" \
+			-e "s|/usr/share|${PREFIX}/share|g"
+SUBST_MESSAGE.conf=	"Fixing configure script."
+
+DOCS=	COPYING NEWS README THANKS TODO doc/ABSTRACT doc/HACKING
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD"
-CFLAGS+=	-fno-operator-names
-.endif
-
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mailsync ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mailsync
-	${INSTALL_DATA} ${WRKSRC}/examples/mailsync				\
-		${PREFIX}/share/examples/mailsync/dot.mailsync
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mailsync
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/mailsync
-	${INSTALL_DATA} ${WRKSRC}/WHATSNEW ${PREFIX}/share/doc/mailsync
-	${INSTALL_MAN} ${WRKSRC}/mailsync.1 ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/src/mailsync ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/doc/examples/mailsync \
+		${PREFIX}/share/examples/mailsync/dot.mailsync
+	${INSTALL_MAN} ${WRKSRC}/doc/mailsync.1 ${PREFIX}/man/man1
+.	for d in ${DOCS}
+		${INSTALL_DATA} ${WRKSRC}/${d} ${PREFIX}/share/doc/mailsync
+.	endfor
+.	undef d
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mail/imap-uw/buildlink3.mk"
