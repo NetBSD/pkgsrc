@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5232 2004/03/12 13:10:07 jmmv Exp $
+$NetBSD: CHANGES,v 1.5233 2004/03/12 14:32:20 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1439,3 +1439,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated wine to 20040309 [adam 2004-03-12]
         Updated sketch to 0.6.16 [jmmv 2004-03-12]
         Renamed sketch to skencil [jmmv 2004-03-12]
+	Updated lsof to 4.71 [atatat 2004-03-12]
