@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.1 2004/07/12 08:14:44 cube Exp $
+$NetBSD: patch-am,v 1.2 2004/09/16 13:32:16 he Exp $
 
---- machine/m_netbsd16.c.orig	2004-07-12 09:11:00.000000000 +0200
+--- machine/m_netbsd16.c.orig	Thu Sep 16 15:39:54 2004
 +++ machine/m_netbsd16.c
 @@ -0,0 +1,837 @@
 +/*	NetBSD: m_netbsd15.c,v 1.16 2002/03/23 01:28:11 thorpej Exp 	*/
@@ -444,7 +444,7 @@ $NetBSD: patch-am,v 1.1 2004/07/12 08:14:44 cube Exp $
 +	/* if requested, sort the "interesting" processes */
 +	qsort((char *)pref, active_procs, sizeof(struct kinfo_proc2 *), 
 +	    (int (*) __P((const void *, const void *)))
-+	    proc_compares[compare_inddex]);
++	    proc_compares[compare_index]);
 +
 +	/* remember active and total counts */
 +	si->p_total = total_procs;
