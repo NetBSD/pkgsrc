@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2001/12/13 18:03:52 fredb Exp $
+# $NetBSD: Makefile,v 1.17 2002/05/13 14:12:03 fredb Exp $
 
-DISTNAME=		bochs-1.3
+DISTNAME=		bochs-1.4
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
@@ -14,6 +14,7 @@ USE_GMAKE=		yes
 # performance. The number of processors can be either 1 (default), 2, or 4.
 #CONFIGURE_ARGS+=	--enable-debugger --enable-disasm
 #CONFIGURE_ARGS+=	--enable-processors=2
+CONFIGURE_ENV+=		CXXFLAGS=-I${X11BASE}/include
 USE_X11=		yes
 
 BOCHS_MAINDIR=		${PREFIX}/share/bochs
@@ -35,8 +36,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-bochs-latest ${BOCHS_BIOSDIR}
 	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-elpin-2.40 ${BOCHS_BIOSDIR}
 	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-elpin-LICENSE ${BOCHS_BIOSDIR}
-	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-cbothamy-0.2a ${BOCHS_BIOSDIR}
-	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-cbothamy-0.2a-README ${BOCHS_BIOSDIR}
+	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-lgpl-0.3a ${BOCHS_BIOSDIR}
+	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-lgpl-README ${BOCHS_BIOSDIR}
 	${INSTALL_DATA_DIR} ${BOCHS_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs-html/00README ${BOCHS_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs-html/*.gif ${BOCHS_DOCDIR}
