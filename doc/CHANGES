@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7099 2004/09/05 14:26:02 jmmv Exp $
+$NetBSD: CHANGES,v 1.7100 2004/09/05 18:36:05 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4196,3 +4196,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pcb-current to 20040903 [dmcmahill 2004-09-04]
 	Added pam-dbm-0.2 [grant 2004-09-05]
 	Updated gnome-speech to 0.3.5 [jmmv 2004-09-05]
+	Updated chicken to 1.66 [seb 2004-09-05]
