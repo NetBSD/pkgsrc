@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2603 2003/06/27 14:22:46 drochner Exp $
+$NetBSD: CHANGES,v 1.2604 2003/06/27 16:00:58 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2590,3 +2590,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gimp-wideangle to 0.4 [drochner 2003-06-27]
 	Updated py-imaging to 1.1.4 [drochner 2003-06-27]
 	Added py-checker-0.8.12	[drochner 2003-06-27]
+	Updated sirius to 0.7.0 [jmmv 2003-06-27]
