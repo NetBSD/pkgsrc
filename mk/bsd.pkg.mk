@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1470 2004/06/23 11:42:18 salo Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1471 2004/07/03 21:59:04 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -2706,7 +2706,7 @@ _DYLIB_AWK= \
 	}					\
 	/.*\/lib[^\/]+\.so$$/ {			\
 		lines[NR] = $$0;		\
-		if (system("${TEST} -e ${PREFIX}/" $$0) == 0) { \
+		if (system("${TEST} -f ${PREFIX}/" $$0) == 0) { \
 			next;			\
 		}				\
 		libtool_release($$0);		\
@@ -4008,7 +4008,7 @@ build-depends-list:
 .PHONY: binpkg-list
 .if !target(binpkg-list)
 binpkg-list:
-	@if [ -e ${PACKAGES} ]; then					\
+	@if ${TEST} -d ${PACKAGES}; then					\
 		cd ${PACKAGES};						\
 		case ${.CURDIR} in					\
 		*/pkgsrc/packages)					\
@@ -4166,7 +4166,7 @@ show-vulnerabilities-html:
 .PHONY: README.html
 README.html: .PRECIOUS
 	@${SETENV} AWK=${AWK} BMAKE=${MAKE} ../../mk/scripts/mkdatabase -f $@.tmp1
-	@if [ -e ${PACKAGES} ]; then					\
+	@if ${TEST} -d ${PACKAGES}; then					\
 		cd ${PACKAGES};						\
 		case `${PWD_CMD}` in					\
 			${_PKGSRCDIR}/packages)				\
@@ -4272,7 +4272,7 @@ print-summary-data:
 .if !target(show-license)
 show-license show-licence:
 	@if [ "${LICENSE}" != "" ]; then				\
-		if [ -e ${_PKGSRCDIR}/licenses/${LICENSE} ]; then	\
+		if ${TEST} -f ${_PKGSRCDIR}/licenses/${LICENSE}; then	\
 			if [ "${PAGER}" != "" ]; then			\
 				${PAGER} ${_PKGSRCDIR}/licenses/${LICENSE};\
 			else						\
@@ -4593,30 +4593,30 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		${ECHO} ${COMMENT:Q} > ${_PKG_DBDIR}/${PKGNAME}/+COMMENT; \
 		${CP} ${BUILD_VERSION_FILE} ${_PKG_DBDIR}/${PKGNAME}/+BUILD_VERSION; \
 		${CP} ${BUILD_INFO_FILE} ${_PKG_DBDIR}/${PKGNAME}/+BUILD_INFO; \
-		if ${TEST} -e ${SIZE_PKG_FILE}; then 			\
+		if ${TEST} -f ${SIZE_PKG_FILE}; then 			\
 			${CP} ${SIZE_PKG_FILE} ${_PKG_DBDIR}/${PKGNAME}/+SIZE_PKG; \
 		fi ; 							\
-		if ${TEST} -e ${SIZE_ALL_FILE}; then 			\
+		if ${TEST} -f ${SIZE_ALL_FILE}; then 			\
 			${CP} ${SIZE_ALL_FILE} ${_PKG_DBDIR}/${PKGNAME}/+SIZE_ALL; \
 		fi ; 							\
-		if ${TEST} -e ${PRESERVE_FILE}; then 			\
+		if ${TEST} -f ${PRESERVE_FILE}; then 			\
 			${CP} ${PRESERVE_FILE} ${_PKG_DBDIR}/${PKGNAME}/+PRESERVE; \
 		fi ; 							\
 		if [ "${PKG_INSTALLATION_TYPE}" = "pkgviews" ]; then	\
 			${TOUCH} ${_PKG_DBDIR}/${PKGNAME}/+VIEWS;	\
 		fi ;							\
 		if [ -n "${INSTALL_FILE}" ]; then			\
-			if ${TEST} -e ${INSTALL_FILE}; then		\
+			if ${TEST} -f ${INSTALL_FILE}; then		\
 				${CP} ${INSTALL_FILE} ${_PKG_DBDIR}/${PKGNAME}/+INSTALL; \
 			fi;						\
 		fi;							\
 		if [ -n "${DEINSTALL_FILE}" ]; then			\
-			if ${TEST} -e ${DEINSTALL_FILE}; then		\
+			if ${TEST} -f ${DEINSTALL_FILE}; then		\
 				${CP} ${DEINSTALL_FILE} ${_PKG_DBDIR}/${PKGNAME}/+DEINSTALL; \
 			fi;						\
 		fi;							\
 		if [ -n "${MESSAGE}" ]; then				\
-			if ${TEST} -e ${MESSAGE}; then			\
+			if ${TEST} -f ${MESSAGE}; then			\
 				${CP} ${MESSAGE} ${_PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
 			fi;						\
 		fi;							\
@@ -4625,7 +4625,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 			if ${TEST} -z "$$realdep"; then			\
 				${ECHO} "$$dep not installed - dependency NOT registered" ; \
 			elif [ -d ${_PKG_DBDIR}/$$realdep ]; then	\
-				if ${TEST} ! -e ${_PKG_DBDIR}/$$realdep/+REQUIRED_BY; then \
+				if ${TEST} ! -f ${_PKG_DBDIR}/$$realdep/+REQUIRED_BY; then \
 					${TOUCH} ${_PKG_DBDIR}/$$realdep/+REQUIRED_BY; \
 				fi; 					\
 				${AWK} 'BEGIN { found = 0; } 		\
