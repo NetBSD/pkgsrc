@@ -1,55 +1,136 @@
-$NetBSD: patch-am,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+$NetBSD: patch-am,v 1.2 2002/03/21 08:47:07 seb Exp $
 
---- tcldgr/Makefile.in.orig	Fri Mar  1 22:35:37 2002
+--- tcldgr/Makefile.in.orig	Fri Mar  8 23:12:21 2002
 +++ tcldgr/Makefile.in
-@@ -187,11 +187,7 @@
- 
- AUTOMAKE_OPTIONS = 1.4
- 
--INCLUDES = @TCL_CFLAGS@ \
--	-I$(top_srcdir)/agraph \
--	-I$(top_srcdir)/cdt \
+@@ -198,8 +198,7 @@
+ INCLUDES = @TCL_CFLAGS@ \
+ 	-I$(top_srcdir)/agraph \
+ 	-I$(top_srcdir)/cdt \
 -	-I$(top_srcdir)/tclhandle \
 -	-I@TCLSH_EXEC_PREFIX@/include
-+INCLUDES = @TCL_CFLAGS@ 	-I$(top_srcdir)/agraph 	-I$(top_srcdir)/cdt 	-I$(top_srcdir)/tclhandle
++	-I$(top_srcdir)/tclhandle
  
  
  LIBS = 
-@@ -204,10 +200,7 @@
- 
- libtcldgr_la_SOURCES = dgedge.c dgnode.c dgr.c dgraph.c dgrutil.c dgr.h
- 
--libtcldgr_la_LIBADD = ../tclhandle/libtclhandle.la \
--	../agraph/libagraph.la \
--	../cdt/libcdt.la \
+@@ -215,7 +214,7 @@
+ libtcldgr_la_LIBADD = ../tclhandle/libtclhandle.la \
+ 	../agraph/libagraph.la \
+ 	../cdt/libcdt.la \
 -        ../tclstubs/libtclstubs.la
-+libtcldgr_la_LIBADD = ../tclhandle/libtclhandle.la 	../agraph/libagraph.la 	../cdt/libcdt.la         ${TCL_STUB_LIB_SPEC}
++        ${TCL_STUB_LIB_SPEC}
  
  
  CLEANFILES = pkgIndex.tcl
-@@ -228,7 +221,7 @@
- X_PRE_LIBS = @X_PRE_LIBS@
- libtcldgr_la_LDFLAGS = 
- libtcldgr_la_DEPENDENCIES =  ../tclhandle/libtclhandle.la \
--../agraph/libagraph.la ../cdt/libcdt.la ../tclstubs/libtclstubs.la
-+../agraph/libagraph.la ../cdt/libcdt.la
- libtcldgr_la_OBJECTS =  dgedge.lo dgnode.lo dgr.lo dgraph.lo dgrutil.lo
- CFLAGS = @CFLAGS@
- COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-@@ -246,7 +239,7 @@
+@@ -229,8 +228,7 @@
  
- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ libtcldgr_la_LDFLAGS =
+ libtcldgr_la_DEPENDENCIES = ../tclhandle/libtclhandle.la \
+-	../agraph/libagraph.la ../cdt/libcdt.la \
+-	../tclstubs/libtclstubs.la
++	../agraph/libagraph.la ../cdt/libcdt.la
+ am_libtcldgr_la_OBJECTS = dgedge.lo dgnode.lo dgr.lo dgraph.lo \
+ 	dgrutil.lo
+ libtcldgr_la_OBJECTS = $(am_libtcldgr_la_OBJECTS)
+@@ -239,10 +237,7 @@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-depcomp = $(SHELL) $(top_srcdir)/depcomp
+-@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dgedge.Plo $(DEPDIR)/dgnode.Plo \
+-@AMDEP_TRUE@	$(DEPDIR)/dgr.Plo $(DEPDIR)/dgraph.Plo \
+-@AMDEP_TRUE@	$(DEPDIR)/dgrutil.Plo
++depcomp =
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
+@@ -281,7 +276,7 @@
+ 	-rm -f libtool
+ $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+ 	cd $(top_srcdir) && \
+-	  $(AUTOMAKE) --gnu  tcldgr/Makefile
++	  $(AUTOMAKE) --gnu  --ignore-deps tcldgr/Makefile
+ Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) && \
+ 	  CONFIG_HEADERS= CONFIG_LINKS= \
+@@ -314,33 +309,14 @@
+ distclean-compile:
+ 	-rm -f *.tab.c
  
--TAR = gtar
-+TAR = tar
- GZIP_ENV = --best
- SOURCES = $(libtcldgr_la_SOURCES)
- OBJECTS = $(libtcldgr_la_OBJECTS)
-@@ -487,7 +480,6 @@
- 	      || exit 1; \
- 	  fi; \
- 	done
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dgedge.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dgnode.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dgr.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dgraph.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dgrutil.Plo@am__quote@
 -
- info-am:
- info: info-recursive
- dvi-am:
+-distclean-depend:
+-	-rm -rf $(DEPDIR)
+-
+ .c.o:
+-@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ 	$(COMPILE) -c `test -f $< || echo '$(srcdir)/'`$<
+ 
+ .c.obj:
+-@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ 	$(COMPILE) -c `cygpath -w $<`
+ 
+ .c.lo:
+-@AMDEP_TRUE@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ 	$(LTCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
+-CCDEPMODE = @CCDEPMODE@
+ uninstall-info-am:
+ 
+ manndir = $(mandir)/mann
+@@ -546,8 +522,8 @@
+ 
+ distclean: distclean-recursive
+ 
+-distclean-am: clean-am distclean-compile distclean-depend \
+-	distclean-generic distclean-libtool distclean-tags
++distclean-am: clean-am distclean-compile distclean-generic \
++	distclean-libtool distclean-tags
+ 
+ dvi: dvi-recursive
+ 
+@@ -585,21 +561,21 @@
+ 
+ .PHONY: $(RECURSIVE_TARGETS) GTAGS all all-am all-local check check-am \
+ 	clean clean-generic clean-libtool clean-pkglibLTLIBRARIES \
+-	clean-recursive distclean distclean-compile distclean-depend \
+-	distclean-generic distclean-libtool distclean-recursive \
+-	distclean-tags distdir dvi dvi-am dvi-recursive info info-am \
+-	info-recursive install install-am install-data install-data-am \
+-	install-data-recursive install-exec install-exec-am \
+-	install-exec-recursive install-info install-info-am \
+-	install-info-recursive install-man install-mann \
+-	install-pkglibLTLIBRARIES install-recursive install-strip \
+-	installcheck installcheck-am installdirs installdirs-am \
+-	installdirs-recursive maintainer-clean maintainer-clean-generic \
+-	maintainer-clean-recursive mostlyclean mostlyclean-compile \
+-	mostlyclean-generic mostlyclean-libtool mostlyclean-recursive \
+-	tags tags-recursive uninstall uninstall-am uninstall-info-am \
+-	uninstall-info-recursive uninstall-man uninstall-mann \
+-	uninstall-pkglibLTLIBRARIES uninstall-recursive
++	clean-recursive distclean distclean-compile distclean-generic \
++	distclean-libtool distclean-recursive distclean-tags distdir \
++	dvi dvi-am dvi-recursive info info-am info-recursive install \
++	install-am install-data install-data-am install-data-recursive \
++	install-exec install-exec-am install-exec-recursive \
++	install-info install-info-am install-info-recursive install-man \
++	install-mann install-pkglibLTLIBRARIES install-recursive \
++	install-strip installcheck installcheck-am installdirs \
++	installdirs-am installdirs-recursive maintainer-clean \
++	maintainer-clean-generic maintainer-clean-recursive mostlyclean \
++	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
++	mostlyclean-recursive tags tags-recursive uninstall \
++	uninstall-am uninstall-info-am uninstall-info-recursive \
++	uninstall-man uninstall-mann uninstall-pkglibLTLIBRARIES \
++	uninstall-recursive
+ 
+ 
+ all-local: pkgIndex.tcl

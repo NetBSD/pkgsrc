@@ -1,57 +1,133 @@
-$NetBSD: patch-ba,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+$NetBSD: patch-ba,v 1.2 2002/03/21 08:47:08 seb Exp $
 
---- tkspline/Makefile.in.orig	Fri Mar  1 22:35:43 2002
+--- tkspline/Makefile.in.orig	Fri Mar  8 23:12:25 2002
 +++ tkspline/Makefile.in
-@@ -185,13 +185,7 @@
- Z_INCLUDES = @Z_INCLUDES@
- Z_LIBS = @Z_LIBS@
- 
--INCLUDES = @X_CFLAGS@ \
--	@TCL_CFLAGS@ \
--	@TK_CFLAGS@ @TK_DEFS@ \
--	@TCLINT_INCLUDES@ \
+@@ -197,9 +197,7 @@
+ 	@TCL_CFLAGS@ \
+ 	@TK_CFLAGS@ @TK_DEFS@ \
+ 	@TCLINT_INCLUDES@ \
 -	@TKINT_INCLUDES@ \
 -	-I@TK_EXEC_PREFIX@/include \
 -	-I@TCLSH_EXEC_PREFIX@/include
-+INCLUDES = @X_CFLAGS@ 	@TCL_CFLAGS@ 	@TK_CFLAGS@ @TK_DEFS@ 	@TCLINT_INCLUDES@ 	@TKINT_INCLUDES@
++	@TKINT_INCLUDES@
  
  
  LIBS = 
-@@ -205,9 +199,7 @@
- 
+@@ -214,8 +212,8 @@
  libtkspline_la_SOURCES = tkspline.c
  
--libtkspline_la_LIBADD = \
+ libtkspline_la_LIBADD = \
 -	../tkstubs/libtkstubs.la \
 -	../tclstubs/libtclstubs.la 
-+libtkspline_la_LIBADD =  	${TK_STUB_LIB_SPEC} 	${TCL_STUB_LIB_SPEC}
++	${TK_STUB_LIB_SPEC} \
++	${TCL_STUB_LIB_SPEC}
  
  
  CLEANFILES = pkgIndex.tcl
-@@ -227,8 +219,7 @@
- X_EXTRA_LIBS = @X_EXTRA_LIBS@
- X_PRE_LIBS = @X_PRE_LIBS@
- libtkspline_la_LDFLAGS = 
--libtkspline_la_DEPENDENCIES =  ../tkstubs/libtkstubs.la \
--../tclstubs/libtclstubs.la
-+libtkspline_la_DEPENDENCIES = 
- libtkspline_la_OBJECTS =  tkspline.lo
- CFLAGS = @CFLAGS@
- COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-@@ -244,7 +235,7 @@
+@@ -228,8 +226,7 @@
+ LTLIBRARIES = $(pkglib_LTLIBRARIES)
  
- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ libtkspline_la_LDFLAGS =
+-libtkspline_la_DEPENDENCIES = ../tkstubs/libtkstubs.la \
+-	../tclstubs/libtclstubs.la
++libtkspline_la_DEPENDENCIES =
+ am_libtkspline_la_OBJECTS = tkspline.lo
+ libtkspline_la_OBJECTS = $(am_libtkspline_la_OBJECTS)
  
--TAR = gtar
-+TAR = tar
- GZIP_ENV = --best
- SOURCES = $(libtkspline_la_SOURCES)
- OBJECTS = $(libtkspline_la_OBJECTS)
-@@ -485,7 +476,6 @@
- 	      || exit 1; \
- 	  fi; \
- 	done
+@@ -237,8 +234,7 @@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-depcomp = $(SHELL) $(top_srcdir)/depcomp
+-@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/tkspline.Plo
++depcomp =
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
+@@ -275,7 +271,7 @@
+ 	-rm -f libtool
+ $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+ 	cd $(top_srcdir) && \
+-	  $(AUTOMAKE) --gnu  tkspline/Makefile
++	  $(AUTOMAKE) --gnu  --ignore-deps tkspline/Makefile
+ Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) && \
+ 	  CONFIG_HEADERS= CONFIG_LINKS= \
+@@ -308,29 +304,14 @@
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/tkspline.Plo@am__quote@
 -
- info-am:
- info: info-recursive
- dvi-am:
+-distclean-depend:
+-	-rm -rf $(DEPDIR)
+-
+ .c.o:
+-@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ 	$(COMPILE) -c `test -f $< || echo '$(srcdir)/'`$<
+ 
+ .c.obj:
+-@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ 	$(COMPILE) -c `cygpath -w $<`
+ 
+ .c.lo:
+-@AMDEP_TRUE@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ 	$(LTCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
+-CCDEPMODE = @CCDEPMODE@
+ uninstall-info-am:
+ 
+ manndir = $(mandir)/mann
+@@ -536,8 +517,8 @@
+ 
+ distclean: distclean-recursive
+ 
+-distclean-am: clean-am distclean-compile distclean-depend \
+-	distclean-generic distclean-libtool distclean-tags
++distclean-am: clean-am distclean-compile distclean-generic \
++	distclean-libtool distclean-tags
+ 
+ dvi: dvi-recursive
+ 
+@@ -575,21 +556,21 @@
+ 
+ .PHONY: $(RECURSIVE_TARGETS) GTAGS all all-am all-local check check-am \
+ 	clean clean-generic clean-libtool clean-pkglibLTLIBRARIES \
+-	clean-recursive distclean distclean-compile distclean-depend \
+-	distclean-generic distclean-libtool distclean-recursive \
+-	distclean-tags distdir dvi dvi-am dvi-recursive info info-am \
+-	info-recursive install install-am install-data install-data-am \
+-	install-data-recursive install-exec install-exec-am \
+-	install-exec-recursive install-info install-info-am \
+-	install-info-recursive install-man install-mann \
+-	install-pkglibLTLIBRARIES install-recursive install-strip \
+-	installcheck installcheck-am installdirs installdirs-am \
+-	installdirs-recursive maintainer-clean maintainer-clean-generic \
+-	maintainer-clean-recursive mostlyclean mostlyclean-compile \
+-	mostlyclean-generic mostlyclean-libtool mostlyclean-recursive \
+-	tags tags-recursive uninstall uninstall-am uninstall-info-am \
+-	uninstall-info-recursive uninstall-man uninstall-mann \
+-	uninstall-pkglibLTLIBRARIES uninstall-recursive
++	clean-recursive distclean distclean-compile distclean-generic \
++	distclean-libtool distclean-recursive distclean-tags distdir \
++	dvi dvi-am dvi-recursive info info-am info-recursive install \
++	install-am install-data install-data-am install-data-recursive \
++	install-exec install-exec-am install-exec-recursive \
++	install-info install-info-am install-info-recursive install-man \
++	install-mann install-pkglibLTLIBRARIES install-recursive \
++	install-strip installcheck installcheck-am installdirs \
++	installdirs-am installdirs-recursive maintainer-clean \
++	maintainer-clean-generic maintainer-clean-recursive mostlyclean \
++	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
++	mostlyclean-recursive tags tags-recursive uninstall \
++	uninstall-am uninstall-info-am uninstall-info-recursive \
++	uninstall-man uninstall-mann uninstall-pkglibLTLIBRARIES \
++	uninstall-recursive
+ 
+ 
+ all-local: pkgIndex.tcl
