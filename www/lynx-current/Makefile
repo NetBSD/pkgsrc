@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2002/08/25 21:52:16 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2003/03/22 00:08:20 wiz Exp $
 #
 
 DISTNAME=		lynx2.8.5dev.7
 PKGNAME=		lynx-2.8.5.0.7
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://lynx.isc.org/current/ \
 			ftp://ftp.nl.uu.net/pub/unix/www/lynx/current/ \
@@ -42,7 +43,7 @@ CONFIGURE_ARGS+=	--enable-scrollbar
 
 # Install gzip'ed help files to ${PREFIX}/share/lynx
 CONFIGURE_ARGS+=	--libdir="${PREFIX}/share/lynx"
-CONFIGURE_ARGS+=	--with-zlib
+CONFIGURE_ARGS+=	--enable-gzip-help --with-zlib
 
 # Miscellaneous
 CONFIGURE_ARGS+=	--enable-externs
