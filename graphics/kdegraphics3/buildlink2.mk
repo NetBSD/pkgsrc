@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/07/30 14:30:15 markd Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/08/04 21:48:00 drochner Exp $
 #
 # This Makefile fragment is included by packages that use kdegraphics.
 #
@@ -11,7 +11,7 @@ BUILDLINK_DEPENDS.kdegraphics?=		kdegraphics>=3.1.3
 BUILDLINK_PKGSRCDIR.kdegraphics?=		../../graphics/kdegraphics3
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdegraphics=kdegraphics
-BUILDLINK_PREFIX.kdegraphics_DEFAULT=	${X11PREFIX}
+BUILDLINK_PREFIX.kdegraphics_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.kdegraphics+=	include/kmultipageInterface.h
 BUILDLINK_FILES.kdegraphics+=	lib/kcolorchooser.*
 BUILDLINK_FILES.kdegraphics+=	lib/kde3/kfile_pdf.*
