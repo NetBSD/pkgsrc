@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/07/17 23:49:25 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.2 2005/02/12 00:46:58 dmcmahill Exp $
 
---- src/batch/Makefile.in.orig	Tue Apr 27 12:46:11 2004
-+++ src/batch/Makefile.in
-@@ -79,7 +79,7 @@ YACC = @YACC@
- am__include = @am__include@
- am__quote = @am__quote@
- install_sh = @install_sh@
+--- src/verilog/Makefile.in.orig	Fri Jul 30 14:39:43 2004
++++ src/verilog/Makefile.in
+@@ -147,7 +147,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
 -AM_CFLAGS = -Wall -W -Wno-unused-parameter -Wno-unused-function -DDDR_DEBUG
 +AM_CFLAGS = -DDDR_DEBUG
- 
  INCLUDES = -I$(srcdir)/../include
- noinst_LIBRARIES = libbatch.a
+ noinst_LIBRARIES = libverilog.a
+ libverilog_a_SOURCES = \
