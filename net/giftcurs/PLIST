@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/08 02:06:48 xtraeme Exp $
+bin/giFTcurs
+man/man1/giFTcurs.1
+man/man5/giFTcurs.conf.5
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/giFTcurs.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/giFTcurs.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/giFTcurs.mo
+${PKGLOCALEDIR}/locale/en/LC_MESSAGES/giFTcurs.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/giFTcurs.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/giFTcurs.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/giFTcurs.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/giFTcurs.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/giFTcurs.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/giFTcurs.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/giFTcurs.mo
