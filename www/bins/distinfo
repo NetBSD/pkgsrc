@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2002/07/31 14:34:01 dmcmahill Exp $
+$NetBSD: distinfo,v 1.5 2002/08/24 11:24:55 dmcmahill Exp $
 
-SHA1 (bins-1.1.10.tar.bz2) = 7ed3889654cefa264d22e3b136669701c5f3a9d3
-Size (bins-1.1.10.tar.bz2) = 98777 bytes
-SHA1 (patch-aa) = 290d84dfcb8c57e4da0528d845f27f2350ec0008
+SHA1 (bins-1.1.14.tar.bz2) = 3e3a97e3790aa300cc278b3234334297f8b4972b
+Size (bins-1.1.14.tar.bz2) = 116489 bytes
+SHA1 (patch-aa) = a7c5a0884ba0dbead3032fd7be36a1a65567d6dc
 SHA1 (patch-ab) = 3109680a859da8499a6b14406aeddbb06536c0fa

@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.3 2002/07/31 14:34:02 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.4 2002/08/24 11:24:56 dmcmahill Exp $
 
---- bins.orig	Sun Jun  9 15:54:12 2002
-+++ bins	Wed Jul 31 10:27:02 2002
-@@ -219,5 +219,5 @@
+--- bins.orig	Mon Aug 19 01:04:31 2002
++++ bins	Mon Aug 19 01:04:31 2002
+@@ -259,5 +259,5 @@
  
     # The following parameters cannot be set in config files for now :
 -   globalConfigDir => "/etc/bins",     # System wide
 +   globalConfigDir => "@pkgsysconfdir@/bins",     # System wide
                                         # configuration directory.
     userConfigDir    => "~/.bins",      # User configuration directory
-@@ -238,11 +238,12 @@
+@@ -278,11 +278,12 @@
  );
  
 -# normally, you don't have to touch that...
@@ -29,12 +29,3 @@ $NetBSD: patch-aa,v 1.3 2002/07/31 14:34:02 dmcmahill Exp $
 +# }
  my $local2htmlConverter;
  if ($defaultConfig{defaultEncoding} ne $defaultConfig{htmlEncoding}){
-@@ -2369,6 +2370,7 @@
-     warn "$x" if "$x";
- 
-+    my($srcformat) = $preview->Get("magick");
-     if (!$configHash->{scaleIfSameSize}
--	and grep (/^$preview->Get("magick")$/, @webFormats ) ) {
-+	and grep (/^$srcformat$/, @webFormats ) ) {
-       my ($width, $height) = $preview->Get("width", "height");
-       if ($width == $newWidth && $height == $newHeight) {

@@ -1,10 +1,30 @@
-@comment $NetBSD: PLIST,v 1.3 2002/07/30 09:46:32 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/08/24 11:24:55 dmcmahill Exp $
 bin/bins
 bin/bins_edit
 man/man1/bins.1
 man/man1/bins_edit.1
+share/doc/html/bins/bins-edit-gui_man.html
+share/doc/html/bins/bins_edit_man.html
+share/doc/html/bins/bins_man.html
+share/doc/html/bins/download.html
+share/doc/html/bins/examples.html
 share/doc/html/bins/index.html
 share/doc/html/bins/index_fr.html
+share/doc/html/bins/install.html
+share/doc/html/bins/install_automatic.html
+share/doc/html/bins/install_manual.html
+share/doc/html/bins/install_prerequisites.html
+share/doc/html/bins/intro.html
+share/doc/html/bins/license.html
+share/doc/html/bins/usage.html
+share/doc/html/bins/usage_album.html
+share/doc/html/bins/usage_custom.html
+share/doc/html/bins/usage_desc.html
+share/doc/html/bins/usage_desc_cli.html
+share/doc/html/bins/usage_desc_gui.html
+share/doc/html/bins/usage_desc_gui_gqview.html
+share/doc/html/bins/usage_desc_gui_nautilus.html
+share/doc/html/bins/usage_desc_xml.html
 share/examples/bins/binsrc
 share/examples/bins/templates.default/details.html
 share/examples/bins/templates.default/footer.html
