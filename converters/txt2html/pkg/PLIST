@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/20 14:53:08 wennmach Exp $
+bin/txt2html
+share/txt2html/txt2html.dict
+share/txt2html/sample.foot
+share/txt2html/sample.html
+share/txt2html/sample.txt
+@dirrm share/txt2html
