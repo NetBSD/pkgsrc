@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/01/24 03:26:46 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/02/14 21:54:12 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PKGCONFIG_BUILDLINK3_MK:=	${PKGCONFIG_BUILDLINK3_MK}+
@@ -14,7 +14,9 @@ BUILDLINK_PKGSRCDIR.pkgconfig?=	../../devel/pkgconfig
 BUILDLINK_DEPMETHOD.pkgconfig?=	build
 
 PKG_CONFIG_PATH?=	${LOCALBASE}/lib/pkgconfig:${X11BASE}/lib/pkgconfig
+CONFIGURE_ENV+=		PKG_CONFIG="${BUILDLINK_PREFIX.pkgconfig}/bin/pkg-config"
 CONFIGURE_ENV+=		PKG_CONFIG_PATH="${PKG_CONFIG_PATH}"
+MAKE_ENV+=		PKG_CONFIG="${BUILDLINK_PREFIX.pkgconfig}/bin/pkg-config"
 MAKE_ENV+=		PKG_CONFIG_PATH="${PKG_CONFIG_PATH}"
 .endif	# PKGCONFIG_BUILDLINK3_MK
 
