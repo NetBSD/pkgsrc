@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2001/05/23 20:24:05 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/07/05 18:04:50 jtb Exp $
 #
 
-DISTNAME=	gsl-0.8
+DISTNAME=	gsl-0.9
 CATEGORIES=	math devel
 MASTER_SITES=	ftp://sources.redhat.com/pub/gsl/ \
 		ftp://ftp.freesoftware.com/pub/sourceware/pub/gsl/ \
@@ -19,7 +19,7 @@ MASTER_SITES=	ftp://sources.redhat.com/pub/gsl/ \
 
 MAINTAINER=	David Maxwell <david@maxwell.net>
 HOMEPAGE=	http://sources.redhat.com/gsl/
-COMMENT=	The GNU Scientific Library - mathematical libs
+COMMENT=	The GNU Scientific Library
 
 GNU_CONFIGURE=		yes
 USE_GTEXINFO=		yes
