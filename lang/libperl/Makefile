@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/05/12 16:15:44 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/05/18 13:52:49 jlam Exp $
 
 DISTNAME=		perl-${PERL_VERSION}
 PKGNAME=		libperl-${PERL_VERSION}nb2
@@ -25,11 +25,18 @@ CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} -Doptimize="${CFLAGS}" \
 			-Dcc=gcc -Dusemymalloc=false
 CONFIGURE_ARGS+=	-Duseshrplib=true
 MAKE_ENV+=              LD_LIBRARY_PATH=${WRKSRC}
-ALL_TARGET=		lib/Config.pm libperl.so
+ALL_TARGET=		lib/Config.pm ${LIBPERL}
+PLIST_SUBST+=		LIBPERL=${LIBPERL}
 
 DYNALOADER_SRCDIR=	${WRKSRC}/ext/DynaLoader
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OBJECT_FMT} == "ELF"
+LIBPERL=		libperl.so
+.else
+LIBPERL=		libperl.so.6.0
+.endif
 
 .if ${OPSYS} == "NetBSD"
 .if !exists(/usr/libexec/ld.elf_so) && !exists(/usr/libexec/ld.so)
@@ -43,8 +50,8 @@ post-build:
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} DynaLoader.o
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/libperl.so				\
-		${PERL5_ARCHLIB}/CORE/libperl.so
+	${INSTALL_DATA} ${WRKSRC}/${LIBPERL}				\
+		${PERL5_ARCHLIB}/CORE/${LIBPERL}
 	${INSTALL_DATA} ${DYNALOADER_SRCDIR}/DynaLoader.o		\
 		${PERL5_ARCHLIB}/DynaLoader_pic.o
 
