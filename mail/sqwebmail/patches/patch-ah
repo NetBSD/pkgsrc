@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2005/02/18 22:12:56 jlam Exp $
+
+--- sqwebmail/configure.orig	2004-11-29 22:53:57.000000000 -0500
++++ sqwebmail/configure
+@@ -19757,7 +19757,7 @@ fi;
+ 
+ 
+ 
+-if test -d ${srcdir}/../courier
++if true || test -d ${srcdir}/../courier
+ then
+ 	pkglibexecdir='$(libexecdir)/courier'
+ else

@@ -1,11 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2004/02/23 23:41:43 jlam Exp $
+$NetBSD: MESSAGE,v 1.6 2005/02/18 22:12:56 jlam Exp $
 
 You must create a cron job that runs at regular intervals (one hour is
 fine) that executes the following Perl script to clean the SqWebMail
 user cache:
 
-    ${PREFIX}/share/courier/sqwebmail/cleancache.pl
+    ${PKG_SYSCONFDIR}/cleancache.pl
 
 You will need to make SqWebMail accessible through your HTTP server by
 making URLs with path "${IMAGEURL}/" resolve to the images in
@@ -36,6 +36,6 @@ If you're using a non-default sendmail program, you will need to edit:
 To use GPG with SqWebMail, you will need to install the security/gnupg
 package and you should read the documentation at:
 
-    ${PREFIX}/share/doc/html/courier/sqwebmail/README.gpg.html
+    ${PREFIX}/share/doc/courier/sqwebmail/README.gpg.html
 
 ===========================================================================

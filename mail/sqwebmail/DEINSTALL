@@ -1,17 +1,29 @@
-# $NetBSD: DEINSTALL,v 1.3 2004/07/14 20:07:22 jlam Exp $
-
-# Additional files that are may be created for sqwebmail.
-ALL_FILES="${ALL_FILES} /dev/null ${PKG_SYSCONFDIR}/authcharset"
-ALL_FILES="${ALL_FILES} /dev/null ${PKG_SYSCONFDIR}/defaultdomain"
-ALL_FILES="${ALL_FILES} /dev/null ${PKG_SYSCONFDIR}/hostname"
-ALL_FILES="${ALL_FILES} /dev/null ${PKG_SYSCONFDIR}/logindomainlist"
-ALL_FILES="${ALL_FILES} /dev/null ${PKG_SYSCONFDIR}/maildirfilterconfig"
-ALL_FILES="${ALL_FILES} /dev/null ${PKG_SYSCONFDIR}/nochangingfrom"
-ALL_FILES="${ALL_FILES} /dev/null ${PKG_SYSCONFDIR}/noimages"
-ALL_FILES="${ALL_FILES} /dev/null ${PKG_SYSCONFDIR}/usexsender"
+# $NetBSD: DEINSTALL,v 1.4 2005/02/18 22:12:56 jlam Exp $
 
 case ${STAGE} in
 DEINSTALL)
-	# Unconditionally remove the SqWebMail socket.
-	${RM} -f @SQWEBMAIL_STATEDIR@/sqwebmail.sock
+	#
+	# Note some additional files that may be created by the sysadmin
+	# that can probably be removed.
+	#
+	if ${TEST} -x ./+FILES; then
+		for file in						\
+			${PKG_SYSCONFDIR}/authcharset			\
+			${PKG_SYSCONFDIR}/autoresponsesquota		\
+			${PKG_SYSCONFDIR}/defaultdomain			\
+			${PKG_SYSCONFDIR}/logindomainlist		\
+			${PKG_SYSCONFDIR}/maildirfilterconfig
+		do
+			${ECHO} "# FILE: $file . /dev/null" >> ./+FILES
+		done
+	fi
+
+	sockfile="@SQWEBMAIL_STATEDIR@/sqwebmail.sock"
+	if ${TEST} -f "$sockfile"; then
+		# Unconditionally remove the SqWebMail socket.
+		${ECHO} "Removing sqwebmail socket file:"
+		${ECHO} "	$sockfile"
+		${RM} -f $sockfile
+	fi
+	;;
 esac
