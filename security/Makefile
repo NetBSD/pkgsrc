@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2004/01/07 19:10:58 ben Exp $
+# $NetBSD: Makefile,v 1.157 2004/01/08 17:56:32 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -30,6 +30,7 @@ SUBDIR+=	egd
 SUBDIR+=	flawfinder
 SUBDIR+=	fortify
 SUBDIR+=	fprot-workstation-bin
+SUBDIR+=	fragroute
 SUBDIR+=	fressh
 SUBDIR+=	fsh
 SUBDIR+=	gnupg
