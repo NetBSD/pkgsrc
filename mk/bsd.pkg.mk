@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.967 2002/04/19 17:14:44 jwise Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.968 2002/04/25 00:02:41 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1642,6 +1642,14 @@ do-extract: ${WRKDIR}
 
 # Patch
 
+# LOCALPATCHES contains the location of local patches to packages
+#	that are maintained in a directory tree reflecting the same
+#	hierarchy as the pkgsrc tree, i.e. local patches for www/apache
+#	would be found as ${LOCALPATCHES}/www/apache/*.
+#
+_DFLT_LOCALPATCHFILES=	${LOCALPATCHES}/${PKGPATH}/*
+_LOCALPATCHFILES=	${_DFLT_LOCALPATCHFILES}
+
 .if !target(do-patch)
 do-patch: uptodate-digest
 .  if defined(PATCHFILES)
@@ -1667,72 +1675,80 @@ do-patch: uptodate-digest
 		esac; \
 	  done
 .  endif
-	${_PKG_SILENT}${_PKG_DEBUG}if [ -d ${PATCHDIR} ]; then		\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	patchlist="";							\
+	if [ -d ${PATCHDIR} ]; then					\
 		if [ "`${ECHO} ${PATCHDIR}/patch-*`" = "${PATCHDIR}/patch-*" ]; then \
 			${ECHO_MSG} "${_PKGSRC_IN}> Ignoring empty patch directory"; \
 			if [ -d ${PATCHDIR}/CVS ]; then			\
 				${ECHO_MSG} "${_PKGSRC_IN}> Perhaps you forgot the -P flag to 'cvs checkout' or 'cvs update'?"; \
 			fi;						\
 		else							\
-			${ECHO_MSG} "${_PKGSRC_IN}> Applying ${OPSYS} patches for ${PKGNAME}" ; \
-			fail="";					\
-			for i in ${PATCHDIR}/patch-* ${LOCALPATCHES}/${PKGPATH}/* ; do		\
-				if [ "$$i" = "${LOCALPATCHES}/${PKGPATH}/*" ]; then \
-					continue ; 			\
-				fi ; 					\
-				if [ ! -f "$$i" ]; then			\
-					${ECHO_MSG} "${_PKGSRC_IN}> $$i is not a valid patch file - skipping" ; \
-					continue ; 			\
-				fi ; 					\
-				case $$i in				\
-				*.orig|*.rej|*~)			\
-					${ECHO_MSG} "${_PKGSRC_IN}> Ignoring patchfile $$i" ; \
-					continue;			\
-					;;				\
-				${PATCHDIR}/patch-local-*) 		\
-					;;				\
-				${LOCALPATCHES}/${PKGPATH}/*) 		\
-					;;				\
-				*)					\
-					if [ -f ${DISTINFO_FILE} ]; then \
-						filename=`expr $$i : '.*/\(.*\)'`; \
-						algsum=`${AWK} 'NF == 4 && $$2 == "('$$filename')" && $$3 == "=" {print $$1 " " $$4}' ${DISTINFO_FILE} || ${TRUE}`; \
-						if [ "X$$algsum" != "X" ]; then \
-							alg=`${ECHO} $$algsum | ${AWK} '{ print $$1 }'`; \
-							recorded=`${ECHO} $$algsum | ${AWK} '{ print $$2 }'`; \
-							calcsum=`${SED} -e '/\$$NetBSD.*/d' $$i | ${DIGEST} $$alg`; \
-							if [ ${PATCH_DEBUG_TMP} = yes ]; then	\
-								${ECHO_MSG} "=> Verifying $$filename (using digest algorithm $$alg)" ; \
-							fi;		\
-						fi;			\
-						if [ "X$$algsum" = "X" -o "X$$recorded" = "X" ]; then \
-							${ECHO_MSG} "**************************************"; \
-							${ECHO_MSG} "Ignoring unknown patch file: $$i"; \
-							${ECHO_MSG} "**************************************"; \
-							continue;	\
-						fi;			\
-						if [ "X$$calcsum" != "X$$recorded" ]; then \
-							${ECHO_MSG} "**************************************"; \
-							${ECHO_MSG} "Patch file $$i has been modified"; \
-							${ECHO_MSG} "**************************************"; \
-							fail="$$fail $$filename"; \
-							continue;	\
+			patchlist=`${ECHO} ${PATCHDIR}/patch-*`;	\
+		fi;							\
+	fi;								\
+	if [ "X${_LOCALPATCHFILES}" = "X${_DFLT_LOCALPATCHFILES}" ]; then \
+		localpatchfiles="`${ECHO} ${_LOCALPATCHFILES}`";	\
+		if [ "$${localpatchfiles}" != "${_LOCALPATCHFILES}" ]; then \
+			patchlist="$${patchlist} $${localpatchfiles}";	\
+		fi;							\
+	else								\
+		patchlist=`${ECHO} $${patchlist} ${_LOCALPATCHFILES}`;	\
+	fi;								\
+	if [ -n "$${patchlist}" ]; then					\
+		${ECHO_MSG} "${_PKGSRC_IN}> Applying ${OPSYS} patches for ${PKGNAME}" ; \
+		fail="";						\
+		for i in $${patchlist}; do				\
+			if [ ! -f "$$i" ]; then				\
+				${ECHO_MSG} "${_PKGSRC_IN}> $$i is not a valid patch file - skipping"; \
+				continue; 				\
+			fi;						\
+			case $$i in					\
+			*.orig|*.rej|*~)				\
+				${ECHO_MSG} "${_PKGSRC_IN}> Ignoring patchfile $$i"; \
+				continue;				\
+				;;					\
+			${PATCHDIR}/patch-local-*) 			\
+				;;					\
+			${PATCHDIR}/patch-*)	 			\
+				if [ -f ${DISTINFO_FILE} ]; then	\
+					filename=`expr $$i : '.*/\(.*\)'`; \
+					algsum=`${AWK} 'NF == 4 && $$2 == "('$$filename')" && $$3 == "=" {print $$1 " " $$4}' ${DISTINFO_FILE} || ${TRUE}`; \
+					if [ "X$$algsum" != "X" ]; then	\
+						alg=`${ECHO} $$algsum | ${AWK} '{ print $$1 }'`; \
+						recorded=`${ECHO} $$algsum | ${AWK} '{ print $$2 }'`; \
+						calcsum=`${SED} -e '/\$$NetBSD.*/d' $$i | ${DIGEST} $$alg`; \
+						if [ ${PATCH_DEBUG_TMP} = yes ]; then \
+							${ECHO_MSG} "=> Verifying $$filename (using digest algorithm $$alg)"; \
 						fi;			\
 					fi;				\
-					;;				\
-				esac;					\
-				if [ ${PATCH_DEBUG_TMP} = yes ]; then	\
-					${ECHO_MSG} "${_PKGSRC_IN}> Applying ${OPSYS} patch $$i" ; \
+					if [ "X$$algsum" = "X" -o "X$$recorded" = "X" ]; then \
+						${ECHO_MSG} "**************************************"; \
+						${ECHO_MSG} "Ignoring unknown patch file: $$i"; \
+						${ECHO_MSG} "**************************************"; \
+						continue;		\
+					fi;				\
+					if [ "X$$calcsum" != "X$$recorded" ]; then \
+						${ECHO_MSG} "**************************************"; \
+						${ECHO_MSG} "Patch file $$i has been modified"; \
+						${ECHO_MSG} "**************************************"; \
+						fail="$$fail $$filename"; \
+						continue;		\
+					fi;				\
 				fi;					\
-				fuzz="";				\
-				${PATCH} -v > /dev/null 2>&1 && fuzz="${PATCH_FUZZ_FACTOR}"; \
-				${PATCH} $$fuzz ${PATCH_ARGS} < $$i ||	\
-					{ ${ECHO} Patch $$i failed ; exit 1; } ; \
-			done;						\
-			if [ "X$$fail" != "X" ]; then			\
-				${ECHO_MSG} "Patching failed due to modified patch file(s): $$fail"; \
-				exit 1;					\
+				;;					\
+			esac;						\
+			if [ ${PATCH_DEBUG_TMP} = yes ]; then		\
+				${ECHO_MSG} "${_PKGSRC_IN}> Applying ${OPSYS} patch $$i" ; \
 			fi;						\
+			fuzz="";					\
+			${PATCH} -v > /dev/null 2>&1 && fuzz="${PATCH_FUZZ_FACTOR}"; \
+			${PATCH} $$fuzz ${PATCH_ARGS} < $$i ||		\
+				{ ${ECHO} Patch $$i failed ; exit 1; };	\
+		done;							\
+		if [ "X$$fail" != "X" ]; then				\
+			${ECHO_MSG} "Patching failed due to modified patch file(s): $$fail"; \
+			exit 1;						\
 		fi;							\
 	fi
 .endif
