@@ -1,0 +1,11 @@
+--- /var/obj/pkgsrc/multimedia/mjpegtools/work.what-time-is-love/mjpegtools-1.6.2/utils/altivec/sub_mean_reduction_ppc.S.orig	2004-04-04 20:47:16.000000000 +1000
++++ /var/obj/pkgsrc/multimedia/mjpegtools/work.what-time-is-love/mjpegtools-1.6.2/utils/altivec/sub_mean_reduction_ppc.S	2004-04-04 20:46:30.000000000 +1000
+@@ -18,7 +18,7 @@
+  */
+ 
+ /* register, local label and global macros */
+-#ifdef __linux__
++#if defined(__linux__) || defined(__NetBSD__)
+ #define R(register_number) register_number
+ #define L(label_name) .L##label_name
+ #define G(global_name) global_name
