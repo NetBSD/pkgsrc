@@ -1,22 +1,22 @@
-@comment $NetBSD: PLIST.plugins,v 1.2 2001/11/21 22:22:10 jlam Exp $
+@comment $NetBSD: PLIST.plugins,v 1.3 2002/01/13 14:23:38 skrll Exp $
 lib/sasl/libanonymous.a
 lib/sasl/libanonymous.la
 lib/sasl/libanonymous.so
 lib/sasl/libanonymous.so.1
-lib/sasl/libanonymous.so.1.15
+lib/sasl/libanonymous.so.1.16
 lib/sasl/libcrammd5.a
 lib/sasl/libcrammd5.la
 lib/sasl/libcrammd5.so
 lib/sasl/libcrammd5.so.1
-lib/sasl/libcrammd5.so.1.15
+lib/sasl/libcrammd5.so.1.17
 lib/sasl/libdigestmd5.a
 lib/sasl/libdigestmd5.la
 lib/sasl/libdigestmd5.so
 lib/sasl/libdigestmd5.so.0
-lib/sasl/libdigestmd5.so.0.17
+lib/sasl/libdigestmd5.so.0.19
 lib/sasl/libplain.a
 lib/sasl/libplain.la
 lib/sasl/libplain.so
 lib/sasl/libplain.so.1
-lib/sasl/libplain.so.1.14
+lib/sasl/libplain.so.1.15
 @unexec ${RMDIR} -p %D/lib/sasl 2>/dev/null || ${TRUE}
