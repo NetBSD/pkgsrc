@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2814 2003/07/17 18:54:20 wennmach Exp $
+$NetBSD: CHANGES,v 1.2815 2003/07/17 19:13:47 wennmach Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2847,3 +2847,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added dbench-1.3 [agc 2003-07-17]
 	Updated gaim to 0.65 [jmmv 2003-07-17]
 	Added avr-libc-2003.05.11 [wennmach 2003-07-17]
+	Added avrdude-4.1.0 [wennmach 2003-07-17]
