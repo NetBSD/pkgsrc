@@ -1,13 +1,5 @@
-$NetBSD: distinfo,v 1.12 2005/02/23 14:59:24 agc Exp $
+$NetBSD: distinfo,v 1.13 2005/03/24 02:05:11 dmcmahill Exp $
 
-SHA1 (geda/geda-gschem-20041228.tar.gz) = d6223ea450f4ae5f4917c1209269febf89380e19
-RMD160 (geda/geda-gschem-20041228.tar.gz) = 679bfe1dd943ffad9d06486e3a75374b498418a7
-Size (geda/geda-gschem-20041228.tar.gz) = 1464961 bytes
-SHA1 (patch-aa) = 2a5a099b01179113fa295a2bd6c6c3c48ad4ea45
-SHA1 (patch-ab) = fc16c5328139a3e0f650cf5eb4b22159aa8210e1
-SHA1 (patch-ac) = d433f3fcedb2d2917c2dff8e432158c7a44a36af
-SHA1 (patch-ad) = 1b7ad847f99a3b99a46ad22398cf257f74dfbef9
-SHA1 (patch-ae) = ea40638a0b9c606cce946c216d61f6dbf9813130
-SHA1 (patch-af) = 0ceda5f105bfec5c2c2fc0cc7932d2e37f99d43f
-SHA1 (patch-ag) = 434f25acf5b5f3bd25bf0dd1c28084a84d5dcbb2
-SHA1 (patch-ah) = 1e49e0ac986edacf760c1b74050b93db33942488
+SHA1 (geda/geda-gschem-20050313.tar.gz) = fe64615cf3612e824929b14497d309bbd464a737
+RMD160 (geda/geda-gschem-20050313.tar.gz) = a500b2d82feb3d8157c5d40edf29f88c1e9340cc
+Size (geda/geda-gschem-20050313.tar.gz) = 1586084 bytes
