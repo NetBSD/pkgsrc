@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5556 2004/04/12 15:55:20 jmmv Exp $
+$NetBSD: CHANGES,v 1.5557 2004/04/12 16:06:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1929,3 +1929,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated oidentd to 2.0.7nb1 [tron 2004-04-12]
 	Added p5-Schedule-RateLimiter-0.01 [grant 2004-04-12]
 	Updated libgtop2 to 2.6.0nb1 [jmmv 2004-04-12]
+	Updated postfix-current to 20040312 [taca 2004-04-12]
