@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/26 02:27:43 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.5 2004/03/29 05:54:12 jlam Exp $
 
 DISTNAME=	cyrus-imapd-2.2.3
 PKGREVISION=	1
@@ -15,6 +14,7 @@ USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PERL5_CONFIGURE=	no
+USE_DB185=		no
 
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
@@ -36,32 +36,49 @@ CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER}
 CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP}
 CONFIGURE_ARGS+=	--with-cyrus-prefix=${PREFIX}/cyrus
 CONFIGURE_ARGS+=	--with-statedir=/var/run
-CONFIGURE_ARGS+=	--with-bdb-libdir=${BUILDLINK_PREFIX.db4}/lib
-CONFIGURE_ARGS+=	--with-bdb-incdir=${BUILDLINK_PREFIX.db4}/include/db4
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
+CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
+CONFIGURE_ENV+=		ac_cv_lib_wrap_request_init=yes
+
 CONFIGURE_ARGS+=	--enable-listext
 CONFIGURE_ARGS+=	--enable-murder
 CONFIGURE_ARGS+=	--enable-nntp
 CONFIGURE_ARGS+=	--without-zephyr
 CONFIGURE_ARGS+=	--without-ucdsnmp
-CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
-CONFIGURE_ENV+=		ac_cv_lib_wrap_request_init=yes
 
-.if exists(/usr/include/krb5/com_err.h)
-CPPFLAGS+=		-I/usr/include/krb5
-CONFIGURE_ARGS+=	--with-com_err=
-.else
-CONFIGURE_ARGS+=	--with-com_err=yes
-.endif
-
-.if defined(KERBEROS) && ${KERBEROS} == 4
-PKG_USE_KERBEROS=	# defined
+.if defined(KERBEROS)
+.  if (${KERBEROS} == 4) && exists(/usr/include/kerberosIV/krb.h)
+PKG_USE_KERBEROS=	yes
 CONFIGURE_ARGS+=	--with-auth=krb
+CONFIGURE_ARGS+=	--with-krb=/usr
+.  else
+.    include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-auth=krb5
+CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE}
+CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
+GSSIMPL.heimdal=	heimdal
+GSSIMPL.mit-krb5=	mit
+CONFIGURE_ENV+=		COMPILE_ET=${KRB5BASE}/bin/compile_et
+COMERRBASE=		${KRB5BASE}
+.  endif
 .else
 CONFIGURE_ARGS+=	--with-auth=unix
 CONFIGURE_ARGS+=	--without-krb
+CONFIGURE_ARGS+=	--disable-gssapi
+.endif
+
+.if exists(/usr/bin/compile_et)
+COMERRBASE?=		/usr
+.endif
+.if defined(COMERRBASE)
+.  if exists(${COMERRBASE}/include/krb5/com_err.h)
+CPPFLAGS+=		-I${COMERRBASE}/include/krb5
+.  endif
+CONFIGURE_ENV+=		COMPILE_ET=${COMERRBASE}/bin/compile_et
+.else
+CONFIGURE_ARGS+=	--with-com-err=yes
 .endif
 
 MAKEFLAGS+=		PERL=${PERL5}
@@ -76,6 +93,13 @@ FILES_SUBST+=		IMAPDCONF=${PKG_SYSCONFDIR}/imapd.conf
 PERL5_PACKLIST= \
 	${PERL5_SITEARCH}/auto/Cyrus/IMAP/.packlist			\
 	${PERL5_SITEARCH}/auto/Cyrus/SIEVE/managesieve/.packlist
+
+.include "../../lang/perl5/module.mk"
+.include "../../security/cyrus-sasl2/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 # Change references of some manpages from foo.8 to cyrus-foo.8 to avoid
 # manpage conflicts with other packages.  Also change references to
@@ -116,11 +140,4 @@ post-install:
 		${INSTALL_DATA} $$file ${HTMLDIR};			\
 	done
 
-.include "../../databases/db4/buildlink3.mk"
-.include "../../lang/perl5/module.mk"
-.include "../../security/cyrus-sasl2/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../security/tcp_wrappers/buildlink3.mk"
-
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
