@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/03 05:18:46 martti Exp $
+$NetBSD: distinfo,v 1.2 2003/12/17 07:01:28 martti Exp $
 
-SHA1 (xfce4-clipman-plugin-0.3.1.tar.gz) = fa3ed2966f1e6923a3e2f91339ec631568263cb7
-Size (xfce4-clipman-plugin-0.3.1.tar.gz) = 202944 bytes
+SHA1 (xfce4-clipman-plugin-0.4.0.tar.gz) = 9c8681a1a5c7238e374790f5b74b382bd058cfa2
+Size (xfce4-clipman-plugin-0.4.0.tar.gz) = 203361 bytes
