@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/18 07:46:41 itohy Exp $
+bin/pstoedit
+man/man1/pstoedit.1
+share/pstoedit/doc/changelog.htm
+share/pstoedit/doc/index.htm
+share/pstoedit/doc/pstoedit.htm
+share/pstoedit/doc/readme.txt
+@dirrm share/pstoedit/doc
+share/pstoedit/latex2e.fmp
+share/pstoedit/mpost.fmp
+@dirrm share/pstoedit

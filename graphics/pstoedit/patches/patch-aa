@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/18 07:46:40 itohy Exp $
+
+--- configure.in.orig	Tue May  2 05:02:00 2000
++++ configure.in	Sat Jun 24 19:30:17 2000
+@@ -18,6 +18,21 @@
+ AC_PROG_INSTALL
+ AC_PATH_PROG(GS,gs,gs)
+ 
++dnl X11 support.  Stolen from plotutils.
++AC_PATH_XTRA
++AC_SUBST(X_CFLAGS)
++AC_SUBST(X_LIBS)
++AC_SUBST(X_TOOLKIT_LIBS)
++AC_SUBST(X_PRE_LIBS)
++AC_SUBST(X_BASIC_LIBS)
++AC_SUBST(X_EXTRA_LIBS)
++
++X_TOOLKIT_LIBS="-lXaw -lXmu -lXt"
++X_BASIC_LIBS="-lXext -lX11"
++
++LDFLAGS="$X_LIBS $LDFLAGS"
++CPPFLAGS="$X_CFLAGS $CPPFLAGS"
++
+ dnl Look for various optional libraries.
+ AC_CHECK_LIB(dl,main,[LDL=-ldl],[LDL=])
+ AC_SUBST(LDL)

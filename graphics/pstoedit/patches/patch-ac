@@ -1,0 +1,48 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/07/18 07:46:40 itohy Exp $
+
+--- Makefile.in.orig	Mon Jul  3 02:18:37 2000
++++ Makefile.in	Sat Jul 15 01:55:35 2000
+@@ -6,6 +6,7 @@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ bindir=@bindir@
++datadir=@datadir@
+ libdir=@libdir@
+ mandir=@mandir@
+ MANEXT=1
+@@ -15,12 +16,16 @@
+ INSTALL=@INSTALL@
+ GS=@GS@
+ 
++X_LIBS=@X_LIBS@ @X_TOOLKIT_LIBS@ @X_PRE_LIBS@ @X_BASIC_LIBS@ @X_EXTRA_LIBS@
++X_CFLAGS=@X_CFLAGS@ 
++
+ # Choose a compiler + linker
+-CXXFLAGS=@CXXFLAGS@
++CXXFLAGS=@CXXFLAGS@ $(X_CFLAGS)
+ CCC=@CXX@ @SPECIAL_CXXFLAGS@
+-LDLIBS=$(LOCALLIBS) @LDLIBS@ -lm @LDL@
++LDLIBS=$(LOCALLIBS) @LDLIBS@ $(X_LIBS) -lm @LDL@
+ LINK=@LINK@
+-CCFLAGS=-DDEFAULTGS=$(GS) $(CXXFLAGS) 
++CCFLAGS=-DDEFAULTGS=$(GS) $(CXXFLAGS)	\
++	-DPATH_DATADIR=\"$(datadir)\" -DPATH_PLUGINDIR=\"$(libdir)\"
+ 
+ # uncommment one of the following CCC lines for Un*x like systems
+ # For users of GNU g++
+@@ -338,11 +343,11 @@
+ 		$(INSTALL_DIR) $(bindir); \
+ 	fi                                    
+ 	$(INSTALL_PROGRAM) pstoedit $(bindir)
+-	if [ ! -d $(libdir) ] ; then \
+-		$(INSTALL_DIR) $(libdir); \
++	if [ ! -d $(datadir) ] ; then \
++		$(INSTALL_DIR) $(datadir); \
+ 	fi
+-	$(INSTALL_DATA) ../misc/mpost.fmp $(libdir)
+-	$(INSTALL_DATA) ../misc/latex2e.fmp $(libdir)
++	$(INSTALL_DATA) ../misc/mpost.fmp $(datadir)
++	$(INSTALL_DATA) ../misc/latex2e.fmp $(datadir)
+ 	if [ ! -d $(MANDIR) ] ; then \
+ 		$(INSTALL_DIR) $(MANDIR); \
+ 	fi
