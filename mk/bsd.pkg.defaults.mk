@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.164 2003/07/29 17:24:49 jmmv Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.165 2003/07/29 19:53:19 jmmv Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -602,6 +602,16 @@ ATERM_USE_GREEK?= NO
 # list.
 # Possible: category/pkg
 # Default: not defined
+
+CANNA_GROUP?=	daemon
+# Used in the canna-server-bin package to specify the server group.
+# Possible: any group name
+# Default: daemon
+
+CANNA_USER?=	daemon
+# Used in the canna-server-bin package to specify the server user.
+# Possible: any user name
+# Default: daemon
 
 #CDRECORD_CONF= ${PKG_SYSCONFDIR}/cdrecord.conf
 # The location of the cdrtools/cdrecord configuration file. The
