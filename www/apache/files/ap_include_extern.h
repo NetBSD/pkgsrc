@@ -1,4 +1,4 @@
-/* $NetBSD: ap_include_extern.h,v 1.1 1998/12/03 17:23:52 tv Exp $ */
+/* $NetBSD: ap_include_extern.h,v 1.2 1998/12/03 22:26:53 tv Exp $ */
 /* ====================================================================
  * Copyright (c) 1998 The Apache Group.  All rights reserved.
  *
@@ -70,9 +70,13 @@
 typedef int (*ap_include_extern_func)(FILE *, request_rec *, const char *);
 
 /* The const char * argument is the command word used to find this hook. */
-API_EXPORT(int) ap_register_include_extern(const char *, ap_include_extern_func);
+API_EXPORT(int) ap_include_register_extern(const char *, ap_include_extern_func);
 
 /* Formerly a static "get_tag()" in mod_include.c */
 API_EXPORT(char *) ap_include_get_tag(pool *, FILE *, char *, int, int);
+
+/* Formerly a static "parse_string()" in mod_include.c */
+API_EXPORT(void) ap_include_parse_string(request_rec *, const char *,
+					 char *, size_t, int);
 
 #endif
