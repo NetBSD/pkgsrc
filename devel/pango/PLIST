@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/07/03 01:29:39 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/08/23 11:47:39 dmcmahill Exp $
 bin/pango-querymodules
 etc/pango/pango.modules
 etc/pango/pangox.aliases
@@ -27,17 +27,17 @@ lib/libpango-1.0.a
 lib/libpango-1.0.la
 lib/libpango-1.0.so
 lib/libpango-1.0.so.0
-lib/libpango-1.0.so.0.3
+lib/libpango-1.0.so.0.4
 lib/libpangoft2-1.0.a
 lib/libpangoft2-1.0.la
 lib/libpangoft2-1.0.so
 lib/libpangoft2-1.0.so.0
-lib/libpangoft2-1.0.so.0.3
+lib/libpangoft2-1.0.so.0.4
 lib/libpangox-1.0.a
 lib/libpangox-1.0.la
 lib/libpangox-1.0.so
 lib/libpangox-1.0.so.0
-lib/libpangox-1.0.so.0.3
+lib/libpangox-1.0.so.0.4
 lib/pango/1.0.0/modules/pango-arabic-ft2.a
 lib/pango/1.0.0/modules/pango-arabic-ft2.la
 lib/pango/1.0.0/modules/pango-arabic-ft2.so
