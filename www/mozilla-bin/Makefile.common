@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2004/06/04 07:30:30 grant Exp $
+# $NetBSD: Makefile.common,v 1.19 2004/06/23 13:01:01 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -24,6 +24,7 @@ HOMEPAGE?=		http://www.mozilla.org/
 
 WRKSRC?=		${WRKDIR}/${MOZILLA}
 NO_CONFIGURE=		# defined
+USE_LANGUAGES=		# empty
 
 FILESDIR=		${.CURDIR}/../../www/mozilla-bin/files
 
