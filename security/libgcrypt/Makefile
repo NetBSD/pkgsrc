@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/10 00:13:24 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/14 17:21:52 jlam Exp $
 #
 
 DISTNAME=	libgcrypt-1.1.90
@@ -29,7 +29,9 @@ INFO_FILES=		gcrypt.info
 .if empty(MACHINE_PLATFORM:MNetBSD-*-i386) && \
     empty(MACHINE_PLATFORM:MNetBSD-*-alpha)
 CONFIGURE_ARGS+=	--disable-asm
-LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
+LIBTOOL_OVERRIDE+=	libtool
+.else
+LIBTOOL_OVERRIDE=	# empty
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
