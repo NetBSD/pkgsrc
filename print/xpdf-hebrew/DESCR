@@ -1,0 +1,10 @@
+If this package includes CMap files, they contain their own copyright
+notices and distribution conditions.  All other files in the package
+are Copyright 2002 Glyph & Cog, LLC, and are licensed under the GNU
+General Public License (GPL), version 2.
+
+This package provides support files needed to use the Xpdf tools with
+Hebrew PDF files.
+
+Contents:
+- ISO-8859-8 encoding
