@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.26 2003/10/08 09:11:33 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.27 2003/10/09 12:15:15 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -829,6 +829,7 @@ _BLNK_EMPTY_FILE?=		${BUILDLINK_DIR}/bin/.empty
 _BLNK_WRAP_ENV?=		${BUILDLINK_WRAPPER_ENV}
 _BLNK_WRAP_BUILDCMD=		${BUILDLINK_DIR}/bin/.buildcmd
 _BLNK_WRAP_QUOTEARG=		${BUILDLINK_DIR}/bin/.quotearg
+_BLNK_WRAP_BUFFER=		${BUILDLINK_DIR}/bin/.buffer
 _BLNK_WRAP_MARSHALL=		${BUILDLINK_DIR}/bin/.marshall
 _BLNK_WRAP_PRE_CACHE=		${BUILDLINK_DIR}/bin/.pre-cache
 _BLNK_WRAP_CACHE_ADD=		${BUILDLINK_DIR}/bin/.cache-add
@@ -857,6 +858,7 @@ _BLNK_WRAP_EXTRA_FLAGS.${_wrappee_}=		# empty
 _BLNK_WRAP_ENV.${_wrappee_}=			${_BLNK_WRAP_ENV}
 _BLNK_WRAP_BUILDCMD.${_wrappee_}=		${_BLNK_WRAP_BUILDCMD}
 _BLNK_WRAP_QUOTEARG.${_wrappee_}=		${_BLNK_WRAP_QUOTEARG}
+_BLNK_WRAP_BUFFER.${_wrappee_}=			${_BLNK_WRAP_BUFFER}
 _BLNK_WRAP_MARSHALL.${_wrappee_}=		${_BLNK_WRAP_MARSHALL}
 _BLNK_WRAP_PRIVATE_PRE_CACHE.${_wrappee_}=	${_BLNK_EMPTY_FILE}
 _BLNK_WRAP_PRIVATE_CACHE_ADD.${_wrappee_}=	${_BLNK_EMPTY_FILE}
@@ -993,6 +995,7 @@ _BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}=				\
 	-e "s|@_BLNK_WRAP_EXTRA_FLAGS@|${_BLNK_WRAP_EXTRA_FLAGS.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_BUILDCMD@|${_BLNK_WRAP_BUILDCMD.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_QUOTEARG@|${_BLNK_WRAP_QUOTEARG.${_wrappee_}:Q}|g" \
+	-e "s|@_BLNK_WRAP_BUFFER@|${_BLNK_WRAP_BUFFER.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_MARSHALL@|${_BLNK_WRAP_MARSHALL.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_PRIVATE_PRE_CACHE@|${_BLNK_WRAP_PRIVATE_PRE_CACHE.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_PRIVATE_CACHE_ADD@|${_BLNK_WRAP_PRIVATE_CACHE_ADD.${_wrappee_}:Q}|g" \
@@ -1013,6 +1016,7 @@ ${BUILDLINK_${_wrappee_}}:						\
 		${_BLNK_WRAPPER_SH.${_wrappee_}}			\
 		${_BLNK_WRAP_BUILDCMD.${_wrappee_}}			\
 		${_BLNK_WRAP_QUOTEARG.${_wrappee_}}			\
+		${_BLNK_WRAP_BUFFER.${_wrappee_}}			\
 		${_BLNK_WRAP_MARSHALL.${_wrappee_}}			\
 		${_BLNK_WRAP_PRIVATE_CACHE.${_wrappee_}}		\
 		${_BLNK_WRAP_CACHE.${_wrappee_}}			\
@@ -1123,6 +1127,13 @@ ${_BLNK_WRAP_BUILDCMD}: ${.CURDIR}/../../mk/buildlink3/buildcmd
 
 .if !target(${_BLNK_WRAP_QUOTEARG})
 ${_BLNK_WRAP_QUOTEARG}: ${.CURDIR}/../../mk/buildlink3/quotearg
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
+.endif
+
+.if !target(${_BLNK_WRAP_BUFFER})
+${_BLNK_WRAP_BUFFER}: ${.CURDIR}/../../mk/buildlink3/buffer
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
