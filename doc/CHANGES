@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5423 2004/04/02 16:09:37 jmmv Exp $
+$NetBSD: CHANGES,v 1.5424 2004/04/02 18:05:01 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1751,3 +1751,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Text-CSV-Hash to 0.18 [abs 2004-04-02]
 	Updated gdm to 2.6.0.0nb1 [jmmv 2004-04-02]
 	Updated gaim to 0.76 [jmmv 2004-04-02]
+	Updated pkg_comp to 1.18 [jmmv 2004-04-02]
