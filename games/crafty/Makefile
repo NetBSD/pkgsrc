@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/04/24 22:46:10 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2004/09/16 17:15:25 he Exp $
 
 DISTNAME=		crafty-18.15
 CATEGORIES=		games
@@ -13,7 +13,6 @@ COMMENT=		Chess engine
 
 USE_BUILDLINK3=		YES
 
-WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		${DISTNAME}
 CRAFTY_DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 CRAFTY_STARTPGN=	start.pgn
@@ -48,10 +47,10 @@ BOOKDIR=		${PREFIX}/lib/crafty
 TBDIR=			${PREFIX}/share/egtb
 DOCDIR=			${PREFIX}/share/doc/crafty
 
-CRAFTYRC=		${WRKDIR}/.craftyrc
+CRAFTYRC=		${WRKSRC}/.craftyrc
 
 post-extract:
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/${CRAFTY_STARTPGN} ${WRKDIR}
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/${CRAFTY_STARTPGN} ${WRKSRC}
 	${MV} ${WRKSRC}/Sparc.s ${WRKSRC}/Sparc.S
 
 post-patch:
@@ -70,7 +69,7 @@ post-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/crafty ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${BOOKDIR}
-	${INSTALL_DATA} ${WRKDIR}/books.bin ${BOOKDIR}
+	${INSTALL_DATA} ${WRKSRC}/books.bin ${BOOKDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	for file in ${CRAFTY_DOCFILES}; do \
 		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$${file} ${DOCDIR}; \
