@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2002/08/28 04:38:07 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/25 19:13:41 wiz Exp $
 
-DISTNAME=		autoconf-2.53
-PKGREVISION=		1
+DISTNAME=		autoconf-2.54
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=autoconf/}
 
