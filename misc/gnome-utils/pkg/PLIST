@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/07/10 18:44:03 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/11/09 21:09:44 mycroft Exp $
 bin/gcalc
 bin/gcharmap
 bin/gcolorsel
@@ -184,6 +184,36 @@ share/gcolorsel/glade/view-color-grid-properties.glade.h
 share/gcolorsel/glade/view-color-list-properties.glade
 share/gcolorsel/glade/view-color-list-properties.glade.h
 share/idl/gsu.idl
+${LOCALEBASE}/locale/ca/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/cs/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/da/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/de/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/el/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/en_GB/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/es/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/et/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/fi/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/fr/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/ga/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/gl/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/hu/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/it/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/ja/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/ko/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/lt/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/nl/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/no/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/pl/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/pt/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/pt_BR/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/ro/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/ru/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/sv/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/tr/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/uk/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/wa/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/zh_TW.Big5/LC_MESSAGES/gnome-utils.mo
+${LOCALEBASE}/locale/zh_CN.GB2312/LC_MESSAGES/gnome-utils.mo
 share/pixmaps/logview/logview.xpm
 share/pixmaps/gdict.png
 share/pixmaps/gnome-fontsel.png
