@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/28 19:50:18 kim Exp $
+# $NetBSD: Makefile,v 1.2 2000/02/22 17:38:07 dmcmahill Exp $
 #
 
 DISTNAME=	irrd-1.5-beta-Sept-24-1999
@@ -22,6 +22,10 @@ DEPENDS+=	pgp-2.*:../../security/pgp2
 # IRRd will be built with pgpv or pgp if found!
 #CONFIGURE_ARGS+=--without-pgp
 .endif
+.endif
+
+.ifndef USE_INET6
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 WRKSRC=		${WRKDIR}/irrd-1.5
