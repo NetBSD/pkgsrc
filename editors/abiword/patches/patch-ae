@@ -1,0 +1,28 @@
+$NetBSD: patch-ae,v 1.14 2004/12/28 01:56:41 reed Exp $
+
+--- src/af/xap/unix/xap_UnixEncodingManager.cpp.orig	Fri Dec 17 16:05:43 2004
++++ src/af/xap/unix/xap_UnixEncodingManager.cpp	Fri Dec 17 16:23:13 2004
+@@ -548,7 +548,7 @@
+ 					MYLANG += LanguageISOName;
+ 					MYLANG += "_";
+ 					MYLANG += LanguageISOTerritory;
+-					putenv(MYLANG.utf8_str());
++					putenv(const_cast<char*>MYLANG.utf8_str());
+ #else
+ 					UT_UTF8String MYLANG (LanguageISOName);
+ 					MYLANG += "_";
+@@ -571,7 +571,7 @@
+ #if defined(SETENV_MISSING)
+ 					MYLANG = "LANG=";
+ 					MYLANG += OLDLANG;
+-					putenv(MYLANG.utf8_str());
++					putenv(const_cast<char*>MYLANG.utf8_str());
+ #else
+ 					setenv("LANG", OLDLANG.utf8_str(), 1);
+ #endif			
+@@ -584,4 +584,4 @@
+ 		}
+ 	}
+ 	describe();
+-}
++};
