@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1194 2003/06/10 06:01:12 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1195 2003/06/12 15:27:08 jschauma Exp $
 #
 # This file is in the public domain.
 #
@@ -79,8 +79,10 @@ PLIST_SUBST+=          IMAKE_MAN_SOURCE_PATH=${IMAKE_MAN_SOURCE_PATH}  \
 USE_X11?=		implied
 .endif
 
+# IRIX *always* needs xpkgwedge
 .if defined(USE_X11BASE)
-.  if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
+.  if ${OPSYS} == "IRIX" ||						\
+      exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) ||		\
       exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
 BUILD_DEPENDS+=		xpkgwedge>=1.5:../../pkgtools/xpkgwedge
 BUILDLINK_X11PKG_DIR=	${LOCALBASE}

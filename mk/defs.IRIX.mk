@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.25 2003/04/15 14:07:54 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.26 2003/06/12 15:27:09 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -36,10 +36,13 @@ GZCAT?=		${LOCALBASE}/bin/zcat
 GZIP?=		-9
 GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
 .endif
-LDCONFIG?=	/usr/bin/true
 HEAD?=		/usr/bsd/head
 HOSTNAME_CMD?=	/usr/bsd/hostname
 ID?=		/usr/bin/id
+IMAKE?=		/usr/bin/X11/imake ${IMAKEOPTS}
+IMAKEOPTS+=	-DMakeCmd=${PREFIX}/bin/bmake -DProjectRoot=${X11BASE}
+IMAKEOPTS+=	-DManUsr=${PREFIX}
+LDCONFIG?=	/usr/bin/true
 LN?=		/sbin/ln
 LS?=		/sbin/ls
 M4?=		/usr/bin/m4
@@ -93,15 +96,14 @@ ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 USERADD?=		${FALSE}
 
 # imake installs manpages in weird places
-# XXX: assume NetBSD defaults until somebody determines correct values
-IMAKE_MAN_SOURCE_PATH=	man/cat
+IMAKE_MAN_SOURCE_PATH=	catman/u_man/cat
 IMAKE_MAN_SUFFIX=	1
 IMAKE_LIBMAN_SUFFIX=	3
 IMAKE_FILEMAN_SUFFIX=	5
-IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
-IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
-IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
-IMAKE_MANNEWSUFFIX=	0
+IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1/X11
+IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3/X11
+IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5/X11
+IMAKE_MANNEWSUFFIX=	z
 
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}		# program which gets invoked by imake
@@ -129,6 +131,10 @@ _USE_RPATH=		yes		# add rpath to LDFLAGS
 # IRIX tools for the time being.
 _OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,-all
 _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,-notall
+
+# IRIX has /usr/include/iconv.h, but it's not GNU iconv, so mark it
+# incompatible.
+_INCOMPAT_ICONV=       IRIX-*-*
 
 .if !defined(DEBUG_FLAGS)
 _STRIPFLAG_CC?=		-s	# cc(1) option to strip
