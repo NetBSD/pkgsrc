@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.21 1999/11/05 15:37:53 jwise Exp $
+# $NetBSD: Makefile,v 1.22 1999/11/14 22:51:18 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
-DISTNAME=		lyx-1.0.3
+DISTNAME=		lyx-1.1.2
 CATEGORIES=		print
-MASTER_SITES=		ftp://ftp.via.ecp.fr/pub/lyx/stable/ \
-			ftp://la1ad.uio.no/pub/lyx/
+MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/
 
 MAINTAINER=		frueauf@netbsd.org
-HOMEPAGE=		http://la1ad.uio.no/lyx/
+HOMEPAGE=		http://www.lyx.org/
 
 DEPENDS=		ispell-3.1.20:../../textproc/ispell \
-			teTeX-1.0.6:../../print/teTeX \
+			teTeX-*:../../print/teTeX \
 			xpm-3.4k:../../graphics/xpm \
 			xforms-0.88:../../x11/xforms
 
