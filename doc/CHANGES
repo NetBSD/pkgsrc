@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5328 2004/03/28 22:24:50 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.5329 2004/03/28 23:24:06 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1557,3 +1557,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated fam to 2.7.0 [minskim 2004-03-28]
 	Updated XFree86 to 4.4.0 [xtraeme 2004-03-28]
 	Updated latex-mk to 1.2 [dmcmahill 2004-03-28]
+	Added py-textile-2.0 [minskim 2004-03-28]
