@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2532 2004/11/27 17:56:40 wiz Exp $
+$NetBSD: TODO,v 1.2533 2004/11/27 17:58:32 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -667,7 +667,6 @@ Suggested package updates
 	o ksi-3.4.2
 	o kth-krb4-1.2.2
 	o lablgtk-1.2.7
-	o larswm-7.5.3
 	o latd-1.21
 	o latex2rtf-1.9.16a
 	o lavaps-2.6
