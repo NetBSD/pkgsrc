@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.12 2003/05/23 09:26:59 wiz Exp $
+$NetBSD: patch-aa,v 1.13 2004/04/12 14:41:03 jschauma Exp $
 
---- configure.orig	Thu Nov 15 18:21:05 2001
-+++ configure
-@@ -59,7 +59,7 @@ LIBGL=auto				# auto-enable build of SGI
+--- configure.orig	Mon Apr 12 09:58:40 2004
++++ configure	Mon Apr 12 10:01:34 2004
+@@ -59,7 +59,7 @@
  LIBIMAGE=auto				# auto-enable build of SGI -limage apps
  : ${CC=}				# name of C compiler to use
  : ${CCOMPILER=}				# full pathname of C compiler
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.12 2003/05/23 09:26:59 wiz Exp $
  : ${ENVOPTS=}				# CC opts for ANSI C compilation
  : ${MAKE=make}				# make to use
  
-@@ -487,7 +487,7 @@ EOF
+@@ -488,7 +488,7 @@
  
  checkCompiler()
  {
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.12 2003/05/23 09:26:59 wiz Exp $
      if isGNU $compiler; then
  	ISGCC=yes
      else
-@@ -513,7 +513,7 @@ checkCompiler()
+@@ -514,7 +514,7 @@
      $RM dummy dummy.o
      capture $compiler -o dummy ${C_ANSI} dummy.c && {
  	CC=$compiler;
@@ -29,10 +29,11 @@ $NetBSD: patch-aa,v 1.12 2003/05/23 09:26:59 wiz Exp $
  	test -z "${ENVOPTS-}"   && ENVOPTS="${C_ANSI-}"
  	return 0
      }
-@@ -1705,6 +1705,7 @@ relativize()
+@@ -1743,6 +1743,8 @@
  	    -[LR]/*)	echo "$i" ;;
  	    -L*)	echo "$i" | sed 's;^-L;-L../;' ;;
  	    -R*)	echo "$i" | sed 's;^-R;-R../;' ;;
++	    -rpath*)	echo "$i" ;;
 +	    -W*)	echo "$i" ;;
  	    *)		echo "../$i" ;;
  	    esac
