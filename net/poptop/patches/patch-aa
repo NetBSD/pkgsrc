@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/10/08 04:32:23 dbj Exp $
+
+--- configure.in.orig	Sat Sep 25 20:13:57 1999
++++ configure.in	Sat Sep 25 20:46:27 1999
+@@ -144,15 +144,18 @@
+ 	[ AC_DEFINE(PNS_MODE)
+ 	  PNS_MODE = yes ])
+ 
+-if test "$BSDUSER_PPP" = "yes"; then
+-  AC_DEFINE(PPP_BINARY, "/usr/sbin/ppp")
+-else
+-  if test "$SLIRP" = "yes"; then
+-    AC_DEFINE(PPP_BINARY, "/bin/slirp")
+-  else
+-    AC_DEFINE(PPP_BINARY, "/usr/sbin/pppd")
+-  fi
+-fi
++AC_ARG_WITH(pppd,
++	[  --with-pppd=[ARG]       Path to pppd binary.],
++	[ AC_DEFINE_UNQUOTED(PPP_BINARY,"$withval")],
++	[ if test "$BSDUSER_PPP" = "yes"; then
++	    AC_DEFINE(PPP_BINARY, "/usr/sbin/ppp")
++	  else
++	    if test "$SLIRP" = "yes"; then
++	      AC_DEFINE(PPP_BINARY, "/bin/slirp")
++	    else
++	      AC_DEFINE(PPP_BINARY, "/usr/sbin/pppd")
++	    fi
++	  fi])
+ 
+ if test "$SLIRP" = "yes"; then
+   if test "$PPPD_IP_ALLOC" = "yes"; then
