@@ -1,16 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 1998/02/02 08:59:44 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/03/16 07:44:00 mycroft Exp $
 bin/toast
-@exec ln -fs %f %B/untoast
-@exec ln -fs %f %B/untoastt
-man/man1/toast.1.gz
-@exec ln -fs %f %B/untoast.1
-@exec ln -fs %f %B/tcat.1
+bin/tcat
+bin/untoast
+man/man1/toast.1
 man/man3/gsm.3.gz
 man/man3/gsm_explode.3.gz
 man/man3/gsm_option.3.gz
 man/man3/gsm_print.3.gz
+lib/libgsm.a
 lib/libgsm.so.1.0.10
 @exec /sbin/ldconfig || /usr/bin/true
 @unexec /sbin/ldconfig || /usr/bin/true
-lib/libgsm.a
 include/gsm.h

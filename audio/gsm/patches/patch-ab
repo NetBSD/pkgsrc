@@ -1,5 +1,5 @@
---- Makefile.orig	Tue Jul  2 15:36:06 1996
-+++ Makefile	Fri Nov 14 14:03:28 1997
+--- Makefile.orig	Tue Jul  2 10:36:06 1996
++++ Makefile	Mon Mar 16 02:32:43 1998
 @@ -7,11 +7,13 @@
  SASR	= -DSASR
  ######### Define SASR if >> is a signed arithmetic shift (-1 >> 1 == -1)
@@ -27,7 +27,7 @@
  
  LD 		= $(CC)
  
-@@ -59,11 +61,13 @@
+@@ -59,6 +61,7 @@
  ######### Includes needed by $(CC)
  
  # LDINC	= -L/usr/gnu/lib/gcc-2.1/gcc-lib/sparc-sun-sunos4.1.2/2.1
@@ -35,13 +35,7 @@
  ######### Library paths needed by $(LD)
  
  # LDLIB	= -lgcc
- ######### Additional libraries needed by $(LD)
- 
-+PREFIX= /usr/local
- 
- # Where do you want to install libraries, binaries, a header file
- # and the manual pages?
-@@ -71,7 +75,7 @@
+@@ -71,7 +74,7 @@
  # Leave INSTALL_ROOT empty (or just don't execute "make install") to
  # not install gsm and toast outside of this directory.
  
@@ -50,7 +44,7 @@
  
  # Where do you want to install the gsm library, header file, and manpages?
  #
-@@ -80,7 +84,7 @@
+@@ -80,7 +83,7 @@
  
  GSM_INSTALL_ROOT = $(INSTALL_ROOT)
  GSM_INSTALL_LIB = $(GSM_INSTALL_ROOT)/lib
@@ -59,7 +53,16 @@
  GSM_INSTALL_MAN = $(GSM_INSTALL_ROOT)/man/man3
  
  
-@@ -129,13 +133,14 @@
+@@ -96,7 +99,7 @@
+ #  Other tools
+ 
+ SHELL		= /bin/sh
+-LN		= ln
++LN		= ln -s
+ BASENAME 	= basename
+ AR		= ar
+ ARFLAGS		= cr
+@@ -129,17 +132,19 @@
  # DEBUG	= -DNDEBUG
  ######### Remove -DNDEBUG to enable assertions.
  
@@ -75,6 +78,11 @@
  
  # Targets
  
+ LIBGSM	= $(LIB)/libgsm.a
++LIBGSM_SHARED	= $(LIB)/libgsm.so.1.0.10
+ 
+ TOAST	= $(BIN)/toast
+ UNTOAST	= $(BIN)/untoast
 @@ -258,6 +263,7 @@
  
  GSM_INSTALL_TARGETS =	\
@@ -93,21 +101,19 @@
  # Target rules
  
 -all:		$(LIBGSM) $(TOAST) $(TCAT) $(UNTOAST)
-+all:            $(LIBGSM) $(LIB)/libgsm.so.1.0.10 $(TOAST) $(TCAT) $(UNTOAST)
++all:		$(LIBGSM) $(LIBGSM_SHARED) $(TOAST) $(TCAT) $(UNTOAST)
  		@-echo $(ROOT): Done.
  
  tst:		$(TST)/lin2cod $(TST)/cod2lin $(TOAST) $(TST)/test-result
-@@ -299,6 +308,9 @@
- 
- # The basic API: libgsm
- 
-+$(LIB)/libgsm.so.1.0.10: $(LIB) $(GSM_OBJECTS:S/o$/so/g)
-+		ld -Bshareable -o $@ $(GSM_OBJECTS:S/o$/so/g)
-+
- $(LIBGSM):	$(LIB) $(GSM_OBJECTS)
- 		-rm $(RMFLAGS) $(LIBGSM)
+@@ -304,11 +313,15 @@
  		$(AR) $(ARFLAGS) $(LIBGSM) $(GSM_OBJECTS)
-@@ -308,7 +320,7 @@
+ 		$(RANLIB) $(LIBGSM)
+ 
++$(LIBGSM_SHARED):	$(LIB) $(GSM_OBJECTS:S/o$/so/g)
++		-rm $(RMFLAGS) $(LIBGSM_SHARED)
++		ld -Bshareable -o $(LIBGSM_SHARED) $(GSM_OBJECTS:S/o$/so/g)
++
+ 
  # Toast, Untoast and Tcat -- the compress-like frontends to gsm.
  
  $(TOAST):	$(BIN) $(TOAST_OBJECTS) $(LIBGSM)
@@ -116,42 +122,66 @@
  
  $(UNTOAST):	$(BIN) $(TOAST)
  		-rm $(RMFLAGS) $(UNTOAST)
-@@ -331,14 +343,19 @@
- # Installation
+@@ -332,12 +345,14 @@
  
  gsminstall:
--		-if [ x"$(GSM_INSTALL_ROOT)" != x ] ; then	\
+ 		-if [ x"$(GSM_INSTALL_ROOT)" != x ] ; then	\
 -			make $(GSM_INSTALL_TARGETS) ;	\
--		fi
-+		${INSTALL} -c -m 0644 lib/libgsm.a ${GSM_INSTALL_LIB}
-+		ranlib ${GSM_INSTALL_LIB}/libgsm.a
-+		${INSTALL} -c -m 0644 lib/libgsm.so.1.0.10 ${GSM_INSTALL_LIB}
-+		${INSTALL} -c -m 0444 inc/gsm.h ${GSM_INSTALL_INC}
-+		-for f in gsm.3 gsm_explode.3 gsm_option.3 gsm_print.3; do \
-+			${INSTALL} -c -m 0644 man/$$f ${GSM_INSTALL_MAN}; \
-+		done
++			make INSTALL_ROOT=$(INSTALL_ROOT)	\
++			    $(GSM_INSTALL_TARGETS);		\
+ 		fi
  
  toastinstall:
--		-if [ x"$(TOAST_INSTALL_ROOT)" != x ]; then	\
+ 		-if [ x"$(TOAST_INSTALL_ROOT)" != x ]; then	\
 -			make $(TOAST_INSTALL_TARGETS);	\
--		fi
-+		-for f in toast tcat untoast; do \
-+			${INSTALL} -c -m 0755 bin/$$f ${TOAST_INSTALL_BIN}; \
-+		done
-+		${INSTALL} -c -m 0644 man/toast.1 ${TOAST_INSTALL_MAN}
++			make INSTALL_ROOT=$(INSTALL_ROOT)	\
++			    $(TOAST_INSTALL_TARGETS);		\
+ 		fi
  
  gsmuninstall:
- 		-if [ x"$(GSM_INSTALL_ROOT)" != x ] ; then	\
-@@ -394,6 +411,12 @@
- 		chmod 444 $@
+@@ -357,11 +372,11 @@
  
- $(GSM_INSTALL_LIB)/libgsm.a:	$(LIBGSM)
-+		-rm $@
-+		cp $? $@
-+		chmod 444 $@
-+		ranlib $@
-+
-+$(GSM_INSTALL_LIB)/libgsm.so.1.0.10:    $(LIB)/libgsm.so.1.0.10
+ $(TOAST_INSTALL_BIN)/untoast:	$(TOAST_INSTALL_BIN)/toast
+ 		-rm $@
+-		ln $? $@
++		cd $(TOAST_INSTALL_BIN) && $(LN) toast $@
+ 
+ $(TOAST_INSTALL_BIN)/tcat:	$(TOAST_INSTALL_BIN)/toast
+ 		-rm $@
+-		ln $? $@
++		cd $(TOAST_INSTALL_BIN) && $(LN) toast $@
+ 
+ $(TOAST_INSTALL_MAN)/toast.1:	$(MAN)/toast.1
+ 		-rm $@
+@@ -397,6 +412,12 @@
  		-rm $@
  		cp $? $@
  		chmod 444 $@
++		ranlib $@
++
++$(GSM_INSTALL_LIB)/libgsm.so.1.0.10:    $(LIBGSM_SHARED)
++		-rm $@
++		cp $? $@
++		chmod 444 $@
+ 
+ 
+ # Distribution
+@@ -416,7 +437,7 @@
+ 		@-echo uninstall: Done.
+ 
+ semi-clean:
+-		-rm $(RMFLAGS)  */*.o			\
++		-rm $(RMFLAGS)  */*.o */*.so		\
+ 			$(TST)/lin2cod $(TST)/lin2txt	\
+ 			$(TST)/cod2lin $(TST)/cod2txt	\
+ 			$(TST)/gsm2cod 			\
+@@ -425,7 +446,8 @@
+ 			-print | xargs rm $(RMFLAGS)
+ 
+ clean:	semi-clean
+-		-rm $(RMFLAGS) $(LIBGSM) $(ADDTST)/add		\
++		-rm $(RMFLAGS) $(LIBGSM) $(LIBGSM_SHARED) \
++			$(ADDTST)/add			\
+ 			$(TOAST) $(TCAT) $(UNTOAST)	\
+ 			$(ROOT)/gsm-1.0.tar.Z
+ 
