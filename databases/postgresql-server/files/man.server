@@ -1,4 +1,0 @@
-# $NetBSD: man.server,v 1.1.1.1 2001/05/14 14:50:26 jlam Exp $
-#
-man1/postgres.1
-man1/postmaster.1
