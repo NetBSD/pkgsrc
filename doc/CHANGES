@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3905 2003/12/03 02:20:44 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3906 2003/12/03 02:28:54 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4725,3 +4725,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated amaya to 8.2 [xtraeme 2003-12-03]
 	Updated gnome-icon-theme to 1.0.9 [xtraeme 2003-12-03]
 	Updated libIDL to 0.8.2 [xtraeme 2003-12-03]
+	Updated intltool to 0.27.2 [xtraeme 2003-12-03]
