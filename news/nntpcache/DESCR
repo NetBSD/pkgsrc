@@ -1,18 +1,18 @@
 NNTPCache is Squid for news (plus lots more).
 
-NNTPCache (very efficiently, using shared memory, COW, mmaps, etc)
-executes on the localhost pretending to be an NNRP news reading
-server. In fact, what it does is pass certain NNTP commands through
-to real (remote and possibly local) news-servers based on various
-pattern matching rules. nntpcache then takes the output from those
-servers and caches & indexes it in funky ways (much specific case
-magic goes into this).  The next time such information is asked
-for, or other information which can be logically inferred from the
-previously collated information, it is sent directly from the cache,
-without consulting the remote servers. NNTPCache can transparently
-merge multiple servers, (permiting local newsgroups with remote
-NNTP feeds), filter articles, xovers, and headers based on weighted
-regular expressions, and has built in NoCem/PGP (anti-spam) support
-(see www.nntpcache.org or www.nocem.org for details). NNTPcache
-also supports a wide variety of authentication types, including
-LDAP, /etc/{passwd,shadow}, generic unixpipe and RADIUS.
+NNTPCache can take reader loads off major news-servers. Besides its
+super efficient execution, a single or multi-layer concentric ring of
+NNTPCaches can be arranged about one or more central news-servers on a
+DNS round-robin basis. Such a wall of NNTPCaches provides drop-in
+scalability, redundancy, authentication & security for even the
+largest news-server heart. NNTPCache can transparently stitch multiple
+split news-servers (e.g, one news-server carrying alt.binaries.*,
+another carrying alt.*, and another carrying everything else) back
+together, allowing news-server administrators to spread their news
+feeds over multiple machines, or to out-source selected components.
+
+NNTPCache minimises the effects of news-server down time, by continuing
+to provide cached news-data in the face of news-server fall-over.
+
+NNTPCache natively supports a variety of AUTHINFO methods, including
+/etc/passwd, generic unix pipes, LDAP and radius.
