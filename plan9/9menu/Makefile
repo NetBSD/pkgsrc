@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1997/10/09 14:35:17 agc Exp $
+# $NetBSD: Makefile,v 1.3 1997/10/17 13:06:49 hubertf Exp $
 # New ports collection makefile for:    9menu
 # Version required:     1.5
 # Date created:         Sun Aug 13 12:36:14 CDT 1995
@@ -13,6 +13,14 @@ MASTER_SITES=	ftp://ftp.mathcs.emory.edu/pub/arnold/
 EXTRACT_SUFX=	.shar.gz
 
 MAINTAINER=	erich@FreeBSD.org
+
+OPSYS!=		uname -s
+
+.if (${OPSYS} == "NetBSD")
+MANCOMPRESSED=	yes
+.endif
+
+MAN1=		9menu.1
 
 NO_WRKSUBDIR=	yes
 EXTRACT_CMD=		zcat
