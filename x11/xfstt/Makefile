@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2002/09/27 14:47:06 grant Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/27 17:03:21 grant Exp $
 #
 
 DISTNAME=		xfstt_1.3
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		x11 net
+PKGREVISION=		1
 MASTER_SITES=		http://download.berlios.de/xfstt/
 
 MAINTAINER=		packages@netbsd.org
@@ -25,7 +26,7 @@ post-patch:
 	for i in INSTALL perftest.cpp xfstt.cpp xfstt.1x; \
 	do \
 	    ${MV} $$i $$i.bak ; \
-	    ${SED} -e 's;@X11BASE@;${X11BASE};' < $$i.bak > $$i ; \
+	    ${SED} -e 's;@PREFIX@;${PREFIX};' < $$i.bak > $$i ; \
 	done ; \
 	)
 
