@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.1 1999/02/25 17:08:34 sommerfe Exp $
+$NetBSD: patch-ba,v 1.2 1999/02/25 18:00:29 sommerfe Exp $
 
---- mh-comp.el.~1~	Thu Feb 25 01:31:23 1999
-+++ mh-comp.el	Thu Feb 25 11:45:24 1999
+--- lisp/mail/mh-comp.el-	Wed Jun 24 05:38:00 1998
++++ lisp/mail/mh-comp.el	Thu Feb 25 12:53:40 1999
 @@ -147,6 +147,13 @@
  is searched for first in the user's MH directory, then in the
  system MH lib directory.")
@@ -34,44 +34,58 @@ $NetBSD: patch-ba,v 1.1 1999/02/25 17:08:34 sommerfe Exp $
  
  
  (defun mh-edit-again (msg)
-@@ -407,25 +414,32 @@
+@@ -407,27 +414,35 @@
    (interactive (list (mh-get-msg-num t) current-prefix-arg))
    (let ((minibuffer-help-form
  	 "from => Sender only\nto => Sender and primary recipients\ncc or all => Sender and all recipients"))
 -    (let ((reply-to (or mh-reply-default-reply-to
-+    (let* ((reply-to (or mh-reply-default-reply-to
- 			(completing-read "Reply to whom: "
- 					 '(("from") ("to") ("cc") ("all"))
- 					 nil
- 					 t)))
+-			(completing-read "Reply to whom: "
+-					 '(("from") ("to") ("cc") ("all"))
+-					 nil
+-					 t)))
 -	  (folder mh-current-folder)
 -	  (show-buffer mh-show-buffer)
 -	  (config (current-window-configuration)))
++    (let* ((reply-to (or mh-reply-default-reply-to
++			 (completing-read "Reply to whom: "
++					  '(("from") ("to") ("cc") ("all"))
++					  nil
++					  t)))
 +	   (folder mh-current-folder)
 +	   (show-buffer mh-show-buffer)
 +	   (config (current-window-configuration))
-+	   (group-reply (or (equal reply-to "cc") (equal reply-to "all")))
-+	   (form-file (cond ((and mh-nmh-p group-reply
-+				  (stringp mh-repl-group-formfile))
-+			     mh-repl-group-formfile)
-+			    ((stringp mh-repl-formfile) mh-repl-formfile)
-+			    (t nil))))
++ 	   (group-reply (or (equal reply-to "cc") (equal reply-to "all")))
++	   ;; mh-repl*formfile must be strings, but we're paranoid
++ 	   (form-file (cond ((and mh-nmh-p group-reply
++ 				  (stringp mh-repl-group-formfile))
++ 			     mh-repl-group-formfile)
++ 			    ((stringp mh-repl-formfile) mh-repl-formfile)
++ 			    (t nil))))
        (message "Composing a reply...")
        (mh-exec-cmd "repl" "-build" "-noquery" "-nodraftfolder"
 -	     (if (stringp mh-repl-formfile) ;must be string, but we're paranoid
 -		 (list "-form" mh-repl-formfile))
-+	     (if form-file
-+		 (list "-form" form-file))
- 	     mh-current-folder message
- 	     (cond ((or (equal reply-to "from") (equal reply-to ""))
- 		    '("-nocc" "all"))
- 		   ((equal reply-to "to")
- 		    '("-cc" "to"))
+-	     mh-current-folder message
+-	     (cond ((or (equal reply-to "from") (equal reply-to ""))
+-		    '("-nocc" "all"))
+-		   ((equal reply-to "to")
+-		    '("-cc" "to"))
 -		   ((or (equal reply-to "cc") (equal reply-to "all"))
--		    '("-group" "-cc" "all" "-nocc" "me")))
-+		   (group-reply (if mh-nmh-p
-+				    '("-group" "-nocc" "me")
-+				  '("-cc" "all" "-nocc" "me"))))
- 	     (if includep
- 		 '("-filter" "mhl.reply")))
+-		    '("-cc" "all" "-nocc" "me")))
+-	     (if includep
+-		 '("-filter" "mhl.reply")))
++		   (if form-file
++		       (list "-form" form-file))
++		   mh-current-folder message
++		   (cond ((or (equal reply-to "from") (equal reply-to ""))
++			  '("-nocc" "all"))
++			 ((equal reply-to "to")
++			  '("-cc" "to"))
++			 (group-reply (if mh-nmh-p
++					  '("-group" "-nocc" "me")
++					'("-cc" "all" "-nocc" "me"))))
++		   (if includep
++		       '("-filter" "mhl.reply")))
        (let ((draft (mh-read-draft "reply"
+ 				  (expand-file-name "reply" mh-user-path)
+ 				  t)))
