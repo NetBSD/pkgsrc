@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/30 04:30:20 grant Exp $
+$NetBSD: distinfo,v 1.2 2004/12/05 18:49:54 he Exp $
 
-SHA1 (Devel-Profile-1.03.tar.gz) = d8b7dcea6638eb2dcc923546fd17477ca65098d9
-Size (Devel-Profile-1.03.tar.gz) = 6713 bytes
+SHA1 (Devel-Profile-1.04.tar.gz) = 4db3de02f637856be72a88a7d61d9b793dce2267
+Size (Devel-Profile-1.04.tar.gz) = 6717 bytes
