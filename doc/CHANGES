@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3883 2003/12/01 00:40:01 heinz Exp $
+$NetBSD: CHANGES,v 1.3884 2003/12/01 04:00:36 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4691,7 +4691,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dx to 4.2.0nb2 [jschauma 2003-11-30]
 	Updated g3d to 0.0.2nb3 [jschauma 2003-11-30]
 	Updated geomview to 1.8.1nb3 [jschauma 2003-11-30]
-	Updated gtkgltext to 0.7.1nb2 [jschauma 2003-11-30]
+	Updated gtkglext to 0.7.1nb2 [jschauma 2003-11-30]
 	Updated hitchhiker to 0.6nb4 [jschauma 2003-11-30]
 	Updated xtraceroute to 0.8.14nb4 [jschauma 2003-11-30]
 	Updated fltk to 1.0.11nb3 [jschauma 2003-11-30]
