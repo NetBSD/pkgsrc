@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST-md.shared,v 1.1.1.1 1999/12/23 13:15:12 rh Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Pg/Pg.so
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Pg/Pg.bs
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Pg
