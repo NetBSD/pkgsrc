@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2002/06/22 15:55:24 grant Exp $
+$NetBSD: patch-ae,v 1.4 2004/02/22 03:13:07 jlam Exp $
 
---- imapd-ssl.rc.in.orig	Fri Mar 16 04:36:47 2001
-+++ imapd-ssl.rc.in	Sat Jun 22 16:58:09 2002
-@@ -21,13 +21,8 @@
+--- imapd-ssl.rc.in.orig	Thu Nov 27 13:07:33 2003
++++ imapd-ssl.rc.in
+@@ -34,18 +34,13 @@ start)
  		LIBAUTHMODULES="$LIBAUTHMODULES @libexecdir@/authlib/$f"
  	done
  
@@ -11,13 +11,18 @@ $NetBSD: patch-ae,v 1.3 2002/06/22 15:55:24 grant Exp $
 -		@SETENV@ - ${libexecdir}/authlib/authdaemond start
 -	fi
 -
- 	ulimit -d $IMAP_ULIMITD
--	@SETENV@ - @SHELL@ -c " . @sysconfdir@/imapd ; \
-+	@SETENV@ -i @SHELL@ -c " . @sysconfdir@/imapd ; \
- 		. @sysconfdir@/imapd-ssl ; \
- 		IMAP_TLS=1; export IMAP_TLS; \
- 		`sed -n '/^#/d;/=/p' <@sysconfdir@/imapd | \
-@@ -45,10 +40,6 @@
+ 	if test "$TLS_CACHEFILE" != ""
+ 	then
+ 		rm -f $TLS_CACHEFILE
+ 	fi
+ 
+ 	@ULIMIT@ $IMAP_ULIMITD
+-	@SETENV@ - @SHELL@ -c " set -a ;
++	@SETENV@ -i @SHELL@ -c " set -a ;
+ 		prefix=@prefix@ ;
+ 		exec_prefix=@exec_prefix@ ;
+ 		bindir=@bindir@ ;
+@@ -64,10 +59,6 @@ start)
  	;;
  stop)
  	@libexecdir@/couriertcpd -pid=$SSLPIDFILE -stop

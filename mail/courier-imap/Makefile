@@ -1,34 +1,36 @@
-# $NetBSD: Makefile,v 1.19 2003/11/12 03:39:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/22 03:13:07 jlam Exp $
 
-DISTNAME=	courier-imap-1.4.2
-PKGREVISION=	2
+DISTNAME=	courier-imap-2.2.1
 COMMENT=	IMAP server for access to Maildir-style mailboxes
 HOMEPAGE=	http://www.inter7.com/courierimap/
 
-DEPENDS+=	courier-auth>=0.37.1:../../mail/courier-auth
-DEPENDS+=	courier-maildirmake>=0.37.1nb1:../../mail/courier-maildirmake
+DEPENDS+=	courier-auth>=${BASE_VERS}:../../mail/courier-auth
+DEPENDS+=	courier-maildirmake>=${BASE_VERS}:../../mail/courier-maildirmake
 
+USE_BUILDLINK3=		yes
+USE_LANGUAGES=		c c++
 USE_PERL5=		yes
 REPLACE_PERL=		sysconftool
+
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL=	${.CURDIR}/../courier-auth/INSTALL
 
 .include "../../mail/courier-auth/Makefile.common"
 
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--with-waitfunc=wait3
-.endif
-
-CONFIGURE_ENV+=		OPENSSL=${BUILDLINK_PREFIX.openssl}/bin/openssl
+CONFIGURE_ENV+=		OPENSSL=${SSLBASE}/bin/openssl
 
 .if defined(_STRIPFLAG_INSTALL) && !empty(_STRIPFLAG_INSTALL:M-s)
 INSTALL_TARGET=         install-strip
 .endif
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 SYSCONFTOOL=		${PREFIX}/sbin/imapd.sysconftool
 GEN_FILES=		imapd imapd-ssl pop3d pop3d-ssl
 SSLCNF_FILES=		imapd.cnf pop3d.cnf
-RCD_SCRIPTS=		courierimap courierimaps courierpop courierpops
+FILES_SUBST+=		SYSCONFTOOL=${SYSCONFTOOL:Q}
+FILES_SUBST+=		SSLCERTS=${SSLCERTS}
+FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
 
 CONF_FILES_PERMS=	# empty
 .for FILE in ${GEN_FILES}
@@ -39,11 +41,9 @@ CONF_FILES_PERMS+=	${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}	\
 CONF_FILES_PERMS+=	${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}	\
 			${ROOT_USER} ${ROOT_GROUP} 0600
 .endfor
+RCD_SCRIPTS=		courierimap courierimaps courierpop courierpops
 
-INSTALL_EXTRA_TMPL=	${.CURDIR}/../../mail/courier-auth/INSTALL
-FILES_SUBST+=		SYSCONFTOOL=${SYSCONFTOOL:Q}
-FILES_SUBST+=		SSLCERTS=${SSLCERTS}
-FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
+.include "../../security/openssl/buildlink3.mk"
 
 pre-configure:
 	cd ${WRKSRC}; for file in					\
@@ -68,11 +68,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${SYSCONFTOOL}
-	${INSTALL_DATA} ${WRKSRC}/imap/BUGS				\
-		${DOCDIR}/BUGS.imap
-	${INSTALL_DATA} ${WRKSRC}/imap/README				\
-		${DOCDIR}/README.imap
-	cd ${WRKSRC}; ${INSTALL_DATA} imap/imapd.pam imap/pop3d.pam ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/imap/BUGS ${DOCDIR}/BUGS.imap
+	${INSTALL_DATA} ${WRKSRC}/imap/README ${DOCDIR}/README.imap
+	cd ${WRKSRC}/imap; ${INSTALL_DATA} imapd.authpam pop3d.authpam ${EGDIR}
 
-.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
