@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.195 1998/11/19 22:59:03 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.196 1998/11/25 17:15:36 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -468,7 +468,7 @@ MASTER_SITE_XCONTRIB+=	\
 	ftp://ftp.x.org/contrib/%SUBDIR%/
 
 MASTER_SITE_GNU+=	\
-	ftp://prep.ai.mit.edu/pub/gnu/%SUBDIR%/ \
+	ftp://ftp.gnu.org/pub/gnu/%SUBDIR%/ \
 	ftp://wuarchive.wustl.edu/systems/gnu/%SUBDIR%/
 
 MASTER_SITE_PERL_CPAN+=	\
