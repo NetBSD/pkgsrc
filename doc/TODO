@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2475 2004/11/26 09:12:09 adam Exp $
+$NetBSD: TODO,v 1.2476 2004/11/26 09:25:11 adam Exp $
 
 Suggested new packages
 ======================
@@ -794,7 +794,6 @@ Suggested package updates
 	o ngspice-15c
 	o nhc98-1.17
 	o nkf-204-2004.11.03
-	o nmap-3.77
 	o nn-6.6.5
 	o nosefart-2.1
 	o nrg2iso-0.4
