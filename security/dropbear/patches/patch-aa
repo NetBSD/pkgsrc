@@ -1,19 +1,23 @@
-$NetBSD: patch-aa,v 1.4 2004/08/31 10:27:38 martti Exp $
+$NetBSD: patch-aa,v 1.5 2005/01/18 17:30:59 drochner Exp $
 
---- Makefile.in.orig	2004-01-30 18:24:25.000000000 +0200
-+++ Makefile.in	2004-08-31 13:22:04.000000000 +0300
-@@ -63,8 +63,8 @@
- 	# chown might fail, so do it separately to the install
--	-chown root $(DESTDIR)$(sbindir)/dropbear
--	-chgrp 0 $(DESTDIR)$(sbindir)/dropbear
--	-chown root $(DESTDIR)$(bindir)/dropbearkey
--	-chgrp 0 $(DESTDIR)$(bindir)/dropbearkey
--	-chown root $(DESTDIR)$(bindir)/dropbearconvert
--	-chgrp 0 $(DESTDIR)$(bindir)/dropbearconvert
-+	-chown ${ROOT_USER} $(DESTDIR)$(sbindir)/dropbear
-+	-chgrp ${ROOT_GROUP} $(DESTDIR)$(sbindir)/dropbear
-+	-chown ${ROOT_USER} $(DESTDIR)$(bindir)/dropbearkey
-+	-chgrp ${ROOT_GROUP} $(DESTDIR)$(bindir)/dropbearkey
-+	-chown ${ROOT_USER} $(DESTDIR)$(bindir)/dropbearconvert
-+	-chgrp ${ROOT_GROUP} $(DESTDIR)$(bindir)/dropbearconvert
+--- Makefile.in.orig	2005-01-03 10:24:03.000000000 +0100
++++ Makefile.in
+@@ -140,14 +140,14 @@ insmulti%: dropbearmulti
+ inst_dropbear: dropbear
+ 	$(INSTALL) -d -m 755 $(DESTDIR)$(sbindir)
+ 	$(INSTALL) -m 755 $(SPREFIX)dropbear$(EXEEXT) $(DESTDIR)$(sbindir)
+-	-chown root $(DESTDIR)$(sbindir)/$(SPREFIX)dropbear$(EXEEXT)
+-	-chgrp 0 $(DESTDIR)$(sbindir)/$(SPREFIX)dropbear$(EXEEXT)
++	-chown ${ROOT_USER} $(DESTDIR)$(sbindir)/$(SPREFIX)dropbear$(EXEEXT)
++	-chgrp ${ROOT_GROUP} $(DESTDIR)$(sbindir)/$(SPREFIX)dropbear$(EXEEXT)
  
+ inst_%: $*
+ 	$(INSTALL) -d -m 755 $(DESTDIR)$(bindir)
+ 	$(INSTALL) -m 755 $(SPREFIX)$*$(EXEEXT) $(DESTDIR)$(bindir)
+-	-chown root $(DESTDIR)$(bindir)/$(SPREFIX)$*$(EXEEXT)
+-	-chgrp 0 $(DESTDIR)$(bindir)/$(SPREFIX)$*$(EXEEXT)
++	-chown ${ROOT_USER} $(DESTDIR)$(bindir)/$(SPREFIX)$*$(EXEEXT)
++	-chgrp ${ROOT_GROUP} $(DESTDIR)$(bindir)/$(SPREFIX)$*$(EXEEXT)
+ 
+ 
+ # for some reason the rule further down doesn't like $($@objs) as a prereq.
