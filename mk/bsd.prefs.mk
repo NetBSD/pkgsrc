@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.81 2002/10/12 20:25:49 bouyer Exp $
+# $NetBSD: bsd.prefs.mk,v 1.82 2002/10/19 20:33:59 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -345,6 +345,42 @@ ZOULARIS_VERSION=	20000522
 .endif
 MAKEFLAGS+=		ZOULARIS_VERSION="${ZOULARIS_VERSION}"
 .endif
+
+_PKGSRCDIR?=		${.CURDIR:C|/[^/]*/[^/]*$||}
+PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
+
+DISTDIR?=		${_PKGSRCDIR}/distfiles
+PACKAGES?=		${_PKGSRCDIR}/packages
+TEMPLATES?=		${_PKGSRCDIR}/templates
+
+PATCHDIR?=		${.CURDIR}/patches
+SCRIPTDIR?=		${.CURDIR}/scripts
+FILESDIR?=		${.CURDIR}/files
+PKGDIR?=		${.CURDIR}
+
+# If WRKOBJDIR is set, use that tree to build
+.ifdef WRKOBJDIR        
+BUILD_DIR?=		${WRKOBJDIR}/${PKGPATH}
+.else
+BUILD_DIR?=		${.CURDIR}
+.endif	# WRKOBJDIR
+
+# If OBJHOSTNAME is set, use first component of hostname in directory name.
+# If OBJMACHINE is set, use ${MACHINE_ARCH} in the working directory name.
+#
+.if defined(OBJHOSTNAME)
+.  if !defined(_HOSTNAME)
+_HOSTNAME!=		${UNAME} -n 
+MAKEFLAGS+=		_HOSTNAME=${_HOSTNAME}
+.  endif
+WRKDIR_BASENAME?=	work.${_HOSTNAME:C|\..*||}
+.elif defined(OBJMACHINE)
+WRKDIR_BASENAME?=	work.${MACHINE_ARCH}
+.else
+WRKDIR_BASENAME?=	work
+.endif  
+
+WRKDIR?=		${BUILD_DIR}/${WRKDIR_BASENAME}
 
 .ifdef BSD_PREFS_MK
 .undef BSD_PREFS_MK

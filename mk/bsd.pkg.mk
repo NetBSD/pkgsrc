@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1067 2002/10/13 09:38:58 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1068 2002/10/19 20:33:59 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -47,21 +47,11 @@ CHECK_SHLIBS?=		YES	# run check-shlibs after install
 SHLIB_HANDLING?=	YES	# do automatic shared lib handling
 NOCLEAN?=		NO	# don't clean up after update
 
-_PKGSRCDIR?=		${.CURDIR:C|/[^/]*/[^/]*$||}
-PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
 PKGBASE?=		${PKGNAME:C/-[^-]*$//}
 PKGVERSION?=		${PKGNAME:C/^.*-//}
 PKGWILDCARD?=		${PKGBASE}-[0-9]*
 
-DISTDIR?=		${_PKGSRCDIR}/distfiles
 _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
-PACKAGES?=		${_PKGSRCDIR}/packages
-TEMPLATES?=		${_PKGSRCDIR}/templates
-
-PATCHDIR?=		${.CURDIR}/patches
-SCRIPTDIR?=		${.CURDIR}/scripts
-FILESDIR?=		${.CURDIR}/files
-PKGDIR?=		${.CURDIR}
 
 INTERACTIVE_STAGE?=	none
 
@@ -484,28 +474,6 @@ _PKG_DEBUG=		set -x;
 _PKG_DEBUG_SCRIPT=	${SH} -x
 .endif
 
-# If WRKOBJDIR is set, use that tree to build
-.ifdef WRKOBJDIR
-BUILD_DIR?=		${WRKOBJDIR}/${PKGPATH}
-.else
-BUILD_DIR?=		${.CURDIR}
-.endif # WRKOBJDIR
-
-# If OBJHOSTNAME is set, use first component of hostname in directory name
-# If OBJMACHINE is set, use ${MACHINE_ARCH} in the working directory name
-.if defined(OBJHOSTNAME)
-.  if !defined(_HOSTNAME)
-_HOSTNAME!= ${UNAME} -n
-MAKEFLAGS+= _HOSTNAME=${_HOSTNAME}
-.  endif
-WRKDIR_BASENAME?=	work.${_HOSTNAME:C|\..*||}
-.elif defined(OBJMACHINE)
-WRKDIR_BASENAME?=	work.${MACHINE_ARCH}
-.else
-WRKDIR_BASENAME?=	work
-.endif
-
-WRKDIR?=		${BUILD_DIR}/${WRKDIR_BASENAME}
 WRKSRC?=		${WRKDIR}/${DISTNAME}
 
 .if defined(NO_WRKSUBDIR)
