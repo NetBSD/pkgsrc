@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.22 1998/11/01 23:25:00 tron Exp $
+# $NetBSD: Makefile,v 1.23 1998/12/03 13:41:33 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
 #    SUBDIR += LPRng
-#    SUBDIR += afio
     SUBDIR += addnerd
+#    SUBDIR += afio
+    SUBDIR += asapm
     SUBDIR += cdrecord
 #    SUBDIR += cd-write
 #    SUBDIR += contool
