@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.5 2004/06/06 16:01:03 taca Exp $
+$NetBSD: patch-ad,v 1.6 2004/06/07 00:27:02 taca Exp $
 
---- icons/Makefile.in.orig	2003-05-22 09:15:40.000000000 +0900
-+++ icons/Makefile.in
-@@ -144,7 +144,7 @@ ICON2 = anthony-bomb.gif \
- 		anthony-xpm.gif
+--- errors/Makefile.in.orig	2003-12-01 19:13:57.000000000 +0900
++++ errors/Makefile.in
+@@ -116,7 +116,7 @@ am__quote = @am__quote@
+ install_sh = @install_sh@
+ makesnmplib = @makesnmplib@
  
+-errordir = $(datadir)/errors
++errordir = $(datadir)/squid/errors
  
--icondir = $(datadir)/icons
-+icondir = $(datadir)/squid/icons
- icon_DATA = $(ICON1) $(ICON2)
- EXTRA_DIST = $(ICON1) $(ICON2) icons.shar
- DISTCLEANFILES = 
+ DEFAULT_ERROR_DIR = $(errordir)
+ 
