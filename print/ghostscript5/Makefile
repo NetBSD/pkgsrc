@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 1999/01/04 21:44:47 frueauf Exp $
+# $NetBSD: Makefile,v 1.32 1999/02/20 22:48:39 hubertf Exp $
 #
 
 DISTNAME=	ghostscript-5.50
@@ -16,8 +16,6 @@ HOMEPAGE=	http://www.cs.wisc.edu/~ghost/index.html
 BUILD_DEPENDS=	${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b:../../graphics/jpeg:extract \
 		unzip:../../archivers/unzip
 DEPENDS=	png-1.0.2:../../graphics/png
-
-CONFLICTS=	ghostscript-5.10
 
 EXTRACT_ONLY=	${GS_SOURCES}
 WRKSRC=		${WRKDIR}/gs5.50

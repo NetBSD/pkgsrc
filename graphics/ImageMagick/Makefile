@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 1999/01/02 20:57:28 tron Exp $
+# $NetBSD: Makefile,v 1.34 1999/02/20 22:48:29 hubertf Exp $
 #
 
 DISTNAME=	ImageMagick-4.1.7
@@ -12,8 +12,6 @@ DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	mpeg2codec-1.2:../../graphics/mpeg2codec
 DEPENDS+=	png-1.0.2:../../graphics/png
 DEPENDS+=	tiff-3.4:../../graphics/tiff
-
-CONFLICTS=	ImageMagick-*
 
 pre-configure:
 .if exists(/usr/lib/libbz2.a)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 1999/01/30 23:18:46 agc Exp $
+# $NetBSD: Makefile,v 1.29 1999/02/20 22:48:28 hubertf Exp $
 #
 
 DISTNAME=		xmame-0.34b8.1
@@ -11,9 +11,6 @@ HOMEPAGE=		http://xmame.retrogames.com/
 
 DEPENDS=		unzip-5.40:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
-
-CONFLICTS=		xmame-0.30.1 xmame-0.33b6.1 xmame-0.34b1.1 \
-			xmame-0.34b2.1 xmame-0.34b2.2 xmame-0.34b5.2
 
 NOT_FOR_ARCHS=		alpha	#gcc lossage
 

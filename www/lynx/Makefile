@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/01/23 12:41:13 frueauf Exp $
+# $NetBSD: Makefile,v 1.17 1999/02/20 22:48:45 hubertf Exp $
 #
 
 DISTNAME=       lynx2-8-1
@@ -11,8 +11,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://sol.slcc.edu/lynx/
 
 DEPENDS+=	libslang-1.2.2:../../devel/libslang
-
-CONFLICTS=	lynx-*
 
 GNU_CONFIGURE=  YES
 CONFIGURE_ARGS+= --with-screen=slang --with-zlib --libdir="${PREFIX}/etc"

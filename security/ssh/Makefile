@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 1999/02/03 22:44:10 wrstuden Exp $
+# $NetBSD: Makefile,v 1.40 1999/02/20 22:48:42 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -10,8 +10,6 @@ MASTER_SITES=		ftp://ftp.cs.hut.fi/pub/ssh/ \
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.cs.hut.fi/ssh/
-
-CONFLICTS=		ssh-1.2.22 ssh-1.2.23 ssh-1.2.25
 
 RESTRICTED=		"Crypto; export-controlled"
 MIRROR_DISTFILE=	no

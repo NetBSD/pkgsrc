@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/12/08 23:19:49 frueauf Exp $
+# $NetBSD: Makefile,v 1.15 1999/02/20 22:48:33 hubertf Exp $
 #
 
 DISTNAME=	kaffe-1.0.b3
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.transvirtual.com/kaffe.html
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-1.0.2:../../graphics/png
 DEPENDS+=	giflib-3.0:../../graphics/giflib
-
-CONFLICTS=	kaffe-0.9.2 kaffe-1.0.b1 kaffe-1.0.b2
 
 ONLY_FOR_ARCHS=	arm32 i386 m68k mips* sparc
 NOT_FOR_ARCHS=	alpha	#assembler problems

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/02/02 10:27:55 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/02/20 22:48:48 hubertf Exp $
 
 DISTNAME=	wmthemes-0.51.x
 CATEGORIES=	x11
@@ -10,8 +10,6 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://wm.themes.org/
 
 DEPENDS+=	windowmaker-0.51.0:../../x11/windowmaker
-
-CONFLICTS=	wm-themes-* wmthemes-*
 
 USE_X11BASE=	yes
 NO_BUILD=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/01/07 16:27:33 frueauf Exp $
+# $NetBSD: Makefile,v 1.19 1999/02/20 22:48:26 hubertf Exp $
 # $FreeBSD Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
@@ -13,8 +13,6 @@ MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://www.cs.tu-bs.de/softech/ddd/
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
-
-CONFLICTS=	ddd-*
 
 USE_MOTIF=	yes
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/02/19 16:08:45 christos Exp $
+# $NetBSD: Makefile,v 1.9 1999/02/20 22:48:45 hubertf Exp $
 #
 
 DISTNAME=	squid-2.1.PATCH2
@@ -19,12 +19,6 @@ PATCHFILES=squid-2.1.PATCH2-clientHandleIMSReply-leak.patch
 
 MAINTAINER=	bad@netbsd.org
 HOMEPAGE=	http://squid.nlanr.net/Squid/
-
-CONFLICTS=	squid-1.1.21 \
-		squid-2.0.PRE1 \
-		squid-2.0.RELEASE \
-		squid-2.0.PATCH1 \
-		squid-2.0.PATCH2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--sysconfdir=/etc \

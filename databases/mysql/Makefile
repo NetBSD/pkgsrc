@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/02/04 21:35:01 frueauf Exp $
+# $NetBSD: Makefile,v 1.16 1999/02/20 22:48:25 hubertf Exp $
 #
 
 # note: if updated, update shlib version number in patch-aa
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.digex.net/pub/database/mysql/Downloads/MySQL-3.21/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.tcx.se/
-
-CONFLICTS=	mysql-3.21.31 mysql-3.21.32a mysql-3.21.33
 
 NO_CDROM=	"Restrictive license."
 

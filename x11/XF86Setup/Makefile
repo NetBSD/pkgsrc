@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/01/22 21:10:01 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/02/20 22:48:46 hubertf Exp $
 
 DISTNAME=	XF86Setup-3.3.3.1
 CATEGORIES=	x11
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.xfree86.org/
 
 BUILD_DEPENDS+= ${TCLLIB}:../../lang/tcl80 \
 		${TKLIB}:../../x11/tk80
-
-CONFLICTS=	XF86Setup-*
 
 TCLLIB=		${LOCALBASE}/lib/libtcl80.a
 TKLIB=		${LOCALBASE}/lib/libtk80.a

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/01/19 14:16:45 jonb Exp $
+# $NetBSD: Makefile,v 1.14 1999/02/20 22:48:33 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/08/27 19:31:37 jmacd Exp
 #
 
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER= 	packages@netbsd.org
 HOMEPAGE=	http://www.neci.nj.nec.com/homepages/kelsey/
-
-CONFLICTS=	scheme48-0.46 scheme48-0.51
 
 NOT_FOR_ARCHS=	alpha	# *severe* problems.  Bus error, alignment
 

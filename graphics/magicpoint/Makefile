@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/11/11 06:28:40 garbled Exp $
+# $NetBSD: Makefile,v 1.4 1999/02/20 22:48:30 hubertf Exp $
 
 DISTNAME=		magicpoint-1.04a
 PKGNAME=		mgp-1.04a
@@ -7,8 +7,6 @@ MASTER_SITES=		ftp://ftp.mew.org/pub/MagicPoint/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.Mew.org/mgp/
-
-CONFLICTS=		mgp-1.03a
 
 GNU_CONFIGURE=		yes
 USE_IMAKE=		yes

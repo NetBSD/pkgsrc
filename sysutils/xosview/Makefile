@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1999/02/17 00:16:55 bgrayson Exp $
+# $NetBSD: Makefile,v 1.25 1999/02/20 22:48:44 hubertf Exp $
 #
 
 DISTNAME=       xosview-1.7.0.b
@@ -8,8 +8,6 @@ MASTER_SITES=   http://www.ece.utexas.edu/~bgrayson/xosview/ \
 
 MAINTAINER=	bgrayson@ece.utexas.edu
 HOMEPAGE=	http://lore.ece.utexas.edu/~bgrayson/xosview.html
-
-CONFLICTS=	xosview-*
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+= --prefix=${PREFIX}

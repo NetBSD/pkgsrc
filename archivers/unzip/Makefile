@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/01/09 01:26:09 tron Exp $
+# $NetBSD: Makefile,v 1.19 1999/02/20 22:48:24 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
@@ -10,8 +10,6 @@ DISTFILES=	unzip540.tar.gz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cdrom.com/pub/infozip/
-
-CONFLICTS=	unzip-*
 
 MAKEFILE=	unix/Makefile
 ALL_TARGET=	unzips
