@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/02/16 15:22:26 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/03/04 09:06:13 tron Exp $
 
 DISTNAME=		magicpoint-1.07a
 CATEGORIES=		x11 graphics
@@ -9,7 +9,7 @@ HOMEPAGE=		http://www.Mew.org/mgp/
 COMMENT=		X11 based presentation tool
 
 DEPENDS+=		freetype-lib>=1.3.1:../../graphics/freetype-lib
-DEPENDS+=		png>=1.0.6:../../graphics/png
+DEPENDS+=		png>1.0.9:../../graphics/png
 
 CONFLICTS=		mgp-*
 

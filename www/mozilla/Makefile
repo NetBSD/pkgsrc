@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2001/02/17 17:22:15 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2001/03/04 09:06:20 tron Exp $
 
 MOZ_VER=	0.8
 DISTNAME=	mozilla-source-${MOZ_VER}
@@ -19,7 +19,7 @@ BUILD_DEPENDS+=	zip:../../archivers/zip
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 DEPENDS+=	ORBit>=0.5.3:../../net/ORBit
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.0.6:../../graphics/png
+DEPENDS+=	png>1.0.9:../../graphics/png
 
 ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
 			NetBSD-1.5_ALPHA-i386 NetBSD-1.5_BETA-* \

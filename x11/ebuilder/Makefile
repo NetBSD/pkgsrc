@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 17:06:18 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/03/04 09:06:20 tron Exp $
 #
 
 DISTNAME=	ebuilder-0.56d
@@ -11,7 +11,7 @@ HOMEPAGE=	http://web.inter.nl.net/users/eavdmeer/index.html
 COMMENT=	GUI builder for the Qt library
 
 DEPENDS+=	qt2-libs-*:../../x11/qt2-libs
-DEPENDS+=	png-*:../../graphics/png
+DEPENDS+=	png>1.0.9:../../graphics/png
 
 USE_X11=	yes
 USE_GMAKE=	yes
