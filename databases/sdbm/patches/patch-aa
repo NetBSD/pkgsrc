@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/01/06 21:53:40 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 1999/06/30 09:45:26 agc Exp $
 
---- sdbm.c.orig	Wed Jan  6 22:48:06 1999
-+++ sdbm.c	Wed Jan  6 22:48:38 1999
+--- sdbm.c.orig	Wed Jun 30 10:10:12 1999
++++ sdbm.c	Wed Jun 30 10:21:59 1999
 @@ -35,17 +35,6 @@
  #endif
  
@@ -20,3 +20,12 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/01/06 21:53:40 hubertf Exp $
   * forward
   */
  static int getdbit proto((DBM *, long));
+@@ -95,7 +84,7 @@
+  */
+ 	n = strlen(file) * 2 + strlen(DIRFEXT) + strlen(PAGFEXT) + 2;
+ 
+-	if ((dirname = malloc((unsigned) n)) == NULL)
++	if ((dirname = (char *) malloc((unsigned) n)) == NULL)
+ 		return errno = ENOMEM, (DBM *) NULL;
+ /*
+  * build the file names
