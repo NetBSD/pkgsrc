@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/06/04 13:08:36 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/06/17 17:07:14 bouyer Exp $
 bin/addtosmbpass
 bin/make_printerdef
 bin/make_smbcodepage
@@ -14,8 +14,10 @@ bin/testprns
 sbin/nmbd
 sbin/smbd
 lib/codepages/codepage.437
+lib/codepages/codepage.737
 lib/codepages/codepage.850
 lib/codepages/codepage.852
+lib/codepages/codepage.861
 lib/codepages/codepage.866
 lib/codepages/codepage.932
 lib/codepages/codepage.936
