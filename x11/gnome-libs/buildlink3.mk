@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/22 13:53:17 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/24 03:26:48 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_LIBS_BUILDLINK3_MK:=	${GNOME_LIBS_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_DEPENDS+=	gnome-libs
 
 .if !empty(GNOME_LIBS_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			gnome-libs
-BUILDLINK_DEPENDS.gnome-libs?=		gnome-libs>=1.4.2nb1
+BUILDLINK_DEPENDS.gnome-libs+=		gnome-libs>=1.4.2nb1
 BUILDLINK_PKGSRCDIR.gnome-libs?=	../../x11/gnome-libs
 
 .  include "../../audio/esound/buildlink3.mk"

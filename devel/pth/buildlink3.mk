@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/24 03:26:46 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PTH_BUILDLINK3_MK:=	${PTH_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	pth
 
 .if !empty(PTH_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		pth
-BUILDLINK_DEPENDS.pth?=		pth>=2.0.0
+BUILDLINK_DEPENDS.pth+=		pth>=2.0.0
 BUILDLINK_PKGSRCDIR.pth?=	../../devel/pth
 .endif	# PTH_BUILDLINK3_MK
 

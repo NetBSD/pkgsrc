@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/01/05 11:05:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/01/24 03:26:46 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DB4_BUILDLINK3_MK:=	${DB4_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	db4
 
 .if !empty(DB4_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		db4
-BUILDLINK_DEPENDS.db4?=		db4>=4.1.25
+BUILDLINK_DEPENDS.db4+=		db4>=4.1.25
 BUILDLINK_PKGSRCDIR.db4?=	../../databases/db4
 BUILDLINK_INCDIRS.db4?=		include/db4
 .endif	# DB4_BUILDLINK3_MK

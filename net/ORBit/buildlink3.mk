@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/22 12:53:48 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/24 03:26:47 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ORBIT_BUILDLINK3_MK:=	${ORBIT_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	ORBit
 
 .if !empty(ORBIT_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		ORBit
-BUILDLINK_DEPENDS.ORBit?=	ORBit>=0.5.15nb5
+BUILDLINK_DEPENDS.ORBit+=	ORBit>=0.5.15nb5
 BUILDLINK_PKGSRCDIR.ORBit?=	../../net/ORBit
 
 .  include "../../devel/gettext-lib/buildlink3.mk"
