@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2002/12/07 02:39:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/04 12:58:24 cjep Exp $
 
+DISTNAME=	acroread5	# Overridden below
 PKGNAME=	acroread5-5.06
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/5.x/
@@ -25,6 +26,9 @@ WRKSRC=		${WRKDIR}
 
 ONLY_FOR_PLATFORM=	*-*-i386 SunOS-*-sparc
 
+# Default (overridden below)
+PLATFORM=	unknown
+
 .if ${OPSYS} == "NetBSD"
 . if (${MACHINE_ARCH} == "i386")
 DEPENDS=	suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
@@ -40,9 +44,6 @@ PLATFORM=	sparcsolaris
 .elif ${OPSYS} == "SunOS"
 DISTNAME=	solaris-506
 PLATFORM=	sparcsolaris
-.else
-DISTNAME=	${PKGNAME}
-PLATFORM=	unknown
 .endif
 
 PLIST_SUBST+=	PLATFORM=${PLATFORM}
