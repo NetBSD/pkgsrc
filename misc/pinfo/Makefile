@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/02/18 15:14:34 seb Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/21 15:04:43 wiz Exp $
 #
 
 DISTNAME=		pinfo-0.6.1
@@ -11,8 +11,8 @@ COMMENT=		Przemek's Info Viewer
 
 BUILD_USES_MSGFMT=	yes
 
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
-USE_LIBINTL=		yes
 
 CPPFLAGS=		-DDFLT_INFOPATH='\"/usr/share/info:${X11BASE}/info:${LOCALBASE}/info:/usr/local/info\"'
 
@@ -24,9 +24,10 @@ post-install:
 .if defined(PINFO_USE_NATIVE_CURSES) && ${PINFO_USE_NATIVE_CURSES} == "YES"
 CONFIGURE_ARGS+=	--with-vcurses
 .else
-DEPENDS+=		ncurses>=5.0:../../devel/ncurses
-CONFIGURE_ARGS+=	--with-ncurses=${LOCALBASE}
+.include "../../devel/ncurses/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_PREFIX.ncurses}
 .endif
 
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
