@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/07/15 12:40:20 jtb Exp $
+# $NetBSD: Makefile,v 1.11 2001/12/26 01:04:54 wiz Exp $
 
 DISTNAME=		nhc98src-1.06
 PKGNAME=		nhc98-1.06
@@ -9,10 +9,11 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.cs.york.ac.uk/fp/nhc98/
 COMMENT=		Portable Haskell 98 compiler
 
-DEPENDS+=		ncurses>=5.2:../../devel/ncurses
-
 # Not yet ported to 64-bit machines
-NOT_FOR_PLATFORM=	*-*-alpha
+NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64
+
+# KEY_RESIZE
+USE_NCURSES=		YES
 
 WRKSRC=			${WRKDIR}/${PKGNAME}
 
@@ -34,4 +35,5 @@ PLIST_SUBST+=		HARCH=${HARCH}
 post-extract:
 	@${FIND} ${WRKSRC}/docs -type d -name \*CVS\* | ${XARGS} ${RM} -rf
 
+.include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
