@@ -1,8 +1,7 @@
 #!/bin/sh
 #
-# $NetBSD: samba.sh,v 1.4 2001/11/21 21:38:54 jlam Exp $
+# $NetBSD: samba.sh,v 1.5 2002/01/12 00:22:40 jlam Exp $
 #
-# PROVIDE: samba
 # KEYWORD: nostart
 
 if [ -e /etc/rc.subr ]
@@ -10,12 +9,14 @@ then
 	. /etc/rc.subr
 fi
 
+rcd_dir=`@DIRNAME@ $0`
+
 # NOTE: run_rc_command sets $_arg
 #
 forward_commands()
 {
 	for file in $COMMAND_LIST; do
-		/etc/rc.d/$file $_arg
+		$rcd_dir/$file $_arg
 	done
 }
 
@@ -26,7 +27,7 @@ reverse_commands()
 		REVCOMMAND_LIST="$file $REVCOMMAND_LIST"
 	done
 	for file in $REVCOMMAND_LIST; do
-		/etc/rc.d/$file $_arg
+		$rcd_dir/$file $_arg
 	done
 }
 
