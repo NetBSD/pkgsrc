@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.20 2001/05/09 09:10:00 abs Exp $
+$NetBSD: TODO,v 1.21 2001/05/09 10:06:11 zuntum Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -55,7 +55,7 @@ package update TODO (Suggested package updates)
 	o update editors/manedit to recent version
 		(zuntum will do that)
 	o update editors/vim because of security problems
-	o update IPv6 patch in net/wget to 20010418
+	o update IPv6 patch in net/wget to 20010508b
 	o update sysutils/gkrellm to 1.0.8
 		(zuntum will do that)
 	o update sysutils/lsof to 4.56 [atatat has new version ready]
