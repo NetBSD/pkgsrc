@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.28 1998/04/17 22:01:01 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.29 1998/04/20 08:25:46 frueauf Exp $
 ###########################################################################
 
 			==========================
@@ -434,6 +434,11 @@ attention to the following things in pkg/PLIST:
    Require-script that is invoked before installation and de-installation
    to ensure things like certain accounts being available, user/sysadmin
    agreeing with usage policy, etc.
+
+ * pkg/MESSAGE
+   Display this file (using more(1))  after installing the package.
+   Useful for things like legal notices on almost-free software,
+   etc.
 
 
  4.5 scripts/*
