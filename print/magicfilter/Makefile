@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/10/12 22:21:49 tron Exp $
+# $NetBSD: Makefile,v 1.7 1998/11/08 22:03:57 tron Exp $
 
 DISTNAME=	magicfilter-1.2
 PKGNAME=	magicfilter-${PAPERSIZE}-1.2
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	system/printing
 MAINTAINER=	tron@netbsd.org
 
 DEPENDS+=	a2ps-${PAPERSIZE}-4.10.3:../../print/a2ps \
-		ghostscript-5.10:../../print/ghostscript5 \
+		ghostscript-5.50:../../print/ghostscript5 \
 		netpbm-19940301:../../graphics/netpbm \
 		teTeX-0.4p8:../../print/teTeX
 
