@@ -1,0 +1,39 @@
+*** Makefile.orig	Mon Jul  7 01:55:05 1997
+--- Makefile	Mon Jul  7 01:55:33 1997
+***************
+*** 27,33 ****
+  # Please assign next values.
+  
+  # Directories of Dictionary and Utilities installed 
+! PREFIX=/usr/local
+  
+  # Preferable Compiler and Options on your system
+  CC=cc
+--- 27,33 ----
+  # Please assign next values.
+  
+  # Directories of Dictionary and Utilities installed 
+! PREFIX?=/usr/local
+  
+  # Preferable Compiler and Options on your system
+  CC=cc
+***************
+*** 73,79 ****
+  	lint $(CFLAGS) $(SOURCES)
+  
+  install: kakasi mkkanwa atoc-conv rdic-conv
+! 	cp kakasi $(BINDIR)
+  	cp $(STDDICTS) mkkanwa atoc-conv rdic-conv $(LIBDIR)
+  	./mkkanwa $(LIBDIR)/kanwadict kakasidict
+  
+--- 73,82 ----
+  	lint $(CFLAGS) $(SOURCES)
+  
+  install: kakasi mkkanwa atoc-conv rdic-conv
+! 	@(for f in ${BINDIR} ${LIBDIR}; do  \
+! 	  if [ ! -d "$$f" ]; then mkdir -p "$$f"; fi; \
+! 	done)
+! 	install -s -c -o bin -g bin -m 755 kakasi $(BINDIR)
+  	cp $(STDDICTS) mkkanwa atoc-conv rdic-conv $(LIBDIR)
+  	./mkkanwa $(LIBDIR)/kanwadict kakasidict
+  
