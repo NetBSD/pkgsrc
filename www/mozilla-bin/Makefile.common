@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2004/01/04 05:06:19 grant Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/01/06 01:33:32 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -37,9 +37,10 @@ ARCH=${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .endif
 
 # suffix gtk2 builds with -gtk2
-MOZ_EXTRA=	# empty
 .if defined(MOZ_GTK2) && ${MOZ_GTK2} == "YES"
 MOZ_EXTRA?=	-gtk2
+.else
+MOZ_EXTRA?=	# empty
 .endif
 
 MOZILLA_LIB=	${PREFIX}/lib/${MOZILLA}${MOZ_EXTRA}-${MOZ_PLATFORM}
@@ -84,7 +85,7 @@ _COMPAT16_LIBSTDCXX=	YES
 
 # gtk2 builds.
 .    if defined(MOZ_GTK2) && ${MOZ_GTK2} == "YES"
-DEPENDS+=	gtk+>=2.2:../../x11/gtk2
+DEPENDS+=	gtk2+>=2.2:../../x11/gtk2
 .    else
 
 # default to at least gtk-1.2.
@@ -158,7 +159,7 @@ post-install:
 		${LN} -s ${PREFIX}/emul/netbsd16/usr/lib/libstdc++.so* .
 .endif
 	@${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
-	@${ECHO} bin/${MOZILLA}-${MOZ_PLATFORM} >> ${PLIST_SRC}
+	@${ECHO} bin/${MOZILLA}${MOZ_EXTRA}-${MOZ_PLATFORM} >> ${PLIST_SRC}
 	@${FIND} ${MOZILLA_LIB} \( -type f -o -type l \) -print		\
 		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
 		>> ${PLIST_SRC}
