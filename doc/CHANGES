@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6316 2004/06/25 17:22:41 wiz Exp $
+$NetBSD: CHANGES,v 1.6317 2004/06/25 19:03:26 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3067,3 +3067,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnuplot to 4.0 [adrianp 2004-06-25]
 	Updated gnuplot-nox11 to 4.0 [adrianp 2004-06-25]
 	Added ctorrent-1.3.2 [wiz 2004-06-25]
+	Updated pkglint to 3.78 [hubertf 2004-06-25]
