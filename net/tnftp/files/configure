@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# From configure.in Revision: 1.5 
+# From configure.in Revision: 1.1.1.1 
 
 
 
@@ -3236,7 +3236,7 @@ EOF
 
 for ac_func in err fgetln fseeko getaddrinfo getnameinfo inet_ntop inet_pton \
 		mkstemp setprogname sl_init snprintf strdup strerror strlcat \
-		strlcpy strptime strsep strunvis strvis timegm usleep
+		strlcpy strptime strsep strunvis strvis timegm usleep utimes
 do
 echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
 echo "configure:3243: checking for $ac_func" >&5

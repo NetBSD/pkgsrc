@@ -1,5 +1,5 @@
 /* config.h.in.  Generated automatically from configure.in by autoheader.  */
-/* $Id: config.h.in,v 1.1 2004/03/11 13:01:01 grant Exp $ */
+/* $Id: config.h.in,v 1.2 2004/03/11 13:45:55 grant Exp $ */
 
 
 /* Define if on AIX 3.
@@ -131,6 +131,9 @@
 
 /* Define if you have the usleep function.  */
 #undef HAVE_USLEEP
+
+/* Define if you have the utimes function.  */
+#undef HAVE_UTIMES
 
 /* Define if you have the <arpa/nameser.h> header file.  */
 #undef HAVE_ARPA_NAMESER_H
