@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1613 2003/03/11 00:06:00 seb Exp $
+$NetBSD: CHANGES,v 1.1614 2003/03/11 00:13:41 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1023,3 +1023,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated naim to 0.11.5.6 [wiz 2003-03-10]
 	Updated pkgdepgraph to 2.1 [atatat 2003-03-10]
 	Updated gdb to 5.3 [seb 2003-03-11]
+	Updated gpgme to 0.3.15 [salo 2003-03-11]
