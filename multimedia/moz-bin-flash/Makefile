@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/26 14:46:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/07 01:14:49 xtraeme Exp $
 #
 
 DISTNAME=	install_flash_player_6_linux
@@ -6,7 +6,7 @@ PKGNAME=	moz-bin-flash-${VERSION}
 CATEGORIES=	multimedia www
 MASTER_SITES=	http://download.macromedia.com/pub/shockwave/flash/english/linux/6.0r69/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.macromedia.com/
 COMMENT=	Flash player for the linux version of mozilla (binary pkg)
 
