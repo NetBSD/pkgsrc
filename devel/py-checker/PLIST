@@ -1,22 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/27 14:16:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/28 14:49:47 drochner Exp $
 bin/pychecker${PYVERSSUFFIX}
-${PYSITELIB}/pychecker/CHANGELOG
-${PYSITELIB}/pychecker/COPYRIGHT
 ${PYSITELIB}/pychecker/CodeChecks.py
 ${PYSITELIB}/pychecker/CodeChecks.pyc
 ${PYSITELIB}/pychecker/Config.py
 ${PYSITELIB}/pychecker/Config.pyc
-${PYSITELIB}/pychecker/KNOWN_BUGS
-${PYSITELIB}/pychecker/MAINTAINERS
 ${PYSITELIB}/pychecker/OP.py
 ${PYSITELIB}/pychecker/OP.pyc
 ${PYSITELIB}/pychecker/OptionTypes.py
 ${PYSITELIB}/pychecker/OptionTypes.pyc
-${PYSITELIB}/pychecker/README
 ${PYSITELIB}/pychecker/Stack.py
 ${PYSITELIB}/pychecker/Stack.pyc
-${PYSITELIB}/pychecker/TODO
-${PYSITELIB}/pychecker/VERSION
 ${PYSITELIB}/pychecker/Warning.py
 ${PYSITELIB}/pychecker/Warning.pyc
 ${PYSITELIB}/pychecker/__init__.py
