@@ -1,18 +1,18 @@
---- Makefiles/Makefile.freebsd.orig	Fri Aug  8 21:56:08 1997
-+++ Makefiles/Makefile.freebsd	Mon Sep 22 12:03:44 1997
+--- Makefile.orig	Sun Mar  8 21:35:00 1998
++++ Makefile	Sun Mar  8 21:35:26 1998
 @@ -2,11 +2,11 @@
- # It has been tested under FreeBSD 2.1.5.
+ # It has been tested under NetBSD 1.2.
  
  # Change this if you have this stuff somewhere else.
--TCLINC = /usr/local/lib/tcl8.0
--TKINC  = /usr/local/lib/tk8.0
--X11INC = /usr/X11/include
-+TCLINC = ${PREFIX}/include/tcl8.1
-+TKINC  = ${PREFIX}/include/tk8.1
+-TCLINC = /usr/local/include
+-TKINC  = /usr/local/include
+-X11INC = /usr/X11R6/include
++TCLINC = ${LOCALBASE}/include/tcl8.0
++TKINC  = ${LOCALBASE}/include/tk8.0
 +X11INC = ${X11BASE}/include
  
--CFLAGS = -Wall -fPIC -O3 -I$(TCLINC) -I$(TKINC) -I$(X11INC)
-+CFLAGS += -Wall -fPIC -I$(TCLINC) -I$(TKINC) -I$(X11INC)
+-CFLAGS = -D__FreeBSD__ -Wall -fPIC -O3 -I$(TCLINC) -I$(TKINC) -I$(X11INC)
++CFLAGS = -D__FreeBSD__ -Wall -fPIC -O2 -I${TCLINC} -I${TKINC} -I${X11INC}
  
  CC = gcc
  
