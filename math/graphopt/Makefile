@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/03/08 19:40:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/14 16:15:24 jmmv Exp $
 #
 
 DISTNAME=	graphopt-0.4.1
@@ -11,9 +11,8 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://schmuhl.org/graphopt/
 COMMENT=	Optimize graph layouts
 
-DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs
-
 USE_BUILDLINK2=	YES
+USE_DIRS+=	xdg-1.1
 USE_GCC_SHLIB=	YES
 GNU_CONFIGURE=	YES
 

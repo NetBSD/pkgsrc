@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/01 18:52:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/14 16:15:28 jmmv Exp $
 #
 
 DISTNAME=	epiphany-1.2.2
@@ -11,10 +11,10 @@ HOMEPAGE=	http://www.gnome.org/projects/epiphany/
 COMMENT=	The web browser for the GNOME Desktop
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/04/01 18:58:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/14 16:15:29 jmmv Exp $
 #
 
 DISTNAME=		gnome-mag-0.10.10
@@ -10,9 +10,8 @@ MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME screen magnifier
 
-DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
-
 USE_BUILDLINK3=		yes
+USE_DIRS+=		gnome2-1.2
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

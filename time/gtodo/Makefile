@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/26 02:27:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/14 16:15:28 jmmv Exp $
 #
 
 DISTNAME=	gtodo-0.14
@@ -10,10 +10,9 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://qballcow.nl/index.php?s=4
 COMMENT=	To-do list manager for the GNOME desktop
 
-DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
-
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
 
