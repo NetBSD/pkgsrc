@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/05 05:03:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/09 23:49:17 hubertf Exp $
 
 DISTNAME=	xdaemon-1.0
 CATEGORIES=	games x11
@@ -28,7 +28,7 @@ do-install:
 	${INSTALL_DATA} ${DISTDIR}/${pic} ${PREFIX}/share/xteddy/pixmaps/${pic}
 .endfor
 	${INSTALL_DATA} ${DISTDIR}/Daemon.README ${PREFIX}/share/doc/xdaemon.README
-	${LN}	${PREFIX}/bin/xteddy	${PREFIX}/bin/xdaemon
-	${LN}	${PREFIX}/bin/xteddy	${PREFIX}/bin/xdaemon2
+	${LN} -s ${PREFIX}/bin/xteddy	${PREFIX}/bin/xdaemon
+	${LN} -s ${PREFIX}/bin/xteddy	${PREFIX}/bin/xdaemon2
 
 .include "../../mk/bsd.pkg.mk"
