@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/09/27 17:07:35 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/09/28 09:13:56 jlam Exp $
 
 .if !defined(EKG_BUILDLINK2_MK)
 EKG_BUILDLINK2_MK=	# defined
@@ -12,7 +12,7 @@ BUILDLINK_PREFIX.ekg_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.ekg=	include/libgadu*.h
 BUILDLINK_FILES.ekg+=	lib/libgadu.*
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/27 17:07:35 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/28 09:13:56 jlam Exp $
 #
 
 DISTNAME=	abook-0.5.0
@@ -13,6 +13,6 @@ USE_BUILDLINK2=		yes
 USE_GNU_READLINE=	yes
 GNU_CONFIGURE=		yes
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/09/27 17:07:34 grant Exp $
+# $NetBSD: Makefile,v 1.16 2003/09/28 09:13:55 jlam Exp $
 #
 
 DISTNAME=	emixer-0.05.5
@@ -18,5 +18,5 @@ USE_BUILDLINK2=	YES
 post-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

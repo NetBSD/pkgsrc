@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/09/27 17:07:38 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/09/28 09:13:59 jlam Exp $
 #
 
 DISTNAME=	wml-2.0.3
@@ -42,6 +42,6 @@ post-install:
 	    ${MV} $${i}.7 $${i}.0 ; \
 	done
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/09/27 17:07:38 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/09/28 09:13:59 jlam Exp $
 #
 
 DISTNAME=		aspell-0.50.3
@@ -32,5 +32,5 @@ REPLACE_PERL=		scripts/aspell-import
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/aspell
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/09/27 17:07:37 grant Exp $
+# $NetBSD: Makefile,v 1.18 2003/09/28 09:13:58 jlam Exp $
 
 DISTNAME=		pari-2.1.5
 PKGREVISION=		1
@@ -26,7 +26,7 @@ CONFIGURE_ENV+=		X11BASE=${X11BASE}
 
 TEST_TARGET=		test-compat bench
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

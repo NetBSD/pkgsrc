@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2003/09/27 17:07:38 grant Exp $
+# $NetBSD: Makefile,v 1.93 2003/09/28 09:13:59 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -95,7 +95,7 @@ post-install:
 	# Make template links writeable, to prevent "Permission denied"
 	${CHMOD} u+w ${PREFIX}/share/kde/apps/kfm/Desktop/Templates/*.kdelnk
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 # kdebase doesn't manipulate GIFs, but KDE packages depending on kdebase
 # often do, so put the dependency here.
 .include "../../graphics/libungif/buildlink2.mk"

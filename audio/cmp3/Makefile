@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/09/27 17:07:34 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/09/28 09:13:55 jlam Exp $
 #
 
 DISTNAME=	cmp3-2.0pre5
@@ -25,5 +25,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/cmp3
 	${INSTALL_DATA} ${WRKSRC}/cmp3rc ${PREFIX}/share/doc/cmp3/sample.cmp3rc
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

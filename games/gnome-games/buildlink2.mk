@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/09/27 17:07:36 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/09/28 09:13:57 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gnome-games.
 #
@@ -20,7 +20,7 @@ BUILDLINK_FILES.gnome-games+=	lib/gnome-stones/objects/libgnomekoban.*
 BUILDLINK_FILES.gnome-games+=	lib/libgdkcardimage.*
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../lang/guile14/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/09/27 17:07:35 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/28 09:13:56 jlam Exp $
 #
 
 DISTNAME=	hexedit-1.2.2
@@ -21,5 +21,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/hexedit
 .endfor
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/09/27 17:07:35 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/28 09:13:56 jlam Exp $
 #
 
 DISTNAME=	ekg-1.3
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=--without-debug
 CONFIGURE_ARGS+=--with-pthread
 .endif
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/09/27 17:07:36 grant Exp $
+# $NetBSD: Makefile,v 1.16 2003/09/28 09:13:57 jlam Exp $
 
 DISTNAME=		mercury-compiler-0.11.0
 PKGNAME=		mercury-0.11.0
@@ -38,5 +38,5 @@ do-install:
 	cd ${WRKSRC}/samples && ${PAX} -rw . ${PREFIX}/share/examples/mercury
 
 .include "../../devel/readline/buildlink2.mk"
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
