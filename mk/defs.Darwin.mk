@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.77 2004/06/18 11:22:41 kristerw Exp $
+# $NetBSD: defs.Darwin.mk,v 1.78 2004/08/01 18:24:20 schmonz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -103,7 +103,7 @@ GROUPADD?=		${LOCALBASE}/sbin/groupadd
 USERADD?=		${LOCALBASE}/sbin/useradd
 _PKG_USER_HOME?=	/var/empty	# to match other system accounts
 _PKG_USER_SHELL?=	/usr/bin/false	# to match other system accounts
-_USER_DEPENDS=		user>=20040331:../../sysutils/user_darwin
+_USER_DEPENDS=		user>=20040801:../../sysutils/user_darwin
 DEPENDS+=		${USE_USERADD:D${_USER_DEPENDS}}
 DEPENDS+=		${USE_GROUPADD:D${_USER_DEPENDS}}
 
