@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4289 2003/12/29 17:52:04 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4290 2003/12/30 03:22:10 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5479,3 +5479,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added apotheke-0.2 [xtraeme 2003-12-29]
 	Added at-spi-1.3.8 [xtraeme 2003-12-29]
 	Added gok-0.8.4 [xtraeme 2003-12-29]
+	Added p5-Net-Bind-0.05 [grant 2003-12-30]
