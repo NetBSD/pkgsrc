@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.17 2004/04/27 01:49:15 tv Exp $
+# $NetBSD: defs.Interix.mk,v 1.18 2004/04/27 03:29:09 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -80,9 +80,8 @@ XARGS?=		/bin/xargs
 USERADD?=	${LOCALBASE}/sbin/useradd
 GROUPADD?=	${LOCALBASE}/sbin/groupadd
 _PKG_USER_HOME?=# empty by default
-.if defined(USE_USERADD) || defined(USE_GROUPADD)
-DEPENDS+=	user>=20040426:../../sysutils/user_interix
-.endif
+DEPENDS+=	${USE_USERADD:Duser>=20040426:../../sysutils/user_interix}
+DEPENDS+=	${USE_GROUPADD:Duser>=20040426:../../sysutils/user_interix}
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		002
