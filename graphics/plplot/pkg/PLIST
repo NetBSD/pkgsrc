@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2001/03/30 20:26:23 jtb Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/06/20 12:51:54 jtb Exp $
 bin/plplot-config
 bin/plrender
 bin/plserver
@@ -19,9 +19,20 @@ include/plplot/pltcl.h
 include/plplot/pltk.h
 include/plplot/plxwd.h
 include/plplot/tclMatrix.h
+@unexec install-info --delete --info-dir=%D/info %D/info/plplotdoc.info
+info/plplotdoc.info
+info/plplotdoc.info-1
+info/plplotdoc.info-2
+info/plplotdoc.info-3
+info/plplotdoc.info-4
+info/plplotdoc.info-5
+info/plplotdoc.info-6
+info/plplotdoc.info-7
+info/plplotdoc.info-8
+@exec install-info --info-dir=%D/info %D/info/plplotdoc.info
 lib/libplcxxd.a
-lib/libtclmatrixd.a
 lib/libplplotd.a
+lib/libtclmatrixd.a
 lib/tcl/plplot/FileSelector.tcl
 lib/tcl/plplot/PLWin.itk
 lib/tcl/plplot/PLXWin.itk
@@ -50,67 +61,55 @@ libdata/plplot/plstnd5.fnt
 libdata/plplot/plxtnd5.fnt
 libdata/plplot/usa.map
 libdata/plplot/usaglobe.map
-share/doc/html/plplot/index.html
-share/doc/html/plplot/p42.html
-share/doc/html/plplot/intro.html
 share/doc/html/plplot/acquiring-plplot.html
-share/doc/html/plplot/installing.html
-share/doc/html/plplot/organization.html
-share/doc/html/plplot/copyrights.html
-share/doc/html/plplot/credits.html
-share/doc/html/plplot/p131.html
-share/doc/html/plplot/simple.html
-share/doc/html/plplot/initializing.html
-share/doc/html/plplot/scales.html
-share/doc/html/plplot/labelling.html
-share/doc/html/plplot/drawing.html
-share/doc/html/plplot/finishing.html
-share/doc/html/plplot/error.html
 share/doc/html/plplot/advanced.html
-share/doc/html/plplot/output-devices.html
-share/doc/html/plplot/driver-functions.html
-share/doc/html/plplot/metafiles-plrender.html
-share/doc/html/plplot/familying.html
-share/doc/html/plplot/interactive-devices.html
-share/doc/html/plplot/specifying-devices.html
-share/doc/html/plplot/arguments.html
-share/doc/html/plplot/viewports.html
-share/doc/html/plplot/windows.html
 share/doc/html/plplot/annotation.html
-share/doc/html/plplot/standard-window.html
-share/doc/html/plplot/line-attributes.html
-share/doc/html/plplot/fill-pattern.html
-share/doc/html/plplot/color.html
-share/doc/html/plplot/characters.html
-share/doc/html/plplot/escape-sequences.html
-share/doc/html/plplot/tri-d-plots.html
-share/doc/html/plplot/contour-plots.html
-share/doc/html/plplot/x-drivers.html
-share/doc/html/plplot/tk-driver.html
-share/doc/html/plplot/output-drivers.html
-share/doc/html/plplot/p1864.html
+share/doc/html/plplot/api-c.html
+share/doc/html/plplot/api-fortran.html
+share/doc/html/plplot/api.html
+share/doc/html/plplot/arguments.html
+share/doc/html/plplot/bibliography.html
 share/doc/html/plplot/c.html
-share/doc/html/plplot/fortran.html
-share/doc/html/plplot/cplusplus.html
+share/doc/html/plplot/characters.html
+share/doc/html/plplot/color.html
+share/doc/html/plplot/contour-plots.html
+share/doc/html/plplot/copyrights.html
 share/doc/html/plplot/cpluscplus-design.html
 share/doc/html/plplot/cpluscplus-specializing.html
 share/doc/html/plplot/cpluscplus-status.html
-share/doc/html/plplot/tcl.html
-share/doc/html/plplot/tcl-overview.html
-share/doc/html/plplot/tcl-extension.html
-share/doc/html/plplot/tcl-contouring.html
-share/doc/html/plplot/tcl-understanding.html
-share/doc/html/plplot/extended-wish.html
-share/doc/html/plplot/introduction-tk.html
-share/doc/html/plplot/introduction-itcl.html
-share/doc/html/plplot/extensions-tcl.html
+share/doc/html/plplot/cplusplus.html
+share/doc/html/plplot/credits.html
 share/doc/html/plplot/custom-extensions-tcl.html
+share/doc/html/plplot/drawing.html
+share/doc/html/plplot/driver-functions.html
+share/doc/html/plplot/error.html
+share/doc/html/plplot/escape-sequences.html
+share/doc/html/plplot/extended-wish.html
+share/doc/html/plplot/extensions-tcl.html
+share/doc/html/plplot/familying.html
+share/doc/html/plplot/fill-pattern.html
+share/doc/html/plplot/finishing.html
+share/doc/html/plplot/fortran.html
 share/doc/html/plplot/gui.html
+share/doc/html/plplot/index.html
+share/doc/html/plplot/initializing.html
+share/doc/html/plplot/installing.html
+share/doc/html/plplot/interactive-devices.html
+share/doc/html/plplot/intro.html
+share/doc/html/plplot/introduction-itcl.html
+share/doc/html/plplot/introduction-tk.html
+share/doc/html/plplot/labelling.html
+share/doc/html/plplot/line-attributes.html
+share/doc/html/plplot/metafiles-plrender.html
+share/doc/html/plplot/organization.html
+share/doc/html/plplot/os-notes.html
+share/doc/html/plplot/output-devices.html
+share/doc/html/plplot/output-drivers.html
+share/doc/html/plplot/p133.html
+share/doc/html/plplot/p1862.html
+share/doc/html/plplot/p2391.html
+share/doc/html/plplot/p42.html
 share/doc/html/plplot/perl.html
-share/doc/html/plplot/python.html
-share/doc/html/plplot/p2393.html
-share/doc/html/plplot/bibliography.html
-share/doc/html/plplot/api.html
 share/doc/html/plplot/pl_setcontlabelformat.html
 share/doc/html/plplot/pladv.html
 share/doc/html/plplot/plaxes.html
@@ -123,7 +122,10 @@ share/doc/html/plplot/plclr.html
 share/doc/html/plplot/plcol.html
 share/doc/html/plplot/plcol0.html
 share/doc/html/plplot/plcol1.html
+share/doc/html/plplot/plcon1.html
+share/doc/html/plplot/plcon2.html
 share/doc/html/plplot/plcont.html
+share/doc/html/plplot/plcontfortran.html
 share/doc/html/plplot/plcpstrm.html
 share/doc/html/plplot/plend.html
 share/doc/html/plplot/plend1.html
@@ -131,6 +133,7 @@ share/doc/html/plplot/plenv.html
 share/doc/html/plplot/pleop.html
 share/doc/html/plplot/plerrx.html
 share/doc/html/plplot/plerry.html
+share/doc/html/plplot/plexit.html
 share/doc/html/plplot/plfamadv.html
 share/doc/html/plplot/plfill.html
 share/doc/html/plplot/plfill3.html
@@ -146,6 +149,7 @@ share/doc/html/plplot/plgdidev.html
 share/doc/html/plplot/plgdiori.html
 share/doc/html/plplot/plgdiplt.html
 share/doc/html/plplot/plgfam.html
+share/doc/html/plplot/plgfile.html
 share/doc/html/plplot/plgfnam.html
 share/doc/html/plplot/plglevel.html
 share/doc/html/plplot/plgpage.html
@@ -166,10 +170,13 @@ share/doc/html/plplot/plline.html
 share/doc/html/plplot/plline3.html
 share/doc/html/plplot/pllsty.html
 share/doc/html/plplot/plmesh.html
+share/doc/html/plplot/plmeshfortran.html
 share/doc/html/plplot/plmkstrm.html
 share/doc/html/plplot/plmtex.html
 share/doc/html/plplot/plot3d.html
+share/doc/html/plplot/plot3dfortran.html
 share/doc/html/plplot/plotsh3d.html
+share/doc/html/plplot/plp_getinitdriverlist.html
 share/doc/html/plplot/plpage.html
 share/doc/html/plplot/plpat.html
 share/doc/html/plplot/plpoin.html
@@ -198,11 +205,13 @@ share/doc/html/plplot/plsdiori.html
 share/doc/html/plplot/plsdiplt.html
 share/doc/html/plplot/plsdiplz.html
 share/doc/html/plplot/plsesc.html
+share/doc/html/plplot/plsescfortran.html
 share/doc/html/plplot/plsfam.html
+share/doc/html/plplot/plsfile.html
 share/doc/html/plplot/plsfnam.html
-share/doc/html/plplot/plshades.html
 share/doc/html/plplot/plshade.html
 share/doc/html/plplot/plshade1.html
+share/doc/html/plplot/plshades.html
 share/doc/html/plplot/plsmaj.html
 share/doc/html/plplot/plsmin.html
 share/doc/html/plplot/plsori.html
@@ -223,6 +232,9 @@ share/doc/html/plplot/plsyax.html
 share/doc/html/plplot/plsym.html
 share/doc/html/plplot/plszax.html
 share/doc/html/plplot/pltext.html
+share/doc/html/plplot/pltr0.html
+share/doc/html/plplot/pltr1.html
+share/doc/html/plplot/pltr2.html
 share/doc/html/plplot/plvasp.html
 share/doc/html/plplot/plvpas.html
 share/doc/html/plplot/plvpor.html
@@ -231,22 +243,21 @@ share/doc/html/plplot/plw3d.html
 share/doc/html/plplot/plwid.html
 share/doc/html/plplot/plwind.html
 share/doc/html/plplot/plxormod.html
-share/doc/html/plplot/api-c.html
-share/doc/html/plplot/plp_getinitdriverlist.html
-share/doc/html/plplot/plexit.html
-share/doc/html/plplot/plgfile.html
-share/doc/html/plplot/plsfile.html
-share/doc/html/plplot/pltr0.html
-share/doc/html/plplot/pltr1.html
-share/doc/html/plplot/pltr2.html
-share/doc/html/plplot/api-fortran.html
-share/doc/html/plplot/plcon1.html
-share/doc/html/plplot/plcon2.html
-share/doc/html/plplot/plcontfortran.html
-share/doc/html/plplot/plmeshfortran.html
-share/doc/html/plplot/plot3dfortran.html
-share/doc/html/plplot/plsescfortran.html
-share/doc/html/plplot/os-notes.html
+share/doc/html/plplot/python.html
+share/doc/html/plplot/scales.html
+share/doc/html/plplot/simple.html
+share/doc/html/plplot/specifying-devices.html
+share/doc/html/plplot/standard-window.html
+share/doc/html/plplot/tcl-contouring.html
+share/doc/html/plplot/tcl-extension.html
+share/doc/html/plplot/tcl-overview.html
+share/doc/html/plplot/tcl-understanding.html
+share/doc/html/plplot/tcl.html
+share/doc/html/plplot/tk-driver.html
+share/doc/html/plplot/tri-d-plots.html
+share/doc/html/plplot/viewports.html
+share/doc/html/plplot/windows.html
+share/doc/html/plplot/x-drivers.html
 share/doc/plplot/CHANGES
 share/doc/plplot/COPYING.LIB
 share/doc/plplot/Copyright
@@ -322,12 +333,12 @@ share/examples/plplot/tcl/x15.tcl
 share/examples/plplot/tcl/x16.tcl
 share/examples/plplot/tcl/x17.tcl
 share/examples/plplot/tcl/x18.tcl
-share/examples/plplot/test_octave.sh
-share/examples/plplot/test_tcl.sh
-share/examples/plplot/test_python.sh
-share/examples/plplot/test_f77.sh
-share/examples/plplot/test_cxx.sh
 share/examples/plplot/test_c.sh
+share/examples/plplot/test_cxx.sh
+share/examples/plplot/test_f77.sh
+share/examples/plplot/test_octave.sh
+share/examples/plplot/test_python.sh
+share/examples/plplot/test_tcl.sh
 share/examples/plplot/tk/Makefile
 share/examples/plplot/tk/README.tkdemos
 share/examples/plplot/tk/tk01
@@ -356,14 +367,14 @@ share/examples/plplot/tk/x18.tcl
 share/examples/plplot/tk/xtk01.c
 share/examples/plplot/tk/xtk02.c
 share/examples/plplot/tk/xtk04.c
-@dirrm include/plplot
-@dirrm lib/tcl/plplot
-@dirrm libdata/plplot
-@dirrm share/doc/html/plplot
-@dirrm share/doc/plplot
-@dirrm share/examples/plplot/c
-@dirrm share/examples/plplot/c++
-@dirrm share/examples/plplot/f77
-@dirrm share/examples/plplot/tcl
 @dirrm share/examples/plplot/tk
+@dirrm share/examples/plplot/tcl
+@dirrm share/examples/plplot/f77
+@dirrm share/examples/plplot/c++
+@dirrm share/examples/plplot/c
 @dirrm share/examples/plplot
+@dirrm share/doc/plplot
+@dirrm share/doc/html/plplot
+@dirrm libdata/plplot
+@dirrm lib/tcl/plplot
+@dirrm include/plplot
