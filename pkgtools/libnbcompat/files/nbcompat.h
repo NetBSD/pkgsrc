@@ -285,6 +285,14 @@ int inet_pton(int, const char *, void *);
 int	mkstemp(char *);
 #endif
 
+#ifndef HAVE_LCHMOD
+int	lchmod(const char *, mode_t);
+#endif
+
+#ifndef HAVE_LCHOWN
+int	lchown(const char *, uid_t, gid_t);
+#endif
+
 #ifndef HAVE_SETPROGNAME
 const char *getprogname(void);
 void	setprogname(const char *);
@@ -300,6 +308,10 @@ char   *strdup(const char *);
 
 #ifndef HAVE_STRERROR
 char   *strerror(int);
+#endif
+
+#ifndef HAVE_STRMODE
+void strmode(mode_t, char *);
 #endif
 
 #if !defined(HAVE_STRPTIME) || !defined(HAVE_STRPTIME_D)
