@@ -3,11 +3,8 @@
 # Date created:				19971214
 # Whom:					hubertf@netbsd.org
 #
-# $NetBSD: Makefile,v 1.13 1998/03/10 16:18:28 frueauf Exp $
+# $NetBSD: Makefile,v 1.14 1998/03/18 03:05:45 tv Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
-#
-# Maximal ssh package requires a YES value for USE_PERL
-# and USE_LIBWRAP.
 #
 
 DISTNAME=		ssh-1.2.22
@@ -29,6 +26,7 @@ GNU_CONFIGURE=		YES
 # <bsd.port.mk> that test variables that may be set here.  Note that
 # this inclusion is otherwise redundant, since <bsd.port.mk> includes
 # <bsd.own.mk>, which includes it.
+# XXX: FIXME ! We need a simple way of doing this in many dozen pkgs.
 
 OPSYS!= uname -s
 .if (${OPSYS} == "FreeBSD")
@@ -41,37 +39,25 @@ OPSYS!= uname -s
 .endif
 .endif
 
-# You can set USA_RESIDENT appropriately in /etc/mk.conf if this bugs you..
-USA_RESIDENT?=		NO
-
-.if defined(USA_RESIDENT) && ${USA_RESIDENT} == YES
-DISTFILES=		${DISTNAME}.tar.gz rsaref2.tar.gz
-MASTER_SITES=	\
-	ftp://ftp.funet.fi/pub/unix/security/login/ssh/ \
-	ftp://nic.funet.fi/pub/crypt/mirrors/ftp.dsi.unimi.it/applied-crypto/ \
-	ftp://rzsun2.informatik.uni-hamburg.de/pub/virus/crypt/ripem/ \
-	ftp://idea.sec.dsi.unimi.it/pub/security/crypt/math/ \
-	ftp://ftp.univie.ac.at/security/crypt/cryptography/asymmetric/rsa/ \
-	ftp://isdec.vc.cvut.cz/pub/security/unimi/crypt/applied-crypto/
-.endif
-
 # Use SSH_CONF_DIR from /etc/mk.conf, if defined; otherwise default to /etc
 SSH_CONF_DIR?=		/etc
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --with-etcdir=${SSH_CONF_DIR} \
-			--disable-suid-ssh
+			--disable-suid-ssh --with-libwrap
 
 #Uncomment if all your users are in their own group and their homedir
 #is writeable by that group.  Beware the security implications!
-#CONFIGURE_ARGS+= --enable-group-writeability
+#CONFIGURE_ARGS+=	--enable-group-writeability
 
 #Uncomment if you want to allow ssh to emulate an unencrypted rsh connection
 #over a secure medium.  This is normally dangerous since it can lead to the
 #disclosure keys and passwords.
 #CONFIGURE_ARGS+=	--with-none
 
-.if defined(USA_RESIDENT) && ${USA_RESIDENT} == YES
-CONFIGURE_ARGS+=	--with-rsaref
+.if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
+LIB_DEPENDS+=		rsaref.2.:${PORTSDIR}/security/rsaref
+CONFIGURE_ARGS+=	--with-rsaref="${PREFIX}/lib"
+CFLAGS+=		-I${PREFIX}/include
 .endif
 
 # Include support for the SecureID card
@@ -87,14 +73,10 @@ CONFIGURE_ARGS+=	--with-secureid
 CONFIGURE_ARGS+=	--without-idea
 .endif
 
-# Support for libwrap.
-.if defined(USE_LIBWRAP) && ${USE_LIBWRAP} == YES
-CONFIGURE_ARGS+=	--with-libwrap
-.endif
-
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && ${USE_SOCKS} == YES
-CONFIGURE_ARGS+=	--with-socks="-L${PREFIX}/lib -lsocks5"
+CONFIGURE_ARGS+= 	--with-socks="-L${PREFIX}/lib -lsocks5"
+CFLAGS+=	 	-I${PREFIX}/include
 .endif
 
 MAN1=			scp.1 ssh-add.1 ssh-agent.1 ssh-keygen.1 ssh.1 \
@@ -106,21 +88,18 @@ pre-patch:
 	    ${WRKSRC}/make-ssh-known-hosts.pl.in
 
 fetch-depends:
-.if !defined(USA_RESIDENT) || ${USA_RESIDENT} != YES && ${USA_RESIDENT} != NO
+.if !defined(USE_RSAREF2) || ${USE_RSAREF2} != YES && ${USE_RSAREF2} != NO
 	@${ECHO}
-	@${ECHO} You must set variable USA_RESIDENT to YES if you are a USA
-	@${ECHO} resident or NO otherwise.
-	@${ECHO} If you are a USA resident you have to get the RSAREF2
-	@${ECHO} library \(RSA Inc. holds a patent on RSA and public key
-	@${ECHO} cypto in general - using RSA implementations other than
-	@${ECHO} RSAREF will violate the US patent law\)
-	@${ECHO} and extract it to ${WRKSRC}.
+	@${ECHO} The variable USE_RSAREF2 must be set to either YES or NO
+	@${ECHO} in order to build this package.  USA residents not at the
+	@${ECHO} Massachusetts Institute of Technology MUST set this
+	@${ECHO} variable to YES.  Users outside the USA MUST set this
+	@${ECHO} variable to NO.  People at MIT may choose -- NO is faster.
+	@${ECHO}
+	@${ECHO} You may also want to set DONT_USE_IDEA to YES if this program
+	@${ECHO} will be used for a commercial purpose.  There are other
+	@${ECHO} configure options\; look at the pkg Makefile for more info.
 	@${FALSE}
-.endif
-
-post-extract:
-.if defined(USA_RESIDENT) && ${USA_RESIDENT} == YES
-	@${MV} ${WRKDIR}/rsaref2 ${WRKSRC}/rsaref2
 .endif
 
 pre-install:
@@ -147,11 +126,10 @@ post-install:
 		${PREFIX}/bin/ssh-keygen \
 			-f ${SSH_CONF_DIR}/ssh_host_key -N ""; \
 	fi
+	${RM} -f ${PREFIX}/man/man1/slogin.1 ${PREFIX}/man/man1/slogin.1.gz
 .if defined(MANZ)
-	${RM} -f ${PREFIX}/man/man1/slogin.1.gz
 	${LN} -sf ssh.1.gz ${PREFIX}/man/man1/slogin.1.gz
 .else
-	${RM} -f ${PREFIX}/man/man1/slogin.1
 	${LN} -sf ssh.1 ${PREFIX}/man/man1/slogin.1
 .endif
 #	@if [ ! -f ${PREFIX}/etc/rc.d/sshd.sh ]; then \
@@ -170,15 +148,3 @@ pre-clean:
 # targets precede inclusion of this.
 
 .include <bsd.port.mk>
-
-# Following stuff must be after <bsd.port.mk> to expand
-# exists(${PREFIX}) properly
-
-.if defined(USE_PERL) && ${USE_PERL} == YES || \
-    exists(${PREFIX}/bin/perl5.00404) && \
-    (!defined(USE_PERL) || ${USE_PERL} != NO)
-BUILD_DEPENDS+=		perl5.00404:${PORTSDIR}/lang/perl5
-CONFIGURE_ENV+=		PERL=${PREFIX}/bin/perl5.00404
-.else
-CONFIGURE_ENV+=		PERL=/replace_it_with_PERL_path
-.endif
