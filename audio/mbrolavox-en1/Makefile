@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/16 13:30:46 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/20 11:40:08 wiz Exp $
 
 DISTNAME=	en1-980910
 PKGNAME=	mbrolavox-en1-980910
@@ -11,12 +11,9 @@ MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 COMMENT=	British English male voice for MBROLA
 
-BUILD_DEPENDS=	unzip:../../archivers/unzip
 DEPENDS+=	mbrola-301h:../mbrola
 
 LICENSE=	no-commercial-use
-
-EXTRACT_CMD=	unzip -Loq ${DOWNLOADED_DISTFILE}
 
 NO_BUILD=	yes
 
