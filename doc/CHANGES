@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6628 2004/07/21 21:50:20 scw Exp $
+$NetBSD: CHANGES,v 1.6629 2004/07/21 22:38:00 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3485,3 +3485,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added steghide-0.5.1 [snj 2004-07-21]
 	Added clamsmtp-0.3 [xtraeme 2004-07-21]
 	Added kphone-4.0.3 [scw 2004-07-21]
+	Added mutt-1.5.6 as mail/mutt-devel [jlam 2004-07-21]
