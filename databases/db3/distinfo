@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2001/10/23 07:26:41 lukem Exp $
+$NetBSD: distinfo,v 1.5 2001/11/21 23:40:47 jlam Exp $
 
 SHA1 (db-3.2.9.tar.gz) = 1adcc34b6a56e51e4019e80bc56b509ac28e1035
 Size (db-3.2.9.tar.gz) = 2085238 bytes
@@ -6,5 +6,5 @@ SHA1 (patch.3.2.9.1) = 34108ae9ce03c40c4d1016e9e54690d5d8fc4135
 Size (patch.3.2.9.1) = 2139 bytes
 SHA1 (patch.3.2.9.2) = c447c089f44c401c174244a7f9f7967522ba92a4
 Size (patch.3.2.9.2) = 495 bytes
-SHA1 (patch-aa) = 08b864ac2c9513c61367efe1c53817f600b420d2
+SHA1 (patch-aa) = 6b49260170602032dd94d6fd206d83110dbdb9b0
 SHA1 (patch-ab) = 7d33cd81c1e23b44d72bb2018624af8dfd08fed4
