@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 15:22:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/12 06:08:12 jlam Exp $
 #
 
 DISTNAME=	get_ds7_1.2.4
@@ -24,6 +24,7 @@ post-patch:
 		<${WRKSRC}/get_ds7 >${WRKSRC}/get_ds7.exe
 
 do-install:
+	${INSTALL_DATA_DIR} ${PERL5_SITELIB}
 	${INSTALL_DATA} ${WRKSRC}/ds7_lib.pm ${PERL5_SITELIB}
 	${INSTALL_SCRIPT} ${WRKSRC}/get_ds7.exe ${PREFIX}/bin/get_ds7
 	${INSTALL_DATA_DIR} ${DOCDIR}
