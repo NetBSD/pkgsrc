@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:36 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/25 22:59:28 wiz Exp $
 #
 
 DISTNAME=	coconut-0.3.0
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.asahi-net.or.jp/~em7t-hmd/coconut/		\
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/coconut-lib/
 COMMENT=	Objective-C library for Unix-like systems
+
+BUILD_DEPENDS+=	papaya>=0.1.7:../../devel/papaya
 
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
@@ -27,7 +29,6 @@ pre-configure:
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
-.include "../../devel/papaya/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
 .include "../../net/gnet1/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
