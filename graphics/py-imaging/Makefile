@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/10/09 19:04:49 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2002/10/24 20:44:51 drochner Exp $
 
 DISTNAME=	Imaging-1.1.3
 PKGNAME=	${PYPKGPREFIX}-imaging-1.1.3
@@ -21,6 +21,12 @@ do-configure:
 	${SED} "s|@JPEGDIR@|${BUILDLINK_PREFIX.jpeg}|g" <${WRKSRC}/setup.py \
 	 >${WRKSRC}/setup.py.tmp && ${MV} -f ${WRKSRC}/setup.py.tmp \
 	 ${WRKSRC}/setup.py
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/${PYINC}/PIL
+	(cd ${WRKSRC}/libImaging; ${INSTALL_DATA} \
+		ImConfig.h ImPlatform.h Imaging.h \
+		${PREFIX}/${PYINC}/PIL )
 
 .include "../../lang/python/extension.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
