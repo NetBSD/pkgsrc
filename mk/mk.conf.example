@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.110 2000/01/06 01:26:31 wiz Exp $
+# $NetBSD: mk.conf.example,v 1.111 2000/01/06 08:48:52 fredb Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -521,6 +521,12 @@ PAPERSIZE=	A4
 #USE_INN=
 # Used in trn and nn to specify use of "inn" instead of "nntpclnt"
 # package to provide "inews" binary.
+# Possible: not defined, YES
+# Default: not defined
+
+#USE_MESA=
+# Used in battleball to build in support for OpenGL/Mesa. Will use
+# Mesa-glx (rather than Mesa) if Mesa-glx is already installed.
 # Possible: not defined, YES
 # Default: not defined
 
