@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2004/04/02 12:33:22 adam Exp $
+# $NetBSD: Makefile,v 1.20 2004/07/05 11:04:33 drochner Exp $
 #
 
-DISTNAME=	gtkmm-2.2.10
+DISTNAME=	gtkmm-2.2.12
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkmm/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/2.2/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.gtkmm.org/

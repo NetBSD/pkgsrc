@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2003/08/27 16:06:13 adam Exp $
+$NetBSD: patch-ab,v 1.5 2004/07/05 11:04:34 drochner Exp $
 
---- docs/FAQ/Makefile.in.orig	2003-08-23 09:49:27.000000000 +0200
+--- docs/FAQ/Makefile.in.orig	2004-06-03 19:49:17.000000000 +0200
 +++ docs/FAQ/Makefile.in
-@@ -170,7 +170,7 @@ web_path_gtkmm2 = /home/groups/g/gt/gtkm
+@@ -187,7 +187,7 @@ docbook_docs = gtkmm-faq.xml
+ web_path_gtkmm2 = /home/groups/g/gt/gtkmm/htdocs/gtkmm2/
  web_path_docs = $(web_path_gtkmm2)docs/
  rsync_args = -vz --rsh ssh --delete --delete-after
- 
 -gtkmm_docdir = $(datadir)/doc/gtkmm-2.0/docs
 +gtkmm_docdir = $(datadir)/doc/gtkmm-2.0
- 
  gtkmm_faq_path = $(web_path_docs)FAQ
- 
+ EXTRA_DIST = README gtkmm-faq.xml html
+ faqdir = $(gtkmm_docdir)/FAQ/html
