@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2000/09/20 04:49:19 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2000/09/28 16:31:15 hubertf Exp $
 #
 
 DISTNAME=		openssh-2.2.0p1
@@ -51,8 +51,8 @@ DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
 MESSAGE_FILE=		${WRKDIR}/MESSAGE
 
-# matches what's in `Configure' (except sparc64)
-ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
+# matches what's in `Configure' (except sparc64 and alpha, see PR 10984)
+ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-m68k NetBSD-*-mips NetBSD-*-mipseb \
 			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-powerpc \
 			NetBSD-*-sparc NetBSD-*-vax

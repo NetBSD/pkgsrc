@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/09/09 19:40:22 fredb Exp $
+# $NetBSD: Makefile,v 1.22 2000/09/28 16:31:15 hubertf Exp $
 #
 
 DISTNAME=		openssl-0.9.5a
@@ -15,8 +15,8 @@ CRYPTO=			YES
 USE_PERL5=		YES
 USE_RSAREF2=		NO
 
-# matches what's in `Configure' (except sparc64)
-ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
+# matches what's in `Configure' (except sparc64 and alpha, see PR 10984)
+ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-m68k NetBSD-*-mips NetBSD-*-mipseb \
 			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-powerpc \
 			NetBSD-*-sparc NetBSD-*-vax \
