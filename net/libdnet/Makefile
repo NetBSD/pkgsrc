@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2004/04/20 07:56:31 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/26 22:39:18 wiz Exp $
 #
 
 DISTNAME=	libdnet-1.7
 CATEGORIES=	devel net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdnet/}
 
-MAINTAINER=	bit5hfit@ethernet.tk
+MAINTAINER=	bit5hift@ethernet.tk
 HOMEPAGE=	http://libdnet.sourceforge.net/
 COMMENT=	C interface to several low-level networking routines
 
