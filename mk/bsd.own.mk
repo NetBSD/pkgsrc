@@ -1,5 +1,5 @@
-#	$NetBSD: bsd.own.mk,v 1.13 1999/03/08 20:38:15 agc Exp $
-# From:  NetBSD: bsd.own.mk,v 1.113 1999/02/07 17:21:09 hubertf Exp 
+#	$NetBSD: bsd.own.mk,v 1.14 1999/03/15 12:49:01 mrg Exp $
+# From:  NetBSD: bsd.own.mk,v 1.120 1999/02/24 14:42:36 drochner Exp
 
 .if !defined(_PKGSRC_BSD_OWN_MK_)
 _PKGSRC_BSD_OWN_MK_=1
@@ -66,6 +66,11 @@ MANOWN?=	root
 MANMODE?=	${NONBINMODE}
 MANINSTALL?=	maninstall catinstall
 
+INFODIR?=	/usr/share/info
+INFOGRP?=	wheel
+INFOOWN?=	root
+INFOMODE?=	${NONBINMODE}
+
 LIBDIR?=	${_OWN_PREFIX}/lib
 LINTLIBDIR?=	${_OWN_PREFIX}/libdata/lint
 LIBGRP?=	${BINGRP}
@@ -119,15 +124,15 @@ NETBSD_CURRENT!= /usr/bin/uname -r | /usr/bin/sed -e 's|^1\.3[C-Z]$$|yes|'
 .if !defined(UVM)
 .if (${NETBSD_CURRENT} == "yes")
 # Systems on which UVM is the standard VM system.
-.if	(${MACHINE} != "pica")
+.if ${MACHINE} != "pica"
 UVM?=		yes
 .endif
 
 # Systems that use UVM's new pmap interface.
-.if	(${MACHINE} == "alpha") || \
-	(${MACHINE} == "i386") || \
-	(${MACHINE} == "pc532") || \
-	(${MACHINE} == "vax")
+.if ${MACHINE} == "alpha" || \
+    ${MACHINE} == "i386" || \
+    ${MACHINE} == "pc532" || \
+    ${MACHINE} == "vax"
 PMAP_NEW?=	yes
 .endif
 
@@ -136,14 +141,14 @@ PMAP_NEW?=	yes
 .endif # !UVM
 
 # The sparc64 port is incomplete.
-.if (${MACHINE_ARCH} == "sparc64")
+.if ${MACHINE_ARCH} == "sparc64"
 NOPROFILE=1
 NOPIC=1
 NOLINT=1
 .endif
 
 # The PowerPC port is incomplete.
-.if (${MACHINE_ARCH} == "powerpc")
+.if ${MACHINE_ARCH} == "powerpc"
 NOPROFILE=
 .endif
 
@@ -154,10 +159,10 @@ NOPROFILE=
 # SHLIB_TYPE:		"ELF" or "a.out" or "" to force static libraries.
 #
 .if (${NETBSD_CURRENT} == "yes")
-.if (${MACHINE_ARCH} == "alpha") || \
-    (${MACHINE_ARCH} == "mips") || \
-    (${MACHINE_ARCH} == "powerpc") || \
-    (${MACHINE_ARCH} == "sparc64")
+.if ${MACHINE_ARCH} == "alpha" || \
+    ${MACHINE_ARCH} == "mipsel" || ${MACHINE_ARCH} == "mipseb" || \
+    ${MACHINE_ARCH} == "powerpc" || \
+    ${MACHINE_ARCH} == "sparc64"
 OBJECT_FMT?=ELF
 .else
 OBJECT_FMT?=a.out
@@ -198,11 +203,13 @@ GNU_ARCH.powerpc=powerpc
 GNU_ARCH.sparc=sparc
 GNU_ARCH.sparc64=sparc
 GNU_ARCH.vax=vax
-# XXX temporary compatibility
-GNU_ARCH.mips=mipsel
+.if ${MACHINE_ARCH} == "mips"
+.INIT:
+	@echo Must set MACHINE_ARCH to one of mipseb or mipsel
+	@false
+.endif
 
-# 
-.if (${MACHINE_ARCH} == "sparc64")
+.if ${MACHINE_ARCH} == "sparc64"
 MACHINE_GNU_ARCH=${MACHINE_ARCH}
 .else
 MACHINE_GNU_ARCH=${GNU_ARCH.${MACHINE_ARCH}}
@@ -218,7 +225,7 @@ TARGETS+=	all clean cleandir depend distclean includes install lint obj \
 # this is used by bsd.pkg.mk to stop "install" being defined
 NEED_OWN_INSTALL_TARGET?=	yes
 
-.if (${NEED_OWN_INSTALL_TARGET} == "yes")
+.if ${NEED_OWN_INSTALL_TARGET} == "yes"
 .if !target(install)
 install:	.NOTMAIN beforeinstall subdir-install realinstall afterinstall
 beforeinstall:	.NOTMAIN
@@ -227,5 +234,91 @@ realinstall:	.NOTMAIN beforeinstall
 afterinstall:	.NOTMAIN subdir-install realinstall
 .endif #! install target
 .endif #! NEED_OWN_INSTALL_TARGET
+
+# Define MKxxx variables (which are either yes or no) for users
+# to set in /etc/mk.conf and override on the make commandline.
+# These should be tested with `== "no"' or `!= "no"'.
+# The NOxxx variables should only be used by Makefiles.
+#
+
+MKCATPAGES?=yes
+
+.if defined(NODOC)
+MKDOC=no
+#.elif !defined(MKDOC)
+#MKDOC=yes
+.else
+MKDOC?=yes
+.endif
+
+MKINFO?=yes
+
+.if defined(NOLINKLIB)
+MKLINKLIB=no
+.else
+MKLINKLIB?=yes
+.endif
+.if ${MKLINKLIB} == "no"
+MKPICINSTALL=no
+MKPROFILE=no
+.endif
+
+.if defined(NOLINT)
+MKLINT=no
+.else
+MKLINT?=yes
+.endif
+
+.if defined(NOMAN)
+MKMAN=no
+.else
+MKMAN?=yes
+.endif
+.if ${MKMAN} == "no"
+MKCATPAGES=no
+.endif
+
+.if defined(NONLS)
+MKNLS=no
+.else
+MKNLS?=yes
+.endif
+
+.if defined(NOOBJ)
+MKOBJ=no
+.else
+MKOBJ?=yes
+.endif
+
+.if defined(NOPIC)
+MKPIC=no
+.else
+MKPIC?=yes
+.endif
+
+.if defined(NOPICINSTALL)
+MKPICINSTALL=no
+.else
+MKPICINSTALL?=yes
+.endif
+
+.if defined(NOPROFILE)
+MKPROFILE=no
+.else
+MKPROFILE?=yes
+.endif
+
+.if defined(NOSHARE)
+MKSHARE=no
+.else
+MKSHARE?=yes
+.endif
+.if ${MKSHARE} == "no"
+MKCATPAGES=no
+MKDOC=no
+MKINFO=no
+MKMAN=no
+MKNLS=no
+.endif
 
 .endif		# _PKGSRC_BSD_OWN_MK_
