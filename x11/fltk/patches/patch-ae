@@ -1,18 +1,28 @@
-$NetBSD: patch-ae,v 1.1 2000/08/28 13:38:57 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2001/05/26 06:37:46 jlam Exp $
 
---- documentation/Makefile.orig	Mon Jun  5 23:20:35 2000
-+++ documentation/Makefile
-@@ -128,10 +128,9 @@
- depend:
+--- fluid/Makefile.orig	Mon Jan 22 10:13:38 2001
++++ fluid/Makefile
+@@ -49,9 +49,9 @@
  
- install:
--	-mkdir -p $(prefix)/share/doc/fltk
--	cp -f $(HTMLFILES) index.html $(prefix)/share/doc/fltk
--	cp -f *.gif *.jpg $(prefix)/share/doc/fltk
--	chmod 644 $(prefix)/share/doc/fltk/*
-+	-${INSTALL_DATA_DIR} $(prefix)/share/doc/html/fltk
-+	${INSTALL_DATA} $(HTMLFILES) index.html $(prefix)/share/doc/html/fltk
-+	${INSTALL_DATA} *.gif *.jpg $(prefix)/share/doc/html/fltk
+ include ../makeinclude
  
- fltk.d/index.html: $(HTMLFILES)
- 	echo "Generating HTML documentation..."
+-$(PROGRAM) : $(OBJECTS) ../lib/$(LIBNAME)
++$(PROGRAM) : $(OBJECTS) $(LIBFLTK)
+ 	echo Linking $@...
+-	$(CXX) -L../lib $(LDFLAGS) -o $(PROGRAM) $(OBJECTS) -lfltk $(LDLIBS)
++	$(CXX) $(LDFLAGS) -o $(PROGRAM) $(OBJECTS) $(LINKFLTK) $(LDLIBS)
+ 
+ clean :
+ 	-@ rm -f *.o $(PROGRAM) $(CLEAN) core *~ makedepend
+@@ -63,9 +63,9 @@
+ 
+ install: $(PROGRAM)
+ 	echo "Installing FLUID..."
+-	strip $(PROGRAM)
+ 	-mkdir -p $(bindir)
+-	cp $(PROGRAM) $(bindir)/$(PROGRAM)
++	$(INSTALL_BIN) $(PROGRAM) $(bindir)/$(PROGRAM)
++	strip $(bindir)/$(PROGRAM)
+ 	chmod 755 $(bindir)/$(PROGRAM)
+ 
+ uninstall:

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2001/05/17 08:32:13 abs Exp $
+# $NetBSD: Makefile,v 1.15 2001/05/26 06:37:45 jlam Exp $
 #
 
 DISTNAME=	${PKGNAME}-source
-PKGNAME=	fltk-1.0.10
+PKGNAME=	fltk-1.0.11
 VERS=		${PKGNAME:S/fltk-//}
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	x11
@@ -14,7 +14,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=FLTK/} \
 		ftp://ftp.kddlabs.co.jp/pub/lang/fltk/${VERS}/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.fltk.org/
 COMMENT=	Fast Light Tool Kit for graphical user interfaces
 
@@ -24,22 +24,18 @@ USE_GMAKE=	# defined
 USE_LIBTOOL=	# defined
 
 GNU_CONFIGURE=	# defined
+CONFIGURE_ARGS=	--enable-libtool=${LIBTOOL}
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
-CPPFLAGS+=	-I${X11PREFIX}/include		# GL/GL.h
-MAKE_ENV+=	INSTALL_DATA_DIR="${INSTALL_DATA_DIR}"
-MAKE_ENV+=	INSTALL_DATA="${INSTALL_DATA}"
 
-# When the API changes and breaks binary-compatibility with the previous
-# version, increment the MAJOR by 1 and reset the MINOR to 0.  Otherwise,
-# bump the MINOR when a new version comes out.
-#
-FLTK_MAJOR=	1
-FLTK_MINOR=	4
-MAKE_ENV+=	FLTK_MAJOR="${FLTK_MAJOR}" FLTK_MINOR="${FLTK_MINOR}"
-PLIST_SUBST+=	FLTK_MAJOR=${FLTK_MAJOR} FLTK_MINOR=${FLTK_MINOR}
+.include "../../graphics/Mesa/buildlink.mk"
+
+CPPFLAGS+=	-I${BUILDLINK_INCDIR}
+LDFLAGS+=	-L${BUILDLINK_LIBDIR}
+
+pre-configure: ${BUILDLINK_TARGETS}
 
 test:
-	@cd ${WRKSRC}/test && \
-		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} all
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}				\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} test
 
 .include "../../mk/bsd.pkg.mk"

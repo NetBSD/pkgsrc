@@ -1,68 +1,34 @@
-$NetBSD: patch-ad,v 1.3 2000/08/04 03:38:15 jlam Exp $
+$NetBSD: patch-ad,v 1.4 2001/05/26 06:37:46 jlam Exp $
 
---- test/Makefile.orig	Mon Jun  5 17:21:15 2000
-+++ test/Makefile	Thu Aug  3 23:13:08 2000
-@@ -56,7 +56,7 @@
- .fl:
- 	echo Generating, compiling, and linking $@...
- 	../fluid/fluid -c $<
--	$(CXX) -I.. -L../lib $(CXXFLAGS) $@.cxx -lfltk $(LDLIBS) -o $@
-+	$(CXX) -I.. -L../lib $(CXXFLAGS) $@.cxx $(FLTKLIB) $(LDLIBS) -o $@
+--- documentation/Makefile.orig	Mon Feb 12 10:12:14 2001
++++ documentation/Makefile
+@@ -129,23 +129,23 @@
+ # htmldir = $(datadir)/doc/html/en/fltk
+ # Possibly the "en/" can be removed, it is not clear.
+ # KDE uses "HTML" instead of "html", which is correct?
+-docdir = $(datadir)/doc/fltk
++docdir = $(datadir)/doc/html/fltk
  
+ install: $(MANPAGES)
+ 	-mkdir -p $(docdir)
+-	cp $(HTMLFILES) *.gif *.jpg index.html $(docdir)
++	$(INSTALL_DATA) $(HTMLFILES) *.gif *.jpg index.html $(docdir)
+ 	chmod 644 $(docdir)/*
+ 	-mkdir -p $(mandir)/cat1
+-	cp fluid.$(CAT1EXT) $(mandir)/cat1
++	$(INSTALL_MAN) fluid.$(CAT1EXT) $(mandir)/cat1
+ 	chmod 644 $(mandir)/cat1/fluid.$(CAT1EXT)
+ 	-mkdir -p $(mandir)/cat3
+-	cp fltk.$(CAT3EXT) $(mandir)/cat3
++	$(INSTALL_MAN) fltk.$(CAT3EXT) $(mandir)/cat3
+ 	chmod 644 $(mandir)/cat3/fltk.$(CAT3EXT)
+ 	-mkdir -p $(mandir)/man1
+-	cp fluid.man $(mandir)/man1/fluid.1
++	$(INSTALL_MAN) fluid.man $(mandir)/man1/fluid.1
+ 	chmod 644 $(mandir)/man1/fluid.1
+ 	-mkdir -p $(mandir)/man3
+-	cp fltk.man $(mandir)/man3/fltk.3
++	$(INSTALL_MAN) fltk.man $(mandir)/man3/fltk.3
+ 	chmod 644 $(mandir)/man3/fltk.3
  
- $(ALL):  ../lib/$(LIBNAME)
-@@ -65,43 +65,43 @@
- CubeView: CubeMain.o CubeView.o CubeViewUI.o
- 	echo Compiling and linking $@...
- 	$(CXX) -I.. -L../lib $(CXXFLAGS) CubeMain.o CubeView.o CubeViewUI.o \
--		-lfltk $(GLDLIBS) -o $@
-+		$(FLTKLIB) $(GLDLIBS) -o $@
- CubeMain.o: CubeViewUI.h CubeView.h
- CubeView.o: CubeView.h
- 
- cube: cube.cxx
- 	echo Compiling and linking $@...
--	$(CXX) -I.. -L../lib $(CXXFLAGS) cube.cxx -lfltk $(GLDLIBS) -o $@
-+	$(CXX) -I.. -L../lib $(CXXFLAGS) cube.cxx $(FLTKLIB) $(GLDLIBS) -o $@
- fractals: fractals.cxx
- 	echo Compiling and linking $@...
--	$(CXX) -I.. -L../lib $(CXXFLAGS) fractals.cxx -lfltk $(GLDLIBS) -o $@
-+	$(CXX) -I.. -L../lib $(CXXFLAGS) fractals.cxx $(FLTKLIB) $(GLDLIBS) -o $@
- fullscreen: fullscreen.cxx
- 	echo Compiling and linking $@...
--	$(CXX) -I.. -L../lib $(CXXFLAGS) fullscreen.cxx -lfltk $(GLDLIBS) -o $@
-+	$(CXX) -I.. -L../lib $(CXXFLAGS) fullscreen.cxx $(FLTKLIB) $(GLDLIBS) -o $@
- glpuzzle: glpuzzle.cxx
- 	echo Compiling and linking $@...
--	$(CXX) -I.. -L../lib $(CXXFLAGS) glpuzzle.cxx -lfltk $(GLDLIBS) -o $@
-+	$(CXX) -I.. -L../lib $(CXXFLAGS) glpuzzle.cxx $(FLTKLIB) $(GLDLIBS) -o $@
- gl_overlay: gl_overlay.cxx
- 	echo Compiling and linking $@...
--	$(CXX) -I.. -L../lib $(CXXFLAGS) gl_overlay.cxx -lfltk $(GLDLIBS) -o $@
-+	$(CXX) -I.. -L../lib $(CXXFLAGS) gl_overlay.cxx $(FLTKLIB) $(GLDLIBS) -o $@
- shiny: shiny.cxx shiny_panel.cxx
- 	echo Compiling and linking $@...
--	$(CXX) -I.. -L../lib $(CXXFLAGS) shiny.cxx -lfltk $(GLDLIBS) -o $@
-+	$(CXX) -I.. -L../lib $(CXXFLAGS) shiny.cxx $(FLTKLIB) $(GLDLIBS) -o $@
- keyboard: keyboard.cxx keyboard_ui.cxx
- 	echo Compiling and linking $@...
--	$(CXX) -I.. -L../lib $(CXXFLAGS) keyboard.cxx -lfltk $(LDLIBS) -o $@
-+	$(CXX) -I.. -L../lib $(CXXFLAGS) keyboard.cxx $(FLTKLIB) $(LDLIBS) -o $@
- mandelbrot: mandelbrot.cxx mandelbrot_ui.cxx
- 	echo Compiling and linking $@...
--	$(CXX) -I.. -L../lib $(CXXFLAGS) mandelbrot.cxx -lfltk $(LDLIBS) -o $@
-+	$(CXX) -I.. -L../lib $(CXXFLAGS) mandelbrot.cxx $(FLTKLIB) $(LDLIBS) -o $@
- shape: shape.cxx
- 	echo Compiling and linking $@...
--	$(CXX) -I.. -L../lib $(CXXFLAGS) shape.cxx -lfltk $(GLDLIBS) -o $@
-+	$(CXX) -I.. -L../lib $(CXXFLAGS) shape.cxx $(FLTKLIB) $(GLDLIBS) -o $@
- 
- # If you have libjpeg installed, you might want to try this test program:
- 
- jpeg_image: jpeg_image.cxx
- 	echo Compiling and linking $@...
--	$(CXX) -I.. -L../lib $(CXXFLAGS) -I../../../local/jpeg-6b -L../../../local/jpeg-6b jpeg_image.cxx -lfltk $(LDLIBS) -ljpeg -lXext -o $@
-+	$(CXX) -I.. -L../lib $(CXXFLAGS) -I../../../local/jpeg-6b -L../../../local/jpeg-6b jpeg_image.cxx $(FLTKLIB) $(LDLIBS) -ljpeg -lXext -o $@
- 
- depend:
- 	$(MAKEDEPEND) -I.. $(CXXFLAGS) $(CPPFILES) > makedepend
+ # Base html files are now the readable ones, so this target is not make by
