@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/08/24 16:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/14 06:53:34 jlam Exp $
 
 DISTNAME=	libxml2-2.4.2
 CATEGORIES=	textproc
@@ -9,10 +9,14 @@ HOMEPAGE=	http://xmlsoft.org/
 COMMENT=	Xml parser library for GNOME
 
 USE_BUILDLINK_ONLY=	yes
-GNU_CONFIGURE=		yes
+REPLACE_BUILDLINK=	xml2-config xml2Conf.sh
+
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_DIR}
 
 .include "../../devel/zlib/buildlink.mk"
 .include "../../converters/libiconv/buildlink.mk"
