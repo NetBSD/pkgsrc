@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:42:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/08 16:15:56 agc Exp $
 #
 
 DISTNAME=		memconf
 PKGNAME=		memconf-1.23.2
 CATEGORIES=		sysutils
-MASTER_SITES=		http://netnow.micron.net/~tschmidt/unix/
+MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
 EXTRACT_SUFX=		.gz
 
 MAINTAINER=		agc@netbsd.org
