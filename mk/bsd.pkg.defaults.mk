@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.272 2004/08/05 02:55:50 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.273 2004/08/05 07:20:33 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1575,22 +1575,6 @@ MTOOLS_ENABLE_FLOPPYD?=	NO
 # build floppyd and run floppyd.
 # Possible: YES, NO
 # Default: NO
-
-MUTT_USE_NCURSES?= NO
-# Force ncurses to be used by mutt. (Older NetBSD and most non-NetBSD
-# platforms get it anyway.)
-# Possible: YES, NO
-# Default: NO
-
-MUTT_USE_SLANG?= NO
-# Use slang instead of curses in mutt.
-# Possible: YES, NO
-# Default: NO
-
-MUTT_USE_SSL?= YES
-# Enable SSL in mutt (for pop and imap connections).
-# Possible: YES, NO
-# Default: YES
 
 #MYSQL_USER?=		mysql
 # The username of the mysql administrator.
