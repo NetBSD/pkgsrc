@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7938 2004/11/22 13:43:47 adam Exp $
+$NetBSD: CHANGES,v 1.7939 2004/11/22 13:59:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5370,3 +5370,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated abiword to 2.0.14 [adam 2004-11-22]
 	Updated abiword-plugins to 2.0.14 [adam 2004-11-22]
 	Updated mono to 1.0.4 [adam 2004-11-22]
+	Updated gmp to 4.1.4 [adam 2004-11-22]
