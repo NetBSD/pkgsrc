@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/14 20:16:19 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/05/03 17:43:42 jmmv Exp $
 include/libgnomeui-2.0/gnome.h
 include/libgnomeui-2.0/libgnomeui/gnome-about.h
 include/libgnomeui-2.0/libgnomeui/gnome-app-helper.h
@@ -204,5 +204,5 @@ share/pixmaps/gnome-question.png
 share/pixmaps/gnome-warning.png
 @dirrm share/doc/html/libgnomeui
 @comment in libglade2: @dirrm lib/libglade/2.0
-@comment in gnome2-dirs: @dirrm include/libgnomeui-2.0/libgnomeui
-@comment in gnome2-dirs: @dirrm include/libgnomeui-2.0
+@dirrm include/libgnomeui-2.0/libgnomeui
+@dirrm include/libgnomeui-2.0
