@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.pre,v 1.1 2001/05/05 17:24:14 dmcmahill Exp $
+@dirrm lib/ICAClient/.config
+@dirrm lib/ICAClient/config
+@dirrm lib/ICAClient/cache
+@dirrm lib/ICAClient/help
+@dirrm lib/ICAClient/icons
+@dirrm lib/ICAClient/keyboard
+@dirrm lib/ICAClient/pkginf
+@dirrm lib/ICAClient/util
+@dirrm lib/ICAClient
