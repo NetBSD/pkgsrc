@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6924 2004/08/17 11:13:29 adrianp Exp $
+$NetBSD: CHANGES,v 1.6925 2004/08/17 11:21:11 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3883,3 +3883,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kanjidic2 to 2004.2 [wiz 2004-08-17]
 	Updated kanjidic to 20040814 [wiz 2004-08-17]
 	Updated tcptrace to 6.6.1 [adrianp 2004-08-17]
+	Updated TeXmacs to 1.0.4.0.2 [recht 2004-08-17]
