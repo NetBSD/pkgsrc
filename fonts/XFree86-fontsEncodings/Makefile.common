@@ -1,0 +1,50 @@
+# $NetBSD: Makefile.common,v 1.1 2004/03/28 22:11:32 xtraeme Exp $
+#
+# Makefile fragment used by XFree86-fonts* packages.
+
+NO_BUILDLINK=	# defined
+USE_LANGUAGES=	# empty
+
+DEPENDS+=	XFree86-fontsEncodings>=4.4.0:../../fonts/XFree86-fontsEncodings
+FILESDIR=	${.CURDIR}/../../fonts/XFree86-fontsEncodings/files
+
+ENCODINGS=	encodings encodings/large
+TOPDIR?=	../../..
+
+post-extract:
+.  if defined(FONTS_MISC)
+	cd ${WRKDIR} && \
+	${GUNZIP_CMD} -c ${DISTDIR}/XFree86-${XF_VER}-src-1.tgz | ${GTAR} -xf - \
+	    xc/extras/fonts/arabic24 xc/extras/fonts/ClearlyU;
+.  endif
+	@${SED} \
+		-e "s|@PREFIX@|${X11ROOT}|g" \
+		-e "s|@MAKE@|${MAKE_PROGRAM}|g" \
+		-e "s|@IMAKE@|${IMAKE}|g" \
+		${FILESDIR}/host.def > ${WRKSRC}/host.def
+.  for f in ${ENCODINGS}
+	@${LN} -sf ${WRKSRC}/host.def ${WRKDIR}/xc/fonts/${f}
+.  endfor
+
+do-configure:
+	(cd ${WRKDIR}/xc/fonts/encodings && \
+	${IMAKE} -DUseInstalled -I${X11ROOT}/lib/X11/config \
+	    -DTOPDIR=${TOPDIR} -DCURDIR=.; \
+	${MAKE} Makefiles ; \
+	${MAKE} includes ; \
+	${MAKE} depend)
+	(cd ${WRKSRC} && \
+	${IMAKE} -DUseInstalled -I${X11ROOT}/lib/X11/config \
+	    -DTOPDIR=${TOPDIR} -DCURDIR=.; \
+	${MAKE} Makefiles ; \
+	${MAKE} includes ; \
+	${MAKE} depend)
+
+SUBST_CLASSES+=		large
+SUBST_STAGE.large=	pre-build
+SUBST_FILES.large=	${WRKDIR}/xc/fonts/encodings/large/Makefile
+SUBST_SED.large=	-e 's,/usr/X11R6,${X11ROOT},g'
+SUBST_MESSAGE.large=	"Fixing large Makefile."
+
+pre-build:
+	cd ${WRKDIR}/xc/fonts/encodings && ${MAKE} all
