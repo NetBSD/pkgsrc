@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/09/24 21:16:02 dmcmahill Exp $
+
+--- itcl/configure.orig	Wed Sep  8 01:23:50 2004
++++ itcl/configure
+@@ -5883,7 +5883,7 @@ echo $ECHO_N "checking for Tcl private i
+ 
+ 	TCL_INCLUDES="-I${TCL_GENERIC_DIR_NATIVE} -I${TCL_PLATFORM_DIR_NATIVE}"
+     else
+-	TCL_TOP_DIR_NATIVE='$(TCL_SRC_DIR)'
++	TCL_TOP_DIR_NATIVE='$(TCL_HEADER_DIR)'
+ 	TCL_GENERIC_DIR_NATIVE='${TCL_TOP_DIR_NATIVE}/generic'
+ 	TCL_UNIX_DIR_NATIVE='${TCL_TOP_DIR_NATIVE}/unix'
+ 	TCL_WIN_DIR_NATIVE='${TCL_TOP_DIR_NATIVE}/win'
+@@ -8591,8 +8591,8 @@ fi
+ 	MAKE_STUB_LIB="\${STLIB_LD} -out:\$@ \$(PKG_STUB_OBJECTS)"
+     else
+ 	MAKE_STATIC_LIB="\${STLIB_LD} \$@ \$(PKG_OBJECTS)"
+-	MAKE_SHARED_LIB="\${SHLIB_LD} -o \$@ \$(PKG_OBJECTS) \${SHLIB_LD_FLAGS} \${SHLIB_LD_LIBS}"
+-	MAKE_STUB_LIB="\${STLIB_LD} \$@ \$(PKG_STUB_OBJECTS)"
++	MAKE_SHARED_LIB="\${SHLIB_LD} -o \${@:C/\.so.*/.la/} \${PKG_OBJECTS:.o=.lo} \${SHLIB_LDFLAGS} \${SHLIB_LD_LIBS} -version-info 0:0"
++	MAKE_STUB_LIB="\${SHLIB_LD} -o \${@:C/\.so.*/.la/} \${PKG_STUB_OBJECTS:.o=.lo} \${SHLIB_LDFLAGS} \${SHLIB_LD_LIBS} -version-info 0:0"
+     fi
+ 
+     if test "${SHARED_BUILD}" = "1" ; then
