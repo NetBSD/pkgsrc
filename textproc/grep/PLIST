@@ -1,14 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2003/08/02 05:19:57 grant Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/03/10 01:50:11 seb Exp $
 bin/${GNU_PROGRAM_PREFIX}grep
 bin/${GNU_PROGRAM_PREFIX}egrep
 bin/${GNU_PROGRAM_PREFIX}fgrep
 man/man1/${GNU_PROGRAM_PREFIX}grep.1
 man/man1/${GNU_PROGRAM_PREFIX}fgrep.1
 man/man1/${GNU_PROGRAM_PREFIX}egrep.1
-info/grep.info
-info/grep.info-1
-info/grep.info-2
-info/grep.info-3
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/grep.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/grep.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/grep.mo
