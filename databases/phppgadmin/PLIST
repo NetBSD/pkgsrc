@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/10/09 16:26:26 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/11/27 11:17:04 jdolecek Exp $
 share/doc/phppgadmin/CREDITS
 share/doc/phppgadmin/DEVELOPERS
 share/doc/phppgadmin/FAQ
@@ -34,14 +34,13 @@ share/phppgadmin/classes/Misc.php
 share/phppgadmin/classes/Reports.php
 share/phppgadmin/classes/class.select.php
 share/phppgadmin/classes/database/ADODB_base.php
-share/phppgadmin/classes/database/BaseDB.php
 share/phppgadmin/classes/database/Connection.php
 share/phppgadmin/classes/database/Postgres.php
 share/phppgadmin/classes/database/Postgres71.php
 share/phppgadmin/classes/database/Postgres72.php
 share/phppgadmin/classes/database/Postgres73.php
 share/phppgadmin/classes/database/Postgres74.php
-share/phppgadmin/classes/database/Postgres75.php
+share/phppgadmin/classes/database/Postgres80.php
 share/phppgadmin/conf/.pkgsrc
 share/phppgadmin/constraints.php
 share/phppgadmin/conversions.php
@@ -53,6 +52,9 @@ share/phppgadmin/display.php
 share/phppgadmin/domains.php
 share/phppgadmin/functions.php
 share/phppgadmin/groups.php
+share/phppgadmin/help.php
+share/phppgadmin/redirect.php
+share/phppgadmin/tablespaces.php
 share/phppgadmin/images/themes/default/database.png
 share/phppgadmin/images/themes/default/domains.png
 share/phppgadmin/images/themes/default/functions.png
@@ -92,21 +94,29 @@ share/phppgadmin/lang/recoded/dutch.php
 share/phppgadmin/lang/recoded/english.php
 share/phppgadmin/lang/recoded/french.php
 share/phppgadmin/lang/recoded/german.php
+share/phppgadmin/lang/recoded/hebrew.php
 share/phppgadmin/lang/recoded/hungarian.php
 share/phppgadmin/lang/recoded/italian.php
 share/phppgadmin/lang/recoded/japanese.php
+share/phppgadmin/lang/recoded/mongol.php
 share/phppgadmin/lang/recoded/polish.php
 share/phppgadmin/lang/recoded/portuguese-br.php
+share/phppgadmin/lang/recoded/romanian.php
 share/phppgadmin/lang/recoded/russian.php
 share/phppgadmin/lang/recoded/slovak.php
 share/phppgadmin/lang/recoded/spanish.php
 share/phppgadmin/lang/recoded/swedish.php
 share/phppgadmin/lang/recoded/turkish.php
+share/phppgadmin/lang/recoded/ukrainian.php
+share/phppgadmin/lang/hebrew.php
+share/phppgadmin/lang/mongol.php
+share/phppgadmin/lang/romanian.php
 share/phppgadmin/lang/russian.php
 share/phppgadmin/lang/slovak.php
 share/phppgadmin/lang/spanish.php
 share/phppgadmin/lang/swedish.php
 share/phppgadmin/lang/turkish.php
+share/phppgadmin/lang/ukrainian.php
 share/phppgadmin/languages.php
 share/phppgadmin/libraries/adodb/adodb-connection.inc.php
 share/phppgadmin/libraries/adodb/adodb-cryptsession.php
@@ -164,6 +174,7 @@ share/phppgadmin/libraries/adodb/server.php
 share/phppgadmin/libraries/adodb/toexport.inc.php
 share/phppgadmin/libraries/adodb/tohtml.inc.php
 share/phppgadmin/libraries/errorhandler.inc.php
+share/phppgadmin/libraries/highlight.php
 share/phppgadmin/libraries/lib.inc.php
 share/phppgadmin/links.js
 share/phppgadmin/login.php
@@ -174,7 +185,6 @@ share/phppgadmin/privileges.php
 share/phppgadmin/reports.php
 share/phppgadmin/robots.txt
 share/phppgadmin/rules.php
-share/phppgadmin/schema.php
 share/phppgadmin/sequences.php
 share/phppgadmin/sql.php
 share/phppgadmin/sql/reports-pgsql.sql
