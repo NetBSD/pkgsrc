@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/03/27 03:20:20 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/04/09 11:45:33 wiz Exp $
 
 DISTNAME=	auth_ldap-1.5.2
 PKGNAME=	ap-auth-ldap-1.5.2
@@ -25,7 +25,7 @@ do-build:
 
 do-install:
 	@cd ${WRKSRC} && ${PREFIX}/sbin/apxs -i auth_ldap.so
-	-${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_auth_ldap
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_auth_ldap
 	${INSTALL_DATA} ${WRKSRC}/FAQ.html				\
 	    ${PREFIX}/share/doc/mod_auth_ldap
 	${INSTALL_DATA} ${WRKSRC}/auth_ldap.html			\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/03/31 10:09:04 zuntum Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/09 11:45:38 wiz Exp $
 
 DISTNAME=		nsieve.c
 PKGNAME=		nsieve-1.2b
@@ -25,7 +25,7 @@ benchmark:
 	-@${WRKSRC}/nsieve | tee ${WRKSRC}/nsieve.out
 
 results:
-	-@${MKDIR} /tmp/benches/`domainname`
+	@${MKDIR} /tmp/benches/`domainname`
 	-@${CP} ${WRKSRC}/nsieve.out /tmp/benches/`domainname`/nsieve.`uname`-`uname -m`-`uname -r`.`hostname`
 
 .include "../../mk/bsd.pkg.mk"

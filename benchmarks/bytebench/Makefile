@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/16 13:37:46 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/04/09 11:45:36 wiz Exp $
 
 DISTNAME=		byte
 PKGNAME=		bytebench-3.6
@@ -34,7 +34,7 @@ benchmark:
 		| tee ${WRKSRC}/bytebench.out
 
 results:
-	-@${MKDIR} /tmp/benches/`domainname`
+	@${MKDIR} /tmp/benches/`domainname`
 	-@${CP} ${WRKSRC}/bytebench.out /tmp/benches/`domainname`/bytebench.`uname`-`uname -m`-`uname -r`.`hostname`
 
 .include "../../mk/bsd.pkg.mk"
