@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.42 2004/11/26 18:52:47 jlam Exp $
+$NetBSD: distinfo,v 1.43 2005/02/24 14:08:28 wiz Exp $
 
 SHA1 (apache_1.3.33.tar.gz) = 4cd49534d1abd04c81ab215f2457122d85855b0d
+RMD160 (apache_1.3.33.tar.gz) = 80e9ea2c7c75f49454acfd83cead5506c5ffddea
 Size (apache_1.3.33.tar.gz) = 2468567 bytes
 SHA1 (sitedrivenby.gif) = 7671e9a8ec2cad3961b268befd33c0920e07c658
+RMD160 (sitedrivenby.gif) = 2e350e6531a800da8796207509c12fb590d0affa
 Size (sitedrivenby.gif) = 8519 bytes
 SHA1 (mod_ssl-2.8.21-1.3.32.tar.gz) = 6bbf83d716254e157b2c6ba9fd13e6b3bfc43239
+RMD160 (mod_ssl-2.8.21-1.3.32.tar.gz) = 559124e89e51ebb362f2468103f4432439bf5a18
 Size (mod_ssl-2.8.21-1.3.32.tar.gz) = 754629 bytes
 SHA1 (patch-aa) = ae280b14dc0102ecfbe3675ca0b5d2b74ee790ca
 SHA1 (patch-ab) = 084d52bb2afbacf18b9d0793293d8ae333c67802
