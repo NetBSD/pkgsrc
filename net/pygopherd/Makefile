@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/24 19:44:00 recht Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/05 08:11:07 recht Exp $
 #
 
 DISTNAME=	pygopherd_2.0.9
@@ -10,7 +10,7 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://gopher.quux.org:70/devel/gopher/pygopherd/
 COMMENT=	Gopher server
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
