@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/02 04:10:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/17 03:57:33 ben Exp $
 bin/f-prot
 lib/fprot-workstation-bin/f-prot
 lib/fprot-workstation-bin/ENGLISH.TX0
@@ -20,7 +20,6 @@ share/doc/html/fprot-workstation-bin/loc_files.html
 share/doc/html/fprot-workstation-bin/macro_scanning_options.html
 share/doc/html/fprot-workstation-bin/main_feat.html
 share/doc/html/fprot-workstation-bin/man_updt.html
-share/doc/html/fprot-workstation-bin/norm_scan.gif
 share/doc/html/fprot-workstation-bin/per_scan.html
 share/doc/html/fprot-workstation-bin/reporting_options.html
 share/doc/html/fprot-workstation-bin/scanning_options.html
