@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.5 1999/10/27 09:51:32 agc Exp $
+$NetBSD: patch-aa,v 1.6 2002/09/03 22:40:38 wiz Exp $
 
 --- siag/Makefile.in.orig	Tue Jul  6 02:09:00 1999
 +++ siag/Makefile.in	Thu Oct 21 16:07:11 1999
-@@ -58,7 +58,7 @@
- PRE_UNINSTALL = :
- POST_UNINSTALL = :
- AWK = @AWK@
--CC = @CC@
-+CC = @CC@ -I${LOCALBASE}/include
- GUILE = @GUILE@
- LIBCURSES = @LIBCURSES@
- LIBDL = @LIBDL@
 @@ -423,12 +423,12 @@
  
  install-data-local:
