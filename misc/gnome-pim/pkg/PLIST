@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/03 16:38:45 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/07/24 08:41:41 rh Exp $
 bin/gnomecal
 bin/gnomecard
 etc/CORBA/servers/gnomecard.gnorba
@@ -22,9 +22,21 @@ share/locale/ja/LC_MESSAGES/gnome-pim.mo
 share/mime-info/gnome-pim.keys
 share/gnome/apps/Applications/gncal.desktop
 share/gnome/apps/Applications/gnomecard.desktop
-share/gnome/help/cal/C/topic.dat
-share/gnome/help/cal/C/gnome-cal.html
-share/gnome/help/cal/C/index.html
+share/gnome/help/gnomecal/C/gnomecal.html
+share/gnome/help/gnomecal/C/topic.dat
+share/gnome/help/gnomecal/C/images/cal-props.gif
+share/gnome/help/gnomecal/C/images/calday.gif
+share/gnome/help/gnomecal/C/images/calmonth.gif
+share/gnome/help/gnomecal/C/images/calweek.gif
+share/gnome/help/gnomecal/C/images/calyear.gif
+share/gnome/help/gnomecal/C/calappoint.html
+share/gnome/help/gnomecal/C/calsetup.html
+share/gnome/help/gnomecal/C/caluse.html
+share/gnome/help/gnomecal/C/cmdline.html
+share/gnome/help/gnomecal/C/gcal.html
+share/gnome/help/gnomecal/C/ln14.html
+share/gnome/help/gnomecal/C/tech.html.html
+share/gnome/help/gnomecal/C/docbook.css
 share/gnome/help/gnomecard/C/index.html
 share/gnome/help/gnomecard/C/topic.dat
 share/gnome/help/gnomecard/C/description.html
@@ -37,8 +49,9 @@ share/gnome/help/gnomecard/C/toolbar.html
 share/gnome/help/gnomecard/C/docbook.css
 @dirrm share/gnome/help/gnomecard/C
 @dirrm share/gnome/help/gnomecard
-@dirrm share/gnome/help/cal/C
-@dirrm share/gnome/help/cal
+@dirrm share/gnome/help/gnomecal/C/images
+@dirrm share/gnome/help/gnomecal/C
+@dirrm share/gnome/help/gnomecal
 @unexec rmdir %D/share/gnome/apps/Applications 2>/dev/null || true
 @unexec rmdir %D/share/gnome/apps 2>/dev/null || true
 @unexec rmdir %D/share/gnome/help 2>/dev/null || true
