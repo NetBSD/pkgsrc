@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.395 2002/10/28 22:29:58 agc Exp $
+$NetBSD: CHANGES,v 1.396 2002/10/28 22:38:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3428,3 +3428,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated hdf5 to 1.4.4 [drochner 2002-10-28]
 	Added navi2ch-1.6.0 [uebayasi 2002-10-28]
 	Added piewm-1.02 [agc 2002-10-28]
+	Updated xscreensaver-gnome to 4.06 [wiz 2002-10-28]
+	Updated xscreensaver to 4.06 [wiz 2002-10-28]
