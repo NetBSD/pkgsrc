@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.15 2002/04/09 09:53:55 itojun Exp $
+$NetBSD: patch-aa,v 1.16 2003/07/30 21:05:00 jmmv Exp $
 
---- configure.in.orig	Wed Mar 27 18:55:22 2002
-+++ configure.in	Tue Apr  9 18:24:45 2002
-@@ -1037,18 +1037,18 @@
+--- configure.in.orig	2002-03-27 10:55:22.000000000 +0100
++++ configure.in
+@@ -529,7 +529,7 @@ if test "x$DEFAULT_MIBDIRS" = "x"; then
+ fi
+ 
+ SNMPCONFPATH=""
+-tmpset="$sysconfdir/snmp"
++tmpset="$sysconfdir"
+ while test "x$tmpset" != "x$SNMPCONFPATH"; do
+   SNMPCONFPATH="$tmpset"
+   eval tmpset="$tmpset"
+@@ -1037,18 +1037,18 @@ dnl rpm-4.0.x needs rpmio.
  AC_CHECK_LIB(rpmio, Fopen, [_rpmlibs="-lrpmio $_rpmlibs"],,$_rpmlibs)
  
  dnl now check for rpm using the appropriate libraries.
@@ -33,7 +42,7 @@ $NetBSD: patch-aa,v 1.15 2002/04/09 09:53:55 itojun Exp $
  
  dnl Replace `main' with a function in -lkstat:
  AC_CHECK_LIB(kstat, kstat_lookup)
-@@ -1073,7 +1073,7 @@
+@@ -1073,7 +1073,7 @@ dnl Checks for header files.
  AC_HEADER_STDC
  AC_HEADER_DIRENT
  AC_HEADER_SYS_WAIT
@@ -42,7 +51,7 @@ $NetBSD: patch-aa,v 1.15 2002/04/09 09:53:55 itojun Exp $
  dnl FreeBSD required headers
  AC_CHECK_HEADERS(malloc.h sys/param.h net/if_dl.h sys/sysctl.h stdlib.h net/if_mib.h net/if_types.h net/if_var.h sys/queue.h osreldate.h sys/disklabel.h machine/types.h sys/socketvar.h)
  dnl Linux
-@@ -1081,7 +1081,7 @@
+@@ -1081,7 +1081,7 @@ AC_CHECK_HEADERS(sys/conf.h netinet/in_s
  dnl NetBSD required headers
  AC_CHECK_HEADERS(arpa/inet.h kvm.h sys/pool.h)
  dnl BSDi2 headers
@@ -51,7 +60,7 @@ $NetBSD: patch-aa,v 1.15 2002/04/09 09:53:55 itojun Exp $
  dnl BSDi3 headers
  AC_CHECK_HEADERS(sys/stat.h sys/vnode.h ufs/ufs/quota.h ufs/ufs/inode.h)
  dnl irix headers
-@@ -1339,11 +1339,7 @@
+@@ -1339,11 +1339,7 @@ AC_CHECK_STRUCT_FOR([
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -63,7 +72,7 @@ $NetBSD: patch-aa,v 1.15 2002/04/09 09:53:55 itojun Exp $
  #include <net/route.h>
  ], rtentry, rt_dst, no)
  
-@@ -1357,11 +1353,7 @@
+@@ -1357,11 +1353,7 @@ AC_TRY_COMPILE([
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -75,7 +84,7 @@ $NetBSD: patch-aa,v 1.15 2002/04/09 09:53:55 itojun Exp $
  #include <net/route.h>
  ],[
  
-@@ -1381,11 +1373,7 @@
+@@ -1381,11 +1373,7 @@ AC_TRY_COMPILE([
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -87,7 +96,7 @@ $NetBSD: patch-aa,v 1.15 2002/04/09 09:53:55 itojun Exp $
  #include <net/route.h>
  ],[
  struct rtentry rt; 
-@@ -1438,11 +1426,7 @@
+@@ -1438,11 +1426,7 @@ AC_TRY_COMPILE([
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -99,7 +108,7 @@ $NetBSD: patch-aa,v 1.15 2002/04/09 09:53:55 itojun Exp $
  #include <net/route.h>
  ],[
  struct rtentry rt; 
-@@ -1462,11 +1446,7 @@
+@@ -1462,11 +1446,7 @@ AC_CHECK_STRUCT_FOR([
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -111,7 +120,7 @@ $NetBSD: patch-aa,v 1.15 2002/04/09 09:53:55 itojun Exp $
  #include <net/route.h>
  ], rtentry, rt_unit)
  
-@@ -1475,11 +1455,7 @@
+@@ -1475,11 +1455,7 @@ AC_CHECK_STRUCT_FOR([
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -123,7 +132,7 @@ $NetBSD: patch-aa,v 1.15 2002/04/09 09:53:55 itojun Exp $
  #include <net/route.h>
  ], rtentry, rt_refcnt)
  
-@@ -1488,11 +1464,7 @@
+@@ -1488,11 +1464,7 @@ AC_CHECK_STRUCT_FOR([
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -135,7 +144,7 @@ $NetBSD: patch-aa,v 1.15 2002/04/09 09:53:55 itojun Exp $
  #include <net/route.h>
  ], rtentry, rt_hash)
  
-@@ -1501,11 +1473,7 @@
+@@ -1501,11 +1473,7 @@ AC_CHECK_STRUCT_FOR([
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
