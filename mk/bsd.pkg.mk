@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1066 2002/10/13 08:01:27 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1067 2002/10/13 09:38:58 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -65,6 +65,7 @@ PKGDIR?=		${.CURDIR}
 
 INTERACTIVE_STAGE?=	none
 
+.if !defined(JAVA_MK)
 .if defined(USE_JAVA)
 BUILD_DEFS+=		PKG_JVM
 .  if !defined(PKG_JVM)
@@ -136,7 +137,16 @@ DEPENDS+=		kaffe-[0-9]*:../../lang/kaffe
 .  endif
 .  undef _UNUSED_DEPENDS
 EVAL_PREFIX+=		_JAVA_HOME=${_JAVA_PKGBASE}
+
+PKG_JAVA_HOME?=		${_JAVA_HOME}
+BUILD_DEFS+=		PKG_JAVA_HOME
+MAKE_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
+CONFIGURE_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
+SCRIPTS_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
+
+PATH:=			${PKG_JAVA_HOME}/bin:${PATH}
 .endif
+.endif	! JAVA_MK
 
 # Set the default BUILDLINK_DIR, BUILDLINK_X11PKG_DIR,  BUILDLINK_X11_DIR so
 # that if no buildlink.mk files are included, then they still point to
@@ -785,6 +795,42 @@ RMAN?=			${LOCALBASE}/bin/rman
 .  else
 RMAN?=			${X11BASE}/bin/rman
 .  endif
+.endif
+
+.if defined(EVAL_PREFIX)
+.  for def in ${EVAL_PREFIX}
+.    if !defined(${def:C/=.*//}_DEFAULT)
+${def:C/=.*//}_DEFAULT=	${X11PREFIX}
+.    endif
+.    if !defined(${def:C/=.*//})
+_depend_${def:C/=.*//} != ${PKG_INFO} -e ${def:C/.*=//} 2>/dev/null; ${ECHO}
+.      if (${_depend_${def:C/=.*//}} == "")
+${def:C/=.*//}=${${def:C/=.*//}_DEFAULT}
+.      else
+_dir_${def:C/=.*//} != (${PKG_INFO} -qp ${def:C/.*=//} 2>/dev/null) | ${AWK} '{ print $$2; exit }'
+${def:C/=.*//}=${_dir_${def:C/=.*//}}
+MAKEFLAGS+= ${def:C/=.*//}=${_dir_${def:C/=.*//}}
+.      endif
+.    endif
+.  endfor
+.endif
+
+# Set the CLASSPATH for Java packages.  This must come after EVAL_PREFIX
+# is evaluated because PKG_JAVA_HOME is used in a .if.endif conditional,
+# and it's value is indirectly set by EVAL_PREFIX.
+#
+.if defined(USE_JAVA)
+.  if exists(${PKG_JAVA_HOME}/lib/classes.zip)
+_JAVA_CLASSES_ZIP=	${PKG_JAVA_HOME}/lib/classes.zip:
+.  endif
+.  if exists(${PKG_JAVA_HOME}/lib/tools.jar)
+_JAVA_TOOLS_JAR=	${PKG_JAVA_HOME}/lib/tools.jar:
+.  endif
+CLASSPATH?=		${_JAVA_CLASSES_ZIP}${_JAVA_TOOLS_JAR}.
+
+MAKE_ENV+=		CLASSPATH=${CLASSPATH}
+CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH}
+SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH}
 .endif
 
 # Popular master sites
@@ -1546,45 +1592,6 @@ show-installed-depends:
 		echo "$$i =>" `${PKG_INFO} -e "$$i"` ;			\
 	done
 .  endif
-.endif
-
-.if defined(EVAL_PREFIX)
-.  for def in ${EVAL_PREFIX}
-.    if !defined(${def:C/=.*//}_DEFAULT)
-${def:C/=.*//}_DEFAULT=	${X11PREFIX}
-.    endif
-.    if !defined(${def:C/=.*//})
-_depend_${def:C/=.*//} != ${PKG_INFO} -e ${def:C/.*=//} 2>/dev/null; ${ECHO}
-.      if (${_depend_${def:C/=.*//}} == "")
-${def:C/=.*//}=${${def:C/=.*//}_DEFAULT}
-.      else
-_dir_${def:C/=.*//} != (${PKG_INFO} -qp ${def:C/.*=//} 2>/dev/null) | ${AWK} '{ print $$2; exit }'
-${def:C/=.*//}=${_dir_${def:C/=.*//}}
-MAKEFLAGS+= ${def:C/=.*//}=${_dir_${def:C/=.*//}}
-.      endif
-.    endif
-.  endfor
-.endif
-
-.if defined(USE_JAVA)
-PKG_JAVA_HOME?=		${_JAVA_HOME}
-BUILD_DEFS+=		PKG_JAVA_HOME
-.  if exists(${PKG_JAVA_HOME}/lib/classes.zip)
-_JAVA_CLASSES_ZIP=	${PKG_JAVA_HOME}/lib/classes.zip:
-.  endif
-.  if exists(${PKG_JAVA_HOME}/lib/tools.jar)
-_JAVA_TOOLS_JAR=	${PKG_JAVA_HOME}/lib/tools.jar:
-.  endif
-CLASSPATH?=		${_JAVA_CLASSES_ZIP}${_JAVA_TOOLS_JAR}.
-PATH:=			${PKG_JAVA_HOME}/bin:${PATH}
-
-MAKE_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
-CONFIGURE_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
-SCRIPTS_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
-
-MAKE_ENV+=		CLASSPATH=${CLASSPATH}
-CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH}
-SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH}
 .endif
 
 .if !target(show-pkgsrc-dir)
