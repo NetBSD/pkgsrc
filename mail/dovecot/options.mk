@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2004/11/17 19:56:49 xtraeme Exp $
+# $NetBSD: options.mk,v 1.6 2005/01/08 19:58:16 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	gnutls inet6 ldap mysql pgsql sasl
@@ -8,6 +8,7 @@ PKG_SUPPORTED_OPTIONS=	gnutls inet6 ldap mysql pgsql sasl
 ### Build with GNU TLS or OpenSSL as the underlying crypto library.
 ###
 .if !empty(PKG_OPTIONS:Mgnutls)
+PKG_FAIL_REASON+=	"GNU TLS support is currently broken."
 CONFIGURE_ARGS+=	--enable-ssl=gnutls
 .  include "../../security/gnutls/buildlink3.mk"
 .else

@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2004/05/29 15:42:51 cube Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/01/08 19:58:16 schmonz Exp $
 libexec/dovecot/dovecot-auth
 libexec/dovecot/imap
 libexec/dovecot/imap-login
 libexec/dovecot/pop3
 libexec/dovecot/pop3-login
 sbin/dovecot
+share/doc/dovecot/USE-WIKI-INSTEAD
 share/doc/dovecot/auth.txt
 share/doc/dovecot/configuration.txt
 share/doc/dovecot/design.txt
