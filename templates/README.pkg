@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.pkg,v 1.12 1999/11/03 04:12:48 hubertf Exp $ -->
+<!-- $NetBSD: README.pkg,v 1.13 1999/12/06 23:06:45 abs Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection: %%PORT%%</title>
@@ -6,7 +6,8 @@
 <body bgcolor=#ffffff>
 
 <a href="http://www.mckusick.com/beastie/mainpage/copyright.html">
-<img align=right src="../../templates/pkg-daemon.gif" alt="Daemon Power" border=0>
+<img align=right src="../../templates/pkg-daemon.gif" alt="Daemon Power"
+	width=127 height=121 border=0>
 </a>
 <h1>The NetBSD Packages Collection: <i>%%PORT%%</i></h1>
 
