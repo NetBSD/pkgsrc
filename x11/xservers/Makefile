@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/07/02 15:30:49 wiz Exp $#
+# $NetBSD: Makefile,v 1.10 2002/07/17 18:29:09 wiz Exp $#
 
 DISTNAME=	xservers-3.3.6.3
 CATEGORIES=	x11
@@ -56,7 +56,7 @@ do-configure:
 post-install:
 	cd ${PREFIX} && \
 	${FIND} ${X11_SUBDIR} \! -type d | ${SORT} >${PLIST_SRC} && \
-	${FIND} ${X11_SUBDIR} -type d | ${SORT${SORT} -r | \
+	${FIND} ${X11_SUBDIR} -type d | ${SORT} -r | \
 	${AWK} '{print("@dirrm "$$1)}' >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
