@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2004/08/27 22:04:45 recht Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2004/10/03 00:14:55 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGDIPLUS_BUILDLINK3_MK:=	${LIBGDIPLUS_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libgdiplus
 
 .if !empty(LIBGDIPLUS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libgdiplus+=	libgdiplus>=1.0.1
+BUILDLINK_RECOMMENDED.libgdiplus+=	libgdiplus>=1.0.1nb1
 BUILDLINK_PKGSRCDIR.libgdiplus?=	../../graphics/libgdiplus
 .endif	# LIBGDIPLUS_BUILDLINK3_MK
 

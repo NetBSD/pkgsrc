@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/12 21:39:41 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:17:54 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBLIVE_BUILDLINK3_MK:=	${LIBLIVE_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	liblive
 
 .if !empty(LIBLIVE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.liblive+=	liblive>=2003.04.04
+BUILDLINK_RECOMMENDED.liblive+=	liblive>=2003.04.04nb1
 BUILDLINK_PKGSRCDIR.liblive?=	../../net/liblive
 .endif	# LIBLIVE_BUILDLINK3_MK
 

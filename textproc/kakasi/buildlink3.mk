@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/04 23:46:36 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:18:19 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KAKASI_BUILDLINK3_MK:=	${KAKASI_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	kakasi
 
 .if !empty(KAKASI_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.kakasi+=	kakasi>=2.3.0
+BUILDLINK_RECOMMENDED.kakasi+=	kakasi>=2.3.4nb2
 BUILDLINK_PKGSRCDIR.kakasi?=	../../textproc/kakasi
 .endif	# KAKASI_BUILDLINK3_MK
 

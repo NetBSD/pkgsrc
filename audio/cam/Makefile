@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2004/06/02 20:28:59 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2004/10/03 00:13:05 tv Exp $
 #
 
 DISTNAME=	cam-1.02
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/sound/mixers/}
 EXTRACT_SUFX=	.tgz

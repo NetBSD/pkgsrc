@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/03/07 23:30:22 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:13:33 tv Exp $
 
 PKGNAME=	swig-perl-${SWIG_VERSION}
+PKGREVISION=	1
 COMMENT=	Simplified Wrapper and Interface Generator, Perl runtime
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

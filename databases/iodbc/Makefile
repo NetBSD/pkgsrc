@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2004/05/05 03:16:02 snj Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/03 00:13:18 tv Exp $
 #
 
 DISTNAME=		libiodbc-2.50.3
 PKGNAME=		iodbc-2.50.3
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		http://www.iodbc.org/dist/
 

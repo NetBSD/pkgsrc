@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/07/22 09:16:03 recht Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/03 00:12:57 tv Exp $
 #
 
 DISTNAME=		pytables-0.8
 PKGNAME=		${PYPKGPREFIX}-pytables-0.8
+PKGREVISION=	1
 CATEGORIES=		math python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pytables/}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2004/08/02 13:08:09 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/03 00:13:25 tv Exp $
 
 DISTNAME=	cmake-2.0.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v2.0/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/07/22 09:16:02 recht Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/03 00:18:20 tv Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-expat-0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 
 MAINTAINER=	tsarna@NetBSD.org

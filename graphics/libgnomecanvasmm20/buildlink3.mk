@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/07/06 20:35:16 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:14:55 tv Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.4.
 # XXX After this file as been verified as correct, the comment lines
@@ -22,6 +22,7 @@ BUILDLINK_PACKAGES+=	libgnomecanvasmm20
 
 .if !empty(LIBGNOMECANVASMM20_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libgnomecanvasmm20+=	libgnomecanvasmm20>=2.0.1
+BUILDLINK_RECOMMENDED.libgnomecanvasmm20+=	libgnomecanvasmm20>=2.0.1nb1
 BUILDLINK_PKGSRCDIR.libgnomecanvasmm20?=	../../graphics/libgnomecanvasmm20
 .endif	# LIBGNOMECANVASMM20_BUILDLINK3_MK
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/07/21 22:27:19 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/03 00:18:10 tv Exp $
 #
 
 DISTNAME=	mirrordir-0.10.49
+PKGREVISION=	1
 CATEGORIES=	security net
 MASTER_SITES=	http://mirrordir.sourceforge.net/
 

@@ -1,26 +1,8 @@
-$NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
+$NetBSD: patch-ad,v 1.13 2004/10/03 00:13:31 tv Exp $
 
---- libltdl/configure.orig	2004-04-11 15:36:50.000000000 +1000
+--- libltdl/configure.orig	2004-09-19 08:23:09.000000000 -0400
 +++ libltdl/configure
-@@ -3652,10 +3652,13 @@ beos*)
-   lt_cv_deplibs_check_method=pass_all
-   ;;
- 
--bsdi4*)
--  lt_cv_deplibs_check_method='file_magic ELF [0-9][0-9]*-bit [ML]SB (shared object|dynamic lib)'
--  lt_cv_file_magic_cmd='/usr/bin/file -L'
--  lt_cv_file_magic_test_file=/shlib/libc.so
-+# Versions of BSD/OS prior to 4.0 did no have real dynamic linking
-+bsdi1*|bsdi2*|bsdi3*)
-+  dynamic_linker=no
-+  ;;
-+
-+bsdi*)
-+  lt_cv_deplibs_check_method=pass_all
-   ;;
- 
- cygwin*)
-@@ -3713,6 +3716,10 @@ hpux10.20* | hpux11*)
+@@ -3739,6 +3739,10 @@ hpux10.20* | hpux11*)
    esac
    ;;
  
@@ -31,7 +13,20 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
  irix5* | irix6* | nonstopux*)
    case $LD in
    *-32|*"-32 ") libmagic=32-bit;;
-@@ -6795,6 +6802,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -6814,9 +6818,11 @@ echo $ECHO_N "checking for $compiler opt
+       ;;
+ 
+     darwin* | rhapsody*)
+-      # PIC is the default on this platform
++      # PIC is the default on this platform, and static linking of
++      # binaries generally doesn't work
+       # Common symbols not allowed in MH_DYLIB files
+       lt_prog_compiler_pic='-fno-common'
++      lt_prog_compiler_static=''
+       ;;
+ 
+     msdosdjgpp*)
+@@ -6845,6 +6851,11 @@ echo $ECHO_N "checking for $compiler opt
        esac
        ;;
  
@@ -43,7 +38,7 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
      *)
        lt_prog_compiler_pic='-fPIC'
        ;;
-@@ -7170,6 +7182,17 @@ EOF
+@@ -7230,6 +7241,17 @@ EOF
        fi
        ;;
  
@@ -61,7 +56,7 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -7677,6 +7700,20 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -7737,6 +7759,20 @@ if test -z "$aix_libpath"; then aix_libp
        fi
        ;;
  
@@ -82,29 +77,27 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
      irix5* | irix6* | nonstopux*)
        if test "$GCC" = yes; then
  	archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -8065,8 +8102,9 @@ beos*)
-   ;;
- 
- bsdi4*)
--  version_type=linux
-+  version_type=sunos
+@@ -8128,6 +8164,7 @@ beos*)
+ bsdi[45]*)
+   version_type=linux
    need_version=no
 +  need_lib_prefix=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -8182,15 +8220,15 @@ kfreebsd*-gnu)
+@@ -8242,16 +8279,17 @@ kfreebsd*-gnu)
+   ;;
  
  freebsd*)
++  version_type=linux
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
 -  version_type=freebsd-$objformat
 -  case $version_type in
 -    freebsd-elf*)
 -      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
-+  version_type=sunos
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
 +  case $objformat in
 +    elf*)
++      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
 +      soname_spec='${libname}${release}${shared_ext}$major'
        need_version=no
        need_lib_prefix=no
@@ -112,15 +105,16 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
 -    freebsd-*)
 -      library_names_spec='${libname}${release}${shared_ext}$versuffix $libname${shared_ext}$versuffix'
 +    *)
++      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
        need_version=yes
        ;;
    esac
-@@ -8266,15 +8304,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -8327,15 +8365,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
 +interix3*)
-+  version_type=sunos
++  version_type=linux
 +  need_lib_prefix=no
 +  need_version=no
 +  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
@@ -140,38 +134,38 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
 -	else
 -		version_type=irix
 -	fi ;;
-+    *) version_type=sunos ;;
++    *) version_type=irix ;;
    esac
    need_lib_prefix=no
    need_version=no
-@@ -8310,7 +8355,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -8412,11 +8457,11 @@ knetbsd*-gnu)
+   ;;
  
- # This must be Linux ELF.
- linux*)
--  version_type=linux
-+  version_type=sunos
+ netbsd*)
+-  version_type=sunos
++  version_type=linux
    need_lib_prefix=no
    need_version=no
-   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -8389,7 +8434,7 @@ openbsd*)
-   version_type=sunos
+   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
+-    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
++    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
+     finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+     dynamic_linker='NetBSD (a.out) ld.so'
+   else
+@@ -8447,10 +8492,10 @@ nto-qnx*)
+   ;;
+ 
+ openbsd*)
+-  version_type=sunos
++  version_type=linux
    need_lib_prefix=no
-   need_version=yes
+   need_version=no
 -  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -8434,7 +8479,7 @@ sco3.2v5*)
-   ;;
- 
- solaris*)
--  version_type=linux
-+  version_type=sunos
-   need_lib_prefix=no
-   need_version=no
-   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -10684,6 +10729,8 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -10722,6 +10767,8 @@ if test -z "$aix_libpath"; then aix_libp
  	;;
      esac
      ;;
@@ -180,7 +174,7 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
    irix5* | irix6*)
      case $cc_basename in
        CC)
-@@ -10792,6 +10839,13 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -10841,6 +10888,13 @@ if test -z "$aix_libpath"; then aix_libp
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
        archive_cmds_CXX='$LD -Bshareable  -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags'
        wlarc=
@@ -194,7 +188,7 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
        hardcode_libdir_flag_spec_CXX='-R$libdir'
        hardcode_direct_CXX=yes
        hardcode_shlibpath_var_CXX=no
-@@ -11164,6 +11218,14 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -11229,6 +11283,14 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
      esac
    done
  
@@ -209,7 +203,7 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
    # Clean up.
    rm -f a.out a.exe
  else
-@@ -11211,9 +11273,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11276,9 +11338,11 @@ echo $ECHO_N "checking for $compiler opt
        lt_prog_compiler_pic_CXX='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -222,7 +216,7 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -11235,6 +11299,10 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11300,6 +11364,10 @@ echo $ECHO_N "checking for $compiler opt
  	;;
        esac
        ;;
@@ -233,7 +227,7 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
      *)
        lt_prog_compiler_pic_CXX='-fPIC'
        ;;
-@@ -11299,6 +11367,8 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11374,6 +11442,8 @@ echo $ECHO_N "checking for $compiler opt
  	    ;;
  	esac
  	;;
@@ -242,29 +236,27 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
        irix5* | irix6* | nonstopux*)
  	case $cc_basename in
  	  CC)
-@@ -11767,8 +11837,9 @@ beos*)
-   ;;
- 
- bsdi4*)
--  version_type=linux
-+  version_type=sunos
+@@ -11844,6 +11914,7 @@ beos*)
+ bsdi[45]*)
+   version_type=linux
    need_version=no
 +  need_lib_prefix=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -11884,15 +11955,15 @@ kfreebsd*-gnu)
+@@ -11958,16 +12029,17 @@ kfreebsd*-gnu)
+   ;;
  
  freebsd*)
++  version_type=linux
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
 -  version_type=freebsd-$objformat
 -  case $version_type in
 -    freebsd-elf*)
 -      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
-+  version_type=sunos
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
 +  case $objformat in
 +    elf*)
++      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
 +      soname_spec='${libname}${release}${shared_ext}$major'
        need_version=no
        need_lib_prefix=no
@@ -272,15 +264,16 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
 -    freebsd-*)
 -      library_names_spec='${libname}${release}${shared_ext}$versuffix $libname${shared_ext}$versuffix'
 +    *)
++      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
        need_version=yes
        ;;
    esac
-@@ -11968,15 +12039,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -12043,15 +12115,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
 +interix3*)
-+  version_type=sunos
++  version_type=linux
 +  need_lib_prefix=no
 +  need_version=no
 +  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
@@ -300,38 +293,51 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
 -	else
 -		version_type=irix
 -	fi ;;
-+    *) version_type=sunos ;;
++    *) version_type=irix ;;
    esac
    need_lib_prefix=no
    need_version=no
-@@ -12012,7 +12090,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -12128,11 +12207,11 @@ knetbsd*-gnu)
+   ;;
  
- # This must be Linux ELF.
- linux*)
--  version_type=linux
-+  version_type=sunos
+ netbsd*)
+-  version_type=sunos
++  version_type=linux
    need_lib_prefix=no
    need_version=no
-   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -12091,7 +12169,7 @@ openbsd*)
-   version_type=sunos
+   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
+-    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
++    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
+     finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+     dynamic_linker='NetBSD (a.out) ld.so'
+   else
+@@ -12163,10 +12242,10 @@ nto-qnx*)
+   ;;
+ 
+ openbsd*)
+-  version_type=sunos
++  version_type=linux
    need_lib_prefix=no
-   need_version=yes
+   need_version=no
 -  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -12136,7 +12214,7 @@ sco3.2v5*)
-   ;;
+@@ -13710,9 +13789,11 @@ echo $ECHO_N "checking for $compiler opt
+       ;;
  
- solaris*)
--  version_type=linux
-+  version_type=sunos
-   need_lib_prefix=no
-   need_version=no
-   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -13666,6 +13744,11 @@ echo $ECHO_N "checking for $compiler opt
+     darwin* | rhapsody*)
+-      # PIC is the default on this platform
++      # PIC is the default on this platform, and static linking of
++      # binaries generally doesn't work
+       # Common symbols not allowed in MH_DYLIB files
+       lt_prog_compiler_pic_F77='-fno-common'
++      lt_prog_compiler_static_F77=''
+       ;;
+ 
+     msdosdjgpp*)
+@@ -13741,6 +13822,11 @@ echo $ECHO_N "checking for $compiler opt
        esac
        ;;
  
@@ -343,7 +349,7 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
      *)
        lt_prog_compiler_pic_F77='-fPIC'
        ;;
-@@ -14041,6 +14124,17 @@ EOF
+@@ -14126,6 +14212,17 @@ EOF
        fi
        ;;
  
@@ -361,7 +367,7 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	archive_cmds_F77='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -14528,6 +14622,20 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -14613,6 +14710,20 @@ if test -z "$aix_libpath"; then aix_libp
        fi
        ;;
  
@@ -382,29 +388,27 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
      irix5* | irix6* | nonstopux*)
        if test "$GCC" = yes; then
  	archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -14916,8 +15024,9 @@ beos*)
-   ;;
- 
- bsdi4*)
--  version_type=linux
-+  version_type=sunos
+@@ -15004,6 +15115,7 @@ beos*)
+ bsdi[45]*)
+   version_type=linux
    need_version=no
 +  need_lib_prefix=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -15033,15 +15142,15 @@ kfreebsd*-gnu)
+@@ -15118,16 +15230,17 @@ kfreebsd*-gnu)
+   ;;
  
  freebsd*)
++  version_type=linux
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
 -  version_type=freebsd-$objformat
 -  case $version_type in
 -    freebsd-elf*)
 -      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
-+  version_type=sunos
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
 +  case $objformat in
 +    elf*)
++      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
 +      soname_spec='${libname}${release}${shared_ext}$major'
        need_version=no
        need_lib_prefix=no
@@ -412,15 +416,16 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
 -    freebsd-*)
 -      library_names_spec='${libname}${release}${shared_ext}$versuffix $libname${shared_ext}$versuffix'
 +    *)
++      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
        need_version=yes
        ;;
    esac
-@@ -15117,15 +15226,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -15203,15 +15316,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
 +interix3*)
-+  version_type=sunos
++  version_type=linux
 +  need_lib_prefix=no
 +  need_version=no
 +  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
@@ -440,38 +445,51 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
 -	else
 -		version_type=irix
 -	fi ;;
-+    *) version_type=sunos ;;
++    *) version_type=irix ;;
    esac
    need_lib_prefix=no
    need_version=no
-@@ -15161,7 +15277,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -15288,11 +15408,11 @@ knetbsd*-gnu)
+   ;;
  
- # This must be Linux ELF.
- linux*)
--  version_type=linux
-+  version_type=sunos
+ netbsd*)
+-  version_type=sunos
++  version_type=linux
    need_lib_prefix=no
    need_version=no
-   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -15240,7 +15356,7 @@ openbsd*)
-   version_type=sunos
+   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
+-    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
++    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
+     finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+     dynamic_linker='NetBSD (a.out) ld.so'
+   else
+@@ -15323,10 +15443,10 @@ nto-qnx*)
+   ;;
+ 
+ openbsd*)
+-  version_type=sunos
++  version_type=linux
    need_lib_prefix=no
-   need_version=yes
+   need_version=no
 -  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -15285,7 +15401,7 @@ sco3.2v5*)
-   ;;
+@@ -16052,9 +16172,11 @@ echo $ECHO_N "checking for $compiler opt
+       ;;
  
- solaris*)
--  version_type=linux
-+  version_type=sunos
-   need_lib_prefix=no
-   need_version=no
-   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -15997,6 +16113,11 @@ echo $ECHO_N "checking for $compiler opt
+     darwin* | rhapsody*)
+-      # PIC is the default on this platform
++      # PIC is the default on this platform, and static linking of
++      # binaries generally doesn't work
+       # Common symbols not allowed in MH_DYLIB files
+       lt_prog_compiler_pic_GCJ='-fno-common'
++      lt_prog_compiler_static_GCJ=''
+       ;;
+ 
+     msdosdjgpp*)
+@@ -16083,6 +16205,11 @@ echo $ECHO_N "checking for $compiler opt
        esac
        ;;
  
@@ -483,7 +501,7 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
      *)
        lt_prog_compiler_pic_GCJ='-fPIC'
        ;;
-@@ -16372,6 +16493,17 @@ EOF
+@@ -16468,6 +16595,17 @@ EOF
        fi
        ;;
  
@@ -501,7 +519,7 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	archive_cmds_GCJ='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -16879,6 +17011,20 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -16975,6 +17113,20 @@ if test -z "$aix_libpath"; then aix_libp
        fi
        ;;
  
@@ -522,29 +540,27 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
      irix5* | irix6* | nonstopux*)
        if test "$GCC" = yes; then
  	archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -17267,8 +17413,9 @@ beos*)
-   ;;
- 
- bsdi4*)
--  version_type=linux
-+  version_type=sunos
+@@ -17366,6 +17518,7 @@ beos*)
+ bsdi[45]*)
+   version_type=linux
    need_version=no
 +  need_lib_prefix=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -17384,15 +17531,15 @@ kfreebsd*-gnu)
+@@ -17480,16 +17633,17 @@ kfreebsd*-gnu)
+   ;;
  
  freebsd*)
++  version_type=linux
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
 -  version_type=freebsd-$objformat
 -  case $version_type in
 -    freebsd-elf*)
 -      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
-+  version_type=sunos
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
 +  case $objformat in
 +    elf*)
++      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
 +      soname_spec='${libname}${release}${shared_ext}$major'
        need_version=no
        need_lib_prefix=no
@@ -552,15 +568,16 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
 -    freebsd-*)
 -      library_names_spec='${libname}${release}${shared_ext}$versuffix $libname${shared_ext}$versuffix'
 +    *)
++      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
        need_version=yes
        ;;
    esac
-@@ -17468,15 +17615,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -17565,15 +17719,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
 +interix3*)
-+  version_type=sunos
++  version_type=linux
 +  need_lib_prefix=no
 +  need_version=no
 +  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
@@ -580,43 +597,34 @@ $NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
 -	else
 -		version_type=irix
 -	fi ;;
-+    *) version_type=sunos ;;
++    *) version_type=irix ;;
    esac
    need_lib_prefix=no
    need_version=no
-@@ -17512,7 +17666,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -17650,11 +17811,11 @@ knetbsd*-gnu)
+   ;;
  
- # This must be Linux ELF.
- linux*)
--  version_type=linux
-+  version_type=sunos
+ netbsd*)
+-  version_type=sunos
++  version_type=linux
    need_lib_prefix=no
    need_version=no
-   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -17591,7 +17745,7 @@ openbsd*)
-   version_type=sunos
+   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
+-    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
++    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
+     finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+     dynamic_linker='NetBSD (a.out) ld.so'
+   else
+@@ -17685,10 +17846,10 @@ nto-qnx*)
+   ;;
+ 
+ openbsd*)
+-  version_type=sunos
++  version_type=linux
    need_lib_prefix=no
-   need_version=yes
+   need_version=no
 -  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -17636,7 +17790,7 @@ sco3.2v5*)
-   ;;
- 
- solaris*)
--  version_type=linux
-+  version_type=sunos
-   need_lib_prefix=no
-   need_version=no
-   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -19858,7 +20012,7 @@ if test "${libltdl_cv_shlibext+set}" = s
- else
- 
- module=yes
--eval libltdl_cv_shlibext=$shrext_cmds
-+eval libltdl_cv_shlibext=$shrext
- 
- fi
- echo "$as_me:$LINENO: result: $libltdl_cv_shlibext" >&5

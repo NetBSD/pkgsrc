@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2004/09/20 22:06:37 snj Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/03 00:14:57 tv Exp $
 
 DISTNAME=	scrot-0.8
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://linuxbrit.co.uk/downloads/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/05/07 01:14:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/03 00:13:17 tv Exp $
 #
 
 DISTNAME=		fribidi-0.10.4
+PKGREVISION=		1
 CATEGORIES=		converters
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fribidi/}
 EXTRACT_SUFX=		.tar.bz2

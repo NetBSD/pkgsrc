@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2004/04/25 07:11:48 snj Exp $
+# $NetBSD: Makefile,v 1.24 2004/10/03 00:14:56 tv Exp $
 # FreeBSD: Makefile,v 1.8 1996/11/18 09:53:36 asami Exp
 #
 
 DISTNAME=		pixmap2.6
 PKGNAME=		pixmap-2.6.4
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=applications/pixmap/}
 

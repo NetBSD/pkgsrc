@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2004/01/17 15:31:02 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/10/03 00:18:09 tv Exp $
 #
 
 DISTNAME=	cracklib,2.7
 PKGNAME=	libcrack-2.7
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.crypticide.org/users/alecm/security/
 EXTRACT_SUFX=	.tgz

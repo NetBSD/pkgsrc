@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/04/26 10:19:53 cube Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:14:56 tv Exp $
 
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 .include "Makefile.common"
 
 CONFLICTS=	nvtv-gtk2-[0-9]*

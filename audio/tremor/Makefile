@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/02/19 01:06:14 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/10/03 00:13:09 tv Exp $
 
 DISTNAME=	tremor_snapshot_030406
 PKGNAME=	tremor-1.0.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel audio
 MASTER_SITES=	http://www.xiph.org/ogg/vorbis/download/
 EXTRACT_SUFX=	.tgz
