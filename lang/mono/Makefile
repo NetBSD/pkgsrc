@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.23 2004/04/04 19:23:10 recht Exp $
+# $NetBSD: Makefile,v 1.24 2004/05/11 17:33:42 recht Exp $
 #
 
-DISTNAME=	mono-0.31
-PKGREVISION=	1
+DISTNAME=	mono-0.91
 CATEGORIES=	lang
-MASTER_SITES=	http://www.go-mono.org/archive/
+MASTER_SITES=	http://www.go-mono.com/archive/beta1/
 
 MAINTAINER=	recht@NetBSD.org
-HOMEPAGE=	http://www.go-mono.org/
+HOMEPAGE=	http://www.go-mono.com/
 COMMENT=	Open source implementation of the .NET Development Framework
 
 BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
-#BUILD_DEPENDS+=	bash>=2.0:../../shells/bash2
 
 CONFLICTS=	pnet-[0-9]*
 
@@ -21,7 +19,6 @@ NOT_FOR_PLATFORM+=	NetBSD-1.6-* NetBSD-1.6.*-*
 NOT_FOR_PLATFORM+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[AB]-*
 # boehm-gc doesn't build on amd64/x86_64
 NOT_FOR_PLATFORM+=	*-*-amd64 *-*-x86_64
-
 
 USE_GNU_TOOLS+=		make yacc
 USE_BUILDLINK3=		yes
@@ -39,7 +36,7 @@ PKG_SYSCONFSUBDIR=	mono
 USE_PERL5=	build
 REPLACE_PERL=	mono/cil/make-opcodes-def.pl
 REPLACE_PERL+=	mono/metadata/make-bundle.pl
-REPLACE_PERL+=	mono/tests/test-driver
+REPLACE_PERL+=	mono/benchmark/test-driver
 
 EGDIR=		${PREFIX}/share/examples/mono
 CONF_FILES=	${EGDIR}/config ${PKG_SYSCONFDIR}/config
@@ -48,27 +45,35 @@ CONF_FILES+=	${EGDIR}/machine.config ${PKG_SYSCONFDIR}/machine.config
 CONF_FILES+=	${EGDIR}/DefaultWsdlHelpGenerator.aspx \
 		${PKG_SYSCONFDIR}/DefaultWsdlHelpGenerator.aspx
 
+DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
+
 .include "../../mk/bsd.prefs.mk"
 
-GC_LIB?=included
 .if ${OPSYS} == "Linux"
 .  if defined(MONO_USE_NPTL) && !empty(MONO_USE_NPTL:M[yY][eE][sS])
 # Enable support for NPTL
 CONFIGURE_ARGS+=	--with-nptl=yes
 .  endif
 BUILD_DEFS+=	MONO_USE_NPTL
-GC_LIB=included
 .else
 CONFIGURE_ARGS+=	--with-nptl=no
 .endif
 
-.if ${GC_LIB} == "boehm"
+# allow changing the gc_type
+# allowed values: included, boehm, none
+MONO_GC_TYPE?=included
+.if ${MONO_GC_TYPE} == "boehm"
 .  include "../../devel/boehm-gc/buildlink3.mk"
+.endif
+CONFIGURE_ARGS+=	--with-gc=${MONO_GC_TYPE}
+
+# mono debugger support is only available with the included gc
+# patch the PLIST accordingly
+.if ${MONO_GC_TYPE} == "boehm" || ${MONO_GC_TYPE} == "none"
 PLIST_SUBST+=  GC="@comment "
 .else
 PLIST_SUBST+=  GC=
 .endif
-CONFIGURE_ARGS+=	--with-gc=${GC_LIB}
 
 # mcs coredumps with sigaltstack
 .if ${OPSYS} == "NetBSD"
