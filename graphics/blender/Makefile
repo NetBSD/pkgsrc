@@ -1,0 +1,57 @@
+# $NetBSD: Makefile,v 1.1.1.1 2001/03/16 00:33:18 manu Exp $
+#
+
+PKGNAME=		blender-2.11.nb1
+CATEGORIES=	graphics
+MASTER_SITES=	ftp://www.blender.nl/pub/
+
+MAINTAINER=	manu@netbsd.org
+HOMEPAGE=	http://www.blender.nl
+COMMENT=		GUI based raytracer
+
+RESTRICTED=	"Only the original, unmodified package may be freely distributed"
+NO_BIN_ON_FTP=	${RESTRICTED}
+NO_BIN_ON_CDROM=${RESTRICTED}
+
+NO_BUILD=	yes
+
+# To be updated as other platforms PLIST will be built
+ONLY_FOR_PLATFORM= *-*-powerpc
+
+.if (${MACHINE_ARCH} == "alpha")
+.if !exists(/emul/linux/lib/ld.so.1)
+IGNORE=  "${PKGNAME} requires Linux libraries - see compat_linux(8)"
+.endif
+DISTNAME=	blender2.11-linux-glibc2.1.3-alpha-static
+#
+.elif (${MACHINE_ARCH} == "i386")
+DEPENDS+=   suse_linux>=6.4:../../emulators/suse_linux
+DISTNAME=	blender2.11-linux-glibc2.1.2-i386-static
+#
+.elif (${MACHINE_ARCH} == "sparc")
+.if !exists(/emul/sunos/usr/lib/ld.so)
+IGNORE=  "${PKGNAME} requires SunOS libraries - see compat_sunos(8)"
+.endif
+DISTNAME=   blender2.11-solaris-2.6-sparc
+EXTRACT_SUFX=	.tar.Z
+#
+.elif (${MACHINE_ARCH} == "powerpc")
+.if !exists(/emul/linux/lib/ld.so.1)
+IGNORE=  "${PKGNAME} requires Linux libraries - see compat_linux(8)"
+.endif
+DEPENDS+=   linuxppc_lib>=2000.q4.2:../../emulators/linuxppc_lib
+DISTNAME=	blender2.11-linux-glibc2.1.3-powerpc-static
+PLIST_ARCH=	linux-powerpc
+#
+.else
+IGNORE=	"Your platform is not supported and the package is buggy!"
+.endif
+
+PLIST_SRC=	${PKGDIR}/PLIST.${PLIST_ARCH}
+
+do-install:
+	${MKDIR} ${PREFIX}/lib/blender
+	${CP} -Rp ${WRKSRC}/* ${PREFIX}/lib/blender/
+	${LN} -sf ${PREFIX}/lib/blender/blender ${PREFIX}/bin/blender
+
+.include "../../mk/bsd.pkg.mk"
