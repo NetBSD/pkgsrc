@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/10/03 00:15:02 tv Exp $
+# $NetBSD: Makefile,v 1.16 2004/10/14 18:43:19 tv Exp $
 
 DISTNAME=		oo2c_${BITS}-2.0.11
 PKGNAME=		oo2c-2.0.11
@@ -11,7 +11,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://ooc.sourceforge.net/
 COMMENT=		Optimizing Oberon-2 Compiler
 
-DEPENDS+=		libtool-base-[0-9]*:../../devel/libtool
+DEPENDS+=		libtool-base-[0-9]*:../../devel/libtool-base
 DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 
 .if ${MACHINE_ARCH} == alpha || ${MACHINE_ARCH} == sparc64 \
