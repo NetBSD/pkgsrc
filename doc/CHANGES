@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1061 2003/01/09 13:18:35 schmonz Exp $
+$NetBSD: CHANGES,v 1.1062 2003/01/09 14:00:36 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -159,3 +159,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gtkhtml to 1.1.7 [rh 2003-01-09]
 	Updated gnumeric to 1.0.12 [rh 2003-01-09]
 	Updated pkg_install to 20030109 [schmonz 2003-01-09]
+	Updated evolution to 1.2.1 [rh 2003-01-09]
