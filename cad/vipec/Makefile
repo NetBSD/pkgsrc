@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/10/03 00:13:13 tv Exp $
+# $NetBSD: Makefile,v 1.37 2004/12/03 15:14:52 wiz Exp $
 #
 
 DISTNAME=	ViPEC-3.1.3
@@ -19,7 +19,7 @@ UNLIMIT_RESOURCES+=	datasize
 
 CONFLICTS+=		vipec-[0-9]*
 
-ALL_TARGET=		ALL
+BUILD_TARGET=		ALL
 
 do-configure:
 	cd ${WRKSRC}/src && tmake vipec "CONFIG+=release" -o Makefile

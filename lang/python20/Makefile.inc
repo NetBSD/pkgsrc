@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.inc,v 1.2 2002/12/07 02:38:58 schmonz Exp $
+# $NetBSD: Makefile.inc,v 1.3 2004/12/03 15:15:01 wiz Exp $
 #
 
 PY_VERSION=	2.0
@@ -21,7 +21,7 @@ PY_COMPILEDIR=	${PY_PROG} ${PY_LIBDIR}/compileall.py
 
 DEPENDS+=	python20-${PY_VERSION}*:../../lang/python20
 
-ALL_TARGET?=	default
+BUILD_TARGET?=	default
 
 .if ${MACHINE_ARCH} == "sparc64"
 PKG_FAIL_REASON= "${PKGNAME} needs dynamic loading"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/10/03 00:13:27 tv Exp $
+# $NetBSD: Makefile,v 1.35 2004/12/03 15:14:54 wiz Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--with-included-gettext
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
-ALL_TARGET=		all-yes
+BUILD_TARGET=		all-yes
 INSTALL_TARGET=		install-exec
 BUILD_DIRS=		${WRKSRC}/intl
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:14:45 tv Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/03 15:14:57 wiz Exp $
 #
 
 DISTNAME=		Magnetic22Src
@@ -14,7 +14,7 @@ COMMENT=		Interpreter for text adventures from Magnetic Scrolls
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
-ALL_TARGET=		gtkmagnetic
+BUILD_TARGET=		gtkmagnetic
 WRKSRC=			${WRKDIR}/Gtk
 
 .include "../../mk/compiler.mk"

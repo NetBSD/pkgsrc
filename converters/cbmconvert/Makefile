@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/11/13 21:28:27 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/12/03 15:14:52 wiz Exp $
 
 DISTNAME=		cbmconvert-2.0.5
 CATEGORIES=		converters archivers
@@ -8,7 +8,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Converts files to and from various C64/C128/CBM formats
 
 USE_BUILDLINK3=		yes
-ALL_TARGET=		unix
+BUILD_TARGET=		unix
 MAKE_FLAGS=		CFLAGS="${CFLAGS}"
 
 do-install:

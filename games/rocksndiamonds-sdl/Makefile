@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/11/03 15:15:08 adam Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/03 15:14:57 wiz Exp $
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
@@ -9,7 +9,7 @@
 PKGNAME=	${DISTNAME:S/-/-sdl-/}
 COMMENT=	Game like Boulder Dash, Emerald Mine, or Sokoban (SDL build)
 
-ALL_TARGET=	sdl
+BUILD_TARGET=	sdl
 CONFLICTS=	rocksndiamonds-[1-9]*
 
 PATCHDIR=	../rocksndiamonds/patches

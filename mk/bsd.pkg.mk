@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1544 2004/12/01 09:53:00 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1545 2004/12/03 15:15:04 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -945,7 +945,12 @@ ECHO_MSG?=		${ECHO}
 # do something.
 DO_NADA?=		${TRUE}
 
-ALL_TARGET?=		all
+# remove after 2005Q1
+.if defined(ALL_TARGET)
+PKG_FAIL_REASON+='ALL_TARGET is deprecated and must be replaced with BUILD_TARGET.'
+.endif
+
+BUILD_TARGET?=		all
 INSTALL_TARGET?=	install
 
 .if defined(USE_IMAKE) && !defined(NO_INSTALL_MANPAGES)
@@ -2430,7 +2435,7 @@ BUILD_MAKE_FLAGS?=	${MAKE_FLAGS}
 .if !target(do-build)
 do-build:
 .  for DIR in ${BUILD_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKEFILE} ${BUILD_TARGET}
 .  endfor
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/03 00:18:00 tv Exp $
+# $NetBSD: Makefile,v 1.14 2004/12/03 15:15:06 wiz Exp $
 #
 
 DISTNAME=		tightvnc-1.2.9
@@ -22,7 +22,7 @@ USE_PERL5=		yes
 
 USE_GNU_TOOLS+=		make
 
-ALL_TARGET=		World
+BUILD_TARGET=		World
 
 # We have to frob a few things, and we want our own permissions, so it's easier
 # to do the install ourselves.

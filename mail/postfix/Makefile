@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2004/12/02 14:39:56 jlam Exp $
+# $NetBSD: Makefile,v 1.154 2004/12/03 15:15:02 wiz Exp $
 
 DISTNAME=	postfix-2.1.5
 PKGREVISION=	2
@@ -84,7 +84,7 @@ MESSAGE_SRC+=		${PKGDIR}/MESSAGE.${OPSYS}
 .endif
 PLIST_SRC+=		${PKGDIR}/PLIST
 
-ALL_TARGET=		# empty
+BUILD_TARGET=		# empty
 MAKE_ENV=		CC="${CC}" OPT="${CFLAGS}"
 MAKE_ENV+=		AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/20 12:22:21 agc Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/03 15:15:06 wiz Exp $
 #
 
 DISTNAME=		rinetd
@@ -13,7 +13,7 @@ COMMENT=		Internet redirection server
 WRKSRC=			${WRKDIR}/${PKGNAME:S|nb*||}
 NO_CONFIGURE=		# defined
 USE_PKGINSTALL=		yes
-ALL_TARGET=		rinetd
+BUILD_TARGET=		rinetd
 
 CPPFLAGS+=		-DRINETD_CONF='\"${PKG_SYSCONFDIR}/rinetd.conf\"'
 

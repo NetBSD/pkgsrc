@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/10/03 00:14:47 tv Exp $
+# $NetBSD: Makefile,v 1.23 2004/12/03 15:14:58 wiz Exp $
 
 DISTNAME=	GMT3.4
 PKGNAME=	GMT-3.4
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=--enable-eps
 CONFIGURE_ARGS+=--enable-www=${PREFIX}/share/doc/html
 CONFIGURE_ARGS+=--enable-mansect=1
 
-ALL_TARGET=	all suppl
+BUILD_TARGET=	all suppl
 INSTALL_TARGET= install-all
 
 post-extract:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:14:40 tv Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:14:56 wiz Exp $
 #
 
 DISTNAME=		arnsrc27012002
@@ -18,7 +18,7 @@ EXTRACT_CMD_OPTS.zip=	-aqo
 WRKSRC=			${WRKDIR}/arnold/src
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
-ALL_TARGET=		arnold
+BUILD_TARGET=		arnold
 
 SHAREDIR=		${PREFIX}/share/arnold
 DOCDIR=			${PREFIX}/share/doc/arnold

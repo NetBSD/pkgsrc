@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/07 02:01:38 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/03 15:15:07 wiz Exp $
 
 DISTNAME=	TeXfamily-1.2.1
 PKGREVISION=	5
@@ -35,7 +35,7 @@ TETEX_DIR=	${PKGSRCDIR}/print/teTeX1-bin/${WRKDIR:T}/teTeX-1.0
 WRKSRC=		${TETEX_DIR}
 EXTRACT_ONLY=	# none
 
-ALL_TARGET=	all
+BUILD_TARGET=	all
 INSTALL_TARGET=	install strip
 USE_GNU_TOOLS+=	make
 USE_X11=	yes

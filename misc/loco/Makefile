@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:49:27 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:04 wiz Exp $
 #
 
 DISTNAME=	loco-0.32
@@ -12,6 +12,6 @@ COMMENT=	Colorize file or standard input and print on the standard output
 USE_PERL5=	YES
 REPLACE_PERL=	loco
 
-ALL_TARGET=	# defined
+BUILD_TARGET=	# defined
 
 .include "../../mk/bsd.pkg.mk"

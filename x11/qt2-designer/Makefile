@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/10/03 00:18:37 tv Exp $
+# $NetBSD: Makefile,v 1.22 2004/12/03 15:15:12 wiz Exp $
 
 PKGNAME=		qt2-designer-${QTVERSION}
 PKGREVISION=		3
@@ -10,7 +10,7 @@ USE_BUILDLINK3=		yes
 
 .include "../qt2-libs/Makefile.common"
 
-ALL_TARGET=		sub-tools
+BUILD_TARGET=		sub-tools
 
 do-install:
 	${LIBTOOL} ${INSTALL_DATA} \

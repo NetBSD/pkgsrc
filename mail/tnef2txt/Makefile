@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/05/10 23:20:30 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:03 wiz Exp $
 #
 
 DISTNAME=	tnef2txt-1.4
@@ -11,7 +11,7 @@ COMMENT=	Portable application/ms-tnef parser
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-ALL_TARGET=	tnef2txt
+BUILD_TARGET=	tnef2txt
 
 INSTALLATION_DIRS=	bin
 
