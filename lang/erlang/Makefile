@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/08/31 01:01:55 jtb Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/11 03:42:02 jmc Exp $
 
 DISTNAME=		otp_src_R9C-0
 PKGNAME=		erlang-9.2
@@ -16,6 +16,8 @@ USE_X11=		yes
 USE_PERL5=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
+USE_JAVA=		yes
+USE_JAVA2=		yes
 
 .include "../../security/openssl/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
