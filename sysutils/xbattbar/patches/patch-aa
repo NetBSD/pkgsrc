@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/14 22:20:25 itojun Exp $
+
+--- Imakefile-	Fri Dec 15 06:21:16 2000
++++ Imakefile	Fri Dec 15 06:21:29 2000
+@@ -19,4 +19,4 @@
+ 
+-BINDIR = /usr/local/bin
+-MANDIR = /usr/local/man/cat1
++BINDIR = ${PREFIX}/bin
++MANDIR = ${PREFIX}/man/cat1
+ 
