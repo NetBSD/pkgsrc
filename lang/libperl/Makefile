@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/12/02 16:53:02 tv Exp $
+# $NetBSD: Makefile,v 1.4 1998/12/02 22:15:02 tv Exp $
 #
 
 DISTNAME=		perl5.004_04
@@ -31,9 +31,15 @@ CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} -Dd_bincompat3=undef \
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
 ALL_TARGET=		perl
 
+post-build:
+	cd ${WRKSRC}/ext/DynaLoader && ${RM} DynaLoader.o && \
+		${MAKE} DynaLoader.o && ${MV} DynaLoader.o DynaLoader_pic.o
+
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libperl.so* \
 		${PREFIX}/lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/
 	${INSTALL_PROGRAM} ${WRKSRC}/perl ${PREFIX}/bin/soperl
+	${INSTALL_DATA} ${WRKSRC}/ext/DynaLoader/DynaLoader_pic.o \
+		${PREFIX}/lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/
 
 .include "../../mk/bsd.pkg.mk"

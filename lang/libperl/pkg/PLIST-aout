@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST-aout,v 1.1.1.1 1998/12/02 02:42:05 tv Exp $
+@comment $NetBSD: PLIST-aout,v 1.2 1998/12/02 22:15:02 tv Exp $
 bin/soperl
+lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/DynaLoader_pic.o
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/libperl.so.4.4
