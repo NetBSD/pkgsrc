@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.6 1998/11/12 14:37:14 agc Exp $
+
 --- unix-gcc.mak.orig	Thu Sep 17 02:06:06 1998
 +++ unix-gcc.mak	Wed Nov  4 19:33:28 1998
 @@ -141,7 +141,7 @@
