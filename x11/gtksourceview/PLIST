@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/10/28 19:05:43 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/01/18 17:27:56 drochner Exp $
 include/gtksourceview-1.0/gtksourceview/gtksourcebuffer.h
 include/gtksourceview-1.0/gtksourceview/gtksourceiter.h
 include/gtksourceview-1.0/gtksourceview/gtksourcelanguage.h
@@ -33,6 +33,7 @@ share/doc/gtksourceview/right.png
 share/doc/gtksourceview/rn01.html
 share/doc/gtksourceview/style.css
 share/doc/gtksourceview/up.png
+share/gtksourceview-1.0/language-specs/R.lang
 share/gtksourceview-1.0/language-specs/ada.lang
 share/gtksourceview-1.0/language-specs/c.lang
 share/gtksourceview-1.0/language-specs/cpp.lang
@@ -41,25 +42,31 @@ share/gtksourceview-1.0/language-specs/css.lang
 share/gtksourceview-1.0/language-specs/desktop.lang
 share/gtksourceview-1.0/language-specs/diff.lang
 share/gtksourceview-1.0/language-specs/fortran.lang
+share/gtksourceview-1.0/language-specs/gtkrc.lang
 share/gtksourceview-1.0/language-specs/haskell.lang
 share/gtksourceview-1.0/language-specs/html.lang
 share/gtksourceview-1.0/language-specs/idl.lang
+share/gtksourceview-1.0/language-specs/ini.lang
 share/gtksourceview-1.0/language-specs/java.lang
 share/gtksourceview-1.0/language-specs/javascript.lang
 share/gtksourceview-1.0/language-specs/language.dtd
 share/gtksourceview-1.0/language-specs/latex.lang
 share/gtksourceview-1.0/language-specs/lua.lang
 share/gtksourceview-1.0/language-specs/msil.lang
+share/gtksourceview-1.0/language-specs/nemerle.lang
 share/gtksourceview-1.0/language-specs/pascal.lang
 share/gtksourceview-1.0/language-specs/perl.lang
 share/gtksourceview-1.0/language-specs/php.lang
 share/gtksourceview-1.0/language-specs/po.lang
 share/gtksourceview-1.0/language-specs/python.lang
 share/gtksourceview-1.0/language-specs/ruby.lang
+share/gtksourceview-1.0/language-specs/sh.lang
 share/gtksourceview-1.0/language-specs/sql.lang
+share/gtksourceview-1.0/language-specs/tcl.lang
 share/gtksourceview-1.0/language-specs/texinfo.lang
 share/gtksourceview-1.0/language-specs/vbnet.lang
 share/gtksourceview-1.0/language-specs/verilog.lang
+share/gtksourceview-1.0/language-specs/vhdl.lang
 share/gtksourceview-1.0/language-specs/xml.lang
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gtksourceview-1.0.mo
