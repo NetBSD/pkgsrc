@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/09/22 08:09:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/10/19 00:02:44 grant Exp $
 bin/clamav-config
 bin/clamdscan
 bin/clamscan
@@ -11,13 +11,13 @@ man/man1/clamdscan.1
 man/man1/clamscan.1
 man/man1/freshclam.1
 man/man1/sigtool.1
-man/man5/clamav.conf.5
+man/man5/clamd.conf.5
 man/man5/freshclam.conf.5
 ${MILTER}man/man8/clamav-milter.8
 man/man8/clamd.8
 ${MILTER}sbin/clamav-milter
 sbin/clamd
-share/examples/clamav/clamav.conf
+share/examples/clamav/clamd.conf
 share/examples/clamav/daily.cvd
 share/examples/clamav/freshclam.conf
 share/examples/clamav/main.cvd
