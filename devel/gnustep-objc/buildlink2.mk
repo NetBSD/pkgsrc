@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/12/05 09:22:26 adam Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/12/05 09:23:41 adam Exp $
 #
 
 .if !defined(GNUSTEP_OBJC_BUILDLINK2_MK)
@@ -13,8 +13,7 @@ BUILDLINK_PREFIX.gnustep-objc_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.gnustep-objc=	share/GNUstep/System/Library/Headers/objc/*
 BUILDLINK_FILES.gnustep-objc+=	share/GNUstep/System/Library/Libraries/*
 
-#.include "../../devel/gnustep-make/buildlink2.mk"
-.include "../gnustep-make/buildlink2.mk"
+.include "../../devel/gnustep-make/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	gnustep-objc-buildlink
 
