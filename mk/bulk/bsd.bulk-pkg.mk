@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.75 2005/03/12 13:27:03 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.76 2005/03/17 22:49:15 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -404,7 +404,7 @@ bulk-package:
 			nbrokenby=0;\
 			if [ "${USE_BULK_CACHE}" = "yes" ]; then \
 				${ECHO_MSG} "BULK> Marking all packages which depend upon ${PKGNAME} as broken:"; \
-				tmp=`${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:[ \t]*;;p" ${SUPPORTSFILE}` ; \
+				tmp=`${SED} -n -e "/^${_ESCPKGPATH} / s;^[^:]*:[ ]*;;p" ${SUPPORTSFILE}` ; \
 				if test -n "$$tmp" ; then \
 					for pkgdir in $$tmp ; do \
 						pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ;\
