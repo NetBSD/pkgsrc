@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2000/01/26 22:09:32 jlam Exp $
+$NetBSD: patch-ab,v 1.7 2003/09/18 18:55:23 wiz Exp $
 
 --- Makefile.orig	Tue Jul  2 10:36:06 1996
 +++ Makefile	Sun Jan 16 02:16:43 2000
@@ -103,7 +103,7 @@ $NetBSD: patch-ab,v 1.6 2000/01/26 22:09:32 jlam Exp $
  		@-mv `$(BASENAME) $@` $@ > /dev/null 2>&1
  
 +.c.lo:
-+		cd `${DIRNAME} $@` && ${LIBTOOL} ${CC} ${CFLAGS} $?
++		cd `${DIRNAME} $@` && ${LIBTOOL} --mode=compile ${CC} ${CFLAGS} $?
 +
  # Target rules
  
@@ -118,7 +118,7 @@ $NetBSD: patch-ab,v 1.6 2000/01/26 22:09:32 jlam Exp $
 -		$(AR) $(ARFLAGS) $(LIBGSM) $(GSM_OBJECTS)
 -		$(RANLIB) $(LIBGSM)
 +		cd $(LIB) && \
-+			$(LIBTOOL) $(CC) -o `$(BASENAME) $@` \
++			$(LIBTOOL) --mode=link $(CC) -o `$(BASENAME) $@` \
 +				$(GSM_OBJECTS:.o=.lo) \
 +				-rpath $(GSM_INSTALL_LIB) -version-info 1:10
  
@@ -128,7 +128,7 @@ $NetBSD: patch-ab,v 1.6 2000/01/26 22:09:32 jlam Exp $
  $(TOAST):	$(BIN) $(TOAST_OBJECTS) $(LIBGSM)
 -		$(LD) $(LFLAGS) -o $(TOAST) $(TOAST_OBJECTS) $(LIBGSM) $(LDLIB)
 +		cd $(BIN) && \
-+			$(LIBTOOL) $(LD) $(LFLAGS) -o `$(BASENAME) $@` \
++			$(LIBTOOL) --mode=link $(LD) $(LFLAGS) -o `$(BASENAME) $@` \
 +				$(TOAST_OBJECTS) $(LIBGSM) $(LDLIB)
  
  $(UNTOAST):	$(BIN) $(TOAST)
@@ -155,7 +155,7 @@ $NetBSD: patch-ab,v 1.6 2000/01/26 22:09:32 jlam Exp $
 -		-rm $@
 -		cp $(TOAST) $@
 -		chmod 755 $@
-+		${LIBTOOL} ${BSD_INSTALL_PROGRAM} $? $(TOAST_INSTALL_BIN)
++		${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} $? $(TOAST_INSTALL_BIN)
  
  $(TOAST_INSTALL_BIN)/untoast:	$(TOAST_INSTALL_BIN)/toast
 -		-rm $@
@@ -209,7 +209,7 @@ $NetBSD: patch-ab,v 1.6 2000/01/26 22:09:32 jlam Exp $
 +		${BSD_INSTALL_DATA} $? $(GSM_INSTALL_INC)
 +
 +$(GSM_INSTALL_LIB)/libgsm.la:	$(LIBGSM)
-+		${LIBTOOL} ${BSD_INSTALL_DATA} $? $(GSM_INSTALL_LIB)
++		${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} $? $(GSM_INSTALL_LIB)
  
  
  # Distribution
