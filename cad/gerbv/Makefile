@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/12/30 17:21:55 cjep Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/22 07:21:54 grant Exp $
 #
 
 DISTNAME=	gerbv-0.15
@@ -12,7 +12,7 @@ COMMENT=	Gerber file viewer
 CONFIGURE_ARGS+=	--enable-exportpng
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"

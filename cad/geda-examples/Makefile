@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/22 07:21:54 grant Exp $
 #
 
 DISTNAME=	geda-examples-${PKGVERSION}
@@ -18,7 +18,7 @@ DIST_SUBDIR=	geda
 PKGVERSION=	20030901
 
 GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/geda

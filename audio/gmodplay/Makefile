@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/12/24 09:53:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/22 07:15:00 grant Exp $
 
 DISTNAME=	gmodplay-0.08
 PKGREVISION=	3
@@ -16,7 +16,7 @@ ONLY_FOR_PLATFORM=	*-*-alpha *-*-arc *-*-cobalt *-*-dreamcast \
 			*-*-vax
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 # for libslang and ossaudio
 CFLAGS+=	-DAUDIO_DEV="\"\\\"$(DEVOSSAUDIO)\\\"\""

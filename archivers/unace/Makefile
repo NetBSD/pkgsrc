@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:21:40 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/22 07:18:44 grant Exp $
 #
 
 DISTNAME=	unace-1.2b
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.winace.com/
 COMMENT=	Extract, list and test files in ACE archives
 
 USE_BUILDLINK2=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 
 ALL_TARGET=	clean unace
 

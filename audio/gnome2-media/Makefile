@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/03 18:49:34 reed Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/22 07:15:00 grant Exp $
 
 DISTNAME=		gnome-media-2.4.1.1
 PKGREVISION=		1
@@ -17,7 +17,7 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_X11=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PERL5=		build
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/01/20 12:07:42 agc Exp $
+# $NetBSD: Makefile,v 1.26 2004/01/22 07:15:00 grant Exp $
 
 DISTNAME=		libmikmod_3.1.10
 PKGNAME=		libmikmod-3.1.10
@@ -9,7 +9,7 @@ MAINTAINER=		kuebart@mathematik.uni-ulm.de
 HOMEPAGE=		http://mikmod.raphnet.net/
 COMMENT=		MikMod Sound Library
 
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 USE_BUILDLINK2=		# defined

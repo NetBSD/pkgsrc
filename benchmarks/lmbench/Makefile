@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/11/14 23:08:51 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/22 07:19:25 grant Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.bitmover.com/lm/lmbench/
 COMMENT=		Complete benchmark that gives a large amount of information
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 ALL_TARGET=		build
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 

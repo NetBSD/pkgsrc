@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:22:54 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/22 07:15:00 grant Exp $
 
 DISTNAME=	mp3check-0.8.0
 CATEGORIES=	audio
@@ -8,7 +8,7 @@ MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://www.0vermann.de/soft/mp3check/mp3check.html
 COMMENT=	Check MP3 files for consistency
 
-#USE_GMAKE=	YES
+#USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 
 ALL_TARGET=	mp3check

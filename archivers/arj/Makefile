@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/05 18:08:33 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/22 07:18:43 grant Exp $
 # FreeBSD Id: ports/archivers/arj/Makefile,v 1.2 2002/09/17 05:17:29 ijliao Exp
 
 DISTNAME=	arj-3.10b
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://arj.sourceforge.net/
 COMMENT=	Open-source ARJ
 
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/gnu/configure
 CONFIG_GUESS_OVERRIDE=	${WRKSRC}/gnu/config.guess
