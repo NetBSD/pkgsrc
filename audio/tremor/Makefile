@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/24 09:49:03 chris Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/02 18:13:16 dillo Exp $
 
 DISTNAME=	tremor_snapshot_020923
 PKGNAME=	tremor-1.0.2
@@ -11,16 +11,19 @@ MAINTAINER=	chris@netbsd.org
 HOMEPAGE=	http://www.xiph.org/ogg/vorbis/
 COMMENT=	Fixed point decoding library for the Ogg Vorbis audio encoding format
 
-BUILD_DEPENDS=		autoconf>=2.13:../../devel/autoconf
-
+AUTOMAKE_REQD=		1.4
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+#LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
 pre-configure:
-	cd ${WRKSRC} && ${SH} ./autogen.sh
+	cd ${WRKSRC} && ${ACLOCAL}
+	cd ${WRKSRC} && ${LOCALBASE}/bin/libtoolize --automake
+	cd ${WRKSRC} && ${AUTOMAKE} --add-missing
+	cd ${WRKSRC} && ${AUTOCONF}
 
+.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
