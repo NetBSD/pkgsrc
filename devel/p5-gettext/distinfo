@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/18 12:53:56 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:30 agc Exp $
 
 SHA1 (gettext-1.04.tar.gz) = 29d2d1d663d4e93da8c137c79e97c34198af7ac0
+RMD160 (gettext-1.04.tar.gz) = fe6bacc114974d62b4ef37a47d9958b921acf6be
 Size (gettext-1.04.tar.gz) = 7550 bytes

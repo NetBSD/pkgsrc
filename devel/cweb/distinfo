@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/06/29 22:31:05 jtb Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 22:24:12 agc Exp $
 
 SHA1 (cweb-3.64.tar.gz) = 83e09dc5c376e3b7f46d4c06058eafa49187d1b7
+RMD160 (cweb-3.64.tar.gz) = eeb70cf7820d8f9af0c1f6456f7216d7df2121ce
 Size (cweb-3.64.tar.gz) = 212010 bytes
 SHA1 (patch-aa) = a7bec36347d2fb7d341744007c95bff2d004d906
 SHA1 (patch-ab) = 81f5f210c2cb44ae22f0c3c7d8b11874245fda9b

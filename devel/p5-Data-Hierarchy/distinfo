@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/11/11 18:01:24 epg Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:24 agc Exp $
 
 SHA1 (Data-Hierarchy-0.21.tar.gz) = a0cdc6f4bbc71d3fc004232f34bbf865de6fd955
+RMD160 (Data-Hierarchy-0.21.tar.gz) = da891c0684a2554367302dbc4e86bc045f6f1e5a
 Size (Data-Hierarchy-0.21.tar.gz) = 3815 bytes

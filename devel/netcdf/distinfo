@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2004/01/11 15:58:45 cjep Exp $
+$NetBSD: distinfo,v 1.10 2005/02/23 22:24:22 agc Exp $
 
 SHA1 (netcdf-3.5.0.tar.Z) = e9c5a9847d8ff9b3e1b8a18f5e216f6a1508bce8
+RMD160 (netcdf-3.5.0.tar.Z) = 4313e00fc56273e871c003bfb27c533d4a7f556f
 Size (netcdf-3.5.0.tar.Z) = 1319419 bytes
 SHA1 (patch-ab) = 37bf389e76316b03cc3590a1c13855636907b8a5
 SHA1 (patch-ac) = 8a73893ae7c98dd45d61d795592c57abe76d3fde

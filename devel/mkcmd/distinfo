@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/11/10 16:43:50 epg Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:21 agc Exp $
 
 SHA1 (mkcmd-8.14.tgz) = 33342afc845db84a040f116202b880d37b9f626f
+RMD160 (mkcmd-8.14.tgz) = e7e17759c936c35a810d814cf3c442a2fc5271a2
 Size (mkcmd-8.14.tgz) = 295120 bytes
 SHA1 (patch-aa) = f453a4abaaa4a0e4527e507249eb427f1c9ac22c
 SHA1 (patch-ab) = ff30b9b4818fcd105d433e0b2c943d27d698f18c

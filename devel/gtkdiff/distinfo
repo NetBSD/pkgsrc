@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2003/03/08 21:03:15 rh Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 22:24:16 agc Exp $
 
 SHA1 (gtkdiff-1.8.0.tar.gz) = 694c5fec2032c8d1e4baab91fdaedbbc65ab2e03
+RMD160 (gtkdiff-1.8.0.tar.gz) = d91d3e8eaa1bbcc5ac582cb3a21f20cc57849cf2
 Size (gtkdiff-1.8.0.tar.gz) = 282002 bytes

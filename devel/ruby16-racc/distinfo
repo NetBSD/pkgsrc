@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/28 05:59:59 taca Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:33 agc Exp $
 
 SHA1 (ruby/racc-1.4.3-all-2.tar.gz) = c73a7f25d8c4a08fbc75b210891cf78b88b6eac5
+RMD160 (ruby/racc-1.4.3-all-2.tar.gz) = 060319d8d3307cc5befd07815ada30d63aa94b53
 Size (ruby/racc-1.4.3-all-2.tar.gz) = 105554 bytes
 SHA1 (ruby/racc-1.4.4.tar.gz) = 05ec265568fcf22d83b810c0377ea9edb0ca9999
 Size (ruby/racc-1.4.4.tar.gz) = 115343 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/06/30 11:23:43 shannonjr Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 22:24:13 agc Exp $
 
 SHA1 (florist-3.15p-src.tgz) = 1f901f25e4d3d450fa75cd8b0a200e3690282cd7
+RMD160 (florist-3.15p-src.tgz) = 57ff4d445f46d4b5631aad43fa5d8e401de8e353
 Size (florist-3.15p-src.tgz) = 264898 bytes
 SHA1 (patch-c-posix.c) = 622d42742a78bad89f8367f92d4931450ec365e5
 SHA1 (patch-configure.in) = b6e182ae9db5960378c047bf84b3a3fe979027a7

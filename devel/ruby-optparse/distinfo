@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2004/11/28 06:01:43 taca Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 22:24:32 agc Exp $
 
 SHA1 (ruby/optparse-0.12.tar.gz) = 843444e1653582a4bc5a1e66760a64417f2650c8
+RMD160 (ruby/optparse-0.12.tar.gz) = b2f3934045e62879fe371475b0561af1675ca8bd
 Size (ruby/optparse-0.12.tar.gz) = 77027 bytes
 SHA1 (patch-aa) = 36bed94f22a32ad2e0d8be2972e4ca0e572b7bbb

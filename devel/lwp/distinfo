@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2005/01/25 13:17:46 blymn Exp $
+$NetBSD: distinfo,v 1.9 2005/02/23 22:24:21 agc Exp $
 
 SHA1 (lwp-1.12.tar.gz) = 8c58b5c8d90f40254667360cb4b4dcec1aec5f15
+RMD160 (lwp-1.12.tar.gz) = 2eab09e2adf8c7d3ecea7f827d1f6f4828880056
 Size (lwp-1.12.tar.gz) = 365064 bytes
 SHA1 (patch-aa) = 7f4f9d0e895ffb93d01e4ff35f38400fd5ac714c

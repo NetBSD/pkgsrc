@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.3 2004/09/08 16:21:53 wiz Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 22:24:14 agc Exp $
 
 SHA1 (gcvs-1.0.tar.gz) = 42b2469d0a9acc0e69a127b44000cd1b11bb895e
+RMD160 (gcvs-1.0.tar.gz) = 195698283848cd1f22d00eb37df7dd0f6b52cffc
 Size (gcvs-1.0.tar.gz) = 2917708 bytes
 SHA1 (gcvs-1.0-configure.tar.gz) = dba59b415ffc71645221e4b9c91065cd0f13ee69
+RMD160 (gcvs-1.0-configure.tar.gz) = 290cce4644d71d8cac27f7ea9a93f7d7124b52a5
 Size (gcvs-1.0-configure.tar.gz) = 42627 bytes
 SHA1 (patch-aa) = cc838bca770a00fb40fa1f613e46bcfc8dd001fa
 SHA1 (patch-ab) = 3f9764eb2e67ecc33cbfb5fac27eadb4b120434d

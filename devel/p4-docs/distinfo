@@ -1,18 +1,26 @@
-$NetBSD: distinfo,v 1.4 2004/07/19 12:34:50 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 22:24:22 agc Exp $
 
 SHA1 (perforce-20040716/p4.1) = b0ba4933132d513bd4082fc6ec85d6768e179e16
+RMD160 (perforce-20040716/p4.1) = a9307097238eb4d670eeee2ec5786f68e8cc9a65
 Size (perforce-20040716/p4.1) = 72954 bytes
 SHA1 (perforce-20040716/p4d.1) = df3033843830ef17c781ef7b84dcbadc958834b1
+RMD160 (perforce-20040716/p4d.1) = 4fdedc2b11930eaac3585ad3e38a723611cd2923
 Size (perforce-20040716/p4d.1) = 4343 bytes
 SHA1 (perforce-20040716/relnotes.txt) = 93bed5eba7cd0eda00a98a81709dcd14cb38e00a
+RMD160 (perforce-20040716/relnotes.txt) = 5512a7174a020a496e88d5377a115d7d7a19a819
 Size (perforce-20040716/relnotes.txt) = 131837 bytes
 SHA1 (perforce-20040716/platformnotes.html) = ee866da6ebf818c1d6d61e0383b4305537665e40
+RMD160 (perforce-20040716/platformnotes.html) = e313cd1dc6d2e623d0f7f03c70652d1fc697ffda
 Size (perforce-20040716/platformnotes.html) = 16151 bytes
 SHA1 (perforce-20040716/cmdref_html.zip) = 7747580482a5ec3842c7e4910d24c3e01bba1080
+RMD160 (perforce-20040716/cmdref_html.zip) = 8df4d86691a4dfa63ae414e4dc07599f9a123376
 Size (perforce-20040716/cmdref_html.zip) = 240693 bytes
 SHA1 (perforce-20040716/p4ftp_html.zip) = 7df4c9ff4db77cc08bd24a7442b52150e6101496
+RMD160 (perforce-20040716/p4ftp_html.zip) = fa012953f8db94c0c7c831ccd893516715967816
 Size (perforce-20040716/p4ftp_html.zip) = 145833 bytes
 SHA1 (perforce-20040716/p4guide_html.zip) = b76ffcd28092b6d06fff66c220e77a9801acab54
+RMD160 (perforce-20040716/p4guide_html.zip) = bf573d7f620f8ceb40b0fecfdd07790214e3b39b
 Size (perforce-20040716/p4guide_html.zip) = 133887 bytes
 SHA1 (perforce-20040716/p4sag_html.zip) = 818f811345b322913e2d5e581f9e2cea5680be4e
+RMD160 (perforce-20040716/p4sag_html.zip) = c394eac7e9290d61ad1a6f06fab262a7abde40fc
 Size (perforce-20040716/p4sag_html.zip) = 151860 bytes

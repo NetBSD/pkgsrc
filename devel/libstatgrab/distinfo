@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2004/11/15 14:26:31 reed Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 22:24:19 agc Exp $
 
 SHA1 (libstatgrab-0.11.tar.gz) = 8cecc0bc07a5c17fd59d77893594f767ad1d53a5
+RMD160 (libstatgrab-0.11.tar.gz) = 3ae40a29b98df65c880fa1f2a541f6c010cb2ad3
 Size (libstatgrab-0.11.tar.gz) = 415774 bytes
 SHA1 (patch-aa) = ff0ec4c9386b0ba47c6cc5306433918e64183fc2

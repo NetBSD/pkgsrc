@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2004/11/25 15:31:47 wiz Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 22:24:11 agc Exp $
 
 SHA1 (cvs2cl-2.58) = be90c5016a5cb1d026eb0f723ee1599f3d56cff5
+RMD160 (cvs2cl-2.58) = 94e9939a31b471c56d287b46f3abf65c3c5b83d2
 Size (cvs2cl-2.58) = 91747 bytes

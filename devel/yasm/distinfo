@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/06/28 11:47:01 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:35 agc Exp $
 
 SHA1 (yasm-0.2.2.tar.gz) = 7d0a941de4ad047ce33d82cecaa20038b752754b
+RMD160 (yasm-0.2.2.tar.gz) = a4e5131064eef34124eba8ee35f0252a96a132ec
 Size (yasm-0.2.2.tar.gz) = 927830 bytes

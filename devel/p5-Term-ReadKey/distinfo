@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2002/07/30 02:02:47 grant Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 22:24:29 agc Exp $
 
 SHA1 (TermReadKey-2.21.tar.gz) = 859c36f26beefff3186b553db1a9d1d35d62cbc8
+RMD160 (TermReadKey-2.21.tar.gz) = cd931ce1c136be4258f6910b1b67e7453ad57594
 Size (TermReadKey-2.21.tar.gz) = 34878 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/03/02 19:33:11 mjl Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:27 agc Exp $
 
 SHA1 (OLE-Storage_Lite-0.11.tar.gz) = 1f8311c5e6e8cfa882585830514e06d9d5e00971
+RMD160 (OLE-Storage_Lite-0.11.tar.gz) = b11a3b07d8ae987646c624e84c6e8aea3f2834e0
 Size (OLE-Storage_Lite-0.11.tar.gz) = 16592 bytes

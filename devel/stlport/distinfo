@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/11/12 06:39:20 jlam Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 22:24:34 agc Exp $
 
 SHA1 (STLport-4.6.tar.gz) = 55401b648bebc0b7b6b4e3d7b4e420d22c358af9
+RMD160 (STLport-4.6.tar.gz) = da9d53334eebed285b096acc9d5e806395926f00
 Size (STLport-4.6.tar.gz) = 756708 bytes
 SHA1 (patch-aa) = 9fb8af22933c925393bdcfb60988d100822501d7
 SHA1 (patch-aj) = 67dd73dcf5a41dd2da38e58363a05f7f54709124

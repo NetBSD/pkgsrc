@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.19 2005/02/21 23:00:56 recht Exp $
+$NetBSD: distinfo,v 1.20 2005/02/23 22:24:32 agc Exp $
 
 SHA1 (roundup-0.8.1.tar.gz) = 18b01cb5de80f3dffefd4c8128bd514251c20e1d
+RMD160 (roundup-0.8.1.tar.gz) = 53a5d8cc0579ebdbda737b0730bf6f6cc878f137
 Size (roundup-0.8.1.tar.gz) = 788337 bytes

@@ -1,14 +1,20 @@
-$NetBSD: distinfo,v 1.3 2003/03/29 07:35:17 jmc Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 22:24:30 agc Exp $
 
 SHA1 (sdk50-win.zip) = c2c8013168be445bb6e71dc7b8bf4b1160ad1e8d
+RMD160 (sdk50-win.zip) = 007bc55074b29d42b1b89c539faeac922f94ed60
 Size (sdk50-win.zip) = 17475949 bytes
 SHA1 (sdk40-core.tar.gz) = 15fcba4a7c6ff6611b536b9b064bf4713587182c
+RMD160 (sdk40-core.tar.gz) = 11b4e4a91627321cae2709104702c6a82293afc1
 Size (sdk40-core.tar.gz) = 389680 bytes
 SHA1 (sdk40upd1.tar.gz) = f968006cbc2ee1cc1284d82f301d554705bb4a27
+RMD160 (sdk40upd1.tar.gz) = db56335f2d67e03a40c9bb40933bba5ec76a52a4
 Size (sdk40upd1.tar.gz) = 357300 bytes
 SHA1 (sdk35.tar.gz) = 27b8e16e0c27eee5583d60e750dc2facc32b49d7
+RMD160 (sdk35.tar.gz) = ff53b015f2e89dcf9896517dcce7a2600e386667
 Size (sdk35.tar.gz) = 284047 bytes
 SHA1 (sdk35-update1.tar.gz) = 64cd653f9efab55942513c8dead236daf32e5e97
+RMD160 (sdk35-update1.tar.gz) = 83ca0ee2e82cbc351a6b0e80ea8fef8175d795f0
 Size (sdk35-update1.tar.gz) = 8399 bytes
 SHA1 (sdk31a1.zip) = 74eabc5bf2438016354a16a7281ff566686c2c43
+RMD160 (sdk31a1.zip) = 8f50eabc7bed1fa4d1213ddd6560dd4c4db34213
 Size (sdk31a1.zip) = 3442635 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/12/28 10:30:58 minskim Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 22:24:21 agc Exp $
 
 SHA1 (nbitools-R6.3.tar.gz) = 0f6751417d7ef412be04611fbe4f56386a04322a
+RMD160 (nbitools-R6.3.tar.gz) = 047f64b113a0307b045573bfe429b59063ae38ea
 Size (nbitools-R6.3.tar.gz) = 435764 bytes
 SHA1 (patch-aa) = df66d326f0a5375f829353084bf9935ac2d8e57c
 SHA1 (patch-ab) = 4cc71d9e9a3c12106deff9d60118d363ae3ba981

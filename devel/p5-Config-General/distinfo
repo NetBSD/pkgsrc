@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/11/27 00:42:28 sketch Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 22:24:24 agc Exp $
 
 SHA1 (Config-General-2.27.tar.gz) = ff4c7a620cb5e34748a64471023268147eaff418
+RMD160 (Config-General-2.27.tar.gz) = b978db18a5a8a5ab0116bff534163ee63ca040fe
 Size (Config-General-2.27.tar.gz) = 36127 bytes

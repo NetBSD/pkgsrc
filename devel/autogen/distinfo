@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/11/27 12:13:37 kristerw Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 22:24:10 agc Exp $
 
 SHA1 (autogen-5.6.4.tar.bz2) = b1d9e3651eb7a68bf0b8d7d533f12b12800386d0
+RMD160 (autogen-5.6.4.tar.bz2) = 12e5ed31740829c9986c62856c9f0514322ca0d5
 Size (autogen-5.6.4.tar.bz2) = 813341 bytes

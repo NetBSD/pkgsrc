@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/01/25 19:32:45 abs Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:28 agc Exp $
 
 SHA1 (Spoon-0.21.tar.gz) = 8d2ceffd2f3bfa9de20c2ea55a07e508e6e75d4d
+RMD160 (Spoon-0.21.tar.gz) = a7139938f125e9557310034f7ba30cd2ea6478e9
 Size (Spoon-0.21.tar.gz) = 23844 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2002/03/15 12:11:10 martti Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 22:24:25 agc Exp $
 
 SHA1 (File-PathConvert-0.9.tar.gz) = 633b714c3951207c0d360980801d0c1ca1dc9661
+RMD160 (File-PathConvert-0.9.tar.gz) = e3b21a69c85c2d9dd029515e6dc7338dd73457d2
 Size (File-PathConvert-0.9.tar.gz) = 23807 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/19 17:28:59 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:29 agc Exp $
 
 SHA1 (Test-Exception-0.20.tar.gz) = 263697301fb11f4669aa010a00b373833e27a361
+RMD160 (Test-Exception-0.20.tar.gz) = c422f9821ec72ac3bf55577d39e83e850efdd4e1
 Size (Test-Exception-0.20.tar.gz) = 9428 bytes

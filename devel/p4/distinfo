@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/09/01 02:30:58 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:22 agc Exp $
 
 SHA1 (perforce/darwinppc/p4) = 6e8e92ca35d15dd112c81785745a896f377eaaff
 Size (perforce/darwinppc/p4) = 500120 bytes
@@ -13,6 +13,7 @@ Size (perforce/linuxppc/p4) = 840812 bytes
 SHA1 (perforce/netbsdaxp/p4) = b39fb6ade9b37a84cbc600cd8fa1550d80198780
 Size (perforce/netbsdaxp/p4) = 607552 bytes
 SHA1 (perforce/netbsdx86/p4) = 778266ebc5c8051b24090ba5a1857b65abaaa2e9
+RMD160 (perforce/netbsdx86/p4) = 690db4f37dd49d57a78cd4a8cff89bed058da906
 Size (perforce/netbsdx86/p4) = 447312 bytes
 SHA1 (perforce/solaris26/p4) = e22b8d1b616d5c300330eb1b5946e68e60fff2ff
 Size (perforce/solaris26/p4) = 607448 bytes

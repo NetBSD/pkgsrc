@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/16 01:12:14 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:18 agc Exp $
 
 SHA1 (libjit-0.0.2.tar.gz) = b912a04273db2c67acf5384709b4703fc0950c34
+RMD160 (libjit-0.0.2.tar.gz) = dc5cf1207edc35890fd3912b88b741cfb18bf8f7
 Size (libjit-0.0.2.tar.gz) = 523897 bytes
 SHA1 (patch-aa) = b4d32b2edab7708661a269ec774952341a1d61d0

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/10/02 01:25:35 mcr Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:28 agc Exp $
 
 SHA1 (SortVersions-1.1.tar.gz) = 33bb979d96836d08a64c0b8cb2261a9177325673
+RMD160 (SortVersions-1.1.tar.gz) = 3da37676a441cd5887f0cb2adc24403ed8a0e627
 Size (SortVersions-1.1.tar.gz) = 2951 bytes
