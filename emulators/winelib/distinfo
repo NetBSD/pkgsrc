@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/04 16:52:41 recht Exp $
+$NetBSD: distinfo,v 1.2 2004/05/11 17:38:54 recht Exp $
 
-SHA1 (winelib-0.1.tar.gz) = cf26a34dff35ad7425dab3f30f7e67ed79c0bbea
-Size (winelib-0.1.tar.gz) = 63183 bytes
+SHA1 (winelib-0.2.tar.gz) = 8fb3def927f8a71eb8c231a64d74dc144a0969bd
+Size (winelib-0.2.tar.gz) = 64219 bytes
 SHA1 (patch-aa) = fa3e80e3d79a261a2d334d921bbb2daf843bf532
+SHA1 (patch-ab) = 255ef83209aa29cf5b197506776eec86a2cc1b45

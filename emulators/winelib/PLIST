@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/04 16:52:41 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/05/11 17:38:54 recht Exp $
 lib/libadvapi32.dll.so
 lib/libamstream.dll.so
 lib/libavicap32.dll.so
@@ -6,6 +6,7 @@ lib/libavifil32.dll.so
 lib/libavifile.dll.so
 lib/libcabinet.dll.so
 lib/libcapi2032.dll.so
+lib/libcards.dll.so
 lib/libcfgmgr32.dll.so
 lib/libcomcat.dll.so
 lib/libcomctl32.dll.so
@@ -21,6 +22,7 @@ lib/libd3d8.dll.so
 lib/libd3d9.dll.so
 lib/libd3dim.dll.so
 lib/libd3dx8.dll.so
+lib/libdbghelp.dll.so
 lib/libdciman32.dll.so
 lib/libddeml.dll.so
 lib/libddraw.dll.so
@@ -37,12 +39,13 @@ lib/libdmstyle.dll.so
 lib/libdmsynth.dll.so
 lib/libdmusic.dll.so
 lib/libdmusic32.dll.so
-lib/libdotnetctl.dll.so
 lib/libdplay.dll.so
 lib/libdplayx.dll.so
+lib/libdpnet.dll.so
 lib/libdpnhpast.dll.so
 lib/libdsound.dll.so
 lib/libdswave.dll.so
+lib/libdxdiagn.dll.so
 lib/libgdi32.dll.so
 lib/libglu32.dll.so
 lib/libglut32.dll.so
@@ -126,6 +129,7 @@ lib/liburl.dll.so
 lib/liburlmon.dll.so
 lib/libuser32.dll.so
 lib/libuxtheme.dll.so
+lib/libvdmdbg.dll.so
 lib/libver.dll.so
 lib/libversion.dll.so
 lib/libw32skrnl.dll.so
@@ -152,6 +156,4 @@ lib/libwprocs.dll.so
 lib/libws2_32.dll.so
 lib/libwsock32.dll.so
 lib/libx11drv.dll.so
-lib/wine/dotnetctl.dll.so
 lib/winelib.exe.so
-@comment in wine: @dirrm lib/wine

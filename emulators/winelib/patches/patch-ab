@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2004/05/11 17:38:55 recht Exp $
+
+--- winelib/winelib.c.orig	2004-05-11 19:08:10.000000000 +0200
++++ winelib/winelib.c	2004-05-11 19:08:44.000000000 +0200
+@@ -69,8 +69,11 @@
+ 	unsigned int		SignalList[] = { SIGHUP, SIGINT, SIGQUIT, SIGILL, SIGTRAP, 
+ 						SIGABRT, SIGIOT, SIGBUS, SIGFPE, SIGUSR1, 
+ 						SIGSEGV, SIGUSR2, SIGPIPE, SIGALRM, SIGTERM, 
++#if defined(SIGSTKFLT)
+ 						SIGSTKFLT, SIGCHLD, SIGCONT, SIGTSTP, SIGSYS, 0};
+-	
++#else
++						SIGCHLD, SIGCONT, SIGTSTP, SIGSYS, 0};
++#endif	
+ 	/* Save signal actions */
+ 	for (i=0; SignalList[i]!=0, i<MAX_SIGNALS; i++) {
+ 		sigaction(SignalList[i], NULL, &(SignalAction[i]));
