@@ -1,6 +1,6 @@
---- Makefile.in.orig	Thu Jun 25 16:23:49 1998
-+++ Makefile.in	Wed Jul  1 22:14:36 1998
-@@ -74,7 +74,7 @@
+--- ogonkify/Makefile.in.orig	Thu Jun 25 16:24:03 1998
++++ ogonkify/Makefile.in	Wed Jul  1 22:14:36 1998
+@@ -70,7 +70,7 @@
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_DATA = @INSTALL_DATA@
@@ -9,12 +9,12 @@
  transform = @program_transform_name@
  
  NORMAL_INSTALL = :
-@@ -368,7 +368,7 @@
- uninstall: uninstall-recursive
+@@ -437,7 +437,7 @@
+ uninstall: uninstall-recursive uninstall-am
  
  install-strip:
 -	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_PROGRAM)' install
 +	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_SCRIPT)' install
  installdirs: installdirs-recursive
- 
- 
+ 	$(mkinstalldirs)  $(DATADIR)$(bindir) $(DATADIR)$(afmdir) \
+ 		$(DATADIR)$(fontsdir) $(DATADIR)$(ogonkifydir)
