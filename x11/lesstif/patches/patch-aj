@@ -1,7 +1,4 @@
-$NetBSD: patch-aj,v 1.6 1999/11/24 17:34:10 hubertf Exp $
-
-Place(s) where this was (most probably...) in before:
-     NetBSD: patch-aj,v 1.5 1999/11/03 04:18:47 jlam Exp 
+$NetBSD: patch-aj,v 1.7 1999/11/24 17:38:50 hubertf Exp $
 
 diff -x *.orig -urN ./doc/www.lesstif.org/imgs/Makefile.in /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/doc/www.lesstif.org/imgs/Makefile.in
 --- ./doc/www.lesstif.org/imgs/Makefile.in	Fri Nov  5 21:14:59 1999
