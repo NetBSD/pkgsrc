@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 10:35:54 agc Exp $
+$NetBSD: patch-aa,v 1.4 1998/11/04 21:12:44 garbled Exp $
 
 --- Makefile.orig	Sun Mar 29 00:54:57 1998
 +++ Makefile	Wed Jul 22 17:17:23 1998
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 10:35:54 agc Exp $
 -CFLAGS = -g -O3 -Wall -DNETWORK_DB -Ilibscsi -Ist
 -LDFLAGS = -Llibscsi -lscsi -Lst -lst
 +CFLAGS = -g -O3 -Wall -DNETWORK_DB -I${PREFIX}/include -Ist
-+LDFLAGS = -L${PREFIX}/lib -lscsi -Lst -lst
++LDFLAGS = -L${PREFIX}/lib -lscsi -Lst -lst -lutil
  
 @@ -16,5 +16,8 @@
  
