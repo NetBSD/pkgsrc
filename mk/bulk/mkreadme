@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.7 2002/11/13 15:12:17 dmcmahill Exp $
+# $NetBSD: mkreadme,v 1.8 2002/11/14 14:05:46 dmcmahill Exp $
 #
 # Script for README.html generation
 #
@@ -340,6 +340,10 @@ if [ "x$restart" = "xno" ] ; then
     echo "Extracting data.  This could take a while"
     echo " "
     npkg=1
+
+    # make sure we don't have an old database lying around
+    rm -fr $DATABASEFILE
+
     cd ${PKGSRCDIR} 
     list=`grep '^[[:space:]]*'SUBDIR */Makefile | sed 's,/Makefile.*=[[:space:]]*,/,'`
     for pkgdir in $list
@@ -375,6 +379,13 @@ else
     echo " "
     echo "Using existing database (are you sure you wanted the -r/--restart flag?)"
     echo " "
+    if [ ! -f $DATABASEFILE ]; then
+	echo " "
+	echo "ERROR:  You have use the -r/--restart flag but the database "
+	echo "        file $DATABASEFILE does not exist"
+	echo " "
+	exit 1
+    fi
 fi
 
 ######################################################################
