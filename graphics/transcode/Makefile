@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/06/25 08:47:30 mrg Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/25 09:31:26 wiz Exp $
 
 DISTNAME=	transcode-0.6.7
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.zebra.fh-weingarten.de/~transcode/pre/ \
-		http://freshmeat.net/redir/transcode/15968/url_tgz/
+MASTER_SITES=	http://www.zebra.fh-weingarten.de/~transcode/pre/
 
 MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.theorie.physik.uni-goettingen.de/~ostreich/transcode/
@@ -25,7 +24,7 @@ CONFIGURE_ARGS+=	--without-libmpeg3
 # this used to operate on acinclude.m4 and run aclocal, but running
 # aclocal here breaks due to missing DLFCN checking
 post-patch:
-	cd ${WRKSRC} && && \
+	cd ${WRKSRC} && \
 	sed "s|/usr/local|${PREFIX}|g; s|include/libmpeg3|include/mpeg3|g; s|-ldl -lm|-lm|g" configure > configure.new && \
 	${MV} configure.new configure && ${CHMOD} a+x configure
 	-cd ${WRKSRC} && ${AUTOMAKE}
@@ -40,7 +39,7 @@ post-install:
 .include "../../audio/libvorbis/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../devel/libmpeg3/buildlink2.mk"
-# depends on a much later avifile that is in pkgsrc
+# depends on a much later avifile than the one in pkgsrc
 #.include "../../graphics/avifile/buildlink2.mk"
 .include "../../graphics/ImageMagick/buildlink2.mk"
 .include "../../graphics/mjpegtools/buildlink2.mk"
