@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.9 2004/02/07 10:37:53 grant Exp $ */
+/* $NetBSD: lib.h,v 1.10 2004/04/09 18:38:12 tv Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -80,6 +80,10 @@
 
 #ifndef OPSYS_NAME
 #define OPSYS_NAME "NetBSD"
+#endif
+
+#ifndef DEF_UMASK
+#define DEF_UMASK 022
 #endif
 
 /* Usually "rm", but often "echo" during debugging! */
