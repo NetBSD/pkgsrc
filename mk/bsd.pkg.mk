@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1282 2003/09/14 05:02:50 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1283 2003/09/14 15:32:30 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -721,7 +721,7 @@ uptodate-pkgtools:
 PKG_FAIL_REASON+='Your package tools need to be updated to ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} versions.'
 PKG_FAIL_REASON+='The installed package tools were last updated on ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|}.'
 PKG_FAIL_REASON+='To fix this, use the following command:'
-PKG_FAIL_REASON+='	cd ${_PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} install'
+PKG_FAIL_REASON+='	cd ${_PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} install'
 .		endif
 .	endif
 
