@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/03/13 17:37:58 fredb Exp $
+# $NetBSD: Makefile,v 1.34 2002/03/15 04:09:14 markd Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	1
@@ -55,6 +55,11 @@ PLIST_SUBST+=		CUPS=
 .else
 PLIST_SUBST+=		CUPS="@comment "
 .endif
+
+# Add a newline to EOF so patch on Solaris succeeds with patch-bk
+
+pre-patch:
+	${ECHO} "" >> ${WRKSRC}/kio/klauncher/Makefile.am
 
 # We will create the complete icon directory tree for use by other KDE2
 # packages at post-install time.
