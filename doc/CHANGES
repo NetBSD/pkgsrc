@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1640 2003/03/14 23:41:48 atatat Exp $
+$NetBSD: CHANGES,v 1.1641 2003/03/15 05:44:39 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1124,3 +1124,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libdvdcss to 1.2.6 [wiz 2003-03-14]
 	Updated cvsync to 0.14.5 [gehenna 2003-03-14]
 	Updated pkgdepgraph to 2.2 [atatat 2003-03-14]
+	Updated lopster to 1.2.0 [hubertf 2003-03-15]
