@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2719 2003/07/10 11:52:37 abs Exp $
+$NetBSD: CHANGES,v 1.2720 2003/07/10 12:02:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2724,3 +2724,14 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated yplot to 1.1.2 [jtb 2003-07-10]
 	Added dnstracer-1.7 [jtb 2003-07-10]
 	Updated cpuflags to 0.54 [abs 2003-07-10]
+	Updated audacity to 1.0.0.2nb2 [adam 2003-07-10]
+	Updated mad123 to 0.7.1nb2 [adam 2003-07-10]
+	Updated mpg321 to 0.2.10nb1 [adam 2003-07-10]
+	Updated normalize to 0.7.6nb2 [adam 2003-07-10]
+	Updated sox to 12.17.4nb1 [adam 2003-07-10]
+	Updated sweep to 0.8.2nb4 [adam 2003-07-10]
+	Updated xhippo to 3.3nb2 [adam 2003-07-10]
+	Updated xmms-mad to 0.0.9nb4 [adam 2003-07-10]
+	Updated scummvm to 0.4.1nb1 [adam 2003-07-10]
+	Updated ogle to 0.9.1nb2 [adam 2003-07-10]
+	Updated gst-plugins to 0.6.1nb2 [adam 2003-07-10]
