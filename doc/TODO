@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2868 2005/01/09 11:30:00 seb Exp $
+$NetBSD: TODO,v 1.2869 2005/01/09 13:36:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -423,7 +423,7 @@ Suggested package updates
 	o dropbear-0.44
 	o drscheme-208
 	o dsssl-docbook-modular-1.79
-	o dvdrip-0.52.0
+	o dvdrip-0.52.1
 	o dvipng-1.4 [http://sourceforge.net/projects/dvipng/]
 	o dxpc-3.8.2
 	o dylan-compiler-2.4.0
@@ -553,12 +553,14 @@ Suggested package updates
 	o gtetrinet-0.7.8
 	o gtexinfo-4.8
 	o gtk-systrace-2003.06.23
+	o gtk2-2.6.1
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
 	o gtranslator-1.0.2
 	o guile-oops-1.0.2
 	o guile-pg-0.24
 	o guile-www-1.1.1
+	o gwenview-1.1.8
 	o hackbot-2.21
 	o hashcash-1.14
 	o haskell-mode-1.45
