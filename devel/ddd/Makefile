@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/06/13 20:45:08 skrll Exp $
+# $NetBSD: Makefile,v 1.34 2001/07/03 20:00:25 jlam Exp $
 #
 
 DISTNAME=	ddd-3.3
@@ -9,10 +9,9 @@ MAINTAINER=     frueauf@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/ddd/
 COMMENT=	Data Display Debugger -- a common graphical front-end for GDB/DBX/XDB
 
-USE_MOTIF=	YES
-USE_XPM=	YES
-GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+USE_BUILDLINK_ONLY=	YES
+GNU_CONFIGURE=		YES
+USE_GMAKE=		YES
 
 CONFIGURE_ARGS+=	--with-ncurses=no
 
@@ -45,6 +44,8 @@ post-install:
 	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd.ps
 
 test:
-	(cd ${WRKSRC} ; ${GMAKE} check)
+	(cd ${WRKSRC} ; ${MAKE_PROGRAM} check)
 
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../x11/lesstif/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
