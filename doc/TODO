@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2888 2005/01/12 20:33:11 jschauma Exp $
+$NetBSD: TODO,v 1.2889 2005/01/12 21:07:52 reed Exp $
 
 Suggested new packages
 ======================
@@ -579,7 +579,6 @@ Suggested package updates
 	o ijs-0.35
 	o ike-scan-1.6.7
 	o imp-3.2.7
-	o inkscape-0.40
 	o inn-2.4.2
 	o intercal-0.24 [dillo]
 	o ion3-devel-20041104
