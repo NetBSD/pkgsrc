@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.32 2004/02/05 01:28:20 jlam Exp $
+# $NetBSD: gcc.mk,v 1.33 2004/02/05 01:42:05 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -229,8 +229,8 @@ _GCC_ARCHDIR!=		\
 		${ECHO} "_GCC_ARCHDIR_not_found";			\
 	fi
 .  if empty(_GCC_ARCHDIR:M*not_found*)
-_GCC_PREFIX:=		${_GCC_ARCHDIR:H:H:H:H}
-_GCC_SUBPREFIX:=	${_GCC_PREFIX:T}
+_GCC_PREFIX:=		${_GCC_ARCHDIR:H:H:H:H}/
+_GCC_SUBPREFIX:=	${_GCC_ARCHDIR:H:H:H:H:T}/
 .  endif
 _GCC_LIBDIRS=	${_GCC_ARCHDIR} ${_GCC_PREFIX}lib
 _GCC_LDFLAGS=	# empty
