@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 1999/08/29 01:32:28 jlam Exp $
+
+Please be sure to read the license agreement in
+${PREFIX}/share/doc/rvplayer/License.txt.
+
+The documentation to install a RealPlayer plug-in for Netscape
+can be found by pointing your favorite HTML browser at
+${PREFIX}/share/doc/rvplayer/index.htm.
+
+===========================================================================

@@ -1,0 +1,58 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/29 01:32:28 jlam Exp $
+bin/rvplayer
+lib/rvplayer/RAObserver.class
+lib/rvplayer/RAPlayer.class
+lib/rvplayer/libdecdnet.so
+lib/rvplayer/libra14_4.so
+lib/rvplayer/libra28_8.so
+lib/rvplayer/libradnet.so
+lib/rvplayer/librarv10.so
+lib/rvplayer/librasipr.so
+lib/rvplayer/librv10dec.so
+lib/rvplayer/librvcore.so
+lib/rvplayer/librvplayer.so
+lib/rvplayer/rvplayer
+lib/rvplayer/rvplayer.ad
+share/doc/rvplayer/License.txt
+share/doc/rvplayer/Mailcap
+share/doc/rvplayer/Mime.types
+share/doc/rvplayer/README
+share/doc/rvplayer/doc/browser.htm
+share/doc/rvplayer/doc/configure.htm
+share/doc/rvplayer/doc/contents.htm
+share/doc/rvplayer/doc/embed.htm
+share/doc/rvplayer/doc/freebsd.htm
+share/doc/rvplayer/doc/general.htm
+share/doc/rvplayer/doc/gifs/config3.jpg
+share/doc/rvplayer/doc/gifs/config4_1.jpg
+share/doc/rvplayer/doc/gifs/config4_2.jpg
+share/doc/rvplayer/doc/gifs/download.gif
+share/doc/rvplayer/doc/gifs/emhelp.gif
+share/doc/rvplayer/doc/gifs/plugin.jpg
+share/doc/rvplayer/doc/gifs/prefs.jpg
+share/doc/rvplayer/doc/gifs/ra-logo.gif
+share/doc/rvplayer/doc/gifs/ra-logo2.gif
+share/doc/rvplayer/doc/gifs/realplayer4.jpg
+share/doc/rvplayer/doc/gifs/rnlogo.gif
+share/doc/rvplayer/doc/gifs/webhelp.gif
+share/doc/rvplayer/doc/install.htm
+share/doc/rvplayer/doc/intro.htm
+share/doc/rvplayer/doc/irix.htm
+share/doc/rvplayer/doc/license.htm
+share/doc/rvplayer/doc/linux.htm
+share/doc/rvplayer/doc/notes.htm
+share/doc/rvplayer/doc/notice.html
+share/doc/rvplayer/doc/path.htm
+share/doc/rvplayer/doc/plugin.htm
+share/doc/rvplayer/doc/setup.htm
+share/doc/rvplayer/doc/shared.htm
+share/doc/rvplayer/doc/solaris.htm
+share/doc/rvplayer/doc/sysreq.htm
+share/doc/rvplayer/doc/title.html
+share/doc/rvplayer/doc/toc.html
+share/doc/rvplayer/index.htm
+share/doc/rvplayer/welcome.rm
+@dirrm share/doc/rvplayer/doc/gifs
+@dirrm share/doc/rvplayer/doc
+@dirrm share/doc/rvplayer
+@dirrm lib/rvplayer
