@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6997 2004/08/25 23:26:07 wiz Exp $
+$NetBSD: CHANGES,v 1.6998 2004/08/26 00:00:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4047,3 +4047,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated hre to 0.9.8 [minskim 2004-08-25]
 	Updated quakeforge to 0.5.5 [snj 2004-08-25]
 	Updated libstatgrab to 0.10.3 [wiz 2004-08-25]
+	Updated gawk to 3.1.4 [wiz 2004-08-25]
