@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8728 2005/01/12 23:52:18 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8729 2005/01/13 08:26:43 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -276,3 +276,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ap-dtcl to 0.11.2nb1 [minskim 2005-01-12]
 	Updated gqmpeg-skins to 20030712nb3 [tron 2005-01-12]
 	Updated mips64emul to 0.2.4 [xtraeme 2005-01-13]
+	Added mDNSResponder-62 [itojun 2005-01-13]
