@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/01/23 20:41:48 recht Exp $
+# $NetBSD: Makefile,v 1.5 2005/02/09 12:29:10 markd Exp $
 #
 
-DISTNAME=		pytables-0.8
-PKGNAME=		${PYPKGPREFIX}-pytables-0.8
-PKGREVISION=	1
+DISTNAME=		pytables-0.9.1
+PKGNAME=		${PYPKGPREFIX}-pytables-0.9.1
 CATEGORIES=		math python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pytables/}
 
@@ -16,13 +15,14 @@ USE_BUILDLINK3=		yes
 PYDISTUTILSPKG=		yes
 PYSETUPBUILDARGS=	--hdf5=${BUILDLINK_PREFIX.hdf5}
 PYSETUPINSTALLARGS=	--hdf5=${BUILDLINK_PREFIX.hdf5}
-PYTHON_VERSIONS_ACCEPTED=	22 23
+PYTHON_VERSIONS_ACCEPTED=	24 23 22
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-extract:
 	cd ${WRKSRC}/utils; \
 	${MV} ptdump ptdump${PYVERSSUFFIX}; \
-	${MV} ptrepack ptrepack${PYVERSSUFFIX}
+	${MV} ptrepack ptrepack${PYVERSSUFFIX}; \
+	${MV} nctoh5 nctoh5${PYVERSSUFFIX}
 
 .include "../../lang/python/extension.mk"
 .include "../../devel/hdf5/buildlink3.mk"
