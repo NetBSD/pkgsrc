@@ -1,6 +1,6 @@
 f2c is a Fortran 77 to C compiler (translates fortran to C).
 
-A script, fc, is included  which works with f2c and the C compile
+A script, f2c-f77, is included  which works with f2c and the C compiler
 to emulate a f77 fortran compiler.
 
 f2c is distributed by netlib.
