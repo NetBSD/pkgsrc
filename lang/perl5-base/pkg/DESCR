@@ -1,0 +1,7 @@
+Perl is a language that combines some of the features of C, sed, awk
+and shell.  See the manual page for more hype.  There are also two Nutshell
+Handbooks published by O'Reilly & Assoc.  See pod/perlbook.pod
+for more information.
+
+This contains the base installation of Perl with some modules removed that
+are externally available in pkgsrc.

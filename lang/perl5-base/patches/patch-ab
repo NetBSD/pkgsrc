@@ -1,0 +1,60 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/09/05 09:18:21 jlam Exp $
+
+--- MANIFEST.orig	Wed Mar 22 14:33:23 2000
++++ MANIFEST	Mon Aug 28 18:35:18 2000
+@@ -214,20 +214,6 @@
+ ext/DB_File/hints/sco.pl	Hint for DB_File for named architecture
+ ext/DB_File/typemap		Berkeley DB extension interface types
+ ext/DB_File/version.c		Berkeley DB extension interface version check
+-ext/Data/Dumper/Changes		Data pretty printer, changelog
+-ext/Data/Dumper/Dumper.pm	Data pretty printer, module
+-ext/Data/Dumper/Dumper.xs	Data pretty printer, externals
+-ext/Data/Dumper/Makefile.PL	Data pretty printer, makefile writer
+-ext/Data/Dumper/Todo		Data pretty printer, futures
+-ext/Devel/DProf/Changes		Perl code profiler changelog
+-ext/Devel/DProf/DProf.pm	Perl code profiler
+-ext/Devel/DProf/DProf.xs	Perl code profiler
+-ext/Devel/DProf/Makefile.PL	Perl code profiler makefile writer
+-ext/Devel/DProf/Todo		Perl code profiler todo list
+-ext/Devel/Peek/Changes		Data debugging tool, changelog
+-ext/Devel/Peek/Makefile.PL	Data debugging tool, makefile writer
+-ext/Devel/Peek/Peek.pm		Data debugging tool, module and pod
+-ext/Devel/Peek/Peek.xs		Data debugging tool, externals
+ ext/DynaLoader/DynaLoader_pm.PL	Dynamic Loader perl module
+ ext/DynaLoader/Makefile.PL	Dynamic Loader makefile writer
+ ext/DynaLoader/README		Dynamic Loader notes and intro
+@@ -260,11 +246,6 @@
+ ext/File/Glob/TODO		File::Glob extension todo list
+ ext/File/Glob/bsd_glob.c	File::Glob extension run time code
+ ext/File/Glob/bsd_glob.h	File::Glob extension header file
+-ext/GDBM_File/GDBM_File.pm	GDBM extension Perl module
+-ext/GDBM_File/GDBM_File.xs	GDBM extension external subroutines
+-ext/GDBM_File/Makefile.PL	GDBM extension makefile writer
+-ext/GDBM_File/hints/sco.pl	Hint for GDBM_File for named architecture
+-ext/GDBM_File/typemap		GDBM extension interface types
+ ext/IO/ChangeLog		IO perl module change log
+ ext/IO/IO.pm			Top-level interface to IO::* classes
+ ext/IO/IO.xs			IO extension external subroutines
+@@ -559,14 +540,6 @@
+ lib/AutoLoader.pm	Autoloader base class
+ lib/AutoSplit.pm	Split up autoload functions
+ lib/Benchmark.pm	Measure execution time
+-lib/CGI.pm		Web server interface ("Common Gateway Interface")
+-lib/CGI/Apache.pm	Support for Apache's Perl module
+-lib/CGI/Carp.pm		Log server errors with helpful context
+-lib/CGI/Cookie.pm	Interface to Netscape Cookies
+-lib/CGI/Fast.pm		Support for FastCGI (persistent server process)
+-lib/CGI/Pretty.pm	Output nicely formatted HTML
+-lib/CGI/Push.pm		Support for server push
+-lib/CGI/Switch.pm	Simple interface for multiple server types
+ lib/CPAN.pm		Interface to Comprehensive Perl Archive Network
+ lib/CPAN/FirstTime.pm	Utility for creating CPAN config files
+ lib/CPAN/Nox.pm		Runs CPAN while avoiding compiled extensions
+@@ -1493,7 +1466,6 @@
+ util.h			Dummy header
+ utils/Makefile		Extract the utility scripts
+ utils/c2ph.PL		program to translate dbx stabs to perl
+-utils/dprofpp.PL	Perl code profile post-processor
+ utils/h2ph.PL		A thing to turn C .h files into perl .ph files
+ utils/h2xs.PL		Program to make .xs files from C header files
+ utils/perlbc.PL		Front-end for byte compiler
