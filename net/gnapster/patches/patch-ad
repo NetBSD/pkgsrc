@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2000/03/16 01:36:08 wiz Exp $
+
+--- aclocal.m4.orig	Sun Feb 13 07:38:19 2000
++++ aclocal.m4	Mon Feb 28 06:34:09 2000
+@@ -1230,8 +1230,7 @@
+ 	nls_cv_header_libgt=
+ 	CATOBJEXT=NONE
+ 
+-	AC_CHECK_HEADER(libintl.h,
+-	  [AC_CACHE_CHECK([for gettext in libc], gt_cv_func_gettext_libc,
++	  AC_CACHE_CHECK([for gettext in libc], gt_cv_func_gettext_libc,
+ 	    [AC_TRY_LINK([#include <libintl.h>], [return (int) gettext ("")],
+ 	       gt_cv_func_gettext_libc=yes, gt_cv_func_gettext_libc=no)])
+ 
+@@ -1271,7 +1270,6 @@
+ 	       INTLLIBS=-lintl
+ 	       LIBS=`echo $LIBS | sed -e 's/-lintl//'`
+ 	    fi
+-	])
+ 
+         if test "$CATOBJEXT" = "NONE"; then
+ 	  AC_MSG_CHECKING([whether catgets can be used])
