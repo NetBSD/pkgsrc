@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 1999/11/23 16:26:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 1999/12/25 23:43:56 wiz Exp $
 # FreeBSD Id: Makefile,v 1.29 1996/12/20 23:46:22 ache Exp 
 #
 
 DISTNAME=		tracker-5.3
 CATEGORIES=		audio
-MASTER_SITES=		ftp://ftp.ens.fr/pub/dmi/users/espie/beta/
+MASTER_SITES=		ftp://ftp.uni-trier.de/pub/unix/audio/tracker/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		packages@netbsd.org
