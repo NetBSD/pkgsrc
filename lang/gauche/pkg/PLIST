@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/31 09:56:59 minoura Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/06/24 03:12:46 minoura Exp $
 bin/gauche-config
 bin/gosh
 lib/gauche/0.3.13/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/gauche-config
@@ -88,8 +88,8 @@ share/gauche/site/lib/example.scm
 @dirrm share/gauche/0.3.13/include
 @dirrm share/gauche/0.3.13
 @dirrm share/gauche
-@dirrm lib/gauche/site/sparc--netbsd
+@dirrm lib/gauche/site/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
 @dirrm lib/gauche/site
-@dirrm lib/gauche/0.3.13/sparc--netbsd
+@dirrm lib/gauche/0.3.13/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
 @dirrm lib/gauche/0.3.13
 @dirrm lib/gauche
