@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.735 2001/05/14 13:44:23 drochner Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.736 2001/05/17 11:12:31 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -998,7 +998,9 @@ CKSUMFILES:=	${CKSUMFILES:N${__tmp__}}
 
 # List of all files, with ${DIST_SUBDIR} in front.  Used for fetch and checksum.
 .if defined(DIST_SUBDIR)
+.if ${CKSUMFILES} != ""
 _CKSUMFILES?=	${CKSUMFILES:S/^/${DIST_SUBDIR}\//}
+.endif
 _DISTFILES?=	${DISTFILES:S/^/${DIST_SUBDIR}\//}
 _IGNOREFILES?=	${IGNOREFILES:S/^/${DIST_SUBDIR}\//}
 _PATCHFILES?=	${PATCHFILES:S/^/${DIST_SUBDIR}\//}
