@@ -1,17 +1,24 @@
-$NetBSD: patch-ac,v 1.4 1999/05/22 22:32:04 tron Exp $
+$NetBSD: patch-ac,v 1.5 1999/07/13 01:34:42 jlam Exp $
 
---- configure.orig	Sun Jun  8 07:25:04 1997
-+++ configure	Sun May 23 00:25:56 1999
-@@ -1072,7 +1072,7 @@
+--- configure.orig	Sun Jun  8 01:25:04 1997
++++ configure	Wed Jul  7 00:05:26 1999
+@@ -1069,6 +1069,7 @@
+ 
+ 
+ # See if we should add -I/usr/local/include -L/usr/local/lib, etc.
++if test "$nc_cv_extra_dirs" = yes ; then
  echo "checking for extra include and lib directories..." 1>&6
  b1=`cd .. ; pwd`
  b2=`cd ../.. ; pwd`
--exdirs="$HOME $j $b1 $b2 $prefix /usr/local /usr/ccs"
-+exdirs="$HOME $j $b1 $b2 $prefix"
+@@ -1128,6 +1129,7 @@
+ 	fi
+ done
+ done
++fi
  
- subexdirs="-"
- if test "$subexdirs" = "" ; then
-@@ -1766,7 +1766,7 @@
+ 
+ # Look for SunOS' /usr/5lib and 5include directories, because
+@@ -1766,7 +1768,7 @@
    echo "$ac_t""no" 1>&6
  fi
  
@@ -20,16 +27,7 @@ $NetBSD: patch-ac,v 1.4 1999/05/22 22:32:04 tron Exp $
                nc_cv_socks=no
        else
                LIBS="$savelibs"
-@@ -2285,7 +2285,7 @@
- 		echo "checking for extra include and lib directories..." 1>&6
- b1=`cd .. ; pwd`
- b2=`cd ../.. ; pwd`
--exdirs="$HOME $j $b1 $b2 $prefix /usr/local /usr /usr/ccs"
-+exdirs="$HOME $j $b1 $b2 $prefix"
- 
- subexdirs="ncurses"
- if test "$subexdirs" = "" ; then
-@@ -2345,7 +2345,7 @@
+@@ -2345,7 +2347,7 @@
  
  		# See if we should add -I/usr/local/ncurses
  		
@@ -38,7 +36,7 @@ $NetBSD: patch-ac,v 1.4 1999/05/22 22:32:04 tron Exp $
  if test -r $incdir ; then
  	case "$CPPFLAGS" in
  		*${incdir}*)
-@@ -2366,7 +2366,7 @@
+@@ -2366,7 +2368,7 @@
  		# Some people (me) have two versions of ncurses on
  		# the system.  Use the one in /usr/local first.
  		case "$CPPFLAGS" in
