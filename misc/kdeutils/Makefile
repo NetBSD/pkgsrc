@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/04/28 22:54:07 tron Exp $
+# $NetBSD: Makefile,v 1.13 1998/05/04 00:20:02 tron Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/28 00:04:18 se Exp
 #
 
@@ -26,12 +26,12 @@ EXTRACT_AFTER_ARGS=	| pax -r
 
 USE_X11=	yes
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--prefix=${PREFIX}" \
-		"--x-inc=${PREFX}/include -I${LOCALBASE}/include -I${LOCALBASE}/include/giflib" \
+CONFIGURE_ARGS=	"--x-inc=${PREFX}/include -I${LOCALBASE}/include -I${LOCALBASE}/include/giflib" \
 		"--x-lib=${PREFIX}/lib -L${LOCALBASE}/lib" \
 		"--with-qt-dir=${PREFIX}" \
 		"--with-qt-includes=${X11BASE}/include/qt"
-CONFIGURE_ENV=	INSTALL_DATA="${INSTALL_DATA}" \
+CONFIGURE_ENV=	KDEDIR=${PREFIX} \
+		INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 		INSTALL="/usr/bin/install"
