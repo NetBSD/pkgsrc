@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1515 2004/10/12 17:32:46 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1516 2004/10/12 18:29:25 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1950,7 +1950,7 @@ BUILD_DEPENDS+=		lha>=114.9:../../archivers/lha
 .if !defined(GZCAT)
 .  if !empty(EXTRACT_ONLY:M*.gz) || !empty(EXTRACT_ONLY:M*.tgz) || \
       !empty(EXTRACT_SUFX:M*.gz) || !empty(EXTRACT_SUFX:M*.tgz)
-BUILD_DEPENDS+=         gzip-base>=1.2.4a:../../archivers/gzip-base
+BUILD_DEPENDS+=         gzip-base>=1.2.4b:../../archivers/gzip-base
 GZCAT=                  ${LOCALBASE}/bin/zcat
 .  endif
 .endif
