@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2068 2004/08/22 03:22:47 markd Exp $
+$NetBSD: TODO,v 1.2069 2004/08/22 21:15:58 cjep Exp $
 
 Suggested new packages
 ======================
@@ -262,7 +262,7 @@ Suggested package updates
 	o hatari-0.50
 	o heimdal-0.6.2
 	o hmmer-2.3.2
-	o host-20031203 [cjep, in wip, awaiting greg woods response on 1 issue]
+	o host-20040812 [cjep,talking to greg woods about this]
 	o hp2xx-3.4.4
 	o icepref-2.3
 	o idesk-0.5.6
