@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.228 2004/04/10 12:26:23 salo Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.229 2004/04/18 12:08:42 uebayasi Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -2058,51 +2058,21 @@ USERPPP_GROUP?=	network
 # Possible: not defined, see "configure --help"
 # Default: not defined
 
-W3M_USE_COLOR?=			YES
-# Used in w3m to use colors.
-# Possible: YES, NO
-# Default: YES
-
-W3M_USE_COOKIE?=		YES
-# Enable cookie support in w3m.
-# Possible: YES, NO
-# Default: YES
-
-W3M_USE_IMAGE?=			NO
-# Enable inline image display support in w3m.  (Useful, but still a bit
-# buggy yet?)
-# Possible: YES, NO
-# Default: NO
-
-W3M_USE_JAPANESE_MESSAGES?=	NO
-# Let w3m to use Japanese messages. (Japanese localization.)
-# Possible: YES, NO
-# Default: NO
-
 W3M_USE_LYNX_KEY?=		NO
 # Enable lynx like keybinding for w3m.
 # Possible: YES, NO
 # Default: NO
 
-W3M_USE_M17N=			YES
+W3M_USE_M17N?=			YES
 # For multilingual support for w3m.
 # Possible: YES, NO
 # Default: YES
 
-W3M_USE_MOUSE?=			YES
-# Enable mouse support in w3m.
-# Possible: YES, NO
-# Default: YES
-
-W3M_USE_SSL?=			YES
-# Enable HTTPS support in w3m.
-# Possible: YES, NO
-# Default: YES
-
-W3M_USE_UNICODE?=		YES
-# Used in w3m to use Unicode characters.
-# Possible: YES, NO
-# Default: YES
+# XXX Currently broken; should be fixed later.
+#W3M_USE_UNICODE?=		YES
+## Used in w3m to use Unicode characters.
+## Possible: YES, NO
+## Default: YES
 
 WGET_USE_SSL?=	YES
 # Enable SSL in wget (for https connections)
