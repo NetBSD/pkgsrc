@@ -1,0 +1,14 @@
+--- ./configure	Thu Mar 20 14:37:38 1997
++++ ./configure	Fri Mar 21 18:39:02 1997
+@@ -4422,9 +4422,9 @@
+ 
+ if test "$SYSTEM" = "unix" ; then
+ 	if test "$awt_toolkit" != "none" ; then
+-		echo CLASSPATH=.:$datadir/kaffe/classes.zip:$datadir/kaffe/$awt_toolkit.zip > ENVIRONMENT
++		echo CLASSPATH=.:$datadir/java/classes.zip:$datadir/kaffe/$awt_toolkit.zip > ENVIRONMENT
+ 	else
+-		echo CLASSPATH=.:$datadir/kaffe/classes.zip > ENVIRONMENT
++		echo CLASSPATH=.:$datadir/java/classes.zip > ENVIRONMENT
+ 	fi
+ 	echo KAFFEHOME=$datadir/kaffe >> ENVIRONMENT
+ 	if test "$dynamic_libraries" = "yes" ; then
