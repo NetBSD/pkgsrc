@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/28 02:47:46 reed Exp $
+# $NetBSD: Makefile,v 1.7 2005/01/23 05:01:44 hamajima Exp $
 #
 
 DISTNAME=	dtcp-20040611
@@ -16,7 +16,7 @@ DEPENDS+=	qpopper-*:../../mail/qpopper
 
 MAKE_ENV+=	RUBY=${RUBY}
 RCD_SCRIPTS=	dtcpc dtcps
-CONF_DEPENDS=	YES
+USE_PKGINSTALL=	YES
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
