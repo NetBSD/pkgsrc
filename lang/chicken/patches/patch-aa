@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2003/05/21 19:43:04 seb Exp $
+$NetBSD: patch-aa,v 1.4 2003/08/27 08:52:59 itojun Exp $
 
---- Makefile.am.orig	2003-03-12 21:23:00.000000000 +0000
-+++ Makefile.am
-@@ -242,10 +242,10 @@ pkgdata_DATA = match.scm moremacros.scm 
+--- Makefile.am.orig	2003-06-14 02:35:08.000000000 +0900
++++ Makefile.am	2003-08-27 17:39:30.000000000 +0900
+@@ -249,10 +249,10 @@
  
  # Install docs and sources.
  install-data-local : doc-html
@@ -17,9 +17,9 @@ $NetBSD: patch-aa,v 1.3 2003/05/21 19:43:04 seb Exp $
  	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/src
  	-cp $(srcdir)/*.scm $(srcdir)/runtime.c $(DESTDIR)$(pkgdatadir)/src
  	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)
-@@ -466,4 +466,4 @@ doc-html :
+@@ -479,4 +479,4 @@
  .PHONY : test
  
  test :
--	cd testsuites; $(MAKE) CC="$(CC)" CHICKEN="$(CHICKEN)" LIBDIR=../.libs CFLAGS="$(CFLAGS)"; cd ..
-+	cd testsuites; $(MAKE)
+-	cd testsuites; $(MAKE) CC="$(CC)" CHICKEN="../chicken" LIBDIR=../.libs CFLAGS="$(CFLAGS)"; cd ..
++	cd testsuites; $(MAKE) CHICKEN="../chicken" LIBDIR=../.libs; cd ..
