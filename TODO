@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.30 2001/05/13 02:44:13 wiz Exp $
+$NetBSD: TODO,v 1.31 2001/05/14 11:59:26 skrll Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -85,6 +85,11 @@ package update TODO (Suggested package updates)
 	o update www/php4 and assorted php4 module packages to 4.0.5
 		(jlam has a new package ready, will update after freeze)
 	o update x11/xfce to 3.8.3
+	o update/add cyrus-imapd 2.0.13
+		(skrll has a new package. Need testers for v1 -> v2
+		database upgrade)
+	o update/add openldap 2.0.8
+		(skrll has a new package)
 
 
 pksgrc TODO (Suggested pkgsrc features and enhancements)
