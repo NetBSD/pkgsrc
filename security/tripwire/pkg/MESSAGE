@@ -1,0 +1,6 @@
+To use tripwire to protect your systems, you should first initialise
+the databases:
+
+	(cd ${PREFIX}/etc/tripwire; ${PREFIX}/sbin/tripwire -initialize)
+
+which creates the database in the ${PREFIX}/etc/tripwire/databases directory.
