@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2003/09/11 06:45:33 martti Exp $
+# $NetBSD: Makefile,v 1.50 2003/09/11 11:50:18 grant Exp $
 #
 
 DISTNAME=	ddd-3.3.7
@@ -13,7 +13,6 @@ USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
-USE_GCC3=		YES
 TEST_TARGET=		check
 INFO_FILES=		ddd-themes.info ddd.info
 
