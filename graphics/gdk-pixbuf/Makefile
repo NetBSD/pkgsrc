@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2002/09/02 13:10:08 drochner Exp $
+# $NetBSD: Makefile,v 1.24 2002/09/11 10:12:38 jlam Exp $
 #
+
+.include "Makefile.common"
 
 PKGNAME=	${DISTNAME}
 COMMENT=	the GNOME image loading library
-
-USE_BUILDLINK2=	# defined
-
-.include "Makefile.common"
 
 # XXX hopefully there is no x.gnome-config.x in PATH
 post-patch:

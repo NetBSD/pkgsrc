@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2002/09/02 13:10:08 drochner Exp $
+# $NetBSD: Makefile.common,v 1.27 2002/09/11 10:12:38 jlam Exp $
 #
 
 DISTNAME=		gdk-pixbuf-0.18.0
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.gnome.org/
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
