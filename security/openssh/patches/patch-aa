@@ -1,12 +1,18 @@
-$NetBSD: patch-aa,v 1.12 2000/10/15 14:17:14 itojun Exp $
+$NetBSD: patch-aa,v 1.13 2000/11/09 09:18:24 itojun Exp $
 
---- configure.in.orig	Thu Aug 31 07:20:05 2000
-+++ configure.in	Thu Oct 12 09:23:08 2000
-@@ -337,2 +337,3 @@
+--- configure.in.orig	Sun Nov  5 18:08:45 2000
++++ configure.in	Thu Nov  9 18:03:33 2000
+@@ -389,6 +389,7 @@
+ saved_LIBS="$LIBS"
+ saved_LDFLAGS="$LDFLAGS"
  saved_CFLAGS="$CFLAGS"
 +crypto_LIBS=""
  if test "x$prefix" != "xNONE" ; then
-@@ -353,8 +354,21 @@
+ 	tryssldir="$tryssldir $prefix"
+ fi
+@@ -405,12 +406,25 @@
+ 			LDFLAGS="$saved_LDFLAGS"
+ 		fi
  
 -		LIBS="$saved_LIBS -lcrypto"
 -
@@ -34,7 +40,11 @@ $NetBSD: patch-aa,v 1.12 2000/10/15 14:17:14 itojun Exp $
 +			AC_TRY_RUN(
 +				[
  #include <string.h>
-@@ -368,8 +382,10 @@
+ #include <openssl/rand.h>
+ int main(void) 
+@@ -420,12 +434,14 @@
+ 	RAND_add(a, sizeof(a), sizeof(a));
+ 	return(RAND_status() <= 0);
  }
 -			],
 -			[
@@ -51,13 +61,14 @@ $NetBSD: patch-aa,v 1.12 2000/10/15 14:17:14 itojun Exp $
 +			)
 +		done
  
-@@ -403,3 +419,3 @@
+ 		if test ! -z "$found_crypto" ; then
+ 			break;
+@@ -455,7 +471,7 @@
+ 		blibpath="$blibpath:$ssldir:$ssldir/lib"
+ 	fi
  fi
 -LIBS="$saved_LIBS -lcrypto"
 +LIBS="$saved_LIBS $crypto_LIBS"
  
-@@ -764,3 +780,3 @@
- 		],
--		[ struct passwd p s; p.pw_class = NULL; ],
-+		[ struct passwd p; p.pw_class = NULL; ],
- 		[ ac_cv_have_pw_class_in_struct_passwd="yes" ],
+ # Now test RSA support
+ saved_LIBS="$LIBS"
