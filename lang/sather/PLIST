@@ -1,17 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/04 00:45:33 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/06 16:27:42 seb Exp $
 bin/sabrowse
 bin/sacomp
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/sather.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/sather-mode.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/sather-tutorial.info
 info/sather.info
 info/sather.info-1
 info/sather.info-2
 info/sather-mode.info
 info/sather-tutorial.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/sather-mode.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/sather.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/sather-tutorial.info
 lib/sather/Bin/PP
 lib/sather/Bin/bin-wrapper
 lib/sather/Bin/gen_html
