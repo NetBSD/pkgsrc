@@ -10,9 +10,6 @@ Ghostscript is the well-known PostScript interpreter which is
 available for all common and most esoteric platforms and supports
 many different printers and some displays.
 
-The official ghostscript Web page:
-	http://www.cs.wisc.edu/~ghost/index.html
-
 Thomas Merz has written a Ghostscript manual which is available in
 PDF from this site (456k) and also from Thomas Merz's site in Germany.
 

@@ -1,6 +1,4 @@
 (Hacked by Ben Buxton <bb@zip.com.au>)
-(The Xaw-XPM web page is at http://www.zip.com.au/~bb/XawXpm/ - check here
-for updates, bug fixes, sample configs, etc)
 
 Xaw-xpm is a hack on Xaw3d, which is in turn based on the 'standard' X11 Xaw
 widget set. It adds the ability to insert colour images into the backgrounds

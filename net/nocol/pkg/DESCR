@@ -86,12 +86,7 @@ New features in v3.0 were:
  - TCP port monitor
  - Perl appletalk, Novell, BGP, modem line monitors.
 
-
 Has been compiled on Solaris2.2, SunOS4.1.1, Ultrix4.2, BSDI/386. Linux.
-
-The software is freely available on the Internet from:
-	http://www.netplex-tech.com/software/nocol   or
-	ftp://ftp.navya.com/pub/vikas/nocol.tar.gz 
 
 Please send a message to 'nocol-users-request@navya.com' to be added to the
 'nocol-users' mailing list for updates and bug fixes. Mail comments and

@@ -13,6 +13,3 @@ capacitance extraction problem.  The linear system resulting
 from the boundary-element discretization is solved using a
 generalized conjugate residual algorithm with a fast multipole
 algorithm to efficiently compute the iterates.
-
-FastCap was written at MIT by the MIT RLE VLSI-CAD research
-group (http://rle-vlsi.mit.edu/).

@@ -7,7 +7,4 @@ through a mouse-based interface.  This program can also write an input
 file for xmodmap to recreate your changes in future sessions.  See the
 man page for more details.
 
-Written by Jamie Zawinski, more information can be found at the
-following URL:
-
-	http://people.netscape.com/jwz/xkeycaps/index.html
+Written by Jamie Zawinski.

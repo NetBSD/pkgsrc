@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/06/18 16:15:10 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/08/26 16:50:48 tsarna Exp $
 #
 
 DISTNAME=	amp-0.7.6
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.rasip.fer.hr/pub/mpeg/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	mycroft@NetBSD.ORG
+MAINTAINER=	mycroft@netbsd.org
 
 GNU_CONFIGURE=	yes
 

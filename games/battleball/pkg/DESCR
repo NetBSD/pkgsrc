@@ -3,6 +3,4 @@ twist. BattleBall runs under Unix / X11, and can be played over LANs and
 short distances on the internet.  BattleBall runs fast without any 3-D
 graphics hardware, and its binaries are small and easily downloaded. 
 
-http://www.cs.utexas.edu/users/pahardin/bb.html
-A 3-D single/multiplayer game for the X11 Window System
-                   by Philip A. Hardin
+BattleBall is by Philip A. Hardin
