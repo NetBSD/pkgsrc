@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 09:13:28 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/07/17 07:02:15 garbled Exp $
 
-SHA1 (postmark-1_13.c) = 1da74a45f96dabe6c6abd979a4a0a5ecdb942464
-Size (postmark-1_13.c) = 41143 bytes
+SHA1 (postmark-1_5.c) = 571ee5365b32cdb9f203f3d76753fa20e095d56a
+Size (postmark-1_5.c) = 46666 bytes
