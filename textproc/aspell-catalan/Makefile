@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/17 03:49:09 salo Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/19 06:35:44 salo Exp $
 #
 
 DISTNAME=	aspell-ca-0.50-2
@@ -16,9 +16,6 @@ HAS_CONFIGURE=	YES
 
 CONFIGURE_ENV+=	ASPELL=${PREFIX}/bin/aspell
 CONFIGURE_ENV+=	WORD_LIST_COMPRESS=${PREFIX}/bin/word-list-compress
-
-MAKE_ENV+=	INSTALL_DATA="${INSTALL_DATA}"
-MAKE_ENV+=	INSTALL_DATA_DIR="${INSTALL_DATA_DIR}"
 
 .include "../../textproc/aspell/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
