@@ -1,0 +1,19 @@
+$NetBSD: patch-ah,v 1.5 2003/05/24 19:26:26 jschauma Exp $
+
+--- texinfo/doc/Makefile.in.orig	Sat May 24 14:56:48 2003
++++ texinfo/doc/Makefile.in	Sat May 24 14:59:51 2003
+@@ -182,12 +182,12 @@
+ 
+ uninstall-info:
+ 	$(PRE_UNINSTALL)
+-	@if $(SHELL) -c 'install-info --version | sed 1q | fgrep -s -v -i debian' >/dev/null 2>&1; then \
++	@if $(SHELL) -c '${INSTALL_INFO} --version | sed 1q | fgrep -s -v -i debian' >/dev/null 2>&1; then \
+ 	  ii=yes; \
+ 	else ii=; fi; \
+ 	for file in $(INFO_DEPS); do \
+ 	  test -z "$ii" \
+-	    || install-info --info-dir=$(DESTDIR)$(infodir) --remove $$file; \
++	    || ${INSTALL_INFO} --info-dir=$(DESTDIR)$(infodir) --remove $$file; \
+ 	done
+ 	@$(NORMAL_UNINSTALL)
+ 	for file in $(INFO_DEPS); do \
