@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/10/03 00:14:42 tv Exp $
+# $NetBSD: Makefile,v 1.35 2004/12/20 18:49:37 xtraeme Exp $
 #
 
 DISTNAME=	fontconfig-2.2.96
@@ -15,8 +15,6 @@ COMMENT=	Library for configuring and customizing font access
 BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.0.9
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-.include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
@@ -35,6 +33,8 @@ CONFIGURE_ARGS+=	--with-expat-lib=${BUILDLINK_PREFIX.expat}/lib
 CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--enable-docs
+
+.include "../../mk/bsd.prefs.mk"
 
 FONT_PATH=	${X11PREFIX}/lib/X11/fonts/TTF,${X11PREFIX}/lib/X11/fonts/Type1
 .if ${X11PREFIX} != ${X11BASE}
