@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 1997/12/08 16:17:17 mrg Exp $
 # New ports collection makefile for:	X-Emacs
-# Version required:	20.2
-# Date created:		26 August 1997
-# Whom:			Michael Elbel (me)
+# Version required:			20.3
+# Date created:				26 August 1997
+# Whom:					Michael Elbel (me)
 #
+# $NetBSD: Makefile,v 1.4 1997/12/13 19:02:24 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -17,7 +17,7 @@ MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs-20.3/ \
 		ftp://SunSITE.sut.ac.jp/pub/archives/xemacs/xemacs-20.3/ \
 		ftp://ftp.miranova.com/pub/xemacs/ \
 		ftp://ftp.gw.com/mirrors/pub/unix/xemacs/xemacs-20.3/
-DISTFILES=	xemacs-20.3.tar.gz
+DISTFILES=	xemacs-20.3.tar.gz xemacs-20.3-info.tar.gz
 
 LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm \
 		jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
@@ -31,22 +31,18 @@ OPSYS!=		uname -s
 
 .if (${OPSYS} == "FreeBSD")
 MAINTAINER=	me@FreeBSD.org
-CONFIGURE_ARGS=	i386--freebsd --prefix=${PREFIX} \
-		--site-includes=${PREFIX}/include \
-		--with-sound=native \
-		--site-libraries=${PREFIX}/lib \
-		--sitelispdir="${PREFIX}/lib/xemacs/site-lisp ${PREFIX}/share/xemacs/site-lisp" \
-		${WITH_MULE} ${WITH_DIALOGS}
+WITH_SOUND=	--with-sound=native
 .elif (${OPSYS} == "NetBSD")
-# agc - NetBSD doesn't use the native sound option
-# agc - braindead xpm installation - or is it us?
 MAINTAINER=	agc@netbsd.org
-CONFIGURE_ARGS=	--prefix=${PREFIX} \
-		--site-includes="${PREFIX}/include /usr/X11R6/include" \
+WITH_SOUND=	
+.endif
+
+CONFIGURE_ARGS=	${ARCH}--`echo ${OPSYS}|tr [A-Z] [a-z]` --prefix=${PREFIX} \
+		--site-includes=${PREFIX}/include \
+		${WITH_SOUND} \
 		--site-libraries=${PREFIX}/lib \
 		--sitelispdir="${PREFIX}/lib/xemacs/site-lisp ${PREFIX}/share/xemacs/site-lisp" \
 		${WITH_MULE} ${WITH_DIALOGS}
-.endif
 
 MAN1=		ctags.1 etags.1 gnuattach.1 gnuclient.1 gnudoit.1 \
 		gnuserv.1 xemacs.1
@@ -65,9 +61,9 @@ WITH_DIALOGS=	--with-dialogs=athena
 .endif
 
 post-install:
-.for file in b2m ctags etags emacsclient gnuattach gnuclient \
-	gnudoit xemacs-20.2
+.for file in b2m ctags etags gnuclient xemacs-20.3
 	strip ${PREFIX}/bin/${file}
 .endfor
+	mv ${PREFIX}/bin/send-pr ${PREFIX}/bin/xemacs-send-pr
 
 .include <bsd.port.mk>
