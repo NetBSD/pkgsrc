@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1 2002/03/22 06:57:35 jlam Exp $
+
+--- Makefile.PL.orig	Wed Mar 13 07:40:44 2002
++++ Makefile.PL	Fri Mar 22 01:40:50 2002
+@@ -64,10 +64,10 @@
+ ESQ
+ close(TST);
+ 
+-if (system("$Config{'cpp'} $Config{'cppflags'} compilerok.c > preprocessorok.log 2>&1")) {
++if (system("$Config{'cppstdin'} $Config{'cppflags'} $Config{'cppminus'} < compilerok.c > preprocessorok.log 2>&1")) {
+   die <<"__EOT__";
+ 
+-ERROR: cannot run the configured preprocessor '$Config{'cpp'}'
++ERROR: cannot run the configured preprocessor '$Config{'cppstdin'}'
+ (see conf/preprocessor.log).  Please fix this by adjusting
+ perls Config.pm, creating a symlink to the right location
+ or maybe by just adding it to your PATH.  You could also build
+@@ -246,8 +246,8 @@
+ }
+ close CPPIN;
+ 
+-if(system("$Config{'cpp'} $Config{'cppflags'} @{[keys %define]} ttsymsdefined.in > ttsymsdefined.out")) {
+-  die "ERROR: cannot run cpp";
++if(system("$Config{'cppstdin'} $Config{'cppflags'} @{[keys %define]} $Config{'cppminus'} < ttsymsdefined.in > ttsymsdefined.out")) {
++  die "ERROR: cannot run preprocessor";
+ }
+ 
+ open (CPPOUT, "ttsymsdefined.out") or die "open: $!";
