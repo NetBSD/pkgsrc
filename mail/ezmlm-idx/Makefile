@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/02/08 05:29:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2005/03/07 09:53:33 uebayasi Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
@@ -27,7 +27,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 USE_PKGINSTALL=		YES
 
 PKG_SYSCONFSUBDIR=	ezmlm
-CFLAGS+=		-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\"\\\"
+CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 EGDIR=			${PREFIX}/share/examples/ezmlm-idx
 CONF_FILES=		${EGDIR}/ezcgirc ${PKG_SYSCONFDIR}/ezcgirc
