@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/27 11:54:14 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/05/02 10:14:02 zuntum Exp $
 #
 
 DISTNAME=	NeTraMet44b8
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.auckland.ac.nz/net/Accounting/
 COMMENT=	NEtwork TRaffic METer
 
 GNU_CONFIGURE=	YES
+
+CONFIGURE_ARGS+=--without-x
 
 post-patch:
 	for i in `${FIND} ${WRKSRC} -name Makefile.in`; do			\
