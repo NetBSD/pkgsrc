@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8659 2005/01/08 13:42:26 minskim Exp $
+$NetBSD: CHANGES,v 1.8660 2005/01/08 18:29:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -180,3 +180,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-Text-Shellwords-1.02 [minskim 2005-01-08]
 	Added p5-WWW-Curl-2.0 [minskim 2005-01-08]
 	Added p5-Tree-DAG_Node-1.05 [minskim 2005-01-08]
+	Updated impress to 1.1b9nb2 [minskim 2005-01-08]
