@@ -1,14 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/17 19:43:39 jmmv Exp $
-bin/fam
+@comment $NetBSD: PLIST,v 1.4 2004/03/28 22:00:05 minskim Exp $
 include/fam.h
-lib/fam/editconf.perl
 lib/libfam.a
 lib/libfam.la
 lib/libfam.so
 lib/libfam.so.0
 lib/libfam.so.0.0
-man/man1/fam.1
 man/man3/fam.3
+man/man5/famd.conf.5
+man/man8/famd.8
+sbin/famd
 share/examples/fam/fam.conf
 @dirrm share/examples/fam
-@dirrm lib/fam

@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2004/03/22 13:57:01 minskim Exp $
+$NetBSD: MESSAGE,v 1.3 2004/03/28 22:00:04 minskim Exp $
 
 FAM uses RPC and is usually started by the inetd(8) superserver.  You need
 to enable it manually, by issuing the following steps:
@@ -12,6 +12,6 @@ to enable it manually, by issuing the following steps:
 2) Add FAM to the system's superserver by appending the following line to
    the /etc/inetd.conf file:
 
-        sgi_fam/1-2 stream rpc/tcp wait root ${PREFIX}/bin/fam fam
+        sgi_fam/1-2 stream rpc/tcp wait root ${PREFIX}/sbin/famd famd
 
 ===========================================================================
