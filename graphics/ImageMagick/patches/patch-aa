@@ -1,39 +1,36 @@
-$NetBSD: patch-aa,v 1.11 1999/11/19 11:53:01 agc Exp $
+$NetBSD: patch-aa,v 1.12 2000/03/21 22:18:24 tron Exp $
 
---- configure.orig	Thu Sep  9 01:10:48 1999
-+++ configure	Fri Nov 19 11:26:56 1999
-@@ -2238,7 +2238,7 @@
- fi
- rm -f confcache
+--- configure.orig	Fri Feb  4 23:41:28 2000
++++ configure	Tue Mar 21 22:21:52 2000
+@@ -1673,6 +1673,7 @@
+ # Must also pass -no-undefined to libtool in Makefile
+ # AC_LIBTOOL_WIN32_DLL
  
--
 +if false; then
- # Actually configure libtool.  ac_aux_dir is where install-sh is found.
- CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
- LD="$LD" LDFLAGS="$LDFLAGS" LIBS="$LIBS" \
-@@ -2247,6 +2247,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+ # Configure libtool
+ # Check whether --enable-shared or --disable-shared was given.
+ if test "${enable_shared+set}" = set; then
+@@ -2057,6 +2058,7 @@
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 +fi
  
- # Reload cache, that may have been modified by ltconfig
- if test -r "$cache_file"; then
-@@ -2257,7 +2258,7 @@
-   > $cache_file
- fi
- 
--
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+@@ -4303,6 +4305,7 @@
+ # Find Posix threads library
+ #
+ LIB_THREAD=''
 +if false; then
- # This can be used to rebuild libtool when needed
- LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
- 
-@@ -2282,7 +2283,7 @@
- then
-   libtool_build_static_libs='yes'
- fi
--
+ echo $ac_n "checking for pthread_attr_init in -lpthread""... $ac_c" 1>&6
+ echo "configure:4308: checking for pthread_attr_init in -lpthread" >&5
+ ac_lib_var=`echo pthread'_'pthread_attr_init | sed 'y%./+-%__p_%'`
+@@ -4346,6 +4349,7 @@
+    DEF_THREAD="-D_REENTRANT"
+ else
+   echo "$ac_t""no" 1>&6
 +fi
+ fi
  
- # Add configure option --enable-maintainer-mode which enables dependency
- # checking and generation useful to package maintainers.  This is made an
+ LIBS="$LIB_THREAD $LIBS"

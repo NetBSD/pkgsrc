@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.7 2000/03/21 22:19:44 tron Exp $
+
+--- magick/magick.h.orig	Fri Feb  4 18:14:06 2000
++++ magick/magick.h	Tue Mar 21 22:38:42 2000
+@@ -5,9 +5,11 @@
+ #define _MAGICK_H
+ 
+ #define __EXTENSIONS__  1
++#ifndef __NetBSD__
+ #define _POSIX_C_SOURCE  199506L
+ #define _XOPEN_SOURCE  500
+ #define _XOPEN_SOURCE_EXTENDED  1
++#endif
+ 
+ /*
+   System include declarations.
