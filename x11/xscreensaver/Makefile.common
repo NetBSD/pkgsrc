@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2002/02/24 21:42:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.24 2002/03/01 06:46:49 fredb Exp $
 #
 
 DISTNAME=		xscreensaver-4.01
@@ -11,21 +11,23 @@ HOMEPAGE=		http://www.jwz.org/xscreensaver/
 
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		gle-[0-9]*:../../graphics/gle
+DEPENDS+=		gdk-pixbuf>=0.10.1:../../graphics/gdk-pixbuf
+DEPENDS+=		jpeg-6b:../../graphics/jpeg
+DEPENDS+=		libxml-1.8.16:../../texproc/libxml
 
 USE_MESA=		yes
 USE_X11BASE=		yes
-USE_XPM=		yes
 
 EVAL_PREFIX+=		GTKDIR=gtk+
-EVAL_PREFIX+=		XPMDIR=xpm
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-hackdir=${PREFIX}/libexec/xscreensaver
-CONFIGURE_ARGS+=	--with-gl
+CONFIGURE_ARGS+=	--with-gl --with-gle
 CONFIGURE_ARGS+=	--with-gtk=${GTKDIR}
-CONFIGURE_ARGS+=	--with-xpm=${XPMDIR}
+CONFIGURE_ARGS+=	--with-jpeg=${LOCALBASE}
 CONFIGURE_ARGS+=	--without-motif
 CONFIGURE_ARGS+=	--without-shadow
+CONFIGURE_ARGS+=	--with-xml=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-zippy=/usr/games/fortune
 CONFIGURE_ENV+=		INSTALL=/usr/bin/install
 CONFIGURE_ENV+=		X_PRE_LIBS=-lXt
