@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/04/05 02:31:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/05 14:54:34 xtraeme Exp $
 
 DISTNAME=	lua-5.0.2
 CATEGORIES=	lang
@@ -23,6 +23,9 @@ USE_BUILDLINK3=	yes
 ALL_TARGET=	all so
 INSTALL_TARGET=	install soinstall
 
+post-build:
+	cd ${WRKSRC}/etc && ${MAKE} bin2c
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/lua
 	cd ${WRKSRC}; ${INSTALL_DATA} README COPYRIGHT  \
@@ -37,5 +40,6 @@ post-install:
 	cd ${WRKSRC}/etc && ${INSTALL_DATA} README *.c *.h \
 		*.lua lua.magic lua.xpm \
 		${PREFIX}/share/examples/lua/etc
+	${INSTALL_PROGRAM} ${WRKSRC}/etc/bin2c ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
