@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/17 19:09:23 wennmach Exp $
+
+--- Makefile.in.org	Tue Jul  8 10:04:00 2003
++++ Makefile.in	Tue Jul  8 10:03:55 2003
+@@ -190,14 +190,9 @@
+ 	lists.c \
+ 	lists.h \
+ 	main.c \
+-	par.c \
+-	par.h \
+ 	pgm.c \
+ 	pgm.h \
+ 	pindefs.h \
+-	ppi.c \
+-	ppi.h \
+-	ppiwin.c \
+ 	serial.h \
+ 	ser_posix.c \
+ 	ser_win32.c \
+@@ -221,8 +216,8 @@
+ 
+ am_avrdude_OBJECTS = config_gram.$(OBJEXT) lexer.$(OBJEXT) avr.$(OBJEXT) \
+ 	avr910.$(OBJEXT) config.$(OBJEXT) confwin.$(OBJEXT) \
+-	fileio.$(OBJEXT) lists.$(OBJEXT) main.$(OBJEXT) par.$(OBJEXT) \
+-	pgm.$(OBJEXT) ppi.$(OBJEXT) ppiwin.$(OBJEXT) \
++	fileio.$(OBJEXT) lists.$(OBJEXT) main.$(OBJEXT) \
++	pgm.$(OBJEXT) \
+ 	ser_posix.$(OBJEXT) ser_win32.$(OBJEXT) stk500.$(OBJEXT) \
+ 	term.$(OBJEXT)
+ avrdude_OBJECTS = $(am_avrdude_OBJECTS)
