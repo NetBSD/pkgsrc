@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/04/12 13:36:37 seb Exp $
-#
+# $NetBSD: Makefile,v 1.10 2004/12/03 13:30:20 adam Exp $
 
-DISTNAME=	iperf-1.7.0-source
-PKGNAME=	${DISTNAME:C/-source//}
+DISTNAME=	iperf-2.0.1
 CATEGORIES=	net
-MASTER_SITES=	http://dast.nlanr.net/Projects/Iperf/
+MASTER_SITES=	http://dast.nlanr.net/Projects/Iperf2.0/
 
 MAINTAINER=	seb@NetBSD.org
 HOMEPAGE=	http://dast.nlanr.net/Projects/Iperf/
@@ -16,13 +14,12 @@ COMMENT=	TCP and UDP bandwidth performance measurement tool
 GCC_REQD+=	3.0
 .endif
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK3=		YES
-CONFIGURE_DIRS=		${WRKSRC}/cfg
-INSTALL_DIRS=		${WRKSRC}/src
-GNU_CONFIGURE=		YES
-MAKE_ENV+=		INSTALL_DIR=${PREFIX}/bin
+USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
+GNU_CONFIGURE=		yes
+#CONFIGURE_DIRS=		${WRKSRC}/cfg
+#INSTALL_DIRS=		${WRKSRC}/src
+#MAKE_ENV+=		INSTALL_DIR=${PREFIX}/bin
 
 INSTALLATION_DIRS+=	share/doc/html/${PKGBASE}
 
