@@ -1,9 +1,0 @@
-$NetBSD: patch-aa,v 1.5 2001/01/18 13:12:06 itojun Exp $
-
---- Makefile.in.orig	Wed Dec  6 05:19:14 2000
-+++ Makefile.in	Sat Dec 16 03:17:07 2000
-@@ -37,3 +37,3 @@
- install:: isc-config.sh installdirs
--	${INSTALL_PROGRAM} isc-config.sh ${DESTDIR}${bindir}
-+	${BSD_INSTALL_SCRIPT} isc-config.sh ${DESTDIR}${bindir}
- 
