@@ -1,0 +1,229 @@
+$NetBSD: patch-aa,v 1.1 1998/08/30 19:43:51 garbled Exp $
+--- linpack.c.orig	Sun Aug 30 11:34:04 1998
++++ linpack.c	Sun Aug 30 11:40:18 1998
+@@ -48,7 +48,7 @@
+ #include <stdio.h>
+ #include <math.h>
+ 
+-static REAL time[9][9];
++static REAL timex[9][9];
+ 
+ main ()
+ {
+@@ -71,11 +71,11 @@
+         matgen(a,lda,n,b,&norma);
+         t1 = second();
+         dgefa(a,lda,n,ipvt,&info);
+-        time[0][0] = second() - t1;
++        timex[0][0] = second() - t1;
+         t1 = second();
+         dgesl(a,lda,n,ipvt,b,0);
+-        time[1][0] = second() - t1;
+-        total = time[0][0] + time[1][0];
++        timex[1][0] = second() - t1;
++        total = timex[0][0] + timex[1][0];
+ 
+ /*     compute a residual to verify results.  */ 
+ 
+@@ -108,10 +108,10 @@
+ 	fprintf(stderr,"      dgefa      dgesl      total       kflops     unit");
+ 	fprintf(stderr,"      ratio\n");
+ 
+-        time[2][0] = total;
+-        time[3][0] = ops/(1.0e3*total);
+-        time[4][0] = 2.0e3/time[3][0];
+-        time[5][0] = total/cray;
++        timex[2][0] = total;
++        timex[3][0] = ops/(1.0e3*total);
++        timex[4][0] = 2.0e3/timex[3][0];
++        timex[5][0] = total/cray;
+ 
+    	fprintf(stderr," times for array with leading dimension of%5d\n",lda);
+ 	print_time(0);
+@@ -119,28 +119,28 @@
+         matgen(a,lda,n,b,&norma);
+         t1 = second();
+         dgefa(a,lda,n,ipvt,&info);
+-        time[0][1] = second() - t1;
++        timex[0][1] = second() - t1;
+         t1 = second();
+         dgesl(a,lda,n,ipvt,b,0);
+-        time[1][1] = second() - t1;
+-        total = time[0][1] + time[1][1];
+-        time[2][1] = total;
+-        time[3][1] = ops/(1.0e3*total);
+-        time[4][1] = 2.0e3/time[3][1];
+-        time[5][1] = total/cray;
++        timex[1][1] = second() - t1;
++        total = timex[0][1] + timex[1][1];
++        timex[2][1] = total;
++        timex[3][1] = ops/(1.0e3*total);
++        timex[4][1] = 2.0e3/timex[3][1];
++        timex[5][1] = total/cray;
+ 
+         matgen(a,lda,n,b,&norma);
+         t1 = second();
+         dgefa(a,lda,n,ipvt,&info);
+-        time[0][2] = second() - t1;
++        timex[0][2] = second() - t1;
+         t1 = second();
+         dgesl(a,lda,n,ipvt,b,0);
+-        time[1][2] = second() - t1;
+-        total = time[0][2] + time[1][2];
+-        time[2][2] = total;
+-        time[3][2] = ops/(1.0e3*total);
+-        time[4][2] = 2.0e3/time[3][2];
+-        time[5][2] = total/cray;
++        timex[1][2] = second() - t1;
++        total = timex[0][2] + timex[1][2];
++        timex[2][2] = total;
++        timex[3][2] = ops/(1.0e3*total);
++        timex[4][2] = 2.0e3/timex[3][2];
++        timex[5][2] = total/cray;
+ 
+         ntimes = NTIMES;
+         tm2 = 0.0;
+@@ -153,19 +153,19 @@
+ 		dgefa(a,lda,n,ipvt,&info);
+ 	}
+ 
+-        time[0][3] = (second() - t1 - tm2)/ntimes;
++        timex[0][3] = (second() - t1 - tm2)/ntimes;
+         t1 = second();
+ 
+ 	for (i = 0; i < ntimes; i++) {
+             	dgesl(a,lda,n,ipvt,b,0);
+ 	}
+ 
+-        time[1][3] = (second() - t1)/ntimes;
+-        total = time[0][3] + time[1][3];
+-        time[2][3] = total;
+-        time[3][3] = ops/(1.0e3*total);
+-        time[4][3] = 2.0e3/time[3][3];
+-        time[5][3] = total/cray;
++        timex[1][3] = (second() - t1)/ntimes;
++        total = timex[0][3] + timex[1][3];
++        timex[2][3] = total;
++        timex[3][3] = ops/(1.0e3*total);
++        timex[4][3] = 2.0e3/timex[3][3];
++        timex[5][3] = total/cray;
+ 
+ 	print_time(1);
+ 	print_time(2);
+@@ -174,41 +174,41 @@
+         matgen(aa,ldaa,n,b,&norma);
+         t1 = second();
+         dgefa(aa,ldaa,n,ipvt,&info);
+-        time[0][4] = second() - t1;
++        timex[0][4] = second() - t1;
+         t1 = second();
+         dgesl(aa,ldaa,n,ipvt,b,0);
+-        time[1][4] = second() - t1;
+-        total = time[0][4] + time[1][4];
+-        time[2][4] = total;
+-        time[3][4] = ops/(1.0e3*total);
+-        time[4][4] = 2.0e3/time[3][4];
+-        time[5][4] = total/cray;
++        timex[1][4] = second() - t1;
++        total = timex[0][4] + timex[1][4];
++        timex[2][4] = total;
++        timex[3][4] = ops/(1.0e3*total);
++        timex[4][4] = 2.0e3/timex[3][4];
++        timex[5][4] = total/cray;
+ 
+         matgen(aa,ldaa,n,b,&norma);
+         t1 = second();
+         dgefa(aa,ldaa,n,ipvt,&info);
+-        time[0][5] = second() - t1;
++        timex[0][5] = second() - t1;
+         t1 = second();
+         dgesl(aa,ldaa,n,ipvt,b,0);
+-        time[1][5] = second() - t1;
+-        total = time[0][5] + time[1][5];
+-        time[2][5] = total;
+-        time[3][5] = ops/(1.0e3*total);
+-        time[4][5] = 2.0e3/time[3][5];
+-        time[5][5] = total/cray;
++        timex[1][5] = second() - t1;
++        total = timex[0][5] + timex[1][5];
++        timex[2][5] = total;
++        timex[3][5] = ops/(1.0e3*total);
++        timex[4][5] = 2.0e3/timex[3][5];
++        timex[5][5] = total/cray;
+ 
+ 	matgen(aa,ldaa,n,b,&norma);
+ 	t1 = second();
+ 	dgefa(aa,ldaa,n,ipvt,&info);
+-	time[0][6] = second() - t1;
++	timex[0][6] = second() - t1;
+ 	t1 = second();
+ 	dgesl(aa,ldaa,n,ipvt,b,0);
+-	time[1][6] = second() - t1;
+-	total = time[0][6] + time[1][6];
+-	time[2][6] = total;
+-	time[3][6] = ops/(1.0e3*total);
+-	time[4][6] = 2.0e3/time[3][6];
+-	time[5][6] = total/cray;
++	timex[1][6] = second() - t1;
++	total = timex[0][6] + timex[1][6];
++	timex[2][6] = total;
++	timex[3][6] = ops/(1.0e3*total);
++	timex[4][6] = 2.0e3/timex[3][6];
++	timex[5][6] = total/cray;
+ 
+ 	ntimes = NTIMES;
+ 	tm2 = 0;
+@@ -219,22 +219,22 @@
+ 		tm2 = tm2 + second() - tm;
+ 		dgefa(aa,ldaa,n,ipvt,&info);
+ 	}
+-	time[0][7] = (second() - t1 - tm2)/ntimes;
++	timex[0][7] = (second() - t1 - tm2)/ntimes;
+ 	t1 = second();
+ 	for (i = 0; i < ntimes; i++) {
+ 		dgesl(aa,ldaa,n,ipvt,b,0);
+ 	}
+-	time[1][7] = (second() - t1)/ntimes;
+-	total = time[0][7] + time[1][7];
+-	time[2][7] = total;
+-	time[3][7] = ops/(1.0e3*total);
+-	time[4][7] = 2.0e3/time[3][7];
+-	time[5][7] = total/cray;
++	timex[1][7] = (second() - t1)/ntimes;
++	total = timex[0][7] + timex[1][7];
++	timex[2][7] = total;
++	timex[3][7] = ops/(1.0e3*total);
++	timex[4][7] = 2.0e3/timex[3][7];
++	timex[5][7] = total/cray;
+ 
+ 	/* the following code sequence implements the semantics of
+-	   the Fortran intrinsics "nint(min(time[3][3],time[3][7]))"	*/
++	   the Fortran intrinsics "nint(min(timex[3][3],timex[3][7]))"	*/
+ 
+-	kf = (time[3][3] < time[3][7]) ? time[3][3] : time[3][7];
++	kf = (timex[3][3] < timex[3][7]) ? timex[3][3] : timex[3][7];
+ 	kf = (kf > ZERO) ? (kf + .5) : (kf - .5);
+ 	if (fabs((double)kf) < ONE) 
+ 		kflops = 0;
+@@ -256,9 +256,9 @@
+ print_time (row)
+ int row;
+ {
+-fprintf(stderr,"%11.2f%11.2f%11.2f%11.0f%11.2f%11.2f\n",   (double)time[0][row],
+-       (double)time[1][row], (double)time[2][row], (double)time[3][row], 
+-       (double)time[4][row], (double)time[5][row]);
++fprintf(stderr,"%11.2f%11.2f%11.2f%11.0f%11.2f%11.2f\n",   (double)timex[0][row],
++       (double)timex[1][row], (double)timex[2][row], (double)timex[3][row], 
++       (double)timex[4][row], (double)timex[5][row]);
+ }
+       
+ /*----------------------*/ 
+@@ -893,8 +893,6 @@
+ struct rusage ru;
+ REAL t ;
+ 
+-void getrusage();
+- 
+ getrusage(RUSAGE_SELF,&ru) ;
+  
+ t = (REAL) (ru.ru_utime.tv_sec+ru.ru_stime.tv_sec) + 
