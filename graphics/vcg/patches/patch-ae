@@ -1,13 +1,18 @@
-$NetBSD: patch-ae,v 1.2 1999/06/13 12:54:19 sakamoto Exp $
+$NetBSD: patch-ae,v 1.3 1999/09/14 11:07:58 sakamoto Exp $
 
---- 1.1	1995/02/18 16:51:08
-+++ src/Makefile	1995/02/18 16:55:50
-@@ -189,7 +189,7 @@
- 
+--- src/Makefile.orig	Wed Feb  8 20:35:38 1995
++++ src/Makefile	Tue Sep 14 14:50:31 1999
+@@ -187,5 +187,5 @@
  # Generated Other - Files
  GOFILES  = grammar.l grammar.y
 - 
 +
  # Object - Files
  OFILES	= y.tab.o lex.yy.o main.o options.o alloc.o step0.o folding.o  \
- 	  step1.o step2.o step3.o step4.o prepare.o draw.o             \
+@@ -214,5 +214,5 @@
+ 
+ $(VCGTOOL): $(OFILES)
+-	$(CCLINK) $(CLINKFLAGS) $(VCGTOOL) $(OFILES) $(LIBPATH) $(LIBRARIES)  
++	$(CCLINK) $(CLINKFLAGS) $(VCGTOOL) $(OFILES) $(LIBPATH) $(LDFLAGS) $(LIBRARIES)  
+ 
+ .SUFFIXES: .c .o 
