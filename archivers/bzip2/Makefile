@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/01/11 10:49:58 tron Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/16 13:15:25 wiz Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/11/20 08:18:40 tg Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.muraroa.demon.co.uk/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://sourceware.cygnus.com/bzip2/index.html
+COMMENT=	Block-sorting file compressor
 
 .if exists(/usr/bin/bzip2)
 IGNORE=		"${PKGNAME} is part of your ${OPSYS} distribution"

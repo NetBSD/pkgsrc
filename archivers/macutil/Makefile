@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/04/01 14:07:52 agc Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/16 13:15:34 wiz Exp $
 
 DISTNAME=		macutil2.0b3
 PKGNAME=		macutil-2.0b3
@@ -7,6 +7,7 @@ MASTER_SITES=		ftp://ftp.cwi.nl/pub/dik/
 EXTRACT_SUFX=		.shar.Z
 
 MAINTAINER=		mycroft@NetBSD.ORG
+COMMENT=		Create & extract Mac archive files
 
 MAKEFILE=		makefile
 EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/01/10 11:59:29 tron Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/16 13:15:30 wiz Exp $
 
 DISTNAME=	gzip-1.2.4a
 PKGNAME=	gzip-base-1.2.4a
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.shar
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/gzip/gzip.html
+COMMENT=	Compress or expand files
 
 EXTRACT_CMD=	${SH} ${DOWNLOADED_DISTFILE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/12/24 00:07:15 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/16 13:15:37 wiz Exp $
 
 DISTNAME=       unarj-2.43
 CATEGORIES=	archivers
@@ -7,6 +7,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://www.arjsoftware.com/
+COMMENT=	Allows files to be extracted from ARJ archives
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/unarj
