@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.48 2002/09/24 14:23:27 jschauma Exp $
+$NetBSD: CHANGES,v 1.49 2002/09/24 15:03:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2948,11 +2948,11 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated psiconv to 0.8.2nb3 [jlam 2002-09-23]
 	Updated p5-Jcode to 0.82 [taca 2002-09-23]
 	Updated bins to 1.1.17 [dmcmahill 2002-09-23]
-	Added tremor 1.0.2 [chris 2002-09-24]
-	Added tremor-tools 1.0.0.8 [chris 2002-09-24]
+	Added tremor-1.0.2 [chris 2002-09-24]
+	Added tremor-tools-1.0.0.8 [chris 2002-09-24]
 	Updated popa3d to 0.5.9 [wiz 2002-09-24]
 	Updated pkglint to 3.33 [wiz 2002-09-24]
-	Added bzflag 1.7.5.6 [blymn 2002-09-24]
+	Added bzflag-1.7.5.6 [blymn 2002-09-24]
 	Updated pkglint to 3.34 [wiz 2002-09-24]
 	Updated libxslt to 1.0.20 [martti 2002-09-24]
 	Updated bbkeys to 0.8.5 [jschauma 2002-09-24]
