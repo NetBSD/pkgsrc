@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2003/02/13 17:41:37 grant Exp $
+# $NetBSD: Makefile,v 1.29 2003/04/22 20:25:08 wiz Exp $
 #
 
 DISTNAME=       tar-1.13.25
@@ -40,7 +40,7 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/gtar.1 \
 		${PREFIX}/man/man1/${GNU_PROGRAM_PREFIX}tar.1
 .if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
-	${LN} -s ${GNU_PROGRAM_PREFIX}tar ${PREFIX}/bin/gtar
+	${LN} -sf ${GNU_PROGRAM_PREFIX}tar ${PREFIX}/bin/gtar
 .endif
 
 .include "../../mk/bsd.pkg.mk"

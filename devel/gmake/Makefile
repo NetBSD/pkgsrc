@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2003/02/21 12:40:54 grant Exp $
+# $NetBSD: Makefile,v 1.44 2003/04/22 20:25:10 wiz Exp $
 
 DISTNAME=	make-3.80
 PKGNAME=	gmake-3.80
@@ -34,7 +34,7 @@ post-install:
 	${CHMOD} g-s ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}make
 	${CHGRP} ${BINGRP} ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}make
 .if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
-	${LN} -s ${GNU_PROGRAM_PREFIX}make ${PREFIX}/bin/gmake
+	${LN} -sf ${GNU_PROGRAM_PREFIX}make ${PREFIX}/bin/gmake
 .endif
 
 # NOTE:  the 'test' target requires perl, but since gmake does
