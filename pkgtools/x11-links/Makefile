@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2003/10/06 03:00:32 mycroft Exp $
+# $NetBSD: Makefile,v 1.42 2003/10/13 15:55:11 veego Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in mk/buildlink[23]/bsd.buildlink[23].mk
 #	to the correct version, usually the most recent.
 
-DISTNAME=	x11-links-0.15
+DISTNAME=	x11-links-0.16
 WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools x11
 MASTER_SITES=	# empty
