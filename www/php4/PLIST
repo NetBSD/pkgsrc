@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:18:38 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/31 23:54:25 jlam Exp $
 bin/pear
+bin/pearize
 bin/php
 bin/php-config
 bin/phpextdist
 bin/phpize
+bin/phptar
 include/php/TSRM/TSRM.h
 include/php/TSRM/acconfig.h
 include/php/TSRM/readdir.h
@@ -89,7 +91,6 @@ include/php/ext/standard/php_link.h
 include/php/ext/standard/php_mail.h
 include/php/ext/standard/php_math.h
 include/php/ext/standard/php_metaphone.h
-include/php/ext/standard/php_output.h
 include/php/ext/standard/php_parsedate.h
 include/php/ext/standard/php_rand.h
 include/php/ext/standard/php_smart_str.h
@@ -97,6 +98,7 @@ include/php/ext/standard/php_smart_str_public.h
 include/php/ext/standard/php_standard.h
 include/php/ext/standard/php_string.h
 include/php/ext/standard/php_var.h
+include/php/ext/standard/php_versioning.h
 include/php/ext/standard/quot_print.h
 include/php/ext/standard/reg.h
 include/php/ext/standard/scanf.h
@@ -105,17 +107,6 @@ include/php/ext/standard/uniqid.h
 include/php/ext/standard/url.h
 include/php/ext/standard/url_scanner.h
 include/php/ext/standard/url_scanner_ex.h
-include/php/ext/xml/expat/xmlparse/expat_hashtable.h
-include/php/ext/xml/expat/xmlparse/xmlparse.h
-include/php/ext/xml/expat/xmltok/asciitab.h
-include/php/ext/xml/expat/xmltok/iasciitab.h
-include/php/ext/xml/expat/xmltok/latin1tab.h
-include/php/ext/xml/expat/xmltok/nametab.h
-include/php/ext/xml/expat/xmltok/utf8tab.h
-include/php/ext/xml/expat/xmltok/xmldef.h
-include/php/ext/xml/expat/xmltok/xmlrole.h
-include/php/ext/xml/expat/xmltok/xmltok.h
-include/php/ext/xml/expat/xmltok/xmltok_impl.h
 include/php/ext/xml/php_xml.h
 include/php/main/SAPI.h
 include/php/main/build-defs.h
@@ -134,6 +125,7 @@ include/php/main/php_logos.h
 include/php/main/php_main.h
 include/php/main/php_network.h
 include/php/main/php_open_temporary_file.h
+include/php/main/php_output.h
 include/php/main/php_reentrancy.h
 include/php/main/php_regex.h
 include/php/main/php_streams.h
@@ -153,6 +145,7 @@ include/php/regex/regex2.h
 include/php/regex/regex_extra.h
 include/php/regex/utils.h
 ${PHP_EXTENSION_DIR}/.directory
+lib/php/Archive/Tar.php
 lib/php/Benchmark/Iterate.php
 lib/php/Benchmark/Timer.php
 lib/php/Cache.php
@@ -162,6 +155,7 @@ lib/php/Cache/Container/dbx.php
 lib/php/Cache/Container/file.php
 lib/php/Cache/Container/phplib.php
 lib/php/Cache/Container/shm.php
+lib/php/Cache/DB.php
 lib/php/Cache/Error.php
 lib/php/Cache/Function.php
 lib/php/Cache/Graphics.php
@@ -172,6 +166,7 @@ lib/php/Crypt/CBC.php
 lib/php/Crypt/HCEMD5.php
 lib/php/DB.php
 lib/php/DB/common.php
+lib/php/DB/fbsql.php
 lib/php/DB/ibase.php
 lib/php/DB/ifx.php
 lib/php/DB/msql.php
@@ -190,6 +185,7 @@ lib/php/File/SearchReplace.php
 lib/php/HTML/Common.php
 lib/php/HTML/Form.php
 lib/php/HTML/IT.php
+lib/php/HTML/IT_Error.php
 lib/php/HTML/ITX.php
 lib/php/HTML/Page.php
 lib/php/HTML/Processor.php
@@ -199,14 +195,15 @@ lib/php/HTTP.php
 lib/php/HTTP/Compress.php
 lib/php/Image/Remote.php
 lib/php/Log.php
+lib/php/Log/Observer.php
 lib/php/Log/composite.php
 lib/php/Log/file.php
 lib/php/Log/mcal.php
-lib/php/Log/observer.php
 lib/php/Log/sql.php
 lib/php/Log/syslog.php
 lib/php/Mail.php
 lib/php/Mail/RFC822.php
+lib/php/Mail/mime.php
 lib/php/Mail/sendmail.php
 lib/php/Mail/smtp.php
 lib/php/Math/Fraction.php
@@ -218,14 +215,16 @@ lib/php/Net/Socket.php
 lib/php/Numbers/Roman.php
 lib/php/PEAR.php
 lib/php/PEAR/Common.php
+lib/php/PEAR/Config.php
 lib/php/PEAR/Installer.php
 lib/php/PEAR/Packager.php
+lib/php/PEAR/Registry.php
+lib/php/PEAR/Remote.php
 lib/php/PEAR/Uploader.php
 lib/php/Payment/Verisign.php
 lib/php/Schedule/At.php
+lib/php/System.php
 lib/php/XML/Parser.php
-lib/php/XML/RPC.php
-lib/php/XML/RPC/Server.php
 lib/php/build/acinclude.m4
 lib/php/build/dynlib.m4
 lib/php/build/dynlib.mk
@@ -241,12 +240,11 @@ lib/php/build/rules_pear.mk
 lib/php/build/shtool
 libexec/cgi-bin/php
 share/examples/php/php.ini-dist
-share/examples/php/php.ini-optimized
+share/examples/php/php.ini-recommended
 share/php/php4.gif
 @dirrm share/php
 @dirrm share/examples/php
 @dirrm lib/php/build
-@dirrm lib/php/XML/RPC
 @dirrm lib/php/XML
 @dirrm lib/php/Schedule
 @dirrm lib/php/Payment
@@ -267,6 +265,7 @@ share/php/php4.gif
 @dirrm lib/php/Cache/Container
 @dirrm lib/php/Cache
 @dirrm lib/php/Benchmark
+@dirrm lib/php/Archive
 @unexec rmdir -p %D/${PHP_EXTENSION_DIR} 2>/dev/null || true
 @dirrm include/php/regex
 @dirrm include/php/main

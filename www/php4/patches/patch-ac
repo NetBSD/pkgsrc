@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2001/10/16 04:54:24 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2001/12/31 23:54:25 jlam Exp $
 
---- acinclude.m4.orig	Sun Jun 10 15:52:56 2001
+--- acinclude.m4.orig	Sat Nov 17 19:33:19 2001
 +++ acinclude.m4
-@@ -251,10 +251,19 @@
+@@ -341,10 +341,19 @@
    ;;
  esac
  
@@ -24,3 +24,12 @@ $NetBSD: patch-ac,v 1.4 2001/10/16 04:54:24 jlam Exp $
  fi
  
  AC_MSG_RESULT($ext_output)
+@@ -675,7 +684,7 @@
+   if test "$1" != "/usr/lib"; then
+     PHP_EXPAND_PATH($1, ai_p)
+     if test "$ext_shared" = "yes" && test -n "$2"; then
+-      $2="-R$1 -L$1 [$]$2"
++      $2="-L$1 [$]$2"
+     else
+       AC_PHP_ONCE(LIBPATH, $ai_p, [
+         test -n "$ld_runpath_switch" && LDFLAGS="$LDFLAGS $ld_runpath_switch$ai_p"
