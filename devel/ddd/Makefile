@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/02/16 14:38:22 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2001/02/17 18:28:12 wiz Exp $
 # $FreeBSD Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
@@ -45,7 +45,7 @@ post-install:
 	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd-paper.ps
 	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd.ps
 
-check:
+test:
 	(cd ${WRKSRC} ; ${GMAKE} check)
 
 .include "../../mk/bsd.pkg.mk"
