@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/04/30 15:19:13 tv Exp $
+
+--- config.orig	Sun Jan 17 09:20:20 1999
++++ config	Tue Apr 27 10:22:07 1999
+@@ -137,12 +137,16 @@
+ 	echo "${MACHINE}-whatever-freebsd"; exit 0
+ 	;;
+ 
+-    NetBSD:*:*:*486*)
+-	echo "i486-whatever-netbsd"; exit 0
++    NetBSD:*:*:i386)
++	if echo __ELF__ | cc -E - | grep -q __ELF__; then
++	    echo "i386-whatever-netbsd"; exit 0
++	else
++	    echo "i386elf-whatever-netbsd"; exit 0
++	fi
+ 	;;
+ 
+     NetBSD:*)
+-	echo "${MACHINE}-whatever-netbsd"; exit 0
++	echo "`sysctl -n hw.machine_arch`-whatever-netbsd"; exit 0
+ 	;;
+ 
+     OpenBSD:*)
+@@ -310,9 +314,9 @@
+   *-*-sunos4) OUT="sunos-$CC" ;;
+   *-freebsd3) OUT="FreeBSD-elf" ;;
+   *-freebsd) OUT="FreeBSD" ;;
+-  *86*-*-netbsd) OUT="NetBSD-x86" ;;
+-  sun3*-*-netbsd) OUT="NetBSD-m68" ;;
+-  *-*-netbsd) OUT="NetBSD-sparc" ;;
++  i386elf-*-netbsd) OUT="NetBSD-i386elf" ;;
++  mips-*-netbsd) OUT="NetBSD-mipsel" ;;
++  *-netbsd) OUT="NetBSD-`sysctl -n hw.machine_arch`" ;;
+   *86*-*-openbsd) OUT="OpenBSD-x86" ;;
+   alpha*-*-openbsd) OUT="OpenBSD-alpha" ;;
+   pmax*-*-openbsd) OUT="OpenBSD-mips" ;;

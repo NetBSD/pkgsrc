@@ -1,0 +1,14 @@
+#!/bin/csh -f
+#	$NetBSD: makelib,v 1.1.1.1 1999/04/30 15:19:13 tv Exp $
+
+# simplistic library builder
+# usage: makelib outfile.so.x.y infile...
+
+echo __ELF__ | $CC -E - | grep -q __ELF__
+if ($status == 0) then
+	ld -Bshareable -Bforcearchive -o $* |& sed /RRS/d || exit 1
+else
+	ld -shared -soname $1:r --whole-archive -o $* || exit 1
+	ln -sf $1 $1:r
+	ln -sf $1 $1:r:r
+endif
