@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2005/03/24 22:04:02 markd Exp $
+$NetBSD: patch-aa,v 1.6 2005/03/24 22:41:58 markd Exp $
 
 --- configure.orig	2005-03-05 01:31:57.000000000 +1300
 +++ configure
@@ -11,15 +11,6 @@ $NetBSD: patch-aa,v 1.5 2005/03/24 22:04:02 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -39370,6 +39370,8 @@ echo "${ECHO_T}$GST_LIBS" >&6
-      fi
-   fi
- 
-+  succeeded=no
-+
-   if test $succeeded = yes; then
-      have_gst=yes
-   else
 @@ -39778,7 +39780,7 @@ echo "${ECHO_T}incs=$para_incdir libs=$p
  echo "${ECHO_T}$with_cdparanoia" >&6
      CDPARANOIA_ROOT="$with_cdparanoia"
