@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1323 2003/12/18 03:32:50 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1324 2003/12/21 14:19:12 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -4070,7 +4070,7 @@ install-depends: uptodate-pkgtools
 			${ECHO_MSG} "=> No directory for $$dir.  Skipping.."; \
 		else							\
 			cd $$dir ;					\
-			${MAKE} ${MAKEFLAGS} $$target _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD=\'$$pkg\'; \
+			${SETENV} _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" ${MAKE} ${MAKEFLAGS} $$target PKGNAME_REQD=\'$$pkg\'; \
 			${ECHO_MSG} "${_PKGSRC_IN}> Returning to build of ${PKGNAME}"; \
 		fi;							\
 	fi
