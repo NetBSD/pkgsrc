@@ -1,0 +1,10 @@
+The program html2ps converts HTML to PostScript. The  HTML
+code  can  be  retrieved  from  one or more URL:s or local
+files, specified as parameters on the command line.  If no
+parameter is given, html2ps reads from standard input.
+
+Note:  To  avoid  unnecessary  network  traffic,  one  can
+rebuild an already  generated  PostScript  file  with  new
+options.  This  is  done  by  running html2ps with the new
+options, and with the old PostScript file  as  input  (not
+applicable for all options).
