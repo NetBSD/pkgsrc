@@ -1,9 +1,4 @@
-;; $NetBSD: site-init.el,v 1.2 2003/04/12 10:16:39 uebayasi Exp $
-
-;; NetBSD puts info files in /usr/share.
-(setq Info-default-directory-list
-      (cons "/usr/share/info/"
-	    Info-default-directory-list))
+;; $NetBSD: site-init.el,v 1.3 2003/06/02 08:12:25 epg Exp $
 
 (autoload 'send-pr "/usr/share/gnats/send-pr.el" 
   "Command to create and send a problem report." t)
