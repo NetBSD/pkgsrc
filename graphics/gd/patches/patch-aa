@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.12 2001/03/04 09:32:43 tron Exp $
+$NetBSD: patch-aa,v 1.13 2001/06/28 20:02:57 jlam Exp $
 
---- Makefile.orig	Sat Jun  3 21:26:12 2000
-+++ Makefile	Sun Mar  4 10:30:05 2001
+--- Makefile.orig	Sat Jun  3 15:26:12 2000
++++ Makefile
 @@ -3,7 +3,9 @@
  #If you do not have gcc, change the setting for COMPILER, but you must
  #use an ANSI standard C compiler (NOT the old SunOS 4.1.3 cc
@@ -193,7 +193,7 @@ $NetBSD: patch-aa,v 1.12 2001/03/04 09:32:43 tron Exp $
 +$(LIBGD): $(GD_OBJS) gd.h gdfontt.h gdfonts.h gdfontmb.h gdfontl.h gdfontg.h
 +	rm -f $(LIBGD)
 +	$(CC) -o $(LIBGD) $(GD_OBJS:.o=.lo) -rpath ${PREFIX}/lib \
-+		-version-info $(GD_MAJOR):$(GD_MINOR) -L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib ${LIBS:C/${LIBGD}//g}
++		-version-info $(GD_MAJOR):$(GD_MINOR) $(LIBDIRS) ${LIBS:C/${LIBGD}//g}
  
  clean:
 -	rm -f *.o *.a ${PROGRAMS} test/gdtest.jpg test/gdtest.wbmp
