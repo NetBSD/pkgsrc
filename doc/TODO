@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.257 2003/02/15 00:38:07 salo Exp $
+$NetBSD: TODO,v 1.258 2003/02/15 00:57:45 jlam Exp $
 
 Suggested new packages
 ======================
@@ -115,7 +115,7 @@ Suggested package updates
 	o fsviewer-0.2.5
 	o g-wrap-1.3.4 [pkg/20270]
 	o gauche-0.6.7 [kei]
-	o gcc3-3.2.2 [pkg/20308]
+	o gcc3-3.2.2 [pkg/20308|jlam]
 	o gcombust-0.1.54
 	o gcvs-1.0
 	o gd-2.0.4
