@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2000/03/18 09:52:15 itojun Exp $
+# $NetBSD: Makefile,v 1.30 2000/05/04 04:03:54 itojun Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-default-server=${DEFAULT_IRC_SERVER}
 .endif
 
-DEPENDS+=		autoconf-*:../../devel/autoconf
+BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 
 BUILD_DEFS+=		USE_INET6
 
