@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.3 2004/02/10 11:52:59 grant Exp $
+$NetBSD: distinfo,v 1.4 2004/06/29 14:47:10 grant Exp $
 
-SHA1 (firefox-0.8-i386-unknown-netbsdelf1.6.tar.bz2) = e93acf161226044ca2abd6897c825695dfa562db
-Size (firefox-0.8-i386-unknown-netbsdelf1.6.tar.bz2) = 8722216 bytes
-SHA1 (firefox-0.8-i686-pc-linux-gnu.tar.gz) = 4dd239f88f212958dec089c7a4c02d7dcd157caf
-Size (firefox-0.8-i686-pc-linux-gnu.tar.gz) = 9189879 bytes
-SHA1 (firefox-0.8-sparc-sun-solaris2.8.tar.gz) = aa5c708ca3e148c69f09d8d7c32f20dc36d40ea7
-Size (firefox-0.8-sparc-sun-solaris2.8.tar.gz) = 19171802 bytes
-SHA1 (firefox-0.8-i386-pc-solaris2.8.tar.gz) = a416a6e1d6d36b55ccb231f6b6d1ab2b5cad697c
-Size (firefox-0.8-i386-pc-solaris2.8.tar.gz) = 16818955 bytes
+SHA1 (firefox-0.9-i686-pc-linux-gnu.tar.bz2) = c002a6a341484704a7849bf9f8b582b388096dcb
+Size (firefox-0.9-i686-pc-linux-gnu.tar.bz2) = 7445337 bytes
+SHA1 (firefox-0.9-i386-pc-solaris2.8.tar.gz) = c555b597b24d795760b2a4a49542f583d0dcf160
+Size (firefox-0.9-i386-pc-solaris2.8.tar.gz) = 16757633 bytes
+SHA1 (firefox-0.9-sparc-sun-solaris2.8.tar.gz) = ec1968b2be45d86068d456493da78c03046425d9
+Size (firefox-0.9-sparc-sun-solaris2.8.tar.gz) = 12407471 bytes

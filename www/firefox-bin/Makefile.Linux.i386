@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.Linux.i386,v 1.1.1.1 2004/02/09 10:29:42 grant Exp $
+# $NetBSD: Makefile.Linux.i386,v 1.2 2004/06/29 14:47:10 grant Exp $
 
-MOZ_VER=	0.8
 DISTNAME=	${MOZILLA}-${MOZ_VER}-i686-pc-linux-gnu
+EXTRACT_SUFX=	.tar.bz2
 
 MOZ_PLATFORM=	linux
