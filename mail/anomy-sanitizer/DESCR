@@ -1,0 +1,4 @@
+Anomy Sanitizer filters mail messages checking for common exploits and
+hostile file attachments. For instance: it can remove attachments,
+rename unknown file types, "defang" HTML messages, fix MIME headers,
+and call external virus scanners to scan email attachments.
