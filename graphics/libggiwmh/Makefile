@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/14 17:21:42 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/18 00:59:34 snj Exp $
 #
 
 DISTNAME=		libggiwmh-0.1.0.src
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.ggi-project.org/packages/libggiwmh.html
 COMMENT=		Windows Manager hints library for GGI
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -23,5 +23,5 @@ PKG_SYSCONFSUBDIR=	ggi
 EGDIR=			${PREFIX}/share/examples/libggiwmh
 CONF_FILES=		${EGDIR}/libggiwmh.conf ${PKG_SYSCONFDIR}/libggiwmh.conf
 
-.include "../../graphics/libggi/buildlink2.mk"
+.include "../../graphics/libggi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
