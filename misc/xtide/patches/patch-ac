@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/05/31 15:48:05 agc Exp $
+
+--- Makefile.in	1999/11/07 16:39:32	1.6
++++ Makefile.in	2001/05/31 12:54:19
+@@ -14,7 +14,7 @@
+ # Compiler and flags
+ # DEFS should include -Dacceptarg3_t=int (replace with the correct data type)
+ CXX = @CXX@
+-CXXFLAGS = @extracxxflags@ @DEFS@ -O2 -I@includedir@ -I$(XROOT)/include -I/usr/local/include -I/usr/contrib/include -c
++CXXFLAGS = @extracxxflags@ @DEFS@ -O2 -I@includedir@ -I$(XROOT)/include -I/usr/local/include -I/usr/contrib/include -DPREFIX='"${prefix}"' -c
+ LDFLAGS = @extraldflags@ -L@libdir@ -L$(XROOT)/lib -L/usr/local/lib -L/usr/contrib/lib -s -o
+ 
+ # Extra switches and libs determined by configure.in
