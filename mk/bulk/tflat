@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: tflat,v 1.5 2001/02/16 12:58:57 wiz Exp $
+# $NetBSD: tflat,v 1.6 2001/02/20 17:08:53 wiz Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -180,7 +180,7 @@ function usage(){
 	printf("\n");
 	printf("Usage:\ttflat -u|-d depfile\n");
 	printf("\n");
-	printf("Options:\t-d\tgo down the depends tree (ie \"foo is depends on:\")\n");
+	printf("Options:\t-d\tgo down the depends tree (ie \"foo depends on:\")\n");
 	printf("        \t-u\tgo up the depends tree (ie \"foo is depended on by:\")\n");
 	printf("\n");
 	printf("Input file format is in the form\n");
