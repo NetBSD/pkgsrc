@@ -1,35 +1,16 @@
-$NetBSD: patch-af,v 1.2 1999/09/24 00:39:13 jlam Exp $
+$NetBSD: patch-af,v 1.3 2000/01/15 18:39:31 jlam Exp $
 
---- mk-2nd.awk.orig	Wed Feb 11 07:13:53 1998
-+++ mk-2nd.awk	Thu Sep 23 17:24:17 1999
-@@ -74,9 +74,11 @@
- 			if ( $1 != "" ) {
- 				print  ""
- 				if ( $2 == "c++" ) {
-+					cplusplus="--cplusplus"
- 					compile="CXX"
- 					suffix=".cc"
- 				} else {
-+					cplusplus=""
- 					compile="CC"
- 					suffix=".c"
- 				}
-@@ -89,10 +91,14 @@
- 					atsign="@"
- 					printf "\t@echo 'compiling %s (%s)'\n", $1, model
- 				}
--				if ( $3 == "." || srcdir == "." )
--					printf "\t%scd ../%s; $(%s) $(CFLAGS_%s) -c ../%s/%s%s", atsign, model, compile, MODEL, name, $1, suffix
--				else
+--- mk-2nd.awk.orig	Sat Oct 17 17:54:21 1998
++++ mk-2nd.awk	Sat Jan 15 11:24:46 2000
+@@ -93,9 +93,9 @@
+ 					dir = $3 "/"
+ 					sub("^\\$\\(srcdir\\)/","",dir);
+ 					sub("^\\./","",dir);
+-					printf "\t%scd ../%s; $(%s) $(CFLAGS_%s) -c ../%s/%s%s%s", atsign, model, compile, MODEL, name, dir, $1, suffix
++					printf "\t%scd ../%s; $(LIBTOOL) $(%s) $(CFLAGS_%s) -c ../%s/%s%s%s", atsign, model, compile, MODEL, name, dir, $1, suffix
+ 				} else
 -					printf "\t%scd ../%s; $(%s) $(CFLAGS_%s) -c %s/%s%s", atsign, model, compile, MODEL, $3, $1, suffix
-+				if ( $3 == "." || srcdir == "." ) {
-+					libprefix="../"
-+					dirname=name
-+				} else {
-+					libprefix=""
-+					dirname=$3
-+				}
-+				printf "\t%scd ../%s; $(LIBTOOL) %s --mode=compile $(%s) $(CFLAGS_%s) -c %s%s/%s%s", atsign, model, cplusplus, compile, MODEL, libprefix, dirname, $1, suffix
++					printf "\t%scd ../%s; $(LIBTOOL) $(%s) $(CFLAGS_%s) -c %s/%s%s", atsign, model, compile, MODEL, $3, $1, suffix
  			} else {
  				printf "%s", $1
  				for (n = 2; n <= NF; n++) printf " %s", $n
