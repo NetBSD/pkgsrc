@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3166 2003/08/31 01:28:18 jtb Exp $
+$NetBSD: CHANGES,v 1.3167 2003/08/31 01:47:23 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3419,3 +3419,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mencoder to 0.91 [xtraeme 2003-08-31]
 	Updated erlang to 9.2 [jtb 2003-08-31]
 	Added camlimages-2.11 [jtb 2003-08-31]
+	Added advi-1.4.0 [jtb 2003-08-31]
