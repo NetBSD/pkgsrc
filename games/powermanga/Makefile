@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/01/30 23:48:32 salo Exp $
+# $NetBSD: Makefile,v 1.8 2005/03/27 15:43:36 wiz Exp $
 #
 
 DISTNAME=	powermanga-0.79
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://linux.tlk.fr/games/Powermanga/download/
 
