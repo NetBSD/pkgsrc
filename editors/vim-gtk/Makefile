@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/06/29 04:54:52 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2001/08/06 17:44:45 pooka Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -7,7 +7,7 @@ PKGNAME=		vim-gtk-${VIM_VERSION}
 COMMENT=		Vim editor (vi clone) with X11 GTK+ GUI
 
 DEPENDS+=		vim-share-${VIM_VERSION}:../vim-share
-CONFLICTS=		vim-[0-9]* vim-xaw-*
+CONFLICTS+=		vim-[0-9]* vim-xaw-*
 
 DISTFILES+=		${DISTNAME}-rt${EXTRACT_SUFX}
 
