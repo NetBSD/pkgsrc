@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6265 2004/06/21 19:50:00 adam Exp $
+$NetBSD: CHANGES,v 1.6266 2004/06/21 20:16:52 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3009,3 +3009,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mrtg to 2.10.14 [martti 2004-06-21]
 	Updated bins to 1.1.26 [martti 2004-06-21]
 	Updated gimp to 2.0.2 [adam 2004-06-21]
+	Updated mhonarc to 2.6.10 [adrianp 2004-06-21]
