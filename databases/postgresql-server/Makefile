@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/08/20 03:55:32 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/11/19 16:23:08 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 .include "../../databases/postgresql/Makefile.ssl"
@@ -23,46 +23,22 @@ DIRS_TO_BUILD=		src/backend
 # PGGROUP	group of the database administrator
 # PGHOME	home directory of the database administrator and location of
 #		the databases
-
+#
 PGUSER?=		pgsql
 PGGROUP?=		pgsql
 PGHOME?=		${PREFIX}/${PGUSER}
 BUILD_DEFS=		PGUSER PGROUP PGHOME
 
-.if ${OPSYS} == "NetBSD"
-.if exists(/usr/sbin/user)
-ADDUSER=		/usr/sbin/useradd
-ADDGROUP=		/usr/sbin/groupadd
-.else
-DEPENDS+=		user>=20000313:../../sysutils/user
-ADDUSER=		${LOCALBASE}/sbin/useradd
-ADDGROUP=		${LOCALBASE}/sbin/groupadd
-.endif
-.else
-ADDUSER=		useradd
-ADDGROUP=		groupadd
-.endif
+PKG_USER=		${PGUSER}
+PKG_USER_DESCR=		PostgreSQL database administrator
+PKG_USER_HOME=		${PGHOME}
+PKG_USER_SHELL=		${SH}
+PKG_GROUP=		${PGGROUP}
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
+RCD_SCRIPTS=		${PREFIX}/etc/rc.d/pgsql /etc/rc.d/pgsql
+OWN_DIRS_PERMS=		${PGHOME} ${PGUSER} ${PGGROUP} 0755
 
-FILES_SUBST=		PREFIX=${PREFIX}
-FILES_SUBST+=		PGUSER=${PGUSER}
-FILES_SUBST+=		PGGROUP=${PGGROUP}
-FILES_SUBST+=		PGHOME=${PGHOME}
-
-FILES_SUBST+=		ADDUSER=${ADDUSER:Q}
-FILES_SUBST+=		ADDGROUP=${ADDGROUP:Q}
-FILES_SUBST+=		CAT=${CAT:Q}
-FILES_SUBST+=		CHGRP=${CHGRP:Q}
-FILES_SUBST+=		CHOWN=${CHOWN:Q}
-FILES_SUBST+=		ID=${ID:Q}
-FILES_SUBST+=		MKDIR=${MKDIR:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST+=		SU=${SU:Q}
-FILES_SUBST+=		TOUCH=${TOUCH:Q}
-
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
 
 do-build:
 .for DIR in ${DIRS_TO_BUILD}
@@ -84,8 +60,6 @@ pre-install:
 	esac
 
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/pgsql.sh > ${WRKDIR}/pgsql.sh
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
@@ -102,4 +76,5 @@ post-install:
 
 .include "../../devel/libgetopt/buildlink.mk"
 .include "../../databases/postgresql-lib/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

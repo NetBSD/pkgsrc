@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/11/11 19:30:07 bouyer Exp $
+# $NetBSD: Makefile,v 1.15 2001/11/19 16:23:15 jlam Exp $
 
 DISTNAME=	horde-1.2.7
 CATEGORIES=	www
@@ -11,11 +11,6 @@ COMMENT=	PHP application framework
 DEPENDS+=	php>3.0.17:../../www/php4
 DEPENDS+=	php-pcre>3.0.17:../../devel/php4-pcre
 
-NO_CONFIGURE=	# defined
-
-DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
-INSTALL_FILE=	${WRKDIR}/INSTALL
-
 DOCDIR=		${PREFIX}/share/doc/horde
 EGDIR=		${PREFIX}/share/examples/horde
 HORDEDIR=	${PREFIX}/share/horde
@@ -26,21 +21,21 @@ MESSAGE_SUBST+=	PHPLIBDIR=${PHPLIBDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
+APACHE_SYSCONFDIR?=	${CONFDIR}/httpd
 BUILD_DEFS+=		APACHE_SYSCONFDIR
 MESSAGE_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
 
-FILES_SUBST=		HORDEDIR=${HORDEDIR:S/^${PREFIX}\///}
-FILES_SUBST+=		PHPLIBDIR=${PHPLIBDIR:S/^${PREFIX}\///}
-FILES_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
-FILES_SUBST+=		CAT=${CAT:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST+=		RMDIR=${RMDIR:Q}
-FILES_SUBST+=		TRUE=${TRUE:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+CONF_FILES=	${EGDIR}/horde.conf ${APACHE_SYSCONFDIR}/horde.conf
+CONF_FILES+=	${PHPLIBDIR}/local.inc.dist ${PHPLIBDIR}/local.inc
+CONF_FILES+=	${PHPLIBDIR}/prepend.php3.dist ${PHPLIBDIR}/prepend.php3
+CONF_FILES+=	${HORDEDIR}/config/horde.php3.dist ${HORDEDIR}/config/horde.php3
+SUPPORT_FILES=	${HORDEDIR}/config/MOTD.html.dist ${HORDEDIR}/config/MOTD.html
+SUPPORT_FILES+=	${HORDEDIR}/config/header.txt.dist ${HORDEDIR}/config/header.txt
+SUPPORT_FILES+=	${HORDEDIR}/config/html.php3.dist ${HORDEDIR}/config/html.php3
+SUPPORT_FILES+=	${HORDEDIR}/config/lang.php3.dist ${HORDEDIR}/config/lang.php3
+SUPPORT_FILES+=	${HORDEDIR}/config/menu.txt.dist ${HORDEDIR}/config/menu.txt
+SUPPORT_FILES+=	${HORDEDIR}/config/mime.php3.dist ${HORDEDIR}/config/mime.php3
+MAKE_DIRS=	${APACHE_SYSCONFDIR}
 
 post-extract:
 	cd ${WRKSRC}/phplib;						\
@@ -82,8 +77,6 @@ pre-install:
 		${FILESDIR}/horde_setup.sh > ${WRKDIR}/horde_setup.sh
 	${SED}	-e "s|@HORDEDIR@|${HORDEDIR}|g"				\
 		${FILESDIR}/horde_secure.sh > ${WRKDIR}/horde_secure.sh
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
@@ -103,4 +96,5 @@ do-install:
 post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
