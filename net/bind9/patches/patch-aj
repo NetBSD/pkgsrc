@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.2 2004/05/07 12:06:47 cjep Exp $
---- lib/Makefile.in.orig	Tue Apr  6 18:29:00 2004
-+++ lib/Makefile.in	Tue Apr  6 18:29:01 2004
-@@ -22,8 +22,8 @@
- # Note: the order of SUBDIRS is important.
+$NetBSD: patch-aj,v 1.3 2004/10/03 09:20:41 tron Exp $
+
+--- lib/Makefile.in.orig	2004-03-08 18:04:25.000000000 +0900
++++ lib/Makefile.in	2004-05-16 05:11:57.000000000 +0900
+@@ -23,7 +23,7 @@
  # Attempt to disable parallel processing.
  .NOTPARALLEL:
  .NO_PARALLEL:
--SUBDIRS =	isc isccc dns isccfg lwres tests
-+SUBDIRS =	bind isc isccc dns isccfg lwres tests
+-SUBDIRS =	isc isccc dns isccfg bind9 lwres tests
++SUBDIRS =	bind isc isccc dns isccfg bind9 lwres tests
  TARGETS =
  
  @BIND9_MAKE_RULES@
