@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.5 2003/06/20 10:55:24 jmmv Exp $
+$NetBSD: patch-ac,v 1.6 2004/12/04 23:37:14 jmmv Exp $
 
---- src/Makefile.in.orig	2003-06-15 18:50:42.000000000 +0200
+--- src/Makefile.in.orig	2004-10-25 03:06:46.000000000 +0200
 +++ src/Makefile.in
 @@ -110,8 +110,8 @@ CMINCLUDE=@SSL_INC@
  # COMREADLINE=-DUSE_READLINE -I/usr/include/readline
  SESSIONTIMEOUT=-DCLIENT_TIMEOUT=1800
  LIBDIFF=$(TOPDIR)/../libgdiff/libgdiff.a
 -LIBZ=$(TOPDIR)/../zlib/libz.a
--LIBGC=$(TOPDIR)/../gc6.1/.libs/libgc.a
+-LIBGC=$(TOPDIR)/../gc6.3/.libs/libgc.a
 +LIBZ=-lz
 +LIBGC=-lgc
  
