@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 1998/01/15 10:08:45 agc Exp $
 # New ports collection makefile for:	cvs
 # Version required:     1.9
 # Date created:		15 November 1997
 # Whom:			lamj@stat.cmu.edu
+#
+# $NetBSD: Makefile,v 1.5 1998/01/24 03:59:20 hubertf Exp $
 #
 
 DISTNAME=       cvs-1.9
@@ -23,7 +24,6 @@ CONFIGURE_ARGS+=	--with-krb4=/usr --enable-encryption
 MAN1=		cvs.1
 MAN5=		cvs.5
 MAN8=		cvsbug.8
-
 
 post-install:
 	strip ${PREFIX}/bin/cvs
