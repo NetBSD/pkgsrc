@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.41 2004/12/20 11:31:14 grant Exp $
+# $NetBSD: Makefile,v 1.41.2.1 2005/02/19 21:47:14 snj Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/09/14 04:00:00 jfitz Exp
 #
 
 DISTNAME=	Tk-804.027
 PKGNAME=	p5-Tk-804.027
 SVR4_PKGNAME=	p5tk
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 tk perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tk/}
 
@@ -25,4 +25,6 @@ PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Tk/.packlist
 MAKE_PARAMS=	X11=${X11BASE}
 
 .include "../../lang/perl5/module.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
