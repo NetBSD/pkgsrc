@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2003/07/13 13:51:16 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/30 14:51:13 markd Exp $
 
-DISTNAME=	kdesdk-3.1.2
-PKGREVISION=	1
+DISTNAME=	kdesdk-3.1.3
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
 
 CONFLICTS=	cervisia-[0-9]*
 
-.include "../../x11/kde3/Makefile.kde3"
+.include "../../meta-pkgs/kde3/Makefile.kde3"
 
 USE_BUILDLINK2=		YES
 LTCONFIG_OVERRIDE+=	${WRKSRC}/kapptemplate/admin/ltconfig
@@ -35,6 +34,6 @@ PLIST_SRC+=	${PKGDIR}/PLIST
 
 .include "../../databases/db/buildlink2.mk"
 .include "../../devel/libtool/buildlink2.mk"
-.include "../../x11/kde3/buildlink2.mk"
+.include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
