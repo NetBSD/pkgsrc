@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.4 2004/06/25 16:16:51 wiz Exp $
+# $NetBSD: bsd.sites.mk,v 1.5 2004/06/27 16:16:11 grant Exp $
 #
 # Default MASTER_SITES
 
@@ -287,7 +287,7 @@ MASTER_SITE_OPENOFFICE+=	\
 	ftp://ftp.ksu.edu.tr/pub/OpenOffice/ \
 	ftp://ftp.mirror.ac.uk/sites/ny1.mirror.openoffice.org/ \
 	http://mirror.pacific.net.au/openoffice/ \
-	http://planetmirror.com/pub/openoffice/ \
+	http://public.planetmirror.com.au/pub/openoffice/ \
 	http://komo.vlsm.org/openoffice/ \
 	ftp://ftp.kddlabs.co.jp/office/openoffice/ \
 	ftp://ftp.ring.gr.jp/pub/misc/openoffice/ \
