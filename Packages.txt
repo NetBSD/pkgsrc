@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.87 2000/06/01 11:28:08 rh Exp $
+# $NetBSD: Packages.txt,v 1.88 2000/06/02 01:52:10 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -736,10 +736,6 @@ here, as it just "knows" how to build both static and dynamic
 libraries from a set our source files, thus being platform
 independent. 
 
-To use "libtool", add a build-dependency on the libtool-pkg, then modify
-the pkg's sources to use libtool for building it's libraries and add the
-resulting patches to your pkg's patches-directory. 
-
 Here's how to use libtool in a pkg in seven simple steps:
 
 1. Add USE_LIBTOOL= yes to the package Makefile.
@@ -792,13 +788,16 @@ Here's how to use libtool in a pkg in seven simple steps:
 6. In your PLIST, include the .a, .la, and .so.major.minor files.  Don't
    include the ELF symlink files; those are automatic. 
 
-Please do not use pkglibtool!  Previously, the package system used its
-own version of libtool from pkgtools.  However, over time, this version
-became outdated and is now deprecated.  You may see some definitions of
-USE_PKGLIBTOOL in existing packages that still use this outdated version
-of libtool.  Please do not use this definition in new packages!
+Do not use pkglibtool!  Previously, the package system used its
+own version of libtool from pkgtools.  However, over time, this
+version became outdated and is now deprecated.  You may see some
+definitions of USE_PKGLIBTOOL in existing packages that still use
+this outdated version of libtool.  Please do not use this definition
+in new packages!
 
-FOR GNU PKGS THAT ALREADY SUPPORT LIBTOOL: 
+ 6.3 Using libtool on GNU packages that already support libtool
+ ==============================================================
+
 Add USE_LIBTOOL=yes and LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig to the
 package Makefile as the quick way to bypass the pkg's own libtool.
 The pkg's own libtool is made by ltconfig script at do-configure target.
@@ -808,7 +807,7 @@ If the pkg already has an original "libtool" which we can replace with
 devel/libtool you may have to specify LIBTOOL_OVERRIDE to the package
 Makefile.
 
- 6.3 Gotchas of FreeBSD ports
+ 6.4 Gotchas of FreeBSD ports
  ============================
 
 See section 4.1 for Makefile issues (MANx, CATx, MANCOMPRESSED, ldconfig,
@@ -851,7 +850,7 @@ variable MANCOMPRESSED_IF_MANZ should be set to a value of "yes" in
 the package Makefile.
 
 
- 6.4 Feedback to the author
+ 6.5 Feedback to the author
  ==========================
 
 If you have found any bugs in the package you make available, if you had to
