@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2003/10/13 12:12:57 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/12/23 11:45:05 jmmv Exp $
 bin/xmlcatmgr
 man/man1/xmlcatmgr.1
 share/doc/${PKGNAME}/CHANGES
 share/doc/${PKGNAME}/COPYING
 share/doc/${PKGNAME}/PEOPLE
 share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/TODO
 share/examples/xmlcatmgr/catalog.etc.sgml
 share/examples/xmlcatmgr/catalog.etc.xml
 share/examples/xmlcatmgr/catalog.share.sgml

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2003/12/16 22:45:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2003/12/23 11:45:05 jmmv Exp $
 #
 
-DISTNAME=	xmlcatmgr-1.2
+DISTNAME=	xmlcatmgr-2.0alpha1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlcatmgr/}
 
@@ -9,19 +9,17 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://xmlcatmgr.sourceforge.net/
 COMMENT=	XML (and SGML) catalog manager
 
+HAS_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
-USE_GNU_TOOLS=	awk
 
-MAKEFILE=	Makefile.boot
-MAKE_ENV+=	BT_PREFIX="${PREFIX}"
-MAKE_ENV+=	BT_PROG_AWK="${AWK}"
-MAKE_ENV+=	BT_PROG_GREP="${GREP}"
-MAKE_ENV+=	BT_PROG_SH="${SH}"
-MAKE_ENV+=	BT_DIR_CATALOG="${PKG_SYSCONFDIR}/xml"
-MAKE_ENV+=	BT_INSTALL_DIR="${INSTALL_DATA_DIR}"
-MAKE_ENV+=	BT_INSTALL_BIN="${INSTALL_SCRIPT}"
-MAKE_ENV+=	BT_INSTALL_DATA="${INSTALL_DATA}"
+CONFIGURE_ARGS+=	-p ${PREFIX}
+CONFIGURE_ARGS+=	-c ${PKG_SYSCONFDIR}/xml/catalog
+CONFIGURE_ENV+=		SED="${SED}"
+CONFIGURE_ENV+=		INSTALL_DATA="${INSTALL_DATA}"
+CONFIGURE_ENV+=		INSTALL_DIR="${INSTALL_DATA_DIR}"
+CONFIGURE_ENV+=		INSTALL_PROGRAM="${INSTALL_PROGRAM}"
+CONFIGURE_SCRIPT=	${WRKSRC}/configure.sh
 
 OWN_DIRS=	${PKG_SYSCONFDIR}/sgml ${PKG_SYSCONFDIR}/xml
 EGDIR=		${PREFIX}/share/examples/xmlcatmgr
@@ -31,16 +29,19 @@ MAKE_DIRS=	${PREFIX}/share/sgml ${PREFIX}/share/xml
 SUPPORT_FILES=	${EGDIR}/catalog.share.sgml ${PREFIX}/share/sgml/catalog
 SUPPORT_FILES+=	${EGDIR}/catalog.share.xml ${PREFIX}/share/xml/catalog
 
+BUILD_DIRS=	${WRKSRC}/work
+INSTALL_DIRS=	${WRKSRC}/work
+
 post-build:
 	@${ECHO} "Creating SGML catalogs..."
-	@${WRKSRC}/bin/xmlcatmgr.sh -sc ${WRKDIR}/catalog.etc.sgml create
-	@${WRKSRC}/bin/xmlcatmgr.sh -sc ${WRKDIR}/catalog.sgml create
-	@${WRKSRC}/bin/xmlcatmgr.sh -sc ${WRKDIR}/catalog.etc.sgml add \
+	@${WRKSRC}/work/xmlcatmgr -sc ${WRKDIR}/catalog.etc.sgml create
+	@${WRKSRC}/work/xmlcatmgr -sc ${WRKDIR}/catalog.sgml create
+	@${WRKSRC}/work/xmlcatmgr -sc ${WRKDIR}/catalog.etc.sgml add \
 		CATALOG ${PREFIX}/share/sgml/catalog
 	@${ECHO} "Creating XML catalogs..."
-	@${WRKSRC}/bin/xmlcatmgr.sh -c ${WRKDIR}/catalog.etc.xml create
-	@${WRKSRC}/bin/xmlcatmgr.sh -c ${WRKDIR}/catalog.xml create
-	@${WRKSRC}/bin/xmlcatmgr.sh -c ${WRKDIR}/catalog.etc.xml add \
+	@${WRKSRC}/work/xmlcatmgr -c ${WRKDIR}/catalog.etc.xml create
+	@${WRKSRC}/work/xmlcatmgr -c ${WRKDIR}/catalog.xml create
+	@${WRKSRC}/work/xmlcatmgr -c ${WRKDIR}/catalog.etc.xml add \
 		nextCatalog ${PREFIX}/share/xml/catalog
 
 post-install:
