@@ -1,16 +1,16 @@
-$NetBSD: patch-ac,v 1.11 2000/07/22 16:14:53 rh Exp $
+$NetBSD: patch-ac,v 1.12 2001/08/07 11:23:57 drochner Exp $
 
---- include/btorder.h.orig	Wed Jan  5 17:42:40 2000
-+++ include/btorder.h	Sat Mar  4 16:28:55 2000
-@@ -25,6 +25,7 @@
- #define	_BTORDER_H
- 
+--- include/btorder.h.orig	Sat Feb 17 23:24:23 2001
++++ include/btorder.h	Mon Aug  6 10:27:20 2001
+@@ -28,6 +28,7 @@
  #include <sys/types.h>			/* try to load isa_defs.h on Solaris */
+ #define	_INCL_SYS_TYPES_H
+ #endif
 +#include <machine/endian.h>
  
  #ifndef _MCONFIG_H
  #include <mconfig.h>
-@@ -74,7 +75,7 @@
+@@ -77,7 +78,7 @@
  #	if defined(__ppc__) || defined(ppc) || defined(__ppc) || \
  	   defined(__PPC) || defined(powerpc) || defined(__powerpc__)
  
