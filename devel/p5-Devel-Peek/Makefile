@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/30 19:08:13 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/09/05 09:25:21 jlam Exp $
 #
 
 DISTNAME=		perl-5.6.0
@@ -10,11 +10,10 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Devel/} \
 
 MAINTAINER=		packages@netbsd.org
 
-# Needs at least perl-5.6.0 to build, and versions older than 5.6.0nb1
-# had their own version of Devel::Peek.
-DEPENDS+=		perl>=5.6.0nb1:../../lang/perl5
+# Some perl packages install their own versions of this module.
+# Can't simply define USE_PERL5.
+DEPENDS+=		perl-{5.0*,5.6.0nb2,base-5.[6-9]*}:../../lang/perl5-base
 
-USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Devel/Peek/.packlist
 EXTRACT_ELEMENTS=	${DISTNAME}/ext/Devel/Peek
 WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
