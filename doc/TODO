@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.777 2003/08/10 22:34:14 jschauma Exp $
+$NetBSD: TODO,v 1.778 2003/08/11 07:01:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -198,7 +198,9 @@ Suggested package updates
 	o net-snmp-5.0.8
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
+	o ngrep-1.41
 	o ns-flash-6.0.79
+	o nut-9.0
 	o openh323-1.11.2
 	o openldap-2.1.20 [pkg/21682]
 	o openoffice-1.0.3.1 [skrll]
@@ -247,7 +249,7 @@ Suggested package updates
 	o tcpreplay-1.4.4
 	o teapop-0.3.6
 	o tightvnc-1.2.9
-	o tin-1.6.0
+	o tin-1.6.1
 	o tinyproxy-1.6.0 [pkg/22161]
 	o tinyproxy-1.6.1
 	o tkman-2.2
