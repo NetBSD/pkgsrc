@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/07 17:42:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/07 18:36:13 xtraeme Exp $
 #
 
 DISTNAME=	dmassage-0.6
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.sentia.org/projects/dmassage/
 COMMENT=	dmesg(8) parser
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-*
 
 NO_BUILD=	yes
 USE_PERL5=	run
