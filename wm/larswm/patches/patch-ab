@@ -1,13 +1,11 @@
-$NetBSD: patch-ab,v 1.1 2003/05/16 08:21:50 salo Exp $
-
---- larswm.man.orig	2003-04-28 15:01:38.000000000 +0200
-+++ larswm.man	2003-05-16 10:14:08.000000000 +0200
-@@ -37,7 +37,7 @@
+--- larswm.man.orig	2004-06-28 20:13:50.000000000 -0400
++++ larswm.man	2004-11-27 12:26:44.000000000 -0500
+@@ -46,7 +46,7 @@
  prints the current version on standard error, then exits.
  .SH FILES
  .TP 18
 -.B $HOME/.larswmrc /etc/X11/larswmrc
 +.B $HOME/.larswmrc @PKG_SYSCONFDIR@/larswmrc
- these two files are looked for in the above order when
- .I larswm
- starts up.
+ these two files are looked for in the above order when larswm starts up.
+ 
+ .SH The Idea
