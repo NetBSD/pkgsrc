@@ -1,12 +1,12 @@
-$NetBSD: patch-ah,v 1.9 2001/12/06 03:46:22 jlam Exp $
+$NetBSD: patch-ah,v 1.10 2002/04/04 07:48:28 jlam Exp $
 
---- src/interfaces/python/GNUmakefile.orig	Sun Mar 25 14:44:03 2001
-+++ src/interfaces/python/GNUmakefile
-@@ -12,9 +12,22 @@
- top_builddir = ../../..
- include $(top_builddir)/src/Makefile.global
+--- src/interfaces/python/GNUmakefile.orig	Thu Dec 13 18:39:04 2001
++++ src/interfaces/python/GNUmakefile	Tue Feb 12 17:37:45 2002
+@@ -19,7 +19,14 @@
  
--all: Makefile pgmodule.c libpq-all
+ override CPPFLAGS := -I$(libpq_srcdir) $(CPPFLAGS) $(python_includespec)
+ 
+-all: all-lib
 +PY_SCRIPTS = pg.py pgdb.py
 +ifeq ($(with_python_compile), yes)
 +PY_COMPILED_SCRIPTS = $(PY_SCRIPTS:%.py=%.pyc) $(PY_SCRIPTS:%.py=%.pyo)
@@ -14,8 +14,13 @@ $NetBSD: patch-ah,v 1.9 2001/12/06 03:46:22 jlam Exp $
 +PY_COMPILED_SCRIPTS =
 +endif
 +
-+all: Makefile pgmodule.c libpq-all $(PY_COMPILED_SCRIPTS)
- 	$(MAKE) -f Makefile
++all: all-lib $(PY_COMPILED_SCRIPTS)
+ 
+ all-lib: libpq-all
+ 
+@@ -27,6 +34,12 @@
+ libpq-all:
+ 	$(MAKE) -C $(libpq_builddir) all
  
 +%.pyc: %.py
 +	$(PYTHON) -c "import py_compile; py_compile.compile(\"$<\")"
@@ -23,25 +28,16 @@ $NetBSD: patch-ah,v 1.9 2001/12/06 03:46:22 jlam Exp $
 +%.pyo: %.py
 +	$(PYTHON) -O -c "import py_compile; py_compile.compile(\"$<\")"
 +
- .PHONY: libpq-all
- libpq-all:
- 	$(MAKE) -C $(libpq_builddir) all
-@@ -28,13 +41,16 @@
- Setup.in: Setup.in.raw
- 	sed -e 's,@libpq_srcdir@,$(libpq_srcdir),g' \
- 	    -e 's,@libpq_builddir@,$(libpq_builddir),g' \
--	    -e 's%@EXTRA_LIBS@%$(filter -L%, $(LDFLAGS)) $(LIBS)%g' \
-+	    -e 's,@libpq@,$(libpq),g' \
-+	    -e 's%@EXTRA_LIBS@%$(filter -L%, $(LDFLAGS)) $(filter -Wl%, $(LDFLAGS)) $(LIBS)%g' \
- 	    -e 's%@INCLUDES@%$(filter -I%, $(CPPFLAGS))%g' \
- 	    $< > $@
+ install-warning-msg := { \
+ echo "*** Skipping the installation of the Python interface module for lack"; \
+ echo "*** of permissions.  To install it, change to the directory"; \
+@@ -35,6 +48,9 @@
  
- install: all
- 	@echo "Installing Python module"
--	@if ( $(INSTALL_DATA) pg.py $(python_moduledir) && \
-+	@if ( ( for i in $(PY_SCRIPTS) $(PY_COMPILED_SCRIPTS); do \
-+		$(INSTALL_DATA) $$i $(python_moduledir); \
-+	    done ) && \
- 	    $(MAKE) -f Makefile install ); then : ; else \
- 		echo "*****" ;\
- 		echo "* Skipping the installation of the Python interface module for lack"; \
+ install: all installdirs
+ 	@if test -w $(DESTDIR)$(python_moduleexecdir) && test -w $(DESTDIR)$(python_moduledir); then \
++	  for i in $(PY_SCRIPTS) $(PY_COMPILED_SCRIPTS); do \
++		$(INSTALL_DATA) $$i $(python_moduledir) ; \
++	  done ; \
+ 	  echo "$(INSTALL_SHLIB) $(shlib) $(DESTDIR)$(python_moduleexecdir)/_pgmodule$(DLSUFFIX)"; \
+ 	  $(INSTALL_SHLIB) $(shlib) $(DESTDIR)$(python_moduleexecdir)/_pgmodule$(DLSUFFIX); \
+ 	\
