@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3988 2003/12/05 22:55:53 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3989 2003/12/05 23:07:00 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4983,4 +4983,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added kodos-2.0 [recht 2003-12-05]
 	Update nail to 10.6 [cjep 2003-12-05]
 	Updated tinyproxy to 1.6.2 [xtraeme 2003-12-05]
-	Added libsoup-1.99.26 [xtraeme 2003-12-05] 
+	Added libsoup-1.99.26 [xtraeme 2003-12-05]
+	Updated bitlbee to 0.82 [xtraeme 2003-12-05] 
