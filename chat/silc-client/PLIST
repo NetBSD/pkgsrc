@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.9 2002/12/04 17:26:48 salo Exp $
+@comment $NetBSD: PLIST,v 1.10 2002/12/06 19:51:25 salo Exp $
 bin/silc
 lib/silc/libsilc-1.0.so
-lib/silc/libsilc-1.0.so.0
-lib/silc/libsilc-1.0.so.0.0
+lib/silc/libsilc-1.0.so.1
+lib/silc/libsilc-1.0.so.1.0
 lib/silc/libsilc.la
 lib/silc/libsilc.so
 lib/silc/libsilcclient-1.0.so
-lib/silc/libsilcclient-1.0.so.0
-lib/silc/libsilcclient-1.0.so.0.0
+lib/silc/libsilcclient-1.0.so.1
+lib/silc/libsilcclient-1.0.so.1.1
 lib/silc/libsilcclient.la
 lib/silc/libsilcclient.so
 lib/silc/modules/aes.sim.so
@@ -104,6 +104,7 @@ share/silc/help/server
 share/silc/help/set
 share/silc/help/shutdown
 share/silc/help/silcoper
+share/silc/help/smsg
 share/silc/help/stats
 share/silc/help/statusbar
 share/silc/help/toggle
@@ -113,7 +114,6 @@ share/silc/help/unalias
 share/silc/help/unignore
 share/silc/help/unload
 share/silc/help/unquery
-share/silc/help/upgrade
 share/silc/help/users
 share/silc/help/version
 share/silc/help/watch
