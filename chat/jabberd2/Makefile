@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/07/14 00:27:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2004/07/18 18:55:14 kristerw Exp $
 #
 
 DISTNAME=		jabberd-2.0s3
@@ -71,6 +71,7 @@ CONFIGURE_ARGS+=	--enable-db
 .  include "../../databases/db4/buildlink3.mk"
 .elif !empty(JABBERD_METHOD:Mmysql)
 CONFIGURE_ARGS+=	--enable-mysql
+CPPFLAGS+=		-I${LOCALBASE}/include/mysql
 .  include "../../databases/mysql4-client/buildlink3.mk"
 .elif !empty(JABBERD_METHOD:Mpgsql)
 CONFIGURE_ARGS+=	--enable-pgsql
