@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6261 2004/06/21 09:03:20 wiz Exp $
+$NetBSD: CHANGES,v 1.6262 2004/06/21 14:17:16 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3000,3 +3000,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated vim to 6.3 [martti 2004-06-21]
 	Updated dovecot to 0.99.10.6 [xtraeme 2004-06-21]
 	Updated html2wml to 0.4.8.2nb2 [wiz 2004-06-21]
+	Updated mozilla to 1.7 [taya 2004-06-21]
+	Updated mozilla-gtk2 to 1.7 [taya 2004-06-21]
