@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/04/04 12:29:49 tron Exp $
+# $NetBSD: Makefile,v 1.21 2002/06/30 15:01:49 schmonz Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 DISTNAME=	j2re-1_3_1_02-linux-i386
@@ -27,9 +27,17 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 .include "../../mk/bsd.prefs.mk"
 
 # Needs to be after bsd.prefs.mk
-.if ${OPSYS} != "Linux"
+.if ${OPSYS} == "NetBSD"
 DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
+.endif
+
+.if ${OPSYS} == "Darwin"
+DISTFILES=	# empty
+NO_PATCH=	# defined
+NO_CONFIGURE=	# defined
+NO_BUILD=	# defined
+PLIST_SRC=	${PKGDIR}/PLIST.Darwin
 .endif
 
 .if !defined(JDK_HOME)
@@ -39,11 +47,13 @@ JDK_HOME:=	${LOCALBASE}/java
 # since we change PREFIX:
 NO_MTREE=	yes
 
-ONLY_FOR_PLATFORM= NetBSD-*-i386 Linux-*-i[3-6]86
+ONLY_FOR_PLATFORM= NetBSD-*-i386 Linux-*-i[3-6]86 Darwin-*-*
 LDD=		${TRUE}
 
 post-fetch:
+.	if ${OPSYS} != "Darwin"
 	@${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+.	endif
 
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
@@ -54,11 +64,15 @@ do-build:
 # This is ugly.  The chown should happen after copying, or tar should have
 # a way to override permissions.
 do-install:
+.	if ${OPSYS} == "Darwin"
+	@${ECHO_MSG} "Darwin ships with a JRE based on Sun's 1.3.1 release."
+.	else
 	${INSTALL_PROGRAM_DIR} ${PREFIX} ${PREFIX}/jre
 	${INSTALL_PROGRAM_DIR} ${PREFIX} ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKDIR}/java ${PREFIX}/bin/java
 	${CHOWN} -hR ${BINOWN}:${BINGRP} ${WRKSRC}
 	${GTAR} -C ${WRKSRC} -cf- . | ${GTAR} -C ${PREFIX}/jre -xpf-
+.	endif
 
 .include "../../emulators/suse_linux/Makefile.application"
 

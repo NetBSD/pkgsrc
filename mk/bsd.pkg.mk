@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.997 2002/06/28 09:05:20 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.998 2002/06/30 15:01:47 schmonz Exp $
 #
 # This file is in the public domain.
 #
@@ -71,6 +71,8 @@ BUILD_DEFS+=		PKG_JVM JAVA_HOME
 PKG_JVM?=		jdk
 .    elif ${MACHINE_PLATFORM:MNetBSD-*-powerpc} != ""
 PKG_JVM?=		blackdown-jdk13
+.    elif ${MACHINE_PLATFORM:MDarwin-*-*} != ""
+PKG_JVM?=		sun-jdk
 .    else
 PKG_JVM?=		kaffe
 .    endif
@@ -89,7 +91,11 @@ JAVA_HOME?=		${LOCALBASE}/java
 .  elif ${PKG_JVM} == "sun-jdk13"
 BUILD_DEPENDS+=		sun-jdk-[0-9]*:../../lang/sun-jdk13
 DEPENDS+=		sun-jre-[0-9]*:../../lang/sun-jre13
+.    if ${OPSYS} == "Darwin"
+JAVA_HOME?=		/usr
+.    else
 JAVA_HOME?=		${LOCALBASE}/java
+.    endif
 .  elif ${PKG_JVM} == "sun-jdk"
 .    if ${MACHINE_PLATFORM:MNetBSD-1.5Z[A-Z]-i386} != "" || \
 	${MACHINE_PLATFORM:MNetBSD-1.[6-9]-i386} != "" || \
@@ -97,11 +103,16 @@ JAVA_HOME?=		${LOCALBASE}/java
 BUILD_DEPENDS+=         sun-jdk-[0-9]*:../../lang/sun-jdk14
 DEPENDS+=               sun-jre-[0-9]*:../../lang/sun-jre14
 .    elif ${MACHINE_PLATFORM:MNetBSD-*-i386} != "" || \
+	${MACHINE_PLATFORM:MDarwin-*-*} != "" || \
 	${MACHINE_PLATFORM:MLinux-*-i386} != ""
 BUILD_DEPENDS+=		sun-jdk-[0-9]*:../../lang/sun-jdk13
 DEPENDS+=		sun-jre-[0-9]*:../../lang/sun-jre13
 .    endif
+.    if ${OPSYS} == "Darwin"
+JAVA_HOME?=		/usr
+.    else
 JAVA_HOME?=		${LOCALBASE}/java
+.    endif
 .  elif ${PKG_JVM} == "blackdown-jdk13"
 DEPENDS+=		blackdown-jdk-[0-9]*:../../lang/blackdown-jdk13
 JAVA_HOME?=		${LOCALBASE}/java
