@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7801 2004/11/09 22:47:01 manu Exp $
+$NetBSD: CHANGES,v 1.7802 2004/11/10 00:49:57 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5201,3 +5201,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnomeicu to 0.99.5 [jmmv 2004-11-09]
 	Updated libradius to 20040827nb1 [manu 2004-11-09]
 	Added ipsec-tools-0.5.pre20041109 [manu 2004-11-09]
+	Added mkcmd-8.14 [epg 2004-11-10]
+	Added xapply-3.4 [epg 2004-11-10]
