@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2001/12/30 17:01:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/23 16:15:49 cjep Exp $
 ${RUBY_SITELIBDIR}/amstd/aliascm.rb
 ${RUBY_SITELIBDIR}/amstd/bench.rb
 ${RUBY_SITELIBDIR}/amstd/bug.rb
 ${RUBY_SITELIBDIR}/amstd/collfrom.rb
 ${RUBY_SITELIBDIR}/amstd/constdef.rb
 ${RUBY_SITELIBDIR}/amstd/d.rb
-${RUBY_SITELIBDIR}/amstd/daemon.rb 
+${RUBY_SITELIBDIR}/amstd/daemon.rb
 ${RUBY_SITELIBDIR}/amstd/dispatch.rb
 ${RUBY_SITELIBDIR}/amstd/extmod.rb
 ${RUBY_SITELIBDIR}/amstd/fileutils.rb
