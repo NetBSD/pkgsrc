@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1515 2003/03/01 22:00:37 jmmv Exp $
+$NetBSD: CHANGES,v 1.1516 2003/03/02 07:46:56 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -877,3 +877,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added mono-0.21 [jmmv 2003-03-01]
 	Added gtkmm-2.2.0 [jmmv 2003-03-01]
 	Added gconfmm-2.0.1 [jmmv 2003-03-01]
+	Updated roundup to 0.5.6 [lukem 2003-03-02]
