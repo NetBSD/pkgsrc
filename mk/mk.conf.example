@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.17 1998/07/03 06:18:43 hubertf Exp $
+# $NetBSD: mk.conf.example,v 1.18 1998/07/06 15:10:48 agc Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection
@@ -44,6 +44,16 @@ MANZ=		1		# gzip manual pages at installation time
                                 # filtering firewalls.
                                 # Possible: defined, not defined
                                 # Default: not defined
+
+#ACCEPTABLE_LICENCES=	shareware non-commercial-use
+                                # Whitespace-delimited list of the types of
+                                # licence which are acceptable for installation.
+                                # (apart from standard "free" licences such as
+                                # Berkeley/CMU and GPL).
+                                # Possible: shareware, non-commercial-use
+                                # 
+                                # Default: none
+
 
 # Definitions used only in the packages collection
 #AMANDA_USER=	backup		# Used in the amanda package to specify the
