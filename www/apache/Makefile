@@ -1,14 +1,10 @@
-# $NetBSD: Makefile,v 1.65 2001/04/14 19:50:04 kim Exp $
-#
-# The fourth number in the PKGNAME version indicates a NetBSD pkg revision
-# (to indicate changes in the shipped third party patches such as the mod_ssl
-# EAPI when there has been no change to the Apache version number).
+# $NetBSD: Makefile,v 1.66 2001/04/29 20:42:28 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
 DISTNAME=		apache_1.3.19
-PKGNAME=		apache-1.3.19
+PKGNAME=		apache-1.3.19nb1
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://www.apache.de/dist/httpd/ \
@@ -25,7 +21,7 @@ COMMENT=		HTTP (Web) server
 
 CONFLICTS=		apache-*modssl-* apache6-*
 
-MODSSL_DISTNAME=	mod_ssl-2.8.1-1.3.19
+MODSSL_DISTNAME=	mod_ssl-2.8.2-1.3.19
 MODSSL_SRC=		${WRKDIR}/${MODSSL_DISTNAME}
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif}
@@ -114,12 +110,11 @@ pre-configure:
 		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
 		${FILESDIR}/config.layout > ${WRKDIR}/config.layout
 
-post-build:
-	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
-		${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
-
 pre-install:
 	${FIND} ${WRKSRC}/htdocs -name '*.orig' -exec ${RM} -f {} \;
+	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
+		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
+		${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
 	${SED}	-e "s|@CAT@|${CAT}|g"					\
 		-e "s|@RM@|${RM}|g"					\
 		-e "s|@RMDIR@|${RMDIR}|g"				\
