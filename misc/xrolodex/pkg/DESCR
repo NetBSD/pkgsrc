@@ -1,0 +1,8 @@
+`xrolodex' is a Rolodex(R)-style application for maintaining a set of
+"virtual business cards."  `xrolodex's top-level window includes four
+principal components:
+ - an application-level menu bar,
+ - a label area for displaying the name of the current rolodex file,
+ - a control panel for entry-level rolodex manipulation, and
+ - an edit window (with local menu bar) for editing the currently
+   displayed rolodex entry, also providing a basic viewport facility.
