@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.255 1999/04/19 14:29:49 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.256 1999/04/19 20:04:18 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -632,13 +632,7 @@ DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 PKGNAME?=		${DISTNAME}
 
 # Latest version of pkgtools required for this file.
-# XXX There's a conditional test around "pkg_delete -O" for
-#     _PKGTOOLS_VER>=${PKGTOOLS_PKGDB_VERSION} below which
-#     should be backed out if this is bumped beyond 19990302.  - HF
-PKGTOOLS_REQD=		19990119
-
-# Version of pkgtools which support pkg_delete -O
-PKGTOOLS_PKGDB_VERSION=	19990302
+PKGTOOLS_REQD=		19990412
 
 # Check that we're using up-to-date pkg_* tools with this file.
 uptodate-pkgtools:
@@ -2210,11 +2204,7 @@ fake-pkg: ${PLIST} ${DESCR}
 		${MKDIR} ${PKG_DBDIR};					\
 	fi
 .if defined(FORCE_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	pkgtools_version=`${MAKE} show-pkgtools-version`;		\
-	if [ $$pkgtools_version -gt ${PKGTOOLS_PKGDB_VERSION} ]; then	\
-		${PKG_DELETE} -O ${PKGNAME};				\
-	fi
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} -O ${PKGNAME}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${PKG_DBDIR}/${PKGNAME}
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
