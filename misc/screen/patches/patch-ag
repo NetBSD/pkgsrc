@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 1999/08/10 17:43:56 tron Exp $
+
+--- teln.c.orig	Wed Jul 28 14:50:22 1999
++++ teln.c	Tue Aug 10 19:18:25 1999
+@@ -28,6 +28,7 @@
+ #include <sys/socket.h>
+ #include <fcntl.h>
+ #include <netdb.h>
++#include <netinet/in.h>
+ #include <arpa/inet.h>
+ 
+ #include "config.h"
