@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2000/10/15 03:01:05 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2000/10/16 17:55:13 tv Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -6,6 +6,8 @@
     SUBDIR += awka
     SUBDIR += bwbasic
     SUBDIR += baci
+    SUBDIR += blackdown-jdk12
+    SUBDIR += blackdown-jre12
     SUBDIR += caml-light
     SUBDIR += camlp4
     SUBDIR += cint
