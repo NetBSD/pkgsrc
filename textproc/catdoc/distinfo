@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:53:48 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/08 16:12:07 agc Exp $
 
-MD5 (catdoc-0.91.4.tar.gz) = bfc146724ad45ba1287eb5466882670a
+SHA1 (catdoc-0.91.4.tar.gz) = f486345447993bc818093f84b505c2ebbb046954
+Size (catdoc-0.91.4.tar.gz) = 128428 bytes
 SHA1 (patch-aa) = 3f232d00d2bc0f55397b76674d6136da81bc887e
 SHA1 (patch-ab) = 328c6d3f1613dff35760836bf051c48fba343576
 SHA1 (patch-ac) = 4b008af59792a155421bc99d6daf31db0da50c63
