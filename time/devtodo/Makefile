@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2001/05/15 06:54:23 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/29 05:48:56 jlam Exp $
 #
 
 DISTNAME=	devtodo-0.1.6-1
 PKGNAME=	devtodo-0.1.6.1
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-1//}
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=devtodo/}
 
@@ -10,11 +11,20 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://sourceforge.net/projects/devtodo/
 COMMENT=	Display and manage a list of items that are outstanding
 
-DEPENDS+=	readline-[0-9]*:../../devel/readline
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-1//}
+GNU_CONFIGURE=		# defined
+CONFIGURE_ENV+=		ac_cv_lib_ncurses_tputs=no
+CONFIGURE_ENV+=		ac_cv_lib_curses_tputs=no
 
-GNU_CONFIGURE=	yes
-MAKE_ENV+=	CXXFLAGS="-Wl,-R${LOCALBASE}/lib"
+USE_GNU_READLINE=	# uses rl_startup_hook()
+
+.include "../../devel/readline/buildlink.mk"
+
+CXXFLAGS+=		-I${BUILDLINK_INCDIR}
+LDFLAGS+=		-L${BUILDLINK_LIBDIR}
+
+pre-configure: ${BUILDLINK_TARGETS}
 
 .include "../../mk/bsd.pkg.mk"
