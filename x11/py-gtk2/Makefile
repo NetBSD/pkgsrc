@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/09 14:50:12 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/09 16:28:54 drochner Exp $
 #
 
 DISTNAME=	pygtk-1.99.16
@@ -22,6 +22,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 
 PYTHON_VERSION_REQD=	22pth
+BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
 
 .include "../../mk/pthread.buildlink2.mk"
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "native")
