@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2002/08/25 19:23:05 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2002/09/10 08:18:32 manu Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	2
 WRKSRC=		${WRKDIR}/faces
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/faces/faces/
+MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/faces/faces/faces-1.6.1/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	packages@netbsd.org
