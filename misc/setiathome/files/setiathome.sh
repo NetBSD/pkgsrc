@@ -1,11 +1,13 @@
 #!/bin/sh
 #
-# $NetBSD: setiathome.sh,v 1.2 2003/05/01 18:07:55 jmmv Exp $
+# $NetBSD: setiathome.sh,v 1.3 2003/06/02 19:55:16 abs Exp $
 #
 
 # PROVIDE: setiathome
 # REQUIRE: LOGIN
 # KEYWORD: shutdown
+
+setiathome_flags='-nice 20'
 
 . /etc/rc.subr
 
@@ -37,7 +39,7 @@ setiathome_start() {
 
 	echo "Starting ${name}."
 	su -fm ${sah_user} -c "cd ${sah_homedir} && exec ${command} \
-		${command_args} &" 2>/dev/null 1>/dev/null
+		${setiathome_flags} ${command_args} &" 2>/dev/null 1>/dev/null
 }
 
 setiathome_poststop() {
