@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.4 2003/12/14 19:44:38 jmmv Exp $
+$NetBSD: patch-aa,v 1.5 2004/04/01 18:17:29 jmmv Exp $
 
 Disable GTK2 support.  This is a workaround until bug #102825 gets fixed.
 See http://bugzilla.gnome.org/show_bug.cgi?id=102825 for more details.
 
---- configure.orig	2003-10-25 23:07:14.000000000 +0000
-+++ configure	2003-10-25 23:08:46.000000000 +0000
-@@ -18961,6 +18961,7 @@
+--- configure.orig	2004-02-24 16:50:54.000000000 +0100
++++ configure
+@@ -19672,6 +19672,7 @@ fi
  
    fi
  
@@ -13,7 +13,7 @@ See http://bugzilla.gnome.org/show_bug.cgi?id=102825 for more details.
    if test "$PKG_CONFIG" = "no" ; then
       echo "*** The pkg-config script could not be found. Make sure it is"
       echo "*** in your path, or set the PKG_CONFIG environment variable"
-@@ -19004,6 +19005,7 @@
+@@ -19715,6 +19716,7 @@ echo "${ECHO_T}$DEPENDENT_WITH_GTK_LIBS"
          echo "*** See http://www.freedesktop.org/software/pkgconfig"
       fi
    fi
@@ -21,7 +21,7 @@ See http://bugzilla.gnome.org/show_bug.cgi?id=102825 for more details.
  
    if test $succeeded = yes; then
       HAVE_GTK=yes
-@@ -19057,6 +19059,7 @@
+@@ -19768,6 +19770,7 @@ fi
  
    fi
  
@@ -29,7 +29,7 @@ See http://bugzilla.gnome.org/show_bug.cgi?id=102825 for more details.
    if test "$PKG_CONFIG" = "no" ; then
       echo "*** The pkg-config script could not be found. Make sure it is"
       echo "*** in your path, or set the PKG_CONFIG environment variable"
-@@ -19100,6 +19103,7 @@
+@@ -19811,6 +19814,7 @@ echo "${ECHO_T}$DEPENDENT_WITH_XML_AND_G
          echo "*** See http://www.freedesktop.org/software/pkgconfig"
       fi
    fi
