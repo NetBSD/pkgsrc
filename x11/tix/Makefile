@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/07/15 10:56:58 agc Exp $
+# $NetBSD: Makefile,v 1.6 1999/04/01 13:38:46 agc Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/03/17 07:55:17 tg Exp
 
 DISTNAME=	Tix4.1.0.006
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.xpi.com/pub/
 
 MAINTAINER=	rh@vip.at
 
-DEPENDS+=	tk-8.0p2:../../x11/tk80
+DEPENDS+=	tk-8.0.5:../../x11/tk80
 
 WRKSRC=		${WRKDIR}/Tix4.1.0/unix/tk8.0
 GNU_CONFIGURE=	yes
