@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/03/15 18:57:00 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/07 21:45:47 zuntum Exp $
 #
 
-DISTNAME=	rfc-3.1
-PKGNAME=	rfcutil-3.1
+DISTNAME=	rfc-3.2
+PKGNAME=	rfcutil-3.2
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.dewn.com/rfc/
 EXTRACT_SUFX=	#
