@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1501 2004/03/11 20:06:44 minskim Exp $
+$NetBSD: TODO,v 1.1502 2004/03/11 21:43:50 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -127,6 +127,7 @@ Suggested package updates
 	o SDL-1.2.7
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
+	o abiword-2.0.5
 	o afio-2.5
 	o amanda-2.4.4p2 [pkg/24550]
 	o ap-python-2.7.10
