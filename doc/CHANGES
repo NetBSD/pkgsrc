@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.581 2002/11/23 18:49:25 seb Exp $
+$NetBSD: CHANGES,v 1.582 2002/11/23 19:04:56 pooka Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3691,3 +3691,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated cyrus-sasl2 to 2.1.9nb2 [chris 2002-11-23]
 	Updated tamago to 20020909 [taca 2002-11-23]
 	Updated gtexinfo to 4.3nb1 [seb 2002-11-23]
+	Updated libsidplay to 1.36.57 [pooka 2002-11-23]
+	Updated sidplay to 1.0.9 [pooka 2002-11-23]
