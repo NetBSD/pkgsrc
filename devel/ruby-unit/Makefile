@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/08/30 08:36:53 taca Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/16 02:01:10 taca Exp $
 # FreeBSD: ports/devel/ruby-runit/Makefile,v 1.10 2001/01/19 09:41:15 knu Exp
 
 DISTNAME=	rubyunit-${VERSION}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}unit-${VERSION}
-CATEGORIES=	devel
+CATEGORIES=	devel ruby
 MASTER_SITES=	http://homepage1.nifty.com/markey/ruby/rubyunit/
 
 MAINTAINER=	taca@NetBSD.org

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 21:48:08 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/16 02:01:11 taca Exp $
 # FreeBSD: ports/math/ruby-bitvector/Makefile,v 1.1 2000/11/23 14:13:41 knu Exp
 
 DISTNAME=	bitvector_0-1-6
 PKGNAME=	${RUBY_PKGNAMEPREFIX}bitvector-0.1.6
-CATEGORIES=	math
+CATEGORIES=	math ruby
 MASTER_SITES=	http://www.ce.chalmers.se/~feldt/ruby/extensions/bitvector/
 
 MAINTAINER=	taca@NetBSD.org

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/02/21 06:58:03 snj Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/16 02:01:10 taca Exp $
 #
 
 DISTNAME=	mutexm-1.0.1
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel ruby
 MASTER_SITES=	http://www2a.biglobe.ne.jp/~seki/ruby/
 
 MAINTAINER=	taca@NetBSD.org

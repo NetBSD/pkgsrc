@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:51:48 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/16 02:01:11 taca Exp $
 # FreeBSD: ports/net/ruby-drb/Makefile,v 1.8 2001/01/18 16:57:25 knu Exp
 
 DISTNAME=	drb-1.3.7
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
-CATEGORIES=	net
+CATEGORIES=	net ruby
 MASTER_SITES=	http://www2a.biglobe.ne.jp/~seki/ruby/
 
 MAINTAINER=	taca@NetBSD.org
