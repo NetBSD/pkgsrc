@@ -1,0 +1,5 @@
+This package implements LWP (light weight process) style threads.
+The interface is simple, and the co-operative model used incurs
+minimal run-time overhead on packages that utilize the library.
+
+The original design and implementation of LWP was done by Larry Raper.
