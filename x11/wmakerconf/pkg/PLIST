@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/01/02 01:03:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/02/05 17:27:21 wiz Exp $
 bin/mkpreview
 bin/wmakerconf
 share/locale/ca/LC_MESSAGES/wmakerconf.mo
@@ -10,6 +10,7 @@ share/locale/fr/LC_MESSAGES/wmakerconf.mo
 share/locale/hu/LC_MESSAGES/wmakerconf.mo
 share/locale/it/LC_MESSAGES/wmakerconf.mo
 share/locale/ja/LC_MESSAGES/wmakerconf.mo
+share/locale/ja/LC_MESSAGES/wmakerconf-data.mo
 share/locale/ko/LC_MESSAGES/wmakerconf.mo
 share/locale/no/LC_MESSAGES/wmakerconf.mo
 share/locale/pl/LC_MESSAGES/wmakerconf.mo
