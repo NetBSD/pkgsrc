@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/20 14:54:36 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/03/28 10:10:24 rh Exp $
 bin/fvwm2
 bin/FvwmCommand
 bin/xselection
@@ -344,7 +344,6 @@ libexec/fvwm/${VERSION}/FvwmDragWell
 libexec/fvwm/${VERSION}/FvwmEvent
 libexec/fvwm/${VERSION}/FvwmForm
 libexec/fvwm/${VERSION}/FvwmTalk
-libexec/fvwm/${VERSION}/FvwmGtk
 libexec/fvwm/${VERSION}/FvwmIconBox
 libexec/fvwm/${VERSION}/FvwmIconMan
 libexec/fvwm/${VERSION}/FvwmIdent
