@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2003/03/24 18:54:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2003/04/17 22:15:44 jmmv Exp $
 
 PKGNAME=		MesaLib-${MESA_VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
 MAINTAINER=		rh@netbsd.org
 COMMENT=		Graphics library similar to SGI's OpenGL
@@ -10,6 +10,7 @@ COMMENT=		Graphics library similar to SGI's OpenGL
 
 USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-glut
 BUILD_DIRS=		${WRKSRC}/src
 
