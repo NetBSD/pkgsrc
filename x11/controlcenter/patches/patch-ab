@@ -1,13 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2000/07/25 06:19:24 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2000/10/18 00:01:12 jlam Exp $
 
---- po/Makefile.in.in.orig	Tue May 23 15:41:53 2000
-+++ po/Makefile.in.in	Tue Jul 25 01:29:03 2000
-@@ -19,7 +19,7 @@
- prefix = @prefix@
- exec_prefix = @exec_prefix@
- datadir = $(prefix)/@DATADIRNAME@
--localedir = $(datadir)/locale
-+localedir = $(prefix)/share/locale
- gnulocaledir = $(prefix)/share/locale
- gettextsrcdir = $(prefix)/share/gettext/po
- subdir = po
+--- configure.orig	Mon Sep 11 22:00:51 2000
++++ configure
+@@ -4873,6 +4873,11 @@
+ 
+ 
+ 
++# NetBSD: set DATADIRNAME to "share"
++DATADIRNAME="share"
++INTLDEPS=
++INTLLIBS="-lintl"
++
+ for ac_hdr in dlfcn.h dl.h
+ do
+ ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
