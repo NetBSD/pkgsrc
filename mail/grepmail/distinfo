@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:34:00 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:09:57 agc Exp $
 
-MD5 (grepmail-4.45.tar.gz) = 826ea148ad482bb24175eac9263338e8
+SHA1 (grepmail-4.45.tar.gz) = 575e158f52265f62919bef8cfbb2fbd898329b2d
+Size (grepmail-4.45.tar.gz) = 310100 bytes

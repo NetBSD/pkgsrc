@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:35:12 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:10:04 agc Exp $
 
-MD5 (spruce-0.5.17.tar.gz) = 5adf03b86b9e9246293b28d991a5ace6
+SHA1 (spruce-0.5.17.tar.gz) = 9d9d28d88f334e36fc95855da0c4e3ab07781b10
+Size (spruce-0.5.17.tar.gz) = 343206 bytes
 SHA1 (patch-aa) = 4e886e46b91b1569bc6e3a6987394c54b8dbd4c6

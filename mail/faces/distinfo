@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:33:49 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:09:56 agc Exp $
 
-MD5 (faces-1.6.1.tar.Z) = 73b1ba54e57bf99f85d3ccf7be95c17d
+SHA1 (faces-1.6.1.tar.Z) = 8402a74e43e78345c23a975a417c2407322db65f
+Size (faces-1.6.1.tar.Z) = 249469 bytes
 SHA1 (patch-aa) = 99012a91d3ac39bdd0ad8b5ab454812ace346dbb
 SHA1 (patch-ab) = b9723f1fba86bfd858933ccab5f008b0fa1be580
 SHA1 (patch-ac) = 42c14c50e46d2310ba3d1003606b4afe06c19bca

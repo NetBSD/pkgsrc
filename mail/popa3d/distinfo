@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:34:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:10:02 agc Exp $
 
-MD5 (popa3d-0.4.tar.gz) = 4ce2ed209abeaeaae7724d8d24bb7dbf
-MD5 (popa3d-0.4-gnu-md5-alignment.diff.gz) = 79e85c61d607f0965ebb83a06b86bb34
+SHA1 (popa3d-0.4.tar.gz) = 47df1be78048b68b6ce7b552cccd76579d576710
+Size (popa3d-0.4.tar.gz) = 29805 bytes
+SHA1 (popa3d-0.4-gnu-md5-alignment.diff.gz) = 4a7d266436c045f1ffb3485067b9d8e3076d1863
+Size (popa3d-0.4-gnu-md5-alignment.diff.gz) = 591 bytes
 SHA1 (patch-aa) = f6826a1e81b7cb73ddf99ce87e00e1e40d6035a9
 SHA1 (patch-ab) = f328a373fbe2fb39632326a65839f7e32f843d04

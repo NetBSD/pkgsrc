@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:33:46 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:09:56 agc Exp $
 
-MD5 (exim-3.20.tar.gz) = a004701a49ab3ec8abf8a293ae47afa0
-MD5 (exim-html-3.20.tar.gz) = 5aa1087b8b4249be338b922d2cd5ffdd
+SHA1 (exim-3.20.tar.gz) = dfb7a7b360dec968b03967f42555df41f79c7bc8
+Size (exim-3.20.tar.gz) = 1257746 bytes
+SHA1 (exim-html-3.20.tar.gz) = f830eaa2b9bd8cc183b66fa1627ce14b15f51ccf
+Size (exim-html-3.20.tar.gz) = 699383 bytes
 SHA1 (patch-ab) = 689d3d6fdc1abdfd0893c1c097b28504f65f3158
 SHA1 (patch-ae) = 24009dd4807f0215e79cc0a86582297bf310c913

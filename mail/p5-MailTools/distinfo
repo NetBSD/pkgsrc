@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:34:41 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:10:01 agc Exp $
 
 SHA1 (MailTools-1.15.tar.gz) = 1a64c81d27c3bb563c21792104c26d37c82b77dd
+Size (MailTools-1.15.tar.gz) = 39585 bytes

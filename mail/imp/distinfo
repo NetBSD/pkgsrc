@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:34:05 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:09:58 agc Exp $
 
-MD5 (imp-2.2.4.tar.gz) = 2c13da892a0d9bc16b328b834453908c
+SHA1 (imp-2.2.4.tar.gz) = ff22bb66d8ac714593e1cfde995d98ceaf75a253
+Size (imp-2.2.4.tar.gz) = 360076 bytes
 SHA1 (patch-aa) = 2149a5a9954d975b9b8c1df5c64c09cd0bf330d3
