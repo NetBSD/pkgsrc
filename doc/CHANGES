@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5010 2004/02/26 17:57:10 jmmv Exp $
+$NetBSD: CHANGES,v 1.5011 2004/02/26 22:55:01 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1061,3 +1061,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gcalctool to 4.3.46 [minskim 2004-02-26]
 	Updated at-spi to 1.3.13 [jmmv 2004-02-26]
 	Updated gnome-mag to 0.10.7 [jmmv 2004-02-26]
+	Added py-IndexedCatalog-0.6.0 [minskim 2004-02-26]
