@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3350 2003/09/12 23:11:07 jlam Exp $
+$NetBSD: CHANGES,v 1.3351 2003/09/13 05:50:23 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3664,3 +3664,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Digest-SHA1 to 2.04 [jlam 2003-09-12]
 	Removed bsdpak [wiz 2003-09-12]
 	Updated p5-Digest-MD5 to 2.27 [jlam 2003-09-12]
+	Updated pkg_install to 20030912 [jlam 2003-09-12]
