@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/01/22 07:49:21 grant Exp $
+# $NetBSD: Makefile,v 1.22 2004/02/10 16:59:21 minskim Exp $
 #
 
 DISTNAME=	xchat-2.0.7
@@ -16,7 +16,7 @@ DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 CONFLICTS=		xchat-gnome-[0-9]*
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
@@ -47,13 +47,13 @@ CONFIGURE_ARGS+=        --enable-socks
 
 # SSL support
 .if defined(XCHAT_USE_SSL) && !empty(XCHAT_USE_SSL:M[Yy][Ee][Ss])
-.  include "../../security/openssl/buildlink2.mk"
+.  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=        --enable-openssl=${SSLBASE}
 .endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/xchat/plugins
 
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
