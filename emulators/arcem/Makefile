@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/19 00:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/13 21:28:28 jlam Exp $
 #
 
 DISTNAME=	arcem0.50
@@ -15,7 +15,7 @@ HOMEPAGE=	ftp://ftp.arm.uk.linux.org/pub/linux/arcem/Index
 COMMENT=	Dave Gilbert's Acorn Archimedes emulator
 
 WRKSRC=		${WRKDIR}/armul-arc
-USE_BUILDLINK3=	# defined
+USE_BUILDLINK3=	yes
 USE_X11=	# defined
 
 post-install:
