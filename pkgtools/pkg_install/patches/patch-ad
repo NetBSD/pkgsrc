@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.5 2002/09/23 13:16:59 abs Exp $
+$NetBSD: patch-ad,v 1.6 2002/11/23 22:49:48 jschauma Exp $
 
---- lib/Makefile.orig	Thu Aug  1 10:46:31 2002
-+++ lib/Makefile
-@@ -5,13 +5,36 @@
- SRCS+=		exec.c file.c ftpio.c global.c lpkg.c pen.c pkgdb.c \
- 		plist.c str.c version.c path.c
+--- lib/Makefile.orig	Sat Nov 23 17:40:45 2002
++++ lib/Makefile	Sat Nov 23 17:42:52 2002
+@@ -1,17 +1,41 @@
+ # $NetBSD: patch-ad,v 1.6 2002/11/23 22:49:48 jschauma Exp $
+ # Original from FreeBSD, no rcs id.
  
 +OPSYS!=		uname -s
 +RELEASE!=	uname -r
@@ -25,10 +25,15 @@ $NetBSD: patch-ad,v 1.5 2002/09/23 13:16:59 abs Exp $
  NOMAN=		# defined
  NOPIC=		# defined
  NOPROFILE=	# defined
+ 
 +MKLINT=		no
 +MKMAN=		no
 +MKPIC=		no
 +MKPROFILE=	no
++
+ LIB+=		install
+ SRCS+=		exec.c file.c ftpio.c global.c lpkg.c pen.c pkgdb.c \
+ 		plist.c str.c version.c path.c
  
  # only needed during build - prevent installation of library
 +.if ${OPSYS} == "Darwin"
