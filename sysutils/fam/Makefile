@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/12/28 02:47:50 reed Exp $
+# $NetBSD: Makefile,v 1.22 2005/01/05 16:21:06 jmmv Exp $
 #
 
 DISTNAME=		fam-2.7.0
@@ -21,7 +21,6 @@ USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS} -DNDEBUG"
 
 EGDIR=			${PREFIX}/share/examples/fam
 CONF_FILES=		${EGDIR}/fam.conf ${PKG_SYSCONFDIR}/fam.conf
@@ -39,7 +38,8 @@ PKG_SUPPORTED_OPTIONS=	kqueue
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mkqueue) && ${OPSYS} == "NetBSD"
+.if !empty(PKG_OPTIONS:Mkqueue) && \
+    (${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD")
 CPPFLAGS+=		-DHAVE_KQUEUE
 
 SUBST_CLASSES+=		kqueue
@@ -54,6 +54,7 @@ MESSAGE_SRC=		${.CURDIR}/MESSAGE ${.CURDIR}/MESSAGE.kqueue
 .include "../../mk/pthread.buildlink3.mk"
 .endif
 
+CPPFLAGS.Darwin+=	-DNDEBUG
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .if ${OPSYS} == "SunOS"

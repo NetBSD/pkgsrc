@@ -1,6 +1,6 @@
-//  $NetBSD: IMonKQueue.c++,v 1.2 2004/10/19 17:00:56 jmmv Exp $
+//  $NetBSD: IMonKQueue.c++,v 1.3 2005/01/05 16:21:06 jmmv Exp $
 //
-//  Copyright (c) 2004 Julio M. Merino Vidal.
+//  Copyright (c) 2004, 2005 Julio M. Merino Vidal.
 //  
 //  This program is free software; you can redistribute it and/or modify it
 //  under the terms of version 2 of the GNU General Public License as
@@ -28,7 +28,8 @@
 //  -----------------------------
 //
 //  The code in this file provides an imon-like interface to FAM using kqueue,
-//  the kernel event notification mechanism found in NetBSD and OpenBSD.
+//  the kernel event notification mechanism found in FreeBSD, NetBSD and
+//  OpenBSD.
 //
 //  The idea is the following: a thread, kqueue_monitor, simulates the kernel
 //  part of imon.  This thread can receive commands (ioctl(2)s) and produces
@@ -59,12 +60,13 @@
 //  it quickly).  If we overflow this limit, the poller will enter the game
 //  (because we will return an error).
 //
-//  Known problem: if we receive *lots* of events quickly, we may end up
-//  locked in pipewr.  I haven't located where the problem is, but I
-//  suspect of the read code in read_handler in IMon.c++.  To reproduce,
-//  run the test program provided by fam against a local directory, say
-//  /tmp/foo, and run the following:
+//  Known problem: if we receive *lots* of events quickly, famd may end up
+//  locked.  To reproduce, run the test program provided by fam against a
+//  local directory, say /tmp/foo, and do the following:
 //     cd /tmp/foo; for f in $(jot 1000); do touch $(jot 100); rm *; done
+//  You should receive some messages like:
+//     famd[21058]: kqueue can't revoke "75", dev = 0, ino = 1113421
+//  while the test is running (not a lot), and it will eventually lock up.
 //
 //  Having said all this, let's go to the code...
 
@@ -99,7 +101,8 @@ struct devino {
     ino_t di_ino;
 
     bool operator<(const struct devino& di) const
-        { return (di_dev < di.di_dev) || (di_ino < di.di_ino); }
+        { return (di_dev < di.di_dev) or
+                 (di_dev == di.di_dev and di_ino < di.di_ino); }
 };
 
 // imon_cmd simulates commands thrown to imon as ioctl(2)s (but remember
@@ -292,6 +295,41 @@ kqueue_monitor(void *data)
         if (nev == -1)
             Log::perror("kevent");
         else if (nev > 0) {
+            assert(nev == 1);
+
+            if (event.flags & EV_ERROR) {
+                int fd = event.ident;
+
+                FDDEVINO_MAP::const_iterator iter = fd_to_devino.find(fd);
+                assert(iter != fd_to_devino.end());
+                struct devino di = iter->second;
+
+                Log::error("kqueue returned error for fd = %d, dev = %d, "
+                           "ino = %d", fd, di.di_dev, di.di_ino);
+
+                // Remove offending entry from the mappings.
+                assert(devino_to_fd.find(di) != devino_to_fd.end());
+                devino_to_fd.erase(di);
+                assert(devino_to_fd.find(di) == devino_to_fd.end());
+                assert(fd_to_devino.find(fd) != fd_to_devino.end());
+                fd_to_devino.erase(fd);
+                assert(fd_to_devino.find(fd) == fd_to_devino.end());
+
+                // Remove the entry associated to the descriptor from the list
+                // of changes monitored by kqueue.
+                int i;
+                for (i = 1; i < last_change; i++)
+                    if (changes[i].ident == fd)
+                        break;
+                for (int j = i; j < last_change - 1; j++)
+                    changes[j] = changes[j + 1];
+                last_change--;
+
+                close(fd);
+
+                continue;
+            }
+
             if (event.ident == pipe_in[0]) {
                 // We have got a control command, so process it.
                 process_command();
@@ -314,9 +352,9 @@ kqueue_monitor(void *data)
                         elem.qe_what |= IMON_DELETE;
                     if (event.fflags & NOTE_RENAME)
                         elem.qe_what |= IMON_RENAME;
-                    if (event.fflags & NOTE_ATTRIB || event.fflags & NOTE_LINK)
+                    if (event.fflags & NOTE_ATTRIB or event.fflags & NOTE_LINK)
                         elem.qe_what |= IMON_ATTRIBUTE;
-                    if (event.fflags & NOTE_WRITE || event.fflags & NOTE_EXTEND)
+                    if (event.fflags & NOTE_WRITE or event.fflags & NOTE_EXTEND)
                         elem.qe_what |= IMON_CONTENT;
 
                     // Deliver the element.
@@ -340,6 +378,8 @@ process_command(void)
     // Read the command from the control pipe.
     read(pipe_in[0], &cmd, sizeof(struct imon_cmd));
     if (cmd.ic_type == IMON_CMD_EXPRESS) {
+        Log::debug("process_command: express, dev = %d, ino = %d",
+                   cmd.ic_di.di_dev, cmd.ic_di.di_ino);
         if (devino_to_fd.find(cmd.ic_di) != devino_to_fd.end()) {
             // The file is already being monitored.
             close(cmd.ic_fd);
@@ -363,21 +403,31 @@ process_command(void)
             // to it and viceversa.  We will need this information during
             // 'revoke' and when we receive events.  We use two different
             // maps to speed up searches in both directions later.
+            assert(devino_to_fd.find(cmd.ic_di) == devino_to_fd.end());
             devino_to_fd.insert
                 (DEVINOFD_MAP::value_type(cmd.ic_di, cmd.ic_fd));
+            assert(devino_to_fd.find(cmd.ic_di) != devino_to_fd.end());
+            assert(fd_to_devino.find(cmd.ic_fd) == fd_to_devino.end());
             fd_to_devino.insert
                 (FDDEVINO_MAP::value_type(cmd.ic_fd, cmd.ic_di));
+            assert(fd_to_devino.find(cmd.ic_fd) != fd_to_devino.end());
 
             result = true;
         }
     } else if (cmd.ic_type == IMON_CMD_REVOKE) {
+        Log::debug("process_command: revoke, dev = %d, ino = %d",
+                   cmd.ic_di.di_dev, cmd.ic_di.di_ino);
         DEVINOFD_MAP::const_iterator iter = devino_to_fd.find(cmd.ic_di);
         if (iter != devino_to_fd.end()) {
             // Get the descriptor associated to the given device/inode pair
             // and remove the mapping from the required structure.
             int fd = (*iter).second;
+            assert(devino_to_fd.find(cmd.ic_di) != devino_to_fd.end());
             devino_to_fd.erase(cmd.ic_di);
+            assert(devino_to_fd.find(cmd.ic_di) == devino_to_fd.end());
+            assert(fd_to_devino.find(fd) != fd_to_devino.end());
             fd_to_devino.erase(fd);
+            assert(fd_to_devino.find(fd) == fd_to_devino.end());
 
             // Remove the entry associated to the descriptor from the list
             // of changes monitored by kqueue.
