@@ -1,0 +1,6 @@
+#!/bin/sh
+ 
+echo "Running post-extract script"
+
+cd ${WRKSRC}
+cp -p makes/generic.mak sources/Makefile
