@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2004/07/17 23:25:04 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.31 2004/08/06 11:10:29 gavan Exp $
 bin/gaim
 bin/gaim-remote
 include/gaim/account.h
@@ -388,12 +388,14 @@ share/pixmaps/gaim/status/default/away.png
 share/pixmaps/gaim/status/default/dnd.png
 share/pixmaps/gaim/status/default/extendedaway.png
 share/pixmaps/gaim/status/default/female.png
+share/pixmaps/gaim/status/default/founder.png
 share/pixmaps/gaim/status/default/freeforchat.png
 share/pixmaps/gaim/status/default/gadu-gadu.png
 share/pixmaps/gaim/status/default/game.png
+share/pixmaps/gaim/status/default/halfop.png
 share/pixmaps/gaim/status/default/hiptop.png
 share/pixmaps/gaim/status/default/icq.png
-share/pixmaps/gaim/status/default/ignored.svg
+share/pixmaps/gaim/status/default/ignored.png
 share/pixmaps/gaim/status/default/invisible.png
 share/pixmaps/gaim/status/default/irc.png
 share/pixmaps/gaim/status/default/jabber.png
@@ -407,10 +409,12 @@ share/pixmaps/gaim/status/default/notauthorized.png
 share/pixmaps/gaim/status/default/novell.png
 share/pixmaps/gaim/status/default/occupied.png
 share/pixmaps/gaim/status/default/offline.png
+share/pixmaps/gaim/status/default/op.png
 share/pixmaps/gaim/status/default/rendezvous.png
 share/pixmaps/gaim/status/default/secure.png
 share/pixmaps/gaim/status/default/silc.png
 share/pixmaps/gaim/status/default/trepia.png
+share/pixmaps/gaim/status/default/voice.png
 share/pixmaps/gaim/status/default/wireless.png
 share/pixmaps/gaim/status/default/yahoo.png
 share/pixmaps/gaim/status/default/zephyr.png
