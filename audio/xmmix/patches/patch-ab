@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2000/09/19 11:09:21 fredb Exp $
+$NetBSD: patch-ab,v 1.2 2002/10/08 12:30:57 jlam Exp $
 
---- mixer.c.orig	Thu Nov  7 10:00:26 1996
-+++ mixer.c	Wed Sep 13 22:46:35 2000
-@@ -104,6 +104,14 @@
+--- mixer.c.orig	Thu Nov  7 08:00:26 1996
++++ mixer.c
+@@ -104,6 +104,14 @@ STATIC ctlinfo_t	ctlsav;		/* Saved state
   ***********************/
  
  
@@ -17,13 +17,14 @@ $NetBSD: patch-ab,v 1.1 2000/09/19 11:09:21 fredb Exp $
  /*
   * do_ioctl
   *	Perform ioctl command.  If file is not yet open or if we
-@@ -201,12 +209,17 @@
+@@ -201,12 +209,18 @@ mx_queryhw(widgets_t *m)
  			ctlinfo.slinfo[i].right = ((level >> 8) & 0xff);
  
  			/* Sanity check */
 -			if (ctlinfo.slinfo[i].left > 100)
 -				ctlinfo.slinfo[i].left = 100;
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) && \
++    !defined(OPEN_SOUND_SYSTEM) && !defined(UNIX_SOUND_SYSTEM)
 +#  define SLIDER_MAX 255
 +#else
 +#  define SLIDER_MAX 100
@@ -39,11 +40,12 @@ $NetBSD: patch-ab,v 1.1 2000/09/19 11:09:21 fredb Exp $
  			else if (ctlinfo.slinfo[i].right < 0)
  				ctlinfo.slinfo[i].right = 0;
  
-@@ -674,18 +687,24 @@
+@@ -674,18 +688,25 @@ mx_init_drv(void)
  	}
  
  	/* Set maximum number of devices supported */
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) && \
++    !defined(OPEN_SOUND_SYSTEM) && !defined(UNIX_SOUND_SYSTEM)
 +	maxdevs = SOUND_MIXER_NRDEVICES;
 +#else
  	maxdevs = MAXDEVS_V3;
@@ -54,7 +56,7 @@ $NetBSD: patch-ab,v 1.1 2000/09/19 11:09:21 fredb Exp $
  	/* Query sound driver version */
  	if ((fp = fopen("/dev/sndstat", "r")) == NULL) {
  		if (!app_data.demo) {
-+#ifndef __NetBSD__
++#if defined(OPEN_SOUND_SYSTEM) || defined(UNIX_SOUND_SYSTEM)
  			fprintf(errfp, "%s: %s: %s\n",
  				PROGNAME,
  				"Cannot open /dev/sndstat",
@@ -64,7 +66,7 @@ $NetBSD: patch-ab,v 1.1 2000/09/19 11:09:21 fredb Exp $
  		}
  		return;
  	}
-@@ -915,6 +934,7 @@
+@@ -915,6 +936,7 @@ void
  mx_start(widgets_t *m)
  {
  	char	msg[256];
@@ -72,13 +74,15 @@ $NetBSD: patch-ab,v 1.1 2000/09/19 11:09:21 fredb Exp $
  
  	if (app_data.autoload != NULL && app_data.autoload[0] != '\0' &&
  	    strcmp(app_data.autoload, "/dev/null") != 0) {
-@@ -930,6 +950,14 @@
+@@ -930,6 +952,16 @@ mx_start(widgets_t *m)
  		}
  	}
  
 +#if defined(__NetBSD__)
 +	signal(SIGIO, mxchg);
-+	ioctl(dev_fd, FIOASYNC, &one);
++#if !defined(OPEN_SOUND_SYSTEM) && !defined(UNIX_SOUND_SYSTEM)
++	do_ioctl(FIOASYNC, &one, "FIOASYNC", IOC_DATA_NONE);
++#endif
 +#endif
 +
 +	/* Query hardware mixer settings */
@@ -87,7 +91,7 @@ $NetBSD: patch-ab,v 1.1 2000/09/19 11:09:21 fredb Exp $
  	/* Update screen controls to match current status */
  	mx_updctl(m);
  }
-@@ -1531,6 +1559,22 @@
+@@ -1531,6 +1563,22 @@ mx_focuschg(Widget w, XtPointer client_d
  	if (p->reason != XmCR_FOCUS || form == (Widget) NULL)
  		return;
  

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/09/09 03:08:49 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2002/10/08 12:30:57 jlam Exp $
 # FreeBSD ID: Makefile,v 1.5 1997/09/08 13:37:47 tg Exp
 #
 
@@ -10,14 +10,17 @@ MAINTAINER=	augustss@cs.chalmers.se
 HOMEPAGE=	http://sunsite.unc.edu/~cddb/xmmix/index.html
 COMMENT=	X interface to the audio mixer device
 
+USE_BUILDLINK2=	yes
 USE_IMAKE=	yes
 
-post-patch:
-	for file in ${WRKSRC}/XMmix.ad ${WRKSRC}/resource.h; do		\
-		${MV} -f $$file $$file.orig;				\
-		${SED} -e "s|/usr/lib/X11/xmmix.hlp|${PREFIX}/lib/X11/xmmix.hlp|g" \
-			$$file.orig > $$file;				\
+pre-configure:
+	cd ${WRKSRC}; for file in XMmix.ad resource.h; do		\
+		${SED} -e "s|/usr/lib/X11/|${PREFIX}/lib/X11/|g"	\
+			$$file > $$file.fixed;				\
+		${MV} -f $$file.fixed $$file;				\
 	done
 
-.include "../../mk/motif.buildlink.mk"
+.include "../../mk/motif.buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2001/07/14 12:55:09 agc Exp $
+$NetBSD: patch-aa,v 1.8 2002/10/08 12:30:57 jlam Exp $
 
 --- Imakefile.orig	Sun Jul 14 19:48:56 1996
 +++ Imakefile	Fri Oct 24 23:34:17 1997
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.7 2001/07/14 12:55:09 agc Exp $
   * #include "Motif.rules"
   */
 -LOCAL_LIBRARIES= XmClientLibs
-+LOCAL_LIBRARIES= ${MOTIFLIB} XawClientLibs -lossaudio
++LOCAL_LIBRARIES= ${MOTIFLIB} XawClientLibs ${LIBOSSAUDIO}
  
  
  /*
