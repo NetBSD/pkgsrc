@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/21 07:52:52 snj Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/18 07:44:21 snj Exp $
 # FreeBSD Id: ports/x11/xnodecor/Makefile,v 1.2 2003/09/09 09:17:20 erwin Exp
 
 DISTNAME=	xnodecor-0.1
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	# none
 COMMENT=        Borderless or undecorated window support utility
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_X11BASE=	yes
 NO_CONFIGURE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/03 18:50:01 reed Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/18 07:41:53 snj Exp $
 
 DISTNAME=	xteddy-2.0.1
 PKGREVISION=	4
@@ -11,7 +11,7 @@ COMMENT=	Teddy bear for your desktop
 
 CONFLICT+=	xteddy-1.*
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
@@ -27,6 +27,6 @@ pre-configure:
 		${RM} -f $${file}.fixme;				\
 	done
 
-.include "../../graphics/imlib/buildlink2.mk"
+.include "../../graphics/imlib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
