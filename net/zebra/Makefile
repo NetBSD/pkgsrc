@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2001/01/11 05:34:16 itojun Exp $
+# $NetBSD: Makefile,v 1.30 2001/01/19 01:49:37 itojun Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
-DISTNAME=	zebra-0.90
+DISTNAME=	zebra-0.90a
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.zebra.org/pub/zebra/
 # you might need debugging, it's a developer release !
