@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2004/02/09 18:47:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.69 2004/02/20 19:25:39 jmmv Exp $
 #
 
 DISTNAME=		abiword-${DIST_VER}
@@ -18,7 +18,7 @@ CONFLICTS=		abiword-personal-[0-9]* abiword2-[0-9]*
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/abi
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_PERL5=		run
 USE_X11=		yes
@@ -46,22 +46,24 @@ BUILD_DEFS+=			ABIWORD_USES_GUCHARMAP
 .if defined(ABIWORD_USES_GUCHARMAP) && \
     !empty(ABIWORD_USES_GUCHARMAP:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=		--enable-gucharmap
-.include "../../fonts/gucharmap/buildlink2.mk"
+.include "../../fonts/gucharmap/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=		--disable-gucharmap
 .endif
 
-.include "../../converters/fribidi/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../converters/wv/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../textproc/enchant/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../converters/fribidi/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../converters/wv/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
