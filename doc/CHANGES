@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5317 2004/03/28 20:47:04 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5318 2004/03/28 21:02:55 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1545,3 +1545,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added sablevm-classpath-1.1.1 [jmmv 2004-03-28]
 	Added sablevm-classpath-gui-1.1.1 [jmmv 2004-03-28]
 	Updated curl to 7.11.1 [xtraeme 2004-03-28]
+	Updated sodipodi to 0.34 [xtraeme 2004-03-28]
