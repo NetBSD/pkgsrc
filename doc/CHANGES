@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1225 2003/01/25 05:29:06 uebayasi Exp $
+$NetBSD: CHANGES,v 1.1226 2003/01/25 07:22:26 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -404,3 +404,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wl to 2.10.0 [uebayasi 2003-01-25]
 	Updated liece to 1.4.10 [uebayasi 2003-01-25]
 	Updated cassowary to 0.60nb2 [uebayasi 2003-01-25]
+	Updated postfix to 2.0.3 [martti 2003-01-25]
