@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3511 2003/09/25 04:24:50 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3512 2003/09/25 04:44:32 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3922,3 +3922,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added arnold-20020127 [dillo 2003-09-24]
 	Updated raptor to 1.0.0 [xtraeme 2003-09-25]
 	Added pixieplus-0.5.4 [xtraeme 2003-09-25]
+	Added foobillard-2.8 [xtraeme 2003-09-25]
