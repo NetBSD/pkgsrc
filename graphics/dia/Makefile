@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2004/04/14 16:15:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2004/05/06 10:21:47 drochner Exp $
 
-DISTNAME=	dia-0.92.2
-PKGREVISION=	7
+DISTNAME=	dia-0.93
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.92/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.93/}
 
 MAINTAINER=	jmcneill@invisible.yi.org
 HOMEPAGE=	http://www.lysator.liu.se/~alla/dia/
@@ -43,6 +42,7 @@ post-patch:
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
