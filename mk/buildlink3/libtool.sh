@@ -1,10 +1,11 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.10 2003/09/02 06:59:51 jlam Exp $
+# $NetBSD: libtool.sh,v 1.2 2003/09/02 06:59:59 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
 
+marshall="@_BLNK_WRAP_MARSHALL@"
 private_pre_cache="@_BLNK_WRAP_PRIVATE_PRE_CACHE@"
 private_cache_add="@_BLNK_WRAP_PRIVATE_CACHE_ADD@"
 private_cache="@_BLNK_WRAP_PRIVATE_CACHE@"
@@ -30,7 +31,6 @@ echo="@ECHO@"
 test="@TEST@"
 
 BUILDLINK_DIR="@BUILDLINK_DIR@"
-BUILDLINK_X11_DIR="@BUILDLINK_X11_DIR@"
 WRKDIR="@WRKDIR@"
 WRKSRC="@WRKSRC@"
 
@@ -69,6 +69,7 @@ case "$1" in
 		*)
 			cachehit=no
 			skipcache=no
+			. $marshall
 			. $private_cache
 			case $skipcache,$cachehit in
 			no,no)	. $cache ;;
