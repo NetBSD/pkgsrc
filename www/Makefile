@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2000/01/14 17:27:00 jwise Exp $
+# $NetBSD: Makefile,v 1.64 2000/01/14 20:45:41 jwise Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -10,6 +10,7 @@
     SUBDIR += ap-auth-postgresql
     SUBDIR += ap-dtcl
     SUBDIR += ap-fastcgi
+#    SUBDIR += ap-jserv
     SUBDIR += ap-ssl
     SUBDIR += ap-perl
     SUBDIR += ap-php3
