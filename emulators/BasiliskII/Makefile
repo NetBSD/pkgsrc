@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.9 2003/06/13 20:56:48 tron Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/14 06:49:04 tron Exp $
 
-DISTNAME=	BasiliskII_src_15012002
-PKGNAME=	BasiliskII-1.0
+DISTNAME=	BasiliskII_src_14032003
+PKGNAME=	BasiliskII-1.0.20030314
 WRKSRC=		${WRKDIR}/BasiliskII-1.0/src/Unix
 CATEGORIES=	emulators
-MASTER_SITES=	http://iphcip1.physik.uni-mainz.de/~cbauer/
+MASTER_SITES=	http://gwenole.beauchesne.online.fr/basilisk2/files/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@netbsd.org
-HOMEPAGE=	http://www.uni-mainz.de/~bauec002/B2Main.html
+HOMEPAGE=	http://gwenole.beauchesne.online.fr/basilisk2/
 COMMENT=	Open Source 68k Macintosh emulator
 
 USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_X11=	yes
-PTHREAD_OPTS+=	require
+CONFIGURE_ARGS+=--without-gtk --without-esd --disable-fbdev-dga --without-mon
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/BasiliskII
@@ -22,7 +23,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/../../TECH ${PREFIX}/share/doc/BasiliskII/
 	${INSTALL_DATA} ${WRKSRC}/../../TODO ${PREFIX}/share/doc/BasiliskII/
 
-.include "../../audio/esound/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
