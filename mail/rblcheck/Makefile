@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.2 1999/12/26 18:39:01 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2000/04/08 05:59:41 itojun Exp $
 # FreeBSD: ports/mail/rblcheck/Makefile,v 1.6 1999/08/25 06:50:47 obrien Exp
 #
 
 DISTNAME=	rblcheck-1.4
 CATEGORIES=	mail
-MASTER_SITES=	http://www.xnet.com/%7Eemarshal/rblcheck/
+MASTER_SITES=	http://download.sourceforge.net/rblcheck/ \
+		http://www.xnet.com/%7Eemarshal/rblcheck/
 
 MAINTAINER=	itojun@itojun.org
-HOMEPAGE=	http://www.xnet.com/%7Eemarshal/rblcheck/
+HOMEPAGE=	http://rblcheck.sourceforge.net/
 
 DOCS=		BUGS CHANGES CREDITS INSTALL PLATFORMS TODO
 
