@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/10/15 14:50:06 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/11/21 14:16:49 kristerw Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GUILE14_BUILDLINK3_MK:=	${GUILE14_BUILDLINK3_MK}+
@@ -25,5 +25,6 @@ GUILE14_SUBDIR=			guile/1.4
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
