@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 1999/04/20 15:01:11 mycroft Exp $
+
+--- src/history.c.orig	Sat Apr 11 12:29:49 1998
++++ src/history.c	Tue Apr 20 10:15:03 1999
+@@ -725,7 +725,7 @@
+ #else
+ 	fprintf (stderr, "-> fopen(%s,a)\n", fname);
+ #endif
+-    if (noexec)
++    if (nolock)
+ 	goto out;
+     fd = CVS_OPEN (fname, O_WRONLY | O_APPEND | O_CREAT | OPEN_BINARY, 0666);
+     if (fd < 0)
