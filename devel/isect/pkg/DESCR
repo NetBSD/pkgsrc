@@ -1,0 +1,13 @@
+isectd is an open-source middleware daemon that simplifies the
+implementation of distributed processing and client-server systems.
+Using a familiar file IO-like programmer's interface it makes
+multi-tier programming as easy as reading and writing. 
+
+Isect is short for intersect, a kind of table required in relational
+databases to express many-to-many relationships. Distributed processing
+implements process-oriented many-to-many relationships: many clients
+communicating with many services. If it's mathmatically required for
+data relationships then it's mathmatically required for process
+relationships! This is the proof--and the reason you need isectd. 
+
+Questions and comments should be mailed to tgagne@ix.netcom.com.
