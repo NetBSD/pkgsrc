@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/08/11 18:35:45 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/09/24 20:59:27 tron Exp $
 bin/ebrowser
 bin/gnome-gtkhtml-editor
 bin/gtkhtml-properties-capplet
@@ -97,8 +97,8 @@ lib/gtkhtmlConf.sh
 lib/libgtkhtml.a
 lib/libgtkhtml.la
 lib/libgtkhtml.so
-lib/libgtkhtml.so.14
-lib/libgtkhtml.so.14.1
+lib/libgtkhtml.so.15
+lib/libgtkhtml.so.15.0
 share/control-center/Documents/gtkhtml-properties.desktop
 share/control-center/capplets/gtkhtml-properties.desktop
 share/gnome/apps/Settings/Documents/gtkhtml-properties.desktop
@@ -107,14 +107,6 @@ share/gnome/html/gtkhtml-sections.txt
 share/gnome/html/gtkhtml.hierarchy
 share/gnome/html/gtkhtml.sgml
 share/gnome/html/gtkhtml.types
-share/gnome/html/gtkhtml/gtkhtml-gtkhtml-enums.html
-share/gnome/html/gtkhtml/gtkhtml-gtkhtml-stream.html
-share/gnome/html/gtkhtml/gtkhtml-gtkhtml-types.html
-share/gnome/html/gtkhtml/gtkhtml-gtkhtmlembedded.html
-share/gnome/html/gtkhtml/gtkhtml.html
-share/gnome/html/gtkhtml/index.html
-share/gnome/html/gtkhtml/license.html
-share/gnome/html/gtkhtml/r27.html
 share/gnome/ui/GNOME_GtkHTML_Editor.xml
 share/gtkhtml/Editor.idl
 share/gtkhtml/gtkhtml-capplet.glade
@@ -137,6 +129,23 @@ share/gtkhtml/icons/insert-table-16.png
 share/gtkhtml/icons/insert-table-24.png
 share/gtkhtml/icons/search-24.png
 share/gtkhtml/icons/search-and-replace-24.png
+share/gtkhtml/icons/empty_image.png
+share/gtkhtml/icons/flowers.png
+share/gtkhtml/icons/insert-object-16.png
+share/gtkhtml/icons/insert-object-24.png
+share/gtkhtml/icons/redo-16.png
+share/gtkhtml/icons/redo-24.png
+share/gtkhtml/icons/rule-blue-center.png
+share/gtkhtml/icons/rule-blue-left.png
+share/gtkhtml/icons/rule-blue-right.png
+share/gtkhtml/icons/rule-yellow-flowers-center.png
+share/gtkhtml/icons/rule-yellow-flowers-left.png
+share/gtkhtml/icons/rule-yellow-flowers-right.png
+share/gtkhtml/icons/search-16.png
+share/gtkhtml/icons/search-and-replace-16.png
+share/gtkhtml/icons/transparent.png
+share/gtkhtml/icons/undo-16.png
+share/gtkhtml/icons/undo-24.png
 share/gtkhtml/keybindingsrc.emacs
 share/gtkhtml/keybindingsrc.ms
 share/gtkhtml/keybindingsrc.xemacs
@@ -171,5 +180,4 @@ share/oaf/GNOME_GtkHTML_Editor.oaf
 @exec mkdir -p -m 0755 %D/share/gnome/html/gtkhtml
 @dirrm share/gtkhtml/icons
 @dirrm share/gtkhtml
-@dirrm share/gnome/html/gtkhtml
 @dirrm include/gtkhtml
