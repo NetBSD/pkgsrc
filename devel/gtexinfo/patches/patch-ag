@@ -1,27 +1,13 @@
-$NetBSD: patch-ag,v 1.4 2000/05/02 18:48:39 danw Exp $
-
-Don't check ncurses lib - just use standard curses.
-Install files into share hierarchy
-Don't assume that we're using the install.sh script - comment out
-	the attempt to prefix it with ../
+$NetBSD: patch-ag,v 1.5 2001/06/18 22:09:17 jlam Exp $
 
 --- configure.orig	Tue Mar  3 13:30:18 1998
 +++ configure	Sun Oct  4 15:53:12 1998
-@@ -1401,7 +1401,7 @@
- # Some GNU/Linux systems (e.g., SuSE 4.3, 1996) don't have curses, but
- # rather ncurses.  So we check for it.
- TERMLIBS=
--for termlib in ncurses curses termcap terminfo termlib ; do
-+for termlib in curses termcap terminfo termlib ; do
-    echo $ac_n "checking for tputs in -l${termlib}""... $ac_c" 1>&6
- echo "configure:1407: checking for tputs in -l${termlib}" >&5
- ac_lib_var=`echo ${termlib}'_'tputs | sed 'y%./+-%__p_%'`
 @@ -3443,7 +3443,7 @@
  		 USE_INCLUDED_LIBINTL=yes
  		 CATOBJEXT=.cat
  		 INSTOBJEXT=.cat
 -		 DATADIRNAME=lib
-+		 DATADIRNAME=share
++		 DATADIRNAME=${PKGLOCALEDIR}
  		 INTLDEPS='$(top_builddir)/intl/libintl.a'
  		 INTLLIBS=$INTLDEPS
  		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`

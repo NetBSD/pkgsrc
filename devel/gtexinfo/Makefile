@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/02/16 14:38:29 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2001/06/18 22:09:16 jlam Exp $
 #
 
 DISTNAME=		texinfo-3.12
@@ -10,15 +10,13 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/texinfo/texinfo.html
 COMMENT=		GNU info file manipulation utilities
 
-.include "../../mk/bsd.prefs.mk"
-.if (${OPSYS} == "SunOS")
-DEPENDS+=		zlib-1.*:../zlib
-CFLAGS+=		-I${PREFIX}/include             # zlib.h
-.endif
-
+USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-catgets
+CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 PLIST_SRC=      	${WRKDIR}/.PLIST_SRC
+
+.include "../../devel/zlib/buildlink.mk"
 
 .if exists(/usr/bin/install-info)
 IGNORE=			"${PKGNAME} is included with your NetBSD distribution"
