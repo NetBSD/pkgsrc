@@ -15,6 +15,9 @@ several components:
     names, MX records, etc. It supports asynchronous resolution.
   * The dnsfilter program is a parallel IP-address-to-host-name
     converter.
-  * The dnsip, dnsipq, dnsname, dnstxt, and dnsmx programs are simple
+  * The dnsip, dnsip6, dnsipq, dnsname, dnstxt, and dnsmx programs are simple
     command-line interfaces to DNS.
   * The dnsq and dnstrace programs are DNS debugging tools.
+
+This package includes IPv6 patches written by Fefe,
+see http://www.fefe.de/dns/ for more details.
