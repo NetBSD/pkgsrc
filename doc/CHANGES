@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1546 2003/03/04 20:06:21 seb Exp $
+$NetBSD: CHANGES,v 1.1547 2003/03/04 22:06:47 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -934,3 +934,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated aumix to 2.8 [wiz 2003-03-04]
 	Updated glib to 1.2.10nb4 [salo 2003-03-04]
 	Updated graphviz to 1.9nb1 [salo 2003-03-04]
+	Updated xemacs-packages to 1.11 [tron 2003-03-04]
