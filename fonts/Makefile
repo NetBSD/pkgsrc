@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/09/16 07:08:57 uebayasi Exp $
+# $NetBSD: Makefile,v 1.39 2002/09/16 08:42:08 jlam Exp $
 #
 
 COMMENT=	Fonts
@@ -14,6 +14,8 @@ SUBDIR+=	acroread5-chtfont
 SUBDIR+=	acroread5-font-share
 SUBDIR+=	acroread5-jpnfont
 SUBDIR+=	acroread5-korfont
+SUBDIR+=	adobe-cidfonts
+SUBDIR+=	adobe-cmaps
 SUBDIR+=	arphic-ttf
 SUBDIR+=	baekmuk-ttf
 SUBDIR+=	bakoma-fonts
@@ -37,6 +39,8 @@ SUBDIR+=	efont-unicode
 SUBDIR+=	freefonts
 SUBDIR+=	geoslab703-ttf
 SUBDIR+=	ghostscript-fonts
+SUBDIR+=	ghostscript-cidfonts
+SUBDIR+=	ghostscript-cmaps
 SUBDIR+=	intlfonts
 SUBDIR+=	jisx0208fonts
 SUBDIR+=	jisx0212fonts
