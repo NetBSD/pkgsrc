@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2005/02/24 23:04:31 minskim Exp $
+$NetBSD: distinfo,v 1.13 2005/02/24 23:07:34 minskim Exp $
 
 SHA1 (doomsrc.zip) = ffd07e0bd95b7c6ba0cd003fb6ff5ebd535d6f99
 RMD160 (doomsrc.zip) = c88e57b3cc72ca8bbfacbe138f8a3c69a13bf2e1
@@ -21,7 +21,7 @@ SHA1 (patch-al) = a3c5b2ae0a820010339c06655f53778e5edfd498
 SHA1 (patch-am) = 3b4606d1d040b8c9a9685ef66faf88598d64d3f2
 SHA1 (patch-an) = 2c146291dcacf250986a8a014dd1b0d69bb8f825
 SHA1 (patch-ao) = b2d0ae80d2832c0aac89da1a078afedd7d97362d
-SHA1 (patch-ap) = 14c78b5911fda030aa6d89426632ee0b42c4da96
+SHA1 (patch-ap) = fe23b3894de0a1c4e32b266377a420e329179beb
 SHA1 (patch-aq) = 83b21a11e8007ea04fbedf10330887469b48dbab
 SHA1 (patch-ar) = 9f7285b05baf484f6546cc6678088e02cd0ff7ea
 SHA1 (patch-as) = 8d56b0a78a6cedb3b1ad63d9418081fb0277cf3d
