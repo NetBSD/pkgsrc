@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/11/27 17:55:54 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2005/03/07 10:05:08 uebayasi Exp $
 #
 
 DISTNAME=	larswm-7.5.3
@@ -21,7 +21,7 @@ USE_IMAKE=	YES
 EGDIR=		${PREFIX}/share/examples/larswm
 CONF_FILES=	${EGDIR}/sample.larswmrc ${PKG_SYSCONFDIR}/larswmrc
 
-CPPFLAGS=	-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
+CPPFLAGS=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 post-patch:
 	@cd ${WRKSRC} &&					\

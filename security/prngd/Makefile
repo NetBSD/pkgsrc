@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/15 23:10:35 recht Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/07 10:03:13 uebayasi Exp $
 
 DISTNAME=		prngd-0.9.29
 CATEGORIES=		security
@@ -14,7 +14,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.aet.tu-cottbus.de/personen/jaenicke/postfix_tls/prngd.html
 COMMENT=		Pseudo Random Number Generator Daemon
 
-MAKE_ENV+=		DEFS="-DRANDSAVENAME=\\\"${VARBASE}/db/prngd-seed\\\" -DCONFIGFILE=\\\"${PKG_SYSCONFDIR}/prngd.conf\\\""
+MAKE_ENV+=		DEFS='-DRANDSAVENAME="\"${VARBASE}/db/prngd-seed\"" -DCONFIGFILE="\"${PKG_SYSCONFDIR}/prngd.conf\""'
 
 EGDIR=          ${PREFIX}/share/examples/prngd
 CONF_FILES=     ${EGDIR}/prngd.conf.netbsd ${PKG_SYSCONFDIR}/prngd.conf
