@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/03/22 03:39:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/12 10:23:24 wiz Exp $
 #
 
-DISTNAME=	getmail-3.1.1
+DISTNAME=	getmail-3.1.7
 CATEGORIES=	mail
 MASTER_SITES=	http://www.qcc.ca/~charlesc/software/getmail-3.0/ \
 		http://www.qcc.ca/~charlesc/software/getmail-3.0/old-versions/
@@ -24,16 +24,16 @@ OWN_DIRS+=	${PREFIX}/share/doc/html/getmail
 OWN_DIRS+=	${PREFIX}/libexec/getmail
 
 post-patch:
-	${SED} "s,/usr/lib,${PREFIX}/libexec," ${WRKSRC}/getmail	\
+	@${SED} "s,/usr/lib,${PREFIX}/libexec," ${WRKSRC}/getmail	\
 		> ${WRKSRC}/getmail.done1
-	${SED} "s,\`which python\`,${PYTHONBIN}," <${WRKSRC}/getmail.done1 \
+	@${SED} "s,\`which python\`,${PYTHONBIN}," <${WRKSRC}/getmail.done1 \
 		> ${WRKSRC}/getmail.done2
-	${MV} ${WRKSRC}/getmail.done2 ${WRKSRC}/getmail
-	${MV} ${WRKSRC}/getmail_maildir ${WRKSRC}/getmail_maildir.tmp
-	${SED} "s,/usr/lib,${PREFIX}/libexec," ${WRKSRC}/getmail_maildir.tmp \
+	@${MV} ${WRKSRC}/getmail.done2 ${WRKSRC}/getmail
+	@${MV} ${WRKSRC}/getmail_maildir ${WRKSRC}/getmail_maildir.tmp
+	@${SED} "s,/usr/lib,${PREFIX}/libexec," ${WRKSRC}/getmail_maildir.tmp \
 		> ${WRKSRC}/getmail_maildir
-	${MV} ${WRKSRC}/getmail_mbox ${WRKSRC}/getmail_mbox.tmp
-	${SED} "s,/usr/lib,${PREFIX}/libexec," ${WRKSRC}/getmail_mbox.tmp \
+	@${MV} ${WRKSRC}/getmail_mbox ${WRKSRC}/getmail_mbox.tmp
+	@${SED} "s,/usr/lib,${PREFIX}/libexec," ${WRKSRC}/getmail_mbox.tmp \
 		> ${WRKSRC}/getmail_mbox
 
 do-install:
