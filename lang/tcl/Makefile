@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2000/08/30 08:35:13 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/09/02 15:59:53 wiz Exp $
 #
 
 DISTNAME=		tcl8.3.2
 PKGNAME=		tcl-8.3.2
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.scriptics.com/pub/tcl/tcl8_3/ \
-			ftp://ftp.informatik.uni-hamburg.de/pub/soft/lang/tcl/tcl8_3/
+			ftp://gd.tuwien.ac.at/languages/tcl/scriptics/tcl8_3/ \
+			ftp://ftp.funet.fi/pub/languages/tcl/tcl/tcl8_3/ \
+			ftp://ftp.mpi-sb.mpg.de/pub/tcl/mirror/ftp.scriptics.com/tcl8_3/
 
 MAINTAINER=		jwise@netbsd.org
 HOMEPAGE=		http://www.tcltk.com/
