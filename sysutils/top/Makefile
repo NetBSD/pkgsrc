@@ -3,7 +3,7 @@
 # Date created:         25 Sep 1994
 # Whom:                 swallace
 #
-# $NetBSD: Makefile,v 1.6 1998/02/16 12:17:14 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/02/16 19:40:11 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/04/30 23:49:14 asami Exp
 #
 
@@ -15,6 +15,10 @@ MAINTAINER=	agc@netbsd.org
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	Configure
+
+MAKE_ENV+=	INSTALL_MAN="${INSTALL_MAN}" \
+		COPY="${COPY}" STRIPFLAG="${STRIPFLAG}"
+
 MAN1=			top.1
 
 OPSYS!= uname -s
@@ -35,8 +39,5 @@ pre-configure:
 	${CP} ${FILESDIR}/m_freebsd2.* ${WRKSRC}/machine
 .endif
 	chmod a-x ${WRKSRC}/install
-
-post-install:
-	strip ${PREFIX}/bin/top
 
 .include <bsd.port.mk>
