@@ -1,0 +1,11 @@
+--- configure.orig	Sat Mar 14 16:50:38 1998
++++ configure	Sun Mar 22 22:59:29 1998
+@@ -3946,7 +3946,7 @@
+ 
+ lexicographic_readdir=1
+ 
+-CFLAGS="$debug_flag $conversions_flag $verbose_flag $production_flag"
++CFLAGS="$CCFLAGS $conversions_flag $verbose_flag $production_flag"
+ GPROF_FLAGS="-pg"
+ GPROF_CFLAGS=""
+ EXTRACFLAGS=""
