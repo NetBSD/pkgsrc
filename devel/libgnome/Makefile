@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/02/09 18:47:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/11 01:04:37 xtraeme Exp $
 #
 
 DISTNAME=	libgnome-2.4.0
@@ -14,10 +14,10 @@ COMMENT=	Core GNOME2 library (non-graphical)
 DEPENDS=	docbook>=4.2:../../textproc/docbook
 BUILD_USES_MSGFMT=	YES
 
-BUILDLINK_DEPENDS.esound=	esound>=0.2.26
+BUILDLINK_DEPENDS.esound+=	esound>=0.2.26
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
@@ -54,15 +54,15 @@ GCONF2_SCHEMAS+=	desktop_gnome_thumbnailers.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_typing_break.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_url_handlers.schemas
 
-.include "../../audio/esound/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/glib2/buildlink2.mk"
+.include "../../audio/esound/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/libbonobo/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../sysutils/gnome-vfs2/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../textproc/libxslt/buildlink2.mk"
+.include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
