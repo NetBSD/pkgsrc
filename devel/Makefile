@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2000/03/03 22:36:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.110 2000/03/07 19:06:06 jlam Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -20,6 +20,7 @@
     SUBDIR += cxref
     SUBDIR += ddd
     SUBDIR += diffutils
+    SUBDIR += doc++
     SUBDIR += electricfence
     SUBDIR += ffcall
     SUBDIR += flex
