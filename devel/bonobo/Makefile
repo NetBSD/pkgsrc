@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/01/20 11:48:17 adam Exp $
+# $NetBSD: Makefile,v 1.49 2005/03/22 22:40:55 reed Exp $
 
 DISTNAME=	bonobo-1.0.22
 CATEGORIES=	devel
@@ -13,6 +13,7 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 BUILDLINK_DEPENDS.libxml=	libxml>1.8.15
 
+BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
