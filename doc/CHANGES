@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.521 2002/11/14 17:08:51 drochner Exp $
+$NetBSD: CHANGES,v 1.522 2002/11/14 19:15:41 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3620,3 +3620,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added zope25-ZWeather-0.0.1 [drochner 2002-11-14]
 	Added zope25-Photo-1.2.3 [drochner 2002-11-14]
 	Added zope25-CMFPlone-1.0beta3 [drochner 2002-11-14]
+	Updated xmame to 0.61.1 [kristerw 2002-11-14]
