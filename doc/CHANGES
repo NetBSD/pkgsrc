@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1490 2003/02/26 10:19:46 tron Exp $
+$NetBSD: CHANGES,v 1.1491 2003/02/26 14:01:53 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -845,3 +845,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ogle to 0.8.5nb2 [wiz 2003-02-26]
 	Updated ogle_gui to 0.8.5nb2 [wiz 2003-02-26]
 	Updated xemacs to 21.4.12nb2 [tron 2003-02-26]
+	Updated leafnode to 1.9.36 [cjep 2003-02-26]
