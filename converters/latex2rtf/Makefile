@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/04/11 07:21:15 snj Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/07 22:08:56 reed Exp $
 #
 
 DISTNAME=	latex2rtf-1.8aa
@@ -28,7 +28,7 @@ do-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/latex2rtf ${PREFIX}/bin/latex2rtf
 	${INSTALL_MAN} ${WRKSRC}/latex2rtf.1 ${PREFIX}/man/man1/latex2rtf.1
-	${INSTALL_DATA} ${WRKSRC}/doc/latex2rtf.info ${PREFIX}/info/latex2rtf.info
+	${INSTALL_DATA} ${WRKSRC}/doc/latex2rtf.info ${PREFIX}/${INFO_DIR}/latex2rtf.info
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/latex2rtf
 	${INSTALL_DATA} ${WRKSRC}/doc/l2r.html ${PREFIX}/share/doc/latex2rtf/latex2rtf.html
 	${INSTALL_DATA} ${WRKSRC}/doc/l2r.pdf ${PREFIX}/share/doc/latex2rtf/latex2rtf.pdf
