@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.734 2002/12/09 11:44:41 ad Exp $
+$NetBSD: CHANGES,v 1.735 2002/12/09 12:47:57 markd Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3874,3 +3874,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added dptutil-3.31 [ad 2002-12-09]
 	Updated exim to 4.10 [ad 2002-12-09]
 	Updated exim-html to 4.10 [ad 2002-12-09]
+	Updated ivtools to 1.0.7 [markd 2002-12-09]
