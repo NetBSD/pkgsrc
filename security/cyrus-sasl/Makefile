@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/08/25 18:39:50 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2002/09/07 07:37:37 jlam Exp $
 
 DISTNAME=		cyrus-sasl-1.5.27
 SVR4_PKGNAME=		csasl
@@ -10,8 +10,6 @@ MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://asg.web.cmu.edu/sasl/
 COMMENT=		Simple Authentication and Security Layer
-
-BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
@@ -84,12 +82,6 @@ INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 post-extract:
 	cd ${WRKSRC}; ${RM} -f include/md5.h
 	${CP} ${FILESDIR}/sasl-config.in ${WRKSRC}/plugins
-
-pre-configure:
-	cd ${WRKSRC};							\
-	${LOCALBASE}/bin/autoheader;					\
-	${LOCALBASE}/bin/automake --gnu;				\
-	${LOCALBASE}/bin/autoconf
 
 pre-install:
 	@for script in ${RCD_SCRIPTS}; do				\
