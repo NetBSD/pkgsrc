@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2004/10/29 10:32:54 tron Exp $
+# $NetBSD: Makefile,v 1.59 2004/11/09 06:11:48 xtraeme Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=		mysqs
@@ -36,14 +36,6 @@ BUILD_DIRS=		${WRKSRC} ${WRKSRC}/man
 
 .include "../../databases/mysql-client/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
-CFLAGS+=	-DSIGNALS_DONT_BREAK_READ
-CXXFLAGS+=	-DSIGNALS_DONT_BREAK_READ
-CONFIGURE_ENV+=	ac_cv_func_pthread_setschedparam=no
-CONFIGURE_ENV+=	ac_cv_func_pthread_attr_setschedparam=no
-.endif
 
 post-configure:
 	cd ${WRKSRC} && ${CP} -f config.h include/my_config.h

@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.10 2004/10/28 01:08:15 xtraeme Exp $
+$NetBSD: patch-aa,v 1.11 2004/11/09 06:11:48 xtraeme Exp $
 
---- Makefile.in.orig	2004-10-22 02:34:04.000000000 +0200
-+++ Makefile.in	2004-10-22 02:35:05.000000000 +0200
-@@ -279,12 +279,8 @@
+--- Makefile.in.orig	2004-11-09 06:53:52.000000000 +0100
++++ Makefile.in	2004-11-09 06:54:21.000000000 +0100
+@@ -280,12 +280,8 @@
  
  # These are built from source in the Docs directory
  EXTRA_DIST = INSTALL-SOURCE README COPYING EXCEPTIONS-CLIENT
 -SUBDIRS = . include @docs_dirs@ @readline_dir@ \
 -			@thread_dirs@ pstack @sql_client_dirs@ \
--			@sql_server_dirs@ scripts man tests \
+-			@sql_server_dirs@ scripts @man_dirs@ tests \
 -			BUILD netware os2 @libmysqld_dirs@ \
 -			@bench_dirs@ support-files @fs_dirs@ @tools_dirs@
 -
