@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/10/09 12:34:13 agc Exp $
+# $NetBSD: Makefile,v 1.4 1997/11/05 13:40:16 agc Exp $
 # New ports collection makefile for:   xmascot
 # Version required:    2.5p2
 # Date created:        20 November 1996
@@ -18,7 +18,7 @@ OPSYS!=		uname -s
 
 USE_GMAKE=	yes
 USE_IMAKE=	yes
-MAN1=		xmascot.1
+CAT1=		xmascot.0
 
 .if (${OPSYS} != "NetBSD")
 MANCOMPRESSED=	yes
