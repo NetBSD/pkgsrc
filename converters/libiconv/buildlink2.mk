@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.16 2004/02/11 12:17:58 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.17 2004/02/12 01:59:37 jlam Exp $
 
 .if !defined(ICONV_BUILDLINK2_MK)
 ICONV_BUILDLINK2_MK=	# defined
@@ -8,33 +8,38 @@ ICONV_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.iconv?=	libiconv>=1.9.1
 BUILDLINK_PKGSRCDIR.iconv?=	../../converters/libiconv
 
-.if defined(USE_GNU_ICONV)
-_NEED_ICONV=		YES
-_BLNK_LIBICONV_FOUND=	NO
-.else
-.  if exists(/usr/include/iconv.h)
-_NEED_ICONV=		NO
+.if exists(/usr/include/iconv.h)
+_BUILTIN_ICONV=		YES
 _BLNK_LIBICONV_LIST!=	${ECHO} /usr/lib/libiconv.*
-.    if ${_BLNK_LIBICONV_LIST} != "/usr/lib/libiconv.*"
+.  if ${_BLNK_LIBICONV_LIST} != "/usr/lib/libiconv.*"
 _BLNK_LIBICONV_FOUND=	YES
-.    else
-_BLNK_LIBICONV_FOUND=	NO
-.    endif
 .  else
-_NEED_ICONV=		YES
 _BLNK_LIBICONV_FOUND=	NO
 .  endif
+.else
+_BUILTIN_ICONV=		NO
+_BLNK_LIBICONV_FOUND=	NO
+.endif
 _INCOMPAT_ICONV?=	# should be set from defs.${OPSYS}.mk
-INCOMPAT_ICONV?=	# empty
-.  for _pattern_ in ${_INCOMPAT_ICONV} ${INCOMPAT_ICONV}
-.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+.for _pattern_ in ${_INCOMPAT_ICONV} ${INCOMPAT_ICONV}
+.  if !empty(MACHINE_PLATFORM:M${_pattern_})
+_BUILTIN_ICONV=		NO
+_BLNK_LIBICONV_FOUND=	NO
+.  endif
+.endfor
+
+.if ${_BUILTIN_ICONV} == "YES"
+_NEED_ICONV=		NO
+.else
 _NEED_ICONV=		YES
-.    endif
-.  endfor
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
     !empty(PREFER_PKGSRC:Miconv)
+_NEED_ICONV=		YES
+.endif
+
+.if defined(USE_GNU_ICONV)
 _NEED_ICONV=		YES
 .endif
 

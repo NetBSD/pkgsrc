@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2004/02/12 01:59:38 jlam Exp $
 
 .if !defined(PAM_BUILDLINK2_MK)
 PAM_BUILDLINK2_MK=	# defined
@@ -9,6 +9,12 @@ BUILDLINK_DEPENDS.pam?=		PAM>=0.75
 BUILDLINK_PKGSRCDIR.pam?=	../../security/PAM
 
 .if exists(/usr/include/security/pam_appl.h)
+_BUILTIN_PAM=		YES
+.else
+_BUILTIN_PAM=		NO
+.endif
+
+.if ${_BUILTIN_PAM} == "YES"
 _NEED_PAM=		NO
 .else
 _NEED_PAM=		YES

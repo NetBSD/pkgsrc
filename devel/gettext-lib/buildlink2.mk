@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.28 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.29 2004/02/12 01:59:37 jlam Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
@@ -8,46 +8,51 @@ GETTEXT_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.gettext?=	gettext-lib>=0.10.35nb1
 BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
 
-.if defined(USE_GNU_GETTEXT)
-_NEED_GNU_GETTEXT=	YES
-_BLNK_LIBINTL_FOUND=	NO
-.else
+.if exists(/usr/include/libintl.h)
+#
+# Consider the base system libintl to be gettext-lib-0.10.35nb1.
+#
+_GETTEXT_PKG=		gettext-lib-0.10.35nb1
+_GETTEXT_DEPENDS=	${BUILDLINK_DEPENDS.gettext}
+_BUILTIN_GETTEXT!= 	\
+	if ${PKG_ADMIN} pmatch '${_GETTEXT_DEPENDS}' ${_GETTEXT_PKG}; then \
+		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
+	fi
 _BLNK_LIBINTL_LIST!=	${ECHO} /usr/lib/libintl.*
 .  if ${_BLNK_LIBINTL_LIST} != "/usr/lib/libintl.*"
 _BLNK_LIBINTL_FOUND=	YES
 .  else
 _BLNK_LIBINTL_FOUND=	NO
 .  endif
-.  if exists(/usr/include/libintl.h)
+.else
+_BUILTIN_GETTEXT=	NO
+_BLNK_LIBINTL_FOUND=	NO
+.endif
 #
-# Consider the base system libintl to be gettext-lib-0.10.35nb1.
-#
-_GETTEXT_PKG=		gettext-lib-0.10.35nb1
-_GETTEXT_DEPENDS=	${BUILDLINK_DEPENDS.gettext}
-_NEED_GNU_GETTEXT!= \
-	if ${PKG_ADMIN} pmatch '${_GETTEXT_DEPENDS}' ${_GETTEXT_PKG}; then \
-		${ECHO} "NO";						\
-	else								\
-		${ECHO} "YES";						\
-	fi
-.  else
-_NEED_GNU_GETTEXT=	YES
-.  endif
-#
-# Solaris has broken (for the purposes of pkgsrc) version of zlib and
-# gettext.
+# Solaris has broken (for the purposes of pkgsrc) version of gettext.
 #
 _INCOMPAT_GETTEXT=	SunOS-*-*
-INCOMPAT_GETTEXT?=	# empty
-.  for _pattern_ in ${_INCOMPAT_GETTEXT} ${INCOMPAT_GETTEXT}
-.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+.for _pattern_ in ${_INCOMPAT_GETTEXT} ${INCOMPAT_GETTEXT}
+.  if !empty(MACHINE_PLATFORM:M${_pattern_})
+_BUILTIN_GETTEXT=	NO
+_BLNK_LIBINTL_FOUND=	NO
+.  endif
+.endfor
+
+.if ${_BUILTIN_GETTEXT} == "YES"
+_NEED_GNU_GETTEXT=	NO
+.else
 _NEED_GNU_GETTEXT=	YES
-.    endif
-.  endfor
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
     !empty(PREFER_PKGSRC:Mgettext)
+_NEED_GNU_GETTEXT=	YES
+.endif
+
+.if defined(USE_GNU_GETTEXT)
 _NEED_GNU_GETTEXT=	YES
 .endif
 

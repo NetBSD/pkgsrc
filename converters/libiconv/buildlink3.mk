@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2004/02/11 12:17:58 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2004/02/12 01:59:37 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ICONV_BUILDLINK3_MK:=	${ICONV_BUILDLINK3_MK}+
@@ -20,12 +20,20 @@ BUILDLINK_IS_BUILTIN.iconv=	NO
 .  if exists(${_ICONV_H})
 BUILDLINK_IS_BUILTIN.iconv=	YES
 .  endif
+.  if !empty(BUILDLINK_CHECK_BUILTIN.iconv:M[nN][oO])
 _INCOMPAT_ICONV?=	# should be set from defs.${OPSYS}.mk
-.  for _pattern_ in ${_INCOMPAT_ICONV} ${INCOMPAT_ICONV}
-.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+.    for _pattern_ in ${_INCOMPAT_ICONV} ${INCOMPAT_ICONV}
+.      if !empty(MACHINE_PLATFORM:M${_pattern_})
 BUILDLINK_IS_BUILTIN.iconv=	NO
-.    endif
-.  endfor
+.      endif
+.    endfor
+.  endif
+.endif
+
+.if !empty(BUILDLINK_IS_BUILTIN.iconv:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.iconv=	YES
+.else
+BUILDLINK_USE_BUILTIN.iconv=	NO
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
@@ -39,15 +47,6 @@ BUILDLINK_USE_BUILTIN.iconv=	NO
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.iconv:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.iconv=	YES
-.endif
-
-.if !defined(BUILDLINK_USE_BUILTIN.iconv)
-.  if !empty(BUILDLINK_IS_BUILTIN.iconv:M[nN][oO])
-BUILDLINK_USE_BUILTIN.iconv=	NO
-.  else
-BUILDLINK_USE_BUILTIN.iconv=	YES
-.  endif
-MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.iconv=${BUILDLINK_USE_BUILTIN.iconv}
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.iconv:M[nN][oO])

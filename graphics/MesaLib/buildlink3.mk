@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2004/02/11 02:03:41 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2004/02/12 01:59:38 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
@@ -47,14 +47,43 @@ _X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
 .if !defined(BUILDLINK_IS_BUILTIN.MesaLib)
 BUILDLINK_IS_BUILTIN.MesaLib=	NO
 .  if exists(${_GL_GLX_H}) && exists(${_X11_TMPL})
-BUILDLINK_IS_BUILTIN.MesaLib!=						\
+_IS_BUILTIN.MesaLib!=							\
 	if ${GREP} -q BuildGLXLibrary ${_X11_TMPL}; then		\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
+BUILDLINK_IS_BUILTIN.MesaLib=	${_IS_BUILTIN.MesaLib}
+.    if !empty(BUILDLINK_CHECK_BUILTIN.MesaLib:M[nN][oO]) && \
+        !empty(_IS_BUILTIN.MesaLib:M[yY][eE][sS])
+#
+# Create an appropriate package name for the built-in Mesa/GLX distributed
+# with the system.  This package name can be used to check against
+# BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc version
+# or if the built-in one is sufficient.
+#
+.      include "../../graphics/Mesa/version.mk"
+_MESALIB_PKG=		MesaLib-${_MESA_VERSION}
+BUILDLINK_IS_BUILTIN.MesaLib?=	YES
+.      for _depend_ in ${BUILDLINK_DEPENDS.MesaLib}
+.        if !empty(BUILDLINK_IS_BUILTIN.MesaLib:M[yY][eE][sS])
+BUILDLINK_IS_BUILTIN.MesaLib!=	\
+	if ${PKG_ADMIN} pmatch '${_depend_}' ${_MESALIB_PKG}; then	\
+		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
+	fi
+.        endif
+.      endfor
+.    endif
 .  endif
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.MesaLib=${BUILDLINK_IS_BUILTIN.MesaLib}
+.endif
+
+.if !empty(BUILDLINK_IS_BUILTIN.MesaLib:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.MesaLib=	YES
+.else
+BUILDLINK_USE_BUILTIN.MesaLib=	NO
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
@@ -65,34 +94,6 @@ BUILDLINK_USE_BUILTIN.MesaLib=	NO
 .if !empty(BUILDLINK_CHECK_BUILTIN.MesaLib:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.MesaLib=	YES
 .endif
-
-.if !defined(BUILDLINK_USE_BUILTIN.MesaLib)
-.  if !empty(BUILDLINK_IS_BUILTIN.MesaLib:M[nN][oO])
-BUILDLINK_USE_BUILTIN.MesaLib=	NO
-.  else
-#
-# Create an appropriate package name for the built-in Mesa/GLX distributed
-# with the system.  This package name can be used to check against
-# BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc version
-# or if the built-in one is sufficient.
-#
-.    include "../../graphics/Mesa/version.mk"
-_MESALIB_PKG=		MesaLib-${_MESA_VERSION}
-BUILDLINK_USE_BUILTIN.MesaLib?=	YES
-.    for _depend_ in ${BUILDLINK_DEPENDS.MesaLib}
-.      if !empty(BUILDLINK_USE_BUILTIN.MesaLib:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.MesaLib!=	\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${_MESALIB_PKG}; then	\
-		${ECHO} "YES";						\
-	else								\
-		${ECHO} "NO";						\
-	fi
-.      endif
-.    endfor
-.  endif
-MAKEFLAGS+=	\
-	BUILDLINK_USE_BUILTIN.MesaLib=${BUILDLINK_USE_BUILTIN.MesaLib}
-.endif	# BUILDLINK_USE_BUILTIN.MesaLib
 
 .if !empty(BUILDLINK_USE_BUILTIN.MesaLib:M[nN][oO])
 #

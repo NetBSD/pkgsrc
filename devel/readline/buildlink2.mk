@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/02/12 01:59:38 jlam Exp $
 #
 # Optionally define USE_GNU_READLINE to force use of GNU readline.
 #
@@ -13,31 +13,36 @@ READLINE_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.readline?=	readline>=2.2
 BUILDLINK_PKGSRCDIR.readline?=	../../devel/readline
 
-.if defined(USE_GNU_READLINE)
-_NEED_GNU_READLINE=	YES
+.if exists(/usr/include/readline.h) || \
+    exists(/usr/include/readline/readline.h)
+_BUILTIN_READLINE=	YES
 .else
-.  if exists(/usr/include/readline.h) || \
-      exists(/usr/include/readline/readline.h)
-_NEED_GNU_READLINE=	NO
-.  else
-_NEED_GNU_READLINE=	YES
-.  endif
+_BUILTIN_READLINE=	NO
+.endif
 #
 # This catch-all for SunOS is probably too broad, but better to err on
 # the safe side.  We can narrow down the match when we have better
 # information.
 #
 _INCOMPAT_READLINE=	SunOS-*-*
-INCOMPAT_READLINE?=	# empty
-.  for _pattern_ in ${_INCOMPAT_READLINE} ${INCOMPAT_READLINE}
-.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+.for _pattern_ in ${_INCOMPAT_READLINE} ${INCOMPAT_READLINE}
+.  if !empty(MACHINE_PLATFORM:M${_pattern_})
+_BUILTIN_READLINE=	NO
+.  endif
+.endfor
+
+.if ${_BUILTIN_READLINE} == "YES"
+_NEED_GNU_READLINE=	NO
+.else
 _NEED_GNU_READLINE=	YES
-.    endif
-.  endfor
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
     !empty(PREFER_PKGSRC:Mreadline)
+_NEED_GNU_READLINE=	YES
+.endif
+
+.if defined(USE_GNU_READLINE)
 _NEED_GNU_READLINE=	YES
 .endif
 
@@ -46,9 +51,9 @@ BUILDLINK_PACKAGES+=		readline
 EVAL_PREFIX+=			BUILDLINK_PREFIX.readline=readline
 BUILDLINK_PREFIX.readline_DEFAULT=	${LOCALBASE}
 .else
-BUILDLINK_PREFIX.readline=		/usr
+BUILDLINK_PREFIX.readline=	/usr
 .endif
-BUILDLINK_PREFIX.history=		${BUILDLINK_PREFIX.readline}
+BUILDLINK_PREFIX.history=	${BUILDLINK_PREFIX.readline}
 
 BUILDLINK_FILES.readline=	include/readline.h
 BUILDLINK_FILES.readline+=	include/readline/*

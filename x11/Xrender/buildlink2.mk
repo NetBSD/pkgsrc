@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2004/02/12 01:59:38 jlam Exp $
 
 .if !defined(XRENDER_BUILDLINK2_MK)
 XRENDER_BUILDLINK2_MK=	# defined
@@ -15,19 +15,10 @@ _REQUIRE_BUILTIN_XRENDER?=	NO
 
 _RENDER_H=		${X11BASE}/include/X11/extensions/render.h
 _X11_TMPL=		${X11BASE}/lib/X11/config/X11.tmpl
-.if exists(${_RENDER_H}) && exists(${_X11_TMPL})
-_IS_BUILTIN_XRENDER!= ${GREP} -c BuildRenderLibrary ${_X11_TMPL} || ${TRUE}
-.else
-_IS_BUILTIN_XRENDER=	0
-.endif
 
-.if !empty(_REQUIRE_BUILTIN_XRENDER:M[yY][eE][sS])
-_NEED_XRENDER=	NO
-.else
-.  if ${_IS_BUILTIN_XRENDER} == "0"
-_NEED_XRENDER=	YES
-.  else
-#
+.if !defined(_BUILTIN_XRENDER)
+_BUILTIN_XRENDER=	NO
+.  if exists(${_RENDER_H}) && exists(${_X11_TMPL})
 # Create an appropriate Xrender package name for the built-in Xrender
 # distributed with XFree86 4.x.  This package name can be used to check
 # against BUILDLINK_DEPENDS.Xrender to see if we need to install the
@@ -40,22 +31,37 @@ _XRENDER_MINOR!= \
 _XRENDER_VERSION=	${_XRENDER_MAJOR}${_XRENDER_MINOR}
 _XRENDER_PKG=		Xrender-${_XRENDER_VERSION}
 _XRENDER_DEPENDS=	${BUILDLINK_DEPENDS.Xrender}
-_NEED_XRENDER!= \
+_BUILTIN_XRENDER!= \
 	if ${PKG_ADMIN} pmatch '${_XRENDER_DEPENDS}' ${_XRENDER_PKG}; then \
-		${ECHO} "NO";						\
+		if ${GREP} -q BuildRenderLibrary ${_X11_TMPL}; then	\
+			${ECHO} "YES";					\
+		else							\
+			${ECHO} "NO";					\
+		fi;							\
 	else								\
-		${ECHO} "YES";						\
+		${ECHO} "NO";						\
 	fi
 .  endif
+MAKEFLAGS+=	_BUILTIN_XRENDER=${_BUILTIN_XRENDER}
 .endif
 
-BUILDLINK_FILES.Xrender=	include/X11/extensions/Xrender.h
-BUILDLINK_FILES.Xrender+=	lib/libXrender.*
+.if !empty(_BUILTIN_XRENDER:M[yY][eE][sS])
+_NEED_XRENDER=	NO
+.else
+_NEED_XRENDER=	YES
+.endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
     !empty(PREFER_PKGSRC:MXrender)
 _NEED_XRENDER=	YES
 .endif
+
+.if !empty(_REQUIRE_BUILTIN_XRENDER:M[yY][eE][sS])
+_NEED_XRENDER=	NO
+.endif
+
+BUILDLINK_FILES.Xrender=	include/X11/extensions/Xrender.h
+BUILDLINK_FILES.Xrender+=	lib/libXrender.*
 
 .if ${_NEED_XRENDER} == "YES"
 BUILDLINK_PACKAGES+=			Xrender

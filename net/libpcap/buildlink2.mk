@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/02/12 01:59:38 jlam Exp $
 
 .if !defined(LIBPCAP_BUILDLINK2_MK)
 LIBPCAP_BUILDLINK2_MK=	# defined
@@ -9,9 +9,15 @@ BUILDLINK_DEPENDS.libpcap?=	libpcap>=0.7.2
 BUILDLINK_PKGSRCDIR.libpcap?=	../../net/libpcap
 
 .if exists(/usr/include/pcap.h)
-_NEED_LIBPCAP=		NO
+_BUILTIN_LIBPCAP=	YES
 .else
-_NEED_LIBPCAP=		YES
+_BUILTIN_LIBPCAP=	NO
+.endif
+
+.if ${_BUILTIN_LIBPCAP} == "YES"
+_NEED_LIBPCAP=	NO
+.else
+_NEED_LIBPCAP=	YES
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \

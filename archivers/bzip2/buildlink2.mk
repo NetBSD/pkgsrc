@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2004/02/12 01:59:37 jlam Exp $
 
 .if !defined(BZIP2_BUILDLINK2_MK)
 BZIP2_BUILDLINK2_MK=	# defined
@@ -8,37 +8,32 @@ BZIP2_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.bzip2?=	bzip2>=1.0.1
 BUILDLINK_PKGSRCDIR.bzip2?=	../../archivers/bzip2
 
-.if defined(USE_BZIP2)
-_NEED_BZIP2=		YES
-.else
-.  if exists(/usr/include/bzlib.h)
+.if exists(/usr/include/bzlib.h)
 #
 # Recent versions of the libbz2 API prefix all functions with "BZ2_".
 #
 _BUILTIN_BZIP2!=	${EGREP} -c "BZ2_" /usr/include/bzlib.h || ${TRUE}
-.  else
+.else
 _BUILTIN_BZIP2=		0
-.  endif
-.  if ${_BUILTIN_BZIP2} == "0"
-_NEED_BZIP2=		YES
-.  else
-_NEED_BZIP2=		NO
-.  endif
+.endif
 #
 # Solaris 9 has bzip2 1.0.1, build it on older versions.
 # Darwin only has static libbz2.a, which can't be buildlinked
 #
 _INCOMPAT_BZIP2=	SunOS-5.[678]-* Darwin-*
-INCOMPAT_BZIP2?=	# empty
-.  for _pattern_ in ${_INCOMPAT_BZIP2} ${INCOMPAT_BZIP2}
-.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+.for _pattern_ in ${_INCOMPAT_BZIP2} ${INCOMPAT_BZIP2}
+.  if !empty(MACHINE_PLATFORM:M${_pattern_})
+_BUILTIN_BZIP2=		0
+.  endif
+.endfor
+
+.if ${_BUILTIN_BZIP2} == "0"
 _NEED_BZIP2=		YES
-.    endif
-.  endfor
+.else
+_NEED_BZIP2=		NO
 .endif
 
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mbzip2)
+.if defined(USE_BZIP2)
 _NEED_BZIP2=		YES
 .endif
 
