@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2003/09/24 10:14:12 xtraeme Exp $
+$NetBSD: distinfo,v 1.13 2003/10/26 08:17:15 wiz Exp $
 
-SHA1 (naim-0.11.6.1.tar.bz2) = 742a7d49a07fcb37abd566c0a8a7f6ee9057a91b
-Size (naim-0.11.6.1.tar.bz2) = 530064 bytes
+SHA1 (naim-0.11.6.2.tar.bz2) = 9a1a75173d8fa5afb309c10bcd034ddbbc96845a
+Size (naim-0.11.6.2.tar.bz2) = 534509 bytes
