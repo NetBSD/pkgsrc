@@ -1,4 +1,4 @@
-$NetBSD: patch-sum,v 1.3 2001/03/14 22:14:18 skrll Exp $
+$NetBSD: patch-sum,v 1.4 2001/03/15 17:58:48 skrll Exp $
 
 SHA1 (patch-aa) = 69618f1b6542f66b99922f6f0c00ea777597a6f8
 SHA1 (patch-ab) = 06386d9f87a4782265b00375f4847517be48c1fc
@@ -8,7 +8,7 @@ SHA1 (patch-ae) = 1d39b67f5d2a4cc23cf0cc4a74622adb86ec3492
 SHA1 (patch-af) = b91246a123ade7fc354308839e1363a4ee513c7f
 SHA1 (patch-ag) = 1666f52f9d31f972c49879d8f314c7f93fd992d4
 SHA1 (patch-ah) = d30d837719e8bbdf4bc6f5ff377d6febcd85c502
-SHA1 (patch-ai) = 4a1df296ca58cb6ef4362d591daf049302216ec1
+SHA1 (patch-ai) = 2681287d8817be3d95f97abba834c906b1226c96
 SHA1 (patch-aj) = 3233b247a68a4184a6e85630a6718bd7f2978d67
 SHA1 (patch-ak) = 923b3cb036f5c6e8024dd432138b29ddf203a84c
 SHA1 (patch-al) = 8f8d0ebd8691d73b1ab9c3328e73a81b56c9e47b
