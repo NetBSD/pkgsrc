@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/07/30 21:05:42 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/08/22 19:32:52 jlam Exp $
 
 DISTNAME=	krb5-1.3.4
 PKGNAME=	mit-${DISTNAME}
@@ -54,13 +54,8 @@ CONFIGURE_ARGS+=	--without-krb4
 CONFIGURE_ARGS+=	--without-tcl
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
 
-# Global and legacy options
-.if defined(KERBEROS_PREFIX_CMDS)
-.  if !defined(PKG_OPTIONS.mit-krb5)
-.    if defined(KERBEROS_PREFIX_CMDS) && !empty(KERBEROS_PREFIX_CMDS:M[yY][eE][sS])
-PKG_OPTIONS.mit-krb5+=	prefix-cmds
-.    endif
-.  endif
+.if defined(KERBEROS_PREFIX_CMDS) && !empty(KERBEROS_PREFIX_CMDS:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	prefix-cmds
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mit-krb5

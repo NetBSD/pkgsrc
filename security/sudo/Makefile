@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2004/07/30 21:05:42 jlam Exp $
+# $NetBSD: Makefile,v 1.65 2004/08/22 19:32:52 jlam Exp $
 #
 
 DISTNAME=		sudo-1.6.7p5
@@ -30,13 +30,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-skey
 .elif ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--without-skey
-.endif
-
-# Global and legacy options
-.if defined(KERBEROS)
-.  if !defined(PKG_OPTIONS.sudo)
-PKG_OPTIONS.sudo+=	kerberos
-.  endif
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sudo
