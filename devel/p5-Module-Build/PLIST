@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/21 16:15:38 kim Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/29 11:51:23 grant Exp $
 ${PERL5_SITELIB}/Module/Build.pm
 ${PERL5_SITELIB}/Module/Build/Base.pm
 ${PERL5_SITELIB}/Module/Build/PPMMaker.pm
@@ -15,3 +15,5 @@ ${PERL5_SITELIB}/Module/Build/Platform/MacOS.pm
 ${PERL5_SITELIB}/Module/Build/Platform/VOS.pm
 ${PERL5_SITELIB}/Module/Build/Platform/RiscOS.pm
 ${PERL5_SITELIB}/Module/Build/Platform/Default.pm
+@dirrm ${PERL5_SITELIB}/Module/Build/Platform
+@dirrm ${PERL5_SITELIB}/Module/Build
