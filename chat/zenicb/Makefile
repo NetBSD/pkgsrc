@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/27 23:17:49 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.5 2002/04/26 09:36:57 tron Exp $
 
 DISTNAME=		zenicb-19981202
 CATEGORIES=		chat
@@ -17,6 +16,8 @@ EMACS=			xemacs
 DEPENDS+=		xemacs-[1-9]*:../../editors/xemacs
 MAKEFLAGS+=		USE_XEMACS=${USE_XEMACS}
 ELISPDIR=		lib/xemacs/xemacs-packages/lisp
+
+.include "../../editors/xemacs/Makefile.pkg"
 .else
 EMACS=			emacs
 DEPENDS+=		emacs-[0-9]*:../../editors/emacs
