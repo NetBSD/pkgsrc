@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.22 2005/01/10 08:59:07 jlam Exp $
+# $NetBSD: ccache.mk,v 1.23 2005/01/10 19:38:53 jlam Exp $
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	defined
@@ -42,14 +42,14 @@ _CCACHE_VARS=	# empty
 PKG_CC?=	${CC}
 _CCACHE_VARS+=	CC
 _CCACHE_CC:=	${_CCACHE_DIR}/bin/${PKG_CC:T}
-_ALIASES.CC?=	cc
+_ALIASES.CC+=	cc
 PKG_CC:=	${_CCACHE_CC}
 .  endif
 .  if !empty(_LANGUAGES.ccache:Mc++)
 PKG_CXX?=	${CXX}
 _CCACHE_VARS+=	CXX
 _CCACHE_CXX:=	${_CCACHE_DIR}/bin/${PKG_CXX:T}
-_ALIASES.CXX?=	c++
+_ALIASES.CXX+=	c++
 PKG_CXX:=	${_CCACHE_CXX}
 .  endif
 
