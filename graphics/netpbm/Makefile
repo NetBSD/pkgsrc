@@ -3,7 +3,7 @@
 # Date created:		20 December 1997
 # Whom:			jmz (original), asami@FreeBSD.ORG, tron
 #
-# $NetBSD: Makefile,v 1.11 1998/01/30 13:57:06 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/02/25 01:40:47 tron Exp $
 #
 
 DISTNAME=	netpbm
@@ -24,7 +24,7 @@ LIB_DEPENDS=	jpeg.7.:${PORTSDIR}/graphics/jpeg \
 		tiff.3.:${PORTSDIR}/graphics/tiff
 
 WRKSRC=		${WRKDIR}/netpbm
-MAKE_ENV +=	PREFIX=${PREFIX}
+MAKE_ENV +=	PREFIX=${PREFIX} INSTALL_MAN="${INSTALL_MAN}"
 
 MAN1=	atktopbm.1 g3topbm.1 brushtopbm.1 cmuwmtopbm.1 \
 	icontopbm.1 gemtopbm.1 macptopbm.1 mgrtopbm.1 \
