@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/03/16 02:01:12 taca Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/24 22:21:39 snj Exp $
 # FreeBSD: ports/x11-toolkits/ruby-gtk/Makefile,v 1.16 2000/10/15 15:45:59 knu Exp
 
 DISTNAME=	ruby-gtk-0.25
@@ -12,7 +12,7 @@ HOMEPAGE=	http://ruby-gnome.sourceforge.net/
 COMMENT=	Ruby interface to Gtk+ toolkits
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/ruby-//}
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 DIST_SUBDIR=	ruby
 USE_RUBY_EXTCONF= yes
@@ -37,8 +37,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/sample/testgtk/* \
 		${RUBY_EXAMPLESDIR}/gtk/testgtk
 
-.include "../../lang/ruby-base/buildlink2.mk"
-.include "../../graphics/imlib/buildlink2.mk"
+.include "../../lang/ruby-base/buildlink3.mk"
+.include "../../graphics/imlib/buildlink3.mk"
 
 .include "../../lang/ruby-base/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
