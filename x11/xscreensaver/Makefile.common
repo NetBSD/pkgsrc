@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.78 2005/03/21 12:33:26 wiz Exp $
+# $nETbsd: Makefile.common,v 1.75 2004/05/15 13:13:19 wiz Exp $
 #
 
-DISTNAME=		xscreensaver-4.18
+DISTNAME=		xscreensaver-4.21
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.fu-berlin.de/unix/X11/graphics/xscreensaver/ \
 			${HOMEPAGE}
@@ -34,20 +34,12 @@ CONFIGURE_ENV+=		INTLTOOL_PERL="${PERL5}"
 CONFIGURE_ENV+=		X_CFLAGS="-DPKGREVISION=${PKGREVISION}"
 .endif
 CONFIGURE_ARGS+=	ac_cv_path_INTLTOOL_PERL="${PERL5}"
-MAKE_ENV+=		KDEDIR=${PREFIX}
 
 DISTINFO_FILE=		${.CURDIR}/../../x11/xscreensaver/distinfo
 FILESDIR=		${.CURDIR}/../../x11/xscreensaver/files
 PATCHDIR=		${.CURDIR}/../../x11/xscreensaver/patches
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "FreeBSD"
-PLIST_SUBST+=		AVAILABLE="@comment "
-CONFIGURE_ARGS+=	--without-kerberos
-.else
-PLIST_SUBST+=		AVAILABLE=
-.endif
 
 .ifndef (PERL_VERSION)
 PERL_VERSION!=		if [ -x ${PERL5} ]; then ${PERL5} -e 'print $$]'; else ${ECHO} "5.006"; fi
