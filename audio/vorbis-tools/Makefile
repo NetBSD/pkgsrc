@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/02/14 17:21:34 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/19 10:47:28 wiz Exp $
 
 DISTNAME=	vorbis-tools-1.0.1
 CATEGORIES=	audio
@@ -13,7 +13,7 @@ BUILD_DEFS+=	USE_INET6
 
 CONFLICTS=	vorbis-[0-9]*
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -25,13 +25,13 @@ PLIST_SUBST+=	DISTNAME="${DISTNAME}"
 
 PTHREAD_OPTS+=	require
 
-.include "../../audio/flac/buildlink2.mk"
-.include "../../audio/libao/buildlink2.mk"
-.include "../../audio/libogg/buildlink2.mk"
-.include "../../audio/libvorbis/buildlink2.mk"
-.include "../../audio/speex/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../www/curl/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../audio/flac/buildlink3.mk"
+.include "../../audio/libao/buildlink3.mk"
+.include "../../audio/libogg/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/speex/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
