@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/03/14 20:02:44 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2002/03/14 23:34:52 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/22 22:16:53 gj Exp
 
 DISTNAME=	xemacs-packages
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/packages/ \
 		ftp://ftp.usyd.edu.au/pub/Xemacs/packages/ \
 		ftp://ftp.lab.kdd.co.jp/xemacs/packages/ \
 		ftp://ftp.th-darmstadt.de/pub/editors/xemacs/packages/ \
-		${MASTER_SITE_BACKUP}/${DIST_SUBDIR:S/nb1//}
+		${MASTER_SITE_BACKUP}/${DIST_SUBDIR}
 DISTFILES=	xemacs-base-1.57-pkg.tar.gz xemacs-devel-1.40-pkg.tar.gz \
 		c-support-1.16-pkg.tar.gz cc-mode-1.27-pkg.tar.gz \
 		debug-1.14-pkg.tar.gz dired-1.11-pkg.tar.gz \
@@ -32,7 +32,7 @@ COMMENT=	Common elisp packages for xemacs 21
 
 DEPENDS+=	xemacs>=21.1.14:../../editors/xemacs
 
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME:S/nb1//}
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
