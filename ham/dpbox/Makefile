@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 15:13:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/06/07 15:20:30 jmmv Exp $
 #
 
 DISTNAME=	dpbox-60000
@@ -13,6 +13,8 @@ COMMENT=	Multi-Protocol Amateur Packet Radio BBS
 
 USE_GMAKE=	yes
 MAKEFILE=	Makefile.netbsd
+
+MAKE_ENV+=	prefix="${PREFIX}"
 
 .include "../../mk/bsd.prefs.mk"
 
