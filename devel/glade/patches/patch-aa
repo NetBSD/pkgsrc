@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2000/11/09 17:59:52 mycroft Exp $
+
+--- configure.orig	Sun Oct  1 12:40:47 2000
++++ configure	Thu Nov  9 17:52:48 2000
+@@ -4490,6 +4490,10 @@
+ 
+ 
+ 
++# Set DATADIRNAME to "${LOCALEBASE}"
++DATADIRNAME="${LOCALEBASE}"
++INTLDEPS=
++INTLLIBS="-lintl"
+ 
+ trap '' 1 2 15
+ cat > confcache <<\EOF
