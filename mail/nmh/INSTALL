@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2001/11/01 01:00:41 zuntum Exp $
+# $NetBSD: INSTALL,v 1.2 2002/07/10 01:44:41 kim Exp $
 #
 
 PKGNAME=$1
@@ -33,6 +33,9 @@ Some files you might need to customize include the following:
 
     ${PKG_PREFIX}/etc/nmh/mhn.defaults
     ${PKG_PREFIX}/etc/nmh/mts.conf
+
+In particular, edit mts.conf to point to an available SMTP
+server if you are not running one locally.
 
 =============================================================
 EOF
