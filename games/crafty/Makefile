@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2001/01/14 04:42:43 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/08 17:23:46 jlam Exp $
 
-DISTNAME=		crafty-18.1
+DISTNAME=		crafty-18.2
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/v18/ \
 			ftp://ftp.cis.uab.edu/pub/hyatt/ \
@@ -31,6 +31,10 @@ ALL_TARGET=		netbsd-sparc
 .else
 ALL_TARGET=		netbsd
 .endif
+.elif ${OPSYS} == "SunOS"
+ALL_TARGET=		solaris-gcc
+.else
+ALL_TARGET=		generic
 .endif
 
 CRAFTY_OPTS=		-DBOOKDIR=\\\"${BOOKDIR}\\\"
