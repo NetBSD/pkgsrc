@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5790 2004/05/02 11:59:18 jmmv Exp $
+$NetBSD: CHANGES,v 1.5791 2004/05/02 17:25:15 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2315,3 +2315,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rhythmbox to 0.8.2 [jmmv 2004-05-02]
 	Updated xmlcatmgr to 2.1 [jmmv 2004-05-02]
 	Updated gpass to 0.4.1 [jmmv 2004-05-02]
+	Updated cue to 20040329 [xtraeme 2004-05-02]
