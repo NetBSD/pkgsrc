@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7460 2004/10/18 03:46:20 ben Exp $
+$NetBSD: CHANGES,v 1.7461 2004/10/18 09:28:42 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4750,3 +4750,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cyrus-imapd22 to 2.2.8nb4 [recht 2004-10-17]
 	Updated wmi to 10 [ben 2004-10-17]
 	Added p5-CDDB_get-2.23 [ben 2004-10-17]
+	Updated ap-ssl to 2.8.20 [tron 2004-10-18]
