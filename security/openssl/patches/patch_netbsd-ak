@@ -1,19 +1,13 @@
-*** apps/speed.c.orig	Sat Apr  7 13:33:11 2001
---- apps/speed.c	Sat Apr  7 13:32:37 2001
-***************
-*** 82,88 ****
-  #include <openssl/rand.h>
-  #include <openssl/err.h>
-  
-! #if defined(__FreeBSD__)
-  # define USE_TOD
-  #elif !defined(MSDOS) && (!defined(VMS) || defined(__DECC))
-  # define TIMES
---- 82,88 ----
-  #include <openssl/rand.h>
-  #include <openssl/err.h>
-  
-! #if defined(__FreeBSD__) || defined(__NetBSD__)
-  # define USE_TOD
-  #elif !defined(MSDOS) && (!defined(VMS) || defined(__DECC))
-  # define TIMES
+$NetBSD: patch_netbsd-ak,v 1.2 2001/05/11 22:14:12 tron Exp $
+
+--- apps/speed.c.orig	Sun Sep 24 17:27:42 2000
++++ apps/speed.c	Sat May 12 00:03:27 2001
+@@ -82,7 +82,7 @@
+ #include <openssl/rand.h>
+ #include <openssl/err.h>
+ 
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ # define USE_TOD
+ #elif !defined(MSDOS) && (!defined(VMS) || defined(__DECC))
+ # define TIMES
