@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9663 2005/03/28 14:53:47 minskim Exp $
+$NetBSD: CHANGES,v 1.9664 2005/03/28 19:48:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1796,3 +1796,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated bittorrent to 4.0.1 [recht 2005-03-28]
 	Updated bittorrent-gui to 4.0.1 [recht 2005-03-28]
 	Updated mathomatic to 12.2b [minskim 2005-03-28]
+	Updated pkgconfig to 0.16.0 [wiz 2005-03-28]
