@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2003/04/23 06:01:29 wiz Exp $
+$NetBSD: distinfo,v 1.8 2005/02/02 21:31:24 drochner Exp $
 
-SHA1 (jhead-2.0.tar.gz) = 6e2ced3b0046e75aba7e18969a4d2841b31991aa
-Size (jhead-2.0.tar.gz) = 43940 bytes
+SHA1 (jhead-2.3.tar.gz) = 37e09315499b66777e5b2b8918e78ff4ca51258d
+Size (jhead-2.3.tar.gz) = 49176 bytes
