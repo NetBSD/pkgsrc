@@ -1,4 +1,32 @@
-@comment $NetBSD: PLIST,v 1.11 1998/11/07 10:52:30 tron Exp $
+@comment $NetBSD: PLIST,v 1.12 1999/02/15 21:33:34 tron Exp $
+include/kaccel.h
+include/kglobalaccel.h
+include/kckey.h
+include/kclipboard.h
+include/krect.h
+include/ksize.h
+include/kpoint.h
+include/kkeydialog.h
+include/kurllabel.h
+include/kruler.h
+include/kquickhelp.h
+include/kcursor.h
+include/kimgio.h
+include/htmltable.h
+include/htmliter.h
+include/kfilebookmark.h
+include/kfilefilter.h
+include/kspell.h
+include/ksconfig.h
+include/kprocio.h
+include/kspelldlg.h
+include/stl_headers.h
+include/kabapi.h
+include/kab.h
+include/addressbook.h
+include/configDB.h
+include/keyvaluemap.h
+include/sections.h
 include/kpixmap.h
 include/kled.h
 include/kcontainer.h
@@ -21,8 +49,6 @@ include/kapp.h
 include/kurl.h
 include/ksock.h
 include/drag.h
-include/kkeyconf.h
-include/kkeydata.h
 include/ckey.h
 include/kmisc.h
 include/kprocess.h
@@ -74,7 +100,6 @@ include/builtin.h
 include/jscript.h
 include/htmlobj.h
 include/htmlfont.h
-include/formats.h
 include/htmlform.h
 include/htmltoken.h
 include/htmlframe.h
@@ -89,7 +114,6 @@ include/kaudio.h
 include/kfileinfo.h
 include/ktmainwindow.h
 include/kfiledialog.h
-include/bookmark.h
 include/kremotefile.h
 include/kdir.h
 include/kdirlistbox.h
@@ -100,27 +124,39 @@ include/kcombiview.h
 include/kpreview.h
 include/xview.h
 include/kfilepreview.h
-lib/libkdecore.a
-lib/libkdecore.la
-lib/libkdecore.so.1.0
-lib/libkdeui.a
-lib/libkdeui.la
-lib/libkdeui.so.1.0
 lib/libjscript.a
 lib/libjscript.la
-lib/libjscript.so.0.90
-lib/libkhtmlw.a
-lib/libkhtmlw.la
-lib/libkhtmlw.so.1.0
+lib/libjscript.so.2.0
+lib/libkab.a
+lib/libkab.la
+lib/libkab.so.2.0
+lib/libkdecore.a
+lib/libkdecore.la
+lib/libkdecore.so.2.0
+lib/libkdeui.a
+lib/libkdeui.la
+lib/libkdeui.so.2.0
 lib/libkfile.a
 lib/libkfile.la
-lib/libkfile.so.1.0
+lib/libkfile.so.2.0
 lib/libkfm.a
 lib/libkfm.la
-lib/libkfm.so.1.0
+lib/libkfm.so.2.0
+lib/libkimgio.so.2.0
+lib/libkimgio.a
+lib/libkimgio.la
+lib/libkhtmlw.a
+lib/libkhtmlw.la
+lib/libkhtmlw.so.2.0
+lib/libkspell.so.2.0
+lib/libkspell.a
+lib/libkspell.la
 lib/libmediatool.a
 lib/libmediatool.la
-lib/libmediatool.so.1.0
+lib/libmediatool.so.2.0
+share/doc/kde/HTML/en/kspell/kspell.html
+share/doc/kde/HTML/en/kspell/ksdialog.html
+share/doc/kde/HTML/en/kspell/ksconfig.html
 share/doc/kde/HTML/en/kfiledialog/back.gif
 share/doc/kde/HTML/en/kfiledialog/bottom.gif
 share/doc/kde/HTML/en/kfiledialog/exec.gif
@@ -137,6 +173,8 @@ share/doc/kde/HTML/en/kfiledialog/viewmag.gif
 share/doc/kde/HTML/en/kdelibs/kdebug.html
 @exec /bin/ln -sf en %D/share/doc/kde/HTML/default
 @unexec /bin/rm -f %D/share/doc/kde/HTML/default
+share/kde/apps/kab/pics/dialog_background.jpg
+share/kde/apps/kab/pics/background_1.jpg
 share/kde/apps/kde/pics/arrow_up.xbm
 share/kde/apps/kde/pics/arrow_down.xbm
 share/kde/apps/kde/pics/arrow_left.xbm
@@ -148,6 +186,14 @@ share/kde/apps/kde/pics/stopsign.xpm
 share/kde/apps/kde/pics/question.xpm
 share/kde/apps/khtmlw/pics/khtmlw_dnd.xpm
 share/kde/config/charsets
+share/kde/config/kdebug.areas
+share/kde/locale/eo/LC_MESSAGES/kde.mo
+share/kde/locale/is/LC_MESSAGES/kde.mo
+share/kde/locale/br/LC_MESSAGES/kde.mo
+share/kde/locale/ko/LC_MESSAGES/kde.mo
+share/kde/locale/tr/LC_MESSAGES/kde.mo
+share/kde/locale/he/LC_MESSAGES/kde.mo
+share/kde/locale/et/LC_MESSAGES/kde.mo
 share/kde/locale/zh_TW.Big5/LC_MESSAGES/kde.mo
 share/kde/locale/zh_CN.GB2312/LC_MESSAGES/kde.mo
 share/kde/locale/sl/LC_MESSAGES/kde.mo
@@ -186,6 +232,45 @@ share/kde/locale/pt/charset
 share/kde/locale/sv/charset
 share/kde/locale/es/charset
 share/kde/locale/sk/charset
+share/kde/locale/it/charset
+share/kde/locale/no/charset
+share/kde/locale/hr/charset
+share/kde/locale/ca/charset
+share/kde/locale/sl/charset
+share/kde/locale/pt_BR/charset
+share/kde/locale/eo/charset
+share/kde/locale/is/charset
+share/kde/locale/he/charset
+share/kde/locale/et/charset
+share/kde/locale/br/charset
+share/kde/toolbar/add_point.xpm
+share/kde/toolbar/airbrush.xpm
+share/kde/toolbar/blend.xpm
+share/kde/toolbar/centrejust.xpm
+share/kde/toolbar/circle_select.xpm
+share/kde/toolbar/context_help.xpm
+share/kde/toolbar/delete.xpm
+share/kde/toolbar/droplet.xpm
+share/kde/toolbar/dropper.xpm
+share/kde/toolbar/edit_point.xpm
+share/kde/toolbar/eraser.xpm
+share/kde/toolbar/find.xpm
+share/kde/toolbar/knife.xpm
+share/kde/toolbar/lassoo.xpm
+share/kde/toolbar/leftjust.xpm
+share/kde/toolbar/move.xpm
+share/kde/toolbar/paintbrush.xpm
+share/kde/toolbar/pencil.xpm
+share/kde/toolbar/print_preview.xpm
+share/kde/toolbar/rectangle_select.xpm
+share/kde/toolbar/redo.xpm
+share/kde/toolbar/search.xpm
+share/kde/toolbar/smart_select.xpm
+share/kde/toolbar/spellcheck.xpm
+share/kde/toolbar/stamp.xpm
+share/kde/toolbar/text.xpm
+share/kde/toolbar/transform.xpm
+share/kde/toolbar/undo.xpm
 share/kde/toolbar/back.xpm
 share/kde/toolbar/bottom.xpm
 share/kde/toolbar/contents.xpm
@@ -277,14 +362,31 @@ share/kde/toolbar/configure.xpm
 @dirrm share/kde/locale/cs
 @dirrm share/kde/locale/ca/LC_MESSAGES
 @dirrm share/kde/locale/ca
+@dirrm share/kde/locale/eo/LC_MESSAGES
+@dirrm share/kde/locale/eo
+@dirrm share/kde/locale/is/LC_MESSAGES
+@dirrm share/kde/locale/is
+@dirrm share/kde/locale/ko/LC_MESSAGES
+@dirrm share/kde/locale/ko
+@dirrm share/kde/locale/tr/LC_MESSAGES
+@dirrm share/kde/locale/tr
+@dirrm share/kde/locale/he/LC_MESSAGES
+@dirrm share/kde/locale/he
+@dirrm share/kde/locale/et/LC_MESSAGES
+@dirrm share/kde/locale/et
+@dirrm share/kde/locale/br/LC_MESSAGES
+@dirrm share/kde/locale/br
 @dirrm share/kde/locale
 @dirrm share/kde/config
 @dirrm share/kde/apps/khtmlw/pics
 @dirrm share/kde/apps/khtmlw
 @dirrm share/kde/apps/kde/pics
 @dirrm share/kde/apps/kde
+@dirrm share/kde/apps/kab/pics
+@dirrm share/kde/apps/kab
 @dirrm share/kde/apps
 @dirrm share/kde
+@dirrm share/doc/kde/HTML/en/kspell
 @dirrm share/doc/kde/HTML/en/kfiledialog
 @dirrm share/doc/kde/HTML/en/kdelibs
 @dirrm share/doc/kde/HTML/en
