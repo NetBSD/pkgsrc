@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2631 2003/06/30 00:44:00 uebayasi Exp $
+$NetBSD: CHANGES,v 1.2632 2003/06/30 06:46:55 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2621,3 +2621,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tinyscheme to 1.33 [jtb 2003-06-29]
 	Updated ncview to 1.92d [jtb 2003-06-29]
 	Updated xemacs-packages to 1.12 [uebayasi 2003-06-30]
+	Updated ImageMagick to 5.5.7.9 [tron 2003-06-30]
+	Updated p5-PerlMagick to 5.5.7.9 [tron 2003-06-30]
