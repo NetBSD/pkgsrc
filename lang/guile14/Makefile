@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:19:02 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/05 05:03:58 uebayasi Exp $
 
 DISTNAME=		guile-1.4.1
 PKGNAME=		guile14-1.4.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=guile/}
 
@@ -24,9 +24,14 @@ USE_GNU_READLINE=	YES
 
 INFO_FILES=		guile.info
 
+# Link the native thread so that Guile processes won't die when libpthread.so
+# is dl_open(3)'ed.
+CFLAGS+=		${PTHREAD_CFLAGS}
+
 .include "../../devel/libtool/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
 
