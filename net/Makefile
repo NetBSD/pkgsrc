@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.374 2003/05/15 03:36:01 salo Exp $
+# $NetBSD: Makefile,v 1.375 2003/05/15 12:53:18 grant Exp $
 #
 
 COMMENT=	Networking tools
@@ -172,6 +172,7 @@ SUBDIR+=	ntp4
 SUBDIR+=	openag
 SUBDIR+=	openh323
 SUBDIR+=	openslp
+SUBDIR+=	overnet
 SUBDIR+=	p5-DNS-ZoneParse
 SUBDIR+=	p5-IO-Interface
 SUBDIR+=	p5-IO-Socket-Multicast
