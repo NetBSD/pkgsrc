@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2657 2004/12/05 09:02:51 jmmv Exp $
+$NetBSD: TODO,v 1.2658 2004/12/05 09:05:30 adam Exp $
 
 Suggested new packages
 ======================
@@ -727,7 +727,6 @@ Suggested package updates
 	o obexftp-0.10.6
 	o objc-3.2.6
 	o ocaml-3.08
-	o octave-forge-2004.11.16
 	o odbc-postgresql-7.4.6
 	o offlineimap-4.0.8
 	o ogre-0.12.3
