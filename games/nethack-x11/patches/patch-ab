@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2000/08/10 17:50:09 pooka Exp $
+$NetBSD: patch-ab,v 1.5 2001/06/26 19:11:04 jlam Exp $
 
 --- sys/unix/Makefile.src.orig	Sat Aug  5 13:52:57 2000
 +++ sys/unix/Makefile.src	Thu Aug 10 19:28:31 2000
@@ -8,8 +8,8 @@ $NetBSD: patch-ab,v 1.4 2000/08/10 17:50:09 pooka Exp $
  
 -CFLAGS = -O -I../include
 -LFLAGS =
-+CFLAGS = -O -I../include -I${X11BASE}/include
-+LFLAGS = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib
++CFLAGS += -I../include -I${X11BASE}/include
++LFLAGS = ${LDFLAGS}
  
  # The Qt and Be window systems are written in C++, while the rest of
  # NetHack is standard C.  If using Qt, uncomment the LD line here to get
