@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/08/15 21:09:04 agc Exp $
+$NetBSD: patch-aa,v 1.2 2001/08/16 10:16:18 abs Exp $
 
---- Makefile	2001/08/15 21:53:53	1.1
-+++ Makefile	2001/08/15 21:57:23
+--- Makefile.orig	Sat Nov  5 00:24:55 1994
++++ Makefile
 @@ -1,16 +1,16 @@
  # Possible defines in CONF:
  #	IS_MSDOS IS_SYSV IS_V7 IS_BSD HAS_DIRENT HAS_RENAME MV_DIR
@@ -26,3 +26,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/08/15 21:09:04 agc Exp $
  
  mmv:		mmv.o
  
+@@ -20,5 +20,5 @@
+ install:	$(DEST)$(IBIN)/mmv
+ install:	$(DEST)$(IMAN)/man1/mmv.1
+ 
+-$(DEST)$(IBIN)/mmv:		mmv;	cp $? $@
+-$(DEST)$(IMAN)/man1/mmv.1:	mmv.1;	cp $? $@
++$(DEST)$(IBIN)/mmv:		mmv;	install -c $? $@
++$(DEST)$(IMAN)/man1/mmv.1:	mmv.1;	install -c -m 0644 $? $@
