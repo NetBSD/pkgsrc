@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/08/17 16:00:02 agc Exp $
+# $NetBSD: Makefile,v 1.19 1999/08/17 16:11:27 agc Exp $
 #
 
 DISTNAME=	tcsh-6.09
@@ -22,7 +22,8 @@ PLIST_SRC=	${WRKDIR}/PLIST-src
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-LOWER_OPSYS=	solaris2.6
+OS_VERSION!=	echo ${OS_VERSION} | sed -e 's|5\.|2.|'
+LOWER_OPSYS=	solaris${OS_VERSION}
 .endif
 
 post-install:
