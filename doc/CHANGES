@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7370 2004/10/07 15:21:08 skrll Exp $
+$NetBSD: CHANGES,v 1.7371 2004/10/07 15:27:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4570,3 +4570,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rhythmbox to 0.8.7 [hira 2004-10-06]
 	Updated tuxpaint to 0.9.14 [wiz 2004-10-06]
 	Updated tuxpaint-stamps to 2004.10.03 [wiz 2004-10-06]
+	Added tuxpaint-config to 0.0.5 [wiz 2004-10-06]
