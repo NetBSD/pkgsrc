@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.211 2003/01/22 22:47:05 jmmv Exp $
+$NetBSD: TODO,v 1.212 2003/01/23 10:10:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -71,6 +71,7 @@ Suggested package updates
 
 	o R-1.6.2
 	o Xbae-4.50.0
+	o abiword-1.0.4
 	o adobe-cmaps-1.5 [pkg/19646]
 	o apache-2.0.44
 	o aim-1.5.277
@@ -236,7 +237,7 @@ Suggested package updates
 	o squeak-3.2 [fredb|pkg/17950]
 	o sqlite-2.7.5 [pkg/19719]
 	o srp_client-1.7.5 [jlam]
-	o subversion-0.17
+	o subversion-0.17.1
 	o suck-4.3.1
 	o sun-jdk14-1.4.1_01 [pkg/19853]
 	o sun-jre14-1.4.1_01 [pkg/19853]
