@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.4 2000/10/18 11:22:44 rh Exp $
+$NetBSD: patch-ai,v 1.5 2004/05/11 12:18:37 wiz Exp $
 
---- configure.orig	Sun Oct 26 22:55:34 1997
-+++ configure	Mon Oct 16 21:09:00 2000
-@@ -970,7 +970,7 @@
+--- configure.orig	1997-10-26 15:55:34.000000000 +0100
++++ configure
+@@ -970,7 +970,7 @@ fi
  #try to guess qt locations
  
  qt_incdirs="/usr/lib/qt/include /usr/local/qt/include /usr/include/qt /usr/include /usr/X11R6/include/X11/qt /usr/X11R6/include/qt $x_includes $QTINC"
@@ -11,18 +11,15 @@ $NetBSD: patch-ai,v 1.4 2000/10/18 11:22:44 rh Exp $
  
  qt_incdir=NO
  for i in $qt_incdirs;
-@@ -1710,6 +1710,14 @@
-     fi
-     if test "$OS_TYPE" = "FreeBSD" ; then
-       OS_TYPE="BSD"
-+    fi
-+    CFLAGS="-O6 -ffast-math -fomit-frame-pointer -DNO_BYTE_SWAPPING ${CFLAGS_ARCH}"
-+    ;;
-+
-+  NetBSD)
-+    CC="gcc"
-+    if test "$ARCH_TYPE" = "i386" ; then
-+      CFLAGS_ARCH="-i586 -pipe"
-     fi
+@@ -1714,6 +1714,11 @@ case "$OS_TYPE" in
      CFLAGS="-O6 -ffast-math -fomit-frame-pointer -DNO_BYTE_SWAPPING ${CFLAGS_ARCH}"
      ;;
+ 
++  NetBSD)
++    CC="gcc"
++    CFLAGS="${CFLAGS} -DNO_BYTE_SWAPPING"
++    ;;
++
+   SunOS)
+     if test "$CC" = "gcc"; then
+        CFLAGS="-O6"
