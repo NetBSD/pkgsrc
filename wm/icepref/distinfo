@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2002/11/23 23:23:52 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/02/04 13:00:09 rillig Exp $
 
 SHA1 (icepref-1.1.tar.gz) = 025c0390f7acb6768ee0b41c733bf9a3e59949b8
 Size (icepref-1.1.tar.gz) = 29418 bytes
 SHA1 (patch-aa) = 0dd492ea8cf440a0076986245f61ddf1281a526a
-SHA1 (patch-ab) = d10a096c1a15a1ea4e56283c44276492a2d39b80
+SHA1 (patch-ab) = 6e0f9cfff26daceeaff1233d7b34e0a264a58f70
