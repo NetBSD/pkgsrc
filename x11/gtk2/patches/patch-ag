@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.2 2002/03/30 20:01:39 dmcmahill Exp $
+$NetBSD: patch-ag,v 1.3 2002/04/06 15:48:55 dmcmahill Exp $
 
---- gdk-pixbuf/Makefile.am.orig	Tue Mar  5 16:04:01 2002
+--- gdk-pixbuf/Makefile.am.orig	Fri Mar  8 01:36:26 2002
 +++ gdk-pixbuf/Makefile.am
 @@ -227,7 +227,7 @@
  @STRIP_END@
