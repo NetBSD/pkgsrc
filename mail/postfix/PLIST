@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/05/01 14:07:57 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/06/21 16:13:23 martti Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/bounce
@@ -9,6 +9,7 @@ libexec/postfix/lmtp
 libexec/postfix/local
 libexec/postfix/master
 libexec/postfix/nqmgr
+libexec/postfix/oqmgr
 libexec/postfix/pickup
 libexec/postfix/pipe
 libexec/postfix/proxymap
@@ -19,6 +20,7 @@ libexec/postfix/smtp
 libexec/postfix/smtpd
 libexec/postfix/spawn
 libexec/postfix/trivial-rewrite
+libexec/postfix/verify
 libexec/postfix/virtual
 man/man1/mailq.1
 man/man1/newaliases.1
@@ -36,8 +38,15 @@ man/man1/postsuper.1
 man/man1/sendmail.1
 man/man5/access.5
 man/man5/aliases.5
+man/man5/body_checks.5
 man/man5/canonical.5
+man/man5/cidr_table.5
+man/man5/header_checks.5
+man/man5/ldap_table.5
+man/man5/mysql_table.5
 man/man5/pcre_table.5
+man/man5/pgsql_table.5
+man/man5/postconf.5
 man/man5/regexp_table.5
 man/man5/relocated.5
 man/man5/transport.5
@@ -50,7 +59,7 @@ man/man8/flush.8
 man/man8/lmtp.8
 man/man8/local.8
 man/man8/master.8
-man/man8/nqmgr.8
+man/man8/oqmgr.8
 man/man8/pickup.8
 man/man8/pipe.8
 man/man8/proxymap.8
@@ -60,7 +69,9 @@ man/man8/showq.8
 man/man8/smtp.8
 man/man8/smtpd.8
 man/man8/spawn.8
+man/man8/trace.8
 man/man8/trivial-rewrite.8
+man/man8/verify.8
 man/man8/virtual.8
 sbin/postalias
 sbin/postcat
@@ -74,7 +85,15 @@ sbin/postmap
 sbin/postqueue
 sbin/postsuper
 sbin/sendmail
+share/doc/postfix/AAAREADME
 share/doc/postfix/ADDRESS_CLASS_README
+share/doc/postfix/ADDRESS_REWRITING_README
+share/doc/postfix/ADDRESS_VERIFICATION_README
+share/doc/postfix/BACKSCATTER_README
+share/doc/postfix/BASIC_CONFIGURATION_README
+share/doc/postfix/BUILTIN_FILTER_README
+share/doc/postfix/CONTENT_INSPECTION_README
+share/doc/postfix/DATABASE_README
 share/doc/postfix/DB_README
 share/doc/postfix/DEBUG_README
 share/doc/postfix/ETRN_README
@@ -84,53 +103,36 @@ share/doc/postfix/LDAP_README
 share/doc/postfix/LINUX_README
 share/doc/postfix/LMTP_README
 share/doc/postfix/LOCAL_RECIPIENT_README
-share/doc/postfix/MACOSX_README
 share/doc/postfix/MAILDROP_README
 share/doc/postfix/MYSQL_README
 share/doc/postfix/NFS_README
+share/doc/postfix/OVERVIEW
 share/doc/postfix/PACKAGE_README
 share/doc/postfix/PCRE_README
+share/doc/postfix/PGSQL_README
 share/doc/postfix/QMQP_README
+share/doc/postfix/QSHAPE_README
 share/doc/postfix/RELEASE_NOTES
 share/doc/postfix/RESTRICTION_CLASS_README
 share/doc/postfix/SASL_README
+share/doc/postfix/SCHEDULER_README
+share/doc/postfix/SMTPD_ACCESS_README
+share/doc/postfix/SMTPD_POLICY_README
+share/doc/postfix/SMTPD_PROXY_README
+share/doc/postfix/STANDARD_CONFIGURATION_README
+share/doc/postfix/TUNING_README
 share/doc/postfix/ULTRIX_README
 share/doc/postfix/UUCP_README
 share/doc/postfix/VERP_README
 share/doc/postfix/VIRTUAL_README
+share/doc/postfix/XCLIENT_README
+share/doc/postfix/XFORWARD_README
 share/examples/postfix/mailer.conf
 share/examples/postfix/main.cf
 share/examples/postfix/master.cf
 share/examples/postfix/post-install
 share/examples/postfix/postfix-files
 share/examples/postfix/postfix-script
-share/examples/postfix/sample-aliases.cf
-share/examples/postfix/sample-auth.cf
-share/examples/postfix/sample-canonical.cf
-share/examples/postfix/sample-compatibility.cf
-share/examples/postfix/sample-debug.cf
-share/examples/postfix/sample-filter.cf
-share/examples/postfix/sample-flush.cf
-share/examples/postfix/sample-ldap.cf
-share/examples/postfix/sample-lmtp.cf
-share/examples/postfix/sample-local.cf
-share/examples/postfix/sample-mime.cf
-share/examples/postfix/sample-misc.cf
-share/examples/postfix/sample-pcre-access.cf
-share/examples/postfix/sample-pcre-body.cf
-share/examples/postfix/sample-pcre-header.cf
-share/examples/postfix/sample-qmqpd.cf
-share/examples/postfix/sample-rate.cf
-share/examples/postfix/sample-regexp-access.cf
-share/examples/postfix/sample-regexp-body.cf
-share/examples/postfix/sample-regexp-header.cf
-share/examples/postfix/sample-relocated.cf
-share/examples/postfix/sample-resource.cf
-share/examples/postfix/sample-rewrite.cf
-share/examples/postfix/sample-smtp.cf
-share/examples/postfix/sample-smtpd.cf
-share/examples/postfix/sample-transport.cf
-share/examples/postfix/sample-virtual.cf
 @dirrm share/examples/postfix
 @dirrm share/doc/postfix
 @dirrm libexec/postfix
