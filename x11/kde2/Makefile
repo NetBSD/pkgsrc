@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/13 06:59:39 skrll Exp $
+# $NetBSD: Makefile,v 1.10 2002/09/20 12:30:04 jlam Exp $
 
 DISTNAME=	kde-2.2.2
 PKGREVISION=	2
@@ -23,6 +23,7 @@ DEPENDS+=	kdeutils-2.2.2nb1:../../misc/kdeutils2
 
 EXTRACT_ONLY=	# empty
 USE_X11BASE=	yes
+USE_BUILDLINK2=	yes
 NO_CHECKSUM=	yes
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
