@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.7 2002/08/26 20:28:14 tron Exp $
+
+--- Makefile.in.orig	Mon May 13 23:30:48 2002
++++ Makefile.in	Mon Aug 26 22:11:28 2002
+@@ -112,7 +112,7 @@
+ 
+ AUTOMAKE_OPTIONS = 1.5
+ 
+-SUBDIRS = ice-9 qt libltdl libguile guile-config guile-readline \
++SUBDIRS = ice-9 qt libguile guile-config guile-readline \
+           doc am test-suite
+ 
+ 
