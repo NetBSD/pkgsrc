@@ -1,0 +1,25 @@
+# $NetBSD: Makefile.common,v 1.1 2003/05/07 16:29:38 kei Exp $
+
+WRKSRC=			${WRKDIR}
+CATEGORIES=		www print
+MASTER_SITES=		# empty
+DISTFILES=		# empty
+
+DEPENDS+=		phoenix-bin-[0-9]*:../../www/phoenix-bin
+
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
+PLATFORM=		intellinux
+
+NO_CHECKSUM=		YES
+NO_CONFIGURE=		YES
+NO_BUILD=		YES
+
+PLIST_SRC=		../../www/phoenix-bin-acroread/PLIST
+PLIST_SUBST+=		ACROREAD=${ACROREAD}
+PLIST_SUBST+=		PLATFORM=${PLATFORM}
+
+do-install:
+	${LN} -s ${PREFIX}/${ACROREAD}/Browsers/${PLATFORM}/nppdf.so \
+		${PREFIX}/lib/phoenix-linux/plugins/nppdf.so
+
+.include "../../mk/bsd.pkg.mk"
