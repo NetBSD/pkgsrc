@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/01/12 15:32:01 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/02/23 04:21:33 minskim Exp $
 
 .if (${MACHINE_ARCH} == "powerpc")
 DISTNAME=		fftw-3.0.1-fma
@@ -14,6 +14,8 @@ MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/ \
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.fftw.org/
 COMMENT=		Collection of fast C routines to compute DFTs
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	fftw.pc.in
