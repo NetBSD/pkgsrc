@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:22 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/11/26 22:22:19 zuntum Exp $
 #
 
 DISTNAME=	qmail-1.03
@@ -21,14 +21,7 @@ MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.qmail.org/
 COMMENT=	SECURE, reliable, efficient, simple, and FAST MTA for UNIX systems
 
-.if exists(/usr/sbin/user)
-USER_CMD=		/usr/sbin/user
-GROUP_CMD=		/usr/sbin/group
-.else
-DEPENDS+=		user-[0-9]*:../../sysutils/user
-USER_CMD=		${LOCALBASE}/sbin/user
-GROUP_CMD=		${LOCALBASE}/sbin/group
-.endif
+DEPENDS+=	qmail-users>=1.0:../../mail/qmail-users
 
 ALL_TARGET= 	it man
 INSTALL_TARGET=	setup check
@@ -38,28 +31,15 @@ NO_PACKAGE=	"Has to be compiled on target system due to installation path issue"
 
 QMAILDIR=	/var/qmail
 
-DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
+OWN_DIRS+=	${QMAILDIR}
 
-FILES_SUBST+=	QMAILDIR=${QMAILDIR}
-FILES_SUBST+=	USER_CMD=${USER_CMD:Q}
-FILES_SUBST+=	GROUP_CMD=${GROUP_CMD:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
-
-PLIST_SUBST+=	QMAILDIR=${QMAILDIR}
+DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
 
 pre-build:
-	@if [ `id -u` != 0 ]; then				\
-		${ECHO} "Error: must be root to build qmail.";	\
-		exit 1;						\
-	fi
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/checkusers.sh 	\
-		> ${WRKDIR}/checkusers.sh
-	${SH} ${WRKDIR}/checkusers.sh
 
 pre-install:
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${LN} -sf ${QMAILDIR} ${PREFIX}/qmail
 
 post-install:
@@ -67,12 +47,5 @@ post-install:
 	cd ${QMAILDIR}/alias && 				\
 		${TOUCH} .qmail-postmaster .qmail-mailer-daemon .qmail-root
 
-remove-users: extract
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/removeusers.sh	\
-		> ${WRKDIR}/removeusers.sh
-	${SH} ${WRKDIR}/removeusers.sh
-
-remove-dirs:
-	${RM} -rf ${QMAILDIR}
-
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

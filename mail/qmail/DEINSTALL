@@ -1,28 +1,11 @@
-# $NetBSD: DEINSTALL,v 1.1 2001/11/01 01:01:10 zuntum Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/11/26 22:22:19 zuntum Exp $
 
-PKGNAME=$1
-STAGE=$2
-
-if [ "$STAGE" != "POST-DEINSTALL" ]; then
-    exit 0
-fi
-
-QMAILDIR=@QMAILDIR@
-
-echo ===========================================================================
-echo 
-echo Note: this package did not remove qmail users and groups in case you may
-echo want to use them later.
-echo
-echo These qmail users still exist in the system:
-echo "	alias qmaill qmaild qmailp qmailq qmailr qmails"
-echo and these groups:
-echo "	nofiles qmail"
-echo
-echo If you won\'t be using ${PKGNAME} any longer, you may remove qmail
-echo users and groups automatically by typing \"make remove-users\".
-echo
-echo Directories \"alias control queue users\" from ${QMAILDIR} were also untouched
-echo and they are ready for future use. You may safely remove them - type \"make remove-dirs\".
-echo 
-echo ===========================================================================
+case "${STAGE}" in
+POST-DEINSTALL)
+	${ECHO} ===========================================================================
+	${ECHO}
+	${ECHO} You may want to remove qmail-users package now, as it is no longer needed.
+	${ECHO}
+	${ECHO} ===========================================================================
+	;;
+esac
