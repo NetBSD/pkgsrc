@@ -4,11 +4,13 @@ NNAAMMEE
      ppkkgg__ccrreeaattee - a utility for creating software package distributions
 
 SSYYNNOOPPSSIISS
-     ppkkgg__ccrreeaattee [--hhllOORRUUVVvv] [--BB _b_u_i_l_d_-_i_n_f_o_-_f_i_l_e] [--CC _c_p_k_g_s] [--DD _d_i_s_p_l_a_y_f_i_l_e]
-     [--PP _d_p_k_g_s] [--XX _e_x_c_l_u_d_e_f_i_l_e] [--bb _b_u_i_l_d_-_v_e_r_s_i_o_n_-_f_i_l_e] [--ff _c_o_n_t_e_n_t_s]
-     [--ii _i_s_c_r_i_p_t] [--II _r_e_a_l_p_r_e_f_i_x] [--kk _d_s_c_r_i_p_t] [--LL _S_r_c_D_i_r] [--mm _m_t_r_e_e_f_i_l_e]
-     [--pp _p_r_e_f_i_x] [--rr _r_s_c_r_i_p_t] [--ss _s_i_z_e_-_p_k_g_-_f_i_l_e] [--SS _s_i_z_e_-_a_l_l_-_f_i_l_e]
-     [--tt _t_e_m_p_l_a_t_e] --cc _c_o_m_m_e_n_t --dd _d_e_s_c_r_i_p_t_i_o_n --ff _p_a_c_k_l_i_s_t _p_k_g_-_n_a_m_e
+     ppkkgg__ccrreeaattee [--EEhhllOORRUUVVvv] [--BB _b_u_i_l_d_-_i_n_f_o_-_f_i_l_e] [--CC _c_p_k_g_s] [--DD _d_i_s_p_l_a_y_f_i_l_e]
+                [--KK _p_k_g___d_b_d_i_r] [--PP _d_p_k_g_s] [--XX _e_x_c_l_u_d_e_f_i_l_e]
+                [--bb _b_u_i_l_d_-_v_e_r_s_i_o_n_-_f_i_l_e] [--ii _i_s_c_r_i_p_t] [--II _r_e_a_l_p_r_e_f_i_x]
+                [--kk _d_s_c_r_i_p_t] [--LL _S_r_c_D_i_r] [--mm _m_t_r_e_e_f_i_l_e] [--pp _p_r_e_f_i_x]
+                [--rr _r_s_c_r_i_p_t] [--ss _s_i_z_e_-_p_k_g_-_f_i_l_e] [--SS _s_i_z_e_-_a_l_l_-_f_i_l_e]
+                [--nn _p_r_e_s_e_r_v_e_-_f_i_l_e] [--tt _t_e_m_p_l_a_t_e] --cc _c_o_m_m_e_n_t --dd _d_e_s_c_r_i_p_t_i_o_n
+                --ff _p_a_c_k_l_i_s_t _p_k_g_-_n_a_m_e
 
 DDEESSCCRRIIPPTTIIOONN
      The ppkkgg__ccrreeaattee command is used to create packages that will subsequently
@@ -58,9 +60,11 @@ OOPPTTIIOONNSS
              Fetch long description for package from file _d_e_s_c or, if preceded
              by --, the argument itself.
 
-     --ff _p_a_c_k_i_n_g_l_i_s_t
-             Fetch ``packing list'' for package from the file _p_a_c_k_i_n_g_l_i_s_t or
-             ssttddiinn if _p_a_c_k_i_n_g_l_i_s_t is a -- (dash).
+     --EE      Add an empty views file to the package.
+
+     --ff _p_a_c_k_l_i_s_t
+             Fetch ``packing list'' for package from the file _p_a_c_k_l_i_s_t or
+             ssttddiinn if _p_a_c_k_l_i_s_t is a -- (dash).
 
      --hh      Force tar to follow symbolic links, so that the files they point
              to are dumped, rather than the links themselves.
@@ -73,6 +77,12 @@ OOPPTTIIOONNSS
              Set _i_s_c_r_i_p_t to be the install procedure for the package.  This
              can be any executable program (or shell script).  It will be in-
              voked automatically when the package is later installed.
+
+     --KK _p_k_g___d_b_d_i_r
+             Set _p_k_g___d_b_d_i_r as the package database directory.  If this option
+             isn't specified, then the package database directory is taken
+             from the value of the environment variable PKG_DBDIR if it's set,
+             otherwise it defaults to _/_v_a_r_/_d_b_/_p_k_g.
 
      --kk _d_s_c_r_i_p_t
              Set _d_s_c_r_i_p_t to be the de-install procedure for the package.  This
@@ -129,6 +139,11 @@ OOPPTTIIOONNSS
              flag.  The file is expected to contain the size (in bytes) of all
              files of this package plus any required packages added up and
              stored as a ASCII string, terminated by a newline.
+
+     --nn _p_r_e_s_e_r_v_e_-_f_i_l_e
+             The file is used to denote that the package should not be delet-
+             ed.  This is intended for use where the deletion of packages may
+             present a bootstrap problem.
 
      --ss _s_i_z_e_-_p_k_g_-_f_i_l_e
              Store the given file for later querying with the pkg_info(1) _-_s
@@ -295,4 +310,4 @@ BBUUGGSS
      cations due to exec argument-space limitations (this depends on the value
      returned by ssyyssccoonnff(___S_C___A_R_G___M_A_X)).
 
-NetBSD 1.6                      April 21, 1995                               5
+NetBSD 1.6.1_STABLE            January 10, 2003                              5

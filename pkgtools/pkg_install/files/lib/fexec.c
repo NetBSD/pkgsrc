@@ -1,11 +1,9 @@
-/*	$NetBSD: setenv.c,v 1.1.1.1 2002/12/20 18:14:06 schmonz Exp $	*/
-
 /*-
- * Copyright (c) 1998 The NetBSD Foundation, Inc.
+ * Copyright (c) 2003 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
- * by Christos Zoulas.
+ * by Matthias Scheler.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -36,39 +34,126 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifdef HAVE_CONFIG_H
+
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#if HAVE_SYS_CDEFS_H
+#include <sys/cdefs.h>
+#endif
+#if HAVE_SYS_WAIT_H
+#include <sys/wait.h>
+#endif
 
-#include <stdio.h>
+#if HAVE_ERR_H
+#include <err.h>
+#endif
+#if HAVE_ERRNO_H
+#include <errno.h>
+#endif
+#if HAVE_STDARG_H
+#include <stdarg.h>
+#endif
+#if HAVE_STDLIB_H
 #include <stdlib.h>
+#endif
+#if HAVE_UNISTD_H
 #include <unistd.h>
-#include <syslog.h>
+#endif
 
-#ifndef HAVE_SETENV
-int
-setenv(name, value, overwrite)
-	const char *name;
-	const char *value;
-	int overwrite;
+#include "lib.h"
+
+#ifndef lint
+__RCSID("$NetBSD: fexec.c,v 1.1 2003/09/01 16:27:14 jlam Exp $");
+#endif
+
+static int	vfcexec(const char *, const char *, va_list);
+
+static int
+vfcexec(const char *path, const char *arg, va_list ap)
 {
-	size_t  len;
-	int     ret;
-	char   *p;
+	static unsigned int	max = 4;
+	static const char	**argv = NULL;
+	unsigned int		argc;
+	pid_t			child;
+	int			status;
 
-	if (overwrite == 0 && getenv(name))
-		return 0;
+	if (argv == NULL) {
+		argv = malloc(max * sizeof(const char *));
+		if (argv == NULL) {
+			warnx("vfcexec can't alloc arg space");
+			return -1;
+		}
+	}
 
-	if (value == NULL)
-	    value = "";
+	argv[0] = arg;
+	argc = 1;
 
-	len = strlen(name) + strlen(value) + 2;
-	p = (char *) malloc(len);
-	if (p == NULL)
+	do {
+		if (argc == max) {
+			unsigned int	new;
+			const char	**ptr;
+
+			new = max * 2;
+			ptr = realloc(argv, new * sizeof(const char *));
+			if (ptr == NULL) {
+				warnx("vfcexec can't alloc arg space");
+				return -1;
+			}
+			argv = ptr;
+			max = new;
+		}
+		arg = va_arg(ap, const char *);
+		argv[argc++] = arg;
+	} while (arg != NULL);
+
+	child = vfork();
+	switch (child) {
+	case 0:
+		if ((path != NULL) && (chdir(path) < 0))
+			_exit(127);
+
+		(void) execvp(argv[0], (char ** const)argv);
+		_exit(127);
+		/* NOTREACHED */
+	case -1:
+		return -1;
+	}
+
+	while (waitpid(child, &status, 0) < 0) {
+		if (errno != EINTR)
+			return -1;
+	}
+
+	if (!WIFEXITED(status))
 		return -1;
 
-	(void) sprintf(p, "%s=%s", name, value);
-	ret = putenv(p);
-	return ret;
+	return WEXITSTATUS(status);
 }
-#endif
+
+int
+fexec(const char *arg, ...)
+{
+	va_list	ap;
+	int	result;
+
+	va_start(ap, arg);
+	result = vfcexec(NULL, arg, ap);
+	va_end(ap);
+
+	return result;
+}
+
+int
+fcexec(const char *path, const char *arg, ...)
+{
+	va_list	ap;
+	int	result;
+
+	va_start(ap, arg);
+	result = vfcexec(path, arg, ap);
+	va_end(ap);
+
+	return result;
+}
