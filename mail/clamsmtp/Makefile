@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/08/03 08:23:58 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/08/03 08:27:51 jlam Exp $
 
 DISTNAME=		clamsmtp-0.4
 CATEGORIES=		mail
@@ -17,6 +17,9 @@ RCD_SCRIPTS=		clamsmtpd
 
 MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE}
 FILES_SUBST+=		CLAMAV_USER=${CLAMAV_USER}
+
+# Doesn't work with GNU pth (missing required mutex features)
+PTHREAD_OPTS+=		require native
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
