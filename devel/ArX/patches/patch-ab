@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1 2004/08/09 10:06:13 drochner Exp $
+
+--- src/arx/utility_functions/Spawn.cpp.orig	2004-08-08 18:33:40.000000000 +0200
++++ src/arx/utility_functions/Spawn.cpp
+@@ -114,10 +114,13 @@ bool Spawn::execute(int &return_exit_sta
+           if(child_pid)
+             {
+               /* This is the parent. */
++	      int res;
+               
+-              if(-1!=waitpid(child_pid,&exit_status,0) && result==TRUE)
+-                {
+-                  if(WIFEXITED(exit_status))
++	      do {
++		      res=waitpid(child_pid,&exit_status,0);
++	      } while (res < 0 && errno == EINTR);
++
++	      if ((res >= 0) && WIFEXITED(exit_status))
+                     {
+                       return_exit_status=WEXITSTATUS(exit_status);
+                     }
+@@ -125,7 +128,6 @@ bool Spawn::execute(int &return_exit_sta
+                     {
+                       result=FALSE;
+                     }
+-                }
+             }
+           else
+             {
