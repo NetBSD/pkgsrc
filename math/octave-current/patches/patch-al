@@ -1,0 +1,11 @@
+$NetBSD: patch-al,v 1.1 2001/04/19 00:13:14 dmcmahill Exp $
+
+--- liboctave/lo-ieee.cc.orig	Tue Jan 25 16:23:09 2000
++++ liboctave/lo-ieee.cc	Wed Apr 18 19:36:20 2001
+@@ -65,5 +65,5 @@
+   double tmp = 1.0;
+   octave_Inf = 1.0 / (tmp - tmp);
+-#elif defined (__alpha__) && ! defined (linux)
++#elif defined (__alpha__) && defined (__osf__)
+   extern unsigned int DINFINITY[2];
+   octave_Inf =  (*(X_CAST(double *, DINFINITY)));
