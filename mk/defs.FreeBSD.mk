@@ -1,4 +1,4 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.25 2003/09/23 07:26:23 grant Exp $
+# $NetBSD: defs.FreeBSD.mk,v 1.26 2003/10/26 00:07:31 grant Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -35,6 +35,8 @@ GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname
 ID?=		/usr/bin/id
+IMAKE?=		${X11BASE}/bin/imake ${IMAKEOPTS}
+IMAKEOPTS+=	-DBuildHtmlManPages=NO
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 LS?=		/bin/ls
