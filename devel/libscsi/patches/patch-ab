@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.4 1999/12/01 10:19:55 fredb Exp $
+
 --- Makefile.orig	Wed Feb 18 08:43:00 1998
 +++ Makefile	Sat Sep 18 09:27:26 1999
 @@ -4,7 +4,13 @@
