@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2000/07/15 03:53:46 itojun Exp $
+# $NetBSD: Makefile,v 1.18 2000/07/22 08:21:59 jlam Exp $
 #
 
-DISTNAME=		openssh-2.1.1p3
+DISTNAME=		openssh-2.1.1p4
 CATEGORIES=		security
 MASTER_SITES=		http://the.wiretapped.net/security/cryptography/ssh/OpenSSH/files/ \
 			http://www.firedrake.org/openssh/files/ \
@@ -16,23 +16,39 @@ HOMEPAGE=		http://www.openssh.com/
 BUILD_DEPENDS+=		${LOCALBASE}/bin/perl:../../lang/perl5
 BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 
-# src/crypto is still 0.9.4 at this moment.  see NetBSD PR 10593.
-#.if !exists(/usr/include/openssl/rsa.h)
+# Check for a usable installed version of OpenSSL.  Version must be greater
+# than 0.9.5a.  If a usable version isn't present, then use the pkgsrc
+# OpenSSL package.
+#
+.if exists(/usr/include/openssl/rsa.h)
+OPENSSLV_H=		/usr/include/openssl/opensslv.h
+OPENSSL_VERSION!=	awk '/.*OPENSSL_VERSION_NUMBER.*/ { print $$3 }' \
+				${OPENSSLV_H}
+OPENSSL_VERSION_095a=	0x0090581fL
+.if (${OPENSSL_VERSION} != ${OPENSSL_VERSION_095a})
 DEPENDS+=		openssl>=0.9.5:../../security/openssl
-#.endif
+SSLBASE=		${LOCALBASE}
+.else
+SSLBASE=		/usr
+.endif
+.else
+DEPENDS+=		openssl>=0.9.5:../../security/openssl
+SSLBASE=		${LOCALBASE}
+.endif
 
 CONFLICTS=		ssh-[0-9]* ssh6-[0-9]*
 
 # retain the following line, for IPv6-ready pkgsrc webpage 
 BUILD_DEFS+=		USE_INET6
+BUILD_DEFS+=		SSH_CONF_DIR
 
 # USE_PERL5=		yes
 RESTRICTED=		"Crypto; export-controlled"
 MIRROR_DISTFILE=	no
+
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+INSTALL_FILE=		${WRKDIR}/INSTALL
 MESSAGE_FILE=		${WRKDIR}/MESSAGE
-PLIST_SRC=		${WRKDIR}/PLIST
-BUILD_DEFS+=		SSH_CONF_DIR
 
 # matches what's in `Configure' (except sparc64)
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
@@ -40,40 +56,32 @@ ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-powerpc \
 			NetBSD-*-sparc NetBSD-*-vax
 
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	openssl
-
 .include "../../mk/bsd.prefs.mk"
+
 SSH_CONF_DIR?=		/etc
-CONFIGURE_ARGS=		--sysconfdir=${SSH_CONF_DIR}
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${SSH_CONF_DIR}
+CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE}
 
 pre-configure:
-	cd ${WRKSRC}; autoreconf
+	cd ${WRKSRC} && autoreconf
 
 post-build:
-	cd ${PKGDIR}; \
-	for FILE in DEINSTALL MESSAGE PLIST ${FILESDIR}/sshd.sh; do \
-	  ${SED} -e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
-	         -e 's#@PREFIX@#${PREFIX}#g' \
-		 <$${FILE} >${WRKDIR}/`basename $${FILE}`; \
+	for FILE in \
+		${PKGDIR}/DEINSTALL	\
+		${PKGDIR}/INSTALL	\
+		${PKGDIR}/MESSAGE	\
+		${FILESDIR}/sshd.sh;	\
+	do \
+		${SED}	-e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
+			-e 's#@PREFIX@#${PREFIX}#g' \
+			< $${FILE} > ${WRKDIR}/`basename $${FILE}`; \
 	done
 
 post-install:
-	for FILE in ssh_config sshd_config ; do \
-		if [ ! -f ${SSH_CONF_DIR}/$${FILE} ]; then \
-			${INSTALL_DATA} ${PREFIX}/share/examples/ssh/$${FILE} ${SSH_CONF_DIR}/$${FILE}  ; \
-		fi ; \
-	done
-	if [ ! -f ${SSH_CONF_DIR}/ssh_host_key ]; then \
-		${ECHO} "Generating a secret host key..."; \
-		${PREFIX}/bin/ssh-keygen \
-			-f ${SSH_CONF_DIR}/ssh_host_key -N ""; \
-	fi
-	if [ ! -f ${SSH_CONF_DIR}/ssh_host_dsa_key ]; then \
-		${ECHO} "Generating a DSA secret host key..."; \
-		${PREFIX}/bin/ssh-keygen \
-			-d -f ${SSH_CONF_DIR}/ssh_host_dsa_key -N ""; \
-	fi
 	${INSTALL_SCRIPT} ${WRKDIR}/sshd.sh ${PREFIX}/etc/rc.d/sshd.sh
+	PKG_PREFIX=${PREFIX} ${SH} ${REQ_FILE} ${PKGNAME} INSTALL
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
