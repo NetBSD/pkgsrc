@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3061 2003/08/17 19:48:30 jmmv Exp $
+$NetBSD: CHANGES,v 1.3062 2003/08/18 01:03:37 cjs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3292,3 +3292,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated boehm-gc to 6.2nb1 [kei 2003-08-17]
 	Updated esound to 0.2.31 [jmmv 2003-08-17]
 	Updated intltool to 0.27.1 [jmmv 2003-08-17]
+	Updated postgresql to 7.3.4 [cjs 2003-08-18]
