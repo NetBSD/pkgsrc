@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2000/10/19 23:54:58 hubertf Exp $
+# $NetBSD: Makefile,v 1.36 2000/10/30 00:48:47 mjl Exp $
 # FreeBSD Id: Makefile,v 1.44 1997/09/13 20:19:28 chuckr Exp
 #
 
     SUBDIR += abiword
     SUBDIR += beav
+    SUBDIR += biew
     SUBDIR += bvi
     SUBDIR += emacs
     SUBDIR += framemaker
