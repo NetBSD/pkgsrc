@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2174 2003/05/07 15:30:23 wiz Exp $
+$NetBSD: CHANGES,v 1.2175 2003/05/07 16:38:09 kei Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1882,3 +1882,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added SDLmm-0.1.8 [salo 2003-05-07]
 	Added sirius-0.5.0 [jmmv 2003-05-07]
 	Updated graphopt to 0.4.1 [wiz 2003-05-07]
+	Updated phoenix-bin-acroread to 1.0nb1 [kei 2003-05-07]
+	Added phoenix-bin-acroread3-1.0 [kei 2003-05-07]
+	Added phoenix-bin-acroread5-1.0 [kei 2003-05-07]
