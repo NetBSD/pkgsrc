@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/12/23 20:08:50 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/04/22 20:25:09 wiz Exp $
 #
 
 DISTNAME=	m4-1.4
@@ -35,7 +35,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/m4
 	${INSTALL_DATA} ${WRKSRC}/examples/*.m4 ${PREFIX}/share/examples/m4
 .if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
-	${LN} -s ${GNU_PROGRAM_PREFIX}m4 ${PREFIX}/bin/gm4
+	${LN} -sf ${GNU_PROGRAM_PREFIX}m4 ${PREFIX}/bin/gm4
 .endif
 
 .include "../../mk/texinfo.mk"
