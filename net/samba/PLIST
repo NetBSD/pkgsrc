@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2004/09/14 17:18:06 jlam Exp $
+@comment $NetBSD: PLIST,v 1.24.2.1 2004/11/18 22:25:13 salo Exp $
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -20,6 +20,7 @@ bin/smbtree
 ${SMBMOUNT}bin/smbumount
 bin/tdbbackup
 bin/tdbdump
+bin/tdbtool
 bin/testparm
 bin/testprns
 bin/wbinfo
@@ -55,6 +56,7 @@ lib/samba/vfs/recycle.so
 lib/samba/vfs/shadow_copy.so
 ${PAM}lib/security/pam_smbpass.so
 ${PAM}lib/security/pam_winbind.so
+${CUPS}libexec/cups/backend/smb
 man/man1/editreg.1
 man/man1/findsmb.1
 man/man1/log2pcap.1
@@ -370,10 +372,6 @@ share/samba/swat/images/wizard.gif
 share/samba/swat/include/footer.html
 share/samba/swat/include/header.html
 share/samba/swat/lang/ja/help/welcome.html
-share/samba/swat/lang/ja/include/footer.html
-share/samba/swat/lang/ja/include/header.html
-share/samba/swat/lang/ja/include/header.nocss.html
-share/samba/swat/lang/ja/include/header_css.html
 share/samba/swat/lang/tr/help/welcome.html
 share/samba/swat/lang/tr/images/globals.gif
 share/samba/swat/lang/tr/images/home.gif
@@ -383,7 +381,6 @@ share/samba/swat/lang/tr/images/samba.gif
 share/samba/swat/lang/tr/images/shares.gif
 share/samba/swat/lang/tr/images/status.gif
 share/samba/swat/lang/tr/images/viewconfig.gif
-share/samba/swat/lang/tr/include/header.html
 share/samba/swat/using_samba/appa.html
 share/samba/swat/using_samba/appb.html
 share/samba/swat/using_samba/appc.html
