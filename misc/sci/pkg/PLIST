@@ -1,3 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/06/16 21:37:16 mjl Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/09/24 03:53:44 hubertf Exp $
 bin/sci
 man/man1/sci.1
+share/doc/sci/APP.README
+share/doc/sci/COPYING
+share/doc/sci/README
+share/doc/sci/allbut.awk
+share/doc/sci/app
+share/doc/sci/edit.awk
+share/doc/sci/maillist.awk
+share/doc/sci/scidata.out
+share/doc/sci/sortd
+share/doc/sci/template.sci
+share/doc/sci/template.sci.num
+share/doc/sci/whch
+@dirrm share/doc/sci

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/06/16 21:37:16 mjl Exp $
+$NetBSD: patch-aa,v 1.2 2000/09/24 03:53:44 hubertf Exp $
 
 --- makefile.orig	Wed Jun 16 23:07:37 1999
 +++ makefile	Wed Jun 16 23:20:05 1999
@@ -12,8 +12,8 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/06/16 21:37:16 mjl Exp $
 -CURSES=-lncurses
 +INSTALL=${PREFIX}/bin
 +MAN=${PREFIX}/man/man1
-+COPT=-DUSLEEP -I${PREFIX}/include
-+CURSES=-L${PREFIX}/lib -lncurses
++COPT=-DUSLEEP
++CURSES= -lcurses
  
  $(PROG).o : $(PROG).c
  	gcc  -O3 $(COPT) -Wall -pedantic -c $(PROG).c

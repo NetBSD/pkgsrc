@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/03/16 13:50:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/09/24 03:53:43 hubertf Exp $
 #
 
 DISTNAME=	sci.0.3.8
@@ -9,8 +9,6 @@ MASTER_SITES=	http://linuxparts.com/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://linuxparts.com/software.html
 
-DEPENDS+=       ncurses>=4.2:../../devel/ncurses
-
 WRKSRC=         ${WRKDIR}/sci
 
 pre-build:
@@ -18,5 +16,13 @@ pre-build:
 
 pre-install:
 		-@${GUNZIP_CMD} ${WRKSRC}/sci.1.gz
+post-install:
+		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sci
+		for i in app APP.README COPYING README allbut.awk edit.awk \
+			maillist.awk template.sci template.sci.num sortd \
+			whch scidata.out ; \
+		do \
+			${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/sci ; \
+		done
 
 .include "../../mk/bsd.pkg.mk"
