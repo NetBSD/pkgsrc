@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.262 2003/12/18 09:46:51 wiz Exp $
+# $NetBSD: Makefile,v 1.263 2003/12/21 21:27:15 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -130,6 +130,7 @@ SUBDIR+=	kdegraphics3
 SUBDIR+=	lcms
 SUBDIR+=	lib3ds
 SUBDIR+=	libart2
+SUBDIR+=	libcaca
 SUBDIR+=	libdvbpsi
 SUBDIR+=	libexif
 SUBDIR+=	libexif-gtk
