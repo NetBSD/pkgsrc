@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/10/26 16:01:37 grant Exp $
+# $NetBSD: Makefile,v 1.6 2002/11/14 23:28:55 jlam Exp $
 #
 
 DISTNAME=       less-378
@@ -11,6 +11,6 @@ HOMEPAGE=       http://www.greenwoodsoftware.com/less/
 COMMENT=	pager similar to more and pg
 
 GNU_CONFIGURE=  	yes
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 
 .include "../../mk/bsd.pkg.mk"

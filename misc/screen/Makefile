@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2002/11/04 22:39:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.37 2002/11/14 23:33:12 jlam Exp $
 
 DISTNAME=	screen-3.9.13
 CATEGORIES=	misc
@@ -9,27 +9,29 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/screen/screen.html
 COMMENT=	Multi-screen window manager
 
-GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		# defined	
 INFO_FILES=		screen.info
 PLIST_SUBST=		DISTNAME=${DISTNAME}
-USE_BUILDLINK_ONLY=	yes
 TEXINFO_OVERRIDE=	YES
 
-CONFIGURE_ARGS+=--with-sys-screenrc=${PKG_SYSCONFDIR}/screenrc \
-		--enable-telnet
+GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=	--with-sys-screenrc=${PKG_SYSCONFDIR}/screenrc
+CONFIGURE_ARGS+=	--enable-telnet
 
 .include "../../mk/bsd.prefs.mk"
-.if (${OPSYS} == SunOS)
-PLIST_SRC=	${PKGDIR}/PLIST.SunOS
+
+.if exists(${PKGDIR}/PLIST.${OPSYS})
+PLIST_SRC=	${PKGDIR}/PLIST.${OPSYS}
 .endif
 
 post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/screen
-	${INSTALL_DATA} ${WRKSRC}/etc/etcscreenrc ${PREFIX}/share/examples/screen/screenrc
+	${INSTALL_DATA} ${WRKSRC}/etc/etcscreenrc			\
+		${PREFIX}/share/examples/screen/screenrc
 .if (${OPSYS} == SunOS)
-	cd ${WRKSRC}/terminfo && \
-	${SETENV} TERMINFO=${PREFIX}/share/lib/terminfo \
-	  /usr/5bin/tic screeninfo.src
+	cd ${WRKSRC}/terminfo &&					\
+	${SETENV} TERMINFO=${PREFIX}/share/lib/terminfo			\
+		/usr/5bin/tic screeninfo.src
 .endif
 
 .include "../../mk/texinfo.mk"
