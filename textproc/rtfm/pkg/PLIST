@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/17 23:35:42 hubertf Exp $
+bin/rtfm
+man/man1/rtfm.1
