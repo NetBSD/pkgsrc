@@ -1,0 +1,3 @@
+ElScreen is a window manager in Emacs.  It's role is very similar to that
+of GNU Screen in terminal emulators.  This is useful if you use Emacs Lisp
+applications which have multiple windows.
