@@ -1,0 +1,82 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/01 19:07:12 jmmv Exp $
+bin/nautilus-cd-burner
+lib/gnome-vfs-2.0/modules/libmapping.a
+lib/gnome-vfs-2.0/modules/libmapping.la
+lib/gnome-vfs-2.0/modules/libmapping.so
+lib/nautilus/extensions-1.0/libnautilus-burn.a
+lib/nautilus/extensions-1.0/libnautilus-burn.la
+lib/nautilus/extensions-1.0/libnautilus-burn.so
+lib/nautilus/extensions-1.0/libnautilus-burn.so.0
+lib/nautilus/extensions-1.0/libnautilus-burn.so.0.0
+libexec/mapping-daemon
+share/examples/nautilus-cd-burner/gnome-vfs-2.0/modules/mapping-modules.conf
+share/gconf/schemas/ncb.schemas
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/nautilus-cd-burner.mo
+share/nautilus-cd-burner/cdburn.glade
+share/nautilus-cd-burner/cdspin1.png
+share/nautilus-cd-burner/cdspin2.png
+share/nautilus-cd-burner/cdspin3.png
+share/nautilus-cd-burner/cdspin4.png
+share/nautilus-cd-burner/cdspin5.png
+share/nautilus-cd-burner/cdspin6.png
+share/nautilus-cd-burner/cdspin7.png
+share/nautilus-cd-burner/cdspin8.png
+@dirrm share/nautilus-cd-burner
+@comment in GConf2: @dirrm share/gconf/schemas
+@dirrm share/examples/nautilus-cd-burner/gnome-vfs-2.0/modules
+@dirrm share/examples/nautilus-cd-burner/gnome-vfs-2.0
+@dirrm share/examples/nautilus-cd-burner
+@comment in nautilus: @dirrm lib/nautilus/extensions-1.0
+@comment in nautilus: @dirrm lib/nautilus
+@comment in gnome-vfs2: @dirrm lib/gnome-vfs-2.0/modules
