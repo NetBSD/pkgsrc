@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<!-- $NetBSD: README.pkg,v 1.15 2000/09/19 19:29:11 agc Exp $ -->
+<!-- $NetBSD: README.pkg,v 1.16 2000/11/09 23:46:30 hubertf Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection: %%PORT%%</title>
@@ -31,7 +31,7 @@ longer description, or browse the package's
 "<A HREF=".">%%PORT%%</A>"
 directory.
 The current source version of the package is
-"%%PKG%%"
+"%%PKG%%".
 For a summary on how to use the package collection, go to the
 <a href="../../README.html">top of the packages tree</a>.
 </p>
