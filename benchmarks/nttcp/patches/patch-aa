@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2003/09/19 18:11:45 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2003/11/25 22:42:30 dmcmahill Exp $
 
 --- Makefile.orig	Mon Dec 18 10:17:20 2000
-+++ Makefile	Fri Sep 19 16:31:34 2003
++++ Makefile
 @@ -108,13 +108,13 @@
  #DBG=	-Wall -g
  #INC=	
@@ -23,17 +23,18 @@ $NetBSD: patch-aa,v 1.3 2003/09/19 18:11:45 wiz Exp $
  
  ## For SGI IRIX 5.3, 6.2 (cc or gcc)
  #ARCH=
-@@ -151,10 +151,13 @@
+@@ -151,9 +151,12 @@ INC=	
  VERSION=	1.47
  #prefix=		/usr/local/dist/DIR/nttcp-$(VERSION)
  #prefix=		/usr/local
 -prefix=		/usr/local/opt/nttcp-$(VERSION)
+-CFLAGS =	$(ARCH) $(DBG) $(DEF) $(INC) $(OPT) -DVERSION=\"$(VERSION)\"
 +#prefix=		/usr/local/opt/nttcp-$(VERSION)
 +prefix=		${PREFIX}
- CFLAGS =	$(ARCH) $(DBG) $(DEF) $(INC) $(OPT) -DVERSION=\"$(VERSION)\"
++CFLAGS =	$(DBG) $(DEF) $(INC) $(OPT) -DVERSION=\"$(VERSION)\"
  LFLAGS = 	$(DBG) 
- 
-+all:		nttcp
 +
++all:		nttcp
+ 
  nttcp:		nttcp.o support.o
  		$(CC) $(LFLAGS) nttcp.o -o nttcp support.o $(LIB)
