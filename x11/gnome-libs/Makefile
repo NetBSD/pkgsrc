@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2001/10/24 22:11:12 jlam Exp $
+# $NetBSD: Makefile,v 1.74 2002/01/01 15:14:19 bjoern Exp $
 
 DISTNAME=		gnome-libs-1.4.1.2
 CATEGORIES=		x11 gnome
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-libs/}
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
-COMMENT=		Libaries for the GNU Network Object Model Environment
+COMMENT=		Libraries for the GNU Network Object Model Environment
 
 BUILD_USES_MSGFMT=	YES
 
