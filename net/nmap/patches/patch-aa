@@ -1,22 +1,31 @@
-$NetBSD: patch-aa,v 1.1 1999/04/04 16:36:40 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2000/04/29 17:32:19 wiz Exp $
 
-Lame 1.3.3 install(1) doesn't understand -c and -d at the same time.
-Fix this (see PR 7318).
-
---- Makefile.in.orig	Wed Mar 31 11:07:26 1999
-+++ Makefile.in	Sun Apr  4 18:17:55 1999
-@@ -111,10 +111,10 @@
- 	$(INSTALL) -d $(mandir) 
- 	$(INSTALL) -d $(mandir)/man1
- 	$(INSTALL) -d $(libdir)
--	$(INSTALL) -m 755 $(TARGET) $(bindir)/$(TARGET)
--	$(INSTALL) -m 644 docs/$(TARGET).1 $(mandir)/man1/$(TARGET).1
--	$(INSTALL) -m 644 nmap-os-fingerprints  $(libdir)/nmap-os-fingerprints
--	$(INSTALL) -m 644 nmap-services  $(libdir)/nmap-services
-+	$(INSTALL) -c -m 755 $(TARGET) $(bindir)/$(TARGET)
-+	$(INSTALL) -c -m 644 docs/$(TARGET).1 $(mandir)/man1/$(TARGET).1
-+	$(INSTALL) -c -m 644 nmap-os-fingerprints  $(libdir)/nmap-os-fingerprints
-+	$(INSTALL) -c -m 644 nmap-services  $(libdir)/nmap-services
+--- Makefile.in.orig	Fri Apr 28 08:21:52 2000
++++ Makefile.in	Sat Apr 29 18:56:00 2000
+@@ -5,7 +5,7 @@
+ sbindir = @sbindir@
+ mandir = @mandir@
+ srcdir = @srcdir@
+-libdir = @libdir@/nmap
++libdir = @datadir@/nmap
+ deskdir = $(prefix)/share/gnome/apps/Utilities
  
- uninstall:
- 	rm -f $(bindir)/$(TARGET)
+ CC = @CC@
+@@ -34,7 +34,7 @@
+ 
+ DEPS = nmap.h error.h targets.h osscan.h tcpip.h utils.h global_structures.h charpool.h services.h rpc.h portlist.h
+ 
+-all: $(TARGET) nmapfe/nmapfe
++all: $(TARGET)
+ 
+ $(TARGET): $(DEPS) @PCAP_DEPENDS@ $(OBJS)
+ 	@echo Compiling nmap
+@@ -128,7 +128,7 @@
+ 	$(MAKEDEPEND) $(INCLS) -s "# DO NOT DELETE" -- $(DEFS) -- $(SRCS)
+ 
+ install: $(TARGET)
+-	$(SHTOOL) mkdir -f -p -m 755 $(bindir) $(mandir)/man1 $(libdir) $(deskdir)
++	$(SHTOOL) mkdir -f -p -m 755 $(bindir) $(mandir)/man1 $(libdir)
+ 	$(INSTALL) -c -m 755 nmap $(bindir)/nmap
+ 	@echo "If the next command failes -- you cannot use the X front end"
+ 	-test -f nmapfe/nmapfe && $(INSTALL) -c -m 755 nmapfe/nmapfe $(bindir)/nmapfe && $(SHTOOL) mkln -f -s $(bindir)/nmapfe $(bindir)/xnmap && $(INSTALL) -c -m 644 nmapfe.desktop $(deskdir)/nmapfe.desktop

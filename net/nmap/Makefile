@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2000/01/28 14:36:37 agc Exp $
+# $NetBSD: Makefile,v 1.8 2000/04/29 17:32:19 wiz Exp $
 #
 
-DISTNAME=	nmap-2.12
-CATEGORIES=	net
+DISTNAME=	nmap-2.50
+CATEGORIES=	net security
 MASTER_SITES=	http://www.insecure.org/nmap/dist/
 EXTRACT_SUFX=	.tgz
 
