@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.6 2003/04/17 06:22:19 martti Exp $
+$NetBSD: patch-ad,v 1.7 2004/01/21 06:56:48 martti Exp $
 
---- conf/sample-misc.cf.orig	2003-03-20 22:51:12.000000000 +0200
-+++ conf/sample-misc.cf	2003-04-17 08:53:55.000000000 +0300
-@@ -357,7 +357,7 @@
+--- conf/sample-misc.cf.orig	2003-08-12 19:20:19.000000000 +0300
++++ conf/sample-misc.cf	2004-01-21 08:40:15.000000000 +0200
+@@ -360,7 +360,7 @@
  # The daemon_directory parameter specifies the location of Postfix
  # support programs and daemons. This directory must be owned by root.
  #

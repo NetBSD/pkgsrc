@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.17 2003/05/01 14:07:58 jmmv Exp $
+$NetBSD: patch-af,v 1.18 2004/01/21 06:56:48 martti Exp $
 
---- conf/main.cf.orig	2003-02-20 16:44:47.000000000 +0200
-+++ conf/main.cf	2003-02-21 13:27:20.000000000 +0200
+--- conf/main.cf.orig	2003-09-06 03:30:35.000000000 +0300
++++ conf/main.cf	2004-01-21 08:40:42.000000000 +0200
 @@ -31,13 +31,18 @@
  # The command_directory parameter specifies the location of all
  # postXXX commands.
@@ -32,7 +32,7 @@ $NetBSD: patch-af,v 1.17 2003/05/01 14:07:58 jmmv Exp $
  
  # INTERNET HOST AND DOMAIN NAMES
  # 
-@@ -618,16 +623,16 @@
+@@ -621,16 +626,16 @@
  # commands.  This must be a group name with a numerical group ID that
  # is not shared with other accounts, not even with the Postfix account.
  #
