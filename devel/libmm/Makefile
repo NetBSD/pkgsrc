@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2.2.2 2002/08/22 11:10:43 jlam Exp $
+# $NetBSD: Makefile,v 1.2.2.3 2002/08/25 18:01:04 jlam Exp $
 #
 
 DISTNAME=	mm-1.2.1
@@ -14,6 +14,6 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.pkg.mk"
