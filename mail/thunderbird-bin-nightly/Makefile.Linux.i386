@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.Linux.i386,v 1.6 2004/03/05 00:45:32 grant Exp $
+# $NetBSD: Makefile.Linux.i386,v 1.7 2004/04/23 09:52:50 grant Exp $
 
-DISTNAME=	thunderbird-i686-pc-linux-gnu
-EXTRACT_SUFX=	.tar.bz2
-MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/thunderbird/nightly/2004-02-20-trunk/
+DISTNAME=	thunderbird-i686-linux-gtk+xft
+MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/thunderbird/nightly/latest-trunk/
 
 MOZ_PLATFORM=	linux
