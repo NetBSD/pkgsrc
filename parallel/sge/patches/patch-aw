@@ -1,0 +1,59 @@
+$NetBSD: patch-aw,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/libs/uti/sge_arch.c.orig	2004-03-03 13:11:00.000000000 +0000
++++ source/libs/uti/sge_arch.c
+@@ -129,6 +129,54 @@ const char *sge_get_arch()
+ #   define ARCHBIN "darwin"   
+ #elif defined(IA64LINUX)
+ #   define ARCHBIN "ia64linux"
++#elif defined(NETBSD)
++# if defined(NETBSD_ALPHA)
++#    define ARCHBIN "nbsd-alpha"
++# elif defined(NETBSD_ARM)
++#    define ARCHBIN "nbsd-arm"
++# elif defined(NETBSD_ARM32)
++#    define ARCHBIN "nbsd-arm32"
++# elif defined(NETBSD_ARMEB)
++#    define ARCHBIN "nbsd-armeb"
++# elif defined(NETBSD_HPPA)
++#    define ARCHBIN "nbsd-hppa"
++# elif defined(NETBSD_I386)
++#    define ARCHBIN "nbsd-i386"
++# elif defined(NETBSD_M68000)
++#    define ARCHBIN "nbsd-m68000"
++# elif defined(NETBSD_M68K)
++#    define ARCHBIN "nbsd-m68k"
++# elif defined(NETBSD_MIPSEB)
++#    define ARCHBIN "nbsd-mipseb"
++# elif defined(NETBSD_MIPSEL)
++#    define ARCHBIN "nbsd-mipsel"
++# elif defined(NETBSD_NS32K)
++#    define ARCHBIN "nbsd-ns32k"
++# elif defined(NETBSD_PDP10)
++#    define ARCHBIN "nbsd-pdp10"
++# elif defined(NETBSD_POWERPC)
++#    define ARCHBIN "nbsd-powerpc"
++# elif defined(NETBSD_SH3)
++#    define ARCHBIN "nbsd-sh3"
++# elif defined(NETBSD_SH3EB)
++#    define ARCHBIN "nbsd-sh3eb"
++# elif defined(NETBSD_SH3EL)
++#    define ARCHBIN "nbsd-sh3el"
++# elif defined(NETBSD_SH5EB)
++#    define ARCHBIN "nbsd-sh5eb"
++# elif defined(NETBSD_SH5EL)
++#    define ARCHBIN "nbsd-sh5el"
++# elif defined(NETBSD_SPARC)
++#    define ARCHBIN "nbsd-sparc"
++# elif defined(NETBSD_SPARC64)
++#    define ARCHBIN "nbsd-sparc64"
++# elif defined(NETBSD_VAX)
++#    define ARCHBIN "nbsd-vax"
++# elif defined(NETBSD_X86_64)
++#    define ARCHBIN "nbsd-x86_64"
++# else
++#    pragma "Define a NetBSD architecture for SGE"
++# endif
+ #else
+ #   pragma "Define an architecture for SGE"
+ #endif

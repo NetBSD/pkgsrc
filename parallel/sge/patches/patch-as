@@ -1,0 +1,26 @@
+$NetBSD: patch-as,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/dist/util/arch	2003-10-02 14:25:34.000000000 +0200
++++ source/dist/util/arch	2003-09-30 15:53:29.000000000 +0200
+@@ -63,6 +63,9 @@
+    FreeBSD,*)
+       ARCH=fbsd-$ht
+       ;;
++   NetBSD,*)
++      ARCH=nbsd-$ht
++      ;;
+    esac
+ fi
+ 
+@@ -267,6 +270,11 @@
+       DEFAULTMANPATH=`/usr/bin/manpath -q`
+       PATH=$SAFE_PATH
+       ;;
++   nbsd-*)
++      PATH=$OLD_PATH
++      DEFAULTMANPATH=/usr/pkg/man:/usr/local/man:/usr/X11R6/man:/usr/share/man
++      PATH=$SAFE_PATH
++      ;;
+    darwin)
+       DEFAULTMANPATH=`/usr/bin/manpath -q`
+       SHARED_LIBRARY_PATH="DYLD_LIBRARY_PATH"

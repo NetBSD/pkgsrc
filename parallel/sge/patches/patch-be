@@ -1,0 +1,13 @@
+$NetBSD: patch-be,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/dist/inst_sge.orig	2004-03-03 08:10:02.000000000 -0500
++++ source/dist/inst_sge
+@@ -738,7 +738,7 @@ AddConfiguration()
+ 
+    if [ $csp = true ]; then
+       X509_COUNT=`strings $V5BIN/sge_qmaster | grep X509 | wc -l`
+-      if [ 50 -gt $X509_COUNT ]; then
++      if [ 10 -gt $X509_COUNT ]; then
+          $INFOTEXT "\n>sge_qmaster< binary is not compiled with >-secure< option!\n"
+          $INFOTEXT -wait -auto $autoinst -n "Hit <RETURN> to cancel the installation >> "
+          exit 1

@@ -1,0 +1,67 @@
+$NetBSD: patch-bd,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/scripts/distinst.orig	2004-04-22 13:39:12.000000000 +0000
++++ source/scripts/distinst
+@@ -66,7 +66,10 @@ REMOTEBINARIES="rsh rshd rlogin"
+ SUPPORTEDARCHS="aix42 aix43 aix51 alinux cray crayts craytsieee glinux hp10 \
+ hp11 hp11-64 irix6 necsx4 sx slinux solaris solaris64 solaris86 osf4 tru64 \
+ darwin fbsd-alpha fbsd-amd64 fbsd-i386 fbsd-ia64 fbsd-ppc fbsd-sparc64 \
+-ia64linux lx24-amd64"
++nbsd-alpha nbsd-arm nbsd-arm32 nbsd-armeb nbsd-hppa nbsd-i386 nbsd-m68000 \
++nbsd-m68k nbsd-mipseb nbsd-mipsel nbsd-ns32k nbsd-pdp10 nbsd-powerpc nbsd-sh3 \
++nbsd-sh3eb nbsd-sh3el nbsd-sh5eb nbsd-sh5el nbsd-sparc nbsd-sparc64 nbsd-vax \
++nbsd-x86_64 ia64linux lx24-amd64"
+ 
+ #SGEEE_UTILITYBINARIES="sge_share_mon sge_host_mon"
+ SGEEE_UTILITYBINARIES="sge_share_mon"
+@@ -213,6 +216,50 @@ SetArchBin()
+       ARCHBIN=FREEBSD_PPC
+    elif [ $i = fbsd-sparc64 ]; then
+       ARCHBIN=FREEBSD_SPARC64
++   elif [ $i = nbsd-alpha ]; then
++      ARCHBIN=NETBSD_ALPHA
++   elif [ $i = nbsd-arm ]; then
++      ARCHBIN=NETBSD_ARM
++   elif [ $i = nbsd-arm32 ]; then
++      ARCHBIN=NETBSD_ARM32
++   elif [ $i = nbsd-armeb ]; then
++      ARCHBIN=NETBSD_ARMEB
++   elif [ $i = nbsd-hppa ]; then
++      ARCHBIN=NETBSD_HPPA
++   elif [ $i = nbsd-i386 ]; then
++      ARCHBIN=NETBSD_I386
++   elif [ $i = nbsd-m68000 ]; then
++      ARCHBIN=NETBSD_M68000
++   elif [ $i = nbsd-m68k ]; then
++      ARCHBIN=NETBSD_M68K
++   elif [ $i = nbsd-mipseb ]; then
++      ARCHBIN=NETBSD_MIPSEB
++   elif [ $i = nbsd-mipsel ]; then
++      ARCHBIN=NETBSD_MIPSEL
++   elif [ $i = nbsd-ns32k ]; then
++      ARCHBIN=NETBSD_NS32K
++   elif [ $i = nbsd-pdp10 ]; then
++      ARCHBIN=NETBSD_PDP10
++   elif [ $i = nbsd-powerpc ]; then
++      ARCHBIN=NETBSD_POWERPC
++   elif [ $i = nbsd-sh3 ]; then
++      ARCHBIN=NETBSD_SH3
++   elif [ $i = nbsd-sh3eb ]; then
++      ARCHBIN=NETBSD_SH3EB
++   elif [ $i = nbsd-sh3el ]; then
++      ARCHBIN=NETBSD_SH3EL
++   elif [ $i = nbsd-sh5eb ]; then
++      ARCHBIN=NETBSD_SH5EB
++   elif [ $i = nbsd-sh5el ]; then
++      ARCHBIN=NETBSD_SH5EL
++   elif [ $i = nbsd-sparc ]; then
++      ARCHBIN=NETBSD_SPARC
++   elif [ $i = nbsd-sparc64 ]; then
++      ARCHBIN=NETBSD_SPARC64
++   elif [ $i = nbsd-vax ]; then
++      ARCHBIN=NETBSD_VAX
++   elif [ $i = nbsd-x86_64 ]; then
++      ARCHBIN=NETBSD_X86_64
+    elif [ $i = ia64linux ]; then
+       ARCHBIN=IA64LINUX
+    elif [ $i = lx24-amd64 ]; then
