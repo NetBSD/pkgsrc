@@ -1,29 +1,25 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/08/22 13:44:20 rh Exp $
+$NetBSD: patch-aa,v 1.2 2001/08/28 03:30:43 mjl Exp $
 
---- configure.orig	Sat Jul  3 23:14:38 1999
-+++ configure	Sun Aug 22 13:34:41 1999
-@@ -1181,6 +1181,8 @@
- /* We use char because int might match the return type of a gcc2
-     builtin and then its argument prototype would still apply.  */
- char hosts_ctl();
-+int allow_severity;
-+int deny_severity;
- 
- int main() {
- hosts_ctl()
-@@ -1207,9 +1209,10 @@
- #define $ac_tr_lib 1
+--- configure.orig	Tue Aug 28 05:11:12 2001
++++ configure	Tue Aug 28 05:13:05 2001
+@@ -1421,6 +1421,8 @@
  EOF
  
--  LIBS="-lwrap $LIBS"
+ ac_cv_lib_wrap_hosts_ctl=yes
++  LIBS="$ac_save_LIBS"
 +  LIBWRAP="-lwrap"
- 
  else
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+@@ -1428,6 +1430,7 @@
+   LIBS="$ac_save_LIBS"
+ echo "$ac_t""no" 1>&6
+ ac_cv_lib_wrap_hosts_ctl=no
 +  LIBWRAP=""
-   echo "$ac_t""no" 1>&6
  fi
+ rm -f conftest*
  
-@@ -2361,6 +2364,7 @@
+@@ -2435,6 +2438,7 @@
  s%@DEFS@%$DEFS%g
  s%@LDFLAGS@%$LDFLAGS%g
  s%@LIBS@%$LIBS%g

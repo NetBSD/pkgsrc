@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 13:37:54 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/08/28 03:30:41 mjl Exp $
 
-SHA1 (NewsCache-0.99.15.tar.gz) = 7a5509a34bc826fa0e3da169021a47dfa2cc7b80
-Size (NewsCache-0.99.15.tar.gz) = 309984 bytes
-SHA1 (patch-aa) = 875f37be9f753c638af4fc868958439156c424ce
+SHA1 (NewsCache-0.99.17.tar.gz) = cb7411a00eeec7dd3a12193733a440b810102cf0
+Size (NewsCache-0.99.17.tar.gz) = 311921 bytes
+SHA1 (patch-aa) = 0964e234041c6ad76c215cbb2d381d8e9feeea85
 SHA1 (patch-ab) = 30da9db48ce320a5e21bb74a38cdbff05b3db28c
-SHA1 (patch-ac) = f53a37461ef03e9f73ef8dc1509c0072ac6ea528
+SHA1 (patch-ac) = 48a21e95d80569784f91c3fc288d711d9e4f77d3
 SHA1 (patch-ad) = 93ca8786fea2c745587e6acdc9ec8f422cdbe8ee
-SHA1 (patch-ae) = 223f000653fe32953fcb743a71e4bd3b0b201def
+SHA1 (patch-ae) = 94bf16d68d09f86bbd30d34b8932e400b39af462
