@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/02/10 14:21:38 ben Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/15 15:08:41 wiz Exp $
 #
 
-DISTNAME=		fp-netbsd-ws-4.3.3
-PKGNAME=		fprot-workstation-bin-4.3.3
+DISTNAME=		fp-netbsd-ws-4.4.0
+PKGNAME=		fprot-workstation-bin-4.4.0
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.f-prot.com/pub/bsd/
 
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.f-prot.com/products/home_use/bsd/
 COMMENT=		F-prot antivirus for home users
 
 DEPENDS+=		p5-libwww>=5.69:../../www/p5-libwww
+DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
