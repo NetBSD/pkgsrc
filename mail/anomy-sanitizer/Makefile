@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/20 12:19:43 agc Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/29 23:04:34 kim Exp $
 #
 
 DISTNAME=	anomy-sanitizer-1.66
@@ -45,7 +45,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/sanitizer ${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/simplify ${PREFIX}/sbin
 	${INSTALL_DATA_DIR} ${ANOMYDOC}
-	cd ${WRKSRC} && ${PAX} -rw \
+	cd ${WRKSRC} && ${PAX} -rw -s',.*\.orig$$,,' \
 	    CHANGELOG.sanitizer \
 	    CREDITS \
 	    README.sanitizer \
@@ -59,7 +59,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${ANOMYLIB}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/sanitizer.pl ${ANOMYLIB}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/simplify.pl ${ANOMYLIB}/bin
-	cd ${WRKSRC}/bin && ${PAX} -rw Anomy ${ANOMYLIB}/bin
+	cd ${WRKSRC}/bin && ${PAX} -rw -s',.*\.orig$$,,' Anomy ${ANOMYLIB}/bin
 	${CHMOD} -R u=rw,go=r ${ANOMYLIB}/bin/Anomy
 	${CHMOD} -R a+X ${ANOMYLIB}/bin/Anomy
 	${CHOWN} -R ${LIBOWN}:${LIBGRP} ${ANOMYLIB}
