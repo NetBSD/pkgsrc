@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2889 2005/01/12 21:07:52 reed Exp $
+$NetBSD: TODO,v 1.2890 2005/01/13 09:59:47 adam Exp $
 
 Suggested new packages
 ======================
@@ -266,7 +266,6 @@ Suggested package updates
 	o GridSim-3.1
 	o GutenMark-20040320
 	o MyPasswordSafe-20041210
-	o ORBit-0.5.17
 	o PAM-0.78
 	o TeXmacs-1.0.4-R3
 	o Xaw3d-1.5E
