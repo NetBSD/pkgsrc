@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.102 2002/11/07 04:22:29 dillo Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.103 2002/11/10 12:17:31 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1591,6 +1591,7 @@ XCHAT_USE_SSL?=	YES
 #
 #MASTER_SITE_GNOME=	ftp://www.planetmirror.com.au/pub/GNOME/
 #MASTER_SITE_GNU=	ftp://www.planetmirror.com.au/pub/gnu/
+#MASTER_SITE_MOZILLA=	ftp://www.planetmirror.com.au/pub/mozilla/releases/
 #MASTER_SITE_PERL_CPAN=	ftp://www.planetmirror.com.au/pub/perl/CPAN/modules/by-module/
 #MASTER_SITE_SUNSITE=	ftp://www.planetmirror.com.au/pub/sunsite/
 #MASTER_SITE_SUSE=	ftp://www.planetmirror.com.au/pub/suse/i386/${SUSE_VERSION}/suse/
