@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.267 2004/07/27 15:56:19 xtraeme Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.268 2004/07/27 15:59:31 xtraeme Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -237,11 +237,11 @@ PKG_INSTALLATION_PREFS?= overwrite pkgviews
 # Possible: any of: overwrite, pkgviews
 # Default: overwrite pkgviews
 
-PKG_RESUME_TRANSFERS?=	YES
+PKG_RESUME_TRANSFERS?=	NO
 # Used in pkgsrc to resume transfers, if enabled the whole file won't be
 # downloaded from scratch again.
 # Possible: yes or no.
-# Default: YES.
+# Default: no.
 
 PKG_SYSCONFBASE?= ${PREFIX}/etc
 # This is the main config directory under which all package configuration
