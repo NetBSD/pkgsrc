@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2003/01/25 07:22:19 martti Exp $
+# $NetBSD: Makefile,v 1.77 2003/01/26 13:20:08 taca Exp $
 
 DISTNAME=	postfix-2.0.3
 CATEGORIES=	mail
@@ -17,7 +17,7 @@ USE_BUILDLINK2=	yes
 .include "../../mk/bsd.prefs.mk"
 
 #.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
-#PATCHFILES+=		tls+ipv6-1.12-pf-2.0.2.patch.gz
+#PATCHFILES+=		tls+ipv6-1.12-pf-2.0.3.patch.gz
 #PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.12/
 #PATCH_DIST_STRIP=	-p1
 #BUILD_DEFS+=		POSTFIX_USE_INET6
@@ -61,21 +61,21 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
 BUILD_DEFS+=	POSTFIX_USE_MYSQL
 .endif
 
-.if defined(POSTFIX_USE_TLS) && ${POSTFIX_USE_TLS} == "YES"
-.include "../../security/openssl/buildlink2.mk"
-PATCH_SITES+=	http://people.arhea.net/dawszy/NetBSD/postfix_tls/
-PATCHFILES+=	pfixtls-1.1.11.diff.gz
-PATCH_DIST_STRIP=	-p1
-
-CCARGS+=	-DHAS_SSL
-AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib	\
-		-Wl,-R${BUILDLINK_PREFIX.openssl}/lib	\
-		-lssl -lcrypto
-BUILD_DEFS+=	POSTFIX_USE_TLS
-
-PLIST_SRC+=	${PKGDIR}/PLIST.tls
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
-.endif
+#.if defined(POSTFIX_USE_TLS) && ${POSTFIX_USE_TLS} == "YES"
+#.include "../../security/openssl/buildlink2.mk"
+#PATCH_SITES+=	http://people.arhea.net/dawszy/NetBSD/postfix_tls/
+#PATCHFILES+=	pfixtls-1.1.11.diff.gz
+#PATCH_DIST_STRIP=	-p1
+#
+#CCARGS+=	-DHAS_SSL
+#AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib	\
+#		-Wl,-R${BUILDLINK_PREFIX.openssl}/lib	\
+#		-lssl -lcrypto
+#BUILD_DEFS+=	POSTFIX_USE_TLS
+#
+#PLIST_SRC+=	${PKGDIR}/PLIST.tls
+#MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
+#.endif
 
 .if defined(USE_SASL) && ${USE_SASL} == "YES"
 .include "../../security/cyrus-sasl/buildlink2.mk"
