@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/06/25 13:56:12 wiz Exp $
+
+--- myWindows/myEvents.cpp.orig	2004-06-13 18:47:40.000000000 +0200
++++ myWindows/myEvents.cpp
+@@ -12,7 +12,7 @@ static NWindows::NSynchronization::CCrit
+ 
+ static void myYield() {
+   myLeave();
+-#ifdef __CYGWIN__
++#if 1
+   usleep(10);
+ #else
+   int ret = pthread_yield();

@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/25 13:56:12 wiz Exp $
+
+--- 7zip/Crypto/AES/aesopt.h.orig	2004-06-13 19:06:36.000000000 +0200
++++ 7zip/Crypto/AES/aesopt.h
+@@ -166,8 +166,7 @@
+ // #if defined(__GNUC__) || defined(__GNU_LIBRARY__)
+ #if (defined(__GNUC__) || defined(__GNU_LIBRARY__)) && !defined(WIN32) && !defined(__CYGWIN__)
+ 
+-#  include <endian.h>
+-#  include <byteswap.h>
++#  include <sys/endian.h>
+ #elif defined(__CRYPTLIB__)
+ #  if defined( INC_ALL )
+ #    include "crypt.h"
