@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/03 01:08:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/09 12:37:40 wiz Exp $
 
 DISTNAME=       mgl2-alpha-019
 PKGNAME=        mgl-0.1.9a
@@ -8,7 +8,7 @@ MASTER_SITES=   http://at.sakura.ne.jp/~suz/arc/
 MAINTAINER=     fk200329@fsinet.or.jp
 HOMEPAGE=	http://www.netbsd.org/Ports/hpcmips/mgl2.html
 
-DEPENDS= 	jpeg>=6b:../../graphics/jpeg \
+DEPENDS= 	jpeg-6b:../../graphics/jpeg \
 		png>=1.0.3:../../graphics/png \
 		libungif>=4.1.0:../../graphics/libungif \
 		mglfonts>=0.1:../../fonts/mglfonts
