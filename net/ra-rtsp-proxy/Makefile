@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/05/10 05:35:01 tron Exp $
+# $NetBSD: Makefile,v 1.14 2001/09/14 23:01:39 wiz Exp $
 
 DISTNAME=	rtspd-src-1.0.0.0
 PKGNAME=	ra-rtsp-proxy-1.0.0.0nb1
@@ -21,6 +21,12 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 DOWNLOAD=	http://proforma.real.com/rn/misc/rtspproxy/index.html
 
 WRKSRC=		${WRKDIR}/rtspd-1.0.0.0a
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=	LOCAL_LIBS="-lsocket -lnsl"
+.endif
 
 do-fetch:
 	@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
