@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/02/14 17:21:39 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/08 01:27:23 minskim Exp $
 
 DISTNAME=		rapidsvn-0.5.0
 CATEGORIES=		devel x11
@@ -8,7 +8,7 @@ MAINTAINER=		epg@NetBSD.org
 HOMEPAGE=		http://rapidsvn.tigris.org/
 COMMENT=		Cross-platform Subversion GUI
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
@@ -16,10 +16,10 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-svn-include=${BUILDLINK_DIR}/include
 CONFIGURE_ARGS+=	--with-svn-lib=${BUILDLINK_DIR}/lib
 
-BUILDLINK_DEPENDS.subversion-base=	subversion-base>=0.36.0
-BUILDLINK_DEPENDS.wxGTK=	wxGTK>=2.4.0
+BUILDLINK_DEPENDS.subversion-base+=	subversion-base>=0.36.0
+BUILDLINK_DEPENDS.wxGTK+=	wxGTK>=2.4.0
 
-.include "../../devel/apr/buildlink2.mk"
-.include "../../devel/subversion/buildlink2.mk"
-.include "../../x11/wxGTK/buildlink2.mk"
+.include "../../devel/apr/buildlink3.mk"
+.include "../../devel/subversion/buildlink3.mk"
+.include "../../x11/wxGTK/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
