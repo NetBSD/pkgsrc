@@ -1,0 +1,17 @@
+Powerful webserver security scanner.
+
+The following features are supported:
+
+- Operating System Detect(used by NetCraft) 
+- webserver type scan 
+- CVE compatible(only NT, some Unix) 
+- flexible scan rule databases 
+- multiple hosts scan and multiple hosts webserver type scan. 
+- http port 
+- wide network(ip range) scan 
+- wide network webserver type scan 
+- patch information.(completed patch info-NT) 
+- http request injection. 
+- virtual host scan 
+- fast scan(used a Processes) 
+- recv flags 
