@@ -1,0 +1,16 @@
+$NetBSD: patch-ai,v 1.1 1999/11/25 14:32:43 tron Exp $
+
+--- src/mtest/mtest.c.orig	Thu Jan  8 08:40:50 1998
++++ src/mtest/mtest.c	Thu Nov 25 15:17:58 1999
+@@ -52,6 +52,11 @@
+ 
+ /* Excellent reasons to hate ifdefs, and why my real code never uses them */
+ 
++#ifdef __NetBSD__
++#undef unix
++#define unix 1
++#endif
++
+ #ifndef unix
+ # define unix 0
+ #endif

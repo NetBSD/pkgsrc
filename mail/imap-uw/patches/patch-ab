@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.4 1999/11/25 14:32:43 tron Exp $
+
+--- src/imapd/Makefile.orig	Sat Nov 21 04:26:03 1998
++++ src/imapd/Makefile	Thu Nov 25 15:13:27 1999
+@@ -52,7 +52,7 @@
+ # Get local definitions from c-client directory
+ 
+ C = ../c-client
+-CCLIENTLIB = $C/c-client.a
++CCLIENTLIB = $C/libimapuw.la
+ CC = `cat $C/CCTYPE`
+ CFLAGS = -I$C `cat $C/CFLAGS` $(EXTRACFLAGS) -DANOFILE=\"$(ANO)\" \
+ 	-DALERTFILE=\"$(ALERT)\" -DUSERALERTFILE=\"$(USERALERT)\"
