@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2004/10/03 00:18:23 tv Exp $
-#
+# $NetBSD: Makefile,v 1.22 2004/11/08 10:14:33 adam Exp $
 
-DISTNAME=	wmakerconf-2.8.1
-PKGREVISION=	6
+DISTNAME=	wmakerconf-2.9.2
 CATEGORIES=	x11 wm windowmaker
-MASTER_SITES=	http://ulli.on.openave.net/wmakerconf/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://starplot.org/wmakerconf/
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://ulli.on.openave.net/wmakerconf/
+HOMEPAGE=	http://starplot.org/wmakerconf/
 COMMENT=	Gtk+ based configuration tool for Window Maker
 
 USE_BUILDLINK3=		yes
@@ -30,7 +27,6 @@ pre-configure:
 		> ${WRKSRC}/data/WMWmakerconf
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libproplist/buildlink3.mk"
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../wm/windowmaker/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
