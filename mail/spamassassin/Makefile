@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/08/30 10:50:51 abs Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/08 23:30:38 wiz Exp $
 
 DISTNAME=	Mail-SpamAssassin-2.31
 PKGNAME=	spamassassin-2.31
@@ -13,6 +13,8 @@ COMMENT=	mail filter to identify spam
 
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
+
+CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*
 
 RCD_SCRIPTS=	spamd
 
