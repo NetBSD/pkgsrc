@@ -1,18 +1,23 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/01/17 09:45:45 seb Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/20 20:41:40 wiz Exp $
 
---- amarok/src/vis/libvisual/libvisual.cpp.orig	2004-10-09 12:52:12.000000000 +0000
-+++ amarok/src/vis/libvisual/libvisual.cpp
-@@ -267,11 +267,11 @@ namespace SDL
-                 break;
+--- amarok/src/amarokcore/crashhandler.cpp.orig	2005-02-13 14:01:30.000000000 +0100
++++ amarok/src/amarokcore/crashhandler.cpp
+@@ -42,15 +42,15 @@ namespace amaroK
+     runCommand( const QCString &command )
+     {
+         static const uint SIZE = 40960; //40 KiB
+-        static char stdout[ SIZE ];
++        static char amarok_stdout[ SIZE ];
  
-             case SDL_MOUSEBUTTONDOWN:
--                visual_event_queue_add_mousebutton (vevent, event.button.button, VISUAL_MOUSE_DOWN);
-+                visual_event_queue_add_mousebutton (vevent, event.button.button, VISUAL_MOUSE_DOWN, 0, 0);
-                 break;
+         debug() << "Running: " << command << endl;
  
-             case SDL_MOUSEBUTTONUP:
--                visual_event_queue_add_mousebutton (vevent, event.button.button, VISUAL_MOUSE_UP);
-+                visual_event_queue_add_mousebutton (vevent, event.button.button, VISUAL_MOUSE_UP, 0, 0);
-                 break;
+         FILE *process = ::popen( command, "r" );
+-        stdout[ std::fread( (void*)stdout, sizeof(char), SIZE-1, process ) ] = '\0';
++        amarok_stdout[ std::fread( (void*)amarok_stdout, sizeof(char), SIZE-1, process ) ] = '\0';
+         ::pclose( process );
  
-             case SDL_QUIT:
+-        return QString::fromLocal8Bit( stdout );
++        return QString::fromLocal8Bit( amarok_stdout );
+     }
+ 
+     void
