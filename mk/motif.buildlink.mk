@@ -1,11 +1,11 @@
-# $NetBSD: motif.buildlink.mk,v 1.4 2001/09/13 19:14:52 jlam Exp $
+# $NetBSD: motif.buildlink.mk,v 1.5 2001/09/13 19:22:17 jlam Exp $
 #
-# This Makefile fragment is included by packages that use Motif.
+# This Makefile fragment is included by packages that use Motif-2.0.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally set MOTIF_TYPE choose a specific Motif-compatible package
-#     to be used.
+# (1) Optionally set MOTIF_TYPE choose a specific Motif-2.0-compatible
+#     package to be used.
 # (2) Include this Makefile fragment in the package Makefile,
 
 .if !defined(MOTIF_BUILDLINK_MK)
@@ -13,7 +13,7 @@ MOTIF_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-# Default to using OpenMotif for Motif-compatible libraries as it's a
+# Default to using OpenMotif for Motif-2.0-compatible libraries as it's a
 # "real" Motif with full functionality.  On Solaris, default to DT-Motif
 # (in /usr/dt).
 #
@@ -23,10 +23,10 @@ MOTIF_TYPE_DEFAULT?=	dt
 MOTIF_TYPE_DEFAULT?=	openmotif
 .endif
 
-# If /usr/dt is a valid Motif installation, then use it.  Otherwise, check
-# to see if a pkgsrc Motif is installed and valid, then use it.  Otherwise,
-# if ${X11BASE} is valid, then use it.  Otherwise, use the Motif specified
-# by ${MOTIF_TYPE_DEFAULT}.
+# If /usr/dt is a valid Motif-2.0 installation, then use it.  Otherwise,
+# check to see if a pkgsrc Motif-2.0 is installed and valid, then use it.
+# Otherwise, if ${X11BASE} is valid, then use it.  Otherwise, use the
+# Motif-2.0 specified by ${MOTIF_TYPE_DEFAULT}.
 #
 .if exists(/usr/dt/include/Xm/Xm.h)
 _MOTIF_TYPE=		dt
@@ -75,7 +75,7 @@ MOTIFBASE=		${BUILDLINK_PREFIX.openmotif}
 MOTIFBASE=		${BUILDLINK_PREFIX.lesstif}
 .else
 #
-# Link the pre-existing Motif libraries and headers in ${MOTIFBASE} into
+# Link the pre-existing Motif-2.0 libraries and headers in ${MOTIFBASE} into
 # ${BUILDLINK_DIR}.
 #
 .  include "../../mk/bsd.buildlink.mk"
