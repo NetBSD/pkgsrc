@@ -1,4 +1,4 @@
-/*	$NetBSD: getid.c,v 1.1 2003/09/05 18:38:58 jlam Exp $	*/
+/*	$NetBSD: getid.c,v 1.2 2004/08/21 04:10:45 jlam Exp $	*/
 /*	from: NetBSD: getpwent.c,v 1.48 2000/10/03 03:22:26 enami Exp */
 /*	from: NetBSD: getgrent.c,v 1.41 2002/01/12 23:51:30 lukem Exp */
 
@@ -70,6 +70,10 @@
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
+
 #include <nbcompat.h>
 #if HAVE_SYS_PARAM_H
 #include <sys/param.h>

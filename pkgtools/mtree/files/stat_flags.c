@@ -1,4 +1,4 @@
-/*	$NetBSD: stat_flags.c,v 1.2 2004/04/16 23:43:36 heinz Exp $	*/
+/*	$NetBSD: stat_flags.c,v 1.3 2004/08/21 04:10:45 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1993
@@ -32,23 +32,21 @@
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
+
 #include <nbcompat.h>
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-#if defined(__RCSID) && !defined(lint)
+#if !defined(lint)
 #if 0
 static char sccsid[] = "@(#)stat_flags.c	8.2 (Berkeley) 7/28/94";
 #else
-__RCSID("$NetBSD: stat_flags.c,v 1.2 2004/04/16 23:43:36 heinz Exp $");
+__RCSID("$NetBSD: stat_flags.c,v 1.3 2004/08/21 04:10:45 jlam Exp $");
 #endif
 #endif /* not lint */
-
-#if HAVE_CONFIG_H
-#include "config.h"
-#else
-#define HAVE_FILE_FLAGS 1
-#endif
 
 #if HAVE_SYS_TYPES_H
 #include <sys/types.h>
@@ -103,6 +101,10 @@ flags_to_string(u_long flags, const char *def)
 		SAPPEND("arch");
 	if (flags & SF_IMMUTABLE)
 		SAPPEND("schg");
+#ifdef SF_SNAPSHOT
+	if (flags & SF_SNAPSHOT)
+		SAPPEND("snap");
+#endif
 #endif
 	if (prefix == NULL)
 		strlcpy(string, def, sizeof(string));
