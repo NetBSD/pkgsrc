@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:18:16 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/03/23 10:20:10 rxg Exp $
 #
 
-DISTNAME=	ROX-Lib-0.1.4
-PKGNAME=	rox-lib-0.1.4
-PKGREVISION=	4
+DISTNAME=	rox-lib-1.9.17
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -12,16 +10,16 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://rox.sourceforge.net/
 COMMENT=	Shared code for ROX applications
 
-DEPENDS+=	rox>=1.2.0nb2:../../sysutils/rox
+DEPENDS+=	rox>=2.2.0:../../sysutils/rox
 
-WRKSRC=		${WRKDIR}/ROX-Lib
+WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Lib2
 DIST_SUBDIR=	rox
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_BUILDLINK3=	yes
 
-PYTHON_PATCH_SCRIPTS=	AppRun bin/savebox
+PYTHON_PATCH_SCRIPTS=	AppRun MakeDist
 
 post-patch:
 	${SED} -e s:"/usr/local/lib":"${PREFIX}/share/rox":g	\
@@ -31,11 +29,11 @@ post-patch:
 
 pre-install:
 	${RM} -f ${WRKSRC}/AppRun.tmp
-	${RM} -f ${WRKSRC}/bin/savebox.tmp
+	${RM} -f ${WRKSRC}/MakeDist.tmp
 
 do-install:
 	${CP} -Rf ${WRKSRC} ${PREFIX}/share/rox
 
 .include "../../lang/python/application.mk"
-.include "../../x11/pygtk/buildlink3.mk"
+.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
