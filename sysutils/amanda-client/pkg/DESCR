@@ -1,19 +1,35 @@
-This is an alpha-test release of Amanda, the Advanced Maryland Automatic
+Amanda, The Advanced Maryland Automatic Network Disk Archiver
+Copyright (c) 1991-1998 University of Maryland at College Park
+All Rights Reserved.
+
+See the files COPYRIGHT, COPYRIGHT-REGEX and COPYRIGHT-APACHE for
+distribution conditions and official warranty disclaimer.
+
+PLEASE NOTE: THIS SOFTWARE IS BEING MADE AVAILABLE ``AS-IS''. UMD is making
+this work available so that other people can use it.  This software is in
+production use at our home site - the UMCP Department of Computer Science -
+but we make no warranties that it will work for you.  Amanda development is
+unfunded - the development team maintains the code in their spare time.  As a
+result, there is no support available other than users helping each other on
+the Amanda mailing lists.  See below for information on the mailing lists.
+
+
+WHAT IS AMANDA?
+---------------
+
+This is a release of Amanda, the Advanced Maryland Automatic
 Network Disk Archiver.  Amanda is a backup system designed to archive many
-computers on a network to a single large-capacity tape drive.  This release
-is currently in daily use at the University of Maryland at College Park
-Computer Science Department, backing up all the disks on all the
-workstations in the department: currently over 70 gigabytes of data across
-more than 400 filesystems on more than 146 workstations and servers, using
-a single 5 Gigabyte Exabyte EXB-8500.  Here are some features of Amanda:
+computers on a network to a single large-capacity tape drive.  
+
+Here are some features of Amanda:
 
   * written in C, freely distributable.
-  * built on top of standard backup software: BSD Unix dump/restore, and
-    later GNU Tar and others.
+  * built on top of standard backup software: Unix dump/restore, GNU Tar
+    and others.
   * will back up multiple machines in parallel to a holding disk, blasting
     finished dumps one by one to tape as fast as we can write files to
     tape.  For example, a ~2 Gb 8mm tape on a ~240K/s interface to a host
-    with a large holding disk can be filled by Amanda in under 4 hours.
+    with a large holding disk can be filled by Amanda in under 4 hours. 
   * does simple tape management: will not overwrite the wrong tape.
   * supports tape changers via a generic interface.  Easily customizable to
     any type of tape carousel, robot, or stacker that can be controlled via
@@ -25,26 +41,31 @@ a single 5 Gigabyte Exabyte EXB-8500.  Here are some features of Amanda:
   * for a restore, tells you what tapes you need, and finds the proper
     backup image on the tape for you.
   * recovers gracefully from errors, including down or hung machines.
-  * reports results, including all errors in detail, in email to operators.
+  * reports results, including all errors in detail, in email.
   * will dynamically adjust backup schedule to keep within constraints: no
     more juggling by hand when adding disks and computers to network.
   * includes a pre-run checker program, that conducts sanity checks on both
     the tape server host and all the client hosts (in parallel), and will
     send an e-mail report of any problems that could cause the backups to
     fail.
-  * can compress dumps before sending over net, with either compress or gzip.
-  * can optionally syncronize with external backups, for those large
+  * can compress dumps before sending or after sending over the net, with
+    either compress or gzip.
+  * can optionally synchronize with external backups, for those large
     timesharing computers where you want to do full dumps when the system
     is down in single-user mode (since BSD dump is not reliable on active
     filesystems): Amanda will still do your daily dumps.
   * lots of other options; Amanda is very configurable.
 
-Amanda requires a host that is mostly idle at night, with a large capacity
-tape drive (e.g. an EXABYTE or DAT tape).  This becomes the "tape server
-host".  All the computers you are going to dump are the "backup client
-hosts".  The server host can also be a client host.
 
-Amanda works best with one or more large "holding disk" partition on the
+WHAT ARE THE SYSTEM REQUIREMENTS FOR AMANDA?
+--------------------------------------------
+
+Amanda requires a host that is mostly idle during the time backups are
+done, with a large capacity tape drive (e.g. an EXABYTE, DAT or DLT tape).
+This becomes the "tape server host".  All the computers you are going to dump
+are the "backup client hosts".  The server host can also be a client host.
+
+Amanda works best with one or more large "holding disk" partitions on the
 server host available to it for buffering dumps before writing to tape.
 The holding disk allows Amanda to run backups in parallel to the disk, only
 writing them to tape when the backup is finished.  Note that the holding
@@ -58,10 +79,102 @@ you are backing up some full gigabyte disks that compress down to 500 MB,
 then you'll want 500 MB on your holding disk.  On the other hand, if those
 gigabyte drives are partitioned into 500 MB filesystems, they'll probably
 compress down to 250 MB and you'll only need that much on your holding
-disk.  Amanda will perform better with larger holding disks.  We use 800 MB
-for our holding disk.
+disk.  Amanda will perform better with larger holding disks.
 
 Actually, Amanda will still work if you have full dumps that are larger
 than the holding disk: Amanda will send those dumps directly to tape one at
 a time.  If you have many such dumps you will be limited by the dump speed
 of those machines.
+
+Amanda does not yet support single backup images larger than a tape.
+
+
+WHAT SYSTEMS DOES AMANDA RUN ON?
+--------------------------------
+
+Amanda should run on any modern Unix system that supports dump or GNU
+tar, has sockets and inetd, and either system V shared memory, or BSD
+mmap implemented.
+
+In particular, Amanda 2.4.0 has been compiled, and the client side tested
+on the following systems:
+	AIX 3.2 and 4.1
+	BSDI BSD/OS 2.1 and 3.1
+	DEC OSF/1 3.2 and 4.0
+	FreeBSD 2.2.5
+	IRIX 5.2 and 6.3
+	Linux/GNU on x86, alpha and sparc
+	NetBSD 1.0
+	Nextstep 3 (*)
+	SunOS 4.1.x (x >= 1) and 5.[56]
+	Ultrix 4.2
+	HP-UX 9.x and 10.x (x >= 01)
+
+The Amanda 2.4.0 server side is known to run on all of the other
+machines except on those marked with an asterisk.
+
+If you know of any system that is not listed here on which amanda
+builds successfully, either client&server or client-only, please
+report to amanda-hackers@amanda.org.
+
+
+WHERE DO I GET AMANDA?
+----------------------
+
+There are several versions of Amanda.  The latest version at the time
+of this writing is available at:
+
+	ftp://ftp.amanda.org/pub/amanda
+
+
+HOW DO I GET AMANDA UP AND RUNNING?
+-----------------------------------
+
+Read the file docs/INSTALL.  There are a variety of steps, from compiling
+Amanda to installing it on the tape server host and the client machines.
+    docs/INSTALL	contains general installation instructions.
+    docs/SYSTEM.NOTES	contains system-specific information.
+    docs/FAQ            contains answers to frequently asked questions.
+    docs/KERBEROS	explains installation under Kerberos 4.
+    docs/TAPE.CHANGERS	explains how to customize the changer interface.
+    docs/WHATS.NEW	details new features.
+
+
+WHO DO I TALK TO IF I HAVE A PROBLEM?
+-------------------------------------
+
+Amanda is completely unsupported and made available as-is.  However,
+you may be able to get useful information in the Amanda mailing lists:
+
+==> To join a mailing list, DO NOT, EVER, send mail to that list.  Send
+    mail to <listname>-request@amanda.org, or amanda-lists@amanda.org,
+    with the following line in the body of the message:
+	subscribe <listname> <your-email-address>
+
+
+    amanda-announce
+        The amanda-announce mailing list is for important announcements
+        related to the Amanda Network Backup Manager package, including new
+        versions, contributions, and fixes.  NOTE: the amanda-users list is
+        itself on the amanda-announce distribution, so you only need to
+        subscribe to one of the two lists, not both.
+	To subscribe, send a message to amanda-announce-request@amanda.org.
+
+    amanda-users
+        The amanda-users mailing list is for questions and general discussion
+        about the Amanda Network Backup Manager.  This package and related
+        files are available via anonymous FTP from ftp.amanda.org in the
+        pub/amanda directory.  NOTE: the amanda-users list is itself on the
+        amanda-announce distribution, so you only need to subscribe to one of
+        the two lists, not both.
+	To subscribe, send a message to amanda-users-request@amanda.org.
+
+    amanda-hackers
+        The amanda-hackers mailing list is for discussion of the
+        technical details of the Amanda package, including extensions,
+        ports, bugs, fixes, and alpha testing of new versions.
+	To subscribe, send a message to amanda-hackers-request@amanda.org.
+
+
+Share and Enjoy,
+The Amanda Development Team
