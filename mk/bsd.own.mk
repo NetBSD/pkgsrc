@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.own.mk,v 1.9 1999/02/08 20:55:47 hubertf Exp $
+#	$NetBSD: bsd.own.mk,v 1.10 1999/02/09 15:44:52 hubertf Exp $
 # From:  NetBSD: bsd.own.mk,v 1.113 1999/02/07 17:21:09 hubertf Exp 
 
 .if !defined(_BSD_OWN_MK_)
@@ -118,6 +118,7 @@ NOPROFILE=
 # OBJECT_FMT:		currently either "ELF" or "a.out".
 # SHLIB_TYPE:		"ELF" or "a.out" or "" to force static libraries.
 #
+.if (${NETBSD_CURRENT} == "yes")
 .if (${MACHINE_ARCH} == "alpha") || \
     (${MACHINE_ARCH} == "mips") || \
     (${MACHINE_ARCH} == "powerpc") || \
@@ -126,8 +127,26 @@ OBJECT_FMT?=ELF
 .else
 OBJECT_FMT?=a.out
 .endif
-
 SHLIB_TYPE?=	${OBJECT_FMT}
+
+.else  # ! NetBSD-current, backward compatibility stuff
+
+.if (${MACHINE_ARCH} == "alpha") || \
+    (${MACHINE_ARCH} == "mips") || \
+    (${MACHINE_ARCH} == "powerpc")
+OBJECT_FMT?=ELF
+.else
+OBJECT_FMT?=a.out
+.endif
+
+.if (${MACHINE_ARCH} == "vax") || \
+    (${MACHINE_ARCH} == "powerpc")
+SHLIB_TYPE?=    "" 
+.else   
+SHLIB_TYPE?=    ${OBJECT_FMT}
+.endif  
+
+.endif # NetBSD-current
 
 
 # GNU sources and packages sometimes see architecture names differently.
