@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/09/30 00:13:53 mrg Exp $
+$NetBSD: distinfo,v 1.2 2004/10/09 16:15:07 kristerw Exp $
 
 SHA1 (flodo-v3.tar.bz2) = 84b8ee60bc01ab982b9b9373058583a3dabbd7a0
 Size (flodo-v3.tar.bz2) = 5742 bytes
+SHA1 (patch-aa) = 94e1ed1bfc311c5d761182df2e085afdc4ca5c9c
