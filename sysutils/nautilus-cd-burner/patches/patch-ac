@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2004/09/21 17:15:35 jmmv Exp $
+$NetBSD: patch-ac,v 1.2 2005/03/23 14:02:52 adam Exp $
 
---- transport.hxx.orig	2004-02-10 11:36:36.000000000 +0100
+--- transport.hxx.orig	2005-02-22 19:43:11.000000000 +0000
 +++ transport.hxx
-@@ -312,7 +312,11 @@ public:
+@@ -441,7 +441,11 @@ public:
      // mounted, so that it could as well just return 0;
      int umount(int f=-1)
      { struct stat    fsb,msb;
@@ -14,7 +14,7 @@ $NetBSD: patch-ac,v 1.1 2004/09/21 17:15:35 jmmv Exp $
        int            ret=0,mntsize,i;
  
  	if (f==-1) f=fd;
-@@ -490,7 +494,11 @@ public:
+@@ -637,7 +641,11 @@ public:
      }
      int umount(int f=-1)
      { struct stat    fsb,msb;
