@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/09/27 23:18:53 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.9 2002/04/04 12:29:50 tron Exp $
 
 DISTNAME=		plugger-3.2-linux-x86-glibc
 PKGNAME=		ns-${PLUGGERNAME}-${BINNAME}-${PLUGGERVERS}
@@ -18,7 +17,7 @@ DEPENDS+=		${BINNAME}-[0-9]*:../../www/${BINNAME}
 MOZILLA_HOME=		${PREFIX}/lib/netscape/${NSNAME:C/nb[0-9]+$//}
 PLIST_SUBST+=		MOZILLA_HOME=${MOZILLA_HOME:S/${PREFIX}\///}
 .else
-DEPENDS+=		suse_base>=6.3:../../emulators/suse_base
+DEPENDS+=		suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
 .endif
 
 CONFLICTS+=		plugger-[0-9]*	# obsolete all-in-one plugger package
@@ -48,7 +47,7 @@ do-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} README COPYING ${DOCDIR}
 .endif
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"
 
 .if ${BINNAME} != common
 NSNAME!=	${PKG_INFO} -e ${BINNAME} || ${ECHO}

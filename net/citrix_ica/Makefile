@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/03/17 03:37:56 jmc Exp $
-#
+# $NetBSD: Makefile,v 1.9 2002/04/04 12:29:49 tron Exp $
 
 # A default so lintpkgsrc is happy
 PKGNAME=	citrix_ica-6.20
@@ -22,7 +21,7 @@ HOMEPAGE=	http://www.citrix.com/products/clients/ica/technology.asp
 COMMENT=	Citrix(R) client for the Microsoft Windows Terminal Server
 
 .if (${MACHINE_ARCH} == "i386")
-DEPENDS=	suse_x11>=6.4:../../emulators/suse_x11
+DEPENDS=	suse_x11>=6.4:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc
@@ -79,4 +78,4 @@ do-install:
 		< ${CDIR}/util/icalicense.sh > ${CDIR}/util/icalicense.sh.fixed
 	${MV} ${CDIR}/util/icalicense.sh.fixed ${CDIR}/util/icalicense.sh
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"

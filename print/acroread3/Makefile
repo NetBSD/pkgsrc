@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/03/14 03:14:47 lukem Exp $
+# $NetBSD: Makefile,v 1.19 2002/04/04 12:29:49 tron Exp $
 
 PKGNAME=	acroread3-3.01
 CATEGORIES=	print
@@ -21,8 +21,8 @@ NO_BUILD=	YES
 
 .if ${OPSYS} == "NetBSD"
 .if (${MACHINE_ARCH} == "i386")
-DEPENDS=	suse_libc5>=6.3:../../emulators/suse_libc5
-DEPENDS=	suse_x11>=6.3:../../emulators/suse_x11
+DEPENDS=	suse_libc5>=6.3:../../emulators/${SUSE_DIR_PREFIX}_libc5
+DEPENDS=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DISTNAME=	acroread_linux_301
 PLATFORM=	intellinux
 CHECK_SHLIBS=	no
@@ -78,4 +78,5 @@ post-install:
 	@${ECHO_MSG} "Be sure to read the license agreement in"
 	@${ECHO_MSG} "${PREFIX}/Acrobat3/Reader/License.pdf"
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"
+

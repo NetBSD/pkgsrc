@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/03/21 07:38:35 martti Exp $
-#
+# $NetBSD: Makefile,v 1.15 2002/04/04 12:29:48 tron Exp $
 
 ONLY_FOR_PLATFORM=      *-*-i386 SunOS-*-sparc
 
@@ -7,8 +6,8 @@ ONLY_FOR_PLATFORM=      *-*-i386 SunOS-*-sparc
 
 .if (${MACHINE_ARCH} == "i386")
 FLASH_VERS=		5.0r47
-DEPENDS+=		suse_compat>=6.3:../../emulators/suse_compat
-DEPENDS+=		suse_x11>=6.3:../../emulators/suse_x11
+DEPENDS+=		suse_compat>=6.3:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=		suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DISTUNAME=		linux
 WRKNAME=		flash_linux
 .elif ${MACHINE_ARCH} == "sparc" && ${OPSYS} == "SunOS"
@@ -54,4 +53,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ShockwaveFlash.class ${NS_PLUGINS_DIR}
 	${INSTALL_DATA} ${WRKSRC}/libflashplayer.so ${NS_PLUGINS_DIR}
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/11/29 01:12:34 hubertf Exp $
-#
+# $NetBSD: Makefile,v 1.11 2002/04/04 12:29:48 tron Exp $
 
 PKGNAME=	blender-2.11
 PKGREVISION=	4
@@ -27,7 +26,7 @@ IGNORE=		"${PKGNAME} requires Linux libraries - see compat_linux(8)"
 DISTNAME=	blender2.11-linux-glibc2.1.3-alpha
 #
 .elif (${MACHINE_ARCH} == "i386")
-DEPENDS+=	suse_linux>=6.4:../../emulators/suse_linux
+DEPENDS+=	suse_linux>=6.4:../../emulators/${SUSE_DIR_PREFIX}_linux
 DISTNAME=	blender2.11-linux-glibc2.1.2-i386-static
 PLIST_ARCH=	linux-i386
 #
@@ -58,4 +57,4 @@ do-install:
 	${CP} -Rp ${WRKSRC}/* ${PREFIX}/lib/blender/
 	${LN} -sf ../lib/blender/blender ${PREFIX}/bin/blender
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/03/19 16:33:58 tron Exp $
+# $NetBSD: Makefile,v 1.20 2002/04/04 12:29:49 tron Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 DISTNAME=	j2re-1_3_1_02-linux-i386
@@ -28,8 +28,8 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 
 # Needs to be after bsd.prefs.mk
 .if ${OPSYS} != "Linux"
-DEPENDS+=	suse_compat-[0-9]*:../../emulators/suse_compat
-DEPENDS+=	suse_x11-[0-9]*:../../emulators/suse_x11
+DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
 .if !defined(JDK_HOME)
@@ -60,7 +60,7 @@ do-install:
 	${CHOWN} -hR ${BINOWN}:${BINGRP} ${WRKSRC}
 	${GTAR} -C ${WRKSRC} -cf- . | ${GTAR} -C ${PREFIX}/jre -xpf-
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"
 
 # These need to be after bsd.pkg.mk 
 

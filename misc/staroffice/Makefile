@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/10/26 14:31:30 agc Exp $
-#
+# $NetBSD: Makefile,v 1.23 2002/04/04 12:29:49 tron Exp $
 
 DISTNAME=		so51a_lnx_${LANGNO}
 PKGNAME=		staroffice-${LANGUAGE}-5.1a
@@ -13,7 +12,7 @@ HOMEPAGE=		http://www.sun.com/staroffice/
 COMMENT=		Integrated office suite
 
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
-DEPENDS+=		suse_linux>=6.1:../../emulators/suse_linux
+DEPENDS+=		suse_linux>=6.1:../../emulators/${SUSE_DIR_PREFIX}_linux
 
 CONFLICTS=		staroffice-[0-9]*
 
@@ -141,4 +140,4 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${file} ${PREFIX}/bin
 .endfor
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"
