@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2002/08/21 12:59:17 kent Exp $
+# $NetBSD: DEINSTALL,v 1.2 2003/04/10 15:25:45 kent Exp $
 # $PEACE: DEINSTALL,v 1.1 2002/08/21 02:02:26 kent Exp $
 
 PKGNAME=$1
@@ -20,9 +20,9 @@ POST-DEINSTALL)
 	${RM} ${CROSSINC}/stdlib.h
 	${RM} ${CROSSINC}/time.h
 	${RM} ${CROSSINC}/unistd.h
-	${RM} ${CROSSINC}/i386/ansi.h
-	${RMDIR} ${CROSSINC}/i386
-	${RM} ${CROSSINC}/machine
+#	${RM} ${CROSSINC}/i386/ansi.h
+#	${RMDIR} ${CROSSINC}/i386
+#	${RM} ${CROSSINC}/machine
 	${RM} ${CROSSINC}/sys/param.h
 	${RMDIR} ${CROSSINC}/sys
 	;;
