@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2501 2004/11/27 00:29:35 sketch Exp $
+$NetBSD: TODO,v 1.2502 2004/11/27 00:30:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -891,7 +891,6 @@ Suggested package updates
 	o p5-Filter-1.30
 	o p5-Font-AFM-1.19
 	o p5-GD-2.19
-	o p5-Getopt-Simple-1.48
 	o p5-Graph-0.20105
 	o p5-GraphViz-2.01
 	o p5-HTML-FillInForm-1.04
