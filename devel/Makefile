@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.264 2002/01/31 23:16:10 wiz Exp $
+# $NetBSD: Makefile,v 1.265 2002/02/07 07:40:30 jdolecek Exp $
 #
 
 COMMENT=	Development utilities
@@ -184,6 +184,7 @@ SUBDIR+=	p5-Safe-Hole
 SUBDIR+=	p5-SortVersions
 SUBDIR+=	p5-Storable
 SUBDIR+=	p5-Term-ReadKey
+SUBDIR+=	p5-Term-ReadLine
 SUBDIR+=	p5-Test-Cmd
 SUBDIR+=	p5-Test-Harness
 SUBDIR+=	p5-Test-Simple
