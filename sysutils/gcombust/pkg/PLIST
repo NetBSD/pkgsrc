@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/02/19 20:08:32 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/05/31 13:01:27 rh Exp $
 bin/gcombust
 share/locale/sv/LC_MESSAGES/gcombust.mo
 share/locale/es/LC_MESSAGES/gcombust.mo
@@ -8,3 +8,4 @@ share/locale/ja/LC_MESSAGES/gcombust.mo
 share/locale/fr/LC_MESSAGES/gcombust.mo
 share/locale/hu/LC_MESSAGES/gcombust.mo
 share/locale/ko/LC_MESSAGES/gcombust.mo
+share/locale/ru/LC_MESSAGES/gcombust.mo
