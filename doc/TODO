@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2423 2004/11/22 22:25:41 wiz Exp $
+$NetBSD: TODO,v 1.2424 2004/11/23 08:51:38 adam Exp $
 
 Suggested new packages
 ======================
@@ -710,7 +710,6 @@ Suggested package updates
 	o nano-1.3.4
 	o nap-1.5.3
 	o napshare-1.2
-	o nas-1.7
 	o navi2ch-1.7.5
 	o ncmpc-0.11.0 [pkg/26237]
 	o ne-1.31
