@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.89 2002/09/23 13:37:21 markd Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.90 2002/09/30 13:55:54 jschauma Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1175,6 +1175,14 @@ PILRC_USE_GTK?=	YES
 # ${JAVA_HOME} will be set based on this choice, if unset
 # Possible: jdk, sun-jdk, blackdown-jdk13, kaffe (kaffe currently has some problems)
 # Default: jdk on NetBSD/i386, blackdown-jdk13 on powerpc, kaffe elsewhere
+
+PKG_LANG?=english
+# Used to specify preferred language settings
+# Currently only used by www/netscape7
+# Possible: depends on packages supporting this variable, basically any
+# language.  Should be '<lang>_<lc>' or '<lang>', for example 'english_uk',
+# 'german' or 'portuguese_br'.
+# Default: english
 
 #PKGVULNDIR=
 # Where audit-packages searchs for the vulnerabilities file.
