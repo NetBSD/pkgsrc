@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/04/21 22:30:11 markd Exp $
+# $NetBSD: Makefile,v 1.34 2004/08/21 14:56:17 markd Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
 CATEGORIES=	net
@@ -12,7 +12,9 @@ USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
 PTHREAD_OPTS+=		require
 
-REPLACE_PERL=		ksirc/dsirc
+REPLACE_PERL=		ksirc/dsirc \
+			knewsticker/knt-0.1-0.2.pl \
+			kopete/kopete/kconf_update/kopete-pluginloader.pl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -27,6 +29,7 @@ CONFIGURE_ENV+=		ac_cv_lib_Xss_XScreenSaverQueryInfo="no"
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../converters/uulib/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
