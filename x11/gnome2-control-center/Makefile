@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2004/04/14 16:15:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.35 2004/05/15 15:00:50 jmmv Exp $
 #
 
-DISTNAME=	control-center-2.6.0
+DISTNAME=	control-center-2.6.1
 PKGNAME=	gnome2-${DISTNAME}
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.6/}
@@ -12,7 +12,8 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME2 configuration utility
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		gnome-icon-theme>=1.1.7:../../graphics/gnome-icon-theme
+
+BUILDLINK_DEPENDS.libxklavier+=	libxklavier>=1.02
 
 USE_MSGFMT_PLURALS=	yes
 GNU_CONFIGURE=		yes
@@ -60,6 +61,7 @@ post-install:
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
