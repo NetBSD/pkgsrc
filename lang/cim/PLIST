@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:23 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/04 20:08:36 seb Exp $
 bin/cim
 bin/cim2latex
 bin/cim2ps
 bin/cimindent
 include/cim.h
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/cim.info
 info/cim.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/cim.info
 lib/libcim-atr.a
 lib/libcim.a
 lib/libcim.la
