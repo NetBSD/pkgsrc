@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8028 2004/11/26 23:03:54 hubertf Exp $
+$NetBSD: CHANGES,v 1.8029 2004/11/26 23:05:00 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5415,7 +5415,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated octave-current to 2.1.63 [adam 2004-11-25]
 	Updated xpdf to 3.00pl1 [dillo 2004-11-25]
 	Updated gimp-print-cups to 4.2.7 [adam 2004-11-25]
-        Updated gimp-print-escputil to 4.2.7 [adam 2004-11-25]
+	Updated gimp-print-escputil to 4.2.7 [adam 2004-11-25]
 	Updated libmm to 1.3.1 [adam 2004-11-25]
 	Updated librsync to 0.9.7 [adam 2004-11-25]
 	Updated libdv to 0.103 [adam 2004-11-25]
@@ -5465,3 +5465,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated 9menu to 1.8 [snj 2004-11-26]
 	Updated qiv to 2.0 [snj 2004-11-26]
 	Updated vpnc to 0.3.2 [hubertf 2004-11-27]
+	Updated epydoc to 2.1 [darcy 2004-11-26]
