@@ -1,29 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/17 21:01:47 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/22 22:07:22 lukem Exp $
 bin/dirsearch
-bin/fake-agent
 bin/newaid
 bin/rex
-bin/rpc_pcl
-bin/rpc_psrv
 bin/rpcc
 bin/sfsagent
 bin/sfsdeclog
 bin/sfskey
 bin/sfsproac
-bin/smkdirall
-bin/smount
-bin/snfsfstab
-bin/snfshost
-bin/snfsmount
-bin/snfspsrv
-bin/snfsumount
-bin/snfsuser
 bin/ssu
-bin/sumount
-bin/sumountall
 etc/rc.d/sfscd
 etc/rc.d/sfssd
-etc/rpc_pcl.conf
 etc/sfs/sfsrwsd_config.sample
 include/sfs
 include/${PKGNAME}/aclnt.h
@@ -150,8 +136,6 @@ info/sfs.info-2
 info/sfs.info-3
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/sfs.info
 lib/libsfs.a
-lib/perl5/site_perl/5.6.1/SNFS.pm
-lib/perl5/site_perl/5.6.1/auto/SNFS/autosplit.ix
 lib/sfs
 lib/${PKGNAME}/aiod
 lib/${PKGNAME}/connect
@@ -215,8 +199,5 @@ share/sfs/sfssd_config
 @dirrm var
 @dirrm share/sfs
 @dirrm lib/${PKGNAME}
-@dirrm lib/perl5/site_perl/5.6.1/auto/SNFS
-@dirrm lib/perl5/site_perl/5.6.1/auto
-@dirrm lib/perl5/site_perl/5.6.1
 @dirrm include/${PKGNAME}
 @dirrm etc/sfs
