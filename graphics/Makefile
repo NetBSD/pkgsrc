@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.311 2004/05/09 15:14:06 minskim Exp $
+# $NetBSD: Makefile,v 1.312 2004/05/10 13:43:43 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -61,7 +61,6 @@ SUBDIR+=	exif
 SUBDIR+=	exiftags
 SUBDIR+=	fbm
 SUBDIR+=	feh
-SUBDIR+=	ffmpeg
 SUBDIR+=	filmgimp
 SUBDIR+=	fly
 SUBDIR+=	fnlib
