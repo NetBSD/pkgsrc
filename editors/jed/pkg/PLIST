@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/31 23:16:12 hwr Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/10/31 23:25:18 frueauf Exp $
 bin/jed
 bin/rgrep
 man/man1/rgrep.1
 man/man1/jed.1
-@exec mkdir %D/share/jed
-@exec mkdir %D/share/jed/bin
-@exec mkdir %D/share/jed/doc
-@exec mkdir %D/share/jed/info
 share/jed/lib/tclmode.sl
 share/jed/lib/tm2sgml.sl
 share/jed/lib/ashell.sl
