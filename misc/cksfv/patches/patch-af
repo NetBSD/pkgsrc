@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.1 2003/09/22 12:23:21 wiz Exp $
+
+--- src/Makefile.orig	Fri Jul  6 07:33:08 2001
++++ src/Makefile	Mon Sep 22 11:42:14 2003
+@@ -17,11 +17,11 @@
+ # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ 
+ PROG=		cksfv
+-CFLAGS+=	-Wall -Werror -O2 -g
++#CFLAGS+=	-Wall -Werror -O2 -g
+ SRCS=		cksfv.c print.c crc32.c readsfv.c newsfv.c
+ 
+ cksfv: $(SRCS)
+-	gcc -DVERSION=\"$(VERSION)\" $(CFLAGS) -o $(PROG) $(SRCS)
++	$(CC) -DVERSION=\"$(VERSION)\" $(CFLAGS) -o $(PROG) $(SRCS)
+ 
+ install: cksfv
+ 	cp $(PROG) /usr/local/bin
+
