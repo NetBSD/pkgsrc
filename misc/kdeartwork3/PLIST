@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/10/13 12:37:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/12/10 06:20:51 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -7760,8 +7760,8 @@ share/kde/wallpapers/simple_wallpaper.jpg
 share/kde/wallpapers/sunday_brunch.jpg
 share/kde/wallpapers/vegetative_fog.jpg
 share/kde/wallpapers/winter_theme_1.jpg
-@comment dirrm share/kde/wallpapers
-@comment dirrm share/kde/sounds
+@comment in kde: @dirrm share/kde/wallpapers
+@comment in kde: @dirrm share/kde/sounds
 @dirrm share/kde/icons/slick/64x64/mimetypes
 @dirrm share/kde/icons/slick/64x64/filesystems
 @dirrm share/kde/icons/slick/64x64/devices
@@ -7894,15 +7894,16 @@ share/kde/wallpapers/winter_theme_1.jpg
 @dirrm share/kde/icons/Locolor/16x16/actions
 @dirrm share/kde/icons/Locolor/16x16
 @dirrm share/kde/icons/Locolor
-@comment dirrm share/kde/icons
+@comment in kde: @dirrm share/kde/icons
 @dirrm share/kde/apps/kworldclock/maps/rainfall
 @dirrm share/kde/apps/kworldclock/maps/mggd
-@dirrm share/kde/apps/kworldclock/maps/depths
+@unexec ${RMDIR} %D/share/kde/apps/kworldclock/maps/depths 2>/dev/null || ${TRUE}
 @dirrm share/kde/apps/kworldclock/maps/caida_bw
 @dirrm share/kde/apps/kworldclock/maps/caida
 @dirrm share/kde/apps/kworldclock/maps/bio
 @dirrm share/kde/apps/kworldclock/maps/alt
-@dirrm share/kde/apps/kworldclock/maps
+@unexec ${RMDIR} %D/share/kde/apps/kworldclock/maps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/apps/kworldclock 2>/dev/null || ${TRUE}
 @dirrm share/kde/apps/kwin/icewm-themes/Model
 @dirrm share/kde/apps/kwin/icewm-themes/MenschMaschine
 @dirrm share/kde/apps/kwin/icewm-themes
@@ -7913,11 +7914,11 @@ share/kde/wallpapers/winter_theme_1.jpg
 @dirrm share/kde/apps/kwin/glow-themes/glass
 @dirrm share/kde/apps/kwin/glow-themes/default
 @dirrm share/kde/apps/kwin/glow-themes
-@comment dirrm share/kde/apps/kwin
-@dirrm share/kde/apps/kstyle/themes
+@comment in kde: @dirrm share/kde/apps/kwin
+@comment in kde: @dirrm share/kde/apps/kstyle/themes
 @dirrm share/kde/apps/kscreensaver
 @dirrm share/kde/apps/kfiresaver
-@comment dirrm share/kde/apps
-@comment dirrm share/kde/applnk/System/ScreenSavers
-@comment dirrm lib/kde3/plugins/styles
-@comment dirrm lib/kde3
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/applnk/System/ScreenSavers
+@comment in kde: @dirrm lib/kde3/plugins/styles
+@comment in kde: @dirrm lib/kde3
