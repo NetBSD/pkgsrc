@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.801 2001/08/23 16:37:27 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.802 2001/08/24 00:54:47 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1416,13 +1416,22 @@ do-patch: uptodate-digest
 		else							\
 			${ECHO_MSG} "${_PKGSRC_IN}> Applying ${OPSYS} patches for ${PKGNAME}" ; \
 			fail="";					\
-			for i in ${PATCHDIR}/patch-*; do		\
+			for i in ${PATCHDIR}/patch-* ${LOCALPATCHES}/${PKGPATH}/* ; do		\
+				if [ "$$i" = "${LOCALPATCHES}/${PKGPATH}/*" ]; then \
+					continue ; 			\
+				fi ; 					\
+				if [ ! -f "$$i" ]; then			\
+					${ECHO_MSG} "${_PKGSRC_IN}> $$i is not a valid patch file - skipping" ; \
+					continue ; 			\
+				fi ; 					\
 				case $$i in				\
 				*.orig|*.rej|*~)			\
 					${ECHO_MSG} "${_PKGSRC_IN}> Ignoring patchfile $$i" ; \
 					continue;			\
 					;;				\
 				${PATCHDIR}/patch-local-*) 		\
+					;;				\
+				${LOCALPATCHES}/${PKGPATH}/*) 		\
 					;;				\
 				*)					\
 					if [ -f ${DISTINFO_FILE} ]; then \
@@ -3099,14 +3108,15 @@ print-PLIST:
 	 | ${SED}							\
 		-e  's@${PREFIX}/./@@' 					\
 		-e  's@${OPSYS}@\$${OPSYS}@' 				\
-		-e  's@${OS_VERSION:S/./\./}@\$${OS_VERSION}@'	\
+		-e  's@${OS_VERSION:S/./\./}@\$${OS_VERSION}@'		\
 		-e  's@${MACHINE_ARCH}@\$${MACHINE_ARCH}@' 		\
 		-e  's@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@'	\
 		-e  's@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@' \
 		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
 		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
 		-e  's@${PKGNAME}@\$${PKGNAME}@' 			\
-	 | ${SORT} \
+	 | ${SORT}							\
+	 | ${GREP} -v emul/linux/proc					\
 	 | ${AWK} '							\
 		/^@/ { print $$0; next }				\
 		/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { 	\
@@ -3155,7 +3165,8 @@ print-PLIST:
 		-e  s@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@ \
 		-e  s@${LOWER_VENDOR}@\$${LOWER_VENDOR}@ 		\
 		-e  s@${LOWER_OPSYS}@\$${LOWER_OPSYS}@ 			\
-		-e  s@${PKGNAME}@\$${PKGNAME}@ 
+		-e  s@${PKGNAME}@\$${PKGNAME}@ 				\
+	 | ${GREP} -v emul/linux/proc
 .endif # target(print-PLIST)
 
 
