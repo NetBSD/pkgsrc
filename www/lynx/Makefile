@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2004/03/03 21:14:41 ben Exp $
+# $NetBSD: Makefile,v 1.69 2004/03/11 22:10:48 ben Exp $
 #
 
 DISTNAME=	lynx2.8.5
-WRKSRC=		${WRKDIR}/lynx2-8-5
 PKGNAME=	lynx-2.8.5
 CATEGORIES=	www
 MASTER_SITES=	http://lynx.isc.org/${DISTNAME}/ \
@@ -19,6 +18,7 @@ BUILD_USES_MSGFMT=	yes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+WRKSRC=			${WRKDIR}/${DISTNAME:S/./-/g}
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -107,12 +107,6 @@ CONFIGURE_ARGS+= 	--with-socks5
 .if defined(USE_INET6) && ${USE_INET6} == YES
 CONFIGURE_ARGS+=       --enable-ipv6
 .endif
-
-SUBST_CLASSES+=		gettext
-SUBST_MESSAGE.gettext=	"Fixing Chinese PO file."
-SUBST_STAGE.gettext=	post-patch
-SUBST_FILES.gettext=	po/zh_TW.po
-SUBST_SED.gettext=	'/^msgstr/s/\(\\[^"[:alpha:]]\)/\\\1/g'
 
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/lynx
