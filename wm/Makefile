@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2005/01/12 13:41:26 xtraeme Exp $
+# $NetBSD: Makefile,v 1.67 2005/01/14 13:38:29 jmmv Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -7,6 +7,7 @@ SUBDIR+=	3ddesktop
 SUBDIR+=	9wm
 SUBDIR+=	aewm++
 SUBDIR+=	afterstep
+SUBDIR+=	afterstep1
 SUBDIR+=	amaterus
 SUBDIR+=	amiwm
 SUBDIR+=	bbconf
