@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/01/20 13:45:33 abs Exp $
+# $NetBSD: Makefile,v 1.35 2004/02/22 00:55:37 minskim Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/14 04:00:11 jfitz Exp
 #
 
@@ -20,7 +20,9 @@ DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/libwww-perl/.packlist
 MAKE_PARAMS=		-n
 
