@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2003/01/18 05:45:43 uebayasi Exp $
+$NetBSD: patch-ab,v 1.4 2004/11/25 18:09:07 magick Exp $
 
---- configure.orig	Mon Dec 16 11:33:04 2002
+--- configure.orig	2004-10-22 07:16:35.000000000 +0200
 +++ configure
-@@ -1159,6 +1159,7 @@
+@@ -1149,6 +1149,7 @@ echo "$ac_t""$configuration" 1>&6
  machine='' opsys=''
  
  case "$canonical" in
@@ -10,19 +10,19 @@ $NetBSD: patch-ab,v 1.3 2003/01/18 05:45:43 uebayasi Exp $
    sparc-*-*        ) machine=sparc ;;
    alpha*-*-*       ) machine=alpha ;;
    vax-*-*          ) machine=vax ;;
-@@ -1231,9 +1232,10 @@
+@@ -1221,9 +1222,10 @@ case "$canonical" in
      case "$canonical" in
        i[3-9]86-*-netbsd*) machine=intel386 ;;
        hp300-*-netbsd* | amiga-*-netbsd* | sun3-*-netbsd* | mac68k-*-netbsd* | da30-*-netbsd* | m68k-*-netbsd* )
 -                                            machine=hp9000s300 ;;
-+	machine=m68k ;;
++      machine=m68k ;;
        pc532-*-netbsd* | ns32k-*-netbsd* )  machine=ns32000 ;;
        pmax-*-netbsd*  | mips-*-netbsd*  )  machine=pmax ;;
 +      alpha-*-netbsd* ) machine=alpha ;;
      esac
    ;;
  
-@@ -3207,7 +3209,7 @@
+@@ -3367,7 +3369,7 @@ echo "configure:3365: checking "for runt
      decosf* | linux* | irix*) dash_r="-rpath " ;;
      *)
        dash_r=""
@@ -31,14 +31,14 @@ $NetBSD: patch-ab,v 1.3 2003/01/18 05:45:43 uebayasi Exp $
          xe_check_libs="${try_dash_r}/no/such/file-or-directory"
          
  if test "$GCC" = "yes"; then
-@@ -14233,6 +14235,43 @@
+@@ -14799,6 +14801,44 @@ EOF
+     with_esd_sound=no
    fi
  fi
- 
 + echo $ac_n "checking for main in -lossaudio""... $ac_c" 1>&6
 + echo "configure:10915: checking for main in -lossaudio" >&5
 + ac_lib_var=`echo ossaudio'_'main | sed 'y%./+-%__p_%'`
-+ 
++
 + xe_check_libs=" -lossaudio "
 + cat > conftest.$ac_ext <<EOF
 + #line 10920 "configure"
@@ -46,7 +46,7 @@ $NetBSD: patch-ab,v 1.3 2003/01/18 05:45:43 uebayasi Exp $
 + /* Override any gcc2 internal prototype to avoid an error.  */
 + /* We use char because int might match the return type of a gcc2
 +     builtin and then its argument prototype would still apply.  */
-+ 
++
 + int main() {
 + main()
 + ; return 0; }
@@ -62,20 +62,21 @@ $NetBSD: patch-ab,v 1.3 2003/01/18 05:45:43 uebayasi Exp $
 + fi
 + rm -f conftest*
 + xe_check_libs=""
-+ 
++
 + if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes" ; then
 +   echo "$ac_t""yes" 1>&6
 +   LIBOSSAUDIO=-lossaudio
 + else
 +   echo "$ac_t""no" 1>&6
 + fi
-+ 
++
 +
 +EOF
++
+ 
  test "$need_miscplay" = "yes" && extra_objs="$extra_objs miscplay.o" &&  if test "$extra_verbose" = "yes"; then
     echo "    xemacs will be linked with \"miscplay.o\""
-  fi
-@@ -16072,6 +16111,7 @@
+@@ -17085,6 +17125,7 @@ s%@ldap_libs@%$ldap_libs%g
  s%@postgresql_libs@%$postgresql_libs%g
  s%@lwlib_objs@%$lwlib_objs%g
  s%@ALLOCA@%$ALLOCA%g
