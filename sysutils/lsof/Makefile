@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2002/05/29 14:33:35 yyamano Exp $
+# $NetBSD: Makefile,v 1.55 2002/06/26 20:11:29 atatat Exp $
 #
 
-DISTNAME=		lsof_4.63
-PKGNAME=		lsof-4.63
+DISTNAME=		lsof_4.64
+PKGNAME=		${DISTNAME:S/_/-/}
 TMPWRK=			${WRKDIR}/${DISTNAME}
 WRKSRC=			${WRKDIR}/${DISTNAME}/${SRCBALL_NAME}
 CATEGORIES=		sysutils
@@ -13,7 +13,7 @@ MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://ftp.web.ad.jp/pub/UNIX/tools/lsof/  \
 			ftp://ftp0.sunet.se/pub/unix/admin/lsof/
 
-MAINTAINER=		wiz@netbsd.org
+MAINTAINER=		atatat@netbsd.org
 HOMEPAGE=		http://www-rcd.cc.purdue.edu/~abe/
 COMMENT=		Lists information about open files
 
