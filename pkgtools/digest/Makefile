@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/03/10 15:26:15 tron Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/10 15:58:56 tron Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -21,13 +21,10 @@ MANCOMPRESSED_IF_MANZ=	YES
 PLIST_SRC=	${WRKDIR}/PLIST
 BUILD_DEFS+=	MANINSTALL
 
-DIGEST=			${WRKSRC}/bootstrap-digest
-DIGEST_ALGORITHM=	MD5
 MAKE_ENV+=		BINDIR=${LOCALBASE}/bin MANDIR=${LOCALBASE}/man
 MAKE_ENV+=		CPPFLAGS="${CPPFLAGS} -DVERSION=${VERSION}"
 
 .include "../../mk/bsd.prefs.mk"
-
 
 post-extract:
 	@for FILE in Makefile digest.c digest.1				\
@@ -37,9 +34,6 @@ post-extract:
 	; do								\
 		${CP} ${FILESDIR}/$$FILE ${WRKSRC};			\
 	done
-	@${SED} -e 's#$${PREFIX}#${PREFIX}#g' ${SCRIPTDIR}/bootstrap-digest \
-	  >${DIGEST}
-	@${CHMOD} +x ${DIGEST}
 
 pre-install:
 	@${RM} -f ${PLIST_SRC}
