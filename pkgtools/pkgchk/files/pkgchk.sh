@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.26 2001/12/31 13:58:29 abs Exp $
+# $Id: pkgchk.sh,v 1.27 2002/03/10 23:23:40 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -52,7 +52,7 @@ check_packages_installed()
 	else
 	    if [ -n "$opt_B" ];then
 		current_build_ver=`get_build_ver`
-		installed_build_ver=`cat /var/db/pkg/$PKGNAME/+BUILD_VERSION | sed "s:^.*/pkgsrc/::"`
+		installed_build_ver=`sed "s|^[^:]*/[^:]*:||" /var/db/pkg/$PKGNAME/+BUILD_VERSION`
 		if [ x"$current_build_ver" != x"$installed_build_ver" ];then
 		    echo "$PKGNAME: build version information mismatch"
 		    MISMATCH_TODO="$MISMATCH_TODO $PKGNAME"
@@ -118,7 +118,7 @@ extract_variables()
 get_build_ver()
     {
     files=""
-    for f in `pwd`/Makefile ${FILESDIR}/* ${PKGDIR}/*; do
+    for f in ${FILESDIR}/* ${PKGDIR}/*; do
 	if [ -f $f ];then
 	    files="$files $f"
 	fi
@@ -139,7 +139,7 @@ get_build_ver()
 	    esac
 	done
     fi
-    ${GREP} '\$NetBSD' $files | ${SED} -e "s|^${real_pkgsrcdir}/||"
+    cat $files | ${GREP} '\$NetBSD'
     }
 
 pkg_install()
