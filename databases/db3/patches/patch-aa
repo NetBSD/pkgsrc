@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2001/10/23 07:26:42 lukem Exp $
+$NetBSD: patch-aa,v 1.7 2001/11/21 23:40:47 jlam Exp $
 
---- ../dist/Makefile.in.orig	Fri Dec  1 10:07:33 2000
-+++ ../dist/Makefile.in	Tue Oct 23 17:16:15 2001
+--- ../dist/Makefile.in.orig	Thu Nov 30 18:07:33 2000
++++ ../dist/Makefile.in
 @@ -17,7 +17,7 @@
  INSTALLER=	@INSTALLER@
  
@@ -256,9 +256,9 @@ $NetBSD: patch-aa,v 1.6 2001/10/23 07:26:42 lukem Exp $
 -	@$(INSTALLER) -fp $(PROGS) $(bindir)
 -	@cd $(bindir) && (test ! -f $(strip) || $(strip) $(PROGS))
 -	@cd $(bindir) && $(chmod) $(emode) $(PROGS)
-+	${BSD_INSTALL_SCRIPT_DIR} $(includedir) $(bindir)
++	${BSD_INSTALL_PROGRAM_DIR} $(bindir)
 +	for i in $(PROGS); do \
-+		${BSD_INSTALL_SCRIPT} $$i $(bindir); \
++		$(LIBTOOL) ${BSD_INSTALL_PROGRAM} $$i $(bindir); \
 +	done
  
  uninstall_utilities:
