@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/06 16:27:41 seb Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/07 13:40:08 seb Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		2
@@ -56,8 +56,6 @@ post-build:
 	cd ${WRKSRC}/Emacs; ${MAKEINFO} sather.texinfo; 		\
 		${MAKEINFO} sather-tutorial.texinfo; 			\
 		${MAKEINFO} sather-mode.texinfo
-
-post-install:
 	${RM} -fr ${WRKSRC}/System/Platforms/dualgui/dual_gui_server.code
 
 do-install:
