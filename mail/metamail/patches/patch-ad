@@ -1,37 +1,27 @@
-$NetBSD: patch-ad,v 1.3 2003/11/04 19:03:53 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.3.2.1 2004/02/26 16:22:03 agc Exp $
 
-*** fonts/Makefile.orig	Mon May 31 22:49:27 1993
---- fonts/Makefile	Thu May 18 21:55:42 1995
-***************
-*** 28,39 ****
-  	-${DIRBUILDER}
-  
-  shownonascii: Xshownonascii
-! 	sed -e s@/u/nsb/lib/fonts@`pwd`@ < Xshownonascii > shownonascii
-  	chmod +x shownonascii
-  
-  mailto-hebrew: Xmailto-hebrew
-! 	sed -e s@/u/nsb/lib/fonts@`pwd`@ < Xmailto-hebrew > mailto-hebrew
-  	chmod +x mailto-hebrew
-  
-  clean:
-  	rm -f heb6x13.${FONTSUFFIX} heb8x13.${FONTSUFFIX} heb8x13B.${FONTSUFFIX}  shownonascii mailto-hebrew fonts.dir
---- 28,45 ----
-  	-${DIRBUILDER}
-  
-  shownonascii: Xshownonascii
-! 	sed -e s@/u/nsb/lib/fonts@${PREFIX}/lib/metamail/fonts@ < Xshownonascii > shownonascii
-  	chmod +x shownonascii
-  
-  mailto-hebrew: Xmailto-hebrew
-! 	sed -e s@/u/nsb/lib/fonts@${PREFIX}/lib/metamail/fonts@ < Xmailto-hebrew > mailto-hebrew
-  	chmod +x mailto-hebrew
-+ 
-+ install:
-+ 	mkdir -p ${PREFIX}/lib/metamail/fonts
-+ 	${INSTALL} -c heb6x13.${FONTSUFFIX} heb8x13.${FONTSUFFIX} \
-+ 		heb8x13B.${FONTSUFFIX} fonts.alias ${PREFIX}/lib/metamail/fonts
-+ 	mkfontdir ${PREFIX}/lib/metamail/fonts 
-  
-  clean:
-  	rm -f heb6x13.${FONTSUFFIX} heb8x13.${FONTSUFFIX} heb8x13B.${FONTSUFFIX}  shownonascii mailto-hebrew fonts.dir
+--- fonts/Makefile.orig	1993-05-31 13:49:27.000000000 -0700
++++ fonts/Makefile	2004-02-24 19:19:01.000000000 -0800
+@@ -28,12 +28,18 @@ heb8x13B.${FONTSUFFIX}: heb8x13B.bdf
+ 	-${DIRBUILDER}
+ 
+ shownonascii: Xshownonascii
+-	sed -e s@/u/nsb/lib/fonts@`pwd`@ < Xshownonascii > shownonascii
+-	chmod +x shownonascii
++	${SED} -e s@/u/nsb/lib/fonts@${PREFIX}/lib/metamail/fonts@ < Xshownonascii > shownonascii
++	${CHMOD} +x shownonascii
+ 
+ mailto-hebrew: Xmailto-hebrew
+-	sed -e s@/u/nsb/lib/fonts@`pwd`@ < Xmailto-hebrew > mailto-hebrew
+-	chmod +x mailto-hebrew
++	${SED} -e s@/u/nsb/lib/fonts@${PREFIX}/lib/metamail/fonts@ < Xmailto-hebrew > mailto-hebrew
++	${CHMOD} +x mailto-hebrew
++
++install:
++	mkdir -p ${PREFIX}/lib/metamail/fonts
++	${INSTALL} -c heb6x13.${FONTSUFFIX} heb8x13.${FONTSUFFIX} \
++		heb8x13B.${FONTSUFFIX} fonts.alias ${PREFIX}/lib/metamail/fonts
++	mkfontdir ${PREFIX}/lib/metamail/fonts
+ 
+ clean:
+ 	rm -f heb6x13.${FONTSUFFIX} heb8x13.${FONTSUFFIX} heb8x13B.${FONTSUFFIX}  shownonascii mailto-hebrew fonts.dir

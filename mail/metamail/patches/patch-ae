@@ -1,23 +1,25 @@
-$NetBSD: patch-ae,v 1.2 1998/08/07 11:09:41 agc Exp $
+$NetBSD: patch-ae,v 1.2.10.1 2004/02/26 16:22:03 agc Exp $
 
-*** metamail/splitmail.c.orig	Sun Jun 18 13:13:56 1995
---- metamail/splitmail.c	Sun Jun 18 13:14:48 1995
-***************
-*** 41,48 ****
-  #define VERBOSEDELIVERYCMD VerboseDeliveryCmd
-  #else
-  extern char *getenv();
-! #define NORMALDELIVERYCMD "/usr/lib/sendmail -t -oi"
-! #define VERBOSEDELIVERYCMD "/usr/lib/sendmail -t -v -oi"
-  #endif
-  
-  usageexit() {
---- 41,48 ----
-  #define VERBOSEDELIVERYCMD VerboseDeliveryCmd
-  #else
-  extern char *getenv();
-! #define NORMALDELIVERYCMD "/usr/sbin/sendmail -t -oi"
-! #define VERBOSEDELIVERYCMD "/usr/sbin/sendmail -t -v -oi"
-  #endif
-  
-  usageexit() {
+--- metamail/splitmail.c.orig	1994-01-31 14:23:14.000000000 -0800
++++ metamail/splitmail.c	2004-02-24 10:49:02.000000000 -0800
+@@ -41,8 +41,8 @@ extern char *malloc(), *index(), *getmyn
+ #define VERBOSEDELIVERYCMD VerboseDeliveryCmd
+ #else
+ extern char *getenv();
+-#define NORMALDELIVERYCMD "/usr/lib/sendmail -t -oi"
+-#define VERBOSEDELIVERYCMD "/usr/lib/sendmail -t -v -oi"
++#define NORMALDELIVERYCMD "/usr/sbin/sendmail -t -oi"
++#define VERBOSEDELIVERYCMD "/usr/sbin/sendmail -t -v -oi"
+ #endif
+ 
+ usageexit() {
+@@ -361,7 +361,8 @@ char **OrigID;
+     }
+     if (!ULstrcmp(s, "subject")) {
+         *colon = ':';
+-        strcpy(SubjectBuf, ++colon);
++        strncpy(SubjectBuf, ++colon, sizeof(SubjectBuf));
++	SubjectBuf[sizeof(SubjectBuf) - 1] = '\0';
+         return(0);
+     }
+     if (!ULstrcmp(s, "content-type")) {
