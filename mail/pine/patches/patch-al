@@ -1,18 +1,18 @@
-$NetBSD: patch-al,v 1.6 2000/09/19 13:27:01 hubertf Exp $
+$NetBSD: patch-al,v 1.7 2000/11/09 03:37:27 hubertf Exp $
 
---- build.orig	Mon Nov 15 23:16:25 1999
+--- build.orig	Tue Aug  1 00:28:01 2000
 +++ build
-@@ -180,7 +180,7 @@
+@@ -198,7 +198,7 @@
       mnt) makeargs="CC=gcc $makeargs" ;;
       bs3) makeargs="CC=shlicc $makeargs" ;;
       lyn) [ -f /CYGNUS.bash ] && . /CYGNUS.bash; makeargs="CC=gcc $makeargs" ;;
 -       *) makeargs="CC=cc $makeargs" ;;
-+       *) makeargs="CC=${LT}\ cc $makeargs" ;;
++       *) makeargs="CC=${LT}\ cc\ -g $makeargs" ;;
    esac
  fi
  
-@@ -277,23 +277,17 @@
- 	  esac
+@@ -303,23 +303,28 @@
+ 	  echo "Including SSL functionality"
  	fi
  
 -        if [ -s c-client ] ; then rm -f c-client ; fi
@@ -22,9 +22,9 @@ $NetBSD: patch-al,v 1.6 2000/09/19 13:27:01 hubertf Exp $
 -        if [ -s imapd    ] ; then rm -f imapd    ; fi
 -        ln -s imap/imapd imapd
 -        echo "Making c-client library, mtest and imapd"
--        eval echo make "$makeargs" "$K1" "$K2" $ccltarg
+-        eval echo make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
 -        cd $PHOME/imap
--        eval make "$makeargs" "$K1" "$K2" $ccltarg
+-        eval make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
 -        echo ''
 -
 -        echo "Making Pico and Pilot"
@@ -32,21 +32,32 @@ $NetBSD: patch-al,v 1.6 2000/09/19 13:27:01 hubertf Exp $
 -        eval echo make "$makeargs" -f makefile.$picotarg
 -        eval make "$makeargs" -f makefile.$picotarg
 -        echo ''
-+# We use the ima-uw pkg's stuff for that, see
-+# http://www.securityfocus.com/advisories/2646:
++#
++# We use the imap-uw pkg's stuff for that, see
++# http://www.securityfocus.com/advisories/2646 and 
++# http://www.securityfocus.com/bid/1709:
++#
 +#       if [ -s c-client ] ; then rm -f c-client ; fi
 +#       ln -s imap/c-client c-client
 +#       if [ -s mtest    ] ; then rm -f mtest    ; fi
 +#       ln -s imap/mtest mtest
++#       if [ -s imapd    ] ; then rm -f imapd    ; fi
++#       ln -s imap/imapd imapd
 +#       echo "Making c-client library, mtest and imapd"
-+#       eval echo make "$makeargs" "$K1" "$K2" $ccltarg
++#       eval echo make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
 +#       cd $PHOME/imap
-+#       eval make "$makeargs" "$K1" "$K2" $ccltarg
++#       eval make "$makeargs" "$SSL" "$K1" "$K2" $ccltarg
++#       echo ''
++
++#       echo "Making Pico and Pilot"
++#       cd $PHOME/pico
++#       eval echo make "$makeargs" -f makefile.$picotarg
++#       eval make "$makeargs" -f makefile.$picotarg
 +#       echo ''
  
          echo "Making Pine".
          cd $PHOME/pine
-@@ -310,8 +304,6 @@
+@@ -336,8 +341,6 @@
          if [ -s ../pico/pilot ] ;     then ln ../pico/pilot pilot ; fi
          cd $PHOME
          echo ''
@@ -55,3 +66,16 @@ $NetBSD: patch-al,v 1.6 2000/09/19 13:27:01 hubertf Exp $
  	case $maketarg in
  	    mnt)    echo "Fixing stacksizes ..."
  		    fixstk 64K bin/pine bin/pico bin/imapd bin/mtest bin/pilot
+@@ -347,9 +350,9 @@
+ 
+ 
+     clean) # This only sort of works 
+-        echo "Cleaning c-client and imapd"
+-	cd $PHOME/imap
+-	make clean
++#       echo "Cleaning c-client and imapd"
++#	cd $PHOME/imap
++#	make clean
+         echo "Cleaning Pine"
+         cd $PHOME/pine
+         make -f makefile.ult clean

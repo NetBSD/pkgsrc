@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2000/01/04 16:58:50 bouyer Exp $
+$NetBSD: patch-aa,v 1.9 2000/11/09 03:37:26 hubertf Exp $
 
 --- pine/makefile.gs5.old	Thu Aug 27 18:49:57 1998
 +++ pine/makefile.gs5	Thu Dec  2 19:03:32 1999
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.8 2000/01/04 16:58:50 bouyer Exp $
 +OPTIMIZE=    -O2
  PROFILE=     # -pg
 -DEBUG=       -g -DDEBUG
-+DEBUG=       # -g -DDEBUG
++DEBUG=       -DDEBUG # -g 	# XXX crashes on 'c'ompose w/o -DDEBUG
  
  CCLIENTDIR=  ../c-client
  PICODIR=     ../pico
