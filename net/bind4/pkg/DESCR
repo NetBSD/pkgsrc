@@ -1,0 +1,7 @@
+NetBSD 1.4 and above ship with BIND 8, a vastly improved name server
+software suite.  Unfortunately, some sites cannot run BIND 8 yet due to
+various reasons, including the incompatible configuration file.
+
+This pkg installs the naed portion of BIND 4, allowing an administrator to
+use a BIND 4 server while retaining the added functionality of the BIND 8
+system tools.
