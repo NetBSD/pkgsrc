@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5894 2004/05/10 09:32:14 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5895 2004/05/10 09:33:47 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2448,3 +2448,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkglint to 3.75 [salo 2004-05-10]
 	Updated gentoo to 0.11.51 [adam 2004-05-10]
 	Added scdp-1.0.2 [xtraeme 2004-05-10]
+	Updated roundup to 0.7.1 [recht 2004-05-10]
