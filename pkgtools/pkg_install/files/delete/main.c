@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.5 2003/01/14 15:18:34 jschauma Exp $	*/
+/*	$NetBSD: main.c,v 1.6 2003/06/26 00:29:01 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.11 1997/10/08 07:46:48 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.5 2003/01/14 15:18:34 jschauma Exp $");
+__RCSID("$NetBSD: main.c,v 1.6 2003/06/26 00:29:01 jschauma Exp $");
 #endif
 #endif
 #endif
@@ -173,7 +173,7 @@ main(int argc, char **argv)
 		usage();
 	}
 	if (!Fake && getuid() != 0) {
-		errx(EXIT_FAILURE, "you must be root to delete packages");
+		warnx("not running as root - trying to delete anyways");
 	}
 	if (OnlyDeleteFromPkgDB) {
 		/* Only delete the given packages' files from pkgdb, do not
