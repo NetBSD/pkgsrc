@@ -1,342 +1,121 @@
-$NetBSD: patch-aa,v 1.8 1998/09/15 16:47:09 tv Exp $
-
-*** cmd/stubfe/Makefile.orig	Tue Aug  4 02:37:20 1998
---- cmd/stubfe/Makefile	Tue Aug  4 11:29:40 1998
-***************
-*** 548,553 ****
---- 548,559 ----
-  endif
-  
-  ########################################
-+ # NetBSD
-+ ifeq ($(OS_ARCH),NetBSD)
-+ OTHER_LIBS	= -lm $(OS_LIBS)
-+ endif
-+ 
-+ ########################################
-  # BSDI
-  ifeq ($(OS_ARCH),BSD_OS)
-  OTHER_LIBS	= -lm $(OS_LIBS)
-*** cmd/xfe/Microline3.0/XmL/Grid.c.orig	Tue Jul 28 06:48:32 1998
---- cmd/xfe/Microline3.0/XmL/Grid.c	Tue Aug  4 02:37:18 1998
-***************
-*** 30,35 ****
---- 30,38 ----
-  #include <Xm/Text.h>
-  #include <Xm/DrawnB.h>
-  #include <Xm/CutPaste.h>
-+ #ifndef MOTIF11
-+ #include <Xm/DropSMgr.h>
-+ #endif
-  #include <X11/StringDefs.h>
-  #include <X11/cursorfont.h>
-  #include <stdio.h>
-*** cmd/xfe/src/HTMLView.cpp.orig	Tue Jul 28 06:48:55 1998
---- cmd/xfe/src/HTMLView.cpp	Tue Aug  4 02:37:17 1998
-***************
-*** 350,356 ****
-    scroller = fe_MakeScrolledWindow (m_contextData, pane, "scroller");
-    XtVaSetValues (CONTEXT_DATA (m_contextData)->scrolled,
-  				 XmNborderWidth, 0, 
-! #if defined(__FreeBSD__)||defined(BSDI)||defined(LINUX)||defined(IRIX)
-  				 // Allow for resolutions > 1000 pixels.
-  				 // This causes the vertical scrollbar not to show
-  				 // up on Solaris 2.4, bug in Motif (77998).  
---- 350,356 ----
-    scroller = fe_MakeScrolledWindow (m_contextData, pane, "scroller");
-    XtVaSetValues (CONTEXT_DATA (m_contextData)->scrolled,
-  				 XmNborderWidth, 0, 
-! #if defined(__FreeBSD__)||defined(BSDI)||defined(LINUX)||defined(IRIX)||defined(__NetBSD__)
-  				 // Allow for resolutions > 1000 pixels.
-  				 // This causes the vertical scrollbar not to show
-  				 // up on Solaris 2.4, bug in Motif (77998).  
-*** cmd/xfe/src/context_funcs.cpp.orig	Tue Jul 28 06:49:11 1998
---- cmd/xfe/src/context_funcs.cpp	Tue Aug  4 02:37:17 1998
-***************
-*** 76,81 ****
---- 76,83 ----
-  #define STATFS statfs
-  #elif defined(BSDI)
-  #include <sys/mount.h>    /* for statfs() */
-+ #elif defined(NETBSD)
-+ #include <sys/mount.h>    /* for statfs() */
-  #define STATFS statfs
-  #else
-  #include <sys/statfs.h>  /* for statfs() */
-*** cmd/xfe/mozilla.c.orig	Tue Jul 28 06:48:31 1998
---- cmd/xfe/mozilla.c	Tue Aug  4 02:37:18 1998
-***************
-*** 1889,1894 ****
---- 1889,1896 ----
-  	strcat (buf, "IRIX");
-  #elif defined(__FreeBSD__)
-  	strcat (buf, "FreeBSD");
-+ #elif defined(__NetBSD__)
-+ 	strcat (buf, "NetBSD");
-  #elif defined(__386BSD__)
-  	strcat (buf, "BSD/386");
-  #elif defined(__osf__)
-***************
-*** 3543,3549 ****
-  
-  #else  /* !OLD_UNIX_FILES */
-  
-! #if !defined(__FreeBSD__) && !defined(MKLINUX) && !defined(LINUX_GLIBC_2)
-  extern char *sys_errlist[];
-  extern int sys_nerr;
-  #endif
---- 3545,3551 ----
-  
-  #else  /* !OLD_UNIX_FILES */
-  
-! #if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(MKLINUX) && !defined(LINUX_GLIBC_2)
-  extern char *sys_errlist[];
-  extern int sys_nerr;
-  #endif
-*** cmd/xfe/dialogs.c.orig	Tue Jul 28 06:48:29 1998
---- cmd/xfe/dialogs.c	Tue Aug  4 02:37:19 1998
-***************
-*** 278,284 ****
-    (void) fe_dialog (parent, "error", message, FALSE, 0, FALSE, FALSE, 0);
-  }
-  
-! #if !defined(__FreeBSD__) && !defined(MKLINUX) && !defined(LINUX_GLIBC_2)
-  #include <sys/errno.h>
-  extern char *sys_errlist[];
-  extern int sys_nerr;
---- 278,284 ----
-    (void) fe_dialog (parent, "error", message, FALSE, 0, FALSE, FALSE, 0);
-  }
-  
-! #if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(MKLINUX) && !defined(LINUX_GLIBC_2)
-  #include <sys/errno.h>
-  extern char *sys_errlist[];
-  extern int sys_nerr;
-*** cmd/xfe/movemail.c.orig	Tue Jul 28 06:48:31 1998
---- cmd/xfe/movemail.c	Tue Aug  4 02:37:20 1998
-***************
-*** 40,46 ****
-  #include "xfe.h"
-  
-  #include <sys/errno.h>
-! #if !defined(__FreeBSD__) && !defined(LINUX_GLIBC_2)
-  extern char *sys_errlist[];
-  extern int sys_nerr;
-  #endif
---- 40,46 ----
-  #include "xfe.h"
-  
-  #include <sys/errno.h>
-! #if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(LINUX_GLIBC_2)
-  extern char *sys_errlist[];
-  extern int sys_nerr;
-  #endif
-*** cmd/xfe/prefdialogs.c.orig	Tue Jul 28 06:48:31 1998
---- cmd/xfe/prefdialogs.c	Tue Aug  4 02:37:20 1998
+$NetBSD: patch-aa,v 1.9 1998/11/09 01:25:13 fvdl Exp $
+*** network/main/prefetch.c.orig	Thu Oct  8 22:24:29 1998
+--- network/main/prefetch.c	Sat Nov  7 20:02:13 1998
 ***************
 *** 76,82 ****
-  
-  /* For sys_errlist and sys_nerr */
-  #include <sys/errno.h>
-! #if !defined(__FreeBSD__) && !defined(LINUX_GLIBC_2)
-  extern char *sys_errlist[];
-  extern int sys_nerr;
-  #endif
+  /*	Returns bool to indicate if its OK to prefetch the specified URL.
+  	we don't prefetch mailto:, file:, etc. 
+  */
+! PRIVATE Bool
+  pre_OKToPrefetch(char* url)
+  {
+  	int type;
 --- 76,82 ----
-  
-  /* For sys_errlist and sys_nerr */
-  #include <sys/errno.h>
-! #if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(LINUX_GLIBC_2)
-  extern char *sys_errlist[];
-  extern int sys_nerr;
-  #endif
-*** dbm/include/mcom_db.h.orig	Tue Jul 28 06:43:48 1998
---- dbm/include/mcom_db.h	Tue Aug  4 02:37:20 1998
+  /*	Returns bool to indicate if its OK to prefetch the specified URL.
+  	we don't prefetch mailto:, file:, etc. 
+  */
+! MODULE_PRIVATE Bool
+  pre_OKToPrefetch(char* url)
+  {
+  	int type;
 ***************
-*** 200,206 ****
-  #define	RET_SUCCESS	 0
-  #define	RET_SPECIAL	 1
-  
-! #if defined(__386BSD__) || defined(SCO)
-  #define	__BIT_TYPES_DEFINED__
-  #endif
-  
---- 200,206 ----
-  #define	RET_SUCCESS	 0
-  #define	RET_SPECIAL	 1
-  
-! #if defined(__386BSD__) || defined(SCO) || defined(__NetBSD__)
-  #define	__BIT_TYPES_DEFINED__
-  #endif
-  
-*** js/src/prmjtime.c.orig	Tue Jul 28 06:42:20 1998
---- js/src/prmjtime.c	Tue Aug  4 02:37:17 1998
-***************
-*** 301,307 ****
-      PRInt64  maxtimet;
-      struct tm tm;
-      PRMJTime prtm;
-! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 ) || defined ( SNI )
-      struct tm *ptm;
-  #endif
-  
---- 301,307 ----
-      PRInt64  maxtimet;
-      struct tm tm;
-      PRMJTime prtm;
-! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 ) || defined ( SNI ) || defined( NETBSD )
-      struct tm *ptm;
-  #endif
-  
-***************
-*** 320,326 ****
-      }
-      LL_L2UI(local,time);
-      PRMJ_basetime(time,&prtm);
-! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 ) || defined ( SNI )
-      ptm = localtime(&local);
-      if(!ptm){
-        return LL_ZERO;
---- 320,326 ----
-      }
-      LL_L2UI(local,time);
-      PRMJ_basetime(time,&prtm);
-! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 ) || defined ( SNI ) || defined( NETBSD )
-      ptm = localtime(&local);
-      if(!ptm){
-        return LL_ZERO;
-*** modules/libreg/src/vr_stubs.h.orig	Tue Jul 28 06:43:10 1998
---- modules/libreg/src/vr_stubs.h	Tue Aug  4 02:37:21 1998
-***************
-*** 29,35 ****
-  #ifdef XP_MAC
-  #include <stat.h>
-  #else
-! #if defined(BSDI) && !defined(BSDI_2)
-  #include <sys/types.h>
-  #endif
-  #include <sys/stat.h>
---- 29,35 ----
-  #ifdef XP_MAC
-  #include <stat.h>
-  #else
-! #if (defined(BSDI) && !defined(BSDI_2)) || defined(NETBSD)
-  #include <sys/types.h>
-  #endif
-  #include <sys/stat.h>
-*** modules/schedulr/src/Makefile.orig	Tue Jul 28 06:43:18 1998
---- modules/schedulr/src/Makefile	Tue Aug  4 02:37:21 1998
-***************
-*** 17,24 ****
-  
-  DEPTH		= ../../..
-  
-! MODULE		= schedulr 
-! LIBRARY_NAME	= sched 
-  
-  REQUIRES	= nspr util
-  
---- 17,24 ----
-  
-  DEPTH		= ../../..
-  
-! MODULE		= schedulr
-! LIBRARY_NAME	= sched
-  
-  REQUIRES	= nspr util
-  
-*** network/main/mkconect.c.orig	Tue Jul 28 06:43:29 1998
---- network/main/mkconect.c	Tue Aug  4 02:37:21 1998
-***************
-*** 81,87 ****
-  
-  #include <resolv.h>
-  
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV)
-  #include <sys/filio.h>
-  #endif
-  
---- 81,87 ----
-  
-  #include <resolv.h>
-  
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV) && !defined(__NetBSD__)
-  #include <sys/filio.h>
-  #endif
-  
-*** network/main/mksockrw.c.orig	Tue Jul 28 06:43:29 1998
---- network/main/mksockrw.c	Tue Aug  4 02:37:21 1998
-***************
-*** 47,53 ****
-  
-  #include <resolv.h>
-  
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV)
-  #include <sys/filio.h>
-  #endif
-  
---- 47,53 ----
-  
-  #include <resolv.h>
-  
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV) && !defined(__NetBSD__)
-  #include <sys/filio.h>
-  #endif
-  
-*** network/main/prefetch.c.orig	Tue Jul 28 06:43:30 1998
---- network/main/prefetch.c	Tue Aug  4 02:37:21 1998
-***************
-*** 177,183 ****
-        }
+*** 101,107 ****
+  	return FALSE;
   }
   
 ! PRIVATE void
   pre_Finished(URL_Struct* url_struct, int status, MWContext* context)
   {
   	/* this should change to update the colors of 
---- 177,183 ----
-        }
+--- 101,107 ----
+  	return FALSE;
   }
   
 ! MODULE_PRIVATE void
   pre_Finished(URL_Struct* url_struct, int status, MWContext* context)
   {
   	/* this should change to update the colors of 
-*** network/protocol/ftp/mkftp.c.orig	Tue Jul 28 06:43:31 1998
---- network/protocol/ftp/mkftp.c	Tue Aug  4 02:37:22 1998
+*** nsprpub/config/NetBSD.mk.orig	Thu Oct  8 22:24:51 1998
+--- nsprpub/config/NetBSD.mk	Mon Nov  9 01:49:34 1998
 ***************
-*** 60,66 ****
-  #endif /* XP_OS2 */
+*** 44,49 ****
+--- 44,51 ----
   
-  #ifdef XP_UNIX
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV)
-  #include <sys/filio.h>
-  #endif
-  #endif /* XP_UNIX */ 
---- 60,66 ----
-  #endif /* XP_OS2 */
+  ARCH			= netbsd
   
-  #ifdef XP_UNIX
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV) || defined(__NetBSD__)
-  #include <sys/filio.h>
-  #endif
-  #endif /* XP_UNIX */ 
-*** nsprpub/pr/include/md/_netbsd.h.orig	Tue Jul 28 06:43:36 1998
---- nsprpub/pr/include/md/_netbsd.h	Tue Aug  4 11:20:59 1998
++ DLL_SUFFIX		= so.1.0
++ 
+  DSO_CFLAGS		= -fPIC
+  DSO_LDFLAGS		=
+  DSO_LDOPTS		= -Bshareable
 ***************
-*** 63,69 ****
---- 63,76 ----
-  #elif defined(__alpha__)
-  #define JB_SP_INDEX 34
-  #elif defined(__arm32__)
-+ /*
-+  * On the arm32, the jmpbuf regs underwent a namechange after NetBSD 1.3
-+  */
-+ #ifdef JMPBUF_REG_R13
-  #define JB_SP_INDEX JMPBUF_REG_R13
-+ #else
-+ #define JB_SP_INDEX _JB_REG_R13
-+ #endif
-  #else
-  #error "Need to define SP index in jmp_buf here"
-  #endif
+*** 55,60 ****
+--- 57,66 ----
+  endif
+  ifeq ($(OS_TEST),pmax)  
+  DSO_LDOPTS		= -shared
++ endif
++ 
++ ifdef LIBRUNPATH
++ DSO_LDOPTS		+= -R$(LIBRUNPATH)
+  endif
+  
+  MKSHLIB			= $(LD) $(DSO_LDOPTS)
+*** nsprpub/pr/include/md/_netbsd.h.orig	Thu Oct  8 22:25:16 1998
+--- nsprpub/pr/include/md/_netbsd.h	Sat Nov  7 20:13:58 1998
+***************
+*** 48,53 ****
+--- 48,55 ----
+  #define HAVE_DLL
+  #define USE_DLFCN
+  #define _PR_HAVE_SOCKADDR_LEN
++ #define _PR_NO_LARGE_FILES
++ #define _PR_STAT_HAS_ST_ATIMESPEC
+  
+  #define USE_SETJMP
+  
+*** cmd/xfe/Makefile.orig	Thu Oct  8 22:34:06 1998
+--- cmd/xfe/Makefile	Mon Nov  9 01:48:42 1998
+***************
+*** 749,758 ****
+  ifeq ($(OS_ARCH),NetBSD)
+  
+  # Work around linker semantics that will never find our own libutil on 1.3.x
+- ifeq ($(shell uname -r | cut -f2 -d.),3)
+  FOOL_GMAKE	= $(EXPORT_LDFLAGS:$(DIST)/lib/lib%.a=-l%)
+  DSO_EX_LIBS	= $(FOOL_GMAKE:-lutil=$(DIST)/lib/libutil.a)
+- endif
+  
+  ifdef LIBRUNPATH
+  OS_LIBS		+= -R$(LIBRUNPATH)
+--- 749,756 ----
+*** config/NetBSD.mk.orig	Thu Oct  8 22:28:25 1998
+--- config/NetBSD.mk	Mon Nov  9 01:49:13 1998
+***************
+*** 41,47 ****
+  # Don't define BSD, because it's already defined in /usr/include/sys/param.h.
+  PLATFORM_FLAGS		= -DNETBSD $(DSO_CFLAGS)
+  MOVEMAIL_FLAGS		= -DHAVE_STRERROR
+! PORT_FLAGS		= -DSW_THREADS -DNEED_UINT -DHAVE_LCHOWN -DNTOHL_ENDIAN_H -DHAVE_FILIO_H -DNEED_SYS_TIME_H -DNEED_UINT_T -DHAVE_BSD_FLOCK
+  PDJAVA_FLAGS		= -mx128m
+  OS_GPROF_FLAGS		= -pg
+  LD_FLAGS		= -L/usr/X11R6/lib -lXm
+--- 41,47 ----
+  # Don't define BSD, because it's already defined in /usr/include/sys/param.h.
+  PLATFORM_FLAGS		= -DNETBSD $(DSO_CFLAGS)
+  MOVEMAIL_FLAGS		= -DHAVE_STRERROR
+! PORT_FLAGS		= -DSW_THREADS -DNEED_UINT -DHAVE_LCHOWN -DNTOHL_ENDIAN_H -DHAVE_FILIO_H -DNEED_SYS_TIME_H -DNEED_UINT_T -DHAVE_BSD_FLOCK -DHAVE_SYSERRLIST
+  PDJAVA_FLAGS		= -mx128m
+  OS_GPROF_FLAGS		= -pg
+  LD_FLAGS		= -L/usr/X11R6/lib -lXm
+***************
+*** 101,104 ****
+--- 101,108 ----
+  DSO_LDOPTS		= -shared
+  else
+  DSO_LDOPTS		= -Bshareable
++ endif
++ 
++ ifdef LIBRUNPATH
++ DSO_LDOPTS		+= -R$(LIBRUNPATH)
+  endif
