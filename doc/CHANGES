@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3643 2003/10/05 08:20:16 grant Exp $
+$NetBSD: CHANGES,v 1.3644 2003/10/05 08:59:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4082,3 +4082,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libtool to 1.4.20010614nb16 [grant 2003-10-05]
 	Updated libtool-base to 1.4.20010614nb16 [grant 2003-10-05]
 	Updated libtool-info to 1.4.20010614nb16 [grant 2003-10-05]
+	Updated ruby-iconv to 0.5 [taca 2003-10-04]
