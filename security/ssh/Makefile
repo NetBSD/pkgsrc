@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 1998/07/14 10:56:17 frueauf Exp $
+# $NetBSD: Makefile,v 1.32 1998/08/06 19:48:40 tv Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -23,8 +23,7 @@ GNU_CONFIGURE=		YES
 # Use SSH_CONF_DIR from /etc/mk.conf, if defined; otherwise default to /etc
 SSH_CONF_DIR?=		/etc
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX} --with-etcdir=${SSH_CONF_DIR} \
-			--with-libwrap
+CONFIGURE_ARGS+=	--with-etcdir=${SSH_CONF_DIR} --with-libwrap
 
 #Uncomment if all your users are in their own group and their homedir
 #is writeable by that group.  Beware the security implications!
@@ -37,8 +36,9 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} --with-etcdir=${SSH_CONF_DIR} \
 
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
 DEPENDS+=		rsaref-2.0:../../security/rsaref
-CONFIGURE_ARGS+=	--with-rsaref="${PREFIX}/lib"
-CFLAGS+=		-I${PREFIX}/include
+CONFIGURE_ARGS+=	--with-rsaref="${LOCALBASE}/lib"
+CONFIGURE_ENV+=		LDFLAGS="-Wl,-R${LOCALBASE}/lib"
+CFLAGS+=		-I${LOCALBASE}/include
 .endif
 
 # Include support for the SecureID card
@@ -56,8 +56,8 @@ CONFIGURE_ARGS+=	--without-idea
 
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
-CONFIGURE_ARGS+= 	--with-socks${USE_SOCKS}="-L${PREFIX}/lib -lsocks${USE_SOCKS}"
-CFLAGS+=	 	-I${PREFIX}/include
+CONFIGURE_ARGS+= 	--with-socks${USE_SOCKS}="-L${LOCALBASE}/lib -lsocks${USE_SOCKS}"
+CFLAGS+=	 	-I${LOCALBASE}/include
 .if ${USE_SOCKS} == 4
 DEPENDS+=		socks4-2.2:../../net/socks4
 .else
