@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.505 2002/11/12 12:28:31 martti Exp $
+$NetBSD: CHANGES,v 1.506 2002/11/12 14:25:13 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3584,3 +3584,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated dctc to 0.83.8 [wiz 2002-11-11]
 	Updated dc_gui to 0.65 [wiz 2002-11-11]
 	Updated xfce to 3.8.18 [martti 2002-11-12]
+	Updated opera6 to 6.10nb1 [tron 2002-11-12]
