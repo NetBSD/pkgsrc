@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.6 1998/11/10 22:39:29 tron Exp $
+
+--- po/Makefile.in.orig	Mon Sep 28 22:13:27 1998
++++ po/Makefile.in	Tue Nov 10 23:07:35 1998
+@@ -79,8 +79,8 @@
+ install:
+ 	for n in $(CATALOGS); do \
+ 	    l=`basename $$n .mo`; \
+-	    $(INSTALL) -m 755 -d $(installprefix)/$(RPMNLSDIR)/$$l; \
+-	    $(INSTALL) -m 755 -d $(installprefix)/$(RPMNLSDIR)/$$l/LC_MESSAGES; \
++	    $(BSD_INSTALL_DATA_DIR) -m 755 $(installprefix)/$(RPMNLSDIR)/$$l; \
++	    $(BSD_INSTALL_DATA_DIR) -m 755 $(installprefix)/$(RPMNLSDIR)/$$l/LC_MESSAGES; \
+ 	    $(INSTALL) -m 644 $$n $(installprefix)/$(RPMNLSDIR)/$$l/LC_MESSAGES/rpm.mo; \
+ 	done
+ 
