@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.4 2000/07/14 04:44:11 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2000/12/07 08:29:00 mjl Exp $
 
 DISTNAME=		postgresql-${PG_VERS}
-PG_VERS=		7.0.2
+PG_VERS=		7.0.3
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/v${PG_VERS}/ \
