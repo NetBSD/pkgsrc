@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.32 2004/11/27 16:53:45 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.33 2004/11/28 00:39:43 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q3 branch:
@@ -67,3 +67,5 @@ Pullup ticket 158 - requested by Quentin Garnier
 security fix for sudo
 Pullup ticket 160 - requested by Thomas Klausner
 remove apache6 package
+Pullup ticket 155 - requested by Havard Eidnes
+security fix for gnats and remove gnats4 package
