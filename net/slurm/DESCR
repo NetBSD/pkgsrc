@@ -1,0 +1,7 @@
+slurm is a tool to monitor network traffic.
+
+Features:
+- realtime traffic statistics divided into incoming and
+  outgoing optional combined view
+- can monitor any kind of network interface (testers welcome!)
+- shows detailed statistics about the interface
