@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/10 12:39:17 wulf Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/12 23:11:12 xtraeme Exp $
 
 DISTNAME=	openvpn-1.5.0
 CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openvpn/}
 
-MAINTAINER=	packages@nNetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://openvpn.sourceforge.net/
 COMMENT=	Easy-to-use, robust, and highly configurable VPN over UDP
 
