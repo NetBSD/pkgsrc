@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4266 2003/12/27 23:14:42 salo Exp $
+$NetBSD: CHANGES,v 1.4267 2003/12/28 00:30:16 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5395,3 +5395,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added blinkenthemes-0.8 [salo 2003-12-27]
 	Added blinkensim-2.2 [salo 2003-12-27]
 	Added blccc-1.99 [salo 2003-12-27]
+	Updated p5-Time-HiRes to 1.52nb1 [heinz 2003-12-28]
