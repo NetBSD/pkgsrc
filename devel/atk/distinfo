@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2002/12/19 13:03:24 grant Exp $
+$NetBSD: distinfo,v 1.10 2002/12/24 03:44:18 wiz Exp $
 
-SHA1 (atk-1.0.3.tar.bz2) = 4ee24ceb359352a2e2ed91e253e230e9a41fc752
-Size (atk-1.0.3.tar.bz2) = 245314 bytes
-SHA1 (patch-aa) = 12baad6715a485f4dd1e0d3176299552fb275598
+SHA1 (atk-1.2.0.tar.bz2) = 0aa7fd2f49e953f568ab6b73a73126f731686483
+Size (atk-1.2.0.tar.bz2) = 285376 bytes
+SHA1 (patch-aa) = 58d79386a8113c4f57209124dfd00b3bc78da86f
