@@ -14,7 +14,7 @@ Setting up: (for impatients)
 	fi
 
 	For accepting incoming FAX/data calls, modify /etc/ttys as below
-	and send SIGHUP to init process: 
+	and send SIGHUP to the init process: 
 
 >tty00	"<prefix>/libexec/faxgetty"	dialup	on secure
 
