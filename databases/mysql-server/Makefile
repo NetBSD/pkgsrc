@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2004/12/28 02:47:43 reed Exp $
+# $NetBSD: Makefile,v 1.62 2005/01/01 00:37:56 minskim Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=		mysqs
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		MySQL 4, a free SQL database (server)
 
 CONFLICTS=		{mysql-server-[0-9]*,mysql3-server-[0-9]*}
