@@ -1,6 +1,6 @@
 RTtool converts RT to HTML table.
 
-Currently it support only HTML, but it hopefully other format like LaTeX.
+Currently it supports only HTML, but it will hopefully support other
+formats like LaTeX later.
 
 Author:	rubikitch@ruby-lang.org
-WWW:	http://www.ruby-lang.org/~rubikitch/computer/rt.html

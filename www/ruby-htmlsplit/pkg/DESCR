@@ -1,4 +1,4 @@
 Ruby HTML Split library
 
-It parse into array of tag and string, and result would be back to
-HTML by to_s method.
+It parses HTML into an array of tag and string; the result could be
+converted back to HTML by the to_s method.
