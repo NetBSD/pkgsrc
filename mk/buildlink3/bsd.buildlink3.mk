@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.47 2004/01/11 06:50:58 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.48 2004/01/13 07:52:37 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -766,6 +766,12 @@ _BLNK_TRANSFORM+=       r:
 .if defined(_USE_RPATH) && !empty(_USE_RPATH:M[nN][oO])
 _BLNK_TRANSFORM+=       no-rpath
 .endif
+#
+# Remove rpath options that try to add relative paths to the runtime
+# library search path.  This basically partly cleans up after lazy
+# programmers.
+#
+_BLNK_TRANSFORM+=	abs-rpath
 #
 # Undo the protection for the directories that we allow to be specified
 # for the runtime library search path.
