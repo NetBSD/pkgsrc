@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/23 12:07:51 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/23 15:28:00 tsarna Exp $
 
 DISTNAME=		AfterStep-1.4.5.0
 PKGNAME=		afterstep-1.450
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.afterstep.org/pub/ \
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.afterstep.org
+HOMEPAGE=		http://www.afterstep.org/
 
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 RUN_DEPENDS+=		asclock:../../x11/asclock
