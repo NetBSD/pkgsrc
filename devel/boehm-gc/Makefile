@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2002/08/25 18:38:25 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2002/09/25 18:18:51 wiz Exp $
 # FreeBSD Id: Makefile,v 1.1 1996/11/16 01:51:25 jdp Exp
 #
 
-DISTNAME=		gc6.0
-PKGNAME=		boehm-gc-6.0
+DISTNAME=		gc6.1
+PKGNAME=		boehm-gc-6.1
 CATEGORIES=		devel
 MASTER_SITES=		http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/
 

@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.8 2001/09/08 00:36:10 kei Exp $
+$NetBSD: patch-ad,v 1.9 2002/09/25 18:18:52 wiz Exp $
 
---- include/private/gcconfig.h.orig	Mon Aug 28 16:56:19 2000
-+++ include/private/gcconfig.h
-@@ -75,6 +75,10 @@
+--- include/private/gcconfig.h.orig	Mon Sep  9 14:56:06 2002
++++ include/private/gcconfig.h	Mon Sep  9 14:57:33 2002
+@@ -98,6 +98,10 @@
  #    endif
  #    define mach_type_known
  # endif
@@ -10,17 +10,17 @@ $NetBSD: patch-ad,v 1.8 2001/09/08 00:36:10 kei Exp $
 +#    define VAX
 +#    define mach_type_known
 +# endif
- # if defined(mips) || defined(__mips)
+ # if defined(mips) || defined(__mips) || defined(_mips)
  #    define MIPS
- #    if !defined(LINUX)
-@@ -690,6 +694,10 @@
+ #    if defined(nec_ews) || defined(_nec_ews)
+@@ -752,6 +756,10 @@
  #   ifdef ULTRIX
  #	define OS_TYPE "ULTRIX"
  #	define STACKBOTTOM ((ptr_t) 0x7fffc800)
 +#   endif
 +#   ifdef NETBSD
-+#	define OS_TYPE "NETBSD"
-+#	define HEURISTIC2
++#      define OS_TYPE "NETBSD"
++#      define HEURISTIC2
  #   endif
  # endif
  
