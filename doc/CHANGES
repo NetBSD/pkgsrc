@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4207 2003/12/21 04:56:15 uebayasi Exp $
+$NetBSD: CHANGES,v 1.4208 2003/12/21 08:00:04 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5268,3 +5268,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mgetty to 1.1.30nb1 [fredb 2003-12-20]
 	Removed wx1Motif [ben 2003-12-20]
 	Updated lv to 4.50 [uebayasi 2003-12-21]
+	Added mysqlcc-0.9.4 [martti 2003-12-21]
