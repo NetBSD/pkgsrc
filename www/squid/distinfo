@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.68.2.6 2005/02/01 10:40:44 salo Exp $
+$NetBSD: distinfo,v 1.68.2.7 2005/02/07 05:48:50 snj Exp $
 
 SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7.tar.bz2) = 24f29e28ec62d7ab5888cd594ac7a1975ee6aa36
 Size (squid-2.5.7-2005020100/squid-2.5.STABLE7.tar.bz2) = 1051830 bytes
@@ -48,6 +48,20 @@ SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7-response_splitting.patch) = 04b5c
 Size (squid-2.5.7-2005020100/squid-2.5.STABLE7-response_splitting.patch) = 10427 bytes
 SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7-wccp_buffer_overflow.patch) = 5cd9a71ea9ebaf35155c9f952152f848da4e5e79
 Size (squid-2.5.7-2005020100/squid-2.5.STABLE7-wccp_buffer_overflow.patch) = 505 bytes
+SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7-oversize_reply_headers.patch) = a4cef8b40aef91dad7da0bd5175e9bde6b2928d8
+Size (squid-2.5.7-2005020100/squid-2.5.STABLE7-oversize_reply_headers.patch) = 3056 bytes
+SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7-ldap_search.patch) = 698c5d4cf703c6f576bea2f7186c1a7eb1af5698
+Size (squid-2.5.7-2005020100/squid-2.5.STABLE7-ldap_search.patch) = 3719 bytes
+SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7-ntlm_segfault.patch) = 5d2029916f949c26a80b6cd4006998275b71fe95
+Size (squid-2.5.7-2005020100/squid-2.5.STABLE7-ntlm_segfault.patch) = 2076 bytes
+SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7-post.patch) = dc115e97f17f8bc5db96aad54dd0f94026aa0e0f
+Size (squid-2.5.7-2005020100/squid-2.5.STABLE7-post.patch) = 3172 bytes
+SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7-server_post.patch) = 99bacbbca5b30e18235dd4c3dd8b2622e4689e83
+Size (squid-2.5.7-2005020100/squid-2.5.STABLE7-server_post.patch) = 1424 bytes
+SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7-wccp_disturb.patch) = 20b7a339b4bd19d66211ef97131237a7c812f6df
+Size (squid-2.5.7-2005020100/squid-2.5.STABLE7-wccp_disturb.patch) = 5075 bytes
+SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7-ftp_password.patch) = 00baf5c0c1d3021a3f88ab9289c669e155a684ad
+Size (squid-2.5.7-2005020100/squid-2.5.STABLE7-ftp_password.patch) = 1494 bytes
 SHA1 (patch-aa) = 3e6fb677125eec276fdfa62336c134f26e1e1edd
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
