@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/06/22 13:01:52 agc Exp $
+# $NetBSD: Makefile,v 1.8 1999/02/04 18:54:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/12 02:19:40 obrien Exp
 #
 
@@ -19,5 +19,7 @@ OPSYS!=			uname -s
 .if (${OPSYS} == "NetBSD")
 MANCOMPRESSED=		yes
 .endif
+
+USE_X11=		yes
 
 .include "../../mk/bsd.pkg.mk"
