@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/08/22 13:44:20 rh Exp $
+
+--- src/NewsCache.cc.orig	Mon Jul  5 15:47:32 1999
++++ src/NewsCache.cc	Sun Aug 22 13:41:40 1999
+@@ -18,9 +18,12 @@
+  */
+ #include "config.h"
+ 
++#ifdef HAVE_CRYPT_H
+ #include <crypt.h>
++#endif
+ #include <ctype.h>
+ #include <unistd.h>
++#include <stdio.h>
+ #include <string.h>
+ #include <errno.h>
+ #include <netinet/in.h>

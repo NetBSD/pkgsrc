@@ -1,0 +1,23 @@
+  NewsCache is a free cache server for USENET News available under the GNU
+General Public License.  NewsCache can be plugged in between your news
+reader(s) and your news server.  NewsCache acts to news readers like a news
+server and retrieves news articles from the news server like a news reader.
+Whenever, a client requests an article from NewsCache, NewsCache checks
+whether the article has already been stored in the cache area.  If this is
+the case, the article is sent directly to its client.  Otherwise, the article
+is requested from the upstream news server, stored in the cache area and sent
+back to the client. 
+
+  NewsCache provides the following functionality: 
+
+   * Offline news reading. 
+   * Small articles are stored within a single database.  This improves
+     performance and reduces the number of inodes used of your system. 
+   * The overview-database is generated on the fly for articles already
+     cached by the cache server.
+   * This reduces the amount of disk space used, but decreases performance
+     slightly. 
+   * The newsgroup-database is now managed as an array instead of a list to
+     allow direct access to articles. 
+   * Merging different news servers to a virtual feed (on a per newsgroup
+     basis). 

@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/08/22 13:44:20 rh Exp $
+
+--- src/Makefile.in.orig	Mon Jul  5 19:08:49 1999
++++ src/Makefile.in	Sun Aug 22 13:37:26 1999
+@@ -120,6 +120,7 @@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
++LIBWRAP = @LIBWRAP@
+ cConfig_OBJECTS =  AccessList.o cConfig.o Config.o
+ cConfig_LDADD = $(LDADD)
+ cConfig_DEPENDENCIES =  ../NServer-0.9.1/libnserver.a \
+@@ -264,7 +265,7 @@
+ 
+ NewsCache: $(NewsCache_OBJECTS) $(NewsCache_DEPENDENCIES)
+ 	@rm -f NewsCache
+-	$(CXXLINK) $(NewsCache_LDFLAGS) $(NewsCache_OBJECTS) $(NewsCache_LDADD) $(LIBS)
++	${CXXLINK} ${NewsCache_LDFLAGS} ${NewsCache_OBJECTS} ${NewsCache_LDADD} ${LIBS} ${LIBWRAP}
+ 
+ NewsCacheClean: $(NewsCacheClean_OBJECTS) $(NewsCacheClean_DEPENDENCIES)
+ 	@rm -f NewsCacheClean
