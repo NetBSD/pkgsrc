@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:42 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/10/09 09:47:29 jlam Exp $
 
 .if !defined(UNPROVEN_PTHREADS_BUILDLINK2_MK)
 UNPROVEN_PTHREADS_BUILDLINK2_MK=	# defined
@@ -9,6 +9,11 @@ BUILDLINK_PKGSRCDIR.unproven-pthreads?=	../../devel/unproven-pthreads
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.unproven-pthreads=unproven-pthreads
 BUILDLINK_PREFIX.unproven-pthreads_DEFAULT=	${LOCALBASE}
+
+BUILDLINK_CPPFLAGS.unproven-pthreads= \
+	-I${BUILDLINK_PREFIX.unproven-pthreads}/pthreads/include
+BUILDLINK_LDFLAGS.unproven-pthreads= \
+	-L${BUILDLINK_PREFIX.unproven-pthreads}/pthreads/lib
 
 CC=	${BUILDLINK_PREFIX.unproven-pthreads}/pthreads/bin/pgcc
 CXX=	${BUILDLINK_PREFIX.unproven-pthreads}/pthreads/bin/pg++
