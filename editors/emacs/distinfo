@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.11 2003/04/11 00:39:36 uebayasi Exp $
+$NetBSD: distinfo,v 1.12 2003/04/12 10:16:39 uebayasi Exp $
 
-SHA1 (emacs-21.2.tar.gz) = 3c0fd252adcac7a996c974b4fe9af554bdb04e75
-Size (emacs-21.2.tar.gz) = 20288222 bytes
+SHA1 (emacs-21.3.tar.gz) = a8aae1b619e50ed6fed5b1351b54b38ed98c61b8
+Size (emacs-21.3.tar.gz) = 20399831 bytes
+SHA1 (patch-ae.work) = 6d47b2e82b8e21c68bd52214679423a24300f4a1
+SHA1 (patch-ae.work) = 6d47b2e82b8e21c68bd52214679423a24300f4a1
 SHA1 (patch-aa) = fee6fe91fb9a2f75300903cc5c6e023bb8de6be5
 SHA1 (patch-ad) = 39a11bc214ae3d2f9d634c30b196a46d473ab92f
-SHA1 (patch-ae) = 992c8072336c53449bd5838cf75028405bcdbb94
+SHA1 (patch-ae) = e2b66b23efb90608470aef5ebd0c75e27bcd6b55
 SHA1 (patch-ak) = c37ecdcb1e0b0211b15baa7100dd43eab3f0830b
-SHA1 (patch-xx) = d226c394a07d25b23a0a31c24935d08e04ebee13
+SHA1 (patch-xx) = 2fe2ac22cb293150da2fa8cc9d2e5da110eb141b
