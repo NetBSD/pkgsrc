@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/02/18 16:53:52 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2004/02/19 18:51:01 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XFT2_BUILDLINK3_MK:=	${XFT2_BUILDLINK3_MK}+
@@ -124,12 +124,15 @@ BUILDLINK_DEPENDS+=		Xft2
 .  endif
 .endif
 
-.if !empty(XFT2_BUILDLINK3_MK:M+)
-.  if !empty(BUILDLINK_USE_BUILTIN.Xft2:M[yY][eE][sS])
-BUILDLINK_PREFIX.Xft2=			${X11BASE}
-BUILDLINK_FILES.Xft2+=			lib/pkgconfig/xft.pc
+.if !empty(BUILDLINK_USE_BUILTIN.Xft2:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.fontconfig=	yes
 BUILDLINK_USE_BUILTIN.Xrender=		yes
+.endif
+
+.if !empty(XFT2_BUILDLINK3_MK:M+)
+.  if !empty(BUILDLINK_USE_BUILTIN.Xft2:M[yY][eE][sS])
+BUILDLINK_PREFIX.Xft2=	${X11BASE}
+BUILDLINK_FILES.Xft2+=	lib/pkgconfig/xft.pc
 .  endif
 USE_X11=	yes
 .  if !empty(BUILDLINK_CHECK_BUILTIN.Xft2:M[nN][oO])
