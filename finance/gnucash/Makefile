@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/10/02 00:36:53 mjl Exp $
+# $NetBSD: Makefile,v 1.17 2001/10/03 09:02:44 jlam Exp $
 
 DISTNAME=		gnucash-1.6.4
 CATEGORIES=		finance
@@ -12,7 +12,6 @@ COMMENT=		Personal double-entry accounting program
 
 DEPENDS+=		eperl-2.2.14:../../textproc/eperl
 DEPENDS+=		g-wrap>=1.1.10:../../devel/g-wrap
-DEPENDS+=		guile-slib-2c8:../../devel/guile-slib
 DEPENDS+=		guppi>=0.35.5nb1:../../math/guppi
 DEPENDS+=		libperl>=${LIBPERL5_REQD}:../../lang/libperl
 DEPENDS+=		popt>=1.5:../../devel/popt
