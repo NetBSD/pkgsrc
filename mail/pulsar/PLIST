@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/28 21:02:15 martin Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/07/07 19:19:54 schmonz Exp $
 man/man1/pulsar_crypt.1.gz
-man/man5/maildir.5.gz
 man/man5/pulsar.conf.5.gz
 man/man8/pulsar.8.gz
 man/man8/pulsar_deliver.8.gz
