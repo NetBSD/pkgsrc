@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/02/18 14:56:04 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/04/20 14:06:44 rh Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/gnome-panel-preferences
@@ -18,7 +18,7 @@ lib/libpanel-applet-2.a
 lib/libpanel-applet-2.la
 lib/libpanel-applet-2.so
 lib/libpanel-applet-2.so.0
-lib/libpanel-applet-2.so.0.13
+lib/libpanel-applet-2.so.0.14
 lib/pkgconfig/libpanelapplet-2.0.pc
 libexec/fish-applet-2
 libexec/notification-area-applet
@@ -36,7 +36,7 @@ share/doc/html/panel-applet/panel-signals.html
 share/doc/html/panel-applet/panelapplet.html
 share/doc/html/panel-applet/server-files.html
 share/doc/html/panel-applet/session-saving.html
-share/examples/gnome-panel/sound/events/mailcheck2.soundlist
+share/examples/gnome-panel/sound/events/mailcheck.soundlist
 share/fish/fish.glade
 share/gconf/schemas/clock.schemas
 share/gconf/schemas/fish.schemas
@@ -61,12 +61,21 @@ share/gnome-panelrc
 share/gnome/help/clock/C/clock.xml
 share/gnome/help/clock/C/figures/clock_applet.png
 share/gnome/help/clock/C/legal.xml
+share/gnome/help/clock/ja/clock.xml
+share/gnome/help/clock/ja/figures/clock_applet.png
+share/gnome/help/clock/ja/legal.xml
 share/gnome/help/fish-applet-2/C/figures/fish_applet.png
 share/gnome/help/fish-applet-2/C/fish-applet-2.xml
 share/gnome/help/fish-applet-2/C/legal.xml
+share/gnome/help/fish-applet-2/ja/figures/fish_applet.png
+share/gnome/help/fish-applet-2/ja/fish-applet-2.xml
+share/gnome/help/fish-applet-2/ja/legal.xml
 share/gnome/help/mailcheck/C/figures/mailcheck_applet.png
 share/gnome/help/mailcheck/C/legal.xml
 share/gnome/help/mailcheck/C/mailcheck.xml
+share/gnome/help/mailcheck/ja/figures/mailcheck_applet.png
+share/gnome/help/mailcheck/ja/legal.xml
+share/gnome/help/mailcheck/ja/mailcheck.xml
 share/gnome/help/notification-area/C/figures/notification-area.png
 share/gnome/help/notification-area/C/legal.xml
 share/gnome/help/notification-area/C/notification-area.xml
@@ -74,9 +83,16 @@ share/gnome/help/window-list/C/figures/window_list_applet.png
 share/gnome/help/window-list/C/figures/window_list_group_applet.png
 share/gnome/help/window-list/C/legal.xml
 share/gnome/help/window-list/C/window-list.xml
+share/gnome/help/window-list/ja/figures/window_list_applet.png
+share/gnome/help/window-list/ja/figures/window_list_group_applet.png
+share/gnome/help/window-list/ja/legal.xml
+share/gnome/help/window-list/ja/window-list.xml
 share/gnome/help/workspace-switcher/C/figures/workspace_switcher_applet.png
 share/gnome/help/workspace-switcher/C/legal.xml
 share/gnome/help/workspace-switcher/C/workspace-switcher.xml
+share/gnome/help/workspace-switcher/ja/figures/workspace_switcher_applet.png
+share/gnome/help/workspace-switcher/ja/legal.xml
+share/gnome/help/workspace-switcher/ja/workspace-switcher.xml
 share/gnome/panel2/gnome-panel-preferences.glade
 share/gnome/panel2/gnome-panel-screenshot.glade
 share/idl/gnome-panel-2.0/GNOME_Panel.idl
@@ -91,9 +107,11 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-panel-2.0.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gnome-panel-2.0.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnome-panel-2.0.mo
@@ -103,6 +121,7 @@ ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-panel-2.0.mo
+${PKGLOCALEDIR}/locale/li/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gnome-panel-2.0.mo
@@ -130,44 +149,59 @@ ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-panel-2.0.mo
 share/omf/gnome-panel/clock-C.omf
+share/omf/gnome-panel/clock-ja.omf
 share/omf/gnome-panel/fish-applet-2-C.omf
+share/omf/gnome-panel/fish-applet-2-ja.omf
 share/omf/gnome-panel/mailcheck-C.omf
+share/omf/gnome-panel/mailcheck-ja.omf
 share/omf/gnome-panel/notification-area-C.omf
 share/omf/gnome-panel/window-list-C.omf
+share/omf/gnome-panel/window-list-ja.omf
 share/omf/gnome-panel/workspace-switcher-C.omf
-share/pixmaps/fish2/fishanim.png
-share/pixmaps/fish2/footguy.png
-share/pixmaps/fish2/monkey.png
-share/pixmaps/fish2/oldwanda.png
+share/omf/gnome-panel/workspace-switcher-ja.omf
+share/pixmaps/fish/fishanim.png
+share/pixmaps/fish/footguy.png
+share/pixmaps/fish/monkey.png
+share/pixmaps/fish/oldwanda.png
 share/pixmaps/gnome-fish.png
 share/pixmaps/gnome-show-desktop.png
-share/pixmaps/mailcheck2/eclouds.png
-share/pixmaps/mailcheck2/email-e.png
-share/pixmaps/mailcheck2/email-eclouds.png
-share/pixmaps/mailcheck2/email-tiny.png
-share/pixmaps/mailcheck2/email.png
-share/pixmaps/mailcheck2/tux-anim.png
-@dirrm share/pixmaps/mailcheck2
-@dirrm share/pixmaps/fish2
+share/pixmaps/mailcheck/eclouds.png
+share/pixmaps/mailcheck/email-e.png
+share/pixmaps/mailcheck/email-eclouds.png
+share/pixmaps/mailcheck/email-tiny.png
+share/pixmaps/mailcheck/email.png
+share/pixmaps/mailcheck/tux-anim.png
+@dirrm share/pixmaps/mailcheck
+@dirrm share/pixmaps/fish
 @dirrm share/omf/gnome-panel
 @comment in scrollkeeper: @dirrm share/omf
 @dirrm share/idl/gnome-panel-2.0
 @dirrm share/gnome/panel2
+@dirrm share/gnome/help/workspace-switcher/ja/figures
+@dirrm share/gnome/help/workspace-switcher/ja
 @dirrm share/gnome/help/workspace-switcher/C/figures
 @dirrm share/gnome/help/workspace-switcher/C
 @dirrm share/gnome/help/workspace-switcher
+@dirrm share/gnome/help/window-list/ja/figures
+@dirrm share/gnome/help/window-list/ja
 @dirrm share/gnome/help/window-list/C/figures
 @dirrm share/gnome/help/window-list/C
 @dirrm share/gnome/help/window-list
 @dirrm share/gnome/help/notification-area/C/figures
 @dirrm share/gnome/help/notification-area/C
 @dirrm share/gnome/help/notification-area
+@dirrm share/gnome/help/mailcheck/ja/figures
+@dirrm share/gnome/help/mailcheck/ja
 @dirrm share/gnome/help/mailcheck/C/figures
 @dirrm share/gnome/help/mailcheck/C
 @dirrm share/gnome/help/mailcheck
+@dirrm share/gnome/help/fish-applet-2/ja/figures
+@dirrm share/gnome/help/fish-applet-2/ja
 @dirrm share/gnome/help/fish-applet-2/C/figures
 @dirrm share/gnome/help/fish-applet-2/C
 @dirrm share/gnome/help/fish-applet-2
+@dirrm share/gnome/help/clock/ja/figures
+@dirrm share/gnome/help/clock/ja
 @dirrm share/gnome/help/clock/C/figures
 @dirrm share/gnome/help/clock/C
 @dirrm share/gnome/help/clock
