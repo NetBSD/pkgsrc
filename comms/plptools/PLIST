@@ -1,9 +1,52 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:38 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/08 12:14:59 wiz Exp $
+bin/plpbackup
 bin/plpftp
+bin/sisinstall
+include/plptools/Enum.h
+include/plptools/bufferarray.h
+include/plptools/bufferstore.h
+include/plptools/iowatch.h
+include/plptools/log.h
+include/plptools/plpdirent.h
+include/plptools/plpintl.h
+include/plptools/ppsocket.h
+include/plptools/psibitmap.h
+include/plptools/psiprocess.h
+include/plptools/psitime.h
+include/plptools/rclip.h
+include/plptools/rfsv.h
+include/plptools/rfsv16.h
+include/plptools/rfsv32.h
+include/plptools/rfsvfactory.h
+include/plptools/rpcs.h
+include/plptools/rpcs16.h
+include/plptools/rpcs32.h
+include/plptools/rpcsfactory.h
+include/plptools/siscomponentrecord.h
+include/plptools/sisfile.h
+include/plptools/sisfileheader.h
+include/plptools/sisfilerecord.h
+include/plptools/sislangrecord.h
+include/plptools/sisreqrecord.h
+include/plptools/sistypes.h
+include/plptools/wprt.h
 lib/libplp.a
 lib/libplp.la
 lib/libplp.so
-lib/libplp.so.1
-lib/libplp.so.1.0
+lib/libplp.so.0
+lib/libplp.so.0.12
+man/man1/plpbackup.1
+man/man1/plpftp.1
+man/man1/sisinstall.1
+man/man8/ncpd.8
+man/man8/plpnfsd.8
+man/man8/plpprintd.8
 sbin/ncpd
 sbin/plpnfsd
+sbin/plpprintd
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/plptools.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/plptools.mo
+share/plptools/fontmap
+share/plptools/prolog.ps
+@dirrm share/plptools
+@dirrm include/plptools

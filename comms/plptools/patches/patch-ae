@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2001/04/04 08:53:44 skrll Exp $
+$NetBSD: patch-ae,v 1.2 2004/09/08 12:14:59 wiz Exp $
 
---- plpnfsd/mp_inode.c.orig	Mon Jul  5 22:33:05 1999
+--- plpnfsd/mp_inode.c.orig	2002-07-12 17:18:01.000000000 +0200
 +++ plpnfsd/mp_inode.c
 @@ -11,7 +11,7 @@
  #include "mp.h"
