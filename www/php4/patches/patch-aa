@@ -1,8 +1,18 @@
-$NetBSD: patch-aa,v 1.4 2000/12/25 21:03:47 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2001/03/13 21:34:03 jlam Exp $
 
---- configure.in.orig	Mon Dec 18 23:32:10 2000
+--- configure.in.orig	Thu Jan 11 13:18:18 2001
 +++ configure.in
-@@ -837,10 +837,6 @@
+@@ -340,7 +340,8 @@
+ 
+ dnl Check for IPv6 support
+ AC_CACHE_CHECK([for IPv6 support], ac_cv_ipv6_support,
+-[AC_TRY_COMPILE([#include <sys/socket.h>
++[AC_TRY_COMPILE([#include <sys/types.h>
++#include <sys/socket.h>
+ #include <netinet/in.h>], [struct sockaddr_in6 s; int i=AF_INET6; s],
+   ac_cv_ipv6_support=yes, ac_cv_ipv6_support=no)])
+ if test "$ac_cv_ipv6_support" = yes; then
+@@ -837,10 +838,6 @@
      PHP_CONFIGURE_PART(Configuring shared libtool)
      $SHELL $srcdir/ltconfig --output=shlibtool --disable-static --srcdir=$srcdir --cache-file=./config.cache $srcdir/ltmain.sh
      SHARED_LIBTOOL='$(SHELL) $(top_builddir)/shlibtool'
