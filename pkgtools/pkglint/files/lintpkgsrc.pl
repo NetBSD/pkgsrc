@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.13 1999/12/22 21:37:58 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.14 1999/12/22 22:07:31 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -118,7 +118,9 @@ exit;
 
 sub check_prebuilt_packages
     {
-    if (/(.*)\.tgz$/)
+    if ($_ eq 'distfiles')
+	{ $File::Find::prune = 1; }
+    elsif (/(.*)\.tgz$/)
 	{
 	if (!defined($pkgver2dir{$1}))
 	    {
