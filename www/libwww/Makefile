@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/07/14 16:56:51 tv Exp $
+# $NetBSD: Makefile,v 1.3 1998/07/14 17:12:35 tv Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/14 23:34:59 jseger Exp
 #
 
@@ -13,10 +13,8 @@ BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-CONFIGURE_ARGS=	--with-zlib --with-regex
-CONFIGURE_ENV=	LIBTOOL=${PREFIX}/bin/libtool \
-		CPPFLAGS="-I${X11BASE}/include" \
-		LDFLAGS="-L${X11BASE}/lib"
+CONFIGURE_ARGS=	--with-zlib --with-regex --without-x
+CONFIGURE_ENV=	LIBTOOL=${PREFIX}/bin/libtool
 WRKSRC=		${WRKDIR}/w3c-libwww-5.1m
 
 DOCDIR=		${PREFIX}/share/doc/libwww
