@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2004/11/15 17:54:49 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2005/01/19 16:28:20 tv Exp $
 
 DISTNAME=	rpm-2.5.4
 PKGREVISION=	3
@@ -12,6 +12,8 @@ COMMENT=	The Red Hat Package Manager
 BUILD_USES_MSGFMT=	yes
 
 CONFLICTS+=		rpm2cpio<1.0nb1
+
+NOT_FOR_PLATFORM+=	Interix-*-* # getmntent() is nonpublic; needs porting
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
