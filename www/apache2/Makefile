@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2004/11/30 23:21:43 jlam Exp $
+# $NetBSD: Makefile,v 1.60 2004/12/07 22:25:50 seb Exp $
 
 .include "Makefile.common"
 
@@ -87,13 +87,13 @@ OWN_DIRS+=		${VARBASE}/db/httpd
 OWN_DIRS_PERMS+=	${VARBASE}/db/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
 FIX_PERMS=		apachectl apxs dbmmanage envvars-std
 
-SUBST_CLASSES=		paths
+SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	config.layout	
 SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.paths=	"Fixing paths."
 
-SUBST_CLASSES=		apr-lt
+SUBST_CLASSES+=		apr-lt
 SUBST_STAGE.apr-lt=	post-configure
 SUBST_FILES.apr-lt=	build/config_vars.mk
 SUBST_SED.apr-lt=	-e "s|^\(LIBTOOL =\) [^ ]*|\1 \$$(SHELL) \$$(top_builddir)/libtool|g"
