@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8535 2004/12/30 21:58:25 minskim Exp $
+$NetBSD: CHANGES,v 1.8536 2004/12/31 10:11:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6714,3 +6714,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added simulavr-0.1.2.1 [kristerw 2004-12-30]
 	Updated gv to 3.6.1 [snj 2004-12-30]
 	Updated db4 to 4.3.21nb1 [minskim 2004-12-30]
+	Updated mrtg to 2.10.15nb2 [minskim 2004-12-31]
