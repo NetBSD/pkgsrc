@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2001/12/12 05:57:29 dillo Exp $
+
+--- src/dw_table.c.orig	Tue Oct 16 19:49:25 2001
++++ src/dw_table.c
+@@ -661,7 +661,7 @@
+    a_List_resize (table->cum_height, table->num_rows, sizeof(gint32),
+                   table->cum_height_max);
+    table->num_rows--;
+-   a_List_resize (table->row_style, table->num_rows, sizeof(gint32),
++   a_List_resize (table->row_style, table->num_rows, sizeof(DwStyle*),
+                   table->row_style_max);
+ 
+    old_num_children = table->num_children;
