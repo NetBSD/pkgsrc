@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1215 2003/07/13 13:10:43 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216 2003/07/13 13:27:18 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -313,6 +313,20 @@ MAKE_ENV+=		CXX="${CXX}"
 .if defined(CPP)
 MAKE_ENV+=		CPP="${CPP}"
 .endif
+
+# Ensure the correct rpath is passed to the linker to enable packages
+# to find shared libraries from gcc. Has no effect when pkgsrc gcc is
+# not being used.
+#
+# Valid compilers are:
+#
+#	USE_GCC2    - GNU Compiler Collection 2.x
+# 	USE_GCC3    - GNU Compiler Collection 3.x
+#	USE_MIPSPRO - Silicon Graphics, Inc. MIPSpro Compiler
+#	USE_SUNPRO  - Sun Microsystems, Inc. WorkShop/Forte/Sun ONE Studio
+#	              Compiler Collection
+#
+.include "../../mk/gcc.buildlink2.mk"
 
 # export the flags needed to compile and link pthreaded code
 MAKE_ENV+=		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
