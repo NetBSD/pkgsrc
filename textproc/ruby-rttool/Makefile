@@ -1,29 +1,31 @@
-# $NetBSD: Makefile,v 1.8 2004/03/16 02:01:11 taca Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/28 04:48:25 taca Exp $
 
 DISTNAME=	rttool-${VERSION}
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc ruby
-MASTER_SITES=	http://www.rubyist.net/~rubikitch/computer/rt/
+MASTER_SITES=	http://www.rubyist.net/~rubikitch/archive/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.rubyist.net/~rubikitch/archive/
+HOMEPAGE=	http://www.rubyist.net/~rubikitch/computer/rt/
 COMMENT=	RT to HTML (and hopefully LaTeX in future) table converter
 
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}optparse>=0.7:../../devel/ruby-optparse
+CONFLICTS+=	ruby[1-9][0-9]-rttool-*
 
-DIST_SUBDIR=	ruby
-VERSION=	0.1.7
-RUBY_REQD=	1.6.0
-USE_RUBY_SETUP=	# defined
-
-REPLACE_RUBY=	bin/rt/rt2 lib/rt/rt2html-lib.rb lib/rt/rt2txt-lib.rb \
-		lib/rt/rtparser-test.rb lib/rt/rtparser.rb \
+VERSION=	0.1.8
+USE_RUBY_SETUP=	yes
+REPLACE_RUBY=	bin/rt/rt2 lib/rt/rt2html-lib.rb \
+		lib/rt/rt2txt-lib.rb lib/rt/rtparser.rb \
 		lib/rt/rtvisitor.rb lib/rt/w3m.rb
-
 EXAMPLES=	rttest.rd test1.rt test2.rt
 
+.include "../../lang/ruby/rubyversion.mk"
+
+.if ${RUBY_VER} == 16
+DEPENDS+=	${RUBY_PKGPREFIX}-optparse>=0.7:../../devel/ruby-optparse
+.endif
+
 pre-configure:
-	${RM} -f ${WRKSRC}/setup/rt.rb
+	${RM} -f ${WRKSRC}/setup/rt.rb ${WRKSRC}/lib/rt/rtparser-test.rb
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/rt
@@ -35,5 +37,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${RUBY_EXAMPLESDIR}/rt
 .endfor
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/11/28 04:48:25 taca Exp $
+
+--- setup.rb.orig	2001-07-09 17:53:45.000000000 +0900
++++ setup.rb
+@@ -640,7 +640,7 @@ class Installer
+   end
+ 
+   def install_so( dest )
+-    to = isdir(File.expand_path @config['so-dir'] + '/' + dest)
++    to = isdir(File.expand_path(@config['so-dir'] + '/' + dest))
+     find_so('.').each do |name|
+       install name, to, 0555
+     end
