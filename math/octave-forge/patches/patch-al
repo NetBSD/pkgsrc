@@ -1,0 +1,37 @@
+$NetBSD: patch-al,v 1.1 2005/03/14 04:08:42 dmcmahill Exp $
+
+sometimes X_LIBS ends up with "-Rpath" in it but mkoctfile doesn't
+understand that (yet).  In an upcoming octave-current release, that
+should be fixed.
+
+--- main/plot/Makefile.orig	2004-01-12 02:39:09.000000000 -0500
++++ main/plot/Makefile
+@@ -9,6 +9,7 @@ ifndef OCTAVE_FORGE
+ 	X_LIBS = -L/usr/X11R6/lib
+ endif
+ 
++X_LIBS2=	$(filter-out -R%, ${X_LIBS})
+ 
+ %.o: %.cc ; $(MKOCTFILE) -c $(X_CFLAGS) $<
+ 
+@@ -22,16 +23,16 @@ endif
+ $(PROGS:.oct=.o): graphics.h
+ 
+ grab.oct: grab.o graphics.o
+-	$(MKOCTFILE) $< graphics.o $(X_LIBS) -o $@
++	$(MKOCTFILE) $< graphics.o $(X_LIBS2) -o $@
+ 
+ gpick.oct: gpick.o graphics.o
+-	$(MKOCTFILE) $< graphics.o $(X_LIBS) -o $@
++	$(MKOCTFILE) $< graphics.o $(X_LIBS2) -o $@
+ 
+ gtext.oct: gtext.o graphics.o
+-	$(MKOCTFILE) $< graphics.o $(X_LIBS) -o $@
++	$(MKOCTFILE) $< graphics.o $(X_LIBS2) -o $@
+ 
+ gzoom.oct: gzoom.o graphics.o
+-	$(MKOCTFILE) $< graphics.o $(X_LIBS) -o $@
++	$(MKOCTFILE) $< graphics.o $(X_LIBS2) -o $@
+ 
+ clean: ; -$(RM) *.o octave-core core *~ *.oct
+ 

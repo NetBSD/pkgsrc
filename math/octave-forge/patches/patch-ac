@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.4 2005/03/14 04:08:42 dmcmahill Exp $
+
+--- FIXES/randmtzig.c.orig	2004-11-08 06:41:25.000000000 -0500
++++ FIXES/randmtzig.c
+@@ -147,7 +147,7 @@
+ 	unsigned long long uint64_t;
+    instead.
+ */ 
+-#include <stdint.h>
++#include <sys/types.h>
+ 
+    
+ /* XXX FIXME XXX may want to suppress X86 if sizeof(long)>4 */

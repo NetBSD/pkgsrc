@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.4 2005/03/14 04:08:42 dmcmahill Exp $
+
+--- main/gsl/Makefile.orig	2004-07-14 15:59:13.000000000 -0400
++++ main/gsl/Makefile
+@@ -21,7 +21,7 @@ endif
+ $(PROGS): Makefile
+ 
+ gsl_sf.cc: $(SF_BUILDSCRIPT)
+-	/bin/sh $(SF_BUILDSCRIPT)
++	${SHELL} $(SF_BUILDSCRIPT)
+ 
+ $(SF_LINKS):
+ 	-$(RM) -f $@
