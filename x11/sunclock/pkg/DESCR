@@ -8,4 +8,3 @@ local timezone and UTC displayed.  The Suntools version had a menu that
 allowed you to speed up time, show different dates, etc., but I have
 never implemented any of that in the X version; there is some support
 for it in the code, however.
-
