@@ -1,26 +1,24 @@
-# $NetBSD: Makefile,v 1.5 2000/12/14 15:53:33 tv Exp $
+# $NetBSD: Makefile,v 1.6 2000/12/14 16:45:01 hubertf Exp $
 #
 
-DISTNAME=	plex86
-PKGNAME=	plex86-0.20001214
+DISTNAME=	plex86-20001214.2
+PKGNAME=	plex86-0.20001214.2
 CATEGORIES=	emulators
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/fvdl/ \
-		${MASTER_SITE_LOCAL}
-DISTFILES=	plex86-20001214.tgz plex86.tgz
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.plex86.org/
 
-BUILD_DEPENDS+=	autoconf:../../devel/autoconf
-
-DIST_SUBDIR=	plex86-20001214
 WRKSRC=		${WRKDIR}/plex86
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-NetBSD \
-		--with-netbsd-source=${BSDSRCDIR}
+		--with-netbsd-source=${BSDSRCDIR}/sys
 USE_GMAKE=	yes
 NO_PKG_REGISTER=	yes	# ONLY until we really install files!!!
 NO_PACKAGE=	Incomplete	# ONLY until we really install files!!!
+
+.include "../../mk/bsd.prefs.mk"
 
 BSDSRCDIR?=	/nonexistent	# (to override <bsd.own.mk>)
 .include "../../mk/bsd.prefs.mk"
@@ -35,15 +33,6 @@ pre-extract:
 	@${ECHO_MSG} "(Or set BSDSRCDIR correctly in /etc/mk.conf.)"
 	@${FALSE}
 .endif
-
-pre-patch:
-	cd ${WRKSRC} && \
-		${PATCH} ${PATCH_ARGS} <${WRKDIR}/plex86.diff
-	${CP} ${WRKDIR}/kernel/host-netbsd.c ${WRKSRC}/kernel
-	${CP} ${WRKDIR}/misc/netbsd_post.sh ${WRKSRC}/misc
-
-pre-configure:
-	cd ${WRKSRC} && autoconf
 
 do-install:
 	@${CAT} ${MESSAGE_FILE}
