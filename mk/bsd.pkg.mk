@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.874 2001/12/04 06:14:57 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.875 2001/12/05 16:42:46 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1918,6 +1918,28 @@ do-shlib-handling:
 				${LDCONFIG} || ${TRUE};			\
 			fi						\
 			;;						\
+		"dylib")						\
+			${AWK} '/^@/ { print $$0; next }		\
+				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
+					next				\
+				}					\
+				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ {	\
+					next				\
+				}					\
+				/.*\/lib[^\/]+\.so\.[0-9]+$$/ {		\
+					next				\
+				}					\
+				/.*\/lib[^\/]+\.so$$/ {			\
+					next				\
+				}					\
+				{ print $$0 }				\
+			' <${PLIST} >${PLIST}.tmp ;			\
+			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then	\
+				${MV} ${PLIST}.tmp ${PLIST};		\
+			else 						\
+				${RM} ${PLIST}.tmp ;			\
+			fi ; 						\
+			;;						\
 		"*")							\
 			if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 	\
 				${ECHO_MSG} "No shared libraries for ${MACHINE_ARCH}"; \
@@ -1977,6 +1999,10 @@ check-shlibs:
 .if !target(show-shlib-type)
 # Show the shared lib type being built: one of ELF, a.out or none
 show-shlib-type:
+.  if exists(/usr/lib/libc.dylib)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} "dylib"
+.  else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${WRKDIR} &&							\
 	sotype=none;							\
@@ -1994,6 +2020,7 @@ show-shlib-type:
 	fi;								\
 	${ECHO} "$$sotype";						\
 	${RM} -f a.$$$$.c a.$$$$.out
+.  endif # libc.sylib
 .endif
 
 
