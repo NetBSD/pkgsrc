@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/03 00:47:56 wulf Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/23 23:03:36 wulf Exp $
 #
 
 
@@ -12,6 +12,7 @@ SUBDIR+=	locator
 SUBDIR+=	tfkiss
 SUBDIR+=	tnt
 SUBDIR+=	wwl
+SUBDIR+=	xdx
 SUBDIR+=	xlog
 SUBDIR+=	yaesu
 
