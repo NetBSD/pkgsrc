@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/08/25 19:22:49 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/08/27 06:40:01 jlam Exp $
 
 DISTNAME=	gphoto2-2.1.0
 PKGNAME=	gphoto-2.1.0
@@ -10,33 +10,42 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.gphoto.org/gphoto2/
 COMMENT=	Download and view files from various digital cameras
 
-USE_BUILDLINK_ONLY=	# XXX gphoto2 adds unneeded -L${LOCALBASE}/lib etc.
-
 BUILD_USES_MSGFMT=	# defined
 
+USE_BUILDLINK2=		# defined
 USE_GMAKE=		# defined
+
 USE_LIBTOOL=		# defined
-USE_GNU_READLINE=	rl_completion_matches
-LIBTOOL_OVERRIDE=	${WRKSRC}/ltmain.sh
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/libgphoto2_port/libtool
+
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-drivers=all
 CONFIGURE_ARGS+=	--with-doc-dir=${PREFIX}/share/doc/gphoto2
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/gphoto2
+CONFIGURE_ARGS+=	--without-pthread
 CONFIGURE_ARGS+=	--without-pkgconfig
 CONFIGURE_ARGS+=	--without-fig2dev
+CONFIGURE_ARGS+=	--without-xmlto
 CONFIGURE_ARGS+=	--with-aalib
-CONFIGURE_ARGS+=	--with-cdk
-CONFIGURE_ARGS+=	--with-exif
-CONFIGURE_ARGS+=	--with-jpeg-prefix=${PREFIX}
+CONFIGURE_ARGS+=	--with-cdk-prefix=${BUILDLINK_PREFIX.cdk}
+CONFIGURE_ARGS+=	--with-exif-prefix=${BUILDLINK_PREFIX.libexif}
+CONFIGURE_ARGS+=	--with-jpeg-prefix=${BUILDLINK_PREFIX.jpeg}
 
-BUILDLINK_DEPENDS.libusb=   libusb>=0.1.5
+# readline detection is currently broken since -ltermcap isn't passed as
+# part of the library check.
+#
+CONFIGURE_ARGS+=	--without-readline
+#USE_GNU_READLINE=	rl_completion_matches
+#.include "../../devel/readline/buildlink2.mk"
 
-.include "../../converters/libiconv/buildlink.mk"
-.include "../../devel/cdk/buildlink.mk"
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/libusb/buildlink.mk"
-.include "../../devel/readline/buildlink.mk"
-.include "../../graphics/aalib/buildlink.mk"
-.include "../../graphics/libexif/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
+.include "../../converters/libiconv/buildlink2.mk"
+.include "../../devel/cdk/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/glib/buildlink2.mk"
+.include "../../devel/libusb/buildlink2.mk"
+.include "../../graphics/aalib/buildlink2.mk"
+.include "../../graphics/libexif/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
