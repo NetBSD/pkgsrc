@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 1999/10/21 18:41:15 agc Exp $
+$NetBSD: patch-aa,v 1.5 2000/01/02 18:23:22 tron Exp $
 
---- makefile.in.orig	Thu Oct 21 18:55:31 1999
-+++ makefile.in	Thu Oct 21 19:05:02 1999
-@@ -51,7 +51,7 @@
+--- makefile.in.orig	Thu Nov 11 03:04:17 1999
++++ makefile.in	Sun Jan  2 19:18:10 2000
+@@ -50,7 +50,7 @@
  
  PERL		= @PERL@
  PERLLIB		= @perl_lib_path@
@@ -11,7 +11,16 @@ $NetBSD: patch-aa,v 1.4 1999/10/21 18:41:15 agc Exp $
  
  
  prefix		= @prefix@
-@@ -615,6 +615,9 @@
+@@ -607,7 +607,7 @@
+ 	$(INSTALL_PROGRAM)	$(TARGET) $@
+ 
+ $(BINDIR)/xshell.sh:		$(srcdir)/xshell.sh
+-	$(INSTALL_PROGRAM)	$(srcdir)/xshell.sh $@
++	$(INSTALL_SCRIPT)	$(srcdir)/xshell.sh $@
+ $(BINDIR)/vileget:		$(srcdir)/perl/vileget
+ 	$(INSTALL_SCRIPT)	$(srcdir)/perl/vileget $@
+ 
+@@ -674,6 +674,9 @@
  
  $(INSTALL_DIRS):
  	$(SHELL) ${srcdir}/mkdirs.sh $@
