@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2001/04/17 07:44:03 tron Exp $
+# $NetBSD: Makefile,v 1.42 2001/04/17 07:49:46 tron Exp $
 #
 
 DISTNAME=	cvs-1.11
@@ -14,8 +14,6 @@ COMMENT=	Concurrent Versions System
 GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes
 
-BUILD_DEPENDS+=	autoconf-*:../../devel/autoconf
-
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=	USE_INET6
@@ -27,6 +25,8 @@ CFLAGS+=	-I${PREFIX}/include		# zlib.h
 PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
 PATCHFILES=		cvs-1.11-v6-20010413.diff.gz
 PATCH_DIST_STRIP=	-p1
+
+BUILD_DEPENDS+=		autoconf-*:../../devel/autoconf
 
 .if ${USE_INET6} == "YES"
 CONFIGURE_ARGS+=	--enable-ipv6
