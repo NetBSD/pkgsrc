@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.288 2003/03/25 16:24:57 salo Exp $
+# $NetBSD: Packages.txt,v 1.289 2003/04/04 20:15:51 jschauma Exp $
 ###########################################################################
 
 			==========================
@@ -1921,6 +1921,16 @@ preprocessor-like .if, .ifdef, or .ifndef statements:
 	.if defined(USE_MENUS)
 	...
 	.endif
+
+If you wish to set the CFLAGS variable in /etc/mk.conf please make sure
+to use:
+   
+   CFLAGS+= -your -flags
+
+Using 'CFLAGS=' (ie without the '+') may lead to problems with packages
+that need to add their own flags.  Also, you may want to take a look at
+the devel/cpuflags package, if you're interested in optimization for the
+current CPU.
 
 
  10.10 Is there a mailing list for pkg-related discussion?
