@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:37 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/06/12 04:45:21 grant Exp $
 #
 
 DISTNAME=	libbegemot-1.9
@@ -10,6 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Base development library, contains useful routines
 
 GNU_CONFIGURE=	yes
+USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 
 .include "../../mk/bsd.pkg.mk"
