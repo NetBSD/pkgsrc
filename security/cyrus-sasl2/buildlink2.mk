@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/02/27 13:18:07 seb Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/03/19 22:22:34 jlam Exp $
 
 .if !defined(CYRUS_SASL_BUILDLINK2_MK)
 CYRUS_SASL_BUILDLINK2_MK=	# defined
@@ -11,10 +11,6 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.cyrus-sasl=cyrus-sasl
 BUILDLINK_PREFIX.cyrus-sasl_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.cyrus-sasl=	include/sasl/*
 BUILDLINK_FILES.cyrus-sasl+=	lib/libsasl2.*
-
-.if defined(USE_PAM)
-.  include "../../security/PAM/buildlink2.mk"
-.endif
 
 BUILDLINK_TARGETS+=	cyrus-sasl-buildlink
 
