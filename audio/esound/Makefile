@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2004/10/03 00:13:05 tv Exp $
+# $NetBSD: Makefile,v 1.54 2004/10/11 18:02:59 tv Exp $
 
 DISTNAME=		esound-0.2.35
 PKGREVISION=		1
@@ -19,7 +19,6 @@ PKGCONFIG_OVERRIDE=	esound.pc.in
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-MAKE_ENV+=		AM_CPPFLAGS='-DDEV_DSP=\"${DEVOSSAUDIO}\"'
 
 BUILD_DEFS+=		USE_INET6
 
@@ -34,11 +33,18 @@ CONFIGURE_ARGS+=	--enable-ipv6
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
+.if ${OPSYS} == "Interix"
+# no sound output device, but can support a remote esound server
+CONFIGURE_ARGS+=	--disable-local-sound
+.else
+.include "../../mk/ossaudio.buildlink3.mk"
+MAKE_ENV+=		AM_CPPFLAGS='-DDEV_DSP=\"${DEVOSSAUDIO}\"'
 SUBST_CLASSES=		oss
 SUBST_STAGE.oss=	post-patch
 SUBST_FILES.oss=	configure
 SUBST_SED.oss=		-e 's,-lossaudio,${LIBOSSAUDIO},g'
 SUBST_MESSAGE.oss=	"Fixing oss."
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/esound
@@ -46,6 +52,4 @@ post-install:
 		${PAX} -rw -pp -pm . ${PREFIX}/share/doc/html/esound
 
 .include "../../audio/libaudiofile/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
