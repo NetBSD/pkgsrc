@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8601 2005/01/04 15:21:59 adam Exp $
+$NetBSD: CHANGES,v 1.8602 2005/01/04 15:29:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -88,3 +88,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated py-generate to 2.2 [darcy 2005-01-04]
 	Updated dillo to 0.8.3nb1 [jmmv 2005-01-04]
 	Updated gimp to 2.2.1 [adam 2005-01-04]
+	Updated p5-DBD-SQLite to 0.25nb2 [wiz 2005-01-04]
