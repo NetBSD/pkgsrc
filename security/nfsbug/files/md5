@@ -1,0 +1,4 @@
+$NetBSD: md5,v 1.1 1998/10/08 14:36:17 hubertf Exp $
+
+MD5 (nfsBugFerret.tgz) = cdf035724b3748930db304797076887f
+MD5 (nfsShell.c) = 93aa2bb72d679fdf45e784876480dc1f
