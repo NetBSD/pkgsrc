@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/09 18:47:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/11 10:02:26 xtraeme Exp $
 #
 
 DISTNAME=	gnome-system-monitor-2.4.0
@@ -15,7 +15,7 @@ COMMENT=	GNOME 2 system monitor program
 DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
@@ -25,12 +25,12 @@ LIBS+=			-lutil
 GCONF2_SCHEMAS+=	gnome-system-monitor.schemas
 
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libgtop2/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/libwnck/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libgtop2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/libwnck/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../x11/startup-notification/buildlink2.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
