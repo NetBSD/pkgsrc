@@ -1,0 +1,59 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- configure.orig	Tue Jul  7 07:52:46 1998
++++ configure	Thu Aug  6 03:18:27 1998
+@@ -6615,3 +6615,3 @@
+             -e 's/rs6000/RS6000/g'	   -e 's/symm_ptx/SYMMETRY_PTX/g' \
+-            -e 's/sppux/HP/g'`
++            -e 's/sppux/HP/g'		   -e 's/netbsd/NETBSD/g'`
+   fi
+@@ -14282,10 +14282,11 @@
+     /usr/sgitcl \
++    /usr/pkg \
+     /local/encap/tcl-7.1 ; do
+-    if test -r $dir/include/tcl.h ; then 
++    if test -r $dir/include/tcl8.0/tcl.h ; then 
+ 	# Check for correct version
+ 	
+-	tclversion=`grep 'TCL_MAJOR_VERSION' $dir/include/tcl.h | \
++	tclversion=`grep 'TCL_MAJOR_VERSION' $dir/include/tcl8.0/tcl.h | \
+ 		sed -e 's/^.*TCL_MAJOR_VERSION[^0-9]*\([0-9]*\).*$/\1/'`
+ 	
+-	if test "$tclversion" != "7" ; then
++	if test "$tclversion" != "8" ; then
+ 	    # Skip if it is the wrong version
+@@ -14307,5 +14308,5 @@
+   if test -z "$ac_echo_test" -a 1 = 1 ; then
+-echo "$ac_t""found $TCL_DIR/include/tcl.h and $TCL_DIR/lib/libtcl"
++echo "$ac_t""found $TCL_DIR/include/tcl8.0/tcl.h and $TCL_DIR/lib/libtcl"
+ else
+-echo "$ac_t""found $TCL_DIR/include/tcl.h and $TCL_DIR/lib/libtcl" 1>&1
++echo "$ac_t""found $TCL_DIR/include/tcl8.0/tcl.h and $TCL_DIR/lib/libtcl" 1>&1
+ fi
+@@ -14398,10 +14399,11 @@
+     /usr/sgitcl \
++    /usr/pkg \
+     /local/encap/tk-3.4 $TCL_DIR ; do
+-    if test -r $dir/include/tk.h ; then 
++    if test -r $dir/include/tk8.0/tk.h ; then 
+ 	# Check for correct version
+ 	
+-	tkversion=`grep 'TK_MAJOR_VERSION' $dir/include/tk.h | \
++	tkversion=`grep 'TK_MAJOR_VERSION' $dir/include/tk8.0/tk.h | \
+ 		sed -e 's/^.*TK_MAJOR_VERSION[^0-9]*\([0-9]*\).*$/\1/'`
+ 	
+-	if test "$tkversion" != "3" ; then
++	if test "$tkversion" != "8" ; then
+ 	    # Skip if it is the wrong version
+@@ -14423,5 +14425,5 @@
+   if test -z "$ac_echo_test" -a 1 = 1 ; then
+-echo "$ac_t""found $TK_DIR/include/tk.h and $TK_DIR/lib/libtk"
++echo "$ac_t""found $TK_DIR/include/tk8.0/tk.h and $TK_DIR/lib/libtk"
+ else
+-echo "$ac_t""found $TK_DIR/include/tk.h and $TK_DIR/lib/libtk" 1>&1
++echo "$ac_t""found $TK_DIR/include/tk8.0/tk.h and $TK_DIR/lib/libtk" 1>&1
+ fi
+@@ -14848,3 +14850,3 @@
+   CFLAGSsave="$CFLAGS"
+-  CFLAGS="$CFLAGS -I$TK_DIR/include -I$TCL_DIR/include $XINCLUDES"
++  CFLAGS="$CFLAGS -I$TK_DIR/include/tk8.0 -I$TCL_DIR/include/tcl8.0 $XINCLUDES"
+   

@@ -1,0 +1,30 @@
+$NetBSD: patch-af,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- mpid/ch_p4/p4/lib/p4_MD.h.orig	Wed Aug  5 19:35:35 1998
++++ mpid/ch_p4/p4/lib/p4_MD.h	Wed Aug  5 19:44:58 1998
+@@ -74,2 +74,6 @@
+ 
++#if defined(NETBSD)
++#define P4_MACHINE_TYPE "NETBSD"
++#endif
++
+ #if defined(FREEBSD)
+@@ -94,3 +98,3 @@
+ /* Rumor has it LINUX support VPRINTF */
+-#if defined(FX2800)  || defined(FX2800_SWITCH) || defined(FREEBSD)
++#if defined(FX2800)  || defined(FX2800_SWITCH) || defined(FREEBSD) || defined(NETBSD)
+ #define VPRINTF
+@@ -117,3 +121,3 @@
+     defined(NEXT)       || defined(KSR)      || defined(FREEBSD) || \
+-    defined(SYMMETRY)   || defined(BALANCE)  || \
++    defined(SYMMETRY)   || defined(BALANCE)  || defined(NETBSD) || \
+     defined(ALLIANT)    || defined(MULTIMAX) ||  defined(CM5) || \
+@@ -127,3 +131,3 @@
+     defined(NEXT)       || defined(KSR)      || defined(FREEBSD) || \
+-    defined(SYMMETRY)   || defined(BALANCE)  || \
++    defined(SYMMETRY)   || defined(BALANCE)  || defined(NETBSD) || \
+     defined(ALLIANT)    || defined(MULTIMAX) || \
+@@ -411,3 +415,3 @@
+     || defined(RS6000)  || defined(IBM3090) || defined(FREEBSD) \
+-    || defined(TITAN)  \
++    || defined(TITAN)   || defined(NETBSD) \
+     || defined(HP)

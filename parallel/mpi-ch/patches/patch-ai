@@ -1,0 +1,7 @@
+$NetBSD: patch-ai,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- bin/tarch.orig	Thu Aug  6 00:52:15 1998
++++ bin/tarch	Thu Aug  6 00:52:54 1998
+@@ -96,2 +96,3 @@
+         FreeBSD)         FARCH=freebsd ; break ;;
++	NetBSD)		 FARCH=netbsd ; break ;;
+ 	i386)            GARCH=ipsc2 ;;
