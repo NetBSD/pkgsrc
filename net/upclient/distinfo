@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2001/06/28 10:32:45 wiz Exp $
-
-SHA1 (upclient-4.2.1.23.tar.gz) = c6595959c6a5058b03ab7096a6bf9c0dbfa4285a
-Size (upclient-4.2.1.23.tar.gz) = 29386 bytes
-SHA1 (patch-aa) = 4492c6741adc516171ecba4d272f5ab46ec28ebe
-SHA1 (patch-ab) = dd1e318cee6e27fcf433b2123cf8f3f6ed8eb548
-SHA1 (patch-ac) = 3641ee544199aa0b63ddfb090b64cbab60e9bb8c
