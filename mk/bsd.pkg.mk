@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.693 2001/03/21 12:12:25 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.694 2001/03/23 14:09:23 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -537,7 +537,7 @@ FALSE?=		/usr/bin/false
 FILE?=		/usr/bin/file
 FIND?=		/usr/bin/find
 GREP?=		/usr/bin/grep
-GTAR?=		${LOCALBASE}/bin/gtar
+GTAR?=		${LOCALBASE}/bsd/bin/tar
 .if exists(/usr/bin/gzip)
 GUNZIP_CMD?=	/usr/bin/gunzip -f
 GZCAT?=		/usr/bin/gzcat
