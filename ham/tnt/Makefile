@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/24 13:40:43 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/11 08:44:52 snj Exp $
 #
 
 DISTNAME=	tnt-1.9.1
@@ -13,7 +13,7 @@ COMMENT=	Amateur packet radio terminal program for TNC2, AEA PK232 and PK88
 DEPENDS+=	dialog>=0.6z:../../misc/dialog
 
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
