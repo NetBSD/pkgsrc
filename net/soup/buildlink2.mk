@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2004/03/26 02:27:49 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2004/04/15 00:49:29 wiz Exp $
 #
 # This Makefile fragment is included by packages that use soup.
 #
@@ -20,7 +20,6 @@ BUILDLINK_FILES.soup+=	include/soup/libwsdl/*.h
 BUILDLINK_FILES.soup+=	lib/libsoup-apache.*
 BUILDLINK_FILES.soup+=	lib/libsoup.*
 BUILDLINK_FILES.soup+=	lib/libwsdl.*
-BUILDLINK_FILES.soup+=	lib/pkgconfig/soup.pc
 BUILDLINK_FILES.soup+=	lib/soupConf.sh
 BUILDLINK_FILES.soup+=	lib/soup_apacheConf.sh
 BUILDLINK_FILES.soup+=	lib/soup_wsdlConf.sh

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2004/03/07 10:58:46 recht Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/04/15 00:49:29 wiz Exp $
 
 .if !defined(AIKSAURUS_BUILDLINK2_MK)
 AIKSAURUS_BUILDLINK2_MK=	# defined
@@ -13,7 +13,6 @@ BUILDLINK_FILES.aiksaurus+=	include/Aiksaurus/Aiksaurus.h
 BUILDLINK_FILES.aiksaurus+=	include/Aiksaurus/AiksaurusC.h
 BUILDLINK_FILES.aiksaurus+=	lib/libAiksaurus-1.0.*
 BUILDLINK_FILES.aiksaurus+=	lib/libAiksaurus.*
-BUILDLINK_FILES.aiksaurus+=	lib/pkgconfig/aiksaurus-1.0.pc
 
 BUILDLINK_TARGETS+=	aiksaurus-buildlink
 
