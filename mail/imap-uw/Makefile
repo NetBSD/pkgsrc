@@ -1,4 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2003/07/28 14:38:05 adam Exp $
+# $NetBSD: Makefile,v 1.64 2003/07/30 08:05:13 tron Exp $
+
+# ATTENTION:
+# The Kerberos support in this software is known to be problematic. If you
+# upgrade this package you *must* test it on a system *without* Kerberos
+# enabled before committing the changes.
 
 DISTNAME=       imap-2002d
 PKGNAME=        imap-uw-2002.4
