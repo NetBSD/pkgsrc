@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.7 2001/02/07 15:39:33 tron Exp $
+# $NetBSD: Makefile.common,v 1.8 2001/03/01 18:18:17 jlam Exp $
 
 DISTNAME=		php-${PHP_DIST_VERS}
 PHP_DIST_VERS=		4.0.4pl1
-PHP_VERS=		4.0.4.1nb1
+PHP_BASE_VERS=		4.0.4.1
+PHP_VERS=		${PHP_BASE_VERS}nb1
 CATEGORIES+=		www php4
 
 # Note the http address is written this way by purpose, so that bsd.pkg.mk DTRT
@@ -10,7 +11,7 @@ MASTER_SITES=		http://www.php.net/distributions/ \
 			http://php3.de/distributions/ \
 			ftp://ftp.php.net/pub/distributions/
 
-MAINTAINER=		jdolecek@netbsd.org
+MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.php.net/
 
 # Put this dependency here to compile in dbm support for all PHP4 modules.
