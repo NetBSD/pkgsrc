@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6162 2004/06/06 13:53:42 taca Exp $
+$NetBSD: CHANGES,v 1.6163 2004/06/06 14:21:05 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2818,3 +2818,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added silc-toolkit-0.9.12 [salo 2004-06-06]
 	Updated audit-packages to 1.32 [agc 2004-06-06]
 	Updated postfix-current to 20040504 [taca 2004-06-06]
+	Updated stunnel to 4.05nb2 [schmonz 2004-06-06]
