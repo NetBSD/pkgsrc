@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2003/06/05 18:52:00 drochner Exp $
+# $NetBSD: Makefile,v 1.48 2003/07/14 13:22:34 drochner Exp $
 #
 
 COMMENT=	CAD tools
@@ -25,6 +25,7 @@ SUBDIR+=	gnetlist
 SUBDIR+=	gnucap
 SUBDIR+=	gschem
 SUBDIR+=	gsymcheck
+SUBDIR+=	gtkwave
 SUBDIR+=	gwave
 SUBDIR+=	ipal-current
 SUBDIR+=	libgeda
