@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/04/03 12:45:48 grant Exp $
+# $NetBSD: Makefile,v 1.1 2003/04/14 19:56:28 grant Exp $
 #
 
 DISTNAME=		phoenix-0.5-i686-pc-linux-gnu
-PKGNAME=		phoenix-linux-0.5
+PKGNAME=		phoenix-bin-0.5
 WRKSRC=			${WRKDIR}/phoenix
 CATEGORIES=		www
 MASTER_SITES=		http://ftp.mozilla.org/pub/phoenix/releases/0.5/
@@ -12,6 +12,8 @@ HOMEPAGE=		http://www.mozilla.org/projects/phoenix/
 COMMENT=		Lightweight gecko-based web browser (binary pkg)
 
 ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
+
+CONFLICTS+=		phoenix-linux-[0-9]*
 
 NO_CONFIGURE=		# defined
 
