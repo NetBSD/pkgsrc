@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/11 03:41:23 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/12 15:15:43 jlam Exp $
 
 DISTNAME=	squirrelmail-1.0.2
 CATEGORIES=	mail www
@@ -19,8 +19,8 @@ NO_BUILD=	# defined
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
 
-SM_SUBDIR=	share/squirrelmail
-SMDIR=		${PREFIX}/${SM_SUBDIR}
+CONFDIR=	${PREFIX}/etc/httpd
+SMDIR=		${PREFIX}/share/squirrelmail
 MESSAGE_SUBST+=	SMDIR=${SMDIR}
 
 post-extract:
@@ -35,13 +35,16 @@ post-patch:
 	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} -f {} \;
 
 pre-install:
-	${SED}	-e "s|@SM_SUBDIR@|${SM_SUBDIR}|g"			\
+	${SED}	-e "s|@SMDIR@|${SMDIR}|g"				\
+		${FILESDIR}/squirrelmail.conf.dist			\
+		> ${WRKDIR}/squirrelmail.conf.dist
+	${SED}	-e "s|@SMDIR@|${SMDIR:S/^${PREFIX}\///}|g"		\
 		-e "s|@CAT@|${CAT}|g"					\
 		-e "s|@RM@|${RM}|g"					\
 		-e "s|@RMDIR@|${RMDIR}|g"				\
 		-e "s|@TRUE@|${TRUE}|g"					\
 		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s|@SM_SUBDIR@|${SM_SUBDIR}|g"			\
+	${SED}	-e "s|@SMDIR@|${SMDIR:S/^${PREFIX}\///}|g"		\
 		-e "s|@CAT@|${CAT}|g"					\
 		-e "s|@CHGRP@|${CHGRP}|g"				\
 		-e "s|@CHMOD@|${CHMOD}|g"				\
@@ -52,9 +55,11 @@ pre-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
-	${MKDIR} ${SMDIR}
+	${INSTALL_DATA_DIR} ${CONFDIR} ${SMDIR}
+	cd ${WRKDIR}; ${INSTALL_DATA} squirrelmail.conf.dist ${CONFDIR}
 	${CP} -R ${WRKSRC}/* ${SMDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${SMDIR}
+	${CHMOD} -R a-w ${SMDIR}
 
 post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL

@@ -1,0 +1,14 @@
+# $NetBSD: squirrelmail.conf.dist,v 1.1 2001/02/12 15:15:44 jlam Exp $
+#
+# SquirrelMail configuration file fragment for Apache
+
+<IfModule mod_alias.c>
+    Alias /mail/ "@SMDIR@/"
+</IfModule>
+
+<Directory "@SMDIR@">
+    Options Indexes MultiViews
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+</Directory>
