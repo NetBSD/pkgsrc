@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/04/30 19:02:27 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2001/05/04 10:15:44 skrll Exp $
 
 DISTNAME=		gcc-2.95.2
 CATEGORIES=		lang
@@ -26,7 +26,8 @@ MACHINE_GCC_PLATFORM=	${MACHINE_GNU_PLATFORM}
 USE_GMAKE=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS=		--host=${MACHINE_GCC_PLATFORM} \
-			--prefix=${GCC_PREFIX}
+			--prefix=${GCC_PREFIX} \
+			--enable-shared
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
 
 GCC_VERSION=		${PKGNAME:C/.*-//}
@@ -57,6 +58,7 @@ CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
 
 post-extract:
 	${MKDIR} ${WRKSRC}
+	${CP} ${FILESDIR}/netbsd*.ml ${WRKSRC}/../${DISTNAME}/libstdc++/config
 
 post-patch:
 	${ECHO} "bogus" >${WRKSRC}/../${DISTNAME}/gcc/cstamp-h.in
