@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/05/22 09:39:07 salo Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/24 18:53:40 snj Exp $
 #
 
 .include "../../misc/celestia/Makefile.common"
@@ -18,8 +18,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/celestia.cfg ${EGDIR}/celestia.cfg.default
 
-.include "../../graphics/Mesa/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/Mesa/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
