@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 1999/10/26 01:50:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.29 2000/01/04 23:46:14 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.35 1997/08/19 07:10:01 fenner Exp
 #
 
@@ -84,7 +84,9 @@ search:	${.CURDIR}/INDEX
 # the category/README.html pages
 #
 readme-all:
-	@[ -f README-all.html ] && mv README-all.html README-all.html.BAK
+	@if [ -f README-all.html ]; then \
+		mv README-all.html README-all.html.BAK ; \
+	fi
 	@${MAKE} README-all.html
 	@if cmp -s README-all.html README-all.html.BAK  ; then \
 		mv README-all.html.BAK README-all.html ; \
