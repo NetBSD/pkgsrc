@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.4 2001/04/13 19:18:13 jonb Exp $
+$NetBSD: patch-ae,v 1.5 2001/05/21 18:42:21 abs Exp $
 
---- etc/afpd/Makefile.orig	Sat Feb  6 12:02:31 1999
-+++ etc/afpd/Makefile	Wed Apr 11 23:59:46 2001
+--- etc/afpd/Makefile.orig	Sat Feb  6 20:02:31 1999
++++ etc/afpd/Makefile
 @@ -72,6 +72,7 @@
  	fi; \
  	${MAKE} ${MFLAGS} CC="${CC}" ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" \

@@ -1,13 +1,16 @@
-$NetBSD: patch-as,v 1.3 2000/08/15 14:48:24 abs Exp $
+$NetBSD: patch-as,v 1.4 2001/05/21 18:42:21 abs Exp $
 
---- libatalk/nbp/nbp_unrgstr.c.orig	Thu Feb  4 07:26:41 1999
-+++ libatalk/nbp/nbp_unrgstr.c
-@@ -7,7 +7,7 @@
- #include <sys/types.h>
- #include <sys/param.h>
- #include <sys/socket.h>
--#include <sys/signal.h>
-+#include <signal.h>
- #include <sys/time.h>
- #include <errno.h>
- #include <netatalk/endian.h>
+--- libatalk/dsi/dsi_tcp.c.orig	Wed Nov 18 07:59:25 1998
++++ libatalk/dsi/dsi_tcp.c
+@@ -108,6 +108,11 @@
+       exit(1);
+     }
+     newact.sa_handler = timeout_handler;
++    sigemptyset(&newact.sa_mask);
++    newact.sa_flags = 0;
++    oldact.sa_handler = NULL;
++    sigemptyset(&oldact.sa_mask);
++    oldact.sa_flags = 0;
+     if (sigaction(SIGALRM, &newact, &oldact) < 0) {
+ 	syslog(LOG_ERR, "dsi_tcp_open: sigaction: %m");
+ 	exit(1);
