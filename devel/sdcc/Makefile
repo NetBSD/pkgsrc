@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/11/28 04:49:01 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2002/10/09 18:59:23 wiz Exp $
 # FreeBSD: ports/devel/sdcc/Makefile,v 1.5 2000/04/15 15:13:38 knu Exp
 
 DISTNAME=	sdcc-2.2.1-src
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME}
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 YACC=		bison
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=      	YES
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/sdcc
@@ -56,6 +56,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/avr/avr_design.txt ${PREFIX}/share/doc/sdcc/avr
 	${INSTALL_DATA} ${WRKSRC}/doc/z80/README ${PREFIX}/share/doc/sdcc/z80
 
-.include "../../devel/boehm-gc/buildlink.mk"
-.include "../../lang/perl5/buildlink.mk"
+.include "../../devel/boehm-gc/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
