@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:40 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/11 16:57:51 taca Exp $
 ${RUBY_ARCHLIBDIR}/termios.so
-${RUBY_EXAMPLESDIR}/termios/test0.rb
-${RUBY_EXAMPLESDIR}/termios/test1.rb
-${RUBY_EXAMPLESDIR}/termios/test2.rb
-${RUBY_EXAMPLESDIR}/termios/test3.rb
+${RUBY_DOCDIR}/termios/ChangeLog
+${RUBY_DOCDIR}/termios/README
+${RUBY_DOCDIR}/termios/TODO.ja
+${RUBY_EXAMPLESDIR}/termios/modem_check0.rb
+${RUBY_EXAMPLESDIR}/termios/modem_check1.rb
+${RUBY_EXAMPLESDIR}/termios/modem_check2.rb
+${RUBY_EXAMPLESDIR}/termios/secret_input1.rb
+${RUBY_EXAMPLESDIR}/termios/secret_input2.rb
 @dirrm ${RUBY_EXAMPLESDIR}/termios/
