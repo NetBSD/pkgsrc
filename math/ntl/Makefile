@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/26 23:46:21 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/29 21:45:43 jtb Exp $
 
 DISTNAME=		ntl-5.0c
 CATEGORIES=		math devel
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.shoup.net/ntl/
 MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://www.shoup.net/ntl/
 
-DEPENDS+=		gmp-[0-9]*:../../devel/gmp
+DEPENDS+=		gmp>=3.1.1:../../devel/gmp
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 NO_CONFIGURE=		YES
