@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1878 2003/04/09 15:53:54 jmmv Exp $
+$NetBSD: CHANGES,v 1.1879 2003/04/09 16:01:25 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1515,3 +1515,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated koffice to 1.2.1nb1 [markd 2003-04-09]
 	Updated pkgdiff to 0.108 [seb 2003-04-09]
 	Updated setiathome to 3.03nb1 [jmmv 2003-04-09]
+	Added yasm-0.2.0 [jmmv 2003-04-09]
