@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2002/11/13 01:53:40 itojun Exp $
+@comment $NetBSD: PLIST,v 1.10 2002/12/19 03:46:47 itojun Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -9,7 +9,6 @@ etc/rc.d/named9
 include/bind9/check.h
 include/bind9/getaddresses.h
 include/bind9/version.h
-include/dns/a6.h
 include/dns/acl.h
 include/dns/adb.h
 include/dns/byaddr.h
