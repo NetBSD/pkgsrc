@@ -1,13 +1,15 @@
-$NetBSD: patch-aa,v 1.3 2002/11/18 07:05:07 schmonz Exp $
+$NetBSD: patch-aa,v 1.4 2004/05/03 08:45:44 adam Exp $
 
---- configure.orig	Sun Nov 17 13:45:22 2002
+--- configure.orig	2004-02-11 16:27:31.000000000 +0000
 +++ configure
-@@ -5406,7 +5406,7 @@ EOF
+@@ -18534,8 +18534,8 @@ _ACEOF
  
-     
+     BSD_API=1
      os_support=bsd
--    echo "$ac_t""FreeBSD" 1>&6
-+    echo "$ac_t""NetBSD" 1>&6
+-    echo "$as_me:$LINENO: result: FreeBSD" >&5
+-echo "${ECHO_T}FreeBSD" >&6
++    echo "$as_me:$LINENO: result: NetBSD" >&5
++echo "${ECHO_T}NetBSD" >&6
      OSLIBS=""
      ;;
    *-darwin*)
