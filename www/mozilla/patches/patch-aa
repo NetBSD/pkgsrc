@@ -659,7 +659,7 @@
 + 
 + #endif /* nspr_cpucfg___ */
 *** ./nsprpub/pr/include/md/_netbsd.h.orig	Wed Apr  1 01:36:40 1998
---- ./nsprpub/pr/include/md/_netbsd.h	Tue Apr  7 22:29:17 1998
+--- ./nsprpub/pr/include/md/_netbsd.h	Thu Apr  9 01:52:41 1998
 ***************
 *** 0 ****
 --- 1,169 ----
@@ -688,7 +688,7 @@
 + 
 + #define PR_LINKER_ARCH	"netbsd"
 + #define _PR_SI_SYSNAME  "NetBSD"
-+ #if defined(__i386)
++ #if defined(__i386__)
 + #define _PR_SI_ARCHITECTURE "x86"
 + #elif defined(__alpha__)
 + #define _PR_SI_ARCHITECTURE "alpha"
@@ -722,7 +722,7 @@
 + 
 + #define CONTEXT(_th) ((_th)->md.context)
 + 
-+ #if defined(__i386) || defined(__sparc__) || defined(__m68k__)
++ #if defined(__i386__) || defined(__sparc__) || defined(__m68k__) || defined(__powerpc__)
 + #define JB_SP_INDEX 2
 + #elif defined(__alpha__)
 + #define JB_SP_INDEX 34
@@ -1419,18 +1419,24 @@
   				 // This causes the vertical scrollbar not to show
   				 // up on Solaris 2.4, bug in Motif (77998).  
 *** ./cmd/xfe/src/context_funcs.cpp.orig	Tue Mar 31 04:06:29 1998
---- ./cmd/xfe/src/context_funcs.cpp	Wed Apr  1 04:52:38 1998
+--- ./cmd/xfe/src/context_funcs.cpp	Thu Apr  9 01:36:26 1998
 ***************
-*** 67,72 ****
---- 67,74 ----
+*** 65,71 ****
+  #include <sys/vfs.h>      /* for statfs() */
+  extern "C" int statfs(char *, struct statfs *);
   #define STATFS statfs
-  #elif defined(BSDI)
+! #elif defined(BSDI)
   #include <sys/mount.h>    /* for statfs() */
-+ #elif defined(NETBSD)
-+ #include <sys/mount.h>    /* for statfs() */
   #define STATFS statfs
   #else
-  #include <sys/statfs.h>  /* for statfs() */
+--- 65,71 ----
+  #include <sys/vfs.h>      /* for statfs() */
+  extern "C" int statfs(char *, struct statfs *);
+  #define STATFS statfs
+! #elif defined(BSDI) || defined(NETBSD)
+  #include <sys/mount.h>    /* for statfs() */
+  #define STATFS statfs
+  #else
 *** ./cmd/xfe/Makefile.orig	Tue Mar 31 04:05:35 1998
 --- ./cmd/xfe/Makefile	Wed Apr  8 23:43:07 1998
 ***************
@@ -1544,10 +1550,10 @@
   extern int sys_nerr;
   #endif
 *** ./config/NetBSD.mk.orig	Wed Apr  1 00:16:52 1998
---- ./config/NetBSD.mk	Wed Apr  8 23:42:56 1998
+--- ./config/NetBSD.mk	Thu Apr  9 01:45:31 1998
 ***************
 *** 0 ****
---- 1,107 ----
+--- 1,106 ----
 + #
 + # The contents of this file are subject to the Netscape Public License
 + # Version 1.0 (the "NPL"); you may not use this file except in
@@ -1630,7 +1636,6 @@
 + 
 + ifeq ($(USE_PTHREADS),1)
 + OS_LIBS			= -lc_r
-+ PORT_FLAGS		+= -D_PR_NEED_FAKE_POLL
 + else
 + OS_LIBS			= -lc
 + PORT_FLAGS		+= -D_PR_LOCAL_THREADS_ONLY
