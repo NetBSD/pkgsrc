@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/20 17:00:41 abs Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/13 15:24:22 wiz Exp $
 #
 
 COMMENT=	Open new communicator, navigator, or mozilla window
@@ -18,7 +18,7 @@ NETSCAPE_PREFERRED=communicator:navigator:mozilla:netscape7
 .endif
 
 DEPENDS+= ns-remote>=1.3:../../www/ns-remote
-DEPENDS+={${NETSCAPE_PREFERRED:C:\::,:g}}-[0-9]*:../../www/${NETSCAPE_PREFERRED:S:\:.*::}
+DEPENDS+={${NETSCAPE_PREFERRED:C/:/,/g}}-[0-9]*:../../www/${NETSCAPE_PREFERRED:C/:.*//}
 
 DISTFILES=	# empty
 MASTER_SITES=	# empty
