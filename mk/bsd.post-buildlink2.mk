@@ -1,4 +1,4 @@
-# $NetBSD: bsd.post-buildlink2.mk,v 1.1.2.1 2002/05/08 08:35:26 jlam Exp $
+# $NetBSD: bsd.post-buildlink2.mk,v 1.1.2.2 2002/05/08 16:09:48 jlam Exp $
 
 ECHO_BUILDLINK_MSG?=	${ECHO_MSG} "=>"
 
@@ -141,6 +141,14 @@ _BUILDLINK_TRANSFORM_SED+=						\
 	-e "s|${_transform_:S/^r://}$$||g"				\
 	-e "s|${_transform_:S/^r://}/[^	 ]*||g"
 .endfor
+#
+# Explicitly remove "-I/usr/include" and "-L/usr/lib" as they're redundant.
+#
+_BUILDLINK_TRANSFORM_SED+=						\
+	-e "s|-I/usr/include ||g"					\
+	-e "s|-I/usr/include$$||g"					\
+	-e "s|-L/usr/lib ||g"						\
+	-e "s|-L/usr/lib$$||g"
 
 # Generate wrapper scripts for the compiler tools that sanitize the
 # argument list by converting references to ${LOCALBASE} and ${X11BASE}
