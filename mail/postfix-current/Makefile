@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/04/12 16:04:45 taca Exp $
+# $NetBSD: Makefile,v 1.30 2004/04/14 17:52:53 grant Exp $
 
 DISTNAME=	postfix-2.0.19-20040312
 PKGNAME=	postfix-20040312
@@ -104,14 +104,14 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.postgresql-lib}/lib -lpq \
 .endif
 
 .if defined(USE_SASL2) && ${USE_SASL2} == "YES"
-USING_SASL=YES
+USING_SASL=	YES
 .  include "../../security/cyrus-sasl2/buildlink3.mk"
 CCARGS+=	-DUSE_SASL2_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
 		-lsasl2
 .elif defined(USE_SASL) && ${USE_SASL} == "YES"
-USING_SASL=YES
+USING_SASL=	YES
 .  include "../../security/cyrus-sasl/buildlink3.mk"
 CCARGS+=	-DUSE_SASL_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
@@ -213,7 +213,7 @@ do-install:
 		${SH} postfix-install -non-interactive
 
 .if ${OPSYS} == "Linux"
-.include "../../databases/db/buildlink3.mk"
+.  include "../../databases/db/buildlink3.mk"
 CCARGS+=	-I${BUILDLINK_PREFIX.db2}/include/db2
 AUXLIBS+=	-L${BUILDLINK_PREFIX.db2}/lib                    \
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db2}/lib     \
