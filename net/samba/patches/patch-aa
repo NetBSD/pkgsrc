@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2000/05/02 15:24:09 jlam Exp $
+$NetBSD: patch-aa,v 1.11 2000/09/03 09:17:00 kei Exp $
 
---- Makefile.in.orig	Tue Apr 25 19:06:11 2000
-+++ Makefile.in	Fri Apr 28 16:26:52 2000
-@@ -25,10 +25,12 @@
+--- Makefile.in.orig	Thu Jun  8 13:31:59 2000
++++ Makefile.in	Sun Sep  3 06:23:06 2000
+@@ -26,10 +26,12 @@
  BINDIR = @bindir@
  # we don't use sbindir because we want full compatibility with
  # the previous releases of Samba
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.10 2000/05/02 15:24:09 jlam Exp $
  SAMBABOOK = @sambabook@
  
  # The permissions to give the executables
-@@ -37,12 +39,12 @@
+@@ -38,12 +40,12 @@
  # set these to where to find various files
  # These can be overridden by command line switches (see smbd(8))
  # or in smb.conf (see smb.conf(5))
@@ -35,12 +35,12 @@ $NetBSD: patch-aa,v 1.10 2000/05/02 15:24:09 jlam Exp $
  # This is where smbpasswd et al go
  PRIVATEDIR = @privatedir@
  
-@@ -463,14 +465,14 @@
+@@ -470,14 +472,14 @@
  
  installdirs:
  	$(SHELL) $(srcdir)/install-sh -d -m $(INSTALLPERMS) \
--	$(BASEDIR) $(SBINDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(CODEPAGEDIR)
-+	$(BASEDIR) $(SBINDIR) $(BINDIR) $(LIBDIR) $(ETCDIR) $(LOGDIR) $(CODEPAGEDIR)
+-	$(BASEDIR) $(SBINDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(CODEPAGEDIR) ${SWATDIR} ${SAMBABOOK}
++	$(BASEDIR) $(SBINDIR) $(BINDIR) $(LIBDIR) $(ETCDIR) $(LOGDIR) $(CODEPAGEDIR) ${SWATDIR} ${SAMBABOOK}
  
  installservers: all installdirs
 -	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
@@ -54,7 +54,7 @@ $NetBSD: patch-aa,v 1.10 2000/05/02 15:24:09 jlam Exp $
  
  installscripts: installdirs
  	@$(SHELL) $(srcdir)/script/installscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)
-@@ -495,8 +497,8 @@
+@@ -502,8 +504,8 @@
  	@$(SHELL) $(srcdir)/script/uninstallman.sh $(MANDIR) $(srcdir)
  
  uninstallbin:
