@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/27 00:53:12 heinz Exp $
+# $NetBSD: Makefile,v 1.15 2004/07/30 15:50:37 minskim Exp $
 
 DISTNAME=		unixbench-4.1.0
 PKGNAME=		bytebench-4.1.0
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		root@garbled.net
 COMMENT=		BYTE Magazine's Public Domain benchmark for UNIX
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_PKGINSTALL=		yes
 
 BENCHMARK_ENV+=		BINDIR=${WRKSRC}/pgms
@@ -18,6 +20,8 @@ BENCHMARK_ENV+=		BENCHDIR=${WRKSRC}/testdir
 BENCHMARK_ENV+=		TESTDIR=${WRKSRC}/tmp
 
 OWN_DIRS=		/var/bytebench
+
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	${RM} -f ${WRKSRC}/pgms/select
