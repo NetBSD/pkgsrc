@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/01 20:29:39 kim Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/10/12 21:20:38 tron Exp $
 bin/gbasename
 bin/gchroot
 bin/gdate
@@ -27,7 +27,6 @@ bin/gtee
 bin/gtest
 bin/gtrue
 bin/gtty
-bin/guname
 bin/gusers
 bin/gwho
 bin/gwhoami
@@ -62,7 +61,6 @@ man/man1/gtee.1
 man/man1/gtest.1
 man/man1/gtrue.1
 man/man1/gtty.1
-man/man1/guname.1
 man/man1/gusers.1
 man/man1/gwho.1
 man/man1/gwhoami.1
