@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/04/04 07:41:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/04/06 09:41:03 taca Exp $
 share/doc/html/postgresql/admin.html
 share/doc/html/postgresql/app-createdb.html
 share/doc/html/postgresql/app-createlang.html
@@ -168,13 +168,12 @@ share/doc/html/postgresql/libpqpp-copy.html
 share/doc/html/postgresql/libpqpp-exec.html
 share/doc/html/postgresql/libpqpp-init.html
 share/doc/html/postgresql/libpqpp-notify.html
-share/doc/html/postgresql/ln13544.html
-share/doc/html/postgresql/ln19341.html
+share/doc/html/postgresql/ln13560.html
+share/doc/html/postgresql/ln19374.html
 share/doc/html/postgresql/ln25.html
-share/doc/html/postgresql/ln31695.html
-share/doc/html/postgresql/ln43726.html
+share/doc/html/postgresql/ln31728.html
+share/doc/html/postgresql/ln43811.html
 share/doc/html/postgresql/ln650.html
-share/doc/html/postgresql/ln8.html
 share/doc/html/postgresql/lo-funcs.html
 share/doc/html/postgresql/lo-implementation.html
 share/doc/html/postgresql/lo-interfaces.html
@@ -358,6 +357,7 @@ share/doc/html/postgresql/release-7-1-1.html
 share/doc/html/postgresql/release-7-1-2.html
 share/doc/html/postgresql/release-7-1-3.html
 share/doc/html/postgresql/release-7-1.html
+share/doc/html/postgresql/release-7-2.html
 share/doc/html/postgresql/release.html
 share/doc/html/postgresql/resources.html
 share/doc/html/postgresql/routine-vacuuming.html
@@ -558,6 +558,7 @@ share/doc/postgresql/FAQ_SCO
 share/doc/postgresql/FAQ_Solaris
 share/doc/postgresql/FAQ_german
 share/doc/postgresql/FAQ_japanese
+share/doc/postgresql/FAQ_russian
 share/doc/postgresql/KNOWN_BUGS
 share/doc/postgresql/MISSING_FEATURES
 share/doc/postgresql/README.mb.big5
