@@ -101,3 +101,25 @@ Note that the context for this next patch is set to 2, to avoid the Id line
 --- 1,2 ----
 + major=1
 + minor=60
+--- machdep/syscall-i386-netbsd-1.1.S	1998/03/09 00:14:35	1.1
++++ machdep/syscall-i386-netbsd-1.1.S	1998/03/09 00:16:17
+@@ -160,3 +160,19 @@
+ 	xorl %eax,%eax
+ 	ret
+ 
++
++/* ==========================================================================
++ * machdep_sys_fstat()
++ */
++        .globl _machdep_sys_fstat;              
++                                                                        
++_machdep_sys_fstat:;                            
++
++	movl $(SYS___fstat13), %eax;            
++	.byte 0x9a; .long 0; .word 7;   
++	cmpl $0, %edx
++	je   2f
++	movl $0, %eax
++2:      
++        ret                                                    
++
