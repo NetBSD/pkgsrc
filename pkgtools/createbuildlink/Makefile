@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/01/14 08:53:57 rh Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/19 13:07:48 jlam Exp $
 #
 
 DISTNAME=	createbuildlink-3.0
@@ -10,13 +10,17 @@ DISTFILES=	# Nothing
 MAINTAINER=	rh@NetBSD.org
 COMMENT=	Shell script to help creating a buildlink2.mk file
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 EXTRACT_ONLY=	# empty
-USE_BUILDLINK2=	yes
 NO_CHECKSUM=	yes
+NO_BUILDLINK=	yes
 NO_BUILD=	yes
 EXTRACT_CMD=	${ECHO}
 
 SCRIPT=		${DISTNAME:C/-.*$//}
+
+INSTALLATION_DIRS=	bin man/man8
 
 do-configure:
 .for scr in ${SCRIPT}
