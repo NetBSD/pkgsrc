@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 16:35:13 martti Exp $
+# $NetBSD: Makefile,v 1.10 2003/08/30 18:40:07 jlam Exp $
 
 DISTNAME=	efax-0.9
 CATEGORIES=	comms
@@ -11,6 +11,7 @@ COMMENT=	Collection of small programs for sending and receiving faxes
 CONFLICTS=	kdeutils<3.1
 
 USE_BUILDLINK2=	# defined
+USE_PKGINSTALL=	YES
 
 post-patch:
 	${SED} -e 's:@PREFIX@:${PREFIX}:g;				\
@@ -30,11 +31,5 @@ post-patch:
 	${TAIL} -n 649 ${WRKSRC}/fax.tmp >> ${WRKSRC}/fax
 	${HEAD} -n 404 ${WRKSRC}/fax.tmp > ${WRKSRC}/efax.rc1
 	${TAIL} -n 402 ${WRKSRC}/efax.rc1 > ${WRKSRC}/efax.rc
-
-post-install:
-	${INSTALL_DATA_DIR} /var/spool/efax
-	${CHMOD} 755 /var/spool/efax
-	${INSTALL_DATA_DIR} /var/log/efax
-	${CHMOD} 755 /var/log/efax
 
 .include "../../mk/bsd.pkg.mk"
