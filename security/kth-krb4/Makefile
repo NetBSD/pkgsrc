@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2004/01/15 10:35:49 grant Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/09 12:54:31 wennmach Exp $
 #
 
 DISTNAME=		krb4-1.2.1
 PKGNAME=		kth-krb4-1.2.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.pdc.kth.se/pub/krb/src/
 
@@ -16,9 +16,6 @@ COMMENT=		Kerberos IV distribution from KTH
 #AUTOCONF_REQD=		2.52
 #AUTOMAKE_REQD=		1.7
 
-CONFLICTS+=		wu-ftpd-[0-9]*
-CONFLICTS+=		lukemftp-[0-9]*
-CONFLICTS+=		tnftp-[0-9]*
 CONFLICTS+=		zephyr-[0-9]*
 CONFLICTS+=		libdes-[0-9]*
 
@@ -27,7 +24,24 @@ CRYPTO=			yes
 USE_BUILDLINK2=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS=		--includedir=${PREFIX}/include/kerberosIV
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/kerberosIV
+
+.include "../../mk/bsd.prefs.mk"
+KRB4_PREFIX_CMDS?=	no
+BUILD_DEFS+=		KRB4_PREFIX_CMDS
+.if !empty(KRB4_PREFIX_CMDS:M[yY][eE][sS])
+MIT_KRB4_TRANSFORM=	s/^ftp/k4&/;\
+			s/^rcp/k4&/;\
+			s/^rlogin/k4&/;\
+			s/^rsh/k4&/;\
+			s/^su/k4&/;\
+			s/^telnet/k4&/
+PLIST_SUBST+=		KRB4_PREFIX=k4
+.else
+MIT_KRB4_TRANSFORM=	s/^ftp$$/k4&/	# always k4ftp
+PLIST_SUBST+=		KRB4_PREFIX=
+.endif
+CONFIGURE_ARGS+=	--program-transform="${MIT_KRB4_TRANSFORM}"
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -38,9 +52,9 @@ EXAMPLEDIR=		${PREFIX}/share/examples/kth-krb4
 
 # this hangs while compiling one of the files, at least with the
 # toolchain as of 1.5ZC (20020329)
-.if ${MACHINE_ARCH} == "sparc64"
-BROKEN=			toolchain problems on sparc64 (1.5ZC, 20020329)
-.endif
+#.if ${MACHINE_ARCH} == "sparc64"
+#BROKEN=			toolchain problems on sparc64 (1.5ZC, 20020329)
+#.endif
 
 post-patch:
 	@for file in ${WRKSRC}/lib/kafs/kafs.h; do			\
