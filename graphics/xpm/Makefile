@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/07/06 21:11:33 tron Exp $
+# $NetBSD: Makefile,v 1.21 2001/08/08 07:15:03 jlam Exp $
 
 DISTNAME=       xpm-3.4k
 CATEGORIES=	graphics x11
@@ -8,6 +8,7 @@ MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www.inria.fr/koala/lehors/xpm.html
 COMMENT=	The X Pixmap library
 
+USE_BUILDLINK_ONLY=	# defined
 USE_IMAKE=		# defined
 CHECK_XPM=		# defined
 
