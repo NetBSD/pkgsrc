@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.377 2003/02/16 03:44:13 salo Exp $
+# $NetBSD: Makefile,v 1.378 2003/02/21 11:32:09 jmmv Exp $
 #
 
 COMMENT=	Development utilities
@@ -108,6 +108,7 @@ SUBDIR+=	glib2
 SUBDIR+=	global
 SUBDIR+=	gmake
 SUBDIR+=	gmp
+SUBDIR+=	gnome-common
 SUBDIR+=	gnome-objc
 SUBDIR+=	gnome2-libole2
 SUBDIR+=	gnustep-base
