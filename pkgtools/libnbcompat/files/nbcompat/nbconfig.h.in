@@ -52,6 +52,9 @@
 /* Define to 1 if you have the <fts.h> header file. */
 #undef HAVE_FTS_H
 
+/* Define to 1 if you have the `fts_open' function. */
+#undef HAVE_FTS_OPEN
+
 /* Define to 1 if you have the `getenv' function. */
 #undef HAVE_GETENV
 
