@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3688 2003/10/13 15:55:11 veego Exp $
+$NetBSD: CHANGES,v 1.3689 2003/10/14 12:33:07 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4194,3 +4194,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fvwm2 to 2.4.17 [martti 2003-10-13]
 	Updated gone to 1.3.5 [wiz 2003-10-13]
 	Updated x11-links to 0.16 [veego 2003-10-13]
+	Updated exif to 0.6nb1 [salo 2003-10-14]
