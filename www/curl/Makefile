@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/01/23 22:52:28 recht Exp $
+# $NetBSD: Makefile,v 1.35 2004/02/14 17:21:54 jlam Exp $
 
 DISTNAME=	curl-7.11.0
 CATEGORIES=	www
@@ -16,7 +16,6 @@ BUILD_DEFS+=	USE_INET6
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 

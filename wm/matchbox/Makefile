@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/21 17:34:04 martti Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/14 17:21:53 jlam Exp $
 #
 
 DISTNAME=	matchbox-0.3.6
@@ -13,7 +13,6 @@ USE_BUILDLINK2=	YES
 USE_X11=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
-LIBTOOL_OVERRIDE=${WRKSRC}/libtool
 
 .include "../../graphics/xpm/buildlink2.mk"
 

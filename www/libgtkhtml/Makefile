@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/02/13 19:36:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2004/02/14 17:21:54 jlam Exp $
 #
 
 DISTNAME=	libgtkhtml-2.4.1
@@ -19,7 +19,6 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_X11=		yes
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	libgtkhtml-2.0.pc.in
 
 .include "../../devel/gail/buildlink3.mk"

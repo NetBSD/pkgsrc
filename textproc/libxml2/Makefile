@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/02/12 22:18:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.47 2004/02/14 17:21:53 jlam Exp $
 
 DISTNAME=	libxml2-${LIBXML_VERSION}
 CATEGORIES=	textproc
@@ -12,7 +12,6 @@ COMMENT=	XML parser library from the GNOME project
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libxml-2.0.pc.in
 
 LIBXML_VERSION=		2.6.6

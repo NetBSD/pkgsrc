@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/01/25 03:08:47 grant Exp $
+# $NetBSD: Makefile,v 1.34 2004/02/14 17:21:55 jlam Exp $
 #
 
 DISTNAME=		gtkmm-1.2.10
@@ -19,7 +19,6 @@ GNU_CONFIGURE=		YES
 USE_PERL5=		build
 USE_GNU_TOOLS+=		m4 make
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS=		--enable-static
 
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/21 21:33:09 kim Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:50 jlam Exp $
 #
 
 DISTNAME=	mpdist-3.7.1
@@ -13,7 +13,6 @@ COMMENT=	PostScript pretty printer
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_X11=		yes
 
 .include "../../mk/bsd.prefs.mk"

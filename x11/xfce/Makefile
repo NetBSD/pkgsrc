@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2004/01/24 15:30:34 grant Exp $
+# $NetBSD: Makefile,v 1.41 2004/02/14 17:21:56 jlam Exp $
 
 DISTNAME=		xfce-3.8.18
 PKGREVISION=		3
@@ -14,9 +14,7 @@ BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK2=		# defined
 USE_X11BASE=		# defined
 USE_PKGLOCALEDIR=	# defined
-
 USE_LIBTOOL=		# defined
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		# defined

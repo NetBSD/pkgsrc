@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/26 18:19:46 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/14 17:21:53 jlam Exp $
 #
 
 DISTNAME=		enchant-1.1.3
@@ -12,7 +12,6 @@ COMMENT=		Generic spell checking library
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/enchant.pc.in
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/26 20:51:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:53 jlam Exp $
 #
 
 DISTNAME=	aiksaurus-1.0.1
@@ -13,7 +13,6 @@ USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS=		--without-gtk
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/base/aiksaurus-1.0.pc.in
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2003/07/17 22:54:29 grant Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/14 17:21:53 jlam Exp $
 #
 
 DISTNAME=		libxml-1.8.17
@@ -13,9 +13,7 @@ COMMENT=		XML parser, mainly used by the GNOME project
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libxml.pc.in
 
 .include "../../devel/zlib/buildlink2.mk"

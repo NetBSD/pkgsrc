@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 15:13:20 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/14 17:21:53 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/04/05 04:46:33 max Exp $
 
 DISTNAME=	kakasi-2.3.4
@@ -14,7 +14,6 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/kakasi.1 ${PREFIX}/man/ja_JP.EUC/man1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:28:27 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:56 jlam Exp $
 #
 
 DISTNAME=	PyQt-3.1-Qt-2.3.1
@@ -14,9 +14,7 @@ WRKSRC=			${WRKDIR}/PyQt-3.1
 USE_BUILDLINK2=		# defined
 USE_X11=		# defined
 USE_LIBTOOL=		# defined
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-HAVE_CONFIGURE=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS=		--with-python=${PYTHONBIN} \
 			--with-qt-dir=${QTDIR}

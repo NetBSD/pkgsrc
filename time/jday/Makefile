@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/09 13:40:53 wennmach Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/14 17:21:53 jlam Exp $
 #
 
 DISTNAME=		jday-1.3
@@ -11,7 +11,6 @@ COMMENT=		Julian date calculator
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 do-test:
 	@(cd ${WRKSRC} && ./RunTest)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/09 18:26:06 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/14 17:21:53 jlam Exp $
 #
 
 DISTNAME=		gtkspell-2.0.5
@@ -13,7 +13,6 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/gtkspell-2.0.pc.in
 
 SUBST_CLASSES+=		subdir

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/24 15:06:58 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/14 17:21:53 jlam Exp $
 #
 
 DISTNAME=	vcdimager-0.7.12
@@ -14,7 +14,6 @@ USE_BUILDLINK2=	YES
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	yes
-LIBTOOL_OVERRIDE= ${WRKSRC}/libtool
 INFO_FILES=	vcdimager.info
 
 .include "../../devel/gettext-lib/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/01/27 08:11:05 grant Exp $
+# $NetBSD: Makefile,v 1.32 2004/02/14 17:21:54 jlam Exp $
 
 PKGNAME=		apache-${APACHE_VERSION}
 PKGREVISION=		3
@@ -16,7 +16,7 @@ USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 
 #USE_LIBTOOL=		YES
-#LIBTOOL_OVERRIDE=	${WRKSRC}/srclib/apr/libtool
+#LIBTOOL_OVERRIDE=	libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-layout=NetBSD
