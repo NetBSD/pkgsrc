@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2004/11/18 12:30:49 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2004/11/23 16:04:35 wiz Exp $
 
 DISTNAME=		guile-1.6.5
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=guile/}
 
@@ -31,6 +32,9 @@ post-patch:
 	@${MV} ${WRKSRC}/guile-config/guile-config.in.orig \
 	    ${WRKSRC}/guile-config/guile-config.in
 .endif
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/guile/site
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
