@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 1999/12/17 10:30:16 pooka Exp $
+
+--- src/util.c.orig	Thu Jul 15 10:27:29 1999
++++ src/util.c	Thu Dec 16 22:06:47 1999
+@@ -148,7 +148,7 @@
+ int slrn_case_strncmp (unsigned char *a, register unsigned char *b, register unsigned int n) /*{{{*/
+ {
+    register unsigned char cha, chb, *bmax;
+-   register int diff = a - b;
++   register long diff = a - b;
+    
+    bmax = b + n;
+    while (b < bmax)
+@@ -170,7 +170,7 @@
+ int slrn_case_strcmp (unsigned char *a, register unsigned char *b) /*{{{*/
+ {
+    register unsigned char cha, chb;
+-   register int diff = a - b;
++   register long diff = a - b;
+    
+    while (1)
+      {
