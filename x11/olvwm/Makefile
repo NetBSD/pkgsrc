@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/06/16 14:18:51 pooka Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/17 09:41:46 tron Exp $
 #
 
 DISTNAME=	olvwm4.src4
@@ -16,5 +16,8 @@ DEPENDS+=	xpm-3.*:../../graphics/xpm
 USE_X11BASE=	yes
 USE_IMAKE=	yes
 NO_WRKSUBDIR=	yes
+
+post-install:
+	${MV} ${PREFIX}/man/cat1/olvwmrc.1 ${PREFIX}/man/man1/olvwmrc.1
 
 .include "../../mk/bsd.pkg.mk"
