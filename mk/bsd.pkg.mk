@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1223 2003/07/24 22:27:16 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1224 2003/07/28 18:15:56 jmmv Exp $
 #
 # This file is in the public domain.
 #
@@ -28,6 +28,31 @@ MAKE_ENV+=	MAKECONF=/dev/null
 ##### Pass information about desired toolchain to package build.
 .if defined(USETOOLS)
 MAKE_ENV+=	USETOOLS="${USETOOLS}"
+.endif
+
+# This has to come first to avoid showing all BUILD_DEFS added by this
+# Makefile, which are usually not customizable.
+.PHONY: pre-fetch build-defs-message
+pre-fetch: build-defs-message
+build-defs-message:
+.if defined(BUILD_DEFS) && !empty(BUILD_DEFS)
+	@${ECHO} "=========================================================================="
+	@${ECHO} "The following variables will affect the build process of this package,"
+	@${ECHO} "${PKGNAME}.  Their current value is shown below:"
+	@${ECHO} ""
+.for var in ${BUILD_DEFS:O:u}
+.if !defined(${var})
+	@${ECHO} "        * ${var} (not defined)"
+.elif defined(${var}) && empty(${var})
+	@${ECHO} "        * ${var} (defined)"
+.else
+	@${ECHO} "        * ${var} = ${${var}}"
+.endif
+.endfor
+	@${ECHO} ""
+	@${ECHO} "You may want to abort the process now with CTRL+C and change their value"
+	@${ECHO} "before continuing.  Be sure to run \`${MAKE} clean' after the changes."
+	@${ECHO} "=========================================================================="
 .endif
 
 ##### Some NetBSD platforms permitted the user to set the binary format while
