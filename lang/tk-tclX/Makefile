@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/01/02 20:19:06 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2005/01/08 23:14:52 minskim Exp $
 #
 
 DISTNAME=	tclx8.3.5-src
@@ -28,8 +28,8 @@ TEST_TARGET=		test
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ENV+=		\
-	PKGSRC_TCL_SRC_DIR="${PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.4.8" \
-	PKGSRC_TK_SRC_DIR="${PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.4.8"
+	PKGSRC_TCL_SRC_DIR="${PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.4.9" \
+	PKGSRC_TK_SRC_DIR="${PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.4.9"
 
 MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
 			SHAREMODE=${SHAREMODE} SHAREOWN=${SHAREOWN} \
