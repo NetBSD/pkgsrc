@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2000/12/06 22:09:24 jtb Exp $
-# FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
+# $NetBSD: Makefile,v 1.111 2000/12/12 01:31:06 wiz Exp $
 #
 
     SUBDIR += Mosaic

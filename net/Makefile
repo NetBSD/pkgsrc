@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2000/12/08 16:48:23 wiz Exp $
-# FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
+# $NetBSD: Makefile,v 1.170 2000/12/12 01:31:02 wiz Exp $
 #
 
     SUBDIR += airportbasestationconfig

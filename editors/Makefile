@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2000/11/21 05:25:58 kei Exp $
-# FreeBSD Id: Makefile,v 1.44 1997/09/13 20:19:28 chuckr Exp
+# $NetBSD: Makefile,v 1.38 2000/12/12 01:30:46 wiz Exp $
 #
 
     SUBDIR += abiword
