@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/02/24 17:26:03 adrianp Exp $
+# $NetBSD: Makefile,v 1.27 2005/02/24 17:50:43 tron Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
@@ -10,6 +10,7 @@ MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://www.phpmyadmin.net/
 COMMENT=	Set of PHP-scripts to adminstrate MySQL over the WWW
 
+DEPENDS+=	php-mbstring{,i}>=4.3.3:../../misc/php-mbstring
 DEPENDS+=	php-mysql{,i}>=4.3.3:../../databases/php-mysql
 
 PLIST_SUBST+=	CP="${CP}" DIST_VERSION=${DIST_VERSION} \
