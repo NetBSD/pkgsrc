@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2000/12/15 23:31:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/12/18 13:54:39 wiz Exp $
 #
 
     SUBDIR += 9wm
     SUBDIR += afterstep
     SUBDIR += amiwm
+    SUBDIR += ascp
     SUBDIR += blackbox
     SUBDIR += ctwm
+    SUBDIR += econf
     SUBDIR += enlightenment
     SUBDIR += ethemes
     SUBDIR += flwm
@@ -24,6 +26,7 @@
     SUBDIR += windowmaker
     SUBDIR += wm2
     SUBDIR += wmakerconf
+    SUBDIR += wmextra
     SUBDIR += wmthemes
     SUBDIR += wmx
 
