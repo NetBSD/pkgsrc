@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2003/12/04 19:48:26 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/23 16:55:37 jmmv Exp $
 #
 
-DISTNAME=		scrollkeeper-0.3.12
-PKGREVISION=		3
+DISTNAME=		scrollkeeper-0.3.14
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scrollkeeper/}	\
 			${MASTER_SITE_GNOME:=sources/scrollkeeper/0.3/}
@@ -26,6 +25,8 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS= 	--localstatedir=${SCROLLKEEPER_DATADIR}
 CONFIGURE_ARGS+=	--sharedstatedir=${SCROLLKEEPER_DATADIR}
 CONFIGURE_ARGS+= 	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+= 	--with-partial-db-dir=db
+CONFIGURE_ARGS+= 	--with-xml-catalog=${BUILDLINK_PREFIX.xmlcatmgr}/share/xml/catalog
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -50,5 +51,6 @@ CONF_FILES=	${EGDIR}/scrollkeeper.conf ${PKG_SYSCONFDIR}/scrollkeeper.conf
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
 .include "../../textproc/intltool/buildlink2.mk"
+.include "../../textproc/xmlcatmgr/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
