@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/12/26 03:02:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/14 21:15:59 hubertf Exp $
 
-DISTNAME=		silc-client-0.7.1
+DISTNAME=		silc-client-0.7.2
 CATEGORIES=		chat
 MASTER_SITES=		http://silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
@@ -26,19 +26,10 @@ USE_BUILDLINK_ONLY=	yes
 
 PKG_SYSCONFSUBDIR?=	silc
 
-CONFIGURE_ARGS+=	--with-helpdir=${PREFIX}/share/silc/help \
-			--with-docdir=${PREFIX}/share/doc/silc \
-			--with-etcdir=${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}
-
+CONFIGURE_ARGS+=	--with-helpdir=${PREFIX}/share/silc/help
+CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/silc
+CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}
 CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_DIR}
-
-post-configure:
-	cd ${WRKSRC}; \
-	${SED} 's/^\(silc_DEPENDENCIES.*\)-L.*buildlink\/lib\(.*\)/\1\2/g' \
-	irssi/src/fe-text/Makefile | \
-	${SED} 's/^\(silc_DEPENDENCIES.*\)-Wl,-R.*lib\(.*\)/\1\2/g' \
-	> Makefile.tmp; \
-	${MV} Makefile.tmp irssi/src/fe-text/Makefile
 
 .if (${MACHINE_ARCH} != "i386")
 CONFIGURE_ARGS+=	--disable-asm
