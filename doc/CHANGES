@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5633 2004/04/18 05:04:36 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5634 2004/04/18 13:56:07 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2051,3 +2051,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed kulki [snj 2004-04-17]
 	Updated xscorch to 0.2.0 [snj 2004-04-17]
 	Added neverball-1.2.2 [xtraeme 2004-04-18]
+	Updated bind8 to 8.4.4 [seb 2004-04-18]
