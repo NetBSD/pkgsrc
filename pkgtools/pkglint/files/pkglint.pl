@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.6 1999/02/18 12:27:27 frueauf Exp $
+# $NetBSD: pkglint.pl,v 1.7 1999/03/10 08:24:16 agc Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -75,6 +75,9 @@ NetBSD	@PORTSDIR@	NetBSD	1	1	1	    0		 1	@PREFIX@
 EOF
 $osname = `uname -s`;
 $osname =~ s/\n$//;
+if ($osname eq "SunOS") {
+	$osname = "NetBSD"
+}
 foreach $i (@osdep) {
 	if ($i =~ /^$osname\t(.*)/) {
 		print "OK: found OS config for $osname.\n" if ($verbose);

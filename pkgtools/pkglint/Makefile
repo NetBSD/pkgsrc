@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 1999/03/04 07:23:09 kim Exp $
+# $NetBSD: Makefile,v 1.8 1999/03/10 08:24:16 agc Exp $
 #
 
-DISTNAME=		pkglint-1.68
+DISTNAME=		pkglint-1.69
 CATEGORIES=		pkgtools devel
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -20,6 +20,8 @@ NO_CONFIGURE=	yes
 PKGSRCDIR?=	${.CURDIR}/../..
 MAKE_ENV=	PKGSRCDIR=${PKGSRCDIR}
 
+.include "../../mk/bsd.prefs.mk"
+
 do-build:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PORTSDIR@|${PKGSRCDIR}|g'	\
@@ -35,7 +37,7 @@ do-build:
 		> ${WRKSRC}/plist-clash
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PORTSDIR@|${PKGSRCDIR}|g'	\
-		< ${FILESDIR}/pkglint.1		\
+		< ${FILESDIR}/pkglint.1			\
 		> ${WRKSRC}/pkglint.1
 	nroff -mandoc ${WRKSRC}/pkglint.1 >${WRKSRC}/pkglint.0
 
