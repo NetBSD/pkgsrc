@@ -4,17 +4,17 @@
 # Date created:         15 May 1996
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.6 1998/01/19 00:39:20 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/01/24 03:20:01 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
 DISTNAME=       rarbsd
 PKGNAME=        rar-2.01
 CATEGORIES=	archivers
-ONLY_FOR_ARCHS=	i386
 MASTER_SITES=   ftp://ftp.inetpros.net/pub/rar/ \
 		ftp://ftp.kiarchive.ru/pub/unix/arcers/
 EXTRACT_SUFX=   .exe
+ONLY_FOR_ARCHS=	i386
 
 MAINTAINER=     ache@FreeBSD.ORG
 
