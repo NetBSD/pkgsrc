@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.308 1999/08/04 13:49:02 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.309 1999/08/09 05:32:12 sakamoto Exp $
 #
 # This file is in the public domain.
 #
@@ -1650,7 +1650,7 @@ fetch-list-one-pkg:
 		if [ "X$$file" = X"" ]; then continue; fi;		\
 		if [ ! -f $$file -a ! -f `${BASENAME} $$file` ]; then	\
 			${ECHO} -n "cd ${_DISTDIR} && [ -f $$file -o -f `${BASENAME} $$file` ] || " ; \
-			for site in "" ${MASTER_SITES}; do		\
+			for site in "" ${SORTED_MASTER_SITES}; do	\
 				if [ "X$$site" = X"" ]; then continue; fi; \
 				${ECHO} -n ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${file} "${FETCH_AFTER_ARGS}" '|| ' ; \
 			done;						\
