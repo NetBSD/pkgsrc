@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/01 05:48:03 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/09 14:30:05 wiz Exp $
 
 DISTNAME=	volume-0.8
 PKGNAME=	gkrellm-${DISTNAME}
@@ -10,13 +10,11 @@ MAINTAINER=	jmmv@hispabsd.org
 HOMEPAGE=	http://gkrellm.luon.net/volume.phtml
 COMMENT=	gkrellm volume mixer plugin
 
-DEPENDS+=       gkrellm-1.2.*:../../sysutils/gkrellm
-
 PTHREAD_OPTS=		require
-#USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 
-.include "../../graphics/imlib/buildlink.mk"
-.include "../../sysutils/gkrellm/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
+.include "../../graphics/imlib/buildlink2.mk"
+.include "../../sysutils/gkrellm/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
