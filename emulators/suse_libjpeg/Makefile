@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/17 13:05:44 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/01/25 09:23:57 tron Exp $
 
 DISTNAME=		suse_libjpeg-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -8,7 +8,7 @@ DISTFILES=		${RPMFILES}
 MAINTAINER=		hubertf@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 
-DEPENDS+=		suse_base-${SUSE_VERSION}:../suse_base
+DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
 
 ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
