@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2512 2004/11/27 04:41:45 jlam Exp $
+$NetBSD: TODO,v 1.2513 2004/11/27 07:44:32 reed Exp $
 
 Suggested new packages
 ======================
@@ -129,7 +129,7 @@ Suggested new packages
 	http://www.methylblue.com/filelight/
 	Graphical representation of disk space usage
 
-	Cinelerra
+	Cinelerra [wip/cinelerra]
 	http://heroinewarrior.com/cinelerra.php3
 	Cinelerra is a complete audio and video production environment.
 
@@ -226,6 +226,10 @@ Suggested new packages
 	LingoTeach
 	http://www.lingoteach.org/
 	Language teaching program with various lessons (with GTK+ interface).
+
+	GraphicsMagick
+	http://www.graphicsmagick.org/
+	Tools and libraries for manipulating images in over 88 formats.
 
 	FreePats
 	http://freepats.opensrc.org/
