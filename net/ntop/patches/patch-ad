@@ -1,0 +1,49 @@
+$NetBSD: patch-ad,v 1.1 1998/08/07 22:42:30 kim Exp $
+
+--- configure.in.orig	Thu Jul 30 06:09:44 1998
++++ configure.in	Fri Aug  7 18:16:15 1998
+@@ -18,7 +18,7 @@
+ 
+ AC_LBL_C_INIT(V_CCOPT, V_INCLS)
+ 
+-AC_CHECK_HEADERS(fcntl.h malloc.h memory.h)
++AC_CHECK_HEADERS(fcntl.h malloc.h memory.h ncurses.h curses.h)
+ AC_HEADER_TIME
+ 
+ AC_REPLACE_FUNCS(vfprintf)
+@@ -27,6 +27,8 @@
+ 
+ AC_LBL_LIBPCAP(V_PCAPDEP, V_INCLS)
+ 
++AC_CHECK_LIB(ncurses, main)
++
+ V_GROUP=0
+ case "$target_os" in
+ 
+@@ -47,19 +49,19 @@
+ 	;;
+ esac
+ 
+-if test -f /dev/bpf0 ; then
+-	V_GROUP=bpf
+-fi
++#if test -f /dev/bpf0 ; then
++#	V_GROUP=bpf
++#fi
+ 
+ AC_LBL_CHECK_TYPE(int32_t, int)
+ AC_LBL_CHECK_TYPE(u_int32_t, u_int)
+ 
+ AC_LBL_DEVEL(V_CCOPT)
+ 
+-if test -r lbl/gnuc.h ; then
+-	rm -f gnuc.h
+-	ln -s lbl/gnuc.h gnuc.h
+-fi
++#if test -r lbl/gnuc.h ; then
++#	rm -f gnuc.h
++#	ln -s lbl/gnuc.h gnuc.h
++#fi
+ 
+ AC_SUBST(V_CCOPT)
+ AC_SUBST(V_GROUP)

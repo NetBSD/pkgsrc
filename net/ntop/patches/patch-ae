@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 1998/08/07 22:42:30 kim Exp $
+
+--- setsignal.c.orig	Fri Jul 31 05:21:22 1998
++++ setsignal.c	Fri Aug  7 18:12:53 1998
+@@ -40,7 +40,6 @@
+ #include <string.h>
+ #endif
+ 
+-#include <gnuc.h>
+ #ifdef HAVE_OS_PROTO_H
+ #include "os-proto.h"
+ #endif
