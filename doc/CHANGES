@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7082 2004/09/02 12:15:25 jmmv Exp $
+$NetBSD: CHANGES,v 1.7083 2004/09/02 19:25:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4174,3 +4174,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libxslt to 1.1.10 [jmmv 2004-09-02]
 	Updated tla to 1.2.1nb2 [recht 2004-09-02]
 	Updated libglade2 to 2.4.0 [jmmv 2004-09-02]
+	Updated glade2 to 2.6.0nb2 [wiz 2004-09-02]
