@@ -1,4 +1,4 @@
-$NetBSD: README.Interix,v 1.11 2004/05/02 03:38:21 tv Exp $
+$NetBSD: README.Interix,v 1.12 2004/08/23 20:43:13 tv Exp $
 
 Please read the general README file as well.
 
@@ -29,20 +29,43 @@ the Windows Services for Unix 3.5 distribution in order to use pkgsrc:
     Remote Connectivity
     Interix SDK
 
-When using pkgsrc on Interix, it is best NOT to install the Utilities
-subcomponent "UNIX Perl".  That is Perl 5.6 without shared module
-support, installed to /usr/local, and will only cause confusion. 
-Instead, install Perl 5.8 from pkgsrc (or from a binary package
-available at the URL above).
+When using pkgsrc on Interix, DO NOT install the Utilities subcomponent 
+"UNIX Perl".  That is Perl 5.6 without shared module support, installed to 
+/usr/local, and will only cause confusion. Instead, install Perl 5.8 from 
+pkgsrc (or from a binary package available at the URL above).
 
 The Remote Connectivity subcomponent "Windows Remote Shell Service" does
 not need to be installed, but Remote Connectivity itself should be
 installed in order to have a working inetd.
 
-Finally, during installation you may be asked whether to enable setuid
-behavior for Interix programs, and whether to make pathnames default to
-case-sensitive.  Both options should be enabled.  (If you choose to
-disable setuid, many system programs from pkgsrc may not work.)
+Finally, during installation you may be asked whether to enable setuid 
+behavior for Interix programs, and whether to make pathnames default to 
+case-sensitive.  Setuid should be enabled, and case-sensitivity MUST be 
+enabled.  (Without case-sensitivity, a large number of packages including 
+perl will not build.)
+
+=====
+
+If SFU is already installed and you wish to alter these settings to work 
+with pkgsrc:
+
+* To uninstall UNIX Perl, use Add/Remove Programs, select Microsoft 
+  Windows Services for UNIX, then click Change.  In the installer, choose 
+  Add or Remove, then uncheck Utilities->UNIX Perl.
+
+* To enable case-sensitivity for the filesystem, run REGEDIT.EXE, and 
+  change the following registry key:
+
+  HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel
+
+  Set the DWORD value "obcaseinsensitive" to 0; then reboot.
+
+* To enable setuid binaries (optional), run REGEDIT.EXE, and change the 
+  following registry key:
+
+  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Services for UNIX
+
+  Set the DWORD value "EnableSetuidBinaries" to 1; then reboot.
 
 =====
 
@@ -74,10 +97,10 @@ KNOWN ISSUES
   these, you may create such a user; make sure it is in the local group
   Administrators.
 
-And the following issue means that binary packages (pkg_add) should be
-installed by Administrator for the time being:
-
 * "pkg_add" creates directories of mode 0755, not 0775, in $PKG_DBDIR.
   This will be fixed.
+
+  For the time being, install packages as Administrator, or use a
+  "chmod -R g+w $PKG_DBDIR" after installing a package to work around it.
 
 =====
