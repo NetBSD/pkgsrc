@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/12/26 18:22:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/03/18 20:08:25 skrll Exp $
 
 DISTNAME=	ogle-0.8.2
 CATEGORIES=	graphics
@@ -11,7 +11,6 @@ COMMENT=	DVD player with menus
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	liba52>=0.7.1.2:../../audio/liba52
 DEPENDS+=	libdvdread>=0.9.2:../../misc/libdvdread
-BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
 
 BUILDLINK_DEPENDS.libxml2=	libxml2>=2.4.5
 
