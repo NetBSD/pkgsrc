@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1804 2004/06/03 22:48:13 xtraeme Exp $
+$NetBSD: TODO,v 1.1805 2004/06/03 23:02:24 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -174,7 +174,6 @@ Suggested package updates
 	o balsa-1.4.4
 	o bind-9.3
 	o bins-1.1.26
-	o bitlbee-0.90
 	o bk_edit-0.6.23
 	o blender-2.33
 	o boehm-gc-6.3alpha6 [recht]
