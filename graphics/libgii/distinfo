@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 09:54:18 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/11/25 20:16:26 jlam Exp $
 
 SHA1 (libgii-0.6.tar.gz) = d83d7b045343b1f745e6557208532c959e9e825f
 Size (libgii-0.6.tar.gz) = 258201 bytes
-SHA1 (patch-aa) = cdc76a63fcbe09053a3363f90d2ef7692be349ce
-SHA1 (patch-ab) = fb15762cb4f5eb9a2b47f58defb44c0ddefd4473
+SHA1 (patch-aa) = 3bdfe5323abf3e1ac952879df7f7381b3bef0c6c
+SHA1 (patch-ab) = a3052dbb66ffcd6815709cbcaf6eda3d2b138c77
+SHA1 (patch-ac) = 3c1787495d633f04e7a430de074f36ce19cfb390

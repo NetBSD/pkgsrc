@@ -1,46 +1,20 @@
-$NetBSD: patch-ab,v 1.1 2000/10/01 13:40:26 rh Exp $
+$NetBSD: patch-ab,v 1.2 2002/11/25 20:16:27 jlam Exp $
 
---- ltmain.sh.orig	Sun Oct  1 15:28:43 2000
-+++ ltmain.sh
-@@ -794,6 +794,7 @@
-     old_convenience=
-     deplibs=
-     linkopts=
-+    wllinkopts=
-     lib_search_path=`pwd`
+--- input/xwin/Makefile.am.orig	Wed Mar 31 16:03:12 1999
++++ input/xwin/Makefile.am
+@@ -10,12 +10,10 @@ xwin_la_LDFLAGS = ${extra_libraries} -mo
  
-     avoid_version=no
-@@ -1105,6 +1106,25 @@
- 	continue
- 	;;
+ inputlibdir = ${libdir}/ggi/input
  
-+      -Wl,*)
-+	args=`$echo "X$arg" | $Xsed -e "$sed_quote_subst" -e 's/^-Wl,//'`
-+	arg=
-+	IFS="${IFS=     }"; save_ifs="$IFS"; IFS=','
-+	for flag in $args; do
-+	  IFS="$save_ifs"
-+	  case "$flag" in
-+	    *[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
-+	    flag="\"$flag\""
-+	    ;;
-+	  esac
-+	  arg="$arg $wl$flag"
-+	  linkopts="$linkopts $flag"
-+	  wllinkopts="$wllinkopts $wl$flag"
-+	done
-+	IFS="$save_ifs"
-+	arg=`$echo "X$arg" | $Xsed -e "s/^ //"`
-+	;;
-+
-       # Some other compiler flag.
-       -* | +*)
- 	# Unknown arguments in both finalize_command and compile_command need
-@@ -2244,6 +2264,7 @@
- 	if test "$thread_safe" = yes && test -n "$thread_safe_flag_spec"; then
- 	  eval flag=\"$thread_safe_flag_spec\"
- 	  linkopts="$linkopts $flag"
-+	  wllinkopts="$linkopts $wl$flag"
- 	fi
+-xev.c:	../x/xev.c
++xev.c:	../x/xev.c ../x/xev.h
+ 	rm -f xev.c
+ 	ln -s ../x/xev.c .
+-
+-xev.lo:
+-	rm -f xev.lo
+-	ln -s ../x/xev.lo .
++	rm -f xev.h
++	ln -s ../x/xev.h .
  
- 	# Prepare the list of exported symbols
+ EXTRA_DIST = EXPSYMS
