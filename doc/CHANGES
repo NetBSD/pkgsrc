@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1901 2003/04/11 11:37:42 tron Exp $
+$NetBSD: CHANGES,v 1.1902 2003/04/11 12:01:16 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1548,3 +1548,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added startup-notification-0.5 [jmmv 2003-04-11]
 	Updated gnome-utils to 1.4.1.2nb2 [tron 2003-04-11]
 	Updated coreutils to 5.0nb1 [tron 2003-04-11]
+	Added xine-ui-0.9.20 [rh 2003-04-11]
