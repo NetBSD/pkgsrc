@@ -1,0 +1,47 @@
+$NetBSD: patch-ae,v 1.1 2002/04/04 16:47:55 atatat Exp $
+
+Add support for $XPLANET/images and $HOME/.xplanet/images images, etc.
+
+--- libannotate/drawSatellite.cc.orig	Tue Jan 22 21:07:42 2002
++++ libannotate/drawSatellite.cc	Tue Apr  2 22:43:04 2002
+@@ -56,6 +56,40 @@
+         return(true);
+     }
+ 
++    char *xplanet = getenv("XPLANET");
++    if (xplanet != NULL)
++    {
++        satellite_file = xplanet;
++        satellite_file += separator;
++        satellite_file += "satellites";
++        satellite_file += separator;
++        satellite_file += filename;
++
++        if (fileExists(satellite_file))
++        {
++            filename = satellite_file;
++            return(true);
++        }
++    }
++
++    char *home = getenv("HOME");
++    if (home != NULL)
++    {
++        satellite_file = home;
++        satellite_file += separator;
++        satellite_file += ".xplanet";
++        satellite_file += separator;
++        satellite_file += "satellites";
++        satellite_file += separator;
++        satellite_file += filename;
++
++        if (fileExists(satellite_file))
++        {
++            filename = satellite_file;
++            return(true);
++        }
++    }
++
+     satellite_file = prefix;
+     satellite_file += separator;
+     satellite_file += "satellites";
