@@ -1,0 +1,726 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/27 05:37:36 sakamoto Exp $
+
+--- configure.orig	Tue Aug 17 18:58:57 1999
++++ configure	Tue Sep 21 09:40:29 1999
+@@ -96,57 +96,57 @@
+   NetBSD )
+ # Newer NetBSD system doesn't define 'unix' symbol anymore, but GC library
+ # requires it.
+-    special_sys="#define unix"
+-  ;;
++#    special_sys="#define unix"
++#  ;;
+ esac
+ 
+-if [ -z "$def_bindir" ]; then
+-  def_bindir="/usr/local/bin"
+-fi
++#if [ -z "$def_bindir" ]; then
++#  def_bindir="/usr/local/bin"
++#fi
+ echo "Which directory do you want to put the binary?"
+ Echo "(default: $def_bindir) "
+-readdir
+-bindir=$_dir
+-if [ -z "$bindir" ]; then
++#readdir
++#bindir=$_dir
++#if [ -z "$bindir" ]; then
+   bindir=$def_bindir
+-fi
++#fi
+ echo "def_bindir=$bindir" >> config.param
+ 
+-if [ -z "$def_helpdir" ]; then
+-  def_helpdir="/usr/local/lib"
+-fi
++#if [ -z "$def_helpdir" ]; then
++#  def_helpdir="/usr/local/lib"
++#fi
+ echo "Which directory do you want to put the helpfile?"
+ Echo "(default: $def_helpdir) "
+-readdir
+-helpdir=$_dir
+-if [ -z "$helpdir" ]; then
++#readdir
++#helpdir=$_dir
++#if [ -z "$helpdir" ]; then
+   helpdir=$def_helpdir
+-fi
++#fi
+ echo "def_helpdir=$helpdir" >> config.param
+ 
+ echo "Which language do you prefer?"
+ echo "  1 - Japanese (charset ISO-2022-JP, EUC-JP, Shift_JIS)"
+ echo "  2 - English (charset US_ASCII, ISO-8859-1, etc.)"
+-if [ "$pref_lang" = 2 ]; then
+-  Echo '[2]? '
+-  def_lg=2
+-else
+-  Echo '[1]? '
+-  def_lg=1
+-fi
+-while :
+-do
+-  read lg_ans
+-  if [ -z "$lg_ans" ]; then
++#if [ "$pref_lang" = 2 ]; then
++#  Echo '[2]? '
++#  def_lg=2
++#else
++#  Echo '[1]? '
++#  def_lg=1
++#fi
++#while :
++#do
++#  read lg_ans
++#  if [ -z "$lg_ans" ]; then
+     lg_ans=$def_lg
+-  elif [ "$lg_ans" != 1 -a "$lg_ans" != 2 ]; then
+-    echo "Please choose 1 or 2."
+-    continue
+-  else
+-    :
+-  fi
+-  break
+-done 
++#  elif [ "$lg_ans" != 1 -a "$lg_ans" != 2 ]; then
++#    echo "Please choose 1 or 2."
++#    continue
++#  else
++#    :
++#  fi
++#  break
++#done 
+ echo "pref_lang='$lg_ans'" >> config.param
+ if [ $lg_ans = 1 ]; then
+   use_lang="#define LANG JA"
+@@ -166,43 +166,44 @@
+   echo '	n - JIS: ESC $B - ESC (B'
+   echo '	m - JIS: ESC $@ - ESC (B'
+   echo ''
+-  while :
+-  do
+-	if [ -n "$def_dcode" ] ; then
+-		Echo "(default: $def_dcode) "
+-	fi
++#  while :
++#  do
++#	if [ -n "$def_dcode" ] ; then
++#		Echo "(default: $def_dcode) "
++#	fi
+ 	Echo "Which? "
+-	read ncode
+-	if [ -n "$def_dcode"  -a -z "$ncode" ] ; then
++#	read ncode
++#	if [ -n "$def_dcode"  -a -z "$ncode" ] ; then
+ 		ncode=$def_dcode
+-	fi
+-	if [ -z "`echo $ncode | grep '[SEjNnm]'`" ] ; then
+-		Echo "Illegal code. Try again."
+-		continue
+-	fi
+-	break
+-  done
++#	fi
++#	if [ -z "`echo $ncode | grep '[SEjNnm]'`" ] ; then
++#		Echo "Illegal code. Try again."
++#		continue
++#	fi
++#	break
++#  done
+   echo "def_dcode=$ncode" >> config.param
+ else
+   ncode=x
+ fi
+ 
+ echo "Do you want to use Lynx-like key binding?"
+-if [ "$lynx_key" = y ]; then
+-  Echo '[y]? '
+-  read ks_ans
+-  if [ "$ks_ans" = 'n' ]; then
+-    lynx_key=n
+-  fi
+-else
+-  Echo '[n]? '
+-  read ks_ans
+-  if [ "$ks_ans" = 'y' ]; then
+-    lynx_key=y
+-  else
+-    lynx_key=n
+-  fi
+-fi
++#if [ "$lynx_key" = y ]; then
++#  Echo '[y]? '
++#  read ks_ans
++#  if [ "$ks_ans" = 'n' ]; then
++#    lynx_key=n
++#  fi
++#else
++#  Echo '[n]? '
++#  read ks_ans
++#  if [ "$ks_ans" = 'y' ]; then
++#    lynx_key=y
++#  else
++#    lynx_key=n
++#  fi
++#fi
++lynx_key=$def_lynx_key
+ echo "lynx_key=$lynx_key" >> config.param
+ if [ $lynx_key = y ]; then
+   keymap_file="keybind_lynx"
+@@ -226,21 +227,22 @@
+ 
+ if [ $lang = ja ]; then
+   echo "Do you want to use 2-byte character for table border, item, etc."
+-  if [ "$kanji_symbols" = n ]; then
+-    Echo '[n]? '
+-    read ks_ans
+-    if [ "$ks_ans" = 'y' ]; then
+-      kanji_symbols=y
+-    fi
+-  else
+-    Echo '[y]? '
+-    read ks_ans
+-    if [ "$ks_ans" = 'n' ]; then
+-      kanji_symbols=n
+-    else
+-      kanji_symbols=y
+-    fi
+-  fi
++#  if [ "$kanji_symbols" = n ]; then
++#    Echo '[n]? '
++#    read ks_ans
++#    if [ "$ks_ans" = 'y' ]; then
++#      kanji_symbols=y
++#    fi
++#  else
++#    Echo '[y]? '
++#    read ks_ans
++#    if [ "$ks_ans" = 'n' ]; then
++#      kanji_symbols=n
++#    else
++#      kanji_symbols=y
++#    fi
++#  fi
++  kanji_symbols=$def_kanji_symbols
+   echo "kanji_symbols=$kanji_symbols" >> config.param
+ fi
+ if [ "$kanji_symbols" = y ]; then
+@@ -250,21 +252,22 @@
+ fi
+ 
+ echo "Do you want to use color ESC sequence for kterm/pxvt "
+-if [ "$use_color" = n ]; then
+-  Echo '[n]? '
+-  read ks_ans
+-  if [ "$ks_ans" = 'y' ]; then
+-    use_color='y'
+-  fi
+-else
+-  Echo '[y]? '
+-  read ks_ans
+-  if [ "$ks_ans" = 'n' ]; then
+-    use_color='n'
+-  else
+-    use_color='y'
+-  fi
+-fi
++#if [ "$use_color" = n ]; then
++#  Echo '[n]? '
++#  read ks_ans
++#  if [ "$ks_ans" = 'y' ]; then
++#    use_color='y'
++#  fi
++#else
++#  Echo '[y]? '
++#  read ks_ans
++#  if [ "$ks_ans" = 'n' ]; then
++#    use_color='n'
++#  else
++#    use_color='y'
++#  fi
++#fi
++use_color=$def_use_color
+ echo "use_color=$use_color" >> config.param
+ if [ $use_color = y ]; then
+   def_color="#define COLOR"
+@@ -274,21 +277,22 @@
+ 
+ echo "Do you want to use mouse?"
+ echo "  (It requires xterm/kterm)"
+-if [ "$use_mouse" = y ]; then
+-  Echo '[y]? '
+-  read ks_ans
+-  if [ "$ks_ans" = 'n' ]; then
+-    use_mouse='n'
+-  fi
+-else
+-  Echo '[n]? '
+-  read ks_ans
+-  if [ "$ks_ans" = 'y' ]; then
+-    use_mouse='y'
+-  else
+-    use_mouse='n'
+-  fi
+-fi
++#if [ "$use_mouse" = y ]; then
++#  Echo '[y]? '
++#  read ks_ans
++#  if [ "$ks_ans" = 'n' ]; then
++#    use_mouse='n'
++#  fi
++#else
++#  Echo '[n]? '
++#  read ks_ans
++#  if [ "$ks_ans" = 'y' ]; then
++#    use_mouse='y'
++#  else
++#    use_mouse='n'
++#  fi
++#fi
++use_mouse=$def_use_mouse
+ echo "use_mouse=$use_mouse" >> config.param
+ if [ $use_mouse = y ]; then
+   def_mouse="#define MOUSE"
+@@ -297,21 +301,22 @@
+ fi
+ 
+ echo "Do you want to use popup menu?"
+-if [ "$use_menu" = n ]; then
+-  Echo '[n]? '
+-  read ks_ans
+-  if [ "$ks_ans" = 'y' ]; then
+-    use_menu='y'
+-  fi
+-else
+-  Echo '[y]? '
+-  read ks_ans
+-  if [ "$ks_ans" = 'n' ]; then
+-    use_menu='n'
+-  else
+-    use_menu='y'
+-  fi
+-fi
++#if [ "$use_menu" = n ]; then
++#  Echo '[n]? '
++#  read ks_ans
++#  if [ "$ks_ans" = 'y' ]; then
++#    use_menu='y'
++#  fi
++#else
++#  Echo '[y]? '
++#  read ks_ans
++#  if [ "$ks_ans" = 'n' ]; then
++#    use_menu='n'
++#  else
++#    use_menu='y'
++#  fi
++#fi
++use_menu=$def_use_menu
+ echo "use_menu=$use_menu" >> config.param
+ if [ $use_menu = y ]; then
+   def_menu="#define MENU"
+@@ -320,21 +325,22 @@
+ fi
+ 
+ echo "Do you want to use matrix in rendering table?"
+-if [ "$use_matrix" = n ]; then
+-  Echo '[n]? '
+-  read ks_ans
+-  if [ "$ks_ans" = 'y' ]; then
+-    use_matrix='y'
+-  fi
+-else
+-  Echo '[y]? '
+-  read ks_ans
+-  if [ "$ks_ans" = 'n' ]; then
+-    use_matrix='n'
+-  else
+-    use_matrix='y'
+-  fi
+-fi
++#if [ "$use_matrix" = n ]; then
++#  Echo '[n]? '
++#  read ks_ans
++#  if [ "$ks_ans" = 'y' ]; then
++#    use_matrix='y'
++#  fi
++#else
++#  Echo '[y]? '
++#  read ks_ans
++#  if [ "$ks_ans" = 'n' ]; then
++#    use_matrix='n'
++#  else
++#    use_matrix='y'
++#  fi
++#fi
++use_matrix=$def_use_matrix
+ echo "use_matrix=$use_matrix" >> config.param
+ if [ $use_matrix = y ]; then
+   def_matrix="#define MATRIX 1"
+@@ -343,70 +349,70 @@
+ fi
+ 
+ 
+-if [ -z "$ded" ] ; then ded=`./which \vi` ; fi
+-if [ -n  "`echo $ded | grep 'no'`" ] ; then ded=vi ; fi
++#if [ -z "$ded" ] ; then ded=`./which \vi` ; fi
++#if [ -n  "`echo $ded | grep 'no'`" ] ; then ded=vi ; fi
+ echo "Input your favorite editor program."
+ Echo "(Default: $ded) "
+-readdir
+-editor=$_dir
+-if [ -z "$editor" ] ; then editor="$ded" ; fi
++#readdir
++#editor=$_dir
++#if [ -z "$editor" ] ; then editor="$ded" ; fi
+ echo "ded='$editor'" >> config.param
+ 
+-if [ -z "$dmail" ] ; then 
+-  if ./which \mailx > /dev/null
+-  then
+-    dmail=`./which \mailx` 
+-  else
+-    dmail=`./which \mail`
+-  fi
+-  if [ -n  "`echo $dmail | grep 'no'`" ] ; then dmail=mailx ; fi
+-fi
++#if [ -z "$dmail" ] ; then 
++#  if ./which \mailx > /dev/null
++#  then
++#    dmail=`./which \mailx` 
++#  else
++#    dmail=`./which \mail`
++#  fi
++#  if [ -n  "`echo $dmail | grep 'no'`" ] ; then dmail=mailx ; fi
++#fi
+ echo "Input your favorite mailer program."
+ Echo "(Default: $dmail) "
+-readdir
+-mailer=$_dir
+-if [ -z "$mailer" ] ; then mailer="$dmail" ; fi
++#readdir
++#mailer=$_dir
++#if [ -z "$mailer" ] ; then mailer="$dmail" ; fi
+ echo "dmail='$mailer'" >> config.param
+ 
+ 
+-if [ -z "$dbrowser" ] ; then 
+-  if ./which netscape > /dev/null
+-  then
+-    dbrowser=`./which netscape` 
+-  elif ./which iexplore > /dev/null
+-  then
+-    dbrowser=`./which iexplore`
+-  else
+-    dbrowser=`./which lynx`
+-  fi
+-  if [ -n  "`echo $dbrowser | grep 'no'`" ] ; then dbrowser=netscape ; fi
+-fi
++#if [ -z "$dbrowser" ] ; then 
++#  if ./which netscape > /dev/null
++#  then
++#    dbrowser=`./which netscape` 
++#  elif ./which iexplore > /dev/null
++#  then
++#    dbrowser=`./which iexplore`
++#  else
++#    dbrowser=`./which lynx`
++#  fi
++#  if [ -n  "`echo $dbrowser | grep 'no'`" ] ; then dbrowser=netscape ; fi
++#fi
+ echo "Input your favorite external browser program."
+ Echo "(Default: $dbrowser) "
+-readdir
+-brz=$_dir
+-if [ -z "$brz" ] ; then brz="$dbrowser" ; fi
++#readdir
++#brz=$_dir
++#if [ -z "$brz" ] ; then brz="$dbrowser" ; fi
+ echo "dbrowser='$brz'" >> config.param
+ 
+-if [ -z "$dcc" ] ; then 
+-  if ./which gcc >/dev/null
+-  then
+-    dcc=gcc
+-  else
+-    dcc=cc
+-  fi
+-fi
++#if [ -z "$dcc" ] ; then 
++#  if ./which gcc >/dev/null
++#  then
++#    dcc=gcc
++#  else
++#    dcc=cc
++#  fi
++#fi
+ echo "Input your favorite C-compiler."
+ Echo "(Default: $dcc) "
+-read cc
+-if [ -z "$cc" ] ; then cc="$dcc" ; fi
++#read cc
++#if [ -z "$cc" ] ; then cc="$dcc" ; fi
+ echo "dcc='$cc'" >> config.param
+ 
+-if [ -z "$dcflags" ] ; then dcflags=-g ; fi
++#if [ -z "$dcflags" ] ; then dcflags=-g ; fi
+ echo "Input your favorite C flags."
+ Echo "(Default: $dcflags) "
+-read cflags
+-if [ -z "$cflags" ] ; then cflags="$dcflags" ; fi
++#read cflags
++#if [ -z "$cflags" ] ; then cflags="$dcflags" ; fi
+ echo "dcflags='$cflags'" >> config.param
+ 
+ bsdinclude=''
+@@ -420,50 +426,51 @@
+ 	fi
+ fi
+ 
+-termlib=''
+-cat > _zmachdep.c << EOF
+-main()
+-{
+-  char bp[100];
+-  tgetent(bp,getenv("TERM"));
+-}
+-EOF
+-
+-TERM_LIBS='termcap termlib terminfo mytinfo curses ncurses'
+-
+-for lib in $TERM_LIBS
+-do
+-  for libdir in /lib /usr/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib
+-  do
+-    if [ -f $libdir/lib$lib.a -o -f $libdir/lib$lib.so ] ; then 
+-      # check if the lib works...
+-      Echo "Terminal library -l$lib found at $libdir, "
+-      if $cc $cflags -o _zmachdep _zmachdep.c -l$lib > /dev/null 2>&1
+-      then
+-        echo "and it seems to work."
+-        termlib=-l$lib
+-      else
+-        echo "but it doesn't seem to work."
+-      fi
+-    fi
+-  done
+-done
+-if [ -z "$termlib" ]; then
+-  Echo "termcap/curses library not found; I hope -ltermcap works."
+-  termlib='-ltermcap'
+-fi
++#termlib=''
++#cat > _zmachdep.c << EOF
++#main()
++#{
++#  char bp[100];
++#  tgetent(bp,getenv("TERM"));
++#}
++#EOF
++
++#TERM_LIBS='termcap termlib terminfo mytinfo curses ncurses'
++
++#for lib in $TERM_LIBS
++#do
++#  for libdir in /lib /usr/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib ${LOCALBASE}/lib
++#  do
++#    if [ -f $libdir/lib$lib.a -o -f $libdir/lib$lib.so ] ; then 
++#      # check if the lib works...
++#      Echo "Terminal library -l$lib found at $libdir, "
++#      if $cc $cflags -o _zmachdep _zmachdep.c -l$lib > /dev/null 2>&1
++#      then
++#        echo "and it seems to work."
++#        termlib=-l$lib
++#      else
++#        echo "but it doesn't seem to work."
++#      fi
++#    fi
++#  done
++#done
++#if [ -z "$termlib" ]; then
++#  Echo "termcap/curses library not found; I hope -ltermcap works."
++#  termlib='-ltermcap'
++#fi
+ echo "Which terminal library do you want to use?"
+ Echo "(default: $termlib) "
+ dtermlib=$termlib
+-read termlib
+-if [ -z "$termlib" ]; then
+-  termlib=$dtermlib
+-fi
++#read termlib
++#if [ -z "$termlib" ]; then
++#  termlib=$dtermlib
++#fi
++echo "termlib=$dtermlib" >> config.param
+ 
+ extlib=''
+ for lib in bsd BSD socket nsl
+ do
+-  for libdir in /lib /usr/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib
++  for libdir in /lib /usr/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib ${LOCALBASE}/lib
+   do
+     if [ -f $libdir/lib$lib.a ] ; then 
+       extlib="$extlib -l$lib"
+@@ -477,64 +484,66 @@
+   echo additional library found: $extlib
+ fi
+ 
+-gclib=''
+-gcinclude=''
+-gctarget=''
+-for libdir in /lib /usr/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib ${HOME}/lib
+-do
+-  if [ -f $libdir/libgc.a -o -f $libdir/libgc.so ] ; then 
+-    echo $libdir/libgc found
++#gclib=''
++#gcinclude=''
++#gctarget=''
++#for libdir in /lib /usr/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib ${HOME}/lib ${LOCALBASE}/lib
++#do
++#  if [ -f $libdir/libgc.a -o -f $libdir/libgc.so ] ; then 
++#    echo $libdir/libgc found
+     gclib="-lgc"
+-  fi
+-done
+-for inc in /usr/include /usr/include/gc /usr/local/include /usr/local/include/gc ${HOME}/include
+-do
+-  if [ -f $inc/gc.h ]; then
+-    echo $inc/gc.h found
+-    gcinclude=$inc
+-  fi
+-done
+-
+-if [ -n "$gclib" -a -n "$gcinclude" ]; then
+-  Echo GC library found on your system...
+-  cat > _zmachdep.c << EOF
+-#include <gc.h>
+-main()
+-{
+-  extern unsigned GC_version;
+-  printf("%d%02d%03d\n",(GC_version>>16)&0xff,(GC_version>>8)&0xff,GC_version&0xff);
+-}
+-EOF
+-  if $cc $cflags -I$gcinclude -o _zmachdep _zmachdep.c $gclib > /dev/null 2>&1
+-  then
+-    echo "and it seems to work."
+-    gcversion=`./_zmachdep`
+-    echo "GC_version is $gcversion."    
+-    if [ $gcversion -lt $mygcversion ]; then
+-      echo "GC library on your system seems to be old."
+-      Echo "Do you want to use GC library comes with w3m?[y] "
+-      read ans
+-      if [ "$ans" = 'n' -o "$ans" = 'N' ]; then
+-        cflags="$cflags -I$gcinclude"
+-      else
+-        cflags="$cflags -I./gc"
+-        gclib="gc/gc.a"
+-        gctarget=$gclib
+-      fi
+-    else
++#  fi
++#done
++#for inc in /usr/include /usr/include/gc /usr/local/include /usr/local/include/gc ${HOME}/include ${LOCALBASE}/include
++#do
++#  if [ -f $inc/gc.h ]; then
++#    echo $inc/gc.h found
++#    gcinclude=$inc
++     gcinclude=${LOCALBASE}/include
++#  fi
++#done
++
++#if [ -n "$gclib" -a -n "$gcinclude" ]; then
++#  Echo GC library found on your system...
++#  cat > _zmachdep.c << EOF
++##include <gc.h>
++#main()
++#{
++#  extern unsigned GC_version;
++#  printf("%d%02d%03d\n",(GC_version>>16)&0xff,(GC_version>>8)&0xff,GC_version&0xff);
++#}
++#EOF
++#  if $cc $cflags -I$gcinclude -o _zmachdep _zmachdep.c $gclib > /dev/null 2>&1
++#  then
++#    echo "and it seems to work."
++#    gcversion=`./_zmachdep`
++#    echo "GC_version is $gcversion."    
++#    if [ $gcversion -lt $mygcversion ]; then
++#      echo "GC library on your system seems to be old."
++#      Echo "Do you want to use GC library comes with w3m?[y] "
++#      read ans
++#      if [ "$ans" = 'n' -o "$ans" = 'N' ]; then
++#        cflags="$cflags -I$gcinclude"
++#      else
++#        cflags="$cflags -I./gc"
++#        gclib="gc/gc.a"
++#        gctarget=$gclib
++#      fi
++#    else
+       cflags="$cflags -I$gcinclude"
+-    fi
+-  else
+-    echo "but it doesn't seem to work."
+-    cflags="$cflags -I./gc"
+-    gclib="gc/gc.a"
+-    gctarget=$gclib
+-  fi
+-else
+-  cflags="$cflags -I./gc"
+-  gclib="gc/gc.a"
+-  gctarget=$gclib
+-fi
++      gctarget=$gclib
++#    fi
++#  else
++#    echo "but it doesn't seem to work."
++#    cflags="$cflags -I./gc"
++#    gclib="gc/gc.a"
++#    gctarget=$gclib
++#  fi
++#else
++#  cflags="$cflags -I./gc"
++#  gclib="gc/gc.a"
++#  gctarget=$gclib
++#fi
+ 
+ # Apply patch.
+ if [ $gclib = "gc/gc.a" ]; then
+@@ -555,9 +564,9 @@
+       patchfile=Patches/hpux11
+     fi
+     ;;
+-  macppc:NetBSD)
+-    patchfile = Patches/macppc
+-    ;;
++#  macppc:NetBSD)
++#    patchfile = Patches/macppc
++#    ;;
+   R3000:*System_V*|R4000:UNIX_SYSV|R4000:UNIX_SV)
+     # EWS-4800
+     patchfile=Patches/ews4800
+@@ -572,15 +581,15 @@
+ 
+ 
+ echo "Input additional LD flags other than listed above, if any:"
+-if [ -n "$dldflags" ]; then
+-  Echo "(default: $dldflags) : "
+-else
+-  Echo ": "
+-fi
+-read ldflags
+-if [ -z "$ldflags" ]; then
++#if [ -n "$dldflags" ]; then
++#  Echo "(default: $dldflags) : "
++#else
++#  Echo ": "
++#fi
++#read ldflags
++#if [ -z "$ldflags" ]; then
+   ldflags=$dldflags
+-fi
++#fi
+ echo "dldflags='$ldflags'" >> config.param
+ 
+ echo "Checking machine dependency."
