@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/20 21:16:07 recht Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/01/20 22:48:07 recht Exp $
 #
 
 DISTNAME=	elvis-2.2_0
@@ -13,7 +13,16 @@ PATCHDIR=	${.CURDIR}/../elvis/patches
 DISTINFO_FILE=	${.CURDIR}/../elvis/distinfo
 
 USE_BUILDLINK2=		YES
-
+USE_PKGINSTALL=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/elvis
+
+PKG_SYSCONFSUBDIR?=	elvis
+CONF_FILES=	${PREFIX}/share/elvis/elvis.rc ${PKG_SYSCONFDIR}/elvis.rc
+
+SUBST_CLASSES+=		sysconf
+SUBST_STAGE.sysconf=	post-patch
+SUBST_FILES.sysconf=	configure
+SUBST_FILES.sysconf=	Makefile.in
+SUBST_SED.sysconf=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
