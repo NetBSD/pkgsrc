@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2002/04/29 08:40:28 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2002/10/03 12:21:29 jlam Exp $
 
 --- audio_oss.c.orig	Tue Jul 18 18:33:41 2000
 +++ audio_oss.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.4 2002/04/29 08:40:28 wiz Exp $
  const char *esd_audio_devices()
  {
 -    return "/dev/dsp, /dev/dsp2, etc.";
-+    return "/dev/audio, /dev/audio2, etc.";
++    return "/dev/audio, /dev/audio2, etc. or /dev/dsp, /dev/dsp2, etc.";
  }
  
  
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.4 2002/04/29 08:40:28 wiz Exp $
  
      /* open the sound device */
 -    device = esd_audio_device ? esd_audio_device : "/dev/dsp";
-+    device = esd_audio_device ? esd_audio_device : "/dev/audio";
++    device = esd_audio_device ? esd_audio_device : DEV_DSP;
      if ((afd = open(device, mode, 0)) == -1)
      {   /* Opening device failed */
          perror(device);
