@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/02/16 21:34:18 seb Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/19 21:40:52 xtraeme Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	2
@@ -14,15 +14,15 @@ CONFLICTS=	emacs-[0-9]*
 .include "../../mk/bsd.prefs.mk"
 
 .if !defined(USE_WNN4) || ${USE_WNN4} == YES
-.include "../../inputmethod/ja-freewnn-lib/buildlink2.mk"
+.include "../../inputmethod/ja-freewnn-lib/buildlink3.mk"
 .endif
 .if !defined(USE_CANNA) || ${USE_CANNA} == YES
-.include "../../inputmethod/canna-lib/buildlink2.mk"
+.include "../../inputmethod/canna-lib/buildlink3.mk"
 .endif
 
 WRKSRC=		${WRKDIR}/mule
 GNU_CONFIGURE=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_X11=	yes
 
