@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/17 18:19:33 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/20 07:43:22 tron Exp $
 
 DISTNAME=	rp-pppoe-2.6
 CATEGORIES=	net
@@ -15,7 +15,7 @@ CONFIGURE_ENV+=	PPPD=${PPPD}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/pppoe.conf ${WRKSRC}/pppoe-server-options \
-	  ${PREFIX}/share/doc/rp-pppoe
+	  ${PREFIX}/share/examples/rp-pppoe
 
 .include "../../mk/bsd.prefs.mk"
 
