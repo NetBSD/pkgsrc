@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/11/17 23:06:20 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/11/17 23:21:17 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/27 07:41:12 fenner Exp
 #
 
@@ -9,6 +9,8 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		packages@netbsd.org
+
+MIRROR_DISTFILE=	no
 
 GNU_CONFIGURE=		yes
 
