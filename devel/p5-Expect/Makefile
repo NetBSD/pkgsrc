@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 14:38:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/28 12:44:30 wiz Exp $
 
-DISTNAME=	Expect.pm-1.07
-PKGNAME=	p5-expect-1.07
+DISTNAME=	Expect-1.11
+PKGNAME=	p5-expect-1.11
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Expect/}
 
