@@ -1,29 +1,26 @@
-$NetBSD: patch-ac,v 1.1 1999/06/08 09:19:50 sakamoto Exp $
+$NetBSD: patch-ac,v 1.2 1999/10/11 13:00:43 sakamoto Exp $
 
---- doc/Makefile.in.orig	Thu May 15 10:36:15 1997
-+++ doc/Makefile.in	Tue Jun  8 10:48:22 1999
-@@ -31,7 +31,7 @@
+--- doc/Makefile.in.orig	Wed Apr 28 23:21:56 1999
++++ doc/Makefile.in	Mon Oct 11 21:38:08 1999
+@@ -31,5 +31,5 @@
  prefix = @prefix@
  exec_prefix = @exec_prefix@
  binprefix =
 -manprefix =
 +manprefix = j
  
- bindir = @bindir@
- libdir = @libdir@
-@@ -77,18 +77,15 @@
- 	for i in $$d/gawk.info*; do \
- 		$(INSTALL_DATA) $$i $(infodir)/$i ; \
+@@ -83,16 +83,13 @@
+ 		$(INSTALL_DATA) $$i $(infodir)/$$i ; \
  	done; \
 -	if $(SHELL) -c 'install-info --version' > /dev/null 2>&1 ; \
 -	then install-info --info-dir=$(infodir) gawk.info ; \
 -	else true ; fi; exit 0
  
- $(mandir)/gawk$(manext): gawk.1
+ $(mandir)/gawk$(manext):: gawk.1
 -	$(INSTALL_DATA) $(srcdir)/gawk.1 $(mandir)/gawk$(manext)
 +	$(INSTALL_DATA) $(srcdir)/gawk.1 $(mandir)/$(manprefix)gawk$(manext)
  
- $(mandir)/igawk$(manext): igawk.1
+ $(mandir)/igawk$(manext):: igawk.1
 -	$(INSTALL_DATA) $(srcdir)/igawk.1 $(mandir)/igawk$(manext)
 +	$(INSTALL_DATA) $(srcdir)/igawk.1 $(mandir)/$(manprefix)igawk$(manext)
  
@@ -32,4 +29,3 @@ $NetBSD: patch-ac,v 1.1 1999/06/08 09:19:50 sakamoto Exp $
 +	rm -f $(mandir)/$(manprefix)gawk$(manext) $(mandir)/$(manprefix)igawk$(manext) $(infodir)/gawk.info*
  
  dvi:	gawk.dvi
- 

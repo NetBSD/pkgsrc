@@ -1,25 +1,22 @@
-$NetBSD: patch-aa,v 1.1 1999/06/08 09:19:50 sakamoto Exp $
+$NetBSD: patch-aa,v 1.2 1999/10/11 13:00:43 sakamoto Exp $
 
---- Makefile.in.orig	Tue Jun  8 10:31:12 1999
-+++ Makefile.in	Tue Jun  8 10:40:30 1999
-@@ -46,7 +46,7 @@
- exec_prefix = @exec_prefix@
+--- Makefile.in.orig	Mon Oct 11 21:30:42 1999
++++ Makefile.in	Mon Oct 11 21:35:44 1999
+@@ -48,5 +48,5 @@
  exec_suffix = @exec_suffix@
  prefix = @prefix@
 -binprefix =
 +binprefix = j
  manprefix =
  
- bindir = @bindir@
-@@ -192,14 +192,8 @@
- mbc.o:	Makefile
+@@ -195,12 +195,6 @@
  
  install:	gawk$(exec_suffix) info installdirs
 -	-rm -f $(bindir)/gawk$(exec_suffix)
 -	fullname=gawk-$(REL).`./gawk '{print $$3}' $(srcdir)/patchlevel.h`+mb$(MBREL) ; \
 -	$(INSTALL_PROGRAM) gawk$(exec_suffix) $(bindir)/$${fullname}$(exec_suffix) ; \
 -	(cd $(bindir); $(LN) $${fullname}$(exec_suffix) gawk$(exec_suffix))
--	(cd $(bindir); \
+-	(cd $(bindir);\
 -	if [ ! -f awk$(exec_suffix) ]; \
 -	then	$(LN_S) gawk$(exec_suffix) awk$(exec_suffix); \
 -	fi; exit 0)
@@ -27,9 +24,7 @@ $NetBSD: patch-aa,v 1.1 1999/06/08 09:19:50 sakamoto Exp $
 +		$(bindir)/$(binprefix)gawk$(exec_suffix)
  	cd doc && $(MAKE) install
  	cd awklib && $(MAKE) install
- 
-@@ -208,12 +202,7 @@
- 		$(libdir) $(infodir) $(mandir) $(libexecdir)
+@@ -211,10 +205,5 @@
  
  uninstall:
 -	(cd $(bindir); \
@@ -41,4 +36,3 @@ $NetBSD: patch-aa,v 1.1 1999/06/08 09:19:50 sakamoto Exp $
 +	rm -f $(bindir)/$(binprefix)gawk$(exec_suffix))
  	cd doc && $(MAKE) uninstall
  	cd awklib && $(MAKE) uninstall
- 	-rmdir $(datadir) $(libexecdir)
