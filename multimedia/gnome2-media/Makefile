@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/05/15 16:34:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/06/06 08:09:05 jmmv Exp $
 
 DISTNAME=		gnome-media-2.6.2
+PKGREVISION=		1
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,6 +11,8 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Set of audio/multimedia applications for GNOME2
 
 BUILD_USES_MSGFMT=	yes
+DEPENDS+=		gst-plugins-esound>=0.8.1:../../audio/gst-plugins-esound
+DEPENDS+=		gst-plugins-oss>=0.8.1:../../audio/gst-plugins-oss
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
