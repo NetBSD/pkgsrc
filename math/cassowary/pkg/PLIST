@@ -1,0 +1,55 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/24 14:24:27 agc Exp $
+lib/libcassowary.a
+lib/libcassowary.so.0.0
+lib/cassowary/bench
+lib/cassowary/tests
+lib/cassowary/tests/ClTests
+lib/libconstraints.a
+include/Cl.h
+include/ClC.h
+include/cassowary/Cassowary.h
+include/cassowary/ClAbstractVariable.h
+include/cassowary/ClDummyVariable.h
+include/cassowary/ClObjectiveVariable.h
+include/cassowary/ClSlackVariable.h
+include/cassowary/ClConstraint.h
+include/cassowary/ClConstraintHash.h
+include/cassowary/ClEditConstraint.h
+include/cassowary/ClEditOrStayConstraint.h
+include/cassowary/ClErrors.h
+include/cassowary/ClLinearConstraint.h
+include/cassowary/ClLinearEquation.h
+include/cassowary/ClLinearExpression.h
+include/cassowary/ClLinearExpression_fwd.h
+include/cassowary/ClLinearInequality.h
+include/cassowary/ClSolver.h
+include/cassowary/ClSimplexSolver.h
+include/cassowary/ClFDSolver.h
+include/cassowary/ClFDBinaryOneWayConstraint.h
+include/cassowary/ClFDConstraint.h
+include/cassowary/ClStayConstraint.h
+include/cassowary/ClStrength.h
+include/cassowary/ClSymbolicWeight.h
+include/cassowary/ClTableau.h
+include/cassowary/ClFDVariable.h
+include/cassowary/ClFDConnectorVariable.h
+include/cassowary/ClFloatVariable.h
+include/cassowary/ClVariable.h
+include/cassowary/ClReader.h
+include/cassowary/ClTypedefs.h
+include/cassowary/ClMap.h
+include/cassowary/ClSet.h
+include/cassowary/ClPoint.h
+include/cassowary/auto_ptr.h
+include/cassowary/config-inline.h
+include/cassowary/debug.h
+include/cassowary_scm.h
+include/cassowary_scm.hpp
+include/cl-snarf.h
+share/guile/site/cassowary/libconstraints.so.0.0
+share/guile/site/cassowary/libconstraints.a
+doc/cassowary-tr.pdf
+doc/cassowary-tr.ps.gz
+@dirrm lib/cassowary
+@dirrm include/cassowary
+@dirrm share/guile/site/cassowary

@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/24 14:24:27 agc Exp $
+
+Use NetBSD's own pkg libtool
+
+--- configure	1999/08/23 14:29:48	1.1
++++ configure	1999/08/23 14:30:43
+@@ -1819,6 +1819,7 @@
+ fi
+ 
+ 
++if false; then
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -1976,6 +1977,7 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
++fi
+ 
+ 
+ ## ACE == AC-Extended -- this was SCWM_ARG_PATH
