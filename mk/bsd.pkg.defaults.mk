@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.7 2001/10/21 21:26:57 seb Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.8 2001/10/25 18:12:53 tron Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -268,8 +268,8 @@ PATCH_FUZZ_FACTOR?= -F0
 
 #MASTER_SORT=        .ac.at .at .de .ch .se .fi .no
 # Whitespace delimited list of preferred download locations. 
-# MASTER_SITES will be reordered according to the hosts' address last
-# components.
+# MASTER_SITES and PATCH_SITES will be reordered according to the hosts'
+# address last components.
 # Possible: list of domain name suffixes
 # Default: none
 
