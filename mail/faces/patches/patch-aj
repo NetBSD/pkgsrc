@@ -1,16 +1,7 @@
-$NetBSD: patch-aj,v 1.3 2000/07/08 12:47:06 tron Exp $
+$NetBSD: patch-aj,v 1.4 2001/11/30 16:29:28 jlam Exp $
 
---- filters/Makefile.orig	Thu Oct 24 03:26:14 1991
-+++ filters/Makefile	Sat Jul  8 14:25:27 2000
-@@ -34,7 +34,7 @@
- 
- CC		= cc
- CDEFS		= $(NOINDEX) $(SYSV)
--CCOMP		= -g
-+CCOMP		= -pipe -O2
- CFLAGS		= $(CCOMP) $(CDEFS)
- 
- all:		$(BINARIES)
+--- filters/Makefile.orig	Wed Oct 23 22:26:14 1991
++++ filters/Makefile
 @@ -55,12 +55,12 @@
  		rm -f *.o $(BINARIES)
  
@@ -24,12 +15,12 @@ $NetBSD: patch-aj,v 1.3 2000/07/08 12:47:06 tron Exp $
 -		install -c -m 755 xbm2ikon $(BINDIR)
 -		install -c -m 755 xbmcut48 $(BINDIR)
 -		install -c -m 755 xbmsize48 $(BINDIR)
-+		install -s -o bin -m 751 icon2ikon $(BINDIR)
-+		install -s -o bin -m 751 ikon2icon $(BINDIR)
-+		install -s -o bin -m 751 rs2icon $(BINDIR)
-+		install -c -o bin -m 755 fs2ikon $(BINDIR)
-+		install -c -o bin -m 755 fs2xbm $(BINDIR)
-+		install -c -o bin -m 755 ikon2xbm $(BINDIR)
-+		install -c -o bin -m 755 xbm2ikon $(BINDIR)
-+		install -c -o bin -m 755 xbmcut48 $(BINDIR)
-+		install -c -o bin -m 755 xbmsize48 $(BINDIR)
++		${BSD_INSTALL_PROGRAM} icon2ikon $(BINDIR)
++		${BSD_INSTALL_PROGRAM} ikon2icon $(BINDIR)
++		${BSD_INSTALL_PROGRAM} rs2icon $(BINDIR)
++		${BSD_INSTALL_SCRIPT} fs2ikon $(BINDIR)
++		${BSD_INSTALL_SCRIPT} fs2xbm $(BINDIR)
++		${BSD_INSTALL_SCRIPT} ikon2xbm $(BINDIR)
++		${BSD_INSTALL_SCRIPT} xbm2ikon $(BINDIR)
++		${BSD_INSTALL_SCRIPT} xbmcut48 $(BINDIR)
++		${BSD_INSTALL_SCRIPT} xbmsize48 $(BINDIR)
