@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/15 11:45:21 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/15 20:21:28 rh Exp $
 #
 
 DISTNAME=		MesaLib-3.2.1
@@ -10,6 +10,9 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.ssec.wisc.edu/~brianp/Mesa.html
+
+CONFLICTS+=		Mesa-glx-*
+CONFLICTS+=		Mesa<3.2.1
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C/Lib//}
 USE_X11BASE=		yes
