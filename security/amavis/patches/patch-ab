@@ -1,0 +1,49 @@
+$NetBSD: patch-ab,v 1.5 2001/10/22 06:41:30 martti Exp $
+
+--- src/scanmails/scanmails.in.orig	Tue Oct 31 17:47:28 2000
++++ src/scanmails/scanmails.in
+@@ -360,7 +360,7 @@
+ 	sendmail_flags="${sendmail_flags} -C${origconf}"
+    else
+ 	SENDER="$2"
+-	RECIPIENT="$7"
++	RECIPIENT="$4"
+    fi
+ fi
+ 
+@@ -455,6 +455,8 @@
+     cat | ${formail} -f -A "${X_Header_String}" >${tmpdir}/receivedmail
+ else
+     cat >${tmpdir}/receivedmail
++    awk <${tmpdir}/receivedmail >${tmpdir}/header '/^$/ {exit 0;} // {print;}'
++    maildest=`grep '^To:' ${tmpdir}/header | head -1 | cut -d' ' -f 2-`
+ fi
+ 
+ mkdir ${tmpdir}/unpacked
+@@ -1287,7 +1289,7 @@
+ 
+                    V I R U S  A L E R T
+ 
+-  Our viruschecker found a VIRUS in your email to "${receiver}".
++  Our viruschecker found a VIRUS in your email to "${maildest}".
+            We stopped delivery of this email!
+ 
+     Now it is on you to check your system for viruses           
+@@ -1313,7 +1315,7 @@
+ 
+ ############### send a mail to the addressee ########################
+ 
+-cat <<EOF| ${sendmail_wrapper} ${sendmail_flags}
++cat <<EOF| cat - ${tmpdir}/header | ${sendmail_wrapper} ${sendmail_flags}
+ From: ${mailfrom}
+ To: ${receiver}
+ Subject: VIRUS IN A MAIL FOR YOU FROM ${sender}
+@@ -1327,6 +1329,8 @@
+   Delivery of the email was stopped!
+   
+   Please contact your system administrator for details
++
++  The header of the stopped message was:
+ 
+ EOF
+ fi
