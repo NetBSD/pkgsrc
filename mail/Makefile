@@ -1,12 +1,11 @@
- $NetBSD: Makefile,v 1.39 2000/02/13 00:16:23 tron Exp $
+ $NetBSD: Makefile,v 1.40 2000/02/25 01:04:14 wiz Exp $
 # FreeBSD Id: Makefile,v 1.45 1997/08/13 18:35:22 andreas Exp 
 #
 
     SUBDIR += balsa
-#    SUBDIR += bulk_mailer
     SUBDIR += coolmail
     SUBDIR += cucipop
-#    SUBDIR += cyrus
+#    SUBDIR += cyrus		# incomplete package
     SUBDIR += distribute
     SUBDIR += elm
     SUBDIR += exim
@@ -19,41 +18,26 @@
     SUBDIR += imap-uw
     SUBDIR += mailagent
     SUBDIR += mailwrapper
-#    SUBDIR += majorcool
     SUBDIR += majordomo
     SUBDIR += metamail
-#    SUBDIR += mew
-#    SUBDIR += mh
     SUBDIR += mhonarc
     SUBDIR += mush
     SUBDIR += mutt
     SUBDIR += nmh
      SUBDIR += p5-MIME-tools
-#    SUBDIR += p5-Mail-Folder
     SUBDIR += p5-Mail-IMAPClient
-#    SUBDIR += p5-Mail-POP3Client
-#    SUBDIR += p5-Mail-Tools
-     SUBDIR += p5-MailTools
-#    SUBDIR += pgpsendmail
+    SUBDIR += p5-MailTools
     SUBDIR += pine
-#    SUBDIR += popclient
-#    SUBDIR += poppassd
-#    SUBDIR += popper
     SUBDIR += postfix
-#    SUBDIR += premail
     SUBDIR += procmail
     SUBDIR += qpopper
     SUBDIR += rblcheck
     SUBDIR += sendmail
     SUBDIR += sendmail88
-#    SUBDIR += smail
     SUBDIR += smtpfeed
     SUBDIR += spruce
     SUBDIR += wmmail
-#    SUBDIR += xfaces
     SUBDIR += xfmail
-#    SUBDIR += xlbiff
     SUBDIR += xmailbox
-#    SUBDIR += youbin
 
 .include "../mk/bsd.pkg.subdir.mk"
