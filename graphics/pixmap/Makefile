@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/01/09 02:51:12 fredb Exp $
+# $NetBSD: Makefile,v 1.16 2002/04/17 02:52:48 jlam Exp $
 # FreeBSD: Makefile,v 1.8 1996/11/18 09:53:36 asami Exp
 #
 
@@ -18,7 +18,6 @@ MAINTAINER=		packages@netbsd.org
 COMMENT=		Pixmap editor based on XPM library
 
 USE_IMAKE=		YES
-USE_MOTIF=		YES
 
 WRKSRC=			${WRKDIR}/pixmap
 
