@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2000/10/27 12:25:08 mjl Exp $
+# $NetBSD: Makefile,v 1.148 2000/10/31 13:34:14 wennmach Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -114,6 +114,7 @@
     SUBDIR += patch
     SUBDIR += pccts
     SUBDIR += pcre
+    SUBDIR += popt
     SUBDIR += prcs
     SUBDIR += pth
     SUBDIR += ptl2
