@@ -1,0 +1,52 @@
+--- Makefile.in.orig	Tue Sep 16 22:23:57 1997
++++ Makefile.in	Sat Feb 21 23:49:32 1998
+@@ -185,7 +185,7 @@
+ # Subdirectories to make recursively.  `lisp' is not included
+ # because the compiled lisp files are part of the distribution
+ # and you cannot remake them without installing Emacs first.
+-SUBDIR = lib-src src leim
++SUBDIR = lib-src src leim man
+ 
+ # The makefiles of the directories in $SUBDIR.
+ SUBDIR_MAKEFILES = lib-src/Makefile man/Makefile src/Makefile oldXMenu/Makefile lwlib/Makefile leim/Makefile
+@@ -357,14 +357,8 @@
+ 	if [ `(cd ${srcdir}/info && /bin/pwd)` != `(cd ${infodir} && /bin/pwd)` ]; \
+ 	then \
+ 	  (cd ${infodir};  \
+-	   if [ -f dir ]; then \
+-	     if [ ! -f dir.old ]; then mv -f dir dir.old; \
+-	     else mv -f dir dir.bak; fi; \
+-	   fi; \
+ 	   cd ${srcdir}/info ; \
+-	   (cd $${thisdir}; ${INSTALL_DATA} ${srcdir}/info/dir ${infodir}/dir); \
+-	   (cd $${thisdir}; chmod a+r ${infodir}/dir); \
+-	   for f in ccmode* cl* dired-x* ediff* emacs* forms* gnus* info* message* mh-e* sc* vip*; do \
++	   for f in ccmode* cl* dired-x* ediff* emacs* forms* gnus* message* mh-e* sc* vip*; do \
+ 	     (cd $${thisdir}; \
+ 	      ${INSTALL_DATA} ${srcdir}/info/$$f ${infodir}/$$f; \
+ 	      chmod a+r ${infodir}/$$f); \
+@@ -374,8 +368,13 @@
+ 	cd ${srcdir}/etc; \
+ 	for page in emacs etags ctags ; do \
+ 	  (cd $${thisdir}; \
+-	   ${INSTALL_DATA} ${srcdir}/etc/$${page}.1 ${man1dir}/$${page}${manext}; \
+-	   chmod a+r ${man1dir}/$${page}${manext}); \
++	   if [ $${page} = emacs ]; then \
++	     ${INSTALL_DATA} ${srcdir}/etc/$${page}.1 ${man1dir}/$${page}${manext}; \
++	     chmod a+r ${man1dir}/$${page}${manext}; \
++	   else \
++	     ${INSTALL_DATA} ${srcdir}/etc/$${page}.1 ${man1dir}/emacs-$${page}${manext}; \
++	     chmod a+r ${man1dir}/emacs-$${page}${manext}; \
++	   fi) \
+ 	done
+ 
+ ### Install LEIM files.  Although they are machine-independent, we
+@@ -421,7 +420,7 @@
+ 	    esac ;					\
+ 	  fi ;						\
+ 	done
+-	(cd ${infodir} && rm -f cl* dired-x* ediff* emacs* forms* gnus* info* mh-e* sc* vip*)
++	(cd ${infodir} && rm -f cl* dired-x* ediff* emacs* forms* gnus* mh-e* sc* vip*)
+ 	(cd ${man1dir}  && rm -f emacs.1 etags.1 ctags.1)
+ 	(cd ${bindir}  && rm -f emacs-${version} $(EMACS))
+ 
