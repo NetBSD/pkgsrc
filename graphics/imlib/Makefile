@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.86 2004/04/23 16:24:14 minskim Exp $
-#
+# $NetBSD: Makefile,v 1.86.4.1 2004/12/13 18:03:27 salo Exp $
 
-DISTNAME=		imlib-1.9.14
-PKGREVISION=		6
-CATEGORIES=		graphics
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/imlib/1.9/}
+DISTNAME=	imlib-1.9.15
+PKGREVISION=	1
+CATEGORIES=	graphics
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/imlib/1.9/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		tron@NetBSD.org
-HOMEPAGE=		http://www.nl.rasterman.com/imlib.html
-COMMENT=		Image manipulation library for X11
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.nl.rasterman.com/imlib.html
+COMMENT=	Image manipulation library for X11
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
-USE_X11=		yes
-USE_LIBTOOL=		yes
-PKGCONFIG_OVERRIDE=	imlib.pc.in
-GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
+USE_LIBTOOL=		yes
+USE_X11=		yes
+GNU_CONFIGURE=		yes
+PKGCONFIG_OVERRIDE=	imlib.pc.in
 UNLIMIT_RESOURCES=	datasize
 
 CPPFLAGS+=		-DENABLE_NLS
