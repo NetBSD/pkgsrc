@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2000/08/15 14:29:13 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2000/08/23 23:14:33 tron Exp $
 #
 
 DISTNAME=       bxform-088
@@ -23,8 +23,6 @@ ARCH_SUBDIR=    netBSD-${MACHINE_ARCH}
 
 DIST_SUBDIR=		xforms-${MACHINE_ARCH}
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
 			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
 
@@ -38,10 +36,11 @@ DISTNAME=	bxform-088-ELF
 .endif
 
 ## Define OBJMACHINE so WRKDIR is defined to be ${MACHINE_ARCH}-specific.
-OBJMACHINE=	yes
+OBJMACHINE=	YES
 
-USE_X11BASE=	yes
-USE_LIBTOOL=	yes
+USE_X11BASE=	YES
+USE_XPM=	YES
+USE_LIBTOOL=	YES
 MAKEFILE=	${FILESDIR}/Makefile
 PLIST_SRC=	${PKGDIR}/PLIST.mi ${PKGDIR}/PLIST.shlib
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/07/25 08:33:58 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/23 23:14:29 tron Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/12/12 22:27:21 jseger Exp
 #
 
@@ -15,14 +15,14 @@ MAINTAINER=		packages@NetBSD.org
 HOMEPAGE=		http://plasma-gate.weizmann.ac.il/Xmgr/
 
 BUILD_DEPENDS=		bison:../../devel/bison
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
 DEPENDS+=		netcdf-3.4:../../devel/netcdf
 
-USE_FORTRAN=		# defined
-USE_X11=		# defined
-USE_MOTIF=		# defined
+USE_FORTRAN=		YES
+USE_X11=		YES
+USE_XPM=		YES
+USE_MOTIF=		YES
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-acegr-home="${PREFIX}"
 CONFIGURE_ARGS+=	--enable-extra-incpath="${EXTRA_INCDIRS}"
 CONFIGURE_ARGS+=	--enable-extra-ldpath="${LOCALBASE}/lib"

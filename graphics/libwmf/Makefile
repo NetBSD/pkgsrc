@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/08/06 14:18:32 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2000/08/23 23:14:29 tron Exp $
 #
 
 DISTNAME=		libwmf-0.1.17
@@ -12,13 +12,10 @@ HOMEPAGE=		http://www.csn.ul.ie/~caolan/docs/libwmf.html
 BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 DEPENDS+=		freetype-lib>=1.3.1:../../graphics/freetype-lib
 DEPENDS+=		png>=1.0.6:../../graphics/png
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-WRKSRC=			${WRKDIR}/libwmf
-USE_X11=		# defined
-
-GNU_CONFIGURE=		# defined
-
+USE_X11=		YES
+USE_XPM=		YES
+GNU_CONFIGURE=		YES
 EVAL_PREFIX+=		XPMDIR=xpm
 CONFIGURE_ARGS+=	--includedir="${PREFIX}/include/libwmf"
 CONFIGURE_ARGS+=	--with-png="${LOCALBASE}"
@@ -27,9 +24,9 @@ CONFIGURE_ARGS+=	--with-xpm="${XPMDIR}"
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 CPPFLAGS+=		-I${LOCALBASE}/include			# png.h
-
 INCLUDEDIR=		${PREFIX}/include/libwmf
 HTMLDIR=		${PREFIX}/share/doc/html/libwmf
+WRKSRC=			${WRKDIR}/libwmf
 
 pre-configure:
 	cd ${WRKSRC} && autoconf

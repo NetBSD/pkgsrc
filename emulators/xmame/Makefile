@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2000/07/13 20:54:01 martin Exp $
+# $NetBSD: Makefile,v 1.38 2000/08/23 23:14:24 tron Exp $
 #
 
 DISTNAME=		xmame-0.37b4.1
@@ -10,10 +10,10 @@ MAINTAINER=		soren@netbsd.org
 HOMEPAGE=		http://x.mame.net/
 
 DEPENDS=		unzip>=5.40:../../archivers/unzip
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-USE_X11BASE=		yes
-USE_GMAKE=		yes
+USE_X11BASE=		YES
+USE_XPM=		YES
+USE_GMAKE=		YES
 MAKE_ENV+=		OPSYS=${OPSYS} ARCH=${ARCH} \
 			MAME_CPU=${MAME_CPU} \
 			INSTALL_MAN="${INSTALL_MAN}" \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/07/31 04:14:07 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2000/08/23 23:14:28 tron Exp $
 
 DISTNAME=		gimp-1.1.24
 CATEGORIES=		graphics
@@ -16,13 +16,13 @@ DEPENDS+=		gtk+>=1.2.7:../../x11/gtk
 DEPENDS+=		mpeg-1.2.1:../../graphics/mpeg-lib
 DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-USE_X11BASE=		yes
-USE_GMAKE=		yes
-USE_LIBTOOL=		yes
+USE_X11BASE=		YES
+USE_XPM=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=		YES
 EVAL_PREFIX+=		GTKDIR=gtk+
 CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}" \
 			--disable-perl \

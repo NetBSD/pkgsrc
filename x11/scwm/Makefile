@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/08/17 14:15:49 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2000/08/23 23:14:35 tron Exp $
 #
 
 DISTNAME=	scwm-0.9
@@ -12,7 +12,6 @@ DEPENDS+=	guile>=1.3.2:../../lang/guile
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	gtar-1.12:../../archivers/gtar
 DEPENDS+=	readline>=4.0:../../devel/readline
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 BROKEN=		Current release does not work with guile-1.4.0.
 
@@ -21,9 +20,10 @@ CONFIGURE_ARGS+=	--with-guile-prefix=${LOCALBASE}	\
 			--with-gtk-prefix="${GTKDIR}"		\
 			--enable-multibyte
 
-USE_X11BASE=	yes
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_LIBTOOL=	yes
+USE_X11BASE=	YES
+USE_XPM=	YES
+GNU_CONFIGURE=	YES
+USE_GMAKE=	YES
+USE_LIBTOOL=	YES
 
 .include "../../mk/bsd.pkg.mk"

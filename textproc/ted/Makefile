@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/04/22 02:05:11 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.10 2000/08/23 23:14:31 tron Exp $
 
 DISTNAME=	ted-2.8.src
 PKGNAME=	ted-2.8
@@ -14,10 +14,10 @@ DEPENDS+=	libungif-*:../../graphics/libungif
 DEPENDS+=       jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png>=1.0.6:../../graphics/png
 DEPENDS+=       tiff-*:../../graphics/tiff
-DEPENDS+=       xpm-3.4k:../../graphics/xpm
 
 USE_MOTIF=	YES
 USE_X11=	YES
+USE_XPM=	YES
 
 AFMDIR=		${PREFIX}/share/Ted/afm
 INDDIR=		${PREFIX}/share/Ted/ind

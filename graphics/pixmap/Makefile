@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/04/15 20:39:43 tron Exp $
+# $NetBSD: Makefile,v 1.10 2000/08/23 23:14:27 tron Exp $
 # FreeBSD: Makefile,v 1.8 1996/11/18 09:53:36 asami Exp
 #
 
@@ -9,9 +9,9 @@ MASTER_SITES=		${MASTER_SITE_XCONTRIB:=applications/pixmap/}
 
 MAINTAINER=		packages@netbsd.org
 
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
+USE_IMAKE=		YES
+USE_XPM=		YES
 
 WRKSRC=			${WRKDIR}/pixmap
-USE_IMAKE=		yes
 
 .include "../../mk/bsd.pkg.mk"

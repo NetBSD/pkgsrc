@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/07/22 10:05:47 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/23 23:14:37 tron Exp $
 #
 
 DISTNAME=       fvwm-${PKG_VERSION}
@@ -14,9 +14,8 @@ MASTER_SITES=   ftp://ftp.hpc.uh.edu/pub/fvwm/version-2/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.fvwm.org/xpmroot.html
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-
 USE_X11BASE=	YES
+USE_XPM=	YES
 WRKSRC=		${WRKDIR}/${DISTNAME}/utils
 
 EVAL_PREFIX=	XPMDIR=xpm

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/06/21 13:17:52 mrg Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/23 23:14:34 tron Exp $
 
 DISTNAME=	tvtwm.pl11
 PKGNAME=	tvtwm-11
@@ -7,10 +7,9 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=window_managers/}
 
 MAINTAINER=	packages@netbsd.org
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
+USE_IMAKE=	YES
+USE_XPM=	YES
 
 WRKSRC=		${WRKDIR}/tvtwm
-
-USE_IMAKE=	yes
 
 .include "../../mk/bsd.pkg.mk"
