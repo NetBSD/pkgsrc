@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.c,v 1.1.1.1 2003/07/31 06:18:43 lukem Exp $	*/
+/*	$NetBSD: fetch.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
 
 /*-
  * Copyright (c) 1997-2003 The NetBSD Foundation, Inc.
@@ -42,7 +42,7 @@
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: fetch.c,v 1.1.1.1 2003/07/31 06:18:43 lukem Exp $");
+__RCSID("$NetBSD: fetch.c,v 1.1 2004/03/11 13:01:01 grant Exp $");
 #endif /* not lint */
 #endif
 

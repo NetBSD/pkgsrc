@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp_var.h,v 1.1.1.1 2003/02/28 10:44:54 lukem Exp $	*/
+/*	$NetBSD: ftp_var.h,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
 
 /*-
  * Copyright (c) 1996-2003 The NetBSD Foundation, Inc.
