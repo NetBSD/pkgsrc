@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/18 04:26:05 xtraeme Exp $
-#
+# $NetBSD: Makefile,v 1.5 2004/01/30 11:31:37 jlam Exp $
 
 DISTNAME=	pure-ftpd-1.0.17a
 CATEGORIES=	net
@@ -16,9 +15,9 @@ MAINTAINER=	dawszy@arhea.net
 HOMEPAGE=	http://www.pureftpd.org/
 COMMENT=	FTP daemon with optional SQL support
 
-USE_BUILDLINK2=	YES
-USE_PKGINSTALL=	YES
-GNU_CONFIGURE=	YES
+USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		yes
+GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-everything	\
 			--with-privsep		\
@@ -26,29 +25,26 @@ CONFIGURE_ARGS+=	--with-everything	\
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(PURE_FTPD_USE_MYSQL) && !empty(PURE_FTPD_USE_MYSQL:M[Yy][Ee][Ss])
-.include "../../databases/mysql-client/buildlink2.mk"
+.if !empty(PURE_FTPD_USE_MYSQL:M[Yy][Ee][Ss])
+.  include "../../databases/mysql-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mysql
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.mysql-client}/include/mysql
-LDFLAGS+=		-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql
-LDFLAGS+=		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib/mysql
 BUILD_DEFS+=		PURE_FTPD_USE_MYSQL
 .endif
 
-.if defined(PURE_FTPD_USE_PGSQL) && !empty(PURE_FTPD_USE_PGSQL:M[Yy][Ee][Ss])
-.include "../../databases/postgresql-lib/buildlink2.mk"
+.if !empty(PURE_FTPD_USE_PGSQL:M[Yy][Ee][Ss])
+.  include "../../databases/postgresql-lib/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pgsql
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.postgresql-lib}/include/pgsql
 BUILD_DEFS+=		PURE_FTPD_USE_PGSQL
 .endif
 
-.if defined(PURE_FTPD_USE_TLS) && !empty(PURE_FTPD_USE_TLS:M[Yy][Ee][Ss])
-.include "../../security/openssl/buildlink2.mk"
+.if !empty(PURE_FTPD_USE_TLS:M[Yy][Ee][Ss])
+.  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-tls
 BUILD_DEFS+=		PURE_FTPD_USE_TLS
 .endif
 
-.if defined(PURE_FTPD_USE_VIRTUAL_CHROOT) && !empty(PURE_FTPD_USE_VIRTUAL_CHROOT:M[Yy][Ee][Ss])
+.if !empty(PURE_FTPD_USE_VIRTUAL_CHROOT:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-virtualchroot
 BUILD_DEFS+=		PURE_FTPD_USE_VIRTUAL_CHROOT
 .endif
