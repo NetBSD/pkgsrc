@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/10/28 01:08:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.34 2004/11/09 06:11:48 xtraeme Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 SVR4_PKGNAME=		mysqc
@@ -8,16 +8,15 @@ CONFLICTS=		{mysql-client-[0-9]*,mysql3-client-[0-9]*}
 
 .include "Makefile.common"
 
+CONFIGURE_ARGS+=	--without-extra-tools
 CONFIGURE_ARGS+=	--without-server
+CONFIGURE_ARGS+=	--enable-thread-safe-client
 USE_BUILDLINK3=		yes
 UNWRAP_FILES=		scripts/mysql_config
 
 INFO_FILES=		mysql.info
 
 post-install:
-	cd ${PREFIX}/man/man1 && \
-		 ${RM} -f mysqld.1 mysqld_multi.1 mysqld_safe.1 safe_mysqld.1
-	cd ${PREFIX}/share/mysql && ${RM} -f mysql.server
 	${INSTALL_DATA} ${WRKSRC}/Docs/mysql.info ${PREFIX}/info
 
 .include "../../devel/readline/buildlink3.mk"
