@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.1.1.1 2004/03/11 13:04:10 grant Exp $	*/
+/*	$NetBSD: main.c,v 1.2 2005/01/05 21:54:40 tv Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -39,7 +39,7 @@
  */
 
 #ifdef MAKE_BOOTSTRAP
-static char rcsid[] = "$NetBSD: main.c,v 1.1.1.1 2004/03/11 13:04:10 grant Exp $";
+static char rcsid[] = "$NetBSD: main.c,v 1.2 2005/01/05 21:54:40 tv Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
@@ -51,13 +51,13 @@ __COPYRIGHT("@(#) Copyright (c) 1988, 1989, 1990, 1993\n\
 #if 0
 static char sccsid[] = "@(#)main.c	8.3 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: main.c,v 1.1.1.1 2004/03/11 13:04:10 grant Exp $");
+__RCSID("$NetBSD: main.c,v 1.2 2005/01/05 21:54:40 tv Exp $");
 #endif
 #endif /* not lint */
 #endif
 
 #if !defined(MAKE_BOOTSTRAP) && !defined(lint)
-__IDSTRING(rcs_id,"$Id: main.c,v 1.1.1.1 2004/03/11 13:04:10 grant Exp $");
+__IDSTRING(rcs_id,"$Id: main.c,v 1.2 2005/01/05 21:54:40 tv Exp $");
 #endif
 
 /*-
@@ -1032,7 +1032,16 @@ ReadMakefile(p, q)
 		Parse_File("(stdin)", stdin);
 		Var_Set("MAKEFILE", "", VAR_GLOBAL, 0);
 	} else {
+#ifdef __INTERIX
+		/* XXX tv: Hack pending a fix to bsd.pkg.mk to use some other
+		   variable name than this.  When using a NFS pkgsrc repository,
+		   bmake thinks "makefile" exists when running under "su" even
+		   though the filesystem is mounted case-sensitive on the
+		   non-su side.  This hoses all sorts of fun things. */
+		setMAKEFILE = FALSE;
+#else
 		setMAKEFILE = strcmp(fname, ".depend");
+#endif
 
 		/* if we've chdir'd, rebuild the path name */
 		if (curdir != objdir && *fname != '/') {
