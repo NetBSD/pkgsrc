@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 1999/04/25 10:10:51 tron Exp $
+# $NetBSD: Makefile,v 1.42 1999/04/25 18:46:30 tv Exp $
 #
 
 DISTNAME=	ImageMagick-4.2.2
@@ -14,22 +14,22 @@ DEPENDS+=	mpeg2codec-1.2:../../graphics/mpeg2codec
 DEPENDS+=	png-1.0.3:../../graphics/png
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 
-# "cc" on 1.3/1.3.x ELF systems doesn't recognize "-R" option.
-.if !exists(/usr/bin/c89)
-NOT_FOR_ARCHS=	alpha mips powerpc
-.endif
-
-pre-configure:
-.if exists(/usr/lib/libbz2.a)
-		@echo >${WRKSRC}/bzlib.tmpl "#define HasBZLIB"
-.else
-		@echo >${WRKSRC}/bzlib.tmpl
-.endif
-		@cd ${WRKSRC} && ./configure --prefix=${X11BASE}
-
 MIRROR_DISTFILE= no
-USE_IMAKE=	yes
-XMKMF=		${MAKE_ENV} xmkmf -a
-MAKE_ENV+=	LOCALBASE=${LOCALBASE} PREFIX=${PREFIX}
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+
+# For things for which we do not specify an explicit dependency above, disable
+# so that we don't cause implicit "hidden" dependencies.  Users may reenable
+# any of these manually as desired (PerlMagick should probably be a separate
+# pkg, however).
+
+CONFIGURE_ARGS=	--without-perl \
+		--without-dps --without-fpx --without-hdf --without-jbig \
+		--without-ttf
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/Copyright.txt ${WRKSRC}/QuickStart.txt \
+		${PREFIX}/share/ImageMagick/
 
 .include "../../mk/bsd.pkg.mk"
