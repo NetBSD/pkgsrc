@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.135 2003/03/22 07:11:54 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.136 2003/03/24 18:25:11 jschauma Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1042,10 +1042,10 @@ MAJORDOMO_USER?= majordom
 # Possible: any
 # Default: majordom
 
-MESA_REQD?= 3.4.2
+MESA_REQD?= 5.0
 # Used by packages depending on an OpenGL implementation
 # Possible: any numerical value
-# Default: 3.4.2
+# Default: 5.0
 
 MOZILLA_USE_XFT?=	NO
 # Used by mozilla packages to enable Xft support where available.
