@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.20 2004/03/12 19:24:47 wiz Exp $
+$NetBSD: patch-ah,v 1.21 2004/08/31 11:27:12 wiz Exp $
 
---- Makefile.in.orig	Wed Feb 18 04:35:11 2004
+--- Makefile.in.orig	2004-08-15 13:01:37.000000000 +0200
 +++ Makefile.in
 @@ -21,7 +21,7 @@ top_srcdir=@top_srcdir@
  DESTDIR=
@@ -11,7 +11,7 @@ $NetBSD: patch-ah,v 1.20 2004/03/12 19:24:47 wiz Exp $
  SFTP_SERVER=$(libexecdir)/sftp-server
  SSH_KEYSIGN=$(libexecdir)/ssh-keysign
  RAND_HELPER=$(libexecdir)/ssh-rand-helper
-@@ -235,7 +235,7 @@ check-config:
+@@ -237,7 +237,7 @@ check-config:
  scard-install:
  	(cd scard && $(MAKE) DESTDIR=$(DESTDIR) install)
  

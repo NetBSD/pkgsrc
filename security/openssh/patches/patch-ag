@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.4 2004/08/04 06:43:52 minskim Exp $
+$NetBSD: patch-ag,v 1.5 2004/08/31 11:27:12 wiz Exp $
 
---- readconf.c.orig	Mon Mar  8 06:12:36 2004
+--- readconf.c.orig	2004-07-17 08:12:08.000000000 +0200
 +++ readconf.c
-@@ -186,7 +186,9 @@ static struct {
+@@ -187,7 +187,9 @@ static struct {
  #endif
  	{ "clearallforwardings", oClearAllForwardings },
  	{ "enablesshkeysign", oEnableSSHKeysign },
