@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2000/08/27 20:55:56 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/28 23:01:46 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
 DISTNAME=		perl-${PERL_VERSION}
-PKGNAME=		perl-${PERL_VERSION}nb1
+PKGNAME=		perl-${PERL_VERSION}nb2
 PERL_VERSION=		5.6.0
 CATEGORIES=		lang devel perl5
 MASTER_SITES=		ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/ \
@@ -50,6 +50,7 @@ post-patch:
 #
 pre-configure:
 	cd ${WRKSRC}/ext; ${RM} -rf Data Devel GDBM_File
+	cd ${WRKSRC}/lib; ${RM} -rf CGI CGI.pm
 	cd ${WRKSRC}/utils; ${RM} -f dprofpp.PL
 
 post-install:
