@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/11/10 07:59:02 tron Exp $
+# $NetBSD: Makefile,v 1.25 2002/12/04 14:13:16 tron Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0
@@ -35,19 +35,9 @@ NO_CONFIGURE=		YES
 OSVERSION_SPECIFIC=	YES
 MAKE_ENV+=		BSDSRCDIR="${BSDSRCDIR}"
 
-BSDSRCDIR?=	/nonexistent	# to override <bsd.own.mk>, MUST be
-                                # set this way BEFORE bsd.prefs.mk
-
 .include "../../mk/bsd.prefs.mk"
 
 pre-extract:
-.if ${BSDSRCDIR} == "/nonexistent"
-	@${ECHO_MSG} "Please set BSDSRCDIR in /etc/mk.conf, pointing it"
-	@${ECHO_MSG} "to a directory that contains sources that match"
-	@${ECHO_MSG} "your currently running system (esp. kernel), e.g."
-	@${ECHO_MSG} "/usr/src."
-	@${FALSE}
-.endif
 .if !exists(${BSDSRCDIR}/sys/lib/libkern/libkern.h)
 	@${ECHO_MSG} "Need a kernel source tree in ${BSDSRCDIR}/sys."
 	@${ECHO_MSG} "(Or set BSDSRCDIR correctly in /etc/mk.conf.)"
