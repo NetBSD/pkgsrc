@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2003/07/17 21:44:42 grant Exp $
+# $NetBSD: Makefile,v 1.35 2003/08/23 15:13:59 jschauma Exp $
 #
 
 VERSION=	1.1.8
 PKGNAME=	jdk-${VERSION}
 PKGREVISION=	4
-CATEGORIES=	lang
+CATEGORIES=	lang java
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/java/i386/${VERSION}/ \
 		ftp://ftp.de.NetBSD.org/pub/NetBSD/misc/java/i386/${VERSION}/
 EXTRACT_SUFX=	.tgz
