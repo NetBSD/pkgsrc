@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2004/12/05 20:43:21 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/03/27 15:43:36 wiz Exp $
 
 DISTNAME=	tworld-1.2.1
 PKGNAME=	${DISTNAME:S/^t/tile/}
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.muppetlabs.com/~breadbox/pub/software/tworld/
 
