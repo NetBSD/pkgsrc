@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1999/10/06 04:34:42 simonb Exp $
+
 --- c++/ClC.cc.orig	Wed Sep  8 18:38:16 1999
 +++ c++/ClC.cc	Wed Sep  8 18:38:36 1999
 @@ -17,7 +17,9 @@

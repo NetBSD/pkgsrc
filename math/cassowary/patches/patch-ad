@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1999/10/06 04:34:42 simonb Exp $
+
 --- c++/ClC.h.orig	Wed Sep  8 18:46:40 1999
 +++ c++/ClC.h	Wed Sep  8 18:46:50 1999
 @@ -23,7 +23,9 @@
