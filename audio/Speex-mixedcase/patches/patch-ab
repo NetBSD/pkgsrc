@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/10/13 16:04:48 wiz Exp $
+
+--- src/Makefile.in.orig	Fri Oct 11 05:59:10 2002
++++ src/Makefile.in
+@@ -103,10 +103,10 @@ noinst_HEADERS = wav_io.h
+ bin_PROGRAMS = speexenc speexdec
+ 
+ speexenc_SOURCES = speexenc.c wav_io.c
+-speexenc_LDADD = $(top_srcdir)/libspeex/libspeex.la $(OGG_LDFLAGS) $(OGG_LIBS)
++speexenc_LDADD = $(top_srcdir)/libspeex/libspeex.la $(OGG_LDFLAGS) $(OGG_LIBS) ${LIBOSSAUDIO}
+ 
+ speexdec_SOURCES = speexdec.c wav_io.c
+-speexdec_LDADD = $(top_srcdir)/libspeex/libspeex.la $(OGG_LDFLAGS) $(OGG_LIBS)
++speexdec_LDADD = $(top_srcdir)/libspeex/libspeex.la $(OGG_LDFLAGS) $(OGG_LIBS) ${LIBOSSAUDIO}
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_CLEAN_FILES = 
+ bin_PROGRAMS =  speexenc$(EXEEXT) speexdec$(EXEEXT)
