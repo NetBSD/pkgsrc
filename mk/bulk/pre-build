@@ -1,0 +1,84 @@
+#!/bin/sh
+# $Id: pre-build,v 1.1 2000/09/15 22:05:47 hubertf Exp $
+#
+# Clean up system to be ready for bulk pkg build
+#
+# (c) 2000 Hubert Feyrer, All Rights Reserved.
+#
+
+#set -v		# Debug
+
+# Pull in USR_PKGSRC, CVS_USER:
+if [ -f "$BULK_BUILD_CONF" ]; then
+    . $BULK_BUILD_CONF
+else
+    . `dirname $0`/build.conf
+fi
+
+
+#
+# Install cvs package and do a cvs update here
+#
+echo Installing required pkgs for CVS update
+( cd ${USR_PKGSRC}/devel/cvs ; make bulk-install )
+( cd ${USR_PKGSRC}/security/ssh ; make bulk-install )
+echo Performing CVS update - this will take some time
+su - ${CVS_USER} -c 'stty sane ; cd '${USR_PKGSRC}' ; cvs -q update -Pd'
+echo CVS update done.
+
+#
+# Remove old/broken distfiles and binary packages
+#
+echo Removing old/broken distfiles and binary packages
+( cd ${USR_PKGSRC}/pkgtools/pkglint ; make bulk-install )
+lintpkgsrc -r
+echo done.
+
+#
+# Clean out everything and it's mother
+#
+echo Removing all installed packages 
+mount -o async -u /usr
+
+if [ -d /var/db/pkg ]; then
+	cd /var/db/pkg
+	for pkg in *
+	do
+		echo pkg_delete -rR $pkg
+		pkg_delete -rR $pkg
+	done
+	for pkg in *
+	do
+		echo pkg_delete -rR $pkg
+		pkg_delete -rR -f $pkg
+	done
+	
+	# We've tried our best to get rid of the pkgs, now do it the hard way
+	# If it wasn't for stuff in $X11BASE, I wouldn't have hard feelings
+	# about this!
+	rm -fr *
+fi
+	
+# General cleanout - easy!
+cd /usr/pkg
+rm -fr *
+rm -fr .??*
+
+# Stuff known to be broken
+rm -fr /usr/X11R6/share/gimp
+rm -fr /usr/X11R6/share/gnome
+rm -fr /usr/X11R6/share/kde
+rm -fr /usr/X11R6/share/netscape
+rm -fr /var/tmp/inst*
+rm -fr /usr/X11R6/lib/libgimp*	# gimp doesn't build with old libs around
+
+
+# Clean up state files
+cd ${USR_PKGSRC}
+rm -f .broken* */*/.broken*
+rm -f .make* */*/.make*
+rm -f .start*
+
+mount -o noasync -u /usr
+
+touch .start.${arch}

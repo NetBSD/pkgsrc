@@ -1,0 +1,231 @@
+#!/usr/pkg/bin/perl
+# $Id: post-build,v 1.1 2000/09/15 22:05:47 hubertf Exp $
+#
+# Collect stuff after a pkg bulk build
+#
+# (c) 2000 Hubert Feyrer, All Rights Reserved.
+#
+
+use File::Basename;
+
+# Where config vars are stored (/bin/sh syntax)
+
+if (-f $ENV{"BULK_BUILD_CONF"}) {
+    $BULK_BUILD_CONF=$ENV{"BULK_BUILD_CONF"};
+} else {
+    $BULK_BUILD_CONF=dirname("$0")."/build.conf";
+}
+
+# Dig given variable out of config file, and set it
+sub getconf
+{
+    local($var)=@_;
+    local($val);
+
+    chomp($val=`. ./$BULK_BUILD_CONF ; echo \$$var`);
+    eval "\$$var=\"$val\";";
+}
+
+
+getconf("FTPURL");		# "pub/NetBSD/pkgstat/`date +%Y%m%d.%H%M`"
+getconf("FTP");			# "/disk1/ftp/${FTPURL}"
+getconf("REPORT");		# "broken.html"
+getconf("USR_PKGSRC");		# "/usr/pkgsrc"
+getconf("osrev");	       	# `uname -r`
+getconf("arch"); 		# `uname -m`
+chomp($date=`date`);
+
+$verbose=1;
+
+
+if ($verbose) {
+	print "\n";
+	print "*** NetBSD $osrev/$arch\n";
+	print "*** Result of bulk pkgsrc build as of $date:\n";
+	print "\n";
+}
+
+
+system("mkdir -p ${FTP}");
+
+# Copy over the output from the build process
+chdir("$USR_PKGSRC");
+system("tar plcf - .broken* */*/.broken* | ( cd ${FTP} ; tar plxf - )");
+
+
+open(HTML,">$REPORT") or die;
+print HTML <<EOHTML
+<HTML>
+<HEAD>
+<TITLE>NetBSD-$osrev/$arch bulk package build</TITLE>
+</HEAD>
+
+<BODY BGCOLOR=#cccccc>
+
+<H1> NetBSD $osrev/$arch </H1>
+<H2>Output of the pkgsrc bulk build<BR>
+    as of $date</H2>
+
+    Packages not listed here resulted in a <A
+    HREF="../../packages/">binary package</A>. To see the output of
+    the (failed) build, select the package below.
+    <P>
+
+    Files not listed in PLISTs can be found in <A HREF="leftovers-${arch}.html">this list</A>.
+    <P>
+    
+<TABLE>
+<TR><TH> Package <TH> State <TH> Last touched by <TH> File touched last <TH> Maintainer
+EOHTML
+;
+
+# some nifty postprocessing of $FTP/.broken* -> HTML here
+$nunpackaged = $nbroken = 0;
+chdir("$FTP");
+$bf=".broken.$arch";
+open(BF,"sort +1 $bf |") or die "can't open .broken-file '$bf'";
+while (<BF>) {
+    ($nerrors, $bf) = split;
+    ( $pkg = $bf ) =~ s,/.broken.*$,,;
+
+#    next
+#	if $pkg!~/^a/; # DEBUG! HF
+    
+    if ($nerrors > 0) {
+	$color = "red";
+	$state = "build broken";
+	$nbroken++;
+    } else {
+	$color = "yellow";
+	$state = "not packaged";
+	$nunpackaged++;
+    }
+
+    # The idea of this is stolen from bsd.pkg.mk's
+    # show-pkgtools-version target - thanks Al! :-)
+    $whofile = `find ${USR_PKGSRC}/${pkg} -type f -print  | xargs ident 2>/dev/null | awk '\$1 ~ /\\\$NetBSD/ { gsub("/", "", \$4); print \$4 " " \$6 " " \$2 }' | sort -n | tail -n 1 | awk '{ print \$2 " " \$3 }' `;
+    $whofile=~s/,v$//;
+    chomp($whofile);
+    ($who,$file) = split(/\s+/, $whofile);
+
+    # $maintainer=`( cd $USR_PKGSRC/$pkg ; ( echo '.include "Makefile"' ; echo 'bla: ; \@echo ${MAINTAINER}' ) | make -f - bla )`;
+    $maintainer=`grep ^MAINTAINER $USR_PKGSRC/$pkg/Makefile | awk '{ print \$2\$3\$4\$5\$6}' | sed -e 's/\</&lt;/g' -e 's/\>/&gt;/g'`;
+    chomp($maintainer);
+    
+    print HTML "<TR><TD><A HREF=\"$bf\">$pkg</A>";
+    print HTML "    <TD><FONT COLOR=$color>$state</FONT>";
+    print HTML "    <TD> $who <TD> $file";
+    print HTML "    <TD> $maintainer\n";
+
+    ($category, $dbfeed_pkg) = split('/', $pkg);
+
+    if ($nerrors > 0) {
+    	printf("%-23s $state\t($who, $maintainer)\n", "$pkg:")
+	    if $verbose;
+    }
+}
+close(BF);
+
+
+$ntotal=$nunpackaged+$nbroken;
+print HTML <<EOHTML
+</TABLE>
+
+<HR>
+
+<TABLE>
+<TR><TD> Packages not packaged:	<TD ALIGHT=RIGHT> <FONT COLOR=yellow>$nunpackaged</FONT>
+<TR><TD> Packages broken:	<TD ALIGHT=RIGHT> <FONT COLOR=red>$nbroken</FONT>
+<TR><TD> Total:			<TD ALIGHT=RIGHT> $ntotal
+</TABLE>
+
+<HR>
+<P>     
+<UL>
+<!-- <LI>View the <A HREF="$PROG">progress</A> of the build. -->
+<!-- <LI>See the list of <A HREF="../index.html">all log files</A>. -->
+<LI>Visit the <A HREF="http://www.netbsd.org">NetBSD Homepage</A>.
+<LI>Learn about the
+    <A HREF="http://www.netbsd.org/Documentation/software/packages.html">
+    NetBSD Package System</A>.
+</UL>
+</P>
+<HR>
+Hubert Feyrer, 1999-2000.
+</BODY>
+</HTML>
+EOHTML
+;
+close(HTML);
+
+#
+# Adjust "last" symlink
+#
+{
+	local($base, $dir) = $FTP=~m|^(.*)/([^/]*)$|;
+
+	unlink("$base/last");
+	symlink($dir, "$base/last");
+}
+
+#
+# Generate leftovers-${arch}.html: files not deleted
+# Leftover files are copied to leftovers-${arch} dir, and linked from
+# leftovers-${arch}.html
+#
+{
+	chdir("${FTP}");
+	system("mkdir -p leftovers-${arch}");
+
+	# Find files since last build:
+	system("find /usr/pkg   -newer ${USR_PKGSRC}/.start.${arch} -type f >>leftovers-${arch}.txt");
+	system("find /usr/X11R6 -newer ${USR_PKGSRC}/.start.${arch} -type f >>leftovers-${arch}.txt");
+
+	# Strip perl-files:
+	system("pkg_info -qL perl-base > .p.${arch}");
+	system("fgrep -v -x -f .p.${arch} leftovers-${arch}.txt >leftovers-${arch}.txt.new");
+	rename("leftovers-${arch}.txt.new", "leftovers-${arch}.txt");
+	unlink(".p.${arch}");
+
+	# Store leftovers, for easier identification:
+	system("tar plcf - `cat leftovers-${arch}.txt` | ( cd leftovers-${arch} ; tar plxf - )");
+
+	# Add links to leftover list:
+	open (IN, "< leftovers-${arch}.txt") 
+		or die "can't read leftovers-${arch}.txt";
+	open (OUT, "> leftovers-${arch}.html")
+		or die "can't write leftovers-${arch}.html";
+	print OUT <<EOOUT
+<HTML>
+<BODY>
+<PRE>
+EOOUT
+;
+	while (<IN>) {
+	    	print OUT "<A HREF=\"/${FTPURL}/leftovers-${arch}$_\">$_</A>\n";
+	}
+	print OUT <<EOOUT2
+</PRE>
+</BODY>
+</HTML>
+EOOUT2
+;
+    	close(IN);
+    	close(OUT);
+}
+
+if ($verbose) {
+	print "\n";
+	print "Packages not packaged:  $nunpackaged\n";
+	print "Packages broken:        $nbroken\n";
+	print "Total:                  $ntotal\n";
+	print "\n";
+	print "See $FTPHOST/$FTPURL/broken.html\n";
+	print "for logs of builds broken or not resulting in a binary pkg.\n";
+	print "\n";
+	print "\n";
+	print " - Hubert\n";
+	print "\n";
+	print "[* This message was created automatically! *]\n";
+	print "\n";
+}

@@ -1,0 +1,35 @@
+# build.conf
+# $Id: build.conf-example,v 1.1 2000/09/15 22:05:47 hubertf Exp $
+#
+# config file in /bin/sh syntax for {,pre,post}-build
+#
+
+
+# Some paths for output files and paths to log files
+FTPx=`date +%Y%m%d.%H%M`
+FTPURL="pub/NetBSD/pkgstat/${FTPx}"		# relative to ~ftp !
+FTP="/home/ftp/${FTPURL}"			# absolute base path
+FTPHOST="ftp://ftp.machi.ne"                    # host for broken.html
+
+# Where build will mail the report
+ADMIN="you@some.whe.re"
+
+# The OS release this bulk build is happening on
+osrev=`uname -r`
+
+# The machine architecture this is happening on
+arch=`uname -m`
+
+# Where our pkgsrc is located
+USR_PKGSRC="/usr/pkgsrc"
+
+# As which user to run "cvs updates"
+CVS_USER="yourlogin"
+
+###########################################################################
+### No changes should be needed below this line !!!
+###########################################################################
+
+# Name of the (generated) HTML file which lists all broken pkgs
+REPORT="$FTP/broken.html"
+
