@@ -1,48 +1,44 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/27 02:01:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/27 02:22:00 taca Exp $
+bin/bnamazu
+bin/clnmz
+bin/gcnmz
+bin/gtnmz
+bin/mailutime
 bin/mknmz
 bin/namazu
-lib/namazu/bin/clnmz
-lib/namazu/bin/gcnmz
-lib/namazu/bin/gtnmz
-lib/namazu/bin/mailutime
-lib/namazu/bin/mknmz
-lib/namazu/bin/namazu
-lib/namazu/bin/rvnmz
-lib/namazu/bin/vfnmz
-lib/namazu/bin/wdnmz
-lib/namazu/contrib/MHonArc-Japanize-patch-1.6.gz
-lib/namazu/contrib/NamazuJAVA.030.tar.gz
-lib/namazu/contrib/bnamazu
-lib/namazu/contrib/namazu.el-1999.05.10.gz
-lib/namazu/contrib/pnamazu-98.12.16.tgz
-lib/namazu/contrib/tknamazu-1.11.tar.gz
-lib/namazu/doc/COPYING
-lib/namazu/doc/ChangeLog
-lib/namazu/doc/ToDo
-lib/namazu/doc/en/README.en
-lib/namazu/doc/en/intro.html
-lib/namazu/doc/en/manual.html
-lib/namazu/doc/ja/FAQ.html
-lib/namazu/doc/ja/README.ja
-lib/namazu/doc/ja/history.html
-lib/namazu/doc/ja/intro.html
-lib/namazu/doc/ja/lynxcgi.html
-lib/namazu/doc/ja/manual.html
-lib/namazu/doc/ja/nmz_files.txt
-lib/namazu/doc/ja/security.html
-lib/namazu/lib/NMZ.body.en
-lib/namazu/lib/NMZ.body.ja
-lib/namazu/lib/NMZ.foot.en
-lib/namazu/lib/NMZ.foot.ja
-lib/namazu/lib/NMZ.head.en
-lib/namazu/lib/NMZ.head.ja
-lib/namazu/lib/namazu.conf-dist
-@exec mkdir %D/lib/namazu/index
-@unexec rmdir %D/lib/namazu/index
-@dirrm lib/namazu/doc/ja
-@dirrm lib/namazu/doc/en
-@dirrm lib/namazu/doc
-@dirrm lib/namazu/lib
-@dirrm lib/namazu/contrib
-@dirrm lib/namazu/bin
-@dirrm lib/namazu
+bin/rvnmz
+bin/vfnmz
+bin/wdnmz
+@exec /bin/mkdir %D/etc/namazu 2>/dev/null || /usr/bin/true
+@dirrm etc/namazu
+@exec /bin/mkdir %D/libdata/namazu 2>/dev/null || /usr/bin/true
+@exec /bin/mkdir %D/libdata/namazu/index 2>/dev/null || /usr/bin/true
+@dirrm libdata/namazu/index
+@dirrm libdata/namazu
+libexec/cgi-bin/namazu.cgi
+share/namazu/doc/COPYING
+share/namazu/doc/ChangeLog
+share/namazu/doc/ToDo
+share/namazu/doc/en/README.en
+share/namazu/doc/en/intro.html
+share/namazu/doc/en/manual.html
+share/namazu/doc/ja/FAQ.html
+share/namazu/doc/ja/README.ja
+share/namazu/doc/ja/history.html
+share/namazu/doc/ja/intro.html
+share/namazu/doc/ja/lynxcgi.html
+share/namazu/doc/ja/manual.html
+share/namazu/doc/ja/nmz_files.txt
+share/namazu/doc/ja/security.html
+share/namazu/doc/namazu.conf-dist
+share/namazu/template/NMZ.body.en
+share/namazu/template/NMZ.body.ja
+share/namazu/template/NMZ.foot.en
+share/namazu/template/NMZ.foot.ja
+share/namazu/template/NMZ.head.en
+share/namazu/template/NMZ.head.ja
+@dirrm share/namazu/template
+@dirrm share/namazu/doc/ja
+@dirrm share/namazu/doc/en
+@dirrm share/namazu/doc
+@dirrm share/namazu
