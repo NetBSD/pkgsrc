@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:33:58 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 09:04:27 agc Exp $
 
-MD5 (xisp-2.6p1.tar.gz) = 360438612d1a9e3721ad97645fa7d3cb
+SHA1 (xisp-2.6p1.tar.gz) = 5e6f1795f20b22fd26212215b86b505e00d43b9e
+Size (xisp-2.6p1.tar.gz) = 260645 bytes
 SHA1 (patch-aa) = 81b575e77095a133015313a47424ca882c662f3b

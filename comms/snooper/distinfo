@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:33:56 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 09:04:26 agc Exp $
 
-MD5 (snooper-19991202.tar.gz) = a735dc4a3c685493e0e3d77ddfa2c6db
+SHA1 (snooper-19991202.tar.gz) = d6aba20cd14449d7b126f393cdb219fd627b7777
+Size (snooper-19991202.tar.gz) = 38239 bytes

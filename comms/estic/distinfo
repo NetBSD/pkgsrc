@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:33:38 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 09:04:18 agc Exp $
 
-MD5 (estic-1.60-sources.zip) = 871be1b5b591e902d6d5545565e40aa3
-MD5 (estic-1.61-patch-from-1.60.zip) = 81f73057e3978af03088a753c5d20452
+SHA1 (estic-1.60-sources.zip) = ce66a6d52faaf6adba492bb3f74e49eab608d0c3
+Size (estic-1.60-sources.zip) = 892311 bytes
+SHA1 (estic-1.61-patch-from-1.60.zip) = b58cf388e2eb60685402a84cc260d88dc7c1820f
+Size (estic-1.61-patch-from-1.60.zip) = 1017 bytes
 SHA1 (patch-aa) = d94d170ac16a95f96730d64ca77be18446515fd7
 SHA1 (patch-ab) = 1ee3659e221e07796f4581bd191145c8cc6673a1
 SHA1 (patch-ac) = 9fda10375f0b074473c47202c59f4f872b14ae87

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:33:53 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 09:04:25 agc Exp $
 
-MD5 (plp_1_8.tar.gz) = 63c0871eb0504c69677c8e16f2d43ea2
+SHA1 (plp_1_8.tar.gz) = cad586353091895b6efc556d2cb5fa16891a3749
+Size (plp_1_8.tar.gz) = 58424 bytes
 SHA1 (patch-aa) = c63110d134d400cbb18e5ac12fb11d66e1d4300a
 SHA1 (patch-ab) = 8f272d487b78508fe083b649f181b270a95e975f
 SHA1 (patch-ac) = 1eaa86ad1e20aa1580c86c9bb52877004dd9ff89
