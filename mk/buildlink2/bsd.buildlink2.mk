@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.86 2003/06/19 21:41:15 seb Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.87 2003/06/25 22:48:02 seb Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -1065,7 +1065,9 @@ ${BUILDLINK_DIR}/bin/makeinfo: ${_GNU_MISSING}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} "#!${BUILDLINK_SHELL}" > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} 'exec ${_GNU_MISSING} makeinfo "$$*"' >>  ${.TARGET}
+	${ECHO} '${ECHO} "==> [buildlink2] Error: makeinfo $$*" >> ${_BLNK_WRAP_LOG}' >> ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} 'exit 1' >>  ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 .  endif # USE_MAKEINFO
 .endif # INFO_FILES
