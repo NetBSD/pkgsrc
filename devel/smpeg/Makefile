@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/11/30 22:58:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/05 22:44:04 jlam Exp $
 #
 
 DISTNAME=	smpeg-0.4.4
@@ -11,7 +11,9 @@ MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://www.lokigames.com/development/smpeg.php3
 COMMENT=	SDL MPEG Player Library
 
-USE_BUILDLINK2=	yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_X11=	yes
@@ -21,8 +23,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 CPPFLAGS+=		-Dunix=1
 
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
