@@ -6,8 +6,8 @@ Add the following to /etc/services:
 
 Add the following to /etc/inetd.conf:
  imap2   stream  tcp     nowait  root    @PREFIX@/libexec/imapd   imapd
- pop2    stream  tcp     nowait  root    @PREFIX@/libexec/pop2d   pop2d
- pop3    stream  tcp     nowait  root    @PREFIX@/libexec/pop3d   pop3d
+ pop2    stream  tcp     nowait  root    @PREFIX@/libexec/ipop2d   ipop2d
+ pop3    stream  tcp     nowait  root    @PREFIX@/libexec/ipop3d   ipop3d
 
 To put the changes into effect, reboot the machine or "kill -HUP"
 your inetd.
