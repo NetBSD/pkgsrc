@@ -1,0 +1,14 @@
+$NetBSD: patch-er,v 1.4 2003/01/19 09:35:27 skrll Exp $
+
+--- ksysguard/ksysguardd/FreeBSD/ProcessList.c.orig	Sun Jan 19 09:30:06 2003
++++ ksysguard/ksysguardd/FreeBSD/ProcessList.c
+@@ -200,7 +200,9 @@ updateProcess(int pid)
+         ps->ppid      = p.kp_eproc.e_ppid;
+         ps->uid       = p.kp_eproc.e_ucred.cr_uid;
+         ps->gid       = p.kp_eproc.e_pgid;
++#if __NetBSD_Version__ < 106130000
+         ps->priority  = p.kp_proc.p_priority;
++#endif
+         ps->niceLevel = p.kp_proc.p_nice;
+ #endif
+ 
