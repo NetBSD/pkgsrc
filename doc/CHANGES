@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8654 2005/01/08 07:10:59 minskim Exp $
+$NetBSD: CHANGES,v 1.8655 2005/01/08 07:48:09 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -173,3 +173,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ezmlm-idx to 0.432nb1 [schmonz 2005-01-08]
 	Updated howl to 0.9.8 [schmonz 2005-01-08]
 	Updated mathomatic to 11.6c [minskim 2005-01-08]
+	Updated ce to 4.5 [schmonz 2005-01-08]
+	Updated ce-doc to 4.5 [schmonz 2005-01-08]
+	Updated ce-x11 to 4.5 [schmonz 2005-01-08]
