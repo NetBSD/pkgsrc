@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42.2.1 2002/06/23 18:37:17 jlam Exp $
+# $NetBSD: Makefile,v 1.42.2.2 2002/08/21 22:42:01 jlam Exp $
 #
 
 COMMENT=	Archivers
@@ -36,6 +36,7 @@ SUBDIR+=	ppunpack
 SUBDIR+=	rar
 SUBDIR+=	ruby-zlib
 SUBDIR+=	squsq
+SUBDIR+=	star
 SUBDIR+=	stuffit
 SUBDIR+=	unace
 SUBDIR+=	unarj

@@ -1,12 +1,19 @@
-# $NetBSD: Makefile,v 1.11.2.2 2002/06/21 23:04:53 jlam Exp $
+# $NetBSD: Makefile,v 1.11.2.3 2002/08/21 22:42:04 jlam Exp $
 
-DISTNAME=	unrar-2.71
+DISTNAME=	unrarsrc
+PKGNAME=	unrar-3.0
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://sunsite.univie.ac.at/pub/distfiles/
+MASTER_SITES=	http://www.rarlab.com/rar/
 
 MAINTAINER=	wiz@netbsd.org
-HOMEPAGE=	http://www.rarsoft.com/
+HOMEPAGE=	http://www.rarlab.com/
 COMMENT=	Extract, view & test RAR archives
+
+DIST_SUBDIR=	${PKGNAME}
+WRKSRC=		${WRKDIR}
+
+ALL_TARGET=	makeunrar
+MAKEFILE=	makefile.gcc
 
 LICENSE=	unrar-license
 RESTRICTED=	"Do not modify. Do not charge a fee for redistribution."
