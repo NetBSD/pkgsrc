@@ -52,7 +52,6 @@ share/emacs/site-lisp/yorick-auto.el
 share/emacs/site-lisp/yorick.el
 share/yorick/1.5/doc/FILE_FORMATS
 share/yorick/1.5/doc/README
-share/yorick/1.5/doc/doc
 share/yorick/1.5/doc/drat.doc
 share/yorick/1.5/doc/drat.tex
 share/yorick/1.5/doc/graph.doc
