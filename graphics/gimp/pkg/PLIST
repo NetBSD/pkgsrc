@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 1999/05/04 22:47:22 tron Exp $
+@comment $NetBSD: PLIST,v 1.13 1999/10/22 23:57:53 tron Exp $
 bin/gimp
 bin/gimptool
 include/gck/gck.h
@@ -631,6 +631,8 @@ share/gimp/scripts/weave.scm
 share/gimp/scripts/web-browser.scm
 share/gimp/scripts/xach-effect.scm
 share/gimp/user_install
+@exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/gimp.m4 ${LOCALBASE}/share/aclocal/gimp.m4
+@unexec test %D = ${LOCALBASE} || rm ${LOCALBASE}/share/aclocal/gimp.m4
 @dirrm include/libgimp
 @dirrm include/gck
 @dirrm lib/gimp/1.0/plug-ins
