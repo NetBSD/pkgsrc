@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2000/10/24 10:20:00 wiz Exp $
+# $NetBSD: Makefile,v 1.164 2000/11/07 17:30:56 ad Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -132,6 +132,7 @@
     SUBDIR += ucd-snmp
     SUBDIR += ucd-snmp-current
     SUBDIR += upclient
+    SUBDIR += userppp
     SUBDIR += vnc
     SUBDIR += vtun
     SUBDIR += wakeup
