@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/09/04 21:05:06 groo Exp $
+
+SHA1 (doxygen-1.2.10.src.tar.gz) = f23eb4c56b0a11cd9ee80b2cfee0ecd3022d7faa
+Size (doxygen-1.2.10.src.tar.gz) = 1658502 bytes
+SHA1 (patch-aa) = c5f0e9d025b4d4672a1ad1467bebd76506ca601d

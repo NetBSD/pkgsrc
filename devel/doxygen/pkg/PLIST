@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/09/04 21:05:06 groo Exp $
+bin/doxygen
+bin/doxysearch
+bin/doxytag
