@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/31 21:49:16 bad Exp $
+bin/cgoban
+bin/grab_cgoban
+man/man6/cgoban.6
+share/misc/seigen-minoru.sgf
