@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2002/07/14 07:44:44 kristerw Exp $
+$NetBSD: patch-aa,v 1.8 2002/08/15 00:16:36 kristerw Exp $
 --- Makefile.orig	Tue Sep 18 08:03:58 2001
-+++ Makefile	Sat Jul 13 22:15:09 2002
++++ Makefile	Thu Aug 15 02:00:53 2002
 @@ -1,14 +1,14 @@
 -ZSNESFX=1
 -ZSNESC4=1
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.7 2002/07/14 07:44:44 kristerw Exp $
  
  ifdef ZSNESFX
  FXOBJ=i386/fxemu2b.o i386/fxemu2.o i386/fxemu2c.o i386/fxtable.o i386/sfxproc.o i386/zsnes.o
-@@ -34,7 +34,10 @@
+@@ -34,13 +34,20 @@
  C4NO_DEPENDS=zsnes_c4
  endif
  
@@ -32,7 +32,17 @@ $NetBSD: patch-aa,v 1.7 2002/07/14 07:44:44 kristerw Exp $
  
  ifdef SPC700ASM
  SOUNDOBJ=spctool/spc700.o spctool/dsp.o spctool.o spctool/soundmod.o spc.o
-@@ -58,6 +61,16 @@
+ SOUNDDEFINES=-DSPCTOOL
+ else
++ifdef USING_I386
+ SOUNDOBJ=spc700.o soundux.o apu.o i386/spc.o
++else
++SOUNDOBJ=spc700.o soundux.o apu.o
++endif
+ SOUNDDEFINES=-DSPC700_C
+ endif
+ 
+@@ -58,6 +65,16 @@
  KREEDOBJ=2xsai.o
  endif
  
@@ -49,7 +59,7 @@ $NetBSD: patch-aa,v 1.7 2002/07/14 07:44:44 kristerw Exp $
  OBJECTS=$(CPUOBJ) $(SOUNDOBJ) apudebug.o $(FXOBJ) $(C4OBJ) \
  	cpu.o sa1.o debug.o sdd1.o tile.o srtc.o \
  	gfx.o memmap.o snaporig.o clip.o dsp1.o \
-@@ -81,9 +94,10 @@
+@@ -81,9 +98,10 @@
  UNZIPDEFINES=-DUNZIP_SUPPORT
  endif
  
@@ -62,7 +72,7 @@ $NetBSD: patch-aa,v 1.7 2002/07/14 07:44:44 kristerw Exp $
  endif
  
  ifdef GLIDE
-@@ -113,9 +127,13 @@
+@@ -113,9 +131,13 @@
  CC = gcc
  NASM = nasm
  
@@ -77,7 +87,7 @@ $NetBSD: patch-aa,v 1.7 2002/07/14 07:44:44 kristerw Exp $
  
  #OPTIMISE=-g -fno-exceptions
  #-DMITSHM 
-@@ -124,10 +142,8 @@
+@@ -124,10 +146,8 @@
  -Ii386 \
  -I. \
  -Iunzip \
@@ -88,7 +98,7 @@ $NetBSD: patch-aa,v 1.7 2002/07/14 07:44:44 kristerw Exp $
  -DCPU_SHUTDOWN \
  -DSPC700_SHUTDOWN \
  -DOLD_COLOUR_BLENDING \
-@@ -142,7 +158,7 @@
+@@ -142,7 +162,7 @@
  $(OPENGLDEFINES) \
  $(GUIDEFINES) \
  $(KREEDDEFINES) \
@@ -97,7 +107,7 @@ $NetBSD: patch-aa,v 1.7 2002/07/14 07:44:44 kristerw Exp $
  
  #-DSOUND
  #-DDEBUGGER
-@@ -154,9 +170,9 @@
+@@ -154,9 +174,9 @@
  CFLAGS=$(CCFLAGS)
  
  .SUFFIXES: .o .cpp .c .cc .h .m .i .S .asm .obj
@@ -109,7 +119,7 @@ $NetBSD: patch-aa,v 1.7 2002/07/14 07:44:44 kristerw Exp $
  
  #ggisnes9x
  #xf86snes9x
-@@ -182,7 +198,7 @@
+@@ -182,7 +202,7 @@
  	./offsets >i386/offsets.h
  
  snes9x: $(OBJECTS) unix/x11.o $(GLIDEOBJS) $(OPENGLOBJS) $(GUIOBJS) $(KREEDOBJ)
@@ -118,7 +128,7 @@ $NetBSD: patch-aa,v 1.7 2002/07/14 07:44:44 kristerw Exp $
  
  ssnes9x: $(OBJECTS) unix/svga.o $(GLIDEOBJS) 
  	$(CCC) $(INCLUDES) -o $@ $(OBJECTS) $(GLIDEOBJS) unix/svga.o $(LDLIBS) $(GLIDELIBS) -lvga -lvgagl -lz $(EXTRALIBS) -lm
-@@ -212,7 +228,7 @@
+@@ -212,7 +232,7 @@
  	$(CCC) $(INCLUDES) -c -E $(CCFLAGS) $*.S -o $@
  
  .asm.o:
