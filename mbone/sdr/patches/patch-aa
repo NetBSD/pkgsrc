@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.6 1999/01/01 07:58:29 garbled Exp $
+--- src/polluted.c.orig	Thu Dec 31 23:09:13 1998
++++ src/polluted.c	Fri Jan  1 00:47:48 1999
+@@ -197,7 +197,7 @@
+     if (find_key_by_name(keyname, key)!=0)
+       return -1;
+     addata->length= strlen(adstr);
+-#ifdef NEVER
++#ifndef NEVER
+     encrypt_announcement(adstr, &encdata, &(addata->length), key);
+ #else
+     encrypt_announcement(adstr, &encdata, (int *)addata->length, key);
