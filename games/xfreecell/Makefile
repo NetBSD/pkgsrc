@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 13:30:57 grant Exp $
+# $NetBSD: Makefile,v 1.6 2005/02/22 13:44:13 minskim Exp $
 
 DISTNAME=	xfreecell-1.0.5b
 CATEGORIES=	games
@@ -15,5 +15,7 @@ MAKEFILE=	makefile
 
 WRKSRC=		${WRKDIR}/xfreecell
 NO_CONFIGURE=	YES
+
+MAKE_ENV+=	GMAKE=${GMAKE:Q}
 
 .include "../../mk/bsd.pkg.mk"
