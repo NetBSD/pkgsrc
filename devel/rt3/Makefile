@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2005/03/24 17:04:12 cube Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/24 20:42:03 cube Exp $
 
-DISTNAME=		rt-3.2.2
-PKGREVISION=		1
+DISTNAME=		rt-3.2.3
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
@@ -17,7 +16,7 @@ DEPENDS+=	p5-Digest-MD5>=2.27:../../security/p5-Digest-MD5
 DEPENDS+=	p5-DBI>=1.37:../../databases/p5-DBI
 DEPENDS+=	p5-Test-Inline>=0.15:../../devel/p5-Test-Inline
 DEPENDS+=	p5-Class-ReturnValue>=0.40:../../devel/p5-Class-ReturnValue
-DEPENDS+=	p5-DBIx-SearchBuilder>=1.01nb1:../../databases/p5-DBIx-SearchBuilder
+DEPENDS+=	p5-DBIx-SearchBuilder>=1.19:../../databases/p5-DBIx-SearchBuilder
 DEPENDS+=	p5-Text-Template>=1.43:../../textproc/p5-Text-Template
 DEPENDS+=	p5-HTML-Parser>=3.35:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTML-Scrubber>=0.08:../../www/p5-HTML-Scrubber
