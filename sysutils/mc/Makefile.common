@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2000/10/19 23:31:17 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2000/10/20 17:00:23 tron Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
@@ -40,6 +40,7 @@ CONFIGURE_ENV+=		LIBS="${LIBS}"
 LIBS+=			-lm -ltermcap		# -lslang
 LIBS+=			-lintl			# check for gettext is broken
 CPPFLAGS+=		-I${LOCALBASE}/include	# slang.h
+CPPFLAGS+=		-Dunix
 
 .include "../../mk/bsd.prefs.mk"
 
