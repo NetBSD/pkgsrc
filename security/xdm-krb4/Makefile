@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/06/25 22:50:19 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/08/09 19:29:46 wiz Exp $
 #
 
 DISTNAME=		xdm-krb4-3.3.6.2
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://gutemine.geo.Uni-Koeln.DE/pub/xdm-krb4/
 MAINTAINER=		wennmach@netbsd.org
 COMMENT=		Kerberos IV and AFS aware xdm
 
-DEPENDS+=               kth-krb4-1.0.1:../../security/kth-krb4
+DEPENDS+=               kth-krb4>=1.0.1:../../security/kth-krb4
 
 USE_X11BASE=		yes
 USE_IMAKE=		yes
