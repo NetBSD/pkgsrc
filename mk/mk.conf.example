@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.136 2000/05/08 02:01:45 fredb Exp $
+# $NetBSD: mk.conf.example,v 1.137 2000/05/09 13:23:21 abs Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -486,6 +486,12 @@
 # installed.
 # Possible: export, us
 # Default: export
+
+#NS_USE_BSDI=	YES
+# Used to decide if i386 BSDi Netscape binary should be used in preference 
+# to linux version.
+# Possible: not defined, YES
+# Default: not defined
 
 PAPERSIZE=	A4
 # Default paper size for packages.

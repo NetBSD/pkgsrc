@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.linux-i386,v 1.1 2000/05/09 13:23:20 abs Exp $
+lib/netscape/${BINNAME}-${NS_VERS}/libjsd.so
+lib/netscape/${BINNAME}-${NS_VERS}/plugins/libnullplugin.so
+lib/netscape/${BINNAME}-${NS_VERS}/netscape-dynMotif
+lib/netscape/${BINNAME}-${NS_VERS}/libnullplugin-dynMotif.so
