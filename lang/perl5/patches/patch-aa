@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.15 2000/01/18 22:31:47 tron Exp $
+$NetBSD: patch-aa,v 1.16 2000/08/30 18:42:24 jlam Exp $
 
---- Configure.orig	Fri Oct  3 13:57:39 1997
-+++ Configure	Wed Dec  2 14:30:27 1998
-@@ -65,7 +65,7 @@
+--- Configure.orig	Wed Mar 22 15:36:37 2000
++++ Configure
+@@ -70,7 +70,7 @@
  fi
  
  : Proper PATH setting
@@ -11,22 +11,7 @@ $NetBSD: patch-aa,v 1.15 2000/01/18 22:31:47 tron Exp $
  paths="$paths /opt/bin /opt/local/bin /opt/local /opt/lbin"
  paths="$paths /usr/5bin /etc /usr/gnu/bin /usr/new /usr/new/bin /usr/nbin"
  paths="$paths /opt/gnu/bin /opt/new /opt/new/bin /opt/nbin"
-@@ -92,10 +92,10 @@
- esac
- 
- : Sanity checks
--if test ! -t 0; then
--	echo "Say 'sh $me', not 'sh <$me'"
--	exit 1
--fi
-+# if test ! -t 0; then
-+# 	echo "Say 'sh $me', not 'sh <$me'"
-+# 	exit 1
-+# fi
- 
- : Test and see if we are running under ksh, either blatantly or in disguise.
- if (PATH=.; alias -x) >/dev/null 2>&1; then
-@@ -725,7 +725,7 @@
+@@ -955,7 +955,7 @@
  archobjs=''
  : Possible local include directories to search.
  : Set locincpth to "" in a hint file to defeat local include searches.
@@ -35,84 +20,56 @@ $NetBSD: patch-aa,v 1.15 2000/01/18 22:31:47 tron Exp $
  locincpth="$locincpth /opt/gnu/include /usr/GNU/include /opt/GNU/include"
  :
  : no include file wanted by default
-@@ -735,14 +735,14 @@
+@@ -965,13 +965,13 @@
+ : change the next line if compiling for Xenix/286 on Xenix/386
  xlibpth='/usr/lib/386 /lib/386'
- 
  : Possible local library directories to search.
 -loclibpth="/usr/local/lib /opt/local/lib /usr/gnu/lib"
 +loclibpth="${PREFIX}/lib /opt/local/lib /usr/gnu/lib"
  loclibpth="$loclibpth /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib"
  
  : general looking path for locating libraries
- glibpth="/shlib /usr/shlib /usr/lib/pa1.1 /usr/lib/large"
- glibpth="$glibpth /lib /usr/lib $xlibpth"
+ glibpth="/usr/lib/large /lib /usr/lib $xlibpth"
  glibpth="$glibpth /lib/large /usr/lib/small /lib/small"
 -glibpth="$glibpth /usr/ccs/lib /usr/ucblib /usr/local/lib"
 +glibpth="$glibpth /usr/ccs/lib /usr/ucblib ${PREFIX}/lib"
+ test -f /usr/shlib/libc.so && glibpth="/usr/shlib $glibpth"
+ test -f /shlib/libc.so     && glibpth="/shlib $glibpth"
  
- : Private path used by Configure to find libraries.  Its value
- : is prepended to libpth. This variable takes care of special
-@@ -753,9 +753,16 @@
- defvoidused=15
+@@ -992,10 +992,17 @@
  
  : List of libraries we want.
--libswanted='sfio net socket inet nsl nm ndbm gdbm dbm db malloc dl'
--libswanted="$libswanted dld ld sun m c cposix posix ndir dir crypt"
--libswanted="$libswanted ucb bsd BSD PW x"
+ : If anyone needs -lnet, put it in a hint file.
 +case `uname -s` in
-+SunOS)
-+	libswanted='sfio net socket inet nsl nm ndbm dbm db malloc dl'
-+	libswanted="$libswanted dld ld sun m c cposix posix ndir dir crypt"
-+	libswanted="$libswanted ucb bsd BSD PW x"
-+	;;
 +NetBSD)
 +	libswanted='m crypt'
++	;;
++*)
+ libswanted='sfio socket bind inet nsl nm ndbm gdbm dbm db malloc dl'
+ libswanted="$libswanted dld ld sun m c cposix posix"
+ libswanted="$libswanted ndir dir crypt sec"
+ libswanted="$libswanted ucb bsd BSD PW x iconv"
 +	;;
 +esac
  : We probably want to search /usr/shlib before most other libraries.
  : This is only used by the lib/ExtUtils/MakeMaker.pm routine extliblist.
  glibpth=`echo " $glibpth " | sed -e 's! /usr/shlib ! !'`
-@@ -2365,7 +2372,7 @@
- : determine root of directory hierarchy where package will be installed.
- case "$prefix" in
- '')
--	dflt=`./loc . /usr/local /usr/local /local /opt /usr`
-+	dflt=`./loc . ${PREFIX} ${PREFIX} /local /opt /usr`
- 	;;
+@@ -1337,10 +1344,10 @@
+ case "$fastread$alldone" in
+ yescont|yesexit) ;;
  *)
- 	dflt="$prefix"
-@@ -2375,10 +2382,10 @@
- 
- By default, $package will be installed in $dflt/bin, manual
- pages under $dflt/man, etc..., i.e. with $dflt as prefix for
--all installation directories. Typically set to /usr/local, but you
-+all installation directories. Typically set to ${PREFIX}, but you
- may choose /usr if you wish to install $package among your system
- binaries. If you wish to have binaries under /bin but manual pages
--under /usr/local/man, that's ok: you will be prompted separately
-+under ${PREFIX}/man, that's ok: you will be prompted separately
- for each of the installation directories, the prefix being only used
- to set the defaults.
- 
-@@ -2426,7 +2433,7 @@
- esac'
- 
- : determine where private library files go
--: Usual default is /usr/local/lib/perl5.  Also allow things like 
-+: Usual default is ${PREFIX}/lib/perl5.  Also allow things like 
- : /opt/perl/lib, since /opt/perl/lib/perl5 would be redundant.
- case "$prefix" in
- *perl*) set dflt privlib lib ;;
-@@ -2501,7 +2508,7 @@
- case "$archlib" in
- '')
-     case "$privlib" in
--    '')	dflt=`./loc . "." $prefixexp/lib /usr/local/lib /usr/lib /lib`
-+    '')	dflt=`./loc . "." $prefixexp/lib ${PREFIX}/lib /usr/lib /lib`
- 	set dflt
- 	eval $prefixup
+-	if test ! -t 0; then
+-		echo "Say 'sh Configure', not 'sh <Configure'"
+-		exit 1
+-	fi
++#	if test ! -t 0; then
++#		echo "Say 'sh Configure', not 'sh <Configure'"
++#		exit 1
++#	fi
  	;;
-@@ -2986,8 +2993,8 @@
+ esac
+ 
+@@ -2763,8 +2770,8 @@
  	syspath='/usr/man/man1 /usr/man/mann /usr/man/manl /usr/man/local/man1'
  	syspath="$syspath /usr/man/u_man/man1 /usr/share/man/man1"
  	syspath="$syspath /usr/catman/u_man/man1 /usr/man/l_man/man1"
@@ -123,7 +80,7 @@ $NetBSD: patch-aa,v 1.15 2000/01/18 22:31:47 tron Exp $
  	sysman=`./loc . /usr/man/man1 $syspath`
  	;;
  esac
-@@ -3268,7 +3275,7 @@
+@@ -3577,7 +3584,7 @@
  : Set private lib path
  case "$plibpth" in
  '') if ./mips; then
@@ -132,13 +89,77 @@ $NetBSD: patch-aa,v 1.15 2000/01/18 22:31:47 tron Exp $
  	fi;;
  esac
  case "$libpth" in
-@@ -4742,15 +4749,15 @@
- shrpdir=$archlibexp/CORE
- xxx=''
- tmp_shrpenv=''
--if "$useshrplib"; then
-+if true; then
-     case "$osname" in 
+@@ -4664,7 +4671,7 @@
+ : determine root of directory hierarchy where package will be installed.
+ case "$prefix" in
+ '')
+-	dflt=`./loc . /usr/local /usr/local /local /opt /usr`
++	dflt=`./loc . ${PREFIX} ${PREFIX} /local /opt /usr`
+ 	;;
+ *)
+ 	dflt="$prefix"
+@@ -4674,9 +4681,9 @@
+ 
+ By default, $package will be installed in $dflt/bin, manual pages
+ under $dflt/man, etc..., i.e. with $dflt as prefix for all
+-installation directories. Typically this is something like /usr/local.
++installation directories. Typically this is something like ${PREFIX}.
+ If you wish to have binaries under /usr/bin but other parts of the
+-installation under /usr/local, that's ok: you will be prompted
++installation under ${PREFIX}, that's ok: you will be prompted
+ separately for each of the installation directories, the prefix being
+ only used to set the defaults.
+ 
+@@ -4835,7 +4842,7 @@
+ installstyle=$dflt
+ 
+ : determine where private library files go
+-: Usual default is /usr/local/lib/perl5/$version.
++: Usual default is ${PREFIX}/lib/perl5.  Also allow things like 
+ : Also allow things like /opt/perl/lib/$version, since 
+ : /opt/perl/lib/perl5... would be redundant.
+ : The default "style" setting is made in installstyle.U
+@@ -4871,8 +4878,8 @@
+ : determine where public architecture dependent libraries go
+ set archlib archlib
+ eval $prefixit
+-: privlib default is /usr/local/lib/$package/$version
+-: archlib default is /usr/local/lib/$package/$version/$archname
++: privlib default is ${PREFIX}/lib/$package/$version
++: archlib default is ${PREFIX}/lib/$package/$version/$archname
+ : privlib may have an optional trailing /share.
+ tdflt=`echo $privlib | $sed 's,/share$,,'`
+ tdflt=$tdflt/$archname
+@@ -5304,7 +5311,7 @@
+ 	;;
+ *)	d_vendorlib="$define"
+ 	: determine where vendor-supplied modules go.
+-	: Usual default is /usr/local/lib/perl5/vendor_perl/$version
++	: Usual default is ${PREFIX}/lib/perl5/vendor_perl/$version
+ 	case "$vendorlib" in
+ 	'')
+ 		prog=`echo $package | $sed 's/-*[0-9.]*$//'`
+@@ -5338,8 +5345,8 @@
+ 	;;
+ *)	d_vendorarch="$define"
+ 	: determine where vendor-supplied architecture-dependent libraries go.
+-	: vendorlib  default is /usr/local/lib/perl5/vendor_perl/$version
+-	: vendorarch default is /usr/local/lib/perl5/vendor_perl/$version/$archname
++	: vendorlib  default is ${PREFIX}/lib/perl5/vendor_perl/$version
++	: vendorarch default is ${PREFIX}/lib/perl5/vendor_perl/$version/$archname
+ 	: vendorlib may have an optional trailing /share.
+ 	case "$vendorarch" in
+ 	'')	dflt=`echo $vendorlib | $sed 's,/share$,,'`
+@@ -5481,7 +5488,7 @@
+ siteprefixexp="$ansexp"
+ 
+ : determine where site specific libraries go.
+-: Usual default is /usr/local/lib/perl5/site_perl/$version
++: Usual default is ${PREFIX}/lib/perl5/site_perl/$version
+ : The default "style" setting is made in installstyle.U
+ : XXX No longer works with Prefixit stuff.
+ prog=`echo $package | $sed 's/-*[0-9.]*$//'`
+@@ -6476,10 +6483,10 @@
  	aix)
  		# We'll set it in Makefile.SH...
  		;;
@@ -151,27 +172,29 @@ $NetBSD: patch-aa,v 1.15 2000/01/18 22:31:47 tron Exp $
  		xxx="-Wl,-R$shrpdir"
  		;;
  	linux|irix*|dec_osf)
-@@ -4965,8 +4972,8 @@
- esac
- 
- echo "If you don't want the manual sources installed, answer 'none'."
--: We dont use /usr/local/man/man3 because some man programs will
--: only show the /usr/local/man/man3 contents, and not the system ones,
-+: We dont use ${PREFIX}/man/man3 because some man programs will
-+: only show the ${PREFIX}/man/man3 contents, and not the system ones,
- : thus man less will show the perl module less.pm, but not the system
- : less command.  We might also conflict with TCL man pages.
- : However, something like /opt/perl/man/man3 is fine.
-@@ -5413,7 +5420,7 @@
+@@ -7113,8 +7120,8 @@
  	: guess some guesses
  	$test -d /usr/share/scripts && dflt=/usr/share/scripts
- 	$test -d /usr/share/bin && dflt=/usr/share/bin
--	$test -d /usr/local/script && dflt=/usr/local/script
-+	$test -d ${PREFIX}/script && dflt=${PREFIX}/script
- 	$test -d $prefixexp/script && dflt=$prefixexp/script
+ 	$test -d /usr/share/bin     && dflt=/usr/share/bin
+-	$test -d /usr/local/script  && dflt=/usr/local/script
+-	$test -d /usr/local/scripts && dflt=/usr/local/scripts
++	$test -d ${PREFIX}/script   && dflt=${PREFIX}/script
++	$test -d ${PREFIX}/scripts  && dflt=${PREFIX}/scripts
+ 	$test -d $prefixexp/script  && dflt=$prefixexp/script
  	set dflt
  	eval $prefixup
-@@ -8726,7 +8733,7 @@
+@@ -7146,8 +7153,8 @@
+ fi
+ 
+ : determine where site specific architecture-dependent libraries go.
+-: sitelib  default is /usr/local/lib/perl5/site_perl/$version
+-: sitearch default is /usr/local/lib/perl5/site_perl/$version/$archname
++: sitelib  default is ${PREFIX}/lib/perl5/site_perl/$version
++: sitearch default is ${PREFIX}/lib/perl5/site_perl/$version/$archname
+ : sitelib may have an optional trailing /share.
+ case "$sitearch" in
+ '')	dflt=`echo $sitelib | $sed 's,/share$,,'`
+@@ -13366,7 +13373,7 @@
  	case "$ranlib" in
  	:) ranlib='';;
  	'')

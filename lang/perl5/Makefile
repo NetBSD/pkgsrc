@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.28 2000/03/27 08:54:57 tron Exp $
+# $NetBSD: Makefile,v 1.29 2000/08/30 18:42:23 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
-DISTNAME=		perl5.004_04
-PKGNAME=		perl-5.00404
+DISTNAME=		perl-${PERL_VERSION}
+PKGNAME=		perl-${PERL_VERSION}nb2
+PERL_VERSION=		5.6.0
 CATEGORIES=		lang devel perl5
-MASTER_SITES=		ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/ \
-			ftp://ftp.cdrom.com/pub/perl/CPAN/src/5.0/
+MASTER_SITES=		ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/maint/ \
+			ftp://ftp.cdrom.com/pub/perl/CPAN/src/5.0/maint/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://language.perl.com/index.html
 
-HAS_CONFIGURE=		yes
+HAS_CONFIGURE=		# defined
 CONFIGURE_ENV+=		PREFIX=${PREFIX}
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} -Doptimize="${CFLAGS}" \
@@ -21,20 +22,44 @@ MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
 
 .include "../../mk/bsd.prefs.mk"
 
+.if exists(/usr/libexec/ld.so) || exists(/usr/libexec/ld.elf_so)
+CONFIGURE_ARGS+=	-Duseshrplib=true
+PLIST_SOURCES=		${PKGDIR}/PLIST-md.shared
+PLIST_SOURCES+=		${PKGDIR}/PLIST-md-${OBJECT_FMT}.shared
+.else
+CONFIGURE_ARGS+=	-Duseshrplib=false
+PLIST_SOURCES=		${PKGDIR}/PLIST-md.static
+.endif
+PLIST_SOURCES+=		${PKGDIR}/PLIST-mi
+PLIST_SRC=		${PLIST_SOURCES}
+PLIST_SUBST+=		PERL_VERSION=${PERL_VERSION}
+
 .if ${OPSYS} == "SunOS"
 PLIST_SRC=      	${WRKDIR}/.PLIST_SRC
 MAKE_ENV+=		CFLAGS=
 .endif
 
 test:
-	@(cd ${WRKSRC}; ${MAKE} test)
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} test
+
+post-patch:
+	cd ${WRKSRC}/ext/DynaLoader/hints && ${CP} -f openbsd.pl netbsd.pl
+
+# Remove several modules which are externally available and don't need to be
+# part of the base perl distribution.
+#
+pre-configure:
+	cd ${WRKSRC}/ext; ${RM} -rf Data Devel GDBM_File
+	cd ${WRKSRC}/lib; ${RM} -rf CGI CGI.pm
+	cd ${WRKSRC}/utils; ${RM} -f dprofpp.PL
 
 post-install:
 	@strip ${PREFIX}/bin/a2p
 	@strip ${PREFIX}/bin/perl
 .if ${OPSYS} == "SunOS"
-	${CAT} ${PKGDIR}/PLIST-mi ${PKGDIR}/PLIST-md.shared  | \
-				${EGREP} -v 'DB_File' > ${PLIST_SRC}
+	${CAT} ${PLIST_SOURCES} | ${EGREP} -v 'DB_File' > ${PLIST_SRC}
 .endif
+	eval `${PREFIX}/bin/perl -V:installsitearch`; \
+	${TOUCH} $${installsitearch}/.directory
 
 .include "../../mk/bsd.pkg.mk"

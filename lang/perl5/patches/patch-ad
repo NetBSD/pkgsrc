@@ -1,25 +1,46 @@
-$NetBSD: patch-ad,v 1.5 2000/01/18 22:31:47 tron Exp $
+$NetBSD: patch-ad,v 1.6 2000/08/30 18:42:24 jlam Exp $
 
---- perl.c.BAK	Wed Nov 19 23:09:31 1997
-+++ perl.c	Wed Nov 19 23:10:58 1997
-@@ -2036,6 +2036,20 @@
- 		croak("Can't swap uid and euid");	/* really paranoid */
- 	    if (Stat(SvPVX(GvSV(curcop->cop_filegv)),&tmpstatbuf) < 0)
- 		croak("Permission denied");	/* testing full pathname here */
-+#if (defined(BSD) && (BSD >= 199306))
-+#ifdef IAMSUID
-+        {
-+            struct statfs stfs;
-+
-+            if (fstatfs(fileno(rsfp),&stfs) < 0)
-+                croak("Can't statfs filesystem of script \"%s\"",origfilename);
-+
-+           if (stfs.f_flags & MNT_NOSUID)
-+                croak("Permission denied");
-+        }
-+#endif /* IAMSUID */
-+#endif /* BSD */
-+
- 	    if (tmpstatbuf.st_dev != statbuf.st_dev ||
- 		tmpstatbuf.st_ino != statbuf.st_ino) {
- 		(void)PerlIO_close(rsfp);
+--- installperl.orig	Wed Mar  8 07:22:41 2000
++++ installperl
+@@ -224,7 +224,7 @@
+ safe_unlink("$installbin/s$perl_verbase$ver$exe_ext");
+ if ($d_dosuid) {
+     copy("suidperl$exe_ext", "$installbin/s$perl_verbase$ver$exe_ext");
+-    chmod(04711, "$installbin/s$perl_verbase$ver$exe_ext");
++    chmod(04111, "$installbin/s$perl_verbase$ver$exe_ext");
+ }
+ 
+ # Install library files.
+@@ -326,19 +326,19 @@
+ 	      (-l $usrbinperl) &&
+ 	      ((readlink $usrbinperl) eq $expinstperl));
+     }
+-    if ((! $mainperl_is_instperl) &&
+-	(yn("Many scripts expect perl to be installed as $usrbinperl.\n" . 
+-	     "Do you wish to have $usrbinperl be the same as\n" .
+-	     "$expinstperl? [y] ")))
+-    {
+-	unlink($usrbinperl);
+-	( $Config{'d_link'} eq 'define' &&
+-	  eval { CORE::link $instperl, $usrbinperl } )	||
+-	eval { symlink $expinstperl, $usrbinperl }	||
+-	copy($instperl, $usrbinperl);
+-
+-	$mainperl_is_instperl = 1;
+-    }
++#    if ((! $mainperl_is_instperl) &&
++#	(yn("Many scripts expect perl to be installed as $usrbinperl.\n" . 
++#	     "Do you wish to have $usrbinperl be the same as\n" .
++#	     "$expinstperl? [y] ")))
++#    {
++#	unlink($usrbinperl);
++#	( $Config{'d_link'} eq 'define' &&
++#	  eval { CORE::link $instperl, $usrbinperl } )	||
++#	eval { symlink $expinstperl, $usrbinperl }	||
++#	copy($instperl, $usrbinperl);
++#
++#	$mainperl_is_instperl = 1;
++#    }
+ }
+ 
+ # Make links to ordinary names if installbin directory isn't current directory.
