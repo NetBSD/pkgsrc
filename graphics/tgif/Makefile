@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/03/29 15:40:21 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.36 2002/08/01 05:48:14 jlam Exp $
 #
 
 DISTNAME=		tgif-4.1.42
@@ -12,8 +12,7 @@ COMMENT=		Fully-featured X11 drawing program
 USE_IMAKE=		yes
 USE_X11=		yes
 
-USE_PTHREAD=	native pth
-.include "../../mk/bsd.prefs.mk"
+PTHREAD_OPTS+=		require
 
 post-patch::
 	@${RM} -f ${WRKSRC}/Tgif.tmpl

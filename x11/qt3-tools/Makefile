@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/05/30 12:33:28 skrll Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/01 05:48:25 jlam Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
@@ -14,7 +14,7 @@ MAKE_ENV+=              LIBQT="-lqt-mt"
 
 USE_BUILDLINK_ONLY=		yes
 
-USE_PTHREAD=	native pth-syscall
+PTHREAD_OPTS+=		require
 
 UNLIMIT_RESOURCES=	datasize
 
@@ -35,7 +35,7 @@ do-install:
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/qm2ts ${QTPREFIX}/bin
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/qtconfig ${QTPREFIX}/bin
 
-.include "../../mk/pthread.buildlink.mk"
 .include "../../x11/qt3-libs/buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

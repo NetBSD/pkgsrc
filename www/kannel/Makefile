@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/06/15 21:00:27 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2002/08/01 05:48:24 jlam Exp $
 #
 
 DISTNAME=	gateway-${KANNEL_VER}
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK_ONLY=	YES
 USE_GMAKE=		YES
 USE_PERL5=		YES
-USE_PTHREAD=		native pth
+PTHREAD_OPTS+=		require
 
 CONFIGURE_ARGS+=	--disable-docs
 
