@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/03/24 21:38:25 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.22 2002/05/06 12:18:25 tron Exp $
 
 DISTNAME=		audiofile-0.2.3
 PKGNAME=		lib${DISTNAME}
@@ -14,7 +13,7 @@ COMMENT=		Sound library for SGI audio file
 GNU_CONFIGURE=		YES
 USE_BUILDLINK_ONLY=	YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 DOCDIR=			${PREFIX}/share/doc/libaudiofile
 
