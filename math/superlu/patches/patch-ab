@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2003/11/11 11:53:56 wiz Exp $
+
+--- TESTING/dtest.csh.orig	Thu Oct  2 01:27:24 2003
++++ TESTING/dtest.csh
+@@ -26,7 +26,7 @@ foreach m ($MATRICES)
+           foreach l ($LWORK)
+ 	    echo '' >> $ofile
+             echo 'n='$n 'nrhs='$s 'lwork='$l >> $ofile
+-            dtest -t "LA" -l $l -n $n -s $s >> $ofile
++            ./dtest -t "LA" -l $l -n $n -s $s >> $ofile
+           end
+         end
+       end
+@@ -40,7 +40,7 @@ foreach m ($MATRICES)
+         foreach l ($LWORK)
+ 	    echo '' >> $ofile
+             echo 'nrhs='$s 'lwork='$l >> $ofile
+-            dtest -t "SP" -s $s -l $l < ../EXAMPLE/$m >> $ofile
++            ./dtest -t "SP" -s $s -l $l < ../EXAMPLE/$m >> $ofile
+         end
+     end
+   endif
