@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2002/08/25 21:52:12 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2005/01/24 13:59:47 wulf Exp $
 
---- Makefile.in.orig	Tue Jun 11 20:59:52 2002
-+++ Makefile.in	Sun Jul  7 21:30:27 2002
-@@ -90,7 +90,7 @@
+--- Makefile.in.orig	2004-08-25 07:20:09.000000000 +0930
++++ Makefile.in	2005-01-22 13:43:38.000000000 +1030
+@@ -94,7 +94,7 @@
  
  # Set this to something if you want all installed binaries to have a suffix.
  # Version number is common.
