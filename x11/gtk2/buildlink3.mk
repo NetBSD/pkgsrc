@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2004/05/17 21:32:35 seb Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2004/05/28 18:16:38 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTK2_BUILDLINK3_MK:=	${GTK2_BUILDLINK3_MK}+
@@ -28,6 +28,7 @@ USE_X11= 	yes
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
