@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.27 2002/09/21 23:31:41 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.28 2002/09/23 01:11:39 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -577,6 +577,7 @@ _BLNK_WRAP_LOGIC=			${BUILDLINK_DIR}/bin/.logic
 _BLNK_WRAP_POST_CACHE_TRANSFORM=	${BUILDLINK_DIR}/bin/.post-cache-trans
 _BLNK_WRAP_CACHE_TRANSFORM=		${BUILDLINK_DIR}/bin/.cache-trans
 _BLNK_WRAP_LOGIC_TRANSFORM=		${BUILDLINK_DIR}/bin/.logic-trans
+_BLNK_WRAP_SPECIFIC_LOGIC=		${BUILDLINK_DIR}/bin/.std-logic
 _BLNK_WRAP_LOG=				${BUILDLINK_DIR}/.wrapper.log
 _BLNK_LIBTOOL_FIX_LA=			${BUILDLINK_DIR}/bin/.libtool-fix-la
 _BLNK_FAKE_LA=				${BUILDLINK_DIR}/bin/.fake-la
@@ -593,6 +594,7 @@ _BLNK_WRAP_PRE_CACHE.${_wrappee_}=	${_BLNK_WRAP_PRE_CACHE}
 _BLNK_WRAP_POST_CACHE.${_wrappee_}=	${_BLNK_WRAP_POST_CACHE_TRANSFORM}
 _BLNK_WRAP_CACHE.${_wrappee_}=		${_BLNK_WRAP_CACHE_TRANSFORM}
 _BLNK_WRAP_LOGIC.${_wrappee_}=		${_BLNK_WRAP_LOGIC_TRANSFORM}
+_BLNK_WRAP_SPECIFIC_LOGIC.${_wrappee_}=	${_BLNK_WRAP_SPECIFIC_LOGIC}
 .endfor
 
 # Don't bother adding AS, CPP to the configure or make environments as
@@ -616,6 +618,9 @@ _BLNK_WRAP_SANITIZE_PATH.LIBTOOL=	# empty
 
 # We need to "unbuildlinkify" any libtool archives.
 _BLNK_WRAP_LT_UNTRANSFORM_SED=		${_REPLACE_BUILDLINK_SED}
+
+# The ld wrapper script accepts "-Wl,*" arguments.
+_BLNK_WRAP_SPECIFIC_LOGIC.LD=	${BUILDLINK_DIR}/bin/.ld-logic
 
 # Don't transform the arguments for imake, which uses the C preprocessor
 # to generate Makefiles, so that imake will find its config files.
@@ -654,6 +659,7 @@ _BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}=				\
 	-e "s|@_BLNK_WRAP_POST_CACHE@|${_BLNK_WRAP_POST_CACHE.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_CACHE@|${_BLNK_WRAP_CACHE.${_wrappee_}:Q}|g"	\
 	-e "s|@_BLNK_WRAP_LOGIC@|${_BLNK_WRAP_LOGIC.${_wrappee_}:Q}|g"	\
+	-e "s|@_BLNK_WRAP_SPECIFIC_LOGIC@|${_BLNK_WRAP_SPECIFIC_LOGIC.${_wrappee_}:Q}|g"	\
 	-e "s|@_BLNK_WRAP_SANITIZE_PATH@|${_BLNK_WRAP_SANITIZE_PATH.${_wrappee_}:Q}|g"
 
 buildlink-wrappers: ${BUILDLINK_${_wrappee_}}
@@ -661,7 +667,8 @@ buildlink-wrappers: ${BUILDLINK_${_wrappee_}}
 ${BUILDLINK_${_wrappee_}}:						\
 		${_BLNK_WRAPPER_SH.${_wrappee_}}			\
 		${_BLNK_WRAP_PRE_CACHE.${_wrappee_}}			\
-		${_BLNK_WRAP_POST_CACHE.${_wrappee_}}
+		${_BLNK_WRAP_POST_CACHE.${_wrappee_}}			\
+		${_BLNK_WRAP_SPECIFIC_LOGIC.${_wrappee_}}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_BUILDLINK_MSG}		\
 		"Creating wrapper: ${.TARGET}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -791,6 +798,17 @@ ${_BLNK_WRAP_LOGIC_TRANSFORM}:						\
 		${_BLNK_WRAP_POST_CACHE_TRANSFORM}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} > ${.TARGET}
+
+${_BLNK_WRAP_SPECIFIC_LOGIC}:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
+
+${_BLNK_WRAP_SPECIFIC_LOGIC.LD}: ${.CURDIR}/../../mk/buildlink2/ld-logic
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
+		-e "s|@ECHO@|${ECHO:Q}|g"				\
+		${.ALLSRC} > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ${_BLNK_LIBTOOL_FIX_LA}: ${.CURDIR}/../../mk/buildlink2/libtool-fix-la
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
