@@ -1,24 +1,32 @@
-# $NetBSD: Makefile,v 1.27 1998/08/20 15:16:59 tsarna Exp $
+# $NetBSD: Makefile,v 1.28 1998/09/28 18:13:36 tron Exp $
 #
 
-DISTNAME=	ImageMagick-4.0.8
+DISTNAME=	ImageMagick-4.1.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.wizards.dupont.com/cristy/ImageMagick.html
 
-DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
+DEPENDS+=	mpeg2codec-1.2:../../graphics/mpeg2codec
 DEPENDS+=	png-1.0.2:../../graphics/png
-DEPENDS+=	mpeg-1.2.1:../../graphics/mpeg-lib
+DEPENDS+=	tiff-3.4:../../graphics/tiff
 
 CONFLICTS=	ImageMagick-4.0 ImageMagick-4.0.1 ImageMagick-4.0.3 \
-		ImageMagick-4.0.5 ImageMagick-4.0.6 ImageMagick-4.0.7
+		ImageMagick-4.0.5 ImageMagick-4.0.6 ImageMagick-4.0.7 \
+		ImageMagick-4.0.8
+
+pre-configure:
+.if exists(/usr/lib/libbz2.a)
+		@echo >${WRKSRC}/bzlib.tmpl "#define HasBZLIB"
+.else
+		@echo >${WRKSRC}/bzlib.tmpl
+.endif
 
 MIRROR_DISTFILE= no
 USE_IMAKE=	yes
 XMKMF=		${MAKE_ENV} xmkmf -a
-MAKE_ENV=	LOCALBASE=${LOCALBASE} PREFIX=${PREFIX}
+MAKE_ENV+=	LOCALBASE=${LOCALBASE} PREFIX=${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"
