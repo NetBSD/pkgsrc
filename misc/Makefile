@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.191 2004/02/16 23:02:18 kristerw Exp $
+# $NetBSD: Makefile,v 1.192 2004/02/24 17:06:48 jmmv Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -38,6 +38,7 @@ SUBDIR+=	dialog
 SUBDIR+=	dirdiff
 SUBDIR+=	dnetc
 SUBDIR+=	dotfile
+SUBDIR+=	drwright
 SUBDIR+=	dsbr100
 SUBDIR+=	dt
 SUBDIR+=	dvorakng
