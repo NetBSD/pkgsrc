@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/15 23:27:07 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/05/22 15:22:21 jlam Exp $
 
 DISTNAME=		sitecopy-0.10.15
 CATEGORIES=		www
@@ -16,6 +16,7 @@ USE_GMAKE=		# defined
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-included-neon
 CONFIGURE_ARGS+=	--enable-libxml
 
 .include "../../devel/libgetopt/Makefile.getopt"
