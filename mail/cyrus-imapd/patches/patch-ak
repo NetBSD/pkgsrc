@@ -1,0 +1,19 @@
+$NetBSD: patch-ak,v 1.1 2001/11/24 20:49:43 jlam Exp $
+
+--- configure.orig	Fri Jul 27 19:53:11 2001
++++ configure
+@@ -1413,14 +1413,6 @@
+ fi
+ 
+ echo "$ac_t""$andrew_runpath_switch" 1>&6
+-CPPFLAGS="-I/usr/local/include ${CPPFLAGS}"
+-
+-  # this is CMU ADD LIBPATH
+-  if test "$andrew_runpath_switch" = "none" ; then
+-	LDFLAGS="-L"/usr/local/lib" ${LDFLAGS}"
+-  else
+-	LDFLAGS="-L"/usr/local/lib" $andrew_runpath_switch"/usr/local/lib" ${LDFLAGS}"
+-  fi
+ 
+ 
+ for ac_hdr in unistd.h sys/select.h sys/param.h
