@@ -1,10 +1,20 @@
-$NetBSD: patch-ae,v 1.1 1998/08/20 22:07:25 agc Exp $
+$NetBSD: patch-ae,v 1.2 1998/12/19 12:31:47 tron Exp $
 
-make a placeholder Makefile.in so sed doesn't puke during configure stage
-
---- /dev/null	Wed Aug 19 14:32:56 1998
-+++ src/services/name/Makefile.in	Wed Aug 19 14:34:41 1998
-@@ -0,0 +1,3 @@
+--- src/services/name/Makefile.in.orig	Wed Dec 16 03:41:47 1998
++++ src/services/name/Makefile.in	Sat Dec 19 12:55:42 1998
+@@ -1,3 +1,6 @@
 +# NetBSD
 +#
 +# There might as well be something here.
+ # Makefile.in generated automatically by automake 1.3 from Makefile.am
+ 
+ # Copyright (C) 1994, 1995, 1996, 1997, 1998 Free Software Foundation, Inc.
+@@ -768,7 +771,7 @@
+ 
+ 
+ $(CosNaming_built): CosNaming.idl $(srcdir)/LName.h $(IDL)
+-	$(IDL) $<
++	$(IDL) CosNaming.idl
+ 	cat $(srcdir)/LName.h >>CosNaming.h
+ 
+ dist-hook:
