@@ -1,0 +1,8 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/28 14:59:05 ad Exp $
+
+--- include/Makefile.am.orig	Fri Jul 28 15:34:49 2000
++++ include/Makefile.am	Fri Jul 28 15:34:58 2000
+@@ -1,2 +1,2 @@
+-include_HEADERS = libfon.h libpsf.h librio500.h librio500_api.h getopt.h 
++include_HEADERS = libfon.h libpsf.h librio500.h librio500_api.h 
+ extra_DIST = usbdevice_fs.h usbdevfs.h usbdrv.h rio500_usb.h
