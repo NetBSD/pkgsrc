@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2000/06/13 10:40:26 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2000/07/03 07:31:35 sakamoto Exp $
 #
 
-DISTNAME=	ruby-1.4.4
+DISTNAME=	ruby-1.4.5
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.TokyoNet.AD.JP/pub/misc/ruby/ \
 		ftp://ftp.iij.ad.jp/pub/lang/ruby/ \
