@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/02/11 00:47:20 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2004/02/12 08:55:33 seb Exp $
 
 DISTNAME=		texinfo-4.6
 PKGNAME=		g${DISTNAME}
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-CONFIG_STATUS_OVERRIDE=	${WRKSRC}/config.status
+CONFIG_STATUS_OVERRIDE=	config.status
 
 INFO_FILES=		info-stnd.info info.info texinfo
 TEST_TARGET=		check
