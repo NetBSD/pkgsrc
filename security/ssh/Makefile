@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 1998/09/10 19:40:41 kim Exp $
+# $NetBSD: Makefile,v 1.36 1999/01/30 09:38:44 is Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -77,6 +77,11 @@ CONFIGURE_ARGS+=	--disable-suid-ssh
 CFLAGS+=		-DLIBWRAP_FWD
 .endif
 
+# be more effective on M68060 machines
+.if defined(M68060)
+CONFIGURE_ARGS+=	--host=m68060--netbsd
+.endif
+
 PKGDIR=		${WRKDIR}/pkg
 
 pre-patch:
@@ -86,11 +91,11 @@ pre-patch:
 fetch-depends:
 .if !defined(USE_RSAREF2) || ${USE_RSAREF2} != YES && ${USE_RSAREF2} != NO
 	@${ECHO}
-	@${ECHO} The variable USE_RSAREF2 must be set to either YES or NO
-	@${ECHO} in order to build this package.  People with no RSA
-	@${ECHO} license MUST set this variable to YES.  Users outside
-	@${ECHO} the USA MUST set this variable to NO.  RSA licensees may
-	@${ECHO} choose -- NO is faster.
+        @${ECHO} The variable USE_RSAREF2 must be set to either YES or NO
+        @${ECHO} in order to build this package.  USA residents that are
+        @${ECHO} no licensees of the RSA algorithm MUST set this variable
+        @${ECHO} to YES.  Users outside the USA MUST set this variable to
+        @${ECHO} NO.  Licensees may choose -- NO is faster.
 	@${ECHO}
 	@${ECHO} You may also want to set DONT_USE_IDEA to YES if this program
 	@${ECHO} will be used for a commercial purpose.  There are other
