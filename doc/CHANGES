@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5453 2004/04/05 18:17:42 adam Exp $
+$NetBSD: CHANGES,v 1.5454 2004/04/05 22:08:33 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1791,3 +1791,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added lua-sqlite-20030228 [xtraeme 2004-04-05]
 	Updated cvsync to 0.24.14 [gehenna 2004-04-05]
 	Updated shared-mime-info to 0.14 [adam 2004-04-05]
+	Updated gimp to 2.0.0nb1 [jmmv 2004-04-05]
