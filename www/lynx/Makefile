@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2001/12/31 19:42:48 fredb Exp $
+# $NetBSD: Makefile,v 1.48 2001/12/31 19:56:23 fredb Exp $
 #
 
 DISTNAME=		lynx2.8.4rel.1
@@ -59,6 +59,9 @@ CONFIGURE_ARGS+=	--enable-file-upload
 CONFIGURE_ARGS+=	--enable-justify-elts
 CONFIGURE_ARGS+=	--enable-prettysrc
 CONFIGURE_ARGS+=	--enable-read-eta
+
+pre-install:
+	${RM} -f ${WRKSRC}/CHANGES.orig
 
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/lynx
