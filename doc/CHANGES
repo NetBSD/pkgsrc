@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7856 2004/11/14 21:51:40 abs Exp $
+$NetBSD: CHANGES,v 1.7857 2004/11/14 21:54:56 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5275,4 +5275,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bmp to 0.9.7rc2nb4 [jmmv 2004-11-14]
 	Updated drivel to 1.2.2nb2 [jmmv 2004-11-14]
 	Updated cpuflags to 0.78 [abs 2004-11-14]
-
+	Updated epiphany to 1.4.5 [jmmv 2004-11-14]
