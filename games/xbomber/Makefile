@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/01/30 23:18:49 agc Exp $
+# $NetBSD: Makefile,v 1.6 2001/01/11 20:58:27 dent Exp $
 #
 
 DISTNAME=	xbomber.0.8
@@ -7,7 +7,7 @@ CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.sonic.net/pub/users/nbs/unix/x/xbomber/
 
 MAINTAINER=	root@garbled.net
-HOMEPAGE=	http://www.sonic.net/~nbs/unix/x/xbomber/
+HOMEPAGE=	http://www.newbreedsoftware.com/xbomber/
 
 WRKSRC=		${WRKDIR}/xbomber
 MAKEFILE=	makefile
