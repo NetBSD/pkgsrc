@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/03/28 20:58:03 jwise Exp $
+# $NetBSD: Makefile,v 1.10 2001/04/21 13:42:38 wiz Exp $
 #
 
 DISTNAME=		postgresql-7.0.3
@@ -15,8 +15,6 @@ COMMENT=		100% Java JDBC driver for PostgreSQL
 
 # No, we don't depend on postgresql.  This code base stands alone.
 
-# checksum shared distfile, since we need not have built postgresql
-DIGEST_FILE=		${PKGSRCDIR}/databases/postgresql/files/md5
 EXTRACT_ELEMENTS=	${DISTNAME}/src/interfaces/jdbc
 
 .include "../../mk/bsd.prefs.mk"
