@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2223 2003/05/13 03:08:25 salo Exp $
+$NetBSD: CHANGES,v 1.2224 2003/05/13 11:58:43 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1945,3 +1945,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated exmh to 2.6.3 [agc 2003-05-12]
 	Updated snortsnarf to 20021111.1 [salo 2003-05-13]
 	Updated libgcrypt to 1.1.12 [salo 2003-05-13]
+	Updated inn to 2.3.5 [tron 2003-05-13]
