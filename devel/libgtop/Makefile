@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/03/22 22:43:42 agc Exp $
+# $NetBSD: Makefile,v 1.16 1999/04/04 21:05:59 tron Exp $
 #
 
 DISTNAME=	libgtop-1.0.1
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
 DEPENDS+=	gettext-0.10.35:../../devel/gettext
-DEPENDS+=	gnome-libs-1.0.3:../../x11/gnome-libs
+DEPENDS+=	gnome-libs-1.0.5:../../x11/gnome-libs
 DEPENDS+=	guile-1.3:../../lang/guile
 
 NOT_FOR_ARCHS=	alpha	# problems with gtk
@@ -20,6 +20,8 @@ GNU_CONFIGURE=	yes
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
+
+IGNORE=		"got broken by removal of Mach VM"
 
 CONFIGURE_ARGS+=	--with-glib-prefix=${LOCALBASE} \
 			--with-libgtop-guile --with-catgets
