@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
+
+--- config.h.in.orig	Fri Jan 17 20:27:10 1997
++++ config.h.in	Tue Dec 21 15:52:49 1999
+@@ -15,8 +15,8 @@
+ /* Define if you have the getdtablesize function.  */
+ #undef HAVE_GETDTABLESIZE
+ 
+-/* Define if you have the tiocnotty function.  */
+-#undef HAVE_TIOCNOTTY
++/* Define if you have the setsid function.  */
++#undef HAVE_SETSID
+ 
+ /* Define if you have the <fcntl.h> header file.  */
+ #undef HAVE_FCNTL_H

@@ -1,0 +1,41 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
+
+--- skkserv/skkserv.c.orig	Tue Jan 21 04:16:36 1997
++++ skkserv/skkserv.c	Tue Dec 21 15:50:59 1999
+@@ -132,6 +132,16 @@
+   int	ctlterm;	/* fildes for control terminal */
+   void	reread();
+ 
++#ifdef SKKSERV_UID
++  gid_t	gid = SKKSERV_GID;
++
++  /* revoke privilege if any */
++  if (getuid() == 0) {
++    setgroups(1, &gid);
++    setgid(SKKSERV_GID);
++    setuid(SKKSERV_UID);
++  }
++#endif
+   pgmnm = argv[0];
+   debug = 0;
+   errout = stderr;
+@@ -200,7 +210,10 @@
+     fclose(stderr);
+ 
+     /* detach child process from control terminal */
+-#ifdef HAVE_TIOCNOTTY
++#ifdef HAVE_SETSID
++    setsid();
++#else
++#ifdef TIOCNOTTY
+     if ((ctlterm = open("/dev/tty", 2)) >= 0) { 
+       ioctl(ctlterm, TIOCNOTTY, 0);
+       close(ctlterm);
+@@ -214,6 +227,7 @@
+     setpgrp();
+     signal(SIGHUP, SIG_IGN);
+     if (fork() != 0) exit(0);
++#endif
+ #endif
+   } else { /* debug mode */
+     fprintf(errout, "SKK-JISYO is %s\n", jname);

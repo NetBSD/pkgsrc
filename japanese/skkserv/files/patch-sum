@@ -1,0 +1,11 @@
+$NetBSD: patch-sum,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
+
+MD5 (patch-aa) = 4755129f92972489cb1f7bba2a7370f9
+MD5 (patch-ab) = ea1b5133ffe3184d6a92735eb9f31f13
+MD5 (patch-ac) = 35889fef05e7b4b7d12376c9e2ce5bba
+MD5 (patch-ad) = 5e4b28776c2bf7753dc095df10468b36
+MD5 (patch-ae) = 126c617a8a4d630a9785aa639ede10f5
+MD5 (patch-af) = ff628b3980e6f0cdc9269215478c2526
+MD5 (patch-ag) = 264a703f7141e814998af34bf97bdeb1
+MD5 (patch-bsearch) = ae90c6d2ed8f4e529f66f3cde3d2f60d
+MD5 (patch-jisyo) = 20cad7a6a9929754edd1ad67a321e601

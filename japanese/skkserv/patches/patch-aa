@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
+
+--- Makefile.in.orig	Mon Feb  3 18:21:39 1997
++++ Makefile.in	Tue Dec 21 20:03:09 1999
+@@ -33,7 +33,7 @@
+ JISYO = @JISYO@
+ JISYODIR = $(datadir)/skk
+ 
+-SUBDIRS = lisp skkserv jisyo-tools doc etc
++SUBDIRS = skkserv jisyo-tools
+ 
+ MDEFINES = CC='$(CC)' CFLAGS='$(CFLAGS)' LDFLAGS='$(LDFLAGS)' \
+ 	EMACS='$(EMACS)' JISYO='$(JISYO)' JISYODIR='$(JISYODIR)' \
+@@ -50,7 +50,6 @@
+ 	  echo making $@ in $$subdir; \
+ 	  (cd $$subdir && $(MAKE) $(MDEFINES) $@) || exit 1; \
+ 	done
+-	$(INSTALL_DATA) jisyo/$(JISYO) $(JISYODIR)/$(JISYO)
+ 
+ clean:
+ 	cd lisp; $(MAKE) clean
