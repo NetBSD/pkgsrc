@@ -1,17 +1,27 @@
-# $NetBSD: Makefile,v 1.48 2003/10/03 15:38:46 salo Exp $
+# $NetBSD: Makefile,v 1.49 2004/01/03 18:33:24 reed Exp $
 
-DISTNAME=	tiff-v3.5.7
-PKGNAME=	tiff-3.5.7
-PKGREVISION=	1
+DISTNAME=	tiff-v3.6.1
+PKGNAME=	tiff-3.6.1
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.remotesensing.org/pub/libtiff/
+MASTER_SITES=	ftp://ftp.remotesensing.org/pub/libtiff/ \
+		http://libtiff.maptools.org/dl/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 # need DISTFILES above for adding lzw-files to it if USE_GIF is defined
 # in mk.conf
+DISTFILES+=	TIFFTechNote2.html
+# It is in CVS for Release-v3-6-1, but accidently excluded from distribution.
+SITES_TIFFTechNote2.html=	${MASTER_SITE_LOCAL:=tiff/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.libtiff.org/
+HOMEPAGE=	http://www.remotesensing.org/libtiff/
 COMMENT=	Library and tools for reading and writing TIFF data files
+
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+# use DIST_SUBDIR because TIFFTechNote2.html could be changed later
+DIST_SUBDIR=	${PKGNAME_NOREV}
+
+BUILD_DEFS+=	USE_GIF
 
 USE_BUILDLINK2=	yes
 USE_LIBTOOL=	yes
@@ -26,12 +36,15 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL.OpenWindows
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL.OpenWindows
 .endif
 
-.if defined(USE_GIF)
-LZW_VERSION=	1.3
-DISTFILES+=	libtiff-lzw-compression-kit-${LZW_VERSION}.tar.gz
-LZWWRKDIR=	${WRKDIR}/libtiff-lzw-compression-kit-${LZW_VERSION}
+post-extract:
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/TIFFTechNote2.html ${WRKSRC}/html/
 
-post-patch:
+.if defined(USE_GIF)
+LZW_VERSION=	1.5
+DISTFILES+=	libtiff-lzw-compression-kit-${LZW_VERSION}.tar.gz
+EXTRACT_ONLY+=	libtiff-lzw-compression-kit-${LZW_VERSION}.tar.gz
+LZWWRKDIR=	${WRKDIR}/libtiff-lzw-compression-kit-${LZW_VERSION}
+pre-patch:
 	${CP} ${LZWWRKDIR}/tif_lzw.c ${WRKSRC}/libtiff
 .endif
 
@@ -39,7 +52,7 @@ CPPFLAGS+=	-Dunix
 CONFIGURE_ENV+=	PREFIX="${PREFIX}"
 CONFIGURE_ENV+=	ENVOPTS="${CFLAGS} ${CPPFLAGS}"
 
-pre-patch:
+post-patch:
 	# reference correct relative man page when using .so
 	#
 	${MV} ${WRKSRC}/man/Makefile.in ${WRKSRC}/man/Makefile.in.in
