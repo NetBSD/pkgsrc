@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/05/05 14:41:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/05 19:36:04 epg Exp $
 #
 
 DISTNAME=		gnome-panel-2.2.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -54,5 +54,6 @@ GCONF2_SCHEMAS+=	tasklist.schemas
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-desktop/buildlink2.mk"
 .include "../../x11/gnome2-control-center/buildlink2.mk"
+.include "../../x11/startup-notification/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
