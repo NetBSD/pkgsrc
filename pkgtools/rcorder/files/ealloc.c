@@ -1,4 +1,4 @@
-/*	$NetBSD: ealloc.c,v 1.1.1.1 2004/08/27 01:49:16 schmonz Exp $	*/
+/*	$NetBSD: ealloc.c,v 1.2 2004/08/27 03:06:07 jlam Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -68,13 +68,15 @@
  * SUCH DAMAGE.
  */
 
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
 #include <nbcompat.h>
-
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: ealloc.c,v 1.1.1.1 2004/08/27 01:49:16 schmonz Exp $");
+__RCSID("$NetBSD: ealloc.c,v 1.2 2004/08/27 03:06:07 jlam Exp $");
 #endif /* not lint */
 
 #if HAVE_STDIO_H
