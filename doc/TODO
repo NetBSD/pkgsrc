@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.79 2002/12/18 04:01:20 wiz Exp $
+$NetBSD: TODO,v 1.80 2002/12/18 12:44:12 tron Exp $
 
 Suggested new packages
 ======================
@@ -247,7 +247,6 @@ Suggested package updates
 	o xforms-1.0RC4
 	o xfstt-1.4
 	o xpuyopuyo-0.9.5
-	o xsane-0.87 [rh|pkg/17952]
 	o xsidplay-1.6.5pre15
 	o yudit-2.7.2
 
