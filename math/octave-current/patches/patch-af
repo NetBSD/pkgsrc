@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 2001/04/22 20:23:02 jtb Exp $
+$NetBSD: patch-af,v 1.3 2001/04/22 22:58:47 jtb Exp $
 
 --- liboctave/Makefile.in.orig	Sun Apr 22 20:22:11 2001
 +++ liboctave/Makefile.in	Sun Apr 22 20:47:03 2001
@@ -28,7 +28,7 @@ $NetBSD: patch-af,v 1.2 2001/04/22 20:23:02 jtb Exp $
 -    libraries:
 -  endif
 -endif
-++libraries: liboctave.$(LIBEXT)
++libraries: liboctave.$(LIBEXT)
  .PHONY: libraries
  
  liboctave.$(LIBEXT): $(OBJECTS)
