@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2001/03/12 10:24:31 zuntum Exp $
+# $NetBSD: Makefile,v 1.90 2001/03/12 11:11:48 zuntum Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -30,6 +30,7 @@ SUBDIR+=	gnome-pim
 SUBDIR+=	gnome-utils
 SUBDIR+=	gone
 SUBDIR+=	gperiodic
+SUBDIR+=	granulate
 SUBDIR+=	heyu
 SUBDIR+=	hitchhiker
 SUBDIR+=	ibutton-pdkit
