@@ -1,25 +1,18 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/05 00:06:46 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2001/02/25 21:40:23 jtb Exp $
 
---- machine.h.in.orig	Mon Nov 20 03:33:32 2000
+--- machine.h.in.orig	Sun Feb 25 21:22:48 2001
 +++ machine.h.in
-@@ -208,13 +208,13 @@
+@@ -211,11 +211,13 @@
  #endif
  
  /* for non-ANSI systems */
--#ifndef HUGE_VAL
--#define HUGE_VAL HUGE
--#else
--#ifndef HUGE
--#define HUGE HUGE_VAL
--#endif
--#endif
-+/*  #ifndef HUGE_VAL */
-+/*  #define HUGE_VAL HUGE */
-+/*  #else */
-+/*  #ifndef HUGE */
-+/*  #define HUGE HUGE_VAL */
-+/*  #endif */
-+/*  #endif */
++#ifndef ANSI_C
+ #ifndef HUGE_VAL
+ #define HUGE_VAL HUGE
+ #else
+ #ifndef HUGE
+ #define HUGE HUGE_VAL
++#endif
+ #endif
+ #endif
  
- 
- #ifdef ANSI_C

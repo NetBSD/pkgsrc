@@ -1,6 +1,6 @@
-LIBS = -L%%PREFIX%%/lib -lmeschach -lm
+LIBS = -Wl,-R@PREFIX@/lib -L@PREFIX@/lib -lmeschach -lm
 
-CFLAGS = -I%%PREFIX%%/include -O2 -ansi
+CFLAGS += -I@PREFIX@/include -O2 -ansi
 
 TORTURE = torture sptort ztorture memtort itertort mfuntort iotort
 
