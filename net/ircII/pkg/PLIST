@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2000/08/08 22:30:37 kim Exp $
+@comment $NetBSD: PLIST,v 1.29 2000/08/21 18:59:57 hubertf Exp $
 bin/irc
 bin/irc-4.4X
 bin/ircbug
@@ -109,6 +109,7 @@ share/irc/help/deop@.GZ@
 share/irc/help/describe@.GZ@
 share/irc/help/die@.GZ@
 share/irc/help/digraph@.GZ@
+share/irc/help/disconnect@.GZ@
 share/irc/help/dmsg@.GZ@
 share/irc/help/dquery@.GZ@
 share/irc/help/echo@.GZ@
