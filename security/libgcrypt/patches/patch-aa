@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.3 2003/12/06 00:29:26 xtraeme Exp $
+
+--- src/libgcrypt-config.in.orig	2003-12-06 00:51:56.000000000 +0100
++++ src/libgcrypt-config.in	2003-12-06 00:52:51.000000000 +0100
+@@ -152,9 +152,9 @@
+ 
+     # Set up `libdirs'.
+     if test "@libdir@" != "/usr/lib" ; then
+-	libdirs="-L@libdir@"
++	libdirs="-L@libdir@ -Wl,-R@libdir@"
+ 	for i in $libs ; do
+-	    if test "$i" = "-L@libdir@" ; then
++	    if test "$i" = "-L@libdir@ -Wl,-R@libdir@" ; then
+ 		libdirs=""
+ 	    fi
+ 	done
