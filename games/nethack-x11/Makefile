@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/03/25 20:32:29 pooka Exp $
+# $NetBSD: Makefile,v 1.19 2002/09/23 10:10:51 jlam Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
@@ -10,7 +10,8 @@ CATEGORIES+=		x11
 
 DEPENDS+=		nethack-lib-${NETHACK_VERSION}:../nethack-lib
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 
 ALL_TARGET=		x11tiles nethack
 INSTALL_TARGET=		binfiles
@@ -22,6 +23,5 @@ post-install:
 	@${INSTALL_DATA} ${WRKSRC}/dat/x11tiles				\
 	     ${PREFIX}/share/nethackdir${NETHACK_DISTVER}
 
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
