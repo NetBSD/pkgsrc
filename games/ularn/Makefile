@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:15:41 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/15 21:17:08 ben Exp $
 
 DISTNAME=		ularn
 PKGNAME=		ularn-6.12.92
@@ -15,6 +15,16 @@ HAS_CONFIGURE=          # defined
 CONFIGURE_ENV+=         PREFIX=${LOCALBASE}
 CONFIGURE_SCRIPT=       ./Configure
 CONFIGURE_ARGS+=        -d
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+SUBST_CLASSES+=		termlib
+SUBST_MESSAGE.termlib=	"Adding -lcompat dependency."
+SUBST_STAGE.termlib=	post-patch
+SUBST_FILES.termlib=	Configure
+SUBST_SED.termlib=	-e 's,^termlib=..termlib,& -lcompat,'
+.endif
 
 pre-configure:
 	${MV} ${WRKSRC}/Configure ${WRKSRC}/Configure.template
