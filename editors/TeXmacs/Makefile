@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2002/04/27 10:27:01 rh Exp $
+# $NetBSD: Makefile,v 1.3 2002/06/16 18:50:26 wiz Exp $
 
-DISTNAME=	TeXmacs-1.0.0.2-src
+DISTNAME=	TeXmacs-1.0.0.7-src
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.texmacs.org/pub/TeXmacs/targz/
@@ -23,6 +23,7 @@ LDFLAGS+=	-Wl,-R${LOCALBASE}/libexec/${PKGNAME}/lib
 
 pre-configure:
 	cd ${WRKSRC} && autoconf;
+	${RM} ${WRKSRC}/misc/scripts/tm_axiom
 
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/texinfo.mk"
