@@ -125,7 +125,6 @@ Suggested package updates
 
 	o ImageViewer-0.6.3
 	o SDL-1.2.7
-	o TeXmacs-1.0.3.3
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o afio-2.5
@@ -151,8 +150,6 @@ Suggested package updates
 	o clisp-2.32
 	o cocoon-2.1.4
 	o conserver-8.1.1
-	o courier-imap-2.0 [pkg/22374]
-	o courier-imap-2.1
 	o crafty-19.5
 	o crimsonfields-0.4.1
 	o crossfire-1.5.0
@@ -200,7 +197,6 @@ Suggested package updates
 	o gimageview-0.2.25
 	o global-4.6
 	o glpk-4.3
-	o gnats-4.0 [pkgsrc-wip]
 	o gnomeicu-0.99
 	o gnuchess-5.06
 	o gnumeric-1.2.5
@@ -250,7 +246,6 @@ Suggested package updates
 	o marbles-1.0.6
 	o matchbox-0.8
 	o memtest86-3.1
-	o metacity-2.6.5
 	o micq-0.4.10.5
 	o midnight-commander-4.6.0
 	o mimedefang-2.39 [markd|pkg/24295]
@@ -265,7 +260,6 @@ Suggested package updates
 	o nap-1.5.2
 	o napshare-1.2
 	o netatalk-1.6.3 [pkg/21930]
-	o nethack-3.4.3
 	o newscache-0.99.22p1
 	o ns-flash-6.0.79
 	o nut-9.11
