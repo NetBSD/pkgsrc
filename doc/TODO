@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1710 2004/05/05 15:26:39 cjep Exp $
+$NetBSD: TODO,v 1.1711 2004/05/05 15:41:14 cjep Exp $
 
 Suggested new packages
 ======================
@@ -9,6 +9,10 @@ Suggested new packages
 	figfonts
 	More fonts for figlet.
 	ftp://ftp.plig.org/pub/figlet/fonts/contributed/
+
+	florist
+	Open-source implementation of POSIX Ada binding
+	wip/florist, PR#23628. Requires Ada compiler.
 
 	pfaedit -> fontforge rename
 	http://pfaedit.sourceforge.net/
