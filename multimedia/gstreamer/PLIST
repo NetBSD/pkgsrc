@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/01 19:05:43 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/06 09:30:01 jmmv Exp $
 bin/gst-complete
 bin/gst-complete-0.8
 bin/gst-compprep
@@ -120,6 +120,8 @@ lib/libgstreamer-0.8.so.1
 lib/libgstreamer-0.8.so.1.0
 lib/pkgconfig/gstreamer-0.8.pc
 lib/pkgconfig/gstreamer-control-0.8.pc
+libdata/gstreamer-0.8/compreg.xml
+libdata/gstreamer-0.8/registry.xml
 man/man1/gst-complete-0.8.1
 man/man1/gst-compprep-0.8.1
 man/man1/gst-feedback-0.8.1
@@ -140,6 +142,7 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gstreamer-0.8.mo
 @exec ${MKDIR} %D/share/doc/${PKGNAME}/faq
 @dirrm share/doc/${PKGNAME}/faq
 @dirrm share/doc/${PKGNAME}
+@dirrm libdata/gstreamer-0.8
 @dirrm lib/gstreamer-0.8
 @dirrm include/gstreamer-0.8/gst/getbits
 @dirrm include/gstreamer-0.8/gst/control
