@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/04/18 15:15:39 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.10 2001/05/17 08:38:43 abs Exp $
 #
 # XXX This package needs to be installed with the same PREFIX as teTeX
 #
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_TEX_CTAN:=web/cweb/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www-cs-faculty.stanford.edu/~knuth/cweb.html
-COMMENT=		The CWEB System of Structured Documentation
+COMMENT=		CWEB System of Structured Documentation
 
 DEPENDS+= 		teTeX-[0-9]*:../../print/teTeX
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 14:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/05/17 08:38:43 abs Exp $
 
 DISTNAME=       ldapsdk_12311998
 PKGNAME=        ldapsdk-12311998
@@ -7,7 +7,7 @@ MASTER_SITES=   ftp://ftp.mozilla.org/pub/directory/c-sdk/ldap/
 
 MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://www.mozilla.org/directory/
-COMMENT=	The LDAP C-SDK from the Mozilla projekt
+COMMENT=	LDAP C-SDK from the Mozilla project
 
 CONFLICTS+=	openldap*
 

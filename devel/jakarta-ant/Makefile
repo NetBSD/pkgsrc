@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/04/09 11:45:39 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/17 08:38:43 abs Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  The previous version
@@ -12,7 +12,7 @@ MASTER_SITES=	http://jakarta.apache.org/builds/jakarta-ant/release/v1.3/src/
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://jakarta.apache.org/
-COMMENT=	the Apache Project's Java-Based make(1) replacement
+COMMENT=	Apache Project's Java-Based make(1) replacement
 
 USE_JAVA=	yes
 
