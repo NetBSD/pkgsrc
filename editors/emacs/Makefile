@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 1999/10/07 17:41:49 tron Exp $
+# $NetBSD: Makefile,v 1.30 1999/12/03 12:55:44 agc Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 #
 
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 CONFIGURE_ARGS+=--with-pop --with-x --with-x-toolkit=lucid
-OPSYS!=         uname -s
 MAKE_ENV+=	INSTALL_STRIP=${STRIPFLAG}
 INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff ccmode message widget reftex forms customize
 
