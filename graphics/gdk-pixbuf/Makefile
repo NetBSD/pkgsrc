@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2000/07/05 23:59:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2000/10/17 23:59:59 jlam Exp $
 #
 
-DISTNAME=		gdk-pixbuf-0.8.0
-PKGNAME=		${DISTNAME}nb1
+DISTNAME=		gdk-pixbuf-0.9.0
 CATEGORIES=		graphics devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/gdk-pixbuf/}
 
@@ -11,23 +10,28 @@ HOMEPAGE=		http://www.gnome.org/
 
 DEPENDS+=		gnome-libs>=1.0.53:../../x11/gnome-libs
 
-GNU_CONFIGURE=		# defined
 USE_X11BASE=		# defined
 USE_GMAKE=		# defined
 
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+GNU_CONFIGURE=		# defined
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
-CONFIGURE_ENV+=		X11BASE="${X11BASE}"
 CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
 
 .include "../../mk/bsd.prefs.mk"
 .if (${OBJECT_FMT} == "ELF")
-PLIST_SRC=	${PKGDIR}/PLIST.elf
+PLIST_SRC=		${PKGDIR}/PLIST.elf
 .endif
-PLIST_SRC+=	${PKGDIR}/PLIST.mi
+PLIST_SRC+=		${PKGDIR}/PLIST.mi
+
+PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
+
+post-install:
+	${TEST} ${PREFIX} = ${LOCALBASE} || \
+	${LN} -fs ${PREFIX}/share/aclocal/libart.m4 \
+		${LOCALBASE}/share/aclocal/libart.m4
 
 .include "../../mk/bsd.pkg.mk"
