@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.5 2004/11/23 05:32:22 jlam Exp $
+# $NetBSD: xlc.mk,v 1.6 2004/11/27 15:28:34 grant Exp $
 
 .if !defined(COMPILER_XLC_MK)
 COMPILER_XLC_MK=	defined
@@ -46,6 +46,10 @@ CC_VERSION?=		IBM XL C
 .if !empty(_LANGUAGES.xlc)
 PREPEND_PATH+=	${_XLC_DIR}/bin
 .endif
+
+# Most packages assume alloca is available without #pragma alloca, so
+# make it the default.
+CFLAGS+=-ma
 
 # Create compiler driver scripts in ${WRKDIR}.
 .for _target_ in ${_XLC_LINKS}
