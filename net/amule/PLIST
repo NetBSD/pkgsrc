@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/07 01:24:16 xtraeme Exp $
+bin/amule
+bin/amulecmd
+bin/amulecmdDLG
+bin/amuleweb
+bin/amulewebDLG
+bin/ed2k
+share/applications/amule.desktop
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/ee/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/amule.mo
+share/pixmaps/amule.xpm
+@dirrm share/applications
