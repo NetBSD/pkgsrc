@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.2 1999/07/04 00:58:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1999/10/25 19:18:41 jlam Exp $
 #
 
 DISTNAME=	kworldwatch-0.6
 CATEGORIES=	x11 kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.1.1/apps/utils/
+MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.1.2/apps/utils/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hubertf@netbsd.org
 
 DEPENDS+=	gettext-0.10.35:../../devel/gettext
-DEPENDS+=	kde-1.1.1:../../x11/kde
+DEPENDS+=	kde-1.1.2:../../x11/kde
 
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
