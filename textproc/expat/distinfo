@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2004/03/02 18:13:58 drochner Exp $
+$NetBSD: distinfo,v 1.12 2004/08/05 22:16:59 recht Exp $
 
-SHA1 (expat-1.95.7.tar.gz) = 70f0658463484a43768a8f3168b707e0ff053e1e
-Size (expat-1.95.7.tar.gz) = 296718 bytes
+SHA1 (expat-1.95.8.tar.gz) = 73cb8fc326d04c44ae0e3b3f797f0e6ba9c4121f
+Size (expat-1.95.8.tar.gz) = 318349 bytes
