@@ -1,24 +1,21 @@
-# New ports collection Makefile for:	tkhylafax-3.0
-# Version required:	3.0b2
-# Date created:		Sun Jun  8 11:51:21 CEST 1997
-# Whom:			Andreas Klemm <andreas@klemm.gtn.com>
-#
-# $Id: Makefile,v 1.1.1.1 1999/08/11 06:18:13 rh Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/11 06:21:27 rh Exp $
+# FreeBSD Id: Makefile,v 1.6 1998/08/07 23:56:12 asami Exp
 #
 
-DISTNAME=	tkhylafax-3.0b2
-PKGNAME=	tkhylafax-3.0
-CATEGORIES=	comms tk42
-MASTER_SITES=	http://www.NeoSoft.com/tcl/ftparchive/sorted/comm/tkhylafax-3.0b2/
+DISTNAME=	tkhylafax-3.1
+CATEGORIES=	comms
+MASTER_SITES=	ftp://ftp.sgi.com/sgi/fax/contrib/tkhylafax/ \
+		ftp://ftp.tuwien.ac.at/infosys/fax/hylafax/contrib/tkhylafax/ \
+		http://gd.tuwien.ac.at/infosys/fax/hylafax/contrib/tkhylafax/
 
-MAINTAINER=	andreas@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.elgro.demon.co.uk/resources.html
 
-RUN_DEPENDS=	wish4.2:${PORTSDIR}/x11-toolkits/tk42 \
-		sendfax:${PORTSDIR}/comms/hylafax \
-		gs:${PORTSDIR}/print/ghostscript4 \
-		gv:${PORTSDIR}/print/gv
+DEPENDS+=	hylafax-4.1b1:../../comms/hylafax
+RUN_DEPENDS+=	${PREFIX}/bin/wish8.0:../../lang/tcl80
+RUN_DEPENDS+=	${PREFIX}/bin/gs:../../print/ghostscript5
+RUN_DEPENDS+=	${X11BASE}/bin/gv:../../print/gv
 
-WRKSRC=		${WRKDIR}/tkhylafax-3.0
-MAN1=		tkhylafax.1
+WRKSRC=		${WRKDIR}/tkhylafax
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
