@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 1999/09/03 22:18:27 rh Exp $
+# $NetBSD: Makefile,v 1.44 1999/09/17 00:49:32 hubertf Exp $
 #
 
     SUBDIR += amp
@@ -60,6 +60,7 @@
     SUBDIR += tracker
     SUBDIR += wmsound
     SUBDIR += wsoundprefs
+    SUBDIR += xamp
     SUBDIR += xcdplayer
     SUBDIR += xhippo
     SUBDIR += xmcd
