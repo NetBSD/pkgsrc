@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2003/01/22 13:52:46 agc Exp $
+# $NetBSD: Makefile,v 1.149 2003/01/22 22:01:18 mrauch Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -88,6 +88,7 @@ SUBDIR+=	mtail
 SUBDIR+=	nxtvepg
 SUBDIR+=	ooqstart
 SUBDIR+=	openoffice
+SUBDIR+=	openoffice-linux
 SUBDIR+=	p5-Array-PrintCols
 SUBDIR+=	p5-Business-CreditCard
 SUBDIR+=	p5-Business-ISBN
