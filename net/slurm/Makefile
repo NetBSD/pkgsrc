@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2004/10/03 00:17:58 tv Exp $
+# $NetBSD: Makefile,v 1.8 2004/10/14 16:27:17 ben Exp $
 #
 
-DISTNAME=	slurm-0.3.1
-PKGREVISION=	1
+DISTNAME=	slurm-0.3.3
 CATEGORIES=	net
-MASTER_SITES=	http://www.raisdorf.net/files/code/
+MASTER_SITES=	http://www.raisdorf.net/files/slurm/
 
 MAINTAINER=	mail@eckigesauge.de
 HOMEPAGE=	http://www.raisdorf.net/projects/slurm/
@@ -13,15 +12,11 @@ COMMENT=	Realtime traffic statistics
 USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
-post-patch:
-	${SED} -e s,@PREFIX@,${PREFIX}, ${WRKSRC}/theme.c > ${WRKSRC}/theme.c.sed
-	${MV} ${WRKSRC}/theme.c.sed ${WRKSRC}/theme.c
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/slurm ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/slurm.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/slurm
-	for theme in blue cyan foo; do								\
+	for theme in black blue cyan foo; do								\
 		${INSTALL_DATA} ${WRKSRC}/themes/$${theme}.theme ${PREFIX}/share/slurm ;	\
 	done
 
