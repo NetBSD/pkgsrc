@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/08/27 14:35:15 tron Exp $
+# $NetBSD: Makefile,v 1.15 2001/08/29 22:41:21 jlam Exp $
 
 DISTNAME=	AfterStep-1.8.9
 PKGNAME=	afterstep-1.8.9
@@ -22,10 +22,10 @@ USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PERL5=		YES
-USE_X11=		YES
 
 CONFIGURE_ARGS+=	--disable-staticlibs
 CONFIGURE_ARGS+=	--with-helpcommand="xpman"
+CFLAGS+=		-I${BUILDLINK_DIR}/include/X11		# xpm.h
 
 post-patch:
 	for i in `${FIND} ${WRKSRC} -name "*.man" -print` \
@@ -44,4 +44,5 @@ pre-configure:
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

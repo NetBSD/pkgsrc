@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/08/20 04:02:15 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/08/29 22:41:07 jlam Exp $
 #
 
 DISTNAME=	psiconv-0.6.1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://huizen.dds.nl/~frodol/psiconv/
 COMMENT=	PSION 5 file format data conversion utilities
 
 USE_BUILDLINK_ONLY=	YES
-USE_X11=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		YES
@@ -25,4 +24,5 @@ post-install:
 	done
 
 .include "../../graphics/ImageMagick/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

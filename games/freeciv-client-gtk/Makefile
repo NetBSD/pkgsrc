@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2001/08/15 19:50:30 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/08/29 22:41:10 jlam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-gtk-/}
 COMMENT=		Freeciv client with GTK+ interface
 
 DEPENDS+=		freeciv-share-${FC_VERS}:../../games/freeciv-share
 
-USE_X11=		# defined
 USE_BUILDLINK_ONLY=	# defined
 
 CONFIGURE_ARGS+=	--disable-server
@@ -22,4 +21,5 @@ do-install:
 .include "../../devel/zlib/buildlink.mk"
 .include "../../graphics/imlib/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

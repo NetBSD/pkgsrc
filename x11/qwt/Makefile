@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/06/26 20:42:59 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/08/29 22:41:30 jlam Exp $
 
 DISTNAME=	qwt-0.3.0
 CATEGORIES=	x11
@@ -31,4 +31,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/man/man3/* ${PREFIX}/man/man3
 
 .include "../../x11/qt2-libs/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

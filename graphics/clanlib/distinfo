@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2001/08/23 15:55:26 jlam Exp $
+$NetBSD: distinfo,v 1.6 2001/08/29 22:41:15 jlam Exp $
 
 SHA1 (ClanLib-0.4.4.tar.gz) = 326fb3812bd3c26cd8ecf60d8975c662674ae9a8
 Size (ClanLib-0.4.4.tar.gz) = 642836 bytes
-SHA1 (patch-aa) = 6aad55020babe8c11c44fee3c6b67157f1cf228c
+SHA1 (patch-aa) = 3c9669716944b0c1617b9020daa51599616aed5e
 SHA1 (patch-ab) = 38acc42d60694482b61853fb14e0460a437a1653
 SHA1 (patch-ac) = 383a03b0ecca44a6d3397184d6022a0bb91882da
 SHA1 (patch-ad) = ea6da825d77090177c2c5c73362fc5caa80181f3

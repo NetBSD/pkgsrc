@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/07/03 01:46:07 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/08/29 22:41:21 jlam Exp $
 
 DISTNAME=	xps-3.14
 CATEGORIES=	sysutils
@@ -15,7 +15,8 @@ USE_X11BASE=	# defined
 
 USE_BUILDLINK_ONLY=	# defined
 GNU_CONFIGURE=		# defined
-CONFIGURE_ENV+=		XINCLUDES="-I${X11BASE}/include"
+CONFIGURE_ENV+=		XINCLUDES="-I${BUILDLINK_X11_DIR}/include"
 
 .include "../../x11/lesstif/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

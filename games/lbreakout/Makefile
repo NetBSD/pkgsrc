@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/08/15 19:41:44 rh Exp $
+# $NetBSD: Makefile,v 1.9 2001/08/29 22:41:12 jlam Exp $
 #
 
 DISTNAME=	lbreakout-010315
@@ -10,9 +10,9 @@ HOMEPAGE=	http://lgames.sourceforge.net/
 COMMENT=	breakout-style arcade game
 
 USE_BUILDLINK_ONLY=	YES
-USE_X11=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-sound
 
 .include "../../devel/SDL/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

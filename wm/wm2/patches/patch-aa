@@ -1,16 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/08/29 22:41:26 jlam Exp $
 
---- Makefile.orig	Sun Sep 26 23:18:49 1999
-+++ Makefile	Sun Sep 26 23:19:31 1999
+--- Makefile.orig	Fri Mar 21 06:12:30 1997
++++ Makefile
 @@ -1,9 +1,9 @@
  
 -LIBS	=  -L/usr/X11/lib -lXext -lX11 -lXmu -lm
-+LIBS	= -Wl,-R,$(X11BASE)/lib -L$(X11BASE)/lib -lXext -lX11 -lXmu -lm
++LIBS	= ${LDFLAGS} -lXext -lX11 -lXmu -lm
  
- CC	= gcc
- CCC	= gcc
+-CC	= gcc
+-CCC	= gcc
 -CFLAGS	= -O2
-+CFLAGS	= -O2 -I$(X11BASE)/include
++#CC	= gcc
++#CCC	= gcc
++#CFLAGS	= -O2
  OBJECTS	= Border.o Buttons.o Client.o Events.o Main.o Manager.o Rotated.o
  
  .c.o:

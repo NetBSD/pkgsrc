@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/07/03 16:30:19 zuntum Exp $
+# $NetBSD: Makefile,v 1.12 2001/08/29 22:41:16 jlam Exp $
 
 DISTNAME=		fnlib-0.5
 CATEGORIES=		x11 graphics
@@ -14,9 +14,23 @@ GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+# Remove -I$(includedir) from the INCLUDES passed to the compiler as this
+# defeats buildlink.
+#
+post-patch:
+	cd ${WRKSRC};							\
+	files=`${FIND} . -name "Makefile.in" -print`;			\
+	for file in $${files}; do					\
+		${MV} -f $${file} $${file}.fixme;			\
+		${SED} -e "/^INCLUDES.*=.*/s|[  ]*-I\$$(includedir)||"	\
+			$${file}.fixme > $${file};			\
+		${RM} $${file}.fixme;					\
+	done
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fnlib
 	${INSTALL_DATA} ${WRKSRC}/doc/fontinfo.README ${PREFIX}/share/doc/fnlib
 
 .include "../../graphics/imlib/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

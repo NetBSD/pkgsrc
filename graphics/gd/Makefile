@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/06/28 20:02:56 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2001/08/29 22:41:16 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/02/14 07:55:45 asami Exp
 #
 
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.boutell.com/gd/
 COMMENT=	graphics library for fast PNG creation
 
 USE_BUILDLINK_ONLY=	YES
-USE_X11=		YES
 USE_LIBTOOL=		YES
 REPLACE_PERL=		bdftogd
 
@@ -23,7 +22,6 @@ MAKE_ENV+=	EXTRA_LIBS="-lsocket -lnsl"
 
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include/freetype	# freetype.h
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include/X11		# xpm.h
-CPPFLAGS+=	-I${X11BASE}/include
 
 # When the API changes and breaks binary-compatibility with the previous
 # version, increment the MAJOR by 1 and reset the MINOR to 0.  Otherwise,
@@ -38,4 +36,5 @@ MAKE_ENV+=	GD_MAJOR="${GD_MAJOR}" GD_MINOR="${GD_MINOR}" COMPILER="${CC}"
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

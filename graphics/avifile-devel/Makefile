@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/08/26 10:32:21 skrll Exp $
+# $NetBSD: Makefile,v 1.19 2001/08/29 22:41:15 jlam Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
@@ -28,7 +28,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
 
-CXXFLAGS+=		-L${BUILDLINK_DIR}/lib -I${BUILDLINK_DIR}/include -I${X11PREFIX}/include
+CXXFLAGS+=		-L${BUILDLINK_DIR}/lib -I${BUILDLINK_DIR}/include
 
 CONFIGURE_ARGS+=	--with-win32-path=${LOCALBASE}/lib/win32
 CONFIGURE_ARGS+=	--disable-dpms
@@ -63,4 +63,5 @@ pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh
 
 .include "../../devel/SDL/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

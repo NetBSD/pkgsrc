@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/06/20 21:20:58 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/08/29 22:41:20 jlam Exp $
 
 DISTNAME=	xpp-1.0
 CATEGORIES=	print x11
@@ -8,7 +8,6 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://cups.sourceforge.net/xpp/index.html
 COMMENT=	X Printing Panel
 
-USE_X11=		# defined
 USE_BUILDLINK_ONLY=	# defined
 USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
@@ -24,4 +23,5 @@ post-install:
 
 .include "../../print/cups/buildlink.mk"
 .include "../../x11/fltk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

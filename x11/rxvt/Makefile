@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/08/06 06:09:55 martin Exp $
+# $NetBSD: Makefile,v 1.27 2001/08/29 22:41:30 jlam Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
@@ -40,7 +40,8 @@ CONFIGURE_ARGS+=	--enable-utmp \
 # enabling it, please fix pkg/MESSAGE as well.
 #			--enable-greek
 
-CPPFLAGS+=		-I${BUILDLINK_DIR}/include/X11
+CONFIGURE_ARGS+=	--with-xpm-includes=${BUILDLINK_DIR}/include/X11
+CONFIGURE_ARGS+=	--with-xpm-library=${BUILDLINK_DIR}/lib
 
 post-patch:
 	${MV} ${WRKSRC}/src/feature.h  ${WRKSRC}/src/feature.h.orig
@@ -53,4 +54,5 @@ pre-install:
 	fi
 
 .include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

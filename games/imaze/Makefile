@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/07/04 02:23:26 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/08/29 22:41:11 jlam Exp $
 
 DISTNAME=		imaze1.3
 PKGNAME=		imaze-1.3
@@ -15,10 +15,10 @@ WRKSRC=			${WRKDIR}/imaze
 
 USE_BUILDLINK_ONLY=	yes
 USE_X11BASE=		yes
-CFLAGS+=		-I${X11BASE}/include
 
 post-build:
 	cd ${WRKSRC} && ${PAX} -rf ${DISTDIR}/imaze-sounds.tar
 
 .include "../../x11/lesstif/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 09:04:18 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/08/29 22:41:06 jlam Exp $
 
 SHA1 (estic-1.60-sources.zip) = ce66a6d52faaf6adba492bb3f74e49eab608d0c3
 Size (estic-1.60-sources.zip) = 892311 bytes
@@ -10,7 +10,7 @@ SHA1 (patch-ac) = 9fda10375f0b074473c47202c59f4f872b14ae87
 SHA1 (patch-ad) = b7287df75abc237859ee25ce04c5b3df4d338c37
 SHA1 (patch-ae) = 29ce3dafba535a26aef00e53da05d51eb09617be
 SHA1 (patch-af) = 39a39789e8875d901bce07581b544ef8590af4fa
-SHA1 (patch-ag) = f12d7fe2bf40a420b8b045e52215cb844cae33e5
+SHA1 (patch-ag) = 6a2703a6839e4e75c0d3a40e9ffd8c6362b29ffc
 SHA1 (patch-ah) = 4a5ce78d5d7173132c91ec5dbcf20b0484afe882
 SHA1 (patch-ai) = d7fdcc29f357a9a8b0790e2491f577160d05db34
 SHA1 (patch-aj) = afaa7e22e01fc698418fb6543fe8e7f81feab106

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/07/09 15:43:14 zuntum Exp $
+# $NetBSD: Makefile,v 1.7 2001/08/29 22:41:32 jlam Exp $
 
 DISTNAME=	xteddy-1.1
 CATEGORIES=	x11 games
@@ -9,12 +9,12 @@ HOMEPAGE=	http://www.ITN.LiU.SE/~stegu/xteddy
 COMMENT=	Xteddy is a cuddly teddy bear for your X Windows desktop
 
 USE_BUILDLINK_ONLY=	YES
-USE_X11=	YES
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=		YES
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xteddy
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xteddy/pixmaps
 
 .include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

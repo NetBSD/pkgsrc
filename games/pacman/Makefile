@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/06/30 11:27:17 zuntum Exp $
+# $NetBSD: Makefile,v 1.13 2001/08/29 22:41:14 jlam Exp $
 
 DISTNAME=		Pacman-0.3-CVS-00-11-17
 PKGNAME=		Pacman-0.3
@@ -15,8 +15,6 @@ USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
-
-CFLAGS+=		-I${X11BASE}/include
 
 # needs a valid X display to compile its datafiles
 .ifndef DISPLAY
@@ -36,4 +34,5 @@ pre-build:
 	fi;
 
 .include "../../graphics/clanlib/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

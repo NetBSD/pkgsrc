@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/07/30 20:07:22 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/08/29 22:41:21 jlam Exp $
 #
 
 DISTNAME=	t1lib-1.1.1
@@ -39,4 +39,5 @@ post-install:
 
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

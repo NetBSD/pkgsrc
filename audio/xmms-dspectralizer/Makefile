@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/08/23 14:07:52 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/08/29 22:41:03 jlam Exp $
 #
 
 DISTNAME=	dspectral-1.2
@@ -11,11 +11,11 @@ HOMEPAGE=	http://hem.passagen.se/joakime/linuxapp.html
 COMMENT=	XMMS plugin for dual spectral analyzer
 
 USE_BUILDLINK_ONLY=	YES
-USE_X11=		YES
 USE_LIBTOOL=		YES
 
 pre-build:
 		cd ${WRKSRC} ; ${MAKE} clean
 
 .include "../../audio/xmms/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

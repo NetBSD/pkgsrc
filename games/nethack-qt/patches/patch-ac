@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2001/06/26 19:10:18 jlam Exp $
+$NetBSD: patch-ac,v 1.9 2001/08/29 22:41:13 jlam Exp $
 
 --- sys/unix/Makefile.src.orig	Sat Aug  5 13:52:57 2000
 +++ sys/unix/Makefile.src	Thu Aug 10 20:03:19 2000
@@ -8,7 +8,7 @@ $NetBSD: patch-ac,v 1.8 2001/06/26 19:10:18 jlam Exp $
  
 -CFLAGS = -O -I../include
 -LFLAGS =
-+CFLAGS += -I../include -I${X11BASE}/include
++CFLAGS += -I../include -I${BUILDLINK_X11_DIR}/include
 +LFLAGS = ${LDFLAGS}
  
  # The Qt and Be window systems are written in C++, while the rest of
@@ -29,7 +29,7 @@ $NetBSD: patch-ac,v 1.8 2001/06/26 19:10:18 jlam Exp $
  #
  # libraries for Qt
 -WINQTLIB = -L$(QTDIR)/lib -lqt
-+WINQTLIB = -Wl,-R$(QTDIR)/lib -L$(QTDIR)/lib -lqt -lXpm -lX11 -lICE -lSM -lz -lpng -lXext
++WINQTLIB = -L$(QTDIR)/lib -lqt -lXpm -lX11 -lICE -lSM -lz -lpng -lXext
  #
  # libraries for KDE (with Qt)
  WINKDELIB = -lkdecore -lkdeui -lXext

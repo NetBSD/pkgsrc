@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2001/06/26 20:26:16 jlam Exp $
+$NetBSD: distinfo,v 1.4 2001/08/29 22:41:06 jlam Exp $
 
 SHA1 (vipec-2.0.4.tar.gz) = 56e273d50fb9886fc25b91eb446da4812032508e
 Size (vipec-2.0.4.tar.gz) = 408479 bytes
-SHA1 (patch-aa) = 0e1640fc310770b49a91a3f1f15012102730d0d9
+SHA1 (patch-aa) = 78ae035d59c4a1e674fb5f9a99be8be680ce089a
 SHA1 (patch-ab) = 3a6b0783950fae7aa79ff4f913a719ce26a70d81
 SHA1 (patch-ac) = e4ab38a8b41e9dfa83881f8b7fd50c01b76103ac

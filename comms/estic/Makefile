@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/08/19 04:48:35 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/08/29 22:41:06 jlam Exp $
 
 DISTNAME=	estic-1.61
 CATEGORIES=	comms
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.von-bassewitz.de/uz/estic/estic.html
 COMMENT=	German language configuration tool for ISTEC 1003/1008 ISDN systems
 
 EXTRACT_ONLY=	estic-1.60-sources${EXTRACT_SUFX}
-USE_X11=	YES
 
 RESTRICTED=	"Only free distribution permitted"
 NO_SRC_ON_CDROM=${RESTRICTED}
@@ -44,4 +43,5 @@ do-install:
 	cd ${WRKSRC}/samples && \
 	${INSTALL_DATA} * ${PREFIX}/share/examples/estic
 
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

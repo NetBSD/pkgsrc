@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/06/29 19:53:21 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2001/08/29 22:41:19 jlam Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
 # 
 
@@ -41,4 +41,5 @@ post-install:
 .include "../../graphics/freetype-lib/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../textproc/t1lib/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

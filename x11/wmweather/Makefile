@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/07/15 14:03:12 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/08/29 22:41:31 jlam Exp $
 #
 
 DISTNAME=	wmWeather-1.31
@@ -18,4 +18,5 @@ REPLACE_PERL=		GrabWeather
 CPPFLAGS+=		-I${X11BASE}/include
 
 .include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,17 +1,22 @@
-$NetBSD: patch-aa,v 1.4 2001/06/30 11:26:32 zuntum Exp $
---- Makefile.conf.in.orig	Thu Dec 14 19:27:08 2000
-+++ Makefile.conf.in	Thu Dec 14 19:28:06 2000
-@@ -13,11 +13,11 @@
+$NetBSD: patch-aa,v 1.5 2001/08/29 22:41:16 jlam Exp $
+
+--- Makefile.conf.in.orig	Sun Apr  9 08:17:58 2000
++++ Makefile.conf.in
+@@ -13,7 +13,7 @@
  BIN_PREFIX = @bindir@
  TARGET_PREFIX = @libdir@/ClanLib
  
 -INCLUDE_DIRS =	-I Sources @x_includes@
-+INCLUDE_DIRS =	-I Sources @x_includes@ -I$(BUILDLINK_DIR)/include
++INCLUDE_DIRS =	-I Sources @CPPFLAGS@ @x_includes@
  
  COMP_OPTIONS =	-Wall $(INCLUDE_DIRS) -fPIC -DNOCONTROLS @DEFS@ @comp_mode@
  
--LINK_CORE = @libs@
-+LINK_CORE = -L$(LOCALBASE)/lib -Wl,-R$(LOCALBASE)/lib @libs@
+@@ -21,7 +21,7 @@
  
  OBJF_NONDYN = @objf_nondyn@
  
+-LINK_COMMAND = $(CXX) -shared -fPIC -Wl,-rpath,$(TARGET_PREFIX)
++LINK_COMMAND = $(CXX) -shared -fPIC -Wl,-rpath,$(TARGET_PREFIX) @LDFLAGS@
+ 
+ Libs/Intermediate/%.o : %.cpp
+ 	@echo "Compiling $<"

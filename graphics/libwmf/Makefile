@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/07/09 18:51:38 zuntum Exp $
+# $NetBSD: Makefile,v 1.24 2001/08/29 22:41:19 jlam Exp $
 #
 
 DISTNAME=		libwmf-0.1.21
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.wvware.com/libwmf.html
 COMMENT=		library for reading and converting WMF (Windows Meta Files)
 
 USE_BUILDLINK_ONLY=	YES
-USE_X11=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--includedir="${PREFIX}/include/libwmf"
 
@@ -36,4 +35,5 @@ post-install:
 .include "../../graphics/freetype-lib/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

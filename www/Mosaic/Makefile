@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/06/30 21:15:01 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2001/08/29 22:41:26 jlam Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -24,7 +24,6 @@ CONFIGURE_ARGS+=	--with-jpegdir=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-pngdir=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-zdir=${BUILDLINK_DIR}
 
-CPPFLAGS+=		-I${X11BASE}/include
 CPPFLAGS+=		-Dunix
 
 post-configure:
@@ -43,4 +42,5 @@ do-install:
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../x11/lesstif12/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

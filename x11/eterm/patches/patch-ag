@@ -1,0 +1,21 @@
+$NetBSD: patch-ag,v 1.1 2001/08/29 22:41:28 jlam Exp $
+
+--- utils/Makefile.in.orig	Fri Nov  5 14:03:55 1999
++++ utils/Makefile.in
+@@ -101,14 +101,14 @@
+ THREADLIBS = @THREADLIBS@
+ VERSION = @VERSION@
+ 
+-INCLUDES = -I. -I../libmej -I.. -I$(includedir) -I$(prefix)/include $(X_CFLAGS)
++INCLUDES = -I. -I../libmej -I.. $(X_CFLAGS)
+ 
+ bin_PROGRAMS = Esetroot Etbg
+ bin_SCRIPTS = Etcolors.sh Etmenu.sh
+ 
+ Esetroot_SOURCES = Esetroot.c
+ Esetroot_LDFLAGS = -rpath $(libdir):$(pkglibdir)
+-Esetroot_LDADD = -L$(DIST_ROOT)/libmej -L$(libdir) -L$(prefix)/lib $(LIBS) $(GRLIBS) $(X_LIBS)
++Esetroot_LDADD = -L$(DIST_ROOT)/libmej $(LIBS) $(GRLIBS) $(X_LIBS)
+ 
+ Etbg_SOURCES = Etbg.c
+ 

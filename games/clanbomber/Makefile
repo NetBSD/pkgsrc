@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/08/23 20:28:57 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/08/29 22:41:10 jlam Exp $
 
 DISTNAME=		clanbomber-1.01
 PKGNAME=		${DISTNAME}nb1
@@ -13,8 +13,6 @@ USE_BUILDLINK_ONLY=	yes
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
-
-CPPFLAGS+=		-I${X11BASE}/include
 
 # needs a valid X display to compile its datafiles
 .ifndef DISPLAY
@@ -33,4 +31,5 @@ pre-build:
 	fi;
 
 .include "../../graphics/clanlib/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

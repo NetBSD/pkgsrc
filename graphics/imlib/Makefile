@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2001/08/27 14:35:09 tron Exp $
+# $NetBSD: Makefile,v 1.57 2001/08/29 22:41:18 jlam Exp $
 #
 
 DISTNAME=		imlib-1.9.11
@@ -20,6 +20,7 @@ PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 USE_GMAKE=		yes
 
 USE_BUILDLINK_ONLY=	yes
+REPLACE_BUILDLINK=	imlib-config
 
 CPPFLAGS+=		-DENABLE_NLS
 CONFIGURE_ENV+=		ac_cv_path_CONVERT_PROG="${LOCALBASE}/bin/convert"
@@ -28,7 +29,7 @@ CONFIGURE_ENV+=		X_LDFLAGS="${X_LDFLAGS}"
 # The following ensures that `imlib-config --libs' includes the correct
 # linker flags for linking the X11 libs.
 #
-X_LDFLAGS=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
+X_LDFLAGS=		-Wl,-R${X11BASE}/lib -L${BUILDLINK_X11_DIR}/lib
 
 pre-configure:
 	${TOUCH} ${WRKSRC}/ltconfig
@@ -49,4 +50,5 @@ post-install:
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/tiff/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
