@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.237 2004/05/02 20:04:36 xtraeme Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.238 2004/05/12 01:03:58 jschauma Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -490,6 +490,13 @@ PRE_ROOT_CMD?=	${TRUE}
 # Possible: any shell commands
 # Default: none
 
+SETGIDGAME?=	no
+# This flags specifies whether or not certain games are installed setgid,
+# which would allow them to write to a group-owned score file.
+# See also:	GAMEGRP, GAMEMODE, GAMEOWN
+# Possible:	yes, no
+# Default:	no
+
 SU_CMD?= ${ROOT_CMD}
 # Command to perform before "make install", if the user does not have
 # an effective uid of 0.  A possible substitute is "sudo sh -c"
@@ -904,6 +911,29 @@ FREEWNN_GROUP?=	jserver
 # Used in the ja-freewnn-server-bin package to specify the Free wnn group.
 # Possible: any group name
 # Default: jserver
+
+GAMEGRP?=	${BINGRP}
+# Used for various games to allow writing to a group-owned score file.
+# If SETGIDGAME is 'yes', setting this to a dedicated group, such as 'games'
+# would make sense.
+# See also:	GAMEMODE, GAMEOWN, SETGIDGAME
+# Possible:	any group name
+# Default:	${BINGRP}
+
+GAMEMODE?=	${BINMODE}
+# Used for various games to allow writing to a group-owned score file.
+# If SETGIDGAME is 'yes', setting this to 2555 would make sense.
+# See also:	GAMEGRP, GAMEOWN, SETGIDGAME
+# Possible:	any mode
+# Default:	${BINMODE}
+
+GAMEOWN?=	${BINOWN}
+# Used for various games to allow writing to a group-owned score file.
+# If SETGIDGAME is 'yes', setting this to a dedicated user, such as 'games'
+# would make sense.
+# See also:	GAMEGRP, GAMEMODE, SETGIDGAME
+# Possible:	any user name
+# Default:	${BINOWN}
 
 GAWK_ENABLE_PORTALS?=	NO
 # Used by gawk package to enable/disable handling file names that start with
