@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/05/29 12:55:23 markd Exp $
+# $NetBSD: Makefile,v 1.24 2004/07/28 13:18:11 markd Exp $
 
 DISTNAME=		kile-1.6.3
 CATEGORIES=		editors kde
@@ -12,6 +12,7 @@ USE_BUILDLINK3=		yes
 USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../meta-pkgs/kde3/kde3.mk"

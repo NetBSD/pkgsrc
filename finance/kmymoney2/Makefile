@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/06/15 13:58:51 markd Exp $
+# $NetBSD: Makefile,v 1.15 2004/07/28 13:18:11 markd Exp $
 
 DISTNAME=	kmymoney2-0.6
 CATEGORIES=	finance kde
@@ -11,14 +11,15 @@ COMMENT=	Personal finance manager for kde3
 
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
-GNU_CONFIGURE=          YES
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=            YES
+GNU_CONFIGURE=          YES
 SHLIBTOOL_OVERRIDE=     libtool
 
 CONFIGURE_ARGS+=	--enable-mt
 
 .include "../../meta-pkgs/kde3/kde3.mk"
-.include "../../x11/kdebase3/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/kdebase3/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
