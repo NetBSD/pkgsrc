@@ -1,0 +1,15 @@
+BLT is an extension to Tcl/Tk.  It adds plotting widgets (X-Y graph,
+barchart, stripchart), a powerful geometry manager, a new canvas item,
+and several new commands to Tk.
+
+Plotting widgets:  graph, barchart, stripchart
+Hierarchical list box:  hierbox
+Tab set:  tabset
+Geometry Manager:  table
+Vector Data Object:  vector
+Background Program Execution:  bgexec
+Busy Command:  busy
+New Canvas Item:  eps
+Drag & Drop Facility:  drag&drop
+Bitmap Command:  bitmap
+Miscellaneous Commands:  winop, bltdebug, watch, spline, htext
