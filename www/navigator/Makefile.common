@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2000/01/15 11:02:18 tron Exp $
+# $NetBSD: Makefile.common,v 1.7 2000/04/30 14:42:22 sakamoto Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -7,6 +7,7 @@
 # Note - the version will be overridden for certain architectures which
 #	 do not have the latest version available (eg: SunOS sparc)
 NS_VERS=	4.7
+LDAP_VERS=	30
 #
 # Based on OPSYS and MACHINE_ARCH, define:
 #	DISTUNAME	Used to determine DISTNAME (tarfile on ftp server)
@@ -30,11 +31,13 @@ WRKNAME=	alpha-dec-osf4.0
 VENDOR_NAME=	Tru64 UNIX
 #
 .elif (${MACHINE_ARCH} == "i386")
+NS_VERS=	4.72
+LDAP_VERS=	40
 DEPENDS=	suse_linux>=6.1:../../emulators/suse_linux
-DISTUNAME=	x86-unknown-linuxglibc2.0
-DIST_DIR_NAME=	supported/linux20_glibc2
-WRKNAME=	x86-unknown-linux2.0
-VENDOR_NAME=	Linux 2.0 (glibc)
+DISTUNAME=	x86-unknown-linux2.2
+DIST_DIR_NAME=	unsupported/linux22
+WRKNAME=	x86-unknown-linux2.2
+VENDOR_NAME=	Linux 2.2
 #
 .elif (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/sunos/usr/lib/ld.so)
@@ -76,7 +79,7 @@ NS_PLUGINS_DIR=	${PREFIX}/lib/netscape/plugins
 PLIST_SRC=	${PKGDIR}/PLIST.pre \
 		${PKGDIR}/PLIST.${LOWER_OPSYS}-${MACHINE_ARCH} \
 		${PKGDIR}/PLIST.post
-PLIST_SUBST+=	NS_VERS=${NS_VERS}
+PLIST_SUBST+=	NS_VERS=${NS_VERS} LDAP_VERS=${LDAP_VERS}
 
 .if (${NS_ENCRYPTION} == "us")
 MASTER_SITES=
@@ -101,7 +104,7 @@ do-install:
 	${MKDIR} ${MOZILLA_HOME}/java/classes
 	${INSTALL_SCRIPT} ${WRKSRC}/vreg ${MOZILLA_HOME}
 .for file in ifc11.jar iiop10.jar jae40.jar java40.jar jio40.jar jsd10.jar \
-    ldap30.jar resource.jar scd10.jar
+    ldap${LDAP_VERS}.jar resource.jar scd10.jar
 	${INSTALL_DATA} ${WRKSRC}/${file} ${MOZILLA_HOME}/java/classes
 .endfor
 	cd ${MOZILLA_HOME} ; ${GTAR} xpzf ${WRKSRC}/nethelp-v${NS_VERS_SHORT}.nif
