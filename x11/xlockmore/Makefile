@@ -1,78 +1,38 @@
-# $NetBSD: Makefile,v 1.58 2003/05/09 22:26:55 hubertf Exp $
-# FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
-#
-
-DISTNAME=       xlockmore-5.08.1
-CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.tux.org/pub/tux/bagleyd/xlockmore/ \
-		${MASTER_SITE_XCONTRIB:=applications/}
-EXTRACT_SUFX=	.tar.bz2
-
-MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://www.tux.org/~bagleyd/xlockmore.html
-COMMENT=	Like the XLock session locker/screen saver, but with more
-
-USE_BUILDLINK2=	yes
+# $NetBSD: Makefile,v 1.59 2003/06/30 07:28:59 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
+# XLOCK_LIGHT will be deprecated, but support it for a while longer
+# until users figure out to install xlockmore-lite instead of xlockmore
+#
 .if defined(XLOCK_LIGHT)
-CONFIGURE_ARGS+=--without-gltt --without-ttf --without-opengl --without-mesa \
-		--without-xpm # --without-cxx XXX doesn't work
-CONFIGURE_ENV+= CXX="${CC}"	# no dependency on libstdc++
+pre-extract:
+	@${ECHO} ""
+	@${ECHO} "***************************************************"
+	@${ECHO} "*** You want to install xlockmore-lite instead. ***"
+	@${ECHO} "***************************************************"
+	@${ECHO} ""
+
+.  include "../xlockmore-lite/Makefile"
 .else
+
+.include "Makefile.common"
+
+PKGREVISION=	1
+COMMENT=	like the XLock session-locker/screensaver, but with more
+
+CONFIGURE_ARGS+=	--with-mesagl
+
+# xlock is installed setuid-root, so mark it as such in the binary package.
+#
+USE_PKGINSTALL=		YES
+SPECIAL_PERMS=		${PREFIX}/bin/xlock ${SETUID_ROOT_PERMS}
+
+.include "../../audio/esound/buildlink2.mk"
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/glu/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
-CONFIGURE_ARGS+= --with-mesagl
-.endif
 
-.if !exists(${X11BASE}/lib/libXdpms.a)
-XLOCK_NO_DPMS=	YES
-.endif
-
-GNU_CONFIGURE=	YES
-USE_X11BASE=	YES
-DEFINES=	-DDEFAULT_SOUND_DIR=\"${PREFIX}/lib/X11/xlock/sounds/\" \
-		-DDEF_MODULEPATH=\"lib/X11/xlock/modules\"
-CC+=		${DEFINES}
-CXX+=		${DEFINES}
-
-CONFIGURE_ARGS+= --without-motif --without-sx \
-		--without-editres --without-dtsaver --without-rplay \
-		--without-nas --without-gtk
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+= --enable-def_play='/usr/bin/audioplay ${PREFIX}/lib/X11/xlockmore/'
-.endif
-
-.if defined(XLOCK_NO_DPMS)
-CONFIGURE_ARGS+= --without-dpms
-.endif
-
-post-patch:
-		for i in xlock/resource.c ; do \
-			f=${WRKSRC}/$$i ; \
-			[ -f $$f.BAK ] || ${MV} $$f $$f.BAK ; \
-			${SED} \
-				-e 's|@PREFIX@|${PREFIX}|g' \
-				<$$f.BAK >$$f ; \
-		done
-.if defined(XLOCK_DEFAULT_MODE) && ${XLOCK_DEFAULT_MODE} != ""
-		cd ${WRKSRC}/xlock; \
-			[ -f XLock.ad.BAK ] || ${MV} XLock.ad XLock.ad.BAK ; \
-			${SED} \
-				-e 's/^\(XLock.mode:[ 	]*\).*/\1${XLOCK_DEFAULT_MODE}/' \
-				XLock.ad.BAK >XLock.ad
-.endif
-
-post-install:
-		${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/xlockmore
-		${INSTALL_DATA}	\
-			${WRKSRC}/sounds/thank-you.au	\
-			${WRKSRC}/sounds/identify-please.au	\
-			${WRKSRC}/sounds/not-programmed.au	\
-			${WRKSRC}/sounds/complete.au	\
-				${PREFIX}/lib/X11/xlockmore
-
-.include "../../audio/esound/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
+
+.endif	# XLOCK_LIGHT
