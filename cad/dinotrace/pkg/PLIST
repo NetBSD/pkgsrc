@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/14 19:52:48 dmcmahill Exp $
+bin/dinotrace
+@unexec install-info --delete %D/info/dinotrace.info %D/info/dir
+info/dinotrace.info
+@exec install-info %D/info/dinotrace.info %D/info/dir

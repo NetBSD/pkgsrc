@@ -1,0 +1,4 @@
+Dinotrace is a tool designed to aid in viewing Verilog Value Change
+Dump (.vcd), ASCII, Verilator, Tempest CCLI, COSMOS, Chango and Decsim
+Binary simulation traces.  It is optimized for rapid design debugging using
+X-Windows Mosaic. 
