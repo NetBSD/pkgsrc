@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/01/25 18:55:56 tv Exp $
+# $NetBSD: Makefile,v 1.36 2005/03/14 23:30:42 tv Exp $
 
 DISTNAME=		db-4.3.27
 PKGNAME=		${DISTNAME:S/db/db4/}
@@ -36,6 +36,7 @@ CONFIGURE_ENV+=		F77=${FALSE}
 
 OPSYSVARS+=		LIBSO_LIBS
 LIBSO_LIBS.Interix+=	-lrpclib
+LIBS.Interix+=		-lrpclib # needed for in-tree programs, too
 LIBSO_LIBS.SunOS+=	-lnsl -lrt
 CONFIGURE_ENV+=		LIBSO_LIBS="${LIBSO_LIBS}"
 
