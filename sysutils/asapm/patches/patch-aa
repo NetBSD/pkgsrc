@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/12/03 13:35:47 frueauf Exp $
+$NetBSD: patch-aa,v 1.2 1999/04/12 17:39:47 jlam Exp $
 
---- autoconf/Makefile.common.in.orig	Wed Dec  2 16:02:51 1998
-+++ autoconf/Makefile.common.in	Thu Dec  3 05:03:19 1998
-@@ -11,11 +11,11 @@
+--- autoconf/Makefile.common.in.orig	Tue Feb 23 04:56:05 1999
++++ autoconf/Makefile.common.in	Sat Mar 20 17:02:15 1999
+@@ -13,11 +13,11 @@
  		$(INSTALL_PROGRAM) $(PROG) $(AFTER_BIN_DIR)
  
  install.man:
