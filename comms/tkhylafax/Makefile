@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/11/24 10:23:48 agc Exp $
+# $NetBSD: Makefile,v 1.6 2000/04/10 00:03:19 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/08/07 23:56:12 asami Exp
 #
 
@@ -13,7 +13,6 @@ HOMEPAGE=	http://www.elgro.demon.co.uk/resources.html
 
 DEPENDS+=	hylafax-4.1b2:../../comms/hylafax
 DEPENDS+=	tk-8.0.5:../../x11/tk80
-DEPENDS+=	ghostscript-5.50:../../print/ghostscript5
 DEPENDS+=	gv-3.5.8:../../print/gv
 
 WRKSRC=		${WRKDIR}/tkhylafax
