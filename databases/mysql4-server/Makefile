@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/26 02:27:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/22 14:31:35 seb Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 PKGREVISION=		2
@@ -11,7 +11,7 @@ CONFIGURE_ARGS+=	--with-libwrap
 CONFIGURE_ARGS+=	--with-raid
 CONFIGURE_ARGS+=	--without-berkeley-db
 CONFIGURE_ARGS+=	--without-mysqlfs
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
@@ -50,9 +50,9 @@ post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 	${CHOWN} -R ${MYSQL_USER}:${MYSQL_GROUP} ${MYSQL_DATADIR}
 
-.include "../../databases/mysql4-client/buildlink2.mk"
-.include "../../security/tcp_wrappers/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../databases/mysql4-client/buildlink3.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
 CFLAGS+=	-DSIGNALS_DONT_BREAK_READ
