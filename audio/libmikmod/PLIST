@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2003/06/26 13:34:05 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/01/02 18:06:56 seb Exp $
 bin/libmikmod-config
 include/mikmod.h
-info/mikmod.info
 lib/libmikmod.a
 lib/libmikmod.la
 lib/libmikmod.so
