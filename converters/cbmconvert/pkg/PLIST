@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/22 18:09:13 tv Exp $
+bin/cbmconvert
+bin/disk2zip
+bin/zip2disk
+share/doc/cbmconvert/README
+share/doc/cbmconvert/README.html
+@dirrm share/doc/cbmconvert
