@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/07/14 22:09:33 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/07/14 22:57:01 tron Exp $
 #
 
 DISTNAME=	kdegraphics-1.0
@@ -13,6 +13,8 @@ DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	qt-1.33:../../x11/qt
 DEPENDS+=	kdelibs-1.0:../../x11/kdelibs
 DEPENDS+=	kdebase-1.0:../../x11/kdebase
+
+CONFLICTS=	kdegraphics-4.1b
 
 USE_X11=	yes
 USE_GMAKE=	yes
