@@ -50,7 +50,7 @@ main(int argc, char** argv)
 			char* s;
 			int error;
 			if (argc > 0 && strcmp(abspath, mntbuf[i].f_mntonname) != 0) continue;
-			if (mntbuf[i].f_type != MOUNT_NFS) continue;
+			if (strcmp(mntbuf[i].f_fstypename,MOUNT_NFS) !=0 ) continue;
 			if (strncmp(mntbuf[i].f_mntfromname, "rumba-", 6) != 0) continue;
 			pid=strtoul(mntbuf[i].f_mntfromname+6, &s, 10);
 			if (*s) continue;
