@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.170 2004/10/06 20:59:40 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.171 2004/10/07 02:01:39 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -214,16 +214,16 @@ OBJECT_FMT?=	a.out
 
 # Calculate depth
 .if exists(${.CURDIR}/mk/bsd.pkg.mk)
-PKGSRC_TOPDIR=	${.CURDIR}
+_PKGSRC_TOPDIR=	${.CURDIR}
 .elif exists(${.CURDIR}/../mk/bsd.pkg.mk)
-PKGSRC_TOPDIR=	${.CURDIR}/..
+_PKGSRC_TOPDIR=	${.CURDIR}/..
 .elif exists(${.CURDIR}/../../mk/bsd.pkg.mk)
-PKGSRC_TOPDIR=	${.CURDIR}/../..
+_PKGSRC_TOPDIR=	${.CURDIR}/../..
 .endif
 
 # include the defaults file
-.if exists(${PKGSRC_TOPDIR}/mk/defaults/mk.conf)
-.  include "${PKGSRC_TOPDIR}/mk/defaults/mk.conf"
+.if exists(${_PKGSRC_TOPDIR}/mk/defaults/mk.conf)
+.  include "${_PKGSRC_TOPDIR}/mk/defaults/mk.conf"
 .endif
 
 .if ${OPSYS} == "NetBSD"
@@ -257,10 +257,10 @@ SHAREMODE?=		${DOCMODE}
 
 # Load the OS-specific definitions for program variables.  Default to loading
 # the NetBSD ones if an OS-specific file doesn't exist.
-.if exists(${PKGSRC_TOPDIR}/mk/platform/${OPSYS}.mk)
-.  include "${PKGSRC_TOPDIR}/mk/platform/${OPSYS}.mk"
-.elif exists(${PKGSRC_TOPDIR}/mk/platform/NetBSD.mk)
-.  include "${PKGSRC_TOPDIR}/mk/platform/NetBSD.mk"
+.if exists(${_PKGSRC_TOPDIR}/mk/platform/${OPSYS}.mk)
+.  include "${_PKGSRC_TOPDIR}/mk/platform/${OPSYS}.mk"
+.elif exists(${_PKGSRC_TOPDIR}/mk/platform/NetBSD.mk)
+.  include "${_PKGSRC_TOPDIR}/mk/platform/NetBSD.mk"
 .endif
 
 PKGDIRMODE?=		755
@@ -465,10 +465,14 @@ PKG_FAIL_REASON+=	'for more details.'
 
 _PKGSRCDIR?=		${.CURDIR:C|/[^/]*/[^/]*$||}
 PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
+.if !defined(PKGSRCDIR)
+PKGSRCDIR!=		cd ${_PKGSRC_TOPDIR} && ${PWD_CMD}
+MAKEFLAGS+=		PKGSRCDIR=${PKGSRCDIR:Q}
+.endif
 
-DISTDIR?=		${_PKGSRCDIR}/distfiles
-PACKAGES?=		${_PKGSRCDIR}/packages
-TEMPLATES?=		${_PKGSRCDIR}/templates
+DISTDIR?=		${PKGSRCDIR}/distfiles
+PACKAGES?=		${PKGSRCDIR}/packages
+TEMPLATES?=		${PKGSRCDIR}/templates
 
 PATCHDIR?=		${.CURDIR}/patches
 SCRIPTDIR?=		${.CURDIR}/scripts
@@ -512,8 +516,8 @@ PKG_DEFAULT_OPTIONS?=	# empty
 PKG_OPTIONS?=		# empty
 
 # Wrapper framework definitions
-.if exists(${PKGSRC_TOPDIR}/mk/wrapper/wrapper-defs.mk)
-.  include "${PKGSRC_TOPDIR}/mk/wrapper/wrapper-defs.mk"
+.if exists(${PKGSRCDIR}/mk/wrapper/wrapper-defs.mk)
+.  include "${PKGSRCDIR}/mk/wrapper/wrapper-defs.mk"
 .endif
 
 .endif	# BSD_PKG_MK

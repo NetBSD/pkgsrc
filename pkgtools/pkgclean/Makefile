@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/22 20:02:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/07 02:01:38 jlam Exp $
 
 DISTNAME=	pkgclean-20040622
 CATEGORIES=	pkgtools
@@ -33,7 +33,7 @@ do-install:
 SUBST_CLASSES=          path
 SUBST_STAGE.path=       post-patch
 SUBST_FILES.path=       pkgclean.c pkgclean.1
-SUBST_SED.path=         -e "s,@PKGSRCDIR@,${_PKGSRCDIR},g"
+SUBST_SED.path=         -e "s,@PKGSRCDIR@,${PKGSRCDIR},g"
 SUBST_MESSAGE.path=     "Adjusting pkgsrc directory."
 
 .include "../../mk/bsd.pkg.mk"

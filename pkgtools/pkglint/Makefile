@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2004/09/24 15:33:26 wiz Exp $
+# $NetBSD: Makefile,v 1.205 2004/10/07 02:01:38 jlam Exp $
 #
 
 DISTNAME=	pkglint-3.91
@@ -22,7 +22,7 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	# empty
 
-MAKE_ENV=	PKGSRCDIR=${_PKGSRCDIR:Q}
+MAKE_ENV=	PKGSRCDIR=${PKGSRCDIR:Q}
 
 DISTVER=	${DISTNAME:S/pkglint-//}
 
@@ -42,7 +42,7 @@ do-extract:
 do-build:
 .for FILE in ${SUBST_FILES}
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
-		-e 's|@PORTSDIR@|${_PKGSRCDIR}|g'	\
+		-e 's|@PORTSDIR@|${PKGSRCDIR}|g'	\
 		-e 's|@DISTVER@|${DISTVER}|g'		\
 		-e 's|@MAKE@|${MAKE}|g'			\
 		-e 's|@PERL@|${PERL5}|g'		\

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1509 2004/10/05 15:28:50 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1510 2004/10/07 02:01:38 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -598,9 +598,9 @@ BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
 
 # Figure out where the local mtree file is
 .if defined(USE_X11BASE)
-MTREE_FILE?=	${_PKGSRCDIR}/mk/${OPSYS}.x11.dist
+MTREE_FILE?=	${PKGSRCDIR}/mk/${OPSYS}.x11.dist
 .else
-MTREE_FILE?=	${_PKGSRCDIR}/mk/${OPSYS}.pkg.dist
+MTREE_FILE?=	${PKGSRCDIR}/mk/${OPSYS}.pkg.dist
 .endif
 
 MTREE_ARGS?=	-U -f ${MTREE_FILE} -d -e -p
@@ -850,7 +850,7 @@ uptodate-digest:
 .if !empty(USE_DIGEST:M[yY][eE][sS])
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${DISTINFO_FILE} -a \( ! -f ${DIGEST} -o ${DIGEST_VERSION} -lt ${DIGEST_REQD} \) ]; then \
-		{ cd ${_PKGSRCDIR}/pkgtools/digest;			\
+		{ cd ${PKGSRCDIR}/pkgtools/digest;			\
 		${MAKE} clean;						\
 		if [ -f ${DIGEST} ]; then				\
 			${MAKE} ${MAKEFLAGS} deinstall;			\
@@ -882,7 +882,7 @@ PKG_FAIL_REASON+='Error: The package tools installed on this system are out of d
 PKG_FAIL_REASON+='The installed package tools are dated ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|} and you must update'
 PKG_FAIL_REASON+='them to at least ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} using the following command:'
 PKG_FAIL_REASON+=''
-PKG_FAIL_REASON+='	cd ${_PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} install'
+PKG_FAIL_REASON+='	cd ${PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} install'
 .		endif
 .	endif
 
@@ -1185,7 +1185,7 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
 	PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin \
 	WRKDIR=${WRKDIR} WRKSRC=${WRKSRC} PATCHDIR=${PATCHDIR} \
 	SCRIPTDIR=${SCRIPTDIR} FILESDIR=${FILESDIR} \
-	_PKGSRCDIR=${_PKGSRCDIR} DEPENDS="${DEPENDS}" \
+	_PKGSRCDIR=${_PKGSRCDIR} PKGSRCDIR=${PKGSRCDIR} DEPENDS="${DEPENDS}" \
 	PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} \
 	VIEWBASE=${VIEWBASE}
 
@@ -1827,7 +1827,7 @@ show-needs-update:
 .  if defined(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for i in `${MAKE} show-all-depends-dirs`; do			\
-		cd ${_PKGSRCDIR}/$$i;					\
+		cd ${PKGSRCDIR}/$$i;					\
 		want=`${MAKE} show-var VARNAME=PKGNAME`;		\
 		wild=`${MAKE} show-var VARNAME=PKGWILDCARD`;		\
 		have=`${PKG_BEST_EXISTS} "$$wild" || ${TRUE}`;		\
@@ -2253,7 +2253,7 @@ do-config-star-override:
 	for file in ${_pattern_}; do					\
 		if [ -f "$$file" ]; then				\
 			${RM} -f $$file;				\
-			${LN} -s ${_PKGSRCDIR}/mk/gnu-config/config.guess \
+			${LN} -s ${PKGSRCDIR}/mk/gnu-config/config.guess \
 				$$file;					\
 		fi;							\
 	done
@@ -2265,7 +2265,7 @@ do-config-star-override:
 	for file in ${_pattern_}; do					\
 		if [ -f "$$file" ]; then				\
 			${RM} -f $$file;				\
-			${LN} -s ${_PKGSRCDIR}/mk/gnu-config/config.sub	\
+			${LN} -s ${PKGSRCDIR}/mk/gnu-config/config.sub	\
 				$$file;					\
 		fi;							\
 	done
@@ -4254,7 +4254,7 @@ README.html: .PRECIOUS
 	@if ${TEST} -d ${PACKAGES}; then					\
 		cd ${PACKAGES};						\
 		case `${PWD_CMD}` in					\
-			${_PKGSRCDIR}/packages)				\
+			${PKGSRCDIR}/packages)				\
 				MULTIARCH=no;				\
 				;;					\
 			*)						\
@@ -4347,7 +4347,7 @@ print-summary-data:
 	@${ECHO} "maintainer ${PKGPATH} ${MAINTAINER}"
 	@${ECHO} "categories ${PKGPATH} ${CATEGORIES}"
 	@if [ -f ${DESCR_SRC} ]; then						\
-		${ECHO}  "descr ${PKGPATH} ${DESCR_SRC:S;${_PKGSRCDIR}/;;g}";	\
+		${ECHO}  "descr ${PKGPATH} ${DESCR_SRC:S;${PKGSRCDIR}/;;g}";	\
 	else									\
 		${ECHO}  "descr ${PKGPATH} /dev/null";				\
 	fi
@@ -4357,11 +4357,11 @@ print-summary-data:
 .if !target(show-license)
 show-license show-licence:
 	@if [ "${LICENSE}" != "" ]; then				\
-		if ${TEST} -f ${_PKGSRCDIR}/licenses/${LICENSE}; then	\
+		if ${TEST} -f ${PKGSRCDIR}/licenses/${LICENSE}; then	\
 			if [ "${PAGER}" != "" ]; then			\
-				${PAGER} ${_PKGSRCDIR}/licenses/${LICENSE};\
+				${PAGER} ${PKGSRCDIR}/licenses/${LICENSE};\
 			else						\
-				${CAT} ${_PKGSRCDIR}/licenses/${LICENSE};\
+				${CAT} ${PKGSRCDIR}/licenses/${LICENSE};\
 			fi						\
 		else							\
 			${ECHO} "Generic ${LICENSE} information not available"; \
@@ -4652,7 +4652,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 			esac;						\
 		done;							\
 	fi;								\
-	eval ${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^${_PKGSRCDIR}/||' > ${BUILD_VERSION_FILE}
+	eval ${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^${PKGSRCDIR}/||' > ${BUILD_VERSION_FILE}
 .  for def in ${BUILD_DEFS}
 	@${ECHO} ${def}=${${def}:Q} | ${SED} -e 's|^PATH=[^ 	]*|PATH=...|' >> ${BUILD_INFO_FILE}
 .  endfor

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/05/23 15:09:06 heinz Exp $
+# $NetBSD: Makefile,v 1.27 2004/10/07 02:01:38 jlam Exp $
 
 DISTNAME=	ppp-2.3.9
 PKGNAME=	ppp-mppe-2.3.9
@@ -14,15 +14,15 @@ CONFLICTS+=	ppp-2.*
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
-OPENSSL_VERS=	0.9.6m
-OPENSSL_SRC=	${_PKGSRCDIR}/security/openssl/${WRKDIR:T}/openssl-${OPENSSL_VERS}
-
 HAS_CONFIGURE=  yes
 MANCOMPRESSED_IF_MANZ=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=	MANINSTALL
+
+OPENSSL_VERS=	0.9.6m
+OPENSSL_SRC=	${PKGSRCDIR}/security/openssl/${WRKDIR:T}/openssl-${OPENSSL_VERS}
 
 post-extract:
 	if [ ! -r ${OPENSSL_SRC}/crypto/rc4 ]; then			\
