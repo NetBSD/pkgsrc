@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2003/09/19 21:32:13 jmmv Exp $
+
+--- src/icqconf.cc.orig	2003-07-25 19:03:00.000000000 +0200
++++ src/icqconf.cc
+@@ -414,11 +414,11 @@ void icqconf::loadsounds() {
+ 
+ 	    switch(rs) {
+ 		case rscard:
+-		    fo << "*\tmsg\tplay " << SHARE_DIR << "/msg.wav" << endl;
+-		    fo << "*\turl\tplay " << SHARE_DIR << "/url.wav" << endl;
+-		    fo << "*\temail\tplay " << SHARE_DIR << "/email.wav" << endl;
+-		    fo << "*\tonline\tplay " << SHARE_DIR << "/online.wav" << endl;
+-		    fo << "*\tsms\tplay " << SHARE_DIR << "/sms.wav" << endl;
++		    fo << "*\tmsg\t" AUDIO_PLAYER " " << SHARE_DIR << "/msg.wav" << endl;
++		    fo << "*\turl\t" AUDIO_PLAYER " " << SHARE_DIR << "/url.wav" << endl;
++		    fo << "*\temail\t" AUDIO_PLAYER " " << SHARE_DIR << "/email.wav" << endl;
++		    fo << "*\tonline\t" AUDIO_PLAYER " " << SHARE_DIR << "/online.wav" << endl;
++		    fo << "*\tsms\t" AUDIO_PLAYER " " << SHARE_DIR << "/sms.wav" << endl;
+ 		    break;
+ 
+ 		case rsspeaker:
