@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.20 2003/09/13 21:29:44 jlam Exp $
+# $NetBSD: module.mk,v 1.21 2003/09/13 22:50:58 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -49,6 +49,7 @@ PERL5_CONFIGURE_DIRS?=	${CONFIGURE_DIRS}
 #
 MAKE_PARAMS+=		INSTALLDIRS=site
 
+.PHONY: perl5-configure
 perl5-configure:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for dir in ${PERL5_CONFIGURE_DIRS}; do				\
