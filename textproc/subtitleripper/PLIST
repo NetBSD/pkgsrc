@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/23 07:20:55 mrg Exp $
+bin/pgm2txt
+bin/srttool
+bin/subtitle2pgm
+bin/subtitle2vobsub
+share/doc/subtitleripper/README
+share/doc/subtitleripper/README.gocr
+share/doc/subtitleripper/README.srttool
+share/doc/subtitleripper/README.subtitle2pgm
+share/doc/subtitleripper/README.vobsub
+share/doc/subtitleripper/gocrfilter_en.sed
+share/doc/subtitleripper/gocrfilter_fr.sed
+share/doc/subtitleripper/gocrfilter_nl.sed
+share/doc/subtitleripper/gocrfilter_none.sed
+@dirrm share/doc/subtitleripper
