@@ -1,0 +1,8 @@
+Mew is an interface to integrate
+
+   - Email
+   - NetNews
+   - MIME(Multipurpose Internet Mail Extensions)
+   - PGP(Pretty Good Privacy)
+
+and to make it easy to view and compose them. 
