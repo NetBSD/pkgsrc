@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/12 11:09:08 zuntum Exp $
+bin/granulate
+share/doc/granulate/README
+@dirrm share/doc/granulate
