@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2005/02/18 00:48:05 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.33 2005/03/08 16:48:11 xtraeme Exp $
 
 DISTNAME=		mysql-4.1.10
 CATEGORIES=		databases
@@ -79,7 +79,7 @@ CXXFLAGS+=		-DHAVE_CURSES_H
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
-  
+
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
 CFLAGS+=	-DSIGNALS_DONT_BREAK_READ
 CXXFLAGS+=	-DSIGNALS_DONT_BREAK_READ
@@ -100,7 +100,7 @@ SUBST_FILES.mk=		dbug/Makefile.in heap/Makefile.in isam/Makefile.in \
 SUBST_SED.mk=		-e "/^install-exec:/s/install-pkglibLIBRARIES//"
 SUBST_MESSAGE.mk=	"Fixing Makefiles."
 SUBST_STAGE.scripts=	post-extract
-SUBST_FILES.scripts=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh	
+SUBST_FILES.scripts=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh
 SUBST_SED.scripts=	-e "s,chown,${CHOWN},g"
 SUBST_MESSAGE.scripts=	"Fixing scripts."
 
