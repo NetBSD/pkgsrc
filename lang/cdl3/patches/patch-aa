@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/23 02:04:23 minskim Exp $
+
+--- docs/Makefile.am.orig	Mon Jan 28 15:06:53 2002
++++ docs/Makefile.am
+@@ -1,5 +1,5 @@
+ ## Process this file with automake to produce Makefile.in
+-docdir = $(prefix)/doc
++docdir = $(prefix)/share/cdl3/doc
+ doc_DATA = $(PACKAGE)-manual-$(VERSION).ps
+ 
+ SUBDIRS = tek
