@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2003/12/30 12:29:48 gavan Exp $
+
+--- configure.orig	2002-08-22 15:36:27.000000000 +0100
++++ configure
+@@ -2679,7 +2679,6 @@ cat >> $CONFIG_STATUS <<EOF
+ EOF
+ cat >> $CONFIG_STATUS <<\EOF
+ test -z "$CONFIG_HEADERS" || echo timestamp > stamp-h
+-touch Makefile.in
+            sed -e "/POTFILES =/r po/POTFILES" po/Makefile.in > po/Makefile
+ exit 0
+ EOF
