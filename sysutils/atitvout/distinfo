@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/08/13 05:22:59 mrg Exp $
+
+SHA1 (atitvout-0.4.tar.gz) = ac0d3f19119fa0c096099f952c9c59ac44ccc840
+Size (atitvout-0.4.tar.gz) = 27163 bytes
+SHA1 (patch-aa) = 4a9dd24f5d1bb5db4cd1093c9c9e5a8d5e74e627
