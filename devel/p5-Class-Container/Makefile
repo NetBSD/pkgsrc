@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/10/11 04:26:10 kim Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 04:15:06 minskim Exp $
 
 DISTNAME=	Class-Container-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,9 @@ COMMENT=	Glues object frameworks together transparently
 DEPENDS+=	p5-Params-Validate>=0.23:../../devel/p5-Params-Validate
 DEPENDS+=	p5-Scalar-List-Utils-[0-9]*:../../devel/p5-Scalar-List-Utils
 
-USE_BUILDLINK2=	YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Class/Container/.packlist
 
 .include "../../lang/perl5/module.mk"
