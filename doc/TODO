@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1851 2004/06/21 14:18:09 taya Exp $
+$NetBSD: TODO,v 1.1852 2004/06/21 16:23:55 martti Exp $
 
 Suggested new packages
 ======================
@@ -170,7 +170,6 @@ Suggested package updates
 	o avidemux-2.0.20
 	o balsa-1.4.4
 	o bind-9.3
-	o bins-1.1.26
 	o bk_edit-0.6.23
 	o blender-2.33
 	o boehm-gc-6.3alpha6 [recht]
@@ -333,7 +332,6 @@ Suggested package updates
 	o pgplot-5.2 [grant]
 	o physfs-1.0.0
 	o plib-1.7.0
-	o postfix-2.1.3
 	o psi-0.9.1
 	o pwlib-1.5.2
 	o py-psycopg-1.1.10
