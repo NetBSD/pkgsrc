@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2002/02/18 15:14:36 seb Exp $
+# $NetBSD: Makefile,v 1.50 2002/03/18 20:41:43 wiz Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -17,7 +17,8 @@ BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
 
 USE_BUILDLINK_ONLY=	# defined
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--sysconfdir=/etc/zebra
+PKG_SYSCONFSUBDIR?=	zebra
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 # you might need debugging, it's a developer release !
 #CFLAGS+=	-g
 
