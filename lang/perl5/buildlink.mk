@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/11/25 23:18:23 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/11/28 04:54:24 jlam Exp $
 #
 # This Makefile fragment is included by packages that use perl.
 #
@@ -57,7 +57,7 @@ MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB}
 PERL5OPT+=		-I${PERL5_ARCHLIB:S/${BUILDLINK_PREFIX.perl}\//${BUILDLINK_DIR}\//}
 MAKE_ENV+=		PERL5OPT="${PERL5OPT}"
 
-pre-configure: perl-buildlink
+pre-configure: ${BUILDLINK_TARGETS.perl}
 
 perl-buildlink:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
