@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.635 2001/01/05 17:37:12 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.636 2001/01/05 18:03:14 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -39,7 +39,7 @@ CLEANDEPENDS?=		NO
 DEINSTALLDEPENDS?=	NO	# add -R to pkg_delete
 REINSTALL?=		NO	# reinstall upon update
 CHECK_SHLIBS?=		YES	# run check-shlibs after install
-SHLIB_HANDLING?=	YES	# do automatic ELF shared lib handling
+SHLIB_HANDLING?=	YES	# do automatic shared lib handling
 NOCLEAN?=		NO	# don't clean up after update
 
 LOCALBASE?=		${DESTDIR}/usr/local
