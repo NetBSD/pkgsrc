@@ -37,7 +37,10 @@ a single 5 Gigabyte Exabyte EXB-8500.  Here are some features of Amanda:
     fail.
   * can compress dumps before sending over net, with either compress or gzip.
   * can optionally syncronize with external backups, for those large
-    timesharing computers where you want to do fu--------------------------------------------
+    timesharing computers where you want to do full dumps when the system
+    is down in single-user mode (since BSD dump is not reliable on active
+    filesystems): Amanda will still do your daily dumps.
+  * lots of other options; Amanda is very configurable.
 
 Amanda requires a host that is mostly idle at night, with a large capacity
 tape drive (e.g. an EXABYTE or DAT tape).  This becomes the "tape server
