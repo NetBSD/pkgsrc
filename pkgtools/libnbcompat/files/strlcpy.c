@@ -1,4 +1,4 @@
-/*	$NetBSD: strlcpy.c,v 1.4 2004/08/23 03:32:12 jlam Exp $	*/
+/*	$NetBSD: strlcpy.c,v 1.5 2004/08/31 17:55:17 jlam Exp $	*/
 /*	$OpenBSD: strlcpy.c,v 1.7 2003/04/12 21:56:39 millert Exp $	*/
 
 /*
@@ -24,24 +24,24 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: strlcpy.c,v 1.4 2004/08/23 03:32:12 jlam Exp $");
+__RCSID("$NetBSD: strlcpy.c,v 1.5 2004/08/31 17:55:17 jlam Exp $");
 #endif /* LIBC_SCCS and not lint */
 
-#if 0
+#ifdef _LIBC
+#undef _LIBC
+#endif
+
 #ifdef _LIBC
 #include "namespace.h"
-#endif
 #endif
 #include <nbcompat/types.h>
 #include <nbcompat/assert.h>
 #include <nbcompat/string.h>
 
-#if 0
 #ifdef _LIBC
 # ifdef __weak_alias
 __weak_alias(strlcpy, _strlcpy)
 # endif
-#endif
 #endif
 
 #if !HAVE_STRLCPY
@@ -51,7 +51,7 @@ __weak_alias(strlcpy, _strlcpy)
  * Returns strlen(src); if retval >= siz, truncation occurred.
  */
 size_t
-#ifdef _LIBC && 0
+#ifdef _LIBC
 _strlcpy(dst, src, siz)
 #else
 strlcpy(dst, src, siz)
