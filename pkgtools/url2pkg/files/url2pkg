@@ -1,8 +1,21 @@
 #!/bin/sh
 #
-# url2pkg V1.0
+# url2pkg $Id: url2pkg,v 1.2 1999/05/06 03:31:58 feyrer Exp $
 # (c) 1999 Hubert Feyrer
 #
+
+if [ "$PKGMAINTAINER" != "" ]; then
+	email_maintainer="$PKGMAINTAINER"
+elif [ "$REPLYTO" != "" ]; then
+	email_maintainer="$REPLYTO"
+else
+	email_maintainer="<INSERT_YOUR_MAIL_ADDRESS_HERE>"
+fi
+
+if [ ! -f ../../mk/bsd.pkg.mk ]; then
+	echo "Run this in .../pkgsrc/foo/bar !"
+	exit 1
+fi
 
 if [ ! -f w*/.extract_done ]; then
 	if [ "$1" = "" ]; then
@@ -32,24 +45,24 @@ if [ ! -f w*/.extract_done ]; then
 	fi
 	
 	(
-	echo '# $NetBSD: url2pkg,v 1.1 1999/05/06 02:49:27 feyrer Exp $'
+	echo '# $NetBSD: url2pkg,v 1.2 1999/05/06 03:31:58 feyrer Exp $'
 	echo '#'
 	echo ""
 	echo "DISTNAME=	$DISTNAME"
+	echo "CATEGORIES=	FILLTHISINPLEASE"
+	echo "MASTER_SITES=	$MASTER_SITES/"
 	if [ "$EXTRACT_SUFX" != ".tar.gz" ]; then
 		echo "EXTRACT_SUFX=	${EXTRACT_SUFX}"
 	fi
-	echo "CATEGORIES=	FILLTHISINPLEASE"
-	echo "MASTER_SITES=	$MASTER_SITES/"
 	echo ""
-	echo "MAINTAINER=	hubertf@netbsd.org"
+	echo "MAINTAINER=	$email_maintainer"
 	echo "HOMEPAGE=	"
 	echo ""
 	echo '.include "../../mk/bsd.pkg.mk"'
 	) >Makefile
 	
 	mkdir pkg
-	echo '@comment $NetBSD: url2pkg,v 1.1 1999/05/06 02:49:27 feyrer Exp $' >pkg/PLIST
+	echo '@comment $NetBSD: url2pkg,v 1.2 1999/05/06 03:31:58 feyrer Exp $' >pkg/PLIST
 	
 	vi +/FILLTHISINPLEASE Makefile
 	
