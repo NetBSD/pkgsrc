@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/21 17:38:26 martti Exp $
+# $NetBSD: Makefile,v 1.15 2003/10/30 12:29:30 grant Exp $
 #
 
 DISTNAME=		gdkxft-1.5
@@ -33,6 +33,7 @@ post-install:
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/libglade/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../x11/controlcenter/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
