@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2147 2004/09/21 00:10:34 wiz Exp $
+$NetBSD: TODO,v 1.2148 2004/09/21 00:21:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -247,7 +247,6 @@ Suggested package updates
 	o firefox-bin-0.9.3 (+ gtk2, etc..) [grant]
 	o firewalk-5.0
 	o firewalk-gtk-5.0
-	o fix-mime-charset-0.5.3
 	o fluxbox-0.9.10
 	o foomatic-3.0.1 [jlam]
 	o fop-0.20.5
