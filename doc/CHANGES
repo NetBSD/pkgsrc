@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1983 2003/04/20 08:34:42 rh Exp $
+$NetBSD: CHANGES,v 1.1984 2003/04/20 10:46:39 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1664,3 +1664,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated PanoTools to 2.6b1nb1 [rh 2003-04-20]
 	Updated ggv to 1.0.2nb7 [rh 2003-04-20]
 	Updated glade to 0.6.4nb1 [rh 2003-04-20]
+	Added gnome1-session-1.4.2 [rh 2003-04-20]
+	Added gnome1-panel-1.4.2 [rh 2003-04-20]
+	Updated gnome-core to 1.4.2nb4 [rh 2003-04-20]
