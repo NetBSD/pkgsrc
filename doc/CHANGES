@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3680 2003/10/12 10:15:02 grant Exp $
+$NetBSD: CHANGES,v 1.3681 2003/10/13 06:05:20 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3950,7 +3950,32 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tits to 1.1.1 [agc 2003-09-26]
 	Updated maradns to 1.0.18 [xtraeme 2003-09-26]
 	Added fix-mime-charset-0.4.0 [wiz 2003-09-26]
+	Added libxfce4gui-4.0.0 [martti 2003-09-26]
+	Added libxfce4mcs-4.0.0 [martti 2003-09-26]
+	Added libxfce4util-4.0.0 [martti 2003-09-26]
 	Added xfce4-4.0.0 [martti 2003-09-26]
+	Added xfce4-artwork-0.0.4 [martti 2003-09-26]
+	Added xfce4-desktop-4.0.0 [martti 2003-09-26]
+	Added xfce4-fm-4.0.0 [martti 2003-09-26]
+	Added xfce4-fm-icons-4.0.0 [martti 2003-09-26]
+	Added xfce4-gtk2-engines-2.1.6 [martti 2003-09-26]
+	Added xfce4-iconbox-4.0.0 [martti 2003-09-26]
+	Added xfce4-mcs-manager-4.0.0 [martti 2003-09-26]
+	Added xfce4-mcs-plugins-4.0.0 [martti 2003-09-26]
+	Added xfce4-minicmd-plugin-0.1.1 [martti 2003-09-26]
+	Added xfce4-mixer-4.0.0 [martti 2003-09-26]
+	Added xfce4-netload-plugin-0.2.0 [martti 2003-09-26]
+	Added xfce4-panel-4.0.0 [martti 2003-09-26]
+	Added xfce4-print-4.0.0 [martti 2003-09-26]
+	Added xfce4-showdesktop-plugin-0.1.1 [martti 2003-09-26]
+	Added xfce4-systemload-plugin-0.3.2 [martti 2003-09-26]
+	Added xfce4-systray-4.0.0 [martti 2003-09-26]
+	Added xfce4-themes-4.0.0 [martti 2003-09-26]
+	Added xfce4-toys-4.0.0 [martti 2003-09-26]
+	Added xfce4-trigger-launcher-4.0.0 [martti 2003-09-26]
+	Added xfce4-utils-4.0.0 [martti 2003-09-26]
+	Added xfce4-wm-4.0.0 [martti 2003-09-26]
+	Added xfce4-wm-themes-4.0.0 [martti 2003-09-26]
 	Updated xosd to 2.2.5 [jmmv 2003-09-26]
 	Updated xmms-osd to 2.2.5 [jmmv 2003-09-26]
 	Updated mplayer-share to 1.0rc1nb1 [salo 2003-09-26]
