@@ -1,0 +1,37 @@
+$NetBSD: patch-netbsd-1.4.2,v 1.1.2.2 2002/08/22 11:12:25 jlam Exp $
+
+Revert the addition of strlcpy() and strlcat(), for NetBSD-1.4.2.
+
+--- crypto/rand/randfile.c.orig	Fri Aug  9 22:31:54 2002
++++ crypto/rand/randfile.c
+@@ -225,9 +225,10 @@
+ 
+ 	if (OPENSSL_issetugid() == 0)
+ 		s=getenv("RANDFILE");
+-	if (s != NULL && *s && strlen(s) + 1 < size)
++	if (s != NULL)
+ 		{
+-		strlcpy(buf,s,size);
++		strncpy(buf,s,size-1);
++		buf[size-1]='\0';
+ 		ret=buf;
+ 		}
+ 	else
+@@ -240,13 +241,13 @@
+ 			s = DEFAULT_HOME;
+ 			}
+ #endif
+-		if (s != NULL && *s && (strlen(s)+strlen(RFILE)+2 < size))
++		if (s != NULL && (strlen(s)+strlen(RFILE)+2 < size))
+ 			{
+-			strlcpy(buf,s,size);
++			strcpy(buf,s);
+ #ifndef VMS
+-			strlcat(buf,"/",size);
++			strcat(buf,"/");
+ #endif
+-			strlcat(buf,RFILE,size);
++			strcat(buf,RFILE);
+ 			ret=buf;
+ 			}
+ 		else

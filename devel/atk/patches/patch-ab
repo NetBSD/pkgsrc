@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.4.2 2002/08/22 11:10:21 jlam Exp $
+
+--- atk.pc.in.orig	Wed Mar  6 03:27:29 2002
++++ atk.pc.in
+@@ -7,5 +7,5 @@ Name: Atk
+ Description: Accessibility Toolkit
+ Version: @VERSION@
+ Requires: @GLIB_PACKAGES@
+-Libs: -L${libdir} -latk-@ATK_API_VERSION@
++Libs: -L${libdir} -Wl,-R${libdir} -latk-@ATK_API_VERSION@
+ Cflags: -I${includedir}/atk-1.0

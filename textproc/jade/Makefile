@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18.2.2 2002/07/01 17:45:11 jlam Exp $
+# $NetBSD: Makefile,v 1.18.2.3 2002/08/22 11:12:40 jlam Exp $
 
 DISTNAME=	jade-1.2.1
 PKGREVISION=	4
@@ -25,8 +25,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 
 JADE_CATALOG_DIR=	${PREFIX}/share/sgml/jade/catalog
 
-CONFIGURE_ARGS=		--disable-shared
-CONFIGURE_ARGS+=	--enable-default-catalog=${JADE_CATALOG_DIR}
+CONFIGURE_ARGS=		--enable-default-catalog=${JADE_CATALOG_DIR}
 CONFIGURE_ARGS+=	--enable-mif
 
 CXXFLAGS+=		${CFLAGS}

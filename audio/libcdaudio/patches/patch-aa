@@ -1,12 +1,10 @@
-$NetBSD: patch-aa,v 1.3 2001/04/20 18:27:10 drochner Exp $
-
---- source/cdaudio.c.orig	Fri Apr 20 20:20:23 2001
-+++ source/cdaudio.c	Fri Apr 20 20:20:27 2001
-@@ -304,6 +304,7 @@
-    struct CDAUDIO_SUBCHANNEL_DATA cdsc_data;
+--- source/cdaudio.c.orig	Fri Jul  5 12:15:13 2002
++++ source/cdaudio.c	Fri Jul  5 12:16:25 2002
+@@ -306,6 +306,7 @@
+   struct CDAUDIO_SUBCHANNEL_DATA cdsc_data;
  #endif
  
-+   memset(&cdsc, '\0', sizeof(cdsc));
++	memset(&cdsc, '\0', sizeof(cdsc));
  
  #ifdef CDAUDIO_SUBCHANNEL_DATA
-    memset(&cdsc_data, '\0', sizeof(cdsc_data));
+   memset(&cdsc_data, '\0', sizeof(cdsc_data));

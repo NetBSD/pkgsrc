@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/04/17 04:40:36 fredb Exp $
+# $NetBSD: Makefile,v 1.39.2.1 2002/08/22 11:13:53 jlam Exp $
 #
 
 DISTNAME=	xforms-0.9999
@@ -12,10 +12,10 @@ COMMENT=	Graphical user interface toolkit for X Window System
 
 USE_IMAKE=	YES
 USE_X11=	YES
-USE_XPM=	YES
 
 MAKE_ENV=	DEPEND_DEFINES="-I${BUILDLINK_DIR}/include"
 SCRIPTS_ENV=	DEPEND_DEFINES="-I${BUILDLINK_DIR}/include"
 
 .include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

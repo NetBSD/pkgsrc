@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/10/25 15:37:04 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.1.2.1 2002/08/22 11:11:04 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ptl2.
 #
@@ -22,7 +22,8 @@ DEPENDS+=	${BUILDLINK_DEPENDS.ptl2}:../../devel/ptl2
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.ptl2=ptl
 BUILDLINK_PREFIX.ptl2_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.ptl2=		PTL/include/*/*/*.h
+BUILDLINK_FILES.ptl2=		PTL/include/*/*/*/*.h
+BUILDLINK_FILES.ptl2+=		PTL/include/*/*/*.h
 BUILDLINK_FILES.ptl2+=		PTL/include/*/*.h
 BUILDLINK_FILES.ptl2+=		PTL/include/*.h
 BUILDLINK_FILES.ptl2+=		lib/libPTL.*

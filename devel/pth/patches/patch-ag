@@ -1,0 +1,82 @@
+$NetBSD: patch-ag,v 1.1.2.2 2002/08/22 11:11:02 jlam Exp $
+
+--- pth_lib.c.orig	Sun Jan 27 11:03:40 2002
++++ pth_lib.c
+@@ -37,25 +37,21 @@ long pth_version(void)
+ 
+ /* implicit initialization support */
+ intern int pth_initialized = FALSE;
++intern int pth_explicit_initialize = FALSE;
++
+ #if cpp
+ #define pth_implicit_init() \
+     if (!pth_initialized) \
+-        pth_init();
++        pth__init(); 
+ #endif
+ 
+-/* initialize the package */
+-int pth_init(void)
++intern int pth__init(void)
+ {
+     pth_attr_t t_attr;
+ 
+-    /* support for implicit initialization calls
+-       and to prevent multiple explict initialization, too */
+-    if (pth_initialized)
+-        return_errno(FALSE, EPERM);
+-    else
+-        pth_initialized = TRUE;
++    pth_initialized = TRUE;
+ 
+-    pth_debug1("pth_init: enter");
++    pth_debug1("pth__init: enter");
+ 
+     /* initialize the scheduler */
+     pth_scheduler_init();
+@@ -105,10 +101,28 @@ int pth_init(void)
+     pth_mctx_switch(&pth_main->mctx, &pth_sched->mctx);
+ 
+     /* came back, so let's go home... */
+-    pth_debug1("pth_init: leave");
++    pth_debug1("pth__init: leave");
+     return TRUE;
+ }
+ 
++/* initialize the package */
++int pth_init(void)
++{
++    int rv;
++
++    /* support for implicit initialization calls
++       and to prevent multiple explict initialization, too */
++    if (pth_initialized) {
++        /* if we've already explicitly initialized then error */
++        if (pth_explicit_initialize)
++            return_errno(FALSE, EPERM);
++    } else {
++        rv = pth__init();
++        pth_explicit_initialize = TRUE;
++        return rv;
++    }
++}
++
+ /* kill the package internals */
+ int pth_kill(void)
+ {
+@@ -118,6 +132,7 @@ int pth_kill(void)
+     pth_thread_cleanup(pth_main);
+     pth_scheduler_kill();
+     pth_initialized = FALSE;
++    pth_explicit_initialize = FALSE;
+     pth_tcb_free(pth_sched);
+     pth_tcb_free(pth_main);
+     pth_debug1("pth_kill: leave");
+@@ -182,6 +197,7 @@ static void pth_spawn_trampoline(void)
+     /* no return! */
+     abort();
+ }
++
+ pth_t pth_spawn(pth_attr_t attr, void *(*func)(void *), void *arg)
+ {
+     pth_t t;

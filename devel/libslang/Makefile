@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33.2.1 2002/06/23 18:44:28 jlam Exp $
+# $NetBSD: Makefile,v 1.33.2.2 2002/08/22 11:10:45 jlam Exp $
 #
 
 DISTNAME=	slang-1.4.5
@@ -20,6 +20,8 @@ USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE= 	yes
 USE_LIBTOOL=	yes
 USE_GMAKE=	yes
+CONFIG_GUESS_OVERRIDE=	${WRKSRC}/autoconf/config.guess
+CONFIG_SUB_OVERRIDE=	${WRKSRC}/autoconf/config.sub
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/slang

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2002/03/21 18:52:30 drochner Exp $
+# $NetBSD: Makefile,v 1.27.2.1 2002/08/22 11:09:59 jlam Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.2.7
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.2.x/ \
 		ftp://ftp.sunet.se/pub/multimedia/xmms/1.2.x/
@@ -15,11 +16,12 @@ USE_LIBTOOL=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 
-CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
 CONFIGURE_ARGS+=	--without-gnome
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.prefs.mk"
+
+PTHREAD_OPTS+=		require
 
 .if (${OPSYS} == NetBSD)
 CONFIGURE_ARGS+=	--with-dev-dsp=/dev/sound
@@ -43,5 +45,6 @@ post-patch:
 .include "../../textproc/libxml/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/ossaudio.buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

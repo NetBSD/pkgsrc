@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2.2.1 2002/06/23 18:54:47 jlam Exp $
+$NetBSD: distinfo,v 1.2.2.2 2002/08/22 11:12:00 jlam Exp $
 
-SHA1 (ORBit2-2.3.108.tar.bz2) = c4678e8350136d2369e426515721167858b0f297
-Size (ORBit2-2.3.108.tar.bz2) = 426112 bytes
+SHA1 (ORBit2-2.4.0.tar.bz2) = 234b4b8f66744637386ad7f2caf0aeca88afe484
+Size (ORBit2-2.4.0.tar.bz2) = 431841 bytes
 SHA1 (patch-aa) = 41e3dd08b704ed3fc20161e2c151bfc58b969eaa
+SHA1 (patch-ab) = 1dee388a93179376810250207e52cebeb55af875

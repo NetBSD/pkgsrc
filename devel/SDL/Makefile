@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31.2.1 2002/06/23 18:43:47 jlam Exp $
+# $NetBSD: Makefile,v 1.31.2.2 2002/08/22 11:10:12 jlam Exp $
 #
 
 DISTNAME=	SDL-1.2.3
+PKGREVISION=	2
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -9,13 +10,13 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.libsdl.org/
 COMMENT=	Simple DirectMedia Layer, a cross-platform multimedia library
 
-BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 USE_BUILDLINK_ONLY=	YES
 
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
+PTHREAD_OPTS+=		require
 
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -48,17 +49,16 @@ CONFIGURE_ENV+=		SYSTEM_LIBS="${LDFLAGS}"
 
 pre-patch:
 	cd ${WRKSRC} && ${MKDIR} src/audio/netbsd
-
-pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf --force --foreign
+	cd ${WRKSRC} && ${MKDIR} src/joystick/bsd
+	${CP} ${FILESDIR}/[MS]* ${WRKSRC}/src/joystick/bsd
 
 post-configure:
 	cd ${WRKSRC}/src/audio && ${CP} *.[ch] netbsd/
 
 .include "../../audio/esound/buildlink.mk"
-.include "../../devel/pth/buildlink.mk"
 .include "../../graphics/Mesa/buildlink.mk"
 .include "../../graphics/aalib-x11/buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
 .include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

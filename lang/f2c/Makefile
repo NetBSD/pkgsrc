@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19.2.1 2002/06/23 18:50:15 jlam Exp $
+# $NetBSD: Makefile,v 1.19.2.2 2002/08/22 11:11:47 jlam Exp $
 
 DISTNAME=	f2c-20001205
 PKGREVISION=	5
@@ -60,7 +60,7 @@ pre-install:
 .if (${MACHINE_ARCH} == "mipsel")
 	${SED} '/lib.*_pic/d' ${PKGDIR}/PLIST > ${PLIST_SRC}
 .else
-	${CP} ${PKGSRCDIR}/PLIST ${PLIST_SRC}
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 .endif
 
 .if (${OBJECT_FMT} == "ELF")

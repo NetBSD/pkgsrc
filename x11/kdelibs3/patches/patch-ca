@@ -1,0 +1,13 @@
+$NetBSD: patch-ca,v 1.1.2.2 2002/08/22 11:13:48 jlam Exp $
+
+--- kdesu/kdesu_pty.cpp.orig	Mon Aug 19 20:55:44 2002
++++ kdesu/kdesu_pty.cpp
+@@ -20,7 +20,7 @@
+ #define _GNU_SOURCE   /* Needed for getpt, ptsname in glibc 2.1.x systems */
+ #endif
+ 
+-#if !defined(_XOPEN_SOURCE) && !defined(__osf__)
++#if !defined(_XOPEN_SOURCE) && !defined(__osf__) && !defined(__NetBSD__)
+ #define _XOPEN_SOURCE /* Needed for grantpt, unlockpt in glibc 2.1.x      */
+ #endif
+ 

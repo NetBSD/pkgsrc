@@ -1,21 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2002/05/02 12:49:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2002/08/22 11:10:21 jlam Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
 ${MACHINE_GNU_PLATFORM}/bin/nm
 ${MACHINE_GNU_PLATFORM}/bin/ranlib
 ${MACHINE_GNU_PLATFORM}/bin/strip
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/${MACHINE_GNU_ARCH}nbsd.x
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/${MACHINE_GNU_ARCH}nbsd.xbn
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/${MACHINE_GNU_ARCH}nbsd.xn
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/${MACHINE_GNU_ARCH}nbsd.xr
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/${MACHINE_GNU_ARCH}nbsd.xu
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_GNU_ARCH}.x
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_GNU_ARCH}.xbn
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_GNU_ARCH}.xn
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_GNU_ARCH}.xr
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_GNU_ARCH}.xs
-${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf_${MACHINE_GNU_ARCH}.xu
 bin/addr2line
 bin/ar
 bin/as

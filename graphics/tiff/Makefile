@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.39.2.2 2002/06/21 23:05:26 jlam Exp $
+# $NetBSD: Makefile,v 1.39.2.3 2002/08/22 11:11:43 jlam Exp $
 
 DISTNAME=	tiff-v3.5.7
 PKGNAME=	tiff-3.5.7
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.libtiff.org/ \
-		ftp://ftp.remotesensing.org/pub/libtiff/
+MASTER_SITES=	ftp://ftp.remotesensing.org/pub/libtiff/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 # need DISTFILES above for adding lzw-files to it if USE_GIF is defined
 # in mk.conf

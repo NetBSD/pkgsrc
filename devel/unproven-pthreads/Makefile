@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27.2.1 2002/06/23 18:45:11 jlam Exp $
+# $NetBSD: Makefile,v 1.27.2.2 2002/08/22 11:11:10 jlam Exp $
 #
 
 DISTNAME=		unproven-pthreads-0.17
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.flame.org/pub/netbsd/
 
@@ -17,11 +17,21 @@ GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/pthreads
 MAKE_ENV+=		NOLINT=1 NOPROFILE=1 OBJECT_FMT=${OBJECT_FMT}
 
+CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config/config.guess
+CONFIG_SUB_OVERRIDE=	${WRKSRC}/config/config.sub
+
+# build makes some assumptions about OBJDIR, avoid confusing it
+do-build:
+	unset MAKEOBJDIRPREFIX; cd ${WRKSRC} && ${MAKE}
+
 post-extract:
 	@${RM} ${WRKSRC}/include/pthread/unistd.h
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/pthreads
+
+do-install:
+	unset MAKEOBJDIRPREFIX; cd ${WRKSRC} && ${MAKE} install
 
 post-install:
 	@${RM} -f ${PREFIX}/pthreads/lib/libpthread_pic.a

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3.2.1 2002/06/23 18:38:25 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3.2.2 2002/08/22 11:09:43 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libao.
 #
@@ -17,7 +17,7 @@ LIBAO_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.libao?=	libao>=0.8.2
+BUILDLINK_DEPENDS.libao?=	libao>=0.8.3
 DEPENDS+=		${BUILDLINK_DEPENDS.libao}:../../audio/libao
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.libao=libao

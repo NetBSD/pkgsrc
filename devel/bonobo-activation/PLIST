@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1.2.1 2002/06/23 18:43:54 jlam Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.2.2 2002/08/22 11:10:24 jlam Exp $
 bin/activation-client
 bin/bonobo-activation-empty-server
 bin/bonobo-activation-run-query
@@ -29,14 +29,17 @@ lib/libbonobo-activation.so
 lib/libbonobo-activation.so.4
 lib/libbonobo-activation.so.4.0
 lib/pkgconfig/bonobo-activation-2.0.pc
+man/man1/bonobo-activation-server.1
 share/gtk-doc/html/bonobo-activation/bonobo-activation.png
 share/idl/bonobo-activation-2.0/Bonobo_ActivationContext.idl
 share/idl/bonobo-activation-2.0/Bonobo_Activation_types.idl
 share/idl/bonobo-activation-2.0/Bonobo_GenericFactory.idl
 share/idl/bonobo-activation-2.0/Bonobo_ObjectDirectory.idl
 share/idl/bonobo-activation-2.0/Bonobo_Unknown.idl
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/bonobo-activation.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/bonobo-activation.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/bonobo-activation.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/bonobo-activation.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/bonobo-activation.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bonobo-activation.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/bonobo-activation.mo
@@ -65,12 +68,13 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/bonobo-activation.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/bonobo-activation.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/bonobo-activation.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/bonobo-activation.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/bonobo-activation.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/bonobo-activation.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/bonobo-activation.mo
 @dirrm share/idl/bonobo-activation-2.0
 @dirrm share/gtk-doc/html/bonobo-activation
 @dirrm lib/bonobo/servers
-@unexec ${RMDIR} %D/lib/bonobo >/dev/null 2>&1 || ${TRUE}
+@unexec ${RMDIR} %D/lib/bonobo 2>/dev/null || ${TRUE}
 @dirrm include/bonobo-activation-2.0/bonobo-activation
 @dirrm include/bonobo-activation-2.0
 @dirrm etc/bonobo-activation

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4.2.1 2002/06/23 19:05:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4.2.2 2002/08/22 11:13:05 jlam Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -484,7 +484,6 @@ share/gtk-doc/html/libart/fdl-section8.html
 share/gtk-doc/html/libart/fdl-section9.html
 share/gtk-doc/html/libart/fdl-using.html
 share/gtk-doc/html/libart/fdl.html
-share/gtk-doc/html/libart/index.sgml
 share/gtk-doc/html/libart/internals-intersector.html
 share/gtk-doc/html/libart/internals.html
 share/gtk-doc/html/libart/intro-file-names.html
@@ -614,5 +613,5 @@ share/type-convert/type.convert
 @dirrm etc/CORBA
 @exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/libart.m4 ${LOCALBASE}/share/aclocal/libart.m4
 @unexec test %D = ${LOCALBASE} || ${RM} -f ${LOCALBASE}/share/aclocal/libart.m4
-@exec ${MKDIR} -p ${LOCALSTATEDIR}
+@exec ${MKDIR} ${LOCALSTATEDIR}
 @unexec ${RM} -rf ${LOCALSTATEDIR}

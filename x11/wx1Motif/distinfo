@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1.2.2 2002/06/23 19:06:59 jlam Exp $
+$NetBSD: distinfo,v 1.1.1.1.2.3 2002/08/22 11:13:51 jlam Exp $
 
 SHA1 (wx168_1.tgz) = 771e5301d81560c4750c7b28f3ed843267232af3
 Size (wx168_1.tgz) = 3267398 bytes
@@ -15,10 +15,10 @@ Size (wxinstal) = 44632 bytes
 SHA1 (patch-aa) = e9d4e2569c4e515eba31f46792dbc864427369a7
 SHA1 (patch-ab) = 58e2fe8a8e915b5fdadfdc2472fa33ef1cb4f2e6
 SHA1 (patch-ac) = f16472aeaba36423664b67419befc8fbe256061b
-SHA1 (patch-ad) = f2a15184da2ea9a0a1095f796d939ba636c282f4
+SHA1 (patch-ad) = 23515a5df517ffb1c7b41ae7e05f3872a8d075e1
 SHA1 (patch-ae) = 450c95f374e44021b0a138320f47aa213fe738c2
 SHA1 (patch-af) = 450b3c43fee0b6dfebf9a2d0c1ef6d5ea0b9bb0d
 SHA1 (patch-ag) = b278a78ecda1b6b3622c47f5c5cf371776a8ed90
-SHA1 (patch-ah) = 8620ff95f1a690968b9f80fb84e46248d6ab3839
+SHA1 (patch-ah) = b21d4951418a3e97121ce4b6bbe0733ef672e1b1
 SHA1 (patch-ai) = 4c92fe6684744985ca9cfb0bbf2a47769927b84d
 SHA1 (patch-aj) = 61f63aa81469648a0a4fcde5cd8478183a011e7b
