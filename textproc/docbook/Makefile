@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/02/25 11:48:15 grant Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/25 11:50:35 grant Exp $
 # FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
 #
 
@@ -14,7 +14,7 @@ SITES_docbk241.zip=	http://www.oasis-open.org/docbook/sgml/2.4.1/
 DISTFILES=	docbk241.zip docbk30.zip docbk31.zip docbk40.zip docbk41.zip \
 		docbook-4.2.zip
 
-MAINTAINER=	rh@NetBSD.ORG
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.oasis-open.org/docbook
 COMMENT=	SGML DTD designed for computer documentation
 
