@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/01/03 18:49:45 reed Exp $
+# $NetBSD: Makefile,v 1.32 2004/04/18 05:03:34 snj Exp $
 
 DISTNAME=		xfmail-1.4.7
 PKGREVISION=		5
@@ -19,7 +19,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 AUTOCONF_REQD=		2.13
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
@@ -32,11 +32,11 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xfmail
 	${INSTALL_DATA} ${WRKSRC}/Copyright ${PREFIX}/share/doc/xfmail
 
-.include "../../databases/gdbm/buildlink2.mk"
-.include "../../devel/glib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../x11/xforms/buildlink2.mk"
+.include "../../databases/gdbm/buildlink3.mk"
+.include "../../devel/glib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/xforms/buildlink3.mk"
 
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
