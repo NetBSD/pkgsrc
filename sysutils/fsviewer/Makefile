@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/14 10:38:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/22 17:42:08 wiz Exp $
 #
 
 DISTNAME=	FSViewer.app-0.2.3
@@ -11,14 +11,12 @@ MAINTAINER=	johnam@mail.kemper.org
 HOMEPAGE=	http://www.csn.ul.ie/~clernong/projects/fsviewer.html
 COMMENT=	NextStep-like Filemanager for WindowMaker
 
-DEPENDS+=	windowmaker>=0.64.0:../../wm/windowmaker
-
 DIST_SUBDIR=	fsviewer
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 # needed for the new location of WINGs include files -- can be removed
 # when the application gets updated for windowmaker>=0.64.0
-CFLAGS+=	-I${X11BASE}/include/WINGs
+CFLAGS+=	-I${BUILDLINK_DIR}/include/WINGs
 
 USE_X11BASE=		yes
 USE_GMAKE=		yes
@@ -28,4 +26,5 @@ post-install:
 	cd ${PREFIX}/GNUstep/Apps/FSViewer.app && \
 		${PAX} -zrf ${_DISTDIR}${DISTSUBDIR}/icons.tar.gz *.xpm *.tif
 
+.include "../../wm/windowmaker/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
