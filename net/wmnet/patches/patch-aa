@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2000/07/31 17:02:25 tron Exp $
+$NetBSD: patch-aa,v 1.2 2002/07/18 12:57:57 seb Exp $
 
 --- Imakefile.orig	Fri May  5 02:34:29 2000
-+++ Imakefile	Mon Jul 31 19:01:24 2000
-@@ -10,14 +10,16 @@
++++ Imakefile	Mon Jul  8 16:54:18 2002
+@@ -10,14 +10,21 @@
  LOCAL_LIBRARIES = $(XLIB) -lm 
  #endif
  
@@ -13,11 +13,16 @@ $NetBSD: patch-aa,v 1.1 2000/07/31 17:02:25 tron Exp $
  INSTPGMFLAGS = -s -g kmem -m 2755 
  #endif
  
++#if defined (SunArchitecture)
++LOCAL_LIBRARIES = $(XLIB) -lm -lkstat
++CCOPTIONS =
++#endif
++
  LINTLIBS = $(LINTXLIB)
  
 -#if defined (FreeBSDArchitecture) || defined (OpenBSDArchitecture)
 +#if defined (FreeBSDArchitecture) || defined (OpenBSDArchitecture) || \
-+    defined (NetBSDArchitecture)
++    defined (NetBSDArchitecture) || defined (SunArchitecture)
  SRCS = wmnet.c drivers.c getopt.c getopt1.c
  OBJS = wmnet.o drivers.o getopt.o getopt1.o
  #else
