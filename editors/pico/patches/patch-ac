@@ -1,48 +1,45 @@
---- build.orig	Tue May 14 12:22:47 1996
-+++ build	Sat Jun  6 07:15:10 1998
-@@ -149,10 +149,2 @@
-         cd $PHOME
+--- build.orig	Sat Jul 18 20:22:16 1998
++++ build	Sat Jul 18 20:23:48 1998
+@@ -254,41 +254,20 @@
+ 	  esac
+ 	fi
+ 
 -        if [ -s c-client ] ; then rm -f c-client ; fi
+-        ln -s imap/c-client c-client
+-        if [ -s mtest    ] ; then rm -f mtest    ; fi
+-        ln -s imap/mtest mtest
 -        if [ -s imapd    ] ; then rm -f imapd    ; fi
--        ln -s imap/systype/c-client c-client
--        ln -s imap/systype/imapd imapd
+-        ln -s imap/imapd imapd
 -        echo "Making c-client library, mtest and imapd"
+-        eval echo make "$makeargs" "$K1" "$K2" $ccltarg
 -        cd $PHOME/imap
--        make $makeargs $maketarget
+-        eval make "$makeargs" "$K1" "$K2" $ccltarg
 -        echo ''
+-
          echo "Making Pico and Pilot"
-@@ -161,5 +153,2 @@
+         cd $PHOME/pico
+         eval echo make "$makeargs" -f makefile.$picotarg
+         eval make "$makeargs" -f makefile.$picotarg
          echo ''
+ 
 -        echo "Making Pine".
 -        cd $PHOME/pine
--        make $makeargs -f makefile.$maketarget
+-        eval echo make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
+-        eval make "$makeargs" "$L1" "$L2" -f makefile.$pinetarg
          cd $PHOME
-@@ -167,8 +156,7 @@
+         if [ ! -d bin ] ;  then    mkdir bin;        fi
          cd $PHOME/bin
 -        rm -f pine mtest imapd pico pilot
 -        if [ -s ../pine/pine ] ;      then ln ../pine/pine  pine      ; fi
--        if [ -s ../c-client/mtest ] ; then ln ../c-client/mtest mtest ; fi
+-        if [ -s ../mtest/mtest ] ;    then ln ../mtest/mtest mtest ; fi
 -        if [ -s ../imapd/imapd ] ;    then ln ../imapd/imapd imapd    ; fi
 +        rm -f pico pilot
          if [ -s ../pico/pico ] ;      then ln ../pico/pico pico ; fi
          if [ -s ../pico/pilot ] ;     then ln ../pico/pilot pilot ; fi
-+        if [ -s ../pico/libpico.so.1.3 ] ;     
-+		then ln ../pico/libpico.so.1.3 libpico.so.1.3 ; fi
          cd $PHOME
-@@ -176,3 +164,2 @@
-         echo "Links to executables are in bin directory:"
+         echo ''
+-        echo "Links to executables are in bin directory:"
 -        size bin/pine bin/mtest bin/imapd bin/pico bin/pilot
          echo "Done"
-@@ -182,11 +169,5 @@
-     clean) # This only sort of works 
--        echo "Cleaning c-client and imapd"
--	cd $PHOME/imap
--	make clean
--        echo "Cleaning Pine"
--        cd $PHOME/pine
--        make -f makefile.ult clean
-         echo "Cleaning pico"
-         cd $PHOME/pico
--        make $makeargs -f makefile.ult clean
-+        make $makeargs -f makefile.neb clean
-         echo "Done"
+         ;;
+ 
