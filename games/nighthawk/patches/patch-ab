@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1999/02/10 15:09:56 frueauf Exp $
+
 --- src/Makefile.orig	Sun Feb  7 01:25:16 1999
 +++ src/Makefile	Sun Feb  7 01:26:48 1999
 @@ -3,13 +3,14 @@
