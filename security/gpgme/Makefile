@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/12/14 15:05:01 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/11 02:30:49 xtraeme Exp $
 #
 
 DISTNAME=	gpgme-0.4.3
@@ -12,13 +12,13 @@ COMMENT=	GnuPG Made Easy
 
 DEPENDS+=	gnupg>=1.2.2:../../security/gnupg
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 PTHREAD_OPTS+=		require
 
 TEST_TARGET=		check
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .if ${PTHREAD_TYPE} == "native"
 CONFIGURE_ARGS+=	--without-pth --without-pth-test
@@ -29,5 +29,5 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 INFO_FILES=		gpgme.info
 
-.include "../../security/libgpg-error/buildlink2.mk"
+.include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

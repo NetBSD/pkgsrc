@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/24 14:58:00 grant Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/11 02:34:55 xtraeme Exp $
 #
 
 DISTNAME=	libgnomeprint-2.4.2
@@ -13,14 +13,14 @@ COMMENT=	Library for the GNOME2 Printing Architecture
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
-BUILDLINK_DEPENDS.freetype2=	freetype2>=2.1.4
+BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.4
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libgnomeprint/libgnomeprint-2.2.pc.in
@@ -31,8 +31,9 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=		USE_CUPS
+
 .if defined(USE_CUPS) && !empty(USE_CUPS:M[Yy][Ee][Ss])
-.include "../../print/cups/buildlink2.mk"
+.include "../../print/cups/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-cups
 PLIST_SUBST+=		USE_CUPS=
 .else
@@ -46,11 +47,11 @@ PLIST_SUBST+=		USE_CUPS="@comment "
 CONFIGURE_ENV+=		libltdl_cv_shlibext=so
 .endif
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/libbonobo/buildlink2.mk"
-.include "../../devel/pango/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../graphics/libart2/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/libart2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
