@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2002/12/18 22:35:30 tsarna Exp $
+# $NetBSD: Makefile,v 1.141 2003/01/06 07:43:25 uebayasi Exp $
 #
 
 COMMENT=	Programming languages
@@ -33,6 +33,7 @@ SUBDIR+=	gawk
 SUBDIR+=	gb
 SUBDIR+=	gcc
 SUBDIR+=	gcc-ssp
+SUBDIR+=	gcc3
 SUBDIR+=	gforth
 SUBDIR+=	ghc
 SUBDIR+=	gprolog
