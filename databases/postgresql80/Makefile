@@ -2,9 +2,9 @@
 PKGNAME=	postgresql80-${BASE_VERS}
 COMMENT=	Robust, next generation, object-relational DBMS
 
-DEPENDS+=	postgresql80-client>=${BASE_VERS}:../../wip/postgresql80-client
-DEPENDS+=	postgresql80-server>=${BASE_VERS}:../../wip/postgresql80-server
-DEPENDS+=	postgresql80-docs>=${BASE_VERS}:../../wip/postgresql80-docs
+DEPENDS+=	postgresql80-client>=${BASE_VERS}:../../databases/postgresql80-client
+DEPENDS+=	postgresql80-server>=${BASE_VERS}:../../databases/postgresql80-server
+DEPENDS+=	postgresql80-docs>=${BASE_VERS}:../../databases/postgresql80-docs
 
 .include "Makefile.common"
 
