@@ -1,0 +1,33 @@
+$NetBSD: patch-cm,v 1.1 2000/06/19 15:56:38 pooka Exp $
+
+--- /dev/null   Thu Jan  1 00:00:00 1970
++++ config/unix/sun_netbsd/status       Thu Jun  8 22:21:08 2000
+@@ -0,0 +1,28 @@
++System configuration:
++
++       SPARC architecture running NetBSD 1.4
++
++Latest Icon version:
++
++       Version 9.3.2
++
++Installer:
++
++       David A. Holland
++       <dholland@eecs.harvard.edu>
++
++Missing features:
++
++       None.
++
++Known bugs:
++
++       None.
++
++Comments:
++
++       Mostly cribbed from a diff of intel_linux and sun_linux.
++
++Date:
++
++       Thu Jun  8 18:20:33 EDT 2000

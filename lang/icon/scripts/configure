@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: configure,v 1.4 1998/08/07 11:09:18 agc Exp $
+# $NetBSD: configure,v 1.5 2000/06/19 15:56:41 pooka Exp $
 #
 
-cd ${WRKSRC}; make Configure name=`uname -m| sed -e 's/i386/intel/'`_`uname -s|tr '[A-Z]' '[a-z]'`
+cd ${WRKSRC}; make Configure name=`uname -m| sed -e 's/i386/intel/;s/sparc/sun/'`_`uname -s|tr '[A-Z]' '[a-z]'`

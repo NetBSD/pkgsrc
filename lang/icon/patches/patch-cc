@@ -1,0 +1,14 @@
+$NetBSD: patch-cc,v 1.4 2000/06/19 15:56:32 pooka Exp $
+
+--- /dev/null   Thu Jan  1 00:00:00 1970
++++ config/unix/sun_netbsd/iconc.hdr    Thu Jun  8 22:10:28 2000
+@@ -0,0 +1,9 @@
++#  The -D$D option to CFLAGS makes it possible to specify a definition
++#  at the Make command level without revising the Makefile, as
++#  in
++#
++#      make D=Debug
++#
++D=NOTHING
++CFLAGS+= -D$D
++SHELL=/bin/sh
