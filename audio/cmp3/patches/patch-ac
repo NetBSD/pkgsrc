@@ -1,21 +1,17 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/02/10 14:18:35 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 2005/03/02 17:50:18 rxg Exp $
 
---- cmp3volume.c.orig	Fri Feb  9 15:54:18 2001
-+++ cmp3volume.c	Fri Feb  9 23:45:24 2001
-@@ -3,7 +3,11 @@
- */    
- 
+--- cmp3volume.c.orig	2001-07-01 12:38:08.000000000 +0800
++++ cmp3volume.c
+@@ -5,6 +5,8 @@
  #include "cmp3funcs.h"
--#include<sys/soundcard.h>
-+#if defined(__NetBSD__)
+ #if defined(__FreeBSD__)
+ #include <machine/soundcard.h>
++#elif defined(__NetBSD__)
 +#include <sys/audioio.h>
-+#else
-+#include <sys/soundcard.h>
-+#endif
- 
- static int mixernum,                    /* ID number for the mixer */
-            vol;                         /* Current volume level */
-@@ -12,6 +16,63 @@
+ #else
+ #include<sys/soundcard.h>
+ #endif
+@@ -16,6 +18,63 @@ static int mixernum,                    
   *  Initialize volume control
   *  Returns: nothing
   ****************************************************************************/
@@ -79,7 +75,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/02/10 14:18:35 hubertf Exp $
  extern void initvol()
  {
      if ((mixernum=open("/dev/mixer", O_RDWR)) < 0) {
-@@ -26,6 +87,8 @@
+@@ -30,6 +89,8 @@ extern void initvol()
      return;
  }
  
@@ -88,7 +84,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/02/10 14:18:35 hubertf Exp $
  extern void endvol()
  {
      close(mixernum);
-@@ -57,6 +120,23 @@
+@@ -61,6 +122,23 @@ extern void volclean()
   *  Although I hate users in general, we should probably do it.
   *  Returns: nothing
   ****************************************************************************/
@@ -112,7 +108,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/02/10 14:18:35 hubertf Exp $
  extern void volup()
  {
      int i;
-@@ -71,10 +151,29 @@
+@@ -75,10 +153,29 @@ extern void volup()
      return;
  }
  
@@ -142,11 +138,10 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/02/10 14:18:35 hubertf Exp $
  extern void voldown()
  {
      int i;
-@@ -89,4 +188,6 @@
+@@ -93,4 +190,6 @@ extern void voldown()
      return;
  }
  
 +#endif
 +
  /* EOF */
-\ No newline at end of file
