@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1.1.1 2001/06/27 18:06:05 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/27 18:28:05 jlam Exp $
 #
 # This Makefile fragment is included by packages that use pilot-link-libs.
 #
@@ -15,7 +15,7 @@
 .if !defined(PILOT_LINK_LIBS_BUILDLINK_MK)
 PILOT_LINK_LIBS_BUILDLINK_MK=	# defined
 
-BUILDLINK_DEPENDS.pilot-link-libs?=	pilot-link-{0.9.3,libs-*}
+BUILDLINK_DEPENDS.pilot-link-libs?=	pilot-link-libs>=0.9.5
 DEPENDS+=	${BUILDLINK_DEPENDS.pilot-link-libs}:../../comms/pilot-link-libs
 
 BUILDLINK_PREFIX.pilot-link-libs=	${LOCALBASE}
