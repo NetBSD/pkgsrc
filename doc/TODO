@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.848 2003/09/11 12:55:19 jmmv Exp $
+$NetBSD: TODO,v 1.849 2003/09/11 16:11:21 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -173,7 +173,6 @@ Suggested package updates
 	o lout-3.26 [pkg/18687]
 	o lwm-1.01
 	o lynx-current-2.8.5dev9
-	o magicpoint-1.10a [pkg/22436]
 	o maildrop-1.5.3 [pkg/22369]
 	o maildrop-1.6
 	o mailman-2.1.2 [pkgsrc-wip]
