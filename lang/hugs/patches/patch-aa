@@ -1,0 +1,23 @@
+--- MkInstal.in.orig	Thu Oct  2 18:21:41 1997
++++ MkInstal.in	Fri Apr  3 23:45:39 1998
+@@ -10,9 +10,6 @@
+ # multiple files at once.
+ ################################################################
+ 
+-INSTALL		= unix/install-sh
+-INSTALL_DATA	= /bin/cp
+-
+ install		:: install_bin install_lib            # the bare minimum
+ install		:: install_libs                       # lotsa libraries
+ install		:: install_demos install_Haskore      # goodies
+@@ -22,8 +19,8 @@
+ 
+ install_bin	:: hugs$(EXE) runhugs$(EXE)
+ 		$(INSTALL) -d $(bindir)
+-		$(INSTALL) hugs$(EXE) $(bindir)
+-		$(INSTALL) runhugs$(EXE) $(bindir)
++		$(INSTALL_PROGRAM) hugs$(EXE) $(bindir)
++		$(INSTALL_PROGRAM) runhugs$(EXE) $(bindir)
+ 
+ install_lib	::
+ 		$(INSTALL) -d $(hugsdir)/lib
