@@ -1,0 +1,23 @@
+#! /bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2000/10/16 07:38:45 skrll Exp $
+#
+
+case "$2" in
+        DEINSTALL) cat <<EOF
+
+---------------------------------------------------------------------------
+Data files and messages created by nocol are store is /var/run/msgs and 
+/var/run/data. You may want to remove these directories manually if you
+don't need them any longer:
+
+	rm -fr /var/run/msgs /var/run/data
+
+For further information look at $PKG_PREFIX/share
+---------------------------------------------------------------------------
+
+EOF
+        ;;
+esac    
+
+exit 0
