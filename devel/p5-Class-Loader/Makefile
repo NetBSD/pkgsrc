@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 16:43:34 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/25 04:11:37 minskim Exp $
 #
 
 DISTNAME=		Class-Loader-2.02
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Class/}
 
 MAINTAINER=		mcr@NetBSD.org
 #	from sen_ml@eccosys.com
-#HOMEPAGE=	
+HOMEPAGE=		http://search.cpan.org/dist/Class-Loader/
 COMMENT=		Perl5 module for module loading and on-demand object creation
 
 USE_BUILDLINK2=		YES
