@@ -1,36 +1,44 @@
-$NetBSD: patch-aa,v 1.2 2000/12/13 23:14:07 jtb Exp $
+$NetBSD: patch-aa,v 1.3 2001/01/28 03:16:55 jtb Exp $
 
---- Makefile.orig	Mon Nov 27 22:51:42 2000
+--- Makefile.orig	Fri Dec 15 20:05:39 2000
 +++ Makefile
-@@ -5,18 +5,18 @@
- EMACS = emacs
+@@ -2,24 +2,24 @@
+ # prior to 19.14 for XEmacs are unsupported.
+ 
+ # what emacs is called on your system
+-EMACS = emacs
++#EMACS = emacs
+ 
+ # top of the installation
+-prefix = /usr/local
++prefix = ${PREFIX}
  
  # where the Info file should go
--INFODIR = /usr/local/lib/emacs/info
-+INFODIR = ${PREFIX}/info
+-INFODIR = ${prefix}/lib/emacs/info
++#INFODIR = ${prefix}/lib/emacs/info
  
  # where the vm.elc, tapestry.elc, etc. files should go
--LISPDIR = /usr/local/lib/emacs/site-lisp
-+LISPDIR = ${PREFIX}/share/emacs/site-lisp/vm
+-LISPDIR = ${prefix}/lib/emacs/site-lisp
++#LISPDIR = ${prefix}/lib/emacs/site-lisp
  
  # where the toolbar pixmaps should go.
  # vm-toolbar-pixmap-directory must point to the same place.
  # vm-image-directory must point to the same place.
--PIXMAPDIR = /usr/local/lib/emacs/etc/vm
-+PIXMAPDIR = ${LISPDIR}/pixmaps
+-PIXMAPDIR = ${prefix}/lib/emacs/etc/vm
++#PIXMAPDIR = ${prefix}/lib/emacs/etc/vm
  
  # where the binaries should be go.
--BINDIR = /usr/local/bin
-+BINDIR = ${PREFIX}/bin
+-BINDIR = ${prefix}/bin
++#BINDIR = ${prefix}/bin
  
  ############## no user servicable parts beyond this point ###################
  
-@@ -124,7 +124,7 @@
+@@ -131,7 +131,7 @@
  
  vm.info:	vm.texinfo
  	@echo "making vm.info..."
 -	@$(EMACS) $(BATCHFLAGS) -insert vm.texinfo -l texinfmt -f texinfo-format-buffer -f save-buffer
-+	-makeinfo vm.texinfo
++	makeinfo vm.texinfo
  
  vm-autoload.elc:	$(SOURCES)
  	@echo scanning sources to build autoload definitions...
