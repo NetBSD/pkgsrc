@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2003/12/26 21:49:08 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.25 2004/01/31 22:13:52 xtraeme Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -39,6 +39,7 @@ include/libxml2/libxml/xmlreader.h
 include/libxml2/libxml/xmlregexp.h
 include/libxml2/libxml/xmlschemas.h
 include/libxml2/libxml/xmlschemastypes.h
+include/libxml2/libxml/xmlstring.h
 include/libxml2/libxml/xmlunicode.h
 include/libxml2/libxml/xmlversion.h
 include/libxml2/libxml/xmlwriter.h
@@ -49,7 +50,7 @@ lib/libxml2.a
 lib/libxml2.la
 lib/libxml2.so
 lib/libxml2.so.8
-lib/libxml2.so.8.4
+lib/libxml2.so.8.5
 lib/pkgconfig/libxml-2.0.pc
 lib/xml2Conf.sh
 man/man1/xml2-config.1
@@ -104,6 +105,7 @@ share/doc/html/libxml2/html/libxml-xmlreader.html
 share/doc/html/libxml2/html/libxml-xmlregexp.html
 share/doc/html/libxml2/html/libxml-xmlschemas.html
 share/doc/html/libxml2/html/libxml-xmlschemastypes.html
+share/doc/html/libxml2/html/libxml-xmlstring.html
 share/doc/html/libxml2/html/libxml-xmlunicode.html
 share/doc/html/libxml2/html/libxml-xmlversion.html
 share/doc/html/libxml2/html/libxml-xmlwriter.html
