@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/11/25 14:52:20 adam Exp $
+# $NetBSD: Makefile,v 1.6 2004/11/28 14:34:28 wiz Exp $
 
 DISTNAME=	libdv-0.103
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdv/}
 
@@ -31,4 +32,5 @@ CONFIGURE_ARGS+=	--disable-asm
 .include "../../devel/popt/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
