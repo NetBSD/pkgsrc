@@ -1,3 +1,4 @@
+$NetBSD: patch-ad,v 1.3 2002/11/26 21:38:24 cjep Exp $
 --- kdevelop/Makefile.in.orig	Tue Jul  9 15:55:13 2002
 +++ kdevelop/Makefile.in	Tue Jul  9 16:02:06 2002
 @@ -242,8 +242,7 @@
