@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/02/23 01:59:59 jmc Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/27 07:27:06 wiz Exp $
 #
 
 DISTNAME=	trplayer-1.2.0
@@ -52,3 +52,4 @@ post-install:
 
 .include "../../mk/texinfo.mk"
 .include "../../emulators/suse_linux/Makefile.application"
+.include "../../mk/bsd.pkg.mk"
