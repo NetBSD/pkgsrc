@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/14 18:26:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/19 21:36:39 minskim Exp $
 #
 
 DISTNAME=	gnome-python-2.0.0
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Python binding for GNOME2
 
 PY_PATCHPLIST=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 PKGCONFIG_OVERRIDE+=	gnome-python-2.0.pc.in
 GNU_CONFIGURE=	YES
@@ -25,13 +25,14 @@ BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 
-.include "../../www/libgtkhtml/buildlink2.mk"
-.include "../../net/py-ORBit/buildlink2.mk"
-.include "../../print/libgnomeprintui/buildlink2.mk"
-.include "../../sysutils/nautilus/buildlink2.mk"
-.include "../../x11/libzvt/buildlink2.mk"
-.include "../../x11/gnome-panel/buildlink2.mk"
-.include "../../x11/py-gtk2/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../net/py-ORBit/buildlink3.mk"
+.include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../sysutils/nautilus/buildlink3.mk"
+.include "../../www/libgtkhtml/buildlink3.mk"
+.include "../../x11/libzvt/buildlink3.mk"
+.include "../../x11/gnome-panel/buildlink3.mk"
+.include "../../x11/py-gtk2/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
