@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2004/12/28 23:18:20 reed Exp $
+# $NetBSD: Makefile,v 1.44 2005/01/31 09:24:07 adam Exp $
 
-DISTNAME=       xpaint-2.7.2
-PKGREVISION=	1
+DISTNAME=       xpaint-2.7.3
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sf-xpaint/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,9 +9,9 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://sf-xpaint.sourceforge.net/
 COMMENT=	Simple paint program
 
-USE_BUILDLINK3=	YES
-USE_GNU_TOOLS+=	make
-USE_IMAKE=      YES
+USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
+USE_IMAKE=      	yes
 
 BUILD_TARGET=	xaw95static
 MAKE_ENV+=	XMKMF="${XMKMF}"
@@ -28,4 +27,5 @@ SUBST_SED.foo=	    -e "s|\$${LOCALBASE}|${LOCALBASE}|g" \
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
