@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.209 2004/01/24 09:23:22 xtraeme Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.210 2004/01/29 18:36:38 jmmv Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -918,6 +918,14 @@ GOLEM_WITH_SOUND?=	NO
 # Use e.g. "rtl8139" for RealTek 8139 support or "eepro100 epic100" for
 # Intel Etherexpress Pro/100 and SMC EtherPower II support.
 # Default: not defined (-> no netboot support)
+
+#GRUB_PRESET_COMMAND=
+# Specifies a single command that will be embedded into GRUB's stage2 and
+# executed at boot time as a default configuration file.  This is usually
+# useful to create stage2 files with automated diskless support; you should
+# set this variable to "bootp", "dhcp" or "rarp", and use it together
+# GRUB_NETWORK_CARDS.
+# Default: not defined
 
 #GRUB_SCAN_ARGS=
 # Can be used to supply additional configure arguments for netboot support in
