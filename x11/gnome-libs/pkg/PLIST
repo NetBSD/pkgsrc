@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/12/29 14:23:04 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/12/29 17:53:11 tron Exp $
 bin/convertrgb
 bin/dns-helper
 bin/gconfigger
@@ -11,19 +11,11 @@ bin/gnome-moz-remote
 bin/gnome-name-service
 bin/gnome_segv
 bin/goad-browser
-doc/README.gtkcauldron
-doc/README.gtkcauldron_for_python
-doc/adding-sounds.txt
-doc/api-comment-style.txt
-doc/gtk_dialog_cauldron.3
-doc/suggestions.txt
-doc/mime-type-handling.txt
 etc/mime-magic
 etc/mime-magic.dat
 etc/paper.config
 etc/sound/events/gnome.soundlist
 etc/sound/events/gtk-events.soundlist
-@exec mkdir %D/html
 include/gnome.h
 include/popt-gnome.h
 include/libart_lgpl/art_affine.h
@@ -164,7 +156,6 @@ lib/gnome-libs/include/popt-gnome.h
 lib/gnomeConf.sh
 lib/libart_lgpl.a
 lib/libart_lgpl.so.0.0
-lib/libart_lgpl.la
 lib/libartConf.sh
 lib/libgnome.so.30.0
 lib/libgnome.a
@@ -180,9 +171,17 @@ lib/libzvt.a
 lib/libzvt.so.0.0
 sbin/gnome-pty-helper
 share/aclocal/libart.m4
-share/doc/gnome-doc.el
-share/doc/gnome-doc
-share/doc/mkstub
+share/doc/gnome-libs/README.gtkcauldron
+share/doc/gnome-libs/README.gtkcauldron_for_python
+share/doc/gnome-libs/adding-sounds.txt
+share/doc/gnome-libs/api-comment-style.txt
+share/doc/gnome-libs/gnome-doc.el
+share/doc/gnome-libs/gnome-doc
+share/doc/gnome-libs/gtk_dialog_cauldron.3
+share/doc/gnome-libs/mime-type-handling.txt
+share/doc/gnome-libs/mkstub
+share/doc/gnome-libs/suggestions.txt
+@exec mkdir -p %D/share/doc/gnome-libs/html
 share/idl/name-service.idl
 share/idl/gnome-factory.idl
 share/idl/Table.idl
@@ -191,10 +190,8 @@ share/pixmaps/calculator-font.png
 share/pixmaps/yes.xpm
 share/pixmaps/no.xpm
 share/gtkrc
-@dirrm doc
 @dirrm etc/sound/events
 @dirrm etc/sound
-@dirrm html
 @dirrm include/libgnorba
 @dirrm include/libgnome
 @dirrm include/libgnomeui
@@ -203,6 +200,8 @@ share/gtkrc
 @dirrm include/zvt
 @dirrm lib/gnome-libs/include
 @dirrm lib/gnome-libs
+@dirrm share/doc/gnome-libs/html
+@dirrm share/doc/gnome-libs
 @dirrm share/idl
 @dirrm share/mime-info
 @dirrm share/pixmaps

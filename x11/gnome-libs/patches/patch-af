@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 1998/12/29 17:53:11 tron Exp $
+
+--- tools/gnome-doc/Makefile.in.orig	Wed Dec 16 10:56:38 1998
++++ tools/gnome-doc/Makefile.in	Tue Dec 29 17:56:38 1998
+@@ -139,7 +139,7 @@
+ 
+ EXTRA_DIST = gnome-doc.el gnome-doc mkstub
+ 
+-docdir = $(datadir)/doc
++docdir = $(datadir)/doc/gnome-libs
+ 
+ doc_DATA = $(EXTRA_DIST)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
