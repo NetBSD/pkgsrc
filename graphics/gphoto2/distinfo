@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2002/12/24 16:24:07 wiz Exp $
+$NetBSD: distinfo,v 1.7 2003/09/28 18:59:09 is Exp $
 
-SHA1 (gphoto2-2.1.1.tar.bz2) = 3eb8f4b6816e786e777f613cb90bdd97d2b6140e
-Size (gphoto2-2.1.1.tar.bz2) = 274275 bytes
+SHA1 (gphoto2-2.1.2.tar.bz2) = bc0f7d7a55786ea52e2f189754d1ae04c183817f
+Size (gphoto2-2.1.2.tar.bz2) = 280153 bytes

@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2002/12/24 16:24:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/09/28 18:59:09 is Exp $
 bin/gphoto2
 man/man1/gphoto2.1
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gphoto2.mo
@@ -8,6 +9,7 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gphoto2.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gphoto2.mo
