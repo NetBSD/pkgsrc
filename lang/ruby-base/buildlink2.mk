@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/01/29 09:00:25 kei Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/03/16 19:44:30 jschauma Exp $
 #
 
 .if !defined(RUBY_BASE_BUILDLINK2_MK)
 RUBY_BASE_BUILDLINK2_MK=	# defined
 
-RUBY_MD_LIBDIR=			${MACHINE_GNU_PLATFORM:C/--/-/}
+RUBY_MD_LIBDIR=			${RUBY_ARCH}
 
 BUILDLINK_PACKAGES+=			ruby-base
 BUILDLINK_DEPENDS.ruby-base?=		ruby-base>=1.6.7nb3
