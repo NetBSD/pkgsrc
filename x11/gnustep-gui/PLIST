@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/01/03 04:06:14 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/04/01 08:35:15 rh Exp $
 share/GNUstep/System/Headers/AppKit/AppKit.h
 share/GNUstep/System/Headers/AppKit/AppKitDefines.h
 share/GNUstep/System/Headers/AppKit/AppKitExceptions.h
@@ -10,7 +10,10 @@ share/GNUstep/System/Headers/AppKit/GSFontInfo.h
 share/GNUstep/System/Headers/AppKit/GSFusedSilica.h
 share/GNUstep/System/Headers/AppKit/GSHbox.h
 share/GNUstep/System/Headers/AppKit/GSHelpManagerPanel.h
+share/GNUstep/System/Headers/AppKit/GSHorizontalTypesetter.h
 share/GNUstep/System/Headers/AppKit/GSInfoPanel.h
+share/GNUstep/System/Headers/AppKit/GSLayoutManager.h
+share/GNUstep/System/Headers/AppKit/GSLayoutManager_internal.h
 share/GNUstep/System/Headers/AppKit/GSMemoryPanel.h
 share/GNUstep/System/Headers/AppKit/GSMethodTable.h
 share/GNUstep/System/Headers/AppKit/GSNibTemplates.h
@@ -19,6 +22,7 @@ share/GNUstep/System/Headers/AppKit/GSServicesManager.h
 share/GNUstep/System/Headers/AppKit/GSTable.h
 share/GNUstep/System/Headers/AppKit/GSTextConverter.h
 share/GNUstep/System/Headers/AppKit/GSTrackingRect.h
+share/GNUstep/System/Headers/AppKit/GSTypesetter.h
 share/GNUstep/System/Headers/AppKit/GSVbox.h
 share/GNUstep/System/Headers/AppKit/GSVersion.h
 share/GNUstep/System/Headers/AppKit/IMConnectors.h
@@ -140,11 +144,11 @@ share/GNUstep/System/Headers/AppKit/NSWindow.h
 share/GNUstep/System/Headers/AppKit/NSWindowController.h
 share/GNUstep/System/Headers/AppKit/NSWorkspace.h
 share/GNUstep/System/Headers/AppKit/PSOperators.h
-share/GNUstep/System/Headers/gnustep/AppKit/GMAppKit.h
-share/GNUstep/System/Headers/gnustep/AppKit/GMArchiver.h
-share/GNUstep/System/Headers/gnustep/AppKit/IMConnectors.h
-share/GNUstep/System/Headers/gnustep/AppKit/IMCustomObject.h
-share/GNUstep/System/Headers/gnustep/AppKit/IMLoading.h
+share/GNUstep/System/Headers/gnustep/gui/GMAppKit.h
+share/GNUstep/System/Headers/gnustep/gui/GMArchiver.h
+share/GNUstep/System/Headers/gnustep/gui/IMConnectors.h
+share/GNUstep/System/Headers/gnustep/gui/IMCustomObject.h
+share/GNUstep/System/Headers/gnustep/gui/IMLoading.h
 share/GNUstep/System/Libraries/Resources/English.lproj/GSPageLayout.gorm
 share/GNUstep/System/Libraries/Resources/English.lproj/GSPrintPanel.gorm
 share/GNUstep/System/Libraries/Resources/Images/GNUstep.tiff
@@ -545,8 +549,10 @@ share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/g
 share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/libgnustep-gui.so.${PKGVERSION}
 share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/RTFConverter
+share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/stamp.make
 share/GNUstep/System/Library/Bundles/libgmodel.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/libgmodel.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/libgmodel
+share/GNUstep/System/Library/Bundles/libgmodel.bundle/stamp.make
 share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/English.lproj/StandardPicker.strings
 share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/French.lproj/StandardPicker.strings
 share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/GSCMYKColorPicker.tiff
@@ -556,9 +562,11 @@ share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/GSRGBC
 share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/Swedish.lproj/StandardPicker.strings
 share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/StandardPicker
+share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/stamp.make
 share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle/Resources/GSWheelColorPicker.tiff
 share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/WheelPicker
+share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle/stamp.make
 share/GNUstep/System/Library/Model/ColorPanel.gmodel
 share/GNUstep/System/Library/Model/SavePanel.gmodel
 share/GNUstep/System/Library/Model/SpellPanel.gmodel
@@ -567,8 +575,8 @@ share/GNUstep/System/Library/Services/GSspell.service/${GNUSTEP_HOST_CPU}/${LOWE
 share/GNUstep/System/Library/Services/example.service/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Services/example.service/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/example
 share/GNUstep/System/Makefiles/Additional/gui.make
+share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/gnustep_sndd
 share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/gopen
-share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/gsnd
 share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/make_services
 share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/set_show_service
 @dirrm share/GNUstep/System/Library/Services/example.service/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
@@ -620,5 +628,5 @@ share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-g
 @dirrm share/GNUstep/System/Libraries/Resources/PrinterTypes
 @dirrm share/GNUstep/System/Libraries/Resources/KeyBindings
 @dirrm share/GNUstep/System/Libraries/Resources/Images
-@dirrm share/GNUstep/System/Headers/gnustep/AppKit
+@dirrm share/GNUstep/System/Headers/gnustep/gui
 @dirrm share/GNUstep/System/Headers/AppKit
