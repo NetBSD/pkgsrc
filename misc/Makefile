@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.12 1997/12/29 03:46:31 hubertf Exp $
+#	$NetBSD: Makefile,v 1.13 1998/02/17 19:35:57 tron Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += amanda
@@ -17,7 +17,7 @@
     SUBDIR += figlet
     SUBDIR += git
     SUBDIR += gnuls
-#   SUBDIR += ical		# broken w/ tcl/tk V8.0 - HF
+    SUBDIR += ical
     SUBDIR += jive
     SUBDIR += kdeutils
     SUBDIR += kp
