@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2003/02/15 13:30:50 jmmv Exp $
+$NetBSD: patch-ae,v 1.2 2004/04/01 18:22:04 jmmv Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=106117
 
 --- libgnome/gnome-config.c.orig	2002-07-12 14:44:10.000000000 +0200
 +++ libgnome/gnome-config.c

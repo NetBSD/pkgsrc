@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/12/14 19:48:04 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/04/01 18:22:04 jmmv Exp $
 bin/gnome-open
 include/libgnome-2.0/libgnome/gnome-config.h
 include/libgnome-2.0/libgnome/gnome-exec.h
@@ -22,8 +22,8 @@ lib/bonobo/servers/GNOME_Moniker_std.server
 lib/libgnome-2.a
 lib/libgnome-2.la
 lib/libgnome-2.so
-lib/libgnome-2.so.400
-lib/libgnome-2.so.400.0
+lib/libgnome-2.so.600
+lib/libgnome-2.so.600.0
 lib/pkgconfig/libgnome-2.0.pc
 share/doc/html/libgnome/ch01s02.html
 share/doc/html/libgnome/ch01s03.html
@@ -61,12 +61,12 @@ share/gconf/schemas/desktop_gnome_applications_window_manager.schemas
 share/gconf/schemas/desktop_gnome_background.schemas
 share/gconf/schemas/desktop_gnome_file_views.schemas
 share/gconf/schemas/desktop_gnome_interface.schemas
+share/gconf/schemas/desktop_gnome_lockdown.schemas
 share/gconf/schemas/desktop_gnome_peripherals_keyboard.schemas
 share/gconf/schemas/desktop_gnome_peripherals_mouse.schemas
 share/gconf/schemas/desktop_gnome_sound.schemas
 share/gconf/schemas/desktop_gnome_thumbnailers.schemas
 share/gconf/schemas/desktop_gnome_typing_break.schemas
-share/gconf/schemas/desktop_gnome_url_handlers.schemas
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/libgnome-2.0.mo
@@ -80,6 +80,7 @@ ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/libgnome-2.0.mo
@@ -91,6 +92,7 @@ ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/libgnome-2.0.mo
@@ -116,6 +118,7 @@ ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/libgnome-2.0.mo
+${PKGLOCALEDIR}/locale/sr@ije/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/libgnome-2.0.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/libgnome-2.0.mo

@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2003/12/14 19:48:04 jmmv Exp $
+$NetBSD: patch-aa,v 1.6 2004/04/01 18:22:04 jmmv Exp $
 
---- gnome-data/Makefile.in.orig	2003-10-26 01:53:29.000000000 +0000
-+++ gnome-data/Makefile.in	2003-10-26 01:53:42.000000000 +0000
-@@ -141,7 +141,7 @@
- cxxflags_set = @cxxflags_set@
+--- gnome-data/Makefile.in.orig	2004-03-09 20:18:25.000000000 +0100
++++ gnome-data/Makefile.in
+@@ -146,7 +146,7 @@ WARN_CXXFLAGS = @WARN_CXXFLAGS@
+ YACC = @YACC@
  gnomelocaledir = @gnomelocaledir@
  
 -soundlistdir = $(sysconfdir)/sound/events
 +soundlistdir = $(datadir)/examples/libgnome/sound/events
  
- soundlist_in_files =  	gnome-2.soundlist.in			gtk-events-2.soundlist.in
- 
+ soundlist_in_files = \
+ 	gnome-2.soundlist.in		\
