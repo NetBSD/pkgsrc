@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/05/30 18:52:59 tron Exp $
+# $NetBSD: Makefile,v 1.7 1999/06/13 20:27:49 kleink Exp $
 
 DISTNAME=	postfix-19990317-pl05
 PKGNAME=	postfix-19990317p05
@@ -28,7 +28,7 @@ post-build:
 pre-install:
 	${MKDIR} /etc/postfix ${PREFIX}/share/postfix \
 	  ${PREFIX}/share/doc/postfix ${PREFIX}/libexec/postfix
-	chown root.wheel ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
+	chown root:wheel ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 	chmod 755 ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 
 post-install:
