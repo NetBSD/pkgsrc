@@ -3,14 +3,15 @@
 # Date created:         Tue Feb  7 12:02:49  1995
 # Whom:                 hsu
 #
-# $NetBSD: Makefile,v 1.4 1997/11/03 00:47:57 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1997/12/17 08:06:43 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.19 1997/09/30 19:21:40 max Exp
 #
 
 DISTNAME=       MesaLib-2.4
 PKGNAME=	Mesa-2.4
 CATEGORIES=	graphics
-MASTER_SITES= 	ftp://iris.ssec.wisc.edu/pub/Mesa/
+MASTER_SITES= 	ftp://iris.ssec.wisc.edu/pub/Mesa/ \
+		ftp://iris.ssec.wisc.edu/pub/Mesa/old-versions/
 DISTFILES=	MesaLib-${SHLIB_VERSION}${EXTRACT_SUFX} \
 		MesaDemos-${SHLIB_VERSION}${EXTRACT_SUFX}
 
