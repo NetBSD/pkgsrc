@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/09/19 19:21:38 kei Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/08 10:02:36 wiz Exp $
 #
 
-DISTNAME=	xpdf-chinese-simplified
-PKGNAME=	${DISTNAME}-20020521
+DISTNAME=	xpdf-chinese-simplified-2002-jun-17
+PKGNAME=	xpdf-chinese-simplified-20020617
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 
@@ -14,8 +14,7 @@ DEPENDS+=	xpdf>=1.00:../../print/xpdf
 
 USE_X11BASE=	yes
 
-DIST_SUBDIR=	${PKGNAME}
-WRKSRC=		${WRKDIR}/${DISTNAME}
+WRKSRC=		${WRKDIR}/xpdf-chinese-simplified
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
@@ -28,6 +27,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/Adobe-GB1.cidToUnicode \
 		${X11PREFIX}/share/xpdf/chinese-simplified
 	${INSTALL_DATA} ${WRKSRC}/EUC-CN.unicodeMap \
+		${X11PREFIX}/share/xpdf/chinese-simplified
+	${INSTALL_DATA} ${WRKSRC}/GBK.unicodeMap \
 		${X11PREFIX}/share/xpdf/chinese-simplified
 	${INSTALL_DATA} ${WRKSRC}/ISO-2022-CN.unicodeMap \
 		${X11PREFIX}/share/xpdf/chinese-simplified
