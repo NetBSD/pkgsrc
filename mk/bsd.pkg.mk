@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.973 2002/05/07 17:50:38 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.974 2002/05/08 11:33:49 drochner Exp $
 #
 # This file is in the public domain.
 #
@@ -797,9 +797,10 @@ MASTER_SITE_GNOME+=	\
 	ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/
 
 MASTER_SITE_SOURCEFORGE+=	\
+	http://belnet.dl.sourceforge.net/sourceforge/ \
+	http://unc.dl.sourceforge.net/sourceforge/ \
+	http://telia.dl.sourceforge.net/sourceforge/ \
 	ftp://ftp3.sourceforge.net/pub/sourceforge/ \
-	http://ftp2.sourceforge.net/ \
-	http://ftp1.sourceforge.net/ \
 	ftp://ftp.tuwien.ac.at/opsys/linux/sourceforge/
 
 # The primary backup site.
