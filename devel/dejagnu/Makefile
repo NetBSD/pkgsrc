@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:30:14 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/31 00:27:36 kristerw Exp $
 #
 
-DISTNAME=	dejagnu-1.4.3
-PKGREVISION=	2
+DISTNAME=	dejagnu-1.4.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=dejagnu/}
 
