@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/15 08:13:20 salo Exp $
+
+--- Makefile.in.orig	Thu Apr 25 16:02:56 2002
++++ Makefile.in	Sat Feb 15 08:41:09 2003
+@@ -68,14 +68,14 @@
+ #
+ 
+ comptime.h:
+-	echo \#define COMPILE_TIME \"`date '+%Y %b %e %T %Z'`\" > comptime.h
++	${ECHO} \#define COMPILE_TIME \"`${DATE} '+%Y %b %e %T %Z'`\" > comptime.h
+ 
+ #
+ # Libraries
+ #
+ 
+ liboshw.a: oshw.h defs.h gen.h state.h err.h oshw/*.c oshw/*.h
+-	(cd oshw && make)
++	(cd oshw && ${MAKE})
+ 
+ #
+ # Resources
+@@ -89,17 +89,15 @@
+ #
+ 
+ install: tworld
+-	cp -i ./tworld $(bindir)/.
+-	mkdir -p $(sharedir)/sets
+-	mkdir -p $(sharedir)/data
+-	mkdir -p $(sharedir)/res
+-	mkdir -p $(mandir)/man6
+-	cp -i sets/*.dac $(sharedir)/sets/.
+-	cp -i data/*.dat $(sharedir)/data/.
+-	cp -i resources/rc $(sharedir)/res/.
+-	cp -i resources/*.bmp $(sharedir)/res/.
+-	cp -i resources/*.wav $(sharedir)/res/.
+-	cp -i docs/tworld.6 $(mandir)/man6/.
++	${BSD_INSTALL_PROGRAM} tworld $(bindir)/
++	${BSD_INSTALL_DATA_DIR} $(sharedir)/sets
++	${BSD_INSTALL_DATA_DIR} $(sharedir)/data
++	${BSD_INSTALL_DATA_DIR} $(sharedir)/res
++	${BSD_INSTALL_DATA} sets/*.dac $(sharedir)/sets/
++	${BSD_INSTALL_DATA} data/*.dat $(sharedir)/data/
++	${BSD_INSTALL_DATA} resources/rc resources/*.bmp \
++			resources/*.wav $(sharedir)/res/
++	${BSD_INSTALL_MAN} docs/tworld.6 $(mandir)/man6/
+ 
+ clean:
+ 	rm -f $(OBJS) tworld mklynxcc comptime.h config.*
