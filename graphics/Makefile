@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.324 2004/07/05 18:21:13 wiz Exp $
+# $NetBSD: Makefile,v 1.325 2004/07/06 21:03:27 drochner Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -145,6 +145,7 @@ SUBDIR+=	libggigcp
 SUBDIR+=	libggiwmh
 SUBDIR+=	libgii
 SUBDIR+=	libgnomecanvas
+SUBDIR+=	libgnomecanvasmm20
 SUBDIR+=	libgnomecanvasmm26
 SUBDIR+=	libpixman
 SUBDIR+=	librsvg
