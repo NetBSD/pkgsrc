@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8053 2004/11/27 07:46:58 reed Exp $
+$NetBSD: CHANGES,v 1.8054 2004/11/27 09:06:21 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5489,3 +5489,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated openslp to 1.2.0 [jlam 2004-11-27]
 	Updated jamjar to 0.7.1 [skrll 2004-11-27]
 	Updated ripmime to 1.4.0.2 [reed 2004-11-27]
+	Updated pwgen to 2.03 [jdolecek 2004-11-27]
