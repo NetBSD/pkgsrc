@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2004/03/12 05:25:41 snj Exp $
+$NetBSD: patch-aa,v 1.1 2004/06/26 18:10:20 grant Exp $
 
 --- configure.orig	2004-03-11 21:16:37.000000000 -0800
 +++ configure	2004-03-11 21:17:54.000000000 -0800
