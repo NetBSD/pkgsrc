@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/29 00:30:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/06 20:40:30 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-clients-${XF_VER}
@@ -31,6 +31,12 @@ post-configure:
 
 post-install:
 	@${CHMOD} a+r ${X11ROOT}/bin/xterm
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+.  include "../../security/PAM/buildlink3.mk"
+.endif
 
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
