@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 1998/10/28 01:29:16 hubertf Exp $
+
+--- doscmd.h.BAK	Wed Oct 28 01:48:56 1998
++++ doscmd.h	Wed Oct 28 01:49:02 1998
+@@ -58,7 +58,7 @@
+ 
+ #define	MAX_AVAIL_SEG 0xa000
+ char *dosmem;
+-char cmdname[];
++char cmdname[256];
+ int dosmem_size;
+ 
+ int pspseg;                                     /* segment # of PSP */
