@@ -1,11 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2004/12/23 11:44:49 shannonjr Exp $
+# $NetBSD: Makefile,v 1.7 2005/01/04 13:52:01 shannonjr Exp $
 #
 
 DISTNAME=		gnupg-1.9.14
 PKGNAME=		${DISTNAME:S/gnupg/gnupg-devel/}
-#PKGREVISION=		1
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=		pth-2.0.0.tar.gz
+SITES_pth-2.0.0.tar.gz=	${MASTER_SITE_GNU:=pth/}
 
 MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/
@@ -21,6 +24,7 @@ USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--with-static-rnd=auto
 CONFIGURE_ARGS+=	--without-included-gettext
+CONFIGURE_ARGS+=	--with-pth-prefix=${WRKDIR}/pth
 
 TEST_TARGET=		check
 
@@ -43,11 +47,10 @@ PLIST_SRC+=	${.CURDIR}/PLIST.gpgsm
 .  include "../../security/dirmngr/buildlink3.mk"
 .endif
 
-# This package will only build with pth
-.include "../../mk/pthread.buildlink3.mk"
-.if ${PTHREAD_TYPE} == "native"
-CONFIGURE_ARGS+=	--disable-threads
-.endif
+# We are building a static pth library and linking against it
+# While this is not very satisfying, gpgme hangs in it's gpgsm tests if we depend on the shared (pkgsrc) pth library
+pre-configure:
+	cd  ${WRKDIR}/pth-2.0.0 && ./configure --prefix=${WRKDIR}/pth --enable-pthread --enable-static --disable-shared && ${MAKE} install
 
 BUILDLINK_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
 
