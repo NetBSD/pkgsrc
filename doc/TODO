@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2227 2004/10/18 19:16:23 adrianp Exp $
+$NetBSD: TODO,v 1.2228 2004/10/19 11:31:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -200,6 +200,7 @@ Suggested package updates
 	o bitchx-1.1
 	o bitlbee-0.91
 	o blender-2.34
+	o bogofilter-0.92.6
 	o boson-0.10
 	o cdrtools-2.01
 	o celestia-1.3.2
@@ -221,6 +222,7 @@ Suggested package updates
 	o crossfire-1.5.0
 	o cscope-15.5
 	o cups-1.1.21
+	o curl-7.12.2
 	o cvs2cl-2.55
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
@@ -237,6 +239,7 @@ Suggested package updates
 	o dovecot-0.99.11
 	o doxygen-1.3.9.1
 	o drscheme-208
+	o dspam-3.2
 	o dvipng-1.2 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
@@ -308,12 +311,15 @@ Suggested package updates
 	o lavaps-2.5
 	o lbreakout-2.5.1
 	o leafnode-1.10.6
+	o libcddb-0.9.6
 	o libidn-0.5.8
 	o libmpeg3-1.5.4
 	o libnet-1.1.2.1
 	o libnids-1.19
 	o libole2-2.2.8
 	o libsigc++-2.0.3
+	o libtiff-3.7.0
+	o libxklavier-1.10 [breaks gnome-2.8]
 	o libxml-2.6.14
 	o libxslt-1.1.11
 	o licq-1.2.7
@@ -328,6 +334,7 @@ Suggested package updates
 	o maketool-0.8.4
 	o maradns-1.0.23
 	o marbles-1.0.6
+	o mathomatic-11.4c
 	o micq-0.4.11
 	o midnight-commander-4.6.0 [pkgsrc-wip]
 	o mimedefang-2.45
@@ -342,7 +349,7 @@ Suggested package updates
 	o mpi-ch-1.2.6 [pkg/27273]
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
-	o multitail-3.2.2
+	o multitail-3.4.0
 	o mummer-3.15
 	o mysql-4.0.21
 	o namazu-2.0.13
@@ -399,6 +406,7 @@ Suggested package updates
 	o rrdtool-1.0.49 [pkg/26353]
 	o ruby-1.8.1 [taca]
 	o sablecc-2.18.1
+	o sane-frontends-1.0.13
 	o sawfish-1.3
 	o scm-5d9
 	o scmxx-0.7.4
@@ -419,7 +427,9 @@ Suggested package updates
 	o sqlite-3.0.7
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
+	o stellarium-0.6.1
 	o streamtuner-0.12.5
+	o svk-0.23
 	o sweep-0.8.3
 	o sylpheed-0.9.99
 	o tcl-expect-5.39.0
@@ -475,9 +485,10 @@ Suggested package updates
 	o xmms-iris-0.12
 	o xmmsctrl-0.8
 	o xpad-1.13.1
-	o xpaint-2.7.1
+	o xpaint-2.7.2
 	o xps-4.2
 	o xpuyopuyo-0.9.5
+	o xsane-0.96
 	o xskat-4.0
 	o xzgv-0.8
 	o yacas-1.0.55
