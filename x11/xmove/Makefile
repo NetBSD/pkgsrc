@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/06/22 13:21:06 agc Exp $
+# $NetBSD: Makefile,v 1.5 2000/07/10 10:40:43 agc Exp $
 #
 
 DISTNAME=	xmove.2.0beta2
@@ -10,10 +10,10 @@ MAINTAINER=	packages@netbsd.org
 
 WRKSRC=		${WRKDIR}/xmove
 USE_IMAKE=	yes
-XMOVEDOCDIR=	${X11BASE}/share/doc/xmove
+XMOVEDOCDIR=	${X11PREFIX}/share/doc/xmove
 
 pre-configure:
-	@${SED} -e 's|@x11base@|'${X11BASE}'|' < ${WRKSRC}/xmove/Imakefile > ${WRKSRC}/xmove/Imakefile.new && \
+	@${SED} -e 's|@x11base@|'${X11PREFIX}'|' < ${WRKSRC}/xmove/Imakefile > ${WRKSRC}/xmove/Imakefile.new && \
 		${MV} ${WRKSRC}/xmove/Imakefile.new ${WRKSRC}/xmove/Imakefile
 	${CP} ${WRKSRC}/man/man1/xmove.1 ${WRKSRC}/xmove/xmove.man
 	${CP} ${WRKSRC}/man/man1/xmovectrl.1 ${WRKSRC}/xmovectrl/xmovectrl.man

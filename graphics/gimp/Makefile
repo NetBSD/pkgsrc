@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2000/06/30 10:04:47 agc Exp $
+# $NetBSD: Makefile,v 1.53 2000/07/10 10:40:41 agc Exp $
 
 DISTNAME=		gimp-1.0.4
 CATEGORIES=		graphics
@@ -28,7 +28,7 @@ USE_X11BASE=		yes
 USE_GMAKE=		yes
 USE_PKGLIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-gtk-prefix=${X11PREFIX}
+CONFIGURE_ARGS+=	--with-gtk-prefix="`${PKG_INFO} -qp gtk+ | ${AWK} '{print $$2}'`"
 CONFIGURE_ENV=		CPPFLAGS="${CPPFLAGS}"
 
 INFO_FILES=		pdb.info
