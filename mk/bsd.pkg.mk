@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1037 2002/08/27 17:35:02 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1038 2002/08/28 11:06:17 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -313,15 +313,11 @@ MAKE_ENV+=	FC="${FC}"
 # Automatically increase process limit where necessary for building.
 _ULIMIT_CMD=
 .if defined(UNLIMIT_RESOURCES)
-.  if ${UNLIMIT_RESOURCES:Mdatasize} != ""
-_ULIMIT_CMD+=	ulimit -d `ulimit -H -d`;
-.  endif
-.  if ${UNLIMIT_RESOURCES:Mstacksize} != ""
-_ULIMIT_CMD+=	ulimit -s `ulimit -H -s`;
-.  endif
-.  if ${UNLIMIT_RESOURCES:Mmemorysize} != ""
-_ULIMIT_CMD+=	ulimit -m `ulimit -H -m`;
-.  endif
+.  for __tmp__ in ${UNLIMIT_RESOURCES}
+.    if defined(ULIMIT_CMD_${__tmp__})
+_ULIMIT_CMD+=	${ULIMIT_CMD_${__tmp__}} ;
+.    endif
+.  endfor
 .endif
 
 # -lintl in CONFIGURE_ENV is to workaround broken gettext.m4

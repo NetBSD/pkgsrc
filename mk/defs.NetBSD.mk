@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.26 2002/07/15 16:24:01 schmonz Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.27 2002/08/28 11:06:19 seb Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -75,6 +75,9 @@ PKG_TOOLS_BIN?=		/usr/sbin
 ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
 ROOT_GROUP?=	wheel
+ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
+ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
+ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
 _DO_LIBINTL_CHECKS=	yes	# perform checks for valid libintl
 _DO_SHLIB_CHECKS=	yes	# fixup PLIST for shared libs/run ldconfig
