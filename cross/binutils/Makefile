@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/01/06 21:43:34 tv Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/07 01:07:41 tv Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -18,10 +18,10 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-64-bit-bfd \
 			--enable-targets=${ENABLE_TARGETS_LIST} \
-			--target=powerpc-eabi
+			--target=i386-linux
 # --target above ensures that --host is not included as default
 MAKE_ARGS+=		CFLAGS="${CFLAGS}"
-ALL_TARGET=		all-binutils all-gprof all-ld
+ALL_TARGET=		all-binutils all-ld
 
 BINDIR=			${PREFIX}/libexec/binutils
 
@@ -43,7 +43,6 @@ do-install:
 	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/addr2line ${BINDIR}
 	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/ar ${BINDIR}
 	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/dlltool ${BINDIR}
-	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/gprof/gprof ${BINDIR}
 	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/ld/ld-new ${BINDIR}/ld
 	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nlmconv ${BINDIR}
 	@${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/binutils/nm-new ${BINDIR}/nm
