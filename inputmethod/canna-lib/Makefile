@@ -1,29 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2002/12/27 08:41:24 uebayasi Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/31 08:28:34 uebayasi Exp $
 #
+.include "../canna/Makefile.common"
 
-DISTNAME=	Canna36p1
-PKGNAME=	Canna-lib-3.6.1
-CATEGORIES=	japanese inputmethod
-MASTER_SITES=	http://downloads.sourceforge.jp/canna/1722/
-
-MAINTAINER=	tech-pkg-ja@jp.netbsd.org
-HOMEPAGE=	http://canna.sourceforge.jp/
-COMMENT=	Kana-Kanji conversion system (library)
+CANNA_MODULE=	lib
 
 INSTALL_TARGET=	install install.man
-
-BUILD_DEFS+=	USE_INET6
-
-.include "../../mk/bsd.prefs.mk"
-.if 0	# defined(USE_INET6) && ${USE_INET6} == "YES"
-INET6=		-DINET6
-.else
-INET6=		# empty
-.endif
-CANNAOWNER?=    daemon
-CANNAGROUP?=    daemon
-MAKE_ENV+=      CANNAOWNER=${CANNAOWNER} CANNAGROUP=${CANNAGROUP} \
-		INET6=${INET6}
 
 # (1) Change SUBDIRS.
 # (2) Don't install `forcpp', `kpdic'.
@@ -46,5 +27,4 @@ do-configure:
 post-configure:
 	@${LN} -s ${WRKSRC}/server/*.h ${WRKSRC}/include
 
-.include "../../devel/nbitools/nbitools.mk"
-.include "../../mk/bsd.pkg.mk"
+.include "../canna/Makefile.include"
