@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/07/14 10:03:54 wiz Exp $
+
+SHA1 (kanjipad-1.2.1.tar.gz) = 8ddc4222386feeb184dae4c57dc7ec3e922adfbc
+Size (kanjipad-1.2.1.tar.gz) = 74287 bytes
+SHA1 (patch-aa) = f44c13036bc990915e50cc1a288bacb09126a570

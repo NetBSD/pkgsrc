@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/14 10:03:54 wiz Exp $
+bin/kanjipad
+bin/kpengine
+share/kanjipad/jdata.dat
+@dirrm share/kanjipad
