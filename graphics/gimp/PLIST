@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2005/01/10 15:32:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2005/02/23 14:16:15 adam Exp $
 bin/gimp
 bin/gimp-2.2
 bin/gimp-remote
@@ -92,8 +92,8 @@ include/gimp-2.0/libgimp/gimpunit_pdb.h
 include/gimp-2.0/libgimpbase/gimpbase.h
 include/gimp-2.0/libgimpbase/gimpbaseenums.h
 include/gimp-2.0/libgimpbase/gimpbasetypes.h
-include/gimp-2.0/libgimpbase/gimpdatafiles.h
 include/gimp-2.0/libgimpbase/gimpchecks.h
+include/gimp-2.0/libgimpbase/gimpdatafiles.h
 include/gimp-2.0/libgimpbase/gimpenv.h
 include/gimp-2.0/libgimpbase/gimplimits.h
 include/gimp-2.0/libgimpbase/gimpmemsize.h
@@ -126,9 +126,9 @@ include/gimp-2.0/libgimpthumb/gimpthumb-utils.h
 include/gimp-2.0/libgimpthumb/gimpthumb.h
 include/gimp-2.0/libgimpthumb/gimpthumbnail.h
 include/gimp-2.0/libgimpwidgets/gimpbutton.h
-include/gimp-2.0/libgimpwidgets/gimpchainbutton.h
 include/gimp-2.0/libgimpwidgets/gimpcellrenderercolor.h
 include/gimp-2.0/libgimpwidgets/gimpcellrenderertoggle.h
+include/gimp-2.0/libgimpwidgets/gimpchainbutton.h
 include/gimp-2.0/libgimpwidgets/gimpcolorarea.h
 include/gimp-2.0/libgimpwidgets/gimpcolorbutton.h
 include/gimp-2.0/libgimpwidgets/gimpcolordisplay.h
@@ -151,10 +151,10 @@ include/gimp-2.0/libgimpwidgets/gimpmemsizeentry.h
 include/gimp-2.0/libgimpwidgets/gimpoffsetarea.h
 include/gimp-2.0/libgimpwidgets/gimpoldwidgets.h
 include/gimp-2.0/libgimpwidgets/gimppatheditor.h
-include/gimp-2.0/libgimpwidgets/gimppreview.h
-include/gimp-2.0/libgimpwidgets/gimppreviewarea.h
 include/gimp-2.0/libgimpwidgets/gimppickbutton.h
 include/gimp-2.0/libgimpwidgets/gimppixmap.h
+include/gimp-2.0/libgimpwidgets/gimppreview.h
+include/gimp-2.0/libgimpwidgets/gimppreviewarea.h
 include/gimp-2.0/libgimpwidgets/gimpquerybox.h
 include/gimp-2.0/libgimpwidgets/gimpscrolledpreview.h
 include/gimp-2.0/libgimpwidgets/gimpsizeentry.h
@@ -189,8 +189,8 @@ lib/gimp/2.0/plug-ins/blur
 lib/gimp/2.0/plug-ins/bmp
 lib/gimp/2.0/plug-ins/borderaverage
 lib/gimp/2.0/plug-ins/bumpmap
-lib/gimp/2.0/plug-ins/cartoon
 lib/gimp/2.0/plug-ins/c_astretch
+lib/gimp/2.0/plug-ins/cartoon
 lib/gimp/2.0/plug-ins/ccanalyze
 lib/gimp/2.0/plug-ins/channel_mixer
 lib/gimp/2.0/plug-ins/checkerboard
@@ -402,8 +402,8 @@ share/doc/html/${PKGNAME}/libgimp/libgimp-gimpmenu.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpmessage.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimppalette.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimppalettemenu.html
-share/doc/html/${PKGNAME}/libgimp/libgimp-gimppaletteselect.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimppalettes.html
+share/doc/html/${PKGNAME}/libgimp/libgimp-gimppaletteselect.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimppaths.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimppattern.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimppatternmenu.html
@@ -426,9 +426,10 @@ share/doc/html/${PKGNAME}/libgimp/libgimp-image.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-selectors.html
 share/doc/html/${PKGNAME}/libgimp/libgimp.devhelp
 share/doc/html/${PKGNAME}/libgimp/libgimp.html
-share/doc/html/${PKGNAME}/libgimp/libgimpui.html
 share/doc/html/${PKGNAME}/libgimp/libgimpui-hierarchy.html
+share/doc/html/${PKGNAME}/libgimp/libgimpui.html
 share/doc/html/${PKGNAME}/libgimp/right.png
+share/doc/html/${PKGNAME}/libgimp/style.css
 share/doc/html/${PKGNAME}/libgimp/up.png
 share/doc/html/${PKGNAME}/libgimpbase/home.png
 share/doc/html/${PKGNAME}/libgimpbase/index.html
@@ -452,6 +453,7 @@ share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpwire.html
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase.devhelp
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase.html
 share/doc/html/${PKGNAME}/libgimpbase/right.png
+share/doc/html/${PKGNAME}/libgimpbase/style.css
 share/doc/html/${PKGNAME}/libgimpbase/up.png
 share/doc/html/${PKGNAME}/libgimpcolor/home.png
 share/doc/html/${PKGNAME}/libgimpcolor/index.html
@@ -500,6 +502,7 @@ share/doc/html/${PKGNAME}/libgimpthumb/libgimpthumb-gimpthumb-utils.html
 share/doc/html/${PKGNAME}/libgimpthumb/libgimpthumb.devhelp
 share/doc/html/${PKGNAME}/libgimpthumb/libgimpthumb.html
 share/doc/html/${PKGNAME}/libgimpthumb/right.png
+share/doc/html/${PKGNAME}/libgimpthumb/style.css
 share/doc/html/${PKGNAME}/libgimpthumb/up.png
 share/doc/html/${PKGNAME}/libgimpwidgets/GimpButton.html
 share/doc/html/${PKGNAME}/libgimpwidgets/GimpCellRendererColor.html
@@ -1326,7 +1329,6 @@ share/gimp/2.0/scripts/starscape-logo.scm
 share/gimp/2.0/scripts/swirltile.scm
 share/gimp/2.0/scripts/swirly-pattern.scm
 share/gimp/2.0/scripts/t-o-p-logo.scm
-share/gimp/2.0/scripts/test-sphere.scm
 share/gimp/2.0/scripts/text-circle.scm
 share/gimp/2.0/scripts/textured-logo.scm
 share/gimp/2.0/scripts/tileblur.scm
@@ -1643,6 +1645,10 @@ share/gimp/2.0/themes/Default/images/stock-wilber-eek-64.png
 share/gimp/2.0/themes/Default/images/stock-zoom-follow-window-12.png
 share/gimp/2.0/themes/Small/gtkrc
 share/gimp/2.0/tips/gimp-tips.xml
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gimp20-libgimp.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gimp20-script-fu.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gimp20-std-plug-ins.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gimp20.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gimp20-libgimp.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gimp20-script-fu.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gimp20-std-plug-ins.mo
