@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2004/06/10 11:54:15 markd Exp $
+# $NetBSD: Makefile,v 1.22 2004/08/21 12:38:32 markd Exp $
 
-DISTNAME=	kdelibs-3.2.3
-PKGNAME=	kdelibdocs-3.2.3
+DISTNAME=	kdelibs-3.3.0
+PKGNAME=	kdelibdocs-3.3.0
 CATEGORIES=	x11 devel
 
 COMMENT=	KDE library documentation
@@ -20,7 +20,7 @@ UNLIMIT_RESOURCES+=	datasize
 
 post-install:
 	cd ${WRKSRC};							\
-	DOCDIRS="arts dcop interfaces kabc kate kdecore kdefx kdeprint kdeui khtml kio kjs kmdi kparts kresources kutils kwallet libkmid"; \
+	DOCDIRS="arts dcop interfaces kabc kate kdecore kdefx kdeprint kdeui khtml kio kjs kmdi knewstuff kparts kresources kutils kwallet libkmid"; \
 	for d in $${DOCDIRS}; do					\
 		(cd $${d}; ${GMAKE} install-apidox);			\
 	done
