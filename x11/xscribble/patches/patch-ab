@@ -1,0 +1,7 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/01 19:35:09 itojun Exp $
+
+--- Imakefile-	Thu Nov  2 04:26:45 2000
++++ Imakefile	Thu Nov  2 04:26:52 2000
+@@ -19 +19,2 @@
+ 
++xscribble.man::
