@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.493 2002/11/09 13:40:20 wiz Exp $
+$NetBSD: CHANGES,v 1.494 2002/11/09 15:24:24 is Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3569,3 +3569,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added gtoolkit-0.9.5 [rh 2002-11-09]
 	Added gtoolkit-examples-0.9.5 [rh 2002-11-09]
 	Updated reed to 5.4 [wiz 2002-11-09]
+	Updated pvm to 3.4.4 [is 2002-11-09]
