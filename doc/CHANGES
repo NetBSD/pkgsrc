@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2691 2003/07/06 16:13:54 uebayasi Exp $
+$NetBSD: CHANGES,v 1.2692 2003/07/06 20:42:12 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2689,3 +2689,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added ruby-installpkg-0.0.1 [taca 2003-07-06]
 	Added ruby-borges-0.2.0 [taca 2003-07-06]
 	Updated emacs to 21.3nb2 [uebayasi 2003-07-06]
+	Updated rc.subr to 20030706 [grant 2003-07-06]
