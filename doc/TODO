@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.850 2003/09/11 18:12:00 jmmv Exp $
+$NetBSD: TODO,v 1.851 2003/09/12 07:08:44 itojun Exp $
 
 Suggested new packages
 ======================
@@ -197,6 +197,7 @@ Suggested package updates
 	o neon-0.24.1
 	o net-snmp-5.0.7 [pkg/19939]
 	o net-snmp-5.0.8
+	o net-snmp-5.0.9
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
 	o ngrep-1.41
