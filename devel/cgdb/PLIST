@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/19 18:12:27 xtraeme Exp $
+bin/cgdb
+share/doc/cgdb/README
+@dirrm share/doc/cgdb
