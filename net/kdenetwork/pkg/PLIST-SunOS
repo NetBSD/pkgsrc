@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-SunOS,v 1.1 1999/12/06 20:44:58 bouyer Exp $
+@comment $NetBSD: PLIST-SunOS,v 1.2 2000/03/23 11:58:32 agc Exp $
 bin/dsirc
 bin/karchie
 bin/kbiff
@@ -321,7 +321,6 @@ share/kde/locale/br/LC_MESSAGES/kmail.mo
 share/kde/locale/br/LC_MESSAGES/knu.mo
 share/kde/locale/br/LC_MESSAGES/korn.mo
 share/kde/locale/br/LC_MESSAGES/krn.mo
-share/kde/locale/br/LC_MESSAGES/ksirc.mo
 share/kde/locale/br/LC_MESSAGES/ktalkd.mo
 share/kde/locale/ca/LC_MESSAGES/kcmktalkd.mo
 share/kde/locale/ca/LC_MESSAGES/kfinger.mo
@@ -337,7 +336,6 @@ share/kde/locale/cs/LC_MESSAGES/kmail.mo
 share/kde/locale/cs/LC_MESSAGES/knu.mo
 share/kde/locale/cs/LC_MESSAGES/korn.mo
 share/kde/locale/cs/LC_MESSAGES/krn.mo
-share/kde/locale/cs/LC_MESSAGES/ksirc.mo
 share/kde/locale/cs/LC_MESSAGES/ktalkd.mo
 share/kde/locale/da/LC_MESSAGES/karchie.mo
 share/kde/locale/da/LC_MESSAGES/kbiff.mo
@@ -347,7 +345,6 @@ share/kde/locale/da/LC_MESSAGES/kmail.mo
 share/kde/locale/da/LC_MESSAGES/knu.mo
 share/kde/locale/da/LC_MESSAGES/korn.mo
 share/kde/locale/da/LC_MESSAGES/krn.mo
-share/kde/locale/da/LC_MESSAGES/ksirc.mo
 share/kde/locale/da/LC_MESSAGES/ktalkd.mo
 share/kde/locale/de/LC_MESSAGES/karchie.mo
 share/kde/locale/de/LC_MESSAGES/kbiff.mo
@@ -357,7 +354,6 @@ share/kde/locale/de/LC_MESSAGES/kmail.mo
 share/kde/locale/de/LC_MESSAGES/knu.mo
 share/kde/locale/de/LC_MESSAGES/korn.mo
 share/kde/locale/de/LC_MESSAGES/krn.mo
-share/kde/locale/de/LC_MESSAGES/ksirc.mo
 share/kde/locale/de/LC_MESSAGES/ktalkd.mo
 share/kde/locale/el/LC_MESSAGES/kmail.mo
 share/kde/locale/el/LC_MESSAGES/knu.mo
@@ -370,7 +366,6 @@ share/kde/locale/eo/LC_MESSAGES/kmail.mo
 share/kde/locale/eo/LC_MESSAGES/knu.mo
 share/kde/locale/eo/LC_MESSAGES/korn.mo
 share/kde/locale/eo/LC_MESSAGES/krn.mo
-share/kde/locale/eo/LC_MESSAGES/ksirc.mo
 share/kde/locale/eo/LC_MESSAGES/ktalkd.mo
 share/kde/locale/es/LC_MESSAGES/kbiff.mo
 share/kde/locale/es/LC_MESSAGES/kfinger.mo
@@ -388,7 +383,6 @@ share/kde/locale/fi/LC_MESSAGES/kmail.mo
 share/kde/locale/fi/LC_MESSAGES/knu.mo
 share/kde/locale/fi/LC_MESSAGES/korn.mo
 share/kde/locale/fi/LC_MESSAGES/krn.mo
-share/kde/locale/fi/LC_MESSAGES/ksirc.mo
 share/kde/locale/fi/LC_MESSAGES/ktalkd.mo
 share/kde/locale/fr/LC_MESSAGES/karchie.mo
 share/kde/locale/fr/LC_MESSAGES/kbiff.mo
@@ -398,14 +392,12 @@ share/kde/locale/fr/LC_MESSAGES/kmail.mo
 share/kde/locale/fr/LC_MESSAGES/knu.mo
 share/kde/locale/fr/LC_MESSAGES/korn.mo
 share/kde/locale/fr/LC_MESSAGES/krn.mo
-share/kde/locale/fr/LC_MESSAGES/ksirc.mo
 share/kde/locale/fr/LC_MESSAGES/ktalkd.mo
 share/kde/locale/hr/LC_MESSAGES/kbiff.mo
 share/kde/locale/hr/LC_MESSAGES/kfinger.mo
 share/kde/locale/hr/LC_MESSAGES/kmail.mo
 share/kde/locale/hr/LC_MESSAGES/knu.mo
 share/kde/locale/hr/LC_MESSAGES/krn.mo
-share/kde/locale/hr/LC_MESSAGES/ksirc.mo
 share/kde/locale/hr/LC_MESSAGES/ktalkd.mo
 share/kde/locale/hs/LC_MESSAGES/kmail.mo
 share/kde/locale/hs/LC_MESSAGES/krn.mo
@@ -422,7 +414,6 @@ share/kde/locale/is/LC_MESSAGES/kmail.mo
 share/kde/locale/is/LC_MESSAGES/knu.mo
 share/kde/locale/is/LC_MESSAGES/korn.mo
 share/kde/locale/is/LC_MESSAGES/krn.mo
-share/kde/locale/is/LC_MESSAGES/ksirc.mo
 share/kde/locale/is/LC_MESSAGES/ktalkd.mo
 share/kde/locale/it/LC_MESSAGES/kbiff.mo
 share/kde/locale/it/LC_MESSAGES/kcmktalkd.mo
@@ -440,7 +431,6 @@ share/kde/locale/ja/LC_MESSAGES/kmail.mo
 share/kde/locale/ja/LC_MESSAGES/knu.mo
 share/kde/locale/ja/LC_MESSAGES/korn.mo
 share/kde/locale/ja/LC_MESSAGES/krn.mo
-share/kde/locale/ja/LC_MESSAGES/ksirc.mo
 share/kde/locale/ja/LC_MESSAGES/ktalkd.mo
 share/kde/locale/ko/LC_MESSAGES/kmail.mo
 share/kde/locale/ko/LC_MESSAGES/knu.mo
@@ -458,7 +448,6 @@ share/kde/locale/no/LC_MESSAGES/kmail.mo
 share/kde/locale/no/LC_MESSAGES/knu.mo
 share/kde/locale/no/LC_MESSAGES/korn.mo
 share/kde/locale/no/LC_MESSAGES/krn.mo
-share/kde/locale/no/LC_MESSAGES/ksirc.mo
 share/kde/locale/no/LC_MESSAGES/ktalkd.mo
 share/kde/locale/pl/LC_MESSAGES/karchie.mo
 share/kde/locale/pl/LC_MESSAGES/kbiff.mo
@@ -468,7 +457,6 @@ share/kde/locale/pl/LC_MESSAGES/kmail.mo
 share/kde/locale/pl/LC_MESSAGES/knu.mo
 share/kde/locale/pl/LC_MESSAGES/korn.mo
 share/kde/locale/pl/LC_MESSAGES/krn.mo
-share/kde/locale/pl/LC_MESSAGES/ksirc.mo
 share/kde/locale/pl/LC_MESSAGES/ktalkd.mo
 share/kde/locale/pt/LC_MESSAGES/kbiff.mo
 share/kde/locale/pt/LC_MESSAGES/kcmktalkd.mo
@@ -476,7 +464,6 @@ share/kde/locale/pt/LC_MESSAGES/kfinger.mo
 share/kde/locale/pt/LC_MESSAGES/kmail.mo
 share/kde/locale/pt/LC_MESSAGES/knu.mo
 share/kde/locale/pt/LC_MESSAGES/krn.mo
-share/kde/locale/pt/LC_MESSAGES/ksirc.mo
 share/kde/locale/pt/LC_MESSAGES/ktalkd.mo
 share/kde/locale/pt_BR/LC_MESSAGES/karchie.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kbiff.mo
@@ -487,7 +474,6 @@ share/kde/locale/pt_BR/LC_MESSAGES/kmail.mo
 share/kde/locale/pt_BR/LC_MESSAGES/knu.mo
 share/kde/locale/pt_BR/LC_MESSAGES/korn.mo
 share/kde/locale/pt_BR/LC_MESSAGES/krn.mo
-share/kde/locale/pt_BR/LC_MESSAGES/ksirc.mo
 share/kde/locale/pt_BR/LC_MESSAGES/ktalkd.mo
 share/kde/locale/ro/LC_MESSAGES/kfinger.mo
 share/kde/locale/ro/LC_MESSAGES/kmail.mo
@@ -499,7 +485,6 @@ share/kde/locale/ru/LC_MESSAGES/kmail.mo
 share/kde/locale/ru/LC_MESSAGES/knu.mo
 share/kde/locale/ru/LC_MESSAGES/korn.mo
 share/kde/locale/ru/LC_MESSAGES/krn.mo
-share/kde/locale/ru/LC_MESSAGES/ksirc.mo
 share/kde/locale/ru/LC_MESSAGES/ktalkd.mo
 share/kde/locale/sk/LC_MESSAGES/karchie.mo
 share/kde/locale/sk/LC_MESSAGES/kbiff.mo
@@ -509,7 +494,6 @@ share/kde/locale/sk/LC_MESSAGES/kmail.mo
 share/kde/locale/sk/LC_MESSAGES/knu.mo
 share/kde/locale/sk/LC_MESSAGES/korn.mo
 share/kde/locale/sk/LC_MESSAGES/krn.mo
-share/kde/locale/sk/LC_MESSAGES/ksirc.mo
 share/kde/locale/sk/LC_MESSAGES/ktalkd.mo
 share/kde/locale/sl/LC_MESSAGES/karchie.mo
 share/kde/locale/sl/LC_MESSAGES/kbiff.mo
@@ -519,7 +503,6 @@ share/kde/locale/sl/LC_MESSAGES/kmail.mo
 share/kde/locale/sl/LC_MESSAGES/knu.mo
 share/kde/locale/sl/LC_MESSAGES/korn.mo
 share/kde/locale/sl/LC_MESSAGES/krn.mo
-share/kde/locale/sl/LC_MESSAGES/ksirc.mo
 share/kde/locale/sl/LC_MESSAGES/ktalkd.mo
 share/kde/locale/sv/LC_MESSAGES/karchie.mo
 share/kde/locale/sv/LC_MESSAGES/kbiff.mo
@@ -529,7 +512,6 @@ share/kde/locale/sv/LC_MESSAGES/kmail.mo
 share/kde/locale/sv/LC_MESSAGES/knu.mo
 share/kde/locale/sv/LC_MESSAGES/korn.mo
 share/kde/locale/sv/LC_MESSAGES/krn.mo
-share/kde/locale/sv/LC_MESSAGES/ksirc.mo
 share/kde/locale/sv/LC_MESSAGES/ktalkd.mo
 share/kde/locale/tr/LC_MESSAGES/kmail.mo
 share/kde/locale/tr/LC_MESSAGES/knu.mo

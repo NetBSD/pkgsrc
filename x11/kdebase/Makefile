@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2000/02/05 15:51:04 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2000/03/23 11:58:31 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -15,7 +15,6 @@ HOMEPAGE=       http://www.kde.org/
 BUILD_DEPENDS+=	${LOCALBASE}/bin/msgfmt:../../devel/gettext
 DEPENDS+=	Mesa-*:../../graphics/Mesa
 DEPENDS+=	kdelibs-1.1.2:../../x11/kdelibs
-DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 # kdebase doesn't manipulate GIFs, but KDE packages depending on kdebase
 # often do, so put the dependency here.
@@ -44,6 +43,15 @@ KDE_DIRS=	share/doc/kde/HTML/cs share/doc/kde/HTML/da \
 		share/doc/kde/HTML/it share/doc/kde/HTML/no \
 		share/doc/kde/HTML/pl share/doc/kde/HTML/sv
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+PLIST_INIT=	${PKGDIR}/PLIST-${OPSYS}
+.else
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
+PLIST_INIT=	${PKGDIR}/PLIST
+.endif
+
 post-extract:
 	@${LN} -fs ${FILESDIR}/info_netbsd.cpp ${WRKSRC}/kcontrol/info
 	@${LN} -fs ${FILESDIR}/memory_netbsd.cpp ${WRKSRC}/kcontrol/info
@@ -64,7 +72,7 @@ post-install:
 	cd ${PREFIX}/share/kde/config ; \
 	${CP} kdmrc kdmrc.new ; \
 	${SED} \
-		-e 's|^\(GreetString\)=.*|\1=Welcome to NetBSD! [HOSTNAME]|' \
+		-e 's|^\(GreetString\)=.*|\1=Welcome to ${OPSYS}! [HOSTNAME]|' \
 		<kdmrc.new >kdmrc ; \
 	${ECHO} 'LogoPixmap=${PREFIX}/share/kde/icons/Daemon.png' >>kdmrc ; \
 	${RM} kdmrc.new
@@ -73,8 +81,3 @@ post-install:
 	  ${PREFIX}/share/doc/kde/HTML/en/kdm
 
 .include "../../mk/bsd.pkg.mk"
-.if (${OPSYS} == "SunOS")
-PLIST_INIT= ${PKGDIR}/PLIST-SunOS
-.else
-PLIST_INIT= ${PKGDIR}/PLIST
-.endif

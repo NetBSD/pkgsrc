@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2000/02/20 22:05:42 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2000/03/23 11:58:32 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -26,8 +26,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		"--datadir=${PREFIX}/share/kde" \
 			"--with-qt-dir=${PREFIX}" \
 			"--with-qt-includes=${PREFIX}/include/qt"
-CPPFLAGS+=		-I${LOCALBASE}/include
-CFLAGS+=		-I${LOCALBASE}/include
 CONFIGURE_ENV=  	KDEDIR=${PREFIX} \
 			CPPFLAGS="${CPPFLAGS}" \
 			CXXFLAGS="${CFLAGS}" \
@@ -40,12 +38,20 @@ PLIST_SRC=		${PKGDIR}/PLIST.egcs
 PLIST_SRC=		${PKGDIR}/PLIST.gcc
 .endif
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+PLIST_SRC=		${PKGDIR}/PLIST-SunOS
+CPPFLAGS=		-I${LOCALBASE}/include
+CFLAGS=			-I${LOCALBASE}/include
+.elif ${OPSYS} == "NetBSD"
+CPPFLAGS+=		-I${LOCALBASE}/include
+CFLAGS+=		-I${LOCALBASE}/include
+.endif
+
 post-install:
 .if (${GCC_VERSION:C/-.*$$//} != egcs)
 	@${FIND} ${PREFIX}/share/kde/locale -name ksirc.mo | xargs ${RM}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
-.if (${OPSYS} == "SunOS")
-PLIST_SRC= ${PKGDIR}/PLIST-SunOS
-.endif
