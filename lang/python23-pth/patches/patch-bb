@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1.1.1 2003/08/04 08:29:32 drochner Exp $
+
+--- Lib/test/test_fcntl.py.orig	2002-07-23 21:03:51.000000000 +0200
++++ Lib/test/test_fcntl.py	2003-08-03 12:50:25.000000000 +0200
+@@ -24,7 +24,7 @@
+                     'freebsd2', 'freebsd3', 'freebsd4', 'freebsd5',
+                     'bsdos2', 'bsdos3', 'bsdos4',
+                     'openbsd', 'openbsd2', 'openbsd3'):
+-    lockdata = struct.pack('lxxxxlxxxxlhh', 0, 0, 0, fcntl.F_WRLCK, 0)
++    lockdata = struct.pack('qqihh', 0, 0, 0, fcntl.F_WRLCK, 0)
+ elif sys.platform in ['aix3', 'aix4', 'hp-uxB', 'unixware7']:
+     lockdata = struct.pack('hhlllii', fcntl.F_WRLCK, 0, 0, 0, 0, 0, 0)
+ elif sys.platform in ['os2emx']:
