@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/01/30 10:46:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/12/18 03:01:38 xtraeme Exp $
 lib/ettercap/ec_H00_lurker.so
 lib/ettercap/ec_H01_zaratan.so
 lib/ettercap/ec_H02_troll.so
@@ -10,6 +10,8 @@ lib/ettercap/ec_H07_hydra5.so
 lib/ettercap/ec_H08_hydra6.so
 lib/ettercap/ec_H09_roper.so
 lib/ettercap/ec_H10_phantom.so
+lib/ettercap/ec_H12_giant1.so
+lib/ettercap/ec_H13_giant2.so
 lib/ettercap/ec_H20_dwarf.so
 lib/ettercap/ec_H30_thief.so
 lib/ettercap/ec_H99_dummy.so
@@ -17,8 +19,10 @@ lib/ettercap/ec_arpcop.so
 lib/ettercap/ec_banshee.so
 lib/ettercap/ec_basilisk.so
 lib/ettercap/ec_beholder.so
+lib/ettercap/ec_confusion.so
 lib/ettercap/ec_dummy.so
 lib/ettercap/ec_golem.so
+lib/ettercap/ec_hunter.so
 lib/ettercap/ec_imp.so
 lib/ettercap/ec_lamia.so
 lib/ettercap/ec_leech.so
