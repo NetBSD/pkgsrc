@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1850 2004/06/21 06:29:19 martti Exp $
+$NetBSD: TODO,v 1.1851 2004/06/21 14:18:09 taya Exp $
 
 Suggested new packages
 ======================
@@ -301,7 +301,6 @@ Suggested package updates
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-1.5.1
 	o moz-mplayer-2.65
-	o mozilla-1.7
 	o mozilla-stable-1.4.2
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
