@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:37 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/01/04 22:08:05 rh Exp $
 
 .if !defined(PKGCONFIG_BUILDLINK2_MK)
 PKGCONFIG_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		pkgconfig
-BUILDLINK_DEPENDS.pkgconfig?=	pkgconfig-[0-9]*
+BUILDLINK_DEPENDS.pkgconfig?=	pkgconfig>=0.14.0
 BUILDLINK_PKGSRCDIR.pkgconfig?=	../../devel/pkgconfig
 BUILDLINK_DEPMETHOD.pkgconfig?=	build
 
