@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/30 13:49:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 12:06:55 agc Exp $
 
 SHA1 (ltm-0.30.zip) = 6bb2a67d7a103db2f260f73b8b36acde15d22b10
+RMD160 (ltm-0.30.zip) = 2bdb5d99215503767e5793fecce3e53b969305ca
 Size (ltm-0.30.zip) = 2076036 bytes

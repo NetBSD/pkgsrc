@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/01/21 15:28:36 drochner Exp $
+$NetBSD: distinfo,v 1.7 2005/02/23 12:06:58 agc Exp $
 
 SHA1 (yacas-1.0.57.tar.gz) = d9a6100f9f0ae8a851868ca8b4e3b0e48903e53c
+RMD160 (yacas-1.0.57.tar.gz) = 9c642297d36fc76ea736b315efa1549014d04126
 Size (yacas-1.0.57.tar.gz) = 1974503 bytes
 SHA1 (patch-aa) = 5b16cdd2fed2697d78dd1ebb594cfaedbe47e751
