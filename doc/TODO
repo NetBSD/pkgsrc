@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.53 2002/12/10 18:50:24 jmmv Exp $
+$NetBSD: TODO,v 1.54 2002/12/11 12:34:56 cjep Exp $
 
 Suggested new packages
 ======================
@@ -232,6 +232,7 @@ Suggested package updates
 	o ttf2pt1-3.4.3
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
+	o w3m-0.3.2.2
 	o wwwoffle-2.7g
 	o xalan-c-1.4
 	o xbae-4.50.0
