@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2002/10/08 19:04:01 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2002/10/26 13:07:29 bouyer Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	3
@@ -27,6 +27,9 @@ BROKEN=		Compilation causes arm32 machines to hang
 .if ${OPSYS} == "NetBSD"
 LIBS+=			-Wl,--export-dynamic
 .endif
+.if ${OPSYS} == "SunOS"
+LIBS+=			`gcc -print-libgcc-file-name`
+.endif
 
 REPLACE_PERL= \
 	${WRKSRC}/kio/proxytype.pl \
@@ -50,6 +53,8 @@ PLIST_SUBST+=		KDED_WORKAROUND="@comment "
 .  else
 PLIST_SUBST+=		KDED_WORKAROUND=""
 .  endif
+.else
+PLIST_SUBST+=		KDED_WORKAROUND=""
 .endif
 
 # Add a newline to EOF so patch on Solaris succeeds with patch-bk
