@@ -1,13 +1,17 @@
-$NetBSD: patch-ab,v 1.3 2000/06/01 12:08:00 rh Exp $
+$NetBSD: patch-ab,v 1.4 2000/06/26 21:55:50 rh Exp $
 
---- libole2/doc/Makefile.in.orig	Sun May 21 08:26:49 2000
-+++ libole2/doc/Makefile.in	Wed May 31 20:59:55 2000
-@@ -272,8 +272,6 @@
- 	    echo '-- Installing '$$i ; \
- 	    $(INSTALL_DATA) $$i $(DESTDIR)$(TARGET_DIR); \
- 	  done; \
--	  echo '-- Installing $(srcdir)/html/index.sgml' ; \
--	  $(INSTALL_DATA) $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR); \
- 	  echo '-- Fixing Crossreferences' ; \
- 	  gtkdoc-fixxref --module=$(DOC_MODULE) --html-dir=$(HTML_DIR)|| true; \
- 	fi)
+--- src/plugin.c.orig	Sat May 27 04:18:47 2000
++++ src/plugin.c	Mon Jun 26 22:42:10 2000
+@@ -206,10 +206,10 @@
+ 		len = strlen (e->d_name);
+ 		/*
+ 		 * Install all files in the directory with the name
+-		 * gnum_*.so
++		 * libgnum_*.so
+ 		 */
+ 		if (len > 8 &&
+-		    strncmp (e->d_name, "gnum_", 3) == 0 &&
++		    strncmp (e->d_name, "libgnum_", 8) == 0 &&
+ 		    strncmp (e->d_name + len - 3, ".so", 3) == 0){
+ 			char *plugin_name;
+ 
