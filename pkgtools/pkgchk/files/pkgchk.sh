@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.21 2001/10/10 09:55:32 abs Exp $
+# $Id: pkgchk.sh,v 1.22 2001/11/21 23:01:56 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -258,13 +258,13 @@ if [ -n "$opt_c" ];then
     PKGDIRLIST="$PKGDIRLIST "`${AWK} -v alreadyset="$PKGDIRLIST" -v setlist=$TAGS -v unsetlist=$opt_U '
     BEGIN {
 	split(alreadyset, tmp, " ");
-	for (tag in tmp) { alreadyset[tmp[tag]] = 1; }
+	for (tag in tmp) { skip[tmp[tag]] = 1; }
 
 	split(setlist, tmp, ",");
 	for (tag in tmp) { taglist[tmp[tag]] = 1; }
 
 	split(unsetlist, tmp, ",");
-	for (tag in tmp) { delete taglist[tmp[tag]] }
+	for (tag in tmp) { skip[tmp[tag]] = 1; delete taglist[tmp[tag]] }
 
 	taglist["*"] = "*"
     }
@@ -278,7 +278,7 @@ if [ -n "$opt_c" ];then
     }
     {
     sub("#.*", "");
-    if (alreadyset[$1])
+    if (skip[$1])
 	{ next; }
     need = 0;
     for (f = 1 ; f<=NF ; ++f) {			# For each word on the line
