@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2004/07/26 06:42:24 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/02 23:55:22 minskim Exp $
 
-DISTNAME=		liferea-0.5.2b
+DISTNAME=		liferea-0.5.2c
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=liferea/}
 
@@ -14,6 +14,7 @@ USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 
 .include "../../x11/gtk2/buildlink3.mk"
