@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/03/29 12:43:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2003/04/21 20:31:31 cjep Exp $
 # FreeBSD: /c/ncvs/ports/x11-toolkits/open-motif/Makefile,v 1.18 2000/10/09 01:40:02 asami Exp 
 # OpenBSD: Makefile,v 1.5 2000/10/23 16:08:12 espie Exp 
 
@@ -89,7 +89,7 @@ do-configure:
 post-build:
 	cd ${WRKSRC}/doc/man;						\
 	for file in man1/*.1 man3/*.3 man4/*.4 man5/*.5; do		\
-                tbl $${file} > $${file}.tblized;			\
+		tbl $${file} > $${file}.tblized;			\
 		${MV} -f $${file}.tblized $${file};			\
 	done
 
@@ -104,6 +104,6 @@ post-install:
 	cd ${WRKSRC}/doc/man;						\
 	for file in man1/*.1 man3/*.3 man5/*.5; do			\
 		${INSTALL_MAN} $${file} ${PREFIX}/man/$${file};		\
-        done
+	done
 
 .include "../../mk/bsd.pkg.mk"
