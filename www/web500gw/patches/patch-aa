@@ -1,0 +1,69 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/01/08 14:15:57 hwr Exp $
+
+--- Makefile.orig	Wed Oct 28 15:21:57 1998
++++ Makefile	Fri Jan  8 14:05:39 1999
+@@ -3,14 +3,14 @@
+ #-----------------------------------------------------------------------------
+ 
+ # Where to install web500gw
+-INSTDIR = /usr/local/etc
++INSTDIR = @PREFIX@/sbin
+ 
+ # Where to install the manual web500gw.8
+-MANDIR	= /usr/local/man/man8
++MANDIR	= @PREFIX@/man/man8
+ 
+ # Where to install web500gw's config/filter/template/help/message files
+ # It's recommended to use an own directory for it.
+-WEB500GWDIR	= $(INSTDIR)/web500
++WEB500GWDIR	= @PREFIX@/etc/web500
+ 
+ # What language dependent files should be installed? 
+ # "" stands for english (default) versions
+@@ -14,7 +14,7 @@
+ 
+ # What language dependent files should be installed? 
+ # "" stands for english (default) versions
+-SUFFIX = "" de es fr
++SUFFIX = "" de
+ 
+ 
+ # DEFINES - Enable/disable some features
+@@ -34,8 +34,8 @@
+ ## If you use OpenLDAP 1.0 or U-Mich LDAP 3.3 package (recommended)
+ # If the LDAP include files and libraries installed in standard places 
+ # (/usr/lib, /usr/include) use this:
+-LDAPINCL = 
+-LDAPLIBS = -lldap -llber
++LDAPINCL = -I@PREFIX@/include
++LDAPLIBS = -L@PREFIX@/lib -lldap -llber -lcompat
+ # set LDAPVERSION (32 for ldap-3.2, 33 for 3.3 etc)
+ LDAPVERSION = 33
+ VERSION = 3.3
+@@ -51,7 +51,7 @@
+ 
+ # T.61 <-> ISO-8859-1 translation: This is built in from LDAP 3.2.
+ # If you didn't define this translation there comment out the following line:
+-STR_TRANSLATION = -DSTR_TRANSLATION
++# STR_TRANSLATION = -DSTR_TRANSLATION
+ # If you defined LDAP_DEBUG there and want to enable LDAP debugging
+ # uncomment the following line:
+ LDAP_DEBUG = -DLDAP_DEBUG
+@@ -69,7 +69,7 @@
+ 
+ # platform specific:
+ # Linux
+-PLATFORMCFLAGS= -Dlinux -DSYSV 
++# PLATFORMCFLAGS= -Dlinux -DSYSV 
+ # Solaris 2
+ # PLATFORMCFLAGS= -Dsunos5
+ # PLATFORMLDFLAGS= -lsocket -lnsl
+@@ -97,7 +97,7 @@
+             $(LDAP_DEBUG) $(STR_TRANSLATION)
+ 
+ # when using gcc:
+-CC	= gcc 
++CC	= cc 
+ #WARN = -Wall -Wno-implicit
+ #CFLAGS	= -O4 $(WARN) $(ALLDEFINES) -fpcc-struct-return -fwritable-strings
+ CFLAGS	= -g $(WARN) $(ALLDEFINES) -fpcc-struct-return -fwritable-strings
