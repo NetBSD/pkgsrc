@@ -1,0 +1,14 @@
+$NetBSD: patch-ay,v 1.2 2005/03/04 15:03:17 spz Exp $
+
+--- src/Core/.aux/config.guess.orig	2002-03-27 12:32:59.000000000 +0100
++++ src/Core/.aux/config.guess
+@@ -61,6 +61,9 @@ case "${UNAME_MACHINE}:${UNAME_SYSTEM}:$
+     21064:Windows_NT:50:3)
+ 	echo alpha-dec-winnt3.5
+ 	exit 0 ;;
++    amd64:NetBSD:*:*)
++	echo amd64-unknown-netbsd${UNAME_RELEASE}
++	exit 0 ;;
+     Amiga*:UNIX_System_V:4.0:*)
+ 	echo m68k-cbm-sysv4
+ 	exit 0;;
