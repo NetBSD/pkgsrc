@@ -1,4 +1,4 @@
-/*	$NetBSD: pkgdb.c,v 1.22 2004/12/29 12:16:56 agc Exp $	*/
+/*	$NetBSD: pkgdb.c,v 1.23 2005/02/04 09:10:13 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: pkgdb.c,v 1.22 2004/12/29 12:16:56 agc Exp $");
+__RCSID("$NetBSD: pkgdb.c,v 1.23 2005/02/04 09:10:13 jlam Exp $");
 #endif
 
 /*
@@ -60,6 +60,9 @@ __RCSID("$NetBSD: pkgdb.c,v 1.22 2004/12/29 12:16:56 agc Exp $");
 #endif
 #if HAVE_STDIO_H
 #include <stdio.h>
+#endif
+#if HAVE_STRING_H
+#include <string.h>
 #endif
 
 #include "lib.h"
@@ -273,6 +276,22 @@ int	pkgdb_remove(const char *key) { return 0; }
 int	pkgdb_remove_pkg(const char *pkg) { return 1; }
 
 #endif /* HAVE_DBOPEN */
+
+/*
+ *  Return the location of the package reference counts database directory.
+ */
+char *
+pkgdb_refcount_dir(void)
+{
+	static char buf[MaxPathSize];
+	char *tmp;
+
+	if (tmp = getenv(PKG_REFCOUNT_DBDIR_VNAME))
+		strlcpy(buf, tmp, sizeof(buf));
+	else
+		snprintf(buf, sizeof(buf), "%s.refcount", _pkgdb_getPKGDB_DIR());
+	return buf;
+}
 
 /*
  *  Return name of cache file in the buffer that was passed.
