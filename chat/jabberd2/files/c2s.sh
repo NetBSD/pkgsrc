@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: c2s.sh,v 1.1.1.1 2004/03/28 19:44:07 xtraeme Exp $
+# $NetBSD: c2s.sh,v 1.2 2004/06/26 11:21:46 abs Exp $
 #
 # PROVIDE: c2s
 # REQUIRE: DAEMON
@@ -18,6 +18,13 @@ command_args="2>&1 >/dev/null &"
 c2s_user="@JABBERD_USER@"
 pidfile="@JABBERD_PIDDIR@/${name}.pid"
 stop_postcmd="remove_pidfile"
+start_precmd="ensure_piddir"
+
+ensure_piddir()
+{
+	mkdir -p @JABBERD_PIDDIR@
+	chown @JABBERD_USER@ @JABBERD_PIDDIR@
+}
 
 remove_pidfile()
 {
