@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/10/18 08:11:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/11/02 17:24:07 salo Exp $
 #
 
 DISTNAME=		dovecot-0.99.10
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail
 MASTER_SITES=		http://dovecot.procontrol.fi/
 
@@ -27,20 +27,8 @@ CONFIGURE_ARGS+=	--with-ssldir=${SSLCERTS}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_OPENLDAP:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--with-ldap
-.include "../../databases/openldap/buildlink2.mk"
-.endif
-
-.if defined(USE_SASL2) && !empty(USE_SASL2:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--with-cyrus-sasl2
-.include "../../security/cyrus-sasl2/buildlink2.mk"
-.endif
-
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
-BUILD_DEFS+=		USE_INET6
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
+BUILD_DEFS+=		DOVECOT_USE_GNUTLS DOVECOT_USE_PGSQL	\
+			USE_INET6 USE_OPENLDAP USE_SASL2
 
 .if !empty(DOVECOT_USE_GNUTLS:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-ssl=gnutls
@@ -54,6 +42,20 @@ CONFIGURE_ARGS+=        --enable-ssl=openssl
 CONFIGURE_ARGS+=	--with-pgsql
 CPPFLAGS=		-I${BUILDLINK_DIR}/include/pgsql
 .include "../../databases/postgresql-lib/buildlink2.mk"
+.endif
+
+.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-ipv6
+.endif
+
+.if !empty(USE_OPENLDAP:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--with-ldap
+.include "../../databases/openldap/buildlink2.mk"
+.endif
+
+.if defined(USE_SASL2) && !empty(USE_SASL2:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--with-cyrus-sasl2
+.include "../../security/cyrus-sasl2/buildlink2.mk"
 .endif
 
 RCD_SCRIPTS=	dovecot
