@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.29 1998/04/20 08:25:46 frueauf Exp $
+# $NetBSD: Packages.txt,v 1.30 1998/04/20 12:14:22 frueauf Exp $
 ###########################################################################
 
 			==========================
@@ -315,6 +315,10 @@ package from the FreeBSD ports collection:
    for you, you should specify USE_GTEXINFO in the package Makefile, to
    ensure that the pre-requisite GNU texinfo package is installed on your
    system.
+ - Adjust MAINTAINER to be either yourself, if you plan to maintain the
+   package for future updates, or set it to the default MAINTAINER
+   packages@netbsd.org, as it is unlikely that the FreeBSD people will
+   care about NetBSD packages.
 
 
  4.2 files/*
