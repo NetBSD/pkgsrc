@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/05/23 22:16:57 hwr Exp $
+# $NetBSD: Makefile,v 1.3 1999/07/09 18:50:02 thorpej Exp $
 #
 
 DISTNAME=	mswordview-0.5.9
@@ -12,5 +12,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS=	--libdir=${PREFIX}/share
 
 WRKSRC=		${WRKDIR}/mswordview
+
+USE_X11BASE=	yes
 
 .include "../../mk/bsd.pkg.mk"
