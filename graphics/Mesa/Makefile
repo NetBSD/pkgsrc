@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.29 2000/01/02 03:36:52 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2000/04/03 11:15:00 drochner Exp $
 #
 
-DISTNAME=       MesaLib-3.0
-PKGNAME=	Mesa-3.0
+DISTNAME=       MesaLib-3.1
+PKGNAME=	Mesa-3.1
 CATEGORIES=	graphics
-MASTER_SITES= 	ftp://iris.ssec.wisc.edu/pub/Mesa/ \
-		ftp://ftp.fu-berlin.de/unix/X11/graphics/Mesa/ \
-		ftp://iris.ssec.wisc.edu/pub/Mesa/old-versions/
-DISTFILES=	MesaLib-${MESA_VERSION}${EXTRACT_SUFX} \
-		MesaDemos-${MESA_VERSION}${EXTRACT_SUFX}
+MASTER_SITES= 	ftp://ftp.mesa3d.org/mesa/ \
+		http://download.sourceforge.net/mesa3d/
+# MesaDemos is needed for glut
+DISTFILES=	MesaLib-3.1.tar.gz \
+		MesaDemos-3.1.tar.gz
 
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www.ssec.wisc.edu/~brianp/Mesa.html
@@ -16,49 +16,11 @@ HOMEPAGE=	http://www.ssec.wisc.edu/~brianp/Mesa.html
 CONFLICTS=	Mesa-glx-*
 
 WRKSRC=         ${WRKDIR}/${PKGNAME}
-ALL_TARGET=	${LOWER_OPSYS}
 USE_X11BASE=	yes
-MESA_LIBS=	libMesaGL libMesaGLU
-MESA_VERSION=	3.0
-GLUT_LIBS=	libglut
-GLUT_VERSION=	3.7
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-ALL_TARGET=	sunos5-gcc
-.endif
-
-post-extract:
-	@${CHMOD} +r ${WRKSRC}/demos/*
-	@${FIND} ${WRKSRC} -type f -name "*~" | xargs ${RM} -f
-
-do-install:
-.for file in ${MESA_LIBS}
-	${INSTALL_DATA} ${WRKSRC}/lib/${file}.a ${PREFIX}/lib
-	${RANLIB} ${PREFIX}/lib/${file}.a
-	${INSTALL_DATA} ${WRKSRC}/lib/${file}.so.${MESA_VERSION} ${PREFIX}/lib
-.endfor
-.for file in ${GLUT_LIBS}
-	${INSTALL_DATA} ${WRKSRC}/lib/${file}.a ${PREFIX}/lib
-	${RANLIB} ${PREFIX}/lib/${file}.a
-	${INSTALL_DATA} ${WRKSRC}/lib/${file}.so.${GLUT_VERSION} ${PREFIX}/lib
-.endfor
-.for file in GL GLU
-	@${LN} -f -s ${PREFIX}/lib/libMesa${file}.a ${PREFIX}/lib/lib${file}.a
-	@${LN} -f -s ${PREFIX}/lib/libMesa${file}.so.${MESA_VERSION} ${PREFIX}/lib/lib${file}.so.${MESA_VERSION}
-.endfor
-	@${MKDIR} ${PREFIX}/include/GL
-	${INSTALL_DATA} ${WRKSRC}/include/GL/* ${PREFIX}/include/GL
-	@${MKDIR} ${PREFIX}/share/examples/Mesa
-	${CP} -Rp ${WRKSRC}/samples ${PREFIX}/share/examples/Mesa
-	${CP} -Rp ${WRKSRC}/demos ${PREFIX}/share/examples/Mesa
-	${CP} -Rp ${WRKSRC}/book ${PREFIX}/share/examples/Mesa
-	${CP} -Rp ${WRKSRC}/widgets-sgi ${PREFIX}/share/examples/Mesa
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/Mesa
-	${LN} -f ${PREFIX}/lib/libMesaGL.so.3.0 ${PREFIX}/lib/libGL.so.3.0
-	${LN} -f ${PREFIX}/lib/libMesaGLU.so.3.0 ${PREFIX}/lib/libGLU.so.3.0
-	${LN} -f ${PREFIX}/lib/libMesaGL.a ${PREFIX}/lib/libGL.a
-	${LN} -f ${PREFIX}/lib/libMesaGLU.a ${PREFIX}/lib/libGLU.a
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--enable-static
+# XXX our pkglibtool is too old
+#USE_LIBTOOL=	yes
 
 .include "../../mk/bsd.pkg.mk"
