@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/05/02 23:32:45 jtb Exp $
+
+--- lib/src/RT0.c.orig
++++ lib/src/RT0.c
+@@ -13,9 +13,9 @@
+ #endif
+ #define MAX_BACKTRACE_LEVELS 20  /* max number of backtraced procedure calls */
+ 
+-#if defined(HAVE_LIBGC) && defined(HAVE_GC_GC_H)
++#if defined(HAVE_LIBGC) && defined(HAVE_GC_H)
+ #  define USE_BOEHM_GC
+-#  include <gc/gc.h>
++#  include <gc.h>
+ #else
+ #  define GC_MALLOC malloc
+ #  define GC_MALLOC_ATOMIC malloc
