@@ -1,10 +1,5 @@
-# $NetBSD: Makefile.Linux.i386,v 1.4 2003/11/27 16:07:46 grant Exp $
-#
+# $NetBSD: Makefile.Linux.i386,v 1.5 2004/01/04 05:01:02 grant Exp $
 
-DISTNAME=	mozilla-i686-pc-linux-gnu-1.5
-MASTER_SITES=	${MASTER_SITE_MOZILLA:=mozilla1.5/}
+DISTNAME=	mozilla-i686-pc-linux-gnu-${MOZ_VER}
 
-DEPENDS+=	gtk+>=1.2:../../x11/gtk
-
-PLATFORM=	linux
-MOZILLA_LIB=	${PREFIX}/lib/mozilla-${PLATFORM}
+MOZ_PLATFORM=	linux
