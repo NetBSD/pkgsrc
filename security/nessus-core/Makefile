@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/26 02:27:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/03 05:52:55 snj Exp $
 #
 
 DISTNAME=	nessus-core-${VERS}
@@ -8,7 +8,7 @@ PKGREVISION=	1
 COMMENT=	Core module of the Nessus Network Security Scanner
 
 WRKSRC=		${WRKDIR}/nessus-core
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=--enable-gtk \
 
 RCD_SCRIPTS=	nessusd
 
-.include "../../security/libnasl/buildlink2.mk"
-.include "../../security/nessus-libraries/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../security/libnasl/buildlink3.mk"
+.include "../../security/nessus-libraries/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
