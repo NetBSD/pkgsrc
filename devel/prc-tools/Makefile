@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/05/11 11:13:21 dillo Exp $
 #
 
 COMMENT=	GNU tool chain for Palm cross development
@@ -8,7 +8,7 @@ DISTFILES=      # empty
 
 DEPENDS+=	prc-tools-base>=2.0:../../devel/prc-tools-base
 DEPENDS+=	prc-tools-gdb>=2.0:../../devel/prc-tools-gdb
-DEPENDS+=	pilrc>=2.7b:../../devel/pilrc
+DEPENDS+=	pilrc>=2.7:../../devel/pilrc
 
 EXTRACT_ONLY=   # empty
 NO_CHECKSUM=    yes
