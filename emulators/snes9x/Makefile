@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/11/16 19:14:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 18:38:22 wiz Exp $
 
 DISTNAME=		s9xs132
 PKGNAME=		snes9x-1.32
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.zip
 
 MAINTAINER=		jmcneill@invisible.yi.org
 HOMEPAGE=		http://www.snes9x.com/
+COMMENT=		Super Nintendo Entertainment System (SNES) emulator
 
 BUILD_DEPENDS+=		nasm:../../devel/nasm
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/01/25 09:27:48 tron Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/17 18:38:27 wiz Exp $
 #
 
 DISTNAME=		suse_glx-${SUSE_VERSION}
@@ -8,6 +8,7 @@ DISTFILES=		${RPMFILES}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
+COMMENT=		Linux compatibility package for GLX binaries
 
 DEPENDS+=		suse_x11-${SUSE_VERSION}:../../emulators/suse_x11
 

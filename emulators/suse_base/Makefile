@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/01/28 09:19:54 tron Exp $
+# $NetBSD: Makefile,v 1.22 2001/02/17 18:38:25 wiz Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}nb2
 CATEGORIES=		emulators
@@ -8,6 +8,7 @@ DISTFILES=		${RPMFILES}
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.suse.com/
+COMMENT=		Linux compatibility package
 
 CONFLICTS=		linux_SuSE-5.3 linux_lib-2.4 suse_base-6.1
 ONLY_FOR_PLATFORM=	NetBSD-*-i386

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2000/12/07 12:58:13 abs Exp $
+# $NetBSD: Makefile,v 1.41 2001/02/17 18:38:36 wiz Exp $
 #
 
 DISTNAME=		xmame-0.37b6.1
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		soren@netbsd.org
 HOMEPAGE=		http://x.mame.net/
+COMMENT=		X11 emulator for old arcade and console machines
 
 DEPENDS=		unzip>=5.40:../../archivers/unzip
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/12/17 21:18:30 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/17 18:38:30 wiz Exp $
 
 DISTNAME=		suse_linux-6.4
 CATEGORIES=		emulators
@@ -7,6 +7,7 @@ DISTFILES=		# empty
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
+COMMENT=		Linux compatibility package collection
 
 DEPENDS+=		suse_audio-6.4:../suse_audio
 DEPENDS+=		suse_libc5-6.4:../suse_libc5

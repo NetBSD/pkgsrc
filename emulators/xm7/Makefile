@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/13 17:12:19 kei Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 18:38:35 wiz Exp $
 #
 
 DISTNAME=		xm71010s
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.lzh
 
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=		http://www.ipc-tokai.or.jp/~ytanaka/fm7/xm7.shtml
+COMMENT=		X11-based FM-7 emulator
 
 NO_WRKSUBDIR=		# empty
 WRKSRC=			${WRKDIR}/vm

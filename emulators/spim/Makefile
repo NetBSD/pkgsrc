@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/03/27 08:54:55 tron Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/17 18:38:23 wiz Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/10/10 06:53:35 obrien Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.cs.wisc.edu/pub/spim/
 
 MAINTAINER=		deberg@netbsd.org
 HOMEPAGE=		http://www.cs.wisc.edu/~larus/spim.html
+COMMENT=		MIPS R2000 Simulator
 
 NO_WRKSUBDIR=		yes
 

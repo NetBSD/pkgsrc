@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/01/25 09:23:25 tron Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 18:38:24 wiz Exp $
 
 DISTNAME=		suse_audio-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -7,6 +7,7 @@ DISTFILES=		${RPMFILES}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
+COMMENT=		Linux compatibility package for audio libraries
 
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
 

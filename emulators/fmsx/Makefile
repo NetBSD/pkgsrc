@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/18 22:46:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 18:38:17 wiz Exp $
 
 DISTNAME=	fMSX22.tar
 PKGNAME=	fmsx-2.2
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.Z
 
 MAINTAINER=	martin@netbsd.org
 HOMEPAGE=	http://www.komkon.org/fms/fMSX/
+COMMENT=	MSX (Z80-based computer) emulator
 
 RESTRICTED=		"ROM image copyright is questionable"
 NO_BIN_ON_CDROM=	${RESTRICTED}

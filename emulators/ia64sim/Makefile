@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/12/10 13:54:32 soren Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 18:38:18 wiz Exp $
 
 DISTNAME=		ia64sim
 PKGNAME=		ia64sim-0.1
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.zip
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.glue.umd.edu/~jasonp/
+COMMENT=		IA64 simulator (Intel(R) Architecture 64)
 
 BUILD_DEPENDS+=		unzip:../../archivers/unzip
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/08/23 23:14:24 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 18:38:34 wiz Exp $
 
 DISTNAME=		Wine-990328
 PKGNAME=		wine-990328
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=ALPHA/wine/development/}
 
 MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.winehq.com/
+COMMENT=		Beta Windows (3.1x, 95, NT) emulator
 
 DEPENDS+=		ncurses>=4.2:../../devel/ncurses
 

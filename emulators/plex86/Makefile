@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/01/29 11:34:25 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2001/02/17 18:38:21 wiz Exp $
 
 DISTNAME=	plex86-20010106
 PKGNAME=	${DISTNAME:S/-/-0./}
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.plex86.org/
+COMMENT=	Extensible open source PC virtualization software (free VMware)
 
 WRKSRC=		${WRKDIR}/plex86
 GNU_CONFIGURE=	yes

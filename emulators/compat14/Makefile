@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/04 08:03:39 mrg Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 18:38:15 wiz Exp $
 #
 
 DISTNAME=		compat14-${MACHINE_ARCH}
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/Releases/formal-1.4/index.html
+COMMENT=		Shared libraries for NetBSD 1.4 (and earlier) compatibility
 
 ONLY_FOR_PLATFORM=	NetBSD-*-sparc NetBSD-*-i386
 NOT_FOR_PLATFORM=	NetBSD-1.3*-* NetBSD-1.4*-*
