@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 1999/05/04 20:31:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.15 1999/07/14 20:45:30 tron Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -180,6 +180,7 @@ lib/libgtkxmhtml.so.1.1
 lib/libzvt.a
 lib/libzvt.so.4.3
 man/man1/gnome.1
+man/man1/gnome-config.1
 share/locale/de/LC_MESSAGES/gnome-libs.mo
 share/locale/eu/LC_MESSAGES/gnome-libs.mo
 share/locale/fr/LC_MESSAGES/gnome-libs.mo
@@ -200,6 +201,9 @@ share/locale/it/LC_MESSAGES/gnome-libs.mo
 share/locale/ru/LC_MESSAGES/gnome-libs.mo
 share/locale/hu/LC_MESSAGES/gnome-libs.mo
 share/locale/wa/LC_MESSAGES/gnome-libs.mo
+share/locale/sk/LC_MESSAGES/gnome-libs.mo
+share/locale/hr/LC_MESSAGES/gnome-libs.mo
+share/locale/en_GB/LC_MESSAGES/gnome-libs.mo
 sbin/gnome-pty-helper
 share/aclocal/libart.m4
 share/doc/gnome-libs/gnome-doc.el
@@ -215,6 +219,7 @@ share/doc/gnome-libs/suggestions.txt
 share/doc/gnome-libs/session-management.txt
 share/doc/gnome-libs/mime-type-handling.txt
 share/doc/gnome-libs/html/gnome-decl.txt
+share/doc/gnome-libs/html/gnome-faq.html
 share/doc/gnome-libs/html/gnome-sections.txt
 share/doc/gnome-libs/html/gnome.html
 share/doc/gnome-libs/html/gnome/book1.html
@@ -323,11 +328,11 @@ share/doc/gnome-libs/html/gnomeui/gtkdial.html
 share/doc/gnome-libs/html/gnomeui/gtkpixmapmenuitem.html
 share/doc/gnome-libs/html/gnomeui/gtkted.html
 share/doc/gnome-libs/html/gnomeui/libgnomeui.html
+share/idl/desktop-editor.idl
+share/idl/desktop-textviewer.idl
 share/idl/GnomeObject.idl
 share/idl/Table.idl
-share/idl/gnome-editor.idl
 share/idl/gnome-factory.idl
-share/idl/gnome-file.idl
 share/idl/name-service.idl
 share/mime-info/gnome.mime
 share/pixmaps/calculator-font.png
