@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2005/03/14 15:09:28 salo Exp $
+# $NetBSD: Makefile,v 1.105 2005/03/14 15:34:57 tron Exp $
 
 DISTNAME=		ethereal-0.10.10
 CATEGORIES=		net
@@ -47,12 +47,6 @@ PTHREAD_OPTS=		require
 .if ${OPSYS} == "Darwin"
 USE_BUILTIN.libpcap=	no
 .endif
-
-# Because we patch "epan/dissectors/packet-3g-a11.c" "register.c" would
-# get rebuilt which requires Python. Avoid the unnecessary overhead
-# by touching the file.
-post-patch:
-	@${TOUCH} ${WRKSRC}/epan/dissectors/register.c
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
