@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/12/30 13:46:03 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2002/11/10 00:35:08 grant Exp $
 #
 
 DISTNAME=	FD-1.03u
@@ -6,7 +6,7 @@ PKGNAME=	fd-1.03u
 CATEGORIES=	misc
 MASTER_SITES=	http://hp.vector.co.jp/authors/VA012337/soft/fd/
 
-MAINTAINER=	Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
+MAINTAINER=	nobu@psrc.isac.co.jp
 COMMENT=	File and directory management tool
 
 MANLANG=	ja
