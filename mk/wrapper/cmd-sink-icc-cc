@@ -1,10 +1,10 @@
-# $NetBSD: arg-pp-darwin-gcc,v 1.1.2.3 2005/02/15 16:25:23 tv Exp $
+# $NetBSD: cmd-sink-icc-cc,v 1.2.2.2 2005/02/15 16:25:23 tv Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
-# by Johnny C. Lam.
+# by Grant Beattie.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -34,43 +34,26 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-case $arg in
-######################################################################
-# Split direct paths to Darwin "dylib" shared libraries into the
-# "-Ldir -llib" equivalent.
-######################################################################
-/*/lib*.dylib)
-	dir="${arg%/lib*.dylib}"
-	lib="${arg#$dir/lib}"
-	case $lib in
-	*/*)		argok=yes; argmatch=yes ;;
-	*.dylib)	lib="${lib%.dylib}" ;;
-	esac
-	case $argmatch in
-	yes)	;;
-	*)	prepend_queue argbuf "-l$lib"
-		$debug_log $wrapperlog "    (arg-pp-darwin-gcc) pre:  -l$lib"
-		prepend_queue argbuf "-L$dir"
-		$debug_log $wrapperlog "    (arg-pp-darwin-gcc) pre:  -L$dir"
-		argmatch=yes
+# all icc built dynamic libraries and executables need to be linked
+# with ${ICCBASE}/lib in the rpath, or statically linked against the
+# icc provided libraries. use the static linking method so binary
+# packages can be used on systems that do not have these libraries
+# available.
+arg=-static-libcxa
+$debug_log $wrapperlog "    (cmd-sink-icc-cc) pop:  $arg"
+. $buildcmd
+
+while ! queue_is_empty cmdbuf; do
+	pop_queue cmdbuf arg
+	case "$arg" in
+	-MT)
+		pop_queue cmdbuf arg2
+		$debug_log $wrapperlog "    (cmd-sink-icc-cc) pop:  $arg $arg2 [drop]"
+		;;
+
+	*)
+		$debug_log $wrapperlog "    (cmd-sink-icc-cc) pop:  $arg"
+		. $buildcmd
 		;;
 	esac
-	;;
-######################################################################
-# Darwin's linker uses:
-#
-#	-dylib_file /path/shlib:/path2/shlib
-#	-dylib_install_name /path/shlib
-#	-install_name /path/shlib
-#
-# to pass the installed locations for the shared libraries to the
-# linker, and we need to pass the extra argument unmodified.  The
-# purpose of -seg_addr_table_filename is more obscure, but Darwin's
-# imake rules use it.
-######################################################################
--dylib_file|-dylib_install_name|-install_name|-seg_addr_table_filename)
-	skipargs=1
-	argok=yes
-	argmatch=yes
-	;;
-esac
+done
