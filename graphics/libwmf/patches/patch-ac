@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.2 2000/08/06 14:18:50 wiz Exp $
+$NetBSD: patch-ac,v 1.3 2000/11/16 18:25:24 wiz Exp $
 
---- xgd-1.7.3/Makefile.in.orig	Thu Dec 16 16:31:47 1999
-+++ xgd-1.7.3/Makefile.in	Sun Aug  6 15:23:04 2000
+--- xgd-1.7.3/Makefile.in.orig	Tue Oct 10 21:16:16 2000
++++ xgd-1.7.3/Makefile.in
 @@ -29,7 +29,7 @@
  
  #If you don't have FreeType and/or Xpm installed, including the
  #header files, uncomment this (default).
--CFLAGS=@CFLAGS@ @DEFS@ -I../ @ZLIB_CFLAGS@ @TTF_CFLAGS@ @XPM_CFLAGS@
-+CFLAGS=@CFLAGS@ @DEFS@ -I../ @ZLIB_CFLAGS@ @TTF_CFLAGS@ @XPM_CFLAGS@ -I${LOCALBASE}/include
+-CFLAGS=@CFLAGS@ @DEFS@ -I../ @PNG_CFLAGS@ @ZLIB_CFLAGS@ @TTF_CFLAGS@ @XPM_CFLAGS@
++CFLAGS=@CFLAGS@ @DEFS@ -I../ @PNG_CFLAGS@ @ZLIB_CFLAGS@ @TTF_CFLAGS@ @XPM_CFLAGS@ -I${LOCALBASE}/include
  #If you do have FreeType and/or Xpm fully installed, uncomment a
  #variation of this and comment out the line above. See also LIBS below.
  #CFLAGS=-O -DHAVE_XPM -DHAVE_LIBTTF

@@ -1,16 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2000/08/05 02:36:38 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2000/11/16 18:25:23 wiz Exp $
 
---- Makefile.in.orig	Thu Dec 16 10:31:01 1999
-+++ Makefile.in	Fri Aug  4 20:21:16 2000
-@@ -1,6 +1,6 @@
- LIBS = -L./libdib -ldib @XPM_LIBS@ @LIBS@ -lm
- 
--GDLIBS = -L./libdib -ldib -Lxgd-1.7.3 -lxgd @XPM_LIBS@ @LIBS@ @TTF_LIBS@ -lpng -lm 
-+GDLIBS = -L./libdib -ldib -Lxgd-1.7.3 -lxgd @XPM_LIBS@ @LIBS@ @TTF_LIBS@ -lpng @ZLIB_LIBS@ -lm 
- 
- XFLIBS = -L./libxfig -lxfig -L./libdib -ldib @XPM_LIBS@ @LIBS@ @TTF_LIBS@ -lm
- 
-@@ -28,7 +28,7 @@
+--- Makefile.in.orig	Tue Oct 10 21:16:15 2000
++++ Makefile.in
+@@ -30,7 +30,7 @@
  libdir = @libdir@
  mandir = @mandir@
  
