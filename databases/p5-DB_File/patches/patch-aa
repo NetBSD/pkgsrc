@@ -1,38 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2003/03/22 19:13:01 heinz Exp $
+$NetBSD: patch-aa,v 1.3 2004/11/15 18:42:04 jlam Exp $
 
---- Makefile.PL.orig	Sat Jun 22 11:35:48 2002
+--- Makefile.PL.orig	2002-06-22 05:35:48.000000000 -0400
 +++ Makefile.PL
-@@ -7,14 +7,15 @@ use Config ;
- die "DB_File needs Perl 5.004_05 or better. This is $]\n" 
-     if $] <= 5.00404; 
- 
--my $VER_INFO ;
-+my $VER_INFO = "";
- my $LIB_DIR ;
- my $INC_DIR ;
- my $DB_NAME ;
- my $LIBS ;
- my $COMPAT185 = "" ;
- 
--ParseCONFIG() ;
-+my $DB_CPPFLAGS = $ENV{'DB_CPPFLAGS'};
-+$DB_NAME = $ENV{'DB_NAME'};
- 
- my @files = ('DB_File.pm', glob "t/*.t") ;
- UpDowngrade(@files);
-@@ -40,9 +41,9 @@ $OS2 = "-DOS2" if $Config{'osname'} eq '
- 
- WriteMakefile(
- 	NAME 		=> 'DB_File',
--	LIBS 		=> ["-L${LIB_DIR} $LIBS"],
-+	LIBS 		=> ["$LIBS"],
-         #MAN3PODS        => {},         # Pods will be built by installman.
--	INC		=> "-I$INC_DIR",
-+	INC		=> "$DB_CPPFLAGS",
- 	VERSION_FROM	=> 'DB_File.pm',
- 	XSPROTOARG	=> '-noprototypes',
- 	DEFINE		=> "-D_NOT_CORE $OS2 $VER_INFO $COMPAT185",
-@@ -51,7 +52,7 @@ WriteMakefile(
+@@ -51,7 +51,7 @@ WriteMakefile(
  	'depend'	=> { 'Makefile'          => 'config.in',
                               'version$(OBJ_EXT)' => 'version.c'},
  	'clean'		=> { FILES => 'constants.h constants.xs' },
@@ -41,3 +11,24 @@ $NetBSD: patch-aa,v 1.2 2003/03/22 19:13:01 heinz Exp $
          'dist'          => { COMPRESS => 'gzip', SUFFIX => 'gz',
  			     DIST_DEFAULT => 'MyDoubleCheck tardist'},    
  	);
+@@ -214,7 +214,7 @@ sub ParseCONFIG
+ 
+     $INC_DIR = $ENV{'DB_FILE_INCLUDE'} || $Info{'INCLUDE'} ;
+     $LIB_DIR = $ENV{'DB_FILE_LIB'} || $Info{'LIB'} ;
+-    $DB_NAME = $Info{'DBNAME'} if defined $Info{'DBNAME'} ;
++    $DB_NAME = $ENV{'DB_NAME'} || $Info{'DBNAME'} ;
+     $COMPAT185 = "-DCOMPAT185 -DDB_LIBRARY_COMPATIBILITY_API" 
+         if (defined $ENV{'DB_FILE_COMPAT185'} && 
+ 		$ENV{'DB_FILE_COMPAT185'} =~ /^\s*(on|true|1)\s*$/i) ||
+@@ -222,9 +222,9 @@ sub ParseCONFIG
+     my $PREFIX  = $Info{'PREFIX'} ;
+     my $HASH    = $Info{'HASH'} ;
+ 
+-    $VER_INFO = "-DmDB_Prefix_t=${PREFIX} -DmDB_Hash_t=${HASH}" ;
++    # $VER_INFO = "-DmDB_Prefix_t=${PREFIX} -DmDB_Hash_t=${HASH}" ;
+ 
+-    print <<EOM if 0 ;
++    print <<EOM if 1 ;
+     INCLUDE	[$INC_DIR]
+     LIB		[$LIB_DIR]
+     HASH	[$HASH]
