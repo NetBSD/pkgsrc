@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2002/01/21 15:24:49 zuntum Exp $
+# $NetBSD: Makefile,v 1.14 2002/01/21 15:48:46 zuntum Exp $
 
 DISTNAME=	MPlayer-0.60pre1
 PKGNAME=	mplayer-0.60.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://mp.dev.hu/MPlayer/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--prefix="${PREFIX}"
 CONFIGURE_ARGS+=	--with-extraincdir="${BUILDLINK_DIR}/include"
 CONFIGURE_ARGS+=	--with-extralibdir="${LOCALBASE}/lib"
 CONFIGURE_ARGS+=	--with-win32libdir="${LOCALBASE}/lib/win32"
-CONFIGURE_ARGS+=	--disable-css
+CONFIGURE_ARGS+=	--enable-dvdread
 
 # The configure script attempts to execute compiled programs in /tmp, but
 # /tmp may be mounted with noexec flag set...
@@ -51,5 +51,6 @@ do-install:
 .include "../../devel/SDL/buildlink.mk"
 .include "../../graphics/aalib/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
+.include "../../misc/libdvdread/buildlink.mk"
 .include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
