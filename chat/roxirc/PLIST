@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/19 11:43:20 grant Exp $
+bin/roxirc
+share/doc/roxirc/help
+share/examples/roxirc/bindings
+share/examples/roxirc/config
+share/examples/roxirc/menus
+share/examples/roxirc/prefs-initial
+share/examples/roxirc/startup
+@dirrm share/examples/roxirc
+@dirrm share/doc/roxirc
