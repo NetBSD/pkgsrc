@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/12 08:20:32 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/11/21 10:02:56 grant Exp $
 #
 
 DISTNAME=	bpalogin-2.0.1-src
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bpalogin/}
 
@@ -14,16 +15,15 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 ALL_TARGET=	bpalogin
 
-pre-install:
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/bpalogin			\
-		> ${WRKDIR}/bpalogin
+CONF_FILES+=	${PREFIX}/share/examples/bpalogin/bpalogin.conf \
+		${PKG_SYSCONFDIR}/bpalogin.conf
+RCD_SCRIPTS=	bpalogin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bpalogin ${PREFIX}/sbin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bpalogin
 	${INSTALL_DATA} ${WRKSRC}/bpalogin.conf				\
 		${PREFIX}/share/examples/bpalogin
-	${INSTALL_SCRIPT} ${WRKDIR}/bpalogin ${PREFIX}/etc/rc.d
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
