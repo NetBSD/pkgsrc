@@ -1,17 +1,19 @@
-$NetBSD: patch-aa,v 1.6 2000/09/06 08:16:16 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2002/11/27 11:03:32 agc Exp $
 
 --- makefile.in.orig	Wed Nov 10 21:04:17 1999
 +++ makefile.in	Wed Sep  6 03:50:28 2000
-@@ -50,7 +50,7 @@
- 
+@@ -51,8 +51,8 @@
+ AWK		= @AWK@
  PERL		= @PERL@
  PERLLIB		= @perl_lib_path@
 -INSTALL_SCRIPT	= $(srcdir)/sinstall.sh $(PERL) $(INSTALL_PROGRAM)
+-INSTALL_MODULE	= $(srcdir)/sinstall.sh $(PERL) $(INSTALL_DATA)
 +INSTALL_SCRIPT	= ${BSD_INSTALL_SCRIPT}
- 
++INSTALL_MODULE	= ${BSD_INSTALL_DATA}
  
  prefix		= @prefix@
-@@ -59,7 +59,7 @@
+ exec_prefix	= @exec_prefix@
+@@ -60,7 +60,7 @@
  manext		= 1
  libdir		= @libdir@
  bindir		= @bindir@
@@ -20,15 +22,15 @@ $NetBSD: patch-aa,v 1.6 2000/09/06 08:16:16 jlam Exp $
  perldir		= $(datadir)/perl
  mandir		= @mandir@/man$(manext)
  
-@@ -316,7 +316,6 @@
+@@ -351,7 +351,6 @@
  
- INSTALL_PERL_DIRS = $(PERLDIR)
+ INSTALL_PERL_DIRS = $(PERLDIR) $(PERLDIR)/Vile
  INSTALL_PERL_FILES = \
 -	$(BINDIR)/vileget \
- 	$(PERLDIR)/Vile.pm \
- 	$(PERLDIR)/Vileserv.pm \
- 	$(PERLDIR)/dir.pl \
-@@ -607,7 +606,7 @@
+ 	$(PERLDIR)/Breadcrumbs.pm \
+ 	$(PERLDIR)/CaptHook.pm \
+ 	$(PERLDIR)/Glob2re.pm \
+@@ -623,7 +622,7 @@
  	$(INSTALL_PROGRAM)	$(TARGET) $@
  
  $(BINDIR)/xshell.sh:		$(srcdir)/xshell.sh
@@ -37,7 +39,7 @@ $NetBSD: patch-aa,v 1.6 2000/09/06 08:16:16 jlam Exp $
  $(BINDIR)/vileget:		$(srcdir)/perl/vileget
  	$(INSTALL_SCRIPT)	$(srcdir)/perl/vileget $@
  
-@@ -674,6 +673,9 @@
+@@ -710,6 +709,9 @@
  
  $(INSTALL_DIRS):
  	$(SHELL) ${srcdir}/mkdirs.sh $@
