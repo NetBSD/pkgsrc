@@ -1,8 +1,8 @@
-$NetBSD: patch-au,v 1.2 2005/03/01 10:00:47 is Exp $
+$NetBSD: patch-au,v 1.3 2005/03/02 13:21:34 is Exp $
 
---- csw/netbsd.c.orig	2005-03-01 09:35:06.000000000 +0000
+--- csw/netbsd.c.orig	2005-03-02 13:00:06.000000000 +0000
 +++ csw/netbsd.c
-@@ -0,0 +1,116 @@
+@@ -0,0 +1,112 @@
 +/*
 + *  netbsd.c -- context switch code for NetBSD 2.
 + *
@@ -11,29 +11,23 @@ $NetBSD: patch-au,v 1.2 2005/03/01 10:00:47 is Exp $
 +
 +#include <ucontext.h>
 +
-+static void startup();
-+void sr_stk_underflow();
++void sr_stk_underflow(void);
++void sr_stk_corrupted(void);
++
++static void startup(void (*)(void), unsigned long, unsigned long, unsigned long, unsigned long);
 +
 +#ifdef __i386__
 +void pthread__i386_init(void);
 +
-+#define _getcontext_u(uc)	(*_md_getcontext_u)(uc)
 +#define _setcontext_u(uc)	(*_md_setcontext_u)(uc)
 +#define _swapcontext_u(oc,nc)	(*_md_swapcontext_u)(oc,nc)
 +
-+static void sr_getcontext_u(ucontext_t *);
 +static void sr_setcontext_u(ucontext_t *);
 +static void sr_swapcontext_u(ucontext_t *, ucontext_t *);
 +
-+void (*_md_getcontext_u) (ucontext_t *)			= sr_getcontext_u;
++void (*_md_getcontext_u) (ucontext_t *);
 +void (*_md_setcontext_u) (ucontext_t *)			= sr_setcontext_u;
 +void (*_md_swapcontext_u)(ucontext_t *, ucontext_t *)	= sr_swapcontext_u;
-+
-+static void
-+sr_getcontext_u(ucontext_t *uc) {
-+	pthread__i386_init();
-+	_getcontext_u(uc);
-+}
 +
 +static void
 +sr_setcontext_u(ucontext_t *uc) {
@@ -65,7 +59,9 @@ $NetBSD: patch-au,v 1.2 2005/03/01 10:00:47 is Exp $
 +{
 +    ucontext_t *uc = (ucontext_t *) buf;	/* put header at front of buf */
 +
-+    _getcontext_u(uc);				/* initialize context */
++    if (0 != getcontext(uc)) {			/* initialize context */
++	sr_stk_corrupted();
++    }
 +
 +    uc->uc_stack.ss_sp = buf + sizeof (ucontext_t);
 +    uc->uc_stack.ss_size = bufsize - sizeof (ucontext_t);
@@ -75,7 +71,7 @@ $NetBSD: patch-au,v 1.2 2005/03/01 10:00:47 is Exp $
 +}
 +
 +/*
-+ *  startup (func, stk) -- intermediary for startup and underflow detection.
++ *  startup (func, a,b,c,d) -- intermediary for startup and underflow detection.
 + */
 +static void
 +startup (func, arg1, arg2, arg3, arg4)
