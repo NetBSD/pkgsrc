@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2003/08/23 14:22:44 grant Exp $
+# $NetBSD: Makefile,v 1.30 2003/08/31 19:56:04 jdolecek Exp $
 #
 
 PKGNAME=		ap-php-${PHP_BASE_VERS}
-PKGREVISION=		1
+PKGREVISION=		# empty
 COMMENT=		Apache 1.x module for PHP4
 
 DEPENDS+=		php>=${PHP_BASE_VERS}:../../www/php4

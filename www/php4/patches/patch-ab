@@ -1,21 +1,22 @@
-$NetBSD: patch-ab,v 1.11 2003/02/03 23:53:25 jlam Exp $
-
---- pear/scripts/phpize.in.orig	Wed Apr 17 06:35:59 2002
-+++ pear/scripts/phpize.in
-@@ -25,7 +25,12 @@ sed \
+--- scripts/phpize.in.orig	2003-08-30 22:28:44.000000000 +0200
++++ scripts/phpize.in	2003-08-30 22:29:39.000000000 +0200
+@@ -54,10 +54,15 @@
  
  touch install-sh mkinstalldirs missing
  
--aclocal
--autoconf
--autoheader
--libtoolize -f -c
+-aclocal || exit 1
+-autoconf || exit 1
+-autoheader || exit 1
+-libtoolize -f -c || exit 1
 +if [ -z "$ACLOCAL" ]; then ACLOCAL=aclocal; fi
 +if [ -z "$AUTOCONF" ]; then AUTOCONF=autoconf; fi
 +if [ -z "$AUTOHEADER" ]; then AUTOHEADER=autoheader; fi
 +if [ -z "$LIBTOOLIZE" ]; then LIBTOOLIZE=libtoolize; fi
 +
-+$ACLOCAL
-+$AUTOCONF
-+$AUTOHEADER
-+$LIBTOOLIZE -f -c
++$ACLOCAL || exit 1
++$AUTOCONF || exit 1
++$AUTOHEADER || exit 1
++$LIBTOOLIZE -f -c || exit 1
+ 
+ # dumping API NOs:
+ PHP_API_VERSION=`egrep '#define PHP_API_VERSION' $includedir/main/php.h|sed 's/#define PHP_API_VERSION//'`

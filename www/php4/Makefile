@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2003/06/29 16:30:32 grant Exp $
+# $NetBSD: Makefile,v 1.34 2003/08/31 19:56:05 jdolecek Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
-PKGREVISION=		2
 CATEGORIES+=		lang
 COMMENT=		HTML-embedded scripting language
 
@@ -9,9 +8,13 @@ CONFLICTS+=		ap-php-4.0.3pl1
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+# PHP uses libtool inconsistently for CGI/CLI build; don't sanify for now
+# LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+USE_GMAKE=		YES
 
 .include "Makefile.php"
+
+CONFIGURE_ARGS+=	--enable-cli
 
 CGIDIR=			${PREFIX}/libexec/cgi-bin
 EGDIR=			${PREFIX}/share/examples/php
@@ -35,8 +38,10 @@ CONF_FILES=	${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=	${PREFIX}/${PHP_EXTENSION_DIR}
 
 post-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${PREFIX}/bin/php
+	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 ${PREFIX}/man/man1/php.1
 	${INSTALL_DATA_DIR} ${CGIDIR}
-	${LN} -sf ../../bin/php ${CGIDIR}/php
+	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cgi/php ${CGIDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-dist php.ini-recommended ${EGDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/php

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2002/11/01 16:34:36 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/31 19:55:27 jdolecek Exp $
 
 MODNAME=		dba
 CATEGORIES+=		databases
-PKGREVISION=		1
+PKGREVISION=		# empty
 COMMENT=		PHP4 extension for DBM database access
 
 USE_BUILDLINK2=		YES
