@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.343 2004/11/07 15:09:41 minskim Exp $
+# $NetBSD: Makefile,v 1.344 2004/11/07 15:11:30 minskim Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -87,6 +87,7 @@ SUBDIR+=	gifsicle
 SUBDIR+=	giftrans
 SUBDIR+=	gimageview
 SUBDIR+=	gimp
+SUBDIR+=	gimp-warp-sharp
 SUBDIR+=	gimp1
 SUBDIR+=	gimp1-base
 SUBDIR+=	gimp1-data
