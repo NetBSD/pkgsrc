@@ -3,7 +3,8 @@
 # Date created:		25 Jun 1997
 # Whom:			jmz
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:54:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/01/24 21:12:16 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.3 1997/08/15 16:47:08 jmz Exp
 #
 
 DISTNAME=	lile-2.0
@@ -17,8 +18,8 @@ MAINTAINER=	jmz@FreeBSD.org
 MAN1=		ile.1
 
 do-configure:
-	@(cd ${WRKSRC}; mv Makefile Makefile.old; \
-	sed -e s:/usr/local:${PREFIX}: <Makefile.old > Makefile; \
-	echo all: ile >> Makefile; echo CC=cc ${CFLAGS} >> Makefile)
+	@(cd ${WRKSRC}; ${MV} Makefile Makefile.old; \
+	${SED} -e s:/usr/local:${PREFIX}: <Makefile.old > Makefile; \
+	${ECHO} all: ile >> Makefile; ${ECHO} CC=cc ${CFLAGS} >> Makefile)
 
 .include <bsd.port.mk>
