@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2002/03/28 10:11:52 jmc Exp $
+$NetBSD: patch-ae,v 1.5 2002/03/31 08:05:52 jmc Exp $
 
 --- ../gcc-2.95.3/gcc/config/alpha/netbsd.h.orig 2000/07/26 00:18:12 1.1.1.1
 +++ ../gcc-2.95.3/gcc/config/alpha/netbsd.h 2002/01/22 02:09:39 1.8
-@@ -19,17 +19,83 @@
+@@ -19,17 +19,84 @@
  the Free Software Foundation, 59 Temple Place - Suite 330,
  Boston, MA 02111-1307, USA.  */
  
@@ -46,7 +46,8 @@ $NetBSD: patch-ae,v 1.4 2002/03/28 10:11:52 jmc Exp $
 +
 +#undef LINK_SPEC
 +#define LINK_SPEC \
-+ "-m elf64alpha_nbsd \
++ "-m elf64alpha \
++  -e __start \
 +  %{O*:-O3} %{!O*:-O1} \
 +  %{assert*} %{R*} \
 +  %{shared:-shared} \
@@ -91,7 +92,7 @@ $NetBSD: patch-ae,v 1.4 2002/03/28 10:11:52 jmc Exp $
  
  #undef FUNCTION_PROFILER
  #define FUNCTION_PROFILER(FILE, LABELNO)			\
-@@ -37,3 +103,460 @@
+@@ -37,3 +104,460 @@
  
  /* Show that we need a GP when profiling.  */
  #define TARGET_PROFILING_NEEDS_GP
