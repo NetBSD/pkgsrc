@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2002/06/28 09:05:19 seb Exp $
+# $NetBSD: Makefile,v 1.101 2002/09/05 00:13:41 itojun Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -98,7 +98,7 @@ DEPENDS+=		socks5-1.0.2:../../net/socks5
 .endif
 
 # The original Kerberos v4 patches were fetched from
-# http://www.monkey.org/~dugsong/ssh-afs/
+# http://monkey.org/~dugsong/ssh-afs/
 # PATCH_SITES+=		ftp://ftp.monkey.org/pub/users/dugsong/
 # PATCHFILES+=		ssh-1.2.27-afs-kerberos.patch-1
 # MD5 (ssh-1.2.27-afs-kerberos.patch-1) = d440f74958d9c3805b76dbc13e97e87d
