@@ -1,19 +1,25 @@
-$NetBSD: patch-aa,v 1.3 2001/08/21 08:17:39 abs Exp $
+$NetBSD: patch-aa,v 1.4 2002/01/31 04:08:00 jlam Exp $
 
---- Makefile.orig	Sat Jul  1 15:48:50 2000
+--- Makefile.orig	Sat Jul  1 11:48:50 2000
 +++ Makefile
-@@ -12,7 +12,7 @@
+@@ -10,9 +10,9 @@
+ SUBDIRS=libtu
+ LIBS += -L./libtu -ltu -lm $(X11_LIBS) -lX11
  INCLUDES += -I./libtu/include $(X11_INCLUDES)
- DEFINES += -DPREFIX=\"$(PREFIX)\"
+-DEFINES += -DPREFIX=\"$(PREFIX)\"
++DEFINES += -DSYSCONFDIR=\"$(SYSCONFDIR)\"
  CFLAGS += $(XOPEN_SOURCE)
 -TO_REALCLEAN += pwm.1x
 +TO_REALCLEAN += pwm.1
  
  OBJS=	main.o draw.o font.o frame.o event.o clientwin.o thing.o \
  	property.o pointer.o key.o moveres.o cursor.o function.o \
-@@ -23,7 +23,7 @@
+@@ -21,9 +21,9 @@
+ 	binding.o winlist.o mwmhints.o signal.o winprops.o
+ 
  BINDIR=$(PREFIX)/bin
- ETCDIR=$(PREFIX)/etc
+-ETCDIR=$(PREFIX)/etc
++ETCDIR=$(PREFIX)/share/examples
  MANDIR=$(PREFIX)/man/man1
 -DOCDIR=$(PREFIX)/doc
 +DOCDIR=$(PREFIX)/share/doc
