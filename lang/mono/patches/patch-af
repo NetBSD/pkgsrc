@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2003/09/25 16:05:21 recht Exp $
+$NetBSD: patch-af,v 1.2 2003/10/02 08:41:42 recht Exp $
 
---- mono/mini/Makefile.in.orig	2003-08-14 08:00:57.000000000 +0200
-+++ mono/mini/Makefile.in	2003-09-25 01:55:36.000000000 +0200
-@@ -180,6 +180,7 @@
+--- mono/mini/Makefile.in.orig	2003-10-01 18:59:02.000000000 +0200
++++ mono/mini/Makefile.in	2003-10-02 10:25:53.000000000 +0200
+@@ -181,6 +181,7 @@
  	mini-x86.c		\
  	mini-x86.h		\
  	exceptions-x86.c	\
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.1 2003/09/25 16:05:21 recht Exp $
  	tramp-x86.c
  
  
-@@ -268,7 +269,7 @@
+@@ -271,7 +272,7 @@
  	linear-scan.lo aot.lo graph.lo
  am__objects_2 = mini-ppc.lo exceptions-ppc.lo tramp-ppc.lo
  am__objects_3 = mini-sparc.lo exceptions-sparc.lo tramp-sparc.lo
