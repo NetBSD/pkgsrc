@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/12/24 00:19:31 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/12/24 00:43:42 wiz Exp $
 #
 # This Makefile fragment is included by packages that use Xft2.
 #
@@ -9,7 +9,7 @@
 XFT2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			Xft2
-BUILDLINK_DEPENDS.Xft2?=		Xft2>=2.1
+BUILDLINK_DEPENDS.Xft2?=		Xft2>=2.1nb1
 BUILDLINK_PKGSRCDIR.Xft2?=		../../fonts/Xft2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.Xft2=Xft2

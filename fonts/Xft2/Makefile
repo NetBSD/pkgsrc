@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/16 12:08:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/24 00:43:42 wiz Exp $
 #
 
 DISTNAME=	fcpackage.2_1
 PKGNAME=	Xft2-2.1
+PKGREVISION=	1
 CATEGORIES=	fonts x11
 MASTER_SITES=	http://fontconfig.org/release/
 
