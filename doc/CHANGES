@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1972 2003/04/19 01:48:04 jschauma Exp $
+$NetBSD: CHANGES,v 1.1973 2003/04/19 03:06:33 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1651,3 +1651,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated unicon-im to 1.2nb1 [kei 2003-04-18]
 	Updated scmxx to 0.6.3.7 [wiz 2003-04-18]
 	Updated ocaml to 3.06nb1 [jschauma 2003-04-18]
+	Updated pkglint to 3.50 [rh 2003-04-19]
