@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5507 2004/04/10 16:38:49 seb Exp $
+$NetBSD: CHANGES,v 1.5508 2004/04/10 23:32:46 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1879,3 +1879,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added mkvtoolnix-0.8.6 [salo 2004-04-10]
 	Updated mad123 to 0.7.1nb3 [salo 2004-04-10]
 	Updated gcc3-c to 3.3.3nb1 [seb 2004-04-10]
+	Updated gnustep-make to 1.9.1 [rh 2004-04-11]
