@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/09/25 04:00:15 fredb Exp $
+# $NetBSD: Makefile,v 1.11 2000/11/25 23:51:17 kim Exp $
 #
 
 DISTNAME=		isakmpd-000915-snap
@@ -18,5 +18,22 @@ IGNORE+=		"${PKGNAME} requires ipsec-ready NetBSD"
 .endif
 
 ALL_TARGET=		depend all
+
+PLIST_SRC=		${WRKDIR}/PLIST
+
+MANCOMPRESSED=		${MANZ}
+
+pre-install:
+	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	@for OPT in ${MANINSTALL} broken-solaris-needs-this; do \
+	  case $$OPT in \
+	    catinstall) \
+		${CAT} ${PKGDIR}/PLIST.cat >> ${PLIST_SRC}; \
+		;; \
+	    maninstall) \
+		${CAT} ${PKGDIR}/PLIST.man >> ${PLIST_SRC}; \
+		;; \
+	  esac; \
+	done
 
 .include "../../mk/bsd.pkg.mk"

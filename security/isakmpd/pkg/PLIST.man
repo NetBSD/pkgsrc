@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.man,v 1.1 2000/11/25 23:51:18 kim Exp $
+man/man5/isakmpd.conf.5
+man/man5/isakmpd.policy.5
+man/man8/certpatch.8
+man/man8/isakmpd.8
