@@ -1,8 +1,8 @@
-# $NetBSD: builtin.mk,v 1.1 2005/01/13 23:00:06 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2005/01/14 07:47:29 jlam Exp $
 
 _SECURITY_OPENPAM_VERSION_H=	/usr/include/security/openpam_version.h
 
-.if !defined(IS_BUILTIN.openapm)
+.if !defined(IS_BUILTIN.openpam)
 IS_BUILTIN.openpam=	no
 .  if empty(_SECURITY_OPENPAM_VERSION_H:M${LOCALBASE}/*) && \
       exists(${_SECURITY_OPENPAM_VERSION_H})
