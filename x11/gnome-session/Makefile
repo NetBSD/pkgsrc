@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.36 2004/03/26 02:27:59 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2004/04/01 18:48:11 jmmv Exp $
 #
 
-DISTNAME=		gnome-session-2.4.2
-PKGREVISION=		6
+DISTNAME=		gnome-session-2.6.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.4/}
-SITES_gnome-splash-2.4.2.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.6/}
+SITES_gnome-splash-2.6.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
 EXTRACT_SUFX=		.tar.bz2
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.4.2.png
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.6.0.png
 
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
@@ -26,12 +25,14 @@ USE_X11=		yes
 USE_PERL5=		build
 USE_LIBTOOL=		yes
 
+MAKE_ENV+=		REAL_GCONFTOOL="${GCONFTOOL2}"
+
 GCONF2_SCHEMAS= 	gnome-session.schemas
 
 post-extract:
 	${MV} ${WRKSRC}/gnome-session/gnome-splash.png \
 	    ${WRKSRC}/gnome-session/gnome-splash-orig.png
-	${CP} ${DISTDIR}/gnome-splash-2.4.2.png \
+	${CP} ${DISTDIR}/gnome-splash-2.6.0.png \
 	    ${WRKSRC}/gnome-session/gnome-splash.png
 
 post-install:
@@ -45,7 +46,9 @@ post-install:
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/buildlink3.mk"
 .include "../../x11/gnome2-control-center/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
