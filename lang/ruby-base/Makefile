@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/03/16 19:44:30 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/24 14:49:37 taca Exp $
 # FreeBSD Id: ports/lang/ruby/Makefile,v 1.39 2000/10/20 19:56:03 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}base-${RUBY_VERSION}
-PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -33,10 +32,11 @@ EXT_DOCS=	ext/etc/etc.txt ext/etc/etc.txt.ja ext/pty/README \
 		ext/pty/README.expect ext/pty/README.expect.ja \
 		ext/pty/README.ja ext/syslog/syslog.txt
 
-REPLACE_RUBY=	ext/curses/hello.rb ext/curses/rain.rb ext/curses/view.rb \
+REPLACE_RUBY=	bin/irb \
+		ext/curses/hello.rb ext/curses/rain.rb ext/curses/view.rb \
 		lib/matrix.rb sample/biorhythm.rb sample/cal.rb \
 		sample/exyacc.rb sample/from.rb sample/fullpath.rb \
-		sample/goodfriday.rb sample/irb.rb sample/less.rb \
+		sample/goodfriday.rb sample/less.rb \
 		sample/mine.rb sample/mpart.rb sample/observ.rb \
 		sample/pi.rb sample/rcs.rb sample/test.rb \
 		sample/time.rb sample/trojan.rb sample/uumerge.rb
@@ -65,9 +65,6 @@ pre-configure:
 pre-build:
 	@${FIND} ${WRKSRC} -name '*.orig' -exec ${RM} -f {} \;
 
-post-build:
-	${MV} -f ${WRKSRC}/sample/irb.rb ${WRKDIR}/irb.rb
-
 post-install:
 	strip ${RUBY}
 .if empty(RUBY_SUFFIX)
@@ -79,7 +76,7 @@ post-install:
 .endif
 	${LN} -fs ruby${_RUBY_SUFFIX}.1 ${PREFIX}/man/man1/ruby.1
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/irb.rb ${PREFIX}/bin/irb
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/irb ${PREFIX}/bin/irb
 	${INSTALL_DATA} ${WRKSRC}/sample/* ${RUBY_EXAMPLESDIR}
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/curses
 	${INSTALL_DATA} ${RUBY_WRKSRC}/ext/curses/hello.rb \

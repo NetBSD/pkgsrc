@@ -1,14 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/06/30 08:07:10 taca Exp $
+$NetBSD: patch-ae,v 1.2 2003/03/24 14:49:38 taca Exp $
 
---- instruby.rb.orig	Tue May  1 17:43:15 2001
+--- instruby.rb.orig	2002-12-03 01:53:03.000000000 +0900
 +++ instruby.rb
-@@ -76,27 +76,25 @@
- end
- Dir.chdir CONFIG["srcdir"]
- 
--File.install "sample/irb.rb", "#{bindir}/irb", 0755, true
--
- Find.find("lib") do |f|
+@@ -117,21 +117,21 @@ Find.find("lib") do |f|
    next unless /\.rb$/ =~ f || /help-message$/ =~ f
    dir = rubylibdir+"/"+File.dirname(f[4..-1])
    File.makedirs dir, true unless File.directory? dir

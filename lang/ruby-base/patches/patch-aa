@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2002/05/13 15:00:02 yyamano Exp $
+$NetBSD: patch-aa,v 1.5 2003/03/24 14:49:38 taca Exp $
 
---- configure.in.orig	Wed Feb  6 18:13:15 2002
+--- configure.in.orig	2002-11-14 03:59:18.000000000 +0900
 +++ configure.in
-@@ -872,7 +872,7 @@
-     darwin*)
- 	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).$(MAJOR).$(MINOR).$(TEENY).dylib'
- 	LIBRUBY_LDSHARED='cc -dynamiclib -undefined suppress -flat_namespace'
--	LIBRUBY_DLDFLAGS='-install_name lib$(RUBY_INSTALL_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
-+	LIBRUBY_DLDFLAGS='-install_name $(prefix)/lib/lib$(RUBY_INSTALL_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
- 	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_INSTALL_NAME).dylib'
- 	;;
-     *)
-@@ -951,6 +951,7 @@
+@@ -990,6 +990,7 @@ case "$target_os" in
  	;;	
  esac
  

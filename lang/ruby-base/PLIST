@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2003/03/16 19:44:30 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/03/24 14:49:37 taca Exp $
 bin/irb
 bin/ruby
 bin/ruby${_RUBY_SUFFIX}
 lib/lib${RUBY_NAME}.so
-lib/lib${RUBY_NAME}.so.${RUBY_SHLIBMAJOR}
+${RUBY_NOSHLIBMAJOR}lib/lib${RUBY_NAME}.so.${RUBY_SHLIBMAJOR}
 lib/lib${RUBY_NAME}.so.${RUBY_SHLIBVER}
 ${RUBY_ARCHLIBDIR}/config.h
-${RUBY_COMMENT}${RUBY_ARCHLIBDIR}/curses.so
-${RUBY_COMMENT}${RUBY_ARCHLIBDIR}/dbm.so
+${RUBY_NOEXT_CURSES}${RUBY_ARCHLIBDIR}/curses.so
+${RUBY_NOEXT_DBM}${RUBY_ARCHLIBDIR}/dbm.so
 ${RUBY_ARCHLIBDIR}/defines.h
 ${RUBY_ARCHLIBDIR}/dln.h
 ${RUBY_ARCHLIBDIR}/env.h
