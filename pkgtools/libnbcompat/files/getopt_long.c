@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt_long.c,v 1.4 2003/09/03 13:11:14 jlam Exp $	*/
+/*	$NetBSD: getopt_long.c,v 1.5 2003/09/06 04:28:16 grant Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -40,12 +40,14 @@
 #include "nbcompat/nbconfig.h"
 #endif
 
+#include "nbcompat.h"
+
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: getopt_long.c,v 1.4 2003/09/03 13:11:14 jlam Exp $");
+__RCSID("$NetBSD: getopt_long.c,v 1.5 2003/09/06 04:28:16 grant Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 /* #include "namespace.h" */
@@ -57,7 +59,6 @@ __RCSID("$NetBSD: getopt_long.c,v 1.4 2003/09/03 13:11:14 jlam Exp $");
 #endif
 
 #include <errno.h>
-#include <getopt.h>
 #include <stdlib.h>
 #include <string.h>
 
