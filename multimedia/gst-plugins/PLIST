@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.10 2004/10/28 14:22:48 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/01/06 11:25:10 jmmv Exp $
 bin/gst-launch-ext-0.8
 bin/gst-visualise-0.8
 include/gstreamer-0.8/gst/audio/audio.h
 include/gstreamer-0.8/gst/audio/audioclock.h
 include/gstreamer-0.8/gst/audio/gstaudiofilter.h
+include/gstreamer-0.8/gst/audio/multichannel-enumtypes.h
+include/gstreamer-0.8/gst/audio/multichannel.h
 include/gstreamer-0.8/gst/colorbalance/colorbalance-enumtypes.h
 include/gstreamer-0.8/gst/colorbalance/colorbalance.h
 include/gstreamer-0.8/gst/colorbalance/colorbalancechannel.h
@@ -37,6 +39,7 @@ lib/gstreamer-0.8/libgstadder.la
 lib/gstreamer-0.8/libgstalaw.la
 lib/gstreamer-0.8/libgstalpha.la
 lib/gstreamer-0.8/libgstalphacolor.la
+lib/gstreamer-0.8/libgstapetag.la
 lib/gstreamer-0.8/libgstasf.la
 lib/gstreamer-0.8/libgstaudio.la
 lib/gstreamer-0.8/libgstaudioconvert.la
@@ -54,6 +57,7 @@ lib/gstreamer-0.8/libgstdecodebin.la
 lib/gstreamer-0.8/libgstdeinterlace.la
 lib/gstreamer-0.8/libgstefence.la
 lib/gstreamer-0.8/libgsteffectv.la
+lib/gstreamer-0.8/libgstequalizer.la
 lib/gstreamer-0.8/libgstfestival.la
 lib/gstreamer-0.8/libgstffmpegcolorspace.la
 lib/gstreamer-0.8/libgstfilter.la
@@ -100,6 +104,7 @@ lib/gstreamer-0.8/libgstswitch.la
 lib/gstreamer-0.8/libgstsynaesthesia.la
 lib/gstreamer-0.8/libgsttagedit.la
 lib/gstreamer-0.8/libgsttcp.la
+lib/gstreamer-0.8/libgsttta.la
 lib/gstreamer-0.8/libgsttypefindfunctions.la
 lib/gstreamer-0.8/libgstudp.la
 lib/gstreamer-0.8/libgstvbidec.la
@@ -140,6 +145,8 @@ ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gst-plugins-0.8.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gst-plugins-0.8.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gst-plugins-0.8.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gst-plugins-0.8.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gst-plugins-0.8.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gst-plugins-0.8.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gst-plugins-0.8.mo
 ${PKGLOCALEDIR}/locale/or/LC_MESSAGES/gst-plugins-0.8.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gst-plugins-0.8.mo
