@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1.1.1 2002/12/30 17:39:27 sommerfeld Exp $
+
+--- server/kstuff.c.orig	Tue Apr 10 19:28:20 2001
++++ server/kstuff.c
+@@ -124,6 +124,9 @@ SendKerberosData(fd, ticket, service, ho
+     char p[32];
+     int written;
+     int size_to_write;
++#ifdef ERROR_TABLE_BASE_krb
++#define krb_err_base ERROR_TABLE_BASE_krb
++#endif
+ 
+     rem = krb_mk_req(ticket, service, host, ZGetRealm(), (u_long) 0);
+     if (rem != KSUCCESS)

@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/12/30 17:39:26 sommerfeld Exp $
+
+SHA1 (zephyr-20010518.tar.gz) = cd2fca9c2f0bfaa8e69c94813bedc87d66d3ac1c
+Size (zephyr-20010518.tar.gz) = 342259 bytes
+SHA1 (patch-aa) = f4338f0da9085e1780c52c9b2be2366b7a0f22c2
+SHA1 (patch-ab) = 61cbadf511806c1c16e489ac6d14de347b09277a
+SHA1 (patch-ac) = db350fc16d88818d4cce287fad220a2c3e84dabe
+SHA1 (patch-ad) = b0f8c408afc2e7fe9a673a5f2ec562a3e34e225c
+SHA1 (patch-ae) = 76b4a43282f3d8d8d42d72f66c677a652ff33e22
+SHA1 (patch-af) = 4ebb22fa3c1b2ed351ee267be737d34d8292129c
+SHA1 (patch-ag) = 6aa65ab0183ddce7418802664ef4fd7f41662923
+SHA1 (patch-ah) = 8282d416d24eafcb40ead93d4c376f1e8e80b207

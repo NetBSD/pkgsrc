@@ -1,0 +1,6 @@
+This is the Project Athena Zephyr notification system 2001/05/28
+snapshot. 
+
+Zephyr allows users to send messages to other users or to groups of
+users. Users can view incoming Zephyr messages as windowgrams
+(transient X windows) or as text on a terminal.

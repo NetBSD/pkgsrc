@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/12/30 17:39:26 sommerfeld Exp $
+
+--- clients/zctl/zctl.c.orig	Thu Aug 12 20:19:38 1999
++++ clients/zctl/zctl.c
+@@ -12,7 +12,7 @@
+ 
+ #include <sysdep.h>
+ #include <zephyr/zephyr.h>
+-#include <ss/ss.h>
++#include <ss.h>
+ #include <com_err.h>
+ #include <pwd.h>
+ #include <netdb.h>
