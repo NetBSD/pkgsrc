@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/11/26 06:50:28 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/07/05 07:05:49 tron Exp $
 #
 
 DISTNAME=	Apache-ASP-2.21
@@ -20,7 +20,7 @@ DEPENDS+=	p5-HTML-Clean>=0.8:../../www/p5-HTML-Clean
 DEPENDS+=	p5-HTML-FillInForm>=0.8:../../www/p5-HTML-FillInForm
 DEPENDS+=	p5-MLDBM>=2.00:../../databases/p5-MLDBM
 DEPENDS+=	p5-MLDBM-Sync>=0.15:../../databases/p5-MLDBM-Sync
-DEPENDS+=	p5-Time-HiRes>=01.20:../../devel/p5-Time-HiRes
+DEPENDS+=	p5-Time-HiRes>=01.20:../../time/p5-Time-HiRes
 DEPENDS+=	p5-XML-XSLT>=0.32:../../textproc/p5-XML-XSLT
 DEPENDS+=	p5-libwww>=5.48:../../www/p5-libwww
 
