@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1919 2003/04/12 14:45:22 martti Exp $
+$NetBSD: CHANGES,v 1.1920 2003/04/12 15:41:05 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1570,3 +1570,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mew3 to 3.2 [uebayasi 2003-04-12]
 	Updated leim to 21.3 [wiz 2003-04-12]
 	Updated bins to 1.1.21nb1 [martti 2003-04-12]
+	Updated p5-MIME-Base64 to 2.18 [martti 2003-04-12]
+	Updated p5-HTML-Parser to 3.27 [martti 2003-04-12]
+	Updated p5-Storable to 2.06 [martti 2003-04-12]
