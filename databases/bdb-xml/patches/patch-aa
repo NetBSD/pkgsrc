@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/31 17:15:58 minskim Exp $
+
+--- ../dist/configure.orig	2003-12-21 17:51:52.000000000 -0600
++++ ../dist/configure
+@@ -3443,14 +3443,14 @@ echo "${ECHO_T}$with_berkeleydb" >&6
+ if test "$with_berkeleydb" = "no"; then
+ 	with_berkeleydb="/usr/local/BerkeleyDB.4.2"
+ fi
+-if test `ls "$with_berkeleydb"/lib/libdb_cxx-*.la 2>/dev/null | wc -l` -gt 0 ; then
++if test `ls "$with_berkeleydb"/lib/libdb4_cxx-*.la 2>/dev/null | wc -l` -gt 0 ; then
+ 	echo "$as_me:$LINENO: checking for Berkeley DB version from install tree" >&5
+ echo $ECHO_N "checking for Berkeley DB version from install tree... $ECHO_C" >&6
+-	db_version=`ls "$with_berkeleydb"/lib/libdb_cxx-*.la | sed 's/.*db_cxx-\(.*\).la/\1/'`
++	db_version=`ls "$with_berkeleydb"/lib/libdb4_cxx-*.la | sed 's/.*db4_cxx-\(.*\).la/\1/'`
+ 	echo "$as_me:$LINENO: result: $db_version" >&5
+ echo "${ECHO_T}$db_version" >&6
+-	echo "$CPPFLAGS" | grep "$with_berkeleydb/include" >/dev/null 2>&1 || CPPFLAGS="$CPPFLAGS -I$with_berkeleydb/include"
+-	LIBS="$LIBS $with_berkeleydb/lib/libdb_cxx-$db_version.la"
++	echo "$CPPFLAGS" | grep "$with_berkeleydb/include/db4" >/dev/null 2>&1 || CPPFLAGS="$CPPFLAGS -I$with_berkeleydb/include/db4"
++	LIBS="$LIBS $with_berkeleydb/lib/libdb4_cxx-$db_version.la"
+ 
+ 	# find test lib locations, if specified, and possible
+ 	# it could be safer to require that --with-berkelydb point to a build
+@@ -19369,7 +19369,7 @@ echo "${ECHO_T}$JMODSUFFIX" >&6
+ INSTALLER="\$(LIBTOOL) --mode=install cp -p"
+ 
+ MAKEFILE_CC="\$(LIBTOOL) --mode=compile ${MAKEFILE_CC}"
+-MAKEFILE_SOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK} -avoid-version"
++MAKEFILE_SOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
+ MAKEFILE_CCLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CCLINK}"
+ MAKEFILE_CXX="\$(LIBTOOL) --mode=compile ${MAKEFILE_CXX}"
+ MAKEFILE_XSOLINK="\$(LIBTOOL) --mode=link ${MAKEFILE_CXXLINK} -avoid-version"
