@@ -3,7 +3,7 @@
 # Copyright (c) 2002, 2003 by Andrew Brown <atatat@netbsd.org>
 # Absolutely no warranty.
 
-# $NetBSD: pkgdepgraph.pl,v 1.6 2003/03/25 18:21:20 atatat Exp $
+# $NetBSD: pkgdepgraph.pl,v 1.7 2003/03/26 04:50:19 atatat Exp $
 # pkgdepgraph: @DISTVER@
 
 use strict;
@@ -326,8 +326,7 @@ if ($delete) {
 ## leaf pkgs.
 ##
 if ($fetch) {
-    printf("MAKE=\"$make\"\nexport MAKE\n");
-    map(print("( cd $pkgsrcdir/$where{$_} && \${MAKE} fetch ) &&\n"),
+    map(print("( cd $pkgsrcdir/$where{$_} && $make fetch ) &&\n"),
 	grep(color($_) eq "red", @pkgs));
     print("true\n");
     exit(0);
@@ -341,14 +340,13 @@ if ($fetch) {
 ##
 if ($rebuild) {
     printf("PKG_PATH=\"$packages\"\nexport PKG_PATH\n") if ($pkgadd);
-    printf("MAKE=\"$make\"\nexport MAKE\n") if (!$pkgadd);
 
     map($pkgadd ?
 	printf("( pkg_info -qe %s || pkg_add %s.tgz ) &&\n",
 	       /(.*)-.*/, ($need{$_} || $_)) :
-	printf("( pkg_info -qe %s || ( cd %s && \${MAKE} %s%s )) &&\n",
+	printf("( pkg_info -qe %s || ( cd %s && $make %s%s )) &&\n",
 	       /(.*)-.*/, "$pkgsrcdir/$where{$_}",
-	       $rebuild, $clean ? " && \${MAKE} $clean" : ""),
+	       $rebuild, $clean ? " && $make $clean" : ""),
 	grep(color($_) ne "green" && $ord{$_} == 1, @pkgs));
     print("true\n");
     exit(0);
