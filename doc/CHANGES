@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1132 2003/01/15 21:06:32 wiz Exp $
+$NetBSD: CHANGES,v 1.1133 2003/01/15 22:50:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -277,3 +277,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated postfix to 2.0.2 [martti 2003-01-15]
 	Updated gdk-pixbuf to 0.22 [wiz 2003-01-15]
 	Updated gdk-pixbuf-gnome to 0.22 [wiz 2003-01-15]
+	Updated cvs to 1.11.4 [wiz 2003-01-16]

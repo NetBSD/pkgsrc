@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.188 2003/01/15 21:06:50 wiz Exp $
+$NetBSD: TODO,v 1.189 2003/01/15 22:50:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -93,7 +93,6 @@ Suggested package updates
 	o crossfire-1.4.0
 	o ctwm-3.6
 	o curl-7.10.3
-	o cvs-1.11.4
 	o dante-1.1.13
 	o db4-4.1.25
 	o dctc-0.84.0
