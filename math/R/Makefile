@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2004/11/18 12:31:29 markd Exp $
+# $NetBSD: Makefile,v 1.60 2005/01/12 15:32:00 jlam Exp $
 
 DISTNAME=		R-2.0.1
 CATEGORIES=		math
@@ -51,7 +51,6 @@ CONFIGURE_ENV+=		ac_cv_lib_blas_dgemm_=yes
 # Pass the Fortran compiler to the configure script in case it's overridden
 # by the package builder.
 #
-USE_FORTRAN=		# defined
 USE_LANGUAGES=		c fortran
 
 # Package assumes it can append to files (specifically DESCRIPTION) that have
