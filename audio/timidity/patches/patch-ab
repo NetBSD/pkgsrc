@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 1998/08/07 10:36:14 agc Exp $
+$NetBSD: patch-ab,v 1.6 1999/06/23 16:32:04 kleink Exp $
 
 --- Makefile.orig	Sun May 26 05:26:46 1996
 +++ Makefile	Sat Mar  7 13:55:24 1998
@@ -69,7 +69,7 @@ $NetBSD: patch-ab,v 1.5 1998/08/07 10:36:14 agc Exp $
 -EXTRAINCS += -I/usr/include/ncurses
 -EXTRALIBS += -lncurses
 +EXTRAINCS += -I${PREFIX}/include
-+EXTRALIBS += -L${PREFIX}/lib -lncurses
++EXTRALIBS += -L${PREFIX}/lib -lncurses -Wl,-R${PREFIX}/lib
  
  ## Select the S-Lang full-screen interface
  #SYSTEM += -DIA_SLANG
