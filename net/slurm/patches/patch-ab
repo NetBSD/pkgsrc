@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/03/04 16:22:06 hubertf Exp $
+
+--- slurm.c.orig	Mon Feb 24 19:57:27 2003
++++ slurm.c
+@@ -107,7 +107,11 @@
+ #include <time.h>
+ #include <ctype.h>
+ #include <signal.h>
+-#include <curses.h>
++#ifdef _HAVE_NCURSES
++#  include <ncurses.h>
++#else
++#  include <curses.h>
++#endif
+ #include <sys/wait.h>
+ #include <sys/stat.h>
+ #include <sys/ioctl.h>
