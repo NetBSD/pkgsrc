@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/06/29 23:42:46 recht Exp $
+
+--- ../src/scrn.c.orig	1998-08-12 16:32:02.000000000 +0200
++++ ../src/scrn.c	2004-06-30 01:38:04.000000000 +0200
+@@ -33,7 +33,7 @@
+ #ifdef TIOCGWINSZ
+ 			struct winsize win;
+ 
+-			if (ioctl(STDERR_FILENO, TIOCGWINSZ, &win) == -1) {
++			if (ioctl(STDERR_FILENO, TIOCGWINSZ, &win) != -1) {
+ 				rows = win.ws_row;
+ 				cols = win.ws_col;
+ 			}
