@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.265 2002/10/23 12:21:29 wiz Exp $
+# $NetBSD: Packages.txt,v 1.266 2002/10/23 19:21:18 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1567,144 +1567,109 @@ perform the equivalent of:
       it was built
 
 
- 8 buildlink.mk methodology
- ==========================
+ 8 buildlink2 methodology
+ ========================
 
-Many packages that install libraries and headers for use in other packages
-now have buildlink.mk files in their pkgsrc subdirectory.  The purpose of
-these files is two-fold:
+"buildlink2" is a pkgsrc framework that controls what headers and libraries
+are seen by a package's configure and build processes.  This is implemented
+in a two step process:
 
- (1) Cause all headers and libraries used by a particular package to be
-     found in a known location during the configure and build process.
-     These packages are said to be "weakly-buildlinked".
+ (1) Symlink headers and libraries for dependencies into ${BUILDLINK_DIR},
+     which by default is a subdirectory of ${WRKDIR};
 
- (2) Cause _only_ those headers and libraries used by a particular package
-     to be found during the configure and build process.
-     These packages are said to be "strongly-buildlinked".
+ (2) Create wrapper scripts that are used in place of the normal compiler
+     tools that translate -I${LOCALBASE}/include and -L${LOCALBASE}/lib
+     into references into ${BUILDLINK_DIR}.
 
-
- 8.1 Using buildlink.mk files
- ============================
-
-Goal (1) is accomplished by simply including the buildlink.mk file of a
-dependency in the package's Makefile, which does the following:
-
- (1a) Adds a DEPENDS or BUILD_DEPENDS line for the package;
-
- (1b) Creates a directory ${BUILDLINK_DIR}, by default set to a
-      subdirectory of ${WRKDIR};
-
- (1c) Links all the headers and libraries for that dependency into
-      ${BUILDLINK_DIR}/include and ${BUILDLINK_DIR}/lib, respectively;
-
- (1d) Prepends -I${BUILDLINK_DIR}/include to CPPFLAGS, CFLAGS, CXXFLAGS,
-      and -L${BUILDLINK_DIR}/lib to LDFLAGS;
-
- (1e) Creates a wrapper script for GTK+-style config scripts, often found
-      in GNOME software, that translates -I${LOCALBASE}/include and
-      -L${LOCALBASE}/lib into references into ${BUILDLINK_DIR}.
-
-Some packages are for software libraries whose functionality is a part of
-recent released versions of NetBSD, e.g. readline, OpenSSL, and ncurses.
-For those packages, the buildlink.mk files link the appropriate system
-headers and libraries into ${BUILDLINK_DIR} so that goal (1) is still met.
-Where possible, the system headers and libraries are renamed when linked
-into ${BUILDLINK_DIR} to match the names of their pkgsrc counterparts so
-that the files may be referenced under a consistent name.
-
-Goal (2) requires some work on the part of the package builder.  As all
-headers and libraries used by a package may be found in ${BUILDLINK_DIR},
-and -I${BUILDLINK_DIR}/include and -L${BUILDLINK_DIR}/lib are already passed
-to the compiler, it is no longer necessary to pass -I${LOCALBASE}/include or
--L${LOCALBASE}/lib to the compiler.  Therefore, those lines should be removed
-from package Makefiles, and where necessary, the package sources should be
-patched to do the same.  Also, if a package uses X11, then by including
-mk/x11.buildlink.mk, -I${BUILDLINK_X11_DIR}/include and
--L${BUILDLINK_X11_DIR}/lib are also passed to the compiler instead of the
-corresponding directories in ${X11BASE}.  Also, if USE_BUILDLINK_ONLY is
-defined, then -L${LOCALBASE}/lib is not automatically added to LDFLAGS in
-bsd.pkg.mk.
+This normalizes the environment in which a package is built so that the
+package may be built consistently despite what may other software may
+installed.
 
 
- 8.2 Writing buildlink.mk files
- ==============================
+ 8.1 Converting packages to use buildlink2
+ =========================================
 
-Most of the work done by buildlink.mk files is encapsulated and shared
-through bsd.buildlink.mk, which is included by packages' buildlink.mk files.
-Please see the comments at the top of bsd.buildlink.mk for complete
-documentation on how to use the file.  A simple example of a buildlink.mk
-for a mythical package foo follows:
+The process of converting packages to use the buildlink2 framework is
+fairly straightforward.  The package Makefile must define USE_BUILDLINK2.
+If a dependency on a particular package, e.g.  foo, is required for its
+libraries and headers, then we replace:
 
-	.include "../../mk/bsd.buildlink.mk"
-	
-	BUILDLINK_DEPENDS.foo?=	foo>=1.0
-	DEPENDS+=			${BUILDLINK_DEPENDS.foo}:../../category/foo
-	
-	EVAL_PREFIX+=			BUILDLINK_PREFIX.foo=foo
-	BUILDLINK_FILES.foo=		include/foo.h
-	BUILDLINK_FILES.foo+=		include/bar.h
-	BUILDLINK_FILES.foo+=		lib/libfoo.*
-	
-	# We need the libraries to be called "libbar.*".
-	BUILDLINK_TRANSFORM.foo=	-e "s|libfoo|libbar|g"
-	
-	BUILDLINK_TARGETS+=		foo-buildlink
-	
-	pre-configure: foo-buildlink
+	DEPENDS+=	foo>=1.1.0:../../category/foo
+with
+	.include "../../category/foo/buildlink2.mk"
+
+There are several buildlink2.mk files in pkgsrc/mk that handle special
+circumstances.
+
+ (*) motif.buildlink2.mk checks for a system-provided Motif installation
+     or adds a dependency on x11/lesstif or x11/openmotif;
+
+ (*) ossaudio.buildlink2.mk defines several variables that may be used by
+     packages that use the Open Sound System (OSS) API;
+
+ (*) pthread.buildlink2.mk uses the value of PTHREAD_OPTS and checks for
+     native pthreads or adds a dependency on devel/pth as needed;
+
+ (*) xaw.buildlink2.mk uses the value of XAW_TYPE to choose a particular
+     Athena widgets library.
+
+The comments in those buildlink2.mk files provide a more complete
+description of how to use them properly.
+
+
+ 8.2 Writing buildlink2.mk files
+ =============================== 
+
+A simple example of a buildlink2.mk file for a mythical package foo
+follows:
+
+	BUILDLINK_PACKAGES+=          foo
+	BUILDLINK_PKGBASE.foo=        foo
+	BUILDLINK_DEPENDS.foo?=       foo>=1.0
+	BUILDLINK_PKGSRCDIR.foo?=     ../../category/foo
+
+	EVAL_PREFIX+=                 BUILDLINK_PREFIX.foo=foo
+	BUILDLINK_PREFIX.foo_DEFAULT= ${LOCALBASE}
+	BUILDLINK_FILES.foo=          include/foo.h
+	BUILDLINK_FILES.foo+=         include/bar.h
+	BUILDLINK_FILES.foo+=         lib/libfoo.*
+
+	BUILDLINK_TARGETS+=           foo-buildlink
+
 	foo-buildlink: _BUILDLINK_USE
 
+The first section controls how the dependency on foo is added.  The
+dependency is constructed from four parts:
 
- 8.3 Converting packages to use buildlink.mk files
- =================================================
+ (1) BUILDLINK_PACKAGES is the global list of packages for which
+     dependencies will be added by buildlink2;
 
-The process of converting existing packages to use the buildlink.mk
-infrastructure is fairly straightforward.  If a dependency on a particular
-package is required for its libraries and headers, then rather than
-directly adding a dependency on that package, include that package's
-buildlink.mk instead.  The following variables may also be replaced with
-buildlink.mk files:
+ (2) BUILDLINK_DEPENDS.foo is the actual dependency recorded in the
+     installed package;
 
-    USE_X11	-->	.include "../../mk/x11.buildlink.mk"
+ (3) BUILDLINK_PKGSRCDIR.foo is the location of the foo pkgsrc
+     directory;
 
-Packages that have an explicit dependency on ncurses should set USE_NCURSES
-to the reason why the system curses is insufficient, and include
-"../../devel/ncurses/buildlink.mk" afterwards.  This helps to identify
-where the system curses differs from ncurses, and when the development of
-the system curses catches up in functionality, the USE_NCURSES setting may
-be removed.
+ (4) BUILDLINK_DEPMETHOD.foo (not shown above) controls whether we use
+     BUILD_DEPENDS or DEPENDS to add the foo dependency, where the
+     full dependency is added if BUILDLINK_DEPMETHOD.foo contains "full".
 
-Package that need a Motif-1.2-compatible installation should define
-USE_MOTIF12, otherwise assume the need for a Motif-2.0-compatible
-installation.  If MOTIFBASE or MOTIF12BASE is set, then it is assumed that
-they point to valid 2.0-compatible or 1.2-compatible Motif, respectively.
+The second section controls which files are linked into ${BUILDLINK_DIR}:
 
-Packages that use OpenSSL that require a specific version of OpenSSL should
-define USE_OPENSSL_VERSION to the minimum version number required prior to
-including "../../security/openssl/buildlink.mk".  The version number is the
-hexadecimal number found in <openssl/opensslv.h>, or the variables
-OPENSSL_VERSION_{095A,096,096A,096B} may be used.
+ (1) BUILDLINK_PREFIX.foo is the installation prefix of the package which
+     we derive by using EVAL_PREFIX;
 
-The use of EVAL_PREFIX to find the installation prefix for packages may be
-removed since references to package library and header files are found
-through ${BUILDLINK_DIR}.  If the required dependency pattern for a package
-differs from the default specified in the package's buildlink.mk file, then
-it may be set by defining BUILDLINK_DEPENDS.<pkgname> in the Makefile to
-the dependency pattern required.
+ (2) BUILDLINK_FILES.foo is a list of files (shell globs allowed) relative
+     to the BUILDLINK_PREFIX.foo directory and will be symlinked into
+     ${BUILDLINK_DIR};
 
-Packages will still need LDFLAGS to be set to include the appropriate rpath
-settings in order for built packages to find libraries.  LDFLAGS should
-still contain -Wl,-R${LOCALBASE}/lib, and -Wl,-R${X11BASE}/lib if the
-package requires the X11 libraries.  -Wl,-R should never refer to a
-${BUILDLINK_DIR} library directory, and all such references should be
-purged from the build.
+ (3) BUILDLINK_FILES_CMD.foo (not shown above) is a shell pipeline that
+     outputs a list of files relative to the BUILDLINK_PREFIX.foo
+     directory and will be symlinked into ${BUILDLINK_DIR}.
 
-A package that builds correctly with USE_BUILDLINK_ONLY set should have
-that setting added to its Makefile to note that it doesn't use any
-libraries or headers in ${LOCALBASE} directly, but rather references them
-only through ${BUILDLINK_DIR}.  Note that you MUST check the build output
-to verify that no references to ${LOCALBASE} directories occurred during
-the configure or build process, or else the package cannot be marked as
-USE_BUILDLINK_ONLY.
+The remaining parts create the foo-buildlink target that actually performs
+the symlinking and adds the foo-buildlink target to BUILDLINK_TARGETS,
+which is the global list of targets to execute at do-buildlink time.
 
 
  9 Debugging
@@ -1958,7 +1923,7 @@ active transfers.
 Your package may depend on some other package being present - and there are
 various ways of expressing this dependency. NetBSD supports the
 BUILD_DEPENDS and DEPENDS definitions, as well as dependencies via
-buildlink.mk (see section 8).
+buildlink2.mk (see section 8).
 
 The basic difference between the two definitions is as follows: The
 DEPENDS definition registers that pre-requisite in the binary package,
@@ -2168,13 +2133,10 @@ unconditionally prevent users from generating binary packages!
 Some packages need curses functionality that wasn't present in NetBSD's own
 curses prior to 1.4Y.
 
-If ../../devel/ncurses/buildlink.mk is included in a package's Makefile,
+If ../../devel/ncurses/buildlink2.mk is included in a package's Makefile,
 then a curses library and headers with ncurses functionality are linked
-into ${BUILDLINK_DIR} at pre-configure time.  If ncurses is needed, then a
-dependency on ncurses is added to the package, otherwise, if the system
-curses is sufficient, then the library and headers are linked into
-${BUILDLINK_DIR} with ncurses names.  If ncurses is actually required, then
-define USE_NCURSES in the package's Makefile.
+into ${BUILDLINK_DIR} at pre-configure time.  If ncurses is actually
+required, then define USE_NCURSES in the package's Makefile.
 
 
  10.21 Automated security check
