@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5424 2004/04/02 18:05:01 jmmv Exp $
+$NetBSD: CHANGES,v 1.5425 2004/04/02 18:19:36 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1752,3 +1752,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gdm to 2.6.0.0nb1 [jmmv 2004-04-02]
 	Updated gaim to 0.76 [jmmv 2004-04-02]
 	Updated pkg_comp to 1.18 [jmmv 2004-04-02]
+	Updated libsoup to 1.99.28 [recht 2004-04-02]
+	Added libsoup-devel-2.1.8 [recht 2004-04-02]
+	Updated gal2 to 1.99.11 [recht 2004-04-02]
+	Updated gtkhtml3 to 3.0.10 [recht 2004-04-02]
