@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/01 17:21:39 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/24 22:33:22 drochner Exp $
 #
 
 DISTNAME=	SOAPpy097
@@ -13,6 +13,7 @@ COMMENT=	SOAP implementation
 
 NO_BUILD=	#yes
 PY_PATCHPLIST=	#yes
+USE_BUILDLINK2=	yes
 
 # XXX hack to get rid of RCS keywords in patch files
 post-extract:
@@ -23,6 +24,6 @@ post-extract:
 do-install:
 	${CP} ${WRKSRC}/SOAP.py ${PREFIX}/${PYSITELIB}
 
-.include "../../textproc/pyxml/buildlink.mk"
+.include "../../textproc/pyxml/buildlink2.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
