@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/26 19:54:15 proff Exp $
+include/avcall.h
+include/vacall.h
+include/trampoline.h
+include/vacall_r.h
+include/trampoline_r.h
+include/callback.h
+lib/libavcall.la
+lib/libavcall.a
+lib/libvacall.a
+lib/libtrampoline.a
+lib/libcallback.la
+lib/libcallback.a
+man/man3/avcall.3
+man/man3/vacall.3
+man/man3/trampoline.3
+man/man3/trampoline_r.3
+man/man3/callback.3
+share/html/avcall.html
+share/html/vacall.html
+share/html/trampoline.html
+share/html/trampoline_r.html
+share/html/callback.html
