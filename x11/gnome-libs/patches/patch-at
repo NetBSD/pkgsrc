@@ -1,13 +1,12 @@
-$NetBSD: patch-at,v 1.1 2001/06/16 20:04:51 jlam Exp $
+$NetBSD: patch-at,v 1.2 2002/03/24 19:53:47 rh Exp $
 
---- libgnorba/Makefile.in.orig	Fri Mar 16 14:47:35 2001
-+++ libgnorba/Makefile.in	Sat Jun 16 09:02:25 2001
-@@ -153,7 +153,7 @@
- 
- EXTRA_DIST = yes.xpm no.xpm
- 
--INCLUDES =  	-I.. 							-I$(srcdir)/..						$(SUPPORTINCS) 						-I$(includedir) 				        $(GNOME_INCLUDES)  					$(ORBIT_CFLAGS) 					$(GLIB_INCLUDES) 					$(AUDIOFILE_CFLAGS) $(ESD_CFLAGS) 			$(GDK_IMLIB_CFLAGS)					-DGNOMEBINDIR=$(bindir) 				-DGNOMESYSCONFDIR=\"$(sysconfdir)\" 			-DVERSION=\""$(VERSION)"\"
-+INCLUDES =  	-I.. 							-I$(srcdir)/..						$(SUPPORTINCS) 						$(GNOME_INCLUDES)  					$(ORBIT_CFLAGS) 					$(GLIB_INCLUDES) 					$(AUDIOFILE_CFLAGS) $(ESD_CFLAGS) 			$(GDK_IMLIB_CFLAGS)					-DGNOMEBINDIR=$(bindir) 				-DGNOMESYSCONFDIR=\"$(sysconfdir)\" 			-DVERSION=\""$(VERSION)"\"
- 
- 
- gnome_factory_built =  	gnome-factory.h 					gnome-factory-skels.c 					gnome-factory-stubs.c 					gnome-factory-common.c
+--- libgnorba/Makefile.in.orig	Fri Jan 25 09:58:19 2002
++++ libgnorba/Makefile.in
+@@ -163,7 +163,6 @@
+ 	-I.. 						\
+ 	-I$(srcdir)/..					\
+ 	$(SUPPORTINCS) 					\
+-	-I$(includedir) 				\
+         $(GNOME_INCLUDES)  				\
+ 	$(ORBIT_CFLAGS) 				\
+ 	$(GLIB_INCLUDES) 				\

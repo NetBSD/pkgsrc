@@ -1,13 +1,13 @@
-$NetBSD: patch-au,v 1.1 2001/06/16 20:04:51 jlam Exp $
+$NetBSD: patch-au,v 1.2 2002/03/24 19:53:47 rh Exp $
 
---- test-gnome/Makefile.in.orig	Fri Mar 16 14:47:36 2001
-+++ test-gnome/Makefile.in	Sat Jun 16 09:03:03 2001
-@@ -144,7 +144,7 @@
- l = @l@
- need_gnome_support = @need_gnome_support@
+--- test-gnome/Makefile.in.orig	Fri Jan 25 09:58:22 2002
++++ test-gnome/Makefile.in
+@@ -146,7 +146,7 @@
  
--INCLUDES = -I.. -I$(srcdir)/.. $(SUPPORTINCS) 	-I$(top_srcdir)/intl -I$(top_builddir)/intl 	-I$(includedir) $(GDK_IMLIB_CFLAGS) 	-DGNOMELOCALEDIR=\""$(gnomelocaledir)"\" 	-DLOCALEDIR=\""$(gnomelocaledir)"\"
-+INCLUDES = -I.. -I$(srcdir)/.. $(SUPPORTINCS) 	-I$(top_srcdir)/intl -I$(top_builddir)/intl 	$(GDK_IMLIB_CFLAGS) 	-DGNOMELOCALEDIR=\""$(gnomelocaledir)"\" 	-DLOCALEDIR=\""$(gnomelocaledir)"\"
+ INCLUDES = -I.. -I$(srcdir)/.. $(SUPPORTINCS) \
+ 	-I$(top_srcdir)/intl -I$(top_builddir)/intl \
+-	-I$(includedir) $(GDK_IMLIB_CFLAGS) \
++	$(GDK_IMLIB_CFLAGS) \
+ 	-DGNOMELOCALEDIR=\""$(gnomelocaledir)"\" \
+ 	-DLOCALEDIR=\""$(gnomelocaledir)"\"
  
- 
- noinst_PROGRAMS = test-gnome

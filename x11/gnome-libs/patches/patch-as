@@ -1,13 +1,13 @@
-$NetBSD: patch-as,v 1.1 2001/06/16 20:04:51 jlam Exp $
+$NetBSD: patch-as,v 1.2 2002/03/24 19:53:46 rh Exp $
 
---- libgnomeui/Makefile.in.orig	Fri Mar 16 14:47:30 2001
-+++ libgnomeui/Makefile.in	Sat Jun 16 09:01:07 2001
-@@ -158,7 +158,7 @@
- #
- libgnomeuiincludedir = $(includedir)/libgnomeui
+--- libgnomeui/Makefile.in.orig	Fri Jan 25 09:58:10 2002
++++ libgnomeui/Makefile.in
+@@ -160,7 +160,7 @@
  
--INCLUDES = -I.. -I$(srcdir)/.. $(SUPPORTINCS) 	-I$(top_srcdir)/intl -I$(top_builddir)/intl 	-I$(includedir) $(GDK_IMLIB_CFLAGS) 	$(AUDIOFILE_CFLAGS) $(ESD_CFLAGS)         -DGNOMELIBDIR=\""$(libdir)"\"         -DGNOMEDATADIR=\""$(datadir)"\"         -DGNOMEBINDIR=\""$(bindir)"\"         -DGNOMELOCALSTATEDIR=\""$(localstatedir)"\"         -DGNOMELOCALEDIR=\""$(gnomelocaledir)"\" 	-DG_LOG_DOMAIN=\"GnomeUI\"
-+INCLUDES = -I.. -I$(srcdir)/.. $(SUPPORTINCS) 	-I$(top_srcdir)/intl -I$(top_builddir)/intl 	$(GDK_IMLIB_CFLAGS) 	$(AUDIOFILE_CFLAGS) $(ESD_CFLAGS)         -DGNOMELIBDIR=\""$(libdir)"\"         -DGNOMEDATADIR=\""$(datadir)"\"         -DGNOMEBINDIR=\""$(bindir)"\"         -DGNOMELOCALSTATEDIR=\""$(localstatedir)"\"         -DGNOMELOCALEDIR=\""$(gnomelocaledir)"\" 	-DG_LOG_DOMAIN=\"GnomeUI\"
- 
- 
- EXTRA_HEADERS = 
+ INCLUDES = -I.. -I$(srcdir)/.. $(SUPPORTINCS) \
+ 	-I$(top_srcdir)/intl -I$(top_builddir)/intl \
+-	-I$(includedir) $(GDK_IMLIB_CFLAGS) \
++	$(GDK_IMLIB_CFLAGS) \
+ 	$(AUDIOFILE_CFLAGS) $(ESD_CFLAGS) \
+         -DGNOMELIBDIR=\""$(libdir)"\" \
+         -DGNOMEDATADIR=\""$(datadir)"\" \

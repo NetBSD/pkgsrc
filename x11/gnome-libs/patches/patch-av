@@ -1,13 +1,12 @@
-$NetBSD: patch-av,v 1.1 2001/06/16 20:04:52 jlam Exp $
+$NetBSD: patch-av,v 1.2 2002/03/24 19:53:48 rh Exp $
 
---- test-suite/tests/Makefile.in.orig	Fri Mar 16 14:47:37 2001
-+++ test-suite/tests/Makefile.in	Sat Jun 16 09:29:35 2001
-@@ -146,7 +146,7 @@
+--- test-suite/tests/Makefile.in.orig	Fri Jan 25 09:58:24 2002
++++ test-suite/tests/Makefile.in
+@@ -150,7 +150,6 @@
+ 	-I$(top_builddir) -I$(top_srcdir)	\
+ 	$(SUPPORTINCS)				\
+ 	$(GDK_IMLIB_CFLAGS)			\
+-	-I$(includedir)				\
+ 	@GTK_CFLAGS@
  
- noinst_PROGRAMS = fileconvert metadata parse-path skel split trigs
  
--INCLUDES =  	-I$(top_builddir) -I$(top_srcdir)		$(SUPPORTINCS)					$(GDK_IMLIB_CFLAGS)				-I$(includedir)					@GTK_CFLAGS@
-+INCLUDES =  	-I$(top_builddir) -I$(top_srcdir)		$(SUPPORTINCS)					$(GDK_IMLIB_CFLAGS)				@GTK_CFLAGS@
- 
- 
- LDADD = $(top_builddir)/libgnomeui/libgnomeui.la		$(top_builddir)/libgnome/libgnome.la			$(top_builddir)/libart_lgpl/libart_lgpl.la		@LIBSUPPORT@ $(LIBGNOMEUI_LIBS) $(INTLLIBS)

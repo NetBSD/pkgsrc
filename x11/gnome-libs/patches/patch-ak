@@ -1,13 +1,13 @@
-$NetBSD: patch-ak,v 1.1 1999/05/01 15:10:42 tron Exp $
+$NetBSD: patch-ak,v 1.2 2002/03/24 19:53:45 rh Exp $
 
---- libart_lgpl/libart-config.in.orig	Thu Nov 19 19:56:20 1998
-+++ libart_lgpl/libart-config.in	Sat May  1 16:53:22 1999
-@@ -45,7 +45,7 @@
-       echo $includes
-       ;;
-     --libs)
--      libdirs=-L@libdir@
-+      libdirs="-L@libdir@ -Wl,-R@libdir@"
-       echo $libdirs -lart_lgpl -lm
-       ;;
-     *)
+--- libart_lgpl/configure.orig	Tue Jan 22 14:35:13 2002
++++ libart_lgpl/configure
+@@ -1625,7 +1625,7 @@
+   fi
+ fi
+ 
+-LIBART_LIBDIR='-L${libdir}'
++LIBART_LIBDIR='-L${libdir} -Wl,-R${libdir}'
+ LIBART_INCLUDEDIR='-I${includedir}/gnome-1.0'
+ LIBART_LIBS='-lart_lgpl -lm'
+ 
