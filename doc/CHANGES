@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1362 2003/02/14 23:57:40 hubertf Exp $
+$NetBSD: CHANGES,v 1.1363 2003/02/14 23:59:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -641,7 +641,12 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome2-terminal to 2.0.1nb2 [jmmv 2003-02-14]
 	Added autogen-5.4.7 [kristerw 2003-02-14]
 	Updated xmess to 0.65.1 [kristerw 2003-02-14]
+	Added gqview-devel-1.3.0 [wiz 2003-02-14]
+	Updated gqmpeg to 0.20.0 [wiz 2003-02-14]
 	Updated opencm to 0.1.2alpha4 [hubertf 2003-02-14]
+	Updated easytag to 0.27 [wiz 2003-02-15]
+	Updated flac to 1.1.0 [wiz 2003-02-15]
+	Updated flac-xmms to 1.1.0 [wiz 2003-02-15]
 	Added xmms-bezier-0.0.3 [hubertf 2003-02-15]
 	Added xmms-bump-scope-0.0.3 [hubertf 2003-02-15]
 	Added xmms-funtimedancer-0.1 [hubertf 2003-02-15]
