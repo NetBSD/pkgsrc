@@ -1,4 +1,9 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/07/13 13:51:02 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/11/25 12:21:27 salo Exp $
+#
+# This Makefile fragment is included by packages that use atk.
+#
+# This file was created automatically using createbuildlink 2.8.
+#
 
 .if !defined(ATK_BUILDLINK2_MK)
 ATK_BUILDLINK2_MK=	# defined
@@ -13,7 +18,8 @@ BUILDLINK_FILES.atk=	include/atk-1.0/*/*
 BUILDLINK_FILES.atk+=	include/atk-1.0/*
 BUILDLINK_FILES.atk+=	lib/libatk-1.0.*
 
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/glib2/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	atk-buildlink
 
