@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.86 2003/04/22 08:26:57 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.87 2003/04/22 10:18:23 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -659,13 +659,13 @@ sub readmakefile {
 				$contents .= $_;
 			} else {
 				$dirname = dirname($file);
-				if (not -e <$dirname/$includefile> ) {	
-				    &perror("FATAL: can't read $dirname/$includefile");
-				}
-				else {
-				    print("OK: including $dirname/$includefile\n");
-				    $contents .= readmakefile("$dirname/$includefile");
-				}
+                                if (-e "$dirname/$includefile") {
+                                    print("OK: including $dirname/$includefile\n");
+                                    $contents .= readmakefile("$dirname/$includefile");
+                                }
+                                else {
+                                    &perror("FATAL: can't read $dirname/$includefile");
+                                }
 			}
 		} else {
 			# we don't want the include Makefile.common lines
