@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/11/25 18:59:46 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/02 06:56:40 jlam Exp $
 
 PKGNAME=		unixodbc-${ODBC_VERS}
 ODBC_PKG_VERS=		# empty
@@ -25,12 +25,10 @@ post-patch: fix-driver-installation
 pre-install:
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/odbcinst.ini.in		\
 		> ${WRKDIR}/odbcinst.ini
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/odbcinst.ini ${EGDIR}/odbcinst.ini
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../devel/readline/buildlink.mk"
 .include "../../mk/bsd.pkg.install.mk"

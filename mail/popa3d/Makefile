@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/11/29 01:12:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 2001/12/02 06:56:41 jlam Exp $
 #
 
 DISTNAME=	popa3d-0.4.9.4
@@ -30,12 +30,6 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} DESIGN INSTALL LICENSE \
 		${PREFIX}/share/doc/popa3d
 	${INSTALL_DATA_DIR} ${PREFIX}/share/empty
-
-pre-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
-
-post-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
