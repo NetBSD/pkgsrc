@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/05/02 11:54:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/12 10:38:22 cjep Exp $
 
 DISTNAME=	ysmv7_2_8_1
-PKGREVISION=	1
 PKGNAME=	ysm-2.8.1
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ysmv7/}
 EXTRACT_SUFX=	.tgz
