@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2708 2004/12/10 06:48:18 markd Exp $
+$NetBSD: TODO,v 1.2709 2004/12/12 17:11:42 minskim Exp $
 
 Suggested new packages
 ======================
@@ -335,6 +335,7 @@ Suggested package updates
 	o bioperl-1.4
 	o blender-2.35
 	o blitz++-0.8
+	o bmp-0.9.7
 	o boaconstructor-0.3.1
 	o bonobo-1.0.22
 	o bonobo-conf-0.16
