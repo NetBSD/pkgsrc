@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/12/14 14:57:40 wiz Exp $
+
+--- src/gpg-error-config.in.orig	2003-09-04 08:56:45.000000000 +0200
++++ src/gpg-error-config.in
+@@ -60,7 +60,7 @@ while test $# -gt 0; do
+             output="$output -I$includedir"
+ 	    ;;
+ 	--libs)
+-            output="$output -L$libdir -lgpg-error"
++            output="$output -Wl,-R$libdir -L$libdir -lgpg-error"
+ 	    ;;
+ 	*)
+             usage 1 1>&2
