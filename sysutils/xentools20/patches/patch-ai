@@ -1,0 +1,31 @@
+$NetBSD: patch-ai,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+
+--- libxc/Makefile.orig	2005-01-22 18:44:30.000000000 +0100
++++ libxc/Makefile	2005-01-22 18:44:15.000000000 +0100
+@@ -62,12 +62,12 @@
+ 	  ln -sf ../../$(LINUX_ROOT)/include/asm-xen/linux-public/*.h . )
+ 
+ install: all
+-	mkdir -p $(prefix)/usr/lib
+-	mkdir -p $(prefix)/usr/include
+-	install -m0755 $(LIB) $(prefix)/usr/lib
+-	ln -sf libxc.so.$(MAJOR).$(MINOR) $(prefix)/usr/lib/libxc.so.$(MAJOR)
+-	ln -sf libxc.so.$(MAJOR) $(prefix)/usr/lib/libxc.so
+-	install -m0644 xc.h $(prefix)/usr/include
++	mkdir -p $(prefix)/${PREFIX}/lib
++	mkdir -p $(prefix)/${PREFIX}/include
++	install -m0755 $(LIB) $(prefix)/${PREFIX}/lib
++	ln -sf libxc.so.$(MAJOR).$(MINOR) $(prefix)/${PREFIX}/lib/libxc.so.$(MAJOR)
++	ln -sf libxc.so.$(MAJOR) $(prefix)/${PREFIX}/lib/libxc.so
++	install -m0644 xc.h $(prefix)/${PREFIX}/include
+ 
+ clean:
+ 	rm -rf *.a *.so *.o *.rpm $(LIB) *~ $(DEPS) xen
+@@ -86,6 +86,6 @@
+ libxc.so.$(MAJOR):
+ 	ln -sf libxc.so.$(MAJOR).$(MINOR) $@
+ libxc.so.$(MAJOR).$(MINOR): $(OBJS)
+-	$(CC) -Wl,-soname -Wl,$(SONAME) -shared -o $@ $^ -L../libxutil -lxutil -lz
++	$(CC) -Wl,-soname -Wl,$(SONAME) -shared -o $@ $^ -L../libxutil $(LDFLAGS) -lxutil -lz
+ 
+ -include $(DEPS)
