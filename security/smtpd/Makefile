@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/25 04:18:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/27 13:52:18 abs Exp $
 #
 
 DISTNAME=	smtpd-2.0
@@ -19,5 +19,10 @@ pre-install:
 		${CHOWN} -R uucp.mail ${SPOOL}
 		${CHMOD} -R g=,o= ${SPOOL}
 		${CP} /etc/localtime /etc/resolv.conf ${SPOOL}/etc
+
+post-install:
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/smtpd
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/smtpd
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/smtpd
 
 .include "../../mk/bsd.pkg.mk"
