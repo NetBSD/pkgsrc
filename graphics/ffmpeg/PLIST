@@ -1,6 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/19 12:39:27 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/22 11:59:18 tron Exp $
 bin/ffmpeg
 bin/ffserver
+lib/libav.a
+lib/libav.la
+lib/libav.so
+lib/libav.so.0
+lib/libav.so.0.0
+lib/libavcodec.a
+lib/libavcodec.la
+lib/libavcodec.so
+lib/libavcodec.so.0
+lib/libavcodec.so.0.0
 share/doc/ffmpeg/FAQ
 share/doc/ffmpeg/README
 share/doc/ffmpeg/README.dev
@@ -8,6 +18,7 @@ share/doc/ffmpeg/README.tech
 share/doc/ffmpeg/TODO
 share/doc/ffmpeg/bench.txt
 share/doc/ffmpeg/ffmpeg.txt
-share/doc/ffmpeg/ffserver.conf
 share/doc/ffmpeg/ffserver.txt
+share/examples/ffmpeg/ffserver.conf
+@dirrm share/examples/ffmpeg
 @dirrm share/doc/ffmpeg
