@@ -1,0 +1,11 @@
+$NetBSD: patch-bd,v 1.1 1998/11/05 01:34:02 mycroft Exp $
+
+--- scripts/Makefile.in.orig	Thu Jul 30 10:19:58 1998
++++ scripts/Makefile.in	Wed Nov  4 20:11:58 1998
+@@ -12,5 +12,5 @@
+ 
+ install:
+ 	for n in $(SCRIPTS); do \
+-	    $(INSTALL_DATA) -m 755 $$n $(installprefix)/$(RPMCONFIGDIR); \
++	    $(BSD_INSTALL_SCRIPT) $$n $(installprefix)/$(RPMCONFIGDIR); \
+ 	done
