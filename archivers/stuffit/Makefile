@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/12/24 18:55:33 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/26 04:05:53 jschauma Exp $
 
 DISTNAME=		stuffit520.611linux-i386
 PKGNAME=		stuffit-5.2.0.611
@@ -39,3 +39,4 @@ do-install:
 		${PREFIX}/share/doc/stuffit/unstuff/
 
 .include "../../emulators/suse_linux/Makefile.application"
+.include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/03/14 10:15:55 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/03/26 04:05:42 jschauma Exp $
 #
 
 # A default so lintpkgsrc is happy
@@ -81,7 +81,7 @@ do-install:
 	${MV} ${CDIR}/util/icalicense.sh.fixed ${CDIR}/util/icalicense.sh
 
 .if (${MACHINE_ARCH} == "i386")
-.include "../../emulators/suse_linux/Makefile.application"
-.else
-.include "../../mk/bsd.pkg.mk"
+.  include "../../emulators/suse_linux/Makefile.application"
 .endif
+
+.include "../../mk/bsd.pkg.mk"

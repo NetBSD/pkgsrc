@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/12/07 02:39:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2003/03/26 04:05:41 jschauma Exp $
 
 PKGNAME=	acroread3-3.01
 CATEGORIES=	print
@@ -79,4 +79,4 @@ post-install:
 	@${ECHO_MSG} "${PREFIX}/Acrobat3/Reader/License.pdf"
 
 .include "../../emulators/suse_linux/Makefile.application"
-
+.include "../../mk/bsd.pkg.mk"

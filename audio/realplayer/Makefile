@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/12/07 02:38:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2003/03/26 04:05:52 jschauma Exp $
 
 PKGNAME=		realplayer-8.0.1
 WRKSRC=			${WRKDIR}/RealPlayer8
@@ -95,3 +95,4 @@ post-install:
 	${INSTALL_DATA} ${REALPLAYER_HOME}/rpnp.so ${NS_PLUGINS_DIR}
 
 .include "../../emulators/suse_linux/Makefile.application"
+.include "../../mk/bsd.pkg.mk"

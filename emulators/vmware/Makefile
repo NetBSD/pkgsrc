@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/02/16 19:49:16 bad Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/26 04:05:45 jschauma Exp $
 
 DISTNAME=	VMware-2.0.4-1142
 PKGNAME=	vmware-2.0.4
@@ -81,3 +81,4 @@ post-install:
 	) > ${VMWARE_CFG_DIR}/config
 
 .include "../suse_linux/Makefile.application"
+.include "../../mk/bsd.pkg.mk"

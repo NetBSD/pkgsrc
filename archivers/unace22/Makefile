@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/27 10:29:03 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/26 04:05:52 jschauma Exp $
 #
 
 DISTNAME=	linunace22
@@ -34,3 +34,4 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/unace ${PREFIX}/bin/unace22
 
 .include "../../emulators/suse_linux/Makefile.application"
+.include "../../mk/bsd.pkg.mk"
