@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/16 15:26:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/27 15:18:08 adam Exp $
 bin/ttf2pt1
 bin/ttf2pt1_convert
 bin/ttf2pt1_x2gs
@@ -15,6 +15,11 @@ share/ttf2pt1/FONTS.html
 share/ttf2pt1/README
 share/ttf2pt1/README.html
 share/ttf2pt1/app/RPM/ttf2pt1.spec.src
+share/ttf2pt1/app/TeX/README
+share/ttf2pt1/app/TeX/README.html
+share/ttf2pt1/app/TeX/cjk-latex-config
+share/ttf2pt1/app/TeX/cjk-latex-t1mapgen
+share/ttf2pt1/app/TeX/sfd2map
 share/ttf2pt1/app/X11/README
 share/ttf2pt1/app/X11/README.html
 share/ttf2pt1/app/X11/t1-xf86.334.patch
@@ -56,6 +61,7 @@ share/ttf2pt1/encodings/russian/iso8859-5.tbl
 share/ttf2pt1/encodings/russian/koi8-r.tbl
 share/ttf2pt1/maps/CP1250.map
 share/ttf2pt1/maps/CP1251.map
+share/ttf2pt1/maps/T2A_compact.map
 share/ttf2pt1/maps/adobe-standard-encoding.map
 share/ttf2pt1/maps/unicode-sample.map
 share/ttf2pt1/other/Makefile
@@ -97,6 +103,7 @@ share/ttf2pt1/scripts/x2gs
 @dirrm share/ttf2pt1/encodings
 @dirrm share/ttf2pt1/app/netscape
 @dirrm share/ttf2pt1/app/X11
+@dirrm share/ttf2pt1/app/TeX
 @dirrm share/ttf2pt1/app/RPM
 @dirrm share/ttf2pt1/app
 @dirrm share/ttf2pt1
