@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2005/01/22 16:22:25 jlam Exp $
+
+--- lib/Makefile.in.orig	2004-02-09 18:00:00.000000000 -0500
++++ lib/Makefile.in
+@@ -160,7 +160,7 @@ libpam_la_OBJECTS = $(am_libpam_la_OBJEC
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+-CPPFLAGS = @CPPFLAGS@
++CPPFLAGS = @CPPFLAGS@ -DSYSCONFDIR=\"$(sysconfdir)\"
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
