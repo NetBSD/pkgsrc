@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1.1.1 2002/05/31 13:16:42 skrll Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/06/27 06:57:08 skrll Exp $
 #
 # This Makefile fragment is included by packages that use kdelibs3.
 #
@@ -55,7 +55,6 @@ USE_OPENSSL_VERSION=		${OPENSSL_VERSION_096}
 
 BUILDLINK_TARGETS.kdelibs3=	kdelibs3-buildlink
 BUILDLINK_TARGETS.kdelibs3+=	kdelibs3-buildlink-config-wrapper
-#BUILDLINK_TARGETS.kdelibs3+=	kdelibs3-artsc-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.kdelibs3}
 
 BUILDLINK_CONFIG.kdelibs3=		${BUILDLINK_PREFIX.kdelibs3}/bin/kde-config
@@ -63,23 +62,14 @@ BUILDLINK_CONFIG_WRAPPER.kdelibs3=	${BUILDLINK_DIR}/bin/kde-config
 REPLACE_BUILDLINK_SED+=	\
 	-e "s|${BUILDLINK_CONFIG_WRAPPER.kdelibs3}|${BUILDLINK_CONFIG.kdelibs3}|g"
 
-#BUILDLINK_CONFIG.kdelibs3-artsc=	 ${BUILDLINK_PREFIX.kdelibs3}/bin/artsc-config
-#BUILDLINK_CONFIG_WRAPPER.kdelibs3-artsc= ${BUILDLINK_DIR}/bin/artsc-config
-#REPLACE_BUILDLINK_SED+=	\
-#	-e "s|${BUILDLINK_CONFIG_WRAPPER.kdelibs3-artsc}|${BUILDLINK_CONFIG.kdelibs3-artsc}|g"
-
 .if defined(USE_CONFIG_WRAPPER)
-#ARTSCCONFIG?=		${BUILDLINK_CONFIG_WRAPPER.kdelibs3-artsc}
 KDECONFIG?=		${BUILDLINK_CONFIG_WRAPPER.kdelibs3}
-#CONFIGURE_ENV+=		ARTSCCONFIG="${ARTSCCONFIG}"
 CONFIGURE_ENV+=		KDECONFIG="${KDECONFIG}"
-#MAKE_ENV+=		ARTSCCONFIG="${ARTSCCONFIG}"
 MAKE_ENV+=		KDECONFIG="${KDECONFIG}"
 .endif
 
 pre-configure: ${BUILDLINK_TARGETS.kdelibs3}
 kdelibs3-buildlink: _BUILDLINK_USE
 kdelibs3-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
-#kdelibs3-artsc-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
 
 .endif	# KDELIBS3_BUILDLINK_MK
