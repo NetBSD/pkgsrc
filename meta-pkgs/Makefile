@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2000/12/12 01:30:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 15:51:51 wiz Exp $
 #
 
-    SUBDIR += edesktop
-    SUBDIR += netbsd-doc
-    SUBDIR += netbsd-doc-print
-    SUBDIR += web-server
+COMMENT=	Collections of other packages
+
+SUBDIR+=	edesktop
+SUBDIR+=	netbsd-doc
+SUBDIR+=	netbsd-doc-print
+SUBDIR+=	web-server
 
 .include "../mk/bsd.pkg.subdir.mk"
