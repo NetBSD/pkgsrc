@@ -1,0 +1,42 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/03/10 17:03:13 jwise Exp $
+--- lgrind.1.orig	Tue Mar  9 13:20:17 1999
++++ lgrind.1	Tue Mar  9 13:21:38 1999
+@@ -43,7 +43,7 @@
+ specifies text to go into the header.
+ .IP "\fB\-d\fP"
+ specifies the language definitions file (default is
+-\fB/usr/TeX/texmf/tex/latex/lgrind/lgrindef\fP).
++\fB@PREFIX@/share/texmf/tex/latex/lgrind/lgrindef\fP).
+ .IP "\fB\-d!\fP"
+ same as above, but do it for now and the future.
+ .IP "\fB\-l\fP"
+@@ -85,7 +85,7 @@
+ headers and footers.
+ .PP
+ For a more detailed explanation of these commands, refer to
+-\fC/usr/TeX/texmf/doc/latex/lgrind.dvi\fP.
++\fC@PREFIX@/share/texmf/doc/latex/lgrind.dvi\fP.
+ .PP
+ .SH "EMBEDDED PROGRAMS WITHIN A LaTeX FILE"
+ (From Jerry Leichter's notes.)
+@@ -202,16 +202,16 @@
+ Doing a \fIreally\fP good job would require defining some special fonts.
+ .PP
+ .SH FILES
+-.IP "\fC/usr/TeX/bin/lgrind\fP"
++.IP "\fC@PREFIX@/bin/lgrind\fP"
+ Executable
+ .PP
+-.IP "\fC/usr/TeX/texmf/doc/latex/lgrind/lgrind.dvi\fP"
++.IP "\fC@PREFIX@/share/texmf/doc/latex/lgrind/lgrind.dvi\fP"
+ Documentation
+ .PP
+-.IP "\fC/usr/TeX/texmf/tex/latex/lgrind/lgrind.sty\fP"
++.IP "\fC@PREFIX@/share/texmf/tex/latex/lgrind/lgrind.sty\fP"
+ LaTeX style file
+ .PP
+-.IP "\fC/usr/TeX/texmf/tex/latex/lgrind/lgrindef\fP"
++.IP "\fC@PREFIX@/share/texmf/tex/latex/lgrind/lgrindef\fP"
+ Language descriptions
+ .PP
+ .SH AUTHOR

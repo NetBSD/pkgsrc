@@ -1,0 +1,3 @@
+The LGRIND package is a pretty printer for source code.  It evolved from
+vgrind, supported TeX (in the tgrind package), LaTeX, and now LaTeX2e,
+in particular NFSS.
