@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2001/05/28 03:52:12 jlam Exp $
+# $NetBSD: Makefile.common,v 1.15 2001/06/10 00:08:48 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -178,8 +178,6 @@ post-patch:
 	fi
 	${SED} -e "s|epsimage\.src|${GSINST_DIR}/lib/escp_24.src|g"	\
 		${WRKDIR}/dmp_site.ps.bak > ${WRKDIR}/dmp_site.ps
-
-pre-configure: ${BUILDLINK_TARGETS}
 
 do-configure:
 	#

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/05/24 08:53:56 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/06/10 00:08:44 jlam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 
@@ -17,8 +17,6 @@ USE_GNU_READLINE=	# uses callback interface of GNU readline
 CPPFLAGS+=		-I${BUILDLINK_INCDIR}
 LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 LIBS+=			-ltermcap
-
-pre-configure: ${BUILDLINK_TARGETS}
 
 do-install:
 	cd ${WRKSRC}/server; ${SETENV} ${MAKE_ENV} \
