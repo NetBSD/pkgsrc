@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 1999/10/12 08:01:34 jlam Exp $
+$NetBSD: patch-ab,v 1.2 1999/10/13 19:03:39 jlam Exp $
 
 --- lib_se/system_tools.e.orig	Sat Jun  5 14:51:08 1999
-+++ lib_se/system_tools.e	Mon Jun 28 04:05:27 1999
++++ lib_se/system_tools.e	Wed Oct 13 05:27:52 1999
 @@ -211,6 +211,8 @@
           tmp_file_read.disconnect;
           bin_directory := sys_directory.twin;
@@ -11,3 +11,23 @@ $NetBSD: patch-ab,v 1.1 1999/10/12 08:01:34 jlam Exp $
           add_directory(bin_directory,fz_bin);
        end;
  
+@@ -359,7 +361,8 @@
+          echo.w_put_string("'.%N");
+          tmp_path.copy(sys_directory);
+          parent_directory(tmp_path);
+-         add_directory(tmp_path,"man");
++         parent_directory(tmp_path);
++         add_directory(tmp_path,fz_man);
+          tmp_path.append(command_name);
+          tmp_path.append(help_suffix);
+          echo.w_put_string("See documentation in file:%N   ");
+@@ -527,6 +530,9 @@
+             else
+                Result := argi + 1;
+             end;
++         elseif arg.has_prefix("-Wl,") then
++            list_add(linker_options,arg);
++            Result := argi + 1;
+          elseif ("-subsystem").is_equal(arg) then
+             list_add(linker_options,arg);
+             if next_arg /= Void then

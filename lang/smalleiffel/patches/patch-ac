@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 1999/10/13 19:03:39 jlam Exp $
+
+--- lib_se/globals.e.orig	Sat Jun  5 14:51:02 1999
++++ lib_se/globals.e	Wed Oct 13 06:13:22 1999
+@@ -460,7 +460,7 @@
+    backup_suffix: STRING is ".bak";
+          -- Backup suffix for command `pretty'.
+ 
+-   help_suffix: STRING is ".txt";
++   help_suffix: STRING is ".html";
+          -- Suffix for SmallEiffel On-line Help Files.
+ 
+    class_suffix: STRING is ".class";

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/10/12 08:01:33 jlam Exp $
+# $NetBSD: Makefile,v 1.4 1999/10/13 19:03:38 jlam Exp $
 #
 
 DISTNAME=	se
@@ -29,11 +29,9 @@ post-extract:
 	cd ${WRKSRC}/man; ${RM} -f *.txt
 	cd ${WRKSRC}/sys; ${RM} -f compiler.se gc loadpath.* system.se
 	cd ${FILESDIR}; \
-		${CP} -f compiler.se gc loadpath.UNIX system.se ${WRKSRC}/sys
-
-post-patch:
-	cd ${WRKSRC}/lib_se; \
-		${RM} -f frozen_string_list.e.orig system_tools.e.orig
+		${CP} -f compiler.se gc system.se ${WRKSRC}/sys
+	${SED} -e "s,@@SE_LIB@@,${LIBDIR},g" \
+		${FILESDIR}/loadpath.UNIX.in > ${WRKSRC}/sys/loadpath.UNIX
 
 do-build:
 	@${ECHO} '*** Building Eiffel compiler system (pass 1) ***'
@@ -47,16 +45,22 @@ do-build:
 
 	@${ECHO} '*** Building Eiffel compiler system (pass 2) ***'
 	@cd ${WRKSRC}/bin_c; \
+	(${ECHO} ${WRKSRC}/lib_std/; \
+	 ${ECHO} ${WRKSRC}/lib_rand/; \
+	 ${ECHO} ${WRKSRC}/lib_se/) > loadpath.se; \
 	for file in ${SE_BINARIES}; do \
 		${ECHO} Building $$file...; \
-		SMALLEIFFEL=${WRKSRC} SmallEiffel=${WRKSRC}/sys/system.se \
-			../bin/compile -boost -no_split -o $$file $$file; \
+		SmallEiffel=${WRKSRC}/sys/system.se ${WRKSRC}/bin/compile \
+			-boost -no_gc -no_split -O2 -o $$file $$file; \
 	done
 
 post-build:
 	${SED}	-e "s,@@SE_LIB@@,${LIBDIR},g" \
 		-e "s,@@SE_LIBEXEC@@,${LIBEXECDIR},g" \
 		${FILESDIR}/${BINNAME}.sh > ${WRKDIR}/${BINNAME}.sh
+
+pre-install:
+	find ${WRKSRC} -name "*.orig" -print | xargs ${RM} -f
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${BINNAME}
