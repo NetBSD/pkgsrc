@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/06/17 10:41:05 itojun Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/13 09:11:53 frueauf Exp $
 #
 
 DISTNAME=	nessus-libraries-${VERS}
@@ -14,7 +14,8 @@ WRKSRC=		${WRKDIR}/nessus-libraries
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CPP=${CPP}
-CONFIGURE_ARGS+=--enable-zlib=/usr/lib
+CONFIGURE_ARGS+=--enable-zlib=/usr/lib \
+		--localstatedir=/var
 
 .include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
