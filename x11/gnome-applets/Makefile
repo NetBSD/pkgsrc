@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/06/24 16:44:03 danw Exp $
+# $NetBSD: Makefile,v 1.4 2000/06/25 12:50:24 wiz Exp $
 #
 
 DISTNAME=	gnome-applets-1.2.0
@@ -18,7 +18,6 @@ CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include"
 
 .if exists(/usr/include/machine/apmvar.h)
 CPPFLAGS+=	-D__NetBSD_APM__
-.endif
 .endif
 
 .include "../../mk/bsd.pkg.mk"
