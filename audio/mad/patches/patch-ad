@@ -1,0 +1,20 @@
+--- audio_sun.c.orig	Sat Nov  3 01:49:07 2001
++++ audio_sun.c	Mon Jun  2 14:18:03 2003
+@@ -26,6 +26,7 @@
+ # include "global.h"
+ 
+ # include <unistd.h>
++# include <stdlib.h>
+ # include <fcntl.h>
+ # include <sys/ioctl.h>
+ # include <sys/audioio.h>
+@@ -60,6 +61,9 @@
+ static
+ int init(struct audio_init *init)
+ {
++  if (init->path == 0)
++    init->path = getenv("AUDIODEV");
++
+   if (init->path == 0)
+     init->path = AUDIO_DEVICE;
+ 
