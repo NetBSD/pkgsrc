@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/03/30 22:05:43 agc Exp $
+# $NetBSD: Makefile,v 1.3 2002/07/12 23:03:57 mycroft Exp $
 #
 
 DISTNAME=		mrproject-0.5.1
@@ -10,6 +10,7 @@ HOMEPAGE=		http://mrproject.codefactory.se/
 COMMENT=		Project management program
 
 USE_BUILDLINK_ONLY=	YES
+USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${LOCALBASE}/etc/mrproject
 CONFIGURE_ARGS+=	--without-python
