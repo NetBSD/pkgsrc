@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.53 2002/04/23 06:16:31 lukem Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.54 2002/04/26 12:56:27 lukem Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1022,6 +1022,11 @@ PILRC_USE_GTK?=	YES
 # ${JAVA_HOME} will be set based on this choice, if unset
 # Possible: jdk, sun-jdk, blackdown-jdk13, kaffe (kaffe currently has some problems)
 # Default: jdk on NetBSD/i386, blackdown-jdk13 on powerpc, kaffe elsewhere
+
+#PKGVULNDIR=
+# Where audit-packages searchs for the vulnerabilities file.
+# Possible: any path
+# Default: ${DISTDIR}
 
 #POPTOP_USE_MPPE=
 # Used in poptop package to specify the use of the mppe-ppp package
