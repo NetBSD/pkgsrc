@@ -4,7 +4,7 @@
 # Date created:		03 September 1994
 # Whom:			mr
 #
-# $NetBSD: Makefile,v 1.5 1998/01/24 20:36:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/02/11 23:44:56 tv Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -18,8 +18,7 @@ MAINTAINER=	ports@FreeBSD.org
 MAN1= 		pine.1 pico.1 pilot.1
 
 post-patch:
-	[ -f ${WRKSRC}/pine/osdep/os-neb.h.orig ] || \
-	  ${CP} ${WRKSRC}/pine/osdep/os-neb.h ${WRKSRC}/pine/osdep/os-neb.h.orig
+	${CP} -f ${WRKSRC}/pine/osdep/os-neb.h ${WRKSRC}/pine/osdep/os-neb.h.orig
 	${SED} \
 	  -e 's|.*\(#define.*SYSTEM_PINERC_FIXED\) .*|\1 "'"${PREFIX}/lib/pine.conf.fixed"'"|g' \
 	  -e 's|.*\(#define.*SYSTEM_PINERC\) .*|\1 "'"${PREFIX}/lib/pine.conf"'"|g' \
