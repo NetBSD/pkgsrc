@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/06/15 12:54:10 kleink Exp $
+# $NetBSD: Makefile,v 1.17 2000/07/17 09:19:43 veego Exp $
 #
 
 DISTNAME=	openldap-1.2.11
@@ -30,6 +30,11 @@ DEPENDS+=	db-2.7.7:../../databases/db
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include/db2"
 CONFIGURE_ENV+=	LIBS="-ldb2 -lpthread -lrt"
 .endif
+
+PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+
+post-build:
+	${CAT} ${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS} > ${PLIST_SRC}
 
 post-configure:
 	${ECHO} "SLAPD_LIBS = " >> ${WRKSRC}/servers/slapd/tools/Makefile
