@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.6 2002/11/24 21:31:24 hubertf Exp $
+$NetBSD: patch-am,v 1.7 2003/07/12 09:19:19 wiz Exp $
 
---- src/cvs.h.orig	Fri Aug 24 19:47:02 2001
+--- src/cvs.h.orig	Sat Apr 26 20:11:31 2003
 +++ src/cvs.h
-@@ -366,6 +366,7 @@
+@@ -367,6 +367,7 @@ extern int really_quiet, quiet;
  extern int use_editor;
  extern int cvswrite;
  extern mode_t cvsumask;
@@ -10,7 +10,7 @@ $NetBSD: patch-am,v 1.6 2002/11/24 21:31:24 hubertf Exp $
  
  
  
-@@ -384,6 +385,7 @@
+@@ -385,6 +386,7 @@ extern int safe_location PROTO ((char *)
  
  extern int trace;		/* Show all commands */
  extern int noexec;		/* Don't modify disk anywhere */
@@ -18,7 +18,7 @@ $NetBSD: patch-am,v 1.6 2002/11/24 21:31:24 hubertf Exp $
  extern int logoff;		/* Don't write history entry */
  
  extern int top_level_admin;
-@@ -660,6 +662,7 @@
+@@ -663,6 +665,7 @@ void sleep_past PROTO ((time_t desttime)
  #define	RUN_STDOUT_APPEND	0x0004	/* append to stdout, don't truncate */
  #define	RUN_STDERR_APPEND	0x0008	/* append to stderr, don't truncate */
  #define	RUN_SIGIGNORE		0x0010	/* ignore interrupts for command */
