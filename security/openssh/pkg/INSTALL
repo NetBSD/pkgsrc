@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.4 2001/01/10 16:05:53 tron Exp $
+# $NetBSD: INSTALL,v 1.5 2001/04/04 23:40:53 hubertf Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -24,7 +24,7 @@ EOF
 	;;
 POST-INSTALL)
 	SSH_CONF_DIR=@SSH_CONF_DIR@
-	SSH_EXAMPLE_DIR=${PKG_PREFIX}/share/examples/ssh
+	SSH_EXAMPLE_DIR=${PKG_PREFIX}/share/examples/openssh
 	INSTALL_DATA="@INSTALL_DATA@"
 
 	if [ ! -d ${SSH_CONF_DIR} ]
