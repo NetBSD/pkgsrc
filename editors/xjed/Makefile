@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/04/05 21:40:54 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/10 07:17:38 reed Exp $
 #
 PKGNAME=		xjed-0.99.16
 .include "../jed/Makefile.common"
@@ -11,7 +11,7 @@ CONFIGURE_ARGS+=	--with-x
 
 ALL_TARGET=		xjed
 
-MESSAGE=		${.CURDIR}/../jed/MESSAGE
+MESSAGE_SRC=		${.CURDIR}/../jed/MESSAGE
 PLIST_SRC=		${.CURDIR}/../jed/PLIST
 PLIST_SRC+=		${.CURDIR}/PLIST.xjed
 
