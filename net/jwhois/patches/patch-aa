@@ -1,8 +1,72 @@
-$NetBSD: patch-aa,v 1.2 2000/08/12 06:29:14 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2005/01/12 04:42:18 kim Exp $
 
---- example/jwhois.conf.orig	Tue Jan 25 10:19:58 2000
-+++ example/jwhois.conf	Fri Aug 11 23:50:21 2000
-@@ -209,10 +209,10 @@
+--- example/jwhois.conf.orig	2003-06-30 13:16:45.000000000 -0400
++++ example/jwhois.conf	2005-01-11 23:37:15.000000000 -0500
+@@ -55,7 +55,40 @@
+ 	"^[0-9]+\\.[0-9]+\\.[0-9]+/[0-9]+-[0-9]+$" = "whois.nic.br";
+  
+ 	#
+-	# Redirect IPv6 numbers to the correct host
++	# Sub-TLA Assignments
++	# see http://www.iana.org/assignments/ipv6-tla-assignments
++	#
++	"^2001:0?[01][A-F0-9][A-F0-9]:.+" = "whois.iana.org";
++	"^2001:0?[23][A-F0-9][A-F0-9]:.+" = "whois.apnic.net";
++	"^2001:0?[45][A-F0-9][A-F0-9]:.+" = "whois.arin.net";
++	"^2001:0?[67][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:0?[89][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:0?[AB][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:0?[CD][A-F0-9][A-F0-9]:.+" = "whois.apnic.net";
++	"^2001:0?[EF][A-F0-9][A-F0-9]:.+" = "whois.apnic.net";
++	"^2001:1[23][A-F0-9][A-F0-9]:.+" = "whois.lacnic.net";
++	"^2001:1[45][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:1[67][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:1[89][A-F0-9][A-F0-9]:.+" = "whois.arin.net";
++	"^2001:1[AB][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:1[CD][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:1[EF][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:2[A-F0-9][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:3[A-B0-9][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:4[01][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:4[23][A-F0-9][A-F0-9]:.+" = "whois.arin.net";
++	"^2001:4[45][A-F0-9][A-F0-9]:.+" = "whois.apnic.net";
++	"^2001:4[67][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:4[89][A-F0-9][A-F0-9]:.+" = "whois.arin.net";
++	"^2001:4[AB][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:4[CD][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	# ...
++	"^2001:5[A-F0-9][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	# ...
++	"^2001:[89A][A-F0-9][A-F0-9][A-F0-9]:.+" = "whois.apnic.net";
++
++	#
++	# Historical IPv6 catch-all
+ 	#
+ 	".*:.*" = "whois.6bone.net";
+ 
+@@ -147,7 +180,7 @@
+ 	"\\.ee$" = "whois.eenet.ee";
+ 	"\\.eg$" = "whois.ripe.net";
+ 	"\\.es$" = "www.nic.es";
+-	"\\.fi$" = "cgi.ficora.fi";
++	"\\.fi$" = "whois.ficora.fi";
+ 	"\\.fj$" = "whois.usp.ac.fj";
+ 	"\\.fm$" = "www.dot.fm";
+ 	"\\.fo$" = "whois.ripe.net";
+@@ -371,6 +404,12 @@
+ 	"80.0.0.0/8" = "whois.ripe.net";
+ 	"81.0.0.0/8" = "whois.ripe.net";
+ 	"82.0.0.0/8" = "whois.ripe.net";
++	"83.0.0.0/8" = "whois.ripe.net";
++	"84.0.0.0/8" = "whois.ripe.net";
++	"85.0.0.0/8" = "whois.ripe.net";
++	"86.0.0.0/8" = "whois.ripe.net";
++	"87.0.0.0/8" = "whois.ripe.net";
++	"88.0.0.0/8" = "whois.ripe.net";
+ 	"150.217.0.0/16" = "whois.ripe.net";
+ 	"151.3.0.0/16" = "whois.ripe.net";
+ 	"151.4.0.0/15" = "whois.ripe.net";
+@@ -724,10 +763,10 @@
  
  #
  # The cache feature is used to provide a local cache with Whois information.
@@ -15,3 +79,12 @@ $NetBSD: patch-aa,v 1.2 2000/08/12 06:29:14 jlam Exp $
  
  #
  # This is the time after which an entry expires from the cache in hours.
+@@ -743,7 +782,7 @@
+ #
+ # Path to the browser to use for HTTP servers.
+ #
+-browser-pathname = "/usr/bin/lynx";
++browser-pathname = "/usr/pkg/bin/lynx";
+ 
+ #
+ # Command line argument to browser to get output on stdout.
