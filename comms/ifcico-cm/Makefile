@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/11/23 17:48:22 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/12/21 15:45:20 tv Exp $
 #
 
 DISTNAME=	ifcico-3.0.cm.alpha-4.0
@@ -16,12 +16,12 @@ post-build:
 	cd ${WRKSRC}/contrib/fdpass && ${LINK.c} -o fdpass fdpass.c
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/etc/ifcico ${PREFIX}/etc/ifcico/inouttabs
-	${INSTALL_DATA} ${WRKSRC}/misc/config ${PREFIX}/etc/ifcico/config.dist
-	${INSTALL_DATA} ${WRKSRC}/misc/config-global ${PREFIX}/etc/ifcico/
+	${INSTALL_DATA_DIR} ${PREFIX}/etc/ifmail ${PREFIX}/etc/ifmail/inouttabs
+	${INSTALL_DATA} ${WRKSRC}/misc/config ${PREFIX}/etc/ifmail/config.dist
+	${INSTALL_DATA} ${WRKSRC}/misc/config-global ${PREFIX}/etc/ifmail/
 	cd ${WRKSRC}/misc/inouttabs && ${INSTALL_DATA} fidom2iso ibmpc-latin1 \
 		iso2fidom latin1-ibmpc outaltkoi8 outkoi8alt \
-		${PREFIX}/etc/ifcico/inouttabs/
+		${PREFIX}/etc/ifmail/inouttabs/
 	${INSTALL_PROGRAM} ${WRKSRC}/contrib/iftelnetd/iftelnetd ${PREFIX}/sbin/
 	${INSTALL_PROGRAM} ${WRKSRC}/contrib/fdpass/fdpass ${PREFIX}/sbin/
 	cd ${WRKSRC}/ifcico && ${INSTALL_MAN} ifcico.8 ifindex.8 ifinfo.8 \

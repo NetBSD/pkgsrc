@@ -1,0 +1,14 @@
+$NetBSD: patch-as,v 1.1 1998/12/21 15:45:21 tv Exp $
+
+--- ifcico/tcpproto.c.orig	Mon Dec 21 09:57:54 1998
++++ ifcico/tcpproto.c	Mon Dec 21 09:58:29 1998
+@@ -31,7 +31,8 @@
+ static char txbuf[2048];
+ static char rxbuf[2048];
+ static int rx_type;
+-static long startime,endtime,rxbytes,sbytes;
++static time_t startime,endtime;
++static long rxbytes,sbytes;
+ 
+ static int sendfile(char *,char *);
+ static int finsend(void);
