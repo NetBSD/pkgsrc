@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2877 2003/07/24 17:18:42 jmmv Exp $
+$NetBSD: CHANGES,v 1.2878 2003/07/24 17:25:38 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2926,3 +2926,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added xmms-arts-0.4 [jmmv 2003-07-24]
 	Added djbfft-0.76 [jschauma 2003-07-24]
 	Updated xmms-osd to 2.2.2nb2 [jmmv 2003-07-24]
+	Added spider-1.1 [jschauma 2003-07-24]
