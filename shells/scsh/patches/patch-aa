@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2001/02/27 19:37:47 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2001/04/12 21:29:50 jtb Exp $
 
---- Makefile.in.orig	Wed Sep 15 16:54:48 1999
-+++ Makefile.in	Sun Oct  1 21:46:02 2000
+--- Makefile.in.orig	Wed Sep 15 14:54:48 1999
++++ Makefile.in
 @@ -139,7 +139,7 @@
  
  # The following is the first rule and therefore the "make" command's
@@ -39,8 +39,12 @@ $NetBSD: patch-aa,v 1.4 2001/02/27 19:37:47 wiz Exp $
  	mkdir $(LIB)/rts
  	mkdir $(LIB)/vm
  
-@@ -304,8 +311,8 @@
- 	$(INSTALL_DATA) $(srcdir)/scheme48.h $(incdir)/
+@@ -301,11 +308,11 @@
+           else echo "No man directory, not installing man page"; fi
+ 
+ install-inc: scheme48.h
+-	$(INSTALL_DATA) $(srcdir)/scheme48.h $(incdir)/
++	$(INSTALL_DATA) $(srcdir)/scheme48.h $(incdir)/scsh.h
  
  install-cig: cig
 -	$(INSTALL_PROGRAM) $(srcdir)/$(CIG) $(LIB)/cig
