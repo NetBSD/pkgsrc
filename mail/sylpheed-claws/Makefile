@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/02/26 14:07:23 minskim Exp $
+# $NetBSD: Makefile,v 1.31 2004/03/11 12:23:19 jmmv Exp $
 #
 
 .include "Makefile.common"
@@ -40,14 +40,14 @@ CONFIGURE_ARGS+=	--disable-ipv6
 
 FACES_IS_INSTALLED!=	${PKG_INFO} -e faces || ${ECHO}
 .if empty(FACES_IS_INSTALLED)
-.  include "../../graphics/compface/buildlink2.mk"
+.  include "../../graphics/compface/buildlink3.mk"
 .else
-.  include "../../mail/faces/buildlink2.mk"
+.  include "../../mail/faces/buildlink3.mk"
 .endif
 
 .if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
 CONFIGURE_ARGS+=	--enable-ldap
-.include "../../databases/openldap/buildlink2.mk"
+.include "../../databases/openldap/buildlink3.mk"
 .endif
 
 EGDIR=		${PREFIX}/share/examples/sylpheed
@@ -58,10 +58,10 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/mime.types ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/sylpheed*.png ${PREFIX}/share/sylpheed
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../security/gpgme03/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../textproc/aspell/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../security/gpgme03/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/aspell/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
