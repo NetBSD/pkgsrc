@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 17:54:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/21 00:28:43 hubertf Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp
 
-DISTNAME=	tin-1.4.4
+DISTNAME=	tin-1.4.5
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/current/ \
 		ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/current/ \
@@ -12,7 +12,7 @@ MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/current/ \
 		ftp://uiarchive.uiuc.edu/pub/packages/news/client/tin/unoff/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	udo@keks.franken.de
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.tin.org/
 COMMENT=	TIN newsreader (termcap based)
 
