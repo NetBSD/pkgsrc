@@ -13,7 +13,9 @@ Default configuration files are installed in @PREFIX@/etc.
 At a minimum, to configure an arla client, copy
 @PREFIX@/etc/{CellServDB,SuidCells,ThisCell,arla.conf}.default to
 @PREFIX@/etc/{CellServDB,SuidCells,ThisCell,arla.conf} and customize them.
-Also, start arlad from rc.local, using the script provided in
+Start arlad from rc.local, using the script provided in
 @PREFIX@/etc/rc.d/arlad.sh and include an entry for xfs in your /etc/fstab
 (see @PREFIX@/share/examples/arla/fstab).
+Also, append @PREFIX@/share/examples/arla/services to /etc/services and
+append @PREFIX@/share/examples/arla/lkm.conf to /etc/lkm.conf.
 ===============================================================================
