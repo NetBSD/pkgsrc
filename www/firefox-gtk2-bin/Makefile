@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/03/05 14:48:08 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/09/20 15:48:58 erh Exp $
 
 MOZILLA=	firefox
-MOZ_VER=	0.8
+MOZ_VER=	0.10
+MOZ_DISTVER=	1.0PR
 
 HOMEPAGE=	http://www.mozilla.org/projects/firefox/
 COMMENT=	Lightweight gecko-based web browser (gtk2 binary pkg)
