@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2000/08/12 06:34:38 jlam Exp $
+# $NetBSD: Makefile.common,v 1.4 2001/01/04 14:18:50 wiz Exp $
 
 DISTNAME=		freeciv-${FC_VERS}
 FC_VERS=		1.11.4
@@ -11,12 +11,14 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.freeciv.org/
 
 BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 
 FILESDIR=		${.CURDIR}/../../games/freeciv-share/files
 PATCHDIR=		${.CURDIR}/../../games/freeciv-share/patches
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+USE_LIBINTL=		yes
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf
