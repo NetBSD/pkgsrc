@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/06/16 14:16:49 pooka Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/18 22:46:53 hubertf Exp $
 # $FreeBSD Id: Makefile,v 1.11 1996/11/16 10:49:52 asami Exp
 #
 
@@ -11,7 +11,8 @@ MAINTAINER=	packages@netbsd.org
 
 DEPENDS=        xview-lib-3.2.1:../../x11/xview-lib
 
-MIRROR_DISTFILE= no
+NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
+
 EXTRACT_ELEMENTS=	xview3.2p1-X11R6/clients xview3.2p1-X11R6/images
 WRKSRC=      	${WRKDIR}/xview3.2p1-X11R6/clients
 USE_IMAKE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/07/20 13:31:00 rh Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/18 22:46:51 hubertf Exp $
 #
 
 DISTNAME=		vlnx407e
@@ -17,7 +17,6 @@ DEPENDS+=		uvscan-dat>=4080:../../security/uvscan-dat
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 NO_BUILD=		YES
 
-MIRROR_DISTFILE=	no
 LICENSE=		shareware
 RESTRICTED=		"restrictive 30 day evaluation license"
 NO_BIN_ON_FTP=		${RESTRICTED}
