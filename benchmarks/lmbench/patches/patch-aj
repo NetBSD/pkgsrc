@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 1998/08/30 17:46:27 garbled Exp $
+$NetBSD: patch-aj,v 1.2 1998/09/24 08:45:00 agc Exp $
 --- results/Makefile.orig	Sun Aug 30 09:20:26 1998
 +++ results/Makefile	Sun Aug 30 09:23:43 1998
 @@ -49,7 +49,7 @@
@@ -6,7 +6,7 @@ $NetBSD: patch-aj,v 1.1 1998/08/30 17:46:27 garbled Exp $
  SHELL=/bin/sh
  
 -SCRIPTS=../scripts/
-+SCRIPTS=XXXPREFIXXXX/bin/lmbench/
++SCRIPTS=@PREFIX@/bin/lmbench/
  
  MISC=	tmp/misc_mhz.bg \
  	tmp/lat_ctx.bg \

@@ -1,27 +1,27 @@
-$NetBSD: patch-ah,v 1.1 1998/08/30 17:46:27 garbled Exp $
+$NetBSD: patch-ah,v 1.2 1998/09/24 08:45:00 agc Exp $
 --- scripts/results.orig	Fri Jul 31 12:55:19 1998
 +++ scripts/results	Sun Aug 30 08:42:03 1998
 @@ -2,20 +2,20 @@
  
- # $Id: patch-ah,v 1.1 1998/08/30 17:46:27 garbled Exp $
+ # $Id: patch-ah,v 1.2 1998/09/24 08:45:00 agc Exp $
  
 -OS=`../scripts/os`
 -CONFIG=`../scripts/config`
 -RESULTS=results/$OS
 -BASE=../$RESULTS/`uname -n`
-+OS=`XXXPREFIXXXX/bin/lmbench/os`
-+CONFIG=`XXXPREFIXXXX/bin/lmbench/config`
-+RESULTS=XXXPREFIXXXX/share/lmbench/results/$OS
++OS=`@PREFIX@/bin/lmbench/os`
++CONFIG=`@PREFIX@/bin/lmbench/config`
++RESULTS=@PREFIX@/share/lmbench/results/$OS
 +BASE=$RESULTS/`uname -n`
  EXT=0
  
 -if [ ! -f "../bin/$OS/$CONFIG" ]
-+if [ ! -f "XXXPREFIXXXX/share/lmbench/$CONFIG" ]
++if [ ! -f "@PREFIX@/share/lmbench/$CONFIG" ]
  then	echo "No config file?"
  	exit 1
  fi
 -. ../bin/$OS/$CONFIG
-+. XXXPREFIXXXX/share/lmbench/$CONFIG
++. @PREFIX@/share/lmbench/$CONFIG
  
 -if [ ! -d ../$RESULTS ]
 -then	mkdir -p ../$RESULTS
@@ -35,14 +35,14 @@ $NetBSD: patch-ah,v 1.1 1998/08/30 17:46:27 garbled Exp $
  done
  
 -cd ../bin/$OS 
-+cd XXXPREFIXXXX/share/lmbench/results/$OS 
++cd @PREFIX@/share/lmbench/results/$OS 
  if [ "X$SYNC_MAX" = X ]; then echo "No SYNC_MAX variable."; exit 1; fi
  if [ $SYNC_MAX -gt 1 ]
  then	SYNC_PID=1; export SYNC_PID
  	while [ $SYNC_PID -le $SYNC_MAX ]
  	do	echo Results $SYNC_PID going to ${RESULTS}.$SYNC_PID
 -		../../scripts/lmbench $CONFIG 2>../${RESULTS}.$SYNC_PID &
-+		XXXPREFIXXXX/bin/lmbench/lmbench XXXPREFIXXXX/share/lmbench/$CONFIG 2>${RESULTS}.$SYNC_PID &
++		@PREFIX@/bin/lmbench/lmbench @PREFIX@/share/lmbench/$CONFIG 2>${RESULTS}.$SYNC_PID &
  		SYNC_PID=`expr $SYNC_PID + 1`
  	done; wait
  else	echo Results going to ${RESULTS}
@@ -50,7 +50,7 @@ $NetBSD: patch-ah,v 1.1 1998/08/30 17:46:27 garbled Exp $
  	SYNC_MAX=1
  	export SYNC_PID SYNC_MAX
 -	../../scripts/lmbench $CONFIG 2>../${RESULTS}
-+	XXXPREFIXXXX/bin/lmbench/lmbench XXXPREFIXXXX/share/lmbench/$CONFIG 2>${RESULTS}
++	@PREFIX@/bin/lmbench/lmbench @PREFIX@/share/lmbench/$CONFIG 2>${RESULTS}
  fi
  
  if [ X$MAIL = Xyes ]
