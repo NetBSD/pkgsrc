@@ -1,7 +1,15 @@
-# $NetBSD: Makefile,v 1.18 1998/10/28 18:16:50 garbled Exp $
+# $NetBSD: Makefile,v 1.19 1999/02/21 21:25:02 agc Exp $
 # FreeBSD Id: Makefile,v 1.35 1997/08/19 07:10:01 fenner Exp
 #
 
+.include "mk/bsd.prefs.mk"
+
+.ifdef SPECIFIC_PKGS
+SUBDIR+=	${SITE_SPECIFIC_PKGS}
+SUBDIR+=	${HOST_SPECIFIC_PKGS}
+SUBDIR+=	${GROUP_SPECIFIC_PKGS}
+SUBDIR+=	${USER_SPECIFIC_PKGS}
+.else
 #SUBDIR += ai
 SUBDIR += archivers
 #SUBDIR += astro
@@ -42,6 +50,7 @@ SUBDIR += textproc
 #SUBDIR += vietnamese
 SUBDIR += www
 SUBDIR += x11
+.endif
 
 PKGSRCTOP=	yes
 
@@ -49,11 +58,11 @@ PKGSRCTOP=	yes
 
 index:
 	@rm -f ${.CURDIR}/INDEX
-	@make ${.CURDIR}/INDEX
+	@${MAKE} ${.CURDIR}/INDEX
 
 ${.CURDIR}/INDEX:
 	@echo -n "Generating INDEX - please wait.."
-	@make describe ECHO_MSG="echo > /dev/null" > ${.CURDIR}/INDEX
+	@${MAKE} describe ECHO_MSG="echo > /dev/null" > ${.CURDIR}/INDEX
 	@echo " Done."
 
 print-index:	${.CURDIR}/INDEX
@@ -62,7 +71,8 @@ print-index:	${.CURDIR}/INDEX
 search:	${.CURDIR}/INDEX
 .if !defined(key)
 	@echo "The search target requires a keyword parameter,"
-	@echo "e.g.: \"make search key=somekeyword\""
+	@echo "e.g.: \"${MAKE} search key=somekeyword\""
 .else
 	@grep ${key} ${.CURDIR}/INDEX | awk -F\| '{ printf("Port:\t%s\nPath:\t%s\nInfo:\t%s\nMaint:\t%s\nIndex:\t%s\nB-deps:\t%s\nR-deps:\t%s\nArch:\t%s\n\n", $$1, $$2, $$4, $$6, $$7, $$8, $$9, $$10); }'
 .endif
+
