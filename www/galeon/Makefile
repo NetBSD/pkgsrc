@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/08/29 14:31:45 abs Exp $
+# $NetBSD: Makefile,v 1.11 2001/08/30 15:30:09 taya Exp $
 
 DISTNAME=	galeon-0.12
 CATEGORIES=	www
@@ -14,7 +14,7 @@ DEPENDS+=	mozilla>=0.9.2:../mozilla
 DEPENDS+=	gnome-libs>=1.2.1:../../x11/gnome-libs
 DEPENDS+=	libglade>=0.13:../../devel/libglade
 DEPENDS+=	gnome-vfs>=0.6:../../sysutils/gnome-vfs
-DEPENDS+=	GConf>=1.0.0:../../devel/GConf
+DEPENDS+=	GConf>=1.0.4:../../devel/GConf
 DEPENDS+=	oaf>=0.6.5:../../devel/oaf
 DEPENDS+=	libxml>=1.8.13:../../textproc/libxml
 DEPENDS+=	libiconv>=1.6.1:../../converters/libiconv
