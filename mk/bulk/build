@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.36 2004/02/25 09:20:59 grant Exp $
+# $NetBSD: build,v 1.37 2004/04/07 22:56:34 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -103,6 +103,7 @@ fi
 fail=no
 if [ -d pkgtools/pkglint ]; then
 	cd pkgtools/pkglint
+	BULK_DBFILE=`${BMAKE} show-var VARNAME=BULK_DBFILE` || fail=yes
 	DEPENDSTREEFILE=`${BMAKE} show-var VARNAME=DEPENDSTREEFILE` || fail=yes
 	DEPENDSFILE=`${BMAKE} show-var VARNAME=DEPENDSFILE` || fail=yes
 	SUPPORTSFILE=`${BMAKE} show-var VARNAME=SUPPORTSFILE` || fail=yes
@@ -127,6 +128,7 @@ fi
 echo "----------------------------------"
 echo "| Build Temporary Files:         |"
 echo "----------------------------------"
+echo "BULK_DBFILE     = $BULK_DBFILE"
 echo "DEPENDSTREEFILE = $DEPENDSTREEFILE"
 echo "DEPENDSFILE     = $DEPENDSFILE"
 echo "SUPPORTSFILE    = $SUPPORTSFILE"
@@ -140,6 +142,7 @@ echo "----------------------------------"
 # make sure we have values for these very important
 # variables
 if [ $fail = "yes" -o \
+	-z "$BULK_DBFILE" -o \
 	-z "$DEPENDSTREEFILE" -o \
 	-z "$DEPENDSFILE" -o \
 	-z "$SUPPORTSFILE" -o \
