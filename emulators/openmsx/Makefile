@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/06/05 17:26:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/05 18:50:59 xtraeme Exp $
 #
 
 DISTNAME=		openmsx-0.4.0
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openmsx/}
 
@@ -30,11 +31,13 @@ SUBST_FILES.prefix=	build/custom.mk
 SUBST_SED.prefix=	-e "s,/opt/openMSX,${PREFIX}/openmsx,"
 SUBST_MESSAGE.prefix=	"Fixing installation directory."
 
-post-install:
+post-build:
 	@(							\
-	${ECHO_MSG} "#!/bin/sh";				\
-	${ECHO_MSG} "exec ${PREFIX}/openmsx/bin/openmsx"	\
+	${ECHO} "#!${SH}";					\
+	${ECHO} 'exec ${PREFIX}/openmsx/bin/openmsx $$@'	\
 	) > ${WRKSRC}/openmsx.sh
+
+post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/openmsx.sh ${PREFIX}/bin/openmsx
 
 .include "../../devel/SDL/buildlink3.mk"
