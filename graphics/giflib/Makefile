@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/05/02 15:51:21 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2001/06/19 04:08:48 jlam Exp $
 #
 
 DISTNAME=		giflib-4.1.0
@@ -17,6 +17,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS=		--without-x
 
+USE_BUILDLINK_ONLY=	# defined
+
 DOCDIR=			${PREFIX}/share/doc/giflib
 HTMLDIR=		${PREFIX}/share/doc/html/giflib
 
@@ -34,7 +36,7 @@ post-patch:
 #
 pre-build:
 	${TOUCH} ${WRKSRC}/aclocal.m4
-	${FIND} ${WRKSRC} -name "Makefile.in" -exec ${TOUCH} {} \;
+	${FIND} ${WRKSRC} -name "Makefile.in" -print0 | ${XARGS} -0 ${TOUCH}
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
