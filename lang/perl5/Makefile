@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2001/10/02 06:46:43 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2001/10/14 19:55:47 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
 PKGNAME=		perl-${PERL5_VERS}
-PERL5_PKG_VERS=		nb5
+PERL5_PKG_VERS=		nb6
 CATEGORIES+=		lang devel
 
 MAINTAINER=		jlam@netbsd.org
@@ -51,6 +51,10 @@ SYSLIBPATH.SunOS=	/usr/lib
 LOCLIBPATH=		${LOCALBASE}/lib
 LOCINCPATH=		${LOCALBASE}/include
 
+# On a.out platforms, we link with "ld" and on ELF platforms, we link with
+# "cc", so we need to use different options to pass the run-time search path
+# flags to the link command in the right way.
+#
 .if ${OBJECT_FMT} == "a.out"
 LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/-R/g}
 .else
