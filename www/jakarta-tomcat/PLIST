@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/05/26 15:16:26 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/06/07 22:42:27 xtraeme Exp $
 tomcat/LICENSE
 tomcat/NOTICE
 tomcat/RELEASE-NOTES
@@ -1311,6 +1311,7 @@ tomcat/webapps/tomcat-docs/images/update.gif
 tomcat/webapps/tomcat-docs/images/void.gif
 tomcat/webapps/tomcat-docs/index.html
 tomcat/webapps/tomcat-docs/introduction.html
+tomcat/webapps/tomcat-docs/jas
 tomcat/webapps/tomcat-docs/jasper-howto.html
 tomcat/webapps/tomcat-docs/jasper/docs/api/allclasses-frame.html
 tomcat/webapps/tomcat-docs/jasper/docs/api/allclasses-noframe.html
@@ -1343,7 +1344,6 @@ tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/JspRuntime
 tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/JspUtil.ValidAttribute.html
 tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/JspUtil.html
 tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Localizer.html
-tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Node.AttributeDirective.html
 tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Node.AttributeGenerator.html
 tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Node.ChildInfo.html
 tomcat/webapps/tomcat-docs/jasper/docs/api/org/apache/jasper/compiler/Node.Comment.html
