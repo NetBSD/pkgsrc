@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/03/02 17:58:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/03/17 07:14:54 garbled Exp $
 share/enlightenment/themes/Absolute_E/ABOUT/aircut3.ttf
 share/enlightenment/themes/Absolute_E/ABOUT/MAIN
 share/enlightenment/themes/Absolute_E/Absolute_E.lsm
@@ -1313,6 +1313,49 @@ share/enlightenment/themes/Evisio-Green/CircuitE/t5b.png
 share/enlightenment/themes/Evisio-Green/CircuitE/textclasses.cfg
 share/enlightenment/themes/Evisio-Green/CircuitE/tooltips.cfg
 share/enlightenment/themes/Evisio-Green/CircuitE/windowmatches.cfg
+share/enlightenment/themes/FinalE/backgrounds/.xvpics/default.png
+share/enlightenment/themes/FinalE/borders/pix/titlebardarkside.png
+share/enlightenment/themes/FinalE/borders/pix/.xvpics/titlebarlightside.png
+share/enlightenment/themes/FinalE/borders/pix/.xvpics/titlebardarkside.png
+share/enlightenment/themes/FinalE/borders/pix/.xvpics/horbarbottomlightside.png
+share/enlightenment/themes/FinalE/borders/pix/.xvpics/horbarbottomdarkside.png
+share/enlightenment/themes/FinalE/borders/pix/.xvpics/horbartoplightside.png
+share/enlightenment/themes/FinalE/borders/pix/.xvpics/horbartopdarkside.png
+share/enlightenment/themes/FinalE/borders/pix/.xvpics/vertbarlight.png
+share/enlightenment/themes/FinalE/borders/pix/.xvpics/vertbardark.png
+share/enlightenment/themes/FinalE/borders/pix/.xvpics/cornertldark.png
+share/enlightenment/themes/FinalE/borders/pix/.xvpics/cornertrdark.png
+share/enlightenment/themes/FinalE/borders/pix/titlebarlightside.png
+share/enlightenment/themes/FinalE/borders/pix/vertbarlight.png
+share/enlightenment/themes/FinalE/borders/pix/vertbardark.png
+share/enlightenment/themes/FinalE/borders/pix/cornertldark.png
+share/enlightenment/themes/FinalE/borders/pix/cornertrdark.png
+share/enlightenment/themes/FinalE/borders/LEFT/border.cfg
+share/enlightenment/themes/FinalE/borders/LEFT/horbarbottomdarkside.png
+share/enlightenment/themes/FinalE/borders/LEFT/horbarbottomlightside.png
+share/enlightenment/themes/FinalE/borders/LEFT/horbartopdarkside.png
+share/enlightenment/themes/FinalE/borders/LEFT/horbartoplightside.png
+share/enlightenment/themes/FinalE/borders/BOTTOM/border.cfg
+share/enlightenment/themes/FinalE/borders/BOTTOM/bottomvertbarleftdark.png
+share/enlightenment/themes/FinalE/borders/BOTTOM/.xvpics/bottomvertbarleftdark.png
+share/enlightenment/themes/FinalE/borders/BOTTOM/.xvpics/bottomvertbarleftlight.png
+share/enlightenment/themes/FinalE/borders/BOTTOM/.xvpics/bottomvertbarrightdark.png
+share/enlightenment/themes/FinalE/borders/BOTTOM/.xvpics/bottomvertbarrightlight.png
+share/enlightenment/themes/FinalE/borders/BOTTOM/bottomvertbarleftlight.png
+share/enlightenment/themes/FinalE/borders/BOTTOM/bottomvertbarrightdark.png
+share/enlightenment/themes/FinalE/borders/BOTTOM/bottomvertbarrightlight.png
+share/enlightenment/themes/FinalE/borders/RIGHT/border.cfg
+share/enlightenment/themes/FinalE/borders/RIGHT/horbarbottomdarkside.png
+share/enlightenment/themes/FinalE/borders/RIGHT/horbarbottomlightside.png
+share/enlightenment/themes/FinalE/borders/RIGHT/horbartopdarkside.png
+share/enlightenment/themes/FinalE/borders/RIGHT/horbartoplightside.png
+share/enlightenment/themes/FinalE/borders/RIGHT/.xvpics/horbartoplightside.png
+share/enlightenment/themes/FinalE/borders/RIGHT/.xvpics/horbartopdarkside.png
+share/enlightenment/themes/FinalE/borders/RIGHT/.xvpics/horbarbottomlightside.png
+share/enlightenment/themes/FinalE/borders/RIGHT/.xvpics/horbarbottomdarkside.png
+share/enlightenment/themes/FinalE/common/pix/.xvpics/buttondark.png
+share/enlightenment/themes/FinalE/common/pix/.xvpics/buttonlight.png
+share/enlightenment/themes/FinalE/eterm/pix/.xvpics/background.png
 share/enlightenment/themes/FinalE/ABOUT/MAIN
 share/enlightenment/themes/FinalE/ABOUT/decker.ttf
 share/enlightenment/themes/FinalE/backgrounds/backgrounds.cfg
@@ -1479,251 +1522,6 @@ share/enlightenment/themes/FinalE/tooltips/tooltips.cfg
 share/enlightenment/themes/FinalE/tooltips/pix/tooltipmain.png
 share/enlightenment/themes/FinalE/tooltips.cfg
 share/enlightenment/themes/FinalE/windowmatches.cfg
-share/enlightenment/themes/GTK+/ABOUT/MAIN
-share/enlightenment/themes/GTK+/ChangeLog
-share/enlightenment/themes/GTK+/README
-share/enlightenment/themes/GTK+/backgrounds/images/gnome_overlay.png
-share/enlightenment/themes/GTK+/backgrounds/images/gtk_overlay.png
-share/enlightenment/themes/GTK+/backgrounds/images/gnome_tiledbg.jpg
-share/enlightenment/themes/GTK+/backgrounds/images/gnome_tiledbg2.jpg
-share/enlightenment/themes/GTK+/backgrounds/backgrounds.cfg
-share/enlightenment/themes/GTK+/borders/BORDERLESS/border.cfg
-share/enlightenment/themes/GTK+/borders/BORDER_ONLY/border.cfg
-share/enlightenment/themes/GTK+/borders/BORDER_ONLY_SMALL/border.cfg
-share/enlightenment/themes/GTK+/borders/DEFAULT/border.cfg
-share/enlightenment/themes/GTK+/borders/DIALOG/border.cfg
-share/enlightenment/themes/GTK+/borders/FIXED_SIZE/border.cfg
-share/enlightenment/themes/GTK+/borders/GIMP/border.cfg
-share/enlightenment/themes/GTK+/borders/MENU/border.cfg
-share/enlightenment/themes/GTK+/borders/PAGER/border.cfg
-share/enlightenment/themes/GTK+/borders/SIDE/images/grippy.png
-share/enlightenment/themes/GTK+/borders/SIDE/border.cfg
-share/enlightenment/themes/GTK+/borders/TRANSIENT/border.cfg
-share/enlightenment/themes/GTK+/borders/TRANSIENT_FIXED/border.cfg
-share/enlightenment/themes/GTK+/borders/common/border.cfg
-share/enlightenment/themes/GTK+/borders/common/images/e_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/e_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/e_normal_active_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/e_normal_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/s_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/s_normal_active_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/w_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/w_normal_active_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/n_normal_active_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/menu_title_bar.png
-share/enlightenment/themes/GTK+/borders/common/images/n_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/n_normal_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/ne_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/ne_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/ne_normal_active_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/ne_normal_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/nw_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/nw_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/nw_normal_active_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/nw_normal_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/s_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/s_normal_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/se_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/se_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/se_normal_active_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/se_normal_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/sw_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/sw_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/sw_normal_active_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/sw_normal_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/w_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/n_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/w_normal_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/iconify_hilited.png
-share/enlightenment/themes/GTK+/borders/common/images/iconify_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/iconify_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/iconify_normal_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/kill_clicked.png
-share/enlightenment/themes/GTK+/borders/common/images/kill_hilited.png
-share/enlightenment/themes/GTK+/borders/common/images/kill_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/kill_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/kill_normal_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/maximize_clicked.png
-share/enlightenment/themes/GTK+/borders/common/images/maximize_hilited.png
-share/enlightenment/themes/GTK+/borders/common/images/maximize_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/maximize_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/maximize_normal_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/shade_clicked.png
-share/enlightenment/themes/GTK+/borders/common/images/shade_hilited.png
-share/enlightenment/themes/GTK+/borders/common/images/shade_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/shade_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/shade_normal_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/stick_clicked.png
-share/enlightenment/themes/GTK+/borders/common/images/stick_hilited.png
-share/enlightenment/themes/GTK+/borders/common/images/stick_hilited_sticky.png
-share/enlightenment/themes/GTK+/borders/common/images/stick_normal.png
-share/enlightenment/themes/GTK+/borders/common/images/stick_normal_active.png
-share/enlightenment/themes/GTK+/borders/common/images/unshade_hilited.png
-share/enlightenment/themes/GTK+/borders/common/images/iconify_clicked.png
-share/enlightenment/themes/GTK+/borders/borders.cfg
-share/enlightenment/themes/GTK+/borders/TRANSIENT_FIXED_GTK/border.cfg
-share/enlightenment/themes/GTK+/borders/FIXED_SIZE_GTK/border.cfg
-share/enlightenment/themes/GTK+/borders.cfg
-share/enlightenment/themes/GTK+/buttons.cfg
-share/enlightenment/themes/GTK+/colormodifiers.cfg
-share/enlightenment/themes/GTK+/common/images/box_hilited.png
-share/enlightenment/themes/GTK+/common/images/box_normal.png
-share/enlightenment/themes/GTK+/common/images/dot_black.png
-share/enlightenment/themes/GTK+/common/images/dot_blue.png
-share/enlightenment/themes/GTK+/common/images/box_clicked.png
-share/enlightenment/themes/GTK+/common/images/dot_clear.png
-share/enlightenment/themes/GTK+/common/images/dot_darkblue.png
-share/enlightenment/themes/GTK+/common/images/dot_darkgrey.png
-share/enlightenment/themes/GTK+/common/images/dot_grey.png
-share/enlightenment/themes/GTK+/common/images/dot_lightgrey.png
-share/enlightenment/themes/GTK+/common/images/submenu_hilited.png
-share/enlightenment/themes/GTK+/common/images/submenu_normal.png
-share/enlightenment/themes/GTK+/common/images/box_hilited_active.png
-share/enlightenment/themes/GTK+/common/images/sel.png
-share/enlightenment/themes/GTK+/common/images/arrow_down_hilited.png
-share/enlightenment/themes/GTK+/common/images/arrow_left_hilited.png
-share/enlightenment/themes/GTK+/common/images/arrow_up_hilited.png
-share/enlightenment/themes/GTK+/common/images/arrow_right_hilited.png
-share/enlightenment/themes/GTK+/common/images/arrow_down_normal.png
-share/enlightenment/themes/GTK+/common/images/arrow_left_normal.png
-share/enlightenment/themes/GTK+/common/images/arrow_right_normal.png
-share/enlightenment/themes/GTK+/common/images/arrow_up_normal.png
-share/enlightenment/themes/GTK+/common/images/arrow_up_clicked.png
-share/enlightenment/themes/GTK+/common/images/arrow_right_clicked.png
-share/enlightenment/themes/GTK+/common/images/arrow_down_clicked.png
-share/enlightenment/themes/GTK+/common/images/arrow_left_clicked.png
-share/enlightenment/themes/GTK+/coords/coords.cfg
-share/enlightenment/themes/GTK+/cursors/bw_images/cursor.xbm
-share/enlightenment/themes/GTK+/cursors/bw_images/cursor.xbm.mask
-share/enlightenment/themes/GTK+/cursors/bw_images/menu.xbm
-share/enlightenment/themes/GTK+/cursors/bw_images/menu.xbm.mask
-share/enlightenment/themes/GTK+/cursors/bw_images/move.xbm
-share/enlightenment/themes/GTK+/cursors/bw_images/move.xbm.mask
-share/enlightenment/themes/GTK+/cursors/bw_images/resize_h.xbm
-share/enlightenment/themes/GTK+/cursors/bw_images/resize_h.xbm.mask
-share/enlightenment/themes/GTK+/cursors/bw_images/resize_nesw.xbm
-share/enlightenment/themes/GTK+/cursors/bw_images/resize_nesw.xbm.mask
-share/enlightenment/themes/GTK+/cursors/bw_images/resize_nwse.xbm
-share/enlightenment/themes/GTK+/cursors/bw_images/resize_nwse.xbm.mask
-share/enlightenment/themes/GTK+/cursors/bw_images/resize_v.xbm
-share/enlightenment/themes/GTK+/cursors/bw_images/resize_v.xbm.mask
-share/enlightenment/themes/GTK+/cursors/cursors.cfg
-share/enlightenment/themes/GTK+/cursors.cfg
-share/enlightenment/themes/GTK+/desktops.cfg
-share/enlightenment/themes/GTK+/dialogs/images/radio_button_hilited.png
-share/enlightenment/themes/GTK+/dialogs/images/radio_button_hilited_active.png
-share/enlightenment/themes/GTK+/dialogs/images/radio_button_normal.png
-share/enlightenment/themes/GTK+/dialogs/images/separator.png
-share/enlightenment/themes/GTK+/dialogs/images/slider_base.png
-share/enlightenment/themes/GTK+/dialogs/images/slider_knob_horiz_hilited.png
-share/enlightenment/themes/GTK+/dialogs/images/slider_knob_horiz_normal.png
-share/enlightenment/themes/GTK+/dialogs/images/slider_knob_vert_hilited.png
-share/enlightenment/themes/GTK+/dialogs/images/slider_knob_vert_normal.png
-share/enlightenment/themes/GTK+/dialogs/images/radio_button_clicked.png
-share/enlightenment/themes/GTK+/dialogs/dialogs.cfg
-share/enlightenment/themes/GTK+/dock/dock.cfg
-share/enlightenment/themes/GTK+/dragbar/images/dragbutton_vert_hilited.png
-share/enlightenment/themes/GTK+/dragbar/images/dragbutton_vert_normal.png
-share/enlightenment/themes/GTK+/dragbar/images/lowerbutton_horiz_normal.png
-share/enlightenment/themes/GTK+/dragbar/images/dragbutton_horiz_clicked.png
-share/enlightenment/themes/GTK+/dragbar/images/dragbutton_horiz_normal.png
-share/enlightenment/themes/GTK+/dragbar/images/dragbutton_horiz_hilited.png
-share/enlightenment/themes/GTK+/dragbar/images/dragbutton_vert_clicked.png
-share/enlightenment/themes/GTK+/dragbar/images/raisebutton_horiz_hilited.png
-share/enlightenment/themes/GTK+/dragbar/images/raisebutton_horiz_normal.png
-share/enlightenment/themes/GTK+/dragbar/images/raisebutton_vert_clicked.png
-share/enlightenment/themes/GTK+/dragbar/images/raisebutton_vert_hilited.png
-share/enlightenment/themes/GTK+/dragbar/images/raisebutton_vert_normal.png
-share/enlightenment/themes/GTK+/dragbar/images/lowerbutton_horiz_hilited.png
-share/enlightenment/themes/GTK+/dragbar/images/lowerbutton_vert_clicked.png
-share/enlightenment/themes/GTK+/dragbar/images/lowerbutton_vert_hilited.png
-share/enlightenment/themes/GTK+/dragbar/images/lowerbutton_vert_normal.png
-share/enlightenment/themes/GTK+/dragbar/images/raisebutton_horiz_clicked.png
-share/enlightenment/themes/GTK+/dragbar/images/lowerbutton_horiz_clicked.png
-share/enlightenment/themes/GTK+/dragbar/dragbar.cfg
-share/enlightenment/themes/GTK+/epplets/images/play_normal.png
-share/enlightenment/themes/GTK+/epplets/images/play_hilited.png
-share/enlightenment/themes/GTK+/epplets/images/play_clicked.png
-share/enlightenment/themes/GTK+/epplets/images/stop_clicked.png
-share/enlightenment/themes/GTK+/epplets/images/stop_normal.png
-share/enlightenment/themes/GTK+/epplets/images/stop_hilited.png
-share/enlightenment/themes/GTK+/epplets/images/pause_clicked.png
-share/enlightenment/themes/GTK+/epplets/images/pause_hilited.png
-share/enlightenment/themes/GTK+/epplets/images/pause_normal.png
-share/enlightenment/themes/GTK+/epplets/images/eject_normal.png
-share/enlightenment/themes/GTK+/epplets/images/eject_hilited.png
-share/enlightenment/themes/GTK+/epplets/images/eject_clicked.png
-share/enlightenment/themes/GTK+/epplets/images/close_normal.png
-share/enlightenment/themes/GTK+/epplets/images/close_clicked.png
-share/enlightenment/themes/GTK+/epplets/images/close_hilited.png
-share/enlightenment/themes/GTK+/epplets/images/config_normal.png
-share/enlightenment/themes/GTK+/epplets/images/config_hilited.png
-share/enlightenment/themes/GTK+/epplets/images/config_clicked.png
-share/enlightenment/themes/GTK+/epplets/images/help_clicked.png
-share/enlightenment/themes/GTK+/epplets/images/help_hilited.png
-share/enlightenment/themes/GTK+/epplets/images/help_normal.png
-share/enlightenment/themes/GTK+/epplets/images/fastforward_clicked.png
-share/enlightenment/themes/GTK+/epplets/images/fastforward_hilited.png
-share/enlightenment/themes/GTK+/epplets/images/fastforward_normal.png
-share/enlightenment/themes/GTK+/epplets/images/rewind_normal.png
-share/enlightenment/themes/GTK+/epplets/images/rewind_clicked.png
-share/enlightenment/themes/GTK+/epplets/images/rewind_hilited.png
-share/enlightenment/themes/GTK+/epplets/images/previous_normal.png
-share/enlightenment/themes/GTK+/epplets/images/previous_hilited.png
-share/enlightenment/themes/GTK+/epplets/images/previous_clicked.png
-share/enlightenment/themes/GTK+/epplets/images/next_normal.png
-share/enlightenment/themes/GTK+/epplets/images/next_hilited.png
-share/enlightenment/themes/GTK+/epplets/images/next_clicked.png
-share/enlightenment/themes/GTK+/epplets/images/repeat_normal.png
-share/enlightenment/themes/GTK+/epplets/images/skip_normal.png
-share/enlightenment/themes/GTK+/epplets/images/skip_hilited.png
-share/enlightenment/themes/GTK+/epplets/images/repeat_hilited.png
-share/enlightenment/themes/GTK+/epplets/images/repeat_clicked.png
-share/enlightenment/themes/GTK+/epplets/images/skip_clicked.png
-share/enlightenment/themes/GTK+/epplets/epplets.cfg
-share/enlightenment/themes/GTK+/eterm/images/arrow_up_normal.png
-share/enlightenment/themes/GTK+/eterm/images/arrow_right_hilited.png
-share/enlightenment/themes/GTK+/eterm/images/arrow_up_clicked.png
-share/enlightenment/themes/GTK+/eterm/images/arrow_down_clicked.png
-share/enlightenment/themes/GTK+/eterm/images/arrow_down_hilited.png
-share/enlightenment/themes/GTK+/eterm/images/arrow_down_normal.png
-share/enlightenment/themes/GTK+/eterm/images/arrow_up_hilited.png
-share/enlightenment/themes/GTK+/eterm/images/arrow_right_clicked.png
-share/enlightenment/themes/GTK+/eterm/images/arrow_right_normal.png
-share/enlightenment/themes/GTK+/eterm/images/arrow_left_hilited.png
-share/enlightenment/themes/GTK+/eterm/images/arrow_left_clicked.png
-share/enlightenment/themes/GTK+/eterm/images/arrow_left_normal.png
-share/enlightenment/themes/GTK+/eterm/eterm.cfg
-share/enlightenment/themes/GTK+/focuslist/focuslist.cfg
-share/enlightenment/themes/GTK+/iconbox/iconbox.cfg
-share/enlightenment/themes/GTK+/imageclasses.cfg
-share/enlightenment/themes/GTK+/init/init.cfg
-share/enlightenment/themes/GTK+/init.cfg
-share/enlightenment/themes/GTK+/menustyles/menustyles.cfg
-share/enlightenment/themes/GTK+/menustyles.cfg
-share/enlightenment/themes/GTK+/pager/pager.cfg
-share/enlightenment/themes/GTK+/slideouts/slideouts.cfg
-share/enlightenment/themes/GTK+/slideouts.cfg
-share/enlightenment/themes/GTK+/sound/sound.cfg
-share/enlightenment/themes/GTK+/sound/samples/close.wav
-share/enlightenment/themes/GTK+/sound/samples/deiconify.wav
-share/enlightenment/themes/GTK+/sound/samples/iconify.wav
-share/enlightenment/themes/GTK+/sound/samples/shade.wav
-share/enlightenment/themes/GTK+/sound/samples/slide.wav
-share/enlightenment/themes/GTK+/sound/samples/startup.wav
-share/enlightenment/themes/GTK+/sound/samples/stick.wav
-share/enlightenment/themes/GTK+/sound/samples/unshade.wav
-share/enlightenment/themes/GTK+/sound/samples/unstick.wav
-share/enlightenment/themes/GTK+/sound.cfg
-share/enlightenment/themes/GTK+/tooltips/images/mouse_0.png
-share/enlightenment/themes/GTK+/tooltips/images/mouse_1.png
-share/enlightenment/themes/GTK+/tooltips/images/mouse_2.png
-share/enlightenment/themes/GTK+/tooltips/images/mouse_3.png
-share/enlightenment/themes/GTK+/tooltips/images/mouse_any.png
-share/enlightenment/themes/GTK+/tooltips/images/tooltip.png
-share/enlightenment/themes/GTK+/tooltips/tooltips.cfg
-share/enlightenment/themes/GTK+/tooltips.cfg
-share/enlightenment/themes/GTK+/windowmatches.cfg
 share/enlightenment/themes/HackerPurple138/actionclasses.cfg
 share/enlightenment/themes/HackerPurple138/borderpx/d11.png
 share/enlightenment/themes/HackerPurple138/borderpx/close1.png
@@ -3293,6 +3091,178 @@ share/enlightenment/themes/small-e/sound.cfg
 share/enlightenment/themes/small-e/textclasses.cfg
 share/enlightenment/themes/small-e/tooltips.cfg
 share/enlightenment/themes/small-e/windowmatches.cfg
+share/enlightenment/themes/GTK+/pix/dialog_button_normal.png
+share/enlightenment/themes/GTK+/pix/dialog_button_hilited.png
+share/enlightenment/themes/GTK+/pix/dialog_button_clicked.png
+share/enlightenment/themes/GTK+/pix/border_ne_normal.png
+share/enlightenment/themes/GTK+/pix/dot_darkblue.png
+share/enlightenment/themes/GTK+/pix/dot_black.png
+share/enlightenment/themes/GTK+/pix/border_nw_normal.png
+share/enlightenment/themes/GTK+/pix/border_ne_normal_active.png
+share/enlightenment/themes/GTK+/pix/border_nw_normal_active.png
+share/enlightenment/themes/GTK+/pix/border_se_normal.png
+share/enlightenment/themes/GTK+/pix/border_se_normal_active.png
+share/enlightenment/themes/GTK+/pix/overlay.png
+share/enlightenment/themes/GTK+/pix/border_sw_normal.png
+share/enlightenment/themes/GTK+/pix/border_sw_normal_active.png
+share/enlightenment/themes/GTK+/pix/cursor.xbm
+share/enlightenment/themes/GTK+/pix/border_w_normal.png
+share/enlightenment/themes/GTK+/pix/border_w_normal_active.png
+share/enlightenment/themes/GTK+/pix/cursor.xbm.mask
+share/enlightenment/themes/GTK+/pix/border_e_normal.png
+share/enlightenment/themes/GTK+/pix/border_e_normal_active.png
+share/enlightenment/themes/GTK+/pix/move.xbm
+share/enlightenment/themes/GTK+/pix/border_n_normal.png
+share/enlightenment/themes/GTK+/pix/border_n_normal_active.png
+share/enlightenment/themes/GTK+/pix/move.xbm.mask
+share/enlightenment/themes/GTK+/pix/border_s_normal.png
+share/enlightenment/themes/GTK+/pix/border_s_normal_active.png
+share/enlightenment/themes/GTK+/pix/resize_h.xbm
+share/enlightenment/themes/GTK+/pix/button_kill_normal.png
+share/enlightenment/themes/GTK+/pix/button_kill_hilited.png
+share/enlightenment/themes/GTK+/pix/button_maximize_normal.png
+share/enlightenment/themes/GTK+/pix/button_iconify_normal.png
+share/enlightenment/themes/GTK+/pix/resize_nesw.xbm
+share/enlightenment/themes/GTK+/pix/button_shade_normal.png
+share/enlightenment/themes/GTK+/pix/button_unshade_hilited.png
+share/enlightenment/themes/GTK+/pix/button_stick_normal.png
+share/enlightenment/themes/GTK+/pix/button_maximize_hilited.png
+share/enlightenment/themes/GTK+/pix/button_stick_hilited.png
+share/enlightenment/themes/GTK+/pix/border_s_normal_sticky.png
+share/enlightenment/themes/GTK+/pix/button_shade_hilited.png
+share/enlightenment/themes/GTK+/pix/button_iconify_hilited.png
+share/enlightenment/themes/GTK+/pix/button_kill_clicked.png
+share/enlightenment/themes/GTK+/pix/button_maximize_clicked.png
+share/enlightenment/themes/GTK+/pix/button_iconify_clicked.png
+share/enlightenment/themes/GTK+/pix/button_shade_clicked.png
+share/enlightenment/themes/GTK+/pix/button_stick_hilited_sticky.png
+share/enlightenment/themes/GTK+/pix/button_stick_clicked.png
+share/enlightenment/themes/GTK+/pix/dot_blue.png
+share/enlightenment/themes/GTK+/pix/pager_sel.png
+share/enlightenment/themes/GTK+/pix/dot_clear.png
+share/enlightenment/themes/GTK+/pix/dot_lightgrey.png
+share/enlightenment/themes/GTK+/pix/dot_grey.png
+share/enlightenment/themes/GTK+/pix/dot_darkgrey.png
+share/enlightenment/themes/GTK+/pix/dialog_widget_radio_button_normal.png
+share/enlightenment/themes/GTK+/pix/dialog_widget_radio_button_hilited.png
+share/enlightenment/themes/GTK+/pix/dialog_widget_separator.png
+share/enlightenment/themes/GTK+/pix/menu.xbm
+share/enlightenment/themes/GTK+/pix/dialog_widget_radio_button_clicked.png
+share/enlightenment/themes/GTK+/pix/dialog_widget_radio_button_hilited_active.png
+share/enlightenment/themes/GTK+/pix/dialog_widget_check_button_hilited_active.png
+share/enlightenment/themes/GTK+/pix/dialog_widget_slider_base.png
+share/enlightenment/themes/GTK+/pix/tooltip.png
+share/enlightenment/themes/GTK+/pix/dialog_widget_slider_knob_horiz_normal.png
+share/enlightenment/themes/GTK+/pix/dialog_widget_slider_knob_horiz_hilited.png
+share/enlightenment/themes/GTK+/pix/dialog_widget_slider_knob_vert_hilited.png
+share/enlightenment/themes/GTK+/pix/dialog_widget_slider_knob_vert_normal.png
+share/enlightenment/themes/GTK+/pix/dialog_widget_check_button_normal.png
+share/enlightenment/themes/GTK+/pix/dialog_widget_check_button_clicked.png
+share/enlightenment/themes/GTK+/pix/dialog_widget_check_button_hilited.png
+share/enlightenment/themes/GTK+/pix/menu_submenu_hilited.png
+share/enlightenment/themes/GTK+/pix/menu_submenu_normal.png
+share/enlightenment/themes/GTK+/pix/border_menu_title_bar.png
+share/enlightenment/themes/GTK+/pix/menu_foldericon.png
+share/enlightenment/themes/GTK+/pix/backgrounds/gtk_overlay.png
+share/enlightenment/themes/GTK+/pix/backgrounds/gnome_overlay.png
+share/enlightenment/themes/GTK+/pix/backgrounds/gnome_tiledbg2.jpg
+share/enlightenment/themes/GTK+/pix/backgrounds/gnome_tiledbg.jpg
+share/enlightenment/themes/GTK+/pix/border_w_normal_active_sticky.png
+share/enlightenment/themes/GTK+/pix/border_w_normal_sticky.png
+share/enlightenment/themes/GTK+/pix/border_sw_normal_active_sticky.png
+share/enlightenment/themes/GTK+/pix/border_sw_normal_sticky.png
+share/enlightenment/themes/GTK+/pix/border_nw_normal_active_sticky.png
+share/enlightenment/themes/GTK+/pix/border_nw_normal_sticky.png
+share/enlightenment/themes/GTK+/pix/border_s_normal_active_sticky.png
+share/enlightenment/themes/GTK+/pix/border_n_normal_active_sticky.png
+share/enlightenment/themes/GTK+/pix/border_n_normal_sticky.png
+share/enlightenment/themes/GTK+/pix/border_e_normal_active_sticky.png
+share/enlightenment/themes/GTK+/pix/border_e_normal_sticky.png
+share/enlightenment/themes/GTK+/pix/border_se_normal_active_sticky.png
+share/enlightenment/themes/GTK+/pix/border_se_normal_sticky.png
+share/enlightenment/themes/GTK+/pix/resize_h.xbm.mask
+share/enlightenment/themes/GTK+/pix/border_ne_normal_active_sticky.png
+share/enlightenment/themes/GTK+/pix/border_ne_normal_sticky.png
+share/enlightenment/themes/GTK+/pix/resize_nesw.xbm.mask
+share/enlightenment/themes/GTK+/pix/resize_nwse.xbm
+share/enlightenment/themes/GTK+/pix/resize_nwse.xbm.mask
+share/enlightenment/themes/GTK+/pix/resize_v.xbm
+share/enlightenment/themes/GTK+/pix/resize_v.xbm.mask
+share/enlightenment/themes/GTK+/pix/menu.xbm.mask
+share/enlightenment/themes/GTK+/pix/desktop_lowerbutton_horiz_normal.png
+share/enlightenment/themes/GTK+/pix/desktop_lowerbutton_horiz_hilited.png
+share/enlightenment/themes/GTK+/pix/desktop_lowerbutton_horiz_clicked.png
+share/enlightenment/themes/GTK+/pix/desktop_raisebutton_horiz_normal.png
+share/enlightenment/themes/GTK+/pix/desktop_raisebutton_horiz_hilited.png
+share/enlightenment/themes/GTK+/pix/desktop_raisebutton_horiz_clicked.png
+share/enlightenment/themes/GTK+/pix/desktop_raisebutton_vert_normal.png
+share/enlightenment/themes/GTK+/pix/desktop_raisebutton_vert_hilited.png
+share/enlightenment/themes/GTK+/pix/desktop_raisebutton_vert_clicked.png
+share/enlightenment/themes/GTK+/pix/desktop_lowerbutton_vert_normal.png
+share/enlightenment/themes/GTK+/pix/desktop_lowerbutton_vert_hilited.png
+share/enlightenment/themes/GTK+/pix/desktop_lowerbutton_vert_clicked.png
+share/enlightenment/themes/GTK+/pix/desktop_dragbutton_horiz_normal.png
+share/enlightenment/themes/GTK+/pix/desktop_dragbutton_horiz_hilited.png
+share/enlightenment/themes/GTK+/pix/desktop_dragbutton_vert_normal.png
+share/enlightenment/themes/GTK+/pix/desktop_dragbutton_horiz_clicked.png
+share/enlightenment/themes/GTK+/pix/desktop_dragbutton_vert_hilited.png
+share/enlightenment/themes/GTK+/pix/desktop_dragbutton_vert_clicked.png
+share/enlightenment/themes/GTK+/pix/iconbox_arrow_up_hilited.png
+share/enlightenment/themes/GTK+/pix/iconbox_arrow_down_normal.png
+share/enlightenment/themes/GTK+/pix/iconbox_arrow_up_normal.png
+share/enlightenment/themes/GTK+/pix/iconbox_arrow_up_clicked.png
+share/enlightenment/themes/GTK+/pix/iconbox_arrow_down_hilited.png
+share/enlightenment/themes/GTK+/pix/iconbox_arrow_down_clicked.png
+share/enlightenment/themes/GTK+/pix/iconbox_arrow_left_normal.png
+share/enlightenment/themes/GTK+/pix/iconbox_arrow_left_hilited.png
+share/enlightenment/themes/GTK+/pix/iconbox_arrow_left_clicked.png
+share/enlightenment/themes/GTK+/pix/iconbox_arrow_right_normal.png
+share/enlightenment/themes/GTK+/pix/iconbox_arrow_right_hilited.png
+share/enlightenment/themes/GTK+/pix/iconbox_arrow_right_clicked.png
+share/enlightenment/themes/GTK+/pix/button_kill_normal_active.png
+share/enlightenment/themes/GTK+/pix/button_kill_normal_sticky.png
+share/enlightenment/themes/GTK+/pix/button_maximize_normal_active.png
+share/enlightenment/themes/GTK+/pix/button_iconify_normal_active.png
+share/enlightenment/themes/GTK+/pix/button_stick_normal_active.png
+share/enlightenment/themes/GTK+/pix/button_iconify_normal_sticky.png
+share/enlightenment/themes/GTK+/pix/button_maximize_normal_sticky.png
+share/enlightenment/themes/GTK+/pix/button_shade_normal_sticky.png
+share/enlightenment/themes/GTK+/pix/button_shade_normal_active.png
+share/enlightenment/themes/GTK+/pix/border_fixed_w_normal_active_sticky.png
+share/enlightenment/themes/GTK+/pix/border_fixed_w_normal_active.png
+share/enlightenment/themes/GTK+/pix/border_fixed_s_normal_active.png
+share/enlightenment/themes/GTK+/pix/border_fixed_s_normal_active_sticky.png
+share/enlightenment/themes/GTK+/pix/border_fixed_n_normal_active.png
+share/enlightenment/themes/GTK+/pix/border_fixed_n_normal_active_sticky.png
+share/enlightenment/themes/GTK+/pix/border_fixed_e_normal_active.png
+share/enlightenment/themes/GTK+/pix/border_fixed_e_normal_active_sticky.png
+share/enlightenment/themes/GTK+/snd/maximize.wav
+share/enlightenment/themes/GTK+/snd/startup.wav
+share/enlightenment/themes/GTK+/snd/slide.wav
+share/enlightenment/themes/GTK+/snd/close.wav
+share/enlightenment/themes/GTK+/snd/stick.wav
+share/enlightenment/themes/GTK+/snd/unstick.wav
+share/enlightenment/themes/GTK+/snd/minimize.wav
+share/enlightenment/themes/GTK+/actionclasses.cfg
+share/enlightenment/themes/GTK+/textclasses.cfg
+share/enlightenment/themes/GTK+/ABOUT/MAIN
+share/enlightenment/themes/GTK+/borders.cfg
+share/enlightenment/themes/GTK+/buttons.cfg
+share/enlightenment/themes/GTK+/colormodifiers.cfg
+share/enlightenment/themes/GTK+/cursors.cfg
+share/enlightenment/themes/GTK+/desktops.cfg
+share/enlightenment/themes/GTK+/imageclasses.cfg
+share/enlightenment/themes/GTK+/init.cfg
+share/enlightenment/themes/GTK+/menustyles.cfg
+share/enlightenment/themes/GTK+/slideouts.cfg
+share/enlightenment/themes/GTK+/sound.cfg
+share/enlightenment/themes/GTK+/tooltips.cfg
+share/enlightenment/themes/GTK+/windowmatches.cfg
+@dirrm share/enlightenment/themes/GTK+/pix/backgrounds
+@dirrm share/enlightenment/themes/GTK+/pix
+@dirrm share/enlightenment/themes/GTK+/snd
+@dirrm share/enlightenment/themes/GTK+/ABOUT
+@dirrm share/enlightenment/themes/GTK+
 @dirrm share/enlightenment/themes/small-e/graphics/.xvpics
 @dirrm share/enlightenment/themes/small-e/graphics
 @dirrm share/enlightenment/themes/small-e/cursors
@@ -3480,76 +3450,6 @@ share/enlightenment/themes/small-e/windowmatches.cfg
 @dirrm share/enlightenment/themes/HackerPurple138/cursors
 @dirrm share/enlightenment/themes/HackerPurple138/borderpx
 @dirrm share/enlightenment/themes/HackerPurple138
-@dirrm share/enlightenment/themes/GTK+/tooltips/images
-@dirrm share/enlightenment/themes/GTK+/tooltips
-@dirrm share/enlightenment/themes/GTK+/sound/samples
-@dirrm share/enlightenment/themes/GTK+/sound
-@dirrm share/enlightenment/themes/GTK+/slideouts/images
-@dirrm share/enlightenment/themes/GTK+/slideouts
-@dirrm share/enlightenment/themes/GTK+/pager/images
-@dirrm share/enlightenment/themes/GTK+/pager
-@dirrm share/enlightenment/themes/GTK+/menustyles/images
-@dirrm share/enlightenment/themes/GTK+/menustyles
-@dirrm share/enlightenment/themes/GTK+/init/images
-@dirrm share/enlightenment/themes/GTK+/init
-@dirrm share/enlightenment/themes/GTK+/iconbox/images
-@dirrm share/enlightenment/themes/GTK+/iconbox
-@dirrm share/enlightenment/themes/GTK+/focuslist/images
-@dirrm share/enlightenment/themes/GTK+/focuslist
-@dirrm share/enlightenment/themes/GTK+/eterm/images
-@dirrm share/enlightenment/themes/GTK+/eterm
-@dirrm share/enlightenment/themes/GTK+/epplets/images
-@dirrm share/enlightenment/themes/GTK+/epplets
-@dirrm share/enlightenment/themes/GTK+/dragbar/images
-@dirrm share/enlightenment/themes/GTK+/dragbar
-@dirrm share/enlightenment/themes/GTK+/dock/images
-@dirrm share/enlightenment/themes/GTK+/dock
-@dirrm share/enlightenment/themes/GTK+/dialogs/images
-@dirrm share/enlightenment/themes/GTK+/dialogs
-@dirrm share/enlightenment/themes/GTK+/cursors/images
-@dirrm share/enlightenment/themes/GTK+/cursors/bw_images
-@dirrm share/enlightenment/themes/GTK+/cursors
-@dirrm share/enlightenment/themes/GTK+/coords/images
-@dirrm share/enlightenment/themes/GTK+/coords
-@dirrm share/enlightenment/themes/GTK+/common/images
-@dirrm share/enlightenment/themes/GTK+/common
-@dirrm share/enlightenment/themes/GTK+/buttons/images
-@dirrm share/enlightenment/themes/GTK+/buttons
-@dirrm share/enlightenment/themes/GTK+/borders/common/images
-@dirrm share/enlightenment/themes/GTK+/borders/common
-@dirrm share/enlightenment/themes/GTK+/borders/TRANSIENT_FIXED_GTK/images
-@dirrm share/enlightenment/themes/GTK+/borders/TRANSIENT_FIXED_GTK
-@dirrm share/enlightenment/themes/GTK+/borders/TRANSIENT_FIXED/images
-@dirrm share/enlightenment/themes/GTK+/borders/TRANSIENT_FIXED
-@dirrm share/enlightenment/themes/GTK+/borders/TRANSIENT/images
-@dirrm share/enlightenment/themes/GTK+/borders/TRANSIENT
-@dirrm share/enlightenment/themes/GTK+/borders/SIDE/images
-@dirrm share/enlightenment/themes/GTK+/borders/SIDE
-@dirrm share/enlightenment/themes/GTK+/borders/PAGER/images
-@dirrm share/enlightenment/themes/GTK+/borders/PAGER
-@dirrm share/enlightenment/themes/GTK+/borders/MENU/images
-@dirrm share/enlightenment/themes/GTK+/borders/MENU
-@dirrm share/enlightenment/themes/GTK+/borders/GIMP/images
-@dirrm share/enlightenment/themes/GTK+/borders/GIMP
-@dirrm share/enlightenment/themes/GTK+/borders/FIXED_SIZE_GTK/images
-@dirrm share/enlightenment/themes/GTK+/borders/FIXED_SIZE_GTK
-@dirrm share/enlightenment/themes/GTK+/borders/FIXED_SIZE/images
-@dirrm share/enlightenment/themes/GTK+/borders/FIXED_SIZE
-@dirrm share/enlightenment/themes/GTK+/borders/DIALOG/images
-@dirrm share/enlightenment/themes/GTK+/borders/DIALOG
-@dirrm share/enlightenment/themes/GTK+/borders/DEFAULT/images
-@dirrm share/enlightenment/themes/GTK+/borders/DEFAULT
-@dirrm share/enlightenment/themes/GTK+/borders/BORDER_ONLY_SMALL/images
-@dirrm share/enlightenment/themes/GTK+/borders/BORDER_ONLY_SMALL
-@dirrm share/enlightenment/themes/GTK+/borders/BORDER_ONLY/images
-@dirrm share/enlightenment/themes/GTK+/borders/BORDER_ONLY
-@dirrm share/enlightenment/themes/GTK+/borders/BORDERLESS/images
-@dirrm share/enlightenment/themes/GTK+/borders/BORDERLESS
-@dirrm share/enlightenment/themes/GTK+/borders
-@dirrm share/enlightenment/themes/GTK+/backgrounds/images
-@dirrm share/enlightenment/themes/GTK+/backgrounds
-@dirrm share/enlightenment/themes/GTK+/ABOUT
-@dirrm share/enlightenment/themes/GTK+
 @dirrm share/enlightenment/themes/FinalE/tooltips/pix
 @dirrm share/enlightenment/themes/FinalE/tooltips
 @dirrm share/enlightenment/themes/FinalE/pager
@@ -3560,6 +3460,7 @@ share/enlightenment/themes/small-e/windowmatches.cfg
 @dirrm share/enlightenment/themes/FinalE/iconbox/pix
 @dirrm share/enlightenment/themes/FinalE/iconbox
 @dirrm share/enlightenment/themes/FinalE/focuslist
+@dirrm share/enlightenment/themes/FinalE/eterm/pix/.xvpics
 @dirrm share/enlightenment/themes/FinalE/eterm/pix
 @dirrm share/enlightenment/themes/FinalE/eterm
 @dirrm share/enlightenment/themes/FinalE/epplets/pix
@@ -3571,8 +3472,15 @@ share/enlightenment/themes/small-e/windowmatches.cfg
 @dirrm share/enlightenment/themes/FinalE/dialogs
 @dirrm share/enlightenment/themes/FinalE/cursors
 @dirrm share/enlightenment/themes/FinalE/coords
+@dirrm share/enlightenment/themes/FinalE/common/pix/.xvpics
 @dirrm share/enlightenment/themes/FinalE/common/pix
 @dirrm share/enlightenment/themes/FinalE/common
+@dirrm share/enlightenment/themes/FinalE/borders/BOTTOM/.xvpics
+@dirrm share/enlightenment/themes/FinalE/borders/BOTTOM
+@dirrm share/enlightenment/themes/FinalE/borders/LEFT
+@dirrm share/enlightenment/themes/FinalE/borders/RIGHT/.xvpics
+@dirrm share/enlightenment/themes/FinalE/borders/RIGHT
+@dirrm share/enlightenment/themes/FinalE/borders/pix/.xvpics
 @dirrm share/enlightenment/themes/FinalE/borders/pix
 @dirrm share/enlightenment/themes/FinalE/borders/WITHMAX
 @dirrm share/enlightenment/themes/FinalE/borders/WINDOWS
@@ -3584,6 +3492,7 @@ share/enlightenment/themes/small-e/windowmatches.cfg
 @dirrm share/enlightenment/themes/FinalE/borders/DEFAULT
 @dirrm share/enlightenment/themes/FinalE/borders/BORDERLESS
 @dirrm share/enlightenment/themes/FinalE/borders
+@dirrm share/enlightenment/themes/FinalE/backgrounds/.xvpics
 @dirrm share/enlightenment/themes/FinalE/backgrounds
 @dirrm share/enlightenment/themes/FinalE/ABOUT
 @dirrm share/enlightenment/themes/FinalE
