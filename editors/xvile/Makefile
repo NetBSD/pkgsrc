@@ -1,27 +1,28 @@
-# $NetBSD: Makefile,v 1.7 1998/05/06 09:03:50 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/02 16:16:15 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
 DISTNAME=	vile
-PKGNAME=	xvile-7.3
-WRKSRC=		${WRKDIR}/vile-7.3
+PKGNAME=	xvile-8.0
+WRKSRC=		${WRKDIR}/vile-8.0
 CATEGORIES=	editors
-# agc - vile-7.4 is on the MASTER_SITES now, so grab the 7.3 distfile
-#	from ftp.netbsd.org. We'll do a 7.4 package ASAP, when circumstances
-#	permit.
-# MASTER_SITES=   ftp://ftp.clark.net/pub/dickey/vile/ \
-#		ftp://id.wing.net/pub/pgf/vile/
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
+MASTER_SITES=   ftp://ftp.clark.net/pub/dickey/vile/ \
+		ftp://id.wing.net/pub/pgf/vile/
 
 MAINTAINER=	packages@netbsd.org
 
 MAKEFILE=	makefile
 GNU_CONFIGURE=	yes
+USE_PERL5=	yes
 CONFIGURE_ARGS+= --with-screen=${SCREEN_TYPE}
+INSTALL_TARGET=	install install-perl
 MAN1=		xvile.1
 
+#.include "../../mk/bsd.prefs.mk"
+
 pre-configure:
-	@echo "To use xvile with menus, set the environment variable USE_MENUS"
+	@echo "To use xvile with menus, set the variable USE_MENUS"
+	@echo "in the environment or in /etc/mk.conf"
 
 .if defined(USE_MENUS)
 SCREEN_TYPE=	Xaw
