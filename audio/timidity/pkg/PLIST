@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/03/06 18:06:23 agc Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/03/07 19:08:38 mycroft Exp $
 bin/timidity
 bin/bag
 bin/wav2pat
@@ -9,6 +9,19 @@ lib/timidity/gravis.cfg
 lib/timidity/midia.cfg
 lib/timidity/wowpats.cfg
 lib/timidity/mt32.cfg
+lib/timidity/tkmidity.tcl
+lib/timidity/tkpanel.tcl
+lib/timidity/browser.tcl
+lib/timidity/misc.tcl
+lib/timidity/tclIndex
+lib/timidity/BITMAPS/prev.xbm
+lib/timidity/BITMAPS/next.xbm
+lib/timidity/BITMAPS/play.xbm
+lib/timidity/BITMAPS/stop.xbm
+lib/timidity/BITMAPS/pause.xbm
+lib/timidity/BITMAPS/quit.xbm
+lib/timidity/BITMAPS/timidity.xbm
+@dirrm lib/timidity/BITMAPS
 lib/timidity/patch/acbass.pat
 lib/timidity/patch/accordn.pat
 lib/timidity/patch/acguitar.pat
