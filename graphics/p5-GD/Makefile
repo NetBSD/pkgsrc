@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/11/26 06:49:57 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/02/28 21:20:41 wiz Exp $
 #
 
 DISTNAME=	GD-1.32
@@ -13,6 +13,8 @@ COMMENT=	Perl5 interface to gd graphics library
 
 USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/GD/.packlist
+
+MAKE_ENV+=		GD_LIBS="${LDFLAGS}"
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
