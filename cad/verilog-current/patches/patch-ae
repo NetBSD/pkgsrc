@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/03/07 16:09:16 dmcmahill Exp $
+
+use the correct flag for our compiler.
+
+--- verilog.sh.orig	Sat Feb  5 01:40:35 2000
++++ verilog.sh	Sun Feb 13 11:15:00 2000
+@@ -117,5 +117,5 @@
+     "xnf") mv ${tmpCCFile} ${outputFile} ;;
+ 
+-    "vvm")  ${execCpp} -rdynamic -I${includedir} -L${libdir} ${tmpCCFile} -o ${outputFile} -lvvm @dllib@ ;
++    "vvm")  ${execCpp} -Wl,--export-dynamic -I${includedir} -L${libdir} ${tmpCCFile} -o ${outputFile} -lvvm @dllib@ ;
+ 	    if test $? -ne 0 ; then
+ 	     echo "C++ compilation failed. Terminating compilation."
