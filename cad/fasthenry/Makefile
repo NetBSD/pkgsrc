@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/09/27 23:17:46 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/04/20 15:34:44 cjep Exp $
 #
 
 DISTNAME=	fasthenry-3.0-12Nov96
@@ -32,6 +32,11 @@ LIBS=		-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lffm -lm
 MAKE_ENV+=	LIBS="${LIBS}"
 .else
 LIBS=		-lm
+.endif
+
+.if (${MACHINE_ARCH} == arm32)
+.include "../../lang/gcc/Makefile.gcc"
+MAKE_FLAGS+=	CC=${CC}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
