@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2266 2004/10/28 10:22:13 wiz Exp $
+$NetBSD: TODO,v 1.2267 2004/10/28 10:37:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -265,7 +265,6 @@ Suggested package updates
 	o bitchx-1.1
 	o blender-2.34
 	o boson-0.10
-	o cabextract-1.1
 	o capc-calc-2.11.10.1
 	o cdrtools-2.01
 	o cdrtools-ossdvd-2.01a32
@@ -405,6 +404,7 @@ Suggested package updates
 	o libsigc++-2.0.3
 	o libtiff-3.7.0
 	o libxklavier-1.10 [breaks gnome-2.8]
+	o libxml2-2.6.15
 	o licq-1.2.7
 	o lilypond-2.2
 	o lmbench-2.0.4
