@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/07/30 15:19:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/12/10 06:40:11 markd Exp $
 bin/kdbg
 share/doc/kde/HTML/de/kdbg/argspwdenv.html
 share/doc/kde/HTML/de/kdbg/breakptlist.html
@@ -91,50 +91,33 @@ share/kde/icons/hicolor/32x32/apps/kdbg.png
 share/kde/icons/hicolor/48x48/apps/kdbg.png
 share/kde/icons/locolor/16x16/apps/kdbg.png
 share/kde/icons/locolor/32x32/apps/kdbg.png
-share/kde/locale/cs/LC_MESSAGES/kdbg.mo
-share/kde/locale/da/LC_MESSAGES/kdbg.mo
-share/kde/locale/de/LC_MESSAGES/kdbg.mo
-share/kde/locale/es/LC_MESSAGES/kdbg.mo
-share/kde/locale/fr/LC_MESSAGES/kdbg.mo
-share/kde/locale/hr/LC_MESSAGES/kdbg.mo
-share/kde/locale/hu/LC_MESSAGES/kdbg.mo
-share/kde/locale/it/LC_MESSAGES/kdbg.mo
-share/kde/locale/ja/LC_MESSAGES/kdbg.mo
-share/kde/locale/no/LC_MESSAGES/kdbg.mo
-share/kde/locale/no_NY/LC_MESSAGES/kdbg.mo
-share/kde/locale/pl/LC_MESSAGES/kdbg.mo
-share/kde/locale/pt/LC_MESSAGES/kdbg.mo
-share/kde/locale/ro/LC_MESSAGES/kdbg.mo
-share/kde/locale/ru/LC_MESSAGES/kdbg.mo
-share/kde/locale/sk/LC_MESSAGES/kdbg.mo
-share/kde/locale/sr/LC_MESSAGES/kdbg.mo
-share/kde/locale/sv/LC_MESSAGES/kdbg.mo
-share/kde/locale/tr/LC_MESSAGES/kdbg.mo
-share/kde/locale/zh_CN.GB2312/LC_MESSAGES/kdbg.mo
-@comment dirrm share/kde/locale/zh_CN.GB2312/LC_MESSAGES
-@comment dirrm share/kde/locale/tr/LC_MESSAGES
-@comment dirrm share/kde/locale/sv/LC_MESSAGES
-@comment dirrm share/kde/locale/sr/LC_MESSAGES
-@comment dirrm share/kde/locale/sk/LC_MESSAGES
-@comment dirrm share/kde/locale/ru/LC_MESSAGES
-@comment dirrm share/kde/locale/ro/LC_MESSAGES
-@comment dirrm share/kde/locale/pt/LC_MESSAGES
-@comment dirrm share/kde/locale/pl/LC_MESSAGES
-@comment dirrm share/kde/locale/no_NY/LC_MESSAGES
-@comment dirrm share/kde/locale/no/LC_MESSAGES
-@comment dirrm share/kde/locale/ja/LC_MESSAGES
-@comment dirrm share/kde/locale/it/LC_MESSAGES
-@comment dirrm share/kde/locale/hu/LC_MESSAGES
-@comment dirrm share/kde/locale/hr/LC_MESSAGES
-@comment dirrm share/kde/locale/fr/LC_MESSAGES
-@comment dirrm share/kde/locale/es/LC_MESSAGES
-@comment dirrm share/kde/locale/de/LC_MESSAGES
-@comment dirrm share/kde/locale/da/LC_MESSAGES
-@comment dirrm share/kde/locale/cs/LC_MESSAGES
-@comment dirrm share/kde/icons/locolor/32x32/apps
-@comment dirrm share/kde/icons/locolor/16x16/apps
-@comment dirrm share/kde/icons/hicolor/32x32/apps
-@comment dirrm share/kde/icons/hicolor/16x16/apps
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/no_NY/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/kdbg.mo
+${PKGLOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/kdbg.mo
+@dirrm ${PKGLOCALEDIR}/locale/no_NY/LC_MESSAGES
+@dirrm ${PKGLOCALEDIR}/locale/no_NY
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/kdbg/types
 @dirrm share/kde/apps/kdbg/pics
 @dirrm share/kde/apps/kdbg/icons/hicolor/22x22/actions
@@ -144,7 +127,11 @@ share/kde/locale/zh_CN.GB2312/LC_MESSAGES/kdbg.mo
 @dirrm share/kde/apps/kdbg/icons/hicolor
 @dirrm share/kde/apps/kdbg/icons
 @dirrm share/kde/apps/kdbg
-@comment dirrm share/kde/applnk/Development
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/applnk/Development
 @dirrm share/doc/kde/HTML/ru/kdbg
+@comment in kde: @dirrm share/doc/kde/HTML/ru
 @dirrm share/doc/kde/HTML/en/kdbg
+@comment in kde: @dirrm share/doc/kde/HTML/en
 @dirrm share/doc/kde/HTML/de/kdbg
+@comment in kde: @dirrm share/doc/kde/HTML/de
