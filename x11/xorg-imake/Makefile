@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/07/30 22:47:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/31 01:37:23 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 DISTFILES=	X11R6.7.0-src1.tar.gz X11R6.7.0-src3.tar.gz
@@ -17,7 +17,6 @@ USE_BUILDLINK3=		yes
 USE_DIRS+=		xorg-1.1
 INSTALL_TARGET=		install install.man
 NO_XORG_TARGETS=	yes
-CHECK_X11_TYPE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -42,10 +41,10 @@ post-extract:
 
 pre-configure:
 .for F in ${SYSTEMS}
-	@${SED} -e "s|@@PKGSRC_CC@@|${CC}|g" \
-		-e "s|@@PKGSRC_CPP@@|${CPP}|g" \
-		-e "s|@@PKGSRC_CXX@@|${CXX}|g" \
-		-e "s|@@PKGSRC_CFLAGS@@|${CFLAGS}|g" \
+	@${SED} -e "s|@@PKGSRC_CC@@|${CC}|g"		\
+		-e "s|@@PKGSRC_CPP@@|${CPP}|g"		\
+		-e "s|@@PKGSRC_CXX@@|${CXX}|g"		\
+		-e "s|@@PKGSRC_CFLAGS@@|${CFLAGS}|g"	\
 		${WRKSRC}/config/cf/${F}.cf.in > ${WRKSRC}/config/cf/${F}.cf
 .endfor
 .undef F
@@ -63,12 +62,27 @@ do-build:
 		-e "s|@LOCALBASE@|${LOCALBASE}|g "	\
 		-e "s|@MAKE@|${MAKE_PROGRAM}|"	${FILESDIR}/host.def > \
 		${WRKSRC}/config/cf/host.def
-	cd ${WRKSRC} && ${MAKE} Makefile.boot && \
+	cd ${WRKSRC} && ${MAKE} Makefile.boot &&	\
 	${MAKE_PROGRAM} -f xmakefile VerifyOS version.def Makefiles includes
 
 pre-install:
 	@${CP} ${WRKSRC}/xmakefile ${WRKSRC}/xmakefile.bak
 	@${SED} 's/SUBDIRS = include/SUBDIRS =/' ${WRKSRC}/xmakefile.bak > \
 		${WRKSRC}/xmakefile
+
+post-install:
+	@${CP} ${X11ROOT}/lib/X11/config/host.def		\
+		${X11ROOT}/lib/X11/config/host.def.orig
+	@${SED} -e "s|\#define ProjectRoot ${X11ROOT}||"	\
+		${X11ROOT}/lib/X11/config/host.def.orig >	\
+		${X11ROOT}/lib/X11/config/host.def
+	@${RM} ${X11ROOT}/lib/X11/config/host.def.orig
+
+	@( \
+	${ECHO};					\
+	${ECHO} "#ifdef BeforeVendorCF";		\
+	${ECHO} "#define ProjectRoot ${X11ROOT}";	\
+	${ECHO} "#endif";				\
+	) >> ${X11ROOT}/lib/X11/config/host.def
 
 .include "../../mk/bsd.pkg.mk"
