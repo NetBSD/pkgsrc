@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.268 2002/01/21 15:43:30 agc Exp $
+# $NetBSD: Makefile,v 1.269 2002/01/27 15:32:20 taca Exp $
 #
 
 COMMENT=	Networking tools
@@ -167,6 +167,7 @@ SUBDIR+=	rp-pppoe
 SUBDIR+=	rsync
 SUBDIR+=	ruby-drb
 SUBDIR+=	ruby-icmp
+SUBDIR+=	ruby-xmlrpc4r
 SUBDIR+=	samba
 SUBDIR+=	samba20
 SUBDIR+=	sdig
