@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2798 2003/07/16 07:42:56 tron Exp $
+$NetBSD: CHANGES,v 1.2799 2003/07/16 09:24:31 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2829,3 +2829,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkgdiff to 0.112 [grant 2003-07-16]
 	Updated icewm to 1.2.9nb2 [tron 2003-07-16]
 	Updated icewm-gnome to 1.2.9nb2 [tron 2003-07-16]
+	Updated icewm-imlib to 1.2.9nb2 [tron 2003-07-16]
