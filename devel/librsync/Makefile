@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/08/14 12:02:04 abs Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/27 15:33:33 abs Exp $
 #
 
 DISTNAME=		librsync-0.9.6
+PKGREVISION=		1
 CATEGORIES=		devel net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=librsync/}
 
