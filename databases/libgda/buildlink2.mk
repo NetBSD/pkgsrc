@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/12/24 06:09:48 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/02/13 18:31:10 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use libgda.
 #
@@ -22,7 +22,6 @@ BUILDLINK_FILES.libgda+=	lib/libgda/providers/libgda-default.*
 BUILDLINK_FILES.libgda+=	lib/libgdasql.*
 BUILDLINK_FILES.libgda+=	lib/pkgconfig/libgda.pc
 
-.include "../../textproc/gtk-doc/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
 .include "../../lang/python22/buildlink2.mk"
