@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6343 2004/06/27 06:34:53 schmonz Exp $
+$NetBSD: CHANGES,v 1.6344 2004/06/27 07:13:31 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3098,3 +3098,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated icewm to 1.2.14 [xtraeme 2004-06-26]
 	Updated TeXmacs to 1.0.3.9 [recht 2004-06-27]
 	Added py-feedparser-3.0.1 [schmonz 2004-06-27]
+	Updated fvwm-devel to 2.5.10 [epg 2004-06-27]
