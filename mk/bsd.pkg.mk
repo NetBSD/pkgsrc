@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.28 2003/08/23 04:01:53 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.29 2003/08/23 07:41:58 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -105,7 +105,7 @@ PKG_FAIL_REASON+=	"PKG_INSTALLATION_TYPE must be \`\`pkgviews'' or \`\`overwrite
 #
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 PLIST_TYPE?=		dynamic
-.else # ${PKG_INSTALLATION_TYPE} == "overwrite"
+.elif ${PKG_INSTALLATION_TYPE} == "overwrite"
 PLIST_TYPE?=		static
 .endif
 
@@ -176,7 +176,7 @@ NO_MTREE=		yes
 .  else
 PREFIX=			${LOCALBASE}
 .  endif
-.else # ${PKG_INSTALLATION_TYPE} == "pkgviews"
+.elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
 PREFIX=			${DEPOTBASE}/${PKGNAME}
 NO_MTREE=		yes
 .endif
@@ -187,7 +187,7 @@ PKG_FAIL_REASON+=	"DEPOT_SUBDIR may not be empty."
 
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
 PKG_DBDIR=		${PKG_DBDIR_DFLT}
-.else # ${PKG_INSTALLATION_TYPE} == "pkgview"
+.elif ${PKG_INSTALLATION_TYPE} == "pkgview"
 PKG_DBDIR=		${DEPOTBASE}
 #
 # _PLIST_IGNORE_FILES basically mirrors the list of ignored files found
@@ -582,7 +582,7 @@ PLIST_SRC=		${PKGDIR}/PLIST.${OPSYS}
 PLIST_SRC=		${PKGDIR}/PLIST
 .    endif
 .  endif
-.elif # ${PLIST_TYPE} == "dynamic"
+.elif ${PLIST_TYPE} == "dynamic"
 PLIST_SRC=		# empty, since we're using a dynamic PLIST
 .endif
 
