@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/25 19:02:27 jtb Exp $
+bin/xzgv
+@unexec install-info --delete --info-dir=%D/info %D/info/xzgv
+info/xzgv
+info/xzgv-1
+info/xzgv-2
+info/xzgv-3
+@exec install-info --info-dir=%D/info %D/info/xzgv
+man/man1/xzgv.1
