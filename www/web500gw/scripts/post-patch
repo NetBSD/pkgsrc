@@ -1,0 +1,5 @@
+#!/bin/sh
+# $NetBSD: post-patch,v 1.1.1.1 1999/01/08 14:15:57 hwr Exp $
+cd ${WRKSRC}
+mv -f Makefile Makefile.pre
+sed -e "s|@PREFIX@|${PREFIX}|g" < Makefile.pre > Makefile
