@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/06/12 14:43:21 wulf Exp $
+# $NetBSD: Makefile,v 1.3 2000/06/12 15:17:45 wulf Exp $
 #
 
 DISTNAME=		ocaml-3.00
@@ -19,9 +19,9 @@ ALL_TARGET=		world
 pre-install:
 			if ${TEST} ${MACHINE_ARCH} = 'i386'; then \
 			  cd ${WRKSRC}; \
-			  ${MAKE} opt; \
-			  ${MAKE} ocamlc.opt; \
-			  ${MAKE} ocamlopt.opt; \
+			  ${GMAKE} opt; \
+			  ${GMAKE} ocamlc.opt; \
+			  ${GMAKE} ocamlopt.opt; \
 			fi
 
 .include "../../mk/bsd.prefs.mk"
