@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.53 2003/09/02 06:59:44 jlam Exp $
+# $NetBSD: defs.Darwin.mk,v 1.54 2003/09/05 13:54:13 martti Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -77,7 +77,7 @@ GROUPADD?=		${FALSE}			# XXX - Fix me!
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=		${FALSE}
-PKG_TOOLS_BIN?=		${ZOULARISBASE}/sbin
+PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		sudo sh -c
 ROOT_GROUP?=		wheel
 ROOT_USER?=		root
@@ -86,7 +86,6 @@ ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 USERADD?=		${FALSE}			# XXX - Fix me!
-ZOULARISBASE?=		${LOCALBASE}
 
 PKG_CREATE_USERGROUP?=	NO				# XXX - Until then
 
@@ -129,3 +128,9 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 _STRIPFLAG_CC?=		-Wl,-x	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 .endif
+
+LOCALBASE?=		${DESTDIR}/usr/pkg
+.if exists(${LOCALBASE}/sbin/pkg_info)
+PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
+.endif
+PKG_TOOLS_BIN?=		${LOCALBASE}/bin
