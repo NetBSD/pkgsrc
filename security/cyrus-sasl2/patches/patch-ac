@@ -1,0 +1,25 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/10/27 15:09:00 chris Exp $
+
+--- acconfig.h.orig	Sun Oct 27 14:12:42 2002
++++ acconfig.h	Sun Oct 27 14:12:46 2002
+@@ -202,6 +202,9 @@
+ /* do we use doors for IPC? */
+ #undef USE_DOORS
+ 
++/* location of the random number generator */
++#undef SASL_DEV_RANDOM
++
+ @BOTTOM@
+ 
+ /* Create a struct iovec if we need one */
+@@ -217,7 +220,9 @@
+ #endif
+ 
+ /* location of the random number generator */
+-#ifndef DEV_RANDOM
++#ifdef SASL_DEV_RANDOM
++#define DEV_RANDOM SASL_DEV_RANDOM
++#else
+ #define DEV_RANDOM "/dev/random"
+ #endif
+ 

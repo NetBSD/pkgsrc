@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2002/10/27 15:08:59 chris Exp $
+
+SASLDB=@PKG_SYSCONFDIR@/sasldb.db
+SASLSOCKETDIR=@SASLSOCKETDIR@
+
+case ${STAGE} in
+POST-DEINSTALL)
+	${RM} -f /usr/lib/sasl2
+	${RM} -rf ${SASLSOCKETDIR}
+	if [ -e ${SASLDB} ]
+	then
+		${CAT} << EOF
+===========================================================================
+You may want to remove the SASL password data file:
+
+	${SASLDB}
+===========================================================================
+EOF
+	fi
+	;;
+esac
