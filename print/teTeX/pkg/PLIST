@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.3 1998/01/24 22:44:47 hubertf Exp $
 bin/MakeTeXMF
 bin/pslatex
 bin/makeindex.bin
@@ -72,10 +73,10 @@ bin/amstex
 bin/kpsexpand
 bin/kpsepath
 bin/kpsewhich
-@unexec install-info --delete %D/info/latex %D/info/dir
-@unexec install-info --delete %D/info/kpathsea.info %D/info/dir
-@unexec install-info --delete %D/info/dvips.info %D/info/dir
-@unexec install-info --delete %D/info/fontname.info %D/info/dir
+@unexec %D/bin/install-info --delete %D/info/latex %D/info/dir
+@unexec %D/bin/install-info --delete %D/info/kpathsea.info %D/info/dir
+@unexec %D/bin/install-info --delete %D/info/dvips.info %D/info/dir
+@unexec %D/bin/install-info --delete %D/info/fontname.info %D/info/dir
 info/dvips.info-2
 info/dvips.info-3
 info/dvips.info
@@ -96,10 +97,10 @@ info/dvips.info-1
 info/fontname.info-4
 info/kpathsea.info-1
 @exec [ -f %D/info/dir ] || sed -ne '1,/Menu:/p' /usr/share/info/dir > %D/info/dir
-@exec install-info %D/info/latex %D/info/dir
-@exec install-info %D/info/kpathsea.info %D/info/dir
-@exec install-info %D/info/dvips.info %D/info/dir
-@exec install-info %D/info/fontname.info %D/info/dir
+@exec %D/bin/install-info %D/info/latex %D/info/dir
+@exec %D/bin/install-info %D/info/kpathsea.info %D/info/dir
+@exec %D/bin/install-info %D/info/dvips.info %D/info/dir
+@exec %D/bin/install-info %D/info/fontname.info %D/info/dir
 man/man1/afm2tfm.1.gz
 man/man1/allcm.1.gz
 man/man1/alldc.1.gz
@@ -3447,6 +3448,7 @@ share/texmf/ls-R
 @unexec rm -f %D/share/texmf/doc/bibtex/custom-bib
 @exec ln -sf ../latex/natbib %D/share/texmf/doc/bibtex/natbib
 @unexec rm -f %D/share/texmf/doc/bibtex/natbib
+@exec /bin/mkdir -p %D/share/texmf/fonts/pk
 @dirrm share/texmf/xdvi
 @dirrm share/texmf/web2c
 @dirrm share/texmf/texconfig/x
