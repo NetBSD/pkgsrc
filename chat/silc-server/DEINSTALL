@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.4 2002/01/26 14:43:16 hubertf Exp $
+# $NetBSD: DEINSTALL,v 1.5 2002/09/14 02:59:25 hubertf Exp $
 
 case ${STAGE} in
 DEINSTALL)
@@ -6,10 +6,12 @@ DEINSTALL)
 	@PREFIX@/etc/rc.d/silcd stop
 	;;
 POST-DEINSTALL)
-	${ECHO} ===========================================================================
-	${ECHO}
-	${ECHO} "If you won't be using silc-server any longer, you may want to remove"
-        ${ECHO} "your server keys located in @PKG_SYSCONFDIR@."
-	${ECHO}
+	if [ -f @PKG_SYSCONFDIR@/silcd.prv ]; then
+		${ECHO} ===========================================================================
+		${ECHO}
+		${ECHO} "If you won't be using silc-server any longer, you may want to remove"
+        	${ECHO} "your server keys located in @PKG_SYSCONFDIR@."
+		${ECHO}
+	fi
 	;;
 esac
