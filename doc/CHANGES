@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3423 2003/09/17 12:05:39 jmmv Exp $
+$NetBSD: CHANGES,v 1.3424 2003/09/17 14:40:34 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3745,3 +3745,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkg_tarup to 1.5 [erh 2003-09-16]
 	Updated darcnes to 20010401nb1 [wiz 2003-09-17]
 	Updated kopete to 0.7.2 [jmmv 2003-09-17]
+	Updated bind9 to 9.2.2p1 [itojun 2003-09-17]
