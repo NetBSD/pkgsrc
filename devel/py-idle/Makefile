@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:13:33 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/01/08 19:40:37 perry Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-idle-0
@@ -27,9 +27,9 @@ do-patch:
 # With Python-2.3, the Idle code is part of the base library.
 # We just install a wrapper script. Also, threads are required now.
 #
-PYTHON_VERSIONS_ACCEPTED=	20 20pth 21 21pth 22 22pth 23pth
+PYTHON_VERSIONS_ACCEPTED=	20 20pth 21 21pth 22 22pth 23pth 24pth
 .include "../../lang/python/extension.mk"
-.if ${PYPKGPREFIX} != "py23pth"
+.if (${PYPKGPREFIX} != "py23pth") && (${PYPKGPREFIX} != "py24pth")
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Tools/idle/*
 PYTHON_PATCH_SCRIPTS=	Tools/idle/idle.py
