@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/04/22 13:36:07 zuntum Exp $
+# $NetBSD: Makefile,v 1.13 2001/05/30 14:31:50 agc Exp $
 #
 
 COMMENT=	window managers (for X)
@@ -25,6 +25,7 @@ SUBDIR+=	ion
 SUBDIR+=	lwm
 SUBDIR+=	olvwm
 SUBDIR+=	pwm
+SUBDIR+=	qvwm
 SUBDIR+=	ratpoison
 SUBDIR+=	sawfish
 SUBDIR+=	sawfish-replibs
