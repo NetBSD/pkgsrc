@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/23 10:59:08 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/12 23:17:36 mycroft Exp $
 bin/mrproject
 bin/mrproject-engine
 bin/run-mrproject
@@ -17,6 +17,9 @@ lib/mrproject/components/libnetwork-component.so
 lib/mrproject/components/libresource-component.a
 lib/mrproject/components/libresource-component.la
 lib/mrproject/components/libresource-component.so
+lib/mrproject/components/libsend-component.a
+lib/mrproject/components/libsend-component.la
+lib/mrproject/components/libsend-component.so
 lib/mrproject/components/libtask-dialog-component.a
 lib/mrproject/components/libtask-dialog-component.la
 lib/mrproject/components/libtask-dialog-component.so
@@ -121,6 +124,5 @@ share/pixmaps/mrproject.png
 @dirrm share/mrproject
 @dirrm share/images/mrproject
 @dirrm share/images
-@dirrm share/gnome/apps/Applications
 @dirrm lib/mrproject/components
 @dirrm lib/mrproject
