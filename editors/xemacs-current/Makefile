@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/11/25 18:09:06 magick Exp $
+# $NetBSD: Makefile,v 1.42 2004/11/25 21:42:59 xtraeme Exp $
 
 DISTNAME=	xemacs-21.5.18
 CATEGORIES=	editors
@@ -11,7 +11,7 @@ COMMENT=	*BETA* XEmacs text editor version 21.5.18
 USE_BUILDLINK3=	YES
 USE_X11=	YES
 
-BUILD_DEFS+=	XEMACS_WIDGETS XEMACS_ESD USE_OPENLDAP USE_XFACE XEMACS_USE_CANNA
+BUILD_DEFS+=	XEMACS_WIDGETS
 PLIST_SUBST+=	EMACSVER=xemacs-21.5-b18
 MESSAGE_SUBST+=	EMACSVER=xemacs-21.5-b18
 
@@ -19,7 +19,7 @@ MESSAGE_SUBST+=	EMACSVER=xemacs-21.5-b18
 GCC_REQD+=		2.95.3
 .endif
 
-.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 XEMACS_WIDGETS?=	lucid
 .if ${XEMACS_WIDGETS} == "gtk"
@@ -33,33 +33,6 @@ WITH_WIDGETS=	--with-gnome
 .else
 .  include "../../mk/xaw.buildlink3.mk"
 WITH_WIDGETS=	--with-widgets=lucid
-.endif
-
-.if defined(XEMACS_ESD) && (${XEMACS_ESD} == "YES")
-.  include "../../audio/esound/buildlink3.mk"
-.else
-CONFIGURE_ARGS += --with-sound=none
-.endif
-
-.if defined(USE_OPENLDAP) && (${USE_OPENLDAP} == "YES")
-WITH_LDAP=	--with-ldap
-.  include "../../databases/openldap/buildlink3.mk"
-.else
-WITH_LDAP=	--without-ldap
-.endif
-
-.if defined(USE_XFACE) && (${USE_XFACE} == "YES")
-.  include "../../mail/faces/buildlink3.mk"
-WITH_XFACE=	--with-xface
-.else
-WITH_XFACE=	--without-xface
-.endif
-
-.if defined(XEMACS_USE_CANNA) && (${XEMACS_USE_CANNA} == "YES")
-.  include "../../inputmethod/canna-lib/buildlink3.mk"
-WITH_CANNA=	--with-canna
-.else
-WITH_CANNA=	--without-canna
 .endif
 
 .include "../../databases/gdbm/buildlink3.mk"
@@ -77,7 +50,7 @@ CONFIGURE_ARGS+=	--error-checking=none
 CONFIGURE_ARGS+=	--with-mule=yes
 CONFIGURE_ARGS+=	--without-ncurses
 CONFIGURE_ARGS+=	--without-msw
-CONFIGURE_ARGS+=	${WITH_WIDGETS} ${WITH_LDAP} ${WITH_XFACE} ${WITH_CANNA}
+CONFIGURE_ARGS+=	${WITH_WIDGETS}
 CONFIGURE_ARGS+=	--infopath="${INFOPATH}"
 CONFIGURE_ARGS+=	--site-includes=${PREFIX}/include:${WRKDIR}
 CONFIGURE_ARGS+=	--site-libraries=${PREFIX}/lib
