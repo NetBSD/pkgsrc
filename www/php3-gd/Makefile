@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/05/03 21:47:27 tv Exp $
+# $NetBSD: Makefile,v 1.2 1999/05/04 20:24:23 tv Exp $
 #
 
 PKGNAME=	php-gd-${PHP_VERSION}
@@ -16,6 +16,7 @@ do-build:
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/functions/gd.so ${PREFIX}/lib/php3/
+	${INSTALL_SCRIPT} ${WRKSRC}/extra/gd/bdf2gdfont ${PREFIX}/bin/
 
 .include "../php3/Makefile"
 
