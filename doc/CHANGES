@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6227 2004/06/19 14:43:24 markd Exp $
+$NetBSD: CHANGES,v 1.6228 2004/06/19 16:56:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2963,3 +2963,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated firefox-gtk2 to 0.8nb4 [xtraeme 2004-06-18]
 	Updated firefox to 0.8nb4 [xtraeme 2004-06-18]
 	Updated t1lib to 5.0.2nb2 [markd 2004-06-19]
+	Updated squid to 2.5.5nb5 [taca 2004-06-19]
