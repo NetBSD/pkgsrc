@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/08/04 21:02:16 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/09 16:48:02 seb Exp $
 bin/a2ps
 bin/card
 bin/composeglyphs
@@ -10,18 +10,6 @@ bin/psmandup
 bin/psset
 bin/texi2dvi4a2ps
 include/liba2ps.h
-info/a2ps.info
-info/a2ps.info-1
-info/a2ps.info-2
-info/a2ps.info-3
-info/a2ps.info-4
-info/a2ps.info-5
-info/a2ps.info-6
-info/ogonkify.info
-info/regex.info
-info/regex.info-1
-info/regex.info-2
-info/regex.info-3
 lib/liba2ps.a
 lib/liba2ps.la
 lib/liba2ps.so
