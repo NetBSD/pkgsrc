@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9477 2005/03/12 09:14:41 jmmv Exp $
+$NetBSD: CHANGES,v 1.9478 2005/03/12 14:58:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1351,3 +1351,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sr to 2.3.3nb3 [is 2005-03-11]
 	Updated gst-plugins to 0.8.7nb2 [jmmv 2005-03-12]
 	Removed gnome-acme [jmmv 2005-03-12]
+	Updated amarok to 1.2.1nb1 [minskim 2005-03-12]
