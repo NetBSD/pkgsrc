@@ -1,4 +1,4 @@
-$NetBSD: manual.README,v 1.4 2004/09/27 14:40:58 tv Exp $
+$NetBSD: manual.README,v 1.5 2004/10/04 19:48:09 tv Exp $
 
 The "manual-*" patch files are used to maintain the pkgsrc version of
 libtool.  These files contain patches for the .m4 files in libtool which are
@@ -18,6 +18,7 @@ cat /usr/pkgsrc/devel/libtool/patches/manual-* | patch -s
 
 [edit *.m4 files and put patches back to manual-*]
 
+./configure
 make ./configure
 pkgdiff configure >/usr/pkgsrc/devel/libtool/patches/patch-ab
 cp -f acinclude.m4 libltdl/
@@ -25,8 +26,11 @@ cp -f acinclude.m4 libltdl/
 pkgdiff libltdl/configure >/usr/pkgsrc/devel/libtool/patches/patch-ad
 cd /usr/pkgsrc/devel/libtool
 make makepatchsum
-cvs commit
+
+[clean and test new libtool-base]
+
+[bump PKGREVISION of libtool-base and commit libtool & libtool-base dirs]
 
 =====
 
-- tv@duh.org, 20 Apr 2004
+- tv@duh.org, 4 Oct 2004
