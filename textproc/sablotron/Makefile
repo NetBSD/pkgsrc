@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/05/27 08:30:24 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/05/29 23:14:10 grant Exp $
 
 DISTNAME=		Sablot-0.96
 PKGNAME=		sablotron-0.96
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.gingerall.com/charlie/ga/xml/p_sab.xml
 COMMENT=		XML toolkit implementing XSLT, DOM, and XPath
 
 USE_BUILDLINK2=		YES
-USE_CXX=		YES
+USE_GCC_SHLIB=		YES
 GNU_CONFIGURE=  	YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
@@ -26,5 +26,4 @@ LDFLAGS+=               -lstdc++ -lm
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
 
-.include "../../mk/gcc.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

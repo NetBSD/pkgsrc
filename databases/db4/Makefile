@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/29 23:14:08 grant Exp $
 
 DISTNAME=	db-4.0.14
 PKGNAME=	db4-4.0.14
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.sleepycat.com/
 COMMENT=	Sleepycat Software's Berkeley DB version 4
 
 USE_BUILDLINK2=		yes
-USE_CXX=		yes
+USE_GCC_SHLIB=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKDIR}/${DISTNAME}/build_unix/libtool
 GNU_CONFIGURE=		yes
