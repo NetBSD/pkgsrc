@@ -1,13 +1,15 @@
-$NetBSD: patch-ac,v 1.6 2001/01/11 19:00:43 jlam Exp $
+$NetBSD: patch-ac,v 1.7 2001/01/28 02:05:37 jlam Exp $
 
---- backend/serial.c.orig	Wed Jan  3 12:44:40 2001
-+++ backend/serial.c
-@@ -800,7 +800,7 @@
-              device, i + 1);
-     }
-   }
--+#elif defined(__NetBSD__)
-+#elif defined(__NetBSD__)
-   int	i, j;		/* Looping vars */
-   int	fd;		/* File descriptor */
-   char	device[255];	/* Device filename */
+--- conf/cupsd.conf.in.orig	Wed Dec 20 08:41:12 2000
++++ conf/cupsd.conf.in
+@@ -247,8 +247,8 @@
+ # program is run...
+ #
+ 
+-#User lp
+-#Group sys
++User @CUPS_USER@
++Group @CUPS_GROUP@
+ 
+ #
+ # RIPCache: the amount of memory that each RIP should use to cache

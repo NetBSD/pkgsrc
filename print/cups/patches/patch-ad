@@ -1,15 +1,72 @@
-$NetBSD: patch-ad,v 1.4 2000/12/21 14:59:38 jlam Exp $
+$NetBSD: patch-ad,v 1.5 2001/01/28 02:05:37 jlam Exp $
 
---- conf/cupsd.conf.in.orig	Wed Dec 20 08:41:12 2000
-+++ conf/cupsd.conf.in
-@@ -247,8 +247,8 @@
- # program is run...
- #
+--- configure.in.orig	Fri Jan 26 10:01:59 2001
++++ configure.in
+@@ -514,8 +514,14 @@
+ dnl Setup init.d locations...
+ case "$uname" in
+-	FreeBSD* | NetBSD* | OpenBSD*)
+-		# *BSD
++	FreeBSD* | OpenBSD*)
+ 		INITDIR=""
+ 		INITDDIR=""
++		INITSCRIPT=""
++		;;
++
++	NetBSD*)
++		INITDIR="/etc/rc.d"
++		INITDDIR=""
++		INITSCRIPT="scripts/netbsd"
+ 		;;
  
--#User lp
--#Group sys
-+User @CUPS_USER@
-+Group @CUPS_GROUP@
+@@ -526,4 +532,5 @@
+ 			INITDIR="/sbin/init.d"
+ 			INITDDIR=".."
++			INITSCRIPT="scripts/sysv"
+ 		else
+ 			if test -d /etc/rc.d; then
+@@ -531,8 +538,10 @@
+ 				INITDIR="/etc/rc.d"
+ 				INITDDIR="../init.d"
++				INITSCRIPT="scripts/sysv"
+ 			else
+ 				# Others
+ 				INITDIR="/etc"
+ 				INITDDIR="../init.d"
++				INITSCRIPT="scripts/sysv"
+ 			fi
+ 		fi
+@@ -542,4 +551,5 @@
+ 		INITDIR="/sbin"
+ 		INITDDIR="../init.d"
++		INITSCRIPT="scripts/sysv"
+ 		;;
  
- #
- # RIPCache: the amount of memory that each RIP should use to cache
+@@ -547,4 +557,5 @@
+ 		INITDIR="/etc"
+ 		INITDDIR="../init.d"
++		INITSCRIPT="scripts/sysv"
+ 		;;
+ 
+@@ -553,4 +564,5 @@
+ AC_SUBST(INITDIR)
+ AC_SUBST(INITDDIR)
++AC_SUBST(INITSCRIPT)
+ 
+ dnl Setup default locations...
+@@ -612,6 +624,6 @@
+ 
+ dnl Set the CUPS_DOCROOT directory...
+-CUPS_DOCROOT='${datadir}/doc/cups'
+-AC_DEFINE_UNQUOTED(CUPS_DOCROOT, "$datadir/doc/cups")
++CUPS_DOCROOT='${datadir}/doc/html/cups'
++AC_DEFINE_UNQUOTED(CUPS_DOCROOT, "$datadir/doc/html/cups")
+ AC_SUBST(CUPS_DOCROOT)
+ 
+@@ -619,5 +631,5 @@
+ AC_DEFINE_UNQUOTED(CUPS_FONTPATH, "$fontpath")
+ 
+-AC_OUTPUT(Makedefs cups.sh)
++AC_OUTPUT(Makedefs cups.sh scripts/common)
+ 
+ dnl

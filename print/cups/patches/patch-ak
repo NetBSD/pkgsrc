@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.5 2001/01/28 02:05:38 jlam Exp $
+
+--- systemv/lpstat.c.orig	Fri Jan 26 09:22:00 2001
++++ systemv/lpstat.c
+@@ -761,6 +761,7 @@
+       */
+ 
+       printer = NULL;
++      printer_uri = NULL;
+       members = NULL;
+ 
+       while (attr != NULL && attr->group_tag == IPP_TAG_PRINTER)

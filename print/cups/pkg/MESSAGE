@@ -1,8 +1,8 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.1 2000/07/12 20:09:40 jlam Exp $
+$NetBSD: MESSAGE,v 1.2 2001/01/28 02:05:38 jlam Exp $
 
-You may want to backup /etc/printcap before starting cupsd for the first
-time, as cupsd may overwrite this file with automatically generated
-content.
+You may want to backup /etc/printcap before starting CUPS for the first
+time, as the CUPS scheduler may overwrite this file with automatically
+generated content.
 
 ==========================================================================

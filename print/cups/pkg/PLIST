@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/01/04 15:10:54 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/01/28 02:05:38 jlam Exp $
 bin/cancel
 bin/disable
 bin/enable
@@ -9,7 +9,7 @@ bin/lpq
 bin/lpr
 bin/lprm
 bin/lpstat
-etc/rc.d/cupsd
+etc/rc.d/cups
 include/cups/cups.h
 include/cups/http.h
 include/cups/ipp.h
@@ -270,9 +270,9 @@ share/cups/templates/printer-stop.tmpl
 share/cups/templates/printers.tmpl
 share/cups/templates/test-page.tmpl
 share/cups/templates/trailer.tmpl
-share/doc/cups/ENCRYPTION
-share/doc/cups/LICENSE
-share/doc/cups/README
+share/doc/cups/ENCRYPTION.txt
+share/doc/cups/LICENSE.txt
+share/doc/cups/README.txt
 share/doc/html/cups/cmp.html
 share/doc/html/cups/cmp.pdf
 share/doc/html/cups/cups.css
