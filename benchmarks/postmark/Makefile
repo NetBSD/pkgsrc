@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/09/09 20:36:15 agc Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/28 21:14:13 wiz Exp $
 # FreeBSD ID: ports/benchmarks/postmark/Makefile,v 1.2 1999/09/19 05:13:20 obrien Exp
 #
 
@@ -14,7 +14,6 @@ COMMENT=	NetApps file system benchmark
 
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} postmark.c
 
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}
 

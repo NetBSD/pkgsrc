@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/01/29 21:28:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/28 21:14:36 wiz Exp $
 #
 
 DISTNAME=	docbook-xsl-1.60.1
@@ -14,7 +14,6 @@ DEPENDS=	docbook-xml>=4.2:../../textproc/docbook-xml
 
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
-NO_PATCH=	YES
 USE_BUILDLINK2=	YES
 
 DOCDIR=		${PREFIX}/share/doc/docbook-xsl
