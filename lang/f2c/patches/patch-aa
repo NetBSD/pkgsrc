@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2001/04/07 12:43:48 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.8 2001/04/07 12:47:46 dmcmahill Exp $
 
 Add a top level Makefile
 
@@ -40,8 +40,8 @@ Add a top level Makefile
 +	${BSD_INSTALL_PROGRAM} ./src/f2c ${PREFIX}/bin
 +	${BSD_INSTALL_SCRIPT} ./f2c-f77 ${PREFIX}/bin
 +	-@mkdir -p ${PREFIX}/lib
-+	@cd libI77 && ${MAKE} -f Makefile install LIBDIR=${PREFIX}/lib
-+	@cd libF77 && ${MAKE} -f Makefile install LIBDIR=${PREFIX}/lib
++	@cd libI77 && ${MAKE} install LIBDIR=${PREFIX}/lib
++	@cd libF77 && ${MAKE} install LIBDIR=${PREFIX}/lib
 +	${BSD_INSTALL_DATA} ./libf2c.a ${PREFIX}/lib
 +	-@mkdir -p ${PREFIX}/include
 +	${BSD_INSTALL_DATA} ./f2c.h ${PREFIX}/include
