@@ -1,14 +1,31 @@
-# $NetBSD: Makefile.NetBSD.i386,v 1.2 2003/10/19 08:35:09 grant Exp $
+# $NetBSD: Makefile.NetBSD.i386,v 1.3 2003/12/17 02:57:10 grant Exp $
 #
 
+.if defined(MOZILLA_USE_LINUX)
 DISTNAME=	MozillaFirebird-i686-pc-linux-gnu
 MASTER_SITES=	http://ftp.mozilla.org/pub/firebird/nightly/latest-trunk/
 
 PLATFORM=	linux
-MOZILLA_LIB=	${PREFIX}/lib/MozillaFirebird-${PLATFORM}
 
 DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DEPENDS+=	suse_gtk>=7.3:../../emulators/${SUSE_DIR_PREFIX}_gtk
+.  include "../../emulators/suse_linux/Makefile.application"
+.else
+DISTNAME=	MozillaFirebird-i386-unknown-netbsdelf1.6
+MASTER_SITES=	http://ftp.mozilla.org/pub/firebird/nightly/contrib/latest-trunk/
 
-.include "../../emulators/suse_linux/Makefile.application"
+ONLY_FOR_PLATFORM+=	NetBSD-1.6*-i386 NetBSD-2*-i386
+
+PLATFORM=	netbsd
+
+DEPENDS+=	ORBit>=0.5.15nb5:../../net/ORBit
+DEPENDS+=	gtk+>=1.2.10nb5:../../x11/gtk
+
+.  if !exists(/usr/lib/libstdc++.so.4)
+DEPENDS+=	compat16>=1.6.0:../../emulators/compat16
+_COMPAT16_LIBSTDCXX=	YES
+.  endif
+.endif
+
+MOZILLA_LIB=	${PREFIX}/lib/MozillaFirebird-${PLATFORM}
