@@ -1,45 +1,22 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/05/10 13:41:10 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2004/05/25 21:49:26 wiz Exp $
 
---- ffserver.c.orig	2001-08-14 17:38:17.000000000 -0500
+--- ffserver.c.orig	2003-09-28 17:26:39.000000000 +0200
 +++ ffserver.c
-@@ -20,6 +20,7 @@
- #include <stdlib.h>
- #include <stdio.h>
- #include <string.h>
-+#include <sys/types.h>
- #include <netinet/in.h>
- #include <unistd.h>
- #include <fcntl.h>
-@@ -28,8 +29,9 @@
- #include <errno.h>
- #include <sys/time.h>
- #include <time.h>
-+#ifndef __FreeBSD__
- #include <getopt.h>
--#include <sys/types.h>
-+#endif
- #include <sys/socket.h>
- #include <arpa/inet.h>
- #include <netdb.h>
-@@ -1491,7 +1493,7 @@ void help(void)
+@@ -4488,7 +4488,7 @@ static void show_help(void)
             "\n"
-            "-L            : print the LICENCE\n"
+            "-L            : print the LICENSE\n"
             "-h            : this help\n"
 -           "-f configfile : use configfile instead of /etc/ffserver.conf\n"
 +           "-f configfile : use configfile instead of " FFSERVER_CONF "\n"
             );
  }
  
-@@ -1523,10 +1525,10 @@ int main(int argc, char **argv)
+@@ -4546,7 +4546,7 @@ int main(int argc, char **argv)
  
-     register_all();
+     av_register_all();
  
 -    config_filename = "/etc/ffserver.conf";
 +    config_filename = FFSERVER_CONF;
  
-     for(;;) {
--        c = getopt_long_only(argc, argv, "Lh?f:", NULL, NULL);
-+        c = getopt(argc, argv, "Lh?f:");
-         if (c == -1)
-             break;
-         switch(c) {
+     my_program_name = argv[0];
+     my_program_dir = getcwd(0, 0);
