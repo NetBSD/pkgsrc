@@ -1,0 +1,2 @@
+To use the The Merit AAA Server you have to copy the contents of the directory
+"@PREFIX@/share/examples/radius" to "/etc/raddb" and to customize it.
