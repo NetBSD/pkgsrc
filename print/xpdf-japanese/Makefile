@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/01/18 16:28:49 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/18 16:30:59 wiz Exp $
 #
 
 DISTNAME=	xpdf-japanese-2004-jan-16
-PKGNAME=	${DISTNAME}-20040116
+PKGNAME=	xpdf-japanese-20040116
 WRKSRC=		${WRKDIR}/xpdf-japanese
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
