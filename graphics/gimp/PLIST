@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/29 22:16:09 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/05 08:02:56 adam Exp $
 bin/gimp
 bin/gimp-2.0
 bin/gimp-remote
@@ -1735,6 +1735,7 @@ share/mime-info/gimp-2.0.keys
 @dirrm share/gimp/2.0/brushes
 @dirrm share/gimp/2.0
 @dirrm share/gimp
+@dirrm share/examples/gimp-2.0
 @dirrm share/doc/html/${PKGNAME}/libgimpwidgets
 @dirrm share/doc/html/${PKGNAME}/libgimpthumb
 @dirrm share/doc/html/${PKGNAME}/libgimpmodule
