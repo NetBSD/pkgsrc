@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3338 2005/03/30 21:59:31 adrianp Exp $
+$NetBSD: TODO,v 1.3339 2005/03/31 02:19:20 seb Exp $
 
 Suggested new packages
 ======================
@@ -372,7 +372,6 @@ Suggested package updates
 	o crossfire-client-1.7.1
 	o crossfire-server-1.7.1
 	o cscope-15.5
-	o cssc-1.0.1
 	o cstream-2.5
 	o cue-20050228
 	o cuetools-1.3
