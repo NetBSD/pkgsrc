@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/01/30 23:18:45 agc Exp $
+# $NetBSD: Makefile,v 1.19 1999/02/15 21:41:32 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
@@ -13,6 +13,8 @@ HOMEPAGE=	http://www.kde.org/
 DEPENDS+=	qt-1.42:../../x11/qt
 
 CONFLICTS=	kdesupport-2.1b kdesupport-3.1b kdesupport-4.1b
+
+IGNORE=		"needs to be updated"
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
