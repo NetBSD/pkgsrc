@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.10 2002/01/07 21:29:35 wiz Exp $
+
+--- mpi/config.links.orig	Sun Apr 29 13:36:18 2001
++++ mpi/config.links
+@@ -119,6 +119,12 @@
+ 	path="sparc32v8 sparc32"
+ 	mpi_extra_modules="udiv"
+ 	;;
++    sparc64-*-netbsd)
++	# There are no sparc64 assembler modules that work, so
++	# just use generic C functions
++	echo '/* configured for sparc64-*-netbsd */' >>./mpi/asm-syntax.h
++	path=""
++	;;
+     sparc9*-*-*     | \
+     sparc64*-*-*    | \
+     ultrasparc*-*-* )
