@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 1999/03/05 01:52:32 hubertf Exp $
+
+--- egon/Makefile.in.BAK	Fri Mar  5 02:13:20 1999
++++ egon/Makefile.in	Fri Mar  5 02:13:29 1999
+@@ -58,7 +58,7 @@
+ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
+ AWK = @AWK@
+-CC = @CC@
++CC = @CC@ -I${LOCALBASE}/include
+ GUILE = @GUILE@
+ LIBCURSES = @LIBCURSES@
+ LIBDL = @LIBDL@

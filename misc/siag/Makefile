@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 1999/02/09 16:08:58 bad Exp $
+# $NetBSD: Makefile,v 1.5 1999/03/05 01:52:32 hubertf Exp $
 
-DISTNAME=       siag-3.1.2
+DISTNAME=       siag-3.1.7
 CATEGORIES=     misc textproc math
 MASTER_SITES=   ftp://ftp.edu.stockholm.se/pub/siag/
 
@@ -19,13 +19,8 @@ CFLAGS+=	-Dunix
 LDFLAGS+=	-Wl,-R${X11BASE}/lib
 STRIPFLAG=
 
-pre-configure:
-	cd ${WRKSRC} ; \
-	[ -f topdir.mk.BAK ] || ${MV} topdir.mk topdir.mk.BAK ; \
-	${SED} \
-		-e 's|^\(SIAG_HOME\)=.*$$|\1="${PREFIX}/lib/siag"|g' \
-		-e 's|^\(SIAG_DOCS\)=.*$$|\1=${PREFIX}/share/siag|g' \
-		-e 's|^\(CURSES\)=.*$$|\1=-lcurses -ltermcap|g' \
-		<topdir.mk.BAK >topdir.mk
+post-install:
+	${MV} ${PREFIX}/doc/siag ${PREFIX}/share/doc/siag
+	${RMDIR} ${PREFIX}/doc
 
 .include "../../mk/bsd.pkg.mk"
