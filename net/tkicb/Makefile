@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/01/29 19:31:12 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/04/01 13:38:45 agc Exp $
 #
 
 DISTNAME=	icb.2.1.4
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.icb.net/
 
-DEPENDS=	tk-8.0p2:../../x11/tk80
+DEPENDS=	tk-8.0.5:../../x11/tk80
 
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
