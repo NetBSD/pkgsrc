@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 1999/02/15 21:33:34 tron Exp $
+@comment $NetBSD: PLIST,v 1.13 1999/06/03 22:44:05 tron Exp $
 include/kaccel.h
 include/kglobalaccel.h
 include/kckey.h
@@ -219,6 +219,7 @@ share/kde/locale/hr/LC_MESSAGES/kde.mo
 share/kde/locale/ro/LC_MESSAGES/kde.mo
 share/kde/locale/sk/LC_MESSAGES/kde.mo
 share/kde/locale/ca/LC_MESSAGES/kde.mo
+share/kde/locale/th/LC_MESSAGES/kde.mo
 share/kde/locale/de/charset
 share/kde/locale/fr/charset
 share/kde/locale/cs/charset
@@ -316,6 +317,8 @@ share/kde/toolbar/configure.xpm
 @dirrm share/kde/locale/zh_TW.Big5
 @dirrm share/kde/locale/zh_CN.GB2312/LC_MESSAGES
 @dirrm share/kde/locale/zh_CN.GB2312
+@dirrm share/kde/locale/th/LC_MESSAGES
+@dirrm share/kde/locale/th
 @dirrm share/kde/locale/sv/LC_MESSAGES
 @dirrm share/kde/locale/sv
 @dirrm share/kde/locale/sl/LC_MESSAGES
