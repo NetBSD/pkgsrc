@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/07/18 20:04:11 martin Exp $
-#
+# $NetBSD: Makefile,v 1.17 2001/07/19 15:04:41 tron Exp $
 
 DISTNAME=		elm2.5.5
 PKGNAME=		elm-2.5.5
@@ -10,7 +9,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.instinct.org/elm/
 COMMENT=		ELM Mail User Agent (without ME extensions)
 
-CONFLICTS=		elm-*
+CONFLICTS+=		mm-*
 
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./Configure
