@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2805 2004/12/30 10:39:10 jmmv Exp $
+$NetBSD: TODO,v 1.2806 2004/12/30 18:06:34 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -317,7 +317,6 @@ Suggested package updates
 	o auctex-11.53
 	o avidemux-2.0.34
 	o avl-2.0.1
-	o avr-libc-1.0.4 [pkg/28570]
 	o balsa-1.4.4
 	o bbsload-0.2.8
 	o bchunk-1.2.0
