@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/03/01 23:19:02 tron Exp $
+# $NetBSD: Makefile,v 1.19 1999/07/27 21:34:31 tron Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -16,7 +16,6 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.fvwm.org/
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	xpmroot-2.2:../../x11/xpmroot
 
 CONFLICTS=	fvwm-2.*
