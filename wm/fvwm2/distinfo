@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.20 2003/06/01 06:53:30 martti Exp $
+$NetBSD: distinfo,v 1.21 2003/10/13 15:21:19 martti Exp $
 
-SHA1 (fvwm-2.4.16.tar.gz) = 7cb65dcfa55392ac18e53ff46595d9b0b3eccd1c
-Size (fvwm-2.4.16.tar.gz) = 1787645 bytes
+SHA1 (fvwm-2.4.17.tar.gz) = 44bc8d8d739092e29cacf2829481bd322839fb46
+Size (fvwm-2.4.17.tar.gz) = 1795326 bytes
 SHA1 (fvwm_icons.tgz) = d6ee1e52f1a84c4edd722ccee0f7e9cc79cc2a4b
 Size (fvwm_icons.tgz) = 363406 bytes
-SHA1 (patch-aa) = 31533662f175f9958eed78b8d181c0b71296c6de
-SHA1 (patch-ab) = 56c1048d42d18b15923fa6a278bccfee4f961be4
+SHA1 (patch-aa) = 6721d48d720a242ec80dd7b50aa934f13ff26ddf
+SHA1 (patch-ab) = 42052984c5b359fc19c117940ea30963d0b22944
