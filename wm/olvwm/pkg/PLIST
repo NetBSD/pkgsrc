@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+bin/olvwm
+lib/help/olvwm.info
+man/cat1/olvwm.0
+man/cat5/olvwmrc.0

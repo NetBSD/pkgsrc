@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+
+--- Makefile.in.orig	Wed Jun 26 02:26:47 1996
++++ Makefile.in	Tue Jan 11 10:04:41 2000
+@@ -10,7 +10,7 @@
+ 
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+-subdirs=libs fvwm modules utils sample.fvwmrc xpmroot icons mini-icons
++subdirs=libs fvwm modules utils sample.fvwmrc icons mini-icons
+ 
+ CFLAGS = -O
+ 

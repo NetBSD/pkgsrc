@@ -1,0 +1,55 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/12/12 02:03:46 wiz Exp $
+
+--- autoconf/Makefile.common.in.orig	Wed Aug 25 17:44:20 1999
++++ autoconf/Makefile.common.in	Fri Aug 27 21:56:14 1999
+@@ -7,7 +7,7 @@
+ all:            $(PROG)
+ 
+ install.bin:	$(PROG)
+-		$(INSTALL_PROGRAM) $(PROG) $(AFTER_BIN_DIR)
++		$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $(PROG) $(AFTER_BIN_DIR)/$(PROG)
+ 
+ install.lib:	@LIBPROG@ @LIBINSTALL@
+ 
+@@ -70,10 +70,10 @@
+ 		done
+ 
+ $(PROG):        $(OBJS) $(LIBS_DEPEND)
+-		$(CC) $(OBJS) $(LIBRARIES) $(EXTRA_LIBRARIES) -o $(@)
++		$(LIBTOOL) --mode=link $(CC) $(OBJS:.o=.lo) $(LIBRARIES) $(EXTRA_LIBRARIES) -o $(@)
+ 
+ .c.o:
+-		$(CC) $(CCFLAGS) $(EXTRA_DEFINES) $(INCLUDES) $(EXTRA_INCLUDES) -c $*.c
++		$(LIBTOOL) --mode=compile $(CC) $(CCFLAGS) $(EXTRA_DEFINES) $(INCLUDES) $(EXTRA_INCLUDES) -c $*.c
+ 
+ #
+ # include dependency files if they exist
+@@ -84,23 +84,17 @@
+ include .depend
+ #endif
+ 
+-../../lib/libafterstep.a:
++../../lib/libafterstep.la:
+ 		cd ../../lib/; ${MAKE}
+ 
+-../../asimagelib/libasimage.a:
++../../asimagelib/libasimage.la:
+ 		cd ../../asimagelib/; ${MAKE}
+ 
+-../Config/libasConfig.a:
++../Config/libasConfig.la:
+ 		cd ../Config/; ${MAKE}
+ 
+-../../lib/libafterstep.so:
+-		cd ../../lib/; ${MAKE}
+-
+-../../asimagelib/libasimage.so:
+-		cd ../../asimagelib/; ${MAKE}
+-
+-../Config/libasConfig.so:
+-		cd ../Config/; ${MAKE}
++../Script/Widgets/Widgets.la:
++		cd ../Script/Widgets/; ${MAKE}
+ 
+ #
+ # End of Make.common

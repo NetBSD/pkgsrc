@@ -1,0 +1,20 @@
+FIRST TIME USERS:
+To use afterstep as your window manager, simply invoke "exec afterstep"
+at the end of your .xinitrc (for "startx), or .xsession file (for xdm).
+Don't forget to comment out any line(s) for your current window manager.
+
+UPGRADERS:
+Afterstep-1.8.x is more configurable than ever, but note: the format of
+many of the configuration files has changed! In particular, it is no
+longer necessary to maintain a complete copy of @PREFIX@/share/afterstep
+in each home directory--your ~/Gnu/Library/Afterstep directory now need
+only contain changes from the defaults in @PREFIX@/share/afterstep.
+Upgraders are advised to back up their old ~/Gnu/Library/Afterstep directory,
+and review the documentation before merging diffs carefully. 
+
+EVERYBODY:
+The AfterStep Control Panel for 1.8.x is still under development.
+See the online docs--Wharf top button, or bottom item of start menu,
+or view @PREFIX@/share/afterstep/doc/afterstep.html with any browser.
+If you are connected to the Internet, a FAQ, mailing lists, and other
+resources may be found on the Afterstep Home Page:
