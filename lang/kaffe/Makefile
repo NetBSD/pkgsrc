@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2003/08/23 15:14:01 jschauma Exp $
-#
+# $NetBSD: Makefile,v 1.49 2003/09/22 03:04:16 jschauma Exp $
 
-DISTNAME=		kaffe-1.0.7
-PKGREVISION=		1
+DISTNAME=		kaffe-1.1.0
 CATEGORIES=		lang java
-MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/v1.0.x-production/
+MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/v1.1.x-development/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.kaffe.org/
@@ -14,6 +12,7 @@ USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
 USE_X11=		yes
 USE_LIBTOOL=		yes
+USE_GMAKE=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 TEST_TARGET=		check
 
@@ -27,6 +26,7 @@ JVM_HOME=		${LOCALBASE}/java/kaffe
 NO_MTREE=		yes	# since we change PREFIX below
 
 OWN_DIRS=	${PREFIX}
+OWN_DIRS+=	${PREFIX}/etc
 OWN_DIRS+=	${PREFIX}/jre
 OWN_DIRS+=	${PREFIX}/jre/lib
 OWN_DIRS+=	${PREFIX}/jre/lib/security
@@ -46,6 +46,7 @@ CONFIGURE_ENV+=		VM_LIBS="-lc"
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/license.terms ${PREFIX}
 
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gmp/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
