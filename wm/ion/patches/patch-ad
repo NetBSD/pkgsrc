@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2002/12/22 21:33:15 jmmv Exp $
+$NetBSD: patch-ad,v 1.2 2004/01/11 19:00:16 jlam Exp $
 
 --- src/Makefile.orig	Wed May 23 23:58:05 2001
 +++ src/Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.1 2002/12/22 21:33:15 jmmv Exp $
  #-lefence
  INCLUDES += -I../libtu/include $(X11_INCLUDES)
 -DEFINES += -DETCDIR=\"$(ETCDIR)\"
-+DEFINES += -DETCDIR=\"$(PKG_SYSCONFBASE)\"
++DEFINES += -DETCDIR=\"$(PKG_SYSCONFBASEDIR)\"
  
  CFLAGS += $(XOPEN_SOURCE) $(MODULE_SUPPORT)
  LDFLAGS += $(MODULE_SUPPORT_LDFLAGS)
