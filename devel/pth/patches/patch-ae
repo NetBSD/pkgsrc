@@ -1,36 +1,9 @@
-$NetBSD: patch-ae,v 1.2 2002/10/14 11:49:56 skrll Exp $
+$NetBSD: patch-ae,v 1.3 2003/05/02 11:49:48 wiz Exp $
 
---- configure.in.orig	Sun Jan 27 11:03:40 2002
-+++ configure.in
-@@ -148,6 +148,26 @@ AC_MSG_PART(Optional Platform Environmen
- dnl #  check for the number of signals
- AC_CHECK_NSIG(PTH_NSIG)
- 
-+dnl #  check for value of FD_SETSIZE
-+AC_FDSETSIZE(PTH_FDSETSIZE)
-+
-+dnl #
-+dnl #  Allow value of PTH_FDSETSIZE to be overridden by user
-+dnl #
-+
-+AC_ARG_WITH(fdsetsize,dnl
-+[  --with-fdsetsize=NUM    set FD_SETSIZE],[
-+case $withval in
-+    [[1-9]][[0-9]]) PTH_FDSETSIZE=$withval ;;
-+    [[0-9]][[0-9]][[0-9]]) PTH_FDSETSIZE=$withval ;;
-+    [[0-9]][[0-9]][[0-9]][[0-9]]) PTH_FDSETSIZE=$withval ;;
-+    * ) AC_ERROR([invalid FD_SETSIZE specified -- allowed: 10-9999]) ;;
-+esac
-+CPPFLAGS="$CPPFLAGS -DFD_SETSIZE=$PTH_FDSETSIZE";
-+AC_MSG_RESULT([Overriding FD_SETSIZE with $PTH_FDSETSIZE]);
-+])dnl
-+AC_SUBST(PTH_FDSETSIZE)
-+
- dnl # check whether poll(2)'s input stuff has to be faked
- AC_CHECK_FUNCTIONS(poll)
- AC_CHECK_DEFINE(POLLIN, poll.h)
-@@ -178,7 +198,7 @@ dnl # check for various other functions 
- AC_CHECK_FUNCTIONS(usleep strerror)
+--- configure.ac.orig	Wed Jan  1 15:45:06 2003
++++ configure.ac
+@@ -190,7 +190,7 @@ dnl # check for various other functions 
+ AC_CHECK_FUNCS(usleep strerror)
  
  dnl # check for various other headers which we might need
 -AC_HAVE_HEADERS(sys/resource.h net/errno.h paths.h)
@@ -38,7 +11,7 @@ $NetBSD: patch-ae,v 1.2 2002/10/14 11:49:56 skrll Exp $
  
  dnl # at least the test programs need some socket stuff
  AC_CHECK_LIB(nsl, gethostname)
-@@ -196,6 +216,15 @@ if test ".$ac_cv_header_sys_select_h" !=
+@@ -208,6 +208,15 @@ if test ".$ac_cv_header_sys_select_h" !=
  fi
  AC_SUBST(EXTRA_INCLUDE_SYS_SELECT_H)
  
@@ -54,7 +27,7 @@ $NetBSD: patch-ae,v 1.2 2002/10/14 11:49:56 skrll Exp $
  dnl # check whether we've to define sig_atomic_t
  AC_CHECK_TYPEDEF(sig_atomic_t, signal.h)
  FALLBACK_SIG_ATOMIC_T="typedef int sig_atomic_t;"
-@@ -563,6 +592,7 @@ fi
+@@ -618,6 +627,7 @@ fi
  AC_SUBST(PTHREAD_O)
  AC_SUBST(LIBPTHREAD_A)
  AC_SUBST(LIBPTHREAD_LA)

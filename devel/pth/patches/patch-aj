@@ -1,15 +1,15 @@
-$NetBSD: patch-aj,v 1.1 2002/10/14 11:55:14 skrll Exp $
+$NetBSD: patch-aj,v 1.2 2003/05/02 11:49:49 wiz Exp $
 
---- pth_util.c.orig	Sun Jan 27 13:11:39 2002
+--- pth_util.c.orig	Wed Jan  1 15:45:06 2003
 +++ pth_util.c
-@@ -181,3 +181,25 @@ intern int pth_util_fds_select(int nfd,
+@@ -182,3 +182,25 @@ intern int pth_util_fds_select(int nfd,
      return n;
  }
  
 +/*
 + * zero the first 'nfd' file descriptors in an fd_set.
 + */
-+intern int pth_util_fd_zero(int nfd, fd_set *fds)
++intern void pth_util_fd_zero(int nfd, fd_set *fds)
 +{
 +    int i;
 +    for (i=0; i<nfd; i++)
@@ -19,7 +19,7 @@ $NetBSD: patch-aj,v 1.1 2002/10/14 11:55:14 skrll Exp $
 +/*
 + * copy the first 'nfd' file descriptors from one fd_set to another.
 + */
-+intern int pth_util_fd_copy(int nfd, fd_set* dfds, fd_set* sfds) 
++intern void pth_util_fd_copy(int nfd, fd_set* dfds, fd_set* sfds) 
 +{
 +    int i;
 +    for (i=0; i < nfd; i++)
