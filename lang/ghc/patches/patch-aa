@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/12/15 06:05:15 proff Exp $
+$NetBSD: patch-aa,v 1.2 1999/12/15 18:15:21 proff Exp $
 
 --- ghc/lib/misc/SocketPrim.lhs	Wed Sep 15 09:06:26 1999
 +++ ghc/lib/misc/SocketPrim.lhs	Tue Dec 14 13:00:08 1999
@@ -32,7 +32,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/12/15 06:05:15 proff Exp $
 +      |	Pseudo_AF_XTP	-- eXpress Transfer Protocol (no AF) 
 +      | AF_COIP         -- connection-oriented IP, aka ST II
 +      | AF_CNT		-- Computer Network Technology
-+      | Psuedo_AF_RTIP  -- Help Identify RTIP packets
++      | Pseudo_AF_RTIP  -- Help Identify RTIP packets
 +      | AF_IPX		-- Novell Internet Protocol
 +      | AF_INET6	-- IPv6
 +      | Pseudo_AF_PIP   -- Help Identify PIP packets
