@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/03/26 02:27:52 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2004/04/25 05:06:35 snj Exp $
 #
 
 DISTNAME=		isakmpd-20030903
@@ -17,7 +17,7 @@ PKG_FAIL_REASON+=	"${PKGNAME} requires ipsec-ready ${OPSYS}"
 WRKSRC=			${WRKDIR}/isakmpd
 
 ALL_TARGET=		depend all
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 
 MAKE_ENV+=		BINDIR=${PREFIX}/sbin MANDIR=${PREFIX}/man
@@ -48,5 +48,5 @@ pre-configure:
 			< ${WRKSRC}/$${i}.unfixed > ${WRKSRC}/$${i};	\
 	done
 
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
