@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/03/01 04:03:08 itojun Exp $
+# $NetBSD: Makefile,v 1.27 2001/04/14 19:42:54 kim Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -34,7 +34,6 @@ CONFIGURE_SCRIPT=	${WRKSRC}/configure.v6
 CONFIGURE_ARGS+=	--prefix=${PREFIX}				\
 			--sbindir=${PREFIX}/sbin			\
 			--libexecdir=${PREFIX}/lib/httpd		\
-			--sysconfdir=${PREFIX}/etc/httpd		\
 			--datadir=${PREFIX}/share/httpd			\
 			--cgidir=${PREFIX}/libexec/cgi-bin		\
 			--includedir=${PREFIX}/include/httpd		\
@@ -55,6 +54,10 @@ BUILD_DEFS+=		USE_INET6
 .if !defined(USE_INET6) || ${USE_INET6} != YES
 IGNORE=			"IPv6 only build"
 .endif
+
+APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
+CONFIGURE_ARGS+=	--sysconfdir=${APACHE_SYSCONFDIR}
+BUILD_DEFS+=		APACHE_SYSCONFDIR
 
 .if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
 APACHE_USER?=		www
@@ -119,18 +122,26 @@ pre-install:
 		-e "s|@RM@|${RM}|g"					\
 		-e "s|@RMDIR@|${RMDIR}|g"				\
 		-e "s|@TRUE@|${TRUE}|g"					\
+		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
 		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED}	-e "s|@CAT@|${CAT}|g"					\
 		-e "s|@CHMOD@|${CHMOD}|g"				\
 		-e "s|@CHOWN@|${CHOWN}|g"				\
 		-e "s|@CP@|${CP}|g"					\
 		-e "s|@MKDIR@|${MKDIR}|g"				\
+		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
 		${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
 .if !defined(NOPIC)
 	cd ${PREFIX}/lib/httpd; ${MV} libproxy.so mod_proxy.so
 .endif
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/httpd
+	for i in httpd.conf magic mime.types; do			\
+		${INSTALL_DATA} ${APACHE_SYSCONFDIR}/$$i.default	\
+			${PREFIX}/share/examples/httpd;			\
+		${RM} -f ${APACHE_SYSCONFDIR}/$$i.default;		\
+	done
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL

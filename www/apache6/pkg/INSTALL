@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2001/02/06 10:58:20 itojun Exp $
+# $NetBSD: INSTALL,v 1.2 2001/04/14 19:42:54 kim Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -11,10 +11,10 @@ CHOWN="@CHOWN@"
 CP="@CP@"
 MKDIR="@MKDIR@"
 
-SERVERROOT=${PKG_PREFIX}/etc/httpd
+SERVERROOT="@APACHE_SYSCONFDIR@"
 LOGDIR=/var/log/httpd
 SPOOLDIR=/var/spool/httpd
-SAMPLECONFDIR=${SERVERROOT}
+SAMPLECONFDIR=${PKG_PREFIX}/share/examples/httpd
 CONFDIR=${SERVERROOT}
 CONFFILES="httpd.conf"
 NONCONFFILES="magic mime.types"
