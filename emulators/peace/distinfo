@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/08/21 15:17:46 kent Exp $
+$NetBSD: distinfo,v 1.2 2002/09/01 15:13:52 kent Exp $
 
 SHA1 (freetype-dll-2.0.1nb1.tgz) = b9d54962eab12857a2a697b87bdf19e955ace845
 Size (freetype-dll-2.0.1nb1.tgz) = 244477 bytes
@@ -12,5 +12,5 @@ SHA1 (peace-i386-implib-20020124.tar.gz) = 0b5d2991da323accb38bf68cf756136fd468d
 Size (peace-i386-implib-20020124.tar.gz) = 486879 bytes
 SHA1 (i386-netbsdpe-stl-3.3.tgz) = ac7f597dee4b33d2794eb90959c756d263a3a8ca
 Size (i386-netbsdpe-stl-3.3.tgz) = 173766 bytes
-SHA1 (peace-20020821.tar.gz) = 125b480bb38425d948782ceb1ea3a199fc48eb11
-Size (peace-20020821.tar.gz) = 1202746 bytes
+SHA1 (peace-20020901.tar.gz) = fd32e56e40a661bb4d3ea7d1de4969be6f446740
+Size (peace-20020901.tar.gz) = 615397 bytes
