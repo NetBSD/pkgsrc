@@ -31,6 +31,13 @@ grep -v ^pax:\  $LIST | @@AWK@@ '{print("@@EMULSUBDIR@@/"$1)}' |
   then
    set - `file $ENTRY`
    shift `expr $# - 1`;
+   case $1 in
+   /* )
+    set - @@EMULDIR@@$1
+    rm $ENTRY
+    ln -s $1 $ENTRY
+    ;;
+   esac
    if cd `dirname $ENTRY` && test -f $1
    then
     echo $ENTRY
