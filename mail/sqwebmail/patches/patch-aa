@@ -1,38 +1,33 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/01/24 07:23:47 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2004/02/23 23:41:43 jlam Exp $
 
---- Makefile.in.orig	Fri Jan 18 22:54:52 2002
+--- Makefile.in.orig	Thu Nov 27 16:46:50 2003
 +++ Makefile.in
-@@ -28,7 +28,7 @@
- sbindir = @sbindir@
- libexecdir = @libexecdir@
- datadir = @datadir@
--sysconfdir = @sysconfdir@
-+sysconfdir = $(prefix)/share/examples/courier
- sharedstatedir = @sharedstatedir@
- localstatedir = @localstatedir@
- libdir = @libdir@
-@@ -98,16 +98,16 @@
- @HAS_USERDB_FALSE@userdb_data = 
+@@ -156,9 +156,9 @@ sysconf_DATA = authmodulelist
+ @HAS_USERDB_TRUE@userdb_data = makeuserdb.8 userdb.8 userdbpw.8
  
  scriptbindir = $(sbindir)
 -scriptbin_SCRIPTS = $(userdb_scripts)
-+scriptbin_SCRIPTS = 
++scriptbin_SCRIPTS =
+ 
+-pkglibPROGRAMS = maildirmake deliverquota reformime makemime pcpd
++pkglibPROGRAMS = reformime makemime pcpd
  
  pkglibexecdir = $(libexecdir)/sqwebmail
--pkglibexec_PROGRAMS = maildirmake reformime makemime mimegpg pcpd
-+pkglibexec_PROGRAMS = mimegpg pcpd
+ pkglibexec_PROGRAMS = @pkglibPROGRAMS_exec@
+@@ -168,10 +168,10 @@ EXTRA_PROGRAMS = 
+ CLEANFILES = $(userdb_scripts) $(pkgman1_DATA) $(pkgman8_DATA) $(sysconf_DATA)
  
  pkgman8dir = @mandir@/man8
 -pkgman8_DATA = deliverquota.8 $(userdb_data)
-+pkgman8_DATA = 
++pkgman8_DATA =
  
  pkgman1dir = @mandir@/man1
 -pkgman1_DATA = maildirmake.1
-+pkgman1_DATA = 
- 
- pcpd_SOURCES = 
- 
-@@ -628,50 +628,24 @@
++pkgman1_DATA =
+ subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -773,44 +773,21 @@ makemime: rfc2045/makemime
  # Install SqWebMail setuid to root, if we're running as root
  #
  
@@ -41,10 +36,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/01/24 07:23:47 jlam Exp $
  	$(mkinstalldirs) $(DESTDIR)$(cgibindir)
  	test -w $(DESTDIR)$(cgibindir) || exit 0; \
  		$(INSTALL_PROGRAM) sqwebmail/sqwebmail \
- 			$(DESTDIR)$(cgibindir)/sqwebmail ; \
--		test -w /etc || continue ; \
- 			chown root $(DESTDIR)$(cgibindir)/sqwebmail ; \
- 			chmod u+s $(DESTDIR)$(cgibindir)/sqwebmail
+ 			$(DESTDIR)$(cgibindir)/sqwebmail
+ 	$(mkinstalldirs) $(DESTDIR)$(pkglibexecdir)
+ 	$(INSTALL_PROGRAM) sqwebmail/sqwebmaild $(DESTDIR)$(pkglibexecdir)/sqwebmaild
 -	$(mkinstalldirs) $(DESTDIR)$(libexecdir)/authlib
 -	for f in `cat authlib/installlist` dummy ; do \
 -		test "$$f" = "dummy" && continue ; \
@@ -70,20 +64,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/01/24 07:23:47 jlam Exp $
 -		chmod 700 $(DESTDIR)@authdaemonvar@
 +
 +install-data-local:
- 	-$(mkinstalldirs) $(DESTDIR)@imagedir@
- 	-for f in `cat sqwebmail/images/filelist` ; do \
+ 	$(mkinstalldirs) $(DESTDIR)@imagedir@
+ 	for f in `cat sqwebmail/images/filelist` ; do \
  		$(INSTALL_DATA) $(srcdir)/sqwebmail/images/$$f $(DESTDIR)@imagedir@/$$f ;\
  		done
+ 	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
+-	cp /dev/null $(DESTDIR)$(sysconfdir)/nodsn
  	@cat sqwebmail/sqwebmail.msg
 -	@cat authlib/authdaemon.msg
  
--uninstall-local: uninstall-userdb-local uninstall-userdb-script
-+uninstall-local:
+ uninstall-local: uninstall-userdb-local uninstall-userdb-script
  	test -w $(DESTDIR)$(cgibindir) || exit 0; \
- 		rm -f $(DESTDIR)$(cgibindir)/sqwebmail
--	. authlib/authpwdprogs ; \
--	for f in `cat authlib/installlist authlib/installlist.sh ; echo $$PWPROGS $$PWSCRIPTS` ; do \
--			rm -f $(DESTDIR)$(libexecdir)/authlib/$$f ; done
- 	for f in `cat sqwebmail/images/filelist` ; do \
- 		rm -f $(DESTDIR)@imagedir@/$$f ;\
- 		done
