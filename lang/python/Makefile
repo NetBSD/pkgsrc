@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/08/02 10:59:34 agc Exp $
+# $NetBSD: Makefile,v 1.18 2000/01/09 01:19:11 wiz Exp $
 #
 
 DISTNAME=	py152
@@ -48,10 +48,11 @@ post-configure:
 
 post-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${PREFIX}; find lib/python1.5 -type f -print >>${PLIST_SRC})
-	(cd ${PREFIX}; find include/python1.5 -type f -print >>${PLIST_SRC})
-	(cd ${PREFIX}; find -d include/python1.5 -type d -print | \
-	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
+	(cd ${PREFIX}; ${FIND} lib/python1.5 -type f -print >>${PLIST_SRC})
+	(cd ${PREFIX}; ${FIND} include/python1.5 -type f -print \
+		>>${PLIST_SRC})
+	(cd ${PREFIX}; ${FIND} -d include/python1.5 -type d -print | \
+		${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 	${ECHO} "@unexec ${RM} -rf %D/lib/python1.5" >>${PLIST_SRC}
 	# Reinstall Python binary to get it stripped
 	${RM} ${PREFIX}/bin/python ${PREFIX}/bin/python1.5
