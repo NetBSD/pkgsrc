@@ -1,0 +1,15 @@
+Rocks'n'Diamonds:
+
+Arcade style game for color X11 with stereo sounds.
+
+A game like "Boulderdash" (C=64) or "Emerald Mine" (Amiga).
+Included are many levels known from the games "Boulderdash",
+"Emerald Mine", "Sokoban", "Supaplex" and "DX-Boulderdash"
+and a lot of new levels designed by other players.
+
+Some features:
+- joystick support for Linux, FreeBSD and DOS/Windows
+- network and local multiplayer support
+- soft scrolling with 50 frames/s
+- stereo sound effects and music
+- complete source code included under GNU GPL
