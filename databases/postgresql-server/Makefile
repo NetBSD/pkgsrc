@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/08/14 03:41:38 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/08/20 03:55:32 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 .include "../../databases/postgresql/Makefile.ssl"
@@ -11,6 +11,8 @@ USE_BUILDLINK_ONLY=			# defined
 BUILDLINK_DEPENDS.postgresql-lib=	postgresql-lib>=${PG_BASE_VERS}
 
 DEPENDS+=		postgresql-client>=${PG_BASE_VERS}:../../databases/postgresql-client
+
+LIBS+=			${LIBGETOPT}
 
 # mips has no TAS implementation
 NOT_FOR_PLATFORM=	*-*-mips

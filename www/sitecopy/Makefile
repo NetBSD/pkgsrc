@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/07/24 09:36:23 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/08/20 03:55:32 jlam Exp $
 
 DISTNAME=		sitecopy-0.10.15
 CATEGORIES=		www
@@ -16,6 +16,8 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-included-neon
 CONFIGURE_ARGS+=	--enable-libxml
+
+LIBS+=			${LIBGETOPT}
 
 # The build process doesn't correctly find the header for GNU fnmatch, which
 # is provided in ${WRKSRC}/lib.  Help the compiler by linking the header
