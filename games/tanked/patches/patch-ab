@@ -1,0 +1,19 @@
+--- server/maps.list.orig	Fri Jul 31 03:32:10 1998
++++ server/maps.list	Fri Jul 31 03:32:29 1998
+@@ -1,8 +1,8 @@
+ 7
+-maps/map1.map
+-maps/bloodbath.map
+-maps/tiny.map
+-maps/blackforest.map
+-maps/fortress.map
+-maps/arena.map
+-maps/archipelago.map
++XXXmaps/map1.map
++XXXmaps/bloodbath.map
++XXXmaps/tiny.map
++XXXmaps/blackforest.map
++XXXmaps/fortress.map
++XXXmaps/arena.map
++XXXmaps/archipelago.map
+

@@ -1,0 +1,7 @@
+--- server/log.c.orig	Fri Jul 31 04:01:21 1998
++++ server/log.c	Fri Jul 31 04:01:50 1998
+@@ -28,3 +28,3 @@
+     if (!ml) {
+-        ml = fopen("logs/message.log", "a");
++        ml = fopen(TANKDIR "/logs/message.log", "a");
+         if (!ml) {

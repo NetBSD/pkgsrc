@@ -1,0 +1,25 @@
+--- server/database.c.orig	Fri Jul 31 03:40:24 1998
++++ server/database.c	Fri Jul 31 03:42:28 1998
+@@ -33,3 +33,3 @@
+ 
+-	if((plf = fopen(".players", "r")) != NULL) {
++	if((plf = fopen(TANKDIR "/players", "r")) != NULL) {
+ 		while(!feof(plf)) {
+@@ -52,3 +52,3 @@
+ 						  &new_pdb->pickups, &new_pdb->deliveries) != 4) {
+-					fprintf(stderr, "Bad line in .players: %s\n", line);
++					fprintf(stderr, "Bad line in " TANKDIR" /players: %s\n", line);
+ 				} else {
+@@ -63,3 +63,3 @@
+ 	} else {
+-		fprintf(stderr, "failed to open .players\n");
++		fprintf(stderr, "failed to open " TANKDIR "/players\n");
+ 	}
+@@ -110,5 +110,5 @@
+ 
+-	rename(".players", ".players.bak");
++	rename(TANKDIR "/players", TANKDIR "/players.bak");
+ 	
+-	if((plf = fopen(".players", "w")) != NULL) {
++	if((plf = fopen(TANKDIR "/players", "w")) != NULL) {
+ 		for(pdb = first_pdb; pdb; pdb = pdb->next) {
