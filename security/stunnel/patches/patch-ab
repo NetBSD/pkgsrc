@@ -1,17 +1,29 @@
-$NetBSD: patch-ab,v 1.15 2005/01/03 12:17:44 martti Exp $
+$NetBSD: patch-ab,v 1.16 2005/01/09 13:09:12 schmonz Exp $
 
---- configure.orig	2004-12-30 13:57:47.000000000 +0200
-+++ configure	2005-01-03 14:13:54.000000000 +0200
-@@ -21497,2 +21497,3 @@
+--- configure.orig	2004-12-30 06:57:47.000000000 -0500
++++ configure
+@@ -21495,6 +21495,7 @@ _ACEOF
+ fi
+ 
  
 +if false; then
  # OSF hack instead of simple AC_CHECK_LIB here
-@@ -21624,2 +21625,3 @@
+ echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
+ echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
+@@ -21622,6 +21623,7 @@ _ACEOF
+ 
+ 
  fi
 +fi
  
-@@ -22168,3 +22170,3 @@
+ 
+ # Check for libwrap library
+@@ -22166,7 +22168,7 @@ fi;
+ { echo "$as_me:$LINENO: **************************************** write the results" >&5
+ echo "$as_me: **************************************** write the results" >&6;}
  LIBS="$LIBS $wrap_LIB"
 -CPPFLAGS="$CPPFLAGS -DLIBDIR=\\\"$libdir\\\" -DCONFDIR=\\\"$sysconfdir/stunnel\\\" -DPIDFILE=\\\"$localstatedir/run/stunnel.pid\\\""
 +CPPFLAGS="$CPPFLAGS -DLIBDIR=\\\"$libdir\\\" -DCONFDIR=\\\"$sysconfdir\\\" -DPIDFILE=\\\"$localstatedir/run/stunnel.pid\\\""
                                                                        ac_config_files="$ac_config_files Makefile src/Makefile src/stunnel3 doc/Makefile tools/Makefile tools/stunnel.conf-sample tools/stunnel.init"
+ 
+ cat >confcache <<\_ACEOF
