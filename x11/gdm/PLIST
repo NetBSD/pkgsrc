@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/01/22 09:16:59 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/01 18:49:37 jmmv Exp $
 bin/gdm
 bin/gdm-binary
 bin/gdmXnest
@@ -13,10 +13,8 @@ bin/gdmthemetester
 etc/rc.d/gdm
 lib/gtk-2.0/modules/libdwellmouselistener.a
 lib/gtk-2.0/modules/libdwellmouselistener.la
-lib/gtk-2.0/modules/libdwellmouselistener.so
 lib/gtk-2.0/modules/libkeymouselistener.a
 lib/gtk-2.0/modules/libkeymouselistener.la
-lib/gtk-2.0/modules/libkeymouselistener.so
 ${PAM_MISC}libexec/gdmaskpass
 libexec/gdmtranslate
 man/man1/gdm.1
@@ -28,7 +26,6 @@ share/applications/gdmflexiserver-xnest.desktop
 share/applications/gdmflexiserver.desktop
 share/applications/gdmsetup.desktop
 share/doc/gdm/Daemon.README
-share/examples/dm/Sessions/default.desktop
 share/examples/gdm/Init/Default
 share/examples/gdm/PostLogin/Default.sample
 share/examples/gdm/PostSession/Default
@@ -42,6 +39,7 @@ share/examples/gdm/modules/AccessDwellMouseEvents
 share/examples/gdm/modules/AccessKeyMouseEvents
 share/examples/gdm/modules/factory-AccessDwellMouseEvents
 share/examples/gdm/modules/factory-AccessKeyMouseEvents
+share/gdm/BuiltInSessions/default.desktop
 share/gdm/gdmchooser.glade
 share/gdm/gdmsetup.glade
 share/gdm/themes/circles/GdmGreeterTheme.desktop
@@ -72,6 +70,36 @@ share/gdm/themes/happygnome/system.png
 share/gnome/capplets/gdmphotosetup.desktop
 share/gnome/help/gdm/C/gdm.xml
 share/gnome/help/gdm/C/legal.xml
+share/gnome/help/gdm/de/figures/gdm_window.png
+share/gnome/help/gdm/de/gdm.xml
+share/gnome/help/gdm/de/legal.xml
+share/gnome/help/gdm/es/figures/gdm_window.png
+share/gnome/help/gdm/es/gdm.xml
+share/gnome/help/gdm/es/legal.xml
+share/gnome/help/gdm/fr/figures/gdm_window.png
+share/gnome/help/gdm/fr/gdm.xml
+share/gnome/help/gdm/fr/legal.xml
+share/gnome/help/gdm/it/figures/gdm_window.png
+share/gnome/help/gdm/it/gdm.xml
+share/gnome/help/gdm/it/legal.xml
+share/gnome/help/gdm/ja/figures/gdm_window.png
+share/gnome/help/gdm/ja/gdm.xml
+share/gnome/help/gdm/ja/legal.xml
+share/gnome/help/gdm/ko/figures/gdm_window.png
+share/gnome/help/gdm/ko/gdm.xml
+share/gnome/help/gdm/ko/legal.xml
+share/gnome/help/gdm/sv/figures/gdm_window.png
+share/gnome/help/gdm/sv/gdm.xml
+share/gnome/help/gdm/sv/legal.xml
+share/gnome/help/gdm/zh_CN/figures/gdm_window.png
+share/gnome/help/gdm/zh_CN/gdm.xml
+share/gnome/help/gdm/zh_CN/legal.xml
+share/gnome/help/gdm/zh_HK/figures/gdm_window.png
+share/gnome/help/gdm/zh_HK/gdm.xml
+share/gnome/help/gdm/zh_HK/legal.xml
+share/gnome/help/gdm/zh_TW/figures/gdm_window.png
+share/gnome/help/gdm/zh_TW/gdm.xml
+share/gnome/help/gdm/zh_TW/legal.xml
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gdm-2.4.mo
@@ -84,6 +112,7 @@ ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gdm-2.4.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gdm-2.4.mo
@@ -94,6 +123,7 @@ ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gdm-2.4.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/gdm-2.4.mo
@@ -129,6 +159,16 @@ ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gdm-2.4.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gdm-2.4.mo
 share/omf/gdm/gdm-C.omf
+share/omf/gdm/gdm-de.omf
+share/omf/gdm/gdm-es.omf
+share/omf/gdm/gdm-fr.omf
+share/omf/gdm/gdm-it.omf
+share/omf/gdm/gdm-ja.omf
+share/omf/gdm/gdm-ko.omf
+share/omf/gdm/gdm-sv.omf
+share/omf/gdm/gdm-zh_CN.omf
+share/omf/gdm/gdm-zh_HK.omf
+share/omf/gdm/gdm-zh_TW.omf
 share/pixmaps/Daemon.png
 share/pixmaps/gdm-foot-logo.png
 share/pixmaps/gdm.png
@@ -137,17 +177,39 @@ share/pixmaps/nobody.png
 share/pixmaps/nohost.png
 share/xsessions/gnome.desktop
 @dirrm share/xsessions
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gdm
-@comment in scrollkeeper @dirrm share/omf
+@comment in scrollkeeper: @dirrm share/omf
+@dirrm share/gnome/help/gdm/zh_TW/figures
+@dirrm share/gnome/help/gdm/zh_TW
+@dirrm share/gnome/help/gdm/zh_HK/figures
+@dirrm share/gnome/help/gdm/zh_HK
+@dirrm share/gnome/help/gdm/zh_CN/figures
+@dirrm share/gnome/help/gdm/zh_CN
+@dirrm share/gnome/help/gdm/sv/figures
+@dirrm share/gnome/help/gdm/sv
+@dirrm share/gnome/help/gdm/ko/figures
+@dirrm share/gnome/help/gdm/ko
+@dirrm share/gnome/help/gdm/ja/figures
+@dirrm share/gnome/help/gdm/ja
+@dirrm share/gnome/help/gdm/it/figures
+@dirrm share/gnome/help/gdm/it
+@dirrm share/gnome/help/gdm/fr/figures
+@dirrm share/gnome/help/gdm/fr
+@dirrm share/gnome/help/gdm/es/figures
+@dirrm share/gnome/help/gdm/es
+@dirrm share/gnome/help/gdm/de/figures
+@dirrm share/gnome/help/gdm/de
 @dirrm share/gnome/help/gdm/C
 @dirrm share/gnome/help/gdm
-@comment @dirrm share/gnome/help
-@dirrm share/gnome/capplets
-@comment @dirrm share/gnome
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/gnome/capplets
+@comment in gnome2-dirs: @dirrm share/gnome
 @dirrm share/gdm/themes/happygnome-list
 @dirrm share/gdm/themes/happygnome
 @dirrm share/gdm/themes/circles
 @dirrm share/gdm/themes
+@dirrm share/gdm/BuiltInSessions
 @dirrm share/gdm
 @dirrm share/examples/gdm/modules
 @dirrm share/examples/gdm/PreSession
@@ -155,8 +217,8 @@ share/xsessions/gnome.desktop
 @dirrm share/examples/gdm/PostLogin
 @dirrm share/examples/gdm/Init
 @dirrm share/examples/gdm
-@dirrm share/examples/dm/Sessions
+@exec ${MKDIR} %D/share/examples/dm
 @dirrm share/examples/dm
 @dirrm share/doc/gdm
-@comment in gnome2-dirs: @dirrm share/applications
+@comment in xdg-dirs: @dirrm share/applications
 @comment in gtk2: @dirrm lib/gtk-2.0/modules
