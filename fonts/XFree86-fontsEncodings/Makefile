@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/28 22:06:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/29 00:30:16 xtraeme Exp $
 
 DISTNAME=	XFree86-4.4.0-src-4
 PKGNAME=	XFree86-fontsEncodings-${XF_VER}
@@ -13,6 +13,7 @@ COMMENT=	XFree86 Encoding fonts
 DEPENDS=	XFree86-clients>=4.4.0:../../x11/XFree86-clients
 
 NO_XFREE86_TARGETS=	# defined
+CHECK_X11_TYPE=		# defined
 WRKSRC=			${WRKDIR}/xc/fonts/encodings
 
 post-extract:
