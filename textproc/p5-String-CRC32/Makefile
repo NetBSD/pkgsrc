@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:54:35 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/04 23:46:36 snj Exp $
 #
 
 DISTNAME=	String-CRC32-1.2
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/search?module=String::CRC32
 COMMENT=	Perl module to generate cksums from strings and from files
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/String/CRC32/.packlist
 
 .include "../../lang/perl5/module.mk"

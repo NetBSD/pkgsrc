@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 22:54:31 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/05/04 23:46:36 snj Exp $
 # FreeBSD Id: ports/japanese/namazu2/Makefile,v 1.16 2000/10/26 20:56:25 knu Exp
 
 DISTNAME=	namazu-2.0.12
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	-with-chasen
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	# defined
 USE_PERL5=		# defined
 GNU_CONFIGURE=		# defined
@@ -58,6 +58,6 @@ post-install:
 	@${TEST} -d ${LOCALBASE}/etc/namazu || ${INSTALL_DATA_DIR} ${LOCALBASE}/etc/namazu
 	@${SH} ${WRKDIR}/INSTALL ${PKGNAME} POST-INSTALL
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
