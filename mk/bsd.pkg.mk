@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.428 2000/04/24 22:39:11 jwise Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.429 2000/04/25 20:19:56 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -221,7 +221,10 @@ M4?=			/usr/bin/m4
 .endif
 
 .if defined(USE_MOTIF) || defined(USE_X11BASE) || defined(USE_X11)
-LDFLAGS+=		-Wl,-R${MOTIFBASE}/lib -L${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib
+.if defined(USE_MOTIF)
+LDFLAGS+=		-Wl,-R${MOTIFBASE}/lib -L${MOTIFBASE}/lib
+.endif
+LDFLAGS+=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
 .endif
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
@@ -229,7 +232,11 @@ CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS}" M4="${M4}" YACC="${YACC}"
 
 MAKE_FLAGS?=
 MAKEFILE?=		Makefile
-MAKE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} MOTIFLIB="${MOTIFLIB}" CFLAGS="${CFLAGS}"
+MAKE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} CFLAGS="${CFLAGS}"
+
+.if defined(USE_MOTIF)
+MAKE_ENV+=		MOTIFLIB="${MOTIFLIB}"
+.endif
 
 .if exists(/usr/bin/fetch)
 FETCH_CMD?=		/usr/bin/fetch
@@ -631,7 +638,9 @@ PKG_SUFX?=		.tgz
 PKG_DBDIR?=		${DESTDIR}/var/db/pkg
 
 # shared/dynamic motif libs
+.if defined(USE_MOTIF)
 MOTIFLIB?=	-L${MOTIFBASE}/lib -L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm
+.endif
 
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
 # of depencies for building, and the current target.
