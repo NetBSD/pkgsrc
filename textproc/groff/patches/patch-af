@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.3 2005/03/14 04:36:53 tv Exp $
+
+--- src/preproc/pic/object.cpp.orig	Wed Apr  7 11:27:56 2004
++++ src/preproc/pic/object.cpp
+@@ -202,7 +202,15 @@ double operator*(const position &a, cons
+ 
+ double hypot(const position &a)
+ {
+-  return hypot(a.x, a.y);
++  double result = hypot(a.x, a.y);
++
++#ifdef __INTERIX
++  /* prevents an endless loop that pops up particularly on Interix */
++  if (isnan(result) && !isnan(a.x) && !isnan(a.y))
++    return 0.0;
++#endif
++
++  return result;
+ }
+ 
+ struct arrow_head_type {
