@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2004/10/03 00:14:41 tv Exp $
+# $NetBSD: Makefile,v 1.66 2004/10/05 23:20:53 mjl Exp $
 
-DISTNAME=		gnucash-1.8.8
-PKGREVISION=		7
+DISTNAME=		gnucash-1.8.9
+# PKGREVISION=		6
 CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ENV+=		PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig:${X11BASE}/lib/pkgconfig"
 
+CFLAGS+=		-Wl,-R${PREFIX}/${GUILE14_SUBDIR}/lib
 #CFLAGS+=		-L${PREFIX}/${GUILE14_SUBDIR}/lib -Wl,-R${PREFIX}/${GUILE14_SUBDIR}/lib
 LDFLAGS+=		-L${PREFIX}/${GUILE14_SUBDIR}/lib -Wl,-R${PREFIX}/${GUILE14_SUBDIR}/lib
 
