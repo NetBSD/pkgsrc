@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6.2.1 2002/06/23 19:03:42 jlam Exp $
+# $NetBSD: Makefile,v 1.6.2.2 2002/06/30 06:24:32 jlam Exp $
 #
 
 DISTNAME=	dillo-0.6.5
@@ -10,16 +10,17 @@ MAINTAINER=	Benjamin.Wong@cc.gatech.edu
 HOMEPAGE=	http://dillo.cipsga.org.br/
 COMMENT=	Very small and fast graphical web-browser
 
-USE_BUILDLINK_ONLY=	yes
-USE_GMAKE=		yes
-GNU_CONFIGURE=		yes
+USE_BUILDLINK2=	yes
+USE_X11=	yes
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dillo
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/dillo
 
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1.2.2 2002/06/23 19:02:05 jlam Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.3 2002/06/30 06:24:18 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/04/05 04:46:33 max Exp $
 
 DISTNAME=	kakasi-2.3.4
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://kakasi.namazu.org/
 COMMENT=	Kanji-Kana Simple Inverter, language filter for Japanese
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES

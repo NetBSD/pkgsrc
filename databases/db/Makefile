@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/07/19 06:26:23 jlam Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2002/06/30 06:24:06 jlam Exp $
 
 DISTNAME=	db-2.7.7
 CATEGORIES=	databases
@@ -10,17 +10,20 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.sleepycat.com/
 COMMENT=	Sleepycat Software's Berkeley DB version 2
 
-USE_BUILDLINK_ONLY=	yes
+WRKSRC=		${WRKDIR}/${PKGNAME}/build_unix
+
+USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../dist/configure
 
-WRKSRC=		${WRKDIR}/${PKGNAME}/build_unix
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--enable-compat185
+.endif
 
 post-install:
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/doc/html/db
 
 .include "../../mk/bsd.pkg.mk"
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--enable-compat185
-.endif

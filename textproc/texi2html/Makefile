@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/11/29 13:27:47 jlam Exp $
+# $NetBSD: Makefile,v 1.11.2.1 2002/06/30 06:24:22 jlam Exp $
 #
 
 DISTNAME=		texi2html-1.64
@@ -11,8 +11,8 @@ COMMENT=		Texinfo-to-HTML direct translator
 
 CONFLICTS=		teTeX-bin-1.0 teTeX-bin-1.0.[1234567]
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

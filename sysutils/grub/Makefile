@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6.2.1 2002/06/23 19:00:14 jlam Exp $
+# $NetBSD: Makefile,v 1.6.2.2 2002/06/30 06:24:14 jlam Exp $
 #
 
 DISTNAME=	grub-0.92
@@ -13,8 +13,9 @@ ONLY_FOR_PLATFORM=	*-*-i386
 
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
-.include "../../devel/binutils/buildlink.mk"
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/binutils/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

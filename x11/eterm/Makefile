@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/03/13 17:37:54 fredb Exp $
+# $NetBSD: Makefile,v 1.15.2.1 2002/06/30 06:24:40 jlam Exp $
 
 DISTNAME=		Eterm-0.8.10
 PKGNAME=		eterm-0.8.10
@@ -18,7 +18,7 @@ ETERM_SRCS=		${DISTNAME}${EXTRACT_SUFX}
 PIXMAP_FILES=		Eterm-bg-scale-1.tar.gz Eterm-bg-scale-2.tar.gz \
 			Eterm-bg-tile.tar.gz
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -41,6 +41,5 @@ post-install:
 	${CHMOD} 4711 ${PREFIX}/bin/Eterm
 .endif
 
-.include "../../graphics/imlib/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/imlib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

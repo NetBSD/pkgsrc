@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/05/03 14:14:23 taca Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2002/06/30 06:24:09 jlam Exp $
 #
 
 DISTNAME=		rats-1.4
@@ -9,10 +9,10 @@ MAINTAINER=		tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=		http://www.securesw.com/rats/
 COMMENT=		Rough Auditing Tool for Security
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--libdir=${LOCALBASE}/share/rats
 ALL_TARGET=		rats
 
-.include "../../textproc/expat/buildlink.mk"
+.include "../../textproc/expat/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
