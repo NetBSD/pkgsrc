@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/03/25 16:18:47 garbled Exp $
+# $NetBSD: Makefile,v 1.15 1999/03/30 12:52:36 hubertf Exp $
 #
 
 # Note to package maintainers:
@@ -31,10 +31,11 @@ MANCOMPRESSED=		yes
 .endif
 
 post-install:
-	[ -f $${PKG_DBDIR:-/var/db/pkg}/pkgdb.byfile.db ] || \
-		if [ -d $${PKG_DBDIR:-/var/db/pkg} ]; then /bin/true; else \
+	if [ ! -f $${PKG_DBDIR:-/var/db/pkg}/pkgdb.byfile.db ]; then
+		if [ ! -d $${PKG_DBDIR:-/var/db/pkg} ]; then \
 			${MKDIR} $${PKG_DBDIR:-/var/db/pkg}; \
 		fi; \
-		pkg_admin rebuild
+		pkg_admin rebuild ; \
+	fi
 
 .include "../../mk/bsd.pkg.mk"
