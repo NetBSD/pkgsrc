@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2004/01/19 16:24:28 atatat Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/26 02:27:48 wiz Exp $
 
 DISTNAME=		pchar-1.4
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		http://www.employees.org/~bmah/Software/pchar/
 

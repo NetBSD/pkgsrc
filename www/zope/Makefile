@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2004/01/28 23:50:00 heinz Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/26 02:27:58 wiz Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
 PKGNAME=	zope-2.2.2
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2004/02/21 07:29:26 snj Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/26 02:27:48 wiz Exp $
 #
 
 DISTNAME=	ipv6calc-0.46
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/
 

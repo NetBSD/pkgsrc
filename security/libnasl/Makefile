@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:25:34 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:52 wiz Exp $
 
 DISTNAME=	libnasl-${VERS}
+PKGREVISION=	1
 .include	"../nessus/Makefile.common"
 
 COMMENT=	Nessus Attack Scripting Language library

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2004/03/08 19:40:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2004/03/26 02:27:41 wiz Exp $
 
 DISTNAME=	dia-0.92.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.92/}
 

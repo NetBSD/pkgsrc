@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2004/02/15 21:33:15 sketch Exp $
+# $NetBSD: Makefile,v 1.75 2004/03/26 02:27:43 wiz Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system *without* Kerberos
@@ -6,7 +6,7 @@
 
 DISTNAME=       imap-2002e
 PKGNAME=        imap-uw-2002.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=     mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z

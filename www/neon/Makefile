@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2004/03/23 04:41:02 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2004/03/26 02:27:57 wiz Exp $
 
 DISTNAME=		neon-0.24.4
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://www.webdav.org/neon/
 
