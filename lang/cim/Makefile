@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/05/11 03:33:57 snj Exp $
+# $NetBSD: Makefile,v 1.18 2004/08/27 06:29:08 jlam Exp $
 
 DISTNAME=		cim-3.30
 CATEGORIES=		lang
@@ -20,7 +20,7 @@ SUBST_STAGE.x=	post-patch
 SUBST_FILES.x=	src/cimcomp.c
 SUBST_SED.x=	-e "s|SCC|\"${CC}\"|"
 SUBST_SED.x+=	-e "s|SCFLAGS|\"${CFLAGS} -I${PREFIX}/include\"|"
-SUBST_SED.x+=	-e "s|SLDFLAGS|\"-L${PREFIX}/lib -Wl,${RPATH_FLAG}${PREFIX}/lib\"|"
+SUBST_SED.x+=	-e "s|SLDFLAGS|\"-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib\"|"
 SUBST_SED.x+=	-e "s|= LIBDIR|= \"${PREFIX}/lib\"|"
 SUBST_SED.x+=	-e "s|= INCLUDEDIR|= \"${PREFIX}/include\"|"
 

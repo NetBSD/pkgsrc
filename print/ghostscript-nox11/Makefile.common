@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2004/05/09 04:14:51 snj Exp $
+# $NetBSD: Makefile.common,v 1.55 2004/08/27 06:29:10 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -142,7 +142,7 @@ GCC_REQD+=		3.0
 .endif
 
 .if defined(ZOULARISBASE)
-LDFLAGS+=	-L${ZOULARISBASE}/lib -Wl,${RPATH_FLAG}${ZOULARISBASE}/lib
+LDFLAGS+=	-L${ZOULARISBASE}/lib ${COMPILER_RPATH_FLAG}${ZOULARISBASE}/lib
 .endif
 
 .if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
@@ -159,7 +159,7 @@ MAKE_FLAGS+=		GS_DISPLAY_DEVICE="${GS_DISPLAY_DEVICE}"
 MAKE_FLAGS+=		XINCLUDE= XLIBDIRS= XLIBS="${XLIBS}"
 
 .if ${OPSYS} == "SunOS"
-LDFLAGS+=		-L${LOCALBASE}/bsd/lib -Wl,${RPATH_FLAG}${LOCALBASE}/bsd/lib
+LDFLAGS+=		-L${LOCALBASE}/bsd/lib ${COMPILER_RPATH_FLAG}${LOCALBASE}/bsd/lib
 .endif
 
 # Define whether this platform has floating point hardware:
