@@ -3,7 +3,7 @@
 # Date created:		1-Aug-1995
 # Whom:			pst
 #
-# $NetBSD: Makefile,v 1.2 1998/02/27 10:33:14 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/02/27 11:18:08 agc Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/07/10 15:50:55 pst Exp
 #
 
@@ -29,7 +29,8 @@ ZEPHYR_DOCS=	INSTALL NOTES OPERATING README USING
 
 post-install:
 	${MKDIR} ${ZEPHYR_RCDIR}
-	${INSTALL_SCRIPT} ${FILESDIR}/zhm.sh ${ZEPHYR_RCDIR}
+	${SED} -e 's|@prefix@|'${PREFIX}'|g' < ${FILESDIR}/zhm.sh > ${WRKDIR}/zhm.sh
+	${INSTALL_SCRIPT} ${WRKDIR}/zhm.sh ${ZEPHYR_RCDIR}
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${ZEPHYR_DOCDIR}
 	for file in ${ZEPHYR_DOCS} ; do \
