@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/04 12:05:13 wiz Exp $
+
+--- makefile.orig	2005-02-24 23:39:10.000000000 +0100
++++ makefile
+@@ -5,20 +5,20 @@
+ MD=mkdir
+ 
+ CC=@gcc
+-CFLAGS+=-Wall -O2 -I $(LOGIQX)/dev
++CFLAGS+=-Wall -O2 -I .
+ 
+ LD=@gcc
+ LIBS+=-lz -lm
+ 
+ UPX=@upx -9
+ 
+-DLSRC=$(LOGIQX)/dev/datlib/src
++DLSRC=./src
+ 
+ DLINCS=	$(DLSRC)/macro.h \
+ 	$(DLSRC)/type.h \
+ 	$(DLSRC)/token.h \
+ 
+-DLOBJ=$(LOGIQX)/dev/datlib/obj
++DLOBJ=./obj
+ 
+ DLOBJDIRS=$(DLOBJ) \
+ 	$(DLOBJ)/drv \
+@@ -42,7 +42,7 @@ DLOBJS=	$(DLOBJ)/datlib.o \
+ # Build the obj tree then build the EXE
+ #
+ 
+-datlib: dlmaketree $(DLOBJS)
++datlib: dlmaketree $(DLOBJS) $(DLOBJ)/libdatlib.a
+ 
+ #
+ # Creating obj directory tree
+@@ -53,6 +53,10 @@ dlmaketree: $(sort $(DLOBJDIRS))
+ $(sort $(DLOBJDIRS)):
+ 	$(MD) $@
+ 
++$(DLOBJ)/libdatlib.a: $(DLOBJS)
++	@echo Creating $@...
++	$(AR) r $@ $(DLOBJS)
++	$(RANLIB) $@
+ #
+ # Compiling of separate modules
+ #
