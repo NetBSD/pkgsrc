@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/18 16:58:54 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/20 03:12:22 minskim Exp $
 #
 # This Makefile fragment is included by packages that use py-ORBit.
 #
@@ -9,7 +9,7 @@ PY_ORBIT_BUILDLINK3_MK:=	${PY_ORBIT_BUILDLINK3_MK}+
 .include "../../lang/python/pyversion.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	${PYPKGPREFIX}-ORBit
+BUILDLINK_DEPENDS+=	pyorbit
 .endif
 
 .if !empty(PY_ORBIT_BUILDLINK3_MK:M+)
