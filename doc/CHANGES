@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6635 2004/07/22 15:03:32 adam Exp $
+$NetBSD: CHANGES,v 1.6636 2004/07/22 16:26:19 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3500,3 +3500,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nessus-core to 2.0.12 [adam 2004-07-22]
 	Updated nessus-plugins to 2.0.12 [adam 2004-07-22]
 	Updated nessus to 2.0.12 [adam 2004-07-22]
+	Updated musicpd to 0.11.3 [simonb 2004-07-23]
