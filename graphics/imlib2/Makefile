@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2004/07/12 19:27:05 cube Exp $
+# $NetBSD: Makefile,v 1.21 2004/08/26 20:21:58 recht Exp $
 #
 
-DISTNAME=		imlib2-1.1.0
-PKGREVISION=		2
+DISTNAME=		imlib2-1.1.1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
@@ -28,6 +27,7 @@ CONFIGURE_ARGS+=	--enable-mmx
 . endif
 .endif
 
+.include "../../devel/libtool/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

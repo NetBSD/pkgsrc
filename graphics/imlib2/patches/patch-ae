@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2004/08/26 20:21:58 recht Exp $
+
+--- demo/Makefile.in.orig	2004-08-26 20:43:34.000000000 +0200
++++ demo/Makefile.in	2004-08-26 20:43:49.000000000 +0200
+@@ -113,7 +113,7 @@
+ # A list of all the files in the current directory which can be regenerated
+ MAINTAINERCLEANFILES = Makefile.in				
+ 
+-LDFLAGS = -L/usr/X11R6/lib
++LDFLAGS = @LDFLAGS@
+ INCLUDES = -I. -I$(top_srcdir) -I$(top_srcdir)/src                        -I$(top_srcdir)/loaders -I$(top_srcdir)/libltdl                        -I/usr/X11R6/include $(X_CFLAGS)                        -I$(prefix)/include -I$(includedir)
+ 
+ 
