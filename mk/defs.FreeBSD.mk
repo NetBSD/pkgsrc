@@ -1,4 +1,4 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.33 2004/03/11 22:57:22 agc Exp $
+# $NetBSD: defs.FreeBSD.mk,v 1.34 2004/04/07 14:26:51 tv Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -15,6 +15,7 @@ DATE?=		/bin/date
 DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
+ECHO?=		${ECHO} -n
 EGREP?=		/usr/bin/egrep
 EXPR?=		/bin/expr
 FALSE?=		false				# Shell builtin
