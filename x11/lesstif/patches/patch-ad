@@ -1,13 +1,12 @@
-$NetBSD: patch-ad,v 1.6 1999/11/03 04:18:47 jlam Exp $
-
---- doc/Makefile.in.orig	Mon Sep  6 17:13:52 1999
-+++ doc/Makefile.in	Tue Nov  2 22:16:16 1999
-@@ -118,7 +118,7 @@
+$NetBSD: patch-ad,v 1.7 1999/11/15 21:30:28 drochner Exp $
+--- doc/Makefile.in.orig	Mon Nov 15 17:50:37 1999
++++ doc/Makefile.in	Mon Nov 15 17:52:34 1999
+@@ -122,7 +122,7 @@
  
  SUBDIRS = www.lesstif.org lessdox
  
 -rootdir = $(exec_prefix)/LessTif/doc
 +rootdir = $(exec_prefix)/share/doc/lesstif
- root_DATA = INSTALL.html All.html Clipboard.txt DragAndDrop.txt Form.txt 		GeoUtils.txt Geometry.html SyntheticResources.txt 		UIL.txt XmStrings.txt thread.html
- 
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ root_DATA = INSTALL.html All.html Clipboard.txt DragAndDrop.txt Form.txt \
+ 		GeoUtils.txt Geometry.html SyntheticResources.txt \
+ 		UIL.txt XmStrings.txt thread.html

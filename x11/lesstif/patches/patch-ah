@@ -1,18 +1,12 @@
-$NetBSD: patch-ah,v 1.4 1999/11/03 04:18:47 jlam Exp $
-
---- doc/www.lesstif.org/Makefile.in.orig	Mon Sep  6 17:13:53 1999
-+++ doc/www.lesstif.org/Makefile.in	Tue Nov  2 22:16:16 1999
-@@ -123,11 +123,11 @@
+$NetBSD: patch-ah,v 1.5 1999/11/15 21:30:28 drochner Exp $
+--- doc/www.lesstif.org/Makefile.in.orig	Mon Nov 15 17:58:35 1999
++++ doc/www.lesstif.org/Makefile.in	Mon Nov 15 17:59:36 1999
+@@ -127,7 +127,7 @@
  # Lets put the informational stuff in a sub directory to avoid 
  # polluting /usr/local for default installs.
  #
 -rootdir = $(exec_prefix)/LessTif/doc
 +rootdir = $(exec_prefix)/share/doc/lesstif
- root_DATA = COPYING.LIB.html FAQ.html apps.html bug-reporting.html 		bugs.html button.html cdrom.html core.html current.html 		cvs.html download.html index.html links.html lists.html 		mirrors.html platforms.html release-policy.html 		test_policy.html test_summary.html testers.html 		versions.html web_button.html known.html help.html 		Advocacy.html Xbae.html Xlt.html
- 
- 
--root2dir = $(exec_prefix)/LessTif
-+root2dir = $(exec_prefix)/share/doc/lesstif
- root2_DATA = FAQ
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = ../../include/LTconfig.h
+ root_DATA = COPYING.LIB.html FAQ.html apps.html bug-reporting.html \
+ 		bugs.html cdrom.html core.html current.html \
+ 		cvs.html download.html index.html links.html lists.html \
