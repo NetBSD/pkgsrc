@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.427 2003/03/28 20:23:35 wiz Exp $
+$NetBSD: TODO,v 1.428 2003/03/28 22:25:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -79,6 +79,7 @@ Suggested package updates
 	o abcde-2.1.0 [pkg/20633]
 	o abcde-2.1.1
 	o angband-3.0.3
+	o anjuta-1.0.2
 	o ap-ssl-2.8.14
 	o arch-1.0pre17 [pkg/20776]
 	o asp2php-0.76.15 [pkg/20506]
@@ -168,6 +169,7 @@ Suggested package updates
 	o lynx-current-2.8.5dev9
 	o lyx-1.3.1 [pkg/20805]
 	o maildrop-1.5.2
+	o mailsync-5.1.0
 	o memtest86-3.0
 	o mgetty-1.1.30
 	o mhonarc-2.5.13 [pkg/19366]
@@ -241,7 +243,7 @@ Suggested package updates
 	o tightvnc-1.2.8
 	o ttf2pt1-3.4.3
 	o vfu-4.00
-	o vm-7.13
+	o vm-7.14
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o wine-20030318
