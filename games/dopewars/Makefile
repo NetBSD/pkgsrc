@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/06/29 04:54:53 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/13 11:35:15 wiz Exp $
 
 DISTNAME=		dopewars-1.5.0
 CATEGORIES=		games
@@ -11,7 +11,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://bellatrix.pcl.ox.ac.uk/~ben/dopewars/
 COMMENT=		Make a fortune dealing drugs on the streets of New York
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 
 GNU_CONFIGURE=		YES
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-gui-client
 # datadir is the place the score file is saved
 CONFIGURE_ARGS+=	--datadir=/var/games
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/glib/buildlink.mk"
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/glib/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
