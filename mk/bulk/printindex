@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.5 2001/07/13 15:14:57 dmcmahill Exp $
+# $NetBSD: printindex,v 1.6 2001/10/14 20:34:53 dmcmahill Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -38,7 +38,8 @@
 #
 
 
-# Generate package index.
+# Generate package index.  If an argument is given, use it as a file name
+# to contain any failure messages in each package directory.
 #
 # generates a pkgsrc directory <-> package name database.  eg.
 #              foo/bar  bar-2.0
@@ -46,6 +47,12 @@
 #
 # Start in /usr/pkgsrc.
 #
+
+if [ ! -z "$1" ]; then
+	brokenfile=$1
+else
+	brokenfile=/dev/null
+fi
 
 # /usr/pkgsrc
 cwd=$PWD
@@ -63,6 +70,12 @@ do
 	else
 		cd $pkgdir
 		pkgname=`make show-var VARNAME=PKGNAME`
+		if [ $? != 0 ]; then
+			echo "ERROR: printindex could not extract PKNAME for $pkgdir" > /dev/stderr
+			echo "make show-var VARNAME=PKGNAME failed" > $brokenfile
+			make show-var VARNAME=PKGNAME >> $brokenfile 2>&1
+			exit 1
+		fi
 		echo "$pkgdir          $pkgname "
 	fi
 	cd $cwd 
@@ -85,6 +98,12 @@ do
 		*)
 			cd $cwd/$pkgdir
 			pkgname=`make show-var VARNAME=PKGNAME`
+			if [ $? != 0 ]; then
+				echo "ERROR: printindex could not extract PKNAME for $pkgdir" > /dev/stderr
+				echo "make show-var VARNAME=PKGNAME failed" > $brokenfile
+				make show-var VARNAME=PKGNAME >> $brokenfile 2>&1
+				exit 1
+			fi
 			echo "$pkgdir          $pkgname "
 			cd $cwd 
 			;;
