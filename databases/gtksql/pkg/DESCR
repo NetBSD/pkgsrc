@@ -1,0 +1,10 @@
+GtkSQL is a graphical query tool (like PostgreSQL's psql). It
+is released under the GNU GPL license, and was developped using
+Gtk+ 1.0.0 and PostgreSQL 6.3. 
+
+Its main features are: 
+
+  *  multiple SQL buffers
+  *  SQL keywords, table names and fields autocompletion
+  *  easy displaying of tables definitions
+  *  exporting of query results

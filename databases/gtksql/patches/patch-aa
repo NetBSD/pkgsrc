@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/01/04 13:08:47 frueauf Exp $
+
+--- Makefile.orig	Wed Aug  5 21:10:26 1998
++++ Makefile	Mon Jan  4 13:43:43 1999
+@@ -1,6 +1,6 @@
+ # Here, what you need for Pgsql
+-PGSQLIBS    = -L/usr/local/pgsql/lib -lpq
+-PGSQLCFLAGS = -I/usr/local/pgsql/include
++PGSQLIBS    = -L${LOCALBASE}/@PGUSER@/lib -lpq
++PGSQLCFLAGS = -I${LOCALBASE}/@PGUSER@/include
+ # Your favorite compilation options here :-)
+ MCFLAGS  = -Wall -O -g
+ 
+@@ -23,8 +23,8 @@
+ clean:
+ 	rm *.o gtksql
+ 
+-install: all
+-	cp gtksql $(DESTDIR)usr/bin/
++install:
++	cp gtksql ${PREFIX}/bin/
+ 
+ .c.o: 
+-	gcc $(CFLAGS) $(GTKCFLAGS) $(PGSQLCFLAGS) -c $*.c -o ./$*.o
++	gcc $(CFLAGS) $(GTKCFLAGS) $(PGSQLCFLAGS) -c $*.c -o ./$*.o
