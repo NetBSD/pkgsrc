@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2967 2005/01/27 15:06:07 xtraeme Exp $
+$NetBSD: TODO,v 1.2968 2005/01/27 15:49:53 adam Exp $
 
 Suggested new packages
 ======================
@@ -631,7 +631,6 @@ Suggested package updates
 	o librsvg-1.0.3
 	o libsieve-2.1.16/2.2.8
 	o libsmi-0.4.3
-	o libtasn1-0.2.13
 	o libtcl-nothread-8.4.9
 	o libtecla-1.6.1
 	o libtheora-1.0alpha4
