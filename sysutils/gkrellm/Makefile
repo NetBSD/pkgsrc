@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2001/11/01 14:08:00 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2001/11/11 22:11:09 damon Exp $
 #
 
-DISTNAME=	gkrellm-1.2.3
-PKGNAME=	${DISTNAME}nb1
+DISTNAME=	gkrellm-1.2.4
+PKGNAME=	${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://web.wt.net/~billw/gkrellm/
 
