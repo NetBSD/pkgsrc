@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/27 22:12:51 itojun Exp $
+bin/ike-scan
+man/man1/ike-scan.1
+share/ike-scan/ike-backoff-patterns
+share/ike-scan/ike-vendor-ids
+@dirrm share/ike-scan
