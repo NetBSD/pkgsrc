@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.7 2000/06/30 03:13:37 wiz Exp $
+$NetBSD: patch-ae,v 1.8 2001/07/17 11:02:02 wiz Exp $
 
 --- sysdeps/freebsd/cpu.c.orig	Sun Feb 13 16:47:58 2000
-+++ sysdeps/freebsd/cpu.c	Thu Jun 29 00:01:11 2000
++++ sysdeps/freebsd/cpu.c
 @@ -27,11 +27,16 @@
  
  #include <glibtop_suid.h>
@@ -19,7 +19,7 @@ $NetBSD: patch-ae,v 1.7 2000/06/30 03:13:37 wiz Exp $
  /* nlist structure for kernel access */
  static struct nlist nlst [] = {
  #ifdef __bsdi__
-@@ -41,16 +46,21 @@
+@@ -41,21 +46,27 @@
  #endif
  	{ 0 }
  };
@@ -41,14 +41,12 @@ $NetBSD: patch-ae,v 1.7 2000/06/30 03:13:37 wiz Exp $
  	if (kvm_nlist (server->machine.kd, nlst) < 0) {
  		glibtop_warn_io_r (server, "kvm_nlist (cpu)");
  		return;
-@@ -58,6 +68,7 @@
+ 	}
  
++#endif
  	/* Set this only if kvm_nlist () succeeded. */
  	server->sysdeps.cpu = _glibtop_sysdeps_cpu;
-+#endif
  }
- 
- /* Provides information about cpu usage. */
 @@ -65,7 +76,11 @@
  void
  glibtop_get_cpu_p (glibtop *server, glibtop_cpu *buf)
