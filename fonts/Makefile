@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/07/19 12:43:47 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2002/07/21 19:22:22 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -47,6 +47,7 @@ SUBDIR+=	mkfontscale
 SUBDIR+=	monafonts
 SUBDIR+=	mozilla-fonts
 SUBDIR+=	ms-ttf
+SUBDIR+=	oto
 SUBDIR+=	p5-Font-AFM
 SUBDIR+=	p5-Font-TTF
 SUBDIR+=	t1lib

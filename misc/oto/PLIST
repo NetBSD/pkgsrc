@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/06/24 12:06:21 uebayasi Exp $
-bin/oto
-share/doc/oto/README
-share/oto/BIG5.TXT
-share/oto/GB12345.TXT
-share/oto/GB12345p.TXT
-share/oto/GB2312.TXT
-@dirrm share/oto
-@dirrm share/doc/oto
