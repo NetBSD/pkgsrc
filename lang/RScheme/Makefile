@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/04/14 21:43:46 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/21 01:13:41 jtb Exp $
 
 DISTNAME=		rs-0.7.3.1
 PKGNAME=		RScheme-0.7.3.1
@@ -11,7 +11,7 @@ COMMENT=		Scheme implementation
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 HAS_CONFIGURE=		#defined
-CONFIGURE_ARGS+=	"--prefix=${PREFIX}/lib/RScheme"
+CONFIGURE_ARGS+=	--prefix=${PREFIX}/lib/RScheme
 ALL_TARGET=		base
 
 pre-configure:
@@ -23,9 +23,6 @@ do-install:
 
 post-install:
 	${LN} -fs ${PREFIX}/lib/RScheme/bin/rs ${PREFIX}/bin/RScheme
-	${LN} -fs ${PREFIX}/lib/RScheme/bin/rs ${PREFIX}/bin/rscheme
-	${LN} -fs ${PREFIX}/lib/RScheme/bin/rsc ${PREFIX}/bin/RSchemec
-	${LN} -fs ${PREFIX}/lib/RScheme/bin/rsc ${PREFIX}/bin/rschemec
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/RScheme
 	${INSTALL_DATA} ${WRKSRC}/../COPYING ${WRKSRC}/../README \
 	${PREFIX}/share/doc/RScheme
