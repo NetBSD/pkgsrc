@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/15 13:43:57 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/29 02:49:46 snj Exp $
 
 DISTNAME=	ogle-0.9.2
 PKGREVISION=	1
@@ -17,10 +17,10 @@ ONLY_FOR_PLATFORM+=	NetBSD-1.6Z*-alpha NetBSD-[2-9]*-alpha
 ONLY_FOR_PLATFORM+=	Linux-*-*
 ONLY_FOR_PLATFORM+=	SunOS-*-*
 
-USE_BUILDLINK2=		yes
-USE_X11=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
+USE_X11=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
@@ -31,11 +31,11 @@ GCC_REQD+=		2.95.3
 
 MESSAGE_SUBST+=		PKGBASE=${PKGBASE}
 
-.include "../../audio/liba52/buildlink2.mk"
-.include "../../audio/libmad/buildlink2.mk"
-.include "../../devel/binutils/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../multimedia/libdvdread/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../audio/liba52/buildlink3.mk"
+.include "../../audio/libmad/buildlink3.mk"
+.include "../../devel/binutils/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../multimedia/libdvdread/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
