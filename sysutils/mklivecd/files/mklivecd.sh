@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.4 2004/03/03 14:46:55 keihan Exp $
+# $NetBSD: mklivecd.sh,v 1.5 2004/03/03 16:26:40 xtraeme Exp $
 #
 # Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
 # All rights reserved.
@@ -38,6 +38,7 @@ progname=$(basename $0)
 config_dir="$HOME/.mklivecd"
 pers_conffile="personal_config"
 tmp_file="/tmp/${progname}.$$"
+mntstat="$config_dir/mount.stat"
 
 MKISOFS="@PREFIX@/bin/mkisofs"
 CDRECORD="@PREFIX@/bin/cdrecord"
@@ -52,7 +53,7 @@ usage()
 {
 	cat <<_usage_
 
-	${progname}: [-c config_file] [target]
+	${progname}: [-v] [-c config_file] [target]
 
 	Target operations:
 
@@ -85,8 +86,9 @@ do_conf()
 	BASE_VARS="SOURCEDIR PKGSRCDIR SHAREDIR BASEDIR WORKDIR ISODIR \
 		   BASE_SETS_DIR X11_SETS_DIR BASE_SETS X11_SETS"
 
-	MISC_VARS="ENABLE_X11 BLANK_BEFORE_BURN CDROM_DEVICE PERSONAL_CONFIG \
-		   BOOTKERN KERNEL_NAME IMAGE_NAME PKG_SYSCONFDIR REMOVE_DIRS"
+	MISC_VARS="ENABLE_X11 CDRECORD_ARGS BLANK_BEFORE_BURN CDROM_DEVICE \
+		   PERSONAL_CONFIG BOOTKERN KERNEL_NAME IMAGE_NAME \
+		   PKG_SYSCONFDIR REMOVE_DIRS"
 
 	MNT_VARS="MNT_DEV_ARGS MNT_ETC_ARGS MNT_VAR_ARGS \
 		  MNT_ROOT_ARGS MNT_TMP_ARGS MNT_HOME_ARGS \
@@ -106,6 +108,7 @@ do_conf()
 
 	# Miscellaneous options
 	: ${ENABLE_X11:=no}
+	: ${CDRECORD_ARGS:=-v}
 	: ${BLANK_BEFORE_BURN:=no}
 	: ${CDROM_DEVICE:=15,1,0}
 	: ${PERSONAL_CONFIG:=no}
@@ -169,7 +172,9 @@ EOF
 		echo "=> Configuration file created, now please edit it."
 		echo "=> Path: $config_file"
 	elif [ -f $config_file -a $target != "config" ]; then
-		showmsg "Using $config_file"
+		if [ "$verbose_mode" = "on" ]; then
+		    showmsg "Using $config_file"
+		fi
 	else
 		showmsg "$config_file already exists!"
 		bye 1
@@ -245,8 +250,10 @@ do_cdlive()
 		    rm -rf $KERNEL_NAME
 		    echo
 		    showmsg "Build successful"
-		    showmsg "Boot/kernel image installed!"
-		    showmsg "Next step: ${progname} base"
+		    if [ "$verbose_mode" = "on" ]; then
+			showmsg "Boot/kernel image installed!"
+			showmsg "Next step: ${progname} base"
+		    fi
 		    echo
 		else
 		    echo
@@ -271,7 +278,9 @@ do_cdlive()
 		for S in ${BASE_SETS}
 		do
 		    if [ -f $BASE_SETS_DIR/$S ]; then
-			echo "=> Unpacking $S"
+			if [ "$verbose_mode" = "on" ]; then
+			    echo "=> Unpacking $S"
+			fi
 			tar xfzp $BASE_SETS_DIR/$S -C $ISODIR
 		    fi
 		done
@@ -291,7 +300,9 @@ do_cdlive()
 			for X in ${X11_SETS}
 			do
 			    if [ -f $X11_SETS_DIR/$X ]; then
-				echo "=> Unpacking $X"
+				if [ "$verbose_mode" = "on" ]; then
+				    echo "=> Unpacking $X"
+				fi
 				tar xfzp $X11_SETS_DIR/$X -C $ISODIR
 			    fi
 			done
@@ -325,7 +336,7 @@ do_cdlive()
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.4 2004/03/03 14:46:55 keihan Exp $
+# \$NetBSD: mklivecd.sh,v 1.5 2004/03/03 16:26:40 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -352,19 +363,16 @@ _EOF_
 		cd $ISODIR/dev && ./MAKEDEV all
 		echo
 		showmsg "Target base successful"
-		showmsg "Base system installed"
-		showmsg "Next step: ${progname} chroot"
+		if [ "$verbose_mode" = "on" ]; then
+		    showmsg "Base system installed"
+		    showmsg "Next step: ${progname} chroot"
+		fi
 	;;
 	chroot)
-		if [ ! -f $ISODIR/.prompt_done ]; then
-		    (						    \
-		    echo "export PS1=\"$KERNEL_NAME> \"";	    \
-		    echo "set -o emacs";			    \
-		    ) > $ISODIR/etc/profile
-		    touch $ISODIR/.prompt_done
-		else
-		    showmsg "Prompt already set!"
-		fi
+		(						    \
+		echo "export PS1=\"$KERNEL_NAME> \"";	    \
+		echo "set -o emacs";			    \
+		) > $ISODIR/etc/profile
 
 		if [ ! -d $ISODIR/usr/pkgsrc ]; then
 		    mkdir $ISODIR/usr/pkgsrc
@@ -378,16 +386,23 @@ _EOF_
 		showmsg "Entering into the chroot!"
 
 		if [ -d $PKGSRCDIR ]; then
-		    showmsg "Mounting pkgsrc directory."
-		    mount_null $PKGSRCDIR $ISODIR/usr/pkgsrc
+		    if [ -f $mntstat ]; then
+			count=`cat $mntstat`
+			count=$(($count + 1))
+			echo $count > $mntstat
+			showmsg "pkgsrc directory already mounted."
+		    else
+			showmsg "pkgsrc directory ready."
+			echo "1" > $mntstat
+			mount_null $PKGSRCDIR $ISODIR/usr/pkgsrc
+		    fi
 		else
-		    showmsg "Can't find $PKGSRCDIR, disabling it"
+		    showmsg "Can't find $PKGSRCDIR, disabling it."
 		fi
 
 		echo
 		chroot $ISODIR /bin/ksh
 		echo
-		showmsg "Unmounting pkgsrc."
 
 		if [ ! -d $ISODIR/root ]; then
 		    showmsg "Target chroot failed!"
@@ -453,7 +468,7 @@ _EOF_
 		if [ "${PERSONAL_CONFIG}" = "yes" -a			    \
 			-f $config_dir/$pers_conffile ]; then
 		    echo
-		    showmsg "Running personal config file"
+		    showmsg "Running personal config file..."
 		    . $config_dir/$pers_conffile
 		    showmsg "Done!"
 		    echo
@@ -472,9 +487,27 @@ _EOF_
 
 		chmod -R a+rx $ISODIR/etc/rc.d
 
-		umount $ISODIR/usr/pkgsrc
-		rm $ISODIR/.prompt_done
-		showmsg "Size: $(du -sh $ISODIR)"
+		if [ ! -f $mntstat ]; then
+		    showmsg "pkgsrc was not mounted."
+		else
+		    cnt=`cat $mntstat`
+		    if [ "$cnt" -gt 1 ]; then
+			cnt=$(($cnt - 1))
+			echo $cnt > $mntstat
+			showmsg "pkgsrc Still in use by mklivecd."
+		    else
+			showmsg "Unmounting pkgsrc."
+			umount -R $ISODIR/usr/pkgsrc
+			if [ $? -eq 0 ]; then
+			    rm $mntstat
+			else
+			    echo "Can't umount $PKGSRCDIR."
+			fi
+		    fi
+		fi
+		if [ "$verbose_mode" = "on" ]; then
+		    showmsg "Size: $(du -sh $ISODIR)"
+		fi
 	;;
 	clean)
 		showmsg "Cleaning WORKDIR: $WORKDIR"
@@ -483,7 +516,9 @@ _EOF_
 		    root tmp usr var sbin home
 		do
 		    if [ -d $ISODIR/$F ]; then
-			showmsg "Cleaning ISODIR: $ISODIR/$F"
+			if [ "$verbose_mode" = "on" ]; then
+			    showmsg "Removing $ISODIR/$F."
+			fi
 			rm -rf $ISODIR/$F
 		    fi
 		done
@@ -501,13 +536,16 @@ _EOF_
 		fi
 
 		echo
-		showmsg "Removing not needed directories:"
+		showmsg "Removing not needed directories."
 		for RM in ${REMOVE_DIRS}
                 do
                     if [ -d $ISODIR/$RM ]; then
-                        echo "=> Removing $RM..."; rm -rf $ISODIR/$RM
+			if [ "$verbose_mode" = "on" ]; then
+			    echo "=> Removing $RM..."
+			fi
+			rm -rf $ISODIR/$RM
 		    else
-			echo "=> Nonexistent directory: $RM"
+			echo "=> Nonexistent directory: $RM."
 		    fi
 		done
 
@@ -528,10 +566,11 @@ _EOF_
 		fi
 
 		if [ $BLANK_BEFORE_BURN = "yes" ]; then
-		    $CDRECORD dev=$CDROM_DEVICE -v blank=fast
+		    $CDRECORD dev=$CDROM_DEVICE $CDRECORD_ARGS blank=fast
 		fi
 		
-		$CDRECORD dev=$CDROM_DEVICE -v $BASEDIR/$IMAGE_NAME.iso
+		$CDRECORD dev=$CDROM_DEVICE $CDRECORD_ARGS \
+		    $BASEDIR/$IMAGE_NAME.iso
 	;;
 	esac
 	
@@ -552,7 +591,7 @@ checkconf()
 #  Main program								      #
 # =========================================================================== #
 
-args=`getopt c: $*`
+args=`getopt c:v $*`
 if [ $? -ne 0 ]; then
 	usage
 fi
@@ -561,6 +600,10 @@ while [ $# -gt 0 ]; do
 	case "$1" in
 	    -c)
 		config_file="$config_dir/$2"
+		shift
+		;;
+	    -v)
+		verbose_mode=on
 		shift
 		;;
 	    --)
@@ -576,6 +619,10 @@ fi
 
 if [ -z "$config_file" ]; then
 	config_file=$config_dir/mklivecd.conf
+fi
+
+if [ -z "$verbose_mode" ]; then
+	verbose_mode=off
 fi
 
 target=$1
