@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 17:37:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/20 11:40:10 wiz Exp $
 # FreeBSD Id: Makefile,v 1.9 1999/02/11 16:01:16 jfieber Exp
 #
 
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	rh@NetBSD.ORG
 HOMEPAGE=	http://www.iso.ch/cate/d16387.html
 COMMENT=	Character entity sets from ISO 8879:1986 (SGML)
-
-BUILD_DEPENDS=	unzip:../../archivers/unzip
 
 NO_MTREE=       yes
 EXTRACT_ONLY=	# empty

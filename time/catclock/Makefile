@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:32:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/20 11:40:10 wiz Exp $
 #
 
 DISTNAME=	catclock
@@ -13,12 +13,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Variant of the MIT xclock with a "cat" mode
 
-BUILD_DEPENDS=	unzip:../../archivers/unzip
-
 USE_IMAKE=	yes
 USE_MOTIF=	yes
-
-EXTRACT_CMD=	unzip ${DOWNLOADED_DISTFILE}
 
 post-extract:
 	${RM} ${WRKSRC}/makefile ${WRKSRC}/pwd.h

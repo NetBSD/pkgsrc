@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 14:38:28 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/20 11:40:09 wiz Exp $
 #
 
 DISTNAME=	gobo15
@@ -13,7 +13,6 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.gobosoft.com/
 COMMENT=	portable Eiffel structure libraries and tools
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/unzip:../../archivers/unzip
 BUILD_DEPENDS+=	${LOCALBASE}/bin/smalleiffel:../../lang/smalleiffel
 
 NO_WRKSUBDIR=	yes
