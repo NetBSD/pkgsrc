@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/05/07 01:14:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/07 11:13:16 jmmv Exp $
 #
 
-DISTNAME=	vte-0.11.10
-PKGREVISION=	2
+DISTNAME=	vte-0.11.11
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.11/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,15 +22,11 @@ USE_X11=		yes
 
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--disable-python
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 PKGCONFIG_OVERRIDE+=    vte.pc.in
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "FreeBSD"
-CPPFLAGS+=		-D_XOPEN_SOURCE_EXTENDED=1
-.endif
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
