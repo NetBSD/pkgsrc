@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2001/06/21 11:29:28 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2001/07/10 01:17:33 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -104,6 +104,7 @@ SUBDIR+=	sidplay
 SUBDIR+=	snd
 SUBDIR+=	sox
 SUBDIR+=	splay
+SUBDIR+=	tfmxplay
 SUBDIR+=	timidity
 SUBDIR+=	tosha
 SUBDIR+=	tracker
