@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2002/11/25 19:52:45 wiz Exp $
+
+--- apr/apr-config.in.orig	Thu Sep 19 12:38:31 2002
++++ apr/apr-config.in
+@@ -232,7 +232,7 @@ while test $# -gt 0; do
+     ;;
+     --apr-libtool)
+     if test "$location" = "installed"; then
+-        echo "${SHELL} ${installbuilddir}/libtool"
++        echo "${SHELL} ${bindir}/libtool"
+     else
+         echo "${SHELL} $thisdir/libtool"
+     fi
