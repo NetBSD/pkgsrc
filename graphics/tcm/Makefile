@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2001/04/14 21:43:45 jtb Exp $
+# $NetBSD: Makefile,v 1.7 2001/05/10 23:35:27 jtb Exp $
 
 DISTNAME=		tcm-2.01.src
 PKGNAME=		tcm-2.01
-CATEGORIES=		graphics
+CATEGORIES=		graphics devel
 MASTER_SITES=		ftp://ftp.cs.utwente.nl/pub/tcm/
 
 MAINTAINER=		packages@netbsd.org
@@ -11,15 +11,12 @@ COMMENT=		TCM - Toolkit for Conceptual Modeling
 
 WRKSRC=			${WRKDIR}/tcm-2.01/src
 
-HAS_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	${SCRIPTDIR}/configure
-
 USE_X11=		yes
 USE_X11BASE=		yes
 USE_MOTIF=		yes
 
-MAKE_ENV+=		XWIN_HOME="${X11BASE}"
-MAKE_ENV+=		MOTIF_HOME="${MOTIFBASE}"
+MAKE_ENV+=		XWIN_HOME=${X11BASE}
+MAKE_ENV+=		MOTIF_HOME=${MOTIFBASE}
 
 TCM_SRC=		${WRKDIR}/tcm-2.01
 MAKE_ENV+=		TCM_HOME=${TCM_SRC}
@@ -30,7 +27,19 @@ post-extract:
 	${RM} -f ${TCM_SRC}/lib/COPYING ${TCM_SRC}/lib/CHANGELOG
 
 do-configure:
-	${CONFIGURE_SCRIPT} ${WRKSRC}
+	${RM} -f ${WRKSRC}/Config.tmpl
+	${LN} -fs ${WRKSRC}/Config.tmpl_netbsd ${WRKSRC}/Config.tmpl
+	${RM} -f ${WRKSRC}/Makefile
+	${LN} -fs ${WRKSRC}/Makefile.gcc ${WRKSRC}/Makefile
+	${MV} -f ${WRKSRC}/gl/system.c ${WRKSRC}/gl/system.c.dist
+	${SED} -e 's:@PREFIX@:${PREFIX}:g'				\
+		-e 's:@X11BASE@:${X11BASE}:g'				\
+		-e 's:@LOCALBASE@:${LOCALBASE}':g			\
+	${WRKSRC}/gl/system.c.dist > ${WRKSRC}/gl/system.c
+	for f in `${FIND} ${WRKSRC} -name \*.c`; do			\
+		${MV} -f $$f $$f`${ECHO} c`;				\
+	done
+	${MV} -f ${WRKSRC}/gl/text2ps.cc ${WRKSRC}/gl/text2ps.c
 
 do-install:
 	cd ${TCM_SRC}/bin && ${INSTALL_PROGRAM} tcm tcmd tcmt text2ps 	\
