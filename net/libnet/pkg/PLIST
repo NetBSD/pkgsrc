@@ -42,3 +42,4 @@ share/doc/libnet/html/lrm.html
 @dirrm share/doc/libnet/html
 @dirrm share/doc/libnet
 @dirrm include/libnet
+man/man3/libnet.3
