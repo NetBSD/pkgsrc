@@ -1,29 +1,30 @@
 # New ports collection makefile for:	samba
-# Version required:			1.9.17p4
+# Version required:			1.9.18
 # Date created:				11th Feb 1995
 # Whom:					gpalmer
 #
-# $NetBSD: Makefile,v 1.3 1997/12/24 10:52:31 agc Exp $
-# FreeBSD Id: Makefile,v 1.17 1997/10/23 15:03:20 max Exp
+# $NetBSD: Makefile,v 1.4 1998/01/12 17:19:25 agc Exp $
+# FreeBSD Id: Makefile,v 1.1.1.1 1997/10/23 15:17:43 max Exp
 #
 
-DISTNAME=	samba-1.9.17p4
-PKGNAME=	samba-1.9.17.4
+DISTNAME=	samba-1.9.18
 CATEGORIES=	net
 MASTER_SITES=	ftp://samba.anu.edu.au/pub/samba/
 
-MAINTAINER=	hosokawa@jp.FreeBSD.ORG
+MAINTAINER=	tsarna@endicor.com
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
-MAN1=		smbstatus.1 smbclient.1 smbrun.1 smbtar.1 testparm.1 testprns.1
+MAN1=		make_smbcodepage.1 smbstatus.1 smbclient.1 smbrun.1 \
+		smbtar.1 testparm.1 testprns.1
 MAN5=		smb.conf.5
 MAN7=		samba.7
-MAN8=		smbd.8 nmbd.8 smbpasswd.8
+MAN8=		smbd.8 nmbd.8 smbpasswd.8 smbmnt.8 smbmount.8 smbumount.8
 
 STARTUP_SCRIPT=	${PREFIX}/etc/rc.d/samba.sh.sample
 SAMPLE_CONFIG=	${PREFIX}/etc/smb.conf.sample
 SAMBA_SPOOL=	/var/spool/samba
 SAMBA_LOGDIR=	/var/log
+SAMBA_PRIVATE=	${PREFIX}/private
 
 post-install:
 .if !defined(NOPORTDOCS)
@@ -51,9 +52,21 @@ post-install:
 	@test -d ${SAMBA_SPOOL} || ${MKDIR} ${SAMBA_SPOOL} && chmod 1777 ${SAMBA_SPOOL}
 	@if [ ! -f ${SAMPLE_CONFIG} ]; then				\
 		${SED} -e 's:__SAMBA_SPOOL__:${SAMBA_SPOOL}:g'		\
-		    -e 's:__LOGDIR__:${SAMBA_LOGDIR}:g' 		\
+		    -e 's:__LOGDIR__:${SAMBA_LOGDIR}:g'			\
 			${FILESDIR}/smb.conf.sample			\
 			> ${SAMPLE_CONFIG} ;				\
 	fi
+	${INSTALL} -c -m 755 -o bin -g bin ${WRKSRC}/mksmbpasswd.sh ${PREFIX}/bin
+	if [ ! -d ${SAMBA_PRIVATE} ] ; then				\
+		${MKDIR} ${SAMBA_PRIVATE} ;				\
+		chown root.wheel ${SAMBA_PRIVATE} ;			\
+		chmod 700 ${SAMBA_PRIVATE} ;				\
+	fi
+	if [ ! -f ${SAMBA_PRIVATE}/smbpasswd ] ; then			\
+		${CAT} /etc/passwd | ${PREFIX}/bin/mksmbpasswd.sh > ${SAMBA_PRIVATE}/smbpasswd ; \
+		chmod 600 ${SAMBA_PRIVATE}/smbpasswd ;			\
+	fi
+	chown root.wheel ${PREFIX}/bin/smbpasswd
+	chmod 4111 ${PREFIX}/bin/smbpasswd
 
 .include <bsd.port.mk>
