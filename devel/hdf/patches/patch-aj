@@ -1,40 +1,31 @@
-$NetBSD: patch-aj,v 1.5 2002/05/03 23:14:52 jtb Exp $
+$NetBSD: patch-aj,v 1.6 2004/04/20 18:14:37 drochner Exp $
 
---- /dev/null	Wed May  1 14:04:01 2002
-+++ mfhdf/ncgen/Makefile	Wed May  1 14:11:52 2002
-@@ -0,0 +1,35 @@
-+PROG= ncgen
-+PROGNAME= hdfncgen
-+
-+MAN= hdfncgen.1
-+
-+SRCS= main.c generate.c load.c ncgentab.c escapes.c getfill.c init.c	\
-+	close.c genlib.c
-+
-+BINDIR= ${PREFIX}/bin
-+LIBDIR= ${PREFIX}/lib
-+MANDIR= ${PREFIX}/man
-+
-+CPPFLAGS+= -Dunix -DNDEBUG
-+CPPFLAGS+= -I${.CURDIR}/../libsrc
-+CPPFLAGS+= -I${.CURDIR}/../../hdf/src
-+
-+LDFLAGS+= -L${.CURDIR}/../libsrc
-+LDFLAGS+= -L${.CURDIR}/../../hdf/src
-+LDFLAGS+= -Wl,-R${BUILDLINK_PREFIX.jpeg}/lib
-+LDFLAGS+= -Wl,-R${BUILDLINK_PREFIX.zlib}/lib
-+
-+LDADD+= -lmfhdf -ldf -ljpeg -lz
-+
-+NOGCCERROR= 1
-+
-+ncgenyy.c: ncgen.l
-+	${LEX} ${LFLAGS} ncgen.l
-+	mv lex.yy.c ncgenyy.c
-+
-+ncgentab.c: ncgenyy.c ncgen.y
-+	${YACC} ${YFLAGS} ncgen.y
-+	mv y.tab.c ncgentab.c
-+	touch ncgentab.h
-+
-+.include <bsd.prog.mk>
+--- mfhdf/ncgen/Makefile.in.orig	2003-11-07 19:39:04.000000000 +0100
++++ mfhdf/ncgen/Makefile.in	2004-04-20 15:53:32.000000000 +0200
+@@ -166,7 +166,7 @@
+ 
+ #############################################################################
+ #############################################################################
+-man1_MANS = ncgen.1
++man1_MANS = hdfncgen.1
+ 
+ 
+ #############################################################################
+@@ -185,7 +185,7 @@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/bin/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/hdf/src/h4config.h
+ CONFIG_CLEAN_FILES =
+-bin_PROGRAMS = ncgen$(EXEEXT)
++bin_PROGRAMS = hdfncgen$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+ am_ncgen_OBJECTS = close.$(OBJEXT) escapes.$(OBJEXT) generate.$(OBJEXT) \
+@@ -246,7 +246,7 @@
+ 
+ clean-binPROGRAMS:
+ 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
+-ncgen$(EXEEXT): $(ncgen_OBJECTS) $(ncgen_DEPENDENCIES) 
++hdfncgen$(EXEEXT): $(ncgen_OBJECTS) $(ncgen_DEPENDENCIES) 
+ 	@rm -f ncgen$(EXEEXT)
+ 	$(LINK) $(ncgen_LDFLAGS) $(ncgen_OBJECTS) $(ncgen_LDADD) $(LIBS)
+ 
