@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.1 1999/04/20 15:01:11 mycroft Exp $
+$NetBSD: patch-ap,v 1.2 2000/10/18 03:31:16 hubertf Exp $
 
---- src/main.c.orig	Wed Aug 12 18:39:33 1998
-+++ src/main.c	Tue Apr 20 10:20:12 1999
-@@ -40,6 +40,7 @@
+--- src/main.c.orig	Thu Sep  7 01:35:04 2000
++++ src/main.c
+@@ -41,6 +41,7 @@
  int quiet = 0;
  int trace = 0;
  int noexec = 0;
@@ -10,24 +10,24 @@ $NetBSD: patch-ap,v 1.1 1999/04/20 15:01:11 mycroft Exp $
  int logoff = 0;
  
  /* Set if we should be writing CVSADM directories at top level.  At
-@@ -217,6 +218,7 @@
+@@ -239,6 +240,7 @@
      "    -w           Make checked-out files read-write (default).\n",
      "    -l           Turn history logging off.\n",
      "    -n           Do not execute anything that will change the disk.\n",
 +    "    -u           Don't create locks (implies -l).\n",
      "    -t           Show trace of program execution -- try with -n.\n",
      "    -v           CVS version and copyright.\n",
-     "    -b bindir    Find RCS programs in 'bindir'.\n",
-@@ -485,7 +487,7 @@
-     opterr = 1;
- 
-     while ((c = getopt_long
--            (argc, argv, "+Qqrwtnlvb:T:e:d:Hfz:s:xa", long_options, &option_index))
-+            (argc, argv, "+Qqrwtnulvb:T:e:d:Hfz:s:xa", long_options, &option_index))
-            != EOF)
+     "    -T tmpdir    Use 'tmpdir' for temporary files.\n",
+@@ -432,7 +434,7 @@
+     int help = 0;		/* Has the user asked for help?  This
+ 				   lets us support the `cvs -H cmd'
+ 				   convention to give help for cmd. */
+-    static const char short_options[] = "+Qqrwtnlvb:T:e:d:Hfz:s:xa";
++    static const char short_options[] = "+Qqrwtunlvb:T:e:d:Hfz:s:xa";
+     static struct option long_options[] =
      {
- 	switch (c)
-@@ -523,6 +525,8 @@
+         {"help", 0, NULL, 'H'},
+@@ -562,6 +564,8 @@
  		break;
  	    case 'n':
  		noexec = 1;
@@ -36,12 +36,12 @@ $NetBSD: patch-ap,v 1.1 1999/04/20 15:01:11 mycroft Exp $
  	    case 'l':			/* Fall through */
  		logoff = 1;
  		break;
-@@ -802,7 +806,7 @@
- 	     * BUT, only if the history file exists.
- 	     */
- 
--	    if (!client_active)
-+	    if (!client_active && !nolock)
- 	    {
- 		char *path;
- 		int save_errno;
+@@ -936,7 +940,7 @@
+ 		/*
+ 		 * Check to see if the repository exists.
+ 		 */
+-		if (!client_active)
++		if (!client_active && !nolock)
+ 		{
+ 		    char *path;
+ 		    int save_errno;

@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 1998/08/21 19:06:52 tv Exp $
+$NetBSD: patch-ab,v 1.4 2000/10/18 03:31:16 hubertf Exp $
 
---- doc/cvs.texinfo.orig	Wed Mar  4 10:47:24 1998
-+++ doc/cvs.texinfo	Thu Mar 19 22:45:08 1998
-@@ -41,6 +41,10 @@
+--- doc/cvs.texinfo.orig	Wed Aug 30 03:16:32 2000
++++ doc/cvs.texinfo
+@@ -40,6 +40,10 @@
  @setfilename cvs.info
  @include CVSvn.texi
  @settitle CVS---Concurrent Versions System
@@ -13,17 +13,3 @@ $NetBSD: patch-ab,v 1.3 1998/08/21 19:06:52 tv Exp $
  @setchapternewpage odd
  
  @c -- TODO list:
---- doc/cvsclient.texi.orig	Tue Feb 10 18:07:31 1998
-+++ doc/cvsclient.texi	Thu Mar 19 22:45:08 1998
-@@ -3,6 +3,11 @@
- @setfilename cvsclient.info
- @include CVSvn.texi
- 
-+@dircategory Programming & development tools
-+@direntry
-+* CVS-CLIENT: (cvsclient).	CVS client/server Reference Manual.
-+@end direntry
-+
- @node Top
- @top CVS Client/Server
- 

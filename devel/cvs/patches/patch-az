@@ -1,10 +1,10 @@
-$NetBSD: patch-az,v 1.1 2000/02/23 06:49:28 mycroft Exp $
+$NetBSD: patch-az,v 1.2 2000/10/18 03:31:17 hubertf Exp $
 
---- src/modules.c.orig	Wed Feb 23 01:29:50 2000
-+++ src/modules.c	Wed Feb 23 01:27:57 2000
-@@ -720,7 +720,8 @@
- 		    run_print (stdout);
+--- src/modules.c.orig	Wed Jul 26 21:29:01 2000
++++ src/modules.c
+@@ -740,7 +740,8 @@
  		    cvs_output ("'\n", 0);
+ 		    cvs_flushout ();
  		}
 -		err += run_exec (RUN_TTY, RUN_TTY, RUN_TTY, RUN_NORMAL);
 +		err += run_exec (RUN_TTY, RUN_TTY, RUN_TTY,
