@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:11:01 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/01/15 12:46:01 drochner Exp $
 bin/gtkextra-config
 include/gtkextra/gtkbordercombo.h
 include/gtkextra/gtkcheckitem.h
@@ -13,15 +13,25 @@ include/gtkextra/gtkiconfilesel.h
 include/gtkextra/gtkiconlist.h
 include/gtkextra/gtkitementry.h
 include/gtkextra/gtkplot.h
+include/gtkextra/gtkplot3d.h
+include/gtkextra/gtkplotbar.h
+include/gtkextra/gtkplotbox.h
 include/gtkextra/gtkplotcanvas.h
+include/gtkextra/gtkplotcsurface.h
+include/gtkextra/gtkplotdata.h
+include/gtkextra/gtkplotflux.h
+include/gtkextra/gtkplotgdk.h
 include/gtkextra/gtkplotpc.h
+include/gtkextra/gtkplotpolar.h
 include/gtkextra/gtkplotprint.h
 include/gtkextra/gtkplotps.h
+include/gtkextra/gtkplotsurface.h
 include/gtkextra/gtkpsfont.h
 include/gtkextra/gtksheet.h
+include/gtkextra/gtktogglecombo.h
 lib/libgtkextra.so
-lib/libgtkextra.so.10
-lib/libgtkextra.so.10.1
+lib/libgtkextra.so.12
+lib/libgtkextra.so.12.0
 lib/libgtkextra.a
 lib/libgtkextra.la
 @dirrm include/gtkextra
