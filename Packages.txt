@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.90 2000/06/16 09:18:34 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.91 2000/06/30 10:23:28 agc Exp $
 ###########################################################################
 
 			==========================
@@ -226,23 +226,16 @@ your packages tree. So, to use /usr/local, set
 	LOCALBASE=/usr/local
 
 in your environment.  There is, of course, one exception to this - X11
-packages are traditionally installed in the X11 tree.  The environment
-variable which governs an X11 package's location is X11BASE.  So to
-install an X11 package into /usr/local/X11R6, set
+packages are traditionally installed in the X11 tree. The definition
+used to identify the root of the X11 tree is the X11BASE definition.
 
-	X11BASE=/usr/local/X11R6
-
-in your environment.
-
-However, beware that strange things may happen if you install X11
-packages outside the X11 tree, in that libraries and header files may
-not be found by other software, and Application Defaults may not be
-found.  For that reason, you are advised to leave X11 packages in the
-X11 tree.  We are looking at ways to change this. 
+It is possible to install X11 packages in the LOCALBASE tree, for
+which you must install the xpkgwedge package
+(pkgsrc/pkgtools/xpkgwedge) - see section 7.1 for further details.
 
 Some packages look in /etc/mk.conf to alter some configuration options
-at build time. Have a look at /usr/pkgsrc/mk/mk.conf.example to get an
-overview of what you can set there. Environment variables such as
+at build time.  Have a look at /usr/pkgsrc/mk/mk.conf.example to get
+an overview of what you can set there.  Environment variables such as
 LOCALBASE, and X11BASE can also be set in /etc/mk.conf to save having
 to remember to set them each time you want to use pkgsrc.
 
@@ -910,10 +903,16 @@ When choosing which of these variables to use, follow the following rules:
    for _standard_ X11 includes (not those installed by a pkg), use ${X11BASE}.
 
  * X11 based pkgs are special in that they may be installed in either
-   X11BASE or LOCALBASE depending on a configuration option in /etc/mk.conf.  
+   X11BASE or LOCALBASE. To install X11 packages in LOCALBASE, simply
+   install the xpkgwedge package (pkgsrc/pkgtools/xpkgwedge).
    If you need to find includes or libraries installed by a pkg that has
    USE_IMAKE, USE_MOTIF, or USE_X11BASE in its pkg Makefile, you need to use
    _both_ ${X11BASE} and ${LOCALBASE}.
+
+ * ${X11BASE} points to the root of the installed X11 tree. To refer to the
+   installed location of an X11 package, use the ${X11PREFIX} definition (this
+   will be ${X11BASE} if xpkgwedge is not installed, and ${LOCALBASE} if
+   xpkgwedge is installed).
 
 
  7.2 Main targets
@@ -976,7 +975,7 @@ The main targets used during the build process defined in bsd.pkg.mk are:
 
    If the program uses an Imakefile for configuration, the appropriate
    steps can be invoked by setting USE_IMAKE to YES. (If you only want the
-   package installed in $X11BASE but xmkmf not being run, set USE_X11BASE
+   package installed in $X11PREFIX but xmkmf not being run, set USE_X11BASE
    instead!)
 
  * build:
