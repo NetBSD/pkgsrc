@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.5 1999/02/10 14:53:34 frueauf Exp $
+
 --- unarj.h.orig	Wed Jun 23 06:07:20 1993
 +++ unarj.h	Wed Jan 21 15:03:39 1998
 @@ -104,9 +104,13 @@
