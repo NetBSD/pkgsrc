@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1 2002/09/25 18:18:52 wiz Exp $
+
+--- os_dep.c.orig	Mon Sep  9 14:59:29 2002
++++ os_dep.c	Mon Sep  9 15:00:00 2002
+@@ -3165,7 +3165,6 @@
+ # endif
+ #endif
+ 
+-#include <execinfo.h>
+ #ifdef LINUX
+ #   include <unistd.h>
+ #endif

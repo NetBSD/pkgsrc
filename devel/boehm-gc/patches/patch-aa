@@ -1,19 +1,19 @@
-$NetBSD: patch-aa,v 1.11 2001/09/08 00:36:09 kei Exp $
+$NetBSD: patch-aa,v 1.12 2002/09/25 18:18:52 wiz Exp $
 
---- Makefile.orig	Fri Jul 27 03:47:41 2001
-+++ Makefile	Fri Sep  7 15:58:41 2001
-@@ -11,8 +11,8 @@
- # cord/de - builds dumb editor based on cords.
- ABI_FLAG= 
+--- Makefile.orig	Mon Sep  9 14:50:58 2002
++++ Makefile	Mon Sep  9 14:52:54 2002
+@@ -20,8 +20,8 @@
+ # executables.
+ 
  CC=cc $(ABI_FLAG)
 -CXX=g++ $(ABI_FLAG)
--AS=as $(ABI_FLAG)
+-AS=as $(AS_ABI_FLAG)
 +CXX=c++ $(ABI_FLAG)
 +AS=gcc -c -x assembler-with-cpp $(ABI_FLAG)
  #  The above doesn't work with gas, which doesn't run cpp.
  #  Define AS as `gcc -c -x assembler-with-cpp' instead.
- #  Under Irix 6, you will have to specify the ABI (-o32, -n32, or -64)
-@@ -296,16 +296,23 @@
+ 
+@@ -335,16 +335,23 @@
  
  all: gc.a gctest
  
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.11 2001/09/08 00:36:09 kei Exp $
  
  pcr: PCR-Makefile include/private/gc_private.h include/private/gc_hdrs.h \
  include/private/gc_locks.h include/gc.h include/private/gcconfig.h \
-@@ -381,7 +388,6 @@
+@@ -420,7 +427,6 @@
  	./if_mach M68K AMIGA $(AR) -vrus gc.a gc_cpp.o
  	./if_not_there dont_ar_4 $(AR) ru gc.a gc_cpp.o
  	./if_not_there dont_ar_4 $(RANLIB) gc.a || cat /dev/null
