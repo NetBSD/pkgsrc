@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/22 14:22:48 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/27 11:45:40 tv Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -33,6 +33,7 @@ CFLAGS=
 .endif
 
 RESTRICTED=	"Cryptographic software"
+MIRROR_DISTFILE=no
 PGPLIB=		${PREFIX}/lib/pgp
 CFLAGS+=	-DPGP_SYSTEM_DIR=\\\"${PGPLIB}/\\\"
 IS_INTERACTIVE=	yes
