@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2003/12/13 00:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/12/14 19:52:26 jmmv Exp $
 #
 
-DISTNAME=	libgtkhtml-2.2.1
-PKGREVISION=	5
-CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgtkhtml/2.2/}
+DISTNAME=	libgtkhtml-2.4.1
+CATEGORIES=	www devel gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgtkhtml/2.4/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -20,7 +19,7 @@ USE_LIBTOOL=		yes
 USE_X11=		yes
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-PKGCONFIG_OVERRIDE=	${WRKSRC}/libgtkhtml-2.0.pc.in
+PKGCONFIG_OVERRIDE=	libgtkhtml-2.0.pc.in
 
 .include "../../devel/gail/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
