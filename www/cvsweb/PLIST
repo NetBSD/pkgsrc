@@ -1,4 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:38 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/27 03:22:23 lukem Exp $
 libexec/cgi-bin/cvsweb.cgi
-share/examples/cvsweb/cvsweb.conf.default
+share/doc/cvsweb/ChangeLog
+share/doc/cvsweb/INSTALL
+share/doc/cvsweb/README
+share/doc/cvsweb/README.FreeBSD
+share/doc/cvsweb/TODO
+share/doc/cvsweb/TODO.FreeBSD
+share/examples/cvsweb/cvsweb.conf
+share/examples/cvsweb/cvsweb.conf-freebsd
+share/examples/cvsweb/cvsweb.conf-netbsd
+share/examples/cvsweb/cvsweb.conf-openbsd
+share/examples/cvsweb/cvsweb.conf-ruby
+share/examples/cvsweb/icons/back.gif
+share/examples/cvsweb/icons/dir.gif
+share/examples/cvsweb/icons/miniback.gif
+share/examples/cvsweb/icons/minidir.gif
+share/examples/cvsweb/icons/minitext.gif
+share/examples/cvsweb/icons/text.gif
+@dirrm share/examples/cvsweb/icons
 @dirrm share/examples/cvsweb
+@dirrm share/doc/cvsweb
