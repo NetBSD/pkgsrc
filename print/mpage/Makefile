@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:51:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/02/09 19:25:33 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/02/20 04:37:31 steve Exp
 
 DISTNAME=	mpage-2.5
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Print multiple pages per sheet of paper
 
-ALL_TARGET=	default
+USE_BUILDLINK_ONLY=	yes
+ALL_TARGET=		default
 
 .include "../../mk/bsd.pkg.mk"
