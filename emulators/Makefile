@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2005/03/04 12:06:22 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2005/03/30 00:33:10 xtraeme Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -46,6 +46,7 @@ SUBDIR+=	gpsim
 SUBDIR+=	gpsim-devel
 SUBDIR+=	gpsim-oscilloscope
 SUBDIR+=	gpsim-ptyusart
+SUBDIR+=        gxemul
 SUBDIR+=	hatari
 SUBDIR+=	hercules
 SUBDIR+=	hercules-images
@@ -56,7 +57,6 @@ SUBDIR+=	linuxppc_lib
 SUBDIR+=	lrmi
 SUBDIR+=	m1
 SUBDIR+=	minivmac
-SUBDIR+=	mips64emul
 SUBDIR+=	mmix
 SUBDIR+=	netbsd32_compat14
 SUBDIR+=	netbsd32_compat15
