@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2004/05/29 02:14:27 reed Exp $
+lib/xine/plugins/1.0.0/xineplug_ao_out_sun.a
+lib/xine/plugins/1.0.0/xineplug_ao_out_sun.so
+lib/xine/plugins/1.0.0/xineplug_vo_out_xv.a
+${XV_WORKAROUND}lib/xine/plugins/1.0.0/xineplug_vo_out_xv.so
