@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/09/04 19:24:55 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/12/05 10:15:23 adam Exp $
 #
 
-DISTNAME=	gnustep-back-0.8.5
-PKGREVISION=	2
+DISTNAME=	gnustep-back-0.9.0
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -17,9 +16,7 @@ MAKEFILE=		GNUmakefile
 GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${PREFIX}/share/GNUstep
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
-CPPFLAGS+=		-I${PREFIX}/share/GNUstep/System/Headers
-CPPFLAGS+=		-I${PREFIX}/share/GNUstep/System/Headers/gnustep
-LDFLAGS+=		${LIBOSSAUDIO}
+#LDFLAGS+=		${LIBOSSAUDIO}
 
 .include "../../graphics/libart2/buildlink2.mk"
 .include "../../x11/gnustep-gui/buildlink2.mk"
