@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8731 2005/01/13 09:59:47 adam Exp $
+$NetBSD: CHANGES,v 1.8732 2005/01/13 10:22:06 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -279,3 +279,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added mDNSResponder-62 [itojun 2005-01-13]
 	Updated abiword to 2.2.3 [adam 2005-01-13]
 	Updated ORBit to 0.5.17 [adam 2005-01-13]
+	Added hobbitmon-4.0beta2 [manu 2005-01-13]
