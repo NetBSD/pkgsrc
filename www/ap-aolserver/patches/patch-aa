@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/07/16 17:04:01 cjones Exp $
+$NetBSD: patch-aa,v 1.2 2001/08/21 17:26:08 cjones Exp $
 
 --- Makefile.in.orig	Sat Oct  7 12:44:37 2000
-+++ Makefile.in	Sun Jul 15 15:09:31 2001
++++ Makefile.in	Sat Aug 18 13:53:04 2001
+@@ -7,7 +7,7 @@
+ APACHE_BASE      = @APACHE_BASE@
+ APXS             = @APXS@
+ CC               = @CC@
+-CFLAGS           = -I. @CFLAGS@ -DORA8_DRIVER_VERSION=\"2.3\"
++CFLAGS           = -I. @CFLAGS@ -DORA8_DRIVER_VERSION=\"2.3\" -fPIC
+ CPPFLAGS         = -DDB_DRIVER_NAME=\"$(DBNAME)\" @CPPFLAGS@
+ DBNAME           = @DBNAME@
+ INSTALL          = @INSTALL@
 @@ -25,7 +25,7 @@
  
  BOOTSTRAP_MAIN_DIR  = $(APACHE_BASE)/libexec
