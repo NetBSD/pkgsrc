@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5585 2004/04/15 10:49:53 grant Exp $
+$NetBSD: CHANGES,v 1.5586 2004/04/15 11:12:04 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1959,4 +1959,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added sqlrelay-0.33.1 [grant 2004-04-15]
 	Updated gtk2 to 2.4.0nb1 [jmmv 2004-04-15]
 	Added gtk2-engines-bluecurve-1.0 [jmmv 2004-04-15]
-	Added p5-DBD-Oracle-1.14 [grant 2004-04-155]
+	Added p5-DBD-Oracle-1.14 [grant 2004-04-15]
+	Added yasql-1.81 [grant 2004-04-15]
