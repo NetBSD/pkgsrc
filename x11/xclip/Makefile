@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:28:28 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/17 03:15:20 snj Exp $
 #
 
 DISTNAME=	xclip-0.08
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://people.debian.org/~kims/xclip/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	snj@NetBSD.org
 HOMEPAGE=	http://people.debian.org/~kims/xclip/
 COMMENT=	Command line interface to the X windows clipboard
 
