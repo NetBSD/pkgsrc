@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2825 2005/01/04 11:29:17 wiz Exp $
+$NetBSD: TODO,v 1.2826 2005/01/04 12:59:19 markd Exp $
 
 Suggested new packages
 ======================
@@ -756,7 +756,6 @@ Suggested package updates
 	o ncmpc-0.11.0 [pkg/26237]
 	o ncview-1.92e
 	o nessus-2.2.2a
-	o netatalk-2.0.2
 	o netatalk1-1.6.4
 	o netcdf-3.6.0
 	o netio-123
