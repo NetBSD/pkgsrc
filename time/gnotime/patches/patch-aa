@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2004/11/24 22:35:25 kristerw Exp $
+$NetBSD: patch-aa,v 1.3 2004/11/27 10:48:03 jdolecek Exp $
 
 --- src/main.c.orig	Mon Apr 26 00:46:20 2004
 +++ src/main.c	Wed Nov 24 22:31:20 2004
-@@ -33,7 +33,7 @@
- #include <unistd.h>
- #include <utime.h>
- #if defined(HAVE_DECL_WNOHANG) && defined(HAVE_WAITPID)
--#include <wait.h>
-+#include <sys/wait.h>
- #endif
- 
- #include <qof.h>
 @@ -299,6 +299,7 @@
  	char * xml_filepath;
  	gboolean read_is_ok;
