@@ -1,3 +1,5 @@
+$NetBSD: patch-az,v 1.2 2000/02/05 15:58:30 wiz Exp $
+
 Index: vdt.c
 ===================================================================
 RCS file: /home/siren/src/tvtwm/vdt.c,v
