@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/01/09 01:28:34 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2000/08/18 20:37:28 hubertf Exp $
 #
 
 DISTNAME=		qpopper2.53
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		mellon@fugue.com
 HOMEPAGE=		http://eudora.qualcomm.com/freeware/qpop.html
-
-MIRROR_DISTFILE=	no
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec \
@@ -38,13 +36,10 @@ CONFIGURE_ENV+=		O_DEFS="${O_DEFS}" CFLAGS="-DINET6"
 # popper makefile doesn't have an install target...
 do-install:
 	(cd ${WRKSRC}; \
-	 ${INSTALL} -o ${BINOWN} -c -g ${BINGRP} -m ${BINMODE} popper \
-					${LOCALBASE}/libexec/qpopper; \
-	 ${INSTALL} -o root -c -g ${BINGRP} -m 4755 popauth \
-					${LOCALBASE}/bin/qpopauth; \
-	 ${INSTALL} -o ${MANOWN} -c -g ${MANGRP} -m ${MANMODE} popper.8 \
-					${LOCALBASE}/man/man8/qpopper.8; \
-	 ${INSTALL} -o ${MANOWN} -c -g ${MANGRP} -m ${MANMODE} popauth.8 \
-					${LOCALBASE}/man/man8/qpopauth.8 )
+	 ${INSTALL_PROGRAM} popper	${PREFIX}/libexec/qpopper; \
+	 ${INSTALL_MAN} popper.8	${PREFIX}/man/man8/qpopper.8; \
+	 ${INSTALL_MAN} popauth.8	${PREFIX}/man/man8/qpopauth.8 ; \
+	 ${INSTALL_MAN} License		${PREFIX}/share/doc/qpopper.License \
+	)
 
 .include "../../mk/bsd.pkg.mk"
