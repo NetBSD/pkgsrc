@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/01 14:56:31 taca Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/19 10:20:12 taca Exp $
 # $FreeBSD: ports/www/mod_ruby/Makefile,v 1.10 2000/12/31 10:14:53 knu Exp $
 
 DISTNAME=	mod_ruby-${VERSION}
@@ -16,7 +16,7 @@ DEPENDS+=	${RUBY_PKGNAMEPREFIX}eruby>=0.9:../../textproc/ruby-eruby
 DIST_SUBDIR=	ruby
 USE_RUBY=	yes
 RUBY_REQD=	1.6
-VERSION=	0.8.5
+VERSION=	0.9.5
 
 APXS=		${LOCALBASE}/sbin/apxs
 
@@ -26,8 +26,12 @@ CONFIGURE_ARGS=	--with-apxs="${APXS}" \
 		--with-eruby-includes="${LOCALBASE}/include" \
 		--with-eruby-libraries="${LOCALBASE}/lib"
 
-DOCS_EN=	ChangeLog README.en
-DOCS_JA=	README.ja
+CONF_FILES=	${RUBY_EXAMPLESDIR}/mod_ruby/mod_ruby.conf \
+		${LOCALBASE}/etc/httpd/mod_ruby.conf
+FILES_SUBST+=	RUBY_DOCDIR=${RUBY_DOCDIR}
+FILES_SUBST+=	RUBY_EXAMPLESDIR=${RUBY_EXAMPLESDIR}
+
+DOCS=		ChangeLog README.en README.ja
 
 post-build:
 	${SED} -e 's|/usr/local/apache/libexec|${LOCALBASE}/lib/httpd|g' \
@@ -35,14 +39,13 @@ post-build:
 
 do-install:
 	${APXS} -i -A -n ruby ${WRKSRC}/mod_ruby.so
-	${INSTALL_DATA} ${WRKDIR}/mod_ruby.conf ${LOCALBASE}/etc/httpd
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/mod_ruby/ja
-.for f in ${DOCS_EN}
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/mod_ruby
+	${INSTALL_DATA} ${WRKDIR}/mod_ruby.conf  ${RUBY_EXAMPLESDIR}/mod_ruby
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/mod_ruby
+.for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/mod_ruby
-.endfor
-.for f in ${DOCS_JA}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/mod_ruby/ja
 .endfor
 
 .include "../../lang/ruby-base/Makefile.common"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:15:57 zuntum Exp $
-etc/httpd/mod_ruby.conf
+@comment $NetBSD: PLIST,v 1.2 2002/01/19 10:20:12 taca Exp $
 lib/httpd/mod_ruby.so
 @exec %D/sbin/apxs -e -A -n ruby %D/%F
 @unexec %D/sbin/apxs -e -A -n ruby %D/%F
 ${RUBY_DOCDIR}/mod_ruby/ChangeLog
 ${RUBY_DOCDIR}/mod_ruby/README.en
-${RUBY_DOCDIR}/mod_ruby/ja/README.ja
-@dirrm ${RUBY_DOCDIR}/mod_ruby/ja
+${RUBY_DOCDIR}/mod_ruby/README.ja
 @dirrm ${RUBY_DOCDIR}/mod_ruby
+${RUBY_EXAMPLESDIR}/mod_ruby/mod_ruby.conf
+@dirrm ${RUBY_EXAMPLESDIR}/mod_ruby
