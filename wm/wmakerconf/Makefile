@@ -1,27 +1,24 @@
-# $NetBSD: Makefile,v 1.3 2001/06/11 06:34:53 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/08/03 17:49:40 wiz Exp $
 #
 
-DISTNAME=	wmakerconf-2.7
+DISTNAME=	wmakerconf-2.8.1
 CATEGORIES=	x11 wm
-MASTER_SITES=	http://ulli.linuxave.net/wmakerconf/
+MASTER_SITES=	http://ulli.on.openave.net/wmakerconf/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wiz@netbsd.org
-HOMEPAGE=	http://ulli.linuxave.net/wmakerconf/
+HOMEPAGE=	http://ulli.on.openave.net/wmakerconf/
 COMMENT=	Gtk+ based configuration tool for Window Maker
 
-DEPENDS+=	imlib-*:../../graphics/imlib
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-DEPENDS+=	windowmaker-*:../../wm/windowmaker
+USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK_X11=	yes
+USE_X11BASE=		yes
+USE_PERL5=		yes
+#USE_LIBINTL=		yes
+GNU_CONFIGURE=		yes
 
-USE_X11BASE=	yes
-USE_PERL5=	yes
-USE_LIBINTL=	yes
-
-GNU_CONFIGURE=	yes
-
-# for libProplist
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
-
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../graphics/imlib/buildlink.mk"
+.include "../../wm/windowmaker/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
