@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:35 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/02/17 01:45:31 jtb Exp $
 
-DISTNAME=		nullmailer-1.00RC5
+DISTNAME=		nullmailer-1.00RC7
 CATEGORIES=		mail
 MASTER_SITES=		http://untroubled.org/nullmailer/
 
@@ -8,9 +8,10 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://untroubled.org/nullmailer/
 COMMENT=		Simple relay-only mail transport agent
 
-USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+= 	--sysconfdir=${PKG_SYSCONFDIR} --localstatedir=/var
+CONFIGURE_ARGS+= 	--sysconfdir=${PKG_SYSCONFDIR} --localstatedir=/var/spool
+CONFIGURE_ARGS+=	--bindir=${PREFIX}/libexec/nullmailer
+CONFIGURE_ARGS+=	--sbindir=${PREFIX}/libexec/nullmailer
 
 INSTALL_TARGET=		install install-data-local install-root
 
@@ -24,8 +25,7 @@ PKG_USERS?=		${NULLMAILER_USER}:${NULLMAILER_GROUP}
 MAKE_ENV+=		NULLMAILER_GROUP=${NULLMAILER_GROUP}
 MAKE_ENV+=		NULLMAILER_USER=${NULLMAILER_USER}
 
-PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}		\
-			NULLMAILER_GROUP=${NULLMAILER_GROUP}		\
+PLIST_SUBST+=		NULLMAILER_GROUP=${NULLMAILER_GROUP}		\
 			NULLMAILER_USER=${NULLMAILER_USER}
 
 pre-configure:
@@ -39,5 +39,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nullmailer
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS BUGS COPYING ChangeLog	\
 		HOWTO NEWS README TODO ${PREFIX}/share/doc/nullmailer
+	${INSTALL_DATA} ${FILESDIR}/nullmailer ${PKG_SYSCONFDIR}/rc.d
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
