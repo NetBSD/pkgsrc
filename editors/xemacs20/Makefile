@@ -3,7 +3,7 @@
 # Date created:				26 August 1997
 # Whom:					Michael Elbel (me)
 #
-# $NetBSD: Makefile,v 1.4 1997/12/13 19:02:24 agc Exp $
+# $NetBSD: Makefile,v 1.5 1997/12/22 07:45:41 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -37,7 +37,7 @@ MAINTAINER=	agc@netbsd.org
 WITH_SOUND=	
 .endif
 
-CONFIGURE_ARGS=	${ARCH}--`echo ${OPSYS}|tr [A-Z] [a-z]` --prefix=${PREFIX} \
+CONFIGURE_ARGS+=	${ARCH}--`echo ${OPSYS}|tr [A-Z] [a-z]` --prefix=${PREFIX} \
 		--site-includes=${PREFIX}/include \
 		${WITH_SOUND} \
 		--site-libraries=${PREFIX}/lib \

@@ -13,7 +13,7 @@ MAINTAINER=	lamj@stat.cmu.edu
 GNU_CONFIGURE=	yes
 
 .if exists(/usr/lib/libkrb.a)
-CONFIGURE_ARGS=	--with-krb4=/usr --enable-encryption
+CONFIGURE_ARGS+=	--with-krb4=/usr --enable-encryption
 .endif
 
 MAN1=		cvs.1

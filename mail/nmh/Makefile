@@ -3,7 +3,7 @@
 # Date created:				26 July 1997
 # Whom:					Scott Blachowicz <Scott.Blachowicz@seaslug.org>
 #
-# $NetBSD: Makefile,v 1.3 1997/12/19 13:43:28 agc Exp $
+# $NetBSD: Makefile,v 1.4 1997/12/22 07:45:45 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -14,7 +14,7 @@ MASTER_SITES=   ftp://ftp.math.gatech.edu/pub/nmh/
 MAINTAINER=     Scott.Blachowicz@seaslug.org
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS= --libexecdir=$(PREFIX)/libexec/nmh \
+CONFIGURE_ARGS+= --libexecdir=$(PREFIX)/libexec/nmh \
 		--sysconfdir=$(PREFIX)/etc/nmh --enable-nmh-pop
 
 MAN1= ali.1 anno.1 burst.1 comp.1 dist.1 flist.1 folder.1 forw.1 inc.1 \
