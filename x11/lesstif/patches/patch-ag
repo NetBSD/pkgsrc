@@ -1,19 +1,19 @@
-$NetBSD: patch-ag,v 1.12 2000/12/22 17:26:19 jlam Exp $
+$NetBSD: patch-ag,v 1.13 2001/06/30 19:08:23 jlam Exp $
 
---- clients/Motif-2.0/uil/Makefile.am.orig	Thu Dec  7 04:12:29 2000
+--- clients/Motif-2.0/uil/Makefile.am.orig	Tue May  1 08:37:20 2001
 +++ clients/Motif-2.0/uil/Makefile.am
 @@ -5,9 +5,13 @@
  if Version_2_0
  bin_PROGRAMS=	uil
  noinst_PROGRAMS   = newuil
--endif
- 
 +if DefaultVersion20
-+bindir = $(prefix)/bin
++bindir = $(exec_prefix)/bin
 +else
- bindir = $(prefix)/LessTif/Motif2.0/bin
++bindir = $(exec_prefix)/LessTif/Motif2.0/bin
 +endif
-+endif
+ endif
+ 
+-bindir = $(exec_prefix)/LessTif/Motif2.0/bin
  
  MAINTAINERCLEANFILES=Makefile.in lex.c yacc.c yacc.h
  
@@ -24,6 +24,6 @@ $NetBSD: patch-ag,v 1.12 2000/12/22 17:26:19 jlam Exp $
 -
 -install-data-hook:
 -if DefaultVersion20
--	-rm -f $(DESTDIR)$(prefix)/bin/$(bin_PROGRAMS)
--	(cd $(DESTDIR)$(prefix)/bin && $(LN_S) ../LessTif/Motif2.0/bin/$(bin_PROGRAMS) .)
+-	-rm -f $(DESTDIR)$(exec_prefix)/bin/$(bin_PROGRAMS)
+-	(cd $(DESTDIR)$(exec_prefix)/bin && $(LN_S) ../LessTif/Motif2.0/bin/$(bin_PROGRAMS) .)
 -endif
