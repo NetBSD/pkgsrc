@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/31 07:30:30 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/02/01 04:44:51 jtb Exp $
 bin/${PKGNAME}
-bin/rlab2
-man/man1/rlab2.1
+bin/rlab
+man/man1/rlab.1
 share/doc/html/rlab/ls.gif
 share/doc/html/rlab/rlab-ref-1.html
 share/doc/html/rlab/rlab-ref-2.html
@@ -275,9 +275,6 @@ share/rlab/help/any
 share/rlab/help/asin
 share/rlab/help/atan
 share/rlab/help/atan2
-share/rlab/help/autoscale
-share/rlab/help/autotics
-share/rlab/help/axis
 share/rlab/help/backsub
 share/rlab/help/balance
 share/rlab/help/ceil
@@ -287,19 +284,15 @@ share/rlab/help/clear
 share/rlab/help/close
 share/rlab/help/conditions
 share/rlab/help/conj
-share/rlab/help/cont
-share/rlab/help/copyplot
 share/rlab/help/cos
 share/rlab/help/cumprod
 share/rlab/help/cumsum
-share/rlab/help/defplotwin
 share/rlab/help/det
 share/rlab/help/diag
 share/rlab/help/diary
 share/rlab/help/dlopen
 share/rlab/help/eig
 share/rlab/help/entinfo
-share/rlab/help/epsplot
 share/rlab/help/error
 share/rlab/help/eval
 share/rlab/help/exist
@@ -319,11 +312,8 @@ share/rlab/help/full
 share/rlab/help/fwrite
 share/rlab/help/getenv
 share/rlab/help/getline
-share/rlab/help/gnuplot
-share/rlab/help/grid
 share/rlab/help/help
 share/rlab/help/hess
-share/rlab/help/hist
 share/rlab/help/ifft
 share/rlab/help/imag
 share/rlab/help/inf
@@ -331,19 +321,12 @@ share/rlab/help/int
 share/rlab/help/isinf
 share/rlab/help/isnan
 share/rlab/help/issymm
-share/rlab/help/key
-share/rlab/help/label
-share/rlab/help/latexplot
 share/rlab/help/ldexp
 share/rlab/help/length
-share/rlab/help/linenumbers
-share/rlab/help/linestyle
 share/rlab/help/load
 share/rlab/help/log
 share/rlab/help/log10
 share/rlab/help/logb
-share/rlab/help/loglog
-share/rlab/help/loglog2
 share/rlab/help/max
 share/rlab/help/maxi
 share/rlab/help/members
@@ -351,80 +334,26 @@ share/rlab/help/min
 share/rlab/help/mini
 share/rlab/help/mnorm
 share/rlab/help/mod
-share/rlab/help/multiplot
-share/rlab/help/mx2tics
-share/rlab/help/mxtics
-share/rlab/help/my2tics
-share/rlab/help/mytics
-share/rlab/help/mztics
 share/rlab/help/nan
 share/rlab/help/nlleastsq
-share/rlab/help/noautoscale
-share/rlab/help/noaxis
-share/rlab/help/nogrid
-share/rlab/help/nokey
-share/rlab/help/nolabel
-share/rlab/help/nolog
-share/rlab/help/nolog2
-share/rlab/help/nomultiplot
-share/rlab/help/nomx2tics
-share/rlab/help/nomxtics
-share/rlab/help/nomy2tics
-share/rlab/help/nomytics
-share/rlab/help/nomztics
-share/rlab/help/notime
-share/rlab/help/notitle
-share/rlab/help/nox2tics
-share/rlab/help/noxtics
-share/rlab/help/noy2tics
-share/rlab/help/noytics
-share/rlab/help/noztics
 share/rlab/help/ode
 share/rlab/help/ones
 share/rlab/help/open
-share/rlab/help/origin
-share/rlab/help/pclose
-share/rlab/help/pcloseall
-share/rlab/help/pend
-share/rlab/help/pformat
-share/rlab/help/phelp
-share/rlab/help/plot
-share/rlab/help/plot2
-share/rlab/help/pobj_list
-share/rlab/help/pointsize
 share/rlab/help/printf
-share/rlab/help/printplot
 share/rlab/help/prod
-share/rlab/help/psave
-share/rlab/help/psize
-share/rlab/help/psplot
-share/rlab/help/pssave
-share/rlab/help/pstring
 share/rlab/help/putenv
-share/rlab/help/pview
 share/rlab/help/qr
 share/rlab/help/quit
 share/rlab/help/rand
-share/rlab/help/range
-share/rlab/help/range2
 share/rlab/help/rcond
 share/rlab/help/read
 share/rlab/help/readm
 share/rlab/help/real
-share/rlab/help/replot
-share/rlab/help/replot2
 share/rlab/help/require
 share/rlab/help/reshape
 share/rlab/help/rfile
 share/rlab/help/round
 share/rlab/help/schur
-share/rlab/help/semilogx
-share/rlab/help/semilogx2
-share/rlab/help/semilogy
-share/rlab/help/semilogy2
-share/rlab/help/setterm
-share/rlab/help/showplot
-share/rlab/help/showpwin
 share/rlab/help/sign
 share/rlab/help/sin
 share/rlab/help/size
@@ -435,7 +364,6 @@ share/rlab/help/sort
 share/rlab/help/sparse
 share/rlab/help/spconvert
 share/rlab/help/spfactor
-share/rlab/help/splot
 share/rlab/help/sprintf
 share/rlab/help/spsolve
 share/rlab/help/spwrite
@@ -450,8 +378,6 @@ share/rlab/help/sylv
 share/rlab/help/system
 share/rlab/help/tan
 share/rlab/help/tic
-share/rlab/help/time
-share/rlab/help/title
 share/rlab/help/tmpnam
 share/rlab/help/toc
 share/rlab/help/type
@@ -459,22 +385,7 @@ share/rlab/help/vpnorm
 share/rlab/help/warranty
 share/rlab/help/write
 share/rlab/help/writem
-share/rlab/help/x2label
-share/rlab/help/x2range
-share/rlab/help/x2tics
-share/rlab/help/xlabel
-share/rlab/help/xrange
-share/rlab/help/xtics
-share/rlab/help/y2label
-share/rlab/help/y2range
-share/rlab/help/y2tics
-share/rlab/help/ylabel
-share/rlab/help/yrange
-share/rlab/help/ytics
 share/rlab/help/zeros
-share/rlab/help/zlabel
-share/rlab/help/zrange
-share/rlab/help/ztics
 share/rlab/rlib/clearall.r
 share/rlab/rlib/compan.r
 share/rlab/rlib/complement.r
@@ -484,7 +395,6 @@ share/rlab/rlib/disp.r
 share/rlab/rlib/dot.r
 share/rlab/rlib/eye.r
 share/rlab/rlib/fix.r
-share/rlab/rlib/gp-compat.r
 share/rlab/rlib/input.r
 share/rlab/rlib/intersection.r
 share/rlab/rlib/inv.r
@@ -497,7 +407,6 @@ share/rlab/rlib/lyap.r
 share/rlab/rlib/norm.r
 share/rlab/rlib/num2str.r
 share/rlab/rlib/pause.r
-share/rlab/rlib/plot.r
 share/rlab/rlib/poly.r
 share/rlab/rlib/rem.r
 share/rlab/rlib/save.r
@@ -580,11 +489,3 @@ share/rlab/toolbox/trapz.r
 share/rlab/toolbox/window.r
 share/rlab/toolbox/writeltx.r
 share/rlab/toolbox/zodiac.r
-@dirrm share/rlab/toolbox
-@dirrm share/rlab/rlib
-@dirrm share/rlab/help
-@dirrm share/rlab/examples
-@dirrm share/rlab/controls-toolbox
-@dirrm share/doc/html/rlab
-@dirrm share/doc/rlab
-@dirrm share/rlab
