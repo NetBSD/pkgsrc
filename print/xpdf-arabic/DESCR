@@ -1,0 +1,5 @@
+This package provides support files needed to use the Xpdf tools with
+Arabic PDF files.
+
+Contents:
+- ISO-8859-6 encoding
