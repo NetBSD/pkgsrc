@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/24 21:30:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/24 23:04:31 jmmv Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -7,8 +7,12 @@ SUBDIR+=	XFree86
 SUBDIR+=	edesktop
 SUBDIR+=	fxtv-capture
 SUBDIR+=	gnome
+SUBDIR+=	gnome-accessibility
+SUBDIR+=	gnome-base
+SUBDIR+=	gnome-extras
 SUBDIR+=	gnome1
 SUBDIR+=	gnustep
+SUBDIR+=	gtk2-extras
 SUBDIR+=	kde3
 SUBDIR+=	netbsd-doc
 SUBDIR+=	netbsd-doc-print
