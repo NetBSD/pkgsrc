@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/10/05 12:18:57 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/10/05 14:16:37 wiz Exp $
 #
 # This Makefile fragment is included by packages that use windowmaker.
 #
@@ -35,9 +35,9 @@ BUILDLINK_FILES.windowmaker+=	lib/libwraster.*
 .include "../../graphics/hermes/buildlink.mk"
 .include "../../graphics/libungif/buildlink.mk"
 .include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk" 
+.include "../../graphics/png/buildlink.mk"
 .include "../../graphics/tiff/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk" 
+.include "../../graphics/xpm/buildlink.mk"
 
 BUILDLINK_TARGETS.windowmaker=	windowmaker-buildlink
 BUILDLINK_TARGETS.windowmaker+=	wm-wings-buildlink-config-wrapper
