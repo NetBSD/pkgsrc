@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2004/11/10 09:11:06 markd Exp $
+# $NetBSD: Makefile,v 1.26.2.1 2004/12/30 12:21:40 salo Exp $
 
-DISTNAME=	opera-${OPERA_PKG_VERSION}
+DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 PKGREVISION=	# empty
 CATEGORIES=	www
 MASTER_SITES=	http://www.panix.com/opera/files/${OPERA_DIR}/ \
@@ -30,8 +30,8 @@ USE_LANGUAGES=          # empty
 .include "../../mk/bsd.prefs.mk"
 
 OPERA_LANG=		en
-OPERA_VER_DATE=		20040803
-OPERA_PKG_VERSION=	7.54
+OPERA_VER_DATE=		20041210
+OPERA_PKG_VERSION=	7.54u1
 
 .if (${OPSYS} == NetBSD)
 DEPENDS+=	suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
@@ -44,26 +44,26 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 EXTRACT_SUFX=		.rpm
 OPERA_ARCH=		.i386
 OPERA_DIR=		linux/${OPERA_PKG_VERSION:S/.//g:C/beta.*//}/final/${OPERA_LANG}/${OPERA_ARCH:S/.//}/static
-OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//}-${OPERA_VER_DATE}.1-static-qt
+OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
 RPMFILES=	${DISTFILES}
 RPM2PKGSTRIP=	0
 
 .elif (${OPSYS} == FreeBSD)
-EXTRACT_SUFX=		.tar.gz
+EXTRACT_SUFX=		.tar.bz2
 OPERA_ARCH=		.i386.freebsd
 OPERA_DIR=		unix/freebsd/${OPERA_PKG_VERSION:S/.//g:}/final/${OPERA_LANG}/static
-OPERA_DIST_VERSION=	${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1-static-qt
+OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
 WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
 
 OWN_DIRS=		${PREFIX}/share/opera/plugins
 
 .elif (${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)
-EXTRACT_SUFX=		.tar.gz
+EXTRACT_SUFX=		.tar.bz2
 OPERA_ARCH=		-sol8-sparc-local
 OPERA_DIR=		unix/solaris/${OPERA_PKG_VERSION:S/.//g}/final/${OPERA_LANG}/static
-OPERA_DIST_VERSION=	${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1-static-qt
+OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
 WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
 
