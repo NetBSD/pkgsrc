@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2000/02/25 01:04:15 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2000/03/24 18:31:02 jlam Exp $
 # FreeBSD Id: Makefile,v 1.52 1997/12/14 00:58:08 asami Exp
 #
 
@@ -10,6 +10,7 @@
     SUBDIR += enscript
     SUBDIR += ggv
     SUBDIR += ghostscript5
+    SUBDIR += ghostscript5-x11
     SUBDIR += gnome-print
     SUBDIR += gv
     SUBDIR += lgrind
