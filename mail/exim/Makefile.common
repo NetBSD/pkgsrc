@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/06/04 17:19:56 reed Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/06/04 23:21:34 reed Exp $
 
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -41,19 +41,19 @@ CFLAGS+=		${_STRIPFLAG_CC}
 .if defined(EXIM_DB) && ${EXIM_DB} == "gdbm"
 .  include "../../databases/gdbm/buildlink3.mk"
 EXIM_USE_DB_CONFIG=	USE_GDBM=yes
-EXIM_DBMLIB=		DBMLIB=-lgdbm
+EXIM_DBMLIB=		DBMLIB=-Wl,${RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.gdbm} -lgdbm
 EXIM_INCLUDE=		-I${PREFIX}/include
 .else # use native or Berkeley DB as defined by BDB_DEFAULT and BDB_ACCEPTED
 .  include "../../mk/bdb.buildlink3.mk"
 EXIM_USE_DB_CONFIG=	USE_DB=yes	# the default
 .  if ${BDB_TYPE} == "db4"
-EXIM_DBMLIB=		DBMLIB=-ldb4
+EXIM_DBMLIB=		DBMLIB=-Wl,${RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db4} -ldb4
 EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db4}
 .  elif ${BDB_TYPE} == "db3"
-EXIM_DBMLIB=		DBMLIB=-ldb3
+EXIM_DBMLIB=		DBMLIB=-Wl,${RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db3} -ldb3
 EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db3}
 .  elif ${BDB_TYPE} == "db2"
-EXIM_DBMLIB=		DBMLIB=-ldb2
+EXIM_DBMLIB=		DBMLIB=-Wl,${RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.db2} -ldb2
 EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db2}
 .  else # using native
 EXIM_DBMLIB=		# empty so use defaults
