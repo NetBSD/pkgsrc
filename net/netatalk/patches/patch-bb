@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1 1999/02/23 00:31:40 wrstuden Exp $
+
+--- libatalk/nbp/nbp_util.c.orig	Tue Oct  7 17:21:38 1997
++++ libatalk/nbp/nbp_util.c	Thu Feb 18 20:19:50 1999
+@@ -6,7 +6,7 @@
+ #include <sys/types.h>
+ #include <sys/param.h>
+ #include <sys/socket.h>
+-#include <sys/signal.h>
++#include <signal.h>
+ #include <sys/time.h>
+ #include <sys/syslog.h>
+ #include <netdb.h>
