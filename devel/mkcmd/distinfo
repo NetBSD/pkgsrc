@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/10 00:46:04 epg Exp $
+
+SHA1 (mkcmd-8.14.tgz) = 33342afc845db84a040f116202b880d37b9f626f
+Size (mkcmd-8.14.tgz) = 295120 bytes
+SHA1 (patch-aa) = f9d297a7d3cf807163a53ba9d69d81e9dd83cd72
+SHA1 (patch-ab) = 72c1a8800491c967f402a1fa9038bab7a5cd3b11

@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/10 00:46:04 epg Exp $
+
+--- bin/mkcmd/main.c.orig	2000-07-30 17:56:23.000000000 -0400
++++ bin/mkcmd/main.c
+@@ -36,9 +36,7 @@ static char rcsid[] =
+  * do the hard work.  mkcmd rembers how it was built and builds all
+  * subsequent parsers that way...
+  */
+-#if !defined(MSDOS)
+-extern int errno;
+-#endif
++#include <errno.h>
+ 
+ 
+ #if USE_STRINGS

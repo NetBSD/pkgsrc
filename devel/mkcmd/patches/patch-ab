@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/11/10 00:46:04 epg Exp $
+
+--- bin/mkcmd/parser.c.orig	2000-07-30 17:56:23.000000000 -0400
++++ bin/mkcmd/parser.c
+@@ -6,6 +6,7 @@
+ #include <ctype.h>
+ #include <sys/param.h>
+ #include <sys/stat.h>
++#include <errno.h>
+ 
+ #include "machine.h"
+ #include "type.h"
