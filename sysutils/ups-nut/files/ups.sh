@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: ups.sh,v 1.5 2001/11/22 00:55:51 lukem Exp $
+# $NetBSD: ups.sh,v 1.6 2002/01/10 12:01:38 jlam Exp $
 #
 # KEYWORD: nostart
 
@@ -9,12 +9,14 @@ then
 	. /etc/rc.subr
 fi
 
+rcd_dir=`@DIRNAME@ $0`
+
 # NOTE: run_rc_command sets $_arg
 #
 forward_commands()
 {
 	for file in $COMMAND_LIST; do
-		@RCD_SCRIPTS_DIR@/$file $_arg
+		$rcd_dir/$file $_arg
 	done
 }
 
@@ -25,7 +27,7 @@ reverse_commands()
 		REVCOMMAND_LIST="$file $REVCOMMAND_LIST"
 	done
 	for file in $REVCOMMAND_LIST; do
-		@RCD_SCRIPTS_DIR@/$file $_arg
+		$rcd_dir/$file $_arg
 	done
 }
 
