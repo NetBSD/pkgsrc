@@ -1,0 +1,12 @@
+   Users can browse the World Wide Web from within Emacs by using
+Emacs/W3.  All of the widely used (and even some not very widely used)
+URL schemes are supported, and it is very easy to add new methods as the
+need arises.
+
+   Emacs/W3 provides some core functionality that can be readily re-used
+from any program in Emacs.  Users and other package writers are
+encouraged to Web-enable their applications and daily work routines
+with the library.
+
+   Emacs/W3 is completely customizable, both from Emacs-Lisp and from
+stylesheets.
