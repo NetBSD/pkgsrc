@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.1 1999/05/22 19:54:09 tv Exp $
+$NetBSD: patch-ab,v 1.2 2002/06/10 15:09:17 schmonz Exp $
 
 --- arcdos.c.orig	Tue Apr 14 18:58:21 1992
-+++ arcdos.c	Sat May 22 15:43:27 1999
-@@ -173,14 +173,20 @@
++++ arcdos.c	Sun Jun  9 12:01:30 2002
+@@ -173,14 +173,21 @@
  	struct tm	tm;
  	struct timeval  tvp[2];
  	int	utimes();
-+#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__)
++#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__APPLE__)
  	long	tmclock();
 +#endif
  	tm.tm_sec = (time & 31) * 2;
@@ -15,10 +15,11 @@ $NetBSD: patch-ab,v 1.1 1999/05/22 19:54:09 tv Exp $
  	tm.tm_mday = date & 31;
  	tm.tm_mon = ((date >> 5) & 15) - 1;
  	tm.tm_year = (date >> 9) + 80;
-+#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__)
++	tm.tm_isdst = -1;
++#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__APPLE__)
  	tvp[0].tv_sec = tmclock(&tm);
 +#else
-+	tvp[0].tv_sec = timelocal(&tm);
++	tvp[0].tv_sec = mktime(&tm);
 +#endif
  	tvp[1].tv_sec = tvp[0].tv_sec;
  	tvp[0].tv_usec = tvp[1].tv_usec = 0;
