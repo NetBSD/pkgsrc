@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2004/11/23 08:50:23 adam Exp $
+$NetBSD: distinfo,v 1.12 2005/02/23 20:39:50 agc Exp $
 
 SHA1 (nas-1.7.src.tar.gz) = a41adef84d0bf4c8e02b14d77bec0d284e7c9317
+RMD160 (nas-1.7.src.tar.gz) = 227ddc4f5f9d264c97066dc461bad138776d1dfd
 Size (nas-1.7.src.tar.gz) = 1288569 bytes
 SHA1 (patch-ab) = 777e5d1e9beaa1a4837a70e7dbc522eb1cb78f9c
 SHA1 (patch-ac) = 36f8ee0ec494e9d6a7994780c608c7a5fbf2114d

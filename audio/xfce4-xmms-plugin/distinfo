@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/03 06:38:40 martti Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 20:39:53 agc Exp $
 
 SHA1 (xfce4-xmms-plugin-0.1.1.tar.bz2) = 9603f40133979ee186dd58cfd8453b3fa0a1f0ab
+RMD160 (xfce4-xmms-plugin-0.1.1.tar.bz2) = 980a746320bbe7330c4cffe3bc553473175808c9
 Size (xfce4-xmms-plugin-0.1.1.tar.bz2) = 145414 bytes

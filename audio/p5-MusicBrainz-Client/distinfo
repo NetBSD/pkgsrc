@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/08/29 21:54:27 epg Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 20:39:50 agc Exp $
 
 SHA1 (MusicBrainz-Client-0.08.tar.gz) = 59f39d6414325682c9f22c4a500fcaaef1fcc243
+RMD160 (MusicBrainz-Client-0.08.tar.gz) = 6b7ab686691036a09c81a03844a5d28a47a2889b
 Size (MusicBrainz-Client-0.08.tar.gz) = 22983 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2004/12/28 23:02:10 minskim Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 20:39:44 agc Exp $
 
 SHA1 (faac-1.24.tar.gz) = fd79715a800f8b39470d5b312f5d843a2629dd49
+RMD160 (faac-1.24.tar.gz) = 7dbd8eec4f26875ea641b3319d8b970e68d88a60
 Size (faac-1.24.tar.gz) = 282585 bytes
 SHA1 (patch-aa) = 5ee567d2da600498f7e7685fc8a1eced60d2a6e5

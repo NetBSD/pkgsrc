@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2004/11/16 12:05:54 sketch Exp $
+$NetBSD: distinfo,v 1.9 2005/02/23 20:39:45 agc Exp $
 
 SHA1 (flac-1.1.1.tar.gz) = 97832e5acad2f20867aafc30f219e47d26b853ac
+RMD160 (flac-1.1.1.tar.gz) = 2bf336514bf76d7d12279a896deb919a4194b36c
 Size (flac-1.1.1.tar.gz) = 1467204 bytes
 SHA1 (patch-aa) = 8389e42e3a90877af795d8e401c438de98ddcc8f
 SHA1 (patch-ab) = abf4df5033956d9c4214064660f82a82619cb3fd

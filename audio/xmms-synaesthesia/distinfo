@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/02/14 23:56:39 hubertf Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 20:39:56 agc Exp $
 
 SHA1 (synaesthesia-xmms-0.0.3-rc3.tar.gz) = 7c60a4ac9cc069e0f1fecf97d34b4f48a7b77c5c
+RMD160 (synaesthesia-xmms-0.0.3-rc3.tar.gz) = 89150fd577e7639fb9878ce6d11ffdf50f1bdebb
 Size (synaesthesia-xmms-0.0.3-rc3.tar.gz) = 152116 bytes

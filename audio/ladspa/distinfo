@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/12 13:57:49 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 20:39:47 agc Exp $
 
 SHA1 (ladspa_sdk_1.12.tgz) = 36a3a7a00f96281ca443dcae15d33f462398c4d4
+RMD160 (ladspa_sdk_1.12.tgz) = 7967731c28785287691655d9346cf46654f4235b
 Size (ladspa_sdk_1.12.tgz) = 71165 bytes
 SHA1 (patch-aa) = 0937e9193ad19a20ec4dd746481db257eeae1d9b
 SHA1 (patch-ab) = 683f59749afb63ade931529eecfd8125634d3964
