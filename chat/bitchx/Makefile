@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/15 23:16:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/16 14:02:48 wiz Exp $
 
 DISTNAME=	ircii-pana-1.0c17
-PKGNAME=	bitchx-1.0.3.17
+PKGNAME=	bitchx-1.0.3.17nb1
 WRKSRC=		${WRKDIR}/BitchX
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.bitchx.org/pub/BitchX/source/
@@ -18,6 +18,13 @@ CONFIGURE_ARGS+=	--with-termcap	# forcibly refuse to use ncurses
 post-extract:
 	-${FIND} ${WRKDIR}/BitchX/bitchx-docs -type d -name CVS \
 		-exec ${RM} -r {} \; 2> /dev/null
+
+# The WANT_NOTIFY_BITCHX_COM message after configure is misleading, we
+# disable this by default.
+post-configure:
+	@${ECHO}
+	@${ECHO} ===== WANT_NOTIFY_BITCHX_COM is disabled by default =====
+	@${ECHO}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/BitchX.1 ${PREFIX}/man/man1
