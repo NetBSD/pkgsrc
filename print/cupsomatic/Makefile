@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/08 16:57:23 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/12 11:14:49 drochner Exp $
 
 DISTNAME=	all-com-ppds
-PKGNAME=	cupsomatic-20001208
+PKGNAME=	cupsomatic-20001211
 CATEGORIES=	print
 MASTER_SITES=	http://www.linuxprinting.org/
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.linuxprinting.org/cups-doc.html
+
+DIST_SUBDIR=	${PKGNAME}
 
 DEPENDS+=	cups>=1.1.1:../../print/cups
 DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
