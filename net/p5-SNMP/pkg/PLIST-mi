@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST-mi,v 1.1 1998/05/24 12:33:47 hubertf Exp $
+@comment $NetBSD: PLIST-mi,v 1.2 1999/04/08 18:51:57 agc Exp $
 lib/perl5/site_perl/auto/SNMP/autosplit.ix
 lib/perl5/site_perl/SNMP.pm
 lib/perl5/site_perl/README.SNMP
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/SNMP/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/SNMP/.packlist
 @dirrm lib/perl5/site_perl/auto/SNMP

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/01/11 22:35:14 kim Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/04/08 18:52:00 agc Exp $
 bin/GET
 bin/HEAD
 bin/POST
@@ -143,8 +143,8 @@ man/man1/lwp-download.1.gz
 man/man1/lwp-mirror.1.gz
 man/man1/lwp-request.1.gz
 man/man1/lwp-rget.1.gz
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/libwww-perl/.packlist
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/libwww-perl
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/libwww-perl/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/libwww-perl
 @dirrm lib/perl5/site_perl/auto/URI/URL/http
 @dirrm lib/perl5/site_perl/auto/URI/URL/file
 @dirrm lib/perl5/site_perl/auto/URI/URL/_generic
