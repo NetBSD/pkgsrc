@@ -1,39 +1,51 @@
-$NetBSD: patch-ab,v 1.2 2000/07/12 20:09:35 jlam Exp $
+$NetBSD: patch-ab,v 1.3 2000/12/07 20:33:06 jlam Exp $
 
---- Makefile.orig	Fri Jul  7 14:19:23 2000
-+++ Makefile	Wed Jul 12 00:49:00 2000
-@@ -60,8 +60,6 @@
+--- Makefile.orig	Tue Aug 29 16:33:48 2000
++++ Makefile
+@@ -55,25 +55,45 @@
+ # Install object and target files...
+ #
+ 
+-install:
++install:	install-cups install-data install-doc \
++		install-fonts install-locale install-ppd install-templates \
++		$(INSTALL_INIT)
++
++install-cups:
+ 	for dir in $(DIRS); do\
  		echo Installing in $$dir... ;\
  		(cd $$dir; $(MAKE) $(MFLAGS) install) || exit 1;\
  	done
--	echo Installing in conf...
--	(cd conf; $(MAKE) $(MFLAGS) install)
++
++install-conf:
+ 	echo Installing in conf...
+ 	(cd conf; $(MAKE) $(MFLAGS) install)
++
++install-data:
  	echo Installing in data...
  	(cd data; $(MAKE) $(MFLAGS) install)
++
++install-doc:
+ 	echo Installing in doc...
+ 	(cd doc; $(MAKE) $(MFLAGS) install)
++
++install-fonts:
  	echo Installing in fonts...
-@@ -72,25 +70,6 @@
+ 	(cd fonts; $(MAKE) $(MFLAGS) install)
++
++install-locale:
+ 	echo Installing in locale...
+ 	(cd locale; $(MAKE) $(MFLAGS) install)
++
++install-ppd:
+ 	echo Installing in ppd...
  	(cd ppd; $(MAKE) $(MFLAGS) install)
++
++install-templates:
  	echo Installing in templates...
  	(cd templates; $(MAKE) $(MFLAGS) install)
--	echo Installing startup script...
--	if test -d $(prefix)/sbin/init.d; then \
--		$(INSTALL_SCRIPT) cups.sh $(prefix)/sbin/init.d/cups; \
--		$(CHMOD) ugo+rx $(prefix)/sbin/init.d/cups; \
--		ln -s ../init.d/cups $(prefix)/sbin/rc0.d/K000cups; \
--		ln -s ../init.d/cups $(prefix)/sbin/rc2.d/S999cups; \
--	fi
--	if test -d $(prefix)/etc/rc.d/init.d; then \
--		$(INSTALL_SCRIPT) cups.sh $(prefix)/etc/rc.d/init.d/cups; \
--		$(CHMOD) ugo+rx $(prefix)/etc/rc.d/cups; \
--		ln -s ../init.d/cups $(prefix)/etc/rc.d/rc0.d/K00cups; \
--		ln -s ../init.d/cups $(prefix)/etc/rc.d/rc2.d/S99cups; \
--	fi
--	if test -d $(prefix)/etc/init.d; then \
--		$(INSTALL_SCRIPT) cups.sh $(prefix)/etc/init.d/cups; \
--		$(CHMOD) ugo+rx $(prefix)/etc/init.d/cups; \
--		ln -s ../init.d/cups $(prefix)/etc/rc0.d/K00cups; \
--		ln -s ../init.d/cups $(prefix)/etc/rc2.d/S99cups; \
--	fi
- 
- #
- # Make software distributions using EPM (http://www.easysw.com/epm)...
++
++install-init:
+ 	echo Installing startup script...
+ 	if test "x$INITDIR" != "x"; then \
+ 		$(MKDIR) $(prefix)/$(INITDIR)/init.d; \

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/07/12 20:09:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/12/07 20:33:06 jlam Exp $
 bin/cancel
 bin/disable
 bin/enable
@@ -9,6 +9,7 @@ bin/lpq
 bin/lpr
 bin/lprm
 bin/lpstat
+etc/rc.d/cupsd
 include/cups/cups.h
 include/cups/http.h
 include/cups/ipp.h
@@ -178,6 +179,8 @@ share/cups/fonts/Utopia-Regular
 share/cups/fonts/ZapfChancery-MediumItalic
 share/cups/fonts/ZapfDingbats
 share/cups/model/deskjet.ppd
+share/cups/model/epson24.ppd
+share/cups/model/epson9.ppd
 share/cups/model/laserjet.ppd
 share/cups/model/stcolor.ppd
 share/cups/model/stphoto.ppd
@@ -299,6 +302,7 @@ share/doc/html/cups/images/printer-processing.gif
 share/doc/html/cups/images/printer-stopped.gif
 share/doc/html/cups/images/reject-jobs.gif
 share/doc/html/cups/images/release-job.gif
+share/doc/html/cups/images/restart-job.gif
 share/doc/html/cups/images/right.gif
 share/doc/html/cups/images/show-active.gif
 share/doc/html/cups/images/show-completed.gif
@@ -317,6 +321,8 @@ share/doc/html/cups/sdd.html
 share/doc/html/cups/sdd.pdf
 share/doc/html/cups/spm.html
 share/doc/html/cups/spm.pdf
+share/doc/html/cups/sps.html
+share/doc/html/cups/sps.pdf
 share/doc/html/cups/ssr.html
 share/doc/html/cups/ssr.pdf
 share/doc/html/cups/stp.html
@@ -331,6 +337,12 @@ share/examples/cups/cupsd.conf
 share/examples/cups/mime.convs
 share/examples/cups/mime.types
 share/examples/cups/printers.conf
+share/locale/C/cups_C
+share/locale/de/cups_de
+share/locale/en/cups_en
+share/locale/es/cups_es
+share/locale/fr/cups_fr
+share/locale/it/cups_it
 @dirrm share/examples/cups
 @dirrm share/doc/html/cups/images
 @dirrm share/doc/html/cups

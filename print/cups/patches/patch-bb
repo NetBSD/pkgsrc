@@ -1,7 +1,7 @@
-$NetBSD: patch-bb,v 1.1 2000/07/12 20:09:39 jlam Exp $
+$NetBSD: patch-bb,v 1.2 2000/12/07 20:33:06 jlam Exp $
 
---- configure.in.orig	Mon Jul 10 16:58:19 2000
-+++ configure.in	Wed Jul 12 01:04:23 2000
+--- configure.in.orig	Wed Sep 20 15:11:05 2000
++++ configure.in
 @@ -43,6 +43,9 @@
  CFLAGS="${CFLAGS:=}"
  CXXFLAGS="${CXXFLAGS:=}"
@@ -12,8 +12,70 @@ $NetBSD: patch-bb,v 1.1 2000/07/12 20:09:39 jlam Exp $
  AC_ARG_ENABLE(debug, [  --enable-debug        turn on debugging [default=no]],[if eval "test x$enable_debug = xyes"; then
  	OPTIM="-g "
  fi])
-@@ -403,13 +406,23 @@
- AC_SUBST(CAT8EXT)
+@@ -449,23 +452,25 @@
+ 	case "$uname" in
+ 		FreeBSD* | NetBSD* | OpenBSD*)
+ 			# *BSD
+-			INITDIR=""
+-			INITDDIR=""
++			INSTALL_INIT=""
+ 			;;
+ 
+ 		Linux*)
+ 			# Linux seems to choose an init.d directory at random...
+ 			if test -d /sbin/init.d; then
+ 				# SuSE
++				INSTALL_INIT="install-init"
+ 				INITDIR="/sbin/init.d"
+ 				INITDDIR=".."
+ 			else
+ 				if test -d /etc/rc.d; then
+ 					# RedHat
++					INSTALL_INIT="install-init"
+ 					INITDIR="/etc/rc.d"
+ 					INITDDIR="../init.d"
+ 				else
+ 					# Others
++					INSTALL_INIT="install-init"
+ 					INITDIR="/etc"
+ 					INITDDIR="../init.d"
+ 				fi
+@@ -473,32 +478,55 @@
+ 			;;
+ 
+ 		OSF1* | HP-UX*)
++			INSTALL_INIT="install-init"
+ 			INITDIR="/sbin"
+ 			INITDDIR="../init.d"
+ 			;;
+ 
+ 		*)
++			INSTALL_INIT="install-init"
+ 			INITDIR="/etc"
+ 			INITDDIR="../init.d"
+ 			;;
+ 
+ 	esac
+ else
+-	INITDIR="/etc"
+-	INITDDIR="../init.d"
++	case "$uname" in
++		FreeBSD* | NetBSD* | OpenBSD*)
++			INSTALL_INIT=""
++			INITDIR="/etc"
++			INITDDIR="../init.d"
++			;;
++		*)
++			INSTALL_INIT="install-init"
++			INITDIR="/etc"
++			INITDDIR="../init.d"
++			;;
++	esac
+ fi
+ 
++AC_SUBST(INSTALL_INIT)
+ AC_SUBST(INITDIR)
+ AC_SUBST(INITDDIR)
  
  dnl Setup default locations...
 -CUPS_SERVERROOT='${prefix}/etc/cups'
@@ -43,7 +105,7 @@ $NetBSD: patch-bb,v 1.1 2000/07/12 20:09:39 jlam Exp $
  
  dnl See what directory to put server executables...
  case "$uname" in
-@@ -460,8 +473,8 @@
+@@ -549,8 +577,8 @@
  AC_SUBST(CUPS_DATADIR)
  
  dnl Set the CUPS_DOCROOT directory...
@@ -53,4 +115,4 @@ $NetBSD: patch-bb,v 1.1 2000/07/12 20:09:39 jlam Exp $
 +AC_DEFINE_UNQUOTED(CUPS_DOCROOT, "$exec_prefix/share/doc/html/cups")
  AC_SUBST(CUPS_DOCROOT)
  
- AC_OUTPUT(Makedefs cups.sh)
+ dnl Set the CUPS_FONTPATH directory...

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2000/07/12 20:09:33 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/12/07 20:33:05 jlam Exp $
 #
 
-DISTNAME=		cups-1.1-source
+DISTNAME=		cups-1.1.4-source
 PKGNAME=		${DISTNAME:S/-source//}
 VERS=			${PKGNAME:S/cups-//}
 WRKSRC=			${WRKDIR}/${PKGNAME}
@@ -25,15 +25,55 @@ USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-libtool-unsupported="${LIBTOOL}"
-CONFIGURE_ARGS+=	--disable-pam
 CONFIGURE_ARGS+=	--enable-rootconfig
+CONFIGURE_ARGS+=	--disable-pam
 
 CFLAGS+=		-I${LOCALBASE}/include
+
+.include "../../mk/bsd.prefs.mk"
+
+.if exists(/usr/sbin/user)
+USERDIR=		/usr/sbin
+.else
+DEPENDS+=		user>=20000313:../../sysutils/user
+USERDIR=		${LOCALBASE}/sbin
+.endif
+
+# CUPS_USER	username of the database administrator
+# CUPS_GROUP	group of the database administrator
+#
+CUPS_USER?=		lp
+CUPS_GROUP?=		sys
+
+DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+INSTALL_FILE=		${WRKDIR}/INSTALL
+
+pre-patch:
+	cd ${WRKSRC}/conf; ${MV} cupsd.conf cupsd.conf.in
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
 
+post-configure:
+	${SED}	-e "s,@CUPS_USER@,${CUPS_USER},g" \
+		-e "s,@CUPS_GROUP@,${CUPS_GROUP},g" \
+		< ${WRKSRC}/conf/cupsd.conf.in > ${WRKSRC}/conf/cupsd.conf
+
+post-build:
+	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
+		< ${FILESDIR}/cupsd.sh > ${WRKDIR}/cupsd.sh
+	${SED}	-e "s,@CUPS_USER@,${CUPS_USER},g" \
+		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED}	-e "s,@CUPS_USER@,${CUPS_USER},g" \
+		-e "s,@CUPS_GROUP@,${CUPS_GROUP},g" \
+		-e "s,@USERDIR@,${USERDIR},g" \
+		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+
+pre-install:
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
+
 post-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/cupsd.sh ${PREFIX}/etc/rc.d/cupsd
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cups
 	cd ${WRKSRC}/conf; ${INSTALL_DATA} *.conf mime.* \
 		${PREFIX}/share/examples/cups
