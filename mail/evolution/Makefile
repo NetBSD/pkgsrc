@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2004/08/28 06:05:32 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2004/09/21 17:21:15 jmmv Exp $
 
-DISTNAME=		evolution-1.4.6
+DISTNAME=		evolution-2.0.0
 CATEGORIES=		mail time gnome
 MASTER_SITES=		ftp://ftp.ximian.com/pub/source/evolution/ \
-			${MASTER_SITE_GNOME:=sources/evolution/1.4/}
+			${MASTER_SITE_GNOME:=sources/evolution/2.0/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -14,11 +14,6 @@ DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 BUILD_USES_MSGFMT=	YES
 
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb2
-
-# Using a wildcard here doesn't make sense because the version number of
-# "db3" is hardcoded in the "configure" script and some source modules
-# to make sure locally stored mails remain in the same format!
-BUILDLINK_DEPENDS.db3=		db3-3.11.2{,nb*}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,36 +33,34 @@ USE_LIBTOOL=		YES
 USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 
-REPLACE_PERL+=		libical/scripts/mkderivedvalues.pl
-REPLACE_PERL+=		libical/scripts/mkparameterrestrictions.pl
-REPLACE_PERL+=		libical/scripts/mkderivedcomponents.pl
-REPLACE_PERL+=		libical/scripts/mkderivedparameters.pl
-REPLACE_PERL+=		libical/scripts/mkderivedproperties.pl
-REPLACE_PERL+=		libical/scripts/mkrestrictionrecords.pl
-REPLACE_PERL+=		libical/scripts/mkrestrictiontable.pl
-REPLACE_PERL+=		tools/csv2vcard
-REPLACE_PERL+=		tools/evolution-addressbook-clean
-REPLACE_PERL+=		tools/evolution-addressbook-clean.in
-REPLACE_PERL+=		tools/killev
-CPPFLAGS+=		-I/usr/include/krb5 -I/usr/include/gssapi
+REPLACE_PERL+=		addressbook/tools/csv2vcard
+REPLACE_PERL+=		addressbook/tools/evolution-addressbook-clean
+REPLACE_PERL+=		addressbook/tools/evolution-addressbook-clean.in
+
+CPPFLAGS+=		-I/usr/include/gssapi
+CPPFLAGS+=		-I/usr/include/krb5
+
 CONFIGURE_ARGS+=	--disable-gtk-doc
-CONFIGURE_ARGS+=	--with-openldap --without-static-ldap
+CONFIGURE_ARGS+=	--with-openldap
+CONFIGURE_ARGS+=	--without-static-ldap
+CONFIGURE_ARGS+=	--enable-nss=no
 CONFIGURE_ARGS+=	--enable-openssl=yes
-CONFIGURE_ARGS+=	--with-krb5=/usr --with-krb4=/usr
-CONFIGURE_ARGS+=	--with-db3-includes=${LOCALBASE}/include/db3
-CONFIGURE_ARGS+=	--with-db3-libs=${LOCALBASE}/lib
-CONFIGURE_ENV+=		PKG_CONFIG_PATH="${LOCALBASE}/lib/pkgconfig:${X11BASE}/lib/pkgconfig"
+CONFIGURE_ARGS+=	--enable-pilot-conduits=no
+CONFIGURE_ARGS+=	--enable-smime=no
+CONFIGURE_ARGS+=	--with-krb4=/usr
+CONFIGURE_ARGS+=	--with-krb5=/usr
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
+.if defined(PKGREVISION)
+CONFIGURE_ARGS+=	--with-sub-version=nb${PKGREVISION}
+.endif
 
 PKGCONFIG_OVERRIDE=	camel.pc.in
 PKGCONFIG_OVERRIDE+=	evolution-shell.pc.in
-PKGCONFIG_OVERRIDE+=	evolution-calendar.pc.in
-PKGCONFIG_OVERRIDE+=	evolution-addressbook.pc.in
 
-GCONF2_SCHEMAS=		apps_evolution_shell.schemas
-GCONF2_SCHEMAS+=	apps_evolution_addressbook.schemas
-GCONF2_SCHEMAS+=	apps_evolution_calendar.schemas
-GCONF2_SCHEMAS+=	apps_evolution_summary.schemas
-GCONF2_SCHEMAS+=	evolution-mail.schemas
+GCONF2_SCHEMAS=		apps_evolution_addressbook-2.0.schemas
+GCONF2_SCHEMAS+=	apps_evolution_calendar-2.0.schemas
+GCONF2_SCHEMAS+=	apps_evolution_shell-2.0.schemas
+GCONF2_SCHEMAS+=	evolution-mail-2.0.schemas
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
@@ -76,22 +69,26 @@ BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 LDFLAGS+=	-lsemaphore
 .include "../../devel/pthread-sem/buildlink3.mk"
 .endif
-.include "../../databases/db3/buildlink3.mk"
 .include "../../databases/openldap/buildlink3.mk"
+.include "../../devel/atk/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gal2/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
+.include "../../mail/evolution-data-server/buildlink3.mk"
+.include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../textproc/gnome-spell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/libunicode/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/gtkhtml3/buildlink3.mk"
