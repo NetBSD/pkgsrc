@@ -1,0 +1,5 @@
+Mstream is an mserv player package for queueing tracks to an IceS MP3
+stream source. It consists of a player script for mserv and a playlist
+handler module for IceS. It supports the NEXT and STOP commands in
+mserv. It also supports title streaming with metadata from your mserv
+database.
