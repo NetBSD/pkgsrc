@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:25:52 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:24 wiz Exp $
 
-MD5 (png2html-1.1.tar.gz) = a018d81e6b6df105b88873dd7b4a2e22
+SHA1 (png2html-1.1.tar.gz) = de8b5ae25ab2b0a27bec9f4bbd219aab5fbd1352
+Size (png2html-1.1.tar.gz) = 9572 bytes
 SHA1 (patch-aa) = 0748514685961935607729c24fb5c73fd6f04328

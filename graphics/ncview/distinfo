@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:24:56 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:21 wiz Exp $
 
 SHA1 (ncview-1.92c.tar.gz) = 2d9ebd63ef870411283f4553e177f27d89c40d39
+Size (ncview-1.92c.tar.gz) = 831002 bytes
 SHA1 (patch-aa) = 77ce989232b1a926e7cdfbbbe9e0e22f653bfb23
 SHA1 (patch-ab) = 6dbdfaea8b37ef792571320c38e9113709bcbbd4

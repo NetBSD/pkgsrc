@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:23:48 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:15 wiz Exp $
 
-MD5 (gnuplot-3.7.1.tar.gz) = 30798b4c14ea734969a86ee41a9c1dca
+SHA1 (gnuplot-3.7.1.tar.gz) = 34b3d9fd03fd5cfc048da78fed007e8946007e65
+Size (gnuplot-3.7.1.tar.gz) = 1319233 bytes
 SHA1 (patch-aa) = 74dc3f1bc1daf4976ea080dbdef5c22a709a7d7a
 SHA1 (patch-ab) = 902b43ac6b2a026b563f9aca6b4f434643c80b1c

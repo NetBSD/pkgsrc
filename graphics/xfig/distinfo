@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:28 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:29 wiz Exp $
 
-MD5 (xfig.3.2.3a.tar.gz) = 854b3dfad1dbdacc1b82022cfe85877c
+SHA1 (xfig.3.2.3a.tar.gz) = d3136ff67d25c3145674b82b67209dac1255cca3
+Size (xfig.3.2.3a.tar.gz) = 2139622 bytes
 SHA1 (patch-aa) = b4e00763a80887bcce9ca2473adbd5305ae676b0
 SHA1 (patch-ab) = beef00b86bfe59f6851b950037b20caa5b919a7e
 SHA1 (patch-ac) = e56168054249f34731499e57d131ef59fef92d03
