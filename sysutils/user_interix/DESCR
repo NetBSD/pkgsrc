@@ -1,0 +1,2 @@
+This implements a subset of useradd(8)/groupadd(8) functionality on
+Interix that is sufficient for pkgsrc use.
