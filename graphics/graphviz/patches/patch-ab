@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.2 2002/03/10 23:58:41 seb Exp $
+$NetBSD: patch-ab,v 1.3 2002/03/21 08:47:07 seb Exp $
 
---- configure.in.orig	Fri Mar  1 03:47:55 2002
+--- configure.in.orig	Fri Mar  8 23:11:31 2002
 +++ configure.in
 @@ -45,7 +45,10 @@
  PATHSEPARATOR=";"
  else
  # This sucks!  Whatever happened to standards for file system layout?
--DEFAULT_FONTPATH="/usr/X11R6/lib/X11/fonts/TrueType:/usr/X11R6/lib/X11/fonts/truetype:/usr/share/fonts/TrueType:/usr/share/fonts/truetype:/usr/openwin/lib/X11/fonts/TrueType:/usr/openwin/lib/X11/fonts/TrueType"
+-DEFAULT_FONTPATH="/usr/X11R6/lib/X11/fonts/TrueType:/usr/X11R6/lib/X11/fonts/truetype:/usr/share/fonts/TrueType:/usr/share/fonts/truetype:/usr/openwin/lib/X11/fonts/TrueType"
 +DEFAULT_FONTPATH="${X11PREFIX}/lib/X11/fonts/TrueType:${X11PREFIX}/lib/X11/fonts/truetype"
 +if test x"$X11PREFIX" != x"$X11BASE" ; then
 +DEFAULT_FONTPATH="${DEFAULT_FONTPATH}:${X11BASE}/lib/X11/fonts/TrueType:${X11BASE}/lib/X11/fonts/truetype"
@@ -42,7 +42,7 @@ $NetBSD: patch-ab,v 1.2 2002/03/10 23:58:41 seb Exp $
      TK_PKGINDEX="tkspline/pkgIndex.tcl"
  else
      AC_MSG_WARN([Unable to find tkConfig.sh. The package "tkspline" will not be built])
-@@ -529,36 +530,12 @@
+@@ -549,36 +550,12 @@
  
  # -----------------------------------
  # tclInt.h
