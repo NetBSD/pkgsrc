@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4494 2004/01/18 14:00:46 cube Exp $
+$NetBSD: CHANGES,v 1.4495 2004/01/18 14:25:38 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -320,3 +320,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added cyrus-imapd-2.2.3 [recht 2004-01-18]
 	Updated SDL_sound to 1.0.1 [cube 2004-01-18]
 	Updated gltron to 0.70 [cube 2004-01-18]
+	Added icbirc-1.6 [tron 2004-01-18]
