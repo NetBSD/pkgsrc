@@ -1,4 +1,4 @@
-The BLAS (Basic Linear Algebra Subroutines) are high quality "building
+The BLAS (Basic Linear Algebra Subprograms) are high quality "building
 block" routines for performing basic vector and matrix
 operations. Level 1 BLAS do vector-vector operations, Level 2 BLAS do
 matrix-vector operations, and Level 3 BLAS do matrix-matrix

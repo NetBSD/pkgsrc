@@ -2,12 +2,6 @@ LIB	= slatec
 
 LIBDIR	= ${PREFIX}/lib
 
-.if ${FC}=="f77" || ${FC}=="g77"
-FOPTS=-funroll-loops -O2
-.else
-FOPTS=-O2
-.endif
-
 all:	lib$(LIB).a
 
 OBJS = aaaaaa.o acosh.o ai.o aie.o albeta.o algams.o ali.o alngam.o	\
@@ -219,9 +213,6 @@ i1mach.o:
 
 r1mach.o:
 	$(FC) -c $<
-
-.f.o:
-	$(FC) $(FFLAGS) $(FOPTS) -c $<
 
 install:  lib$(LIB).a
 	$(BSD_INSTALL_DATA) $? $(LIBDIR)

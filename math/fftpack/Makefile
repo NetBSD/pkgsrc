@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/01/22 23:30:01 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/02 00:23:51 jtb Exp $
 
 DISTNAME=		fftpack-20001130
 CATEGORIES=		math
@@ -8,8 +8,7 @@ MAINTAINER=		jtb@netbsd.org
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 WRKSRC=			${WRKDIR}/fftpack
-USE_LIBTOOL=		YES
-UES_FORTRAN=		YES
+USE_FORTRAN=		YES
 
 post-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}

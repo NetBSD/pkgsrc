@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/10 05:11:31 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/02 00:23:52 jtb Exp $
 
 DISTNAME=		minpack-20001130
 CATEGORIES=		math
@@ -6,16 +6,11 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		jtb@netbsd.org
 
+NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 WRKSRC=			${WRKDIR}/minpack
 USE_FORTRAN=		YES
 
 pre-build:
-	@${SED} -e 's:%%F77%%:'${FC}':g' \
-	< ${FILESDIR}/Makefile > ${WRKSRC}/Makefile
-
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/minpack
-	${INSTALL_DATA} ${WRKSRC}/ex/file* ${WRKSRC}/ex/index* \
-	${PREFIX}/share/examples/minpack
+	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
