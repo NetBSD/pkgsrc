@@ -1,9 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:05 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 09:31:31 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETOPT_BUILDLINK3_MK:=	${GETOPT_BUILDLINK3_MK}+
 
 .if !empty(GETOPT_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=		getopt
 BUILDLINK_DEPENDS.getopt?=	libgetopt>=1.3
 BUILDLINK_PKGSRCDIR.getopt?=	../../devel/libgetopt
 .endif	# GETOPT_BUILDLINK3_MK
@@ -18,37 +19,34 @@ BUILDLINK_IS_BUILTIN.getopt=	YES
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.getopt:M[yY][eE][sS])
-_NEED_GETOPT=	NO
+BUILDLINK_USE_BUILTIN.getopt=	YES
 .endif
 
-.if !defined(_NEED_GETOPT)
+.if !defined(BUILDLINK_USE_BUILTIN.getopt)
 .  if !empty(BUILDLINK_IS_BUILTIN.getopt:M[nN][oO])
-_NEED_GETOPT=	YES
+BUILDLINK_USE_BUILTIN.getopt=	NO
 .  else
-_NEED_GETOPT=	NO
+BUILDLINK_USE_BUILTIN.getopt=	YES
 .  endif
-MAKEFLAGS+=	_NEED_GETOPT="${_NEED_GETOPT}"
 .endif
 
-.if ${_NEED_GETOPT} == "YES"
+.if !empty(BUILDLINK_USE_BUILTIN.getopt:M[nN][oO])
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	getopt
 .  endif
 .endif
 
 .if !empty(GETOPT_BUILDLINK3_MK:M+)
-.  if ${_NEED_GETOPT} == "YES"
-BUILDLINK_PACKAGES+=		getopt
-LIBGETOPT=			-lgetopt
+.  if !empty(BUILDLINK_USE_BUILTIN.getopt:M[nN][oO])
+LIBGETOPT=	-lgetopt
 .  else
-BUILDLINK_PREFIX.getopt=	/usr
-LIBGETOPT=			# empty
+LIBGETOPT=	# empty
 .  endif
 
 BUILDLINK_LDADD.getopt?=	${LIBGETOPT}
 
-CONFIGURE_ENV+=			LIBGETOPT="${LIBGETOPT}"
-MAKE_ENV+=			LIBGETOPT="${LIBGETOPT}"
+CONFIGURE_ENV+=		LIBGETOPT="${LIBGETOPT}"
+MAKE_ENV+=		LIBGETOPT="${LIBGETOPT}"
 .endif	# GETOPT_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}

@@ -1,13 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/01/04 23:34:06 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/01/05 09:31:31 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLU_BUILDLINK3_MK:=	${GLU_BUILDLINK3_MK}+
 
-.if !empty(GLU_BUILDLINK3_MK:M+)
-.  include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
+.if !empty(GLU_BUILDLINK3_MK:M+)
 MESA_REQD?=		3.4.2
 
+BUILDLINK_PACKAGES+=		glu
 BUILDLINK_DEPENDS.glu?=		glu>=${MESA_REQD}
 BUILDLINK_PKGSRCDIR.glu?=	../../graphics/glu
 .endif	# GLU_BUILDLINK3_MK
@@ -22,21 +23,21 @@ BUILDLINK_IS_BUILTIN.glu=	NO
 .  if exists(${_GL_GLU_H}) && exists(${_X11_TMPL})
 BUILDLINK_IS_BUILTIN.glu!=						\
 	if ${GREP} -q BuildGLULibrary ${_X11_TMPL}; then		\
-		${ECHO} YES;						\
+		${ECHO} "YES";						\
 	else								\
-		${ECHO} NO;						\
+		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.glu=${BUILDLINK_IS_BUILTIN.glu}
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.glu="${BUILDLINK_IS_BUILTIN.glu}"
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.glu:M[yY][eE][sS])
-_NEED_GLU=	NO
+BUILDLINK_USE_BUILTIN.glu=	YES
 .endif
 
-.if !defined(_NEED_GLU)
+.if !defined(BUILDLINK_USE_BUILTIN.glu)
 .  if !empty(BUILDLINK_IS_BUILTIN.glu:M[nN][oO])
-_NEED_GLU=	YES
+BUILDLINK_USE_BUILTIN.glu=	NO
 .  else
 #
 # Create an appropriate package name for the built-in Mesa/GLU distributed
@@ -47,17 +48,17 @@ _NEED_GLU=	YES
 .    include "../../graphics/Mesa/version.mk"
 _GLU_PKG=	glu-${_MESA_VERSION}
 _GLU_DEPENDS=	${BUILDLINK_DEPENDS.glu}
-_NEED_GLU!=	\
+BUILDLINK_USE_BUILTIN.glu!=	\
 	if ${PKG_ADMIN} pmatch '${_GLU_DEPENDS}' ${_GLU_PKG}; then \
-		${ECHO} "NO";						\
-	else								\
 		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	_NEED_GLU="${_NEED_GLU}"
-.endif	# _NEED_GLU
+MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.glu="${BUILDLINK_USE_BUILTIN.glu}"
+.endif	# BUILDLINK_USE_BUILTIN.glu
 
-.if ${_NEED_GLU} == "YES"
+.if !empty(BUILDLINK_USE_BUILTIN.glu:M[nN][oO])
 #
 # If we depend on the package, depend on the latest version with a library
 # major number bump.
@@ -69,9 +70,7 @@ BUILDLINK_DEPENDS+=	glu
 .endif
 
 .if !empty(GLU_BUILDLINK3_MK:M+)
-.  if ${_NEED_GLU} == "YES"
-BUILDLINK_PACKAGES+=	glu
-.  else
+.  if !empty(BUILDLINK_USE_BUILTIN.glu:M[yY][eE][sS])
 BUILDLINK_PREFIX.glu=	${X11BASE}
 .  endif
 .endif	# GLU_BUILDLINK3_MK

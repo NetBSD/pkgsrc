@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/01/04 23:34:06 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2004/01/05 09:31:31 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XPM_BUILDLINK3_MK:=	${XPM_BUILDLINK3_MK}+
@@ -6,6 +6,7 @@ XPM_BUILDLINK3_MK:=	${XPM_BUILDLINK3_MK}+
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(XPM_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=		xpm
 BUILDLINK_DEPENDS.xpm?=		xpm>=3.4k
 BUILDLINK_PKGSRCDIR.xpm?=	../../graphics/xpm
 .endif	# XPM_BUILDLINK3_MK
@@ -21,31 +22,31 @@ BUILDLINK_IS_BUILTIN.xpm=	NO
 .    if !empty(X11BASE:M*openwin)
 BUILDLINK_IS_BUILTIN.xpm!=						\
 	if /usr/sbin/pkgchk -l SUNWxwinc | ${GREP} -q xpm.h; then	\
-		${ECHO} YES;						\
+		${ECHO} "YES";						\
 	else								\
-		${ECHO} NO;						\
+		${ECHO} "NO";						\
 	fi
 .    elif exists(${_X11_TMPL})
 BUILDLINK_IS_BUILTIN.xpm!=						\
 	if ${GREP} -q NormalLibXpm ${_X11_TMPL}; then			\
-		${ECHO} YES;						\
+		${ECHO} "YES";						\
 	else								\
-		${ECHO} NO;						\
+		${ECHO} "NO";						\
 	fi
 .    else
 BUILDLINK_IS_BUILTIN.xpm=	NO
 .    endif
 .  endif
-MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.xpm=${BUILDLINK_IS_BUILTIN.xpm}
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.xpm="${BUILDLINK_IS_BUILTIN.xpm}"
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.xpm:M[yY][eE][sS])
-_NEED_XPM=	NO
+BUILDLINK_USE_BUILTIN.xpm=	YES
 .endif
 
-.if !defined(_NEED_XPM)
+.if !defined(BUILDLINK_USE_BUILTIN.xpm)
 .  if !empty(BUILDLINK_IS_BUILTIN.xpm:M[nN][oO])
-_NEED_XPM=	YES
+BUILDLINK_USE_BUILTIN.xpm=	NO
 .  else
 #
 # Create an appropriate package name for the built-in xpm distributed
@@ -62,26 +63,24 @@ _XPM_PATCH!=	\
 _XPM_VERSION=	${_XPM_MAJOR}${_XPM_MINOR}${_XPM_PATCH}
 _XPM_PKG=	xpm-${_XPM_VERSION}
 _XPM_DEPENDS=	${BUILDLINK_DEPENDS.xpm}
-_NEED_XPM!=	\
+BUILDLINK_USE_BUILTIN.xpm!=	\
 	if ${PKG_ADMIN} pmatch '${_XPM_DEPENDS}' ${_XPM_PKG}; then	\
-		${ECHO} "NO";						\
-	else								\
 		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	_NEED_XPM="${_NEED_XPM}"
-.endif	# _NEED_XPM
+MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.xpm="${BUILDLINK_USE_BUILTIN.xpm}"
+.endif	# BUILDLINK_USE_BUILTIN.xpm
 
-.if ${_NEED_XPM} == "YES"
+.if !empty(BUILDLINK_USE_BUILTIN.xpm:M[nN][oO])
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	xpm
 .  endif
 .endif
 
 .if !empty(XPM_BUILDLINK3_MK:M+)
-.  if ${_NEED_XPM} == "YES"
-BUILDLINK_PACKAGES+=	xpm
-.  else
+.  if !empty(BUILDLINK_USE_BUILTIN.xpm:M[yY][eE][sS])
 BUILDLINK_PREFIX.xpm=	${X11BASE}
 .  endif
 .endif	# XPM_BUILDLINK3_MK

@@ -1,26 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:05 jlam Exp $
-#
-# Optionally define:
-#
-# USE_NCURSES		force use of ncurses
-# INCOMPAT_CURSES	specify MACHINE_PLATFORM versions that are missing
-#			some needed functions.
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 09:31:31 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
 
-.if !empty(NCURSES_BUILDLINK3_MK:M+)
-.  include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
+.if !empty(NCURSES_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=		ncurses
 BUILDLINK_DEPENDS.ncurses?=	ncurses>=5.3nb1
 BUILDLINK_PKGSRCDIR.ncurses?=	../../devel/ncurses
 .endif	# NCURSES_BUILDLINK3_MK
 
 BUILDLINK_CHECK_BUILTIN.ncurses?=	NO
-
-.if !defined(BUILDLINK_IS_BUILTIN.ncurses)
-BUILDLINK_IS_BUILTIN.ncurses=	NO
-.endif
 
 .if !defined(_BLNK_LIBNCURSES_FOUND)
 _BLNK_LIBNCURSES_FOUND!=	\
@@ -32,17 +23,24 @@ _BLNK_LIBNCURSES_FOUND!=	\
 MAKEFLAGS+=	_BLNK_LIBNCURSES_FOUND=${_BLNK_LIBNCURSES_FOUND}
 .endif
 
-.if ${_BLNK_LIBNCURSES_FOUND} == "YES"
+.if !defined(BUILDLINK_IS_BUILTIN.ncurses)
+BUILDLINK_IS_BUILTIN.ncurses=	NO
+.  if ${_BLNK_LIBNCURSES_FOUND} == "YES"
 BUILDLINK_IS_BUILTIN.ncurses=	YES
+.  endif
+.endif
+
+.if defined(USE_NCURSES)
+BUILDLINK_USE_BUILTIN.ncurses=	NO
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.ncurses:M[yY][eE][sS])
-_NEED_NCURSES=	NO
+BUILDLINK_USE_BUILTIN.ncurses=	YES
 .endif
 
-.if !defined(_NEED_NCURSES)
+.if !defined(BUILDLINK_USE_BUILTIN.ncurses)
 .  if !empty(BUILDLINK_IS_BUILTIN.ncurses:M[nN][oO])
-_NEED_NCURSES=	NO
+BUILDLINK_USE_BUILTIN.ncurses=	YES
 .  else
 #
 # These versions of NetBSD didn't have a curses library that was capable of
@@ -61,24 +59,22 @@ _INCOMPAT_CURSES+=      Darwin-*-*
 INCOMPAT_CURSES?=	# empty
 .    for _pattern_ in ${_INCOMPAT_CURSES} ${INCOMPAT_CURSES}
 .      if !empty(MACHINE_PLATFORM:M${_pattern_})
-_NEED_NCURSES=		YES
+BUILDLINK_USE_BUILTIN.ncurses=	NO
 .      endif
 .    endfor
 .  endif
-MAKEFLAGS+=	_NEED_NCURSES="${_NEED_NCURSES}"
+MAKEFLAGS+=	\
+	BUILDLINK_USE_BUILTIN.ncurses="${BUILDLINK_USE_BUILTIN.ncurses}"
 .endif
 
-.if ${_NEED_NCURSES} == "YES"
+.if !empty(BUILDLINK_USE_BUILTIN.ncurses:M[nN][oO])
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	ncurses
 .  endif
 .endif
 
 .if !empty(NCURSES_BUILDLINK3_MK:M+)
-.  if ${_NEED_NCURSES} == "YES"
-BUILDLINK_PACKAGES+=	ncurses
-.  else
-BUILDLINK_PREFIX.ncurses=	/usr
+.  if !empty(BUILDLINK_USE_BUILTIN.ncurses:M[yY][eE][sS])
 .    if ${_BLNK_LIBNCURSES_FOUND} == "NO"
 BUILDLINK_TRANSFORM.ncurses+=	-e "s|/curses.h|/ncurses.h|g"
 BUILDLINK_TRANSFORM+=		l:ncurses:curses
@@ -94,9 +90,7 @@ BUILDLINK_TARGETS+=	buildlink-ncurses-extra-includes
 .PHONY: buildlink-ncurses-extra-includes
 buildlink-ncurses-extra-includes:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	extra_includes="						\
-		include/term.h						\
-	";								\
+	extra_includes="include/term.h";				\
 	for f in $${extra_includes}; do					\
 		if [ ! -f ${BUILDLINK_DIR}/$${f} ]; then		\
 			${ECHO_BUILDLINK_MSG} "Touching extra ncurses header ($${f}) in ${BUILDLINK_DIR}."; \
