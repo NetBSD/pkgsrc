@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2002/11/26 21:46:11 cjep Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/22 04:08:20 salo Exp $
+#
 
-DISTNAME=	nmap-3.00
+DISTNAME=	nmap-3.20
 PKGNAME=	nmapfe-0.9.5
+PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	http://codebox.net/download/
 EXTRACT_SUFX=	.tgz
@@ -13,9 +15,10 @@ COMMENT=	graphical front end to the nmap port scanner
 DEPENDS+=	nmap-[23].*:../../net/nmap
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
-HAS_CONFIGURE=	Yes
-CONFIGURE_ENV+= INSTALL=${INSTALL}
-CONFIGURE_ARGS+=--prefix=${PREFIX}
+GNU_CONFIGURE=	YES
+
+PATCHDIR=	${.CURDIR}/../../net/nmap/patches
+DISTINFO_FILE=	${.CURDIR}/../../net/nmap/distinfo
 
 .include "../../mk/bsd.prefs.mk"
 
