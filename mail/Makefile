@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/02/02 10:50:04 tron Exp $
+# $NetBSD: Makefile,v 1.7 1998/02/18 12:03:26 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.45 1997/08/13 18:35:22 andreas Exp 
 #
 
@@ -29,6 +29,7 @@
 #    SUBDIR += popper
 #    SUBDIR += premail
 #    SUBDIR += procmail
+    SUBDIR += qpopper
 #    SUBDIR += smail
 #    SUBDIR += xfaces
 #    SUBDIR += xfmail
