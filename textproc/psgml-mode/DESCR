@@ -1,0 +1,9 @@
+PSGML is an emacs major mode for SGML documents.
+
+PSGML has several functions for editing SGML documents. Indentation
+according to element nesting depth and identification of structural
+errors (but it is not a validating SGML parser). Menus and commands
+for inserting tags with only the contextually valid tags. Attribute
+values can be edited in a separate window with information about
+types and defaults. Structure based editing includes movement and
+killing; and also several commands for folding editing.
