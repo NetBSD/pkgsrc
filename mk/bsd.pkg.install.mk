@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.49 2003/09/06 11:43:55 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.50 2003/09/06 11:51:16 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -152,7 +152,6 @@ SUPPORT_FILES_MODE?=	0644
 SUPPORT_FILES_PERMS?=	# empty
 RCD_SCRIPTS?=		# empty
 RCD_SCRIPTS_MODE?=	0755
-RCD_SCRIPTS_DIR?=	/etc/rc.d
 RCD_SCRIPTS_EXAMPLEDIR?=	${PREFIX}/etc/rc.d
 RCD_SCRIPTS_SHELL?=	${SH}
 FILES_SUBST+=		CONF_FILES=${CONF_FILES:Q}
