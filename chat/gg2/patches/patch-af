@@ -1,27 +1,24 @@
-$NetBSD: patch-af,v 1.1 2005/01/17 20:15:28 kristerw Exp $
+$NetBSD: patch-af,v 1.2 2005/04/04 08:26:29 adam Exp $
 
---- src/plugins/docklet/dockapp/dockapp_plugin.c.orig	Mon Jan 17 20:54:04 2005
-+++ src/plugins/docklet/dockapp/dockapp_plugin.c	Mon Jan 17 20:55:32 2005
-@@ -105,6 +105,8 @@
+--- src/plugins/docklet/dockapp/dockapp_plugin.c.orig	2005-02-20 11:31:50.000000000 +0000
++++ src/plugins/docklet/dockapp/dockapp_plugin.c
+@@ -109,6 +109,7 @@ void redraw()
  //Przerysowuje elementy dynamiczne pixmapy
  void draw_pixmap()
  {
 +	int i;
-+	GdkFont *font;
  
  	//tlo ikony
- 	gdk_gc_set_rgb_fg_color(gc, &clwhite);
-@@ -118,9 +120,6 @@
+ 	gdk_draw_pixmap(launch_pixmap, gc , source_pixmap , 0 , 0 , 0 , 0 , 64 ,64);
+@@ -121,7 +122,6 @@ void draw_pixmap()
  	if ((icon2_img != NULL) && ((blink_no % 2) == 1))
  		gdk_draw_pixbuf(launch_pixmap, gc, icon2_img, 0, 0, icon2.x, icon2.y, icon2.width, icon2.height, GDK_RGB_DITHER_NONE, 0, 0);
  
 -	int i;
--	GdkFont *font;
--
- 	//Wyswietl 3 nicki w kolorach zalenych od statusu
- 	font = gdk_font_load("-misc-fixed-bold-r-normal-*-15-*-*-*-*-*-iso8859-2");
- 	gdk_gc_set_rgb_fg_color(gc, &clred);
-@@ -350,6 +349,7 @@
+ 
+ 	//Wyswietl 3 nicki w kolorach zalenych od statusu	
+ 	for (i = 0; i < NNICK; i++)
+@@ -468,6 +468,7 @@ gpointer user_preferences_action(gpointe
  //Funkcja startowa pluginu, exportowana,musi byc
  void start_plugin()
  {
@@ -29,11 +26,11 @@ $NetBSD: patch-af,v 1.1 2005/01/17 20:15:28 kristerw Exp $
  	print_debug("%s : start\n", GGadu_PLUGIN_NAME);
  
  	//Etykietki
-@@ -397,7 +397,6 @@
+@@ -529,7 +530,6 @@ void start_plugin()
  	redraw();
  
  	//Windowmaker hints - tu sprowadza okno do ikony
 -	XWMHints wmhints;
  	wmhints.initial_state = WithdrawnState;
- 	wmhints.flags = StateHint;
- 	XSetWMHints(GDK_DISPLAY(), GDK_WINDOW_XWINDOW(status_dockapp->window), &wmhints);
+ 	wmhints.flags = StateHint | IconWindowHint | IconPositionHint | WindowGroupHint;
+ 	wmhints.icon_x = 0;
