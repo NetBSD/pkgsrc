@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/08/06 21:31:34 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2002/03/31 05:23:48 taca Exp $
 
 DISTNAME=	NetBSD1.3I-jman-19990531
 PKGNAME=	ja-man-19990531
@@ -67,6 +67,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/jman/jman.conf.t ${PREFIX}/etc/jman.conf
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jman
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/jman
-	@(cd ${WRKSRC}/man; ${MAKE} PREFIX='${PREFIX}' install)
+	@(cd ${WRKSRC}/man; \
+		${MAKE} PREFIX='${PREFIX}' JAMANDIR='${JAMANDIR}' install)
 
 .include "../../mk/bsd.pkg.mk"
