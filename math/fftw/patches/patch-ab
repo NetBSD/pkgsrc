@@ -1,0 +1,44 @@
+$NetBSD: patch-ab,v 1.1 2001/04/27 22:22:23 jtb Exp $
+
+--- configure.orig	Mon Nov  8 01:45:45 1999
++++ configure
+@@ -2215,6 +2215,7 @@
+ int main() {
+ foobar();
+ ; return 0; }
++void MAIN__(void){abort();}
+ EOF
+ if { (eval echo configure:2220: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   rm -rf conftest*
+@@ -2230,6 +2231,7 @@
+ int main() {
+ foobar_();
+ ; return 0; }
++void MAIN__(void){abort();}
+ EOF
+ if { (eval echo configure:2235: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   rm -rf conftest*
+@@ -2245,6 +2247,7 @@
+ int main() {
+ FOOBAR();
+ ; return 0; }
++void MAIN__(void){abort();}
+ EOF
+ if { (eval echo configure:2250: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   rm -rf conftest*
+@@ -2260,6 +2263,7 @@
+ int main() {
+ FOOBAR_();
+ ; return 0; }
++void MAIN__(void){abort();}
+ EOF
+ if { (eval echo configure:2265: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   rm -rf conftest*
+@@ -2337,6 +2341,7 @@
+ int main() {
+ $mangle_try();
+ ; return 0; }
++void MAIN__(void){abort();}
+ EOF
+ if { (eval echo configure:2342: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   rm -rf conftest*
