@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9682 2005/03/29 22:09:57 jschauma Exp $
+$NetBSD: CHANGES,v 1.9683 2005/03/29 23:31:03 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1818,3 +1818,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated uim to 0.4.6 [wiz 2005-03-29]
 	Added mdf2iso-0.2.2 [xtraeme 2005-03-29]
 	Updated tor to 0.0.9.6 [jschauma 2005-03-29]
+	Updated cygwin_lib to 1.5.13.1 [tv 2005-03-29]
