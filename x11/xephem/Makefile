@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/25 04:18:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/09/12 02:36:28 jlam Exp $
 
 DISTNAME=	xephem-3.4
 CATEGORIES=	x11
@@ -13,7 +13,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
 LIBSRC=		${WRKDIR}/${DISTNAME}/libastro
 USE_PERL5=	yes
 USE_IMAKE=	yes
-USE_MOTIF=	yes
 
 LICENSE=	no-commercial-use
 
@@ -45,4 +44,5 @@ post-install:
 	done)
 	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/xephem
 
+.include "../../mk/motif.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
