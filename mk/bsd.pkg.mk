@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.173 1998/10/05 00:34:44 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.174 1998/10/05 21:47:02 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1547,7 +1547,7 @@ package-depends:
 .endfor
 .for dep in ${RUN_DEPENDS}
 	@pkg="`${ECHO} \"${dep}\" | ${SED} -e 's/:.*//'`"; \
-	dir="`${ECHO} \"${dep} |\" ${SED} -e 's/[^:]*://'`"; \
+	dir="`${ECHO} \"${dep}\" | ${SED} -e 's/[^:]*://'`"; \
 	if [ -d $$dir ]; then \
 		(cd $$dir ; ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		(cd $$dir ; ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
@@ -1600,8 +1600,8 @@ _DEPENDS_USE:	.USE
 .if defined(DEPENDS_TMP)
 .if !defined(NO_DEPENDS)
 	@for i in ${DEPENDS_TMP}; do \
-		prog=`${ECHO} $$i | ${SED} -e 's/:.*//'`; \
-		dir=`${ECHO} $$i | ${SED} -e 's/[^:]*://'`; \
+		prog="`${ECHO} \"$$i\" | ${SED} -e 's/:.*//'`"; \
+		dir="`${ECHO} \"$$i\" | ${SED} -e 's/[^:]*://'`"; \
 		if expr "$$dir" : '.*:' > /dev/null; then \
 			target=`${ECHO} $$dir | ${SED} -e 's/.*://'`; \
 			dir=`${ECHO} $$dir | ${SED} -e 's/:.*//'`; \
