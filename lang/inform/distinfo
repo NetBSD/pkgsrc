@@ -1,4 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/06/22 03:41:49 nathanw Exp $
+$NetBSD: distinfo,v 1.2 2003/09/16 18:55:04 jmmv Exp $
 
-SHA1 (inform-6.21.2.tar.gz) = e60410b63bb803c2783b54520eb8fff8b96149c9
-Size (inform-6.21.2.tar.gz) = 819128 bytes
+SHA1 (inform-6.21.4.tar.gz) = c9a9a6eccf9658100709a3227ed67ac7ddf988fb
+Size (inform-6.21.4.tar.gz) = 1177122 bytes
+SHA1 (patch-aa) = be6eaa24934669c068be81521a674f60fa508de5
+SHA1 (patch-ab) = 57499217d679affff26b551b367b76fe02a06a64
+SHA1 (patch-ac) = 067b2bea40e29ccf9f58eabd18669c0bd2cbe95f

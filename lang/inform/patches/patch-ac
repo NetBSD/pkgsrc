@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2003/09/16 18:55:07 jmmv Exp $
+
+--- lib/Makefile.in.orig	2003-06-17 16:42:19.000000000 +0200
++++ lib/Makefile.in
+@@ -309,7 +309,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-data-local install-moduleDATA
++install-data-am: install-moduleDATA install-data-local
+ 
+ install-exec-am:
+ 
