@@ -1,10 +1,22 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 17:42:10 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/05/05 14:32:43 jlam Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0nb1
 CATEGORIES=	sysutils x11
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-current/xsrc/xfree/xc/programs/Xserver/hw/xfree86/etc/
 EXTRACT_SUFX=	.shar
+
+# Not sure why ${MASTER_SITE_LOCAL:=${PKGNAME}} doesn't work, but the
+# following does the correct substitution.
+#
+.for subdir in ${PKGNAME}
+MASTER_SITES=	${MASTER_SITE_LOCAL:=${subdir}/}
+.endfor
+
+# The definitive location of the distfile is as below, but it's risky to depend
+# on NetBSD-current files to stay stable, so don't we'll place new copies at
+# MASTER_SITE_LOCAL and update this package accordingly.
+#
+#MASTER_SITES+=	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-current/xsrc/xfree/xc/programs/Xserver/hw/xfree86/etc/
 
 MAINTAINER=	jlam@netbsd.org
 COMMENT=	XFree86 Framebuffer "aperture" driver for NetBSD/i386
