@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2004/05/19 05:42:38 minskim Exp $
+$NetBSD: distinfo,v 1.6 2004/06/07 19:25:58 shannonjr Exp $
 
 SHA1 (OpenSP-1.5.1.tar.gz) = 93bd4f99972c9a50e07c68e3161ed3c25f9a3b22
 Size (OpenSP-1.5.1.tar.gz) = 1418784 bytes
 SHA1 (patch-aa) = 15a4c6051a95b70a5c978f831185382b4bd386f8
+SHA1 (patch-ab) = 25873063e861873b86790a4420216cde8d422a15
