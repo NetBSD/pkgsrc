@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/09/30 04:07:19 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/30 13:45:44 jschauma Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -32,10 +32,10 @@ DIST_SUBDIR=		netscape7/${PKG_LANG}
 WRKSRC=			${WRKDIR}/netscape-installer
 
 .if ${PKG_LANG} != english
-DISTINFO_FILE=		${FILESDIR}/distinfo.${PKG_LANG}
+DISTINFO_FILE=		distinfo.${PKG_LANG}
 .endif
 
-PLIST_SRC=		${FILESDIR}/PLIST.${PKG_LANG} PLIST
+PLIST_SRC=		PLIST.${PKG_LANG} PLIST
 
 pre-fetch:
 	@${CAT} ${FILESDIR}/fetch-message

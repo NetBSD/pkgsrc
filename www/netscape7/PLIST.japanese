@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.japanese,v 1.1 2002/09/29 22:58:45 jschauma Exp $
+@comment $NetBSD: PLIST.japanese,v 1.1 2002/09/30 13:45:46 jschauma Exp $
 lib/netscape/netscape7/chrome/JP.jar
 lib/netscape/netscape7/chrome/ja-JP.jar
 lib/netscape/netscape7/chrome/ja-mac.jar
