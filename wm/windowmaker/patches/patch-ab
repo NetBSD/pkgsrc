@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2001/08/29 22:41:25 jlam Exp $
+$NetBSD: patch-ab,v 1.8 2001/10/05 12:18:58 wiz Exp $
 
---- configure.in.orig	Mon Jul 23 21:43:34 2001
-+++ configure.in	Sat Aug 18 19:57:49 2001
-@@ -220,43 +220,18 @@
+--- configure.in.orig	Fri Oct  5 10:52:05 2001
++++ configure.in	Fri Oct  5 13:59:51 2001
+@@ -244,43 +244,18 @@
  
  dnl List of supported locales
  dnl -------------------------
@@ -55,7 +55,7 @@ $NetBSD: patch-ab,v 1.7 2001/08/29 22:41:25 jlam Exp $
  done
  
  
-@@ -732,8 +707,8 @@
+@@ -706,8 +681,8 @@
      fi
  fi
  

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2001/10/02 08:48:02 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/10/05 12:18:57 wiz Exp $
 
-DISTNAME=		WindowMaker-0.65.1
-PKGNAME=		windowmaker-0.65.1
+DISTNAME=		WindowMaker-0.70.0
+PKGNAME=		windowmaker-0.70.0
 CATEGORIES=		x11 wm
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/source/release/ \
 			ftp://ftp.ics.es.osaka-u.ac.jp/mirrors/WindowMaker/source/release/
@@ -85,7 +85,6 @@ post-install:
 		${PREFIX}/share/doc/WindowMaker
 
 .include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/libproplist/buildlink.mk"
 .include "../../graphics/hermes/buildlink.mk"
 .include "../../graphics/libungif/buildlink.mk"
 .include "../../graphics/jpeg/buildlink.mk"

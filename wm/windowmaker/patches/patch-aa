@@ -1,31 +1,33 @@
-$NetBSD: patch-aa,v 1.4 2001/08/18 18:13:28 tron Exp $
+$NetBSD: patch-aa,v 1.5 2001/10/05 12:18:58 wiz Exp $
 
---- doc/Makefile.am.orig	Wed Jun  6 22:22:55 2001
-+++ doc/Makefile.am	Sat Aug 18 18:24:27 2001
-@@ -3,16 +3,16 @@
+--- doc/Makefile.am.orig	Thu Sep 13 00:11:05 2001
++++ doc/Makefile.am	Fri Oct  5 14:01:28 2001
+@@ -3,17 +3,17 @@
  SUBDIRS = sk
  
  man_MANS = \
 -	geticonset.1x \
--	setstyle.1x \
--	wxpaste.1x \
 -	getstyle.1x \
+-	seticons.1x \
+-	setstyle.1x \
+-	wcopy.1x \
 -	wdwrite.1x \
+-	wmaker.1x \
 -	wmsetbg.1x \
 -	wsetfont.1x \
--	seticons.1x \
--	wmaker.1x \
--	wxcopy.1x
+-	wxcopy.1x \
+-	wxpaste.1x
 +	geticonset.1 \
-+	setstyle.1 \
-+	wxpaste.1 \
 +	getstyle.1 \
++	seticons.1 \
++	setstyle.1 \
++	wcopy.1 \
 +	wdwrite.1 \
++	wmaker.1 \
 +	wmsetbg.1 \
 +	wsetfont.1 \
-+	seticons.1 \
-+	wmaker.1 \
-+	wxcopy.1
++	wxcopy.1 \
++	wxpaste.1
  
  EXTRA_DIST = $(man_MANS)
  
