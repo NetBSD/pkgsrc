@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2005/01/17 14:42:35 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.30 2005/01/20 13:37:48 xtraeme Exp $
 
 DISTNAME=		mysql-4.1.9
 CATEGORIES=		databases
@@ -51,7 +51,6 @@ CONFIGURE_ARGS+=	--without-bench
 CONFIGURE_ARGS+=	--with-low-memory
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-vio
-CONFIGURE_ARGS+=	--without-mysqlfs
 
 CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET}
 CONFIGURE_ARGS+=	--with-extra-charsets=${MYSQL_EXTRA_CHARSET}
