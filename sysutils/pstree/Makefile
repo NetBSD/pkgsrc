@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/05/01 22:06:33 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/02 15:37:21 jtb Exp $
 #
 
 DISTNAME=	pstree-2.16
@@ -13,7 +13,7 @@ CONFLICTS+=	psmisc-[0-9]*
 WRKSRC=		${WRKDIR}
 
 do-build:
-		cd ${WRKSRC}; ${CC} -o pstree pstree.c
+		cd ${WRKSRC}; ${CC} ${CFLAGS} -o pstree pstree.c
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/pstree ${PREFIX}/bin
