@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2002/04/04 11:56:47 tron Exp $
+# $NetBSD: Makefile,v 1.7 2002/04/08 12:24:53 wiz Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 CATEGORIES=	www
 MASTER_SITES=	ftp://opera.panix.com/pub/linux/${OPERA_DIR}/ \
 		ftp://ftp.hu-berlin.de/pub/www/opera/linux/${OPERA_DIR}/ \
 		http://ftp.sunet.se/pub/www/clients/Opera/linux/${OPERA_DIR}/ \
-		http://ftp.opera.com/pub/opera/linux/${OPERA_DIR}/
+		http://ftp.opera.com/pub/opera/linux/${OPERA_DIR}/ \
+		http://opera.online.no/linux/${OPERA_DIR}/ \
+		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/linux/${OPERA_DIR}/
 EXTRACT_SUFX=	.rpm
 DISTFILES=	opera-${OPERA_DIST_VERSION}.${OPERA_ARCH}${EXTRACT_SUFX}
 
