@@ -1,48 +1,13 @@
-$NetBSD: patch-af,v 1.1 2002/10/06 13:03:58 magick Exp $
+$NetBSD: patch-af,v 1.2 2002/11/24 17:23:41 magick Exp $
 
---- epgvbi/btdrv4linux.c.orig	Sun Oct  6 14:32:01 2002
+--- epgvbi/btdrv4linux.c.orig	Sun Nov 24 17:56:26 2002
 +++ epgvbi/btdrv4linux.c
-@@ -145,6 +145,9 @@
- 
- static void * BtDriver_Main( void * foo );
- static void BtDriver_OpenVbiBuf( void );
-+#ifdef __NetBSD__
-+int BtDriver_StartCapture(void);
-+#endif
- 
- #ifdef __NetBSD__
- // ---------------------------------------------------------------------------
-@@ -481,6 +484,7 @@
-    char devName[DEV_MAX_NAME_LEN];
-    ulong lfreq;
-    bool result = FALSE;
-+   uint  norm;
- 
+@@ -516,7 +516,7 @@
+    norm  = freq >> 24;
     lfreq = freq & 0xffffff;
-    if (BtDriver_SetInputSource(inputIdx, norm, pIsTuner))
-@@ -1358,13 +1362,15 @@
  
-       if (pVbiBuf->doQueryFreq && (vbi_fdin != -1))
+-   if (DevKeptOpen || BtDriver_SetInputSource(inputIdx, norm, pIsTuner))
++   if (devKeptOpen || BtDriver_SetInputSource(inputIdx, norm, pIsTuner))
+    {
+       if ( (devKeptOpen || *pIsTuner) && (lfreq != 0) )
        {
-+#ifndef __NetBSD__
-          struct video_channel vchan;
-+#endif __NetBSD__
-          ulong lfreq;
- 
-          if (ioctl(vbi_fdin, VIDIOCGFREQ, &lfreq) == 0)
-          {
-             dprintf1("BtDriver-Main: QueryChannel got %.2f MHz\n", (double)lfreq/16);
--
-+#ifndef __NetBSD__
-             // get TV norm set in the tuner (channel #0)
-             memset(&vchan, 0, sizeof(vchan));
-             if (ioctl(vbi_fdin, VIDIOCGCHAN, &vchan) == 0)
-@@ -1374,7 +1380,7 @@
-             }
-             else
-                debug1("BtDriver-Main: VIDIOCGCHAN error: %s", strerror(errno));
--
-+#endif //__NetBSD__	    
-             pVbiBuf->vbiQueryFreq = lfreq;
-          }
-          else
