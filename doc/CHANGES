@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9251 2005/02/21 21:58:11 adrianp Exp $
+$NetBSD: CHANGES,v 1.9252 2005/02/21 22:10:38 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1010,3 +1010,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dtcpclient-20040923nb1 [hamajima 2005-02-21]
 	Updated xorg-server to 6.8.1nb3 [hira 2005-02-21]
 	Added ap2-auth-ldap-2.16 [adrianp 2005-02-21]
+	Removed courier-auth [jlam 2005-02-21]
+	Removed courier-authldap [jlam 2005-02-21]
+	Removed courier-authmysql [jlam 2005-02-21]
+	Removed courier-authpgsql [jlam 2005-02-21]
