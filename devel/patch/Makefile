@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/01/07 10:33:26 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/01/07 10:55:51 wiz Exp $
 #
 
 DISTNAME=	patch-2.5.4
@@ -34,6 +34,11 @@ do-patch:
 		{print $$0;}'						\
 		< ${WRKSRC}/pch.c.orig 					\
 		> ${WRKSRC}/pch.c
+
+.if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
+post-install:
+	${LN} -s ${GNU_PROGRAM_PREFIX}patch ${PREFIX}/bin/gpatch
+.endif
 
 .include "../../mk/bsd.pkg.mk"
 
