@@ -1,10 +1,12 @@
---- gas/configure.in.dist	Sun Oct  1 20:59:05 2000
-+++ gas/configure.in	Sun Oct  1 20:59:46 2000
-@@ -150,6 +150,7 @@
-       i386-sequent-bsd*)    fmt=aout em=dynix bfd_gas=yes ;;
+$NetBSD: binutils-ab,v 1.2 2001/10/21 12:24:16 kent Exp $
+
+--- gas/configure.in.dist	Mon Jun 11 19:04:44 2001
++++ gas/configure.in
+@@ -240,6 +240,7 @@
+       i386-*-beoself* | i386-*-beos*) fmt=elf bfd_gas=yes ;;
        i386-*-bsd*)          fmt=aout em=386bsd ;;
        i386-*-netbsd0.8)     fmt=aout em=386bsd ;;
 +      i386-*-netbsdpe*)     fmt=coff em=pe bfd_gas=yes ;;
        i386-*-netbsd*)       fmt=aout em=nbsd bfd_gas=yes;;
        i386-*-openbsd*)      fmt=aout em=nbsd bfd_gas=yes;;
-       i386-*-linux*aout* | i386-*-linuxoldld)   fmt=aout em=linux ;;
+       i386-*-linux*aout* | i386-*-linux*oldld)   fmt=aout em=linux ;;
