@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/06/19 20:39:10 jlam Exp $
+
+SHA1 (ssmtp_2.60.3.tar.gz) = 09aad88a61f3ee014b52e0daa3e8749d612ceaef
+Size (ssmtp_2.60.3.tar.gz) = 159289 bytes
+SHA1 (patch-aa) = 73681fd5585fe520fb9620e2f8358c41ad42cfd8
+SHA1 (patch-ab) = 76b2669443ff3ac488c18f3c7877cf621f7b3708
+SHA1 (patch-ac) = 1eaf754bffa3c1612ebde8cd58810d3ae1ee6ce4
+SHA1 (patch-ad) = 92c666b84e8fa20103103f6d24f887a587d57a4c
+SHA1 (patch-ae) = ef626358229731e6afff2e194928780e5fc908a3
