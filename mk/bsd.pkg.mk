@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.679 2001/03/07 09:52:53 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.680 2001/03/07 14:57:49 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1477,13 +1477,15 @@ do-patch: uptodate-digest
 					if [ -f ${PATCH_SUM_FILE} ]; then \
 						filename=`expr $$i : '.*/\(.*\)'`; \
 						algsum=`${AWK} 'NF == 4 && $$2 == "('$$filename')" && $$3 == "=" {print $$1 " " $$4}' ${PATCH_SUM_FILE} || ${TRUE}`; \
-						alg=`${ECHO} $$algsum | ${AWK} '{ print $$1 }'`; \
-						recorded=`${ECHO} $$algsum | ${AWK} '{ print $$2 }'`; \
-						calcsum=`${SED} -e '/\$$NetBSD.*/d' $$i | ${DIGEST} $$alg`; \
-						if [ ${PATCH_DEBUG_TMP} = yes ]; then	\
-							${ECHO_MSG} "=> Verifying $$filename (using digest algorithm $$alg)" ; \
+						if [ "X$$algsum" != "X" ]; then \
+							alg=`${ECHO} $$algsum | ${AWK} '{ print $$1 }'`; \
+							recorded=`${ECHO} $$algsum | ${AWK} '{ print $$2 }'`; \
+							calcsum=`${SED} -e '/\$$NetBSD.*/d' $$i | ${DIGEST} $$alg`; \
+							if [ ${PATCH_DEBUG_TMP} = yes ]; then	\
+								${ECHO_MSG} "=> Verifying $$filename (using digest algorithm $$alg)" ; \
+							fi;		\
 						fi;			\
-						if [ "X$$recorded" = "X" ]; then \
+						if [ "X$$algsum" = "X" -o "X$$recorded" = "X" ]; then \
 							${ECHO_MSG} "**************************************"; \
 							${ECHO_MSG} "Ignoring unknown patch file: $$i"; \
 							${ECHO_MSG} "**************************************"; \
@@ -2519,20 +2521,22 @@ checksum: fetch uptodate-digest
 		  for file in "" ${_CKSUMFILES}; do			\
 		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
 			alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DIGEST_FILE}`; \
-			CKSUM=`${DIGEST} $$alg < $$file`;		\
-			CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')"{print $$4;}' ${DIGEST_FILE}`; \
-			if [ "$$CKSUM2" = "" ]; then			\
+			if [ "X$$alg" = "X" ]; then			\
 				${ECHO_MSG} "=> No checksum recorded for $$file."; \
 				OK="false";				\
-			elif [ "$$CKSUM2" = "IGNORE" ]; then		\
-				${ECHO_MSG} "=> Checksum for $$file is set to IGNORE in checksum file even though"; \
-				${ECHO_MSG} "   the file is not in the "'$$'"{IGNOREFILES} list."; \
-				OK="false";				\
-			elif [ "$$CKSUM" = "$$CKSUM2" ]; then		\
-				${ECHO_MSG} "=> Checksum OK for $$file."; \
 			else						\
-				${ECHO_MSG} "=> Checksum mismatch for $$file."; \
-				OK="false";				\
+				CKSUM=`${DIGEST} $$alg < $$file`;	\
+				CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')"{print $$4;}' ${DIGEST_FILE}`; \
+				if [ "$$CKSUM2" = "IGNORE" ]; then	\
+					${ECHO_MSG} "=> Checksum for $$file is set to IGNORE in checksum file even though"; \
+					${ECHO_MSG} "   the file is not in the "'$$'"{IGNOREFILES} list."; \
+					OK="false";			\
+				elif [ "$$CKSUM" = "$$CKSUM2" ]; then	\
+					${ECHO_MSG} "=> Checksum OK for $$file."; \
+				else					\
+					${ECHO_MSG} "=> Checksum mismatch for $$file."; \
+					OK="false";			\
+				fi;					\
 			fi;						\
 		  done;							\
 		  for file in "" ${_IGNOREFILES}; do			\
