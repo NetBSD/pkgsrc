@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.8 2005/02/13 07:24:22 grant Exp $
+$NetBSD: patch-ad,v 1.9 2005/02/14 11:20:13 grant Exp $
 
---- docs/Makefile.in.orig	2005-02-07 08:28:08.000000000 +1100
+--- docs/Makefile.in.orig	2005-02-14 09:40:05.000000000 +1100
 +++ docs/Makefile.in
-@@ -179,6 +179,8 @@ EXTRA_DIST = clamdoc.pdf man clamav-mirr
+@@ -182,6 +182,8 @@ EXTRA_DIST = clamdoc.pdf man clamav-mirr
  man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamd.conf.5 man/clamdscan.1 man/clamav-milter.8 man/freshclam.conf.5
  all: all-am
  
 +@BUILD_CLAMD_TRUE@@HAVE_MILTER_TRUE@MILTER_MANS = man/clamav-milter.8
 +
  .SUFFIXES:
- $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
+ $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ $(srcdir)/Makefile.am  $(am__configure_deps)
  	@for dep in $?; do \
