@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2001/04/02 16:23:39 itojun Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/27 13:40:34 itojun Exp $
 #
 
-DISTNAME=	www6to4-1.3p1
+DISTNAME=	www6to4-1.4
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.pasta.cs.uit.no/pub/Vermicelli/
 
@@ -14,12 +14,6 @@ ALL_TARGET=	# empty
 .include "../../mk/bsd.prefs.mk"
 # always IPv6 ready
 BUILD_DEFS+=	USE_INET6
-
-post-extract:
-	for i in www6to4.conf www6to4_forward.conf; do \
-		${MV} ${WRKSRC}/$$i ${WRKSRC}/$$i.dist; \
-		${TR} -d '\015' <${WRKSRC}/$$i.dist >${WRKSRC}/$$i; \
-	done
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/www6to4
