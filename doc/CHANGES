@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3389 2003/09/15 22:17:21 recht Exp $
+$NetBSD: CHANGES,v 1.3390 2003/09/16 01:33:33 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3707,3 +3707,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rocksndiamonds to 3.0.4 [adam 2003-09-15]
 	Updated rocksndiamonds-sdl to 3.0.4 [adam 2003-09-15]
 	Added py-TPG 2.1.6 [recht 2003-09-15]
+	Removed samba20 [jlam 2003-09-16]
