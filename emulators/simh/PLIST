@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/10/19 21:06:04 thorpej Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/10/19 21:38:09 thorpej Exp $
 bin/simh-altair
 bin/simh-altairz80
 bin/simh-eclipse
@@ -49,4 +49,5 @@ share/doc/simh/simh_doc.txt
 share/doc/simh/simh_swre.txt
 share/doc/simh/system3.txt
 share/doc/simh/vax_doc.txt
+share/doc/simh/xq_README.txt
 @dirrm share/doc/simh
