@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 2000/01/21 01:35:42 hubertf Exp $
+$NetBSD: md5,v 1.3 2000/01/23 01:49:55 wiz Exp $
 
-MD5 (upclient-4.07.tar.gz) = 80988cc56ef4ac5ad25649987ef45940
+MD5 (upclient-4.08.tar.gz) = 3fbe8bb45b581423602a66bdd5d558d4
