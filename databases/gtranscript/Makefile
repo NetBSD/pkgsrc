@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2003/07/17 21:28:11 grant Exp $
+# $NetBSD: Makefile,v 1.20 2003/09/19 23:08:24 dent Exp $
 #
 
 DISTNAME=	gtranscript-0.0.1
 PKGREVISION=	4
 CATEGORIES=	databases
-MASTER_SITES=	http://gtranscript.linuxbox.com/ \
-		ftp://ftp.matrix.com.br/pub/linuxberg/files/gnome/office/ \
+MASTER_SITES=	ftp://ftp.matrix.com.br/pub/linuxberg/files/gnome/office/ \
 		ftp://ftp.abordo.com.br/pub/linuxberg/files/gnome/office/ \
 		ftp://ftp.interpath.net/pub/linuxberg/files/gnome/office/ \
 		ftp://ftp.iinet.net.au/mirrors1/berg/files/gnome/office/ \
@@ -15,7 +14,7 @@ MASTER_SITES=	http://gtranscript.linuxbox.com/ \
 		ftp://ftp.sunsite.auc.dk/disk2/linuxberg.com/files/gnome/office/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://gtranscript.linuxbox.com/
+HOMEPAGE=	http://gtranscript.sourceforge.net/
 COMMENT=	SQL Database Client with GNOME frontend
 
 GNU_CONFIGURE=	YES

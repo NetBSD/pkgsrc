@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:47:25 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/19 23:08:30 dent Exp $
 
 DISTNAME=	dcdflib.f-1.1
 WRKSRC=		${WRKDIR}/dcdflib.f/src
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	ftp://odin.mdacc.tmc.edu/pub/source/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://odin.mdacc.tmc.edu/anonftp/page_2.html
+HOMEPAGE=	http://odin.mdacc.tmc.edu/anonftp/
 COMMENT=	Library of Fortran Routines for Cumulative Distribution Functions
 
 USE_FORTRAN=	yes
