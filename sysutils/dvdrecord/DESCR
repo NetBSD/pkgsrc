@@ -1,0 +1,5 @@
+Dvdrtools is a fork of cdrtools, with the primary goal of supporting
+writable DVD drives.
+The original version of the DVD driver was written by Nicolae Mihalache.
+It is presently being developed by bero@gnu.org using a Pioneer DVR-A03 DVD
+writer; any other MMC compliant hardware is likely to work.
