@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/10/01 05:57:05 itojun Exp $
+
+--- configure-	2003-10-01 01:09:30.000000000 +0900
++++ configure	2003-10-01 01:09:54.000000000 +0900
+@@ -11299,7 +11299,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpopt  $LIBS"
++LIBS="-lpopt -lintl $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ #include "confdefs.h"
