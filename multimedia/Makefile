@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/26 12:39:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/26 12:44:50 jmmv Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -11,6 +11,7 @@ SUBDIR+=	gst-plugins
 SUBDIR+=	gstreamer
 SUBDIR+=	kmplayer
 SUBDIR+=	mencoder
+SUBDIR+=	mjpegtools
 SUBDIR+=	moz-mplayer
 SUBDIR+=	mplayer
 SUBDIR+=	mplayer-share
