@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4660 2004/02/01 17:47:28 snj Exp $
+$NetBSD: CHANGES,v 1.4661 2004/02/01 22:29:05 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -545,3 +545,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmms-mad to 0.5.5nb1 [jmmv 2004-02-01]
 	Updated gcc3 to 3.3.2 [jlam 2004-02-01]
 	Updated naim to 0.11.6.5 [snj 2004-02-01]
+	Updated TeXmacs to 1.0.3.2 [recht 2004-02-01]
