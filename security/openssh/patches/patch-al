@@ -1,0 +1,19 @@
+$NetBSD: patch-al,v 1.3 2004/08/04 06:43:52 minskim Exp $
+
+--- openbsd-compat/getrrsetbyname.c.orig	Mon Feb 23 22:51:07 2004
++++ openbsd-compat/getrrsetbyname.c
+@@ -47,7 +47,7 @@
+ 
+ #include "includes.h"
+ 
+-#ifndef HAVE_GETRRSETBYNAME
++#if !defined(HAVE_GETRRSETBYNAME) && !defined(__INTERIX)
+ 
+ #include "getrrsetbyname.h"
+ 
+@@ -574,4 +574,4 @@ count_dns_rr(struct dns_rr *p, u_int16_t
+ 	return (n);
+ }
+ 
+-#endif /* !defined(HAVE_GETRRSETBYNAME) */
++#endif /* !defined(HAVE_GETRRSETBYNAME) && !defined(__INTERIX) */

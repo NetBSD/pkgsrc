@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.8 2004/08/04 06:43:52 minskim Exp $
+
+--- openbsd-compat/getrrsetbyname.h.orig	Mon Jan 26 23:40:35 2004
++++ openbsd-compat/getrrsetbyname.h
+@@ -50,7 +50,7 @@
+ 
+ #include "includes.h"
+ 
+-#ifndef HAVE_GETRRSETBYNAME
++#if !defined(HAVE_GETRRSETBYNAME) && !defined(__INTERIX)
+ 
+ #include <sys/types.h>
+ #include <netinet/in.h>
+@@ -105,6 +105,6 @@ struct rrsetinfo {
+ int		getrrsetbyname(const char *, unsigned int, unsigned int, unsigned int, struct rrsetinfo **);
+ void		freerrset(struct rrsetinfo *);
+ 
+-#endif /* !defined(HAVE_GETRRSETBYNAME) */
++#endif /* !defined(HAVE_GETRRSETBYNAME) && !defined(__INTERIX) */
+ 
+ #endif /* _GETRRSETBYNAME_H */

@@ -1,0 +1,18 @@
+$NetBSD: patch-ap,v 1.3 2004/08/04 06:43:53 minskim Exp $
+
+--- session.c.orig	Fri Apr 16 07:47:55 2004
++++ session.c
+@@ -1272,11 +1272,13 @@ do_setusercontext(struct passwd *pw)
+ 			perror("setgid");
+ 			exit(1);
+ 		}
++#ifndef __INTERIX
+ 		/* Initialize the group list. */
+ 		if (initgroups(pw->pw_name, pw->pw_gid) < 0) {
+ 			perror("initgroups");
+ 			exit(1);
+ 		}
++#endif /* __INTERIX */
+ 		endgrent();
+ # ifdef USE_PAM
+ 		/*
