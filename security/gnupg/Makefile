@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/10/11 09:57:30 itojun Exp $
+# $NetBSD: Makefile,v 1.16 2000/10/11 09:57:45 itojun Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.gnupg.org/pub/gcrypt/gnupg/
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.gnupg.org/
 
-#DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
+DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
 
 CRYPTO=		yes
 GNU_CONFIGURE=	yes
