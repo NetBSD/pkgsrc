@@ -1,67 +1,98 @@
-$NetBSD: patch-aa,v 1.4 2000/08/30 19:15:59 jwise Exp $
+$NetBSD: patch-aa,v 1.5 2001/02/28 12:29:30 wiz Exp $
 
---- tkcvs/doinstall.orig	Tue Jan  9 22:17:52 1996
-+++ tkcvs/doinstall	Fri Oct 31 09:21:23 1997
-@@ -5,31 +5,31 @@
+--- doinstall.tcl.orig	Fri Sep 29 06:44:53 2000
++++ doinstall.tcl
+@@ -2,5 +2,5 @@
+ #-*-tcl-*-
+ # the next line restarts using wish \
+-exec wish "$0" -- ${1+"$@"}
++exec tclsh "$0" "$@"
+ 
+ #
+@@ -19,23 +19,6 @@
+   } else {
+     set BINDIR [file join $INSTALLROOT bin]
+-    set LIBDIR [file join $INSTALLROOT lib]
+-    set MANDIR [file join $INSTALLROOT man mann]
+-  }
+-
+-  set msg(1) [file join $BINDIR $TKCVS]
+-  set msg(2) [file join $BINDIR $TKDIFF]
+-  set msg(3) [file join $LIBDIR tkcvs *.tcl]
+-  set msg(4) [file join $LIBDIR tkcvs bitmaps *.gif]
+-  if {$tcl_platform(platform) == "unix"} {
+-     set msg(5) [file join $MANDIR tkcvs.n]
+-  }
+-  foreach m [lsort [array names msg]] {
+-    if {[winfo exists .messages.$m]} {
+-      destroy .messages.$m
+-    }
+-    global var$m
+-    set var$m $msg($m)
+-    label .messages.$m -text $msg($m) -justify left -textvariable var$m
+-    pack .messages.$m -side top -anchor w
++    set LIBDIR [file join $INSTALLROOT share]
++    set MANDIR [file join $INSTALLROOT man man1]
+   }
+ }
+@@ -76,6 +59,6 @@
+     file attributes [file join $BINDIR $TKDIFF] -permissions 0755
+     file mkdir $MANDIR
+-    puts "Installing manpage tkcvs.n in $MANDIR"
+-    file copy -force [file join tkcvs tkcvs.n] $MANDIR
++    puts "Installing manpage tkcvs.1 in $MANDIR"
++    file copy -force [file join tkcvs tkcvs.1] $MANDIR
+   }
+ 
+@@ -95,9 +78,4 @@
+   cd ..
+   puts "Finished!"
+-
+-  destroy .bottom.do
+-  destroy .bottom.not
+-  button .bottom.done -text "Finished!" -command {destroy .}
+-  pack .bottom.done
+ }
+ 
+@@ -105,10 +83,5 @@
+ 
+ # Check Tcl/TK version
+-if {$tk_version < 8.1} {
+-   tk_dialog .wrongversion "Tcl/Tk too old" \
+-   "TkCVS requires Tcl/Tk 8.1 or better!" \
+-   error 0 {Bye Bye}
+-   exit 1
+-}
++# This is done by the package Makefile
  
  # Some rational and reasonable defaults.
+@@ -128,27 +101,5 @@
+   set INSTALLROOT [lindex $argv 0]
+ }
+-frame .title
+-label .title.lbl -text "TkCVS Installer" -font {Helvetica -14 bold}
+-pack .title -side top
+-pack .title.lbl -side top
+-frame .entry
+-label .entry.instlbl -text "Installation Root"
+-entry .entry.instent -textvariable INSTALLROOT
+-bind .entry.instent <Return> {show_paths $INSTALLROOT}
+-pack .entry -side top -pady 10
+-pack .entry.instlbl -side left
+-pack .entry.instent -side left
+-
+-frame .messages -relief groove -bd 2
+-pack .messages -side top -expand y -fill x
+-label .messages.adv -text "These files will be installed:"
+-pack .messages.adv -side top
+-show_paths $INSTALLROOT
+-
+-frame .bottom
+-button .bottom.do -text "Install" -command {doinstall $INSTALLROOT}
+-button .bottom.not -text "Cancel" -command {destroy .}
+-pack .bottom -side top
+-pack .bottom.do -side left
+-pack .bottom.not -side left
  
--INSTALLDIR=/usr/local/lib
--BINDIR=/usr/local/bin
--MANDIR=/usr/local/man/mann
-+INSTALLDIR=${PREFIX}/share
-+BINDIR=${PREFIX}/bin
-+MANDIR=${PREFIX}/man/man1
- 
- INSTALL_PROG=./install-sh
- 
- # This must be an X based editor -- do NOT use vi except via an xterm
- # or shelltool.
- 
--EDITOR=nedit
-+EDITOR="xedit"
- 
- # Find a Tk interpreter.
-  
--WISH=`which wish4.0`
-+WISH=`which wish`
- if [ ! -f $WISH ]; then
--  WISH=`which wish4.1`
-+  WISH=`which wish4.1`
- fi
- if [ ! -f $WISH ]; then
--  echo "I cant find a Tk interpreter on your system"
-+  echo "I cant find a usefull Tk interpreter on your system"
-   exit 1
- fi
- 
- # Find where the global bitmaps are.
- 
--for GDIR in /usr/include/X11/bitmaps /usr/openwin/include/X11/bitmaps /usr/X11/include/bitmaps /usr/include/bitmaps /usr/local/include/bitmaps
-+for GDIR in /usr/X11R6/include/X11/bitmaps /usr/openwin/include/X11/bitmaps /usr/X11/include/bitmaps /usr/include/bitmaps ${PREFIX}/include/bitmaps
- do
-   if [ -d "$GDIR" ]; then
-     break
-@@ -62,10 +62,10 @@
- 
- # Some directories we have to create.
- 
--LDIR=${INSTALLDIR}/bitmaps
- TCDIR=${INSTALLDIR}/tkcvs
--mkdir -p $LDIR $TCDIR
--for dir in $LDIR $TCDIR
-+LDIR=${TCDIR}/bitmaps
-+mkdir -p $LDIR $TCDIR 
-+for dir in $TCDIR $LDIR
- do
-   if [ ! -d $dir ]; then
-     echo "I cant create the directory $dir"
-@@ -99,7 +99,7 @@
-   fi
- done
- 
--for f in *.n ../tkdiff/*.n
-+for f in *.1 ../tkdiff/*.1
- do
-         $INSTALL_PROG -m 444 $f $MANDIR
- done
++show_paths $INSTALLROOT
++doinstall $INSTALLROOT
