@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.837 2001/10/29 15:10:14 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.838 2001/10/29 19:21:18 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1525,14 +1525,15 @@ AUTOMAKE_PATTERNS+=	*.m4
 AUTOMAKE_PATTERNS+=	*.in
 AUTOMAKE_PATTERNS+=	configure
 _AUTOMAKE_PATTERNS_FIND=	\
-	${AUTOMAKE_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1}
+	\( ${AUTOMAKE_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
 
 _CONFIGURE_PREREQ+=	suppress-automake
 suppress-automake:
 .  if defined(HAS_CONFIGURE)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${WRKSRC};							\
-	${FIND} . ${_AUTOMAKE_PATTERNS_FIND} | ${XARGS} ${TOUCH} ${TOUCH_ARGS}
+	${FIND} . ${_AUTOMAKE_PATTERNS_FIND} -print |			\
+		${XARGS} ${TOUCH} ${TOUCH_ARGS}
 .  else
 	${_PKG_SILENT}${_PKG_DEBUG}${TRUE}
 .  endif
