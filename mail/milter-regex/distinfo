@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/20 17:03:47 manu Exp $
+$NetBSD: distinfo,v 1.2 2004/03/03 21:09:52 manu Exp $
 
-SHA1 (milter-regex-0.6.tar.gz) = 02056a9ab11fb9279ae9baeaf164114dc5f42954
-Size (milter-regex-0.6.tar.gz) = 9100 bytes
+SHA1 (milter-regex-1.2.tar.gz) = 7420da795ad89a7cf34b4316c1655a792a54a83a
+Size (milter-regex-1.2.tar.gz) = 15371 bytes
