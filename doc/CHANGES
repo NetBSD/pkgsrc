@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2915 2003/07/28 22:39:18 itojun Exp $
+$NetBSD: CHANGES,v 1.2916 2003/07/29 11:19:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3049,3 +3049,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated falcons-eye to 1.9.3nb3 [wiz 2003-07-28]
 	Updated fluxbox to 0.9.4 [hubertf 2003-07-28]
 	Updated nsd to 1.2.2 [itojun 2003-07-28]
+	Updated stunnel to 4.04nb1 [jmmv 2003-07-29]
