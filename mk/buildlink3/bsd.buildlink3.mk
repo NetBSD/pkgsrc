@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.71 2004/02/04 22:31:54 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.72 2004/02/05 00:00:05 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -553,8 +553,8 @@ _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 	-e "/^dependency_libs=/s,${X11BASE}\(/[^ 	]*/lib[^/ 	]*\.la\),${BUILDLINK_X11_DIR}\\1,g" \
 	-e "/^dependency_libs=/s,${LOCALBASE}\(/[^ 	]*/lib[^/ 	]*\.la\),${BUILDLINK_DIR}\\1,g" \
 	-e "/^dependency_libs=/s,-L/usr/lib[^/ 	]*[ 	]*,,g"		\
-	-e "/^dependency_libs=/s,-L${X11BASE}/[^/ 	]*[ 	]*,,g"	\
-	-e "/^dependency_libs=/s,-L${LOCALBASE}/[^/ 	]*[ 	]*,,g"
+	-e "/^dependency_libs=/s,-L${X11BASE}/[^ 	]*[ 	]*,,g"	\
+	-e "/^dependency_libs=/s,-L${LOCALBASE}/[^ 	]*[ 	]*,,g"
 .  if (${PKG_INSTALLATION_TYPE} == "overwrite") ||			\
       !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[nN][oO])
 #
