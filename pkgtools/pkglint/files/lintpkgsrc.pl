@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.54 2001/06/21 15:53:54 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.55 2001/07/07 18:21:29 dmcmahill Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -27,12 +27,12 @@ my(	%pkg,			# {$ver} ->{restricted} ->{dir} ->{BROKEN}
 
 $ENV{PATH} .= ':/usr/sbin';
 
-if (! &getopts('BDK:LM:P:RSVdg:hilmopru', \%opt) || $opt{'h'} ||
+if (! &getopts('BDK:LM:OP:RSVdg:hilmopru', \%opt) || $opt{'h'} ||
 	! ( defined($opt{'d'}) || defined($opt{'g'}) || defined($opt{'i'}) ||
 	    defined($opt{'l'}) || defined($opt{'m'}) || defined($opt{'o'}) ||
 	    defined($opt{'p'}) || defined($opt{'r'}) || defined($opt{'u'}) ||
 	    defined($opt{'B'}) || defined($opt{'D'}) || defined($opt{'R'}) ||
-	    defined($opt{'S'}) || defined($opt{'V'}) ))
+	    defined($opt{'O'}) || defined($opt{'S'}) || defined($opt{'V'}) ))
     { &usage_and_exit; }
 $| = 1;
 
@@ -101,7 +101,7 @@ if ($opt{'D'} && @ARGV)
 
     # List obsolete or NO_BIN_ON_FTP/RESTRICTED prebuilt packages
     #
-    if ($opt{'p'} || $opt{'R'} || $opt{'V'})
+    if ($opt{'p'} || $opt{'O'} || $opt{'R'} || $opt{'V'})
 	{
 	if ($opt{'V'})
 	    {
@@ -116,7 +116,7 @@ if ($opt{'D'} && @ARGV)
 		}
 	    close(VULN);
 	    }
-	if ($opt{'p'} || $opt{'R'})
+	if ($opt{'p'} || $opt{'O'} || $opt{'R'})
 	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
 	@prebuilt_pkgdirs = ($default_vars->{'PACKAGES'});
 	while (@prebuilt_pkgdirs)
@@ -287,6 +287,11 @@ sub check_prebuilt_packages
 		($chkver) = (reverse sort keys %{$pkg{$pkgname}});
 		}
 	    if ($opt{'R'} && defined $pkg{$pkgname}{$chkver}->{'restricted'})
+		{
+		print "$File::Find::dir/$_\n";
+		push(@matched_prebuiltpackages, "$File::Find::dir/$_");
+		}
+	    if ($opt{'O'} && defined $pkg{$pkgname}{$chkver}->{'osversion_specific'})
 		{
 		print "$File::Find::dir/$_\n";
 		push(@matched_prebuiltpackages, "$File::Find::dir/$_");
@@ -643,6 +648,8 @@ sub parse_makefile_pkgsrc
 	    if (defined $vars->{'NO_BIN_ON_FTP'} ||
 		defined $vars->{'RESTRICTED'})
 		{ $pkg{$1}{$2}{'restricted'} = 1; }
+	    if (defined $vars->{'OSVERSION_SPECIFIC'})
+		{ $pkg{$1}{$2}{'osversion_specific'} = 1; }
 	    if (defined $vars->{'BROKEN'})
 		{ $pkg{$1}{$2}{'BROKEN'} = $vars->{'BROKEN'}; }
 	    if ($file =~ m:([^/]+)/([^/]+)/Makefile$:)
@@ -1126,8 +1133,9 @@ Installed package options:		Distfile options:
 
 Prebuilt package options:		Makefile options:
   -p : List old/obsolete		  -B : List packages marked as 'BROKEN'
-  -R : List NO_BIN_ON_FTP/RESTRICTED	  -d : Check 'DEPENDS' up to date
-  -V : List known vulnerabilities	  -S : List packages not in 'SUBDIRS'
+  -O : List OSVERSION_SPECIFIC		  -d : Check 'DEPENDS' up to date
+  -R : List NO_BIN_ON_FTP/RESTRICTED	  -S : List packages not in 'SUBDIRS'
+  -V : List known vulnerabilities
 
 Misc:
   -g file : Generate 'pkgname pkgdir pkgver' map in file
