@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/30 08:18:27 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/30 16:23:59 taca Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -20,11 +20,13 @@ USE_BUILDLINK_ONLY=	# defined
 
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/readline
 USE_RUBY_EXTCONF=	yes
+RUBY_DOCS=		README README.ja
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/readline/ja
-	${INSTALL_DATA} ${RUBY_WRKSRC}/ext/readline/README \
-		${RUBY_DOCDIR}/readline/ja
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/readline
+.for file in ${RUBY_DOCS}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${RUBY_DOCDIR}/readline
+.endfor
 
 .include "../../lang/ruby-base/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
