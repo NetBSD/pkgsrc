@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/01/13 19:33:57 tv Exp $
+# $NetBSD: Makefile,v 1.8 2001/01/13 19:34:49 tv Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/02/10 18:13:21 motoyuki Exp $
 
 DISTNAME=	mh-6.8.4-JP-3.03
@@ -12,7 +12,7 @@ MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 
 DEPENDS=	ja-less-332:../../japanese/less
 
-CONFLICTS=	nmh-*
+CONFLICTS=	nmh-* ja-mh-*_JP_*
 
 .include "../../mk/bsd.prefs.mk"
 
