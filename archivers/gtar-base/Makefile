@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/11/20 16:57:54 bouyer Exp $
+# $NetBSD: Makefile,v 1.22 2002/11/22 12:05:05 bouyer Exp $
 #
 
 DISTNAME=       tar-1.13.25
@@ -15,6 +15,7 @@ COMMENT=	The GNU tape archiver with remote magnetic tape support
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
+MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--program-prefix=g --with-catgets
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 
