@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:55:01 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/26 19:57:58 wiz Exp $
 
 DISTNAME=	korganizer-1.1.2
 PKGREVISION=	2
@@ -11,7 +11,7 @@ MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	Organizer application for the KDE integrated X11 desktop
 
-DEPENDS+=	kdebase-1.1.2nb3:../../x11/kdebase
+DEPENDS+=	kdebase-1.1.2nb4:../../x11/kdebase
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
