@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/21 16:39:07 martti Exp $
+# $NetBSD: Makefile,v 1.14 2004/03/29 09:58:28 grant Exp $
 #
 
 DISTNAME=		DBD-Sybase-0.94
@@ -15,10 +15,27 @@ COMMENT=		Perl DBI/DBD driver for Sybase/MS-SQL databases
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/DBD/Sybase/.packlist
 
-PERL5_LDFLAGS+=		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.freetds}/freetds/lib
-MAKE_ENV+=		SYBASE=${BUILDLINK_PREFIX.freetds}/freetds
+BUILD_DEFS+=		USE_SYBASE_OPENCLIENT
+BUILD_DEFS+=		SYBASE
 
-.include "../../databases/freetds/buildlink2.mk"
+.if defined(USE_SYBASE_OPENCLIENT) && empty(USE_SYBASE_OPENCLIENT:M[Nn][Oo])
+.  if defined(SYBASE) || exists(${SYBASE}/lib/libct.so)
+BUILDLINK_PASSTHRU_DIRS=${SYBASE}
+_SYBASE=		${SYBASE}
+.  else
+PKG_FAIL_REASON+=	"You must define SYBASE to the base directory of your Open Client."
+.  endif
+.else
+_SYBASE=		${BUILDLINK_PREFIX.freetds}/freetds
+.endif
+
+PERL5_LDFLAGS+=		-Wl,${RPATH_FLAG}${_SYBASE}/lib
+MAKE_ENV+=		SYBASE=${_SYBASE}
+
+.if !defined(USE_SYBASE_OPENCLIENT)
+.  include "../../databases/freetds/buildlink2.mk"
+.endif
+
 .include "../../databases/p5-DBI/buildlink2.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
