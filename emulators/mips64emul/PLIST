@@ -1,2 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/21 20:30:22 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/06/28 04:01:11 xtraeme Exp $
 bin/mips64emul
+man/man1/mips64emul.1
+share/doc/mips64emul/BUGS
+share/doc/mips64emul/HISTORY
+share/doc/mips64emul/LICENSE
+share/doc/mips64emul/README
+share/doc/mips64emul/RELEASE
+share/doc/mips64emul/TODO
+@dirrm share/doc/mips64emul
