@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 1998/11/10 23:58:49 tron Exp $
+# $NetBSD: Makefile,v 1.22 1998/12/29 19:34:47 tron Exp $
 #
 
-DISTNAME=	qt-1.41
+DISTNAME=	qt-1.42
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.troll.no/qt/source/ \
 		ftp://ftp.fu-berlin.de/unix/X11/gui/Qt/source/
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.troll.no/qt/source/ \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.troll.no/products/qt.html
 
-CONFLICTS=	qt-1.33 qt-1.40
+CONFLICTS=	qt-*
 
 USE_X11=	yes
 USE_GMAKE=	yes
