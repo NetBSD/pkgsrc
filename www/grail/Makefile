@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/04/14 15:21:03 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 1999/04/26 19:25:07 garbled Exp $
 #
 
 DISTNAME=	grail-06
@@ -13,6 +13,7 @@ HOMEPAGE=	http://grail.cnri.reston.va.us/grail/
 DEPENDS+=       python-1.5.2:../../lang/python
 DEPENDS+=	py-Tk-1.5.2:../../x11/py-Tk
 
+USE_X11=	yes
 NO_CONFIGURE=   yes
 NO_BUILD=       yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/09 12:20:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/26 19:30:28 garbled Exp $
 #
 
 DISTNAME=	xview3.2p1-X11R6
@@ -13,6 +13,7 @@ DEPENDS+=	xview-config-3.2.1:../xview-config
 DEPENDS+=	xview-lib-3.2.1:../xview-lib
 DEPENDS+=	xview-clients-3.2.1:../xview-clients
 
+USE_X11=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_PATCH=	yes
