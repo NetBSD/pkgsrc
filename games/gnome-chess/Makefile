@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/10/19 10:54:52 rh Exp $
+# $NetBSD: Makefile,v 1.13 2002/10/26 20:04:31 bouyer Exp $
 
 DISTNAME=	gnome-chess-0.3.3
 PKGREVISION=	3
@@ -16,3 +16,8 @@ CONFIGURE_ARGS+=	--localstatedir=${X11PREFIX}/var/lib
 
 .include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
+
+.if ${OPSYS} == "SunOS"
+LEX= lex
+CONFIGURE_ENV+=	LEX=${LEX}
+.endif
