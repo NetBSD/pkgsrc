@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8639 2005/01/06 17:41:51 drochner Exp $
+$NetBSD: CHANGES,v 1.8640 2005/01/06 18:23:11 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -153,3 +153,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gxine to 0.4.1 [drochner 2005-01-06]
 	Updated gphoto2 to 2.1.5 [drochner 2005-01-06]
 	Updated py-MyHDL to 0.4.1 [drochner 2005-01-06]
+	Updated mppe-lkm to 0.0.4nb1 [cube 2005-01-06]
