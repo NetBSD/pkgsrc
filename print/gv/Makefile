@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2005/02/12 23:01:59 snj Exp $
+# $NetBSD: Makefile,v 1.49 2005/03/01 22:59:16 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 
 DISTNAME=	gv-3.6.1
@@ -19,6 +19,13 @@ TEXINFO_REQD=		4.2
 INFO_FILES=		gv.info
 
 XAW_TYPE=		3d
+
+.if !exists(/usr/include/getopt.h)
+.  include "../../pkgtools/libnbcompat/buildlink3.mk"
+post-extract:
+	cd ${WRKSRC}/src && ${LN} -s ${PREFIX}/include/nbcompat.h getopt.h
+
+.endif
 
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/ghostscript.mk"
