@@ -1,4 +1,4 @@
-$NetBSD: patch-be,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
+$NetBSD: patch-be,v 1.2 2000/01/20 14:12:50 pooka Exp $
 
 --- gc/os_dep.c.orig	Thu Oct 21 22:06:15 1999
 +++ gc/os_dep.c	Thu Dec 30 22:15:23 1999
@@ -36,7 +36,7 @@ $NetBSD: patch-be,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
  /* callers.  Ignore my frame and my callers frame.			*/
  
 -#ifdef OPENBSD
-+#ifdef OPENBSD || defined(NETBSD)
++#if defined(OPENBSD) || defined(NETBSD)
  #  define FR_SAVFP fr_fp
  #  define FR_SAVPC fr_pc
  #else
