@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/07/21 09:56:35 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2005/03/25 02:48:53 wiz Exp $
 
---- configure.orig	Mon Jul 21 08:29:45 2003
+--- configure.orig	2004-11-30 23:00:09.000000000 +0100
 +++ configure
-@@ -7824,7 +7824,7 @@ cat >>confdefs.h <<EOF
- EOF
+@@ -9647,7 +9647,7 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
  
- cat >>confdefs.h <<EOF
--#define GCPCONFFILE "$PATHTAG$static_sysconfdir/$ggi_subdir/$gcp_conffile"
-+#define GCPCONFFILE "$PATHTAG$static_sysconfdir/$gcp_conffile"
- EOF
+ cat >>confdefs.h <<_ACEOF
+-#define GCPCONFDIR "$PATHTAG$static_sysconfdir/$ggi_subdir"
++#define GCPCONFDIR "$PATHTAG$static_sysconfdir"
+ _ACEOF
  
- # Add the stamp file to the list of files AC keeps track of,
+ cat >>confdefs.h <<_ACEOF
