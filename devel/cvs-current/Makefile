@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/10/17 00:05:03 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2000/10/18 13:03:47 wiz Exp $
 #
 
 DISTNAME=       cvs-1.10.8
@@ -12,6 +12,8 @@ GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes
 
 BUILD_DEFS+=	RCS_LOCALID
+
+IGNORE=		"devel/cvs contains a newer version of cvs"
 
 .if exists(/usr/bin/cvs)  
 IGNORE=		"${PKGNAME} is part of your NetBSD distribution"
