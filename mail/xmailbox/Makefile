@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/05/25 15:30:34 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/09 01:50:02 wiz Exp $
 #
 
 DISTNAME=       xmailbox-2.5
 CATEGORIES=	mail x11
-MASTER_SITES=   ftp://ftp.x.org/contrib/applications/
+MASTER_SITES=   ${MASTER_SITE_XCONTRIB:=applications/}
 
 MAINTAINER=	bouyer@netbsd.org
 
