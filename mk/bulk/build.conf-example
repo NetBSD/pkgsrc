@@ -1,5 +1,5 @@
 # build.conf
-# $NetBSD: build.conf-example,v 1.16 2004/01/31 03:37:24 grant Exp $
+# $NetBSD: build.conf-example,v 1.17 2004/02/25 09:20:59 grant Exp $
 #
 # config file in /bin/sh syntax for {,pre,post}-build
 #
@@ -48,11 +48,11 @@ PRUNEDISTFILES=no
 
 # destination for packages with the OSVERSION_SPECIFIC flag set.  Needs major.minor.patch
 # version.
-RSYNC_DST_SPECIFIC=$CVS_USER@ftp.netbsd.org:/pub/NetBSD/packages/x.y.z/arch
+RSYNC_DST_SPECIFIC=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/x.y.z/arch
 
 # destination for packages without the OSVERSION_SPECIFIC flag set.  Needs major.minor
 # version.
-RSYNC_DST_OTHER=$CVS_USER@ftp.netbsd.org:/pub/NetBSD/packages/x.y/arch
+RSYNC_DST_OTHER=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/x.y/arch
 RSYNC_OPTS='-e ssh'
 
 ###########################################################################
