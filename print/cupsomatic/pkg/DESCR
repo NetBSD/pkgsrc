@@ -1,0 +1,4 @@
+The CUPS-O-Matic PPD collection includes suitable PPDs any printer
+driver that has full details entered in the Linux Printing Database
+(http://www.linuxprinting.org).  This collection allows many
+non-Postscript printers to function with CUPS.

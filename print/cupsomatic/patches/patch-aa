@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/08 16:57:25 jlam Exp $
+
+--- cupsomatic.in.orig	Thu Dec  7 03:48:55 2000
++++ cupsomatic.in
+@@ -1,4 +1,4 @@
+-#! /usr/bin/perl
++#!@PERL@
+ 
+ # The above Perl path may vary on your system; fix it!!!
+ 
+@@ -26,7 +26,7 @@
+ # possibly other stuff.  The default path is often fine on Linux, but
+ # may not be on other systems.
+ # 
+-# $ENV{'PATH'} = '/usr/local/bin:/usr/bin:/bin';
++$ENV{'PATH'} = '@LOCALBASE@/bin:/usr/local/bin:/usr/bin:/bin';
+ 
+ 
+ # Set debug to 1 to enable the debug logfile for this filter; it will
