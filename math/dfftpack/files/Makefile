@@ -2,7 +2,7 @@ LIB 	= dfftpack
 
 LIBDIR	= ${PREFIX}/lib
 
-all:	lib$(LIB).la
+all:	lib$(LIB).a
 
 OBJS = 	zfftb.o cfftb1.o zfftf.o cfftf1.o zffti.o cffti1.o dcosqb.o	\
 	cosqb1.o dcosqf.o cosqf1.o dcosqi.o dcost.o dcosti.o ezfft1.o	\
@@ -12,15 +12,12 @@ OBJS = 	zfftb.o cfftb1.o zfftf.o cfftf1.o zffti.o cffti1.o dcosqb.o	\
 	radf5.o radfg.o dfftb.o rfftb1.o dfftf.o rfftf1.o dffti.o	\
 	rffti1.o dsinqb.o dsinqf.o dsinqi.o dsint.o sint1.o dsinti.o
 
-lib$(LIB).la:	$(OBJS)
-	$(LIBTOOL) --mode=link $(FC) $(FFLAGS) -o $@ $(OBJS:.o=.lo) \
-	-rpath $(LIBDIR) --version-info 0:0
+lib$(LIB).a:	$(OBJS)
+	$(AR) cru $@ $?
+	$(RANLIB) $@
 
-.f.o:
-	$(LIBTOOL) --mode=compile $(FC) $(FFLAGS) -c $*.f
-
-install:	lib$(LIB).la
-	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $? $(LIBDIR)
+install:	lib$(LIB).a
+	$(BSD_INSTALL_DATA) $? $(LIBDIR)
 
 clean: 
-	 rm -rf *.o *.lo .libs lib$(LIB).la
+	 rm -f *.o lib$(LIB).a

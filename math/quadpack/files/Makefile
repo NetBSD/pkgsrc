@@ -1,12 +1,10 @@
 LIB 	= quadpack
 
 LIBDIR	= ${PREFIX}/lib
-FORTRAN = %%FORTRAN%%
-FFLAGS	= -O3
 
-all:	lib$(LIB)
+all:	lib$(LIB).a
 
-OBJ= 	dqag.o dqage.o dqagi.o dqagie.o dqagp.o dqagpe.o dqags.o	\
+OBJS = 	dqag.o dqage.o dqagi.o dqagie.o dqagp.o dqagpe.o dqags.o	\
 	dqagse.o dqawc.o dqawce.o dqawf.o dqawfe.o dqawo.o		\
 	dqawoe.o dqaws.o dqawse.o dqc25c.o dqc25f.o dqc25s.o		\
 	dqcheb.o dqelg.o dqk15.o dqk15i.o dqk15w.o dqk21.o		\
@@ -18,15 +16,12 @@ OBJ= 	dqag.o dqage.o dqagi.o dqagie.o dqagp.o dqagpe.o dqags.o	\
 	qk31.o qk41.o qk51.o qk61.o qmomo.o qng.o qpsrt.o		\
 	qwgtc.o qwgtf.o qwgts.o
 
-lib$(LIB):	$(OBJ)
-	@$(LIBTOOL) --mode=link $(FORTRAN) $(FFLAGS) \
-	-O -o lib$(LIB).la $(OBJ:.o=.lo) -rpath $(LIBDIR) --version-info 0:0
+lib$(LIB).a:	$(OBJS)
+	$(AR) cru $@ $?
+	$(RANLIB) $@
 
-.f.o:
-	@$(LIBTOOL) --mode=compile $(FORTRAN) $(FFLAGS) -c $*.f
-
-install:	lib$(LIB)
-	@$(LIBTOOL) --mode=install install -c lib$(LIB).la $(LIBDIR)
+install:	lib$(LIB).a
+	$(BSD_INSTALL_DATA) $? $(LIBDIR)
 
 clean:
-	rm -rf *.o *.lo .libs lib$(LIB).la
+	rm -f *.o lib$(LIB).a

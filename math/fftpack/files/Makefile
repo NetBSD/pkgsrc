@@ -2,13 +2,7 @@ LIB 	= fftpack
 
 LIBDIR	= ${PREFIX}/lib
 
-.if $(FC)=="f77" || $(FC)=="g77"
-FOPTS=-funroll-loops -O2
-.else
-FOPTS=-O2
-.endif
-
-all:	lib$(LIB).la
+all:	lib$(LIB).a
 
 OBJS =	cfftb.o cosqf1.o passb2.o radb2.o radfg.o		\
 	sinqi.o cfftb1.o cosqi.o passb3.o radb3.o rfftb.o	\
@@ -20,15 +14,12 @@ OBJS =	cfftb.o cosqf1.o passb2.o radb2.o radfg.o		\
 	ezffti.o passf4.o radf4.o sinqb.o cosqf.o passb.o	\
 	passf5.o radf5.o sinqf.o
 
-lib$(LIB).la:	$(OBJS)
-	$(LIBTOOL) --mode=link $(FC) $(FFLAGS) $(FOPTS) \
-	-o $@ $(OBJS:.o=.lo)  -rpath $(LIBDIR) --version-info 0:0
+lib$(LIB).a:	$(OBJS)
+	$(AR) cru $@ $?
+	$(RANLIB) $@
 
-.f.o:
-	$(LIBTOOL) --mode=compile $(FC) $(FFLAGS) $(FOPTS) -c $<
-
-install:	lib$(LIB).la
-	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $? $(LIBDIR)
+install:	lib$(LIB).a
+	$(BSD_INSTALL_DATA) $? $(LIBDIR)
 
 clean:
-	rm -rf *.o *.lo .libs lib$(LIB).la
+	rm -f *.o lib$(LIB).a

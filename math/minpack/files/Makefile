@@ -1,8 +1,6 @@
 LIB 	= minpack
 
 LIBDIR	= ${PREFIX}/lib
-F77	= %%F77%%
-FFLAGS	= -O3
 
 all:	lib$(LIB).a
 
@@ -14,14 +12,11 @@ OBJ =   covar.o	dmchar.o dogleg.o dpmpar.o enorm.o errjac.o fdjac1.o	\
 	vecjac.o
 
 lib$(LIB).a:	$(OBJ)
-	$(AR) ru $@ $?
+	$(AR) cru $@ $?
 	$(RANLIB) $@
 
-.f.o:
-	$(F77) $(FFLAGS) -c $<
-
 install:	lib$(LIB).a
-	install -c lib$(LIB).a $(LIBDIR)
+	$(BSD_INSTALL_DATA) $? $(LIBDIR)
 
 clean:
-	rm -rf *.o lib$(LIB).a
+	rm -f *.o lib$(LIB).a
