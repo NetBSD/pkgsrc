@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.6 1999/02/15 21:33:34 tron Exp $
+$NetBSD: md5,v 1.7 1999/03/06 00:00:28 tron Exp $
 
 MD5 (kdelibs-1.1.tar.bz2) = c3ba5b202432222222c8e48ca142d086
+MD5 (kdelibs-1.1-connect.patch) = 8742ccc0fc1d2bf94e426747b9da3894
