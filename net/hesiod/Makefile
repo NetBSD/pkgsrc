@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/25 18:39:32 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/21 10:59:20 grant Exp $
 
 DISTNAME=	hesiod-3.0.2
 CATEGORIES=	net
@@ -16,5 +16,10 @@ IGNORE=		"${PKGNAME} is part of your ${OPSYS} distribution"
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+pre-build:
+	@${MV} ${WRKSRC}/hesinfo.1 ${WRKSRC}/hesinfo.1.orig
+	@${SED} -e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|' \
+		${WRKSRC}/hesinfo.1.orig > ${WRKSRC}/hesinfo.1
 
 .include "../../mk/bsd.pkg.mk"
