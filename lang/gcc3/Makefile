@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/05/25 20:44:26 jdolecek Exp $
+# $NetBSD: Makefile,v 1.17 2003/05/26 20:39:10 jschauma Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/gcc/gcc.html
 COMMENT=		GNU Compiler Collection
-
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 CONFLICTS+=		gcc-3* pgcc-[0-9]*
 
@@ -56,8 +54,7 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 pre-configure:
 	${MKDIR} ${BUILD_DIRS}
-	${TOUCH} ${TOUCH_FLAGS}	${WRKSRC}/gcc/c-gperf.h
-	${ECHO} "bogus" > ${WRKSRC}/gcc/cstamp-h.in
+	cd ${WRKSRC} && contrib/gcc_update --touch
 
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
