@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2002/05/28 14:19:36 martti Exp $
+$NetBSD: distinfo,v 1.21 2002/06/07 22:56:29 cjep Exp $
 
-SHA1 (dat-4204.tar) = 22a2941f2f635400eaf2a413552eda30e1000e5d
-Size (dat-4204.tar) = 2467840 bytes
+SHA1 (dat-4206.tar) = fb3cb4feda7c9cd344902ac8c5c1c51d8fdb423e
+Size (dat-4206.tar) = 2498560 bytes
