@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/04/15 10:38:22 agc Exp $
+# $NetBSD: Makefile,v 1.14 1998/04/17 09:37:24 agc Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 #
 
@@ -9,9 +9,6 @@ MASTER_SITES=	${MASTER_SITE_GNU}
 
 MAINTAINER=	hubertf@netbsd.org
 
-BUILD_DEPENDS=  ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
-RUN_DEPENDS=    ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
-
 GNU_CONFIGURE=	yes
 #USE_GMAKE=	yes
 CONFIGURE_ARGS+=	${MACHINE_ARCH}--netbsd --with-pop --with-x --with-x-toolkit=lucid
@@ -19,6 +16,7 @@ MAN1=		emacs.1 emacs-etags.1 emacs-ctags.1
 OPSYS!=         uname -s
 MAKE_ENV+=	INSTALL_STRIP=${STRIPFLAG} \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff ccmode message
 
 post-build:
 	(cd ${WRKSRC}/lisp/mail; \
@@ -32,8 +30,5 @@ post-install:
 	  ${SED} -ne '1,/Menu:/p' /usr/share/info/dir > ${PREFIX}/info/dir; \
 	fi
 .endif
-.for info in emacs vip viper forms gnus mh-e cl sc dired-x ediff ccmode message
-	install-info ${PREFIX}/info/${info} ${PREFIX}/info/dir
-.endfor
 
 .include "../../mk/bsd.pkg.mk"

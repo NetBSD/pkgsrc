@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:48 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/17 09:37:25 agc Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/06/27 23:03:27 ache Exp 
 #
 
@@ -12,17 +12,12 @@ DISTFILES=      bash-2.01.tar.gz bash-doc-2.01.tar.gz
 
 MAINTAINER=	ache@FreeBSD.ORG
 
-BUILD_DEPENDS=  ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
-RUN_DEPENDS=    ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
-
 GNU_CONFIGURE=	Yes
 MAN1=		bash.1 bashbug.1
+USE_GTEXINFO=	yes
 
 pre-install:
 	strip ${WRKSRC}/bash
-	if [ ! -s ${PREFIX}/info/dir ]; then \
-	  ${SED} -ne '1,/Menu:/p' /usr/share/info/dir > ${PREFIX}/info/dir; \
-	fi
 
 post-install:
 	${CP} /etc/shells /etc/shells.bak
