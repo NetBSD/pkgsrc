@@ -1,14 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2003/08/30 21:00:08 jtb Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:40 jlam Exp $
 bin/oo2c
 bin/oob
 bin/oobacktrace
 bin/ooef
 bin/oowhereis
-lib/liboo2c.a
 lib/liboo2c.la
-lib/liboo2c.so
-lib/liboo2c.so.0
-lib/liboo2c.so.0.0
 lib/oo2c/emacs/o2-default.el
 lib/oo2c/emacs/oberon2.el
 lib/oo2c/install-sh

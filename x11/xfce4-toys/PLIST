@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2004/07/12 08:25:11 martti Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:10:08 jlam Exp $
 bin/xfce4-tips
-lib/xfce4/panel-plugins/libeyes.a
 lib/xfce4/panel-plugins/libeyes.la
-lib/xfce4/panel-plugins/libeyes.so
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce4-toys.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xfce4-toys.mo

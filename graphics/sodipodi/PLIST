@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2004/03/28 21:02:55 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:38 jlam Exp $
 bin/sodipodi
 lib/sodipodi/extensions/ill2svg.pl
-lib/sodipodi/modules/libxmleditor.a
 lib/sodipodi/modules/libxmleditor.la
-lib/sodipodi/modules/libxmleditor.so
 man/man1/sodipodi.1
 share/applications/sodipodi.desktop
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/sodipodi.mo

@@ -1,18 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:03 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:29 jlam Exp $
 bin/pth-config
 bin/pthread-config
 include/pth.h
 include/pthread.h
-lib/libpth.a
 lib/libpth.la
-lib/libpth.so
-lib/libpth.so.${PTH_MAJOR}
-lib/libpth.so.${PTH_MAJOR}.${PTH_MINOR}
-lib/libpthread.a
 lib/libpthread.la
-lib/libpthread.so
-lib/libpthread.so.${PTH_MAJOR}
-lib/libpthread.so.${PTH_MAJOR}.${PTH_MINOR}
 man/man1/pth-config.1
 man/man1/pthread-config.1
 man/man3/pth.3

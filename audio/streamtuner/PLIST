@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/03/30 22:21:31 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:17 jlam Exp $
 bin/streamtuner
 include/streamtuner/st-action-api.h
 include/streamtuner/st-category-api.h
@@ -18,9 +18,7 @@ include/streamtuner/st-transfer-api.h
 include/streamtuner/st-version-api.h
 include/streamtuner/streamtuner.h
 lib/pkgconfig/streamtuner.pc
-lib/streamtuner/plugins/shoutcast.a
 lib/streamtuner/plugins/shoutcast.la
-lib/streamtuner/plugins/shoutcast.so
 share/applications/streamtuner.desktop
 share/doc/streamtuner/C/documentation-license.xml
 share/doc/streamtuner/C/figures/main-window.png

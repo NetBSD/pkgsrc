@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/15 10:32:33 grant Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:29 jlam Exp $
 bin/rudiments-config
 doc/rudiments/classes/client.h.html
 doc/rudiments/classes/commandline.h.html
@@ -223,16 +223,8 @@ include/rudiments/variablebuffer.h
 include/rudiments/xmldom.h
 include/rudiments/xmldomnode.h
 include/rudiments/xmlsax.h
-lib/lib${PKGNAME}.so.1
-lib/lib${PKGNAME}.so.1.0
-lib/librudiments.a
 lib/librudiments.la
-lib/librudiments.so
-lib/librudiments_p-${PKGVERSION}.so.1
-lib/librudiments_p-${PKGVERSION}.so.1.0
-lib/librudiments_p.a
 lib/librudiments_p.la
-lib/librudiments_p.so
 @dirrm include/rudiments/private
 @dirrm include/rudiments
 @dirrm doc/rudiments/programming

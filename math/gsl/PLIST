@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/08/06 19:29:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/09/22 08:09:42 jlam Exp $
 bin/gsl-config
 bin/gsl-histogram
 bin/gsl-randist
@@ -214,16 +214,8 @@ include/gsl/gsl_vector_uint.h
 include/gsl/gsl_vector_ulong.h
 include/gsl/gsl_vector_ushort.h
 include/gsl/gsl_version.h
-lib/libgsl.a
 lib/libgsl.la
-lib/libgsl.so
-lib/libgsl.so.6
-lib/libgsl.so.6.0
-lib/libgslcblas.a
 lib/libgslcblas.la
-lib/libgslcblas.so
-lib/libgslcblas.so.0
-lib/libgslcblas.so.0.0
 lib/pkgconfig/gsl.pc
 man/man1/gsl-config.1
 man/man1/gsl-histogram.1

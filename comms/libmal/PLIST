@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/19 14:01:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:21 jlam Exp $
 bin/malsync
 include/libmal/AGArray.h
 include/libmal/AGBase64.h
@@ -52,9 +52,5 @@ include/libmal/MAL31UserConfig.h
 include/libmal/MALCommonWin.h
 include/libmal/ag-md5.h
 include/libmal/libmal.h
-lib/libmal.a
 lib/libmal.la
-lib/libmal.so
-lib/libmal.so.1
-lib/libmal.so.1.0
 @dirrm include/libmal

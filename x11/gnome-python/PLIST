@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/02/22 00:49:27 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:58 jlam Exp $
 bin/pygtk-codegen-1.2
 ${PYINC}/pygtk/pygdkimlib.h
 ${PYINC}/pygtk/pygdkpixbuf.h
@@ -16,29 +16,17 @@ ${PYSITELIB}/gtk-1.2/GtkExtra.py
 ${PYSITELIB}/gtk-1.2/GtkExtra.pyc
 ${PYSITELIB}/gtk-1.2/GtkExtra.pyo
 ${PYSITELIB}/gtk-1.2/_gtkmodule.la
-${PYSITELIB}/gtk-1.2/_gtkmodule.so
 ${PYSITELIB}/gtk-1.2/_gdkimlibmodule.la
-${PYSITELIB}/gtk-1.2/_gdkimlibmodule.so
 ${PYSITELIB}/gtk-1.2/_gtkglmodule.la
-${PYSITELIB}/gtk-1.2/_gtkglmodule.so
 ${PYSITELIB}/gtk-1.2/_libglademodule.la
-${PYSITELIB}/gtk-1.2/_libglademodule.so
 ${PYSITELIB}/gtk-1.2/_gnomemodule.la
-${PYSITELIB}/gtk-1.2/_gnomemodule.so
 ${PYSITELIB}/gtk-1.2/_gnomeuimodule.la
-${PYSITELIB}/gtk-1.2/_gnomeuimodule.so
 ${PYSITELIB}/gtk-1.2/_zvtmodule.la
-${PYSITELIB}/gtk-1.2/_zvtmodule.so
 ${PYSITELIB}/gtk-1.2/_gtkxmhtmlmodule.la
-${PYSITELIB}/gtk-1.2/_gtkxmhtmlmodule.so
 ${PYSITELIB}/gtk-1.2/_appletmodule.la
-${PYSITELIB}/gtk-1.2/_appletmodule.so
 ${PYSITELIB}/gtk-1.2/_cappletmodule.la
-${PYSITELIB}/gtk-1.2/_cappletmodule.so
 ${PYSITELIB}/gtk-1.2/_gladegnomemodule.la
-${PYSITELIB}/gtk-1.2/_gladegnomemodule.so
 ${PYSITELIB}/gtk-1.2/gdkpixbufmodule.la
-${PYSITELIB}/gtk-1.2/gdkpixbufmodule.so
 ${PYSITELIB}/gtk-1.2/gnome/__init__.py
 ${PYSITELIB}/gtk-1.2/gnome/__init__.pyc
 ${PYSITELIB}/gtk-1.2/gnome/__init__.pyo

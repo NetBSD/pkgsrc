@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:16 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:38 jlam Exp $
 bin/aliastorle
 bin/applymap
 bin/avg4
@@ -74,11 +74,7 @@ include/rle_code.h
 include/rle_config.h
 include/rle_put.h
 include/rle_raw.h
-lib/librle.a
 lib/librle.la
-lib/librle.so
-lib/librle.so.1
-lib/librle.so.1.0
 man/man1/aliastorle.1
 man/man1/applymap.1
 man/man1/avg4.1

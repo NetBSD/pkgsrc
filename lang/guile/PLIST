@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/03/02 11:43:39 seb Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/09/22 08:09:39 jlam Exp $
 bin/guile
 bin/guile-snarf
 bin/guile-config
@@ -100,31 +100,11 @@ include/guile/srfi/srfi-13.h
 include/guile/srfi/srfi-14.h
 include/guile-readline/readline.h
 include/libguile.h
-lib/libguile.a
 lib/libguile.la
-lib/libguile.so
-lib/libguile.so.15
-lib/libguile.so.15.0
-lib/libguile-ltdl.a
 lib/libguile-ltdl.la
-lib/libguile-ltdl.so
-lib/libguile-ltdl.so.1
-lib/libguile-ltdl.so.1.0
-lib/libguilereadline-v-12.a
 lib/libguilereadline-v-12.la
-lib/libguilereadline-v-12.so
-lib/libguilereadline-v-12.so.15
-lib/libguilereadline-v-12.so.15.0
-lib/libguile-srfi-srfi-4-v-1.a
 lib/libguile-srfi-srfi-4-v-1.la
-lib/libguile-srfi-srfi-4-v-1.so
-lib/libguile-srfi-srfi-4-v-1.so.1
-lib/libguile-srfi-srfi-4-v-1.so.1.0
-lib/libguile-srfi-srfi-13-14-v-1.a
 lib/libguile-srfi-srfi-13-14-v-1.la
-lib/libguile-srfi-srfi-13-14-v-1.so
-lib/libguile-srfi-srfi-13-14-v-1.so.1
-lib/libguile-srfi-srfi-13-14-v-1.so.1.0
 share/aclocal/guile.m4
 share/guile/1.6/oop/goops/active-slot.scm
 share/guile/1.6/oop/goops/compile.scm

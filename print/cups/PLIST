@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/07/30 21:05:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/09/22 08:09:51 jlam Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestppd
@@ -19,16 +19,9 @@ include/cups/language.h
 include/cups/md5.h
 include/cups/ppd.h
 include/cups/raster.h
-lib/libcups.a
 lib/libcups.la
-lib/libcups.so
-lib/libcups.so.2
-lib/libcups.so.2.6
 lib/libcupsimage.a
 lib/libcupsimage.la
-lib/libcupsimage.so
-lib/libcupsimage.so.2
-lib/libcupsimage.so.2.1
 libexec/cups/backend/http
 libexec/cups/backend/ipp
 libexec/cups/backend/lpd

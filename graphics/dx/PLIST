@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/20 22:11:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:32 jlam Exp $
 bin/dx
 dx/bin/dx
 dx/bin/mdf2c
@@ -2247,13 +2247,9 @@ dx/lib/mdf2c.awk
 dx/lib/messages
 dx/lib/outboard.c
 dx/lib_${LOWER_OPSYS}/arch.mak
-dx/lib_${LOWER_OPSYS}/libDX.a
 dx/lib_${LOWER_OPSYS}/libDX.la
-dx/lib_${LOWER_OPSYS}/libDXL.a
 dx/lib_${LOWER_OPSYS}/libDXL.la
-dx/lib_${LOWER_OPSYS}/libDXcallm.a
 dx/lib_${LOWER_OPSYS}/libDXcallm.la
-dx/lib_${LOWER_OPSYS}/libDXlite.a
 dx/lib_${LOWER_OPSYS}/libDXlite.la
 dx/man/catl/dx.0
 dx/man/manl/dx.l

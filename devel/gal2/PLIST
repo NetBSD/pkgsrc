@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/21 17:10:06 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:24 jlam Exp $
 include/gal-2.2/gal/a11y/e-table/gal-a11y-e-cell-popup.h
 include/gal-2.2/gal/a11y/e-table/gal-a11y-e-cell-registry.h
 include/gal-2.2/gal/a11y/e-table/gal-a11y-e-cell-text.h
@@ -148,16 +148,8 @@ include/gal-2.2/gal/widgets/gal-combo-stack.h
 include/gal-2.2/gal/widgets/gal-combo-text.h
 include/gal-2.2/gal/widgets/widget-color-combo.h
 include/gal-2.2/gal/widgets/widget-pixmap-combo.h
-lib/libgal-2.2.a
 lib/libgal-2.2.la
-lib/libgal-2.2.so
-lib/libgal-2.2.so.1
-lib/libgal-2.2.so.1.1
-lib/libgal-a11y-2.2.a
 lib/libgal-a11y-2.2.la
-lib/libgal-a11y-2.2.so
-lib/libgal-a11y-2.2.so.1
-lib/libgal-a11y-2.2.so.1.1
 lib/pkgconfig/gal-2.2.pc
 share/doc/gal-2.2/gal-api.html
 share/doc/gal-2.2/gal-api.sgml

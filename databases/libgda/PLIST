@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/04/20 16:15:48 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:22 jlam Exp $
 bin/gda-report-test
 bin/gda-run
 bin/gda-test
@@ -66,24 +66,10 @@ include/libgda/gda-xql-utils.h
 include/libgda/gda-xql-value.h
 include/libgda/gda-xql-valueref.h
 include/libgda/libgda.h
-lib/libgda-2.a
 lib/libgda-2.la
-lib/libgda-2.so
-lib/libgda-2.so.2
-lib/libgda-2.so.2.0
-lib/libgda-report-2.a
 lib/libgda-report-2.la
-lib/libgda-report-2.so
-lib/libgda-report-2.so.2
-lib/libgda-report-2.so.2.0
-lib/libgda/providers/libgda-xml.a
 lib/libgda/providers/libgda-xml.la
-lib/libgda/providers/libgda-xml.so
-lib/libgdasql.a
 lib/libgdasql.la
-lib/libgdasql.so
-lib/libgdasql.so.0
-lib/libgdasql.so.0.0
 lib/pkgconfig/libgda.pc
 share/doc/html/libgda/architecture.html
 share/doc/html/libgda/c694.html

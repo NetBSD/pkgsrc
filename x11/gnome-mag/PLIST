@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2004/09/21 17:11:57 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:58 jlam Exp $
 bin/magnifier
 include/gnome-mag-1.0/magnifier/GNOME_Magnifier.h
 lib/bonobo/servers/GNOME_Magnifier.server
-lib/libgnome-mag.a
 lib/libgnome-mag.la
-lib/libgnome-mag.so
-lib/libgnome-mag.so.2
-lib/libgnome-mag.so.2.5
 lib/pkgconfig/gnome-mag-1.0.pc
 share/gnome-mag/1_32/appstart.xpm
 share/gnome-mag/1_32/bottom_left_corner.xpm

@@ -1,9 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 19:20:21 zuntum Exp $
-lib/libirc.a
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:20 jlam Exp $
 lib/libirc.la
-lib/libirc.so
-lib/libirc.so.0
-lib/libirc.so.0.0
 include/btypes.h
 include/cmd.h
 include/irc_core.h

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:53:37 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:31 jlam Exp $
 bin/amor
 bin/kmoon
 bin/kodo
@@ -7,26 +7,10 @@ bin/kteatime
 bin/ktux
 bin/kworldclock
 include/AmorIface.h
-lib/libkeyesapplet.a
 lib/libkeyesapplet.la
-lib/libkeyesapplet.so
-lib/libkeyesapplet.so.1
-lib/libkeyesapplet.so.1.0
-lib/libkfifteenapplet.a
 lib/libkfifteenapplet.la
-lib/libkfifteenapplet.so
-lib/libkfifteenapplet.so.1
-lib/libkfifteenapplet.so.1.0
-lib/libkscoreapplet.a
 lib/libkscoreapplet.la
-lib/libkscoreapplet.so
-lib/libkscoreapplet.so.1
-lib/libkscoreapplet.so.1.0
-lib/libkwwapplet.a
 lib/libkwwapplet.la
-lib/libkwwapplet.so
-lib/libkwwapplet.so.1
-lib/libkwwapplet.so.1.0
 share/doc/kde/HTML/en/amor/billy.png
 share/doc/kde/HTML/en/amor/bonhomme.png
 share/doc/kde/HTML/en/amor/bsd.png

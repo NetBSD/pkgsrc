@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:34 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:43 jlam Exp $
 bin/ark
 bin/efax
 bin/efix
@@ -25,31 +25,13 @@ bin/knotes
 bin/ktimer
 bin/kwikdisk
 include/KNotesIface.h
-lib/kcalc.a
 lib/kcalc.la
-lib/kcalc.so
-lib/kde2/kedit.a
 lib/kde2/kedit.la
-lib/kde2/kedit.so
-lib/kfind.a
 lib/kfind.la
-lib/kfind.so
-lib/libark.a
 lib/libark.la
-lib/libark.so
-lib/libark.so.1
-lib/libark.so.1.0
-lib/libkcharselectapplet.a
 lib/libkcharselectapplet.la
-lib/libkcharselectapplet.so
-lib/libkcharselectapplet.so.1
-lib/libkcharselectapplet.so.1.0
-lib/libkcm_kdf.a
 lib/libkcm_kdf.la
-lib/libkcm_kdf.so
-lib/libkcm_laptop.a
 lib/libkcm_laptop.la
-lib/libkcm_laptop.so
 man/man1/efax.1
 man/man1/efix.1
 man/man1/fax.1

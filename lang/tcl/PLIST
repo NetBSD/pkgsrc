@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/05/12 23:50:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:40 jlam Exp $
 bin/tclsh
 bin/tclsh8.4
 include/tcl.h
@@ -18,11 +18,7 @@ include/tcl/generic/tclRegexp.h
 include/tcl/unix/tclUnixPort.h
 include/tclDecls.h
 include/tclPlatDecls.h
-lib/libtcl84.a
 lib/libtcl84.la
-lib/libtcl84.so
-lib/libtcl84.so.1
-lib/libtcl84.so.1.0
 lib/libtclstub84.a
 lib/tcl8.4/auto.tcl
 lib/tcl8.4/encoding/ascii.enc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2004/08/21 12:35:15 markd Exp $
+# $NetBSD: Makefile,v 1.57 2004/09/22 08:10:05 jlam Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -57,18 +57,6 @@ _KDE3_EXTRA_INCLUDES=	${LOCALBASE}/include:${X11BASE}/include:${BUILDLINK_PREFIX
 CONFIGURE_ENV+=		RUN_KAPPFINDER=no
 
 PLIST_SRC+=		${PKGDIR}/PLIST
-
-.if ${OPSYS} == "NetBSD" && !exists(${X11BASE}/lib/libxkbfile.so)
-PLIST_SUBST+=		KCMKEYBOARD="kcm_keyboard.a"
-.else
-PLIST_SUBST+=		KCMKEYBOARD="kcm_keyboard.so"
-.endif
-
-.if ${OPSYS} == "NetBSD" && !exists(${X11BASE}/lib/libfontenc.so)
-PLIST_SUBST+=		FONTENC_SUFFIX="a"
-.else
-PLIST_SUBST+=		FONTENC_SUFFIX="so"
-.endif
 
 .if exists(${X11BASE}/include/X11/extensions/Xrandr.h)
 HAVE_RANDR!=		${GREP} XRRSetScreenConfigAndRateX  ${X11BASE}/include/X11/extensions/Xrandr.h; ${ECHO}

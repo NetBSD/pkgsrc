@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/10 09:14:34 garbled Exp $
-lib/libcal3d.a
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:32 jlam Exp $
 lib/libcal3d.la
-lib/libcal3d.so
-lib/libcal3d-0.9.1.so
 lib/pkgconfig/cal3d.pc
 include/cal3d/buffersource.h
 include/cal3d/coresubmorphtarget.h

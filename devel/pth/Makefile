@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2004/04/19 12:16:08 skrll Exp $
+# $NetBSD: Makefile,v 1.64 2004/09/22 08:09:29 jlam Exp $
 #
 
 DISTNAME=		pth-2.0.0
@@ -22,11 +22,6 @@ CONFIGURE_ARGS+=	--with-fdsetsize=1024
 #CONFIGURE_ARGS+=	--enable-debug
 
 TEST_TARGET=		test
-
-# for PLIST
-PTH_MAJOR=		20
-PTH_MINOR=		20
-PLIST_SUBST+=		PTH_MAJOR=${PTH_MAJOR} PTH_MINOR=${PTH_MINOR}
 
 .include "../../mk/bsd.prefs.mk"
 

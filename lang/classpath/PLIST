@@ -1,35 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2004/07/10 22:02:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:39 jlam Exp $
 lib/awt/font.properties
-lib/classpath/libjavaio.a
 lib/classpath/libjavaio.la
-lib/classpath/libjavaio.so
-lib/classpath/libjavaio.so.0
-lib/classpath/libjavaio.so.0.0
-lib/classpath/libjavalang.a
 lib/classpath/libjavalang.la
-lib/classpath/libjavalang.so
-lib/classpath/libjavalang.so.0
-lib/classpath/libjavalang.so.0.0
-lib/classpath/libjavalangreflect.a
 lib/classpath/libjavalangreflect.la
-lib/classpath/libjavalangreflect.so
-lib/classpath/libjavalangreflect.so.0
-lib/classpath/libjavalangreflect.so.0.0
-lib/classpath/libjavanet.a
 lib/classpath/libjavanet.la
-lib/classpath/libjavanet.so
-lib/classpath/libjavanet.so.0
-lib/classpath/libjavanet.so.0.0
-lib/classpath/libjavanio.a
 lib/classpath/libjavanio.la
-lib/classpath/libjavanio.so
-lib/classpath/libjavanio.so.0
-lib/classpath/libjavanio.so.0.0
-lib/classpath/libjavautil.a
 lib/classpath/libjavautil.la
-lib/classpath/libjavautil.so
-lib/classpath/libjavautil.so.0
-lib/classpath/libjavautil.so.0.0
 lib/security/classpath.security
 share/classpath/glibj.zip
 @exec ${MKDIR} %D/share/classpath/api

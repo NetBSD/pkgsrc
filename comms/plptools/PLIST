@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/08 12:14:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:21 jlam Exp $
 bin/plpbackup
 bin/plpftp
 bin/sisinstall
@@ -30,11 +30,7 @@ include/plptools/sislangrecord.h
 include/plptools/sisreqrecord.h
 include/plptools/sistypes.h
 include/plptools/wprt.h
-lib/libplp.a
 lib/libplp.la
-lib/libplp.so
-lib/libplp.so.0
-lib/libplp.so.0.12
 man/man1/plpbackup.1
 man/man1/plpftp.1
 man/man1/sisinstall.1

@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/20 17:34:03 abs Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:56 jlam Exp $
 bin/galeon
 bin/galeon-bin
 bin/galeon-config-tool
 etc/gconf/schemas/galeon.schemas
 etc/sound/events/galeon.soundlist
-lib/galeon/components/libgaleon-xpcom.a
 lib/galeon/components/libgaleon-xpcom.la
-lib/galeon/components/libgaleon-xpcom.so
 man/man1/galeon.1
 share/galeon/CloseTab.png
 share/galeon/FAQ.html

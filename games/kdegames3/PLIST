@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/08/23 23:42:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:31 jlam Exp $
 bin/atlantik
 bin/kasteroids
 bin/katomic
@@ -95,31 +95,13 @@ include/kolf/vector.h
 include/kscoredialog.h
 include/kstdgameaction.h
 lib/kde3/kio_atlantik.la
-lib/kde3/kio_atlantik.so
 lib/kde3/kolf.la
-lib/kde3/kolf.so
 lib/libatlantic.la
-lib/libatlantic.so
-lib/libatlantic.so.3
-lib/libatlantic.so.3.0
 lib/libatlantikclient.la
-lib/libatlantikclient.so
-lib/libatlantikclient.so.3
-lib/libatlantikclient.so.3.0
 lib/libatlantikui.la
-lib/libatlantikui.so
-lib/libatlantikui.so.3
-lib/libatlantikui.so.3.0
 lib/libkdegames.la
-lib/libkdegames.so
-lib/libkdegames.so.3
-lib/libkdegames.so.3.0
 lib/libkdeinit_kolf.la
-lib/libkdeinit_kolf.so
 lib/libkolf.la
-lib/libkolf.so
-lib/libkolf.so.3
-lib/libkolf.so.3.0
 share/applications/kde/KGoldrunner.desktop
 share/applications/kde/atlantik.desktop
 share/applications/kde/kasteroids.desktop

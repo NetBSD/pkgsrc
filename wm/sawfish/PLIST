@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/11 15:26:40 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:56 jlam Exp $
 bin/sawfish
 bin/sawfish-capplet
 bin/sawfish-client
@@ -6,32 +6,16 @@ bin/sawfish-themer
 bin/sawfish-ui
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/DOC
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gradient.la
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gradient.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gradient.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gtk-style
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish-about
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish-menu
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/flippers.la
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/flippers.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/flippers.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/gradient.la
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/gradient.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/gradient.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/play-sample.la
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/play-sample.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/play-sample.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/selection.la
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/selection.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/selection.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/x.la
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/x.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/x.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/selection.la
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/selection.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/selection.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/x.la
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/x.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/x.so
 share/control-center/Sawfish/.directory
 share/control-center/Sawfish/.order
 share/control-center/Sawfish/appearance-properties.desktop

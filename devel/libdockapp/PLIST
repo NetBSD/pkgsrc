@@ -1,9 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:28 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:26 jlam Exp $
 include/dockapp.h
-lib/libdockapp.a
 lib/libdockapp.la
-lib/libdockapp.so
-lib/libdockapp.so.1
-lib/libdockapp.so.1.0
 share/doc/libdockapp/README
 @dirrm share/doc/libdockapp

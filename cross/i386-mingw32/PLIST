@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/11 18:07:09 kent Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:21 jlam Exp $
 bin/i386-mingw32-addr2line
 bin/i386-mingw32-ar
 bin/i386-mingw32-as
@@ -643,9 +643,7 @@ i386-mingw32/lib/libshell32.a
 i386-mingw32/lib/libshfolder.a
 i386-mingw32/lib/libshlwapi.a
 i386-mingw32/lib/libsnmpapi.a
-i386-mingw32/lib/libstdc++.a
 i386-mingw32/lib/libstdc++.la
-i386-mingw32/lib/libsupc++.a
 i386-mingw32/lib/libsupc++.la
 i386-mingw32/lib/libsvrapi.a
 i386-mingw32/lib/libtapi32.a

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/03/08 22:31:40 seb Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/09/22 08:09:46 jlam Exp $
 bin/libIDL-config
 bin/name-client
 bin/old-name-server
@@ -64,32 +64,12 @@ include/orbit-1.0/orb/poa.h
 include/orbit-1.0/orb/sequences.h
 include/orbit-1.0/orb/typecode.h
 include/orbit-1.0/orbit-idl2.h
-lib/libIDL.a
 lib/libIDL.la
-lib/libIDL.so
-lib/libIDL.so.0
-lib/libIDL.so.0.6
 lib/libIDLConf.sh
-lib/libIIOP.a
 lib/libIIOP.la
-lib/libIIOP.so
-lib/libIIOP.so.${ORBIT_MAJOR}
-lib/libIIOP.so.${ORBIT_MAJOR}.${ORBIT_MINOR}
-lib/libORBit.a
 lib/libORBit.la
-lib/libORBit.so
-lib/libORBit.so.${ORBIT_MAJOR}
-lib/libORBit.so.${ORBIT_MAJOR}.${ORBIT_MINOR}
-lib/libORBitCosNaming.a
 lib/libORBitCosNaming.la
-lib/libORBitCosNaming.so
-lib/libORBitCosNaming.so.${ORBIT_MAJOR}
-lib/libORBitCosNaming.so.${ORBIT_MAJOR}.${ORBIT_MINOR}
-lib/libORBitutil.a
 lib/libORBitutil.la
-lib/libORBitutil.so
-lib/libORBitutil.so.${ORBIT_MAJOR}
-lib/libORBitutil.so.${ORBIT_MAJOR}.${ORBIT_MINOR}
 lib/libname-server.a
 lib/liborbit-c-backend.a
 lib/pkgconfig/ORBit.pc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/09/21 17:00:16 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/09/22 08:09:58 jlam Exp $
 bin/gdm
 bin/gdm-binary
 bin/gdmXnest
@@ -10,9 +10,7 @@ bin/gdmlogin
 bin/gdmphotosetup
 bin/gdmsetup
 bin/gdmthemetester
-lib/gtk-2.0/modules/libdwellmouselistener.a
 lib/gtk-2.0/modules/libdwellmouselistener.la
-lib/gtk-2.0/modules/libkeymouselistener.a
 lib/gtk-2.0/modules/libkeymouselistener.la
 libexec/gdmtranslate
 ${PAM_MISC}libexec/gdmaskpass

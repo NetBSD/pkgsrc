@@ -1,22 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/08 14:39:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:17 jlam Exp $
 include/vorbis/codec.h
 include/vorbis/vorbisenc.h
 include/vorbis/vorbisfile.h
-lib/libvorbis.a
 lib/libvorbis.la
-lib/libvorbis.so
-lib/libvorbis.so.3
-lib/libvorbis.so.3.0
-lib/libvorbisenc.a
 lib/libvorbisenc.la
-lib/libvorbisenc.so
-lib/libvorbisenc.so.2
-lib/libvorbisenc.so.2.0
-lib/libvorbisfile.a
 lib/libvorbisfile.la
-lib/libvorbisfile.so
-lib/libvorbisfile.so.4
-lib/libvorbisfile.so.4.0
 lib/pkgconfig/vorbis.pc
 lib/pkgconfig/vorbisenc.pc
 lib/pkgconfig/vorbisfile.pc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/09/21 16:47:56 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/09/22 08:09:27 jlam Exp $
 include/libgnomeui-2.0/gnome.h
 include/libgnomeui-2.0/libgnomeui/gnome-about.h
 include/libgnomeui-2.0/libgnomeui/gnome-app-helper.h
@@ -50,17 +50,9 @@ include/libgnomeui-2.0/libgnomeui/gnome-window-icon.h
 include/libgnomeui-2.0/libgnomeui/gnome-window.h
 include/libgnomeui-2.0/libgnomeui/gnometypebuiltins.h
 include/libgnomeui-2.0/libgnomeui/libgnomeui.h
-lib/gtk-2.0/2.4.0/filesystems/libgnome-vfs.a
 lib/gtk-2.0/2.4.0/filesystems/libgnome-vfs.la
-lib/gtk-2.0/2.4.0/filesystems/libgnome-vfs.so
-lib/libglade/2.0/libgnome.a
 lib/libglade/2.0/libgnome.la
-lib/libglade/2.0/libgnome.so
-lib/libgnomeui-2.a
 lib/libgnomeui-2.la
-lib/libgnomeui-2.so
-lib/libgnomeui-2.so.800
-lib/libgnomeui-2.so.800.0
 lib/pkgconfig/libgnomeui-2.0.pc
 libexec/gnome_segv2
 share/doc/libgnomeui/GnomeAbout.html

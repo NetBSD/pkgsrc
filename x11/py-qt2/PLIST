@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/17 10:31:36 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:10:06 jlam Exp $
 bin/eric${PYVERSSUFFIX}
 bin/pyuic${PYVERSSUFFIX}
 ${PYSITELIB}/eric/AsyncIO.py
@@ -14,30 +14,12 @@ ${PYSITELIB}/eric/Shell.py
 ${PYSITELIB}/eric/SourceViewer.py
 ${PYSITELIB}/eric/UserInterface.py
 ${PYSITELIB}/eric/eric.py
-${PYSITELIB}/libqtcanvascmodule-${PKGVERSION}.so
-${PYSITELIB}/libqtcanvascmodule.a
 ${PYSITELIB}/libqtcanvascmodule.la
-${PYSITELIB}/libqtcanvascmodule.so
-${PYSITELIB}/libqtcmodule-${PKGVERSION}.so
-${PYSITELIB}/libqtcmodule.a
 ${PYSITELIB}/libqtcmodule.la
-${PYSITELIB}/libqtcmodule.so
-${PYSITELIB}/libqtglcmodule-${PKGVERSION}.so
-${PYSITELIB}/libqtglcmodule.a
 ${PYSITELIB}/libqtglcmodule.la
-${PYSITELIB}/libqtglcmodule.so
-${PYSITELIB}/libqtnetworkcmodule-${PKGVERSION}.so
-${PYSITELIB}/libqtnetworkcmodule.a
 ${PYSITELIB}/libqtnetworkcmodule.la
-${PYSITELIB}/libqtnetworkcmodule.so
-${PYSITELIB}/libqttablecmodule-${PKGVERSION}.so
-${PYSITELIB}/libqttablecmodule.a
 ${PYSITELIB}/libqttablecmodule.la
-${PYSITELIB}/libqttablecmodule.so
-${PYSITELIB}/libqtxmlcmodule-${PKGVERSION}.so
-${PYSITELIB}/libqtxmlcmodule.a
 ${PYSITELIB}/libqtxmlcmodule.la
-${PYSITELIB}/libqtxmlcmodule.so
 ${PYSITELIB}/qt.py
 ${PYSITELIB}/qt.pyc
 ${PYSITELIB}/qtcanvas.py

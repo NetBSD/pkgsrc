@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/02/25 17:15:42 minskim Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/09/22 08:10:06 jlam Exp $
 bin/mlcc
 bin/mlclient
 bin/mlterm
@@ -14,34 +14,14 @@ etc/mlterm/tfont
 etc/mlterm/vaafont
 etc/mlterm/vfont
 etc/mlterm/xim
-lib/libkik.a
 lib/libkik.la
-lib/libkik.so
-lib/libkik.so.9
-lib/libkik.so.9.0
-lib/libmkf.a
 lib/libmkf.la
-lib/libmkf.so
-lib/libmkf.so.13
-lib/libmkf.so.13.0
-lib/mlterm/libathena.a
 lib/mlterm/libathena.la
-lib/mlterm/libathena.so
-lib/mlterm/libmotif.a
 lib/mlterm/libmotif.la
-lib/mlterm/libmotif.so
-lib/mlterm/libmozmodern.a
 lib/mlterm/libmozmodern.la
-lib/mlterm/libmozmodern.so
-lib/mlterm/libnext.a
 lib/mlterm/libnext.la
-lib/mlterm/libnext.so
-lib/mlterm/libsample.a
 lib/mlterm/libsample.la
-lib/mlterm/libsample.so
-lib/mlterm/libsample2.a
 lib/mlterm/libsample2.la
-lib/mlterm/libsample2.so
 libexec/mlconfig
 libexec/mlterm-menu
 man/man1/mlclient.1

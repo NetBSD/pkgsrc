@@ -1,18 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/18 23:02:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:56 jlam Exp $
 bin/bbconf
 man/man1/bbconf.1
-share/bbconf/plugins/libbbconf.a
 share/bbconf/plugins/libbbconf.la
-share/bbconf/plugins/libbbconf.so
-share/bbconf/plugins/libkeybindings.a
 share/bbconf/plugins/libkeybindings.la
-share/bbconf/plugins/libkeybindings.so
-share/bbconf/plugins/libmenu.a
 share/bbconf/plugins/libmenu.la
-share/bbconf/plugins/libmenu.so
-share/bbconf/plugins/libthemes.a
 share/bbconf/plugins/libthemes.la
-share/bbconf/plugins/libthemes.so
 share/doc/bbconf/AUTHORS
 share/doc/bbconf/COPYING
 share/doc/bbconf/ChangeLog

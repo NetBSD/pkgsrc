@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/27 13:19:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:53 jlam Exp $
 bin/xmlsec1
 bin/xmlsec1-config
 include/xmlsec1/xmlsec/app.h
@@ -37,16 +37,8 @@ include/xmlsec1/xmlsec/xmldsig.h
 include/xmlsec1/xmlsec/xmlenc.h
 include/xmlsec1/xmlsec/xmlsec.h
 include/xmlsec1/xmlsec/xmltree.h
-lib/libxmlsec1-openssl.a
 lib/libxmlsec1-openssl.la
-lib/libxmlsec1-openssl.so
-lib/libxmlsec1-openssl.so.3
-lib/libxmlsec1-openssl.so.3.6
-lib/libxmlsec1.a
 lib/libxmlsec1.la
-lib/libxmlsec1.so
-lib/libxmlsec1.so.3
-lib/libxmlsec1.so.3.6
 lib/pkgconfig/xmlsec1-openssl.pc
 lib/pkgconfig/xmlsec1.pc
 lib/xmlsec1Conf.sh

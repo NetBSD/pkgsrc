@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/04 13:47:56 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:28 jlam Exp $
 include/sigc++-2.0/sigc++/adaptors/adaptor_trait.h
 include/sigc++-2.0/sigc++/adaptors/adaptors.h
 include/sigc++-2.0/sigc++/adaptors/bind.h
@@ -65,11 +65,7 @@ include/sigc++-2.0/sigc++/slot.h
 include/sigc++-2.0/sigc++/trackable.h
 include/sigc++-2.0/sigc++/type_traits.h
 include/sigc++-2.0/sigc++/visit_each.h
-lib/libsigc-2.0.a
 lib/libsigc-2.0.la
-lib/libsigc-2.0.so
-lib/libsigc-2.0.so.0
-lib/libsigc-2.0.so.0.0
 lib/pkgconfig/sigc++-2.0.pc
 lib/sigc++-2.0/include/sigc++config.h
 share/doc/libsigc-2.0/docs/images/libsigc_logo.gif

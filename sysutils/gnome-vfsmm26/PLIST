@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/04 13:54:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:53 jlam Exp $
 include/gnome-vfsmm-2.6/libgnomevfsmm.h
 include/gnome-vfsmm-2.6/libgnomevfsmm/application-registry.h
 include/gnome-vfsmm-2.6/libgnomevfsmm/async-handle.h
@@ -38,11 +38,7 @@ include/gnome-vfsmm-2.6/libgnomevfsmm/wrap_init.h
 lib/gnome-vfsmm-2.6/include/libgnomevfsmmconfig.h
 lib/gnome-vfsmm-2.6/proc/m4/convert.m4
 lib/gnome-vfsmm-2.6/proc/m4/convert_gnome_vfsmm.m4
-lib/libgnomevfsmm-2.6.a
 lib/libgnomevfsmm-2.6.la
-lib/libgnomevfsmm-2.6.so
-lib/libgnomevfsmm-2.6.so.1
-lib/libgnomevfsmm-2.6.so.1.1
 lib/pkgconfig/gnome-vfsmm-2.6.pc
 @dirrm lib/gnome-vfsmm-2.6/proc/m4
 @dirrm lib/gnome-vfsmm-2.6/proc

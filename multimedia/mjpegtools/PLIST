@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/17 05:50:50 sekiya Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:46 jlam Exp $
 bin/jpeg2yuv
 bin/lav2avi.sh
 bin/lav2mpeg
@@ -87,30 +87,12 @@ info/mjpeg-howto.info
 info/mjpeg-howto.info-1
 info/mjpeg-howto.info-2
 info/mjpeg-howto.info-3
-lib/liblavfile-1.6.so.2
-lib/liblavfile-1.6.so.2.2
 lib/liblavfile.la
-lib/liblavfile.so
-lib/liblavjpeg-1.6.so.2
-lib/liblavjpeg-1.6.so.2.2
 lib/liblavjpeg.la
-lib/liblavjpeg.so
-lib/liblavplay-1.6.so.2
-lib/liblavplay-1.6.so.2.2
 lib/liblavplay.la
-lib/liblavplay.so
-lib/libmjpegutils-1.6.so.2
-lib/libmjpegutils-1.6.so.2.2
 lib/libmjpegutils.la
-lib/libmjpegutils.so
-lib/libmpeg2encpp-1.6.so.2
-lib/libmpeg2encpp-1.6.so.2.2
 lib/libmpeg2encpp.la
-lib/libmpeg2encpp.so
-lib/libmplex2-1.6.so.2
-lib/libmplex2-1.6.so.2.2
 lib/libmplex2.la
-lib/libmplex2.so
 lib/pkgconfig/mjpegtools.pc
 man/man1/jpeg2yuv.1
 man/man1/lav2mpeg.1

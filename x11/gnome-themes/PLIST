@@ -1,22 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/21 16:57:50 jmmv Exp $
-lib/gtk-2.0/2.4.0/engines/libcrux-engine.a
+@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:58 jlam Exp $
 lib/gtk-2.0/2.4.0/engines/libcrux-engine.la
-lib/gtk-2.0/2.4.0/engines/libcrux-engine.so
-lib/gtk-2.0/2.4.0/engines/libhcengine.a
 lib/gtk-2.0/2.4.0/engines/libhcengine.la
-lib/gtk-2.0/2.4.0/engines/libhcengine.so
-lib/gtk-2.0/2.4.0/engines/liblighthouseblue.a
 lib/gtk-2.0/2.4.0/engines/liblighthouseblue.la
-lib/gtk-2.0/2.4.0/engines/liblighthouseblue.so
-lib/gtk-2.0/2.4.0/engines/libmist.a
 lib/gtk-2.0/2.4.0/engines/libmist.la
-lib/gtk-2.0/2.4.0/engines/libmist.so
-lib/gtk-2.0/2.4.0/engines/libsmooth.a
 lib/gtk-2.0/2.4.0/engines/libsmooth.la
-lib/gtk-2.0/2.4.0/engines/libsmooth.so
-lib/gtk-2.0/2.4.0/engines/libthinice.a
 lib/gtk-2.0/2.4.0/engines/libthinice.la
-lib/gtk-2.0/2.4.0/engines/libthinice.so
 share/eazel-engine/arrow_down-spinner.png
 share/eazel-engine/arrow_down.png
 share/eazel-engine/arrow_left.png

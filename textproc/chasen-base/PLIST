@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2004/05/06 13:32:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:54 jlam Exp $
 bin/chasen
 bin/chasen-config
 include/chasen.h
-lib/libchasen.a
 lib/libchasen.la
-lib/libchasen.so
-lib/libchasen.so.0
-lib/libchasen.so.0.1
 sbin/makeda
 sbin/makemat
 @dirrm share/chasen/dic

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/12 02:41:18 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:55 jlam Exp $
 include/pathan/Pathan.hpp
 include/pathan/XPathEvaluator.hpp
 include/pathan/XPathException.hpp
@@ -7,10 +7,6 @@ include/pathan/XPathNSResolver.hpp
 include/pathan/XPathNamespace.hpp
 include/pathan/XPathResult.hpp
 include/pathan/ext/XPathEvaluatorExt.hpp
-lib/libpathan.a
 lib/libpathan.la
-lib/libpathan.so
-lib/libpathan.so.2
-lib/libpathan.so.2.2
 @dirrm include/pathan/ext
 @dirrm include/pathan

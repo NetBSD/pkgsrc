@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/07/09 00:18:54 recht Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:24 jlam Exp $
 include/gc.h
 include/gc/gc.h
 include/gc/gc_alloc.h
@@ -28,16 +28,8 @@ include/gc_local_alloc.h
 include/gc_pthread_redirects.h
 include/gc_typed.h
 include/leak_detector.h
-lib/libgc.a
 lib/libgc.la
-lib/libgc.so
-lib/libgc.so.1
-lib/libgc.so.1.2
-lib/libgccpp.a
 lib/libgccpp.la
-lib/libgccpp.so
-lib/libgccpp.so.1
-lib/libgccpp.so.1.2
 man/man3/gc.3
 share/doc/gc/README
 share/doc/gc/README.DGUX386

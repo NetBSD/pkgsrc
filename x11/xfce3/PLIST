@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/11 06:13:59 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:10:07 jlam Exp $
 bin/CDE2Xfcepal
 bin/glob
 bin/startxfce
@@ -54,9 +54,7 @@ etc/xfce/xinitrc
 etc/xfce/xinitrc.mwm
 etc/xfce/xsession
 etc/xfce/xtree.reg
-lib/gtk/themes/engines/libxfce.a
 lib/gtk/themes/engines/libxfce.la
-lib/gtk/themes/engines/libxfce.so
 man/man1/glob.1
 man/man1/xfbd.1
 man/man1/xfce.1

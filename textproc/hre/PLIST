@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/12 03:38:11 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:55 jlam Exp $
 include/hre/hre.h
-lib/libhre.a
 lib/libhre.la
-lib/libhre.so
-lib/libhre.so.0
-lib/libhre.so.0.9
 @dirrm include/hre

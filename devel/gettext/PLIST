@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/02/15 21:38:32 seb Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:25 jlam Exp $
 bin/autopoint
 bin/gettext
 bin/gettextize
@@ -22,12 +22,8 @@ lib/gettext/hostname
 lib/gettext/project-id
 lib/gettext/urlget
 lib/gettext/user-email
-lib/libgettextlib-${PKGVERSION}.so
 lib/libgettextlib.la
-lib/libgettextlib.so
-lib/libgettextsrc-${PKGVERSION}.so
 lib/libgettextsrc.la
-lib/libgettextsrc.so
 man/man1/autopoint.1
 man/man1/gettext.1
 man/man1/gettextize.1

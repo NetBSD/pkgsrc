@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/21 05:59:30 martti Exp $
-lib/xfce4/panel-plugins/libweather.a
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:44 jlam Exp $
 lib/xfce4/panel-plugins/libweather.la
-lib/xfce4/panel-plugins/libweather.so
 share/xfce4/weather/icons/liquid/1.png
 share/xfce4/weather/icons/liquid/10.png
 share/xfce4/weather/icons/liquid/11.png

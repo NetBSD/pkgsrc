@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/22 11:28:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:21 jlam Exp $
 bin/wv2-config
 include/wv2/associatedstrings.h
 include/wv2/convert.h
@@ -24,9 +24,5 @@ include/wv2/word95_generated.h
 include/wv2/word97_generated.h
 include/wv2/word_helper.h
 include/wv2/wvlog.h
-lib/libwv2.a
 lib/libwv2.la
-lib/libwv2.so
-lib/libwv2.so.1
-lib/libwv2.so.1.6
 @dirrm include/wv2

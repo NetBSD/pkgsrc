@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/29 02:57:36 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:40 jlam Exp $
 bin/cob-config
 bin/cobc
 include/libcob.h
@@ -11,11 +11,7 @@ include/libcob/numeric.h
 include/libcob/screenio.h
 include/libcob/strings.h
 include/libcob/termio.h
-lib/libcob.a
 lib/libcob.la
-lib/libcob.so
-lib/libcob.so.1
-lib/libcob.so.1.0
 share/examples/open-cobol/libcob.conf
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/open-cobol.mo
 @dirrm share/examples/open-cobol

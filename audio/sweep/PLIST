@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/06/21 18:00:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:17 jlam Exp $
 bin/sweep
 include/sweep/sweep.h
 include/sweep/sweep_filter.h
@@ -10,24 +10,12 @@ include/sweep/sweep_typeconvert.h
 include/sweep/sweep_types.h
 include/sweep/sweep_undo.h
 include/sweep/sweep_version.h
-lib/sweep/libbyenergy.a
 lib/sweep/libbyenergy.la
-lib/sweep/libbyenergy.so
-lib/sweep/libecho.a
 lib/sweep/libecho.la
-lib/sweep/libecho.so
-lib/sweep/libfade.a
 lib/sweep/libfade.la
-lib/sweep/libfade.so
-lib/sweep/libladspameta.a
 lib/sweep/libladspameta.la
-lib/sweep/libladspameta.so
-lib/sweep/libnormalise.a
 lib/sweep/libnormalise.la
-lib/sweep/libnormalise.so
-lib/sweep/libreverse.a
 lib/sweep/libreverse.la
-lib/sweep/libreverse.so
 man/man1/sweep.1
 share/gnome/apps/Multimedia/sweep.desktop
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sweep.mo

@@ -1,11 +1,9 @@
-# $NetBSD: language.mk,v 1.3 2004/09/10 19:53:51 jlam Exp $
+# $NetBSD: language.mk,v 1.4 2004/09/22 08:09:39 jlam Exp $
 
 BUILDLINK_DEPENDS.gcc3-c+=	gcc3${GCC3_PKGMODIF}-c-${GCC_VERSION}{,nb*}
 BUILDLINK_DEPMETHOD.gcc3-c+=	full
 
 .include "../../lang/gcc3/Makefile.common"
-
-LIBTOOLIZE_PLIST=	yes
 
 pre-build:
 	cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} tconfig.h

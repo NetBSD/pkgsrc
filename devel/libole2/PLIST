@@ -1,14 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:38 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:27 jlam Exp $
 bin/libole2-config
 include/libole2/libole2.h
 include/libole2/ms-ole-summary.h
 include/libole2/ms-ole-vba.h
 include/libole2/ms-ole.h
-lib/libgnomeole2.a
 lib/libgnomeole2.la
-lib/libgnomeole2.so
-lib/libgnomeole2.so.0
-lib/libgnomeole2.so.0.0
 lib/libole2Conf.sh
 share/aclocal/gnome-libole2.m4
 share/aclocal/libole2.m4

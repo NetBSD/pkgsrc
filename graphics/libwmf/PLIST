@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/02/05 20:14:06 skrll Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/09/22 08:09:36 jlam Exp $
 bin/libwmf-config
 bin/libwmf-fontmap
 bin/wmf2eps
@@ -20,16 +20,8 @@ include/libwmf/macro.h
 include/libwmf/svg.h
 include/libwmf/types.h
 include/libwmf/x.h
-lib/libwmf-0.2.so.8
-lib/libwmf-0.2.so.8.0
-lib/libwmf.a
 lib/libwmf.la
-lib/libwmf.so
-lib/libwmflite-0.2.so.7
-lib/libwmflite-0.2.so.7.1
-lib/libwmflite.a
 lib/libwmflite.la
-lib/libwmflite.so
 share/doc/html/libwmf/caolan/2.html
 share/doc/html/libwmf/caolan/Arc.html
 share/doc/html/libwmf/caolan/BitBlt.html

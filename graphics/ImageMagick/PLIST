@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2004/09/06 13:09:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2004/09/22 08:09:32 jlam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -105,21 +105,9 @@ lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/type-windows.mgk
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/type.mgk
 @exec ${MKDIR} %D/lib/ImageMagick-${IM_MAJOR_VER}/modules-Q16/coders
 @exec ${MKDIR} %D/lib/ImageMagick-${IM_MAJOR_VER}/modules-Q16/filters
-lib/libMagick++.a
 lib/libMagick++.la
-lib/libMagick++.so
-lib/libMagick++.so.6
-lib/libMagick++.so.6.7
-lib/libMagick.a
 lib/libMagick.la
-lib/libMagick.so
-lib/libMagick.so.6
-lib/libMagick.so.6.7
-lib/libWand.a
 lib/libWand.la
-lib/libWand.so
-lib/libWand.so.6
-lib/libWand.so.6.7
 lib/pkgconfig/ImageMagick++.pc
 lib/pkgconfig/ImageMagick.pc
 lib/pkgconfig/Wand.pc

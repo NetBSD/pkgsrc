@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/08/21 13:39:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:43 jlam Exp $
 bin/celestrongps
 bin/fliccd
 bin/indiserver
@@ -33,27 +33,12 @@ bin/test_extdatepicker
 include/kstarsinterface.h
 include/simclockinterface.h
 lib/kde3/kfile_drgeo.la
-lib/kde3/kfile_drgeo.so
 lib/kde3/kfile_kig.la
-lib/kde3/kfile_kig.so
 lib/kde3/libkigpart.la
-lib/kde3/libkigpart.so
 lib/libextdate.la
-lib/libextdate.so
-lib/libextdate.so.3
-lib/libextdate.so.3.0
 lib/libkdeeducore.la
-lib/libkdeeducore.so
-lib/libkdeeducore.so.3
-lib/libkdeeducore.so.3.0
 lib/libkdeeduplot.la
-lib/libkdeeduplot.so
-lib/libkdeeduplot.so.3
-lib/libkdeeduplot.so.3.0
 lib/libkdeeduui.la
-lib/libkdeeduui.so
-lib/libkdeeduui.so.3
-lib/libkdeeduui.so.3.0
 share/applications/kde/kalzium.desktop
 share/applications/kde/kbruch.desktop
 share/applications/kde/keduca.desktop

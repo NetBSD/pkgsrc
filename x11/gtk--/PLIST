@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/09/11 21:53:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:58 jlam Exp $
 bin/gtkmm-config
 include/gdk--.h
 include/gdk--/bitmap.h
@@ -186,16 +186,8 @@ lib/gtkmm/proc/gtkconvert.m4
 lib/gtkmm/proc/gtkmmproc
 lib/gtkmm/proc/list.m4
 lib/gtkmm/proc/stage1.m4
-lib/libgdkmm.a
 lib/libgdkmm.la
-lib/libgdkmm.so
-lib/libgdkmm.so.2
-lib/libgdkmm.so.2.2
-lib/libgtkmm.a
 lib/libgtkmm.la
-lib/libgtkmm.so
-lib/libgtkmm.so.3
-lib/libgtkmm.so.3.4
 @unexec test %D = ${LOCALBASE} || ${RM} ${LOCALBASE}/share/aclocal/gtk--.m4
 share/aclocal/gtk--.m4
 @exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/gtk--.m4 ${LOCALBASE}/share/aclocal/gtk--.m4

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/21 15:24:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:57 jlam Exp $
 bin/kimagemapeditor
 bin/klinkstatus
 bin/kmdr-editor
@@ -11,27 +11,13 @@ include/kommanderfactory.h
 include/kommanderplugin.h
 include/kommanderwidget.h
 lib/kde3/libkfilereplacepart.la
-lib/kde3/libkfilereplacepart.so
 lib/kde3/libkimagemapeditor.la
-lib/kde3/libkimagemapeditor.so
 lib/kde3/libklinkstatuspart.la
-lib/kde3/libklinkstatuspart.so
 lib/kde3/libkxsldbgpart.la
-lib/kde3/libkxsldbgpart.so
 lib/kde3/quantadebuggergubed.la
-lib/kde3/quantadebuggergubed.so
 lib/libkommanderplugin.la
-lib/libkommanderplugin.so
-lib/libkommanderplugin.so.0
-lib/libkommanderplugin.so.0.0
 lib/libkommanderwidget.la
-lib/libkommanderwidget.so
-lib/libkommanderwidget.so.0
-lib/libkommanderwidget.so.0.0
 lib/libkommanderwidgets.la
-lib/libkommanderwidgets.so
-lib/libkommanderwidgets.so.0
-lib/libkommanderwidgets.so.0.0
 share/doc/kde/HTML/en/klinkstatus/common
 share/doc/kde/HTML/en/klinkstatus/index.cache.bz2
 share/doc/kde/HTML/en/klinkstatus/index.docbook

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/02/22 13:49:44 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:39 jlam Exp $
 bin/cilk
 include/cilk/cilk-cilk2c-pre.h
 include/cilk/cilk-cilk2c.h
@@ -10,26 +10,10 @@ include/cilk/gcc-builtin.h
 lib/cilk/cilk2c
 lib/cilk/libcilkrt0.a
 lib/cilk/specs
-lib/libcilk.a
-lib/libcilk.g.a
 lib/libcilk.g.la
-lib/libcilk.g.p.a
 lib/libcilk.g.p.la
-lib/libcilk.g.p.so
-lib/libcilk.g.p.so.1
-lib/libcilk.g.p.so.1.1
-lib/libcilk.g.so
-lib/libcilk.g.so.1
-lib/libcilk.g.so.1.1
 lib/libcilk.la
-lib/libcilk.p.a
 lib/libcilk.p.la
-lib/libcilk.p.so
-lib/libcilk.p.so.1
-lib/libcilk.p.so.1.1
-lib/libcilk.so
-lib/libcilk.so.1
-lib/libcilk.so.1.1
 share/doc/cilk/AUTHORS
 share/doc/cilk/COPYING
 share/doc/cilk/README

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/05 13:14:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:10:06 jlam Exp $
 bin/mowitz-config
 include/Mowitz/Mowitz.h
 include/Mowitz/MwCanvas.h
@@ -89,11 +89,7 @@ include/Mowitz/MwXutils.h
 include/Mowitz/MwFormat.h
 include/Mowitz/MwXFormat.h
 include/Mowitz/MwFormatP.h
-lib/libMowitz.a
 lib/libMowitz.la
-lib/libMowitz.so
-lib/libMowitz.so.2
-lib/libMowitz.so.2.2
 share/Mowitz/fonts/agd.afm
 share/Mowitz/fonts/agdo.afm
 share/Mowitz/fonts/agw.afm

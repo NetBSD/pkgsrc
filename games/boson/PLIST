@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 18:47:33 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:31 jlam Exp $
 bin/bocursor
 bin/bodebugdialog
 bin/boinfo
@@ -6,9 +6,7 @@ bin/boprofiling
 bin/borender
 bin/boson
 bin/bounit
-lib/kde3/plugins/designer/bosonwidgets.a
 lib/kde3/plugins/designer/bosonwidgets.la
-lib/kde3/plugins/designer/bosonwidgets.so
 share/doc/kde/HTML/en/boson/boson-green.jpg
 share/doc/kde/HTML/en/boson/facilities/commandbunker.jpg
 share/doc/kde/HTML/en/boson/facilities/commandbunker_small.jpg

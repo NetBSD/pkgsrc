@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:06 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:32 jlam Exp $
 bin/GMT
 bin/backtracker
 bin/binlegs
@@ -118,26 +118,10 @@ include/gmt/gmt_project.h
 include/gmt/gmt_shore.h
 include/gmt/gmt_unique.h
 include/gmt/pslib.h
-lib/libgmt.a
 lib/libgmt.la
-lib/libgmt.so
-lib/libgmt.so.0
-lib/libgmt.so.0.0
-lib/libgmt_mgg.a
 lib/libgmt_mgg.la
-lib/libgmt_mgg.so
-lib/libgmt_mgg.so.0
-lib/libgmt_mgg.so.0.0
-lib/libpsl.a
 lib/libpsl.la
-lib/libpsl.so
-lib/libpsl.so.0
-lib/libpsl.so.0.0
-lib/libx2sys.a
 lib/libx2sys.la
-lib/libx2sys.so
-lib/libx2sys.so.0
-lib/libx2sys.so.0.0
 man/man1/GMT.1
 man/man1/backtracker.1
 man/man1/binlegs.1

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/18 07:54:44 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:48 jlam Exp $
 bin/soup-config
 bin/soup-httpd
 bin/soup-ssl-proxy
@@ -29,21 +29,9 @@ include/soup/libwsdl/wsdl-soap-memory.h
 include/soup/libwsdl/wsdl-soap-parse.h
 include/soup/libwsdl/wsdl-typecodes.h
 include/soup/libwsdl/wsdl.h
-lib/libsoup-apache.a
 lib/libsoup-apache.la
-lib/libsoup-apache.so
-lib/libsoup-apache.so.6
-lib/libsoup-apache.so.6.4
-lib/libsoup.a
 lib/libsoup.la
-lib/libsoup.so
-lib/libsoup.so.6
-lib/libsoup.so.6.4
-lib/libwsdl.a
 lib/libwsdl.la
-lib/libwsdl.so
-lib/libwsdl.so.6
-lib/libwsdl.so.6.4
 lib/pkgconfig/soup.pc
 lib/soupConf.sh
 lib/soup_apacheConf.sh

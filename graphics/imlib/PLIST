@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/23 16:24:14 minskim Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:34 jlam Exp $
 bin/imlib_config
 bin/imlib-config
 include/gdk_imlib.h
@@ -7,40 +7,16 @@ include/gdk_imlib_types.h
 include/Imlib.h
 include/Imlib_private.h
 include/Imlib_types.h
-lib/libImlib.a
 lib/libImlib.la
-lib/libImlib.so
-lib/libImlib.so.10
-lib/libImlib.so.10.14
-lib/libgdk_imlib.a
 lib/libgdk_imlib.la
-lib/libgdk_imlib.so
-lib/libgdk_imlib.so.10
-lib/libgdk_imlib.so.10.14
-lib/libimlib-bmp.a
 lib/libimlib-bmp.la
-lib/libimlib-bmp.so
-lib/libimlib-gif.a
 lib/libimlib-gif.la
-lib/libimlib-gif.so
-lib/libimlib-jpeg.a
 lib/libimlib-jpeg.la
-lib/libimlib-jpeg.so
-lib/libimlib-png.a
 lib/libimlib-png.la
-lib/libimlib-png.so
-lib/libimlib-ppm.a
 lib/libimlib-ppm.la
-lib/libimlib-ppm.so
-lib/libimlib-ps.a
 lib/libimlib-ps.la
-lib/libimlib-ps.so
-lib/libimlib-tiff.a
 lib/libimlib-tiff.la
-lib/libimlib-tiff.so
-lib/libimlib-xpm.a
 lib/libimlib-xpm.la
-lib/libimlib-xpm.so
 lib/pkgconfig/imlib.pc
 lib/pkgconfig/imlibgdk.pc
 man/man1/imlib-config.1

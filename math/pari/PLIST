@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/07 21:57:50 jtb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:42 jlam Exp $
 bin/gp
 bin/gp-2.1
 bin/gphelp
@@ -16,11 +16,7 @@ include/pari/pariport.h
 include/pari/paristio.h
 include/pari/parisys.h
 include/pari/paritype.h
-lib/libpari.a
 lib/libpari.la
-lib/libpari.so
-lib/libpari.so.0
-lib/libpari.so.0.0
 man/man1/gp.1
 man/man1/gphelp.1
 man/man1/pari.1

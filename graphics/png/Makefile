@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2004/08/17 09:54:30 drochner Exp $
+# $NetBSD: Makefile,v 1.66 2004/09/22 08:09:37 jlam Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
@@ -29,8 +29,6 @@ MAKEFILE=	scripts/makefile.std
 MAKE_ENV+=	REALCC="${CC}"
 MAKE_ENV+=	LIBPNG_SO_MAJOR=${LIBPNG_SO_MAJOR}
 MAKE_ENV+=	LIBPNG_SO_MINOR=${LIBPNG_SO_MINOR}
-PLIST_SUBST+=	LIBPNG_SO_MAJOR=${LIBPNG_SO_MAJOR}
-PLIST_SUBST+=	LIBPNG_SO_MINOR=${LIBPNG_SO_MINOR}
 
 INSTALLATION_DIRS=	include lib/pkgconfig man/man3 man/man5
 

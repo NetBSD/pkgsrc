@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/05 19:03:12 nathanw Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:47 jlam Exp $
 bin/mDNSBrowse
 bin/mDNSPublish
 bin/mDNSResponder
@@ -26,11 +26,7 @@ include/howl/salt/verrno.h
 include/howl/salt/vstdlib.h
 include/howl/salt/vstring.h
 include/howl/salt/vtypes.h
-lib/lib${PKGNAME}.so.0
-lib/lib${PKGNAME}.so.0.2
-lib/libhowl.a
 lib/libhowl.la
-lib/libhowl.so
 lib/pkgconfig/howl.pc
 man/man8/mDNSResponder.8
 share/howl/help/address-summary.html
