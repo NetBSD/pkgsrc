@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2004/12/24 18:33:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2005/02/04 22:47:24 adrianp Exp $
 
-DISTNAME=	lablgtk-1.2.6
-PKGREVISION=	3
+DISTNAME=	lablgtk-1.2.7
 CATEGORIES=	x11
 MASTER_SITES=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/
 
@@ -14,6 +13,7 @@ USE_GNU_TOOLS+=	make
 USE_X11=	YES
 
 BUILDLINK_DEPMETHOD.ocaml=	full
+BUILDLINK_DEPENDS.ocaml+=	ocaml>=3.0.5
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,6 +24,10 @@ USE_DOTOPT=	YES
 CAMLOPT=	ocamlc
 MAKE_ENV+=	CAMLOPT=${CAMLOPT}
 PLIST_SRC=	${PKGDIR}/PLIST.noopt
+.endif
+
+.if ${OPSYS} == "Darwin"
+PLIST_SRC+=	${PKGDIR}/PLIST.stub
 .endif
 
 do-configure:
