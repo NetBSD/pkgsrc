@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2073 2003/04/29 01:37:07 rh Exp $
+$NetBSD: CHANGES,v 1.2074 2003/04/29 08:20:40 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1774,3 +1774,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added suse_freetype2-7.3 [jdolecek 2003-04-29]
 	Added opera-7.1.0beta1 [jdolecek 2003-04-29]
 	Updated createbuildlink to 2.6 [rh 2003-04-29]
+	Added gnome-icon-theme-1.0.2 [rh 2003-04-29]
