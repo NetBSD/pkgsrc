@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/11/05 05:32:18 mycroft Exp $
-# FreeBSD Id: Makefile,v 1.6 1997/10/15 20:35:20 fenner Exp 
+# $NetBSD: Makefile,v 1.13 1998/11/05 06:35:24 mycroft Exp $
 #
 
 DISTNAME=	sdr-2.5.8
