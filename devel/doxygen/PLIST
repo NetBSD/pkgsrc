@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/16 12:07:18 martti Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/10/05 12:03:50 martti Exp $
 bin/doxygen
-bin/doxysearch
 bin/doxytag
 share/doc/doxygen/doxygen_manual.pdf
 share/doc/doxygen/examples/Makefile
@@ -307,7 +306,6 @@ share/doc/doxygen/html/doxygen.png
 share/doc/doxygen/html/doxygen_logo.gif
 share/doc/doxygen/html/doxygen_logo_low.gif
 share/doc/doxygen/html/doxygen_usage.html
-share/doc/doxygen/html/doxysearch_usage.html
 share/doc/doxygen/html/doxytag_usage.html
 share/doc/doxygen/html/doxywizard.gif
 share/doc/doxygen/html/doxywizard_usage.html
