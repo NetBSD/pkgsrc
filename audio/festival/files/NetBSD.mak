@@ -5,11 +5,8 @@ ECHO_N = /usr/bin/printf "%s"
 
 NAWK=awk
 
-NAS_LIB=$(PKG_X11BASE)/lib
-NAS_INCLUDE=$(PKG_X11BASE)/include
+NAS_LIB=${BUILDLINK_DIR}/lib
+NAS_INCLUDE=${BUILDLINK_DIR}/include
 
 X11_LIB=$(PKG_X11BASE)/lib
 X11_INCLUDE=$(PKG_X11BASE)/include
-
-OS_INCLUDES+=-I$(PKG_PREFIX)/include
-OS_LIBS+=-L$(PKG_PREFIX)/lib
