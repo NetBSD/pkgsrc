@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.247 2004/05/31 16:47:00 jschauma Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.248 2004/06/04 20:15:28 mrauch Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1757,7 +1757,7 @@ PKG_INSTALLATION_TYPES?= overwrite
 
 PKG_LANG?=english
 # Used to specify preferred language settings
-# Currently only used by www/netscape7
+# Currently only used by www/netscape7 and misc/openoffice
 # Possible: depends on packages supporting this variable, basically any
 # language.  Should be '<lang>_<lc>' or '<lang>', for example 'english_uk',
 # 'german' or 'portuguese_br'.
