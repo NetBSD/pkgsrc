@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4951 2004/02/22 10:01:19 jmmv Exp $
+$NetBSD: CHANGES,v 1.4952 2004/02/22 12:30:08 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -969,3 +969,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Perl-Tidy-20021130 [minskim 2004-02-22]
 	Updated courier-imap to 2.2.1 [jlam 2004-02-22]
 	Updated fxtv to 1.03nb5 [jmmv 2004-02-22]
+	Deleted rdesktop10 [grant 2004-02-22]
