@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-mi,v 1.3 1998/07/21 21:34:09 cjs Exp $
+@comment $NetBSD: PLIST-mi,v 1.4 1998/08/07 23:46:09 cjs Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
@@ -216,6 +216,9 @@ http/icons/world2.gif
 http/include/alloc.h
 http/include/ap.h
 http/include/ap_config.h
+http/include/ap_config_auto.h
+http/include/ap_compat.h
+http/include/ap_ctype.h
 http/include/ap_md5.h
 http/include/buff.h
 http/include/compat.h
