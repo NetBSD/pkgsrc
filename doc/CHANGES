@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.45 2002/09/24 13:09:14 blymn Exp $
+$NetBSD: CHANGES,v 1.46 2002/09/24 14:02:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2953,3 +2953,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated popa3d to 0.5.9 [wiz 2002-09-24]
 	Updated pkglint to 3.33 [wiz 2002-09-24]
 	Added bzflag 1.7.5.6 [blymn 2002-09-24]
+	Updated pkglint to 3.34 [wiz 2002-09-24]
