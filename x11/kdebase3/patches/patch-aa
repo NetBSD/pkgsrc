@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2003/05/22 02:42:47 markd Exp $
+$NetBSD: patch-aa,v 1.7 2003/06/05 21:29:33 drochner Exp $
 
---- configure.orig	Tue May 13 23:08:06 2003
-+++ configure
-@@ -31619,63 +31619,6 @@ _ACEOF
+--- configure.orig	2003-05-13 13:08:06.000000000 +0200
++++ configure	2003-06-05 20:04:56.000000000 +0200
+@@ -31619,63 +31619,6 @@
  
  
  
@@ -66,11 +66,10 @@ $NetBSD: patch-aa,v 1.6 2003/05/22 02:42:47 markd Exp $
  echo "$as_me:$LINENO: checking if it's safe to enable UTMP" >&5
  echo $ECHO_N "checking if it's safe to enable UTMP... $ECHO_C" >&6
  
-@@ -33795,6 +33738,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   (exit $ac_status); }; }; then
+@@ -33796,6 +33739,23 @@
  
                    ac_cv_have_dpms="-lXdpms"
-+
+ 
 +	lib=Xdpms
 +	shared_lib_found=no
 +	for i in ${LDFLAGS}; do
@@ -87,6 +86,15 @@ $NetBSD: patch-aa,v 1.6 2003/05/22 02:42:47 markd Exp $
 +	if [ "$shared_lib_found" = "no" ]; then
 +		eval "ac_cv_have_dpms=no"
 +	fi
- 
++
  else
    echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -38423,6 +38383,7 @@
+ case "$UNAME" in
+ 	Linux) LIBHOSTS="$LIBSENSORS" ;;
+ 	FreeBSD) LIBHOSTS="$LIBSENSORS -lkvm" ;;
++	NetBSD) LIBHOSTS="$LIBSENSORS -lkvm" ;;
+ 	Solaris) LIBHOSTS="$LIBSENSORS -lkstat -lsocket" ;;
+ esac
+ 
