@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/07/20 19:46:47 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2000/08/22 11:53:08 dmcmahill Exp $
 
---- os.h.orig	Wed Jul  1 10:29:10 1998
-+++ os.h	Thu Jul 20 20:28:19 2000
-@@ -21,4 +21,13 @@
-   #define DIRSEP '/'
+--- os.h.orig	Wed Jul  1 04:29:10 1998
++++ os.h	Tue Aug 22 07:47:45 2000
+@@ -22,3 +22,13 @@
  #endif
  
 +#if defined(__NetBSD__)
++#include <sys/types.h>
 +#include <machine/endian.h>
 +#if BYTE_ORDER == BIG_ENDIAN
 +#define HI_LO_BYTE_ORDER
