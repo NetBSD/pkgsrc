@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1046 2003/11/18 14:55:37 xtraeme Exp $
+$NetBSD: TODO,v 1.1047 2003/11/18 18:33:45 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -229,6 +229,7 @@ Suggested package updates
 	o gnumeric-1.2.0
 	o gnustep-0.9.0
 	o gnutls-0.8.12
+	o gossip-0.6
 	o gpa-0.7.0
 	o gperiodic-2.0.7
 	o grace-5.1.12
