@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 1999/10/31 10:46:31 mrg Exp $
+
+--- lib/Imakefile.orig	Fri Mar 20 06:50:59 1998
++++ lib/Imakefile	Sun Oct 31 21:39:04 1999
+@@ -55,7 +55,7 @@
+ #endif
+ 
+ XCOMM on Dec Alpha we need to define the following to build the shared library
+-#ifdef AlphaArchitecture
++#if defined(AlphaArchitecture) && defined(ModernOSF1)
+ REQUIREDLIBS = $(LDPRELIB) $(XLIB)
+ SO_REQLIBS = -lX11 -lc
+ #endif
