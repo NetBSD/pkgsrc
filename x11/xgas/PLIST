@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/03 04:17:37 jschauma Exp $
 bin/xgas
 lib/X11/app-defaults/XGas
-man/cat1/xgas.0.gz
+${IMAKE_MAN_DIR}/xgas.${IMAKE_MANNEWSUFFIX}.gz

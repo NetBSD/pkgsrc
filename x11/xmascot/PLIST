@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:19 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/03 04:17:34 jschauma Exp $
 bin/xmascot
 lib/X11/xmascot/pin.mag
 lib/X11/xmascot/chain.mag
@@ -22,5 +22,5 @@ lib/X11/xmascot/mi2.raw
 lib/X11/xmascot/mitime.au
 lib/X11/xmascot/mitime.raw
 @dirrm lib/X11/xmascot
-man/cat1/xmascot.0
+${IMAKE_MAN_DIR}/xmascot.${IMAKE_MANNEWSUFFIX}
 lib/X11/app-defaults/XMascot
