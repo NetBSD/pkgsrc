@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.2 2003/08/02 04:49:14 grant Exp $
+# $NetBSD: tools.mk,v 1.3 2003/08/02 05:07:35 grant Exp $
 #
 # handle platforms with broken tools in the base system, such as sed
 # and awk.
@@ -104,7 +104,7 @@ _TOOLS_PROGNAME.grep=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
 .  if exists(${_TOOLS_PROGNAME.grep})
 GREP=				${_TOOLS_PROGNAME.grep}
 .  endif
-BUILDLINK_DEPENDS.grep?=	grep>=3.1.1
+BUILDLINK_DEPENDS.grep?=	grep>=2.5.1
 BUILDLINK_PKGSRCDIR.grep?=	../../textproc/grep
 BUILDLINK_DEPMETHOD.grep?=	build
 BUILDLINK_PACKAGES+=		grep
