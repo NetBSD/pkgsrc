@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/01/10 14:06:31 bouyer Exp $
+
+--- Makefile.orig	Fri May 18 14:52:00 2001
++++ Makefile	Sun Jan  6 18:34:14 2002
+@@ -1,22 +1,19 @@
+-CC	= gcc
+-CFLAGS	= -O2 -Wall # -g -static
+-BINDIR	= /usr/sbin
+-PROGS   = sdig nbname swc
++PREFIX ?= /usr/local
++CFLAGS	= -g -O2 -Wall -DPREFIX="\"${PREFIX}\""
++PROGS   = sdig nbname # swc
+ 
+ all: $(PROGS)
+ 
+-sdig: sdig.c common.o
+-swc: swc.c common.o
++sdig: sdig.o common.o
++	$(CC) $(LDFLAGS) -o $@ $@.o common.o
++
++#swc: swc.o common.o
++#	$(CC) $(LDFLAGS) -o $@ $@.o common.o
+ 
+ clean:
+ 	rm $(PROGS) *.o
+ 
+ install: all
+-	cp sdig /usr/local/bin
+-	cp nbname /usr/local/bin
+-	@if ( test -f /etc/sdig.conf ) \
+-	then \
+-		echo Not replacing existing file: /etc/sdig.conf; \
+-	else \
+-		cp sdig.conf /etc; \
+-	fi
++	${BSD_INSTALL_PROGRAM} sdig ${PREFIX}/bin
++	${BSD_INSTALL_PROGRAM} nbname ${PREFIX}/bin
++	${BSD_INSTALL_DATA} README ${PREFIX}/share/doc/sdig.README
