@@ -1,0 +1,4 @@
+p5-Test-Harness-2.01 perl5 module for testing
+p5-Test-Simple-0.41 perl5 module with a simple framework for writing tests
+p5-IO-stringy-2.108 Perl class for I/O on in-core objects like strings and arrays
+p5-AppConfig-1.52   perl5 module for parsing config files and command line arguments
