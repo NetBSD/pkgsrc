@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/03/15 11:04:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/04/09 06:33:10 jlam Exp $
 bin/411toppm
 bin/anytopnm
 bin/asciitopgm
@@ -91,6 +91,7 @@ bin/pgmhist
 bin/pgmkernel
 bin/pgmnoise
 bin/pgmnorm
+bin/pgmoil
 bin/pgmramp
 bin/pgmslice
 bin/pgmtexture
