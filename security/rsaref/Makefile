@@ -1,25 +1,24 @@
 # New ports collection makefile for: rsaref
 # Version required:     2.0
-#
 # Date created:         17 Feb 1998
 # Whom:                 tv@netbsd.org
 #
-# $NetBSD: Makefile,v 1.2 1998/03/18 13:54:23 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/03/19 12:17:53 frueauf Exp $
 #
 
-PKGNAME=        rsaref-2.0
-DISTNAME=	rsaref20
-CATEGORIES=     security
-RSA_SITE=	ftp://ftp.rsa.com/rsaref/
-MASTER_SITES=	${RSA_SITE}
-EXTRACT_SUFX=	.tar.Z
+DISTNAME=		rsaref20
+PKGNAME=		rsaref-2.0
+WRKSRC=			${WRKDIR}/source
+CATEGORIES=		security
+RSA_SITE=		ftp://ftp.rsa.com/rsaref/
+MASTER_SITES=		${RSA_SITE}
+EXTRACT_SUFX=		.tar.Z
 
-MAINTAINER=	packages@NetBSD.ORG
+MAINTAINER=		packages@NetBSD.ORG
 
-WRKSRC=         ${WRKDIR}/source
-RESTRICTED=     "Cryptographic source usable only within the USA"
-MIRROR_DISTFILE=no
-IS_INTERACTIVE=	yes
+RESTRICTED=		"Cryptographic source usable only within the USA"
+MIRROR_DISTFILE=	no
+IS_INTERACTIVE=		yes
 
 do-fetch:
 	@(if [ "X${USA_RESIDENT}" != XYES ]; then	\
