@@ -1,6 +1,16 @@
-$NetBSD: patch-aa,v 1.3 2000/09/01 16:20:47 jwise Exp $
+$NetBSD: patch-aa,v 1.4 2000/12/08 20:41:19 jlam Exp $
+
 --- Makefile.in.orig	Tue Aug  8 15:17:11 2000
-+++ Makefile.in	Thu Aug 24 12:01:11 2000
++++ Makefile.in
+@@ -87,7 +87,7 @@
+ #CFLAGS			= $(CFLAGS_DEBUG)
+ #CFLAGS			= $(CFLAGS_OPTIMIZE)
+ #CFLAGS			= $(CFLAGS_DEBUG) $(CFLAGS_OPTIMIZE)
+-CFLAGS			= @CFLAGS@
++CFLAGS			+= @CFLAGS@
+ 
+ # To disable ANSI-C procedure prototypes reverse the comment characters
+ # on the following lines:
 @@ -161,8 +161,8 @@
  # "install" around;  better to use the install-sh script that comes
  # with the distribution, which is slower but guaranteed to work.
