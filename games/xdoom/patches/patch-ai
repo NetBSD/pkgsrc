@@ -1,0 +1,39 @@
+$NetBSD: patch-ai,v 1.1 1999/03/15 01:54:32 sommerfe Exp $
+
+*** linuxdoom-1.10/info.c.orig	Sun Mar 14 17:11:53 1999
+--- linuxdoom-1.10/info.c	Sun Mar 14 17:12:02 1999
+***************
+*** 37,43 ****
+  
+  #include "p_mobj.h"
+  
+! char *sprnames[NUMSPRITES] = {
+      "TROO","SHTG","PUNG","PISG","PISF","SHTF","SHT2","CHGG","CHGF","MISG",
+      "MISF","SAWG","PLSG","PLSF","BFGG","BFGF","BLUD","PUFF","BAL1","BAL2",
+      "PLSS","PLSE","MISL","BFS1","BFE1","BFE2","TFOG","IFOG","PLAY","POSS",
+--- 37,43 ----
+  
+  #include "p_mobj.h"
+  
+! char *sprnames[NUMSPRITES+1] = {
+      "TROO","SHTG","PUNG","PISG","PISF","SHTF","SHT2","CHGG","CHGF","MISG",
+      "MISF","SAWG","PLSG","PLSF","BFGG","BFGF","BLUD","PUFF","BAL1","BAL2",
+      "PLSS","PLSE","MISL","BFS1","BFE1","BFE2","TFOG","IFOG","PLAY","POSS",
+***************
+*** 51,57 ****
+      "POL3","POL1","POL6","GOR2","GOR3","GOR4","GOR5","SMIT","COL1","COL2",
+      "COL3","COL4","CAND","CBRA","COL6","TRE1","TRE2","ELEC","CEYE","FSKU",
+      "COL5","TBLU","TGRN","TRED","SMBT","SMGT","SMRT","HDB1","HDB2","HDB3",
+!     "HDB4","HDB5","HDB6","POB1","POB2","BRS1","TLMP","TLP2"
+  };
+  
+  
+--- 51,57 ----
+      "POL3","POL1","POL6","GOR2","GOR3","GOR4","GOR5","SMIT","COL1","COL2",
+      "COL3","COL4","CAND","CBRA","COL6","TRE1","TRE2","ELEC","CEYE","FSKU",
+      "COL5","TBLU","TGRN","TRED","SMBT","SMGT","SMRT","HDB1","HDB2","HDB3",
+!     "HDB4","HDB5","HDB6","POB1","POB2","BRS1","TLMP","TLP2", 0
+  };
+  
+  
+
