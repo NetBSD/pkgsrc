@@ -1,6 +1,8 @@
---- configure.orig	Sun Oct  5 03:32:52 2003
-+++ configure	Thu Nov 11 16:34:34 2004
-@@ -7834,9 +7834,9 @@
+$NetBSD: patch-ae,v 1.5 2004/11/16 14:49:13 adam Exp $
+
+--- configure.orig	2004-03-19 15:49:41.000000000 +0000
++++ configure
+@@ -8081,9 +8081,9 @@ else
                  PROFILE="-pg -g -O20 -D__NO_MATH_INLINES -fsigned-char -mv8" ;;
          *-darwin*)
                  PLUGIN_LDFLAGS="-module -avoid-version"
@@ -13,15 +15,15 @@
          *)
                  PLUGIN_LDFLAGS="-export-dynamic -avoid-version"
                  DEBUG="-g -Wall -D__NO_MATH_INLINES -fsigned-char"
-@@ -9072,6 +9072,11 @@
-    BUILD_ESD="$enableval"
- else
+@@ -9490,6 +9490,11 @@ else
     BUILD_ESD="yes"
-+fi;
-+
+ fi;
+ 
 +if test "$BUILD_ESD" = "no"; then
 +  HAVE_ESD_TRUE='#'
 +  HAVE_ESD_FALSE=
- fi;
- 
++fi;
++
  if test "$BUILD_ESD" = "yes"; then
+ 
+ # Check whether --with-esd-prefix or --without-esd-prefix was given.
