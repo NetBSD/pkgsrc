@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/04/05 19:27:41 jwise Exp $
+# $NetBSD: Makefile,v 1.16 2001/09/27 20:27:32 jlam Exp $
 # STOP!  Don't update this to a later version of this software.
 # The JSDK and Apache Jakarta projects have merged, making the
 # jakarta-tomcat package the current version of this software.
@@ -15,7 +15,7 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://java.sun.com/products/servlet/index.html
 COMMENT=	Sun's Java Servlet Development Kit, version 2.0
 
-BUILD_DEPENDS+=        urlget-1.3:../../www/urlget
+BUILD_DEPENDS+=        urlget>=1.3:../../www/urlget
 
 LICENSE=	sun-jsdk20-license
 USE_JAVA=	yes
@@ -35,24 +35,29 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 .include "../../mk/bsd.prefs.mk"
 
 TEMPDIR?=	/tmp
-TEMPFILE!=echo ${TEMPDIR}/jsdk20.location.$$$$
+TEMPFILE!=	echo ${TEMPDIR}/jsdk20.location.$$$$
+URLGET?=	${LOCALBASE}/bin/urlget
 
 pre-fetch:
-	${MAKE} install-depends DEPENDS=
+	@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
+		if [ ! -x ${URLGET} ]; then				\
+			${MAKE} install-depends DEPENDS=;		\
+		fi;							\
+	fi
 
 do-fetch:
-	-if [ ! -f ${DISTDIR}/${DISTFILES} ] ; \
-	then \
-	${LOCALBASE}/bin/urlget -p http://java.sun.com/cgi-bin/download2.cgi \
-		referer=http://java.sun.com/products/servlet/download.html \
-		protocol="FTP Download" \
-		download-name=jsdk20-solaris2-sparc.tar.Z \
-		config-file=jsdk20.config \
-		platform=solaris2-sparc \
-		domain-checked= \
-		> ${TEMPFILE} ; \
-	${FETCH_CMD} -o ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} `${GREP} ftp:// ${TEMPFILE} | \
-		${SED} -e 's|.*\(ftp://.*.tar.Z\).*|\1|'` ;\
+	-@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
+		${URLGET} -p http://java.sun.com/cgi-bin/download2.cgi	\
+			referer=					\
+			protocol="FTP Download"				\
+			download-name=${DISTNAME}${EXTRACT_SUFX}	\
+			config-file=jsdk20.config			\
+			platform=solaris2-sparc				\
+			domain-checked=					\
+			> ${TEMPFILE};					\
+		${FETCH_CMD} -o ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}	\
+			`${GREP} ftp:// ${TEMPFILE} |			\
+			${SED} -e 's|.*\(ftp://.*.tar.Z\).*|\1|'`;	\
 	fi
 
 do-install:
