@@ -1,12 +1,13 @@
-$NetBSD: patch-ac,v 1.4 2004/05/18 19:07:58 tron Exp $
+$NetBSD: patch-ac,v 1.5 2005/03/21 14:44:08 tv Exp $
 
---- src/stat.c.orig	2004-02-05 14:46:12.000000000 +0100
-+++ src/stat.c	2004-05-18 21:02:54.000000000 +0200
-@@ -86,6 +86,11 @@
+--- src/stat.c.orig	Thu Feb  5 08:46:12 2004
++++ src/stat.c
+@@ -86,6 +86,12 @@
  # endif
  #endif
  
-+#if defined(__NetBSD__) && (__NetBSD_Version__ > 200030000)
++#if (defined(__NetBSD__) && (__NetBSD_Version__ > 200030000)) || defined(__INTERIX)
++#include <sys/statvfs.h>
 +#define	statfs					statvfs
 +#define	STATXFS_FILE_SYSTEM_TYPE_MEMBER_NAME	f_fstypename
 +#endif
