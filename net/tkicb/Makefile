@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/06/29 14:26:37 jwise Exp $
+# $NetBSD: Makefile,v 1.9 2000/08/30 15:51:36 jwise Exp $
 #
 
 DISTNAME=	icb.2.1.4
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.icb.net/
 
-DEPENDS=	tk-8.0.5:../../x11/tk80
+DEPENDS=	tk-8.3.2:../../x11/tk
 
 USE_X11=	yes
 NO_CONFIGURE=	yes
@@ -18,7 +18,7 @@ NO_WRKSUBDIR=	yes
 
 do-build:
 	${SED} -e 's,/usr/local/lib/icb,${PREFIX}/libdata/tkicb,g' \
-		-e 's,wish8\.0,${PREFIX}/bin/wish8.0,g' < ${WRKSRC}/bin/icb \
+		-e 's,wish8\.0,${PREFIX}/bin/wish,g' < ${WRKSRC}/bin/icb \
 		> ${WRKSRC}/bin/tkicb
 
 do-install:
