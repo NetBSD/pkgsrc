@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3127 2003/08/29 00:58:13 dan Exp $
+$NetBSD: CHANGES,v 1.3128 2003/08/29 02:03:38 epg Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3366,3 +3366,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pekwm to 0.1.3nb1 [xtraeme 2003-08-28]
 	Added bitstir-0.2 [dan 2003-08-29]
 	Updated libmcrypt to 2.5.7 [dan 2003-08-29]
+	Updated subversion to 0.28.1 [epg 2003-08-29]
