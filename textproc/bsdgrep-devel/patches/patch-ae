@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/08/31 09:37:51 cjep Exp $
+$NetBSD: patch-ae,v 1.2 2004/12/21 16:09:44 agc Exp $
 
 --- util.c.orig	Wed Aug 27 13:01:54 2003
 +++ util.c	Wed Aug 27 13:02:02 2003
@@ -18,3 +18,14 @@ $NetBSD: patch-ae,v 1.1.1.1 2003/08/31 09:37:51 cjep Exp $
  
  #include "grep.h"
  
+@@ -228,8 +228,8 @@
+ 				continue;
+ 			if (r == 0) {
+ 				if (wflag) {
+-					if ((pmatch.rm_so != 0 && isword(l->dat[pmatch.rm_so - 1]))
+-					    || (pmatch.rm_eo != l->len && isword(l->dat[pmatch.rm_eo])))
++					if ((pmatch.rm_so != 0 && isword((unsigned char)l->dat[pmatch.rm_so - 1]))
++					    || (pmatch.rm_eo != l->len && isword((unsigned char)l->dat[pmatch.rm_eo])))
+ 						r = REG_NOMATCH;
+ 				}
+ 				if (xflag) {
