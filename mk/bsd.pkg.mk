@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.543 2000/08/17 01:42:03 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.544 2000/08/17 14:13:56 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -190,17 +190,9 @@ LIBTOOL=		${LOCALBASE}/bin/libtool
 .if make(install-run-depends)
 DEPENDS+=		libtool>1.3.5nb3:../../devel/libtool
 .endif
-.elif defined(USE_PKGLIBTOOL)
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
-LIBTOOL=		${LOCALBASE}/bin/pkglibtool-${OBJECT_FMT}-1.2p2
-BUILD_DEPENDS+=		${LIBTOOL}:../../pkgtools/pkglibtool
-.else
-LIBTOOL=		${LOCALBASE}/bin/libtool
-BUILD_DEPENDS+=		${LIBTOOL}:../../devel/libtool
-.endif
 .endif
 
-.if defined(USE_LIBTOOL) || defined(USE_PKGLIBTOOL)
+.if defined(USE_LIBTOOL)
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 .endif
@@ -1370,7 +1362,7 @@ do-configure:
 .endfor
 .endif
 
-.if (defined(USE_LIBTOOL) || defined(USE_PKGLIBTOOL)) && defined(LTCONFIG_OVERRIDE) && !defined(LIBTOOL_OVERRIDE)
+.if defined(USE_LIBTOOL) && defined(LTCONFIG_OVERRIDE) && !defined(LIBTOOL_OVERRIDE)
 .for ltconfig in ${LTCONFIG_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	if [ -f ${ltconfig} ]; then \
@@ -1398,7 +1390,7 @@ do-configure:
 .if defined(USE_IMAKE)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF}
 .endif
-.if (defined(USE_LIBTOOL) || defined(USE_PKGLIBTOOL)) && defined(LIBTOOL_OVERRIDE) && !defined(LTCONFIG_OVERRIDE)
+.if defined(USE_LIBTOOL) && defined(LIBTOOL_OVERRIDE) && !defined(LTCONFIG_OVERRIDE)
 .for libtool in ${LIBTOOL_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${libtool} ]; then \
 		${RM} -f ${libtool}; \
