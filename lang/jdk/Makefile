@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/02/23 22:10:48 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2004/07/01 00:00:43 wiz Exp $
 #
 
 VERSION=	1.1.8
@@ -16,7 +16,7 @@ LICENSE=	jdk-license
 
 .include "../../mk/bsd.prefs.mk"
 
-JVM_HOME=	${LOCALBASE}/java/jdk-${VERSION}
+JVM_HOME=	${PREFIX}/java/jdk-${VERSION}
 
 .if ${OBJECT_FMT} == "ELF"
 DISTNAME=	jdk${VERSION}-rc1-elf
@@ -29,12 +29,13 @@ PLIST_SRC=	${PKGDIR}/PLIST-aout
 .endif
 PLIST_SRC+=	${PKGDIR}/PLIST
 
+MESSAGE_SUBST+=	JVM_HOME=${JVM_HOME:Q}
+
 CHECK_SHLIBS=	no
 
-USE_BUILDLINK2=	yes
+NO_BUILDLINK=	yes
 USE_PKGINSTALL=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes	# since we change PREFIX below
 
 ONLY_FOR_PLATFORM= NetBSD-*-i386 Linux-*-i[3-6]86
 RESTRICTED=	"No redistribution of the Java(tm) Development Kit"
@@ -43,7 +44,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-OWN_DIRS=	${PREFIX} ${PREFIX}/lib ${PREFIX}/lib/security
+OWNDIRS+=	${JVM_HOME} ${JVM_HOME}/lib ${JVM_HOME}/lib/security
 SFILES=		appletviewer.properties		awt.properties
 SFILES+=	content-types.properties	font.properties
 SFILES+=	font.properties.ISO8859_15_FDIS	font.properties.cs
@@ -57,7 +58,7 @@ SFILES+=	psfont.properties.ja		serialver.properties
 SFILES+=	security/java.security
 SUPPORT_FILES=	# empty
 .for FILE in ${SFILES}
-SUPPORT_FILES+=	${PREFIX}/lib/${FILE}.default ${PREFIX}/lib/${FILE}
+SUPPORT_FILES+=	${JVM_HOME}/lib/${FILE}.default ${JVM_HOME}/lib/${FILE}
 .endfor
 
 do-configure:
@@ -68,7 +69,7 @@ do-configure:
 .if ${OBJECT_FMT} == "ELF"
 # This gross hack normalizes the shlib names so that automatic
 # shared library handling will work.
-pre-install:
+post-patch:
 	@(cd ${WRKSRC}/lib/i386/green_threads;				\
 	${LN} -s libXm.so libXm.so.2;					\
 	for X in lib*.so ;do						\
@@ -86,11 +87,8 @@ pre-install:
 
 do-install:
 	${RM} -f ${WRKSRC}/*.orig
-	${INSTALL_PROGRAM_DIR} ${PREFIX}
-	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}
-	${RM} -f ${PREFIX}/bin/i386/green_threads/javac.orig
+	${INSTALL_PROGRAM_DIR} ${JVM_HOME}
+	cd ${WRKSRC} && ${PAX} -rw . ${JVM_HOME}
+	${RM} -f ${JVM_HOME}/bin/i386/green_threads/javac.orig
 
 .include "../../mk/bsd.pkg.mk"
-
-# This needs to be after bsd.pkg.mk
-PREFIX=		${JVM_HOME}
