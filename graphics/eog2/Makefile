@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/02/11 04:58:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/16 22:29:24 jmmv Exp $
 #
 
 DISTNAME=	eog-2.5.1
@@ -28,6 +28,7 @@ GCONF2_SCHEMAS= 	eog.schemas
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
