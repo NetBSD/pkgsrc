@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 21:33:40 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/15 15:37:43 taca Exp $
 # FreeBSD: ports/devel/ruby-filelock/Makefile,v 1.4 2000/09/26 08:01:52 knu Exp
 
 DISTNAME=	filelock-0.2
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.netlab.co.jp/pub/lang/ruby/contrib/
+MASTER_SITES=	ftp://ftp.ruby-lang.org/pub/ruby/contrib/
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	# not available
