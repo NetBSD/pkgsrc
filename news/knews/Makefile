@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/03/04 13:51:17 tron Exp $
+# $NetBSD: Makefile,v 1.18 1999/03/08 10:53:57 agc Exp $
 #
 
 DISTNAME=	knews-1.0b.0
@@ -22,7 +22,7 @@ WRKSRC=		${WRKDIR}/knews
 # DOMAIN_FILE to a file from which the domain name will be read.
 post-extract:
 .if !defined(DOMAIN_FILE) && !defined(DOMAIN_NAME)
-	@${ECHO_MSG} "Type \"make DOMAIN_NAME=xyz\" to set the domain name."
+	@${ECHO_MSG} "Type \"${MAKE} DOMAIN_NAME=xyz\" to set the domain name."
 .elif defined(DOMAIN_FILE)
 	@${ECHO_MSG} "Reading \"From:\" domain from file \"${DOMAIN_FILE}\"."
 .else

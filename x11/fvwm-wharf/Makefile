@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:55 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/03/08 10:53:58 agc Exp $
 
 DISTNAME=		AfterStep-1.0
 PKGNAME=		fvwm-wharf-1.0
@@ -13,7 +13,7 @@ DEPENDS=		xpm-3.4k:../../graphics/xpm
 USE_X11BASE=		yes
 
 do-configure:
-	(cd ${WRKSRC} ; xmkmf ; make Makefiles)
+	(cd ${WRKSRC} ; xmkmf ; ${MAKE} Makefiles)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/modules/Wharf/Wharf ${PREFIX}/bin/Fvwm-Wharf
