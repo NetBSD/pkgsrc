@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/07 21:18:12 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/04 02:31:40 jlam Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
@@ -9,6 +9,11 @@ SVR4_PKGNAME=	ltoob
 COMMENT=	Generic shared library support script (the script itself)
 
 CONFLICTS+=	libtool<=1.3.5nb11
+
+# We are going to want libtool to find the same version of C and C++
+# compilers.
+#
+USE_LANGUAGES=	c c++
 
 TEST_TARGET=	check
 
