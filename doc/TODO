@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1295 2004/01/11 15:28:07 cjep Exp $
+$NetBSD: TODO,v 1.1296 2004/01/11 16:48:22 cjep Exp $
 
 Suggested new packages
 ======================
@@ -12,7 +12,6 @@ Suggested new packages
 
 	gd-noX11
 	Version of gd for systems without X11.
-	[cjep is looking at this]
 
 	jgloss
 	application for adding reading and translation annotations to Japanese
@@ -51,7 +50,6 @@ Suggested new packages
 
 	tme, Matt Fredette's Sun 2 emulator.
 	http://theory.lcs.mit.edu/~fredette/tme/index.html
-	[ cjep is looking at this one ]
 
 	tutos
 	the ultimate team organization software
@@ -215,7 +213,6 @@ Suggested package updates
 	o koffice-1.2.94 [pkg/23412|kleink]
 	o lavaps-2.4
 	o lcms-1.0.9
-	o leafnode-1.9.49 [cjep]
 	o libcaca-0.7
 	o libesmtp-1.0.2
 	o libidn-0.3.6
