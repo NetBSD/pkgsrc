@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.19 2004/02/21 13:08:31 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.20 2004/04/02 18:03:01 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -105,7 +105,7 @@ env_setdefaults()
     : ${AUTO_TARGET:=package}
     : ${BUILD_TARGET:=package}
     : ${DISTRIBDIR:=/var/pub/NetBSD}
-    : ${SETS:=base.tgz comp.tgz etc.tgz text.tgz}
+    : ${SETS:=base.tgz comp.tgz etc.tgz kern-GENERIC.tgz text.tgz}
     : ${SETS_X11:=xbase.tgz xcomp.tgz xcontrib.tgz xfont.tgz xmisc.tgz xserver.tgz}
     : ${REAL_SRC:=/usr/src}
     : ${REAL_SRC_OPTS:=-t null -o ro}
@@ -468,6 +468,8 @@ makeroot()
         echo "Extracting $s..."
         tar xzpf $DISTRIBDIR/binary/sets/$s
     done
+
+    [ -f ${DESTDIR}/netbsd ] || touch ${DESTDIR}/netbsd
 
     echo "Making device nodes..."
     cd $DESTDIR/dev
