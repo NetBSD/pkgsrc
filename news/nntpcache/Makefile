@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.20 2005/03/18 17:51:46 tv Exp $
+# $NetBSD: Makefile,v 1.21 2005/03/18 17:56:10 tv Exp $
 # FreeBSD Id: Makefile,v 1.11 1998/02/01 03:04:11 itojun Exp
 #
 
 DISTNAME=		nntpcache-3.0.1
 CATEGORIES=		news
-MASTER_SITES=		ftp://ftp.nntpcache.org/pub/nntpcache/ \
+MASTER_SITES=		ftp://ftp.cs.tu-berlin.de/pub/net/news/nntpcache/ \
 			ftp://ftp.netlab.is.tsukuba.ac.jp/pub/network/news/nntpcache/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		# none; was (until expiration):  http://www.nntpcache.org/
+HOMEPAGE=		http://www.iq.org/~proff/nntpcache.org/
 COMMENT=		NNTP multi-server caching daemon
 
 LICENSE=		fee-based-commercial-use
