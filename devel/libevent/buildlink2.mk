@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2004/02/12 01:59:37 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/02/12 02:35:06 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libevent.
 #
@@ -17,13 +17,23 @@ _BUILTIN_LIBEVENT=	NO
 .endif
 
 .if ${_BUILTIN_LIBEVENT} == "YES"
-_NEED_LIBEVENT=		NO
+_NEED_LIBEVENT=	NO
 .else
-_NEED_LIBEVENT=		YES
+_NEED_LIBEVENT=	YES
 .endif
 
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mlibevent)
+.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+    ${_BUILTIN_LIBEVENT} == "YES"
+_NEED_LIBEVENT=	NO
+.endif
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+_NEED_LIBEVENT=	YES
+.endif
+.if !empty(PREFER_NATIVE:Mlibevent) && \
+    ${_BUILTIN_LIBEVENT} == "YES"
+_NEED_LIBEVENT=	NO
+.endif
+.if !empty(PREFER_PKGSRC:Mlibevent)
 _NEED_LIBEVENT=	YES
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.13 2004/02/12 01:59:38 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.14 2004/02/12 02:35:06 jlam Exp $
 
 .if !defined(ZLIB_BUILDLINK2_MK)
 ZLIB_BUILDLINK2_MK=	# defined
@@ -65,8 +65,18 @@ BUILDLINK_USE_BUILTIN.zlib=	YES
 BUILDLINK_USE_BUILTIN.zlib=	NO
 .endif
 
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mzlib)
+.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+    ${BUILDLINK_IS_BUILTIN.zlib} == "YES"
+BUILDLINK_USE_BUILTIN.zlib=	YES
+.endif
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.zlib=	NO
+.endif
+.if !empty(PREFER_NATIVE:Mzlib) && \
+    ${BUILDLINK_IS_BUILTIN.zlib} == "YES"
+BUILDLINK_USE_BUILTIN.zlib=	YES
+.endif
+.if !empty(PREFER_PKGSRC:Mzlib)
 BUILDLINK_USE_BUILTIN.zlib=	NO
 .endif
 
