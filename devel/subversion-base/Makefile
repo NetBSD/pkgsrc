@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/11/10 18:09:07 epg Exp $
+# $NetBSD: Makefile,v 1.20 2004/11/19 04:01:59 epg Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
@@ -60,5 +60,4 @@ BUILDLINK_DEPENDS.neon+=	neon>=0.24.7
 
 .include "../../devel/apr/buildlink3.mk"
 .include "../../www/neon/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
