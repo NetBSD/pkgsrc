@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/28 19:50:19 kim Exp $
+sbin/irr_check
+sbin/irr_notify
+sbin/irr_rpsl_submit
+sbin/irr_submit
+sbin/irrd
