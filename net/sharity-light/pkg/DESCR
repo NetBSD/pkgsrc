@@ -1,0 +1,5 @@
+Sharity-Light is derived from smbfs, but runs as a user level program, not
+in the kernel. It is roughly the opposite of Samba since it's a client for
+the Lanmanager protocol. Sharity-Light lets you mount drives exported by
+Windows (f.Workgroups/95/NT), Lan Manager, OS/2 etc. on Unix machines. The
+former name of this application was "rumba". 

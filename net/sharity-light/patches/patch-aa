@@ -1,0 +1,68 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/09 16:09:36 wiz Exp $
+
+--- Makefile.orig	Tue Nov 24 09:52:13 1998
++++ Makefile	Thu Mar  8 11:27:22 2001
+@@ -5,18 +5,18 @@
+ NAME	=	shlight
+ 
+ INCLUDES =	-Iinclude -I.
+-THE_CC	=	gcc
++THE_CC	=	${CC}
+ 
+ ##############################################################################
+ ############################ System specific part ############################
+ ##############################################################################
+ 
+ # For NEXTSTEP/OPENSTEP:
+-CFLAGS = -Wall -O2 -traditional-cpp -g
++#CFLAGS = -Wall -O2 -traditional-cpp -g
+ # put your architecture here:
+-ARCH = -arch i386
+-THE_CC = cc
+-RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
++#ARCH = -arch i386
++#THE_CC = cc
++#RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
+ 
+ # For Linux: (use static linking because of libc5/libc6 troubles)
+ #CFLAGS = -Wall -O2 -g
+@@ -29,9 +29,9 @@
+ #RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
+ 
+ # For NetBsd
+-#CFLAGS = -Wall -O2 -DNETBSD
++CFLAGS = -Wall -O2 -DNETBSD
+ #THE_CC = cc
+-#RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
++RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
+ 
+ # For BSDI
+ #CFLAGS= -Wall -O2
+@@ -59,22 +59,21 @@
+ ######################## End of system specific part #########################
+ ##############################################################################
+ 
+-LD		=	ld
+-CC		=	$(THE_CC) $(INCLUDES)
+-STRIP	=	strip
++LD	=	${LD}
++STRIP	=	${STRIP}
+ 
+ OFILES = proc.o sock.o rumba.o psinode.o kernel.o smb_abstraction.o fo_nfs.o
+ 
+ .c.o:
+-	$(CC) $(CFLAGS) $(ARCH) -c -o $*.o $<
++	$(CC) $(INCLUDES) $(CFLAGS) $(ARCH) -c -o $*.o $<
+ 
+ all: $(NAME)
+ 
+ nfs_dir:
+-	(cd nfs; $(MAKE) "CFLAGS=$(CFLAGS)" "CC=$(THE_CC)" "ARCH=$(ARCH)" "RPC_WARNFLAGS=$(RPC_WARNFLAGS)")
++	(cd nfs; $(MAKE) "CFLAGS=$(CFLAGS)" "CC=$(CC)" "ARCH=$(ARCH)" "RPC_WARNFLAGS=$(RPC_WARNFLAGS)")
+ 
+ $(NAME): $(OFILES) nfs_dir
+-	$(CC) $(LDFLAGS) $(ARCH) -o $(NAME) $(OFILES) nfs/nfs.o $(LIBS)
++	$(CC) $(INCLUDES) $(LDFLAGS) $(ARCH) -o $(NAME) $(OFILES) nfs/nfs.o $(LIBS)
+ 
+ clean:
+ 	rm -f $(OFILES)
