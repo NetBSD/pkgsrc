@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2002/02/20 16:44:26 tron Exp $
+# $NetBSD: Makefile,v 1.32 2002/03/20 14:16:00 tron Exp $
 
-DISTNAME=       analog-5.21
+DISTNAME=       analog-5.22
 CATEGORIES=	www
 MASTER_SITES=   ${HOMEPAGE} \
 		http://www.web42.com/analog/ \
