@@ -1,0 +1,5 @@
+The Gtk2 module allows Perl access to the Gtk+ 2.0 graphical user interface
+library. You can find more information about Gtk+ 2.0 on http://www.gtk.org.
+The Perl binding tries to follow the C interface as much as possible,
+providing at the same time a fully object-oriented interface and
+Perl-style calling conventions.
