@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/05/31 13:01:31 seb Exp $
+$NetBSD: patch-ac,v 1.2 2002/06/10 09:55:00 sakamoto Exp $
 
 --- Imakefile.orig	Tue Apr 19 20:38:45 1994
 +++ Imakefile	Fri Jan 22 00:50:46 1999
@@ -19,8 +19,8 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/05/31 13:01:31 seb Exp $
 +     CANNASRC = $(CANNAROOT)
        DEFINES = -DCANNA -DJAPANESE $(SIGNAL_DEFINES)
 -     INCLUDES = -I$(CANNAROOT)/include
-+     INCLUDES = -I$(CANNAROOT) -I${PREFIX}/include
-+    LDOPTIONS = ${CANNALIB16}
++     INCLUDES = -I$(CANNAROOT) ${CPPFLAGS}
++EXTRA_LIBRARIES = ${LDFLAGS} -lcanna16 -lcanna
  
           SRCS = header.c printf.c termio.c termcap.c ttyfdslot.c setutmp.c \
  		screen.c cursor.c jhlp.c xutoj.c canna.c
