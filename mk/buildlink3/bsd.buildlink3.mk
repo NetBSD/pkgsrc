@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.16 2003/09/22 19:49:10 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.17 2003/09/23 19:48:22 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -334,7 +334,8 @@ do-buildlink: buildlink-wrappers buildlink-${_BLNK_OPSYS}-wrappers
 #	to be symlinked into ${BUILDLINK_DIR}.  By default for
 #	overwrite packages, BUILDLINK_FILES_CMD.<pkg> outputs the
 #	contents of the include and lib directories in the package
-#	+CONTENTS.
+#	+CONTENTS, and for pkgviews packages, it outputs any libtool
+#	archives in lib directories.
 #
 # BUILDLINK_TRANSFORM.<pkg>
 #	sed arguments used to transform the name of the source filename
@@ -363,16 +364,20 @@ buildlink-${_pkg_}-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TOUCH} ${TOUCH_FLAGS} ${_BLNK_COOKIE.${_pkg_}}
 
-.if (${PKG_INSTALLATION_TYPE} == "pkgviews") &&				\
-    !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
-BUILDLINK_FILES_CMD.${_pkg_}?=	${TRUE}
-.else
+.  if (${PKG_INSTALLATION_TYPE} == "pkgviews") &&			\
+      !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
+BUILDLINK_FILES_CMD.${_pkg_}?=						\
+	${_BLNK_PKG_INFO.${_pkg_}} -f ${BUILDLINK_PKGNAME.${_pkg_}} |	\
+	${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p' |		\
+	${GREP} 'lib.*/lib[^/]*\.la$$' |				\
+	${SED} "s,^,$${pkg_prefix},"
+.  else
 BUILDLINK_FILES_CMD.${_pkg_}?=						\
 	${_BLNK_PKG_INFO.${_pkg_}} -f ${BUILDLINK_PKGNAME.${_pkg_}} |	\
 	${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p' |		\
 	${GREP} '\(include.*/\|lib.*/lib[^/]*$$\)' |			\
 	${SED} "s,^,$${pkg_prefix},"
-.endif
+.  endif
 
 ${_BLNK_COOKIE.${_pkg_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -416,7 +421,7 @@ ${_BLNK_COOKIE.${_pkg_}}:
 			case $$src in					\
 			*.la)						\
 				${CAT} $$src |				\
-				${_BLNK_LT_ARCHIVE_FILTER}		\
+				${_BLNK_LT_ARCHIVE_FILTER.${_pkg_}}	\
 				> $$dest;				\
 				;;					\
 			*)						\
@@ -427,42 +432,57 @@ ${_BLNK_COOKIE.${_pkg_}}:
 		done;							\
 		;;							\
 	esac
-.endfor
 
-# _BLNK_LT_ARCHIVE_FILTER is a command-line filter for transforming
-# libtool archives (*.la) to allow libtool to properly interact with
-# buildlink at link time by linking against the libraries pointed to by
-# symlinks in ${BUILDLINK_DIR}.  It achieves this in two ways:
+# _BLNK_LT_ARCHIVE_FILTER.${_pkg_} is a command-line filter used in
+# the previous target for transforming libtool archives (*.la) to
+# allow libtool to properly interact with # buildlink at link time by
+# linking against the libraries pointed to by symlinks in
+# ${BUILDLINK_DIR}.
 #
-#     -	Modifies the dependency_libs line by changing all full paths to
+_BLNK_LT_ARCHIVE_FILTER.${_pkg_}=	\
+	${AWK} '${_BLNK_LT_ARCHIVE_FILTER_AWK_SCRIPT.${_pkg_}}'
+
+_BLNK_LT_ARCHIVE_FILTER_AWK_SCRIPT.${_pkg_}=	# empty
+#
+#     -	Modify the dependency_libs line by changing all full paths to
 #	other *.la files into the canonical ${BUILDLINK_DIR} path.
 #
-#     -	Modifies the libdir line to point to within ${BUILDLINK_DIR}.
+_BLNK_LT_ARCHIVE_FILTER_AWK_SCRIPT.${_pkg_}+=				\
+	/^dependency_libs=/ {						\
+		line = $$0;						\
+		line = gensub("/usr(/lib/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
+		line = gensub("${DEPOTBASE}/[^/ 	]*(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
+		line = gensub("${X11BASE}(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_X11_DIR}\\1", "g", line); \
+		line = gensub("${LOCALBASE}(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
+		line = gensub("-L/usr/lib[^/ 	]*[ 	]*", "", "g", line); \
+		line = gensub("-L${X11BASE}/[^ 	]*[ 	]*", "", "g", line); \
+		line = gensub("-L${LOCALBASE}/[^ 	]*[ 	]*", "", "g", line); \
+		print line;						\
+		next;							\
+	}
+.  if (${PKG_INSTALLATION_TYPE} == "overwrite") ||			\
+      empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
+#
+#     -	Modify the libdir line to point to within ${BUILDLINK_DIR}.
 #	This prevents libtool from looking into the original directory
 #	for other *.la files.
 #
-_BLNK_LT_ARCHIVE_FILTER=						\
-	${AWK} '							\
-		/^dependency_libs=/ {					\
-			line = $$0;					\
-			line = gensub("/usr(/lib/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
-			line = gensub("${DEPOTBASE}/[^/ 	]*(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
-			line = gensub("${X11BASE}(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_X11_DIR}\\1", "g", line); \
-			line = gensub("${LOCALBASE}(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
-			print line;					\
-			next;						\
-		}							\
-		/^libdir=/ {						\
-			line = $$0;					\
-			line = gensub("/usr(/lib/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
-			line = gensub("${DEPOTBASE}/[^/ 	]*(/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
-			line = gensub("${X11BASE}(/[^ 	]*)", "${BUILDLINK_X11_DIR}\\1", "g", line); \
-			line = gensub("${LOCALBASE}(/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
-			print line;					\
-			next;						\
-		}							\
-		{ print }						\
-	'
+_BLNK_LT_ARCHIVE_FILTER_AWK_SCRIPT.${_pkg_}+=				\
+	/^libdir=/ {							\
+		line = $$0;						\
+		line = gensub("/usr(/lib/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
+		line = gensub("${DEPOTBASE}/[^/ 	]*(/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
+		line = gensub("${X11BASE}(/[^ 	]*)", "${BUILDLINK_X11_DIR}\\1", "g", line); \
+		line = gensub("${LOCALBASE}(/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
+		print line;						\
+		next;							\
+	}
+.  endif
+#
+#     -	Leave all other lines alone.
+#
+_BLNK_LT_ARCHIVE_FILTER_AWK_SCRIPT.${_pkg_}+=	{ print }
+.endfor
 
 # Include any BUILDLINK_TARGETS provided in buildlink3.mk files in
 # _BLNK_TARGETS.
@@ -923,9 +943,11 @@ _BLNK_CPPFLAGS=			-I${BUILDLINK_DIR}/include
 _BLNK_LDFLAGS=			-L${BUILDLINK_DIR}/lib
 _BLNK_WRAP_EXTRA_FLAGS.CC=	${_BLNK_CPPFLAGS} ${_BLNK_LDFLAGS}
 _BLNK_WRAP_EXTRA_FLAGS.CXX=	${_BLNK_CPPFLAGS} ${_BLNK_LDFLAGS}
-_BLNK_WRAP_EXTRA_FLAGS.CPP=	${_BLNK_CPPFLAGS} ${_BLNK_LDFLAGS}
+_BLNK_WRAP_EXTRA_FLAGS.CPP=	${_BLNK_CPPFLAGS}
 _BLNK_WRAP_EXTRA_FLAGS.FC=	${_BLNK_CPPFLAGS} ${_BLNK_LDFLAGS}
 _BLNK_WRAP_EXTRA_FLAGS.LD=	${_BLNK_LDFLAGS}
+_BLNK_WRAP_EXTRA_FLAGS.LIBTOOL=		${_BLNK_LDFLAGS}
+_BLNK_WRAP_EXTRA_FLAGS.SHLIBTOOL=	${_BLNK_WRAP_EXTRA_FLAGS.LIBTOOL}
 
 .PHONY: buildlink-wrappers
 
