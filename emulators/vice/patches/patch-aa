@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.4 2003/09/28 10:41:21 kristerw Exp $
+--- src/arch/unix/types.h.orig	Sun Sep 28 12:29:23 2003
++++ src/arch/unix/types.h	Sun Sep 28 12:31:06 2003
+@@ -60,7 +60,8 @@
+ /* Maximum value of a CLOCK.  */
+ #define CLOCK_MAX (~((CLOCK)0))
+ 
+-#if defined(__GNUC__) && defined(__i386__) && !defined(NO_REGPARM)
++/* GCC 2.95 has code gen problems with regparam(). */
++#if defined(__GNUC__) && (__GNUC__ > 2) && defined(__i386__) && !defined(NO_REGPARM)
+ #define REGPARM1 __attribute__((regparm(1)))
+ #define REGPARM2 __attribute__((regparm(2)))
+ #define REGPARM3 __attribute__((regparm(3)))

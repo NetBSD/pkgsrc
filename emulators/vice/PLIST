@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/06/30 12:06:09 seb Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/09/28 10:41:21 kristerw Exp $
 bin/c1541
 bin/petcat
 bin/vsid
@@ -15,7 +15,6 @@ info/vice.info-3
 info/vice.info-4
 info/vice.info-5
 info/vice.info-6
-info/vice.info-7
 man/man1/c1541.1
 man/man1/petcat.1
 man/man1/vice.1
@@ -50,11 +49,9 @@ share/doc/vice/Win32-Howto.txt
 share/doc/vice/cbm_basic_tokens.txt
 share/doc/vice/drive_info.txt
 share/doc/vice/mon.txt
-share/doc/vice/navbarlogo.gif
 share/doc/vice/new.gif
 share/doc/vice/serial.txt
 share/doc/vice/vice-logo.jpg
-share/doc/vice/vice-sublogo.jpg
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/vice.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/vice.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/vice.mo
@@ -65,6 +62,7 @@ share/vice/C128/basichi
 share/vice/C128/basiclo
 share/vice/C128/beos_pos.vkm
 share/vice/C128/beos_sym.vkm
+share/vice/C128/c64hq.vpl
 share/vice/C128/c64s.vpl
 share/vice/C128/ccs64.vpl
 share/vice/C128/chargde
@@ -99,6 +97,7 @@ share/vice/C64/basic
 share/vice/C64/basic.64gs
 share/vice/C64/beos_pos.vkm
 share/vice/C64/beos_sym.vkm
+share/vice/C64/c64hq.vpl
 share/vice/C64/c64mem.sym
 share/vice/C64/c64s.vpl
 share/vice/C64/ccs64.vpl
@@ -126,13 +125,16 @@ share/vice/CBM-II/amber.vpl
 share/vice/CBM-II/basic.128
 share/vice/CBM-II/basic.256
 share/vice/CBM-II/basic.500
+share/vice/CBM-II/beos_bukp.vkm
 share/vice/CBM-II/beos_buks.vkm
+share/vice/CBM-II/c64hq.vpl
 share/vice/CBM-II/c64s.vpl
 share/vice/CBM-II/ccs64.vpl
 share/vice/CBM-II/chargen.500
 share/vice/CBM-II/chargen.600
 share/vice/CBM-II/chargen.700
 share/vice/CBM-II/default.vpl
+share/vice/CBM-II/dos_bukp.vkm
 share/vice/CBM-II/dos_buks.vkm
 share/vice/CBM-II/frodo.vpl
 share/vice/CBM-II/godot.vpl
@@ -147,6 +149,7 @@ share/vice/CBM-II/rom256h.vrs
 share/vice/CBM-II/rom256l.vrs
 share/vice/CBM-II/rom500.vrs
 share/vice/CBM-II/white.vpl
+share/vice/CBM-II/win_bukp.vkm
 share/vice/CBM-II/win_buks.vkm
 share/vice/CBM-II/x11_buks.vkm
 share/vice/DRIVES/d1541II
