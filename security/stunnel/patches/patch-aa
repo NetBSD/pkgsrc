@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2001/10/31 10:00:24 martti Exp $
+$NetBSD: patch-aa,v 1.11 2001/11/20 15:15:15 martti Exp $
 
---- Makefile.in.orig	Tue Oct 30 22:38:38 2001
-+++ Makefile.in	Wed Oct 31 09:02:39 2001
+--- Makefile.in.orig	Sun Nov 11 19:09:51 2001
++++ Makefile.in	Tue Nov 20 15:43:00 2001
 @@ -9,7 +9,7 @@
  sbindir=@sbindir@
  libdir=@libdir@
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.10 2001/10/31 10:00:24 martti Exp $
 +DESTFILES=$(sbindir)/stunnel $(libdir)/stunnel.so $(man8dir)/stunnel.8
  
  WINGCC=i386-mingw32msvc-gcc 
- WINCFLAGS=-O2 -Wall -DUSE_WIN32=1 -DHAVE_OPENSSL=1 -DFD_SETSIZE=4096 -DVERSION=\"@VERSION@\" -I../openssl-0.9.6/outinc
+ WINCFLAGS=-O2 -Wall -DUSE_WIN32=1 -DHAVE_OPENSSL=1 -DFD_SETSIZE=4096 -DVERSION=\"@VERSION@\" -I../openssl-0.9.6b/outinc
 @@ -30,7 +30,7 @@
  
  # standard external rules

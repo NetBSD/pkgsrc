@@ -1,26 +1,111 @@
-$NetBSD: patch-ab,v 1.8 2001/08/19 16:26:08 martin Exp $
+$NetBSD: patch-ab,v 1.9 2001/11/20 15:15:15 martti Exp $
 
---- configure.in.orig	Wed Aug 15 20:25:28 2001
-+++ configure.in	Thu Aug 16 09:03:22 2001
-@@ -125,20 +125,7 @@
- AC_CHECK_LIB(nsl, gethostbyname)
- AC_CHECK_LIB(socket, socket)
+--- configure.orig	Tue Nov 20 16:00:52 2001
++++ configure	Tue Nov 20 16:02:20 2001
+@@ -2189,106 +2189,6 @@
+ 
+ fi
  
 -# OSF hack instead of simple AC_CHECK_LIB here
--AC_MSG_CHECKING([for pthread_create in -lpthread])
+-echo "$as_me:2193: checking for pthread_create in -lpthread" >&5
+-echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
 -    saved_LIBS="$LIBS"
 -    LIBS="-lpthread $saved_LIBS"
--    AC_TRY_LINK([#include <pthread.h>],
--      [pthread_create((void *)0, (void *)0, (void *)0, (void *)0)],
--      [AC_MSG_RESULT(yes); AC_DEFINE(HAVE_LIBPTHREAD)],
--      [AC_MSG_RESULT(no); LIBS="$saved_LIBS"])
+-    cat >conftest.$ac_ext <<_ACEOF
+-#line 2198 "configure"
+-#include "confdefs.h"
+-#include <pthread.h>
+-int
+-main ()
+-{
+-pthread_create((void *)0, (void *)0, (void *)0, (void *)0)
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext conftest$ac_exeext
+-if { (eval echo "$as_me:2210: \"$ac_link\"") >&5
+-  (eval $ac_link) 2>&5
+-  ac_status=$?
+-  echo "$as_me:2213: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-         { ac_try='test -s conftest$ac_exeext'
+-  { (eval echo "$as_me:2216: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:2219: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  echo "$as_me:2221: result: yes" >&5
+-echo "${ECHO_T}yes" >&6; cat >>confdefs.h <<\EOF
+-#define HAVE_LIBPTHREAD 1
+-EOF
+-
+-else
+-  echo "$as_me: failed program was:" >&5
+-cat conftest.$ac_ext >&5
+-echo "$as_me:2229: result: no" >&5
+-echo "${ECHO_T}no" >&6; LIBS="$saved_LIBS"
+-fi
+-rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
 -
 -# BSD hack
--AC_CHECK_LIB(c_r, pthread_create,
--        [ LIBS="$LIBS -pthread"
--	AC_DEFINE(HAVE_LIBPTHREAD) ]
--)
-+# XXX pthread does not work with stunnel on NetBSD
- 
- AC_CHECK_LIB(util, openpty)
- 
+-echo "$as_me:2235: checking for pthread_create in -lc_r" >&5
+-echo $ECHO_N "checking for pthread_create in -lc_r... $ECHO_C" >&6
+-if test "${ac_cv_lib_c_r_pthread_create+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lc_r  $LIBS"
+-cat >conftest.$ac_ext <<_ACEOF
+-#line 2243 "configure"
+-#include "confdefs.h"
+-
+-/* Override any gcc2 internal prototype to avoid an error.  */
+-#ifdef __cplusplus
+-extern "C"
+-#endif
+-/* We use char because int might match the return type of a gcc2
+-   builtin and then its argument prototype would still apply.  */
+-char pthread_create ();
+-int
+-main ()
+-{
+-pthread_create ();
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext conftest$ac_exeext
+-if { (eval echo "$as_me:2262: \"$ac_link\"") >&5
+-  (eval $ac_link) 2>&5
+-  ac_status=$?
+-  echo "$as_me:2265: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-         { ac_try='test -s conftest$ac_exeext'
+-  { (eval echo "$as_me:2268: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:2271: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_lib_c_r_pthread_create=yes
+-else
+-  echo "$as_me: failed program was:" >&5
+-cat conftest.$ac_ext >&5
+-ac_cv_lib_c_r_pthread_create=no
+-fi
+-rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+-LIBS=$ac_check_lib_save_LIBS
+-fi
+-echo "$as_me:2282: result: $ac_cv_lib_c_r_pthread_create" >&5
+-echo "${ECHO_T}$ac_cv_lib_c_r_pthread_create" >&6
+-if test $ac_cv_lib_c_r_pthread_create = yes; then
+-   LIBS="$LIBS -pthread"
+-	cat >>confdefs.h <<\EOF
+-#define HAVE_LIBPTHREAD 1
+-EOF
+-
+-fi
+-
+ echo "$as_me:2292: checking for openpty in -lutil" >&5
+ echo $ECHO_N "checking for openpty in -lutil... $ECHO_C" >&6
+ if test "${ac_cv_lib_util_openpty+set}" = set; then
