@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.655 2001/01/29 14:40:26 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.656 2001/01/30 23:18:36 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -749,7 +749,7 @@ MOTIFLIB?=	-L${MOTIFBASE}/lib -L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${MOTIFB
 .endif
 
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
-# of depencies for building, and the current target.
+# of dependencies for building, and the current target.
 .ifdef SMART_MESSAGES
 _PKGSRC_IN?=		===> ${.TARGET} [${PKGNAME}${_PKGSRC_DEPS}] ===
 .else
