@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.891 2002/01/05 18:40:32 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.892 2002/01/05 22:46:18 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -300,7 +300,8 @@ DEPENDS+=		Xaw3d-1.5:../../x11/Xaw3d
 .  endif
 .endif
 
-.if defined(BUILD_USES_MSGFMT) && !exists(/usr/bin/msgfmt)
+.if defined(BUILD_USES_MSGFMT) && \
+    (!exists(/usr/bin/msgfmt) || ${OPSYS} == SunOS)
 BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 .endif
 
