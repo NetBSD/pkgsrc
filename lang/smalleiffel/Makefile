@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/02/21 21:23:28 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/02/25 05:11:58 jlam Exp $
 #
 
 DISTNAME=	se
@@ -22,8 +22,6 @@ DOCDIR=		share/doc/smalleiffel
 EGDIR=		share/examples/smalleiffel
 LIBDIR=		share/smalleiffel
 LIBEXECDIR=	libexec/smalleiffel
-
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 post-extract:
 	${FIND} ${WRKSRC} -type f -print0 | xargs -0 ${CHMOD} 644
@@ -75,21 +73,5 @@ do-install:
 		${PAX} -rw $${dir} ${PREFIX}/${EGDIR}; \
 	done
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/${EGDIR}
-
-post-install:
-	${RM} -f ${PLIST_SRC}
-	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
-	( cd ${PREFIX}; \
-	  ${FIND} ${LIBEXECDIR} -type f -print; \
-	  ${FIND} ${LIBDIR} -type f -print; \
-	  ${FIND} ${DOCDIR} -type f -print; \
-	  ${FIND} ${EGDIR} -type f -print; \
-	) | sort >> ${PLIST_SRC}
-	( cd ${PREFIX}; \
-	  ${FIND} ${LIBEXECDIR} -type d; \
-	  ${FIND} ${LIBDIR} -type d; \
-	  ${FIND} ${DOCDIR} -type d; \
-	  ${FIND} ${EGDIR} -type d; \
-	) | sort -r | ${SED} "s,^,@dirrm ," >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
