@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2004/06/26 18:10:20 grant Exp $
+# $NetBSD: Makefile,v 1.55 2004/06/26 18:27:23 grant Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -53,6 +53,7 @@ SUBDIR+=	moz-flash
 SUBDIR+=	moz-mplayer
 SUBDIR+=	mpeg_encode
 SUBDIR+=	mpeg_play
+SUBDIR+=	mpeg-lib
 SUBDIR+=	mplayer
 SUBDIR+=	mplayer-share
 SUBDIR+=	mplex

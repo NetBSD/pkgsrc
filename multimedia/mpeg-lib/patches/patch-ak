@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.4 2003/10/04 15:54:39 danw Exp $
+$NetBSD: patch-ak,v 1.1 2004/06/26 18:27:23 grant Exp $
 
 --- mono.c.orig	Fri Jul 23 23:59:22 1999
 +++ mono.c	Mon Sep 15 22:50:16 2003
