@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2002/09/10 12:35:07 markd Exp $
+# $NetBSD: Makefile,v 1.19 2002/09/23 20:39:21 jlam Exp $
 #
 
 DISTNAME=	psiconv-0.8.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	converters
 MASTER_SITES=	http://huizen.dds.nl/~frodol/psiconv/
 
@@ -11,11 +11,13 @@ HOMEPAGE=	http://huizen.dds.nl/~frodol/psiconv/
 COMMENT=	PSION 5 file format data conversion utilities
 
 USE_BUILDLINK2=		YES
-USE_LIBTOOL=		YES
 USE_X11=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
 GNU_CONFIGURE=		YES
 CPPFLAGS+=		-DIMAGEMAGICK
+
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 DOCDIR=		${PREFIX}/share/doc/psiconv
 
