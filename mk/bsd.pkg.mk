@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1561 2005/01/14 14:36:31 jmmv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1562 2005/01/14 18:02:38 jmmv Exp $
 #
 # This file is in the public domain.
 #
@@ -110,17 +110,6 @@ CHECK_FILES_STRICT?=	NO	# make check-files very strict on errors
 CHECK_SHLIBS?=		YES	# run check-shlibs after install
 SHLIB_HANDLING?=	YES	# do automatic shared lib handling
 NOCLEAN?=		NO	# don't clean up after update
-
-# A list of file names that will be skipped when analyzing file lists in
-# the check-files target.  This is useful to avoid getting errors triggered
-# by changes in directories not really handled by pkgsrc.
-CHECK_FILES_SKIP+=	emul/linux/proc
-
-CHECK_FILES_SKIP_CMD=
-.for name in ${CHECK_FILES_SKIP}
-CHECK_FILES_SKIP_CMD+=	| ${GREP} -v ${name}
-.endfor
-.undef name
 
 PKGBASE?=		${PKGNAME:C/-[^-]*$//}
 PKGVERSION?=		${PKGNAME:C/^.*-//}
@@ -818,6 +807,17 @@ MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
 
 MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
 .endif
+
+# A list of file names that will be skipped when analyzing file lists in
+# the check-files target.  This is useful to avoid getting errors triggered
+# by changes in directories not really handled by pkgsrc.
+CHECK_FILES_SKIP+=	emul/linux/proc
+
+CHECK_FILES_SKIP_CMD=
+.for name in ${CHECK_FILES_SKIP}
+CHECK_FILES_SKIP_CMD+=	| ${GREP} -v ${name}
+.endfor
+.undef name
 
 # If pkgsrc is supposed to ensure that tests are run before installation
 # of the package, then the build targets should be "build test", otherwise
