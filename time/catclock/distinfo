@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:52:49 agc Exp $
-MD5 (catclock.zip) = bf62338a5f7d94d4a7180bad0f7a30ae
+$NetBSD: distinfo,v 1.2 2001/04/18 14:47:11 agc Exp $
+
+SHA1 (catclock.zip) = 0e977f080968067c4232072aa88d919e3f5daf84
+Size (catclock.zip) = 180008 bytes
 SHA1 (patch-aa) = 65efd893dfd1a8c7bfc71606f8ada61e22940638
 SHA1 (patch-ab) = 86f72fbfcc352781cdc3ae760d3143c58e40cb6a
