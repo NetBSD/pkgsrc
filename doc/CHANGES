@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1164 2003/01/19 09:12:26 jmmv Exp $
+$NetBSD: CHANGES,v 1.1165 2003/01/19 11:06:59 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -329,3 +329,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated evilwm to 0.99.14 [salo 2003-01-19]
 	Updated pnm2ppa to 1.04nb1 [salo 2003-01-19]
 	Updated asm2html to 1.2 [jmmv 2003-01-19]
+	Updated scrollz to 1.9 [grant 2003-01-19]
