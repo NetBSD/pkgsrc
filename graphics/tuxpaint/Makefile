@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/27 11:07:23 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/29 20:58:18 wiz Exp $
 #
 
-DISTNAME=	tuxpaint-2002.09.25
+DISTNAME=	tuxpaint-2002.09.28
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.sonic.net/pub/users/nbs/unix/x/tuxpaint/
 
