@@ -1,19 +1,13 @@
-$NetBSD: patch-ad,v 1.6 2003/09/27 20:18:37 danw Exp $
+$NetBSD: patch-ad,v 1.7 2003/11/11 13:39:09 fvdl Exp $
 
---- gmodule/gmodule-dyld.c.orig	Sat Sep  6 13:23:40 2003
-+++ gmodule/gmodule-dyld.c	Sat Sep  6 13:24:35 2003
-@@ -116,7 +116,13 @@
-       if (NSIsSymbolNameDefined (symbol_name))
- 	sym = NSLookupAndBindSymbol (symbol_name);
-       else
--	sym = NULL;
-+	{
-+	  GModule *mod;
-+	  for (mod = modules, sym = NULL; mod && !sym; mod = mod->next)
-+	    {
-+	      sym = NSLookupSymbolInModule (mod->handle, symbol_name);
-+	    }
-+	}
-     }
-   else
-     sym = NSLookupSymbolInModule (handle, symbol_name);
+--- gthread/gthread-posix.c.orig	2002-11-04 21:09:47.000000000 +0100
++++ gthread/gthread-posix.c
+@@ -97,7 +97,7 @@ static gboolean posix_check_cmd_prio_war
+ # error This should not happen. Contact the GLib team.
+ #endif
+ 
+-#if defined (POSIX_MIN_PRIORITY) && defined (POSIX_MAX_PRIORITY)
++#if defined (POSIX_MIN_PRIORITY) && defined (POSIX_MAX_PRIORITY) && defined(_POSIX_THREAD_PRIORITY_SCHEDULING)
+ # define HAVE_PRIORITIES 1
+ static gint priority_normal_value;
+ # ifdef __FreeBSD__
