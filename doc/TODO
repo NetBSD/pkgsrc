@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3266 2005/03/23 01:18:28 wiz Exp $
+$NetBSD: TODO,v 1.3267 2005/03/23 02:00:27 cjs Exp $
 
 Suggested new packages
 ======================
@@ -859,7 +859,6 @@ Suggested package updates
 	o poedit-1.3.2
 	o poppy-4.01
 	o posh-0.3.14
-	o postfix-2.2.1
 	o potrace-1.7
 	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
 	o pptpd-1.2.3
