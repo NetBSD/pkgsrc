@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2001/05/22 09:32:27 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2001/05/23 12:12:33 abs Exp $
 
 MOZ_VER=	0.9
 DISTNAME=	mozilla-source-${MOZ_VER}
@@ -24,7 +24,7 @@ DEPENDS+=	png>=1.0.11:../../graphics/png
 
 ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
 			NetBSD-1.5_ALPHA-i386 NetBSD-1.5_BETA-* \
-			NetBSD-1.[5-9]*-*
+			NetBSD-1.[5-9]*-* Linux-*-*
 
 USE_GMAKE=	yes
 USE_X11BASE=	yes
