@@ -1,6 +1,6 @@
-GNU `recode' converts files between character sets and usages.  When
-exact transliterations are not possible, it may get rid of the
-offending characters or fall back on approximations.  This program
-recognizes or produces nearly 150 different character sets and is able
-to transliterate files between almost any pair.  Most RFC 1345
-character sets are supported.
+The `recode' library converts files between character sets and usages.
+It recognises or produces more than 300 different character sets and
+transliterates files between almost any pair.  When exact transliteration
+are not possible, it gets rid of offending characters or falls back
+on approximations.  The `recode' program is a handy front-end to
+the library.
