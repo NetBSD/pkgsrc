@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.21 2004/03/18 10:47:04 jlam Exp $
+#	$NetBSD: createbuildlink,v 1.22 2004/04/27 03:51:24 dmcmahill Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,7 +40,7 @@
 # and PLIST
 #
 
-REV=`echo '$Revision: 1.21 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.22 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 spacesintab=8
 makefile=Makefile
@@ -108,7 +108,7 @@ PKGUPPER=`echo $PKGNOVER | tr '[:lower:]' '[:upper:]' | tr - _`
 PREFIX=X11PREFIX
 USE_X11BASE=`@MAKE@ show-var VARNAME=USE_X11BASE`
 if [ -z "$USE_X11BASE" ]; then
-	if ! grep -q "^USE_X11BASE" $makefile $commons ; then
+	if ! grep "^USE_X11BASE" $makefile $commons > /dev/null; then
 		PREFIX=LOCALBASE
 	fi
 fi
