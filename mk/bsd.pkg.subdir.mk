@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.16 1998/05/29 03:25:51 hubertf Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.17 1998/06/17 21:01:09 hubertf Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -65,10 +65,16 @@ _SUBDIRUSE: .USE
 			${ECHO_MSG} "===> ${_THISDIR_}$${entry} non-existent"; \
 		fi; \
 		if [ "$$OK" = "" ]; then \
-			${ECHO_MSG} "===> ${_THISDIR_}$${edir}"; \
 			cd ${.CURDIR}/$${edir}; \
-			${MAKE} ${.TARGET:realinstall=install} \
-				"_THISDIR_=${_THISDIR_}$${edir}/"; \
+			if [ -z "${_THISDIR_}" ]; then \
+				${ECHO_MSG} "===> category ${_THISDIR_}$${edir}"; \
+				${MAKE} ${.TARGET:realinstall=install} \
+					"_THISDIR_=${_THISDIR_}$${edir}/"; \
+			else \
+				${ECHO_MSG} "===> package ${_THISDIR_}$${edir}"; \
+				${MAKE} ${.TARGET:realinstall=install} \
+					"_THISDIR_=${_THISDIR_}$${edir}/" || /usr/bin/true ; \
+			fi ; \
 		fi; \
 	done
 
