@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2002/03/30 20:01:39 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.4 2002/04/06 15:48:55 dmcmahill Exp $
 
---- demos/Makefile.am.orig	Tue Mar  5 16:03:50 2002
+--- demos/Makefile.am.orig	Fri Mar  8 01:36:21 2002
 +++ demos/Makefile.am
 @@ -19,6 +19,7 @@
  	$(top_builddir)/gtk/@gtktargetlib@
