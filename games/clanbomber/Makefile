@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/24 23:39:50 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/06/30 11:41:57 zuntum Exp $
 
 DISTNAME=		clanbomber-1.01
 PKGNAME=		${DISTNAME}nb1
@@ -9,13 +9,11 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.clanbomber.de/
 COMMENT=		Bomberman clone using the ClanLib graphics system
 
-DEPENDS+=		ClanLib>=0.4:../../graphics/clanlib
-
+USE_BUILDLINK_ONLY=	yes
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 
-LDFLAGS+=		-L${LOCALBASE}/lib
 CPPFLAGS+=		-I${X11BASE}/include
 
 # needs a valid X display to compile its datafiles
@@ -34,4 +32,5 @@ pre-build:
 		exit 1;							    \
 	fi;
 
+.include "../../graphics/clanlib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
