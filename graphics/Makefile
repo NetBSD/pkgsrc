@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.285 2004/01/26 15:21:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.286 2004/01/26 15:34:47 jmmv Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -22,7 +22,6 @@ SUBDIR+=	SDLKit
 SUBDIR+=	SDL_image
 SUBDIR+=	aalib
 SUBDIR+=	aalib-x11
-SUBDIR+=	apla
 SUBDIR+=	aqsis
 SUBDIR+=	artist
 SUBDIR+=	autotrace
