@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/11/02 20:36:50 wiz Exp $
+$NetBSD: distinfo,v 1.4 2004/11/02 20:55:29 wiz Exp $
 
-SHA1 (GTL-1.2.0.tar.bz2) = 7d01a57539348e870fe5b8335475882d40b50322
-Size (GTL-1.2.0.tar.bz2) = 630054 bytes
+SHA1 (GTL-1.2.1.tar.bz2) = 87fbaf515213733025889cd03627c6b65f5c239a
+Size (GTL-1.2.1.tar.bz2) = 613258 bytes
