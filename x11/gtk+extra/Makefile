@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:06:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/10 12:32:00 drochner Exp $
 #
 
-DISTNAME=	gtk+extra-0.99.12
+DISTNAME=	gtk+extra-0.99.13
 CATEGORIES=	x11
 MASTER_SITES=	http://gtkextra.sourceforge.net/src/
 
 MAINTAINER=	rh@netbsd.org
-HOMEPAGE=	http://magnet.fsu.edu/~feiguin/gtk/
+HOMEPAGE=	http://gtkextra.sourceforge.net/
 COMMENT=	useful set of GTK+ widgets for creating GUIs
 
 DEPENDS+=	gtk+>=1.2.0:../../x11/gtk
