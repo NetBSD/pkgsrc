@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2004/04/18 05:47:40 snj Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/19 10:17:01 cjep Exp $
 
 DISTNAME=	nail-10.7
 CATEGORIES=	mail
-MASTER_SITES=	http://nail.berlios.de/archive/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nail/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cjep@NetBSD.org
-HOMEPAGE=	http://omnibus.ruf.uni-freiburg.de/~gritter/
+HOMEPAGE=	http://nail.sourceforge.net/
 COMMENT=	BSD mail utility with MIME extensions
 
 USE_BUILDLINK3=	yes
