@@ -1,0 +1,21 @@
+HINT (Hierarchical INTegration) is a computer benchmarking tool
+developed at the Scalable Computing Laboratory of the Ames Laboratory,
+a US Department of Energy laboratory.  Unlike traditional benchmarks,
+HINT neither fixes the size of the problem nor the calculation time.
+Instead, it uses a rigorously defined measure called QUIPS (QUality
+Improvements Per Second).
+
+The output of HINT is data which can be plotted (the gnuplot graphics
+package is useful for plotting HINT output).  The plot shows the speed
+of the computation as the size of the problem increases.  The HINT
+graph shows the peak processor speed and the effects of different
+levels of cache and memory on processing speed.  See
+http://www.scl.ameslab.gov/Projects/HINT/ for more information and
+an on-line database of HINT results.
+
+HINT also outputs a single number which is the integral of the HINT
+curve.  This number, called NetQUIPS, can be used for general
+comparison between machines.
+
+- Guy Helmer
+ghelmer@freebsd.org
