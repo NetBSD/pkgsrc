@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/27 14:27:50 taca Exp $
+${RUBY_SITEARCHLIBDIR}/dbm.so
+${RUBY_EXAMPLESDIR}/dbmtest.rb
