@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/30 16:18:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/09 10:03:50 salo Exp $
 #
 
 DISTNAME=	raptor-0.9.12
@@ -9,15 +9,15 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.redland.opensource.ac.uk/raptor/
 COMMENT=	RDF Parser Toolkit written in C
 
-USE_BUILDLINK2=		yes
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+USE_BUILDLINK2=	YES
+USE_LIBTOOL=	YES
+GNU_CONFIGURE=	YES
 
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
-PKGCONFIG_OVERRIDE+=    ${WRKSRC}/raptor.pc.in
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/raptor.pc.in
 
-.include "../../textproc/libxml2/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
 .include "../../www/curl/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
