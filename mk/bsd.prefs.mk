@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.98 2003/01/05 22:48:12 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.99 2003/01/12 20:36:58 jschauma Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -88,6 +88,8 @@ LOWER_OPSYS?=		solaris
 
 .elif ${OPSYS} == "Linux"
 LOWER_OPSYS?=		linux
+LOWER_ARCH!=            echo "${LOWER_ARCH}" | sed -e 's/i.86/i386/'
+MACHINE_ARCH!=          echo "${MACHINE_ARCH}" | sed -e 's/i.86/i386/'
 .  if ${MACHINE_ARCH} == "unknown"
 .    if !defined(LOWER_ARCH)
 LOWER_ARCH!=		${UNAME} -m | sed -e 's/[456]86/386/'
