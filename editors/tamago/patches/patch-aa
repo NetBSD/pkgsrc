@@ -1,8 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2001/02/16 08:14:04 jun Exp $
-Common subdirectories: ../tamago-4.0.6/CVS and ./CVS
-diff -Ndu ../tamago-4.0.6/ChangeLog ./ChangeLog
---- ../tamago-4.0.6/ChangeLog	Mon Jan 17 09:48:50 2000
-+++ ./ChangeLog	Sun Jan 28 03:53:13 2001
+$NetBSD: patch-aa,v 1.3 2001/03/16 05:50:36 jun Exp $
+diff -rdu ../tamago-4.0.6.org/ChangeLog ./ChangeLog
+--- ../tamago-4.0.6.org/ChangeLog	Mon Jan 17 09:48:50 2000
++++ ./ChangeLog	Fri Mar 16 14:13:49 2001
 @@ -1,3 +1,129 @@
 +2000-06-02  KATAYAMA Yoshio <kate@pfu.co.jp>
 +
@@ -133,25 +132,2327 @@ diff -Ndu ../tamago-4.0.6/ChangeLog ./ChangeLog
  2000-01-17  TOMURA Satoru <tomura@etl.go.jp>
  
  	* Version 4.0.6 released
-diff -Ndu ../tamago-4.0.6/Makefile.in ./Makefile.in
---- ../tamago-4.0.6/Makefile.in	Sun Jan 16 00:39:09 2000
-+++ ./Makefile.in	Sun Jan 28 03:53:13 2001
-@@ -138,8 +139,8 @@
- egg/sj3rpc.elc: egg-com.elc egg/sj3.elc
- egg/wnnrpc.elc: egg-com.elc egg/wnn.elc
+diff -rdu ../tamago-4.0.6.org/egg/canna.el ./egg/canna.el
+--- ../tamago-4.0.6.org/egg/canna.el	Tue Jan  4 15:56:14 2000
++++ ./egg/canna.el	Fri Mar 16 14:14:11 2001
+@@ -30,257 +30,861 @@
  
--egg.elc its/ascii.elc its/erpin.elc its/hankata.elc \
--its/hira.elc its/jeonkak.elc its/pinyin.elc \
-+egg.elc its/ascii.elc its/aynu.elc its/erpin.elc \
-+its/hankata.elc its/hira.elc its/jeonkak.elc its/pinyin.elc \
- its/hangul.elc its/kata.elc its/quanjiao.elc \
- its/zenkaku.elc its/zhuyin.elc: its-keydef.elc
+ ;;; Code:
  
-Common subdirectories: ../tamago-4.0.6/doc and ./doc
-Common subdirectories: ../tamago-4.0.6/egg and ./egg
-diff -Ndu ../tamago-4.0.6/egg-cnv.el ./egg-cnv.el
---- ../tamago-4.0.6/egg-cnv.el	Tue Jan 11 20:59:10 2000
-+++ ./egg-cnv.el	Sun Jan 28 03:53:13 2001
+-
++(require 'egg)
+ (require 'egg-edep)
+ 
+-(eval-when-compile
+-  (defmacro CANNA-const (c)
+-    (cond ((eq c 'FileNotExist) xxxxxxxxxxxxxx)
+-	  )))
++(defgroup canna nil
++  "CANNA interface for Tamago 4."
++  :group 'egg)
+ 
+-(defconst canna-conversion-backend
+-  [ canna-init
++(defcustom canna-hostname "localhost"
++  "Hostname of CANNA server"
++  :group 'canna :type 'string)
+ 
+-    canna-start-conversion
+-      canna-get-bunsetsu-converted
+-      canna-get-bunsetsu-source
+-      canna-list-candidates
+-          canna-get-number-of-candidates
+-          canna-get-current-candidate-number
+-          canna-get-all-candidates
+-          canna-decide-candidate
+-      canna-change-bunsetsu-length
+-    canna-end-conversion
+-    nil
++(defcustom canna-server-port 5680
++  "Port number of CANNA server"
++  :group 'canna :type 'integer)
+ 
+-    canna-fini
+- ])
++(defcustom canna-user-name nil
++  "User Name on CANNA server"
++  :group 'canna :type 'string)
+ 
+-(defconst canna-server-port 5680 "Port number of Canna server")
+-(defvar canna-hostname "localhost"
+-  "Hostname of Canna server")
++(defcustom canna-group-name nil
++  "Group Name on CANNA server"
++  :group 'canna :type 'string)
+ 
+-(defun canna-open (hostname)
+-  "Establish the connection to CANNA server.  Return environment object."
+-  (let* ((buf (generate-new-buffer " *CANNA*"))
+-	 (proc (open-network-stream "CANNA" buf hostname canna-server-port))
+-	 result)
+-    (process-kill-without-query proc)
+-    (set-process-coding-system proc 'no-conversion 'no-conversion)
+-    (set-marker-insertion-type (process-mark proc) t)
+-    (save-excursion
+-      (set-buffer buf)
+-      (erase-buffer)
+-      (buffer-disable-undo)
+-      (set-buffer-multibyte nil))
+-    (setq result (cannarpc-open proc (user-login-name)))
+-    (if (< result 0)
+-	(let ((msg (cannarpc-get-error-message (- result))))
+-	  (delete-process proc)
+-	  (kill-buffer buf)
+-	  (error "Can't open CANNA session (%s): %s" hostname msg)))
+-    (vector proc result)))
++; (eval-when-compile
++;   (defmacro CANNA-const (c)
++;     (cond ((eq c 'FileNotExist) xxxxxxxxxxxxxx)
++; 	  )))
+ 
+-;; XXX: Should support multiple outstanding context
+-;; <env> ::= [ <proc> <context> ]
+-(defvar canna-environment nil
++(egg-add-message
++ '((Japanese
++    (canna-connect-error  "$B%5!<%P$H@\B3$G$-$^$;$s$G$7$?(B")
++    (canna-fail-make-env  "$B4D6-$r:n$k$3$H$O$G$-$^$;$s$G$7$?(B")
++    (canna-dict-missing-1 "$B<-=q%U%!%$%k(B %s $B$,$"$j$^$;$s!#(B")
++    (canna-dict-missing-2 "$B<-=q%U%!%$%k(B %s $B$,$"$j$^$;$s!#:n$j$^$9$+(B? ")
++    (canna-dict-created   "$B<-=q%U%!%$%k(B %s $B$r:n$j$^$7$?(B")
++    (canna-dict-saving    "%s $B$NIQEY>pJs!&<-=q>pJs$rB`Hr$7$F$$$^$9(B")
++    (canna-dict-saved     "%s $B$NIQEY>pJs!&<-=q>pJs$rB`Hr$7$^$7$?(B")
++    (canna-register-1     "$BEPO?<-=qL>(B:")
++    (canna-register-2     "$BIJ;lL>(B"))))
++
++(defvar canna-hinshi-alist
++  '(("$B?ML>(B" . "#JN") ("$BCOL>(B" . "#CN") ("$B8GM-L>;l(B" . "#KK")
++    ("$B0lHLL>;l(B" . "#T35") ("$BL>;l(B($BNc(B)$B6/NO$J(B" . "#T15")
++    ("$B%5JQL>;l(B" . "#T30") ("$B%5JQL>;l(B($BNc(B)$B0B?4$J(B" . "#T10") ("$BC14A;z(B" . "#KJ")
++    ("$BF0;l%+9TJQ3J3hMQ(B" . "#KX") ("$BF0;l%s%69TJQ3J3hMQ(B" . "#NZX")
++    ("$BF0;l%69TJQ3J3hMQ(B" . "#ZX") ("$BF0;l%59TJQ3J3hMQ(B" . "#SX")
++    ("$BF0;l%+9T8^CJ3hMQ(B" . "#K5") ("$BF0;l%,9T8^CJ3hMQ(B" . "#G5")
++    ("$BF0;l%59T8^CJ3hMQ(B" . "#S5") ("$BF0;l%?9T8^CJ3hMQ(B" . "#T5")
++    ("$BF0;l%J9T8^CJ3hMQ(B" . "#N5") ("$BF0;l%P9T8^CJ3hMQ(B" . "#B5")
++    ("$BF0;l%^9T8^CJ3hMQ(B" . "#M5") ("$BF0;l%i9T8^CJ3hMQ(B" . "#R5")
++    ("$BF0;l%o9T8^CJ3hMQ(B" . "#W5") ("$BF0;l>e2<0lCJ3hMQ(B" . "#KS")
++    ("$BF0;l%+9T8^CJO"MQL>;l(B" . "#K5r") ("$BF0;l%,9T8^CJO"MQL>;l(B" . "#G5r")
++    ("$BF0;l%59T8^CJO"MQL>;l(B" . "#S5r") ("$BF0;l%?9T8^CJO"MQL>;l(B" . "#T5r")
++    ("$BF0;l%J9T8^CJO"MQL>;l(B" . "#N5r") ("$BF0;l%P9T8^CJO"MQL>;l(B" . "#B5r")
++    ("$BF0;l%^9T8^CJO"MQL>;l(B" . "#M5r") ("$BF0;l%i9T8^CJO"MQL>;l(B" . "#R5r")
++    ("$BF0;l%o9T8^CJO"MQL>;l(B" . "#W5r") ("$BF0;l>e2<0lCJ8l44L>;l(B" . "#KSr")
++    ("$B7AMF;l(B" . "#KY") ("$B7AMF;l(B($BNc(B)$B$-$$$m$$(B" . "#KYT")
++    ("$B7AMFF0;l(B" . "#T05")
++    ("$B7AMFF0;l(B($BNc(B)$B4X?4$@(B" . "#T10") ("$B7AMFF0;l(B($BNc(B)$BB?92$F$@(B" . "#T13")
++    ("$B7AMFF0;l(B($BNc(B)$B0U30$@(B" . "#T15") ("$B7AMFF0;l(B($BNc(B)$BJXMx$@(B" . "#T18")
++    ("$BI{;l(B" . "#F14") ("$BI{;l(B($BNc(B)$B$U$C$/$i(B" . "#F04")
++    ("$BI{;l(B($BNc(B)$B$=$C$H(B" . "#F12") ("$BI{;l(B($BNc(B)$BFMA3(B" . "#F06")
++    ("$B?t;l(B" . "#NN") ("$B@\B3;l!&46F0;l(B" . "#CJ") ("$BO"BN;l(B" . "#RT")))
++
++(defvar canna-hinshi-menu
++  '("$B?ML>(B" "$BCOL>(B" ("$BCDBN!&2q<RL>(B" . "$B8GM-L>;l(B") ("$BL>;l(B" . MEISHI)
++    ("$B%5JQL>;l(B" . SAHEN-MEISHI) "$BC14A;z(B" ("$BF0;l(B" . DOUSHI)
++    ("$B7AMF;l(B" . KEIYOUSHI) ("$B7AMFF0;l(B" . KEIYOUDOUSHI) ("$BI{;l(B" . FUKUSHI)
++    "$B?t;l(B" "$B@\B3;l!&46F0;l(B" "$BO"BN;l(B" ("$B$=$NB>$N8GM-L>;l(B" . "$B8GM-L>;l(B"))
++  "Menu data for a hinshi (a part of speech) selection.")
++
++(defun canna-hinshi-name (id &optional reverse)
++  (if reverse
++      (cdr (assoc id canna-hinshi-alist))
++    (car (rassoc id canna-hinshi-alist))))
++
++(defmacro canna-backend-plist ()
++  ''(egg-start-conversion          canna-start-conversion
++     egg-get-bunsetsu-source       canna-get-bunsetsu-source
++     egg-get-bunsetsu-converted    canna-get-bunsetsu-converted
++     egg-get-source-language       canna-get-source-language
++     egg-get-converted-language    canna-get-converted-language
++     egg-list-candidates           canna-list-candidates
++     egg-decide-candidate          canna-decide-candidate
++     egg-special-candidate         canna-special-candidate
++     egg-change-bunsetsu-length    canna-change-bunsetsu-length
++     egg-end-conversion            canna-end-conversion
++     egg-word-registration         canna-word-registration))
++
++(defconst canna-backend-language-alist nil)
++
++(defvar canna-backend-alist nil)
++
++(defun canna-backend-func-name (name lang &optional env)
++  (intern (concat name "-" (symbol-name lang)
++		  (and env "-") (and env (symbol-name env)))))
++
++(defun canna-make-backend (lang env &optional source-lang converted-lang)
++  (let ((finalize (canna-backend-func-name "canna-finalize-backend" lang))
++	(backend (canna-backend-func-name "canna-backend" lang env)))
++    (if (null (fboundp finalize))
++	(progn
++	  (fset finalize (function (lambda () (canna-finalize-backend))))
++	  (egg-set-finalize-backend (list finalize))))
++    (if (null (get backend 'egg-start-conversion))
++	(setplist backend (apply 'list
++				 'language lang
++				 'source-language (or source-lang lang)
++				 'converted-language (or converted-lang lang)
++				 (canna-backend-plist))))
++    backend))
++
++(defun canna-define-backend (lang env-name-list)
++  (mapcar (lambda (env)
++	    (if (consp env)
++		(canna-define-backend lang env)
++	      (canna-make-backend lang env)))
++	  env-name-list))
++
++(defun canna-define-backend-alist (deflist)
++  (setq canna-backend-alist
++	(mapcar (lambda (slot)
++		  (let* ((lang (car slot))
++			 (alt (cdr (assq lang canna-backend-language-alist))))
++		    (cons lang (canna-define-backend (or alt lang) (cdr slot)))))
++		deflist)))
++
++(defcustom canna-backend-define-list
++  '((Japanese    ((nil nil nil))
++		 ((Bushu Bushu Bushu))))
++  "Alist of Japanese language and lists of the Canna backend suffixes."
++  :group 'canna
++  :set (lambda (sym value)
++	 (set-default sym value)
++	 (canna-define-backend-alist value))
++  :type '(repeat
++	  (cons
++	   :tag "Language - Backend"
++	   (choice :tag "Language"
++		   (const Japanese)
++		   (symbol :tag "Other"))
++	   (repeat
++	    (cons
++	     :tag "Backend Sequece"
++	     (cons :tag "First Conversion Stage"
++		   (symbol :tag "Backend for Start Conversion")
++		   (repeat :tag "Backends for Reconvert"
++			   (symbol :tag "Backend")))
++	     (repeat
++	      :tag "Following Conversion Stages"
++	      (cons
++	       :tag "N-th Stage"
++	       (symbol :tag "Backend for This Stage")
++	       (repeat :tag "Backends for Reconvert"
++		       (symbol :tag "Backend")))))))))
++
++(defsubst canna-backend-get-language (backend)
++  (get backend 'language))
++
++(defsubst canna-backend-get-source-language (backend)
++  (get backend 'source-language))
++
++(defsubst canna-backend-get-converted-language (backend)
++  (get backend 'converted-language))
++
++(defvar canna-envspec-list nil)
++(defvar canna-current-envspec nil)
++
++;; Should support multiple outstanding context
++;; <env> ::= [ <proc> <context> <backend> <convert-mode> <nostudy> <dic-list> ]
++(defvar canna-environments nil
+   "Environment for CANNA kana-kanji conversion")
+ 
+-(defsubst cannaenv-get-proc (env)
+-  (aref env 0))
+-(defsubst cannaenv-get-context (env)
+-  (aref env 1))
++(defun cannaenv-create (proc context &optional backend mode nostudy)
++  (vector proc context backend mode nostudy (list nil)))
+ 
+-;; <bunsetsu> ::=
+-;;  [ <env> <converted> <bunsetsu-pos>
+-;;    <source> <zenkouho-pos> <zenkouho> ]
+-(defsubst canna-make-bunsetsu (env converted bunsetsu-pos)
+-  (vector env converted bunsetsu-pos nil nil nil))
++(defsubst cannaenv-get-proc (env)    (aref env 0))
++(defsubst cannaenv-get-context (env) (aref env 1))
++(defsubst cannaenv-get-backend (env) (aref env 2))
++(defsubst cannaenv-get-mode (env)    (aref env 3))
++(defsubst cannaenv-get-nostudy (env) (aref env 4))
++(defsubst cannaenv-get-dic-list (env) (cdr (aref env 5)))
+ 
+-(defsubst cannabunsetsu-get-env (b)
+-  (aref b 0))
+-(defsubst cannabunsetsu-get-converted (b)
+-  (aref b 1))
+-(defsubst cannabunsetsu-get-bunsetsu-pos (b)
+-  (aref b 2))
+-(defsubst cannabunsetsu-get-source (b)
+-  (aref b 3))
+-(defsubst cannabunsetsu-set-source (b s)
+-  (aset b 3 s))
+-(defsubst cannabunsetsu-get-zenkouho-pos (b)
+-  (aref b 4))
+-(defsubst cannabunsetsu-set-zenkouho-pos (b p)
+-  (aset b 4 p))
+-(defsubst cannabunsetsu-get-zenkouho (b)
+-  (aref b 5))
+-(defsubst cannabunsetsu-set-zenkouho (b z)
+-  (aset b 5 z))
++(defsubst cannaenv-add-dic-list (env &rest dic)
++  (nconc (aref env 5) (list (apply 'vector dic))))
++
++;; <canna-bunsetsu> ::=
++;;  [ <env> <converted> <bunsetsu-pos> <source>
++;;    <zenkouho-pos> <zenkouho> <zenkouho-converted> ]
++(defsubst canna-make-bunsetsu (env converted bunsetsu-pos source)
++  (egg-bunsetsu-create
++   (cannaenv-get-backend env)
++   (vector env converted bunsetsu-pos source nil nil nil)))
++
++(defsubst canna-bunsetsu-get-env (b)
++  (aref (egg-bunsetsu-get-info b) 0))
++(defsubst canna-bunsetsu-get-converted (b)
++  (aref (egg-bunsetsu-get-info b) 1))
++(defsubst canna-bunsetsu-get-bunsetsu-pos (b)
++  (aref (egg-bunsetsu-get-info b) 2))
++(defsubst canna-bunsetsu-get-source (b)
++  (aref (egg-bunsetsu-get-info b) 3))
++(defsubst canna-bunsetsu-set-source (b s)
++  (aset (egg-bunsetsu-get-info b) 3 s))
++(defsubst canna-bunsetsu-get-zenkouho-pos (b)
++  (aref (egg-bunsetsu-get-info b) 4))
++(defsubst canna-bunsetsu-set-zenkouho-pos (b p)
++  (aset (egg-bunsetsu-get-info b) 4 p))
++(defsubst canna-bunsetsu-get-zenkouho (b)
++  (aref (egg-bunsetsu-get-info b) 5))
++(defsubst canna-bunsetsu-set-zenkouho (b z)
++  (aset (egg-bunsetsu-get-info b) 5 z))
++(defsubst canna-bunsetsu-get-zenkouho-converted (b)
++  (aref (egg-bunsetsu-get-info b) 6))
++(defsubst canna-bunsetsu-set-zenkouho-converted (b zc)
++  (aset (egg-bunsetsu-get-info b) 6 zc))
+ 
+ (defun canna-get-bunsetsu-source (b)
+-  (let ((s (cannabunsetsu-get-source b)))
++  (let ((s (canna-bunsetsu-get-source b)))
+     (or s
+-	(let* ((env (cannabunsetsu-get-env b))
+-	       (bp (cannabunsetsu-get-bunsetsu-pos b))
++	(let* ((env (canna-bunsetsu-get-env b))
++	       (bp (canna-bunsetsu-get-bunsetsu-pos b))
+ 	       (s (cannarpc-get-bunsetsu-source env bp)))
+-	  (cannabunsetsu-set-source b s)))))
++	  (canna-bunsetsu-set-source b s)))))
++(defun canna-get-bunsetsu-converted (b) (canna-bunsetsu-get-converted b))
++(defun canna-get-source-language (b) 'Japanese)
++(defun canna-get-converted-language (b) 'Japanese)
+ 
+-(defun canna-get-bunsetsu-converted (b)
+-  (cannabunsetsu-get-converted b))
++(defun canna-envspec-create (env-name convert-mode nostudy)
++  (vector (and env-name (setq env-name (intern env-name)))
++	  (canna-make-backend egg-language env-name)
++	  convert-mode nostudy (list nil)))
+ 
+-(defconst canna-dictionary-specification
+-  '("iroha"
+-    "fuzokugo"
+-    "hojomwd"
+-    "hojoswd"
+-    "bushu"
+-    "user"
+-    )
+-  "Dictionary specification of CANNA.")
++(defsubst canna-envspec-env-type (spec)           (aref spec 0))
++(defsubst canna-envspec-backend (spec)            (aref spec 1))
++(defsubst canna-envspec-mode (spec)               (aref spec 2))
++(defsubst canna-envspec-nostudy (spec)            (aref spec 3))
++(defsubst canna-envspec-dic-list (spec)           (cdr (aref spec 4)))
++
++(defsubst canna-envspec-add-dic-list (spec &rest dic)
++  (nconc (aref spec 4) (list (apply 'vector dic))))
++
++(defmacro canna-arg-type-error (func)
++  `(egg-error ,(format "%s: Wrong type argument" func)))
++
++(defun canna-define-environment (&optional env-name convert-mode nostudy)
++  "Define a Canna environment. ENV-NAME specifies suffix of the Canna
++environment name. CONVERT-MODE specifies including hiragana or
++katakana to candidates list. NOSTUDY specifies not study."
++  (if (and env-name (null (stringp env-name)))
++      (canna-arg-type-error canna-define-environment))
++  (setq canna-current-envspec (canna-envspec-create env-name
++						    convert-mode nostudy)
++	canna-envspec-list (nconc canna-envspec-list 
++				  (list canna-current-envspec))))
++
++(defun canna-add-dict (dict dict-rw)
++  (canna-envspec-add-dic-list canna-current-envspec dict dict-rw))
++
++(defun canna-comm-sentinel (proc reason)	; assume it is close
++  (let ((inhibit-quit t))
++    (kill-buffer (process-buffer proc))
++    ;; delete env from the list.
++    (setq canna-environments
++	  (delq nil (mapcar (lambda (env)
++			      (if (null (eq (cannaenv-get-proc env) proc))
++				  env))
++			    canna-environments)))))
++
++(defun canna-open (hostname-list)
++  "Establish the connection to CANNA server.  Return environment object."
++  (let* ((save-inhibit-quit inhibit-quit)
++	 (inhibit-quit t)
++	 (proc-name "CANNA")
++	 (msg-form "Canna: connecting to %S at %s...")
++	 (user-name (or canna-user-name (user-login-name)))
++	 (id (shell-command-to-string "id"))
++	 (group (or canna-group-name
++		    (if (string-match "gid=[0-9]+(\\([^)]+\\))" id)
++			(match-string 1 id)
++		      "user")))
++	 buf hostname port proc result msg)
++    (unwind-protect
++	(progn
++	  (setq buf (generate-new-buffer " *CANNA*"))
++    (save-excursion
++      (set-buffer buf)
++      (erase-buffer)
++      (buffer-disable-undo)
++	    (set-buffer-multibyte nil)
++	    (setq egg-fixed-euc 'fixed-euc-jp))
++	  (or (consp hostname-list)
++	      (setq hostname-list (list hostname-list)))
++	  (while (and hostname-list (null proc))
++	    (setq hostname (or (car hostname-list) "")
++		  hostname-list (cdr hostname-list))
++	    (if (null (string-match ":" hostname))
++		(setq port canna-server-port)
++	      (setq port (string-to-int (substring hostname (match-end 0)))
++		    hostname (substring hostname 0 (match-beginning 0))))
++	    (and (equal hostname "")
++		 (setq hostname (or (getenv "CANNAHOST") "localhost")))
++	    (let ((inhibit-quit save-inhibit-quit))
++	      (if (and msg
++		       (null (y-or-n-p (format "%s failed. Try to %s? "
++					       msg hostname))))
++		  (egg-error "abort connect")))
++	    (setq msg (format "Canna: connecting to %s..." hostname))
++	    (message "%s" msg)
++	    (let ((inhibit-quit save-inhibit-quit))
++	      (condition-case nil
++		  (setq proc (open-network-stream proc-name buf hostname port))
++		((error quit))))
++	    (when proc
++	      (process-kill-without-query proc)
++	      (set-process-coding-system proc 'no-conversion 'no-conversion)
++	      (set-process-sentinel proc 'canna-comm-sentinel)
++	      (set-marker-insertion-type (process-mark proc) t)
++	      (setq result (cannarpc-open proc user-name)) ;; result is context
++	      (if (= result -1)
++		  (progn
++	  (delete-process proc)
++		    (setq proc nil))
++		(cannarpc-notice-group-name proc result group)
++		(cannarpc-set-app-name proc result "EGG4"))))
++	  (cons proc result))
++      (if proc
++	  (message (concat msg "done"))
++	(if buf (kill-buffer buf))
++	(egg-error 'canna-connect-error)))))
+ 
+ (defun canna-filename (p)
+   ""
+   (cond ((consp p) (concat (car p) "/" (user-login-name)))
+ 	(t p)))
+ 
+-(defun canna-get-environment ()
++(defun canna-search-environment (backend)
++  (let ((env-list canna-environments)
++	env)
++    (while (and (null env) env-list)
++      (setq env (and (eq (cannaenv-get-backend (car env-list)) backend)
++		     (car env-list))
++	    env-list (cdr env-list)))
++    env))
++
++(defun canna-get-environment (backend)
+   "Return the backend of CANNA environment."
+-  (if canna-environment
+-      canna-environment
+-    (let* ((env (canna-open canna-hostname))
+-	   (l canna-dictionary-specification)
+-	   dict-list)
+-      (while l
+-	(let ((dic (car l))
+-	      result)
+-	  (setq result
+-		(canna-open-dictionary env (canna-filename dic)))
+-	  (if (= result 255)
+-	      (error "Damedamedame")		; XXX
+-	    (setq l (cdr l)))))
+-      (setq canna-environment env))))
++  (let ((env (canna-search-environment backend))
++	proc context error)
++    (or env    
++	(unwind-protect
++	    (let* ((language (canna-backend-get-language backend))
++		   specs)
++	      (setq proc (canna-open canna-hostname)
++		    context (cdr proc)
++		    proc (car proc)
++		    canna-envspec-list nil)
++	      (condition-case err
++		  (egg-load-startup-file 'canna language)
++		(egg-error
++		 (setq error err)
++		 (signal (car error) (cdr error))))
++	      (setq specs canna-envspec-list)
++	      (while specs
++		(canna-create-environment proc context (car specs))
++		(setq context nil)
++		(setq specs (cdr specs)))
++	      (setq env (canna-search-environment backend)))
++	  (when (and proc (null env))
++	    (cannarpc-close proc)
++	    (if error
++		(signal (car error) (cdr error))
++	      (egg-error 'canna-fail-make-env)))
++	    ))))
+ 
+-(defun canna-open-dictionary (env name)
++(defun canna-create-environment (proc context spec)
++  (let* ((save-inhibit-quit inhibit-quit)
++	 (inhibit-quit t)
++	 (backend (canna-envspec-backend spec))
++	 (convert-mode (canna-envspec-mode spec))
++	 (nostudy (canna-envspec-nostudy spec))
++	 (dic-list (canna-envspec-dic-list spec))
++	 env)
++    (condition-case err
++	(progn
++	  (if (not context)
++	      (setq context (cannarpc-create-context proc)))
++	  (if (< context 0)
++	      (egg-error "%s" (cannarpc-get-error-message (- context))))
++	  (setq env (cannaenv-create proc context backend convert-mode nostudy))
++	  (let ((inhibit-quit save-inhibit-quit))
++	    (while dic-list
++	      (canna-set-dictionary env (car dic-list))
++	      (setq dic-list (cdr dic-list))))
++	  (setq canna-environments (nconc canna-environments (list env))))
++      ((egg-error quit)
++       (if (eq (car err) 'egg-error)
++	   (message "%s" (nth 1 err)))
++       (if env
++	   (progn
++	     (cannarpc-close-context env)
++	     (setq canna-environments (delq env canna-environments))))
++       (if (eq (car err) 'quit)
++	   (signal 'quit (cdr err)))))))
++
++(defun canna-set-dictionary (env dic-spec)
++  (let ((dname (aref dic-spec 0))
++	(drw   (aref dic-spec 1))
++	did result)
++    (if (= 0 (canna-open-dictionary env dname drw))
++	(cannaenv-add-dic-list env dname drw))))
++
++(defun canna-open-dictionary (env name rw)
+   (let ((trying t)
+ 	ret)
+     (while trying
+       (setq ret (cannarpc-open-dictionary env name 0)) ; XXX MODE=0
+       (if (= ret 0)
+ 	  (setq trying nil)
+-	(message "$B<-=q%U%!%$%k(B(%s)$B$,$"$j$^$;$s(B" name)
+-	(setq ret (- ret))		; Get error code.
++	(message (egg-get-message 'canna-dict-missing-1) name)
++	(if rw
+ 	(if (and (y-or-n-p
+-		  (format "$B<-=q%U%!%$%k(B(%s)$B$,$"$j$^$;$s!#:n$j$^$9$+(B? "
+-			  name))
++		      (format (egg-get-message 'canna-dict-missing-2) name))
+ 		 (= (cannarpc-make-dictionary env name) 0))
+-	    (message "$B<-=q%U%!%$%k(B(%s)$B$r:n$j$^$7$?(B" name)
+-	  (error "Fatal"))))
++		(message (egg-get-message 'canna-dict-created) name)
++	      (message "%s" (cannarpc-get-error-message (- ret))))
++	  (setq trying nil))))
+     ret))
+ 
++(defun canna-save-dictionaries (env)
++  (let ((dic-list (canna-list-writable-dictionaries-byname env))
++	dic)
++    (while dic-list
++      (setq dic (car dic-list)
++	    dic-list (cdr dic-list))
++      (cannarpc-save-dictionary env dic))))
++
+ (defun canna-init ()
+   )
+ 
+-(defun canna-start-conversion (yomi lang)
++(defun canna-start-conversion (backend yomi &optional context)
+   "Convert YOMI string to kanji, and enter conversion mode.
+ Return the list of bunsetsu."
+-  (if (eq lang 'Japanese)
+-      (let ((env (canna-get-environment)))
+-	(cannarpc-begin-conversion env yomi))
+-    (signal 'lang-not-supported)))    
++  (let* ((env (canna-get-environment backend))
++	 (bunsetsu-list (cannarpc-begin-conversion env yomi)))
++    (if (numberp bunsetsu-list) ; XXX error $B$N=hM}E,Ev(B
++	(progn
++	  (if (= -1 (cannarpc-cancel-conversion env))
++	      (progn
++	  (setq env (canna-get-environment backend))
++		(canna-finalize-backend)))
++	  (setq bunsetsu-list (cannarpc-begin-conversion env yomi))))
++    bunsetsu-list))
+ 
+ (defun canna-end-conversion (bunsetsu-list abort)
+-  (let* ((env (cannabunsetsu-get-env (car bunsetsu-list)))
++  (let* ((env (canna-bunsetsu-get-env (car bunsetsu-list)))
+ 	 (l bunsetsu-list)
+ 	 (len (length bunsetsu-list))
+ 	 (zenkouho-pos-vector (make-vector (* 2 len) 0))
+ 	 (i 0)
+-	 (mode 1) ;XXX MODE=1 attru?
++	 (mode (if (cannaenv-get-nostudy env) 0 1)) ; MODE=1 $B3X=,(B  0 $B$7$J$$(B
+ 	 bunsetsu zenkouho-pos)
+     (if abort
+ 	(setq mode 0))
+     (while l
+       (setq bunsetsu (car l))
+       (setq l (cdr l))
+-      (setq zenkouho-pos (cannabunsetsu-get-zenkouho-pos bunsetsu))
++      (setq zenkouho-pos (canna-bunsetsu-get-zenkouho-pos bunsetsu))
+       (if (null zenkouho-pos)
+ 	  () ; XXX: NIL--> 0 atteru???
+ 	(aset zenkouho-pos-vector i 0)	; XXX Don't support >=256
+ 	(aset zenkouho-pos-vector (1+ i) zenkouho-pos))
+       (setq i (+ i 2)))
+-    (cannarpc-end-conversion env len zenkouho-pos-vector 0)))
++    (cannarpc-end-conversion env len zenkouho-pos-vector mode)))
+ 
+-(defun canna-list-candidates (bunsetsu prev-bunsetsu)
+-  (let* ((env (cannabunsetsu-get-env bunsetsu))
+-	 (bunsetsu-pos (cannabunsetsu-get-bunsetsu-pos bunsetsu))
+-	 (z (cannarpc-get-bunsetsu-candidates env bunsetsu-pos)))
+-    (cannabunsetsu-set-zenkouho bunsetsu z)
+-    (cannabunsetsu-set-zenkouho-pos bunsetsu 0)
+-    0))
++(defun canna-list-candidates (bunsetsu prev-b next-b major)
++  (setq bunsetsu (car bunsetsu))
++  (if (canna-bunsetsu-get-zenkouho bunsetsu)
++      (cons (canna-bunsetsu-get-zenkouho-pos bunsetsu)
++	    (canna-bunsetsu-get-zenkouho-converted bunsetsu))
++    (let* ((env (canna-bunsetsu-get-env bunsetsu))
++	   (yomi (canna-get-bunsetsu-source bunsetsu))
++	   (bunsetsu-pos (canna-bunsetsu-get-bunsetsu-pos bunsetsu))
++	   (z (cannarpc-get-bunsetsu-candidates env bunsetsu-pos yomi)))
++      (canna-bunsetsu-set-zenkouho bunsetsu z)
++      (cons (canna-bunsetsu-set-zenkouho-pos bunsetsu 0)
++	    (canna-bunsetsu-set-zenkouho-converted
++	     bunsetsu
++	     (mapcar 'canna-bunsetsu-get-converted z))))))
+ 
++;;; XXX not use ?
+ (defun canna-get-number-of-candidates (bunsetsu)
+-  (let ((l (cannabunsetsu-get-zenkouho bunsetsu)))
++  (let ((l (canna-bunsetsu-get-zenkouho bunsetsu)))
+     (if l
+ 	(length l)
+       nil)))
+ 
+-(defun canna-decide-candidate (bunsetsu candidate-pos)
+-  (let* ((candidate-list (cannabunsetsu-get-zenkouho bunsetsu))
+-	 (candidate (nth candidate-pos candidate-list)))
+-    (cannabunsetsu-set-zenkouho candidate candidate-list)
+-    (cannabunsetsu-set-zenkouho-pos candidate candidate-pos)
+-    candidate))
++(defun canna-decide-candidate (bunsetsu pos prev-b next-b)
++  (let* ((head (car bunsetsu))
++	 (candidate-list (canna-bunsetsu-get-zenkouho head))
++	 (candidate (nth pos candidate-list)))
++    (canna-bunsetsu-set-zenkouho candidate candidate-list)
++    (canna-bunsetsu-set-zenkouho-pos candidate pos)
++    (canna-bunsetsu-set-zenkouho-converted
++     candidate (canna-bunsetsu-get-zenkouho-converted head))
++    (list (list candidate))))
+ 
++(defun canna-special-candidate (bunsetsu prev-b next-b major type)
++  (let* ((head (car bunsetsu))
++	 (env (canna-bunsetsu-get-env head))
++	 (backend (egg-bunsetsu-get-backend head))
++	 (lang (get backend 'language))
++	 source converted zenkouho-list kouho-list pos)
++    (when (and (eq lang (get backend 'source-language))
++	       (eq lang (get backend 'converted-language)))
++      (cond ((eq lang 'Japanese)
++	     (setq source (canna-get-bunsetsu-source head))
++	     (cond ((eq type 'egg-hiragana)
++		    (setq converted source))
++		   ((eq type 'egg-katakana)
++		    (setq converted (japanese-katakana source))))
++	     (setq zenkouho-list
++		   (cdr (canna-list-candidates bunsetsu prev-b next-b major)))
++	     (setq pos
++		   (when (setq kouho-list (member converted zenkouho-list))
++		     (- (length zenkouho-list) (length kouho-list))))))
++      (when pos
++	(canna-decide-candidate bunsetsu pos prev-b next-b)))))
++
++;;; XXX not used ?
+ (defun canna-get-current-candidate-number (bunsetsu)
+-  (cannabunsetsu-get-zenkouho-pos bunsetsu))
++  (canna-bunsetsu-get-zenkouho-pos bunsetsu))
+ 
++;;; XXX not used ?
+ (defun canna-get-all-candidates (bunsetsu)
+-  (let* ((l (cannabunsetsu-get-zenkouho bunsetsu))
++  (let* ((l (canna-bunsetsu-get-zenkouho bunsetsu))
+ 	 (result (cons nil nil))
+ 	 (r result))
+     (catch 'break
+       (while t
+ 	(let ((candidate (car l)))
+-	  (setcar r (cannabunsetsu-get-converted candidate))
++	  (setcar r (canna-bunsetsu-get-converted candidate))
+ 	  (if (null (setq l (cdr l)))
+ 	      (throw 'break nil)
+ 	    (setq r (setcdr r (cons nil nil)))))))
+     result))
+ 
+-;;;;;;;;;;;;;;;;;;;;;;; MADAMADA zenzendame, just copy from SJ3
+-(defun canna-change-bunsetsu-length (b0 b1 b2 len)
+-  (let ((yomi (concat
+-	       (cannabunsetsu-get-source b1)
+-	       (if b2 (cannabunsetsu-get-source b2))))
+-	(env (cannabunsetsu-get-env b1))
+-	yomi1 yomi2
+-	bunsetsu1 bunsetsu2)
+-    (setq yomi1 (substring yomi 0 len)
+-	  yomi2 (substring yomi len))
+-    (setq bunsetsu1
+-	  (cannarpc-tanbunsetsu-conversion env yomi1))
+-    ;; Only set once (memory original length of the bunsetsu).
+-    (cannabunsetsu-set-kugiri-changed bunsetsu1
+-				    (or (cannabunsetsu-get-kugiri-changed b1)
+-					(length (cannabunsetsu-get-source b1))))
+-    (if (< 0 (length yomi2))
+-	(setq bunsetsu2 (cannarpc-tanbunsetsu-conversion env yomi2))
+-      (setq bunsetsu2 nil))
+-    (if bunsetsu2
+-	(list bunsetsu1 bunsetsu2)
+-      (list bunsetsu1))))
++(defun canna-change-bunsetsu-length (bunsetsu prev-b next-b len major)
++  (let* ((env (canna-bunsetsu-get-env (car bunsetsu)))
++	 (yomi (canna-get-bunsetsu-source (car bunsetsu)))
++	 (yomi-length (cond ((< (length yomi) len) -1)
++			    ((> (length yomi) len) -2)
++			    (t nil)))
++	 (bunsetsu-pos (canna-bunsetsu-get-bunsetsu-pos (car bunsetsu)))
++	 new)
++    (if yomi-length
++	(setq new (cannarpc-set-kugiri-changed env yomi-length bunsetsu-pos))
++      (setq new bunsetsu))
++    (list (list (car new)) prev-b (cdr new))))
+ 
+-;;;;;;;;;;;;;; MADAMADA
+-(defun canna-fini ()
+-)
++(defun canna-finalize-backend (&optional action)
++  (let* ((save-inhibit-quit inhibit-quit)
++	 (inhibit-quit t)
++	 (env-list canna-environments)
++	 env proc-list saved)
++    (while env-list
++      (setq env (car env-list)
++	    env-list (cdr env-list))
++      (condition-case err
++	  (progn
++	    (unless (memq (cannaenv-get-proc env) proc-list)
++	      (setq proc-list (cons (cannaenv-get-proc env) proc-list)))
++	    (unless (eq action 'disconnect-only)
++	      (unless saved
++		(setq saved t)
++		(message (egg-get-message 'canna-dict-saving) "Canna"))
++	      (let ((inhibit-quit save-inhibit-quit))
++		(canna-save-dictionaries env)))
++	    (unless (eq action 'save-only)
++	      (cannarpc-close-context env)))
++	((error quit)
++	 (message "signal %S occured when dictionary saving" err))))
++    (if saved
++	(message (egg-get-message 'canna-dict-saved) "Canna"))
++    (unless (eq action 'save-only)
++      (while proc-list
++	(if (and (car proc-list)
++		 (eq (process-status (car proc-list)) 'open))
++	    (cannarpc-close (car proc-list)))
++	(setq proc-list (cdr proc-list)))))
++  (setq canna-environments nil))
++
++;;; word registration
++
++(defun canna-list-writable-dictionaries-byname (env)
++  (let ((dic-list (cannaenv-get-dic-list env)))
++    (delq nil
++	  (mapcar (lambda (dic)
++		    (let ((dname (aref dic 0))
++			  (drw   (aref dic 1)))
++		      (and drw dname)))
++		  dic-list))))
++
++(defun canna-dictionary-select (env)
++  (let ((dic-list (canna-list-writable-dictionaries-byname env)))
++    (if (= 1 (length dic-list))
++	(car dic-list)
++      (menudiag-select (list 'menu
++			     (egg-get-message 'canna-register-1)
++			     dic-list)))))
++
++(defun canna-hinshi-MEISHI (kanji yomi)
++  (if (y-or-n-p (concat "$B!V(B" kanji "$B$J!W$O@5$7$$$G$9$+!#(B")) "#T15" "#T35"))
++
++(defun canna-hinshi-SAHEN-MEISHI (kanji yomi)
++  (if (y-or-n-p (concat "$B!V(B" kanji "$B$J!W$O@5$7$$$G$9$+!#(B") "#T10" "#T30")))
++
++(defmacro canna-hinshi-DOUSHI-check-gobi ()
++  '(progn
++     (setq i 0)
++     (while (> 9 i)
++       (if (string-match (concat (substring gobi i (1+ i)) "$") kanji)
++	   (progn
++	     (setq renyou  (substring re-gobi i (1+ i)))
++	     (setq mizen   (substring mi-gobi i (1+ i)))
++	     (setq kanji-gobi   (substring kanji (match-beginning 0)))
++	     (setq kanji-gokan (substring kanji 0 (match-beginning 0)))
++	     (setq ret (nth i hinshi))
++	     (setq i 9)))
++       (setq i (1+ i)))
++     (setq i 0)
++     (while (> 9 i)
++       (if (string-match (concat (substring gobi i (1+ i)) "$") yomi)
++	   (progn
++	     (setq yomi-gobi  (substring yomi (match-beginning 0)))
++	     (setq yomi-gokan (substring yomi 0 (match-beginning 0)))
++	     (setq i 9)))
++       (setq i (1+ i)))))
++
++(defun canna-hinshi-DOUSHI (kanji yomi)
++  (let ((gobi    "$B$/$0$9$D$L$V$`$k$&(B")
++	(re-gobi "$B$-$.$7$A$K$S$_$j$$(B")
++	(mi-gobi "$B$+$,$5$?$J$P$^$i$o(B")
++	(hinshi (list "#K5" "#G5" "#S5" "#T5" "#N5" "#B5" "#M5" "#R5" "#W5"))
++	kanji-gokan yomi-gokan kanji-gobi yomi-gobi mizen renyou
++	i ret1 ret2 ret)
++    (canna-hinshi-DOUSHI-check-gobi)
++    (if (not (and (> (length kanji) 1) (> (length yomi) 1)
++		  (and kanji-gobi yomi-gobi (equal kanji-gobi yomi-gobi))))
++	(if (and kanji-gobi yomi-gobi)
++	    (egg-error "$BFI$_$H8uJd$N3hMQ$,0c$$$^$9!#F~NO$7$J$*$7$F$/$@$5$$!#(B")
++	  (egg-error "$BFI$_$H8uJd$r=*;_7A$GF~NO$7$F$/$@$5$$!#(B")))
++    (cond ((and (> (length kanji) 2) (> (length yomi) 2)
++		(string-match "$B$/$k(B$" kanji) (string-match "$B$/$k(B$" yomi))
++	   (setq ret "#KX")
++	   (setq kanji-gokan (substring kanji 0 (- (length kanji) 2)))
++	   (setq yomi-gokan  (substring yomi  0 (- (length  yomi) 2))))
++	  ((and (> (length kanji) 3) (> (length yomi) 3)
++		(string-match "$B$s$:$k(B$" kanji) (string-match "$B$s$:$k(B$" yomi))
++	   (setq ret "#NZX")
++	   (setq kanji-gokan (substring kanji 0 (- (length kanji) 3)))
++	   (setq yomi-gokan  (substring yomi  0 (- (length  yomi) 3))))
++	  ((and (> (length kanji) 2) (> (length yomi) 2)
++		(string-match "$B$:$k(B$" kanji) (string-match "$B$:$k(B$" yomi))
++	   (setq ret "#ZX")
++	   (setq kanji-gokan (substring kanji 0 (- (length kanji) 2)))
++	   (setq yomi-gokan  (substring yomi  0 (- (length  yomi) 2))))
++	  ((and (> (length kanji) 2) (> (length yomi) 2)
++		(string-match "$B$9$k(B$" kanji) (string-match "$B$9$k(B$" yomi))
++	   (setq ret "#SX")
++	   (setq kanji-gokan (substring kanji 0 (- (length kanji) 2)))
++	   (setq yomi-gokan  (substring yomi  0 (- (length  yomi) 2)))))
++    (if (not (string-match "5$" ret))
++	(if (y-or-n-p (concat "$B!X(B" kanji "$B!Y$r(B (" (canna-hinshi-name ret)
++			      ") $B$H$7$FEPO?$7$^$9$+(B? "))
++	    (setq ret (list kanji-gokan yomi-gokan ret))
++	  (setq ret "#R5")
++	  (setq kanji-gokan (substring kanji 0 (- (length kanji) 1)))
++	  (setq yomi-gokan  (substring yomi  0 (- (length  yomi) 1)))))
++    (if (listp ret)
++	ret
++      (if (y-or-n-p "$B$5$i$K:Y$+$$IJ;lJ,$1$N$?$a$N<ALd$r$7$F$bNI$$$G$9$+(B? ")
++	  (progn
++	    (setq ret1 (y-or-n-p (concat "$B!V(B" kanji-gokan mizen
++					 "$B$J$$!W$O@5$7$$$G$9$+!#(B")))
++	    (setq i 0)
++	    (if (eq "#R5" ret)
++		(while (> 9 i)
++		  (if (string-match (concat (substring re-gobi i (1+ i)) "$")
++				    kanji-gokan)
++		      (progn (setq renyou nil)
++			     (setq i 9)))
++		  (setq i (1+ i))))
++	    (setq ret2 (y-or-n-p (concat "$B!V(B" kanji-gokan renyou
++					 "$B$,$$$$!W$O@5$7$$$G$9$+!#(B")))
++	    (setq ret (if ret1 (if ret2 (concat ret "r") ret)
++			(if ret2 "#KSr" "#KS")))))
++      (list kanji-gokan yomi-gokan ret))))
++
++(defun canna-hinshi-KEIYOUSHI (kanji yomi)
++  (let (ret)
++    (if (not (and (> (length kanji) 1) (> (length yomi) 1)
++		  (string-match "$B$$(B$" yomi) (string-match "$B$$(B$" kanji)))
++	(egg-error "$BFI$_$H8uJd$r(B $B=*;_7A$GF~NO$7$F$/$@$5$$!#Nc(B) $BAa$$(B"))
++    (setq kanji (substring kanji 0 (1- (length kanji))))
++    (setq yomi (substring yomi 0 (1- (length yomi))))
++    (setq ret
++	  (if (y-or-n-p "$B$5$i$K:Y$+$$IJ;lJ,$1$N$?$a$N<ALd$r$7$F$bNI$$$G$9$+(B? ")
++	      (if (y-or-n-p (concat "$B!V(B" kanji "$B!W$O@5$7$$$G$9$+!#(B"))
++		  "#KYT" "#KY")
++	    "#KY"))
++    (list kanji yomi ret)))
++
++(defun canna-hinshi-KEIYOUDOUSHI (kanji yomi)
++  (let (ret1 ret2 ret)
++    (if (not (and (> (length kanji) 1) (> (length yomi) 1)
++		  (string-match "$B$@(B$" yomi) (string-match "$B$@(B$" kanji)))
++	(egg-error "$BFI$_$H8uJd$r(B $B=*;_7A$GF~NO$7$F$/$@$5$$!#Nc(B) $B@E$+$@(B"))
++    (setq kanji (substring kanji 0 (1- (length kanji))))
++    (setq yomi (substring yomi 0 (1- (length yomi))))
++    (setq ret
++	  (if (y-or-n-p "$B$5$i$K:Y$+$$IJ;lJ,$1$N$?$a$N<ALd$r$7$F$bNI$$$G$9$+(B? ")
++	      (progn
++		(setq ret1 (y-or-n-p
++			    (concat "$B!V(B" kanji "$B$9$k!W$O@5$7$$$G$9$+!#(B")))
++		(setq ret2 (y-or-n-p
++			    (concat "$B!V(B" kanji "$B$,$"$k!W$O@5$7$$$G$9$+!#(B")))
++		(if ret1 (if ret2 "#T10" "#T13") (if ret2 "#T15" "#T18")))
++	    "#T05"))
++    (list kanji yomi ret)))
++
++(defun canna-hinshi-FUKUSHI (kanji yomi)
++  (let (ret1 ret2)
++    (if (y-or-n-p "$B$5$i$K:Y$+$$IJ;lJ,$1$N$?$a$N<ALd$r$7$F$bNI$$$G$9$+(B? ")
++	(progn
++	  (setq ret1 (y-or-n-p (concat "$B!V(B" kanji "$B$9$k!W$O@5$7$$$G$9$+!#(B")))
++	  (setq ret2 (y-or-n-p (concat "$B!V(B" kanji "$B$H!W$O@5$7$$$G$9$+!#(B")))
++	  (if ret1 (if ret2 "#F04" "#F12") (if ret2 "#F06" "#F14")))
++      "#F14")))
++
++(defun canna-hinshi-select (kanji yomi)
++  (let ((key (menudiag-select (list 'menu
++				    (egg-get-message 'canna-register-2)
++				    canna-hinshi-menu))))
++    (cond ((symbolp key) (funcall
++			  (intern (concat "canna-hinshi-" (symbol-name key)))
++			  kanji yomi))
++	  ((stringp key) (cdr (assoc key canna-hinshi-alist))))))
++	
++(defun canna-word-registration (backend kanji yomi)
++  "Register a word KANJI with a pronunciation YOMI."
++  (if (or (null (eq (egg-get-language 0 kanji)
++		    (canna-get-converted-language backend)))
++	  (next-single-property-change 0 'egg-lang kanji)
++	  (null (eq (egg-get-language 0 yomi)
++		    (canna-get-source-language backend)))
++	  (next-single-property-change 0 'egg-lang yomi))
++      (egg-error "word registration: invalid character")
++    (let* ((env (canna-get-environment backend))
++	   (dic (canna-dictionary-select env))
++	   (hinshi-id (canna-hinshi-select kanji yomi))
++	   result)
++      (if (listp hinshi-id)
++	  (progn (setq kanji     (car hinshi-id))
++		 (setq yomi      (nth 1 hinshi-id))
++		 (setq hinshi-id (nth 2 hinshi-id))))
++      (setq result (cannarpc-add-word env dic yomi kanji hinshi-id))
++      (if (>= result 0)
++	  (progn
++	    (cannarpc-save-dictionary env dic)
++	    (list (canna-hinshi-name hinshi-id) dic))
++	(egg-error (cannarpc-get-error-message (- result)))))))
++
++;;; word delete registration
++
++(defun canna-word-delete-regist (backend yomi)
++  "Delete a word KANJI from dictionary."
++  (let* ((env (canna-get-environment backend))
++	 (dic (canna-dictionary-select env))
++	 proc context envd bunsetsu bunsetsu-pos z zpos kouho-list hinshi i
++	 kanji lex result)
++    (setq proc (cannaenv-get-proc env))
++    (setq context (cannarpc-create-context proc))
++    (setq envd (cannaenv-create proc context
++				'canna-backend-Japanese-tmp-delete-regist
++				1 t))
++    (canna-set-dictionary envd (vector dic t))
++    (canna-set-dictionary envd (vector "fuzokugo" nil))
++    (setq bunsetsu (car (cannarpc-begin-conversion envd yomi)))
++    (setq bunsetsu-pos (canna-bunsetsu-get-bunsetsu-pos bunsetsu))
++    (setq z (cannarpc-get-bunsetsu-candidates envd bunsetsu-pos yomi))
++    (canna-bunsetsu-set-zenkouho bunsetsu z)
++    (canna-bunsetsu-set-zenkouho-pos bunsetsu 0)
++    (setq kouho-list
++	  (canna-bunsetsu-set-zenkouho-converted
++	   bunsetsu
++	   (mapcar 'canna-bunsetsu-get-converted z)))
++    (setq yomi  (car (last kouho-list)))
++    (setq kouho-list (cdr (reverse kouho-list)))
++    (setq kouho-list (reverse kouho-list))
++    (setq i 0)
++    (setq kouho-list (mapcar '(lambda (k)
++				(prog1
++				    (cons k i)
++				  (setq i (1+ i))))
++			     kouho-list))
++    (let ((hiragana (assoc yomi kouho-list))
++	  hinshi)
++      (if hiragana
++	  (setq hinshi (cannarpc-get-hinshi envd bunsetsu-pos (cdr hiragana))))
++      (if (stringp hinshi)
++	  (if (equal "#T35" hinshi)
++	      (setq kouho-list (delete hiragana kouho-list)))
++	(setq kouho-list (delete hiragana kouho-list))))
++    (cond
++     ((null kouho-list)
++      (cannarpc-close-context envd)
++      (egg-error "$BEPO?$5$l$F$$$^$;$s!#(B"))
++     ((eq 1 (length kouho-list))
++      (setq zpos 0)
++      (setq kanji (car (car kouho-list))))
++     (t
++      (setq kanji (menudiag-select (list 'menu "$B:o=|(B:" kouho-list) nil nil t))
++      (setq zpos (cdr (car kanji)))
++      (setq kanji (car (car kanji)))))
++    (setq hinshi (cannarpc-get-hinshi envd bunsetsu-pos zpos))
++    (setq lex (cannarpc-get-lex envd bunsetsu-pos zpos))
++    (cannarpc-cancel-conversion envd)
++    (if (string-match "#[^#]+" hinshi)
++	(setq hinshi (substring hinshi 0 (match-end 0)))
++      (egg-error "$BIJ;l>pJs$,<hF@$G$-$^$;$s!#(B"))
++    (setq kanji (substring kanji 0 (nth 1 (car lex))))
++    (setq yomi (substring yomi 0 (car (car lex))))
++    (if (y-or-n-p (concat "$B!X(B" kanji "$B!Y(B(" yomi ": "
++			  (canna-hinshi-name hinshi) ")$B$r(B "
++			  dic " $B$+$i:o=|$7$^$9$+(B? "))
++	(setq result
++	      (cannarpc-delete-word envd dic yomi kanji hinshi))
++      (setq result -1))
++    (if (>= result 0)
++	(progn
++	  (cannarpc-save-dictionary envd dic)
++	  (cannarpc-close-context envd)
++	  (list kanji yomi (canna-hinshi-name hinshi) dic))
++      (cannarpc-close-context envd)
++      (egg-error (cannarpc-get-error-message (- result))))
++    ))
+ 
+ ;;; setup
+-(require 'egg)
++(load "egg/cannarpc")
++(run-hooks 'canna-load-hook)
+ 
+ ;;;###autoload
+ (defun egg-activate-canna (&rest arg)
+-  "Activate CANNA backend of Tamagotchy."
+-  (setq egg-conversion-backend canna-conversion-backend)
+-  (if (not (fboundp 'cannarpc-open))
+-      (load-library "egg/canna"))
+-  (apply 'egg-mode arg))
++  "Activate CANNA backend of Tamago 4."
++  (apply 'egg-mode (append arg canna-backend-alist)))
+ 
+ ;;; egg/canna.el ends here.
+diff -rdu ../tamago-4.0.6.org/egg/cannarpc.el ./egg/cannarpc.el
+--- ../tamago-4.0.6.org/egg/cannarpc.el	Tue Jan  4 15:48:42 2000
++++ ./egg/cannarpc.el	Fri Mar 16 14:14:12 2001
+@@ -45,17 +45,31 @@
+ 	  ((eq c 'GetDirectoryList)      7)
+ 	  ((eq c 'MountDictionary)       8)
+ 	  ((eq c 'UnmountDictionary)       9)
++	  ((eq c 'GetMountDictionaryList) 11)
++	  ((eq c 'DefineWord)		  13)
++	  ((eq c 'DeleteWord)		  14)
+ 	  ((eq c 'BeginConvert)         15)
+ 	  ((eq c 'EndConvert)           16)
+ 	  ((eq c 'GetCandidacyList)     17)
+ 	  ((eq c 'GetYomi)              18)
+ 	  ((eq c 'ResizePause)          26)
++	  ((eq c 'GetHinshi)		  27)
++	  ((eq c 'GetLex)		  28)
++	  ((eq c 'SetApplicationName)	  33)
++	  ((eq c 'NoticeGroupName)        34)
+ 
+ 	  ((eq c 'CreateDictionary)      3)
++	  ((eq c 'Sync)			   8)
+ 	  (t (error "No such constant")))))
+ 
++;; XXX
++(defconst cannarpc-error-message (vector ))
++
+ (defun cannarpc-get-error-message (errno)
+-  (or (aref cannarpc-error-message errno) (format "#%d" errno)))
++  (or (and (>= errno 0)
++	   (< errno (length cannarpc-error-message))
++	   (aref cannarpc-error-message errno))
++      (format "#%d" errno)))
+ 
+ (defmacro cannarpc-call-with-environment (e vlist send-expr &rest receive-exprs)
+   (let ((v (append
+@@ -73,54 +87,101 @@
+ 	   (goto-char (prog1 (point) (accept-process-output proc))))
+ 	receive-exprs))))
+ 
+-(defconst canna-version-fmt "2.0:%s")
++(defconst canna-version-fmt "3.3:%s")
+ 
+ (defun cannarpc-open (proc username)
+   "Open the session.  Return 0 on success, error code on failure."
+   (let ((verusr (format canna-version-fmt username)))
+-    (comm-call-with-proc proc (result)
+-      (comm-format (u u v) (canna-const Initialize) (length verusr) verusr)
+-      (comm-unpack (u) result)
+-      result)))
++    (comm-call-with-proc proc (minor context)
++      (comm-format (u u s) (canna-const Initialize) (+ (length verusr) 1)
++		   verusr)
++      (comm-unpack (w w) minor context)
++      (cond ((and (= minor 65535) (= context 65535))
++	     -1)			; failure
++	    ((and (= minor 65535) (= context 65534))
++	     -1)			; version miss match
++	    (t context)))))
+ 
+ (defun cannarpc-close (proc)
+   (comm-call-with-proc proc (dummy result)
+     (comm-format (b b w) (canna-const Finalize) 0 0)
+-    (comm-unpack (b b w b) dummy dummy dummy result)
+-    result))
++    (comm-unpack (u b) dummy result)
++    (if (= result 255)
++	-1				; failure
++      result)))
+ 
+ (defun cannarpc-create-context (proc)
+   (comm-call-with-proc proc (dummy result)
+     (comm-format (b b w) (canna-const CreateContext) 0 0)
+-    (comm-unpack (b b w w) dummy dummy dummy result)
+-    result))
++    (comm-unpack (u w) dummy result)
++    (if (= result 65535)
++	-1				; failure
++      result)))
+ 
+-(defun cannarpc-close-context (proc context)
+-  (comm-call-with-proc proc (dummy result)
++(defun cannarpc-close-context (env)
++  (cannarpc-call-with-environment env (dummy result)
+     (comm-format (b b w w) (canna-const CloseContext) 0 2 context)
+-    (comm-unpack (b b w b) dummy dummy dummy result)
+-    result))
++    (comm-unpack (u b) dummy result)
++    (if (= result 255)
++	-1				; failure
++      result)))
+ 
+-;; XXX: Not implemented fully
+ (defun cannarpc-get-dictionary-list (env)
+-  (cannarpc-call-with-environment env (dymmy result)
++  (let ((i 0)
++	dic dl dic-list)
++    (cannarpc-call-with-environment env (dummy result)
+     (comm-format (b b w w w) (canna-const GetDictionaryList) 0 4
+ 		 context 1024)
+     (comm-unpack (u w) dummy result)
+     ;; follow list of dictionaries
+-    result))
++      (if (= result 65535)
++	  -1				; failure
++	(while (< i result)
++	  (comm-unpack (s) dic)
++	  (if dl
++	      (setq dl (setcdr dl (cons dic nil)))
++	    (setq dic-list (setq dl (cons dic nil))))
++	  (setq i (1+ i)))
++	dic-list))))
+ 
+-;; XXX: Not implemented fully
+ (defun cannarpc-get-directory-list (env)
+-  (cannarpc-call-with-environment env (dymmy result)
++  (let ((i 0)
++	dir dl dir-list)
++    (cannarpc-call-with-environment env (dummy result)
+     (comm-format (b b w w w) (canna-const GetDirectoryList) 0 4
+ 		 context 1024)
+     (comm-unpack (u w) dummy result)
+     ;; follow list of directories
+-    result))
++      (if (= result 65535)
++	  -1				; failure
++	(while (< i result)
++	  (comm-unpack (s) dir)
++	  (if dl
++	      (setq dl (setcdr dl (cons dir nil)))
++	    (setq dir-list (setq dl (cons dir nil))))
++	  (setq i (1+ i)))
++	dir-list))))
++
++(defun cannarpc-get-mount-dictionary-list (env)
++  (let ((i 0)
++	dic dl dic-list)
++    (cannarpc-call-with-environment env (dummy result)
++      (comm-format (b b w w w) (canna-const GetMountDictionaryList) 0 4
++		   context 1024)
++      (comm-unpack (u w) dummy result)
++      ;; follow list of dictionaries
++      (if (= result 65535)
++	  -1				; failure
++	(while (< i result)
++	  (comm-unpack (s) dic)
++	  (if dl
++	      (setq dl (setcdr dl (cons dic nil)))
++	    (setq dic-list (setq dl (cons dic nil))))
++	  (setq i (1+ i)))
++	dic-list))))
+ 
+ (defun cannarpc-open-dictionary (env dict-file-name mode)
+-  (cannarpc-call-with-environment env (dymmy result)
++  (cannarpc-call-with-environment env (dummy result)
+     (comm-format (b b w u w s) (canna-const MountDictionary) 0
+ 		 (+ (length dict-file-name) 7)
+ 		 mode context dict-file-name)
+@@ -128,27 +189,28 @@
+     result))
+ 
+ (defun cannarpc-close-dictionary (env dict-file-name mode)
+-  (cannarpc-call-with-environment env (dymmy result)
++  (cannarpc-call-with-environment env (dummy result)
+     (comm-format (b b w u w s) (canna-const UnmountDictionary) 0
+-		 (+ (length dict-file-name) 6)
++		 (+ (length dict-file-name) 7)
+ 		 mode context dict-file-name)
+     (comm-unpack (u b) dummy result)
+     result))
+ 
+ (defun cannarpc-begin-conversion (env yomi)
+   "Begin conversion."
+-  (let ((yomi-ext (encode-coding-string yomi 'euc-japan))
++  (let ((yomi-ext (encode-coding-string yomi 'fixed-euc-jp))
++	(mode (or (cannaenv-get-mode env) 19)) ; 19 kana hiragana
+ 	(i 0)
+ 	converted bunsetsu-list bl)
+     (cannarpc-call-with-environment env (dummy result)
+-      (comm-format (b b w u w S) (canna-const BeginConvert) 0
+-		   (+ (length yomi-ext) 8) 0 context yomi)
++      (comm-format (b b w i w S) (canna-const BeginConvert) 0
++		   (+ (length yomi-ext) 8) mode context yomi)
+       (comm-unpack (u w) dummy result)
+       (if (= result 65535)
+ 	  -1				; failure
+ 	(while (< i result)
+ 	  (comm-unpack (S) converted)
+-	  (let ((bl1 (cons (canna-make-bunsetsu env converted i)
++	  (let ((bl1 (cons (canna-make-bunsetsu env converted i nil)
+ 			   nil)))
+ 	    (if bl
+ 		(setq bl (setcdr bl bl1))
+@@ -156,11 +218,21 @@
+ 	  (setq i (1+ i)))
+ 	bunsetsu-list))))
+ 
++(defun cannarpc-cancel-conversion (env)
++  "Cancel conversion."
++  (cannarpc-call-with-environment env (dummy result)
++    (comm-format (b b w w w u) (canna-const EndConvert) 0 8 context 0 0)
++    (comm-unpack (u b) dummy result)
++    (if (= result 255)
++	-1				; failure
++      result)))
++
+ (defun cannarpc-end-conversion (env len zenkouho-pos-vector mode)
+   "End conversion."
+   (cannarpc-call-with-environment env (dummy result)
+     (comm-format (b b w w w u v) (canna-const EndConvert) 0
+-		 (+ (* len 2) 8) context len mode zenkouho-pos-vector)
++		 (+ (* len 2) 8) context len mode zenkouho-pos-vector
++		 (length zenkouho-pos-vector))
+     (comm-unpack (u b) dummy result)
+     (if (= result 255)
+ 	-1				; failure
+@@ -173,6 +245,24 @@
+     (comm-unpack (u b) dummy result)
+     result))
+ 
++(defun cannarpc-save-dictionary (env dict-name)
++  (cannarpc-call-with-environment env (dummy result)
++    (comm-format (b b w u w s) (canna-const Sync) 1
++		 (+ (length dict-name) 7) 0 context dict-name)
++    (comm-unpack (u b) dummy result)
++    result))
++
++;;; XXX not used
++(defun cannarpc-get-dictionary-data (env dir dic)
++  (cannarpc-call-with-environment env (dummy result)
++    (comm-format (b b w w s s w) 6 1
++		 (+ (length dir) (length dic) 6) context dir dic 4096)
++    (comm-unpack (u w) dummy result)
++    (if (= result 65535)
++	-1
++;;      (comm-unpack (S) result)
++      result)))
++
+ (defun cannarpc-get-bunsetsu-source (env bunsetsu-pos)
+   (cannarpc-call-with-environment env (dummy result)
+     (comm-format (b b w w w w) (canna-const GetYomi) 0 6 context
+@@ -183,23 +273,123 @@
+       (comm-unpack (S) result)
+       result)))
+ 
+-(defun cannarpc-get-bunsetsu-candidates (env bunsetsu-pos)
++(defun cannarpc-get-bunsetsu-candidates (env bunsetsu-pos yomi)
+   (let ((i 0)
+ 	converted bunsetsu-list bl)
+     (cannarpc-call-with-environment env (dummy result)
+       (comm-format (b b w w w w) (canna-const GetCandidacyList) 0 6 context
+ 		   bunsetsu-pos 1024)
+-      (comm-unpack (u w) dymmy result)
++      (comm-unpack (u w) dummy result)
+       (if (= result 65535)
+ 	  -1				; failure
+ 	(while (< i result)
+ 	  (comm-unpack (S) converted)
+-	  (let ((bl1 (cons (canna-make-bunsetsu env converted bunsetsu-pos)
++	  (let ((bl1 (cons (canna-make-bunsetsu env converted
++						bunsetsu-pos yomi)
+ 			   nil)))
+ 	    (if bl
+ 		(setq bl (setcdr bl bl1))
+ 	      (setq bunsetsu-list (setq bl bl1))))
+ 	  (setq i (1+ i)))
+ 	bunsetsu-list))))
++
++(defun cannarpc-set-kugiri-changed (env yomi-length bunsetsu-pos)
++  ;; yomi-length -2$B!DJ8@a=L$a(B -1$B!DJ8@a?-$P$7(B
++  (let* ((i bunsetsu-pos)
++	 converted bunsetsu-list bl)
++    (cannarpc-call-with-environment env (dummy result)
++      (comm-format (b b w w w w) (canna-const ResizePause) 0 6 context
++		   bunsetsu-pos yomi-length)
++      (comm-unpack (u w) dummy result)
++      (if (= result 65535)
++	  -1				; failure
++	(while (< i result)
++	  (comm-unpack (S) converted)
++	  (let ((bl1 (cons (canna-make-bunsetsu env converted i nil) nil)))
++	    (if bl
++		(setq bl (setcdr bl bl1))
++	      (setq bunsetsu-list (setq bl bl1))))
++	  (setq i (1+ i)))
++	bunsetsu-list))))
++
++(defun cannarpc-get-hinshi (env bunsetsu-pos kouho-pos)
++  (let (b hinshi)
++    (cannarpc-call-with-environment env (dummy result)
++      (comm-format (b b w w w w w) (canna-const GetHinshi) 0 8 context
++		   bunsetsu-pos kouho-pos 1024)
++      (comm-unpack (u w) dummy result)
++      (if (= result 65535)
++	  -1
++	(while (> result 0)
++	  (comm-unpack (w) b)
++	  (setq hinshi (concat hinshi (char-to-string b)))
++	  (setq result (1- result)))
++	hinshi))))
++
++(defun cannarpc-get-lex (env bunsetsu-pos kouho-pos)
++  (let ((i 0)
++	ylen klen rownum coldnum dicnum lex-list ll)
++    (cannarpc-call-with-environment env (dummy result)
++      (comm-format (b b w w w w w) (canna-const GetLex) 0 8 context
++		   bunsetsu-pos kouho-pos 1024)
++      (comm-unpack (u w) dummy result)
++      (if (= result 65535)
++	  -1
++	(while (< i result)
++	  (comm-unpack (i i i i i) ylen klen rownum coldnum dicnum)
++	  (let ((ll1 (cons (list ylen klen rownum coldnum dicnum) nil)))
++	    (if ll
++		(setq ll (setcdr ll ll1))
++	      (setq lex-list (setq ll ll1))))
++	  (setq i (1+ i)))
++	lex-list))))
++
++(defun cannarpc-add-word (env dictionary yomi kanji hinshi)
++  "Register a word KANJI into DICTIONARY with a pronunciation YOMI and
++a part of speech HINSHI.  Where DICTIONARY should be an integer."
++  (let* ((word-info (concat yomi " " hinshi " " kanji))
++	 (word-info-ext (encode-coding-string word-info 'fixed-euc-jp))
++	 (length (+ (length word-info-ext) (length dictionary) 5)))
++    (cannarpc-call-with-environment env (dummy result)
++      (comm-format (b b w w S s) (canna-const DefineWord) 0 length context
++		   word-info dictionary)
++      (comm-unpack (u b) dummy result)
++      (if (= result 255)
++	  -1		; failure
++	result))))
++
++(defun cannarpc-delete-word (env dictionary yomi kanji hinshi)
++  "Delete the registered word KANJI from DICTIONARY with a
++pronunciation YOMI and a part of speech HINSHI.  Where DICTIONARY
++should be an integer."
++  (let* ((word-info (concat yomi " " hinshi " " kanji))
++	 (word-info-ext (encode-coding-string word-info 'fixed-euc-jp))
++	 (length (+ (length word-info-ext) (length dictionary) 5)))
++    (cannarpc-call-with-environment env (dummy result)
++      (comm-format (b b w w S s) (canna-const DeleteWord) 0 length context
++		   word-info dictionary)
++      (comm-unpack (u b) dummy result)
++      (if (= result 255)
++	  -1		; failure
++	result))))
++
++(defun cannarpc-notice-group-name (proc context group)
++  (comm-call-with-proc proc (dummy result)
++    (comm-format (b b w u w s) (canna-const NoticeGroupName) 0
++		 (+ (length group) 7) 0 ;; mode = 0
++		 context group)
++    (comm-unpack (u b) dummy result)
++    (if (= result 255)
++	-1
++      result)))
++
++(defun cannarpc-set-app-name (proc context name)
++  (comm-call-with-proc proc (dummy result)
++    (comm-format (b b w u w s) (canna-const SetApplicationName) 0
++		 (+ (length name) 7) 0 context name)
++    (comm-unpack (u b) dummy result)
++    (if (= result 255)
++	-1
++      result)))
+ 
+ ;;; egg/cannarpc.el ends here.
+diff -rdu ../tamago-4.0.6.org/egg/sj3.el ./egg/sj3.el
+--- ../tamago-4.0.6.org/egg/sj3.el	Thu Jan 13 16:09:50 2000
++++ ./egg/sj3.el	Fri Mar 16 14:14:13 2001
+@@ -35,33 +35,89 @@
+ (require 'egg-edep)
+ 
+ (defgroup sj3 nil
+-  "SJ3 interface for Tamago 4"
++  "SJ3 interface for Tamago 4."
+   :group 'egg)
+ 
+-(defcustom  sj3-hostname "localhost"
+-  "*Hostname of SJ3 server"
++(defcustom sj3-hostname "localhost"
++  "Hostname of SJ3 server"
+   :group 'sj3 :type 'string)
+ 
+-(defcustom  sj3-server-port 3086 
+-  "*Port number of SJ3 server"
++(defcustom sj3-server-port 3086
++  "Port number of SJ3 server"
+   :group 'sj3 :type 'integer)
+ 
+-(defcustom sj3-server-version 2
+-  "Major version number of SJ3 server."
+-  :group 'sj3
+-  :type '(choice (const 1) (const 2)))
+-
+-(defcustom sj3-server-coding-system-list '(shift_jis euc-japan)
+-  "List of coding systems for SJ3 server v1 and v2."
+-  :group 'sj3
+-  :type '(list (symbol :tag "v1") (symbol :tag "v2")))
+-
+ 
+ (eval-when-compile
+   (defmacro SJ3-const (c)
+     (cond ((eq c 'FileNotExist) 35)
+ 	  )))
+ 
++(egg-add-message
++ '((Japanese
++    (sj3-register-1 "$BEPO?<-=qL>(B:")
++    (sj3-register-2 "$BIJ;lL>(B"))))
++
++(defvar sj3-hinshi-menu
++  '(("$BL>;l(B"	.
++     (menu "$BIJ;l(B:$BL>;l(B:"
++	   (("$BL>;l(B"		. 1)
++	    ("$BL>;l(B($B$*!D(B)"	. 2)
++	    ("$BL>;l(B($B$4!D(B)"	. 3)
++	    ("$BL>;l(B($B!DE*(B/$B2=(B)"	. 4)
++	    ("$BL>;l(B($B$*!D$9$k(B)"	. 5)
++	    ("$BL>;l(B($B!D$9$k(B)"	. 6)
++	    ("$BL>;l(B($B$4!D$9$k(B)"	. 7)
++	    ("$BL>;l(B($B!D$J(B/$B$K(B)"	. 8)
++	    ("$BL>;l(B($B$*!D$J(B/$B$K(B)"	. 9)
++	    ("$BL>;l(B($B$4!D$J(B/$B$K(B)"	. 10)
++	    ("$BL>;l(B($BI{;l(B)"	. 11))))
++    ("$BBeL>;l(B"	. 12)
++    ("$BID;z(B"	. 21)
++    ("$BL>A0(B"	. 22)
++    ("$BCOL>(B"	. 24)
++    ("$B8)(B/$B6hL>(B"	. 25)
++    ("$BF0;l(B"	.
++     (menu "$BIJ;l(B:$BF0;l(B:"
++	   (("$B%5JQ8l44(B"		. 80)
++	    ("$B%6JQ8l44(B"		. 81)
++	    ("$B0lCJITJQ2=It(B"	. 90)
++	    ("$B%+9T8^CJ8l44(B"	. 91)
++	    ("$B%,9T8^CJ8l44(B"	. 92)
++	    ("$B%59T8^CJ8l44(B"	. 93)
++	    ("$B%?9T8^CJ8l44(B"	. 94)
++	    ("$B%J9T8^CJ8l44(B"	. 95)
++	    ("$B%P9T8^CJ8l44(B"	. 96)
++	    ("$B%^9T8^CJ8l44(B"	. 97)
++	    ("$B%i9T8^CJ8l44(B"	. 98)
++	    ("$B%o9T8^CJ8l44(B"	. 99))))
++    ("$BO"BN;l(B"		. 26)
++    ("$B@\B3;l(B"		. 27)
++    ("$B=u?t;l(B"		. 29)
++    ("$B?t;l(B"		. 30)
++    ("$B@\F,8l(B"		. 31)
++    ("$B@\Hx8l(B"		. 36)
++    ("$BI{;l(B"		. 45)
++    ("$BI{;l(B2"		. 46)
++    ("$B7AMF;l8l44(B"	. 60)
++    ("$B7AMFF0;l8l44(B"	. 71)
++    ("$BC14A;z(B"		. 189))
++  "Menu data for a hinshi (a part of speech) selection.")
++
++(defun sj3-hinshi-name (id &optional menu alist)
++  "Return a hinshi (a part of speech) name corresponding to ID.
++If ID is nil, return a flattened alist from `sj3-hinshi-menu'.
++Don't specify the optional arguments in normal use."
++  (let ((menu (or menu sj3-hinshi-menu)))
++    (if (consp menu)
++	(if (consp (cdr menu))
++	    (mapcar (lambda (elem)
++		      (setq alist (sj3-hinshi-name nil elem alist)))
++		    menu)
++	  (setq alist (nconc alist (list (cons (cdr menu) (car menu)))))))
++    (if id
++	(cdr (assq id alist))
++      alist)))
++
+ (setplist 'sj3-conversion-backend
+ 	  '(egg-start-conversion          sj3-start-conversion
+ 	    egg-get-bunsetsu-source       sj3-get-bunsetsu-source
+@@ -71,7 +127,8 @@
+ 	    egg-list-candidates           sj3-list-candidates
+ 	    egg-decide-candidate          sj3-decide-candidate
+ 	    egg-change-bunsetsu-length    sj3-change-bunsetsu-length
+-	    egg-end-conversion            sj3-end-conversion))
++	    egg-end-conversion            sj3-end-conversion
++	    egg-word-registration         sj3-word-registration))
+ 
+ (defconst sj3-backend-alist '((Japanese ((sj3-conversion-backend)))))
+ 
+@@ -353,7 +410,7 @@
+     (list (list candidate))))
+ 
+ (defun sj3-change-bunsetsu-length (bunsetsu prev-b next-b len major)
+-  (let ((yomi (apply 'concat (mapcar 'sj3bunsetsu-get-source bunsetsu)))
++  (let ((yomi (mapconcat 'sj3bunsetsu-get-source bunsetsu nil))
+ 	(env (sj3bunsetsu-get-env (car bunsetsu)))
+ 	(old (car bunsetsu))
+ 	new yomi1 yomi2)
+@@ -361,7 +418,7 @@
+ 	  yomi2 (substring yomi len))
+     (setq new (sj3rpc-tanbunsetsu-conversion env yomi1))
+     ;; Only set once (memory original length of the bunsetsu).
+-    (sj3bunsetsu-set-kugiri-changed new 
++    (sj3bunsetsu-set-kugiri-changed new
+ 				    (or (sj3bunsetsu-get-kugiri-changed old)
+ 					(length (sj3bunsetsu-get-source old))))
+     (if (> (length yomi2) 0)
+@@ -381,6 +438,37 @@
+ 	(sj3rpc-close proc)
+ 	(setq sj3-environment nil))))
+ 
++;;; word registration
++
++(defun sj3-dictionary-select ()
++  (menudiag-select (list 'menu
++			 (egg-get-message 'sj3-register-1)
++			 (aref (nth 2 sj3-dictionary-specification) 0))))
++
++(defun sj3-hinshi-select ()
++  (menudiag-select (list 'menu
++			 (egg-get-message 'sj3-register-2)
++			 sj3-hinshi-menu)))
++
++(defun sj3-word-registration (backend kanji yomi)
++  "Register a word KANJI with a pronunciation YOMI."
++  (if (or (null (eq (egg-get-language 0 kanji)
++		    (sj3-get-converted-language backend)))
++	  (next-single-property-change 0 'egg-lang kanji)
++	  (null (eq (egg-get-language 0 yomi)
++		    (sj3-get-source-language backend)))
++	  (next-single-property-change 0 'egg-lang yomi))
++      (egg-error "word registration: invalid character")
++    (let* ((env (sj3-get-environment))
++	   (dic (sj3-dictionary-select))
++	   (hinshi-id (sj3-hinshi-select))
++	   (result (sj3rpc-add-word env
++				    (car (aref env 1))
++				    yomi kanji hinshi-id)))
++      (if (>= result 0)
++	  (list (sj3-hinshi-name hinshi-id) dic)
++	(egg-error (sj3rpc-get-error-message (- result)))))))
++
+ ;;; setup
+ 
+ (load "egg/sj3rpc")
+@@ -388,7 +476,7 @@
+ 
+ ;;;###autoload
+ (defun egg-activate-sj3 (&rest arg)
+-  "Activate SJ3 backend of Tamagotchy."
++  "Activate SJ3 backend of Tamago 4."
+   (apply 'egg-mode (append arg sj3-backend-alist)))
+ 
+ ;;; egg/sj3.el ends here.
+diff -rdu ../tamago-4.0.6.org/egg/sj3rpc.el ./egg/sj3rpc.el
+--- ../tamago-4.0.6.org/egg/sj3rpc.el	Thu Jan 13 12:36:08 2000
++++ ./egg/sj3rpc.el	Fri Mar 16 14:14:13 2001
+@@ -31,9 +31,18 @@
+ 
+ ;;; Code:
+ 
++(defvar sj3-server-version 2
++  "*Major version number of SJ3 server.")
++
++(defvar sj3-server-coding-system 'shift_jis
++  "*Coding system used when decoding and encoding of I/O operation with
++SJ3 server.  Valid coding systems are depend on the server spec.")
++
+ (eval-when-compile
+   (require 'egg-com)
+-;;  (load-library "egg/sj3")
++  (defmacro sj3-sjis-p ()
++    '(eq 'coding-category-sjis (coding-system-category
++				sj3-server-coding-system)))
+   (defmacro sj3-const (c)
+     (cond ((eq c 'OPEN)            1)
+ 	  ((eq c 'CLOSE)           2)
+@@ -44,20 +53,20 @@
+ 	  ((eq c 'STDYSIZE)       23)
+ 	  ((eq c 'LOCK)           31)
+ 	  ((eq c 'UNLOCK)         32)
+-	  ((eq c 'BEGIN)   '(if (eq 1 sj3-server-version) 41 111))
+-	  ((eq c 'TANCONV) '(if (eq 1 sj3-server-version) 51 112))
+-	  ((eq c 'KOUHO)   '(if (eq 1 sj3-server-version) 54 115))
+-	  ((eq c 'KOUHOSU) '(if (eq 1 sj3-server-version) 55 116))
++	  ((eq c 'BEGIN)   '(if (sj3-sjis-p) 41 111))
++	  ((eq c 'TANCONV) '(if (sj3-sjis-p) 51 112))
++	  ((eq c 'KOUHO)   '(if (sj3-sjis-p) 54 115))
++	  ((eq c 'KOUHOSU) '(if (sj3-sjis-p) 55 116))
+ 	  ((eq c 'STDY)           61)
+-	  ((eq c 'CLSTDY)  '(if (eq 1 sj3-server-version) 62 117))
+-	  ((eq c 'WREG)    '(if (eq 1 sj3-server-version) 71 118))
+-	  ((eq c 'WDEL)    '(if (eq 1 sj3-server-version) 72 119))
++	  ((eq c 'CLSTDY)  '(if (sj3-sjis-p) 62 117))
++	  ((eq c 'WREG)    '(if (sj3-sjis-p) 71 118))
++	  ((eq c 'WDEL)    '(if (sj3-sjis-p) 72 119))
+ 	  ((eq c 'MKDIC)          81)
+ 	  ((eq c 'MKSTDY)         82)
+ 	  ((eq c 'MKDIR)          83)
+ 	  ((eq c 'ACCESS)         84)
+-	  ((eq c 'WSCH)    '(if (eq 1 sj3-server-version) 91 120))
+-	  ((eq c 'WNSCH)   '(if (eq 1 sj3-server-version) 92 121))
++	  ((eq c 'WSCH)    '(if (sj3-sjis-p) 91 120))
++	  ((eq c 'WNSCH)   '(if (sj3-sjis-p) 92 121))
+ 	  ((eq c 'VERSION)       103)
+ 	  (t (error "No such constant")))))
+ 
+@@ -85,15 +94,12 @@
+ 	   (goto-char (prog1 (point) (accept-process-output proc))))
+ 	receive-exprs))))
+ 
+-(defmacro sj3rpc-server-coding-system ()
+-  '(nth (1- sj3-server-version) sj3-server-coding-system-list))
+-
+-(defmacro sj3rpc-unpack-mb-string (coding-system)
+-  `(let ((start (point)))
++(defmacro sj3rpc-unpack-mb-string ()
++  '(let ((start (point)))
+      (while (not (search-forward "\0" nil t))
+        (comm-accept-process-output))
+      (decode-coding-string (buffer-substring start (1- (point)))
+-			   ,coding-system)))
++			   sj3-server-coding-system)))
+ 
+ (defun sj3rpc-open (proc myhostname username)
+   "Open the session.  Return 0 on success, error code on failure."
+@@ -102,7 +108,7 @@
+ 		 myhostname username
+ 		 ;; program name
+ 		 (format "%d.emacs-egg" (emacs-pid)))
+-    (comm-unpack (u) result)
++    (comm-unpack (i) result)
+     (if (= result -2)
+ 	0
+       result)))
+@@ -110,7 +116,7 @@
+ (defun sj3rpc-close (proc)
+   (comm-call-with-proc proc (result)
+     (comm-format (u) (sj3-const CLOSE))
+-    (comm-unpack (u) result)
++    (comm-unpack (i) result)
+     result))
+ 
+ (defun sj3rpc-get-stdy-size (proc)
+@@ -134,10 +140,9 @@
+ 
+ (defun sj3rpc-begin (env yomi)
+   "Begin conversion."
+-  (let* ((codesys (sj3rpc-server-coding-system))
+-	 (yomi-ext (encode-coding-string yomi codesys))
+-	 (p 0)
+-	 len source converted stdy bunsetsu-list bl)
++  (let ((yomi-ext (encode-coding-string yomi sj3-server-coding-system))
++	(p 0)
++	len source converted stdy bunsetsu-list bl)
+     (sj3rpc-call-with-environment env (result)
+       (comm-format (u s) (sj3-const BEGIN) yomi-ext)
+       (comm-unpack (u) result)
+@@ -148,9 +153,9 @@
+ 		 (comm-unpack (b) len)
+ 		 (> len 0))
+ 	  (setq stdy (sj3rpc-get-stdy proc))
+-	  (setq converted (sj3rpc-unpack-mb-string codesys))
++	  (setq converted (sj3rpc-unpack-mb-string))
+ 	  (setq source (decode-coding-string (substring yomi-ext p (+ p len))
+-					     codesys)
++					     sj3-server-coding-system)
+ 		p (+ p len))
+ 	  (let ((bl1 (cons (sj3-make-bunsetsu env
+ 					      source converted nil stdy) nil)))
+@@ -171,7 +176,7 @@
+ (defun sj3rpc-close-dictionary (proc dict-no)
+   (comm-call-with-proc proc (result)
+     (comm-format (u u) (sj3-const DICDEL) dict-no)
+-    (comm-unpack (u) result)
++    (comm-unpack (i) result)
+     result))
+ 
+ (defun sj3rpc-make-dictionary (proc dict-name)
+@@ -181,19 +186,19 @@
+ 		 2048  ; Length
+ 		 256   ; Number
+ 		 )
+-    (comm-unpack (u) result)
++    (comm-unpack (i) result)
+     result))
+ 
+ (defun sj3rpc-open-stdy (proc stdy-name)
+   (comm-call-with-proc proc (result)
+     (comm-format (u s s) (sj3-const OPENSTDY) stdy-name "")
+-    (comm-unpack (u) result)
++    (comm-unpack (i) result)
+     result))
+ 
+ (defun sj3rpc-close-stdy (proc)
+   (comm-call-with-proc proc (result)
+     (comm-format (u) (sj3-const CLOSESTDY))
+-    (comm-unpack (u) result)
++    (comm-unpack (i) result)
+     result))
+ 
+ (defun sj3rpc-make-stdy (proc stdy-name)
+@@ -203,18 +208,17 @@
+ 		 1     ; Step
+ 		 2048  ; Length
+ 		 )
+-    (comm-unpack (u) result)
++    (comm-unpack (i) result)
+     result))
+ 
+ (defun sj3rpc-make-directory (proc name)
+   (comm-call-with-proc proc (result)
+     (comm-format (u s) (sj3-const MKDIR) name)
+-    (comm-unpack (u) result)
++    (comm-unpack (i) result)
+     result))
+ 
+ (defun sj3rpc-get-bunsetsu-candidates-sub (proc env yomi yomi-ext len n)
+-  (let ((codesys (sj3rpc-server-coding-system))
+-	(i 0)
++  (let ((i 0)
+ 	stdy converted bunsetsu bl bunsetsu-list cylen rest)
+     (comm-call-with-proc-1 proc (result)
+       (comm-format (u u s) (sj3-const KOUHO) len yomi-ext)
+@@ -224,9 +228,9 @@
+ 	(while (< i n)
+ 	  (comm-unpack (u) cylen)
+ 	  (setq stdy (sj3rpc-get-stdy proc))
+-	  (setq converted (sj3rpc-unpack-mb-string codesys))
++	  (setq converted (sj3rpc-unpack-mb-string))
+ 	  (setq rest (decode-coding-string (substring yomi-ext cylen)
+-					   codesys))
++					   sj3-server-coding-system))
+ 	  (setq bunsetsu (sj3-make-bunsetsu env yomi converted rest stdy))
+ 	  (if bl
+ 	      (setq bl (setcdr bl (cons bunsetsu nil)))
+@@ -240,7 +244,7 @@
+ 	bunsetsu-list))))
+ 
+ (defun sj3rpc-get-bunsetsu-candidates (env yomi)
+-  (let* ((yomi-ext (encode-coding-string yomi (sj3rpc-server-coding-system)))
++  (let* ((yomi-ext (encode-coding-string yomi sj3-server-coding-system))
+ 	 (len (length yomi-ext)))
+     (sj3rpc-call-with-environment env (result)
+       (comm-format (u u s) (sj3-const KOUHOSU) len yomi-ext)
+@@ -254,9 +258,8 @@
+ 					      yomi yomi-ext len result))))))
+ 
+ (defun sj3rpc-tanbunsetsu-conversion (env yomi)
+-  (let* ((codesys (sj3rpc-server-coding-system))
+-	 (yomi-ext (encode-coding-string yomi codesys))
+-	 (len (length yomi-ext)) cylen stdy converted rest)
++  (let* ((yomi-ext (encode-coding-string yomi sj3-server-coding-system))
++	(len (length yomi-ext)) cylen stdy converted rest)
+     (sj3rpc-call-with-environment env (result)
+       (comm-format (u u s) (sj3-const TANCONV) len yomi-ext)
+       (comm-unpack (u) result)
+@@ -264,28 +267,35 @@
+ 	  (- result)
+ 	(comm-unpack (u) cylen)
+ 	(setq stdy (sj3rpc-get-stdy proc))
+-	(setq converted (sj3rpc-unpack-mb-string codesys))
+-	(setq rest (decode-coding-string (substring yomi-ext cylen) codesys))
++	(setq converted (sj3rpc-unpack-mb-string))
++	(setq rest (decode-coding-string (substring yomi-ext cylen)
++					 sj3-server-coding-system))
+ 	(setq bunsetsu (sj3-make-bunsetsu env yomi converted rest stdy))))))
+ 
+ (defun sj3rpc-bunsetsu-stdy (env stdy)
+   (sj3rpc-call-with-environment env (result)
+      (comm-format (u v) (sj3-const STDY) stdy (length stdy))
+      (comm-unpack (u) result)
+-      (if (/= result 0)
+-	  (- result)
+-	0)))
++     (- result)))
+ 
+ (defun sj3rpc-kugiri-stdy (env yomi1 yomi2 stdy)
+-  (let* ((codesys (sj3rpc-server-coding-system))
+-	 (yomi1-ext (encode-coding-string yomi1 codesys))
+-	 (yomi2-ext (encode-coding-string yomi2 codesys)))
+-    (sj3rpc-call-with-environment env (result)
+-      (comm-format (u s s v) (sj3-const CLSTDY)
+-		   yomi1-ext yomi2-ext stdy (length stdy))
+-      (comm-unpack (u) result)
+-      (if (/= result 0)
+-	  (- result)
+-	0))))
++  (sj3rpc-call-with-environment env (result)
++    (comm-format (u s s v) (sj3-const CLSTDY)
++		 (encode-coding-string yomi1 sj3-server-coding-system)
++		 (encode-coding-string yomi2 sj3-server-coding-system)
++		 stdy (length stdy))
++    (comm-unpack (u) result)
++    (- result)))
++
++(defun sj3rpc-add-word (env dictionary yomi kanji hinshi)
++  "Register a word KANJI into DICTIONARY with a pronunciation YOMI and
++a part of speech HINSHI.  Where DICTIONARY should be an integer."
++  (sj3rpc-call-with-environment env ()
++    (comm-format (u u s s u) (sj3-const WREG) dictionary
++		 (encode-coding-string yomi sj3-server-coding-system)
++		 (encode-coding-string kanji sj3-server-coding-system)
++		 hinshi)
++    (comm-unpack (u) result)
++    (- result)))
+ 
+ ;;; egg/sj3rpc.el ends here.
+diff -rdu ../tamago-4.0.6.org/egg/wnn.el ./egg/wnn.el
+--- ../tamago-4.0.6.org/egg/wnn.el	Tue Jan  4 16:08:04 2000
++++ ./egg/wnn.el	Fri Mar 16 14:14:13 2001
+@@ -36,7 +36,7 @@
+ (require 'egg-edep)
+ 
+ (defgroup wnn nil
+-  "Wnn interface for Tamagotchy"
++  "Wnn interface for Tamago 4."
+   :group 'egg)
+ 
+ (defcustom wnn-auto-save-dictionaries 0
+@@ -114,6 +114,7 @@
+      egg-major-bunsetsu-continue-p wnn-major-bunsetsu-continue-p
+      egg-list-candidates           wnn-list-candidates
+      egg-decide-candidate          wnn-decide-candidate
++     egg-special-candidate         wnn-special-candidate
+      egg-change-bunsetsu-length    wnn-change-bunsetsu-length
+      egg-bunsetsu-combinable-p     wnn-bunsetsu-combinable-p
+      egg-end-conversion            wnn-end-conversion
+@@ -657,20 +658,28 @@
+ (defun wnn-major-bunsetsu-continue-p (bunsetsu)
+   (wnn-bunsetsu-get-dai-continue bunsetsu))
+ 
++(defmacro wnn-uniq-hash-string (uniq-level)
++  `(mapconcat
++    (lambda (b)
++      (concat ,@(cond ((eq uniq-level 'wnn-uniq) 
++		       '((number-to-string (wnn-bunsetsu-get-hinshi b))))
++		      ((eq uniq-level 'wnn-uniq-entry)
++		       '((number-to-string (wnn-bunsetsu-get-dic-no b))
++			 "+"
++			 (number-to-string (wnn-bunsetsu-get-entry b)))))
++	      "\0"
++	      (wnn-bunsetsu-get-converted b)
++	      "\0"
++	      (wnn-bunsetsu-get-fuzokugo b)))
++    bunsetsu "\0"))
++
+ (defun wnn-uniq-hash (bunsetsu hash-table)
+-  (intern (mapconcat (lambda (b)
+-		       (concat (cond
+-				((eq wnn-uniq-level 'wnn-uniq) 
+-				 (wnn-bunsetsu-get-hinshi b))
+-				((eq wnn-uniq-level 'wnn-uniq-entry)
+-				 (concat (wnn-bunsetsu-get-dic-no b)
+-					 "+"
+-					 (wnn-bunsetsu-get-entry b))))
+-			       (concat "\0"
+-				       (wnn-bunsetsu-get-converted b)
+-				       "\0"
+-				       (wnn-bunsetsu-get-fuzokugo b))))
+-		     bunsetsu "\0")
++  (intern (cond ((eq wnn-uniq-level 'wnn-uniq)
++		 (wnn-uniq-hash-string wnn-uniq))
++		((eq wnn-uniq-level 'wnn-uniq-entry)
++		 (wnn-uniq-hash-string wnn-uniq-entry))
++		(t
++		 (wnn-uniq-hash-string nil)))
+ 	  hash-table))
+ 
+ (defun wnn-uniq-candidates (candidates)
+@@ -786,6 +795,68 @@
+ 	(setq next-b (list (car next-b))))
+     (list cand prev-b next-b)))
+ 
++(defun wnn-special-candidate (bunsetsu prev-b next-b major type)
++  (let* ((backend (egg-bunsetsu-get-backend (car bunsetsu)))
++	 (lang (get backend 'language))
++	 pos cand)
++    (when (and (eq lang (get backend 'source-language))
++	       (eq lang (get backend 'converted-language)))
++      (setq pos (and (eq lang (get backend 'source-language))
++		     (eq lang (get backend 'converted-language))
++		     (cond ((eq lang 'Japanese)
++			    (cond ((eq type 'egg-hiragana) -1)
++				  ((eq type 'egg-katakana) -2)))
++			   ((or (eq lang 'Chinese-GB) (eq lang 'Chinese-CNS))
++			    (cond ((eq type 'egg-pinyin) -1)
++				  ((eq type 'egg-zhuyin) -1)))
++			   ((eq lang 'Korean)
++			    (cond ((eq type 'egg-hangul) -1))))))
++      (when pos
++	(setq cand (cdr (wnn-list-candidates bunsetsu prev-b next-b major))
++	      pos (+ pos (length cand)))
++	(when (and (or (eq lang 'Chinese-GB) (eq lang 'Chinese-CNS)))
++	  (let ((converted (nth pos cand)))
++	    (cond ((egg-pinyin-syllable converted)
++		   (cond ((eq type 'egg-pinyin)) ; OK
++			 ((eq type 'egg-zhuyin)
++			  (wnn-pinyin-zhuyin-bunsetsu bunsetsu pos lang type))
++			 (t (setq pos nil))))
++		  ((egg-zhuyin-syllable converted)
++		   (cond ((eq type 'egg-pinyin)
++			  (wnn-pinyin-zhuyin-bunsetsu bunsetsu pos lang type))
++			 ((eq type 'egg-zhuyin)) ; OK
++			 (t (setq pos nil))))
++		  (t (setq pos nil))))))
++      (when pos
++	(wnn-decide-candidate bunsetsu pos prev-b next-b)))))
++
++(defun wnn-pinyin-zhuyin-bunsetsu (bunsetsu pos lang type)
++  (let ((b (nth pos (wnn-bunsetsu-get-zenkouho-list (car bunsetsu))))
++	(encoding (if (eq lang 'Chinese-GB)
++		      (if (eq type 'egg-pinyin)
++			  'fixed-euc-py-cn 'fixed-euc-zy-cn)
++		    (if (eq type 'egg-pinyin)
++			'fixed-euc-py-tw 'fixed-euc-zy-tw)))
++	(converted (wnn-bunsetsu-get-zenkouho-converted (car bunsetsu)))
++	str)
++    (setcar (nthcdr pos converted)
++	    (wnn-pinyin-zhuyin-string (nth pos converted) encoding))
++    (while b
++      (setq str (wnn-bunsetsu-get-converted (car b)))
++      (when str
++	(wnn-bunsetsu-set-converted
++	 (car b)
++	 (wnn-pinyin-zhuyin-string str encoding)))
++      (setq str (wnn-bunsetsu-get-fuzokugo (car b)))
++      (when str
++	(wnn-bunsetsu-set-fuzokugo
++	 (car b)
++	 (wnn-pinyin-zhuyin-string str encoding)))
++      (setq b (cdr b)))))
++
++(defun wnn-pinyin-zhuyin-string (str encoding)
++  (decode-coding-string (encode-coding-string str encoding) encoding))
++
+ (defun wnn-change-bunsetsu-length (bunsetsu prev-b next-b len major)
+   (let ((backend (egg-bunsetsu-get-backend (car bunsetsu)))
+ 	(env (wnn-bunsetsu-get-env (car bunsetsu)))
+@@ -2090,7 +2161,7 @@
+ 
+ ;;;###autoload
+ (defun egg-activate-wnn (&rest arg)
+-  "Activate Wnn backend of Tamagotchy."
++  "Activate Wnn backend of Tamago 4."
+   (apply 'egg-mode (append arg wnn-backend-alist)))
+ 
+ ;;; egg/wnn.el ends here.
+diff -rdu ../tamago-4.0.6.org/egg/wnnrpc.el ./egg/wnnrpc.el
+--- ../tamago-4.0.6.org/egg/wnnrpc.el	Tue Jan  4 15:49:24 2000
++++ ./egg/wnnrpc.el	Fri Mar 16 14:14:13 2001
+@@ -693,10 +693,10 @@
+ 
+ (defmacro wnnrpc-get-result (&rest body)
+   `(let (result)
+-     (comm-unpack (u) result)
++     (comm-unpack (i) result)
+      (if (< result 0)
+        (progn
+-	 (comm-unpack (u) result)
++	 (comm-unpack (i) result)
+ 	 (- result))
+      ,@(or body '(result)))))
+ 
+@@ -783,7 +783,7 @@
+     (comm-format (u u u) (wnn-const JS_GET_AUTOLEARNING_DIC)
+ 		 env-id type)
+     (wnnrpc-get-result
+-      (comm-unpack (u) result)
++      (comm-unpack (i) result)
+       (1+ result))))
+ 
+ (defun wnnrpc-set-autolearning-dic (env type dic-id)
+@@ -798,7 +798,7 @@
+   "Return the version number of WNN server."
+   (comm-call-with-proc proc (result)
+     (comm-format (u) (wnn-const JS_VERSION))
+-    (comm-unpack (u) result)
++    (comm-unpack (i) result)
+     result))
+ 
+ (defun wnnrpc-access (env path mode) 
+@@ -807,7 +807,7 @@
+ can be accessed in mode MODE.  Return Non-zero otherwise."
+   (wnnrpc-call-with-environment env (result)
+     (comm-format (u u u s) (wnn-const JS_ACCESS) env-id mode path)
+-    (comm-unpack (u) result)
++    (comm-unpack (i) result)
+     result))
+ 
+ (defun wnnrpc-mkdir (env path)
+@@ -904,7 +904,7 @@
+ 	hinshi status status-backward kangovect evaluation
+ 	result source fuzokugo)
+     (while (> n-bunsetsu 0)
+-      (comm-unpack (u u u u u u u u u u u u)
++      (comm-unpack (i i i i i i i i i i i i)
+ 		   end start jiritsugo-end
+ 		   dic-no entry freq right-now hinshi
+ 		   status status-backward kangovect evaluation)
+@@ -929,9 +929,9 @@
+ 	n-bunstsu kanji-length dlist slist
+ 	end start n-sho evaluation
+ 	n retval)
+-    (comm-unpack (u u) n-bunstsu kanji-length)
++    (comm-unpack (i i) n-bunstsu kanji-length)
+     (while (> n-dai 0)
+-      (comm-unpack (u u u u) end start n-sho evaluation)
++      (comm-unpack (i i i i) end start n-sho evaluation)
+       (setq dlist (cons (cons n-sho evaluation) dlist)
+ 	    n-dai (1- n-dai)))
+     (setq dlist (nreverse dlist)
+@@ -1010,7 +1010,7 @@
+ 	fi-dic dic entry offset num result)
+     (comm-unpack (i) num)
+     (while (> num 0)
+-      (comm-unpack (u u u u) fi-dic dic entry offset)
++      (comm-unpack (i i i i) fi-dic dic entry offset)
+       (setq result (cons (vector fi-dic dic entry offset -2 -4) result)
+ 	    num (1- num)))
+     (nreverse result)))
+@@ -1110,7 +1110,7 @@
+   ""
+   (comm-call-with-proc proc (result)
+     (comm-format (u s) (wnn-const JS_ENV_EXIST) envname)
+-    (comm-unpack (u) result)
++    (comm-unpack (i) result)
+     result))
+ 
+ (defun wnnrpc-make-env-sticky (env)
+@@ -1156,14 +1156,14 @@
+   ""
+   (wnnrpc-call-with-environment env (n-dic)
+     (comm-format (u u) (wnn-const JS_DIC_LIST) env-id)
+-    (comm-unpack (u) n-dic)
++    (comm-unpack (i) n-dic)
+     (wnnrpc-receive-dictionary-list proc n-dic)))
+ 
+ (defun wnnrpc-get-fi-dictionary-list-with-environment (env mask)
+   ""
+   (wnnrpc-call-with-environment env (n-dic)
+     (comm-format (u u u) (wnn-const JS_FI_DIC_LIST) env-id mask)
+-    (comm-unpack (u) n-dic)
++    (comm-unpack (i) n-dic)
+     (wnnrpc-receive-dictionary-list proc n-dic)))
+ 
+ (defun wnnrpc-receive-dictionary-list (proc n-dic)
+@@ -1171,7 +1171,7 @@
+ 	rev comment dicname freqname dic-passwd freq-passwd
+ 	type gosuu dic-local-flag freq-local-flag retval)
+     (while (> n-dic 0)
+-      (comm-unpack (u u u u u u u u S s s s s u u u u)
++      (comm-unpack (i i i i i i i i S s s s s i i i i)
+ 		   entry dic freq dic-mode freq-mode enable-flag nice
+ 		   rev comment dicname freqname dic-passwd freq-passwd
+ 		   type gosuu dic-local-flag freq-local-flag)
+@@ -1193,7 +1193,7 @@
+     (comm-format (u u i) (wnn-const JS_HINSI_DICTS) env-id -1)
+     (wnnrpc-get-result
+       (while (> result 0)
+-	(comm-unpack (u) dic)
++	(comm-unpack (i) dic)
+ 	(setq dic-list (nconc dic-list (list dic))
+ 	      result (1- result)))
+       dic-list)))
+@@ -1222,7 +1222,7 @@
+ 				     p10 p11 p12 p13 p14 p15)
+     (comm-format (u u) (wnn-const JS_PARAM_GET) env-id)
+     (wnnrpc-get-result
+-      (comm-unpack (u u  u u u u u  u u u u u  u u u u u)
++      (comm-unpack (i i  i i i i i  i i i i i  i i i i i)
+ 		   n nsho p1 p2 p3 p4 p5 p6 p7 p8 p9
+ 		   p10 p11 p12 p13 p14 p15)
+       (vector n nsho p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15))))
+@@ -1243,7 +1243,7 @@
+   ""
+   (comm-call-with-proc proc (result)
+     (comm-format (u s) (wnn-const JS_FILE_LOADED) path)
+-    (comm-unpack (u) result)
++    (comm-unpack (i) result)
+     result))
+ 
+ (defun wnnrpc-write-file (env fid filename)
+@@ -1261,9 +1261,9 @@
+   (let ((i 0)
+ 	flist
+ 	nfiles fid local ref-count type name)
+-    (comm-unpack (u) nfiles)
++    (comm-unpack (i) nfiles)
+     (while (> nfiles 0)
+-      (comm-unpack (u u u u s) fid local ref-count type name)
++      (comm-unpack (i i i i s) fid local ref-count type name)
+       (setq flist (nconc flist (list (vector fid local ref-count type name)))
+ 	    nfiles (1- nfiles)))
+     flist))
+@@ -1284,7 +1284,7 @@
+   "3: dictionary, 4: hindo file, 5: fuzokugo-file"
+   (wnnrpc-call-with-environment env (result)
+     (comm-format (u u s) (wnn-const JS_FILE_STAT) env-id path)
+-    (comm-unpack (u) result)
++    (comm-unpack (i) result)
+     result))
+ 
+ (defun wnnrpc-get-file-info (env fid)
+@@ -1292,7 +1292,7 @@
+   (wnnrpc-call-with-environment env (name local ref-count type)
+     (comm-format (u u u) (wnn-const JS_FILE_INFO) env-id fid)
+     (wnnrpc-get-result
+-      (comm-unpack (s u u u) name local ref-count type)
++      (comm-unpack (s i i i) name local ref-count type)
+       (vector name local ref-count type))))
+ 
+ (defmacro wnnrpc-receive-vector (n)
+@@ -1300,7 +1300,7 @@
+ 	 (i 0)
+ 	 j)
+      (while (< i ,n)
+-       (comm-unpack (u) j)
++       (comm-unpack (i) j)
+        (aset v i j)
+        (setq i (1+ i)))
+      v))
+@@ -1311,7 +1311,7 @@
+     (comm-format (u) (wnn-const JS_WHO))
+     (wnnrpc-get-result
+       (while (> result 0)
+-	(comm-unpack (u s s) socket username hostname)
++	(comm-unpack (i s s) socket username hostname)
+ 	(setq who (nconc who
+ 			 (list (vector socket username hostname
+ 				       (wnnrpc-receive-vector
+@@ -1324,7 +1324,7 @@
+     (comm-format (u) (wnn-const JS_ENV_LIST))
+     (wnnrpc-get-result
+       (while (> result 0)
+-	(comm-unpack (u s u u u) id name count fuzokugo dic-max)
++	(comm-unpack (i s i i i) id name count fuzokugo dic-max)
+ 	(setq envs (nconc envs
+ 			  (list (vector id name count fuzokugo dic-max
+ 					(wnnrpc-receive-vector
+@@ -1338,7 +1338,7 @@
+   ""
+   (comm-call-with-proc proc (result)
+     (comm-format (u) (wnn-const JS_KILL))
+-    (comm-unpack (u) result)
++    (comm-unpack (i) result)
+     result))
+ 
+ (defun wnnrpc-delete-dictionary (env dic)
+@@ -1357,7 +1357,7 @@
+   ""
+   (wnnrpc-call-with-proc proc (n-dic)
+     (comm-format (u) (wnn-const JS_DIC_LIST_ALL))
+-    (comm-unpack (u) n-dic)
++    (comm-unpack (i) n-dic)
+     (wnnrpc-receive-dictionary-list proc n-dic)))
+ 
+ (defun wnnrpc-delete-word (env dic entry)
+@@ -1369,15 +1369,15 @@
+ (defun wnnrpc-receive-word (proc yomi)
+   (let (dic serial hinshi hindo right-now internal-hindo internal-right-now
+ 	kanji comment l l1)
+-    (comm-unpack (u) dic)
++    (comm-unpack (i) dic)
+     (while (>= dic 0)
+-      (comm-unpack (u u u u u u) serial hinshi hindo right-now
++      (comm-unpack (i i i i i i) serial hinshi hindo right-now
+ 		   internal-hindo internal-right-now)
+       (setq l (cons (vector dic serial hinshi hindo right-now
+ 			    internal-hindo internal-right-now
+ 			    yomi nil nil)
+ 		    l))
+-      (comm-unpack (u) dic))
++      (comm-unpack (i) dic))
+     (setq l (nreverse l)
+ 	  l1 l)
+     (while l1
+@@ -1492,7 +1492,7 @@
+ 		    (wnn-const WNN_FILE_STRING)))
+ 	(progn
+ 	  (goto-char (1+ (wnn-const WNN_FILE_STRING_LEN)))
+-	  (comm-unpack (u v v v)
++	  (comm-unpack (i v v v)
+ 		       type
+ 		       uniq1 (wnn-const WNN_UNIQ_LEN)
+ 		       uniq2 (wnn-const WNN_UNIQ_LEN)
+@@ -1534,10 +1534,18 @@
+ 
+ (defun wnnrpc-make-uniq (attributes)
+   (wnnrpc-with-temp-buffer
+-    (comm-format (U i u V)
+-		 (nth 6 attributes) (nth 11 attributes) (nth 10 attributes)
+-		 wnn-system-name (wnn-const WNN_HOST_LEN))
+-    (buffer-string)))
++    (let ((ctime (nth 6 attributes))
++	  (ino (nth 10 attributes))
++	  (devno (nth 11 attributes)))
++      (if (numberp devno)
++	  (comm-format (U i u V)
++		       ctime devno ino
++		       wnn-system-name (wnn-const WNN_HOST_LEN))
++	;; Emacs 21 returns returns negative devno as 16 bits uint pair
++	(comm-format (U U u V)
++		     ctime (list (car devno) (cdr devno)) ino
++		     wnn-system-name (wnn-const WNN_HOST_LEN)))
++      (buffer-string))))
+ 
+ (defun wnnrpc-change-file-uniq (header path &optional new)
+   (wnnrpc-with-write-file path
+@@ -1558,27 +1566,28 @@
+ (defun wnnrpc-check-passwd (proc passwd header)
+   (let ((env-id -1))
+     (unwind-protect
+-	(if (>= (setq env-id (wnnrpc-connect proc "")) 0)
+-	    (wnnrpc-call-with-environment (wnnenv-create proc env-id)
+-		(file-id)
+-	      (comm-format (u u v) (wnn-const JS_FILE_SEND)
+-			   env-id
+-			   (nth 1 header) (wnn-const WNN_UNIQ_LEN))
+-	      (comm-unpack (u) file-id)
+-	      (if (>= file-id 0)
+-		  (progn
+-		    (wnnrpc-get-result)	; ignore result code
+-		    (- (wnn-const WNN_FILE_IN_USE)))
+-		(wnnrpc-get-result
+-		  (comm-call-with-proc-1 proc ()
+-		    (comm-format (s B)
+-				 (concat wnn-system-name "!TEMPFILE")
+-				 (wnnrpc-make-dummy-dictionary header))
+-		    (wnnrpc-get-result
+-		      (let ((egg-fixed-euc (list egg-fixed-euc egg-fixed-euc)))
+-			(wnnrpc-set-dictionary (wnnenv-create proc env-id)
+-					       result -1 1 t t
+-					       passwd "" nil))))))))
++	(if (< (setq env-id (wnnrpc-connect proc "")) 0)
++	    -1
++	  (wnnrpc-call-with-environment (wnnenv-create proc env-id)
++	      (file-id)
++	    (comm-format (u u v) (wnn-const JS_FILE_SEND)
++			 env-id
++			 (nth 1 header) (wnn-const WNN_UNIQ_LEN))
++	    (comm-unpack (i) file-id)
++	    (if (>= file-id 0)
++		(progn
++		  (wnnrpc-get-result)	; ignore result code
++		  (- (wnn-const WNN_FILE_IN_USE)))
++	      (wnnrpc-get-result
++		(comm-call-with-proc-1 proc ()
++		  (comm-format (s B)
++			       (concat wnn-system-name "!TEMPFILE")
++			       (wnnrpc-make-dummy-dictionary header))
++		  (wnnrpc-get-result
++		    (let ((egg-fixed-euc (list egg-fixed-euc egg-fixed-euc)))
++		      (wnnrpc-set-dictionary (wnnenv-create proc env-id)
++					     result -1 1 t t
++					     passwd "" nil))))))))
+       (if (>= env-id 0)
+ 	  (wnnrpc-disconnect (wnnenv-create proc env-id))))))
+ 
+@@ -1603,7 +1612,7 @@
+       (comm-call-with-proc proc (result)
+ 	(comm-format (u v) (wnn-const JS_FILE_LOADED_LOCAL)
+ 		     (nth 1 header) (wnn-const WNN_UNIQ_LEN))
+-	(comm-unpack (u) result)
++	(comm-unpack (i) result)
+ 	result))))
+ 
+ (defun wnnrpc-file-receive (env fid local-filename)
+@@ -1654,7 +1663,7 @@
+ 	    (comm-format (u u v) (wnn-const JS_FILE_SEND)
+ 			 env-id
+ 			 (nth 1 header) (wnn-const WNN_UNIQ_LEN))
+-	    (comm-unpack (u) file-id)
++	    (comm-unpack (i) file-id)
+ 	    (if (>= file-id 0)
+ 		(wnnrpc-get-result
+ 		  (wnnenv-set-client-file env filename)
+@@ -1718,9 +1727,9 @@
+ (defun wnnrpc-make-temp-name (env)
+   (let ((n 0)
+ 	(temp-form "usr/temp"))
+-    (while (= (wnnrpc-access env (concat temp-form n) 0) 0)
++    (while (= (wnnrpc-access env (concat temp-form (number-to-string n)) 0) 0)
+       (setq n (1+ n)))
+-    (concat temp-form n)))
++    (concat temp-form (number-to-string n))))
+ 
+ (defun wnnrpc-create-and-move-to-client (env dic-id filename type
+ 					     comment passwd hpasswd)
+diff -rdu ../tamago-4.0.6.org/egg-cnv.el ./egg-cnv.el
+--- ../tamago-4.0.6.org/egg-cnv.el	Tue Jan 11 20:59:10 2000
++++ ./egg-cnv.el	Fri Mar 16 14:13:50 2001
 @@ -34,19 +34,29 @@
  (require 'egg-edep)
  
@@ -726,9 +3027,9 @@ diff -Ndu ../tamago-4.0.6/egg-cnv.el ./egg-cnv.el
        (progn
  	(goto-char (next-single-property-change (point) 'egg-end))
  	(egg-decide-before-point))))
-diff -Ndu ../tamago-4.0.6/egg-com.el ./egg-com.el
---- ../tamago-4.0.6/egg-com.el	Tue Jan  4 15:49:56 2000
-+++ ./egg-com.el	Sun Jan 28 03:53:13 2001
+diff -rdu ../tamago-4.0.6.org/egg-com.el ./egg-com.el
+--- ../tamago-4.0.6.org/egg-com.el	Tue Jan  4 15:49:56 2000
++++ ./egg-com.el	Fri Mar 16 14:13:50 2001
 @@ -136,6 +136,7 @@
  		    (cons ccl-decode-fixed-euc-kr ccl-encode-fixed-euc-kr))
  
@@ -895,9 +3196,9 @@ diff -Ndu ../tamago-4.0.6/egg-com.el ./egg-com.el
  		    ((eq f 'w) `(setq ,arg (comm-unpack-u16)))
  		    ((eq f 'b) `(setq ,arg (comm-unpack-u8)))
  		    ((eq f 'S) `(setq ,arg (comm-unpack-u16-string)))
-diff -Ndu ../tamago-4.0.6/egg-sim-old.el ./egg-sim-old.el
---- ../tamago-4.0.6/egg-sim-old.el	Mon Jan 17 01:43:15 2000
-+++ ./egg-sim-old.el	Thu Jan  1 09:00:00 1970
+diff -rdu ../tamago-4.0.6.org/egg-sim-old.el ./egg-sim-old.el
+--- ../tamago-4.0.6.org/egg-sim-old.el	Mon Jan 17 01:43:15 2000
++++ ./egg-sim-old.el	Fri Mar 16 14:13:50 2001
 @@ -1,514 +0,0 @@
 -;;; egg-sim.el --- EGG Simple Input Method
 -
@@ -1413,9 +3714,9 @@ diff -Ndu ../tamago-4.0.6/egg-sim-old.el ./egg-sim-old.el
 -	    (setq j (1+ j)))
 -	  (insert (format "\n")))
 -	(setq i (1+ i))))))
-diff -Ndu ../tamago-4.0.6/egg-sim.el ./egg-sim.el
---- ../tamago-4.0.6/egg-sim.el	Mon Jan 17 01:51:34 2000
-+++ ./egg-sim.el	Sun Jan 28 03:53:13 2001
+diff -rdu ../tamago-4.0.6.org/egg-sim.el ./egg-sim.el
+--- ../tamago-4.0.6.org/egg-sim.el	Mon Jan 17 01:51:34 2000
++++ ./egg-sim.el	Fri Mar 16 14:13:50 2001
 @@ -73,7 +73,7 @@
  		result)))))
  
@@ -1440,9 +3741,9 @@ diff -Ndu ../tamago-4.0.6/egg-sim.el ./egg-sim.el
  	  (insert (format "\n")))
 -	(setq i (1+ i))))))
 +	(setq i (1+ i))))))
-diff -Ndu ../tamago-4.0.6/egg-simv.el ./egg-simv.el
---- ../tamago-4.0.6/egg-simv.el	Mon Jan 17 01:42:21 2000
-+++ ./egg-simv.el	Thu Jan  1 09:00:00 1970
+diff -rdu ../tamago-4.0.6.org/egg-simv.el ./egg-simv.el
+--- ../tamago-4.0.6.org/egg-simv.el	Mon Jan 17 01:42:21 2000
++++ ./egg-simv.el	Fri Mar 16 14:13:50 2001
 @@ -1,47 +0,0 @@
 -
 - |  0   1   2   3   4   5   6   7   8   9   A   B   C   D   E   F 
@@ -1491,9 +3792,9 @@ diff -Ndu ../tamago-4.0.6/egg-simv.el ./egg-simv.el
 -"Y" ",2O(B" ",2V(B" ",2[(B" ",2}(B" ",2\(B" 
 -
 -",2p(B" ",1p(B"
-diff -Ndu ../tamago-4.0.6/egg.el ./egg.el
---- ../tamago-4.0.6/egg.el	Mon Jan 17 09:36:17 2000
-+++ ./egg.el	Sun Jan 28 03:53:13 2001
+diff -rdu ../tamago-4.0.6.org/egg.el ./egg.el
+--- ../tamago-4.0.6.org/egg.el	Mon Jan 17 09:36:17 2000
++++ ./egg.el	Fri Mar 16 14:13:50 2001
 @@ -33,10 +33,11 @@
  (require 'cl)
  (require 'egg-edep)
@@ -1693,9 +3994,10 @@ diff -Ndu ../tamago-4.0.6/egg.el ./egg.el
  
  (defun egg-mark-modification (beg end)
    (if (and (null egg-suppress-marking)
-diff -Ndu ../tamago-4.0.6/eggrc ./eggrc
---- ../tamago-4.0.6/eggrc	Tue Jan  4 15:50:44 2000
-+++ ./eggrc	Sun Jan 28 03:53:13 2001
+Only in ../tamago-4.0.6.org/: egg.el.orig
+diff -rdu ../tamago-4.0.6.org/eggrc ./eggrc
+--- ../tamago-4.0.6.org/eggrc	Tue Jan  4 15:50:44 2000
++++ ./eggrc	Fri Mar 16 14:13:50 2001
 @@ -1,4 +1,4 @@
 -;;; eggrc --- EGG Input Method Startup File
 +;;; eggrc --- EGG Input Method Startup File -*- emacs-lisp -*-
@@ -1724,10 +4026,143 @@ diff -Ndu ../tamago-4.0.6/eggrc ./eggrc
 +  (canna-define-environment "Bushu" 0 t)
 +  (canna-add-dict "bushu" nil))
 + )
-Common subdirectories: ../tamago-4.0.6/its and ./its
-diff -Ndu ../tamago-4.0.6/its-keydef.el ./its-keydef.el
---- ../tamago-4.0.6/its-keydef.el	Wed Jan  5 13:43:30 2000
-+++ ./its-keydef.el	Sun Jan 28 03:53:13 2001
+diff -rdu ../tamago-4.0.6.org/its/ascii.el ./its/ascii.el
+--- ../tamago-4.0.6.org/its/ascii.el	Tue Jan  4 16:08:35 2000
++++ ./its/ascii.el	Fri Mar 16 14:14:19 2001
+@@ -26,10 +26,7 @@
+ ;; Boston, MA 02111-1307, USA.
+ 
+ ;;; Commentary:
+-;;
+-;; Symbol input is desined by jiro@math.keio.ac.jp (TANAKA Jiro)
+-;; This file is based on the rules of its/hira.el in Mule-2.3 distribution.
+-;;
++
+ 
+ ;;; Code:
+ 
+Only in ./its: aynu.el
+diff -rdu ../tamago-4.0.6.org/its/hankata.el ./its/hankata.el
+--- ../tamago-4.0.6.org/its/hankata.el	Wed Jan  5 13:45:22 2000
++++ ./its/hankata.el	Fri Mar 16 14:14:19 2001
+@@ -24,10 +24,7 @@
+ ;; Boston, MA 02111-1307, USA.
+ 
+ ;;; Commentary:
+-;;
+-;; Symbol input is desined by jiro@math.keio.ac.jp (TANAKA Jiro)
+-;; This file is based on the rules of its/kata.el in Mule-2.3 distribution.
+-;;
++
+ 
+ ;;; Code:
+ 
+diff -rdu ../tamago-4.0.6.org/its/jeonkak.el ./its/jeonkak.el
+--- ../tamago-4.0.6.org/its/jeonkak.el	Tue Jan  4 16:09:13 2000
++++ ./its/jeonkak.el	Fri Mar 16 14:14:19 2001
+@@ -26,10 +26,7 @@
+ ;; Boston, MA 02111-1307, USA.
+ 
+ ;;; Commentary:
+-;;
+-;; Symbol input is desined by jiro@math.keio.ac.jp (TANAKA Jiro)
+-;; This file is based on the rules of its/hira.el in Mule-2.3 distribution.
+-;;
++
+ 
+ ;;; Code:
+ 
+diff -rdu ../tamago-4.0.6.org/its/pinyin.el ./its/pinyin.el
+--- ../tamago-4.0.6.org/its/pinyin.el	Tue Jan  4 16:09:25 2000
++++ ./its/pinyin.el	Fri Mar 16 14:14:19 2001
+@@ -4,7 +4,7 @@
+ 
+ ;; Author: KATAYAMA Yoshio <kate@pfu.co.jp>
+ 
+-;; Maintainer: TOMURA Satoru <tomura@etl.go.jp>
++;; Maintainer: TOMURA Satoru <tomura@etl.go.jp>
+ 
+ ;; Keywords: mule, multilingual, input method
+ 
+diff -rdu ../tamago-4.0.6.org/its/quanjiao.el ./its/quanjiao.el
+--- ../tamago-4.0.6.org/its/quanjiao.el	Tue Jan  4 16:09:32 2000
++++ ./its/quanjiao.el	Fri Mar 16 14:14:19 2001
+@@ -26,10 +26,7 @@
+ ;; Boston, MA 02111-1307, USA.
+ 
+ ;;; Commentary:
+-;;
+-;; Symbol input is desined by jiro@math.keio.ac.jp (TANAKA Jiro)
+-;; This file is based on the rules of its/hira.el in Mule-2.3 distribution.
+-;;
++
+ 
+ ;;; Code:
+ 
+diff -rdu ../tamago-4.0.6.org/its/thai.el ./its/thai.el
+--- ../tamago-4.0.6.org/its/thai.el	Tue Jan  4 16:09:40 2000
++++ ./its/thai.el	Fri Mar 16 14:14:19 2001
+@@ -69,7 +69,7 @@
+ 	(setq next-keyseq (concat keyseq (car (car vowel)))
+ 	      next-output (concat output (cdr (car vowel)))
+ 	      vowel (cdr vowel))
+-        (its-defrule next-keyseq (compose-string next-output))
++        (its-defrule next-keyseq `(eval compose-string ,next-output))
+ 	(its-thai-add-tone next-keyseq next-output tone))))
+ 
+   (defun its-thai-add-tone (keyseq output tone)
+@@ -78,7 +78,7 @@
+ 	(setq next-keyseq (concat keyseq (car (car tone)))
+ 	      next-output (concat output (cdr (car tone)))
+               tone (cdr tone))
+-        (its-defrule next-keyseq (compose-string next-output))))))
++        (its-defrule next-keyseq `(eval compose-string ,next-output))))))
+ 
+ ;; Thai Kesmanee keyboard support.
+ 
+@@ -93,7 +93,7 @@
+     ("4"  ",T@(B" consonant)    ("$"  ",Ts(B")
+     ("5"  ",T6(B" consonant)    ("%"  ",Tt(B")
+     ("6"  ",TX(B" vowel)        ("^"  ",TY(B" vowel)
+-    ("7"  ",TV(B" vowel)        ("&"  "0,TQi(B1" vowel)
++    ("7"  ",TV(B" vowel)        ("&"  "0,TQi1(B" vowel)
+     ("8"  ",T$(B" consonant)    ("*"  ",Tu(B")
+     ("9"  ",T5(B" consonant)    ("("  ",Tv(B")
+     ("0"  ",T((B" consonant)    (")"  ",Tw(B")
+diff -rdu ../tamago-4.0.6.org/its/zenkaku.el ./its/zenkaku.el
+--- ../tamago-4.0.6.org/its/zenkaku.el	Tue Jan  4 16:09:48 2000
++++ ./its/zenkaku.el	Fri Mar 16 14:14:19 2001
+@@ -26,10 +26,7 @@
+ ;; Boston, MA 02111-1307, USA.
+ 
+ ;;; Commentary:
+-;;
+-;; Symbol input is desined by jiro@math.keio.ac.jp (TANAKA Jiro)
+-;; This file is based on the rules of its/hira.el in Mule-2.3 distribution.
+-;;
++
+ 
+ ;;; Code:
+ 
+diff -rdu ../tamago-4.0.6.org/its/zhuyin.el ./its/zhuyin.el
+--- ../tamago-4.0.6.org/its/zhuyin.el	Tue Jan  4 16:09:56 2000
++++ ./its/zhuyin.el	Fri Mar 16 14:14:19 2001
+@@ -142,9 +142,9 @@
+        (mapcar (lambda (s) (its-defoutput (car s) (nth 1 s)))
+ 	       (list B P M F D T N L G K H J Q X))
+ 
+-       (its-defrule (concat (car N) 2) (concat (nth 1 N) "(0B(B"))
+-       (its-defrule (concat (car N) 3) (concat (nth 1 N) "(0C(B"))
+-       (its-defrule (concat (car N) 4) (concat (nth 1 N) "(0D(B")))))
++       (its-defrule (concat (car N) "2") (concat (nth 1 N) "(0B(B"))
++       (its-defrule (concat (car N) "3") (concat (nth 1 N) "(0C(B"))
++       (its-defrule (concat (car N) "4") (concat (nth 1 N) "(0D(B")))))
+ 
+ (define-its-state-machine its-zhuyin-cn-map
+   "zhuyin-cn" "$AW"(BG" Chinese-GB
+diff -rdu ../tamago-4.0.6.org/its-keydef.el ./its-keydef.el
+--- ../tamago-4.0.6.org/its-keydef.el	Wed Jan  5 13:43:30 2000
++++ ./its-keydef.el	Fri Mar 16 14:13:50 2001
 @@ -70,7 +70,7 @@
  	     ((its-in-fence-p)
  	      (its-input-end)
@@ -1737,9 +4172,9 @@ diff -Ndu ../tamago-4.0.6/its-keydef.el ./its-keydef.el
  	      (egg-exit-conversion)))
  	    (setq its-current-select-func func
  		  its-current-map ',map
-diff -Ndu ../tamago-4.0.6/its.el ./its.el
---- ../tamago-4.0.6/its.el	Mon Jan 17 09:36:17 2000
-+++ ./its.el	Sun Jan 28 03:53:13 2001
+diff -rdu ../tamago-4.0.6.org/its.el ./its.el
+--- ../tamago-4.0.6.org/its.el	Mon Jan 17 09:36:17 2000
++++ ./its.el	Fri Mar 16 14:13:50 2001
 @@ -35,7 +35,7 @@
  (require 'egg-edep)
  
@@ -2228,9 +4663,10 @@ diff -Ndu ../tamago-4.0.6/its.el ./its.el
  
  (defun its-mode ()
    "\\{its-mode-map}"
-diff -Ndu ../tamago-4.0.6/leim-list.el ./leim-list.el
---- ../tamago-4.0.6/leim-list.el	Tue Jan 11 22:47:31 2000
-+++ ./leim-list.el	Sun Jan 28 03:53:13 2001
+Only in .: jisx0213.el
+diff -rdu ../tamago-4.0.6.org/leim-list.el ./leim-list.el
+--- ../tamago-4.0.6.org/leim-list.el	Tue Jan 11 22:47:31 2000
++++ ./leim-list.el	Fri Mar 16 14:13:50 2001
 @@ -32,8 +32,10 @@
  ;;; Code:
  
@@ -2272,9 +4708,9 @@ diff -Ndu ../tamago-4.0.6/leim-list.el ./leim-list.el
  
 -  )
 +  )
-diff -Ndu ../tamago-4.0.6/menudiag.el ./menudiag.el
---- ../tamago-4.0.6/menudiag.el	Tue Jan  4 15:53:49 2000
-+++ ./menudiag.el	Sun Jan 28 03:53:13 2001
+diff -rdu ../tamago-4.0.6.org/menudiag.el ./menudiag.el
+--- ../tamago-4.0.6.org/menudiag.el	Tue Jan  4 15:53:49 2000
++++ ./menudiag.el	Fri Mar 16 14:13:50 2001
 @@ -50,7 +50,7 @@
  ;;
  
