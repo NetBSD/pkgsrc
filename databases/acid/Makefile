@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/20 09:53:27 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/20 10:09:14 xtraeme Exp $
 #
 
 DISTNAME=	acid-0.9.6b23
@@ -16,7 +16,9 @@ DEPENDS+=	php-jpgraph>=1.8:../../graphics/php-jpgraph
 DEPENDS+=	php-gd>=4.0.4:../../graphics/php4-gd
 DEPENDS+=	php-sockets>=4.0.4:../../net/php4-sockets
 
-USE_BUILDLINK3=	YES
+USE_BUILDLINK3=	yes
+NO_BUILD=	yes
+NO_BUILDLINK=	yes
 WRKSRC=		${WRKDIR}/acid
 
 .include "../../mk/bsd.prefs.mk"
@@ -40,7 +42,7 @@ ACID_DIR=	${PREFIX}/share/acid
 EXDIR=		${PREFIX}/share/examples/acid
 MESSAGE_SUBST+= EXDIR=${EXDIR} ACID_DIR=${ACID_DIR}
 
-do-build:
+pre-install:
 	@${SED} -e 's#@ACID_DIR@#${ACID_DIR}#g' ${FILESDIR}/acid.conf \
 		>${WRKDIR}/acid.conf
 
