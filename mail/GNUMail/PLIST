@@ -1,13 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/20 14:50:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/25 04:50:01 rh Exp $
 share/GNUstep/Local/Applications/GNUMail.app/GNUMail
 share/GNUstep/Local/Applications/GNUMail.app/Resources/AddressBook_32.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/AddressManager_32.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/Address_bcc.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/Address_cc.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/Address_to.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/CVS/Entries
-share/GNUstep/Local/Applications/GNUMail.app/Resources/CVS/Repository
-share/GNUstep/Local/Applications/GNUMail.app/Resources/CVS/Root
 share/GNUstep/Local/Applications/GNUMail.app/Resources/Czech.lproj/Localizable.strings
 share/GNUstep/Local/Applications/GNUMail.app/Resources/English.lproj/Localizable.strings
 share/GNUstep/Local/Applications/GNUMail.app/Resources/French.lproj/Localizable.strings
@@ -173,7 +170,6 @@ share/GNUstep/Local/Library/Libraries/libGNUMail.so.0.0.1
 @dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources/French.lproj
 @dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources/English.lproj
 @dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources/Czech.lproj
-@dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources/CVS
 @dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources
 @dirrm share/GNUstep/Local/Applications/GNUMail.app
 @comment in gnustep-make: @dirrm share/GNUstep/Local/Applications
