@@ -1,0 +1,13 @@
+$NetBSD: patch-ax,v 1.1 1999/02/23 00:31:40 wrstuden Exp $
+
+--- libatalk/asp/asp_getsess.c.orig	Sat Aug 16 19:20:31 1997
++++ libatalk/asp/asp_getsess.c	Thu Feb 18 20:19:39 1999
+@@ -6,7 +6,7 @@
+ #include <sys/errno.h>
+ #include <sys/time.h>
+ #include <sys/types.h>
+-#include <sys/signal.h>
++#include <signal.h>
+ #include <sys/uio.h>
+ #include <sys/wait.h>
+ #include <sys/syslog.h>
