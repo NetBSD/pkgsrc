@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8730 2005/01/13 09:30:19 adam Exp $
+$NetBSD: CHANGES,v 1.8731 2005/01/13 09:59:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -278,3 +278,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mips64emul to 0.2.4 [xtraeme 2005-01-13]
 	Added mDNSResponder-62 [itojun 2005-01-13]
 	Updated abiword to 2.2.3 [adam 2005-01-13]
+	Updated ORBit to 0.5.17 [adam 2005-01-13]
