@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9647 2005/03/27 13:09:57 jmmv Exp $
+$NetBSD: CHANGES,v 1.9648 2005/03/27 13:18:00 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1774,3 +1774,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated imp to 4.0.2 [adrianp 2005-03-27]
 	Updated gedit to 2.10.1 [jmmv 2005-03-27]
 	Added arka-0.11 [jmmv 2005-03-27]
+	Updated mono to 1.1.5 [recht 2005-03-27]
+	Updated icu to 3.2 [recht 2005-03-27]
+	Updated libgdiplus to 1.1.5 [recht 2005-03-27]
+	Updated libpixman to 0.1.4 [recht 2005-03-27]
+	Updated cairo to 0.4.0 [recht 2005-03-27]
