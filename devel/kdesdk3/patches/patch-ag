@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2004/04/20 14:08:39 markd Exp $
+
+--- kompare/komparenavtreepart/Makefile.in.orig	2004-04-06 02:53:00.000000000 +1200
++++ kompare/komparenavtreepart/Makefile.in
+@@ -369,8 +369,8 @@ xdg_appsdir = @xdg_appsdir@
+ xdg_directorydir = @xdg_directorydir@
+ xdg_menudir = @xdg_menudir@
+ INCLUDES = \
+-	-D INLINE_DIFFERENCES=0 \
+-	-D EXCLUDE_DIFF_OPTION=0 \
++	-DINLINE_DIFFERENCES=0 \
++	-DEXCLUDE_DIFF_OPTION=0 \
+ 	-I$(top_srcdir)/kompare/libdiff2 \
+ 	-I$(top_srcdir)/kompare/komparepart \
+ 	$(all_includes)

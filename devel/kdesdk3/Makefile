@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2004/04/14 16:15:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2004/04/20 14:08:39 markd Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
 
@@ -10,11 +9,9 @@ CONFLICTS+=	umbrello-[0-9]*
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
-LTCONFIG_OVERRIDE+=	${WRKSRC}/kapptemplate/admin/ltconfig
-
-BUILD_DEPENDS+= qt3-tools>=3.1.1:../../x11/qt3-tools
+USE_PERL5=		run
 
 REPLACE_PERL=	cervisia/change_colors.pl \
 		cervisia/move_repositories.pl \
@@ -37,8 +34,10 @@ PLIST_SRC+=	${PKGDIR}/PLIST.kmtrace
 .endif
 PLIST_SRC+=	${PKGDIR}/PLIST
 
-.include "../../databases/db4/buildlink2.mk"
-.include "../../devel/libtool/buildlink2.mk"
-.include "../../meta-pkgs/kde3/buildlink2.mk"
-.include "../../x11/kdebase3/buildlink2.mk"
+.include "../../meta-pkgs/kde3/kde3.mk"
+
+.include "../../databases/db4/buildlink3.mk"
+.include "../../devel/libtool/buildlink3.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/kdebase3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
