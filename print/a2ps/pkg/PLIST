@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 1998/07/15 10:39:36 agc Exp $
+@comment $NetBSD: PLIST,v 1.10 1998/07/17 19:08:28 tv Exp $
 bin/a2ps
 bin/card
 bin/compose
@@ -28,7 +28,6 @@ info/regex.info-3
 @exec %D/bin/install-info %D/info/ogonkify.info %D/info/dir
 @exec %D/bin/install-info %D/info/regex.info %D/info/dir
 lib/liba2ps.a
-lib/liba2ps.la
 lib/liba2ps.so.1.0
 man/man1/a2ps.1
 man/man1/card.1
