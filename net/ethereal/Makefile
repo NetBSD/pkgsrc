@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2004/10/03 00:17:51 tv Exp $
+# $NetBSD: Makefile,v 1.98 2004/10/09 12:09:15 adrianp Exp $
 
 DISTNAME=	ethereal-0.10.6
 PKGREVISION=	# defined1
@@ -41,6 +41,12 @@ CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ENV+=		ac_cv_func_pcap_compile_nopcap=no
 
 PTHREAD_OPTS=		require
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin" 
+USE_BUILTIN.libpcap=	no
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
