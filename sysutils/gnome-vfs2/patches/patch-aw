@@ -1,0 +1,16 @@
+$NetBSD: patch-aw,v 1.1 2005/01/21 20:32:23 recht Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=159823
+
+--- libgnomevfs/gnome-vfs-mime-info-cache.c.orig	Tue Oct 26 15:37:05 2004
++++ libgnomevfs/gnome-vfs-mime-info-cache.c	Fri Jan 21 20:06:07 2005
+@@ -769,6 +769,9 @@
+ 
+ 	G_UNLOCK (mime_info_cache);
+ 
++	g_list_foreach (mime_types, (GFunc)g_free, NULL);
++	g_list_free (mime_types);
++
+ 	desktop_entries = g_list_reverse (desktop_entries);
+ 
+ 	return desktop_entries;
