@@ -1,0 +1,47 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/18 19:55:16 dbj Exp $
+@unexec %D/bin/install-info --delete %D/info/elisp %D/info/dir
+info/elisp
+info/elisp-1
+info/elisp-2
+info/elisp-3
+info/elisp-4
+info/elisp-5
+info/elisp-6
+info/elisp-7
+info/elisp-8
+info/elisp-9
+info/elisp-10
+info/elisp-11
+info/elisp-12
+info/elisp-13
+info/elisp-14
+info/elisp-15
+info/elisp-16
+info/elisp-17
+info/elisp-18
+info/elisp-19
+info/elisp-20
+info/elisp-21
+info/elisp-22
+info/elisp-23
+info/elisp-24
+info/elisp-25
+info/elisp-26
+info/elisp-27
+info/elisp-28
+info/elisp-29
+info/elisp-30
+info/elisp-31
+info/elisp-32
+info/elisp-33
+info/elisp-34
+info/elisp-35
+info/elisp-36
+info/elisp-37
+info/elisp-38
+info/elisp-39
+info/elisp-40
+info/elisp-41
+info/elisp-42
+info/elisp-43
+@exec %D/bin/install-info %D/info/elisp %D/info/dir
