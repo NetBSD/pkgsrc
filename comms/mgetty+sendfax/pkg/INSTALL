@@ -1,5 +1,15 @@
 #!/bin/sh
 #
+
+if [ x"$2" != xPOST-INSTALL ]
+then
+	exit
+fi
+
+${INSTALL_DATA_DIR} ${MGETTY_CONFDIR}
+(cd ${PREFIX}/share/examples/mgetty+sendfax;
+	${PAX} -r -w -pe -k * ${MGETTY_CONFDIR})
+
 test -d /var/spool ||  \
 	( mkdir /var/spool ; chmod 755 /var/spool )
 test -d /var/spool/fax ||  \
