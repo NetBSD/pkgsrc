@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/05/01 14:22:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2000/05/13 01:15:01 wiz Exp $
 #
 
 DISTNAME=	psiconv-0.6.1
@@ -10,6 +10,7 @@ HOMEPAGE=	http://huizen.dds.nl/~frodol/psiconv/
 
 .if !exists(/usr/include/getopt.h)
 DEPENDS+=	libgetopt-[0-9]*:../../devel/libgetopt
+LIBS=		-lgetopt
 .endif
 DEPENDS+=	ImageMagick-*:../../graphics/ImageMagick
 
@@ -19,7 +20,7 @@ USE_X11=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	CPPFLAGS="`${MAGICK_CONFIG} --cppflags` -DIMAGEMAGICK" \
-		LIBS="-lgetopt `${MAGICK_CONFIG} --libs`"
+		LIBS="${LIBS} `${MAGICK_CONFIG} --libs`"
 
 post-configure:
 	@${RM} -f ${WRKSRC}/libtool
