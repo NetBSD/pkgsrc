@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/06/27 18:11:37 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/09/06 10:52:55 tron Exp $
 
 DISTNAME=		pilot-link.0.9.5
 PKGNAME=		p5-pilot-link-0.1
@@ -26,6 +26,7 @@ pre-configure:
 	${SED}	-e "s|@prefix@|${PREFIX}|g"				\
 		-e "s|@exec_prefix@|${PREFIX}|g"			\
 		-e "s|@libdir@|${PREFIX}/lib|g"				\
+		-e "s|\(-I.*\)\(',\)|\1 ${BUILDLINK_CPPFLAGS}\2|"	\
 		Makefile.PL.in > Makefile.PL
 
 do-configure:
