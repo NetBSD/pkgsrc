@@ -1,9 +1,9 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmail.sh,v 1.1.1.1 2004/08/02 03:59:22 schmonz Exp $
+# $NetBSD: qmail.sh,v 1.2 2004/08/03 08:59:24 schmonz Exp $
 #
-# Master script for administrators to control qmail services.
-# Usage resembles the qmailctl script from "Life with qmail".
+# @PKGNAME@ master script for administrators to control qmail
+# services. Usage resembles the qmailctl script from "Life with qmail".
 #
 
 # KEYWORD: nostart
