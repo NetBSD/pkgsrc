@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/04/24 07:45:32 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2000/05/05 13:43:07 hubertf Exp $
 #
 
-DISTNAME=		gtk-gnutella-0.11
+DISTNAME=		gtk-gnutella-0.12
 CATEGORIES=		net
 MASTER_SITES=		http://gtk-gnutella.sourceforge.net/download/ \
 			ftp://gtk-gnutella.sourceforge.net/pub/gtk-gnutella/
