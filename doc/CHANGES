@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5652 2004/04/19 14:15:26 jmmv Exp $
+$NetBSD: CHANGES,v 1.5653 2004/04/19 14:26:16 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2072,3 +2072,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated Renaissance to 0.8.0 [rh 2004-04-19]
 	Added libmal-0.40 [markd 2004-04-19]
 	Updated epiphany to 1.2.3 [jmmv 2004-04-19]
+	Updated libxml2 to 2.6.9 [jmmv 2004-04-19]
