@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2001/12/23 17:18:12 kim Exp $
+$NetBSD: patch-aa,v 1.3 2005/01/01 06:26:41 cube Exp $
 
---- configure.in.orig	Sun Sep 24 21:29:23 2000
-+++ configure.in	Sun Dec 23 12:09:28 2001
-@@ -112,7 +112,7 @@
+--- configure.in.orig	2004-06-23 09:38:43.000000000 +0200
++++ configure.in
+@@ -112,7 +112,7 @@ fi
  if test "$ac_cv_header_libintl_h" = yes; then
    if test "$ac_cv_lib_c_gettext" = no; then
      if test "$ac_cv_lib_intl_gettext" = yes; then
@@ -11,31 +11,3 @@ $NetBSD: patch-aa,v 1.2 2001/12/23 17:18:12 kim Exp $
      else
        echo "Have libintl.h but no usable gettext!" 1>&2
        exit 1
-@@ -144,15 +144,18 @@
- 	[ AC_DEFINE(PNS_MODE)
- 	  PNS_MODE = yes ])
- 
--if test "$BSDUSER_PPP" = "yes"; then
--  AC_DEFINE(PPP_BINARY, "/usr/sbin/ppp")
--else
--  if test "$SLIRP" = "yes"; then
--    AC_DEFINE(PPP_BINARY, "/bin/slirp")
--  else
--    AC_DEFINE(PPP_BINARY, "/usr/sbin/pppd")
--  fi
--fi
-+AC_ARG_WITH(pppd,
-+	[  --with-pppd=[ARG]       Path to pppd binary.],
-+	[ AC_DEFINE_UNQUOTED(PPP_BINARY,"$withval")],
-+	[ if test "$BSDUSER_PPP" = "yes"; then
-+	    AC_DEFINE(PPP_BINARY, "/usr/sbin/ppp")
-+	  else
-+	    if test "$SLIRP" = "yes"; then
-+	      AC_DEFINE(PPP_BINARY, "/bin/slirp")
-+	    else
-+	      AC_DEFINE(PPP_BINARY, "/usr/sbin/pppd")
-+	    fi
-+	  fi])
- 
- if test "$SLIRP" = "yes"; then
-   if test "$PPPD_IP_ALLOC" = "yes"; then
