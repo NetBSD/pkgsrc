@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2005/01/08 07:09:50 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2005/01/14 14:52:44 minskim Exp $
 #
 
-DISTNAME=		mathomatic-11.6c
+DISTNAME=		mathomatic-11.6d
 CATEGORIES=		math
 MASTER_SITES=		http://www.panix.com/~gesslein/
 EXTRACT_SUFX=		.tgz
