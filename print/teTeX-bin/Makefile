@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2002/09/21 01:48:03 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2002/11/10 23:18:47 cjep Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -72,9 +72,9 @@ post-install:
 	### someone needs to adjust papersize to this:
 	#texconfig dvips paper a4
 	#texconfig xdvi a4
-	texconfig font ro
-	texconfig font vardir /var/spool/texfonts
-	texconfig font options appendonlydir varfonts
+	${LOCALBASE}/bin/texconfig font ro
+	${LOCALBASE}/bin/texconfig font vardir /var/spool/texfonts
+	${LOCALBASE}/bin/texconfig font options appendonlydir varfonts
 
 .include "../../graphics/png/buildlink2.mk"
 .include "../../www/libwww/buildlink2.mk"
