@@ -1,33 +1,25 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:11:14 agc Exp $
+$NetBSD: patch-aa,v 1.3 1999/10/13 11:32:06 simonb Exp $
 
-*** Makefile.orig	Fri Aug 11 15:55:35 1995
---- Makefile	Fri Aug 11 16:03:26 1995
-***************
-*** 6,13 ****
-  # arnold@skeeve.atl.ga.us
-  
-  CC = gcc
-! CFLAGS = -g -O
-! LIBS = -lX11
-  
-  9menu: 9menu.c
-  	$(CC) $(CFLAGS) 9menu.c $(LIBS) -o 9menu
---- 6,23 ----
-  # arnold@skeeve.atl.ga.us
-  
-  CC = gcc
-! CFLAGS = -O -I/usr/X11R6/include
-! LIBS = -L/usr/X11R6/lib -lX11
-! 
-! 
-! all: 9menu
-  
-  9menu: 9menu.c
-  	$(CC) $(CFLAGS) 9menu.c $(LIBS) -o 9menu
-+ 
-+ install:
-+ 	$(INSTALL) -c 9menu $(PREFIX)/bin
-+ 	$(INSTALL) -c 9menu.1 $(PREFIX)/man/man1
-+ 	strip $(PREFIX)/bin/9menu
-+ 	gzip -9nf $(PREFIX)/man/man1/9menu.1
-+ 
+--- Makefile.orig	Wed Oct 13 19:58:26 1999
++++ Makefile	Wed Oct 13 20:56:08 1999
+@@ -6,8 +6,18 @@
+ # arnold@skeeve.atl.ga.us
+ 
+ CC = gcc
+-CFLAGS = -g -O
++CFLAGS = -O -I/usr/X11R6/include
+ LIBS = -lX11
+ 
++
++all: 9menu
++
+ 9menu: 9menu.c
+-	$(CC) $(CFLAGS) 9menu.c $(LIBS) -o 9menu
++	$(CC) $(CFLAGS) 9menu.c $(LDFLAGS) $(LIBS) -o 9menu
++
++install:
++	$(INSTALL) -c 9menu $(PREFIX)/bin
++	$(INSTALL) -c 9menu.1 $(PREFIX)/man/man1
++	strip $(PREFIX)/bin/9menu
++	gzip -9nf $(PREFIX)/man/man1/9menu.1
++
