@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/09/22 03:04:16 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/06 16:59:37 xtraeme Exp $
 bin/appletviewer
 bin/install-jar
 bin/jar
@@ -18,68 +18,66 @@ bin/rmic
 bin/rmiregistry
 bin/serialver
 include/jni.h
-include/kaffe/Arrays.h
-include/kaffe/errors.h
+include/jni_cpp.h
+include/jvmpi.h
 include/kaffe/java_lang_Object.h
+include/kaffe/java_lang_StackTraceElement.h
 include/kaffe/java_lang_String.h
 include/kaffe/java_lang_Thread.h
 include/kaffe/java_lang_ThreadGroup.h
 include/kaffe/java_lang_Throwable.h
+include/kaffe/java_lang_VMThrowable.h
 include/kaffe/jmalloc.h
-include/kaffe/jni_cpp.h
-include/kaffe/jsyscall.h
 include/kaffe/jtypes.h
-include/kaffe/native.h
-jre/.pkgsrc
 jre/bin/java
 jre/bin/kaffe
 jre/bin/kaffe-bin
 jre/bin/rmiregistry
-jre/lib/.pkgsrc
-jre/lib/${MACHINE_ARCH}/libawt-${PKGVERSION}.so
-jre/lib/${MACHINE_ARCH}/libawt.la
-jre/lib/${MACHINE_ARCH}/libawt.so
+${WITH_X11}jre/lib/${MACHINE_ARCH}/libawt-${PKGVERSION}.so
+${WITH_X11}jre/lib/${MACHINE_ARCH}/libawt.a
+${WITH_X11}jre/lib/${MACHINE_ARCH}/libawt.la
+${WITH_X11}jre/lib/${MACHINE_ARCH}/libawt.so
 jre/lib/${MACHINE_ARCH}/libio-${PKGVERSION}.so
+jre/lib/${MACHINE_ARCH}/libio.a
 jre/lib/${MACHINE_ARCH}/libio.la
 jre/lib/${MACHINE_ARCH}/libio.so
 jre/lib/${MACHINE_ARCH}/libkaffevm-${PKGVERSION}.so
+jre/lib/${MACHINE_ARCH}/libkaffevm.a
 jre/lib/${MACHINE_ARCH}/libkaffevm.la
 jre/lib/${MACHINE_ARCH}/libkaffevm.so
 jre/lib/${MACHINE_ARCH}/libmanagement-${PKGVERSION}.so
+jre/lib/${MACHINE_ARCH}/libmanagement.a
 jre/lib/${MACHINE_ARCH}/libmanagement.la
 jre/lib/${MACHINE_ARCH}/libmanagement.so
 jre/lib/${MACHINE_ARCH}/libmath-${PKGVERSION}.so
+jre/lib/${MACHINE_ARCH}/libmath.a
 jre/lib/${MACHINE_ARCH}/libmath.la
 jre/lib/${MACHINE_ARCH}/libmath.so
 jre/lib/${MACHINE_ARCH}/libnative-${PKGVERSION}.so
+jre/lib/${MACHINE_ARCH}/libnative.a
 jre/lib/${MACHINE_ARCH}/libnative.la
 jre/lib/${MACHINE_ARCH}/libnative.so
 jre/lib/${MACHINE_ARCH}/libnet-${PKGVERSION}.so
+jre/lib/${MACHINE_ARCH}/libnet.a
 jre/lib/${MACHINE_ARCH}/libnet.la
 jre/lib/${MACHINE_ARCH}/libnet.so
+jre/lib/${MACHINE_ARCH}/libnio-${PKGVERSION}.so
+jre/lib/${MACHINE_ARCH}/libnio.a
+jre/lib/${MACHINE_ARCH}/libnio.la
+jre/lib/${MACHINE_ARCH}/libnio.so
 jre/lib/${MACHINE_ARCH}/libsecurity-${PKGVERSION}.so
+jre/lib/${MACHINE_ARCH}/libsecurity.a
 jre/lib/${MACHINE_ARCH}/libsecurity.la
 jre/lib/${MACHINE_ARCH}/libsecurity.so
-jre/lib/${MACHINE_ARCH}/libtritonuscommon-${PKGVERSION}.so
-jre/lib/${MACHINE_ARCH}/libtritonuscommon.la
-jre/lib/${MACHINE_ARCH}/libtritonuscommon.so
 jre/lib/${MACHINE_ARCH}/libzip-${PKGVERSION}.so
+jre/lib/${MACHINE_ARCH}/libzip.a
 jre/lib/${MACHINE_ARCH}/libzip.la
 jre/lib/${MACHINE_ARCH}/libzip.so
 jre/lib/rt.jar
-jre/lib/security/.pkgsrc
 jre/lib/security/java.security.default
 lib/kjc.jar
 license.terms
 man/man1/kaffe.1
-@dirrm lib
 @dirrm man/man1
-@dirrm man
-@dirrm jre/lib/security
 @dirrm jre/lib/${MACHINE_ARCH}
-@dirrm jre/lib
-@dirrm jre/bin
-@dirrm jre
 @dirrm include/kaffe
-@dirrm include
-@dirrm bin
