@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2003/09/21 16:21:15 kim Exp $
+$NetBSD: distinfo,v 1.4 2004/04/01 16:13:17 kim Exp $
 
 SHA1 (Apache-Gallery-0.7.tar.gz) = bb73d611da624d23273cebfd269156040857b6c4
 Size (Apache-Gallery-0.7.tar.gz) = 73532 bytes
+SHA1 (patch-aa) = 7b6f5e774b1bf40850b6d7e3dc19ec675625ff1f
