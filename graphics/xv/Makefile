@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/06/20 19:45:44 tron Exp $
+# $NetBSD: Makefile,v 1.22 1999/07/08 13:03:45 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -34,6 +34,11 @@ post-patch:
 	${MV} ${WRKSRC}/config.h ${WRKSRC}/config.h.bak
 	${SED} -e 's|@LOCALBASE@|${LOCALBASE}|g' < ${WRKSRC}/config.h.bak \
 		> ${WRKSRC}/config.h
+
+.if ${OPSYS} == "SunOS"
+pre-build:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} xvinfo.o CC=cc
+.endif
 
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/xv
