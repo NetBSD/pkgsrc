@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2003/03/25 14:02:44 salo Exp $
+$NetBSD: patch-ak,v 1.2 2004/03/03 10:50:09 adam Exp $
 
---- doc/xpdfrc.5.orig	2003-03-21 08:01:01.000000000 +0100
-+++ doc/xpdfrc.5	2003-03-25 12:38:38.000000000 +0100
-@@ -7,7 +7,7 @@
+--- doc/xpdfrc.5.orig	2004-01-22 01:26:44.000000000 +0000
++++ doc/xpdfrc.5
+@@ -7,7 +7,7 @@ All of the Xpdf tools read a single conf
  .I .xpdfrc
  file in your home directory, it will be read.  Otherwise, a
  system-wide configuration file will be read from
@@ -11,7 +11,7 @@ $NetBSD: patch-ak,v 1.1 2003/03/25 14:02:44 salo Exp $
  if it exists.  (This is its default location; depending on build
  options, it may be placed elsewhere.)  On Win32 systems, the
  .I xpdfrc
-@@ -390,12 +390,12 @@
+@@ -405,33 +405,33 @@ The following is a sample xpdfrc file.
  .nf
  
  # from the Thai support package
@@ -25,10 +25,6 @@ $NetBSD: patch-ak,v 1.1 2003/03/25 14:02:44 salo Exp $
 +cidToUnicode Adobe-Japan1 @PREFIX@/share/xpdf/Adobe-Japan1.cidToUnicode
 +unicodeMap   JISX0208     @PREFIX@/share/xpdf/JISX0208.unicodeMap
 +cMapDir      Adobe-Japan1 @PREFIX@/share/xpdf/cmap/Adobe-Japan1
- 
- # use an X server font for Times-Roman
- # (this is the built-in default)
-@@ -403,27 +403,27 @@
  
  # use the Base-14 Type 1 fonts from ghostscript
  # (note that this overrides the displayFontX command above)
@@ -61,18 +57,15 @@ $NetBSD: patch-ak,v 1.1 2003/03/25 14:02:44 salo Exp $
 +displayFontT1 Symbol                @PREFIX@/share/ghostscript/fonts/s050000l.pfb
 +displayFontT1 ZapfDingbats          @PREFIX@/share/ghostscript/fonts/d050000l.pfb
  
- # from the Japanese support package
- displayCIDFontX Adobe-Japan1 "-*-fixed-medium-r-normal-*-%s-*-*-*-*-*-jisx0208.1983-0" JISX0208
- 
  # use the Bakoma Type 1 fonts
 -# (this assumes they happen to be installed in /usr/local/fonts/bakoma)
 -fontDir /usr/local/fonts/bakoma
-+# (this assumes they happen to be installed in @PREFIX@/share/tex-contrib/BaKoMa)
-+fontDir @PREFIX@/share/tex-contrib/BaKoMa
++# (this assumes they happen to be installed in @PREFIX@/share/tex-contrib/fonts/BaKoMa)
++fontDir @PREFIX@/share/tex-contrib/fonts/BaKoMa
  
  # set some PostScript options
  psPaperSize          letter
-@@ -450,7 +450,7 @@
+@@ -458,7 +458,7 @@ urlCommand      "netscape -remote 'openU
  .fi
  .SH FILES
  .TP
