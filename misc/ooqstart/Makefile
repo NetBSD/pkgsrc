@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/03 18:49:47 reed Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/24 14:11:10 grant Exp $
 #
 
 DISTNAME=	ooqstart-0.8.3
@@ -14,7 +14,7 @@ COMMENT=	OpenOffice quickstart applet for GNOME
 DEPENDS+=	gnome-applets>=1.4.0:../../x11/gnome-applets
 
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 

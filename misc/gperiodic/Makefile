@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/03 18:49:46 reed Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/24 14:11:10 grant Exp $
 
 DISTNAME=		gperiodic-2.0.7
 PKGREVISION=		1
@@ -15,7 +15,7 @@ DEPENDS+=		gnome1-dirs>=1.0:../../misc/gnome1-dirs
 USE_BUILDLINK2=		# defined
 USE_PKGLOCALEDIR=	# defined
 USE_X11=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 ALL_TARGET=		gperiodic
