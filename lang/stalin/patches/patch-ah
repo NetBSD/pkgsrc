@@ -1,12 +1,12 @@
-$NetBSD: patch-ah,v 1.2 2000/12/10 12:20:48 jtb Exp $
+$NetBSD: patch-ah,v 1.3 2001/01/21 02:04:56 jtb Exp $
 
---- benchmarks/compile-and-run-stalin-benchmark.orig	Mon Apr 26 20:40:00 1999
+--- benchmarks/compile-and-run-stalin-benchmark.orig	Sun Dec 10 09:10:17 2000
 +++ benchmarks/compile-and-run-stalin-benchmark
 @@ -12,6 +12,6 @@
  o="$s $c"
  echo compile $1
  sed -f stalin.sed $1.sc >$1-stalin.sc
 -time ../stalin $o $2 $1-stalin
-+time %%STALIN%% $o $2 $1-stalin
++time @PREFIX@/bin/stalin -I @PREFIX@/lib/stalin -I @PREFIX@/include -I @PREFIX@/lib -I @GC_PREFIX@/include -I @GC_PREFIX@/lib $o $2 $1-stalin
  echo run $1
  time ./$1-stalin >/dev/null
