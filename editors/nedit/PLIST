@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:23:12 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/19 01:23:09 mjl Exp $
 bin/nc
 bin/nedit
-lib/X11/app-defaults/NEdit
 man/man1/nc.1
 man/man1/nedit.1
+share/doc/nedit/NEdit.ad
 share/doc/nedit/README
-share/doc/nedit//ReleaseNotes
+share/doc/nedit/ReleaseNotes
 share/doc/nedit/faq.txt
 @dirrm share/doc/nedit
