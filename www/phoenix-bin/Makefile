@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2003/04/14 19:56:28 grant Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/14 22:59:31 grant Exp $
 #
 
-DISTNAME=		phoenix-0.5-i686-pc-linux-gnu
+#DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
 PKGNAME=		phoenix-bin-0.5
 WRKSRC=			${WRKDIR}/phoenix
 CATEGORIES=		www
@@ -16,23 +16,25 @@ ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 CONFLICTS+=		phoenix-linux-[0-9]*
 
 NO_CONFIGURE=		# defined
+USE_PKGINSTALL=		YES
 
+FILES_SUBST+=		PLATFORM=${PLATFORM}
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-PHOENIX_LIB=		${PREFIX}/lib/phoenix-linux
 
 do-build:
 
 post-build:
-	${SED} -e "s|@PREFIX@|${PREFIX}|g" ${FILESDIR}/phoenix.sh >	\
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/phoenix.sh > \
 		${WRKDIR}/phoenix.sh
 
 do-install:
 	${INSTALL_DATA_DIR} ${PHOENIX_LIB}
-	cd ${WRKSRC} && ${CP} -r . ${PHOENIX_LIB}
-	${INSTALL_SCRIPT} ${WRKDIR}/phoenix.sh ${PREFIX}/bin/phoenix-linux
+	cd ${WRKSRC} && ${PAX} -rw -pm . ${PHOENIX_LIB}
+	${INSTALL_SCRIPT} ${WRKDIR}/phoenix.sh ${PREFIX}/bin/phoenix-${PLATFORM}
 
 post-install:
 	@${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
+	@${ECHO} bin/phoenix-${PLATFORM} >> ${PLIST_SRC}
 	@${FIND} ${PHOENIX_LIB} \( -type f -o -type l \) -print		\
 		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
 		>> ${PLIST_SRC}
