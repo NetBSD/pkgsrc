@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1597 2003/03/09 04:40:29 salo Exp $
+$NetBSD: CHANGES,v 1.1598 2003/03/09 06:08:21 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -996,3 +996,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gtkdiff to 1.8.0 [rh 2003-03-08]
 	Updated ethereal to 0.9.10 [salo 2003-03-09]
 	Updated fep to 1.0nb1 [salo 2003-03-09]
+	Updated libgdgeda to 2.0.9 [dmcmahill 2003-03-09]
