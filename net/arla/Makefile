@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2002/02/18 15:14:35 seb Exp $
+# $NetBSD: Makefile,v 1.21 2002/04/05 11:46:03 wennmach Exp $
 #
 
-DISTNAME=		arla-0.35.5
+DISTNAME=		arla-0.35.7
 CATEGORIES=		net security
 MASTER_SITES=		ftp://ftp.stacken.kth.se/pub/arla/
 
@@ -9,9 +9,25 @@ MAINTAINER=		wennmach@netbsd.org
 HOMEPAGE=		http://www.stacken.kth.se/project/arla/
 COMMENT=		Free AFS implementation from KTH
 
-DEPENDS+=		kth-krb4>=1.0.9:../../security/kth-krb4
+.if exists(/usr/lib/libroken.a)
+CONFIGURE_ARGS+=	--with-krb4-lib=/usr
+CONFIGURE_ARGS+=	--with-krb4-include=/usr/include/kerberosIV
+CONFIGURE_ARGS+=	--with-roken=/usr
+CONFIGURE_ARGS+=	--with-roken-include=/usr/include/krb5
+.else
+.include "../../security/kth-krb4/buildlink.mk"
+USE_BUILDLINK_ONLY=	# defined
+CONFIGURE_ARGS+=	--with-krb4-lib=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-krb4-include=${BUILDLINK_DIR}/include
+CONFIGURE_ARGS+=	--with-roken=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-roken-include=${BUILDLINK_DIR}/include/kerberosIV
+.endif
 
-CONFLICTS+=		lwp-[0-9]* rx-[0-9]*
+# for "amon":
+.include "../../mk/x11.buildlink.mk"
+
+CONFLICTS+=		lwp-[0-9]*
+CONFLICTS+=		rx-[0-9]*
 
 OSVERSION_SPECIFIC=	yes
 GNU_CONFIGURE=		yes
@@ -19,7 +35,6 @@ INFO_FILES=		arla.info
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--with-krb4=${PREFIX}
 .if !exists(/sys/lib/libkern/libkern.h)
 .if exists(${BSDSRCDIR}/sys/lib/libkern/libkern.h)
 CONFIGURE_ARGS+=	--with-sys=${BSDSRCDIR}/sys
@@ -57,13 +72,13 @@ post-install:
 		${ECHO} "Creating arla cache directory ${CACHEDIR}";          \
 		${INSTALL_DATA_DIR} ${CACHEDIR};                              \
 		${CHMOD} 700 ${CACHEDIR};                                     \
-		${CHOWN} ${ROOT_USER} ${CACHEDIR};                                    \
+		${CHOWN} ${ROOT_USER} ${CACHEDIR};                            \
 	fi
 	@if [ -e /sbin/mount_xfs ]; then                                      \
 		${ECHO} "/sbin/mount_xfs already exists";                     \
 	else                                                                  \
 		${ECHO} "Creating /sbin/mount_xfs";                           \
-		${LN} -s ${PREFIX}/sbin/mount_xfs /sbin/mount_xfs;             \
+		${LN} -s ${PREFIX}/sbin/mount_xfs /sbin/mount_xfs;            \
 	fi
 	@-${INSTALL_DATA_DIR} ${PREFIX}/share/examples/arla
 	@${SED} -e 's|@PREFIX@|${PREFIX}|g'                                   \
