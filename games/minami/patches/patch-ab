@@ -1,10 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/04/22 07:53:00 kei Exp $
+$NetBSD: patch-ab,v 1.2 2001/11/28 14:25:50 jlam Exp $
 
---- gen_act.orig	Sat Mar 31 14:11:46 2001
-+++ gen_act	Sat Mar 31 14:12:02 2001
-@@ -1,4 +1,4 @@
--#!/usr/bin/perl 
-+#!/usr/pkg/bin/perl 
+--- gen_act.orig	Wed Nov 28 09:12:21 2001
++++ gen_act
+@@ -209,7 +209,7 @@
+ map{$_ = "$_.o";}@k;
+ print MAKEFILE <<_T_;
  
- use strict;
- use vars qw(@LINE $scene_cond);
+-CFLAGS = -g -O -Wall
++CFLAGS += -g -O -Wall
+ 
+ libaction.a: @k
+ 	-rm -f libaction.a
