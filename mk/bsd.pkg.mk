@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1227 2003/07/31 13:50:11 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1228 2003/08/02 03:46:34 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -547,6 +547,9 @@ PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SITEARCH:S/^${LOCALBASE}\///}
 .if defined(PERL5_ARCHLIB)
 PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
 .endif
+
+# base vs. GNU tools
+.include "../../mk/tools.mk"
 
 .if defined(USE_NEW_TEXINFO)
 INFO_FILES?=
