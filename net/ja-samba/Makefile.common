@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.3 2003/05/27 15:59:08 taca Exp $
+# $NetBSD: Makefile.common,v 1.4 2003/08/30 01:31:11 taca Exp $
 
 DISTNAME=		samba-${SAMBA_BASE_VERS}-ja-${SAMBA_JA_VERS}
 SAMBA_BASE_VERS=	2.2.8a
-SAMBA_JA_VERS=		1.0
+SAMBA_JA_VERS=		1.1
 WRKSRC?=		${WRKDIR}/${DISTNAME}/source
 CATEGORIES?=		net
 MASTER_SITES=		ftp://ftp.samba.gr.jp/pub/samba-jp/samba-${SAMBA_BASE_VERS}-ja/ \
