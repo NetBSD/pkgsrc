@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2002/11/23 20:55:23 cjep Exp $
+--- gensolpkg.c.in.orig	Sat Nov 23 20:19:13 2002
++++ gensolpkg.c.in	Sat Nov 23 20:19:33 2002
+@@ -572,7 +572,7 @@
+ 	int	i;
+ 
+ 	(void) strcpy(prefix, "@PREFIX@");
+-	(void) strcpy(bmake, "@PREFIX@/bsd/bin/bmake");
++	(void) strcpy(bmake, "@ZOULARISBASE@/bin/bmake");
+ 	(void) strcpy(output, "/tmp");
+ 	(void) strcpy(pkgdir, "@SPOOLDIR@");
+ 	transform = 0;
