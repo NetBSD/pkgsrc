@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/01/29 07:40:11 martti Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/04/26 10:32:37 martti Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -6,6 +6,7 @@ include/libxml2/libxml/DOCBparser.h
 include/libxml2/libxml/HTMLparser.h
 include/libxml2/libxml/HTMLtree.h
 include/libxml2/libxml/SAX.h
+include/libxml2/libxml/c14n.h
 include/libxml2/libxml/catalog.h
 include/libxml2/libxml/debugXML.h
 include/libxml2/libxml/encoding.h
@@ -35,19 +36,42 @@ lib/libxml2.a
 lib/libxml2.la
 lib/libxml2.so
 lib/libxml2.so.6
-lib/libxml2.so.6.13
+lib/libxml2.so.6.20
 lib/pkgconfig/libxml-2.0.pc
 lib/xml2Conf.sh
 man/man1/xml2-config.1
 man/man1/xmlcatalog.1
 man/man1/xmllint.1
-man/man4/libxml.4
+man/man3/libxml.3
 share/aclocal/libxml.m4
+share/doc/libxml2-2.4.20/Copyright
+share/doc/libxml2-2.4.20/examples/testHTML.c
+share/doc/libxml2-2.4.20/examples/testSAX.c
+share/doc/libxml2-2.4.20/examples/testXPath.c
+share/doc/libxml2-2.4.20/examples/xmllint.c
+share/doc/libxml2-python-2.4.20/examples/attribs.py
+share/doc/libxml2-python-2.4.20/examples/build.py
+share/doc/libxml2-python-2.4.20/examples/cutnpaste.py
+share/doc/libxml2-python-2.4.20/examples/error.py
+share/doc/libxml2-python-2.4.20/examples/invalid.xml
+share/doc/libxml2-python-2.4.20/examples/push.py
+share/doc/libxml2-python-2.4.20/examples/pushSAX.py
+share/doc/libxml2-python-2.4.20/examples/serialize.py
+share/doc/libxml2-python-2.4.20/examples/tst.py
+share/doc/libxml2-python-2.4.20/examples/tst.xml
+share/doc/libxml2-python-2.4.20/examples/tstURI.py
+share/doc/libxml2-python-2.4.20/examples/tstxpath.py
+share/doc/libxml2-python-2.4.20/examples/valid.xml
+share/doc/libxml2-python-2.4.20/examples/validate.py
+share/doc/libxml2-python-2.4.20/examples/xpath.py
+share/doc/libxml2-python-2.4.20/examples/xpathext.py
+share/doc/libxml2-python-2.4.20/examples/xpathret.py
 share/doc/libxml2/html/DOM.gif
 share/doc/libxml2/html/FAQ.html
 share/doc/libxml2/html/book1.html
 share/doc/libxml2/html/encoding.html
 share/doc/libxml2/html/index.sgml
+share/doc/libxml2/html/libxml-c14n.html
 share/doc/libxml2/html/libxml-catalog.html
 share/doc/libxml2/html/libxml-debugxml.html
 share/doc/libxml2/html/libxml-docbparser.html
@@ -75,10 +99,18 @@ share/doc/libxml2/html/libxml-xmlmemory.html
 share/doc/libxml2/html/libxml-xpath.html
 share/doc/libxml2/html/libxml-xpathinternals.html
 share/doc/libxml2/html/libxml-xpointer.html
+share/doc/libxml2/html/libxml.gif
+share/doc/libxml2/html/redhat.gif
+share/doc/libxml2/html/smallfootonly.gif
 share/doc/libxml2/html/structure.gif
+share/doc/libxml2/html/w3c.png
 share/doc/libxml2/html/xml.html
-@dirrm share/doc/libxml2/html
-@dirrm share/doc/libxml2
 @dirrm include/libxml2/libxml
 @dirrm include/libxml2
+@dirrm share/doc/libxml2-2.4.20/examples
+@dirrm share/doc/libxml2-2.4.20
+@dirrm share/doc/libxml2-python-2.4.20/examples
+@dirrm share/doc/libxml2-python-2.4.20
+@dirrm share/doc/libxml2/html
+@dirrm share/doc/libxml2
 @unexec ${RMDIR} -p %D/lib/pkgconfig 2>/dev/null || ${TRUE}
