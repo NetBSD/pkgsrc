@@ -1,6 +1,27 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.7 2001/11/26 14:48:53 jlam Exp $
+# $NetBSD: deinstall,v 1.8 2001/11/26 20:37:39 jlam Exp $
+
+eval set -- ${PKG_USERS}
+for userset
+do
+	user=`
+		IFS=":"
+		set -- ${userset}
+		${ECHO} "$1"
+	`
+	ALL_USERS="${ALL_USERS} \"${user}\""
+done
+eval set -- ${PKG_GROUPS}
+for groupset
+do
+	group=`
+		IFS=":"
+		set -- ${groupset}
+		${ECHO} "$1"
+	`
+	ALL_GROUPS="${ALL_GROUPS} \"${group}\""
+done
 
 eval set -- ${CONF_FILES} ${SUPPORT_FILES}
 for file
@@ -48,11 +69,11 @@ do
 	ALL_DIRS="${ALL_DIRS} \"${dir}\""
 done
 ALL_DIRS=`
-	(	eval set -- ${ALL_DIRS}
-		for dir
-		do
-			${ECHO} "\"${dir}\""
-		done
+	( eval set -- ${ALL_DIRS}
+	  for dir
+	  do
+		${ECHO} "\"${dir}\""
+	  done
 	) | ${SORT} -r
 `
 
@@ -117,26 +138,38 @@ POST-DEINSTALL)
 		fi
 	done
 
-	if [ -n "${PKG_USER}" -o -n "${PKG_GROUP}" -o			\
+	if [ -n "${ALL_USERS}" -o -n "${ALL_GROUPS}" -o			\
 	     -n "${modified_files}" -o -n "${existing_dirs}" ]
 	then
 		${CAT} << EOF
 ===========================================================================
 If you won't be using ${PKGNAME} any longer, you may want to remove
 EOF
-		if [ -n "${PKG_USER}" ]
+		if [ -n "${ALL_USERS}" ]
 		then
-			${CAT} << EOF
-
-  * the \`${PKG_USER}' user
-EOF
+			${ECHO} ""
+			${ECHO} -n "  * the following users"
+			sep=":   "
+			eval set -- ${ALL_USERS}
+			for user
+			do
+				${ECHO} -n "${sep}${user}"
+				sep=", "
+			done
+			${ECHO} ""
 		fi
-		if [ -n "${PKG_GROUP}" ]
+		if [ -n "${ALL_GROUPS}" ]
 		then
-			${CAT} << EOF
-
-  * the \`${PKG_GROUP}' group
-EOF
+			${ECHO} ""
+			${ECHO} -n "  * the following groups"
+			sep=":  "
+			eval set -- ${ALL_GROUPS}
+			for group
+			do
+				${ECHO} -n "${sep}${group}"
+				sep=", "
+			done
+			${ECHO} ""
 		fi
 		if [ -n "${modified_files}" ]
 		then

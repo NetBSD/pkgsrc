@@ -1,54 +1,72 @@
 # start of install
 #
-# $NetBSD: install,v 1.4 2001/11/26 14:48:53 jlam Exp $
+# $NetBSD: install,v 1.5 2001/11/26 20:37:39 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
-	if [ -n "${PKG_GROUP}" ]
+	if [ -n "${PKG_GROUPS}" ]
 	then
-		# We need to check that ${PKG_GROUP} exists before adding the
-		# user.  Do it with chgrp to be able to use NIS.
-		#
-	        ${TOUCH} /tmp/grouptest.$$
-		${CHGRP} ${PKG_GROUP} /tmp/grouptest.$$ >/dev/null 2>&1
-		if [ $? -eq 0 ]
-		then
-			${ECHO} "Group '${PKG_GROUP}' already exists."
-		else
-			groupid_option=
-			if [ -n "${PKG_GROUPID}" ]
-			then
-				groupid_option="-g ${PKG_GROUPID}"
-			fi
-			${ECHO} "Creating '${PKG_GROUP}' group..."
-			${GROUPADD} ${groupid_option} "${PKG_GROUP}"
-			${ECHO} "Done."
-		fi
-		${RM} -f /tmp/grouptest.$$
+		eval set -- ${PKG_GROUPS}
+		for groupset
+		do
+			( IFS=":"
+			  set -- ${groupset}
+			  group="$1"; groupid="$2"
+			  
+			  # We need to check that ${PKG_GROUP} exists before
+			  # adding the user.  Do it with chgrp to be able to
+			  # use NIS.
+			  #
+	        	  ${TOUCH} /tmp/grouptest.$$
+			  if ${CHGRP} ${group} /tmp/grouptest.$$ >/dev/null 2>&1
+			  then
+				${ECHO} "Group '${group}' already exists."
+			  else
+				groupid_option=
+				if [ -n "${groupid}" ]
+				then
+					groupid_option="-g ${groupid}"
+				fi
+				${ECHO} "Creating group: ${group}"
+				${GROUPADD} ${groupid_option} "${group}"
+			  fi
+			  ${RM} -f /tmp/grouptest.$$
+			)
+		done
 	fi
 
-	if [ -n "${PKG_USER}" -a -n "${PKG_GROUP}" ]
+	if [ -n "${PKG_USERS}" ]
 	then
-		# Use `id' to be able to use NIS.
-		${ID} ${PKG_USER} >/dev/null 2>&1
-		if [ $? -eq 0 ]
-		then
-			${ECHO} "User '${PKG_USER}' already exists."
-		else
-			userid_option=
-			if [ -n "${PKG_USERID}" ]
-			then
-				userid_option="-u ${PKG_USERID}"
-			fi
-			${ECHO} "Creating '${PKG_USER}' user..."
-			${USERADD} -c "@PKG_USER_DESCR@"		\
-				${userid_option}			\
-				-g "${PKG_GROUP}"			\
-				-d "@PKG_USER_HOME@"			\
-				-s "@PKG_USER_SHELL@"			\
-				"${PKG_USER}"
-			${ECHO} "Done."
-		fi
+		eval set -- ${PKG_USERS}
+		for userset
+		do
+			( IFS=":"
+			  set -- ${userset}
+			  user="$1"; group="$2"; userid="$3"
+			  descr="${4:-${PKGBASE} ${user} user}"
+			  home="${5:-@PKG_USER_HOME@}"
+			  shell="${6:-@PKG_USER_SHELL@}"
+
+			  # Use `id' to be able to use NIS.
+			  if ${ID} "${user}" >/dev/null 2>&1
+			  then
+				${ECHO} "User '${user}' already exists."
+			  else
+				userid_option=
+				if [ -n "${userid}" ]
+				then
+					userid_option="-u ${userid}"
+				fi
+				${ECHO} "Creating user: ${user}"
+				${USERADD} -c "${descr}"		\
+					${userid_option}		\
+					-g "${group}"			\
+					-d "${home}"			\
+					-s "${shell}"			\
+					"${user}"
+			  fi
+			)
+		done
 	fi
         ;;
 
@@ -70,8 +88,9 @@ POST-INSTALL)
 		${CHMOD} "${mode}" "${dir}"
 	done
 
-	if [ -n "${CONF_FILES}" -o -n "${CONF_FILES_PERMS}" -o	\
-	     -n "${SUPPORT_FILES}" -o -n "${SUPPORT_FILES_PERMS}" ]
+	if [ -n "${CONF_FILES}" -o -n "${CONF_FILES_PERMS}" -o		\
+	     -n "${SUPPORT_FILES}" -o -n "${SUPPORT_FILES_PERMS}" -o	\
+	     -n "${RCD_SCRIPTS}" ]
 	then
 		${ECHO} "Installing configuration files:"
 	fi
@@ -85,9 +104,12 @@ POST-INSTALL)
 		then
 			${ECHO} "    ${file} already exists"
 		else
-			${ECHO} "    ${file}"
-			${CP} "${samplefile}" "${file}"
-			${CHMOD} @CONF_FILES_MODE@ "${file}"
+			if [ -e "${samplefile}" ]
+			then
+				${ECHO} "    ${file}"
+				${CP} "${samplefile}" "${file}"
+				${CHMOD} @CONF_FILES_MODE@ "${file}"
+			fi
 		fi
 	done
 	eval set -- ${SUPPORT_FILES}
@@ -100,9 +122,12 @@ POST-INSTALL)
 		then
 			${ECHO} "    ${file} already exists"
 		else
-			${ECHO} "    ${file}"
-			${CP} "${samplefile}" "${file}"
-			${CHMOD} @SUPPORT_FILES_MODE@ "${file}"
+			if [ -e "${samplefile}" ]
+			then
+				${ECHO} "    ${file}"
+				${CP} "${samplefile}" "${file}"
+				${CHMOD} @SUPPORT_FILES_MODE@ "${file}"
+			fi
 		fi
 	done
 	eval set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS}
@@ -115,11 +140,14 @@ POST-INSTALL)
 		then
 			${ECHO} "    ${file} already exists"
 		else
-			${ECHO} "    ${file}"
-			${CP} "${samplefile}" "${file}"
-			${CHOWN} "${owner}" "${file}"
-			${CHGRP} "${group}" "${file}"
-			${CHMOD} ${mode} "${file}"
+			if [ -e "${samplefile}" ]
+			then
+				${ECHO} "    ${file}"
+				${CP} "${samplefile}" "${file}"
+				${CHOWN} "${owner}" "${file}"
+				${CHGRP} "${group}" "${file}"
+				${CHMOD} ${mode} "${file}"
+			fi
 		fi
 	done
 	eval set -- ${RCD_SCRIPTS}
@@ -132,9 +160,12 @@ POST-INSTALL)
 		then
 			${ECHO} "    ${file} already exists"
 		else
-			${ECHO} "    ${file}"
-			${CP} "${samplefile}" "${file}"
-			${CHMOD} @RCD_SCRIPTS_MODE@ "${file}"
+			if [ -e "${samplefile}" ]
+			then
+				${ECHO} "    ${file}"
+				${CP} "${samplefile}" "${file}"
+				${CHMOD} @RCD_SCRIPTS_MODE@ "${file}"
+			fi
 		fi
 	done
 
