@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3,v 1.1 2004/02/11 03:22:37 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.1 2004/02/11 03:26:44 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use jabberd.
 #
