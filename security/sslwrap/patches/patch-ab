@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/30 20:04:25 rh Exp $
+
+--- apps.h.orig	Sat Nov 11 23:01:25 2000
++++ apps.h
+@@ -62,7 +62,7 @@
+ #ifdef FLAT_INC
+ #include "e_os.h"
+ #else
+-#include "../e_os.h"
++#include OPENSSL"e_os.h"
+ #endif
+ 
+ #include OPENSSL"buffer.h"
