@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/26 04:11:11 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/29 13:47:29 zuntum Exp $
 #
 
-DISTNAME=	colorize_0.2.6
-PKGNAME=	colorize-0.2.6
+DISTNAME=	colorize_0.2.7
+PKGNAME=	colorize-0.2.7
 CATEGORIES=	misc
 MASTER_SITES=	http://nrg.martos.bme.hu/release/colorize/download/bz2/
 EXTRACT_SUFX=	.tar.bz2
