@@ -1,4 +1,4 @@
-# $NetBSD
+# $NetBSD: Makefile,v 1.5 2002/05/30 19:16:01 schmonz Exp $
 #
 
 DISTNAME=	qt3-${QTVERSION}
