@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:22:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/27 19:57:02 jlam Exp $
 #
 
 DISTNAME=		urlget-1.3
@@ -8,9 +8,10 @@ MASTER_SITES=		ftp://ftp.gw.com/pub/people/kim/
 MAINTAINER=		kim@tac.nyc.ny.us
 COMMENT=		simple command-line tool to retrieve an HTTP URL
 
+USE_BUILDLINK_ONLY=	YES
+
 .include "../../mk/bsd.prefs.mk"
 
-NO_CONFIGURE=		yes
 .if ${OPSYS} == "SunOS"
 ALL_TARGET=		svr4
 .else
