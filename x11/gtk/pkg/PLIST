@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 1999/08/28 22:54:08 rh Exp $
+@comment $NetBSD: PLIST,v 1.23 1999/10/22 23:35:04 tron Exp $
 bin/gtk-config
 etc/gtk/gtkrc.cs
 etc/gtk/gtkrc.hr
@@ -10,6 +10,38 @@ etc/gtk/gtkrc.ja
 etc/gtk/gtkrc.ko
 etc/gtk/gtkrc.ru
 etc/gtk/gtkrc.iso-8859-2
+etc/gtk/gtkrc.bg
+etc/gtk/gtkrc.el
+etc/gtk/gtkrc.eo
+etc/gtk/gtkrc.he
+etc/gtk/gtkrc.hy
+etc/gtk/gtkrc.tr
+etc/gtk/gtkrc.th
+etc/gtk/gtkrc.uk
+etc/gtk/gtkrc.iso-8859-5
+etc/gtk/gtkrc.iso-8859-13
+etc/gtk/gtkrc.iso-8859-14
+etc/gtk/gtkrc.iso-8859-15
+etc/gtk/gtkrc.zh_CN
+etc/gtk/gtkrc.zh_TW.Big5
+etc/gtk/gtkrc.ka_GE.georgianacademy
+etc/gtk/gtkrc.ka_GE.georgianps
+etc/gtk/gtkrc.vi_VN.tcvn
+etc/gtk/gtkrc.vi_VN.viscii
+etc/gtk/gtkrc.ro
+etc/gtk/gtkrc.sq
+etc/gtk/gtkrc.bg_BG.iso88595
+etc/gtk/gtkrc.mk
+etc/gtk/gtkrc.sr
+etc/gtk/gtkrc.ru_RU.iso88595
+etc/gtk/gtkrc.lt
+etc/gtk/gtkrc.cy
+etc/gtk/gtkrc.ga
+etc/gtk/gtkrc.et
+etc/gtk/gtkrc.ka
+etc/gtk/gtkrc.vi_VN.viscii111
+etc/gtk/gtkrc.vi_VN.tcvn5712
+etc/gtk/gtkrc.vi
 include/gdk/gdk.h
 include/gdk/gdkrgb.h
 include/gdk/gdkcursors.h
@@ -130,9 +162,9 @@ include/gtk/gtklayout.h
 include/gtk/gtkplug.h
 include/gtk/gtksocket.h
 include/gtk/gtkthemes.h
-lib/libgdk.so.12.4
+lib/libgdk.so.12.6
 lib/libgdk.a
-lib/libgtk.so.12.4
+lib/libgtk.so.12.6
 lib/libgtk.a
 man/man1/gtk-config.1
 @unexec install-info --delete %D/info/gdk.info %D/info/dir
@@ -148,6 +180,15 @@ info/gtk.info-4
 info/gtk.info-5
 info/gtk.info-6
 share/aclocal/gtk.m4
+share/locale/nl/LC_MESSAGES/gtk+.mo
+share/locale/da/LC_MESSAGES/gtk+.mo
+share/locale/pt_BR/LC_MESSAGES/gtk+.mo
+share/locale/ro/LC_MESSAGES/gtk+.mo
+share/locale/el/LC_MESSAGES/gtk+.mo
+share/locale/eu/LC_MESSAGES/gtk+.mo
+share/locale/ga/LC_MESSAGES/gtk+.mo
+share/locale/et/LC_MESSAGES/gtk+.mo
+share/locale/uk/LC_MESSAGES/gtk+.mo
 share/locale/ko/LC_MESSAGES/gtk+.mo
 share/locale/fr/LC_MESSAGES/gtk+.mo
 share/locale/de/LC_MESSAGES/gtk+.mo
@@ -169,6 +210,8 @@ share/locale/wa/LC_MESSAGES/gtk+.mo
 share/locale/hr/LC_MESSAGES/gtk+.mo
 share/locale/sl/LC_MESSAGES/gtk+.mo
 share/themes/Default/gtk/gtkrc
+@exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/gtk.m4 ${LOCALBASE}/share/aclocal/gtk.m4
+@unexec test %D = ${LOCALBASE} || rm ${LOCALBASE}/share/aclocal/gtk.m4
 @unexec rmdir %D/share/aclocal 2>/dev/null || true
 @dirrm share/themes/Default/gtk
 @dirrm share/themes/Default
