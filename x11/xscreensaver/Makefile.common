@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2002/04/05 04:50:23 mycroft Exp $
+# $NetBSD: Makefile.common,v 1.29 2002/04/05 12:05:31 skrll Exp $
 #
 
 DISTNAME=		xscreensaver-4.02
@@ -9,7 +9,6 @@ MASTER_SITES=		${HOMEPAGE} \
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.jwz.org/xscreensaver/
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		gle-[0-9]*:../../graphics/gle
 DEPENDS+=		gdk-pixbuf>=0.11.0nb1:../../graphics/gdk-pixbuf
@@ -46,9 +45,6 @@ post-patch:
 	f=xscreensaver.kss ; \
 	[ -f $$f.BAK ] || ${MV} $$f $$f.BAK ; \
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' < $$f.BAK > $$f
-
-pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
 
 .include "../../mk/bsd.prefs.mk"
 
