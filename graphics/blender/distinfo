@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2004/01/10 19:59:02 jschauma Exp $
+$NetBSD: distinfo,v 1.9 2004/01/10 20:25:10 jschauma Exp $
 
-SHA1 (blender-2.31.tar.bz2) = aa40963ed2d812a964f3d6db4b3776f78f8e01ba
-Size (blender-2.31.tar.bz2) = 4546274 bytes
+SHA1 (blender-2.31a.tar.bz2) = 72cacaab9b1e0e1f609fb984994be4eed41e7746
+Size (blender-2.31a.tar.bz2) = 4540160 bytes
