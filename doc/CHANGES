@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4098 2003/12/14 14:58:37 wiz Exp $
+$NetBSD: CHANGES,v 1.4099 2003/12/14 15:14:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5130,3 +5130,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added php4-zip-4.3.4 [jdolecek 2003-12-14]
 	Added php4-mssql-4.3.4 [jdolecek 2003-12-14]
 	Updated libgpg-error to 0.6nb1 [wiz 2003-12-14]
+	Updated gpgme to 0.4.3 [wiz 2003-12-14]
+	Updated gpa to 0.7.0 [wiz 2003-12-14]
