@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/07/05 14:39:25 seb Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/03/02 11:43:39 seb Exp $
 bin/guile
 bin/guile-snarf
 bin/guile-config
@@ -100,41 +100,6 @@ include/guile/srfi/srfi-13.h
 include/guile/srfi/srfi-14.h
 include/guile-readline/readline.h
 include/libguile.h
-info/guile.info
-info/guile.info-1
-info/guile.info-2
-info/guile.info-3
-info/guile.info-4
-info/guile.info-5
-info/guile.info-6
-info/guile.info-7
-info/guile.info-8
-info/guile.info-9
-info/guile.info-10
-info/guile.info-11
-info/guile.info-12
-info/guile.info-13
-info/guile.info-14
-info/guile.info-15
-info/guile.info-16
-info/guile.info-17
-info/guile.info-18
-info/guile.info-19
-info/guile.info-20
-info/guile.info-21
-info/guile.info-22
-info/guile.info-23
-info/guile-tut.info
-info/goops.info
-info/goops.info-1
-info/goops.info-2
-info/goops.info-3
-info/r5rs.info
-info/r5rs.info-1
-info/r5rs.info-2
-info/r5rs.info-3
-info/r5rs.info-4
-info/r5rs.info-5
 lib/libguile.a
 lib/libguile.la
 lib/libguile.so
