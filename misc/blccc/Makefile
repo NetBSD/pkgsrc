@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:12:58 tv Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/14 20:36:54 minskim Exp $
 #
 
 DISTNAME=		blccc-1.99
@@ -17,6 +17,9 @@ SHLIBTOOL_OVERRIDE=	libtool
 
 EGDIR=			${PREFIX}/share/examples/blccc
 
+.include "../../devel/blib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}/movies
@@ -27,7 +30,5 @@ post-install:
 	do								\
 		${INSTALL_DATA} ${WRKSRC}/examples/$${f} ${EGDIR}/$${f};\
 	done
-
-.include "../../devel/blib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

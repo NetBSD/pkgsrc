@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/10/03 00:18:16 tv Exp $
+# $NetBSD: Makefile,v 1.21 2004/12/14 20:36:55 minskim Exp $
 #
 
 DISTNAME=	rox-1.2.0
@@ -21,6 +21,10 @@ USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gtk2
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.libxml2}/include/libxml2/libxml
+
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 post-patch:
 	${SED} -e "s:@PREFIX@:"${PREFIX}":g" < ${FILESDIR}/rox > \
@@ -45,6 +49,4 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${DISTNAME}/rox ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/rox.1 ${PREFIX}/man/man1
 
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
