@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:03:46 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/08 02:21:18 kim Exp $
 bin/nn
 bin/nnadmin
 bin/nnbatch
@@ -11,27 +11,6 @@ bin/nnstats
 bin/nntidy
 bin/nnusage
 bin/nnview
-lib/nn/aux
-lib/nn/conf
-lib/nn/help/Manual
-lib/nn/help/adm.upgrade1
-lib/nn/help/adm.upgrade2
-lib/nn/help/adm.upgrade3
-lib/nn/help/adm.upgrade4
-lib/nn/help/adm.welcome
-lib/nn/help/help.attr
-lib/nn/help/help.commands
-lib/nn/help/help.extended
-lib/nn/help/help.help
-lib/nn/help/help.map
-lib/nn/help/help.menu
-lib/nn/help/help.more
-lib/nn/help/help.read
-lib/nn/help/help.set
-lib/nn/help/help.show
-lib/nn/help/help.sort
-lib/nn/help/help.variables
-lib/nn/upgrade_rc
 man/man1/nn.1
 man/man1/nnacct.1
 man/man1/nnadmin.1
@@ -46,5 +25,26 @@ man/man1/nnusage.1
 man/man1/nnview.1
 man/man8/nnmaster.8
 man/man8/nnspew.8
-@dirrm lib/nn/help
-@dirrm lib/nn
+share/nn/aux
+share/nn/conf
+share/nn/help/Manual
+share/nn/help/adm.upgrade1
+share/nn/help/adm.upgrade2
+share/nn/help/adm.upgrade3
+share/nn/help/adm.upgrade4
+share/nn/help/adm.welcome
+share/nn/help/help.attr
+share/nn/help/help.commands
+share/nn/help/help.extended
+share/nn/help/help.help
+share/nn/help/help.map
+share/nn/help/help.menu
+share/nn/help/help.more
+share/nn/help/help.read
+share/nn/help/help.set
+share/nn/help/help.show
+share/nn/help/help.sort
+share/nn/help/help.variables
+share/nn/upgrade_rc
+@dirrm share/nn/help
+@dirrm share/nn

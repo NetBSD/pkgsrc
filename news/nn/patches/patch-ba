@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.2 1999/08/22 22:55:46 kim Exp $
+$NetBSD: patch-ba,v 1.3 2002/07/08 02:21:20 kim Exp $
 
---- term.c.orig	Wed Jun  9 14:19:01 1999
-+++ term.c	Sun Aug 22 18:28:48 1999
-@@ -47,9 +47,9 @@
+--- term.c.orig	Sun Jun 16 01:54:33 2002
++++ term.c	Sun Jul  7 21:33:10 2002
+@@ -42,9 +42,9 @@
  #  include <termio.h>
  # endif	/* USE_TERMCAP */
  #else
@@ -13,8 +13,8 @@ $NetBSD: patch-ba,v 1.2 1999/08/22 22:55:46 kim Exp $
 +#endif	/* HAVE_TERMIOS_H */
  #endif
  
- /* SYSV curses.h clash */
-@@ -413,6 +413,12 @@
+ #ifdef SYSV_RESIZING
+@@ -401,6 +401,12 @@
  #endif	/* FAKE_INTERRUPT */
  
  static unsigned sp_table[] = {

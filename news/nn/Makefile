@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2002/03/13 23:07:29 jmc Exp $
+# $NetBSD: Makefile,v 1.17 2002/07/08 02:21:18 kim Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
 #
 
-DISTNAME=	nn-6.5.4
+DISTNAME=	nn-6.6.4
 CATEGORIES=	news
-MASTER_SITES=	ftp://ftp.gw.com/pub/unix/news/nn/ \
-		ftp://ftp.visi.com/users/mtpins/nn/
+MASTER_SITES=	ftp://ftp.gw.com/pub/unix/news/nn/nn-6.6/ \
+		ftp://ftp.gw.com/pub/unix/news/nn/nn-6.6/old/ \
+		ftp://ftp.nndev.org/pub/nn-6.6/ \
+		ftp://ftp.nndev.org/pub/nn-6.6/old/
 
 MAINTAINER=	packages@netbsd.org
 COMMENT=	NN newsreader
@@ -13,12 +15,6 @@ COMMENT=	NN newsreader
 BUILD_DEFS+=	USE_INN
 
 .include "../../mk/bsd.prefs.mk"
-
-.if defined(USE_INN) && ${USE_INN} == YES
-DEPENDS=	inn>=2.2:../inn
-.else
-DEPENDS=	nntpclnt-1.6.1:../nntpclnt
-.endif
 
 .if ${OPSYS} == "SunOS"
 SFILE=		s-sunos5.h
