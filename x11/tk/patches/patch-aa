@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.11 2004/04/09 23:39:00 danw Exp $
+$NetBSD: patch-aa,v 1.12 2004/10/01 13:35:53 adam Exp $
 
 --- Makefile.in.orig	Mon Mar  1 19:04:48 2004
 +++ Makefile.in
@@ -11,15 +11,6 @@ $NetBSD: patch-aa,v 1.11 2004/04/09 23:39:00 danw Exp $
  
  # The directory containing the Tcl library archive file appropriate
  # for this version of Tk:
-@@ -118,7 +118,7 @@ CFLAGS			= @CFLAGS@ @CFLAGS_DEFAULT@
- # Flags to pass to the linker
- LDFLAGS_DEBUG		= @LDFLAGS_DEBUG@
- LDFLAGS_OPTIMIZE	= @LDFLAGS_OPTIMIZE@
--LDFLAGS			= @LDFLAGS@ @LDFLAGS_DEFAULT@
-+LDFLAGS			= @LD_FLAGS@ @LDFLAGS@ @LDFLAGS_DEFAULT@
- 
- # A "-I" switch that can be used when compiling to make all of the
- # X11 include files accessible (the configure script will try to
 @@ -176,8 +176,8 @@ SHELL			= /bin/sh
  INSTALL_STRIP_PROGRAM   = -s
  INSTALL_STRIP_LIBRARY   = -S -S
