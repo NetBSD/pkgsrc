@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3317 2005/03/28 10:42:50 wiz Exp $
+$NetBSD: TODO,v 1.3318 2005/03/28 14:46:55 recht Exp $
 
 Suggested new packages
 ======================
@@ -321,8 +321,6 @@ Suggested package updates
 	o bind-9.3.1
 	o bioperl-1.5.0
 	o bitlbee-0.92
-	o bittorrent-4.0
-	o bittorrent-gui-4.0
 	o blitz++-0.8
 	o bmake-20050322
 	o boaconstructor-0.3.1
@@ -648,7 +646,6 @@ Suggested package updates
 	o mknmz-wwwoffle-0.7.2
 	o mlview-0.7.1
 	o mmix-20041014
-	o mono-1.0.6
 	o moscow_ml-2.01
 	o most-4.10.1
 	o mowitz-0.3.0
