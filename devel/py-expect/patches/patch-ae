@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/03/21 23:36:07 jwise Exp $
+--- explib/Makefile.in.orig	Sat Nov  4 05:27:16 2000
++++ explib/Makefile.in	Wed Mar 21 15:01:18 2001
+@@ -13,11 +13,11 @@
+ OBJS     = exp_clib.o $(EXPLIB_REGEXP)
+ DUMMYOBJS= dummy.o
+ 
+-TARGET   = libexplib.a libexplib.as
++TARGET   = libexplib.a
+ all: $(TARGET)
+ 
+ libexplib.a: $(OBJS)
+-	ar r $@ $(OBJS)
++	${LD} -o libexplib.la $(OBJS:.o=.lo)
+ libexplib.as: $(OBJS:.o=.os)
+ 	ar r $@ $(OBJS:.o=.os)
+ libdummy.a: $(DUMMYOBJS)
