@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2004/02/21 00:08:00 kristerw Exp $
+# $NetBSD: Makefile,v 1.107 2004/03/31 04:39:17 xtraeme Exp $
 #
 
-DISTNAME=		xmame-0.79.1
+DISTNAME=		xmame-0.80.1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,7 +14,7 @@ RESTRICTED=		"selling is not allowed"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
@@ -24,6 +24,8 @@ UNLIMIT_RESOURCES=	datasize
 
 .include "../../mk/bsd.prefs.mk"
 
+BUILD_DEFS+=		USE_ESOUND
+
 ROMPATH=		${PREFIX}/share/${TARGET}
 SPOOLDIR=		/var/games/${TARGET}
 
@@ -31,7 +33,11 @@ MAKE_FLAGS+=		TARGET="${TARGET:S/x//}"
 MAKE_FLAGS+=		LIBS="${LDFLAGS} ${LIBS}"
 MAKE_FLAGS+=		CFLAGS="${CFLAGS}"
 MAKE_FLAGS+=		X11INC= X11LIB=
+
+.if !empty(USE_ESOUND:M[Yy][Ee][Ss])
 MAKE_FLAGS+=		SOUND_ESOUND=1
+.include "../../audio/esound/buildlink3.mk"
+.endif
 
 MAME_DISP_METHOD?=	x11
 
@@ -104,7 +110,5 @@ do-install:
 		${PREFIX}/man/man6/${TARGET}.6
 	${INSTALL_DATA_DIR} ${ROMPATH}
 	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc ${ROMPATH}/${TARGET}rc
-
-.include "../../audio/esound/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

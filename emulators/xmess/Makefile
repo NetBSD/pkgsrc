@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2004/02/21 00:06:36 kristerw Exp $
+# $NetBSD: Makefile,v 1.48 2004/03/31 04:39:17 xtraeme Exp $
 #
 
-DISTNAME=		xmame-0.79.1
-PKGNAME=		xmess-0.79.1
+DISTNAME=		xmame-0.80.1
+PKGNAME=		xmess-0.80.1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -32,7 +32,13 @@ MAKE_FLAGS+=		TARGET="${TARGET:S/x//}"
 MAKE_FLAGS+=		LIBS="${LDFLAGS} ${LIBS}"
 MAKE_FLAGS+=		CFLAGS="${CFLAGS}"
 MAKE_FLAGS+=		X11INC= X11LIB=
+
+BUILD_DEFS+=		USE_ESOUND
+
+.if !empty(USE_ESOUND:M[Yy][Ee][Ss])
 MAKE_FLAGS+=		SOUND_ESOUND=1
+.include "../../audio/esound/buildlink3.mk"
+.endif
 
 MAME_DISP_METHOD?=	x11
 
@@ -106,7 +112,5 @@ do-install:
 		${PREFIX}/man/man6/${TARGET}.6
 	${INSTALL_DATA_DIR} ${ROMPATH}
 	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc ${ROMPATH}/${TARGET}rc
-
-.include "../../audio/esound/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
