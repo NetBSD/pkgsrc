@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1778 2003/03/26 22:49:54 wiz Exp $
+$NetBSD: CHANGES,v 1.1779 2003/03/27 00:00:41 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1320,3 +1320,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.16.1 [gehenna 2003-03-26]
 	Added clamav-0.54 [agc 2003-03-26]
 	Added SDL_sound-1.0.0 [wiz 2003-03-26]
+	Updated opera6 to 6.12 [jdolecek 2003-03-26]
