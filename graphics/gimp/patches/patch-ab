@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.5 2000/12/31 05:26:50 dogcow Exp $
+
+diff -ur ./patterns.c /net/admin/build/gimp/bluh/gimp/app/patterns.c
+--- app/patterns.c.orig       Tue Dec 19 08:14:44 2000
++++ app/patterns.c      Tue Dec 26 11:13:31 2000
+@@ -298,6 +298,8 @@
+ 
+   pattern = pattern_load_real (fd, filename, FALSE);
+ 
++  close (fd);
++
+   if (!pattern)
+     return;
+
