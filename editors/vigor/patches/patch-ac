@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2005/01/22 02:35:44 minskim Exp $
+
+--- configure.in.orig	2000-05-02 21:27:52.000000000 -0500
++++ configure.in
+@@ -243,7 +243,8 @@ dnl Make sure we can find a Tcl/Tk inter
+ LIBOBJS="tcl.o $LIBOBJS"
+ dnl GNU/Linux Tcl requires -ldl
+ AC_CHECK_LIB(dl,dlopen)
+-LIBS="$LIBS -lm"
++. $TCLCONFIG_SH
++LIBS="$LIBS $TCL_LIBS"
+ AC_SEARCH_LIBS(Tcl_Init,tcl tcl82 tcl8.2 tcl80 tcl8.0,,dnl
+   AC_MSG_ERROR([Tcl is required for Vigor but could not be located.]))
+ AC_SEARCH_LIBS(Tk_Init,tk tk82 tk8.2 tk80 tk8.0,,dnl
