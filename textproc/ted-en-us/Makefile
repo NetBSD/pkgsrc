@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2000/03/02 16:40:34 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.4 2000/04/22 11:08:45 dmcmahill Exp $
 
-DISTNAME=	ted-2.6.src
-PKGNAME=	ted-en-us-2.6
-WRKSRC=		${WRKDIR}/Ted-2.6
+DISTNAME=	ted-2.8.src
+PKGNAME=	ted-en-us-2.8
+WRKSRC=		${WRKDIR}/Ted-2.8
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/ \
 		ftp://metalab.unc.edu/pub/packages/editors/ted/
