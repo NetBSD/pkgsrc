@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2002/03/18 20:24:07 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2002/09/23 10:31:25 jlam Exp $
 
 --- Makefile.orig	Fri Jan 25 13:42:54 2002
 +++ Makefile
@@ -29,8 +29,8 @@ $NetBSD: patch-aa,v 1.2 2002/03/18 20:24:07 wiz Exp $
 +EXTRALIBS = $(IPV6_LDFLAGS) #-lnsl -lsocket 
  
 +# specify X11 cflags and libdir if your system needs it
-+XCFLAGS = -I${BUILDLINK_X11_DIR}/include -Wl,-R${X11BASE}/lib
-+XLIBDIR = -L${BUILDLINK_X11_DIR}/lib
++XCFLAGS = -I${X11BASE}/include -Wl,-R${X11BASE}/lib
++XLIBDIR = -L${X11BASE}/lib
 +
 +# IPv6 Settings
 +IPV6_CFLAGS = #-DINET6 #-I/usr/inet6/include
