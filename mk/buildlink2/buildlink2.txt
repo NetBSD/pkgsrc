@@ -1,7 +1,7 @@
-$NetBSD: buildlink2.txt,v 1.7 2002/12/25 05:16:12 schmonz Exp $
+$NetBSD: buildlink2.txt,v 1.8 2002/12/26 04:12:49 schmonz Exp $
 
 The buildlink2 framework is a departure from the original buildlink
-framework, which tries to do its work up-front before the configure
+framework, which tried to do its work up-front before the configure
 process and fix things up after the build process.  Over time, the
 buildlink framework grew overly complex to deal with software that stored
 build-time information in the installed files, e.g. GNOME packages.  The
@@ -28,7 +28,7 @@ To-do list:
 
 Here are some FAQs and answers regarding buildlink2:
 
-Q1: Why is the buildlink2 framework better than the existing one?
+Q1: Why is the buildlink2 framework better than the old one?
 A1: There are several reasons:
 
     (1) The new framework makes it simpler to buildinkify a package because
@@ -59,7 +59,7 @@ A1: There are several reasons:
 	process, so we don't accidentally trigger rebuilds of those files
 	during the install process.
 
-Q2: How does this affect packages that use the existing buildlink framework?
+Q2: How does this affect packages that use the old buildlink framework?
 A2: The buildlink and buildlink2 frameworks can coexist within pkgsrc, but
     packages that use the new framework must use it exclusively, i.e. a
     package Makefile can't include both buildlink.mk and buildlink2.mk
