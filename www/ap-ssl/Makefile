@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/12/01 01:00:17 bad Exp $
+# $NetBSD: Makefile,v 1.11 1999/12/07 20:15:16 bad Exp $
 #
 
 DISTNAME=	mod_ssl-2.4.8-1.3.9
@@ -33,7 +33,7 @@ fetch-depends:
 
 CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs --with-ssl=${PREFIX}
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
-CONFIUGRE_ARGS+=	--with-rsa=${PREFIX}
+CONFIUGRE_ARGS+=	--with-rsa=${PREFIX}/lib
 .endif
 
 post-install:
