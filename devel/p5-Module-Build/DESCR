@@ -1,0 +1,2 @@
+This is a beta version of a new module "Module::Build". It is meant to
+be a replacement for "ExtUtils::MakeMaker".
