@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6304 2004/06/24 23:14:07 taya Exp $
+$NetBSD: CHANGES,v 1.6305 2004/06/24 23:35:35 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3051,3 +3051,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated roundup to 0.7.5 [recht 2004-06-24]
 	Updated thunderbird to 0.7 [taya 2004-06-24]
 	Updated thunderbird-gtk2 to 0.7 [taya 2004-06-24]
+	Removed gmodplay [ben 2004-06-24]
+	Removed iso-pernangband [ben 2004-06-24]
+	Added lcab-1.0b10 [ben 2004-06-24]
