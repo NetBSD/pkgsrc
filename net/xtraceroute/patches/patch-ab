@@ -1,58 +1,40 @@
-$NetBSD: patch-ab,v 1.4 2000/04/05 20:56:03 tron Exp $
+$NetBSD: patch-ab,v 1.5 2000/11/03 00:15:49 itojun Exp $
 
---- configure.orig	Sun Feb 28 05:56:14 1999
-+++ configure	Wed Apr  5 22:53:00 2000
-@@ -3422,14 +3422,14 @@
- fi
- 
+--- configure-	Fri Nov  3 09:13:56 2000
++++ configure	Fri Nov  3 09:13:58 2000
+@@ -2310,2 +2310,3 @@
+   gt_cv_func_gettext_libintl=yes
++		  LIBS="$LIBS -lintl"
+ else
+@@ -3424,4 +3425,4 @@
  
 -echo $ac_n "checking for glBegin in -lMesaGL""... $ac_c" 1>&6
 -echo "configure:3427: checking for glBegin in -lMesaGL" >&5
 +echo $ac_n "checking for glBegin in -lGL""... $ac_c" 1>&6
 +echo "configure:3427: checking for glBegin in -lGL" >&5
  ac_lib_var=`echo MesaGL'_'glBegin | sed 'y%./+-%__p_%'`
- if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
+@@ -3431,3 +3432,3 @@
    ac_save_LIBS="$LIBS"
 -LIBS="-lMesaGL $GTK_LIBS $GL_LDOPTS $LIBS"
 +LIBS="-lGL $GTK_LIBS $GL_LDOPTS $LIBS"
  cat > conftest.$ac_ext <<EOF
- #line 3435 "configure"
- #include "confdefs.h"
-@@ -3554,7 +3554,7 @@
- elif test "x$with_lib_MesaGL" = "xyes"; then
- 
+@@ -3556,3 +3557,3 @@
   if test "x$have_MesaGL" = "xyes"; then
 -  GL_LIBS="$GL_LDOPTS -lMesaGLU -lMesaGL"
 +  GL_LIBS="$GL_LDOPTS -lGLU -lGL"
   else
-   { echo "configure: error: Missing MesaGL library" 1>&2; exit 1; }
-  fi
-@@ -3564,7 +3564,7 @@
-  if test "x$have_GL" = "xyes"; then
-   GL_LIBS="$GL_LDOPTS -lGLU -lGL"
+@@ -3566,3 +3567,3 @@
   elif test "x$have_MesaGL" = "xyes"; then
 -  GL_LIBS="$GL_LDOPTS -lMesaGLU -lMesaGL"
 +  GL_LIBS="$GL_LDOPTS -lGLU -lGL"
   else
-   { echo "configure: error: You need GL or MesaGL libraries" 1>&2; exit 1; }
-  fi
-@@ -3630,7 +3630,7 @@
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
+@@ -3632,3 +3633,3 @@
    ac_save_LIBS="$LIBS"
 -LIBS="-ltiff  $LIBS"
 +LIBS="-ltiff -ljpeg -lz $LIBS"
  cat > conftest.$ac_ext <<EOF
- #line 3636 "configure"
- #include "confdefs.h"
-@@ -3666,7 +3666,7 @@
- if test "x$have_libtiff" = "x" ; then
-         { echo "configure: error: Missing tiff library" 1>&2; exit 1; }        
+@@ -3668,3 +3669,3 @@
  else
 -	LIBS="$LIBS -ltiff"
 +	LIBS="$LIBS -ltiff -ljpeg -lz"
  fi
- 
- echo $ac_n "checking for ANSI C header files""... $ac_c" 1>&6

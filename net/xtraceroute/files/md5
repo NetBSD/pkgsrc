@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.4 1999/12/15 21:34:05 windsor Exp $
+$NetBSD: md5,v 1.5 2000/11/03 00:15:48 itojun Exp $
 
 MD5 (xtraceroute-0.8.14.tar.gz) = c4f16fecae49b8bfa2a9bc9b036aa442
 MD5 (ndg_files.tar.gz) = 0e2d6ab6a780b49acbd8f706840380d9
