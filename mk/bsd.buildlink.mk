@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.35 2001/10/04 03:29:08 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.36 2001/10/05 00:09:23 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -239,10 +239,12 @@ _REPLACE_LIBNAMES_SCRIPT=						\
 		fi;							\
 	fi
 
+MAKEFILE_PATTERNS+=	Makefile
+MAKEFILE_PATTERNS+=	Makeconf
+MAKEFILE_PATTERNS+=	*.mk
+
 .if (${OBJECT_FMT} == "a.out")
-REPLACE_LIBNAME_PATTERNS+=	Makefile
-REPLACE_LIBNAME_PATTERNS+=	Makeconf
-REPLACE_LIBNAME_PATTERNS+=	*.mk
+REPLACE_LIBNAME_PATTERNS+=	${MAKEFILE_PATTERNS}
 REPLACE_LIBNAME_PATTERNS_FIND=	\
 	${REPLACE_LIBNAME_PATTERNS:S/$/!/:S/^/-or -name !/:S/!/"/g:S/-or//1}
 
@@ -250,7 +252,7 @@ REPLACE_LIBNAMES+=	\
 	`cd ${WRKSRC}; ${FIND} . ${REPLACE_LIBNAME_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
 .endif
 
-.if defined(REPLACE_LIBNAMES)
+.if defined(REPLACE_LIBNAMES) || defined(REPLACE_LIBNAME_PATTERNS)
 .if defined(HAS_CONFIGURE) || defined(GNU_CONFIGURE)
 pre-configure: replace-libnames-configure
 
@@ -295,7 +297,8 @@ post-build: replace-buildlink
 REPLACE_BUILDLINK_SED?=		# empty
 REPLACE_BUILDLINK_POST_SED+=						\
 	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"			\
-	-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"
+	-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"			\
+	-e "s|-R${BUILDLINK_DIR}/|-R${LOCALBASE}/|g"
 
 # Fix files by removing buildlink directory references and library names.
 replace-buildlink:
