@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/17 17:50:08 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/03/23 10:31:51 wiz Exp $
 #
 
 DISTNAME=		srp-1.4.4
@@ -18,6 +18,7 @@ CRYPTO=			yes
 GNU_CONFIGURE=		yes
 
 CPPFLAGS+=		-Dunix=1
+#CPPFLAGS+=		-Dkrb_get_err_text=k_strerror
 CPPFLAGS+=		-I${LOCALBASE}/include	# gmp.h
 LDFLAGS+=		-L${LOCALBASE}/lib	# libgmp.a
 
@@ -27,14 +28,21 @@ CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 .if exists(/usr/lib/libkrb.a)
 CONFIGURE_ARGS+=	--with-krb4
 
+.include "../../mk/bsd.prefs.mk"
+
+SED_PATTERN=	-e "s,include/kerberos,include/kerberosIV,"
+.if ${MACHINE_PLATFORM:MNetBSD-[01].[0-4]*-i386} == ""
+SED_PATTERN+=	-e "s,-ldes,-ldes -lroken -lcom_err,"
+.else
+SED_PATTERN+=	-e "s,-ldes,-ldes -lcom_err,"
+.endif
+
 post-patch:
 	for FILE in ftp/ftp/Makefile.in ftp/ftpd/Makefile.in		\
 		telnet/configure telnet/configure.in;			\
 	do								\
 		cd ${WRKSRC} &&						\
-		${SED}  -e "s,include/kerberos,include/kerberosIV,"	\
-			-e "s,-ldes,-ldes -lroken -lcom_err,"		\
-			$$FILE > $$FILE.patched &&			\
+		${SED}  ${SED_PATTERN} $$FILE > $$FILE.patched &&	\
 		${MV} $$FILE.patched $$FILE;				\
 	done
 .endif
