@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2002/12/09 16:01:15 tron Exp $
+@comment $NetBSD: PLIST,v 1.11.2.1 2003/04/16 15:19:51 grant Exp $
 bin/irc
 bin/irc-${VERS}
 bin/ircbug
@@ -8,6 +8,7 @@ bin/wserv
 man/man1/irc.1
 man/man1/ircII.1
 man/man1/ircbug.1
+share/irc/help/@@.GZ@
 share/irc/help/!@.GZ@
 share/irc/help/.date@.GZ@
 share/irc/help/:@.GZ@
