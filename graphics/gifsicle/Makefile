@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 16:51:42 martti Exp $
+# $NetBSD: Makefile,v 1.6 2003/11/26 19:52:18 explorer Exp $
 #
 
-DISTNAME=	gifsicle-1.37
+DISTNAME=	gifsicle-1.40
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.lcdf.org/~eddietwo/gifsicle/
 
