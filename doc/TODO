@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.948 2003/10/14 13:53:40 jmmv Exp $
+$NetBSD: TODO,v 1.949 2003/10/14 17:40:47 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -203,6 +203,7 @@ Suggested package updates
 	o jwhois-3.2.2 [pkg/22741]
 	o kaffe-1.1.2
 	o kbiff-3.7
+	o kopete-0.7.3 [jmmv]
 	o latd-1.18 [pkg/22735]
 	o lavaps-2.4
 	o lcms-1.0.9
@@ -320,6 +321,7 @@ Suggested package updates
 	o wwwoffle-2.7h
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
+	o xbindkeys-1.6.5 [jmmv]
 	o xdaliclock-2.20
 	o xemacs-21.5.16
 	o xephem-3.5.2
