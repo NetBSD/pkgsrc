@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.16 2004/01/23 09:48:53 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.17 2004/02/11 22:53:18 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -39,7 +39,7 @@ ProgName="`basename $0`"
 
 # USE_GCC3, CFLAGS, CPPFLAGS and CXXFLAGS are ommited from _MKCONF_VARS
 # as they require special handling.
-_MKCONF_VARS="OBJMACHINE MKOBJDIRS BSDSRCDIR WRKOBJDIR DISTDIR PACKAGES \
+_MKCONF_VARS="WRKDIR_BASENAME MKOBJDIRS BSDSRCDIR WRKOBJDIR DISTDIR PACKAGES \
               PKG_DEVELOPER CLEANDEPENDS LOCALBASE PKG_SYSCONFBASE \
               CFLAGS CPPFLAGS CXXFLAGS USE_AUDIT_PACKAGES PKGVULNDIR \
               USE_XPKGWEDGE"
@@ -79,7 +79,7 @@ env_setdefaults()
     TEMPLATE_VARS="$TEMPLATE_VARS ${_TEMPLATE_VARS}"
 
     # Default values for variables that will be written to mk.conf.
-    : ${OBJMACHINE:=yes}
+    : ${WRKDIR_BASENAME:=default}
     : ${MKOBJDIRS:=yes}
     : ${BSDSRCDIR:=/usr/src}
     : ${WRKOBJDIR:=/pkg_comp/obj/pkgsrc}
@@ -455,7 +455,7 @@ makeroot()
     echo "Setting root's environment..."
     chroot $DESTDIR chpass -s $ROOTSHELL
     if [ "$COPYROOTCFG" = "yes" ]; then
-        cp /root/.* $DESTDIR/root 2>&1 | > /dev/null
+        cp /root/.* $DESTDIR/root >/dev/null 2>&1
     fi
 
     echo "Setting up initial configuration..."
