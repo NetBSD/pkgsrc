@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/02/16 23:08:55 seb Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/06/23 10:33:52 adam Exp $
 #
 # This Makefile fragment is included by packages that use rrdtool.
 #
@@ -17,6 +17,7 @@ BUILDLINK_PREFIX.rrdtool_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.rrdtool+=	include/rrd.h
 BUILDLINK_FILES.rrdtool+=	lib/librrd.*
 
+.include "../../graphics/freetype-lib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/gd/buildlink2.mk"
 .include "../../www/cgilib/buildlink2.mk"
