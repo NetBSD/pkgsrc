@@ -1,15 +1,18 @@
-@comment $NetBSD: PLIST,v 1.9 2004/06/10 12:28:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/08/21 13:01:32 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
 bin/keuphoria.kss
+bin/kfiresaver.kss
 bin/kflux.kss
 bin/kfountain.kss
 bin/kgravity.kss
 bin/klines.kss
 bin/klorenz.kss
 bin/kpartsaver.kss
+bin/kpendulum.kss
 bin/kpolygon.kss
+bin/krotation.kss
 bin/kscience.kss
 bin/kslideshow.kss
 bin/ksolarwinds.kss
@@ -53,12 +56,15 @@ share/kde/applnk/System/ScreenSavers/KBanner.desktop
 share/kde/applnk/System/ScreenSavers/KBlob.desktop
 share/kde/applnk/System/ScreenSavers/KClock.desktop
 share/kde/applnk/System/ScreenSavers/KEuphoria.desktop
+share/kde/applnk/System/ScreenSavers/KFiresaver.desktop
 share/kde/applnk/System/ScreenSavers/KFlux.desktop
 share/kde/applnk/System/ScreenSavers/KFountain.desktop
 share/kde/applnk/System/ScreenSavers/KGravity.desktop
 share/kde/applnk/System/ScreenSavers/KLines-saver.desktop
 share/kde/applnk/System/ScreenSavers/KLorenz.desktop
+share/kde/applnk/System/ScreenSavers/KPendulum.desktop
 share/kde/applnk/System/ScreenSavers/KPolygon.desktop
+share/kde/applnk/System/ScreenSavers/KRotation.desktop
 share/kde/applnk/System/ScreenSavers/KScience.desktop
 share/kde/applnk/System/ScreenSavers/KSlideshow.desktop
 share/kde/applnk/System/ScreenSavers/KSolarWinds.desktop
@@ -70,11 +76,13 @@ share/kde/applnk/System/ScreenSavers/anemone.desktop
 share/kde/applnk/System/ScreenSavers/ant.desktop
 share/kde/applnk/System/ScreenSavers/antspotlight.desktop
 share/kde/applnk/System/ScreenSavers/apollonian.desktop
+share/kde/applnk/System/ScreenSavers/apple2.desktop
 share/kde/applnk/System/ScreenSavers/atlantis.desktop
 share/kde/applnk/System/ScreenSavers/attraction.desktop
 share/kde/applnk/System/ScreenSavers/atunnel.desktop
 share/kde/applnk/System/ScreenSavers/barcode.desktop
 share/kde/applnk/System/ScreenSavers/blaster.desktop
+share/kde/applnk/System/ScreenSavers/blinkbox.desktop
 share/kde/applnk/System/ScreenSavers/blitspin.desktop
 share/kde/applnk/System/ScreenSavers/blocktube.desktop
 share/kde/applnk/System/ScreenSavers/bouboule.desktop
@@ -119,11 +127,13 @@ share/kde/applnk/System/ScreenSavers/flow.desktop
 share/kde/applnk/System/ScreenSavers/fluidballs.desktop
 share/kde/applnk/System/ScreenSavers/flurry.desktop
 share/kde/applnk/System/ScreenSavers/flyingtoasters.desktop
+share/kde/applnk/System/ScreenSavers/fontglide.desktop
 share/kde/applnk/System/ScreenSavers/forest.desktop
 share/kde/applnk/System/ScreenSavers/galaxy.desktop
 share/kde/applnk/System/ScreenSavers/gears.desktop
 share/kde/applnk/System/ScreenSavers/gflux.desktop
 share/kde/applnk/System/ScreenSavers/glblur.desktop
+share/kde/applnk/System/ScreenSavers/gleidescope.desktop
 share/kde/applnk/System/ScreenSavers/glforestfire.desktop
 share/kde/applnk/System/ScreenSavers/glknots.desktop
 share/kde/applnk/System/ScreenSavers/glmatrix.desktop
@@ -163,6 +173,7 @@ share/kde/applnk/System/ScreenSavers/loop.desktop
 share/kde/applnk/System/ScreenSavers/maze.desktop
 share/kde/applnk/System/ScreenSavers/menger.desktop
 share/kde/applnk/System/ScreenSavers/metaballs.desktop
+share/kde/applnk/System/ScreenSavers/mirrorblob.desktop
 share/kde/applnk/System/ScreenSavers/moebius.desktop
 share/kde/applnk/System/ScreenSavers/moire.desktop
 share/kde/applnk/System/ScreenSavers/moire2.desktop
@@ -179,9 +190,9 @@ share/kde/applnk/System/ScreenSavers/petri.desktop
 share/kde/applnk/System/ScreenSavers/phosphor.desktop
 share/kde/applnk/System/ScreenSavers/piecewise.desktop
 share/kde/applnk/System/ScreenSavers/pipes.desktop
-share/kde/applnk/System/ScreenSavers/pixmaps.desktop
 share/kde/applnk/System/ScreenSavers/polyominoes.desktop
 share/kde/applnk/System/ScreenSavers/polytopes.desktop
+share/kde/applnk/System/ScreenSavers/pong.desktop
 share/kde/applnk/System/ScreenSavers/popsquares.desktop
 share/kde/applnk/System/ScreenSavers/pulsar.desktop
 share/kde/applnk/System/ScreenSavers/pyro.desktop
@@ -228,6 +239,7 @@ share/kde/applnk/System/ScreenSavers/webcollage.desktop
 share/kde/applnk/System/ScreenSavers/whirlwindwarp.desktop
 share/kde/applnk/System/ScreenSavers/whirlygig.desktop
 share/kde/applnk/System/ScreenSavers/worm.desktop
+share/kde/applnk/System/ScreenSavers/xanalogtv.desktop
 share/kde/applnk/System/ScreenSavers/xflame.desktop
 share/kde/applnk/System/ScreenSavers/xjack.desktop
 share/kde/applnk/System/ScreenSavers/xlyap.desktop
@@ -237,6 +249,16 @@ share/kde/applnk/System/ScreenSavers/xspirograph.desktop
 share/kde/applnk/System/ScreenSavers/xsublim.desktop
 share/kde/applnk/System/ScreenSavers/xteevee.desktop
 share/kde/applnk/System/ScreenSavers/zoom.desktop
+share/kde/apps/kfiresaver/kfs_debris.ogg
+share/kde/apps/kfiresaver/kfs_explode.ogg
+share/kde/apps/kfiresaver/kfs_kde.png
+share/kde/apps/kfiresaver/kfs_letters.desc
+share/kde/apps/kfiresaver/kfs_letters1.png
+share/kde/apps/kfiresaver/kfs_letters2.png
+share/kde/apps/kfiresaver/kfs_particle.png
+share/kde/apps/kfiresaver/kfs_particle_diastar.png
+share/kde/apps/kfiresaver/kfs_particle_flare.png
+share/kde/apps/kfiresaver/kfs_tux.png
 share/kde/apps/kscreensaver/image.png
 share/kde/apps/kscreensaver/kscience.png
 share/kde/apps/kscreensaver/particle.png
@@ -483,33 +505,6 @@ share/kde/apps/kworldclock/maps/rainfall/200.jpg
 share/kde/apps/kworldclock/maps/rainfall/400.jpg
 share/kde/apps/kworldclock/maps/rainfall/800.jpg
 share/kde/apps/kworldclock/maps/rainfall/rainfall.desktop
-share/kde/config/antrc
-share/kde/config/attractionrc
-share/kde/config/bouboulerc
-share/kde/config/bubblesrc
-share/kde/config/coralrc
-share/kde/config/crystalrc
-share/kde/config/decayscreenrc
-share/kde/config/deluxerc
-share/kde/config/demonrc
-share/kde/config/driftrc
-share/kde/config/epicyclerc
-share/kde/config/fadeplotrc
-share/kde/config/flamerc
-share/kde/config/flowrc
-share/kde/config/forestrc
-share/kde/config/gearsrc
-share/kde/config/gooprc
-share/kde/config/gravrc
-share/kde/config/halorc
-share/kde/config/imsmaprc
-share/kde/config/interferencerc
-share/kde/config/kumpparc
-share/kde/config/laserrc
-share/kde/config/lissierc
-share/kde/config/penroserc
-share/kde/config/rocksrc
-share/kde/config/sliprc
 share/kde/icons/Locolor/16x16/actions/1downarrow.png
 share/kde/icons/Locolor/16x16/actions/1leftarrow.png
 share/kde/icons/Locolor/16x16/actions/1rightarrow.png
@@ -695,7 +690,6 @@ share/kde/icons/Locolor/16x16/apps/kasteroids.png
 share/kde/icons/Locolor/16x16/apps/kbabel.png
 share/kde/icons/Locolor/16x16/apps/kbackgammon.png
 share/kde/icons/Locolor/16x16/apps/kblackbox.png
-share/kde/icons/Locolor/16x16/apps/kbruch.png
 share/kde/icons/Locolor/16x16/apps/kcalc.png
 share/kde/icons/Locolor/16x16/apps/kcharselect.png
 share/kde/icons/Locolor/16x16/apps/kchart.png
@@ -738,13 +732,13 @@ share/kde/icons/Locolor/16x16/apps/khelpcenter.png
 share/kde/icons/Locolor/16x16/apps/khexedit.png
 share/kde/icons/Locolor/16x16/apps/kicker.png
 share/kde/icons/Locolor/16x16/apps/kiconedit.png
-share/kde/icons/Locolor/16x16/apps/kig.png
 share/kde/icons/Locolor/16x16/apps/killustrator.png
 share/kde/icons/Locolor/16x16/apps/kit.png
 share/kde/icons/Locolor/16x16/apps/kivio.png
 share/kde/icons/Locolor/16x16/apps/kjots.png
 share/kde/icons/Locolor/16x16/apps/kjumpingcube.png
 share/kde/icons/Locolor/16x16/apps/klaptopdaemon.png
+share/kde/icons/Locolor/16x16/apps/klatin.png
 share/kde/icons/Locolor/16x16/apps/kless.png
 share/kde/icons/Locolor/16x16/apps/klettres.png
 share/kde/icons/Locolor/16x16/apps/klipper.png
@@ -766,6 +760,7 @@ share/kde/icons/Locolor/16x16/apps/knode.png
 share/kde/icons/Locolor/16x16/apps/knotes.png
 share/kde/icons/Locolor/16x16/apps/knotify.png
 share/kde/icons/Locolor/16x16/apps/kodo.png
+share/kde/icons/Locolor/16x16/apps/kompare.png
 share/kde/icons/Locolor/16x16/apps/koncd.png
 share/kde/icons/Locolor/16x16/apps/konqueror.png
 share/kde/icons/Locolor/16x16/apps/konquest.png
@@ -936,6 +931,7 @@ share/kde/icons/Locolor/16x16/mimetypes/binary2.png
 share/kde/icons/Locolor/16x16/mimetypes/core.png
 share/kde/icons/Locolor/16x16/mimetypes/document.png
 share/kde/icons/Locolor/16x16/mimetypes/dvi.png
+share/kde/icons/Locolor/16x16/mimetypes/empty.png
 share/kde/icons/Locolor/16x16/mimetypes/font_bitmap.png
 share/kde/icons/Locolor/16x16/mimetypes/font_truetype.png
 share/kde/icons/Locolor/16x16/mimetypes/font_type1.png
@@ -950,7 +946,6 @@ share/kde/icons/Locolor/16x16/mimetypes/make.png
 share/kde/icons/Locolor/16x16/mimetypes/man.png
 share/kde/icons/Locolor/16x16/mimetypes/metafont.png
 share/kde/icons/Locolor/16x16/mimetypes/midi.png
-share/kde/icons/Locolor/16x16/mimetypes/mime_empty.png
 share/kde/icons/Locolor/16x16/mimetypes/netscape_doc.png
 share/kde/icons/Locolor/16x16/mimetypes/news.png
 share/kde/icons/Locolor/16x16/mimetypes/pdf.png
@@ -1070,12 +1065,12 @@ share/kde/icons/Locolor/32x32/apps/khangman.png
 share/kde/icons/Locolor/32x32/apps/khelpcenter.png
 share/kde/icons/Locolor/32x32/apps/khexedit.png
 share/kde/icons/Locolor/32x32/apps/kiconedit.png
-share/kde/icons/Locolor/32x32/apps/kig.png
 share/kde/icons/Locolor/32x32/apps/killustrator.png
 share/kde/icons/Locolor/32x32/apps/kit.png
 share/kde/icons/Locolor/32x32/apps/kivio.png
 share/kde/icons/Locolor/32x32/apps/kjots.png
 share/kde/icons/Locolor/32x32/apps/kjumpingcube.png
+share/kde/icons/Locolor/32x32/apps/klatin.png
 share/kde/icons/Locolor/32x32/apps/kless.png
 share/kde/icons/Locolor/32x32/apps/klettres.png
 share/kde/icons/Locolor/32x32/apps/klipper.png
@@ -1096,6 +1091,7 @@ share/kde/icons/Locolor/32x32/apps/knode.png
 share/kde/icons/Locolor/32x32/apps/knotes.png
 share/kde/icons/Locolor/32x32/apps/knotify.png
 share/kde/icons/Locolor/32x32/apps/kodo.png
+share/kde/icons/Locolor/32x32/apps/kompare.png
 share/kde/icons/Locolor/32x32/apps/koncd.png
 share/kde/icons/Locolor/32x32/apps/konqueror.png
 share/kde/icons/Locolor/32x32/apps/konquest.png
@@ -1261,6 +1257,7 @@ share/kde/icons/Locolor/32x32/mimetypes/core.png
 share/kde/icons/Locolor/32x32/mimetypes/deb.png
 share/kde/icons/Locolor/32x32/mimetypes/document.png
 share/kde/icons/Locolor/32x32/mimetypes/dvi.png
+share/kde/icons/Locolor/32x32/mimetypes/empty.png
 share/kde/icons/Locolor/32x32/mimetypes/font_bitmap.png
 share/kde/icons/Locolor/32x32/mimetypes/font_truetype.png
 share/kde/icons/Locolor/32x32/mimetypes/font_type1.png
@@ -1275,7 +1272,6 @@ share/kde/icons/Locolor/32x32/mimetypes/make.png
 share/kde/icons/Locolor/32x32/mimetypes/man.png
 share/kde/icons/Locolor/32x32/mimetypes/metafont.png
 share/kde/icons/Locolor/32x32/mimetypes/midi.png
-share/kde/icons/Locolor/32x32/mimetypes/mime_empty.png
 share/kde/icons/Locolor/32x32/mimetypes/netscape_doc.png
 share/kde/icons/Locolor/32x32/mimetypes/news.png
 share/kde/icons/Locolor/32x32/mimetypes/pdf.png
@@ -1753,12 +1749,12 @@ share/kde/icons/ikons/48x48/filesystems/link.png
 share/kde/icons/ikons/48x48/filesystems/trashcan_empty.png
 share/kde/icons/ikons/48x48/filesystems/trashcan_full.png
 share/kde/icons/ikons/48x48/mimetypes/apple_macintosh.png
+share/kde/icons/ikons/48x48/mimetypes/empty.png
 share/kde/icons/ikons/48x48/mimetypes/hancompainter.png
 share/kde/icons/ikons/48x48/mimetypes/hancompresenter.png
 share/kde/icons/ikons/48x48/mimetypes/hancomsheet.png
 share/kde/icons/ikons/48x48/mimetypes/hancomword.png
 share/kde/icons/ikons/48x48/mimetypes/image.png
-share/kde/icons/ikons/48x48/mimetypes/mime_empty.png
 share/kde/icons/ikons/48x48/mimetypes/rpm.png
 share/kde/icons/ikons/64x64/apps/Kpilot_FileInstaller.png
 share/kde/icons/ikons/64x64/apps/Kpilot_Notes.png
@@ -2110,6 +2106,7 @@ share/kde/icons/kdeclassic/16x16/actions/null.png
 share/kde/icons/kdeclassic/16x16/actions/ok.png
 share/kde/icons/kdeclassic/16x16/actions/onetwomatrix.png
 share/kde/icons/kdeclassic/16x16/actions/openterm.png
+share/kde/icons/kdeclassic/16x16/actions/opentermred.png
 share/kde/icons/kdeclassic/16x16/actions/options.png
 share/kde/icons/kdeclassic/16x16/actions/organizer.png
 share/kde/icons/kdeclassic/16x16/actions/oscilloscope.png
@@ -2512,6 +2509,7 @@ share/kde/icons/kdeclassic/16x16/apps/kjobviewer.png
 share/kde/icons/kdeclassic/16x16/apps/kjots.png
 share/kde/icons/kdeclassic/16x16/apps/kjumpingcube.png
 share/kde/icons/kdeclassic/16x16/apps/klaptopdaemon.png
+share/kde/icons/kdeclassic/16x16/apps/klatin.png
 share/kde/icons/kdeclassic/16x16/apps/klettres.png
 share/kde/icons/kdeclassic/16x16/apps/klines.png
 share/kde/icons/kdeclassic/16x16/apps/klipper.png
@@ -2756,6 +2754,7 @@ share/kde/icons/kdeclassic/16x16/mimetypes/debfile.png
 share/kde/icons/kdeclassic/16x16/mimetypes/document.png
 share/kde/icons/kdeclassic/16x16/mimetypes/document2.png
 share/kde/icons/kdeclassic/16x16/mimetypes/dvi.png
+share/kde/icons/kdeclassic/16x16/mimetypes/empty.png
 share/kde/icons/kdeclassic/16x16/mimetypes/font_bitmap.png
 share/kde/icons/kdeclassic/16x16/mimetypes/font_truetype.png
 share/kde/icons/kdeclassic/16x16/mimetypes/font_type1.png
@@ -2764,16 +2763,24 @@ share/kde/icons/kdeclassic/16x16/mimetypes/html.png
 share/kde/icons/kdeclassic/16x16/mimetypes/image.mng
 share/kde/icons/kdeclassic/16x16/mimetypes/image.png
 share/kde/icons/kdeclassic/16x16/mimetypes/info.png
+share/kde/icons/kdeclassic/16x16/mimetypes/karbon_karbon.png
+share/kde/icons/kdeclassic/16x16/mimetypes/kchart_chrt.png
+share/kde/icons/kdeclassic/16x16/mimetypes/kformula_kfo.png
+share/kde/icons/kdeclassic/16x16/mimetypes/kivio_flw.png
 share/kde/icons/kdeclassic/16x16/mimetypes/kmultiple.png
 share/kde/icons/kdeclassic/16x16/mimetypes/kpovmodeler_doc.png
+share/kde/icons/kdeclassic/16x16/mimetypes/kpresenter_kpr.png
+share/kde/icons/kdeclassic/16x16/mimetypes/krita_kra.png
+share/kde/icons/kdeclassic/16x16/mimetypes/kspread_ksp.png
+share/kde/icons/kdeclassic/16x16/mimetypes/kugar_kud.png
 share/kde/icons/kdeclassic/16x16/mimetypes/kugardata.png
+share/kde/icons/kdeclassic/16x16/mimetypes/kword_kwd.png
 share/kde/icons/kdeclassic/16x16/mimetypes/log.png
 share/kde/icons/kdeclassic/16x16/mimetypes/make.png
 share/kde/icons/kdeclassic/16x16/mimetypes/man.png
 share/kde/icons/kdeclassic/16x16/mimetypes/message.png
 share/kde/icons/kdeclassic/16x16/mimetypes/metafont.png
 share/kde/icons/kdeclassic/16x16/mimetypes/midi.png
-share/kde/icons/kdeclassic/16x16/mimetypes/mime_empty.png
 share/kde/icons/kdeclassic/16x16/mimetypes/misc_doc.png
 share/kde/icons/kdeclassic/16x16/mimetypes/netscape_doc.png
 share/kde/icons/kdeclassic/16x16/mimetypes/news.png
@@ -3490,7 +3497,17 @@ share/kde/icons/kdeclassic/22x22/apps/konqsidebar_mediaplayer.png
 share/kde/icons/kdeclassic/22x22/apps/kpilot.png
 share/kde/icons/kdeclassic/22x22/apps/kugar.png
 share/kde/icons/kdeclassic/22x22/apps/noatun.png
+share/kde/icons/kdeclassic/22x22/mimetypes/empty.png
+share/kde/icons/kdeclassic/22x22/mimetypes/karbon_karbon.png
+share/kde/icons/kdeclassic/22x22/mimetypes/kchart_chrt.png
+share/kde/icons/kdeclassic/22x22/mimetypes/kformula_kfo.png
+share/kde/icons/kdeclassic/22x22/mimetypes/kivio_flw.png
+share/kde/icons/kdeclassic/22x22/mimetypes/kpresenter_kpr.png
+share/kde/icons/kdeclassic/22x22/mimetypes/krita_kra.png
+share/kde/icons/kdeclassic/22x22/mimetypes/kspread_ksp.png
+share/kde/icons/kdeclassic/22x22/mimetypes/kugar_kud.png
 share/kde/icons/kdeclassic/22x22/mimetypes/kugardata.png
+share/kde/icons/kdeclassic/22x22/mimetypes/kword_kwd.png
 share/kde/icons/kdeclassic/32x32/actions/1day.png
 share/kde/icons/kdeclassic/32x32/actions/1downarrow.png
 share/kde/icons/kdeclassic/32x32/actions/1leftarrow.png
@@ -3658,6 +3675,7 @@ share/kde/icons/kdeclassic/32x32/actions/next.png
 share/kde/icons/kdeclassic/32x32/actions/nextsection.png
 share/kde/icons/kdeclassic/32x32/actions/onetwomatrix.png
 share/kde/icons/kdeclassic/32x32/actions/openterm.png
+share/kde/icons/kdeclassic/32x32/actions/opentermred.png
 share/kde/icons/kdeclassic/32x32/actions/over.png
 share/kde/icons/kdeclassic/32x32/actions/paren.png
 share/kde/icons/kdeclassic/32x32/actions/percent.png
@@ -3869,6 +3887,7 @@ share/kde/icons/kdeclassic/32x32/apps/kivio.png
 share/kde/icons/kdeclassic/32x32/apps/kjobviewer.png
 share/kde/icons/kdeclassic/32x32/apps/kjots.png
 share/kde/icons/kdeclassic/32x32/apps/kjumpingcube.png
+share/kde/icons/kdeclassic/32x32/apps/klatin.png
 share/kde/icons/kdeclassic/32x32/apps/klettres.png
 share/kde/icons/kdeclassic/32x32/apps/klines.png
 share/kde/icons/kdeclassic/32x32/apps/klipper.png
@@ -4105,6 +4124,7 @@ share/kde/icons/kdeclassic/32x32/filesystems/trashcan_full.png
 share/kde/icons/kdeclassic/32x32/filesystems/www.png
 share/kde/icons/kdeclassic/32x32/filesystems/zip.png
 share/kde/icons/kdeclassic/32x32/mimetypes/applix.png
+share/kde/icons/kdeclassic/32x32/mimetypes/ascii.png
 share/kde/icons/kdeclassic/32x32/mimetypes/binary.png
 share/kde/icons/kdeclassic/32x32/mimetypes/binary2.png
 share/kde/icons/kdeclassic/32x32/mimetypes/cdtrack.png
@@ -4114,6 +4134,7 @@ share/kde/icons/kdeclassic/32x32/mimetypes/deb.png
 share/kde/icons/kdeclassic/32x32/mimetypes/document.png
 share/kde/icons/kdeclassic/32x32/mimetypes/document2.png
 share/kde/icons/kdeclassic/32x32/mimetypes/dvi.png
+share/kde/icons/kdeclassic/32x32/mimetypes/empty.png
 share/kde/icons/kdeclassic/32x32/mimetypes/font_bitmap.png
 share/kde/icons/kdeclassic/32x32/mimetypes/font_truetype.png
 share/kde/icons/kdeclassic/32x32/mimetypes/font_type1.png
@@ -4121,21 +4142,28 @@ share/kde/icons/kdeclassic/32x32/mimetypes/gf.png
 share/kde/icons/kdeclassic/32x32/mimetypes/html.png
 share/kde/icons/kdeclassic/32x32/mimetypes/image.png
 share/kde/icons/kdeclassic/32x32/mimetypes/info.png
+share/kde/icons/kdeclassic/32x32/mimetypes/karbon_karbon.png
+share/kde/icons/kdeclassic/32x32/mimetypes/kchart_chrt.png
 share/kde/icons/kdeclassic/32x32/mimetypes/kdevelop_project.png
+share/kde/icons/kdeclassic/32x32/mimetypes/kformula_kfo.png
+share/kde/icons/kdeclassic/32x32/mimetypes/kivio_flw.png
 share/kde/icons/kdeclassic/32x32/mimetypes/kmultiple.png
 share/kde/icons/kdeclassic/32x32/mimetypes/kpovmodeler_doc.png
+share/kde/icons/kdeclassic/32x32/mimetypes/kpresenter_kpr.png
 share/kde/icons/kdeclassic/32x32/mimetypes/krec_fileempty.png
 share/kde/icons/kdeclassic/32x32/mimetypes/krec_fileplay.png
 share/kde/icons/kdeclassic/32x32/mimetypes/krec_filerec.png
+share/kde/icons/kdeclassic/32x32/mimetypes/krita_kra.png
+share/kde/icons/kdeclassic/32x32/mimetypes/kspread_ksp.png
+share/kde/icons/kdeclassic/32x32/mimetypes/kugar_kud.png
 share/kde/icons/kdeclassic/32x32/mimetypes/kugardata.png
+share/kde/icons/kdeclassic/32x32/mimetypes/kword_kwd.png
 share/kde/icons/kdeclassic/32x32/mimetypes/log.png
 share/kde/icons/kdeclassic/32x32/mimetypes/make.png
 share/kde/icons/kdeclassic/32x32/mimetypes/man.png
 share/kde/icons/kdeclassic/32x32/mimetypes/message.png
 share/kde/icons/kdeclassic/32x32/mimetypes/metafont.png
 share/kde/icons/kdeclassic/32x32/mimetypes/midi.png
-share/kde/icons/kdeclassic/32x32/mimetypes/mime_ascii.png
-share/kde/icons/kdeclassic/32x32/mimetypes/mime_empty.png
 share/kde/icons/kdeclassic/32x32/mimetypes/misc_doc.png
 share/kde/icons/kdeclassic/32x32/mimetypes/netscape_doc.png
 share/kde/icons/kdeclassic/32x32/mimetypes/pdf.png
@@ -4452,6 +4480,7 @@ share/kde/icons/kdeclassic/48x48/filesystems/trashcan_full.png
 share/kde/icons/kdeclassic/48x48/filesystems/www.png
 share/kde/icons/kdeclassic/48x48/filesystems/zip.png
 share/kde/icons/kdeclassic/48x48/mimetypes/applix.png
+share/kde/icons/kdeclassic/48x48/mimetypes/ascii.png
 share/kde/icons/kdeclassic/48x48/mimetypes/binary.png
 share/kde/icons/kdeclassic/48x48/mimetypes/binary2.png
 share/kde/icons/kdeclassic/48x48/mimetypes/cdtrack.png
@@ -4461,6 +4490,7 @@ share/kde/icons/kdeclassic/48x48/mimetypes/deb.png
 share/kde/icons/kdeclassic/48x48/mimetypes/document.png
 share/kde/icons/kdeclassic/48x48/mimetypes/document2.png
 share/kde/icons/kdeclassic/48x48/mimetypes/dvi.png
+share/kde/icons/kdeclassic/48x48/mimetypes/empty.png
 share/kde/icons/kdeclassic/48x48/mimetypes/encrypted.png
 share/kde/icons/kdeclassic/48x48/mimetypes/font_bitmap.png
 share/kde/icons/kdeclassic/48x48/mimetypes/font_truetype.png
@@ -4469,17 +4499,24 @@ share/kde/icons/kdeclassic/48x48/mimetypes/gf.png
 share/kde/icons/kdeclassic/48x48/mimetypes/html.png
 share/kde/icons/kdeclassic/48x48/mimetypes/image.png
 share/kde/icons/kdeclassic/48x48/mimetypes/info.png
+share/kde/icons/kdeclassic/48x48/mimetypes/karbon_karbon.png
+share/kde/icons/kdeclassic/48x48/mimetypes/kchart_chrt.png
+share/kde/icons/kdeclassic/48x48/mimetypes/kformula_kfo.png
 share/kde/icons/kdeclassic/48x48/mimetypes/kget_list.png
+share/kde/icons/kdeclassic/48x48/mimetypes/kivio_flw.png
 share/kde/icons/kdeclassic/48x48/mimetypes/kmultiple.png
+share/kde/icons/kdeclassic/48x48/mimetypes/kpresenter_kpr.png
+share/kde/icons/kdeclassic/48x48/mimetypes/krita_kra.png
+share/kde/icons/kdeclassic/48x48/mimetypes/kspread_ksp.png
+share/kde/icons/kdeclassic/48x48/mimetypes/kugar_kud.png
 share/kde/icons/kdeclassic/48x48/mimetypes/kugardata.png
+share/kde/icons/kdeclassic/48x48/mimetypes/kword_kwd.png
 share/kde/icons/kdeclassic/48x48/mimetypes/log.png
 share/kde/icons/kdeclassic/48x48/mimetypes/make.png
 share/kde/icons/kdeclassic/48x48/mimetypes/man.png
 share/kde/icons/kdeclassic/48x48/mimetypes/message.png
 share/kde/icons/kdeclassic/48x48/mimetypes/metafont.png
 share/kde/icons/kdeclassic/48x48/mimetypes/midi.png
-share/kde/icons/kdeclassic/48x48/mimetypes/mime_ascii.png
-share/kde/icons/kdeclassic/48x48/mimetypes/mime_empty.png
 share/kde/icons/kdeclassic/48x48/mimetypes/misc_doc.png
 share/kde/icons/kdeclassic/48x48/mimetypes/netscape_doc.png
 share/kde/icons/kdeclassic/48x48/mimetypes/pdf.png
@@ -4527,12 +4564,12 @@ share/kde/icons/kdeclassic/64x64/mimetypes/cdtrack.png
 share/kde/icons/kdeclassic/64x64/mimetypes/core.png
 share/kde/icons/kdeclassic/64x64/mimetypes/document.png
 share/kde/icons/kdeclassic/64x64/mimetypes/document2.png
+share/kde/icons/kdeclassic/64x64/mimetypes/empty.png
 share/kde/icons/kdeclassic/64x64/mimetypes/html.png
 share/kde/icons/kdeclassic/64x64/mimetypes/image.png
 share/kde/icons/kdeclassic/64x64/mimetypes/make.png
 share/kde/icons/kdeclassic/64x64/mimetypes/man.png
 share/kde/icons/kdeclassic/64x64/mimetypes/midi.png
-share/kde/icons/kdeclassic/64x64/mimetypes/mime_empty.png
 share/kde/icons/kdeclassic/64x64/mimetypes/misc_doc.png
 share/kde/icons/kdeclassic/64x64/mimetypes/netscape_doc.png
 share/kde/icons/kdeclassic/64x64/mimetypes/postscript.png
@@ -5850,6 +5887,7 @@ share/kde/icons/slick/16x16/actions/bottom.png
 share/kde/icons/slick/16x16/actions/camera_test.png
 share/kde/icons/slick/16x16/actions/cancel.png
 share/kde/icons/slick/16x16/actions/cd.png
+share/kde/icons/slick/16x16/actions/cdburn.png
 share/kde/icons/slick/16x16/actions/cdcopy.png
 share/kde/icons/slick/16x16/actions/cdrwblank.png
 share/kde/icons/slick/16x16/actions/charset.png
@@ -6022,6 +6060,7 @@ share/kde/icons/slick/16x16/apps/background.png
 share/kde/icons/slick/16x16/apps/bell.png
 share/kde/icons/slick/16x16/apps/camera.png
 share/kde/icons/slick/16x16/apps/cdbakeoven.png
+share/kde/icons/slick/16x16/apps/cervisia.png
 share/kde/icons/slick/16x16/apps/clock.png
 share/kde/icons/slick/16x16/apps/colors.png
 share/kde/icons/slick/16x16/apps/configure_shortcuts.png
@@ -6040,6 +6079,7 @@ share/kde/icons/slick/16x16/apps/kaddressbook.png
 share/kde/icons/slick/16x16/apps/karchiver.png
 share/kde/icons/slick/16x16/apps/kate.png
 share/kde/icons/slick/16x16/apps/kaudiocdcreator.png
+share/kde/icons/slick/16x16/apps/kaudiocreator.png
 share/kde/icons/slick/16x16/apps/kbear.png
 share/kde/icons/slick/16x16/apps/kcmdevices.png
 share/kde/icons/slick/16x16/apps/kcmdf.png
@@ -6055,6 +6095,7 @@ share/kde/icons/slick/16x16/apps/kcmx.png
 share/kde/icons/slick/16x16/apps/kcontrol.png
 share/kde/icons/slick/16x16/apps/kcontrol_2.png
 share/kde/icons/slick/16x16/apps/kdf.png
+share/kde/icons/slick/16x16/apps/kdirstat.png
 share/kde/icons/slick/16x16/apps/kdisknav.png
 share/kde/icons/slick/16x16/apps/kdisknav1.png
 share/kde/icons/slick/16x16/apps/kdmconfig.png
@@ -6087,31 +6128,25 @@ share/kde/icons/slick/16x16/apps/konqsidebar_mediaplayer.png
 share/kde/icons/slick/16x16/apps/konqueror.png
 share/kde/icons/slick/16x16/apps/konsole.png
 share/kde/icons/slick/16x16/apps/kontact.png
-share/kde/icons/slick/16x16/apps/kontour.png
 share/kde/icons/slick/16x16/apps/kopete.png
 share/kde/icons/slick/16x16/apps/korganizer.png
 share/kde/icons/slick/16x16/apps/kpackage.png
 share/kde/icons/slick/16x16/apps/kpf.png
 share/kde/icons/slick/16x16/apps/kpilot.png
 share/kde/icons/slick/16x16/apps/kppp.png
-share/kde/icons/slick/16x16/apps/kpresenter.png
 share/kde/icons/slick/16x16/apps/kprintfax.png
-share/kde/icons/slick/16x16/apps/krayon.png
 share/kde/icons/slick/16x16/apps/kreatecd.png
 share/kde/icons/slick/16x16/apps/kscd.png
 share/kde/icons/slick/16x16/apps/kscreensaver.png
 share/kde/icons/slick/16x16/apps/kshowmail.png
-share/kde/icons/slick/16x16/apps/kspread.png
 share/kde/icons/slick/16x16/apps/ksysguard.png
 share/kde/icons/slick/16x16/apps/ksysv.png
 share/kde/icons/slick/16x16/apps/kteatime.png
 share/kde/icons/slick/16x16/apps/ktip.png
-share/kde/icons/slick/16x16/apps/kugar.png
 share/kde/icons/slick/16x16/apps/kuickshow.png
 share/kde/icons/slick/16x16/apps/kview.png
 share/kde/icons/slick/16x16/apps/kwikdisk.png
 share/kde/icons/slick/16x16/apps/kwin.png
-share/kde/icons/slick/16x16/apps/kword.png
 share/kde/icons/slick/16x16/apps/kwrite.png
 share/kde/icons/slick/16x16/apps/laptop_battery.png
 share/kde/icons/slick/16x16/apps/laptop_pcmcia.png
@@ -6145,6 +6180,7 @@ share/kde/icons/slick/16x16/apps/printmgr.png
 share/kde/icons/slick/16x16/apps/remote.png
 share/kde/icons/slick/16x16/apps/samba.png
 share/kde/icons/slick/16x16/apps/showimg.png
+share/kde/icons/slick/16x16/apps/smb4k.png
 share/kde/icons/slick/16x16/apps/speaker.png
 share/kde/icons/slick/16x16/apps/style.png
 share/kde/icons/slick/16x16/apps/suspend.png
@@ -6155,6 +6191,7 @@ share/kde/icons/slick/16x16/apps/tux.png
 share/kde/icons/slick/16x16/apps/vmware.png
 share/kde/icons/slick/16x16/apps/window_list.png
 share/kde/icons/slick/16x16/apps/xapp.png
+share/kde/icons/slick/16x16/apps/xchat.png
 share/kde/icons/slick/16x16/apps/xmms.png
 share/kde/icons/slick/16x16/apps/xpaint.png
 share/kde/icons/slick/16x16/devices/3floppy_mount.png
@@ -6294,6 +6331,7 @@ share/kde/icons/slick/16x16/filesystems/folder_txt_3.png
 share/kde/icons/slick/16x16/filesystems/folder_video.png
 share/kde/icons/slick/16x16/filesystems/folder_video_2.png
 share/kde/icons/slick/16x16/filesystems/folder_video_3.png
+share/kde/icons/slick/16x16/filesystems/folder_violet.png
 share/kde/icons/slick/16x16/filesystems/folder_www.png
 share/kde/icons/slick/16x16/filesystems/folder_yellow.png
 share/kde/icons/slick/16x16/filesystems/folder_yellow_2.png
@@ -6411,7 +6449,9 @@ share/kde/icons/slick/22x22/actions/2downarrow.png
 share/kde/icons/slick/22x22/actions/2leftarrow.png
 share/kde/icons/slick/22x22/actions/2rightarrow.png
 share/kde/icons/slick/22x22/actions/2uparrow.png
+share/kde/icons/slick/22x22/actions/agent.png
 share/kde/icons/slick/22x22/actions/airbrush.png
+share/kde/icons/slick/22x22/actions/apply.png
 share/kde/icons/slick/22x22/actions/arrowback.png
 share/kde/icons/slick/22x22/actions/arrowforward.png
 share/kde/icons/slick/22x22/actions/attach.png
@@ -6420,11 +6460,14 @@ share/kde/icons/slick/22x22/actions/back.png
 share/kde/icons/slick/22x22/actions/bookmark.png
 share/kde/icons/slick/22x22/actions/bookmark_add.png
 share/kde/icons/slick/22x22/actions/bookmark_folder.png
+share/kde/icons/slick/22x22/actions/bookmark_toolbar.png
 share/kde/icons/slick/22x22/actions/bottom.png
 share/kde/icons/slick/22x22/actions/button_cancel.png
+share/kde/icons/slick/22x22/actions/button_cancel1.png
 share/kde/icons/slick/22x22/actions/button_ok.png
 share/kde/icons/slick/22x22/actions/cancel.png
 share/kde/icons/slick/22x22/actions/cd.png
+share/kde/icons/slick/22x22/actions/cdburn.png
 share/kde/icons/slick/22x22/actions/cdcopy.png
 share/kde/icons/slick/22x22/actions/cdrwblank.png
 share/kde/icons/slick/22x22/actions/colorpicker.png
@@ -6433,8 +6476,10 @@ share/kde/icons/slick/22x22/actions/connect_creating.png
 share/kde/icons/slick/22x22/actions/connect_established.png
 share/kde/icons/slick/22x22/actions/connect_no.png
 share/kde/icons/slick/22x22/actions/contents.png
+share/kde/icons/slick/22x22/actions/contexthelp.png
 share/kde/icons/slick/22x22/actions/decrypted.png
 share/kde/icons/slick/22x22/actions/define_clip.png
+share/kde/icons/slick/22x22/actions/dock.png
 share/kde/icons/slick/22x22/actions/domtreeviewer.png
 share/kde/icons/slick/22x22/actions/down.png
 share/kde/icons/slick/22x22/actions/edit.png
@@ -6457,10 +6502,12 @@ share/kde/icons/slick/22x22/actions/filesaveas.png
 share/kde/icons/slick/22x22/actions/filter.png
 share/kde/icons/slick/22x22/actions/find.png
 share/kde/icons/slick/22x22/actions/finish.png
-share/kde/icons/slick/22x22/actions/folder.png
 share/kde/icons/slick/22x22/actions/folder_new.png
 share/kde/icons/slick/22x22/actions/forward.png
 share/kde/icons/slick/22x22/actions/frameprint.png
+share/kde/icons/slick/22x22/actions/fsview.png
+share/kde/icons/slick/22x22/actions/ftin.png
+share/kde/icons/slick/22x22/actions/ftout.png
 share/kde/icons/slick/22x22/actions/gear.png
 share/kde/icons/slick/22x22/actions/gohome.png
 share/kde/icons/slick/22x22/actions/halfencrypted.png
@@ -6478,6 +6525,7 @@ share/kde/icons/slick/22x22/actions/khtml_kget.png
 share/kde/icons/slick/22x22/actions/klipper_dock.png
 share/kde/icons/slick/22x22/actions/korgac.png
 share/kde/icons/slick/22x22/actions/korgac_disabled.png
+share/kde/icons/slick/22x22/actions/launch.png
 share/kde/icons/slick/22x22/actions/locationbar_erase.png
 share/kde/icons/slick/22x22/actions/lock.png
 share/kde/icons/slick/22x22/actions/mail_find.png
@@ -6489,6 +6537,7 @@ share/kde/icons/slick/22x22/actions/mail_reply.png
 share/kde/icons/slick/22x22/actions/mail_replyall.png
 share/kde/icons/slick/22x22/actions/mail_replylist.png
 share/kde/icons/slick/22x22/actions/mail_send.png
+share/kde/icons/slick/22x22/actions/mime_empty.png
 share/kde/icons/slick/22x22/actions/misc.png
 share/kde/icons/slick/22x22/actions/move.png
 share/kde/icons/slick/22x22/actions/next.png
@@ -6518,18 +6567,44 @@ share/kde/icons/slick/22x22/actions/query_erase.png
 share/kde/icons/slick/22x22/actions/queue.png
 share/kde/icons/slick/22x22/actions/redo.png
 share/kde/icons/slick/22x22/actions/reload.png
+share/kde/icons/slick/22x22/actions/reload1.png
 share/kde/icons/slick/22x22/actions/revert.png
+share/kde/icons/slick/22x22/actions/rotate.png
+share/kde/icons/slick/22x22/actions/rotate_ccw.png
+share/kde/icons/slick/22x22/actions/rotate_cw.png
 share/kde/icons/slick/22x22/actions/run.png
+share/kde/icons/slick/22x22/actions/save_all.png
 share/kde/icons/slick/22x22/actions/showmenu.png
 share/kde/icons/slick/22x22/actions/spellcheck.png
 share/kde/icons/slick/22x22/actions/sphere.png
 share/kde/icons/slick/22x22/actions/start.png
 share/kde/icons/slick/22x22/actions/stop.png
+share/kde/icons/slick/22x22/actions/tab_breakoff.png
 share/kde/icons/slick/22x22/actions/tab_duplicate.png
 share/kde/icons/slick/22x22/actions/tab_new.png
 share/kde/icons/slick/22x22/actions/tab_new_bg.png
+share/kde/icons/slick/22x22/actions/tab_remove.png
 share/kde/icons/slick/22x22/actions/thumbnail.png
+share/kde/icons/slick/22x22/actions/tool_clipboard.png
+share/kde/icons/slick/22x22/actions/tool_delete.png
+share/kde/icons/slick/22x22/actions/tool_disconnect.png
+share/kde/icons/slick/22x22/actions/tool_dock.png
+share/kde/icons/slick/22x22/actions/tool_drop_target.png
+share/kde/icons/slick/22x22/actions/tool_expert.png
+share/kde/icons/slick/22x22/actions/tool_logwindow.png
+share/kde/icons/slick/22x22/actions/tool_normal.png
+share/kde/icons/slick/22x22/actions/tool_offline_mode_off.png
+share/kde/icons/slick/22x22/actions/tool_offline_mode_on.png
+share/kde/icons/slick/22x22/actions/tool_paste.png
+share/kde/icons/slick/22x22/actions/tool_pause.png
+share/kde/icons/slick/22x22/actions/tool_preferences.png
+share/kde/icons/slick/22x22/actions/tool_restart.png
+share/kde/icons/slick/22x22/actions/tool_resume.png
+share/kde/icons/slick/22x22/actions/tool_shutdown.png
+share/kde/icons/slick/22x22/actions/tool_timer.png
+share/kde/icons/slick/22x22/actions/tool_uselastdir.png
 share/kde/icons/slick/22x22/actions/top.png
+share/kde/icons/slick/22x22/actions/translate.png
 share/kde/icons/slick/22x22/actions/undo.png
 share/kde/icons/slick/22x22/actions/unlock.png
 share/kde/icons/slick/22x22/actions/up.png
@@ -6546,22 +6621,128 @@ share/kde/icons/slick/22x22/actions/viewmag+.png
 share/kde/icons/slick/22x22/actions/viewmag-.png
 share/kde/icons/slick/22x22/actions/viewmag.png
 share/kde/icons/slick/22x22/actions/viewmagfit.png
+share/kde/icons/slick/22x22/actions/wallet_open.png
+share/kde/icons/slick/22x22/actions/webarchiver.png
 share/kde/icons/slick/22x22/actions/window_fullscreen.png
 share/kde/icons/slick/22x22/actions/window_new.png
 share/kde/icons/slick/22x22/actions/window_nofullscreen.png
 share/kde/icons/slick/22x22/actions/wizard.png
+share/kde/icons/slick/22x22/apps/1randr.png
 share/kde/icons/slick/22x22/apps/bell.png
+share/kde/icons/slick/22x22/apps/cervisia.png
 share/kde/icons/slick/22x22/apps/date.png
+share/kde/icons/slick/22x22/apps/fonts.png
+share/kde/icons/slick/22x22/apps/go.png
+share/kde/icons/slick/22x22/apps/k3b.png
+share/kde/icons/slick/22x22/apps/kcmdf.png
 share/kde/icons/slick/22x22/apps/kcmsystem.png
 share/kde/icons/slick/22x22/apps/kdmconfig.png
+share/kde/icons/slick/22x22/apps/kfind.png
 share/kde/icons/slick/22x22/apps/kfm.png
 share/kde/icons/slick/22x22/apps/kfm_home.png
+share/kde/icons/slick/22x22/apps/kget.png
+share/kde/icons/slick/22x22/apps/khelpcenter.png
+share/kde/icons/slick/22x22/apps/kjobviewer.png
 share/kde/icons/slick/22x22/apps/klipper.png
+share/kde/icons/slick/22x22/apps/kmail.png
+share/kde/icons/slick/22x22/apps/kmenu.png
+share/kde/icons/slick/22x22/apps/kmenuedit.png
 share/kde/icons/slick/22x22/apps/kmixdocked.png
 share/kde/icons/slick/22x22/apps/kmixdocked1.png
 share/kde/icons/slick/22x22/apps/knotes.png
+share/kde/icons/slick/22x22/apps/konqsidebar_mediaplayer.png
+share/kde/icons/slick/22x22/apps/konqueror.png
+share/kde/icons/slick/22x22/apps/konsole.png
+share/kde/icons/slick/22x22/apps/kopete.png
+share/kde/icons/slick/22x22/apps/kwalletmanager.png
+share/kde/icons/slick/22x22/apps/kwin.png
 share/kde/icons/slick/22x22/apps/noatun.png
+share/kde/icons/slick/22x22/apps/package.png
+share/kde/icons/slick/22x22/apps/package_network.png
+share/kde/icons/slick/22x22/apps/package_settings.png
+share/kde/icons/slick/22x22/apps/package_system.png
 share/kde/icons/slick/22x22/apps/personal.png
+share/kde/icons/slick/22x22/apps/printmgr.png
+share/kde/icons/slick/22x22/apps/randr.png
+share/kde/icons/slick/22x22/apps/wallet_closed.png
+share/kde/icons/slick/22x22/apps/window_list.png
+share/kde/icons/slick/22x22/apps/xmms.png
+share/kde/icons/slick/22x22/devices/cdrom_mount.png
+share/kde/icons/slick/22x22/devices/cdrom_unmount.png
+share/kde/icons/slick/22x22/devices/cdwriter_mount.png
+share/kde/icons/slick/22x22/devices/cdwriter_unmount.png
+share/kde/icons/slick/22x22/devices/dvd_mount.png
+share/kde/icons/slick/22x22/devices/dvd_unmount.png
+share/kde/icons/slick/22x22/devices/floppy_mount.png
+share/kde/icons/slick/22x22/devices/floppy_unmount.png
+share/kde/icons/slick/22x22/devices/hdd.png
+share/kde/icons/slick/22x22/devices/hdd_mount.png
+share/kde/icons/slick/22x22/devices/hdd_unmount.png
+share/kde/icons/slick/22x22/devices/nfs_mount.png
+share/kde/icons/slick/22x22/devices/nfs_unmount.png
+share/kde/icons/slick/22x22/filesystems/chardevice.png
+share/kde/icons/slick/22x22/filesystems/desktop.png
+share/kde/icons/slick/22x22/filesystems/file_broken.png
+share/kde/icons/slick/22x22/filesystems/file_important.png
+share/kde/icons/slick/22x22/filesystems/file_locked.png
+share/kde/icons/slick/22x22/filesystems/folder.png
+share/kde/icons/slick/22x22/filesystems/folder_blue.png
+share/kde/icons/slick/22x22/filesystems/folder_develop.png
+share/kde/icons/slick/22x22/filesystems/folder_green.png
+share/kde/icons/slick/22x22/filesystems/folder_grey.png
+share/kde/icons/slick/22x22/filesystems/folder_home.png
+share/kde/icons/slick/22x22/filesystems/folder_image.png
+share/kde/icons/slick/22x22/filesystems/folder_locked.png
+share/kde/icons/slick/22x22/filesystems/folder_mail.png
+share/kde/icons/slick/22x22/filesystems/folder_open.png
+share/kde/icons/slick/22x22/filesystems/folder_sound.png
+share/kde/icons/slick/22x22/filesystems/folder_txt.png
+share/kde/icons/slick/22x22/filesystems/folder_video.png
+share/kde/icons/slick/22x22/filesystems/link.png
+share/kde/icons/slick/22x22/filesystems/lockoverlay.png
+share/kde/icons/slick/22x22/filesystems/mime_empty.png
+share/kde/icons/slick/22x22/filesystems/network.png
+share/kde/icons/slick/22x22/filesystems/pipe.png
+share/kde/icons/slick/22x22/filesystems/socket.png
+share/kde/icons/slick/22x22/filesystems/trashcan_empty.png
+share/kde/icons/slick/22x22/filesystems/trashcan_full.png
+share/kde/icons/slick/22x22/filesystems/www.png
+share/kde/icons/slick/22x22/mimetypes/ascii.png
+share/kde/icons/slick/22x22/mimetypes/binary.png
+share/kde/icons/slick/22x22/mimetypes/cdtrack.png
+share/kde/icons/slick/22x22/mimetypes/core.png
+share/kde/icons/slick/22x22/mimetypes/deb.png
+share/kde/icons/slick/22x22/mimetypes/develop.png
+share/kde/icons/slick/22x22/mimetypes/disk_image.png
+share/kde/icons/slick/22x22/mimetypes/document.png
+share/kde/icons/slick/22x22/mimetypes/font.png
+share/kde/icons/slick/22x22/mimetypes/font_bitmap.png
+share/kde/icons/slick/22x22/mimetypes/font_truetype.png
+share/kde/icons/slick/22x22/mimetypes/html.png
+share/kde/icons/slick/22x22/mimetypes/image.png
+share/kde/icons/slick/22x22/mimetypes/info.png
+share/kde/icons/slick/22x22/mimetypes/kmultiple.png
+share/kde/icons/slick/22x22/mimetypes/log.png
+share/kde/icons/slick/22x22/mimetypes/message.png
+share/kde/icons/slick/22x22/mimetypes/mime_empty.png
+share/kde/icons/slick/22x22/mimetypes/pdf.png
+share/kde/icons/slick/22x22/mimetypes/pov.png
+share/kde/icons/slick/22x22/mimetypes/real_doc.png
+share/kde/icons/slick/22x22/mimetypes/recycled.png
+share/kde/icons/slick/22x22/mimetypes/resource.png
+share/kde/icons/slick/22x22/mimetypes/rpm.png
+share/kde/icons/slick/22x22/mimetypes/shellscript.png
+share/kde/icons/slick/22x22/mimetypes/sound.png
+share/kde/icons/slick/22x22/mimetypes/source_java.png
+share/kde/icons/slick/22x22/mimetypes/source_moc.png
+share/kde/icons/slick/22x22/mimetypes/tar.png
+share/kde/icons/slick/22x22/mimetypes/text.png
+share/kde/icons/slick/22x22/mimetypes/text1.png
+share/kde/icons/slick/22x22/mimetypes/tgz.png
+share/kde/icons/slick/22x22/mimetypes/unknown.png
+share/kde/icons/slick/22x22/mimetypes/video.png
+share/kde/icons/slick/22x22/mimetypes/webarchiver.png
+share/kde/icons/slick/22x22/mimetypes/workprocessing.png
 share/kde/icons/slick/32x32/actions/1downarrow.png
 share/kde/icons/slick/32x32/actions/1leftarrow.png
 share/kde/icons/slick/32x32/actions/1rightarrow.png
@@ -6731,6 +6912,7 @@ share/kde/icons/slick/32x32/apps/icons.png
 share/kde/icons/slick/32x32/apps/k3b.png
 share/kde/icons/slick/32x32/apps/kab.png
 share/kde/icons/slick/32x32/apps/kaddressbook.png
+share/kde/icons/slick/32x32/apps/kaudiocreator.png
 share/kde/icons/slick/32x32/apps/kchart.png
 share/kde/icons/slick/32x32/apps/kcmkicker.png
 share/kde/icons/slick/32x32/apps/kcmmemory.png
@@ -6794,6 +6976,7 @@ share/kde/icons/slick/32x32/apps/penguin.png
 share/kde/icons/slick/32x32/apps/remote.png
 share/kde/icons/slick/32x32/apps/samba.png
 share/kde/icons/slick/32x32/apps/showimg.png
+share/kde/icons/slick/32x32/apps/smb4k.png
 share/kde/icons/slick/32x32/apps/speaker.png
 share/kde/icons/slick/32x32/apps/trees.png
 share/kde/icons/slick/32x32/apps/tux.png
@@ -7075,6 +7258,7 @@ share/kde/icons/slick/48x48/apps/kontour.png
 share/kde/icons/slick/48x48/apps/kopete.png
 share/kde/icons/slick/48x48/apps/korganizer.png
 share/kde/icons/slick/48x48/apps/kpackage.png
+share/kde/icons/slick/48x48/apps/kpf.png
 share/kde/icons/slick/48x48/apps/kppp.png
 share/kde/icons/slick/48x48/apps/kpresenter.png
 share/kde/icons/slick/48x48/apps/kprintfax.png
@@ -7125,6 +7309,7 @@ share/kde/icons/slick/48x48/apps/xapp.png
 share/kde/icons/slick/48x48/apps/xmms.png
 share/kde/icons/slick/48x48/devices/3floppy_mount.png
 share/kde/icons/slick/48x48/devices/3floppy_unmount.png
+share/kde/icons/slick/48x48/devices/camera.png
 share/kde/icons/slick/48x48/devices/cd.png
 share/kde/icons/slick/48x48/devices/cdaudio_mount.png
 share/kde/icons/slick/48x48/devices/cdaudio_unmount.png
@@ -7376,10 +7561,39 @@ share/kde/icons/slick/64x64/actions/launch.png
 share/kde/icons/slick/64x64/actions/lock.png
 share/kde/icons/slick/64x64/actions/share.png
 share/kde/icons/slick/64x64/actions/share1.png
+share/kde/icons/slick/64x64/apps/kcontrol.png
 share/kde/icons/slick/64x64/apps/komba2.png
 share/kde/icons/slick/64x64/apps/konsole.png
+share/kde/icons/slick/64x64/apps/package_settings.png
 share/kde/icons/slick/64x64/apps/samba.png
 share/kde/icons/slick/64x64/apps/terminal.png
+share/kde/icons/slick/64x64/devices/3floppy_mount.png
+share/kde/icons/slick/64x64/devices/3floppy_unmount.png
+share/kde/icons/slick/64x64/devices/blockdevice.png
+share/kde/icons/slick/64x64/devices/camera.png
+share/kde/icons/slick/64x64/devices/cd.png
+share/kde/icons/slick/64x64/devices/cdaudio_mount.png
+share/kde/icons/slick/64x64/devices/cdaudio_unmount.png
+share/kde/icons/slick/64x64/devices/cdrom_mount.png
+share/kde/icons/slick/64x64/devices/cdrom_unmount.png
+share/kde/icons/slick/64x64/devices/cdwriter_mount.png
+share/kde/icons/slick/64x64/devices/cdwriter_unmount.png
+share/kde/icons/slick/64x64/devices/dvd_mount.png
+share/kde/icons/slick/64x64/devices/dvd_unmount.png
+share/kde/icons/slick/64x64/devices/hdd.png
+share/kde/icons/slick/64x64/devices/hdd_games.png
+share/kde/icons/slick/64x64/devices/hdd_gfx.png
+share/kde/icons/slick/64x64/devices/hdd_linux.png
+share/kde/icons/slick/64x64/devices/hdd_mount.png
+share/kde/icons/slick/64x64/devices/hdd_system.png
+share/kde/icons/slick/64x64/devices/hdd_unmount.png
+share/kde/icons/slick/64x64/devices/hdd_www.png
+share/kde/icons/slick/64x64/devices/memory.png
+share/kde/icons/slick/64x64/devices/nfs.png
+share/kde/icons/slick/64x64/devices/nfs_mount.png
+share/kde/icons/slick/64x64/devices/nfs_unmount.png
+share/kde/icons/slick/64x64/devices/print_printer.png
+share/kde/icons/slick/64x64/devices/printer1.png
 share/kde/icons/slick/64x64/filesystems/chardevice.png
 share/kde/icons/slick/64x64/filesystems/desktop.png
 share/kde/icons/slick/64x64/filesystems/exec.png
@@ -7543,7 +7757,7 @@ share/kde/wallpapers/kdemagic.jpg
 share/kde/wallpapers/kiagara.jpg
 share/kde/wallpapers/kraftwurm.jpg
 share/kde/wallpapers/kroller.png
-share/kde/wallpapers/kubical.jpg
+share/kde/wallpapers/kubical.png
 share/kde/wallpapers/linux_addict.jpg
 share/kde/wallpapers/mystical_rightturn.jpg
 share/kde/wallpapers/northbeach.jpg
@@ -7551,8 +7765,11 @@ share/kde/wallpapers/simple_wallpaper.jpg
 share/kde/wallpapers/sunday_brunch.jpg
 share/kde/wallpapers/vegetative_fog.jpg
 share/kde/wallpapers/winter_theme_1.jpg
+@comment dirrm share/kde/wallpapers
+@comment dirrm share/kde/sounds
 @dirrm share/kde/icons/slick/64x64/mimetypes
 @dirrm share/kde/icons/slick/64x64/filesystems
+@dirrm share/kde/icons/slick/64x64/devices
 @dirrm share/kde/icons/slick/64x64/apps
 @dirrm share/kde/icons/slick/64x64/actions
 @dirrm share/kde/icons/slick/64x64
@@ -7568,6 +7785,9 @@ share/kde/wallpapers/winter_theme_1.jpg
 @dirrm share/kde/icons/slick/32x32/apps
 @dirrm share/kde/icons/slick/32x32/actions
 @dirrm share/kde/icons/slick/32x32
+@dirrm share/kde/icons/slick/22x22/mimetypes
+@dirrm share/kde/icons/slick/22x22/filesystems
+@dirrm share/kde/icons/slick/22x22/devices
 @dirrm share/kde/icons/slick/22x22/apps
 @dirrm share/kde/icons/slick/22x22/actions
 @dirrm share/kde/icons/slick/22x22
@@ -7679,6 +7899,7 @@ share/kde/wallpapers/winter_theme_1.jpg
 @dirrm share/kde/icons/Locolor/16x16/actions
 @dirrm share/kde/icons/Locolor/16x16
 @dirrm share/kde/icons/Locolor
+@comment dirrm share/kde/icons
 @dirrm share/kde/apps/kworldclock/maps/rainfall
 @dirrm share/kde/apps/kworldclock/maps/mggd
 @dirrm share/kde/apps/kworldclock/maps/depths
@@ -7697,6 +7918,11 @@ share/kde/wallpapers/winter_theme_1.jpg
 @dirrm share/kde/apps/kwin/glow-themes/glass
 @dirrm share/kde/apps/kwin/glow-themes/default
 @dirrm share/kde/apps/kwin/glow-themes
+@comment dirrm share/kde/apps/kwin
 @dirrm share/kde/apps/kstyle/themes
 @dirrm share/kde/apps/kscreensaver
+@dirrm share/kde/apps/kfiresaver
+@comment dirrm share/kde/apps
 @comment dirrm share/kde/applnk/System/ScreenSavers
+@comment dirrm lib/kde3/plugins/styles
+@comment dirrm lib/kde3
