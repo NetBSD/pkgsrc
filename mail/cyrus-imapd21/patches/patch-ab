@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/10/27 16:08:53 chris Exp $
+
+--- lib/cyrusdb_flat.c~	Mon Aug  5 13:46:15 2002
++++ lib/cyrusdb_flat.c	Thu Aug 29 23:13:17 2002
+@@ -186,6 +186,7 @@
+     struct db *db = (struct db *) xmalloc(sizeof(struct db));
+     struct stat sbuf;
+ 
++    db->fname = NULL;
+     assert(fname && ret);
+ 
+     db->fd = open(fname, O_RDWR | O_CREAT, 0666);
