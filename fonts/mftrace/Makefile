@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/26 13:03:59 adam Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/29 10:14:17 adam Exp $
 
 DISTNAME=	mftrace-1.0.35
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.xs4all.nl/~hanwen/mftrace/
 
@@ -9,7 +10,8 @@ HOMEPAGE=	http://www.xs4all.nl/~hanwen/mftrace/
 COMMENT=	Scalable Fonts for MetaFont
 
 DEPENDS+=	autotrace>=0.31:../../graphics/autotrace
-DEPENDS+=	pfaedit>=20030712:../../fonts/pfaedit
+DEPENDS+=	potrace>=1.5:../../graphics/potrace
+DEPENDS+=	fontforge>=20041115:../../fonts/fontforge
 DEPENDS+=	t1utils>=1.27:../../fonts/t1utils
 DEPENDS+=	teTeX>=2.0.2:../../print/teTeX
 
