@@ -1,0 +1,21 @@
+$NetBSD: patch-al,v 1.1 1998/12/17 16:19:20 tv Exp $
+
+--- iflib/config.h.orig	Thu Dec 17 10:26:12 1998
++++ iflib/config.h	Thu Dec 17 10:27:03 1998
+@@ -6,6 +6,7 @@
+ #define _CONFIG_H
+ 
+ #include "ftn.h"
++#include <sys/time.h>
+ 
+ #ifndef AREA_LIST_TYPE
+ #define AREA_LIST_TYPE
+@@ -58,7 +59,7 @@
+ extern area_list *badgroups;
+ 
+ extern long configverbose;
+-extern long configtime;
++extern time_t configtime;
+ extern long maxfsize;
+ extern long maxpsize;
+ extern long speed;
