@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.4 2001/12/31 23:54:26 jlam Exp $
+$NetBSD: patch-ah,v 1.5 2002/10/14 06:21:20 martti Exp $
 
---- php.ini-recommended.orig	Fri Aug 17 12:54:16 2001
-+++ php.ini-recommended
-@@ -368,7 +368,7 @@
+--- php.ini-recommended.orig	Sat Aug 24 00:57:06 2002
++++ php.ini-recommended	Sat Oct 12 09:29:54 2002
+@@ -373,7 +373,7 @@
  user_dir =
  
  ; Directory in which the loadable extensions (modules) reside.
@@ -11,7 +11,7 @@ $NetBSD: patch-ah,v 1.4 2001/12/31 23:54:26 jlam Exp $
  
  ; Whether or not to enable the dl() function.  The dl() function does NOT work
  ; properly in multithreaded servers, such as IIS or Zeus, and is automatically
-@@ -385,7 +385,7 @@
+@@ -403,7 +403,7 @@
  
  ; Temporary directory for HTTP uploaded files (will use system default if not
  ; specified).
