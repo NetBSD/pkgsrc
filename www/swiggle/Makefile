@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/30 01:12:38 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/30 01:16:27 minskim Exp $
 
 DISTNAME=	swiggle-0.3.3
 CATEGORIES=	www graphics
@@ -8,12 +8,16 @@ MAINTAINER=	snj@NetBSD.org
 HOMEPAGE=	http://mailbox.univie.ac.at/~le/swiggle/
 COMMENT=	Lightweight image gallery generator
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=	yes
 
 SUBST_CLASSES+=		mf
 SUBST_STAGE.mf=		post-patch
 SUBST_FILES.mf=		Makefile
 SUBST_SED.mf=		-e "s/gcc/${CC}/" -e "s/-O3//"
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/swiggle ${PREFIX}/bin/
