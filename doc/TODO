@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1820 2004/06/07 02:29:46 snj Exp $
+$NetBSD: TODO,v 1.1821 2004/06/07 02:48:05 snj Exp $
 
 Suggested new packages
 ======================
@@ -177,7 +177,6 @@ Suggested package updates
 	o bk_edit-0.6.23
 	o blender-2.33
 	o boehm-gc-6.3alpha6 [recht]
-	o boost-1.31.0
 	o boson-0.10
 	o capc-calc-2.11.9.3
 	o centericq-4.9.12
@@ -208,7 +207,6 @@ Suggested package updates
 	o docsis-0.9.1
 	o dvd+rw-tools-5.19-1.4.9.7 [pkg/25433]
 	o dvdrip-0.50.18
-	o dvipng-1.1
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o easytag-0.31
