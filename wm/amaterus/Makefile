@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 22:55:09 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/10 14:12:50 xtraeme Exp $
 
 DISTNAME=	amaterus-0.34.1
 PKGREVISION=	2
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.taiyaki.org/
 COMMENT=	GTK+ window manager
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11=	YES
 
 post-install:
@@ -18,7 +18,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/amaterus
 	${INSTALL_DATA} ${WRKSRC}/README.en ${PREFIX}/share/doc/amaterus
 
-.include "../../textproc/libxml/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../textproc/libxml/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
