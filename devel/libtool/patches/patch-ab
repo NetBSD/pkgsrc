@@ -1,8 +1,58 @@
-$NetBSD: patch-ab,v 1.20 2001/04/03 17:06:17 skrll Exp $
+$NetBSD: patch-ab,v 1.21 2001/05/09 10:24:11 agc Exp $
 
 --- ltmain.sh.orig	Mon Feb 19 05:05:23 2001
-+++ ltmain.sh
-@@ -2397,7 +2397,7 @@
++++ ltmain.sh	Wed May  9 11:13:29 2001
+@@ -484,7 +484,14 @@
+       # Blanks in the command may have been stripped by the calling shell,
+       # but not from the CC environment variable when ltconfig was run.
+       "`$echo $CC` "*) ;;
+-      *)
++      *)   base_compiler=`echo $base_compile | awk '{ print $1 }'`
++	   case $base_compiler in
++	   *cc)	tagname=CC ;;
++	   *++)	tagname=CXX ;;
++	   esac ;;
++      esac
++    fi
++    if test -n "$available_tags" && test -z "$tagname"; then
+         for z in $available_tags; do
+           if grep "^### BEGIN LIBTOOL TAG CONFIG: $z$" < "$0" > /dev/null; then
+ 	    # Evaluate the configuration.
+@@ -514,8 +521,6 @@
+ #        else
+ #          echo "$modename: using $tagname tagged configuration"
+         fi
+-	;;
+-      esac
+     fi
+ 
+     objname=`$echo "X$obj" | $Xsed -e 's%^.*/%%'`
+@@ -1423,7 +1428,14 @@
+       # Blanks in the command may have been stripped by the calling shell,
+       # but not from the CC environment variable when ltconfig was run.
+       "`$echo $CC` "*) ;;
+-      *)
++      *)   base_compiler=`echo $base_compile | awk '{ print $1 }'`
++	   case $base_compiler in
++	   *cc)	tagname=CC ;;
++	   *++)	tagname=CXX ;;
++	   esac ;;
++      esac
++    fi
++    if test -n "$available_tags" && test -z "$tagname"; then
+         for z in $available_tags; do
+           if grep "^### BEGIN LIBTOOL TAG CONFIG: $z$" < "$0" > /dev/null; then
+ 	    # Evaluate the configuration.
+@@ -1453,8 +1465,6 @@
+ #       else
+ #         echo "$modename: using $tagname tagged configuration"
+         fi
+-	;;
+-      esac
+     fi
+ 
+     if test "$export_dynamic" = yes && test -n "$export_dynamic_flag_spec"; then
+@@ -2397,7 +2407,7 @@
  
  	# Check that each of the things are valid numbers.
  	case "$current" in
@@ -11,7 +61,7 @@ $NetBSD: patch-ab,v 1.20 2001/04/03 17:06:17 skrll Exp $
  	*)
  	  $echo "$modename: CURRENT \`$current' is not a nonnegative integer" 1>&2
  	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
-@@ -2406,7 +2406,7 @@
+@@ -2406,7 +2416,7 @@
  	esac
  
  	case "$revision" in
@@ -20,7 +70,7 @@ $NetBSD: patch-ab,v 1.20 2001/04/03 17:06:17 skrll Exp $
  	*)
  	  $echo "$modename: REVISION \`$revision' is not a nonnegative integer" 1>&2
  	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
-@@ -2415,7 +2415,7 @@
+@@ -2415,7 +2425,7 @@
  	esac
  
  	case "$age" in
@@ -29,7 +79,7 @@ $NetBSD: patch-ab,v 1.20 2001/04/03 17:06:17 skrll Exp $
  	*)
  	  $echo "$modename: AGE \`$age' is not a nonnegative integer" 1>&2
  	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
-@@ -2612,6 +2612,9 @@
+@@ -2612,6 +2622,9 @@
  	  *-*-cygwin* | *-*-mingw* | *-*-pw32* | *-*-os2* | *-*-beos*)
  	    # these systems don't actually have a c library (as such)!
  	    ;;
@@ -39,7 +89,7 @@ $NetBSD: patch-ab,v 1.20 2001/04/03 17:06:17 skrll Exp $
  	  *)
   	    # Add libc to deplibs on all other systems if necessary.
   	    if test $build_libtool_need_lc = "yes"; then
-@@ -2771,6 +2774,40 @@
+@@ -2771,6 +2784,40 @@
  	    fi
  	  done # Gone through all deplibs.
  	  ;;
