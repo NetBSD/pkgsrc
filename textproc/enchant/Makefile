@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/14 18:26:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/15 23:25:38 wiz Exp $
 #
 
 DISTNAME=		enchant-1.1.3
@@ -9,12 +9,12 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.abisource.com/enchant/
 COMMENT=		Generic spell checking library
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	enchant.pc.in
 GNU_CONFIGURE=		yes
 
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../textproc/aspell/buildlink2.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../textproc/aspell/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
