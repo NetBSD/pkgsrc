@@ -1,30 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:40:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/04/05 21:39:41 wiz Exp $
 #
+PKGNAME=		xjed-0.99.16
+.include "../jed/Makefile.common"
+COMMENT=		Extensible folding editor with Emacs/WordStar/EDT emulations, X11 version
 
-DISTNAME=		jed-B0.99-15
-PKGNAME=		xjed-0.99.15
-WRKSRC=			${WRKDIR}/jed-B0.99-15
-CATEGORIES=		editors
-MASTER_SITES=		ftp://space.mit.edu/pub/davis/jed/v0.99/ \
-			ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/jed/
-
-MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://space.mit.edu/~davis/jed.html
-COMMENT=		X11-based text editor, extensible through S-Lang functions
-
-USE_BUILDLINK2=		# defined
-USE_X11=		# defined
-GNU_CONFIGURE=		# defined
+USE_X11=		yes
 CONFIGURE_ARGS+=	--with-x
 
-post-install:
-	@cd ${WRKSRC};							\
-		for dir in lib info doc; do				\
-			${ECHO} "Installing $$dir files";		\
-			${PAX} -rwpe $$dir ${PREFIX}/share/xjed;	\
-		done
-	${RM} -f ${PREFIX}/share/xjed/doc/jed.1 ${PREFIX}/share/xjed/doc/rgrep.1
-	${RMDIR} ${PREFIX}/share/xjed/bin
+ALL_TARGET=		xjed
 
-.include "../../devel/libslang/buildlink2.mk"
+MESSAGE=		${.CURDIR}/../jed/MESSAGE
+PLIST_SRC=		${.CURDIR}/../jed/PLIST
+PLIST_SRC+=		${.CURDIR}/PLIST.xjed
+
 .include "../../mk/bsd.pkg.mk"
