@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2000/08/30 07:17:11 rh Exp $
+# $NetBSD: Makefile,v 1.97 2000/09/04 21:43:43 kim Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -85,6 +85,7 @@
     SUBDIR += web500gw
     SUBDIR += webalizer
     SUBDIR += weblint
+    SUBDIR += wml
     SUBDIR += wwwcount
     SUBDIR += wwwoffle
     SUBDIR += zope
