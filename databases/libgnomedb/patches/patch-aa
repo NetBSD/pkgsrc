@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/10/30 05:09:08 rh Exp $
+
+--- /dev/null	Sat Jul 13 01:28:16 2002
++++ monikers/GNOME_Database_Monikers.server
+@@ -0,0 +1,23 @@
++<oaf_info>
++
++<oaf_server iid="OAFIID:GNOME_Database_MonikerFactory"
++	    type="shlib" location="/usr/pkg/lib/bonobo/monikers/libmoniker_database.so">
++	    <oaf_attribute name="repo_ids" type="stringv">
++			   <item value="IDL:Bonobo/GenericFactory:1.0"/>
++	    </oaf_attribute>
++	    <oaf_attribute name="name" type="string" _value="Database Moniker factory"/>
++</oaf_server>
++
++<oaf_server iid="OAFIID:GNOME_Database_Moniker" type="factory"
++	    location="OAFIID:GNOME_Database_MonikerFactory">
++	    <oaf_attribute name="repo_ids" type="stringv">
++			   <item value="IDL:Bonobo/Moniker:1.0"/>
++			   <item value="IDL:Bonobo/Unknown:1.0"/>
++            </oaf_attribute>
++	    <oaf_attribute name="name" type="string" _value="database: moniker"/>
++	    <oaf_attribute name="bonobo:moniker" type="stringv">
++			   <item value="database"/>
++            </oaf_attribute>
++</oaf_server>
++
++</oaf_info>
