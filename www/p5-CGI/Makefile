@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2000/09/15 14:50:58 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2000/10/15 02:17:16 jlam Exp $
 #
 
-DISTNAME=       	CGI.pm-2.72
-PKGNAME=        	p5-CGI-2.72
+DISTNAME=       	CGI.pm-2.74
+PKGNAME=        	p5-CGI-2.74
 CATEGORIES=		www perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/} \
+			http://stein.cshl.org/WWW/software/CGI/
 
 MAINTAINER=		christos@netbsd.org
+HOMEPAGE=		http://stein.cshl.org/WWW/software/CGI/
 
 # Some perl packages install their own versions of this module.
 # Can't simply define USE_PERL5.
@@ -23,22 +25,17 @@ post-extract:
 		${RM} -f $${file}.tmp; \
 	done
 
-pre-configure:
-	${CP} ${FILESDIR}/Makefile.PL ${WRKSRC}/Makefile.PL
-
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 post-build:
 	@cd ${WRKSRC}/examples; ${PERL5} make_links.pl
 
-pre-install:
-	@${RM} -rf ${WRKSRC}/examples/WORLD_WRITABLE
-
 post-install:
 	${INSTALL_DATA_DIR} ${HTMLDIR}
-	${INSTALL_DATA} ${WRKSRC}/cgi*.html ${HTMLDIR}
-	${CP} -R ${WRKSRC}/examples ${HTMLDIR}/examples
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${HTMLDIR}/examples
+	${INSTALL_DATA_DIR} ${HTMLDIR}/examples
+	cd ${WRKSRC}; ${INSTALL_DATA} *.html ${HTMLDIR}
+	cd ${WRKSRC}/examples; ${INSTALL_DATA} *.cgi *.gif *.html *.txt *.xbm \
+		${HTMLDIR}/examples
 
 .include "../../mk/bsd.pkg.mk"
