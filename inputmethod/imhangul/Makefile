@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/30 00:39:41 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/30 12:46:29 minskim Exp $
 
 DISTNAME=	imhangul-0.9.9
 PKGREVISION=	1
@@ -12,7 +12,8 @@ COMMENT=	GTK+-2.0 Hangul Input Module
 
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
-USE_SHLIBTOOL=		YES
+USE_LIBTOOL=		YES
+SHLIBTOOL_OVERRIDE=	libtool
 GTK2_IMMODULES=		YES
 
 .include "../../devel/pkgconfig/buildlink3.mk"
