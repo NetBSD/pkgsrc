@@ -1,0 +1,33 @@
+$NetBSD: patch-ac,v 1.1 2004/01/21 10:11:19 recht Exp $
+
+--- Makefile.in.orig	2003-10-21 04:32:25.000000000 +0200
++++ Makefile.in	2004-01-20 23:42:20.000000000 +0100
+@@ -441,22 +441,20 @@
+ 	-(cd $(DATADIR); $(BINDIR)/elvtags -gitv stubs/*.c || ctags stubs/*.c)
+ 	chmod 0755 $(DATADIR)/*/. $(DATADIR) $(DOCDIR)
+ 	sh instman.sh -p$(PREFIX) $(ALL)
+-	-[ -d /etc/elvis ] || mkdir /etc/elvis
+-	-chmod 0755 /etc/elvis/
+-	-@ : >/etc/elvis/README && ( \
++	-@ : >$(DATADIR)/README.etc && ( \
+ 	  echo "This directory contains system-dependent versions of elvis' configuration" \
+ 	  echo "files.  The standard versions are available in $(DATADIR)"  \
+ 	  echo "To customize any of these configuration files for this system,"  \
+-	  echo "first copy the standard version of the file into /etc/elvis and" \
++	  echo "first copy the standard version of the file into @PKG_SYSCONFDIR@ and" \
+ 	  echo "then edit the copy.  Leave the standard version unchanged." \
+-	) >>/etc/elvis/README
+-	-chmod 0644 /etc/elvis/README
++	) >>$(DATADIR)/README.etc
++	-chmod 0644 $(DATADIR)/README.etc
+ 	@echo "This directory contains the standard versions of elvis' configuration" >$(DATADIR)/README
+ 	@echo "files.  DO NOT MODIFY THESE FILES!  To perform host-specific customization," >>$(DATADIR)/README
+-	@echo "copy files from this directory into /etc/elvis/, and then modify the copies." >>$(DATADIR)/README
++	@echo "copy files from this directory into @PKG_SYSCONFDIR@/, and then modify the copies." >>$(DATADIR)/README
+ 	@echo "To make user-specific changes, create a ~/.elvis/ directory (if it doesn't" >>$(DATADIR)/README
+ 	@echo "exist already) and copy files from this directory into ~/.elvis/ and then" >>$(DATADIR)/README
+-	@echo "modify the copies.  Any file that elvis finds in ~/.elvis/ or /etc/elvis/" >>$(DATADIR)/README
++	@echo "modify the copies.  Any file that elvis finds in ~/.elvis/ or @PKG_SYSCONFDIR@/" >>$(DATADIR)/README
+ 	@echo "overrides the similarly named file in this directory." >>$(DATADIR)/README
+ 	chmod 0644 $(DATADIR)/README
+ 

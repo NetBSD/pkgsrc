@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/01/21 10:11:19 recht Exp $
+
+--- configure.orig	2004-01-20 23:11:37.000000000 +0100
++++ configure	2004-01-20 23:11:54.000000000 +0100
+@@ -950,7 +950,7 @@
+ 
+ 
+ # Generate the "config.h" file
+-ELVISPATH=`echo "~/.elvis:/etc/elvis:$DATADIR:$DOCDIR" | sed s,'$(DATADIR)',"$DATADIR",g\;s,'$(PREFIX)',"$PREFIX",g`
++ELVISPATH=`echo "~/.elvis:@PKG_SYSCONFDIR@:$DATADIR:$DOCDIR" | sed s,'$(DATADIR)',"$DATADIR",g\;s,'$(PREFIX)',"$PREFIX",g`
+ cat >config.h <<eof-config
+ /* config.h */
+ 
