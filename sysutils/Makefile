@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2001/03/21 14:24:23 ad Exp $
+# $NetBSD: Makefile,v 1.94 2001/03/27 19:24:57 zuntum Exp $
 #
 
 COMMENT=	System utilities
@@ -59,6 +59,7 @@ SUBDIR+=	skill
 SUBDIR+=	socket
 SUBDIR+=	sshsh
 SUBDIR+=	stow
+SUBDIR+=	safetynet
 SUBDIR+=	sux
 SUBDIR+=	sysgen
 SUBDIR+=	sysinfo
