@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2003/02/17 15:28:00 dillo Exp $
+# $NetBSD: Makefile,v 1.48 2003/05/28 12:51:29 grant Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
@@ -37,4 +37,6 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/png.5 ${PREFIX}/man/man5
 
 .include "../../devel/zlib/buildlink2.mk"
+
+.include "../../mk/gcc.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
