@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/25 04:18:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/22 22:14:24 zuntum Exp $
 # KAME Id: Makefile,v 1.3 2000/01/21 12:34:29 itojun Exp
 #
 
@@ -29,10 +29,8 @@ post-install:
 	strip ${PREFIX}/netperf/netserver
 	${INSTALL_MAN} ${WRKSRC}/netperf.man ${PREFIX}/man/man1/netperf.1
 	${INSTALL_MAN} ${WRKSRC}/netserver.man ${PREFIX}/man/man1/netserver.1
-.if !defined(NOPORTDOCS)
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/netperf
 	${INSTALL_MAN} ${WRKSRC}/netperf.ps ${PREFIX}/share/doc/netperf
 	${GZIP_CMD} -9nf ${PREFIX}/share/doc/netperf/netperf.ps
-.endif
 
 .include "../../mk/bsd.pkg.mk"
