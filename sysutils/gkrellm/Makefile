@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2004/05/09 20:47:04 fredb Exp $
+# $NetBSD: Makefile,v 1.36 2004/06/07 17:01:50 cube Exp $
 .include "Makefile.common"
 
-PKGREVISION=		# defined
+PKGREVISION=		1
 
 GKRELLM_PKGBASE=	gkrellm
 WRKSRC=			${GKRELLM_SRCDIR}
@@ -16,7 +16,7 @@ USE_PKGINSTALL=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD")
+.if (${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD")
 SPECIAL_PERMS+=		${PREFIX}/bin/gkrellm ${ROOT_USER} kmem 2711
 .endif
 
