@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/01/21 11:56:16 pooka Exp $
+$NetBSD: distinfo,v 1.2 2003/07/28 16:03:19 wiz Exp $
 
 SHA1 (nethack_source_331_jtp_193.zip) = 8e002c7f7ca039de875b3c797b2584a517aad6ce
 Size (nethack_source_331_jtp_193.zip) = 8405675 bytes
@@ -17,3 +17,4 @@ SHA1 (patch-be) = 632a256780e80c8127635080df5112ce7678d4df
 SHA1 (patch-bf) = b58009fe635389483c34b50afca6aba9cb75fc72
 SHA1 (patch-bh) = 65bf424d1e60b0ee9b9acc8b04359f2f4621e605
 SHA1 (patch-bi) = 6b3d0d1eca3a23c3086155c1da3c2965d7092d5f
+SHA1 (patch-bj) = 281f1d3b8d9eafe7fbe7ca729861d4bdccea5a41
