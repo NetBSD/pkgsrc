@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 1999/02/20 22:48:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1999/04/27 20:33:57 tron Exp $
 
-DISTNAME=	XF86Setup-3.3.3.1
+DISTNAME=	XF86Setup-3.3.3.1a
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
+EXTRACT_SUFX=	.tar.bz2
 ONLY_FOR_ARCHS=	i386
 
 MAINTAINER=	tron@netbsd.org
@@ -15,7 +16,7 @@ TCLLIB=		${LOCALBASE}/lib/libtcl80.a
 TKLIB=		${LOCALBASE}/lib/libtk80.a
 
 MIRROR_DISTFILE= no
-WRKSRC=		${WRKDIR}/XF86Setup
+WRKSRC=		${WRKDIR}/hw/xfree86/XF86Setup
 USE_IMAKE=	yes
 
 pre-configure:
