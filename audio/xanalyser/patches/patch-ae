@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/04/23 03:33:27 schmonz Exp $
+$NetBSD: patch-ae,v 1.2 2002/08/09 01:58:04 dmcmahill Exp $
 
 --- src/Sample.cc.orig	Wed Dec 12 16:36:27 2001
 +++ src/Sample.cc
@@ -13,3 +13,12 @@ $NetBSD: patch-ae,v 1.1.1.1 2002/04/23 03:33:27 schmonz Exp $
  
  #include <X11/Xlib.h>
  #include <Xm/Xm.h>
+@@ -116,7 +116,7 @@ Sample::shot ()
+ 	if (j == 0 || j != length)	// EOF
+ 	    return false;
+ 
+-#if __BYTE_ORDER == __LITTLE_ENDIAN
++#if BYTE_ORDER == LITTLE_ENDIAN
+ 	dsp.swapbuffer (buffer, 4 * length);
+ #endif
+ 
