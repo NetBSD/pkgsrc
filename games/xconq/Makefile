@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.20 2004/03/08 20:27:14 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2004/03/12 17:15:57 minskim Exp $
 
 DISTNAME=		xconq-7.4.1
 CATEGORIES=		games x11
 MASTER_SITES=		ftp://sources.redhat.com/pub/xconq/
-PKGREVISION=		1
+PKGREVISION=		2
 
 MAINTAINER=		kleink@NetBSD.org
 HOMEPAGE=		http://sources.redhat.com/xconq/
 COMMENT=		Xconq is a general strategy game system
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
@@ -28,6 +28,7 @@ post-build:
 post-install:
 	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install-info
 
-.include "../../x11/tk83/buildlink2.mk"
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
