@@ -1,15 +1,25 @@
-$NetBSD: patch-al,v 1.1.1.1 2004/01/18 12:42:11 recht Exp $
+$NetBSD: patch-al,v 1.2 2004/11/28 14:34:07 recht Exp $
 
---- imtest/imtest.c~	2003-10-22 20:50:10.000000000 +0200
-+++ imtest/imtest.c	2003-11-03 11:09:41.000000000 +0100
-@@ -72,6 +72,10 @@
+--- imtest/imtest.c.orig	Wed Aug  4 15:03:18 2004
++++ imtest/imtest.c	Sun Nov 28 15:12:44 2004
+@@ -47,7 +47,9 @@
+ #include <sys/time.h>
+ #include <sys/types.h>
+ #include <sys/ipc.h>
++#if !defined(__APPLE__)
+ #include <sys/msg.h>
++#endif
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ 
+@@ -71,6 +73,10 @@
+ #include <sys/file.h>
  #include <netinet/in.h>
  #include <netdb.h>
- 
++
 +#ifdef HAVE_SYS_PARAM_H
 +#include <sys/param.h>
 +#endif
-+
+ 
  #include <sasl/sasl.h>
  #include <sasl/saslutil.h>
- 

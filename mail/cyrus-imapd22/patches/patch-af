@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2004/07/27 13:28:38 recht Exp $
+$NetBSD: patch-af,v 1.5 2004/11/28 14:34:07 recht Exp $
 
---- configure.orig	2004-07-26 20:11:28.000000000 +0200
-+++ configure	2004-07-27 15:00:10.000000000 +0200
-@@ -13576,6 +13576,7 @@
+--- configure.orig	Tue Nov 23 19:55:47 2004
++++ configure	Sun Nov 28 14:34:29 2004
+@@ -13532,6 +13532,7 @@
      EXTRA_SUBDIRS="${EXTRA_SUBDIRS} perl"
      PERL_SUBDIRS="imap"
      PERL="${with_perl}"
