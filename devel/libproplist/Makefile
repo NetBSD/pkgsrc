@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/02/02 09:43:46 tron Exp $
-#
+# $NetBSD: Makefile,v 1.2 1999/02/02 09:50:44 tron Exp $
 
 DISTNAME=	libPropList-0.8.3
+PKGNAME=	libproplist-0.8.3
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.windowmaker.org/pub/libs/ \
-		ftP://ftp.gnome.org/pub/libPropList/
+		ftp://ftp.gnome.org/pub/libPropList/
 
 MAINTAINER=	lamj@stat.cmu.edu
 
