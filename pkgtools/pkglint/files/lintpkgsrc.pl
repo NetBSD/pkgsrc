@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.47 2001/05/01 15:52:50 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.48 2001/05/16 11:36:47 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -735,7 +735,7 @@ sub parse_makefile_vars
 	    next;
 	    }
 
-	if (/^ *(\w+)\s*([+?]?)=\s*(\S.*)/)
+	if (/^ *(\w+)\s*([+?]?)=\s*(.*)/)
 	    {
 	    $key = $1;
 	    $plus = $2;
