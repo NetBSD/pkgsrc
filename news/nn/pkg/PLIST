@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/05/19 22:26:40 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/05/22 08:30:32 tron Exp $
 bin/nn
 bin/nnusage
 bin/nngrab
@@ -13,7 +13,6 @@ bin/nnbatch
 lib/nn/aux
 lib/nn/upgrade_rc
 lib/nn/conf
-lib/nn/inews
 lib/nn/help/adm.upgrade1
 lib/nn/help/adm.upgrade2
 lib/nn/help/adm.upgrade3
@@ -45,6 +44,5 @@ man/man1/nnstats.1
 man/man1/nnusage.1
 man/man8/nnmaster.8
 man/man8/nnspew.8
-@unexec rm -f %D/etc/nntp_server
 @dirrm lib/nn/help
 @dirrm lib/nn
