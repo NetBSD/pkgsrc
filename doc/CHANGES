@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8831 2005/01/20 12:07:26 salo Exp $
+$NetBSD: CHANGES,v 1.8832 2005/01/20 14:01:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -438,3 +438,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated bonobo to 1.0.22 [adam 2005-01-20]
 	Updated nmap to 3.78 [salo 2005-01-20]
 	Updated nmapfe to 0.9.5nb18 [salo 2005-01-20]
+	Removed thunderbird-bin [wiz 2005-01-20]
