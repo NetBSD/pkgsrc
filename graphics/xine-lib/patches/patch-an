@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2003/10/02 14:20:35 mycroft Exp $
+
+--- src/libw32dll/wine/Makefile.am.orig	2003-07-20 22:08:20.000000000 +0000
++++ src/libw32dll/wine/Makefile.am	2003-10-02 12:53:55.000000000 +0000
+@@ -34,7 +34,7 @@
+ 	vfl.c \
+ 	win32.c 
+ 
+-libwine_la_LIBADD = stubs.lo wrapper.lo
++libwine_la_LIBADD = stubs.lo wrapper.lo ${WINE_LIBS}
+ 
+ noinst_HEADERS = \
+ 	avifmt.h \
