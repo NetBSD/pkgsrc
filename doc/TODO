@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.138 2003/01/04 13:24:21 wiz Exp $
+$NetBSD: TODO,v 1.139 2003/01/04 13:59:16 cjep Exp $
 
 Suggested new packages
 ======================
@@ -16,6 +16,7 @@ Suggested new packages
 
 	gd-noX11
 	Version of gd for systems without X11.
+	[cjep is looking at this]
 
 	jabber
 	Messaging client.
