@@ -1,0 +1,231 @@
+$NetBSD: BUILDLINK3_DG,v 1.1 2004/01/29 06:03:15 jlam Exp $
+
+ 0 Developer's guide to buildlink3
+ =================================
+
+This is a tutorial for pkgsrc developers to understand and to use the
+buildlink3 framework in pkgsrc.
+
+
+ 1 Changes between buildlink2 and buildlink3
+ ===========================================
+
+The buildlink3 framework is a evolutionary descendant of the
+buildlink2 framework that does a better job of adhering to the
+fundamental buildlink principle: only allow the software build
+process to see what we choose to allow it to see.
+
+
+ 1.1 Better behavior with libtool
+ ================================
+
+One of the biggest problems in buildlink2 is handling packages that
+install libtool archive files for libraries that are also present in
+the base system.  buildlink3 is significantly better at this as it
+more tightly controls where libtool can find libtool archives.  One
+side effect of this is that we no longer need to create fake libtool
+archives to work around cases where the pkgsrc libraries were being
+used instead of the system libraries if they shared the same name.
+
+
+ 1.3 Support for native compilers
+ ================================
+
+The buildlink3 wrapper scripts have better support for using SunPro
+and MIPSpro compilers to build pkgsrc software.  For the most part,
+packages can use any compiler, but some third-party software is
+written assuming that it will be compiled using GCC.  The buildlink3
+wrapper scripts can capture some common GCC options and convert them
+into native toolchain equivalents.
+
+
+ 1.4 New buildlink3.mk file structure
+ ====================================
+
+buildlink3.mk files have two major differences over buildlink2.mk
+files.  The first, most noticeable difference is that buildlink3.mk
+generally don't have contain a BUILDLINK_FILES definition.  This is
+because buildlink3 automatically determines which files to symlink
+into ${BUILDLINK_DIR} by examining the PLIST of the installed package.
+The second difference is that buildlink3.mk files keep track of how
+"deep" we are in including buildlink3.mk files, and only creates
+dependencies on packages encountered at depth 1.  This means that
+packages that want to add a dependency must directly include the
+buildlink3.mk file for that dependency.
+
+
+ 1.5 Support for pkgviews
+ ========================
+
+When building pkgviews packages, buildlink3 doesn't symlink files
+into ${BUILDLINK_DIR} since it can safely refer to only a specific
+package's files by passing the appropriate -I<dir> and -L<dir> flags
+to the compiler, where <dir> points to a location in the package's
+depot directory.  When building "overwrite" packages, buildlink3 will
+act and feel very much like buildlink2 but with more advanced wrapper
+scripts, and there are provisions for allowing an "overwrite" package
+to build against the viewed instance of a depoted package.
+
+
+ 2 Writing buildlink3.mk files
+ =============================
+
+A package's buildlink3.mk file is included by Makefiles to indicate
+the need to compile and link against header files and libraries
+provided by the package.  A buildlink3.mk file should always provide
+enough information to add the correct type of dependency relationship
+and include any other buildlink3.mk files that it needs to find
+headers and libraries that it needs in turn.
+
+
+ 2.1 Simple packages
+ ===================
+
+To generate an initial buildlink3.mk file for further editting, Rene
+Hexel's pkgtools/createbuildlink package is highly recommended.  For
+most packages, the following command will generate a good starting
+point for buildlink3.mk files:
+
+    cd pkgsrc/category/pkgdir; createbuildlink -3 > buildlink3.mk
+
+The following real-life example buildlink3.mk is taken from
+graphics/tiff:
+
+------------8<------------8<------------8<------------8<------------
+# $NetBSD: BUILDLINK3_DG,v 1.1 2004/01/29 06:03:15 jlam Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+TIFF_BUILDLINK3_MK:=	${TIFF_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	tiff
+.endif
+
+.if !empty(TIFF_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=		tiff
+BUILDLINK_DEPENDS.tiff+=	tiff>=3.5.4
+BUILDLINK_PKGSRCDIR.tiff?=	../../graphics/tiff
+
+.  include "../../devel/zlib/buildlink3.mk"
+.  include "../../graphics/jpeg/buildlink3.mk"
+.endif	# TIFF_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+------------8<------------8<------------8<------------8<------------
+
+The header and footer manipulate BUILDLINK_DEPTH, which is common
+across all buildlink3.mk files and is used to track at what depth we
+are in including buildlink3.mk files.
+
+The first section controls if the dependency on tiff is added.
+BUILDLINK_DEPENDS is the global list of packages for which
+dependencies are added by buildlink3.  The tiff package is only
+appended to this list if the buildlink3.mk is included directly by a
+package Makefile.
+
+The second section is protected from multiple inclusion and control
+how the dependency on tiff is added.  Several important variables
+are set in the section:
+
+ (1) BUILDLINK_PACKAGES is the global list of packages for which
+     buildlink3.mk files have been included.  It must _always_ be
+     appended to within a buildlink3.mk;
+
+ (2) BUILDLINK_DEPENDS.tiff is the actual dependency recorded in the
+     installed package; this should always be set using += to ensure
+     that we're appending to any pre-existing list of values.
+
+ (3) BUILDLINK_PKGSRCDIR.tiff is the location of the tiff pkgsrc
+     directory;
+
+ (4) BUILDLINK_DEPMETHOD.tiff (not shown above) controls whether we
+     use BUILD_DEPENDS or DEPENDS to add the dependency on tiff.  The
+     build dependency is selected by setting BUILDLINK_DEPMETHOD.tiff
+     to "build".  By default, the full dependency is used.
+
+ (5) BUILDLINK_INCDIRS.tiff and BUILDLINK_LIBDIRS.tiff (not shown
+     above) are lists of subdirectories of ${BUILDLINK_PREFIX.tiff} to
+     add the header and library search paths.  These default to
+     "include" and "lib" respectively.
+
+ (6) BUILDLINK_CPPFLAGS.tiff is the list of preprocessor flags to add
+     CPPFLAGS, which are passed on to the configure and build phases.
+     -I should be avoided and instead be added using
+     BUILDLINK_INCDIRS.tiff as above.
+
+Any buildlink3.mk for tiff's dependencies are also included at this
+point.  Including these buildlink3.mk files means that the headers
+and libraries for these dependencies are also symlinked into
+${BUILDLINK_DIR} whenever the tiff buildlink3.mk file is included.
+
+There are several considerations that arise when figuring out how
+to set BUILDLINK_DEPENDS.<pkg> correctly:
+
+ (1) If the package has a pre-existing buildlink2.mk file, then
+     match the BUILDLINK_DEPENDS.<pkg> lines between the
+     buildlink2.mk file and the newly-created buildlink3.mk file.
+
+ (2) If there is no pre-existing buildlink2.mk file, then set
+     BUILDLINK_DEPENDS.foo to the first version of the package that
+     had the last change in the major number of a shared library or
+     that had a major API change.
+
+
+ 2.1 Packages that coincide with base system software
+ ====================================================
+
+Some packages in pkgsrc install headers and libraries that coincide
+with headers and libraries present in the base system.  The best
+recommendation for writing buildlink3.mk files for these packages is
+to use graphics/MesaLib/buildlink3.mk as a template.
+
+
+ 3 bl3ifying a package
+ =====================
+
+The process of "bl3ifying" a package, or converting a package to use
+the buildlink3 framework, is surprisingly easy.  The things to keep in
+mind are:
+
+  (1) Set USE_BUILDLINK3=yes.
+
+  (2) Change references to buildlink2.mk files into buildlink3.mk
+      files.
+
+  (3) Ensure that the build always calls the wrapper scripts instead of
+      the actual toolchain.  Some are tricky, e.g. openssl, cdrecord,
+      ocaml, and the only way to know for sure is the check .work.log
+      to see if the wrappers are being invoked.
+
+  (4) Don't override PREFIX from within the package Makefile, e.g.
+      Java VMs, standalone shells, etc., because the code to symlink
+      files into ${BUILDLINK_DIR} looks for files relative to
+      "pkg_info -qp <pkgname>".
+
+
+ 4 Troubleshooting
+ =================
+
+Q1: I'm trying to bl3ify a package but I get an error that looks like:
+
+	make: don't know how to make _BUILDLINK_USE. Stop
+
+A1: You forgot to change a reference to a buildlink2.mk file into a
+    buildlink3.mk file.
+
+
+Q2: Dependencies are added for every single buildlink3.mk file I
+    include, including for when it's supposed to use the base system
+    software.  What's going on?
+
+A2: You forgot to change USE_BUILDLINK2 to USE_BUILDLINK3 in the
+    package Makefile.
+
+
+Q3: Where can I see the actual command executed by the wrapper
+    scripts?
+
+A3: You should examine the contents of the ${WRKDIR}/.work.log file.
+    The lines preceded with [*] are the commands that are intercepted
+    by the wrapper scripts, and the lines preceded with <.> are the
+    commands that are executed by the wrapper scripts.
