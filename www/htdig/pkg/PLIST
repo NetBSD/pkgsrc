@@ -1,14 +1,44 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/20 02:40:46 fredb Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/09/23 01:33:31 fredb Exp $
 bin/htdig
 bin/htfuzzy
 bin/htmerge
 bin/htnotify
 bin/rundig
-sbin/htsearch
+bin/htsearch
 share/examples/htdig/search.html
+share/examples/htdig/htdig.conf
+share/examples/htdig/button1.gif
+share/examples/htdig/button2.gif
+share/examples/htdig/button3.gif
+share/examples/htdig/button4.gif
+share/examples/htdig/button5.gif
+share/examples/htdig/button6.gif
+share/examples/htdig/button7.gif
+share/examples/htdig/button8.gif
+share/examples/htdig/button9.gif
+share/examples/htdig/buttonl.gif
+share/examples/htdig/buttonr.gif
+share/examples/htdig/button10.gif
+share/examples/htdig/htdig.gif
+share/examples/htdig/star.gif
+share/examples/htdig/star_blank.gif
+share/examples/htdig/button1.png
+share/examples/htdig/button2.png
+share/examples/htdig/button3.png
+share/examples/htdig/button4.png
+share/examples/htdig/button5.png
+share/examples/htdig/button6.png
+share/examples/htdig/button7.png
+share/examples/htdig/button8.png
+share/examples/htdig/button9.png
+share/examples/htdig/buttonl.png
+share/examples/htdig/buttonr.png
+share/examples/htdig/button10.png
+share/examples/htdig/htdig.png
+share/examples/htdig/star.png
+share/examples/htdig/star_blank.png
 @dirrm share/examples/htdig
-share/htdig/conf/htdig.conf
-@dirrm share/htdig/conf
+@exec mkdir -p %D/etc/htdig; if [ ! -f %D/etc/htdig/htdig.conf ]; then cp %D/%F %D/etc/htdig/; fi
 share/htdig/common/header.html
 share/htdig/common/footer.html
 share/htdig/common/wrapper.html
@@ -20,39 +50,10 @@ share/htdig/common/bad_words
 share/htdig/common/english.0
 share/htdig/common/english.aff
 share/htdig/common/synonyms
+share/htdig/common/synonyms.db
+share/htdig/common/word2root.db
+share/htdig/common/root2word.db
 @dirrm share/htdig/common
-@dirrm share/htdig/db
 @dirrm share/htdig
-share/httpd/htdocs/htdig/button1.gif
-share/httpd/htdocs/htdig/button2.gif
-share/httpd/htdocs/htdig/button3.gif
-share/httpd/htdocs/htdig/button4.gif
-share/httpd/htdocs/htdig/button5.gif
-share/httpd/htdocs/htdig/button6.gif
-share/httpd/htdocs/htdig/button7.gif
-share/httpd/htdocs/htdig/button8.gif
-share/httpd/htdocs/htdig/button9.gif
-share/httpd/htdocs/htdig/buttonl.gif
-share/httpd/htdocs/htdig/buttonr.gif
-share/httpd/htdocs/htdig/button10.gif
-share/httpd/htdocs/htdig/htdig.gif
-share/httpd/htdocs/htdig/star.gif
-share/httpd/htdocs/htdig/star_blank.gif
-share/httpd/htdocs/htdig/button1.png
-share/httpd/htdocs/htdig/button2.png
-share/httpd/htdocs/htdig/button3.png
-share/httpd/htdocs/htdig/button4.png
-share/httpd/htdocs/htdig/button5.png
-share/httpd/htdocs/htdig/button6.png
-share/httpd/htdocs/htdig/button7.png
-share/httpd/htdocs/htdig/button8.png
-share/httpd/htdocs/htdig/button9.png
-share/httpd/htdocs/htdig/buttonl.png
-share/httpd/htdocs/htdig/buttonr.png
-share/httpd/htdocs/htdig/button10.png
-share/httpd/htdocs/htdig/htdig.png
-share/httpd/htdocs/htdig/star.png
-share/httpd/htdocs/htdig/star_blank.png
-@dirrm share/httpd/htdocs/htdig
-@dirrm share/httpd/htdocs
-@dirrm share/httpd
+@exec mkdir -p /var/db/htdig
+@unexec (rmdir /var/db/htdig && echo Empty database directory /var/db/htdig deleted) || true
