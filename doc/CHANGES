@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4015 2003/12/08 13:56:18 grant Exp $
+$NetBSD: CHANGES,v 1.4016 2003/12/08 14:52:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5014,3 +5014,9 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated crimsonfields to 0.3.7 [wiz 2003-12-07]
 	Updated popa3d to 0.6.4 [wiz 2003-12-07]
 	Updated pkg_install to 20031121 [grant 2003-12-08]
+	Updated libao to 0.8.4 [wiz 2003-12-08]
+	Updated libao-arts to 0.8.4 [wiz 2003-12-08]
+	Updated libao-esound to 0.8.4 [wiz 2003-12-08]
+	Updated libogg to 1.1 [wiz 2003-12-08]
+	Updated libvorbis to 1.0.1 [wiz 2003-12-08]
+	Updated vorbis-tools to 1.0.1 [wiz 2003-12-08]
