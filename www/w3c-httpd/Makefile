@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/05/09 21:12:32 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/05/10 07:48:01 tron Exp $
 # FreeBSD Id: Makefile,v 1.19 1999/01/08 19:59:26 fenner Exp
 
 DISTNAME=	w3c-httpd-3.0A
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.w3.org/pub/WWW/Daemon/
 
 NO_WRKSUBDIR=	yes
 
-WWW_ROOT=	${PREFIX}/www
-
 pre-configure:
 .if !defined(MD5_PW)
 	@echo ""
@@ -24,14 +22,14 @@ pre-configure:
 .endif
 
 do-install:
-	${MKDIR} ${WWW_ROOT}/data ${WWW_ROOT}/cgi-bin ${WWW_ROOT}/htbin
-	${CP} -R ${WRKSRC}/server_root/icons $(WWW_ROOT)
-	${CP} ${WRKSRC}/server_root/config/*.conf $(PREFIX)/etc
-	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/httpd ${PREFIX}/libexec
+	${MKDIR} ${PREFIX}/etc/w3c-httpd ${PREFIX}/share/w3c-httpd
+	${CP} -R ${WRKSRC}/server_root/icons ${PREFIX}/share/w3c-httpd
+	${CP} ${WRKSRC}/server_root/config/*.conf ${PREFIX}/etc/w3c-httpd
+	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/httpd ${PREFIX}/sbin/w3c-httpd
 	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/htadm ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/htimage ${WWW_ROOT}/htbin
-	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/cgiparse ${WWW_ROOT}/cgi-bin
-	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/cgiutils ${WWW_ROOT}/cgi-bin
+	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/htimage ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/cgiparse ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/cgiutils ${PREFIX}/sbin
 
 .include <../../mk/bsd.pkg.mk>
 
