@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2000/12/17 23:40:54 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2001/02/27 20:23:59 hubertf Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -58,17 +58,17 @@ index:
 	@${MAKE} ${.CURDIR}/INDEX
 
 ${.CURDIR}/INDEX:
-	@echo -n "Generating INDEX - please wait.."
-	@${MAKE} describe ECHO_MSG="echo > /dev/null" > ${.CURDIR}/INDEX
-	@echo " Done."
+	@${ECHO} -n "Generating INDEX - please wait.."
+	@${MAKE} describe ECHO_MSG="${ECHO} > /dev/null" > ${.CURDIR}/INDEX
+	@${ECHO} " Done."
 
 print-index:	${.CURDIR}/INDEX
 	@awk -F\| '{ printf("Port:\t%s\nPath:\t%s\nInfo:\t%s\nMaint:\t%s\nIndex:\t%s\nB-deps:\t%s\nR-deps:\t%s\nArch:\t%s\n\n", $$1, $$2, $$4, $$6, $$7, $$8, $$9, $$10); }' < ${.CURDIR}/INDEX
 
 search:	${.CURDIR}/INDEX
 .if !defined(key)
-	@echo "The search target requires a keyword parameter,"
-	@echo "e.g.: \"${MAKE} search key=somekeyword\""
+	@${ECHO} "The search target requires a keyword parameter,"
+	@${ECHO} "e.g.: \"${MAKE} search key=somekeyword\""
 .else
 	@grep ${key} ${.CURDIR}/INDEX | awk -F\| '{ printf("Port:\t%s\nPath:\t%s\nInfo:\t%s\nMaint:\t%s\nIndex:\t%s\nB-deps:\t%s\nR-deps:\t%s\nArch:\t%s\n\n", $$1, $$2, $$4, $$6, $$7, $$8, $$9, $$10); }'
 .endif
@@ -92,10 +92,10 @@ readme-all:
 README-all.html:
 	@rm -f $@.new
 	@rm -f $@.newsorted
-	@echo -n "Processing categories for $@:"
+	@${ECHO} -n "Processing categories for $@:"
 .for category in ${SUBDIR}
 	@if [ -f ${category}/README.html ]; then \
-		echo -n ' ${category}' ; \
+		${ECHO} -n ' ${category}' ; \
 		grep '^<TR>' ${category}/README.html \
 		| sed -e 's|"|"${category}/|' \
 		      -e 's| <TD>| <TD>(<A HREF="${category}/README.html">${category}</A>) <TD>|' \
@@ -104,7 +104,7 @@ README-all.html:
 		>> $@.new ; \
 	fi
 .endfor
-	@echo "."
+	@${ECHO} "."
 	@sort -f -t '">' +2 <$@.new >$@.newsorted
 	@wc -l $@.newsorted | awk '{ print $$1 }'  >$@.npkgs
 	@cat templates/README.all \
@@ -144,6 +144,6 @@ README-IPv6.html:
 	@${RM} $@.pkgs
 
 show-host-specific-pkgs:
-	@echo "HOST_SPECIFIC_PKGS= \\";					\
+	@${ECHO} "HOST_SPECIFIC_PKGS= \\";					\
 	${MAKE} show-pkgsrc-dir | awk '/^===/ { next; } { printf("%s \\\n", $$1) }'; \
-	echo ""
+	${ECHO} ""
