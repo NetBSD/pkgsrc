@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.306 2002/08/22 17:06:26 skrll Exp $
+# $NetBSD: Makefile,v 1.307 2002/08/25 19:41:41 gson Exp $
 #
 
 COMMENT=	Development utilities
@@ -296,6 +296,7 @@ SUBDIR+=	slib
 SUBDIR+=	sml-mode
 SUBDIR+=	smpeg
 SUBDIR+=	spiff
+SUBDIR+=	st
 SUBDIR+=	stlport
 SUBDIR+=	stooop
 SUBDIR+=	subversion
