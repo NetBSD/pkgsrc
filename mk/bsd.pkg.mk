@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.489 2000/06/28 15:02:31 agc Exp $			\
+#	$NetBSD: bsd.pkg.mk,v 1.490 2000/06/28 16:05:44 dmcmahill Exp $			\
 #
 # This file is in the public domain.
 #
@@ -2027,18 +2027,43 @@ clean: pre-clean
 
 .if !target(clean-depends)
 clean-depends:
-.if defined(BUILD_DEPENDS) || defined(DEPENDS) || defined(RUN_DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for dir in `${ECHO} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*//}	\
-			          ${DEPENDS:C/^[^:]*://:C/:.*//}	\
-			      ${RUN_DEPENDS:C/^[^:]*://:C/:.*//} |	\
-		    ${TR} '\040' '\012' | sort -u`; do			\
-		cd ${.CURDIR}/$$dir &&					\
-		${MAKE} ${MAKEFLAGS} CLEANDEPENDS=${CLEANDEPENDS} clean;\
+	for i in `${MAKE} ${MAKEFLAGS} clean-depends-list | ${SED} -e 's;\.\./[^ ]*; ;g' | ${TR} -s "[:space:]" "\n" | sort -u` ;\
+	do 								\
+		cd ${.CURDIR}/../../$$i &&				\
+		${MAKE} ${MAKEFLAGS} CLEANDEPENDS=NO clean;		\
 	done
 .endif
-.endif
 
+
+# The clean-depends-list target will produce a list of all 
+# BUILD_DEPENDS, RUN_DEPENDS, and DEPENDS packages.  
+# As each *DEPENDS package is visited, it is added to the 
+# CLEAN_DEPENDS_LIST_SEEN variable.  Once a pkg is in the list
+# it will not be visited again.  This prevents traversing the same
+# part of the dependency tree multiple times.  Each depending package
+# ends up in the list twice.  Once as the relative path from the depending
+# package and once as the path from pkgsrc.  Eg, "../../foo/bar foo/bar"
+# The "../../foo/bar" version is later removed from the list in the
+# clean-depends target.  The remaining bit of redundancy is that some
+# packages list their depends as "../bar" instead of "../../foo/bar"
+# In this case its possible for a dependency to be visited twice.
+
+.if !target(clean-depends-list)
+clean-depends-list:
+	@for dir in `${ECHO} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*//}	\
+			${DEPENDS:C/^[^:]*://:C/:.*//}			\
+			${RUN_DEPENDS:C/^[^:]*://:C/:.*//} |		\
+			${TR} '\040' '\012' `; do			\
+		case "$$CLEAN_DEPENDS_LIST_SEEN" in				\
+		*" "$$dir" "*)  ;; 					\
+		*) 							\
+			CLEAN_DEPENDS_LIST_SEEN=" $$dir `cd ${.CURDIR} ; cd $$dir && ${MAKE} ${MAKEFLAGS} CLEAN_DEPENDS_LIST_SEEN="$$CLEAN_DEPENDS_LIST_SEEN" clean-depends-list)`";\
+			;;						\
+		esac							\
+	done ;								\
+	echo " ${PKGPATH} $$CLEAN_DEPENDS_LIST_SEEN"
+.endif
 
 .if !target(pre-distclean)
 pre-distclean:
@@ -2761,7 +2786,7 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 
 .if !target(print-PLIST)
 print-PLIST:
-	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.489 2000/06/28 15:02:31 agc Exp $$'
+	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.490 2000/06/28 16:05:44 dmcmahill Exp $$'
 	@${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED} s@${PREFIX}/./@@ 				\
 	 | sort							\
