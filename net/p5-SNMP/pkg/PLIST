@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2000/08/27 07:11:18 jlam Exp $
-lib/perl5/site_perl/README.SNMP
+@comment $NetBSD: PLIST,v 1.2 2000/08/29 20:48:14 jlam Exp $
+${PERL5_SITELIB}/README.SNMP

@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/05/11 14:03:13 bad Exp $
+$NetBSD: patch-aa,v 1.2 2000/08/29 20:48:15 jlam Exp $
 
---- Makefile.PL.orig	Mon Aug  3 18:59:14 1998
-+++ Makefile.PL	Tue May 11 01:07:10 1999
-@@ -32,7 +32,7 @@
+Until the sources catch up to the current Perl API, we need PERL_POLLUTE
+to look like an older perl.
+
+--- Makefile.PL.orig	Mon Aug  3 12:59:14 1998
++++ Makefile.PL
+@@ -32,17 +32,17 @@
     'PREREQ_PM'    => { Curses     => 0,
                       },
     'LIBS'         => "-L$Config{ldflags} -lwais",
@@ -10,8 +13,11 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/05/11 14:03:13 bad Exp $
 +   'INC'          => "-DWAIS_USES_STDIO $Config{cppflags}",
     'NAME'         => 'Wais',
     'VERSION_FROM' => 'lib/Wais.pm',
-    'DEFINE'       => '-DTRACE=0',
-@@ -42,7 +42,7 @@
+-   'DEFINE'       => '-DTRACE=0',
++   'DEFINE'       => '-DTRACE=0 -DPERL_POLLUTE=1',
+    'OBJECT'       => "Wais.o HTWAIS.o dictionary.o",
+    'dist'         => { SUFFIX   => 'gz',
+                        COMPRESS => 'gzip -9f',
                         PREOP    => 'pod2text lib/Wais.pm > README; pod2text install > INSTALL',
                       },
     'MAP_TARGET'   => 'waisperl',
