@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/09/06 21:21:54 frueauf Exp $
+
 --- src/makemake.in.orig	Sun Aug  9 21:27:13 1998
 +++ src/makemake.in	Sun Sep  6 21:55:57 1998
 @@ -1034,6 +1034,9 @@
