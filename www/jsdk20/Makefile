@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/10/16 17:21:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2000/10/21 22:59:33 wiz Exp $
 # STOP!  Don't update this to a later version of this software.
 # The JSDK and Apache Jakarta projects have merged, making the
 # jakarta-tomcat package the current version of this software.
@@ -11,10 +11,12 @@ CATEGORIES=	www
 MASTER_SITES=	# none
 EXTRACT_SUFX=	.tar.Z
 
-LICENSE=	sun-jsdk20-license
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://java.sun.com/products/servlet/index.html
 
+BUILD_DEPENDS+=        ${LOCALBASE}/bin/urlget:../../www/urlget
+
+LICENSE=	sun-jsdk20-license
 USE_JAVA=	yes
 
 WRKSRC=		${WRKDIR}/JSDK2.0
@@ -34,7 +36,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 TEMPDIR?=	/tmp
 TEMPFILE!=echo ${TEMPDIR}/jsdk20.location.$$$$
 
-BUILD_DEPENDS+=        ${LOCALBASE}/bin/urlget:../../www/urlget
 pre-fetch:
 	if [ ! -x ${LOCALBASE}/bin/urlget ]; \
 	then \
