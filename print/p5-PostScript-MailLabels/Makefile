@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/11/26 06:50:13 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/06 22:31:09 seb Exp $
 
 DISTNAME=	PostScript-MailLabels-1.01
 PKGNAME=	p5-${DISTNAME}
@@ -10,11 +10,8 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.oplnk.net/~ajackson/software/maillabels/
 COMMENT=	create PostScript for printing on mailing label stock
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/PostScript/MailLabels/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
