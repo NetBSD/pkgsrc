@@ -1,0 +1,12 @@
+This package provides the necessary header files and libraries to
+install NetBSD utilities and libraries on Solaris 2.6, and has been
+used to get the NetBSD packages collection working on Solaris.  It was
+developed by Christos Zoulas, and has been tested on Solaris 2.6,
+running on Sparc hardware.
+
+To get this package running on Solaris, you'll need to have either
+a recent gcc or egcs installed, and a version of GNU tar available,
+as well as gzip.
+
+The README file, distributed with the package itself, provides
+instructions on how to build and install this environment.
