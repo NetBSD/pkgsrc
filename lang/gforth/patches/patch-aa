@@ -1,19 +1,32 @@
-$NetBSD: patch-aa,v 1.2 2000/11/13 23:58:12 hubertf Exp $
+$NetBSD: patch-aa,v 1.3 2003/12/05 00:26:38 uebayasi Exp $
 
---- Makefile.in.orig	Sat Sep 23 20:21:57 2000
+--- Makefile.in.orig	Mon Aug 25 16:57:49 2003
 +++ Makefile.in
-@@ -461,11 +461,11 @@
- 		touch $(siteforthdir)/siteinit.fs
- 		-$(RM) $(bindir)/gforth$(EXE) $(bindir)/gforth-$(VERSION)$(EXE) $(bindir)/gforthmi
- 		-$(RM) $(bindir)/gforth-fast$(EXE) $(bindir)/gforth-fast-$(VERSION)$(EXE)
--		$(INSTALL_PROGRAM) -s gforth$(EXE) $(bindir)/gforth-$(VERSION)$(EXE)
-+		$(INSTALL_PROGRAM) gforth$(EXE) $(bindir)/gforth-$(VERSION)$(EXE)
- 		(cd $(bindir) && $(LN_S) gforth-$(VERSION)$(EXE) gforth$(EXE))
--		$(INSTALL_PROGRAM) -s gforth-fast$(EXE) $(bindir)/gforth-fast-$(VERSION)$(EXE)
-+		$(INSTALL_PROGRAM) gforth-fast$(EXE) $(bindir)/gforth-fast-$(VERSION)$(EXE)
+@@ -51,7 +51,7 @@ osclass = @OSCLASS@
+ # -------------	Utility programs
+ 
+ SHELL	= /bin/sh
+-RM	= rm
++RM	= rm -f
+ RMTREE	= rm -rf
+ CP	= cp -p
+ MV	= mv
+@@ -60,6 +60,7 @@ INSTALL	= @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_INFO = @INSTALL_INFO@
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ LN_S	= @LN_S@
+ GCC	= @CC@
+ CC	= $(GCC)
+@@ -528,8 +529,8 @@ install:	gforth$(EXE) $(FORTH_SRC) $(ker
  		(cd $(bindir) && $(LN_S) gforth-fast-$(VERSION)$(EXE) gforth-fast$(EXE))
+ 		$(INSTALL_PROGRAM) -s gforth-itc$(EXE) $(bindir)/gforth-itc-$(VERSION)$(EXE)
+ 		(cd $(bindir) && $(LN_S) gforth-itc-$(VERSION)$(EXE) gforth-itc$(EXE))
 -		$(INSTALL_PROGRAM) gforthmi $(bindir)/gforthmi-$(VERSION)
-+		$(BSD_INSTALL_SCRIPT) gforthmi $(bindir)/gforthmi-$(VERSION)
+-		$(INSTALL_PROGRAM) vmgen $(bindir)/vmgen-$(VERSION)
++		$(INSTALL_SCRIPT) gforthmi $(bindir)/gforthmi-$(VERSION)
++		$(INSTALL_SCRIPT) vmgen $(bindir)/vmgen-$(VERSION)
  		$(INSTALL_PROGRAM) gforth-ditc $(libdir)/gforth/$(VERSION)
  		(cd $(bindir) && $(LN_S) gforthmi-$(VERSION) gforthmi)
- 		-$(INSTALL_DATA) $(srcdir)/doc/gforth.1 $(man1dir)
+ 		(cd $(bindir) && $(LN_S) vmgen-$(VERSION) vmgen)

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3975 2003/12/04 20:53:10 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3976 2003/12/05 00:26:38 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4967,3 +4967,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xfce4-trigger-launcher to 4.0.1nb1 [xtraeme 2003-12-04]
 	Updated xscreensaver to 4.13nb1 [xtraeme 2003-12-04]
 	Updated xscreensaver-gnome to 4.13nb2 [xtraeme 2003-12-04]
+	Updated gforce to 0.6.2 [uebayasi 2003-12-05]
