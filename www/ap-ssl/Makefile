@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/09/12 14:52:43 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2000/10/05 14:07:37 fredb Exp $
 #
 
 DISTNAME=	mod_ssl-2.6.6-1.3.12
@@ -16,6 +16,7 @@ BUILD_DEPENDS+=	${PERL5}:../../lang/perl5-base
 CONFLICTS=	apache-1.3.[0123456789] apache-*modssl-* apache6-*
 
 HAS_CONFIGURE=	defined
+USE_RSAREF2=	NO
 USE_SSL=	defined
 
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
