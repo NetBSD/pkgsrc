@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/12/04 04:35:25 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2003/12/16 11:33:44 sketch Exp $
 #
 
 DISTNAME=	xmlcatmgr-1.1
@@ -16,6 +16,7 @@ USE_GNU_TOOLS=	awk
 MAKEFILE=	Makefile.boot
 MAKE_ENV+=	BT_PREFIX="${PREFIX}"
 MAKE_ENV+=	BT_PROG_AWK="${AWK}"
+MAKE_ENV+=	BT_PROG_GREP="${GREP}"
 MAKE_ENV+=	BT_PROG_SH="${SH}"
 MAKE_ENV+=	BT_DIR_CATALOG="${PKG_SYSCONFDIR}/xml"
 MAKE_ENV+=	BT_INSTALL_DIR="${INSTALL_DATA_DIR}"

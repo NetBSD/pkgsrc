@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2003/12/16 11:33:44 sketch Exp $
+
+--- Makefile.boot.orig	2003-12-15 17:08:29.900198509 +0000
++++ Makefile.boot	2003-12-15 17:09:18.226048672 +0000
+@@ -17,6 +17,7 @@
+ SUBSTS=		-e "s|@BT_PKG_NAME@|${BT_PKG_NAME}|g"
+ SUBSTS+=	-e "s|@BT_PKG_VERSION@|${BT_PKG_VERSION}|g"
+ SUBSTS+=	-e "s|@BT_PROG_AWK@|${BT_PROG_AWK}|g"
++SUBSTS+=	-e "s|@BT_PROG_GREP@|${BT_PROG_GREP}|g"
+ SUBSTS+=	-e "s|@BT_PROG_SH@|${BT_PROG_SH}|g"
+ SUBSTS+=	-e "s|@BT_DIR_CATALOG@|${BT_DIR_CATALOG}|g"
+ 
