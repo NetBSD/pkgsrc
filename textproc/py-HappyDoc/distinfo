@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/01/29 16:26:44 drochner Exp $
+
+SHA1 (HappyDoc_r2_0.tar.gz) = 80e3dc954e000062fdbbfe585e03ef3e416ae1f3
+Size (HappyDoc_r2_0.tar.gz) = 491398 bytes
+SHA1 (patch-aa) = 6683e58efccdde4fbc9fa9d10201606905307c63
