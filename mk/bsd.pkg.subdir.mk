@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.10 1998/04/24 09:15:57 agc Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.11 1998/05/06 09:33:22 hubertf Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -29,7 +29,7 @@
 #		Creating README.html for package.
 #
 #	afterinstall, all, beforeinstall, build, checksum, clean,
-#	configure, depend, describe, extract, fetch, fetch-list,
+#	configure, deinstall, depend, describe, extract, fetch, fetch-list, 
 #	install, package, readmes, realinstall, reinstall, tags,
 #	mirror-distfiles
 #
@@ -82,7 +82,7 @@ ${SUBDIR}::
 
 .for __target in all fetch fetch-list package extract configure \
 		 build clean depend describe reinstall tags checksum \
-		 mirror-distfiles
+		 mirror-distfiles deinstall
 .if !target(__target)
 ${__target}: _SUBDIRUSE
 .endif
