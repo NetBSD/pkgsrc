@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.5 2003/05/22 02:42:41 markd Exp $
+$NetBSD: patch-ap,v 1.6 2004/01/15 09:52:51 markd Exp $
 
---- kded/Makefile.in.orig	Thu May  8 05:24:05 2003
+--- kded/Makefile.in.orig	2003-12-29 11:16:54.000000000 +1300
 +++ kded/Makefile.in
-@@ -394,18 +394,22 @@ x_libraries = @x_libraries@
+@@ -396,18 +396,22 @@ x_libraries = @x_libraries@
  
  INCLUDES = -I$(srcdir)/.. -I$(top_srcdir) $(all_includes)
  
@@ -32,7 +32,7 @@ $NetBSD: patch-ap,v 1.5 2003/05/22 02:42:41 markd Exp $
  				kbuildservicefactory.cpp \
  				kbuildservicegroupfactory.cpp \
  				kbuildimageiofactory.cpp \
-@@ -413,15 +417,19 @@ kbuildsycoca_la_SOURCES = kbuildsycoca.c
+@@ -415,15 +419,19 @@ kbuildsycoca_la_SOURCES = kbuildsycoca.c
  				kctimefactory.cpp
  
  
@@ -56,7 +56,7 @@ $NetBSD: patch-ap,v 1.5 2003/05/22 02:42:41 markd Exp $
  
  kdontchangethehostname_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  kdontchangethehostname_LDADD = $(LIB_KDECORE) 
-@@ -448,46 +456,56 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -451,46 +459,56 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -138,7 +138,7 @@ $NetBSD: patch-ap,v 1.5 2003/05/22 02:42:41 markd Exp $
  am_kdontchangethehostname_OBJECTS = khostname.$(OBJEXT)
  #>- kdontchangethehostname_OBJECTS = $(am_kdontchangethehostname_OBJECTS)
  #>+ 1
-@@ -497,33 +515,39 @@ kdontchangethehostname_DEPENDENCIES =
+@@ -500,33 +518,39 @@ kdontchangethehostname_DEPENDENCIES =
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
  am__depfiles_maybe = depfiles
@@ -185,7 +185,7 @@ $NetBSD: patch-ap,v 1.5 2003/05/22 02:42:41 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kdedmodule.Plo ./$(DEPDIR)/khostname.Po
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
-@@ -545,6 +569,7 @@ CXXLD = $(CXX)
+@@ -548,6 +572,7 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  DIST_SOURCES = $(kbuildsycoca_la_SOURCES) $(kded_la_SOURCES) \
@@ -193,7 +193,7 @@ $NetBSD: patch-ap,v 1.5 2003/05/22 02:42:41 markd Exp $
  	$(kbuildsycoca_SOURCES) $(kded_SOURCES) \
  	$(kdontchangethehostname_SOURCES)
  DATA = $(servicetype_DATA) $(update_DATA)
-@@ -553,7 +578,7 @@ HEADERS = $(include_HEADERS) $(noinst_HE
+@@ -556,7 +581,7 @@ HEADERS = $(include_HEADERS) $(noinst_HE
  
  DIST_COMMON = $(include_HEADERS) $(noinst_HEADERS) Makefile.am \
  	Makefile.in
@@ -202,7 +202,7 @@ $NetBSD: patch-ap,v 1.5 2003/05/22 02:42:41 markd Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -602,6 +627,10 @@ kbuildsycoca.la: $(kbuildsycoca_la_OBJEC
+@@ -605,6 +630,10 @@ kbuildsycoca.la: $(kbuildsycoca_la_OBJEC
  	$(CXXLINK) -rpath $(libdir) $(kbuildsycoca_la_LDFLAGS) $(kbuildsycoca_la_OBJECTS) $(kbuildsycoca_la_LIBADD) $(LIBS)
  kded.la: $(kded_la_OBJECTS) $(kded_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kded_la_LDFLAGS) $(kded_la_OBJECTS) $(kded_la_LIBADD) $(LIBS)
@@ -213,7 +213,7 @@ $NetBSD: patch-ap,v 1.5 2003/05/22 02:42:41 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -647,15 +676,18 @@ mostlyclean-compile:
+@@ -650,15 +679,18 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -233,16 +233,16 @@ $NetBSD: patch-ap,v 1.5 2003/05/22 02:42:41 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kdedmodule.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/khostname.Po@am__quote@
  
-@@ -814,7 +846,7 @@ distclean-tags:
+@@ -817,7 +849,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=DESIGN kded.upd kded.h kdedmodule.desktop README.kded HOWTO kctimefactory.h 
-+KDE_DIST=README.kded DESIGN kdedmodule.desktop kded.h HOWTO kded.upd kctimefactory.h 
+-KDE_DIST=kdedmodule.desktop README.kded kded.h HOWTO DESIGN kctimefactory.h kded.upd 
++KDE_DIST=README.kded DESIGN kdedmodule.desktop kded.h HOWTO Makefile.in.rej kded.upd kctimefactory.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -953,9 +985,6 @@ uninstall-am: uninstall-binPROGRAMS unin
+@@ -955,19 +987,16 @@ uninstall-am: uninstall-binPROGRAMS unin
  	uninstall-info-am uninstall-libLTLIBRARIES \
  	uninstall-servicetypeDATA uninstall-updateDATA
  
@@ -252,7 +252,39 @@ $NetBSD: patch-ap,v 1.5 2003/05/22 02:42:41 markd Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
-@@ -987,45 +1016,45 @@ force-reedit:
+ 
+ #>+ 3
+-kbuildsycoca.moc: $(srcdir)/kbuildsycoca.h
+-	$(MOC) $(srcdir)/kbuildsycoca.h -o kbuildsycoca.moc
++kded.moc: $(srcdir)/kded.h
++	$(MOC) $(srcdir)/kded.h -o kded.moc
+ 
+ #>+ 1
+-mocs: kbuildsycoca.moc
++mocs: kded.moc
+ #>+ 3
+ kdedmodule.moc: $(srcdir)/kdedmodule.h
+ 	$(MOC) $(srcdir)/kdedmodule.h -o kdedmodule.moc
+@@ -975,14 +1004,14 @@ kdedmodule.moc: $(srcdir)/kdedmodule.h
+ #>+ 1
+ mocs: kdedmodule.moc
+ #>+ 3
+-kded.moc: $(srcdir)/kded.h
+-	$(MOC) $(srcdir)/kded.h -o kded.moc
++kbuildsycoca.moc: $(srcdir)/kbuildsycoca.h
++	$(MOC) $(srcdir)/kbuildsycoca.h -o kbuildsycoca.moc
+ 
+ #>+ 1
+-mocs: kded.moc
++mocs: kbuildsycoca.moc
+ #>+ 3
+ clean-metasources:
+-	-rm -f  kbuildsycoca.moc kdedmodule.moc kded.moc
++	-rm -f  kded.moc kdedmodule.moc kbuildsycoca.moc
+ 
+ #>+ 2
+ docs-am:
+@@ -995,45 +1024,45 @@ force-reedit:
  
  
  #>+ 11
@@ -276,7 +308,7 @@ $NetBSD: patch-ap,v 1.5 2003/05/22 02:42:41 markd Exp $
 +	rm -f libkbuildsycoca_main_la.all_cpp.final libkbuildsycoca_main_la.all_cpp.files
  
  #>+ 11
--kded_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kded.cpp $(srcdir)/kbuildservicetypefactory.cpp $(srcdir)/kbuildservicefactory.cpp $(srcdir)/kbuildservicegroupfactory.cpp $(srcdir)/kdedmodule.cpp  kded.moc kdedmodule.moc
+-kded_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kded.cpp $(srcdir)/kbuildservicetypefactory.cpp $(srcdir)/kbuildservicefactory.cpp $(srcdir)/kbuildservicegroupfactory.cpp $(srcdir)/kdedmodule.cpp  kdedmodule.moc kded.moc
 -	@echo 'creating kded_la.all_cpp.cpp ...'; \
 -	rm -f kded_la.all_cpp.files kded_la.all_cpp.final; \
 -	echo "#define KDE_USE_FINAL 1" >> kded_la.all_cpp.final; \
@@ -319,15 +351,16 @@ $NetBSD: patch-ap,v 1.5 2003/05/22 02:42:41 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1036,8 +1065,8 @@ kde-rpo-clean:
+@@ -1043,9 +1072,9 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
  
  #>+ 7
- kbuildsycoca.lo: kbuildsycoca.moc 
--kbuildsycoca.o: kbuildsycoca.moc 
--kded.lo: kded.moc 
+-kded.o: kded.moc 
+-kdedmodule.o: kdedmodule.moc 
 -kdedmodule.lo: kdedmodule.moc 
- kded.o: kded.moc 
-+kded.lo: kded.moc 
- kdedmodule.o: kdedmodule.moc 
-+kbuildsycoca.o: kbuildsycoca.moc 
+ kbuildsycoca.lo: kbuildsycoca.moc 
++kded.o: kded.moc 
+ kded.lo: kded.moc 
++kdedmodule.o: kdedmodule.moc 
+ kbuildsycoca.o: kbuildsycoca.moc 
 +kdedmodule.lo: kdedmodule.moc 
