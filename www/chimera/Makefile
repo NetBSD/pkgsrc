@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/05/04 02:39:12 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2001/05/04 02:41:09 fredb Exp $
 #
 
 DISTNAME=	chimera-2.0a19
@@ -19,7 +19,7 @@ pre-configure:
 	    -e 's|@@LOCALBASE@@|${LOCALBASE}|'			\
 	    -e 's|@@PREFIX@@|${PREFIX}|'			\
 	    -e 's|@@X11BASE@@|${X11BASE}|'			\
-	    < Common.tmpl.dist > Common.tmpl
+	    Common.tmpl.dist > Common.tmpl
 
 post-install:
 	${INSTALL_DATA_DIR} ${X11PREFIX}/share/doc/chimera
