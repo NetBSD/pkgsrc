@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.10 2001/10/26 16:18:46 jwise Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.11 2001/11/02 01:24:06 hubertf Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -520,6 +520,14 @@ FOX_USE_XUNICODE?=	YES
 # http://www.ab.wakwak.com/~tino/jatk/fox/ (in japanese) for more information.
 # Possible: YES, NO
 # Default: YES
+
+#GQMPEG_NO_JAPANESE?=	yes
+# Can be enabled to handle keep gqmpeg from interpreting ID3 tags
+# different, to make it possible to read japanese language tags, which
+# may be a problem with tags in other encodings (e.g. windows-1251 as
+# commonly used for russian-language tags).
+# Possible: yes, no, not defined
+# Default: not defined
 
 INN_DATA_DIR?= /var/news
 # Used by inn to specify the data directory.
