@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/26 03:48:13 kent Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/01 02:37:45 jschauma Exp $
 #
 
 DISTNAME=	eggdrop1.6.10
@@ -6,7 +6,7 @@ PKGNAME=	eggdrop-1.6.10
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/
 
-MAINTAINER=     tv@netbsd.org
+MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://www.eggheads.org/
 COMMENT=	IRC robot with TCL scripting and multi-channel ability
 
