@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2003/05/02 08:42:05 abs Exp $
+# $NetBSD: Makefile,v 1.29 2003/08/12 16:37:05 jschauma Exp $
 
-DISTNAME=	j2re-1_3_1_08-linux-i586
-PKGNAME=	sun-jre13-1.0.8
-PKGREVISION=	1
-WRKSRC=		${WRKDIR}/jre1.3.1_08
+DISTNAME=	j2re-1_3_1_09-linux-i586
+PKGNAME=	sun-jre13-1.0.9
+WRKSRC=		${WRKDIR}/jre1.3.1_09
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) Runtime Environment 1.3.1
