@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2003/10/26 23:23:47 kristerw Exp $
+
+--- udfdump.c.orig	Mon Oct 27 00:06:46 2003
++++ udfdump.c	Mon Oct 27 00:07:20 2003
+@@ -118,7 +118,8 @@
+ 
+ int main(int argc, char *argv[]) {
+ 	struct udf_discinfo *disc, *next_disc;
+-	char flag, *progname, *range;
++	char *progname, *range;
++	int flag;
+ 	int min_session_number, max_session_number;
+ 
+ 	progname = argv[0];
