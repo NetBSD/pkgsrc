@@ -1,20 +1,13 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 15:05:13 skrll Exp $
+$NetBSD: distinfo,v 1.3 2003/06/23 07:52:40 jlam Exp $
 
-SHA1 (xerces-c-src1_3_0.tar.gz) = 74d632a0f7080110fc9d203055d3b6dd16e400c8
-Size (xerces-c-src1_3_0.tar.gz) = 4192315 bytes
-SHA1 (patch-aa) = 85cb4489813102d6eed0331f86d268ea4485c6d8
-SHA1 (patch-ab) = 7d5836be474ed0edd8ffe1266e58c2d5478c6d2d
-SHA1 (patch-ac) = fc50d3a96740182f1a9f65f2e06791f8399c9770
-SHA1 (patch-ad) = 3ae75424accf4b661298cbdf12790af672768826
-SHA1 (patch-ae) = 5223e628ca53d215cd92d746bc47113c1277a414
-SHA1 (patch-af) = 7cf92c47dc62b364e4b974954cf43c8dccc709d9
-SHA1 (patch-ag) = b37a51322b6bb7e59a8b44125c96cd0e034b8302
-SHA1 (patch-ah) = 2c5e52b56eaaec856cbb3426906387ada52b72fe
-SHA1 (patch-ai) = adde8ffb50aeb24616ba64f418c529b23854e3ef
-SHA1 (patch-aj) = cc853dd9771ee0be09bbe297acea9a12708a738a
-SHA1 (patch-ak) = 615fedd6c272179b80a27c7488bb1ddf74c56ccb
-SHA1 (patch-al) = 0a07643330d0bdfc58d7c527ce46e73795a25d93
-SHA1 (patch-am) = 1761441d0afd5f63a0873bfd1cad8946e27f3ad7
-SHA1 (patch-an) = 4b8af155b34f4930075c9d22f162014117c84b62
-SHA1 (patch-ao) = 2c13b5f5b7d6edd4cf88ad8061f1f9ad981b41b5
-SHA1 (patch-ap) = b762f1c86cb273095c36ff9a4475353f8afca2ce
+SHA1 (xerces-c-src1_7_0.tar.gz) = 39048b762d3def44492493b2fbd6ca00125584b1
+Size (xerces-c-src1_7_0.tar.gz) = 6914463 bytes
+SHA1 (patch-aa) = e9452b5cd5318ff85aa0a6a2e2744d895f704766
+SHA1 (patch-ab) = ff2ce93680d8b373f152235b62196d9443f8b11f
+SHA1 (patch-ac) = 30ce79950ec4091ef77c79b124bea4d2db1d9810
+SHA1 (patch-ad) = 5cfa9095f4ca47cc56d7ab2db0894ac5d1aa71a5
+SHA1 (patch-ae) = 1ee42f883ddef78e308cc364409da824468c4976
+SHA1 (patch-af) = ebf8a00d8665f8e786ec063cf657e3fa5407d5da
+SHA1 (patch-ag) = d5a1503dd00bac7c6f6ec89b9350e09fde701aaa
+SHA1 (patch-ah) = aba02b027b22c40f659c604c7e7cc6b95095405d
+SHA1 (patch-ai) = f84599c94366a9b7f75d133087dbc5a08a02b967
