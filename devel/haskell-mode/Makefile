@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/09/07 11:07:55 kristerw Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/14 03:20:28 uebayasi Exp $
 
 DISTNAME=		haskell-mode-1.43
 CATEGORIES=		devel editors
@@ -12,17 +12,13 @@ WRKSRC=			${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_XEMACS)
-DEPENDS+=	 	xemacs-[0-9]*:../../editors/xemacs
-EMACS=			xemacs
-LISPDIR=		lib/xemacs/xemacs-packages/lisp/prog-modes
-.else
-DEPENDS+=	 	emacs-[0-9]*:../../editors/emacs
-EMACS=			emacs
-LISPDIR=		share/emacs/site-lisp/haskell-mode
-.endif
+.include "../../mk/emacs.mk"
 
-PLIST_SUBST+=		LISPDIR=${LISPDIR}
+.if ${EMACS_FLAVOR} == "emacs"
+EMACS=	"emacs"
+.else
+EMACS=	"xemacs"
+.endif
 
 HTML=	.emacs fontlock.hs indent.hs index.html installation-guide.html
 SRCS=	haskell-decl-scan.el haskell-doc.el haskell-font-lock.el	\
@@ -36,9 +32,9 @@ do-build:
 	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${LISPDIR}
+	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/haskell-mode
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
-			${PREFIX}/${LISPDIR}
+			${EMACS_LISPPREFIX}/haskell-mode
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/haskell-mode
 	cd ${WRKSRC} && ${INSTALL_DATA} ${HTML}				\
 			${PREFIX}/share/doc/html/haskell-mode
