@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2001/12/05 04:29:32 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2003/11/18 14:34:33 xtraeme Exp $
 
 --- Makefile.orig	Thu Mar  5 17:06:19 1998
 +++ Makefile
@@ -59,7 +59,7 @@ $NetBSD: patch-aa,v 1.2 2001/12/05 04:29:32 jlam Exp $
 +netbsd:
 +	$(MAKE) OBJECTS='$(OBJECTS)' \
 +	CC="$(CC)" LDFLAGS="$(LDFLAGS)" \
-+	CFLAGS='-Wall -O2 $(SDEV) \
++	CFLAGS+='-Wall -O2 $(SDEV) \
 +	$(CFLAGS) -fwritable-strings \
 +	$(JDEV) \
 +	-DDATADIR=\"$(DATADIR)\"' \
