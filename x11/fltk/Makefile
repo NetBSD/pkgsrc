@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2003/11/30 22:58:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.33 2004/01/20 12:28:26 agc Exp $
 #
 
 DISTNAME=	fltk-1.0.11-source
 PKGNAME=	${DISTNAME:S/-source//}
 PKGREVISION=	3
 VERS=		${DISTNAME:S/fltk-//:S/-source//}
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fltk/} \
 		ftp://ftp.fltk.org/pub/fltk/${VERS}/ \
@@ -19,6 +18,7 @@ MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.fltk.org/
 COMMENT=	Fast Light Tool Kit for graphical user interfaces
 
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_BUILDLINK2=		# defined
 USE_GCC_SHLIB=		# defined
 USE_GNU_TOOLS+=		make

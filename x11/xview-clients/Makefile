@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2003/07/17 22:57:05 grant Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/20 12:28:29 agc Exp $
 # $FreeBSD Id: Makefile,v 1.11 1996/11/16 10:49:52 asami Exp
 #
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-clients-3.2.1
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/${DISTNAME}/clients
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -18,6 +17,7 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 EXTRACT_ELEMENTS=	${DISTNAME}/clients ${DISTNAME}/images
 
+WRKSRC=			${WRKDIR}/${DISTNAME}/clients
 USE_BUILDLINK2=		# defined
 USE_IMAKE=		# defined
 
