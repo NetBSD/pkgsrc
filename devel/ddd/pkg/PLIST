@@ -1,9 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1 1998/06/02 11:29:29 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/02/03 11:48:38 rh Exp $
 bin/ddd
 man/man1/ddd.1.gz
+@unexec install-info --delete %D/info/ddd.info %D/info/dir
+info/ddd.info
+info/ddd.info-1
+info/ddd.info-2
+info/ddd.info-3
+info/ddd.info-4
+info/ddd.info-5
+info/ddd.info-6
+info/ddd.info-7
+info/ddd.info-8
+info/ddd.info-9
+info/ddd.info-10
+@exec install-info %D/info/ddd.info %D/info/dir
 share/doc/ddd/PROBLEMS
 share/doc/ddd/README
+share/doc/ddd/ddd.pdf
+share/doc/ddd/ddd.ps.gz
 share/doc/ddd/ddd-paper.ps.gz
-share/doc/ddd/ddd.man.ps.gz
 share/doc/ddd/sample.dddinit
 @dirrm share/doc/ddd
