@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2004/02/14 17:21:55 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2004/02/15 18:37:50 jmmv Exp $
 #
 
 DISTNAME=	control-center-2.4.0
 PKGNAME=	gnome2-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.4/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME2 configuration utility
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.3:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
