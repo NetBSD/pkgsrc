@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/24 12:03:04 tsutsui Exp $
+
+--- gas/Makefile.in.orig	Fri May  1 10:45:03 1998
++++ gas/Makefile.in	Thu Sep 28 18:44:51 2000
+@@ -87,7 +87,7 @@
+ 
+ tooldir = $(exec_prefix)/$(target_alias)
+ 
+-YACC = `if [ -f ../bison/bison ] ; then echo ../bison/bison -y -L../bison/bison ; else echo bison -y ; fi`
++YACC = @YACC@
+ LEX = `if [ -f ../flex/flex ] ; then echo ../flex/flex ;  else echo flex ; fi`
+ 
+ DEP = mkdep
