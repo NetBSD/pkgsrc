@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2000/02/09 02:30:39 fredb Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/02/20 07:19:02 fredb Exp $
 bin/filcon
 bin/norton
 bin/norton-reinit
 bin/reinit
-sbin/au
 sbin/auth2
 sbin/backup
 sbin/backup.sh

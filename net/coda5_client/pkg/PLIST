@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/02/09 02:27:47 fredb Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/02/20 07:19:01 fredb Exp $
 lib/coda/Advice.tcl
 lib/coda/CodaConsole
 lib/coda/Consider.tcl
@@ -41,7 +41,6 @@ bin/codacon
 bin/cpasswd
 bin/ctokens
 bin/cunlog
-bin/filcon
 bin/filerepair
 bin/hoard
 bin/logbandwidth
