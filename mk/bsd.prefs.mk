@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.16 2000/06/03 07:16:51 hubertf Exp $
+# $NetBSD: bsd.prefs.mk,v 1.17 2000/06/03 22:33:22 mycroft Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -23,12 +23,12 @@ UNAME=echo Unknown
 
 .ifndef OPSYS
 OPSYS!=			${UNAME} -s
-MAKEFLAGS+=		OPSYS=${OPSYS}
 .endif
+MAKEFLAGS+=		OPSYS=${OPSYS}
 .ifndef OS_VERSION
 OS_VERSION!=		${UNAME} -r
-MAKEFLAGS+=		OS_VERSION=${OS_VERSION}
 .endif
+MAKEFLAGS+=		OS_VERSION=${OS_VERSION}
 
 # Preload these for architectures not in all variations of bsd.own.mk.
 GNU_ARCH.alpha?=	alpha
@@ -50,8 +50,8 @@ LOWER_OPSYS?=		netbsd
 . if ${MACHINE_ARCH} == "unknown"
 .  if !defined(LOWER_ARCH)
 LOWER_ARCH!=		${UNAME} -p
-MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 .  endif	# !defined(LOWER_ARCH)
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 . endif
 LOWER_VENDOR?=		sun
 LOWER_OPSYS?=		solaris
@@ -60,8 +60,8 @@ LOWER_OPSYS?=		linux
 . if ${MACHINE_ARCH} == "unknown"
 .  if !defined(LOWER_ARCH)
 LOWER_ARCH!=		${UNAME} -m | sed -e 's/[456]86/386/'
-MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 .  endif # !defined(LOWER_ARCH)
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
 .  if ${LOWER_ARCH} == "i386"
 LOWER_VENDOR?=		pc
 .  else
@@ -71,8 +71,8 @@ LOWER_VENDOR?=		unknown
 
 .elif !defined(LOWER_OPSYS)
 LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
-MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS}
 .endif
+MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS}
 
 LOWER_VENDOR?=
 LOWER_ARCH?=		${MACHINE_GNU_ARCH}
