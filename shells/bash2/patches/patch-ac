@@ -1,19 +1,11 @@
-*** lib/glob/Makefile.in.orig	Fri Oct  4 19:02:34 1996
---- lib/glob/Makefile.in	Tue May 27 01:48:43 1997
-***************
-*** 45,51 ****
-  # The header files for this library.
-  HSOURCES = $(srcdir)/fnmatch.h
-  
-! OBJECTS = glob.o fnmatch.o
-  
-  # The texinfo files which document this library.
-  DOCSOURCE = doc/glob.texi
---- 45,51 ----
-  # The header files for this library.
-  HSOURCES = $(srcdir)/fnmatch.h
-  
-! OBJECTS = glob.o #fnmatch.o
-  
-  # The texinfo files which document this library.
-  DOCSOURCE = doc/glob.texi
+--- lib/glob/Makefile.in.orig	Tue Sep 16 12:13:23 1997
++++ lib/glob/Makefile.in	Tue Aug  4 21:18:05 1998
+@@ -46,7 +46,7 @@
+ # The header files for this library.
+ HSOURCES = $(srcdir)/fnmatch.h
+ 
+-OBJECTS = glob.o fnmatch.o
++OBJECTS = glob.o #fnmatch.o
+ 
+ # The texinfo files which document this library.
+ DOCSOURCE = doc/glob.texi
