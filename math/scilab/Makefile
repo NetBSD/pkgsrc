@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2004/03/19 01:26:58 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.52 2004/03/28 17:26:21 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
@@ -31,11 +31,14 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-xaw3d
 
-TCL_DIR=${LOCALBASE}
-CONFIGURE_ARGS+=	--with-tcl-library=${TCL_DIR}/lib
-CONFIGURE_ARGS+=	--with-tcl-include=${TCL_DIR}/include
-CONFIGURE_ARGS+=	--with-tk-library=${TCL_DIR}/lib
-CONFIGURE_ARGS+=	--with-tk-include=${TCL_DIR}/include
+EVAL_PREFIX+=		TCL_PREFIX=tcl
+EVAL_PREFIX+=		TK_PREFIX=tk
+CONFIGURE_ARGS+=	--with-tcl-library=${TCL_PREFIX}/lib
+CONFIGURE_ARGS+=	--with-tcl-include=${TCL_PREFIX}/include
+CONFIGURE_ARGS+=	--with-tk-library=${TK_PREFIX}/lib
+CONFIGURE_ARGS+=	--with-tk-include=${TK_PREFIX}/include
+CONFIGURE_ENV+=		TCL_CONFIG_SH=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
+CONFIGURE_ENV+=		TK_CONFIG_SH=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
 
 # override HOME to avoid picking up a bad ${HOME}/.scilab during the build
 MAKE_ENV+=		HOME=${WRKSRC}
