@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/05/06 08:10:26 rh Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2002/05/11 02:09:26 jlam Exp $
 
 DISTNAME=	libxslt-1.0.17
 PKGNAME=	${DISTNAME}
@@ -7,19 +7,19 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/libxslt/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://xmlsoft.org/
-COMMENT=	Xslt parser library for GNOME
-
-USE_BUILDLINK_ONLY=	yes
-USE_GMAKE=		yes
-USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+COMMENT=	XSLT parser library for GNOME
 
 BUILDLINK_DEPENDS.libxml2=     libxml2>=2.4.10
 
-.include "../../textproc/libxml2/buildlink.mk"
-.include "../../lang/perl5/buildlink.mk"
+USE_BUILDLINK2_ONLY=	yes
+USE_GMAKE=		yes
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_PREFIX.libxml2}
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/03/09 04:55:33 yyamano Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2002/05/11 02:08:51 jlam Exp $
 
 DISTNAME=       lha-114i
 PKGNAME=	lha-114.9
@@ -9,9 +9,9 @@ MASTER_SITES=   http://www2m.biglobe.ne.jp/~dolphin/lha/prog/ \
 MAINTAINER=     packages@netbsd.org
 COMMENT=	Archive files using LZW compression (.lzh files)
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2_ONLY=	# defined
 
-MAKE_FLAGS=	CC="${CC}" MAKE="${MAKE_PROGRAM}"
+MAKE_FLAGS=	MAKE="${MAKE_PROGRAM}"
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"

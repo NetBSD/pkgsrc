@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/07/15 11:23:25 jlam Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/05/11 02:08:48 jlam Exp $
 #
 
 DISTNAME=	fastjar-0.90
@@ -11,7 +11,7 @@ HOMEPAGE=	http://fastjar.sourceforge.net/
 COMMENT=	C language version of the 'jar' archiver normally used by Java
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2_ONLY=	YES
 
-.include "../../devel/zlib/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

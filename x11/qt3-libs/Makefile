@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2002/03/19 17:54:35 drochner Exp $
-#
-
-.include "../qt3-libs/Makefile.common"
+# $NetBSD: Makefile,v 1.3.2.1 2002/05/11 02:09:33 jlam Exp $
 
 PKGNAME=		qt3-libs-${QTVERSION}
 COMMENT=		C++ X GUI toolkit
 
-USE_BUILDLINK_ONLY=	yes
-BUILDLINK_QTDIR=	${WRKSRC}
+USE_BUILDLINK2_ONLY=	yes
+
+.include "../qt3-libs/Makefile.common"
 
 ALL_TARGET=		sub-src
 
@@ -19,16 +17,16 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${QTPREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${QTPREFIX}/bin
 	${INSTALL_DATA_DIR} ${QTPREFIX}/lib
-	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/lib/libqt.la ${QTPREFIX}/lib
+	${PKGLIBTOOL} ${INSTALL_DATA} ${WRKSRC}/lib/libqt.la ${QTPREFIX}/lib
 	${INSTALL_DATA_DIR} ${QTPREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/include/*.h ${QTPREFIX}/include
 	${INSTALL_DATA_DIR} ${QTPREFIX}/include/private
 	${INSTALL_DATA} ${WRKSRC}/include/private/*.h ${QTPREFIX}/include/private
 
-.include "../../devel/zlib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/Mesa/buildlink.mk"
-.include "../../graphics/mng/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/mng/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

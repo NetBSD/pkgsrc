@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/10/22 01:13:11 mjl Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2002/05/11 02:08:52 jlam Exp $
 #
 
 VERS=			1.07
@@ -14,7 +14,7 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://wildsau.idv.uni-linz.ac.at/mfx/lzo.html
 COMMENT=		Portable lossless data compression library written in ANSI C
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2_ONLY=	# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/acconfig/ltconfig

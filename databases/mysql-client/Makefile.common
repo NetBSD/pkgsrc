@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2002/03/18 14:17:38 martti Exp $
+# $NetBSD: Makefile.common,v 1.8.2.1 2002/05/11 02:09:00 jlam Exp $
 
 DISTNAME=		mysql-3.23.49
 CATEGORIES=		databases
@@ -52,4 +52,4 @@ post-extract:
 		${RM} $${file}.orig;					\
 	done
 
-.include "../../devel/zlib/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"

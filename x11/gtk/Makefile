@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2002/02/18 15:14:45 seb Exp $
+# $NetBSD: Makefile,v 1.69.2.1 2002/05/11 02:09:29 jlam Exp $
 
 DISTNAME=		gtk+-1.2.10
 CATEGORIES=		x11
@@ -14,7 +14,7 @@ COMMENT=		Gimp toolkit. Libraries for building X11 user interfaces
 BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2_ONLY=	yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_X11BASE=		yes
@@ -32,7 +32,7 @@ PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 # The following ensures that `gtk-config --libs' includes the correct linker
 # flags for linking the X11 libs.
 #
-X_LDFLAGS=		-Wl,-R${X11BASE}/lib -L${BUILDLINK_X11_DIR}/lib
+X_LDFLAGS=		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
 
 GTK_VERSION=		${DISTNAME:S/gtk+-//}
 GTK_MAJOR_VERSION=	${GTK_VERSION:C/\..*//}
@@ -62,8 +62,7 @@ post-install:
 	${LN} -fs ${PREFIX}/share/aclocal/gtk.m4 \
 	  ${LOCALBASE}/share/aclocal/gtk.m4
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/glib/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/glib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

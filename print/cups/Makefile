@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2002/03/13 17:37:33 fredb Exp $
+# $NetBSD: Makefile,v 1.48.2.1 2002/05/11 02:09:21 jlam Exp $
 
 DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
@@ -22,7 +22,7 @@ COMMENT=		Common UNIX Printing System
 
 CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2_ONLY=	YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/cups
 CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER}
 CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP}
-CONFIGURE_ARGS+=	--enable-libtool-unsupported="${LIBTOOL}"
+CONFIGURE_ARGS+=	--enable-libtool-unsupported="${PKGLIBTOOL}"
 CONFIGURE_ARGS+=	--enable-slp
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ENV+=		DSOFLAGS="${LDFLAGS}"
@@ -39,7 +39,7 @@ CONFIGURE_ENV+=		DSOFLAGS="${LDFLAGS}"
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_PAM)
-.include "../../security/PAM/buildlink.mk"
+.include "../../security/PAM/buildlink2.mk"
 BUILD_DEFS+=		USE_PAM
 CONFIGURE_ARGS+=	--enable-pam
 PLIST_SRC=		${PKGDIR}/PLIST.pam
@@ -102,11 +102,12 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/cups.pam ${EGDIR}
 .endif
 
-.include "../../devel/zlib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../net/openslp/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../net/openslp/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

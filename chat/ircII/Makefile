@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/04/03 14:00:49 mrg Exp $
+# $NetBSD: Makefile,v 1.17.2.1 2002/05/11 02:08:59 jlam Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -17,7 +17,7 @@ PLIST_SUBST+= 		VERS=${VERS}
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2_ONLY=	yes
 GNU_CONFIGURE=		yes
 .if defined(DEFAULT_IRC_SERVER)
 CONFIGURE_ARGS+=	--with-default-server=${DEFAULT_IRC_SERVER}
@@ -34,20 +34,18 @@ BUILD_DEFS+=		USE_SOCKS
 
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
-CONFIGURE_ARGS+=	--with-socks${USE_SOCKS}=${BUILDLINK_DIR}
-.if ${USE_SOCKS} == 4
-.include "../../net/socks4/buildlink.mk"
-.else
-.include "../../net/socks5/buildlink.mk"
-.endif
+.  if ${USE_SOCKS} == 4
+.    include "../../net/socks4/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-socks4=${BUILDLINK_PREFIX.socks4}
+.  elif ${USE_SOCKS} == 5
+.    include "../../net/socks5/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-socks5=${BUILDLINK_PREFIX.socks5}
+.  endif
 .endif
 
-.if defined(IRCII_CONFIGURE_ARGS)
+# Allow customizations from /etc/mk.conf.
 CONFIGURE_ARGS+=	${IRCII_CONFIGURE_ARGS}
-.endif
-.if defined(IRCII_CONFIGURE_ENV)
 CONFIGURE_ENV+=		${IRCII_CONFIGURE_ENV}
-.endif
 
 pre-install:
 	@(if [ "X${MANZ}" != X"" ]; then \

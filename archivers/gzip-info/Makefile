@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/02/18 15:14:01 seb Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2002/05/11 02:08:50 jlam Exp $
 
 DISTNAME=	gzip-1.2.4a
 PKGNAME=	gzip-info-1.2.4a
@@ -13,13 +13,11 @@ COMMENT=	Info format documentation for the GZIP utility
 
 INFO_FILES=	gzip.info
 
+USE_BUILDLINK2_ONLY=	yes
+
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-
-.if exists(/usr/bin/gzip)
-IGNORE=		"${PKGNAME} is part of your ${OPSYS} distribution"
-.endif
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/gzip.info ${PREFIX}/info

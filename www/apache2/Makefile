@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/04/16 20:07:09 jlam Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2002/05/11 02:09:28 jlam Exp $
 
 DISTNAME=		httpd-2.0.35
 PKGNAME=		apache-2.0.35
@@ -16,10 +16,7 @@ CONFLICTS+=		ap-*-[0-9]*	# Apache-1.x DSOs
 
 BUILD_DEFS+=		USE_INET6
 
-USE_BUILDLINK_ONLY=	YES
-REPLACE_BUILDLINK=	config_vars.mk
-REPLACE_BUILDLINK_SED=	-e "s|${BUILDLINK_DIR}|${LOCALBASE}|g"
-
+USE_BUILDLINK2_ONLY=	YES
 USE_GMAKE=		YES
 
 USE_LIBTOOL=		YES
@@ -36,7 +33,7 @@ CONFIGURE_ARGS+=	--with-mpm=prefork
 
 # Apache Portable Runtime Utility library configure options
 CONFIGURE_ARGS+=	--with-dbm=sdbm
-CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -93,15 +90,15 @@ OWN_DIRS_PERMS+=	/var/db/httpd/proxy nobody nobody 0755
 
 # Add dependencies for the modules that will be built.  For each module
 # ap_mod listed in ${APACHE_MODULES}, _AP_DEPENDS.ap_mod is a whitespace
-# separated list of dependencies or buildlink.mk files needed to build
+# separated list of dependencies or buildlink2.mk files needed to build
 # ap_mod, and _AP_CFG_ARGS.ap_mod is a whitespace separated list of
 # configure script options for ap_mod.
 #
-_AP_DEPENDS.ssl=	../../security/openssl/buildlink.mk
-_AP_DEPENDS.deflate=	../../devel/zlib/buildlink.mk
+_AP_DEPENDS.ssl=	../../security/openssl/buildlink2.mk
+_AP_DEPENDS.deflate=	../../devel/zlib/buildlink2.mk
 
-_AP_CFG_ARGS.ssl=	--with-ssl=${BUILDLINK_DIR}
-_AP_CFG_ARGS.deflate=	--with-z=${BUILDLINK_DIR}
+_AP_CFG_ARGS.ssl=	--with-ssl=${BUILDLINK_PREFIX.openssl}
+_AP_CFG_ARGS.deflate=	--with-z=${BUILDLINK_PREFIX.zlib}
 
 .for _ap_mod in ${APACHE_MODULES}
 .  if defined(_AP_DEPENDS.${_ap_mod}) && !empty(_AP_DEPENDS.${_ap_mod})
@@ -159,8 +156,8 @@ post-install:
 	done
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
 
-.include "../../lang/perl5/buildlink.mk"
-.include "../../textproc/expat/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
+.include "../../textproc/expat/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/03/13 17:43:38 fredb Exp $
+# $NetBSD: Makefile,v 1.39.2.1 2002/05/11 02:09:14 jlam Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
@@ -15,17 +15,16 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.libpng.org/pub/png/
 COMMENT=	Library for manipulating PNG images
 
-USE_LIBTOOL=	yes
+USE_BUILDLINK2_ONLY=	yes
+USE_LIBTOOL=		yes
+MAKE_ENV+=		REALCC="${BUILDLINK_CC}"
 
 MAKEFILE=	scripts/makefile.std
-MAKE_ENV+=	REALCC="${CC}"
-
-USE_BUILDLINK_ONLY=	yes
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/libpng.3 ${PREFIX}/man/man3
 	${INSTALL_MAN} ${WRKSRC}/libpngpf.3 ${PREFIX}/man/man3
 	${INSTALL_MAN} ${WRKSRC}/png.5 ${PREFIX}/man/man5
 
-.include "../../devel/zlib/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,25 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2001/07/15 12:22:17 jlam Exp $
+$NetBSD: patch-aa,v 1.2.2.1 2002/05/11 02:08:59 jlam Exp $
 
---- configure.orig	Mon Feb 12 07:46:44 2001
-+++ configure
-@@ -538,16 +538,6 @@
- 
- 
- 
--# So many systems seem to need this that it is better do it here automatically.
--if test "x$prefix" != xNONE; then
--  if test -d "$prefix/lib"; then
--    LIBS="-L${prefix}/lib $LIBS"
--  fi
--else
--  if test -d "$ac_default_prefix/lib"; then
--    LIBS="-L${ac_default_prefix}/lib $LIBS"
--  fi
--fi
- 
- 
- VERSION=`sed -n -e 's/"[^"]*$//' -e '/#define[ 	]*IRCII_VERSION[ 	]*"/s///p' -e '/#define IRCII_VERSION/q' < ${srcdir}/source/irc.c` 
-@@ -5499,7 +5489,7 @@
+--- configure.orig	Wed Mar 27 09:20:46 2002
++++ configure	Wed May  8 05:34:40 2002
+@@ -5578,7 +5578,7 @@
  fi
  if test "x$COPY_DIRECTORY" = "xpax";
  then

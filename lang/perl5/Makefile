@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2002/01/30 22:34:15 jlam Exp $
+# $NetBSD: Makefile,v 1.55.2.1 2002/05/11 02:09:17 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -15,6 +15,7 @@ CONFLICTS=		perl-5.00* perl-base-[0-9]* \
 			p5-Devel-DProf-[0-9]* p5-Devel-Peek-[0-9]* \
 			perl-mk-[0-9]*
 
+USE_BUILDLINK2_ONLY=	# defined
 HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
@@ -22,7 +23,7 @@ CONFIGURE_ARGS+=	-Dprefix="${PREFIX}"
 CONFIGURE_ARGS+=	-Dscriptdir="${PREFIX}/bin"
 CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
 CONFIGURE_ARGS+=	-Doptimize="${CFLAGS}"
-CONFIGURE_ARGS+=	-Dcc="${CC}"
+CONFIGURE_ARGS+=	-Dcc="${CC:T}"
 CONFIGURE_ARGS+=	-Uusemymalloc
 CONFIGURE_ARGS+=	-Uinstallusrbinperl
 
