@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4422 2004/01/10 22:45:16 wiz Exp $
+$NetBSD: CHANGES,v 1.4423 2004/01/11 00:48:45 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -174,3 +174,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed kdebase [wiz 2004-01-10]
 	Removed kdelibs [wiz 2004-01-10]
 	Removed khostchooser [wiz 2004-01-10]
+	Added samba-2.2.8anb6 as net/samba2 [jlam 2004-01-10]
