@@ -1,0 +1,38 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+#
+
+DISTNAME=	icewm-1.0.4
+CATEGORIES=	x11 wm
+MASTER_SITES=	http://download.sourceforge.net/icewm/ \
+		ftp://ftp.fu-berlin.de/unix/X11/window-managers/icewm/
+EXTRACT_SUFX=	.src.tar.gz
+
+MAINTAINER=	wiz@netbsd.org
+HOMEPAGE=	http://icewm.sourceforge.net/
+
+GNU_CONFIGURE=	# defined
+USE_X11BASE=	# defined
+
+FILESDIR=	${.CURDIR}/../../wm/icewm/files
+PATCHDIR=	${.CURDIR}/../../wm/icewm/patches
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+.if exists(/usr/include/machine/apmvar.h)
+CPPFLAGS+=	-DCONFIG_APM
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
+.endif
+.endif
+
+DOCDIR=		${PREFIX}/share/doc/icewm
+HTMLDIR=	${PREFIX}/share/doc/html/icewm
+
+post-install:
+	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
+	for file in BUGS CHANGES COPYING FAQ README TODO; do \
+		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR}; \
+	done
+	${INSTALL_DATA} ${WRKSRC}/doc/icewm*.html ${HTMLDIR}
+
+.include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+
+--- src/config.h.orig	Mon Nov  8 06:45:52 1999
++++ src/config.h	Mon Mar  6 22:20:48 2000
+@@ -31,6 +31,6 @@
+ #define CONFIG_NET_STATUS
+ 
+ /* apm status */
+-#define CONFIG_APM
++/* #define CONFIG_APM */
+ 
+ #endif

@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+
+--- wrlib/Makefile.am.orig	Fri Mar 24 02:16:03 2000
++++ wrlib/Makefile.am	Sun Jun  4 01:22:53 2000
+@@ -4,7 +4,7 @@
+ 
+ lib_LTLIBRARIES = libwraster.la
+ 
+-libwraster_la_LDFLAGS = -version-info 2:0:0
++libwraster_la_LDFLAGS = @LIBRARY_SEARCH_PATH@ @GFXLIBS@ @XLIBS@ -lm -version-info 2:0:0
+ 
+ bin_SCRIPTS = get-wraster-flags
+ 

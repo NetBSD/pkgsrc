@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+
+--- doc/Makefile.am.orig	Sun May  2 23:23:10 1999
++++ doc/Makefile.am	Sun Jun  4 02:00:27 2000
+@@ -1,16 +1,16 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+ man_MANS = \
+-	geticonset.1x \
+-	setstyle.1x \
+-	wxpaste.1x \
+-	getstyle.1x \
+-	wdwrite.1x \
+-	wmsetbg.1x \
+-	wsetfont.1x \
+-	seticons.1x \
+-	wmaker.1x \
+-	wxcopy.1x
++	geticonset.1 \
++	setstyle.1 \
++	wxpaste.1 \
++	getstyle.1 \
++	wdwrite.1 \
++	wmsetbg.1 \
++	wsetfont.1 \
++	seticons.1 \
++	wmaker.1 \
++	wxcopy.1
+ 
+ EXTRA_DIST = $(man_MANS)
+ 
