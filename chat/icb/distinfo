@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:31:40 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:07:17 agc Exp $
 
-MD5 (icb-5.0.9.tar.gz) = 1240504a8b0350a05c4441e7e91956e4
+SHA1 (icb-5.0.9.tar.gz) = 151430ad7fe3e9787627b31f6551bf1f398b1bd8
+Size (icb-5.0.9.tar.gz) = 357565 bytes
 SHA1 (patch-aa) = 1790a2c85ec28fc6b741d56299dc287c29f6bf90
 SHA1 (patch-ab) = 6a5970e1443834e9370c29ace56811f0ba35fa4e
 SHA1 (patch-ac) = 87bc593c9678ca32d1d87d89ccd4c361bb1a8b53

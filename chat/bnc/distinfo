@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:31:35 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:07:15 agc Exp $
 
-MD5 (bnc2.8.2.tar.gz) = e0d12168cdace5d9ae410db4d24e6e2e
+SHA1 (bnc2.8.2.tar.gz) = da1329e65ad4876fab8d7abeb0c313d07c780af9
+Size (bnc2.8.2.tar.gz) = 48378 bytes
 SHA1 (patch-aa) = d013af5ab689e23c5d14b9ec440e736c8e4f7596

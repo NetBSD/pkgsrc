@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:31:44 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:07:18 agc Exp $
 
-MD5 (kicq-1.0.0.tar.gz) = c96d8f3b178863e2cc0049359be25273
+SHA1 (kicq-1.0.0.tar.gz) = 97c96ccc8c73290be37045a6f609a293c4af6212
+Size (kicq-1.0.0.tar.gz) = 704919 bytes
 SHA1 (patch-aa) = 021b142e77fd7b2308c223859019fcf6b1c0812b

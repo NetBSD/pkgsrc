@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:31:36 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:07:15 agc Exp $
 
 SHA1 (epic4-1.0.tar.bz2) = c2c49192343882ca34fc01cc3b5df7f69716fa7a
+Size (epic4-1.0.tar.bz2) = 497484 bytes
 SHA1 (epic4pre2-help.tar.gz) = 673413e3cba17e69259fc13c5819f5cb727e9727
+Size (epic4pre2-help.tar.gz) = 216319 bytes
 SHA1 (epic4-0.10.1-ipv6-20010331.patch.gz) = 19abdd9fe5b155626ef8568f0e99372ba9d7ddd5
+Size (epic4-0.10.1-ipv6-20010331.patch.gz) = 20140 bytes
