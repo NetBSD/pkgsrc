@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2000/05/09 13:23:20 abs Exp $
+# $NetBSD: Makefile.common,v 1.11 2000/05/11 21:35:04 abs Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -9,10 +9,11 @@ NS_ENCRYPTION?=	export
 
 # Note - the version will be overridden for certain architectures which
 #	 do not have the latest version available (eg: SunOS sparc)
-NS_VERS=	4.7
-LDAP_VERS=	30
+NS_VERS=	4.73
+LDAP_VERS=	40
 #
 # Based on OPSYS and MACHINE_ARCH, define:
+#	PLIST_ARCH	ARCH specific PLIST contents
 #	DISTUNAME	Used to determine DISTNAME (tarfile on ftp server)
 #	DIST_DIR_NAME	Directory on ftp site from which to download
 #	WRKNAME		Used to determine WRKSRC (directoryname in tarfile)
@@ -37,8 +38,6 @@ VENDOR_NAME=	Tru64 UNIX
 #
 .elif (${MACHINE_ARCH} == "i386" && defined(NS_USE_BSDI))
 PLIST_ARCH=	bsdi-i386
-NS_VERS=	4.72
-LDAP_VERS=	40
 DISTUNAME=	x86-bsdi-bsd2
 DIST_DIR_NAME=	unsupported/bsdi21
 WRKNAME=	x86-bsdi-bsd2
@@ -46,8 +45,6 @@ VENDOR_NAME=	BSD/OS 2.1
 #
 .elif (${MACHINE_ARCH} == "i386")
 PLIST_ARCH=	linux-i386
-NS_VERS=	4.72
-LDAP_VERS=	40
 DEPENDS=	suse_linux>=6.1:../../emulators/suse_linux
 DISTUNAME=	x86-unknown-linux2.2
 DIST_DIR_NAME=	unsupported/linux22
@@ -59,6 +56,7 @@ VENDOR_NAME=	Linux 2.2
 IGNORE=	"requires SunOS libraries - see compat_sunos(8)"
 .endif
 NS_VERS=	4.61
+LDAP_VERS=	30
 PLIST_ARCH=	sunos-sparc
 DISTUNAME=	sparc-sun-sunos4.1.3_U1
 DIST_DIR_NAME=	unsupported/sunos413
