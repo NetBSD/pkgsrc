@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2003/12/27 18:43:13 fredb Exp $
+# $NetBSD: Makefile.common,v 1.64 2003/12/28 12:47:09 jmmv Exp $
 #
 
 DISTNAME=		xscreensaver-4.14
@@ -8,6 +8,8 @@ MASTER_SITES=		${HOMEPAGE} \
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.jwz.org/xscreensaver/
+
+BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
@@ -61,5 +63,6 @@ CFLAGS+=		-fno-strict-aliasing
 USE_PKGSRC_GCC=		# defined
 .endif
 
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/gle/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
