@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/27 23:28:25 jtb Exp $
+
+--- etc/Makefile.conf.orig	Sun Mar  5 01:37:06 2000
++++ etc/Makefile.conf
+@@ -1,14 +1,11 @@
+-AR		= ar
+-CC		= gcc
+-CCOPTS		= -O3 -g
++CCOPTS		= -O3 -ansi
+ CONTRIBDIR	= none
+ CONTRIBFLAGS	= 
+-CPP		= /lib/cpp
+-DESTBIN		= /usr/local/bin
+-DESTLIB		= /usr/local/lib/felt
+-DESTMAN		= /usr/local/man
++DESTBIN		= ${PREFIX}/bin
++DESTLIB		= ${PREFIX}/share/felt
++DESTMAN		= ${PREFIX}/man
+ INSTALL		= sh $(TOPDIR)/etc/install.sh -c
+-LDOPTS		= -g
++LDOPTS		= -s
+ LIBELT		= $(TOPDIR)/lib/Elements/libelt.a
+ LIBFELT		= $(TOPDIR)/lib/Felt/libfelt.a
+ LIBGEN		= $(TOPDIR)/lib/Generate/libgen.a
+@@ -18,9 +15,9 @@
+ MKDIR		= sh $(TOPDIR)/etc/mkdirhier.sh
+ RANLIB		= ranlib
+ READLINE	= -DREADLINE
+-READLIBS	= -L/usr/lib -lreadline -ltermcap
++READLIBS	= -L${RL_PREFIX}/lib -lreadline -ltermcap
+ RM		= rm -f
+ SYSLIBS		=
+-X11DEF		= /usr/X11R6/lib/X11/app-defaults
+-X11INC		= /usr/X11R6/include
+-X11LIB		= /usr/X11R6/lib
++X11DEF		= ${X11BASE}/lib/X11/app-defaults
++X11INC		= ${X11BASE}/include
++X11LIB		= ${X11BASE}/lib
