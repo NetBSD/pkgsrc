@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.8 2001/10/25 18:12:53 tron Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.9 2001/10/26 16:08:53 jwise Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -706,7 +706,9 @@ JAKARTA_HOME?= ${JAVA_HOME}/jakarta
 # Default: ${JAVA_HOME}/jakarta
 
 #JAVA_HOME=
-# Location for packages which install java code
+# Location of jvm to be used by pkgsrc.  Java-based packages will be installed
+# in ${LOCALBASE}/lib/java, so that they are available to all jvms.
+# 
 # Possible: any directory
 # Default: home of JVM chosen by ${PKG_JVM}
 
