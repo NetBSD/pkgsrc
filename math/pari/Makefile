@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2003/12/30 17:27:31 cjep Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/22 02:19:50 heinz Exp $
 
 DISTNAME=		pari-2.1.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		math
-MASTER_SITES=		ftp://www.gn-50uma.de/gn/gn-50uma.de/pari-2.1/ \
-			http://www.gn-50uma.de/ftp/pari-2.1/
+MASTER_SITES=		http://pari.math.u-bordeaux.fr/download/ \
+			ftp://www.gn-50uma.de/gn/gn-50uma.de/pari-2.1/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.parigp-home.de/
+HOMEPAGE=		http://pari.math.u-bordeaux.fr/
 COMMENT=		Software package for computer-aided number theory
 
 BUILD_DEPENDS+= 	teTeX-[0-9]*:../../print/teTeX
