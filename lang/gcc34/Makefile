@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/07/26 21:55:37 shannonjr Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/28 07:37:19 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
 PKGNAME=	gcc34-${GCC_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,11 +19,11 @@ GCC_VERSION=		3.4.1
 # Determine whether to use binutils
 .if ${OPSYS} == "NetBSD"
 .  if !defined(USE_BINUTILS)
-AS_PATH:=   ${AS}
+AS_PATH:=	${AS}
 .    for _dir_ in ${PATH:C/\:/ /g}
 .      if empty(AS_PATH:M/*)
 .        if exists(${_dir_}/${AS})
-AS_PATH:=   ${_dir_}/${AS}
+AS_PATH:=	${_dir_}/${AS}
 .        endif
 .      endif
 .    endfor
@@ -132,6 +132,11 @@ MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include
 CFLAGS+=	-I${BUILDLINK_DIR}/include
+LOWER_OPSYS_VERSUFFIX!=	echo ${LOWER_OS_VERSION} | ${CUT} -d _ -f 1
+GCC_PLATFORM=	${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
+CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
+GCC_ARCHSUBDIR=	${GCC_SUBPREFIX}/lib/gcc/${GCC_PLATFORM}/${GCC_VERSION}
+GCC_ARCHDIR=	${PREFIX}/${GCC_ARCHSUBDIR}
 
 post-patch:
 .if (${MACHINE_GNU_ARCH} == "x86_64")
