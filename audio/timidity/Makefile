@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2001/02/16 13:30:50 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2001/12/19 14:40:59 wiz Exp $
 #
 
-DISTNAME=	TiMidity++-2.10.2
+DISTNAME=	TiMidity++-2.10.4
 PKGNAME=	${DISTNAME:S/TiMidity++/timidity/}
 CATEGORIES=     audio
 MASTER_SITES=	http://www.goice.co.jp/member/mo/timidity/dist/
@@ -11,11 +11,11 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.goice.co.jp/member/mo/timidity/
 COMMENT=	MIDI to WAV renderer and player
 
-DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
-
-USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-vt100 --enable-audio=sun --disable-debug \
 		--enable-gtk
+USE_CONFIG_WRAPPER=	yes
 
+.include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
