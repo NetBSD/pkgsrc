@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2002/08/22 02:22:14 grant Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/02/22 13:33:31 salo Exp $
 bin/xfstt
 etc/rc.d/xfstt
 man/man1/xfstt.1
 share/doc/xfstt/FAQ
 share/doc/xfstt/CHANGES
-share/doc/xfstt/INSTALL
 share/doc/xfstt/THANKS
-lib/X11/fonts/TrueType/.keepme
-@dirrm lib/X11/fonts/TrueType
+share/doc/xfstt/TODO
+share/examples/xfstt/font.properties
+@dirrm share/examples/xfstt
 @dirrm share/doc/xfstt
+@unexec ${RMDIR} -p %D/lib/X11/fonts/TrueType 2> /dev/null || ${TRUE}

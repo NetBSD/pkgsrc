@@ -1,45 +1,47 @@
-# $NetBSD: Makefile,v 1.12 2003/01/28 22:04:36 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/02/22 13:33:31 salo Exp $
 #
 
-DISTNAME=		xfstt_1.3
-PKGNAME=		${DISTNAME:S/_/-/}
-CATEGORIES=		x11 net
-PKGREVISION=		1
+DISTNAME=		xfstt-1.4
+CATEGORIES=		x11 net fonts
 MASTER_SITES=		http://download.berlios.de/xfstt/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://developer.berlios.de/projects/xfstt
 COMMENT=		TrueType font server for X11
 
-CXXFLAGS+=		-fomit-frame-pointer -ffast-math
-MAKE_ENV+=		CXXFLAGS="${CXXFLAGS}"
-
 USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+GNU_CONFIGURE=		YES
+
+# There isn't really any l10n yet, only some preliminary i18n support.
+CONFIGURE_ARGS+=	--disable-nls
+
+CXXFLAGS+=		-fomit-frame-pointer -ffast-math
 
 RCD_SCRIPTS=		xfstt
 
 post-patch:
 	@( \
 	cd ${WRKSRC} ; \
-	for i in INSTALL perftest.cpp xfstt.cpp xfstt.1x; \
+	for f in src/perftest.cc src/xfstt.cc doc/xfstt.1x; \
 	do \
-	    ${MV} $$i $$i.bak ; \
-	    ${SED} -e 's;@PREFIX@;${PREFIX};' < $$i.bak > $$i ; \
+	    ${MV} $$f $$f.orig ; \
+	    ${SED} ${FILES_SUBST_SED} $$f.orig > $$f ; \
 	done ; \
 	)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xfstt ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/xfstt.1x ${PREFIX}/man/man1/xfstt.1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xfstt
-	${INSTALL_DATA} ${WRKSRC}/FAQ ${PREFIX}/share/doc/xfstt
-	${INSTALL_DATA} ${WRKSRC}/CHANGES ${PREFIX}/share/doc/xfstt
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/xfstt
-	${INSTALL_DATA} ${WRKSRC}/THANKS ${PREFIX}/share/doc/xfstt
+	${INSTALL_PROGRAM} ${WRKSRC}/src/xfstt ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/xfstt.1x ${PREFIX}/man/man1/xfstt.1
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fonts/TrueType
-	${ECHO} belongs to xfstt pkg >${PREFIX}/lib/X11/fonts/TrueType/.keepme
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xfstt
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xfstt
+	cd ${WRKSRC} && (				\
+	${INSTALL_DATA} doc/FAQ CHANGES TODO THANKS	\
+		${PREFIX}/share/doc/xfstt/ ;		\
+	${INSTALL_DATA} doc/examples/font.properties	\
+		 ${PREFIX}/share/examples/xfstt/	\
+	)
 
 .include "../../mk/bsd.pkg.mk"
