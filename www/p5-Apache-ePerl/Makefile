@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/12/05 16:26:22 tv Exp $
+# $NetBSD: Makefile,v 1.2 2000/03/04 01:58:58 hubertf Exp $
 #
 
 DISTNAME=		eperl-2.2.14
@@ -10,8 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.engelschall.com/sw/eperl/
 
 DEPENDS=		eperl-2.2.14:../../textproc/eperl
-BUILD_DEPENDS=		${PREFIX}/lib/httpd/mod_perl.so:../../www/ap-perl
-RUN_DEPENDS:=		${BUILD_DEPENDS}
+DEPENDS=		ap-perl-1.19:../../www/ap-perl
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/mod/Apache
 
