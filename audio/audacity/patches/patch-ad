@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/06/17 19:13:52 drochner Exp $
+
+--- snd/sndio.c.orig	Fri Jun 15 13:50:37 2001
++++ snd/sndio.c	Fri Jun 15 13:51:00 2001
+@@ -20,7 +20,7 @@
+ #ifdef WIN32
+ #include <sys/stat.h>
+ #include "io.h"
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <sys/stat.h>
+ #else
+ #include <stat.h>

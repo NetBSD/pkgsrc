@@ -1,0 +1,33 @@
+$NetBSD: patch-ao,v 1.1.1.1 2001/06/17 19:13:52 drochner Exp $
+
+--- prefs/AudioIOPrefs.cpp.orig	Sun Jun 17 09:15:01 2001
++++ prefs/AudioIOPrefs.cpp	Sun Jun 17 09:15:47 2001
+@@ -45,8 +45,8 @@
+ 									GetSize());
+ 
+ 	gPrefs->SetPath("/AudioIO");
+-	wxString playDevice = gPrefs->Read("PlaybackDevice", "/dev/dsp");
+-	wxString recDevice  = gPrefs->Read("RecordingDevice", "/dev/dsp");
++	wxString playDevice = gPrefs->Read("PlaybackDevice", "/dev/sound");
++	wxString recDevice  = gPrefs->Read("RecordingDevice", "/dev/sound");
+ 	bool recordStereo;
+ 	gPrefs->Read("RecordStereo", &recordStereo, false);
+ 	bool duplex;
+@@ -173,7 +173,7 @@
+ {
+ 	/* TODO: attempt autodetection? */
+ #ifdef __WXGTK__
+-	mPlaybackDeviceCtrl->SetValue("/dev/dsp");
++	mPlaybackDeviceCtrl->SetValue("/dev/sound");
+ #endif // __WXGTK__
+ }
+ 
+@@ -184,7 +184,7 @@
+ void AudioIOPrefs::SetRecordingDeviceDefault(wxCommandEvent& event)
+ {
+ #ifdef __WXGTK__
+-	mRecordingDeviceCtrl->SetValue("/dev/dsp");
++	mRecordingDeviceCtrl->SetValue("/dev/sound");
+ #endif // __WXGTK__
+ }
+ 

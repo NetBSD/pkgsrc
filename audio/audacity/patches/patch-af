@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2001/06/17 19:13:52 drochner Exp $
+
+--- snd/sndcvt.c.orig	Fri Jun 15 14:42:55 2001
++++ snd/sndcvt.c	Fri Jun 15 14:43:29 2001
+@@ -16,7 +16,7 @@
+ #ifdef WIN32
+ #include <sys/stat.h>
+ #include "io.h"
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <sys/stat.h>
+ #else
+ #include <stat.h>
