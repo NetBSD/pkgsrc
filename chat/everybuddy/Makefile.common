@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2003/07/17 21:25:40 grant Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/08/15 22:48:04 jmc Exp $
 
 DISTNAME=	everybuddy-0.2.0
 CATEGORIES=	chat
@@ -12,6 +12,7 @@ DEPENDS+=	gnome1-dirs>=1.0:../../misc/gnome1-dirs
 
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
+USE_BUILDLINK2= yes
 
 DISTINFO_FILE=	${.CURDIR}/../everybuddy/distinfo
 FILESDIR=	${.CURDIR}/../everybuddy/files
@@ -28,3 +29,10 @@ post-build:
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/wrapper ${PREFIX}/bin/everybuddy
+
+.include "../../converters/libiconv/buildlink2.mk"
+
+_ICONV_LIB=     ${BUILDLINK_LIBICONV_LDADD:M-l*:C/-l//}
+.if empty(_ICONV_LIB)
+BUILDLINK_TRANSFORM+=   S:-liconv:
+.endif
