@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.229 2002/02/13 12:30:52 mjl Exp $
+# $NetBSD: Packages.txt,v 1.230 2002/02/13 20:05:02 abs Exp $
 ###########################################################################
 
 			==========================
@@ -247,6 +247,11 @@ and adding the definitions there.
 If you don't have a permanent Internet connection and you want to know
 which files to download, "make fetch-list" will tell you what you'll need.
 Put these distfiles into /usr/pkgsrc/distfiles.
+
+If you need to download from a dynamic URL you can set DYNAMIC_MASTER_SITES
+and a 'make fetch' will call files/getsite.sh with the name of each file
+to download as an argument, expecting it to output the URL of the directory
+from which to download it. graphics/ns-cult3d is an example of this usage.
 
 
  2.4 How to build and install
