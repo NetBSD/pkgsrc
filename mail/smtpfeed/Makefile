@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.2 1999/11/29 08:33:30 itojun Exp $
-# KAME $Id: Makefile,v 1.2 1999/11/29 08:33:30 itojun Exp $
+# $NetBSD: Makefile,v 1.3 1999/12/27 09:34:13 itojun Exp $
+# KAME $Id: Makefile,v 1.3 1999/12/27 09:34:13 itojun Exp $
 # Based on FreeBSD Id: Makefile,v 1.27 1999/04/03 08:25:18 itojun Exp
 #
 
@@ -44,6 +44,7 @@ post-patch:
 	@(cd ${_DISTDIR}; for i in ${SENDMAILPATCH}.patch.gz; do \
 		${GZCAT} $$i | ${PATCH} ${PATCH_SENDMAIL_ARGS}; \
 	done)
+	${CP} -f ${FILESDIR}/site.config ${WRKSRC_SENDMAIL}
 	${CP} -f ${FILESDIR}/site.config-v6.kame ${WRKSRC_SENDMAIL}
 
 post-build:
@@ -51,7 +52,7 @@ post-build:
 .if defined(USE_INET6) && ${USE_INET6} == YES
 	@(cd ${WRKSRC_SENDMAIL}; sh makesendmail -f site.config-v6.kame)
 .else
-	@(cd ${WRKSRC_SENDMAIL}; sh makesendmail )
+	@(cd ${WRKSRC_SENDMAIL}; sh makesendmail -f site.config)
 .endif
 
 post-install:
@@ -61,7 +62,10 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$$i ${DOCDIR}; \
 	done
 .endif
-	@${SED} -e 's#/usr/local#${PREFIX}#' ${PKGDIR}/MESSAGE
+	@${SED} -e 's#/usr/pkg#${PREFIX}#' ${PKGDIR}/MESSAGE
+
+backup-sendmail:
+	(cd /usr/libexec/sendmail; ${MV} sendmail sendmail.dist)
 
 install-sendmail:
 	(cd ${WRKSRC_SENDMAIL}; sh makesendmail install)
