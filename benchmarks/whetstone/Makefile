@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/12/26 15:59:56 garbled Exp $
+# $NetBSD: Makefile,v 1.5 1999/03/16 09:02:27 agc Exp $
 
 DISTNAME=		whetstone
 PKGNAME=		whetstone-1.2
@@ -14,7 +14,7 @@ EXTRACT_BEFORE_ARGS=	#empty
 EXTRACT_AFTER_ARGS=	${WRKSRC}
 
 do-build:
-	(cd ${WRKSRC} ; cc -O2 -o whetstone whetstone.c -lm)
+	(cd ${WRKSRC} ; ${CC} -O2 -o whetstone whetstone.c -lm)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/whetstone ${PREFIX}/bin
