@@ -1,10 +1,8 @@
-$NetBSD: patch-am,v 1.7 2004/05/03 15:39:47 jmmv Exp $
+$NetBSD: patch-am,v 1.8 2004/09/21 16:45:47 jmmv Exp $
 
-http://bugzilla.gnome.org/show_bug.cgi?id=141739
-
---- libgnomevfs/gnome-vfs-unix-mounts.c.orig	2004-04-29 16:11:52.000000000 +0200
-+++ libgnomevfs/gnome-vfs-unix-mounts.c	2004-04-29 16:13:57.000000000 +0200
-@@ -411,7 +411,11 @@
+--- libgnomevfs/gnome-vfs-unix-mounts.c.orig	2004-08-25 09:37:37.000000000 +0200
++++ libgnomevfs/gnome-vfs-unix-mounts.c
+@@ -452,7 +455,11 @@ get_mtab_monitor_file (void)
  gboolean
  _gnome_vfs_get_current_unix_mounts (GList **return_list)
  {
@@ -16,14 +14,14 @@ http://bugzilla.gnome.org/show_bug.cgi?id=141739
  	int num_mounts, i;
  	GnomeVFSUnixMount *mount_entry;
  
-@@ -428,7 +432,11 @@
+@@ -469,7 +476,11 @@ _gnome_vfs_get_current_unix_mounts (GLis
  		mount_entry->mount_path = g_strdup (mntent[i].f_mntonname);
  		mount_entry->device_path = g_strdup (mntent[i].f_mntfromname);
  		mount_entry->filesystem_type = g_strdup (mntent[i].f_fstypename);
 +#ifdef HAVE_STATVFS
-+		if (mntent[i].f_flag == MNT_RDONLY) {
++		if (mntent[i].f_flag & MNT_RDONLY) {
 +#else
- 		if (mntent[i].f_flags == MNT_RDONLY) {
+ 		if (mntent[i].f_flags & MNT_RDONLY) {
 +#endif
  		    	mount_entry->is_read_only = TRUE;
  		}
