@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/08/16 10:49:52 rh Exp $
+$NetBSD: patch-aa,v 1.2 2003/12/04 19:37:52 xtraeme Exp $
 
---- src/Makefile.in.orig	Sun Apr 29 07:54:34 2001
+--- src/Makefile.in.orig	2003-09-07 21:12:28.000000000 -0500
 +++ src/Makefile.in
-@@ -93,7 +93,7 @@
+@@ -99,7 +99,7 @@ AUTOMAKE_OPTIONS = 1.4 foreign
  # A list of all the files in the current directory which can be regenerated
  MAINTAINERCLEANFILES = Makefile.in loaderpath.h
  
 -LDFLAGS = -L/usr/X11R6/lib
 +LDFLAGS = @LDFLAGS@
- INCLUDES = -I/usr/X11R6/include -I$(top_srcdir)/libltdl                        $(X_CFLAGS) -I$(prefix)/include -I$(includedir) 		       -I. -I$(top_srcdir) -I$(top_srcdir)/src 		       -I$(top_srcdir)/loaders
- 
- MMX_SRCS = asm_blend.S asm_rgba.S asm_scale.S asm_rotate.S 		       asm_blend_cmod.S
+ INCLUDES = -I. -I$(top_srcdir) -I$(top_srcdir)/src \
+                        -I$(top_srcdir)/loaders -I$(top_srcdir)/libltdl \
+                        $(freetype_cflags) -I/usr/X11R6/include $(X_CFLAGS) \
