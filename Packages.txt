@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.96 2000/07/16 17:20:20 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.97 2000/07/19 02:27:16 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -416,7 +416,7 @@ future modifications more difficult.
 
 One important thing to mention is to pay attention that no RCS IDs get
 stored in the patch files, as these will cause problems when later checked
-into the NetBSD CVS tree. To avoid this, use the "-U 2" or -U 1" option to
+into the NetBSD CVS tree. To avoid this, use the "-U 2" or "-U 1" option to
 diff.
 
 If you don't want to worry about the problems in the last two paragraphs
