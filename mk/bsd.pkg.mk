@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1142 2003/02/16 04:43:02 salo Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1143 2003/02/18 10:36:44 lukem Exp $
 #
 # This file is in the public domain.
 #
@@ -1529,11 +1529,15 @@ _ACQUIRE_LOCK=								\
 		sleep)	sleep ${PKGSRC_SLEEPSECS} ;;			\
 		esac							\
 	done;								\
-	${ECHO_MSG} "=> Lock acquired on behalf of process $$ppid"
+	if [ "${PKG_VERBOSE}" != "" ]; then				\
+		${ECHO_MSG} "=> Lock acquired on behalf of process $$ppid"; \
+	fi
 
 _RELEASE_LOCK=								\
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO_MSG} "=> Lock released on behalf of process `${CAT} ${LOCKFILE}`"; \
+	if [ "${PKG_VERBOSE}" != "" ]; then				\
+		${ECHO_MSG} "=> Lock released on behalf of process `${CAT} ${LOCKFILE}`"; \
+	fi;								\
 	${RM} ${LOCKFILE}
 .endif # PKGSRC_LOCKTYPE
 
