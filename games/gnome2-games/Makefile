@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.15 2003/12/28 23:37:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2003/12/29 00:02:47 xtraeme Exp $
 
-DISTNAME=		gnome-games-2.2.1
-PKGREVISION=		7
+DISTNAME=		gnome-games-2.4.1
 CATEGORIES=		games gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.2/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.4/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 games collection
 
-BUILD_USES_MSGFMT=	yes
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 CONFLICTS=		xbill-[0-9]*
@@ -51,12 +49,19 @@ post-patch:
 	${CP} gnect/src/connect4.c gnect/src/connect4.c.broken &&	\
 	${SED} -e 's|/usr/share|${PREFIX}/share|'			\
 		< gnect/src/connect4.c.broken > gnect/src/connect4.c
+	${TOUCH} ${WRKSRC}/po/*.gmo
 
-GCONF2_SCHEMAS=		freecell.schemas
+GCONF2_SCHEMAS=		aisleriot.schemas
+GCONF2_SCHEMAS+=	blackjack.schemas
 GCONF2_SCHEMAS+=	gataxx.schemas
+GCONF2_SCHEMAS+=	glines.schemas
 GCONF2_SCHEMAS+=	gnect.schemas
+GCONF2_SCHEMAS+=	gnibbles.schemas
+GCONF2_SCHEMAS+=	gnobots2.schemas
+GCONF2_SCHEMAS+=	gnome-stones.schemas
 GCONF2_SCHEMAS+=	gnometris.schemas
 GCONF2_SCHEMAS+=	gnomine.schemas
+GCONF2_SCHEMAS+=	gnotravex.schemas
 GCONF2_SCHEMAS+=	gtali.schemas
 GCONF2_SCHEMAS+=	iagno.schemas
 GCONF2_SCHEMAS+=	mahjongg.schemas
@@ -67,7 +72,7 @@ GCONF2_SCHEMAS+=	same-gnome.schemas
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libgnome/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
 .include "../../lang/guile/buildlink2.mk"
+.include "../../sysutils/gnome-vfs2/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../mk/bsd.pkg.mk"
