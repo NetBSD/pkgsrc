@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.4 2003/09/10 17:31:43 gavan Exp $
+# $NetBSD: DEINSTALL,v 1.5 2003/09/19 00:53:58 jlam Exp $
 
 FONT_PROGS="@FONT_PROGS@"
 X11BASE=@X11BASE@
@@ -26,7 +26,9 @@ POST-DEINSTALL)
 		${RM} -f ${HOSTDEF}
 	fi
 	case ${X11BASE} in
-		*openwin) ${RM} -f ${SITEDEF} ${SV4LIB} ;;
+	*openwin)
+		${RM} -f ${SITEDEF} ${SV4LIB}
+		;;
 	esac
 	${ECHO} "done."
 	${RMDIR} -p ${PKG_PREFIX}/lib/X11/config 2>/dev/null || ${TRUE}
