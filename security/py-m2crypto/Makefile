@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:54 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/05 08:59:31 recht Exp $
 #
 
 DISTNAME=		m2crypto-0.12
@@ -12,13 +12,13 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://sandbox.rulemaker.net/ngps/m2/
 COMMENT=		Crypto and SSL toolkit for Python
 
-USE_BUILDLINK2=			yes
+USE_BUILDLINK3=			yes
 PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_ACCEPTED=	22pth 21pth
+PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
 
 BUILDLINK_DEPENDS.openssl=	openssl>=0.9.7b
 
 .include "../../lang/python/extension.mk"
-.include "../../devel/swig-build/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../devel/swig-build/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
