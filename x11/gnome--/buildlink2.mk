@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/11 22:17:11 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/09/11 22:36:52 wiz Exp $
 
 .if !defined(GNOMEMM_BUILDLINK2_MK)
 GNOMEMM_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		gnomemm
-BUILDLINK_DEPENDS.gnomemm?=	gnome-->=1.1.19nb2
+BUILDLINK_DEPENDS.gnomemm?=	gnome-->=1.2.2
 BUILDLINK_PKGSRCDIR.gnomemm?=	../../x11/gnome--
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.gnomemm=gnome--
