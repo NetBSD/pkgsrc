@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:46:23 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 16:56:46 martti Exp $
 
 DISTNAME=	mailman-2.0.12
 CATEGORIES=	mail www
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://www.list.org/
-COMMENT=	the GNU Mailing List Manager
+COMMENT=	The GNU Mailing List Manager
 
 .include "../../mk/bsd.prefs.mk"
 

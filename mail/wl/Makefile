@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:47:11 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/21 16:56:57 martti Exp $
 
 DISTNAME=	wl-2.10.0
 CATEGORIES=	mail
@@ -6,7 +6,7 @@ MASTER_SITES=	ftp://ftp.ring.gr.jp/pub/text/elisp/wl/stable/
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.gohome.org/wl/
-COMMENT=	mail/news management system with IMAP4rev1 support for Emacs
+COMMENT=	Mail/news management system with IMAP4rev1 support for Emacs
 
 DEPENDS+=	semi>=1.13.7:../../devel/semi
 # XXX please someone adjust paths and PLIST for XEmacs...

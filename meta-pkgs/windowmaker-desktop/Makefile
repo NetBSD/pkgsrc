@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:48:38 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/21 16:58:19 martti Exp $
 #
 
 DISTNAME=	windowmaker-desktop-1.1
@@ -9,7 +9,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.windowmaker.org/
-COMMENT=	provides a desktop based on the WindowMaker wm
+COMMENT=	Provides a desktop based on the WindowMaker wm
 
 DEPENDS+=	windowmaker>=0.80.0:../../wm/windowmaker
 DEPENDS+=	wterm-[0-9]*:../../x11/wterm

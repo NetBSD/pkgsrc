@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:46:46 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/21 16:56:52 martti Exp $
 
 DISTNAME=	razor-agents-2.22
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=razor/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://razor.sourceforge.net/
-COMMENT=	distributed and collaborative spam detection network
+COMMENT=	Distributed and collaborative spam detection network
 
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/05/02 11:55:45 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/21 16:58:14 martti Exp $
 #
 
 DISTNAME=	edesktop-1.0
@@ -8,7 +8,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	root@garbled.net
-COMMENT=	provides a nearly complete E desktop
+COMMENT=	Provides a nearly complete E desktop
 
 DEPENDS+=	enlightenment>=0.16.2:../../wm/enlightenment
 DEPENDS+=	eterm-[0-9]*:../../x11/eterm
