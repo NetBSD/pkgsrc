@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.940 2002/03/04 17:21:46 jmc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.941 2002/03/04 19:41:03 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -1251,17 +1251,22 @@ _CHECK_DIST_PATH=							\
 	fi
 
 #
-# Sort the master site list according to the patterns in MASTER_SORT.
+# Set up ORDERED_SITES to work out the exact list of sites for every file,
+# using the dynamic sites script, or sorting according to the master site
+# list or the patterns in MASTER_SORT or MASTER_SORT_REGEX as appropriate.
+# No actual sorting is done until ORDERED_SITES is expanded.
 #
-.if defined(MASTER_SORT) || defined(MASTER_SORT_REGEX)
+.if defined(DYNAMIC_MASTER_SITES)
+ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} `${SH} ${FILESDIR}/getsite.sh $${file}`
+.elif defined(MASTER_SORT) || defined(MASTER_SORT_REGEX)
 MASTER_SORT?=
 MASTER_SORT_REGEX?=
 MASTER_SORT_REGEX+= ${MASTER_SORT:S/./\\./g:C/.*/:\/\/[^\/]*&\//}
 
 MASTER_SORT_AWK= BEGIN { RS = " "; ORS = " "; IGNORECASE = 1 ; gl = "${MASTER_SORT_REGEX}"; }
-.for srt in ${MASTER_SORT_REGEX}
+.  for srt in ${MASTER_SORT_REGEX}
 MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt}"] = good["${srt}"] " " $$0 ; next; } 
-.endfor
+.  endfor
 MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; }
 
 SORT_SITES_CMD= ${ECHO} $$unsorted_sites | ${AWK} '${MASTER_SORT_AWK}'
@@ -1271,47 +1276,43 @@ ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} $$unsorted_sites
 .endif
 
 #
-# Complete macro for the do-fetch target.
+# Associate each file to fetch with the correct site(s).
 #
-.if !defined(_FETCH_ALLFILES)
-.  if !empty(_DISTFILES)
-.    for fetchfile in ${_DISTFILES}
+.if !empty(_DISTFILES)
+.  for fetchfile in ${_DISTFILES}
 SITES_${fetchfile:T}?= ${MASTER_SITES}
-.    endfor
-.  endif
-.  if !empty(_PATCHFILES)
-.    for fetchfile in ${_PATCHFILES}
+.  endfor
+.endif
+.if !empty(_PATCHFILES)
+.  for fetchfile in ${_PATCHFILES}
 SITES_${fetchfile:T}?= ${PATCH_SITES}
-.    endfor
-.  endif
-.  if !empty(_ALLFILES)
-_FETCH_ALLFILES= ${TEST} -d ${_DISTDIR} || ${MKDIR} ${_DISTDIR};
-_FETCH_ALLFILES+= cd ${_DISTDIR};
-.    for fetchfile in ${_ALLFILES}
-.      if defined(DYNAMIC_MASTER_SITES)
-_FETCH_ALLFILES+= 							\
-	file="${fetchfile}";						\
-	bfile="${fetchfile:T}";						\
-	sites=`sh ${FILESDIR}/getsite.sh $${file}`; 			\
-	${_CHECK_DIST_PATH};						\
-	${_FETCH_FILE};
-.      else
-_FETCH_ALLFILES+= 							\
-	unsorted_sites="${SITES_${fetchfile:T}} ${_MASTER_SITE_BACKUP}"; \
-	sites="${ORDERED_SITES}";					\
-	file="${fetchfile}";						\
-	bfile="${fetchfile:T}";						\
-	${_CHECK_DIST_PATH};						\
-	${_FETCH_FILE};
-.      endif
-.    endfor
-.  endif
-_FETCH_ALLFILES?= ${DO_NADA}
+.  endfor
 .endif
 
 .if !target(do-fetch)
 do-fetch:
-	${_PKG_SILENT}${_PKG_DEBUG}${_FETCH_ALLFILES}
+.  if !empty(_ALLFILES)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${TEST} -d ${_DISTDIR} || ${MKDIR} ${_DISTDIR}
+.    for fetchfile in ${_ALLFILES}
+.      if defined(_FETCH_MESSAGE)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	file="${fetchfile}";						\
+	if [ ! -f ${DISTDIR}/$$file ]; then				\
+		${_FETCH_MESSAGE};					\
+	fi
+.      else
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cd ${_DISTDIR};							\
+	file="${fetchfile}";						\
+	bfile="${fetchfile:T}";						\
+	unsorted_sites="${SITES_${fetchfile:T}} ${_MASTER_SITE_BACKUP}"; \
+	sites="${ORDERED_SITES}";					\
+	${_CHECK_DIST_PATH};						\
+	${_FETCH_FILE};
+.      endif # defined(_FETCH_MESSAGE)
+.    endfor
+.  endif # !empty(_ALLFILES)
 .endif
 
 # show both build and run depends directories (non-recursively)
@@ -2844,6 +2845,7 @@ fetch-list-recursive:
 		| ${AWK} '						\
 		/^[^#]/ { FoundSomething = 1 }				\
 		/^unsorted/ { gsub(/[[:space:]]+/, " \\\n\t") }		\
+		/^echo/ { gsub(/;[[:space:]]+/, "\n") }			\
 		{ block[line_c++] = $$0 }				\
 		END { if (FoundSomething)				\
 			for (line = 0; line < line_c; line++)		\
@@ -2864,8 +2866,20 @@ fetch-list-one-pkg:
 	@${ECHO} '#'
 	@${MKDIR} ${_DISTDIR}
 .    for fetchfile in ${_ALLFILES}
+.      if defined(_FETCH_MESSAGE)
 	@(cd ${_DISTDIR};						\
-	if [ ! -f ${fetchfile} -a ! -f ${fetchfile:T} ]; then		\
+	if [ ! -f ${fetchfile:T} ]; then				\
+		${ECHO};						\
+		filesize=`${AWK} '					\
+			/^Size/ && $$2 == "(${fetchfile})" { print $$4 } \
+			' ${DISTINFO_FILE}` || true;			\
+		${ECHO} '# Prompt user to get ${fetchfile} ('$${filesize-???}' bytes) manually:'; \
+		${ECHO} '#';						\
+		${ECHO} ${_FETCH_MESSAGE:Q};				\
+	fi)
+.      else
+	@(cd ${_DISTDIR};						\
+	if [ ! -f ${fetchfile:T} ]; then				\
 		${ECHO};						\
 		filesize=`${AWK} '					\
 			/^Size/ && $$2 == "(${fetchfile})" { print $$4 } \
@@ -2881,6 +2895,7 @@ fetch-list-one-pkg:
 		${ECHO} '	${ECHO} ${fetchfile} not fetched';	\
 		${ECHO}	done;						\
 	fi)
+.      endif # defined(_FETCH_MESSAGE)
 .    endfor
 .  endif # !empty(_ALLFILES)
 .endif # !target(fetch-list-one-pkg)

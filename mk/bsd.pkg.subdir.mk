@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.46 2002/02/28 14:42:39 fredb Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.47 2002/03/04 19:41:05 fredb Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -236,6 +236,7 @@ fetch-list:
 		}						\
 	/^[^#=]/ { FoundSomething = 1 }				\
 	/^unsorted/ { gsub(/[[:space:]]+/, " \\\n\t") }		\
+	/^echo/ { gsub(/;[[:space:]]+/, "\n") }			\
 	!/^=/ { block[c++] = $$0 }				\
 	/^=/ { do_block() }					\
 	END { do_block() }					\

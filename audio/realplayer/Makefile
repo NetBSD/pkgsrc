@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/02/26 21:28:47 fredb Exp $
+# $NetBSD: Makefile,v 1.8 2002/03/04 19:41:06 fredb Exp $
 
 DISTNAME=		rp8_linux20_libc6_i386_cs2
 PKGNAME=		realplayer-8.0.1
@@ -44,15 +44,6 @@ _FETCH_MESSAGE= \
 	    ${ECHO} "  be fetched into ${DISTDIR} from"; \
 	    ${ECHO} "  ${DOWNLOAD}."; \
 	    ${ECHO} "==============================================================="
-
-do-fetch:
-	@if [ ! -f ${RP_INSTALLER} ]; then \
-	    ${_FETCH_MESSAGE}; \
-	    ${FALSE}; \
-	fi
-
-fetch-list-one-pkg:
-	@${ECHO} ${_FETCH_MESSAGE:Q}
 
 pre-extract:
 	@delay=15;							\
