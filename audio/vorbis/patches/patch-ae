@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2000/08/18 14:48:37 itojun Exp $
---- configure.in-	Fri Aug 18 23:41:48 2000
-+++ configure.in	Fri Aug 18 23:42:35 2000
+$NetBSD: patch-ae,v 1.2 2000/08/18 16:31:24 itojun Exp $
+--- configure.in.orig	Tue Aug 15 18:09:31 2000
++++ configure.in	Sat Aug 19 01:27:39 2000
 @@ -36,5 +36,5 @@
  #not everyone uses libm (eg, BeOS)
 -#AC_CHECK_LIB(m, cos, LIBS="-lm"; AC_DEFINE(HAVE_LIBM), LIBS="")
@@ -8,4 +8,9 @@ $NetBSD: patch-ae,v 1.1 2000/08/18 14:48:37 itojun Exp $
  # We no longer use config.h
 -AC_CHECK_LIB(m, cos, LIBS="-lm", LIBS="")
 +AC_CHECK_LIB(m, cos, LIBS="$LIBS -lm")
+ 
+@@ -120,3 +120,3 @@
+ 
+-CFLAGS=""
++#CFLAGS=""
  
