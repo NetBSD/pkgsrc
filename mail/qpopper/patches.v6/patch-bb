@@ -1,0 +1,176 @@
+$NetBSD: patch-bb,v 1.1 1999/07/08 17:11:57 itojun Exp $
+
+--- pop_init.c.orig	Thu Nov 20 06:20:38 1997
++++ pop_init.c	Thu May 14 14:28:25 1998
+@@ -44,6 +44,8 @@
+ 
+ #include <popper.h>
+ 
++#include "sockunion.h"
++
+ /* CNS Kerberos IV */
+ #ifdef KERBEROS
+ AUTH_DAT kdata;
+@@ -75,9 +77,31 @@
+ }
+ #endif
+ 
++char *
++sock_ntop(p)
++    struct sockaddr *p;
++{
++    static char ntop_buf[INET6_ADDRSTRLEN];
++    union sockunion *su;
++
++    su = (union sockunion *)p;
++    switch (su->su_family) {
++    case AF_INET:
++	inet_ntop(su->su_family, &su->su_sin.sin_addr, ntop_buf,
++	    sizeof(ntop_buf));
++	return ntop_buf;
++    case AF_INET6:
++	inet_ntop(su->su_family, &su->su_sin6.sin6_addr, ntop_buf,
++	    sizeof(ntop_buf));
++	return ntop_buf;
++    default:
++	return "(unsupported AF)";
++    }
++}
++
+ authenticate(p, addr)
+      POP     *p;
+-     struct sockaddr_in *addr;
++     struct socket *addr;
+ {
+ 
+ #ifdef KERBEROS
+@@ -87,10 +111,10 @@
+     char version[9];
+     int auth;
+   
+-    if (p->kerberos) {
++    if (p->kerberos && addr->sa_family == AF_INET) {	/*XXX*/
+ 	strcpy(instance, "*");
+ 	auth = krb_recvauth(0L, 0, &ticket, KERBEROS_SERVICE, instance,
+-			    addr, (struct sockaddr_in *) NULL,
++			    (struct sockaddr_in *)addr, (struct sockaddr_in *) NULL,
+ 			    &kdata, "", schedule, version);
+ 	
+ 	if (auth != KSUCCESS) {
+@@ -105,7 +129,7 @@
+ # ifdef DEBUG
+ 	if (p->debug)
+ 	    pop_log(p, POP_DEBUG, "%s.%s@%s (%s): ok", kdata.pname, 
+-		kdata.pinst, kdata.prealm, inet_ntoa(addr->sin_addr));
++		kdata.pinst, kdata.prealm, sock_ntop(addr));
+ # endif /* DEBUG */
+ 
+ 	strncpy(p->user, kdata.pname, sizeof(p->user));
+@@ -126,7 +150,7 @@
+ char    **      argmessage;
+ {
+ 
+-    struct sockaddr_in      cs;                 /*  Communication parameters */
++    union sockunion         cs;                 /*  Communication parameters */
+     struct hostent      *   ch;                 /*  Client host information */
+     int                     errflag = 0;
+     int                     c;
+@@ -272,13 +296,23 @@
+ 
+     /*  Save the dotted decimal form of the client's IP address 
+         in the POP parameter block */
+-    p->ipaddr = (char *)strdup(inet_ntoa(cs.sin_addr));
++    p->ipaddr = (char *)strdup(sock_ntop(&cs));
+ 
+     /*  Save the client's port */
+-    p->ipport = ntohs(cs.sin_port);
++    p->ipport = ntohs(cs.su_port);
+ 
+     /*  Get the canonical name of the host to whom I am speaking */
+-    ch = gethostbyaddr((char *) &cs.sin_addr, sizeof(cs.sin_addr), AF_INET);
++    switch (cs.su_family) {
++    case AF_INET:
++	ch = gethostbyaddr((char *) &cs.su_sin.sin_addr, sizeof(cs.su_sin.sin_addr), AF_INET);
++	break;
++    case AF_INET6:
++	ch = gethostbyaddr((char *) &cs.su_sin6.sin6_addr, sizeof(cs.su_sin6.sin6_addr), AF_INET6);
++	break;
++    default:
++	ch = NULL;
++	break;
++    }
+     if (ch == NULL){
+         pop_log(p,POP_PRIORITY,
+             "(v%s) Unable to get canonical name of client, err = %d",
+@@ -320,6 +354,7 @@
+ 
+ 	strncpy(h_name, ch->h_name, sizeof(h_name));
+ 
++#if 0
+         /*  See if the name obtained for the client's IP 
+             address returns an address */
+         if ((ch_again = gethostbyname(h_name)) == NULL) {
+@@ -336,7 +371,7 @@
+             /*  Look for the client's IP address in the list returned 
+                 for its name */
+             for (addrp=ch_again->h_addr_list; *addrp; ++addrp)
+-                if (bcmp(*addrp,&(cs.sin_addr),sizeof(cs.sin_addr)) == 0) break;
++		 if (bcmp(*addrp,&(cs.su_sin.sin_addr),sizeof(cs.su_sin.sin_addr)) == 0) break;
+ 
+             if (!*addrp) {
+                 pop_log (p,POP_PRIORITY,
+@@ -345,6 +380,54 @@
+                 p->client = p->ipaddr;
+             }
+         }
++#else
++      {
++	struct addrinfo hints, *res;
++	int error;
++
++	p->client = (char *)strdup(ch->h_name);
++
++        /*
++	 * See if the name obtained for the client's IP
++         * address returns an address
++         */
++	memset(&hints, 0, sizeof(hints));
++	hints.ai_flags = AI_CANONNAME;
++	hints.ai_family = AF_UNSPEC;
++	hints.ai_socktype = SOCK_STREAM;
++	hints.ai_protocol = 0;
++	error = getaddrinfo(h_name, NULL, &hints, &res);
++	if (error) {
++            pop_log(p,POP_PRIORITY,
++                "Client at \"%s\" resolves to an unknown host name \"%s\"",
++                    p->ipaddr, h_name);
++            p->client = p->ipaddr;
++	} else {
++	    for ( ; res; res = res->ai_next) {
++		if (res->ai_addr->sa_family == AF_INET) {
++		    if (!memcmp(&((struct sockaddr_in *)res->ai_addr)->sin_addr,
++			 &(cs.su_sin.sin_addr), sizeof(cs.su_sin.sin_addr))) {
++			break;
++		    }
++		} else if (res->ai_addr->sa_family == AF_INET6) {
++		    if (!memcmp(&((struct sockaddr_in6 *)res->ai_addr)->sin6_addr,
++			 &(cs.su_sin6.sin6_addr), sizeof(cs.su_sin6.sin6_addr))) {
++			break;
++		    }
++		} else {
++		    break;
++		}
++	    }
++
++	    if (!res) {
++                pop_log (p,POP_PRIORITY,
++                    "Client address \"%s\" not listed for its host name \"%s\"",
++                        p->ipaddr,h_name);
++                p->client = p->ipaddr;
++	    }
++	}
++      }
++#endif
+ 
+ #ifdef RES_DEFNAMES
+ 	/* 

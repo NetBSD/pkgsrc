@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/06/08 11:54:08 bad Exp $
+# $NetBSD: Makefile,v 1.15 1999/07/08 17:11:56 itojun Exp $
 #
 
 DISTNAME=		qpopper2.53
@@ -21,6 +21,15 @@ CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec \
 
 .if defined(QPOPPER_SERVERMODE)
 CONFIGURE_ARGS+=	--enable-servermode
+.endif
+.if defined(USE_INET6)
+CONFIGURE_ENV+=		O_DEFS="${O_DEFS}" CFLAGS="-DINET6"
+PATCHDIR=		${WRKDIR}/.patches
+
+pre-patch:
+	${MKDIR} ${WRKDIR}/.patches
+	${CP} ${.CURDIR}/patches/patch-* ${WRKDIR}/.patches
+	${CP} ${.CURDIR}/patches.v6/patch-* ${WRKDIR}/.patches
 .endif
 
 # popper makefile doesn't have an install target...
