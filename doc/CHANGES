@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5983 2004/05/19 12:36:42 recht Exp $
+$NetBSD: CHANGES,v 1.5984 2004/05/19 12:47:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2588,3 +2588,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated opensp to 1.5.1 [minskim 2004-05-19]
 	Updated rhythmbox to 0.8.4 [jmmv 2004-05-19]
 	Added postgresql74-contrib-7.4.2 [recht 2004-05-19]
+	Updated gtk2 to 2.4.1nb1 [wiz 2004-05-19]
