@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/08/20 15:17:24 tsarna Exp $
+# $NetBSD: Makefile,v 1.10 1998/09/01 14:29:28 agc Exp $
 #
 
 DISTNAME=		rsaref20
@@ -12,7 +12,7 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.rsa.com/rsalabs/newfaq/q174.html
 
-BUILD_DEPENDS=		${PREFIX}/bin/libtool:../../devel/libtool
+USE_LIBTOOL=		yes
 
 RESTRICTED=		"Cryptographic source usable only within the USA"
 MIRROR_DISTFILE=	no
@@ -45,7 +45,7 @@ do-configure:
 do-install:
 	${MKDIR} ${PREFIX}/include/rsaref ${PREFIX}/share/doc/rsaref
 	cd ${WRKSRC} && \
-		${PREFIX}/bin/libtool --mode=install ${INSTALL_DATA} \
+		${LIBTOOL} --mode=install ${INSTALL_DATA} \
 			librsaref.la ${PREFIX}/lib
 	cd ${WRKDIR}/source && \
 		${INSTALL_DATA} des.h global.h md2.h md5.h rsa.h rsaref.h \

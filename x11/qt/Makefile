@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/08/20 15:17:35 tsarna Exp $
+# $NetBSD: Makefile,v 1.18 1998/09/01 14:29:28 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/30 05:15:19 jkh Exp
 #
 
@@ -13,9 +13,8 @@ HOMEPAGE=	http://www.troll.no/products/qt.html
 
 CONFLICTS=	qt-1.33
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/libtool:../../devel/libtool
-
 USE_X11=	yes
+USE_LIBTOOL=	yes
 
 MAKE_ENV=	QTDIR=${WRKSRC}
 ALL_TARGET=	src
@@ -25,7 +24,7 @@ do-configure:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${PREFIX}/bin/
-	@${LOCALBASE}/bin/libtool ${INSTALL_DATA} ${WRKSRC}/src/libqt.la ${PREFIX}/lib/
+	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/src/libqt.la ${PREFIX}/lib/
 	${INSTALL_DATA_DIR} ${PREFIX}/include/qt
 	${INSTALL_DATA} ${WRKSRC}/include/* ${PREFIX}/include/qt/
 	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/man/man1/
