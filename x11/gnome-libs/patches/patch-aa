@@ -1,25 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2000/05/30 19:23:48 drochner Exp $
+$NetBSD: patch-aa,v 1.11 2000/06/20 23:20:12 jlam Exp $
 
 --- configure.orig	Sat May 20 20:55:16 2000
 +++ configure	Fri May 26 23:39:02 2000
-@@ -2000,7 +2000,7 @@
- fi
- rm -f confcache
- 
--
-+if false; then
- # Actually configure libtool.  ac_aux_dir is where install-sh is found.
- CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
- LD="$LD" LDFLAGS="$LDFLAGS" LIBS="$LIBS" \
-@@ -2029,7 +2029,7 @@
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
- exec 5>>./config.log
--
-+fi
- 
- echo $ac_n "checking whether to enable maintainer-specific portions of Makefiles""... $ac_c" 1>&6
- echo "configure:2036: checking whether to enable maintainer-specific portions of Makefiles" >&5
 @@ -5304,7 +5304,7 @@
    
  # AM_GNOME_GETTEXT above substs $DATADIRNAME

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2000/06/01 11:23:44 rh Exp $
+# $NetBSD: Makefile,v 1.45 2000/06/20 23:20:11 jlam Exp $
 
 DISTNAME=		gnome-libs-1.2.1
 CATEGORIES=		x11 gnome
@@ -13,16 +13,20 @@ DEPENDS+=		gtk+>=1.2.7:../gtk
 DEPENDS+=		imlib-*:../../graphics/imlib
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-GNU_CONFIGURE=		yes
-USE_X11BASE=		yes
-USE_GMAKE=		yes
-USE_PKGLIBTOOL=		yes
-LDFLAGS+=       	"-L${LOCALBASE}/lib"
+USE_X11BASE=		# defined
+USE_GMAKE=		# defined
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
 			--with-glib-prefix=${LOCALBASE}
-CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include" \
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}" \
 			LOCALBASE=${LOCALBASE} \
 			X11BASE=${X11BASE}
+
+CPPFLAGS+=		-I${LOCALBASE}/include
+LDFLAGS+=       	-L${LOCALBASE}/lib
 
 LOCALSTATEDIR=		/var/gnome
 PLIST_SRC=		${WRKDIR}/PLIST
@@ -33,8 +37,7 @@ PLIST_SUBST+=		LOCALBASE=${LOCALBASE} \
 
 .if ${OPSYS} == "SunOS"
 DEPENDS+=		db-*:../../databases/db
-
-CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include -I${LOCALBASE}/include/db2"
+CPPFLAGS+=		-I${LOCALBASE}/include/db2
 
 pre-configure:
 	${MV} ${WRKSRC}/configure ${WRKSRC}/configure-pre-db-sub && \
@@ -48,15 +51,15 @@ post-patch:
 		${WRKSRC}/gnome-config.in-pre-lpath >${WRKSRC}/gnome-config.in
 
 pre-build:
-	(cd ${WRKSRC}/support; ${GMAKE} gnomesupport.h)
+	cd ${WRKSRC}/support; ${GMAKE} gnomesupport.h
 
 post-install:
 	${MKDIR} ${LOCALSTATEDIR}
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	cd ${PREFIX}; ${FIND} lib -name 'libgnome.so.*' >>${PLIST_SRC}
+	cd ${PREFIX}; ${FIND} lib -name 'libgnome.so.*.*' >>${PLIST_SRC}
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
 	${LN} -fs ${PREFIX}/share/aclocal/libart.m4 \
-	  ${LOCALBASE}/share/aclocal/libart.m4
+		${LOCALBASE}/share/aclocal/libart.m4
 
 .include "../../mk/bsd.pkg.mk"
 
