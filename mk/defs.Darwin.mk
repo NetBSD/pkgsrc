@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.56 2003/09/23 07:26:22 grant Exp $
+# $NetBSD: defs.Darwin.mk,v 1.57 2003/09/25 02:13:15 danw Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -115,7 +115,7 @@ _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	yes	# Java is standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
-_OPSYS_LIBTOOL_REQD=	1.4.20010614nb12 # base version of libtool required
+_OPSYS_LIBTOOL_REQD=	1.4.20010614nb15 # base version of libtool required
 _OPSYS_PERL_REQD=	5.8.0	# base version of perl required
 _OPSYS_PTHREAD_AUTO=	yes	# -lpthread not needed for pthreads
 _OPSYS_RPATH_NAME=	darwin_has_no_rpath
