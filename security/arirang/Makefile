@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:52:51 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/06/27 13:13:23 grant Exp $
 #
 
 DISTNAME=	arirang-1.6
@@ -8,6 +8,8 @@ MASTER_SITES=	http://monkey.org/~pilot/arirang/
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://monkey.org/~pilot/arirang/
 COMMENT=	Powerful webserver security scanner
+
+USE_BUILDLINK3=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/arirang ${PREFIX}/sbin
