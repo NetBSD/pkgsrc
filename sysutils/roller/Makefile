@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2000/04/19 16:57:40 kim Exp $
+# $NetBSD: Makefile,v 1.6 2000/06/10 18:06:27 kim Exp $
 #
 
-DISTNAME=		roller-1.3
+DISTNAME=		roller-1.4
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.gw.com/pub/people/kim/
 
