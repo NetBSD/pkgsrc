@@ -1,18 +1,39 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/08/02 04:37:09 sakamoto Exp $
+$NetBSD: patch-ab,v 1.2 2002/04/02 16:29:23 uebayasi Exp $
 
---- ./Imakefile.orig	Wed Nov 27 16:01:34 1996
-+++ ./Imakefile	Fri Jul 30 19:17:44 1999
-@@ -61,5 +61,5 @@
- 	do \
- 		(cd $$i ; echo "installing" "in $(CURRENT_DIR)/$$i..."; \
--		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install); \
-+		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install install.man); \
- 	done
+--- Imakefile.orig	Wed Apr  3 01:19:05 2002
++++ Imakefile
+@@ -4,7 +4,7 @@
+ #define IHaveSubdirs
+ #define PassCDebugFlags
+       WORLDOPTS = -k
+-        SUBDIRS = lib canna server cmd dic misc doc
++        SUBDIRS = lib canna cmd/forcpp cmd/kpdic dic/phono misc doc
+         INCLUDE = ./include/canna
+ AllTarget(cannaconf.h)
+ MakeSubdirs($(SUBDIRS))
+@@ -22,7 +22,7 @@
+ CANNAROOT = .
+ SERVERDIR = server dic/phono dic/ideo
+ CLIENTDIR = cmd dic/phono misc
+-SGSDIR = canna lib
++SGSDIR =  lib canna dic/phono misc doc
  
-@@ -69,5 +69,5 @@
- 	do \
- 		(cd $$i ; echo "installing" "in $(CURRENT_DIR)/$$i..."; \
--		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install); \
-+		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install install.man); \
- 	done
+ install:: mkbindir mklibdir mkdicdir mkerrdir
+ instserver:: mkdicdir mkerrdir
+@@ -39,7 +39,15 @@
+ MakeDirectoriesLong(mkerrdir, $(ErrDir), $(cannaOwner), $(cannaGroup))
+ #endif
  
+-LinkFileList(includes,cannaconf.h,$(CANNAROOT)/include,..)
++/* XXX The definition of LinkFileList macro changes in XFree86 4.2.0,
++       which leads a ciritical compilation error.  So we expand the macro
++       with the prior definition. */
++/* LinkFileList(includes,cannaconf.h,$(CANNAROOT)/include,..) */
++includes:: cannaconf.h
++	@for flag in ${MAKEFLAGS} ''; do \
++	case "$$flag" in *=*) ;; *[i]*) set +e;; esac; done; \
++	echo "  cd" $(CANNAROOT)/include; cd $(CANNAROOT)/include && \
++	for i in cannaconf.h; do (set -x; $(RM) $$i; $(LN) ../$$i .); done
+ 
+ canna:: 
+ 	@echo ""

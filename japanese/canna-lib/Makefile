@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2001/02/16 15:25:11 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/04/02 16:29:22 uebayasi Exp $
 #
 
 DISTNAME=	Canna35b2
 PKGNAME=	Canna-lib-3.5b2
+PKGREVISION=	1
 CATEGORIES=	japanese
 MASTER_SITES=	ftp://ftp.nec.co.jp/pub/Canna/Canna35/
 
@@ -17,6 +18,7 @@ COMMENT=	Kana-Kanji conversion system (library)
 
 INSTALL_TARGET=	install install.man
 
+USE_IMAKE=	# defined
 BUILD_DEFS+=	USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
@@ -27,7 +29,7 @@ INET6=		# empty
 .endif
 CANNAOWNER?=    daemon
 CANNAGROUP?=    daemon
-DICT_DIR?=	/var/dict
+DICT_DIR?=	${DISTDIR}/var/dict
 MAKE_ENV+=      CANNAOWNER=${CANNAOWNER} CANNAGROUP=${CANNAGROUP} \
 		DICT_DIR=${DICT_DIR} INET6=${INET6}
 PLIST_SUBST=	CANNAOWNER=${CANNAOWNER}	\
@@ -45,9 +47,6 @@ post-patch:
 	@${SED} -e '/InstallProgram/d' ${WRKSRC}/cmd/${f}/Imakefile.orig \
 		> ${WRKSRC}/cmd/${f}/Imakefile
 .endfor
-
-do-configure:
-	@(cd ${WRKSRC}; ${XMKMF})
 
 post-configure:
 	@${LN} -s ${WRKSRC}/server/*.h ${WRKSRC}/include
