@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/10/11 17:45:26 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/11/26 17:22:54 sketch Exp $
 #
 
 DBUS_VERSION=	0.22
 
 DISTNAME=	dbus-${DBUS_VERSION}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://freedesktop.org/Software/dbus/releases/
+MASTER_SITES=	http://freedesktop.org/software/dbus/releases/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/dbus
