@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/11 16:37:08 taca Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/19 13:12:13 taca Exp $
 
 DISTNAME=	rttool-${VERSION}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
@@ -13,7 +13,8 @@ DEPENDS+=	${RUBY_PKGNAMEPREFIX}optparse>=0.7:../../devel/ruby-optparse
 DEPENDS+=	w3m>=0.2.1:../../www/w3m
 
 DIST_SUBDIR=	ruby
-VERSION=	0.1.4
+VERSION=	0.1.5
+RUBY_REQD=	1.6.0
 USE_RUBY_SETUP=	# defined
 
 REPLACE_RUBY=	bin/rt/rt2 lib/rt/rt2html-lib.rb lib/rt/rt2txt-lib.rb \
