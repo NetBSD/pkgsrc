@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.351 2003/02/16 17:22:39 grant Exp $
+# $NetBSD: Makefile,v 1.352 2003/02/17 11:52:01 zuntum Exp $
 #
 
 COMMENT=	Networking tools
@@ -197,6 +197,7 @@ SUBDIR+=	poptop
 SUBDIR+=	ppp-mppe
 SUBDIR+=	pptp
 SUBDIR+=	proftpd
+SUBDIR+=	proxycheck
 SUBDIR+=	publicfile
 SUBDIR+=	pureftpd
 SUBDIR+=	pxe
