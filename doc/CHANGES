@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5465 2004/04/06 13:58:33 jmmv Exp $
+$NetBSD: CHANGES,v 1.5466 2004/04/06 14:54:17 manu Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1820,3 +1820,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gst-plugins-mpeg2dec-0.8.0 [jmmv 2004-04-06]
 	Added gst-plugins-theora-0.8.0 [jmmv 2004-04-06]
 	Added gst-player-0.8.0 [jmmv 2004-04-06]
+	Updated bind9 to 9.2.3nb3 [manu 2004-04-06]
