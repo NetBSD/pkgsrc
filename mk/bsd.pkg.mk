@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.283 1999/06/23 17:06:21 christos Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.284 1999/06/23 20:17:59 christos Exp $
 #
 # This file is in the public domain.
 #
@@ -427,7 +427,7 @@ ECHO?=		/bin/echo
 EGREP?=		/bin/egrep
 FALSE?=		/usr/false
 FILE?=		/usr/bin/file
-GREP?=		/usr/grep
+GREP?=		/bin/grep
 GTAR?=		/bin/tar
 GUNZIP_CMD?=	/usr/bin/gunzip -f
 GZCAT?=		/bin/zcat
