@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/13 13:51:37 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/30 15:50:55 markd Exp $
 
 DISTNAME=	kvim-${KVIM_VERSION}
 PKGNAME=	vim-kde-${KVIM_VERSION}
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--with-features=huge
 CONFIGURE_ARGS+=	--with-tlib=ncurses
 
 .include "../../devel/ncurses/buildlink2.mk"
-.include "../../x11/kde3/buildlink2.mk"
+.include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
