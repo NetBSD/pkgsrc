@@ -1,5 +1,5 @@
 <?php
-# $NetBSD: pear_plist.php,v 1.2 2004/11/01 20:17:20 jdolecek Exp $
+# $NetBSD: pear_plist.php,v 1.3 2004/11/01 20:31:13 jdolecek Exp $
 # Parses package XML file and outputs appropriate PLIST
 
 $PEAR_LIB = getenv('PEAR_LIB');
@@ -18,6 +18,7 @@ foreach($info['filelist'] as $f => $v) {
 	switch($v['role']) {
 	case 'test':
 	case 'doc':
+	case 'data':
 		$prefix = "$v[role]/$pkg/";
 		$dirrm["$v[role]/$pkg"] = true;
 		break;
