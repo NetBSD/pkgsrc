@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.128 2004/03/26 08:53:01 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.129 2004/03/28 22:25:35 xtraeme Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -68,8 +68,8 @@ BUILDLINK_DEPENDS?=	# empty
 X11_TYPE?=	native
 .  if ${X11_TYPE} == "native"
 .    include "../../pkgtools/x11-links/buildlink3.mk"
-#.  elif ${X11_TYPE} == "XFree86"
-#.    include "../../x11/XFree86-libs/buildlink3.mk"
+.  elif ${X11_TYPE} == "XFree86"
+.    include "../../x11/XFree86-libs/buildlink3.mk"
 #.  elif ${X11_TYPE} == "xlibs"
 #.    include "../../x11/xlibs/buildlink3.mk"
 .  else
