@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1 2004/05/15 13:02:33 grant Exp $
+$NetBSD: patch-ad,v 1.2 2004/07/31 08:10:47 xtraeme Exp $
 
---- libfaad/common.h.orig	2004-02-06 23:55:24.000000000 +1100
-+++ libfaad/common.h
+--- libfaad/common.h.orig	2004-07-31 09:50:50.000000000 +0200
++++ libfaad/common.h	2004-07-31 09:54:34.000000000 +0200
 @@ -32,7 +32,7 @@
  extern "C" {
  #endif
@@ -11,3 +11,12 @@ $NetBSD: patch-ad,v 1.1 2004/05/15 13:02:33 grant Exp $
  #if defined(_WIN32) && !defined(_WIN32_WCE)
  #define ALIGN __declspec(align(16))
  #else
+@@ -310,7 +310,7 @@
+   #elif (defined(__i386__) && defined(__GNUC__))
+     #define HAS_LRINTF
+     // from http://www.stereopsis.com/FPU.html
+-    static INLINE int lrintf(float f)
++    static long INLINE int lrintf(float f)
+     {
+         int i;
+         __asm__ __volatile__ (

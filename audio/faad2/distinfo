@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.3 2004/05/15 13:01:02 grant Exp $
+$NetBSD: distinfo,v 1.4 2004/07/31 08:10:47 xtraeme Exp $
 
 SHA1 (faad2-2.0.tar.gz) = fc9f8d0812a9f46bbd851880045131e0e4ab08b8
 Size (faad2-2.0.tar.gz) = 766660 bytes
 SHA1 (patch-aa) = 59215b4c221b47dbee9a713fff302fdfe700cea2
 SHA1 (patch-ab) = 33c8c741f3b3870d84c66b6eb8bf95d4b768f39e
 SHA1 (patch-ac) = 9c610dbaa89df5a82587f685116aac5e760fe32c
-SHA1 (patch-ad) = ca6ca41c5f20535f0f91edb1cd5674882369a9b2
+SHA1 (patch-ad) = 4d57360bfd5e9c7f75d06ae274723f7aa1e11186
 SHA1 (patch-ae) = 04b09d0ace9381152b1ebc12951c530c5c3c46fc
 SHA1 (patch-af) = 474117f9333c0b14bdd99d9c7b330e480b1e1b4a
