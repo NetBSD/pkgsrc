@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.8 2002/11/14 14:05:46 dmcmahill Exp $
+# $NetBSD: mkreadme,v 1.1 2003/01/04 21:13:37 dmcmahill Exp $
 #
 # Script for README.html generation
 #
@@ -403,7 +403,7 @@ else
     debug=0;
 fi
 
-${AWK} -f ${PKGSRCDIR}/mk/bulk/genreadme.awk  \
+${AWK} -f ${PKGSRCDIR}/mk/scripts/genreadme.awk  \
     builddependsfile=${TMPDIR}/pkgsrc.builddepends.debug \
     debug=$debug \
     dependsfile=${TMPDIR}/pkgsrc.depends.debug \
