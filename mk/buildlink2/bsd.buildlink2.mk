@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.49 2002/11/14 22:25:05 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.50 2002/11/17 17:39:40 seb Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -387,7 +387,7 @@ _BUILDLINK_SUBST_USE: .USE
 						if [ -x $${file} ]; then \
 							${CHMOD} +x $${file}.modified; \
 						fi;			\
-						if ! ${CMP} -s $${file} $${file}.modified; then \
+						if ${CMP} -s $${file} $${file}.modified; then :; else \
 							${MV} -f $${file}.modified $${file}; \
 							${ECHO} $${file} >> $${cookie}; \
 						fi;			\
