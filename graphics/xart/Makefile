@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/07/04 09:19:00 mycroft Exp $
+# $NetBSD: Makefile,v 1.7 1998/07/15 11:45:51 tv Exp $
 #
 
 DISTNAME=       xart19980415
@@ -12,7 +12,7 @@ MAINTAINER=	packages@netbsd.org
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
-DEPENDS+=	png-0.96:../../graphics/png
+DEPENDS+=	png-1.0.2:../../graphics/png
 
 WRKSRC=		${WRKDIR}/19980415
 USE_IMAKE=      yes
