@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:27:58 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/06/28 17:28:58 abs Exp $
 #
 
 DISTNAME=	hiawatha
@@ -20,7 +20,7 @@ NO_CONFIGURE=
 NO_BUILD=
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	YES
 USE_JAVA=	run
 USE_PKGINSTALL=	yes
 
