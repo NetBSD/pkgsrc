@@ -1,0 +1,20 @@
+$NetBSD: gcc-aa,v 1.1 2001/08/05 15:28:41 kent Exp $
+
+--- gcc/configure.hoge	Thu Aug  2 23:14:48 2001
++++ gcc/configure
+@@ -4686,6 +4686,15 @@
+ 		# On NetBSD, the headers are already okay, except for math.h.
+ 		tmake_file=t-netbsd
+ 		;;
++	mipsEEel-*-netbsd*)			# for NetBSD/PlayStation2, incomplete!!
++		xmake_file=x-linux		# Oops
++		xm_file="xm-siglist.h ${xm_file}"
++		tmake_file="mips/t-eelinux"	# 
++                tm_file="mips/elfl.h mips/eenetbsd.h"
++		extra_parts="crtbegin.o crtbeginS.o crtend.o crtendS.o"
++		gnu_ld=yes
++		gas=yes
++		;;
+ 	mipsEE*-*-linux*)		# MIPS EE w/ Linux & ELF
+ 		xmake_file=x-linux
+ 		xm_file="xm-siglist.h ${xm_file}"
