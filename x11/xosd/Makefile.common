@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2003/09/26 11:23:43 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/01/07 07:37:59 xtraeme Exp $
 #
 
 DISTNAME=	xosd-2.2.5
@@ -20,5 +20,13 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool-disable-static
 
 CONFIGURE_ARGS+=	--disable-xinerama
+
+post-extract:
+	@( \
+	${MV} ${WRKSRC}/configure ${WRKSRC}/configure.fixme; \
+	${SED} -e "s,-lpthread,${PTHREAD_LDFLAGS},g" \
+		${WRKSRC}/configure.fixme > ${WRKSRC}/configure; \
+	${CHMOD} +x ${WRKSRC}/configure \
+	)
 
 .include "../../mk/pthread.buildlink2.mk"
