@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2001/04/06 22:43:08 mjl Exp $
+# $NetBSD: Makefile,v 1.194 2001/04/14 23:09:50 jtb Exp $
 #
 
 COMMENT=	Development utilities
@@ -171,6 +171,7 @@ SUBDIR+=	sfio
 SUBDIR+=	sgi-stl
 SUBDIR+=	sgi-stl-docs
 SUBDIR+=	slib
+SUBDIR+=	sml-mode
 SUBDIR+=	smpeg
 SUBDIR+=	stlport
 SUBDIR+=	stooop
