@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1530 2004/11/02 00:03:09 erh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1531 2004/11/02 08:31:45 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -3437,7 +3437,7 @@ update:
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} ${DDIR}
 .  if ${UPDATE_TARGET} != "replace"
 	${_PKG_SILENT}${_PKG_DEBUG}if ${PKG_INFO} -qe ${PKGBASE}; then	\
-		${MAKE} ${MAKEFLAGS} deinstall UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL	\
+		${MAKE} ${MAKEFLAGS} deinstall UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL \
 		|| (${RM} ${DDIR} && ${FALSE});				\
 	fi
 .  endif
@@ -3452,7 +3452,7 @@ update:
 			if [ "(" "${RESUMEUPDATE}" = "NO" -o 		\
 			     "${REINSTALL}" != "NO" ")" -a		\
 			     "${UPDATE_TARGET}" != "replace" ] ; then	\
-				${MAKE} ${MAKEFLAGS} deinstall UPDATE_RUNNING=YES;		\
+				${MAKE} ${MAKEFLAGS} deinstall UPDATE_RUNNING=YES; \
 			fi &&						\
 			${MAKE} ${MAKEFLAGS} ${UPDATE_TARGET}		\
 				DEPENDS_TARGET=${DEPENDS_TARGET:Q} ;	\
@@ -3567,10 +3567,10 @@ tarup:
 
 # shared code for replace and undo-replace
 _REPLACE=								\
-	if [ -f ${_PKG_DBDIR}/$$oldpkgname/+REQUIRED_BY ]; then	\
+	if [ -f ${_PKG_DBDIR}/$$oldpkgname/+REQUIRED_BY ]; then		\
 		${MV} ${_PKG_DBDIR}/$$oldpkgname/+REQUIRED_BY ${WRKDIR}/.req; \
 	fi;								\
-	${MAKE} deinstall UPDATE_RUNNING=YES;						\
+	${MAKE} deinstall UPDATE_RUNNING=YES;				\
 	$$replace_action;						\
 	if [ -f ${WRKDIR}/.req ]; then					\
 		${MV} ${WRKDIR}/.req ${_PKG_DBDIR}/$$newpkgname/+REQUIRED_BY; \
