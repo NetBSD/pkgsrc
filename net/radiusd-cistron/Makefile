@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/03/05 06:27:48 david Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/27 20:36:28 darcy Exp $
 
 DISTNAME=	radiusd-cistron-1.6.6
 CATEGORIES=	net
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.radius.cistron.nl/
 COMMENT=	RADIUS-compliant remote authentication and accouting server
 
 MAKEFILE=	Makefile.BSD
+
+CONFLICTS+= freeradius*
 
 do-build:
 	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE} -f ${MAKEFILE}
