@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.14 2002/08/04 15:47:44 fredb Exp $
+# $NetBSD: buildlink.mk,v 1.15 2002/08/04 23:38:43 fredb Exp $
 #
 # This Makefile fragment is included by packages that use OpenSSL.
 #
@@ -30,8 +30,6 @@ OPENSSL_VERSION_096E=		0x0090605fL
 # If a usable version isn't present, then use the pkgsrc OpenSSL package.
 #
 .include "../../mk/bsd.prefs.mk"
-_NEED_OPENSSL=		YES
-
 .if ${OPSYS} == "Darwin"
 _OPENSSLV_H=		/usr/local/include/openssl/opensslv.h
 _SSL_H=			/usr/local/include/openssl/ssl.h
@@ -40,6 +38,7 @@ _OPENSSLV_H=		/usr/include/openssl/opensslv.h
 _SSL_H=			/usr/include/openssl/ssl.h
 .endif
 
+_NEED_OPENSSL=		YES
 .if exists(${_OPENSSLV_H}) && exists(${_SSL_H})
 _IN_TREE_OPENSSL_HAS_FIX!=					\
 		${AWK} 'BEGIN { ans = "NO" }			\
@@ -50,11 +49,6 @@ _IN_TREE_OPENSSL_HAS_FIX!=					\
 USE_OPENSSL_VERSION?=		${OPENSSL_VERSION_095A}
 . else
 USE_OPENSSL_VERSION?=		${OPENSSL_VERSION_096E}
-. endif
-
-# Associate OpenSSL dependency with version number.
-. if defined(USE_OPENSSL_VERSION)
-BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6e
 . endif
 
 _OPENSSL_VERSION!=	${AWK} '/.*OPENSSL_VERSION_NUMBER.*/ { print $$3 }' \
@@ -99,6 +93,11 @@ _NEED_OPENSSL=		NO
 . endfor
 
 .endif  # exists(${_OPENSSLV_H}) && exists(${_SSL_H})
+
+# Here is where we associate the OpenSSL dependency with version number,
+# conditionally on ${USE_OPENSSL_VERSION}, but for now, there is only one
+# version permitted.
+BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6e
 
 .if ${_NEED_OPENSSL} == "YES"
 DEPENDS+=	${BUILDLINK_DEPENDS.openssl}:../../security/openssl
