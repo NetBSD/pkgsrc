@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.357 1999/10/19 14:08:47 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.358 1999/10/20 09:57:47 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1358,38 +1358,42 @@ root-install:
 		case "$$shlib_type" in					\
 		"ELF")							\
 			${ECHO_MSG} "===>   [Automatic ELF shared object handling]";\
-			for so3 in $$sos; do				\
-				so2=`${BASENAME} $$so3`; \
-				so1=`${ECHO} $$so3 | ${SED} -e 's|\.[0-9]*$$||'`; \
-				so0=`${ECHO} $$so1 | ${SED} -e 's|\.[0-9]*$$||'`; \
-				cnt=`${EGREP} -c -x "$$so0" ${PLIST} || ${TRUE}`; \
-				if [ $$cnt -eq 0 ]; then		\
-					${AWK} "{so3re=\"^$$so3$$\";		 \
-						 gsub(\"\\+\",\"\\\\+\", so3re); \
-						 gsub(\"\\*\",\"\\\\*\", so3re); \
-						 sub(so3re,\"$$so3\n$$so0\");	 \
-						 print}" 			\
-					    <${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
-					${ECHO_MSG} "${LN} -s $$so2 ${PREFIX}/$$so0"; \
-					${RM} -f ${PREFIX}/$$so0; 	\
-					${LN} -s $$so2 ${PREFIX}/$$so0; \
-				fi;					\
-				cnt=`${EGREP} -c -x "$$so1" ${PLIST} || ${TRUE}`; \
-				if [ $$cnt -eq 0 ]; then		\
-					${AWK} "{so3re=\"^$$so3$$\";		 \
-						 gsub(\"\\+\",\"\\\\+\", so3re); \
-						 gsub(\"\\*\",\"\\\\*\", so3re); \
-						 sub(so3re,\"$$so3\n$$so1\");	 \
-						 print}" 			\
-					    <${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
-					${ECHO_MSG} "${LN} -s $$so2 ${PREFIX}/$$so1"; \
-					${RM} -f ${PREFIX}/$$so1; 	\
-					${LN} -s $$so2 ${PREFIX}/$$so1; \
-				fi;					\
-				if [ X"${PKG_VERBOSE}" != X"" ]; then	\
-					${ECHO_MSG} "$$so3";		\
-				fi;					\
-			done;						\
+			${AWK} 'function makelinks(target, lib, v1, v2, v3) { \
+					print target;			\
+					slashc = split(target, slashes, "/"); \
+					if (v3 >= 0) {			\
+						system(sprintf("${RM} -f ${PREFIX}/%s.%s.%s.%s; ${LN} -s %s ${PREFIX}/%s.%s.%s.%s", lib, v1, v2, v3, slashes[slashc], lib, v1, v2, v3)); \
+						printf("%s.%s.%s.%s\n", lib, v1, v2, v3); \
+					}				\
+					if (v2 >= 0) {			\
+						system(sprintf("${RM} -f ${PREFIX}/%s.%s.%s; ${LN} -s %s ${PREFIX}/%s.%s.%s", lib, v1, v2, slashes[slashc], lib, v1, v2)); \
+						printf("%s.%s.%s\n", lib, v1, v2); \
+					}				\
+					if (v1 >= 0) {			\
+						system(sprintf("${RM} -f ${PREFIX}/%s.%s; ${LN} -s %s ${PREFIX}/%s.%s", lib, v1, slashes[slashc], lib, v1)); \
+						printf("%s.%s\n", lib, v1); \
+					}				\
+				}					\
+				/^@/ { print; next }			\
+				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
+					dotc = split($$0, dots, "\.");	\
+					lib = dots[1];			\
+					for (i = 2 ; i <= dotc - 4 ; i++) \
+						lib = lib "." dots[i];	\
+					makelinks($$0, lib, dots[dotc - 3], dots[dotc - 2], dots[dotc - 1]); \
+					next;				\
+				}					\
+				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ {	\
+					dotc = split($$0, dots, "\.");	\
+					lib = dots[1];			\
+					for (i = 2 ; i <= dotc - 3 ; i++) \
+						lib = lib "." dots[i];	\
+					makelinks($$0, lib, dots[dotc - 2], dots[dotc - 1], -1); \
+					next;				\
+				}					\
+				/.*\/lib[^\/]+\.so\.[0-9]+$$/ { next; }	\
+				/.*\/lib[^\/]+\.so$$/ { next; }		\
+				{ print; }' < ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
 			;;						\
 		"a.out")						\
 			${ECHO_MSG} "===>   [Automatic a.out shared object handling]";\
