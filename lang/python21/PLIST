@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:24:39 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/22 13:05:04 drochner Exp $
+bin/pydoc2.1
 bin/python2.1
 include/python2.1/Python.h
 include/python2.1/abstract.h
@@ -621,7 +622,6 @@ lib/python2.1/lib-dynload/_symtable.so
 lib/python2.1/lib-dynload/_testcapi.so
 lib/python2.1/lib-dynload/_weakref.so
 lib/python2.1/lib-dynload/array.so
-lib/python2.1/lib-dynload/audioop.so
 lib/python2.1/lib-dynload/binascii.so
 lib/python2.1/lib-dynload/bsddb.so
 lib/python2.1/lib-dynload/cPickle.so
@@ -633,7 +633,6 @@ lib/python2.1/lib-dynload/errno.so
 lib/python2.1/lib-dynload/fcntl.so
 lib/python2.1/lib-dynload/fpectl.so
 lib/python2.1/lib-dynload/grp.so
-lib/python2.1/lib-dynload/imageop.so
 lib/python2.1/lib-dynload/math.so
 lib/python2.1/lib-dynload/md5.so
 lib/python2.1/lib-dynload/mmap.so
@@ -645,7 +644,6 @@ lib/python2.1/lib-dynload/pcre.so
 lib/python2.1/lib-dynload/pwd.so
 lib/python2.1/lib-dynload/regex.so
 lib/python2.1/lib-dynload/resource.so
-lib/python2.1/lib-dynload/rgbimg.so
 lib/python2.1/lib-dynload/rotor.so
 lib/python2.1/lib-dynload/select.so
 lib/python2.1/lib-dynload/sha.so
@@ -1087,6 +1085,7 @@ lib/python2.1/test/output/test_poll
 lib/python2.1/test/output/test_popen2
 lib/python2.1/test/output/test_posixpath
 lib/python2.1/test/output/test_pow
+lib/python2.1/test/output/test_profile
 lib/python2.1/test/output/test_pty
 lib/python2.1/test/output/test_pwd
 lib/python2.1/test/output/test_pyexpat
@@ -1451,6 +1450,9 @@ lib/python2.1/test/test_posixpath.pyo
 lib/python2.1/test/test_pow.py
 lib/python2.1/test/test_pow.pyc
 lib/python2.1/test/test_pow.pyo
+lib/python2.1/test/test_profile.py
+lib/python2.1/test/test_profile.pyc
+lib/python2.1/test/test_profile.pyo
 lib/python2.1/test/test_pty.py
 lib/python2.1/test/test_pty.pyc
 lib/python2.1/test/test_pty.pyo
@@ -1610,6 +1612,9 @@ lib/python2.1/test/testrgb.uue
 lib/python2.1/test/tokenize_tests.py
 lib/python2.1/test/tokenize_tests.pyc
 lib/python2.1/test/tokenize_tests.pyo
+lib/python2.1/this.py
+lib/python2.1/this.pyc
+lib/python2.1/this.pyo
 lib/python2.1/threading.py
 lib/python2.1/threading.pyc
 lib/python2.1/threading.pyo
