@@ -1,48 +1,26 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/02/06 19:04:24 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2004/03/10 18:06:07 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-DB2_BUILDLINK3_MK:=	${DB2_BUILDLINK3_MK}+
+DB_BUILDLINK3_MK:=	${DB_BUILDLINK3_MK}+
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(DB2_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=		db
-BUILDLINK_DEPENDS.db+=		db>=2.7.3
-BUILDLINK_PKGSRCDIR.db?=	../../databases/db
-.endif	# DB2_BUILDLINK3_MK
-
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mdb)
-BUILDLINK_USE_BUILTIN.db=	NO
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	db2
 .endif
 
-.if !defined(BUILDLINK_USE_BUILTIN.db)
-BUILDLINK_USE_BUILTIN.db=	NO
-.  if defined(USE_DB185)
-.    if exists(/usr/include/db.h)
-# NetBSD, Darwin
-BUILDLINK_USE_BUILTIN.db=	YES
-.    elif exists(/usr/include/db1/db.h)
-# Linux
-BUILDLINK_USE_BUILTIN.db=	YES
-BUILDLINK_INCDIRS.db?=		include/db1
-BUILDLINK_TRANSFORM+=		l:db:db1
-.    endif
-.  endif
-MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.db=${BUILDLINK_USE_BUILTIN.db}
-.endif
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndb2}
+BUILDLINK_PACKAGES+=	db2
 
-.if !empty(BUILDLINK_USE_BUILTIN.db:M[nN][oO])
-.  if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	db
-.  endif
-.endif
+.if !empty(DB_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.db2+=		db>=2.7.3
+BUILDLINK_PKGSRCDIR.db2?=	../../databases/db
 
-.if !empty(DB2_BUILDLINK3_MK:M+)
-.  if !empty(BUILDLINK_USE_BUILTIN.db:M[nN][oO])
-BUILDLINK_INCDIRS.db=	include/db2
+.if defined(USE_DB185)
+BUILDLINK_INCDIRS.db2?=	include/db2
 BUILDLINK_TRANSFORM+=	l:db:db2
-.  endif
-.endif	# DB2_BUILDLINK3_MK
+.endif
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+.endif	# DB_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
