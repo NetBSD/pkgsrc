@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.6 2002/01/24 13:59:57 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2002/02/01 17:02:18 mjl Exp $
 
---- configure.orig	Wed Oct 18 11:06:28 2000
-+++ configure
-@@ -3436,7 +3436,7 @@
+--- configure.orig	Sun Jan 20 12:45:14 2002
++++ configure	Fri Feb  1 14:12:02 2002
+@@ -6593,7 +6593,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
--LIBS="-lpspell  $LIBS"
-+LIBS="-lpspell  $LIBS -lm"
+-LIBS="-lpspell -lstdc++ -lpspell-modules $LIBS"
++LIBS="-lpspell -lstdc++ -lpspell-modules $LIBS -lm"
  cat > conftest.$ac_ext <<EOF
- #line 3442 "configure"
+ #line 6599 "configure"
  #include "confdefs.h"
-@@ -5018,7 +5018,7 @@
+@@ -8131,7 +8131,7 @@
    cat conftest.$ac_ext >&5
    rm -rf conftest*
    CATOBJEXT=.mo
@@ -20,12 +20,16 @@ $NetBSD: patch-aa,v 1.6 2002/01/24 13:59:57 wiz Exp $
  fi
  rm -f conftest*
  		INSTOBJEXT=.mo
-@@ -5280,7 +5280,7 @@
- 		 USE_INCLUDED_LIBINTL=yes
- 		 CATOBJEXT=.cat
- 		 INSTOBJEXT=.cat
--		 DATADIRNAME=lib
-+		 DATADIRNAME=${PKGLOCALEDIR}
- 		 INTLDEPS='$(top_builddir)/intl/libintl.a'
- 		 INTLLIBS=$INTLDEPS
- 		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
+@@ -9137,10 +9137,10 @@
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */
+-char iconv_open();
++char libiconv_open();
+ 
+ int main() {
+-iconv_open()
++libiconv_open()
+ ; return 0; }
+ EOF
+ if { (eval echo configure:9147: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
