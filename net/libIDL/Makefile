@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/10 16:06:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/08 22:31:43 jlam Exp $
 #
 
 DISTNAME=		libIDL-0.7.4
@@ -11,13 +11,14 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		CORBA Interface Definition Language parser
 
-USE_LIBTOOL=		YES
-USE_BUILDLINK_ONLY=	YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.include "../../converters/libiconv/buildlink.mk"
-.include "../../devel/pkgconfig/buildlink.mk"
-.include "../../devel/glib2/buildlink.mk"
+.include "../../converters/libiconv/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/glib2/buildlink2.mk"
+
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
