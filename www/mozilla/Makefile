@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2000/08/16 21:23:48 tron Exp $: Makefile,v 1.30 2000/06/17 22:14:00 tsarna Exp $
+# $NetBSD: Makefile,v 1.35 2000/08/17 13:11:08 wiz Exp $: Makefile,v 1.30 2000/06/17 22:14:00 tsarna Exp $
 
 DISTNAME=	mozilla-source-M17
 PKGNAME=	mozilla-5.0m17
@@ -38,8 +38,8 @@ pre-configure:
 #	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} -f client.mk build)
 
 do-install:
-	sed -e "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/mozilla
-	chmod 755 ${PREFIX}/bin/mozilla
+	${SED} -e "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/mozilla
+	${CHMOD} 755 ${PREFIX}/bin/mozilla
 	${INSTALL_PROGRAM_DIR} ${MOZ_LIBDIR}
 	( cd ${WRKSRC}/dist/bin; \
 	tar chf - . | (cd ${MOZ_LIBDIR}; tar xpf -) ; \
