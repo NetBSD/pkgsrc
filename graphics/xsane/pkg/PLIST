@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/06 05:57:31 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/05/03 16:29:25 rh Exp $
 bin/xsane
 man/man1/xsane.1
+share/sane/xsane-style.rc
 share/sane/xsane-logo.xpm
+share/sane/sane-pnm-doc.html
+share/sane/sane-pnm16-doc.html
 share/sane/sane-xsane-advanced-doc.html
 share/sane/sane-xsane-copy-doc.html
 share/sane/sane-xsane-doc.html
@@ -14,8 +17,13 @@ share/sane/sane-xsane-setup-doc.html
 share/sane/sane-xsane-standard-doc.html
 share/sane/sane-logo.gif
 share/sane/sane-xsane-advanced.gif
+share/sane/sane-xsane-copy.gif
+share/sane/sane-xsane-gimp.gif
 share/sane/sane-xsane-histogram.gif
-share/sane/sane-xsane-setup.gif
+share/sane/sane-xsane-setup-fax.gif
+share/sane/sane-xsane-setup-preview.gif
+share/sane/sane-xsane-setup-printer.gif
+share/sane/sane-xsane-setup-save.gif
 share/sane/sane-xsane-standard.gif
 share/sane/sane-xsane.gif
 share/sane/xsane-logo.gif

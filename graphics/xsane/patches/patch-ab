@@ -1,13 +1,19 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/04/06 05:57:31 rh Exp $
+$NetBSD: patch-ab,v 1.2 1999/05/03 16:29:23 rh Exp $
 
---- lib/Makefile.in.orig	Wed Mar  3 00:14:45 1999
-+++ lib/Makefile.in	Mon Apr  5 19:11:21 1999
-@@ -36,7 +36,7 @@
- DEFS = @DEFS@
+--- frontend/Makefile.in.orig	Thu Apr 15 18:18:45 1999
++++ frontend/Makefile.in	Sun May  2 14:17:15 1999
+@@ -29,12 +29,12 @@
  
- COMPILE = $(CC) -c $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
--LIBTOOL = ../libtool
-+LIBTOOL = @LIBTOOL@
- MCOMP	= --mode=compile
- MLINK	= --mode=link
+ CC = @CC@
+ INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/include -I$(top_srcdir)/include \
+-	@GTK_CFLAGS@ @INCLUDES@
++	@GTK_CFLAGS@ @INCLUDES@ -I${LOCALBASE}/include
+ DEFS = @DEFS@
+ CPPFLAGS = @CPPFLAGS@
+ CFLAGS = @CFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -L${X11BASE}/lib -lsane
+ GTK_LIBS = @GTK_LIBS@
+ GIMP_LIBS = @GIMP_LIBS@
  
