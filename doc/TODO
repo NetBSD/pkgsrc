@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.256 2003/02/14 23:59:56 wiz Exp $
+$NetBSD: TODO,v 1.257 2003/02/15 00:38:07 salo Exp $
 
 Suggested new packages
 ======================
@@ -219,7 +219,6 @@ Suggested package updates
 	o openoffice-1.0.2 [skrll]
 	o openoffice-643 [post-1.0.1]
 	o openssl-0.9.7
-	o opensp-1.5 [pkg/20220]
 	o oss-3.9.7h
 	o p0f-1.8.3
 	o p5-CGI-2.88 [pkg/20323]
