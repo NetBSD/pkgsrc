@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.293 2002/06/19 13:01:31 agc Exp $
+# $NetBSD: Makefile,v 1.294 2002/06/26 07:54:14 cjs Exp $
 #
 
 COMMENT=	Development utilities
@@ -38,6 +38,7 @@ SUBDIR+=	cdk
 SUBDIR+=	cervisia
 SUBDIR+=	cervisia2
 SUBDIR+=	cfitsio
+SUBDIR+=	check
 SUBDIR+=	chkpt
 SUBDIR+=	cmdline
 SUBDIR+=	cook
