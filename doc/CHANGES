@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2306 2003/05/24 11:24:48 salo Exp $
+$NetBSD: CHANGES,v 1.2307 2003/05/24 12:32:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2124,3 +2124,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated phoenix-bin-java to 1.0nb1 [jmmv 2003-05-24]
 	Updated phoenix-bin-realplayer to 1.0nb1 [jmmv 2003-05-24]
 	Updated giram to 0.3.5 [salo 2003-05-24]
+	Updated squid to 2.5.2nb4 [taca 2003-05-24]
