@@ -1,0 +1,14 @@
+VNC (Virtual Network Computing) software makes it possible to view and
+fully-interact with one computer from any other computer or mobile device
+anywhere on the Internet.  VNC software is cross-platform, allowing remote
+control between different types of computer.
+
+VNC has a wide range of applications including system administration, IT
+support and helpdesks.  It can also be used to support the mobile user, both
+for hot desking within the enterprise and also to provide remote access at
+home, or on the road.  The system allows several connections to the same
+desktop, providing an invaluable tool for collaborative or shared working in
+the workplace or classroom.  Computer support within the geographically spread
+family is an ever popular use.
+
+Vino is an VNC server that integrates cleanly within the GNOME Desktop.
