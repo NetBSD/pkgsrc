@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1883 2004/06/30 00:14:48 wiz Exp $
+$NetBSD: TODO,v 1.1884 2004/06/30 00:31:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -212,7 +212,6 @@ Suggested package updates
 	o dvipng-1.1 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
-	o easytag-0.31
 	o eclipse-3.0
 	o efax-gtk-2.2.8
 	o elk-3.99.6
