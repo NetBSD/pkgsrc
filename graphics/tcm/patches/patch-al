@@ -1,14 +1,14 @@
-$NetBSD: patch-al,v 1.2 2001/09/12 07:35:57 jlam Exp $
+$NetBSD: patch-al,v 1.3 2002/07/08 02:48:18 wiz Exp $
 
---- ui/error.c.orig	Fri Jun 18 04:29:04 1999
-+++ ui/error.c
-@@ -23,6 +23,9 @@
- #include "application.h"
- #include "messagelogdialog.h"
- #include <stdarg.h>
+--- ed/startupwindow.c.orig	Fri Feb  9 15:44:45 2001
++++ ed/startupwindow.c
+@@ -38,6 +38,9 @@
+ #include "liteclue.h"
+ #include "grafport.h"
+ #include "Teapot2a.xbm"
 +#ifdef LESSTIF
-+#include <iostdio.h>
++#include <stdio.h>
 +#endif
+ #include <stdlib.h>
+ #include <Xm/XmAll.h>
  
- void error(const char *fmt ...) {
- 	// we're not getting huge strings
