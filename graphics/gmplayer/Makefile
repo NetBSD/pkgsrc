@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/06/08 23:41:55 veego Exp $
+# $NetBSD: Makefile,v 1.9 2002/08/28 07:00:45 jlam Exp $
 
 .include "../../graphics/mplayer-share/Makefile.common"
 
@@ -32,14 +32,15 @@ SKINS +=	default${EXTRACT_SUFX}				\
 		hwswskin${EXTRACT_SUFX}
 
 .if !defined(SITES_default.tar.bz2)
-.for skin in ${SKINS}
+.  for skin in ${SKINS}
 SITES_${skin}= ${SKIN_SITES}
-.endfor
+.  endfor
 .endif
 
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	${SKINS}
 
+USE_BUILDLINK2=		# defined
 CONFIGURE_ARGS+=	--enable-gui
 CONFIGURE_ARGS+=	--disable-mencoder
 
@@ -54,7 +55,9 @@ do-install:
 	@${CHMOD} -R a+r ${PREFIX}/share/mplayer/Skin
 	@${CHMOD} a+rx ${PREFIX}/share/mplayer/Skin/*
 
-.include "../../audio/nas/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
 .include "../../graphics/mplayer-share/Makefile.depends"
+
+.include "../../audio/nas/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
