@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:19:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/13 08:25:29 wiz Exp $
 #
 
-DISTNAME=	pfaedit_full-020910
-PKGNAME=	pfaedit-20020910
-PKGREVISION=	1
-WRKSRC=		${WRKDIR}/pfaedit
+DISTNAME=	pfaedit_full-${VERSION}
+PKGNAME=	pfaedit-20${VERSION}
+WRKSRC=		${WRKDIR}/pfaedit-${VERSION}
 CATEGORIES=	fonts editors
 MASTER_SITES=	http://pfaedit.sourceforge.net/
 EXTRACT_SUFX=	.tgz
@@ -13,8 +12,11 @@ MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://pfaedit.sourceforge.net/
 COMMENT=	postscript font editor
 
+VERSION=	030712
+
+USE_GMAKE=	YES
 USE_LIBTOOL=	YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 USE_X11=	YES
