@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/12/07 02:39:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2003/03/14 10:15:55 wiz Exp $
 #
 
 # A default so lintpkgsrc is happy
@@ -6,11 +6,11 @@ PKGNAME=	citrix_ica-6.30
 DISTNAME=       citrix
 .if (${MACHINE_ARCH} == "i386")
 DISTNAME=	linuxx86
-PKGNAME=	citrix_ica-6.30.1050
+PKGNAME=	citrix_ica-6.30.1052
 .endif
 .if (${MACHINE_ARCH} == "sparc")
 DISTNAME=       solaris
-PKGNAME=        citrix_ica-6.20.985
+PKGNAME=        citrix_ica-6.30.1061
 EXTRACT_SUFX=   .tar.Z
 .endif
 CATEGORIES=	net
@@ -54,6 +54,7 @@ PATCHDIR=${WRKDIR}/.patches
 pre-patch:
 	${MKDIR} ${PATCHDIR}
 	${CP} ${PKGDIR}/patches/patch-${MACHINE_ARCH}-* ${PATCHDIR}
+	${CHMOD} -R u+w ${WRKSRC}
 
 do-build:
 	${SED} s%DESTINATION%${CDIR}% ${FILESDIR}/response \
