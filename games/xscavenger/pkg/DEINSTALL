@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2000/01/08 18:26:00 wiz Exp $
+#
+
+PKGNAME=$1
+
+case $2 in
+DEINSTALL)
+	;;
+POST-DEINSTALL)
+	cat << EOF
+=============================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove the
+scores and progress files that were copied to ~/.scavenger/ of every
+user playing it.
+=============================================================================
+EOF
+	;;
+*)
+	echo "Unexpected argument: $2"
+	exit 1
+	;;
+esac
+exit 0
