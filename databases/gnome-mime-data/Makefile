@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/12/25 15:11:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/02 03:21:34 rh Exp $
 #
 
 DISTNAME=		gnome-mime-data-2.0.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		databases gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-mime-data/2.0/}
 EXTRACT_SUFX=		.tar.bz2
@@ -13,7 +13,7 @@ COMMENT=		MIME and Application database for GNOME2
 
 BUILD_USES_MSGFMT=	YES
 
-CONFLICTS=		gnome-vfs-1*
+CONFLICTS=		gnome-vfs<=1.0.3
 
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
