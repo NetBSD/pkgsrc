@@ -1,19 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/08/05 03:04:33 jlam Exp $
-
-# Global and legacy options
-.if defined(KERBEROS) || defined(USE_SASL) || defined(USE_SASL2)
-.  if !defined(PKG_OPTIONS.openldap)
-.    if defined(KERBEROS)
-PKG_OPTIONS.openldap+=	kerberos
-.    endif
-.    if defined(USE_SASL) && !empty(USE_SASL:M[yY][eE][sS])
-PKG_OPTIONS.openldap+=	sasl
-.    endif
-.    if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
-PKG_OPTIONS.openldap+=	sasl
-.    endif
-.  endif
-.endif
+# $NetBSD: options.mk,v 1.2 2004/08/22 19:32:51 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap
 PKG_SUPPORTED_OPTIONS=	dynamic kerberos sasl slp

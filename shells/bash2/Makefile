@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2004/08/07 21:03:59 minskim Exp $
+# $NetBSD: Makefile,v 1.56 2004/08/22 19:32:52 jlam Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -30,13 +30,8 @@ PKG_SHELL=		${PREFIX}/bin/bash
 
 .include "../../mk/bsd.prefs.mk"
 
-# Global and legacy options
-.if defined(BASH_STATIC)
-.  if !defined(PKG_OPTIONS.bash)
-.    if defined(BASH_STATIC) && !empty(BASH_STATIC:M[yY][eE][sS])
-PKG_OPTIONS.bash+=	static
-.    endif
-.  endif
+.if defined(BASH_STATIC) && !empty(BASH_STATIC:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	static
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bash

@@ -1,30 +1,21 @@
-# $NetBSD: options.mk,v 1.1 2004/08/05 03:04:34 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2004/08/22 19:32:52 jlam Exp $
 
 # Global and legacy options
-.if defined(USE_CUPS) || defined(USE_PAM) || defined(USE_OPENLDAP) || \
-    defined(SAMBA_WITH_ADS) || defined(SAMBA_USE_LDAP) || \
-    defined(SAMBA_USE_LDAP_COMPAT)
-.  if !defined(PKG_OPTIONS.samba)
-.    if defined(USE_CUPS) && !empty(USE_CUPS:M[yY][eE][sS])
-PKG_OPTIONS.samba+=	cups
-.    endif
-.    if defined(USE_PAM)
-PKG_OPTIONS.samba+=	PAM
-.    endif
-.    if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[yY][eE][sS])
-PKG_OPTIONS.samba+=	ldap
-.    endif
-.    if defined(SAMBA_WITH_ADS) && !empty(SAMBA_WITH_ADS:M[yY][eE][sS])
-PKG_OPTIONS.samba+=	ads
-.    endif
-.    if defined(SAMBA_USE_LDAP)
-PKG_OPTIONS.samba+=	ldap
-.    endif
-.    if defined(SAMBA_USE_LDAP_COMPAT) && \
-        !empty(SAMBA_USE_LDAP_COMPAT:M[yY][eE][sS])
-PKG_OPTIONS.samba+=	ldap-compat
-.    endif
-.  endif
+.if defined(USE_CUPS) && !empty(USE_CUPS:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	cups
+.endif
+.if defined(USE_PAM)
+PKG_DEFAULT_OPTIONS+=	PAM
+.endif
+.if defined(SAMBA_WITH_ADS) && !empty(SAMBA_WITH_ADS:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	ads
+.endif
+.if defined(SAMBA_USE_LDAP)
+PKG_DEFAULT_OPTIONS+=	ldap
+.endif
+.if defined(SAMBA_USE_LDAP_COMPAT) && \
+    !empty(SAMBA_USE_LDAP_COMPAT:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	ldap-compat
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba

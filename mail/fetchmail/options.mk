@@ -1,23 +1,22 @@
-# $NetBSD: options.mk,v 1.2 2004/08/05 03:30:16 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2004/08/22 19:32:51 jlam Exp $
 
-# Global and legacy options
-.if defined(KERBEROS) && defined(USE_INET6) || defined(FETCHMAIL_USE_SSL)
-.  if !defined(PKG_OPTIONS.fetchmail)
-.    if defined(KERBEROS)
-PKG_OPTIONS.fetchmail+=	kerberos4
-.    endif
-.    if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS])
-PKG_OPTIONS.fetchmail+=	inet6
-.    endif
-.    if defined(FETCHMAIL_USE_SSL) && !empty(FETCHMAIL_USE_SSL:M[yY][eE][sS])
-PKG_OPTIONS.fetchmail+=	ssl
-.    endif
-.  endif
+.if defined(KERBEROS)
+PKG_DEFAULT_OPTIONS+=	kerberos4
+.endif
+.if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	inet6
+.endif
+.if defined(FETCHMAIL_USE_SSL) && !empty(FETCHMAIL_USE_SSL:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	ssl
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fetchmail
-PKG_OPTIONS.fetchmail?=	inet6 ssl
 PKG_SUPPORTED_OPTIONS=	inet6 kerberos4 ssl
+
+.if !defined(PKG_OPTIONS.fetchmail)
+PKG_DEFAULT_OPTIONS+=	inet6 ssl
+.endif
+
 .include "../../mk/bsd.options.mk"
 
 ###

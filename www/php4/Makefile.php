@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.16 2004/07/30 21:05:43 jlam Exp $
+# $NetBSD: Makefile.php,v 1.17 2004/08/22 19:32:52 jlam Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -6,7 +6,7 @@
 PKGREVISION=		# empty
 
 DISTINFO_FILE=		${.CURDIR}/../../www/php4/distinfo
-PATCHDIR=			${.CURDIR}/../../www/php4/patches
+PATCHDIR=		${.CURDIR}/../../www/php4/patches
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
@@ -42,17 +42,12 @@ CONFIGURE_ARGS+=	${PHP4_CONFIGURE_ARGS}
 CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[^-]*$//}
-
 # Global and legacy options
-.if defined(USE_SSL)
-.  if !defined(${PKG_OPTIONS_VAR})
-.    if defined(USE_SSL) && !empty(USE_SSL:M[Yy][Ee][Ss])
-${PKG_OPTIONS_VAR}+=	ssl
-.    endif
-.  endif
+.if defined(USE_SSL) && !empty(USE_SSL:M[Yy][Ee][Ss])
+PKG_DEFAULT_OPTIONS+=	ssl
 .endif
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[^-]*$//}
 PKG_SUPPORTED_OPTIONS+=	ssl
 .include "../../mk/bsd.options.mk"
 

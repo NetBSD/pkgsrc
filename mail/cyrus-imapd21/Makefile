@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/07/31 03:52:00 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2004/08/22 19:32:51 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.1.15
 PKGREVISION=		3
@@ -59,24 +59,11 @@ CONFIGURE_ARGS+=	--with-bdb-incdir=${BUILDLINK_PREFIX.db3}/include/db3
 CONFIGURE_ENV+=		ac_cv_lib_${_var_}_db_create=no
 .endfor
 
-# Global and legacy options
-.if defined(CYRUS_USE_INET6) || defined(CYRUS_DB_RECOMMENDED) || \
-    defined(KERBEROS)
-.  if !defined(PKG_OPTIONS.cyrus-imapd)
-.    if defined(CYRUS_USE_INET6)
-PKG_OPTIONS.cyrus-imapd+=	inet6
-.    endif
-.    if defined(CYRUS_DB_RECOMMENDED)
-PKG_OPTIONS.cyrus-imapd+=	recommended-db
-.    endif
-.    if defined(KERBEROS)
-.      if ${KERBEROS} == "4"
-PKG_OPTIONS.cyrus-imapd+=	kerberos4
-.      else
-PKG_OPTIONS.cyrus-imapd+=	kerberos
-.      endif
-.    endif
-.  endif
+.if defined(CYRUS_USE_INET6)
+PKG_DEFAULT_OPTIONS+=	inet6
+.endif
+.if defined(CYRUS_DB_RECOMMENDED)
+PKG_DEFAULT_OPTIONS+=	recommended-db
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd

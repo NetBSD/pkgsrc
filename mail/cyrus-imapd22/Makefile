@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/08/11 22:09:04 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2004/08/22 19:32:51 jlam Exp $
 
 DISTNAME=	cyrus-imapd-2.2.8
 PKGREVISION=	1
@@ -48,18 +48,6 @@ CONFIGURE_ARGS+=	--enable-murder
 CONFIGURE_ARGS+=	--enable-nntp
 CONFIGURE_ARGS+=	--without-zephyr
 CONFIGURE_ARGS+=	--without-ucdsnmp
-
-.if defined(KERBEROS)
-.  if !defined(PKG_OPTIONS.cyrus-imapd)
-.    if defined(KERBEROS)
-.      if ${KERBEROS} == "4"
-PKG_OPTIONS.cyrus-imapd+=	kerberos4
-.      else
-PKG_OPTIONS.cyrus-imapd+=	kerberos
-.      endif
-.    endif
-.  endif
-.endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
 PKG_SUPPORTED_OPTIONS=	gssapi kerberos kerberos4

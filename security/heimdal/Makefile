@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/08/05 16:28:45 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2004/08/22 19:32:52 jlam Exp $
 
 DISTNAME=	heimdal-0.6.1
 PKGREVISION=	1
@@ -37,16 +37,8 @@ LIBS.SunOS=		-ltermcap
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 .include "../../security/openssl/buildlink3.mk"
 
-# Global and legacy options
-.if defined(USE_DB4) || defined(KERBEROS_PREFIX_CMDS)
-.  if !defined(PKG_OPTIONS.heimdal)
-.    if defined(USE_DB4) && !empty(USE_DB4:M[yY][eE][sS])     
-PKG_OPTIONS.heimdal+=	db4
-.    endif
-.    if defined(KERBEROS_PREFIX_CMDS) && !empty(KERBEROS_PREFIX_CMDS:M[yY][eE][sS])     
-PKG_OPTIONS.heimdal+=	prefix-cmds
-.    endif
-.  endif
+.if defined(KERBEROS_PREFIX_CMDS) && !empty(KERBEROS_PREFIX_CMDS:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	prefix-cmds
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.heimdal

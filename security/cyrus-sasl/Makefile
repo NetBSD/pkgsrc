@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2004/07/30 21:05:41 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2004/08/22 19:32:52 jlam Exp $
 
 .include "Makefile.common"
 
@@ -14,19 +14,8 @@ CONFIGURE_ARGS+=	--enable-digest		# DIGEST-MD5
 CONFIGURE_ARGS+=	--with-rc4=${SSLBASE}
 .include "../../security/openssl/buildlink3.mk"
 
-# Global and legacy options
-.if defined(KERBEROS) || defined(USE_PAM) || defined(SASL_USE_GSSAPI)
-.  if !defined(PKG_OPTIONS.cyrus-sasl)
-.    if defined(KERBEROS)
-PKG_OPTIONS.cyrus-sasl+=	kerberos
-.    endif
-.    if defined(USE_PAM) && !empty(USE_PAM:M[yY][eE][sS])     
-PKG_OPTIONS.cyrus-sasl+=	PAM
-.    endif
-.    if defined(SASL_USE_GSSAPI) && !empty(SASL_USE_GSSAPI:M[yY][eE][sS])     
-PKG_OPTIONS.cyrus-sasl+=	gssapi
-.    endif
-.  endif
+.if defined(SASL_USE_GSSAPI) && !empty(SASL_USE_GSSAPI:M[yY][eE][sS])     
+PKG_DEFAULT_OPTIONS+=	gssapi
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-sasl

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.6 2004/08/10 05:33:05 schmonz Exp $
+# $NetBSD: bsd.options.mk,v 1.7 2004/08/22 19:32:52 jlam Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -60,19 +60,21 @@
 #
 # -------------8<-------------8<-------------8<-------------8<-------------
 # # Global and legacy options
-# .if defined(USE_OPENLDAP) || defined(USE_SASL2)
-# .  if !defined(PKG_OPTIONS.wibble)
-# .    if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[yY][eE][sS])
-# PKG_OPTIONS.wibble+=	ldap
-# .    endif
-# .    if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
-# PKG_OPTIONS.wibble+=	sasl
-# .    endif
-# .  endif
+# .if defined(WIBBLE_USE_OPENLDAP) && !empty(WIBBLE_USE_OPENLDAP:M[yY][eE][sS])
+# PKG_DEFAULT_OPTIONS+=	ldap
+# .endif
+# .if defined(WIBBLE_USE_SASL2) && !empty(WIBBLE_USE_SASL2:M[yY][eE][sS])
+# PKG_DEFAULT_OPTIONS+=	sasl
 # .endif
 #
 # PKG_OPTIONS_VAR=		PKG_OPTIONS.wibble
 # PKG_SUPPORTED_OPTIONS=	ldap sasl
+#
+# # Default options for ``wibble'' package.
+# .if !defined(PKG_OPTIONS.wibble)
+# PKG_DEFAULT_OPTIONS+=		sasl
+# endif
+#
 # .include "../../mk/bsd.options.mk"
 #
 # # Package-specific option-handling

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2004/08/05 02:45:28 jlam Exp $
+# $NetBSD: Makefile,v 1.95 2004/08/22 19:32:52 jlam Exp $
 
 DISTNAME=		openssl-0.9.6m
 SVR4_PKGNAME=		ossl
@@ -35,12 +35,8 @@ CONFIGURE_ARGS+=	shared
 CONFIGURE_ARGS+=	no-idea no-rc5 no-mdc2
 
 # Global and legacy options
-.if defined(USE_RSAREF2)
-.  if !defined(PKG_OPTIONS.openssl)
-.    if defined(USE_RSAREF2) && !empty(USE_RSAREF2:M[yY][eE][sS])
-PKG_OPTIONS.openssl+=	rsaref
-.    endif
-.  endif
+.if defined(USE_RSAREF2) && !empty(USE_RSAREF2:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	rsaref
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssl
