@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/11/21 17:17:44 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/11/25 18:59:47 jlam Exp $
 
 DISTNAME=		samba-2.0.10
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -17,9 +17,11 @@ USE_BUILDLINK_ONLY=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
+PKG_SYSCONFSUBDIR?=	samba
+
 SAMBA_LOGDIR?=		/var/log
 SAMBA_LOCKDIR?=		/var/run/samba
-SAMBA_ETCDIR?=		${CONFDIR}/samba
+SAMBA_ETCDIR?=		${PKG_SYSCONFDIR}
 SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
 SAMBA_DATADIR=		${PREFIX}/share
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2001/11/19 16:23:12 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2001/11/25 18:59:48 jlam Exp $
 
 DISTNAME=		mod_ssl-2.8.5-1.3.22
 PKGNAME=		ap-ssl-2.8.5
@@ -24,29 +24,27 @@ CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
 MAKE_ENV+=		SSL_RPATH_LDFLAGS="-R${SSLBASE}/lib"
 
-APACHE_SYSCONFDIR?=	${CONFDIR}/httpd
-BUILD_DEFS+=		APACHE_SYSCONFDIR
-FILES_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
+PKG_SYSCONFSUBDIR?=	httpd
 
 EGDIR=		${PREFIX}/share/examples/mod_ssl
 CONF_FILES=	${EGDIR}/apache_start.conf				\
-		${APACHE_SYSCONFDIR}/apache_start.conf
+		${PKG_SYSCONFDIR}/apache_start.conf
 SUPPORT_FILES=	${EGDIR}/ssl.crl/Makefile.crl				\
-		${APACHE_SYSCONFDIR}/ssl.crl/Makefile.crl
+		${PKG_SYSCONFDIR}/ssl.crl/Makefile.crl
 SUPPORT_FILES+=	${EGDIR}/ssl.crl/README.CRL				\
-		${APACHE_SYSCONFDIR}/ssl.crl/README.CRL
+		${PKG_SYSCONFDIR}/ssl.crl/README.CRL
 SUPPORT_FILES+=	${EGDIR}/ssl.crt/Makefile.crt				\
-		${APACHE_SYSCONFDIR}/ssl.crt/Makefile.crt
+		${PKG_SYSCONFDIR}/ssl.crt/Makefile.crt
 SUPPORT_FILES+=	${EGDIR}/ssl.crt/README.CRT				\
-		${APACHE_SYSCONFDIR}/ssl.crt/README.CRT
+		${PKG_SYSCONFDIR}/ssl.crt/README.CRT
 SUPPORT_FILES+=	${EGDIR}/ssl.crt/ca-bundle.crt				\
-		${APACHE_SYSCONFDIR}/ssl.crt/ca-bundle.crt
+		${PKG_SYSCONFDIR}/ssl.crt/ca-bundle.crt
 SUPPORT_FILES+=	${EGDIR}/ssl.csr/README.CSR				\
-		${APACHE_SYSCONFDIR}/ssl.csr/README.CSR
+		${PKG_SYSCONFDIR}/ssl.csr/README.CSR
 SUPPORT_FILES+=	${EGDIR}/ssl.key/README.KEY				\
-		${APACHE_SYSCONFDIR}/ssl.key/README.KEY
+		${PKG_SYSCONFDIR}/ssl.key/README.KEY
 SUPPORT_FILES+=	${EGDIR}/ssl.prm/README.PRM				\
-		${APACHE_SYSCONFDIR}/ssl.prm/README.PRM
+		${PKG_SYSCONFDIR}/ssl.prm/README.PRM
 
 post-extract:
 	cd ${WRKSRC}/pkg.contrib; ${MV} -f loadcacert.cgi loadcacert.cgi.in

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.5 2001/11/23 14:37:24 abs Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.6 2001/11/25 18:59:50 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -50,7 +50,7 @@ INSTALL_SRC?=		${INSTALL_TEMPLATES}
 FILES_SUBST+=		PREFIX=${PREFIX}
 FILES_SUBST+=		LOCALBASE=${LOCALBASE}
 FILES_SUBST+=		X11BASE=${X11BASE}
-FILES_SUBST+=		CONFDIR=${CONFDIR}
+FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 # PKG_USER and PKG_GROUP are the user and group that need to be created
 #	before this package is installed.
@@ -134,8 +134,8 @@ FILES_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
 #       created and should attempt to be destroyed by the INSTALL/DEINSTALL
 #	scripts.  MAKE_DIRS is used the same way, but the package admin
 #	isn't prompted to remove the directory at post-deinstall time if it
-#	isn't empty.  For convenience, ${CONFDIR} and ${RCD_SCRIPTS_DIR} are
-#	automatically added to MAKE_DIRS.
+#	isn't empty.  For convenience, ${PKG_SYSCONFDIR} and
+#	${RCD_SCRIPTS_DIR} are automatically added to MAKE_DIRS.
 #
 # OWN_DIRS_PERMS contains a list of "directory owner group mode" sublists
 #	representing directories for this package that should be
@@ -145,7 +145,7 @@ FILES_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
 #
 MAKE_DIRS?=		# empty
 MAKE_DIRS_PERMS?=	# empty
-_MAKE_DIRS=		${CONFDIR} ${RCD_SCRIPTS_DIR} ${MAKE_DIRS}
+_MAKE_DIRS=		${PKG_SYSCONFDIR} ${RCD_SCRIPTS_DIR} ${MAKE_DIRS}
 OWN_DIRS?=		# empty
 OWN_DIRS_PERMS?=	# empty
 FILES_SUBST+=		MAKE_DIRS=${_MAKE_DIRS:Q}
