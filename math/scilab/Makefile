@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/02/24 03:35:29 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.35 2003/03/01 02:01:47 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
@@ -56,6 +56,11 @@ pre-fetch:
 		${ECHO} "   - you have overridden CFLAGS for pkgsrc removing the -mieee flag" ;\
 		${ECHO} "Without fixing this problem ${PKGNAME} will not work." ; ${FALSE} ; fi
 .endif
+
+# delete some .orig files that got created by patching 
+post-install:
+	${RM} -f ${PREFIX}/lib/${PKGNAME}/config/Makeso.incl.in.orig
+	${RM} -f ${PREFIX}/lib/${PKGNAME}/macros/util/scipad.sci.orig
 
 .if ${MACHINE_ARCH} == "arm32"
 .include "../../lang/gcc/buildlink2.mk"
