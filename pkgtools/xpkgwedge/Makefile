@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 1998/06/26 16:41:11 tv Exp $
+# $NetBSD: Makefile,v 1.3 1998/07/01 15:56:35 tv Exp $
 #
 
-DISTNAME=	xpkgwedge-0.1
+DISTNAME=	xpkgwedge-0.2
 CATEGORIES=	devel x11
 DISTFILES=	# none
 
