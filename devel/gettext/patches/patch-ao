@@ -1,0 +1,15 @@
+$NetBSD: patch-ao,v 1.1 2004/10/13 17:14:36 gavan Exp $
+
+--- lib/pipe-in.c.orig	2002-01-02 10:55:32.000000000 +0000
++++ lib/pipe-in.c
+@@ -51,6 +51,10 @@
+ # define STDOUT_FILENO 1
+ #endif
+ 
++#ifndef HAVE_ENVIRON_DECL
++extern char **environ;
++#endif
++
+ #define _(str) gettext (str)
+ 
+ 

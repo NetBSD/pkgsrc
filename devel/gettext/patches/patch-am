@@ -1,0 +1,15 @@
+$NetBSD: patch-am,v 1.1 2004/10/13 17:14:36 gavan Exp $
+
+--- lib/execute.c.orig	2002-01-02 10:55:32.000000000 +0000
++++ lib/execute.c
+@@ -56,6 +56,10 @@
+ # define STDERR_FILENO 2
+ #endif
+ 
++#ifndef HAVE_ENVIRON_DECL
++extern char **environ;
++#endif
++
+ #define _(str) gettext (str)
+ 
+ 
