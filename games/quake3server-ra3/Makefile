@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/10 17:47:38 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/22 09:08:51 xtraeme Exp $
 
 DISTNAME=	ra3-1.65
 PKGNAME=	quake3server-ra3-1.65
@@ -23,16 +23,10 @@ DOCDIR=		${PREFIX}/share/doc/lokigames/quake3server/arena
 do-install:
 	${INSTALL_DATA_DIR} ${Q3MODDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
-.for datafile in *.pk3 qagame*
+.for datafile in *.pk3 qagame* *.cfg
 	${INSTALL_DATA} ${WRKSRC}/${datafile} ${Q3MODDIR}
 .endfor
-
-# Installs configuration files in baseq3
-
-.for cfgfile in arena.cfg server.cfg
-	${INSTALL_DATA} ${WRKSRC}/${cfgfile} ${Q3ROOTDIR}/baseq3
-.endfor
-
+	
 .for docfile in readme.txt readsrv.txt
 	${INSTALL_DATA} ${WRKSRC}/${docfile} ${DOCDIR}
 .endfor
