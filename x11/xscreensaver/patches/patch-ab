@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.11 2003/02/21 22:05:02 mycroft Exp $
+$NetBSD: patch-ab,v 1.12 2004/05/11 13:34:20 wiz Exp $
 
---- configure.in.orig	2003-02-12 23:27:30.000000000 +0000
-+++ configure.in	2003-02-21 21:42:53.000000000 +0000
-@@ -1579,7 +1579,7 @@
+--- configure.in.orig	2004-02-20 23:58:44.000000000 +0100
++++ configure.in
+@@ -1661,7 +1661,7 @@ if test "$enable_locking" = yes -a "$wit
      # from Matt Knopp <mhat@infocalypse.netlag.com>
      # (who got it from amu@mit.edu)
  
