@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2004/04/26 22:07:06 snj Exp $
+
+--- src/gtkmmproc/Makefile.in.orig	2004-04-26 14:30:13.000000000 -0700
++++ src/gtkmmproc/Makefile.in	2004-04-26 14:30:30.000000000 -0700
+@@ -113,7 +113,7 @@ m4include_HEADERS = doc1.m4 stage1.m4 co
+ 
+ YFLAGS = -d
+ CXXFLAGS =  
+-CPPFLAGS =  -D MACRO_DIR=\"$(m4includedir)\" -D M4=\"@M4@\"
++CPPFLAGS =  -DMACRO_DIR=\"$(m4includedir)\" -DM4=\"@M4@\"
+ mkinstalldirs = $(SHELL) $(top_srcdir)/scripts/mkinstalldirs
+ CONFIG_HEADER = ../../config.h ../../gdk--config.h ../../gtk--config.h
+ CONFIG_CLEAN_FILES = 

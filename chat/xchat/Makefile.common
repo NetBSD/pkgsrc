@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2004/04/25 04:16:43 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.29 2004/04/26 22:07:06 snj Exp $
 
 DISTNAME=	xchat-1.8.11
 PKGREVISION=	8
@@ -18,7 +18,7 @@ PATCHDIR=	${.CURDIR}/../xchat/patches
 PKGDIR=		${.CURDIR}/../xchat
 PLIST_SRC=	${.CURDIR}/../xchat/PLIST
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--enable-ipv6
 
 # SSL support
 .if defined(XCHAT_USE_SSL) && ${XCHAT_USE_SSL} == "YES"
-.  include "../../security/openssl/buildlink2.mk"
+.  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-openssl=${SSLBASE}
 .endif
 
@@ -54,6 +54,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xchat
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/xchat
 
-.include "../../devel/glib/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../devel/glib/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/python/application.mk"

@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.6 2002/10/27 13:34:59 bouyer Exp $
+$NetBSD: distinfo,v 1.7 2004/04/26 22:07:06 snj Exp $
 
 SHA1 (gtkmm-1.2.10.tar.gz) = fb220aa8bdb609b7ead42fac1afbbbf57031fb2a
 Size (gtkmm-1.2.10.tar.gz) = 716700 bytes
 SHA1 (patch-aa) = f23a20f6fa3912d9d1a743363de0fcaf8c69818d
+SHA1 (patch-ab) = 42c8a11cf88e105290dac40d9d2de75c02afb93c
 SHA1 (patch-ag) = de2719b25d41927b52f2de7bf5ee1a4720c34e26
 SHA1 (patch-ah) = 5bd15cf450b81c6bc6f73e9f5f0ccd1700e5c626
 SHA1 (patch-ai) = d9c3a26edf0dd0baca519b5477f09ba267fbebd5
