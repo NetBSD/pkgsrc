@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/01/04 03:08:03 mrg Exp $
+$NetBSD: distinfo,v 1.5 2004/06/21 08:48:41 mrg Exp $
 
-SHA1 (onyx-5.0.0.tar.bz2) = 466fe3d171e08e96d93b1382a1bf6b7666074a07
-Size (onyx-5.0.0.tar.bz2) = 1384468 bytes
+SHA1 (onyx-5.1.1.tar.bz2) = 18f7cb7e3dc0637a0de3cdd3a43bb6ae1ac26ada
+Size (onyx-5.1.1.tar.bz2) = 1388978 bytes

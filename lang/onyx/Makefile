@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/05/02 04:59:23 snj Exp $
+# $NetBSD: Makefile,v 1.13 2004/06/21 08:48:41 mrg Exp $
 
 DISTNAME=	onyx-${VERS}
 CATEGORIES=	lang
@@ -17,12 +17,10 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5[YZ]*-* NetBSD-1.6*-* NetBSD-1.7*-* NetBSD-[2-9]*
 USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-pcre-prefix=${BUILDLINK_PREFIX.pcre}
-# XXX
-CONFIGURE_ARGS+= --disable-threads
 
 BUILDLINK_DEPENDS.pcre?=        pcre>=4.0
 
-VERS=		5.0.0
+VERS=		5.1.1
 PLIST_SUBST+=	VERS=${VERS}
 
 do-build:
@@ -35,4 +33,10 @@ post-install:
 	@strip ${PREFIX}/bin/onyx
 
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
+CONFIGURE_ARGS+=	--disable-threads
+.endif
+
 .include "../../mk/bsd.pkg.mk"
