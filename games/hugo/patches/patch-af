@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1 2004/05/28 14:24:04 dillo Exp $
+
+--- source/hdwindow.c.orig	2004-01-05 20:22:00.000000000 +0100
++++ source/hdwindow.c
+@@ -349,7 +349,7 @@ SelectThisItem:
+ 
+ 				switch (event.object)
+ 				{
+-					case UP:
++					case EV_UP:
+ 					{
+ 						/* if previous item is a separator */
+ 	                                        if (menu[m][--selection][0]=='-')
+@@ -920,7 +920,7 @@ PrintChoices:
+ 			{
+ 				switch (event.object)
+ 				{
+-					case UP:
++					case EV_UP:
+ 					{
+ 						if (this==1) break;
+ 						if (--this < first) first--;
