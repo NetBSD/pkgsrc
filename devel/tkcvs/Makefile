@@ -3,17 +3,18 @@
 # Date created:         02 Aug 1996
 # Whom:                 shanee@augusta.de
 #
+# $NetBSD: Makefile,v 1.2 1998/02/25 15:48:11 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:24 jseger Exp
 #
 
 DISTNAME=	tkcvs-6.0
-CATEGORIES=	devel tk81
+CATEGORIES=	devel
 MASTER_SITES=	http://www.neosoft.com/tcl/ftparchive/sorted/apps/tkcvs-6.0/ \
 		http://ftp.sunet.se/pub/lang/tcl/sorted/apps/tkcvs-6.0/
 
 MAINTAINER=	shanee@augusta.de
 
-LIB_DEPENDS=	tk81\\.1\\.:${PORTSDIR}/x11/tk81
+LIB_DEPENDS=	tk80.1.:${PORTSDIR}/x11/tk80
 
 NO_BUILD=	yes
 MAN1=		tkcvs.1 tkdiff.1
