@@ -1,7 +1,0 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.2 2001/02/06 14:24:13 wiz Exp $
-
-The following programs have been installed suid root on your
-machine: inndstart, startinnfeed
-
-======================================================================

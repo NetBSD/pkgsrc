@@ -1,0 +1,7 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2001/10/31 21:22:52 zuntum Exp $
+
+You might want to have a look at ${PREFIX}/share/jed/lib/* and
+install a file defaults.sl for site defaults there.
+
+======================================================================

@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:51:02 zuntum Exp $
+bin/psiconv
+include/psiconv/data.h
+include/psiconv/list.h
+include/psiconv/parse.h
+include/psiconv/parse_routines.h
+lib/libpsiconv.a
+lib/libpsiconv.la
+lib/libpsiconv.so
+lib/libpsiconv.so.3
+lib/libpsiconv.so.3.0
+share/doc/psiconv/ascii
+share/doc/psiconv/html
+share/doc/psiconv/html4
+@dirrm share/doc/psiconv
+@dirrm include/psiconv

@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:28:12 zuntum Exp $
+bin/ppuzzle
+bin/puzzle
+share/doc/puzzle/manual.html
+share/doc/puzzle/ppuzzle.gif
+share/doc/puzzle/puzzle.gif
+share/examples/puzzle/atp6.a
+share/examples/puzzle/globin.a
+share/examples/puzzle/marswolf.n
+share/examples/puzzle/primates.b
+@dirrm share/doc/puzzle
+@dirrm share/examples/puzzle

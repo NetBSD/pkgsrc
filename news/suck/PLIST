@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:03:51 zuntum Exp $
+bin/suck
+bin/rpost
+bin/testhost
+bin/lmove
+man/man1/rpost.1
+man/man1/suck.1
+man/man1/testhost.1
+man/man1/lmove.1
+share/examples/suck/get.news.inn
+share/examples/suck/get.news.generic
+share/examples/suck/killprg_child.c
+share/examples/suck/killxover_child.c
+share/examples/suck/perl_kill.pl
+share/examples/suck/perl_xover.pl
+share/examples/suck/post_filter.pl
+share/examples/suck/put.news
+share/examples/suck/put.news.pl
+share/examples/suck/put.news.sm
+share/examples/suck/suckkillfile.sample
+share/examples/suck/sucknewsrc.sample
+share/examples/suck/suckothermsgs.sample
+@dirrm share/examples/suck

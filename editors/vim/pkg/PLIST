@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.12 2000/01/25 17:13:16 pooka Exp $
-bin/vim
-bin/rvim
-bin/rview

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:18:52 zuntum Exp $
+bin/buildlink-xmkmf
+lib/X11/config/buildlinkX11.def
+lib/X11/config/buildlinkX11.rules

@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:24:04 zuntum Exp $
+bin/vigor
+share/vi/catalog/german
+share/vi/catalog/spanish
+share/vi/catalog/ru_SU.KOI8-R
+share/vi/catalog/swedish
+share/vi/catalog/french
+share/vi/catalog/english
+share/vi/catalog/dutch
+share/vi/perl/VI.pm
+share/vi/perl/wc.pl
+share/vi/perl/tk.pl
+share/vi/perl/make.pl
+share/vi/perl/forall.pl
+share/vi/tcl/wc.tcl
+share/vi/tcl/mailprocs.tcl
+share/vi/tcl/gnats.tcl
+share/vi/tcl/errors.tcl
+share/vi/recover
+@dirrm share/vi/tcl
+@dirrm share/vi/perl
+@dirrm share/vi/catalog
+@dirrm share/vi

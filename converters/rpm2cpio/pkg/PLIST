@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/10/24 00:25:59 lukem Exp $
-bin/rpm2cpio.pl

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/01/28 23:30:26 manu Exp $
-bin/url2pkg
-man/man8/url2pkg.8

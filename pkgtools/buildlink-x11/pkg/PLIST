@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/07/14 02:33:44 jlam Exp $
-bin/buildlink-xmkmf
-lib/X11/config/buildlinkX11.def
-lib/X11/config/buildlinkX11.rules

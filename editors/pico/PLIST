@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:23:19 zuntum Exp $
+bin/pico
+bin/pilot
+include/pico/ebind.h
+include/pico/edef.h
+include/pico/efunc.h
+include/pico/estruct.h
+include/pico/headers.h
+include/pico/msmenu.h
+include/pico/os.h
+include/pico/pico.h
+include/pico/resource.h
+lib/libpico.a
+lib/libpico.la
+lib/libpico.so
+lib/libpico.so.3
+lib/libpico.so.3.1
+man/man1/pico.1
+man/man1/pilot.1
+@dirrm include/pico

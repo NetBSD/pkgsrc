@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/04/03 18:03:04 wennmach Exp $
-lib/dewey_cmp.so
-bin/pkgconflict
-bin/pkgdbextract

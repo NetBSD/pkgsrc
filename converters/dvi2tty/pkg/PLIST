@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/26 13:04:32 fredb Exp $
-bin/disdvi
-bin/dvi2tty
-man/man1/dvi2tty.1

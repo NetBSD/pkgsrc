@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:51:11 zuntum Exp $
+bin/txt2man
+man/man1/txt2man.1
