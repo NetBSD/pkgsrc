@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6811 2004/08/06 15:07:44 jlam Exp $
+$NetBSD: CHANGES,v 1.6812 2004/08/06 16:04:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3747,3 +3747,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gimp to 2.0.4 [adam 2004-08-06]
 	Added amavisd-new-20040701 [jlam 2004-08-06]
 	Moved amavisd-new to security/amavisd-new [jlam 2004-08-06]
+	Updated getmail to 4.0.8 [schmonz 2004-08-06]
