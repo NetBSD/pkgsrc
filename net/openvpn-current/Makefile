@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 23:13:10 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/03 23:14:02 jlam Exp $
 #
 
 DISTNAME=	openvpn-2.0_beta15
@@ -28,6 +28,11 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 .include "../../archivers/liblzo/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+
+# The configure script assumes that PTHREAD_LIBS also contains any LDFLAGS
+# needed to link with -lpthread.
+#
+PTHREAD_LIBS+=	${PTHREAD_LDFLAGS}
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
