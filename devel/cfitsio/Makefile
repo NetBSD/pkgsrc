@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:13:28 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/09/08 13:32:31 wiz Exp $
 
-DISTNAME=	cfitsio2037
-PKGNAME=	cfitsio-2.0.37
+DISTNAME=	cfitsio2500
+PKGNAME=	cfitsio-2.500
 CATEGORIES=	devel
 MASTER_SITES=	ftp://heasarc.gsfc.nasa.gov/software/fitsio/c/
 
 MAINTAINER=	tron@NetBSD.org
-HOMEPAGE=	http://legacy.gsfc.nasa.gov/docs/software/fitsio/fitsio.html
+HOMEPAGE=	http://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html
 COMMENT=	FITS (flexible image transport system) file input and output
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:C/-.*//}
