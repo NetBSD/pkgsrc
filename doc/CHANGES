@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8823 2005/01/19 22:00:44 adrianp Exp $
+$NetBSD: CHANGES,v 1.8824 2005/01/19 22:35:09 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -427,3 +427,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated eclipse to 3.0.1 [jschauma 2005-01-19]
 	Updated cgiirc to 0.5.5 [adrianp 2005-01-19]
 	Updated ircservices to 5.0.44 [adrianp 2005-01-19]
+	Updated dspam to 3.2.6 [xtraeme 2005-01-19]
