@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2000/11/02 03:15:14 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2000/11/02 06:57:32 itojun Exp $
 
 DISTNAME=	mutt-1.2.5i
 CATEGORIES=	mail
@@ -12,8 +12,9 @@ HOMEPAGE=	http://www.mutt.org/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
-DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 
+USE_LIBINTL=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 CONFIGURE_ARGS+= --with-exec-shell=/bin/ksh \
