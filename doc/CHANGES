@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7027 2004/08/28 23:11:09 grant Exp $
+$NetBSD: CHANGES,v 1.7028 2004/08/28 23:21:43 rumble Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4088,3 +4088,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated queue_repair to 0.9.0 [schmonz 2004-08-28]
 	Added queue-fix-1.4 [schmonz 2004-08-28]
 	Updated pkg_chk to 1.50 [grant 2004-08-28]
+	Added w9wm-0.4.2 [rumble 2004-08-28]
