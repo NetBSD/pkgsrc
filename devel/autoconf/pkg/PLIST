@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 1998/03/11 23:18:46 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/03/12 22:57:07 agc Exp $
 bin/autoconf
 bin/autoheader
 bin/autoreconf
-@HaveAutoscan@bin/autoscan
+bin/autoscan
 bin/autoupdate
 bin/ifnames
 @unexec %D/bin/install-info --delete %D/info/autoconf.info %D/info/dir
@@ -12,18 +12,18 @@ info/standards.info
 @exec %D/bin/install-info %D/info/autoconf.info %D/info/dir
 @exec %D/bin/install-info %D/info/standards.info %D/info/dir
 share/autoconf/acconfig.h
-@HaveAutoscan@share/autoconf/acfunctions
+share/autoconf/acfunctions
 share/autoconf/acgeneral.m4
-@HaveAutoscan@share/autoconf/acheaders
-@HaveAutoscan@share/autoconf/acidentifiers
-@HaveAutoscan@share/autoconf/acmakevars
+share/autoconf/acheaders
+share/autoconf/acidentifiers
+share/autoconf/acmakevars
 share/autoconf/acoldnames.m4
-@HaveAutoscan@share/autoconf/acprograms
+share/autoconf/acprograms
 share/autoconf/acspecific.m4
 share/autoconf/autoconf.m4
 share/autoconf/autoconf.m4f
 share/autoconf/autoheader.m4
 share/autoconf/autoheader.m4f
-@HaveAutoscan@share/autoconf/config.guess
-@HaveAutoscan@share/autoconf/config.sub
+share/autoconf/config.guess
+share/autoconf/config.sub
 @dirrm share/autoconf
