@@ -1,0 +1,6 @@
+Check mp3 files for consistency and print several errors and warnings. List 
+stream attributes (color). Layer 1,2,3, mpeg1.0+2.0 are currently supported. 
+CRC check for layer 3. 
+mp3check is very useful for incomplete mp3 detection as it can be used to scan 
+through your mp3 collection and find all mp3s that aren't perfect. Good for use
+with Napster and other bulk downloading of mp3s.
