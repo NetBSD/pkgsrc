@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/10/07 16:21:38 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/04/05 01:42:46 dmcmahill Exp $
 
 DISTNAME=	tcl-itcl-20040920
 PKGNAME=	${DISTNAME:S/itcl/itcl-current/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
