@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.11 2003/10/28 04:49:33 itojun Exp $
+$NetBSD: patch-aa,v 1.11.6.1 2004/07/14 12:39:00 agc Exp $
 
---- Makefile.in.orig	Mon Aug 25 09:12:06 2003
-+++ Makefile.in	Tue Oct 28 13:39:36 2003
+--- Makefile.in.orig	Sat Dec 27 12:00:42 2003
++++ Makefile.in	Sat Jul  3 18:13:46 2004
 @@ -14,7 +14,7 @@
  PROGRAMS        = $(PROGRAM_NAME)
  TARGETS         = $(PROGRAMS) $(shared_build) $(other_targets)
@@ -81,3 +81,12 @@ $NetBSD: patch-aa,v 1.11 2003/10/28 04:49:33 itojun Exp $
  	    echo "[PRESERVING EXISTING CGI SUBDIR: $(DESTDIR)$(cgidir)]"; \
  	else \
  	   echo Installing CGIs ; \
+@@ -191,8 +193,6 @@
+ 	@test -d $(DESTDIR)$(manualdir)   || $(MKINSTALLDIRS) $(DESTDIR)$(manualdir)
+ 	@cp -p $(top_srcdir)/docs/man/*.1 $(DESTDIR)$(mandir)/man1
+ 	@cp -p $(top_srcdir)/docs/man/*.8 $(DESTDIR)$(mandir)/man8
+-	@(cd $(top_srcdir)/docs/manual && cp -rp * $(DESTDIR)$(manualdir))
+-	@(cd $(DESTDIR)$(manualdir) && find . -name "CVS" -type d -print | xargs rm -rf 2>/dev/null ) || true
+ 
+ install-suexec:
+ 	@if test -f $(builddir)/support/suexec; then \

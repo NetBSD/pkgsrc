@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/18 09:12:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2.4.1 2004/07/14 12:39:00 agc Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APR_BUILDLINK3_MK:=	${APR_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Napr}
 BUILDLINK_PACKAGES+=	apr
 
 .if !empty(APR_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.apr+=	apr>=0.9.5.2.0.48nb1
+BUILDLINK_DEPENDS.apr+=	apr>=0.9.5.2.0.50
 BUILDLINK_PKGSRCDIR.apr?=	../../devel/apr
 
 BUILDLINK_FILES.apr+=	bin/apr-config
