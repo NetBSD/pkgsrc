@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+$NetBSD: patch-al,v 1.2 2000/05/07 12:50:52 wulf Exp $ 
 
---- examples/cgi-demo.cgi.in.orig	Sun Nov 14 13:13:02 1999
-+++ examples/cgi-demo.cgi.in	Sun Nov 14 13:13:18 1999
+--- examples/cgi-demo.cgi.in.orig	Tue Jan  4 08:36:55 2000
++++ examples/cgi-demo.cgi.in	Sun Apr  2 09:55:18 2000
 @@ -11,7 +11,7 @@
  <H1>This is NOT traffic</H1>
  
@@ -10,7 +10,7 @@ $NetBSD: patch-al,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
 +<P><RRD::GRAPH cgi-demo1.png 
  	    --lower-limit 0
  	    --start 'end-10h'
- 	    --title "Graph in Localtime"
+ 	    --title "Graph in Localtime <RRD::TIME::NOW %c>"
 @@ -22,7 +22,7 @@
  </P>
  

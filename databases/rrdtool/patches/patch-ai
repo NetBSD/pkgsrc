@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+$NetBSD: patch-ai,v 1.2 2000/05/07 12:50:52 wulf Exp $
 
---- src/rrd_graph.c.orig	Sun Nov  7 21:46:02 1999
-+++ src/rrd_graph.c	Sun Nov  7 21:47:13 1999
+--- src/rrd_graph.c.orig	Tue May  2 04:51:47 2000
++++ src/rrd_graph.c	Wed May  3 21:04:46 2000
 @@ -6,12 +6,12 @@
  
  #include "rrd_tool.h"
@@ -19,8 +19,8 @@ $NetBSD: patch-ai,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
  
  /* #define DEBUG */
  
-@@ -37,7 +37,7 @@
- 	    OP_COS,OP_LOG,OP_EXP,OP_LT,OP_LE,OP_GT,OP_GE,OP_EQ,OP_IF,
+@@ -38,7 +38,7 @@
+ 	    OP_MIN,OP_MAX,OP_LIMIT,
  	    OP_UN,OP_END};
  
 -enum if_en {IF_GIF=0,IF_PNG=1};
@@ -28,7 +28,7 @@ $NetBSD: patch-ai,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
  
  typedef struct rpnp_t {
      enum op_en   op;
-@@ -305,7 +305,6 @@
+@@ -340,7 +340,6 @@
  
  enum if_en if_conv(char *string){
      
@@ -36,17 +36,17 @@ $NetBSD: patch-ai,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
      conv_if(PNG,IF_PNG)
  
      return (-1);
-@@ -2129,9 +2128,6 @@
+@@ -2291,9 +2290,6 @@
      if ((fd = fopen(im->graphfile,"rb")) == NULL) 
        return 0; /* the file does not exist */
      switch (im->imgformat) {
 -    case IF_GIF:
--	GifSize(fd,&(im->xgif),&(im->ygif));
+-	size = GifSize(fd,&(im->xgif),&(im->ygif));
 -	break;
      case IF_PNG:
- 	PngSize(fd,&(im->xgif),&(im->ygif));
+ 	size = PngSize(fd,&(im->xgif),&(im->ygif));
  	break;
-@@ -2389,9 +2385,6 @@
+@@ -2552,9 +2548,6 @@
  	}
      }
      switch (im->imgformat) {
@@ -56,7 +56,7 @@ $NetBSD: patch-ai,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
      case IF_PNG:
  	gdImagePng(gif, fo);    
  	break;
-@@ -2506,7 +2499,7 @@
+@@ -2669,7 +2662,7 @@
      im.prt_c = 0;
      im.gdes_c = 0;
      im.gdes = NULL;
