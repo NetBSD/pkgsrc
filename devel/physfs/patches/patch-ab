@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.3 2004/11/28 14:35:19 wiz Exp $
+
+--- configure.orig	2004-01-03 22:06:44.000000000 +0100
++++ configure
+@@ -9815,6 +9815,20 @@ echo $ECHO_N "checking if this is FreeBS
+ echo "${ECHO_T}$this_is_freebsd" >&6
+ fi
+ 
++this_is_netbsd=no
++if test x$we_have_sed = xyes; then
++  echo "$as_me:$LINENO: checking if this is NetBSD" >&5
++echo $ECHO_N "checking if this is NetBSD... $ECHO_C" >&6
++  x=`echo $target_os |tr A-Z a-z |sed "s/.*netbsd.*/netbsd/"`
++  if test x$x = xnetbsd; then
++    this_is_netbsd=yes
++    PHYSFSLDFLAGS="$PHYSFSLDFLAGS -pthread"
++  fi
++
++  echo "$as_me:$LINENO: result: $this_is_netbsd" >&5
++echo "${ECHO_T}$this_is_netbsd" >&6
++fi
++
+ this_is_openbsd=no
+ if test x$we_have_sed = xyes; then
+   echo "$as_me:$LINENO: checking if this is OpenBSD" >&5
