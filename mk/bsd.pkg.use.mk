@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.6 2005/03/22 15:40:06 tv Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.7 2005/03/24 17:46:00 tv Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -22,9 +22,7 @@ PLIST_SUBST+=		IMAKE_KERNMAN_SUFFIX=${IMAKE_KERNMAN_SUFFIX}
 PLIST_SUBST+=		IMAKE_FILEMAN_SUFFIX=${IMAKE_FILEMAN_SUFFIX}
 PLIST_SUBST+=		IMAKE_MISCMAN_SUFFIX=${IMAKE_MISCMAN_SUFFIX}
 PLIST_SUBST+=		IMAKE_MANNEWSUFFIX=${IMAKE_MANNEWSUFFIX}
-.  if !empty(USE_BUILDLINK3:M[yY][eE][sS])
-MAKE_FLAGS+=		CC="${CC}" CXX="${CXX}"
-.  endif
+MAKE_FLAGS+=		CC=${CC:Q} CXX=${CXX:Q}
 .endif
 
 .if defined(USE_X11BASE)
@@ -189,9 +187,7 @@ RMAN?=			${X11BASE}/bin/rman
 .if defined(USE_X11)
 X11_LDFLAGS+=		${COMPILER_RPATH_FLAG}${X11BASE}/lib${LIBABISUFFIX}
 X11_LDFLAGS+=		-L${X11BASE}/lib${LIBABISUFFIX}
-.  if !empty(USE_BUILDLINK3:M[nN][oO])
 LDFLAGS+=		${X11_LDFLAGS}
-.  endif
 .endif
 
 ### USE_XPKGWEDGE

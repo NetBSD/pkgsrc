@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.5 2004/12/01 09:53:01 wiz Exp $
+$NetBSD: README,v 1.6 2005/03/24 17:46:01 tv Exp $
 
  0 Package Views
  ===============
@@ -115,36 +115,8 @@ implementation currently allows "overwrite" to depend on either
 "overwrite" or pkgviews packages, but pkgviews packages are restricted
 to only being able to depend on other pkgviews packages.
 
-Packages that have been converted to use buildlink3 should add the
-following line to their Makefiles:
 
-	USE_BUILDLINK3=	YES
-
-A package must be converted to use the buildlink3 framework before it
-can support the pkgviews installation style.
-
-
- 0.5 Package conversion issues
- =============================
-
-The conversion process for a package to use buildlink3 and pkgviews
-essentially consists of changing USE_BUILDLINK2 to USE_BUILDLINK3,
-including buildlink3.mk files instead of buildlink2.mk files, and
-adding the PKG_INSTALLATION_TYPES line to the package Makefile.  It's
-extremely easy and painless.
-
-Since the idea is that the user can choose to install a package using
-either installation style, the package Makefiles have to explicitly
-support this.  This means that "hard" packages just got harder to
-maintain, but easy packages stay about the same.  In this case, "hard"
-packages are the ones that have module packages, e.g. PHP4, perl5,
-Apache, Cyrus-SASL, etc.  A package of this type must support finding
-shared modules or configuration files in directories shared with all
-of its module packages, thus requiring some hard-coding of paths
-across different packages.
-
-
- 0.6 Future Work
+ 0.5 Future Work
  ===============
 
 There may be some way around the problem of pkgviews packages not
