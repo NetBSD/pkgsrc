@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/16 17:14:38 tron Exp $
+bin/ipmon2ipstat
+bin/ipstat
+bin/pcap2ipstat
+share/doc/cia/README
+share/examples/cia/ipstat.cfg
+share/examples/cia/sum.cfg
+@dirrm share/examples/cia
+@dirrm share/doc/cia
