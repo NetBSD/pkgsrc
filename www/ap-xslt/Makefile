@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2003/02/17 21:21:37 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/02/18 00:41:35 grant Exp $
 
-DISTNAME=	modxslt
+DISTNAME=	modxslt-1.1
 PKGNAME=	ap-xslt-1.1
 PKGREVISION=	3
 CATEGORIES=	www
-MASTER_SITES=	http://download.sourceforge.net/modxslt/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=modxslt/}
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://modxslt.sourceforge.net/
