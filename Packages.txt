@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.272 2002/11/28 14:21:32 salo Exp $
+# $NetBSD: Packages.txt,v 1.273 2002/12/03 10:51:47 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -2433,6 +2433,19 @@ USE_PKGLOCALEDIR should be defined.  It will ensure that the package's
 Makefile template files are fixed and point to the correct locale directories
 (which may vary, depending on OS), if necessary.  See also section 5.1 for
 details about ${PKGLOCALEDIR}.  This functionality is buildlink2-only.
+
+
+ 10.30 Using 'sudo' with pkgsrc
+ ==============================
+
+When installing packages as non-root user and using the just-in-time
+su(1) feature of pkgsrc, it can become annoying to type in the root
+password for each required package installed. To avoid this, the sudo
+package can be used, which does password caching over a limited time.
+To use it, install sudo (either as binary package or from
+pkgsrc/security/sudo) and then put the following into your /etc/mk.conf:
+
+	SU_CMD=/usr/pkg/bin/sudo /bin/sh -c
 
 
  11 Submitting & Committing
