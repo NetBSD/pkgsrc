@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/12/11 09:04:52 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2000/12/13 16:24:50 jlam Exp $
 
 DISTNAME=		cyrus-sasl-1.5.24
 PKGNAME=		${DISTNAME}nb2
@@ -97,7 +97,7 @@ pre-configure:
 
 post-build:
 	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
-		< ${FILESDIR}/pwcheck.sh > ${WRKDIR}/pwcheck.sh
+		< ${FILESDIR}/sasl_pwcheck.sh > ${WRKDIR}/sasl_pwcheck.sh
 
 pre-install:
 	${SED}	-e "s,@CYRUS_USER@,${CYRUS_USER},g" \
@@ -120,7 +120,8 @@ pre-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/pwcheck.sh ${PREFIX}/etc/rc.d/pwcheck
+	${INSTALL_SCRIPT} ${WRKDIR}/sasl_pwcheck.sh \
+		${PREFIX}/etc/rc.d/sasl_pwcheck
 	${INSTALL_DATA_DIR} ${HTMLDIR}
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.txt ${HTMLDIR}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
