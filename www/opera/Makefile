@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/03/23 08:38:06 tron Exp $
+# $NetBSD: Makefile,v 1.16 2001/03/23 08:42:56 tron Exp $
 
 DISTNAME=	opera-5.0b7
 CATEGORIES=	www
@@ -13,11 +13,6 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.opera.com/
 COMMENT=	Small, fast and customizable WWW client
 
-DEPENDS+=	suse_compat>=6.4:../../emulators/suse_compat
-DEPENDS+=	suse_libjpeg>=6.4:../../emulators/suse_libjpeg
-DEPENDS+=	suse_libpng>=6.4:../../emulators/suse_libpng
-DEPENDS+=	suse_x11>=6.4:../../emulators/suse_x11
-
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 LICENSE=	opera-license
@@ -27,7 +22,22 @@ EXTRACT_ONLY=	# empty
 NO_BUILD=	YES
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=	opera-static-5.0b7-20010320.018.1.${MACHINE_ARCH}.rpm
+.include "../../mk/bsd.prefs.mk"
+
+.if (${MACHINE_ARCH} == i386)
+DEPENDS+=	suse_compat>=6.4:../../emulators/suse_compat
+DEPENDS+=	suse_libjpeg>=6.4:../../emulators/suse_libjpeg
+DEPENDS+=	suse_libpng>=6.4:../../emulators/suse_libpng
+DEPENDS+=	suse_x11>=6.4:../../emulators/suse_x11
+
+OPERA_ARCH=	${MACHINE_ARCH}
+.elif (${MACHINE_ARCH} == powerpc)
+DEPENDS+=	linuxppc_lib>=2000.q4.2:../../emulators/linuxppc_lib
+
+OPERA_ARCH=	ppc
+.endif
+
+RPMFILES=	opera-static-5.0b7-20010320.018.1.${OPERA_ARCH}.rpm
 
 post-install:
 	${LN} -fs ../${EMULSUBDIR}/usr/bin/opera ${PREFIX}/bin
