@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/09/05 03:21:11 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/17 15:39:53 agc Exp $
 
 DISTNAME=		inn-2.1
 CATEGORIES=		news
@@ -19,9 +19,12 @@ CONFIGURE_ARGS+=	--with-perl --with-spool-dir=${INN_SPOOL}
 CONFIGURE_ARGS+=	--with-tmp-path=/tmp
 GNU_CONFIGURE=		yes
 
+INSTALL_FILE=		${WRKDIR}/.INSTALL
+
 post-patch:
 	${SED} -e 's@XXXINN_SPOOLXXX@${INN_SPOOL}@g' \
-	-e 's@XXXPREFIXXXX@${PREFIX}@g' <${PKGDIR}/install >${PKGDIR}/INSTALL
+		-e 's@XXXPREFIXXXX@${PREFIX}@g' \
+		${PKGDIR}/install > ${INSTALL_FILE}
 
 post-install:
 	${MKDIR} ${PREFIX}/share/examples/inn
