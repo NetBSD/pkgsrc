@@ -1,8 +1,34 @@
-$NetBSD: patch-ak,v 1.1 2000/01/26 22:14:27 jlam Exp $
+$NetBSD: patch-ak,v 1.2 2000/03/13 13:17:16 bouyer Exp $
 
---- Makefile.in.orig	Thu Apr 25 09:20:32 1996
-+++ Makefile.in	Wed Jan 26 16:37:34 2000
-@@ -209,16 +209,10 @@
+--- Makefile.in.orig	Thu Apr 25 15:20:32 1996
++++ Makefile.in	Mon Mar 13 14:11:24 2000
+@@ -48,6 +48,7 @@
+ C++ = @CXX@
+ TABCC = @V_TABCC@
+ CCOPT = @V_CCOPT@
++CPPFLAGS= @CPPFLAGS@
+ 
+ INCLUDE_TK = @V_INCLUDE_TK@
+ INCLUDE_TCL = @V_INCLUDE_TCL@
+@@ -175,7 +176,7 @@
+ 	$(TABCC) $(RFLAG) -c $*.c
+ 
+ $(SRC3): mktab.c
+-	$(CC) $(CFLAGS) -o mktab mktab.c $(LIB) $(STATIC)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o mktab mktab.c $(LIB) $(STATIC)
+ 	rm -f $(SRC3)
+ 	./mktab -mulaw > tabmulaw.c
+ 	./mktab -sum > tabmix.c
+@@ -184,7 +185,7 @@
+ 	rm -f mktab
+ 
+ vat-gsm.o: vat-gsm.c
+-	rm -f $@; $(CC) -o $@ -c $(INCLUDE_GSM) $(CFLAGS) $*.c
++	rm -f $@; $(CC) -o $@ -c $(CPPFLAGS) $(CFLAGS) $*.c
+ 
+ tar: force
+ 	tar=vatbin-`cat VERSION`-@V_TAR_TARGET@.tar.gz ; \
+@@ -209,16 +210,10 @@
  	     rm ../$$name; chmod 444 $$tar
  
  install: force
