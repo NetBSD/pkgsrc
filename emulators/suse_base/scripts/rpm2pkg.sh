@@ -2,9 +2,12 @@
 export PATH=/bin:/usr/bin:@@PREFIX@@/bin
 
 TMPDIR=/tmp/.rpm.$$.`date +%s`
-PLIST=$TMPDIR/PLIST
+LIST=$TMPDIR/LIST
+DIRS=$TMPDIR/DIRS
+FILES=$TMPDIR/FILES
+LINKS=$TMPDIR/LINKS
 
-if ! rm -rf $PLIST $TMPDIR
+if ! rm -rf $TMPDIR
 then 
  exit 1
 fi
@@ -13,34 +16,46 @@ then
  exit 1
 fi
 
+touch $LIST
 for RPM
 do
- rpm2cpio $RPM | (cd $TMPDIR/@@EMULSUBDIR@@; cpio -i -d 2>/dev/null)
+ rpm2cpio $RPM | (cd @@EMULDIR@@; @@PAX@@ -r -v 2>>$LIST)
 done
 
-(cd $TMPDIR
- find @@EMULSUBDIR@@/* -type f | sort
- find @@EMULSUBDIR@@/* -type d | sort | awk '{print("@exec mkdir -p %D/"$1)}'
- find @@EMULSUBDIR@@/* -type l | sort |
- (while read LINK
-  do
-   set - X `file $LINK`
-   if cd `dirname $LINK` && test -f $6
+touch $DIRS $LINKS
+cd @@PREFIX@@
+grep -v ^pax:\  $LIST | @@AWK@@ '{print("@@EMULSUBDIR@@/"$1)}' |
+(while read ENTRY
+ do
+  if [ -L "$ENTRY" ]
+  then
+   set - `file $ENTRY`
+   shift `expr $# - 1`;
+   if cd `dirname $ENTRY` && test -f $1
    then
-    echo $LINK
+    echo $ENTRY
    else
-    echo "@exec ln -s $6 %D/$LINK"
-    echo "@unexec rm -f %D/$LINK"
+    echo "@exec ln -s $1 %D/$ENTRY" >>$LINKS
+    echo "@unexec rm -f %D/$ENTRY" >>$LINKS
    fi
-   cd $TMPDIR
-  done)
- find @@EMULSUBDIR@@/* -type d | sort -r |
- awk '{print("@unexec rmdir %D/"$1" >/dev/null 2>&1 || true")}') >$PLIST
+   cd @@PREFIX@@
+  else
+   if [ -f "$ENTRY" ]
+   then
+    echo "$ENTRY"
+   else
+    if [ -d "$ENTRY" ]
+    then
+     echo "$ENTRY" >>$DIRS
+    fi
+   fi
+  fi
+ done) >$FILES
 
-@@GTAR@@ cCf $TMPDIR - @@EMULSUBDIR@@ | @@GTAR@@ xCf @@PREFIX@@ -
-
-cat $PLIST
+cat $FILES
+sort $DIRS | awk '{print("@exec mkdir -p %D/"$1)}'
+cat $LINKS
+sort -r $DIRS | awk '{print("@unexec rmdir %D/"$1" >/dev/null 2>&1 || true")}'
 
 rm -rf $TMPDIR
 exit 0
-
