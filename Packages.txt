@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.303 2003/07/14 21:23:51 wiz Exp $
+# $NetBSD: Packages.txt,v 1.304 2003/07/28 08:08:59 seb Exp $
 ###########################################################################
 
 			==========================
@@ -2321,7 +2321,7 @@ If the system does not provide a makeinfo command or if it does not match
 the required minimum a build dependency on the devel/gtexinfo package is
 added.
 
-The installation process of the software provided by the package must not
+The installation process of the software provided by the package should not
 use the install-info as the registration of info files
 is the task of the package INSTALL SCRIPT, and it must use
 the right makeinfo command.
