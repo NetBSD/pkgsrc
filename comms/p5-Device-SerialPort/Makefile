@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/02/13 14:51:03 agc Exp $
+# $NetBSD: Makefile,v 1.9 2003/02/13 19:29:33 mjl Exp $
 #
 
 DISTNAME=	Device-SerialPort-0.12
@@ -16,7 +16,8 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Device/SerialPort/.packlist
 
 MAKE_PARAMS=	${DEFAULT_SERIAL_DEVICE}
 
-BROKEN=		Device::Serial could not find ioctl definitions
+pre-configure:
+	cd /usr/include; h2ph -d ${WRKSRC} -a sys/termios.h
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
