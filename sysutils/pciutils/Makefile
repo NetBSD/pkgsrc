@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/24 15:06:58 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/26 10:25:22 wiz Exp $
 
 DISTNAME=	pciutils-2.1.11
 CATEGORIES=	sysutils
@@ -10,6 +10,7 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
 COMMENT=	PCI bus manipulation utility similar to NetBSD pcictl(8)
 
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 
 .include "../../mk/bsd.prefs.mk"
