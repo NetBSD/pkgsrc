@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.5 2003/05/22 02:42:48 markd Exp $
+$NetBSD: patch-ao,v 1.6 2003/07/30 13:34:59 markd Exp $
 
---- kcontrol/kcontrol/Makefile.in.orig	Tue May 13 23:07:54 2003
+--- kcontrol/kcontrol/Makefile.in.orig	2003-07-15 22:03:19.000000000 +1200
 +++ kcontrol/kcontrol/Makefile.in
-@@ -445,52 +445,65 @@ INCLUDES = $(all_includes)
+@@ -446,52 +446,65 @@ INCLUDES = $(all_includes)
  
  SUBDIRS = . pics
  
@@ -311,16 +311,16 @@ $NetBSD: patch-ao,v 1.5 2003/05/22 02:42:48 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kcrootonly.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kecdialog.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
-@@ -991,7 +1051,7 @@ distclean-tags:
+@@ -985,7 +1045,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=cr32-app-kcontrol.png cr48-app-kcontrol.png kcdialog.h proxywidget.h quickhelp.h KControl_NoDisplay.desktop cr64-app-kcontrol.png aboutwidget.h global.h toplevel.h modulemenu.h modulemenu.cpp kinfocenterui.rc kcontrolui.rc kcmshell.h kinfocenter.desktop helpwidget.h main.h moduleinfo.h moduletreeview.h searchwidget.h moduleiconview.h dockcontainer.h kecdialog.h cr16-app-kcontrol.png version.h cr128-app-kcontrol.png indexwidget.h KControl.desktop moduleIface.h modules.h modloader.h kcrootonly.h 
-+KDE_DIST=kcontrolui.rc indexwidget.h cr64-app-kcontrol.png kinfocenterui.rc proxywidget.h dockcontainer.h cr32-app-kcontrol.png modulemenu.h quickhelp.h cr128-app-kcontrol.png searchwidget.h main.h moduletreeview.h kcdialog.h kecdialog.h moduleIface.h aboutwidget.h kinfocenter.desktop kcrootonly.h toplevel.h helpwidget.h KControl.desktop cr48-app-kcontrol.png modules.h version.h cr16-app-kcontrol.png moduleiconview.h KControl_NoDisplay.desktop moduleinfo.h global.h kcmshell.h modulemenu.cpp modloader.h 
++KDE_DIST=kcontrolui.rc indexwidget.h cr64-app-kcontrol.png kinfocenterui.rc proxywidget.h dockcontainer.h cr32-app-kcontrol.png modulemenu.h quickhelp.h cr128-app-kcontrol.png searchwidget.h main.h Makefile.in.rej moduletreeview.h kcdialog.h kecdialog.h moduleIface.h aboutwidget.h kinfocenter.desktop kcrootonly.h toplevel.h helpwidget.h KControl.desktop cr48-app-kcontrol.png modules.h version.h cr16-app-kcontrol.png moduleiconview.h KControl_NoDisplay.desktop moduleinfo.h global.h kcmshell.h modulemenu.cpp modloader.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -1065,7 +1125,6 @@ install-strip:
+@@ -1059,7 +1119,6 @@ install-strip:
  mostlyclean-generic:
  
  clean-generic:
@@ -328,7 +328,7 @@ $NetBSD: patch-ao,v 1.5 2003/05/22 02:42:48 markd Exp $
  
  distclean-generic:
  	-rm -f Makefile $(CONFIG_CLEAN_FILES)
-@@ -1170,84 +1229,81 @@ install-data-local: KControl_NoDisplay.d
+@@ -1164,49 +1223,34 @@ install-data-local: KControl_NoDisplay.d
  
  messages: rc.cpp
  	$(XGETTEXT) *.cpp -o $(podir)/kcontrol.pot
@@ -343,111 +343,165 @@ $NetBSD: patch-ao,v 1.5 2003/05/22 02:42:48 markd Exp $
 -moduleinfo.moc: $(srcdir)/moduleinfo.h
 -	$(MOC) $(srcdir)/moduleinfo.h -o moduleinfo.moc
 -
+-#>+ 1
+-mocs: moduleinfo.moc
 -#>+ 3
  indexwidget.moc: $(srcdir)/indexwidget.h
  	$(MOC) $(srcdir)/indexwidget.h -o indexwidget.moc
  
+ #>+ 1
+ mocs: indexwidget.moc
  #>+ 3
 -moduleiconview.moc: $(srcdir)/moduleiconview.h
 -	$(MOC) $(srcdir)/moduleiconview.h -o moduleiconview.moc
 -
+-#>+ 1
+-mocs: moduleiconview.moc
 -#>+ 3
 -dockcontainer.moc: $(srcdir)/dockcontainer.h
 -	$(MOC) $(srcdir)/dockcontainer.h -o dockcontainer.moc
 +main.moc: $(srcdir)/main.h
 +	$(MOC) $(srcdir)/main.h -o main.moc
  
+ #>+ 1
+-mocs: dockcontainer.moc
++mocs: main.moc
  #>+ 3
 -aboutwidget.moc: $(srcdir)/aboutwidget.h
 -	$(MOC) $(srcdir)/aboutwidget.h -o aboutwidget.moc
 +moduleinfo.moc: $(srcdir)/moduleinfo.h
 +	$(MOC) $(srcdir)/moduleinfo.h -o moduleinfo.moc
  
+ #>+ 1
+-mocs: aboutwidget.moc
++mocs: moduleinfo.moc
  #>+ 3
 -proxywidget.moc: $(srcdir)/proxywidget.h
 -	$(MOC) $(srcdir)/proxywidget.h -o proxywidget.moc
 +kcmshell.moc: $(srcdir)/kcmshell.h
 +	$(MOC) $(srcdir)/kcmshell.h -o kcmshell.moc
  
+ #>+ 1
+-mocs: proxywidget.moc
++mocs: kcmshell.moc
  #>+ 3
  helpwidget.moc: $(srcdir)/helpwidget.h
  	$(MOC) $(srcdir)/helpwidget.h -o helpwidget.moc
- 
+@@ -1214,17 +1258,29 @@ helpwidget.moc: $(srcdir)/helpwidget.h
+ #>+ 1
+ mocs: helpwidget.moc
  #>+ 3
 -quickhelp.moc: $(srcdir)/quickhelp.h
 -	$(MOC) $(srcdir)/quickhelp.h -o quickhelp.moc
 +toplevel.moc: $(srcdir)/toplevel.h
 +	$(MOC) $(srcdir)/toplevel.h -o toplevel.moc
  
+ #>+ 1
+-mocs: quickhelp.moc
++mocs: toplevel.moc
  #>+ 3
 -main.moc: $(srcdir)/main.h
 -	$(MOC) $(srcdir)/main.h -o main.moc
 +moduletreeview.moc: $(srcdir)/moduletreeview.h
 +	$(MOC) $(srcdir)/moduletreeview.h -o moduletreeview.moc
-+
+ 
+ #>+ 1
+-mocs: main.moc
++mocs: moduletreeview.moc
 +#>+ 3
 +kecdialog.moc: $(srcdir)/kecdialog.h
 +	$(MOC) $(srcdir)/kecdialog.h -o kecdialog.moc
 +
++#>+ 1
++mocs: kecdialog.moc
 +#>+ 3
 +modulemenu.moc: $(srcdir)/modulemenu.h
 +	$(MOC) $(srcdir)/modulemenu.h -o modulemenu.moc
- 
++
++#>+ 1
++mocs: modulemenu.moc
  #>+ 3
  modules.moc: $(srcdir)/modules.h
  	$(MOC) $(srcdir)/modules.h -o modules.moc
- 
+@@ -1232,53 +1288,53 @@ modules.moc: $(srcdir)/modules.h
+ #>+ 1
+ mocs: modules.moc
  #>+ 3
 -kcdialog.moc: $(srcdir)/kcdialog.h
 -	$(MOC) $(srcdir)/kcdialog.h -o kcdialog.moc
 +moduleiconview.moc: $(srcdir)/moduleiconview.h
 +	$(MOC) $(srcdir)/moduleiconview.h -o moduleiconview.moc
  
+ #>+ 1
+-mocs: kcdialog.moc
++mocs: moduleiconview.moc
  #>+ 3
 -moduletreeview.moc: $(srcdir)/moduletreeview.h
 -	$(MOC) $(srcdir)/moduletreeview.h -o moduletreeview.moc
 +kcdialog.moc: $(srcdir)/kcdialog.h
 +	$(MOC) $(srcdir)/kcdialog.h -o kcdialog.moc
  
+ #>+ 1
+-mocs: moduletreeview.moc
++mocs: kcdialog.moc
  #>+ 3
 -kecdialog.moc: $(srcdir)/kecdialog.h
 -	$(MOC) $(srcdir)/kecdialog.h -o kecdialog.moc
 +searchwidget.moc: $(srcdir)/searchwidget.h
 +	$(MOC) $(srcdir)/searchwidget.h -o searchwidget.moc
  
+ #>+ 1
+-mocs: kecdialog.moc
++mocs: searchwidget.moc
  #>+ 3
 -toplevel.moc: $(srcdir)/toplevel.h
 -	$(MOC) $(srcdir)/toplevel.h -o toplevel.moc
 +moduleIface.moc: $(srcdir)/moduleIface.h
 +	$(MOC) $(srcdir)/moduleIface.h -o moduleIface.moc
  
+ #>+ 1
+-mocs: toplevel.moc
++mocs: moduleIface.moc
  #>+ 3
 -modulemenu.moc: $(srcdir)/modulemenu.h
 -	$(MOC) $(srcdir)/modulemenu.h -o modulemenu.moc
 +aboutwidget.moc: $(srcdir)/aboutwidget.h
 +	$(MOC) $(srcdir)/aboutwidget.h -o aboutwidget.moc
  
+ #>+ 1
+-mocs: modulemenu.moc
++mocs: aboutwidget.moc
  #>+ 3
 -kcmshell.moc: $(srcdir)/kcmshell.h
 -	$(MOC) $(srcdir)/kcmshell.h -o kcmshell.moc
 +proxywidget.moc: $(srcdir)/proxywidget.h
 +	$(MOC) $(srcdir)/proxywidget.h -o proxywidget.moc
  
+ #>+ 1
+-mocs: kcmshell.moc
++mocs: proxywidget.moc
  #>+ 3
 -moduleIface.moc: $(srcdir)/moduleIface.h
 -	$(MOC) $(srcdir)/moduleIface.h -o moduleIface.moc
 +dockcontainer.moc: $(srcdir)/dockcontainer.h
 +	$(MOC) $(srcdir)/dockcontainer.h -o dockcontainer.moc
  
+ #>+ 1
+-mocs: moduleIface.moc
++mocs: dockcontainer.moc
  #>+ 3
 -searchwidget.moc: $(srcdir)/searchwidget.h
 -	$(MOC) $(srcdir)/searchwidget.h -o searchwidget.moc
 +quickhelp.moc: $(srcdir)/quickhelp.h
 +	$(MOC) $(srcdir)/quickhelp.h -o quickhelp.moc
  
+ #>+ 1
+-mocs: searchwidget.moc
++mocs: quickhelp.moc
  #>+ 5
  kcdialog.kidl: $(srcdir)/kcdialog.h $(DCOP_DEPENDENCIES)
-@@ -1263,7 +1319,7 @@ moduleIface_skel.cpp: moduleIface.kidl
+ 	$(DCOPIDL) $(srcdir)/kcdialog.h > kcdialog.kidl || ( rm -f kcdialog.kidl ; false )
+@@ -1293,7 +1349,7 @@ moduleIface_skel.cpp: moduleIface.kidl
  
  #>+ 3
  clean-metasources:
@@ -456,7 +510,7 @@ $NetBSD: patch-ao,v 1.5 2003/05/22 02:42:48 markd Exp $
  
  #>+ 5
  clean-idl:
-@@ -1314,45 +1370,57 @@ kcminit_la.all_cpp.cpp: $(srcdir)/Makefi
+@@ -1344,45 +1400,57 @@ kcminit_la.all_cpp.cpp: $(srcdir)/Makefi
  	rm -f kcminit_la.all_cpp.final kcminit_la.all_cpp.files
  
  #>+ 11
@@ -535,7 +589,7 @@ $NetBSD: patch-ao,v 1.5 2003/05/22 02:42:48 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1362,39 +1430,39 @@ kde-rpo-clean:
+@@ -1392,39 +1460,39 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 37
