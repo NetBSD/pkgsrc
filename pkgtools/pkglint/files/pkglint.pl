@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.113 2004/07/10 05:55:50 snj Exp $
+# $NetBSD: pkglint.pl,v 1.114 2004/07/14 17:43:43 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -465,7 +465,7 @@ sub checkfile_MESSAGE($) {
 		checkline_trailing_whitespace($line);
 		checkline_valid_characters($line, $regex_validchars);
 	}
-	if ($message->[-1] ne "=" x 75) {
+	if ($message->[-1]->[2] ne "=" x 75) {
 		log_warning($message->[-1]->[0], $message->[-1]->[1], "expected a line of exactly 75 \"=\" characters.");
 	}
 	return 1;
@@ -496,14 +496,16 @@ sub checkfile_PLIST($) {
 				$curdir = $arg;
 			} elsif ($cmd eq "unexec" && $arg =~ /^rmdir/) {
 				log_warning($line->[0], $line->[1], "use \"\@dirrm\" instead of \"\@unexec rmdir\".");
-			} elsif (($cmd eq "exec" || $cmd eq "unexec") && ($arg =~ /(?:install-info|\$\{INSTALL_INFO\})/)) {
-				log_warning($line->[0], $line->[1], "\@exec/unexec install-info is deprecated.");
-			} elsif (($cmd eq "exec" || $cmd eq "unexec") && $arg =~ /ldconfig/) {
-				if ($arg !~ m:/usr/bin/true:) {
+			} elsif ($cmd eq "exec" || $cmd eq "unexec") {
+				if ($arg =~ /(?:install-info|\$\{INSTALL_INFO\})/) {
+					log_warning($line->[0], $line->[1], "\@exec/unexec install-info is deprecated.");
+				} elsif ($arg =~ /ldconfig/ && $arg !~ qr"/usr/bin/true") {
 					log_error($line->[0], $line->[1], "ldconfig must be used with \"||/usr/bin/true\".");
 				}
-			} elsif ($cmd eq "comment" && $arg =~ /^$regex_rcsidstr$/) {
-				$rcsid_seen = 1;
+			} elsif ($cmd eq "comment") {
+				if ($arg =~ /^$regex_rcsidstr$/) {
+					$rcsid_seen = 1;
+				}
 			} elsif ($cmd eq "dirrm" || $cmd eq "option") {
 				# no check made
 			} elsif ($cmd eq "mode" || $cmd eq "owner" || $cmd eq "group") {
@@ -1829,7 +1831,7 @@ sub log_info($$$)
 sub print_summary_and_exit()
 {
 	if ($errors != 0 || $warnings != 0) {
-		print("$errors errors and $warnings warnings found.\n");
+		print("$errors fatal errors and $warnings warnings found.\n");
 	} else {
 		print "looks fine.\n";
 	}
