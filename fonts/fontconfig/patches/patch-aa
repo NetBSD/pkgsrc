@@ -1,14 +1,47 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/12/11 20:12:45 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2003/08/31 19:19:13 wiz Exp $
 
---- Makefile.in.orig	Thu Aug  1 17:57:25 2002
+--- Makefile.in.orig	Sun Aug 31 18:53:15 2003
 +++ Makefile.in
-@@ -26,6 +26,9 @@ TOPDIR         = .
+@@ -201,14 +201,14 @@ fontconfig-zip: $(top_builddir)/config.s
  
- include $(TOPDIR)/config/Makedefs
+ install-configDATA: $(config_DATA)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(configdir)
++	$(mkinstalldirs) $(DESTDIR)$(datadir)/examples/fontconfig
+ 	@list='$(config_DATA)'; for p in $$list; do \
+ 	  if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(configdir)/$$p"; \
+-	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(configdir)/$$p; \
++	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(datadir)/examples/fontconfig/$$p"; \
++	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(datadir)/examples/fontconfig/$$p; \
+ 	  else if test -f $$p; then \
+-	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(configdir)/$$p"; \
+-	    $(INSTALL_DATA) $$p $(DESTDIR)$(configdir)/$$p; \
++	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(datadir)/examples/fontconfig/$$p"; \
++	    $(INSTALL_DATA) $$p $(DESTDIR)$(datadir)/examples/fontconfig/$$p; \
+ 	  fi; fi; \
+ 	done
  
-+# Override CONFDIR in Makedefs, so we can install templates in EGDIR.
-+CONFDIR = @datadir@/examples/fontconfig
-+
- DIRS          = src fc-cache fc-list fontconfig
+@@ -465,16 +465,15 @@ mostlyclean distclean maintainer-clean
  
- all install clean::
+ 
+ install-data-local:
+-	if [ -f $(DESTDIR)$(configdir)/local.conf ]; then \
+-	  echo "not overwriting existing $(DESTDIR)$(configdir)/local.conf"; \
++	if [ -f $(DESTDIR)$(datadir)/examples/fontconfig/local.conf ]; then \
++	  echo "not overwriting existing $(DESTDIR)$(datadir)/examples/fontconfig/local.conf"; \
+ 	else if [ -f $(srcdir)/local.conf ]; then \
+-	  echo " $(INSTALL_DATA) $(srcdir)/local.conf $(DESTDIR)$(configdir)/local.conf"; \
+-	  $(INSTALL_DATA) $(srcdir)/local.conf $(DESTDIR)$(configdir)/local.conf; \
++	  echo " $(INSTALL_DATA) $(srcdir)/local.conf $(DESTDIR)$(datadir)/examples/fontconfig/local.conf"; \
++	  $(INSTALL_DATA) $(srcdir)/local.conf $(DESTDIR)$(datadir)/examples/fontconfig/local.conf; \
+ 	else if [ -f local.conf ]; then \
+-	  echo " $(INSTALL_DATA) local.conf $(DESTDIR)$(configdir)/local.conf"; \
+-	  $(INSTALL_DATA) local.conf $(DESTDIR)$(configdir)/local.conf; \
++	  echo " $(INSTALL_DATA) local.conf $(DESTDIR)$(datadir)/examples/fontconfig/local.conf"; \
++	  $(INSTALL_DATA) local.conf $(DESTDIR)$(datadir)/examples/fontconfig/local.conf; \
+ 	fi; fi; fi
+-	if [ x$(DESTDIR) = x ]; then fc-cache/fc-cache -f -v; fi
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
