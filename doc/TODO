@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.489 2003/04/22 19:07:43 jmmv Exp $
+$NetBSD: TODO,v 1.490 2003/04/23 11:57:54 mjl Exp $
 
 Suggested new packages
 ======================
@@ -182,7 +182,6 @@ Suggested package updates
 	o mrtg-2.9.29
 	o mtools-3.9.9
 	o multi-gnome-terminal-1.6.2
-	o multitail-1.9
 	o mysql-3.23.54
 	o napshare-1.2
 	o neon-0.23.9 [pkg/20987]
