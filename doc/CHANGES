@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3460 2003/09/19 21:33:21 jmmv Exp $
+$NetBSD: CHANGES,v 1.3461 2003/09/19 22:21:05 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3850,3 +3850,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated thttpd to 2.23.0.1nb1 [wiz 2003-09-19]
 	Updated epic4 to 1.1.12 [wiz 2003-09-19]
 	Updated centericq to 4.9.6nb1 [jmmv 2003-09-19]
+	Updated libgda to 1.0.0 [jmmv 2003-09-19]
+	Updated libgnomedb to 1.0.0 [jmmv 2003-09-19]
