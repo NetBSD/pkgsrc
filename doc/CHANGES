@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2366 2003/05/30 15:43:20 taca Exp $
+$NetBSD: CHANGES,v 1.2367 2003/05/30 15:57:29 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2211,3 +2211,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated suse_base to 7.3nb4 [taca 2003-05-30]
 	Updated suse_devel to 7.3nb2 [taca 2003-05-30]
 	Updated suse_freetype2 to 7.3nb1 [taca 2003-05-30]
+	Updated gnome-dirs to 1.2 [jmmv 2003-05-30]
+	Updated gnome1-dirs to 1.2 [jmmv 2003-05-30]
+	Updated gnome2-dirs to 1.2 [jmmv 2003-05-30]
