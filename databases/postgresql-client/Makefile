@@ -1,34 +1,22 @@
-# $NetBSD: Makefile,v 1.13 2002/08/25 21:49:36 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/19 03:03:50 jlam Exp $
 
 PKGNAME=		postgresql-client-${BASE_VERS}
 COMMENT=		PostgreSQL database client programs
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK2=		# defined
 
 .include "../../databases/postgresql/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--enable-readline
 MAKE_ENV+=		INSTALLED_LIBPQ=1
 
-DIRS_TO_BUILD=		src/bin
+BUILD_DIRS=		${WRKSRC}/src/bin
 
 pre-build:
 	cd ${WRKSRC}/src/bin/psql &&					\
 		${RM} -f pqsignal.h &&					\
 		${LN} -sf ../../interfaces/libpq/pqsignal.h pqsignal.h
-
-do-build:
-.for DIR in ${DIRS_TO_BUILD}
-	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${ALL_TARGET}
-.endfor
-
-do-install:
-.for DIR in ${DIRS_TO_BUILD}
-	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${INSTALL_TARGET}
-.endfor
 
 post-install:
 	${SED} -e "s|^#.*||" ${FILESDIR}/exclude			\
@@ -37,4 +25,5 @@ post-install:
 .include "../../databases/postgresql-lib/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
