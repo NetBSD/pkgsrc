@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/28 17:50:41 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/17 18:13:53 jlam Exp $
 
 DISTNAME=	db-3.2.9
 PKGNAME=	java-db3-2.9
@@ -12,9 +12,9 @@ COMMENT=	Java interface to Sleepycat Software's Berkeley DB version 3
 DEPENDS+=	db3-2.9:../../databases/db3
 
 USE_JAVA=		yes
-JDK_HOME=		${JAVA_HOME}
-JAVAC=			${JDK_HOME}/bin/javac
-JAR=			${JDK_HOME}/bin/jar
+JDK_BASE=		${JAVA_HOME}
+JAVAC=			${JDK_BASE}/bin/javac
+JAR=			${JDK_BASE}/bin/jar
 JAVACABS=		${JAVAC}
 
 USE_BUILDLINK_ONLY=	yes
@@ -38,8 +38,8 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
 .include "../../mk/bsd.pkg.mk"
 
 .if ${PKG_JVM} == "jdk"
-CPPFLAGS+=		-I${JDK_HOME}/include/netbsd
+CPPFLAGS+=		-I${JDK_BASE}/include/netbsd
 .elif ${PKG_JVM} == "sun-jdk"
-JDK_HOME=		${LOCALBASE}/java
-CPPFLAGS+=		-I${JDK_HOME}/include/linux
+JDK_BASE=		${LOCALBASE}/java
+CPPFLAGS+=		-I${JDK_BASE}/include/linux
 .endif
