@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5445 2004/04/05 05:06:52 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5446 2004/04/05 09:59:09 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1530,6 +1530,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated naim to 0.11.6.7 [snj 2004-03-28]
 	Updated djbdns to 1.05nb4 [taca 2004-03-28]
 	Updated ntp4 to 4.2.0nb3 [xtraeme 2004-03-28]
+	Added epydoc-2.0 [darcy 2004-03-28]
 	Updated zsh to 4.2.0 [recht 2004-03-28]
 	Removed zsh-4.1.1 [uebayasi 2004-03-28]
 	Updated tcl-fbsql to 1.06 [minskim 2004-03-28]
