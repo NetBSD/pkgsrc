@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2004/12/03 13:37:48 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.28 2005/01/11 22:26:01 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/08 09:21:37 tg Exp
 #
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	ftp://ic.eecs.berkeley.edu/pub/Spice3/
 EXTRACT_SUFX=   .tar.Z
@@ -13,12 +13,14 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://bwrc.eecs.berkeley.edu/Classes/IcBook/SPICE/
 COMMENT=	General-purpose circuit simulation program
 
-BUILDLINK_DEPENDS.readline=	readline>=4.0
 
 WRKSRC=			${WRKDIR}
 USE_BUILDLINK3=		yes
 USE_X11=		# defined
-USE_GNU_READLINE=	uses rl_* interface
+# GPL license used by GNU readline is not compatible
+# with 4 clause BSD license used by spice.
+#BUILDLINK_DEPENDS.readline=	readline>=4.0
+#USE_GNU_READLINE=	uses rl_* interface
 
 # documentation in ftp://ic.eecs.berkeley.edu/pub/Spice3/um.3f3.ps
 
@@ -64,5 +66,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/spice3
 	${INSTALL_DATA} ${WRKSRC}/examples/*.cir ${PREFIX}/share/examples/spice3
 
-.include "../../devel/readline/buildlink3.mk"
+#.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
