@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/19 12:02:20 bad Exp $
+libexec/bozohttpd
+man/cat8/bozohttpd.0
+man/man8/bozohttpd.8
