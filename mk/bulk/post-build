@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.40 2004/03/22 21:54:48 jschauma Exp $
+# $NetBSD: post-build,v 1.41 2004/03/28 20:35:29 agc Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -467,7 +467,7 @@ EOHTML
 
 	if ($verbose) {
 		print "\n\n$ADMINSIG\n\n";
-		print "[* This message was created automatically! *]\n";
+		print "[* This message was created by the Packages Collection bulk build software *]\n";
 	}
 }
 
