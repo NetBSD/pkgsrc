@@ -1,0 +1,10 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/11/01 16:25:09 hubertf Exp $
+
+--- utils/kill_mgl.sh.orig	Thu Aug 31 21:06:51 2000
++++ utils/kill_mgl.sh	Wed Nov  1 14:44:50 2000
+@@ -1,4 +1,4 @@
+-PID=`ps ax |grep mglsvr |grep -v grep |awk '{print $1}'`
++PID=`ps ax |grep mglsvrcons |grep -v grep |awk '{print $1}'`
+ 
+ kill  -HUP $PID
+ 
