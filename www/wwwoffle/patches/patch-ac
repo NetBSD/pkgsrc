@@ -1,8 +1,24 @@
-$NetBSD: patch-ac,v 1.1 2001/08/14 04:51:46 fredb Exp $
+$NetBSD: patch-ac,v 1.2 2001/08/16 04:23:46 fredb Exp $
 
---- sockets6.c.orig	Mon Aug 13 23:16:47 2001
+--- sockets6.c.orig	Thu Jun 28 13:48:36 2001
 +++ sockets6.c
-@@ -507,9 +507,12 @@
+@@ -81,7 +81,6 @@
+     if(errno!=ETIMEDOUT)
+        errno=ERRNO_USE_GAI_ERRNO;
+     PrintMessage(Warning,"Unknown host '%s' for server [%!s].",host);
+-    freeaddrinfo(server);
+     return(-1);
+    }
+ 
+@@ -144,7 +143,6 @@
+     if(errno!=ETIMEDOUT)
+        errno=ERRNO_USE_GAI_ERRNO;
+     PrintMessage(Warning,"Unknown host '%s' for server [%!s].",NULL);
+-    freeaddrinfo(server);
+     return(-1);
+    }
+ 
+@@ -507,9 +505,12 @@
   struct sigaction action;
   static char _host[NI_MAXHOST],_ip[46],_port[12];
  
