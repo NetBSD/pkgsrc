@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1998/10/03 23:52:02 hubertf Exp $
+# $NetBSD: Makefile,v 1.25 1998/10/04 00:11:36 tv Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -38,7 +38,6 @@ do-install:
 	( ${ECHO} '# (This file is not part of the pine distribution! - HF)' ; \
 	  ${PREFIX}/bin/pine -conf ) | ${SED} \
 	    -e 's|^\(use-only-domain-name\)=.*$$|\1=No|g' \
-	    -e 's|^\(mail-directory\)=.*$$|\1=~/Mail|g' \
 	    -e 's|^\(feature-list\)=.*$$|\1=enable-mail-check-cue,enable-suspend,expanded-view-of-addressbooks,include-header-in-reply,include-text-in-reply,show-selected-in-boldface,signature-at-bottom|g' \
 	    -e 's|^\(sort-key\)=.*$$|\1=Arrival/Reverse|g' \
 	    >${PREFIX}/etc/pine.conf
