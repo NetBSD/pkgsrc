@@ -3,7 +3,7 @@
 # Date created:		5 December 1996
 # Whom:			Bernd Rosauer <br@schiele-ct.de>
 #
-# $NetBSD: Makefile,v 1.5 1998/01/24 22:42:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/03/02 20:13:00 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -45,7 +45,8 @@ INSTALL_INFO=	${PREFIX}/bin/install-info
 pre-install:
 	@${RM} -f ${PREFIX}/share/texmf/ls-R
 	@chown -R bin:bin ${WRKLIB}/info ${WRKLIB}/man
-	@${RM} -f ${WRKLIB}/info/dir ${WRKLIB}/info/localdir ${WRKLIB}/info/*.orig
+	@${RM} -f ${WRKLIB}/info/dir ${WRKLIB}/info/localdir \
+		 ${WRKLIB}/info/*.orig ${WRKLIB}/info/README
 	@chmod 444 ${WRKLIB}/info/* ${WRKLIB}/man/man1/* ${WRKLIB}/man/man5/*
 	@find ${WRKLIB}/texmf/fonts -type d -perm 1755 -exec chmod 755 {} \;
 	@ (cd ${WRKLIB}; tar cf - info man/man1 man/man5) | (cd ${PREFIX}; tar --unlink -xpf -)
@@ -57,6 +58,7 @@ post-install:
 	${INSTALL_INFO} ${PREFIX}/info/kpathsea.info ${PREFIX}/info/dir
 	${INSTALL_INFO} ${PREFIX}/info/dvips.info ${PREFIX}/info/dir
 	${INSTALL_INFO} ${PREFIX}/info/fontname.info ${PREFIX}/info/dir
+	@chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/texmf
 	@find ${PREFIX}/share/texmf/fonts/pk ${PREFIX}/share/texmf/fonts/tfm \
 		-type d -print | xargs chmod 1777
 	@${SETENV} PREFIX=${PREFIX} ${SH} ${PKGDIR}/INSTALL
