@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.8 2004/06/28 13:21:48 ben Exp $
+$NetBSD: distinfo,v 1.9 2005/02/23 20:39:43 agc Exp $
 
 SHA1 (csound-manual-4.23nb2/manual-html-4.23.tar.gz) = 114c4155ae5de4260827f7f0d9342c3b200a171f
+RMD160 (csound-manual-4.23nb2/manual-html-4.23.tar.gz) = 47008c7bd4437ddfd7739f1795a631bc94234d5b
 Size (csound-manual-4.23nb2/manual-html-4.23.tar.gz) = 1762467 bytes

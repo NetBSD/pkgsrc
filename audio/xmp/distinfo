@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2004/05/16 17:11:30 danw Exp $
+$NetBSD: distinfo,v 1.7 2005/02/23 20:39:56 agc Exp $
 
 SHA1 (xmp-2.0.4.tar.bz2) = 35c1578f2f6728aa2ec92f34ada050e328694167
+RMD160 (xmp-2.0.4.tar.bz2) = c1c0c3af63d1f3e43fe6b47ca55725e0922fe2f1
 Size (xmp-2.0.4.tar.bz2) = 314820 bytes
 SHA1 (patch-aa) = e5ce08ae036f947c2486dcf5def72bc0a65a6600
 SHA1 (patch-ab) = 9d4732f57cf045a3904b8d9627ccb866d39e0fb0

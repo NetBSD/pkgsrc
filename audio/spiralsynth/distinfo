@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/11/25 17:24:27 ben Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 20:39:52 agc Exp $
 
 SHA1 (SpiralSynth-2.0.0.tar.gz) = ea42c5b7710237139f5281cf0c4ca155c184c4cd
+RMD160 (SpiralSynth-2.0.0.tar.gz) = c05f38a9ae8b8b87f520c11854631e6dfa00c034
 Size (SpiralSynth-2.0.0.tar.gz) = 66263 bytes
 SHA1 (patch-aa) = 4555f5a2d61980d1a19c7fdddaf3671ef86ea9ef
 SHA1 (patch-ab) = 49ea69a000b68c3c6ec07fefa9f1e2a415abb0f0
