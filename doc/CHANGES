@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6984 2004/08/23 21:17:06 recht Exp $
+$NetBSD: CHANGES,v 1.6985 2004/08/23 23:37:14 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4032,3 +4032,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated fidogate to 4.4.9nb1 [tv 2004-08-23]
 	Updated sudo to 1.6.8 [xtraeme 2004-08-23]
 	Added nget-0.27 [recht 2004-08-23]
+	Updated libmatroska to 0.7.3 [salo 2004-08-23]
+	Updated mkvtoolnix to 0.9.5 [salo 2004-08-23]
+	Updated mmg to 0.9.5 [salo 2004-08-23]
