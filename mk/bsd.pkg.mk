@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1583 2005/02/11 16:15:53 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1584 2005/02/11 16:36:49 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -20,11 +20,6 @@
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.hacks.mk"
-
-##### Pass information about desired toolchain to package build.
-MAKE_ENV+=	MAKECONF=${PKGMAKECONF:U/dev/null}
-MAKE_ENV+=	OBJECT_FMT=${OBJECT_FMT:Q}
-MAKE_ENV+=	${USETOOLS:DUSETOOLS=${USETOOLS:Q}}
 
 # This has to come first to avoid showing all BUILD_DEFS added by this
 # Makefile, which are usually not customizable.
@@ -173,6 +168,60 @@ ${_var_}+=	${${_var_}.*}
 .  endif
 .endfor
 
+CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
+ 
+.if !empty(USE_BUILDLINK3:M[nN][oO])
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib
+.endif
+
+ALL_ENV+=	CC=${CC:Q}
+ALL_ENV+=	CFLAGS=${CFLAGS:Q}
+ALL_ENV+=	CPPFLAGS=${CPPFLAGS:Q}
+ALL_ENV+=	CXX=${CXX:Q}
+ALL_ENV+=	CXXFLAGS=${CXXFLAGS:Q}
+ALL_ENV+=	COMPILER_RPATH_FLAG=${COMPILER_RPATH_FLAG:Q}
+ALL_ENV+=	F77=${F77:Q}
+ALL_ENV+=	FC=${FC:Q}
+ALL_ENV+=	FFLAGS=${FFLAGS:Q}
+ALL_ENV+=	LDFLAGS=${LDFLAGS:Q}
+ALL_ENV+=	LINKER_RPATH_FLAG=${LINKER_RPATH_FLAG:Q}
+ALL_ENV+=	PATH=${PATH:Q}:${LOCALBASE}/bin:${X11BASE}/bin
+ALL_ENV+=	PREFIX=${PREFIX}
+
+MAKE_ENV+=	${ALL_ENV}
+MAKE_ENV+=	${NO_EXPORT_CPP:D:UCPP=${CPP:Q}}
+MAKE_ENV+=	LINK_ALL_LIBGCC_HACK=${LINK_ALL_LIBGCC_HACK:Q}
+MAKE_ENV+=	LOCALBASE=${LOCALBASE}
+MAKE_ENV+=	NO_WHOLE_ARCHIVE_FLAG=${NO_WHOLE_ARCHIVE_FLAG:Q}
+MAKE_ENV+=	WHOLE_ARCHIVE_FLAG=${WHOLE_ARCHIVE_FLAG:Q}
+MAKE_ENV+=	X11BASE=${X11BASE}
+MAKE_ENV+=	X11PREFIX=${X11PREFIX}
+
+# Constants to provide a consistent environment for packages using
+# BSD-style Makefiles.
+MAKE_ENV+=	MAKECONF=${PKGMAKECONF:U/dev/null}
+MAKE_ENV+=	OBJECT_FMT=${OBJECT_FMT:Q}
+MAKE_ENV+=	${USETOOLS:DUSETOOLS=${USETOOLS:Q}}
+
+SCRIPTS_ENV+=	${ALL_ENV}
+SCRIPTS_ENV+=	_PKGSRCDIR=${_PKGSRCDIR}
+SCRIPTS_ENV+=	${BATCH:DBATCH=yes}
+SCRIPTS_ENV+=	CURDIR=${.CURDIR}
+SCRIPTS_ENV+=	DEPENDS=${DEPENDS:Q}
+SCRIPTS_ENV+=	DISTDIR=${DISTDIR}
+SCRIPTS_ENV+=	FILESDIR=${FILESDIR}
+SCRIPTS_ENV+=	LOCALBASE=${LOCALBASE}
+SCRIPTS_ENV+=	PATCHDIR=${PATCHDIR}
+SCRIPTS_ENV+=	PKGSRCDIR=${PKGSRCDIR}
+SCRIPTS_ENV+=	SCRIPTDIR=${SCRIPTDIR}
+SCRIPTS_ENV+=	VIEWBASE=${VIEWBASE}
+SCRIPTS_ENV+=	WRKDIR=${WRKDIR}
+SCRIPTS_ENV+=	WRKSRC=${WRKSRC}
+SCRIPTS_ENV+=	X11BASE=${X11BASE}
+
+CONFIGURE_ENV+=	${ALL_ENV}
+
 # Store the result in the +BUILD_INFO file so we can query for the build
 # options using "pkg_info -Q PKG_OPTIONS <pkg>".
 #
@@ -271,8 +320,6 @@ _ULIMIT_CMD+=	${ULIMIT_CMD_${__tmp__}} ;
 .  endfor
 .endif
 
-CPPFLAGS+=		${CPP_PRECOMP_FLAGS}
-
 # If GNU_CONFIGURE is defined, then pass LIBS to the GNU configure script.
 # also pass in a CONFIG_SHELL to avoid picking up bash
 .if defined(GNU_CONFIGURE)
@@ -302,44 +349,7 @@ SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
 
 LIBABISUFFIX?=
 
-.if !empty(USE_BUILDLINK3:M[nN][oO])
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
-LDFLAGS+=		-L${LOCALBASE}/lib
-.endif
-MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
-MAKE_ENV+=		LINKER_RPATH_FLAG="${LINKER_RPATH_FLAG}"
-MAKE_ENV+=		COMPILER_RPATH_FLAG="${COMPILER_RPATH_FLAG}"
-MAKE_ENV+=		WHOLE_ARCHIVE_FLAG="${WHOLE_ARCHIVE_FLAG}"
-MAKE_ENV+=		NO_WHOLE_ARCHIVE_FLAG="${NO_WHOLE_ARCHIVE_FLAG}"
-MAKE_ENV+=		LINK_ALL_LIBGCC_HACK="${LINK_ALL_LIBGCC_HACK}"
-
-CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS:M*}" M4="${M4}" YACC="${YACC}"
-CONFIGURE_ENV+=		LINKER_RPATH_FLAG="${LINKER_RPATH_FLAG}"
-CONFIGURE_ENV+=		COMPILER_RPATH_FLAG="${COMPILER_RPATH_FLAG}"
-
-MAKE_ENV+=		PATH=${PATH:Q}
-MAKE_ENV+=		PREFIX=${PREFIX} LOCALBASE=${LOCALBASE}
-MAKE_ENV+=		X11BASE=${X11BASE} CFLAGS="${CFLAGS}"
-MAKE_ENV+=		CPPFLAGS="${CPPFLAGS}" FFLAGS="${FFLAGS}"
-MAKE_ENV+=		X11PREFIX=${X11PREFIX}
-.if defined(CC)
-MAKE_ENV+=		CC="${CC}"
-.endif
-.if defined(CXX)
-MAKE_ENV+=		CXX="${CXX}"
-.endif
-.if defined(CPP) && !defined(NO_EXPORT_CPP)
-MAKE_ENV+=		CPP="${CPP}"
-.endif
-.if defined(CXXFLAGS)
-MAKE_ENV+=		CXXFLAGS="${CXXFLAGS}"
-.endif
-.if defined(F77)
-MAKE_ENV+=		F77="${F77}"
-.endif
-.if defined(FC)
-MAKE_ENV+=		FC="${FC}"
-.endif
+CONFIGURE_ENV+=		M4="${M4}" YACC="${YACC}"
 
 TOUCH_FLAGS?=		-f
 
@@ -836,8 +846,6 @@ PKG_FAIL_REASON+='Please "${MAKE} install" in ../../pkgtools/shlock.'
 . endif
 .endif
 
-CONFIGURE_ENV+=		PATH=${PATH:Q}
-
 .if defined(GNU_CONFIGURE)
 #
 # GNU_CONFIGURE_PREFIX is the argument to the --prefix option passed to the
@@ -908,22 +916,8 @@ PKG_SYSCONFBASEDIR=	${PKG_SYSCONFDIR.${PKG_SYSCONFVAR}}
 PKG_SYSCONFDEPOTBASE=	# empty
 .endif
 
-CONFIGURE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
-MAKE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
+ALL_ENV+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
-
-# Passed to most of script invocations
-SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR}			\
-	PATH=${PATH:Q}							\
-	WRKDIR=${WRKDIR} WRKSRC=${WRKSRC} PATCHDIR=${PATCHDIR}		\
-	SCRIPTDIR=${SCRIPTDIR} FILESDIR=${FILESDIR}			\
-	_PKGSRCDIR=${_PKGSRCDIR} PKGSRCDIR=${PKGSRCDIR} DEPENDS="${DEPENDS}" \
-	PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}	\
-	VIEWBASE=${VIEWBASE}
-
-.if defined(BATCH)
-SCRIPTS_ENV+=	BATCH=yes
-.endif
 
 # If NO_BUILD is defined, default to not needing a compiler.
 .if defined(NO_BUILD)
@@ -2090,8 +2084,7 @@ do-configure:
 .  if defined(HAS_CONFIGURE)
 .    for DIR in ${CONFIGURE_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} \
-	    AWK="${AWK}" CC="${CC}" CFLAGS="${CFLAGS:M*}" CPPFLAGS="${CPPFLAGS:M*}" \
-	    CXX="${CXX}" CXXFLAGS="${CXXFLAGS:M*}" FC="${FC}" F77="${FC}" FFLAGS="${FFLAGS:M*}" \
+	    AWK="${AWK}" \
 	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
 	    ac_given_INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
 	    INSTALL_DATA="${INSTALL_DATA}"				\
