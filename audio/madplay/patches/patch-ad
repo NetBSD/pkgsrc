@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1 2000/11/23 19:37:14 pooka Exp $
+
+--- player.c.orig	Thu Nov 16 12:51:04 2000
++++ player.c	Wed Nov 22 13:38:04 2000
+@@ -243,6 +243,9 @@
+ 	input->data = 0;
+ 	return MAD_FLOW_BREAK;
+       }
++#ifdef __NetBSD__
++      madvise(input->fdm, stat.st_size, MADV_SEQUENTIAL);
++#endif
+ 
+       input->data   = input->fdm;
+       input->length = stat.st_size;
+@@ -709,6 +712,9 @@
+ 	error("decode", ":mmap");
+ 	return -1;
+       }
++#ifdef __NetBSD__
++      madvise(player->input.fdm, stat.st_size, MADV_SEQUENTIAL);
++#endif
+ 
+       player->input.data   = player->input.fdm;
+       player->input.length = stat.st_size;
