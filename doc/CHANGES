@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9031 2005/02/04 22:19:04 adrianp Exp $
+$NetBSD: CHANGES,v 1.9032 2005/02/04 22:24:23 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -747,3 +747,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated bibtex2html to 1.7.4 [adrianp 2005-02-04]
 	Updated camlimages to 2.2.0 [adrianp 2005-02-04]
 	Updated geneweb to 4.10 [adrianp 2005-02-04]
+	Updated hevea to 1.07 [adrianp 2005-02-04]
