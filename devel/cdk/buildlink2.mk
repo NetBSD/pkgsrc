@@ -1,9 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/06/23 23:04:10 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/24 06:01:06 jlam Exp $
 
 .if !defined(CDK_BUILDLINK2_MK)
 CDK_BUILDLINK2_MK=     # defined
 
-BUILDLINK_PACKAGES+=	cdk
+BUILDLINK_DEPENDS.cdk?=		cdk>=4.9.6
+BUILDLINK_PKGSRCDIR.cdk?=	../../devel/cdk
 
 .if defined(USE_CDK)
 _NEED_CDK=		YES
@@ -14,9 +15,7 @@ _NEED_CDK=		YES
 .endif
 
 .if ${_NEED_CDK} == "YES"
-BUILDLINK_DEPENDS.cdk?=		cdk>=4.9.6
-BUILDLINK_PKGSRCDIR.cdk?=	../../devel/cdk
-
+BUILDLINK_PACKAGES+=		cdk
 EVAL_PREFIX+=			BUILDLINK_PREFIX.cdk=cdk
 BUILDLINK_PREFIX.cdk_DEFAULT=	${LOCALBASE}
 .else
