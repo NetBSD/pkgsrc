@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.10 2000/05/31 22:12:09 tron Exp $
+$NetBSD: patch-aa,v 1.11 2000/10/27 03:22:50 tron Exp $
 
---- Makefile.orig	Wed May 31 17:46:15 2000
-+++ Makefile	Thu Jun  1 00:03:54 2000
+--- Makefile.orig	Wed Oct 11 14:11:07 2000
++++ Makefile	Fri Oct 27 05:14:48 2000
 @@ -1,8 +1,8 @@
- # Makefile for analog 4.11
+ # Makefile for analog 4.13
  # Please read docs/Readme.html, or http://www.analog.cx/
 -CC = gcc           # which compiler to use: eg cc, acc, gcc. NB Different
 +#CC = gcc           # which compiler to use: eg cc, acc, gcc. NB Different
@@ -13,14 +13,14 @@ $NetBSD: patch-aa,v 1.10 2000/05/31 22:12:09 tron Exp $
  #                    HP/UX cc requires CEXTRAFLAGS = -Aa (HP/UX 9) or ...
  #                    -Ae (HP/UX 10);       BS2000/OSD requires -XLLML -XLLMK;
  #                    NeXTSTEP apparently needs...
-@@ -24,15 +24,26 @@
+@@ -26,15 +26,26 @@
  #              SVR4 requires LIBS = -lsocket -lnsl
  #              DYNIX/ptx requires LIBS = -L/usr/lib/bsd-socket -lsocket -lnsl
  
 +OPSYS!= uname -s
 +
 +.if ${OPSYS} == "SunOS"
-+LIBS+= -lsocket -lnsl
++LIBS+=	-lsocket -lnsl
 +.endif
 +
 +DEFS =	-DANALOGDIR=\"${PREFIX}/lib/analog/\" \
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.10 2000/05/31 22:12:09 tron Exp $
 +CFLAGS += $(DEFS) -D$(OS)
  
  $(PROGRAM): $(OBJS) $(HEADERS) Makefile
--	$(CC) $(CEXTRAFLAGS) $(OBJS) -o $(PROGRAM) $(LIBS)
+-	$(CC) $(CEXTRAFLAGS) -o $(PROGRAM) $(OBJS) $(LIBS)
 +	$(CC) $(OBJS) -o $(PROGRAM) $(LIBS)
  	@echo '***'
  	@echo '***IMPORTANT: You must read the licence before using analog'

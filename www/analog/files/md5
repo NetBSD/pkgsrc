@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.13 2000/05/31 22:12:08 tron Exp $
+$NetBSD: md5,v 1.14 2000/10/27 03:22:50 tron Exp $
 
-MD5 (analog-4.11.tar.gz) = 1eb98a1c2f44f3a846b27e257a458e4a
+MD5 (analog-4.13.tar.gz) = d1e2d335688d76e4206242dd0102a2fc
