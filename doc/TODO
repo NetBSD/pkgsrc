@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.653 2003/06/23 19:07:12 kristerw Exp $
+$NetBSD: TODO,v 1.654 2003/06/24 07:03:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -80,7 +80,7 @@ Suggested package updates
 	o biew-5.5.0
 	o bind-8.4.0
 	o binutils-2.14
-	o boehm-gc-6.2alpha6
+	o boehm-gc-6.2alpha6 [pkg/21950]
 	o bogofilter-0.11.2
 	o bzflag-1.7g0
 	o centericq-4.9.4
@@ -94,9 +94,11 @@ Suggested package updates
 	o cvs-1.11.6
 	o ddd-3.3.5
 	o disc-cover-1.5.2
+	o dmalloc-5.2.0 [pkg/21951]
 	o dopewars-1.5.9
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
+	o echoping-5.0.1
 	o elm-me-2.4pl102
 	o ettercap-0.6.a
 	o evolution-1.4
@@ -106,7 +108,7 @@ Suggested package updates
 	o findutils-4.1.7
 	o fltk-1.1.3
 	o foomatic-2.9.1 [jlam]
-	o fox-1.0.40
+	o fox-1.0.42
 	o fsviewer-0.2.5
 	o gabber-0.8.8
 	o gauche-0.7 [kei]
@@ -132,11 +134,11 @@ Suggested package updates
 	o gnomeicu-0.99
 	o gnucash-1.8.4
 	o gnuchess-5.06
-	o gnustep-0.8.6
+	o gnustep-0.8.7
 	o gpa-0.6.1
 	o gq-0.6.0 [pkg/21284]
 	o grace-5.1.12
-	o gtetrinet-0.7.2
+	o gtetrinet-0.7.3
 	o gtk-gnutella-0.92 [pkg/21551]
 	o gtkglext-1.0.0
 	o gtkmm-2.2.2
@@ -149,11 +151,12 @@ Suggested package updates
 	o inform-6.21.3 [pkg/19298]
 	o inform-6.21.4 [pkg/21934]
 	o inn-2.4.0
-	o iozone-3.181
+	o iozone-3.185
 	o jakarta-tomcat-3.3.1a
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o jove-4.16.0.58 [pkg/19924]
 	o jove-4.16.0.61
+	o kdbg-1.2.8
 	o lcms-1.0.9
 	o leafnode-1.9.41
 	o lesstif-0.93.41
@@ -184,12 +187,14 @@ Suggested package updates
 	o mysql-3.23.54
 	o nap-1.5.2
 	o napshare-1.2
+	o neon-0.24.0
+	o neon-0.24.0
 	o net-snmp-5.0.7 [pkg/19939]
 	o net-snmp-5.0.8
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
 	o ns-flash-6.0.79
-	o nut-8.8
+	o nut-8.9
 	o openh323-1.11.2
 	o openldap-2.1.20 [pkg/21682]
 	o openoffice-1.0.3.1 [skrll]
@@ -208,7 +213,7 @@ Suggested package updates
 	o postgresql-7.3.3
 	o povray-3.5
 	o proftpd-1.2.9rc1
-	o pureftpd-1.0.15
+	o pureftpd-1.0.15 [pkg/21941]
 	o py-soappy-0.10.1 [pkg/21735]
 	o pygtk-0.6.11
 	o qvwm-1.1.12 [pkg/21935]
@@ -234,10 +239,12 @@ Suggested package updates
 	o snd-6.7
 	o snes9x-1.39a
 	o soappy-0.9.8 [pkg/20787]
+	o spread-3.17.1 [pkg/21949]
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
 	o stella-1.3
+	o subversion-0.24.2
 	o sun-jdk14-1.4.2
 	o sun-jre14-1.4.2
 	o swig-1.3.17 [epg]
@@ -267,11 +274,13 @@ Suggested package updates
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.2.0
 	o xmms-crossfade-0.3.2
+	o xmule-1.4.1 [pkg/21940]
 	o xosview-1.8.0 [pkg/20265]
 	o xpaint-2.7.0
 	o xplanet-1.0.0
 	o xps-4.2
 	o xpuyopuyo-0.9.5
+	o xscreensaver-4.11
 	o xsidplay-1.6.5pre20
 	o yacas-1.0.55
 	o yasm-0.2.2 [pkg/21850]
