@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.692 2001/03/20 12:39:00 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.693 2001/03/21 12:12:25 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -554,7 +554,6 @@ ID?=		/usr/xpg4/bin/id
 IDENT?=		${LOCALBASE}/bin/ident
 LDCONFIG?=	/usr/bin/true
 LN?=		/usr/bin/ln
-PKGLOCALEDIR?=	lib
 LS?=		/usr/bin/ls
 MKDIR?=		/usr/bin/mkdir -p
 MTREE?=		${LOCALBASE}/bsd/bin/mtree
@@ -565,6 +564,7 @@ PATCH?=		/usr/bin/gpatch -b
 PATCH?=		${LOCALBASE}/bin/patch -b
 .endif
 PAX?=		/bin/pax
+PKGLOCALEDIR?=	lib
 RM?=		/usr/bin/rm
 RMDIR?=		/usr/bin/rmdir
 SED?=		/usr/bin/sed
@@ -603,13 +603,13 @@ ID?=		/usr/bin/id
 IDENT?=		/usr/bin/ident
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
-PKGLOCALEDIR?=	share
 LS?=		/bin/ls
 MKDIR?=		/bin/mkdir -p
 MTREE?=		${LOCALBASE}/bsd/bin/mtree
 MV?=		/bin/mv
 PATCH?=		/usr/bin/patch
 PAX?=		/usr/local/bsd/bin/pax
+PKGLOCALEDIR?=	share
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
 SED?=		/bin/sed
@@ -648,13 +648,13 @@ ID?=		/usr/bin/id
 IDENT?=		/usr/bin/ident
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
-PKGLOCALEDIR?=	share
 LS?=		/bin/ls
 MKDIR?=		/bin/mkdir -p
 MTREE?=		/usr/sbin/mtree
 MV?=		/bin/mv
 PATCH?=		/usr/bin/patch
 PAX?=		/bin/pax
+PKGLOCALEDIR?=	share
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
 SED?=		/usr/bin/sed
