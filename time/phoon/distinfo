@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/11/10 19:53:46 is Exp $
+
+SHA1 (phoon_01apr95.tar.gz) = b0e81c9cd6f1d332bc25340c12e1f0fcc274c8b5
+Size (phoon_01apr95.tar.gz) = 15769 bytes
+SHA1 (patch-aa) = 0f449ed1994d54cea9db0d727c646ff03b94e4fc

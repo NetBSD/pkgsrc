@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1 2001/11/10 19:53:46 is Exp $
+diff -r -u phoon.orig/Makefile Makefile
+--- phoon.orig/Makefile	Sat Nov 11 20:57:08 1995
++++ Makefile	Sat Nov 10 20:10:33 2001
+@@ -1,15 +1,15 @@
+ # Makefile for phoon
+ 
+-BINDIR =	/usr/local/bin
+-MANDIR =	/usr/local/man/man1
++BINDIR =	${PREFIX}/bin
++MANDIR =	${PREFIX}/man/man1
++
++INSTALL = install
+ 
+ DEFINES =	-DBSD
+ #DEFINES =	-DSYSV
+ 
+-CC =		gcc
+-CFLAGS =	-O $(DEFINES)
++CFLAGS +=	$(DEFINES)
+ 
+-LDFLAGS =	-s
+ 
+ 
+ all:		phoon
+@@ -21,10 +21,8 @@
+ 	$(CC) $(CFLAGS) -c $<
+ 
+ install:	all
+-	rm -f $(BINDIR)/phoon
+-	cp phoon $(BINDIR)
+-	rm -f $(MANDIR)/phoon.1
+-	cp phoon.1 $(MANDIR)
++	${BSD_INSTALL_PROGRAM} phoon $(BINDIR)
++	${BSD_INSTALL_MAN} phoon.1 $(MANDIR)
+ 
+ clean:
+ 	rm -f phoon *.o a.out core
