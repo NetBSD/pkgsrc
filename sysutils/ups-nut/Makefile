@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/11/25 18:59:48 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/11/26 20:38:32 jlam Exp $
 #
 
 DISTNAME=		nut-0.45.2
@@ -15,8 +15,8 @@ BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR}			\
-			--with-user=${PKG_USER}				\
-			--with-group=${PKG_GROUP}			\
+			--with-user=${NUT_USER}				\
+			--with-group=${NUT_GROUP}			\
 			--with-statepath=${NUT_STATEDIR}		\
 			--with-modelpath=${LOCALBASE}/sbin/ups-drivers
 
@@ -26,13 +26,14 @@ NUT_DOCDIR=		${PREFIX}/share/doc/nut
 NUT_EGDIR=		${PREFIX}/share/examples/nut
 NUT_STATEDIR=		/var/db/nut
 
+NUT_USER?=		nut
+NUT_GROUP?=		nut
+
 FILES_SUBST+=		NUT_CONFDIR=${NUT_CONFDIR}
 FILES_SUBST+=		NUT_STATEDIR=${NUT_STATEDIR}
 
-PKG_USER=		nut
-PKG_USER_DESCR=		Network UPS Tools
-PKG_USER_SHELL=		${SH}
-PKG_GROUP=		nut
+PKG_GROUPS=		${NUT_GROUP}
+PKG_USERS=		${NUT_USER}:${NUT_GROUP}::Network\\ UPS\\ Tools::${SH}
 
 CONF_FILES=	${NUT_EGDIR}/hosts.conf.sample ${NUT_CONFDIR}/hosts.conf
 CONF_FILES+=	${NUT_EGDIR}/multimon.conf.sample ${NUT_CONFDIR}/multimon.conf
@@ -52,7 +53,7 @@ CONF_FILES_PERMS+=	${NUT_EGDIR}/upsd.users.sample			\
 RCD_SCRIPTS=		ups upsd upsdriver upslog upsmon
 
 OWN_DIRS=		${NUT_CONFDIR}
-OWN_DIRS_PERMS=		${NUT_STATEDIR} ${PKG_USER} ${PKG_GROUP} 0770
+OWN_DIRS_PERMS=		${NUT_STATEDIR} ${NUT_USER} ${NUT_GROUP} 0770
 
 pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf --force
