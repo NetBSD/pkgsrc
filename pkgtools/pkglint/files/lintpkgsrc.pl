@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.1 1999/04/19 07:32:10 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.2 1999/04/19 07:36:43 abs Exp $
 
 # (Somewhat quickly) Written by David Brownlee <abs@anim.dreamworks.com>.
 # Caveats:
@@ -398,7 +398,7 @@ sub set_pkgsrcdir # Parse /etc/mk.conf (if present) for PKGSRCDIR
 
 sub usage_and_exit
     {
-    print "Usage: pkg_check [opts]
+    print "Usage: lintpkgsrc [opts]
 opts:	-d : Check each Makefile's 'DEPENDS' matches current pkgsrc versions.
 	-h : This help.
 	-i : Check versions of installed packages against pkgsrc.
