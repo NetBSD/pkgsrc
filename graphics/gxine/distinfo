@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/06 11:08:15 rh Exp $
+
+SHA1 (gxine-0.3.2.tar.gz) = 2d9db935f42a9ceee90f3d4d13dabfd3074afa8c
+Size (gxine-0.3.2.tar.gz) = 1062304 bytes
+SHA1 (patch-aa) = f44ea3e755465d1b2a52f254782eb8c9e28e9ee1
+SHA1 (patch-ab) = 581122a87dd3ea1a61b434ba721866efd3455ab6
+SHA1 (patch-ac) = da2834d8d5b5f1994d000203864f9e20ee3a51e0
+SHA1 (patch-ad) = 8084ae91ef7b6bb3cf4ab1e87e6efad32eb20ade
+SHA1 (patch-ae) = b9396a73eff4a4c1591af1095d015cce396a9c67
+SHA1 (patch-af) = 0bf58de7d5d3a50731d30623bc76732e8d2f771f
