@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.60 2001/03/27 03:20:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.61 2001/04/06 22:25:04 rh Exp $
 
-DISTNAME=		gnome-core-1.2.4
+DISTNAME=		gnome-core-1.4.0.1
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-core/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=stable/releases/gnome-1.4/}
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Base component of GNU Network Object Management Environment
 
 DEPENDS+=		gdk-pixbuf-gnome>=0.9.0nb1:../../graphics/gdk-pixbuf-gnome
-DEPENDS+=		libghttp>=1.0.4:../../www/libghttp
+DEPENDS+=		libghttp>=1.0.9:../../www/libghttp
 DEPENDS+=		libxml-*:../../textproc/libxml
 DEPENDS+=		xscreensaver-gnome>=3.25nb1:../xscreensaver-gnome
-BUILD_USES_MSGFMT=	yes
+DEPENDS+=		libglade>=0.14:../../devel/libglade
+DEPENDS+=		gtkhtml>=0.8.3:../../www/gtkhtml
 
+BUILD_USES_MSGFMT=	YES
 USE_LIBINTL=		YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
@@ -39,11 +41,11 @@ post-patch:
 	done
 
 post-install:
-	${RMDIR} ${PREFIX}/share/gnome/help/gnome-terminal/C/figures
-	${RMDIR} ${PREFIX}/share/gnome/help/gnome-terminal/da/figures
-	${RMDIR} ${PREFIX}/share/gnome/help/gnome-terminal/es/figures
-	${RMDIR} ${PREFIX}/share/gnome/help/gnome-terminal/it/figures
-	${RMDIR} ${PREFIX}/share/gnome/help/gnome-terminal/no/figures
-	${RMDIR} ${PREFIX}/share/gnome/help/session/C/figures
+.for prg in gnome-terminal gpl lgpl fdl
+.for lng in C da de es it no
+	[ ! -d ${PREFIX}/share/gnome/help/${prg}/${lng}/figures ] || \
+	${RMDIR} ${PREFIX}/share/gnome/help/${prg}/${lng}/figures
+.endfor
+.endfor
 
 .include "../../mk/bsd.pkg.mk"

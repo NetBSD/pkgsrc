@@ -1,6 +1,6 @@
-$NetBSD: patch-sum,v 1.18 2001/04/02 14:51:54 minoura Exp $
+$NetBSD: patch-sum,v 1.19 2001/04/06 22:25:04 rh Exp $
 
-MD5 (patch-aa) = 0212bb34df5c1458d2040701f0676db7
-MD5 (patch-ab) = d3502ab67db8dae7cf76e49d4528f7e2
-MD5 (patch-ag) = 3310214d715de1ca1366a0272ad64ae6
-MD5 (patch-aj) = a83b2b71980cc7695b376c93b3abc01b
+SHA1 (patch-aa) = 80c363f6ad23043a971843e9fdf6bfb950d8e65b
+SHA1 (patch-ab) = 3ebfdc6b16f10e0a27e3a91b967937272f4bb03a
+SHA1 (patch-ag) = 8b346044f65aca8e7147df56b54065f02bf42c00
+SHA1 (patch-aj) = a0afc1cc6c414e710e555112dccb945ded4c3251
