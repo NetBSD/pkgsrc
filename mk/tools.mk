@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.6 2003/08/16 23:49:27 grant Exp $
+# $NetBSD: tools.mk,v 1.7 2003/08/16 23:54:31 grant Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -131,7 +131,7 @@ _TOOLS_OPSYS_HAS_GNU.sed+=	Linux-*-*
 #
 _TOOLS_REPLACE_OPSYS.awk+=	SunOS-*-*
 _TOOLS_REPLACE_OPSYS.grep+=	SunOS-*-*
-_TOOLS_REPLACE_OPSYS.sed+=	# empty
+_TOOLS_REPLACE_OPSYS.sed+=	SunOS-*-*
 
 # These platforms have completely unusable versions of these tools, and
 # no suitable replacement is available.
