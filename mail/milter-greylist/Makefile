@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.2 2004/03/08 14:46:31 manu Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/25 16:57:48 manu Exp $
 #
 
-DISTNAME=	milter-greylist-0.12
+DISTNAME=	milter-greylist-1.0
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.espci.fr/pub/milter-greylist/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	manu@netbsd.rg
-COMMENT=	Greylist milter for sendmail
+HOMEPAGE=	http://hcpnet.free.fr/milter-greylist/
+COMMENT=	Easy-to-use greylist milter for sendmail
 
 USE_PKGINSTALL=	YES
 USE_BUILDLINK2= YES
 
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-user=smmsp --prefix=${PREFIX}
+ALL_TARGET=	milter-greylist
 
 PKG_GROUPS=	smmsp
 PKG_USERS=	smmsp:smmsp::Sendmail\\ Message\\ Submission\\ Program
