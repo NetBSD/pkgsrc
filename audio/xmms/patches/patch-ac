@@ -1,0 +1,36 @@
+*** xmms/eq_graph.c.org	Wed Feb  2 21:12:51 2000
+--- xmms/eq_graph.c	Wed Feb  2 21:13:07 2000
+***************
+*** 74,79 ****
+--- 74,87 ----
+  	gfloat x[] =
+  	{0, 11, 23, 35, 47, 59, 71, 83, 97, 109}, yf[10];
+  
++ 	/*
++ 	 * This avoids the init_spline() function to be inlined.
++ 	 * Inlining the function caused troubles when compiling with
++ 	 * `-O' (at least on FreeBSD).
++ 	 */
++ 	void (*__init_spline)(gfloat *, gfloat *, gint, gfloat *) =
++ 	    init_spline;
++ 
+  	src = get_skin_pixmap(SKIN_EQMAIN);
+  	obj = eg->eg_widget.parent;
+  	gdk_draw_pixmap(obj, eg->eg_widget.gc, src, 0, 294, eg->eg_widget.x, eg->eg_widget.y, eg->eg_widget.width, eg->eg_widget.height);
+***************
+*** 83,89 ****
+  		cols[i] = gdk_image_get_pixel(img, 0, i);
+  	gdk_image_destroy(img);
+  
+! 	init_spline(x, cfg.equalizer_bands, 10, yf);
+  	for (i = 0; i < 109; i++)
+  	{
+  		y = 9 - (gint) ((eval_spline(x, cfg.equalizer_bands, yf, 10, i) * 9.0) / 20.0);
+--- 91,97 ----
+  		cols[i] = gdk_image_get_pixel(img, 0, i);
+  	gdk_image_destroy(img);
+  
+! 	__init_spline(x, cfg.equalizer_bands, 10, yf);
+  	for (i = 0; i < 109; i++)
+  	{
+  		y = 9 - (gint) ((eval_spline(x, cfg.equalizer_bands, yf, 10, i) * 9.0) / 20.0);
