@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1998/06/12 20:41:54 tv Exp $
+# $NetBSD: Makefile,v 1.26 1998/06/15 10:25:24 tron Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -8,6 +8,8 @@ MASTER_SITES=		ftp://ftp.cs.hut.fi/pub/ssh/ \
 			ftp://ftp.funet.fi/pub/unix/security/login/ssh/
 
 MAINTAINER=		tron@netbsd.org
+
+CONFLICTS=		ssh-1.2.22 ssh-1.2.23
 
 RESTRICTED=		"Crypto; export-controlled"
 MIRROR_DISTFILE=	no
@@ -80,14 +82,6 @@ MAN8=		sshd.8 sshd1.8
 
 PKGDIR=		${WRKDIR}/pkg
 
-post-extract:
-	@${MKDIR} ${PKGDIR}
-.for FILE in COMMENT DEINSTALL DESCR MESSAGE PLIST
-	@${SED} -e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
-	  -e 's#@PREFIX@#${PREFIX}#g' \
-	  <${.CURDIR}/pkg/${FILE} >${PKGDIR}/${FILE}
-.endfor
-
 pre-patch:
 	@${MV} -f ${WRKSRC}/make-ssh-known-hosts.pl \
 	    ${WRKSRC}/make-ssh-known-hosts.pl.in
@@ -106,6 +100,18 @@ fetch-depends:
 	@${ECHO} configure options\; look at the pkg Makefile for more info.
 	@${FALSE}
 .endif
+
+post-extract:
+	@${MKDIR} ${PKGDIR}
+.for FILE in COMMENT DEINSTALL DESCR MESSAGE PLIST
+	@${SED} -e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
+	  -e 's#@PREFIX@#${PREFIX}#g' \
+	  <${.CURDIR}/pkg/${FILE} >${PKGDIR}/${FILE}
+.endfor
+	@if [ -f ${X11BASE}/include/X11/X.h ]; then \
+		${ECHO} bin/ssh-askpass >>${PKGDIR}/PLIST; \
+		${ECHO} bin/ssh-askpass1 >>${PKGDIR}/PLIST; \
+	fi
 
 post-build:
 	@${SED} -e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
