@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/10/08 14:50:52 taya Exp $
+# $NetBSD: Makefile,v 1.39 2002/11/05 08:22:31 simonb Exp $
 
 DISTNAME=	galeon-1.2.6
 CATEGORIES=	www
@@ -12,16 +12,18 @@ CONFLICTS=	galeon-current-[0-9]*
 
 BUILD_DEPENDS+=	xml-i18n-tools>=0.8.1:../../textproc/xml-i18n-tools
 
-USE_X11BASE=	yes
-USE_BUILDLINK2=	yes
-USE_GMAKE=	yes
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --with-mozilla-includes=${PREFIX}/include/mozilla \
-		 --with-mozilla-libs=${PREFIX}/lib/mozilla \
-		--with-libiconv=${LOCALBASE} \
-		--disable-applet \
-		--disable-werror \
-		--sysconfdir=${PREFIX}/etc
+USE_X11BASE=		yes
+USE_BUILDLINK2=		yes
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+USE_GMAKE=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-mozilla-includes=${PREFIX}/include/mozilla \
+			--with-mozilla-libs=${PREFIX}/lib/mozilla \
+			--with-libiconv=${LOCALBASE} \
+			--disable-applet \
+			--disable-werror \
+			--sysconfdir=${PREFIX}/etc
 # XXX to build against mozilla 1.1
 #CONFIGURE_ARGS+= --with-mozilla-snapshot=trunk
 
