@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/03/11 18:03:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2004/07/19 12:50:58 wiz Exp $
 #
 
-DISTNAME=	nulibdist
+DISTNAME=	nulibdist-200
 PKGNAME=	nulib2-2.0.0
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.nulib.com/downloads/
@@ -14,8 +14,6 @@ WRKSRC=		${WRKDIR}/nulib2-200
 USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--cache-file=${WRKDIR}/config.cache
-
-DIST_SUBDIR=	${PKGNAME_NOREV}
 
 .include "../../mk/bsd.pkg.mk"
 
