@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.560 2003/05/18 03:45:53 grant Exp $
+$NetBSD: TODO,v 1.561 2003/05/18 13:11:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -198,7 +198,6 @@ Suggested package updates
 	o ns-flash-6.0.79
 	o ntop2-2.2
 	o nut-8.5
-	o nxtvepg-2.5.1
 	o ocaml-3.06-15
 	o openbox-2.3.1 [devel]
 	o openh323-1.11.2
@@ -207,7 +206,6 @@ Suggested package updates
 	o openslp-1.0.11
 	o openssh-3.6.1p2
 	o openssl-0.9.7b
-	o opera-7.11
 	o oss-3.9.7j
 	o p0f-1.8.3
 	o php4-4.3.1
@@ -265,7 +263,6 @@ Suggested package updates
 	o wwwoffle-2.7h
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
-	o xemacs-21.5.13
 	o xerces-c-2.1.0 [heinz]
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.2.0
