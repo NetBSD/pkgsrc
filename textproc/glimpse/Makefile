@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2001/10/18 04:51:04 tron Exp $
+# $NetBSD: Makefile,v 1.16 2002/07/12 19:53:01 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/07/17 19:29:07 andreas Exp
 #
 
-DISTNAME=	glimpse-4.15
+DISTNAME=	glimpse-4.16.2
 CATEGORIES=	textproc databases
 MASTER_SITES=   http://webglimpse.net/trial/
 
@@ -19,9 +19,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-
-pre-configure:
-	cd ${WRKSRC}; make distclean
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/glimpse
