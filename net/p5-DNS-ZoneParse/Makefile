@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:51:32 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/27 06:05:57 snj Exp $
 #
 
 DISTNAME=	DNS-ZoneParse-0.82
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/author/SIMONFLK/DNS-ZoneParse-0.82/ZoneParse.pm
 COMMENT=	Perl5 module for parsing DNS zone files
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/DNS/ZoneParse/.packlist
 
 .include "../../lang/perl5/module.mk"
