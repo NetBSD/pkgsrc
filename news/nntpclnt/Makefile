@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/04/07 13:56:43 cube Exp $
+# $NetBSD: Makefile,v 1.22 2004/12/03 15:15:07 wiz Exp $
 
 DISTNAME=	nntpclnt-1.6.1
 PKGREVISION=	4
@@ -15,7 +15,7 @@ RESTRICTED=	"Do not sell, rent, trade, market, or use for monetary profit"
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
-ALL_TARGET=	inews
+BUILD_TARGET=	inews
 PKG_GROUPS=	news
 USE_PKGINSTALL=	yes
 PKG_SYSCONFSUBDIR=	nntp

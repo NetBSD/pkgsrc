@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2003/11/12 03:39:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.41 2004/12/03 15:15:05 wiz Exp $
 
 PKGNAME=	coda-server-${DIST_VERS}
 PKGREVISION=	1
@@ -6,7 +6,7 @@ COMMENT=	Server programs for a replicated high-performance network file system
 
 .include "Makefile.common"
 
-ALL_TARGET=		coda
+BUILD_TARGET=		coda
 INSTALL_TARGET=		server-install
 
 USE_PKGINSTALL=		yes

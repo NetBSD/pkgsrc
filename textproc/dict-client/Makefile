@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/10/15 09:49:36 salo Exp $
+# $NetBSD: Makefile,v 1.15 2004/12/03 15:15:11 wiz Exp $
 
 DISTNAME=       dictd-1.8.0
 PKGNAME=        dict-client-1.8.0
@@ -14,7 +14,7 @@ USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes
 
-ALL_TARGET=	dict
+BUILD_TARGET=	dict
 INSTALL_TARGET=	install.dict
 
 FILESDIR=	${.CURDIR}/../../textproc/dict-server/files

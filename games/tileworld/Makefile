@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:14:47 tv Exp $
+# $NetBSD: Makefile,v 1.12 2004/12/03 15:14:58 wiz Exp $
 
 DISTNAME=	tworld-1.1.3
 PKGNAME=	${DISTNAME:S/^t/tile/}
@@ -15,7 +15,7 @@ USE_GNU_TOOLS+=	make
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 
-ALL_TARGET=	tworld
+BUILD_TARGET=	tworld
 
 MAKE_ENV+=	ECHO="${ECHO}" DATE="${DATE}"
 

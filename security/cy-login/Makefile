@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/26 02:27:52 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/03 15:15:07 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy-login/}
 PKGREVISION=	1
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.pam}
 .endif
 
 BUILD_DIRS=	${WRKSRC}/plugins
-ALL_TARGET=	liblogin.la
+BUILD_TARGET=	liblogin.la
 
 do-install:
 	cd ${WRKSRC}/plugins && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/04/28 05:06:28 snj Exp $
+# $NetBSD: Makefile,v 1.31 2004/12/03 15:15:00 wiz Exp $
 
 DISTNAME=       	icon.v942src
 PKGNAME=		icon-9.4.2
@@ -13,7 +13,7 @@ COMMENT=		The Icon programming language
 USE_BUILDLINK3=		YES
 USE_X11=		YES
 CONFIGURE_TARGET=	X-Configure
-ALL_TARGET=		All
+BUILD_TARGET=		All
 TEST_TARGET=		Test
 
 .if (${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "i386") || \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/06/17 12:23:38 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/03 15:15:03 wiz Exp $
 
 DISTNAME=       sma-1.3.2
 CATEGORIES=	mail
@@ -13,7 +13,7 @@ NO_CONFIGURE=	yes
 USE_BUILDLINK3=	yes
 
 MAKEFILE=	Makefile
-ALL_TARGET=	sma
+BUILD_TARGET=	sma
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:55:05 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/03 15:15:11 wiz Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/03/03 16:27:10 obrien Exp
 #
 
@@ -15,6 +15,6 @@ COMMENT=		Analog clock for X w/appointment reminder and mail notification
 
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
-ALL_TARGET=		clock
+BUILD_TARGET=		clock
 
 .include "../../mk/bsd.pkg.mk"

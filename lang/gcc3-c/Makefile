@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/07/02 15:40:01 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2004/12/03 15:15:00 wiz Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-c-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - C compiler
@@ -18,7 +18,7 @@ MAKE_ENV+=	ALL_GCC_CCC=${ALL_GCCXX_C:Q}
 .include "../../mk/compiler.mk"
 
 .if empty(CC_VERSION:Mgcc-*)
-ALL_TARGET=	bootstrap
+BUILD_TARGET=	bootstrap
 .endif
 
 post-build:

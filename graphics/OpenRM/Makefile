@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:14:48 tv Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:14:59 wiz Exp $
 #
 
 DISTNAME=		openrm-devel-1.5.2
@@ -13,7 +13,7 @@ COMMENT=		The OpenRM Scene Graph API
 
 USE_X11=		yes
 WRKSRC=			${WRKDIR}/rm152
-ALL_TARGET=		freebsd docs
+BUILD_TARGET=		freebsd docs
 USE_BUILDLINK3=		yes
 MAKE_ENV+=		AR=${AR} RM=${RM} CP=${CP} LN=${LN} ECHO_CMD=${ECHO} \
 			STRIP_CMD=${ECHO}

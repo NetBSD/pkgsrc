@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/01/28 22:03:20 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:14:58 wiz Exp $
 
 DISTNAME=		xmris.4.04
 PKGNAME=		xmris-4.04
@@ -12,7 +12,7 @@ COMMENT=		Version of the Mr Do video arcade game for X
 
 USE_PKGINSTALL=		yes
 USE_IMAKE=		yes
-ALL_TARGET=		initialize xmris xmred
+BUILD_TARGET=		initialize xmris xmred
 NO_INSTALL_MANPAGES=	yes
 
 OWN_DIRS_PERMS=		/var/games/${PKGBASE} games games 775

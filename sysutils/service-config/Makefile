@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:53:51 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/03 15:15:10 wiz Exp $
 #
 
 DISTNAME=	service-config-0.51
@@ -11,7 +11,7 @@ COMMENT=	Utility to create and configure svscan service directories
 
 DEPENDS+=	daemontools-[0-9]*:../../sysutils/daemontools
 
-ALL_TARGET=	it
+BUILD_TARGET=	it
 INSTALL_TARGET=	setup check
 
 RESTRICTED=     "Possibly inherited DJB-style license would prohibit distribution	\

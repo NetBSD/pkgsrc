@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/11/22 19:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2004/12/03 15:14:51 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp
 #
 
@@ -29,9 +29,9 @@ CFLAGS=		-O0
 .include "../../mk/compiler.mk"
 
 .if !empty(CC_VERSION:Mgcc*)
-ALL_TARGET=	generic_gcc
+BUILD_TARGET=	generic_gcc
 .else
-ALL_TARGET=	generic
+BUILD_TARGET=	generic
 CFLAGS=		-O
 .endif
 

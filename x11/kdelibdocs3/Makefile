@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/10/13 11:55:51 markd Exp $
+# $NetBSD: Makefile,v 1.25 2004/12/03 15:15:12 wiz Exp $
 
 DISTNAME=	kdelibs-3.3.1
 PKGNAME=	kdelibdocs-3.3.1
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=		graphviz-[0-9]*:../../graphics/graphviz
 BUILD_DEPENDS+=		qt3-docs>=3.1.1:../../x11/qt3-docs
 
 USE_BUILDLINK3=		YES
-ALL_TARGET=		apidox
+BUILD_TARGET=		apidox
 INSTALL_TARGET=		install-data-local
 
 UNLIMIT_RESOURCES+=	datasize

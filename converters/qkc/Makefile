@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/24 11:25:17 uebayasi Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/03 15:14:52 wiz Exp $
 # FreeBSD: ports/japanese/qkc/Makefile,v 1.15 2001/05/10 11:42:23 max Exp
 
 DISTNAME=	qkcc100
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 INSTALLATION_DIRS=	bin man/ja_JP.EUC/man1
 
 WRKSRC=		${WRKDIR}
-ALL_TARGET=	qkc
+BUILD_TARGET=	qkc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/qkc ${PREFIX}/bin

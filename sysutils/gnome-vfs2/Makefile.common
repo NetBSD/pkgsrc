@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/11/28 13:00:17 recht Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/12/03 15:15:10 wiz Exp $
 #
 
 DISTNAME=		gnome-vfs-2.8.3
@@ -60,7 +60,7 @@ PKGNAME:=		${PKGNAME:S/gnome-vfs2/gnome-vfs2-${GNOME_VFS2_NAME}/}
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-${GNOME_VFS2_FLAG}/--enable-${GNOME_VFS2_FLAG}/}
 COMMENT+=		- ${GNOME_VFS2_NAME} plugin
 
-ALL_TARGET=		lib${GNOME_VFS2_NAME}.la
+BUILD_TARGET=		lib${GNOME_VFS2_NAME}.la
 BUILD_DIRS=		${WRKSRC}/modules
 
 # Fix paths to already installed libraries (by the gnome-vfs2 package).

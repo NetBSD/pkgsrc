@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:15:42 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/12/03 15:14:58 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/08/05 09:31:04 asami Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	root@garbled.net
 COMMENT=	Classic game with apples and hungry worm
 
 WRKSRC=		${WRKDIR}/XWorm
-ALL_TARGET=	bsd
+BUILD_TARGET=	bsd
 USE_X11=	yes
 
 do-install:

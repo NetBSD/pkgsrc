@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/14 17:13:28 salo Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:05 wiz Exp $
 #
 
 .include "../../multimedia/mkvtoolnix/Makefile.dist"
@@ -16,7 +16,7 @@ USE_GNU_TOOLS+=	make
 USE_LANGUAGES=	c++
 USE_X11=	yes
 
-ALL_TARGET=	src/mmg/mmg
+BUILD_TARGET=	src/mmg/mmg
 
 post-patch:
 	@${SED} 's,@PREFIX@,${PREFIX},' ${WRKSRC}/doc/mmg.1 > \

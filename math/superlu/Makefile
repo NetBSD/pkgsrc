@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/07/19 13:47:51 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/03 15:15:03 wiz Exp $
 
 DISTNAME=		superlu_3.0
 PKGNAME=		superlu-3.0.1
@@ -16,7 +16,7 @@ EVAL_PREFIX+=		BLAS_PREFIX=blas
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
 WRKSRC=			${WRKDIR}/SuperLU_3.0
-ALL_TARGET=		superlulib
+BUILD_TARGET=		superlulib
 TEST_DIRS=		${WRKSRC}/TESTING/MATGEN ${WRKSRC}/TESTING
 TEST_TARGET=		all
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/10/03 00:15:00 tv Exp $
+# $NetBSD: Makefile,v 1.25 2004/12/03 15:15:00 wiz Exp $
 # FreeBSD Id: Makefile,v 1.15 1997/09/01 12:28:30 tg Exp
 #
 
@@ -15,7 +15,7 @@ COMMENT=		Embeddable Scheme interpreter
 # ELF loading problems, LP64
 NOT_FOR_PLATFORM=	*-*-alpha *-*-mips* *-*-sparc64
 
-ALL_TARGET=		default
+BUILD_TARGET=		default
 USE_BUILDLINK3=		yes
 
 .include "../../mk/bsd.prefs.mk"

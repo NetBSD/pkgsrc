@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/11/27 02:35:53 epg Exp $
+# $NetBSD: Makefile,v 1.18 2004/12/03 15:15:12 wiz Exp $
 
 PKGNAME=	ap2-subversion-${SVNVER}
 COMMENT=	WebDAV server (Apache module) for Subversion
@@ -10,7 +10,7 @@ CONFIGURE_ARGS+=	--disable-mod-activation
 
 APACHE_MODULE=		YES
 
-ALL_TARGET=		apache-mod
+BUILD_TARGET=		apache-mod
 INSTALL_TARGET=		install-mods-shared
 
 BUILDLINK_DEPENDS.apache?=	apache>=2.0.48

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/24 00:28:01 rh Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/03 15:15:01 wiz Exp $
 #
 
 DISTNAME=		objc-3.2.5
@@ -15,7 +15,7 @@ WRKSRC_BS=		${WRKDIR}/${DIST_BS}
 
 CONFIGURE_DIRS=		${WRKSRC_BS} ${WRKSRC}
 PREPEND_PATH+=		${WRKSRC_BS}
-ALL_TARGET=		default
+BUILD_TARGET=		default
 
 USE_GNU_TOOLS+=		lex
 USE_BUILDLINK3=		yes
@@ -24,7 +24,7 @@ GNU_CONFIGURE=		yes
 
 pre-configure:
 	${ECHO} >> ${WRKSRC_BS}/configure				\
-		'${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}'
+		'${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKEFILE} ${BUILD_TARGET}'
 
 post-extract:
 	${RM} -rf `${FIND} ${WRKSRC} -name CVS -type d`

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2004/11/13 21:28:28 jlam Exp $
+# $NetBSD: Makefile,v 1.86 2004/12/03 15:15:02 wiz Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system *without* Kerberos
@@ -27,16 +27,16 @@ DOC_DIR=	${PREFIX}/share/doc/imap-uw
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-ALL_TARGET=	gso
+BUILD_TARGET=	gso
 .elif ${OPSYS} == "Linux"
-ALL_TARGET=	slx
+BUILD_TARGET=	slx
 .elif ${OPSYS} == "Darwin"
-ALL_TARGET=	osx
+BUILD_TARGET=	osx
 .else
-ALL_TARGET=	neb
+BUILD_TARGET=	neb
 .  if defined(USE_KERBEROS) && ${USE_KERBEROS} != "no"
 PKG_USE_KERBEROS=	# defined
-ALL_TARGET+=	EXTRAAUTHENTICATORS="gss"
+BUILD_TARGET+=	EXTRAAUTHENTICATORS="gss"
 .    if !empty(MACHINE_PLATFORM:MNetBSD-1.5*)
 # NetBSD-1.5 didn't have "des_new_random_key" in libcrypto
 MAKE_ENV+=	GSS_EXTRA_LDFLAGS="-ldes"
@@ -70,19 +70,19 @@ MAKE_ENV+=	CCLIENT_MAJOR=${CCLIENT_MAJOR:Q}
 MAKE_ENV+=	CCLIENT_MINOR=${CCLIENT_MINOR:Q}
 MAKE_ENV+=	CREATEPROTO=${IMAP_UW_CCLIENT_MBOX_FMT:Q}proto
 
-ALL_TARGET+=	CC="${LIBTOOL} ${CC}"
+BUILD_TARGET+=	CC="${LIBTOOL} ${CC}"
 .if defined(IMAP_UW_USE_WHOSON) && ${IMAP_UW_USE_WHOSON} == "YES"
-ALL_TARGET+=	EXTRALDFLAGS="${LDFLAGS} -lwhoson"
-ALL_TARGET+=	EXTRACFLAGS="${CFLAGS} -DUSE_WHOSON"
+BUILD_TARGET+=	EXTRALDFLAGS="${LDFLAGS} -lwhoson"
+BUILD_TARGET+=	EXTRACFLAGS="${CFLAGS} -DUSE_WHOSON"
 .else
-ALL_TARGET+=	EXTRALDFLAGS="${LDFLAGS}"
-ALL_TARGET+=	EXTRACFLAGS="${CFLAGS}"
+BUILD_TARGET+=	EXTRALDFLAGS="${LDFLAGS}"
+BUILD_TARGET+=	EXTRACFLAGS="${CFLAGS}"
 .endif
 .if defined(IMAP_UW_NO_CLEARTEXT) && ${IMAP_UW_NO_CLEARTEXT} == "YES"
-ALL_TARGET+=	SSLTYPE="nopwd"
+BUILD_TARGET+=	SSLTYPE="nopwd"
 .elif !defined(IMAP_UW_NO_SSL) || ${IMAP_UW_NO_SSL} != "YES"
-ALL_TARGET+=	SPECIALAUTHENTICATORS="ssl"
-ALL_TARGET+=	SSLTYPE="unix"
+BUILD_TARGET+=	SPECIALAUTHENTICATORS="ssl"
+BUILD_TARGET+=	SSLTYPE="unix"
 .endif
 
 # reduce optimization level on alpha to avoid compiler bugs

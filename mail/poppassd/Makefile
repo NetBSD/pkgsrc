@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/10/20 14:18:42 taca Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/03 15:15:02 wiz Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -25,7 +25,7 @@ MAKE_ENV+=	ROOT_USER=${ROOT_USER} ROOT_GROUP=${ROOT_GROUP}
 do-build:
 .for DIR in common password
 	cd ${WRKSRC}/${DIR}; ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${MAKE_FLAGS} ${ALL_TARGET}
+		${MAKE_PROGRAM} ${MAKE_FLAGS} ${BUILD_TARGET}
 .endfor
 
 # popper makefile doesn't have an install target...

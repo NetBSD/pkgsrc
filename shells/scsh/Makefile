@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/04/21 12:08:09 dillo Exp $
+# $NetBSD: Makefile,v 1.28 2004/12/03 15:15:09 wiz Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/07/15 15:00:30 cracauer Exp
 #
 
@@ -14,7 +14,7 @@ NOT_FOR_PLATFORM=	*-*-alpha	# Needs scheme
 
 GNU_CONFIGURE=		yes
 
-ALL_TARGET=		enough
+BUILD_TARGET=		enough
 TEST_TARGET=		check
 
 USE_PKGINSTALL=		yes

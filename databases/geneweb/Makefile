@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/07 11:32:44 recht Exp $
+# $NetBSD: Makefile,v 1.17 2004/12/03 15:14:53 wiz Exp $
 #
 
 DISTNAME=	geneweb-4.09
@@ -17,7 +17,7 @@ USE_GNU_TOOLS+=	make
 RCD_SCRIPTS=	geneweb
 
 .if !exists(${LOCALBASE}/bin/ocamlc.opt)
-ALL_TARGET=	out
+BUILD_TARGET=	out
 .endif
 
 .include "../../mk/bsd.prefs.mk"

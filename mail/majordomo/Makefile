@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/11/04 12:20:18 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2004/12/03 15:15:02 wiz Exp $
 
 DISTNAME=		majordomo-1.94.5
 CATEGORIES=		mail
@@ -26,7 +26,7 @@ USE_PERL5=		yes
 NO_BIN_ON_FTP=		requires compiled-in hardcoded uid/gid
 NO_BIN_ON_CDROM=	${NO_BIN_ON_FTP}
 
-ALL_TARGET=		wrapper
+BUILD_TARGET=		wrapper
 INSTALL_TARGET=		install install-wrapper
 
 INSTALL_FILE=		${WRKDIR}/INSTALL

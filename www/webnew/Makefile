@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/22 04:14:39 martti Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/03 15:15:12 wiz Exp $
 #
 
 DISTNAME=		webnew-1.3
@@ -12,7 +12,7 @@ COMMENT=		Retrieve modification times of web documents
 USE_PERL5=		# defined
 
 NO_CONFIGURE=		yes
-ALL_TARGET=		all DEST=${PREFIX} PERL=${PERL5}
+BUILD_TARGET=		all DEST=${PREFIX} PERL=${PERL5}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/webnew ${PREFIX}/bin

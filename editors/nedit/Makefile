@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/10/15 13:29:00 adam Exp $
+# $NetBSD: Makefile,v 1.39 2004/12/03 15:14:56 wiz Exp $
 
 DISTNAME=	nedit-${VERS}-src
 PKGNAME=	nedit-${VERS}
@@ -18,7 +18,7 @@ VERS=		5.5
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK3=		YES
 USE_X11=		YES
-ALL_TARGET=		netbsd
+BUILD_TARGET=		netbsd
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/source/nedit ${PREFIX}/bin

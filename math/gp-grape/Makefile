@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:20:04 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/03 15:15:03 wiz Exp $
 #
 
 DISTNAME=	grape4r1
@@ -13,7 +13,7 @@ MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	http://www.gap-system.org/Share/grape.html
 COMMENT=	GRAPE (GRape Algorithms using PErmutation groups)
 
-ALL_TARGET=	bsd-gcc
+BUILD_TARGET=	bsd-gcc
 
 WRKSRC=		${WRKDIR}/${GAP_PKG_NAME}
 GAP_PKG_NAME=	grape

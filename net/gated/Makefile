@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/07/10 21:00:00 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/12/03 15:15:05 wiz Exp $
 # FreeBSD Id: Makefile,v 1.17 1998/04/26 18:47:12 peter Exp
 #
 
@@ -24,7 +24,7 @@ USE_PKGINSTALL=		yes
 RCD_SCRIPTS=		gated
 RCD_SCRIPT_SRC.gated=	${FILESDIR}/gated
 
-ALL_TARGET=	gated
+BUILD_TARGET=	gated
 
 post-extract:
 	@${SED} -e 's#@PREFIX@#${PREFIX}#' <${FILESDIR}/configuration \

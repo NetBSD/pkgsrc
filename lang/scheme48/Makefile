@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/08/27 09:14:43 itojun Exp $
+# $NetBSD: Makefile,v 1.23 2004/12/03 15:15:01 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/08/27 19:31:37 jmacd Exp
 #
 
@@ -15,7 +15,7 @@ NOT_FOR_PLATFORM=	*-*-alpha	# *severe* problems.  Bus error, alignment
 
 GNU_CONFIGURE=  	yes
 CONFIGURE_ARGS=		--prefix=${PREFIX}
-ALL_TARGET=		enough
+BUILD_TARGET=		enough
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/scheme48

@@ -498,7 +498,7 @@ PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
                      fetching all distfiles (for interactive use in
                      _$_{_P_K_G_S_R_C_D_I_R_}, mostly.
 
-           ALL_TARGET
+           BUILD_TARGET
                      The target to pass to make in the package when building.
                      The default is ``all''.
 

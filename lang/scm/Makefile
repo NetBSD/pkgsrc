@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/28 16:01:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:01 wiz Exp $
 #
 
 DISTNAME=	scm5d8
@@ -20,7 +20,7 @@ USE_X11=	# defined
 
 WRKSRC=		${WRKDIR}/scm
 
-ALL_TARGET=	scmlit libscm.a
+BUILD_TARGET=	scmlit libscm.a
 INSTALL_TARGET=	install installlib
 
 INFO_FILES=	scm.info hobbit.info Xlibscm.info

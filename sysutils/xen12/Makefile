@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/23 17:50:57 recht Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/03 15:15:10 wiz Exp $
 #
 
 DISTNAME=		xeno-1.2-src-040418
@@ -16,7 +16,7 @@ COMMENT=		Xen Virtual Machine Monitor
 ONLY_FOR_PLATFORM=	*-*-i386
 
 WRKSRC=			${WRKDIR}/xeno-1.2/xen
-ALL_TARGET=		default
+BUILD_TARGET=		default
 
 USE_PKGINSTALL=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:20:05 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/03 15:15:03 wiz Exp $
 #
 
 DISTNAME=	newmat10
@@ -12,7 +12,7 @@ COMMENT=	Newmat C++ Matrix Library
 
 WRKSRC=		${WRKDIR}
 MAKEFILE=	nm_cc.mak
-ALL_TARGET=	garch
+BUILD_TARGET=	garch
 
 HEADERS=	boolean.h controlw.h include.h myexcept.h newmat.h 	\
 		newmatap.h newmatio.h newmatnl.h newmatrc.h precisio.h

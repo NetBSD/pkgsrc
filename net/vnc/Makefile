@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/11/27 00:58:21 abs Exp $
+# $NetBSD: Makefile,v 1.33 2004/12/03 15:15:07 wiz Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -27,7 +27,7 @@ USE_IMAKE=		yes
 USE_PERL5=		yes
 BUILD_DEFS+=		USE_INET6
 
-ALL_TARGET=		World
+BUILD_TARGET=		World
 
 MAKE_ENV+= CC=${CC:Q}	#for make imake in Xvnc/config/imake
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/11/18 16:29:50 cube Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/03 15:14:55 wiz Exp $
 #
 
 DISTNAME=	pcl-cvs-2.9.9
@@ -20,7 +20,7 @@ EMACS_VERSIONS_ACCEPTED=	emacs20
 .include "../../mk/emacs.mk"
 
 MAKE_ENV+=	PREFIX=${PREFIX}
-ALL_TARGET= 	default
+BUILD_TARGET= 	default
 INFO_FILES=	pcl-cvs.info
 MESSAGE_SUBST+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX:Q}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/09/01 17:00:24 reed Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/03 15:15:04 wiz Exp $
 #
 
 DISTNAME=       mmv_1.01b.orig
@@ -11,7 +11,7 @@ HOMEPAGE=       # none
 COMMENT=	Move, copy, append or link multiple files using wildcard patterns
 
 WRKSRC=		${WRKDIR}/mmv-1.01b.orig
-ALL_TARGET=	mmv
+BUILD_TARGET=	mmv
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/05/09 02:26:14 snj Exp $
+# $NetBSD: Makefile,v 1.34 2004/12/03 15:15:00 wiz Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGNAME=		gcc-ssp-2.95.3.13
@@ -52,7 +52,7 @@ INFO_FILES=		chill.info cpp.info g77.info gcc.info
 
 .if ${OPSYS} == "SunOS"
 .  if ${CC:M*gcc*} == ""
-ALL_TARGET=		bootstrap
+BUILD_TARGET=		bootstrap
 .  endif
 # we know it's a GNU toolchain on Linux and the BSDs.
 .elif ${OPSYS:M*BSD} != "" || ${OPSYS} == "Linux"
@@ -62,7 +62,7 @@ CONFIGURE_ARGS+=	--with-gnu-ld
 # play it safe, force a bootstrap build if we don't know for sure it
 # is gcc.
 .  if ${CC:M*gcc*} == ""
-ALL_TARGET=		bootstrap
+BUILD_TARGET=		bootstrap
 .  endif
 .endif
 

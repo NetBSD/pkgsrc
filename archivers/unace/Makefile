@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/07/28 02:47:35 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/03 15:14:51 wiz Exp $
 #
 
 DISTNAME=	unace-1.2b
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 
-ALL_TARGET=	clean unace
+BUILD_TARGET=	clean unace
 
 INSTALLATION_DIRS=	bin
 

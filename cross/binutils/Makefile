@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/10/03 00:13:17 tv Exp $
+# $NetBSD: Makefile,v 1.39 2004/12/03 15:14:53 wiz Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--enable-targets=all
 CONFIGURE_ARGS+=	--target=i386-linux
 
 MAKE_ARGS+=		CFLAGS="${CFLAGS}"
-ALL_TARGET=		all-binutils all-ld
+BUILD_TARGET=		all-binutils all-ld
 
 PLIST_SUBST=		LOCALBASE=${LOCALBASE}
 

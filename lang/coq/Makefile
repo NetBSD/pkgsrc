@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:15:00 tv Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:00 wiz Exp $
 #
 
 DISTNAME=	coq-7.4
@@ -16,7 +16,7 @@ HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=	-prefix ${PREFIX}
 CONFIGURE_ARGS+=	-emacslib ${PREFIX}/share/emacs/site-lisp
 CONFIGURE_ARGS+=	-reals all
-ALL_TARGET=	world
+BUILD_TARGET=	world
 
 .include "../../mk/bsd.prefs.mk"
 

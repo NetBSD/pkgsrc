@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/03 00:14:39 tv Exp $
+# $NetBSD: Makefile,v 1.14 2004/12/03 15:14:56 wiz Exp $
 #
 
 DISTNAME=	ssam-1.9
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.westley.demon.co.uk/software.html
 COMMENT=	UTF-8-aware stream editor like sed(1), using the sam command set
 
 GNU_CONFIGURE=	yes
-ALL_TARGET=	tst
+BUILD_TARGET=	tst
 USE_BUILDLINK3=	yes
 
 .include "../../misc/libutf/buildlink3.mk"

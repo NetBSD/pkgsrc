@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/11/12 10:45:45 adam Exp $
+# $NetBSD: Makefile,v 1.35 2004/12/03 15:15:07 wiz Exp $
 
 DISTNAME=	pvm3.4.5
 PKGNAME=	pvm-3.4.5
@@ -30,7 +30,7 @@ MAKE_ENV+=		SSH=${PVM_SSH}
 MAKE_ENV+=		MKDIR="${MKDIR}"
 MAKE_ENV+=		PVMLIB_VER=3:4
 MAKE_ENV+=		PVM_DIR=${PVM_DIR}
-ALL_TARGET=		all install
+BUILD_TARGET=		all install
 
 # Set PVM_ARCH to the correct value for this machine platform.
 .include "arch.mk"

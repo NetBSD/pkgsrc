@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:18:26 tv Exp $
+# $NetBSD: Makefile,v 1.12 2004/12/03 15:15:12 wiz Exp $
 #
 
 DISTNAME=	asp2php-0.76.17
@@ -13,7 +13,7 @@ COMMENT=	Gtk+ version of utility to convert asp pages to php pages
 
 USE_BUILDLINK3=	YES
 
-ALL_TARGET=	all gui
+BUILD_TARGET=	all gui
 
 .include "../../x11/gtk/buildlink3.mk"
 

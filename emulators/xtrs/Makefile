@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:14:41 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/03 15:14:56 wiz Exp $
 #
 
 DISTNAME=	xtrs-4.9
@@ -13,7 +13,7 @@ COMMENT=	TRS-80 Model I/III/4 Emulator for Unix
 USE_BUILDLINK3=	yes
 USE_X11=	yes
 
-ALL_TARGET=	default
+BUILD_TARGET=	default
 
 SUBST_CLASSES+=		mf
 SUBST_STAGE.mf=		post-patch

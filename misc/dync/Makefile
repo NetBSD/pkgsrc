@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/08 23:33:35 kristerw Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/03 15:15:04 wiz Exp $
 #
 
 DISTNAME=		dync-1.1
@@ -11,6 +11,6 @@ HOMEPAGE=		http://www.westley.demon.co.uk/software.html
 COMMENT=		awk-like utility with C as language
 
 GNU_CONFIGURE=		yes
-ALL_TARGET=		tst
+BUILD_TARGET=		tst
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/22 08:24:30 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/03 15:14:54 wiz Exp $
 #
 
 DISTNAME=	nasm-0.98.38
@@ -12,7 +12,7 @@ COMMENT=	General-purpose x86 assembler
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=	YES
 
-ALL_TARGET=	everything
+BUILD_TARGET=	everything
 INSTALL_TARGET=	install_everything
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/15 21:58:17 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:08 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-gssapi/}
 COMMENT=	Cyrus SASL GSSAPI authentication plugin
@@ -15,7 +15,7 @@ GSSIMPL.heimdal=	heimdal
 GSSIMPL.mit-krb5=	mit
 
 BUILD_DIRS=	${WRKSRC}/plugins
-ALL_TARGET=	libgssapiv2.la
+BUILD_TARGET=	libgssapiv2.la
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"

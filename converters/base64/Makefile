@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/12 01:50:07 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2004/12/03 15:14:52 wiz Exp $
 #
 
 DISTNAME=	base64-1.3
@@ -14,7 +14,7 @@ COMMENT=	Encode and decode base64 files
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
-ALL_TARGET=	prog
+BUILD_TARGET=	prog
 USE_BUILDLINK3=	yes
 
 INSTALLATION_DIRS=	bin man/man1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/10/03 00:15:01 tv Exp $
+# $NetBSD: Makefile,v 1.28 2004/12/03 15:15:00 wiz Exp $
 
 DISTNAME=	hugs98-Dec2001
 PKGNAME=	hugs98-200112
@@ -14,7 +14,7 @@ WRKSRC=			${WRKDIR}/hugs98-Dec2001/src/unix
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-readline
-ALL_TARGET=		default
+BUILD_TARGET=		default
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,7 +26,7 @@ CONFIGURE_ENV+=		ac_cv_header_nlist_h=no
 
 do-build:
 	@cd ${WRKSRC}/.. && ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
+		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${BUILD_TARGET}
 
 do-install:
 	@cd ${WRKSRC}/.. && ${SETENV} ${MAKE_ENV} \

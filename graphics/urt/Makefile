@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/10/03 00:14:58 tv Exp $
+# $NetBSD: Makefile,v 1.36 2004/12/03 15:14:59 wiz Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
@@ -24,7 +24,7 @@ CONFIGURE_SCRIPT=./Configure
 CONFIGURE_ARGS=	config/urt
 HAS_CONFIGURE=	yes
 MAKEFILE=	makefile
-ALL_TARGET=
+BUILD_TARGET=
 
 post-extract:
 	${CHMOD} 644 ${WRKSRC}/man/man1/rletotarga.1

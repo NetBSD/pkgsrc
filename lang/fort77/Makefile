@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/21 16:54:02 martti Exp $
+# $NetBSD: Makefile,v 1.14 2004/12/03 15:15:00 wiz Exp $
 #
 
 DISTNAME=		fort77-1.14a
@@ -22,7 +22,7 @@ F2CPKGHASNOSHAREDLIB=
 PKG_SKIP_REASON=	"${PKGNAME} is part of your ${OPSYS} distribution"
 .endif
 
-ALL_TARGET=		test
+BUILD_TARGET=		test
 
 USE_PERL5=		YES
 

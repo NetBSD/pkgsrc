@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/08/09 11:14:05 seb Exp $
+# $NetBSD: Makefile,v 1.24 2004/12/03 15:15:04 wiz Exp $
 # FreeBSD Id: Makefile,v 1.8 1996/11/21 11:54:39 asami Exp
 #
 
@@ -14,7 +14,7 @@ COMMENT=	GNU Interactive Tools - a file system browser for UNIX systems
 GNU_CONFIGURE=	YES
 INFO_FILES=	git.info
 
-ALL_TARGET=	all info
+BUILD_TARGET=	all info
 
 pre-install:
 	${CP} ${WRKSRC}/term/.gitrc.ansi \

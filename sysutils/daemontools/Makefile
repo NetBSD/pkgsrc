@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/08/25 17:20:56 snj Exp $
+# $NetBSD: Makefile,v 1.16 2004/12/03 15:15:10 wiz Exp $
 # FreeBSD Id: ports/sysutils/daemontools/Makefile,v 1.8 2000/12/03 05:16:41 steve Exp
 
 DISTNAME=	daemontools-0.76
@@ -21,7 +21,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 
-ALL_TARGET=	it
+BUILD_TARGET=	it
 SAMPLERC=	svscan.sh.sample
 SERVICEDIR?=	${VARBASE}/spool/service
 WRKSRC=		${WRKDIR}/admin/${DISTNAME}

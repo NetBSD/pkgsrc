@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:12:56 tv Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/03 15:15:03 wiz Exp $
 
 DISTNAME=		euler-1.60.6
 PKGREVISION=		4
@@ -11,7 +11,7 @@ COMMENT=		Interactive numerical analysis and graphics program
 
 WRKSRC=			${WRKDIR}/euler-1.60/source
 MAKEFILE=		makefile
-ALL_TARGET=		euler
+BUILD_TARGET=		euler
 USE_BUILDLINK3=		yes
 
 .include "../../x11/gtk/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/10/03 00:18:16 tv Exp $
+# $NetBSD: Makefile,v 1.32 2004/12/03 15:15:10 wiz Exp $
 
 DISTNAME=		nut-2.0.0
 PKGNAME=		ups-nut-cgi-2.0.0
@@ -12,7 +12,7 @@ COMMENT=		Network UPS Tools CGI scripts
 
 DEPENDS+=		ups-nut-2.*:../../sysutils/ups-nut
 
-ALL_TARGET=		cgi
+BUILD_TARGET=		cgi
 INSTALL_TARGET=		install-cgi
 
 USE_BUILDLINK3=		yes

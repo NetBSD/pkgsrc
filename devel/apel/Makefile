@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/05/08 13:35:20 uebayasi Exp $
+# $NetBSD: Makefile,v 1.11 2004/12/03 15:14:54 wiz Exp $
 
 DISTNAME=	apel-10.6
 CATEGORIES=	devel
@@ -22,10 +22,10 @@ EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215
 .include "../../mk/emacs.mk"
 
 .if ${EMACS_FLAVOR} == "emacs"
-ALL_TARGET=	elc
+BUILD_TARGET=	elc
 INSTALL_TARGET=	install
 .else	# ${EMACS_FLAVOR} == "xemacs"
-ALL_TARGET=	package
+BUILD_TARGET=	package
 INSTALL_TARGET=	install-package
 MAKE_FLAGS+=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 .endif

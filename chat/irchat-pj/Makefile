@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/06/12 02:11:42 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/03 15:14:52 wiz Exp $
 
 DISTNAME=	irchat-pj-2.4.24.22
 CATEGORIES=	chat
@@ -15,7 +15,7 @@ USE_BUILDLINK3=	yes
 .if ${EMACS_FLAVOR} == "emacs"
 INSTALL_TARGET=	install
 .elif ${EMACS_FLAVOR} == "xemacs"
-ALL_TARGET=	package
+BUILD_TARGET=	package
 INSTALL_TARGET=	install-package
 .else
 PKG_FAIL_REASON+= "Unknown Emacs flavor"

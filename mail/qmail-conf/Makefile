@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/08/22 00:23:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2004/12/03 15:15:02 wiz Exp $
 #
 
 DISTNAME=		qmail-conf-0.60
@@ -20,7 +20,7 @@ DEPENDS+=		ucspi-tcp>=0.86:../../net/ucspi-tcp
 
 USE_BUILDLINK3=		yes
 
-ALL_TARGET=		it
+BUILD_TARGET=		it
 INSTALL_TARGET= 	setup check
 
 do-configure:

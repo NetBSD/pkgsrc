@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/30 06:56:04 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/03 15:15:03 wiz Exp $
 #
 
 DISTNAME=	octave-forge-2004.09.09
@@ -23,7 +23,7 @@ USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_X11=	YES
 
-ALL_TARGET=	
+BUILD_TARGET=	
 TEST_DIRS=	${WRKSRC}
 TEST_TARGET=	check
 

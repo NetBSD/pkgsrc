@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/02 23:02:06 snj Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/03 15:14:54 wiz Exp $
 #
 
 DISTNAME=	libtecla-1.5.0
@@ -13,6 +13,6 @@ WRKSRC=		${WRKDIR}/${PKGBASE}
 USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
-ALL_TARGET=	default
+BUILD_TARGET=	default
 
 .include "../../mk/bsd.pkg.mk"
