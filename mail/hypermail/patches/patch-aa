@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2002/10/10 00:49:42 jlam Exp $
+$NetBSD: patch-aa,v 1.1.2.1 2003/03/08 12:30:41 grant Exp $
 
---- configure.orig	Sat Dec  1 20:49:31 2001
+--- configure.orig	Fri Feb 14 01:11:16 2003
 +++ configure
-@@ -542,13 +542,6 @@ fi
+@@ -544,13 +544,5 @@ fi
  
  
  
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.1 2002/10/10 00:49:42 jlam Exp $
 -INCLUDES=""
 -GDBM_INCLUDE=""
 -GDBM_LIB=""
--
- ac_aux_dir=
- for ac_dir in $srcdir $srcdir/.. $srcdir/../..; do
-   if test -f $ac_dir/install-sh; then
+-FNV_DEP=""
+-SUBDIRS="src/pcre"
+ 
+ 
