@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2004/06/27 01:08:44 recht Exp $
+@comment $NetBSD: PLIST,v 1.17 2004/07/03 21:25:53 recht Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -370,6 +370,7 @@ share/TeXmacs/doc/index.en.tm
 share/TeXmacs/doc/index.es.tm
 share/TeXmacs/doc/index.fr.tm
 share/TeXmacs/doc/index.it.tm
+share/TeXmacs/doc/index.pl.tm
 share/TeXmacs/doc/index.pt.tm
 share/TeXmacs/doc/main/config/man-config-kbd-modkeys.en.tm
 share/TeXmacs/doc/main/config/man-config-kbd-modkeys.es.tm
@@ -1448,6 +1449,7 @@ share/TeXmacs/plugins/matlab/code/typeinfo.m
 share/TeXmacs/plugins/matlab/progs/init-matlab.scm
 share/TeXmacs/plugins/maxima/lisp/texmacs-maxima-5.6.lisp
 share/TeXmacs/plugins/maxima/lisp/texmacs-maxima-5.9.0.lisp
+share/TeXmacs/plugins/maxima/lisp/texmacs-maxima-5.9.1.lisp
 share/TeXmacs/plugins/maxima/packages/session/maxima.ts
 share/TeXmacs/plugins/maxima/progs/init-maxima.scm
 share/TeXmacs/plugins/maxima/progs/maxima-input.scm
