@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/07/01 11:23:08 taca Exp $
+# $NetBSD: Makefile,v 1.34 2001/09/14 18:21:52 abs Exp $
 #
 
 COMMENT=	Character code converters
@@ -15,6 +15,7 @@ SUBDIR+=	latex2rtf
 SUBDIR+=	libiconv
 SUBDIR+=	mpack
 SUBDIR+=	p5-MIME-Base64
+SUBDIR+=	p5-Text-Iconv
 SUBDIR+=	psiconv
 SUBDIR+=	recode
 SUBDIR+=	rpm2cpio
