@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2002/07/11 11:41:28 tron Exp $
+# $NetBSD: Makefile,v 1.156 2002/07/23 12:08:43 agc Exp $
 
 COMMENT=	System utilities
 
@@ -54,6 +54,7 @@ SUBDIR+=	grub
 SUBDIR+=	grun
 SUBDIR+=	gtop
 SUBDIR+=	hfsutils
+SUBDIR+=	isapnptools
 SUBDIR+=	i2ocfg
 SUBDIR+=	kapm
 SUBDIR+=	kdf
