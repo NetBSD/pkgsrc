@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.816 2002/12/17 19:46:47 jmmv Exp $
+$NetBSD: CHANGES,v 1.817 2002/12/18 04:01:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3986,3 +3986,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated dc_gui to 0.66 [wiz 2002-12-17]
 	Updated easytag to 0.25.0.2 [wiz 2002-12-17]
 	Updated fam to 2.6.9 [jmmv 2002-12-17]
+	Added gtk-systrace-20021201 [wiz 2002-12-18]
