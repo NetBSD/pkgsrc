@@ -127,7 +127,7 @@ Suggested package updates
 	o afio-2.5
 	o amanda-2.4.4p2 [pkg/24550]
 	o ap-python-2.7.10
-	o ap-ruby-1.0.7 [pkg/24545]
+	o ap-ruby-1.0.7 [pkg/24545|taca]
 	o apache-ant.1.6.1
 	o asc-1.14.0
 	o avidemux-2.0.20
@@ -154,6 +154,7 @@ Suggested package updates
 	o crimsonfields-0.4.0
 	o crossfire-1.5.0
 	o cscope-15.5
+	o cvs-1.11.13
 	o cvs-1.12.3
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
@@ -166,8 +167,9 @@ Suggested package updates
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o efax-gtk-2.2.5
+	o eggdrop-1.6.15
 	o elk-3.99.6
-	o elm-me-2.4pl111
+	o elm-me-2.4pl112
 	o ethereal-0.10.2
 	o evolution-1.5.2
 	o exim-4.24
@@ -189,10 +191,12 @@ Suggested package updates
 	o gcvs-1.0-1
 	o gdb-6.0
 	o generator-0.35
+	o gentoo-0.11.46
 	o gettext-0.14.1
 	o gforth-0.6.2
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
+	o gimageview-0.2.25
 	o gimp-print-4.2.6
 	o global-4.6
 	o glpk-4.3
@@ -255,9 +259,8 @@ Suggested package updates
 	o mimedefang-2.39 [markd|pkg/24295]
 	o minicom-2.1
 	o mldonkey-2.5.12
-	o mlterm-2.8.0 [pkg/24534]
 	o mowitz-0.3.0
-	o moz-bin-plugger-1.5
+	o moz-bin-plugger-1.5.1
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.1.0
@@ -270,7 +273,7 @@ Suggested package updates
 	o nethack-3.4.3
 	o newscache-0.99.22p1
 	o ns-flash-6.0.79
-	o nut-9.10
+	o nut-9.11
 	o ocaml-3.07pl2
 	o onyx-5.0.1
 	o openal-20040215
@@ -319,7 +322,7 @@ Suggested package updates
 	o skill-4.1.1
 	o skkinput-2.06.4
 	o smarteiffel-1.1 [replacing smalleiffel]
-	o sml-nj-110.45
+	o sml-nj-110.45 [pkg/24586]
 	o snd-7.2
 	o snes9x-1.42
 	o snort-2.1.1
@@ -336,11 +339,12 @@ Suggested package updates
 	o t1lib-5.0.1
 	o tcl/tk-8.4.5
 	o tcl-expect-5.39.0
-	o tcpreplay-2.0.0
+	o tcpreplay-2.0.2
 	o tct-1.14
 	o teapop-0.3.8
 	o tkcvs-7.2
 	o tkman-2.2
+	o tla-1.2 [pkg/24585]
 	o tmda-1.0.2
 	o top-3.5b12.10
 	o transcode-0.6.12
@@ -351,12 +355,12 @@ Suggested package updates
 	o txt2html-2.20 [wennmach]
 	o vba-1.7.1
 	o vfu-4.03
-	o vim-kde-6.2.14 [pkg/23681]
+	o vim-kde-6.2.14 [pkg/23681|24592]
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o w3m-0.4.2
 	o wavesurfer-1.5.3 [requires tk-8.4.2]
-	o wdm-1.26
+	o wdm-1.27
 	o wistumbler2-2.00pre4 [xtraeme]
 	o wwwoffle-2.8a
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
@@ -378,6 +382,7 @@ Suggested package updates
 	o xpdf-3.00
 	o xps-4.2
 	o xpuyopuyo-0.9.5
+	o xscreensaver-4.15
 	o xsidplay-1.6.5pre20
 	o xzgv-0.8
 	o yacas-1.0.55
