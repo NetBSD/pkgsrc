@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/05/09 20:54:42 jwise Exp $
+# $NetBSD: Makefile,v 1.6 2000/06/22 14:23:25 jwise Exp $
 # STOP!  Don't update this to a later version of this software.
 # The JSDK and Apache Jakarta projects have merged, making the
 # jakarta-tomcat package the current version of this software.
@@ -42,8 +42,10 @@ do-install:
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/lib/jsdk.jar ${PREFIX}/lib/java
 	${MKDIR} ${PREFIX}/share/doc/java/jsdk20
 	cd ${WRKSRC}/doc ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/jsdk20 ; ${GTAR} pvxf - )
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/java/jsdk20
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/README ${PREFIX}/share/doc/java/jsdk20
 	${MKDIR} ${PREFIX}/share/examples/java/jsdk20
 	cd ${WRKSRC}/examples ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/examples/java/jsdk20 ; ${GTAR} pvxf - )
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/java/jsdk20
 
 .include "../../mk/bsd.pkg.mk"

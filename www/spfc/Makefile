@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/05/09 21:02:35 jwise Exp $
+# $NetBSD: Makefile,v 1.3 2000/06/22 14:23:26 jwise Exp $
 
 DISTNAME=	spfc-0.2.0
 CATEGORIES=	www
@@ -23,6 +23,7 @@ do-install:
 	${MKDIR} ${PREFIX}/share/doc/java/spfc
 	(cd ${WRKSRC}/../docs ; ${GTAR} pcf - .) | \
 		(cd ${PREFIX}/share/doc/java/spfc ; ${GTAR} pxvf -)
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/java/spfc
 
 .include "../../mk/bsd.pkg.mk"
 
