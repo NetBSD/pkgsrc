@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.66 2002/06/15 15:26:15 fredb Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.67 2002/06/23 02:20:08 kei Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1447,6 +1447,7 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_XCONTRIB=	ftp://ftp.ring.gr.jp/pub/X/opengroup/contrib/
 #MASTER_SITE_GNOME=	ftp://ftp.ring.gr.jp/pub/X/gnome/
 #MASTER_SITE_GNU=	ftp://ftp.ring.gr.jp/pub/GNU/
+#MASTER_SITE_MOZILLA=	ftp://ftp.ring.gr.jp/pub/net/www/mozilla/mozilla/releases/
 #MASTER_SITE_PERL_CPAN=	ftp://ftp.ring.gr.jp/pub/lang/perl/CPAN/modules/by-module/
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.ring.gr.jp/pub/text/CTAN/
 #MASTER_SITE_SUNSITE=	ftp://sunsite.sut.ac.jp/pub/archives/linux/sunsite-unc/
