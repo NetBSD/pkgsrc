@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4279 2003/12/29 00:53:20 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4280 2003/12/29 11:39:05 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5468,3 +5468,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated py-gnome2 to 2.0.0nb3 [jmmv 2003-12-28]
 	Updated gnome2-games to 2.4.1 [xtraeme 2003-12-29]
 	Added gnome2-system-monitor-2.4.0 [xtraeme 2003-12-29]
+	Added gnome-themes-extra-0.5 [xtraeme 2003-12-29]
