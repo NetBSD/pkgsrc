@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2002/07/18 14:18:48 abs Exp $
+# $NetBSD: Makefile,v 1.62 2002/07/28 05:49:28 schmonz Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -81,6 +81,9 @@ BUILDFILE= gs5
 .elif ${OPSYS} == "Linux"
 BUILDNAME= lrh
 BUILDFILE= lnx
+.elif ${OPSYS} == "Darwin"
+BUILDNAME= osx
+BUILDFILE= osx
 .else
 BUILDNAME= neb
 BUILDFILE= neb
