@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/08/11 18:39:25 rh Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/24 04:02:29 mycroft Exp $
 #
 
 DISTNAME=		evolution-0.12
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/evolution/}
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.ximian.com/apps/evolution.php3
 COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
+
+BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 DEPENDS+=		bison-*:../../devel/bison
 DEPENDS+=		db3-2.9:../../databases/db3
@@ -36,6 +38,9 @@ CONFIGURE_ARGS+=	--with-db3-includes=${LOCALBASE}/include/db3
 CONFIGURE_ARGS+=	--with-db3-libs=${LOCALBASE}/lib
 CONFIGURE_ENV+=		CFLAGS="-D_POSIX_THREAD_SYSCALL_SOFT=1 ${CFLAGS}"
 CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
+
+pre-configure:
+	(cd ${WRKSRC} && ${LOCALBASE}/bin/automake)
 
 .include "../../security/openssl/buildlink.mk"
 .include "../../databases/db3/buildlink.mk"

@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2001/09/24 04:02:30 mycroft Exp $
+
+--- libibex/Makefile.am.orig	Sun Sep 23 23:38:35 2001
++++ libibex/Makefile.am	Sun Sep 23 23:38:42 2001
+@@ -9,8 +9,6 @@
+ 	disktail.c \
+ 	ibex_block.c
+ 
+-libibex_la_LDFLAGS = -static
+-
+ libibex_la_LIBADD = \
+ 	$(GAL_LIBS)
+ 
