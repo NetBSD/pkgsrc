@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.common_end,v 1.1 2003/09/25 05:36:33 grant Exp $
+@dirrm lib/xmms/General
+@dirrm lib/xmms
