@@ -1,6 +1,7 @@
-$NetBSD: patch-ah,v 1.1 1998/08/23 06:22:17 garbled Exp $
---- config/Makefile.in	1997/10/13 10:47:39	1.1
-+++ config/Makefile.in	1997/10/13 10:47:51
+$NetBSD: patch-ah,v 1.2 1999/04/29 17:30:40 bad Exp $
+
+--- config/Makefile.in.orig	Fri Mar 22 05:29:54 1996
++++ config/Makefile.in	Thu Apr 29 19:10:54 1999
 @@ -29,7 +29,7 @@
  # pathname for srcdir here, and live with it.
  srcdir = $(srctop)
@@ -10,5 +11,14 @@ $NetBSD: patch-ah,v 1.1 1998/08/23 06:22:17 garbled Exp $
  
  .include "${srcdir}/pthreads/Makefile.inc"
  .include "${srcdir}/stdlib/Makefile.inc"
-Note that the context for this next patch is set to 2, to avoid the Id line
-- agc
+@@ -40,6 +40,10 @@
+ .include "${srcdir}/scripts/Makefile.inc"
+ 
+ .include <bsd.lib.mk>
++
++.if (${OBJECT_FMT} == "a.out")
++SHLIB_LDSTARTFILE = /usr/lib/c++rt0.o
++.endif
+ 
+ $(OBJS) : $(config) $(types) $(paths)
+ 
