@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5924 2004/05/13 11:40:13 tron Exp $
+$NetBSD: CHANGES,v 1.5925 2004/05/13 11:48:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2509,3 +2509,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkglint to 3.76 [salo 2004-05-13]
 	Removed opera [tron 2004-05-13]
 	Removed opera6 [tron 2004-05-13]
+	Updated apache to 1.3.31 [taca 2004-05-13]
+	Updated ap-ssl to 2.8.17 [taca 2004-05-13]
+	Updated lha to 114.9nb2 [taca 2004-05-13]
