@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.6 2001/06/15 08:35:34 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.7 2001/06/16 14:58:56 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -10,6 +10,10 @@
 #     respectively.
 # (3) Prepends ${BUILDLINK_CPPFLAGS} to CPPFLAGS, CFLAGS, and CXXFLAGS;
 # (4) Prepends ${BUILDLINK_LDFLAGS} to LDFLAGS.
+# (5) Defines a macro target, _BUILDLINK_CONFIG_WRAPPER_USE, that generates
+#     a wrapper script around GTK+-style config scripts that replaces
+#     -I${LOCALBASE}/... and -L${LOCALBASE}/... with references into
+#     ${BUILDLINK_DIR}.
 #
 # The variables required to be defined prior to including this file are
 # listed below.  <pkgname> refers to the name of the package and should be
@@ -30,15 +34,29 @@
 #				the source filename into a destination
 #				filename
 #
+# BUILDLINK_CONFIG.<pkgname>	absolute path to GTK+-style config script
+#
+# BUILDLINK_CONFIG_WRAPPER.<pkgname>
+#				absolute path for generated wrapper script;
+#				this should be under ${BUILDLINK_DIR}/bin
+#
 # The targets required to be defined prior to including this file are
 # listed below.
 #
 # pre-configure			this target should have as dependencies any
-#				targets to be invoked; this is just usually	#				<pkgname>-buildlink
+#				targets to be invoked; this is just usually	#				<pkgname>-buildlink and possibly
+#				<pkgname>-buildlink-config-wrapper
 #
 # <pkgname>-buildlink		this target should just invoke the
 #				_BUILDLINK_USE macro target defined in this
 #				file
+#
+# The targets that may optionally be defined are:
+#
+# <pkgname>-buildlink-config-wrapper
+#				this target should just invoke the
+#				_BUILDLINK_CONFIG_WRAPPER_USE macro target
+#				defined in this file
 #
 # Example package buildlink.mk file:
 #
@@ -94,6 +112,22 @@ _BUILDLINK_USE: .USE
 				${LN} -sf $${file} $${dest};		\
 			fi;						\
 		done;							\
+		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
+	fi
+
+_BUILDLINK_CONFIG_WRAPPER_USE: .USE
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cookie=${BUILDLINK_DIR}/.${.TARGET:S/-buildlink-config-wrapper//}_buildlink_config_wrapper_done; \
+	if [ ! -f $${cookie} ]; then					\
+		${ECHO_MSG} "Creating wrapper script ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}."; \
+		${MKDIR} ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}:H}; \
+		(${ECHO} '#!/bin/sh';					\
+		${ECHO} '';						\
+		${ECHO} '${ECHO} "`${BUILDLINK_CONFIG.${.TARGET:S/-buildlink-config-wrapper//}} $$*`" | ${SED} \'; \
+		${ECHO} '	-e "s|-I${LOCALBASE}/|-I${BUILDLINK_DIR}/|g" \'; \
+		${ECHO} '	-e "s|-L${LOCALBASE}/|-L${BUILDLINK_DIR}/|g"';	\
+		) > ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}; \
+		${CHMOD} +x ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}; \
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
 
