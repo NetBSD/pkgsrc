@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2002/04/17 18:58:52 briggs Exp $
+$NetBSD: patch-aa,v 1.7 2002/09/21 23:17:25 jlam Exp $
 
 --- Makefile.orig	Thu Aug 26 08:08:51 1999
 +++ Makefile	Wed Apr 17 14:55:31 2002
@@ -109,11 +109,11 @@ $NetBSD: patch-aa,v 1.6 2002/04/17 18:58:52 briggs Exp $
  
  xispdial: xispdial.c common.h version.h
 -	gcc $(GCCOPTS) -o xispdial xispdial.c
-+	gcc $(GCCOPTS)  -L$(LINKX11) -o xispdial xispdial.c
++	gcc $(GCCOPTS) $(LINKX11) -o xispdial xispdial.c
  
  xisprccv: xisprccv.o pcode.o
 -	gcc -o xisprccv xisprccv.o pcode.o $(EXTRALIBS) -lm
-+	gcc -o xisprccv xisprccv.o pcode.o $(EXTRALIBS) -L$(LINKX11) -lm
++	gcc -o xisprccv xisprccv.o pcode.o $(EXTRALIBS) $(LINKX11) -lm
  
  xisprccv.o: xisprccv.c common.h version.h pcode.h logs.h
  	gcc $(GCCOPTS) -c xisprccv.c
