@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/21 17:11:18 martti Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/31 22:13:16 kristerw Exp $
 #
 
 DISTNAME=		srsh-1.2
@@ -9,7 +9,7 @@ MAINTAINER=		kim@tac.nyc.ny.us
 COMMENT=		Emulate rsh client behavior using ssh
 
 .if !exists(/usr/bin/ssh)
-DEPENDS+=		{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/ssh
+DEPENDS+=		{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/openssh
 .endif
 
 NO_CONFIGURE=		yes
