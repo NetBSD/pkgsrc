@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/06/25 15:31:34 taca Exp $
+
+--- include/local.h.orig	Tue Oct  9 14:30:11 2001
++++ include/local.h
+@@ -176,10 +176,10 @@
+  * Default passwd chat script.
+  */
+ 
+-#define DEFAULT_PASSWD_CHAT "*new*password* %n\\n *new*password* %n\\n *changed*"
++#define DEFAULT_PASSWD_CHAT "*\\n*ew\\spassword* %n\\n *ew\\spassword* %n\\n *updating\\sthe\\sdatabase...\\npasswd:\\sdone\\n"
+ 
+ /* Minimum length of allowed password when changing UNIX password. */
+-#define MINPASSWDLENGTH 5
++#define MINPASSWDLENGTH 6
+ 
+ /* maximum ID number used for session control. This cannot be larger
+    than 62*62 for the current code */
