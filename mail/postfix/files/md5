@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.7 2000/07/03 02:46:18 sommerfeld Exp $
+$NetBSD: md5,v 1.8 2000/10/28 23:19:31 kim Exp $
 
 MD5 (postfix/postfix-19991231-pl08.tar.gz) = 0461524d91c87b03c80cc640ec953a63
+MD5 (postfix/postfix-19991231-pl06-verp.patch.gz) = 50a274d4b7e33a6e573f7678e4b5955b
