@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 1999/11/05 13:52:50 abs Exp $
+# $NetBSD: Makefile,v 1.47 1999/11/06 15:59:46 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -27,6 +27,7 @@
 #    SUBDIR += idled
     SUBDIR += kapm
     SUBDIR += kdf
+    SUBDIR += klavg
     SUBDIR += lavaps
     SUBDIR += logrot
     SUBDIR += logtime
