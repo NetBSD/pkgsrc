@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/10/28 10:35:56 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/29 14:32:38 tv Exp $
 #
 
 DISTNAME=		cabextract-1.1
@@ -6,7 +6,7 @@ CATEGORIES=		archivers
 MASTER_SITES=		http://www.kyz.uklinux.net/downloads/
 
 MAINTAINER=		ben@NetBSD.org
-HOMEPAGE=		http://www.kyz.uklinux.net/cabextract.php3
+HOMEPAGE=		http://www.kyz.uklinux.net/cabextract.php
 COMMENT=		Microsoft cabinet (.CAB) file extractor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
