@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/01/02 22:19:38 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/01/02 22:24:43 jlam Exp $
 
 PKGNAME=	courier-imap-${BASE_VERS}
 PKGREVISION?=	# empty
@@ -12,7 +12,7 @@ REPLACE_PERL=		sysconftool
 
 INSTALL_TARGET=		install-strip
 
-.include "../../scratch/courier-imap/Makefile.common"
+.include "../../mail/courier-imap/Makefile.common"
 
 GEN_FILES=	authdaemonrc imapd imapd-ssl pop3d pop3d-ssl
 SSLCNF_FILES=	imapd.cnf pop3d.cnf
