@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/12/14 03:43:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2003/02/05 06:29:54 grant Exp $
 #
 
 DISTNAME=	SnortSnarf-020516.1
@@ -17,22 +17,22 @@ REPLACE_PERL=	snortsnarf.pl
 NO_BUILD=	# defined
 
 post-configure:
-	@cd ${WRKSRC} ; \
-	${SED} -e "s|@@PREFIX@@|${PREFIX}|g" snortsnarf.pl > snortsnarf.tmp ; \
-	${MV} snortsnarf.tmp snortsnarf.pl
+	@cd ${WRKSRC} && \
+		${SED} -e "s|@PREFIX@|${PREFIX}|g" snortsnarf.pl \
+			> ${WRKDIR}/snortsnarf.pl
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/snortsnarf.pl ${PREFIX}/bin/snortsnarf.pl
+	${INSTALL_SCRIPT} ${WRKDIR}/snortsnarf.pl ${PREFIX}/bin/snortsnarf.pl
 	${INSTALL_DATA_DIR} ${PREFIX}/share/snortsnarf/SnortSnarf
 .for f in IPAddrContact.pm ann_xml.pl web_utils.pl xml_help.pl
 		${INSTALL_DATA} ${WRKSRC}/include/${f} \
 			${PREFIX}/share/snortsnarf
 .endfor
-.for f in AlertBase.pm HTMLOutput.pm MemTimeBase.pm MultiStore.pm \
-	MemPacket.pm HTMLMemStorage.pm Filtering.pm PacketBase.pm \
-	AllMods.pm BasicFilters.pm KnownEquiv.pm SnortFileInput.pm \
-	HTMLAnomMemStorage.pm Input.pm SorterBase.pm Sort.pm \
-	StorageBase.pm MemAlert.pm BasicSorters.pm Filter.pm \
+.for f in AlertBase.pm HTMLOutput.pm MemTimeBase.pm MultiStore.pm	\
+	MemPacket.pm HTMLMemStorage.pm Filtering.pm PacketBase.pm	\
+	AllMods.pm BasicFilters.pm KnownEquiv.pm SnortFileInput.pm	\
+	HTMLAnomMemStorage.pm Input.pm SorterBase.pm Sort.pm		\
+	StorageBase.pm MemAlert.pm BasicSorters.pm Filter.pm		\
 	SnortRules.pm MemStorage.pm SnortDBInput.pm TimeFilters.pm
 	${INSTALL_DATA} ${WRKSRC}/include/SnortSnarf/${f} \
 		${PREFIX}/share/snortsnarf/SnortSnarf
