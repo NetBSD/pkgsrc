@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/01/04 15:34:52 agc Exp $
+# $NetBSD: Makefile,v 1.6 2000/01/04 16:28:42 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1998/08/20 18:56:00 jseger Exp
 #
 
@@ -17,5 +17,7 @@ HOMEPAGE=	http://www.povray.org/
 DEPENDS+=	png-1.0.3:../../graphics/png
 
 USE_X11=	yes
+
+INSTALL_TARGET=	install-povray
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,20 +1,19 @@
-$NetBSD: patch-ac,v 1.1.1.1 1998/08/24 12:33:38 agc Exp $
+$NetBSD: patch-ac,v 1.2 2000/01/04 16:28:43 agc Exp $
 
 Small Makefile to drive NetBSD package
 
 --- /dev/null	Mon Aug 24 13:46:39 1998
 +++ Makefile	Mon Aug 24 13:46:32 1998
-@@ -0,0 +1,18 @@
-+POVLIB=		${PREFIX}/lib/povray3
+@@ -0,0 +1,17 @@
++POVLIB=		${PREFIX}/lib/povray31
 +
 +all:
 +	cd source/unix && ${MAKE} newxwin
 +
-+install:
++install-povray:
 +	mkdir -p ${POVLIB}/allscene
 +	${INSTALL} -m 0755 -s -c source/unix/x-povray ${PREFIX}/bin/povray
-+	tar cpf - pov3demo povscn docsdemo include texsamps | \
-+		(cd ${POVLIB}; tar xpf -)
++	tar cpf - scenes include | (cd ${POVLIB}; tar xpf -)
 +	${INSTALL} -c -m 0644 *.ini ${POVLIB}/
 +	${INSTALL} -c -m 0644 *.doc ${POVLIB}/
 +	${INSTALL} -c -m 0644 *.gif *.xpm ${POVLIB}/
