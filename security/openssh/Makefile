@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2003/08/30 22:51:36 jlam Exp $
+# $NetBSD: Makefile,v 1.108 2003/09/11 04:13:02 jlam Exp $
 
 DISTNAME=		openssh-3.6.1p2
 PKGNAME=		openssh-3.6.1.2
@@ -23,9 +23,6 @@ CONFLICTS+=		ssh-[0-9]* ssh6-[0-9]* ssh2-[0-9]*
 CONFLICTS+=		openssh+gssapi-[0-9]*
 
 USE_PERL5=		build
-
-# 0.9.5a can be used, with blowfish support broken.  so require 0.9.6.
-USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096}
 
 CRYPTO=			yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2003/07/13 13:54:25 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2003/09/11 04:13:04 jlam Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	6
@@ -11,7 +11,6 @@ CONFLICTS=	arts-[1-9]*
 
 USE_BUILDLINK2=		YES
 USE_GCC_SHLIB=		YES
-USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096}
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 CONFIGURE_ENV+=		PKG_CONFIG=${WRKDIR}/must-not-exist
