@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:11:48 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/04/19 17:59:18 jwise Exp $
 lib/java/postgresql.jar
+share/examples/java/jdbc-postgresql/postgresql-examples.jar
 share/examples/java/jdbc-postgresql/ImageViewer.java
 share/examples/java/jdbc-postgresql/Unicode.java
 share/examples/java/jdbc-postgresql/basic.java
