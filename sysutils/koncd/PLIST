@@ -1,11 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:22 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/13 21:26:58 jlam Exp $
 bin/koncd
-share/kde/applnk/Multimedia/koncd.desktop
-share/kde/icons/locolor/32x32/apps/koncd.png
-share/kde/icons/locolor/16x16/apps/koncd.png
-share/kde/icons/hicolor/32x32/apps/koncd.png
-share/kde/icons/hicolor/16x16/apps/koncd.png
-share/kde/locale/de/LC_MESSAGES/koncd.mo
 share/doc/kde/HTML/en/koncd/images/audiocd.jpg
 share/doc/kde/HTML/en/koncd/images/copycd.jpg
 share/doc/kde/HTML/en/koncd/images/imagetype.jpg
@@ -34,7 +28,16 @@ share/doc/kde/HTML/de/koncd/index.html
 share/doc/kde/HTML/de/koncd/kopiere_cd.htm
 share/doc/kde/HTML/de/koncd/tipps.htm
 share/doc/kde/HTML/de/koncd/werkzeuge.htm
+share/kde/applnk/Multimedia/koncd.desktop
+share/kde/icons/locolor/32x32/apps/koncd.png
+share/kde/icons/locolor/16x16/apps/koncd.png
+share/kde/icons/hicolor/32x32/apps/koncd.png
+share/kde/icons/hicolor/16x16/apps/koncd.png
+share/kde/locale/de/LC_MESSAGES/koncd.mo
+@unexec ${RMDIR} %D/share/kde/locale/de/LC_MESSAGES 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/locale/de 2>/dev/null || ${TRUE}
 @dirrm share/doc/kde/HTML/en/koncd/images
 @dirrm share/doc/kde/HTML/en/koncd
 @dirrm share/doc/kde/HTML/de/koncd/images
 @dirrm share/doc/kde/HTML/de/koncd
+@unexec ${RMDIR} %D/share/doc/kde/HTML/de 2>/dev/null || ${TRUE}
