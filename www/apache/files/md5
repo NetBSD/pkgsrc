@@ -1,5 +1,5 @@
-$NetBSD: md5,v 1.13 2000/01/31 16:35:36 christos Exp $
+$NetBSD: md5,v 1.14 2000/04/21 02:16:23 explorer Exp $
 
-MD5 (apache_1.3.11.tar.gz) = 8e0e4c9b410d4d4c4f5832fc0662b9e1
-MD5 (mod_ssl-2.5.0-1.3.11.tar.gz) = 0d630dd536e2cdc6885368c79b45766f
+MD5 (apache_1.3.12.tar.gz) = de3ccff384b0d4ab94c3251cb85d49d2
+MD5 (mod_ssl-2.6.3-1.3.12.tar.gz) = b66b034d91079dcc7749de8f7ab98573
 MD5 (sitedrivenby.gif) = ad0647dceb931d02bfd046e55915f7b1
