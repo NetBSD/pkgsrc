@@ -1,0 +1,6 @@
+  Oregano is intended to be an application for schematic capture and
+simulation of electrical circuits. The actual simulation is performed
+by Berkeley SPICE. Oregano can still be used without SPICE, for
+schematic capture. 
+
+  Oregano is licensed under the terms of the GNU GPL. 
