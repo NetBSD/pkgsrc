@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1965 2004/07/23 14:21:11 wiz Exp $
+$NetBSD: TODO,v 1.1966 2004/07/23 15:16:43 recht Exp $
 
 Suggested new packages
 ======================
@@ -174,7 +174,6 @@ Suggested package updates
 	o asc-1.15.0
 	o avidemux-2.0.26
 	o balsa-1.4.4
-	o balsa2-2.0.18
 	o bind-9.3
 	o bitchx-1.1
 	o blender-2.33
