@@ -1,4 +1,4 @@
-# $NetBSD: smb.conf.sample,v 1.5 1999/11/16 21:23:05 jlam Exp $
+# $NetBSD: smb.conf.sample,v 1.6 2000/05/02 15:24:09 jlam Exp $
 #
 # This is the main Samba configuration file. You should read the
 # smb.conf(5) manual page in order to understand the options listed
@@ -52,7 +52,7 @@
 
 # this tells Samba to use a separate log file for each machine
 # that connects
-   log file = __LOGDIR__/log.%m
+   log file = @LOGDIR@/log.%m
 
 # Put a capping on the size of the log files (in Kb).
    max log size = 50
@@ -71,7 +71,7 @@
 # Using the following line enables you to customise your configuration
 # on a per machine basis. The %m gets replaced with the netbios name
 # of the machine that is connecting
-;   include = __ETCDIR__/smb.conf.%m
+;   include = @ETCDIR@/smb.conf.%m
 
 # Most people will find that this option gives better performance.
 # See speed.txt and the manual pages for details
@@ -147,7 +147,7 @@
 # Un-comment the following and create the netlogon directory for Domain Logons
 ; [netlogon]
 ;   comment = Network Logon Service
-;   path = __PREFIX__/lib/netlogon
+;   path = @PREFIX@/lib/netlogon
 ;   guest ok = yes
 ;   writable = no
 ;   share modes = no
@@ -156,7 +156,7 @@
 # Un-comment the following to provide a specific roving profile share
 # the default is to use the user's home directory
 ;[Profiles]
-;    path = __PREFIX__/samba/profiles
+;    path = @PREFIX@/samba/profiles
 ;    browseable = no
 ;    guest ok = yes
 
