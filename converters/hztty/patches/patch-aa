@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/06/19 09:39:18 agc Exp $
+
+--- Makefile.orig	Sun Jan 29 16:39:19 1995
++++ Makefile	Sun Apr  2 11:16:03 2000
+@@ -31,7 +30,7 @@
+ 	${OBJ_GB_BIG5} ${OBJ_UNICODE_GB} ${OBJ_UNICODE_BIG5}
+ 
+ DEFINES= 
+-CFLAGS=${CDEBUGFLAGS} ${DEFINES} ${MODULES_DEF} -I.
++CFLAGS+=${DEFINES} ${MODULES_DEF} -I.
+ 
+ PROG = hztty
+ LIBS=
+@@ -132,7 +131,7 @@
+ 
+ 
+ bsd:
+-	miniconf.sh $(CPP)
++	./miniconf.sh $(CPP)
+ 	${MAKE} ${MFLAGS} DEFINES='-DBSD' ${PROG}
+ 
+ posix:
