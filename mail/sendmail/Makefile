@@ -1,18 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2000/06/15 12:55:07 kleink Exp $
+# $NetBSD: Makefile,v 1.18 2000/07/24 04:22:31 itojun Exp $
 
-DISTNAME=	sendmail.8.9.3
-PKGNAME=	sendmail-8.9.3
+DISTNAME=	sendmail.8.11.0
+PKGNAME=	sendmail-8.11.0
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.cert.dfn.de/pub/tools/net/sendmail/ \
 		ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/
-
-PATCH_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/
-PATCHFILES=	sendmail893+3.2W.patch.gz
-PATCH_DIST_ARGS=-d ${WRKSRC}/src -E ${PATCH_DIST_STRIP}
-.if !(defined(PATCH_DEBUG) || defined(PKG_VERBOSE))
-PATCH_DIST_ARGS+=--forward --quiet
-.endif
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.sendmail.org/
@@ -30,47 +23,42 @@ BUILD_DEFS+=    USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_INET6) && ${USE_INET6} == YES
-MAKE_ENV+=	CONFIG="-f ${WRKSRC}/site.config-v6"
-.endif
-
 .if ${OPSYS} == "SunOS"
 USE_DB2?=	YES
 .else
 USE_DB2?=	NO
 .endif
 
-.if ${USE_DB2} == YES
-DEPENDS+=	db-2.7.7:../../databases/db
-
-MAKE_ENV+=	DB_ENVDEF="-I${LOCALBASE}/include/db2" \
-		DB_LIBS="-L${LOCALBASE}/lib -ldb2"
-.else
-MAKE_ENV+=	DB_ENVDEF="" DB_LIBS=""
-.endif
-
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 .if defined(USE_LDAP) && ${USE_LDAP} == YES
 DEPENDS+=	openldap-1.2.*:../../databases/openldap
-
-MAKE_ENV+=	LDAP_CONF="-DLDAPMAP"			\
-		LDAP_ENVDEF="-I${LOCALBASE}/include"	\
-		LDAP_LIBS="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lldap -llber"
-.else
-MAKE_ENV+=	LDAP_CONF="" LDAP_ENVDEF="" LDAP_LIBS=""
 .endif
-
-.if ${OPSYS} == "NetBSD"
-MAKE_ENV+=	TCPD_CONF="-DTCPWRAPPERS" TCPD_LIBS="-lwrap"
-.else
-MAKE_ENV+=	TCPD_CONF="" TCPD_LIBS=""
+.if ${USE_DB2} == YES
+DEPENDS+=	db-2.7.7:../../databases/db
 .endif
 
 post-patch:
+	${CP} ${FILESDIR}/site.config.m4 ${WRKSRC}/devtools/Site/site.config.m4
 .if defined(USE_INET6) && ${USE_INET6} == YES
-	@(${CP} ${FILESDIR}/site.config-v6 ${WRKSRC})
+	${CAT} ${FILESDIR}/site.config.m4-v6 \
+	    >> ${WRKSRC}/devtools/Site/site.config.m4
 .endif
+.if ${OPSYS} == "NetBSD"
+	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers \
+	    >> ${WRKSRC}/devtools/Site/site.config.m4
+.endif
+.if defined(USE_LDAP) && ${USE_LDAP} == YES
+	${CAT} ${FILESDIR}/site.config.m4-ldap \
+	    >> ${WRKSRC}/devtools/Site/site.config.m4
+.endif
+.if ${USE_DB2} == YES
+	${CAT} ${FILESDIR}/site.config.m4-db2 \
+	    >> ${WRKSRC}/devtools/Site/site.config.m4
+.endif
+
+do-build:
+	@(cd ${WRKSRC}; ./Build)
 
 post-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
