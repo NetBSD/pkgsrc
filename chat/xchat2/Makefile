@@ -1,25 +1,17 @@
-# $NetBSD: Makefile,v 1.36 2004/10/30 18:02:45 minskim Exp $
+# $NetBSD: Makefile,v 1.37 2004/10/30 18:10:35 minskim Exp $
 #
 
-DISTNAME=	xchat-2.4.0
-PKGREVISION=	1
-CATEGORIES=	chat gnome
-MASTER_SITES=	http://www.xchat.org/files/source/2.4/
-EXTRACT_SUFX=	.tar.bz2
+.include "Makefile.common"
 
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.xchat.org/
+PKGREVISION=	1
+
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
 
 BUILD_USES_MSGFMT=	YES
 
 CONFLICTS=		xchat-gnome-[0-9]*
 
-GNU_CONFIGURE=		YES
-USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome2-1.5
-USE_LIBTOOL=		YES
-USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 
@@ -54,7 +46,5 @@ CONFIGURE_ARGS+=        --enable-openssl=${SSLBASE}
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/xchat/plugins
 
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
