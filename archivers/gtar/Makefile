@@ -3,7 +3,7 @@
 # Date created:		1 March 1998
 # Whom:			tv@netbsd.org
 #
-# $NetBSD: Makefile,v 1.3 1998/03/05 20:09:46 tv Exp $
+# $NetBSD: Makefile,v 1.4 1998/03/10 11:57:27 frueauf Exp $
 #
 
 DISTNAME=       tar-1.12
@@ -24,6 +24,6 @@ CONFIGURE_ARGS= --program-prefix=g
 MAN1=	gtar.1
 
 post-install:
-	${INSTALL_DATA} files/gtar.1 ${PREFIX}/man/man1/
+	${INSTALL_DATA} ${FILESDIR}/gtar.1 ${PREFIX}/man/man1/
 
 .include <bsd.port.mk>
