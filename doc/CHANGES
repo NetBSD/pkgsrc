@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8108 2004/11/28 15:48:57 recht Exp $
+$NetBSD: CHANGES,v 1.8109 2004/11/28 16:04:47 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5591,3 +5591,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ap2-ruby to 1.2.4 [taca 2004-11-28]
 	Updated ap-ruby to 1.2.4 [taca 2004-11-28]
 	Updated doclifter to 1.15 [recht 2004-11-28]
+	Updated LPRng-core to 3.8.28 [martti 2004-11-28]
+	Updated LPRng to 3.8.28 [martti 2004-11-28]
