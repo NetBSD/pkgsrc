@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/03/14 16:14:08 skrll Exp $
+$NetBSD: patch-ae,v 1.2 2001/04/17 09:22:32 skrll Exp $
 
 --- kmidi/linux_a.cpp.orig	Mon Jan 22 12:14:45 2001
 +++ kmidi/linux_a.cpp
@@ -16,7 +16,17 @@ $NetBSD: patch-ae,v 1.1.1.1 2001/03/14 16:14:08 skrll Exp $
  #ifdef __FreeBSD__
  #include <stdio.h>
  #include <machine/soundcard.h>
-@@ -320,13 +327,21 @@
+@@ -76,6 +83,9 @@
+ #ifdef LINUX_SECOND_DEVICE
+   "Linux 2nd dsp device", 'D',
+   "/dev/dsp1",
++#elif defined(__NetBSD__)
++  "NetBSD audio device", 'd',
++  "/dev/audio",
+ #else
+   "Linux dsp device", 'd',
+   "/dev/dsp",
+@@ -320,13 +330,21 @@
  static void flush_output(void)
  {
    output_data(0, 0);
