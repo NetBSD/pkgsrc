@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/10/16 10:13:16 rh Exp $
+# $NetBSD: Makefile,v 1.7 2000/10/16 11:02:35 rh Exp $
 #
 
 DISTNAME=     	perl-ldap-0.22
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://perl-ldap.sourceforge.net/
 
+DEPENDS+=	p5-XML-Parser-*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-Digest-MD5-*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Convert-ASN1-*:../../textproc/p5-Convert-ASN1
 DEPENDS+=	p5-libwww-*:../../www/p5-libwww
