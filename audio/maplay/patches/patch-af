@@ -1,0 +1,35 @@
+$NetBSD: patch-af,v 1.1 2002/06/27 15:52:16 agc Exp $
+
+--- ibitstream.cc	2002/06/27 15:41:04	1.1
++++ ibitstream.cc	2002/06/27 15:41:40
+@@ -33,6 +33,12 @@
+ #include "all.h"
+ #include "ibitstream.h"
+ 
++#ifdef NETBSD
++#include <machine/endian.h>
++#if BYTE_ORDER == LITTLE_ENDIAN
++#define DAMN_INTEL_BYTE_ORDER
++#endif
++#endif
+ 
+ #define swap_int32(int_32) (((int_32) << 24) | (((int_32) << 8) & 0x00ff0000) | \
+ 			   (((int_32) >> 8) & 0x0000ff00) | ((int_32) >> 24))
+@@ -64,7 +70,7 @@
+ }
+ 
+ 
+-bool Ibitstream::get_header (uint32 *headerstring)
++boolean Ibitstream::get_header (uint32 *headerstring)
+ {
+   int readvalue;
+ 
+@@ -102,7 +108,7 @@
+ }
+ 
+ 
+-bool Ibitstream::read_frame (uint32 bytesize)
++boolean Ibitstream::read_frame (uint32 bytesize)
+ {
+   int readvalue;
+ 

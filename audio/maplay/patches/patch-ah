@@ -1,0 +1,77 @@
+$NetBSD: patch-ah,v 1.1 2002/06/27 15:52:18 agc Exp $
+
+--- maplay.cc	2002/06/27 15:41:04	1.1
++++ maplay.cc	2002/06/27 15:41:40
+@@ -54,14 +54,14 @@
+ 
+ // data extracted from commandline arguments:
+ static char *filename;
+-static bool verbose_mode = False, filter_check = False;
+-static bool stdout_mode = False;
++static boolean verbose_mode = False, filter_check = False;
++static boolean stdout_mode = False;
+ static enum e_channels which_channels = both;
+-static bool use_speaker = False, use_headphone = False, use_line_out = False;
++static boolean use_speaker = False, use_headphone = False, use_line_out = False;
+ #ifdef ULAW
+-static bool force_amd = False;
++static boolean force_amd = False;
+ #endif
+-static bool use_own_scalefactor = False;
++static boolean use_own_scalefactor = False;
+ static real scalefactor;
+ 
+ // data extracted from header of first frame:
+@@ -93,7 +93,7 @@
+ main (int argc, char *argv[])
+ {
+   int i;
+-  bool read_ready = False, write_ready = False;
++  boolean read_ready = False, write_ready = False;
+ 
+   if (argc < 2 || !strncmp (argv[1], "-h", 2))
+   {
+@@ -146,6 +146,9 @@
+ #ifdef Solaris
+ 	    "SPARC Solaris 2.x"
+ #else
++#ifdef __FreeBSD__
++	    "FreeBSD"
++#else
+ #ifdef LINUX
+ 	    "Linux"
+ #else
+@@ -159,6 +162,7 @@
+ #endif
+ #endif
+ #endif
++#endif
+ 	    " version)\n"
+ 	    "@(#) Copyright (C) 1993, 1994 Tobias Bading (bading@cs.tu-berlin.de)\n"
+ 	    "@(#) Berlin University of Technology\n"
+@@ -319,6 +323,17 @@
+       Exit (0);
+   }
+ #else
++#ifdef NETBSD
++  {
++    if (NetBSDObuffer::class_suitable (mode == single_channel || which_channels != both) ? 1 : 2)
++      if (mode == single_channel || which_channels != both)
++	buffer = new NetBSDObuffer (1, header);
++      else
++	buffer = new NetBSDObuffer (2, header);
++    else
++      Exit (0);
++  }
++#else
+ //#ifdef your_machine
+ //  {
+ //    if (mode == single_channel || which_channels != both)
+@@ -333,6 +348,7 @@
+     Exit (0);
+   }
+ //#endif	// !your_machine
++#endif  // !NETBSD
+ #endif	// !LINUX
+ #endif	// !SPARC
+ #endif	// !Indigo

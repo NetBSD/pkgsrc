@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1 2002/06/27 15:52:17 agc Exp $
+
+--- ibitstream.h	2002/06/27 15:41:04	1.1
++++ ibitstream.h	2002/06/27 15:41:40
+@@ -43,10 +43,10 @@
+ 		~Ibitstream (void);
+   int		filedescriptor (void) { return fd; };
+ 
+-  bool		get_header (uint32 *);
++  boolean		get_header (uint32 *);
+ 		// get next 32 bits from bitstream in an unsigned int,
+ 		// returned value False => end of stream
+-  bool		read_frame (uint32 bytesize);
++  boolean		read_frame (uint32 bytesize);
+ 		// fill buffer with data from bitstream, returned value False => end of stream
+   uint32	get_bits (uint32 number_of_bits);
+ 		// read bits (1 <= number_of_bits <= 16) from buffer into the lower bits

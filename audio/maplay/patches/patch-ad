@@ -1,24 +1,16 @@
-$NetBSD: patch-ad,v 1.3 1998/08/07 10:35:57 agc Exp $
+$NetBSD: patch-ad,v 1.4 2002/06/27 15:52:14 agc Exp $
 
-diff -u ../work/configuration.sh ./configuration.sh
---- ../work/configuration.sh	Sun Oct 26 12:31:52 1997
-+++ ./configuration.sh	Sun Oct 26 12:19:41 1997
-@@ -72,6 +72,12 @@
-      INCLUDEDIRS=
-      LIBRARIES=
-      AUDIO_INCLUDES='#include <sys/audioio.h>' ;;
-+  NetBSD*)
-+     COMPILER=g++
-+     COMPILERFLAGS='-O2 -DNETBSD'
-+     INCLUDEDIRS=
-+     LIBRARIES= 
-+     AUDIO_INCLUDES='#include <sys/audioio.h>' ;;
-   FreeBSD*)
-      COMPILER=g++
-      COMPILERFLAGS='-O2 -m486 -DLINUX -DDAMN_INTEL_BYTE_ORDER'
-diff -u ../work/header.cc ./header.cc
---- ../work/header.cc	Sun Oct 26 12:31:52 1997
-+++ ./header.cc	Sun Oct 26 12:25:28 1997
+--- header.cc	2002/06/27 15:41:04	1.1
++++ header.cc	2002/06/27 15:44:28
+@@ -36,7 +36,7 @@
+ const uint32 Header::frequencies[3] = { 44100, 48000, 32000 };
+ 
+ 
+-bool Header::read_header (Ibitstream *stream, Crc16 **crcp)
++boolean Header::read_header (Ibitstream *stream, Crc16 **crcp)
+ {
+   uint32 headerstring;
+ 
 @@ -48,8 +48,8 @@
      cerr << "invalid syncword 0x";
      cerr.width (8);
@@ -30,202 +22,12 @@ diff -u ../work/header.cc ./header.cc
  	 << lseek (stream->filedescriptor (), 0, SEEK_CUR) - 4 << '\n';
      return False;
    }
-diff -u ../work/ibitstream.cc ./ibitstream.cc
---- ../work/ibitstream.cc	Sun Oct 26 12:31:52 1997
-+++ ./ibitstream.cc	Sun Oct 26 12:17:22 1997
-@@ -33,6 +33,12 @@
- #include "all.h"
- #include "ibitstream.h"
+@@ -161,7 +161,7 @@
+   static const int32 bitrates_layer_2[15] = {
+     0 /*free format*/, 32000, 48000, 56000, 64000, 80000, 96000,
+     112000, 128000, 160000, 192000, 224000, 256000, 320000, 384000 };
+-  static const samplefrequencies[3] = { 44100, 48000, 32000 };
++  static const int32 samplefrequencies[3] = { 44100, 48000, 32000 };
+   uint32 framesize;
  
-+#ifdef NETBSD
-+#include <machine/endian.h>
-+#if BYTE_ORDER == LITTLE_ENDIAN
-+#define DAMN_INTEL_BYTE_ORDER
-+#endif
-+#endif
- 
- #define swap_int32(int_32) (((int_32) << 24) | (((int_32) << 8) & 0x00ff0000) | \
- 			   (((int_32) >> 8) & 0x0000ff00) | ((int_32) >> 24))
-diff -u ../work/maplay.cc ./maplay.cc
---- ../work/maplay.cc	Sun Oct 26 12:31:52 1997
-+++ ./maplay.cc	Sun Oct 26 12:18:30 1997
-@@ -323,6 +323,17 @@
-       Exit (0);
-   }
- #else
-+#ifdef NETBSD
-+  {
-+    if (NetBSDObuffer::class_suitable (mode == single_channel || which_channels != both) ? 1 : 2)
-+      if (mode == single_channel || which_channels != both)
-+	buffer = new NetBSDObuffer (1, header);
-+      else
-+	buffer = new NetBSDObuffer (2, header);
-+    else
-+      Exit (0);
-+  }
-+#else
- //#ifdef your_machine
- //  {
- //    if (mode == single_channel || which_channels != both)
-@@ -337,6 +348,7 @@
-     Exit (0);
-   }
- //#endif	// !your_machine
-+#endif  // !NETBSD
- #endif	// !LINUX
- #endif	// !SPARC
- #endif	// !Indigo
-diff -u ../work/obuffer.cc ./obuffer.cc
---- ../work/obuffer.cc	Sun Oct 26 12:31:52 1997
-+++ ./obuffer.cc	Sun Oct 26 12:32:53 1997
-@@ -639,3 +639,122 @@
- }
- 
- #endif	/* LINUX */
-+
-+#ifdef NETBSD
-+int NetBSDObuffer::audio_fd = -1;
-+
-+int NetBSDObuffer::open_audio_device (void)
-+{
-+  int fd;
-+
-+  if ((fd = open ("/dev/audio", O_WRONLY | O_NDELAY, 0)) < 0)
-+    if (errno == EBUSY)
-+    {
-+      cerr << "Sorry, the audio device is busy!\n";
-+      exit (1);
-+    }
-+    else
-+    {
-+      perror ("can't open /dev/audio for writing");
-+      exit (1);
-+    }
-+
-+  int flags;
-+  if ((flags = fcntl (fd, F_GETFL, 0)) < 0)
-+  {
-+    perror ("fcntl F_GETFL on /dev/audio failed");
-+    exit (1);
-+  }
-+  flags &= ~O_NDELAY;
-+  if (fcntl (fd, F_SETFL, flags) < 0)
-+  {
-+    perror ("fcntl F_SETFL on /dev/audio failed");
-+    exit (1);
-+  }
-+  return fd;
-+}
-+
-+
-+NetBSDObuffer::NetBSDObuffer (uint32 number_of_channels, Header *header)
-+{
-+#ifdef DEBUG
-+  if (!number_of_channels || number_of_channels > MAXCHANNELS)
-+  {
-+    cerr << "NetBSDObuffer: 0 < number of channels < " << MAXCHANNELS << "!\n";
-+    exit (1);
-+  }
-+#endif
-+  channels = number_of_channels;
-+  for (int i = 0; i < number_of_channels; ++i)
-+    bufferp[i] = buffer + i;
-+
-+  if (audio_fd < 0)
-+  {
-+    cerr << "Internal error, NetBSDObuffer::audio_fd has to be initialized\n"
-+	    "by NetBSDObuffer::class_suitable()!\n";
-+    exit (1);
-+  }
-+
-+  audio_info info;
-+  AUDIO_INITINFO(&info);
-+
-+  // configure the device:
-+  info.play.encoding = AUDIO_ENCODING_SLINEAR;
-+  info.play.precision = 16;
-+  info.play.channels = channels;
-+  info.play.sample_rate = header->frequency ();
-+
-+  if (ioctl (audio_fd, AUDIO_SETINFO, &info))
-+  {
-+    perror ("configuration of /dev/audio failed");
-+    exit (1);
-+  }
-+}
-+
-+
-+NetBSDObuffer::~NetBSDObuffer (void)
-+{
-+  close (audio_fd);
-+}
-+
-+
-+void NetBSDObuffer::append (uint32 channel, int16 value)
-+{
-+#ifdef DEBUG
-+  if (channel >= channels)
-+  {
-+    cerr << "illegal channelnumber in NetBSDObuffer::append()!\n";
-+    exit (1);
-+  }
-+  if (bufferp[channel] - buffer >= OBUFFERSIZE)
-+  {
-+    cerr << "buffer overflow!\n";
-+    exit (1);
-+  }
-+#endif
-+  *bufferp[channel] = value;
-+  bufferp[channel] += channels;
-+}
-+
-+
-+void NetBSDObuffer::write_buffer (int)
-+{
-+  int length = (int)((char *)bufferp[0] - (char *)buffer);
-+  if (write (audio_fd, buffer, length) != length)
-+  {
-+    perror ("write to /dev/audio failed");
-+    exit (1);
-+  }
-+  for (int i = 0; i < channels; ++i)
-+    bufferp[i] = buffer + i;
-+}
-+
-+
-+boolean NetBSDObuffer::class_suitable (uint32 number_of_channels)
-+{
-+  // open the dsp audio device:
-+  audio_fd = open_audio_device ();
-+  return True;
-+}
-+
-+#endif	/* NETBSD */
-diff -u ../work/obuffer.h ./obuffer.h
---- ../work/obuffer.h	Sun Oct 26 12:31:52 1997
-+++ ./obuffer.h	Sun Oct 26 12:19:16 1997
-@@ -163,4 +163,24 @@
- };
- #endif	// LINUX
- 
-+#ifdef NETBSD
-+class NetBSDObuffer : public Obuffer
-+{
-+  int16  buffer[OBUFFERSIZE];
-+  int16 *bufferp[MAXCHANNELS];
-+  uint32 channels;
-+  static int audio_fd;
-+
-+  static int open_audio_device (void);
-+
-+public:
-+	NetBSDObuffer (uint32 number_of_channels, Header *);
-+       ~NetBSDObuffer (void);
-+  void	append (uint32 channel, int16 value);
-+  void	write_buffer (int dummy);
-+
-+  static boolean class_suitable (uint32 number_of_channels);
-+};
-+#endif	// LINUX
-+
- #endif
+   if (h_layer == 1)
