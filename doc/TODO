@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2390 2004/11/19 13:25:06 adam Exp $
+$NetBSD: TODO,v 1.2391 2004/11/19 13:36:32 adam Exp $
 
 Suggested new packages
 ======================
@@ -510,7 +510,6 @@ Suggested package updates
 	o skampi-4.1
 	o skkinput-2.06.4
 	o slib-3a1
-	o slrn-0.9.8.1
 	o sml-nj-110.49 [pkgsrc-wip]
 	o sml-nj-110.50
 	o snd-7.7
