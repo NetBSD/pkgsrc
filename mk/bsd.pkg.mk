@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.476 2000/06/04 17:56:15 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.477 2000/06/05 07:25:13 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -914,7 +914,8 @@ IGNORE=	"is restricted: ${RESTRICTED}"
 IGNORE=	"uses X11, but ${X11BASE} not found"
 .elif defined(BROKEN)
 IGNORE=	"is marked as broken: ${BROKEN}"
-.elif defined(LICENSE)
+.else
+.if defined(LICENSE)
 .ifdef ACCEPTABLE_LICENSES
 .for _lic in ${ACCEPTABLE_LICENSES}
 .if ${LICENSE} == "${_lic}"
@@ -927,26 +928,28 @@ IGNORE=	"Unacceptable license: ${LICENSE}." \
 	"	To build this package, add this line to your /etc/mk.conf:" \
 	"	ACCEPTABLE_LICENSES+=${LICENSE}"
 .endif	# _ACCEPTABLE
-.else	# This can't be in an "elif":
+.endif	# LICENSE
 # Define __PLATFORM_OK only if the OS matches the pkg's allowed list.
-. if defined(ONLY_FOR_PLATFORM) && !empty(ONLY_FOR_PLATFORM)
-.  for __tmp__ in ${ONLY_FOR_PLATFORM}
-.   if ${MACHINE_PLATFORM:M${__tmp__}} != ""
+.if !defined(IGNORE)
+.if defined(ONLY_FOR_PLATFORM) && !empty(ONLY_FOR_PLATFORM)
+.for __tmp__ in ${ONLY_FOR_PLATFORM}
+.if ${MACHINE_PLATFORM:M${__tmp__}} != ""
 __PLATFORM_OK?=	yes
-.   endif	# MACHINE_PLATFORM
-.  endfor	# __tmp__
-. else	# !ONLY_FOR_PLATFORM
+.endif	# MACHINE_PLATFORM
+.endfor	# __tmp__
+.else	# !ONLY_FOR_PLATFORM
 __PLATFORM_OK?=	yes
-. endif	# ONLY_FOR_PLATFORM
-. for __tmp__ in ${NOT_FOR_PLATFORM}
-.  if ${MACHINE_PLATFORM:M${__tmp__}} != ""
-.   undef __PLATFORM_OK
-.  endif	# MACHINE_PLATFORM
-. endfor	# __tmp__
-. if !defined(__PLATFORM_OK)
+.endif	# ONLY_FOR_PLATFORM
+.for __tmp__ in ${NOT_FOR_PLATFORM}
+.if ${MACHINE_PLATFORM:M${__tmp__}} != ""
+.undef __PLATFORM_OK
+.endif	# MACHINE_PLATFORM
+.endfor	# __tmp__
+.if !defined(__PLATFORM_OK)
 IGNORE=			"is not available for ${MACHINE_PLATFORM}"
-. endif	# !__PLATFORM_OK
-.endif	# .elif row
+.endif	# !__PLATFORM_OK
+.endif	# IGNORE
+.endif	# IGNORE
 
 .if defined(IGNORE)
 .if defined(IGNORE_SILENT)
