@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2004/10/03 00:14:55 tv Exp $
+# $NetBSD: Makefile,v 1.32 2004/10/25 07:08:42 tron Exp $
 
 DISTNAME=	libungif-4.1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libungif/}
 EXTRACT_SUFX=	.tar.bz2
@@ -31,10 +31,16 @@ post-patch:
 	${RM} ${WRKSRC}/doc/gif2x11.html
 
 post-install:
-	cd ${PREFIX}; \
-	for f in libungif.a libungif.so libungif.so.5 libungif.so.5.3; do \
-		g=`echo $$f | ${SED} "s,libungif,libgif,"`; \
-		${LN} -sf $$f ${PREFIX}/lib/$$g; \
+	cd ${PREFIX}/lib && 						\
+	for SOURCE in libungif.*; do					\
+	  TARGET=`echo $$SOURCE | sed -e s/libungif/libgif/`;		\
+	  ${RM} -f $$TARGET; 						\
+	  if [ $$SOURCE = libungif.la ]; then				\
+	    ${SED} -e s/libungif/libgif/g $$SOURCE >$$TARGET;		\
+	    ${CHMOD} 755 $$TARGET;					\
+	  else								\
+	    ${LN} -s $$SOURCE $$TARGET;					\
+	  fi;								\
 	done
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} COPYING UNCOMPRESSED_GIF ${DOCDIR}
@@ -42,3 +48,4 @@ post-install:
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.txt *.png ${HTMLDIR}
 
 .include "../../mk/bsd.pkg.mk"
+
