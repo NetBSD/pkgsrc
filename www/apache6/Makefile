@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/04/14 19:42:54 kim Exp $
+# $NetBSD: Makefile,v 1.28 2001/04/14 19:50:05 kim Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -13,7 +13,7 @@
 DISTNAME=		apache_1.3.19
 PKGNAME=		apache6-1.3.19
 CATEGORIES=		www
-MASTER_SITES=		http://httpd.apache.org/dist/ \
+MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://www.netbsd.org/images/logos/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			sitedrivenby.gif
