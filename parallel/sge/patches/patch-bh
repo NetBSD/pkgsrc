@@ -1,0 +1,22 @@
+$NetBSD: patch-bh,v 1.1 2004/06/15 00:26:07 dmcmahill Exp $
+
+--- source/daemons/common/pdc.c.orig	Wed Mar  3 13:09:47 2004
++++ source/daemons/common/pdc.c
+@@ -117,7 +117,7 @@ int main(int argc,char *argv[])
+ #include "sge_stat.h"
+ #endif
+ 
+-#if defined(LINUX) || defined(ALPHA) || defined(IRIX6) || defined(SOLARIS) || defined(FREEBSD) || defined(DARWIN)
++#if defined(LINUX) || defined(ALPHA) || defined(IRIX6) || defined(SOLARIS) || defined(FREEBSD) || defined (NETBSD) || defined(DARWIN)
+ #include "sge_nprocs.h"
+ #endif
+ 
+@@ -2082,7 +2082,7 @@ int psStartCollector(void)
+    pagesize = getpagesize();
+ 
+    /* retrieve static parameters */
+-#if defined(LINUX) || defined(ALINUX) || defined(IRIX6) || defined(SOLARIS) || defined(FREEBSD) || defined(DARWIN)
++#if defined(LINUX) || defined(ALINUX) || defined(IRIX6) || defined(SOLARIS) || defined(FREEBSD) || defined (NETBSD) || defined(DARWIN)
+    ncpus = sge_nprocs();
+ #elif defined(ALPHA)
+    {
