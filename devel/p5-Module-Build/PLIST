@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2004/05/02 06:09:43 kim Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/02/19 12:40:47 wiz Exp $
+bin/config_data
 ${PERL5_SITELIB}/Module/Build.pm
 ${PERL5_SITELIB}/Module/Build/Base.pm
 ${PERL5_SITELIB}/Module/Build/Compat.pm
+${PERL5_SITELIB}/Module/Build/ConfigData.pm
 ${PERL5_SITELIB}/Module/Build/Cookbook.pm
 ${PERL5_SITELIB}/Module/Build/PPMMaker.pm
 ${PERL5_SITELIB}/Module/Build/Platform/Amiga.pm
@@ -14,24 +16,31 @@ ${PERL5_SITELIB}/Module/Build/Platform/Unix.pm
 ${PERL5_SITELIB}/Module/Build/Platform/VMS.pm
 ${PERL5_SITELIB}/Module/Build/Platform/VOS.pm
 ${PERL5_SITELIB}/Module/Build/Platform/Windows.pm
+${PERL5_SITELIB}/Module/Build/Platform/aix.pm
 ${PERL5_SITELIB}/Module/Build/Platform/cygwin.pm
 ${PERL5_SITELIB}/Module/Build/Platform/darwin.pm
-lib/perl5/site_perl/man/man3/Module::Build.3
-lib/perl5/site_perl/man/man3/Module::Build::Base.3
-lib/perl5/site_perl/man/man3/Module::Build::Compat.3
-lib/perl5/site_perl/man/man3/Module::Build::Cookbook.3
-lib/perl5/site_perl/man/man3/Module::Build::PPMMaker.3
-lib/perl5/site_perl/man/man3/Module::Build::Platform::Amiga.3
-lib/perl5/site_perl/man/man3/Module::Build::Platform::Default.3
-lib/perl5/site_perl/man/man3/Module::Build::Platform::EBCDIC.3
-lib/perl5/site_perl/man/man3/Module::Build::Platform::MPEiX.3
-lib/perl5/site_perl/man/man3/Module::Build::Platform::MacOS.3
-lib/perl5/site_perl/man/man3/Module::Build::Platform::RiscOS.3
-lib/perl5/site_perl/man/man3/Module::Build::Platform::Unix.3
-lib/perl5/site_perl/man/man3/Module::Build::Platform::VMS.3
-lib/perl5/site_perl/man/man3/Module::Build::Platform::VOS.3
-lib/perl5/site_perl/man/man3/Module::Build::Platform::Windows.3
-lib/perl5/site_perl/man/man3/Module::Build::Platform::cygwin.3
-lib/perl5/site_perl/man/man3/Module::Build::Platform::darwin.3
+${PERL5_SITELIB}/Module/Build/Platform/os2.pm
+${PERL5_SITELIB}/Module/Build/PodParser.pm
+lib/perl5/site_perl/man/man3/Module::Build.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::Base.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::Compat.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::ConfigData.3
+lib/perl5/site_perl/man/man3/Module::Build::Cookbook.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::PPMMaker.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::Platform::Amiga.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::Platform::Default.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::Platform::EBCDIC.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::Platform::MPEiX.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::Platform::MacOS.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::Platform::RiscOS.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::Platform::Unix.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::Platform::VMS.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::Platform::VOS.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::Platform::Windows.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::Platform::aix.3
+lib/perl5/site_perl/man/man3/Module::Build::Platform::cygwin.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::Platform::darwin.3.gz
+lib/perl5/site_perl/man/man3/Module::Build::Platform::os2.3
+man/man1/config_data.1
 @dirrm ${PERL5_SITELIB}/Module/Build/Platform
 @dirrm ${PERL5_SITELIB}/Module/Build
