@@ -1,54 +1,64 @@
-$NetBSD: patch-aa,v 1.4 2001/06/09 15:14:26 magick Exp $
+$NetBSD: patch-aa,v 1.5 2001/08/26 14:15:32 magick Exp $
 
---- Makefile.orig	Mon Jun  4 21:25:11 2001
+--- Makefile.orig	Sat Aug 25 15:22:17 2001
 +++ Makefile
-@@ -32,33 +32,33 @@
- include Makefile.win32
+@@ -33,36 +33,41 @@
  else
  
--IROOT   = /usr/local
-+IROOT   = $(X11PREFIX)
- BINDIR  = $(IROOT)/bin
- MANDIR  = $(IROOT)/man/man1
+ ROOT    =
+-prefix  = /usr/local
++prefix  = ${PREFIX}
+ exec_prefix = ${prefix}
+ bindir  = $(ROOT)${exec_prefix}/bin
+ mandir  = $(ROOT)${prefix}/man/man1
  
  # if you have perl set the path here, else just leave it alone
 -PERL    = /usr/bin/perl
-+PERL    = $(LOCALBASE)/bin/perl
++PERL    = ${LOCALBASE}/bin/perl
  
 -LDLIBS  = -ltk8.3 -ltcl8.3 -L/usr/X11R6/lib -lX11 -lXmu -lm -ldl
-+LDLIBS  = -ltk83 -ltcl83 -L$(X11BASE)/lib -lX11 -lm -lXmu
++#LDLIBS  = -ltk8.3 -ltcl8.3 -L/usr/X11R6/lib -lX11 -lXmu -lm -ldl
++LDLIBS  =  -ltk83 -ltcl83 -lX11 -lXmu -lm
  # use static libraries for debugging only
  #LDLIBS  = dbglib/libtk8.3.a dbglib/libtcl8.3.a -lX11 -lm -ldl -L/usr/X11R6/lib
  
 -INCS   += -I. -I/usr/X11R6/include
-+INCS   += -I. -I$(X11BASE)/include -I$(LOCALBASE)/include
++#INCS   += -I. -I/usr/X11R6/include
++INCS   += -I. -I${X11BASE}/include
  # path to Tcl/Tk headers, if not properly installed
  #INCS   += -I/usr/local/tcl/tcl8.0/generic -I/usr/local/tcl/tk8.0/generic
  
  # path to Tcl/Tk script library (Tk is usually in X11/lib/tk#.#)
 -DEFS   += -DTK_LIBRARY_PATH=\"/usr/lib/tk8.3\"
 -DEFS   += -DTCL_LIBRARY_PATH=\"/usr/lib/tcl8.3\"
++-DEFS   += -DTK_LIBRARY_PATH=\"/usr/lib/tk8.3\"
++-DEFS   += -DTCL_LIBRARY_PATH=\"/usr/lib/tcl8.3\"
 +DEFS   += -DTK_LIBRARY_PATH=\"$(LOCALBASE)/lib/tk8.3\"
 +DEFS   += -DTCL_LIBRARY_PATH=\"$(LOCALBASE)/lib/tcl8.3\"
  
  # path to the directory where the provider database files are kept
--DEFS   += -DEPG_DB_DIR=\"/usr/tmp/nxtvdb\"
-+DEFS   += -DEPG_DB_DIR=_PATH_TMP\"nxtvdb\"
+-DB_DIR  = /usr/tmp/nxtvdb
+-DEFS   += -DEPG_DB_DIR=\"$(DB_DIR)\"
++#DB_DIR  = /usr/tmp/nxtvdb
++DB_DIR  = _PATH_TMP\"nxtvdb\"
++DEFS   += -DEPG_DB_DIR=$(DB_DIR)
+ INST_DB_DIR = $(ROOT)$(DB_DIR)
  
  #WARN    = -Wall -Wpointer-arith -Wnested-externs \
  #          -Werror -Wstrict-prototypes -Wmissing-prototypes
  WARN    = -Wall
  CC      = gcc
 -CFLAGS  = -pipe $(WARN) $(INCS) $(DEFS) -O2
-+CFLAGS  += $(WARN) $(INCS) $(DEFS)
++CFLAGS  = -pipe $(WARN) $(INCS) $(DEFS)
  
  # ----- don't change anything below ------------------------------------------
  
-@@ -85,7 +85,6 @@
- 	test -d $(MANDIR) || mkdirhier $(MANDIR)
- 	install -c -m 0755 nxtvepg     $(BINDIR)
- 	install -c -m 0644 nxtvepg.1   $(MANDIR)
--	rm -f $(MANDIR)/nxtvepg.1x
+@@ -91,7 +96,7 @@
+ 	chmod 0777 $(INST_DB_DIR)
+ 	install -c -m 0755 nxtvepg     $(bindir)
+ 	install -c -m 0644 nxtvepg.1   $(mandir)
+-	rm -f $(mandir)/nxtvepg.1x
++#	rm -f $(mandir)/nxtvepg.1x
  
  ##%.o: %.c
  ##	$(CC) $(CFLAGS) -c *.c -o *.o
