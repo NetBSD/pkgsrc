@@ -1,0 +1,18 @@
+$NetBSD: patch-ao,v 1.1 1999/09/13 03:33:36 simonb Exp $
+
+--- system.h.orig	Sat Jul 24 07:50:33 1999
++++ system.h	Mon Sep 13 12:55:43 1999
+@@ -183,12 +183,9 @@
+ 
+ typedef		unsigned	char 	uchar;
+ 
+-#ifndef				_SYS_TYPES_H
++#if !defined(_SYS_TYPES_H) && !defined(_SYS_TYPES_H_)
+ typedef         unsigned        short   ushort;
+-typedef         unsigned        long    ulong;
+ typedef         unsigned        int     uint;
+ #endif
+-
+-
+ 
+ 

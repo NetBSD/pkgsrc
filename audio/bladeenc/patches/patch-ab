@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1999/09/13 03:33:34 simonb Exp $
+
+--- bladesys.c.orig	Sat Jul 24 07:50:33 1999
++++ bladesys.c	Mon Sep 13 12:54:54 1999
+@@ -294,7 +294,7 @@
+ #ifdef  MSWIN
+ 
+ static struct   _finddata_t sFind;
+-static long             hFind;
++static int             hFind;
+ 
+ /*____ findFirstMatch() - MSWIN version ______________________________________*/
+ 
