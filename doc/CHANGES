@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5236 2004/03/12 17:17:37 minskim Exp $
+$NetBSD: CHANGES,v 1.5237 2004/03/12 18:04:13 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1444,3 +1444,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ssh2 to 3.2.9.1 [seb 2004-03-12]
 	Updated ssh2-nox11 to 3.2.9.1 [seb 2004-03-12]
 	Updated xconq to 7.4.1nb2 [minskim 2004-03-12]
+	Updated destroy to 20040310 [recht 2004-03-12]
