@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/04 20:03:21 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/04 23:08:22 jmmv Exp $
 bin/linc-cleanup-sockets
 bin/linc-config
 include/linc-1.0/linc/linc-config.h
@@ -16,6 +16,7 @@ lib/pkgconfig/linc.pc
 share/aclocal/linc.m4
 share/doc/html/linc/c4.html
 share/doc/html/linc/index.html
+share/doc/html/linc/index.sgml
 share/doc/html/linc/linc-config.html
 share/doc/html/linc/linc-linc-config.html
 share/doc/html/linc/linc-linc-private.html
