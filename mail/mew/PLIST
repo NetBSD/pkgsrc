@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/03/07 20:53:25 seb Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/06/05 17:35:45 minskim Exp $
 bin/mewcat
 bin/mewdecode
 bin/mewencode
@@ -42,6 +42,7 @@ share/mew/mew-sep.xpm
 share/mew/mew-show.xpm
 share/mew/mew-write.xpm
 share/mew/mew-yank.xpm
+man/man1/incm.1
 man/man1/mewcat.1
 man/man1/mewdecode.1
 man/man1/mewencode.1
