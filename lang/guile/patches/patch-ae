@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.9 2004/03/16 00:46:39 dmcmahill Exp $
+$NetBSD: patch-ae,v 1.10 2004/11/18 12:30:49 wiz Exp $
 
---- libguile/gc_os_dep.c.orig	Wed Apr 16 20:16:21 2003
+--- libguile/gc_os_dep.c.orig	2004-06-16 00:55:31.000000000 +0200
 +++ libguile/gc_os_dep.c
-@@ -98,12 +98,27 @@ typedef int GC_bool;
+@@ -112,12 +112,27 @@ typedef int GC_bool;
  #    define NETBSD
  #    define mach_type_known
  # endif
@@ -32,7 +32,7 @@ $NetBSD: patch-ae,v 1.9 2004/03/16 00:46:39 dmcmahill Exp $
  #    define ARM32
  #    define NETBSD
  #    define mach_type_known
-@@ -227,7 +242,7 @@ typedef int GC_bool;
+@@ -241,7 +256,7 @@ typedef int GC_bool;
  # endif
  # if defined(__alpha) || defined(__alpha__)
  #   define ALPHA
@@ -41,7 +41,7 @@ $NetBSD: patch-ae,v 1.9 2004/03/16 00:46:39 dmcmahill Exp $
  #     define OSF1	/* a.k.a Digital Unix */
  #   endif
  #   define mach_type_known
-@@ -279,6 +294,11 @@ typedef int GC_bool;
+@@ -294,6 +309,11 @@ typedef int GC_bool;
  #   define NETBSD
  #   define mach_type_known
  # endif
@@ -53,7 +53,7 @@ $NetBSD: patch-ae,v 1.9 2004/03/16 00:46:39 dmcmahill Exp $
  # if defined(bsdi) && defined(i386)
  #    define I386
  #    define BSDI
-@@ -412,12 +432,12 @@ typedef int GC_bool;
+@@ -433,12 +453,12 @@ scm_get_stack_base ()
  /*
   * For each architecture and OS, the following need to be defined:
   *
@@ -69,11 +69,10 @@ $NetBSD: patch-ae,v 1.9 2004/03/16 00:46:39 dmcmahill Exp $
   *
   * MACH_TYPE is a string representation of the machine type.
   * OS_TYPE is analogous for the OS.
-@@ -961,6 +981,21 @@ typedef int GC_bool;
- #      define OS_TYPE "GNU"
+@@ -983,6 +1003,21 @@ scm_get_stack_base ()
  #    endif
  # endif
-+
+ 
 +# ifdef X86_64
 +#   define MACH_TYPE "X86_64"
 +#   define ALIGNMENT 8
@@ -88,6 +87,7 @@ $NetBSD: patch-ae,v 1.9 2004/03/16 00:46:39 dmcmahill Exp $
 +#	define DATASTART ((ptr_t)(&etext))
 +#   endif
 +#   endif
- 
++
  # ifdef NS32K
  #   define MACH_TYPE "NS32K"
+ #   define ALIGNMENT 4

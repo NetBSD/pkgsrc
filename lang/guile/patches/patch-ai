@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2004/05/16 17:52:11 danw Exp $
+$NetBSD: patch-ai,v 1.2 2004/11/18 12:30:49 wiz Exp $
 
---- libguile/Makefile.in.orig	Sat Mar 13 17:21:34 2004
+--- libguile/Makefile.in.orig	2004-10-05 05:34:09.000000000 +0200
 +++ libguile/Makefile.in
-@@ -258,7 +258,7 @@ noinst_HEADERS = coop-threads.c coop-thr
+@@ -343,7 +343,7 @@ noinst_HEADERS = coop-threads.c coop-thr
  
  libguile_la_DEPENDENCIES = @LIBLOBJS@
  libguile_la_LIBADD = @LIBLOBJS@ ../libguile-ltdl/libguile-ltdl.la $(THREAD_LIBS_LOCAL)

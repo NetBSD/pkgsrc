@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.2 2003/12/14 17:14:40 wiz Exp $
+$NetBSD: patch-ag,v 1.3 2004/11/18 12:30:49 wiz Exp $
 
---- doc/goops/Makefile.in.orig	2003-04-21 19:02:48.000000000 +0200
+--- doc/goops/Makefile.in.orig	2004-10-05 05:34:07.000000000 +0200
 +++ doc/goops/Makefile.in
-@@ -201,7 +201,7 @@ PSS = goops.ps
- TEXINFOS = goops.texi
- DATA = $(html_DATA)
- 
--DIST_COMMON = $(goops_TEXINFOS) ChangeLog Makefile.am Makefile.in
-+DIST_COMMON = $(info_TEXINFOS) ChangeLog Makefile.am Makefile.in
- all: all-am
- 
- .SUFFIXES:
+@@ -36,7 +36,7 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ subdir = doc/goops
+-DIST_COMMON = $(goops_TEXINFOS) $(srcdir)/Makefile.am \
++DIST_COMMON = $(info_TEXINFOS) $(srcdir)/Makefile.am \
+ 	$(srcdir)/Makefile.in ChangeLog
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ am__aclocal_m4_deps = $(top_srcdir)/guile-config/qthreads.m4 \
