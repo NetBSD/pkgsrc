@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/19 20:09:15 drochner Exp $
+
+--- lib/filesys.C.orig	2004-07-14 16:20:54.000000000 +0200
++++ lib/filesys.C
+@@ -44,7 +44,7 @@
+ #include <sys/resource.h>
+ #endif
+ #ifdef HAVE_SYS_MOUNT_H
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <sys/param.h>
+ #endif
+ #include <sys/mount.h>
