@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/21 19:12:52 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/04/27 08:24:18 rh Exp $
 bin/pgaccess
 share/doc/pgaccess/a_right.gif
 share/doc/pgaccess/addindex.gif
@@ -165,6 +165,12 @@ share/pgaccess/lib/languages/francais
 share/pgaccess/lib/languages/italiano
 share/pgaccess/lib/languages/magyar
 share/pgaccess/lib/languages/romana
+share/pgaccess/lib/languages/czech
+share/pgaccess/lib/languages/deutsch
+share/pgaccess/lib/languages/russian.koi8r
+share/pgaccess/lib/languages/russian_win
+share/pgaccess/lib/languages/spanish
+share/pgaccess/lib/languages/portugues
 share/pgaccess/lib/mainlib.tcl
 share/pgaccess/lib/preferences.tcl
 share/pgaccess/lib/qed

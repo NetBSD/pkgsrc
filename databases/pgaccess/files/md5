@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1999/11/23 20:39:28 windsor Exp $
+$NetBSD: md5,v 1.3 2000/04/27 08:24:18 rh Exp $
 
-MD5 (pgaccess-0.98.tar.gz) = ae3f8262f7d14cbda9144b13206524f0
+MD5 (pgaccess-0.98.5.tar.gz) = d2312d7ea74c411343f618588f6ddf2a
