@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2002/12/06 19:33:50 tron Exp $
+# $NetBSD: Makefile,v 1.24 2003/01/11 23:57:00 jmmv Exp $
 
 DISTNAME=	jade-1.2.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.jclark.com/pub/jade/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.jclark.com/pub/jade/ \
@@ -46,10 +46,13 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/jadedoc/*.htm ${PREFIX}/share/doc/jade
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sgml/jade
 	${INSTALL_DATA} ${WRKSRC}/dsssl/* ${PREFIX}/share/sgml/jade
+	${PREFIX}/bin/xmlcatmgr -c ${PREFIX}/share/sgml/catalog add \
+		CATALOG ${PREFIX}/share/sgml/jade/catalog
 # Installed by print/tex-jadetex
 	${RM} ${PREFIX}/share/sgml/jade/*jadetex.*
 
 .include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../textproc/xmlcatmgr/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # Turn off C++ optimization as there seem to be problems with the generated
