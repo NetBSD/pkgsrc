@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2002/08/25 22:44:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.142 2002/08/26 16:03:08 hubertf Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -73,7 +73,6 @@ SUBDIR+=	p5-Mail-Audit
 SUBDIR+=	p5-Mail-IMAPClient
 SUBDIR+=	p5-Mail-ListDetector
 SUBDIR+=	p5-Mail-Sendmail
-SUBDIR+=	p5-Mail-SpamAssassin
 SUBDIR+=	p5-MailTools
 SUBDIR+=	p5-Sendmail-AccessDB
 SUBDIR+=	p5-razor-agents
@@ -100,6 +99,7 @@ SUBDIR+=	sendmail
 SUBDIR+=	sendmail88
 SUBDIR+=	smtpfeed
 SUBDIR+=	solid-pop3d
+SUBDIR+=	spamassassin
 SUBDIR+=	spruce
 SUBDIR+=	squirrelmail
 SUBDIR+=	sqwebmail
