@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2003/03/20 18:49:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.61 2003/05/28 02:33:59 jlam Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -6,8 +6,8 @@
 
 DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
-PKGREVISION=		2
-BASE_VERS=		1.1.18
+PKGREVISION=		# empty
+BASE_VERS=		1.1.19
 DIST_VERS=		${BASE_VERS}
 VERS=			${DIST_VERS:S/-/./g}
 WRKSRC=			${WRKDIR}/cups-${BASE_VERS}
@@ -26,13 +26,16 @@ COMMENT=		Common UNIX Printing System
 
 CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
 
+UNLIMIT_RESOURCES=	datasize memorysize
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GMAKE=		yes
+
 USE_LIBTOOL=		yes
+LIBTOOL_FLAGS+=		--preserve-dup-deps
+
 GNU_CONFIGURE=		yes
-UNLIMIT_RESOURCES=	datasize memorysize
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/cups
@@ -41,7 +44,7 @@ CONFIGURE_ARGS+=	--with-rcdir=${RCD_SCRIPTS_DIR}
 CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER}
 CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP}
 CONFIGURE_ARGS+=	--with-bsdmanext
-CONFIGURE_ARGS+=	--enable-libtool-unsupported="${PKGLIBTOOL}"
+CONFIGURE_ARGS+=	--enable-libtool-unsupported="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
 CONFIGURE_ARGS+=	--enable-slp
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ENV+=		DSOFLAGS="${LDFLAGS}"
@@ -96,8 +99,8 @@ OWN_DIRS+=		${CUPS_CONFDIR}/interfaces
 OWN_DIRS+=		${CUPS_CONFDIR}/ppd
 OWN_DIRS+=		${CUPS_LOGDIR}
 OWN_DIRS_PERMS=		${CUPS_CONFDIR}/certs ${CUPS_USER} ${CUPS_GROUP} 0711
-OWN_DIRS_PERMS+=	${CUPS_REQUESTS} ${CUPS_USER} ${CUPS_GROUP} 0700
-OWN_DIRS_PERMS+=	${CUPS_REQUESTS}/tmp ${CUPS_USER} ${CUPS_GROUP} 1700
+OWN_DIRS_PERMS+=	${CUPS_REQUESTS} ${CUPS_USER} ${CUPS_GROUP} 0710
+OWN_DIRS_PERMS+=	${CUPS_REQUESTS}/tmp ${CUPS_USER} ${CUPS_GROUP} 1770
 
 pre-configure:
 	cd ${WRKSRC} && ${AUTOCONF}
@@ -107,7 +110,7 @@ pre-install:
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	for file in ENCRYPTION.txt LICENSE.txt README.txt; do		\
+	for file in CGI.txt ENCRYPTION.txt LICENSE.txt README.txt; do	\
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR}/$${file};	\
 	done
 	${INSTALL_DATA_DIR} ${EGDIR}

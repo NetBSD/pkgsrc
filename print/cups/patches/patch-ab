@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.15 2002/09/18 22:58:47 jlam Exp $
+$NetBSD: patch-ab,v 1.16 2003/05/28 02:34:00 jlam Exp $
 
---- Makefile.orig	Tue Apr 23 10:49:34 2002
+--- Makefile.orig	Thu Mar  6 11:36:00 2003
 +++ Makefile
-@@ -72,8 +72,6 @@ install:	installhdrs
+@@ -67,13 +67,13 @@
+ # Install object and target files...
+ #
+ 
+-install:	installhdrs
++install:	installcups installconf
++
++installcups:	installhdrs
+ 	for dir in $(DIRS); do\
  		echo Installing in $$dir... ;\
  		(cd $$dir; $(MAKE) $(MFLAGS) install) || exit 1;\
  	done
@@ -11,34 +19,17 @@ $NetBSD: patch-ab,v 1.15 2002/09/18 22:58:47 jlam Exp $
  	echo Installing in data...
  	(cd data; $(MAKE) $(MFLAGS) install)
  	echo Installing in doc...
-@@ -89,30 +87,6 @@ install:	installhdrs
+@@ -89,6 +89,13 @@
  	echo Installing cups-config script...
  	$(INSTALL_DIR) $(BINDIR)
  	$(INSTALL_SCRIPT) cups-config $(BINDIR)/cups-config
--	echo Installing startup script...
--	if test "x$(INITDIR)" != "x"; then \
--		$(INSTALL_DIR) $(BUILDROOT)$(INITDIR)/init.d; \
--		$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDIR)/init.d/cups; \
--		$(INSTALL_DIR) $(BUILDROOT)$(INITDIR)/rc0.d; \
--		$(INSTALL_SCRIPT) cups.sh  $(BUILDROOT)$(INITDIR)/rc0.d/K00cups; \
--		$(INSTALL_DIR) $(BUILDROOT)$(INITDIR)/rc2.d; \
--		$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDIR)/rc2.d/S99cups; \
--		$(INSTALL_DIR) $(BUILDROOT)$(INITDIR)/rc3.d; \
--		$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDIR)/rc3.d/S99cups; \
--		$(INSTALL_DIR) $(BUILDROOT)$(INITDIR)/rc5.d; \
--		$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDIR)/rc5.d/S99cups; \
--	fi
--	if test "x$(INITDIR)" = "x" -a "x$(INITDDIR)" != "x"; then \
--		$(INSTALL_DIR) $(BUILDROOT)$(INITDDIR); \
--		if test "$(INITDDIR)" = "/System/Library/StartupItems/PrintingServices"; then \
--			$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDDIR)/PrintingServices; \
--			$(INSTALL_DATA) cups.plist $(BUILDROOT)$(INITDDIR)/StartupParameters.plist; \
--			$(INSTALL_DIR) $(BUILDROOT)$(INITDDIR)/Resources/English.lproj; \
--			$(INSTALL_DATA) cups.strings $(BUILDROOT)$(INITDDIR)/Resources/English.lproj/Localizable.strings; \
--		else \
--			$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDDIR)/cups; \
--		fi \
--	fi
- 
- #
- # Install source and header files...
++
++#
++# Install config files...
++#
++installconf:
++	echo Installing in conf...
++	(cd conf; $(MAKE) $(MFLAGS) install)
+ 	echo Installing startup script...
+ 	if test "x$(INITDIR)" != "x"; then \
+ 		$(INSTALL_DIR) $(BUILDROOT)$(INITDIR)/init.d; \
