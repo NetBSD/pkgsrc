@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/11/12 23:40:20 frueauf Exp $
+
 *** icb/unix.c.orig	Fri Feb 24 16:20:31 1995
 --- icb/unix.c	Thu Sep  3 10:28:33 1998
 ***************
