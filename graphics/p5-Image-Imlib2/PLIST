@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/21 16:17:42 kim Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/05/02 06:17:00 kim Exp $
 ${PERL5_SITEARCH}/auto/Image/Imlib2/Imlib2.bs
 ${PERL5_SITEARCH}/auto/Image/Imlib2/Imlib2.so
 ${PERL5_SITEARCH}/Image/Imlib2.pm
+lib/perl5/site_perl/man/man3/Image::Imlib2.3
+@dirrm ${PERL5_SITEARCH}/auto/Image/Imlib2
