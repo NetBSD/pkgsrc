@@ -1,23 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2003/12/16 07:26:49 recht Exp $
+$NetBSD: patch-ab,v 1.5 2004/01/24 10:54:08 jmmv Exp $
 
---- lavtools/Makefile.in.orig	2003-08-23 07:21:53.000000000 -0700
-+++ lavtools/Makefile.in	2003-12-15 18:00:39.000000000 -0800
-@@ -220,7 +220,7 @@
- 
- yuv2lav_SOURCES = yuv2lav.c $(lav_headers)
- yuv2lav_LDADD = $(top_builddir)/utils/libmjpegutils.a \
--		 liblavfile.la liblavjpeg.la
-+		 liblavfile.la liblavjpeg.la -lm
- 
- 
- transist_flt_SOURCES = transist.flt.c ${lav_headers}
-@@ -235,7 +235,8 @@
- lavplay_SOURCES = lavplay.c ${lav_headers}
+--- lavtools/Makefile.in.orig	2004-01-16 12:22:10.000000000 +0100
++++ lavtools/Makefile.in
+@@ -340,7 +340,7 @@ multiblend_flt_LDADD = $(top_builddir)/u
+ lavplay_SOURCES = lavplay.c
  lavplay_LDADD = $(top_builddir)/utils/libmjpegutils.a \
  	liblavplay.la liblavjpeg.la liblavfile.la \
--	@LIBGETOPT_LIB@ ${PTHREAD_LIBS} ${SDL_LIBS} ${X_LIBS} -lX11
-+	@LIBGETOPT_LIB@ ${PTHREAD_LIBS} ${SDL_LIBS} ${X_LIBS} -lX11 \
-+	${LIBOSSAUDIO}
+-	@LIBGETOPT_LIB@ ${PTHREAD_LIBS} ${SDL_LIBS} $(LAVPLAY_X_LIBS)
++	@LIBGETOPT_LIB@ ${PTHREAD_LIBS} ${SDL_LIBS} $(LAVPLAY_X_LIBS) $(LIBOSSAUDIO)
  
  
- lavrec_SOURCES = lavrec.c $(lav_headers)
+ lavrec_SOURCES = lavrec.c
