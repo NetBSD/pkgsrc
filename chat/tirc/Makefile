@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/27 10:59:49 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/11/10 22:51:08 agc Exp $
 #
 
 DISTNAME=	tirc-1.2
@@ -25,4 +25,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/tirc
 	${INSTALL_DATA} ${WRKSRC}/dot.tircrc ${PREFIX}/share/tirc/tircrc
 
+.include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
