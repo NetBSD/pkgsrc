@@ -1,17 +1,26 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:19:51 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/26 07:00:02 tron Exp $
 
-DISTNAME=	VMware-workstation-3.2.1-2237
-PKGNAME=	vmware-3.2.1
+DISTNAME=	VMware-workstation-3.2.0-2230
+PKGNAME=	vmware-3.2.0
 WRKSRC=		${WRKDIR}/vmware-distrib
 CATEGORIES=	emulators
-MASTER_SITES=   http://www4.vmware.com/software/ \
-		http://www.vmware.com/download1/software/ \
-		ftp://download1.vmware.com/pub/software/ \
-		http://vmware-svca.www.conxion.com/software/ \
-		http://vmware-chil.www.conxion.com/software/ \
-		http://vmware-heva.www.conxion.com/software/ \
-		ftp://vmware.wespe.de/pub/software/ \
-		ftp://mirror.aarnet.edu.au/pub/vmware/software/
+MASTER_SITES=	ftp://distro.ibiblio.org/pub/linux/distributions/gentoo/distfiles/ \
+		http://ftp.tuwien.ac.at/opsys/linux/gentoo/distfiles/ \
+		http://csociety-ftp.ecn.purdue.edu/pub/gentoo/distfiles/ \
+		http://slackware.linux.no/pub/gentoo/distfiles/ \
+		ftp://sunsite.informatik.rwth-aachen.de/pub/Linux/gentoo/distfiles/
+
+### Standard sites for "the most current version" are below.
+### The MASTER_SITES above are mirrors for the version used by this pkg.
+###
+#MASTER_SITES=	http://www4.vmware.com/software/ \
+#		http://www.vmware.com/download1/software/ \
+#		ftp://download1.vmware.com/pub/software/ \
+#		http://vmware-svca.www.conxion.com/software/ \
+#		http://vmware-chil.www.conxion.com/software/ \
+#		http://vmware-heva.www.conxion.com/software/ \
+#		ftp://vmware.wespe.de/pub/software/ \
+#		ftp://mirror.aarnet.edu.au/pub/vmware/software/
 
 MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.vmware.com/
