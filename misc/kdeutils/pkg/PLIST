@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 1999/06/05 15:33:45 tron Exp $
+@comment $NetBSD: PLIST,v 1.11 1999/09/15 18:26:03 tron Exp $
 bin/ark
 bin/kab
 bin/kabapi_test
@@ -137,6 +137,18 @@ share/kde/icons/kljetlogo.xpm
 share/kde/icons/klpq.xpm
 share/kde/icons/knotes.xpm
 share/kde/icons/kwrite.xpm
+share/kde/icons/large/ark.xpm
+share/kde/icons/large/kab.xpm
+share/kde/icons/large/karm.xpm
+share/kde/icons/large/kcalc.xpm
+share/kde/icons/large/kedit.xpm
+share/kde/icons/large/khexdit.xpm
+share/kde/icons/large/kjots.xpm
+share/kde/icons/large/klipper.xpm
+share/kde/icons/large/kljettool.xpm
+share/kde/icons/large/klpq.xpm
+share/kde/icons/large/knotes.xpm
+share/kde/icons/large/kwrite.xpm
 share/kde/icons/mini/ark.xpm
 share/kde/icons/mini/kab.xpm
 share/kde/icons/mini/karm.xpm
@@ -263,8 +275,11 @@ share/kde/locale/et/LC_MESSAGES/kedit.mo
 share/kde/locale/et/LC_MESSAGES/kfloppy.mo
 share/kde/locale/et/LC_MESSAGES/khexdit.mo
 share/kde/locale/et/LC_MESSAGES/kjots.mo
+share/kde/locale/et/LC_MESSAGES/klipper.mo
 share/kde/locale/et/LC_MESSAGES/kljettool.mo
+share/kde/locale/et/LC_MESSAGES/klpq.mo
 share/kde/locale/et/LC_MESSAGES/knotes.mo
+share/kde/locale/et/LC_MESSAGES/kwrite.mo
 share/kde/locale/fi/LC_MESSAGES/ark.mo
 share/kde/locale/fi/LC_MESSAGES/kab.mo
 share/kde/locale/fi/LC_MESSAGES/karm.mo
@@ -307,6 +322,7 @@ share/kde/locale/hr/LC_MESSAGES/klpq.mo
 share/kde/locale/hr/LC_MESSAGES/knotes.mo
 share/kde/locale/hr/LC_MESSAGES/kpm.mo
 share/kde/locale/hr/LC_MESSAGES/ktop.mo
+share/kde/locale/hs/LC_MESSAGES/kfloppy.mo
 share/kde/locale/hu/LC_MESSAGES/ark.mo
 share/kde/locale/hu/LC_MESSAGES/kab.mo
 share/kde/locale/hu/LC_MESSAGES/kedit.mo
@@ -344,6 +360,21 @@ share/kde/locale/it/LC_MESSAGES/knotes.mo
 share/kde/locale/it/LC_MESSAGES/kpm.mo
 share/kde/locale/it/LC_MESSAGES/ktop.mo
 share/kde/locale/it/LC_MESSAGES/kwrite.mo
+share/kde/locale/ja/LC_MESSAGES/ark.mo
+share/kde/locale/ja/LC_MESSAGES/kab.mo
+share/kde/locale/ja/LC_MESSAGES/karm.mo
+share/kde/locale/ja/LC_MESSAGES/kcalc.mo
+share/kde/locale/ja/LC_MESSAGES/kedit.mo
+share/kde/locale/ja/LC_MESSAGES/kfloppy.mo
+share/kde/locale/ja/LC_MESSAGES/khexdit.mo
+share/kde/locale/ja/LC_MESSAGES/kjots.mo
+share/kde/locale/ja/LC_MESSAGES/klipper.mo
+share/kde/locale/ja/LC_MESSAGES/kljettool.mo
+share/kde/locale/ja/LC_MESSAGES/klpq.mo
+share/kde/locale/ja/LC_MESSAGES/knotes.mo
+share/kde/locale/ja/LC_MESSAGES/kpm.mo
+share/kde/locale/ja/LC_MESSAGES/ktop.mo
+share/kde/locale/ja/LC_MESSAGES/kwrite.mo
 share/kde/locale/ko/LC_MESSAGES/ark.mo
 share/kde/locale/ko/LC_MESSAGES/karm.mo
 share/kde/locale/ko/LC_MESSAGES/kcalc.mo
@@ -392,6 +423,7 @@ share/kde/locale/pl/LC_MESSAGES/kljettool.mo
 share/kde/locale/pl/LC_MESSAGES/klpq.mo
 share/kde/locale/pl/LC_MESSAGES/knotes.mo
 share/kde/locale/pl/LC_MESSAGES/kpm.mo
+share/kde/locale/pl/LC_MESSAGES/ktop.mo
 share/kde/locale/pl/LC_MESSAGES/kwrite.mo
 share/kde/locale/pt/LC_MESSAGES/ark.mo
 share/kde/locale/pt/LC_MESSAGES/kab.mo
@@ -466,6 +498,21 @@ share/kde/locale/sk/LC_MESSAGES/knotes.mo
 share/kde/locale/sk/LC_MESSAGES/kpm.mo
 share/kde/locale/sk/LC_MESSAGES/ktop.mo
 share/kde/locale/sk/LC_MESSAGES/kwrite.mo
+share/kde/locale/sl/LC_MESSAGES/ark.mo
+share/kde/locale/sl/LC_MESSAGES/kab.mo
+share/kde/locale/sl/LC_MESSAGES/karm.mo
+share/kde/locale/sl/LC_MESSAGES/kcalc.mo
+share/kde/locale/sl/LC_MESSAGES/kedit.mo
+share/kde/locale/sl/LC_MESSAGES/kfloppy.mo
+share/kde/locale/sl/LC_MESSAGES/khexdit.mo
+share/kde/locale/sl/LC_MESSAGES/kjots.mo
+share/kde/locale/sl/LC_MESSAGES/klipper.mo
+share/kde/locale/sl/LC_MESSAGES/kljettool.mo
+share/kde/locale/sl/LC_MESSAGES/klpq.mo
+share/kde/locale/sl/LC_MESSAGES/knotes.mo
+share/kde/locale/sl/LC_MESSAGES/kpm.mo
+share/kde/locale/sl/LC_MESSAGES/ktop.mo
+share/kde/locale/sl/LC_MESSAGES/kwrite.mo
 share/kde/locale/sv/LC_MESSAGES/ark.mo
 share/kde/locale/sv/LC_MESSAGES/kab.mo
 share/kde/locale/sv/LC_MESSAGES/karm.mo

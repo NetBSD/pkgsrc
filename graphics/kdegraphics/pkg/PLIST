@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1999/06/05 17:27:56 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/09/15 18:26:02 tron Exp $
 bin/kdvi
 bin/kfax
 bin/kfract
@@ -120,6 +120,14 @@ share/kde/icons/kiconedit.xpm
 share/kde/icons/kpaint.xpm
 share/kde/icons/ksnapshot.xpm
 share/kde/icons/kview.xpm
+share/kde/icons/large/kdvi.xpm
+share/kde/icons/large/kfax.xpm
+share/kde/icons/large/kfract.xpm
+share/kde/icons/large/kghostview.xpm
+share/kde/icons/large/kiconedit.xpm
+share/kde/icons/large/kpaint.xpm
+share/kde/icons/large/ksnapshot.xpm
+share/kde/icons/large/kview.xpm
 share/kde/icons/mini/kdvi.xpm
 share/kde/icons/mini/kfax.xpm
 share/kde/icons/mini/kfract.xpm
@@ -136,6 +144,9 @@ share/kde/locale/br/LC_MESSAGES/kiconedit.mo
 share/kde/locale/br/LC_MESSAGES/kpaint.mo
 share/kde/locale/br/LC_MESSAGES/ksnapshot.mo
 share/kde/locale/br/LC_MESSAGES/kview.mo
+share/kde/locale/ca/LC_MESSAGES/kdvi.mo
+share/kde/locale/ca/LC_MESSAGES/kfax.mo
+share/kde/locale/ca/LC_MESSAGES/kghostview.mo
 share/kde/locale/ca/LC_MESSAGES/ksnapshot.mo
 share/kde/locale/cs/LC_MESSAGES/kdvi.mo
 share/kde/locale/cs/LC_MESSAGES/kfax.mo
@@ -197,6 +208,7 @@ share/kde/locale/hr/LC_MESSAGES/kfax.mo
 share/kde/locale/hr/LC_MESSAGES/kghostview.mo
 share/kde/locale/hr/LC_MESSAGES/kpaint.mo
 share/kde/locale/hr/LC_MESSAGES/kview.mo
+share/kde/locale/hs/LC_MESSAGES/kdvi.mo
 share/kde/locale/hu/LC_MESSAGES/kdvi.mo
 share/kde/locale/hu/LC_MESSAGES/kghostview.mo
 share/kde/locale/hu/LC_MESSAGES/kpaint.mo
@@ -211,8 +223,18 @@ share/kde/locale/is/LC_MESSAGES/kpaint.mo
 share/kde/locale/is/LC_MESSAGES/ksnapshot.mo
 share/kde/locale/is/LC_MESSAGES/kview.mo
 share/kde/locale/it/LC_MESSAGES/kdvi.mo
+share/kde/locale/it/LC_MESSAGES/kfax.mo
+share/kde/locale/it/LC_MESSAGES/kfrac.mo
 share/kde/locale/it/LC_MESSAGES/kghostview.mo
 share/kde/locale/it/LC_MESSAGES/kpaint.mo
+share/kde/locale/ja/LC_MESSAGES/kdvi.mo
+share/kde/locale/ja/LC_MESSAGES/kfax.mo
+share/kde/locale/ja/LC_MESSAGES/kfract.mo
+share/kde/locale/ja/LC_MESSAGES/kghostview.mo
+share/kde/locale/ja/LC_MESSAGES/kiconedit.mo
+share/kde/locale/ja/LC_MESSAGES/kpaint.mo
+share/kde/locale/ja/LC_MESSAGES/ksnapshot.mo
+share/kde/locale/ja/LC_MESSAGES/kview.mo
 share/kde/locale/ko/LC_MESSAGES/kdvi.mo
 share/kde/locale/ko/LC_MESSAGES/kfax.mo
 share/kde/locale/ko/LC_MESSAGES/kghostview.mo
@@ -267,6 +289,14 @@ share/kde/locale/sk/LC_MESSAGES/kiconedit.mo
 share/kde/locale/sk/LC_MESSAGES/kpaint.mo
 share/kde/locale/sk/LC_MESSAGES/ksnapshot.mo
 share/kde/locale/sk/LC_MESSAGES/kview.mo
+share/kde/locale/sl/LC_MESSAGES/kdvi.mo
+share/kde/locale/sl/LC_MESSAGES/kfax.mo
+share/kde/locale/sl/LC_MESSAGES/kfract.mo
+share/kde/locale/sl/LC_MESSAGES/kghostview.mo
+share/kde/locale/sl/LC_MESSAGES/kiconedit.mo
+share/kde/locale/sl/LC_MESSAGES/kpaint.mo
+share/kde/locale/sl/LC_MESSAGES/ksnapshot.mo
+share/kde/locale/sl/LC_MESSAGES/kview.mo
 share/kde/locale/sv/LC_MESSAGES/kdvi.mo
 share/kde/locale/sv/LC_MESSAGES/kfax.mo
 share/kde/locale/sv/LC_MESSAGES/kghostview.mo
