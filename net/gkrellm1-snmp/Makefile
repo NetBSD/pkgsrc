@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/24 23:27:25 cube Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/24 23:44:04 cube Exp $
 
 DISTNAME=		gkrellm_snmp-0.18
 PKGNAME=		gkrellm-snmp-0.18
@@ -20,6 +20,6 @@ do-install:
 .include "../../graphics/imlib/buildlink2.mk"
 .include "../../net/ucd-snmp/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
-.include "../../sysutils/gkrellm/buildlink2.mk"
+.include "../../sysutils/gkrellm1/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
