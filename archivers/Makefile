@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2002/12/13 16:29:32 cjep Exp $
+# $NetBSD: Makefile,v 1.53 2002/12/13 17:51:25 cjep Exp $
 #
 
 COMMENT=	Archivers
@@ -25,6 +25,7 @@ SUBDIR+=	gzip-info
 SUBDIR+=	ha
 SUBDIR+=	hpack
 SUBDIR+=	jamjar
+SUBDIR+=	lbrate
 SUBDIR+=	lha
 SUBDIR+=	libcomprex
 SUBDIR+=	liblzo
