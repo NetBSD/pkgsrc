@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2004/12/03 15:14:54 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2004/12/29 11:37:39 adrianp Exp $
 #
 
-DISTNAME=	cvsgraph-1.4.1
-PKGREVISION=	1
+DISTNAME=	cvsgraph-1.5.1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.akhphd.au.dk/~bertho/cvsgraph/release/
 
@@ -26,7 +25,7 @@ BUILD_TARGET=	cvsgraph
 SUBST_CLASSES=		man
 SUBST_STAGE.man=	pre-install
 SUBST_FILES.man= 	cvsgraph.1
-SUBST_SED.man=		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_SED.man=		-e "s|/usr/local/etc|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.man=	"Fixing man page paths."
 
 do-install:
