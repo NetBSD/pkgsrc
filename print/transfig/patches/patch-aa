@@ -1,25 +1,34 @@
---- fig2dev/Imakefile.orig	Fri Aug 22 23:33:55 1997
-+++ fig2dev/Imakefile	Sun Feb  8 15:57:10 1998
-@@ -54,7 +54,7 @@
- XCOMM Finally, if your system doesn't have ndbm (the 'new' database subroutines)
- XCOMM remove the -DNDBM from the XPMDBM definition.
+--- fig2dev/Imakefile.orig	Wed Jul  1 01:52:50 1998
++++ fig2dev/Imakefile	Fri Jul  3 13:34:01 1998
+@@ -31,7 +31,7 @@
+ XCOMM You should point XFIGLIBDIR to the same directory you did when you compiled
+ XCOMM and installed xfig.  This will be made automatic in the future.
+ 
+-XFIGLIBDIR =	/usr/local/lib/X11/xfig
++XFIGLIBDIR =	$(PROJECTROOT)/lib/X11/xfig
+ 
+ XCOMM If your system has the strerror() function (doesn't have sys_errlist) then
+ XCOMM comment out NEED_STRERROR with an XCOMM comment.
+@@ -57,7 +57,7 @@
+ XCOMM You need version 3.4c of the XPM package.
+ XCOMM
  
 -XCOMM #define USEXPM
 +#define USEXPM
  
- XCOMM If you don't have the JPEG library or don't want to use JPEG, comment
- XCOMM out the following line
-@@ -78,7 +78,7 @@
+ XCOMM For Linux machines or any machines that have a separate library for
+ XCOMM the database management routines, uncomment the following line.
+@@ -136,7 +136,7 @@
  #ifdef USEXPM
  DUSEXPM = -DUSE_XPM
  XPMLIBDIR = $(USRLIBDIR)
 -XPMINC = -I$(INCDIR)
 +XPMINC = -I$(INCDIR)/X11
- XPMLIB = -L$(XPMLIBDIR) -lXpm -lX11
+ XPMLIBS = -L$(XPMLIBDIR) -lXpm -lX11
  XPMRGB = XPMRGB=$(LIBDIR)/rgb
- XPMDBM = -DNDBM
-@@ -137,8 +137,8 @@
- #ifdef USEJPEG
+ XPMDBM = $(USE_NDBM)
+@@ -153,8 +153,8 @@
+ DUSEJPEG = -DUSE_JPEG
  
  #ifdef USEINSTALLEDJPEG
 -JPEGLIBDIR = /usr/local/lib
@@ -28,4 +37,4 @@
 +JPEGINCDIR = $(LOCALBASE)/include
  JPEGLIB = -L$(JPEGLIBDIR) -ljpeg
  #else
- JPEGLIBDIR = ../../jpeg
+ XCOMM this is relative to this directory (transfig/fig2dev)
