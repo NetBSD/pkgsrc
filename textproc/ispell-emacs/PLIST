@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/04 09:10:00 uebayasi Exp $
+${EMACS_LISPPREFIX}/ispell/ispell.el
+@dirrm ${EMACS_LISPPREFIX}/ispell
