@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/04/25 04:13:20 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/09/19 21:38:20 kim Exp $
 #
 
 DISTNAME=		tcptraceroute-1.4
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://michael.toren.net/code/tcptraceroute/
 
