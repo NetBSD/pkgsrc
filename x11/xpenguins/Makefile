@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/04/19 05:08:21 snj Exp $
+# $NetBSD: Makefile,v 1.14 2004/11/26 20:44:02 snj Exp $
 #
 
-DISTNAME=	xpenguins-2.1
+DISTNAME=	xpenguins-2.2
 CATEGORIES=	games x11
 MASTER_SITES=	http://xpenguins.seul.org/
 

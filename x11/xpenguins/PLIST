@@ -1,6 +1,36 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:27 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/26 20:44:02 snj Exp $
 bin/xpenguins
 man/man1/xpenguins.1
+share/xpenguins/themes/Big_Penguins/about
+share/xpenguins/themes/Big_Penguins/angel.xpm
+share/xpenguins/themes/Big_Penguins/ballooner.xpm
+share/xpenguins/themes/Big_Penguins/bigpenguin.png
+share/xpenguins/themes/Big_Penguins/bomber.xpm
+share/xpenguins/themes/Big_Penguins/climber.xpm
+share/xpenguins/themes/Big_Penguins/climber_skateboarder.xpm
+share/xpenguins/themes/Big_Penguins/config
+share/xpenguins/themes/Big_Penguins/digger.xpm
+share/xpenguins/themes/Big_Penguins/exit.xpm
+share/xpenguins/themes/Big_Penguins/explosion.xpm
+share/xpenguins/themes/Big_Penguins/faller.xpm
+share/xpenguins/themes/Big_Penguins/floater.xpm
+share/xpenguins/themes/Big_Penguins/reader.xpm
+share/xpenguins/themes/Big_Penguins/skateboarder.xpm
+share/xpenguins/themes/Big_Penguins/splat.xpm
+share/xpenguins/themes/Big_Penguins/superpenguin.xpm
+share/xpenguins/themes/Big_Penguins/tumbler.xpm
+share/xpenguins/themes/Big_Penguins/walker.xpm
+share/xpenguins/themes/Big_Penguins/zapped.xpm
+share/xpenguins/themes/Bill/about
+share/xpenguins/themes/Bill/bill.png
+share/xpenguins/themes/Bill/carrier.xpm
+share/xpenguins/themes/Bill/climber.xpm
+share/xpenguins/themes/Bill/config
+share/xpenguins/themes/Bill/explosion.xpm
+share/xpenguins/themes/Bill/faller.xpm
+share/xpenguins/themes/Bill/hacker.xpm
+share/xpenguins/themes/Bill/splat.xpm
+share/xpenguins/themes/Bill/walker.xpm
 share/xpenguins/themes/Classic_Penguins/about
 share/xpenguins/themes/Classic_Penguins/bomber.xpm
 share/xpenguins/themes/Classic_Penguins/climber.xpm
@@ -44,5 +74,7 @@ share/xpenguins/themes/Turtles/walker.xpm
 @dirrm share/xpenguins/themes/Turtles
 @dirrm share/xpenguins/themes/Penguins
 @dirrm share/xpenguins/themes/Classic_Penguins
+@dirrm share/xpenguins/themes/Bill
+@dirrm share/xpenguins/themes/Big_Penguins
 @dirrm share/xpenguins/themes
 @dirrm share/xpenguins
