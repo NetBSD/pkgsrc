@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/11 21:53:48 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/09/11 22:30:37 wiz Exp $
 
 .if !defined(GTKMM_BUILDLINK2_MK)
 GTKMM_BUILDLINK2_MK=	# defined
@@ -14,6 +14,7 @@ BUILDLINK_FILES.gtkmm+=		include/gdk--/*
 BUILDLINK_FILES.gtkmm+=		include/glib--.h
 BUILDLINK_FILES.gtkmm+=		include/gtk--.h
 BUILDLINK_FILES.gtkmm+=		include/gtk--/*
+BUILDLINK_FILES.gtkmm+=		include/gtk--/private/*
 BUILDLINK_FILES.gtkmm+=		lib/gtkmm/include/*
 BUILDLINK_FILES.gtkmm+=		lib/libgdkmm.*
 BUILDLINK_FILES.gtkmm+=		lib/libgtkmm.*
