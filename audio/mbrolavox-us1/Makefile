@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/11 16:02:30 proff Exp $
+# $NetBSD: Makefile,v 1.2 1999/10/11 17:22:14 proff Exp $
 
 PKGNAME=	mbrolavox-us1-980512
 DISTNAME=	us1-980512
@@ -8,8 +8,7 @@ MASTER_SITES=	ftp://tcts.fpms.ac.be/pub/mbrola/VOICES/us1/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	proff@iq.org
-HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
-
+HOMEPAGE=	http://tcts.fpms.ac.be/synthesis/
 DEPENDS+=	mbrola-301h:../mbrola
 
 BUILD_DEPENDS=	unzip:../../archivers/unzip
