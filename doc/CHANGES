@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7516 2004/10/21 21:27:29 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7517 2004/10/22 01:10:03 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4807,3 +4807,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-pgnotify-0.1 [darcy 2004-10-21]
 	Updated rsync to 2.6.3 [tv 2004-10-21]
 	Updated sylpheed-gtk2 to 0.9.12.20040918 [xtraeme 2004-10-21]
+	Updated mysql4-client to 4.0.21 [xtraeme 2004-10-22]
+	Updated mysql4-server to 4.0.21 [xtraeme 2004-10-22]

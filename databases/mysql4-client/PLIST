@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:22 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/10/22 01:10:04 xtraeme Exp $
 bin/make_win_binary_distribution
 bin/make_win_src_distribution
 bin/msql2mysql
@@ -71,6 +71,7 @@ share/mysql/binary-configure
 share/mysql/make_binary_distribution
 share/mysql/make_sharedlib_distribution
 share/mysql/my-huge.cnf
+share/mysql/my-innodb-heavy-4G.cnf
 share/mysql/my-large.cnf
 share/mysql/my-medium.cnf
 share/mysql/my-small.cnf
