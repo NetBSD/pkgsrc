@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/09/02 17:42:39 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2002/11/30 11:46:03 salo Exp $
 #
 
 DISTNAME=	easytag-0.23.2
@@ -11,16 +11,14 @@ COMMENT=	Tool to view, edit and write ID3 v1&2 TAGs with a GTK+ interface
 
 BUILD_USES_MSGFMT=	yes				# xgettext, really
 
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_X11BASE=	yes
-USE_BUILDLINK2=	yes
+GNU_CONFIGURE=		yes
+USE_GMAKE=		yes
+USE_X11BASE=		yes
+USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 
 .include "../../audio/id3lib/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
-
-MAKE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR}
-
 .include "../../mk/bsd.pkg.mk"

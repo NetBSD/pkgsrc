@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2002/09/11 09:48:46 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2002/11/30 11:46:04 salo Exp $
 #
 
 DISTNAME=		gqmpeg-0.19.0
@@ -15,10 +15,9 @@ DEPENDS+=		vorbis-tools>=1.0.0.6:../../audio/vorbis-tools
 DEPENDS+=		xmp>=2.0.2:../../audio/xmp
 
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--without-included-gettext \
-			--datadir=${PREFIX}/${PKGLOCALEDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -28,6 +27,7 @@ CONFIGURE_ARGS+=	--enable-japanese
 .if !defined(GQMPEG_NO_RUSSIAN)
 CONFIGURE_ARGS+=	--enable-russian
 .endif
+CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ENV+=		GNOME_DATADIR=${PREFIX}/share
 
 # in case gnome isn't installed, we need to create the directories

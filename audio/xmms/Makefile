@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/11/03 23:05:26 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2002/11/30 11:46:07 salo Exp $
 #
 
 DISTNAME=	xmms-1.2.7
@@ -11,19 +11,20 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.xmms.org/
 COMMENT=	X Multimedia System --- An audio player with a Winamp GUI
 
-USE_BUILDLINK2=	yes
-USE_LIBTOOL=	yes
-USE_GMAKE=	yes
-USE_X11=	yes
-GNU_CONFIGURE=	yes
+USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+USE_GMAKE=		yes
+USE_X11=		yes
+GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--without-gnome
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 # Broken configure script assumes that iconv_open lives in libc; work around.  
-CPPFLAGS+=		-DHAVE_ICONV_OPEN=1                                     
-CONFIGURE_ENV+=		ac_cv_func_iconv_open=yes                       
-LIBS+=			-liconv                                                 
+CPPFLAGS+=		-DHAVE_ICONV_OPEN=1
+CONFIGURE_ENV+=		ac_cv_func_iconv_open=yes
+LIBS+=			-liconv
 
 .include "../../mk/bsd.prefs.mk"
 

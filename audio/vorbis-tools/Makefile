@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/09/16 14:51:21 uebayasi Exp $
+# $NetBSD: Makefile,v 1.20 2002/11/30 11:46:06 salo Exp $
 
 DISTNAME=	vorbis-tools-1.0
 PKGNAME=	vorbis-tools-1.0.0.8
@@ -16,6 +16,7 @@ BUILD_DEFS+=	USE_INET6
 CONFLICTS=	vorbis-[0-9]*
 
 USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
