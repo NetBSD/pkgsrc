@@ -1,4 +1,4 @@
-# $NetBSD: mfs_rcd,v 1.2 2004/02/26 04:06:39 xtraeme Exp $ 
+# $NetBSD: mfs_rcd,v 1.3 2004/04/27 21:12:43 xtraeme Exp $ 
 #
 # Mount mfs directories and unpack the required file
 # before anything.
@@ -16,20 +16,6 @@ stop_cmd="mfsrc_stop"
 
 mfsrc_start()
 {
-	cat <<_EOF
-
-##############################################################################
-##############################################################################
-#######								##############
-#######	    Welcome to the NetBSD Live CD!			##############
-#######	    Please visit us: http://www.NetBSD.org/		##############
-#######								##############
-#######	    Copyright (C) 2004, Juan RP <xtraeme@NetBSD.org>	##############
-#######								##############
-##############################################################################
-##############################################################################
-
-_EOF
 	echo "=> Mounting Memory based filesystems..."
 	mount_mfs @MNT_DEV_ARGS@ swap /dev
 	mount_mfs @MNT_ETC_ARGS@ swap /etc
