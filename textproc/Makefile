@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2002/10/30 11:12:27 markd Exp $
+# $NetBSD: Makefile,v 1.171 2002/11/01 02:21:11 rh Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -10,6 +10,7 @@ SUBDIR+=	aspell-slovak
 SUBDIR+=	bibclean
 SUBDIR+=	biblook
 SUBDIR+=	bibparse
+SUBDIR+=	btparse
 SUBDIR+=	catdoc
 SUBDIR+=	cdif
 SUBDIR+=	chasen
