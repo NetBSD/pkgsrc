@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/11/01 09:02:05 rh Exp $
+# $NetBSD: Makefile,v 1.22 1999/12/02 12:04:18 kleink Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -16,7 +16,7 @@ HOMEPAGE=	http://www.fvwm.org/
 
 DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
 DEPENDS+=	readline-*:../../devel/readline
-DEPENDS+=	rplay-3.*:../../devel/readline
+DEPENDS+=	rplay-3.*:../../audio/rplay
 
 CONFLICTS=	fvwm-2.*
 
