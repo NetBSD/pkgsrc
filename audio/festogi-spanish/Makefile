@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 1999/10/11 10:54:35 proff Exp $
+# $NetBSD: Makefile,v 1.6 1999/12/25 22:38:57 wiz Exp $
 
-DISTNAME=	festogi-spanish-2.0
+DISTNAME=	OGIspanish-2.0
+PKGNAME=	festogi-spanish-2.0
 WRKSRC=		${WRKDIR}/festival
 CATEGORIES=	audio
 MASTER_SITES=	ftp://cslu.cse.ogi.edu/pub/tts/
-DISTFILES=	OGIspanish-2.0.tar.gz
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://cslu.cse.ogi.edu/tts
@@ -18,11 +18,11 @@ NO_BUILD=	yes
 FHOME=		${PREFIX}/share/festival
 
 post-extract:
-	@ chmod -R a+r ${WRKSRC}
-	@ find ${WRKSRC} -type d -print0 | xargs -0 chmod 755
+	@ ${CHMOD} -R a+r ${WRKSRC}
+	@ find ${WRKSRC} -type d -print0 | xargs -0 ${CHMOD} 755
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
-	cd ${WRKSRC} && pax -r -w * ${FHOME}
+	cd ${WRKSRC} && ${PAX} -r -w * ${FHOME}
 
 .include "../../mk/bsd.pkg.mk"
