@@ -1,5 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/03 01:41:49 recht Exp $
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/09 23:56:33 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 RENDER_BUILDLINK3_MK:=	${RENDER_BUILDLINK3_MK}+
@@ -9,10 +8,9 @@ BUILDLINK_DEPENDS+=	render
 .endif
 
 .if !empty(RENDER_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			render
-BUILDLINK_DEPENDS.render?=		render>=0.8
-BUILDLINK_PKGSRCDIR.render?=		../../x11/render
-
+BUILDLINK_PACKAGES+=		render
+BUILDLINK_DEPENDS.render+=	render>=0.8
+BUILDLINK_PKGSRCDIR.render?=	../../x11/render
 .endif # RENDER_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
