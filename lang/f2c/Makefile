@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2001/04/09 12:38:42 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.15 2001/04/18 21:43:18 dmcmahill Exp $
 
 DISTNAME=	f2c-20001205
-PKGNAME=	f2c-20001205nb2
+PKGNAME=	f2c-20001205nb3
 WRKSRC=		${WRKDIR}/f2c
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL}
