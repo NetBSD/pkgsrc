@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.827 2001/10/17 23:23:16 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.828 2001/10/24 19:42:28 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1477,10 +1477,10 @@ do-patch: uptodate-digest
 
 # Configure
 
-.if !target(do-configure)
-do-configure:
-.  if defined(REPLACE_NCURSES) && (!defined(NEED_NCURSES) || ${NEED_NCURSES} == "NO")
-.    for f in ${REPLACE_NCURSES}
+_CONFIGURE_PREREQ+=	replace-ncurses
+replace-ncurses:
+.if defined(REPLACE_NCURSES) && (!defined(NEED_NCURSES) || ${NEED_NCURSES} == "NO")
+.  for f in ${REPLACE_NCURSES}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; if [ -f ${f} ]; then	\
 		${SED}  -e "s/ncurses/curses/g" ${f} > ${f}.new;	\
 		if [ -x ${f} ]; then					\
@@ -1488,20 +1488,29 @@ do-configure:
 		fi;							\
 		${MV} ${f}.new ${f};					\
 	fi
-.    endfor
-.  endif
+.  endfor
+.else
+	${_PKG_SILENT}${_PKG_DEBUG}${TRUE}
+.endif
 
-.  if defined(USE_LIBTOOL) && defined(LTCONFIG_OVERRIDE)
-.    for ltconfig in ${LTCONFIG_OVERRIDE}
-	${_PKG_SILENT}${_PKG_DEBUG}\
-	if [ -f ${ltconfig} ]; then \
-		${RM} -f ${ltconfig}; \
-		${ECHO} "${RM} -f libtool; ${LN} -s ${LIBTOOL} libtool" \
-			> ${ltconfig}; \
-		${CHMOD} +x ${ltconfig} ; \
+_CONFIGURE_PREREQ+=	do-libtool
+do-libtool:
+.if defined(USE_LIBTOOL) && defined(LTCONFIG_OVERRIDE)
+.  for ltconfig in ${LTCONFIG_OVERRIDE}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -f ${ltconfig} ]; then					\
+		${RM} -f ${ltconfig};					\
+		${ECHO} "${RM} -f libtool; ${LN} -s ${LIBTOOL} libtool"	\
+			> ${ltconfig};					\
+		${CHMOD} +x ${ltconfig};				\
 	fi
-.    endfor
-.  endif
+.  endfor
+.else
+	${_PKG_SILENT}${_PKG_DEBUG}${TRUE}
+.endif
+
+.if !target(do-configure)
+do-configure: ${_CONFIGURE_PREREQ}
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/configure ]; then \
 		cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} \
 		  ${SCRIPTDIR}/configure; \
