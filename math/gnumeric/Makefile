@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.85 2004/05/24 18:13:19 drochner Exp $
+# $NetBSD: Makefile,v 1.86 2004/06/07 08:57:24 jmmv Exp $
 #
 
 DISTNAME=		gnumeric-1.2.12
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.2/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/gnumeric/
