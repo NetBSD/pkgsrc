@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/27 22:25:18 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/27 23:43:48 sommerfeld Exp $
 #
 
 DISTNAME=	nidentd-0.3
@@ -8,6 +8,9 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hubertf@netbsd.org
 COMMENT=	identd that supports IPv4, IPv6 and NAT
+
+BROKEN=		Distfile checksum mismatch.  
+BROKEN+= 	Extreme inefficiency enables DoS attacks, particularly when running as root.
 
 DEPENDS+=	lsof-*:../../sysutils/lsof
 
