@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/05/26 05:44:10 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/05/26 07:23:34 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libcups.
 #
@@ -17,13 +17,11 @@
 CUPS_BUILDLINK_MK=	# defined
 
 CUPS_REQD?=		1.1.1
-
-CUPS_INCDIR=		${LOCALBASE}/include/cups
-LIBCUPS=		${LOCALBASE}/lib/libcups.a
-LIBCUPS=		${LOCALBASE}/lib/libcups.so*
-LIBCUPSIMAGE=		${LOCALBASE}/lib/libcupsimage.a
-LIBCUPSIMAGE=		${LOCALBASE}/lib/libcupsimage.so*
 DEPENDS+=		cups>=${CUPS_REQD}:../../print/cups
+
+CUPS_HEADERS=		${LOCALBASE}/include/cups/*
+CUPS_LIBS=		${LOCALBASE}/lib/libcups.*
+CUPS_LIBS+=		${LOCALBASE}/lib/libcupsimage.*
 
 BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
@@ -37,7 +35,8 @@ BUILDLINK_TARGETS+=	link-cups-libs
 link-cups-headers:
 	@${ECHO} "Linking cups headers into ${BUILDLINK_INCDIR}."
 	@${MKDIR} ${BUILDLINK_INCDIR}/cups
-	@for inc in ${CUPS_INCDIR}/*; do				\
+	@${RM} -f ${BUILDLINK_INCDIR}/cups/*
+	@for inc in ${CUPS_HEADERS}; do					\
 		dest=${BUILDLINK_INCDIR}/cups/`${BASENAME} $${inc}`;	\
 		if [ -f $${inc} ]; then					\
 			${RM} -f $${dest};				\
@@ -51,7 +50,7 @@ link-cups-headers:
 link-cups-libs:
 	@${ECHO} "Linking cups libraries into ${BUILDLINK_LIBDIR}."
 	@${MKDIR} ${BUILDLINK_LIBDIR}
-	@for lib in ${LIBCUPS} ${LIBCUPSIMAGE}; do			\
+	@for lib in ${CUPS_LIBS}; do					\
 		dest=${BUILDLINK_LIBDIR}/`${BASENAME} $${lib}`;		\
 		if [ -f $${lib} ]; then					\
 			${RM} -f $${dest};				\
