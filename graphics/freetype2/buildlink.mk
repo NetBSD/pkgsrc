@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.10 2001/07/27 13:33:28 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.11 2001/08/17 21:14:11 jlam Exp $
 #
 # This Makefile fragment is included by packages that use freetype2.
 #
@@ -82,9 +82,10 @@ freetype2-buildlink-config:
 	fi
 .endif	# _NEED_FREETYPE2
 
-.if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
+.if defined(USE_CONFIG_WRAPPER)
 FREETYPE_CONFIG?=	${BUILDLINK_CONFIG_WRAPPER.freetype2}
 CONFIGURE_ENV+=		FREETYPE_CONFIG="${FREETYPE_CONFIG}"
+MAKE_ENV+=		FREETYPE_CONFIG="${FREETYPE_CONFIG}"
 .endif
 
 pre-configure: ${BUILDLINK_TARGETS.freetype2}

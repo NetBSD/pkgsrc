@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.9 2001/07/27 13:33:37 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.10 2001/08/17 21:14:16 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gnome-libs.
 #
@@ -61,11 +61,13 @@ BUILDLINK_CONFIG.gnome-libs=		${BUILDLINK_PREFIX.gnome-libs}/bin/gnome-config
 BUILDLINK_CONFIG_WRAPPER.gnome-libs=	${BUILDLINK_DIR}/bin/gnome-config
 BUILDLINK_CONFIG_WRAPPER.libart=	${BUILDLINK_DIR}/bin/libart-config
 
-.if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
+.if defined(USE_CONFIG_WRAPPER)
 GNOME_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.gnome-libs}
 LIBART_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.libart}
 CONFIGURE_ENV+=		GNOME_CONFIG="${GNOME_CONFIG}"
 CONFIGURE_ENV+=		LIBART_CONFIG="${LIBART_CONFIG}"
+MAKE_ENV+=		GNOME_CONFIG="${GNOME_CONFIG}"
+MAKE_ENV+=		LIBART_CONFIG="${LIBART_CONFIG}"
 .endif
 
 pre-configure: ${BUILDLINK_TARGETS.gnome-libs}
