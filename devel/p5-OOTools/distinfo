@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/10/23 17:19:21 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:27 agc Exp $
 
 SHA1 (OOTools-1.75.tar.gz) = 73a751ece76a3d14d65dc8d2be529d2c267b01f2
+RMD160 (OOTools-1.75.tar.gz) = cfdeddb1ae6a71f844c472e96867df10c684f08c
 Size (OOTools-1.75.tar.gz) = 12540 bytes

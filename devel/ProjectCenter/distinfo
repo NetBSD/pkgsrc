@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/02/07 08:58:35 adam Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 22:24:08 agc Exp $
 
 SHA1 (ProjectCenter-0.4.2.tar.gz) = 202c4af75e8fb3ecea6897aacb3e134abbfab6a3
+RMD160 (ProjectCenter-0.4.2.tar.gz) = 0a1a92e37448fe65a0d8378bea38d494914d834b
 Size (ProjectCenter-0.4.2.tar.gz) = 302035 bytes

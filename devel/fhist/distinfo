@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/02/05 14:03:26 salo Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:13 agc Exp $
 
 SHA1 (fhist-1.13.tar.gz) = bebbaa3f1db0fdbfae731c99a3a5ab19cdcd75fd
+RMD160 (fhist-1.13.tar.gz) = e58b280b96929765a853fafafdc3a7bdaef073b6
 Size (fhist-1.13.tar.gz) = 263993 bytes

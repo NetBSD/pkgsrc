@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2004/11/14 06:16:49 jlam Exp $
+$NetBSD: distinfo,v 1.10 2005/02/23 22:24:32 agc Exp $
 
 SHA1 (readline-5.0.tar.gz) = 9b9959c3f62e3e82d3edd604c0bf6124d5256c9e
+RMD160 (readline-5.0.tar.gz) = 17b38d5cafab6dbc663aba4fbba5a2e282bb4876
 Size (readline-5.0.tar.gz) = 1808946 bytes
 SHA1 (patch-ae) = 92a6249e51d8e0cb0e159862a383ba7b785a33c0

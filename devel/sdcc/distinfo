@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.10 2004/06/07 00:19:02 xtraeme Exp $
+$NetBSD: distinfo,v 1.11 2005/02/23 22:24:33 agc Exp $
 
 SHA1 (sdcc-2.4.0.tar.gz) = 3ce83ec60417ac6cdffb1668679cb4eeae6c3941
+RMD160 (sdcc-2.4.0.tar.gz) = 807aaa5166e143d3793a66b620ccde40d0c83260
 Size (sdcc-2.4.0.tar.gz) = 3021296 bytes

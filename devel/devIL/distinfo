@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/03 19:00:02 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:12 agc Exp $
 
 SHA1 (DevIL-1.6.6.tar.gz) = 946883351dcd72d00618887f1faa01d173317903
+RMD160 (DevIL-1.6.6.tar.gz) = f609c71397c143517b045f764c549528f7cb5e84
 Size (DevIL-1.6.6.tar.gz) = 787878 bytes

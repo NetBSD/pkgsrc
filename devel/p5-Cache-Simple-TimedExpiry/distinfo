@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/10 16:42:22 seb Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:23 agc Exp $
 
 SHA1 (Cache-Simple-TimedExpiry-0.22.tar.gz) = 22fb9fedc33a93e8faa46a56164bbf3e0b4129e1
+RMD160 (Cache-Simple-TimedExpiry-0.22.tar.gz) = fbc8a6615f5a8a09c43e5962cdd962b884a46b57
 Size (Cache-Simple-TimedExpiry-0.22.tar.gz) = 8255 bytes
