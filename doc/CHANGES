@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7484 2004/10/20 10:12:56 grant Exp $
+$NetBSD: CHANGES,v 1.7485 2004/10/20 10:18:49 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4775,3 +4775,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated evolution to 2.0.2nb2 [jmmv 2004-10-20]
 	Updated p5-Net-IRC to 0.75 [adrianp 2004-10-20]
 	Updated hypermail to 2.1.8 [grant 2004-10-20]
+	Updated clamav to 0.80nb1 [grant 2004-10-20]
