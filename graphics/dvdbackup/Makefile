@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:18:15 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/28 14:39:36 recht Exp $
 
 DISTNAME=	dvdbackup-0.1.1
 PKGREVISION=	1
@@ -20,5 +20,5 @@ do-install:
 	cd ${WRKSRC}; \
 	${INSTALL_PROGRAM} dvdbackup ${LOCALBASE}/bin;
 
-.include "../../misc/libdvdread/buildlink2.mk"
+.include "../../multimedia/libdvdread/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
