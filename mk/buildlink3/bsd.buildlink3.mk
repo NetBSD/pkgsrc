@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.10 2003/09/10 12:58:39 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.11 2003/09/13 07:43:11 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -374,9 +374,8 @@ ${_BLNK_COOKIE.${_pkg_}}:
 	esac;								\
 	cd ${BUILDLINK_PREFIX.${_pkg_}};				\
 	pkg_prefix=`							\
-		${_BLNK_PKG_INFO.${_pkg_}} -qp ${BUILDLINK_PKGNAME.${_pkg_}} | \
-		${SED}	-e "s,^[^/]*,,"					\
-			-e "s,^${BUILDLINK_PREFIX.${_pkg_}},,"		\
+		${ECHO} ${BUILDLINK_PREFIX.${_pkg_}} |			\
+		${SED}	-e "s,^${BUILDLINK_PREFIX.${_pkg_}},,"		\
 			-e "s,^/,,"					\
 	`;								\
 	case "$$pkg_prefix" in						\
@@ -390,7 +389,7 @@ ${_BLNK_COOKIE.${_pkg_}}:
 	*)	for file in $$files; do					\
 			src="${BUILDLINK_PREFIX.${_pkg_}}/$$file";	\
 			if [ ! -f $$src ]; then				\
-				${ECHO} "$${file}: not found" >> ${.TARGET}; \
+				${ECHO} "$$src: not found" >> ${.TARGET}; \
 				continue;				\
 			fi;						\
 			if [ -z "${BUILDLINK_TRANSFORM.${_pkg_}}" ]; then \
