@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2004/10/30 05:18:51 minskim Exp $
+# $NetBSD: Makefile,v 1.41 2004/11/16 22:44:51 jlam Exp $
 
 DISTNAME=	tcl8.4.7-src
 PKGNAME=	tcl-8.4.7
@@ -40,12 +40,6 @@ CONFIGURE_ARGS+=	--disable-threads
 
 # Add ${VIEWBASE}/lib/tcl to the list of locations for Tcl packages.
 CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
-
-# NetBSD-1.5.x-m68k platforms apparently have a compiler optimization bug
-# tickled by the Tcl code that manifests in code generation problems.
-.if (${MACHINE_PLATFORM:MNetBSD-1.5*-m68k} != "")
-CONFIGURE_ENV+=		COMPILER_OPTIMIZATION_BUG=YES
-.endif
 
 .if ${OPSYS} == "NetBSD"
 .if empty(OS_VERSION:M1.[56].*)
