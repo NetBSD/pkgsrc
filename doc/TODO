@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2284 2004/10/30 10:29:53 wiz Exp $
+$NetBSD: TODO,v 1.2285 2004/10/30 10:32:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -390,7 +390,6 @@ Suggested package updates
 	o iroffer-1.309
 	o ispman-1.1.1
 	o jabberd-1.4.3
-	o jabberd2-2.04
 	o jakarta-tomcat-3.3.1a
 	o jamjar-0.7.1
 	o john-1.6.37
