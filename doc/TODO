@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1901 2004/07/05 22:51:32 wiz Exp $
+$NetBSD: TODO,v 1.1902 2004/07/06 09:56:38 adam Exp $
 
 Suggested new packages
 ======================
@@ -250,7 +250,6 @@ Suggested package updates
 	o gss-0.0.11
 	o gtar-1.14
 	o gtetrinet-0.7.4
-	o gtk-gnutella-0.93.4
 	o gtkglext-1.0.6
 	o gtkmm-2.4.4
 	o gtksee-0.5.5.1
