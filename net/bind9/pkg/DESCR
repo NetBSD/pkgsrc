@@ -1,0 +1,10 @@
+   BIND 9.0.0b1 is the first public release of BIND 9 code.  It will
+   be most useful to advanced users working with IPv6 or DNSSEC.
+
+   BIND 9.0.0b1 is not functionally complete, and is not a release
+   candidate for BIND 9.0.0.  The ISC anticipates a number of additional
+   beta releases between now and May, when BIND 9.0.0 is scheduled to
+   be released.
+
+   The ISC does not recommend using BIND 9.0.0b1 for "production"
+   services.
