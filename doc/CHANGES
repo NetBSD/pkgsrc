@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5826 2004/05/05 14:08:33 jmmv Exp $
+$NetBSD: CHANGES,v 1.5827 2004/05/05 15:11:26 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2360,3 +2360,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnucash to 1.8.8nb6 [wiz 2004-05-05]
 	Updated cscope to 15.4nb2 [wiz 2004-05-05]
 	Updated libgsf to 1.9.0 [jmmv 2004-05-05]
+	Updated bsdgrep-devel to 20040505 [cjep 2004-05-05]
