@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/14 16:43:51 recht Exp $
-${PYSITELIB}/rpy.py
-${PYSITELIB}/rpy.pyc
-${PYSITELIB}/rpy.pyo
+@comment $NetBSD: PLIST,v 1.3 2003/12/04 13:50:33 adam Exp $
 ${PYSITELIB}/io.py
 ${PYSITELIB}/io.pyc
 ${PYSITELIB}/io.pyo
+${PYSITELIB}/rpy.py
+${PYSITELIB}/rpy.pyc
+${PYSITELIB}/rpy.pyo
+${PYSITELIB}/rpy_version.py
+${PYSITELIB}/rpy_version.pyc
+${PYSITELIB}/rpy_version.pyo
 ${PYSITELIB}/_rpymodule.so
