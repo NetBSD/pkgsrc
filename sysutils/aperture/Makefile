@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/01/27 19:31:59 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2002/02/08 22:58:54 wiz Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.shar
 # following does the correct substitution.
 #
 .for subdir in ${PKGNAME}
-MASTER_SITES=	${MASTER_SITE_LOCAL:=${subdir}/}
+MASTER_SITES=	${MASTER_SITE_LOCAL:=${subdir}nb1/}
 .endfor
 
 # The definitive location of the distfile is as below, but it's risky to depend
