@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/09 20:36:38 agc Exp $
+# $NetBSD: Makefile,v 1.5 2001/10/31 17:05:59 zuntum Exp $
 # FreeBSD Id: ports/net/fping/Makefile,v 1.10 2000/04/20 20:18:57 mharo Exp
 
 DISTNAME=	part01
@@ -18,6 +18,6 @@ EXTRACT_CMD=	zcat ${DOWNLOADED_DISTFILE} | ${SED} -e '1,/Archive-Name/d' | ${SH}
 WRKSRC=		${WRKDIR}
 
 post-install:
-	${CHMOD} 4555 ${PREFIX}/sbin/fping
+	${CHMOD} 4555 ${LOCALBASE}/sbin/fping
 
 .include "../../mk/bsd.pkg.mk"
