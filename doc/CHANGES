@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2662 2003/07/02 17:43:20 jmmv Exp $
+$NetBSD: CHANGES,v 1.2663 2003/07/02 18:23:17 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2655,3 +2655,4 @@ Changes to the packages collection and infrastructure in 2003:
 	gtexinfo: Downgraded to 4.6 [grant 2003-07-02]
 	Updated postfix to 2.0.13 [martti 2003-07-02]
 	Updated mtoolsfm to 1.9.3nb2 [jmmv 2003-07-02]
+	Updated upclient to 4.2.1.23nb2 [jmmv 2003-07-02]
