@@ -1,4 +1,4 @@
 #!/bin/sh
 MOZILLA_FIVE_HOME=@PREFIX@/lib/@MOZILLA@
 export MOZILLA_FIVE_HOME
-exec @PREFIX@/lib/@MOZILLA@/mozilla-bin "$@"
+exec @PREFIX@/lib/@MOZILLA@/@MOZILLA_BIN@ "$@"
