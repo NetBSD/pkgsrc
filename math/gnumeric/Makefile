@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/08/11 18:46:34 rh Exp $
+# $NetBSD: Makefile,v 1.33 2001/08/13 17:42:37 rh Exp $
 #
 
 DISTNAME=		gnumeric-0.68
@@ -15,6 +15,7 @@ DEPENDS+=		gal>=0.10:../../devel/gal
 DEPENDS+=		gb>=0.0.20:../../lang/gb
 DEPENDS+=		libole2>=0.1.7:../../devel/libole2
 DEPENDS+=		oaf>=0.6.5:../../devel/oaf
+DEPENDS+=		libxml>=1.8.14:../../textproc/libxml
 
 GNU_CONFIGURE=		YES
 USE_LIBINTL=		YES
