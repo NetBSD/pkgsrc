@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/31 18:18:58 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/14 21:43:53 jtb Exp $
 #
 #  XXX The tests run during configuration should not be compiled 
 #      with optimization as they determine machine parameters and
@@ -9,7 +9,7 @@ PKGNAME=		meschach-1.2b
 CATEGORIES=		math
 MASTER_SITES=		http://www.math.uiowa.edu/~dstewart/meschach/
 
-MAINTAINER=		jtb@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.math.uiowa.edu/~dstewart/meschach/
 COMMENT=		Library of C Routines for Matrix Computations
 
