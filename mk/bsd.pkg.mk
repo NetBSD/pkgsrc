@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.880 2001/12/12 12:31:14 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.881 2001/12/15 20:25:38 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -35,16 +35,16 @@ CHECK_SHLIBS?=		YES	# run check-shlibs after install
 SHLIB_HANDLING?=	YES	# do automatic shared lib handling
 NOCLEAN?=		NO	# don't clean up after update
 
-PKGSRCDIR?=		${.CURDIR:C|/[^/]*/[^/]*$||}
+_PKGSRCDIR?=		${.CURDIR:C|/[^/]*/[^/]*$||}
 PKGPATH?=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
 PKGBASE?=		${PKGNAME:C/-[^-]*$//}
 PKGVERSION?=		${PKGNAME:C/^.*-//}
 PKGWILDCARD?=		${PKGBASE}-[0-9]*
 
-DISTDIR?=		${PKGSRCDIR}/distfiles
+DISTDIR?=		${_PKGSRCDIR}/distfiles
 _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
-PACKAGES?=		${PKGSRCDIR}/packages
-TEMPLATES?=		${PKGSRCDIR}/templates
+PACKAGES?=		${_PKGSRCDIR}/packages
+TEMPLATES?=		${_PKGSRCDIR}/templates
 
 PATCHDIR?=		${.CURDIR}/patches
 SCRIPTDIR?=		${.CURDIR}/scripts
@@ -414,9 +414,9 @@ EXTRACT_CMD?=		${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf - ${EXTRAC
 # Figure out where the local mtree file is
 .if !defined(MTREE_FILE)
 .  if defined(USE_IMAKE) || defined(USE_X11BASE)
-MTREE_FILE=	${PKGSRCDIR}/mk/${OPSYS}.x11.dist
+MTREE_FILE=	${_PKGSRCDIR}/mk/${OPSYS}.x11.dist
 .  else
-MTREE_FILE=	${PKGSRCDIR}/mk/${OPSYS}.pkg.dist
+MTREE_FILE=	${_PKGSRCDIR}/mk/${OPSYS}.pkg.dist
 .  endif
 .endif # ! MTREE_FILE
 
@@ -595,7 +595,7 @@ uptodate-digest:
 		digest-*)						\
 			;;						\
 		*)							\
-			{ cd ${PKGSRCDIR}/pkgtools/digest;		\
+			{ cd ${_PKGSRCDIR}/pkgtools/digest;		\
 			${MAKE} clean;					\
 			if [ -f ${DIGEST} ]; then			\
 				${MAKE} ${MAKEFLAGS} deinstall;		\
@@ -988,7 +988,7 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
 	PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin \
 	WRKDIR=${WRKDIR} WRKSRC=${WRKSRC} PATCHDIR=${PATCHDIR} \
 	SCRIPTDIR=${SCRIPTDIR} FILESDIR=${FILESDIR} \
-	PKGSRCDIR=${PKGSRCDIR} DEPENDS="${DEPENDS}" \
+	_PKGSRCDIR=${_PKGSRCDIR} DEPENDS="${DEPENDS}" \
 	PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
 
 .if defined(BATCH)
@@ -3103,8 +3103,8 @@ print-run-depends-list:
 .if !target(show-license)
 show-license show-licence:
 	@if [ "${LICENSE}" != "" ]; then				\
-		if [ -e ${PKGSRCDIR}/licenses/${LICENSE} ]; then	\
-			${CAT} ${PKGSRCDIR}/licenses/${LICENSE};	\
+		if [ -e ${_PKGSRCDIR}/licenses/${LICENSE} ]; then	\
+			${CAT} ${_PKGSRCDIR}/licenses/${LICENSE};	\
 		else							\
 			${ECHO} "Generic ${LICENSE} information not available"; \
 			${ECHO} "See the package description (pkg_info -d ${PKGNAME}) for more information."; \
@@ -3317,7 +3317,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 			esac;						\
 		done;							\
 	fi;								\
-	${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^${PKGSRCDIR}/||' > ${BUILD_VERSION_FILE};
+	${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^${_PKGSRCDIR}/||' > ${BUILD_VERSION_FILE};
 .  for def in ${BUILD_DEFS}
 	@${ECHO} ${def}=	${${def}:Q} | ${SED} -e 's|^PATH=[^ 	]*|PATH=...|' >> ${BUILD_INFO_FILE}
 .  endfor

@@ -44,7 +44,7 @@ upload_specific=$TMP/upload_specific
 upload_others=$TMP/upload_others
 
 # May be different than $USR_PKGSRC:
-pkgsrcdir=`cd pkgtools/pkglint ; make show-var VARNAME=PKGSRCDIR`
+pkgsrcdir=`cd pkgtools/pkglint ; make show-var VARNAME=_PKGSRCDIR`
 packages=`cd pkgtools/pkglint ; make show-var VARNAME=PACKAGES`
 
 # Pull in some pkgs needed
