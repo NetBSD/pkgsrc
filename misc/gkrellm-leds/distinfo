@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 11:02:52 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/03/22 15:51:26 cube Exp $
 
-SHA1 (gkleds-0.8.1.tar.gz) = 4b126ea47470430adf2938b79c6e1aa70371912e
-RMD160 (gkleds-0.8.1.tar.gz) = 05d421893284c31114a173638ee54b415333b84e
-Size (gkleds-0.8.1.tar.gz) = 44904 bytes
-SHA1 (patch-aa) = 8240be1e14291bc795e9b09ab377f5dbc53d174c
+SHA1 (gkleds-0.8.2.tar.gz) = a7af635996782448b2fa1f901029a43c9936d779
+RMD160 (gkleds-0.8.2.tar.gz) = 95caf420a56263df08f0f3ffaac750498c7f3a5b
+Size (gkleds-0.8.2.tar.gz) = 322409 bytes
