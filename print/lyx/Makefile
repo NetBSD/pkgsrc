@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/06/04 06:00:10 frueauf Exp $
+# $NetBSD: Makefile,v 1.20 1999/08/20 01:44:48 fredb Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=		frueauf@netbsd.org
 HOMEPAGE=		http://la1ad.uio.no/lyx/
 
 DEPENDS=		ispell-3.1.20:../../textproc/ispell \
-			teTeX-0.4p8:../../print/teTeX \
+			teTeX-1.0.6:../../print/teTeX \
 			xpm-3.4k:../../graphics/xpm \
 			xforms-0.88:../../x11/xforms
 
