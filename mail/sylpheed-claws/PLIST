@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2004/10/05 15:37:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2005/03/06 16:45:47 chris Exp $
 bin/sylpheed
 include/sylpheed-claws/account.h
 include/sylpheed-claws/action.h
@@ -28,7 +28,6 @@ include/sylpheed-claws/common/log.h
 include/sylpheed-claws/common/md5.h
 include/sylpheed-claws/common/mgutils.h
 include/sylpheed-claws/common/nntp.h
-include/sylpheed-claws/common/partial_download.h
 include/sylpheed-claws/common/passcrypt.h
 include/sylpheed-claws/common/plugin.h
 include/sylpheed-claws/common/prefs.h
@@ -129,8 +128,13 @@ include/sylpheed-claws/mutt.h
 include/sylpheed-claws/news.h
 include/sylpheed-claws/news_gtk.h
 include/sylpheed-claws/noticeview.h
-include/sylpheed-claws/passphrase.h
+include/sylpheed-claws/partial_download.h
 include/sylpheed-claws/pine.h
+include/sylpheed-claws/plugins/pgpmime/passphrase.h
+include/sylpheed-claws/plugins/pgpmime/pgpmime.h
+include/sylpheed-claws/plugins/pgpmime/prefs_gpg.h
+include/sylpheed-claws/plugins/pgpmime/select-keys.h
+include/sylpheed-claws/plugins/pgpmime/sgpgme.h
 include/sylpheed-claws/pop.h
 include/sylpheed-claws/prefs_account.h
 include/sylpheed-claws/prefs_actions.h
@@ -160,8 +164,6 @@ include/sylpheed-claws/quote_fmt_lex.h
 include/sylpheed-claws/quote_fmt_parse.h
 include/sylpheed-claws/recv.h
 include/sylpheed-claws/remotefolder.h
-include/sylpheed-claws/rfc2015.h
-include/sylpheed-claws/select-keys.h
 include/sylpheed-claws/send_message.h
 include/sylpheed-claws/setup.h
 include/sylpheed-claws/sourcewindow.h
@@ -317,7 +319,10 @@ share/sylpheed-claws/manual/ja/sylpheed-14.html
 share/sylpheed-claws/manual/ja/sylpheed-15.html
 share/sylpheed-claws/manual/ja/sylpheed-16.html
 share/sylpheed-claws/manual/ja/sylpheed-17.html
+share/sylpheed-claws/manual/ja/sylpheed-18.html
+share/sylpheed-claws/manual/ja/sylpheed-19.html
 share/sylpheed-claws/manual/ja/sylpheed-2.html
+share/sylpheed-claws/manual/ja/sylpheed-20.html
 share/sylpheed-claws/manual/ja/sylpheed-3.html
 share/sylpheed-claws/manual/ja/sylpheed-4.html
 share/sylpheed-claws/manual/ja/sylpheed-5.html
@@ -344,6 +349,9 @@ share/sylpheed-claws/sylpheed.png
 @dirrm share/sylpheed-claws/faq
 @dirrm share/sylpheed-claws
 @dirrm share/examples/sylpheed
+@dirrm lib/sylpheed-claws/plugins
+@dirrm include/sylpheed-claws/plugins/pgpmime
+@dirrm include/sylpheed-claws/plugins
 @dirrm include/sylpheed-claws/gtk
 @dirrm include/sylpheed-claws/common
 @dirrm include/sylpheed-claws
