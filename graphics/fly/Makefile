@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/02/20 22:48:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1999/05/02 23:17:23 tron Exp $
 #
 
 DISTNAME=       fly-1.6.1
@@ -10,10 +10,9 @@ HOMEPAGE=	http://www.unimelb.edu.au/fly/fly.html
 
 DEPENDS+=       gd-1.3:../../graphics/gd
 
-pre-install:
+do-install:
 	${MKDIR} ${PREFIX}/share/doc/fly
 	${MKDIR} ${PREFIX}/share/examples/fly
-do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fly ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/fly
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${PREFIX}/share/examples/fly
