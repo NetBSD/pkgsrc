@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3665 2003/10/08 10:05:24 gehenna Exp $
+$NetBSD: CHANGES,v 1.3666 2003/10/08 12:21:47 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4125,3 +4125,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-razor-agents to 2.22nb2 [heinz 2003-10-07]
 	Updated squirrelmail to 1.4.2 [martti 2003-10-08]
 	Updated cvsync to 0.24.8 [gehenna 2003-10-08]
+	Updated rconfig to 0.25 [abs 2003-10-08]
+
