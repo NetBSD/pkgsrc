@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/07/03 06:17:32 rh Exp $
+# $NetBSD: Makefile,v 1.20 2001/07/14 15:45:34 jlam Exp $
 #
 
 DISTNAME=	SDL-1.2.1
@@ -38,6 +38,7 @@ NASMFLAGS=		-f aoutb
 CONFIGURE_ARGS+=	--disable-nas
 .endif
 
+CONFIGURE_ARGS+=	--disable-arts
 CONFIGURE_ARGS+=	--disable-pthread-sem
 CONFIGURE_ENV+=		NASMFLAGS="${NASMFLAGS}"
 MAKE_ENV+=		NASMFLAGS="${NASMFLAGS}"
@@ -54,4 +55,5 @@ post-configure:
 .include "../../audio/esound/buildlink.mk"
 .include "../../devel/pth/buildlink.mk"
 .include "../../graphics/Mesa/buildlink.mk"
+.include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
