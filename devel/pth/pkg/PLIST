@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2001/01/04 15:10:32 agc Exp $
+@comment $NetBSD: PLIST,v 1.20 2001/01/08 02:11:35 wiz Exp $
 bin/pth-config
 bin/pthread-config
 include/pth.h
@@ -6,13 +6,13 @@ include/pthread.h
 lib/libpth.a
 lib/libpth.la
 lib/libpth.so
-lib/libpth.so.13
-lib/libpth.so.13.27
+lib/libpth.so.${PTH_MAJOR}
+lib/libpth.so.${PTH_MAJOR}.${PTH_MINOR}
 lib/libpthread.a
 lib/libpthread.la
 lib/libpthread.so
-lib/libpthread.so.13
-lib/libpthread.so.13.27
+lib/libpthread.so.${PTH_MAJOR}
+lib/libpthread.so.${PTH_MAJOR}.${PTH_MINOR}
 man/man1/pth-config.1
 man/man1/pthread-config.1
 man/man3/pth.3

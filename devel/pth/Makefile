@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2000/10/06 09:03:17 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2001/01/08 02:11:35 wiz Exp $
 #
 
 DISTNAME=		pth-1.3.7
@@ -9,14 +9,16 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/pth/pth.html
 
 CONFLICTS=		pth-current-*
-# for PLIST
-VERS=			13.27
 
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-pthread
-PLIST_SUBST+=		VERS=${VERS}
+
+# for PLIST
+PTH_MAJOR=		13
+PTH_MINOR=		27
+PLIST_SUBST+=		PTH_MAJOR=${PTH_MAJOR} PTH_MINOR=${PTH_MINOR}
 
 test:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} test
