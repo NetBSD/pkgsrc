@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.8 2001/05/03 14:41:30 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2001/10/22 12:59:06 wiz Exp $
 
---- configure.orig	Mon Feb 26 15:35:33 2001
+--- configure.orig	Sat Oct 20 02:11:57 2001
 +++ configure
-@@ -2168,7 +2168,6 @@
+@@ -2224,7 +2224,6 @@
    FALSE_FALSE=
  fi
  
 -localedir='${prefix}/share/locale'
  
  
- ALL_LINGUAS="de es fr hu it ja pl pt_BR ru sk sl tr zh_CN.GB2312 zh_TW.Big5"
-@@ -3999,6 +3998,9 @@
+ ALL_LINGUAS="de es et fi fr hu it ja nl pl pt_BR ru sk sl tr zh_CN.GB2312 zh_TW.Big5"
+@@ -4055,6 +4054,9 @@
  	< $srcdir/po/POTFILES.in > po/POTFILES
    
  
