@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2004/11/15 06:35:50 snj Exp $
+# $NetBSD: Makefile,v 1.7 2005/02/27 22:43:24 wiz Exp $
 
-DISTNAME=		devilspie-0.7
+DISTNAME=		devilspie-0.8
 CATEGORIES=		x11
 MASTER_SITES=		http://www.burtonini.com/computing/
 
@@ -21,6 +21,7 @@ post-install:
 		${PREFIX}/share/examples/devilspie/
 
 .include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
