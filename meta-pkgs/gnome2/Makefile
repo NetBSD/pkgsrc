@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2004/01/20 13:46:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/22 10:53:31 jmmv Exp $
 
 DISTNAME=	gnome-2.4.1
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -33,6 +34,7 @@ DEPENDS+=	gnome-utils>=2.4.1:../../misc/gnome2-utils
 DEPENDS+=	gnome-vfs2>=2.4.1:../../sysutils/gnome-vfs2
 DEPENDS+=	gtk2-engines>=2.2.0:../../x11/gtk2-engines
 DEPENDS+=	nautilus>=2.4.1:../../sysutils/nautilus
+DEPENDS+=	xscreensaver>=4.14nb1:../../x11/xscreensaver
 DEPENDS+=	yelp>=2.4.2:../../misc/yelp
 
 USE_X11=	yes
