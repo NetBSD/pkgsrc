@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/08/25 19:23:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/10/29 13:56:50 joda Exp $
 bin/afslog
 bin/compile_et
 bin/ftp
@@ -9,7 +9,7 @@ bin/kinit
 bin/kip
 bin/klist
 bin/kpasswd
-bin/krb4-config 
+bin/krb4-config
 bin/ksrvtgt
 bin/kstring2key
 bin/kx
@@ -35,7 +35,8 @@ include/kerberosIV/acl.h
 include/kerberosIV/base64.h
 include/kerberosIV/com_err.h
 include/kerberosIV/com_right.h
-include/kerberosIV/editline.h  
+include/kerberosIV/des.h
+include/kerberosIV/editline.h
 include/kerberosIV/getarg.h
 include/kerberosIV/kadm.h
 include/kerberosIV/kadm_err.h
@@ -64,9 +65,9 @@ include/kerberosIV/xdbm.h
 include/kerberosIV/ss/ss.h
 @dirrm include/kerberosIV/ss
 @dirrm include/kerberosIV
-@unexec ${INSTALL_INFO} --delete %D/info/kth-krb.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/kth-krb.info
 info/kth-krb.info
-@exec ${INSTALL_INFO} %D/info/kth-krb.info %D/info/dir
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/kth-krb.info
 lib/libacl.a
 lib/libacl.la
 lib/libacl.so
@@ -76,39 +77,39 @@ lib/libcom_err.a
 lib/libcom_err.la
 lib/libcom_err.so
 lib/libcom_err.so.2
-lib/libcom_err.so.2.0
+lib/libcom_err.so.2.1
 lib/libeditline.a
 lib/libeditline.la
 lib/libkadm.a
 lib/libkadm.la
 lib/libkadm.so
 lib/libkadm.so.1
-lib/libkadm.so.1.10
+lib/libkadm.so.1.11
 lib/libkafs.a
 lib/libkafs.la
 lib/libkafs.so
 lib/libkafs.so.3
-lib/libkafs.so.3.3
+lib/libkafs.so.3.4
 lib/libkdb.a
 lib/libkdb.la
 lib/libkdb.so
 lib/libkdb.so.1
-lib/libkdb.so.1.10
+lib/libkdb.so.1.11
 lib/libkrb.a
 lib/libkrb.la
 lib/libkrb.so
 lib/libkrb.so.2
-lib/libkrb.so.2.0
+lib/libkrb.so.2.1
 lib/libotp.a
-lib/libotp.la  
+lib/libotp.la
 lib/libotp.so
 lib/libotp.so.1
 lib/libotp.so.1.3
 lib/libroken.a
 lib/libroken.la
 lib/libroken.so
-lib/libroken.so.15
-lib/libroken.so.15.0
+lib/libroken.so.16
+lib/libroken.so.16.0
 lib/libsl.a
 lib/libsl.la
 lib/libsl.so
@@ -172,7 +173,7 @@ man/cat3/k_unlog.0
 man/cat3/kafs.0
 man/cat3/kerberos.0
 man/cat3/krb_afslog.0
-man/cat3/krb_afslog_uid.0 
+man/cat3/krb_afslog_uid.0
 man/cat3/krb_realmofhost.0
 man/cat3/krb_sendauth.0
 man/cat5/ftpusers.0
@@ -201,7 +202,7 @@ man/man1/kdestroy.1
 man/man1/kerberos.1
 man/man1/kinit.1
 man/man1/klist.1
-man/man1/krb4-config.1  
+man/man1/krb4-config.1
 man/man1/ksrvtgt.1
 man/man1/kx.1
 man/man1/login.1

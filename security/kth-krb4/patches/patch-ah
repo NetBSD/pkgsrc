@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.2 2002/04/05 11:32:22 wennmach Exp $
+$NetBSD: patch-ah,v 1.3 2002/10/29 13:56:51 joda Exp $
 
 Do not install the des executable, nor the des.1 man page. This avoids
 a conflict with the openssl package, which installs an executable with
@@ -24,18 +24,18 @@ the same name (and functionality) into the same place.
  
  ## this is an awful lot of junk, but it's just as well to include everything
  EXTRA_DIST =		\
---- lib/des/Makefile.in.orig	Thu Apr  4 16:10:37 2002
-+++ lib/des/Makefile.in	Thu Apr  4 16:11:27 2002
-@@ -212,7 +212,7 @@
- check_PROGRAMS = destest mdtest md5crypt_test
+--- lib/des/Makefile.in.orig	Wed Oct 23 06:39:44 2002
++++ lib/des/Makefile.in	Mon Oct 28 15:26:36 2002
+@@ -213,7 +213,7 @@
  
  TESTS = destest mdtest md5crypt_test
+ CHECK_LOCAL = 
 -bin_PROGRAMS = des #rpw speed
-+bin_PROGRAMS =
++bin_PROGRAMS = 
  
  des_SOURCES = des.c des_ver.h
  
-@@ -260,7 +260,7 @@
+@@ -261,7 +261,7 @@
  	passwd_dialog.rc passwd_dialog.res passwd_dlg.c passwd_dlg.h resource.h
  
  
@@ -44,12 +44,12 @@ the same name (and functionality) into the same place.
  
  EXTRA_DIST = \
  	COPYRIGHT	\
-@@ -329,7 +329,7 @@
- rc4_enc.lo read_pwd.lo rnd_keys.lo set_key.lo sha.lo str2key.lo \
- xcbc_enc.lo
- libdes_la_OBJECTS =  $(am_libdes_la_OBJECTS)
--bin_PROGRAMS =  des$(EXEEXT)
-+bin_PROGRAMS =
- check_PROGRAMS =  destest$(EXEEXT) mdtest$(EXEEXT) \
- md5crypt_test$(EXEEXT)
- PROGRAMS =  $(bin_PROGRAMS)
+@@ -322,7 +322,7 @@
+ 	pcbc_enc.lo qud_cksm.lo rc4_skey.lo rc4_enc.lo read_pwd.lo \
+ 	rnd_keys.lo set_key.lo sha.lo str2key.lo xcbc_enc.lo
+ libdes_la_OBJECTS = $(am_libdes_la_OBJECTS)
+-bin_PROGRAMS = des$(EXEEXT)
++bin_PROGRAMS = 
+ check_PROGRAMS = destest$(EXEEXT) mdtest$(EXEEXT) md5crypt_test$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
