@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:33:26 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/11 17:43:50 minskim Exp $
 #
 
 DISTNAME=	ExpectPy-1.9b1
 PKGNAME=	${PYPKGPREFIX}-expect-1.9b1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pub/sourceforge/expectpy/}
 
@@ -10,14 +11,14 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.sourceforge.net/projects/expectpy/
 COMMENT=	Expect module for Python
 
-DEPENDS+=	tcl-expect>=5.32.1:../../lang/tcl-expect
-
+USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-python=${LOCALBASE} \
-			--with-expect=${LOCALBASE} \
+CONFIGURE_ARGS+=	--with-python=${BUILDLINK_PREFIX.${PYPACKAGE}} \
+			--with-expect=${BUILDLINK_PREFIX.tcl-expect} \
 			--with-tcl --enable-shared
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
+CONFIGURE_ENV+=	PYTH_CONFIGDIR=${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/config
 INSTALL_TARGET=	installshared
 PY_PATCHPLIST=	yes
 PLIST_SUBST+=	PYLIB=${PYLIB} PYPKGPREFIX=${PYPKGPREFIX}
@@ -31,5 +32,7 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/examples/$f ${EXAMPLESDIR}
 .endfor
 
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../lang/tcl-expect/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
