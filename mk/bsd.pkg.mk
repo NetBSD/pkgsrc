@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.584 2000/10/12 19:05:02 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.585 2000/10/13 23:18:00 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -39,6 +39,7 @@ CLEANDEPENDS?=		NO
 DEINSTALLDEPENDS?=	NO	# add -R to pkg_delete
 REINSTALL?=		NO	# reinstall upon update
 CHECK_SHLIBS?=		YES	# run check-shlibs after install
+SHLIB_HANDLING?=	YES	# do automatic ELF shared lib handling
 NOCLEAN?=		NO	# don't clean up after update
 
 LOCALBASE?=		${DESTDIR}/usr/local
@@ -1698,6 +1699,7 @@ root-install:
 		done;							\
 	fi
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+.if ${SHLIB_HANDLING} == "YES"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	sos=`${EGREP} -h -x '.*/lib[^/]+\.so\.[0-9]+(\.[0-9]+)+' ${PLIST} || ${TRUE}`; \
 	if [ "X$$sos" != "X" ]; then					\
@@ -1762,6 +1764,7 @@ root-install:
 			;;						\
 		esac;							\
 	fi
+.endif
 .endif
 .ifdef MESSAGE_FILE
 	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
