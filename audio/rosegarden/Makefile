@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/31 16:40:56 agc Exp $
+# $NetBSD: Makefile,v 1.2 2001/05/31 16:46:24 agc Exp $
 
 DISTNAME=	rosegarden-2.1pl2
-DISTNAME=	rosegarden-2.1p2
+PKGNAME=	rosegarden-2.1p2
 CATEGORIES=	audio
 MASTER_SITES=	http://www.cannam.demon.co.uk/rosegarden/distribution/
 
