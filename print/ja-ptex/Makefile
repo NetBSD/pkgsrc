@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/03/26 02:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/01/19 12:22:36 kei Exp $
 
 DISTNAME=	ja-ptex-1.0
 PKGREVISION=	1
@@ -19,6 +19,8 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+
+MESSAGE_SRC=	${PKGDIR}/MESSAGE
 
 do-install:	# empty
 
