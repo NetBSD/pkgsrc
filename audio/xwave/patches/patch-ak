@@ -1,0 +1,55 @@
+--- FWF/FWF.rules.orig	Mon Jan 29 18:55:22 1996
++++ FWF/FWF.rules	Sat Feb 21 20:45:05 1998
+@@ -23,9 +23,6 @@
+ libdir/libname:: objlist						@@\
+ 	-@(if [ ! -f libdir/libname ]; then \				@@\
+ 		$(MKDIRHIER) libdir ; \					@@\
+-		echo Creating Library libdir/libname ; \		@@\
+-		$(AR) libdir/libname ; \				@@\
+-		RanLibrary(libdir/libname) ; \				@@\
+ 	fi; exit 0)							@@\
+ 	@echo Adding objlist To Library libdir/libname			@@\
+ 	$(ARMERGE) libdir/libname objlist				@@\
+@@ -44,16 +41,6 @@
+ #endif /* FileCopyWhenNeeded */
+ 
+ /*
+- * RequireThisFileForDepend(file)
+- *
+- */
+-#ifndef RequireThisFileForDepend
+-#define RequireThisFileForDepend(file)					@@\
+-depend:: file								@@\
+-
+-#endif /* RequireThisFileForDepend */
+-
+-/*
+  * RequireThisFileForInit(file)
+  *
+  */
+@@ -244,18 +231,6 @@
+ #endif /* ObjectRuleWithFlags */
+ 
+ /*
+- * DependTargetWithFlags(flags,sources)
+- *
+- */
+-#ifndef DependTargetWithFlags
+-#define	DependTargetWithFlags(flags,sources)				@@\
+-DependDependency()							@@\
+-									@@\
+-depend::								@@\
+-	$(DEPEND) -s "# DO NOT DELETE" -- flags -- sources
+-#endif /* DependTargetWithFlags */
+-
+-/*
+  * SqueakyCleanTarget()
+  *
+  */
+@@ -282,3 +257,6 @@
+ #define SqueakyCleanSubdirs(dirs)					@@\
+ NamedSqueakyCleanSubdirs(squeakyclean,dirs)
+ #endif
++
++DependSubdirs($(SUBDIRS))
++
