@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/08/27 20:15:39 tron Exp $
-#
+# $NetBSD: Makefile,v 1.14 2001/08/29 06:49:27 tron Exp $
 
 DISTNAME=		gnome-vfs-1.0.1
 CATEGORIES=		sysutils gnome
@@ -10,7 +9,7 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME Virtual File System
 
-BUILD_DEPENDS+=		autoconf>=2.50:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 DEPENDS+=		GConf>=1.0.0:../../devel/GConf
 BUILD_USES_MSGFMT=	YES
