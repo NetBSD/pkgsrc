@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/07/11 20:33:12 tsarna Exp $
+# $NetBSD: Makefile,v 1.8 1998/07/11 20:44:52 tsarna Exp $
 #
 
 DISTNAME=	pyth151
@@ -6,10 +6,6 @@ PKGNAME=	python-1.5.1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
 EXTRACT_SUFX=	.tgz
-
-MAINTAINER=	tsarna@netbsd.org
-
-# Official post-release patches from www.python.org 
 
 PATCH_SITES=	http://www.python.org/1.5/patches-1.5.1/
 PATCHFILES= 	freeze.1.txt _tkinter.1.txt configure.1.txt \
@@ -21,10 +17,11 @@ PATCHFILES= 	freeze.1.txt _tkinter.1.txt configure.1.txt \
 		imaplib.2.txt import.1.txt imaplib.3.txt \
 		stringobject.1.txt sgmllib.2.txt
 
+MAINTAINER=	tsarna@netbsd.org
+
 WRKSRC=		${WRKDIR}/Python-1.5.1
 GNU_CONFIGURE=	yes
 MAKE_FLAGS+=	'OPT=${CFLAGS}'
-
 
 # Handle the module setup file:
 #   - disable some modules on 64 bit platforms
