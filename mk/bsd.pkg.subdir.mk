@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.44 2001/10/26 21:42:44 tron Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.45 2001/11/28 10:21:47 abs Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -151,8 +151,8 @@ README.html: .PRECIOUS
 .endfor
 	@${SORT} -t '>' +3 -4 $@.tmp > $@.tmp2
 	@${AWK} '{ ++n } END { print n }' < $@.tmp2 > $@.tmp4
-.if exists(${.CURDIR}/pkg/DESCR)
-	@${HTMLIFY} ${.CURDIR}/pkg/DESCR > $@.tmp3
+.if exists(${.CURDIR}/DESCR)
+	@${HTMLIFY} ${.CURDIR}/DESCR > $@.tmp3
 .else
 	@> $@.tmp3
 .endif
@@ -181,8 +181,8 @@ README.html: .PRECIOUS
 show-comment:
 	@if [ "${COMMENT}" ]; then					\
 		${ECHO} "${COMMENT:S/"/''/}";				\
-	elif [ -f pkg/COMMENT ] ; then					\
-		${CAT} pkg/COMMENT;					\
+	elif [ -f COMMENT ] ; then					\
+		${CAT} COMMENT;						\
 	else								\
 		${ECHO} '(no description)';				\
 	fi
