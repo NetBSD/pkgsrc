@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9728 2005/04/03 05:09:36 mjl Exp $
+$NetBSD: CHANGES,v 1.9729 2005/04/03 14:22:22 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1872,3 +1872,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ruby-syck-0.42 [minskim 2005-04-02]
 	Added p5-String-Format-1.13 [epg 2005-04-03]
 	Updated p5-SQL-Statement to 1.11 [mjl 2005-04-03]
+	Added dircproxy-1.1.0 [adrianp 2005-04-03]
