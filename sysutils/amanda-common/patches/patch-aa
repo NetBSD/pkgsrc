@@ -1,19 +1,17 @@
-$NetBSD: patch-aa,v 1.6 2001/06/26 03:14:12 christos Exp $
+$NetBSD: patch-aa,v 1.7 2004/05/12 18:45:25 bouyer Exp $
 
---- client-src/Makefile.in.orig	Mon Jun 25 21:44:46 2001
-+++ client-src/Makefile.in	Mon Jun 25 22:29:03 2001
-@@ -281,11 +281,10 @@
- sendsize_LDFLAGS = 
+--- client-src/Makefile.in.orig	2004-01-08 10:22:34.000000000 -0800
++++ client-src/Makefile.in	2004-02-23 16:26:20.000000000 -0800
+@@ -307,10 +307,8 @@
+ sendsize_LDFLAGS =
  versionsuffix_SOURCES = versionsuffix.c
- versionsuffix_OBJECTS =  versionsuffix.$(OBJEXT)
+ versionsuffix_OBJECTS = versionsuffix.$(OBJEXT)
 -versionsuffix_LDADD = $(LDADD)
--versionsuffix_DEPENDENCIES =  ../common-src/libamanda.$(LIB_EXTENSION) \
--libamclient.$(LIB_EXTENSION) ../common-src/libamanda.$(LIB_EXTENSION)
+-versionsuffix_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
+-	libamclient.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION)
 +versionsuffix_LDADD = ../common-src/libamanda.$(LIB_EXTENSION)
 +versionsuffix_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION)
- versionsuffix_LDFLAGS = 
--SCRIPTS =  $(libexec_SCRIPTS) $(sbin_SCRIPTS)
-+SCRIPTS =  $(libexec_S:RIPTS) $(sbin_SCRIPTS)
+ versionsuffix_LDFLAGS =
+ SCRIPTS = $(libexec_SCRIPTS) $(sbin_SCRIPTS)
  
- CFLAGS = @CFLAGS@
- COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/04 03:40:50 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/05/12 18:45:25 bouyer Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 AMANDA_COMMON_BUILDLINK3_MK:=	${AMANDA_COMMON_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Namanda-common}
 BUILDLINK_PACKAGES+=	amanda-common
 
 .if !empty(AMANDA_COMMON_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.amanda-common+=	amanda-common>=2.4.2p2
+BUILDLINK_DEPENDS.amanda-common+=	amanda-common>=2.4.4p2
 BUILDLINK_PKGSRCDIR.amanda-common?=	../../sysutils/amanda-common
 .endif	# AMANDA_COMMON_BUILDLINK3_MK
 

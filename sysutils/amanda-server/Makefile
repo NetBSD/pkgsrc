@@ -1,15 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2004/05/04 03:40:50 snj Exp $
+# $NetBSD: Makefile,v 1.28 2004/05/12 18:45:25 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
-DISTNAME=		amanda-2.4.2p2
-PKGNAME=		amanda-server-2.4.2p2
+PKGNAME=		amanda-server-${VERS}
 SVR4_PKGNAME=		amase
-CATEGORIES=		sysutils
-MASTER_SITES=		ftp://ftp.cs.umd.edu/pub/amanda/
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.amanda.org/
 COMMENT=		Server part of Amanda, a network backup system
 
 USE_PERL5=		yes
