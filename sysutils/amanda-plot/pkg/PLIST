@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/06 18:11:22 bad Exp $
+libexec/amcat.awk
+libexec/amplot.awk
+libexec/amplot.g
+libexec/amplot.gp
+man/man8/amplot.8
+sbin/amplot
