@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2005/03/26 03:49:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.32 2005/03/27 21:54:52 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -4347,6 +4347,8 @@ ${PKGLOCALEDIR}/locale/l10n/zw/flag.png
 @dirrm share/kde/applnk/Settings/WebBrowsing
 @dirrm share/kde/applnk/Settings/LookNFeel/Themes
 @dirrm share/kde/applnk/Settings/LookNFeel
+@exec ${MKDIR} %D/share/kde/applnk/Settings/Information
+@dirrm share/kde/applnk/Settings/Information
 @comment in kde: @dirrm share/kde/applnk/Settings
 @comment in kde: @dirrm share/kde/applnk/Internet
 @comment in kde: @dirrm share/kde/applnk/.hidden
