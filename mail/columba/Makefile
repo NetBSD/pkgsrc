@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/08 14:57:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/08 15:04:36 jmmv Exp $
 #
 
 DISTNAME=	columba-unix-1.0_M2-bin
@@ -23,6 +23,8 @@ SUBST_STAGE.foo=    post-patch
 SUBST_FILES.foo=    run.sh
 SUBST_SED.foo=	    -e "s,columba.jar,${COLUMBA_BIN},"
 SUBST_MESSAGE.foo=  "Fixing columba\'s executable path."
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/${PKGBASE}/lib
