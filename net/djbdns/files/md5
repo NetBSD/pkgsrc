@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.1.1.1 2000/12/27 16:04:23 hubertf Exp $
+$NetBSD: md5,v 1.2 2000/12/27 23:29:57 hubertf Exp $
 
 MD5 (djbdns-1.02.tar.gz) = c27b7ffd4af1c93db96f40f6d5f793b6
+MD5 (djbdns-1.02-man.tar.gz) = 8795b414c01389aafbee2849915bd6bb
