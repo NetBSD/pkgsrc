@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2003/05/06 19:52:43 grant Exp $
+# $NetBSD: Makefile,v 1.49 2003/05/07 21:23:13 grant Exp $
 
 DISTNAME=	cdrtools-2.0
 PKGNAME=	cdrecord-2.0
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/
 
 MAINTAINER=	lukem@netbsd.org
 HOMEPAGE=	http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html
-COMMENT=	This program allows you to create CDs on a CD-Recorder
+COMMENT=	Software for creating ISO9660 images and writing CDs/CD-RWs
 
 CONFLICTS=	mkisofs-[0-9]*
 
