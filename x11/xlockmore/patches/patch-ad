@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2000/05/11 16:37:53 hubertf Exp $
+
+--- xlock/sound.c.orig	Fri Apr 14 13:21:37 2000
++++ xlock/sound.c	Fri Apr 14 13:22:28 2000
+@@ -127,7 +127,7 @@
+ #ifdef USE_ESOUND
+ 
+ #ifndef DEFAULT_SOUND_DIR
+-#define DEFAULT_SOUND_DIR "/usr/lib/sounds/xlockmore/"
++#define DEFAULT_SOUND_DIR "@PREFIX@/lib/X11/xlockmore/"
+ #endif
+ 
+ #ifdef HAVE_LIBESD
