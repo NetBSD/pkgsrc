@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2000/04/11 22:36:05 tron Exp $
+$NetBSD: patch-ab,v 1.3 2000/08/14 07:27:39 tron Exp $
 
---- libGL/Makefile.in.orig	Sun Feb 27 13:52:53 2000
-+++ libGL/Makefile.in	Thu Apr  6 23:29:08 2000
+--- libGL/Makefile.in.orig	Sat Jun  3 10:16:36 2000
++++ libGL/Makefile.in	Sun Aug 13 23:46:13 2000
 @@ -14,7 +14,7 @@
  # These define the name/version of the shared library we're building
  # ------------------------------------------------------------------
@@ -44,30 +44,30 @@ $NetBSD: patch-ab,v 1.2 2000/04/11 22:36:05 tron Exp $
  
  
  clean :
-@@ -78,20 +67,8 @@
+@@ -79,20 +68,8 @@
  	${DEPEND} -f .deps -- ${ALL_CFLAGS} -- ${SRCS}
  
  
 -ifeq "${USE_DYNAMIC_MODULE}" "yes"
 -install: lib${LIBNAME}.so.${SOGLREV}
--	@if [ -d ${INSTALL_libdir} ]; then set +x; \
--	else (set -x; ${MKDIR} ${INSTALL_libdir}); fi
--	${INSTALL} ${INSTALLFLAGS} ${INSTBINFLAGS} lib${LIBNAME}.so.${SOGLREV} ${INSTALL_libdir}
--	@T=`echo ${INSTALL_libdir}/lib${LIBNAME}.so.${SOGLREV} | sed 's/\.[^\.]*$$//'`; set -x; ${RM} $$T && ${LN} lib${LIBNAME}.so.${SOGLREV} $$T
--	${RM} ${INSTALL_libdir}/lib${LIBNAME}.so
--	${LN} lib${LIBNAME}.so.${SOGLREV} ${INSTALL_libdir}/lib${LIBNAME}.so
+-	@if [ -d ${DESTDIR}${INSTALL_libdir} ]; then set +x; \
+-	else (set -x; ${MKDIR} ${DESTDIR}${INSTALL_libdir}); fi
+-	${INSTALL} ${INSTALLFLAGS} ${INSTBINFLAGS} lib${LIBNAME}.so.${SOGLREV} ${DESTDIR}${INSTALL_libdir}
+-	@T=`echo ${DESTDIR}${INSTALL_libdir}/lib${LIBNAME}.so.${SOGLREV} | sed 's/\.[^\.]*$$//'`; set -x; ${RM} $$T && ${LN} lib${LIBNAME}.so.${SOGLREV} $$T
+-	${RM} ${DESTDIR}${INSTALL_libdir}/lib${LIBNAME}.so
+-	${LN} lib${LIBNAME}.so.${SOGLREV} ${DESTDIR}${INSTALL_libdir}/lib${LIBNAME}.so
 -else
 -install: lib${LIBNAME}.a
--	@if [ -d ${INSTALL_libdir} ]; then set +x; \
--	else (set -x; ${MKDIR} ${INSTALL_libdir}); fi
--	${INSTALL} ${INSTALLFLAGS} ${INSTBINFLAGS} lib${LIBNAME}.a ${INSTALL_libdir}
+-	@if [ -d ${DESTDIR}${INSTALL_libdir} ]; then set +x; \
+-	else (set -x; ${MKDIR} ${DESTDIR}${INSTALL_libdir}); fi
+-	${INSTALL} ${INSTALLFLAGS} ${INSTBINFLAGS} lib${LIBNAME}.a ${DESTDIR}${INSTALL_libdir}
 -endif
 +install: lib${LIBNAME}.la
-+	${LIBTOOL} ${BSD_INSTALL_DATA} $< ${INSTALL_libdir}
++	${LIBTOOL} ${BSD_INSTALL_DATA} $< ${DESTDIR}${INSTALL_libdir}
  
  tags :
  	${TAGS} -w *.[ch]
-@@ -109,21 +86,9 @@
+@@ -110,21 +87,9 @@
  render.c: genlib.tcl genGL.tcl
  	${TCLSH} genlib.tcl
  
@@ -87,7 +87,7 @@ $NetBSD: patch-ab,v 1.2 2000/04/11 22:36:05 tron Exp $
 -	${RM} lib${LIBNAME}.so
 -	${LN} $@ lib${LIBNAME}.so
 +lib${LIBNAME}.la : render.c ${OBJS}
-+	${LIBTOOL} --mode=link ${CC} -rpath ${INSTALL_libdir} \
++	${LIBTOOL} --mode=link ${CC} -rpath ${DESTDIR}${INSTALL_libdir} \
 +	  -version-info ${SOGLREV} -o $@ ${OBJS:.o=.lo}
  
  lib${LIBNAME}.a : render.c ${UNSHARED_OBJS}
