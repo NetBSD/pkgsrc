@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/09/01 15:15:37 kim Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/01 12:34:38 agc Exp $
 # FreeBSD: ports/graphics/lcms/Makefile,v 1.2 2000/12/19 15:36:26 sobomax Exp
 
 DISTNAME=	lcms-1.06
@@ -17,7 +17,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/lcms
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${WRKSRC}/doc
 	cd ${WRKSRC}/doc && ${PAX} -rw . ${PREFIX}/share/doc/lcms
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/lcms
 
 .include "../../mk/bsd.pkg.mk"
