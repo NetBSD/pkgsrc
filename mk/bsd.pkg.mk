@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.459 2000/06/03 18:51:34 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.460 2000/06/03 19:03:20 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -43,8 +43,8 @@ CROSSBASE?=		${LOCALBASE}/cross
 
 PKGSRCDIR=		${.CURDIR:C|/[^/]*/[^/]*$||}
 PKGPATH=		${.CURDIR:C|.*/([^/]*/[^/]*)$|\1|}
-PKGBASE=		${PKGNAME:C/-[^-]*$//}
-PKGVERSION=		${PKGNAME:C/^.*-//}
+PKGBASE?=		${PKGNAME:C/-[^-]*$//}
+PKGVERSION?=		${PKGNAME:C/^.*-//}
 PKGWILDCARD=		${PKGBASE}-[0-9]*
 
 DISTDIR?=		${PKGSRCDIR}/distfiles
