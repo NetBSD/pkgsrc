@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1477 2004/07/27 03:59:26 xtraeme Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1478 2004/07/27 09:57:57 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1415,23 +1415,31 @@ package:
 # Resume a previous transfer not finished totally.
 _RESUME_TRANSFER=							\
 	dsize=`${LS} -l ${_DISTDIR}/$$bfile | ${AWK} '{print $$5}'`;	\
-	tsize=`${AWK} '/^Size/ && $$2 == '"\"($$bfile)\""' { print $$4 }' ${DISTINFO_FILE}` || true; \
-	if [ -n "$$ftp_proxy" -o -n "$$http_proxy" ]; then		\
+	case "${DIST_SUBDIR}" in					\
+	"")	f=$$bfile ;;						\
+	*)	f="${DIST_SUBDIR}/$$bfile" ;;				\
+	esac;								\
+	tsize=`${AWK} '/^Size/ && $$2 == '"\"($$f)\""' { print $$4 }' ${DISTINFO_FILE}` || ${TRUE}; \
+	case "$$tsize" in						\
+	"")	${ECHO_MSG} "No size in distinfo file (${DISTINFO_FILE})"; \
+		break ;;						\
+	esac;								\
+	if ${TEST} -n "$$ftp_proxy" -o -n "$$http_proxy"; then		\
 		${ECHO_MSG} "===> Resume is not supported by ftp(1) using http/ftp proxies.";	\
 		break;							\
 	else								\
-		if [ `echo $$dsize` != `echo $$tsize` ]; then		\
+		if ${TEST} "$$dsize" -ne "$$dsize"; then		\
 			for res_site in $$sites; do			\
 				${ECHO_MSG} "===> $$bfile not completed, resuming...";	\
 				cd ${_DISTDIR};				\
-				${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS}	\
-					$${res_site}$${bfile};		\
+				${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS} $${res_site}$${bfile}; \
 				if [ $$? -eq 0 ]; then			\
 					break;				\
 				fi;					\
 			done;						\
-		fi;							\
+		fi; 							\
 	fi
+
 #
 # Define the elementary fetch macros.
 #
