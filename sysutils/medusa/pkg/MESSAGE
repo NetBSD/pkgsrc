@@ -1,0 +1,8 @@
+$NetBSD: MESSAGE,v 1.1.1.1 2001/05/14 17:13:21 rh Exp $
+
+==========================================================================
+  Medusa has now been installed on your system.  To configure this
+  package, you need to create "medusa.conf", "file-index-stoplist", and
+  "mount-type-stoplist" files in ${PREFIX}/etc by copying and editing
+  the corresponding ".sample" files.
+==========================================================================
