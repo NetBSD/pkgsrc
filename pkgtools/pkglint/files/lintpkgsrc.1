@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.17 2001/07/02 13:23:22 abs Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.18 2001/07/02 15:37:05 abs Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -78,7 +78,9 @@ List any prebuilt packages in any subdirs of
 with known vulnerabilities, based on the data in
 PKGSRCDIR/distfiles/vulnerabilities .
 .It Fl d
-Extract the 'DEPENDS' listing from each pkgsrc package Makefile, then
+Extract the
+.Ql DEPENDS
+listing from each pkgsrc package Makefile, then
 verify the version specified in each DEPEND correctly matches a current
 pkgsrc package.
 .It Fl g Ar pkgsrcmap
@@ -138,7 +140,9 @@ or set conditionally in
 based on the value of
 .Em LINTPKGSRC .
 .Sh BUGS
-The 'Makefile parsing' algorithm used to obtain package versions
+The
+.Ql Makefile parsing
+algorithm used to obtain package versions
 and DEPENDS information is geared towards speed rather than
 perfection, though it has got somewhat better over time, it only
 parses the simplest Makefile conditionals. (a == b, no && etc).
