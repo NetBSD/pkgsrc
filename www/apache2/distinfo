@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2002/06/01 13:18:01 itojun Exp $
+$NetBSD: distinfo,v 1.7 2002/06/18 02:17:17 itojun Exp $
 
 SHA1 (httpd-2.0.36.tar.gz) = 7080a7ab9cb1289b4b0f934e81439f9d21076784
 Size (httpd-2.0.36.tar.gz) = 4558484 bytes
@@ -10,3 +10,5 @@ SHA1 (patch-ai) = d04ed1f2999be97e1e764e9e4f0decbff202d76b
 SHA1 (patch-ak) = f11a86b1235d5c595fa381bbb474db4fe8448215
 SHA1 (patch-al) = 0dcba1455b4fa3fc40fbd488813608b7e2350309
 SHA1 (patch-am) = ff60a7b69ad949363ebec194141e9b95cb796426
+SHA1 (patch-an) = 2a5b54b7e63410756f8ff7b1b8da0a9f8e4c9fa5
+SHA1 (patch-ao) = fd8211a4b9e2b58ab418168d27cbbd96a61f0537
