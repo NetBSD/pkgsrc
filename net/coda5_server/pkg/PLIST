@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/06/04 23:45:45 rvb Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/10/19 00:28:38 rvb Exp $
 bin/filcon
 bin/norton
 bin/norton-reinit
@@ -37,4 +37,4 @@ sbin/vice-setup-scm
 sbin/vice-setup-srvdir
 sbin/vice-setup-user
 sbin/volutil
-etc/rc.vice
+etc/rc.d/rc.vice
