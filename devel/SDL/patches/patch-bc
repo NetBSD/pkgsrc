@@ -1,0 +1,22 @@
+$NetBSD: patch-bc,v 1.1 2003/07/26 21:38:23 jmmv Exp $
+
+--- src/audio/arts/Makefile.in.orig	2003-07-25 21:01:00.000000000 +0200
++++ src/audio/arts/Makefile.in
+@@ -136,7 +136,7 @@ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@
+ X_PRE_LIBS = @X_PRE_LIBS@
+-libaudio_arts_la_LDFLAGS = 
++libaudio_arts_la_LDFLAGS = -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) `$(ARTSCCONFIG) --libs`
+ libaudio_arts_la_LIBADD = 
+ libaudio_arts_la_OBJECTS =  SDL_artsaudio.lo
+ CFLAGS = @CFLAGS@
+@@ -213,7 +213,7 @@ distclean-libtool:
+ maintainer-clean-libtool:
+ 
+ libaudio_arts.la: $(libaudio_arts_la_OBJECTS) $(libaudio_arts_la_DEPENDENCIES)
+-	$(LINK)  $(libaudio_arts_la_LDFLAGS) $(libaudio_arts_la_OBJECTS) $(libaudio_arts_la_LIBADD) $(LIBS)
++	$(LINK) -rpath $(libdir) $(libaudio_arts_la_LDFLAGS) $(libaudio_arts_la_OBJECTS) $(libaudio_arts_la_LIBADD) $(LIBS)
+ 
+ tags: TAGS
+ 

@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/05/02 11:54:18 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/07/26 21:38:22 jmmv Exp $
 
 .if !defined(SDL_BUILDLINK2_MK)
 SDL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		SDL
-BUILDLINK_DEPENDS.SDL?=		SDL>=1.2.5nb4
+BUILDLINK_DEPENDS.SDL?=		SDL>=1.2.5nb5
 BUILDLINK_PKGSRCDIR.SDL?=	../../devel/SDL
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.SDL=SDL
@@ -22,7 +22,6 @@ PTHREAD_OPTS+=		require
 .if defined(SDL_USE_NAS)
 .  include "../../audio/nas/buildlink2.mk"
 .endif
-.include "../../audio/esound/buildlink2.mk"
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/glut/buildlink2.mk"
 .include "../../graphics/aalib-x11/buildlink2.mk"
