@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/02/14 21:43:52 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/14 22:46:55 minskim Exp $
 #
 # This Makefile fragment is included by packages that use gnome-spell.
 #
@@ -15,7 +15,7 @@ BUILDLINK_DEPENDS+=	gnome-spell
 .if !empty(GNOME_SPELL_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			gnome-spell
 BUILDLINK_DEPENDS.gnome-spell+=		gnome-spell>=1.0.5
-BUILDLINK_PKGSRCDIR.gnome-spell?=		../../wip/gnome-spell
+BUILDLINK_PKGSRCDIR.gnome-spell?=		../../textproc/gnome-spell
 
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
