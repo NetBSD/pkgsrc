@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2003/01/28 22:03:39 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2003/03/04 00:21:31 seb Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
@@ -23,7 +23,9 @@ USE_DB2?=	NO
 .include "../../databases/openldap/buildlink2.mk"
 .endif
 
-.if defined(USE_SASL) && ${USE_SASL} == YES
+.if defined(USE_SASL2) && ${USE_SASL2} == YES
+.include "../../security/cyrus-sasl2/buildlink2.mk"
+.elif defined(USE_SASL) && ${USE_SASL} == YES
 .include "../../security/cyrus-sasl/buildlink2.mk"
 .endif
 
@@ -56,7 +58,10 @@ post-patch: make-sendmail-siteconfig
 	${CAT} ${FILESDIR}/site.config.m4-starttls >>${SITECONFIG}
 	${ECHO} -n ' STARTTLS' >>${DESCR_SRC}
 .endif
-.if defined(USE_SASL) && ${USE_SASL} == YES
+.if defined(USE_SASL2) && ${USE_SASL2} == YES
+	${CAT} ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
+	${ECHO} -n ' SASL2' >>${DESCR_SRC}
+.elif defined(USE_SASL) && ${USE_SASL} == YES
 	${CAT} ${FILESDIR}/site.config.m4-sasl >>${SITECONFIG}
 	${ECHO} -n ' SASL' >>${DESCR_SRC}
 .endif
