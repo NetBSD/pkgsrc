@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/17 06:47:05 salo Exp $
+lib/aspell/cy.multi
+lib/aspell/cy.rws
+lib/aspell/welsh.alias
+share/aspell/cy.dat
