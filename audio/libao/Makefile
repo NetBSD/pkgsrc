@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2001/03/28 10:21:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/08/08 09:18:28 lukem Exp $
 
-DISTNAME=	libao-0.6.0
-PKGNAME=	${DISTNAME}nb1
+DISTNAME=	libao-0.7.0
 CATEGORIES=	devel
-MASTER_SITES=	http://www.vorbis.com/files/beta4/unix/
+MASTER_SITES=	http://www.vorbis.com/files/rc1/unix/
 
 MAINTAINER=	reed@reedmedia.net
 COMMENT=	cross-platform audio library
