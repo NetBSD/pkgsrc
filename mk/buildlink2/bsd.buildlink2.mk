@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.1.2.8 2002/06/30 05:07:09 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.9 2002/06/30 06:20:31 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -347,7 +347,12 @@ _ALIASES.CPP=		cpp
 _ALIASES.FC=		f77 g77
 _ALIASES.LD=		ld
 
+.if ${OPSYS} == "Darwin"
+BUILD_DEPENDS+=		bash-[0-9]*:../../shells/bash2
+BUILDLINK_SHELL?=	${LOCALBASE}/bin/bash
+.else
 BUILDLINK_SHELL?=	${SH}
+.endif
 
 # _BLNK_WRAP_*.<wrappee> variables represent "template methods" of the
 
