@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7823 2004/11/11 18:25:10 seb Exp $
+$NetBSD: CHANGES,v 1.7824 2004/11/11 19:08:44 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5231,3 +5231,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-SVN-Simple to 0.26 [epg 2004-11-11]
 	Updated svk to 0.26 [epg 2004-11-11]
 	Added p5-Module-Signature-0.41 [seb 2004-11-11]
+	Added p5-Module-ScanDeps-0.50 [seb 2004-11-11]
