@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2003/03/30 23:15:45 jmc Exp $
+# $NetBSD: Makefile,v 1.5 2003/04/16 15:51:24 salo Exp $
 #
 
 .include "../../net/snort/Makefile.common"
 
 PKGNAME=        ${DISTNAME:S/-/-mysql-/}
+PKGREVISION=	1
 
 COMMENT=        Libpcap-based packet sniffer/logger using a MySQL database
 
