@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6591 2004/07/18 17:07:10 heinz Exp $
+$NetBSD: CHANGES,v 1.6592 2004/07/18 21:41:40 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3434,3 +3434,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mimedefang to 2.44 [markd 2004-07-18]
 	Updated sylpheed-claws to 0.9.12 [recht 2004-07-18]
 	Updated opera7 to 7.52 [heinz 2004-07-18]
+	Updated ggv2 to 2.6.2 [jmmv 2004-07-18]
