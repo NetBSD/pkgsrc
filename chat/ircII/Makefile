@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2001/09/27 23:17:48 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/12/10 13:38:29 mrg Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
-DISTNAME=		ircii-20010612
-PKGNAME=		ircII-20010612
-WRKSRC=			${WRKDIR}/ircii-20010612
+DISTNAME=		ircii-20011210
+PKGNAME=		ircII-20011210
+WRKSRC=			${WRKDIR}/ircii-20011210
 CATEGORIES=		chat
-MASTER_SITES=		ftp://ircftp.au.eterna.com.au/pub/ircII/
+MASTER_SITES=		ftp://ircii.warped.com/pub/ircII/ \
+			ftp://ircftp.au.eterna.com.au/pub/ircII/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
