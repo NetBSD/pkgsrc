@@ -1,16 +1,20 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/06 09:59:17 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1997/12/14 23:09:50 hubertf Exp $
+@unexec %D/bin/install-info --delete --info-dir=%D/info %D/info/info-stnd.info
+@unexec %D/bin/install-info --delete --info-dir=%D/info %D/info/info.info
+@unexec %D/bin/install-info --delete --info-dir=%D/info %D/info/texinfo
 bin/makeinfo
-bin/info
-bin/texindex
 bin/texi2dvi
+bin/texindex
 bin/install-info
-man/man1/info.1.gz
+bin/info
 info/dir
-info/makeinfo.info
-info/info.info
 info/info-stnd.info
+info/info.info
 info/texinfo
 info/texinfo-1
+info/texinfo-10
+info/texinfo-11
+info/texinfo-12
 info/texinfo-2
 info/texinfo-3
 info/texinfo-4
@@ -19,6 +23,13 @@ info/texinfo-6
 info/texinfo-7
 info/texinfo-8
 info/texinfo-9
-info/texinfo-10
-info/texinfo-11
-info/texinfo-12
+@exec %D/bin/install-info --info-dir=%D/info %D/info/info-stnd.info
+@exec %D/bin/install-info --info-dir=%D/info %D/info/info.info
+@exec %D/bin/install-info --info-dir=%D/info %D/info/texinfo
+share/locale/de/LC_MESSAGES/texinfo.mo
+share/locale/fr/LC_MESSAGES/texinfo.mo
+@dirrm share/locale/de/LC_MESSAGES
+@dirrm share/locale/de
+@dirrm share/locale/fr/LC_MESSAGES
+@dirrm share/locale/fr
+@dirrm share/locale
