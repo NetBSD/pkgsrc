@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/04/12 01:58:50 snj Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/25 12:27:46 wiz Exp $
 #
 
-DISTNAME=		NeoPop-SDL-0.1
+DISTNAME=		NeoPop-SDL-0.2
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.nih.at/NeoPop-SDL/
 EXTRACT_SUFX=		.tar.bz2
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.nih.at/NeoPop-SDL/
 COMMENT=		SNK NeoGeo Pocket emulator
 
 USE_BUILDLINK3=		yes
-USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-png=${BUILDLINK_PREFIX.png}
 
