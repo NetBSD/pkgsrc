@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.authdaemond,v 1.2 2002/01/27 23:47:08 jlam Exp $
+# $NetBSD: Makefile.authdaemond,v 1.3 2002/02/05 15:03:19 jlam Exp $
 
 .include "../../mail/courier-auth/Makefile.common"
 
@@ -23,6 +23,11 @@ DISTINFO_FILE=		${.CURDIR}/../../mail/courier-auth/distinfo
 PATCHDIR=		${.CURDIR}/../../mail/courier-auth/patches
 
 FILES_SUBST+=		SYSCONFTOOL=${SYSCONFTOOL:Q}
+
+.if defined(USE_PAM)
+BUILD_DEFS+=		USE_PAM
+.include "../../security/PAM/buildlink.mk"
+.endif
 
 pre-configure: configure-init
 
