@@ -1,8 +1,8 @@
---- ./sudo.man.org	Wed Nov 13 17:58:50 1996
-+++ ./sudo.man	Mon Dec  9 20:44:48 1996
-@@ -180,10 +180,11 @@
- .IX Header "DESCRIPTION"
- \fBsudo\fR allows a permitted user to execute a \fIcommand\fR 
+--- sudo.man.orig	Tue Jan 13 06:00:17 1998
++++ sudo.man	Wed Jul  1 20:11:51 1998
+@@ -195,10 +195,11 @@
+ .SH "DESCRIPTION"
+ \fBsudo\fR allows a permitted user to execute a \fIcommand\fR
  as the superuser (real and effective uid and gid are set
 -to \f(CW0\fR and root's group as set in the passwd file respectively).
 +to \f(CW0\fR and root's group as set in the passwd file respectively)
@@ -15,101 +15,11 @@
  The password prompt itself will also time out if the password is
  not entered with N minutes (again, this is defined at installation
 @@ -321,7 +322,7 @@
- .IX Header "FILES"
+ .SH "FILES"
  .PP
  .Vb 1
 -\& /etc/sudoers           file of authorized users.
 +\& /usr/pkg/etc/sudoers           file of authorized users.
  .Ve
  .SH "ENVIRONMENT VARIABLES"
- .IX Header "ENVIRONMENT VARIABLES"
---- ./sudoers.man.org	Wed Nov 13 17:58:50 1996
-+++ ./sudoers.man	Mon Dec  9 20:38:43 1996
-@@ -296,7 +296,7 @@
- \fB\s-1DO\s0 \s-1NOT\s0\fR define an alias of \fI\s-1ALL\s0\fR, it will \fB\s-1NOT\s0\fR be used.
- Note that \fI\s-1ALL\s0\fR implies the entire universe of hosts/users/commands.
- You can subtract elements from the universe by using the syntax:
--   user  host=\s-1ALL\s0,!\s-1ALIAS1\s0,!/etc/halt...
-+   user  host=\s-1ALL\s0,!\s-1ALIAS1\s0,!/sbin/halt...
- Note that the \*(L"!\*(R" notation only works in a user's command list.  You
- may not use it to subtract elements in a User_Alias, Host_Alias,
- Cmnd_Alias or user list.
-@@ -334,7 +334,7 @@
- \&    Cmnd_Alias  SHELLS=/bin/sh,/bin/csh,/bin/tcsh,/bin/ksh
- \&    Cmnd_Alias  SU=/bin/su
- \&    Cmnd_Alias  MISC=/bin/rm,/bin/cat:\e
--\&                SHUTDOWN=/etc/halt,/etc/shutdown
-+\&                SHUTDOWN=/sbin/halt,/sbin/shutdown
- .Ve
- .Vb 14
- \&    # User specification
-@@ -344,11 +344,11 @@
- \&    +interns    +openlabs=ALL,!SHELLS,!SU
- \&    britt       REMOTE=SHUTDOWN:ALL=LPCS
- \&    jimbo       CUNETS=/bin/su ?*,!/bin/su root
--\&    nieusma     SERVERS=SHUTDOWN,/etc/reboot:\e
-+\&    nieusma     SERVERS=SHUTDOWN,/sbin/reboot:\e
- \&                HUB=ALL,!SHELLS
--\&    jill        houdini=/etc/shutdown -[hr] now,MISC
--\&    markm       HUB=ALL,!MISC,!/etc/shutdown,!/etc/halt
--\&    davehieb    merlin=(OP) ALL:SERVERS=/etc/halt:\e
-+\&    jill        houdini=/sbin/shutdown -[hr] now,MISC
-+\&    markm       HUB=ALL,!MISC,!/sbin/shutdown,!/sbin/halt
-+\&    davehieb    merlin=(OP) ALL:SERVERS=/sbin/halt:\e
- \&                kodiakthorn=NOPASSWD: ALL
- \&    steve       CSNETS=(operator) /usr/op_commands/
- .Ve
-@@ -405,24 +405,24 @@
- .Ip "nieusma" 16
- .IX Item "nieusma"
- The user \f(CWnieusma\fR may run commands in the \f(CWSHUTDOWN\fR alias
--as well as \fI/etc/reboot\fR on the \f(CWSERVER\fR machines and
-+as well as \fI/sbin/reboot\fR on the \f(CWSERVER\fR machines and
- any command except those in the \f(CWSHELLS\fR alias on the \f(CWHUB\fR
- machines.
- .Ip "jill" 16
- .IX Item "jill"
--The user \f(CWjill\fR may run \f(CW/etc/shutdown -h now\fR or
--\f(CW/etc/shutdown -r now\fR as well as the commands in the
-+The user \f(CWjill\fR may run \f(CW/sbin/shutdown -h now\fR or
-+\f(CW/sbin/shutdown -r now\fR as well as the commands in the
- \f(CWMISC\fR alias on houdini.
- .Ip "markm" 16
- .IX Item "markm"
- The user \f(CWmarkm\fR may run any command on the \f(CWHUB\fR machines
--except \fI/etc/shutdown\fR, \fI/etc/halt\fR, and commands listed
-+except \fI/sbin/shutdown\fR, \fI/sbin/halt\fR, and commands listed
- in the \f(CWMISC\fR alias.
- .Ip "davehieb" 16
- .IX Item "davehieb"
- The user \f(CWdavehieb\fR may run any command on \f(CWmerlin\fR as any
- user in the Runas_Alias \s-1OP\s0 (ie: root or operator).  He may
--also run \fI/etc/halt\fR on the \f(CWSERVERS\fR and any command
-+also run \fI/sbin/halt\fR on the \f(CWSERVERS\fR and any command
- on \f(CWkodiakthorn\fR (no password required on \f(CWkodiakthorn\fR).
- .Ip "steve" 16
- .IX Item "steve"
-@@ -438,8 +438,8 @@
- .IX Header "FILES"
  .PP
- .Vb 2
--\& /etc/sudoers           file of authorized users.
--\& /etc/netgroup          list of network groups.
-+\& /usr/pkg/etc/sudoers     file of authorized users.
-+\& /etc/netgroup              list of network groups.
- .Ve
- .SH "SEE ALSO"
- .IX Header "SEE ALSO"
---- ./visudo.man.org	Wed Nov 13 17:58:51 1996
-+++ ./visudo.man	Mon Dec  9 20:39:01 1996
-@@ -211,8 +211,8 @@
- .IX Header "FILES"
- .PP
- .Vb 2
--\& /etc/sudoers           file of authorized users.
--\& /etc/stmp              lock file for visudo.
-+\& /usr/pkg/etc/sudoers     file of authorized users.
-+\& /usr/pkg/etc/stmp        lock file for visudo.
- .Ve
- .SH "ENVIRONMENT VARIABLES"
- .IX Header "ENVIRONMENT VARIABLES"
