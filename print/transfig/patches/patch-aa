@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 11:11:34 agc Exp $
+$NetBSD: patch-aa,v 1.4 1999/01/19 17:22:11 frueauf Exp $
 
 --- fig2dev/Imakefile.orig	Wed Jul  1 01:52:50 1998
-+++ fig2dev/Imakefile	Fri Jul  3 13:34:01 1998
++++ fig2dev/Imakefile	Tue Jan 19 18:07:15 1999
 @@ -31,7 +31,7 @@
  XCOMM You should point XFIGLIBDIR to the same directory you did when you compiled
  XCOMM and installed xfig.  This will be made automatic in the future.
@@ -29,14 +29,16 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 11:11:34 agc Exp $
  XPMLIBS = -L$(XPMLIBDIR) -lXpm -lX11
  XPMRGB = XPMRGB=$(LIBDIR)/rgb
  XPMDBM = $(USE_NDBM)
-@@ -153,8 +153,8 @@
+@@ -153,9 +153,9 @@
  DUSEJPEG = -DUSE_JPEG
  
  #ifdef USEINSTALLEDJPEG
 -JPEGLIBDIR = /usr/local/lib
 -JPEGINCDIR = /usr/include/X11
+-JPEGLIB = -L$(JPEGLIBDIR) -ljpeg
 +JPEGLIBDIR = $(LOCALBASE)/lib
 +JPEGINCDIR = $(LOCALBASE)/include
- JPEGLIB = -L$(JPEGLIBDIR) -ljpeg
++JPEGLIB = -Wl,-R$(JPEGLIBDIR) -L$(JPEGLIBDIR) -ljpeg
  #else
  XCOMM this is relative to this directory (transfig/fig2dev)
+ JPEGLIBDIR = ../../jpeg-6a
