@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.382 2000/01/07 12:24:14 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.383 2000/01/09 04:43:20 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -394,70 +394,6 @@ REQ_FILE=		${PKGDIR}/REQ
 MESSAGE_FILE=		${PKGDIR}/MESSAGE
 .endif
 
-# Latest version of pkgtools required for this file.
-# XXX See below for a few test on PKGTOOLS_REQD > 19990909
-#     that can be removed when this is bumped. (size code - HF)
-PKGTOOLS_REQD=		19990909
-
-# Check that we're using up-to-date pkg_* tools with this file.
-uptodate-pkgtools:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ${PKGTOOLS_VERSION} -lt ${PKGTOOLS_REQD} ]; then		\
-		case ${PKGNAME} in					\
-		pkg_install-*)						\
-			;;						\
-		*)							\
-			${ECHO} "Your package tools need to be updated to `${ECHO} ${PKGTOOLS_REQD} | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'` versions."; \
-			${ECHO} "The installed package tools were last updated on `${ECHO} $$pkgtools_version | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'`."; \
-			${ECHO} "Please make and install the pkgsrc/pkgtools/pkg_install package."; \
-			${FALSE} ;;					\
-		esac							\
-	fi
-
-# Files to create for versioning and build information
-BUILD_VERSION_FILE=	${WRKDIR}/.build_version
-BUILD_INFO_FILE=	${WRKDIR}/.build_info
-
-# Files containing size of pkg w/o and w/ all required pkgs
-SIZE_PKG_FILE=		${WRKDIR}/SizePkg
-SIZE_ALL_FILE=		${WRKDIR}/SizeAll
-
-.ifndef PKG_ARGS
-PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -l
-PKG_ARGS+=		-b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
-.if ${PKGTOOLS_REQD} > 19990909
-# Size storing options, only available since 19991123 or so
-# I don't want to force people using this.
-# This .if block should be removed next time PKGTOOLS_REQD is bumped.
-PKG_ARGS+=		-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
-.endif 	# ${PKGTOOLS_REQD) > 19990909
-PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=false|sort -u`"
-.ifdef CONFLICTS
-PKG_ARGS+=		-C "${CONFLICTS}"
-.endif
-.ifdef INSTALL_FILE
-PKG_ARGS+=		-i ${INSTALL_FILE}
-.endif
-.ifdef DEINSTALL_FILE
-PKG_ARGS+=		-k ${DEINSTALL_FILE}
-.endif
-.ifdef REQ_FILE
-PKG_ARGS+=		-r ${REQ_FILE}
-.endif
-.ifdef MESSAGE_FILE
-PKG_ARGS+=		-D ${MESSAGE_FILE}
-.endif
-.ifndef NO_MTREE
-PKG_ARGS+=		-m ${MTREE_FILE}
-.endif
-.endif # !PKG_ARGS
-PKG_SUFX?=		.tgz
-# where pkg_add records its dirty deeds.
-PKG_DBDIR?=		/var/db/pkg
-
-# shared/dynamic motif libs
-MOTIFLIB?=	-L${MOTIFBASE}/lib -L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm
-
 .if (${OPSYS} == "SunOS")
 AWK?=		/usr/bin/nawk
 BASENAME?=	/usr/bin/basename
@@ -599,6 +535,70 @@ PKGTOOLS_VERSION!= ${IDENT} ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} |
 .endif
 .endif
 MAKEFLAGS+=	" PKGTOOLS_VERSION=${PKGTOOLS_VERSION}"
+
+# Latest version of pkgtools required for this file.
+# XXX See below for a few test on PKGTOOLS_REQD > 19990909
+#     that can be removed when this is bumped. (size code - HF)
+PKGTOOLS_REQD=		19990909
+
+# Check that we're using up-to-date pkg_* tools with this file.
+uptodate-pkgtools:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ${PKGTOOLS_VERSION} -lt ${PKGTOOLS_REQD} ]; then		\
+		case ${PKGNAME} in					\
+		pkg_install-*)						\
+			;;						\
+		*)							\
+			${ECHO} "Your package tools need to be updated to `${ECHO} ${PKGTOOLS_REQD} | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'` versions."; \
+			${ECHO} "The installed package tools were last updated on `${ECHO} $$pkgtools_version | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'`."; \
+			${ECHO} "Please make and install the pkgsrc/pkgtools/pkg_install package."; \
+			${FALSE} ;;					\
+		esac							\
+	fi
+
+# Files to create for versioning and build information
+BUILD_VERSION_FILE=	${WRKDIR}/.build_version
+BUILD_INFO_FILE=	${WRKDIR}/.build_info
+
+# Files containing size of pkg w/o and w/ all required pkgs
+SIZE_PKG_FILE=		${WRKDIR}/SizePkg
+SIZE_ALL_FILE=		${WRKDIR}/SizeAll
+
+.ifndef PKG_ARGS
+PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -l
+PKG_ARGS+=		-b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
+.if ${PKGTOOLS_VERSION} > 19990909
+# Size storing options, only available since 19991123 or so
+# I don't want to force people using this.
+# This .if block should be removed next time PKGTOOLS_REQD is bumped.
+PKG_ARGS+=		-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
+.endif 	# ${PKGTOOLS_VERSION) > 19990909
+PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=false|sort -u`"
+.ifdef CONFLICTS
+PKG_ARGS+=		-C "${CONFLICTS}"
+.endif
+.ifdef INSTALL_FILE
+PKG_ARGS+=		-i ${INSTALL_FILE}
+.endif
+.ifdef DEINSTALL_FILE
+PKG_ARGS+=		-k ${DEINSTALL_FILE}
+.endif
+.ifdef REQ_FILE
+PKG_ARGS+=		-r ${REQ_FILE}
+.endif
+.ifdef MESSAGE_FILE
+PKG_ARGS+=		-D ${MESSAGE_FILE}
+.endif
+.ifndef NO_MTREE
+PKG_ARGS+=		-m ${MTREE_FILE}
+.endif
+.endif # !PKG_ARGS
+PKG_SUFX?=		.tgz
+# where pkg_add records its dirty deeds.
+PKG_DBDIR?=		/var/db/pkg
+
+# shared/dynamic motif libs
+MOTIFLIB?=	-L${MOTIFBASE}/lib -L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm
 
 # Used to print all the '===>' style prompts - override this to turn them off.
 ECHO_MSG?=		${ECHO}
@@ -2491,9 +2491,9 @@ fake-pkg: ${PLIST} ${DESCR}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${PKG_DBDIR}/${PKGNAME}
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
-.if ${PKGTOOLS_REQD} > 19990909
+.if ${PKGTOOLS_VERSION} > 19990909
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}
-.endif # ${PKGTOOLS_REQD} > 19990909
+.endif # ${PKGTOOLS_VERSION} > 19990909
 	${_PKG_SILENT}${_PKG_DEBUG}files="";				\
 	for f in ${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*; do	\
 		if [ -f $$f ]; then					\
@@ -2529,10 +2529,10 @@ fake-pkg: ${PLIST} ${DESCR}
 	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
 .endif
 	@${ECHO} "_PKGTOOLS_VER= ${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
-.if ${PKGTOOLS_REQD} > 19990909
+.if ${PKGTOOLS_VERSION} > 19990909
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} print-pkg-size                       >${SIZE_PKG_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} print-pkg-size SIZEDEPENDS=yesplease >${SIZE_ALL_FILE}
-.endif # ${PKGTOOLS_REQD} > 19990909
+.endif # ${PKGTOOLS_VERSION} > 19990909
 	${_PKG_SILENT}${_PKG_DEBUG}if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then			\
 		${ECHO_MSG} "===>  Registering installation for ${PKGNAME}"; \
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
