@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.94 2002/06/18 02:06:01 itojun Exp $
+# $NetBSD: Makefile,v 1.95 2002/06/19 10:17:58 jdolecek Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
-DISTNAME=		apache_1.3.24
-PKGNAME=		apache-1.3.24
-PKGREVISION=		1
+DISTNAME=		apache_1.3.26
+PKGNAME=		apache-1.3.26
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://www.apache.de/dist/httpd/
@@ -126,10 +125,12 @@ post-extract:
 	${CP} ${MODSSL_SRC}/pkg.eapi/*.c ${WRKSRC}/src/ap
 	${CP} ${MODSSL_SRC}/pkg.eapi/*.h ${WRKSRC}/src/include
 
+# XXX one mod_ssl-2.2.801.3.26 would be available, use their own patch
+# and g/c files/mod_ssl-2.2.8-1.3.26-eapi.patch
 pre-patch:
 	cd ${WRKSRC} && ${CAT}						\
 		${MODSSL_SRC}/pkg.addon/addon.patch			\
-		${MODSSL_SRC}/pkg.eapi/eapi.patch			\
+		${FILESDIR}/mod_ssl-2.2.8-1.3.26-eapi.patch		\
 		${MODSSL_SRC}/pkg.sslcfg/sslcfg.patch			\
 		${MODSSL_SRC}/pkg.sslmod/sslmod.patch			\
 		${MODSSL_SRC}/pkg.sslsup/sslsup.patch			\
