@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/06/26 09:19:21 frueauf Exp $
 man/man8/gated.8.gz
 man/man8/ripquery.8.gz
 man/man8/ospf_monitor.8.gz
