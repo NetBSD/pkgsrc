@@ -1,0 +1,94 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/06 07:42:27 uebayasi Exp $
+etc/${PKGNAME}.mk
+@unexec ${INSTALL_INFO} --delete %D/info/cpp.info %D/info/dir
+info/cpp.info
+info/cpp.info-1
+info/cpp.info-2
+info/cpp.info-3
+info/cpp.info-4
+info/cpp.info-5
+@exec ${INSTALL_INFO} %D/info/cpp.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/g77.info %D/info/dir
+info/g77.info
+info/g77.info-1
+info/g77.info-2
+info/g77.info-3
+info/g77.info-4
+info/g77.info-5
+info/g77.info-6
+info/g77.info-7
+info/g77.info-8
+info/g77.info-9
+info/g77.info-10
+info/g77.info-11
+info/g77.info-12
+info/g77.info-13
+info/g77.info-14
+info/g77.info-15
+info/g77.info-16
+info/g77.info-17
+info/g77.info-18
+info/g77.info-19
+info/g77.info-20
+info/g77.info-21
+@exec ${INSTALL_INFO} %D/info/g77.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/gcc.info %D/info/dir
+info/gcc.info
+info/gcc.info-1
+info/gcc.info-2
+info/gcc.info-3
+info/gcc.info-4
+info/gcc.info-5
+info/gcc.info-6
+info/gcc.info-7
+info/gcc.info-8
+info/gcc.info-9
+info/gcc.info-10
+info/gcc.info-11
+info/gcc.info-12
+info/gcc.info-13
+info/gcc.info-14
+info/gcc.info-15
+info/gcc.info-16
+info/gcc.info-17
+info/gcc.info-18
+info/gcc.info-19
+info/gcc.info-20
+info/gcc.info-21
+info/gcc.info-22
+info/gcc.info-23
+@exec ${INSTALL_INFO} %D/info/gcc.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/gccint.info %D/info/dir
+info/gccint.info
+info/gccint.info-1
+info/gccint.info-2
+info/gccint.info-3
+info/gccint.info-4
+info/gccint.info-5
+info/gccint.info-6
+info/gccint.info-7
+info/gccint.info-8
+info/gccint.info-9
+info/gccint.info-10
+info/gccint.info-11
+info/gccint.info-12
+info/gccint.info-13
+info/gccint.info-14
+info/gccint.info-15
+info/gccint.info-16
+info/gccint.info-17
+info/gccint.info-18
+info/gccint.info-19
+info/gccint.info-20
+info/gccint.info-21
+info/gccint.info-22
+info/gccint.info-23
+@exec ${INSTALL_INFO} %D/info/gccint.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/cppinternals.info %D/info/dir
+info/cppinternals.info
+@exec ${INSTALL_INFO} %D/info/cppinternals.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/gcj.info %D/info/dir
+info/gcj.info
+info/gcj.info-1
+info/gcj.info-2
+@exec ${INSTALL_INFO} %D/info/gcj.info %D/info/dir
