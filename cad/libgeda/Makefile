@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2001/09/27 23:17:46 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/03/13 17:36:40 fredb Exp $
 #
 
 DISTNAME=		libgeda-${PKGVERSION}
+PKGREVISION=		1
 CATEGORIES=		cad
 MASTER_SITES=		ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 			ftp://ieee.ing.uniroma1.it/pub/geda/devel/${PKGVERSION}/ \
@@ -14,7 +15,7 @@ COMMENT=		Library of shared modules for gEDA
 
 DEPENDS+=		guile>=1.3.0:../../lang/guile
 DEPENDS+=		libstroke-[0-9]*:../../devel/libstroke
-DEPENDS+=		libgdgeda>=1.8:../../graphics/libgdgeda
+DEPENDS+=		libgdgeda>=1.8nb1:../../graphics/libgdgeda
 DEPENDS+=		gtk+>=1.2.3:../../x11/gtk
 
 CONFLICTS+=		gEDA<19991011

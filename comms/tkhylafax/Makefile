@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2001/07/27 10:54:05 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2002/03/13 17:36:44 fredb Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/08/07 23:56:12 asami Exp
 #
 
 DISTNAME=	tkhylafax-3.1
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.sgi.com/sgi/fax/contrib/tkhylafax/ \
 		ftp://ftp.tuwien.ac.at/infosys/fax/hylafax/contrib/tkhylafax/ \

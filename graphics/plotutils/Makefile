@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2002/02/18 15:14:21 seb Exp $
+# $NetBSD: Makefile,v 1.18 2002/03/13 17:37:15 fredb Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
+PKGREVISION=		1
 CATEGORIES=		devel graphics x11
 MASTER_SITES=		${MASTER_SITE_GNU:=plotutils/}
 
@@ -9,7 +10,7 @@ MAINTAINER=		dmcmahill@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/plotutils/plotutils.html
 COMMENT=		Programs and library for plotting scientific data
 
-DEPENDS+=		png>=1.0.11:../../graphics/png
+DEPENDS+=		png>=1.2.1:../../graphics/png
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libplotter

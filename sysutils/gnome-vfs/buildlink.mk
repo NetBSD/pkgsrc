@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/10/10 13:44:29 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2002/03/13 17:37:43 fredb Exp $
 #
 # This Makefile fragment is included by packages that use gnome-vfs.
 #
@@ -17,7 +17,7 @@ GNOME_VFS_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.gnome-vfs?=	gnome-vfs>=1.0.2
+BUILDLINK_DEPENDS.gnome-vfs?=	gnome-vfs>=1.0.2nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.gnome-vfs}:../../sysutils/gnome-vfs
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.gnome-vfs=gnome-vfs

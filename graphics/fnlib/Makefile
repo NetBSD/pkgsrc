@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2001/10/24 22:11:00 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/03/13 17:37:06 fredb Exp $
 
 DISTNAME=		fnlib-0.5
+PKGREVISION=		1
 CATEGORIES=		x11 graphics
 MASTER_SITES=		ftp://ftp.enlightenment.org/pub/e/enlightenment/libs/
 

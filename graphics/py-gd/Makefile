@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2002/01/19 17:49:14 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2002/03/13 17:37:16 fredb Exp $
 
 DISTNAME=	gdmodule.c
 PKGNAME=	${PYPKGPREFIX}-gd-1.3
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://starship.python.net/~richard/gdmodule/
 DISTFILES=	gdmodule.c
@@ -10,7 +11,7 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://starship.python.net/~richard/gdmodule/
 COMMENT=	Python interface to gd graphics library
 
-DEPENDS+=	gd>=1.8.3:../../graphics/gd
+DEPENDS+=	gd>=1.8.4nb1:../../graphics/gd
 
 WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}

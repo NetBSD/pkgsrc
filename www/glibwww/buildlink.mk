@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/10/06 14:30:05 rh Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/03/13 17:37:51 fredb Exp $
 #
 # This Makefile fragment is included by packages that use glibwww.
 #
@@ -17,7 +17,7 @@ GLIBWWW_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.glibwww?=	glibwww>=0.2
+BUILDLINK_DEPENDS.glibwww?=	glibwww>=0.2nb1
 DEPENDS+=			${BUILDLINK_DEPENDS.glibwww}:../../www/glibwww
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.glibwww=glibwww

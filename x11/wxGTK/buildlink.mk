@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.9 2001/10/03 20:56:55 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.10 2002/03/13 17:38:05 fredb Exp $
 #
 # This Makefile fragment is included by packages that use wxGTK.
 #
@@ -17,7 +17,7 @@ WXGTK_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.wxGTK?=	wxGTK>=2.2.2
+BUILDLINK_DEPENDS.wxGTK?=	wxGTK>=2.2.7nb1
 DEPENDS+=			${BUILDLINK_DEPENDS.wxGTK}:../../x11/wxGTK
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.wxGTK=wxGTK

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2001/12/03 07:58:47 tron Exp $
+# $NetBSD: Makefile,v 1.15 2002/03/13 17:37:22 fredb Exp $
 
 DISTNAME=		evolution-0.15
+PKGREVISION=		1
 CATEGORIES=		mail time gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/evolution/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,11 +11,11 @@ HOMEPAGE=		http://www.ximian.com/products/ximian_evolution/
 COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-DEPENDS+=		bonobo-conf>=0.11:../../devel/bonobo-conf
+DEPENDS+=		bonobo-conf>=0.14nb1:../../devel/bonobo-conf
 BUILD_USES_MSGFMT=	YES
 
-BUILDLINK_DEPENDS.gdk-pixbuf=		gdk-pixbuf>=0.9.0
-BUILDLINK_DEPENDS.gdk-pixbuf-gnome=	gdk-pixbuf-gnome>=0.9.0
+BUILDLINK_DEPENDS.gdk-pixbuf=		gdk-pixbuf>=0.11.0nb1
+BUILDLINK_DEPENDS.gdk-pixbuf-gnome=	gdk-pixbuf-gnome>=0.11.0nb1
 # Using a wildcard here doesn't make sence because the version number of
 # "db3" is hardcoded in the "configure" script.
 BUILDLINK_DEPENDS.db3=			db3-3.11.2

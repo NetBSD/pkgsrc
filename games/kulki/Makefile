@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2001/10/24 22:10:56 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/03/13 17:37:01 fredb Exp $
 #
 
 DISTNAME=	kulki-1.01
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.cs.put.poznan.pl/adanilecki/
 EXTRACT_SUFX=	.tgz

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2001/12/15 20:25:36 agc Exp $
+# $NetBSD: Makefile,v 1.8 2002/03/13 17:37:20 fredb Exp $
 
 DISTNAME=	TeXfamily-1.2.1nb1
+PKGREVISION=	1
 CATEGORIES=	japanese
 MASTER_SITES=	ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2/ \
 		ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2.1/ \

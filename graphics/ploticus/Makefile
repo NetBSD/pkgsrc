@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2001/07/08 08:09:39 rh Exp $
+# $NetBSD: Makefile,v 1.11 2002/03/13 17:37:15 fredb Exp $
 #
 
 DISTNAME=	plsrc141
 PKGNAME=	ploticus-1.41
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.sgpr.net/download/ \
 		http://gd.tuwien.ac.at/visual/ploticus/download/
@@ -12,7 +13,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.sgpr.net/
 COMMENT=	Versatile data visualization engine
 
-DEPENDS+=	png>=1.0.11:../../graphics/png
+DEPENDS+=	png>=1.2.1:../../graphics/png
 
 NO_CONFIGURE=	YES
 USE_X11=	YES

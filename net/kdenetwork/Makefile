@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2001/06/12 06:56:35 tron Exp $
+# $NetBSD: Makefile,v 1.58 2002/03/13 17:37:30 fredb Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
 DISTNAME=		kdenetwork-1.1.2
+PKGREVISION=		1
 CATEGORIES=		net kde
 MASTER_SITES=		ftp://ftp.us.kde.org/pub/kde/Attic/old/1.1.2/distribution/tar/generic/source/bz2/ \
 			ftp://ftp.de.kde.org/pub/kde/Attic/old/1.1.2/distribution/tar/generic/source/bz2/
@@ -15,7 +16,7 @@ COMMENT=		Network modules for the KDE integrated X11 desktop
 DEPENDS=		gdbm>=1.7.3:../../databases/gdbm
 DEPENDS+=		uulib>=0.5.13:../../converters/uulib
 DEPENDS+=		kdesupport-1.1.2:../../converters/kdesupport
-DEPENDS+=		kdebase-1.1.2:../../x11/kdebase
+DEPENDS+=		kdebase-1.1.2nb1:../../x11/kdebase
 
 USE_X11BASE=		yes
 USE_GMAKE=		yes

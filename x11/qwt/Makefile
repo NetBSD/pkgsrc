@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2001/10/24 22:11:14 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/03/13 17:38:03 fredb Exp $
 
 DISTNAME=	qwt-0.3.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qwt/}
 
@@ -8,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://sourceforge.net/projects/qwt
 COMMENT=	Qt widget library for technical purposes
 
-BUILDLINK_DEPENDS.qt2-libs=	qt2-libs>=2.3.0
+BUILDLINK_DEPENDS.qt2-libs=	qt2-libs>=2.3.1nb2
 USE_BUILDLINK_ONLY=		yes
 
 USE_X11BASE=	yes

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2001/09/27 23:19:00 jlam Exp $
+# $NetBSD: Makefile,v 1.84 2002/03/13 17:37:57 fredb Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
+PKGREVISION=	1
 CATEGORIES=	x11 kde
 MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/Attic/old/1.1.2/distribution/tar/generic/source/bz2/ \
 		ftp://ftp.de.kde.org/pub/kde/Attic/old/1.1.2/distribution/tar/generic/source/bz2/ \
@@ -14,7 +15,7 @@ HOMEPAGE=       http://www.kde.org/
 COMMENT=	Base modules for the KDE integrated X11 desktop
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=	kdelibs-1.1.2:../../x11/kdelibs
+DEPENDS+=	kdelibs-1.1.2nb1:../../x11/kdelibs
 # kdebase doesn't manipulate GIFs, but KDE packages depending on kdebase
 # often do, so put the dependency here.
 #

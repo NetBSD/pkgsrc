@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2001/10/31 01:41:03 kei Exp $
+# $NetBSD: Makefile,v 1.5 2002/03/13 17:37:20 fredb Exp $
 #
 
 DISTNAME=	xdvik-22.15
 PKGNAME=	ja-vfxdvik-22.15
+PKGREVISION=	1
 CATEGORIES=	japanese print
 MASTER_SITES=	ftp://ftp.appi.keio.ac.jp/pub/xdvi/
 

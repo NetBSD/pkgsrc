@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2001/07/29 00:46:59 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2002/03/13 17:37:57 fredb Exp $
 
 DISTNAME=		gtk-engines-0.12
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gtk-engines/}
 

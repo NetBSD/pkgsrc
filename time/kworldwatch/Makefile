@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2001/09/27 23:18:48 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/03/13 17:37:45 fredb Exp $
 #
 
 DISTNAME=	kworldwatch-0.6
+PKGREVISION=	1
 CATEGORIES=	x11 kde time
 MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.1.2/apps/utils/
 EXTRACT_SUFX=	.tgz
@@ -10,7 +11,7 @@ MAINTAINER=	hubertf@netbsd.org
 COMMENT=	Revolving world map indicating the time in each part of the world
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
+DEPENDS+=	kdebase-1.1.2nb1:../../x11/kdebase
 
 CONFLICTS+=	kdetoys-[0-9]*
 

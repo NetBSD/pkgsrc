@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2001/11/07 18:26:50 bouyer Exp $
+# $NetBSD: Makefile,v 1.30 2002/03/13 17:37:31 fredb Exp $
 #
 
 DISTNAME=	mrtg-2.9.17
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		http://gd.tuwien.ac.at/infosys/network/tools/mrtg/pub/ \
@@ -16,7 +17,7 @@ MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
 COMMENT=	The Multi-Router Traffic Grapher
 
-DEPENDS=	gd>=1.8.1:../../graphics/gd
+DEPENDS=	gd>=1.8.4nb1:../../graphics/gd
 
 USE_PERL5=	YES
 PERL5_REQD=	5.6.0

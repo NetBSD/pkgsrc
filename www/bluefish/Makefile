@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2002/02/06 03:29:05 jmc Exp $
+# $NetBSD: Makefile,v 1.23 2002/03/13 17:37:50 fredb Exp $
 
 DISTNAME=	bluefish-0.7
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://pkedu.fbt.eitn.wau.nl/~olivier/downloads/	\
 		http://student.wau.nl/~olivier/bluefish/download/	\
@@ -15,13 +16,13 @@ HOMEPAGE=	http://bluefish.openoffice.nl/
 COMMENT=	GTK HTML editor for the experienced web designer
 
 DEPENDS+=	gtk+>=1.2.7:../../x11/gtk
-DEPENDS+=	imlib-[0-9]*:../../graphics/imlib
+DEPENDS+=	imlib>=1.9.11nb1:../../graphics/imlib
 DEPENDS+=	weblint-[0-9]*:../../www/weblint
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png-[0-9]*:../../graphics/png
+DEPENDS+=	png>=1.2.1:../../graphics/png
 DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
-DEPENDS+=	gnome-libs-[0-9]*:../../x11/gnome-libs
-DEPENDS+=	gdk-pixbuf-[0-9]*:../../graphics/gdk-pixbuf
+DEPENDS+=	gnome-libs>=1.4.1.2nb1:../../x11/gnome-libs
+DEPENDS+=	gdk-pixbuf-0.11.0nb1:../../graphics/gdk-pixbuf
 
 BUILD_USES_MSGFMT=	YES
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2001/08/23 04:26:54 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2002/03/13 17:37:18 fredb Exp $
 #
 
 DISTNAME=		xfig.3.2.3d.full
 PKGNAME=		xfig-3.2.3.4
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}/xfig.3.2.3d
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=applications/drawing_tools/xfig/} \

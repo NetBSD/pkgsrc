@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2001/12/04 20:45:31 skrll Exp $
+# $NetBSD: Makefile,v 1.11 2002/03/13 17:36:51 fredb Exp $
 
 DISTNAME=	kdevelop-2.0.2
 PKGNAME=	${DISTNAME:S/-/-base-/}
+PKGREVISION=	1
 CATEGORIES=	devel kde
 COMMENT=	Base modules for IDE for Unix/X11/KDE
 
@@ -13,11 +14,11 @@ BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK_ONLY=	yes
 DEPENDS+=		automake>=1.4:../../devel/automake
 DEPENDS+=		kdoc-2.2.2:../../textproc/kdoc
-DEPENDS+=		htdig>=3.1.5:../../www/htdig
+DEPENDS+=		htdig>=3.1.6:../../www/htdig
 DEPENDS+=		a2ps>=4.12:../../print/a2ps
-DEPENDS+=		kdelibdocs>=2.2.2:../../x11/kdelibdocs2
-DEPENDS+=		qt2-designer-kde>=2.3.1:../../x11/qt2-designer-kde
-DEPENDS+=		kdesdk>=2.2.2:../../devel/kdesdk2
+DEPENDS+=		kdelibdocs>=2.2.2nb1:../../x11/kdelibdocs2
+DEPENDS+=		qt2-designer-kde>=2.3.1nb2:../../x11/qt2-designer-kde
+DEPENDS+=		kdesdk>=2.2.2nb1:../../devel/kdesdk2
 
 CONFLICTS+=	kdevelop<=1.3
 

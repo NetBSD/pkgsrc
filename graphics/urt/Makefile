@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2001/12/05 15:00:46 agc Exp $
+# $NetBSD: Makefile,v 1.24 2002/03/13 17:37:18 fredb Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.cs.utah.edu/pub/dept/OLD/pub/
 DISTFILES=	urt-3.1b.tar.Z urt-doc.tar urt-img.tar
@@ -15,7 +16,7 @@ MAINTAINER=	packages@netbsd.org
 COMMENT=	Utah raster toolkit - a toolkit and library for raster image processing
 
 #DEPENDS+=	tiff-[0-9]*:../tiff	# netpbm will pull in tiff.
-DEPENDS+=	netpbm-9.*:../netpbm
+DEPENDS+=	netpbm>=9.7nb1:../../graphics/netpbm
 
 EXTRACT_ONLY=	urt-3.1b.tar.Z
 

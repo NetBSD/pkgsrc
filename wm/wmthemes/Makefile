@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/12/19 15:35:40 tron Exp $
+# $NetBSD: Makefile,v 1.10 2002/03/13 17:37:49 fredb Exp $
 
 #
 # There is no distinfo file since the files change contents so often on the
@@ -6,6 +6,7 @@
 #
 
 DISTNAME=	wmthemes-0.62nb1
+PKGREVISION=	1
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://download.themes.org/wm/
 DISTFILES=	${THEME_FILES}
@@ -14,7 +15,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://wm.themes.org/
 COMMENT=	Themes for the window manager WindowMaker
 
-DEPENDS+=	windowmaker-[0-9]*:../../wm/windowmaker
+DEPENDS+=	windowmaker>=0.80.0nb1:../../wm/windowmaker
 
 DIST_SUBDIR=	wmthemes
 

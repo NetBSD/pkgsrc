@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/10/06 15:58:06 rh Exp $
+# $NetBSD: buildlink.mk,v 1.4 2002/03/13 17:37:56 fredb Exp $
 #
 # This Makefile fragment is included by packages that use gnome-core.
 #
@@ -17,7 +17,7 @@ GNOME_CORE_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.gnome-core?=	gnome-core>=1.0.53
+BUILDLINK_DEPENDS.gnome-core?=	gnome-core>=1.4.0.4nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.gnome-core}:../../x11/gnome-core
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.gnome-core=gnome-core

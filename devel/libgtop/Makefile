@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2002/02/18 15:14:13 seb Exp $
+# $NetBSD: Makefile,v 1.59 2002/03/13 17:36:51 fredb Exp $
 
 DISTNAME=		libgtop-1.0.12
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/libgtop/}
 
@@ -11,7 +11,7 @@ COMMENT=		library to retrieve system information, used in GNOME
 
 BUILD_DEPENDS=		perl>=${PERL5_REQD}:../../lang/perl5
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		gnome-libs-[0-9]*:../../x11/gnome-libs
+DEPENDS+=		gnome-libs>=1.4.1.2nb1:../../x11/gnome-libs
 DEPENDS+=		guile-[0-9]*:../../lang/guile
 
 NOT_FOR_PLATFORM=	SunOS-*-*

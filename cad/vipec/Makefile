@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2001/10/24 22:10:47 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2002/03/13 17:36:40 fredb Exp $
 #
 
 DISTNAME=	vipec-2.0.4
+PKGREVISION=		1
 CATEGORIES=	cad
 MASTER_SITES=	http://netfold.com/~vipec/public_ftp/stable/
 

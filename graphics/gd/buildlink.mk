@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/27 13:33:28 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2002/03/13 17:37:06 fredb Exp $
 #
 # This Makefile fragment is included by packages that use gd.
 #
@@ -17,7 +17,7 @@ GD_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.gd?=	gd>=1.8.3
+BUILDLINK_DEPENDS.gd?=	gd>=1.8.4nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.gd}:../../graphics/gd
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.gd=gd

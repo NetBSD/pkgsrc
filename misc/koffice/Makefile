@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2001/12/21 21:19:28 skrll Exp $
+# $NetBSD: Makefile,v 1.10 2002/03/13 17:37:27 fredb Exp $
 
 DISTNAME=	koffice-1.1.1
+PKGREVISION=	1
 CATEGORIES=	misc kde
 MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.1.1/src/ \
 		ftp://ftp.us.kde.org/pub/kde/stable/koffice-1.1.1/src/ \
@@ -12,7 +13,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.koffice.org/
 COMMENT=	KDE Office Suite with text processor, spreadsheet, etc.
 
-BUILD_DEPENDS+=	qt2-designer-kde>=2.3.1nb1:../../x11/qt2-designer-kde
+BUILD_DEPENDS+=	qt2-designer-kde>=2.3.1nb2:../../x11/qt2-designer-kde
 
 USE_BUILDLINK_ONLY=	YES
 

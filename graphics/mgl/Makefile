@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2001/05/22 09:32:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/03/13 17:37:12 fredb Exp $
 #
 
 DISTNAME=       mgl2-alpha-020
 PKGNAME=        mgl-0.2.0a
+PKGREVISION=	1
 CATEGORIES=     graphics
 MASTER_SITES=   http://at.sakura.ne.jp/~suz/arc/
 
@@ -11,7 +12,7 @@ HOMEPAGE=	http://www.netbsd.org/Ports/hpcmips/mgl2.html
 COMMENT=	Graphics library for NEC Mobilegear/PocketBSD, NetBSD/hpcmips
 
 DEPENDS+= 	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.0.11:../../graphics/png
+DEPENDS+=	png>=1.2.1:../../graphics/png
 DEPENDS+=	libungif>=4.1.0:../../graphics/libungif
 DEPENDS+=	mglfonts>=0.1:../../fonts/mglfonts
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2002/01/21 21:44:34 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/03/13 17:36:40 fredb Exp $
 #
 
 DISTNAME=		oregano-0.20
+PKGREVISION=		1
 CATEGORIES=		cad gnome
 MASTER_SITES=		http://www.dtek.chalmers.se/~d4hult/oregano/download/
 

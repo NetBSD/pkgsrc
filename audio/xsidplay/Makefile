@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2001/10/24 22:10:46 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2002/03/13 17:36:38 fredb Exp $
 #
 
 DISTNAME=	xsidplay-1_5_4
 PKGNAME=	xsidplay-1.5.4
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/xsidplay-1.5.4
 CATEGORIES=	audio x11
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/packages/

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2001/11/17 06:36:14 itohy Exp $
+# $NetBSD: Makefile,v 1.5 2002/03/13 17:36:35 fredb Exp $
 #
 
 DISTNAME=	audacity-src-0.96
 PKGNAME=	audacity-0.96
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://prdownloads.sourceforge.net/audacity/
 EXTRACT_SUFX=	.tgz
@@ -11,7 +12,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://audacity.sourceforge.net/
 COMMENT=	audio editor
 
-DEPENDS+=	wxGTK-[0-9]*:../../x11/wxGTK
+DEPENDS+=	wxGTK>=2.2.7nb1:../../x11/wxGTK
 DEPENDS+=	pth-[0-9]*:../../devel/pth
 DEPENDS+=	id3lib-[0-9]*:../../audio/id3lib
 DEPENDS+=	libmpeg3-[0-9]*:../../devel/libmpeg3

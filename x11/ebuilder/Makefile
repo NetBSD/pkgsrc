@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2001/10/24 22:11:11 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/03/13 17:37:54 fredb Exp $
 #
 
 DISTNAME=	ebuilder-0.56d
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	x11 devel
 MASTER_SITES=	http://web.inter.nl.net/users/eavdmeer/src/

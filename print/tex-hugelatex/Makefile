@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2001/10/21 21:58:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2002/03/13 17:37:39 fredb Exp $
 #
 
 DISTNAME=	hugelatex-1.0
 PKGNAME=	tex-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	# none
 DISTFILES=	# nada

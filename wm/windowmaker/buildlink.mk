@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2001/10/05 14:16:37 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.9 2002/03/13 17:37:48 fredb Exp $
 #
 # This Makefile fragment is included by packages that use windowmaker.
 #
@@ -17,7 +17,7 @@ WINDOWMAKER_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.windowmaker?=	windowmaker>=0.70.0
+BUILDLINK_DEPENDS.windowmaker?=	windowmaker>=0.80.0nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.windowmaker}:../../wm/windowmaker
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.windowmaker=windowmaker
