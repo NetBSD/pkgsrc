@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.5 1998/05/15 12:10:43 agc Exp $
+# $NetBSD: mk.conf.example,v 1.6 1998/05/26 19:46:17 tron Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection
@@ -41,13 +41,15 @@ MANZ=		1		# gzip manual pages at installation time
                                 # Default: not defined
 
 # Definitions used only in the packages collection
-#AMANDA_USER=	backup		# Used in the amanda package to specify the login
-                                # user and group responsible for backups
+#AMANDA_USER=	backup		# Used in the amanda package to specify the
+                                # login user and group responsible for backups
                                 # Possible: any user name
                                 # Default: backup
 
-#DOMAIN_NAME=			# Used in the knews package to set the domain name
-                                # Possible: almost anything really, usually a FQDN.
+#DOMAIN_NAME=			# Used in the knews package to set the domain
+				# name.
+                                # Possible: almost anything really, usually a
+				#           FQDN.
                                 # Default: none
 
 #DONT_USE_IDEA=			# Used in ssh package to stop IDEA encryption
@@ -70,8 +72,8 @@ HAVE_MOTIF=	YES		# this must be set so that packages which
                                 # Possible: defined, not defined.
                                 # Default: not defined
 
-#HTTP_ROOT=			# Used by the apache package to specify the root
-                                # directory for its files
+#HTTP_ROOT=			# Used by the apache package to specify the
+                                # root directory for its files
                                 # Possible: any valid directory
                                 # Default: [agc - don't know yet]
 
@@ -80,7 +82,7 @@ HAVE_MOTIF=	YES		# this must be set so that packages which
                                 # Possible: defined, not defined
                                 # Default: not defined
 
-#LANG=                                # Used by ispell to specify national dictionary
+#LANG=				# Used by ispell to specify national dictionary
                                 # Possible: not defined, british
                                 # Default: not defined
                                 # [agc - this must conflict with the locale?]
@@ -94,8 +96,8 @@ HAVE_MOTIF=	YES		# this must be set so that packages which
                                 # Possible: defined, not defined
                                 # Default: not defined
 
-#MAKE_KERBEROS4=		# Used in the fetchmail package to specify use of
-                                # Kerberos subsystem.
+#MAKE_KERBEROS4=		# Used in the fetchmail package to specify use
+                                # of Kerberos subsystem.
                                 # Possible: defined, not defined
                                 # Default: not defined
 
@@ -131,16 +133,23 @@ PAPERSIZE=	A4		# Default paper size for packages.
                                 # Possible: anything (within reason)
                                 # Default: none
 
-#SSH_CONF_DIR=			# Used in ssh to set the configuration directory
-                                # Possible: any valid directory on root filesystem
+#SSH_CONF_DIR=			# Used in ssh to set the configuration
+				# directory.
+                                # Possible: any valid directory
                                 # Default: none, package defaults to /etc
+
+#SSH_NO_SUID=			# Used in ssh to disable setuid installation
+				# of "ssh" binary.
+				# Possible: YES, or NO.
+				# Default: NO
 
 #USE_MENUS=			# Used in xvile package to build in support for
                                 # menus.
                                 # Possible: defined, not defined
                                 # Default: undefined
 
-#USE_MULE=			# Used in emacs package to build MULE extensions
+#USE_MULE=			# Used in emacs package to build MULE
+				# extensions
                                 # Possible: defined, not defined
                                 # Default: not defined
 
@@ -152,7 +161,7 @@ PAPERSIZE=	A4		# Default paper size for packages.
                                 # Possible: not defined, YES
                                 # Default: not defined
 
-#VERS_ID=			# Used by the apache package to specify its version
+#VERS_ID=			# Used by the apache package to specify its
+				# version
                                 # Possible: almost anything
                                 # Default: not defined
-
