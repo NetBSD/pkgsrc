@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/06/03 12:35:44 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/06/20 09:33:13 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/18 22:20:02 hoek Exp
 #
 
@@ -11,8 +11,6 @@ MASTER_SITES=	http://www.uni-frankfurt.de/~fp/uudeview/Apps/frank/  \
 MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=	yes
-
-MAN3=		uulib.3
 
 ALL_TARGET=	libuu.a	libuu.so.1.0
 
