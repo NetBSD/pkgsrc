@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.745 2002/12/10 12:55:26 wiz Exp $
+$NetBSD: CHANGES,v 1.746 2002/12/10 14:32:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3903,3 +3903,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Removed R-survival [markd 2002-12-10]
 	Updated pkglint to 3.38 [wiz 2002-12-10]
 	Updated scummvm to 0.3.0 [wiz 2002-12-10]
+	Updated pkglint to 3.39 [schmonz 2002-12-10]
