@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.29 2004/01/31 03:30:49 grant Exp $
+# $NetBSD: post-build,v 1.30 2004/02/05 10:59:40 sketch Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -243,8 +243,6 @@ report, including logs of failed/not-packaged is available from:
 $FTPHOST/$FTPURL/$reportf
 EOF
 	}
-
-	$REPORT = "/data1/www/broken.html";
 
 	open(HTML,">$REPORT") or die "Can't write $REPORT: $!\n";
 	print HTML <<EOHTML;
