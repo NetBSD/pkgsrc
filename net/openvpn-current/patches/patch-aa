@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/11/17 18:04:04 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2004/12/03 23:13:10 jlam Exp $
 
---- ntlm.c.orig	2004-11-17 18:47:38.000000000 +0100
-+++ ntlm.c	2004-11-17 18:47:49.000000000 +0100
+--- ntlm.c.orig	2004-10-02 06:22:38.000000000 -0400
++++ ntlm.c
 @@ -29,7 +29,7 @@
  
  #if NTLM
  
 -#include <openssl/des.h>
-+#include <des.h>
++#include <openssl/des_old.h>
  #include <openssl/md4.h>
  #include "common.h"
  #include "buffer.h"
