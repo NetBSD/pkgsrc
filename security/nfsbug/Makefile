@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/20 12:25:34 agc Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/22 19:30:52 jlam Exp $
 
 DISTNAME=	nfsshell-1.0
 CATEGORIES=	net security
@@ -12,10 +12,15 @@ COMMENT=	NFS security verification suite
 EXTRACT_ONLY=   nfsBugFerret.tgz
 WRKSRC=		${WRKDIR}/nfsbug
 
+USE_BUILDLINK3=	yes
+NO_EXPORT_CPP=	yes	# needed since we use rpcgen
+
 # Only works on 1.5B or greater on most platforms but will work on any x86
 # since struct pmap didn't get exposed through vm.h there.
 ONLY_FOR_PLATFORM=	NetBSD-1.5[B-Z]-* NetBSD-1.5Z[A-Z]-* NetBSD-1.[6-9]*-* \
 			NetBSD-*-i386
+
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	${CP} ${DISTDIR}/nfsShell.c ${WRKSRC}/nfsshell.c
