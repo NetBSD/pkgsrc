@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2004/10/08 21:02:53 mjl Exp $
+$NetBSD: patch-ab,v 1.7 2004/10/09 14:01:03 mjl Exp $
 
---- make/lib.mak.orig	2003-07-29 14:33:34.000000000 +0200
-+++ make/lib.mak	2004-10-08 22:11:51.000000000 +0200
-@@ -187,22 +187,18 @@
+--- make/lib.mak.orig	2004-06-17 08:33:07.000000000 +0200
++++ make/lib.mak	2004-10-09 14:49:04.000000000 +0200
+@@ -200,22 +200,18 @@
      LD = $(CPLUS)
    endif
  
@@ -18,9 +18,9 @@ $NetBSD: patch-ab,v 1.6 2004/10/08 21:02:53 mjl Exp $
  	@echo SYSLIBS = $(SYSLIBS)
  	@if [ ! -d $(LIBDIR) ] ; then mkdir $(LIBDIR) ; fi
 -	$(LD) $(LDSOOPTS) -o $(LIBDIR)/$(LIBNAME_PAT) $(LDFLAGS) $(EXTLIBS) $(OBJS) $(ENDLDLIBS)
-+	/usr/pkg/bin/libtool --tag=CXX --mode=link $(CPLUS) -o $(LIBDIR)/$(LIB_FILENAME) \
++	$(LIBTOOL) --tag=CXX --mode=link $(CPLUS) -o $(LIBDIR)/$(LIB_FILENAME) \
 +		$(OBJS:.o=.lo) $(EXTLIBS) $(ENDLDLIBS) -rpath $(INSTALLLIB_DIR) \
-+		-version-info $(MAJOR_VERSION):$(MINOR_VERSION)
++		-release $(MAJOR_VERSION).$(MINOR_VERSION).$(BUILD_NUMBER)
  
 -  install: $(LIBDIR)/$(LIBNAME_PAT)
 -	$(INSTALL) $(LIBDIR)/$(LIBNAME_PAT) $(INSTALLLIB_DIR)/$(LIBNAME_PAT)
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.6 2004/10/08 21:02:53 mjl Exp $
 -	ln -sf $(LIBNAME_PAT) $(INSTALLLIB_DIR)/$(LIBNAME_MAJ)
 -	ln -sf $(LIBNAME_PAT) $(INSTALLLIB_DIR)/$(LIBNAME_MIN)
 +  install: $(LIBDIR)/$(LIB_FILENAME)
-+	/usr/pkg/bin/libtool --mode=install install $(LIBDIR)/$(LIB_FILENAME) $(INSTALLLIB_DIR)/$(LIB_FILENAME)
++	$(LIBTOOL) --mode=install install $(LIBDIR)/$(LIB_FILENAME) $(INSTALLLIB_DIR)/$(LIB_FILENAME)
  
  endif # P_SHAREDLIB
  

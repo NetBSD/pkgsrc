@@ -1,55 +1,49 @@
-$NetBSD: patch-ai,v 1.5 2004/10/09 06:49:23 mjl Exp $
+$NetBSD: patch-ai,v 1.6 2004/10/09 14:01:03 mjl Exp $
 
---- make/common.mak.orig	2003-07-29 13:25:23.000000000 +0200
-+++ make/common.mak	2004-10-09 04:17:05.000000000 +0200
-@@ -273,11 +273,11 @@
+--- make/common.mak.orig	2004-06-10 03:36:44.000000000 +0200
++++ make/common.mak	2004-10-09 12:52:56.000000000 +0200
+@@ -310,11 +310,11 @@
  #
  $(OBJDIR)/%.o : %.cxx 
  	@if [ ! -d $(OBJDIR) ] ; then mkdir -p $(OBJDIR) ; fi
--	$(CPLUS) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -x c++ -c $< -o $@
-+	/usr/pkg/bin/libtool --tag=CXX --mode=compile $(CPLUS) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
+-	$(CPLUS) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) $(STDCXXFLAGS) -x c++ -c $< -o $@
++	$(LIBTOOL) --mode=compile --tag=CXX $(CPLUS) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) $(STDCXXFLAGS) -x c++ -c $< -o $@
  
  $(OBJDIR)/%.o : %.c 
  	@if [ ! -d $(OBJDIR) ] ; then mkdir -p $(OBJDIR) ; fi
 -	$(CC) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -x c -c $< -o $@
-+	/usr/pkg/bin/libtool --tag=CC --mode=compile $(CC) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
++	$(LIBTOOL) --mode=compile --tag=CC $(CC) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -x c -c $< -o $@
  
  #
  # create list of object files 
-@@ -300,12 +300,12 @@
- $(DEPDIR)/%.dep : %.cxx 
- 	@if [ ! -d $(DEPDIR) ] ; then mkdir -p $(DEPDIR) ; fi
- 	@printf %s $(OBJDIR) > $@
--	$(CPLUS) $(STDCCFLAGS) -M $< >> $@
-+	/usr/pkg/bin/libtool --tag=CXX --mode=compile $(CPLUS) $(STDCCFLAGS) -M $< >> $@
- 
- $(DEPDIR)/%.dep : %.c 
- 	@if [ ! -d $(DEPDIR) ] ; then mkdir -p $(DEPDIR) ; fi
- 	@printf %s $(OBJDIR) > $@
--	$(CC) $(STDCCFLAGS) -M $< >> $@
-+	/usr/pkg/bin/libtool --tag=CC --mode=compile $(CC) $(STDCCFLAGS) -M $< >> $@
- 
- #
- # add in good files to delete
-@@ -344,7 +344,7 @@
+@@ -379,7 +379,7 @@
  # directory
  	@if [ ! -L $(OBJDIR)/lib ] ; then cd $(OBJDIR); ln -s $(PW_LIBDIR) lib; fi
  endif
 -	$(CPLUS) -o $@ $(CFLAGS) $(LDFLAGS) $(OBJS) $(LDLIBS) $(ENDLDLIBS) $(ENDLDFLAGS)
-+	/usr/pkg/bin/libtool --tag=CXX --mode=link $(CPLUS) -o $@ $(CFLAGS) $(LDFLAGS) $(OBJS) $(LDLIBS) $(ENDLDLIBS) $(ENDLDFLAGS)
++	$(LIBTOOL) --mode=link --tag=CXX $(CPLUS) -o $@ $(CFLAGS) $(LDFLAGS) $(OBJS) $(LDLIBS) $(ENDLDLIBS) $(ENDLDFLAGS)
  ifeq ($(OSTYPE),VxWorks)
  	$(LD)   --split-by-reloc 65535 -r   $(OBJS) -o $@ 
  endif
-@@ -380,7 +380,7 @@
+@@ -405,7 +405,7 @@
  ifndef INSTALL_OVERRIDE
  
  install:	$(TARGET)
 -	$(INSTALL) $(TARGET) $(INSTALLBIN_DIR)
-+	/usr/pkg/bin/libtool --mode=install $(BSD_INSTALL_PROGRAM) $(TARGET) $(INSTALLBIN_DIR)
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $(TARGET) $(INSTALLBIN_DIR)
  endif
  
  # ifdef PROG
-@@ -451,7 +451,7 @@
+@@ -413,7 +413,7 @@
+ 
+ $(PWLIBDIR)/include/ptlib.h.gch: $(PWLIBDIR)/include/ptlib.h
+ 	@if [ ! -d $(OBJDIR) ] ; then mkdir -p $(OBJDIR) ; fi
+-	$(CPLUS) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) $(STDCXXFLAGS) -x c++ -c $< -o $@
++	$(LIBTOOL) --mode=compile --tag=CXX $(CPLUS) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) $(STDCXXFLAGS) -x c++ -c $< -o $@
+ 
+ PCH	:= $(PWLIBDIR)/include/ptlib.h.gch
+ 
+@@ -481,7 +481,7 @@
  	@$(MAKE) DEBUG= libs
  
  libs ::
@@ -58,7 +52,7 @@ $NetBSD: patch-ai,v 1.5 2004/10/09 06:49:23 mjl Exp $
  
  else
  
-@@ -480,7 +480,7 @@
+@@ -510,7 +510,7 @@
  optlibs :: libs
  
  libs ::

@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.1 2004/10/08 21:02:54 mjl Exp $
+$NetBSD: patch-bb,v 1.2 2004/10/09 14:01:03 mjl Exp $
 
---- src/ptlib/unix/socket.cxx.orig	2004-10-08 19:49:23.000000000 +0200
-+++ src/ptlib/unix/socket.cxx	2004-10-08 19:50:36.000000000 +0200
-@@ -312,6 +312,7 @@
+--- src/ptlib/unix/socket.cxx.orig	2004-08-24 09:08:11.000000000 +0200
++++ src/ptlib/unix/socket.cxx	2004-10-09 13:40:31.000000000 +0200
+@@ -349,6 +349,7 @@
  #endif
  
  #if defined(P_FREEBSD) || defined(P_OPENBSD) || defined(P_NETBSD) || defined(P_MACOSX) || defined(P_MACOS) || defined(P_QNX)
@@ -10,3 +10,12 @@ $NetBSD: patch-bb,v 1.1 2004/10/08 21:02:54 mjl Exp $
  #include <sys/sysctl.h>
  #endif
  
+@@ -762,7 +763,7 @@
+ }
+ 
+ 
+-#if P_HAS_RECVMSG
++#if P_HAS_RECVMSG && P_HAS_PKTINFO
+ 
+ int PSocket::os_recvfrom(
+       void * buf,     // Data to be written as URGENT TCP data.
