@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/12 13:03:31 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/12/14 19:51:29 jmmv Exp $
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-font-dialog.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-dialog.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-job-preview.h
@@ -8,12 +8,14 @@ include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-unit-selector.h
 lib/libgnomeprintui-2-2.a
 lib/libgnomeprintui-2-2.la
 lib/libgnomeprintui-2-2.so
-lib/libgnomeprintui-2-2.so.0
-lib/libgnomeprintui-2-2.so.0.0
+lib/libgnomeprintui-2-2.so.1
+lib/libgnomeprintui-2-2.so.1.0
 lib/pkgconfig/libgnomeprintui-2.2.pc
 share/doc/html/libgnomeprintui/c7.html
+share/doc/html/libgnomeprintui/home.png
 share/doc/html/libgnomeprintui/index.html
 share/doc/html/libgnomeprintui/index.sgml
+share/doc/html/libgnomeprintui/left.png
 share/doc/html/libgnomeprintui/libgnomeprintui-gnome-font-dialog.html
 share/doc/html/libgnomeprintui/libgnomeprintui-gnome-print-copies.html
 share/doc/html/libgnomeprintui/libgnomeprintui-gnome-print-dialog.html
@@ -22,13 +24,17 @@ share/doc/html/libgnomeprintui/libgnomeprintui-gnome-print-paper-selector.html
 share/doc/html/libgnomeprintui/libgnomeprintui-gnome-print-preview.html
 share/doc/html/libgnomeprintui/libgnomeprintui-gnome-printer-selector.html
 share/doc/html/libgnomeprintui/libgnomeprintui.html
+share/doc/html/libgnomeprintui/right.png
+share/doc/html/libgnomeprintui/up.png
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/libgnomeprintui-2.2.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libgnomeprintui-2.2.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/libgnomeprintui-2.2.mo
@@ -50,8 +56,10 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/libgnomeprintui-2.2.mo
+${PKGLOCALEDIR}/locale/li/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/libgnomeprintui-2.2.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libgnomeprintui-2.2.mo
@@ -64,6 +72,9 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libgnomeprintui-2.2.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/libgnomeprintui-2.2.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/libgnomeprintui-2.2.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libgnomeprintui-2.2.mo
