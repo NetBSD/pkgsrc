@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2002/01/08 21:18:04 mrauch Exp $
+# $NetBSD: Makefile,v 1.9 2002/02/25 13:53:36 mrauch Exp $
 
 DISTNAME=	STLport-4.0
 PKGNAME=	stlport-4.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.stlport.com/archive/
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.stlport.org/
 COMMENT=	Complete C++ standard library
 
 DEPENDS+=	{gcc,pgcc}>=${GCC_VERS}:../../lang/gcc
-GCC_VERS=	2.95.2
+GCC_VERS=	2.95.3
 
 USE_GMAKE=	# defined
 USE_LIBTOOL=	# defined
