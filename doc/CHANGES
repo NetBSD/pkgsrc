@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6557 2004/07/14 17:44:12 wiz Exp $
+$NetBSD: CHANGES,v 1.6558 2004/07/14 18:09:00 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3392,3 +3392,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Update pkg_tarup to 1.6 [erh 2004-07-14]
 	Updated neon to 0.24.7 [epg 2004-07-14]
 	Updated pkglint to 3.88 [wiz 2004-07-14]
+	Updated dovecot to 0.99.10.7 [xtraeme 2004-07-14]
