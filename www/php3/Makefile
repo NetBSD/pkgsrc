@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.35 2002/08/22 18:51:12 jschauma Exp $
+# $NetBSD: Makefile,v 1.36 2002/10/09 11:55:54 wiz Exp $
 
 PKGNAME=		php-${BASE_VERS}
 PKGREVISION?=		1
 CATEGORIES+=		lang
 COMMENT=		HTML-embedded programming language
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 
 .include "Makefile.common"
 

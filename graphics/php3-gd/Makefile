@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2002/03/13 17:37:15 fredb Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/09 11:55:54 wiz Exp $
 
 MODNAME=		gd
 CATEGORIES+=		graphics
 PKGREVISION=		1
 COMMENT=		PHP3 extension for GD graphics library
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 
 .include "../../www/php3/Makefile.module"
 
@@ -17,5 +17,5 @@ PLIST_SRC+=		${.CURDIR}/PLIST.extras
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/extra/gd/bdf2gdfont ${PREFIX}/bin
 
-.include "../../graphics/gd/buildlink.mk"
+.include "../../graphics/gd/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2002/01/10 13:17:11 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/10/09 11:55:54 wiz Exp $
 
 DISTNAME=		php-${DIST_VERS}
 CATEGORIES+=		www php3
@@ -53,5 +53,5 @@ post-extract: copy-abstractions-c
 copy-abstractions-c:
 	@${CP} ${FILESDIR}/abstractions.c ${WRKSRC}
 
-.include "../../databases/gdbm/buildlink.mk"
-.include "../../devel/zlib/buildlink.mk"
+.include "../../databases/gdbm/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
