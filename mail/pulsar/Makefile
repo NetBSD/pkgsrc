@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/28 21:02:15 martin Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/28 21:34:35 snj Exp $
 #
 
 DISTNAME=	pulsar-0.1.1
@@ -10,8 +10,8 @@ MAINTAINER=	martin@NetBSD.org
 HOMEPAGE=	http://pulsar.sourceforge.net/
 COMMENT=	Small, secure POP3 daemon, featuring native SSL support
 
-USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 
 MANCOMPRESSED=	yes
@@ -19,6 +19,6 @@ MANCOMPRESSED=	yes
 pre-configure:
 	cd ${WRKSRC}; ${AUTOCONF}
 
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
