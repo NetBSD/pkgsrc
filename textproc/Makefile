@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/10/30 01:40:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/12 11:52:30 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/10/13 11:11:32 itojun Exp
 #
 
@@ -10,13 +10,13 @@
 #    SUBDIR += isearch
 #    SUBDIR += iso12083
 #    SUBDIR += iso8879
-#    SUBDIR += ispell
+    SUBDIR += ispell
 #    SUBDIR += jade
 #    SUBDIR += linuxdoc
 #    SUBDIR += mgdiff
-#    SUBDIR += par
+    SUBDIR += par
 #    SUBDIR += pilot_makedoc
-#    SUBDIR += rman
+    SUBDIR += rman
 #    SUBDIR += sgmlformat
 #    SUBDIR += sp
 #    SUBDIR += unroff
