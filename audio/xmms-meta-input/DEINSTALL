@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2003/12/24 00:09:55 ben Exp $
+#
+
+case $2 in
+	DEINSTALL) cat << EOF
+
+=============================================================
+The xmms-meta-input player scripts were not wiped out by
+this deletion process.  If you don't want them around,
+please remove ${PKG_PREFIX}/lib/xmms/Input/Meta.
+=============================================================
+
+EOF
+	;;
+esac
