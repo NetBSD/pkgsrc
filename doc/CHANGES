@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6394 2004/06/29 13:49:17 cjep Exp $
+$NetBSD: CHANGES,v 1.6395 2004/06/29 14:48:05 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3175,3 +3175,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated musicpd to 0.11.1 [simonb 2004-06-29]
 	Updated mpc to 0.11.1 [simonb 2004-06-29]
 	Updated nail to 10.8 [cjep 2004-06-29]
+	Updated firefox-bin to 0.9 [grant 2004-06-29]
