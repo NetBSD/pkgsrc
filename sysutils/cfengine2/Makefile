@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/06/10 09:56:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/16 19:24:25 seb Exp $
 #
 
 .include "../../sysutils/cfengine2/Makefile.common"
-
-PKGREVISION=	1
 
 COMMENT=	Automate configuration and administration of large systems
 

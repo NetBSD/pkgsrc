@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.5 2003/05/29 21:08:26 seb Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/09/16 19:24:26 seb Exp $
 #
 
-CFENGINE_VERSION= 2.0.7p3
+CFENGINE_VERSION= 2.0.8p1
 DISTNAME=	cfengine-${CFENGINE_VERSION}
 CATEGORIES=	sysutils net
 MASTER_SITES=	ftp://ftp.iu.hio.no/pub/cfengine/ \
