@@ -3,7 +3,8 @@
 # Date created:		18 Oct 1994
 # Whom:			torstenb
 #
-# $Id: Makefile,v 1.1.1.1 1997/11/09 22:04:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/11/09 22:09:53 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
 DISTNAME=	ircii-2.9-roof
