@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/08/09 15:39:04 tron Exp $
+# $NetBSD: Makefile,v 1.29 2001/08/20 04:17:43 jlam Exp $
 #
 
 DISTNAME=		xfig.3.2.3d.full
@@ -16,13 +16,13 @@ DEPENDS+=		transfig>=3.2.3.4:../../print/transfig
 
 USE_IMAKE=		YES
 USE_XAW=		YES
+XAW_TYPE?=		3d
+
 NO_INSTALL_MANPAGES=	YES	# install.all does install.man
 INSTALL_TARGET=		install install.all
 CFLAGS+=		-I${BUILDLINK_DIR}/include/X11
 
 .include "../../mk/bsd.prefs.mk"
-
-XAW_TYPE?=		3d
 
 .if ${XAW_TYPE} != "3d"
 pre-configure:
