@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2340 2004/11/09 13:03:48 adam Exp $
+$NetBSD: TODO,v 1.2341 2004/11/09 13:21:02 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -324,7 +324,7 @@ Suggested package updates
 	o file-roller-2.8.3
 	o file-roller-2.9.0
 	o findutils-4.1.20
-	o firefox-0.10rc2
+	o firefox-1.0
 	o firefox-bin-0.10.1 [not available yet]
 	o firewalk-5.0
 	o firewalk-gtk-5.0
