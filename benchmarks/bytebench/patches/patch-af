@@ -1,0 +1,30 @@
+$NetBSD: patch-af,v 1.1 2003/03/30 02:24:43 itohy Exp $
+
+Fix LP64 problem.
+
+--- src/execl.c.orig	Thu Jul 29 06:46:58 1999
++++ src/execl.c	Sun Mar 30 00:35:24 2003
+@@ -47,6 +47,7 @@
+ 	int 	duration;
+ 	char	count_str[6], start_str[12], path_str[81], *dur_str;
+ 	time_t	start_time, this_time;
++	unsigned long ul_time;
+ 
+ #ifdef DEBUG
+ 	int count;
+@@ -77,12 +78,13 @@
+ 		duration = atoi(argv[2]);
+ 		dur_str = argv[2];
+ 		iter = (unsigned long)atoi(argv[3]); /* where are we now ? */
+-		sscanf(argv[4], "%lu", &start_time);
++		sscanf(argv[4], "%lu", &ul_time);
++		start_time = ul_time;
+ 		fullpath = argv[0];
+ 		} 
+ 
+ 	sprintf(count_str, "%lu", ++iter); /* increment the execl counter */
+-	sprintf(start_str, "%lu", start_time);
++	sprintf(start_str, "%lu", (unsigned long) start_time);
+ 	time(&this_time);
+ 	if (this_time - start_time >= duration) { /* time has run out */
+ 		fprintf(stderr, "%lu loops\n", iter);
