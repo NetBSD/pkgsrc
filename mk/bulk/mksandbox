@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.17 2002/12/31 17:42:32 cjep Exp $
+# $NetBSD: mksandbox,v 1.18 2002/12/31 17:46:12 cjep Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -42,6 +42,7 @@
 pkgsrc=/usr/pkgsrc
 src=/usr/src
 
+kernel=""
 sandboxDirs="/bin /sbin /lib /libexec /usr/X11R6 /usr/bin /usr/games /usr/include /usr/lib /usr/libdata /usr/libexec /usr/lkm /usr/share /usr/sbin /var/mail"
 
 opsys=`uname -s`
@@ -79,6 +80,7 @@ NetBSD)
 	cpprog=/bin/cp
 	gtarprog=/usr/bin/tar
 	idprog=/usr/bin/id
+	kernel=/netbsd
 	mkdirprog="/bin/mkdir -p"
 	mountflags="-t null"
 	mountprog=/sbin/mount
@@ -162,8 +164,10 @@ r3() {
 fses="\\
 EOS
 
-echo "Copying the kernel"
-$cpprog /netbsd $sandbox
+if [ ! -z "$kernel" ]; then
+	echo "Copying the kernel"
+	$cpprog $kernel $sandbox
+fi
 
 echo "Checking package hierarchy in $localbase and package database in $pkg_dbdir exist"
 $mkdirprog $sandbox/$localbase $sandbox/$pkg_dbdir
