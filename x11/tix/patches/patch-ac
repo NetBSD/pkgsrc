@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.5 1999/04/23 23:16:56 tron Exp $
+$NetBSD: patch-ac,v 1.6 1999/07/24 21:01:18 tron Exp $
 
 --- Makefile.in.orig	Thu Sep 25 20:32:45 1997
-+++ Makefile.in	Sat Apr 24 01:03:47 1999
++++ Makefile.in	Sat Jul 24 22:40:29 1999
 @@ -29,7 +29,7 @@
  # Directory in which to install the library of Tix scripts and demos
  # (note: you can set the TIX_LIBRARY environment variable at run-time to
@@ -34,6 +34,33 @@ $NetBSD: patch-ac,v 1.5 1999/04/23 23:16:56 tron Exp $
  
  
  #----------------------------------------------------------------
+@@ -88,7 +88,7 @@
+ # modify any of this stuff by hand.
+ #----------------------------------------------------------------
+ 
+-CC		 = @CC@
++CC		 = $(LIBTOOL) @CC@
+ 
+ SHLIB_CFLAGS	 = @SHLIB_CFLAGS@
+ SHLIB_LD	 = @SHLIB_LD@
+@@ -105,7 +105,7 @@
+ AC_FLAGS	 = @DEFS@ @TIX_DEFS@
+ RANLIB		 = @RANLIB@
+ INSTALL		 = @TIX_SRC_DIR@/install.sh -c
+-INSTALL_PROGRAM  = @INSTALL_PROGRAM@
++INSTALL_PROGRAM  = $(LIBTOOL) @INSTALL_PROGRAM@
+ INSTALL_DATA	 = @INSTALL_DATA@
+ 
+ TIX_LIB_FILE     = @TIX_LIB_FILE@
+@@ -133,7 +133,7 @@
+     -I$(TCL_SRC_DIR)/unix -I$(TK_GENERIC_DIR) -I$(TK_SRC_DIR)/unix \
+     $(ITCL_CFLAGS) \
+     -I$(GENERIC_DIR) -I$(UNIX_DIR) $(TK_XINCLUDES) $(TIX_SHLIB_CFLAGS) \
+-    -DTIX_LIBRARY=\"${TIX_LIBRARY}\"
++    -DTIX_LIBRARY=\"$(TIX_LIBRARY)\"
+ 
+ #----------------------------------------------------------------
+ # The information below should be usable as is. You shouldn't need
 @@ -211,29 +211,29 @@
  # scripts of TK must be included in the fixed order.
  #----------------------------------------------------------------------
@@ -85,12 +112,69 @@ $NetBSD: patch-ac,v 1.5 1999/04/23 23:16:56 tron Exp $
      $(SRC_DIR)/generic/tk8.0/console.tcl
  
  TIX_SCRIPTS = \
-@@ -265,7 +265,7 @@
+@@ -241,12 +241,10 @@
+     $(SRC_DIR)/library/pref/*.csc \
+     $(SRC_DIR)/library/*.tcl
  
- $(TIX_EXE_FILE): tixAppInit.o $(TIX_LIB_FILE)
- 	$(CC) @LD_FLAGS@ tixAppInit.o @TIX_BUILD_LIB_SPEC@ $(LIBS) \
+-all: $(TIX_LIB_FILE) $(TIX_EXE_FILE) @TIX_SAM_TARGETS@
++all: $(TIX_LIB_FILE:.a=.la) $(TIX_EXE_FILE) $(TIX_SAM_TARGETS:.a=.la)
+ 
+-$(TIX_LIB_FILE): $(OBJS)
+-	rm -f $(TIX_LIB_FILE)
+-	@TIX_MAKE_LIB@
+-	$(RANLIB) $(TIX_LIB_FILE)
++$(TIX_LIB_FILE:.a=.la): $(OBJS)
++	$(LIBTOOL) --mode=link cc -o $(.TARGET) $(OBJS:.o=.lo) -rpath $(PREFIX)/lib -version-info 1:2
+ 
+ $(TCL_SAM_FILE): $(TCL_SAM_OBJS)
+ 	rm -f $(TCL_SAM_FILE)
+@@ -258,14 +256,14 @@
+ 	@TK_MAKE_SAM@
+ 	$(RANLIB) $(TK_SAM_FILE)
+ 
+-$(TIX_SAM_FILE): $(TIX_SAM_OBJS)
+-	rm -f $(TIX_SAM_FILE)
+-	@TIX_MAKE_SAM@
+-	$(RANLIB) $(TIX_SAM_FILE)
+-
+-$(TIX_EXE_FILE): tixAppInit.o $(TIX_LIB_FILE)
+-	$(CC) @LD_FLAGS@ tixAppInit.o @TIX_BUILD_LIB_SPEC@ $(LIBS) \
 -		@TIX_LD_SEARCH_FLAGS@ -o $(TIX_EXE_FILE)
-+		@TIX_LD_SEARCH_FLAGS@ @LDFLAGS@ -o $(TIX_EXE_FILE)
++$(TIX_SAM_FILE:.a=.la): $(TIX_SAM_OBJS)
++	$(LIBTOOL) --mode=link cc -o $(.TARGET) $(TIX_SAM_OBJS:.o=.lo) -rpath $(PREFIX)/lib -version-info 1:2
++
++RPATH=	-Wl,-R$(LOCALBASE)/lib -Wl,-R$(X11BASE)/lib
++
++$(TIX_EXE_FILE): tixAppInit.o $(TIX_LIB_FILE:.a=.la)
++	$(CC) @LD_FLAGS@ tixAppInit.o @LDFLAGS@ $(RPATH) $(LIBS) \
++		@TIX_LD_SEARCH_FLAGS@ $(TIX_LIB_FILE:.a=.la) -o $(TIX_EXE_FILE)
  
  $(TCL_SAMEXE_FILE): $(UNIX_DIR)/samAppInit.c $(TCL_SAM_FILE)
  	$(CC) $(CC_SWITCHES) @LD_FLAGS@ -DUSE_TCL $(UNIX_DIR)/samAppInit.c \
+@@ -451,7 +449,7 @@
+ 	    ITK_LIBRARY=$(ITK_SRC_DIR)/library \
+ 	    IWIDGETS_LIBRARY=$(ITCL_ROOT_DIR)/$(IWIDGETS) \
+ 	    TIX_LIBRARY=$(SRC_DIR)/library \
+-    	    LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:. \
++    	    LD_LIBRARY_PATH=$(LD_LIBRARY_PATH):. \
+ 	    ./$(TIX_EXE_FILE) $(SRC_DIR)/tests/Driver.tcl
+ 
+ sa-tests: $(TIX_SAMEXE_FILE)
+@@ -473,7 +471,7 @@
+ 		fi; \
+ 	    done;
+ 	@echo "Installing $(TIX_LIB_FILE) as $(LIB_DIR)/$(TIX_LIB_FILE)"
+-	@$(INSTALL_PROGRAM) $(TIX_LIB_FILE) $(LIB_DIR)/$(TIX_LIB_FILE)
++	@$(LIBTOOL) --mode=install $(INSTALL_DATA) $(TIX_LIB_FILE:.a=.la) $(LIB_INSTALL_DIR)
+ 	@echo "Installing $(TIX_EXE_FILE) as $(BIN_DIR)/$(INST_EXE)"
+ 	@$(INSTALL_PROGRAM) $(TIX_EXE_FILE) $(BIN_DIR)/$(INST_EXE)
+ 
+@@ -510,7 +508,7 @@
+ 		fi; \
+ 	    done;
+ 	@echo "Installing $(TIX_SAM_FILE) as $(LIB_DIR)/$(TIX_SAM_FILE)"
+-	@$(INSTALL_PROGRAM) $(TIX_SAM_FILE) $(LIB_DIR)/$(TIX_SAM_FILE)
++	@$(LIBTOOL) --mode=install $(INSTALL_DATA) $(TIX_SAM_FILE:.a=.la) $(LIB_INSTALL_DIR)
+ 
+ 
+ install: _install_
