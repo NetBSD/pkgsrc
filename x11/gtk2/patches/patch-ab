@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2002/04/06 15:48:55 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.5 2002/10/08 00:02:18 jlam Exp $
 
---- demos/Makefile.am.orig	Fri Mar  8 01:36:21 2002
+--- demos/Makefile.am.orig	Mon Jul 29 20:09:49 2002
 +++ demos/Makefile.am
-@@ -19,6 +19,7 @@
+@@ -19,6 +19,7 @@ DEPS = \
  	$(top_builddir)/gtk/@gtktargetlib@
  
  LDADDS = @STRIP_BEGIN@ 							\
@@ -10,3 +10,12 @@ $NetBSD: patch-ab,v 1.4 2002/04/06 15:48:55 dmcmahill Exp $
  	$(top_builddir)/gdk-pixbuf/libgdk_pixbuf-$(GTK_API_VERSION).la	\
  	$(top_builddir)/gdk/@gdktargetlib@        			\
  	$(top_builddir)/gtk/@gtktargetlib@ 				\
+@@ -35,7 +36,7 @@ noinst_PROGRAMS = 		\
+ if CROSS_COMPILING
+ pixbuf_csource=$(GDK_PIXBUF_CSOURCE)
+ else
+-pixbuf_csource=GDK_PIXBUF_MODULEDIR=$$topdir/gdk-pixbuf/.libs $$topdir/gdk-pixbuf/gdk-pixbuf-csource
++pixbuf_csource=GDK_PIXBUF_MODULEDIR=$$topdir/gdk-pixbuf $$topdir/gdk-pixbuf/gdk-pixbuf-csource
+ endif
+ 
+ test-inline-pixbufs.h: $(top_builddir)/gdk-pixbuf/gdk-pixbuf-csource apple-red.png gnome-foot.png
