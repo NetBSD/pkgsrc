@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/06/22 08:18:05 itohy Exp $
+# $NetBSD: Makefile,v 1.22 2000/06/23 00:22:34 itohy Exp $
 #
 
 DISTNAME=		xfig.3.2.3a
@@ -28,12 +28,14 @@ pre-configure:
 	  ${SED} 's/#define.XAW3D/XCOMM &/' Imakefile.bak > Imakefile
 .endif
 
+XFIGEXAMPLES=		${PREFIX}/share/examples/xfig
+
 post-install:
-	@${MKDIR} ${X11BASE}/share/examples/xfig
-	@${CP} ${WRKSRC}/Examples/*.fig ${X11BASE}/share/examples/xfig
-	@${CP} ${WRKSRC}/Examples/*.gif ${X11BASE}/share/examples/xfig
-	@${CP} ${WRKSRC}/Examples/*.jpg ${X11BASE}/share/examples/xfig
-	@${CP} ${WRKSRC}/Examples/*.xbm ${X11BASE}/share/examples/xfig
-	@${CP} ${WRKSRC}/Examples/*.xpm ${X11BASE}/share/examples/xfig
+	@${MKDIR} ${XFIGEXAMPLES}
+	@${CP} ${WRKSRC}/Examples/*.fig ${XFIGEXAMPLES}
+	@${CP} ${WRKSRC}/Examples/*.gif ${XFIGEXAMPLES}
+	@${CP} ${WRKSRC}/Examples/*.jpg ${XFIGEXAMPLES}
+	@${CP} ${WRKSRC}/Examples/*.xbm ${XFIGEXAMPLES}
+	@${CP} ${WRKSRC}/Examples/*.xpm ${XFIGEXAMPLES}
 
 .include "../../mk/bsd.pkg.mk"
