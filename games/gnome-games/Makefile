@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/11/09 20:06:05 mycroft Exp $
+# $NetBSD: Makefile,v 1.14 2000/11/24 11:12:29 abs Exp $
 
 DISTNAME=		gnome-games-1.2.0
 CATEGORIES=		games gnome
@@ -18,6 +18,7 @@ USE_GMAKE=		# defined
 USE_X11BASE=		# defined
 USE_CURSES=		# defined
 USE_LIBTOOL=		# defined
+USE_LIBINTL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		# defined
