@@ -1,0 +1,11 @@
+--- conf/cocoon.properties.orig	Wed May 31 15:37:14 2000
++++ conf/cocoon.properties	Sun Jan 11 21:18:12 1970
+@@ -11,7 +11,7 @@
+ # Indicates whether or not Cocoon should be visible if
+ # the requested URI equals the specified one.
+ selfservlet.enabled = true
+-selfservlet.uri = /cocoon/Cocoon.xml
++selfservlet.uri = /Cocoon.xml
+ 
+ # Indicates whether or not Cocoon should handle errors internally
+ # and format the error and the exception stack trace to the client
