@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.6 2004/11/30 02:02:13 atatat Exp $
+$NetBSD: patch-ae,v 1.7 2004/12/18 05:30:33 atatat Exp $
 
 Incorporate a patch from the author that widens the NETBSDV definition
 to account for new current versioning system, properly handles the
@@ -70,14 +70,18 @@ support.
  	}
  /*
   * Obtain the inode number.
-@@ -836,6 +869,16 @@ process_overlaid_node:
+@@ -836,6 +869,20 @@ process_overlaid_node:
  	    break;
  #endif	/* defined(HASPROCFS) */
  
 +#if	defined(HASPTYFS)
 +	case PTYFSNODE:
-+	    if (pt.ptyfs_type == PTYFSptc)
-+		Lf->inode = (unsigned long)(pt.ptyfs_fileno & 0x3fffffff);
++	    if (pt.ptyfs_type == PTYFSptc) {
++		if (pt.ptyfs_fileno >= 0x3fffffff)
++		    Lf->inode = (unsigned long)(pt.ptyfs_fileno & 0x3fffffff);
++		else
++		    Lf->inode = (unsigned long)(pt.ptyfs_fileno - 1);
++	    }
 +	    else
 +		Lf->inode = (unsigned long)pt.ptyfs_fileno;
 +	    Lf->inp_ty = 1;
