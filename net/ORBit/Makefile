@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2000/07/25 04:50:37 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2000/07/31 04:14:09 jlam Exp $
 #
 
 DISTNAME=		ORBit-0.5.2
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.gnome.org/
 
 DEPENDS+=		glib>=1.2.7:../../devel/glib
 DEPENDS+=		gindent-*:../../devel/gindent
-DEPENDS+=		gettext-0.10.*:../../devel/gettext
+DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined

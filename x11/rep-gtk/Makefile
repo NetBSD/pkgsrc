@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/07/01 03:40:18 danw Exp $
+# $NetBSD: Makefile,v 1.3 2000/07/31 04:14:11 jlam Exp $
 #
 
 DISTNAME=	rep-gtk-0.11
@@ -12,7 +12,7 @@ DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	librep>=0.11:../../lang/librep
 DEPENDS+=	libglade-*:../../devel/libglade
 DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
-DEPENDS+=	gettext-*:../../devel/gettext
+DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
