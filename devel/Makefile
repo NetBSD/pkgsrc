@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.576 2004/11/28 08:06:29 taca Exp $
+# $NetBSD: Makefile,v 1.577 2004/11/30 08:25:32 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -136,6 +136,7 @@ SUBDIR+=	gdb
 SUBDIR+=	gdb6
 SUBDIR+=	gdbada
 SUBDIR+=	generate
+SUBDIR+=	gentle
 SUBDIR+=	gettext
 SUBDIR+=	gettext-lib
 SUBDIR+=	gettext-m4
@@ -483,6 +484,7 @@ SUBDIR+=	re2c
 SUBDIR+=	readline
 SUBDIR+=	roundup
 SUBDIR+=	rpc2
+SUBDIR+=	rsltc
 SUBDIR+=	rt-mysql
 SUBDIR+=	rt-pgsql
 SUBDIR+=	rt3
@@ -503,6 +505,7 @@ SUBDIR+=	ruby-textbuf
 SUBDIR+=	ruby-unit
 SUBDIR+=	ruby-zlib
 SUBDIR+=	ruby16-curses
+SUBDIR+=	ruby16-racc
 SUBDIR+=	rudiments
 SUBDIR+=	rvm
 SUBDIR+=	rx
