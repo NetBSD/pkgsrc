@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 1998/12/08 14:18:51 hwr Exp $
+# $NetBSD: Makefile,v 1.66 1998/12/26 16:07:57 garbled Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -111,6 +111,7 @@
     SUBDIR += xforms
     SUBDIR += xgas
 #    SUBDIR += xgrab
+    SUBDIR += xinvest
     SUBDIR += xkeycaps
     SUBDIR += xless
 #    SUBDIR += xloadimage
@@ -127,6 +128,7 @@
 #    SUBDIR += xpostit
 #    SUBDIR += xpostitPlus
 #    SUBDIR += xprompt
+    SUBDIR += xquote
     SUBDIR += xrolodex
     SUBDIR += xscreensaver
     SUBDIR += xsnow
