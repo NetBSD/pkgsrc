@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.170 2001/01/29 11:52:59 wiz Exp $
+# $NetBSD: mk.conf.example,v 1.171 2001/02/09 13:03:05 simonb Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -52,8 +52,7 @@
 #
 
 #PKG_DEVELOPER=	yes
-# Run some sanity checks that package developers want:
-#  * make sure patches apply with zero fuzz
+# Run a sanity check that package developers want:
 #  * run check-shlibs to see that all binaries will find their libs
 # Possible: defined, not defined
 # Default: not defined
@@ -119,7 +118,7 @@
 # setting, since package Makefiles may set this value, before
 # /etc/mk.conf is read.
 # Possible: "-Fn" where n is a number, none
-# Default: none
+# Default: "-F0"
 
 #ACCEPTABLE_LICENSES=	fee-based-commercial-use no-commercial-use \
 # 			no-profit limited-redistribution shareware
