@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 1998/09/04 22:14:26 agc Exp $
+
+Don't try to strip a script.
+
+--- Makefile.in	1998/09/02 07:47:48	1.1
++++ Makefile.in	1998/09/02 07:47:53
+@@ -51,7 +51,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = :
