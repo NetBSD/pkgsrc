@@ -1,4 +1,4 @@
-/*	$NetBSD: pl.c,v 1.1.1.1 2002/12/20 18:14:11 schmonz Exp $	*/
+/*	$NetBSD: pl.c,v 1.2 2003/01/06 04:34:16 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: pl.c,v 1.11 1997/10/08 07:46:35 charnier Exp";
 #else
-__RCSID("$NetBSD: pl.c,v 1.1.1.1 2002/12/20 18:14:11 schmonz Exp $");
+__RCSID("$NetBSD: pl.c,v 1.2 2003/01/06 04:34:16 jschauma Exp $");
 #endif
 #endif
 #endif
@@ -132,9 +132,9 @@ check_list(char *home, package_t *pkg, const char *PkgName)
 	int     dirc;
 
 	/* Open Package Database for writing */
-	if (update_pkgdb && pkgdb_open(0) == -1) {
+	if (update_pkgdb && !pkgdb_open(ReadWrite)) {
 		cleanup(0);
-		err(1, "can't open pkgdb");
+		err(EXIT_FAILURE, "can't open pkgdb");
 	}
 
 	for (dirc = 0, p = pkg->head; p; p = p->next) {

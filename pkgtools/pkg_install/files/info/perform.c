@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.1.1.1 2002/12/20 18:14:13 schmonz Exp $	*/
+/*	$NetBSD: perform.c,v 1.2 2003/01/06 04:34:16 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.1.1.1 2002/12/20 18:14:13 schmonz Exp $");
+__RCSID("$NetBSD: perform.c,v 1.2 2003/01/06 04:34:16 jschauma Exp $");
 #endif
 #endif
 #endif
@@ -78,7 +78,7 @@ pkg_do(char *pkg)
 		if (*pkg != '/') {
 			if (!getcwd(fname, FILENAME_MAX)) {
 				cleanup(0);
-				err(1, "fatal error during execution: getcwd");
+				err(EXIT_FAILURE, "fatal error during execution: getcwd");
 			}
 			len = strlen(fname);
 			(void) snprintf(&fname[len], sizeof(fname) - len, "/%s", pkg);
@@ -338,8 +338,8 @@ pkg_perform(lpkg_head_t *pkghead)
 			char   *file, *pkg;
 
 			/* pkg_info -Fa => Dump pkgdb */
-			if (pkgdb_open(1) == -1) {
-				err(1, "cannot open pkgdb");
+			if (!pkgdb_open(ReadOnly)) {
+				err(EXIT_FAILURE, "cannot open pkgdb");
 			}
 			while ((file = pkgdb_iter())) {
 				pkg = pkgdb_retrieve(file);
