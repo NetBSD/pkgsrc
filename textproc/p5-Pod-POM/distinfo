@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 15:05:02 skrll Exp $
+$NetBSD: distinfo,v 1.3 2002/03/04 00:22:20 wiz Exp $
 
-SHA1 (Pod-POM-0.02.tar.gz) = 1c38b60ea595556729d8f5c5cd510dca2e503e86
-Size (Pod-POM-0.02.tar.gz) = 26149 bytes
+SHA1 (Pod-POM-0.14.tar.gz) = 5a5271d6be3ff307fdf149d5921ebad9cb090ac0
+Size (Pod-POM-0.14.tar.gz) = 32793 bytes
