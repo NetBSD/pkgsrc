@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2004/04/27 15:18:08 adam Exp $
+
+--- ft.c.orig	2004-04-27 10:58:11.000000000 +0000
++++ ft.c
+@@ -12,6 +12,7 @@
+ #include <stdlib.h>
+ #include <ctype.h>
+ #include <sys/types.h>
++#include <ft2build.h>
+ #include <freetype/freetype.h>
+ #include <freetype/ftglyph.h>
+ #include <freetype/ftsnames.h>
