@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/31 00:17:45 salo Exp $
-bin/BitchX
-bin/BitchX-1.0c19
-bin/scr-bx
+@comment $NetBSD: PLIST,v 1.5 2003/05/05 06:06:11 grant Exp $
+bin/${GTK}BitchX
+bin/${GTK}BitchX-1.0c19
+${NOT_GTK}bin/scr-bx
 man/man1/BitchX.1
 share/bx/BitchX.doc
 share/bx/BitchX.help
@@ -961,7 +961,7 @@ share/bx/translation/SWEDISH_NAMES_COM.bz2
 share/bx/translation/SWISS.bz2
 share/bx/translation/UNITED_KINGDOM.bz2
 share/bx/translation/UNITED_KINGDOM_COM.bz2
-share/bx/wserv
+${NOT_GTK}share/bx/wserv
 @dirrm share/bx/translation
 @dirrm share/bx/script
 @dirrm share/bx/help/8_Scripts
