@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6827 2004/08/09 11:25:52 adam Exp $
+$NetBSD: CHANGES,v 1.6828 2004/08/09 11:51:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3765,3 +3765,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated png to 1.2.6rc2 [recht 2004-08-09]
 	Updated nail to 11.1 [cjep 2004-08-09]
 	Updated scummvm to 0.6.1b [adam 2004-08-09]
+	Updated ImageMagick to 6.0.4-3 [adam 2004-08-09]
