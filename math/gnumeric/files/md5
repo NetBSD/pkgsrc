@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.11 2000/06/26 21:55:48 rh Exp $
+$NetBSD: md5,v 1.12 2000/10/17 17:24:19 rh Exp $
 
-MD5 (gnumeric-0.56.tar.gz) = 674581cf58fc5b5158fb5103327955be
+MD5 (gnumeric-0.57.tar.gz) = abe5002a4b812c86c85363cc24ac3a8a
