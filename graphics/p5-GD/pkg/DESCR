@@ -1,0 +1,3 @@
+This is a port of Thomas Boutell's gd graphics library.  GD allows
+creating color drawings using a large number of graphics primitives,
+and emit the drawings as PNG files. 
