@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/03/28 17:17:41 jmc Exp $
+# $NetBSD: Makefile,v 1.41 2002/04/08 12:11:43 dmcmahill Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -31,8 +31,8 @@ WRKSRC=			${WRKDIR}/objdir
 
 .if (${OPSYS} != SunOS)
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld --infodir=${PREFIX}/info
-
 GCC_PREFIX=		${LOCALBASE}/${PKGNAME}
+PLIST_SRC=              ${WRKDIR}/PLIST_DYNAMIC
 .else
 .if (${CC} != gcc)
 ALL_TARGET=		bootstrap
@@ -80,6 +80,10 @@ post-install:
 	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/curses.h ${PREFIX}/${PKGNAME}/bin/cc
 	${LN} -s gcc ${PREFIX}/${PKGNAME}/bin/cc
 	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGNAME}.mk
+	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
+	${FIND} ${PREFIX}/${PKGNAME} -type f -print | ${SORT} -r | ${SED} 's;${PREFIX}/;;g' >> ${PLIST_SRC}
+	${FIND} ${PREFIX}/${PKGNAME} -type l -print | ${SORT} -r | ${SED} 's;${PREFIX}/;;g' >> ${PLIST_SRC}
+	${FIND} ${PREFIX}/${PKGNAME} -type d -print | ${SORT} -r | ${SED} 's;${PREFIX}/;@dirrm ;g' >> ${PLIST_SRC}
 .else
 # remove empy file and directories that show up when one
 # does make install; make deinstall; make install
