@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/18 20:57:11 recht Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/04 18:31:44 recht Exp $
 #
 
 DISTNAME=	Python-2.3
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--without-threads
 CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	OPT="${CFLAGS}"
 # XXX configure would pull in libpthread
 CONFIGURE_ENV+=		ac_cv_search_sem_init=no
 
