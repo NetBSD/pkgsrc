@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2001/07/15 08:43:34 jlam Exp $
+
+--- util/wmaker.inst.in.orig	Mon Feb 19 20:28:11 2001
++++ util/wmaker.inst.in
+@@ -293,7 +293,7 @@
+  echo "menu that will be used by default is the property list one. Read"
+  echo "    $GSDIR/Library/WindowMaker/README"
+  echo "for information on how to change it."
+-    if [ "${inst_menu%.*}" == "menu" ]; then
++    if [ "${inst_menu%.*}" = "menu" ]; then
+  echo "However, since you have locale set to $LOCALE and plmenu for such locale"
+  echo "was not found, your WMRootMenu contains path to text formated menu:"
+  echo "    $GSDIR/Library/WindowMaker/$inst_menu"
