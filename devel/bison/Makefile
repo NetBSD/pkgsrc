@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/06/11 06:34:25 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/06/19 04:15:24 jlam Exp $
 
 DISTNAME=		bison-1.28
 CATEGORIES=		devel
@@ -10,7 +10,8 @@ COMMENT=		GNU yacc(1) replacement
 
 BUILD_USES_MSGFMT=	yes
 
-USE_LIBINTL=		# defined
+#USE_LIBINTL=		# defined
+USE_BUILDLINK_ONLY=	# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
@@ -19,4 +20,5 @@ CPPFLAGS+=		-Dunix		# for $TMPDIR parsing
 
 INFO_FILES=		bison.info
 
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
