@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2001/02/25 04:18:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.29 2001/02/27 02:54:27 itojun Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
-# trick to avoid version number issue - 9.1.1rc1 is prior to 9.1.1
-PKGNAME=	bind-9.1.0.1
+# trick to avoid version number issue - 9.1.1rc3 is prior to 9.1.1
+PKGNAME=	bind-9.1.0.3
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
@@ -16,7 +16,7 @@ COMMENT=	Version 9 of the Berkeley Internet Name Daemon, implementation of DNS
 BUILD_DEFS+=	USE_INET6
 
 # No need to set USE_INET6, will auto-detect.
-BIND_VERSION=	9.1.1rc1
+BIND_VERSION=	9.1.1rc3
 DIST_SUBDIR=	bind/${BIND_VERSION}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-threads	# Until we have real threads
@@ -28,9 +28,8 @@ CONFIGURE_ARGS+=--with-libtool=yes \
 LDFLAGS+=	-Wl,-R${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
 # use external OpenSSL.  comment the following two lines out to use
 # OpenSSL shipped with BIND9.
-# 9.1.1rc1 has errors in openssh include path determination.
-#USE_SSL=	yes
-#CONFIGURE_ARGS+=--with-openssl=${LOCALBASE}
+USE_SSL=	yes
+CONFIGURE_ARGS+=--with-openssl=${LOCALBASE}
 
 post-build:
 	${SED} \
