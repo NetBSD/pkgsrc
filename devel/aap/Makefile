@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/11/23 22:34:22 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/25 14:27:05 wiz Exp $
 
 DISTNAME=	exec-0.107
 PKGNAME=	aap-0.107
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.a-a-p.org/
-COMMENT=
+COMMENT=	make(1) replacement
 
 WRKSRC=		${WRKDIR}
 
