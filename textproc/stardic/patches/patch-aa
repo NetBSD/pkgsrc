@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/06/15 09:21:43 shell Exp $
+
+--- makefile.orig	Sat Jan 29 12:07:34 2000
++++ makefile
+@@ -1,15 +1,16 @@
+ TRANSOBJ= trans.o image.o regdef.o
++TRANSDIR= $(PREFIX)/share/stardic
+ 
+ # modify those variables for yourself
+ 
+ # for linux
+-LDFLAGS= -L/usr/X11/lib -lXm -lXt -lXext -lX11
++LDFLAGS+= -L/usr/X11/lib -lXm -lXt -lXext -lX11
+ 
+ # for solaris
+ # LDFLAGS= -lXm -lXt -lXext -lX11
+ 
+ # for linux
+-CPPFLAGS= -I/usr/X11/include
++CPPFLAGS+= -I/usr/X11/include -DTRANSHOME=\"$(TRANSDIR)\"
+ 
+ # for solaris
+ #CPPFLAGS= -I/usr/dt/include -I/usr/openwin/include
+@@ -18,14 +19,22 @@
+ #CFLAGS=  +w -DNDEBUG
+ 
+ # for g++
+-CFLAGS=  -Wall -DNDEBUG
++CFLAGS+=  -Wall -DNDEBUG
+ 
+-CC= g++
++CC= $(CXX)
+ #CC= CC
+ 
+ .KEEP_STATE:
+-stardic:$(TRANSOBJ)
++all: $(TRANSOBJ)
+ 	$(LINK.c) -o stardic $(TRANSOBJ)
++	gzip hzfont/*.pcf
+ 
+ .cc.o:
+ 	$(COMPILE.c) $<
++
++install:
++	$(BSD_INSTALL_PROGRAM) stardic $(PREFIX)/bin
++	$(BSD_INSTALL_DATA_DIR) $(TRANSDIR)
++	$(BSD_INSTALL_DATA) transdic yblib *.gif *.xbm $(TRANSDIR)
++	$(BSD_INSTALL_DATA_DIR) $(TRANSDIR)/hzfont
++	$(BSD_INSTALL_DATA) hzfont/fonts.dir hzfont/*.pcf.gz $(TRANSDIR)/hzfont

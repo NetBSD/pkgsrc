@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/15 09:21:43 shell Exp $
+bin/stardic
+share/stardic/back.gif
+share/stardic/chinabyte.gif
+share/stardic/exitmask.xbm
+share/stardic/help.gif
+share/stardic/helpmask.xbm
+share/stardic/hzfont/fonts.dir
+share/stardic/hzfont/hz16.pcf.gz
+share/stardic/hzfont/hz16ft.pcf.gz
+share/stardic/hzfont/yb10x20.pcf.gz
+share/stardic/icon.gif
+share/stardic/iconmask.xbm
+share/stardic/joyo.gif
+share/stardic/last.gif
+share/stardic/lastmask.xbm
+share/stardic/next.gif
+share/stardic/nextmask.xbm
+share/stardic/sina.gif
+share/stardic/transdic
+share/stardic/wri.gif
+share/stardic/wuhan.gif
+share/stardic/yblib
+@dirrm share/stardic/hzfont
+@dirrm share/stardic
