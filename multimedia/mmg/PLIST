@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/08 18:22:14 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/07/21 00:04:30 salo Exp $
 bin/mmg
 man/man1/mmg.1
 share/doc/html/mmg/guide.html
@@ -7,6 +7,7 @@ share/doc/html/mmg/images/addremovefiles.png
 share/doc/html/mmg/images/attachmentoptions.png
 share/doc/html/mmg/images/audiotrackoptions.png
 share/doc/html/mmg/images/chaptereditor.png
+share/doc/html/mmg/images/jobmanager.png
 share/doc/html/mmg/images/movietitle.png
 share/doc/html/mmg/images/muxingwindow.png
 share/doc/html/mmg/images/selectmkvmergeexecutable.png
