@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3326 2005/03/29 14:35:46 wiz Exp $
+$NetBSD: TODO,v 1.3327 2005/03/29 14:40:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -883,7 +883,6 @@ Suggested package updates
 	o pstree-2.26
 	o pth-2.0.4
 	o puf-0.93.3
-	o putty-0.57
 	o puzzle-5.2
 	o pv-0.9.0
 	o pvs-3.2
