@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 1998/07/14 16:21:35 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/08/10 15:40:19 tv Exp $
 include/gdbm.h
 @unexec %D/bin/install-info --delete %D/info/gdbm.info %D/info/dir
 info/gdbm.info
 @exec   %D/bin/install-info          %D/info/gdbm.info %D/info/dir
 lib/libgdbm.a
-lib/libgdbm_pic.a
 lib/libgdbm.so.1.73
-man/man3/gdbm.3.gz
+man/man3/gdbm.3
