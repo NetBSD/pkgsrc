@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2001/10/24 22:11:09 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/02/26 09:41:39 martti Exp $
 #
 
-COMMENT=		small, fast and light-weight window manager
+COMMENT=		Small, fast and light-weight window manager
 
 CONFLICTS+=		icewm-gnome-[0-9]*
 

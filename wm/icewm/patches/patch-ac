@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2002/02/26 09:41:40 martti Exp $
 
 --- src/aapm.h.orig	Sun Dec  5 11:47:02 1999
 +++ src/aapm.h	Mon Mar  6 22:20:48 2000
 @@ -3,6 +3,10 @@
  #include "ytimer.h"
  
- #ifdef CONFIG_APM
+ #ifdef CONFIG_APPLET_APM
 +#if defined(__NetBSD__)
 +#define APMDEV "/dev/apm"
 +#endif
