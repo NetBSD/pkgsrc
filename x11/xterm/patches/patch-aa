@@ -1,8 +1,14 @@
-$NetBSD: patch-aa,v 1.1 2004/10/16 18:19:54 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2004/10/21 07:39:43 minskim Exp $
 
 --- configure.in.orig	Sun Aug 15 16:07:59 2004
 +++ configure.in
-@@ -81,6 +81,7 @@ AC_CHECK_FUNCS( \
+@@ -76,11 +76,13 @@ AC_CHECK_FUNCS( \
+ 	bcopy \
+ 	gethostname \
+ 	getlogin \
++	initgroups \
+ 	memmove \
+ 	strerror \
  	strftime \
  	tcgetattr \
  	waitpid \
