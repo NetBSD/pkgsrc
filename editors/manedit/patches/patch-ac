@@ -1,0 +1,36 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/01/21 18:18:04 fredb Exp $
+
+--- manedit.1.orig	Sat Jan 20 12:39:31 2001
++++ manedit.1
++@@ -50,16 +50,14 @@
++ Output version information and exit.
++ .LP 
++ Most other customizations can be performed in the
++-preferances menu.
+++preferences menu.
++ .SH "FILES"
+@@ -55,11 +55,9 @@
+ .LP 
+ \fI$HOME/.maneditrc\fP
+ .br 
+-\fI/usr/share/manedit/\fP 
++\fI@PREFIX@/share/manedit/\fP 
+ .br 
+-\fI/usr/share/manedit/help/\fP
+-.br 
+-\fI/usr/share/manedit/templates/\fP
++\fI@PREFIX@/share/manedit/templates/\fP
+ .SH "ENVIRONMENT VARIABLES"
+ .TP 
+ \fBHOME\fP
+@@ -84,5 +82,9 @@
+ .LP 
+ WolfPack Entertainment \- http://wolfpack.twu.net/contacts.html
+ .SH "SEE ALSO"
+-.LP 
++.LP
+ ManEdit's home page at http://wolfpack.twu.net/ManEdit/
++.LP
++manpage_writing_procedures(7)
++.br
++manpage_xml_reference(7)
