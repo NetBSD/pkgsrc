@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 1998/03/05 22:26:26 mycroft Exp $
+bin/rat
+man/man1/rat.1.gz
