@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/07/12 02:36:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1999/09/20 00:53:05 tron Exp $
 #
 
 DISTNAME=	compupic-current-i386-Linux
@@ -9,7 +9,7 @@ MASTER_SITES=	http://linux.compupic.com/files/
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://linux.compupic.com/
 
-DEPENDS+=	suse_linux-6.1:../../emulators/suse_linux
+DEPENDS+=	suse_linux-6.1p1:../../emulators/suse_linux
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386
 
