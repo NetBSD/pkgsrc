@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/01/08 08:11:42 martti Exp $
+$NetBSD: distinfo,v 1.5 2004/03/10 07:41:16 martti Exp $
 
-SHA1 (gtk-xfce-engine-2.1.8.tar.gz) = ae75c7cfcb71ef879d6b1628bda25bac4849d763
-Size (gtk-xfce-engine-2.1.8.tar.gz) = 330448 bytes
+SHA1 (gtk-xfce-engine-2.1.9.tar.gz) = 2cd1f13ec0f046481eba40177219b69503db373a
+Size (gtk-xfce-engine-2.1.9.tar.gz) = 347548 bytes

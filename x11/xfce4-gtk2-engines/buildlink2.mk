@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2004/01/08 08:11:42 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/03/10 07:41:16 martti Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-gtk2-engine.
 #
@@ -9,7 +9,7 @@
 XFCE4_GTK2_ENGINE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-gtk2-engine
-BUILDLINK_DEPENDS.xfce4-gtk2-engine?=		xfce4-gtk2-engine>=2.1.8
+BUILDLINK_DEPENDS.xfce4-gtk2-engine?=		xfce4-gtk2-engine>=2.1.9
 BUILDLINK_PKGSRCDIR.xfce4-gtk2-engine?=		../../x11/xfce4-gtk2-engines
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-gtk2-engine=xfce4-gtk2-engine
