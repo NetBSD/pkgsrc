@@ -4,7 +4,7 @@
 # Date Created:				30 January 1998
 # Whom:					root@garbled.futureone.com
 #
-# $NetBSD: Makefile,v 1.1 1998/02/14 22:06:04 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/02/20 20:38:14 hubertf Exp $
 
 DISTNAME=		xmame-0.30.1_src
 PKGNAME=		xmame-0.30.1
@@ -15,6 +15,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		root@garbled.futureone.com
 
 RUN_DEPENDS=		unzip:${PORTSDIR}/archivers/unzip
+LIB_DEPENDS=		Xpm.4.:${PORTSDIR}/graphics/xpm
 
 WRKSRC=			${WRKDIR}/xmame-0.30.1
 USE_X11=		yes
