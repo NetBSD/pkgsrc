@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.21 2004/10/15 23:48:44 snj Exp $
+$NetBSD: distinfo,v 1.22 2005/02/24 08:45:07 agc Exp $
 
 SHA1 (gqview-1.4.5.tar.gz) = 3dda2e5bafaa4a49d20871e8d8806aff09a8d5c0
+RMD160 (gqview-1.4.5.tar.gz) = 8658732e19cce677ed5bd65466e7f8fae96b1f6e
 Size (gqview-1.4.5.tar.gz) = 1222801 bytes

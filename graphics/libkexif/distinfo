@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/09 10:33:36 seb Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 08:45:09 agc Exp $
 
 SHA1 (libkexif-0.2.1.tar.bz2) = 504b460b70d1a17ce88c0cf94a1aa6b7d4718371
+RMD160 (libkexif-0.2.1.tar.bz2) = c9d936ba2bb8207a433e06f744d54f5b75f4aa0d
 Size (libkexif-0.2.1.tar.bz2) = 441169 bytes
