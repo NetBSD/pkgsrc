@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/09/22 06:11:38 garbled Exp $
+# $NetBSD: Makefile,v 1.12 1998/11/13 01:18:13 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/08/27 19:31:37 jmacd Exp
 #
 
@@ -7,12 +7,12 @@ CATEGORIES=	lang
 MASTER_SITES=	http://www.neci.nj.nec.com/homepages/kelsey/
 EXTRACT_SUFX=	.tgz
 
-NOT_FOR_ARCHS=	alpha	# *severe* problems.  Bus error, alignment
-
 MAINTAINER= 	packages@netbsd.org
 HOMEPAGE=	http://www.neci.nj.nec.com/homepages/kelsey/
 
 CONFLICTS=	scheme48-0.46
+
+NOT_FOR_ARCHS=	alpha	# *severe* problems.  Bus error, alignment
 
 GNU_CONFIGURE=  yes
 CONFIGURE_ARGS+= --prefix=${PREFIX}

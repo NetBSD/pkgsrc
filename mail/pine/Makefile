@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1998/10/04 00:11:36 tv Exp $
+# $NetBSD: Makefile,v 1.26 1998/11/13 01:21:40 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -7,8 +7,6 @@ PKGNAME=        pine-4.02
 CATEGORIES=     mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
 
-NOT_FOR_ARCHS=	alpha	#LP64 problems
-
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.washington.edu/pine/
 
@@ -16,6 +14,8 @@ HOMEPAGE=	http://www.washington.edu/pine/
 DEPENDS=	pico-3.2:../../editors/pico
 
 CONFLICTS=	pine-3.96 pine-4.00
+
+NOT_FOR_ARCHS=	alpha	#LP64 problems
 
 do-configure:
 	${CP} -f ${WRKSRC}/pine/osdep/os-neb.h ${WRKSRC}/pine/osdep/os-neb.h.orig
