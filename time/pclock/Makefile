@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/04 16:10:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/05 11:43:22 jlam Exp $
 #
 
 DISTNAME=	pclock-0.13.1
@@ -10,8 +10,8 @@ MAINTAINER=	salo@Xtrmntr.org
 HOMEPAGE=	http://www.kourakos.com/~awk/programs/pclock/
 COMMENT=	Simple analog clock designed for WindowMaker
 
+USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
-USE_BUILDLINK_ONLY=	YES
 
 MAKE_ENV+=	LN=${LN}
 
@@ -23,6 +23,5 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/CREDITS ${PREFIX}/share/doc/pclock
 		${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/pclock
 
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
