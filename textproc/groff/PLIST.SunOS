@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.2 2003/06/05 04:16:25 grant Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.3 2003/07/31 22:02:07 seb Exp $
 bin/addftinfo
 bin/afmtodit
 bin/eqn2graph
@@ -29,7 +29,6 @@ bin/pic2graph
 bin/post-grohtml
 bin/pre-grohtml
 bin/tfmtodit
-@unexec ${INSTALL_INFO} --delete %D/info/groff %D/info/dir
 info/groff
 info/groff-1
 info/groff-10
@@ -42,7 +41,6 @@ info/groff-6
 info/groff-7
 info/groff-8
 info/groff-9
-@exec ${INSTALL_INFO} %D/info/groff %D/info/dir
 lib/groff/site-tmac/an.tmac
 lib/groff/site-tmac/ansun.tmac
 lib/groff/site-tmac/bib.tmac
