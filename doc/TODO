@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3311 2005/03/27 20:50:34 wiz Exp $
+$NetBSD: TODO,v 1.3312 2005/03/27 20:54:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -730,7 +730,6 @@ Suggested package updates
 	o p5-CDDB-1.15
 	o p5-CGI-3.07
 	o p5-Cache-Cache-1.04
-	o p5-Class-MethodMaker-2.06
 	o p5-Class-Trigger-0.09
 	o p5-Compress-Bzip2-1.03
 	o p5-Convert-BER-1.3101
