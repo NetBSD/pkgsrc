@@ -1,4 +1,4 @@
-$NetBSD: patch-03,v 1.2 1999/09/29 15:14:29 bouyer Exp $
+$NetBSD: patch-ad,v 1.1 1999/10/04 17:35:52 bouyer Exp $
 
 --- conf/dictgrps.conf.orig	Fri Dec 13 10:32:34 1996
 +++ conf/dictgrps.conf	Fri Jan 31 11:16:16 1997
