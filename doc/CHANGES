@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7515 2004/10/21 19:55:04 tv Exp $
+$NetBSD: CHANGES,v 1.7516 2004/10/21 21:27:29 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4806,3 +4806,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lsof to 4.73 [atatat 2004-10-21]
 	Added py-pgnotify-0.1 [darcy 2004-10-21]
 	Updated rsync to 2.6.3 [tv 2004-10-21]
+	Updated sylpheed-gtk2 to 0.9.12.20040918 [xtraeme 2004-10-21]
