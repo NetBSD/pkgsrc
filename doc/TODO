@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1076 2003/11/27 17:02:24 wiz Exp $
+$NetBSD: TODO,v 1.1077 2003/11/27 17:40:02 abs Exp $
 
 Suggested new packages
 ======================
@@ -135,7 +135,6 @@ Suggested package updates
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0.1
-	o abcde-2.1.9
 	o amanda-2.4.4p1
 	o anjuta-1.0.2
 	o arch-1.1pre5 [pkg/23022]
