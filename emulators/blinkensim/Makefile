@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/03 18:49:40 reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/16 04:09:19 salo Exp $
 #
 
 DISTNAME=	blinkensim-2.2
@@ -12,13 +12,13 @@ COMMENT=	Blinkenlights graphics simulator
 
 DEPENDS+=	blinkenthemes>=0.8:../../graphics/blinkenthemes
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 post-install:
 	cd ${PREFIX}/bin && ${LN} -s blinkensim-gtk blinkensim
 
-.include "../../devel/blib/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/blib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
