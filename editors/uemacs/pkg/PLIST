@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2000/03/23 22:08:53 tron Exp $
 bin/uemacs
 share/uemacs/.emacsrc
 share/uemacs/bpage.cmd

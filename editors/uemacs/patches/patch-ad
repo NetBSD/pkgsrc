@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 2000/03/23 22:08:52 tron Exp $
+
 --- src/lock.c.orig	Sun Nov 19 03:09:22 1995
 +++ src/lock.c	Wed Mar 25 13:56:13 1998
 @@ -10,10 +10,17 @@
