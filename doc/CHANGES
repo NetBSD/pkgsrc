@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2317 2003/05/25 08:10:48 jmmv Exp $
+$NetBSD: CHANGES,v 1.2318 2003/05/25 10:03:06 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2142,3 +2142,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mencoder to 0.90nb3 [dan 2003-05-25]
 	Updated libgnome to 2.2.1 [jmmv 2003-05-25]
 	Updated gnome-mime-data to 2.2.0nb1 [jmmv 2003-05-25]
+	Updated fnlib to 0.5nb4 [salo 2003-05-25]
+	Updated enlightenment to 0.16.4nb3 [salo 2003-05-25]
