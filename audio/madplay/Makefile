@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/03/01 15:56:58 adam Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/22 23:02:11 snj Exp $
 #
 
 DISTNAME=	madplay-0.15.2b
@@ -17,6 +17,9 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=		F77=${FALSE}
 
 .include "../../mk/bsd.prefs.mk"
 
