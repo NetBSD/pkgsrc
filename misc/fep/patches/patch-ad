@@ -1,11 +1,51 @@
-$NetBSD: patch-ad,v 1.2 2000/02/13 14:20:42 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.3 2003/11/07 16:35:51 christos Exp $
 
---- fep_defs.h.orig	Mon May 10 01:23:33 1993
-+++ fep_defs.h	Sun Feb 13 09:17:42 2000
-@@ -6,5 +6,5 @@
- #endif lint
+--- fep_defs.h.orig	1993-05-10 01:23:33.000000000 -0400
++++ fep_defs.h	2003-11-07 11:14:52.000000000 -0500
+@@ -3,9 +3,9 @@
+ #ifndef lint
+ # define FEP_DEFS \
+     "$Header: /cvsroot/pkgsrc/misc/fep/patches/patch-ad,v 1.3 2003/11/07 16:35:51 christos Exp $ (SRA)"
+-#endif lint
++#endif /* lint */
  
 -#define	MAXCOMLEN		512	/* maximum command length */
 +#define	MAXCMDLEN		512	/* maximum command length */
  #define MAXARGS			64	/* maximum number of arguments */
  #define ON			1	/* on switch */
+ #define OFF			0	/* off switch */
+@@ -31,11 +31,11 @@
+ # define isctlchar(c)	(c && !iskanji(c) && (!(c&0140) || c=='\177'))
+ # define iswordchar(c)	(c && (iskanji(c) || isalnum(c) || iscntrl(c)))
+ # define isWordchar(c)	((c) && !isspace((c)))
+-#else KANJI
++#else /* KANJI */
+ # define isctlchar(c)	(c && (!(c&0140) || c=='\177'))
+ # define iswordchar(c)	(isalnum(c) || iscntrl(c))
+ # define isWordchar(c)	((c) && !isspace((c)))
+-#endif KANJI
++#endif /* KANJI */
+ #define unctl(c)	(((c)=='\177') ? '?' : ((c) >= 040) ? (c) : (c)|0100)
+ #define toctrl(c)	((c)&~0100)
+ #define ctrl(c)		((c)&037)
+@@ -53,17 +53,17 @@
+ #ifdef KANJI
+ # define CHAR		unsigned char
+ # define CHARMASK	0377
+-#else KANJI
++#else /* KANJI */
+ # define CHAR		char
+ # define CHARMASK	0177
+-#endif KANJI
++#endif /* KANJI */
+ 
+ /*
+  * Only one machine I know alloca() works is vax.
+  */
+ #ifdef vax
+ # define ALLOCA
+-#endif vax
++#endif /* vax */
+ 
+ /*
+  * Typedef's
