@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/03/24 14:49:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/06/05 14:52:35 jschauma Exp $
 bin/irb
 bin/ruby
 bin/ruby${_RUBY_SUFFIX}
@@ -11,13 +11,13 @@ ${RUBY_NOEXT_DBM}${RUBY_ARCHLIBDIR}/dbm.so
 ${RUBY_ARCHLIBDIR}/defines.h
 ${RUBY_ARCHLIBDIR}/dln.h
 ${RUBY_ARCHLIBDIR}/env.h
-${RUBY_ARCHLIBDIR}/etc.so
+${RUBY_NOEXT_ETC}${RUBY_ARCHLIBDIR}/etc.so
 ${RUBY_ARCHLIBDIR}/fcntl.so
 ${RUBY_ARCHLIBDIR}/intern.h
 ${RUBY_ARCHLIBDIR}/lib${RUBY_NAME}.a
 ${RUBY_ARCHLIBDIR}/nkf.so
 ${RUBY_ARCHLIBDIR}/node.h
-${RUBY_ARCHLIBDIR}/pty.so
+${RUBY_NOEXT_PTY}${RUBY_ARCHLIBDIR}/pty.so
 ${RUBY_ARCHLIBDIR}/rbconfig.rb
 ${RUBY_ARCHLIBDIR}/re.h
 ${RUBY_ARCHLIBDIR}/regex.h
@@ -25,9 +25,9 @@ ${RUBY_ARCHLIBDIR}/ruby.h
 ${RUBY_ARCHLIBDIR}/rubyio.h
 ${RUBY_ARCHLIBDIR}/rubysig.h
 ${RUBY_ARCHLIBDIR}/sdbm.so
-${RUBY_ARCHLIBDIR}/socket.so
+${RUBY_NOEXT_SOCK}${RUBY_ARCHLIBDIR}/socket.so
 ${RUBY_ARCHLIBDIR}/st.h
-${RUBY_ARCHLIBDIR}/syslog.so
+${RUBY_NOEXT_SYSL}${RUBY_ARCHLIBDIR}/syslog.so
 ${RUBY_ARCHLIBDIR}/util.h
 ${RUBY_ARCHLIBDIR}/version.h
 ${RUBY_LIBDIR}/English.rb
@@ -44,7 +44,7 @@ ${RUBY_LIBDIR}/debug.rb
 ${RUBY_LIBDIR}/delegate.rb
 ${RUBY_LIBDIR}/e2mmap.rb
 ${RUBY_LIBDIR}/eregex.rb
-${RUBY_LIBDIR}/expect.rb
+${RUBY_NOEXT_EXPECT}${RUBY_LIBDIR}/expect.rb
 ${RUBY_LIBDIR}/final.rb
 ${RUBY_LIBDIR}/finalize.rb
 ${RUBY_LIBDIR}/find.rb
