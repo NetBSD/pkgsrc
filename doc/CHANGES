@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9430 2005/03/05 14:23:28 wiz Exp $
+$NetBSD: CHANGES,v 1.9431 2005/03/05 15:00:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1283,3 +1283,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated skk to 12.2.0nb1 [uebayasi 2005-03-05]
 	Updated pango to 1.8.1 [wiz 2005-03-05]
 	Updated curl to 7.13.1 [wiz 2005-03-05]
+	Updated tkdiff to 4.0.2 [minskim 2005-03-05]
