@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2886 2005/01/12 16:01:55 adam Exp $
+$NetBSD: TODO,v 1.2887 2005/01/12 16:10:01 adam Exp $
 
 Suggested new packages
 ======================
@@ -668,7 +668,6 @@ Suggested package updates
 	o lout-3.30
 	o lq-sp-1.3.4.11
 	o lsh-2.0
-	o ltris-1.0.7
 	o lv-451
 	o lwp-1.12
 	o maelstrom-x11-2.0.7
