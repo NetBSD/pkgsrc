@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/25 14:19:42 xtraeme Exp $
+
+--- trickle-overload.c.orig	2003-06-04 18:35:52.000000000 +0200
++++ trickle-overload.c	2003-06-04 18:36:45.000000000 +0200
+@@ -476,7 +476,7 @@ select(int nfds, fd_set *rfds, fd_set *w
+ #if defined(__linux__) || (defined(__svr4__) && defined(__sun__))
+ int
+ poll(struct pollfd *fds, nfds_t nfds, int __timeout)
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+ int
+ poll(struct pollfd *fds, unsigned int nfds, int __timeout)
+ #else
