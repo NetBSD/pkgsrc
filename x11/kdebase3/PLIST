@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2004/09/22 08:10:05 jlam Exp $
+@comment $NetBSD: PLIST,v 1.24 2004/10/13 11:54:11 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -244,6 +244,7 @@ lib/kde3/kio_pop3.la
 lib/kde3/kio_print.la
 lib/kde3/kio_settings.la
 lib/kde3/kio_sftp.la
+${HAVE_SMB}lib/kde3/kio_smb.la
 lib/kde3/kio_smtp.la
 lib/kde3/kio_tar.la
 lib/kde3/kio_thumbnail.la
@@ -1762,6 +1763,7 @@ share/kde/apps/konqueror/about/specs.html
 share/kde/apps/konqueror/about/specs_rtl.html
 share/kde/apps/konqueror/about/tips.html
 share/kde/apps/konqueror/about/tips_rtl.html
+${HAVE_SMB}share/kde/apps/konqueror/dirtree/remote/smb-network.desktop
 share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde1.png
 share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde2.png
 share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde3.png
@@ -3193,6 +3195,8 @@ share/kde/mimelnk/application/x-kate-project.desktop
 share/kde/mimelnk/application/x-konsole.desktop
 share/kde/mimelnk/application/x-ksysguard.desktop
 share/kde/mimelnk/application/x-ktheme.desktop
+${HAVE_SMB}share/kde/mimelnk/application/x-smb-server.desktop
+${HAVE_SMB}share/kde/mimelnk/application/x-smb-workgroup.desktop
 share/kde/mimelnk/fonts/folder.desktop
 share/kde/mimelnk/fonts/system-folder.desktop
 share/kde/mimelnk/print/class.desktop
@@ -3340,6 +3344,7 @@ share/kde/services/searchproviders/wikipedia.desktop
 share/kde/services/searchproviders/wordref.desktop
 share/kde/services/settings.protocol
 share/kde/services/sftp.protocol
+${HAVE_SMB}share/kde/services/smb.protocol
 share/kde/services/smtp.protocol
 share/kde/services/smtps.protocol
 share/kde/services/tar.protocol
