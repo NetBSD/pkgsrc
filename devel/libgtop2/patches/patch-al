@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.3 2003/12/13 20:27:42 xtraeme Exp $
+$NetBSD: patch-al,v 1.4 2004/03/19 22:55:30 kristerw Exp $
 
---- sysdeps/freebsd/prockernel.c.orig	Sat Sep  6 00:34:15 2003
-+++ sysdeps/freebsd/prockernel.c	Sat Sep  6 00:45:41 2003
+--- sysdeps/freebsd/prockernel.c.orig	2003-10-19 18:55:32.000000000 +0200
++++ sysdeps/freebsd/prockernel.c	2004-03-19 23:39:38.000000000 +0100
 @@ -34,12 +34,9 @@
  #if (!defined __OpenBSD__) && (!defined __bsdi__)
  #include <sys/user.h>
@@ -123,7 +123,7 @@ $NetBSD: patch-al,v 1.3 2003/12/13 20:27:42 xtraeme Exp $
  		       (unsigned long) &u_addr->u_pcb,
  		       (char *) &pcb, sizeof (pcb)) == sizeof (pcb))
  		{
-@@ -167,18 +215,52 @@
+@@ -167,18 +215,55 @@
  			/*xxx FreeBSD/Alpha? */
  #endif
  #else
@@ -139,6 +139,9 @@ $NetBSD: patch-al,v 1.3 2003/12/13 20:27:42 xtraeme Exp $
 +#if defined(__NetBSD__)
 +#if defined(__m68k__)
 +			buf->kstk_esp = (u_int64_t) pcb.pcb_usp;
++			buf->kstk_eip = (u_int64_t) 0;
++#elif defined(__x86_64__)
++			buf->kstk_esp = (u_int64_t) pcb.pcb_usersp;
 +			buf->kstk_eip = (u_int64_t) 0;
 +#elif (defined(__arm32__) || defined(__powerpc__))
 +			buf->kstk_esp = (u_int64_t) pcb.pcb_sp;

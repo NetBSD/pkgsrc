@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/03/12 22:30:35 minskim Exp $
+# $NetBSD: Makefile,v 1.26 2004/03/19 22:55:30 kristerw Exp $
 
 DISTNAME=		libgtop-2.0.8
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -22,7 +22,8 @@ OSVERSION_SPECIFIC=	YES
 	(${MACHINE_ARCH} != arm) && (${MACHINE_ARCH} != arm32) && \
 	(${MACHINE_ARCH} != i386) && (${MACHINE_ARCH} != m68k) && \
 	(${MACHINE_ARCH} != mipsel) && (${MACHINE_ARCH} != powerpc) && \
-	(${MACHINE_ARCH} != sparc) && (${MACHINE_ARCH} != sparc64)
+	(${MACHINE_ARCH} != sparc) && (${MACHINE_ARCH} != sparc64) && \
+	(${MACHINE_ARCH} != x86_64)
 PKG_FAIL_REASON=	"${PKGNAME} has not yet been ported to ${MACHINE_ARCH}."
 PKG_FAIL_REASON+=	"Please look at /usr/include/${MACHINE_ARCH}/pcb.h"
 PKG_FAIL_REASON+=	"and update patches/patch-al appropriately."
