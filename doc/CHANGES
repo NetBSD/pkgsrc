@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2148 2003/05/05 12:50:35 markd Exp $
+$NetBSD: CHANGES,v 1.2149 2003/05/05 13:19:03 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -800,9 +800,9 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xscreensaver to 4.08 [mycroft 2003-02-21]
 	Updated xscreensaver-gnome to 4.08 [mycroft 2003-02-21]
 	Updated gnome-python to 1.4.4 [mycroft 2003-02-21]
-        Updated lua to 4.0.1 [jtb 2003-02-21]
+	Updated lua to 4.0.1 [jtb 2003-02-21]
 	Added libsieve-2.1.12 [rh 2003-02-22]
-        Updated imapfilter to 0.8.5 [jtb 2003-02-22]
+	Updated imapfilter to 0.8.5 [jtb 2003-02-22]
 	Updated scilab to 2.7 [dmcmahill 2003-02-21]
 	Updated xemacs-packages to 1.10 [uebayasi 2003-02-22]
 	Updated xmms-madspin to 0.05 [hubertf 2003-02-22]
