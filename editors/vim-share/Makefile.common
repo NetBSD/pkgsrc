@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2002/01/08 09:20:30 martti Exp $
+# $NetBSD: Makefile.common,v 1.21 2002/01/09 13:40:17 martti Exp $
 
 VIM_VERSION=		6.0.120
 DISTNAME=		vim-${VIM_VERSION:C/\.[0-9]*$//}
@@ -10,24 +10,21 @@ DIST_SUBDIR=		vim
 EXTRACT_SUFX=		.tar.bz2
 
 #
-# Following patches were ignored:
-# 12, 27, 48, 53, 64, 70, 73, 87, 93, 106, 107, 115, 116, 117, 119
+# Combine the first 120 patches into one big patch to avoid "Argument list
+# too long" errors.
 #
-PATCH_SITES=		${MASTER_SITES:S/unix/patches/}
-.for p in		001 002 003 004 005 006 007 008 009 010 \
-			011 013 014 015 016 017 018 019 020 \
-			021 022 023 024 025 026 028 029 030 \
-			031 032 033 034 035 036 037 038 039 040 \
-			041 042 043 044 045 046 047 049 050 \
-			051 052 054 055 056 057 058 059 060 \
-			061 062 063 065 066 067 068 069 \
-			071 072 074 075 076 077 078 079 080 \
-			081 082 083 084 085 086 088 089 090 \
-			091 092 094 095 096 097 098 099 100 \
-			101 102 103 104 105 108 109 110 \
-			111 112 113 114 118 120
-PATCHFILES+=		${VIM_VERSION:C/\.[0-9]*$//}.${p}
-.endfor
+# Ignored: 12, 27, 48, 53, 64, 70, 73, 87, 93, 106, 107, 115, 116, 117, 119
+#
+PATCH_SITES+=		ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
+PATCHFILES+=		vim-6.0-001-120.diff.gz
+
+#
+# Following patches were ignored:
+#
+#PATCH_SITES+=		${MASTER_SITES:S/unix/patches/}
+#.for p in		121
+#PATCHFILES+=		${VIM_VERSION:C/\.[0-9]*$//}.${p}
+#.endfor
 
 MAINTAINER=		martti@netbsd.org
 HOMEPAGE=		http://www.vim.org/
