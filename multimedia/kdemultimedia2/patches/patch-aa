@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/26 15:40:00 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2004/07/10 23:34:39 salo Exp $
 
 --- configure.orig	Sat Nov 10 09:15:55 2001
 +++ configure	Sat Oct 19 15:26:23 2002
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/26 15:40:00 jmmv Exp $
 +		case "$i" in
 +		-L*)
 +			dir=`echo $i | sed "s,^-L,,"`
-+			if [ -e $dir/lib${lib}.so ] ||
++			if [ -f $dir/lib${lib}.so ] ||
 +			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
 +				shared_lib_found=yes
 +				break;
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/26 15:40:00 jmmv Exp $
 +		case "$i" in
 +		-L*)
 +			dir=`echo $i | sed "s,^-L,,"`
-+			if [ -e $dir/lib${lib}.so ] ||
++			if [ -f $dir/lib${lib}.so ] ||
 +			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
 +				shared_lib_found=yes
 +				break;
@@ -98,7 +98,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/26 15:40:00 jmmv Exp $
 +               case "$i" in
 +               -L*)
 +                       dir=`echo $i | sed "s,^-L,,"`
-+                       if [ -e $dir/lib${lib}.so ] ||
++                       if [ -f $dir/lib${lib}.so ] ||
 +                          [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
 +                               shared_lib_found=yes
 +                               break;
@@ -121,7 +121,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/26 15:40:00 jmmv Exp $
 +               case "$i" in
 +               -L*)
 +                       dir=`echo $i | sed "s,^-L,,"`
-+                       if [ -e $dir/lib${lib}.so ] ||
++                       if [ -f $dir/lib${lib}.so ] ||
 +                          [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
 +                               shared_lib_found=yes
 +                               break;
@@ -144,7 +144,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/26 15:40:00 jmmv Exp $
 +               case "$i" in
 +               -L*)
 +                       dir=`echo $i | sed "s,^-L,,"`
-+                       if [ -e $dir/lib${lib}.so ] ||
++                       if [ -f $dir/lib${lib}.so ] ||
 +                          [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
 +                               shared_lib_found=yes
 +                               break;
