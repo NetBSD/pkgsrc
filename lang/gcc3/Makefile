@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.8 2003/04/13 10:51:19 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/04/14 04:30:21 salo Exp $
+#
 
-# Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-3.2.2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
+
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/gcc/gcc.html
 COMMENT=		GNU Compiler Collection
 
-NOT_FOR_PLATFORM=	Darwin-*-*
-
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
+
 CONFLICTS+=		pgcc-[0-9]*
+
+NOT_FOR_PLATFORM=	Darwin-*-*
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
@@ -22,9 +24,10 @@ CONFIGURE_ARGS=		--host=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
 
-FILES_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
-FILES_SUBST+=		PKGNAME=${PKGNAME}
-PLIST_SUBST+=		PKGNAME=${PKGNAME}
+FILES_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV} GCC_PREFIX=${GCC_PREFIX}
+MESSAGE_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV}
+
+TEXINFO_REQD=		4.1
 
 INFO_FILES=		cpp.info g77.info gcc.info gcj.info
 
@@ -43,10 +46,8 @@ ALL_TARGET=		bootstrap
 .  endif
 .endif
 
-GCC_PREFIX=		${PREFIX}/${PKGNAME}
+GCC_PREFIX=		${PREFIX}/${PKGNAME_NOREV}
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-
-GCC_ARCHDIR=	${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}
 
 pre-configure:
 	${MKDIR} ${BUILD_DIRS}
@@ -57,7 +58,7 @@ post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${PREFIX}/etc/${PKGNAME}.mk
+	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${PREFIX}/etc/${PKGNAME_NOREV}.mk
 	${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc
 #	${LN} -f ${GCC_PREFIX}/bin/g77 ${GCC_PREFIX}/bin/f77
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
