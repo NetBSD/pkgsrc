@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/24 22:13:23 dmcmahill Exp $
+bin/acs
+bin/acs.hlp
+share/doc/acs/acs-tutorial
+share/doc/acs/man.pdf
+share/doc/acs/whatisit
+share/examples/acs/README
+share/examples/acs/eq.doc
+share/examples/acs/eq2-145.ckt
+share/examples/acs/eq2-289.ckt
+share/examples/acs/eq2-577.ckt
+share/examples/acs/eq3-1153.ckt
+share/examples/acs/eq4-2305.ckt
+share/examples/acs/eq4-4609.ckt
+share/examples/acs/eq4-6913.ckt
+share/examples/acs/eq4-9217.ckt
+share/examples/acs/eqboost.ckt
+share/examples/acs/eqflat.ckt
+share/examples/acs/eqmodify.ckt
+share/examples/acs/killzap.ckt
+share/examples/acs/killzap.doc
+share/examples/acs/nmos.doc
+share/examples/acs/nmos100.ckt
+share/examples/acs/nmos15.ckt
+share/examples/acs/nmos18.ckt
+share/examples/acs/nmos30.ckt
+share/examples/acs/nmosgen.c
+share/examples/acs/nmp100.ckt
+share/examples/acs/nmpgen.c
+share/examples/acs/opamp-ol.ckt
+share/examples/acs/opamp-vf.ckt
+share/examples/acs/opamp.doc
+share/examples/acs/runall
+share/examples/acs/runall.out
+share/examples/acs/sc18.ckt
+@dirrm share/doc/acs
+@dirrm share/examples/acs
