@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.686 2001/03/16 11:45:01 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.687 2001/03/16 12:43:45 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1225,12 +1225,6 @@ package:
 .else
 	@${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} may not be packaged: ${NO_PACKAGE}."
 .endif
-.endif
-
-# Disable describe
-.if defined(NO_DESCRIBE) && !target(describe)
-describe:
-	@${DO_NADA}
 .endif
 
 ################################################################
