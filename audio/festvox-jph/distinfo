@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:48 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/09 22:02:47 wiz Exp $
 
-MD5 (voice_jph_di-2.0.tar.gz) = 653f8c8c5602097600fe27ebdf7f17f9
+SHA1 (voice_jph_di-2.0.tar.gz) = 0c78878967ea4004755b9b039c6ade8eb2f03ecb
+Size (voice_jph_di-2.0.tar.gz) = 5694796 bytes
