@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3809 2003/11/11 09:19:10 abs Exp $
+$NetBSD: CHANGES,v 1.3810 2003/11/11 09:33:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4336,4 +4336,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xpdf-greek to 20030628 [wiz 2003-11-11]
 	Updated xpdf-cyrillic to 20030628 [wiz 2003-11-11]
 	Update mserv to 0.35nb3 [abs 2003-11-11]
-
+	Updated ipcheck to 0.207 [wiz 2003-11-11]
