@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2004/05/08 13:35:20 uebayasi Exp $
+# $NetBSD: Makefile,v 1.16 2004/11/30 15:42:02 wiz Exp $
 
-DISTNAME=	emacs-packages-0.5
+DISTNAME=	emacs-packages-0.6
 CATEGORIES=	meta-pkgs editors
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -37,7 +37,7 @@ DEPENDS+=	ispell-emacs-[0-9]*:../../textproc/ispell-emacs
 #.if defined(_EMACS_VERSION_EMACS_MAJOR) && ${_EMACS_VERSION_EMACS_MAJOR} == "21"
 #DEPENDS+=	jde-[0-9]*:../../editors/jde
 #.endif
-DEPENDS+=	liece-[0-9]*:../../chat/liece
+DEPENDS+=	riece-[0-9]*:../../chat/riece
 #DEPENDS+=	lookup-[0-9]*:../../misc/lookup
 DEPENDS+=	mailcrypt-[0-9]*:../../mail/mailcrypt
 DEPENDS+=	matlab-mode-*:../../editors/matlab-mode
