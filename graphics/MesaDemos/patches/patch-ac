@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/12/05 15:20:22 jschauma Exp $
+
+--- samples/Makefile.X11.orig	Tue Feb 15 20:09:06 2000
++++ samples/Makefile.X11	Thu Nov 21 14:49:47 2002
+@@ -9,15 +9,15 @@
+ 
+ ##### MACROS #####
+ 
+-INCDIR = ../include
+-LIBDIR = ../lib
++INCDIR = ${X11PREFIX}/include
++LIBDIR = ${X11PREFIX}/lib
+ 
+ GL_LIBS = -L$(LIBDIR) -lglut -lGLU -lGL $(APP_LIB_DEPS)
+ 
+ LIB_DEP = $(LIBDIR)/$(GL_LIB) $(LIBDIR)/$(GLU_LIB) $(LIBDIR)/$(GLUT_LIB)
+ 
+ PROGS = accum bitmap1 bitmap2 blendeq blendxor copy cursor depth eval fog \
+-	font line logo nurb oglinfo olympic overlay point prim quad select \
++	font line logo nurb olympic overlay point prim quad select \
+ 	shape sphere star stencil stretch texture tri wave
+ 
+ 
