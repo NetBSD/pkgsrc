@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2002/08/20 01:38:16 grant Exp $
+# $NetBSD: Makefile,v 1.43 2002/08/26 11:25:41 itojun Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -45,7 +45,7 @@ IPV6H=		"@comment "
 IPV6H=		""
 .endif
 
-PLIST_SUBST+=	IPV6H="${IPV6H}"
+PLIST_SUBST+=	IPV6H=${IPV6H}
 PLIST_SRC=	${WRKDIR}/PLIST
 
 post-install:
