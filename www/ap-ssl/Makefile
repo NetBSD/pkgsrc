@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2002/06/19 10:20:06 jdolecek Exp $
+# $NetBSD: Makefile,v 1.51 2002/06/19 11:03:58 jdolecek Exp $
 
-DISTNAME=		mod_ssl-2.8.8-1.3.24
-PKGREVISION=		1
-PKGNAME=		ap-ssl-2.8.8
+DISTNAME=		mod_ssl-2.8.9-1.3.26
+PKGNAME=		ap-ssl-2.8.9
 CATEGORIES=		www security
 MASTER_SITES=		http://www.modssl.org/source/ \
 			ftp://ftp.pca.dfn.de/pub/tools/net/mod_ssl/source/ \
@@ -46,10 +45,6 @@ SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 post-extract:
 	cd ${WRKSRC}/pkg.contrib; ${MV} -f loadcacert.cgi loadcacert.cgi.in
 	cd ${WRKSRC}/pkg.sslsup; ${MV} -f mkcert.sh mkcert.sh.in
-
-# XXX hack - remove once version distributed for 1.3.26 would be avilable
-pre-configure:
-	echo mod_ssl/2.8.8-1.3.26 > ${WRKSRC}/pkg.sslmod/libssl.version
 
 post-build:
 	@${SED}	-e "s|^#!/.*|#!${PERL5}|g"				\
