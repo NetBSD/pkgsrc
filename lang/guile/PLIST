@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/01/21 15:16:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/07/05 14:39:25 seb Exp $
 bin/guile
 bin/guile-snarf
 bin/guile-config
@@ -100,10 +100,6 @@ include/guile/srfi/srfi-13.h
 include/guile/srfi/srfi-14.h
 include/guile-readline/readline.h
 include/libguile.h
-@unexec ${INSTALL_INFO} --delete %D/info/guile.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/guile-tut.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/goops.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/r5rs.info %D/info/dir
 info/guile.info
 info/guile.info-1
 info/guile.info-2
@@ -139,10 +135,6 @@ info/r5rs.info-2
 info/r5rs.info-3
 info/r5rs.info-4
 info/r5rs.info-5
-@exec ${INSTALL_INFO} %D/info/r5rs.info %D/info/dir
-@exec ${INSTALL_INFO} %D/info/goops.info %D/info/dir
-@exec ${INSTALL_INFO} %D/info/guile-tut.info %D/info/dir
-@exec ${INSTALL_INFO} %D/info/guile.info %D/info/dir
 lib/libguile.a
 lib/libguile.la
 lib/libguile.so
