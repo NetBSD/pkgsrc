@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4602 2004/01/25 17:00:05 mrauch Exp $
+$NetBSD: CHANGES,v 1.4603 2004/01/25 20:39:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -476,3 +476,13 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lua to 5.0.1nb1 [cube 2004-01-25]
 	Updated kde to 3.1.5nb1 [tron 2004-01-25]
 	Updated openoffice-linux to 1.1.0 [mrauch 2004-01-25]
+	Updated arphic-ttf to 2.11nb2 [wiz 2004-01-25]
+	Updated baekmuk-ttf to 2.1nb2 [wiz 2004-01-25]
+	Updated cyberbase-ttf to 2.0nb3 [wiz 2004-01-25]
+	Updated cyberbit-ttf to 2.0nb3 [wiz 2004-01-25]
+	Updated dbz-ttf to 20020507nb2 [wiz 2004-01-25]
+	Updated geoslab703-ttf to 20010522nb2 [wiz 2004-01-25]
+	Updated kochi-ttf to 20030809nb1 [wiz 2004-01-25]
+	Updated ms-ttf to 20020306nb3 [wiz 2004-01-25]
+	Updated vera-ttf to 1.10nb2 [wiz 2004-01-25]
+	Updated vfontcap-kochi to 0.0nb1 [wiz 2004-01-25]
