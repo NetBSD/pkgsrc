@@ -1,17 +1,19 @@
-$NetBSD: patch-ac,v 1.1 2003/02/14 20:04:10 jmmv Exp $
+$NetBSD: patch-ac,v 1.2 2003/12/14 19:44:38 jmmv Exp $
 
---- gconf/Makefile.in.orig	2003-01-21 04:30:18.000000000 +0100
-+++ gconf/Makefile.in
-@@ -136,7 +136,7 @@ NULL = 
- 
- GCONFD_BINARY_NAME = gconfd-2
- 
--INCLUDES =  	-I$(top_srcdir)								-I$(top_builddir)							$(DEPENDENT_WITH_XML_AND_GTK_CFLAGS) 					-DG_LOG_DOMAIN=\"GConf\"						-DGCONF_LOCALE_DIR=\""$(gconflocaledir)"\"			        -DGCONF_SRCDIR=\""$(absolute_top_srcdir)"\"				-DGCONF_CONFDIR=\""$(sysconfdir)/gconf/$(MAJOR_VERSION)"\"		-DGCONF_ETCDIR=\""$(sysconfdir)/gconf"\"				-DGCONF_BINDIR=\""$(bindir)"\"						-DGCONF_SERVERDIR=\""$(libexecdir)"\"           	-DGCONF_BUILDDIR=\""$(top_builddir)"\"					-DGCONF_BACKEND_DIR=\""$(pkglibdir)/$(MAJOR_VERSION)"\"			-DVERSION=\""$(VERSION)"\"						-DGCONF_ENABLE_INTERNALS=1						-DGCONFD=\""$(GCONFD_BINARY_NAME)"\"					$(NULL)
-+INCLUDES =  	-I$(top_srcdir)								-I$(top_builddir)							$(DEPENDENT_WITH_XML_AND_GTK_CFLAGS) 					-DG_LOG_DOMAIN=\"GConf\"						-DGCONF_LOCALE_DIR=\""$(gconflocaledir)"\"			        -DGCONF_SRCDIR=\""$(absolute_top_srcdir)"\"				-DGCONF_CONFDIR=\""$(sysconfdir)/$(MAJOR_VERSION)"\"		-DGCONF_ETCDIR=\""$(sysconfdir)"\"				-DGCONF_BINDIR=\""$(bindir)"\"						-DGCONF_SERVERDIR=\""$(libexecdir)"\"           	-DGCONF_BUILDDIR=\""$(top_builddir)"\"					-DGCONF_BACKEND_DIR=\""$(pkglibdir)/$(MAJOR_VERSION)"\"			-DVERSION=\""$(VERSION)"\"						-DGCONF_ENABLE_INTERNALS=1						-DGCONFD=\""$(GCONFD_BINARY_NAME)"\"					$(NULL)
- 
- 
- EFENCE = 
-@@ -614,8 +614,8 @@ $(CORBA_SOURCECODE): $(srcdir)/GConfX.id
+--- gconf/Makefile.in.orig	2003-10-25 23:27:25.000000000 +0000
++++ gconf/Makefile.in	2003-10-25 23:29:40.000000000 +0000
+@@ -148,8 +148,8 @@
+ 	-DG_LOG_DOMAIN=\"GConf\"					\
+ 	-DGCONF_LOCALE_DIR=\""$(gconflocaledir)"\"			\
+         -DGCONF_SRCDIR=\""$(absolute_top_srcdir)"\"			\
+-	-DGCONF_CONFDIR=\""$(sysconfdir)/gconf/$(MAJOR_VERSION)"\"	\
+-	-DGCONF_ETCDIR=\""$(sysconfdir)/gconf"\"			\
++	-DGCONF_CONFDIR=\""$(sysconfdir)/$(MAJOR_VERSION)"\"	\
++	-DGCONF_ETCDIR=\""$(sysconfdir)"\"			\
+ 	-DGCONF_BINDIR=\""$(bindir)"\"					\
+ 	-DGCONF_SERVERDIR=\""$(libexecdir)"\"           \
+ 	-DGCONF_BUILDDIR=\""$(top_builddir)"\"				\
+@@ -606,8 +606,8 @@
  	$(ORBIT_IDL) $(srcdir)/GConfX.idl
  
  install-data-local:

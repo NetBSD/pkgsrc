@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.7 2003/12/09 00:54:29 reed Exp $
+# $NetBSD: Makefile.common,v 1.8 2003/12/14 19:44:38 jmmv Exp $
 #
 
-DISTNAME=		GConf-2.2.0
+DISTNAME=		GConf-2.4.0.1
 CATEGORIES=		devel gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/2.2/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/2.4/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -30,5 +30,5 @@ PKG_SYSCONFSUBDIR=	gconf
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
-CONFIGURE_ARGS+=	--enable-gtk-doc=no
+CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--enable-gconf-source=xml::${PKG_SYSCONFDIR}/gconf.xml.defaults
