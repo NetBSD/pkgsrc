@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/01/28 13:19:28 itojun Exp $
+# $NetBSD: Makefile,v 1.23 2001/01/31 04:07:36 hubertf Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -48,6 +48,6 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/man/bin/*.5 ${PREFIX}/man/man5
 	${INSTALL_MAN} ${WRKSRC}/doc/man/bin/*.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/dnssec/*.8 ${PREFIX}/man/man8
-	${INSTALL_DATA} ${WRKDIR}/named ${PREFIX}/etc/rc.d
+	${INSTALL_DATA} ${WRKDIR}/named ${PREFIX}/etc/rc.d/named9
 
 .include "../../mk/bsd.pkg.mk"
