@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.9 2003/07/22 10:39:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/12/08 16:32:52 adam Exp $
 bin/ekg
 include/libgadu-config.h
 include/libgadu.h
 lib/libgadu.a
 lib/libgadu.la
 lib/libgadu.so
-lib/libgadu.so.2
-lib/libgadu.so.2.13
+lib/libgadu.so.3
+lib/libgadu.so.3.0
 lib/pkgconfig/libgadu.pc
+man/man1/ekg.1
+man/pl/man1/ekg.1
 share/ekg/themes/arim.theme
 share/ekg/themes/dj.theme
 share/ekg/themes/eileen.theme
