@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6905 2004/08/16 16:00:58 wiz Exp $
+$NetBSD: CHANGES,v 1.6906 2004/08/16 16:20:49 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3862,3 +3862,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated source-highlight to 1.10 [seb 2004-08-16]
 	Updated nail to 11.2 [cjep 2004-08-16]
 	Added glabels-2.0.1 [wiz 2004-08-16]
+	Updated zsh to 4.2.1 [recht 2004-08-16]
