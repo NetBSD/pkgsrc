@@ -1,0 +1,71 @@
+$NetBSD: patch-ab,v 1.1 1998/09/14 15:14:52 agc Exp $
+
+Use mkstemp(3) to make temporary files.
+
+--- files.c.orig	Sun Oct 15 21:01:30 1995
++++ files.c	Mon Sep 14 15:58:01 1998
+@@ -235,12 +235,64 @@
+   tmpattrsfile = mktemp(stringappend(tmp_base, tmp_len, "atXXXXXX"));
+   tmptabfile = mktemp(stringappend(tmp_base, tmp_len, "taXXXXXX"));
+   tmpdefsfile = mktemp(stringappend(tmp_base, tmp_len, "deXXXXXX"));
++  if (! noparserflag)
++    faction = tryopen(actfile, "w+");
++  fattrs = tryopen(tmpattrsfile,"w+");
++  ftable = tryopen(tmptabfile, "w+");
++
++  if (definesflag)
++    {
++      defsfile = stringappend(name_base, base_length, ".h");
++      fdefines = tryopen(tmpdefsfile, "w+");
++    }
++#else
++#ifdef __NetBSD__
++{
++	int	tmpdefsfd;
++	
++  if (! noparserflag &&
++    (faction = fdopen(mkstemp(actfile = stringappend(tmp_base, tmp_len, "act.XXXXXX")), "w+")) == (FILE *) NULL) {
++      fprintf(stderr, "%s: ", program_name);
++      perror(actfile);
++      done(2);
++  }
++  if ((fattrs = fdopen(mkstemp(tmpattrsfile = stringappend(tmp_base, tmp_len, "attrs.XXXXXX")), "w+")) == (FILE *) NULL) {
++      fprintf(stderr, "%s: ", program_name);
++      perror(tmpattrsfile);
++      done(2);
++  }
++  if ((ftable = fdopen(mkstemp(tmptabfile = stringappend(tmp_base, tmp_len, "tab.XXXXXX")), "w+")) == (FILE *) NULL) {
++      fprintf(stderr, "%s: ", program_name);
++      perror(tmptabfile);
++      done(2);
++  }
++  if ((tmpdefsfd = mkstemp(tmpdefsfile = stringappend(tmp_base, tmp_len, "defs.XXXXXX"))) < 0) {
++      fprintf(stderr, "%s: ", program_name);
++      perror(tmpdefsfile);
++      done(2);
++  }
++  if (definesflag) {
++      defsfile = stringappend(name_base, base_length, ".h");
++      fdefines = fdopen(tmpdefsfd, "w+");
++  }
++}
+ #else
+   if (! noparserflag)
+     actfile = mktemp(stringappend(tmp_base, tmp_len, "act.XXXXXX"));
+   tmpattrsfile = mktemp(stringappend(tmp_base, tmp_len, "attrs.XXXXXX"));
+   tmptabfile = mktemp(stringappend(tmp_base, tmp_len, "tab.XXXXXX"));
+   tmpdefsfile = mktemp(stringappend(tmp_base, tmp_len, "defs.XXXXXX"));
++  if (! noparserflag)
++    faction = tryopen(actfile, "w+");
++  fattrs = tryopen(tmpattrsfile,"w+");
++  ftable = tryopen(tmptabfile, "w+");
++
++  if (definesflag)
++    {
++      defsfile = stringappend(name_base, base_length, ".h");
++      fdefines = tryopen(tmpdefsfile, "w+");
++    }
++#endif /* not NetBSD */
+ #endif /* not MSDOS */
+ 
+   if (! noparserflag)
