@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/02/21 21:55:25 adrianp Exp $
+
+In order to use this module in your Apache installation, you need to
+add the following to your httpd.conf file:
+
+  LoadModule auth_ldap_module lib/httpd/mod_auth_ldap.so
+
+===========================================================================

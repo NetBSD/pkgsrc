@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/21 21:55:25 adrianp Exp $
+lib/httpd/mod_auth_ldap.so
+share/doc/mod_auth_ldap/mod_auth_ldap_apache2.html
+@dirrm share/doc/mod_auth_ldap
