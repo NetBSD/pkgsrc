@@ -3,7 +3,10 @@
 # Copyright (c) 2003 Hubert Feyrer <hubertf@netbsd.org>
 #
 
-tmp=/tmp/dmesg2gif.$$
+tmp=/tmp/dmesg2gif.$$.dot
+
+# Clean up things on ^C
+trap "rm -r $tmp ; exit 1" INT
 
 if [ -t 0 -o -t 1 ]
 then
@@ -11,11 +14,6 @@ then
 	exit 1
 fi
 
-if ! pkg_info -qe graphviz >/dev/null
-then
-	echo 2>&1 "Please install pkgsrc/graphics/graphviz for dot!"
-	exit 1
-fi
 
 (
 	echo "digraph dmesg { "
@@ -28,5 +26,7 @@ fi
 			print "\t$from -> $to\n"; 
 		}'
 	echo "}"
-) > $tmp.dot
-dot -Tgif $tmp.dot
+) > $tmp
+dot -Tgif $tmp
+
+rm $tmp
