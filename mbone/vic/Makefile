@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/10/01 10:37:33 grant Exp $
+# $NetBSD: Makefile,v 1.29 2004/11/03 00:46:24 kristerw Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/11 03:54:53 fenner Exp
 #
 
@@ -19,12 +19,13 @@ MAINTAINER=	is@NetBSD.org
 HOMEPAGE=	http://www-nrg.ee.lbl.gov/vic/
 COMMENT=	MBONE video conferencing tool
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk83
-
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 USE_X11=	yes
 
-CONFIGURE_ARGS+=	--with-tcl=${PREFIX} --with-tk=${PREFIX}
+CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
+CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
 
+.include "../../x11/tk83/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
