@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/04/14 21:43:46 jtb Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/21 01:10:58 jtb Exp $
 
 DISTNAME=		cim-3.30
 CATEGORIES=		lang
@@ -8,16 +8,11 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/cim/cim.html
 COMMENT=		Simula compiler based on the C programming language
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
-
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-USE_PERL5=		YES
+USE_PERL5=		yes
 
 INFO_FILES=		cim.info
-
-pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
 
 .include "../../mk/bsd.pkg.mk"
