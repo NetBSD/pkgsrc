@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2112 2003/05/01 19:15:05 jmmv Exp $
+$NetBSD: CHANGES,v 1.2113 2003/05/01 19:38:48 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1816,3 +1816,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nsca to 1.1.0nb2 [jmmv 2003-05-01]
 	Updated radiusd-cistron to 1.6.6nb1 [jmmv 2003-05-01]
 	Updated netsaint-base to 0.0.7nb2 [jmmv 2003-05-01]
+	Updated vmware3 to 3.2.1 [jdolecek 2003-05-01]
