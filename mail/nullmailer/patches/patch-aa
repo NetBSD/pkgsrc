@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/05/04 01:15:25 jtb Exp $
+
+--- lib/mergelib.sh.orig	Thu May  2 09:42:12 2002
++++ lib/mergelib.sh	Thu May  2 09:44:41 2002
+@@ -4,7 +4,7 @@
+ tmpdir=".libmerge.$archive.$$.$RANDOM.$USER"
+ mkdir "$tmpdir"
+ cd "$tmpdir"
+-trap 'cd ..; rm -rf "$tmpdir"' EXIT
++trap 'cd ..; rm -rf "$tmpdir"'
+ for input in "$@"; do
+ 	dir="`basename "$input"`"
+ 	mkdir "$dir"

@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/04 01:15:25 jtb Exp $
+bin/mailq
+bin/nullmailer-inject
+libexec/nullmailer/qmqp
+libexec/nullmailer/smtp
+man/man1/nullmailer-inject.1
+man/man1/sendmail.1
+man/man7/nullmailer.7
+sbin/nullmailer-queue
+sbin/nullmailer-send
+sbin/sendmail
+share/doc/nullmailer/AUTHORS
+share/doc/nullmailer/BUGS
+share/doc/nullmailer/COPYING
+share/doc/nullmailer/ChangeLog
+share/doc/nullmailer/HOWTO
+share/doc/nullmailer/NEWS
+share/doc/nullmailer/README
+share/doc/nullmailer/TODO
+@dirrm share/doc/nullmailer
+@dirrm libexec/nullmailer
+@dirrm etc/nullmailer
