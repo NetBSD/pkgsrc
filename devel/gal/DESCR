@@ -14,3 +14,5 @@ the code it fully owns under a difference license.
 The API is not frozen and might change at any time.  Larger class
 renaming might happen at any point without notice.  Use this library
 at your own risk.
+
+This version of gal implements the gal-1.0 (gnome1) API.
