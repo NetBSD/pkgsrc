@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/11 16:17:08 seb Exp $
+$NetBSD: distinfo,v 1.2 2004/12/05 18:58:12 he Exp $
 
-SHA1 (Digest-SHA-5.27.tar.gz) = de471c88e8ed80f109ff8b6fe73e09aa4536e1c3
-Size (Digest-SHA-5.27.tar.gz) = 43980 bytes
+SHA1 (Digest-SHA-5.28.tar.gz) = fef4c6d6792188644088dcfa1933ff2892404f0d
+Size (Digest-SHA-5.28.tar.gz) = 44154 bytes
