@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/08 18:52:33 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/18 19:19:44 snj Exp $
 #
 
 DISTNAME=	libcdio-0.68
@@ -9,7 +9,7 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/libcdio/
 COMMENT=	CD-ROM access library
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libcdio.pc.in
@@ -21,6 +21,6 @@ CONFIGURE_ARGS+=	--without-versioned-libs
 pre-patch:
 	${CP} ${FILESDIR}/_cdio_netbsd.c ${WRKSRC}/lib/_cdio_freebsd.c
 
-.include "../../devel/popt/buildlink2.mk"
-.include "../../audio/libcddb/buildlink2.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../audio/libcddb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
