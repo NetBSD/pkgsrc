@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 1998/07/15 11:45:56 tv Exp $
+@comment $NetBSD: PLIST,v 1.8 1998/07/16 13:36:48 tv Exp $
 include/png.h
 include/pngconf.h
 lib/libpng.a
-lib/libpng.la
 lib/libpng.so.1.0
