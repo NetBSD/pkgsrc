@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:00:02 zuntum Exp $
-@cwd @localbase@
+@comment $NetBSD: PLIST,v 1.2 2001/11/29 18:00:31 wiz Exp $
+@cwd ${LOCALBASE}
 share/faces/machine.tab
 share/faces/people.tab
 @dirrm share/faces
 bin/compface
 bin/uncompface
-man/man1/compface.1.gz
-man/man1/uncompface.1.gz
+man/man1/compface.1
+man/man1/uncompface.1
 lib/libcompface.a
 lib/libcompface.so
 lib/libcompface.so.1
 lib/libcompface.so.1.0
 include/compface.h
-man/man3/compface.3.gz
-man/man3/uncompface.3.gz
+man/man3/compface.3
+man/man3/uncompface.3
 bin/icon2ikon
 bin/ikon2icon
 bin/rs2icon
@@ -38,5 +38,5 @@ bin/face_update
 bin/faces.sendmail
 man/man1/faces.1.gz
 man/man1/face_update.1.gz
-@cwd @x11prefix@
+@cwd ${X11PREFIX}
 lib/X11/app-defaults/Faces

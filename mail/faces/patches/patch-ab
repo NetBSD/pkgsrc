@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2000/09/04 11:29:36 tron Exp $
+$NetBSD: patch-ab,v 1.9 2001/11/29 18:00:32 wiz Exp $
 
 --- Makefile.orig	Mon Sep  4 10:37:54 2000
 +++ Makefile	Mon Sep  4 10:55:54 2000
-@@ -0,0 +1,475 @@
+@@ -0,0 +1,476 @@
 +#
 +#  Makefile for faces, an icon face server, plus associated software.
 +#
@@ -428,6 +428,7 @@ $NetBSD: patch-ab,v 1.8 2000/09/04 11:29:36 tron Exp $
 +				$(MANDIR)/man$(MANSECT)/faces.$(MANSECT)
 +		install -c -m 444 face_update.1 \
 +				$(MANDIR)/man$(MANSECT)/face_update.$(MANSECT)
++		install -d -m 444 @x11prefix@/lib/X11/app-defaults
 +		install -c -m 444 -o bin Faces.ad @x11prefix@/lib/X11/app-defaults/Faces
 +
 +clean:

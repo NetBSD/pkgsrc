@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.4 2001/02/03 01:53:03 dmcmahill Exp $
+$NetBSD: patch-at,v 1.5 2001/11/29 18:00:32 wiz Exp $
 
 --- x11.c.orig	Mon Nov 18 23:00:50 1991
 +++ x11.c	Fri Feb  2 20:01:06 2001
@@ -55,7 +55,7 @@ $NetBSD: patch-at,v 1.4 2001/02/03 01:53:03 dmcmahill Exp $
    home = getenv("HOME") ;
    XrmInitialize() ;
 +#if (defined(BSD) && BSD >= 199306)
-+  STRCPY(name, "/usr/X11R6/lib/X11/app-defaults/Faces") ;
++  STRCPY(name, "@x11prefix@/lib/X11/app-defaults/Faces") ;
 +#else
    STRCPY(name, "/usr/lib/X11/app-defaults/Faces") ;
 +#endif
