@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.42 2004/10/14 09:51:43 grant Exp $
+# $NetBSD: tools.mk,v 1.43 2004/10/14 09:54:04 grant Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -349,7 +349,7 @@ _TOOLS_PROGNAME.yacc=	${LOCALBASE}/bin/bison
 YACC:=			${_TOOLS_PROGNAME.yacc} -y
 .  endif
 .endif
-.if !empty(PKGPATH:Mdevel/yacc)
+.if !empty(PKGPATH:Mdevel/bison)
 _TOOLS_OVERRIDE.yacc=	NO
 MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
 .endif
