@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2004/05/22 10:09:53 adam Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/28 12:59:10 recht Exp $
 
---- configure.orig	2004-05-22 11:55:09.000000000 +0000
-+++ configure
-@@ -3586,8 +3586,6 @@ if test $ac_cv_c_compiler_gnu != no; the
+--- configure.orig	Sat Nov 13 22:54:25 2004
++++ configure	Sat Nov 27 22:31:53 2004
+@@ -3632,8 +3632,6 @@
  
  	if test x$opt_developer_mode = xyes; then
  	  CFLAGS="${CFLAGS} -g -Wno-format-y2k -Wall -Wcast-align -W -Wpointer-arith -Wchar-subscripts -Wformat-security -Wmissing-braces -Winline -Wstrict-prototypes"
