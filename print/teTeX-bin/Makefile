@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/01/04 18:53:33 bouyer Exp $
+# $NetBSD: Makefile,v 1.11 2000/01/09 06:10:43 jwise Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -16,6 +16,8 @@ DEPENDS+=	dialog-0.6z:../../misc/dialog
 DEPENDS+=	libwww-5.2.8:../../www/libwww
 DEPENDS+=	ncurses-4.2:../../devel/ncurses
 DEPENDS+=	png-1.0.3:../../graphics/png
+
+CONFLICTS+=	omega-*
 
 ALL_TARGET=	all
 INSTALL_TARGET=	install strip
@@ -39,7 +41,7 @@ CONFIGURE_ARGS+=--without-texinfo \
 		--with-system-pnglib \
 		--with-pnglib-libdir=${LOCALBASE}/lib \
 		--with-pnglib-include=${LOCALBASE}/include \
-		--with-system-zlib 
+		--with-system-zlib
 .include "../../mk/bsd.prefs.mk"
 .if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
 CONFIGURE_ARGS+=--enable-a4

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/01/06 01:32:04 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/01/09 06:10:43 jwise Exp $
 # FreeBSD Id: ports/games/omega/Makefile,v 1.3 1999/08/25 06:04:09 obrien Exp
 
 DISTNAME=	omega-0.90-pa4
@@ -13,6 +13,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.win.tue.nl/games/roguelike/omega
 
 DEPENDS+=	ncurses-4.2:../../devel/ncurses
+
+CONFLICTS=	teTeX-bin-*
 
 ALL_TARGET=
 
