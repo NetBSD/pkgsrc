@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.2 1999/02/04 01:20:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1999/02/10 15:14:10 frueauf Exp $
 #
 
 DISTNAME=	vfu-1.42-source
 PKGNAME=	vfu-1.42
-EXTRACT_SUFX=	.tgz
+WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	misc
 MASTER_SITES=	http://www.biscom.net/~cade/away/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.biscom.net/~cade/vfu/
 
 DEPENDS=	ncurses-1.9.9g:../../devel/ncurses
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
 MAKE_FLAGS+=	CCDEF="-I${LOCALBASE}/include -DVFU_RCPATH1=\\\"${PREFIX}/etc/\\\" -DVFU_RCPATH2=\\\"${PREFIX}/\\\"" \
 		LDDEF="-L${LOCALBASE}/lib"
 
