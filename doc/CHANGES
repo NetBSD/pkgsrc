@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9111 2005/02/11 12:23:34 jmmv Exp $
+$NetBSD: CHANGES,v 1.9112 2005/02/11 14:48:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -846,3 +846,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkg_install to 20050210 [grant 2005-02-10]
 	Updated vipec to 3.2.0 [dmcmahill 2005-02-10]
 	Updated gtk-send-pr to 0.4.4 [jmmv 2005-02-11]
+	Updated squid to 2.5.8 [taca 2005-02-11]
