@@ -1,4 +1,4 @@
-/*	$NetBSD: read.h,v 1.1.1.1 2001/09/27 19:29:50 lukem Exp $	*/
+/*	$NetBSD: read.h,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
 
 /*-
  * Copyright (c) 2001 The NetBSD Foundation, Inc.

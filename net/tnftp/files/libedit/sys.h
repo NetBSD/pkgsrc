@@ -1,4 +1,4 @@
-/*	$NetBSD: sys.h,v 1.1.1.1 2002/06/10 07:18:19 lukem Exp $	*/
+/*	$NetBSD: sys.h,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993

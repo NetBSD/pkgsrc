@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2004/01/15 10:35:49 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/11 13:01:01 grant Exp $
 #
 
 DISTNAME=		tnftp-20030825
 SVR4_PKGNAME=		tnftp
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
+MASTER_SITES=		# empty
+DISTFILES=		# empty
 
 MAINTAINER=		lukem@NetBSD.org
 COMMENT=		The enhanced FTP client in NetBSD
@@ -13,6 +14,8 @@ GNU_CONFIGURE=		YES
 
 CONFLICTS+=		kth-krb4-[0-9]*
 CONFLICTS+=		lukemftp-[0-9]*
+
+NO_CHECKSUM=		# defined
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,5 +38,8 @@ CONFIGURE_ARGS+=	--disable-ipv6
 
 OPSYSVARS+=		MAKE_ENV
 MAKE_ENV.SunOS+=	CPPFLAGS=""
+
+do-extract:
+	@${CP} -Rp ${FILESDIR} ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
