@@ -1,8 +1,12 @@
-$NetBSD: patch-ao,v 1.1 2003/12/29 20:03:31 cjep Exp $
+$NetBSD: patch-ao,v 1.2 2003/12/30 14:41:09 cjep Exp $
 
---- ../sqlite/src/select.c.orig	2003-07-20 02:16:47.000000000 +0100
-+++ ../sqlite/src/select.c
-@@ -16,2 +16,3 @@
+--- ../sqlite/src/printf.c.orig	2003-06-16 04:08:19.000000000 +0100
++++ ../sqlite/src/printf.c
+@@ -46,6 +46,7 @@
+ **      +  All functions are fully reentrant.
+ **
  */
 +#include "os.h"
  #include "sqliteInt.h"
+ 
+ /*
