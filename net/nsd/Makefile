@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/10/03 00:17:56 tv Exp $
+# $NetBSD: Makefile,v 1.26 2004/12/29 15:42:38 minskim Exp $
 
 DISTNAME=	nsd-2.1.2
 PKGREVISION=	1
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ARGS+=--disable-ipv6
 .endif
 .if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=--with-pidfile=/var/run/nsd.pid
+CONFIGURE_ARGS+=--with-pidfile=${VARBASE}/run/nsd.pid
 CONFIGURE_ARGS+=--with-user=named
 CONFIGURE_ARGS+=--with-namedxfer=/usr/libexec/named-xfer
 .endif
