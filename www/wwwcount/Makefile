@@ -1,38 +1,48 @@
-# New ports collection makefile for:    wwwcount
-# Version required:     2.4
-# Date created:         16 May 1996
-# Whom:                 ache
-#
-# FreeBSD Id: Makefile,v 1.12 1998/09/28 18:02:05 smace Exp
-#
+# $NetBSD: Makefile,v 1.2 1999/05/14 22:05:23 tron Exp $
+# FreeBSD: Makefile,v 1.12 1998/09/28 18:02:05 smace Exp
 
-# WWW site: http://www.fccc.edu/users/muquit/Count.html
-# For digit images look at:
-# http://www.digitmania.holowww.com/
-
-DISTNAME=       wwwcount2.4
-PKGNAME=        wwwcount-2.4
+DISTNAME=       wwwcount2.5
+PKGNAME=        wwwcount-2.5
 CATEGORIES=     www
-MASTER_SITES=   http://www.fccc.edu/users/muquit/src/wwwcount2.4/
+MASTER_SITES=   http://www.fccc.edu/users/muquit/src/wwwcount2.5/
 
-MAINTAINER=     ports@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.fccc.edu/users/muquit/Count.html
 
 GNU_CONFIGURE=  yes
-IS_INTERACTIVE= yes
-USE_GMAKE=      yes
-MAN1=		mkstrip.1
 
 pre-configure:
 	cd ${WRKSRC}; yes "" | PREFIX=${PREFIX} ./Count-config
 
-post-build:
-	cd ${WRKSRC}; ./Gen-conf
-
 do-install:
 	cd ${WRKSRC}; yes "" | ./Count-install
-	cd ${WRKSRC}/utils/mkstrip; \
-		${INSTALL_PROGRAM} extdgts mkstrip ${PREFIX}/bin; \
-		${INSTALL_MAN} mkstrip.1 ${PREFIX}/man/man1; \
-		${INSTALL_SCRIPT} mkstrip.sh ${PREFIX}/lib/Counter/digits
+	${INSTALL_DATA} ${FILESDIR}/wwwcount.conf ${PREFIX}/share/examples
+	${INSTALL_PROGRAM} ${WRKSRC}/utils/extdgts/extdgts ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/utils/mkstrip/mkstrip ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/utils/mkstrip/mkstrip.1 ${PREFIX}/man/man1
+	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/wwwcount
+	${INSTALL_MAN} ${WRKSRC}/docs/blues.gif ${PREFIX}/share/doc/wwwcount
+	${INSTALL_MAN} ${WRKSRC}/docs/Count.html ${PREFIX}/share/doc/wwwcount
+	${INSTALL} -l rs ${PREFIX}/share/doc/wwwcount/Count.html ${PREFIX}/share/doc/wwwcount/index.html
+	${INSTALL_MAN} ${WRKSRC}/docs/Count2_5-ex.html ${PREFIX}/share/doc/wwwcount
+	${INSTALL_MAN} ${WRKSRC}/docs/Count_Changelog.html ${PREFIX}/share/doc/wwwcount
+	${INSTALL_MAN} ${WRKSRC}/docs/Count_FAQ.html ${PREFIX}/share/doc/wwwcount
+	${INSTALL_MAN} ${WRKSRC}/docs/Count_download.html ${PREFIX}/share/doc/wwwcount
+	${INSTALL_MAN} ${WRKSRC}/docs/Count_mirrors.html ${PREFIX}/share/doc/wwwcount
+	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/wwwcount/Count2.5
+	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/c-c.txt ${PREFIX}/share/doc/wwwcount/Count2.5
+	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/gen-c.txt ${PREFIX}/share/doc/wwwcount/Count2.5
+	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/wwwcount/Count2.5/images
+	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/images/styleA.gif ${PREFIX}/share/doc/wwwcount/Count2.5/images
+	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/images/styleB.gif ${PREFIX}/share/doc/wwwcount/Count2.5/images
+	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/images/styleC.gif ${PREFIX}/share/doc/wwwcount/Count2.5/images
+	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/images/styleD.gif ${PREFIX}/share/doc/wwwcount/Count2.5/images
+	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/images/styleE.gif ${PREFIX}/share/doc/wwwcount/Count2.5/images
+	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/images/stylecd.gif ${PREFIX}/share/doc/wwwcount/Count2.5/images
+	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/images/stylecdd.gif ${PREFIX}/share/doc/wwwcount/Count2.5/images
+	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/images/stylecdr.gif ${PREFIX}/share/doc/wwwcount/Count2.5/images
+	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/wwwcount/Count2.5/eximages
+	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/eximages/* ${PREFIX}/share/doc/wwwcount/Count2.5/eximages
+	${INSTALL_SCRIPT} ${WRKSRC}/utils/mkstrip/mkstrip.sh ${PREFIX}/libdata/wwwcount/digits
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
