@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2003/06/08 20:14:28 grant Exp $
+# $NetBSD: Makefile,v 1.60 2003/06/08 20:26:33 grant Exp $
 
 DISTNAME=       imap-2002b
 PKGNAME=        imap-uw-2002.2
@@ -29,14 +29,14 @@ ALL_TARGET=	lrh
 ALL_TARGET=	osx
 .else
 ALL_TARGET=	neb
-. if defined(USE_KERBEROS) && ${USE_KERBEROS} != "no"
+.  if defined(USE_KERBEROS) && ${USE_KERBEROS} != "no"
 PKG_USE_KERBEROS=	# defined
 ALL_TARGET+=	EXTRAAUTHENTICATORS="gss"
-.  if !empty(MACHINE_PLATFORM:MNetBSD-1.5*)
+.    if !empty(MACHINE_PLATFORM:MNetBSD-1.5*)
 # NetBSD-1.5 didn't have "des_new_random_key" in libcrypto
 MAKE_ENV+=	GSS_EXTRA_LDFLAGS="-ldes"
+.    endif
 .  endif
-. endif
 .endif
 
 BUILD_DEFS+=	IMAP_UW_CCLIENT_MBOX_FMT IMAP_UW_NO_CLEARTEXT
@@ -98,7 +98,7 @@ post-extract:
 	# Correct hardcoded paths in man pages.
 	#
 	cd ${WRKSRC}; for file in ${MANFILES}; do			\
-		f=`echo $${file} | ${SED} "s|\(.*\)\.\([0-9]\).*|\1.\2|"`; \
+		f=`${ECHO} $${file} | ${SED} "s|\(.*\)\.\([0-9]\).*|\1.\2|"`; \
 		${SED}	-e "s|/usr/etc/imapd|${PREFIX}/libexec/imapd|g"	\
 			-e "s|/etc/rimapd|${PREFIX}/sbin/rimapd|g"	\
 			-e "s|/usr/etc/ipop2d|${PREFIX}/libexec/ipop2d|g" \
@@ -119,7 +119,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/c-client/.libs/${CCLIENT_PICLIB} ${LIB_DIR}
 	${RANLIB} ${LIB_DIR}/${CCLIENT_PICLIB}
 	cd ${LIB_DIR}; for file in libc-client.*; do			\
-		f=`echo $${file} | ${SED} "s|libc-client|libimapuw|g"`;	\
+		f=`${ECHO} $${file} | ${SED} "s|libc-client|libimapuw|g"`; \
 		${TEST} -f $${file} && ${LN} -sf $${file} $${f};	\
 	done
 	${INST_PROG} ${WRKSRC}/imapd/imapd ${PREFIX}/libexec
