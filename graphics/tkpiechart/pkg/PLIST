@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/06/07 22:45:49 tron Exp $
+lib/tkpiechart/boxlabel.tcl
+lib/tkpiechart/canlabel.tcl
+lib/tkpiechart/labarray.tcl
+lib/tkpiechart/objselec.tcl
+lib/tkpiechart/perilabel.tcl
+lib/tkpiechart/pie.tcl
+lib/tkpiechart/pielabel.tcl
+lib/tkpiechart/pkgIndex.tcl
+lib/tkpiechart/selector.tcl
+lib/tkpiechart/slice.tcl
+@dirrm lib/tkpiechart
