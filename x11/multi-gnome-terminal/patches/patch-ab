@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1 2001/11/11 22:02:51 damon Exp $
+
+--- gnome-terminal/multi-gnome-terminal.desktop.orig	Sat Nov 10 20:12:15 2001
++++ gnome-terminal/multi-gnome-terminal.desktop
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=GNOME terminal
++Name=multi GNOME terminal
+ Name[sl]=Terminal GNOME
+ Name[ca]=Terminal GNOME
+ Name[cs]=Terminál Gnome
