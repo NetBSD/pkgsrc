@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2003/09/13 14:55:30 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2003/09/13 15:21:27 jlam Exp $
 
 DISTNAME=	Mail-SpamAssassin-2.55
 PKGNAME=	spamassassin-2.55
@@ -81,11 +81,6 @@ DEPTHFIRST2=	-depth
 .endif
 FILES_SUBST+=		INTERPRETER_SUPPORT="${INTERPRETER_SUPPORT}"
 FILES_SUBST+=		OPSYS="${OPSYS}"
-
-# SpamAssassin is actually a perl module.
-.include "../../lang/perl5/module.mk"
-
-INSTALL_TARGET+=	inst_cfs
 
 post-extract:
 	@# correct bad SA permissions
@@ -178,4 +173,5 @@ post-install:
 	@${ECHO} "bin/sslspamc" >> ${PLIST_ADD}
 .endif
 
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
