@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:20:10 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/28 17:14:29 joda Exp $
 
 DISTNAME=	emacs-20.7
 PKGREVISION=	2
@@ -31,6 +31,19 @@ GNU_ARCH.mipsbe= mips
 BUILD_DEFS+=	USE_INET6 EMACS_USE_POP
 
 .include "../../mk/bsd.prefs.mk"
+
+# This matches NetBSD <1.7 releases and 1.6A-1.6P, where ld is <2.13.2.1.
+.if ${OPSYS} == "NetBSD" && \
+    (empty(OS_VERSION:M1.[0-5]*) && \
+     empty(OS_VERSION:M1.6_*) && \
+     empty(OS_VERSION:M1.6) && \
+     empty(OS_VERSION:M1.6.[0-9]*) && \
+     empty(OS_VERSION:M1.6[A-P]*))
+# If using GNU ld 2.13.2.1 or later, avoid creating combined reloc
+# sections and .data reloc sections, both of which Emacs can't handle
+# properly.  Analyzed by Stephen Ma.
+LDFLAGS+=	-Wl,-z,nocombreloc
+.endif
 
 EMACS_USE_POP?=	yes
 .if (defined(EMACS_USE_POP) && \
@@ -66,7 +79,7 @@ INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff \
 INSTALL_PROGRAM=${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 
 pre-install:
-	@${FIND} ${WRKSRC} -type f -name "*.orig" | ${XARGS} ${RM} -f
+	@${FIND} ${WRKSRC} -type f -name "*.orig*" | ${XARGS} ${RM} -f
 
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
