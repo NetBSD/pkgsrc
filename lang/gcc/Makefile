@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2002/12/12 02:01:06 salo Exp $
+# $NetBSD: Makefile,v 1.52 2003/01/11 10:44:27 grant Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/gcc/gcc.html
 COMMENT=		GNU Compiler Collection
+
+NOT_FOR_PLATFORM=	Darwin-*-*
 
 PATCH_SITES=		${MASTER_SITE_LOCAL}
 PATCHFILES=		gcc-2.95.3-diff-2002-08-29.gz
