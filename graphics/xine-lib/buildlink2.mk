@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/04/11 09:19:53 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/04/11 09:52:16 rh Exp $
 #
 # This Makefile fragment is included by packages that use xine-lib.
 #
@@ -108,7 +108,7 @@ BUILDLINK_FILES.xine-lib+=	lib/xine/plugins/1.0.0/xineplug_vo_out_xv.*
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/aalib/buildlink2.mk"
 .include "../../graphics/mng/buildlink2.mk"
-.include "../../sysutils/gnome-vfs2/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	xine-lib-buildlink
 
