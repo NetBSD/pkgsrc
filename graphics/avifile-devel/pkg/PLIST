@@ -1,11 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2001/08/14 19:59:50 zuntum Exp $
-${QT}bin/avibench
-${QT}bin/avicat
+@comment $NetBSD: PLIST,v 1.5 2001/08/19 08:55:59 zuntum Exp $
 bin/avifile-config
-${QT}bin/avimake
-${QT}bin/aviplay
-${QT}bin/avirecompress
-${QT}bin/avitype
 include/avifile/Locker.h
 include/avifile/ReadHandlers.h
 include/avifile/StreamInfo.h
@@ -42,12 +36,6 @@ lib/avifile-0.6/libaudiodec-0.6.so.2.0
 lib/avifile-0.6/libaudiodec.a
 lib/avifile-0.6/libaudiodec.la
 lib/avifile-0.6/libaudiodec.so
-lib/avifile-0.6/libmjpeg-0.6.so
-lib/avifile-0.6/libmjpeg-0.6.so.2
-lib/avifile-0.6/libmjpeg-0.6.so.2.0
-lib/avifile-0.6/libmjpeg.a
-lib/avifile-0.6/libmjpeg.la
-lib/avifile-0.6/libmjpeg.so
 lib/avifile-0.6/libmp3lame_audioenc-0.6.so
 lib/avifile-0.6/libmp3lame_audioenc-0.6.so.2
 lib/avifile-0.6/libmp3lame_audioenc-0.6.so.2.0
