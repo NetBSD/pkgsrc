@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/04/30 14:48:45 jtb Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/04/30 20:56:52 jtb Exp $
 bin/burlap
 bin/corduroy
 bin/felt
@@ -6,6 +6,7 @@ bin/loom
 bin/patchwork
 bin/velvet
 bin/yardstick
+lib/X11/app-defaults/Velvet
 share/felt/beam.defaults
 share/felt/german.trn
 share/felt/german_new.trn
