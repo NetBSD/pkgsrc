@@ -1,8 +1,0 @@
-$NetBSD: patch-ag,v 1.4 2003/12/30 14:41:09 cjep Exp $
-
---- ../sqlite/src/delete.c.orig	2003-05-17 18:35:11.000000000 +0100
-+++ ../sqlite/src/delete.c
-@@ -16,2 +16,3 @@
- */
-+#include "os.h"
- #include "sqliteInt.h"
