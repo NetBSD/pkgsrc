@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/25 17:15:12 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/02/10 20:45:02 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PYTHON22_BUILDLINK3_MK:=	${PYTHON22_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	python22
 
 .if !empty(PYTHON22_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		python22
-BUILDLINK_DEPENDS.python22+=	python22>=2.2.2
+BUILDLINK_DEPENDS.python22+=	python22>=2.2
 BUILDLINK_PKGSRCDIR.python22?=	../../lang/python22
 
 .  if defined(BUILDLINK_DEPMETHOD.python)
