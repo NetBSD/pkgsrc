@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2002/07/17 13:10:31 agc Exp $
+
+Prototype select(2).
+
+--- printsession.cc	2002/07/17 13:07:37	1.1
++++ printsession.cc	2002/07/17 13:07:54
+@@ -4,6 +4,7 @@
+ #include "record.h"
+ #include "stream5250.h"
+ #include <sys/time.h>
++#include <unistd.h>
+ #include "printsession.h"
+ #include "utility.h"
+ 
