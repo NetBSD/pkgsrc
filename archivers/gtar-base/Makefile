@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/07/17 21:21:15 grant Exp $
+# $NetBSD: Makefile,v 1.33 2004/03/11 18:03:49 xtraeme Exp $
 #
 
 DISTNAME=       tar-1.13.25
@@ -16,7 +16,7 @@ COMMENT=	The GNU tape archiver with remote magnetic tape support
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 

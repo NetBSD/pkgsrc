@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/03/10 23:05:43 ben Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/11 18:03:49 xtraeme Exp $
 #
 
 DISTNAME=		cabextract-1.0
@@ -9,7 +9,7 @@ MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://www.kyz.uklinux.net/cabextract.php3
 COMMENT=		Microsoft cabinet (.CAB) file extractor
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 
