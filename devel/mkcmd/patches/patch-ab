@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/11/10 00:46:04 epg Exp $
+$NetBSD: patch-ab,v 1.2 2004/11/10 16:43:50 epg Exp $
 
 --- bin/mkcmd/parser.c.orig	2000-07-30 17:56:23.000000000 -0400
 +++ bin/mkcmd/parser.c
@@ -10,3 +10,18 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/11/10 00:46:04 epg Exp $
  
  #include "machine.h"
  #include "type.h"
+@@ -26,14 +27,6 @@
+ #include <string.h>
+ #endif
+ 
+-#if USE_MALLOC_H
+-#include <malloc.h>
+-#else
+-#if NEED_MALLOC_EXTERN
+-extern char *malloc(), *calloc(), *realloc();
+-#endif
+-#endif
+-
+ #if TILDEDIR
+ #include <pwd.h>
+ #endif
