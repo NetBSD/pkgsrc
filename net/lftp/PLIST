@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:29:52 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/08/25 21:50:01 jlam Exp $
 bin/lftp
 bin/lftpget
 man/man1/lftp.1
 share/examples/lftp/lftp.conf
-@exec test -f ${PKG_SYSCONFDIR}/lftp.conf || cp -p %D/%F ${PKG_SYSCONFDIR}
 share/lftp/import-ncftp
 share/lftp/import-netscape
 share/locale/de/LC_MESSAGES/lftp.mo
@@ -17,8 +16,8 @@ share/locale/pt_BR/LC_MESSAGES/lftp.mo
 share/locale/ru/LC_MESSAGES/lftp.mo
 share/locale/zh_CN/LC_MESSAGES/lftp.mo
 share/locale/zh_TW/LC_MESSAGES/lftp.mo
+@dirrm share/examples/lftp
+@dirrm share/lftp
 @exec ${MKDIR} %D/lib/lftp/${PKGVERSION}
 @dirrm lib/lftp/${PKGVERSION}
 @dirrm lib/lftp
-@dirrm share/lftp
-@dirrm share/examples/lftp

@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.5 2002/05/20 13:25:17 itojun Exp $
+$NetBSD: patch-ag,v 1.6 2002/08/25 21:50:43 jlam Exp $
 
 --- algorithm.c.orig	Thu Apr 25 18:48:32 2002
 +++ algorithm.c	Mon May 20 22:11:56 2002

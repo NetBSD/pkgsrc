@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2002/05/20 14:22:36 wiz Exp $
+$NetBSD: distinfo,v 1.7 2002/08/25 21:50:00 jlam Exp $
 
 SHA1 (jwhois-3.2.0.tar.gz) = dc325c688c56a31acd494029a053a7497a8df843
 Size (jwhois-3.2.0.tar.gz) = 361144 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/07/18 20:44:52 heinz Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/08/25 21:50:36 jlam Exp $
 bin/gpg
 bin/gpgkeys_mailto
 bin/gpgsplit

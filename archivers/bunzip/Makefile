@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/02/25 04:47:21 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/25 21:48:59 jlam Exp $
 
 DISTNAME=	bunzip021.c
 PKGNAME=	bunzip-0.21
@@ -10,13 +10,13 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.muraroa.demon.co.uk/
 COMMENT=	Decompressor for bzip .bz files
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 WRKSRC=			${WRKDIR}
 
 do-build:
-	cd ${WRKSRC} && ${LINK.c} -o bunzip ${DISTNAME}
+	cd ${WRKSRC} && ${BUILDLINK_CC} ${CFLAGS} -o bunzip ${DISTNAME}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bunzip ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/bunzip ${PREFIX}/bin/bunzip
 
 .include "../../mk/bsd.pkg.mk"
