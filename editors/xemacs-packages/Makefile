@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/06/30 00:42:33 uebayasi Exp $
+# $NetBSD: Makefile,v 1.37 2003/06/30 11:24:54 seb Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.12
@@ -195,4 +195,3 @@ do-install:
 .endif
 
 .include "../../mk/bsd.pkg.mk"
-.include "../../mk/texinfo.mk"
