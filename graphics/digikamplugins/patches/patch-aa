@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/09/26 00:12:13 seb Exp $
+
+--- jpeglossless/Makefile.in.orig	2004-06-18 10:55:30.000000000 +0000
++++ jpeglossless/Makefile.in
+@@ -798,7 +798,6 @@ docs-am:
+ install-kde-icons:
+ 	$(mkinstalldirs) $(DESTDIR)$(digikamjpeglosslessicondir)/hicolor/32x32/actions
+ 	$(INSTALL_DATA) $(srcdir)/hi32-action-grayscaleconvert.png $(DESTDIR)$(digikamjpeglosslessicondir)/hicolor/32x32/actions/grayscaleconvert.png
+-	$(INSTALL_DATA) $(srcdir)/hi32-action-flip_image.png $(DESTDIR)$(digikamjpeglosslessicondir)/hicolor/32x32/actions/flip_image.png
+ 
+ uninstall-kde-icons:
+ 	-rm -f $(DESTDIR)$(digikamjpeglosslessicondir)/hicolor/32x32/actions/grayscaleconvert.png
