@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.1 2001/03/21 15:54:27 tron Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.2 2001/05/14 12:14:48 rh Exp $
 bin/iconv
 include/iconv.h
 include/libcharset.h
@@ -12,7 +12,7 @@ lib/libiconv.a
 lib/libiconv.la
 lib/libiconv.so
 lib/libiconv.so.2
-lib/libiconv.so.2.2
+lib/libiconv.so.2.3
 lib/libiconv_plug.so
 man/man1/iconv.1
 man/man3/iconv.3

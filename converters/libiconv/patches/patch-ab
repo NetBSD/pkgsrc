@@ -1,15 +1,15 @@
-$NetBSD: patch-ab,v 1.1 2001/01/11 10:56:34 rh Exp $
+$NetBSD: patch-ab,v 1.2 2001/05/14 12:14:48 rh Exp $
 
---- Makefile.in.orig	Sat Dec  2 04:00:57 2000
+--- Makefile.in.orig	Mon Apr 16 13:58:39 2001
 +++ Makefile.in
 @@ -27,7 +27,9 @@
  SHELL = /bin/sh
  
  all : force
--	builddir="`pwd`"; cd libcharset && $(MAKE) -r all && $(MAKE) -r install-lib libdir="$$builddir/lib" includedir="$$builddir/lib"
-+	builddir="`pwd`"; cd libcharset && $(MAKE) -r all &&		\
-+	cp -pR lib/libcharset.la lib/.libs "$$builddir/lib" &&		\
+-	builddir="`pwd`"; cd libcharset && $(MAKE) all && $(MAKE) install-lib libdir="$$builddir/lib" includedir="$$builddir/lib"
++	builddir="`pwd`"; cd libcharset && $(MAKE) all &&	\
++	cp -pR lib/libcharset.la lib/.libs "$$builddir/lib" &&	\
 +	cp -pR include/*.h "$$builddir/include"
- 	cd lib && $(MAKE) -r all
- 	cd src && $(MAKE) -r all
- 	cd man && $(MAKE) -r all
+ 	cd lib && $(MAKE) all
+ 	cd src && $(MAKE) all
+ 	cd man && $(MAKE) all
