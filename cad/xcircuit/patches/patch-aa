@@ -1,40 +1,17 @@
-$NetBSD: patch-aa,v 1.2 2001/01/19 23:24:34 jtb Exp $
+$NetBSD: patch-aa,v 1.3 2003/07/10 08:03:58 jtb Exp $
 
---- Imakefile.orig	Tue Dec 19 18:43:58 2000
-+++ Imakefile
-@@ -28,15 +28,15 @@
- #CCOPTIONS = -O2
- #
- # for debugging purposes uncomment the following line:
--CDEBUGFLAGS = -g
--STD_INCLUDES = -I. -I/usr/X11R6/include/X11
-+#CDEBUGFLAGS = -g
-+STD_INCLUDES = -I. -I${X11BASE}/include -I${LOCALBASE}/include
+--- configure.in.orig
++++ configure.in
+@@ -718,9 +718,9 @@
+       # Not available on all versions:  check for include file.
+       AC_CHECK_HEADER(dlfcn.h, test_ok=yes, test_ok=no)
+       if test "$test_ok" = yes; then
+-        SHLIB_CFLAGS="-fpic"
+-        SHLIB_LD="ld"
+-        LDDL_FLAGS="-Bshareable -x ${LIB_SPEC}"
++        SHLIB_CFLAGS="-fPIC"
++        SHLIB_LD=$CC
++        LDDL_FLAGS="-shared"
+       fi
+       ;;
  
- #------------------------------------------------------------------------
- # Installation directories:
- # Change the following as desired to suit your environment:
- #------------------------------------------------------------------------
- #
--PREFIX = /usr/local
-+# PREFIX = /usr/local
- # XCIRCUIT_LIB_DIR = $(PREFIX)/src/xcircuit-2.2.0/psfiles
- XCIRCUIT_LIB_DIR = $(PREFIX)/lib/xcircuit-2.2
- XCIRCUIT_BIN_DIR = $(PREFIX)/bin
-@@ -58,7 +58,7 @@
- # Support for background rendering through ghostscript.  Change this
- # to the path where gs can be found.
- # GS_EXEC= /usr/local/src/gs5.50/obj/gs
--GS_EXEC= /usr/bin/gs
-+GS_EXEC= ${GS_PREFIX}/bin/gs
- 
- #------------------------------------------------------------------------
- # Window manager bug workaround---If you don't like xcircuit grabbing kbd
-@@ -186,6 +186,7 @@
-    MakeNsubdirMakefiles()
- #endif
- 
-+MakefileSubdirs(Xw)
- MakeMakeSubdirs(Xw,libxcXw.a)
- MakeSubdirs(Xw)
- DependSubdirs(Xw)
