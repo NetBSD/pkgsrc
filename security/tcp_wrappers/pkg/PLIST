@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/19 21:18:16 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/21 01:22:08 tron Exp $
 bin/safe_finger
 bin/tcpdchk
 bin/tcpdmatch
 bin/try-from
+include/tcpd.h
 lib/libwrap.a
 libexec/tcpd
 man/man3/hosts_access.3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/19 21:18:16 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/21 01:22:08 tron Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -21,6 +21,7 @@ do-install:
 	cd ${WRKSRC} && \
 	${INSTALL_PROGRAM} tcpdmatch try-from safe_finger tcpdchk \
 	  ${PREFIX}/bin && \
+	${INSTALL_DATA} tcpd.h ${PREFIX}/include && \
 	${INSTALL_DATA} libwrap.a ${PREFIX}/lib && \
 	${INSTALL_PROGRAM} tcpd ${PREFIX}/libexec && \
 	${INSTALL_DATA} *.3 ${PREFIX}/man/man3 && \
