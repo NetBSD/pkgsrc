@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/04 08:29:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/06 11:51:30 drochner Exp $
 bin/pydoc2p3
 bin/python2p3
 include/python2p3/Python.h
@@ -72,6 +72,7 @@ include/python2p3/tupleobject.h
 include/python2p3/ucnhash.h
 include/python2p3/unicodeobject.h
 include/python2p3/weakrefobject.h
+lib/libpython2p3.so
 lib/libpython2p3.so.1.0
 lib/python2p3/BaseHTTPServer.py
 lib/python2p3/BaseHTTPServer.pyc
