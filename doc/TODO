@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2369 2004/11/15 10:12:58 jmmv Exp $
+$NetBSD: TODO,v 1.2370 2004/11/15 10:46:49 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -246,7 +246,7 @@ Suggested package updates
 	o Addresses-0.4.6 [pkg/28111|rh]
 	o BasiliskII-1.0.20041109
 	o R-2.0.0
-	o TeXmacs-1.0.4.3
+	o TeXmacs-1.0.4.4
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o afterstep-2.00.00
