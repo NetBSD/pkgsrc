@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST.post,v 1.1.1.1 1999/02/22 07:45:22 abs Exp $
+@dirrm lib/netscape/navigator-4.5/plugins
+@dirrm lib/netscape/navigator-4.5/nls
+@dirrm lib/netscape/navigator-4.5/nethelp/netscape/shared
+@dirrm lib/netscape/navigator-4.5/nethelp/netscape/navigatr
+@dirrm lib/netscape/navigator-4.5/nethelp/netscape/home
+@dirrm lib/netscape/navigator-4.5/nethelp/netscape
+@dirrm lib/netscape/navigator-4.5/nethelp
+@dirrm lib/netscape/navigator-4.5/java/classes/irix
+@dirrm lib/netscape/navigator-4.5/java/classes/hpux
+@dirrm lib/netscape/navigator-4.5/java/classes/aix
+@dirrm lib/netscape/navigator-4.5/java/classes
+@dirrm lib/netscape/navigator-4.5/java
+@dirrm lib/netscape/navigator-4.5
+@unexec rmdir %D/lib/netscape 2>/dev/null || true
