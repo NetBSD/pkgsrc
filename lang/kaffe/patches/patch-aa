@@ -1,0 +1,22 @@
+--- configure.orig	Tue Jul 14 08:54:26 1998
++++ configure	Wed Jul 15 13:08:19 1998
+@@ -2587,7 +2587,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-ljpeg  $LIBS"
++LIBS="-ljpeg -L$libdir $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 2593 "configure"
+ #include "confdefs.h"
+@@ -2615,8 +2615,8 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-    JPEG_LIBRARIES="-ljpeg $JPEG_LIBRARIES";
+-  LIBS="-ljpeg $LIBS"
++    JPEG_LIBRARIES="-ljpeg -L$libdir $JPEG_LIBRARIES";
++  LIBS="-ljpeg  -L$libdir $LIBS"
+   ac_tr_lib=HAVE_LIB`echo jpeg | tr 'abcdefghijklmnopqrstuvwxyz' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'`
+   cat >> confdefs.h <<EOF
+ #define $ac_tr_lib 1
