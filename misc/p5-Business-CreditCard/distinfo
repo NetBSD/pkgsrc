@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:38:51 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:17 agc Exp $
 
-MD5 (Business-CreditCard-0.1.tar.gz) = 42132d39c21faa3a99282b462f8228f0
+SHA1 (Business-CreditCard-0.1.tar.gz) = 526e5882951c70403c4ef96c95c44537337e9236
+Size (Business-CreditCard-0.1.tar.gz) = 1728 bytes

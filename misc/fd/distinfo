@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:37:44 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:11 agc Exp $
 
 SHA1 (FD-1.03r.tar.gz) = 51e1aae536c1fa086bcd94645a3f84ac43f661d0
+Size (FD-1.03r.tar.gz) = 323499 bytes
 SHA1 (patch-aa) = 806474896350a5630e608f2b095a629c96616eab
 SHA1 (patch-ab) = 2a21c78e4b57e9e627b3ea39c3307f6b42782ff5
 SHA1 (patch-ac) = 2860300666b1ad498d4bc5b43b4ab4367cfc0792

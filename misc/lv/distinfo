@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:38:41 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:16 agc Exp $
 
-MD5 (lv4494.tar.gz) = 8b221fcca182f3914a5e79e771ebfb0b
+SHA1 (lv4494.tar.gz) = 0effd50e04c7507e663791ee7401a8240cfa5b8c
+Size (lv4494.tar.gz) = 597686 bytes

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:38:53 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 13:52:17 agc Exp $
 
-MD5 (Business-ISBN-20001010.tar.gz) = 9f3be82ae9ab251a1d3780d243f10d6f
+SHA1 (Business-ISBN-20001010.tar.gz) = 67f92cb01e16dc4012565500cae5740bddec967c
+Size (Business-ISBN-20001010.tar.gz) = 6876 bytes
