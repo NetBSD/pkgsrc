@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1 1998/10/05 14:02:07 agc Exp $
+
+Name the idl file explicitly, or orbit-idl complains (this may
+be a gmake problem).
+
+--- src/services/name/Makefile.in	1998/10/05 13:33:08	1.1
++++ src/services/name/Makefile.in	1998/10/05 13:33:21
+@@ -510,7 +510,7 @@
+ 
+ name.h name-common.c name-stubs.c name-skels.c: name.idl \
+ 				 $(top_builddir)/src/idl-compiler/orbit-idl
+-	$(top_builddir)/src/idl-compiler/orbit-idl $<
++	$(top_builddir)/src/idl-compiler/orbit-idl name.idl
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
