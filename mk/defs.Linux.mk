@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.52 2003/06/06 17:57:36 jschauma Exp $
+# $NetBSD: defs.Linux.mk,v 1.53 2003/06/06 19:07:42 jschauma Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -99,7 +99,11 @@ SORT?=		/usr/bin/sort
 SU?=		/bin/su
 TAIL?=		/usr/bin/tail
 TEE?=		/usr/bin/tee
+.if exists(/bin/test)
+TEST?=		/bin/test
+.else
 TEST?=		/usr/bin/test
+.endif
 .if exists(/bin/touch)
 TOUCH?=		/bin/touch
 .else
