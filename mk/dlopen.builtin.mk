@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.builtin.mk,v 1.6 2004/11/28 05:44:34 jlam Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.7 2004/12/02 15:04:16 jlam Exp $
 
 .for _lib_ in dl
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -71,6 +71,8 @@ BUILDLINK_PREFIX.dl=	/usr
 # scripts already check for -ldl themselves.
 #
 BUILDLINK_LDADD.dl=	-ldl
+.    else
+BUILDLINK_TRANSFORM+=	rm:-ldl
 .    endif
 .    if !empty(_DLOPEN_REQUIRE_PTHREADS:M[yY][eE][sS])
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
