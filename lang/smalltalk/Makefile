@@ -1,20 +1,23 @@
-# $NetBSD: Makefile,v 1.4 2001/05/10 23:41:29 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2001/07/10 22:37:36 mjl Exp $
 #
 
-DISTNAME=	smalltalk-1.8.5
+DISTNAME=	smalltalk-1.95.4
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=smalltalk/}
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.gnu.org/software/smalltalk/smalltalk.html
-COMMENT=	the GNU implementation of the Smalltalk-80 language
+HOMEPAGE=	http://www.smalltalk.org/versions/GNUSmalltalk.html
+COMMENT=	GNU Smalltalk: A smalltalk-80 implementation
 
-# smalltalk does not support 64-bit platforms yet (as of 1.8.5)
-NOT_FOR_PLATFORM=	*-*-alpha  *-*-sparc64
+CONFIGURE_ARGS=	--with-included-regex --with-readline=${PREFIX}
+GNU_CONFIGURE=	YES
+USE_GMAKE=	YES
+USE_LIBTOOL=	YES
+USE_GNU_READLINE=YES
 
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-INFO_FILES=	gst.info
-
+.include "../../devel/readline/buildlink.mk"
+.include "../../lang/tcl/buildlink.mk"
+.include "../../x11/tk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
