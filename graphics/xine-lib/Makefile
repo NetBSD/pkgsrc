@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/09/30 12:17:01 seb Exp $
+# $NetBSD: Makefile,v 1.15 2003/11/05 21:33:42 markd Exp $
 #
 
 DISTNAME=		xine-lib-1-rc0a
@@ -31,6 +31,12 @@ CONFIGURE_ARGS+=	--with-w32-path='${PREFIX}/lib/win32'
 CONFIGURE_ENV+=		have_libpng="yes"
 CONFIGURE_ENV+=		PNG_CFLAGS="-I${PREFIX}/include"
 CONFIGURE_ENV+=		PNG_LIBS="-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lpng"
+
+.if !exists(${X11BASE}/lib/libXv.so)
+PLIST_SUBST+=		XV_WORKAROUND="@comment "
+.else
+PLIST_SUBST+=		XV_WORKAROUND=""
+.endif
 
 .include "../../audio/esound/buildlink2.mk"
 .include "../../audio/flac/buildlink2.mk"
