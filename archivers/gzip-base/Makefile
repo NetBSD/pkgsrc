@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2004/07/02 21:06:35 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2004/10/12 18:28:28 tv Exp $
 #
 
 DISTNAME=	gzip-1.2.4a
-PKGNAME=	${DISTNAME:S/gzip-/gzip-base-/}
-PKGREVISION=	1
+PKGNAME=	${DISTNAME:S/gzip-/gzip-base-/:S/a$/b/}
 SVR4_PKGNAME=	gzipb
 CATEGORIES=	archivers
 MASTER_SITES=   ${MASTER_SITE_GNU:=gzip/}
