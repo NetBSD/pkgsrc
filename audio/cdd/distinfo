@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:29 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 13:04:19 agc Exp $
 
-MD5 (cdd-1.0nb3.tar.gz) = dbcfb504f99ebd3a192c3d8fdf272e3c
+SHA1 (cdd-1.0nb3.tar.gz) = 333323444571f463501c206f9d9fd7dde09d12a6
+Size (cdd-1.0nb3.tar.gz) = 48699 bytes
