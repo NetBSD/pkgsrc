@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2005/01/31 09:55:15 markd Exp $
+# $NetBSD: Makefile,v 1.77 2005/03/06 12:48:09 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -13,6 +13,10 @@ USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_PERL5=		run
 USE_PKGINSTALL=		YES
+
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/xdg/menus
+CONF_FILES+=		${PREFIX}/share/examples/kdelibs3/applications.menu \
+			${PKG_SYSCONFDIR}/xdg/menus/applications.menu
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 
@@ -54,6 +58,7 @@ PKG_SUPPORTED_OPTIONS=	cups
 .include "../../print/cups/buildlink3.mk"
 PLIST_SUBST+=		CUPS=
 .else
+CONFIGURE_ARGS+=	--disable-cups
 PLIST_SUBST+=		CUPS="@comment "
 .endif
 
