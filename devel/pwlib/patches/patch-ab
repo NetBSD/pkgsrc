@@ -1,18 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2001/03/05 12:40:25 skrll Exp $
+$NetBSD: patch-ab,v 1.3 2002/02/08 06:29:43 jlam Exp $
 
---- make/lib.mak.orig	Fri May 19 02:26:31 2000
+--- make/lib.mak.orig	Thu May 18 21:26:31 2000
 +++ make/lib.mak
-@@ -49,29 +49,33 @@
- BUILD_NUMBER	:= 0
- endif
- 
-+ifndef PROG
-+CC             := ${LIBTOOL} --mode=compile --tag=CC /usr/pkg/pthreads/bin/pgcc
-+CPLUS          := ${LIBTOOL} --mode=compile --tag=CXX /usr/pkg/pthreads/bin/pg++
-+INSTALL        := ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA}
-+endif
-+
- LIBNAME_MAJ		= $(LIB_BASENAME).$(MAJOR_VERSION)
+@@ -53,36 +53,18 @@
  LIBNAME_MIN		= $(LIBNAME_MAJ).$(MINOR_VERSION)
  LIBNAME_PAT		= $(LIBNAME_MIN).$(BUILD_NUMBER)$(BUILD_TYPE)
  
@@ -23,20 +13,14 @@ $NetBSD: patch-ab,v 1.2 2001/03/05 12:40:25 skrll Exp $
 -	ln -s $(LIBDIR)/$(LIBNAME_PAT) $(LIBDIR)/$(LIBNAME_MAJ)
 -	@rm -f $(LIBDIR)/$(LIBNAME_MIN)
 -	ln -s $(LIBDIR)/$(LIBNAME_PAT) $(LIBDIR)/$(LIBNAME_MIN)
-+# $(LIBDIR)/$(LIB_BASENAME): $(LIBDIR)/$(LIBNAME_PAT)
-+	# @rm -f $(LIBDIR)/$(LIB_BASENAME)
-+	# ln -s $(LIBDIR)/$(LIBNAME_PAT) $(LIBDIR)/$(LIB_BASENAME)
-+	# @rm -f $(LIBDIR)/$(LIBNAME_MAJ)
-+	# ln -s $(LIBDIR)/$(LIBNAME_PAT) $(LIBDIR)/$(LIBNAME_MAJ)
-+	# @rm -f $(LIBDIR)/$(LIBNAME_MIN)
-+	# ln -s $(LIBDIR)/$(LIBNAME_PAT) $(LIBDIR)/$(LIBNAME_MIN)
- 
+-
 -$(LIBDIR)/$(LIBNAME_PAT): $(OBJS)
-+$(LIBDIR)/${LIB_BASENAME}: $(OBJS)
++$(LIBDIR)/$(LIB_BASENAME): $(OBJS)
  	@if [ ! -d $(LIBDIR) ] ; then mkdir $(LIBDIR) ; fi
 -	gcc -shared -Wl,-soname,$(LIB_BASENAME).1 -o $(LIBDIR)/$(LIBNAME_PAT) $(OBJS)
-+	${LIBTOOL} --mode=link --tag=CXX g++ -o ${LIBDIR}/${LIB_BASENAME:.so=.la} ${OBJS:.o=.lo} \
-+		-rpath ${PREFIX}/lib -version-info ${MAJOR_VERSION}:${MINOR_VERSION}
++	$(LIBTOOL) --tag=CXX $(CPLUS) -o $(LIBDIR)/$(LIB_BASENAME) \
++		$(OBJS:.o=.lo) -rpath $(INSTALLLIB_DIR) \
++		-version-info $(MAJOR_VERSION):$(MINOR_VERSION)
  
  CLEAN_FILES += $(LIBDIR)/$(LIBNAME_PAT) $(LIBDIR)/$(LIB_BASENAME) $(LIBDIR)/$(LIBNAME_MAJ) $(LIBDIR)/$(LIBNAME_MIN)
  
@@ -45,17 +29,19 @@ $NetBSD: patch-ab,v 1.2 2001/03/05 12:40:25 skrll Exp $
 -	ln -s $(INSTALLLIB_DIR)/$(LIBNAME_PAT) $(INSTALLLIB_DIR)/$(LIB_BASENAME)
 -	ln -s $(INSTALLLIB_DIR)/$(LIBNAME_PAT) $(INSTALLLIB_DIR)/$(LIBNAME_MAJ)
 -	ln -s $(INSTALLLIB_DIR)/$(LIBNAME_PAT) $(INSTALLLIB_DIR)/$(LIBNAME_MIN)
+-
+-else
 +install: $(LIBDIR)/$(LIB_BASENAME)
-+	$(INSTALL) $(LIBDIR)/$(LIB_BASENAME) $(INSTALLLIB_DIR)
++	$(LIBTOOL) $(BSD_INSTALL_DATA) $(LIBDIR)/$(LIB_BASENAME) $(INSTALLLIB_DIR)
  
- else
- 
-@@ -81,7 +85,7 @@
- 	$(AR) rc $(LIBDIR)/$(LIB_BASENAME) $(OBJS)
- 	$(RANLIB) $(LIBDIR)/$(LIB_BASENAME)
+-$(LIBDIR)/$(LIB_BASENAME): $(OBJS)
+-	@if [ ! -d $(LIBDIR) ] ; then mkdir $(LIBDIR) ; fi
+-ifdef P_USE_RANLIB
+-	$(AR) rc $(LIBDIR)/$(LIB_BASENAME) $(OBJS)
+-	$(RANLIB) $(LIBDIR)/$(LIB_BASENAME)
  else
 -	$(AR) rcs $(LIBDIR)/$(LIB_BASENAME) $(OBJS)
-+	# $(AR) rcs $(LIBDIR)/$(LIB_BASENAME) $(OBJS)
- endif
+-endif
  
  CLEAN_FILES += $(LIBDIR)/$(LIB_BASENAME)
+ 
