@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2002/05/11 11:52:05 rh Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/06 00:36:14 rh Exp $
 #
 
-DISTNAME=	createbuildlink-1.5
+DISTNAME=	createbuildlink-2.0
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	# Nothing
 DISTFILES=	# Nothing
@@ -16,15 +16,18 @@ NO_BUILD=	yes
 NO_PATCH=	yes
 EXTRACT_CMD=	${ECHO}
 
+SCRIPT=		${DISTNAME:C/-.*$//}
+
 do-configure:
+.for scr in ${SCRIPT} ${SCRIPT}1
 	${SED} -e 's/@PKGVERSION@/${PKGVERSION}/'		\
-		< ${FILESDIR}/${DISTNAME:C/-.*$//}		\
-		> ${WRKSRC}/${DISTNAME:C/-.*$//}
+		< ${FILESDIR}/${scr} > ${WRKSRC}/${scr}
+.endfor
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME:C/-.*$//}	\
-		${PREFIX}/bin/${DISTNAME:C/-.*$//}
-	${INSTALL_MAN} ${FILESDIR}/${DISTNAME:C/-.*$//}.8	\
-		${PREFIX}/man/man8
+.for scr in ${SCRIPT} ${SCRIPT}1
+	${INSTALL_SCRIPT} ${WRKSRC}/${scr} ${PREFIX}/bin/${scr}
+.endfor
+	${INSTALL_MAN} ${FILESDIR}/${SCRIPT}.8 ${PREFIX}/man/man8
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,256 @@
+#!/bin/sh
+#
+#	$NetBSD: createbuildlink1,v 1.1 2002/09/06 00:36:15 rh Exp $
+#
+# Copyright (c) 2002 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Rene Hexel.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. All advertising materials mentioning features or use of this software
+#    must display the following acknowledgement:
+# This product includes software developed by the NetBSD
+# Foundation, Inc. and its contributors.
+# 4. Neither the name of The NetBSD Foundation nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# Create an initial buildlink.mk from a package's Makefile and PLIST
+#
+
+REV=`echo '$Revision: 1.1 $' | sed 's/\\$//g'`
+tmpdir=/tmp
+makefile=Makefile
+sedrules=$tmpdir/sedrules.buildlink.$$
+PLIST=PLIST
+
+##
+## some simple integrity checking
+##
+if [ ! -f $makefile ]; then
+	echo "===> Incomplete package! To create a buildlink.mk <==="
+	echo "===> a working $makefile is required!              <==="
+	exit 1
+fi
+
+if [ ! -f "$PLIST" ]; then
+	echo "===> Incomplete package! To create a buildlink.mk <==="
+	echo "===> a working PLIST is required!                 <==="
+	exit 1
+fi
+
+##
+## try to find any included Makefile.common's
+## 
+commons=`grep '^.include.*Makefile.common\"' $makefile |		\
+	sed 's/^.*"\(.*\)".*/\1/'`
+
+##
+## package specific variables
+##
+CURDIR=`pwd | sed 's|^.*/\([^/]*/[^/]*\)$|\1|'`
+PKGNAME=`make show-var VARNAME=PKGNAME`
+PKGVER=`echo $PKGNAME | sed -e 's/^.*-//'`
+PKGNOVER=`echo $PKGNAME | sed -e 's/-[^-]*$//'`
+PKGUPPER=`echo $PKGNOVER | tr '[:lower:]' '[:upper:]' | tr - _`
+PREFIX=X11PREFIX
+USE_X11BASE=`make show-var VARNAME=USE_X11BASE`
+if [ -z "$USE_X11BASE" ]; then
+	if ! grep -q "^USE_X11BASE" $makefile $commons ; then
+		PREFIX=LOCALBASE
+	fi
+fi
+
+##
+## create sed rules
+##
+echo  >$sedrules "s|@@CURDIR@@|$CURDIR|g"
+echo >>$sedrules "s|@@ID@@|\$NetBSD\$|g"
+echo >>$sedrules "s|@@PKGNAME@@|$PKGNAME|g"
+echo >>$sedrules "s|@@PKGNOVER@@|$PKGNOVER|g"
+echo >>$sedrules "s|@@PKGUPPER@@|$PKGUPPER|g"
+echo >>$sedrules "s|@@PKGVER@@|$PKGVER|g"
+echo >>$sedrules "s|@@PREFIX@@|$PREFIX|g"
+echo >>$sedrules "s|@@REV@@|$REV|g"
+echo >>$sedrules "s|@@PKGVERSION@@|@PKGVERSION@|g"
+
+#
+# buildlink header
+#
+sed -f $sedrules <<EOF
+# @@ID@@
+#
+# This Makefile fragment is included by packages that use $PKGNOVER.
+#
+# This file was created automatically using createbuildlink @PKGVERSION@.
+#
+# To use this Makefile fragment, simply:
+#
+# (1) Optionally define BUILDLINK_DEPENDS.$PKGNOVER to the dependency pattern
+#     for the version of $PKGNOVER desired.
+# (2) Include this Makefile fragment in the package Makefile,
+# (3) Add \${BUILDLINK_DIR}/include to the front of the C preprocessor's header
+#     search path, and
+# (4) Add \${BUILDLINK_DIR}/lib to the front of the linker's library search
+#     path.
+
+.if !defined(${PKGUPPER}_BUILDLINK_MK)
+${PKGUPPER}_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
+
+BUILDLINK_DEPENDS.$PKGNOVER?=		$PKGNOVER>=$PKGVER
+DEPENDS+=	\${BUILDLINK_DEPENDS.$PKGNOVER}:../../$CURDIR
+
+EVAL_PREFIX+=	BUILDLINK_PREFIX.$PKGNOVER=$PKGNOVER
+BUILDLINK_PREFIX.${PKGNOVER}_DEFAULT=	\${$PREFIX}
+EOF
+
+##
+## buildlinked includes
+##
+for i in `grep "^include/" $PLIST`; do
+	echo "BUILDLINK_FILES.$PKGNOVER+=	$i"
+done
+
+##
+## buildlinked libraries
+##
+for i in `grep "^lib/" $PLIST |	\
+sed -e 's/\.a$/.*/' -e 's/\.la$/.*/' -e 's/\.so.*$/.*/' | sort | uniq`; do
+	echo "BUILDLINK_FILES.$PKGNOVER+=	$i"
+done
+
+echo ""
+
+##
+## buildlinked dependencies
+##
+for i in $makefile $commons ; do
+	[ ! -f $i ] || grep '^.include.*\.\.\/.*\/.*/buildlink.mk\"' $i
+done
+
+##
+## check for pkgconfig style config files
+##
+pkgconfigs=`grep "^lib/pkgconfig/.*.pc" $PLIST`
+inplist=`grep "^.include.*devel/pkgconfig/buildlink.mk" $makefile $commons`
+[ -z "$pkgconfigs" -o -n "$inplist" ] || echo ".include \"../../devel/pkgconfig/buildlink.mk\""
+
+##
+## main buildlink target for this package
+##
+echo ""
+echo "BUILDLINK_TARGETS.$PKGNOVER=	${PKGNOVER}-buildlink"
+
+##
+## config wrappers for the buildlink directories
+##
+configs=`grep 'bin/.*-config$' $PLIST`
+
+for i in $configs ; do
+	cfg=`echo $i | sed 's|.*/||'`
+	blc=`echo $cfg | sed 's|\(.*\)-config|\1-buildlink-config|'`
+	echo "BUILDLINK_TARGETS.$PKGNOVER+=	$PKGNOVER-$blc-wrapper"
+done
+
+echo "BUILDLINK_TARGETS+=		\${BUILDLINK_TARGETS.$PKGNOVER}"
+[ -z "$pkgconfigs" ] || \
+echo "BUILDLINK_TARGETS+=		\${BUILDLINK_PKG_CONFIG}"
+echo ""
+
+for i in $configs ; do
+	cfg=`echo $i | sed 's|.*/||'`
+	ctg=`echo $cfg | sed 's|\(.*\)-config|\1|'`
+	echo "BUILDLINK_CONFIG.$PKGNOVER-$ctg=					\\"
+	echo "	\${BUILDLINK_PREFIX.$PKGNOVER}/$i"
+	echo "BUILDLINK_CONFIG_WRAPPER.$PKGNOVER-$ctg=				\\"
+	echo "	\${BUILDLINK_DIR}/$i"
+	echo "REPLACE_BUILDLINK_SED+=							\\"
+	echo "	-e \"s|\${BUILDLINK_CONFIG_WRAPPER.$PKGNOVER-$ctg}|\${BUILDLINK_CONFIG.$PKGNOVER-$ctg}|g\""
+	echo ""
+done
+
+##
+## config wrappers for include and library directories
+##
+if [ -n "$configs" ]; then
+    for i in `grep "^include/[^/]*/.*\.h" $PLIST |	\
+    sed -e 's|/[^/]*\.h$||' | sort | uniq`; do
+	dir=$i
+	while [ "$dir" != "include" ] ; do
+		echo "BUILDLINK_CONFIG_WRAPPER_SED+=						\\"
+		echo "	-e \"s|-I[ 	]*\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|-I\${BUILDLINK_DIR}/$dir|g\""
+		echo "REPLACE_BUILDLINK_SED+=							\\"
+		echo "	-e \"s|-I\${BUILDLINK_DIR}/$dir|-I\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|g\""
+		dir=`echo $dir | sed 's|/[^/]*$||'`
+	done
+    done
+
+    for i in `grep "^lib/.*\.a$" $PLIST |	\
+    sed -e 's|/[^/]*\.a$||' | sort | uniq`; do
+	dir=$i
+	while [ "$dir" != "lib" ] ; do
+		echo "BUILDLINK_CONFIG_WRAPPER_SED+=						\\"
+		echo "	-e \"s|-L[ 	]*\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|-L\${BUILDLINK_DIR}/$dir|g\""
+		echo "REPLACE_BUILDLINK_SED+=							\\"
+		echo "	-e \"s|-L\${BUILDLINK_DIR}/$dir|-L\${BUILDLINK_PREFIX.$PKGNOVER}/$dir|g\""
+		dir=`echo $dir | sed 's|/[^/]*$||'`
+	done
+    done
+    echo ""
+fi
+
+##
+## environment variables to help dependent packages find config scripts
+##
+if [ -n "$configs" ]; then
+    echo '.if defined(USE_CONFIG_WRAPPER)'
+    for i in $configs ; do
+	cfg=`echo $i | sed 's|.*/||'`
+	CFG=`echo $cfg | tr '[:lower:]' '[:upper:]' | tr - _`
+	ctg=`echo $cfg | sed 's|\(.*\)-config|\1|'`
+	echo "${PKGUPPER}_${CFG}?=	\${BUILDLINK_CONFIG_WRAPPER.$PKGNOVER-$ctg}"
+	echo "CONFIGURE_ENV+=		${PKGUPPER}_${CFG}=\"\${${PKGUPPER}_${CFG}}\""
+	echo "MAKE_ENV+=		${PKGUPPER}_${CFG}=\"\${${PKGUPPER}_${CFG}}\""
+    done
+    echo ".endif"
+    echo ""
+fi
+
+##
+## buildlink targets for this package
+##
+echo "pre-configure: \${BUILDLINK_TARGETS}"
+echo "${PKGNOVER}-buildlink: _BUILDLINK_USE"
+for i in $configs ; do
+	cfg=`echo $i | sed 's|.*/||'`
+	blc=`echo $cfg | sed 's|\(.*\)-config|\1-buildlink-config|'`
+	echo "$PKGNOVER-$blc-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE"
+done
+
+echo ""
+echo ".endif	# ${PKGUPPER}_BUILDLINK_MK"
+
+rm -f $sedrules
