@@ -1,0 +1,20 @@
+$NetBSD: patch-ai,v 1.1 1998/12/03 17:30:01 tv Exp $
+
+--- perl/Makefile.PL.orig	Wed Dec  2 19:59:49 1998
++++ perl/Makefile.PL	Wed Dec  2 20:18:14 1998
+@@ -1,12 +1,14 @@
+ use ExtUtils::MakeMaker;
+ # See lib/ExtUtils/MakeMaker.pm for details of how to influence
+ # the contents of the Makefile that is written.
++$libs = "-L../.libs -L$ENV{'PREFIX'}/lib -lssl -lcrypto";
++$libs .= "-lrsaref" if $ENV{'USE_RSAREF_DEF'} ne '';
+ WriteMakefile(
+ 	'OPTIMIZE'	=> '-g',
+ 	'DISTNAME'	=> 'SSLeay-perl5-0.8.5',
+ 	'NAME'		=> 'SSLeay',
+ 	'VERSION_FROM'	=> 'SSLeay.pm',
+-	'LIBS'		=> ['-L.. -lssl -lcrypto'],
++	'LIBS'		=> [$libs],
+ 	'DEFINE'	=> '',
+ 	'INC'		=> '-I../include',
+ 	'C'		=> ['callback.c'],

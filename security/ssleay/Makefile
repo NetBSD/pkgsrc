@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.10 1998/10/02 22:02:25 tv Exp $
-# FreeBSD: Makefile,v 1.20 1998/08/27 16:38:02 markm Exp
-#
-#  Note that the config file goes in ${PREFIX}/lib; this cannot easily
-#  be changed to etc without modifing a bunch of code on the software
-#  itself, due to certain assumptions it makes. [cjs]
+# $NetBSD: Makefile,v 1.11 1998/12/03 17:29:58 tv Exp $
 #
 
 DISTNAME=		SSLeay-0.9.0b
+# Lower case differentiates the new (shared lib) pkg from the old one.
+# Since the directory name is lower case, it should stay this way.
+PKGNAME=		ssleay-0.9.0b
 CATEGORIES=		devel security
 MASTER_SITES=		ftp://psych.psy.uq.oz.au/pub/Crypto/SSL/
 
 MAINTAINER=		explorer@netbsd.org
 HOMEPAGE=		http://www.psy.uq.oz.au/~ftp/Crypto/
 
-ONLY_FOR_ARCHS=		alpha arm32 i386 m68k mips mipse[bl] ns32k powerpc \
-			sparc sparc64 vax
+CONFLICTS=		SSLeay-*
+
+NOT_FOR_ARCHS=		alpha *64
 
 USE_PERL5=		yes
 
 RESTRICTED=		"Crypto; export-controlled"
 MIRROR_DISTFILE=	no
 
+USE_LIBTOOL=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	util/NetBSD.sh
 CONFIGURE_ARGS=		${MACHINE_ARCH}
@@ -34,7 +34,7 @@ PLIST_SRC=	${PKGDIR}/PLIST
 DEPENDS=		rsaref-2.0:../../security/rsaref
 CONFIGURE_ENV+=		USE_RSAREF_DEF=-DRSAref
 MAKE_ENV+=		USE_RSAREF=YES
-PLIST_SRC+=		${PKGDIR}/PLIST.rsaref2
+LDFLAGS+=		-L${PREFIX}/lib -lrsaref
 .endif
 
 fetch-depends:
@@ -52,15 +52,42 @@ post-extract:
 	@${CP} -f ${FILESDIR}/NetBSD.sh ${WRKSRC}/util/
 	@chmod +x ${WRKSRC}/util/NetBSD.sh
 
-.if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
 post-configure:
+.if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
 	@${CP} ${WRKSRC}/rsaref/rsaref.h ${WRKSRC}/include/rsaref.h
 .endif
+	@cd ${WRKSRC}/perl && PREFIX=${PREFIX} ${PREFIX}/bin/perl Makefile.PL
 
-post-install:
-.if !defined(NOPORTDOCS)
-	@${MKDIR} ${PREFIX}/share/doc/SSLeay
-	@${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/SSLeay
-.endif
+post-build:
+	@cd ${WRKSRC}/perl && ${MAKE}
+
+do-install:
+	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/apps/ssleay ${PREFIX}/bin/
+	@cd ${PREFIX}/bin && ${SH} ${WRKSRC}/apps/mklinks
+	cd ${WRKSRC}/tools && ${INSTALL_SCRIPT} \
+		c_hash c_info c_issuer c_name c_rehash ${PREFIX}/bin/
+	${SED} -e s,/usr/local,${PREFIX}, ${WRKSRC}/apps/der_chop >${WRKDIR}/der_chop && \
+		${INSTALL_SCRIPT} ${WRKDIR}/der_chop ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/apps/CA.sh ${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/apps/ssleay.cnf ${PREFIX}/etc/ssleay.cnf.example
+	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libcrypto.la ${PREFIX}/lib/
+	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libssl.la ${PREFIX}/lib/
+	${INSTALL_DATA_DIR} ${PREFIX}/include/ssleay
+	cd ${WRKSRC}/include && ${INSTALL_DATA} \
+		asn1.h asn1_mac.h bio.h blowfish.h bn.h bss_file.c \
+		buffer.h cast.h conf.h cryptall.h cryptlib.h crypto.h \
+		des.h dh.h dsa.h e_os.h err.h evp.h hmac.h idea.h lhash.h \
+		md2.h md5.h mdc2.h objects.h pem.h pkcs7.h rand.h rc2.h \
+		rc4.h rc5.h ripemd.h rsa.h sha.h ssl.h ssl2.h ssl23.h \
+		ssl3.h stack.h tls1.h txt_db.h x509.h x509_vfy.h \
+		${PREFIX}/include/ssleay/
+	${LN} -sf ../etc/ssleay.cnf ${PREFIX}/lib/ssleay.cnf
+	@cd ${WRKSRC}/perl && ${MAKE} install
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ssleay
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/ssleay
+	${INSTALL_DATA_DIR} ${PREFIX}/certs ${PREFIX}/private
+	@if [ ! -f ${PREFIX}/etc/ssleay.cnf ]; then \
+		${CP} -p ${PREFIX}/etc/ssleay.cnf.example ${PREFIX}/etc/ssleay.cnf; \
+	fi
 
 .include  "../../mk/bsd.pkg.mk"

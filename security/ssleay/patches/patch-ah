@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 1998/12/03 17:30:00 tv Exp $
+
+--- apps/Makefile.ssl.orig	Tue Dec  1 12:44:14 1998
++++ apps/Makefile.ssl	Tue Dec  1 12:44:44 1998
+@@ -22,8 +22,8 @@
+ 
+ DLIBCRYPTO=../libcrypto.a
+ DLIBSSL=../libssl.a
+-LIBCRYPTO=-L.. -lcrypto
+-LIBSSL=-L.. -lssl
++LIBCRYPTO=../libcrypto.la
++LIBSSL=../libssl.la
+ 
+ SSLEAY= ssleay
+ 
