@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2004/09/08 02:42:23 danw Exp $
+# $NetBSD: Makefile,v 1.81 2004/09/22 07:38:52 jlam Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system *without* Kerberos
@@ -6,6 +6,7 @@
 
 DISTNAME=       imap-2004a
 PKGNAME=        imap-uw-2004a
+PKGREVISION=	1
 CATEGORIES=     mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -16,6 +17,8 @@ COMMENT=	University of Washington's IMAP, POP2, and POP3 servers
 
 USE_BUILDLINK3=	# defined
 USE_LIBTOOL=	# defined
+
+LIBTOOLIZE_PLIST=	yes
 
 INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
 INST_LIB=	${LIBTOOL} ${INSTALL_DATA}
@@ -141,8 +144,13 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/c-client/.libs/${CCLIENT_PICLIB} ${LIB_DIR}
 	${RANLIB} ${LIB_DIR}/${CCLIENT_PICLIB}
 	cd ${LIB_DIR}; for file in libc-client.*; do			\
-		f=`${ECHO} $${file} | ${SED} "s|libc-client|libimapuw|g"`; \
-		${TEST} -f $${file} && ${LN} -f $${file} $${f};	\
+		case $$file in						\
+		*.la)	;;						\
+		*)							\
+			f=`${ECHO} $${file} | ${SED} "s|libc-client|libimapuw|g"`; \
+			${TEST} -f $${file} && ${LN} -f $${file} $${f};	\
+			;;						\
+		esac;							\
 	done
 	${INST_PROG} ${WRKSRC}/imapd/imapd ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop2d ${PREFIX}/libexec
