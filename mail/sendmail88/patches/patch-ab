@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+
+--- cf/feature/smrsh.m4.orig	Mon Apr  7 23:39:39 1997
++++ cf/feature/smrsh.m4	Sat Feb 12 23:28:26 2000
+@@ -39,4 +39,4 @@
+ 
+ ifdef(`_MAILER_local_',
+ 	`errprint(`*** FEATURE(smrsh) must occur before MAILER(local)')')dnl
+-define(`LOCAL_SHELL_PATH', ifelse(_ARG_, `', `/usr/local/etc/smrsh', _ARG_))
++define(`LOCAL_SHELL_PATH', ifelse(_ARG_, `', `/usr/pkg/libexec/sendmail/smrsh', _ARG_))

@@ -1,0 +1,37 @@
+$NetBSD: patch-aq,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+
+--- smrsh/smrsh.8.orig	Wed Jan 10 01:53:51 1996
++++ smrsh/smrsh.8	Sat Feb 12 23:28:27 2000
+@@ -59,7 +59,7 @@
+ Briefly,
+ .I smrsh
+ limits programs to be in the directory
+-/usr/adm/sm.bin,
++/usr/libexec/sm.bin,
+ allowing the system administrator to choose the set of acceptable commands.
+ It also rejects any commands with the characters
+ `\`', `<', `>', `|', `;', `&', `$', `(', `)', `\er' (carriage return),
+@@ -73,10 +73,10 @@
+ and
+ ``vacation''
+ all actually forward to
+-``/usr/adm/sm.bin/vacation''.
++``/usr/libexec/sm.bin/vacation''.
+ .PP
+ System administrators should be conservative about populating
+-/usr/adm/sm.bin.
++/usr/libexec/sm.bin.
+ Reasonable additions are
+ .IR vacation (1),
+ .IR procmail (1),
+@@ -98,8 +98,8 @@
+ (defaults to ``/bin:/usr/bin:/usr/ucb'')
+ and/or \-DCMDBIN=\e"\fIdir\fP\e"
+ to change the default program directory
+-(defaults to ``/usr/adm/sm.bin'').
++(defaults to ``/usr/libexec/sm.bin'').
+ .SH FILES
+-/usr/adm/sm.bin \- directory for restricted programs
++/usr/libexec/sm.bin \- directory for restricted programs
+ .SH SEE ALSO
+ sendmail(8)

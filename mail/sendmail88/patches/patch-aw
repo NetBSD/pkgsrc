@@ -1,0 +1,46 @@
+$NetBSD: patch-aw,v 1.1.1.1 2000/02/13 00:14:49 tron Exp $
+
+--- src/daemon.c.orig	Thu Oct 23 19:26:05 1997
++++ src/daemon.c	Sat Feb 12 23:28:27 2000
+@@ -814,15 +814,13 @@
+ 
+ 	if (host[0] == '[')
+ 	{
+-		long hid;
+ 		register char *p = strchr(host, ']');
+ 
+ 		if (p != NULL)
+ 		{
+ 			*p = '\0';
+ #if NETINET
+-			hid = inet_addr(&host[1]);
+-			if (hid == INADDR_NONE)
++			if (inet_aton(&host[1], &addr.sin.sin_addr) == 0)
+ #endif
+ 			{
+ 				/* try it as a host name (avoid MX lookup) */
+@@ -856,7 +854,6 @@
+ 		}
+ #if NETINET
+ 		addr.sin.sin_family = AF_INET;		/*XXX*/
+-		addr.sin.sin_addr.s_addr = hid;
+ #endif
+ 	}
+ 	else
+@@ -1131,6 +1128,7 @@
+ 	{
+ 		(void) strcpy(hostbuf, "localhost");
+ 	}
++	hostbuf[size - 1] = '\0';
+ 	hp = sm_gethostbyname(hostbuf);
+ 	if (hp == NULL)
+ 		return NULL;
+@@ -1721,7 +1719,7 @@
+ 	if ((cp = strchr(name, ']')) == NULL)
+ 		return (NULL);
+ 	*cp = '\0';
+-	in_addr.s_addr = inet_addr(&name[1]);
++	(void) inet_aton(&name[1], &in_addr);
+ 	*cp = ']';
+ 
+ 	/* nope -- ask the name server */

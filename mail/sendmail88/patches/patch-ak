@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+
+--- makemap/makemap.8.orig	Wed Jul 23 17:03:35 1997
++++ makemap/makemap.8	Sat Feb 12 23:28:26 2000
+@@ -33,7 +33,7 @@
+ .\"
+ .Dd November 16, 1992
+ .Dt MAKEMAP 8
+-.Os BSD 4.4
++.Os
+ .Sh NAME
+ .Nm makemap
+ .Nd create database maps for sendmail
