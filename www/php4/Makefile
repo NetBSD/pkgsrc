@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2001/12/03 08:31:05 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2001/12/11 06:12:44 jlam Exp $
 
 .include "Makefile.php"
 
 PKGNAME=		php-${PHP_BASE_VERS}
-PHP_PKG_VERS=		# empty
+PKGREVISION?=		# empty
 CATEGORIES+=		lang
 COMMENT=		HTML-embedded scripting language
 
