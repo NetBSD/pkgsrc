@@ -1,0 +1,27 @@
+#
+# $Id: personal_config,v 1.1.1.1 2004/02/26 03:58:51 xtraeme Exp $
+#
+# Personal configuration example file for mklivecd.
+#
+
+for f in zshrc xinitrc
+do
+    if [ ! -f $ISODIR/$HOME/.$f ]; then
+	cp $HOME/.$f $ISODIR/$HOME
+	echo "=> Copying .$f"
+    else
+	echo "=> Skipping .$f, already exists"
+    fi
+done
+    
+for d in pekwm sylpheed gkrellm2 xmms xchat2
+do
+    if [ ! -d $ISODIR/$HOME/.$d ]; then
+	cp -r $HOME/.$d $ISODIR/$HOME
+	echo "=> Copying .$d"
+    else
+	echo "=> Skipping .$d, already exists"
+    fi
+done
+
+chown -R juan:users $ISODIR/$HOME
