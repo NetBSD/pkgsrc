@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2001/02/27 07:59:31 itojun Exp $
+# $NetBSD: Makefile,v 1.19 2001/02/28 10:34:38 itojun Exp $
 
 DISTNAME=	snapshot-20010225
 PKGNAME=	postfix-20010225
 CATEGORIES=	mail
 MASTER_SITES=	ftp://postfix.cloud9.net/experimental/
 
-PATCHFILES=	postfix-20010225snap-v6-20010227a.diff.gz 
+PATCHFILES=	postfix-20010225snap-v6-20010228a.diff.gz 
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 PATCH_DIST_STRIP+=	-p1
 
