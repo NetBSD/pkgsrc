@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2004/09/06 19:55:07 tron Exp $
+# $NetBSD: Makefile,v 1.80 2004/09/08 02:42:23 danw Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system *without* Kerberos
@@ -142,7 +142,7 @@ do-install:
 	${RANLIB} ${LIB_DIR}/${CCLIENT_PICLIB}
 	cd ${LIB_DIR}; for file in libc-client.*; do			\
 		f=`${ECHO} $${file} | ${SED} "s|libc-client|libimapuw|g"`; \
-		${TEST} -f $${file} && ${LN} -sf $${file} $${f};	\
+		${TEST} -f $${file} && ${LN} -f $${file} $${f};	\
 	done
 	${INST_PROG} ${WRKSRC}/imapd/imapd ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop2d ${PREFIX}/libexec
