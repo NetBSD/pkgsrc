@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:14:45 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/03/14 14:57:30 rillig Exp $
 #
 
 DISTNAME=	gtkgo-0_0_10
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://norbertdejonge.sourceforge.net/gtkgo.html
 COMMENT=	Go board with skin support
 
-CPPFLAGS+=	-DPKGDATADIR='\"${PREFIX}/share/gtkgo/\"'
+CPPFLAGS+=	-DPKGDATADIR='"${PREFIX}/share/gtkgo/"'
 GNU_CONFIGURE=	YES
 USE_BUILDLINK3=	YES
 USE_X11=	YES
