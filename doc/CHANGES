@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9427 2005/03/05 11:06:42 uebayasi Exp $
+$NetBSD: CHANGES,v 1.9428 2005/03/05 11:19:09 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1280,3 +1280,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added gtk2-engines-clearlooks-0.4 [jmmv 2005-03-05]
 	Updated freepwing to 1.4.4 [uebayasi 2005-03-05]
 	Updated eb to 4.1.3 [uebayasi 2005-03-05]
+	Updated skk to 12.2.0nb1 [uebayasi 2005-03-05]
