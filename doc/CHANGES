@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7502 2004/10/20 22:06:18 schmonz Exp $
+$NetBSD: CHANGES,v 1.7503 2004/10/20 22:17:31 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4793,3 +4793,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome2-system-monitor to 2.8.0 [jmmv 2004-10-20]
 	Updated getmail to 4.2.2 [schmonz 2004-10-20]
 	Updated checkpassword-pam to 0.99 [schmonz 2004-10-20]
+	Updated wistumbler2 to 2.00-pre9 [xtraeme 2004-10-20] 
