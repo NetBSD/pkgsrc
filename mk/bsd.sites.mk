@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.28 2004/12/25 03:22:37 jlam Exp $
+# $NetBSD: bsd.sites.mk,v 1.29 2004/12/25 03:43:33 jlam Exp $
 #
 # Default MASTER_SITES
 
@@ -48,14 +48,13 @@ MASTER_SITE_GNUSTEP+=   \
 	ftp://ftp.easynet.nl/mirror/GNUstep/ \
 	http://ftp.easynet.nl/mirror/GNUstep/
 
-CPAN_MODULE_DIR?=	modules/by-module
 MASTER_SITE_PERL_CPAN+= \
-	ftp://cpan.pair.com/${CPAN_MODULE_PATH}/ \
-	ftp://mirrors.cloud9.net/mirrors/CPAN/${CPAN_MODULE_PATH}/ \
-	ftp://ftp.uvsq.fr/pub/perl/CPAN/${CPAN_MODULE_PATH}/ \
-	ftp://ftp.gmd.de/mirrors/CPAN/${CPAN_MODULE_PATH}/ \
-	ftp://ftp.tuwien.ac.at/pub/CPAN/${CPAN_MODULE_PATH}/ \
-	ftp://cpan.perl.org/CPAN/${CPAN_MODULE_PATH}/
+	ftp://cpan.pair.com/module/by-module/ \
+	ftp://mirrors.cloud9.net/mirrors/CPAN/module/by-module/ \
+	ftp://ftp.uvsq.fr/pub/perl/CPAN/module/by-module/ \
+	ftp://ftp.gmd.de/mirrors/CPAN/module/by-module/ \
+	ftp://ftp.tuwien.ac.at/pub/CPAN/module/by-module/ \
+	ftp://cpan.perl.org/CPAN/module/by-module/
 
 MASTER_SITE_R_CRAN+=    \
 	http://cran.r-project.org/src/ \
