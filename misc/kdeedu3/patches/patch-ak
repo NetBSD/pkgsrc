@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.1 2005/02/20 11:31:11 markd Exp $
+
+--- kstars/kstars/indi/indicom.h.orig	2004-06-25 21:10:04.000000000 +1200
++++ kstars/kstars/indi/indicom.h
+@@ -38,6 +38,7 @@
+ 
+ #define J2000 2451545.0
+ #define TRACKING_THRESHOLD	0.05		/* 3' for tracking */
++#define ERRMSG_SIZE 1024
+ 
+ extern const char * Direction[];
+ extern const char * SolarSystem[];
