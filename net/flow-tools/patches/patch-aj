@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1 2003/02/16 23:50:21 seb Exp $
+$NetBSD: patch-aj,v 1.2 2003/05/23 07:19:44 seb Exp $
 
---- src/flow-fanout.c.orig	Wed Oct 23 18:08:52 2002
+--- src/flow-fanout.c.orig	2003-04-04 02:24:40.000000000 +0000
 +++ src/flow-fanout.c
-@@ -252,8 +252,9 @@ int main(int argc, char **argv)
+@@ -287,8 +287,9 @@ int main(int argc, char **argv)
      }
     
      chdir ("/"); 
