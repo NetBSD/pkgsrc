@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2004/01/23 21:50:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/26 03:31:31 rh Exp $
 #
 
-DISTNAME=		balsa-2.0.15
-PKGREVISION=		7
+DISTNAME=		balsa-2.0.16
 CATEGORIES=		mail gnome
 MASTER_SITES=		http://balsa.gnome.org/				\
 			ftp://ftp.newton.cx/pub/balsa/
@@ -22,7 +21,7 @@ USE_PKGLOCALEDIR=	yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--with-gpgme=${BUILDLINK_PREFIX.gpgme}
+CONFIGURE_ARGS+=	--with-gpgme=${BUILDLINK_PREFIX.gpgme}/bin/gpgme-config
 CONFIGURE_ARGS+=	--disable-more-warnings
 CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--enable-pcre
@@ -44,7 +43,7 @@ CONFIGURE_ARGS+=        --enable-ldap
 CONFIGURE_ENV+=	ac_cv_lib_iconv_iconv_open=yes
 .endif
 
-.include "../../security/gpgme03/buildlink2.mk"
+.include "../../security/gpgme/buildlink2.mk"
 .include "../../devel/pcre/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/libtool/buildlink2.mk"
@@ -55,7 +54,7 @@ CONFIGURE_ENV+=	ac_cv_lib_iconv_iconv_open=yes
 .include "../../security/openssl/buildlink2.mk"
 .include "../../textproc/aspell/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../www/libgtkhtml/buildlink2.mk"
+.include "../../www/gtkhtml3/buildlink2.mk"
 .include "../../mail/libesmtp/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
