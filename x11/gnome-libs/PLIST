@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2003/05/30 16:20:06 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2003/09/12 16:12:02 drochner Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -216,8 +216,8 @@ lib/libgtkxmhtml.so.1.1
 lib/libzvt.a
 lib/libzvt.la
 lib/libzvt.so
-lib/libzvt.so.4
-lib/libzvt.so.4.10
+lib/libzvt.so.5
+lib/libzvt.so.5.0
 man/man1/dns-helper.1
 man/man1/gconfigger.1
 man/man1/gnome-bug.1
@@ -568,7 +568,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-libs.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-libs.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-libs.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-libs.mo
-${PKGLOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/gnome-libs.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-libs.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-libs.mo
 share/mime-info/gnome.mime
 share/pixmaps/calculator-font.png
