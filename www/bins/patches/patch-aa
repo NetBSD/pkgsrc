@@ -1,11 +1,16 @@
-$NetBSD: patch-aa,v 1.6 2002/09/24 02:01:30 dmcmahill Exp $
-
-
-no 'locale' command on netbsd so deal with `locale charmap` not returning
-correctly.
+$NetBSD: patch-aa,v 1.7 2002/10/19 18:16:40 dmcmahill Exp $
 
 --- bins.orig	Sat Sep 21 09:50:14 2002
 +++ bins
+@@ -86,7 +86,7 @@ sub _; # alias for Getext, if present
+ ############################################################################
+ 
+ # I18N
+-my $localePath = "/usr/local/share/locale"; # Base locale path  (for I18N)
++my $localePath = "@pkglocaledir@"; # Base locale path  (for I18N)
+ 
+ my $I18N = have_package("Locale::gettext");
+ if ($I18N) {
 @@ -301,7 +301,7 @@ my %defaultConfig =
     # any new options need corresponding new documentation.
  
