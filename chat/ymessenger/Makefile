@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:26:29 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/22 03:54:33 kristerw Exp $
 
 DISTNAME=		ymessenger-0.93.0
 CATEGORIES=		chat
@@ -13,7 +13,7 @@ DEPENDS+=		suse_compat>=6.4:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=		suse_gtk>=6.4:../../emulators/${SUSE_DIR_PREFIX}_gtk
 
 ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
-			NetBSD-1.5_ALPHA-i386 NetBSD-1.[5-9]*-i386
+			NetBSD-1.[5-9]*-i386 NetBSD-[2-9]*-i386
 
 CHECK_SHLIBS=		no
 
