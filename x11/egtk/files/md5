@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/10/13 19:08:28 jlam Exp $
+$NetBSD: md5,v 1.2 2000/02/25 17:58:01 jlam Exp $
 
-MD5 (eiffel_gtk_0.3.3.tar.gz) = 6571e16839eb8e05b3d62033f6b2d643
+MD5 (eGTK_0.3.4.tar.gz) = bfdd61c536383dbebd6f69ebd1136ecd
