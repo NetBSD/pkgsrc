@@ -13,3 +13,19 @@
 +			includeName[dirLen + 1] = 0;
  			strcat(includeName, tmpName);
  		}
+
+--- config/i386/netbsd1/md.h	1998/02/03 14:29:01	1.1
++++ config/i386/netbsd1/md.h	1998/02/03 14:30:48
+@@ -16,6 +16,12 @@
+ #include "i386/common.h"
+ #include "i386/threads.h"
+ 
++/*
++ * Redefine stack pointer offset.
++ */
++#undef	SP_OFFSET
++#define	SP_OFFSET	2
++
+ #if defined(TRANSLATOR)
+ #include "jit-md.h"
+ #endif
