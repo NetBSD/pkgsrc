@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-mi,v 1.1 1998/06/04 19:38:37 tv Exp $
+@comment $NetBSD: PLIST-mi,v 1.2 1998/06/06 23:48:21 tv Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
@@ -216,6 +216,7 @@ http/icons/world2.gif
 http/include/alloc.h
 http/include/ap.h
 http/include/ap_config.h
+http/include/ap_md5.h
 http/include/buff.h
 http/include/compat.h
 http/include/conf.h
@@ -231,7 +232,6 @@ http/include/http_protocol.h
 http/include/http_request.h
 http/include/http_vhost.h
 http/include/httpd.h
-http/include/md5.h
 http/include/multithread.h
 http/include/os.h
 http/include/rfc1413.h
