@@ -1,0 +1,6 @@
+Ninja IRC is yet another ircII-based IRC client. Its many extra features 
+include enhanced socket handling, additional resolving capabilities, ANSI 
+and MIRC color support, MIRC-style DCC RESUME, cloak mode, a friend list, 
+an enemy list, SOCKS v4&5 proxy support, more ircii $func() functions, 
+auto-rejoin, cycling auto-reconnect, auto-dcc get, improved ban/unban 
+handling, cached information, NDCC file offering, and much more.
