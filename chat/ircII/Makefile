@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/07/07 20:54:52 mrg Exp $
+# $NetBSD: Makefile,v 1.9 2001/07/15 12:22:16 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
@@ -16,6 +16,7 @@ CONFLICTS=		blackened-*
 
 .include "../../mk/bsd.prefs.mk"
 
+USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
 .if defined(DEFAULT_IRC_SERVER)
 CONFIGURE_ARGS+=	--with-default-server=${DEFAULT_IRC_SERVER}
@@ -31,16 +32,16 @@ BUILD_DEFS+=		USE_SOCKS
 
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
-CONFIGURE_ARGS+=	--with-socks${USE_SOCKS}=${PREFIX}
+CONFIGURE_ARGS+=	--with-socks${USE_SOCKS}=${BUILDLINK_DIR}
 .if ${USE_SOCKS} == 4
-DEPENDS+=               socks4-2.2:../../net/socks4
+.include "../../net/socks4/buildlink.mk"
 .else
-DEPENDS+=               socks5-1.0.2:../../net/socks5
+.include "../../net/socks5/buildlink.mk"
 .endif
 .endif
 
 .if (${OPSYS} == SunOS)
-LIBS=			-lnsl
+LIBS+=			-lnsl
 .endif
 
 .if defined(IRCII_CONFIGURE_ARGS)
