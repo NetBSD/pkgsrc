@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2003/07/18 13:12:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/09/08 14:17:19 wiz Exp $
 bin/scmxx
 man/man1/scmxx.1
 man/ru/man1/scmxx.1
 share/doc/scmxx/doc_sources.txt
 share/doc/scmxx/gsmcharset.txt
-share/examples/scmxx/phonebook
+share/examples/scmxx/debian_with_scmxx.bmp
 share/examples/scmxx/sms.txt
 share/examples/scmxx/vCalendar.vcs
 share/examples/scmxx/vCard.vcf
