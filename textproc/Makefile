@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2003/12/03 23:50:02 xtraeme Exp $
+# $NetBSD: Makefile,v 1.218 2003/12/04 08:35:10 agc Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -31,6 +31,7 @@ SUBDIR+=	aspell-spanish
 SUBDIR+=	aspell-svenska
 SUBDIR+=	aspell-ukrainian
 SUBDIR+=	aspell-welsh
+SUBDIR+=	awf
 SUBDIR+=	bibclean
 SUBDIR+=	biblook
 SUBDIR+=	bibparse
