@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/08/25 18:39:08 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2002/10/30 15:15:16 seb Exp $
 
 PKGNAME=		${DISTNAME:S/MesaLib/glut/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
@@ -14,14 +14,8 @@ CONFLICTS+=		Mesa<3.2.1
 
 USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
-
-do-build:
-	cd ${WRKSRC}/src-glut && ${SETENV} ${MAKE_ENV} \
-	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
-
-do-install:
-	cd ${WRKSRC}/src-glut && ${SETENV} ${MAKE_ENV} \
-	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
+CONFIGURE_DIRS=		${WRKSRC}
+BUILD_DIRS=		${WRKSRC}/src-glut
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/GL
