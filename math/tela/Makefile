@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/03/30 00:12:01 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/09 04:09:48 jtb Exp $
 
 DISTNAME=	tela-1.31
 CATEGORIES=	math
@@ -14,11 +14,10 @@ DEPENDS+=	lapack-[0-9]*:../../math/lapack
 DEPENDS+=	hdf-[0-9]*:../../devel/hdf
 DEPENDS+=	plotmtv-[0-9]*:../../graphics/plotmtv
 DEPENDS+=	readline-[0-9]*:../../devel/readline
-DEPENDS+=	f2c-[0-9]*:../../lang/f2c
 
-EVAL_PREFIX+=	HDF_PREFIX=hdf F2C_PREFIX=f2c
-EVAL_PREFIX+=	READLINE_PREFIX=readline JPEG_PREFIX=jpeg
 EVAL_PREFIX+=	BLAS_PREFIX=blas LAPACK_PREFIX=lapack
+EVAL_PREFIX+=	HDF_PREFIX=hdf JPEG_PREFIX=jpeg
+EVAL_PREFIX+=	READLINE_PREFIX=readline
 
 GNU_CONFIGURE=	#defined
 USE_FORTRAN=	#defined
@@ -33,7 +32,7 @@ pre-configure:
 	@for f in ${WRKSRC}/t/demo.t ${WRKSRC}/t/docview.t	\
 	${WRKSRC}/t/std.t; do					\
 		${SED} -e 's:@PREFIX@:'${PREFIX}':g'		\
-		< $$f > $$f.tmp && ${MV} -f $$f.tmp $$f;	\
+		$$f > $$f.tmp && ${MV} -f $$f.tmp $$f;		\
 	done
 
 .include "../../mk/bsd.pkg.mk"
