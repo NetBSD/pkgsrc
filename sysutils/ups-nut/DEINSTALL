@@ -1,19 +1,35 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/10/31 22:54:04 zuntum Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/11/19 04:25:15 lukem Exp $
 #
+
+PKGNAME=$1
+STAGE=$2
 
 USER="@NUT_USER@"
 GROUP="@NUT_GROUP@"
-USERDEL="@USERDEL@"
-GROUPDEL="@GROUPDEL@"
 
-case "$2" in
-	DEINSTALL)
-		echo "Removing user ${USER}"
-		${USERDEL} -r ${USER}
-		echo "Removing group ${GROUP}"
-		${GROUPDEL} ${GROUP}
+CAT="@CAT@"
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+
+POST-DEINSTALL)
+	${CAT} << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove:
+
+  * the \`${USER}' user
+  * the \`${GROUP}' group
+
+===========================================================================
+EOF
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
 	;;
 esac
 exit 0

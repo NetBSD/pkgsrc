@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/11/17 15:50:56 lukem Exp $
+# $NetBSD: Makefile,v 1.12 2001/11/19 04:25:15 lukem Exp $
 #
 
 DISTNAME=		nut-0.45.2
@@ -15,20 +15,14 @@ COMMENT=		Network UPS Tools
 .if exists(/usr/sbin/user)
 ADDUSER=		/usr/sbin/useradd
 ADDGROUP=		/usr/sbin/groupadd
-USERDEL=		/usr/sbin/userdel
-GROUPDEL=		/usr/sbin/groupdel
 .else
 DEPENDS+=		user>=20000313:../../sysutils/user
 ADDUSER=		${LOCALBASE}/sbin/useradd
 ADDGROUP=		${LOCALBASE}/sbin/groupadd
-USERDEL=		${LOCALBASE}/sbin/userdel
-GROUPDEL=		${LOCALBASE}/sbin/groupdel
 .endif
 .elif ${OPSYS} == "SunOS"
 ADDUSER=		useradd
 ADDGROUP=		groupadd
-USERDEL=		userdel
-GROUPDEL=		groupdel
 .endif
 DEINSTALL_FILE=         ${WRKDIR}/DEINSTALL
 INSTALL_FILE=           ${WRKDIR}/INSTALL
@@ -43,26 +37,26 @@ CONFIGURE_ARGS+=	--sysconfdir=${LOCALBASE}/etc/nut \
 			--with-group=${NUT_GROUP} \
 			--with-statepath=/var/db/nut
 
+FILES_SUBST=		NUT_USER=${NUT_USER}
+FILES_SUBST+=		NUT_GROUP=${NUT_GROUP}
+
+FILES_SUBST+=		ADDGROUP=${ADDGROUP:Q}
+FILES_SUBST+=		ADDUSER=${ADDUSER:Q}
+FILES_SUBST+=		CAT=${CAT:Q}
+FILES_SUBST+=		CHGRP=${CHGRP:Q}
+FILES_SUBST+=		ID=${ID:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST+=		TOUCH=${TOUCH:Q}
+
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
 pre-configure:
 	cd ${WRKSRC} && autoreconf --force
 
 pre-install:
-	${SED}  -e 's|@NUT_USER@|${NUT_USER}|g' \
-		-e 's|@NUT_GROUP@|${NUT_GROUP}|g' \
-		-e 's|@USERDEL@|${USERDEL}|g' \
-		-e 's|@GROUPDEL@|${GROUPDEL}|g' \
-		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}  -e 's|@NUT_USER@|${NUT_USER}|g' \
-		-e 's|@NUT_GROUP@|${NUT_GROUP}|g' \
-		-e 's|@USERDIR@|${USERDIR}|g' \
-		-e 's|@ADDUSER@|${ADDUSER}|g' \
-		-e 's|@ADDGROUP@|${ADDGROUP}|g' \
-		-e 's|@CHGRP@|${CHGRP}|g' \
-		-e 's|@ID@|${ID}|g' \
-		-e 's|@RM@|${RM}|g' \
-		-e 's|@TOUCH@|${TOUCH}|g' \
-		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
-	${SH} ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
 	@${SED} -e "/%%PREFIX%%/s##${LOCALBASE}#g" \
@@ -77,5 +71,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/FAQ ${NUT_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/Changes.trust ${NUT_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${NUT_DOCDIR}
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
