@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/16 23:18:46 kim Exp $
 #
 
-DISTNAME=	anomy-sanitizer-1.49
+DISTNAME=	anomy-sanitizer-1.59
 WRKSRC=		${WRKDIR}/anomy
 CATEGORIES=	mail
 MASTER_SITES=	http://mailtools.anomy.net/dist/
@@ -47,7 +47,6 @@ do-install:
 	    README.sanitizer \
 	    contrib \
 	    sanitizer.html \
-	    testcases \
 	    ${ANOMYDOC}
 	${CHMOD} -R u=rw,go=r ${ANOMYDOC}
 	${CHMOD} -R a+X ${ANOMYDOC}
