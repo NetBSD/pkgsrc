@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/02/03 04:34:06 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/03 04:36:19 grant Exp $
 
 DISTNAME=	ogle_gui-0.9.2
 PKGREVISION=	2
@@ -26,7 +26,7 @@ LDFLAGS+=	${BUILDLINK_LDFLAGS.ogle}
 
 .include "../../devel/binutils/buildlink2.mk"
 .include "../../devel/libglade/buildlink2.mk"
-.include "../../graphics/ogle/buildlink2.mk"
+.include "../../multimedia/ogle/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
