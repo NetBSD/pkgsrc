@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/01/23 10:37:41 itojun Exp $
+# $NetBSD: Makefile,v 1.9 2001/01/23 10:42:42 itojun Exp $
 #
 
 DISTNAME=	jisx0208fonts-20010112
@@ -11,7 +11,7 @@ DISTFILES=	${ELISA10X8} ${ELISA8X8} ${KANAME12} ${KAPPA20} ${NAGA10} \
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 
 # not USE_GMAKE
-BUILD_DEPENDS+=	${GMAKE}:../../devel/gmake
+BUILD_DEPENDS+=	gmake:../../devel/gmake
 
 USE_NON_RECTANGULAR?= NO
 USE_SHINONOME?=	YES
@@ -83,7 +83,7 @@ post-extract:
 	@(cd ${WRKDIR}/shinonome12-1.0.8 ; \
 	${SETENV} ${SHINONOME_CONFIGURE_ENV} ${CONFIGURE_SCRIPT} \
 		${SHINONOME_CONFIGURE_ARGS} ; \
-	${SETENV} ${MAKE_ENV} ${GMAKE} bdf; \
+	${SETENV} ${MAKE_ENV} gmake bdf; \
 	${RM} hankaku/*.bdf latin1/*.bdf)
 .endif
 	(cd ${WRKSRC}; ${MAKE} prepare)
