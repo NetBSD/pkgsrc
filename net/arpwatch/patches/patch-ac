@@ -1,0 +1,12 @@
+--- arpwatch.h.orig	Mon Apr 27 19:41:46 1998
++++ arpwatch.h	Mon Apr 27 19:42:16 1998
+@@ -3,7 +3,9 @@
+ #define NEWARPFILE "arp.dat.new"
+ #define ARPFILE "arp.dat"
+ #define OLDARPFILE "arp.dat-"
++#ifndef ETHERCODES
+ #define ETHERCODES "ethercodes.dat"
++#endif
+ #define CHECKPOINT (15*60)		/* Checkpoint time in seconds */
+ 
+ #define MEMCMP(a, b, n) memcmp((char *)a, (char *)b, n)
