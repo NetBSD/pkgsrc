@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/10/18 15:20:20 veego Exp $
+# $NetBSD: Makefile,v 1.10 2001/11/26 06:49:56 jlam Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
@@ -11,14 +11,13 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://language.perl.com/index.html
 COMMENT=		Perl header files
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/.packlist.h2ph
 
 EXTRACT_ONLY=		# empty
 WRKSRC=			${WRKDIR}
 NO_CHECKSUM=		# defined
 NO_PATCH=		# defined
-NO_CONFIGURE=		# defined
 
 # Since this package will be named, for instance, p5-perl-headers-1.5.1,
 # binary packages on a FTP server (where only "1.5" is used as the directory
@@ -46,4 +45,5 @@ do-install:
 	${CAT} ${PERL5_PACKLIST} | ${XARGS} ${CHMOD} a-w
 	${CAT} ${PERL5_PACKLIST} | ${XARGS} ${CHOWN} ${SHAREOWN}:${SHAREGRP}
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

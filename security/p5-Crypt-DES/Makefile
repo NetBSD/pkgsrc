@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/10/18 15:20:35 veego Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/26 06:50:14 jlam Exp $
 #
 
 DISTNAME=		Crypt-DES-2.03
@@ -10,10 +10,11 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 MAINTAINER=		packages@netbsd.org
 COMMENT=		XS-based DES implementation for Perl
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/DES/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

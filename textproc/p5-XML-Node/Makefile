@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/10/18 15:20:44 veego Exp $
+# $NetBSD: Makefile,v 1.6 2001/11/26 06:50:25 jlam Exp $
 #
 
 DISTNAME=	XML-Node-0.10
@@ -14,18 +14,19 @@ COMMENT=	Node-based XML parsing: an simplified interface to XML::Parser
 
 DEPENDS+=	p5-XML-Parser-2.*:../p5-XML-Parser
 
-USE_PERL5=	yes
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/Node/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/Node/.packlist
 
 do-configure:
-		@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 post-install:
-		${INSTALL_DATA} \
-			${WRKSRC}/orders.xml \
-			${WRKSRC}/test.xml \
-			${WRKSRC}/foo.xml \
-			${WRKSRC}/README \
-			${PERL5_SITELIB}/XML
+	${INSTALL_DATA} \
+		${WRKSRC}/orders.xml \
+		${WRKSRC}/test.xml \
+		${WRKSRC}/foo.xml \
+		${WRKSRC}/README \
+		${PERL5_SITELIB}/XML
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

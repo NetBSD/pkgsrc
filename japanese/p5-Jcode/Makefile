@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/10/18 15:20:22 veego Exp $
+# $NetBSD: Makefile,v 1.12 2001/11/26 06:50:00 jlam Exp $
 #
 
 DISTNAME=	Jcode-0.75
@@ -13,8 +13,8 @@ COMMENT=	perl5 module for handling various Japanese charsets
 
 DEPENDS+=	p5-MIME-Base64>=2.1:../../converters/p5-MIME-Base64
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Jcode/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Jcode/.packlist
 
 pre-configure:
 	@cd ${WRKSRC}; ${RM} -f mac_install.pl win_install.pl
@@ -25,4 +25,5 @@ do-configure:
 test:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} test
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

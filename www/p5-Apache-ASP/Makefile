@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/10/18 15:20:46 veego Exp $
+# $NetBSD: Makefile,v 1.13 2001/11/26 06:50:28 jlam Exp $
 #
 
 DISTNAME=	Apache-ASP-2.21
@@ -24,10 +24,11 @@ DEPENDS+=	p5-Time-HiRes>=01.20:../../devel/p5-Time-HiRes
 DEPENDS+=	p5-XML-XSLT>=0.32:../../textproc/p5-XML-XSLT
 DEPENDS+=	p5-libwww>=5.48:../../www/p5-libwww
 
-USE_PERL5=	YES
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Apache/ASP/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/ASP/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

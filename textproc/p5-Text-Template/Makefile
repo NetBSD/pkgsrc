@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/11/22 09:45:21 martti Exp $
+# $NetBSD: Makefile,v 1.7 2001/11/26 06:50:24 jlam Exp $
 #
 
 DISTNAME=       Text-Template-1.42
@@ -11,10 +11,11 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.plover.com/~mjd/perl/Template/
 COMMENT=	perl5 library for generating form letters
 
-USE_PERL5=	YES
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Text/Template/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Text/Template/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

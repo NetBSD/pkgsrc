@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/10/18 15:20:26 veego Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/26 06:50:04 jlam Exp $
 
 DISTNAME=	Mail-Audit-1.11
 PKGNAME=	p5-${DISTNAME}
@@ -14,10 +14,11 @@ DEPENDS+=	p5-Mail-ListDetector-[0-9]*:../../mail/p5-Mail-ListDetector
 # We need Net::SMTP from p5-Net.
 DEPENDS+=	p5-Net>=1.0:../../net/p5-Net
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Mail/Audit/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mail/Audit/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

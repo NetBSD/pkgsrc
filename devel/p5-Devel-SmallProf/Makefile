@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/10/18 15:20:14 veego Exp $
+# $NetBSD: Makefile,v 1.7 2001/11/26 06:49:48 jlam Exp $
 #
 
 DISTNAME=		Devel-SmallProf-0.9
@@ -12,10 +12,11 @@ COMMENT=		perl5 module for line-by-line profiling perl programs
 
 DEPENDS=		p5-Time-HiRes>=01.20:../../devel/p5-Time-HiRes
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Devel/SmallProf/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

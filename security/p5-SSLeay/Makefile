@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/10/18 15:20:39 veego Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/26 06:50:18 jlam Exp $
 #
 
 DISTNAME=		Crypt-SSLeay-0.22
@@ -12,14 +12,14 @@ COMMENT=		Crypt::SSLeay - OpenSSL glue that provides LWP https support
 
 DEPENDS+=		p5-libwww>=5.48:../../www/p5-libwww
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/SSLeay/.packlist
 
-USE_SSL=		yes
-
 do-configure:
-	@cd ${WRKSRC} && ${SED} "s|@SSLBASE@|${SSLBASE}|" Makefile.PL \
+	@cd ${WRKSRC} && ${SED} "s|@SSLBASE@|${BUILDLINK_DIR}|" Makefile.PL \
 		> Makefile.PL.tmp && ${MV} Makefile.PL.tmp Makefile.PL
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

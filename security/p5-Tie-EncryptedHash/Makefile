@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/10/18 15:20:39 veego Exp $
+# $NetBSD: Makefile,v 1.4 2001/11/26 06:50:19 jlam Exp $
 #
 
 DISTNAME=		Tie-EncryptedHash-1.1
@@ -15,10 +15,11 @@ DEPENDS+=		p5-Crypt-CBC-[0-9]*:../../security/p5-Crypt-CBC
 DEPENDS+=		p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish
 DEPENDS+=		p5-Crypt-DES-[0-9]*:../../security/p5-Crypt-DES
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Tie/EncryptedHash/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

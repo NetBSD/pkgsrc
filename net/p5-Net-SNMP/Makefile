@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/10/18 15:20:31 veego Exp $
+# $NetBSD: Makefile,v 1.6 2001/11/26 06:50:11 jlam Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/06/27 18:38:15 jfitz Exp
 #
 
@@ -13,10 +13,11 @@ MAINTAINER=	packages@netbsd.org
 #HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/libnet/FAQ.html
 COMMENT=	perl5 module for SNMP queries
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Net/SNMP/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/SNMP/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
