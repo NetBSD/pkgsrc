@@ -1,33 +1,19 @@
-$NetBSD: patch-aa,v 1.2 2003/06/07 17:39:15 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2003/09/20 01:27:19 chris Exp $
 
---- configure.in.orig	Thu Nov 21 01:43:16 2002
-+++ configure.in	Tue Mar 11 17:48:07 2003
-@@ -137,12 +137,7 @@
- AC_SUBST(DBDIR)
- 
- # config file
--cfg_dir=`echo $sysconfdir | grep prefix`
--if test -n "$cfg_dir"; then
--    cfg_dir="$ac_default_prefix/etc"
--else
--    cfg_dir="$sysconfdir"
--fi
-+cfg_dir=$sysconfdir
- 
- CFGDIR=$cfg_dir
- AC_SUBST(CFGDIR)
-@@ -224,9 +219,13 @@
+--- configure.in.orig	2003-09-20 00:27:32.000000000 +0100
++++ configure.in	2003-09-20 00:32:19.000000000 +0100
+@@ -255,8 +255,12 @@
      AC_DEFINE(C_BSD)
      ;;
  netbsd*)
 -    AC_MSG_RESULT(NetBSD detected. Disabling thread support.)
-+    AC_MSG_RESULT(NetBSD detected. Adding pth stuff.)
-     have_pthreads="no"
+-    have_pthreads="no"
++    if test "$have_pthreads" = "yes"; then
++    	LIBCLAMAV_LIBS="$LIBCLAMAV_LIBS -lpthread"
++	CLAMD_LIBS="-lpthread"
++	TH_SAFE="-thread-safe"
++	AC_DEFINE(CL_THREAD_SAFE)
++    fi
      AC_DEFINE(C_BSD)
-+    LIBCLAMAV_LIBS="$LIBCLAMAV_LIBS $LDFLAGS -lpthread"
-+    AC_DEFINE(CL_THREAD_SAFE)
-+    CLAMD_LIBS="-lpthread $LDFLAGS"
-+    CFLAGS="$CFLAGS"
      ;;
  bsd*)
-     AC_MSG_RESULT(Unknown BSD detected. Disabling thread support.)
