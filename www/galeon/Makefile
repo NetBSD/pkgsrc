@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2004/01/03 18:49:55 reed Exp $
+# $NetBSD: Makefile,v 1.59 2004/01/20 12:45:04 abs Exp $
 
 DISTNAME=	galeon-1.2.13
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=galeon/}
 
@@ -29,9 +29,9 @@ CONFIGURE_ARGS+=	--with-mozilla-includes=${BUILDLINK_PREFIX.mozilla}/include/moz
 			--with-libiconv=${LOCALBASE} \
 			--disable-applet \
 			--disable-werror \
-			--sysconfdir=${PREFIX}/etc
-# XXX to build against mozilla 1.5
-CONFIGURE_ARGS+= --with-mozilla-snapshot=1.5
+			--sysconfdir=${PREFIX}/etc \
+			MOZILLA_CONFIG=${MOZ_LIBDIR}/mozilla-config
+CONFIGURE_ARGS+= --with-mozilla-snapshot=1.6b
 
 .include	"../../converters/libiconv/buildlink2.mk"
 .include	"../../devel/GConf/buildlink2.mk"
