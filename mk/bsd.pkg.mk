@@ -1,4 +1,4 @@
-i	$NetBSD: bsd.pkg.mk,v 1.424 2000/04/15 16:13:07 hubertf Exp $
+i	$NetBSD: bsd.pkg.mk,v 1.425 2000/04/19 15:02:31 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1112,9 +1112,10 @@ show-downlevel:
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	base=`${ECHO} ${PKGNAME} | ${SED} -e 's|\(.*\)-.*|\1|'`;	\
-	found=`${PKG_INFO} -e "$$base-[0-9]*" || ${TRUE}`;		\
+	base=`${ECHO} ${PKGNAME} | ${SED} -e 's/-\([^-]*\)$$/<\1/'`;	\
+	found=`${PKG_INFO} -e "$$base" || ${TRUE}`;		\
 	if [ "X$$found" != "X" -a "X$$found" != "X${PKGNAME}" ]; then	\
+		base=`${ECHO} $$base | ${SED} -e 's/<[^<]*$$//'`;	\
 		${ECHO} "$$base package: $$found installed, pkgsrc version ${PKGNAME}"; \
 	fi
 .endif
