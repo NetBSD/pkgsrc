@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/06/02 13:08:31 drochner Exp $
+
+--- ./modemlights/modemlights.c.orig	Thu Jun  1 10:20:10 2000
++++ ./modemlights/modemlights.c	Thu Jun  1 10:23:24 2000
+@@ -32,7 +32,7 @@
+ #include <ctype.h>
+ #include <sys/stat.h>
+ 
+-#ifdef __OpenBSD__
++#if defined(__OpenBSD__) || defined(__NetBSD__)
+ #include <net/if_ppp.h>
+ #endif
+ 
+@@ -271,13 +271,13 @@
+ 	struct 	ppp_stats stats;
+ 
+ 	memset(&ifreq, 0, sizeof(ifreq));
+-#if defined(__FreeBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
+ 	strncpy(ifreq.ifr_name, device_name, IFNAMSIZ);
+ #else
+ 	strncpy(ifreq.ifr_ifrn.ifrn_name, device_name, IFNAMSIZ);
+ #endif /* FreeBSD or OpenBSD */
+ 	ifreq.ifr_ifru.ifru_data = (caddr_t)&stats;
+-#if defined(__FreeBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
+ 		if ((ioctl(ip_socket,SIOCGPPPSTATS,(caddr_t)&ifreq) < 0))
+ #else
+ #ifdef SIOCDEVPRIVATE
+@@ -286,7 +286,7 @@
+ 	*in = *out = 0;
+ 	return FALSE;
+ #endif
+-#endif /* FreeBSD or OpenBSD */
++#endif /* FreeBSD or OpenBSD or NetBSD */
+ 			{
+ 				/* failure means ppp is not up */
+ 				*in = *out = 0;
