@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/08/27 02:46:04 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2000/08/31 15:47:05 jwise Exp $
 
 DISTNAME=	glx-20000813
 PKGNAME=	Mesa-${DISTNAME}
@@ -14,7 +14,7 @@ HOMEPAGE=	http://utah-glx.sourceforge.net/
 
 BUILD_DEPENDS+=	${PERL5}:../../lang/perl5
 BUILD_DEPENDS+=	${AUTOCONF}:../../devel/autoconf
-BUILD_DEPENDS+=	${TCLSH}:../../lang/tcl80
+BUILD_DEPENDS+=	${TCLSH}:../../lang/tcl
 
 CONFLICTS+=		Mesa-*
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
@@ -32,7 +32,7 @@ WRKSRCDIRS=	${MESA_WRKSRC} ${WRKSRC} ${WRKSRC}/docs
 MAKE_ENV+=	PERL=${PERL5}
 MESA_VERSION=	3.1
 MESA_WRKSRC=	${WRKDIR}/Mesa-${MESA_VERSION}
-TCLSH=		${LOCALBASE}/bin/tclsh8.0
+TCLSH=		${LOCALBASE}/bin/tclsh
 
 pre-configure:
 	@cd ${WRKSRC} && ${AUTOCONF} && cd docs && ${AUTOCONF}
