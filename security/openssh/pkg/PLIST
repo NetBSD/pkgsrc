@@ -1,21 +1,23 @@
-@comment $NetBSD: PLIST,v 1.6 2000/11/09 09:18:25 itojun Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/02/20 16:33:15 itojun Exp $
 bin/scp
-bin/slogin
+bin/sftp
 bin/ssh
 bin/ssh-add
 bin/ssh-agent
 bin/ssh-keygen
+bin/ssh-keyscan
 etc/rc.d/sshd
 libexec/sftp-server
 man/man1/scp.1
-man/man1/slogin.1
+man/man1/sftp.1
 man/man1/ssh-add.1
 man/man1/ssh-agent.1
 man/man1/ssh-keygen.1
+man/man1/ssh-keyscan.1
 man/man1/ssh.1
 man/man8/sftp-server.8
 man/man8/sshd.8
 sbin/sshd
-share/examples/ssh/ssh_config
-share/examples/ssh/sshd_config
-@dirrm share/examples/ssh
+share/examples/openssh/ssh_config
+share/examples/openssh/sshd_config
+@dirrm share/examples/openssh
