@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.38 2004/04/09 11:06:35 dmcmahill Exp $
+# $NetBSD: build,v 1.39 2004/04/24 01:22:49 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -37,6 +37,7 @@
 usage() {
 	echo "Usage:"
 	echo "   $0 [-m | --mirror_only] [-r | --restart | restart]"
+	echo "         [-s | --specific-pkgs]"
 	echo "   $0 -h|--help"
 	echo " "
 	echo "Runs a bulk pkgsrc build."
@@ -63,11 +64,16 @@ usage() {
 	echo "                       The --restart option may be combined with the"
 	echo "                       --mirror_only option."
 	echo " "
+	echo " -s|--specific-pkgs    Sets SPECIFIC_PKGS=1 when building packages."
+	echo "                       This option is used for building a subset of"
+	echo "                       pkgsrc."
+	echo " "
 }
 
 restart=no
 mirror_only=no
 target=bulk-package
+makeargs=""
 
 while [ ${#} -ge 1 ] ; do
 	case $1 in
@@ -85,6 +91,11 @@ while [ ${#} -ge 1 ] ; do
 
 	--restart|restart )
 		restart=yes
+		shift
+		;;
+
+	--specific-pkgs|-s )
+		makeargs="$makeargs SPECIFIC_PKGS=1"
 		shift
 		;;
 
@@ -258,7 +269,7 @@ done
 # Create the bulk cache files
 cd ${USR_PKGSRC}
 if [ "x$restart" != "xyes" ]; then
-	cd ${USR_PKGSRC} && ${BMAKE} bulk-cache
+	cd ${USR_PKGSRC} && ${BMAKE} bulk-cache $makeargs
 	if [ $? != 0 ]; then
 		echo "$0: Cache creation failed.  Aborting build."
 		exit 1
@@ -288,7 +299,9 @@ do
 	if [ $? -ne 0 ]; then
 		built=`wc -l $BUILDLOG | ${AWK} '{print $1}'`
 		percent=`echo $built $tot | ${AWK} '{printf("%4.1f%%",$1*100/$2);}'`
-		(cd $pkgdir && nice -n 20 ${BMAKE} USE_BULK_CACHE=yes $target </dev/null | ${SED} "s;^;`date '+%m/%d/%y %H:%M:%S'`  $built/${tot}=$percent $pkgdir @ ${MACHINE_ARCH}> ;g")
+		(cd $pkgdir && nice -n 20 ${BMAKE} USE_BULK_CACHE=yes $target \
+			$makeargs </dev/null | \
+			${SED} "s;^;`date '+%m/%d/%y %H:%M:%S'`  $built/${tot}=$percent $pkgdir @ ${MACHINE_ARCH}> ;g")
 		echo "$pkgdir" >> $BUILDLOG
 	fi
 done
