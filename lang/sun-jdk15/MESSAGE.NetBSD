@@ -1,0 +1,22 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1.1.1 2004/09/30 23:47:19 rh Exp $
+
+In order to be able to run the JVM, you will need to compile your kernel
+with the following options:
+
+options		COMPAT_LINUX
+
+Then, you need to add the following line to your /etc/fstab:
+
+procfs /emul/linux/proc procfs rw,linux
+
+Furthermore, the maximum data segment size assigned to your user must be
+at least 262144.
+
+You may want to read
+
+	${JAVA_HOME}/README
+
+for details about running this JDK.
+
+===========================================================================
