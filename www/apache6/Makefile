@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/05/08 17:28:09 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2001/05/18 06:01:36 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--enable-module=most				\
 			--disable-module=auth_dbm
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 CONFIGURE_ARGS+=	--with-port=80
-CONFIGURE_ENV+=		OPTIM="${OPTIM}"
+CONFIGURE_ENV+=		OPTIM="${APACHE_CUSTOM_CFLAGS}"
 
 BUILD_DEFS+=		USE_INET6
 
@@ -71,9 +71,11 @@ CONFIGURE_ARGS+=	--disable-module=proxy
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
+APACHE_CUSTOM_CFLAGS?=	# empty
+
 .if defined(APACHE_PERF_TUNING) && ${APACHE_PERF_TUNING} == YES
-OPTIM+=			-DBUFFERED_LOGS
-CFLAGS+=		-O6 -fomit-frame-pointer -fexpensive-optimizations
+APACHE_CUSTOM_CFLAGS+=	-DBUFFERED_LOGS
+APACHE_CUSTOM_CFLAGS+=	-O6 -fomit-frame-pointer -fexpensive-optimizations
 .endif
 
 .if (${OPSYS} == "SunOS")
@@ -84,7 +86,9 @@ CONFIGURE_ENV+=		INCLUDES="-I${LOCALBASE}/include/db2"
 CONFIGURE_ENV+=		LIBS="-ldbm -ldb2"
 .endif
 
-BUILD_DEFS+=		APACHE_PERF_TUNING APACHE_SUEXEC
+BUILD_DEFS+=		APACHE_CUSTOM_CFLAGS
+BUILD_DEFS+=		APACHE_PERF_TUNING
+BUILD_DEFS+=		APACHE_SUEXEC
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
