@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/08/29 08:28:19 jlam Exp $
+$NetBSD: md5,v 1.2 1999/08/30 08:43:03 jlam Exp $
 
-MD5 (gtkstep-1.8.tar.gz) = 7ac36c5fcff31395fe546e3ea4d3f093
+MD5 (gtkstep-1.8.tar.bz2) = bf5f21c6d337e8e6eb9f20c56e61981e
