@@ -1,0 +1,163 @@
+--- changer-src/scsi-chio.c.orig	Wed Jul  8 00:04:04 1998
++++ changer-src/scsi-chio.c	Mon Mar  6 15:26:26 2000
+@@ -119,25 +119,41 @@
+  */
+ int isempty(int fd, int slot)
+ {
++#if defined(OCHIOGSTATUS)
++struct ochanger_element_status_request cesr;
++#else
+ struct changer_element_status  ces;
++#endif
++
+ int                            i,rc;
+ int type=CHET_ST;
+ 
+     get_changer_info(fd);
+ 
++#if defined(OCHIOGSTATUS)
++    cesr.cesr_type = type;
++    cesr.cesr_data = malloc(changer_info.cp_nslots);
++    rc = ioctl(fd, OCHIOGSTATUS, &cesr);
++#else
+     ces.ces_type = type;
+     ces.ces_data = malloc(changer_info.cp_nslots);
+-
+     rc = ioctl(fd, CHIOGSTATUS, &ces);
++#endif
++
+     if (rc) {
+ 	fprintf(stderr,"%s: changer status query failed: 0x%x %s\n",
+ 			get_pname(), rc,strerror(errno));
+ 	return -1;
+     }
+ 
++#if defined(OCHIOGSTATUS)
++    i = cesr.cesr_data[slot] & CESTATUS_FULL;
++    free(cesr.cesr_data);
++#else
+     i = ces.ces_data[slot] & CESTATUS_FULL;
+-
+     free(ces.ces_data);
++#endif
++
+     return !i;
+ }
+ 
+@@ -146,16 +162,27 @@
+  */
+ int find_empty(int fd)
+ {
++#if defined(OCHIOGSTATUS)
++struct ochanger_element_status_request cesr;
++#else
+ struct changer_element_status  ces;
++#endif
++
+ int                            i,rc;
+ int type=CHET_ST;
+ 
+     get_changer_info(fd);
+ 
++#if defined(OCHIOGSTATUS)
++    cesr.cesr_type = type;
++    cesr.cesr_data = malloc(changer_info.cp_nslots);
++    rc = ioctl(fd, OCHIOGSTATUS, &cesr);
++#else
+     ces.ces_type = type;
+     ces.ces_data = malloc(changer_info.cp_nslots);
++    rc = ioctl(fd, CHIOGSTATUS, &ces);
++#endif
+ 
+-    rc = ioctl(fd,CHIOGSTATUS,&ces);
+     if (rc) {
+ 	fprintf(stderr,"%s: changer status query failed: 0x%x %s\n",
+ 			get_pname(), rc, strerror(errno));
+@@ -163,9 +190,17 @@
+     }
+ 
+     i = 0; 
++
++#if defined(OCHIOGSTATUS)
++    while ((i < changer_info.cp_nslots)&&(cesr.cesr_data[i] & CESTATUS_FULL))
++        i++;
++    free(cesr.cesr_data);
++#else
+     while ((i < changer_info.cp_nslots)&&(ces.ces_data[i] & CESTATUS_FULL))
+ 	i++;
+     free(ces.ces_data);
++#endif
++
+     return i;
+ }
+ 
+@@ -174,25 +209,41 @@
+  */
+ int drive_loaded(int fd, int drivenum)
+ {
++#if defined(OCHIOGSTATUS)
++struct ochanger_element_status_request cesr;
++#else
+ struct changer_element_status  ces;
++#endif
++
+ int                            i,rc;
+ int type=CHET_DT;
+ 
+     get_changer_info(fd);
+ 
++#if defined(OCHIOGSTATUS)
++    cesr.cesr_type = type;
++    cesr.cesr_data = malloc(changer_info.cp_ndrives);
++    rc = ioctl(fd, OCHIOGSTATUS, &cesr);
++#else
+     ces.ces_type = type;
+     ces.ces_data = malloc(changer_info.cp_ndrives);
+-
+     rc = ioctl(fd, CHIOGSTATUS, &ces);
++#endif
++
+     if (rc) {
+ 	fprintf(stderr,"%s: drive status query failed: 0x%x %s\n",
+ 			get_pname(), rc, strerror(errno));
+ 	return -1;
+     }
+ 
++#if defined(OCHIOGSTATUS)
++    i = (cesr.cesr_data[drivenum] & CESTATUS_FULL);
++    free(cesr.cesr_data);
++#else
+     i = (ces.ces_data[drivenum] & CESTATUS_FULL);
+-
+     free(ces.ces_data);
++#endif
++
+     return i;
+ }
+ 
+@@ -202,7 +253,12 @@
+  */
+ int unload(int fd, int drive, int slot)
+ {
++#if defined(OCHIOGSTATUS)
++struct changer_move_request move;
++#else
+ struct changer_move  move;
++#endif
++
+ int rc;
+ 
+     move.cm_fromtype = CHET_DT;
+@@ -226,7 +282,12 @@
+  */
+ int load(int fd, int drive, int slot)
+ {
++#if defined(OCHIOGSTATUS)
++struct changer_move_request move;
++#else
+ struct changer_move  move;
++#endif
++
+ int rc;
+ 
+     move.cm_fromtype = CHET_ST;
