@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/06/07 22:45:49 tron Exp $
+$NetBSD: patch-ab,v 1.2 1999/11/19 12:12:30 agc Exp $
 
---- source.tcl.orig	Tue Jun  8 00:38:54 1999
-+++ source.tcl	Tue Jun  8 00:38:11 1999
+--- source.tcl.orig	Fri Nov 19 11:57:09 1999
++++ source.tcl	Fri Nov 19 11:57:10 1999
 @@ -1,6 +1,6 @@
  #!/bin/sh
  # the next line restarts using the interpreter \
 -exec tclsh "$0" "$@"
 +exec tclsh8.0 "$0" "$@"
  
- set rcsId {$Id: patch-ab,v 1.1.1.1 1999/06/07 22:45:49 tron Exp $}
+ set rcsId {Id: source.tcl,v 1.9 1997/06/14 23:21:49 jfontain Exp }
  
