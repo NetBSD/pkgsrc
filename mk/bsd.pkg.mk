@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1590 2005/02/16 11:01:03 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1591 2005/02/19 04:25:31 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -2624,12 +2624,12 @@ _DYLIB_AWK= \
 			}			\
 	}
 
-# Turn lib*.so.*, lib*.so into lib*.a.  Drop duplicates.
+# Turn lib*.so.*, lib*.so into lib*.so.  Drop duplicates.
 _AIXLIB_AWK= \
 	/^@/ { lines[NR] = $$0; next }		\
 	/.*\/lib[^\/]+\.so(\.[0-9]+)*$$/ {	\
 		sub("(\\.[0-9]+)*$$", "");	\
-		sub("\\.so$$", ".a");       	\
+		sub("\\.so$$", ".so");       	\
 		lines[NR] = $$0;     		\
 		next				\
 	}					\
