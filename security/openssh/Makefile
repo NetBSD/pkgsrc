@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2004/05/21 23:00:23 reed Exp $
+# $NetBSD: Makefile,v 1.140 2004/07/25 12:36:03 grant Exp $
 
 DISTNAME=		openssh-3.8.1p1
 PKGNAME=		openssh-3.8.1.1
@@ -18,7 +18,8 @@ HOMEPAGE=		http://www.openssh.com/
 COMMENT=		Open Source Secure shell client and server (remote login program)
 
 CONFLICTS=		sftp-[0-9]*
-CONFLICTS+=		ssh-[0-9]* ssh6-[0-9]* ssh2-[0-9]*
+CONFLICTS+=		ssh-[0-9]* ssh6-[0-9]*
+CONFLICTS+=		ssh2-[0-9]* ssh2-nox11-[0-9]*
 CONFLICTS+=		openssh+gssapi-[0-9]*
 
 USE_PERL5=		build
