@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/04/23 08:15:40 rh Exp $
+$NetBSD: patch-ab,v 1.2 2003/05/11 10:05:13 jmc Exp $
 
---- player/swf_play.c.orig	2003-02-06 06:19:27.000000000 +1000
-+++ player/swf_play.c
+--- player/swf_play.c.orig	Wed Feb  5 20:19:27 2003
++++ player/swf_play.c	Sun May 11 04:39:15 2003
 @@ -15,6 +15,8 @@
  #include <signal.h>
  #include <sys/wait.h>
@@ -11,7 +11,23 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/04/23 08:15:40 rh Exp $
  #include <time.h>
  #include <string.h>
  
-@@ -539,6 +541,19 @@ void fault_handler(int signum, siginfo_t
+@@ -72,6 +74,15 @@
+ static gboolean render_idle(gpointer data);
+ 
+ /* fault handling stuff */
++#ifndef SA_SIGINFO
++typedef struct {
++        char *si_addr;
++        int si_signo;
++        int si_errno;
++        int si_code;
++} siginfo_t;
++#endif
++
+ void fault_handler(int signum, siginfo_t *si, void *misc);
+ void fault_restore(void);
+ void fault_setup(void);
+@@ -539,6 +550,20 @@
  	_exit(0);
  }
  
@@ -20,6 +36,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/04/23 08:15:40 rh Exp $
 +{
 +	siginfo_t si;
 +
++	si.si_addr = NULL;
 +	si.si_signo = sig;
 +	si.si_errno = errno;
 +	si.si_code = code;
@@ -31,7 +48,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/04/23 08:15:40 rh Exp $
  void fault_restore(void)
  {
  	struct sigaction action;
-@@ -555,8 +570,13 @@ void fault_setup(void)
+@@ -555,8 +580,13 @@
  	struct sigaction action;
  
  	memset(&action,0,sizeof(action));
@@ -39,7 +56,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/04/23 08:15:40 rh Exp $
  	action.sa_sigaction = fault_handler;
  	action.sa_flags = SA_SIGINFO;
 +#else
-+	action.sa_sigaction = (void (*)(int))si_handler;
++	action.sa_handler = (void (*)(int))si_handler;
 +	action.sa_flags = 0;
 +#endif
  
