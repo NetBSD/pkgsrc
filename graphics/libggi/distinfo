@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2002/01/11 11:47:54 skrll Exp $
+$NetBSD: distinfo,v 1.4 2002/11/25 20:48:42 jlam Exp $
 
 SHA1 (libggi-2.0b2.1.tar.gz) = 698de63108a58fa1fc08942266118dc2fccf482c
 Size (libggi-2.0b2.1.tar.gz) = 658294 bytes
-SHA1 (patch-aa) = 472fcd0dcb83e46264286c6446e5e2c25b568f14
-SHA1 (patch-ab) = d040fdc112f01932224e3d0016a9d9459be74973
 SHA1 (patch-ac) = 144fe4919dbc1d6434cf764db52a5752be06974b
+SHA1 (patch-ad) = e89cc8c86efabee6495c66d031004c6bf36b152b
