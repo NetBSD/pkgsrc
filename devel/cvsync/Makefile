@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/03/06 12:36:45 grant Exp $
+# $NetBSD: Makefile,v 1.3 2003/03/06 12:42:24 grant Exp $
 #
 
 DISTNAME=	cvsync-0.14.0
@@ -22,7 +22,7 @@ EGDIR=		${PREFIX}/share/examples/cvsync
 CONF_FILES+=	${EGDIR}/cvsync.conf ${PKG_SYSCONFDIR}/cvsync.conf
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cvsync
+	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/samples/cvsync.conf ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/samples/cvsyncd.conf ${EGDIR}
 
