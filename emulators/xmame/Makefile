@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 1998/08/23 19:29:51 tron Exp $
+# $NetBSD: Makefile,v 1.14 1998/08/29 04:08:12 mycroft Exp $
 #
 
-DISTNAME=		xmame-0.33b6.1
+DISTNAME=		xmame-0.34b1.1
 CATEGORIES=		emulators games x11
-MASTER_SITES=		ftp://drake.dit.upm.es/pub/emulators/mame/
+MASTER_SITES=		ftp://drake.dit.upm.es/xmame/ftpsite/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		mycroft@NetBSD.ORG
@@ -12,7 +12,7 @@ HOMEPAGE=		http://drake.dit.upm.es/~mame/
 RUN_DEPENDS=		unzip:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-CONFLICTS=		xmame-0.30.1
+CONFLICTS=		xmame-0.30.1 xmame-0.33b6.1
 
 USE_X11=		yes
 USE_GMAKE=		yes
@@ -20,8 +20,10 @@ MAKE_ENV+=		OPSYS=${OPSYS} ARCH=${ARCH} DESTDIR=${DESTDIR} \
 			INSTALL_MAN="${INSTALL_MAN}" \
 			INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 			NETBSD_JOYSTICK="${NETBSD_JOYSTICK}"
+MAKEFILE=		makefile.unix
+ALL_TARGET=		xmame.xwindows
 
-MAMEDIR=		${PREFIX}/share/mame
+MAMEDIR=		${PREFIX}/share/xmame
 .if exists(/usr/include/machine/joystick.h)
 NETBSD_JOYSTICK=	yes
 .else
@@ -29,13 +31,14 @@ NETBSD_JOYSTICK=	no
 .endif
 
 post-patch:
-	${CP} ${WRKSRC}/makefile.unix ${WRKSRC}/Makefile
-	${SED} 's|@MAMEDIR@|${MAMEDIR}|' ${WRKSRC}/doc/xmamerc.dist >${WRKSRC}/doc/xmamerc
-	${MV} ${WRKSRC}/src/unix/netbsd_i386.c ${WRKSRC}/src/unix/netbsd.c
+	(cd ${WRKSRC}/doc && ${SED} 's|@MAMEDIR@|${MAMEDIR}|' xmamerc.dist >xmamerc)
+	(cd ${WRKSRC}/src/unix && ${MV} netbsd_i386.c netbsd.c)
 
-post-install:
+do-install:
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ${ALL_TARGET} ${PREFIX}/bin/xmame)
+	(cd ${WRKSRC}/doc && ${INSTALL_MAN} xmame.man ${PREFIX}/man/man6/xmame.6)
 	${MKDIR} ${MAMEDIR}
-	${CP} ${WRKSRC}/doc/xmamerc ${MAMEDIR}/xmamerc
+	(cd ${WRKSRC}/doc && ${INSTALL_DATA} xmamerc ${MAMEDIR}/xmamerc)
 	@${ECHO} Remember to set MAMEDIR to ${MAMEDIR}.
 
 .include "../../mk/bsd.pkg.mk"
