@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2003/09/25 22:01:26 recht Exp $
+# $NetBSD: Makefile,v 1.20 2003/09/26 10:53:54 jmmv Exp $
 # $FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:11 jseger Exp
 #
 
 DISTNAME=	FileRunner-2.5.1
-PKGNAME=	filerunner-2.5.1
+PKGNAME=	${DISTNAME:S/FileRunner/filerunner/}
 CATEGORIES=	x11
 MASTER_SITES=	http://www.cd.chalmers.se/~hch/
 
