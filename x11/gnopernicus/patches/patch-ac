@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.2 2004/04/01 19:04:28 jmmv Exp $
+$NetBSD: patch-ac,v 1.3 2004/09/21 17:12:18 jmmv Exp $
 
---- srcore/Makefile.in.orig	2004-02-11 14:57:59.000000000 +0100
+--- srcore/Makefile.in.orig	2004-08-30 18:39:59.000000000 +0200
 +++ srcore/Makefile.in
-@@ -175,7 +175,7 @@ INCLUDES = -I$(srcdir)                  
- 	   -I$(top_srcdir)/magnifier/libmag   	\
- 	   -I$(top_srcdir)/srutil             	\
- 	   -DGNOPERNICUSLOCALEDIR=\""$(gnopernicuslocaledir)"\" \
--	   -DBRAILLE_TRANS_TABLES_DIR=\"$(sysconfdir)/gnopernicus-1.0/translation_tables/\" \
-+	   -DBRAILLE_TRANS_TABLES_DIR=\"$(sysconfdir)/translation_tables/\" \
- 	   -DPRESENTATION_DIR=\"$(datadir)/gnopernicus/presentation/\" \
- 	   $(SRCORE_CFLAGS)  			\
- 	   -DG_LOG_DOMAIN=\"gnopernicus\"
+@@ -175,7 +175,7 @@ WARN_CXXFLAGS = @WARN_CXXFLAGS@
+ X_LIBS = @X_LIBS@
+ gnopernicuslocaledir = @gnopernicuslocaledir@
+ 
+-INCLUDES = -I$(srcdir)                     		   -I$(top_srcdir)/braille/libbrl     		   -I$(top_srcdir)/speech/libsrs      		   -I$(top_srcdir)/srlow/libsrlow     		   -I$(top_srcdir)/srconf/libsrconf   		   -I$(top_srcdir)/kbd_mouse/libke    		   -I$(top_srcdir)/magnifier/libmag   		   -I$(top_srcdir)/srutil             		   -DGNOPERNICUSLOCALEDIR=\""$(gnopernicuslocaledir)"\" 	   -DBRAILLE_TRANS_TABLES_DIR=\"$(sysconfdir)/gnopernicus-1.0/translation_tables/\" 	   -DPRESENTATION_DIR=\"$(datadir)/gnopernicus/presentation/\" 	   -DBRLMON_DIR=\"$(libexecdir)/\" 	   $(SRCORE_CFLAGS)  				   -DG_LOG_DOMAIN=\"gnopernicus\"		   -DSRS_NO_MARKERS_SUPPORTED
++INCLUDES = -I$(srcdir)                     		   -I$(top_srcdir)/braille/libbrl     		   -I$(top_srcdir)/speech/libsrs      		   -I$(top_srcdir)/srlow/libsrlow     		   -I$(top_srcdir)/srconf/libsrconf   		   -I$(top_srcdir)/kbd_mouse/libke    		   -I$(top_srcdir)/magnifier/libmag   		   -I$(top_srcdir)/srutil             		   -DGNOPERNICUSLOCALEDIR=\""$(gnopernicuslocaledir)"\" 	   -DBRAILLE_TRANS_TABLES_DIR=\"$(sysconfdir)/translation_tables/\" 	   -DPRESENTATION_DIR=\"$(datadir)/gnopernicus/presentation/\" 	   -DBRLMON_DIR=\"$(libexecdir)/\" 	   $(SRCORE_CFLAGS)  				   -DG_LOG_DOMAIN=\"gnopernicus\"		   -DSRS_NO_MARKERS_SUPPORTED
+ 
+ 
+ bin_PROGRAMS = srcore
