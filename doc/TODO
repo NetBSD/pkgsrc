@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3023 2005/02/15 22:49:05 peter Exp $
+$NetBSD: TODO,v 1.3024 2005/02/16 12:23:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -279,6 +279,7 @@ Suggested package updates
 	o ald-0.1.6 [pkg/26431]
 	o alee-ttf-4.1
 	o algae-4.3.6
+	o amarok-1.2
 	o amavis-0.3.12
 	o amule-2.0.0rc8 [pkg/28762]
 	o ap-Embperl-1.3.3
@@ -302,6 +303,7 @@ Suggested package updates
 	o arnold-20040104
 	o arpwatch-2.1a13
 	o asapm-2.13
+	o asc-1.15.3
 	o aspell-danish-1.4.47
 	o aspell-faroese-0.2.20
 	o ast-ksh-20040229
@@ -309,6 +311,7 @@ Suggested package updates
 	o at-spi-1.6.2
 	o auctex-11.54
 	o autogen-5.6.6
+	o automake-1.9.5
 	o avidemux-2.0.36
 	o avl-2.0.1
 	o avr-libc-1.2.0
@@ -350,7 +353,7 @@ Suggested package updates
 	o cgic-205
 	o cgicc-3.2.3
 	o check-0.9.2
-	o chemtool-1.6.5
+	o chemtool-1.6.6
 	o chktex-1.6.2
 	o cilk-5.3.2
 	o cint-5.15
@@ -428,7 +431,7 @@ Suggested package updates
 	o efax-gtk-2.2.14
 	o efont-unicode-0.4.2
 	o egtk-0.3.6
-	o electricfence-2.4.12
+	o electricfence-2.4.13
 	o elf-0.5.4
 	o elinks-0.10.2
 	o elk-3.99.6
@@ -439,7 +442,7 @@ Suggested package updates
 	o enscript-1.6.4
 	o epic4-2.2
 	o eric3-3.6.1
-	o erlang-10b-2
+	o erlang-10b-3
 	o esh-0.8.5
 	o etach-1.4.0
 	o ettercap-0.7.2 [wip/ettercap-NG|adrianp]
@@ -450,7 +453,7 @@ Suggested package updates
 	o fdgw-20040609
 	o fhist-1.14
 	o fidogate-4.4.10
-	o file-4.12
+	o file-4.13
 	o findutils-4.2.15
 	o firefox-bin-1.0
 	o flim-1.14.7
@@ -459,7 +462,7 @@ Suggested package updates
 	o fondu-040927
 	o fop-0.20.5
 	o fort77-1.18
-	o fox-1.2.13
+	o fox-1.4.4
 	o freetds-0.62.4
 	o ftpproxy-1.2.3
 	o fugu-1.2.3
@@ -517,12 +520,11 @@ Suggested package updates
 	o grepmail-5.3030
 	o gri-2.12.8
 	o grub-0.96
-	o gsasl-0.2.4
+	o gsasl-0.2.5
 	o gsed-4.1.4
 	o gsharutils-4.3.78
 	o gtetrinet-0.7.8
 	o gtexinfo-4.8
-	o gtk-send-pr-0.4.3
 	o gtk-systrace-2003.06.23
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -535,6 +537,7 @@ Suggested package updates
 	o hdf5-1.6.3
 	o hercules-3.02
 	o hitchhiker-0.7
+	o horde-3.0.3
 	o host-20040812 [cjep,talking to greg woods about this]
 	o hot-babe-0.2.2
 	o howl-0.9.10 [pkg/29259]
@@ -553,6 +556,8 @@ Suggested package updates
 	o ifile-1.3.5
 	o ijs-0.35
 	o imp-3.2.7
+	o imp4-4.0.2
+	o inkscape-0.41
 	o inn-2.4.2
 	o intercal-0.24 [dillo]
 	o ion3-devel-20041104
@@ -580,6 +585,7 @@ Suggested package updates
 	o john-1.6.37
 	o jove-4.16.0.65
 	o jpilot-0.99.7 [pkg/24635]
+	o kajaani-kombat-0.6.6.6
 	o kapooka-0.3
 	o kdrill-6.3.1
 	o kinput2-3.1
@@ -615,14 +621,17 @@ Suggested package updates
 	o libksba-0.9.9
 	o liblive-2004.12.29
 	o libmpeg3-1.5.4
-	o libnids-1.19
+	o libnids-1.20
 	o libopendaap-0.2.3
 	o libpqxx-2.4.2
 	o libsieve-2.1.16/2.2.8
 	o libsmi-0.4.3
 	o libtcl-nothread-8.4.9
 	o libtecla-1.6.1
-	o libtool-1.5.12
+	o libtool-1.5.14
+	o libvisual-0.2.0
+	o libvisual-bmp-0.2.0
+	o libvisual-xmms-0.2.0
 	o licq-core-1.3.0
 	o liferea-0.9.0b
 	o links-2.1pre16
@@ -636,7 +645,6 @@ Suggested package updates
 	o lv-451
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
-	o maildrop-1.5.3 [pkg/22369]
 	o maildrop-1.8.0
 	o mailman-2.1.5
 	o mailscanner-4.35.11
@@ -648,12 +656,13 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.0.23
-	o mathomatic-12.0
+	o mathomatic-12.1
 	o memtest86-3.2
 	o mergeant-0.52
 	o mew-4.2
 	o mgetty+sendfax-1.1.31
 	o micq-0.4.12 [pkg/29063]
+	o mimedefang-2.51
 	o mini_sendmail-1.3.5
 	o minicom-2.1
 	o minivmac-2.5.0
@@ -670,14 +679,15 @@ Suggested package updates
 	o mpage-2.5.4
 	o mpfr-2.1.0
 	o mpi-ch-1.2.6 [pkg/27273]
-	o mplayer-plugin-firefox-2.75
+	o mplayer-plugin-firefox-2.80
 	o mrproject-0.9.1
 	o mserv-devel-0.41
-	o msmtp-1.3.6
+	o msmtp-1.3.7
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.4.5
 	o muse-0.9.1
+	o magios-2.0b2 [replacing netsaint]
 	o nail-11.20
 	o naim-0.11.7.3.1
 	o nano-1.3.5 [devel version]
@@ -685,6 +695,7 @@ Suggested package updates
 	o navi2ch-1.7.5
 	o ncmpc-0.11.1 [pkg/29057]
 	o ncview-1.92e
+	o nessus-2.2.3
 	o netatalk1-1.6.4
 	o netcdf-4.0.0a
 	o netio-123
@@ -719,7 +730,7 @@ Suggested package updates
 	o oregano-0.40.3
 	o oroborus-2.0.13.1
 	o osh-041231
-	o oss-3.99.2a [for 2.0]
+	o oss-3.99.2b [for 2.0]
 	o p11-2.10c
 	o p5-Apache-ASP-2.57
 	o p5-Apache-Gallery-0.9.1
@@ -963,7 +974,8 @@ Suggested package updates
 	o robodoc-4.99.6
 	o root-4.01.04
 	o root-tail-1.2
-	o rosegarden-4.0.9.9 [replacing audio/rosegarden|pkgsrc-wip]
+	o rosegarden4-1.0 [replacing audio/rosegarden|pkgsrc-wip]
+	o roundup-0.8
 	o rox-2.1.3
 	o rox-session-0.1.25
 	o rox-wrappers-1.0.3
@@ -978,6 +990,7 @@ Suggested package updates
 	o sablevm-1.1.7
 	o sablevm-classpath-1.1.7
 	o sablevm-classpath-gui-1.1.7
+	o samba-3.0.11
 	o same-1.8
 	o sarah-0.9.1b
 	o sawfish-1.3
@@ -985,6 +998,7 @@ Suggested package updates
 	o scew-0.4.0
 	o scheme48-1.1
 	o scm-5d9
+	o scmxx-0.7.5
 	o screws-0.56 [pkg/28646]
 	o scribus-1.2.1
 	o scrollz-1.9.4
@@ -1009,14 +1023,15 @@ Suggested package updates
 	o smartmontools-5.33
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.52
-	o snd-7.9
+	o snd-7.10
 	o snes9x-1.43
 	o snownews-1.5.6.1
 	o sox-12.17.7
 	o spim-7.0
 	o splint-3.1.1
 	o spruce-0.6.5
-	o sqlite-3.0.7
+	o sqlite-2.8.16
+	o sqlite3-3.1.2
 	o sqlrelay-0.35
 	o sqwebmail-5.0.0
 	o srp_client-1.7.5 [jlam]
@@ -1035,6 +1050,7 @@ Suggested package updates
 	o swig-python-1.3.24
 	o swish-e-2.4.3
 	o sylpheed-claws-1.0.0 [pkg/29168]
+	o sylpheed-claws-1.0.1
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sysinfo-4.2.2
 	o tcl-itcl-3.2.1
@@ -1044,6 +1060,7 @@ Suggested package updates
 	o tcpdstat-0.9
 	o tcpick-0.2.1
 	o tcpillust-1.00b
+	o tcpreplay-2.3.3
 	o tcptrace-6.6.7
 	o tct-1.15
 	o tdir-1.67
@@ -1077,8 +1094,7 @@ Suggested package updates
 	o ttyrec-1.0.6
 	o tunesbrowser-0.1.6
 	o twelf-1.5
-	o txt2html-2.31 [wennmach]
-	o txt2html-2.32
+	o txt2html-2.40
 	o txt2man-1.4.8
 	o uae-0.8.23
 	o ubs-0.20
@@ -1110,6 +1126,7 @@ Suggested package updates
 	o weechat-0.0.8
 	o wesnoth-0.8.10
 	o windowlab-1.25
+	o wine-20050211
 	o wl-2.12.0 [pkg/29043]
 	o wmbiff-0.4.26
 	o wmweather-2.4.3
@@ -1137,7 +1154,7 @@ Suggested package updates
 	o xfmail-1.5.4
 	o xkbset-0.5
 	o xlispstat-3.52.20
-	o xlog-1.0
+	o xlog-1.1
 	o xm7-303
 	o xmcd-3.3.0
 	o xmlstarlet-1.0.0
@@ -1173,7 +1190,7 @@ Suggested package updates
 	o ytalk-3.2.0 [pkg/28840]
 	o zebedee-2.5.2
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.0.0
+	o zile-2.0.1
 	o zircon-1.18.256
 	o zopeedit-0.8
 	o zsh-4.2.4
