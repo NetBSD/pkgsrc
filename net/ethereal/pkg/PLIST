@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.11 2000/11/29 04:02:01 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.12 2001/06/30 23:55:56 tron Exp $
 bin/editcap
 bin/ethereal
 bin/tethereal
 etc/manuf
-lib/ethereal/plugins/${ETHEREAL_VERSION}/gryphon.la
-lib/ethereal/plugins/${ETHEREAL_VERSION}/gryphon.a
-lib/ethereal/plugins/${ETHEREAL_VERSION}/gryphon.so
-lib/ethereal/plugins/${ETHEREAL_VERSION}/mgcp.la
-lib/ethereal/plugins/${ETHEREAL_VERSION}/mgcp.a
-lib/ethereal/plugins/${ETHEREAL_VERSION}/mgcp.so
+lib/ethereal/plugins/${PKGVERSION}/gryphon.la
+lib/ethereal/plugins/${PKGVERSION}/gryphon.a
+lib/ethereal/plugins/${PKGVERSION}/gryphon.so
+lib/ethereal/plugins/${PKGVERSION}/mgcp.la
+lib/ethereal/plugins/${PKGVERSION}/mgcp.a
+lib/ethereal/plugins/${PKGVERSION}/mgcp.so
 man/man1/editcap.1
 man/man1/ethereal.1
 man/man1/tethereal.1
-@dirrm lib/ethereal/plugins/${ETHEREAL_VERSION}
+@dirrm lib/ethereal/plugins/${PKGVERSION}
 @dirrm lib/ethereal/plugins
 @dirrm lib/ethereal
