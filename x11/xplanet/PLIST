@@ -1,0 +1,46 @@
+@comment $NetBSD: PLIST,v 1.1 2002/03/25 16:08:07 atatat Exp $
+bin/xplanet
+bin/xplanetbg
+bin/tkxplanet
+bin/tzcoord.pl
+man/man1/tkxplanet.1
+man/man1/tzcoord.pl.1
+man/man1/xplanet.1
+man/man1/xplanetbg.1
+share/xplanet/satellites/science
+share/xplanet/satellites/iss
+share/xplanet/satellites/science.tle
+share/xplanet/satellites/iss.tle
+share/xplanet/markers/locale/ru_RU/earth
+share/xplanet/markers/locale/el_GR/earth
+share/xplanet/markers/locale/ja_JP/earth
+share/xplanet/markers/locale/ko_KR/earth
+share/xplanet/markers/locale/zh_CN/earth
+share/xplanet/markers/locale/zh_TW/earth
+share/xplanet/markers/earth
+share/xplanet/markers/moon
+share/xplanet/markers/mars
+share/xplanet/images/night.jpg
+share/xplanet/images/iss.png
+share/xplanet/images/smile.png
+share/xplanet/images/hubble.png
+share/xplanet/images/shuttle.png
+share/xplanet/images/sublunar.png
+share/xplanet/images/subsolar.png
+share/xplanet/images/earth.jpg
+share/xplanet/images/README
+share/xplanet/fonts/helr____.ttf
+share/xplanet/fonts/README
+share/xplanet/rgb.txt
+@dirrm share/xplanet/fonts
+@dirrm share/xplanet/images
+@dirrm share/xplanet/markers/locale/el_GR
+@dirrm share/xplanet/markers/locale/ja_JP
+@dirrm share/xplanet/markers/locale/ko_KR
+@dirrm share/xplanet/markers/locale/ru_RU
+@dirrm share/xplanet/markers/locale/zh_CN
+@dirrm share/xplanet/markers/locale/zh_TW
+@dirrm share/xplanet/markers/locale
+@dirrm share/xplanet/markers
+@dirrm share/xplanet/satellites
+@dirrm share/xplanet
