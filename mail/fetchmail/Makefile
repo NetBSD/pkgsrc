@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2002/01/22 20:51:39 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2002/02/13 22:59:02 skrll Exp $
 
 DISTNAME=	fetchmail-5.9.6
 PKGREVISION=	1
@@ -11,7 +11,6 @@ MAINTAINER=	frueauf@netbsd.org
 HOMEPAGE=	http://www.tuxedo.org/~esr/fetchmail/
 COMMENT=	batch mail retrieval/forwarding utility for pop2, pop3, apop, imap
 
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK_ONLY=	yes
@@ -68,9 +67,6 @@ post-extract:
 	done
 	${CHMOD} a+x ${WRKSRC}/configure
 .endif
-
-pre-configure:
-	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf --force
 
 post-build:
 	tbl ${WRKSRC}/fetchmail.tbl >${WRKSRC}/fetchmail.man
