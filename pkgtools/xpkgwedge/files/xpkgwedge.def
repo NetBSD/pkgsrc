@@ -1,4 +1,4 @@
-/*	$NetBSD: xpkgwedge.def,v 1.6 2001/06/29 18:27:30 jlam Exp $	*/
+/*	$NetBSD: xpkgwedge.def,v 1.7 2001/07/01 21:13:21 jlam Exp $	*/
 
 #ifdef AfterVendorCF
 
@@ -88,6 +88,8 @@ InstallNamedTargetNoClobber(install,file.ad,$(INSTAPPFLAGS),$(XAPPLOADDIR),class
 # define LdPreLib BuildLinkLdFlags
 # undef LdPostLib
 # define LdPostLib BuildLinkLdFlags
+# undef ImakeCmd
+# define ImakeCmd imake -DBuildLink -I$(PREFIX)/lib/X11/config
 #endif
 #endif /* BuildLink */
 
