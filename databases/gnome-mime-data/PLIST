@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/04/30 19:52:35 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/05/25 08:10:20 jmmv Exp $
 lib/pkgconfig/gnome-mime-data-2.0.pc
 man/man5/gnome-vfs-mime.5
 share/application-registry/gnome-vfs.applications
@@ -224,4 +224,4 @@ share/pixmaps/document-icons/i-zipdisk.png
 @dirrm share/pixmaps/document-icons
 @unexec ${RMDIR} %D/share/mime-info 2>/dev/null || ${TRUE}
 @dirrm share/examples/gnome-mime-data
-@dirrm share/application-registry
+@comment in gnome2-dirs: @dirrm share/application-registry
