@@ -1,11 +1,13 @@
-$NetBSD: patch-ac,v 1.4 2004/08/16 15:34:25 cjep Exp $
+$NetBSD: patch-ac,v 1.5 2005/02/24 16:35:37 wiz Exp $
 
---- nail.rc.orig	2004-08-15 14:03:44.000000000 +0100
+--- nail.rc.orig	2005-01-15 15:33:16.000000000 +0100
 +++ nail.rc
-@@ -48,3 +48,6 @@ set newmail=noimap
- # Hide some header fields which are uninteresting for most human readers.
+@@ -58,5 +58,8 @@ set autocollapse
  ignore received in-reply-to message-id references
  ignore mime-version content-transfer-encoding
-+
+ 
 +# Be xBSD compliant
 +set bsdcompat
++
+ # Only include selected header fields when forwarding messages.
+ fwdretain subject date from to
