@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.5 2001/07/21 15:23:52 jlam Exp $
+
+--- ../../libwww/Library/src/Makefile.in.orig	Fri Sep 15 08:45:58 2000
++++ ../../libwww/Library/src/Makefile.in
+@@ -123,7 +123,7 @@
+ have_tn3270 = @have_tn3270@
+ subdirs = @subdirs@
+ 
+-LDFLAGS = -version-info "1:0:1"
++LDFLAGS = @LDFLAGS@ -version-info "1:0:1"
+ 
+ lib_LTLIBRARIES =  	libwwwutils.la 	libwwwcore.la 	libwwwtrans.la 	libwwwstream.la 	libwwwcache.la 	libwwwdir.la 	libwwwfile.la 	libwwwftp.la 	libwwwgopher.la 	libwwwmime.la 	libwwwhttp.la 	libwwwnews.la 	libwwwtelnet.la 	libwwwhtml.la 	libwwwapp.la 	libwwwinit.la 	libwwwmux.la 	@WWWXML@ 	@WWWZIP@ 	@WWWWAIS@ 	@WWWSQL@
+ 
+@@ -217,7 +217,7 @@
+ 
+ libwwwsql_la_LDFLAGS = -rpath $(libdir)
+ 
+-INCLUDES =  	-I/usr/local/include 	-I${top_srcdir}/modules/md5 	-I${top_srcdir}/modules/expat/xmlparse
++INCLUDES =  	-I${top_srcdir}/modules/md5 	-I${top_srcdir}/modules/expat/xmlparse
+ 
+ 
+ BUILT_SOURCES =  	wwwsys.h 	HTAABrow.h 	HTAAUtil.h 	HTANSI.h 	HTAccess.h 	HTAlert.h 	HTAncMan.h 	HTAnchor.h 	HTArray.h 	HTAssoc.h 	HTAtom.h 	HTBInit.h 	HTBTree.h 	HTBind.h 	HTBind.h 	HTBound.h 	HTBufWrt.h 	HTCache.h 	HTChannl.h 	HTChunk.h 	HTConLen.h 	HTCookie.h 	HTDNS.h 	HTDemux.h 	HTDescpt.h 	HTDialog.h 	HTDigest.h 	HTDir.h 	HTEPtoCl.h 	HTError.h 	HTEscape.h 	HTEvent.h 	HTEvtLst.h 	HTFSave.h 	HTFTP.h 	HTFTPDir.h 	HTFWrite.h 	HTFile.h 	HTFilter.h 	HTFormat.h 	HTGopher.h 	HTGuess.h 	HTHInit.h 	HTHash.h 	HTHeader.h 	HTHist.h 	HTHome.h 	HTHost.h 	HTHstMan.h 	HTIOStream.h 	HTIcons.h 	HTInet.h 	HTInit.h 	HTLib.h 	HTLink.h 	HTList.h 	HTLocal.h 	HTLog.h 	HTMIME.h 	HTMIMERq.h 	HTMIMImp.h 	HTMIMPrs.h 	HTML.h 	HTMLGen.h 	HTMLPDTD.h 	HTMemLog.h 	HTMemory.h 	HTMerge.h 	HTMethod.h 	HTMulpar.h 	HTMulti.h 	HTMuxCh.h 	HTMuxHeader.h 	HTMuxTx.h 	HTNDir.h 	HTNet.h 	HTNetMan.h 	HTNetTxt.h 	HTNews.h 	HTNewsLs.h 	HTNewsRq.h 	HTNoFree.h 	HTPEP.h 	HTParse.h 	HTPlain.h 	HTProfil.h 	HTProt.h 	HTProxy.h 	HTRDF.h 	HTReader.h 	HTReq.h 	HTReqMan.h 	HTResMan.h 	HTResponse.h 	HTRules.h 	HTSChunk.h 	HTSQL.h 	HTSQLLog.h 	HTSocket.h 	HTStream.h 	HTString.h 	HTStruct.h 	HTStyle.h 	HTTCP.h 	HTTChunk.h 	HTTP.h 	HTTPGen.h 	HTTPReq.h 	HTTPRes.h 	HTTPServ.h 	HTTPUtil.h 	HTTeXGen.h 	HTTee.h 	HTTelnet.h 	HTTimer.h 	HTTrans.h 	HTUTree.h 	HTUU.h 	HTUser.h 	HTUtils.h 	HTWAIS.h 	HTWSRC.h 	HTWWWStr.h 	HTWriter.h 	HTXML.h 	HTXParse.h 	HTZip.h 	HText.h 	HTextImp.h 	SGML.h 	WWWApp.h 	WWWCache.h 	WWWCore.h 	WWWDir.h 	WWWFTP.h 	WWWFile.h 	WWWGophe.h 	WWWHTML.h 	WWWHTTP.h 	WWWInit.h 	WWWLib.h 	WWWMIME.h 	WWWMux.h 	WWWNews.h 	WWWSQL.h 	WWWStream.h 	WWWTelnt.h 	WWWTrans.h 	WWWUtil.h 	WWWWAIS.h 	WWWXML.h 	WWWZip.h
