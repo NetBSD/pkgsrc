@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.2 2000/07/15 09:48:13 jlam Exp $
+$NetBSD: patch-ag,v 1.3 2002/09/11 21:53:50 wiz Exp $
 
---- gdk--/gdk--/Makefile.in.orig	Sat May 20 14:51:19 2000
-+++ gdk--/gdk--/Makefile.in	Sat Jul 15 04:28:08 2000
-@@ -100,7 +100,7 @@
- 
- libgdkmm_la_SOURCES =  	bitmap.cc    colormap.cc  font.cc      main.cc      window.cc 	color.cc     drawable.cc  gc.cc        pixmap.cc    visual.cc         image.cc     types.cc     cursor.cc
+--- gdk--/gdk--/Makefile.in.orig	Tue Apr  9 14:34:14 2002
++++ gdk--/gdk--/Makefile.in	Tue May 28 13:59:53 2002
+@@ -110,7 +110,7 @@
+ 	color.cc     drawable.cc  gc.cc        pixmap.cc    visual.cc \
+         image.cc     types.cc     cursor.cc
  
 -libgdkmm_la_LDFLAGS = -version-info $(LIBGDKMM_SO_VERSION) -release $(GTKMM_RELEASE)
 +libgdkmm_la_LDFLAGS = -version-info $(LIBGDKMM_SO_VERSION)
  
  libgdkmmincludedir = $(includedir)/gdk--
- libgdkmminclude_HEADERS =  	bitmap.h      colormap.h    gc.h          main.h 	color.h       drawable.h    pixmap.h 	font.h        types.h       window.h      visual.h         image.h       list.h        cursor.h
+ libgdkmminclude_HEADERS = \
