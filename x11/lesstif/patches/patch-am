@@ -1,25 +1,13 @@
-$NetBSD: patch-am,v 1.8 2000/10/23 19:45:18 jlam Exp $
+$NetBSD: patch-am,v 1.9 2000/12/22 17:26:19 jlam Exp $
 
---- include/Motif-2.0/Xm/Makefile.am.orig	Wed Aug 16 12:39:26 2000
-+++ include/Motif-2.0/Xm/Makefile.am
-@@ -11,7 +11,7 @@
- # Lets put the headers in a sub directory to avoid
- # poluting /usr/local with more directories for default installs.
- #
--xmdir=	$(prefix)/LessTif/Motif2.0/include/Xm
-+xmdir=	$(includedir)/Xm
+--- doc/Makefile.am.orig	Fri Jan  7 11:57:44 2000
++++ doc/Makefile.am
+@@ -6,7 +6,7 @@
  
- HEADERS1_2 = \
- 	ArrowB.h ArrowBG.h AtomMgr.h \
-@@ -73,11 +73,4 @@
- 	   fi ; \
- 	  done
+ SUBDIRS	= www.lesstif.org lessdox
  
--endif   
--install-data-hook:
--if Version_2_0
--if DefaultVersion20
--	if [ -d $(DESTDIR)$(prefix)/include/Xm ]; then rm -rf $(DESTDIR)$(prefix)/include/Xm; else rm -f $(DESTDIR)$(prefix)/include/Xm; fi
--	(mkdir -p $(DESTDIR)$(prefix)/include && cd $(DESTDIR)$(prefix)/include && $(LN_S) ../LessTif/Motif2.0/include/Xm Xm)
--endif   
- endif   
+-rootdir=	$(exec_prefix)/LessTif/doc
++rootdir=	$(htmldir)
+ root_DATA=	All.html Clipboard.txt DragAndDrop.txt Form.txt \
+ 		GeoUtils.txt Geometry.html SyntheticResources.txt \
+ 		UIL.txt XmStrings.txt thread.html INSTALL.html

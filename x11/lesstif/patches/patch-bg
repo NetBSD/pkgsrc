@@ -1,0 +1,41 @@
+$NetBSD: patch-bg,v 1.1 2000/12/22 17:26:21 jlam Exp $
+
+--- lib/Uil-2.0/Makefile.am.orig	Wed Oct 25 04:56:15 2000
++++ lib/Uil-2.0/Makefile.am
+@@ -40,7 +40,11 @@
+           -DX_LIB_PATH=\"@x_libraries@\" \
+           -DLESSTIFHOME=\"@prefix@\"
+ 
++if DefaultVersion20
++libdir = $(prefix)/lib
++else
+ libdir = $(prefix)/LessTif/Motif2.0/lib
++endif
+ 
+ lib_LTLIBRARIES= libUil.la
+ 
+@@ -59,24 +63,4 @@
+ 	      rm $$i; \
+ 	   fi ; \
+ 	  done
+-endif
+-
+-install-data-hook:
+-if Version_2_0
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libUil.so.2*
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libUil.so.2* .)
+-endif
+-if DefaultVersion20
+-	-rm -f $(DESTDIR)$(prefix)/lib/libUil.la
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libUil.la .)
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libUil.so
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libUil.so .)
+-endif
+-if LibtoolStatic
+-	-rm -f $(DESTDIR)$(prefix)/lib/libUil.a
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libUil.a .)
+-endif
+-endif
+ endif

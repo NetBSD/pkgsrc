@@ -1,0 +1,27 @@
+$NetBSD: patch-bi,v 1.1 2000/12/22 17:26:21 jlam Exp $
+
+--- lib/Uil/Makefile.am.orig	Fri Oct 27 04:47:11 2000
++++ lib/Uil/Makefile.am
+@@ -25,22 +25,3 @@
+ 
+ 
+ endif
+-install-data-hook:
+-if Version_1_2
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libUil.so.1*
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libUil.so.1* .)
+-endif
+-if DefaultVersion12
+-	-rm -f $(DESTDIR)$(prefix)/lib/libUil.la
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libUil.la .)
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libUil.so
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libUil.so .)
+-endif
+-if LibtoolStatic
+-	-rm -f $(DESTDIR)$(prefix)/lib/libUil.a
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libUil.a .)
+-endif
+-endif
+-endif

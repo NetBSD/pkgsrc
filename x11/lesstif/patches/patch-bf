@@ -1,0 +1,27 @@
+$NetBSD: patch-bf,v 1.1 2000/12/22 17:26:21 jlam Exp $
+
+--- lib/Mrm/Makefile.am.orig	Sun Oct  8 02:02:21 2000
++++ lib/Mrm/Makefile.am
+@@ -25,22 +25,3 @@
+ 			lookup.h misc.h uil.h
+ 
+ endif
+-install-data-hook:
+-if Version_1_2
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libMrm.so.1*
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libMrm.so.1* .)
+-endif
+-if DefaultVersion12
+-	-rm -f $(DESTDIR)$(prefix)/lib/libMrm.la
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libMrm.la .)
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libMrm.so
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libMrm.so .)
+-endif
+-if LibtoolStatic
+-	-rm -f $(DESTDIR)$(prefix)/lib/libMrm.a
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libMrm.a .)
+-endif
+-endif
+-endif

@@ -1,13 +1,43 @@
-$NetBSD: patch-ab,v 1.11 2000/10/23 19:45:10 jlam Exp $
+$NetBSD: patch-ab,v 1.12 2000/12/22 17:26:18 jlam Exp $
 
---- clients/Motif-1.2/mwm/system.mwmrc.orig	Sun Jan 16 06:06:11 2000
-+++ clients/Motif-1.2/mwm/system.mwmrc
-@@ -4,7 +4,7 @@
- Menu DefaultRootMenu
- {
- 	"Root Menu"		f.title
--	"New Window"		f.exec "xterm -e /bin/bash &"
-+	"New Window"		f.exec "xterm &"
- 	"Shuffle Up"		f.circle_up
- 	"Shuffle Down"		f.circle_down
- 	"Refresh"		f.refresh
+--- clients/Motif-1.2/mwm/Makefile.am.orig	Tue Dec 19 05:47:42 2000
++++ clients/Motif-1.2/mwm/Makefile.am
+@@ -4,8 +4,8 @@
+ 
+ if Version_1_2
+ bin_PROGRAMS=	mwm
++bindir=		$(prefix)/LessTif/Motif1.2/bin
+ endif
+-bindir = $(prefix)/LessTif/Motif1.2/bin
+ 
+ MAINTAINERCLEANFILES=Makefile.in mwmlex.c mwmparse.c mwmparse.h
+ 
+@@ -17,6 +17,7 @@
+ Additional_Src = gethostname.c
+ endif
+ 
++if Version_1_2
+ mwm_SOURCES=	colormaps.c cursors.c decorate.c defaults.c desktop.c \
+ 		events.c functions.c icons.c menus.c misc.c move.c \
+ 		mwm.c mwm.h mwmerr.c mwmparse.y mwmlex.l mwmstrings.h \
+@@ -37,6 +38,7 @@
+ 
+ mwmddir=	$(libdir)/X11/mwm
+ mwmd_DATA=	system.mwmrc alt.map README
++endif
+ 
+ EXTRA_DIST=	Mwm.ad Mwm.mlm system.mwmrc alt.map README gethostname.c
+ 
+@@ -48,12 +50,6 @@
+ mwmlex.o: mwmparse.h
+ 
+ YFLAGS=		-d
+-
+-install-data-hook:
+-if DefaultVersion12
+-	-rm -f $(DESTDIR)$(prefix)/bin/$(bin_PROGRAMS)
+-	(cd $(DESTDIR)$(prefix)/bin && $(LN_S) ../LessTif/Motif1.2/bin/$(bin_PROGRAMS) .)
+-endif
+ 
+ install-data-local:
+ if DefaultVersion12

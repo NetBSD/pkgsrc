@@ -1,16 +1,29 @@
-$NetBSD: patch-aj,v 1.10 2000/10/23 19:45:17 jlam Exp $
+$NetBSD: patch-aj,v 1.11 2000/12/22 17:26:19 jlam Exp $
 
---- include/Motif-1.2/Mrm/Makefile.am.orig	Sun Apr 11 08:28:41 1999
-+++ include/Motif-1.2/Mrm/Makefile.am
-@@ -16,11 +16,3 @@
- mrm_HEADERS=	MrmAppl.h MrmDecls.h MrmPrivate.h MrmPublic.h
- 
- endif
--install-data-hook:
--if Version_1_2
--if DefaultVersion12
--	if [ -d $(DESTDIR)$(prefix)/include/Mrm ]; then rm -rf $(DESTDIR)$(prefix)/include/Mrm; else rm -f $(DESTDIR)$(prefix)/include/Mrm; fi
--	(mkdir -p $(DESTDIR)$(prefix)/include && cd $(DESTDIR)$(prefix)/include && $(LN_S) ../LessTif/Motif1.2/include/Mrm Mrm)
+--- clients/Motif-2.1/uil/Makefile.am.orig	Thu Dec  7 04:12:29 2000
++++ clients/Motif-2.1/uil/Makefile.am
+@@ -5,8 +5,12 @@
+ if Version_2_1
+ bin_PROGRAMS=	uil
+ noinst_PROGRAMS   = newuil
 -endif
++if DefaultVersion21
++bindir = $(prefix)/bin
++else
+ bindir = $(prefix)/LessTif/Motif2.1/bin
++endif
++endif
+ 
+ MAINTAINERCLEANFILES=Makefile.in lex.c yacc.c yacc.h
+ 
+@@ -75,10 +79,3 @@
+ 	      rm $$i; \
+ 	   fi ; \
+ 	   done
+-
+-install-data-hook:
+-if DefaultVersion21
+-	-rm -f $(DESTDIR)$(prefix)/bin/$(bin_PROGRAMS)
+-	(cd $(DESTDIR)$(prefix)/bin && $(LN_S) ../LessTif/Motif2.1/bin/$(bin_PROGRAMS) .)
 -endif
 -

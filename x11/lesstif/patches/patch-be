@@ -1,0 +1,41 @@
+$NetBSD: patch-be,v 1.1 2000/12/22 17:26:21 jlam Exp $
+
+--- lib/Mrm-2.1/Makefile.am.orig	Wed Dec  6 10:37:47 2000
++++ lib/Mrm-2.1/Makefile.am
+@@ -52,7 +52,11 @@
+           -DX_LIB_PATH=\"@x_libraries@\" \
+           -DLESSTIFHOME=\"@prefix@\"
+ 
++if DefaultVersion21
++libdir = $(prefix)/lib
++else
+ libdir = $(prefix)/LessTif/Motif2.1/lib
++endif
+ 
+ lib_LTLIBRARIES= libMrm.la
+ 
+@@ -78,24 +82,4 @@
+ 	      rm $$i; \
+ 	   fi ; \
+ 	  done
+-endif
+-
+-install-data-hook:
+-if Version_2_1
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libMrm.so.2*
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.1/lib/libMrm.so.2* .)
+-endif
+-if DefaultVersion21
+-	-rm -f $(DESTDIR)$(prefix)/lib/libMrm.la
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.1/lib/libMrm.la .)
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libMrm.so
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.1/lib/libMrm.so .)
+-endif
+-if LibtoolStatic
+-	-rm -f $(DESTDIR)$(prefix)/lib/libMrm.a
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.1/lib/libMrm.a .)
+-endif
+-endif
+ endif

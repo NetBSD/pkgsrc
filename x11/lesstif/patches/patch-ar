@@ -1,27 +1,13 @@
-$NetBSD: patch-ar,v 1.6 2000/10/23 19:45:18 jlam Exp $
+$NetBSD: patch-ar,v 1.7 2000/12/22 17:26:19 jlam Exp $
 
---- lib/Xm/Makefile.am.orig	Thu Jun 22 15:37:11 2000
-+++ lib/Xm/Makefile.am
-@@ -54,22 +54,3 @@
- 	Xmos.c alloca.c misc.c $(XDND_SRCS)
- 
- endif
--install-data-hook:
--if Version_1_2
--if LibtoolShared
--	-rm -f $(DESTDIR)$(prefix)/lib/libXm.so.1*
--	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libXm.so.1* .)
--endif
--if DefaultVersion12
--	-rm -f $(DESTDIR)$(prefix)/lib/libXm.la
--	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libXm.la .)
--if LibtoolShared
--	-rm -f $(DESTDIR)$(prefix)/lib/libXm.so
--	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libXm.so .)
--endif
--if LibtoolStatic
--	-rm -f $(DESTDIR)$(prefix)/lib/libXm.a
--	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libXm.a .)
--endif
--endif
--endif
+--- doc/www.lesstif.org/images/Makefile.am.orig	Tue Jul 11 12:26:18 2000
++++ doc/www.lesstif.org/images/Makefile.am
+@@ -10,7 +10,7 @@
+ # Lets put the informational stuff in a sub directory to avoid 
+ # poluting /usr/local for default installs.
+ #
+-rootdir=	$(exec_prefix)/LessTif/doc/images
++rootdir=	$(htmldir)/images
+ root_DATA=	hungry.png \
+ 		lesstif-realsmall.png lesstif-small.png lesstif.png \
+ 		ltsunlogo.png lesstif.jpg ltsunlogo.jpg \
