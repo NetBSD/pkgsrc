@@ -1,0 +1,11 @@
+--- crossedit/Makefile.in.orig	Tue Dec  5 23:30:11 2000
++++ crossedit/Makefile.in	Tue Dec  5 23:31:40 2000
+@@ -67,7 +67,7 @@
+ 
+ DEPEND = makedepend
+ 
+-X11LIBS= @X_LIBS@ @X_EXTRA_LIBS@ @X11LIBS@
++X11LIBS= @LDFLAGS@ @X_LIBS@ @X_EXTRA_LIBS@ @X11LIBS@
+ 
+ LIBS = @LIBS@ $(X11LIBS)
+ 

@@ -1,0 +1,9 @@
+#! /bin/sh
+#
+# $NetBSD: install,v 1.1.1.1 2000/12/13 08:18:06 garbled Exp $
+#
+if [ "$2" != "POST-INSTALL" ]; then
+        exit 0
+fi
+XXXX11BASEXXX/bin/mkfontdir XXXX11BASEXXX/lib/X11/fonts/misc
+cat >> XXXLOCALBASEXXX/etc/rplay.conf << EOF
