@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/08 02:04:53 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/15 22:32:51 peter Exp $
 
-SHA1 (giFT-FastTrack-0.8.6.tar.gz) = d85ecd9e490f43286ab77d805bb49d3b497b67f9
-Size (giFT-FastTrack-0.8.6.tar.gz) = 362589 bytes
+SHA1 (giFT-FastTrack-0.8.9.tar.gz) = c44dc2c6a9f9b9a1b3f4c7c4eac7477eaa8439f6
+Size (giFT-FastTrack-0.8.9.tar.gz) = 449505 bytes
