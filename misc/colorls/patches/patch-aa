@@ -256,7 +256,7 @@
 +PROG=	colorls
  SRCS=	cmp.c stat_flags.c ls.c print.c util.c
 +BINDIR=	${PREFIX}/bin
-+MANDIR= ${PREFIX}/man/man
++MANDIR= ${PREFIX}/man
  
  .include <bsd.prog.mk>
 --- ./colorls.1.org	Wed Mar  8 02:14:10 1995
