@@ -1,9 +1,10 @@
-#$NetBSD: Makefile,v 1.10 2001/10/24 22:11:15 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/05/02 15:34:41 jschauma Exp $
 #
 
-DISTNAME=	wmfire-0.0.3.8
+DISTNAME=	wmfire-0.0.3.9pre4
+PKGNAME=	wmfire-0.0.3.9.4
 CATEGORIES=	x11
-MASTER_SITES=	http://www.zebra.net/~dm/wmfire/
+MASTER_SITES=	http://staff.xmms.org/zinx/misc/
 
 MAINTAINER=	hubertf@netbsd.org
 COMMENT=	Displays generated fire according to system load
