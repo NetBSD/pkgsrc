@@ -3,5 +3,4 @@ language, providing commands (ruby, irb, ...) without its release
 number information.
 
 Actual Ruby programming language is provided by a package with its
-release number like ruby16 or ruby18 and no package should not
-depends on this pacakge.
+release number like ruby16 or ruby18.
