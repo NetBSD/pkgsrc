@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.12 2005/01/12 22:58:19 kristerw Exp $
+
+--- src/video/SDL_yuv_mmx.c.orig	Wed Jan 12 23:20:48 2005
++++ src/video/SDL_yuv_mmx.c	Wed Jan 12 23:22:43 2005
+@@ -26,7 +26,7 @@
+ #endif
+ 
+ 
+-#if defined(i386) && defined(__GNUC__) && defined(USE_ASMBLIT)
++#if defined(i386) && defined(__GNUC__) && __GNUC__ > 2 && defined(USE_ASMBLIT)
+ 
+ #include "SDL_types.h"
+ 

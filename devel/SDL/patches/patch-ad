@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.7 2005/01/12 22:58:19 kristerw Exp $
+
+--- src/video/SDL_yuv_sw.c.orig	Wed Feb 18 18:22:04 2004
++++ src/video/SDL_yuv_sw.c	Wed Jan 12 23:43:27 2005
+@@ -1067,7 +1067,7 @@
+ 	    case SDL_YV12_OVERLAY:
+ 	    case SDL_IYUV_OVERLAY:
+ 		if ( display->format->BytesPerPixel == 2 ) {
+-#if defined(i386) && defined(__GNUC__) && defined(USE_ASMBLIT)
++#if defined(i386) && defined(__GNUC__) && __GNUC__ > 2 && defined(USE_ASMBLIT)
+ 			/* inline assembly functions */
+ 			if ( SDL_HasMMX() && (Rmask == 0xF800) &&
+ 			                     (Gmask == 0x07E0) &&
+@@ -1089,7 +1089,7 @@
+ 			swdata->Display2X = Color24DitherYV12Mod2X;
+ 		}
+ 		if ( display->format->BytesPerPixel == 4 ) {
+-#if defined(i386) && defined(__GNUC__) && defined(USE_ASMBLIT)
++#if defined(i386) && defined(__GNUC__) && __GNUC__ > 2 && defined(USE_ASMBLIT)
+ 			/* inline assembly functions */
+ 			if ( SDL_HasMMX() && (Rmask == 0x00FF0000) &&
+ 			                     (Gmask == 0x0000FF00) &&
