@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2004/04/01 18:25:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.175 2004/04/11 00:09:04 rh Exp $
 #
 
 COMMENT=	Security tools
@@ -38,6 +38,7 @@ SUBDIR+=	fressh
 SUBDIR+=	fsh
 SUBDIR+=	gnome-keyring
 SUBDIR+=	gnupg
+SUBDIR+=	gnustep-ssl
 SUBDIR+=	gnutls
 SUBDIR+=	gpa
 SUBDIR+=	gpg2dot
