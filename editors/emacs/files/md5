@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.5 1999/12/28 14:08:55 tron Exp $
+$NetBSD: md5,v 1.6 2000/03/10 15:45:34 minoura Exp $
 
-MD5 (emacs-20.5a.tar.gz) = d3852880bcd144c79be1b9537d28490c
+MD5 (emacs-20.6.tar.gz) = cfcaa33b5fc7d64210d3428f13570f8d
