@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2002/03/22 13:49:11 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2002/05/25 02:43:39 fredb Exp $
 #
 
 COMMENT=	Archivers
@@ -8,6 +8,7 @@ SUBDIR+=	bicom
 SUBDIR+=	bunzip
 SUBDIR+=	bzip2
 SUBDIR+=	cabextract
+SUBDIR+=	cxunzip
 SUBDIR+=	dact
 SUBDIR+=	fastjar
 SUBDIR+=	freeze
