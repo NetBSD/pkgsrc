@@ -1,13 +1,12 @@
-$NetBSD: patch-ab,v 1.4 1998/08/07 11:18:08 agc Exp $
-
---- lib/config/Makefile.in-orig	Sun Mar 22 19:46:26 1998
-+++ lib/config/Makefile.in	Sun Mar 22 19:45:27 1998
-@@ -97,7 +97,7 @@
- MAINTAINERCLEANFILES=Makefile.in
- bin_SCRIPTS=	mxmkmf
+$NetBSD: patch-ab,v 1.5 1999/09/03 19:45:12 drochner Exp $
+--- lib/config/Makefile.in.orig	Sun Aug 15 11:51:22 1999
++++ lib/config/Makefile.in	Sun Aug 15 11:51:50 1999
+@@ -114,7 +114,7 @@
+ MAINTAINERCLEANFILES = Makefile.in
+ bin_SCRIPTS = mxmkmf
  
--configdir=	$(libdir)/X11/config
-+configdir=	$(libdir)/X11/lesstif
- config_DATA=	Imake.tmpl Motif.rules Motif.tmpl
+-configdir = $(libdir)/X11/config
++configdir = $(libdir)/X11/lesstif
+ config_DATA = Imake.tmpl Motif.rules Motif.tmpl
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = ../../include/LTconfig.h

@@ -1,0 +1,19 @@
+$NetBSD: patch-al,v 1.1 1999/09/03 19:45:12 drochner Exp $
+--- lib/Xlt/configure.orig	Mon Aug 16 01:13:22 1999
++++ lib/Xlt/configure	Mon Aug 16 01:41:30 1999
+@@ -1973,6 +1973,7 @@
+ 
+ 
+ # Check for any special flags to pass to ltconfig.
++if false; then
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+ test "$enable_static" = no && libtool_flags="$libtool_flags --disable-static"
+@@ -2129,6 +2130,7 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
++fi
+ 
+ echo $ac_n "checking whether to enable maintainer-specific portions of Makefiles""... $ac_c" 1>&6
+ echo "configure:2135: checking whether to enable maintainer-specific portions of Makefiles" >&5

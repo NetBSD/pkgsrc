@@ -1,13 +1,12 @@
-$NetBSD: patch-aj,v 1.3 1998/08/12 22:44:21 frueauf Exp $
-
---- doc/www.lesstif.org/imgs/Makefile.in-orig	Wed Aug 12 03:37:31 1998
-+++ doc/www.lesstif.org/imgs/Makefile.in	Wed Aug 12 23:08:45 1998
-@@ -106,7 +106,7 @@
+$NetBSD: patch-aj,v 1.4 1999/09/03 19:45:12 drochner Exp $
+--- doc/www.lesstif.org/imgs/Makefile.in.orig	Sun Aug 15 11:48:21 1999
++++ doc/www.lesstif.org/imgs/Makefile.in	Sun Aug 15 11:48:36 1999
+@@ -120,7 +120,7 @@
  # Lets put the informational stuff in a sub directory to avoid 
  # poluting /usr/local for default installs.
  #
--rootdir=	$(exec_prefix)/LessTif/doc/imgs
-+rootdir=	$(exec_prefix)/share/lesstif/doc/imgs
- root_DATA=	lesstif.jpg ltsunlogo.gif
+-rootdir = $(exec_prefix)/LessTif/doc/imgs
++rootdir = $(exec_prefix)/share/lesstif/doc/imgs
+ root_DATA = lesstif.jpg ltsunlogo.gif
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = ../../../include/LTconfig.h

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 1998/10/31 01:02:18 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.16 1999/09/03 19:45:13 drochner Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
@@ -7,6 +7,8 @@ include/Mrm/MrmAppl.h
 include/Mrm/MrmDecls.h
 include/Mrm/MrmPrivate.h
 include/Mrm/MrmPublic.h
+include/Xm/AccTextT.h
+include/Xm/ActivatableT.h
 include/Xm/ArrowB.h
 include/Xm/ArrowBG.h
 include/Xm/ArrowBGP.h
@@ -15,13 +17,18 @@ include/Xm/AtomMgr.h
 include/Xm/BaseClassP.h
 include/Xm/BulletinB.h
 include/Xm/BulletinBP.h
+include/Xm/CSText.h
 include/Xm/CacheP.h
 include/Xm/CascadeB.h
 include/Xm/CascadeBG.h
 include/Xm/CascadeBGP.h
 include/Xm/CascadeBP.h
+include/Xm/ComboBox.h
+include/Xm/ComboBoxP.h
 include/Xm/Command.h
 include/Xm/CommandP.h
+include/Xm/Container.h
+include/Xm/ContainerT.h
 include/Xm/CutPaste.h
 include/Xm/CutPasteP.h
 include/Xm/DesktopP.h
@@ -53,15 +60,22 @@ include/Xm/Form.h
 include/Xm/FormP.h
 include/Xm/Frame.h
 include/Xm/FrameP.h
+include/Xm/Gadget.h
 include/Xm/GadgetP.h
+include/Xm/GrabShell.h
+include/Xm/GrabShellP.h
+include/Xm/IconG.h
+include/Xm/IconGP.h
 include/Xm/Label.h
 include/Xm/LabelG.h
 include/Xm/LabelGP.h
 include/Xm/LabelP.h
+include/Xm/LayoutT.h
 include/Xm/List.h
 include/Xm/ListP.h
 include/Xm/MainW.h
 include/Xm/MainWP.h
+include/Xm/Manager.h
 include/Xm/ManagerP.h
 include/Xm/MenuShell.h
 include/Xm/MenuShellP.h
@@ -69,8 +83,12 @@ include/Xm/MenuUtilP.h
 include/Xm/MessageB.h
 include/Xm/MessageBP.h
 include/Xm/MwmUtil.h
+include/Xm/NavigatorT.h
+include/Xm/Notebook.h
+include/Xm/NotebookP.h
 include/Xm/PanedW.h
 include/Xm/PanedWP.h
+include/Xm/Primitive.h
 include/Xm/PrimitiveP.h
 include/Xm/Protocols.h
 include/Xm/ProtocolsP.h
@@ -89,6 +107,7 @@ include/Xm/Screen.h
 include/Xm/ScreenP.h
 include/Xm/ScrollBar.h
 include/Xm/ScrollBarP.h
+include/Xm/ScrollFrameT.h
 include/Xm/ScrolledW.h
 include/Xm/ScrolledWP.h
 include/Xm/SelectioB.h
@@ -98,6 +117,8 @@ include/Xm/SeparatoGP.h
 include/Xm/Separator.h
 include/Xm/SeparatorP.h
 include/Xm/ShellEP.h
+include/Xm/SpinB.h
+include/Xm/SpinBP.h
 include/Xm/TearOffBP.h
 include/Xm/TearOffP.h
 include/Xm/Text.h
@@ -113,6 +134,9 @@ include/Xm/ToggleB.h
 include/Xm/ToggleBG.h
 include/Xm/ToggleBGP.h
 include/Xm/ToggleBP.h
+include/Xm/TraitP.h
+include/Xm/Transfer.h
+include/Xm/TransferP.h
 include/Xm/TransltnsP.h
 include/Xm/VaSimpleP.h
 include/Xm/VendorS.h
@@ -127,21 +151,22 @@ include/Xm/XmP.h
 include/Xm/XmStrDefs.h
 include/Xm/XmosP.h
 lib/X11/app-defaults/Mwm
-lib/X11/mwm/README
-lib/X11/mwm/alt.map
-lib/X11/mwm/system.mwmrc
 lib/X11/lesstif/Imake.tmpl
 lib/X11/lesstif/Motif.rules
 lib/X11/lesstif/Motif.tmpl
+lib/X11/mwm/README
+lib/X11/mwm/alt.map
+lib/X11/mwm/system.mwmrc
 lib/libMrm.a
-lib/libMrm.so.1.2
+lib/libMrm.so.2.0
 lib/libXm.a
-lib/libXm.so.1.2
+lib/libXm.so.2.0
 share/lesstif/AUTHORS
 share/lesstif/BUG-REPORTING
 share/lesstif/COPYING
 share/lesstif/COPYING.LIB
 share/lesstif/CREDITS
+share/lesstif/FAQ
 share/lesstif/INSTALL
 share/lesstif/KNOWN_BUGS
 share/lesstif/NEWS
@@ -168,6 +193,8 @@ share/lesstif/doc/images/ltsunlogo.gif
 share/lesstif/doc/imgs/lesstif.jpg
 share/lesstif/doc/imgs/ltsunlogo.gif
 share/lesstif/doc/index.html
+share/lesstif/doc/help.html
+share/lesstif/doc/known.html
 share/lesstif/doc/links.html
 share/lesstif/doc/lists.html
 share/lesstif/doc/mirrors.html
@@ -193,6 +220,7 @@ man/man3/Shell.3
 man/man3/TopLevelShell.3
 man/man3/TransientShell.3
 man/man3/UnNamedObj.3
+man/man3/VendorShell.3
 man/man3/WmShell.3
 man/man3/XmArrowButton.3
 man/man3/XmArrowButtonGadget.3
@@ -210,11 +238,11 @@ man/man3/XmDragContext.3
 man/man3/XmDragIcon.3
 man/man3/XmDragOverShell.3
 man/man3/XmDrawingArea.3
-man/man3/XmForm.3
 man/man3/XmDrawnButton.3
 man/man3/XmDropSiteManager.3
 man/man3/XmDropTransfer.3
 man/man3/XmFileSelectionBox.3
+man/man3/XmForm.3
 man/man3/XmFrame.3
 man/man3/XmGadget.3
 man/man3/XmGrabShell.3
@@ -246,9 +274,9 @@ man/man3/XmTearOffButton.3
 man/man3/XmText.3
 man/man3/XmTextField.3
 man/man3/XmToggleButton.3
-man/man3/XmWorld.3
 man/man3/XmToggleButtonGadget.3
-man/man3/XmVendorShellExt.3
+man/man3/XmVendorShell.3
+man/man3/XmWorld.3
 man/man3/XtConfigureObject.3
 man/man3/XtDestroyWidget.3
 man/man3/XtManageChild.3
@@ -260,5 +288,6 @@ man/man5/mwmrc.5
 @dirrm include/Mrm
 @dirrm share/lesstif/doc/images
 @dirrm share/lesstif/doc/imgs
+@dirrm share/lesstif/doc/html
 @dirrm share/lesstif/doc
 @dirrm share/lesstif

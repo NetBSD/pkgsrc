@@ -1,13 +1,17 @@
-$NetBSD: patch-af,v 1.4 1998/08/12 22:44:21 frueauf Exp $
-
---- doc/www.lesstif.org/Makefile.in.orig	Wed Aug 12 03:37:30 1998
-+++ doc/www.lesstif.org/Makefile.in	Wed Aug 12 22:06:39 1998
-@@ -107,7 +107,7 @@
+$NetBSD: patch-af,v 1.5 1999/09/03 19:45:12 drochner Exp $
+--- doc/www.lesstif.org/Makefile.in.orig	Tue Jul 13 16:21:23 1999
++++ doc/www.lesstif.org/Makefile.in	Tue Aug 17 00:23:59 1999
+@@ -121,11 +121,11 @@
  # Lets put the informational stuff in a sub directory to avoid 
  # poluting /usr/local for default installs.
  #
--rootdir=	$(exec_prefix)/LessTif/doc
-+rootdir=	$(exec_prefix)/share/lesstif/doc
- root_DATA=	COPYING.LIB.html FAQ.html apps.html bug-reporting.html \
- 		bugs.html button.html cdrom.html core.html current.html \
- 		cvs.html download.html index.html links.html lists.html \
+-rootdir = $(exec_prefix)/LessTif/doc
++rootdir = $(exec_prefix)/share/lesstif/doc
+ root_DATA = COPYING.LIB.html FAQ.html apps.html bug-reporting.html 		bugs.html button.html cdrom.html core.html current.html 		cvs.html download.html index.html links.html lists.html 		mirrors.html platforms.html release-policy.html 		test_policy.html test_summary.html testers.html 		versions.html web_button.html known.html help.html
+ 
+ 
+-root2dir = $(exec_prefix)/LessTif
++root2dir = $(exec_prefix)/share/lesstif
+ root2_DATA = FAQ
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../../include/LTconfig.h
