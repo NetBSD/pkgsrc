@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/04 12:05:13 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/03/14 16:20:58 wiz Exp $
 
 SHA1 (mdiff216.zip) = bc6dd8b21c20b73027dfb0e541681227d11173a9
 RMD160 (mdiff216.zip) = 8b144e710c75b20309fc12f8f24399aec4bc5294
 Size (mdiff216.zip) = 153474 bytes
-SHA1 (patch-aa) = 889efeca6087d8b43b793d015e84a40ee39cd64c
-SHA1 (patch-ab) = 71d9b2b8321f3e1d7adead3c385d6d7d4b2f53be
-SHA1 (patch-ac) = a7d6acfc086ee4eec481e9c1aea10fbe3636f63b
-SHA1 (patch-ad) = 02187fcf5720f639e922f8e6cdc7e3dec783793b
+SHA1 (patch-aa) = da1422224efb2c332b2a4d1117f6b3184535cebe
+SHA1 (patch-ab) = 0558a1b50e869a40e5268ba567b0a6c23e354c07
+SHA1 (patch-ac) = d5095a349590a9f2a96173b973a9bec78f9fdd4f
+SHA1 (patch-ad) = 878633f71e1cab024801937307bd30e880a72eb0
