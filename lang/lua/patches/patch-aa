@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.7 2004/06/12 03:01:59 grant Exp $
+$NetBSD: patch-aa,v 1.8 2004/10/02 20:54:59 cube Exp $
 
---- config.orig	2003-04-12 00:00:41.000000000 +1000
+--- config.orig	2003-04-11 16:00:41.000000000 +0200
 +++ config
+@@ -6,7 +6,7 @@
+ LOADLIB=
+ DLLIB=
+ NUMBER=
+-POPEN=
++POPEN= -DUSE_POPEN=1
+ TMPNAM=
+ DEGREES=
+ USERCONF=
 @@ -25,7 +25,7 @@ USERCONF=
  # interface (e.g., Linux, Solaris, IRIX, BSD, AIX, HPUX, and probably others),
  # uncomment the next two lines.
