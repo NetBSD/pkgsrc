@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/27 02:58:06 snj Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/30 12:47:18 seb Exp $
 
 DISTNAME=		nosefart-1.92i-mls
 PKGNAME=		${DISTNAME:S/-mls//}
@@ -16,7 +16,7 @@ NO_CONFIGURE=		YES
 SUBST_CLASSES+=		ossaudio
 SUBST_STAGE.ossaudio=	pre-build
 SUBST_MESSAGE.ossaudio=	"Fixing audio device."
-SUBST_FILES.ossaudio=	${WRKSRC}/src/linux/main_linux.c
+SUBST_FILES.ossaudio=	src/linux/main_linux.c
 SUBST_SED.ossaudio=	-e 's|/dev/dsp|${DEVOSSSOUND}|'
 
 do-install:
