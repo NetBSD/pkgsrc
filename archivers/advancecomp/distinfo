@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/11/09 11:52:42 adam Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 14:45:22 agc Exp $
 
 SHA1 (advancecomp-1.13.tar.gz) = d1c4711273541f67e88ea3be612951549caf5dce
+RMD160 (advancecomp-1.13.tar.gz) = b0f127d00e79f79969eb074de1f748f7c86b4895
 Size (advancecomp-1.13.tar.gz) = 256677 bytes
