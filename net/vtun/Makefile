@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/06/12 20:33:07 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/07/13 07:09:21 jlam Exp $
 
 DISTNAME=	vtun-2.4
 CATEGORIES=	net
@@ -30,19 +30,20 @@ VTUN_SYSCONFDIR?=${LOCALBASE}/etc
 CONFIGURE_ARGS+=--sysconfdir=${VTUN_SYSCONFDIR}
 BUILD_DEFS+=	VTUN_SYSCONFDIR
 
+FILES_SUBST=		VTUN_SYSCONFDIR=${VTUN_SYSCONFDIR}
+FILES_SUBST+=		CAT=${CAT:Q}
+FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CMP=${CMP:Q}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		MKDIR=${MKDIR:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST+=		RMDIR=${RMDIR:Q}
+FILES_SUBST+=		TRUE=${TRUE:Q}  
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
 pre-install:
-	@${SED}	-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@RM@|${RM}|g"					\
-		-e "s|@RMDIR@|${RMDIR}|g"				\
-		-e "s|@TRUE@|${TRUE}|g"					\
-		-e "s|@VTUN_SYSCONFDIR@|${VTUN_SYSCONFDIR}|g"		\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	@${SED}	-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@CHMOD@|${CHMOD}|g"				\
-		-e "s|@CP@|${CP}|g"					\
-		-e "s|@MKDIR@|${MKDIR}|g"				\
-		-e "s|@VTUN_SYSCONFDIR@|${VTUN_SYSCONFDIR}|g"		\
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vtund ${PREFIX}/sbin

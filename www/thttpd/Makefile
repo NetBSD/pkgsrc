@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/06/09 11:26:33 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/07/13 07:09:27 jlam Exp $
 
 DISTNAME=	thttpd-2.21b
 CATEGORIES=	www
@@ -19,6 +19,13 @@ BUILD_DEFS+=	USE_INET6
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
 
+FILES_SUBST=		CAT=${CAT:Q}
+FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CMP=${CMP:Q}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
 pre-configure:
 	${MV} ${WRKSRC}/extras/htpasswd.1 ${WRKSRC}/extras/thtpasswd.1
 	${MV} ${WRKSRC}/extras/htpasswd.c ${WRKSRC}/extras/thtpasswd.c
@@ -36,13 +43,8 @@ post-build:
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/thttpd
-	${SED}	-e "s,@CAT@,${CAT},g" \
-		-e "s,@RM@,${RM},g" \
-		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s,@CAT@,${CAT},g" \
-		-e "s,@CHMOD@,${CHMOD},g" \
-		-e "s,@CP@,${CP},g" \
-		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:

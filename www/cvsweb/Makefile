@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.2 2001/04/23 20:12:24 kim Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/13 07:09:25 jlam Exp $
 #
 
 DISTNAME=		cvsweb-1.93
@@ -24,23 +24,23 @@ INSTALL_FILE=		${WRKDIR}/INSTALL
 
 APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
 
+FILES_SUBST=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
+FILES_SUBST+=		CAT=${CAT:Q}
+FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CMP=${CMP:Q}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
 do-build:
 	${MV} ${WRKSRC}/cvsweb.cgi ${WRKSRC}/cvsweb.cgi.bak
-	${SED} -e 's,/usr/bin/perl,${PERL5},'				\
-	    -e 's,/usr/local/web/apache/conf/,${APACHE_SYSCONFDIR}/,'	\
+	${SED}	-e 's,/usr/bin/perl,${PERL5},'				\
+		-e 's,/usr/local/web/apache/conf/,${APACHE_SYSCONFDIR}/,' \
 	    ${WRKSRC}/cvsweb.cgi.bak > ${WRKSRC}/cvsweb.cgi
 
 pre-install:
-	${SED}	-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@CP@|${CP}|g"					\
-		-e "s|@RM@|${RM}|g"					\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@CHMOD@|${CHMOD}|g"				\
-		-e "s|@CP@|${CP}|g"					\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 do-install:
 	${INSTALL_SCRIPT_DIR} ${PREFIX}/libexec/cgi-bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:51:34 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/07/13 07:09:22 jlam Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/10/21 00:57:27 steve Exp
 #
 
@@ -52,6 +52,14 @@ EXAMPLES_DIR=	 	${PREFIX}/share/examples/LPRng
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
 
+FILES_SUBST=		CAT=${CAT:Q}
+FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CMP=${CMP:Q}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST+=		TRUE=${TRUE:Q}  
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
 pre-patch:
 	${MV} ${WRKSRC}/man/lpd.conf.5 ${WRKSRC}/man/lpd.conf.5.in
 
@@ -66,14 +74,8 @@ post-configure:
 pre-install:
 	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
 		< ${FILESDIR}/LPRng.sh > ${WRKDIR}/LPRng.sh
-	${SED}	-e "s,@CAT@,${CAT},g" \
-		-e "s,@RM@,${RM},g" \
-		-e "s,@RMDIR@,${RMDIR},g" \
-		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s,@CAT@,${CAT},g" \
-		-e "s,@CHMOD@,${CHMOD},g" \
-		-e "s,@CP@,${CP},g" \
-		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/LPRng.sh ${PREFIX}/etc/rc.d/LPRng
