@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.6 2001/12/17 19:26:25 tron Exp $
+
+--- sh.func.c.orig	Tue Mar 13 13:53:50 2001
++++ sh.func.c	Mon Dec 17 20:23:03 2001
+@@ -2143,6 +2143,9 @@
+     else
+ 	rlim.rlim_cur = limit;
+ 
++    if (rlim.rlim_cur > rlim.rlim_max)
++	rlim.rlim_max = rlim.rlim_cur;
++
+     if (setrlimit(lp->limconst, &rlim) < 0) {
+ # else /* BSDLIMIT */
+     if (limit != RLIM_INFINITY && lp->limconst == RLIMIT_FSIZE)
+@@ -2153,10 +2156,10 @@
+ # endif /* aiws */
+     if (ulimit(toset(lp->limconst), limit) < 0) {
+ # endif /* BSDLIMIT */
+-	xprintf(CGETS(15, 1, "%s: %s: Can't %s%s limit\n"), bname, lp->limname,
+-		limit == RLIM_INFINITY ? CGETS(15, 2, "remove") :
+-		CGETS(15, 3, "set"),
+-		hard ? CGETS(14, 4, " hard") : "");
++	xprintf(CGETS(15, 1, "%s: %s: Can't %s%s limit (%s)\n"), bname,
++	    lp->limname, limit == RLIM_INFINITY ? CGETS(15, 2, "remove") :
++	    CGETS(15, 3, "set"), hard ? CGETS(14, 4, " hard") : "",
++	    strerror(errno));
+ 	return (-1);
+     }
+     return (0);
