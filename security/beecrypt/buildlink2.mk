@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/08/03 15:47:46 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/08/03 20:58:18 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use beecrypt.
 #
@@ -9,7 +9,7 @@
 BEECRYPT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			beecrypt
-BUILDLINK_DEPENDS.beecrypt?=		beecrypt>=2.1.0
+BUILDLINK_DEPENDS.beecrypt?=		beecrypt>=3.0.0
 BUILDLINK_PKGSRCDIR.beecrypt?=		../../devel/beecrypt
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.beecrypt=beecrypt
