@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.7 2002/11/22 00:41:14 dmcmahill Exp $
+$NetBSD: distinfo,v 1.8 2003/02/05 19:19:27 dmcmahill Exp $
 
 SHA1 (gerbv-0.11.tar.gz) = d2caf38d0bc18fb87be218254c8ab0cd191c72eb
 Size (gerbv-0.11.tar.gz) = 961551 bytes
+SHA1 (patch-aa) = b754f8eb900ea3e03b2e1bf7b5e5263d6e449152
