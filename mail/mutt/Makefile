@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2002/11/30 14:59:39 grant Exp $
+# $NetBSD: Makefile,v 1.89 2002/12/01 15:38:00 salo Exp $
 
 DISTNAME=		mutt-1.4i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -13,10 +13,9 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.mutt.org/
 COMMENT=		text-based MIME mail client with PGP support
 
-USE_BUILDLINK2=		# defined
-
 BUILD_USES_MSGFMT=	# defined
 
+USE_BUILDLINK2=		# defined
 USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
 USE_PKGLOCALEDIR=	# defined
