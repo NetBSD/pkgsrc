@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2002/04/16 02:34:34 itojun Exp $
+# $NetBSD: Makefile,v 1.48 2002/04/26 00:08:21 itojun Exp $
 #
 
-DISTNAME=	racoon-20011215a
-PKGREVISION=	1
+DISTNAME=	racoon-20020426a
 CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 
@@ -41,9 +40,9 @@ CONFIGURE_ARGS+=--disable-ipv6
 .endif
 CONFIGURE_ARGS+=--sysconfdir=/etc/racoon
 .if defined(PKGREVISION)
-CONFIGURE_ARGS+=--with-pkgversion=netbsd-pkgsrc-20011215anb${PKGREVISION}
+CONFIGURE_ARGS+=--with-pkgversion=netbsd-pkgsrc-20020426anb${PKGREVISION}
 .else
-CONFIGURE_ARGS+=--with-pkgversion=netbsd-pkgsrc-20011215a
+CONFIGURE_ARGS+=--with-pkgversion=netbsd-pkgsrc-20020426a
 .endif
 
 pre-configure:
@@ -51,7 +50,7 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/racoon
-	for i in FAQ README.certificate; do \
+	for i in FAQ README.certificate README.gssapi; do \
 		${INSTALL_DATA} ${WRKSRC}/doc/$$i ${PREFIX}/share/doc/racoon; \
 	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/racoon
