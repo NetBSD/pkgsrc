@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/13 13:53:31 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/13 14:06:08 wulf Exp $
 #
 
 DISTNAME=		aspell-0.50.3
@@ -23,6 +23,8 @@ INCOMPAT_CURSES=	NetBSD-1.[45]*-* NetBSD-1.6[-_.]* NetBSD-1.6[A-L]-*
 
 CONFIGURE_ARGS+=	--enable-doc-dir=${PREFIX}/share/doc/aspell
 CONFIGURE_ARGS+=	--enable-curses=ncurses
+
+REPLACE_PERL=		scripts/aspell-import
 
 # Create directory for dictionaries.
 #
