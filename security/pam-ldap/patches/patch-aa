@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/21 18:47:46 rh Exp $
+
+--- Makefile.in.orig	Thu Oct 12 23:25:50 2000
++++ Makefile.in
+@@ -83,7 +83,7 @@
+ 
+ 
+ DEFS = @DEFS@ -I. -I$(srcdir) -I.
+-CPPFLAGS = @CPPFLAGS@
++CPPFLAGS = @CPPFLAGS@ -DETCPAMDIR=\"${PREFIX}/etc/pam\"
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ pam_ldap_so_OBJECTS =  pam_ldap.o md5.o
+@@ -380,17 +380,11 @@
+ install-exec-local: pam_ldap.so
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(libdir)/security
+-@EXTENSION_SO_TRUE@	$(INSTALL_PROGRAM) -o root -g root pam_ldap.so $(DESTDIR)$(libdir)/security/pam_ldap.so
+-@EXTENSION_SO_FALSE@	$(INSTALL_PROGRAM) -o root -g root pam_ldap.so $(DESTDIR)$(libdir)/security/pam_ldap.so.1
+-@EXTENSION_SO_FALSE@	-rm -f $(DESTDIR)$(libdir)/security/pam_ldap.so
+-@EXTENSION_SO_FALSE@	-ln -s $(DESTDIR)$(libdir)/security/pam_ldap.so.1 $(DESTDIR)$(libdir)/security/pam_ldap.so
++	${BSD_INSTALL_PROGRAM} pam_ldap.so ${DESTDIR}${libdir}/security/pam_ldap.so
+ 
+ install-data-local:
+ 	@$(NORMAL_INSTALL)
+-	@if test ! -f $(DESTDIR)$(etcdir)/ldap.conf; then \
+-		$(mkinstalldirs) $(DESTDIR)$(etcdir); \
+-		$(INSTALL_DATA) -o root -g root $(srcdir)/ldap.conf $(DESTDIR)$(etcdir)/ldap.conf; \
+-	fi
++	${BSD_INSTALL_DATA} $(srcdir)/ldap.conf ${PREFIX}/etc/pam/ldap.conf;
+ 
+ uninstall-local:
+ 	@$(NORMAL_UNINSTALL)
