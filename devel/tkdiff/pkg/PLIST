@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/10 02:59:09 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/08/10 11:45:48 agc Exp $
 bin/tkdiff3
+bin/tkdiff
