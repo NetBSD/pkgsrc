@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7456 2004/10/16 15:04:50 wiz Exp $
+$NetBSD: CHANGES,v 1.7457 2004/10/17 19:21:55 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4746,3 +4746,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nikto to 1.34 [adrianp 2004-10-15]
 	Updated fam to 2.7.0nb3 [jmmv 2004-10-16]
 	Updated pkglint to 3.93 [wiz 2004-10-16]
+	Updated fam to 2.7.0nb4 [jmmv 2004-10-17]
