@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1999/04/24 23:47:09 tron Exp $
+$NetBSD: patch-aa,v 1.4 1999/12/05 22:46:45 tron Exp $
 
---- Makefile.orig	Sun Apr 25 01:43:46 1999
-+++ Makefile	Sun Apr 25 01:44:41 1999
+--- Makefile.orig	Sun Dec  5 23:41:31 1999
++++ Makefile	Sun Dec  5 23:43:38 1999
 @@ -51,11 +51,12 @@
  # Where the configuration files live.
  RADDB		= ./raddb
@@ -68,16 +68,29 @@ $NetBSD: patch-aa,v 1.3 1999/04/24 23:47:09 tron Exp $
  #
  #--------------------------------------------------------------------------
 -DEFS	  = -DHAVE_SETVBUF -DNOSHADOW $(MERIT) $(STUFF) \
-+#DEFS	  = -DHAVE_SETVBUF -DNOSHADOW $(MERIT) $(STUFF) \
- # end local defs additions
+-            -DMODVERSION
 -RADLIBS	  = ./logdaemon-5.6/skey/libskey.a
 -INCS	  = -I./logdaemon-5.6/skey
++#DEFS	  = -DHAVE_SETVBUF -DNOSHADOW $(MERIT) $(STUFF) \
++#            -DMODVERSION
 +#RADLIBS	  = ./logdaemon-5.6/skey/libskey.a
 +#INCS	  = -I./logdaemon-5.6/skey
  
  #
  # mkerb
-@@ -237,12 +238,12 @@
+@@ -186,9 +187,9 @@
+ 	$(OBJ)/fsm.o $(OBJ)/fwd2nas.o $(OBJ)/nas_reb.o $(OBJ)/res_qry.o       \
+ 	$(OBJ)/rf_req.o $(OBJ)/rf_resp.o $(OBJ)/arades.o $(OBJ)/cache.o       \
+ 	$(OBJ)/pooladdr.o $(OBJ)/rad.bsd.o                                    \
++	$(OBJ)/rad.simult.o \
+ 	$(OBJ)/rad.skey.o \
+-	$(OBJ)/rad.ftp.o \
+-	$(OBJ)/modversion.o
++	$(OBJ)/rad.ftp.o
+ 
+ LIB_OBJS  = $(OBJ)/des.o $(OBJ)/dict.o $(OBJ)/filters.o $(OBJ)/funcs.o        \
+ 	$(OBJ)/md5.o $(OBJ)/sendserver.o $(OBJ)/users.o $(OBJ)/resources.o    \
+@@ -236,12 +237,12 @@
  #
  #--------------------------------------------------------------------------
  
@@ -96,7 +109,7 @@ $NetBSD: patch-aa,v 1.3 1999/04/24 23:47:09 tron Exp $
  
  #
  # Solaris 2.x [[NB: if BIND/named not SMCC, try CFLAGS = ... -DBSD=1 ...]]
-@@ -439,6 +440,8 @@
+@@ -438,6 +439,8 @@
  
  # You must un-comment one, and only one, of the above sections!
  
@@ -105,7 +118,7 @@ $NetBSD: patch-aa,v 1.3 1999/04/24 23:47:09 tron Exp $
  # No modifications are necessary below this line except possibly near line 500.
  
  all:	notice $(RADIUS) utils
-@@ -697,26 +700,26 @@
+@@ -696,26 +699,26 @@
  						$(MAN_INSDIR)/man8/radpwtst.8
  
  config-install: $(CONFIGS)
