@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.6 2005/01/01 03:31:38 minskim Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/01/11 11:09:27 adam Exp $
 
-ABIWORD_DIST_VERSION=	2.0.14
+ABIWORD_DIST_VERSION=	2.2.2
 DISTNAME=	abiword-${ABIWORD_DIST_VERSION}
 
 CATEGORIES=	editors
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=        --with-libpng=${BUILDLINK_PREFIX.png}
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
