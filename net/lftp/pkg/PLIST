@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2000/09/03 14:54:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/11/05 17:18:16 wiz Exp $
 bin/lftp
 bin/lftpget
 etc/lftp.conf
 man/man1/lftp.1
 share/locale/de/LC_MESSAGES/lftp.mo
 share/locale/es/LC_MESSAGES/lftp.mo
+share/locale/fr/LC_MESSAGES/lftp.mo
+share/locale/ja/LC_MESSAGES/lftp.mo
 share/locale/ko/LC_MESSAGES/lftp.mo
 share/locale/pl/LC_MESSAGES/lftp.mo
 share/locale/ru/LC_MESSAGES/lftp.mo

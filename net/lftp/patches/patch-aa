@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2000/11/05 17:18:16 wiz Exp $
+
+--- configure.orig	Fri Oct 13 17:13:45 2000
++++ configure
+@@ -3031,6 +3031,8 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
++  ac_save_LIBS="$LIBS"
++LIBS="-lintl $LIBS"
+ 		cat > conftest.$ac_ext <<EOF
+ #line 3036 "configure"
+ #include "confdefs.h"
+@@ -3059,6 +3061,7 @@
+ else
+   echo "$ac_t""no" 1>&6
+ fi
++  LIBS="$ac_save_LIBS"
+ 
+ 
+         if test "$CATOBJEXT" = "NONE"; then
