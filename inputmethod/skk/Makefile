@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/09/13 06:07:10 minoura Exp $
+# $NetBSD: Makefile,v 1.4 2003/09/13 08:30:38 minoura Exp $
 #
 
 DISTNAME=	ddskk-12.2.0
@@ -20,9 +20,7 @@ DEPENDS=	${PKGNAME_PREFIX}apel>=10.6:../../devel/apel
 .if ${EMACS_FLAVOR} == "emacs"
 BUILD_DEPENDS+=	${PKGNAME_PREFIX}lookup-*:../../misc/lookup
 EMACS_USE_LEIM=	# defined
-.if ${_EMACS_VERSION} == "emacs21" || ${_EMACS_VERSION} == "emacs21nox"
 BUILD_DEPENDS+=	Mule-UCS-*:../../editors/mule-ucs
-.endif
 .else # xemacs
 PKGNAME=	xemacs-skk-12.2.0	# XXX
 BUILD_DEPENDS+= xemacs-packages>=1.10:../../editors/xemacs-packages
