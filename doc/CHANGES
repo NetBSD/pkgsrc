@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.188 2002/10/06 15:30:23 taca Exp $
+$NetBSD: CHANGES,v 1.189 2002/10/06 16:29:00 he Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3137,3 +3137,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ruby-base to 1.6.7nb3 [taca 2002-10-06]
 	Updated ruby-rdtool to 0.6.11nb1 [taca 2002-10-06]
 	Updated ruby-rd-mode to 0.6.11nb1 [taca 2002-10-06]
+	Updated xv to 3.10anb4 [he 2002-10-06]
