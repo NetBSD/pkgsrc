@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/21 19:43:03 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/08/27 08:52:57 itojun Exp $
 bin/chicken
 bin/chicken-config
 bin/chicken-static
@@ -164,7 +164,10 @@ share/doc/html/chicken/manual-Z-H-45.html
 share/doc/html/chicken/manual-Z-H-46.html
 share/doc/html/chicken/manual-Z-H-47.html
 share/doc/html/chicken/manual-Z-H-48.html
+share/doc/html/chicken/manual-Z-H-49.html
 share/doc/html/chicken/manual-Z-H-5.html
+share/doc/html/chicken/manual-Z-H-50.html
+share/doc/html/chicken/manual-Z-H-51.html
 share/doc/html/chicken/manual-Z-H-6.html
 share/doc/html/chicken/manual-Z-H-7.html
 share/doc/html/chicken/manual-Z-H-8.html
