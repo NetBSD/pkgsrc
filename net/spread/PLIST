@@ -1,0 +1,41 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/18 22:11:55 mjl Exp $
+bin/spmonitor
+bin/spuser
+bin/sptuser
+bin/spflooder
+lib/libspread.a
+lib/libtspread.a
+lib/libspread.so
+lib/libtspread.so
+lib/libspread.so.1
+lib/libtspread.so.1
+man/man1/spread.1
+man/man1/spuser.1
+man/man1/sptuser.1
+man/man1/spflooder.1
+man/man1/spmonitor.1
+man/man3/libsp.3
+man/man3/SP_connect.3
+man/man3/SP_disconnect.3
+man/man3/SP_equal_group_ids.3
+man/man3/SP_error.3
+man/man3/SP_join.3
+man/man3/SP_leave.3
+man/man3/SP_multicast.3
+man/man3/SP_multigroup_multicast.3
+man/man3/SP_multigroup_scat_multicast.3
+man/man3/SP_poll.3
+man/man3/SP_receive.3
+man/man3/SP_scat_multicast.3
+man/man3/SP_scat_receive.3
+sbin/spread
+include/spread/sp.h
+include/spread/sp_func.h
+include/spread/sp_events.h
+share/examples/spread/spread.conf.sample
+share/examples/spread/spread.access_ip.sample
+share/doc/spread/Readme.txt
+share/doc/spread/LICENSE
+@unexec ${RMDIR} %D/share/examples/spread 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/doc/spread 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/include/spread 2>/dev/null || ${TRUE}

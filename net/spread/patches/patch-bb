@@ -1,0 +1,15 @@
+$NetBSD: patch-bb,v 1.1.1.1 2003/02/18 22:11:55 mjl Exp $
+
+--- auth-pword.c.orig	2003-02-18 20:55:48.000000000 +0100
++++ auth-pword.c	2003-02-18 20:56:20.000000000 +0100
+@@ -122,8 +122,8 @@
+         if (NULL != (fp = fopen("./spread.access_pword", "r")) )
+             Alarm( PRINT, "pword_init: using file: ./spread.access_pword\n");
+     if (fp == NULL)
+-        if (NULL != (fp = fopen("/etc/spread.access_pword", "r")) )
+-            Alarm( PRINT, "pword_init: using file: /etc/spread.access_pword\n");
++        if (NULL != (fp = fopen(SPREAD_ETCDIR "/spread.access_pword", "r")) )
++            Alarm( PRINT, "pword_init: using file: " SPREAD_ETCDIR "/spread.access_pword\n");
+     if (fp == NULL)
+         Alarm( EXIT, "pword_init: error opening config file %s in any of the standard locations. Please make sure the file exists\n", file_name);
+ 

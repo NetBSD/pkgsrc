@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/18 22:11:55 mjl Exp $
+
+--- configure.orig	2002-09-25 18:35:26.000000000 +0200
++++ configure	2003-02-18 21:46:00.000000000 +0100
+@@ -1250,9 +1250,9 @@
+ 	{ echo "configure: error: *** 'ar' missing, please install or fix your \$PATH ***" 1>&2; exit 1; }
+ fi
+ 
+-if test -z "$LD" ; then
++# if test -z "$LD" ; then
+ 	LD=$CC
+-fi
++# fi
+ 
+ 	
+ # C Compiler features

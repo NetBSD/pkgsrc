@@ -1,0 +1,21 @@
+$NetBSD: patch-bc,v 1.1.1.1 2003/02/18 22:11:55 mjl Exp $
+
+--- spread.c.orig	2003-02-18 20:57:01.000000000 +0100
++++ spread.c	2003-02-18 20:59:32.000000000 +0100
+@@ -47,6 +47,7 @@
+ #include <grp.h>
+ #include <pwd.h>
+ #include <unistd.h>
++#include <util.h>
+ #include <sys/types.h>
+ #endif
+ 
+@@ -144,6 +145,8 @@
+ 
+ #endif	/* ARCH_PC_WIN95 */
+ 
++        pidfile("spread");
++
+         /* initialize each valid authentication protocol */
+         null_init();
+         ip_init();
