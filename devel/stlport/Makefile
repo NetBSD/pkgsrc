@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 14:39:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/26 20:00:30 jlam Exp $
 
 DISTNAME=	STLport-4.0
 PKGNAME=	stlport-4.0
@@ -9,13 +9,11 @@ MAINTAINER=	p99dreyf@criens.u-psud.fr
 HOMEPAGE=	http://www.stlport.org/
 COMMENT=	Complete C++ standard library
 
-DEPENDS+=	gcc>=${GCC_VERS}:../../lang/gcc
+DEPENDS+=	{gcc,pgcc}-${GCC_VERS}*:../../lang/gcc
+GCC_VERS=	2.95.2
 
 USE_GMAKE=	# defined
 USE_LIBTOOL=	# defined
-
-GCC_VERS=	2.95.2
-GCC_BINDIR=	${PREFIX}/gcc-${GCC_VERS}/bin
 
 NO_CONFIGURE=	# defined
 
@@ -58,3 +56,16 @@ do-install:
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} images/* ${HTMLDIR}/images
 
 .include "../../mk/bsd.pkg.mk"
+
+GCC_BINDIR=	# empty
+.if ${GCC_BINDIR} == ""
+PGCC_DEPEND!=	${PKG_INFO} -e "pgcc>=${GCC_VERS}" || ${ECHO}
+GCC_DEPEND!=	${PKG_INFO} -e "gcc>=${GCC_VERS}" || ${ECHO}
+.if ${PGCC_DEPEND} != ""
+GCC_BINDIR=	${PREFIX}/${PGCC_DEPEND}/bin
+MAKEFLAGS+=	GCC_BINDIR="${GCC_BINDIR}"
+.elif ${GCC_DEPEND} != ""
+GCC_BINDIR=	${PREFIX}/${GCC_DEPEND}/bin
+MAKEFLAGS+=	GCC_BINDIR="${GCC_BINDIR}"
+.endif
+.endif
