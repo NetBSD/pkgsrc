@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/07/15 20:10:52 gmcgarry Exp $
+--- Makefile.bsd.orig	Sun Jul 15 17:36:47 2001
++++ Makefile.bsd	Sun Jul 15 17:37:04 2001
+@@ -41,6 +41,6 @@
+ 	fi
+ 
+ clean:
+-	(rm *.o *~  *.core $(TARGETS))
++	rm -f *.o *~  *.core $(TARGETS)
+ 
+ #EOF
