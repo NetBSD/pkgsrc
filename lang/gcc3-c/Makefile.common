@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2003/07/08 15:04:56 drochner Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/07/08 16:39:51 seb Exp $
 #
 
 GCC_VERSION=	3.3
@@ -34,7 +34,6 @@ MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 .if defined(INFO_FILES)
 USE_NEW_TEXINFO=	yes
 INFO_DIR=	${GCC_SUBPREFIX}/info
-.include "../../mk/texinfo.mk"
 .endif
 
 # Support threads and building of crt*.o on post-1.6 -current.
