@@ -1,4 +1,4 @@
-$NetBSD: patch-02,v 1.2 1999/12/04 16:50:11 sommerfeld Exp $
+$NetBSD: patch-ab,v 1.1 2001/04/05 15:18:09 wiz Exp $
 
 --- dns.c.orig Wed Jun  9 11:09:20 1999
 +++ dns.c      Tue Aug 10 01:21:12 1999
