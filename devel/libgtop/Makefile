@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1999/10/22 23:47:58 tron Exp $
+# $NetBSD: Makefile,v 1.25 1999/11/02 23:16:18 tron Exp $
 
 DISTNAME=		libgtop-1.0.5
 CATEGORIES=		devel gnome
@@ -17,8 +17,9 @@ USE_X11BASE=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 
+CFLAGS+=		-g
 CPPFLAGS+=		-I${LOCALBASE}/include
-LDFLAGS+=		-L${LOCALBASE}/lib -lintl
+LDFLAGS+=		-g -L${LOCALBASE}/lib -lintl
 PERL=			${LOCALBASE}/bin/perl
 
 # The following CPPFLAGS are for debugging purposes.
