@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2521 2004/11/27 12:16:35 kristerw Exp $
+$NetBSD: TODO,v 1.2522 2004/11/27 12:40:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -276,6 +276,7 @@ Suggested package updates
 	o AiCA-0.81
 	o ArX-2.1.1
 	o BasiliskII-1.0.20041109
+	o BitTornado-0.3.8
 	o Chinput-3.0.1
 	o GMT-4.0
 	o GUIlib-1.1.1
@@ -417,6 +418,7 @@ Suggested package updates
 	o cscope-15.5
 	o cstream-2.5
 	o cue-20041115
+	o cuetools-1.2
 	o cvsgraph-1.5.1
 	o cwtext-0.94
 	o cxref-1.6
@@ -906,7 +908,6 @@ Suggested package updates
 	o p5-HTML-Parser-3.38
 	o p5-I18N-LangTags-0.35
 	o p5-INET6-2.01
-	o p5-IO-Interface-0.98
 	o p5-IO-Socket-SSL-0.96
 	o p5-IO-String-1.06
 	o p5-IO-Zlib-1.04
