@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/04/28 11:05:53 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/10/16 21:08:27 frueauf Exp $
 bin/suck
 bin/rpost
 bin/testhost
@@ -10,7 +10,9 @@ man/man1/lmove.1
 share/examples/suck/get.news.innxmit
 share/examples/suck/get.news.rnews
 share/examples/suck/killprg_child.c
+share/examples/suck/perl_kill.pl
 share/examples/suck/put.news
+share/examples/suck/put.news.pl
 share/examples/suck/suckkillfile.sample
 share/examples/suck/sucknewsrc.sample
 share/examples/suck/suckothermsgs.sample
