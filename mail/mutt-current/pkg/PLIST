@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/03/14 13:53:13 pooka Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/03/30 13:31:35 pooka Exp $
 bin/mutt
 bin/pgpring
 bin/pgpewrap
@@ -27,18 +27,20 @@ ${LOCALEBASE}/locale/sk/LC_MESSAGES/mutt.mo
 ${LOCALEBASE}/locale/sv/LC_MESSAGES/mutt.mo
 ${LOCALEBASE}/locale/uk/LC_MESSAGES/mutt.mo
 ${LOCALEBASE}/locale/zh_TW.Big5/LC_MESSAGES/mutt.mo
-share/doc/mutt/PGP-Notes.txt
 share/doc/mutt/applying-patches.txt
 share/doc/mutt/devel-notes.txt
+share/doc/mutt/ChangeLog
+share/doc/mutt/PGP-Notes.txt
+share/doc/mutt/manual.txt
 share/doc/mutt/COPYRIGHT
 share/doc/mutt/GPL
 share/doc/mutt/INSTALL
-share/doc/mutt/ChangeLog
-share/doc/mutt/README
 share/doc/mutt/NEWS
-share/doc/mutt/TODO
+share/doc/mutt/README
+share/doc/mutt/README.SSL
+share/doc/mutt/README.UPGRADE
 share/doc/mutt/README.SECURITY
-share/doc/mutt/manual.txt
+share/doc/mutt/TODO
 share/doc/mutt/html/manual-1.html
 share/doc/mutt/html/manual-2.html
 share/doc/mutt/html/manual-3.html
@@ -52,6 +54,7 @@ share/doc/mutt/samples/Pine.rc
 share/doc/mutt/samples/gpg.rc
 share/doc/mutt/samples/pgp2.rc
 share/doc/mutt/samples/pgp5.rc
+share/doc/mutt/samples/Tin.rc
 share/mutt/charmaps/ANSI_X3.110-1983
 share/mutt/charmaps/ANSI_X3.4-1968
 share/mutt/charmaps/ASMO_449
