@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2004/10/03 00:18:31 tv Exp $
+# $NetBSD: Makefile,v 1.31 2004/10/26 21:05:46 jmmv Exp $
 #
 
-DISTNAME=		gnome-desktop-2.8.0
-PKGREVISION=		1
+DISTNAME=		gnome-desktop-2.8.1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.8/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,6 +20,8 @@ USE_GNU_TOOLS+=		make
 USE_PERL5=		yes
 USE_X11=		yes
 USE_LIBTOOL=		yes
+
+BUILDLINK_DEPENDS.gnome2-pixmaps+=	gnome2-pixmaps>=2.8.1
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
