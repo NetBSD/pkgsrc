@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.627 2000/12/06 16:29:16 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.628 2000/12/08 10:17:36 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -503,11 +503,6 @@ INSTALL_FILE=		${PKGDIR}/INSTALL
 DEINSTALL_FILE=		${PKGDIR}/DEINSTALL
 .endif
 
-# Set REQ_FILE to be the name of any REQ file
-.if !defined(REQ_FILE) && exists(${PKGDIR}/REQ)
-REQ_FILE=		${PKGDIR}/REQ
-.endif
-
 # Set MESSAGE_FILE to be the name of any MESSAGE file
 .if !defined(MESSAGE_FILE) && exists(${PKGDIR}/MESSAGE)
 MESSAGE_FILE=		${PKGDIR}/MESSAGE
@@ -704,9 +699,6 @@ PKG_ARGS+=		-i ${INSTALL_FILE}
 .endif
 .ifdef DEINSTALL_FILE
 PKG_ARGS+=		-k ${DEINSTALL_FILE}
-.endif
-.ifdef REQ_FILE
-PKG_ARGS+=		-r ${REQ_FILE}
 .endif
 .ifdef MESSAGE_FILE
 PKG_ARGS+=		-D ${MESSAGE_FILE}
@@ -3205,11 +3197,6 @@ fake-pkg: ${PLIST} ${DESCR}
 		if [ -n "${DEINSTALL_FILE}" ]; then			\
 			if ${TEST} -e ${DEINSTALL_FILE}; then		\
 				${CP} ${DEINSTALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+DEINSTALL; \
-			fi;						\
-		fi;							\
-		if [ -n "${REQ_FILE}" ]; then				\
-			if ${TEST} -e ${REQ_FILE}; then			\
-				${CP} ${REQ_FILE} ${PKG_DBDIR}/${PKGNAME}/+REQUIRE; \
 			fi;						\
 		fi;							\
 		if [ -n "${MESSAGE_FILE}" ]; then			\
