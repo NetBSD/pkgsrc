@@ -1,0 +1,28 @@
+$NetBSD: patch-af,v 1.4 2004/04/26 11:31:25 markd Exp $
+
+--- kcontrol/info/info_netbsd.cpp.orig	2003-01-21 02:17:16.000000000 +1300
++++ kcontrol/info/info_netbsd.cpp
+@@ -272,7 +272,11 @@ bool GetInfo_Partitions (QListView *lbox
+ 	FILE *pipe = popen("/sbin/mount", "r");
+ 	QTextStream *t;
+ 	u_int64_t tsz, fsz;
++#ifdef ST_RDONLY
++	struct statvfs sfs;
++#else
+ 	struct statfs sfs;
++#endif
+ 	int ok;
+ 
+ 	if (!pipe) {
+@@ -312,7 +316,11 @@ bool GetInfo_Partitions (QListView *lbox
+ 			flags = "";
+ 		}
+ 
++#ifdef ST_RDONLY
++		if (statvfs(mountpoint, &sfs) == 0) {
++#else
+ 		if (statfs(mountpoint, &sfs) == 0) {
++#endif
+ 			tsz = ((1LL * sfs.f_blocks * sfs.f_bsize / 1024) + 513)
+ 					/ 1024;
+ 			fsz = ((1LL * sfs.f_bfree * sfs.f_bsize / 1024) + 513)

@@ -1,0 +1,30 @@
+$NetBSD: patch-ag,v 1.6 2004/04/26 11:31:25 markd Exp $
+
+--- ksysguard/ksysguardd/NetBSD/diskstat.c.orig	2003-03-13 01:26:05.000000000 +1300
++++ ksysguard/ksysguardd/NetBSD/diskstat.c
+@@ -64,7 +64,11 @@ char *getMntPnt(const char *cmd)
+ 
+ int numMntPnt(void)
+ {
++#ifdef ST_RDONLY
++	struct statvfs *fs_info;
++#else
+ 	struct statfs *fs_info;
++#endif
+ 	int i, n, counter = 0;
+ 
+ 	n = getmntinfo(&fs_info, MNT_WAIT);
+@@ -130,8 +134,13 @@ void exitDiskStat(void)
+ 
+ int updateDiskStat(void)
+ {
++#ifdef ST_RDONLY
++	struct statvfs *fs_info;
++	struct statvfs fs;
++#else
+ 	struct statfs *fs_info;
+ 	struct statfs fs;
++#endif
+ 	float percent;
+ 	int i, mntcount;
+ 	DiskInfo *disk_info;
