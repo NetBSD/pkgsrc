@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2000/08/07 10:41:56 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2000/08/08 08:19:13 jlam Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -33,6 +33,7 @@
     SUBDIR += freewais-sf
     SUBDIR += gaim
     SUBDIR += gated
+    SUBDIR += gnapfetch
     SUBDIR += gnapster
     SUBDIR += gnomeicu
     SUBDIR += gnut
