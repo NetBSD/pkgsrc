@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 14:38:49 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/26 07:23:57 jlam Exp $
 #
 
 DISTNAME=		perl-5.6.0
@@ -23,3 +23,8 @@ do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"
+
+.if !defined(PERL5_SITEARCH)
+PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`; \
+			${ECHO} $${installsitearch}
+.endif
