@@ -1,8 +1,14 @@
-$NetBSD: patch-ab,v 1.4 2004/11/19 12:35:22 sketch Exp $
+$NetBSD: patch-ab,v 1.5 2004/12/09 18:45:32 minskim Exp $
 
---- config.h.in.orig	2003-01-20 00:40:15.000000000 +0000
-+++ config.h.in	2004-11-08 14:04:04.600109000 +0000
-@@ -52,6 +52,9 @@
+--- config.h.in.orig	2003-01-19 18:40:15.000000000 -0600
++++ config.h.in
+@@ -49,9 +49,15 @@
+ /* Define to 1 if you have the <rpc/rpc.h> header file. */
+ #undef HAVE_RPC_RPC_H
+ 
++/* Define to 1 if you have the <rpc/rpcent.h> header file. */
++#undef HAVE_RPC_RPCENT_H
++
  /* Define to 1 if you have the `select' function. */
  #undef HAVE_SELECT
  
@@ -12,7 +18,7 @@ $NetBSD: patch-ab,v 1.4 2004/11/19 12:35:22 sketch Exp $
  /* Define to 1 if the system has the type `socklen_t'. */
  #undef HAVE_SOCKLEN_T
  
-@@ -76,6 +79,9 @@
+@@ -76,6 +82,9 @@
  /* Define to 1 if `sa_len' is member of `struct sockaddr'. */
  #undef HAVE_STRUCT_SOCKADDR_SA_LEN
  
@@ -22,7 +28,17 @@ $NetBSD: patch-ab,v 1.4 2004/11/19 12:35:22 sketch Exp $
  /* Define to 1 if you have the <syslog.h> header file. */
  #undef HAVE_SYSLOG_H
  
-@@ -120,6 +126,15 @@
+@@ -83,6 +92,9 @@
+    */
+ #undef HAVE_SYS_DIR_H
+ 
++/* Define to 1 if you have the <sys/filio.h> header file. */
++#undef HAVE_SYS_FILIO_H
++
+ /* Define to 1 if you have the <sys/imon.h> header file. */
+ #undef HAVE_SYS_IMON_H
+ 
+@@ -120,6 +132,15 @@
  /* Define to 1 if you have the <unistd.h> header file. */
  #undef HAVE_UNISTD_H
  
@@ -38,7 +54,7 @@ $NetBSD: patch-ab,v 1.4 2004/11/19 12:35:22 sketch Exp $
  /* Define to 1 if the system has the type `_Bool'. */
  #undef HAVE__BOOL
  
-@@ -180,3 +192,9 @@
+@@ -180,3 +201,9 @@
  
  /* Define to `int' if <sys/types.h> doesn't define. */
  #undef uid_t
