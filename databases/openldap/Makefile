@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2003/09/27 13:54:51 reed Exp $
+# $NetBSD: Makefile,v 1.59 2003/09/29 16:56:54 salo Exp $
 
 DISTNAME=	openldap-2.1.22
+PKGREVISION=	1
 SVR4_PKGNAME=	oldap
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
@@ -30,9 +31,7 @@ CONFIGURE_ARGS+=	--enable-ldbm
 CONFIGURE_ARGS+=	--enable-crypt
 
 PKG_SYSCONFSUBDIR=	openldap
-# XXX use PKG_SYSCONFBASE without PKG_SYSCONFSUBDIR, because
-# XXX openldap build automatically appends "/openldap"
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var/openldap
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.db4}/include/db4
 
