@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.505 2004/11/01 20:20:32 jdolecek Exp $
+# $NetBSD: Makefile,v 1.506 2004/11/01 20:39:15 jdolecek Exp $
 #
 
 COMMENT=	Networking tools
@@ -256,6 +256,7 @@ SUBDIR+=	p5-ispman
 SUBDIR+=	pchar
 SUBDIR+=	pconsole
 SUBDIR+=	pear-DIME
+SUBDIR+=	pear-Net_URL
 SUBDIR+=	pen
 SUBDIR+=	pfnet
 SUBDIR+=	php-ftp
