@@ -1,4 +1,6 @@
-#!/bin/sh
+# /bin/sh
+#
+# $NetBSD: print-la-libnames,v 1.1 2004/09/10 19:51:51 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,25 +37,37 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-PREFIX="$1"; shift
+: ${ECHO=echo}
+: ${GREP=grep}
+: ${SORT=sort}
 
-for la in $*; do
-	basedir=$(dirname $la)
+for la
+do
+	dir="${la%/*.la}"
 	library_names=
 	old_library=
 
-	# the .la file is itself a Bourne-compatible script
-	. $PREFIX/$la || {
-		echo "$0: cannot read libtool archive $PREFIX/$la" >&2; exit 1
-	}
+	case $dir in
+	$la)	dir= ;;
+	*)	dir="$dir/" ;;
+	esac
+	case $la in
+	/*|./*)	lapath="$la" ;;
+	*)	lapath="./$la" ;;
+	esac
 
-	# catch where libtool's install wrapper was not properly used
-	if [ "$installed" = "no" ]; then
-		echo "$0: library $PREFIX/$la was not properly installed" >&2; exit 1
+	if [ -r "$lapath" ] && \
+	   ${GREP} -q "libtool library file" "$lapath"; then
+		. "$lapath"
+		if [ "$installed" = "no" ]; then
+			${ECHO} 1>&2 "$0: \`$lapath' was not properly installed"
+			exit 1
+		fi
+		for lib in $library_names $old_library; do
+			${ECHO} "$dir$lib"
+		done
+	else
+		${ECHO} 1>&2 "$0: cannot read libtool archive \`$lapath'"
+		exit 1
 	fi
-
-	echo "$la"
-	for lib in $library_names $old_library; do
-		echo "$basedir/$lib"
-	done
-done
+done | ${SORT} -u
