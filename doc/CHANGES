@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.214 2002/10/09 13:47:49 wiz Exp $
+$NetBSD: CHANGES,v 1.215 2002/10/09 14:18:15 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3164,3 +3164,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated rp-pppoe to 3.5 [tron 2002-10-09]
 	Updated fvwm2 to 2.4.11nb1 [martti 2002-10-09]
 	Updated www6to4 to 1.5 [wiz 2002-10-09]
+	Updated gnupg to 1.2.0 [itojun 2002-10-09]
