@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.536 2002/11/16 14:08:14 wiz Exp $
+$NetBSD: CHANGES,v 1.537 2002/11/17 01:21:59 seb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3641,3 +3641,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated wine to 20021031 [wiz 2002-11-15]
 	Updated ispell-german to 20021114 [wiz 2002-11-15]
 	Updated win32-codecs to 020909 [wiz 2002-11-16]
+	Updated gtexinfo to 4.3 [seb 2002-11-17]
