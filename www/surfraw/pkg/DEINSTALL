@@ -1,0 +1,58 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2000/10/31 13:48:39 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+CONFDIR=${PKG_PREFIX}/etc
+CONFFILES="surfraw.conf"
+
+case ${STAGE} in
+DEINSTALL)
+	# Remove configuration files if they don't differ from the default
+	# config file.
+	#
+	for file in ${CONFFILES}
+	do
+		FILE=${CONFDIR}/${file}
+		if diff -q ${FILE} ${FILE}.dist >/dev/null
+		then
+			rm -f ${FILE}
+		fi
+	done
+	;;
+POST-DEINSTALL)
+	CONFDIR=${PKG_PREFIX}/etc
+	modified_files=''
+	for file in ${CONFFILES}
+	do
+		FILE=${CONFDIR}/${file}
+		if [ -f ${FILE} ]
+		then
+			modified_files="${modified_files} ${FILE}"
+		fi
+	done
+	if [ -n "${modified_files}" ]
+	then
+		cat << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove the
+following files:
+
+EOF
+		for file in ${modified_files}
+		do
+			echo "	${file}"
+		done
+		cat << EOF
+===========================================================================
+EOF
+	fi
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
