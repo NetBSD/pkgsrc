@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/20 19:57:58 tron Exp $
+# $NetBSD: Makefile,v 1.2 1999/11/21 16:14:18 tron Exp $
 
 DISTNAME=	pygtk-0.6.3
 PKGNAME=	py-gtk-0.6.3
@@ -14,5 +14,13 @@ DEPENDS+=	python-*:../../lang/python
 GNU_CONFIGURE=	yes
 USE_X11=	yes
 USE_GMAKE=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OBJECT_FMT} == a.out)
+post-configure:
+	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.old
+	${SED} -e 's#-Wl,-R#-R#g' ${WRKSRC}/Makefile.old >${WRKSRC}/Makefile
+.endif
 
 .include "../../mk/bsd.pkg.mk"
