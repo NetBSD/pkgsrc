@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/12/11 22:17:46 agc Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/25 21:39:05 snj Exp $
 
 DISTNAME=		rlab-2.1.05
 PKGREVISION=		1
@@ -11,7 +11,7 @@ COMMENT=		Matrix oriented, interactive programming environment
 
 BROKEN=			relies on API from older version of superlu
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_FORTRAN=		yes
 CONFIGURE_ARGS+=	--enable-SUPERLU
@@ -54,7 +54,7 @@ post-install:
 	${PREFIX}/share/rlab/examples
 .endif
 
-.include "../../devel/boehm-gc/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
-.include "../../math/superlu/buildlink2.mk"
+.include "../../devel/boehm-gc/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../math/superlu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
