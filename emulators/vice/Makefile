@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/07/30 20:32:01 kristerw Exp $
+# $NetBSD: Makefile,v 1.48 2004/08/03 20:47:50 wiz Exp $
 #
 
 DISTNAME=		vice-1.14
@@ -25,19 +25,25 @@ USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
+USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		YES
-USE_GCC_SHLIB=		YES
 CONFIGURE_ARGS+=	--enable-fullscreen
 
 INFO_FILES=		vice.info
 
-BUILD_DEFS+=		VICE_USE_FFMPEG
-BUILD_DEFS+=		USE_ESOUND
-
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(VICE_USE_FFMPEG:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-ffmpeg
+PKG_OPTIONS.vice+=	ffmpeg
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.vice
+PKG_SUPPORTED_OPTIONS=	esound ffmpeg gnome
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mgnome)
+CONFIGURE_ARGS+=	--enable-gnomeui
 .endif
 
 # These changes are rather common, so sed instead of patch:
@@ -55,7 +61,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/vice
 	${MV} ${PREFIX}/share/doc/vice/*.html ${PREFIX}/share/doc/html/vice
 
-.if !empty(USE_ESOUND:M[Yy][Ee][Ss])
+.if !empty(PKG_OPTIONS:Mesound)
 .include "../../audio/esound/buildlink3.mk"
 .endif
 .include "../../devel/readline/buildlink3.mk"
@@ -63,8 +69,11 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
-.if !empty(VICE_USE_FFMPEG:M[Yy][Ee][Ss])
+.if !empty(PKG_OPTIONS:Mffmpeg)
 .include "../../multimedia/ffmpeg/buildlink3.mk"
+.endif
+.if !empty(PKG_OPTIONS:Mgnome)
+.include "../../x11/gnome-libs/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
