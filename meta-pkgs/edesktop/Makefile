@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/01/07 01:31:56 garbled Exp $
+# $NetBSD: Makefile,v 1.10 2000/03/10 16:21:35 minoura Exp $
 #
 
 DISTNAME=	edesktop-1.0
@@ -19,7 +19,7 @@ DEPENDS+=	ee-0.3.8:../../graphics/ee
 DEPENDS+=	gimp-1.*:../../graphics/gimp
 DEPENDS+=	xpaint-2.5.6:../../graphics/xpaint
 DEPENDS+=	xfig-3.2.2:../../graphics/xfig
-DEPENDS+=	emacs-20.3:../../editors/emacs
+DEPENDS+=	emacs-20.6:../../editors/emacs
 DEPENDS+=	jed-0.98-7:../../editors/jed
 
 USE_X11=	yes
