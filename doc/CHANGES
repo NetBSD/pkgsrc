@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9016 2005/02/03 15:09:43 cube Exp $
+$NetBSD: CHANGES,v 1.9017 2005/02/03 17:56:55 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -731,3 +731,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated exim-exiscan to 4.44_28 [abs 2005-02-03]
 	Updated gdm to 2.6.0.7 [jmmv 2005-02-03]
 	Added beacon-1.1.0 [cube 2005-02-03]
+	Updated nspr to 4.4.1nb1 [jschauma 2004-02-03]
