@@ -1,11 +1,13 @@
-$NetBSD: patch-af,v 1.1 2000/02/28 02:34:44 dmcmahill Exp $
+$NetBSD: patch-af,v 1.2 2000/05/13 06:21:02 rh Exp $
 
---- ./src/reports/Makefile.in.orig	Wed Oct 28 00:55:33 1998
-+++ ./src/reports/Makefile.in	Sun Feb 27 21:22:05 2000
-@@ -24,5 +24,5 @@
- include @top_srcdir@/Makefile.init
+--- Makefile.common.orig	Thu May  4 11:24:58 2000
++++ Makefile.common	Thu May  4 11:25:29 2000
+@@ -42,7 +42,7 @@
+ QT_OBJS    := $(addprefix obj/qt/,${COMMON_SRCS:.c=.o})
+ QT_OBJS    += $(addprefix obj/qt/,${QT_SRCS:.cpp=.o})
  
--INCLPATH = -I../.. -I../engine -I@srcdir@/../../include -I@prefix@/include
-+INCLPATH = -I../.. -I../engine -I@srcdir@/../../include -I@prefix@/include @GUILE_INC@
- CFLAGS   = @CFLAGS@ @X_CFLAGS@ ${INCLPATH}
+-CFLAGS += -pg ${DEFS}
++CFLAGS += ${DEFS}
  
+ ifdef GNOME_CONFIG_BIN
+   GNOME_CFLAGS += $(shell ${GNOME_CONFIG_BIN} --cflags gnomeui)
