@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/12/09 16:01:53 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/08/29 09:23:25 jmmv Exp $
 bin/wwwoffle
 bin/wwwoffle-hash
 bin/wwwoffle-ls
@@ -39,6 +39,7 @@ share/doc/wwwoffle/de/INSTALL
 share/doc/wwwoffle/de/LSM
 share/doc/wwwoffle/de/NEWS
 share/doc/wwwoffle/de/README.1st
+share/doc/wwwoffle/de/README.CONF
 share/doc/wwwoffle/de/README.CONF.html
 share/doc/wwwoffle/de/README.html
 share/doc/wwwoffle/es/CONVERT
