@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2001/10/18 11:14:39 darcy Exp $
-# FreeBSD Id: ports/graphics/py-gdchart/Makefile,v 1.2 2001/09/16 17:27:58 kevlo Exp
+# $NetBSD: Makefile,v 1.2 2001/10/18 11:46:30 wiz Exp $
+#
 
 DISTNAME=	gdchart-py-0.6
 PKGNAME=	py-gdchart-0.6
-WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	http://athani.pair.com/msteed/software/gdchart/
 
