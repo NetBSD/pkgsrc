@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2003/08/10 03:15:29 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/23 12:18:57 recht Exp $
 #
 
 DISTNAME=		libglade-2.0.1
 PKGNAME=		${DISTNAME:S/libglade/libglade2/}
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.0/}
 
@@ -18,6 +18,7 @@ USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	libglade-2.0.pc.in
 
 CONFIGURE_ENV+=		jh_cv_path_python="${PYTHONBIN}"
 CONFIGURE_ARGS+=	--enable-gtk-doc=no

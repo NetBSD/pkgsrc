@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:31:21 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/09/23 12:18:56 recht Exp $
 
 DISTNAME=		libbonobo-2.2.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libbonobo/2.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,6 +16,7 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 USE_GMAKE=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	bonobo/libbonobo-2.0.pc.in
 
 CONFIGURE_ARGS= 	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
