@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2000/03/20 02:25:48 itojun Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/09/20 04:49:20 jlam Exp $
 bin/ssh
 bin/ssh1
 bin/scp
@@ -12,7 +12,7 @@ bin/ssh-keygen
 bin/ssh-keygen1
 bin/make-ssh-known-hosts
 bin/make-ssh-known-hosts1
-etc/rc.d/sshd.sh
+etc/rc.d/sshd
 man/man1/make-ssh-known-hosts1.1
 man/man1/make-ssh-known-hosts.1
 man/man1/scp.1

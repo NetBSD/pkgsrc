@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2000/07/22 08:22:03 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/09/20 04:49:19 jlam Exp $
 bin/scp
 bin/slogin
 bin/ssh
 bin/ssh-add
 bin/ssh-agent
 bin/ssh-keygen
-etc/rc.d/sshd.sh
+etc/rc.d/sshd
 man/man1/ssh.1
 man/man1/scp.1
 man/man1/slogin.1

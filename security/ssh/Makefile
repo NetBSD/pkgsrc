@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2000/09/09 19:40:24 fredb Exp $
+# $NetBSD: Makefile,v 1.83 2000/09/20 04:49:19 jlam Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -200,7 +200,7 @@ post-install:
 		${PREFIX}/bin/ssh-keygen \
 			-f ${SSH_CONF_DIR}/ssh_host_key -N ""; \
 	fi
-	${INSTALL_SCRIPT} ${WRKDIR}/sshd.sh ${PREFIX}/etc/rc.d/sshd.sh
+	${INSTALL_SCRIPT} ${WRKDIR}/sshd.sh ${PREFIX}/etc/rc.d/sshd
 
 BUILD_DEFS+=		USE_IDEA SSH_CONF_DIR SSH_SUID USE_RSAREF2
 BUILD_DEFS+=		LIBWRAP_FWD M68060 USE_SOCKS

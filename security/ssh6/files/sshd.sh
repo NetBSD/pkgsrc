@@ -1,7 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: sshd.sh,v 1.2 2000/07/24 16:44:53 jlam Exp $
+# $NetBSD: sshd.sh,v 1.3 2000/09/20 04:49:20 jlam Exp $
 #
+# PROVIDE: sshd
+# REQUIRE: DAEMON LOGIN
 
 name="sshd"
 pidfile="/var/run/${name}.pid"

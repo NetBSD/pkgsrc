@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2000/09/09 19:40:21 fredb Exp $
+# $NetBSD: Makefile,v 1.29 2000/09/20 04:49:19 jlam Exp $
 #
 
 DISTNAME=		openssh-2.2.0p1
@@ -91,7 +91,7 @@ post-build:
 	done
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/sshd.sh ${PREFIX}/etc/rc.d/sshd.sh
+	${INSTALL_SCRIPT} ${WRKDIR}/sshd.sh ${PREFIX}/etc/rc.d/sshd
 	PKG_PREFIX=${PREFIX} ${SH} ${REQ_FILE} ${PKGNAME} INSTALL
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
