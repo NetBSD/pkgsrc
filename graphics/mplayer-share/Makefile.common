@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2002/09/27 00:31:01 dillo Exp $
+# $NetBSD: Makefile.common,v 1.10 2002/09/28 15:54:54 dillo Exp $
 
 MPLAYER_DIST_VERSION=	0.90pre6
 
@@ -6,6 +6,7 @@ MPLAYER_DIST_VERSION=	0.90pre6
 
 # This variable is used in all packages which depend on this package
 MPLAYER_PKG_VERSION=	${MPLAYER_DIST_VERSION:S/pre/rc/}
+PKGREVISION=		1
 
 DISTNAME=		MPlayer-${MPLAYER_DIST_VERSION}
 CATEGORIES?=		graphics
