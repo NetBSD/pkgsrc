@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.55 2004/01/12 12:58:23 salo Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.56 2004/04/23 22:07:52 reed Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -335,6 +335,8 @@ install-rcd-scripts:	# do nothing
 .for _script_ in ${RCD_SCRIPTS}
 RCD_SCRIPT_SRC.${_script_}?=	${FILESDIR}/${_script_}.sh
 RCD_SCRIPT_WRK.${_script_}?=	${WRKDIR}/${_script_}
+
+GENERATE_PLIST+=	${ECHO} ${RCD_SCRIPTS_EXAMPLEDIR:S|${PREFIX}/||}/${_script_};
 
 .  if !empty(RCD_SCRIPT_SRC.${_script_})
 .    if exists(${RCD_SCRIPT_SRC.${_script_}})

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:34 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:57 reed Exp $
 bin/cfs_attach
 bin/cfs_cat
 bin/cfs_detach
@@ -7,7 +7,6 @@ bin/cfs_mkkey
 bin/cfs_name
 bin/cfs_passwd
 bin/cfssh
-etc/rc.d/cfsd
 man/man1/cfs_attach.1
 man/man1/cfs_detach.1
 man/man1/cfs_mkdir.1

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2004/04/20 12:33:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2004/04/23 22:08:00 reed Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -67,7 +67,6 @@ bin/kwrited
 bin/kxkb
 bin/startkde
 etc/ksysguarddrc
-etc/rc.d/kdm
 etc/xdg/menus/applications-merged/kde-essential.menu
 etc/xdg/menus/kde-information.menu
 etc/xdg/menus/kde-screensavers.menu

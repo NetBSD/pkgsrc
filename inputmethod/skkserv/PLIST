@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 12:59:58 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:53 reed Exp $
 bin/skkdic-expr
 bin/skkdic-sort
 bin/skkdic-count
-etc/rc.d/skkserv
 libexec/skkserv
 share/skk/SKK-JISYO.L
 share/skk/README.skkserv

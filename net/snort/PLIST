@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.13 2004/04/10 03:09:45 snj Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/04/23 22:07:57 reed Exp $
 bin/snort
-etc/rc.d/snort
 man/man8/snort.8
 share/doc/snort/AUTHORS
 share/doc/snort/BUGS

@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/07 11:18:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/23 22:07:55 reed Exp $
 bin/md-mx-ctrl
 bin/mimedefang
 bin/mimedefang-multiplexor
 bin/mimedefang.pl
 bin/watch-mimedefang
-etc/rc.d/mimedefang
-etc/rc.d/mimedefang-multiplexor
 man/man5/mimedefang-filter.5
 man/man7/mimedefang-protocol.7
 man/man8/md-mx-ctrl.8
