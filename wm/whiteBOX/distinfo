@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2002/12/16 23:28:41 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 18:43:55 wiz Exp $
 
 SHA1 (whiteBOX-0.5.tar.gz) = 4bf73188cd2781a5cea6cf950438c6155e1059b3
+RMD160 (whiteBOX-0.5.tar.gz) = 8935581b9cd155cba00cc35efc65cdd0b8eaede8
 Size (whiteBOX-0.5.tar.gz) = 389934 bytes
 SHA1 (patch-ab) = 2809ade224502b97252af35ccae269163b7b90a7
 SHA1 (patch-ac) = a97f77b3a8aed2aae3d14c35bcf847d5ef355fc4

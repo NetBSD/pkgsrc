@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/08/28 23:18:01 rumble Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 18:43:55 wiz Exp $
 
 SHA1 (w9wm-0.4.2.tar.gz) = a42eaea2b284b4343f5a4ee2f1aec9e9a3ca5c37
+RMD160 (w9wm-0.4.2.tar.gz) = 7dc18c438a4ae04413c80e2d79c74e8d699f1701
 Size (w9wm-0.4.2.tar.gz) = 24505 bytes

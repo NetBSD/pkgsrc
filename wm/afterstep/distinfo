@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.7 2005/01/14 13:37:53 jmmv Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 18:43:53 wiz Exp $
 
 SHA1 (AfterStep-2.00.01.tar.gz) = fb75266aa3ac1634e7ad16eaf99c60e5962165f7
+RMD160 (AfterStep-2.00.01.tar.gz) = 517f755fb4d437f27e5e1815b9af7068cad7766f
 Size (AfterStep-2.00.01.tar.gz) = 4903186 bytes

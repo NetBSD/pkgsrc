@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2002/09/20 21:27:15 jlam Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 18:43:53 wiz Exp $
 
 SHA1 (bbconf-1.4.tar.gz) = 4985200f90ac57f8aa1441c3fc5ceecd8f018d79
+RMD160 (bbconf-1.4.tar.gz) = f2115eafae58332e4850f5863880ccc6c2f0657a
 Size (bbconf-1.4.tar.gz) = 536665 bytes
 SHA1 (patch-aa) = 26c53221cdee163a70d4642e6acd779c0773f904
 SHA1 (patch-ab) = bbcd8da80bb79e50a82198026912bd7e185b765a

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.15 2005/02/05 00:00:11 cube Exp $
+$NetBSD: distinfo,v 1.16 2005/02/23 18:43:54 wiz Exp $
 
 SHA1 (ion-2-20040729.tar.gz) = 92329a392de13dfb79ecd236eeb121a7045327e5
+RMD160 (ion-2-20040729.tar.gz) = a32053c744cc130d9feb07f64bf3fef6cb4fa0c7
 Size (ion-2-20040729.tar.gz) = 399367 bytes
 SHA1 (patch-ad) = 063d68427764a3cdde8ef52d798583d43a3f5dca
 SHA1 (patch-ae) = 69581555a9805360f6c15f338420a16912c2966f

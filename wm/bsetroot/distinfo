@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2003/02/20 16:50:16 jschauma Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 18:43:53 wiz Exp $
 
 SHA1 (blackbox-0.65.0.tar.gz) = 903a35526b1c29912ca500b7f8c205368e60fc38
+RMD160 (blackbox-0.65.0.tar.gz) = d88d9c5d9375274da149c77d3c63bb9c92470f26
 Size (blackbox-0.65.0.tar.gz) = 292950 bytes
 SHA1 (patch-aa) = 134f628eef5cec1e9d7ce4b95a57c7e35a2307d9
 SHA1 (patch-ab) = 0654be7d1465d0adc331714377f17e6e6bd459da
