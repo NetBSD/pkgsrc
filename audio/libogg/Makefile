@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2001/08/08 09:46:53 lukem Exp $
+# $NetBSD: Makefile,v 1.6 2001/08/14 14:46:30 lukem Exp $
 
-DISTNAME=	libogg-1.0rc1
-PKGNAME=	libogg-1.0.0.5
+DISTNAME=	libogg-1.0rc2
+PKGNAME=	libogg-1.0.0.6
 CATEGORIES=	devel audio
-MASTER_SITES=	http://www.vorbis.com/files/rc1/unix/
+MASTER_SITES=	http://www.vorbis.com/files/rc2/unix/
 
-MAINTAINER=	reed@reedmedia.net
+MAINTAINER=	lukem@netbsd.org
 HOMEPAGE=	http://www.xiph.org/ogg/
 COMMENT=	Ogg project codecs library
 
