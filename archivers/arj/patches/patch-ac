@@ -1,41 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/12/13 15:39:28 cjep Exp $
+$NetBSD: patch-ac,v 1.2 2004/04/22 20:16:58 dillo Exp $
 
---- gnu/makefile.in.orig	Mon Apr  8 23:14:22 2002
+--- gnu/makefile.in.orig	Sat Apr 17 13:28:06 2004
 +++ gnu/makefile.in
-@@ -420,21 +420,21 @@ clean:
- #
+@@ -166,7 +166,7 @@ MAKE_KEY=$(TOOLS_DIR)/make_key$x
+ endif
  
- install:
--	cp $(ARJ_DIR)/arj$x /usr/local/bin/
--	-rm -f /usr/bin/arj$x
--	ln -s /usr/local/bin/arj$x /usr/bin/arj$x
--	cp $(ARJCRYPT_DIR)/arjcrypt$d /usr/local/lib/
--	-rm -f /usr/lib/arjcrypt$d
--	ln -s /usr/local/lib/arjcrypt$d /usr/lib/arjcrypt$d
--	cp $(REARJ_DIR)/rearj$x /usr/local/bin/
--	-rm -f /usr/bin/rearj$x
--	ln -s /usr/local/bin/rearj$x /usr/bin/rearj$x
--	cp $(ARJDISP_DIR)/arjdisp$x /usr/local/bin/
--	-rm -f /usr/bin/arjdisp$x
--	ln -s /usr/local/bin/arjdisp$x /usr/bin/arjdisp$x
--	cp $(REGISTER_DIR)/register$x /usr/local/bin/
--	-rm -f /usr/bin/register$x
--	ln -s /usr/local/bin/register$x /usr/bin/register$x
-+	cp $(ARJ_DIR)/arj$x @prefix@/bin
-+#	-rm -f /usr/bin/arj$x
-+#	ln -s /usr/local/bin/arj$x /usr/bin/arj$x
-+	cp $(ARJCRYPT_DIR)/arjcrypt$d @prefix@/lib/
-+#	-rm -f /usr/lib/arjcrypt$d
-+#	ln -s /usr/local/lib/arjcrypt$d /usr/lib/arjcrypt$d
-+	cp $(REARJ_DIR)/rearj$x @prefix@/bin/
-+#	-rm -f /usr/bin/rearj$x
-+#	ln -s /usr/local/bin/rearj$x /usr/bin/rearj$x
-+	cp $(ARJDISP_DIR)/arjdisp$x @prefix@/bin/
-+#	-rm -f /usr/bin/arjdisp$x
-+#	ln -s /usr/local/bin/arjdisp$x /usr/bin/arjdisp$x
-+	cp $(REGISTER_DIR)/register$x @prefix@/bin/
-+#	-rm -f /usr/bin/register$x
-+#	ln -s /usr/local/bin/register$x /usr/bin/register$x
+ all:	prepare timestamp
+-	$(MAKE) do-all
++	$(MAKE) -f makefile.gnu do-all
  
- #
- # Packaging (was: packager$x $(BASEDIR_C) $(BASEDIR))
+ do-all:	\
+ 	$(ARJ_DIR)/arj$x \

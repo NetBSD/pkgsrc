@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/13 15:39:28 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/22 20:16:58 dillo Exp $
 bin/arj
+bin/arj-register
 bin/arjdisp
 bin/rearj
-bin/register
-lib/arjcrypt.so
+lib/arj/arjcrypt.so
+man/man1/arj-register.1
+man/man1/arj.1
+man/man1/arjdisp.1
+man/man1/rearj.1
 share/doc/arj/COPYING
 share/doc/arj/arjl.txt
 share/doc/arj/arjs.txt
@@ -12,3 +16,4 @@ share/doc/arj/history.txt
 share/doc/arj/readme.txt
 share/doc/arj/unix.txt
 @dirrm share/doc/arj
+@dirrm lib/arj
