@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/11/22 10:44:51 rh Exp $
+# $NetBSD: Makefile,v 1.4 2001/01/25 10:46:40 wiz Exp $
 #
 
 DISTNAME=	ispman-0.5
@@ -11,7 +11,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.ispman.org/
 
 DEPENDS+=	pam-ldap>=77:../../security/pam-ldap
-DEPENDS+=	apache>=1.3.14.1:../../www/apache
+DEPENDS+=	apache>=1.3.14nb1:../../www/apache
 DEPENDS+=	p5-${DISTNAME}:../../net/p5-ispman
 
 .if !exists(/usr/sbin/postfix)
