@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/29 18:43:47 tv Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/25 15:30:57 tv Exp $
 #
 
 DISTNAME=		ft-0.2.21
 PKGNAME=		${DISTNAME:S/ft-/freenet-tools-/}
 WRKSRC=			${WRKDIR}/ft
 CATEGORIES=		net www
-MASTER_SITES=		http://entropy.stop1984.com/files/ \
-			http://www.duh.org/extropy/files/
+MASTER_SITES=		http://entropy.stop1984.com/files/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		tv@duh.org
