@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.14 1998/06/19 17:16:32 tron Exp $
+# $NetBSD: mk.conf.example,v 1.15 1998/06/20 22:46:19 tv Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection
@@ -75,11 +75,6 @@ MANZ=		1		# gzip manual pages at installation time
                                 # of the small data set only.
                                 # Possible: defined, not defined
                                 # Default: not defined
-
-#HTTP_ROOT=			# Used by the apache package to specify the
-                                # root directory for its files
-                                # Possible: any valid directory
-                                # Default: [agc - don't know yet]
 
 #ISPELL_FR=			# Used by ispell to specify a French/English
                                 # dictionary.
@@ -169,9 +164,4 @@ PAPERSIZE=	A4		# Default paper size for packages.
 #USE_SOCKS=			# Used to specify SOCKS firewall support
                                 # Set this to the version of socks necessary.
                                 # Possible: 4, 5, not defined
-                                # Default: not defined
-
-#VERS_ID=			# Used by the apache package to specify its
-                                # version
-                                # Possible: almost anything
                                 # Default: not defined
