@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/04/16 07:39:03 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/09/30 14:51:46 wiz Exp $
 
 DISTNAME=		benchfft-2.0
 CATEGORIES=		benchmarks math
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_FORTRAN=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LTCONFIG_OVERRIDE=	${WRKDIR}/fftw-2.0.1/ltconfig
 
 do-configure:
 	(cd ${WRKDIR}/fftw-2.0.1 && ./configure)
