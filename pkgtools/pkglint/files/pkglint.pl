@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.128 2005/02/12 10:59:21 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.129 2005/02/12 21:34:47 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -812,7 +812,7 @@ sub checkfile_MESSAGE($) {
 sub checkfile_PLIST($) {
 	my ($file) = @_;
 	my ($fname) = ("$opt_packagedir/$file");
-	my ($plist, $curdir, $rcsid_seen);
+	my ($plist, $curdir, $rcsid_seen, $last_file_seen);
 	
 	checkperms($fname);
 	if (!defined($plist = load_file($fname))) {
@@ -857,6 +857,15 @@ sub checkfile_PLIST($) {
 
 		if ($line->text =~ /^\//) {
 			log_error($line->file, $line->lineno, "use of full pathname disallowed.");
+		}
+
+		if ($line->text =~ qr"^[\w\d]") {
+			if (defined($last_file_seen)) {
+				if ($last_file_seen gt $line->text) {
+					log_error($line->file, $line->lineno, $line->text." must be sorted before ${last_file_seen}.");
+				}
+			}
+			$last_file_seen = $line->text;
 		}
 
 		if ($line->text =~ /^doc/) {

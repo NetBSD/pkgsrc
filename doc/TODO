@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3018 2005/02/12 16:52:07 taca Exp $
+$NetBSD: TODO,v 1.3019 2005/02/12 21:34:47 rillig Exp $
 
 Suggested new packages
 ======================
@@ -1198,8 +1198,6 @@ Infrastructure problems which need addressing
 
 Suggested pkgsrc enhancements
 =============================
-
-	o Add a sort check to pkglint for PLISTs.
 
 	o Allow tokens in Makefiles, etc to silence pkglint WARNS.
 	  e.g. # ABS_PATH could silence an absolute path warning
