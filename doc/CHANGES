@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6190 2004/06/09 20:51:11 cube Exp $
+$NetBSD: CHANGES,v 1.6191 2004/06/09 23:48:56 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2852,3 +2852,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sun-jdk13 to 1.0.12 [jschauma 2004-06-08]
 	Updated airportbasestationconfig to 1.5.2nb2 [tron 2004-06-09]
 	Updated cpuflags to 0.71 [cube 2004-06-09]
+	Updated cdraw to 1.175nb1 [xtraeme 2004-06-09]
