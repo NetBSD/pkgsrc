@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/01/24 14:52:44 grant Exp $
+# $NetBSD: Makefile,v 1.29 2004/05/31 22:13:16 kristerw Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
@@ -15,7 +15,7 @@ COMMENT=	Global Layer Unix for NOW (Network Of Workstations)
 .if exists(/usr/bin/ssh)
 SSH=		/usr/bin/ssh
 .else
-DEPENDS+=	{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/ssh
+DEPENDS+=	{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/openssh
 SSH=		${LOCALBASE}/bin/ssh
 .endif
 
