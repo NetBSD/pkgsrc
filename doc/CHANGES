@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3631 2003/10/03 18:22:20 hubertf Exp $
+$NetBSD: CHANGES,v 1.3632 2003/10/04 02:12:16 toshii Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4066,3 +4066,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated source-highlight to 1.8 [seb 2003-10-03]
 	Updated jpeg to 6bnb1 [salo 2003-10-03]
 	Added chkfontpath-1.9.7 [hubertf 2003-10-03]
+	Updated navi2ch to 1.7.1 [toshii 2003-10-04]
