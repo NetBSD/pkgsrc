@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.341 1999/09/20 23:00:04 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.342 1999/09/21 12:53:14 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1304,7 +1304,7 @@ root-install:
 	install-info --info-dir=${PREFIX}/info ${PREFIX}/info/${f}
 .endfor
 	${_PKG_SILENT}(${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
-		'^([^/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
+		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
 		${PLIST_SRC} || ${TRUE}`;				\
 	if [ X"${MANCOMPRESSED}" != X"" -a X"${MANZ}" = X"" ]; then	\
 		${ECHO_MSG} "===>   [Automatic manual page handling]";	\
