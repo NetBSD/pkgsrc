@@ -1,12 +1,11 @@
-$NetBSD: patch-ac,v 1.2 2000/04/16 03:59:32 mycroft Exp $
+$NetBSD: patch-ac,v 1.3 2001/01/07 03:10:50 wiz Exp $
 
---- nctgui.c.orig	Fri Jan 28 11:30:52 2000
-+++ nctgui.c	Sat Apr 15 23:53:35 2000
-@@ -30,7 +30,10 @@
- void ncurses_init(void)
+--- nctgui.c.orig	Fri Jan 28 17:30:52 2000
++++ nctgui.c
+@@ -31,6 +31,10 @@
  {
      (void) initscr();
--    curs_set(0);
+     curs_set(0);
 +    cbreak();
 +    noecho();
 +    timeout(2);
@@ -14,7 +13,7 @@ $NetBSD: patch-ac,v 1.2 2000/04/16 03:59:32 mycroft Exp $
  }/* ncurses_init */
  
  void ncurses_exit(void)
-@@ -66,24 +69,23 @@
+@@ -66,24 +70,23 @@
      int j;
      int maxY,maxX;
  
@@ -46,7 +45,7 @@ $NetBSD: patch-ac,v 1.2 2000/04/16 03:59:32 mycroft Exp $
  } /* display_bar */
  
  /*Display additional info at bottom of screen*/
-@@ -106,14 +108,14 @@
+@@ -106,14 +109,14 @@
      
      for(j=0;j<num_items[hpos];j++)
      {
@@ -64,7 +63,7 @@ $NetBSD: patch-ac,v 1.2 2000/04/16 03:59:32 mycroft Exp $
      box(subWn,0,0);
      wrefresh(subWn);
  } /* display_menu */
-@@ -127,7 +129,8 @@
+@@ -127,7 +130,8 @@
      switch(active_channel)
      {
      case CHANNEL_1:
@@ -74,7 +73,7 @@ $NetBSD: patch-ac,v 1.2 2000/04/16 03:59:32 mycroft Exp $
          box(chWin,0,0);
          wmove(chWin,0,2);
          wattrset(chWin,COLOR_PAIR(5)|A_BOLD|A_BLINK);
-@@ -137,7 +140,8 @@
+@@ -137,7 +141,8 @@
          break;
       
      case CHANNEL_2:
@@ -84,7 +83,7 @@ $NetBSD: patch-ac,v 1.2 2000/04/16 03:59:32 mycroft Exp $
          box(chWin,0,0);
          wmove(chWin,0,width-13);
          wattrset(chWin,COLOR_PAIR(6)|A_BOLD|A_BLINK);
-@@ -155,6 +159,7 @@
+@@ -155,6 +160,7 @@
      int centre, j;
  
      centre=(FADER_BARS/2)+2;
@@ -92,7 +91,7 @@ $NetBSD: patch-ac,v 1.2 2000/04/16 03:59:32 mycroft Exp $
      wbkgd(faderWin,COLOR_PAIR(1)|A_BOLD);
      box(faderWin,0,0);
      wattrset(faderWin,COLOR_PAIR(9)|A_BOLD);
-@@ -201,6 +206,7 @@
+@@ -201,6 +207,7 @@
  
      getmaxyx(volumeWin,maxY,maxX);
      centre=(VOLUME_BARS/2)+2;
@@ -100,7 +99,7 @@ $NetBSD: patch-ac,v 1.2 2000/04/16 03:59:32 mycroft Exp $
      wbkgd(volumeWin,COLOR_PAIR(1)|A_BOLD);
      box(volumeWin,0,0);
      if(bar==VOLBAR)mvwaddstr(volumeWin,maxY-1,maxX-9,"[Active]");
-@@ -263,6 +269,7 @@
+@@ -263,6 +270,7 @@
  
      getmaxyx(speedWin,maxY,maxX);
      centre=(SPEED_BARS/2)+2;
@@ -108,7 +107,7 @@ $NetBSD: patch-ac,v 1.2 2000/04/16 03:59:32 mycroft Exp $
      wbkgd(speedWin,COLOR_PAIR(1)|A_BOLD);
      box(speedWin,0,0);
      if(bar==SPDBAR)mvwaddstr(speedWin,maxY-1,maxX-9,"[Active]");
-@@ -323,6 +330,7 @@
+@@ -323,6 +331,7 @@
  void display_player_status(int sim_play, int playmode)
  {
  
@@ -116,7 +115,7 @@ $NetBSD: patch-ac,v 1.2 2000/04/16 03:59:32 mycroft Exp $
      wbkgd(pStatusWin,COLOR_PAIR(1)|A_BOLD);
      box(pStatusWin,0,0);
      wattrset(pStatusWin,COLOR_PAIR(9)|A_BOLD);
-@@ -343,54 +351,6 @@
+@@ -343,54 +352,6 @@
   exit(0);
  } /*gui_exit/*/
  
@@ -171,7 +170,7 @@ $NetBSD: patch-ac,v 1.2 2000/04/16 03:59:32 mycroft Exp $
  void create_windows()
  {
      int maxY, maxX, height, width, origY=1, origX=0;
-@@ -398,10 +358,7 @@
+@@ -398,10 +359,7 @@
      getmaxyx(stdscr,maxY,maxX);
      height = maxY-4; width  = (maxX/10)*7;
      chWin  = newwin(height,width,origY,origX);
