@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+
+--- contrib/trytime/Makefile.in.ORIG	Sat Oct 30 20:34:18 1999
++++ contrib/trytime/Makefile.in	Sat Oct 30 20:34:35 1999
+@@ -76,7 +76,7 @@
+ ZLIB_LIB_DIR = @ZLIB_LIB_DIR@
+ 
+ EXTRA_DIST = trytime.c
+-contribdir = $(prefix)/contrib/trytime
++contribdir = $(prefix)/share/rrdtool/contrib/trytime
+ contrib_DATA = README trytime.c
+ mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs
+ CONFIG_HEADER = ../../config/config.h

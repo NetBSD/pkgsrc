@@ -1,0 +1,22 @@
+$NetBSD: patch-al,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+
+--- examples/cgi-demo.cgi.in.orig	Sun Nov 14 13:13:02 1999
++++ examples/cgi-demo.cgi.in	Sun Nov 14 13:13:18 1999
+@@ -11,7 +11,7 @@
+ <H1>This is NOT traffic</H1>
+ 
+ 
+-<P><RRD::GRAPH cgi-demo1.gif 
++<P><RRD::GRAPH cgi-demo1.png 
+ 	    --lower-limit 0
+ 	    --start 'end-10h'
+ 	    --title "Graph in Localtime"
+@@ -22,7 +22,7 @@
+ </P>
+ 
+ <P><RRD::SETENV TZ UTC>
+-   <RRD::GRAPH cgi-demo2.gif 
++   <RRD::GRAPH cgi-demo2.png
+ 	    --lower-limit 0
+ 	    --start 'end-10h'
+ 	    --title "Graph in UTC"
