@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/03/04 07:53:34 tron Exp $
+# $NetBSD: Makefile,v 1.30 2001/03/30 12:57:38 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:44 max Exp
 
 DISTNAME=	libpng-1.0.9
@@ -16,7 +16,7 @@ COMMENT=	Library for manipulating PNG images
 USE_LIBTOOL=	yes
 
 MAKEFILE=	scripts/makefile.std
-MAKE_ENV+=	REALCC=${CC}
+MAKE_ENV+=	REALCC="${CC}"
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/libpng.3 ${PREFIX}/man/man3
