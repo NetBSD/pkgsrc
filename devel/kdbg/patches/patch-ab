@@ -1,16 +1,12 @@
-$NetBSD: patch-ab,v 1.2 2001/03/10 00:30:06 wulf Exp $
-
---- kdbg/mainwndbase.cpp.orig	Wed Sep 13 03:44:40 2000
-+++ kdbg/mainwndbase.cpp	Wed Feb 28 00:31:03 2001
-@@ -562,7 +562,11 @@
- 	 */
- 	static const char shellScriptFmt[] =
- 	    "tty>%s;"
+--- kdbg/ttywnd.cpp.orig	Tue Jul  2 14:31:36 2002
++++ kdbg/ttywnd.cpp	Tue Jul  2 14:33:00 2002
+@@ -32,6 +32,9 @@
+ #ifdef HAVE_LIBUTIL_H
+ #include <libutil.h>			/* openpty on FreeBSD */
+ #endif
 +#ifdef __NetBSD__
-+	    "trap \"\" 2 3 18;"	/* ignore various signals */
-+#else
- 	    "trap \"\" INT QUIT TSTP;"	/* ignore various signals */
++#include <util.h>                      /* openpty on NetBSD */
 +#endif
- 	    "exec<&-;exec>&-;"		/* close stdin and stdout */
- 	    "while :;do sleep 3600;done";
- 	// let config file override this script
+ #include <errno.h>
+ 
+ #include "mydebug.h"
