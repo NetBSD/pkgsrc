@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/06/03 23:02:24 xtraeme Exp $
+$NetBSD: distinfo,v 1.6 2004/07/07 09:31:08 xtraeme Exp $
 
-SHA1 (bitlbee-0.90.tar.gz) = 18e4daf9f3efe0d3514635398e015612cb6eb924
-Size (bitlbee-0.90.tar.gz) = 433321 bytes
+SHA1 (bitlbee-0.90a.tar.gz) = 8e9e75905544ffd2238b266a1a49074308cb5d66
+Size (bitlbee-0.90a.tar.gz) = 433338 bytes
