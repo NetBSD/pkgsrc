@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2000/07/10 03:31:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/26 20:38:15 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.17 1999/04/24 09:25:32 kuriyama Exp
 
-DISTNAME=	db154
-PKGNAME=	dsssl-docbook-modular-1.54
+DISTNAME=	db155
+PKGNAME=	dsssl-docbook-modular-1.55
 CATEGORIES=	textproc
 MASTER_SITES=	http://nwalsh.com/docbook/dsssl/
-DISTFILES=	db154.zip db154d.zip
+DISTFILES=	db155.zip db155d.zip
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://nwalsh.com/docbook/dsssl/

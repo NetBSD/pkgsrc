@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/07/10 03:31:15 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/07/26 20:38:17 hubertf Exp $
 share/sgml/docbook/dsssl/modular/BUGS
 share/sgml/docbook/dsssl/modular/ChangeLog
 share/sgml/docbook/dsssl/modular/README
@@ -27,10 +27,16 @@ share/sgml/docbook/dsssl/modular/common/dbl1en.dsl
 share/sgml/docbook/dsssl/modular/common/dbl1en.ent
 share/sgml/docbook/dsssl/modular/common/dbl1es.dsl
 share/sgml/docbook/dsssl/modular/common/dbl1es.ent
+share/sgml/docbook/dsssl/modular/common/dbl1et.dsl
+share/sgml/docbook/dsssl/modular/common/dbl1et.ent
 share/sgml/docbook/dsssl/modular/common/dbl1fi.dsl
 share/sgml/docbook/dsssl/modular/common/dbl1fi.ent
 share/sgml/docbook/dsssl/modular/common/dbl1fr.dsl
 share/sgml/docbook/dsssl/modular/common/dbl1fr.ent
+share/sgml/docbook/dsssl/modular/common/dbl1hu.dsl
+share/sgml/docbook/dsssl/modular/common/dbl1hu.ent
+share/sgml/docbook/dsssl/modular/common/dbl1in.dsl
+share/sgml/docbook/dsssl/modular/common/dbl1in.ent
 share/sgml/docbook/dsssl/modular/common/dbl1it.dsl
 share/sgml/docbook/dsssl/modular/common/dbl1it.ent
 share/sgml/docbook/dsssl/modular/common/dbl1ja.dsl
@@ -52,8 +58,12 @@ share/sgml/docbook/dsssl/modular/common/dbl1ru.dsl
 share/sgml/docbook/dsssl/modular/common/dbl1ru.ent
 share/sgml/docbook/dsssl/modular/common/dbl1sk.dsl
 share/sgml/docbook/dsssl/modular/common/dbl1sk.ent
+share/sgml/docbook/dsssl/modular/common/dbl1sl.dsl
+share/sgml/docbook/dsssl/modular/common/dbl1sl.ent
 share/sgml/docbook/dsssl/modular/common/dbl1sv.dsl
 share/sgml/docbook/dsssl/modular/common/dbl1sv.ent
+share/sgml/docbook/dsssl/modular/common/dbl1zhcn.dsl
+share/sgml/docbook/dsssl/modular/common/dbl1zhcn.ent
 share/sgml/docbook/dsssl/modular/common/dbtable.dsl
 share/sgml/docbook/dsssl/modular/contrib/html/ChangeLog
 share/sgml/docbook/dsssl/modular/contrib/html/short-biblioentry.dsl
@@ -493,6 +503,13 @@ share/sgml/docbook/dsssl/modular/doc/print/verbatim-default-width.html
 share/sgml/docbook/dsssl/modular/doc/print/verbatim-size-factor.html
 share/sgml/docbook/dsssl/modular/doc/print/visual-acuity.html
 share/sgml/docbook/dsssl/modular/doc/print/writing-mode.html
+share/sgml/docbook/dsssl/modular/doc/testdata/ChangeLog
+share/sgml/docbook/dsssl/modular/doc/testdata/c01.htm
+share/sgml/docbook/dsssl/modular/doc/testdata/jtest.dsl
+share/sgml/docbook/dsssl/modular/doc/testdata/jtest.rtf
+share/sgml/docbook/dsssl/modular/doc/testdata/jtest.sgm
+share/sgml/docbook/dsssl/modular/doc/testdata/test.rtf
+share/sgml/docbook/dsssl/modular/doc/testdata/test.sgm
 share/sgml/docbook/dsssl/modular/docbook.dcl
 share/sgml/docbook/dsssl/modular/dtds/dbdsssl/ChangeLog
 share/sgml/docbook/dsssl/modular/dtds/dbdsssl/dbdsssl.dtd
@@ -712,6 +729,7 @@ share/sgml/docbook/dsssl/modular/test/xtables.sgm
 @dirrm share/sgml/docbook/dsssl/modular/dtds/decls
 @dirrm share/sgml/docbook/dsssl/modular/dtds/dbdsssl
 @dirrm share/sgml/docbook/dsssl/modular/dtds
+@dirrm share/sgml/docbook/dsssl/modular/doc/testdata
 @dirrm share/sgml/docbook/dsssl/modular/doc/print
 @dirrm share/sgml/docbook/dsssl/modular/doc/lib
 @dirrm share/sgml/docbook/dsssl/modular/doc/html
