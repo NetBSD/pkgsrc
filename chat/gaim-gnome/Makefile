@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/07/13 13:50:45 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/11/12 01:31:47 salo Exp $
 
 .include "../gaim-gtk1/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-gnome-/}
-PKGREVISION=	4
+PKGREVISION=	5
 CONFLICTS+=	gaim-[0-9]*
 COMMENT+=	with GNOME support
 
