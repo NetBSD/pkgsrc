@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/10/15 21:22:17 jmmv Exp $
+$NetBSD: distinfo,v 1.5 2005/02/19 22:36:20 wiz Exp $
 
 SHA1 (libsoup-2.2.1.tar.bz2) = e2dbe6b8259048192632068a37dd0843d2775ac2
 Size (libsoup-2.2.1.tar.bz2) = 403907 bytes
+SHA1 (patch-aa) = 87de77a96b6f86bd9135f1955f789ff26ea36ff0
