@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1998/05/26 19:43:49 tron Exp $
+# $NetBSD: Makefile,v 1.21 1998/06/03 13:49:07 agc Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -16,23 +16,7 @@ IS_INTERACTIVE=		YES
 CFLAGS=			-O2
 GNU_CONFIGURE=		YES
 
-# Include local make config file here.  It is essential to have this
-# precede any override targets (those that override defaults in
-# <bsd.pkg.mk> that test variables that may be set here.  Note that
-# this inclusion is otherwise redundant, since <bsd.pkg.mk> includes
-# <bsd.own.mk>, which includes it.
-# XXX: FIXME ! We need a simple way of doing this in many dozen pkgs.
-
-OPSYS!= uname -s
-.if (${OPSYS} == "FreeBSD")
-.if exists(/etc/make.conf)
-.include "/etc/make.conf"
-.endif
-.else
-.if exists(/etc/mk.conf)
-.include "/etc/mk.conf"
-.endif
-.endif
+.include "../../mk/bsd.prefs.mk"
 
 # Use SSH_CONF_DIR from /etc/mk.conf, if defined; otherwise default to /etc
 SSH_CONF_DIR?=		/etc
