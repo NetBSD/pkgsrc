@@ -1,41 +1,41 @@
-@comment $NetBSD: PLIST,v 1.7 1999/12/26 17:57:51 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/09/06 08:16:15 jlam Exp $
 bin/vile
 bin/vile-pager
 bin/vileget
-libexec/vile-ada-filt
-libexec/vile-awk-filt
-libexec/vile-bat-filt
-libexec/vile-c-filt
-libexec/vile-crypt
-libexec/vile-dcl-filt
-libexec/vile-diff-filt
-libexec/vile-fdl-filt
-libexec/vile-html-filt
-libexec/vile-latex-filt
-libexec/vile-lex-filt
-libexec/vile-m4-filt
-libexec/vile-mail-filt
-libexec/vile-make-filt
-libexec/vile-manfilt
-libexec/vile-mms-filt
-libexec/vile-nr-filt
-libexec/vile-pas-filt
-libexec/vile-perl-filt
-libexec/vile-py-filt
-libexec/vile-rcs-filt
-libexec/vile-sccs-filt
-libexec/vile-sh-filt
-libexec/vile-spell-filt
-libexec/vile-sql-filt
-libexec/vile-tbl-filt
-libexec/vile-tc-filt
-libexec/vile-tcl-filt
-libexec/vile-ti-filt
-libexec/vile-txt-filt
-libexec/vile-vile-filt
-libexec/vile-xs-filt
-libexec/vile-yacc-filt
-man/man1/vile.1.gz
+libexec/vile/vile-ada-filt
+libexec/vile/vile-awk-filt
+libexec/vile/vile-bat-filt
+libexec/vile/vile-c-filt
+libexec/vile/vile-crypt
+libexec/vile/vile-dcl-filt
+libexec/vile/vile-diff-filt
+libexec/vile/vile-fdl-filt
+libexec/vile/vile-html-filt
+libexec/vile/vile-latex-filt
+libexec/vile/vile-lex-filt
+libexec/vile/vile-m4-filt
+libexec/vile/vile-mail-filt
+libexec/vile/vile-make-filt
+libexec/vile/vile-manfilt
+libexec/vile/vile-mms-filt
+libexec/vile/vile-nr-filt
+libexec/vile/vile-pas-filt
+libexec/vile/vile-perl-filt
+libexec/vile/vile-py-filt
+libexec/vile/vile-rcs-filt
+libexec/vile/vile-sccs-filt
+libexec/vile/vile-sh-filt
+libexec/vile/vile-spell-filt
+libexec/vile/vile-sql-filt
+libexec/vile/vile-tbl-filt
+libexec/vile/vile-tc-filt
+libexec/vile/vile-tcl-filt
+libexec/vile/vile-ti-filt
+libexec/vile/vile-txt-filt
+libexec/vile/vile-vile-filt
+libexec/vile/vile-xs-filt
+libexec/vile/vile-yacc-filt
+man/man1/vile.1
 share/examples/vile/digraphs.rc
 share/examples/vile/filters.rc
 share/examples/vile/manpage.rc
@@ -103,3 +103,4 @@ share/vile/yacc.keywords
 @dirrm share/vile/perl
 @dirrm share/vile
 @dirrm share/examples/vile
+@dirrm libexec/vile
