@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/25 02:42:32 fredb Exp $
+$NetBSD: patch-aa,v 1.2 2003/11/26 10:40:01 abs Exp $
 
---- src/callbacks.cc.orig	Fri May 24 12:49:34 2002
-+++ src/callbacks.cc	Fri May 24 12:51:17 2002
-@@ -203,7 +203,7 @@
- 			msg=g_strdup_printf(_("Unable view file %s"),filename);
+--- src/callbacks.cc.orig	2003-10-12 17:36:01.000000000 +0100
++++ src/callbacks.cc
+@@ -246,7 +246,7 @@ void view_dialog_clicked_callback(gchar 
  			show_error(msg);
  		} else {
+                         std::string fname = escapeChars(filename);
 -			msg=g_strdup_printf("%s %s/%s &",
-+			msg=g_strdup_printf("%s \"%s/%s\" &",
- 					    string,dirname,filename);
++ 			msg=g_strdup_printf("%s \"%s/%s\" &",
+ 					    cmdstring,dirname,fname.c_str());
  			system(msg);
  		}

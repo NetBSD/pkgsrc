@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:21:08 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/11/26 10:40:01 abs Exp $
 
-DISTNAME=	cxunzip-0.96
-PKGREVISION=	3
+DISTNAME=	cxunzip-0.98
 CATEGORIES=	archivers
 MASTER_SITES=	http://gurb.ton.tut.fi/gnome/download/
 
