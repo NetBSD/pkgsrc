@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/02/16 14:46:20 kent Exp $
+# $NetBSD: Makefile,v 1.8 2002/03/05 06:13:21 jmc Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
@@ -24,7 +24,9 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 #ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc
 #
 # Build error for NetBSD/alpha
-NOT_FOR_PLATFORM=	NetBSD-*-alpha
+NOT_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-powerpc NetBSD-*-macppc \
+			NetBSD-*-prep NetBSD-*-bebox NetBSD-*-ofppc \
+			NetBSD-*-amigappc NetBSD-*-sandpoint
 
 .include "../../mk/bsd.prefs.mk"
 
