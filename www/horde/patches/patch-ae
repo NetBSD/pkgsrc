@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/02/12 15:26:05 jlam Exp $
+
+--- templates/setup/imp/write_file.inc.orig	Wed Sep 13 13:08:39 2000
++++ templates/setup/imp/write_file.inc
+@@ -26,7 +26,7 @@
+       <br> 
+          <ul>
+          <?php echo $lang->go_run_unix ?><br>
+-         sh ./secure.sh
++         horde_secure
+          </ul>
+       </td>
+    </tr>
