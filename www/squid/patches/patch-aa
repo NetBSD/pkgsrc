@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 1998/12/06 12:42:00 tron Exp $
+$NetBSD: patch-aa,v 1.5 2001/04/14 10:05:01 tron Exp $
 
---- src/Makefile.in.orig	Mon Aug 17 19:27:15 1998
-+++ src/Makefile.in	Thu Oct  1 17:00:53 1998
+--- src/Makefile.in.orig	Sat Apr 14 11:38:49 2001
++++ src/Makefile.in	Sat Apr 14 11:42:36 2001
 @@ -12,6 +12,8 @@
  cgi_suffix	= @cgi_suffix@
  top_srcdir	= @top_srcdir@
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 1998/12/06 12:42:00 tron Exp $
  libexecdir      = @libexecdir@
  sysconfdir	= @sysconfdir@
  localstatedir   = @localstatedir@
-@@ -29,18 +31,18 @@
+@@ -35,19 +37,19 @@
  
  DEFAULT_PREFIX		= $(prefix)
  DEFAULT_CONFIG_FILE     = $(sysconfdir)/squid.conf
@@ -26,6 +26,7 @@ $NetBSD: patch-aa,v 1.4 1998/12/06 12:42:00 tron Exp $
  DEFAULT_SWAP_DIR        = $(localstatedir)/cache
  DEFAULT_PINGER		= $(libexecdir)/$(PINGER_EXE)
  DEFAULT_UNLINKD		= $(libexecdir)/$(UNLINKD_EXE)
+ DEFAULT_DISKD		= $(libexecdir)/$(DISKD_EXE)
 -DEFAULT_ICON_DIR	= $(sysconfdir)/icons
 -DEFAULT_ERROR_DIR	= $(sysconfdir)/errors
 -DEFAULT_MIB_PATH	= $(sysconfdir)/mib.txt
@@ -35,43 +36,45 @@ $NetBSD: patch-aa,v 1.4 1998/12/06 12:42:00 tron Exp $
  
  CC		= @CC@
  MAKEDEPEND	= @MAKEDEPEND@
-@@ -264,9 +266,9 @@
+@@ -310,9 +312,9 @@
  		echo "mkdir $(exec_prefix)"; \
- 		mkdir $(exec_prefix); \
+ 		mkdir -p $(exec_prefix); \
  	fi
 -	-@if test ! -d $(bindir); then \
 -		echo "mkdir $(bindir)"; \
--		mkdir $(bindir); \
+-		mkdir -p $(bindir); \
 +	-@if test ! -d $(sbindir); then \
 +		echo "mkdir $(sbindir)"; \
-+		mkdir $(sbindir); \
++		mkdir -p $(sbindir); \
  	fi
  	-@if test ! -d $(libexecdir); then \
  		echo "mkdir $(libexecdir)"; \
-@@ -276,28 +278,28 @@
+@@ -322,14 +324,14 @@
  		echo "mkdir $(sysconfdir)"; \
- 		mkdir $(sysconfdir); \
+ 		mkdir -p $(sysconfdir); \
  	fi
 -	-@if test ! -d $(localstatedir); then \
 -		echo "mkdir $(localstatedir)"; \
--		mkdir $(localstatedir); \
+-		mkdir -p $(localstatedir); \
 -	fi
 -	-@if test ! -d $(localstatedir)/logs; then \
 -		echo "mkdir $(localstatedir)/logs"; \
--		mkdir $(localstatedir)/logs; \
+-		mkdir -p $(localstatedir)/logs; \
 -	fi
 +#	-@if test ! -d $(localstatedir); then \
 +#		echo "mkdir $(localstatedir)"; \
-+#		mkdir $(localstatedir); \
++#		mkdir -p $(localstatedir); \
 +#	fi
 +#	-@if test ! -d $(localstatedir)/logs; then \
 +#		echo "mkdir $(localstatedir)/logs"; \
-+#		mkdir $(localstatedir)/logs; \
++#		mkdir -p $(localstatedir)/logs; \
 +#	fi
  
  # Michael Lupp <mike@nemesis.saar.de> wants to know about additions
  # to the install target.
- install: all install-mkdirs
+@@ -339,15 +341,15 @@
+ 		(cd $$dir ; $(MAKE) $(MFLAGS) prefix="$(prefix)" $@) || exit 1; \
+ 	done
  	@for f in $(PROGS); do \
 -		if test -f $(bindir)/$$f; then \
 -			echo $(MV) $(bindir)/$$f $(bindir)/-$$f; \
@@ -92,8 +95,8 @@ $NetBSD: patch-aa,v 1.4 1998/12/06 12:42:00 tron Exp $
 +			$(RM) -f $(sbindir)/-$$f; \
  		fi; \
  	done
- 	@for f in $(UTILS); do \
-@@ -325,20 +327,20 @@
+ 	@if test -n "$(UTILS)"; then \
+@@ -377,20 +379,20 @@
  		fi; \
  	done
  	$(INSTALL_FILE) $(srcdir)/mib.txt $(DEFAULT_MIB_PATH)
