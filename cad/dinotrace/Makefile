@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2001/10/24 22:10:46 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/02/10 22:06:15 dmcmahill Exp $
 #
 
-DISTNAME=	dinotrace-9.1d
+DISTNAME=	dinotrace-9.1g
 CATEGORIES=	cad
 MASTER_SITES=	http://www.veripool.com/ftp/
 
