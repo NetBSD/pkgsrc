@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST-md.static,v 1.1.1.1 1999/07/09 05:43:37 sakamoto Exp $
+lib/ruby/1.3/${MACHINE_ARCH}-${LOWER_OPSYS}/libruby.a
+@dirrm lib/ruby/1.3/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/ruby/1.3/site_ruby/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/ruby/1.3/site_ruby
+@dirrm lib/ruby/1.3
+@dirrm lib/ruby
