@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.18 2004/06/01 15:01:18 taya Exp $
+$NetBSD: patch-bb,v 1.19 2004/06/21 14:14:00 taya Exp $
 
 diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h ./nsprpub/pr/include/md/_netbsd.h
 --- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.h	2003-09-12 02:24:53.000000000 +0900
-+++ ./nsprpub/pr/include/md/_netbsd.h	2004-05-30 23:41:41.000000000 +0900
++++ ./nsprpub/pr/include/md/_netbsd.h	2004-06-10 23:07:02.000000000 +0900
 @@ -44,16 +44,26 @@
  #define _PR_SI_ARCHITECTURE "x86"
  #elif defined(__alpha__)
