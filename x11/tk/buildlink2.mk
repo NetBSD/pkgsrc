@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/09/21 10:30:58 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/01/04 20:59:22 wiz Exp $
 
 .if !defined(TK_BUILDLINK2_MK)
 TK_BUILDLINK2_MK=	# defined
@@ -16,6 +16,8 @@ BUILDLINK_FILES.tk+=		include/tkIntXlibDecls.h
 BUILDLINK_FILES.tk+=		include/tk/*/*.h
 BUILDLINK_FILES.tk+=		lib/libtk83.*
 BUILDLINK_FILES.tk+=		lib/libtkstub83.*
+
+USE_X11=	YES
 
 .include "../../lang/tcl/buildlink2.mk"
 
