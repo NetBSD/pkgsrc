@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7234 2004/09/24 19:09:10 reed Exp $
+$NetBSD: CHANGES,v 1.7235 2004/09/24 19:26:09 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4413,3 +4413,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated SDL_gfx to 2.0.12 [adam 2004-09-24]
 	Updated pkglint to 3.91 [wiz 2004-09-24]
 	Updated fbdesk to 1.2.1 [reed 2004-09-24]
+	Updated global to 4.8 [abs 2004-09-24]
+

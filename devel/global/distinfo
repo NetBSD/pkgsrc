@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/05/13 02:07:47 cjs Exp $
+$NetBSD: distinfo,v 1.5 2004/09/24 19:25:38 abs Exp $
 
-SHA1 (global-4.7.tar.gz) = 843a3f4e71ac0e52e8d6ed727544f8c59e5eb949
-Size (global-4.7.tar.gz) = 508714 bytes
+SHA1 (global-4.8.tar.gz) = 4117c62cdb26c65bd5c8d115a02dd4e1dfaca54a
+Size (global-4.8.tar.gz) = 591811 bytes
