@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2004/01/24 14:50:05 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/13 11:18:29 jmmv Exp $
 #
 
-DISTNAME=		aMule-1.2.4
+DISTNAME=		aMule-1.2.5
 PKGNAME=		${DISTNAME:S/aMule/amule/}
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amule/}
@@ -11,7 +11,7 @@ MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://amule.sourceforge.net/
 COMMENT=		Another Emule P2P client
 
-DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS=		xdg-dirs>=1.0:../../misc/xdg-dirs
 BUILD_USES_MSGFMT=	yes
 
 CONFLICTS=		xmule-[0-9]*
@@ -21,6 +21,8 @@ USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
+
+LIBS+=			-lm
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"

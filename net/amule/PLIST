@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/14 22:31:27 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/13 11:18:29 jmmv Exp $
 bin/amule
 bin/amulecmd
 bin/amulecmdDLG
@@ -6,13 +6,19 @@ bin/amuleweb
 bin/amulewebDLG
 bin/ed2k
 share/applications/amule.desktop
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/ee/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/en/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/amule.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/amule.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/amule.mo
 share/pixmaps/amule.xpm
+@comment in xdg-dirs: @dirrm share/applications
