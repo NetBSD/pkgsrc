@@ -1,4 +1,10 @@
-# $NetBSD: Makefile.common,v 1.5 2000/12/07 08:29:00 mjl Exp $
+# $NetBSD: Makefile.common,v 1.6 2000/12/08 17:16:32 jlam Exp $
+#
+# This file is included by the following packages:
+#
+#	postgresql
+#	tcl-postgresql
+#	tk-postgresql
 
 DISTNAME=		postgresql-${PG_VERS}
 PG_VERS=		7.0.3
