@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/07/04 11:52:50 jmmv Exp $
+
+--- pixmaps/Makefile.in.orig	2003-07-04 13:22:31.000000000 +0200
++++ pixmaps/Makefile.in
+@@ -141,8 +141,7 @@ pixmap_DATA = cong-docbook-set-16.png \
+ 	cong-numbered-list-16.png \
+ 	cong-list-item-16.png \
+ 	cong-definition-list-16.png \
+-	cong-code-fragment-16.png \
+-	ChangeLog
++	cong-code-fragment-16.png
+ 
+ 
+ EXTRA_DIST = $(pixmap_DATA)
