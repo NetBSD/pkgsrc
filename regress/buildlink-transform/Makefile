@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/08/27 21:45:54 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/08/27 21:47:02 jlam Exp $
 
 DISTNAME=	regress-buildlink-transform-0.0
 CATEGORIES=	regress
@@ -52,8 +52,6 @@ TEST_MAKEFILES=	${RUNTESTS:S/^/${TEST_DIR}\//:S/$/.mk/}
 TEST_MAKEFILES!= \
 	${FIND} ${TEST_DIR} -name "*.mk" -print || ${ECHO} "none"
 .endif
-
-TEST_MAKEFILES:=	${TEST_MAKEFILES:N*-slashdot.mk}
 
 .for _mkfile_ in ${TEST_MAKEFILES}
 .  if exists(${_mkfile_})
