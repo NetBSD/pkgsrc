@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/08/01 11:59:09 grant Exp $
+$NetBSD: distinfo,v 1.1.1.1.2.1 2003/06/24 09:52:03 grant Exp $
 
-SHA1 (linux-506.tar.gz) = 6629b759a9e1565bc431edece24847dcb25ed6c6
-Size (linux-506.tar.gz) = 9281557 bytes
-SHA1 (solaris-506.tar.gz) = 8b799014285328daf0919287cbe34b00ce2b086b
-Size (solaris-506.tar.gz) = 9939810 bytes
+SHA1 (linux-507.tar.gz) = d3e23fc3f97f872c1ed794ad43f64967a39f5b19
+Size (linux-507.tar.gz) = 9282753 bytes
+SHA1 (sol-507.tar.gz) = 8f5782493757a5acd28de9814c6d4cb4450e1dac
+Size (sol-507.tar.gz) = 9937465 bytes
 SHA1 (patch-aa) = 635cfe39ca34ebc83cdb4633282f2fb667c452c3
