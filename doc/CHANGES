@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6045 2004/05/28 01:49:26 lukem Exp $
+$NetBSD: CHANGES,v 1.6046 2004/05/28 11:10:44 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2668,3 +2668,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated Xft2 to 2.1.2nb2 [reed 2003-05-27]
 	Updated deliver to 2.1.14nb1 [wiz 2004-05-28]
 	Updated cvsweb to 3.0.1 [lukem 2004-05-28]
+	Removed raw [dillo 2004-05-28]
