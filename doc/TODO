@@ -1,4 +1,4 @@
-$-devNetBSD: TODO,v 1.1735 2004/05/12 15:12:51 minskim Exp $
+$NetBSD: TODO,v 1.1760 2004/05/18 16:07:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -154,7 +154,8 @@ Suggested package updates
 
 	o ImageViewer-0.6.3
 	o LPRng-3.8.26
-	o TeXmacs-1.0.3.8
+	o SDL_gfx-2.0.11
+	o TeXmacs-1.0.3.9
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o anjuta-1.2.2
@@ -165,6 +166,7 @@ Suggested package updates
 	o avidemux-2.0.20
 	o balsa-1.4.4
 	o bind-9.3
+	o bittorrent-3.4.2
 	o blender-2.33
 	o boehm-gc-6.3alpha6 [recht]
 	o bogofilter-0.17.5
@@ -192,6 +194,7 @@ Suggested package updates
 	o delegate-8.9.2
 	o dict-client-1.9.11
 	o dict-server-1.9.11
+	o dillo-0.8.1
 	o dmalloc-5.3.0
 	o dnetc-2.9004-482 [pkg/22390]
 	o dvd+rw-tools-5.19-1.4.9.7 [pkg/25433]
@@ -212,7 +215,7 @@ Suggested package updates
 	o firewalk-gtk-5.0
 	o foomatic-2.9.1 [jlam]
 	o fop-0.20.5
-	o fox-1.0.51
+	o fox-1.2.0
 	o freetds-0.62.3
 	o fsviewer-0.2.5
 	o gcc-3.4.0 [pkgsrc-wip]
@@ -226,6 +229,7 @@ Suggested package updates
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.25
 	o glpk-4.3
+	o gmp-4.1.3
 	o gnomeicu-0.99.5
 	o gnucash-1.8.9
 	o gnumeric-1.2.12
@@ -236,6 +240,7 @@ Suggested package updates
 	o gqmpeg-0.91.1
 	o grepmail-5.23
 	o grhino-0.12.0
+	o groff-1.19.1
 	o gsasl-0.1.0
 	o gtar-1.14
 	o gtetrinet-0.7.4
@@ -254,12 +259,13 @@ Suggested package updates
 	o ivtools-1.1.3
 	o jakarta-tomcat-3.3.1a
 	o jam-2.5
+	o jikes-1.21
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o joe-3.0
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
 	o kile-1.6.3
-	o larswm-7.3.5
+	o larswm-7.3.6
 	o latex2rtf-1.9.15
 	o lavaps-2.4
 	o leafnode-1.9.53
@@ -279,10 +285,11 @@ Suggested package updates
 	o lwm-1.2.0
 	o maildrop-1.5.3 [pkg/22369]
 	o maildrop-1.6.3
+	o mailman-2.1.5
 	o maradns-1.0.21
 	o marbles-1.0.6
 	o matchbox-0.8.2 [pkgsrc-wip]
-	o mhonarc-2.6.9
+	o mhonarc-2.6.10
 	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o mimedefang-2.43
@@ -327,10 +334,12 @@ Suggested package updates
 	o postfix-2.1.1
 	o psi-0.9.1
 	o pwlib-1.5.2
+	o py-Lupy-0.2.1 [pkg/25611]
 	o py-psycopg-1.1.10
 	o pygtk-0.6.11
 	o pysol-4.82
 	o rep-gtk-0.17
+	o roundup-0.7.2
 	o rox-1.2.2
 	o rox-session-0.1.22
 	o rrdtool-1.0.45
@@ -340,7 +349,7 @@ Suggested package updates
 	o samba-2.2.9
 	o sawfish-1.3
 	o scm-5d9
-	o scmxx-0.7.0
+	o scmxx-0.7.1
 	o scribus-1.1.6
 	o sendfile-20010424
 	o shorten-3.6.0
@@ -360,7 +369,7 @@ Suggested package updates
 	o sweep-0.8.3
 	o tcl-expect-5.39.0
 	o tcl-itcl-3.2.1
-	o tcpreplay-2.1.1
+	o tcpreplay-2.2.0
 	o tct-1.14
 	o teapop-0.3.8
 	o texi2html-1.70
@@ -371,8 +380,7 @@ Suggested package updates
 	o tmda-1.0.2
 	o top-3.5b12.10
 	o tripwire-2.3.1 [see also pkg/22362]
-	o txt2html-2.20 [wennmach]
-	o txt2html-2.23
+	o txt2html-2.24 [wennmach]
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.1
 	o vfu-4.03
