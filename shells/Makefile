@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2004/01/10 06:56:15 grant Exp $
+# $NetBSD: Makefile,v 1.26 2004/01/10 07:04:02 grant Exp $
 #
 
 COMMENT=	Shells
 
 SUBDIR+=	ast-ksh
+SUBDIR+=	ast-ksh-static
 SUBDIR+=	bash2
 SUBDIR+=	bash2-doc
 SUBDIR+=	es
@@ -14,7 +15,6 @@ SUBDIR+=	pdksh
 SUBDIR+=	perlsh
 SUBDIR+=	rc
 SUBDIR+=	scsh
-SUBDIR+=	static-ast-ksh
 SUBDIR+=	static-bash2
 SUBDIR+=	tcsh
 SUBDIR+=	tcsh-standalone
