@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/12/03 19:22:23 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/30 22:58:08 cjep Exp $
 #
 # This Makefile fragment is included by packages that use gss.
 #
@@ -18,7 +18,6 @@ BUILDLINK_FILES.gss+=	include/gss.h
 BUILDLINK_FILES.gss+=	include/gss/api.h
 BUILDLINK_FILES.gss+=	include/gss/ext.h
 BUILDLINK_FILES.gss+=	lib/libgss.*
-
 
 BUILDLINK_TARGETS+=	gss-buildlink
 
