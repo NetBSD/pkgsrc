@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/10/01 11:10:29 drochner Exp $
+--- kmix/Makefile.in.orig	Sun Sep 26 02:36:54 1999
++++ kmix/Makefile.in	Sun Sep 26 02:37:38 1999
+@@ -286,7 +286,7 @@
+ 
+ kmix: $(kmix_OBJECTS) $(kmix_DEPENDENCIES)
+ 	@rm -f kmix
+-	$(CXXLINK) $(kmix_LDFLAGS) $(kmix_OBJECTS) $(kmix_LDADD) $(LIBS)
++	$(CXXLINK) $(kmix_LDFLAGS) $(kmix_OBJECTS) $(kmix_LDADD) $(LIBS) -lossaudio
+ .cpp.o:
+ 	$(CXXCOMPILE) -c $<
+ .cpp.lo:
