@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2000/03/02 20:34:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/03/08 01:42:12 wiz Exp $
 
-DISTNAME=	dn9a0226
-PKGNAME=	darcnes-20000226
+DISTNAME=	dn9a0305
+PKGNAME=	darcnes-20000305
 WRKSRC=		${WRKDIR}/darcnes
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.netway.com/~nyef/
