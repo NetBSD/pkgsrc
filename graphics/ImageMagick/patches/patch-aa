@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.22 2004/09/27 11:04:24 adam Exp $
+
+--- configure.orig	2004-09-27 12:34:15.000000000 +0000
++++ configure
+@@ -26397,7 +26397,6 @@ fi
+ # of whether modules are built or not.
+ with_ltdl='no'
+ if test "$libtool_build_shared_libs" != 'no' ; then
+-  with_ltdl='yes'
+ fi
+ 
+ 
