@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.44 2003/10/19 06:28:08 grant Exp $
+# $NetBSD: Makefile,v 1.45 2003/10/20 16:11:16 tron Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in mk/buildlink[23]/bsd.buildlink[23].mk
 #	to the correct version, usually the most recent.
 
-DISTNAME=	x11-links-0.17
+DISTNAME=	x11-links-0.18
 WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools x11
 MASTER_SITES=	# empty
