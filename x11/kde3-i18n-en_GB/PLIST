@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 10:57:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:17 markd Exp $
 share/doc/kde/HTML/en_GB/kaddressbook/common
 share/doc/kde/HTML/en_GB/kaddressbook/index.cache.bz2
 share/doc/kde/HTML/en_GB/kaddressbook/index.docbook
@@ -252,6 +252,13 @@ share/doc/kde/HTML/en_GB/klipper/index.docbook
 share/doc/kde/HTML/en_GB/kmenuedit/common
 share/doc/kde/HTML/en_GB/kmenuedit/index.cache.bz2
 share/doc/kde/HTML/en_GB/kmenuedit/index.docbook
+share/doc/kde/HTML/en_GB/konqueror/bookmarks.docbook
+share/doc/kde/HTML/en_GB/konqueror/commands.docbook
+share/doc/kde/HTML/en_GB/konqueror/credits.docbook
+share/doc/kde/HTML/en_GB/konqueror/faq.docbook
+share/doc/kde/HTML/en_GB/konqueror/introduction.docbook
+share/doc/kde/HTML/en_GB/konqueror/path-complete.docbook
+share/doc/kde/HTML/en_GB/konqueror/save-settings.docbook
 share/doc/kde/HTML/en_GB/konsole/common
 share/doc/kde/HTML/en_GB/konsole/index.cache.bz2
 share/doc/kde/HTML/en_GB/konsole/index.docbook
@@ -695,6 +702,7 @@ share/kde/locale/en_GB/flag.png
 @dirrm share/doc/kde/HTML/en_GB/kspell
 @dirrm share/doc/kde/HTML/en_GB/kpager
 @dirrm share/doc/kde/HTML/en_GB/konsole
+@dirrm share/doc/kde/HTML/en_GB/konqueror
 @dirrm share/doc/kde/HTML/en_GB/kmenuedit
 @dirrm share/doc/kde/HTML/en_GB/klipper
 @dirrm share/doc/kde/HTML/en_GB/kioslave

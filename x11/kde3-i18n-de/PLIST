@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 10:55:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:16 markd Exp $
 share/doc/kde/HTML/de/KRegExpEditor/common
 share/doc/kde/HTML/de/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/de/KRegExpEditor/index.docbook
@@ -604,9 +604,6 @@ share/doc/kde/HTML/de/kioslave/telnet.docbook
 share/doc/kde/HTML/de/kioslave/thumbnail.docbook
 share/doc/kde/HTML/de/kioslave/webdav.docbook
 share/doc/kde/HTML/de/kioslave/webdavs.docbook
-share/doc/kde/HTML/de/kit/common
-share/doc/kde/HTML/de/kit/index.cache.bz2
-share/doc/kde/HTML/de/kit/index.docbook
 share/doc/kde/HTML/de/kiten/common
 share/doc/kde/HTML/de/kiten/index.cache.bz2
 share/doc/kde/HTML/de/kiten/index.docbook
@@ -1121,6 +1118,7 @@ share/kde/locale/de/LC_MESSAGES/appletproxy.mo
 share/kde/locale/de/LC_MESSAGES/ark.mo
 share/kde/locale/de/LC_MESSAGES/artsbuilder.mo
 share/kde/locale/de/LC_MESSAGES/artscontrol.mo
+share/kde/locale/de/LC_MESSAGES/artsmodules.mo
 share/kde/locale/de/LC_MESSAGES/atlantik.mo
 share/kde/locale/de/LC_MESSAGES/atlantikdesigner.mo
 share/kde/locale/de/LC_MESSAGES/babelfish.mo
@@ -1619,7 +1617,6 @@ share/kde/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/kjumpingcube
 @dirrm share/doc/kde/HTML/de/kjots
 @dirrm share/doc/kde/HTML/de/kiten
-@dirrm share/doc/kde/HTML/de/kit
 @dirrm share/doc/kde/HTML/de/kioslave
 @dirrm share/doc/kde/HTML/de/kinfocenter/xserver
 @dirrm share/doc/kde/HTML/de/kinfocenter/usb
