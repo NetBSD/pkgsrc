@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.312 2002/10/19 20:08:45 heinz Exp $
+$NetBSD: CHANGES,v 1.313 2002/10/19 20:56:06 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3332,3 +3332,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added phoenix-0.3 [taya 2002-10-19]
 	Updated popt to 1.7nb1 [martti 2002-10-19]
 	Updated rocksndiamonds to 2.1.1 [heinz 2002-10-19]
+	Update simh to 2.10-beta2 [thorpej 2002-10-19]
