@@ -1,0 +1,16 @@
+Camlp4 is a Pre-Processor-Pretty-Printer for Objective Caml. It offers tools
+for syntax (grammars) and the ability to modify the concrete syntax of the
+language (quotations, syntax extensions). 
+
+The Objective Caml compiler has a special option "-pp", allowing to call 
+any preprocessor. If Camlp4 is used, the parsing is done (only once) by
+Camlp4, and the Objective Caml compiler resumes the rest of the compilation
+(typing, code generation). 
+
+Camlp4 can parse normal Ocaml concrete syntax or any other user-definable
+syntax. As an example, an alternative syntax is provided, named revised,
+because it tries to fix some small problems of the normal syntax.
+
+Camlp4 can pretty print the normal Ocaml concrete syntax or the revised one.
+It is therefore always possible to have a version of your sources
+compilable by the compiler Objective Caml without preprocessing. 
