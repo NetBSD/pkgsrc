@@ -1,13 +1,20 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/10/19 07:41:14 skrll Exp $
+$NetBSD: patch-aa,v 1.2 2000/12/09 17:21:50 skrll Exp $
 
---- Makefile.orig	Wed Oct  4 10:55:36 2000
+--- Makefile.orig	Wed Nov  8 17:06:41 2000
 +++ Makefile
-@@ -25,7 +25,7 @@
+@@ -25,8 +25,14 @@
  	-rm -f bin/moc
  	cp src/moc/moc bin/moc
  
 -sub-tools: sub-src FORCE
 +sub-tools: FORCE
  	cd tools; $(MAKE)
++
++sub-designer: FORCE
++	cd tools; $(MAKE) designer
++
++sub-designer-utils: FORCE
++	cd tools; $(MAKE) designer-utils
  
  symlinks: .buildopts
+ 	@cd include; rm -f q*.h; ln -s ../src/*/q*.h .; ln -s ../extensions/*/src/q*.h .; rm -f q*_p.h

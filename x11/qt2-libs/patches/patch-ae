@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.2 2000/12/05 18:32:05 drochner Exp $
+$NetBSD: patch-ae,v 1.3 2000/12/09 17:21:50 skrll Exp $
 
---- src/Makefile.in.orig	Wed Nov  8 18:06:56 2000
-+++ src/Makefile.in	Thu Nov 30 13:15:27 2000
+--- src/Makefile.in.orig	Wed Nov  8 17:06:56 2000
++++ src/Makefile.in
 @@ -2,7 +2,7 @@
  
  ####### Compiler, tools and options
@@ -16,7 +16,7 @@ $NetBSD: patch-ae,v 1.2 2000/12/05 18:32:05 drochner Exp $
  ####### Target
  
 -DESTDIR = ../lib/
-+DESTDIR =
++DESTDIR = 
  VER_MAJ = 2
  VER_MIN = 2
  VER_PATCH = 2
@@ -40,13 +40,4 @@ $NetBSD: patch-ae,v 1.2 2000/12/05 18:32:05 drochner Exp $
 +	@cd `dirname $@` && $(CXX) -c $(CXXFLAGS) `basename $<`
  
  ####### Build rules
- 
-@@ -390,7 +378,7 @@
- all: $(DESTDIR)$(SYSCONF_LINK_TARGET)
- 
- $(DESTDIR)$(SYSCONF_LINK_TARGET): $(UICDECLS) $(OBJECTS) $(OBJMOC) $(SUBLIBS)
--	$(SYSCONF_LINK_LIB)
-+	$(SYSCONF_LINK_LIB) $(SYSCONF_RPATH_X11) $(SYSCONF_RPATH_OPENGL)
- 
- moc: $(SRCMOC)
  

@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2000/12/05 18:32:04 drochner Exp $
+$NetBSD: patch-ab,v 1.4 2000/12/09 17:21:50 skrll Exp $
 
---- configs/netbsd-g++-static.orig	Wed Nov  8 18:06:36 2000
-+++ configs/netbsd-g++-static	Thu Nov 30 13:01:14 2000
+--- configs/netbsd-g++-static.orig	Wed Nov  8 17:06:36 2000
++++ configs/netbsd-g++-static
 @@ -1,21 +1,22 @@
  # Compiling
  INTERFACE_DECL_PATH 	= .
@@ -25,9 +25,9 @@ $NetBSD: patch-ab,v 1.3 2000/12/05 18:32:04 drochner Exp $
 -SYSCONF_RPATH_X11	= 
 -SYSCONF_RPATH_QT	= 
 -SYSCONF_RPATH_OPENGL	= 
-+SYSCONF_RPATH_X11	= -Wl,-R/usr/X11R6/lib
-+SYSCONF_RPATH_QT	= -Wl,-R$(QTDIR)/lib
-+SYSCONF_RPATH_OPENGL	= -Wl,-R$(X11BASE)/lib -Wl,-R$(LOCALBASE)/lib
++SYSCONF_RPATH_X11	= -Wl,-R${X11BASE}/lib
++SYSCONF_RPATH_QT	= -Wl,-R${QTDIR}/lib
++SYSCONF_RPATH_OPENGL	= -Wl,-R${X11BASE}/lib -W,-R${LOCALBASE}/lib
  
  # Linking with support libraries
  # X11
@@ -53,7 +53,7 @@ $NetBSD: patch-ab,v 1.3 2000/12/05 18:32:04 drochner Exp $
  # Flags for threading
  SYSCONF_CFLAGS_THREAD	= 
  SYSCONF_CXXFLAGS_THREAD	= 
-@@ -51,34 +49,23 @@
+@@ -51,34 +49,24 @@
  # UI compiler
  SYSCONF_UIC		= $(QTDIR)/bin/uic
  
@@ -69,8 +69,9 @@ $NetBSD: patch-ab,v 1.3 2000/12/05 18:32:04 drochner Exp $
 -SYSCONF_LINK_LIB_SHARED	= $(SYSCONF_LINK_SHLIB) -Bshareable $(LFLAGS) -o $(DESTDIR)$(SYSCONF_LINK_TARGET_SHARED) `lorder /usr/lib/c++rt0.o $(OBJECTS) $(OBJMOC) | tsort` $(LIBS)
 +SYSCONF_LINK_TARGET	= lib$(TARGET).la
 +SYSCONF_LINK_LIB	= rm -f $(DESTDIR)$(SYSCONF_LINK_TARGET); \
-+	$(SYSCONF_LINK) -rpath $(QTPREFIX)/lib -version-info $(VER_MAJ):$(VER_MIN) \
-+	-o $(SYSCONF_LINK_TARGET) $(OBJECTS:.o=.lo) $(OBJMOC:.o=.lo) $(LIBS)
++	$(SYSCONF_LINK) $(LFLAGS) -rpath $(QTPREFIX)/lib \
++	-version-info $(VER_MAJ):$(VER_MIN) -o $(SYSCONF_LINK_TARGET) \
++	$(OBJECTS:.o=.lo) $(OBJMOC:.o=.lo) $(LIBS)
  
 -# Linking static libraries
 -#   - Build the $(TARGET) library, eg. lib$(TARGET).a
