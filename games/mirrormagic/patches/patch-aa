@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:43 agc Exp $
-
---- Makefile.orig	Thu Jun 11 13:25:51 1998
-+++ Makefile	Thu Jun 11 13:28:21 1998
-@@ -10,7 +10,7 @@
+$NetBSD: patch-aa,v 1.3 1998/11/09 21:20:18 garbled Exp $
+--- Makefile.orig	Wed Sep  6 04:56:17 1995
++++ Makefile	Mon Nov  9 12:35:14 1998
+@@ -8,11 +8,11 @@
+ CC = gcc
+ # CC = cc				# for HP-UX and others
  
 -GFX_PATH = -DGFX_PATH=\"./graphics\"	# path where the graphics are
 -SND_PATH = -DSND_PATH=\"./sounds\"	# path where the sounds are
@@ -15,17 +16,24 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 10:40:43 agc Exp $
 +SCORE_PATH = -DSCORE_PATH=\"${X11BASE}/share/mirrormagic\"		# path where the score file is
 +NAMES_PATH = -DNAMES_PATH=\"${X11BASE}/share/mirrormagic\"		# path where the names file is
  # SOUNDS = -DNO_SOUNDS			# don't play any sounds
-@@ -28,3 +28,3 @@
+ # SCORE_ENTRIES = -DONE_PER_NAME	# only one score entry per name
+ SCORE_ENTRIES = -DMANY_PER_NAME		# many score entries per name
+@@ -26,15 +26,15 @@
+ 
+ # DEBUG = -DDEBUG -g -ansi -pedantic -Wall
  # DEBUG = -DDEBUG -g -Wall
 -DEBUG = -O6
 +DEBUG = -O2
  
-@@ -33,6 +33,6 @@
+ # SYSTEM = -Aa -D_HPUX_SOURCE -Dhpux	# for HP-UX (obsolete)
+ # SYSTEM = -DSYSV -Ae			# for HP-UX
  # SYSTEM = -DSYSV			# for systems without 'usleep()'
 -# INCL = -I/usr/include/X11R5		# for HP-UX and others
 +INCL = -I${X11BASE}/include		# for HP-UX and others
  # LIBS = -lXpm -lX11 -lm
  # LIBS = -L/usr/lib/X11R5 -lXpm -lX11 -lm # for HP-UX and others
 -LIBS = -lXpm -lXpm -lXpm -lX11 -lm	# triple "-lXpm" because of Xpm error
-+LIBS = -L${X11BASE}/lib -lXpm -lX11 -lm	# triple "-lXpm" because of Xpm error
++LIBS = -L${X11BASE}/lib -lXpm -lX11 -lm	-lossaudio # triple "-lXpm" because of Xpm error
  
+ # CFLAGS = -O2 $(CONFIG) $(SYSTEM)
+ CFLAGS = $(DEBUG) $(CONFIG) $(SYSTEM) $(INCL)
