@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2001/05/14 20:21:20 skrll Exp $
+$NetBSD: patch-af,v 1.2 2002/10/14 11:49:56 skrll Exp $
 
---- pth.h.in.orig	Sat Mar 24 14:49:49 2001
+--- pth.h.in.orig	Sun Jan 27 11:03:40 2002
 +++ pth.h.in
 @@ -44,6 +44,7 @@
  #include <sys/socket.h>    /* for sockaddr       */
@@ -10,7 +10,19 @@ $NetBSD: patch-af,v 1.1 2001/05/14 20:21:20 skrll Exp $
  
      /* fallbacks for essential typedefs */
  #ifndef _PTHREAD_PRIVATE
-@@ -499,7 +500,10 @@
+@@ -85,6 +86,11 @@ struct timeval;
+ #define END_DECLARATION   /*nop*/
+ #endif
+ 
++    /* check if the user want a bigger FD_SETSIZE than we can handle */
++#if FD_SETSIZE > @PTH_FDSETSIZE@
++#error "FD_SETSIZE is larger than pth can handle."
++#endif
++
+ BEGIN_DECLARATION
+ 
+     /* some global constants */
+@@ -500,7 +506,10 @@ extern ssize_t        pth_sendto(int, co
  extern ssize_t        pth_pread(int, void *, size_t, off_t);
  extern ssize_t        pth_pwrite(int, const void *, size_t, off_t);
  
