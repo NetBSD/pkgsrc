@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.320 2003/12/16 08:55:27 recht Exp $
+# $NetBSD: Makefile,v 1.321 2003/12/18 09:48:42 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -53,7 +53,6 @@ SUBDIR+=	gnome2-terminal
 SUBDIR+=	gnustep-back
 SUBDIR+=	gnustep-gui
 SUBDIR+=	gnustep-preferences
-SUBDIR+=	gtk2-theme-switch
 SUBDIR+=	gtk
 SUBDIR+=	gtk+extra
 SUBDIR+=	gtk--
@@ -62,6 +61,7 @@ SUBDIR+=	gtk-thinice-engine
 SUBDIR+=	gtk10
 SUBDIR+=	gtk2
 SUBDIR+=	gtk2-engines
+SUBDIR+=	gtk2-theme-switch
 SUBDIR+=	gtkglarea
 SUBDIR+=	gtkglarea2
 SUBDIR+=	gtkmm
