@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2003/01/18 18:22:16 cjep Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/20 22:39:33 jschauma Exp $
 #
 
 DISTNAME=	gap4r3
 PKGNAME=	gap-4.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/ \
 		ftp://ftp.math.rwth-aachen.de/pub/gap/gap4/ \
@@ -26,7 +26,7 @@ CONFIGURE_ENV+=	PREFIX=${PREFIX}
 ALL_TARGET=	default
 
 GAP_DIRECTORY=	${PREFIX}/lib/gap4.3
-GAP_PLATFORM=	${MACHINE_GNU_PLATFORM}-cc
+GAP_PLATFORM=	${MACHINE_GNU_PLATFORM}-${CC}
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == SunOS
