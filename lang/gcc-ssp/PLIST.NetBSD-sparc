@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.NetBSD-sparc,v 1.1 2001/11/01 00:32:27 zuntum Exp $
+${PKGBASENAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/crtbegin.o
+${PKGBASENAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/crtbeginS.o
+${PKGBASENAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/crtend.o
+${PKGBASENAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/crtendS.o
