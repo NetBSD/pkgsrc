@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/12/06 16:50:03 jmmv Exp $
+$NetBSD: distinfo,v 1.8 2002/12/06 17:36:13 wiz Exp $
 
 SHA1 (dopewars-1.5.8.tar.gz) = 8528c03c8c5012cbdac4d124322e3cd1eb548107
 Size (dopewars-1.5.8.tar.gz) = 1168140 bytes
@@ -8,4 +8,4 @@ SHA1 (patch-ac) = 304ca6d21da3117a7da6b2dc9df56f34b10dd772
 SHA1 (patch-ad) = 471c30b8b8e75d687e7891037f2427cb8ee51c14
 SHA1 (patch-ae) = 935eaef23aef3285249d9aab2d3ffc687fafa3b4
 SHA1 (patch-af) = f39b804dfed2d1e4613aa68b60773540a58e595c
-SHA1 (patch-ah) = e21bf4cb3125a0e9d361a8e96a3ed61d59174554
+SHA1 (patch-ag) = e21bf4cb3125a0e9d361a8e96a3ed61d59174554
