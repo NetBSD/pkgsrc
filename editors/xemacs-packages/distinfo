@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2004/02/15 03:42:31 minskim Exp $
+$NetBSD: distinfo,v 1.16 2004/07/11 17:56:56 cube Exp $
 
 SHA1 (xemacs-packages/Sun-1.15-pkg.tar.gz) = fb227f01bee8ce85fdb64c999393a1c9b936b8a0
 Size (xemacs-packages/Sun-1.15-pkg.tar.gz) = 64660 bytes
@@ -90,8 +90,8 @@ SHA1 (xemacs-packages/haskell-mode-1.06-pkg.tar.gz) = f4da39c094638f26cafd9cd9bf
 Size (xemacs-packages/haskell-mode-1.06-pkg.tar.gz) = 94315 bytes
 SHA1 (xemacs-packages/hm--html-menus-1.23-pkg.tar.gz) = ff65bc6c6b0f6942157768a61623682efb63cefd
 Size (xemacs-packages/hm--html-menus-1.23-pkg.tar.gz) = 179091 bytes
-SHA1 (xemacs-packages/hyperbole-1.15-pkg.tar.gz) = db08fc888e3893bee959a7bc5c2802a5dae6d860
-Size (xemacs-packages/hyperbole-1.15-pkg.tar.gz) = 634400 bytes
+SHA1 (xemacs-packages/hyperbole-1.15-pkg.tar.gz) = 4562482806f16a6f7f4313f13e8c64aabdb64eb0
+Size (xemacs-packages/hyperbole-1.15-pkg.tar.gz) = 634611 bytes
 SHA1 (xemacs-packages/ibuffer-1.09-pkg.tar.gz) = 41670404165180310c4d1e4e1157099e10d17a7e
 Size (xemacs-packages/ibuffer-1.09-pkg.tar.gz) = 89926 bytes
 SHA1 (xemacs-packages/idlwave-1.31-pkg.tar.gz) = f8d358b310e0ba985ceb1f6338a4e79f65bb6797
