@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 2000/03/26 14:16:48 itojun Exp $
+--- src/options.h.orig	Tue Apr 28 23:29:40 1998
++++ src/options.h	Fri Sep 24 15:49:42 1999
+@@ -30,6 +30,8 @@
+ 				   data than specified in
+ 				   content-length? */
+   int ignore_length;		/* Do we heed content-length at all?  */
++  int inet;
++  int inet6;
+   int recursive;		/* Are we recursive? */
+   int spanhost;			/* Do we span across hosts in
+ 				   recursion? */
