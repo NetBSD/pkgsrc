@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.53 2004/02/18 13:32:38 jlam Exp $
+# $NetBSD: gcc.mk,v 1.54 2004/02/20 07:10:06 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -103,6 +103,9 @@ _NEED_GCC3?=	no
 _NEED_GCC3=	yes
 .  endif
 .endfor
+.if !empty(_NEED_GCC2:M[nN][oO]) && !empty(_NEED_GCC3:M[nN][oO])
+_NEED_GCC3=	yes
+.endif
 
 # Assume by default that GCC will only provide a C compiler.
 LANGUAGES.gcc?=	c
