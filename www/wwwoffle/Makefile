@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2001/04/22 06:44:39 fredb Exp $
+# $NetBSD: Makefile,v 1.31 2001/08/14 04:51:46 fredb Exp $
 
-DISTNAME=	wwwoffle-2.6c
+DISTNAME=	wwwoffle-2.6d
 CATEGORIES=	www
 MASTER_SITES=	http://www.gedanken.demon.co.uk/download-wwwoffle/ \
 		ftp://ftp.demon.co.uk/pub/unix/httpd/ \
 		${MASTER_SITE_SUNSITE:=apps/www/servers/}
 EXTRACT_SUFX=	.tgz
-
-PATCHFILES+=	wwwoffle-26b-v6-20010411.diff.gz
-PATCH_SITES+=	ftp://ftp.kame.net/pub/kame/misc/
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gedanken.demon.co.uk/wwwoffle/
@@ -23,6 +19,12 @@ PLIST_SUBST+=	GTAR="${GTAR}" MKDIR="${MKDIR}" PREFIX="${PREFIX}"
 BUILD_DEFS+=	USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${USE_INET6} == "YES"
+MAKE_ENV+=	USE_IPV6=1
+.else
+MAKE_ENV+=	USE_IPV6=0
+.endif
 
 .if ${OPSYS} == "SunOS"
 MAKE_ENV+=	LIBRARY="-lnsl -lsocket"
