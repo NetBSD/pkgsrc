@@ -1,0 +1,83 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/05/14 04:17:31 salo Exp $
+
+--- dovecot-example.conf.orig	2003-04-04 14:17:25.000000000 +0200
++++ dovecot-example.conf	2003-05-13 06:00:16.000000000 +0200
+@@ -1,17 +1,15 @@
+ ## Dovecot 1.0 configuration file
+ 
+ # Default values are shown after each value, it's not required to uncomment
+-# any of the lines. Exception to this are paths, they're just examples
+-# with real defaults being based on configure options. The paths listed here
+-# are for configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+-# --with-ssldir=/etc/ssl
++# any of the lines. Exception to this are paths, they're just examples with
++# real defaults being based on configure options.
+ 
+ # Base directory where to store runtime data.
+ #base_dir = /var/run/dovecot/
+ 
+ # Protocols we want to be serving:
+ #  imap imaps pop3 pop3s
+-#protocols = imap imaps
++protocols = imap pop3
+ 
+ # IP or host address where to listen in for connections. It's not currently
+ # possible to specify multiple addresses. "*" listens in all IPv4 interfaces.
+@@ -27,7 +25,7 @@
+ #pop3s_listen = 
+ 
+ # Disable SSL/TLS support.
+-#ssl_disable = no
++ssl_disable = yes
+ 
+ # PEM encoded X.509 SSL/TLS certificate and private key. They're opened before
+ # dropping root privileges, so keep the key file unreadable by anyone but
+@@ -81,7 +79,7 @@
+ login = imap
+ 
+ # Executable location.
+-#login_executable = /usr/libexec/dovecot/imap-login
++#login_executable = @PREFIX@/libexec/dovecot/imap-login
+ 
+ # User to use for the login process. The user must belong to a group where
+ # only it has access, it's used to control access for authentication process
+@@ -126,7 +124,7 @@
+ login = pop3
+ 
+ # Exception to above rule being the executable location.
+-#login_executable = /usr/libexec/dovecot/pop3-login
++#login_executable = @PREFIX@/libexec/dovecot/pop3-login
+ 
+ ##
+ ## Mail processes
+@@ -310,7 +308,7 @@
+ ##
+ 
+ # Executable location
+-#imap_executable = /usr/libexec/dovecot/imap
++#imap_executable = @PREFIX@/libexec/dovecot/imap
+ 
+ # Set max. process size in megabytes. Most of the memory goes to mmap()ing
+ # files, so it shouldn't harm much even if this limit is set pretty high.
+@@ -321,7 +319,7 @@
+ ##
+ 
+ # Executable location
+-#pop3_executable = /usr/libexec/dovecot/pop3
++#pop3_executable = @PREFIX@/libexec/dovecot/pop3
+ 
+ # Set max. process size in megabytes. Most of the memory goes to mmap()ing
+ # files, so it shouldn't harm much even if this limit is set pretty high.
+@@ -374,10 +372,10 @@
+ #   vpopmail: vpopmail authentication
+ #   ldap <config path>: LDAP, see doc/dovecot-ldap.conf
+ #   pgsql <config path>: a PostgreSQL database, see doc/dovecot-pgsql.conf
+-auth_passdb = pam
++auth_passdb = passwd
+ 
+ # Executable location
+-#auth_executable = /usr/libexec/dovecot/dovecot-auth
++#auth_executable = @PREFIX@/libexec/dovecot/dovecot-auth
+ 
+ # Set max. process size in megabytes.
+ #auth_process_size = 256
