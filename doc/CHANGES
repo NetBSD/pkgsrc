@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8398 2004/12/22 00:52:08 christos Exp $
+$NetBSD: CHANGES,v 1.8399 2004/12/22 03:59:30 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6461,3 +6461,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dhisd to 5.1 [hubertf 2004-12-21]
 	Updated freeradius to 1.0.1nb5 [adrianp 2002-12-21]
 	Added netgroup-0.0 [christos 2004-12-21]
+	Updated tiff to 3.6.1nb6 [reed 2004-12-22]
