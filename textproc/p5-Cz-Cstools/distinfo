@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/10/04 16:29:51 hubertf Exp $
+$NetBSD: distinfo,v 1.2 2003/01/15 11:43:27 salo Exp $
 
-SHA1 (Cstools-3.3.tar.gz) = af1e9f63beb96b871f8fc1aaa4be15a9fc5c55e3
-Size (Cstools-3.3.tar.gz) = 29787 bytes
+SHA1 (Cstools-3.42.tar.gz) = 9f14f121640528eca779cd4bcf163b5aa8dace87
+Size (Cstools-3.42.tar.gz) = 30650 bytes
