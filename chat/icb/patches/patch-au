@@ -1,7 +1,7 @@
-$NetBSD: patch-au,v 1.1 2003/09/28 19:29:37 tron Exp $
+$NetBSD: patch-au,v 1.2 2003/09/28 20:13:55 tron Exp $
 
---- tcl/panic.c.orig	1995-02-24 22:19:49.000000000 +0100
-+++ tcl/panic.c	2003-09-28 21:27:47.000000000 +0200
+--- tcl/panic.c.orig	Fri Feb 24 22:19:49 1995
++++ tcl/panic.c	Sun Sep 28 22:12:20 2003
 @@ -19,7 +19,7 @@
  
  #include <stdio.h>
@@ -11,7 +11,7 @@ $NetBSD: patch-au,v 1.1 2003/09/28 19:29:37 tron Exp $
  
  /*
   *----------------------------------------------------------------------
-@@ -39,18 +39,19 @@
+@@ -39,18 +39,18 @@
  
  #ifndef lint
  void
@@ -28,8 +28,8 @@ $NetBSD: patch-au,v 1.1 2003/09/28 19:29:37 tron Exp $
 +    char *format;
  
 -    va_start(args);
+-    format = va_arg(args, char *);
 +    va_start(args, format);
-     format = va_arg(args, char *);
      (void) vfprintf(stderr, format, args);
 +    va_end(args);
      (void) fflush(stderr);
