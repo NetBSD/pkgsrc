@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9741 2005/04/04 08:57:15 adam Exp $
+$NetBSD: CHANGES,v 1.9742 2005/04/04 09:11:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1887,3 +1887,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gg2 to 2.2.5 [adam 2005-04-04]
 	Updated msmtp to 1.4.0 [adam 2005-04-04]
 	Updated mtools to 3.9.10 [adam 2005-04-04]
+	Updated epic4 to 2.2 [wiz 2005-04-04]
+	Updated epic4-doc to 1.0.20050313 [wiz 2005-04-04]
