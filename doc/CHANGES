@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2209 2003/05/10 10:09:14 seb Exp $
+$NetBSD: CHANGES,v 1.2210 2003/05/10 16:33:18 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1463,7 +1463,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated py-postgresql to 3.3nb2 [toshii 2003-04-03]
 	Updated py-Numeric to 23.0 [drochner 2003-04-03]
 	Updated mrstat to 1.16 [abs 2003-04-03]
-	Updated cvsync-0.19.0 [gehenna 2003-04-03]
+	Updated cvsync to 0.19.0 [gehenna 2003-04-03]
 	Added spamass-milter-0.1.3a [manu 2003-04-04]
 	Updated mrstat to 1.17 [abs 2003-04-04]
 	Added wol-0.6.0 [zuntum 2003-04-04]
