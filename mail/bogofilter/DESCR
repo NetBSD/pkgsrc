@@ -1,0 +1,20 @@
+Bogofilter is a mail filter that classifies mail as spam or ham 
+(non-spam) by a statistical analysis of the message's header and 
+content (body).  The program is able to learn from the user's 
+classifications and corrections.
+
+The statistical technique is known as the Bayesian technique and 
+its use for spam was first described by Paul Graham in his article 
+A Plan For Spam.  Gary Robinson, in his weblog Rants, suggests some 
+refinements for improved discrimination between spam and ham. 
+Bogofilter's primary algorithm uses the f(w) parameter and the 
+Fisher inverse chi-square technique that he describes.
+
+Bogofilter is run by an MDA script to classify an incoming message 
+as spam or ham (using wordlists stored by BerkeleyDB).  Bogofilter 
+provides processing for plain text and html.  It supports multi-part 
+mime message with decoding of base64, quoted-printable, and 
+uuencoded text and ignores attachments, such as images.
+
+Bogofilter is written in C.  Supported platforms: Linux, FreeBSD, 
+Solaris, OS X, HP-UX, AIX, ... 
