@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1999/12/28 02:28:23 proff Exp $
+
 --- inv.c	Fri Jan  1 03:08:33 1999
 +++ /home/andy/tmp/wrk/inv.c	Fri May 14 20:28:52 1999
 @@ -8,7 +8,11 @@
@@ -5,7 +7,7 @@
  #  include <curses210.h>
  # else
 -#  include <curses.h>
-+#  ifdef __FreeBSD__
++#  if defined(__NetBSD__) || defined(__FreeBSD__)
 +#   include <ncurses.h>
 +#  else
 +#   include <curses.h>
