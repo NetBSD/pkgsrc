@@ -1,22 +1,23 @@
-$NetBSD: distinfo,v 1.3 2001/05/17 19:57:02 jlam Exp $
+$NetBSD: distinfo,v 1.4 2001/05/24 04:28:19 jlam Exp $
 
-SHA1 (abisuite/abi-0.7.10.tar.gz) = 4b878760fc72077062b5bc218eac50217b247805
-Size (abisuite/abi-0.7.10.tar.gz) = 4636793 bytes
-SHA1 (abisuite/abidistfiles-0.7.10.tar.gz) = af8f8c900357c0c2a40c2cc691c825b37c4e3617
-Size (abisuite/abidistfiles-0.7.10.tar.gz) = 560355 bytes
-SHA1 (abisuite/expat-0.7.10.tar.gz) = 54ca32a6aed9607ea637412716b952bed980034c
-Size (abisuite/expat-0.7.10.tar.gz) = 66421 bytes
-SHA1 (abisuite/libiconv-0.7.10.tar.gz) = e769adceacfea42ffbb7626e41da44ad34a763f4
-Size (abisuite/libiconv-0.7.10.tar.gz) = 1484987 bytes
-SHA1 (abisuite/unixfonts-0.7.10.tar.gz) = 606ee92fbfe56cd0c80b80e5fa5c011b1af4cd2e
-Size (abisuite/unixfonts-0.7.10.tar.gz) = 1861943 bytes
-SHA1 (abisuite/wv-0.7.10.tar.gz) = 469d7317d844ba1010c4d4a155ce476a8cd19c76
-Size (abisuite/wv-0.7.10.tar.gz) = 1175280 bytes
-SHA1 (patch-aa) = a40db24e3d228b4ce3e7f702566fc6d9801bdb3b
-SHA1 (patch-ab) = 9dbc317697b767bee137cb81d7cc8225a4a96e79
-SHA1 (patch-ac) = 67635e365940271c7c7163d9d3ecb705054130ab
-SHA1 (patch-ad) = f36237c325431173820435fb9180cce3234f7ad2
-SHA1 (patch-ae) = 1c2b65110e93eee782ff70ef5388eb2e1c50207e
-SHA1 (patch-af) = 96f86578e030576e2a9539d5c3d92ed7faed9ea6
-SHA1 (patch-ak) = 853ee1773c724c0fe1f89955a884d07b2c5df37a
-SHA1 (patch-al) = 717d3c3f0c64c36f335fdac7f6e41066be35eb2b
+SHA1 (abisuite/abi-0.7.14.tar.gz) = dbe34d41e1a8d07e8a9e56352b6b5658d7a53209
+Size (abisuite/abi-0.7.14.tar.gz) = 5804834 bytes
+SHA1 (abisuite/abidistfiles-0.7.14.tar.gz) = 977ffd05e969c72dc8f47371694b004839d1b216
+Size (abisuite/abidistfiles-0.7.14.tar.gz) = 560577 bytes
+SHA1 (abisuite/expat-0.7.14.tar.gz) = 20a9e32286b2e969dff180ad55a2cea21455a404
+Size (abisuite/expat-0.7.14.tar.gz) = 196526 bytes
+SHA1 (abisuite/psiconv-0.7.14.tar.gz) = 790c8380d7a35773df636e1b0b561e62a4169393
+Size (abisuite/psiconv-0.7.14.tar.gz) = 170914 bytes
+SHA1 (abisuite/unixfonts-0.7.14.tar.gz) = d73b2cc742e62bf4540d2f974e3e05ff7c49fbc6
+Size (abisuite/unixfonts-0.7.14.tar.gz) = 1871873 bytes
+SHA1 (abisuite/wv-0.7.14.tar.gz) = 47a7639fd3c401f41eff66eb6ff86e3d81859155
+Size (abisuite/wv-0.7.14.tar.gz) = 1222648 bytes
+SHA1 (patch-aa) = b16ed42c28c8cd15b9eae852da328f89ce39e21c
+SHA1 (patch-ab) = fca478185d564829f15111f228cb7102bb2e3515
+SHA1 (patch-ac) = 021a39f6755b7f33a00c8bc268f9ca0748cf69a7
+SHA1 (patch-ad) = 223f452642681c25cae67871fa25b05c2a5fe937
+SHA1 (patch-ae) = 5417b14fdc6e492eb424e91b4be1fd71a02db56b
+SHA1 (patch-af) = f36dd977b33d4a3dcb22200e3e7c5bc776d54612
+SHA1 (patch-ag) = 059f22ac858c146d63c8451d22f5f80bd7565b53
+SHA1 (patch-ah) = 19e2e5def6d235ff44efc856346a4ae85b2bdbd5
+SHA1 (patch-ai) = d58724b199123d0cf3244bfb554c0dfe11dfe47a

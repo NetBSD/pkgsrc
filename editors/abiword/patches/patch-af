@@ -1,12 +1,18 @@
-$NetBSD: patch-af,v 1.4 2001/05/17 19:57:03 jlam Exp $
+$NetBSD: patch-af,v 1.5 2001/05/24 04:28:20 jlam Exp $
 
---- src/config/abi_rules.mk.orig	Thu May 17 15:36:47 2001
-+++ src/config/abi_rules.mk
-@@ -36,6 +36,7 @@
- ##################################################################
- ##################################################################
- 
-+CFLAGS+=	$(OS_EXTRA_CFLAGS)
- 
- ifdef LIBRARY_NAME
- ifeq ($(OS_NAME), WIN32)
+--- src/other/spell/ispell_def.h.orig	Sat Mar 24 20:30:02 2001
++++ src/other/spell/ispell_def.h
+@@ -2,3 +2,13 @@
+ #ifndef	INPUTWORDLEN
+ #define INPUTWORDLEN 100
+ #endif
++
++#ifdef HAVE_INTTYPES_H
++#include <inttypes.h>
++#define PTRSIZE intptr_t
++#else
++#define PTRSIZE int
++#endif
++#if !defined(HAVE_INTTYPES_H) && defined(__alpha) && defined(__NetBSD__)
++#define PTRSIZE long
++#endif /* hack for 1.3 */

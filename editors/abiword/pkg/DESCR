@@ -1,19 +1,8 @@
-AbiWord(R) is the first application of a suite of Open Source desktop
-productivity applications.  AbiWord(R) is available for all to use,
-free of charge.
-
-AbiWord(R) is a lean and fast, full-featured word processor. It works on
-Windows and most Unix Systems. Features include: 
-
-	Basic character formatting (bold, underline, italics, etc.) 
-	Paragraph alignment 
-	Spell-check 
-	Import of Word97 and RTF documents 
-	Export to RTF, Text, HTML, and LaTeX formats
-	Interactive rulers and tabs 
-	Styles 
-	Unlimited undo/redo 
-	Multiple column control 
-	Widow/orphan control 
-	Find/Replace 
-	Images 
+AbiWord is a small and simple word processor, that is fast and complete.
+Abiword's features include it's "look & feel", the ability to format pages
+and paragraphs, a spell checker, an interactive ruler, the integration of
+styles, the unlimited capacity to undo/redo , a find and replace function
+and the image insertion.  It is also able to import documents from Microsoft
+Word 97 and rtf (Rich Text Format) and to save documents using Internet HTML
+format.  Several other features are planned for future releases, these
+include tables, lists and a Microsoft Word exporter.
