@@ -1,28 +1,42 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/27 14:42:19 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/12/24 02:27:41 wiz Exp $
+bin/freetype-config
+include/freetype2/freetype/cache/ftcchunk.h
+include/freetype2/freetype/cache/ftcglyph.h
+include/freetype2/freetype/cache/ftcimage.h
+include/freetype2/freetype/cache/ftcmanag.h
+include/freetype2/freetype/cache/ftcsbits.h
+include/freetype2/freetype/cache/ftlru.h
+include/freetype2/freetype/config/ftbuild.h
 include/freetype2/freetype/config/ftconfig.h
 include/freetype2/freetype/config/ftmodule.h
 include/freetype2/freetype/config/ftoption.h
 include/freetype2/freetype/freetype.h
 include/freetype2/freetype/ftbbox.h
+include/freetype2/freetype/ftcache.h
 include/freetype2/freetype/fterrors.h
 include/freetype2/freetype/ftglyph.h
 include/freetype2/freetype/ftimage.h
+include/freetype2/freetype/ftlist.h
+include/freetype2/freetype/ftmac.h
 include/freetype2/freetype/ftmm.h
 include/freetype2/freetype/ftmodule.h
 include/freetype2/freetype/ftnames.h
 include/freetype2/freetype/ftoutln.h
 include/freetype2/freetype/ftrender.h
+include/freetype2/freetype/ftsynth.h
 include/freetype2/freetype/ftsystem.h
 include/freetype2/freetype/fttypes.h
 include/freetype2/freetype/internal/autohint.h
+include/freetype2/freetype/internal/fnttypes.h
 include/freetype2/freetype/internal/ftcalc.h
 include/freetype2/freetype/internal/ftdebug.h
 include/freetype2/freetype/internal/ftdriver.h
 include/freetype2/freetype/internal/ftextend.h
-include/freetype2/freetype/internal/ftlist.h
 include/freetype2/freetype/internal/ftmemory.h
 include/freetype2/freetype/internal/ftobjs.h
 include/freetype2/freetype/internal/ftstream.h
+include/freetype2/freetype/internal/internal.h
+include/freetype2/freetype/internal/psaux.h
 include/freetype2/freetype/internal/psnames.h
 include/freetype2/freetype/internal/sfnt.h
 include/freetype2/freetype/internal/t1errors.h
@@ -37,8 +51,9 @@ include/freetype2/freetype/tttables.h
 include/freetype2/freetype/tttags.h
 lib/libfreetype.a
 lib/libfreetype.la
-lib/libfreetype.so.6.0
+lib/libfreetype.so.6.1
 @dirrm include/freetype2/freetype/internal
 @dirrm include/freetype2/freetype/config
+@dirrm include/freetype2/freetype/cache
 @dirrm include/freetype2/freetype
 @dirrm include/freetype2
