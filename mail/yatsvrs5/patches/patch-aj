@@ -1,0 +1,39 @@
+$NetBSD: patch-aj,v 1.1.1.1 2001/11/15 16:08:43 taca Exp $
+
+--- yatconfd/message.c.orig	Mon Jun 25 17:45:45 2001
++++ yatconfd/message.c
+@@ -9,13 +9,13 @@
+  */
+ int Msg2Cli(
+ #ifdef STDC_HEADERS
+-	    int stat, CONST char * pFmt, ...
++	    int status, CONST char * pFmt, ...
+ #else
+-	    stat, pFmt, va_alist
++	    status, pFmt, va_alist
+ #endif
+ 	    )
+ #ifndef STDC_HEADERS
+-     int stat;
++     int status;
+      CONST char * pFmt;
+      va_dcl
+ #endif
+@@ -32,7 +32,7 @@
+   if (feof(stdout) || ferror(stdout))
+     SysData.Flags.errCliIO = 1;
+ 
+-  strcpy(szMsg, stat==SUCCESS ? ANS_POSITIVE : ANS_NEGATIVE);
++  strcpy(szMsg, status==SUCCESS ? ANS_POSITIVE : ANS_NEGATIVE);
+   p = strchr(szMsg, '\0');
+     *p++ = ' ';
+   *p = '\0';
+@@ -89,7 +89,7 @@
+   else
+     LogNOTICE("<<<NO CONNECTION>>> %.512s", szMsg);
+   va_end(ap);
+-  return stat;
++  return status;
+ }
+ 
+ /*

@@ -1,0 +1,17 @@
+1. Add /etc/services those services.
+
+yatconf		54111/tcp
+ascy		54106/tcp
+
+  Since those port numbers are not official one, please choose
+  appropriate values for your environment.
+
+2. Please install inetd.conf(5)'s entry like bellow.
+
+pop3	stream	tcp	nowait	root	${LOCALBASE}/libexec/yatd	yatd
+yatconf	stream	tcp	nowait	root	${LOCALBASE}/libexec/yatconfd	yatconfd
+ascy	stream	tcp	nowait	root	${LOCALBASE}/libexec/ascyd	ascyd
+
+  You should add appropriate options.
+
+3. Edit yatsvrrc and yatrc2 in ${CONFDIR}.

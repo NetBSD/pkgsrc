@@ -1,0 +1,29 @@
+$NetBSD: patch-ah,v 1.1.1.1 2001/11/15 16:08:43 taca Exp $
+
+--- sample/yatrc2.orig	Wed Jul  4 12:34:11 2001
++++ sample/yatrc2
+@@ -27,18 +27,18 @@
+ 
+ # Default Kanji code
+ [KANJI]
+-	files:	JIS, JIS, ^[$B, ^[(J
++	files:	JIS, JIS, ^[$B, ^[(B
+ 
+ # Common aliases
+ [ALIAS]
+-	メール管理者: postmaster@your.domain.jp
+-	ニュース管理者: news@your.domain.jp
+-	システム管理者: root@your.domain.jp
+-	Web管理者: webmaster@your.domain.jp
++#	メール管理者: postmaster@your.domain.jp
++#	ニュース管理者: news@your.domain.jp
++#	システム管理者: root@your.domain.jp
++#	Web管理者: webmaster@your.domain.jp
+ 
+ # Common alias group
+ [ALIASGRP]
+-	管理人: メール管理者 ニュース管理者 システム管理者
++#	管理人: メール管理者 ニュース管理者 システム管理者
+ 
+ # customization
+ [CUSTOM]
