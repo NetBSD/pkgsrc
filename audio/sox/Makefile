@@ -3,7 +3,8 @@
 # Date created:		17 Oct 1994
 # Whom:			torstenb
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/28 23:19:03 augustss Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/29 01:48:29 augustss Exp $
+# FreeBSD Id: Makefile,v 1.9 1997/02/04 10:32:34 max Exp 
 #
 
 DISTNAME=	soxgamma
