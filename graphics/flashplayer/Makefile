@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2001/12/02 14:47:13 tron Exp $
+# $NetBSD: Makefile,v 1.6 2002/07/02 12:45:04 wiz Exp $
 #
 
 PKGNAME=	${DISTNAME:C/-/player-/}
-COMMONDIR=	../libflash
 
-DEPENDS+=	libflash-[0-9]*:${COMMONDIR}
+DEPENDS+=	libflash-[0-9]*:../libflash
 
 COMMENT=	standalone open source flash(tm) player
 
-DISTINFO_FILE=	${.CURDIR}/${COMMONDIR}/distinfo
-FILESDIR=	${.CURDIR}/${COMMONDIR}/files
-PATCHDIR=	${.CURDIR}/${COMMONDIR}/patches
+DISTINFO_FILE=	${.CURDIR}/../libflash/distinfo
+FILESDIR=	${.CURDIR}/../libflash/files
+PATCHDIR=	${.CURDIR}/../libflash/patches
 
 do-build:
 		cd ${WRKSRC}/Player && ${SETENV} ${MAKE_ENV} ${MAKE}
@@ -18,4 +17,4 @@ do-build:
 do-install:
 		cd ${WRKSRC}/Player && ${INSTALL_PROGRAM} swfplayer ${PREFIX}/bin
 
-.include "${COMMONDIR}/Makefile.common"
+.include "../libflash/Makefile.common"
