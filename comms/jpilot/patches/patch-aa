@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2003/01/10 04:34:19 rh Exp $
+$NetBSD: patch-aa,v 1.5 2004/06/27 21:10:40 wiz Exp $
 
---- docs/Makefile.in.orig	Wed Oct  9 11:55:05 2002
+--- docs/Makefile.in.orig	2003-02-22 15:41:56.000000000 +0100
 +++ docs/Makefile.in
-@@ -330,33 +330,33 @@ uninstall-man: uninstall-man1
+@@ -332,33 +332,33 @@ uninstall-man: uninstall-man1
  # HTML documentation, etc.
  ###
  install-data-local:
