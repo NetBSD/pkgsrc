@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7290 2004/09/30 09:43:32 grant Exp $
+$NetBSD: CHANGES,v 1.7291 2004/09/30 10:54:28 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4487,3 +4487,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added flodo-v3 [mrg 2004-09-29]
 	Updated gtklife to 4.1 [wiz 2004-09-30]
 	Added shc-3.7 [grant 2004-09-30]
+	Updated dylan-interpreter to 2.3.11 [agc 2004-09-30]
