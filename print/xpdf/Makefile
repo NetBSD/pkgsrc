@@ -1,15 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2003/01/28 22:04:03 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2003/03/25 14:02:37 salo Exp $
 # 
 
-DISTNAME=	xpdf-2.01
-PKGREVISION=	2
+DISTNAME=	xpdf-2.02
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 		${MASTER_SITE_SUNSITE:=apps/graphics/viewers/X/}
-
-PATCH_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
-PATCHFILES=	xpdf-2.01-patch1
-PATCH_DIST_ARGS=-d ${WRKSRC}/xpdf
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
@@ -21,7 +16,7 @@ CONFLICTS=	xpdf-crypto-[0-9]*
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
-USE_X11BASE=		YES
+USE_X11=		YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -38,6 +33,17 @@ CONFIGURE_ARGS+=	--enable-a4-paper
 
 EGDIR=			${PREFIX}/share/examples/xpdf
 CONF_FILES=		${EGDIR}/xpdfrc ${PKG_SYSCONFDIR}/xpdfrc
+
+post-patch:
+	@cd ${WRKSRC}/doc && \
+	for f in *.1 *.5; do \
+		${MV} $${f} $${f}.orig; \
+		${SED} ${FILES_SUBST_SED} $${f}.orig > $${f}; \
+	done
+
+# Used by supplemental packages.
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xpdf
 
 .include "../../fonts/t1lib/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
