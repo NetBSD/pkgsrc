@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/02/15 00:26:19 salo Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/05/19 05:42:38 minskim Exp $
 bin/onsgmls
 bin/osgmlnorm
 bin/ospam
@@ -145,11 +145,12 @@ include/OpenSP/xnew.h
 lib/libosp.a
 lib/libosp.la
 lib/libosp.so
-lib/libosp.so.3
-lib/libosp.so.3.0
+lib/libosp.so.4
+lib/libosp.so.4.0
 man/man1/onsgmls.1
 man/man1/osgmlnorm.1
 man/man1/ospam.1
+man/man1/ospcat.1
 man/man1/ospent.1
 man/man1/osx.1
 share/OpenSP/HTML32.dcl
@@ -182,6 +183,7 @@ share/OpenSP/xml.dcl
 share/OpenSP/xml.soc
 share/doc/OpenSP/ABOUT-NLS
 share/doc/OpenSP/AUTHORS
+share/doc/OpenSP/BUGS
 share/doc/OpenSP/COPYING
 share/doc/OpenSP/ChangeLog
 share/doc/OpenSP/NEWS
@@ -211,6 +213,10 @@ share/doc/OpenSP/sysdecl.htm
 share/doc/OpenSP/sysid.htm
 share/doc/OpenSP/xml.htm
 share/doc/OpenSP/xmlwarn.htm
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sp4.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/sp4.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/sp4.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sp4.mo
 @dirrm share/doc/OpenSP
 @dirrm share/OpenSP
 @dirrm include/OpenSP

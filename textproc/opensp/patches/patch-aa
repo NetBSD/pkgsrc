@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2003/02/15 00:26:20 salo Exp $
+$NetBSD: patch-aa,v 1.3 2004/05/19 05:42:38 minskim Exp $
 
---- doc/Makefile.in.orig	Sat Feb 15 00:36:47 2003
-+++ doc/Makefile.in	Sat Feb 15 00:53:04 2003
-@@ -105,7 +105,7 @@
- am__quote = @am__quote@
- install_sh = @install_sh@
+--- doc/Makefile.in.orig	2003-10-11 04:05:56.000000000 -0500
++++ doc/Makefile.in
+@@ -117,7 +117,7 @@ install_sh = @install_sh@
  
--docdir = $(prefix)/doc
-+docdir = $(prefix)/share/doc
+ docdir = $(datadir)/doc
  pkgdocdir = $(docdir)/@PACKAGE@
+-pkgdochtmldir = $(pkgdocdir)/doc
++pkgdochtmldir = $(docdir)/@PACKAGE@
  
  MAINTAINERCLEANFILES = Makefile.in
+ 
