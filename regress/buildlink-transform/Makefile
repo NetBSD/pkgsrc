@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/08/28 06:26:41 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/28 08:20:44 jlam Exp $
 #
 # Run many buildlink transform tests in a single regression test to avoid
 # having to keep creating the wrapper scripts over and over again.
@@ -27,22 +27,33 @@ BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
 BUILDLINK_TRANSFORM+=	l:readline:edit:termcap:m
 
 REGRESS_ENV=		PATH=${PATH}
-#REGRESS_ENV+=		WRAPPER_DEBUG=yes
+.if defined(PHASES_AFTER_WRAPPER)
+REGRESS_ENV+=		WRAPPER_DEBUG=yes
+.endif
 
 # Create a "regress" script in the wrapper directory that just echoes its
 # arguments.
 #
 REGRESS=		${ECHO}
+.if defined(PHASES_AFTER_WRAPPER)
+_WRAPPEES+=		REGRESS
+_WRAP_ALIASES.REGRESS=	regress
+WRAPPER_PHASE=		wrapper
+.else
 _BLNK_WRAPPEES+=	REGRESS
 _ALIASES.REGRESS=	regress
+WRAPPER_PHASE=		buildlink
+WRAPPER_BINDIR=		${BUILDLINK_DIR}/bin
+.endif
 
-post-buildlink:
-	@${RM} ${BUILDLINK_DIR}/bin/${REGRESS}
+post-${WRAPPER_PHASE}:
+	@${RM} ${WRAPPER_BINDIR}/${REGRESS}
 
 .PHONY: regress do-regress
 
-regress: buildlink
-	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-regress PKG_PHASE=buildlink
+regress: ${WRAPPER_PHASE}
+	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-regress		\
+		PKG_PHASE=${WRAPPER_PHASE}
 
 do-regress:
 	@${DO_NADA}
