@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2001/11/26 06:50:24 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/20 14:41:56 wiz Exp $
 #
 
-DISTNAME=       Text-Template-1.42
+DISTNAME=       Text-Template-1.43
 PKGNAME=        p5-${DISTNAME}
 SVR4_PKGNAME=	p5tte
 CATEGORIES=	textproc perl5
