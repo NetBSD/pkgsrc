@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:53:53 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 17:24:39 martti Exp $
 #
 
 DISTNAME=		sysinfo-3.5.1
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.rge.com/pub/admin/sysinfo/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.magnicomp.com/
-COMMENT=		displays system hardware and software information and configuration
+COMMENT=		Displays system hardware and software information and configuration
 
 LICENSE=		shareware
 

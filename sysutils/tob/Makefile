@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 22:53:55 grant Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/21 17:24:42 martti Exp $
 
 DISTNAME=	tob-0.25
 CATEGORIES=	sysutils
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://tinyplanet.ca/projects/tob/
-COMMENT=	general driver for making and maintaining backups
+COMMENT=	General driver for making and maintaining backups
 
 USE_PKGINSTALL=	yes
 

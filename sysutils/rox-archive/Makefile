@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:53:46 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 17:24:26 martti Exp $
 #
 
 DISTNAME=	Archive-0.1.2
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://rox.sourceforge.net/
-COMMENT=	simple archiver
+COMMENT=	Simple archiver
 
 # no real libraries there
 DEPENDS+=	rox-lib>=0.1.4nb1:../../sysutils/rox-lib

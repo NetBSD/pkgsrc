@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:53:48 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:24:31 martti Exp $
 #
 
 DISTNAME=	System-0.1.2
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://rox.sourceforge.net/
-COMMENT=	simple system monitor
+COMMENT=	Simple system monitor
 
 DEPENDS+=	rox>=1.2.0nb2:../../sysutils/rox
 
