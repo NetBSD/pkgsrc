@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/12/27 12:52:07 abs Exp $
+$NetBSD: patch-ad,v 1.2 2003/07/28 15:51:25 adam Exp $
 
---- prayer/Makefile.orig	Wed Oct 30 11:43:18 2002
-+++ prayer/Makefile
-@@ -88,8 +88,8 @@ ifeq ($(strip $(CCLIENT_KERB_ENABLE)), t
+--- prayer/Makefile.orig	2003-05-21 16:41:16.000000000 +0200
++++ prayer/Makefile	2003-07-28 16:43:11.000000000 +0200
+@@ -89,8 +89,8 @@
    SESSION_LIBS += $(KERB_LIBS)
  endif
  
