@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: setpapersize,v 1.3 1999/09/05 18:38:56 kim Exp $
+# $NetBSD: setpapersize,v 1.4 2000/07/11 10:06:41 agc Exp $
 #
 # Small shell script to set the default papersize for packages
 #
@@ -54,7 +54,7 @@ while [ $# -gt 0 ]; do
 		fi
 		;;
 	ddd)
-		dddfile=@x11base@/lib/X11/app-defaults/Ddd
+		dddfile=@x11prefix@/lib/X11/app-defaults/Ddd
 		if [ -e $dddfile ]; then
 			mv $dddfile $dddfile.old
 			sed -e 's|@Ddd@\*paperSize:.*|@Ddd@*paperSize: '$dimensions'|' $dddfile.old > $dddfile && rm $dddfile.old

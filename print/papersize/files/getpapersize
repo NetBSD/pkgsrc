@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: getpapersize,v 1.2 1999/09/05 18:38:55 kim Exp $
+# $NetBSD: getpapersize,v 1.3 2000/07/11 10:06:41 agc Exp $
 #
 # Small shell script to show the default papersize for packages
 #
@@ -22,7 +22,7 @@ while [ $# -gt 0 ]; do
 		fi
 		;;
 	ddd)
-		f=@x11base@/lib/X11/app-defaults/Ddd
+		f=@x11prefix@/lib/X11/app-defaults/Ddd
 		if [ -e $f ]; then
 			echo -n "$1 has default papersize: "
 			awk '/^@Ddd\*paperSize: / { gsub(".*:", "", $0); print $0; }' $f
