@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4688 2004/02/05 20:37:16 garbled Exp $
+$NetBSD: CHANGES,v 1.4689 2004/02/05 22:39:15 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -598,4 +598,24 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mozilla-gtk2 to 1.6nb1 [jmmv 2004-02-05]
 	Added epiphany-1.0.7 [jmmv 2004-02-05]
 	Updated gnome to 2.4.1nb4 [jmmv 2004-02-05]
-    Added openrm-1.5.1 [garbled 2004-02-05]
+	Added openrm-1.5.1 [garbled 2004-02-05]
+	Removed kde3-i18n-af [markd 2004-02-05]
+	Removed kde3-i18n-ar [markd 2004-02-05]
+	Removed kde3-i18n-eo [markd 2004-02-05]
+	Removed kde3-i18n-ja [markd 2004-02-05]
+	Removed kde3-i18n-lt [markd 2004-02-05]
+	Removed kde3-i18n-mt [markd 2004-02-05]
+	Removed kde3-i18n-nso [markd 2004-02-05]
+	Removed kde3-i18n-th [markd 2004-02-05]
+	Removed kde3-i18n-ven [markd 2004-02-05]
+	Removed kde3-i18n-vi [markd 2004-02-05]
+	Removed kde3-i18n-xh [markd 2004-02-05]
+	Removed kde3-i18n-zu [markd 2004-02-05]
+	Added kde3-i18n-az-3.2.0 [markd 2004-02-05]
+	Added kde3-i18n-cy-3.2.0 [markd 2004-02-05]
+	Updated kde3-i18n-bg to 3.2.0 [markd 2004-02-05]
+	Updated kde3-i18n-bs to 3.2.0 [markd 2004-02-05]
+	Updated kde3-i18n-ca to 3.2.0 [markd 2004-02-05]
+	Updated kde3-i18n-cs to 3.2.0 [markd 2004-02-05]
+	Updated kde3-i18n-da to 3.2.0 [markd 2004-02-05]
+	Updated kde3-i18n-de to 3.2.0 [markd 2004-02-05]
