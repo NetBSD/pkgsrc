@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2004/10/03 00:12:54 tv Exp $
+# $NetBSD: Makefile,v 1.96 2004/11/08 17:10:24 tv Exp $
 
 DISTNAME=       pine4.61
 PKGNAME=        pine-4.61
@@ -14,7 +14,6 @@ COMMENT=	Program for Internet News and E-mail
 
 LICENSE=	pine-license
 
-BUILD_DEFS+=	USE_OPENLDAP
 USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 
@@ -41,10 +40,15 @@ CFLAGS+=	-O
 UNLIMIT_RESOURCES+=	datasize
 .endif
 
-.if defined(USE_OPENLDAP) && (${USE_OPENLDAP} == "YES")
+PKG_OPTIONS_VAR=	PKG_OPTIONS.pine
+PKG_SUPPORTED_OPTIONS=	ldap
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap/buildlink3.mk"
-LDAPCFLAGS=    LDAPCFLAGS="-DENABLE_LDAP"
-LDAPLIBS=      LDAPLIBS="-lldap -llber"
+PINE_LDAPCFLAGS=	LDAPCFLAGS="-DENABLE_LDAP"
+PINE_LDAPLIBS=		LDAPLIBS="-lldap -llber"
 .endif
 
 pre-patch:
@@ -64,7 +68,7 @@ do-configure:
 do-build:
 	cd ${WRKSRC} && ${_ULIMIT_CMD} 					\
 	${SETENV} ${MAKE_ENV} ./build ${BUILDNAME}			\
-		${LDAPCFLAGS} ${LDAPLIBS}				\
+		${PINE_LDAPCFLAGS} ${PINE_LDAPLIBS}			\
 		PREFIX=${PREFIX}					\
 		CC="${CC} ${CFLAGS} ${LDFLAGS}"
 
