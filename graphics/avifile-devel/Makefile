@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/06/24 02:16:39 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/24 02:22:25 zuntum Exp $
 #
 
 DISTNAME=	avifile-0.6.20010618
@@ -31,7 +31,6 @@ WRKSRC=		${WRKDIR}/avifile-0.6
 
 ONLY_FOR_PLATFORM= NetBSD-*-i386
 USE_GMAKE=	yes
-USE_AUTOCONF=	yes
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
