@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:58 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 12:14:29 agc Exp $
 
 SHA1 (gmodplay-0.08.tar.gz) = fb19c21cfd08b96e5a4ef5bb802127803260c3bd
+Size (gmodplay-0.08.tar.gz) = 104056 bytes
 SHA1 (patch-aa) = fcf30254b109cc6b9d0cf5c54758421dca1be73b
 SHA1 (patch-ab) = bb3ab618f39109d9c528770feaf1ae8516c9162f
 SHA1 (patch-ac) = 9b40f06f51d509da4a03b219209c8aa7b6f5e6a7

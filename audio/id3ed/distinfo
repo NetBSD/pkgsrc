@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:23:05 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 12:14:31 agc Exp $
 
-MD5 (id3ed-1.10.2.tar.gz) = c06fcc3678eb1f90b45bbc69d4f2c2b2
+SHA1 (id3ed-1.10.2.tar.gz) = c7f60428bfb34a83f2fd3b13fa7b997a843c9218
+Size (id3ed-1.10.2.tar.gz) = 32014 bytes
 SHA1 (patch-aa) = 150ea360cb5c7f82f37684201dd41600628fe59b

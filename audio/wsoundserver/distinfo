@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:23:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 12:14:40 agc Exp $
 
 SHA1 (WSoundServer-0.4.0.tar.gz) = b414025f0f19e66cd9146546ecf634564941b1e4
+Size (WSoundServer-0.4.0.tar.gz) = 147044 bytes
 SHA1 (patch-aa) = 8613c67a3b87007255cd075128c7c5a62cdaf4a3
 SHA1 (patch-ab) = 93853707636168459e842c90c6dc313ded1cb02a
 SHA1 (patch-ac) = f93b9bb268af157e443cb87a4621081de79eee1b

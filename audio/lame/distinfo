@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:23:07 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 12:14:31 agc Exp $
 
-MD5 (lame3.87beta.tar.gz) = 0c0f6f4aab5963be12509657d5dccd5c
+SHA1 (lame3.87beta.tar.gz) = d1c23fddf6418249fb7f843572cc4a13df7b563c
+Size (lame3.87beta.tar.gz) = 470753 bytes
 SHA1 (patch-aa) = 7971f9979571f5206c4c24508fea003b0964933e

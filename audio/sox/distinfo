@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:23:32 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 12:14:38 agc Exp $
 
-MD5 (sox-12.17.1.tar.gz) = 9afc59e4c5221462a24fa6092038b6b3
+SHA1 (sox-12.17.1.tar.gz) = 67c1fa9da11f95b0c151f51e1eb22be296751298
+Size (sox-12.17.1.tar.gz) = 312208 bytes
 SHA1 (patch-aa) = dac5666e8684b7d7e878d8e94cf8619d1a65e4eb
 SHA1 (patch-ab) = 94753db1d82ed4b984867042d0a353a5be2ccd56
 SHA1 (patch-ac) = 6eff289de2993667830e8eea6b283c42c204cec9

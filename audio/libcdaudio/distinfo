@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:23:10 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 12:14:32 agc Exp $
 
-MD5 (libcdaudio-0.99.4.tar.gz) = 1e673579fc377f2240d993a558a048be
+SHA1 (libcdaudio-0.99.4.tar.gz) = 00ee00d4e6dcff71b28be377b972c91f0277e273
+Size (libcdaudio-0.99.4.tar.gz) = 161900 bytes

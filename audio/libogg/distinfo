@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:23:12 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 12:14:32 agc Exp $
 
 SHA1 (libogg-1.0beta4.tar.gz) = 188135db21f6cc9507e977cc17f9cf7c314e95d8
+Size (libogg-1.0beta4.tar.gz) = 162129 bytes

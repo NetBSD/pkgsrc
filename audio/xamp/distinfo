@@ -1,9 +1,13 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:23:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 12:14:40 agc Exp $
 
-MD5 (xamp/xamp-0.8-10.tgz) = 6baec3236fbeaf2de994ec3421d0186e
-MD5 (xamp/bfamp.tar.gz) = 0831c191b987b2f9ce741508b10a3559
-MD5 (xamp/chrome.tar.gz) = bdae4fc85c9f7601a3b6ee9b0d122921
-MD5 (xamp/mmxamp.tar.gz) = 400c441b72ce2b38d7fd75f6e0e7bf3b
+SHA1 (xamp/xamp-0.8-10.tgz) = 65f83c41091184432d64baf1d74aef880733fbd5
+Size (xamp/xamp-0.8-10.tgz) = 239024 bytes
+SHA1 (xamp/bfamp.tar.gz) = a5249fc728b7ae10bb44d363d7d30b6d31182735
+Size (xamp/bfamp.tar.gz) = 23533 bytes
+SHA1 (xamp/chrome.tar.gz) = 039762b34489d8ec83c2947ca80e2ec4b5013c19
+Size (xamp/chrome.tar.gz) = 32636 bytes
+SHA1 (xamp/mmxamp.tar.gz) = f703dfe3040bd72db35bb05e26a8eb7841b54887
+Size (xamp/mmxamp.tar.gz) = 41405 bytes
 SHA1 (patch-aa) = a178fc8dee38f4e55eff7289577f2f4b36806574
 SHA1 (patch-ab) = e44114a8770cc7065f230932da2c10dab19bd730
 SHA1 (patch-ac) = de83b1fd7b170438f818d76d025838f8aa07c752

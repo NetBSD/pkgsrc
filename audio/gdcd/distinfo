@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:58 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 12:14:28 agc Exp $
 
-MD5 (gdcd-0.0.2.tar.gz) = 2c2fee796bd05fcdbacceab099826962
+SHA1 (gdcd-0.0.2.tar.gz) = 848510fe44613bf3bb54b81b14e61cc5991ca3ac
+Size (gdcd-0.0.2.tar.gz) = 213410 bytes
 SHA1 (patch-aa) = 98e5e77cb5d8e73cb8733fba8d69b880b7e35953
 SHA1 (patch-ab) = 3137a354ee3b10ee8888340c15be5fc4e9c68037
 SHA1 (patch-ac) = 1a3711d8d4cadbc0d9c4f022ffa8f0c620e3660f

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:23:16 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 12:14:34 agc Exp $
 
-MD5 (mbr301h.zip) = 0520ccf7303441232e7ebbf39752c6ee
+SHA1 (mbr301h.zip) = 33c1a808b0b746378403b808d5ce617c62badc9f
+Size (mbr301h.zip) = 51771 bytes
