@@ -1,0 +1,43 @@
+$NetBSD: patch-ae,v 1.1 2001/05/24 02:58:16 jlam Exp $
+
+--- configure.in.orig	Tue Aug  8 15:17:11 2000
++++ configure.in
+@@ -440,7 +440,7 @@
+     if test "x$DL_OBJS" = "xtclLoadAout.o"; then
+ 	MAKE_LIB="ar cr \${TCL_LIB_FILE} \${OBJS}"
+     else
+-	MAKE_LIB="\${SHLIB_LD} -o \${TCL_LIB_FILE} \${OBJS} ${SHLIB_LD_LIBS}"
++	MAKE_LIB="\${SHLIB_LD} -o \${TCL_LIB_FILE:C/\.so.*/.la/} \${OBJS:.o=.lo} ${SHLIB_LD_LIBS} -version-info 1:0"
+ 	RANLIB=":"
+     fi
+ else
+@@ -480,7 +480,7 @@
+         TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
+     fi
+     TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
+-    TCL_LIB_SPEC="-L${exec_prefix}/lib ${TCL_LIB_FLAG}"
++    TCL_LIB_SPEC="${TCL_LIB_SPEC_RPATH} -L${exec_prefix}/lib ${TCL_LIB_FLAG}"
+ else
+     TCL_BUILD_EXP_FILE="lib.exp"
+     eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
+@@ -510,9 +510,9 @@
+ #--------------------------------------------------------------------
+ 
+ if test "$prefix" != "$exec_prefix"; then
+-    TCL_PACKAGE_PATH="${exec_prefix}/lib ${prefix}/lib"
++    TCL_PACKAGE_PATH="${exec_prefix}/lib/tcl ${prefix}/lib"
+ else
+-    TCL_PACKAGE_PATH="${prefix}/lib"
++    TCL_PACKAGE_PATH="${prefix}/lib/tcl"
+ fi
+ 
+ #--------------------------------------------------------------------
+@@ -558,6 +558,8 @@
+ 
+ AC_SUBST(BUILD_DLTEST)
+ AC_SUBST(CFLAGS)
++AC_SUBST(LDFLAGS_DEBUG)
++AC_SUBST(LDFLAGS_OPTIMIZE)
+ AC_SUBST(CFG_TCL_SHARED_LIB_SUFFIX)
+ AC_SUBST(CFG_TCL_UNSHARED_LIB_SUFFIX)
+ AC_SUBST(CFG_TCL_EXPORT_FILE_SUFFIX)

@@ -1,17 +1,68 @@
-$NetBSD: patch-ab,v 1.7 2001/01/24 20:13:40 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2001/05/24 02:58:16 jlam Exp $
 
---- configure.orig	Tue Aug  8 21:17:11 2000
-+++ configure	Wed Jan 24 21:08:05 2001
-@@ -4773,7 +4773,7 @@
-     ECHO_VERSION='`echo ${VERSION}`'
-     TCL_LIB_VERSIONS_OK=ok
-     CFLAGS_DEBUG=-g
--    CFLAGS_OPTIMIZE=-O
-+    CFLAGS_OPTIMIZE=
-     if test "$using_gcc" = "yes" ; then
- 	CFLAGS_WARNING="-Wall -Wconversion -Wno-implicit-int"
-     else
-@@ -5789,7 +5789,7 @@
+--- configure.orig	Tue Aug  8 15:17:11 2000
++++ configure
+@@ -4766,6 +4766,7 @@
+ 
+     do64bit_ok=no
+     fullSrcDir=`cd $srcdir; pwd`
++    TCL_LIB_SPEC_RPATH=""
+     EXTRA_CFLAGS=""
+     TCL_EXPORT_FILE_SUFFIX=""
+     UNSHARED_LIB_SUFFIX=""
+@@ -5065,17 +5066,15 @@
+   
+ 		# NetBSD/SPARC needs -fPIC, -fpic will not do.
+ 		SHLIB_CFLAGS="-fPIC"
+-		SHLIB_LD="ld -Bshareable -x"
+ 		SHLIB_LD_LIBS=""
+ 		SHLIB_SUFFIX=".so"
+ 		DL_OBJS="tclLoadDl.o"
+ 		DL_LIBS=""
+ 		LDFLAGS=""
+-		LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+ 		echo $ac_n "checking for ELF""... $ac_c" 1>&6
+-echo "configure:5077: checking for ELF" >&5
++echo "configure:5076: checking for ELF" >&5
+ 		cat > conftest.$ac_ext <<EOF
+-#line 5079 "configure"
++#line 5078 "configure"
+ #include "confdefs.h"
+ 
+ #ifdef __ELF__
+@@ -5086,11 +5085,20 @@
+ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+   egrep "yes" >/dev/null 2>&1; then
+   rm -rf conftest*
+-  echo "$ac_t""yes" 1>&6
++  
++		    echo "$ac_t""yes" 1>&6
++		    SHLIB_LD='${TCL_CC} -shared -Wl,-x'
++		    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
++		    TCL_LIB_SPEC_RPATH='-Wl,-rpath,${exec_prefix}/lib'
+ 		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
++		
+ else
+   rm -rf conftest*
+-  echo "$ac_t""no" 1>&6
++  
++		    echo "$ac_t""no" 1>&6
++		    SHLIB_LD="ld -Bshareable -x"
++		    LD_SEARCH_FLAGS='-R${LIB_RUNTIME_DIR}'
++		    TCL_LIB_SPEC_RPATH='-R${exec_prefix}/lib'
+ 		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1.0'
+ 		
+ fi
+@@ -5752,7 +5760,7 @@
+ 
+ 
+     echo $ac_n "checking how to build libraries""... $ac_c" 1>&6
+-echo "configure:5756: checking how to build libraries" >&5
++echo "configure:5764: checking how to build libraries" >&5
+     # Check whether --enable-shared or --disable-shared was given.
+ if test "${enable_shared+set}" = set; then
+   enableval="$enable_shared"
+@@ -5789,7 +5797,7 @@
      if test "x$DL_OBJS" = "xtclLoadAout.o"; then
  	MAKE_LIB="ar cr \${TCL_LIB_FILE} \${OBJS}"
      else
@@ -20,33 +71,42 @@ $NetBSD: patch-ab,v 1.7 2001/01/24 20:13:40 wiz Exp $
  	RANLIB=":"
      fi
  else
-@@ -5829,7 +5829,7 @@
+@@ -5829,7 +5837,7 @@
          TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
      fi
      TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
 -    TCL_LIB_SPEC="-L${exec_prefix}/lib ${TCL_LIB_FLAG}"
-+    TCL_LIB_SPEC="-L${exec_prefix}/lib -Wl,-R${exec_prefix}/lib ${TCL_LIB_FLAG}"
++    TCL_LIB_SPEC="${TCL_LIB_SPEC_RPATH} -L${exec_prefix}/lib ${TCL_LIB_FLAG}"
  else
      TCL_BUILD_EXP_FILE="lib.exp"
      eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
-@@ -5859,9 +5859,9 @@
+@@ -5859,9 +5867,9 @@
  #--------------------------------------------------------------------
  
  if test "$prefix" != "$exec_prefix"; then
 -    TCL_PACKAGE_PATH="${exec_prefix}/lib ${prefix}/lib"
-+    TCL_PACKAGE_PATH="${exec_prefix}/lib/tcl ${prefix}/lib/tcl"
++    TCL_PACKAGE_PATH="${exec_prefix}/lib/tcl ${prefix}/lib"
  else
 -    TCL_PACKAGE_PATH="${prefix}/lib"
 +    TCL_PACKAGE_PATH="${prefix}/lib/tcl"
  fi
  
  #--------------------------------------------------------------------
-@@ -6097,6 +6097,8 @@
- s%@CFLAGS_DEBUG@%$CFLAGS_DEBUG%g
- s%@CFLAGS_OPTIMIZE@%$CFLAGS_OPTIMIZE%g
- s%@CFLAGS_WARNING@%$CFLAGS_WARNING%g
+@@ -5943,6 +5951,8 @@
+ 
+ 
+ 
++
++
+ trap '' 1 2 15
+ cat > confcache <<\EOF
+ # This file is a shell script that caches the results of configure
+@@ -6106,6 +6116,8 @@
+ s%@TCL_STUB_LIB_PATH@%$TCL_STUB_LIB_PATH%g
+ s%@MAKE_STUB_LIB@%$MAKE_STUB_LIB%g
+ s%@BUILD_DLTEST@%$BUILD_DLTEST%g
 +s%@LDFLAGS_DEBUG@%$LDFLAGS_DEBUG%g
 +s%@LDFLAGS_OPTIMIZE@%$LDFLAGS_OPTIMIZE%g
- s%@STUB_LIB_FILE@%$STUB_LIB_FILE%g
- s%@TCL_STUB_LIB_FILE@%$TCL_STUB_LIB_FILE%g
- s%@TCL_STUB_LIB_FLAG@%$TCL_STUB_LIB_FLAG%g
+ s%@CFG_TCL_SHARED_LIB_SUFFIX@%$CFG_TCL_SHARED_LIB_SUFFIX%g
+ s%@CFG_TCL_UNSHARED_LIB_SUFFIX@%$CFG_TCL_UNSHARED_LIB_SUFFIX%g
+ s%@CFG_TCL_EXPORT_FILE_SUFFIX@%$CFG_TCL_EXPORT_FILE_SUFFIX%g
