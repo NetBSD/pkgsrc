@@ -1,14 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/03/30 22:06:01 itojun Exp $
+$NetBSD: patch-ac,v 1.2 2002/01/04 09:45:10 martti Exp $
 
---- support/Makefile.in-	Fri Mar 30 20:52:10 2001
-+++ support/Makefile.in	Fri Mar 30 20:51:00 2001
-@@ -5,7 +5,8 @@
- 
- PROGRAM_LDADD        = $(EXTRA_LDFLAGS) $(PROGRAM_DEPENDENCIES) $(EXTRA_LIBS)
- PROGRAM_DEPENDENCIES = \
--	../srclib/apr-util/libaprutil.la ../srclib/apr/libapr.la
-+	../srclib/apr-util/libaprutil.la ../srclib/apr/libapr.la \
-+	../srclib/apr/shmem/unix/mm/libmm.la
- 
- include $(top_srcdir)/build/rules.mk
- 
+--- srclib/apr-util/build/apu-conf.m4.orig	Tue Aug 21 20:44:26 2001
++++ srclib/apr-util/build/apu-conf.m4	Thu Dec  6 17:50:19 2001
+@@ -328,6 +328,11 @@
+     expat_include_dir="$1/include/xml"
+     expat_libs="-L$1/lib -lexpat"
+     expat_old=yes
++  elif test -r "$1/include/expat.h"; then
++    dnl previously installed expat
++    expat_include_dir="$1/include"
++    expat_libs="-Wl,-R${LOCALBASE}/lib -lexpat"
++    expat_old=yes
+   elif test -r "$1/include/xmltok/xmlparse.h"; then
+     dnl Debian distribution
+     expat_include_dir="$1/include/xmltok"
