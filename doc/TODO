@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.366 2003/03/12 07:25:57 wiz Exp $
+$NetBSD: TODO,v 1.367 2003/03/12 11:30:06 markd Exp $
 
 Suggested new packages
 ======================
@@ -26,10 +26,6 @@ Suggested new packages
 	application for adding reading and translation annotations to Japanese
 	  text documents
 	http://jgloss.sourceforge.net/
-
-	kde-i18n
-	Internationalisation package for KDE 2.
-	ftp://ftp.kde.org/pub/kde/stable/2.1/distribution/tar/generic/src
 
 	loserjabber
 	GTK application which allows posting of journal entries to
