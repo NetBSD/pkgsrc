@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2002/04/27 08:04:15 shell Exp $
+# $NetBSD: Makefile,v 1.8 2002/05/09 06:03:38 shell Exp $
 
-DISTNAME=		Test-Harness-2.03
+DISTNAME=		Test-Harness-2.21
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5tha
 CATEGORIES=		devel perl5
