@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/27 23:24:23 seb Exp $
+bin/kbarcode
+lib/kde3/kfile_kbarcode.la
+share/kde/applnk/Applications/KBarcode/kbarcode-batch.desktop
+share/kde/applnk/Applications/KBarcode/kbarcode-editor.desktop
+share/kde/applnk/Applications/KBarcode/kbarcode-label.desktop
+share/kde/applnk/Applications/KBarcode/kbarcode-single.desktop
+share/kde/applnk/Applications/KBarcode/kbarcode.desktop
+share/kde/apps/kbarcode/barcodes.html
+share/kde/apps/kbarcode/exampledata.sql
+share/kde/apps/kbarcode/labeldefinitions.sql
+share/kde/apps/kbarcode/logo.png
+share/kde/icons/hicolor/16x16/actions/barcode.png
+share/kde/icons/hicolor/16x16/actions/kbarcodeellipse.png
+share/kde/icons/hicolor/16x16/actions/kbarcodegrid.png
+share/kde/icons/hicolor/16x16/actions/kbarcodelinetool.png
+share/kde/icons/hicolor/16x16/apps/kbarcode.png
+share/kde/icons/hicolor/22x22/actions/barcode.png
+share/kde/icons/hicolor/32x32/actions/barcode.png
+share/kde/icons/hicolor/32x32/actions/kbarcoderect.png
+share/kde/icons/hicolor/32x32/apps/kbarcode.png
+share/kde/icons/hicolor/64x64/apps/kbarcode.png
+share/kde/locale/de/LC_MESSAGES/kbarcode.mo
+share/kde/locale/el/LC_MESSAGES/kbarcode.mo
+share/kde/locale/es/LC_MESSAGES/kbarcode.mo
+share/kde/locale/fi/LC_MESSAGES/kbarcode.mo
+share/kde/locale/fr/LC_MESSAGES/kbarcode.mo
+share/kde/locale/hu/LC_MESSAGES/kbarcode.mo
+share/kde/locale/it/LC_MESSAGES/kbarcode.mo
+share/kde/locale/nl/LC_MESSAGES/kbarcode.mo
+share/kde/locale/pl/LC_MESSAGES/kbarcode.mo
+share/kde/locale/sv/LC_MESSAGES/kbarcode.mo
+share/kde/services/kfile_kbarcode.desktop
+@dirrm share/kde/apps/kbarcode
+@dirrm share/kde/applnk/Applications/KBarcode
