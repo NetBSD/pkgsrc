@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/29 16:41:21 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/01 19:12:51 jmmv Exp $
 bin/rhythmbox
 lib/bonobo/librb-nautilus-context-menu.a
 lib/bonobo/librb-nautilus-context-menu.la
@@ -50,6 +50,7 @@ share/gnome/help/rhythmbox/C/rhythmbox.xml
 share/gnome/help/rhythmbox/C/user-guide.xml
 share/idl/Rhythmbox.idl
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/rhythmbox.mo
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/rhythmbox.mo
@@ -60,14 +61,19 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/rhythmbox.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/rhythmbox.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/rhythmbox.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/rhythmbox.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/rhythmbox.mo
+${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/rhythmbox.mo
@@ -80,6 +86,7 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/rhythmbox.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/rhythmbox.mo
 share/mime-info/rhythmbox.keys
@@ -90,6 +97,7 @@ share/rhythmbox/art/rhythmbox-album.png
 share/rhythmbox/art/rhythmbox-audiocd.png
 share/rhythmbox/art/rhythmbox-automatic-playlist.png
 share/rhythmbox/art/rhythmbox-dnd.png
+share/rhythmbox/art/rhythmbox-ipod.png
 share/rhythmbox/art/rhythmbox-iradio.png
 share/rhythmbox/art/rhythmbox-library.png
 share/rhythmbox/art/rhythmbox-next.png
@@ -114,31 +122,24 @@ share/rhythmbox/art/rhythmbox-volume-medium.png
 share/rhythmbox/art/rhythmbox-volume-min.png
 share/rhythmbox/art/rhythmbox-volume-mute.png
 share/rhythmbox/art/rhythmbox-volume-zero.png
-share/rhythmbox/glade/buffering-dialog.glade
 share/rhythmbox/glade/create-playlist.glade
 share/rhythmbox/glade/druid.glade
 share/rhythmbox/glade/general-prefs.glade
 share/rhythmbox/glade/library-prefs.glade
 share/rhythmbox/glade/load-failure.glade
+share/rhythmbox/glade/song-info-multiple.glade
 share/rhythmbox/glade/song-info.glade
 share/rhythmbox/glade/station-new.glade
 share/rhythmbox/glade/station-properties.glade
 share/rhythmbox/glade/uri.glade
 share/rhythmbox/iradio-initial.pls
-share/rhythmbox/node-views/rb-node-view-albums.xml
-share/rhythmbox/node-views/rb-node-view-artists.xml
-share/rhythmbox/node-views/rb-node-view-cdaudio.xml
-share/rhythmbox/node-views/rb-node-view-genres.xml
-share/rhythmbox/node-views/rb-node-view-iradio-genres.xml
-share/rhythmbox/node-views/rb-node-view-iradio-stations.xml
-share/rhythmbox/node-views/rb-node-view-songs.xml
-@dirrm share/rhythmbox/node-views
 @dirrm share/rhythmbox/glade
 @dirrm share/rhythmbox/art
 @dirrm share/rhythmbox
-@comment in scrollkeeper: @dirrm share/omf/rhythmbox
+@comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/omf/rhythmbox
 @comment in scrollkeeper: @dirrm share/omf
-@comment in gnome2-dirs: @dirrm share/mime-info
+@comment in xdg-dirs: @dirrm share/mime-info
 @comment in ORBit2: @dirrm share/idl
 @dirrm share/gnome/help/rhythmbox/C/figures
 @dirrm share/gnome/help/rhythmbox/C
@@ -146,8 +147,7 @@ share/rhythmbox/node-views/rb-node-view-songs.xml
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
 @comment in GConf2: @dirrm share/gconf/schemas
-@comment in GConf2: @dirrm share/gconf
-@comment in gnome2-dirs: @dirrm share/applications
-@comment in gnome2-dirs: @dirrm share/application-registry
+@comment in xdg-dirs: @dirrm share/applications
+@comment in xdg-dirs: @dirrm share/application-registry
 @comment in libbonobo: @dirrm lib/bonobo/servers
 @comment in libbonobo: @dirrm lib/bonobo
