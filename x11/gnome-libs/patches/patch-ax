@@ -1,7 +1,7 @@
-$NetBSD: patch-ax,v 1.1 2001/06/16 20:04:52 jlam Exp $
+$NetBSD: patch-ax,v 1.2 2001/09/22 03:39:02 jlam Exp $
 
 --- zvt/Makefile.in.orig	Fri Mar 16 14:47:34 2001
-+++ zvt/Makefile.in	Sat Jun 16 09:03:34 2001
++++ zvt/Makefile.in
 @@ -150,7 +150,7 @@
  
  libzvtincludedir = $(includedir)/zvt
@@ -11,3 +11,12 @@ $NetBSD: patch-ax,v 1.1 2001/06/16 20:04:52 jlam Exp $
  
  
  libzvt_la_SOURCES =  	gnome-login-support.h		gnome-login-support.c		lists.c				subshell.h			subshell.c			subshell-includes.h		update.c			vt.c				zvtterm.c
+@@ -524,7 +524,7 @@
+ 
+ install-exec-local:
+ 	-file=$(DESTDIR)$(sbindir)/gnome-pty-helper; \
+-	chown root $$file && chgrp root $$file && chmod u+s $$file
++	chown 0 $$file && chgrp 0 $$file && chmod u+s $$file
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
