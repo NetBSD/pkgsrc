@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/06/10 06:49:08 cjep Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/25 18:35:23 wiz Exp $
 #
 
 DISTNAME=	sftp-0.5
@@ -7,10 +7,11 @@ MASTER_SITES=	ftp://ftp.xbill.org/pub/sftp/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.xbill.org/sftp/
-COMMENT=	Ftp replacement that runs over an ssh tunnel
+COMMENT=	ftp replacement that runs over an ssh tunnel
 
 CONFLICTS=	openssh-[0-9]*
 
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 
 do-install:
@@ -20,5 +21,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/sftp.1 	${PREFIX}/man/man1/sftp.1
 	${INSTALL_DATA}	${WRKSRC}/README	${PREFIX}/share/doc/README.sftp
 
-.include "../../devel/readline/buildlink.mk"
+.include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
