@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/06 08:34:24 rh Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel/Symdump/.packlist
+lib/perl5/site_perl/Devel/Symdump/Export.pm
+lib/perl5/site_perl/Devel/Symdump.pm
+lib/perl5/man/man3/Devel::Symdump.3
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel/Symdump
+@dirrm lib/perl5/site_perl/Devel/Symdump
