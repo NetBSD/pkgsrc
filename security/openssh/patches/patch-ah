@@ -1,0 +1,36 @@
+$NetBSD: patch-ah,v 1.1 2000/01/17 05:34:35 christos Exp $
+
+--- Makefile.in.orig	Thu Jan 13 23:45:46 2000
++++ Makefile.in	Mon Jan 17 00:24:48 2000
+@@ -5,6 +5,7 @@
+ libexecdir=@libexecdir@
+ mandir=@mandir@
+ sysconfdir=@sysconfdir@
++examplesdir=@prefix@/share/examples/ssh
+ 
+ srcdir = @srcdir@
+ top_srcdir = @top_srcdir@
+@@ -137,16 +138,16 @@
+ 		$(INSTALL) -s @GNOME_ASKPASS@ ${ASKPASS_LOCATION} ; \
+ 	fi
+ 
+-	if [ ! -f $(sysconfdir)/ssh_config -a ! -f $(sysconfdir)/sshd_config ]; then \
+-		$(INSTALL) -d $(sysconfdir); \
+-		$(INSTALL) -m 644 ssh_config $(sysconfdir)/ssh_config; \
+-		$(INSTALL) -m 644 sshd_config $(sysconfdir)/sshd_config; \
++	if [ ! -f $(examplesdir)/ssh_config -a ! -f $(examplesdir)/sshd_config ]; then \
++		$(INSTALL) -d $(examplesdir); \
++		$(INSTALL) -m 644 ssh_config $(examplesdir)/ssh_config; \
++		$(INSTALL) -m 644 sshd_config $(examplesdir)/sshd_config; \
+ 	fi
+ 
+ uninstallall:	uninstall
+-	-rm -f $(sysconfdir)/ssh_config
+-	-rm -f $(sysconfdir)/sshd_config
+-	-rmdir $(sysconfdir)
++	-rm -f $(examplesdir)/ssh_config
++	-rm -f $(examplesdir)/sshd_config
++	-rmdir $(examplesdir)
+ 	-rmdir $(bindir)
+ 	-rmdir $(sbindir)
+ 	-rmdir $(mandir)/man1
