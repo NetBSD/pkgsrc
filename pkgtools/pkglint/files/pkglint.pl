@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.41 2001/02/25 05:20:02 hubertf Exp $
+# $NetBSD: pkglint.pl,v 1.42 2001/03/08 10:14:50 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -204,11 +204,11 @@ if (-f "$portdir/$patchsumfile") {
 		&perror("WARN: no $portdir/$patchsumfile file. Please run 'make makepatchsum'.");
 	}
 }
-if (-e <$portdir/$md5file>) {
-	$i = "$md5file";
+if (-e <$portdir/$digestfile>) {
+	$i = "$digestfile";
 	next if (defined $checker{$i});
 	push(@checker, $i);
-	$checker{$i} = 'checkmd5';
+	$checker{$i} = 'checkdigest';
 }
 foreach $i (@checker) {
 	print "OK: checking $i.\n";
@@ -217,19 +217,19 @@ foreach $i (@checker) {
 	} else {
 		$proc = $checker{$i};
 		&$proc($i) || &perror("WARN: Cannot open the file $i\n");
-		if ($i !~ /^patches\//) {
+		if ($i !~ /patches\/patch/) {
 			&checklastline($i) ||
 				&perror("WARN: Cannot open the file $i\n");
 		}
 	}
 }
-if (-e <$portdir/$md5file> ) {
+if (-e <$portdir/$digestfile> ) {
 	if ( $seen_NO_CHECKSUM ) {
-		&perror("WARN: NO_CHECKSUM set, but $portdir/$md5file exists. Please remove it.");
+		&perror("WARN: NO_CHECKSUM set, but $portdir/$digestfile exists. Please remove it.");
 	}
 } else {
 	if ( ! $seen_NO_CHECKSUM ) {
-		&perror("WARN: no $portdir/$md5file file. Please run 'make makesum'.");
+		&perror("WARN: no $portdir/$digestfile file. Please run 'make makesum'.");
 	}
 }
 if (-e <$pkgdir/COMMENT> ) {
@@ -309,9 +309,10 @@ sub checkpatchsum {
 
 	open(SUM,"<$portdir/$file") || return 0;
 	while(<SUM>) {
-		next if !/^MD5 \(([^)]+)\) = (.*)$/;
-		$patch=$1;
-		$sum=$2;
+		next if !/^(MD5|SHA1|RMD160) \(([^)]+)\) = (.*)$/;
+		$alg=$1;
+		$patch=$2;
+		$sum=$3;
 
 		# bitch about *~
 		if ($patch =~ /~$/) {
@@ -319,7 +320,7 @@ sub checkpatchsum {
 		}
 
 		if (-T "$portdir/$patchdir/$patch") {
-			$calcsum=`sed -e '/\$NetBSD.*/d' $portdir/$patchdir/$patch | md5`;
+			$calcsum=`sed -e '/\$NetBSD.*/d' $portdir/$patchdir/$patch | digest $alg`;
 			chomp($calcsum);
 			if ( "$sum" ne "$calcsum" ) {
 				&perror("FATAL: checksum of $patch differs between $portdir/$file and\n"
@@ -570,7 +571,7 @@ sub checkpatch {
 	close(IN);
 }
 
-sub checkmd5 {
+sub checkdigest {
 	local($file) = @_;
 	local($rcsidseen) = 0;
 
@@ -580,7 +581,7 @@ sub checkmd5 {
 	}
 	if (!$rcsidseen) {
 		&perror("FATAL: RCS tag \"\$$rcsidstr\$\" must be present ".
-			"in md5 $file.")
+			"in digest $file.")
 	}
 	close(IN);
 }
@@ -685,10 +686,10 @@ sub checkmakefile {
 
 	#
 	# whole file: get FILESDIR, PATCHDIR, PKGDIR, SCRIPTDIR,
-	# PATCH_SUM_FILE and MD5_FILE
+	# PATCH_SUM_FILE and DIGEST_FILE
 	#
 	print "OK: checking for PATCHDIR, SCRIPTDIR, FILESDIR, PKGDIR,".
-	    " MD5_FILE.\n" if ($verbose);
+	    " DIGEST_FILE.\n" if ($verbose);
 
 	$filesdir = "files";
 	$filesdir = $1 if ($whole =~ /\nFILESDIR[+?]?=[ \t]*([^\n]+)\n/);
@@ -706,16 +707,17 @@ sub checkmakefile {
 	$scriptdir = $1 if ($whole =~ /\nSCRIPTDIR[+?]?=[ \t]*([^\n]+)\n/);
 	$scriptdir =~ s/\$\{.CURDIR\}/./;
 
-	$md5file = "$filesdir/md5";
-	$md5file = $1 if ($whole =~ /\nMD5_FILE[+?]?=[ \t]*([^\n]+)\n/);
-	$md5file =~ s/\$\{.CURDIR\}/./;
+	$digestfile = "$filesdir/md5";
+	$digestfile = $1 if ($whole =~ /\nDIGEST_FILE[+?]?=[ \t]*([^\n]+)\n/);
+	$digestfile =~ s/\$\{.CURDIR\}/./;
 
 	$patchsumfile = "$filesdir/patch-sum";
 	$patchsumfile = $1
 	    if ($whole =~ /\nPATCH_SUM_FILE[+?]?=[ \t]*([^\n]+)\n/);
 	$patchsumfile =~ s/\$\{.CURDIR\}/./;
 	print("OK: PATCHDIR: $patchdir, SCRIPTDIR: $scriptdir, ".
-	      "FILESDIR: $filesdir, PKGDIR: $pkgdir, MD5_FILE: $md5file, ".
+	      "FILESDIR: $filesdir, PKGDIR: $pkgdir, ".
+	      "DIGEST_FILE: $digestfile, ".
 	      "PATCH_SUM_FILE: $patchsumfile\n") if ($verbose);
 
 	#
@@ -760,6 +762,11 @@ sub checkmakefile {
 		&perror("FATAL: LIBTOOL_OVERRIDE is deprecated, ".
 			"try to use LTCONFIG_OVERRIDE instead.");
 	}
+	print "OK: checking MD5_FILE.\n" if ($verbose);
+	if ($whole =~ /\nMD5_FILE/) {
+		&perror("FATAL: MD5_FILE is deprecated, ".
+			"use DIGEST_FILE instead.");
+	}
 	print "OK: checking MIRROR_DISTFILE.\n" if ($verbose);
 	if ($whole =~ /\nMIRROR_DISTFILE/) {
 		&perror("WARN: use of MIRROR_DISTFILE deprecated, ".
@@ -772,8 +779,8 @@ sub checkmakefile {
 	}
 	print "OK: checking NO_PACKAGE.\n" if ($verbose);
 	if ($whole =~ /\nNO_PACKAGE/) {
-		&perror("WARN: use of NO_PACKAGE to enforce license restrictions ".
-		        "is deprecated.");
+		&perror("WARN: use of NO_PACKAGE to enforce license ".
+			"restrictions is deprecated.");
 	}
 	print "OK: checking for MKDIR.\n" if ($verbose);
 	if ($whole =~ m|\${MKDIR}.*(\${PREFIX}[/0-9a-zA-Z\${}]*)|) {
@@ -799,7 +806,7 @@ sub checkmakefile {
 	#
 	print "OK: checking direct use of command names.\n" if ($verbose);
 	foreach $i (split(/\s+/, <<EOF)) {
-awk basename cat chmod chown chgrp cp cut echo egrep false file find
+awk basename cat chmod chown chgrp cp cut digest echo egrep false file find
 gmake grep gtar gzcat id ident install ldconfig ln md5 mkdir mtree mv
 patch pax pkg_add pkg_create pkg_delete pkg_info rm rmdir sed setenv sh
 su tail test touch tr true type xmkmf
@@ -814,6 +821,10 @@ EOF
 	# use of echo itself.
 	$j = $whole;
 	$j =~ s/([ \t][\@-]?)(echo|\$[\{\(]ECHO[\}\)]|\$[\{\(]ECHO_MSG[\}\)])[ \t]+("(\\'|\\"|[^"])*"|'(\\'|\\"|[^'])*')[ \t]*[;\n]/$1$2;/;
+	# no need to check comments...
+	$j =~ s/\n#[\n]*/\n#/;
+	# ...nor COMMENTs
+	$j =~ s/\nCOMMENT[\t ]*=[\t ]*[^\n]*\n/\nCOMMENT=#replaced\n/;
 	foreach $i (keys %cmdnames) {
 		if ($j =~ /[ \t\/@]$i[ \t\n;]/) {
 			&perror("WARN: possible direct use of command \"$i\" ".
@@ -976,7 +987,7 @@ EOF
 			}
 		}
 	} else {
-		&perror("WARN: no MASTER_SITES found. is it ok?");
+		&perror("WARN: no MASTER_SITES found. Is this ok?");
 	}
 
 	# check DISTFILES and related items.
@@ -1018,6 +1029,11 @@ EOF
 				"if not, avoid \"-\" in version number ".
 				"part of ".
 				(($pkgname eq '') ? "DISTNAME." : "PKGNAME."));
+		}
+		# Be very smart. Kids, don't do this at home.
+		if ($k =~ /\$(\(|\{)([A-Z_-]+)(\)|\})/) {
+			$k1 = $2;
+			$k = $1 if ($rawwhole =~ /\n$k1[ \t]*?=[ \t]*([^\n]+)\n/);
 		}
 		if ($k =~ /^pl[0-9]*$/
 		 || $k =~ /^[0-9]*[A-Za-z]*[0-9]*(\.[0-9]*[A-Za-z]*[0-9]*)*$/) {
@@ -1142,10 +1158,8 @@ EOF
 
 	# check the order of items.
         @tocheck=split(/\s+/, <<EOF);
-MAINTAINER
+MAINTAINER HOMEPAGE COMMENT
 EOF
-	push(@tocheck,"HOMEPAGE");
-	push(@tocheck,"COMMENT");
 
         &checkorder('MAINTAINER', $tmp, @tocheck);
 
@@ -1182,7 +1196,7 @@ EOF
 	$tmp =~ s/\n\n+/\n/g;
 
 	push(@varnames, split(/\s+/, <<EOF));
-MAINTAINER HOMEPAGE
+MAINTAINER HOMEPAGE COMMENT
 EOF
 
 	#
@@ -1334,7 +1348,7 @@ EOF
 	# print "OK: checking RESTRICTED/NO_{SRC,BIN}_ON_CDROM/NO_PACKAGE.\n"
 	# if ($verbose);
 	# if ($committer && $tmp =~ /\n(RESTRICTED|NO_{SRC,BIN}_ON_CDROM|NO_PACKAGE)[+?]?=/) {
-	#	&perror("WARN: \"$1\" found. do not forget to update ".
+	#	&perror("WARN: \"$1\" found. Do not forget to update ".
 	#		"ports/LEGAL.");
 	# }
 
