@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/08/05 14:28:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/20 17:46:06 seb Exp $
 #
 
 DISTNAME=	Image-Info-1.10
@@ -13,11 +13,8 @@ COMMENT=	perl module to extract meta information from images
 
 DEPENDS+=	p5-IO-String>=1.01:../../devel/p5-IO-String
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Image/Info/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/22 06:34:58 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/20 17:46:03 seb Exp $
 #
 
 DISTNAME=	XML-Simple-1.08
@@ -12,11 +12,8 @@ COMMENT=	Easy Perl API to read/write XML
 
 DEPENDS+=       p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/Simple/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

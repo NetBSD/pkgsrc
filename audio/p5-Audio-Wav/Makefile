@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/26 01:46:41 grant Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/20 17:46:01 seb Exp $
 #
 
 DISTNAME=	Audio-Wav-0.02
@@ -10,11 +10,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://search.cpan.org/dist/Audio-Wav/
 COMMENT=	perl modules for reading & writing Microsoft WAV files
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Audio/Wav/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

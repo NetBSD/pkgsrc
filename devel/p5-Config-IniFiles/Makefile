@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/12/19 10:43:20 mjl Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/20 17:46:02 seb Exp $
 #
 
 DISTNAME=	Config-IniFiles-2.23
@@ -11,11 +11,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://sourceforge.net/projects/config-inifiles/
 COMMENT=	Perl module for reading .ini-style configuration files
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Config/IniFiles/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
