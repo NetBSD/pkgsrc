@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.197 1998/11/26 06:40:15 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.198 1998/11/26 23:39:15 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -17,7 +17,8 @@
 # NEVER override the "regular" targets unless you want to open
 # a major can of worms.
 
-# Let people know what's going on
+# Let people know this is bsd.pkg.mk, so they can set up their
+# /etc/mk.conf accordingly
 BSD_PKG_MK=1
 
 # Get the operating system type
