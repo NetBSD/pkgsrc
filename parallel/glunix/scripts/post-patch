@@ -17,4 +17,3 @@ mv bak glush/Makefile
 cd $WRKSRC/glunix
 sed "s+%%%NOW_ROOT%%%+$NOW_ROOT+" src/init/glunix.h > bak
 mv bak src/init/glunix.h
-

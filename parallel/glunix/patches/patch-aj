@@ -1,8 +1,10 @@
-$NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
+$NetBSD: patch-aj,v 1.2 2000/05/27 09:53:37 wiz Exp $
 
---- glunix/src/idle/didle_sysinfo.cc~	Thu Sep 18 12:04:55 1997
-+++ glunix/src/idle/didle_sysinfo.cc	Fri Feb 27 06:42:28 1998
-@@ -97,2 +97,12 @@
+--- glunix/src/idle/didle_sysinfo.cc.orig	Thu Sep 18 21:04:55 1997
++++ glunix/src/idle/didle_sysinfo.cc	Fri May 26 14:44:45 2000
+@@ -95,14 +95,29 @@
+ #include <kvm.h>
+ #include <nlist.h>
  #include <stdio.h>
 +
 +#ifdef __NetBSD__
@@ -15,7 +17,9 @@ $NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
 +#include <sys/sysctl.h>
 +#else
  #include <sys/proc.h>
-@@ -102,5 +112,10 @@
+ #include <sys/procfs.h>
+ #include <sys/sysinfo.h>
+ #include <sys/cpuvar.h>
  #include <sys/time.h>
 +#endif
 +
@@ -26,7 +30,11 @@ $NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
  #include <vm/anon.h>  // Contains defns for swap virtual memory info
 +#endif
  
-@@ -122,8 +137,47 @@
+ #include "clist.h"
+ #include "cidle.h"
+@@ -120,12 +135,51 @@
+ 
+ #define LOADDOUBLE(la) ((double)(la) / FSCALE)
  #define HASH(x) ((x) >> 1)
 +
 +#ifdef __NetBSD__
@@ -75,12 +83,25 @@ $NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
 +#else
 +
  /* definitions for indices in the nlist array */
-@@ -167,3 +221,3 @@
+ #define X_AVENRUN		 0
+ #define X_MPID			 1
+@@ -165,11 +219,11 @@
+ 
+ // These are offsets into kmem for the stats we need
  static ulong avenrunOffset, availrmemOffset, anoninfoOffset, swapfsOffset;
 -
 +#endif
  /*****************************************************************************/
-@@ -239,2 +293,41 @@
+ 
+ /* These two declarations are no longer necessary */
+-#ifdef 0
++#if 0
+ static int cpuStates[NUM_CPUSTATES];
+ static int memoryStats[5];
+ static char *cpuStateNames[] =
+@@ -237,6 +291,45 @@
+  *
+  * Side effects:
   *****************************************************************************/
 +#ifdef __NetBSD__
 +Bool
@@ -122,12 +143,20 @@ $NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
 +}
 +#else
  Bool
-@@ -303,3 +396,3 @@
+ Idle_InitializeSysinfo(void)
+ {
+@@ -301,7 +394,7 @@
+ 
+     return True;
  }
 -
 +#endif
  /******************************************************************************
-@@ -335,4 +428,9 @@
+  * Idle_CleanupSysinfo --
+  *    Description of purpose and function of the procedure
+@@ -333,18 +426,30 @@
+  *
+  * Side effects:
   *****************************************************************************/
 +#ifdef __NetBSD__
 +static ProcUsage *
@@ -137,7 +166,7 @@ $NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
  FindEntry(struct prpsinfo *targProc, double usage)
 +#endif
  {
-@@ -340,5 +438,8 @@
+     int         index, start;
      ProcUsage  *candidate;
 +#ifdef __NetBSD__
 +    index = HASH(pid);
@@ -147,7 +176,7 @@ $NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
      index = HASH(targProc->pr_pid);
 +#endif
      start = index;
-@@ -346,3 +447,7 @@
+     while (1) {
  	candidate = &(procUsageTable[index]);
 +#ifdef __NetBSD__
 +	if (candidate->pid == pid) {
@@ -155,7 +184,11 @@ $NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
  	if (candidate->pid == targProc->pr_pid) {
 +#endif
  	    /* Has this pid been recycled?  Are we hitting a very old process?
-@@ -355,3 +460,7 @@
+ 	       If so, then reset the entry */
+ 	    if (usage < candidate->cpuUsage) {
+@@ -353,7 +458,11 @@
+ 	    return candidate;
+ 	}
  	if (candidate->pid == -1) {
 +#ifdef __NetBSD__
 +	    candidate->pid = pid;
@@ -163,7 +196,11 @@ $NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
  	    candidate->pid = targProc->pr_pid;
 +#endif
  	    candidate->cpuUsage = 0;
-@@ -381,2 +490,8 @@
+ 	    return candidate;
+ 	}
+@@ -379,10 +488,17 @@
+  *
+  * Side effects:
   *****************************************************************************/
 +
 +#ifdef __NetBSD__
@@ -172,11 +209,16 @@ $NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
 +{
 +#else
  static void
-@@ -385,2 +500,3 @@
+ UpdateEntry(ProcUsage *entry, struct prpsinfo *proc, double usage)
+ {
      UNUSED_PARAM(proc);
 +#endif
      ASSERT(entry != NULL);
-@@ -410,3 +526,11 @@
+     entry->cpuUsage = usage;
+ }
+@@ -408,12 +524,24 @@
+ void
+ Idle_GetSysInfo(Idle_Load *total, Idle_Load *seq, List_List *glunixProcs)
  {
 +
 +#ifndef __NetBSD__
@@ -187,8 +229,21 @@ $NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
 +    size_t size;
 +#endif
 +
++#ifndef __NetBSD__
      int              fd;
-@@ -461,2 +585,29 @@
++#endif
+     int              activeMemory[2];
+     int              vmInUse[2];
+     int              cpuUsage[2];
++#ifndef __NetBSD__
+     struct dirent         *direntp;
++#endif
+     static struct timeval  lastTime = {0, 0};
+     struct timeval         currTime;
+     double                 alpha, beta;
+@@ -459,6 +587,33 @@
+     vmInUse[TOTAL] = 0; vmInUse[SEQUENTIAL] = 0;
+     cpuUsage[TOTAL] = 0; cpuUsage[SEQUENTIAL] = 0;
      numProcs = 0;
 +
 +#ifdef __NetBSD__
@@ -218,11 +273,19 @@ $NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
 +    }
 +#else
      rewinddir(procdir);
-@@ -495,2 +646,3 @@
+     
+     while ((direntp = readdir(procdir)) != 0) {
+@@ -493,6 +648,7 @@
+ 	(void) close(fd);
+ 	numProcs++;
      }
 +#endif
      total->mem = activeMemory[TOTAL];
-@@ -505,6 +657,15 @@
+     total->cpu = cpuUsage[TOTAL];
+     seq->mem = activeMemory[SEQUENTIAL];
+@@ -503,10 +659,21 @@
+ void
+ Idle_GetSystemInfo(Idle_SystemLoad *sysLoad)
  {
 -    struct anoninfo anoninfo;
 +#ifndef __NetBSD__
@@ -234,13 +297,19 @@ $NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
 +#else
 +    int i;
 +    double  avenrun[3];
-+    struct  vmmeter sum;
++    int mib[2];
++    struct vmtotal total;
++    int sizeofvmtotal;
 +    struct  swapent *sep;
 +    int     totalsize, size, totalinuse, inuse, ncounted;
 +    int     rnswap, nswap;
 +#endif
  
-@@ -517,3 +678,37 @@
+     if (kd == NULL) {
+ 	sysLoad->loadAvg[0] = 0;
+@@ -515,7 +682,48 @@
+ 	sysLoad->memory = 0;
+ 	return;
      }
 +#ifdef __NetBSD__
  
@@ -249,7 +318,6 @@ $NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
 +	sysLoad->loadAvg[i] = avenrun[i];
 +    }
 +
-+    kvm_read(kd, cnt_offset, (int *)(&sum), sizeof(sum));
 +    sep = NULL;
 +    do {
 +        nswap = swapctl(SWAP_NSWAP, 0, 0);
@@ -275,10 +343,24 @@ $NetBSD: patch-aj,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
 +    if (sep)
 +            free(sep);
 +
-+    sysLoad->memory = PAGETOK(dbtob(totalsize) - dbtob(totalinuse) + sum.v_free_count);
++    sizeofvmtotal = sizeof(total);
++    mib[0] = CTL_VM;
++    mib[1] = VM_METER;
++    if (sysctl(mib, 2, &total, &sizeofvmtotal, NULL, 0) < 0) {
++            printf("Can't get vmtotals: %s\n",
++                strerror(errno));
++            memset(&total, 0, sizeof(total));
++    }
++    sysLoad->memory = PAGETOK(dbtob(totalsize) - dbtob(totalinuse) + total.t_free);
 +#else
      /* get load average array */
-@@ -541,2 +736,3 @@
+     ReadKernelData(avenrunOffset, (char *) avenrun, sizeof (avenrun));
+     //
+@@ -539,6 +747,7 @@
+     sysLoad->memory = PAGETOK(MAX(ani_max - ani_resv, 0) +
+ 			      availrmem - swapfs_minfree);
  
 +#endif
      return;
+ }
+ 
