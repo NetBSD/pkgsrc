@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.5 2001/06/20 12:51:53 jtb Exp $
+
+--- doc/plplotdoc-info-0.4.1/plplotdoc.info.orig	Wed Jun 20 12:44:22 2001
++++ doc/plplotdoc-info-0.4.1/plplotdoc.info
+@@ -1,6 +1,11 @@
+ This is info/plplotdoc.info, produced by makeinfo version 4.0 from
+ plplotdoc.texi.
+ 
++INFO-DIR-SECTION Plotting
++START-INFO-DIR-ENTRY
++* PLplot: (plplotdoc).   	The PLplot plotting library
++END-INFO-DIR-ENTRY
++
+ 
+ Indirect:
+ plplotdoc.info-1: 84
