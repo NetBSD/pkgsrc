@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/25 21:49:28 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/09/25 15:59:59 wulf Exp $
 # FreeBSD: ports/devel/sdcc/Makefile,v 1.5 2000/04/15 15:13:38 knu Exp
 
 DISTNAME=	sdcc-2.1.9Ea
@@ -24,5 +24,9 @@ post-extract:
 	${MKDIR} ${WRKDIR}/include
 	${LN} -fs /usr/include/sys/endian.h ${WRKDIR}/include
 .endif
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sdcc
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/sdcc
 
 .include "../../mk/bsd.pkg.mk"
