@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/10/10 09:48:35 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/11/27 01:22:26 minskim Exp $
 
-DISTNAME=	moss-0.1.11
+DISTNAME=	moss-0.1.13
 CATEGORIES=	audio
-MASTER_SITES=	http://kldp.net/download.php/1534/
+MASTER_SITES=	http://kldp.net/frs/download.php/1580/
 
 MAINTAINER=	myunggoni@users.kldp.net
 HOMEPAGE=	http://moss.kldp.net/
