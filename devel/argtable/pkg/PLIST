@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/08 18:10:04 jlam Exp $
+include/argtable.h
+lib/libargtable.a
+man/man3/arg_catargs.3
+man/man3/arg_dump.3
+man/man3/arg_glossary.3
+man/man3/arg_record.3
+man/man3/arg_scanargv.3
+man/man3/arg_scanstr.3
+man/man3/arg_syntax.3
+man/man3/arg_typestr.3
+share/doc/argtable/COPYING.LIB
+@dirrm share/doc/argtable
