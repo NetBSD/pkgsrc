@@ -1,8 +1,26 @@
-$NetBSD: patch-ad,v 1.8 2002/10/28 22:37:11 wiz Exp $
+$NetBSD: patch-ad,v 1.9 2003/11/14 15:05:09 fredb Exp $
 
---- driver/Makefile.in.orig	Fri Oct 25 23:20:06 2002
+--- driver/Makefile.in.orig	2003-09-07 19:00:00.000000000 -0500
 +++ driver/Makefile.in
-@@ -452,7 +452,7 @@ install-pam:
+@@ -16,7 +16,7 @@ exec_prefix	= @exec_prefix@
+ bindir		= @bindir@
+ #datadir	= @datadir@
+ datadir		= $(GNOME_DATADIR)
+-localedir	= $(datadir)/locale
++localedir	= /usr/X11R6/share/locale
+ mandir		= @mandir@
+ mansuffix	= 1
+ manNdir		= $(mandir)/man$(mansuffix)
+@@ -39,7 +39,7 @@ CC		= @CC@
+ CFLAGS		= @CFLAGS@
+ LDFLAGS		= @LDFLAGS@
+ DEFS		= @DEFS@
+-INTL_DEFS	= -DLOCALEDIR=\"$(localedir)\"
++INTL_DEFS	= -DLOCALEDIR="\"/usr/X11R6/share/locale\""
+ SUBP_DEFS	= $(DEFS) -DDEFAULT_PATH_PREFIX='"@HACKDIR@"'
+ GTK_DEFS	= $(DEFS) -DDEFAULT_ICONDIR='"$(GLADE_DATADIR)"'
+ CONF_DEFS	= -DHACK_CONFIGURATION_PATH='"$(HACK_CONF_DIR)"'
+@@ -456,7 +456,7 @@ install-pam:
  	  fi ;								\
  	fi
  
@@ -11,7 +29,35 @@ $NetBSD: patch-ad,v 1.8 2002/10/28 22:37:11 wiz Exp $
  	@lost=""							     ;\
           if [ "$(GNOME_DATADIR)" != "" ]; then                                \
  	                                                                      \
-@@ -527,7 +527,7 @@ install-gnome:: screensaver-properties.d
+@@ -464,10 +464,6 @@ install-gnome:: screensaver-properties.d
+              echo $(INSTALL_DIRS) "$(install_prefix)$(GNOME_CCDIR_1)"        ;\
+                   $(INSTALL_DIRS) "$(install_prefix)$(GNOME_CCDIR_1)"        ;\
+            fi                                                                ;\
+-           if [ ! -d "$(install_prefix)$(GNOME_CCDIR_2)" ]; then              \
+-             echo $(INSTALL_DIRS) "$(install_prefix)$(GNOME_CCDIR_2)"        ;\
+-                  $(INSTALL_DIRS) "$(install_prefix)$(GNOME_CCDIR_2)"        ;\
+-           fi                                                                ;\
+            if [ ! -d "$(install_prefix)$(GNOME_CCDIR_3)" ]; then              \
+              echo $(INSTALL_DIRS) "$(install_prefix)$(GNOME_CCDIR_3)"        ;\
+                   $(INSTALL_DIRS) "$(install_prefix)$(GNOME_CCDIR_3)"        ;\
+@@ -488,16 +484,6 @@ install-gnome:: screensaver-properties.d
+            fi                                                                ;\
+ 	                                                                      \
+            echo $(INSTALL_DATA) screensaver-properties.desktop		      \
+-             $(install_prefix)$(GNOME_CCDIR_2)/screensaver-properties.desktop;\
+-	                                                                      \
+-           if   $(INSTALL_DATA) screensaver-properties.desktop		      \
+-             $(install_prefix)$(GNOME_CCDIR_2)/screensaver-properties.desktop;\
+-             then true                                                       ;\
+-           else                                                               \
+-             lost="$$lost $(install_prefix)$(GNOME_CCDIR_2)"                 ;\
+-           fi                                                                ;\
+-	                                                                      \
+-           echo $(INSTALL_DATA) screensaver-properties.desktop		      \
+              $(install_prefix)$(GNOME_CCDIR_3)/screensaver-properties.desktop;\
+ 	                                                                      \
+            if   $(INSTALL_DATA) screensaver-properties.desktop		      \
+@@ -531,7 +517,7 @@ install-gnome:: screensaver-properties.d
             fi                                                                ;\
           fi
  
@@ -20,3 +66,12 @@ $NetBSD: patch-ad,v 1.8 2002/10/28 22:37:11 wiz Exp $
  	@if [ "$(GNOME_DATADIR)" != "" ]; then                                \
             if [ ! -d "$(install_prefix)$(GNOME_BINDIR)" ]; then               \
               echo $(INSTALL_DIRS) "$(install_prefix)$(GNOME_BINDIR)"         ;\
+@@ -630,8 +616,6 @@ uninstall-gnome::
+           f=screensaver-properties.desktop                                   ;\
+           echo rm -f $(install_prefix)$(GNOME_CCDIR_1)/$$f                   ;\
+                rm -f $(install_prefix)$(GNOME_CCDIR_1)/$$f                   ;\
+-          echo rm -f $(install_prefix)$(GNOME_CCDIR_2)/$$f                   ;\
+-               rm -f $(install_prefix)$(GNOME_CCDIR_2)/$$f                   ;\
+           echo rm -f $(install_prefix)$(GNOME_CCDIR_3)/$$f                   ;\
+                rm -f $(install_prefix)$(GNOME_CCDIR_3)/$$f                   ;\
+           echo rm -f $(install_prefix)$(GNOME_PANELDIR)/$$f                  ;\
