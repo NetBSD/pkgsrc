@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2000/02/05 16:05:42 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2000/07/09 21:12:55 tron Exp $
 
-DISTNAME=	wmthemes-0.6x
+DISTNAME=	wmthemes-0.62.x
 CATEGORIES=	x11
-MASTER_SITES=	http://wm.themes.org/WMThemes/
+MASTER_SITES=	http://download.themes.org/wm/
 DISTFILES=	${THEME_FILES}
 
 MAINTAINER=	packages@netbsd.org
@@ -14,9 +14,7 @@ DIST_SUBDIR=	wmthemes
 
 USE_X11BASE=	yes
 NO_BUILD=	yes
-NO_CONFIGURE=	yes
 NO_CHECKSUM=	yes
-NO_PATCH=	yes
 NO_WRKSUBDIR=	yes
 
 PLIST_SRC=	${WRKDIR}/PLIST
@@ -27,7 +25,7 @@ BUILD_DEFS+=	WINDOWMAKER_THEMES
 
 .include "../../mk/bsd.prefs.mk"
 
-WINDOWMAKER_THEMES?=	FreeBSD-theme
+WINDOWMAKER_THEMES?=	FreeBSD-theme-0.52
 
 do-install:
 	@${RM} -f ${PLIST_SRC}
@@ -42,6 +40,20 @@ do-install:
 	  done; \
 	fi
 .endfor
+	@cd ${WRKSRC}; \
+	for DIR in *.themed; do \
+	  if [ -d "$$DIR" ] && [ -n "`ls "$$DIR"`" ]; then \
+	    ${ECHO} "Installing \"$${DIR%.*}\" theme."; \
+	    ${MKDIR} "${PREFIX}/${WM_DATADIR}/Themes/$$DIR"; \
+	    cd "${WRKSRC}/$$DIR"; \
+	    for FILE in *; do \
+	      ${INSTALL_DATA} "$$FILE" "${PREFIX}/${WM_DATADIR}/Themes/$$DIR"; \
+	      ${ECHO} "${WM_DATADIR}/Themes/$$DIR/$$FILE" >>${PLIST_SRC}; \
+	    done; \
+	    cd ..; \
+	    ${ECHO} "@dirrm ${WM_DATADIR}/Themes/$$DIR" >>${PLIST_SRC}; \
+	  fi; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
 
