@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.109 2004/03/11 05:13:31 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.110 2004/03/11 05:15:23 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -65,10 +65,7 @@ PREPEND_PATH+=	${BUILDLINK_DIR}/bin
 BUILDLINK_DEPENDS?=	# empty
 
 .if defined(USE_X11)
-USE_X11_LINKS?=			YES
-.  if !empty(USE_X11_LINKS:M[yY][eE][sS])
-.    include "../../pkgtools/x11-links/buildlink3.mk"
-.  endif
+.  include "../../pkgtools/x11-links/buildlink3.mk"
 .endif
 
 # For each package we use, check whether we are using the built-in
