@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.592 2000/10/23 17:32:06 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.593 2000/10/26 16:09:54 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2250,7 +2250,7 @@ clean-depends-list:
 		case "$$CLEAN_DEPENDS_LIST_SEEN" in			\
 		*" "$$dir" "*)  ;; 					\
 		*) 							\
-			CLEAN_DEPENDS_LIST_SEEN=" $$dir `cd ${.CURDIR} ; cd $$dir && ${MAKE} ${MAKEFLAGS} CLEAN_DEPENDS_LIST_SEEN="$$CLEAN_DEPENDS_LIST_SEEN" CLEAN_DEPENDS_LIST_TOP=NO clean-depends-list)`";\
+			CLEAN_DEPENDS_LIST_SEEN=" $$dir `cd ${.CURDIR} ; cd $$dir && ${MAKE} ${MAKEFLAGS} CLEAN_DEPENDS_LIST_SEEN="$$CLEAN_DEPENDS_LIST_SEEN" CLEAN_DEPENDS_LIST_TOP=NO clean-depends-list`";\
 			;;						\
 		esac							\
 	done ;								\
