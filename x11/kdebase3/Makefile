@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/02/04 18:06:50 skrll Exp $
+# $NetBSD: Makefile,v 1.17.2.1 2003/03/02 10:24:17 agc Exp $
 
 DISTNAME=	kdebase-3.0.5a
 PKGREVISION=	3
@@ -25,6 +25,9 @@ CONFIGURE_ARGS+=	--without-vorbis
 
 .if ${OPSYS} == "NetBSD"
 LIBS+=			${EXPORT_SYMBOLS_LDFLAGS}
+.if exists(/usr/include/machine/apmvar.h)
+CPPFLAGS+=		-D__NetBSD_APM__
+.endif
 .endif
 
 PLIST_SRC=		${WRKDIR}/PLIST.Xdpms

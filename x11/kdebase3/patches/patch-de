@@ -1,10 +1,12 @@
-$NetBSD: patch-de,v 1.2 2002/08/25 19:23:45 jlam Exp $
+$NetBSD: patch-de,v 1.2.2.1 2003/03/02 10:24:18 agc Exp $
 
 --- ksysguard/ksysguardd/FreeBSD/apm.c.orig	Tue Sep 18 15:03:53 2001
 +++ ksysguard/ksysguardd/FreeBSD/apm.c
-@@ -20,7 +20,13 @@
+@@ -20,6 +20,14 @@
  */
  
++#if defined(__NetBSD_APM__)
++
  #include <fcntl.h>
 +#if defined(__NetBSD__)
 +#include <machine/apmvar.h>
@@ -15,9 +17,7 @@ $NetBSD: patch-de,v 1.2 2002/08/25 19:23:45 jlam Exp $
 +#endif
  #include <stdio.h>
  
- #include "Command.h"
-@@ -62,13 +68,22 @@
- int
+@@ -63,6 +71,14 @@ int
  updateApm(void)
  {
 -	struct apm_info info;
@@ -33,10 +33,32 @@ $NetBSD: patch-de,v 1.2 2002/08/25 19:23:45 jlam Exp $
 +	struct apm_info info;
  
  	retval = ioctl(ApmFD, APMIO_GETINFO, &info);
- 
+@@ -70,4 +86,5 @@ updateApm(void)
  	BattFill = info.ai_batt_life;
  	BattTime = info.ai_batt_time;
 +#endif
  
  	return retval;
+@@ -97,2 +114,22 @@ printApmBatTimeInfo(const char* c)
+ 	fprintf(CurrentClient, "Remaining battery time\t0\t0\tmin\n");
  }
++
++#else
++
++void
++initApm(void)
++{
++}
++
++void
++exitApm(void)
++{
++}
++
++int
++updateApm(void)
++{
++	return -1;
++}
++
++#endif
