@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/07/03 23:30:09 tron Exp $
+# $NetBSD: Makefile,v 1.8 1998/07/15 12:01:41 agc Exp $
 #
 
 DISTNAME=	compat11
@@ -20,9 +20,6 @@ PLIST_SRC=	${WRKSRC}/.PLIST
 
 pre-configure:
 	@${INSTALL} -c -m 755 ${FILESDIR}/configure ${WRKSRC}
-
-post-install:
-	${LDCONFIG} || ${TRUE}
 
 .include "../../mk/bsd.pkg.mk"
 

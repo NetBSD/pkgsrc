@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/07/04 09:18:56 mycroft Exp $
+# $NetBSD: Makefile,v 1.11 1998/07/15 12:14:24 agc Exp $
 
 DISTNAME=		Wine-980614
 PKGNAME=		wine-980614
@@ -19,7 +19,6 @@ CONFIGURE_ARGS+= --enable-dll
 WRKSRC=		${WRKDIR}/${PKGNAME}
 
 post-install:
-	${LDCONFIG} || ${TRUE}
 	${INSTALL_DATA} ${WRKSRC}/wine.ini ${PREFIX}/etc/wine.conf.example
 
 .include "../../mk/bsd.pkg.mk"
