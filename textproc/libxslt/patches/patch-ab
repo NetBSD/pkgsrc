@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2002/10/03 14:06:17 martti Exp $
+$NetBSD: patch-ab,v 1.7 2003/02/24 20:45:19 jmmv Exp $
 
---- doc/Makefile.in.orig	Thu Sep 26 20:59:32 2002
-+++ doc/Makefile.in	Thu Oct  3 12:44:13 2002
-@@ -124,7 +124,7 @@
+--- doc/Makefile.in.orig	2003-02-10 18:00:22.000000000 +0100
++++ doc/Makefile.in
+@@ -128,7 +128,7 @@ EXTRA_DIST = \
  
  
  # The name of the module.
@@ -11,16 +11,19 @@ $NetBSD: patch-ab,v 1.6 2002/10/03 14:06:17 martti Exp $
  
  # The top-level SGML file.
  DOC_MAIN_SGML_FILE = libxslt.sgml
-@@ -134,7 +134,7 @@
+@@ -136,9 +136,9 @@ DOC_MAIN_SGML_FILE = libxslt.sgml
+ # The directory containing the source code (if it contains documentation).
+ DOC_SOURCE_DIR = ..
  
- HTML_DIR = @HTML_DIR@
+-HTML_DIR = $(datadir)/doc
++HTML_DIR = $(datadir)/doc/html
  
 -TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)/html
 +TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)
  PAGES = API.html bugs.html contribs.html docs.html downloads.html \
         help.html index.html intro.html news.html xsltproc2.html FAQ.html
  
-@@ -351,7 +351,6 @@
+@@ -353,7 +353,6 @@ install-data-local: 
  	-@INSTALL@ -m 0644 $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR)
  	$(mkinstalldirs) $(DESTDIR)$(TARGET_DIR)/tutorial
  	-@INSTALL@ -m 0644 $(srcdir)/tutorial/* $(DESTDIR)$(TARGET_DIR)/tutorial
