@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/11/27 14:11:15 taca Exp $
+$NetBSD: MESSAGE,v 1.2 2004/11/30 17:16:11 taca Exp $
 
 Note that a number of packages which are installed as default with
 the Ruby 1.8 distribution are provided as separate packages:
@@ -11,6 +11,7 @@ the Ruby 1.8 distribution are provided as separate packages:
 	security/ruby-digest:		message digest module
 	security/ruby-openssl:		OpenSSL module
 	devel/ruby-readline:		readline module
+	devel/ruby-zlib:		Zlib module
 	x11/ruby-tcltklib:		Tcl/Tk libraries
 	x11/ruby-tk:			Tk modules
 
