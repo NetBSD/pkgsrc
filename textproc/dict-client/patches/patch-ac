@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/07/27 22:00:22 tron Exp $
+
+--- Makefile.in.orig	Mon Jul  6 00:09:59 1998
++++ Makefile.in	Tue Jul 27 23:55:26 1999
+@@ -141,8 +141,8 @@
+ 	$(CC) -c $(XTRACFLAGS) $(CFLAGS) -Wno-implicit $<
+ 
+ install.dict: dict
+-	install dict $(bindir)
+-	install -m 644 dict.1 $(man1_prefix)
++	${BSD_INSTALL_PROGRAM} dict $(bindir)
++	${BSD_INSTALL_MAN} dict.1 $(man1_prefix)
+ 
+ install.dictzip: dictzip
+ 	install dictzip $(bindir)

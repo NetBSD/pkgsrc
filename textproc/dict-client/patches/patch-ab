@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/27 22:00:22 tron Exp $
+
+*** configure.orig	Tue Jul 13 23:04:36 1999
+--- configure	Tue Jul 13 23:06:29 1999
+***************
+*** 47,50 ****
+--- 47,51 ----
+  build=NONE
+  cache_file=./config.cache
++ etcdir=/etc
+  exec_prefix=NONE
+  host=NONE
+***************
+*** 52,55 ****
+--- 53,57 ----
+  nonopt=NONE
+  no_recursion=
++ piddir=/var/run
+  prefix=NONE
+  program_prefix=NONE
+***************
+*** 550,556 ****
+  
+  
+- prefix=/usr
+- etcdir=/etc
+- piddir=/var/run
+  
+  echo Configuring for dict
+--- 552,555 ----
