@@ -1,0 +1,15 @@
+$NetBSD: patch-ce,v 1.1.2.2 2004/10/26 11:09:16 agc Exp $
+
+--- toolkit/mozapps/installer/unix/wizard/Makefile.in.orig	2004-08-27 05:57:00.000000000 +1000
++++ toolkit/mozapps/installer/unix/wizard/Makefile.in
+@@ -60,6 +60,10 @@ LIBS        = \
+         -lpthread \
+         $(NULL)
+ 
++ifeq ($(OS_ARCH),SunOS)
++LIBS    += -lnsl
++endif
++
+ EXTRA_DEPS = \
+ 	$(DIST)/lib/$(LIB_PREFIX)jar50_s.$(LIB_SUFFIX) \
+ 	$(DIST)/lib/$(LIB_PREFIX)xpnet_s.$(LIB_SUFFIX) \
