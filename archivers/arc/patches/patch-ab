@@ -1,12 +1,24 @@
-$NetBSD: patch-ab,v 1.2 2002/06/10 15:09:17 schmonz Exp $
+$NetBSD: patch-ab,v 1.3 2004/04/10 23:31:27 minskim Exp $
 
---- arcdos.c.orig	Tue Apr 14 18:58:21 1992
-+++ arcdos.c	Sun Jun  9 12:01:30 2002
-@@ -173,14 +173,21 @@
+--- arcdos.c.orig	1992-04-14 17:58:21.000000000 -0500
++++ arcdos.c
+@@ -31,7 +31,11 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #if	BSD
++#ifdef __linux__
++#include <time.h>
++#else
+ #include <sys/time.h>
++#endif
+ #else	
+ #include <time.h>		/* Sys V. Bleah. */
+ struct	timeval {
+@@ -173,14 +177,21 @@ setstamp(f, date, time)		/* set a file's
  	struct tm	tm;
  	struct timeval  tvp[2];
  	int	utimes();
-+#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__APPLE__)
++#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__APPLE__) && !defined(__linux__) && !defined(__sgi__)
  	long	tmclock();
 +#endif
  	tm.tm_sec = (time & 31) * 2;
@@ -16,7 +28,7 @@ $NetBSD: patch-ab,v 1.2 2002/06/10 15:09:17 schmonz Exp $
  	tm.tm_mon = ((date >> 5) & 15) - 1;
  	tm.tm_year = (date >> 9) + 80;
 +	tm.tm_isdst = -1;
-+#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__APPLE__)
++#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(__APPLE__) && !defined(__linux__) && !defined(__sgi__)
  	tvp[0].tv_sec = tmclock(&tm);
 +#else
 +	tvp[0].tv_sec = mktime(&tm);
