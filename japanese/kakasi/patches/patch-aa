@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.6 2001/01/25 12:29:52 taca Exp $
+
+--- lib/libkakasi.c.orig	Sun Jan 21 17:28:04 2001
++++ lib/libkakasi.c
+@@ -105,6 +105,12 @@
+ static int digest PARAMS((Character *c, int clen, Character *r, int rlen, int type, int (*proc)(void)));
+ static void digest_shift PARAMS((Character *c, int s));
+ #else /* LIBRARY */
++void digest_start_copy PARAMS((Character *c, Character *r));
++void put_separator PARAMS((void));
++void putchars PARAMS((Character *results));
++void digest_out PARAMS((Character *c, int ret));
++int digest PARAMS((Character *c, int clen, Character *r, int rlen, int type, int (*proc)(void)));
++void digest_shift PARAMS((Character *c, int s));
+ static void free_jisyo PARAMS((void));
+ #endif /* LIBRARY */
+ 
+@@ -495,7 +501,7 @@
+ 
+ char *
+ kakasi_do(str)
+-     char *str;
++     unsigned char *str;
+ {
+     Character c[KAKASIBUF], r[KAKASIBUF];
+     int clen, ptype, pctype;
