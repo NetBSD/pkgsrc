@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.28 2002/12/05 11:59:46 jmmv Exp $
+$NetBSD: TODO,v 1.29 2002/12/05 12:22:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -126,7 +126,7 @@ Suggested package updates
 	o gnome-python-1.4.4
 	o gnome-python-1.99.13
 	o gnomeicu-0.99beta
-	o gnucash-1.7.4
+	o gnucash-1.7.5 [devel]
 	o gnumeric-1.1.11 [devel]
 	o gnustep-1.5.1
 	o gnustep-gui-0.8.3
@@ -185,7 +185,6 @@ Suggested package updates
 	o openoffice-643 [post-1.0.1]
 	o openssh-3.5p1
 	o opensp-1.5
-	o opera-6.11
 	o oss-397f
 	o pen-0.9.5 [pkg/19216]
 	o phoenix-0.4
@@ -228,7 +227,7 @@ Suggested package updates
 	o sylpheed-claws-0.8.6
 	o tcl/tk-8.4.1 [bjoern]
 	o tightvnc-1.2.7
-	o ttf2pt1-3.4.2
+	o ttf2pt1-3.4.3
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o wine-20021125
