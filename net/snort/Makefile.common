@@ -1,21 +1,17 @@
-# $NetBSD: Makefile.common,v 1.6.2.1 2003/03/07 07:46:24 jmc Exp $
+# $NetBSD: Makefile.common,v 1.6.2.2 2003/04/16 15:43:45 grant Exp $
 #
 
-DISTNAME=	snort-1.9.1
+DISTNAME=	snort-2.0.0
 CATEGORIES=	net security
-MASTER_SITES=	http://www.snort.org/releases/				\
+MASTER_SITES=	http://www.snort.org/dl/				\
 		ftp://the.wiretapped.net/pub/security/network-intrusion-detection/snort/ \
-		http://www.centus.com/snort/				\
-		http://snort.whitehats.com/				\
-		http://snort.safenetworks.com/				\
-		ftp://gd.tuwien.ac.at/infosys/security/snort/		\
-		http://snort.sourcefire.com/releases/
+		ftp://gd.tuwien.ac.at/infosys/security/snort/dl/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	salo@netbsd.org
 HOMEPAGE=	http://www.snort.org/
 
-USE_PKGINSTALL=		YES
-GNU_CONFIGURE=		YES
+USE_PKGINSTALL=	YES
+GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--with-libpcap-includes=${BUILDLINK_PREFIX.libpcap}/include
 CONFIGURE_ARGS+=	--with-libpcap-libraries=${BUILDLINK_PREFIX.libpcap}/lib
@@ -56,7 +52,7 @@ post-install:
 	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/snort/rules
 	cd ${WRKSRC}/etc ; \
-	for i in *.map *.txt sid ; do \
+	for i in *.map sid ; do \
 		${INSTALL_DATA} $$i ${PREFIX}/share/snort/rules ; \
 	done
 	cd ${WRKSRC}/rules ; \
