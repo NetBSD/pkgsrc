@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4769 2004/02/10 13:00:08 grant Exp $
+$NetBSD: CHANGES,v 1.4770 2004/02/10 13:25:46 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -760,3 +760,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Deleted firefox-bin-flash [grant 2004-02-10]
 	Deleted firefox-bin-java [grant 2004-02-10]
 	Deleted firefox-bin-realplayer [grant 2004-02-10]
+	Added firefox-bin-nightly [grant 2004-02-10]
+	Added firefox-gtk2-bin-nightly [grant 2004-02-10]
+	Deleted firefox-gtk2-bin-nightly [grant 2004-02-10]
