@@ -1,0 +1,8 @@
+  DBD::Sybase is built upon the DBI, the generic Perl Database
+Interface.  It brings you an identical interface to a broad
+variety of databases and is in this regard comparable to ODBC.
+The advantage of the DBI approach is portability and
+interoperability.
+
+  The Sybase backend allows access to Sybase and Microsoft-SQL
+servers.
