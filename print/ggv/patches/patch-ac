@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2000/03/24 18:27:14 jlam Exp $
+
+--- gtkgs.c.orig	Fri Aug 20 17:51:34 1999
++++ gtkgs.c	Fri Mar 24 09:09:01 2000
+@@ -203,7 +203,7 @@
+         gs->height = -1;
+         gs->busy      = FALSE;
+         gs->changed   = FALSE;
+-        gs->gs_scan_pdf_cmd = "gs -dNODISPLAY -dQUIET -sPDFname=%s -sDSCname=%s pdf2dsc.ps -c quit";
++        gs->gs_scan_pdf_cmd = GS_PATH " -dNODISPLAY -dQUIET -sPDFname=%s -sDSCname=%s pdf2dsc.ps -c quit";
+         gs->gs_uncompress_cmd = "gzip -cd %s > %s";
+         gs->gs_scanstyle = 0;
+ 	gs->gs_filename_raw = 0;
