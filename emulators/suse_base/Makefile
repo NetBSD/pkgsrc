@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/11/25 11:01:13 schmonz Exp $
+# $NetBSD: Makefile,v 1.34 2002/11/25 11:16:02 schmonz Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -11,7 +11,7 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package
 
-CONFLICTS=		linux_SuSE-5.3 linux_lib-2.4
+CONFLICTS=		linux_SuSE-5.3 linux_lib-2.4 linuxppc_lib-[0-9]*
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z[C-Z]-i386 NetBSD-1.6*-i386 NetBSD-*-powerpc
 
 USE_BUILDLINK2=		# defined
