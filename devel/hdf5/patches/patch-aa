@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2003/08/04 17:27:01 jtb Exp $
+$NetBSD: patch-aa,v 1.7 2005/02/25 09:10:18 adam Exp $
 
---- config/commence.in.orig	2003-08-04 17:55:43.000000000 +0100
-+++ config/commence.in	2003-08-04 17:56:24.000000000 +0100
-@@ -59,7 +59,7 @@
+--- config/commence.in.orig	2004-01-07 18:45:06.000000000 +0000
++++ config/commence.in
+@@ -60,7 +60,7 @@ LT_UNINSTALL=$(LT) --mode=uninstall $(RM
  ## defined. The main makefile is free to redefine these to something else.
  DOCDIR=$(docdir)
  SUBDOCDIR=
