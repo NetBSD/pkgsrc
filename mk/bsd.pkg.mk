@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1214 2003/07/13 06:44:02 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1215 2003/07/13 13:10:43 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -217,12 +217,6 @@ CONFIGURE_ENV+=	F77="${F77}"
 CONFIGURE_ENV+=	FFLAGS="${FFLAGS}"
 MAKE_ENV+=	F77="${F77}"
 MAKE_ENV+=	FC="${FC}"
-.endif
-
-# Ensure the correct rpath is passed to the linker to enable packages
-# to find shared libraries from gcc.
-.if defined(USE_GCC_SHLIB)
-.  include "../../mk/gcc.buildlink2.mk"
 .endif
 
 # Automatically increase process limit where necessary for building.
