@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:31 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:54 jlam Exp $
 #
 # This Makefile fragment is included by packages that use lesstif.
 #
@@ -16,7 +16,7 @@ LESSTIF_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.lesstif?=	lesstif>=0.91.4
 DEPENDS+=	${BUILDLINK_DEPENDS.lesstif}:../../x11/lesstif
 
-EVAL_PREFIX+=			BUILDLINK_PREFIX.lesstif=lesstif
+EVAL_PREFIX+=	BUILDLINK_PREFIX.lesstif=lesstif
 BUILDLINK_PREFIX.lesstif_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.lesstif=	include/Mrm/*
 BUILDLINK_FILES.lesstif+=	include/Xm/*

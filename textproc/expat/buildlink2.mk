@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:25 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:51 jlam Exp $
 #
 # This Makefile fragment is included by packages that use expat.
 #
@@ -16,7 +16,8 @@ EXPAT_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.expat?=	expat>=1.95.2
 DEPENDS+=	${BUILDLINK_DEPENDS.expat}:../../textproc/expat
 
-BUILDLINK_PREFIX.expat=		${LOCALBASE}
+EVAL_PREFIX+=	BUILDLINK_PREFIX.expat=expat
+BUILDLINK_PREFIX.expat_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.expat=		include/expat.h
 BUILDLINK_FILES.expat+=		lib/libexpat.*
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:17 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:43 jlam Exp $
 #
 # This Makefile fragment is included by packages that use perl.
 #
@@ -17,7 +17,8 @@ PERL5_BUILDLINK2_MK=  # defined
 PERL5_REQD?=			5.0
 BUILDLINK_DEPENDS.perl?=	perl>=${PERL5_REQD}
 
-BUILDLINK_PREFIX.perl?=	${LOCALBASE}
+EVAL_PREFIX+=		BUILDLINK_PREFIX.perl=perl
+BUILDLINK_PREFIX.perl_DEFAULT=	${LOCALBASE}
 PERL5?=			${BUILDLINK_PREFIX.perl}/bin/perl
 
 DEPENDS+=		${BUILDLINK_DEPENDS.perl}:../../lang/perl5

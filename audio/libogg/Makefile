@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/01/04 13:27:05 tron Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2002/06/06 06:54:33 jlam Exp $
 
 DISTNAME=	libogg-1.0rc3
 PKGNAME=	libogg-1.0.0.7
@@ -9,10 +9,10 @@ MAINTAINER=	lukem@netbsd.org
 HOMEPAGE=	http://www.xiph.org/ogg/
 COMMENT=	Ogg project codecs library
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2_ONLY=	YES
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 

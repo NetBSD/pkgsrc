@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2002/04/25 12:17:04 agc Exp $
+$NetBSD: distinfo,v 1.10.2.1 2002/06/06 06:54:44 jlam Exp $
 
 SHA1 (ORBit-0.5.15.tar.gz) = 1571976662311060175008d225de05e9bc2eb038
 Size (ORBit-0.5.15.tar.gz) = 1335272 bytes
 SHA1 (patch-aa) = ef745d3d279d57dbdf6380053b6b4a7e63322671
 SHA1 (patch-ab) = c2b7cc5f83230035c214600bff59d4dfefd92422
-SHA1 (patch-ac) = cd1f6d8848ad11927717574dada0b164713aab23
+SHA1 (patch-ac) = cc073ac41f69671fe10be3975cb0753e163a10dd
 SHA1 (patch-ad) = 688920ba423aa2994d9e2e6540f8738305cb7fd9
 SHA1 (patch-ae) = 95cc6f46fa2cfcd34af2e546f3d4a8d55194e5eb
 SHA1 (patch-af) = b88b26b8fe7d42f267c6761edc3e3b8250bd14fb

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2002/03/07 23:40:56 jlam Exp $
+# $NetBSD: Makefile,v 1.42.2.1 2002/06/06 06:54:35 jlam Exp $
 
 DISTNAME=	openldap-2.0.23
 SVR4_PKGNAME=	oldap
@@ -12,9 +12,7 @@ COMMENT=	Lightweight directory access protocol server and client package
 
 CONFLICTS+=	ldapsdk-[0-9]*
 
-USE_BUILDLINK_ONLY=	YES
-REPLACE_BUILDLINK_SED+=	-e "s|-L${WRKSRC}/libraries||g"
-
+USE_BUILDLINK2_ONLY=	YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/build/ltconfig
 
@@ -46,13 +44,13 @@ PLIST_SRC=		${.CURDIR}/PLIST.slurpd ${.CURDIR}/PLIST
 .endif
 
 .if ${OPSYS} == "SunOS"
-.include "../../databases/db/buildlink.mk"
-CPPFLAGS+=	-I${BUILDLINK_DIR}/include/db2
+.include "../../databases/db/buildlink2.mk"
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.db}/include/db2
 LIBS=		-ldb2 -lpthread -lrt
 .endif
 
 .if defined(USE_SASL) && (${USE_SASL} == "YES")
-.include "../../security/cyrus-sasl/buildlink.mk"
+.include "../../security/cyrus-sasl/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-cyrus-sasl
 CONFIGURE_ARGS+=	--enable-spasswd
 .endif
@@ -116,8 +114,9 @@ post-install:
 		${RM} -f ${PKG_SYSCONFDIR}/$${file}.default;		\
 	done
 
-.include "../../security/openssl/buildlink.mk"
-.include "../../security/tcp_wrappers/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../security/tcp_wrappers/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

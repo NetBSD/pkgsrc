@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:32 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:55 jlam Exp $
 #
 # This Makefile fragment is included by packages that use openmotif.
 #
@@ -16,7 +16,7 @@ OPENMOTIF_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.openmotif?=	openmotif>=2.1.30
 DEPENDS+=	${BUILDLINK_DEPENDS.openmotif}:../../x11/openmotif
 
-EVAL_PREFIX+=			BUILDLINK_PREFIX.openmotif=openmotif
+EVAL_PREFIX+=	BUILDLINK_PREFIX.openmotif=openmotif
 BUILDLINK_PREFIX.openmotif_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.openmotif=	include/Mrm/*
 BUILDLINK_FILES.openmotif+=	include/Xm/*

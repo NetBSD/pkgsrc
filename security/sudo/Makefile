@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46.2.1 2002/05/11 02:09:24 jlam Exp $
+# $NetBSD: Makefile,v 1.46.2.2 2002/06/06 06:54:50 jlam Exp $
 #
 
 DISTNAME=		sudo-1.6.6
@@ -43,6 +43,8 @@ PLIST_SRC+=		${PKGDIR}/PLIST.${LOWER_OPSYS}
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES_PERMS=	${EGDIR}/sudoers ${PKG_SYSCONFDIR}/sudoers 0 0 0440
+
+USE_X11=yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:05 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:37 jlam Exp $
 #
 # This Makefile fragment is included by packages that use pcre.
 #
@@ -16,7 +16,8 @@ PCRE_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.pcre?=	pcre>=3.4
 DEPENDS+=	${BUILDLINK_DEPENDS.pcre}:../../devel/pcre
 
-BUILDLINK_PREFIX.pcre=	${LOCALBASE}
+EVAL_PREFIX+=	BUILDLINK_PREFIX.pcre=pcre
+BUILDLINK_PREFIX.pcre_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.pcre=	include/pcre.h
 BUILDLINK_FILES.pcre+=	include/pcreposix.h
 BUILDLINK_FILES.pcre+=	lib/libpcre.*

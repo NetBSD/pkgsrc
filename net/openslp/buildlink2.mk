@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:18 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:45 jlam Exp $
 #
 # This Makefile fragment is included by packages that use openslp.
 #
@@ -16,7 +16,8 @@ OPENSLP_BUILDLINK2_MK=	# defined
 BUILDLINK_DEPENDS.openslp?=	openslp>=1.0.1
 DEPENDS+=	${BUILDLINK_DEPENDS.openslp}:../../net/openslp
 
-BUILDLINK_PREFIX.openslp=	${LOCALBASE}
+EVAL_PREFIX+=	BUILDLINK_PREFIX.openslp=openslp
+BUILDLINK_PREFIX.openslp_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.openslp=	include/slp.h
 BUILDLINK_FILES.openslp+=	lib/libslp.*
 

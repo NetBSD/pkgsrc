@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:04 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:36 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ncurses.
 #
@@ -36,7 +36,8 @@ _NEED_NCURSES=		YES
 .endif
 
 .if ${_NEED_NCURSES} == "YES"
-BUILDLINK_PREFIX.ncurses=	${LOCALBASE}
+EVAL_PREFIX+=	BUILDLINK_PREFIX.ncurses=ncurses
+BUILDLINK_PREFIX.ncurses_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.ncurses=	include/cursesapp.h
 BUILDLINK_FILES.ncurses+=	include/cursesf.h
 BUILDLINK_FILES.ncurses+=	include/cursesm.h
@@ -74,7 +75,7 @@ BUILDLINK_TRANSFORM+=		l:ncurses:curses
 .endif
 
 BUILDLINK_TARGETS.ncurses+=	ncurses-buildlink
-.if defined(USE_BUILDLINK_ONLY)
+.if defined(USE_BUILDLINK2_ONLY)
 BUILDLINK_TARGETS.ncurses+=	ncurses-curses-h
 .endif
 .if ${_NEED_NCURSES} == "NO"

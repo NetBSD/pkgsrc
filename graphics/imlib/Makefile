@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2002/04/09 15:29:51 jlam Exp $
+# $NetBSD: Makefile,v 1.67.2.1 2002/06/06 06:54:40 jlam Exp $
 #
 
 DISTNAME=		imlib-1.9.14
@@ -17,7 +17,7 @@ PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 USE_GMAKE=		yes
 UNLIMIT_RESOURCES=	datasize
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2_ONLY=	yes
 
 CPPFLAGS+=		-DENABLE_NLS
 CONFIGURE_ENV+=		ac_cv_path_CONVERT_PROG="${LOCALBASE}/bin/convert"
@@ -26,7 +26,7 @@ CONFIGURE_ENV+=		X_LDFLAGS="${X_LDFLAGS}"
 # The following ensures that `imlib-config --libs' includes the correct
 # linker flags for linking the X11 libs.
 #
-X_LDFLAGS=		-Wl,-R${X11BASE}/lib -L${BUILDLINK_X11_DIR}/lib
+X_LDFLAGS=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/imlib
@@ -36,12 +36,12 @@ post-install:
 	${LN} -fs ${PREFIX}/share/aclocal/imlib.m4 \
 		${LOCALBASE}/share/aclocal/imlib.m4
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/libungif/buildlink.mk"
-.include "../../graphics/netpbm/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/libungif/buildlink2.mk"
+.include "../../graphics/netpbm/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
