@@ -1,0 +1,11 @@
+--- misc.tcl.orig	Fri Mar 29 04:19:49 1996
++++ misc.tcl	Sat Mar  7 14:17:27 1998
+@@ -207,7 +207,7 @@
+ proc my-random {max} {
+     global pseudo_random
+     if {$pseudo_random} {
+-	return [expr [exec bash -c {echo $RANDOM}] % $max]
++	return [exec jot -r 1 0 [expr $max - 1]]
+     } else {
+ 	return [random $max]
+     }
