@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2001/12/28 07:38:56 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2001/12/31 04:21:30 fredb Exp $
 #
 
-DISTNAME=		lynx2.8.4dev.19
-PKGNAME=		lynx-2.8.4.0b19
+DISTNAME=		lynx2.8.5dev.5
+PKGNAME=		lynx-2.8.5.0.5
 CATEGORIES=		www
-MASTER_SITES=		http://lynx.isc.org/current/ \
-			http://lynx.isc.org/po/ \
-			http://www.iro.umontreal.ca/contrib/po/teams/PO/
+MASTER_SITES=		http://lynx.isc.org/current/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		fredb@netbsd.org
@@ -15,12 +13,14 @@ COMMENT=		Alphanumeric display oriented World-Wide Web Client
 
 BUILD_USES_MSGFMT=	yes
 
-WRKSRC=			${WRKDIR}/lynx2-8-4
+WRKSRC=			${WRKDIR}/lynx2-8-5
 
 USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
-INSTALL_TARGET=		install-bin install-cfg install-help install-lss
-INSTALL_TARGET+=	install-doc install-man
+USE_GMAKE=		yes
+USE_LIBINTL=		yes
+USE_SSL=		yes
+INSTALL_TARGET=		install-full install-lss
 MAKEFILE=       	makefile
 
 BUILD_DEFS+=		LYNX_SCREEN_LIB USE_SOCKS USE_INET6
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--enable-scrollbar
 
 # Install gzip'ed help files to ${PREFIX}/share/lynx
 CONFIGURE_ARGS+=	--libdir="${PREFIX}/share/lynx"
-CONFIGURE_ARGS+=	--enable-gzip-help --with-zlib
+CONFIGURE_ARGS+=	--with-zlib
 
 # Miscellaneous
 CONFIGURE_ARGS+=	--enable-externs
@@ -50,6 +50,8 @@ CONFIGURE_ARGS+=	--enable-source-cache
 # Experimental features
 CONFIGURE_ARGS+=	--enable-file-upload
 CONFIGURE_ARGS+=	--enable-justify-elts
+CONFIGURE_ARGS+=	--enable-kbd-layout
+CONFIGURE_ARGS+=	--enable-nested-tables
 CONFIGURE_ARGS+=	--enable-prettysrc
 CONFIGURE_ARGS+=	--enable-read-eta
 
@@ -58,7 +60,6 @@ post-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-LYNX_SCREEN_LIB?=	slang
 .if (${LYNX_SCREEN_LIB} == slang)
 .  include "../../devel/libslang/buildlink.mk"
 .elif (${LYNX_SCREEN_LIB} == ncurses)
@@ -66,7 +67,9 @@ USE_NCURSES=		color
 .  include "../../devel/ncurses/buildlink.mk"
 CONFIGURE_ARGS+=	--enable-color-style
 .elif (${LYNX_SCREEN_LIB} == curses)
-CONFIGURE_ENV+=		cf_cv_ncurses_version=no
+.  if ${MACHINE_PLATFORM:MNetBSD-1.5*-i386} != ""
+CONFIGURE_ARGS+=	--enable-color-style
+.  endif
 .else
 pre-configure:
 	@${ECHO} '****************************************************'
