@@ -1,16 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2002/06/26 18:02:40 agc Exp $
+$NetBSD: patch-ab,v 1.3 2003/06/06 07:40:41 itojun Exp $
 
---- Makefile.orig	Wed Apr  3 06:32:18 2002
-+++ Makefile	Wed Jun 26 19:00:37 2002
-@@ -88,6 +88,7 @@
- 	route.c vif.c timer.c mrt.c pim6.c pim6_proto.c rp.c crc.c trace.c\
- 	cfparse.y cftoken.l
- CLEANFILES+= lex.yy.c y.tab.c y.tab.h
-+YFLAGS+=-d
- 
- .if (${OPSYS} == "BSD/OS")
- CC=	gcc
-@@ -127,6 +128,12 @@
+--- Makefile.orig	2002-12-02 11:42:32.000000000 +0900
++++ Makefile	2003-06-06 16:31:17.000000000 +0900
+@@ -127,6 +127,12 @@
  
  realinstall:
  	install ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} \
