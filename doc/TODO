@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1170 2003/12/13 00:46:15 wiz Exp $
+$NetBSD: TODO,v 1.1171 2003/12/13 10:34:40 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -124,7 +124,6 @@ Suggested package updates
 	o balsa-1.4.4
 	o blender-2.31a
 	o boehm-gc-6.3alpha2
-	o bzflag-1.10.0
 	o centericq-4.9.9
 	o cervisia-2.0
 	o clisp-2.31
