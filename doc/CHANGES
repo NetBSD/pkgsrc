@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2532 2003/06/18 14:48:58 simonb Exp $
+$NetBSD: CHANGES,v 1.2533 2003/06/18 18:15:02 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2485,7 +2485,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated htmllint to 20030518 [wiz 2003-06-18]
 	Updated pkgchk to 1.38 [abs 2003-06-18]
 	Updated gimp to 1.2.5 [drochner 2003-06-18]
-	Added gimp-wideangle-Feb02 [drochner 2003-06-18]
+	Added gimp-wideangle-20010202 [drochner 2003-06-18]
 	Updated ap2-subversion to 0.24.1 [epg 2003-06-18]
 	Updated subversion to 0.24.1 [epg 2003-06-18]
 	Updated subversion-base to 0.24.1 [epg 2003-06-18]
