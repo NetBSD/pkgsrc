@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/07/20 00:04:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/21 22:58:10 schmonz Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
@@ -6,7 +6,7 @@
 DISTNAME=		ezmlm-idx-0.421
 SITES_${DISTNAME}.tar.gz=	http://www.ezmlm.org/archive/0.421/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.ezmlm.org/
 COMMENT=		ezmlm with enhancements by third parties
 
