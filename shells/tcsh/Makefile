@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/11/13 12:31:15 agc Exp $
+# $NetBSD: Makefile,v 1.16 1999/03/11 08:24:21 agc Exp $
 #
 
 DISTNAME=	tcsh-6.08
@@ -41,11 +41,9 @@ post-install:
 	    s=$$1; shift;					\
 	    c=$$1; shift;					\
 	    o=;							\
-	    for j;						\
-	    do							\
-		d=${NLSDIR}/$${c}_$${j}.$${s};			\
-		if [ -z "$$o" ];				\
-		then						\
+	    while [ $$# -gt 0 ]; do				\
+		d=${NLSDIR}/$${c}_$$1.$${s};			\
+		if [ -z "$$o" ]; then				\
 		    o="$$d";					\
 		    ${INSTALL_DATA} ${WRKSRC}/tcsh.$${l}.cat	\
 			${PREFIX}/$${d}/tcsh.cat;		\
@@ -54,6 +52,7 @@ post-install:
 			${PREFIX}/$${d};			\
 		fi;						\
 		${ECHO} $${d}/tcsh.cat >> ${PLIST_SRC};		\
+		shift 1;					\
 	    done;						\
 	done
 	@${ECHO} "updating /etc/shells";			\
