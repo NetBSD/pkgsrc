@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/04 22:35:22 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/03/25 13:12:08 adrianp Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
@@ -31,6 +31,7 @@ share/horde/admin/setup/index.php
 share/horde/admin/setup/scripts.php
 share/horde/admin/sqlshell.php
 share/horde/admin/templates.php
+share/horde/admin/user.php
 share/horde/config/conf.php.dist
 share/horde/config/conf.xml.dist
 share/horde/config/hooks.php.dist
