@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2000/06/05 00:36:30 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2000/06/05 01:13:34 hubertf Exp $
 
 DISTNAME=	netpbm-9.3
 CATEGORIES=	graphics
@@ -23,11 +23,6 @@ MAKEFILE=	GNUmakefile
 CFLAGS=
 .endif
 # 'echo' doesn't suffice for unknown reasons
-.if ${OPSYS} == NetBSD
-MAKE_ENV+=	ECHO="/bin/echo"
-.else
-MAKE_ENV+=	ECHO="${ECHO}"
-.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/shhopt/shhopt.h ${PREFIX}/include
