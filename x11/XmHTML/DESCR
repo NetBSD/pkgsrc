@@ -1,5 +1,5 @@
 XmHTML, a high performance Motif Widget capable of displaying HTML 3.2
-conforming text. Amongst it's many features are the following:
+conforming text. Amongst its many features are the following:
   * builtin image support for X11 bitmaps, X11 pixmaps, GIF87a, GIF89a,
     JPEG and PNG;
   * GIF images are decoded using a patent free scheme;
