@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2001/08/12 10:50:43 tron Exp $
+
+--- src/fe-text/Makefile.in.orig	Sun Aug 12 12:37:54 2001
++++ src/fe-text/Makefile.in	Sun Aug 12 12:43:12 2001
+@@ -119,7 +119,7 @@
+ DEFS = @DEFS@ -I. -I$(srcdir) -I../..
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -lintl
+ @USE_MYGLIB_FALSE@xchat_text_OBJECTS =  fe-text.o
+ @USE_MYGLIB_TRUE@xchat_text_OBJECTS =  fe-text.o glib.o
+ xchat_text_DEPENDENCIES =  ../common/libxchatmain.a
