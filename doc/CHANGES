@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8851 2005/01/21 13:42:16 taca Exp $
+$NetBSD: CHANGES,v 1.8852 2005/01/21 14:31:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -471,3 +471,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated jakarta-tomcat to 5.0.30 [abs 2005-01-21]
 	Updated gaim to 1.1.2 [adam 2005-01-21]
 	Updated squid to 2.5.7nb8 [taca 2005-01-21]
+	Updated unarj to 2.65 [wiz 2005-01-21]
