@@ -1,11 +1,11 @@
-phpMyAdmin is intended to handle the adminstration of MySQL over the WWW.
-Currently it can:
-  - create and drop databases
-  - create, copy, drop and alter tables
-  - delete, edit and add fields
-  - execute any SQL-statement, even batch-queries
-  - manage keys on fields
-  - load text files into tables
-  - create and read dumps of tables
-  - export and import CSV data
-  - administer one single database
+phpMyAdmin is a tool written in PHP intended to handle the administration of 
+MySQL over the Web. Currently it can:
+
+- create and drop databases, 
+- create/drop/alter tables, 
+- delete/edit/add fields, 
+- execute any SQL statement, 
+- manage keys on fields, 
+- manage privileges,
+- export data into various formats and 
+- is available in 47 languages.

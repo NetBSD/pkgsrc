@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/09/01 14:00:31 tron Exp $
-share/doc/phpmyadmin/ANNOUNCE.txt
+@comment $NetBSD: PLIST,v 1.6 2004/08/07 11:31:14 adrianp Exp $
 share/doc/phpmyadmin/CREDITS
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
@@ -13,9 +12,9 @@ share/examples/phpmyadmin/config.inc.php
 @exec ${TEST} -f ${PMCONFFILE} || ${CP} -p %D/%F ${PMCONFFILE}
 share/examples/phpmyadmin/phpmyadmin.conf
 share/phpmyadmin/Documentation.html
-share/phpmyadmin/badwords.txt
 share/phpmyadmin/browse_foreigners.php
 share/phpmyadmin/chk_rel.php
+share/phpmyadmin/css/phpmyadmin.css.php
 share/phpmyadmin/db_create.php
 share/phpmyadmin/db_datadict.php
 share/phpmyadmin/db_details.php
@@ -36,6 +35,7 @@ share/phpmyadmin/images/arrow_ltr.gif
 share/phpmyadmin/images/arrow_rtl.gif
 share/phpmyadmin/images/asc_order.png
 share/phpmyadmin/images/browse.png
+share/phpmyadmin/images/button_bookmark.png
 share/phpmyadmin/images/button_browse.png
 share/phpmyadmin/images/button_drop.png
 share/phpmyadmin/images/button_edit.png
@@ -73,6 +73,12 @@ share/phpmyadmin/lang/albanian-iso-8859-1.inc.php
 share/phpmyadmin/lang/albanian-utf-8.inc.php
 share/phpmyadmin/lang/arabic-utf-8.inc.php
 share/phpmyadmin/lang/arabic-windows-1256.inc.php
+share/phpmyadmin/lang/azerbaijani-iso-8859-9.inc.php
+share/phpmyadmin/lang/azerbaijani-utf-8.inc.php
+share/phpmyadmin/lang/basque-iso-8859-1.inc.php
+share/phpmyadmin/lang/basque-utf-8.inc.php
+share/phpmyadmin/lang/bosnian-utf-8.inc.php
+share/phpmyadmin/lang/bosnian-windows-1250.inc.php
 share/phpmyadmin/lang/brazilian_portuguese-iso-8859-1.inc.php
 share/phpmyadmin/lang/brazilian_portuguese-utf-8.inc.php
 share/phpmyadmin/lang/bulgarian-koi8-r.inc.php
@@ -129,6 +135,8 @@ share/phpmyadmin/lang/malay-iso-8859-1.inc.php
 share/phpmyadmin/lang/malay-utf-8.inc.php
 share/phpmyadmin/lang/norwegian-iso-8859-1.inc.php
 share/phpmyadmin/lang/norwegian-utf-8.inc.php
+share/phpmyadmin/lang/persian-utf-8.inc.php
+share/phpmyadmin/lang/persian-windows-1256.inc.php
 share/phpmyadmin/lang/polish-iso-8859-2.inc.php
 share/phpmyadmin/lang/polish-utf-8.inc.php
 share/phpmyadmin/lang/portuguese-iso-8859-1.inc.php
@@ -175,9 +183,10 @@ share/phpmyadmin/libraries/db_table_exists.lib.php
 share/phpmyadmin/libraries/dbg/profiling.php
 share/phpmyadmin/libraries/dbg/setup.php
 share/phpmyadmin/libraries/defines.lib.php
-share/phpmyadmin/libraries/defines_php.lib.php
+share/phpmyadmin/libraries/defines_mysql.lib.php
 share/phpmyadmin/libraries/display_export.lib.php
 share/phpmyadmin/libraries/display_tbl.lib.php
+share/phpmyadmin/libraries/display_tbl_links.lib.php
 share/phpmyadmin/libraries/dom-drag.js
 share/phpmyadmin/libraries/export/csv.php
 share/phpmyadmin/libraries/export/latex.php
@@ -221,6 +230,7 @@ share/phpmyadmin/libraries/sqlvalidator.lib.php
 share/phpmyadmin/libraries/string.lib.php
 share/phpmyadmin/libraries/tbl_change.js
 share/phpmyadmin/libraries/transformations.lib.php
+share/phpmyadmin/libraries/transformations/application_octetstream__download.inc.php
 share/phpmyadmin/libraries/transformations/global.inc.php
 share/phpmyadmin/libraries/transformations/image_jpeg__inline.inc.php
 share/phpmyadmin/libraries/transformations/image_jpeg__link.inc.php
@@ -251,7 +261,6 @@ share/phpmyadmin/scripts/decode_bug.php
 share/phpmyadmin/scripts/extchg.sh
 share/phpmyadmin/scripts/inno2pma.sh
 share/phpmyadmin/scripts/remove_control_m.sh
-share/phpmyadmin/scripts/updatedocs.sh
 share/phpmyadmin/server_collations.php
 share/phpmyadmin/server_common.inc.php
 share/phpmyadmin/server_databases.php
@@ -282,11 +291,11 @@ share/phpmyadmin/tbl_relation.php
 share/phpmyadmin/tbl_rename.php
 share/phpmyadmin/tbl_replace.php
 share/phpmyadmin/tbl_replace_fields.php
+share/phpmyadmin/tbl_row_delete.php
 share/phpmyadmin/tbl_select.php
 share/phpmyadmin/transformation_wrapper.php
 share/phpmyadmin/user_password.php
-@dirrm share/phpmyadmin/lang
-@dirrm share/phpmyadmin/images
+@dirrm share/phpmyadmin/scripts
 @dirrm share/phpmyadmin/libraries/transformations
 @dirrm share/phpmyadmin/libraries/fpdf/font
 @dirrm share/phpmyadmin/libraries/fpdf
@@ -294,7 +303,9 @@ share/phpmyadmin/user_password.php
 @dirrm share/phpmyadmin/libraries/dbg
 @dirrm share/phpmyadmin/libraries/auth
 @dirrm share/phpmyadmin/libraries
-@dirrm share/phpmyadmin/scripts
+@dirrm share/phpmyadmin/lang
+@dirrm share/phpmyadmin/images
+@dirrm share/phpmyadmin/css
 @exec ${RMDIR} %D/share/phpmyadmin >/dev/null 2>&1 || ${TRUE}
 @dirrm share/examples/phpmyadmin
 @dirrm share/doc/phpmyadmin

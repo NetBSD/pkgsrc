@@ -1,26 +1,18 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2003/05/06 17:40:46 jmmv Exp $
+$NetBSD: MESSAGE,v 1.6 2004/08/07 11:31:14 adrianp Exp $
 
-Do *not* edit "${PREFIX}/share/phpmyadmin/config.inc.php" to customize
+Do *not* edit "${PMDIR}/config.inc.php" to customize
 this package because it is a link which will removed during upgrades.
 The actual configuration file is "${PMCONFFILE}".
 
 You will need to make phpMyAdmin accessible through your HTTP server.
-If you are running Apache and ap-php, then you may either symlink
+If you are running Apache and ap-php, then you can add the following line
+to httpd.conf:
        
-	${PMDIR}
+	Include ${PKG_SYSCONFDIR}/phpmyadmin.conf
 
-into DocumentRoot, or copy
-
-	${EXDIR}/phpmyadmin.conf
-
-to ${PKG_SYSCONFDIR}/httpd and add the following line to httpd.conf:
-
-	Include ${PKG_SYSCONFDIR}/httpd/phpmyadmin.conf
-
-to make mySQL accessible through:
+to make phpMyAdmin accessible through:
 				
 	http://www.domain.com/phpmyadmin/
-
 
 ===========================================================================
