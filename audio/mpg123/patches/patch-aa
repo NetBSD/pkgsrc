@@ -1,48 +1,73 @@
-$NetBSD: patch-aa,v 1.11 1999/07/10 10:39:03 tron Exp $
+$NetBSD: patch-aa,v 1.12 1999/10/12 04:43:12 simonb Exp $
 
---- Makefile.orig	Tue Jan 26 06:35:18 1999
-+++ Makefile	Wed Jun 23 19:45:35 1999
-@@ -34,6 +34,9 @@
- 	@echo "make aix            IBM AIX (tested: 4.2)"
+--- Makefile.orig	Wed Jun 16 06:39:06 1999
++++ Makefile	Tue Oct 12 13:57:53 1999
+@@ -39,6 +39,10 @@
+ 	@echo "make aix-tk3play    IBM AIX"
  	@echo "make os2            IBM OS/2"
  	@echo "make netbsd         NetBSD"
++	@echo "make netbsd-arm32   NetBSD for strongarm"
 +	@echo "make netbsd-i386    NetBSD optimized for i386"
 +	@echo "make netbsd-i386-elf NetBSD optimized for i386, ELF format"
 +	@echo "make netbsd-m68k    NetBSD optimized for m68k"
  	@echo "make bsdos          BSDI BSD/OS"
+ 	@echo "make bsdos4         BSDI BSD/OS 4.0"
  	@echo "make bsdos-nas      BSDI BSD/OS with NAS support"
- 	@echo "make mint           MiNT on Atari"
-@@ -365,6 +368,33 @@
- 			-funroll-all-loops -ffast-math -DROT_I386 \
- 			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
+@@ -362,6 +366,34 @@
+ 			-funroll-all-loops  -finline-functions' \
  		mpg123-make
-+
+ 
 +netbsd-i386-elf:
 +	$(MAKE) CC=cc LDFLAGS= \
 +		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
-+			audio_sun.o' \
++			audio_sun.o term.o' \
 +		CFLAGS='-Wall -ansi -pedantic -O4 -m486 -fomit-frame-pointer \
 +			-funroll-all-loops -ffast-math -DROT_I386 \
 +			-DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DUSE_MMAP \
-+			-DREAD_MMAP -DNETBSD' \
++			-DREAD_MMAP -DNETBSD -DTERM_CONTROL' \
 +		mpg123-make
 +
-+netbsd-profile:
-+	$(MAKE) CC=cc LDFLAGS='-pg -static'\
-+		OBJECTS='decode.o dct64.o audio_sun.o' \
-+		CFLAGS='-Wall -ansi -pedantic -O3 -pg \
-+			-funroll-all-loops -ffast-math \
-+			-DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD -DM68K_ASSEM' \
-+		mpg123-make
-+ 
 +netbsd-m68k:
 +	$(MAKE) CC=cc LDFLAGS= \
-+		OBJECTS='decode.o dct64.o audio_sun.o' \
++		OBJECTS='decode.o dct64.o audio_sun.o term.o' \
 +		CFLAGS='-Wall -ansi -pedantic -O3 -fomit-frame-pointer \
 +			-ffast-math -DREAL_IS_FLOAT \
-+			-DUSE_MMAP -DNETBSD -DM68K_ASSEM' \
++			-DUSE_MMAP -DNETBSD -DM68K_ASSEM -DTERM_CONTROL' \
 +		mpg123-make
 +
++netbsd-arm32:
++	$(MAKE) CC=cc LDFLAGS= \
++		OBJECTS='decode.o dct64.o audio_sun.o term.o' \
++		CFLAGS='-Wall -O6 -fomit-frame-pointer \
++			-funroll-all-loops -finline-functions -ffast-math \
++			-march=armv4 -mtune=strongarm -mcpu=strongarm \
++			-DREAL_IS_FIXED -DUSE_MMAP -DREAD_MMAP -DTERM_CONTROL \
++			-DNETBSD' \
++		mpg123-make
++
+ solaris-gcc-esd:
+ 	$(MAKE) CC=gcc LDFLAGS='-lsocket -lnsl' \
+ 		AUDIO_LIB='-lesd -lresolv' \
+@@ -481,18 +513,18 @@
+ 
+ netbsd:
+ 	$(MAKE) CC=cc LDFLAGS= \
+-		OBJECTS='decode.o dct64.o audio_sun.o' \
++		OBJECTS='decode.o dct64.o audio_sun.o term.o' \
+ 		CFLAGS='-Wall -ansi -pedantic -O3 -fomit-frame-pointer \
+ 			-funroll-all-loops -ffast-math \
+-			-DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
++			-DREAL_IS_FLOAT -DUSE_MMAP -DTERM_CONTROL -DNETBSD' \
+ 		mpg123-make
+ 
+ netbsd-i386:
+ 	$(MAKE) CC=cc LDFLAGS= \
+-		OBJECTS='decode_i386.o dct64_i386.o audio_sun.o' \
++		OBJECTS='decode_i386.o dct64_i386.o audio_sun.o term.o' \
+ 		CFLAGS='-Wall -ansi -pedantic -O4 -m486 -fomit-frame-pointer \
+ 			-funroll-all-loops -ffast-math -DROT_I386 \
+-			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
++			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DTERM_CONTROL -DNETBSD' \
+ 		mpg123-make
  
  bsdos:
- 	$(MAKE) CC=shlicc2 LDFLAGS= \
