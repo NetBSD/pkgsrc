@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/12/08 22:32:07 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/04/08 09:26:20 wiz Exp $
 
 DISTNAME=	latex2html-2002-2-1
 PKGNAME=	latex2html-2002.2.1
@@ -9,7 +9,7 @@ MAINTAINER=	wennmach@netbsd.org
 HOMEPAGE=	http://www.latex2html.org
 COMMENT=	LaTeX to HTML converter
 
-DEPENDS+=       teTeX-bin>=1.0.6:../../print/teTeX-bin
+DEPENDS+=       {teTeX-bin>=1.0.6,teTeX2-bin-[0-9]*}:../../print/teTeX-bin
 DEPENDS+=	netpbm>=9.7nb1:../../graphics/netpbm
 
 USE_PERL5=		# defined
