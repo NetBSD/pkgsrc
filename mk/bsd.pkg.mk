@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1392 2004/02/12 15:34:18 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1393 2004/02/12 21:29:28 xtraeme Exp $
 #
 # This file is in the public domain.
 #
@@ -2023,6 +2023,7 @@ _EXTRACT_SUFFICES+=	.zip
 _EXTRACT_SUFFICES+=	.lha .lzh
 _EXTRACT_SUFFICES+=	.Z .bz2 .gz
 _EXTRACT_SUFFICES+=	.zoo
+_EXTRACT_SUFFICES+=	.rar
 
 # If the distfile has a tar.bz2 suffix, use bzcat in preference to gzcat,
 # pulling in the "bzip2" package if necessary.  [Note: this is only for
@@ -2054,6 +2055,9 @@ GZCAT=                  ${LOCALBASE}/bin/zcat
 .endif
 .if !empty(EXTRACT_ONLY:M*.zoo) || !empty(EXTRACT_SUFX:M*.zoo)
 BUILD_DEPENDS+=		unzoo-[0-9]*:../../archivers/unzoo
+.endif
+.if !empty(EXTRACT_ONLY:M*.rar) || !empty(EXTRACT_SUFX:M*.rar)
+BUILD_DEPENDS+=		unrar>=3.3.4:../../archivers/unrar
 .endif
 
 DECOMPRESS_CMD.tar.gz?=		${GZCAT}
@@ -2092,6 +2096,8 @@ EXTRACT_CMD.lzh?=	${EXTRACT_CMD.lha}
 EXTRACT_CMD_OPTS.lzh?=	${EXTRACT_CMD_OPTS.lha}
 EXTRACT_CMD.zoo?=	${LOCALBASE}/bin/unzoo ${EXTRACT_CMD_OPTS.zoo} $${extract_file}
 EXTRACT_CMD_OPTS.zoo?=	-x
+EXTRACT_CMD.rar?=	${LOCALBASE}/bin/unrar ${EXTRACT_CMD_OPTS.rar} $${extract_file}
+EXTRACT_CMD_OPTS.rar?=	x -inul
 
 .for __suffix__ in .gz .bz2 .Z
 EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} > `${BASENAME} $${extract_file} ${__suffix__}`
