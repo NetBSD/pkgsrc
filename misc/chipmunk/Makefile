@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:48:46 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/21 17:01:12 martti Exp $
 #
 
 DISTNAME=       chipmunk-1.4
@@ -7,7 +7,7 @@ MASTER_SITES=   http://www.bitwizard.nl/chipmunk/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.bitwizard.nl/chipmunk/index.html
-COMMENT=	shell-like tool for hardware debugging
+COMMENT=	Shell-like tool for hardware debugging
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
