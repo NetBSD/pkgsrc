@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 1998/11/24 05:23:24 mycroft Exp $
+$NetBSD: patch-aa,v 1.5 2001/06/16 00:10:48 wiz Exp $
 
 --- Local.config.orig	Fri Oct 30 13:35:18 1998
 +++ Local.config	Tue Nov 24 01:46:55 1998
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.4 1998/11/24 05:23:24 mycroft Exp $
  #endif /* LocalGuru */
  
 -PREFIX = /usr/local/games
-+PREFIX = $(X11BASE)
++/* PREFIX = /usr/local/games */
  
  /* Manual pages for games usually go to section 6. */
  MANSUFFIX = 6
