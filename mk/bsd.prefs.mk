@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.53 2001/07/10 16:37:13 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.54 2001/07/17 10:11:32 abs Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -274,7 +274,19 @@ SERIAL_DEVICES?=	/dev/null
 .if (${OPSYS} == "NetBSD")
 PKG_TOOLS_BIN?=		/usr/sbin
 .elif (${OPSYS} == "SunOS")
-LOCALBASE?=             ${DESTDIR}/usr/local
+# Migration aid for old /usr/local LOCALBASE on Solaris
+.if !defined(LOCALBASE) && exists(${DESTDIR}/usr/local/libexec/cgi-bin) && \
+	!exists(${DESTDIR}/usr/pkg/libexec/cgi-bin)
+.BEGIN:
+	@echo "On Solaris and /usr/local/libexec/cgi-bin found:"
+	@echo "- If you have an existing pkgsrc installation & wish to continue"
+	@echo "  using /usr/local, append LOCALBASE=/usr/local to /etc/mk.conf."
+	@echo "- Otherwise set LOCALBASE=/usr/pkg in your environment for the"
+	@echo "  first package install.
+	@false
+.endif
+# end of migration aid
+LOCALBASE?=             ${DESTDIR}/usr/pkg
 .if !defined(ZOULARISBASE)
 ZOULARISBASE:=		${LOCALBASE}/bsd
 .endif
