@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/04/03 15:35:40 sakamoto Exp $
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/opengl.so
-lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/glut.so
+@comment $NetBSD: PLIST,v 1.2 2000/07/08 16:10:54 sakamoto Exp $
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/opengl.so
+lib/ruby/${RUBY_VERSION}/${MACHINE_GNU_ARCH}-${LOWER_OPSYS}/glut.so
 share/examples/ruby/gl/aaindex.rb
 share/examples/ruby/gl/aapoly.rb
 share/examples/ruby/gl/aargb.rb
