@@ -1,0 +1,55 @@
+$NetBSD: patch-af,v 1.10 2005/02/16 12:22:11 adam Exp $
+
+--- dlls/ntdll/signal_i386.c.orig	2005-02-16 10:30:28.000000000 +0000
++++ dlls/ntdll/signal_i386.c
+@@ -206,7 +206,7 @@ typedef struct trapframe SIGCONTEXT;
+ 
+ #endif /* bsdi */
+ 
+-#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__)
+ 
+ typedef struct sigcontext SIGCONTEXT;
+ 
+@@ -306,7 +306,40 @@ typedef struct ucontext SIGCONTEXT;
+ 
+ #endif /* __APPLE__ */
+ 
+-#if defined(linux) || defined(__NetBSD__) || defined(__FreeBSD__) ||\
++#if defined(__NetBSD__) 
++# include <sys/ucontext.h>
++# include <sys/types.h>
++# include <signal.h>
++
++typedef struct __ucontext SIGCONTEXT;
++
++#define HANDLER_DEF(name) void name( int __signal, int code, SIGCONTEXT *__context )
++#define HANDLER_CONTEXT __context
++
++#define EAX_sig(context)     ((context)->uc_mcontext.__gregs[_REG_EAX])
++#define EBX_sig(context)     ((context)->uc_mcontext.__gregs[_REG_EBX])
++#define ECX_sig(context)     ((context)->uc_mcontext.__gregs[_REG_ECX])
++#define EDX_sig(context)     ((context)->uc_mcontext.__gregs[_REG_EDX])
++#define ESI_sig(context)     ((context)->uc_mcontext.__gregs[_REG_ESI])
++#define EDI_sig(context)     ((context)->uc_mcontext.__gregs[_REG_EDI])
++#define EBP_sig(context)     ((context)->uc_mcontext.__gregs[_REG_EBP])
++
++#define CS_sig(context)      ((context)->uc_mcontext.__gregs[_REG_CS])
++#define DS_sig(context)      ((context)->uc_mcontext.__gregs[_REG_DS])
++#define ES_sig(context)      ((context)->uc_mcontext.__gregs[_REG_ES])
++#define FS_sig(context)      ((context)->uc_mcontext.__gregs[_REG_FS])
++#define GS_sig(context)      ((context)->uc_mcontext.__gregs[_REG_GS])
++#define SS_sig(context)      ((context)->uc_mcontext.__gregs[_REG_SS])
++
++#define EFL_sig(context)     ((context)->uc_mcontext.__gregs[_REG_EFL])
++
++#define EIP_sig(context)     (*((unsigned long*)&(context)->uc_mcontext.__gregs[_REG_EIP]))
++#define ESP_sig(context)     (*((unsigned long*)&(context)->uc_mcontext.__gregs[_REG_EIP]))
++
++#endif	/* NetBSD */
++
++
++#if defined(linux) || defined(__FreeBSD__) ||\
+     defined(__OpenBSD__) || defined(__EMX__) || defined(__CYGWIN__)
+ 
+ #define EAX_sig(context)     ((context)->sc_eax)

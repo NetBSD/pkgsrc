@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.77 2005/01/17 15:35:41 adam Exp $
+# $NetBSD: Makefile,v 1.78 2005/02/16 12:22:11 adam Exp $
 
-DISTNAME=	Wine-20050111
+DISTNAME=	Wine-20050211
 PKGNAME=	${DISTNAME:S/W/w/}
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.ibiblio.org/pub/Linux/ALPHA/wine/development/ \
-		${MASTER_SITE_SOURCEFORGE:=wine/} \
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wine/} \
+		http://www.ibiblio.org/pub/Linux/ALPHA/wine/development/ \
 		${MASTER_SITE_SUNSITE:=ALPHA/wine/development/}
 
 MAINTAINER=	adam@NetBSD.org
@@ -22,12 +22,11 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD*-i386 Linux*-i386 SunOS*-i386
 
 WRKSRC=		 	${WRKDIR}/${DISTNAME:S/W/w/}
-USE_BUILDLINK3=		YES
-USE_X11=		YES
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
-USE_LIBTOOL=		YES
-
-GNU_CONFIGURE=		YES
+USE_LIBTOOL=		yes
+USE_X11=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-curses #--disable-debug --disable-trace
 CONFIGURE_ENV+=		ac_cv_path_ARTSCCONFIG=${TRUE}
 CONFIGURE_ENV+=		ac_cv_prog_sane_devel=no
@@ -62,6 +61,7 @@ post-install:
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 
 .include "../../mk/ossaudio.buildlink3.mk"
