@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2001/04/17 11:57:42 tron Exp $
+# $NetBSD: Makefile,v 1.213 2001/05/02 15:22:46 skrll Exp $
 #
 
 COMMENT=	Networking tools
@@ -151,7 +151,7 @@ SUBDIR+=	totd
 SUBDIR+=	trafshow
 SUBDIR+=	ttt
 SUBDIR+=	ucd-snmp
-SUBDIR+=	ucd-snmp-current
+#SUBDIR+=	ucd-snmp-current	# ucd-snmp is newer
 SUBDIR+=	ucspi-tcp
 SUBDIR+=	unison
 SUBDIR+=	upclient
