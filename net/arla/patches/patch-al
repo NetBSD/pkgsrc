@@ -1,0 +1,18 @@
+$NetBSD: patch-al,v 1.1 2000/06/18 13:01:36 assar Exp $
+
+The prototype for vfs_getnewfsid is defined in <sys/vnode.h>, so in order
+to successfully test for the number of arguments, make sure that this header
+file gets included. This patch is required to get arla to compile on
+NetBSD-1.4ZD.
+
+--- configure.orig	Sun Jun 18 11:32:44 2000
++++ configure		Sun Jun 18 11:40:40 2000
+@@ -9976,6 +9976,7 @@
+ #ifdef HAVE_SYS_MODULE_H
+ #include <sys/module.h>
+ #endif
++#include <sys/vnode.h>
+ #include <sys/mount.h>
+ 
+ int main() {
+
