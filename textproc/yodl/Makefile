@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/09/27 23:18:48 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/21 15:35:42 wiz Exp $
 
 DISTNAME=	yodl-1.31.18
 CATEGORIES=	textproc
@@ -11,12 +11,12 @@ COMMENT=	high-level document preparation system
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
 GNU_CONFIGURE=	YES
+USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 MAKEFILE=	GNUmakefile
-
-USE_LIBINTL=	YES
 
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} LDFLAGS="${LDFLAGS}"
 
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
