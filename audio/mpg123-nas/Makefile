@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/25 06:28:00 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/21 02:43:44 grant Exp $
 #
 
 DISTNAME=	mpg123-0.59r
@@ -27,15 +27,15 @@ USE_BUILDLINK_ONLY=	# defined
 # for OBJECT_FMT
 .include "../../mk/bsd.prefs.mk"
 
-.if (${MACHINE_ARCH} == "i386")
-.if (${OBJECT_FMT} == "ELF")
+.if ${MACHINE_ARCH} == "i386"
+.if ${OBJECT_FMT} == "ELF"
 ALL_TARGET=	netbsd-i386-elf
 .else
 ALL_TARGET=	netbsd-i386
 .endif
-.elif (${MACHINE_ARCH} == "arm32")
+.elif ${MACHINE_ARCH} == "arm32"
 ALL_TARGET=	netbsd-arm32
-.elif (${MACHINE_ARCH} == "m68k")
+.elif ${MACHINE_ARCH} == "m68k"
 ALL_TARGET=	netbsd-m68k
 .else
 ALL_TARGET=	${LOWER_OPSYS}
