@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/03 15:15:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/28 23:35:59 adrianp Exp $
 #
 
 DISTNAME=		arping-2.01
@@ -12,6 +12,8 @@ COMMENT=		ARP-level ping utility
 
 USE_BUILDLINK3=		yes
 NO_CONFIGURE=		yes
+
+BUILDLINK_DEPENDS.libnet+=	libnet<=1.0.1b
 
 .include "../../mk/bsd.prefs.mk"
 
