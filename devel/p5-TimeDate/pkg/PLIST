@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/03 08:47:25 rh Exp $
+lib/perl5/site_perl/Date/Format.pm
+lib/perl5/site_perl/Date/Parse.pm
+lib/perl5/site_perl/Date/Language.pm
+lib/perl5/site_perl/Time/Zone.pm
+lib/perl5/man/man3/Date::Format.3
+lib/perl5/man/man3/Date::Parse.3
+lib/perl5/man/man3/Time::Zone.3
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/TimeDate/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/TimeDate
+@dirrm lib/perl5/site_perl/Date
+@dirrm lib/perl5/site_perl/Time
