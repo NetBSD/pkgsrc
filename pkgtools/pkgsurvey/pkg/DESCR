@@ -1,0 +1,19 @@
+pkgsurvey is a small utility to add the pkgsrc people at pkgsrc.org
+
+Information of currently-installed packages is taken from the current
+machine, along with Operating System type, hardware architecture, and
+operating system release version information, and mailed to a central
+site.
+
+No information will be divulged to anyone - it is simply meant for use
+by the pkgsrc people, for finding the most popular packages.
+
+If the idea of divulging package or operating system version
+information is distasteful to you, or does not conform to your site's
+policy, then please feel free to delete pkgsurvey from your system: 
+as root, type
+
+	pkg_delete -v pkgsurvey
+
+Alistair G. Crooks
+Thu Feb  1 07:48:48 GMT 2001
