@@ -1,0 +1,5 @@
+Note: a sample config file can be found here:
+
+	 ${PREFIX}/share/examples/sdig.conf
+
+Copy it to ${PREFIX}/etc/sdig.conf and edit to suit your needs.
