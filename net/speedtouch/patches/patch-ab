@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/07/29 01:18:33 abs Exp $
+
+--- ppp.conf.sample.orig	Sun Jul 29 01:39:43 2001
++++ ppp.conf.sample
+@@ -7,7 +7,7 @@
+  accept chap
+  # These are the value of vpi and vci in france.
+  # Check in the INSTALL-BSD to see value for uk or netherland
+- set device !"/usr/local/bin/pppoa2 -vpi 8 -vci 35"
++ set device !"/usr/local/sbin/pppoa2 -vpi 8 -vci 35"
+  set speed sync
+  set authname login@provider
+  set authkey password

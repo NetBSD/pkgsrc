@@ -1,0 +1,2 @@
+Driver for the ALCATEL SpeedTouch USB ADSL modem.
+It currently only supports PPPoA encapsulation.
