@@ -1,24 +1,22 @@
-$NetBSD: patch-aa,v 1.1 2001/11/22 09:11:08 martti Exp $
+$NetBSD: patch-aa,v 1.2 2001/12/15 10:12:40 martti Exp $
 
---- Makefile.PL.orig	Sat Nov 17 16:27:59 2001
-+++ Makefile.PL	Sat Nov 17 16:32:13 2001
-@@ -41,13 +41,18 @@
-                             sub { ($_[5]+1900, $_[4]+1, $_[3])}->(localtime(time - 45 * 24*60*60));
+--- Makefile.PL.orig	Sat Dec 15 16:03:49 2001
++++ Makefile.PL
+@@ -41,13 +41,16 @@
+           sub { ($_[5]+1900, $_[4]+1, $_[3])}->(localtime(time - 45 * 24*60*60));
  if ($some_time_ago lt $release_date) {
      # Check if we have internet connection
 -    require IO::Socket;
 -    my $s = IO::Socket::INET->new(PeerAddr => "www.google.com:80",
 -				  Timeout  => 10,
 -				 );
-+    my $s = 0;
 +#    require IO::Socket;
 +#    my $s = IO::Socket::INET->new(PeerAddr => "www.google.com:80",
 +#				  Timeout  => 10,
 +#				 );
-+#
-+# Disable the test by default, to avoid interactive and some system maybe
-+# don't have directly internet connection.
-+#
++
++    my $s = 0;
++
      if ($s) {
  	# XXX could try to send a GET to it???
 -	close($s);
