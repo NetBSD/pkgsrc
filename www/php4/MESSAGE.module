@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.module,v 1.4 2001/05/14 14:12:31 jlam Exp $
+$NetBSD: MESSAGE.module,v 1.1 2001/11/01 19:34:52 jlam Exp $
 
 To enable this module, add the following to ${PHP_CONFDIR}/php.ini:
 
