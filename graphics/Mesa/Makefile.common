@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2004/10/26 13:55:17 adam Exp $
+# $NetBSD: Makefile.common,v 1.33 2004/10/27 10:30:38 grant Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -13,7 +13,6 @@ MESA_VERSION=	6.2
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.mesa3d.org/
 
-ALL_TARGET=             pkgsrc
 USE_LIBTOOL=		yes
 USE_X11=		yes
 
@@ -24,6 +23,26 @@ PATCHDIR?=		${.CURDIR}/../MesaLib/patches
 DISTINFO_FILE?=		${.CURDIR}/../MesaLib/distinfo
 
 INSTALLATION_DIRS+=	lib
+
+.include "../../mk/compiler.mk"
+.include "../../mk/bsd.prefs.mk"
+
+# Mesa has proper support for Solaris and SunPro, use it.
+.if ${OPSYS} == "SunOS"
+.  if !empty(CC_VERSION:MSun)
+.    if ${SPARC_TARGET_ARCH} == "sparcv7"
+ALL_TARGET=             sunos5
+.    elif ${SPARC_TARGET_ARCH} == "sparcv8"
+ALL_TARGET=             sunos5-v8
+.    elif ${SPARC_TARGET_ARCH} == "sparcv9"
+ALL_TARGET=             sunos5-v9
+.    endif
+.  else
+ALL_TARGET=             sunos5-gcc
+.  endif
+.else
+ALL_TARGET=             pkgsrc
+.endif
 
 pre-install:
 	@if [ -n "${INSTLIBS}" ]; then					\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/10/26 13:55:37 adam Exp $
+# $NetBSD: Makefile,v 1.36 2004/10/27 10:30:38 grant Exp $
 
 PKGNAME=	MesaLib-${MESA_VERSION}
 COMMENT=	Graphics library similar to SGI's OpenGL
@@ -12,8 +12,6 @@ USE_BUILDLINK3=		yes
 INSTLIBS=	${WRKSRC}/src/mesa/libGL.la \
 		${WRKSRC}/src/glw/libGLw.la \
 		${WRKSRC}/src/mesa/libOSMesa.la
-
-.include "../../mk/compiler.mk"
 
 # The sparc asm included with Mesa does not build on sparc64
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc64"
