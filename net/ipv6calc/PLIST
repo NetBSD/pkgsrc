@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/04/21 21:06:54 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/10/14 23:46:46 hubertf Exp $
 bin/ipv6calc
 bin/ipv6logconv
+bin/ipv6logstats
