@@ -1,8 +1,8 @@
-$NetBSD: patch-bk,v 1.1 2002/04/25 15:52:47 taya Exp $
+$NetBSD: patch-bk,v 1.2 2002/05/14 00:16:38 taya Exp $
 
-diff -ru ../mozilla-current.orig/mozilla/directory/c-sdk/build.mk ./directory/c-sdk/build.mk
---- ../mozilla-current.orig/mozilla/directory/c-sdk/build.mk	Thu Apr  4 20:00:46 2002
-+++ ./directory/c-sdk/build.mk	Sun Apr  7 11:21:34 2002
+diff -ru ../Orig/mozilla/directory/c-sdk/build.mk ./directory/c-sdk/build.mk
+--- ../Orig/mozilla/directory/c-sdk/build.mk	Wed Apr 10 11:31:52 2002
++++ ./directory/c-sdk/build.mk	Sat May 11 20:14:23 2002
 @@ -396,7 +396,7 @@
  SO_FILES_TO_REMOVE=so_locations
  endif

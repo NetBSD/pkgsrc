@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2002/05/08 13:25:23 taya Exp $
+# $NetBSD: Makefile,v 1.86 2002/05/14 00:16:37 taya Exp $
 
-MOZ_VER=	1.0rc1
-DISTNAME=	mozilla-source-1.0.rc1
+MOZ_VER=	1.0rc2
+DISTNAME=	mozilla-source-${MOZ_VER}
 PKGNAME=	mozilla-${MOZ_VER}
-PKGREVISION=	1
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/mozilla${MOZ_VER}/src/ \
