@@ -1,20 +1,13 @@
-$NetBSD: patch-aa,v 1.3 1998/12/20 14:18:02 christos Exp $
-*** misc.h.orig	Tue Jun  9 17:07:47 1998
---- misc.h	Sun Dec 20 09:02:37 1998
-***************
-*** 23,29 ****
-  long random(void);
-  #endif
-  
-! #if !defined(linux) & !defined(__EMX__) & !defined(__FreeBSD__)
-  #if defined(BSD4_4) || defined(HPArchitecture) || defined(SGIArchitecture) || defined(_AIX) || defined(_SCO_DS)
-  void srandom(unsigned int);
-  #else
---- 23,29 ----
-  long random(void);
-  #endif
-  
-! #if !defined(linux) & !defined(__EMX__) & !defined(__FreeBSD__) && !defined(__NetBSD__)
-  #if defined(BSD4_4) || defined(HPArchitecture) || defined(SGIArchitecture) || defined(_AIX) || defined(_SCO_DS)
-  void srandom(unsigned int);
-  #else
+$NetBSD: patch-aa,v 1.4 2001/03/30 21:44:49 hubertf Exp $
+
+--- misc.h.orig	Mon Oct  2 22:56:30 2000
++++ misc.h
+@@ -23,7 +23,7 @@
+ long random(void);
+ #endif
+ 
+-#if !defined(linux) & !defined(__EMX__) & !defined(__FreeBSD__) & !defined(__CYGWIN__)
++#if !defined(linux) & !defined(__EMX__) & !defined(__FreeBSD__) & !defined(__CYGWIN__) & !defined(__NetBSD__)
+ #if defined(BSD4_4) || defined(HPArchitecture) || defined(SGIArchitecture) || defined(_AIX) || defined(_SCO_DS)
+ void srandom(unsigned int);
+ #else

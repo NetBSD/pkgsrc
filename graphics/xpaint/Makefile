@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2001/03/04 09:06:15 tron Exp $
+# $NetBSD: Makefile,v 1.27 2001/03/30 21:44:48 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/29 12:17:50 tg Exp
 
-DISTNAME=       xpaint-2.5.6
+DISTNAME=       xpaint-2.6.1
 WRKSRC=		${WRKDIR}/xpaint
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://home.worldonline.dk/~torsten/xpaint/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://home.worldonline.dk/~torsten/xpaint/
 COMMENT=	Simple paint program
 
@@ -16,6 +16,7 @@ DEPENDS+=	png>1.0.9:../../graphics/png
 
 USE_IMAKE=      YES
 USE_XPM=	YES
+USE_RMAN=	YES
 
 EVAL_PREFIX=	XPMDIR=xpm
 
