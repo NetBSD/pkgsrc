@@ -1,38 +1,22 @@
-$NetBSD: patch-ab,v 1.6 2000/01/31 16:35:37 christos Exp $
+$NetBSD: patch-ab,v 1.7 2000/09/12 14:17:32 jlam Exp $
 
---- htdocs/index.html.en.orig	Sat Nov 20 16:29:40 1999
-+++ htdocs/index.html.en	Sun Jan 30 17:00:58 2000
-@@ -28,11 +28,29 @@
+--- conf/httpd.conf-dist.orig	Thu Sep  7 01:19:50 2000
++++ conf/httpd.conf-dist
+@@ -199,7 +199,16 @@
+ # the order below without expert advice.
+ #
+ # Example:
+-# LoadModule foo_module libexec/mod_foo.so
++# LoadModule foo_module lib/httpd/mod_foo.so
++
++<IfDefine SSL>
++### Uncomment the following if you wish to use SSL and you need RSAREF: ###
++#LoadFile !librsaref.so
++LoadFile !libcrypto.so
++LoadFile !libssl.so
++LoadModule ssl_module lib/httpd/mod_ssl.so
++AddModule mod_ssl.c
++</IfDefine>
  
- 
- <P>
--The Apache <A HREF="manual/index.html">documentation</A> has been included with this distribution.
--
-+The Apache <A HREF="manual/index.html">documentation</A>
-+has been included with this distribution.<BR>
-+If the <STRONG>mod_ssl</STRONG> SSL extension has been installed, read the
-+<A
-+ HREF="manual/mod/mod_ssl/index.html"
-+>SSL documentation</A>
-+carefully.
-+</P>
-+<P>
-+Information on the NetBSD multiplatform operating system can be found
-+at <A HREF="http://www.netbsd.org/">NetBSD's homepage</A> on the net.
-+</P>
- <P>
--You are free to use the image below on an Apache-powered web server.  Thanks for using Apache!
-+The Webmaster of this site is free to use the images below on
-+an Apache/NetBSD-powered Web server.  Thanks for using
-+<A HREF="http://www.apache.org/">Apache</A> on
-+<A HREF="http://www.netbsd.org/">NetBSD</A>!
-+</P>
- 
--<DIV ALIGN="CENTER"><IMG SRC="apache_pb.gif" ALT=""></DIV>
-+<DIV ALIGN="CENTER"><IMG SRC="apache_pb.gif" ALT="">
-+<A HREF="http://www.netbsd.org/">
-+<IMG SRC="sitedrivenby.gif" border=0 
-+ ALT="Site driven by NetBSD - NetBSD rocks!"></A>
-+</DIV>
- </BODY>
- </HTML>
+ #
+ # ExtendedStatus controls whether Apache will generate "full" status
