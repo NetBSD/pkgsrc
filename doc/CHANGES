@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1643 2003/03/15 08:30:42 kei Exp $
+$NetBSD: CHANGES,v 1.1644 2003/03/15 08:54:45 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1131,3 +1131,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated teTeX2-sharesrc to 2.0.2 [kei 2003-03-15]
 	Updated dvipdfmx to 0.0.0.20021230nb1 [kei 2003-03-15]
 	Updated mono to 0.23 [jmmv 2003-03-15]
+	Added regexx-0.98.1 [rh 2003-03-15]
