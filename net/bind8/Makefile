@@ -1,14 +1,14 @@
 #
-# $NetBSD: Makefile,v 1.4 2000/11/10 07:38:22 itojun Exp $
+# $NetBSD: Makefile,v 1.5 2001/01/27 07:33:21 itojun Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
 
 DISTNAME=	bind
-PKGNAME=	bind-8.2.2p7
+PKGNAME=	bind-8.2.3
 WRKSRC=		${WRKDIR}/src
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/8.2.2-P7/
+MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/8.2.3/
 DISTFILES=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
 
 MAINTAINER=	packages@NetBSD.org
@@ -16,7 +16,7 @@ HOMEPAGE=	http://www.isc.org/products/BIND/
 
 Y2K=		http://www.isc.org/ISC/y2k.html
 
-DIST_SUBDIR=	bind/8.2.2-P7
+DIST_SUBDIR=	bind/8.2.3
 EXTRACT_ONLY=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
 
 post-build:
