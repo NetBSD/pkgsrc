@@ -1,0 +1,14 @@
+This package is a source code package of xbattbar (version 1.4) on X11
+environment.  Xbattbar is designed as a (laptop) battery status
+indicator based on APM kernel API.
+
+* Developers
+
+xbattbar developers are:
+
+Suguru Yamaguchi	base development and releasing
+Akira Kato		function enhancements
+Noriyuki Shigechika	function enhancements
+Susumu Sano		FreeBSD porting
+Hiroshi Ura		NetBSD porting
+Yuji Sekiya		Linux porting
