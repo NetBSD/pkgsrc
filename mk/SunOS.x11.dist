@@ -1,4 +1,4 @@
-#     $NetBSD: SunOS.x11.dist,v 1.28 2003/06/09 23:04:20 jmmv Exp $
+#     $NetBSD: SunOS.x11.dist,v 1.29 2003/07/21 17:50:08 jmmv Exp $
 #     FreeBSD Id: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 #
 
@@ -288,6 +288,10 @@
                 LC_MESSAGES
                 ..
             ..
+            fo
+                LC_MESSAGES
+                ..
+            ..
             fr
                 LC_MESSAGES
                 ..
@@ -384,6 +388,10 @@
                 LC_MESSAGES
                 ..
             ..
+            nso
+                LC_MESSAGES
+                ..
+            ..
             pl
                 LC_MESSAGES
                 ..
@@ -452,11 +460,23 @@
                 LC_MESSAGES
                 ..
             ..
+            ven
+                LC_MESSAGES
+                ..
+            ..
             vi
                 LC_MESSAGES
                 ..
             ..
             wa
+                LC_MESSAGES
+                ..
+            ..
+            xh
+                LC_MESSAGES
+                ..
+            ..
+            xx
                 LC_MESSAGES
                 ..
             ..
@@ -481,6 +501,10 @@
                 ..
             ..
             zh_TW.Big5
+                LC_MESSAGES
+                ..
+            ..
+            zu
                 LC_MESSAGES
                 ..
             ..
