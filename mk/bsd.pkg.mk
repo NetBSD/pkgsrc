@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.264 1999/05/04 22:44:10 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.265 1999/05/12 05:35:55 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -723,11 +723,7 @@ EXTRACT_ONLY?=	${DISTFILES}
 #  shouldn't match "[a-z]*"), see the target "delete-package-links" below.
 PKGREPOSITORYSUBDIR?=	All
 PKGREPOSITORY?=		${PACKAGES}/${PKGREPOSITORYSUBDIR}
-.if exists(${PACKAGES})
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
-.else
-PKGFILE?=		${PKGNAME}${PKG_SUFX}
-.endif
 
 CONFIGURE_SCRIPT?=	configure
 CONFIGURE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
@@ -1143,19 +1139,15 @@ do-install:
 do-package: ${PLIST} ${DESCR}
 	${_PKG_SILENT}${_PKG_DEBUG}if ${TEST} -e ${PLIST}; then		\
 		${ECHO_MSG} "===>  Building package for ${PKGNAME}";	\
-		if [ -d ${PACKAGES} ]; then				\
-			if [ ! -d ${PKGREPOSITORY} ]; then		\
-				${MKDIR} ${PKGREPOSITORY};		\
-				if [ $$? -ne 0 ]; then			\
-					${ECHO_MSG} ">> Can't create directory ${PKGREPOSITORY}."; \
-					exit 1;				\
-				fi;					\
+		if [ ! -d ${PKGREPOSITORY} ]; then			\
+			${MKDIR} ${PKGREPOSITORY};			\
+			if [ $$? -ne 0 ]; then				\
+				${ECHO_MSG} ">> Can't create directory ${PKGREPOSITORY}."; \
+				exit 1;					\
 			fi;						\
 		fi;							\
 		if ${PKG_CREATE} ${PKG_ARGS} ${PKGFILE}; then		\
-			if [ -d ${PACKAGES} ]; then			\
-				${MAKE} ${.MAKEFLAGS} package-links;	\
-			fi;						\
+			${MAKE} ${.MAKEFLAGS} package-links;		\
 		else							\
 			${MAKE} ${.MAKEFLAGS} delete-package;		\
 			exit 1;						\
