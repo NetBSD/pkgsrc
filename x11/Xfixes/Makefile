@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/14 18:26:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/15 20:24:32 xtraeme Exp $
 #
 
 DISTNAME=		libXfixes-2.0.0
@@ -12,12 +12,12 @@ HOMEPAGE=		http://freedesktop.org/
 COMMENT=		Xfixes extension of X RandR
 
 USE_X11=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=    xfixes.pc.in
 
-.include "../../x11/fixesext/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../x11/fixesext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
