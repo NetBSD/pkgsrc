@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2001/10/01 11:57:10 rh Exp $
+# $NetBSD: Makefile,v 1.19 2001/10/11 12:19:35 abs Exp $
 #
 
-DISTNAME=		GConf-1.0.4
+DISTNAME=		GConf-1.0.4nb1
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/GConf/}
 EXTRACT_SUFX=		.tar.bz2
@@ -25,6 +25,9 @@ post-install:
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
 	${LN} -fs ${PREFIX}/share/aclocal/gconf-1.m4 \
 	    ${LOCALBASE}/share/aclocal/gconf-1.m4
+	${TEST} -f ${PREFIX}/etc/gconf/1/path || \
+	    ${CP} -p ${PREFIX}/etc/gconf/1/path.example \
+	    ${PREFIX}/etc/gconf/1/path
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../databases/db3/buildlink.mk"
