@@ -8,5 +8,8 @@ To get this package running on Solaris, you'll need to have either
 a recent gcc or egcs installed, and a version of GNU tar available,
 as well as gzip.
 
-The README file, distributed with the package itself, provides
-instructions on how to build and install this environment.
+After extracting all the files, you need to edit Makefile.inc to set
+the correct paths for ${BSDSRCDIR} (where the NetBSD src tree is
+located), and for ${DESTDIR} (where the binaries and support files
+will be placed). Then, make sure that /usr/ccs/bin is in your path,
+and then invokde Solaris' make (/usr/ccs/bin/make).
