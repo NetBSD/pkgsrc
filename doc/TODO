@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.475 2003/04/17 10:33:52 salo Exp $
+$NetBSD: TODO,v 1.476 2003/04/17 10:39:52 salo Exp $
 
 Suggested new packages
 ======================
@@ -201,7 +201,6 @@ Suggested package updates
 	o opera-7.10
 	o oss-3.9.7h
 	o p0f-1.8.3
-	o pen-0.10.1 [pkg/21075]
 	o php4-4.3.1
 	o pine-4.53
 	o plib-1.6.0 [pkg/19015]
