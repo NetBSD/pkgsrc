@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:24:30 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/14 13:02:30 wiz Exp $
 bin/hpack
 bin/keycvt
 man/man1/hpack.1
 share/doc/hpack/hpackext.doc
+@unexec cmp -s %D/etc/hpack.cfg %D/share/hpack/hpack.cfg.example && rm %D/etc/hpack.cfg || true
 share/hpack/hpack.cfg.example
 @exec if [ ! %D/etc/hpack.cfg ]; then cp -p %F %D/etc/hpack.cfg; fi
 share/hpack/language.dat
