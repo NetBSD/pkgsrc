@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2004/11/13 21:28:28 jlam Exp $
+# $NetBSD: Makefile.common,v 1.17 2005/01/25 12:59:48 tv Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 GS_VERS=	7.07
@@ -42,6 +42,10 @@ PLIST_SRC=		${.CURDIR}/../../print/ghostscript-gnu/PLIST
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "Interix"
+MAKE_FLAGS+=		XLIBS="Xt SM ICE Xext X11"
+.endif
+
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		3.0
 .endif
@@ -53,10 +57,6 @@ CFLAGS+=		-DHAVE_MKSTEMP=1
 
 MAKE_FLAGS+=		XCFLAGS="${CFLAGS}"
 MAKE_FLAGS+=		XLDFLAGS="${LDFLAGS}"
-
-.if ${OPSYS} == "SunOS"
-LDFLAGS+=		-L${ZOULARISBASE}/lib ${COMPILER_RPATH_FLAG}${ZOULARISBASE}/lib
-.endif
 
 REPLACE_PERL=		lib/fixmswrd.pl
 
