@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/01/24 13:49:40 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/05 15:32:16 wiz Exp $
 #
 
 DISTNAME=	pspell-.12.2
@@ -19,5 +19,4 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--enable-doc-dir=${PREFIX}/share/doc/pspell
 USE_BUILDLINK_ONLY=	YES
 
-.include "../../devel/libtool/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
