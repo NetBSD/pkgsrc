@@ -1,0 +1,63 @@
+/* $NetBSD: host.def,v 1.1.1.1 2004/07/29 04:52:04 xtraeme Exp $ */
+
+#define ProjectRoot @PREFIX@
+#define BuildHtmlManPages NO
+
+#define MakeCmd @MAKE@
+#define HasGnuMake      NO
+#define ImakeCmd @IMAKE@
+#define RmanCmd @RMAN@
+#define HtmlIndexCmd @MKHTMLINDEX@
+#define DependDir @GCCMAKEDEP@
+#define DependCmd @MAKEDEPEND@
+#define RevPathCmd @REVPATH@
+
+#define NothingOutsideProjectRoot YES
+#define InstallFSConfig NO
+#define	BuildServer NO
+#define	BuildFontServer NO
+#define	BuildFonts NO
+#define	Build75DpiFonts NO
+#define	Build100DpiFonts NO
+#define	BuildSpeedoFonts NO
+#define	BuildType1Fonts NO
+#define	BuildCIDFonts NO
+#define	BuildCyrillicFonts NO
+#define	BuildLatin2Fonts NO
+#define	BuildPlugin NO
+#define	LibHeaders NO
+#define	LibInstall NO
+#define	ForceNormalLib NO
+#define	ModInstall NO 
+#define	XTrueTypeInstallCConvHeaders NO
+#define BuildXcursorgen YES
+
+#ifndef LinuxArchitecture
+#define HasShadowPasswd NO
+#endif
+
+#ifdef NetBSDArchitecture
+#define HasSecureRPC NO
+#define HasPam NO
+#endif
+
+#define InstallXdmConfig YES
+#define InstallXinitConfig YES
+#define InstallAppDefFiles YES
+
+#define StandardIncludes -I@BLNK@/include
+#define ExtraLoadFlags @LDFLAGS@
+#define LibInstallBuild  YES
+
+#define DontUseLibPathVar YES
+#define PreloadSetup
+#define UseInstalledPrograms YES
+
+#define HasFreetype2 YES
+#define Freetype2Dir @BLNK@
+
+#define HasExpat YES
+#define ExpatDir @BLNK@
+
+#define HasFontconfig YES
+#define FontconfigDir @BLNK@
