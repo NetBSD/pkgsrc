@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/12/16 16:55:48 drochner Exp $
+$NetBSD: distinfo,v 1.5 2003/01/20 22:28:56 drochner Exp $
 
-SHA1 (zope/ZPhotoSlides-0.7.tar) = 0735df5b996d4c44a0cef6aac3380ea17f62548f
-Size (zope/ZPhotoSlides-0.7.tar) = 286720 bytes
+SHA1 (zope/ZPhotoSlides-0.9.tar.gz) = c1695e9978b29a50b8baa8276b38293090952381
+Size (zope/ZPhotoSlides-0.9.tar.gz) = 306907 bytes
