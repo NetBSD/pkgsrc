@@ -1,0 +1,219 @@
+$NetBSD: patch-ak,v 1.1 1998/10/25 17:10:57 christos Exp $
+*** old/folders.c	Sun Oct 25 11:59:14 1998
+--- folders.c	Sun Oct 25 11:58:30 1998
+***************
+*** 148,153 ****
+--- 148,154 ----
+  	msg[msg_cnt].m_size = 0;
+  	msg[msg_cnt].m_offset = 0;
+  	msg[msg_cnt].m_lines = 0;
++ 	msg[msg_cnt].m_headers = 0;
+      }
+      msg_cnt = 0, msg[0].m_offset = 0L;
+      turnoff(glob_flags, CONT_PRNT);
+*** old/hdrs.c	Sun Oct 25 11:59:10 1998
+--- hdrs.c	Sun Oct 25 11:58:30 1998
+***************
+*** 548,554 ****
+--- 548,557 ----
+  		when '%': p2 = "%";
+  		when 't': p2 = to;
+  		when 's': p2 = subject;
++ 		when 'h': p2 = sprintf(lines, "%d", msg[cnt].m_headers);
+  		when 'l': p2 = sprintf(lines, "%d", msg[cnt].m_lines);
++ 		when 'b': p2 = sprintf(lines, "%d", msg[cnt].m_lines - 
++ 				       msg[cnt].m_headers);
+  		when 'c': p2 = sprintf(lines, "%ld", msg[cnt].m_size);
+  		when 'i': (p2 = read_header_field(cnt, "message-id")) || (p2 = "");
+  		/* date formatting chars */
+*** old/msgs.c	Sun Oct 25 11:59:14 1998
+--- msgs.c	Sun Oct 25 11:58:29 1998
+***************
+*** 797,803 ****
+  int append;
+  {
+      char	buf[BUFSIZ];
+!     int		lines = 0, msg_found = 0, had_error = 1;
+      int		get_status = 1, cnt;
+      long	bytes;
+      struct msg  old;
+--- 797,803 ----
+  int append;
+  {
+      char	buf[BUFSIZ];
+!     int		headers = 0, lines = 0, msg_found = 0, had_error = 1;
+      int		get_status = 1, cnt;
+      long	bytes;
+      struct msg  old;
+***************
+*** 943,948 ****
+--- 943,949 ----
+  		if (cnt && lines) {
+  		    msg[cnt-1].m_size = bytes - msg[cnt-1].m_offset;
+  		    msg[cnt-1].m_lines = lines;
++ 		    msg[cnt-1].m_headers = headers;
+  		}
+  		if (isoff(glob_flags, READ_ONLY) && fputs(buf, tmpf) == -1) {
+  		    error(tempfile);
+***************
+*** 953,960 ****
+--- 954,963 ----
+  		msg[cnt].m_flags = 0L;
+  #ifdef MSG_SEPARATOR
+  		lines = 0;
++ 		headers = 0;
+  #else /* MSG_SEPARATOR */
+  		lines = 1; /* count the From_ line */
++ 		headers = 1;
+  		if (warn)
+  		    turnon(glob_flags, WARNING);
+  		strdup(msg[cnt].m_date_recv, date);
+***************
+*** 1021,1026 ****
+--- 1024,1030 ----
+  			break;
+  		    }
+  		    lines++;
++ 		    headers++;
+  		}
+  		if (!msg[cnt].m_date_sent || !*msg[cnt].m_date_sent)
+  		    if (!msg[cnt].m_date_recv || !*msg[cnt].m_date_recv) {
+***************
+*** 1042,1047 ****
+--- 1046,1052 ----
+  	} else if (!msg_found && buf[0] != '\n') {
+  	    /* Allow leading blank lines, but anything else is wrong */
+  	    lines++;
++ 	    headers++;
+  	    had_error++;
+  	    break;
+  	}
+***************
+*** 1092,1097 ****
+--- 1097,1103 ----
+  	else
+  	    msg[cnt].m_size = ftell(fp) - msg[cnt].m_offset;
+  	msg[cnt].m_lines = lines;
++ 	msg[cnt].m_headers = headers;
+  	/* remember where we were to seek to for when we append new mail */ 
+  	if (append)
+  	    cnt++;
+*** old/mush.1	Sun Oct 25 11:59:15 1998
+--- mush.1	Sun Oct 25 12:04:10 1998
+***************
+*** 4206,4214 ****
+  .nf
+  .ta 0.5i
+  %a	address of the author
+  %c	number of characters (bytes) in the message
+  %f	entire \*QFrom:\*U field (author)
+! %l	number of lines in the message
+  %i	the message-id (may not be present)
+  %n	name of the author
+  %s	subject of the message
+--- 4206,4216 ----
+  .nf
+  .ta 0.5i
+  %a	address of the author
++ %b	number of lines in the body of the message
+  %c	number of characters (bytes) in the message
+  %f	entire \*QFrom:\*U field (author)
+! %h	number of header lines in the message
+! %l	number of total lines in the message
+  %i	the message-id (may not be present)
+  %n	name of the author
+  %s	subject of the message
+*** old/mush.h	Sun Oct 25 11:59:14 1998
+--- mush.h	Sun Oct 25 11:58:29 1998
+***************
+*** 578,583 ****
+--- 578,584 ----
+      long   m_offset;	/* offset in tempfile of msg */
+      long   m_size;	/* number of bytes in msg */
+      int    m_lines;	/* number of lines in msg */
++     int    m_headers;	/* number of header lines in msg */
+      char   *m_date_recv;/* Date user received msg (see dates.c for fmt) */
+      char   *m_date_sent;/* Date author sent msg (see dates.c for fmt) */
+      char   *m_to;	/* Cached To: field */
+*** old/pick.c	Sun Oct 25 11:59:14 1998
+--- pick.c	Sun Oct 25 11:58:28 1998
+***************
+*** 297,307 ****
+  
+  
+  static int
+! cmplines(m1, m2)
+      struct msg **m1;
+      struct msg **m2;
+  {
+!     int z =  (int) (*m2)->m_lines - (int) (*m1)->m_lines;
+      if (z > 0)
+  	return 1;
+      else if (z < 0)
+--- 297,308 ----
+  
+  
+  static int
+! cmpreallines(m1, m2)
+      struct msg **m1;
+      struct msg **m2;
+  {
+!     int z =  (int) (((*m2)->m_lines - (*m2)->m_headers) -
+! 		    ((*m1)->m_lines - (*m1)->m_headers));
+      if (z > 0)
+  	return 1;
+      else if (z < 0)
+***************
+*** 340,356 ****
+  	}
+  
+      cnt = i;
+!     qsort((char *) mlist, cnt, sizeof(struct msg *), cmplines);
+  
+      clear_msg_list(ret_list);
+  
+      lcur = -1;
+  
+      for (i = 0; i < cnt - 1; i++) {
+! 	lcur = mlist[i]->m_lines;
+  	mcur = mlist[i]->m_spare;
+  
+! 	if (mlist[i + 1]->m_lines != lcur)
+  	    /* Next message has not the same number of lines, skip */
+  	    continue;
+  
+--- 341,357 ----
+  	}
+  
+      cnt = i;
+!     qsort((char *) mlist, cnt, sizeof(struct msg *), cmpreallines);
+  
+      clear_msg_list(ret_list);
+  
+      lcur = -1;
+  
+      for (i = 0; i < cnt - 1; i++) {
+! 	lcur = mlist[i]->m_lines - mlist[i]->m_headers;
+  	mcur = mlist[i]->m_spare;
+  
+! 	if (mlist[i + 1]->m_lines - mlist[i + 1]->m_headers != lcur)
+  	    /* Next message has not the same number of lines, skip */
+  	    continue;
+  
+***************
+*** 374,380 ****
+  	}
+  	omsize = mlist[i]->m_size - (omsg - otext);
+  	for (j = i + 1; j < cnt; j++) {
+! 	    if (mlist[j]->m_lines != lcur)
+  		/* Next message has not the same number of lines, skip */
+  		break;
+  	    mid = mlist[j]->m_spare;
+--- 375,381 ----
+  	}
+  	omsize = mlist[i]->m_size - (omsg - otext);
+  	for (j = i + 1; j < cnt; j++) {
+! 	    if (mlist[j]->m_lines - mlist[j]->m_headers != lcur)
+  		/* Next message has not the same number of lines, skip */
+  		break;
+  	    mid = mlist[j]->m_spare;
