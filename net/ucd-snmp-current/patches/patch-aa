@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2001/09/11 01:46:31 wrstuden Exp $
+$NetBSD: patch-aa,v 1.6 2002/01/11 06:42:36 itojun Exp $
 
---- configure.in.orig	Tue Jan 30 15:10:50 2001
-+++ configure.in	Tue Jan 30 15:16:46 2001
-@@ -1011,23 +1011,23 @@
+--- configure.in.orig	Tue Nov 27 23:51:57 2001
++++ configure.in	Fri Jan 11 15:28:57 2002
+@@ -1022,23 +1022,23 @@
  dnl
  dnl now check for rpm using the appropriate db library
  dnl
@@ -39,16 +39,16 @@ $NetBSD: patch-aa,v 1.5 2001/09/11 01:46:31 wrstuden Exp $
  
  
  dnl Replace `main' with a function in -lkstat:
-@@ -1053,7 +1053,7 @@
+@@ -1064,7 +1064,7 @@
  AC_HEADER_STDC
  AC_HEADER_DIRENT
  AC_HEADER_SYS_WAIT
--AC_CHECK_HEADERS(stdarg.h string.h fcntl.h limits.h sys/file.h sys/ioctl.h syslog.h unistd.h netinet/tcpip.h netinet/in.h netinet/ip.h net/if.h netdb.h sys/dmap.h machine/pte.h xti.h sys/sockio.h sys/socket.h sys/un.h fstab.h sys/fs.h mtab.h ufs/fs.h ufs/ffs/fs.h sys/fixpoint.h machine/param.h sys/vm.h vm/vm.h sys/vmmeter.h sys/vmparam.h sys/vmmac.h sys/vmsystm.h sys/mbuf.h sys/time.h sys/swap.h inet/mib2.h sys/statvfs.h sys/vfs.h sys/mnttab.h sys/user.h sys/proc.h sys/select.h mntent.h sys/mntent.h kstat.h utsname.h sys/utsname.h sys/cdefs.h getopt.h locale.h pthread.h sys/loadavg.h regex.h pwd.h grp.h)
-+AC_CHECK_HEADERS(stdarg.h string.h fcntl.h limits.h sys/file.h sys/ioctl.h syslog.h unistd.h netinet/tcpip.h netinet/in.h netinet/ip.h net/if.h netdb.h sys/dmap.h machine/pte.h xti.h sys/sockio.h sys/socket.h sys/un.h fstab.h sys/fs.h mtab.h ufs/fs.h ufs/ffs/fs.h sys/fixpoint.h machine/param.h vm/vm.h sys/vmmeter.h sys/vmparam.h sys/vmmac.h sys/vmsystm.h sys/mbuf.h sys/time.h sys/swap.h inet/mib2.h sys/statvfs.h sys/vfs.h sys/mnttab.h sys/user.h sys/proc.h sys/select.h mntent.h sys/mntent.h kstat.h utsname.h sys/utsname.h sys/cdefs.h getopt.h locale.h pthread.h sys/loadavg.h regex.h pwd.h grp.h)
+-AC_CHECK_HEADERS(stdarg.h string.h fcntl.h limits.h sys/file.h sys/ioctl.h syslog.h unistd.h netinet/tcpip.h netinet/in.h netinet/ip.h netinet/ip_icmp.h net/if.h netdb.h sys/dmap.h machine/pte.h xti.h sys/sockio.h sys/socket.h sys/un.h fstab.h sys/fs.h mtab.h ufs/fs.h ufs/ffs/fs.h sys/fixpoint.h machine/param.h sys/vm.h vm/vm.h sys/vmmeter.h sys/vmparam.h sys/vmmac.h sys/vmsystm.h sys/mbuf.h sys/time.h sys/swap.h inet/mib2.h sys/statvfs.h sys/vfs.h sys/mnttab.h sys/user.h sys/proc.h sys/select.h mntent.h sys/mntent.h kstat.h utsname.h sys/utsname.h sys/cdefs.h getopt.h locale.h pthread.h sys/loadavg.h regex.h linux/tasks.h pwd.h grp.h utmpx.h)
++AC_CHECK_HEADERS(stdarg.h string.h fcntl.h limits.h sys/file.h sys/ioctl.h syslog.h unistd.h netinet/tcpip.h netinet/in.h netinet/ip.h netinet/ip_icmp.h net/if.h netdb.h sys/dmap.h machine/pte.h xti.h sys/sockio.h sys/socket.h sys/un.h fstab.h sys/fs.h mtab.h ufs/fs.h ufs/ffs/fs.h sys/fixpoint.h machine/param.h vm/vm.h sys/vmmeter.h sys/vmparam.h sys/vmmac.h sys/vmsystm.h sys/mbuf.h sys/time.h sys/swap.h inet/mib2.h sys/statvfs.h sys/vfs.h sys/mnttab.h sys/user.h sys/proc.h sys/select.h mntent.h sys/mntent.h kstat.h utsname.h sys/utsname.h sys/cdefs.h getopt.h locale.h pthread.h sys/loadavg.h regex.h linux/tasks.h pwd.h grp.h utmpx.h)
  dnl FreeBSD required headers
  AC_CHECK_HEADERS(malloc.h sys/param.h net/if_dl.h sys/sysctl.h stdlib.h net/if_mib.h net/if_types.h net/if_var.h sys/queue.h osreldate.h sys/disklabel.h machine/types.h sys/socketvar.h)
  dnl Linux
-@@ -1061,7 +1061,7 @@
+@@ -1072,7 +1072,7 @@
  dnl NetBSD required headers
  AC_CHECK_HEADERS(arpa/inet.h kvm.h sys/pool.h)
  dnl BSDi2 headers
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.5 2001/09/11 01:46:31 wrstuden Exp $
  dnl BSDi3 headers
  AC_CHECK_HEADERS(sys/stat.h sys/vnode.h ufs/ufs/quota.h ufs/ufs/inode.h)
  dnl irix headers
-@@ -1314,11 +1314,7 @@
+@@ -1329,11 +1329,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -69,7 +69,7 @@ $NetBSD: patch-aa,v 1.5 2001/09/11 01:46:31 wrstuden Exp $
  #include <net/route.h>
  ], rtentry, rt_dst, no)
  
-@@ -1332,11 +1328,7 @@
+@@ -1347,11 +1343,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -81,7 +81,7 @@ $NetBSD: patch-aa,v 1.5 2001/09/11 01:46:31 wrstuden Exp $
  #include <net/route.h>
  ],[
  
-@@ -1356,11 +1348,7 @@
+@@ -1371,11 +1363,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -93,7 +93,7 @@ $NetBSD: patch-aa,v 1.5 2001/09/11 01:46:31 wrstuden Exp $
  #include <net/route.h>
  ],[
  struct rtentry rt; 
-@@ -1413,11 +1401,7 @@
+@@ -1428,11 +1416,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -105,7 +105,7 @@ $NetBSD: patch-aa,v 1.5 2001/09/11 01:46:31 wrstuden Exp $
  #include <net/route.h>
  ],[
  struct rtentry rt; 
-@@ -1437,11 +1421,7 @@
+@@ -1452,11 +1436,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -117,7 +117,7 @@ $NetBSD: patch-aa,v 1.5 2001/09/11 01:46:31 wrstuden Exp $
  #include <net/route.h>
  ], rtentry, rt_unit)
  
-@@ -1450,11 +1430,7 @@
+@@ -1465,11 +1445,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -129,7 +129,7 @@ $NetBSD: patch-aa,v 1.5 2001/09/11 01:46:31 wrstuden Exp $
  #include <net/route.h>
  ], rtentry, rt_refcnt)
  
-@@ -1463,11 +1439,7 @@
+@@ -1478,11 +1454,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -141,7 +141,7 @@ $NetBSD: patch-aa,v 1.5 2001/09/11 01:46:31 wrstuden Exp $
  #include <net/route.h>
  ], rtentry, rt_hash)
  
-@@ -1476,11 +1448,7 @@
+@@ -1491,11 +1463,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
