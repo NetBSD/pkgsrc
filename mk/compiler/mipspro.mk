@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.33 2005/01/12 17:30:34 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.34 2005/01/12 18:37:52 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	defined
@@ -7,19 +7,15 @@ COMPILER_MIPSPRO_MK=	defined
 
 MIPSPROBASE?=	/usr
 
-# LANGUAGES.<compiler> is the list of supported languages by the compiler.
-# _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
-# requested by the package in USE_LANGUAGES.
-# 
-LANGUAGES.mipspro=	c c++
-_LANGUAGES.mipspro=	# empty
-.for _lang_ in ${USE_LANGUAGES}
-_LANGUAGES.mipspro+=	${LANGUAGES.mipspro:M${_lang_}}
-.endfor
+# LANGUAGES.<compiler> is the list of supported languages by the
+# compiler.
+#
+LANGUAGES.mipspro=	# empty
 
 _MIPSPRO_DIR=		${WRKDIR}/.mipspro
 _MIPSPRO_VARS=		# empty
 .if exists(${MIPSPROBASE}/bin/cc)
+LANGUAGES.mipspro+=	c
 _MIPSPRO_VARS+=		CC
 _MIPSPRO_CC=		${_MIPSPRO_DIR}/bin/cc
 _ALIASES.CC=		cc
@@ -27,6 +23,7 @@ CCPATH=			${MIPSPROBASE}/bin/cc
 PKG_CC:=		${_MIPSPRO_CC}
 .endif
 .if exists(${MIPSPROBASE}/bin/CC)
+LANGUAGES.mipspro+=	c++
 _MIPSPRO_VARS+=		CXX
 _MIPSPRO_CXX=		${_MIPSPRO_DIR}/bin/CC
 _ALIASES.CXX=		CC c++
@@ -57,6 +54,14 @@ _COMPILER_ABI_FLAG.32=	-n32	# ABI == "32" is an alias for ABI == "n32"
 _COMPILER_ABI_FLAG.o32=	# empty
 _COMPILER_ABI_FLAG.n32=	-n32
 _COMPILER_ABI_FLAG.64=	-64
+
+# _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the
+# ones requested by the package in USE_LANGUAGES.
+# 
+_LANGUAGES.mipspro=	# empty
+.for _lang_ in ${USE_LANGUAGES}
+_LANGUAGES.mipspro+=	${LANGUAGES.mipspro:M${_lang_}}
+.endfor
 
 # Prepend the path to the compiler to the PATH.
 .if !empty(_LANGUAGES.mipspro)
