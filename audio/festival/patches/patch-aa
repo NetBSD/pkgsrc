@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/04/04 19:32:33 proff Exp $
+
+--- /tmp/speech_tools/include/EST_unix.h	Mon Jan 11 20:43:14 1999
++++ speech_tools/include/EST_unix.h	Wed Mar 10 03:20:38 1999
+@@ -49,6 +49,7 @@
+ #   include <sys/wait.h>
+ #   include <sys/resource.h>
+ #   include <dirent.h>
++#   define unix 1
+ #elif defined(SYSTEM_IS_WIN32)
+ #   include <io.h>
+ #   include "win32/EST_unix_win32.h"
