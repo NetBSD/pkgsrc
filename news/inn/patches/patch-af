@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.7 2004/07/07 12:38:25 tron Exp $
+
+--- innd/inndstart.c.orig	2004-01-07 23:47:19.000000000 +0100
++++ innd/inndstart.c	2004-07-07 14:25:19.000000000 +0200
+@@ -136,6 +136,7 @@
+     if (p && strcmp(p, "all") != 0 && strcmp(p, "any") != 0) {
+         if (!inet_aton(p, &address))
+             die("invalid bindaddress in inn.conf (%s)", p);
++	addr_specified = true;
+     }
+ #ifdef HAVE_INET6
+     address6 = in6addr_any;
+@@ -143,6 +144,7 @@
+     if (p && strcmp(p, "all") != 0 && strcmp(p, "any") != 0) {
+ 	if (inet_pton(AF_INET6, p, &address6) < 1)
+ 	    die("invalid bindaddress6 in inn.conf (%s)", p);
++	addr_specified = true;
+     }
+ #endif
+ 
