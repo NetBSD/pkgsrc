@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.7 2004/01/13 22:48:41 epg Exp $
+$NetBSD: patch-ae,v 1.8 2004/01/26 17:13:42 epg Exp $
 
---- configure.orig	Tue Jan 13 13:32:27 2004
+--- configure.orig	Sat Jan 24 08:30:50 2004
 +++ configure
-@@ -10559,8 +10559,9 @@ echo "$as_me: WARNING: swig bindings req
+@@ -10583,8 +10583,9 @@ echo "$as_me: WARNING: swig bindings ver
      if test "$PYTHON" != "none" -a "$SWIG_SUITABLE" = "yes" -a "$svn_swig_bindings_enable_python" = "yes"; then
        { echo "$as_me:$LINENO: \"Configuring python swig binding\"" >&5
  echo "$as_me: \"Configuring python swig binding\"" >&6;}
@@ -12,18 +12,18 @@ $NetBSD: patch-ae,v 1.7 2004/01/13 22:48:41 epg Exp $
 +      #SWIG_BUILD_RULES="$SWIG_BUILD_RULES swig-py-lib"
 +      #SWIG_INSTALL_RULES="$SWIG_INSTALL_RULES install-swig-py-lib"
  
-       echo "$as_me:$LINENO: checking for swig library directory" >&5
- echo $ECHO_N "checking for swig library directory... $ECHO_C" >&6
-@@ -10654,7 +10655,7 @@ echo "${ECHO_T}$ac_cv_python_link" >&6
+ 
+       echo "$as_me:$LINENO: checking if swig needs -L for its libraries" >&5
+@@ -10666,7 +10667,7 @@ echo "${ECHO_T}$ac_cv_python_link" >&6
        ### TODO: enable when the target is implemented correctly
  #      SWIG_BUILD_RULES="$SWIG_BUILD_RULES swig-pl-lib"
  #      SWIG_INSTALL_RULES="$SWIG_INSTALL_RULES install-swig-pl-lib"
--      SWIG_PL_INCLUDES="`$PERL -MExtUtils::Embed -e ccopts`"
-+      SWIG_PL_INCLUDES="`$PERL -MExtUtils::Embed -e ccopts | sed s/-fno-strict-aliasing//`"
+-      SWIG_PL_INCLUDES="\$(SWIG_INCLUDES) `$PERL -MExtUtils::Embed -e ccopts`"
++      SWIG_PL_INCLUDES="\$(SWIG_INCLUDES) `$PERL -MExtUtils::Embed -e ccopts | sed s/-fno-strict-aliasing//`"
        SWIG_PL_COMPILE="`$PERL -MConfig -e 'print $Config{cc}'` \$(SWIG_PL_INCLUDES)"
        SWIG_PL_LINK="`$PERL -MConfig -e 'print $Config{ld}'` `$PERL -MConfig -e 'print $Config{lddlflags}'` `$PERL -MExtUtils::Embed -e ldopts`"
      fi
-@@ -10749,8 +10750,9 @@ echo "$as_me: WARNING: swig bindings req
+@@ -10784,8 +10785,9 @@ echo "$as_me: WARNING: swig bindings ver
      if test "$PYTHON" != "none" -a "$SWIG_SUITABLE" = "yes" -a "$svn_swig_bindings_enable_python" = "yes"; then
        { echo "$as_me:$LINENO: \"Configuring python swig binding\"" >&5
  echo "$as_me: \"Configuring python swig binding\"" >&6;}
@@ -33,18 +33,18 @@ $NetBSD: patch-ae,v 1.7 2004/01/13 22:48:41 epg Exp $
 +      #SWIG_BUILD_RULES="$SWIG_BUILD_RULES swig-py-lib"
 +      #SWIG_INSTALL_RULES="$SWIG_INSTALL_RULES install-swig-py-lib"
  
-       echo "$as_me:$LINENO: checking for swig library directory" >&5
- echo $ECHO_N "checking for swig library directory... $ECHO_C" >&6
-@@ -10844,7 +10846,7 @@ echo "${ECHO_T}$ac_cv_python_link" >&6
+ 
+       echo "$as_me:$LINENO: checking if swig needs -L for its libraries" >&5
+@@ -10867,7 +10869,7 @@ echo "${ECHO_T}$ac_cv_python_link" >&6
        ### TODO: enable when the target is implemented correctly
  #      SWIG_BUILD_RULES="$SWIG_BUILD_RULES swig-pl-lib"
  #      SWIG_INSTALL_RULES="$SWIG_INSTALL_RULES install-swig-pl-lib"
--      SWIG_PL_INCLUDES="`$PERL -MExtUtils::Embed -e ccopts`"
-+      SWIG_PL_INCLUDES="`$PERL -MExtUtils::Embed -e ccopts | sed s/-fno-strict-aliasing//`"
+-      SWIG_PL_INCLUDES="\$(SWIG_INCLUDES) `$PERL -MExtUtils::Embed -e ccopts`"
++      SWIG_PL_INCLUDES="\$(SWIG_INCLUDES) `$PERL -MExtUtils::Embed -e ccopts | sed s/-fno-strict-aliasing//`"
        SWIG_PL_COMPILE="`$PERL -MConfig -e 'print $Config{cc}'` \$(SWIG_PL_INCLUDES)"
        SWIG_PL_LINK="`$PERL -MConfig -e 'print $Config{ld}'` `$PERL -MConfig -e 'print $Config{lddlflags}'` `$PERL -MExtUtils::Embed -e ldopts`"
      fi
-@@ -10942,8 +10944,9 @@ echo "$as_me: WARNING: swig bindings req
+@@ -10988,8 +10990,9 @@ echo "$as_me: WARNING: swig bindings ver
      if test "$PYTHON" != "none" -a "$SWIG_SUITABLE" = "yes" -a "$svn_swig_bindings_enable_python" = "yes"; then
        { echo "$as_me:$LINENO: \"Configuring python swig binding\"" >&5
  echo "$as_me: \"Configuring python swig binding\"" >&6;}
@@ -54,14 +54,14 @@ $NetBSD: patch-ae,v 1.7 2004/01/13 22:48:41 epg Exp $
 +      #SWIG_BUILD_RULES="$SWIG_BUILD_RULES swig-py-lib"
 +      #SWIG_INSTALL_RULES="$SWIG_INSTALL_RULES install-swig-py-lib"
  
-       echo "$as_me:$LINENO: checking for swig library directory" >&5
- echo $ECHO_N "checking for swig library directory... $ECHO_C" >&6
-@@ -11037,7 +11040,7 @@ echo "${ECHO_T}$ac_cv_python_link" >&6
+ 
+       echo "$as_me:$LINENO: checking if swig needs -L for its libraries" >&5
+@@ -11071,7 +11074,7 @@ echo "${ECHO_T}$ac_cv_python_link" >&6
        ### TODO: enable when the target is implemented correctly
  #      SWIG_BUILD_RULES="$SWIG_BUILD_RULES swig-pl-lib"
  #      SWIG_INSTALL_RULES="$SWIG_INSTALL_RULES install-swig-pl-lib"
--      SWIG_PL_INCLUDES="`$PERL -MExtUtils::Embed -e ccopts`"
-+      SWIG_PL_INCLUDES="`$PERL -MExtUtils::Embed -e ccopts | sed s/-fno-strict-aliasing//`"
+-      SWIG_PL_INCLUDES="\$(SWIG_INCLUDES) `$PERL -MExtUtils::Embed -e ccopts`"
++      SWIG_PL_INCLUDES="\$(SWIG_INCLUDES) `$PERL -MExtUtils::Embed -e ccopts | sed s/-fno-strict-aliasing//`"
        SWIG_PL_COMPILE="`$PERL -MConfig -e 'print $Config{cc}'` \$(SWIG_PL_INCLUDES)"
        SWIG_PL_LINK="`$PERL -MConfig -e 'print $Config{ld}'` `$PERL -MConfig -e 'print $Config{lddlflags}'` `$PERL -MExtUtils::Embed -e ldopts`"
      fi
