@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 1999/09/21 02:30:20 sakamoto Exp $
+# $NetBSD: Makefile,v 1.11 1999/09/23 14:27:56 agc Exp $
 #
 
 #SUBDIR+= ftp			# only needed on 1.3 systems
+SUBDIR+= gensolpkg
 #SUBDIR+= pax			# only needed on 1.3 systems
 #SUBDIR+= pkg_install		# only install on demand of bsd.pkg.mk
 SUBDIR+= pkgdep
