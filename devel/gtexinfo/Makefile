@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/04/14 21:39:02 tron Exp $
+# $NetBSD: Makefile,v 1.17 1999/08/13 20:40:54 abs Exp $
 #
 
 DISTNAME=		texinfo-3.12
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.gnu.org/software/texinfo/texinfo.html
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-catgets
+PLIST_SRC=      	${WRKDIR}/.PLIST_SRC
 
 .if exists(/usr/bin/install-info)
 IGNORE=			"is included with your NetBSD distribution"
@@ -28,5 +29,6 @@ post-install:
 	${PREFIX}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/texinfo
 	${PREFIX}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/info.info
 	${PREFIX}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/info-stnd.info
+	${CAT} ${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS} > ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
