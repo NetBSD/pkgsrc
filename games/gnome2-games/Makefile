@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/02/09 18:47:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/11 08:06:32 xtraeme Exp $
 
 DISTNAME=		gnome-games-2.4.2
 PKGREVISION=		1
@@ -14,7 +14,7 @@ DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 CONFLICTS=		xbill-[0-9]*
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
@@ -63,11 +63,11 @@ GCONF2_SCHEMAS+=	mahjongg.schemas
 GCONF2_SCHEMAS+=	same-gnome.schemas
 
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/GConf2-ui/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libgnome/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../lang/guile/buildlink2.mk"
-.include "../../sysutils/gnome-vfs2/buildlink2.mk"
+.include "../../devel/GConf2-ui/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../lang/guile/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../mk/bsd.pkg.mk"
