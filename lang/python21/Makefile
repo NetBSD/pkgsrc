@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2005/01/23 20:41:46 recht Exp $
+# $NetBSD: Makefile,v 1.18 2005/01/30 12:44:39 jmmv Exp $
 #
 
 DISTNAME=	Python-2.1.3
 PKGNAME=	python21-2.1.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.1.3/
 EXTRACT_SUFX=	.tgz
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
+
+CONFLICTS+=	python-[0-9]*
 
 USE_LANGUAGES=	c c++
 USE_BUILDLINK3=	YES
