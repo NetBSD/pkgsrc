@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/19 00:57:05 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/06 06:38:21 tsutsui Exp $
 #
 
 DISTVERSION=		1.3.0.0
@@ -11,7 +11,7 @@ WRKSRC=			${WRKDIR}/${EGCS_DISTNAME}
 
 USE_CROSS_BINUTILS=	yes
 BINUTILS_GNUTARGET=	elf32-bigmips
-BINUTILS_LDEMULATION=	elf32ebmip
+BINUTILS_LDEMULATION=	elf32bmip
 USE_CROSS_EGCS=		yes
 EGCS_FAKE_RUNTIME=	yes
 
