@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:40 agc Exp $
+
+MD5 (vtun-2.4.tar.gz) = 4403855f23b7784a7c85b96e6da1704c
+SHA1 (patch-aa) = ce4bc46b05e7473cab43c062ab0b72157b438f01

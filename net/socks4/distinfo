@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:53:38 agc Exp $
+
+MD5 (export.socks.cstc.4.2.2.tar.gz) = f5e60083ea10e63383589dd3d34a94b2
+SHA1 (patch-aa) = 6761a0f53f0845d9324d22d7b78bf665a028d08c
+SHA1 (patch-ab) = e0206c1fece2b8ec63a7fa24b92d1b8ba3ce5c72
+SHA1 (patch-ac) = d3988d7ae5103bd7849305bb555d7cf3b1574ddc
+SHA1 (patch-ad) = 321d88cf5863f8c3f0b5b3623a1af2c4753f5eb3
+SHA1 (patch-ae) = 6bb9ffb57bb45f3a427059ddeee1f8cfd5489ab4
+SHA1 (patch-af) = a45528fcd2d4526e7c4b5dcd1519368aa40a3056
