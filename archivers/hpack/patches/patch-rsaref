@@ -1,0 +1,24 @@
+$NetBSD: patch-rsaref,v 1.1.1.1 1999/05/23 22:41:21 tv Exp $
+
+--- makefile.orig	Sun May 23 18:11:55 1999
++++ makefile	Sun May 23 18:12:51 1999
+@@ -280,8 +280,7 @@
+ 				$(OUTPATH)model$(OBJ) $(OUTPATH)model2$(OBJ) \
+ 				$(OUTPATH)model3$(OBJ) $(OUTPATH)model4$(OBJ) \
+ 				$(OUTPATH)pack$(OBJ) $(OUTPATH)unpack$(OBJ) \
+-				$(OUTPATH)store$(OBJ) $(OUTPATH)digit$(OBJ) \
+-				$(OUTPATH)nn$(OBJ) $(OUTPATH)rsa$(OBJ)
++				$(OUTPATH)store$(OBJ)
+ 		@$(LD) $(LFLAGS) $(OUTPATH)arcdir$(OBJ) $(OUTPATH)arcdirio$(OBJ) \
+ 		$(OUTPATH)archive$(OBJ) $(OUTPATH)cli$(OBJ) $(OUTPATH)display$(OBJ) \
+ 		$(OUTPATH)error$(OBJ) $(OUTPATH)fastio$(OBJ) $(OUTPATH)stream$(OBJ) \
+@@ -294,8 +293,7 @@
+ 		$(OUTPATH)md5$(OBJ) $(OUTPATH)mdc$(OBJ) $(OUTPATH)shs$(OBJ) \
+ 		$(OUTPATH)unix$(OBJ) $(OUTPATH)store$(OBJ) $(OUTPATH)lza$(OBJ) \
+ 		$(OUTPATH)model$(OBJ) $(OUTPATH)model2$(OBJ) $(OUTPATH)model3$(OBJ) \
+-		$(OUTPATH)model4$(OBJ) $(OUTPATH)pack$(OBJ) $(OUTPATH)unpack$(OBJ) \
+-		$(OUTPATH)digit$(OBJ) $(OUTPATH)nn$(OBJ) $(OUTPATH)rsa$(OBJ)
++		$(OUTPATH)model4$(OBJ) $(OUTPATH)pack$(OBJ) $(OUTPATH)unpack$(OBJ)
+ 
+ #****************************************************************************
+ #*																			*
