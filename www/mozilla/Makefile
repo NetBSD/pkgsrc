@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 1998/05/13 14:47:56 fvdl Exp $
+# $NetBSD: Makefile,v 1.9 1998/05/24 23:28:29 fvdl Exp $
 #
 
-DISTNAME=	unix-19980408
-PKGNAME=	mozilla-19980408
+DISTNAME=	unix-19980429
+PKGNAME=	mozilla-19980429
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/source/ \
 	ftp://sunsite.org.uk/Mirrors/ftp.mozilla.org/pub/mozilla/source/ \
@@ -15,7 +15,7 @@ USE_GMAKE=	yes
 USE_PERL5=	yes
 REQUIRES_MOTIF=	yes
 
-WRKSRC=		${WRKDIR}/ns
+WRKSRC=		${WRKDIR}/19980429/mozilla
 
 RELEASE!=	uname -r
 MOZ_OBJDIR=	${OPSYS}${RELEASE}_OPT.OBJ

@@ -1,7 +1,218 @@
-*** ./include/mcom_db.h.orig	Tue Mar 31 04:03:49 1998
---- ./include/mcom_db.h	Wed Apr  1 04:59:54 1998
+*** js/src/prmjtime.c.orig	Wed Apr 29 20:54:26 1998
+--- js/src/prmjtime.c	Sun May 24 22:04:50 1998
 ***************
-*** 224,230 ****
+*** 287,293 ****
+      PRInt32 diff;
+      PRInt64  maxtimet;
+      struct tm tm;
+! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 )
+      struct tm *ptm;
+  #endif
+      PRMJTime prtm;
+--- 287,293 ----
+      PRInt32 diff;
+      PRInt64  maxtimet;
+      struct tm tm;
+! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 ) || defined(NETBSD)
+      struct tm *ptm;
+  #endif
+      PRMJTime prtm;
+***************
+*** 307,313 ****
+      }
+      LL_L2UI(local,time);
+      PRMJ_basetime(time,&prtm);
+! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 )
+      ptm = localtime(&local);
+      if(!ptm){
+        return LL_ZERO;
+--- 307,313 ----
+      }
+      LL_L2UI(local,time);
+      PRMJ_basetime(time,&prtm);
+! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 ) || defined(NETBSD)
+      ptm = localtime(&local);
+      if(!ptm){
+        return LL_ZERO;
+*** cmd/xfe/src/HTMLView.cpp.orig	Wed Apr 29 21:16:45 1998
+--- cmd/xfe/src/HTMLView.cpp	Sun May 24 22:00:15 1998
+***************
+*** 345,351 ****
+    scroller = fe_MakeScrolledWindow (m_contextData, pane, "scroller");
+    XtVaSetValues (CONTEXT_DATA (m_contextData)->scrolled,
+  				 XmNborderWidth, 0, 
+! #if defined(__FreeBSD__)||defined(BSDI)||defined(LINUX)||defined(IRIX)
+  				 // Allow for resolutions > 1000 pixels.
+  				 // This causes the vertical scrollbar not to show
+  				 // up on Solaris 2.4, bug in Motif (77998).  
+--- 345,351 ----
+    scroller = fe_MakeScrolledWindow (m_contextData, pane, "scroller");
+    XtVaSetValues (CONTEXT_DATA (m_contextData)->scrolled,
+  				 XmNborderWidth, 0, 
+! #if defined(__FreeBSD__)||defined(BSDI)||defined(LINUX)||defined(IRIX)||defined(__NetBSD__)
+  				 // Allow for resolutions > 1000 pixels.
+  				 // This causes the vertical scrollbar not to show
+  				 // up on Solaris 2.4, bug in Motif (77998).  
+*** cmd/xfe/src/context_funcs.cpp.orig	Wed Apr 29 21:16:53 1998
+--- cmd/xfe/src/context_funcs.cpp	Sun May 24 22:00:15 1998
+***************
+*** 67,72 ****
+--- 67,74 ----
+  #define STATFS statfs
+  #elif defined(BSDI)
+  #include <sys/mount.h>    /* for statfs() */
++ #elif defined(NETBSD)
++ #include <sys/mount.h>    /* for statfs() */
+  #define STATFS statfs
+  #else
+  #include <sys/statfs.h>  /* for statfs() */
+*** cmd/xfe/Microline3.0/XmL/Grid.c.orig	Wed Apr 29 21:15:36 1998
+--- cmd/xfe/Microline3.0/XmL/Grid.c	Sun May 24 22:00:15 1998
+***************
+*** 30,35 ****
+--- 30,38 ----
+  #include <Xm/Text.h>
+  #include <Xm/DrawnB.h>
+  #include <Xm/CutPaste.h>
++ #ifndef MOTIF11
++ #include <Xm/DropSMgr.h>
++ #endif
+  #include <X11/StringDefs.h>
+  #include <X11/cursorfont.h>
+  #include <stdio.h>
+*** cmd/xfe/Makefile.orig	Wed Apr 29 21:15:29 1998
+--- cmd/xfe/Makefile	Sun May 24 22:00:16 1998
+***************
+*** 488,493 ****
+--- 488,507 ----
+  endif
+  
+  ########################################
++ # NetBSD
++ # Work around linker semantics that will never find our own libutil on 1.3.x
++ ifeq ($(OS_ARCH),NetBSD)
++ ifeq ($(OS_MINOR),3)
++ FOOL_GMAKE	= $(EXPORT_LDFLAGS:$(DIST)/lib/lib%.a=-l%)
++ DSO_EX_LIBS	= $(FOOL_GMAKE:-lutil=$(DIST)/lib/libutil.a)
++ endif
++ ifdef LIBRUNPATH
++ OS_LIBS		+= -R$(LIBRUNPATH)
++ endif
++ OTHER_LIBS	= -L/usr/X11R6/lib -lXm -lXt -lXmu -lXext -lX11 -lSM -lICE -lm $(OS_LIBS)
++ endif
++ 
++ ########################################
+  # BSDI
+  ifeq ($(OS_ARCH),BSD_OS)
+  OTHER_LIBS	= $(MOTIF)/libXm.a $(LOC_LIB_DIR)/libXt.a $(X11R6LIBS) $(LOC_LIB_DIR)/libXmu.a \
+*** cmd/xfe/mozilla.c.orig	Wed Apr 29 21:15:32 1998
+--- cmd/xfe/mozilla.c	Sun May 24 22:05:44 1998
+***************
+*** 1885,1890 ****
+--- 1885,1892 ----
+  	strcat (buf, "IRIX");
+  #elif defined(__FreeBSD__)
+  	strcat (buf, "FreeBSD");
++ #elif defined(__NetBSD__)
++ 	strcat (buf, "NetBSD");
+  #elif defined(__386BSD__)
+  	strcat (buf, "BSD/386");
+  #elif defined(__osf__)
+***************
+*** 3476,3482 ****
+  
+  #else  /* !OLD_UNIX_FILES */
+  
+! #if !defined(__FreeBSD__) && !defined(MKLINUX) && !defined(LINUX_GLIBC_2)
+  extern char *sys_errlist[];
+  extern int sys_nerr;
+  #endif
+--- 3478,3484 ----
+  
+  #else  /* !OLD_UNIX_FILES */
+  
+! #if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(MKLINUX) && !defined(LINUX_GLIBC_2)
+  extern char *sys_errlist[];
+  extern int sys_nerr;
+  #endif
+*** cmd/xfe/dialogs.c.orig	Wed Apr 29 21:15:30 1998
+--- cmd/xfe/dialogs.c	Sun May 24 22:06:07 1998
+***************
+*** 239,245 ****
+    (void) fe_dialog (parent, "error", message, FALSE, 0, FALSE, FALSE, 0);
+  }
+  
+! #if !defined(__FreeBSD__) && !defined(MKLINUX) && !defined(LINUX_GLIBC_2)
+  #include <sys/errno.h>
+  extern char *sys_errlist[];
+  extern int sys_nerr;
+--- 239,245 ----
+    (void) fe_dialog (parent, "error", message, FALSE, 0, FALSE, FALSE, 0);
+  }
+  
+! #if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(MKLINUX) && !defined(LINUX_GLIBC_2)
+  #include <sys/errno.h>
+  extern char *sys_errlist[];
+  extern int sys_nerr;
+*** cmd/xfe/movemail.c.orig	Wed Apr 29 21:15:32 1998
+--- cmd/xfe/movemail.c	Sun May 24 22:00:16 1998
+***************
+*** 40,46 ****
+  #include "xfe.h"
+  
+  #include <sys/errno.h>
+! #if !defined(__FreeBSD__) && !defined(LINUX_GLIBC_2)
+  extern char *sys_errlist[];
+  extern int sys_nerr;
+  #endif
+--- 40,46 ----
+  #include "xfe.h"
+  
+  #include <sys/errno.h>
+! #if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(LINUX_GLIBC_2)
+  extern char *sys_errlist[];
+  extern int sys_nerr;
+  #endif
+*** cmd/xfe/prefdialogs.c.orig	Wed Apr 29 21:15:32 1998
+--- cmd/xfe/prefdialogs.c	Sun May 24 22:00:17 1998
+***************
+*** 75,81 ****
+  
+  /* For sys_errlist and sys_nerr */
+  #include <sys/errno.h>
+! #if !defined(__FreeBSD__) && !defined(LINUX_GLIBC_2)
+  extern char *sys_errlist[];
+  extern int sys_nerr;
+  #endif
+--- 75,81 ----
+  
+  /* For sys_errlist and sys_nerr */
+  #include <sys/errno.h>
+! #if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(LINUX_GLIBC_2)
+  extern char *sys_errlist[];
+  extern int sys_nerr;
+  #endif
+*** cmd/stubfe/Makefile.orig	Wed Apr 29 21:15:27 1998
+--- cmd/stubfe/Makefile	Sun May 24 22:00:15 1998
+***************
+*** 542,547 ****
+--- 542,553 ----
+  endif
+  
+  ########################################
++ # NetBSD
++ ifeq ($(OS_ARCH),NetBSD)
++ OTHER_LIBS	= -lm $(OS_LIBS)
++ endif
++ 
++ ########################################
+  # BSDI
+  ifeq ($(OS_ARCH),BSD_OS)
+  OTHER_LIBS	= -lm $(OS_LIBS)
+*** dbm/include/mcom_db.h.orig	Wed Apr 29 20:59:11 1998
+--- dbm/include/mcom_db.h	Sun May 24 22:00:15 1998
+***************
+*** 200,206 ****
   #define	RET_SUCCESS	 0
   #define	RET_SPECIAL	 1
   
@@ -9,7 +220,7 @@
   #define	__BIT_TYPES_DEFINED__
   #endif
   
---- 224,230 ----
+--- 200,206 ----
   #define	RET_SUCCESS	 0
   #define	RET_SPECIAL	 1
   
@@ -17,137 +228,8 @@
   #define	__BIT_TYPES_DEFINED__
   #endif
   
-*** ./js/src/prmjtime.c.orig	Tue Mar 31 04:04:03 1998
---- ./js/src/prmjtime.c	Wed Apr  1 03:13:59 1998
-***************
-*** 390,396 ****
-      PRInt32 diff;
-      PRInt64  maxtimet;
-      struct tm tm;
-! #if defined( XP_PC ) || defined( FREEBSD )
-      struct tm *ptm;
-  #endif
-      PRMJTime prtm;
---- 390,396 ----
-      PRInt32 diff;
-      PRInt64  maxtimet;
-      struct tm tm;
-! #if defined( XP_PC ) || defined( FREEBSD ) || defined( NETBSD )
-      struct tm *ptm;
-  #endif
-      PRMJTime prtm;
-***************
-*** 409,415 ****
-      }
-      LL_L2UI(local,time);
-      PRMJ_basetime(time,&prtm);
-! #if defined( XP_PC ) || defined( FREEBSD )
-      ptm = localtime(&local);
-      if(!ptm){
-        return LL_ZERO;
---- 409,415 ----
-      }
-      LL_L2UI(local,time);
-      PRMJ_basetime(time,&prtm);
-! #if defined( XP_PC ) || defined( FREEBSD ) || defined( NETBSD )
-      ptm = localtime(&local);
-      if(!ptm){
-        return LL_ZERO;
-***************
-*** 844,850 ****
-  /*	seconds += dstOffset;*/
-  
-  #endif
-! #if defined(XP_PC) || defined(XP_MAC) || defined( FREEBSD )
-  	lt = *localtime(&seconds);
-  #else
-  	localtime_r(&seconds,&lt);
---- 844,850 ----
-  /*	seconds += dstOffset;*/
-  
-  #endif
-! #if defined(XP_PC) || defined(XP_MAC) || defined( FREEBSD ) || defined (NETBSD)
-  	lt = *localtime(&seconds);
-  #else
-  	localtime_r(&seconds,&lt);
-*** ./lib/libnet/mkftp.c.orig	Tue Mar 31 04:04:31 1998
---- ./lib/libnet/mkftp.c	Wed Apr  1 05:00:28 1998
-***************
-*** 53,59 ****
-  #endif /* XP_OS2 */
-  
-  #ifdef XP_UNIX
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV)
-  #include <sys/filio.h>
-  #endif
-  #endif /* XP_UNIX */ 
---- 53,59 ----
-  #endif /* XP_OS2 */
-  
-  #ifdef XP_UNIX
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV) || defined(__NetBSD__)
-  #include <sys/filio.h>
-  #endif
-  #endif /* XP_UNIX */ 
-*** ./lib/libnet/mkconect.c.orig	Tue Mar 31 04:04:31 1998
---- ./lib/libnet/mkconect.c	Wed Apr  1 05:00:58 1998
-***************
-*** 77,83 ****
-  
-  #include <resolv.h>
-  
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV)
-  #include <sys/filio.h>
-  #endif
-  
---- 77,83 ----
-  
-  #include <resolv.h>
-  
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV) && !defined(__NetBSD__)
-  #include <sys/filio.h>
-  #endif
-  
-*** ./lib/libnet/mksockrw.c.orig	Tue Mar 31 04:04:34 1998
---- ./lib/libnet/mksockrw.c	Wed Apr  1 05:01:12 1998
-***************
-*** 48,54 ****
-  
-  #include <resolv.h>
-  
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV)
-  #include <sys/filio.h>
-  #endif
-  
---- 48,54 ----
-  
-  #include <resolv.h>
-  
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV) && !defined(__NetBSD__)
-  #include <sys/filio.h>
-  #endif
-  
-*** ./lib/libnet/prefetch.c.orig	Tue Mar 31 04:04:34 1998
---- ./lib/libnet/prefetch.c	Thu Apr  2 02:16:08 1998
-***************
-*** 177,183 ****
-        }
-  }
-  
-! PRIVATE void
-  pre_Finished(URL_Struct* url_struct, int status, MWContext* context)
-  {
-  	/* this should change to update the colors of 
---- 177,183 ----
-        }
-  }
-  
-! MODULE_PRIVATE void
-  pre_Finished(URL_Struct* url_struct, int status, MWContext* context)
-  {
-  	/* this should change to update the colors of 
-*** ./lib/xp/xp_file.c.orig	Tue Mar 31 04:04:41 1998
---- ./lib/xp/xp_file.c	Wed Apr  1 04:45:00 1998
+*** lib/xp/xp_file.c.orig	Wed Apr 29 20:55:26 1998
+--- lib/xp/xp_file.c	Sun May 24 22:00:13 1998
 ***************
 *** 804,810 ****
   	case xpMimeTypes:
@@ -165,131 +247,567 @@
   	    /* In bsdi, mkdir fails if the directory name is terminated
   	     * with a '/'. - dp
   	     */
-*** ./modules/libreg/src/vr_stubs.h.orig	Tue Mar 31 04:04:54 1998
---- ./modules/libreg/src/vr_stubs.h	Wed Apr  1 04:45:46 1998
+*** lib/libnet/mkftp.c.orig	Wed Apr 29 20:55:10 1998
+--- lib/libnet/mkftp.c	Sun May 24 22:00:13 1998
 ***************
-*** 29,35 ****
-  #ifdef XP_MAC
-  #include <stat.h>
-  #else
-! #if defined(BSDI) && !defined(BSDI_2)
-  #include <sys/types.h>
+*** 53,59 ****
+  #endif /* XP_OS2 */
+  
+  #ifdef XP_UNIX
+! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV)
+  #include <sys/filio.h>
   #endif
-  #include <sys/stat.h>
---- 29,35 ----
-  #ifdef XP_MAC
-  #include <stat.h>
-  #else
-! #if (defined(BSDI) && !defined(BSDI_2)) || defined(NETBSD)
-  #include <sys/types.h>
+  #endif /* XP_UNIX */ 
+--- 53,59 ----
+  #endif /* XP_OS2 */
+  
+  #ifdef XP_UNIX
+! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV) || defined(__NetBSD__)
+  #include <sys/filio.h>
   #endif
-  #include <sys/stat.h>
-*** ./modules/schedulr/src/Makefile.orig	Tue Mar 31 04:05:31 1998
---- ./modules/schedulr/src/Makefile	Sun Apr  5 23:54:52 1998
+  #endif /* XP_UNIX */ 
+*** lib/libnet/mkconect.c.orig	Wed Apr 29 20:55:09 1998
+--- lib/libnet/mkconect.c	Sun May 24 22:00:13 1998
 ***************
-*** 17,24 ****
+*** 77,83 ****
   
-  DEPTH		= ../../..
+  #include <resolv.h>
   
-! MODULE		= schedulr 
-! LIBRARY_NAME	= sched 
+! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV)
+  #include <sys/filio.h>
+  #endif
   
-  REQUIRES	= nspr util
+--- 77,83 ----
   
---- 17,24 ----
+  #include <resolv.h>
   
-  DEPTH		= ../../..
+! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV) && !defined(__NetBSD__)
+  #include <sys/filio.h>
+  #endif
   
-! MODULE		= schedulr
-! LIBRARY_NAME	= sched
+*** lib/libnet/mksockrw.c.orig	Wed Apr 29 20:55:12 1998
+--- lib/libnet/mksockrw.c	Sun May 24 22:00:13 1998
+***************
+*** 48,54 ****
   
-  REQUIRES	= nspr util
+  #include <resolv.h>
   
-*** ./nsprpub/config/NetBSD1.mk.orig	Wed Apr  1 01:14:46 1998
---- ./nsprpub/config/NetBSD1.mk	Mon Apr  6 23:06:58 1998
+! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV)
+  #include <sys/filio.h>
+  #endif
+  
+--- 48,54 ----
+  
+  #include <resolv.h>
+  
+! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV) && !defined(__NetBSD__)
+  #include <sys/filio.h>
+  #endif
+  
+*** lib/libnet/prefetch.c.orig	Wed Apr 29 20:55:12 1998
+--- lib/libnet/prefetch.c	Sun May 24 22:00:13 1998
+***************
+*** 177,183 ****
+        }
+  }
+  
+! PRIVATE void
+  pre_Finished(URL_Struct* url_struct, int status, MWContext* context)
+  {
+  	/* this should change to update the colors of 
+--- 177,183 ----
+        }
+  }
+  
+! MODULE_PRIVATE void
+  pre_Finished(URL_Struct* url_struct, int status, MWContext* context)
+  {
+  	/* this should change to update the colors of 
+*** nsprpub/pr/src/md/unix/Makefile.orig	Wed Apr 29 20:58:18 1998
+--- nsprpub/pr/src/md/unix/Makefile	Sun May 24 22:00:14 1998
+***************
+*** 57,62 ****
+--- 57,66 ----
+  	freebsd.c \
+  	$(NULL)
+  
++ NETBSD_CSRCS = \
++ 	netbsd.c \
++ 	$(NULL)
++ 
+  BSDI_CSRCS = \
+  	bsdi.c \
+  	$(NULL)
+***************
+*** 118,123 ****
+--- 122,130 ----
+  endif
+  ifeq ($(OS_ARCH),FreeBSD)
+  CSRCS += $(FREEBSD_CSRCS)
++ endif
++ ifeq ($(OS_ARCH),NetBSD)
++ CSRCS += $(NETBSD_CSRCS)
+  endif
+  ifeq ($(OS_ARCH),BSD_OS)
+  CSRCS += $(BSDI_CSRCS)
+*** nsprpub/pr/src/md/unix/objs.mk.orig	Wed Apr 29 20:58:18 1998
+--- nsprpub/pr/src/md/unix/objs.mk	Sun May 24 22:00:14 1998
+***************
+*** 49,54 ****
+--- 49,58 ----
+  	freebsd.c \
+  	$(NULL)
+  
++ NETBSD_CSRCS = \
++ 	netbsd.c \
++ 	$(NULL)
++ 
+  BSDI_CSRCS = \
+  	bsdi.c \
+  	$(NULL)
+***************
+*** 111,116 ****
+--- 115,123 ----
+  endif
+  ifeq ($(OS_ARCH),FreeBSD)
+  CSRCS += $(FREEBSD_CSRCS)
++ endif
++ ifeq ($(OS_ARCH),NetBSD)
++ CSRCS += $(NETBSD_CSRCS)
+  endif
+  ifeq ($(OS_ARCH),BSD_OS)
+  CSRCS += $(BSDI_CSRCS)
+*** nsprpub/pr/src/md/unix/unix.c.orig	Wed Apr 29 20:58:19 1998
+--- nsprpub/pr/src/md/unix/unix.c	Sun May 24 22:00:14 1998
+***************
+*** 48,54 ****
+      || defined(SUNOS4) || defined(NCR)
+  #define _PRSockLen_t int
+  #elif (defined(AIX) && !defined(AIX4_1)) || defined(FREEBSD) \
+!     || defined(UNIXWARE)
+  #define _PRSockLen_t size_t
+  #else
+  #error "Cannot determine architecture"
+--- 48,54 ----
+      || defined(SUNOS4) || defined(NCR)
+  #define _PRSockLen_t int
+  #elif (defined(AIX) && !defined(AIX4_1)) || defined(FREEBSD) \
+!     || defined(UNIXWARE) || defined(NETBSD)
+  #define _PRSockLen_t size_t
+  #else
+  #error "Cannot determine architecture"
+*** nsprpub/pr/src/md/unix/unix_errors.c.orig	Wed Apr 29 20:58:19 1998
+--- nsprpub/pr/src/md/unix/unix_errors.c	Sun May 24 22:00:14 1998
+***************
+*** 160,166 ****
+  		case EROFS:
+  			PR_SetError(PR_READ_ONLY_FILESYSTEM_ERROR, err);
+  			break;
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
+  		case EMULTIHOP:
+  		case ENOLINK:
+  			PR_SetError(PR_REMOTE_FILE_ERROR, err);
+--- 160,166 ----
+  		case EROFS:
+  			PR_SetError(PR_READ_ONLY_FILESYSTEM_ERROR, err);
+  			break;
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
+  		case EMULTIHOP:
+  		case ENOLINK:
+  			PR_SetError(PR_REMOTE_FILE_ERROR, err);
+***************
+*** 185,191 ****
+  			PR_SetError(PR_PENDING_INTERRUPT_ERROR, err);
+  			break;
+  		case ETIMEDOUT:
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
+  		case EMULTIHOP:
+  		case ENOLINK:
+  #endif
+--- 185,191 ----
+  			PR_SetError(PR_PENDING_INTERRUPT_ERROR, err);
+  			break;
+  		case ETIMEDOUT:
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
+  		case EMULTIHOP:
+  		case ENOLINK:
+  #endif
+***************
+*** 278,284 ****
+  		case ELOOP:
+  			PR_SetError(PR_LOOP_ERROR, err);
+  			break;
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
+  		case EMULTIHOP:
+  		case ENOLINK:
+  			PR_SetError(PR_REMOTE_FILE_ERROR, err);
+--- 278,284 ----
+  		case ELOOP:
+  			PR_SetError(PR_LOOP_ERROR, err);
+  			break;
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
+  		case EMULTIHOP:
+  		case ENOLINK:
+  			PR_SetError(PR_REMOTE_FILE_ERROR, err);
+***************
+*** 329,335 ****
+  		case ELOOP:
+  			PR_SetError(PR_LOOP_ERROR, err);
+  			break;
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
+  		case EMULTIHOP:
+  		case ENOLINK:
+  #endif
+--- 329,335 ----
+  		case ELOOP:
+  			PR_SetError(PR_LOOP_ERROR, err);
+  			break;
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
+  		case EMULTIHOP:
+  		case ENOLINK:
+  #endif
+***************
+*** 395,401 ****
+  		case EIO:
+  			PR_SetError(PR_IO_ERROR, err);
+  			break;
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
+  		case EMULTIHOP:
+  		case ENOLINK:
+  			PR_SetError(PR_REMOTE_FILE_ERROR, err);
+--- 395,401 ----
+  		case EIO:
+  			PR_SetError(PR_IO_ERROR, err);
+  			break;
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
+  		case EMULTIHOP:
+  		case ENOLINK:
+  			PR_SetError(PR_REMOTE_FILE_ERROR, err);
+***************
+*** 432,438 ****
+  		case ELOOP:
+  			PR_SetError(PR_LOOP_ERROR, err);
+  			break;
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
+  		case EMULTIHOP:
+  		case ENOLINK:
+  #endif
+--- 432,438 ----
+  		case ELOOP:
+  			PR_SetError(PR_LOOP_ERROR, err);
+  			break;
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
+  		case EMULTIHOP:
+  		case ENOLINK:
+  #endif
+***************
+*** 1345,1351 ****
+  			PR_SetError(PR_NO_ACCESS_RIGHTS_ERROR, err);
+  			break;
+  		case ETIMEDOUT:
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
+  		case EMULTIHOP:
+  		case ENOLINK:
+  #endif
+--- 1345,1351 ----
+  			PR_SetError(PR_NO_ACCESS_RIGHTS_ERROR, err);
+  			break;
+  		case ETIMEDOUT:
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
+  		case EMULTIHOP:
+  		case ENOLINK:
+  #endif
+*** nsprpub/pr/src/md/unix/uxwrap.c.orig	Wed Apr 29 20:58:19 1998
+--- nsprpub/pr/src/md/unix/uxwrap.c	Sun May 24 22:00:14 1998
+***************
+*** 324,329 ****
+--- 324,331 ----
+  int poll(struct pollfd filedes[], unsigned int nfds, int timeout)
+  #elif defined(HPUX9)
+  int poll(struct pollfd filedes[], int nfds, int timeout)
++ #elif defined(NETBSD)
++ int poll(struct pollfd *filedes, nfds_t nfds, int timeout)
+  #else
+  int poll(struct pollfd *filedes, unsigned long nfds, int timeout)
+  #endif
+*** nsprpub/pr/src/md/unix/netbsd.c.orig	Sun May 24 22:00:14 1998
+--- nsprpub/pr/src/md/unix/netbsd.c	Sun May 24 22:00:14 1998
 ***************
 *** 0 ****
---- 1,58 ----
-+ #
-+ # The contents of this file are subject to the Netscape Public License
-+ # Version 1.0 (the "NPL"); you may not use this file except in
-+ # compliance with the NPL.  You may obtain a copy of the NPL at
-+ # http://www.mozilla.org/NPL/
-+ # 
-+ # Software distributed under the NPL is distributed on an "AS IS" basis,
-+ # WITHOUT WARRANTY OF ANY KIND, either express or implied. See the NPL
-+ # for the specific language governing rights and limitations under the
-+ # NPL.
-+ # 
-+ # The Initial Developer of this code under the NPL is Netscape
-+ # Communications Corporation.  Portions created by Netscape are
-+ # Copyright (C) 1998 Netscape Communications Corporation.  All Rights
-+ # Reserved.
-+ #
+--- 1,102 ----
++ /* -*- Mode: C++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
++ /*
++  * The contents of this file are subject to the Netscape Public License
++  * Version 1.0 (the "NPL"); you may not use this file except in
++  * compliance with the NPL.  You may obtain a copy of the NPL at
++  * http://www.mozilla.org/NPL/
++  * 
++  * Software distributed under the NPL is distributed on an "AS IS" basis,
++  * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the NPL
++  * for the specific language governing rights and limitations under the
++  * NPL.
++  * 
++  * The Initial Developer of this code under the NPL is Netscape
++  * Communications Corporation.  Portions created by Netscape are
++  * Copyright (C) 1998 Netscape Communications Corporation.  All Rights
++  * Reserved.
++  */
 + 
-+ #
-+ # Config stuff for NetBSD 1.x
-+ #
++ #include "primpl.h"
 + 
-+ include $(MOD_DEPTH)/config/UNIX.mk
++ #include <signal.h>
++ #include <poll.h>
++ #include <sys/syscall.h>
 + 
-+ CC			= gcc
-+ CCC			= g++
-+ RANLIB			= ranlib
++ void _MD_EarlyInit(void)
++ {
++     /*
++      * Ignore FPE because coercion of a NaN to an int causes SIGFPE
++      * to be raised.
++      */
++     struct sigaction act;
 + 
-+ OS_REL_CFLAGS		=
-+ #CPU_ARCH		= x86
++     act.sa_handler = SIG_IGN;
++     sigemptyset(&act.sa_mask);
++     act.sa_flags = SA_RESTART;
++     sigaction(SIGFPE, &act, 0);
++ }
 + 
-+ OS_CFLAGS		= $(DSO_CFLAGS) $(OS_REL_CFLAGS) -ansi -Wall -pipe -DNETBSD -DHAVE_STRERROR -DHAVE_BSD_FLOCK
++ PRWord *_MD_HomeGCRegisters(PRThread *t, int isCurrent, int *np)
++ {
++ #ifndef _PR_PTHREADS
++     if (isCurrent) {
++ 	(void) sigsetjmp(CONTEXT(t), 1);
++     }
++     *np = sizeof(CONTEXT(t)) / sizeof(PRWord);
++     return (PRWord *) CONTEXT(t);
++ #else
++ 	*np = 0;
++ 	return NULL;
++ #endif
++ }
 + 
-+ ifeq ($(USE_PTHREADS),1)
-+ OS_LIBS			= -lc_r
-+ # XXX probably should define _THREAD_SAFE too.
-+ else
-+ OS_LIBS			= -lc
-+ DEFINES			+= -D_PR_LOCAL_THREADS_ONLY
-+ endif
++ #ifndef _PR_PTHREADS
++ void
++ _MD_SET_PRIORITY(_MDThread *thread, PRUintn newPri)
++ {
++     return;
++ }
 + 
-+ ARCH			= netbsd
++ PRStatus
++ _MD_InitializeThread(PRThread *thread)
++ {
++ 	return PR_SUCCESS;
++ }
 + 
-+ DSO_CFLAGS		= -fPIC
-+ DSO_LDFLAGS		=
-+ DSO_LDOPTS		= -Bshareable
-+ ifeq ($(OS_TEST),alpha)
-+ DSO_LDOPTS		= -shared
-+ endif
-+ ifeq ($(OS_TEST),mips)
-+ DSO_LDOPTS		= -shared
-+ endif
-+ ifeq ($(OS_TEST),pmax)  
-+ DSO_LDOPTS		= -shared
-+ endif
++ PRStatus
++ _MD_WAIT(PRThread *thread, PRIntervalTime ticks)
++ {
++     PR_ASSERT(!(thread->flags & _PR_GLOBAL_SCOPE));
++     _PR_MD_SWITCH_CONTEXT(thread);
++     return PR_SUCCESS;
++ }
 + 
-+ MKSHLIB			= $(LD) $(DSO_LDOPTS)
++ PRStatus
++ _MD_WAKEUP_WAITER(PRThread *thread)
++ {
++     if (thread) {
++ 	PR_ASSERT(!(thread->flags & _PR_GLOBAL_SCOPE));
++     }
++     return PR_SUCCESS;
++ }
 + 
-+ G++INCLUDES		= -I/usr/include/g++
-*** ./nsprpub/config/arch.mk.orig	Wed Apr  1 01:30:26 1998
---- ./nsprpub/config/arch.mk	Wed Apr  1 01:33:34 1998
++ /* These functions should not be called for OSF1 */
++ void
++ _MD_YIELD(void)
++ {
++     PR_NOT_REACHED("_MD_YIELD should not be called for OSF1.");
++ }
++ 
++ PRStatus
++ _MD_CREATE_THREAD(
++     PRThread *thread,
++     void (*start) (void *),
++     PRThreadPriority priority,
++     PRThreadScope scope,
++     PRThreadState state,
++     PRUint32 stackSize)
++ {
++     PR_NOT_REACHED("_MD_CREATE_THREAD should not be called for OSF1.");
++ 	return PR_FAILURE;
++ }
++ #endif /* ! _PR_PTHREADS */
+*** nsprpub/pr/src/md/prosdep.c.orig	Wed Apr 29 20:58:15 1998
+--- nsprpub/pr/src/md/prosdep.c	Sun May 24 22:00:14 1998
 ***************
-*** 58,64 ****
-  # Handle one dot (2.2-STABLE) and two dot (2.2.5-RELEASE) forms.
-  #
+*** 42,48 ****
+      /* Get page size */
+  #ifdef XP_UNIX
+  #if defined SUNOS4 || defined LINUX || defined BSDI || defined AIX \
+! 	|| defined FREEBSD
+      _pr_pageSize = getpagesize();
+  #elif defined(HPUX)
+      /* I have no idea. Don't get me started. --Rob */
+--- 42,48 ----
+      /* Get page size */
+  #ifdef XP_UNIX
+  #if defined SUNOS4 || defined LINUX || defined BSDI || defined AIX \
+! 	|| defined FREEBSD || defined NETBSD
+      _pr_pageSize = getpagesize();
+  #elif defined(HPUX)
+      /* I have no idea. Don't get me started. --Rob */
+*** nsprpub/pr/src/pthreads/ptio.c.orig	Wed Apr 29 20:58:25 1998
+--- nsprpub/pr/src/pthreads/ptio.c	Sun May 24 22:00:14 1998
+***************
+*** 75,81 ****
+  #elif defined(IRIX) || (defined(AIX) && !defined(AIX4_1)) \
+      || defined(OSF1) || defined(SOLARIS) \
+      || defined(HPUX10_30) || defined(HPUX11) || defined(LINUX) \
+!     || defined(FREEBSD)
+  #define _PRSelectFdSetArg_t fd_set *
+  #else
+  #error "Cannot determine architecture"
+--- 75,81 ----
+  #elif defined(IRIX) || (defined(AIX) && !defined(AIX4_1)) \
+      || defined(OSF1) || defined(SOLARIS) \
+      || defined(HPUX10_30) || defined(HPUX11) || defined(LINUX) \
+!     || defined(FREEBSD) || defined(NETBSD)
+  #define _PRSelectFdSetArg_t fd_set *
+  #else
+  #error "Cannot determine architecture"
+***************
+*** 2506,2512 ****
+  #endif
   
-! ifeq ($(OS_ARCH),FreeBSD)
-  	OS_RELEASE := $(basename $(shell uname -r))
-  	NEW_OS_RELEASE := $(basename $(OS_RELEASE))
-  	ifneq ($(NEW_OS_RELEASE),"")
---- 58,65 ----
-  # Handle one dot (2.2-STABLE) and two dot (2.2.5-RELEASE) forms.
-  #
+  #if defined(HPUX) || defined(OSF1) || defined(SOLARIS) || defined (IRIX) \
+!     || defined(AIX) || defined(LINUX) || defined(FREEBSD)
+  #define _PR_FCNTL_FLAGS O_NONBLOCK
+  #else
+  #error "Can't determine architecture"
+--- 2506,2512 ----
+  #endif
   
-! #ifeq ($(OS_ARCH),FreeBSD)
-! ifneq (,$(filter FreeBSD NetBSD,$(OS_ARCH)))
-  	OS_RELEASE := $(basename $(shell uname -r))
-  	NEW_OS_RELEASE := $(basename $(OS_RELEASE))
-  	ifneq ($(NEW_OS_RELEASE),"")
-*** ./nsprpub/pr/include/md/_pth.h.orig	Tue Mar 31 04:05:25 1998
---- ./nsprpub/pr/include/md/_pth.h	Wed Apr  1 03:16:24 1998
+  #if defined(HPUX) || defined(OSF1) || defined(SOLARIS) || defined (IRIX) \
+!     || defined(AIX) || defined(LINUX) || defined(FREEBSD) || defined(NETBSD)
+  #define _PR_FCNTL_FLAGS O_NONBLOCK
+  #else
+  #error "Can't determine architecture"
+*** nsprpub/pr/src/pthreads/ptthread.c.orig	Wed Apr 29 20:58:25 1998
+--- nsprpub/pr/src/pthreads/ptthread.c	Sun May 24 22:07:22 1998
+***************
+*** 194,204 ****
+  
+      if (EPERM != pt_schedpriv)
+      {
+! #if !defined(_PR_DCETHREADS) && !defined(FREEBSD)
+          struct sched_param schedule;
+  #endif
+  
+! #if !defined(FREEBSD)
+          rv = pthread_attr_setinheritsched(&tattr, PTHREAD_EXPLICIT_SCHED);
+          PR_ASSERT(0 == rv);
+  #endif
+--- 194,204 ----
+  
+      if (EPERM != pt_schedpriv)
+      {
+! #if !defined(_PR_DCETHREADS) && !defined(FREEBSD) && !defined(NETBSD)
+          struct sched_param schedule;
+  #endif
+  
+! #if !defined(FREEBSD) && !defined(NETBSD)
+          rv = pthread_attr_setinheritsched(&tattr, PTHREAD_EXPLICIT_SCHED);
+          PR_ASSERT(0 == rv);
+  #endif
+***************
+*** 208,214 ****
+  #if defined(_PR_DCETHREADS)
+          rv = pthread_attr_setprio(&tattr, pt_PriorityMap(priority));
+          PR_ASSERT(0 == rv);
+! #elif !defined(FREEBSD)
+          rv = pthread_attr_getschedparam(&tattr, &schedule);
+          PR_ASSERT(0 == rv);
+          schedule.sched_priority = pt_PriorityMap(priority);
+--- 208,214 ----
+  #if defined(_PR_DCETHREADS)
+          rv = pthread_attr_setprio(&tattr, pt_PriorityMap(priority));
+          PR_ASSERT(0 == rv);
+! #elif !defined(FREEBSD) && !defined(NETBSD)
+          rv = pthread_attr_getschedparam(&tattr, &schedule);
+          PR_ASSERT(0 == rv);
+          schedule.sched_priority = pt_PriorityMap(priority);
+***************
+*** 550,556 ****
+      rv = pthread_setprio(thred->id, pt_PriorityMap(newPri));
+      /* pthread_setprio returns the old priority */
+      PR_ASSERT(-1 != rv);
+! #elif !defined(FREEBSD)
+      if (EPERM != pt_schedpriv)
+      {
+          int policy;
+--- 550,556 ----
+      rv = pthread_setprio(thred->id, pt_PriorityMap(newPri));
+      /* pthread_setprio returns the old priority */
+      PR_ASSERT(-1 != rv);
+! #elif !defined(FREEBSD) && !defined(NETBSD)
+      if (EPERM != pt_schedpriv)
+      {
+          int policy;
+***************
+*** 751,757 ****
+       * conflict with the use of these two signals in our GC support.
+       * So we don't know how to support GC on Linux pthreads.
+       */
+! #if !defined(LINUX) && !defined(FREEBSD)
+  	init_pthread_gc_support();
+  #endif
+  
+--- 751,757 ----
+       * conflict with the use of these two signals in our GC support.
+       * So we don't know how to support GC on Linux pthreads.
+       */
+! #if !defined(LINUX) && !defined(FREEBSD) && !defined(NETBSD)
+  	init_pthread_gc_support();
+  #endif
+  
+***************
+*** 1036,1042 ****
+  	pthread_cond_signal(&me->suspendResumeCV);
+  	while (me->suspend & PT_THREAD_SUSPENDED)
+  	{
+! #if !defined(FREEBSD)  /*XXX*/
+          PRIntn rv;
+  	    sigwait(&sigwait_set, &rv);
+  #endif
+--- 1036,1042 ----
+  	pthread_cond_signal(&me->suspendResumeCV);
+  	while (me->suspend & PT_THREAD_SUSPENDED)
+  	{
+! #if !defined(FREEBSD) && !defined(NETBSD) /*XXX*/
+          PRIntn rv;
+  	    sigwait(&sigwait_set, &rv);
+  #endif
+*** nsprpub/pr/src/linking/prlink.c.orig	Wed Apr 29 20:58:08 1998
+--- nsprpub/pr/src/linking/prlink.c	Sun May 24 22:00:14 1998
+***************
+*** 75,81 ****
+  
+  /************************************************************************/
+  
+! #if ( !defined(USE_DLFCN) && !defined(HAVE_STRERROR) ) || defined(HPUX) || defined(BSDI) || defined(LINUX)
+  static char* errStrBuf = NULL;
+  #define ERR_STR_BUF_LENGTH	20
+  static char* errno_string(PRIntn oserr)
+--- 75,81 ----
+  
+  /************************************************************************/
+  
+! #if ( !defined(USE_DLFCN) && !defined(HAVE_STRERROR) ) || defined(HPUX) || defined(BSDI) || defined(LINUX) || defined(NETBSD)
+  static char* errStrBuf = NULL;
+  #define ERR_STR_BUF_LENGTH	20
+  static char* errno_string(PRIntn oserr)
+*** nsprpub/pr/include/md/_pth.h.orig	Wed Apr 29 20:58:01 1998
+--- nsprpub/pr/include/md/_pth.h	Sun May 24 22:07:59 1998
 ***************
 *** 69,75 ****
   	(!memcmp(&(t), &pt_zero_tid, sizeof(pthread_t)))
@@ -330,7 +848,7 @@
 *** 142,148 ****
    * These platforms don't have sigtimedwait()
    */
-  #if (defined(AIX) && !defined(AIX4_3)) || defined(LINUX2_0) \
+  #if (defined(AIX) && !defined(AIX4_3)) || defined(LINUX) \
 ! 	|| defined(FREEBSD)
   #define PT_NO_SIGTIMEDWAIT
   #endif
@@ -338,7 +856,7 @@
 --- 144,150 ----
    * These platforms don't have sigtimedwait()
    */
-  #if (defined(AIX) && !defined(AIX4_3)) || defined(LINUX2_0) \
+  #if (defined(AIX) && !defined(AIX4_3)) || defined(LINUX) \
 ! 	|| defined(FREEBSD) || defined(NETBSD)
   #define PT_NO_SIGTIMEDWAIT
   #endif
@@ -361,7 +879,7 @@
   #define PT_PRIO_MAX            126
   #else
 ***************
-*** 210,216 ****
+*** 213,219 ****
   #define PTHREAD_YIELD()             sched_yield()
   #elif defined(LINUX)
   #define PTHREAD_YIELD()            	sched_yield()
@@ -369,7 +887,7 @@
   #define PTHREAD_YIELD()                 pthread_yield()
   #else
   #error "Need to define PTHREAD_YIELD for this platform"
---- 212,218 ----
+--- 215,221 ----
   #define PTHREAD_YIELD()             sched_yield()
   #elif defined(LINUX)
   #define PTHREAD_YIELD()            	sched_yield()
@@ -377,8 +895,8 @@
   #define PTHREAD_YIELD()                 pthread_yield()
   #else
   #error "Need to define PTHREAD_YIELD for this platform"
-*** ./nsprpub/pr/include/md/prosdep.h.orig	Tue Mar 31 04:05:25 1998
---- ./nsprpub/pr/include/md/prosdep.h	Wed Apr  1 04:11:48 1998
+*** nsprpub/pr/include/md/prosdep.h.orig	Wed Apr 29 20:58:01 1998
+--- nsprpub/pr/include/md/prosdep.h	Sun May 24 22:00:13 1998
 ***************
 *** 59,64 ****
 --- 59,67 ----
@@ -391,8 +909,8 @@
   #elif defined(BSDI)
   #include "md/_bsdi.h"
   
-*** ./nsprpub/pr/include/md/_netbsd.cfg.orig	Wed Apr  1 01:36:34 1998
---- ./nsprpub/pr/include/md/_netbsd.cfg	Tue Apr  7 22:38:07 1998
+*** nsprpub/pr/include/md/_netbsd.cfg.orig	Sun May 24 23:32:44 1998
+--- nsprpub/pr/include/md/_netbsd.cfg	Sun May 24 22:00:41 1998
 ***************
 *** 0 ****
 --- 1,262 ----
@@ -425,7 +943,7 @@
 + #define NETBSD
 + #endif
 + 
-+ #ifdef __i386__
++ #if defined(__i386__) || defined(__arm32__)
 + 
 + #define IS_LITTLE_ENDIAN 1
 + #undef  IS_BIG_ENDIAN
@@ -658,8 +1176,8 @@
 + #endif /* NO_NSPR_10_SUPPORT */
 + 
 + #endif /* nspr_cpucfg___ */
-*** ./nsprpub/pr/include/md/_netbsd.h.orig	Wed Apr  1 01:36:40 1998
---- ./nsprpub/pr/include/md/_netbsd.h	Thu Apr  9 01:52:41 1998
+*** nsprpub/pr/include/md/_netbsd.h.orig	Sun May 24 23:32:50 1998
+--- nsprpub/pr/include/md/_netbsd.h	Sun May 24 22:00:41 1998
 ***************
 *** 0 ****
 --- 1,169 ----
@@ -688,7 +1206,7 @@
 + 
 + #define PR_LINKER_ARCH	"netbsd"
 + #define _PR_SI_SYSNAME  "NetBSD"
-+ #if defined(__i386__)
++ #if defined(__i386)
 + #define _PR_SI_ARCHITECTURE "x86"
 + #elif defined(__alpha__)
 + #define _PR_SI_ARCHITECTURE "alpha"
@@ -699,7 +1217,7 @@
 + #elif defined(__sparc__)
 + #define _PR_SI_ARCHITECTURE "sparc"
 + #elif defined(__arm32__)
-+ #define _PR_SI_ACRHITECTURE "arm32"
++ #define _PR_SI_ARCHITECTURE "arm32"
 + #endif
 + 
 + #define PR_DLL_SUFFIX		".so.1.0"
@@ -722,7 +1240,7 @@
 + 
 + #define CONTEXT(_th) ((_th)->md.context)
 + 
-+ #if defined(__i386__) || defined(__sparc__) || defined(__m68k__) || defined(__powerpc__)
++ #if defined(__i386) || defined(__sparc__) || defined(__m68k__)
 + #define JB_SP_INDEX 2
 + #elif defined(__alpha__)
 + #define JB_SP_INDEX 34
@@ -832,8 +1350,8 @@
 + #endif
 + 
 + #endif /* nspr_netbsd_defs_h___ */
-*** ./nsprpub/pr/include/md/Makefile.orig	Tue Mar 31 04:05:25 1998
---- ./nsprpub/pr/include/md/Makefile	Wed Apr  1 02:48:34 1998
+*** nsprpub/pr/include/md/Makefile.orig	Wed Apr 29 20:58:01 1998
+--- nsprpub/pr/include/md/Makefile	Sun May 24 22:00:13 1998
 ***************
 *** 55,60 ****
 --- 55,64 ----
@@ -847,8 +1365,8 @@
   ifeq ($(OS_ARCH),HP-UX)
   MDCPUCFG_H = _hpux.cfg
   endif
-*** ./nsprpub/pr/include/md/_unixos.h.orig	Tue Mar 31 04:05:25 1998
---- ./nsprpub/pr/include/md/_unixos.h	Wed Apr  1 03:16:41 1998
+*** nsprpub/pr/include/md/_unixos.h.orig	Wed Apr 29 20:58:01 1998
+--- nsprpub/pr/include/md/_unixos.h	Sun May 24 22:00:13 1998
 ***************
 *** 49,55 ****
           || defined(UNIXWARE) || defined(NCR) || defined(SNI) || defined(NEC) \
@@ -866,493 +1384,92 @@
   #include <sys/types.h>
   #elif defined(LINUX)
   #include <sys/time.h>
-*** ./nsprpub/pr/src/md/unix/Makefile.orig	Tue Mar 31 04:05:26 1998
---- ./nsprpub/pr/src/md/unix/Makefile	Wed Apr  1 03:50:43 1998
+*** nsprpub/config/UNIX.mk.orig	Wed Apr 29 20:57:38 1998
+--- nsprpub/config/UNIX.mk	Sun May 24 23:11:32 1998
 ***************
-*** 57,62 ****
---- 57,66 ----
-  	freebsd.c \
-  	$(NULL)
+*** 32,38 ****
+  endif
   
-+ NETBSD_CSRCS = \
-+ 	netbsd.c \
-+ 	$(NULL)
-+ 
-  BSDI_CSRCS = \
-  	bsdi.c \
-  	$(NULL)
-***************
-*** 118,123 ****
---- 122,130 ----
-  endif
-  ifeq ($(OS_ARCH),FreeBSD)
-  CSRCS += $(FREEBSD_CSRCS)
-+ endif
-+ ifeq ($(OS_ARCH),NetBSD)
-+ CSRCS += $(NETBSD_CSRCS)
-  endif
-  ifeq ($(OS_ARCH),BSD_386)
-  CSRCS += $(BSDI_CSRCS)
-*** ./nsprpub/pr/src/md/unix/objs.mk.orig	Tue Mar 31 04:05:26 1998
---- ./nsprpub/pr/src/md/unix/objs.mk	Wed Apr  1 03:51:09 1998
-***************
-*** 49,54 ****
---- 49,58 ----
-  	freebsd.c \
-  	$(NULL)
+  # Name of the binary code directories
+! OBJDIR_NAME	= $(OS_CONFIG)$(CPU_ARCH_TAG)$(COMPILER_TAG)$(IMPL_STRATEGY)$(OBJDIR_TAG).OBJ
   
-+ NETBSD_CSRCS = \
-+ 	netbsd.c \
-+ 	$(NULL)
-+ 
-  BSDI_CSRCS = \
-  	bsdi.c \
-  	$(NULL)
-***************
-*** 111,116 ****
---- 115,123 ----
+  MKDEPEND_DIR    = $(DEPTH)/config/mkdepend
+  MKDEPEND 	= $(MKDEPEND_DIR)/$(OBJDIR_NAME)/mkdepend
+--- 32,38 ----
   endif
-  ifeq ($(OS_ARCH),FreeBSD)
-  CSRCS += $(FREEBSD_CSRCS)
-+ endif
-+ ifeq ($(OS_ARCH),NetBSD)
-+ CSRCS += $(NETBSD_CSRCS)
-  endif
-  ifeq ($(OS_ARCH),BSD_386)
-  CSRCS += $(BSDI_CSRCS)
-*** ./nsprpub/pr/src/md/unix/unix.c.orig	Tue Mar 31 04:05:26 1998
---- ./nsprpub/pr/src/md/unix/unix.c	Wed Apr  1 03:20:06 1998
-***************
-*** 44,50 ****
-      || defined(SUNOS4)
-  #define _PRSockLen_t int
-  #elif (defined(AIX) && !defined(AIX4_1)) || defined(FREEBSD) \
-!     || defined(UNIXWARE)
-  #define _PRSockLen_t size_t
-  #else
-  #error "Cannot determine architecture"
---- 44,50 ----
-      || defined(SUNOS4)
-  #define _PRSockLen_t int
-  #elif (defined(AIX) && !defined(AIX4_1)) || defined(FREEBSD) \
-!     || defined(UNIXWARE) || defined(NETBSD)
-  #define _PRSockLen_t size_t
-  #else
-  #error "Cannot determine architecture"
-*** ./nsprpub/pr/src/md/unix/unix_errors.c.orig	Tue Mar 31 04:05:26 1998
---- ./nsprpub/pr/src/md/unix/unix_errors.c	Wed Apr  1 03:21:08 1998
-***************
-*** 160,166 ****
-  		case EROFS:
-  			PR_SetError(PR_READ_ONLY_FILESYSTEM_ERROR, err);
-  			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
-  		case EMULTIHOP:
-  		case ENOLINK:
-  			PR_SetError(PR_REMOTE_FILE_ERROR, err);
---- 160,166 ----
-  		case EROFS:
-  			PR_SetError(PR_READ_ONLY_FILESYSTEM_ERROR, err);
-  			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
-  		case EMULTIHOP:
-  		case ENOLINK:
-  			PR_SetError(PR_REMOTE_FILE_ERROR, err);
-***************
-*** 185,191 ****
-  			PR_SetError(PR_PENDING_INTERRUPT_ERROR, err);
-  			break;
-  		case ETIMEDOUT:
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
-  		case EMULTIHOP:
-  		case ENOLINK:
-  #endif
---- 185,191 ----
-  			PR_SetError(PR_PENDING_INTERRUPT_ERROR, err);
-  			break;
-  		case ETIMEDOUT:
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
-  		case EMULTIHOP:
-  		case ENOLINK:
-  #endif
-***************
-*** 278,284 ****
-  		case ELOOP:
-  			PR_SetError(PR_LOOP_ERROR, err);
-  			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
-  		case EMULTIHOP:
-  		case ENOLINK:
-  			PR_SetError(PR_REMOTE_FILE_ERROR, err);
---- 278,284 ----
-  		case ELOOP:
-  			PR_SetError(PR_LOOP_ERROR, err);
-  			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
-  		case EMULTIHOP:
-  		case ENOLINK:
-  			PR_SetError(PR_REMOTE_FILE_ERROR, err);
-***************
-*** 329,335 ****
-  		case ELOOP:
-  			PR_SetError(PR_LOOP_ERROR, err);
-  			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
-  		case EMULTIHOP:
-  		case ENOLINK:
-  #endif
---- 329,335 ----
-  		case ELOOP:
-  			PR_SetError(PR_LOOP_ERROR, err);
-  			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
-  		case EMULTIHOP:
-  		case ENOLINK:
-  #endif
-***************
-*** 395,401 ****
-  		case EIO:
-  			PR_SetError(PR_IO_ERROR, err);
-  			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
-  		case EMULTIHOP:
-  		case ENOLINK:
-  			PR_SetError(PR_REMOTE_FILE_ERROR, err);
---- 395,401 ----
-  		case EIO:
-  			PR_SetError(PR_IO_ERROR, err);
-  			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
-  		case EMULTIHOP:
-  		case ENOLINK:
-  			PR_SetError(PR_REMOTE_FILE_ERROR, err);
-***************
-*** 432,438 ****
-  		case ELOOP:
-  			PR_SetError(PR_LOOP_ERROR, err);
-  			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
-  		case EMULTIHOP:
-  		case ENOLINK:
-  #endif
---- 432,438 ----
-  		case ELOOP:
-  			PR_SetError(PR_LOOP_ERROR, err);
-  			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
-  		case EMULTIHOP:
-  		case ENOLINK:
-  #endif
-***************
-*** 1345,1351 ****
-  			PR_SetError(PR_NO_ACCESS_RIGHTS_ERROR, err);
-  			break;
-  		case ETIMEDOUT:
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
-  		case EMULTIHOP:
-  		case ENOLINK:
-  #endif
---- 1345,1351 ----
-  			PR_SetError(PR_NO_ACCESS_RIGHTS_ERROR, err);
-  			break;
-  		case ETIMEDOUT:
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
-  		case EMULTIHOP:
-  		case ENOLINK:
-  #endif
-*** ./nsprpub/pr/src/md/unix/uxwrap.c.orig	Tue Mar 31 04:05:26 1998
---- ./nsprpub/pr/src/md/unix/uxwrap.c	Wed Apr  1 03:47:19 1998
-***************
-*** 326,331 ****
---- 326,333 ----
-  int poll(struct pollfd filedes[], unsigned int nfds, int timeout)
-  #elif defined(HPUX9)
-  int poll(struct pollfd filedes[], int nfds, int timeout)
-+ #elif defined(NETBSD)
-+ int poll(struct pollfd *filedes, nfds_t nfds, int timeout)
-  #else
-  int poll(struct pollfd *filedes, unsigned long nfds, int timeout)
-  #endif
-*** ./nsprpub/pr/src/md/unix/netbsd.c.orig	Wed Apr  1 03:26:27 1998
---- ./nsprpub/pr/src/md/unix/netbsd.c	Mon Apr  6 00:06:25 1998
+  
+  # Name of the binary code directories
+! OBJDIR_NAME	= NetBSD1.3E_OPT.OBJ
+  
+  MKDEPEND_DIR    = $(DEPTH)/config/mkdepend
+  MKDEPEND 	= $(MKDEPEND_DIR)/$(OBJDIR_NAME)/mkdepend
+*** nsprpub/config/NetBSD.mk.orig	Sun May 24 22:00:13 1998
+--- nsprpub/config/NetBSD.mk	Sun May 24 22:00:13 1998
 ***************
 *** 0 ****
---- 1,102 ----
-+ /* -*- Mode: C++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
-+ /*
-+  * The contents of this file are subject to the Netscape Public License
-+  * Version 1.0 (the "NPL"); you may not use this file except in
-+  * compliance with the NPL.  You may obtain a copy of the NPL at
-+  * http://www.mozilla.org/NPL/
-+  * 
-+  * Software distributed under the NPL is distributed on an "AS IS" basis,
-+  * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the NPL
-+  * for the specific language governing rights and limitations under the
-+  * NPL.
-+  * 
-+  * The Initial Developer of this code under the NPL is Netscape
-+  * Communications Corporation.  Portions created by Netscape are
-+  * Copyright (C) 1998 Netscape Communications Corporation.  All Rights
-+  * Reserved.
-+  */
+--- 1,58 ----
++ #
++ # The contents of this file are subject to the Netscape Public License
++ # Version 1.0 (the "NPL"); you may not use this file except in
++ # compliance with the NPL.  You may obtain a copy of the NPL at
++ # http://www.mozilla.org/NPL/
++ # 
++ # Software distributed under the NPL is distributed on an "AS IS" basis,
++ # WITHOUT WARRANTY OF ANY KIND, either express or implied. See the NPL
++ # for the specific language governing rights and limitations under the
++ # NPL.
++ # 
++ # The Initial Developer of this code under the NPL is Netscape
++ # Communications Corporation.  Portions created by Netscape are
++ # Copyright (C) 1998 Netscape Communications Corporation.  All Rights
++ # Reserved.
++ #
 + 
-+ #include "primpl.h"
++ #
++ # Config stuff for NetBSD 1.x
++ #
 + 
-+ #include <signal.h>
-+ #include <poll.h>
-+ #include <sys/syscall.h>
++ include $(MOD_DEPTH)/config/UNIX.mk
 + 
-+ void _MD_EarlyInit(void)
-+ {
-+     /*
-+      * Ignore FPE because coercion of a NaN to an int causes SIGFPE
-+      * to be raised.
-+      */
-+     struct sigaction act;
++ CC			= gcc
++ CCC			= g++
++ RANLIB			= ranlib
 + 
-+     act.sa_handler = SIG_IGN;
-+     sigemptyset(&act.sa_mask);
-+     act.sa_flags = SA_RESTART;
-+     sigaction(SIGFPE, &act, 0);
-+ }
++ OS_REL_CFLAGS		=
++ #CPU_ARCH		= x86
 + 
-+ PRWord *_MD_HomeGCRegisters(PRThread *t, int isCurrent, int *np)
-+ {
-+ #ifndef _PR_PTHREADS
-+     if (isCurrent) {
-+ 	(void) sigsetjmp(CONTEXT(t), 1);
-+     }
-+     *np = sizeof(CONTEXT(t)) / sizeof(PRWord);
-+     return (PRWord *) CONTEXT(t);
-+ #else
-+ 	*np = 0;
-+ 	return NULL;
-+ #endif
-+ }
++ OS_CFLAGS		= $(DSO_CFLAGS) $(OS_REL_CFLAGS) -ansi -Wall -pipe -DNETBSD -DHAVE_STRERROR -DHAVE_BSD_FLOCK
 + 
-+ #ifndef _PR_PTHREADS
-+ void
-+ _MD_SET_PRIORITY(_MDThread *thread, PRUintn newPri)
-+ {
-+     return;
-+ }
++ ifeq ($(USE_PTHREADS),1)
++ OS_LIBS			= -lc_r
++ # XXX probably should define _THREAD_SAFE too.
++ else
++ OS_LIBS			= -lc
++ DEFINES			+= -D_PR_LOCAL_THREADS_ONLY
++ endif
 + 
-+ PRStatus
-+ _MD_InitializeThread(PRThread *thread)
-+ {
-+ 	return PR_SUCCESS;
-+ }
++ ARCH			= netbsd
 + 
-+ PRStatus
-+ _MD_WAIT(PRThread *thread, PRIntervalTime ticks)
-+ {
-+     PR_ASSERT(!(thread->flags & _PR_GLOBAL_SCOPE));
-+     _PR_MD_SWITCH_CONTEXT(thread);
-+     return PR_SUCCESS;
-+ }
++ DSO_CFLAGS		= -fPIC
++ DSO_LDFLAGS		=
++ DSO_LDOPTS		= -Bshareable
++ ifeq ($(OS_TEST),alpha)
++ DSO_LDOPTS		= -shared
++ endif
++ ifeq ($(OS_TEST),mips)
++ DSO_LDOPTS		= -shared
++ endif
++ ifeq ($(OS_TEST),pmax)  
++ DSO_LDOPTS		= -shared
++ endif
 + 
-+ PRStatus
-+ _MD_WAKEUP_WAITER(PRThread *thread)
-+ {
-+     if (thread) {
-+ 	PR_ASSERT(!(thread->flags & _PR_GLOBAL_SCOPE));
-+     }
-+     return PR_SUCCESS;
-+ }
++ MKSHLIB			= $(LD) $(DSO_LDOPTS)
 + 
-+ /* These functions should not be called for OSF1 */
-+ void
-+ _MD_YIELD(void)
-+ {
-+     PR_NOT_REACHED("_MD_YIELD should not be called for OSF1.");
-+ }
-+ 
-+ PRStatus
-+ _MD_CREATE_THREAD(
-+     PRThread *thread,
-+     void (*start) (void *),
-+     PRThreadPriority priority,
-+     PRThreadScope scope,
-+     PRThreadState state,
-+     PRUint32 stackSize)
-+ {
-+     PR_NOT_REACHED("_MD_CREATE_THREAD should not be called for OSF1.");
-+ 	return PR_FAILURE;
-+ }
-+ #endif /* ! _PR_PTHREADS */
-*** ./nsprpub/pr/src/md/prosdep.c.orig	Tue Mar 31 04:05:25 1998
---- ./nsprpub/pr/src/md/prosdep.c	Wed Apr  1 03:17:59 1998
++ G++INCLUDES		= -I/usr/include/g++
+*** include/mcom_db.h.orig	Wed Apr 29 20:53:35 1998
+--- include/mcom_db.h	Sun May 24 22:00:12 1998
 ***************
-*** 42,48 ****
-      /* Get page size */
-  #ifdef XP_UNIX
-  #if defined SUNOS4 || defined LINUX || defined BSDI || defined AIX \
-! 	|| defined FREEBSD
-      _pr_pageSize = getpagesize();
-  #elif defined(HPUX)
-      /* I have no idea. Don't get me started. --Rob */
---- 42,48 ----
-      /* Get page size */
-  #ifdef XP_UNIX
-  #if defined SUNOS4 || defined LINUX || defined BSDI || defined AIX \
-! 	|| defined FREEBSD || defined NETBSD
-      _pr_pageSize = getpagesize();
-  #elif defined(HPUX)
-      /* I have no idea. Don't get me started. --Rob */
-*** ./nsprpub/pr/src/linking/prlink.c.orig	Tue Mar 31 04:05:25 1998
---- ./nsprpub/pr/src/linking/prlink.c	Wed Apr  1 04:53:37 1998
-***************
-*** 75,81 ****
-  
-  /************************************************************************/
-  
-! #if ( !defined(USE_DLFCN) && !defined(HAVE_STRERROR) ) || defined(HPUX) || defined(BSDI) || defined(LINUX)
-  static char* errStrBuf = NULL;
-  #define ERR_STR_BUF_LENGTH	20
-  static char* errno_string(PRIntn oserr)
---- 75,81 ----
-  
-  /************************************************************************/
-  
-! #if ( !defined(USE_DLFCN) && !defined(HAVE_STRERROR) ) || defined(HPUX) || defined(BSDI) || defined(LINUX) || defined(NETBSD)
-  static char* errStrBuf = NULL;
-  #define ERR_STR_BUF_LENGTH	20
-  static char* errno_string(PRIntn oserr)
-*** ./nsprpub/pr/src/pthreads/ptio.c.orig	Tue Mar 31 04:05:27 1998
---- ./nsprpub/pr/src/pthreads/ptio.c	Wed Apr  1 03:22:42 1998
-***************
-*** 84,90 ****
-  #elif defined(IRIX) || (defined(AIX) && !defined(AIX4_1)) \
-      || defined(OSF1) || defined(SOLARIS) \
-      || defined(HPUX10_30) || defined(HPUX11) || defined(LINUX) \
-!     || defined(FREEBSD)
-  #define _PRSelectFdSetArg_t fd_set *
-  #else
-  #error "Cannot determine architecture"
---- 84,90 ----
-  #elif defined(IRIX) || (defined(AIX) && !defined(AIX4_1)) \
-      || defined(OSF1) || defined(SOLARIS) \
-      || defined(HPUX10_30) || defined(HPUX11) || defined(LINUX) \
-!     || defined(FREEBSD) || defined(NETBSD)
-  #define _PRSelectFdSetArg_t fd_set *
-  #else
-  #error "Cannot determine architecture"
-***************
-*** 2385,2391 ****
-  #endif
-  
-  #if defined(HPUX) || defined(OSF1) || defined(SOLARIS) || defined (IRIX) \
-!     || defined(AIX) || defined(LINUX) || defined(FREEBSD)
-  #define _PR_FCNTL_FLAGS O_NONBLOCK
-  #else
-  #error "Can't determine architecture"
---- 2385,2391 ----
-  #endif
-  
-  #if defined(HPUX) || defined(OSF1) || defined(SOLARIS) || defined (IRIX) \
-!     || defined(AIX) || defined(LINUX) || defined(FREEBSD) || defined(NETBSD)
-  #define _PR_FCNTL_FLAGS O_NONBLOCK
-  #else
-  #error "Can't determine architecture"
-*** ./nsprpub/pr/src/pthreads/ptthread.c.orig	Tue Mar 31 04:05:27 1998
---- ./nsprpub/pr/src/pthreads/ptthread.c	Wed Apr  1 03:24:16 1998
-***************
-*** 191,201 ****
-  
-      if (EPERM != pt_schedpriv)
-      {
-! #if !defined(_PR_DCETHREADS) && !defined(FREEBSD)
-          struct sched_param schedule;
-  #endif
-  
-! #if !defined(FREEBSD)
-          rv = pthread_attr_setinheritsched(&tattr, PTHREAD_EXPLICIT_SCHED);
-          PR_ASSERT(0 == rv);
-  #endif
---- 191,201 ----
-  
-      if (EPERM != pt_schedpriv)
-      {
-! #if !defined(_PR_DCETHREADS) && !defined(FREEBSD) && !defined(NETBSD)
-          struct sched_param schedule;
-  #endif
-  
-! #if !defined(FREEBSD) && !defined(NETBSD)
-          rv = pthread_attr_setinheritsched(&tattr, PTHREAD_EXPLICIT_SCHED);
-          PR_ASSERT(0 == rv);
-  #endif
-***************
-*** 205,211 ****
-  #if defined(_PR_DCETHREADS)
-          rv = pthread_attr_setprio(&tattr, pt_PriorityMap(priority));
-          PR_ASSERT(0 == rv);
-! #elif !defined(FREEBSD)
-          rv = pthread_attr_getschedparam(&tattr, &schedule);
-          PR_ASSERT(0 == rv);
-          schedule.sched_priority = pt_PriorityMap(priority);
---- 205,211 ----
-  #if defined(_PR_DCETHREADS)
-          rv = pthread_attr_setprio(&tattr, pt_PriorityMap(priority));
-          PR_ASSERT(0 == rv);
-! #elif !defined(FREEBSD) && !defined(NETBSD)
-          rv = pthread_attr_getschedparam(&tattr, &schedule);
-          PR_ASSERT(0 == rv);
-          schedule.sched_priority = pt_PriorityMap(priority);
-***************
-*** 539,545 ****
-      rv = pthread_setprio(thred->id, pt_PriorityMap(newPri));
-      /* pthread_setprio returns the old priority */
-      PR_ASSERT(-1 != rv);
-! #elif !defined(FREEBSD)
-      if (EPERM != pt_schedpriv)
-      {
-          int policy;
---- 539,545 ----
-      rv = pthread_setprio(thred->id, pt_PriorityMap(newPri));
-      /* pthread_setprio returns the old priority */
-      PR_ASSERT(-1 != rv);
-! #elif !defined(FREEBSD) && !defined(NETBSD)
-      if (EPERM != pt_schedpriv)
-      {
-          int policy;
-***************
-*** 730,736 ****
-       * conflict with the use of these two signals in our GC support.
-       * So we don't know how to support GC on Linux pthreads.
-       */
-! #if !defined(LINUX2_0) && !defined(FREEBSD)
-  	init_pthread_gc_support();
-  #endif
-  
---- 730,736 ----
-       * conflict with the use of these two signals in our GC support.
-       * So we don't know how to support GC on Linux pthreads.
-       */
-! #if !defined(LINUX2_0) && !defined(FREEBSD) && !defined(NETBSD)
-  	init_pthread_gc_support();
-  #endif
-  
-***************
-*** 1015,1021 ****
-  	pthread_cond_signal(&me->suspendResumeCV);
-  	while (me->suspend & PT_THREAD_SUSPENDED)
-  	{
-! #if !defined(FREEBSD)  /*XXX*/
-          PRIntn rv;
-  	    sigwait(&sigwait_set, &rv);
-  #endif
---- 1015,1021 ----
-  	pthread_cond_signal(&me->suspendResumeCV);
-  	while (me->suspend & PT_THREAD_SUSPENDED)
-  	{
-! #if !defined(FREEBSD) && !defined(NETBSD) /*XXX*/
-          PRIntn rv;
-  	    sigwait(&sigwait_set, &rv);
-  #endif
-*** ./dbm/include/mcom_db.h.orig	Tue Mar 31 04:05:30 1998
---- ./dbm/include/mcom_db.h	Wed Apr  1 05:01:27 1998
-***************
-*** 200,206 ****
+*** 224,230 ****
   #define	RET_SUCCESS	 0
   #define	RET_SPECIAL	 1
   
@@ -1360,7 +1477,7 @@
   #define	__BIT_TYPES_DEFINED__
   #endif
   
---- 200,206 ----
+--- 224,230 ----
   #define	RET_SUCCESS	 0
   #define	RET_SPECIAL	 1
   
@@ -1368,192 +1485,70 @@
   #define	__BIT_TYPES_DEFINED__
   #endif
   
-*** ./cmd/stubfe/Makefile.orig	Tue Mar 31 04:05:33 1998
---- ./cmd/stubfe/Makefile	Wed Apr  1 04:49:28 1998
+*** modules/schedulr/src/Makefile.orig	Wed Apr 29 20:56:51 1998
+--- modules/schedulr/src/Makefile	Sun May 24 22:00:13 1998
 ***************
-*** 542,547 ****
---- 542,553 ----
-  endif
+*** 17,24 ****
   
-  ########################################
-+ # NetBSD
-+ ifeq ($(OS_ARCH),NetBSD)
-+ OTHER_LIBS	= -lm $(OS_LIBS)
-+ endif
-+ 
-+ ########################################
-  # BSDI
-  ifeq ($(OS_ARCH),BSD_OS)
-  OTHER_LIBS	= -lm $(OS_LIBS)
-*** ./cmd/xfe/Microline3.0/XmL/Grid.c.orig	Tue Mar 31 04:05:42 1998
---- ./cmd/xfe/Microline3.0/XmL/Grid.c	Thu Apr  2 01:35:01 1998
+  DEPTH		= ../../..
+  
+! MODULE		= schedulr 
+! LIBRARY_NAME	= sched 
+  
+  REQUIRES	= nspr util
+  
+--- 17,24 ----
+  
+  DEPTH		= ../../..
+  
+! MODULE		= schedulr
+! LIBRARY_NAME	= sched
+  
+  REQUIRES	= nspr util
+  
+*** modules/libreg/src/vr_stubs.h.orig	Wed Apr 29 20:56:24 1998
+--- modules/libreg/src/vr_stubs.h	Sun May 24 22:00:13 1998
 ***************
-*** 30,35 ****
---- 30,38 ----
-  #include <Xm/Text.h>
-  #include <Xm/DrawnB.h>
-  #include <Xm/CutPaste.h>
-+ #ifndef MOTIF11
-+ #include <Xm/DropSMgr.h>
-+ #endif
-  #include <X11/StringDefs.h>
-  #include <X11/cursorfont.h>
-  #include <stdio.h>
-*** ./cmd/xfe/src/HTMLView.cpp.orig	Tue Mar 31 04:06:22 1998
---- ./cmd/xfe/src/HTMLView.cpp	Wed Apr  1 04:52:19 1998
-***************
-*** 343,349 ****
-    scroller = fe_MakeScrolledWindow (m_contextData, pane, "scroller");
-    XtVaSetValues (CONTEXT_DATA (m_contextData)->scrolled,
-  				 XmNborderWidth, 0, 
-! #if defined(__FreeBSD__)||defined(BSDI)||defined(LINUX)||defined(IRIX)
-  				 // Allow for resolutions > 1000 pixels.
-  				 // This causes the vertical scrollbar not to show
-  				 // up on Solaris 2.4, bug in Motif (77998).  
---- 343,349 ----
-    scroller = fe_MakeScrolledWindow (m_contextData, pane, "scroller");
-    XtVaSetValues (CONTEXT_DATA (m_contextData)->scrolled,
-  				 XmNborderWidth, 0, 
-! #if defined(__FreeBSD__)||defined(BSDI)||defined(LINUX)||defined(IRIX)||defined(__NetBSD__)
-  				 // Allow for resolutions > 1000 pixels.
-  				 // This causes the vertical scrollbar not to show
-  				 // up on Solaris 2.4, bug in Motif (77998).  
-*** ./cmd/xfe/src/context_funcs.cpp.orig	Tue Mar 31 04:06:29 1998
---- ./cmd/xfe/src/context_funcs.cpp	Thu Apr  9 01:36:26 1998
-***************
-*** 65,71 ****
-  #include <sys/vfs.h>      /* for statfs() */
-  extern "C" int statfs(char *, struct statfs *);
-  #define STATFS statfs
-! #elif defined(BSDI)
-  #include <sys/mount.h>    /* for statfs() */
-  #define STATFS statfs
+*** 29,35 ****
+  #ifdef XP_MAC
+  #include <stat.h>
   #else
---- 65,71 ----
-  #include <sys/vfs.h>      /* for statfs() */
-  extern "C" int statfs(char *, struct statfs *);
-  #define STATFS statfs
-! #elif defined(BSDI) || defined(NETBSD)
-  #include <sys/mount.h>    /* for statfs() */
-  #define STATFS statfs
+! #if defined(BSDI) && !defined(BSDI_2)
+  #include <sys/types.h>
+  #endif
+  #include <sys/stat.h>
+--- 29,35 ----
+  #ifdef XP_MAC
+  #include <stat.h>
   #else
-*** ./cmd/xfe/Makefile.orig	Tue Mar 31 04:05:35 1998
---- ./cmd/xfe/Makefile	Wed Apr  8 23:43:07 1998
-***************
-*** 485,490 ****
---- 485,504 ----
-  endif
-  
-  ########################################
-+ # NetBSD
-+ # Work around linker semantics that will never find our own libutil on 1.3.x
-+ ifeq ($(OS_ARCH),NetBSD)
-+ ifeq ($(OS_MINOR),3)
-+ FOOL_GMAKE	= $(EXPORT_LDFLAGS:$(DIST)/lib/lib%.a=-l%)
-+ DSO_EX_LIBS	= $(FOOL_GMAKE:-lutil=$(DIST)/lib/libutil.a)
-+ endif
-+ ifdef LIBRUNPATH
-+ OS_LIBS		+= -R$(LIBRUNPATH)
-+ endif
-+ OTHER_LIBS	= -L/usr/X11R6/lib -lXm -lXt -lXmu -lXext -lX11 -lSM -lICE -lm $(OS_LIBS)
-+ endif
-+ 
-+ ########################################
-  # BSDI
-  ifeq ($(OS_ARCH),BSD_OS)
-  OTHER_LIBS	= $(MOTIF)/libXm.a $(LOC_LIB_DIR)/libXt.a $(X11R6LIBS) $(LOC_LIB_DIR)/libXmu.a \
-*** ./cmd/xfe/mozilla.c.orig	Wed Apr  1 04:59:26 1998
---- ./cmd/xfe/mozilla.c	Thu Apr  2 01:49:10 1998
-***************
-*** 1886,1891 ****
---- 1886,1893 ----
-  	strcat (buf, "IRIX");
-  #elif defined(__FreeBSD__)
-  	strcat (buf, "FreeBSD");
-+ #elif defined(__NetBSD__)
-+ 	strcat (buf, "NetBSD");
-  #elif defined(__386BSD__)
-  	strcat (buf, "BSD/386");
-  #elif defined(__osf__)
-***************
-*** 3477,3483 ****
-  
-  #else  /* !OLD_UNIX_FILES */
-  
-! #if !defined(__FreeBSD__) && !defined(MACLINUX) && !defined(LINUX_GLIBC_2)
-  extern char *sys_errlist[];
-  extern int sys_nerr;
+! #if (defined(BSDI) && !defined(BSDI_2)) || defined(NETBSD)
+  #include <sys/types.h>
   #endif
---- 3479,3485 ----
-  
-  #else  /* !OLD_UNIX_FILES */
-  
-! #if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(MACLINUX) && !defined(LINUX_GLIBC_2)
-  extern char *sys_errlist[];
-  extern int sys_nerr;
-  #endif
-*** ./cmd/xfe/dialogs.c.orig	Tue Mar 31 04:05:37 1998
---- ./cmd/xfe/dialogs.c	Thu Apr  2 01:44:10 1998
+  #include <sys/stat.h>
+*** sun-java/stubs/include/typedefs_md.h.orig	Wed Apr 29 21:03:22 1998
+--- sun-java/stubs/include/typedefs_md.h	Sun May 24 22:11:50 1998
 ***************
-*** 239,245 ****
-    (void) fe_dialog (parent, "error", message, FALSE, 0, FALSE, FALSE, 0);
-  }
+*** 38,44 ****
   
-! #if !defined(__FreeBSD__) && !defined(MACLINUX) && !defined(LINUX_GLIBC_2)
-  #include <sys/errno.h>
-  extern char *sys_errlist[];
-  extern int sys_nerr;
---- 239,245 ----
-    (void) fe_dialog (parent, "error", message, FALSE, 0, FALSE, FALSE, 0);
-  }
+  typedef prword_t uintVP_t; /* unsigned that is same size as a void pointer */
   
-! #if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(MACLINUX) && !defined(LINUX_GLIBC_2)
-  #include <sys/errno.h>
-  extern char *sys_errlist[];
-  extern int sys_nerr;
-*** ./cmd/xfe/movemail.c.orig	Tue Mar 31 04:05:40 1998
---- ./cmd/xfe/movemail.c	Thu Apr  2 01:48:34 1998
-***************
-*** 40,46 ****
-  #include "xfe.h"
+! #if !defined(BSDI) && !defined(IRIX6_2) && !defined(IRIX6_3) && !defined(LINUX2_0) && !defined(MKLINUX) && !defined(SOLARIS2_6) && !defined(HPUX10_20) && !defined(HPUX10_30) && !defined(HPUX11)
+  typedef int64 int64_t;
+  #else
+  /*
+--- 38,44 ----
   
-  #include <sys/errno.h>
-! #if !defined(__FreeBSD__) && !defined(LINUX_GLIBC_2)
-  extern char *sys_errlist[];
-  extern int sys_nerr;
-  #endif
---- 40,46 ----
-  #include "xfe.h"
+  typedef prword_t uintVP_t; /* unsigned that is same size as a void pointer */
   
-  #include <sys/errno.h>
-! #if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(LINUX_GLIBC_2)
-  extern char *sys_errlist[];
-  extern int sys_nerr;
-  #endif
-*** ./cmd/xfe/prefdialogs.c.orig	Tue Mar 31 04:05:40 1998
---- ./cmd/xfe/prefdialogs.c	Thu Apr  2 01:49:23 1998
-***************
-*** 77,83 ****
-  
-  /* For sys_errlist and sys_nerr */
-  #include <sys/errno.h>
-! #if !defined(__FreeBSD__) && !defined(LINUX_GLIBC_2)
-  extern char *sys_errlist[];
-  extern int sys_nerr;
-  #endif
---- 77,83 ----
-  
-  /* For sys_errlist and sys_nerr */
-  #include <sys/errno.h>
-! #if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(LINUX_GLIBC_2)
-  extern char *sys_errlist[];
-  extern int sys_nerr;
-  #endif
-*** ./config/NetBSD.mk.orig	Wed Apr  1 00:16:52 1998
---- ./config/NetBSD.mk	Thu Apr  9 01:45:31 1998
+! #if !defined(BSDI) && !defined(IRIX6_2) && !defined(IRIX6_3) && !defined(LINUX2_0) && !defined(MKLINUX) && !defined(SOLARIS2_6) && !defined(HPUX10_20) && !defined(HPUX10_30) && !defined(HPUX11) && !defined(NETBSD)
+  typedef int64 int64_t;
+  #else
+  /*
+*** config/NetBSD.mk.orig	Sun May 24 23:33:28 1998
+--- config/NetBSD.mk	Sun May 24 22:00:51 1998
 ***************
 *** 0 ****
---- 1,106 ----
+--- 1,107 ----
 + #
 + # The contents of this file are subject to the Netscape Public License
 + # Version 1.0 (the "NPL"); you may not use this file except in
@@ -1636,6 +1631,7 @@
 + 
 + ifeq ($(USE_PTHREADS),1)
 + OS_LIBS			= -lc_r
++ PORT_FLAGS		+= -D_PR_NEED_FAKE_POLL
 + else
 + OS_LIBS			= -lc
 + PORT_FLAGS		+= -D_PR_LOCAL_THREADS_ONLY
@@ -1648,7 +1644,7 @@
 + #
 + # For NetBSD > 1.3, this can all be -shared.
 + #
-+ DSO_CFLAGS		= -fpic
++ DSO_CFLAGS		= -fPIC
 + DSO_LDFLAGS		=
 + DSO_LDOPTS		= -Bshareable
 + ifeq ($(OS_TEST),alpha)
@@ -1660,8 +1656,8 @@
 + ifeq ($(OS_TEST),pmax)
 + DSO_LDOPTS		= -shared
 + endif
-*** ./config/rules.mk.orig	Tue Mar 31 04:07:28 1998
---- ./config/rules.mk	Tue Apr  7 01:36:14 1998
+*** config/rules.mk.orig	Wed Apr 29 21:02:19 1998
+--- config/rules.mk	Sun May 24 22:00:17 1998
 ***************
 *** 102,107 ****
 --- 102,110 ----
@@ -1684,8 +1680,8 @@
   endif
   endif
   endif
-*** ./config/config.mk.orig	Tue Mar 31 04:06:41 1998
---- ./config/config.mk	Tue Apr  7 22:04:05 1998
+*** config/config.mk.orig	Wed Apr 29 21:02:18 1998
+--- config/config.mk	Sun May 24 22:00:17 1998
 ***************
 *** 83,89 ****
   # but save the version to allow multiple versions of the same base
@@ -1703,22 +1699,3 @@
   OS_VERS		:= $(suffix $(OS_RELEASE))
   OS_RELEASE	:= $(basename $(OS_RELEASE))
   OS_VERSION	:= $(shell echo $(OS_VERS) | sed 's/-.*//')
-*** ./sun-java/stubs/include/typedefs_md.h.orig	Tue Mar 31 04:07:55 1998
---- ./sun-java/stubs/include/typedefs_md.h	Wed Apr  1 05:11:54 1998
-***************
-*** 38,44 ****
-  
-  typedef prword_t uintVP_t; /* unsigned that is same size as a void pointer */
-  
-! #if !defined(BSDI) && !defined(IRIX6_2) && !defined(IRIX6_3) && !defined(LINUX2_0) && !defined(MACLINUX) && !defined(SOLARIS2_6) && !defined(HPUX10_20) && !defined(HPUX10_30) && !defined(HPUX11)
-  typedef int64 int64_t;
-  #else
-  /*
---- 38,44 ----
-  
-  typedef prword_t uintVP_t; /* unsigned that is same size as a void pointer */
-  
-! #if !defined(BSDI) && !defined(IRIX6_2) && !defined(IRIX6_3) && !defined(LINUX2_0) && !defined(MACLINUX) && !defined(SOLARIS2_6) && !defined(HPUX10_20) && !defined(HPUX10_30) && !defined(HPUX11) && !defined(NETBSD)
-  typedef int64 int64_t;
-  #else
-  /*
