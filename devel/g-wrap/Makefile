@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/02/14 17:21:37 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2004/05/03 15:58:55 wiz Exp $
 
 DISTNAME=	g-wrap-1.3.4
 PKGREVISION=	3
@@ -11,22 +11,20 @@ COMMENT=	Tool for importing types, functions, and constants into guile
 
 DEPENDS+=	guile-slib>=2.4.2:../../devel/guile-slib
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
+MAKE_ENV+=		GUILE14_SUBDIR=${GUILE14_SUBDIR:Q}
 
 USE_MAKEINFO=		YES
 INFO_FILES=		g-wrap.info
 
-CONFIGURE_ARGS+=	--with-modules-dir=${GUILE14_PREFIX}/share/guile
-CONFIGURE_ENV+=		GUILE=${GUILE14}
-CONFIGURE_ENV+=		BUILD_GUILE=${GUILE14_CONFIG}
+CONFIGURE_ARGS+=	--with-modules-dir=${PREFIX}/${GUILE14_SUBDIR}/share/guile
 CONFIGURE_ENV+=		ac_cv_path_RSCHEME="nope"
-CONFIGURE_ENV+=		ac_cv_path_GUILE="${LOCALBASE}/guile/1.4/bin/guile"
 
-.include "../../devel/glib/buildlink2.mk"
-.include "../../lang/guile14/buildlink2.mk"
-.include "../../devel/guile-gtk/buildlink2.mk"
+.include "../../devel/glib/buildlink3.mk"
+.include "../../lang/guile14/buildlink3.mk"
+.include "../../devel/guile-gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

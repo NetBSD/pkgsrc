@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/04/14 19:30:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.40 2004/05/03 15:58:55 wiz Exp $
 
 DISTNAME=	Guppi-0.40.3
 PKGNAME=	${DISTNAME:S/G/g/}
@@ -25,26 +25,20 @@ CONFIGURE_ARGS=		--disable-gnumeric
 PLIST_SUBST+=		GNUMERIC="@comment "
 .endif
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
-USE_X11BASE=		YES
+USE_X11=		YES
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
-post-install:
-	${TEST} ${PREFIX} = ${LOCALBASE} || \
-	${LN} -fs ${PREFIX}/share/aclocal/libguppi.m4 \
-		${LOCALBASE}/share/aclocal/libguppi.m4
-
-.include "../../devel/bonobo/buildlink2.mk"
-.include "../../devel/gal/buildlink2.mk"
-.include "../../devel/libglade/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
-.include "../../lang/guile14/buildlink2.mk"
-.include "../../print/gnome-print/buildlink2.mk"
-.include "../../x11/gnome-libs/buildlink2.mk"
+.include "../../devel/bonobo/buildlink3.mk"
+.include "../../devel/gal/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../lang/guile14/buildlink3.mk"
+.include "../../print/gnome-print/buildlink3.mk"
+.include "../../x11/gnome-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/08/09 10:44:43 seb Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/03 15:58:55 wiz Exp $
 
 DISTNAME=	guile-www-1.0.1
 PKGREVISION=	2
@@ -9,9 +9,9 @@ MAINTAINER=	epg@pretzelnet.org
 HOMEPAGE=	http://www.gnu.org/software/guile/
 COMMENT=	Guile WWW module
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 INFO_FILES=	guile-www.info
 
-.include "../../lang/guile14/buildlink2.mk"
+.include "../../lang/guile14/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

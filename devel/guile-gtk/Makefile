@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/02/21 06:51:42 snj Exp $
+# $NetBSD: Makefile,v 1.17 2004/05/03 15:58:55 wiz Exp $
 #
 
 DISTNAME=		guile-gtk-0.19
@@ -13,23 +13,15 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.ping.de/sites/zagadka/guile-gtk/
 COMMENT=		Library to make GTK accessible from guile
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 USE_X11=		# defined
 USE_LIBTOOL=		# defined
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--datadir=${GUILE14_PREFIX}/share
-PLIST_SUBST+=		GUILE14_SUBDIR=${GUILE14_SUBDIR}
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/${GUILE14_SUBDIR}/share
+PLIST_SUBST+=		GUILE14_SUBDIR=${GUILE14_SUBDIR:Q}
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
-pre-build:
-	cd ${WRKSRC}; for file in build-guile-gtk; do			\
-		${SED}	-e "s,^exec guile,exec ${GUILE14},"		\
-			$$file > $$file.new;				\
-		${MV} -f $$file.new $$file;				\
-	done
-
-.include "../../lang/guile14/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../lang/guile14/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

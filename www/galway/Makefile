@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:55:33 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/03 15:58:55 wiz Exp $
 #
 
 DISTNAME=	galway-0.33
@@ -13,14 +13,14 @@ COMMENT=	Web editor programmed in Scheme
 
 DEPENDS+=	guile-gtk>=0.19nb2:../../devel/guile-gtk
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 NO_BUILD=	yes
 
 do-configure:
 	cd ${WRKSRC}; for i in *.scm; do				\
 		${SED}	-e "s|/usr/local|${PREFIX}|g"			\
-			-e "s|^\(exec\) guile |\1 ${GUILE14} |g"	\
-			-e "s|guile-config|${GUILE14_CONFIG} |g"	\
+			-e "s|^\(exec\) guile |\1 ${PREFIX}/${GUILE14_SUBDIR}/bin/guile |g"	\
+			-e "s|guile-config|${PREFIX}/${GUILE14_SUBDIR}/bin/guile |g"		\
 			< $$i > $$i.cfg;				\
 		${MV} $$i.cfg $$i;					\
 		${CHMOD} +x $$i;					\
@@ -29,5 +29,5 @@ do-configure:
 do-install:
 	cd ${WRKSRC} && ./install.scm
 
-.include "../../lang/guile14/buildlink2.mk"
+.include "../../lang/guile14/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

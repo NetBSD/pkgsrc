@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/04/24 22:46:09 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/05/03 15:58:55 wiz Exp $
 
 DISTNAME=	guile-slib-2.4.2
 PKGREVISION=	3
@@ -12,17 +12,18 @@ COMMENT=	SLIB installation for guile Scheme interpreter
 
 DEPENDS+=	slib>=2.4.2:../../devel/slib
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_BUILD=	yes
 
-PLIST_SUBST+=	GUILE14_SUBDIR=${GUILE14_SUBDIR}
+PLIST_SUBST+=	GUILE14_SUBDIR=${GUILE14_SUBDIR:Q}
 
 do-install:
-	${LN} -sf ${PREFIX}/share/slib ${GUILE14_PREFIX}/share/guile/slib
-	cd ${GUILE14_PREFIX}/share/guile/slib; \
-		${GUILE14} -q -s ${FILESDIR}/gencat.scm
+	${LN} -sf ${PREFIX}/share/slib ${PREFIX}/${GUILE14_SUBDIR}/share/guile/slib
+	cd ${PREFIX}/${GUILE14_SUBDIR}/share/guile/slib; \
+		${PREFIX}/${GUILE14_SUBDIR}/bin/guile -q -s \
+			${FILESDIR}/gencat.scm
 
-.include "../../lang/guile14/buildlink2.mk"
+.include "../../lang/guile14/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
