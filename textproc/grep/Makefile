@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/09/18 19:13:50 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/09 08:13:04 grant Exp $
 #
 
 DISTNAME=	grep-2.5.1
@@ -29,10 +29,6 @@ CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
 .endif
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
-
-.if ${OPSYS} == "SunOS"
-CONFIGURE_SCRIPT=	${SH} ./configure
-.endif
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
