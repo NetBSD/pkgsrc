@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2959 2003/07/31 15:10:31 jwise Exp $
+$NetBSD: CHANGES,v 1.2960 2003/07/31 15:15:41 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3159,3 +3159,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bkpupsd to 2.1.2nb1 [jmmv 2003-07-31]
 	Updated sj3-server-bin to 2.0.1.20nb3 [jmmv 2003-07-31]
 	Updated MHonarc to 2.6.6 [jwise 2003-07-31]
+	Updated pkglint to 3.58 [seb 2003-07-31]
