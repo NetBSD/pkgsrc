@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2820 2005/01/03 22:50:50 jmmv Exp $
+$NetBSD: TODO,v 1.2821 2005/01/03 22:53:40 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -503,7 +503,6 @@ Suggested package updates
 	o gattrib-20041120
 	o gauche-0.8.3
 	o gbib-0.1.3rc1
-	o gcalctool-5.5.21
 	o gcc3-3.3.5
 	o gcombust-0.1.55
 	o gconfmm26-2.8.0?
