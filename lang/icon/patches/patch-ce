@@ -1,0 +1,12 @@
+$NetBSD: patch-ce,v 1.1 2000/06/19 15:56:34 pooka Exp $
+
+--- /dev/null   Thu Jan  1 00:00:00 1970
++++ config/unix/sun_netbsd/iconx.hdr    Thu Jun  8 22:10:28 2000
+@@ -0,0 +1,7 @@
++SHELL=/bin/sh
++# the seek stuff is defined in a header file that they don't
++# include.  This is the easiest.  -Dconst= causes const to
++# be ignored.  This is needed because otherwise we get complaints
++# due to stdio.h defining some functions with const when they
++# are not defined that way in Icon's header files
++RSWITCH=rswitch.c
