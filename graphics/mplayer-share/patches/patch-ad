@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2002/10/07 11:36:18 skrll Exp $
+$NetBSD: patch-ad,v 1.2 2002/10/18 06:44:34 skrll Exp $
 
 --- cpudetect.c.orig	Mon May 20 02:00:51 2002
 +++ cpudetect.c
@@ -70,7 +70,7 @@ $NetBSD: patch-ad,v 1.1 2002/10/07 11:36:18 skrll Exp $
 +      }
 +   }
 +#else
-+   gCpuCaps.hasSSE = 0
++   gCpuCaps.hasSSE = 0;
 +   mp_msg(MSGT_CPUDETECT,MSGL_WARN, "No OS support for SSE, disabling to be safe.\n" );
 +#endif
  #elif defined(__linux__)
