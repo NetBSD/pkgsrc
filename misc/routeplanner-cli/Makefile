@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/20 12:21:02 agc Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/26 00:12:41 wiz Exp $
 #
 
 DISTNAME=		routeplanner_0.11
@@ -11,7 +11,7 @@ HOMEPAGE=		http://routeplanner.sourceforge.net/
 COMMENT=		Highway trip planner written in Python
 
 WRKSRC=			${WRKDIR}/routeplanner-0.11
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 NO_BUILD=		yes
 
 PYTHON_PATCH_SCRIPTS=	rpcli
@@ -38,8 +38,8 @@ do-install:
 	done
 
 # optional speedup
-#.include "../../devel/py-kjbuckets/buildlink2.mk"
-#.include "../../devel/py-pqueue/buildlink2.mk"
+#.include "../../devel/py-kjbuckets/buildlink3.mk"
+#.include "../../devel/py-pqueue/buildlink3.mk"
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
