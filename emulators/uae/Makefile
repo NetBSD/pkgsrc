@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/09/23 19:05:05 tron Exp $
+# $NetBSD: Makefile,v 1.26 2003/09/24 12:33:22 tron Exp $
 
 DISTNAME=	uae-0.8.22
 PKGNAME=	${DISTNAME}
@@ -20,8 +20,8 @@ CONFIGURE_ARGS+=	--enable-dga --enable-vidmode --disable-ui
 
 .include "../../mk/bsd.prefs.mk"
 
+.if defined(CC_VERSION) && !empty(CC_VERSION:Mgcc-3.*)
 post-configure:
-.if ${OPSYS} == NetBSD && defined(HAVE_GCC3) && ${HAVE_GCC3} == yes
 	${TOUCH} ${WRKSRC}/src/tools/cpuopti.o
 	${CP} ${CAT} ${WRKSRC}/src/tools/cpuopti
 .endif
