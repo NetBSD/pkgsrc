@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/09/26 10:30:27 martti Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/23 14:05:38 martti Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -15,5 +15,6 @@ SUBDIR+=	netbsd-www
 SUBDIR+=	web-server
 SUBDIR+=	windowmaker-desktop
 SUBDIR+=	xfce4
+SUBDIR+=	xfce4-extras
 
 .include "../mk/bsd.pkg.subdir.mk"
