@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2003/06/18 13:26:26 epg Exp $
+$NetBSD: patch-aa,v 1.5 2003/08/15 19:27:45 recht Exp $
 
---- build-outputs.mk.orig	Mon Jun 16 08:27:37 2003
-+++ build-outputs.mk
-@@ -109,10 +109,10 @@ libsvn_swig_java_OBJECTS = swigutil_java
- subversion/bindings/swig/libsvn_swig_java-1.la: $(libsvn_swig_java_DEPS)
- 	cd subversion/bindings/swig && $(LINK) -o libsvn_swig_java-1.la $(libsvn_swig_java_OBJECTS) $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
+--- build-outputs.mk.orig	2003-08-14 14:26:47.000000000 +0200
++++ build-outputs.mk	2003-08-15 18:05:32.000000000 +0200
+@@ -114,10 +114,10 @@
+ subversion/bindings/swig/libsvn_swig_perl-1.la: $(libsvn_swig_perl_DEPS)
+ 	cd subversion/bindings/swig && $(LINK) -o libsvn_swig_perl-1.la $(libsvn_swig_perl_OBJECTS) $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
  
 -libsvn_swig_py_DEPS = subversion/bindings/swig/swigutil_py.lo subversion/libsvn_subr/libsvn_subr-1.la subversion/libsvn_delta/libsvn_delta-1.la 
 +libsvn_swig_py_DEPS = subversion/bindings/swig/swigutil_py.lo
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.4 2003/06/18 13:26:26 epg Exp $
  
  libsvn_test_DEPS = subversion/tests/svn_test_editor.lo subversion/tests/svn_tests_main.lo subversion/libsvn_delta/libsvn_delta-1.la subversion/libsvn_subr/libsvn_subr-1.la 
  libsvn_test_OBJECTS = svn_test_editor.lo svn_tests_main.lo
-@@ -134,15 +134,15 @@ md5args_OBJECTS = md5args.o
+@@ -139,15 +139,15 @@
  subversion/tests/libsvn_repos/md5args$(EXEEXT): $(md5args_DEPS)
  	cd subversion/tests/libsvn_repos && $(LINK) -o md5args$(EXEEXT) $(md5args_OBJECTS) ../../../subversion/libsvn_subr/libsvn_subr-1.la $(SVN_APRUTIL_LIBS) $(SVN_APR_LIBS) $(LIBS)
  
@@ -35,9 +35,9 @@ $NetBSD: patch-aa,v 1.4 2003/06/18 13:26:26 epg Exp $
  
  path_test_DEPS = subversion/tests/libsvn_subr/path-test.o subversion/tests/libsvn_test-1.la subversion/libsvn_subr/libsvn_subr-1.la 
  path_test_OBJECTS = path-test.o
-@@ -219,40 +219,40 @@ java_wc_OBJECTS = svn_wc.lo
- subversion/bindings/swig/java/_wc.la: $(java_wc_DEPS)
- 	cd subversion/bindings/swig/java && $(LINK_JAVA_WRAPPER) -o _wc.la $(java_wc_OBJECTS) ../../../../subversion/libsvn_wc/libsvn_wc-1.la ../../../../subversion/bindings/swig/libsvn_swig_java-1.la $(LIBS)
+@@ -259,40 +259,40 @@
+ subversion/bindings/swig/perl/_wc.la: $(perl_wc_DEPS)
+ 	cd subversion/bindings/swig/perl && $(LINK_PL_WRAPPER) -o _wc.la $(perl_wc_OBJECTS) ../../../../subversion/libsvn_wc/libsvn_wc-1.la -lswigpl ../../../../subversion/bindings/swig/libsvn_swig_perl-1.la $(LIBS)
  
 -python_client_DEPS = subversion/bindings/swig/python/svn_client.lo subversion/libsvn_client/libsvn_client-1.la subversion/bindings/swig/libsvn_swig_py-1.la 
 +python_client_DEPS = subversion/bindings/swig/python/svn_client.lo subversion/bindings/swig/libsvn_swig_py-1.la 
@@ -88,5 +88,5 @@ $NetBSD: patch-aa,v 1.4 2003/06/18 13:26:26 epg Exp $
 -	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _wc.la $(python_wc_OBJECTS) ../../../../subversion/libsvn_wc/libsvn_wc-1.la -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
 +	cd subversion/bindings/swig/python && $(LINK_PY_WRAPPER) -o _wc.la $(python_wc_OBJECTS) -lsvn_wc-1 -lswigpy ../../../../subversion/bindings/swig/libsvn_swig_py-1.la $(LIBS)
  
- svn_DEPS = subversion/clients/cmdline/add-cmd.o subversion/clients/cmdline/cat-cmd.o subversion/clients/cmdline/checkout-cmd.o subversion/clients/cmdline/cleanup-cmd.o subversion/clients/cmdline/commit-cmd.o subversion/clients/cmdline/copy-cmd.o subversion/clients/cmdline/delete-cmd.o subversion/clients/cmdline/diff-cmd.o subversion/clients/cmdline/export-cmd.o subversion/clients/cmdline/feedback.o subversion/clients/cmdline/help-cmd.o subversion/clients/cmdline/import-cmd.o subversion/clients/cmdline/info-cmd.o subversion/clients/cmdline/log-cmd.o subversion/clients/cmdline/ls-cmd.o subversion/clients/cmdline/main.o subversion/clients/cmdline/merge-cmd.o subversion/clients/cmdline/mkdir-cmd.o subversion/clients/cmdline/move-cmd.o subversion/clients/cmdline/prompt.o subversion/clients/cmdline/propdel-cmd.o subversion/clients/cmdline/propedit-cmd.o subversion/clients/cmdline/propget-cmd.o subversion/clients/cmdline/proplist-cmd.o subversion/clients/cmdline/props.o subversion/clients/cmdline/propset-cmd.o subversion/clients/cmdline/resolve-cmd.o subversion/clients/cmdline/revert-cmd.o subversion/clients/cmdline/status-cmd.o subversion/clients/cmdline/status.o subversion/clients/cmdline/switch-cmd.o subversion/clients/cmdline/update-cmd.o subversion/clients/cmdline/util.o subversion/libsvn_client/libsvn_client-1.la subversion/libsvn_wc/libsvn_wc-1.la subversion/libsvn_ra/libsvn_ra-1.la subversion/libsvn_delta/libsvn_delta-1.la subversion/libsvn_subr/libsvn_subr-1.la 
- svn_OBJECTS = add-cmd.o cat-cmd.o checkout-cmd.o cleanup-cmd.o commit-cmd.o copy-cmd.o delete-cmd.o diff-cmd.o export-cmd.o feedback.o help-cmd.o import-cmd.o info-cmd.o log-cmd.o ls-cmd.o main.o merge-cmd.o mkdir-cmd.o move-cmd.o prompt.o propdel-cmd.o propedit-cmd.o propget-cmd.o proplist-cmd.o props.o propset-cmd.o resolve-cmd.o revert-cmd.o status-cmd.o status.o switch-cmd.o update-cmd.o util.o
+ svn_DEPS = subversion/clients/cmdline/add-cmd.o subversion/clients/cmdline/cat-cmd.o subversion/clients/cmdline/checkout-cmd.o subversion/clients/cmdline/cleanup-cmd.o subversion/clients/cmdline/commit-cmd.o subversion/clients/cmdline/copy-cmd.o subversion/clients/cmdline/delete-cmd.o subversion/clients/cmdline/diff-cmd.o subversion/clients/cmdline/export-cmd.o subversion/clients/cmdline/feedback.o subversion/clients/cmdline/help-cmd.o subversion/clients/cmdline/import-cmd.o subversion/clients/cmdline/info-cmd.o subversion/clients/cmdline/log-cmd.o subversion/clients/cmdline/ls-cmd.o subversion/clients/cmdline/main.o subversion/clients/cmdline/merge-cmd.o subversion/clients/cmdline/mkdir-cmd.o subversion/clients/cmdline/move-cmd.o subversion/clients/cmdline/prompt.o subversion/clients/cmdline/propdel-cmd.o subversion/clients/cmdline/propedit-cmd.o subversion/clients/cmdline/propget-cmd.o subversion/clients/cmdline/proplist-cmd.o subversion/clients/cmdline/props.o subversion/clients/cmdline/propset-cmd.o subversion/clients/cmdline/resolved-cmd.o subversion/clients/cmdline/revert-cmd.o subversion/clients/cmdline/status-cmd.o subversion/clients/cmdline/status.o subversion/clients/cmdline/switch-cmd.o subversion/clients/cmdline/update-cmd.o subversion/clients/cmdline/util.o subversion/libsvn_client/libsvn_client-1.la subversion/libsvn_wc/libsvn_wc-1.la subversion/libsvn_ra/libsvn_ra-1.la subversion/libsvn_delta/libsvn_delta-1.la subversion/libsvn_subr/libsvn_subr-1.la 
+ svn_OBJECTS = add-cmd.o cat-cmd.o checkout-cmd.o cleanup-cmd.o commit-cmd.o copy-cmd.o delete-cmd.o diff-cmd.o export-cmd.o feedback.o help-cmd.o import-cmd.o info-cmd.o log-cmd.o ls-cmd.o main.o merge-cmd.o mkdir-cmd.o move-cmd.o prompt.o propdel-cmd.o propedit-cmd.o propget-cmd.o proplist-cmd.o props.o propset-cmd.o resolved-cmd.o revert-cmd.o status-cmd.o status.o switch-cmd.o update-cmd.o util.o
