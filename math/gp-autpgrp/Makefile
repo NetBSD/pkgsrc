@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:47:35 grant Exp $
 #
 
 DISTNAME=	autpgrp-1.1
@@ -9,7 +9,7 @@ CATEGORIES=	math
 MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/share/
 EXTRACT_SUFX=	.zoo
 
-MAINTAINER=	cjep@netbsd.org
+MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	http://www.gap-system.org/Share/autpgrp.html
 COMMENT=	GAP package for finding automorphism groups of finite p-groups
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/06/02 01:19:14 jschauma Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/17 21:42:50 grant Exp $
 
 DISTNAME=		tcm-2.01.src
 PKGNAME=		tcm-2.01
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}/tcm-2.01/src
 CATEGORIES=		graphics devel
 MASTER_SITES=		ftp://ftp.cs.utwente.nl/pub/tcm/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://wwwhome.cs.utwente.nl/~tcm/index.html
 COMMENT=		TCM - Toolkit for Conceptual Modeling
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:41:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:46:08 grant Exp $
 #
 
 DISTNAME=	fromto-1.5
@@ -7,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/
 EXTRACT_SUFX=	#empty
 
-MAINTAINER=	bad@netbsd.org
+MAINTAINER=	bad@NetBSD.org
 COMMENT=	Sendmail logfile viewer
 
 RESTRICTED=	"Redistribution allowed for non-commercial purposes only"

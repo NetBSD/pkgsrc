@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:18:53 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:45:30 grant Exp $
 
 DISTNAME=	itcl3.2
 PKGNAME=	tcl-itcl-3.2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.scriptics.com/pub/tcl/itcl/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://tcltk.com/itcl/
 COMMENT=	[incr Tcl] object-oriented extension to Tcl/Tk
 

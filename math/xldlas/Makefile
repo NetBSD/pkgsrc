@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/06/11 20:50:57 abs Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 21:48:19 grant Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/09/26 23:18:07 steve Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=		http://sunsite.math.klte.hu/mirrors/xldlas/	\
 			${MASTER_SITE_SUNSITE:=X11/xapps/math/}
 EXTRACT_SUFX=		-source.tgz
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://sunsite.math.klte.hu/mirrors/xldlas/
 COMMENT=		XForms-based statistics package
 

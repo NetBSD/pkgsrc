@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/13 13:52:18 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/17 21:43:19 grant Exp $
 
 DISTNAME=	xzgv-0.7
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://xzgv.browser.org/ \
 		ftp://ftp.ibiblio.org/pub/Linux/apps/graphics/viewers/X/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://xzgv.browser.org/
 COMMENT=	Image viewer
 

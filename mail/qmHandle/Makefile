@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/29 12:41:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:46:53 grant Exp $
 #
 
 DISTNAME=	qmHandle-1.0.0
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}
 CATEGORIES=	mail
 MASTER_SITES=	http://www.italpro.net/mb/soft/
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.italpro.net/mb/soft/qmhandle.html
 COMMENT=	tool to view and manage the qmail message queue
 

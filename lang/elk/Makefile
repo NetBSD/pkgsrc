@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/06/02 01:19:05 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2003/07/17 21:44:16 grant Exp $
 # FreeBSD Id: Makefile,v 1.15 1997/09/01 12:28:30 tg Exp
 #
 
@@ -7,7 +7,7 @@ PKGNAME=		elk-3.0.3
 CATEGORIES=		lang
 MASTER_SITES=		http://www-rn.informatik.uni-bremen.de/software/elk/dist/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www-rn.informatik.uni-bremen.de/software/elk/
 COMMENT=		Embeddable Scheme interpreter
 

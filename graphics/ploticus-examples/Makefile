@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/08 08:26:30 rh Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 21:42:14 grant Exp $
 #
 
 DISTNAME=	plnode141
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://www.sgpr.net/download/ \
 		http://gd.tuwien.ac.at/visual/ploticus/download/
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.sgpr.net/
 COMMENT=	examples for the ploticus data plotting suite
 

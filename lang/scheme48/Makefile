@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/06/02 01:18:54 jschauma Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/17 21:45:21 grant Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/08/27 19:31:37 jmacd Exp
 #
 
@@ -7,7 +7,7 @@ CATEGORIES=		lang
 MASTER_SITES=		http://s48.org/0.57/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://s48.org
 COMMENT=		The Scheme Underground's implementation of R5RS
 

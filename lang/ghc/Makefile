@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2003/06/02 01:19:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 21:44:29 grant Exp $
 
 DISTNAME=	ghc-5.04.3
 CATEGORIES=	lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/5.04.3/
 DISTFILES=	ghc-5.04.3-src.tar.bz2 ghc-5.04.3-i386-unknown-netbsd-hc.tar.bz2
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell
 

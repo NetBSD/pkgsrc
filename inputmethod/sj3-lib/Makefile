@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/21 14:28:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:43:44 grant Exp $
 # FreeBSD Id: Makefile,v 1.9 1998/11/28 05:08:27 asami Exp $
 
 DISTNAME=	sj3-2.0.1.20
@@ -8,7 +8,7 @@ CATEGORIES=	japanese inputmethod
 MASTER_SITES=	ftp://ftp.sony.co.jp/pub/unsupported/src/	\
 		ftp://ftp.cs.titech.ac.jp/pub/japanese/sj3/
 
-MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 COMMENT=	Japanese input method (library)
 
 USE_BUILDLINK2=	YES

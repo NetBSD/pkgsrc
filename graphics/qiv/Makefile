@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/13 13:52:14 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 21:42:36 grant Exp $
 #
 
 DISTNAME=	qiv-1.8-src
@@ -9,7 +9,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://www.klografx.net/qiv/download/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.klografx.net/qiv/
 COMMENT=	Quick image viewer
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/07/02 20:58:34 jtb Exp $
+# $NetBSD: Makefile,v 1.34 2003/07/17 21:47:51 grant Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.17
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/ \
 		ftp://ftp.task.gda.pl/pub/software/octave/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.che.wisc.edu/octave/
 COMMENT=	High-level language, primarily intended for numerical computations
 
