@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2002/09/18 19:51:55 tron Exp $
+# $NetBSD: Makefile,v 1.50 2002/11/21 11:05:56 grant Exp $
 
 DISTNAME=	wget-1.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
 
@@ -21,6 +21,10 @@ USE_BUILDLINK2=		YES
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
 MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+EGDIR=		${PREFIX}/share/examples/wget
+CONF_FILES=	${EGDIR}/wgetrc ${PKG_SYSCONFDIR}/wgetrc
 
 INFO_FILES=	wget.info
 
@@ -48,4 +52,5 @@ CONFIGURE_ARGS+=--with-ssl=${SSLBASE}
 .include "../../devel/gettext-lib/buildlink2.mk"
 
 .include "../../mk/texinfo.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
