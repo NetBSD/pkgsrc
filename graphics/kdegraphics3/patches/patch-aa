@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.7 2005/03/29 11:03:18 markd Exp $
+
+--- kpdf/ui/pageview.cpp.orig	2005-03-29 11:56:20.631795000 +1200
++++ kpdf/ui/pageview.cpp
+@@ -1497,7 +1497,7 @@ void PageView::slotRelayoutPages()
+         // Here we find out column's width and row's height to compute a table
+         // so we can place widgets 'centered in virtual cells'.
+         int nCols = Settings::viewColumns(),
+-            nRows = (int)ceilf( (float)pageCount / (float)nCols ),
++            nRows = (int)ceil( (float)pageCount / (float)nCols ),
+             * colWidth = new int[ nCols ],
+             * rowHeight = new int[ nRows ],
+             cIdx = 0,
