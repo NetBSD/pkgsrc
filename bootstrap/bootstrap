@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.7 2004/03/11 20:49:09 tv Exp $
+# $NetBSD: bootstrap,v 1.8 2004/03/21 01:06:37 grant Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -259,7 +259,7 @@ OpenBSD)
 	need_sed=no
 	set_opsys=no
 	check_prog mtreeprog mtree
-	machine_arch=`uname -p`
+	machine_arch=`uname -m`
 	;;
 SunOS)
 	if [ -d "/usr/xpg4/bin" ]; then
