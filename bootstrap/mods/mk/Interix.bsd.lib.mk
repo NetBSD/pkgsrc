@@ -1,4 +1,4 @@
-#	$NetBSD: Interix.bsd.lib.mk,v 1.1 2005/01/18 17:49:26 tv Exp $
+#	$NetBSD: Interix.bsd.lib.mk,v 1.2 2005/01/18 19:36:25 tv Exp $
 #	@(#)bsd.lib.mk	8.3 (Berkeley) 4/22/94
 
 .if !target(__initialized__)
@@ -332,6 +332,7 @@ lib${LIB}.so.${SHLIB_FULLVERSION}: ${SOLIB} ${DPADD} \
 	@rm -f lib${LIB}.so.${SHLIB_FULLVERSION}
 	$(CC) -shared ${SHLIB_SHFLAGS} -o ${.TARGET} \
 	    ${SHLIB_LDSTARTFILE} \
+	    -Wl,--image-base,$$(($$RANDOM %4096/2*262144+1342177280)) \
 	    -Wl,--whole-archive ${SOLIB} -Wl,--no-whole-archive ${LDADD} \
 	    ${SHLIB_LDENDFILE}
 .if ${OBJECT_FMT} == "ELF"
