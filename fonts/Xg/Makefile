@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/20 12:15:16 agc Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/12 11:15:28 xtraeme Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/01/27 15:59:35 erich Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	These are the UNICODE fonts for use with 9term and sam
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK2=	yes
+NO_BUILDLINK=	# defined
 USE_X11BASE=	yes
 
 .include "../../mk/bsd.pkg.mk"
