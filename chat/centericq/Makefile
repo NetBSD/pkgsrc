@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/09/29 06:20:23 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/11/30 12:41:05 salo Exp $
 #
 
 DISTNAME=	centericq-4.6.5
@@ -9,10 +9,11 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://konst.org.ua/eng/software/centericq/info.html
 COMMENT=	Instant Messenger interface (ICQ2000, Yahoo!, and MSN support)
 
-USE_BUILDLINK2=	yes
-USE_NCURSES=	yes
-USE_CXX=	yes
-GNU_CONFIGURE=	yes
+USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
+USE_NCURSES=		yes
+USE_CXX=		yes
+GNU_CONFIGURE=		yes
 LIBS=		${LDFLAGS}
 
 .include "../../devel/gettext-lib/buildlink2.mk"
@@ -26,4 +27,3 @@ LIBS=		${LDFLAGS}
 # avoid toolchain bugs
 CFLAGS:=	${CFLAGS:C/-O[0-9]*//g}
 .endif
-

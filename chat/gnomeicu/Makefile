@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/11/01 16:34:35 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/11/30 12:41:07 salo Exp $
 
 DISTNAME=	gnomeicu-0.96
 PKGREVISION=	3
@@ -10,10 +10,11 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://gnomeicu.sourceforge.net/
 COMMENT=	GNOME ICQ client
 
-USE_BUILDLINK2=	YES
-GNU_CONFIGURE=	YES
-USE_X11BASE=	YES
-USE_GMAKE=	YES
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
+GNU_CONFIGURE=		YES
+USE_X11BASE=		YES
+USE_GMAKE=		YES
 
 LIBS+=		-liconv
 
