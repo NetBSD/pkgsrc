@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2001/07/15 22:19:11 bad Exp $
+$NetBSD: distinfo,v 1.6 2001/08/29 12:51:26 itohy Exp $
 
 SHA1 (ghostscript/ghostscript-6.01.tar.bz2) = 405a8ab16453a8c3f846eae2aa4abbea6a093300
 Size (ghostscript/ghostscript-6.01.tar.bz2) = 2974476 bytes
@@ -22,8 +22,8 @@ SHA1 (ghostscript/gdevlips-2.3.6.tar.gz) = 2aedfd54a55356d6241fe3cbc8ba1aece9b69
 Size (ghostscript/gdevlips-2.3.6.tar.gz) = 64940 bytes
 SHA1 (ghostscript/gdevrpdl.tar.gz) = 927f2f858821ab6a445bfc860d8f87ab40f6e2de
 Size (ghostscript/gdevrpdl.tar.gz) = 1664 bytes
-SHA1 (ghostscript/gdevprsc-0.2.1.tar.gz) = 2f20889b06b2fee27a47e0aa0ef2de65a63be6a3
-Size (ghostscript/gdevprsc-0.2.1.tar.gz) = 12206 bytes
+SHA1 (ghostscript/gdevprsc-0.3.tar.gz) = 7abd8e0685971e2c19276ee31131f05cc36f3dc7
+Size (ghostscript/gdevprsc-0.3.tar.gz) = 12484 bytes
 SHA1 (ghostscript/gs6.01-jpdf-exp.patch.gz) = 21f427a4c80871edab8c4d748b1fe1b7796cd876
 Size (ghostscript/gs6.01-jpdf-exp.patch.gz) = 59034 bytes
 SHA1 (patch-bug-workaround) = 99f4e197b35a8f33b8a1219a38f6d9fc2c307eb6

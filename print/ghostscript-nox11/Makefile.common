@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2001/07/15 22:19:11 bad Exp $
+# $NetBSD: Makefile.common,v 1.20 2001/08/29 12:51:26 itohy Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -80,7 +80,7 @@ EXTRACT_LIST+=		${RPDL_DRV}.tar.gz
 
 # Kyocera Prescribe
 MASTER_SITES+=		${MASTER_SITE_LOCAL}
-PRESCR_DRV=		gdevprsc-0.2.1
+PRESCR_DRV=		gdevprsc-0.3
 DISTFILES+=		${PRESCR_DRV}.tar.gz
 EXTRACT_LIST+=		${PRESCR_DRV}.tar.gz
 
