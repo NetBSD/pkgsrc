@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/01/28 08:14:34 martti Exp $
+# $NetBSD: Makefile,v 1.14 2002/03/11 07:20:55 martti Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/ \
 		ftp://ftp.hpc.uh.edu/pub/fvwm/version-2/
 DISTFILES+=	fvwm-${FVWM_VER}.tar.gz fvwm_icons.tgz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	martti@netbsd.org
 HOMEPAGE=	http://www.fvwm.org/
 COMMENT=	Newer version of X11 Virtual window manager
 
@@ -18,7 +18,7 @@ DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
 
 CONFLICTS=	fvwm-2.*
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
-FVWM_VER=	2.4.5
+FVWM_VER=	2.4.6
 
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
