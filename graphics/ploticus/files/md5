@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.2 1999/12/15 21:27:18 windsor Exp $
+$NetBSD: md5,v 1.3 2000/04/12 06:38:24 rh Exp $
 
-MD5 (plsrc13.tar.gz) = 3e6e72034e845ed78e43f9bd3c2bd190
-MD5 (plman13.tar.gz) = 14c991dd43fe22dd743b64e45e0f29ea
+MD5 (plsrc13.tar.gz) = 5471dcd60a4adebd8f791ae4858c3c28
+MD5 (plman13.tar.gz) = 617661b30e22f58b3d7f758d67af31e0
