@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/02/11 04:20:16 minskim Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 14:48:50 agc Exp $
 
 SHA1 (Xalan-C_1_6-src.tar.gz) = a683c328dd266180bff2a182183be29a4596a662
+RMD160 (Xalan-C_1_6-src.tar.gz) = 9d8d5c85b4cf395d710ce7e3638665cbf17804d5
 Size (Xalan-C_1_6-src.tar.gz) = 1274432 bytes

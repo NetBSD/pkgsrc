@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/16 01:19:45 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:48:49 agc Exp $
 
 SHA1 (scew-0.3.1.tar.gz) = 7a6a437957bc7aefc840af322da180f84fd77520
+RMD160 (scew-0.3.1.tar.gz) = 3632cb3fb2d9867a7f79ab7b2cc9b380620fcbce
 Size (scew-0.3.1.tar.gz) = 106116 bytes

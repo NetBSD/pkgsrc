@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2003/09/17 14:57:27 jmmv Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 14:48:40 agc Exp $
 
 SHA1 (catdoc-0.91.4.tar.gz) = f486345447993bc818093f84b505c2ebbb046954
+RMD160 (catdoc-0.91.4.tar.gz) = 6519112a49c495c2b2fcee442c841d1ee23e9970
 Size (catdoc-0.91.4.tar.gz) = 128428 bytes
 SHA1 (patch-aa) = 3f232d00d2bc0f55397b76674d6136da81bc887e
 SHA1 (patch-ab) = 328c6d3f1613dff35760836bf051c48fba343576

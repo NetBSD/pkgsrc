@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2004/12/21 16:09:44 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/02/24 14:48:40 agc Exp $
 
 SHA1 (bsdgrep-200405051607.tar.gz) = 0a50caa04dab9ee576bb30f4abf62e03378d4f0e
+RMD160 (bsdgrep-200405051607.tar.gz) = 50b188e6f47d90491300a6310167dec17a5b927b
 Size (bsdgrep-200405051607.tar.gz) = 12972 bytes
 SHA1 (patch-aa) = c147bb05387e01b6f7e0ec8a918b09e77da2103c
 SHA1 (patch-ab) = c7fa54dedb0925d342549cbc56197bf2d8e4e47b

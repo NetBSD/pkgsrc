@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2004/09/12 06:04:45 minskim Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 14:48:42 agc Exp $
 
 SHA1 (hre-0.9.8a.tar.gz) = 9082ec1553052483340ec15648204738ecab1e41
+RMD160 (hre-0.9.8a.tar.gz) = ea5bb3ce17e07eb85c596502d3ecdb1e62c06fc0
 Size (hre-0.9.8a.tar.gz) = 369257 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/01/14 18:18:39 darcy Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 14:48:48 agc Exp $
 
 SHA1 (docutils-0.3.7.tar.gz) = 49e67c5448a4dcb544dc2128b0b6f93808813190
+RMD160 (docutils-0.3.7.tar.gz) = 34e1b8e6a19cfefe1e097108bcedaff11f9fdb80
 Size (docutils-0.3.7.tar.gz) = 625719 bytes

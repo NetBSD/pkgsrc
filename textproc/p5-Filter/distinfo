@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2004/12/25 02:06:55 jlam Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 14:48:44 agc Exp $
 
 SHA1 (Filter-1.30.tar.gz) = 4fddf0bd5e4cdf9ea88c65460a9f14edac1de1fa
+RMD160 (Filter-1.30.tar.gz) = 57a425b32b1f90fe195c64a1907efe451820e6b3
 Size (Filter-1.30.tar.gz) = 39956 bytes

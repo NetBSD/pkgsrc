@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/19 19:21:58 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:48:47 agc Exp $
 
 SHA1 (XML-SAX-Writer-0.44.tar.gz) = 30a08a8b9a0f0f70f859362c5c930dce75c8a991
+RMD160 (XML-SAX-Writer-0.44.tar.gz) = cbc1992edbceb6976edea4f7e84c5e908a64178a
 Size (XML-SAX-Writer-0.44.tar.gz) = 11683 bytes
