@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2314 2003/05/25 05:32:48 taca Exp $
+$NetBSD: CHANGES,v 1.2315 2003/05/25 07:21:56 dan Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2137,3 +2137,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-IO-Socket-SSL to 0.92 [heinz 2003-05-25]
 	Updated cvsync to 0.21.1 [gehenna 2003-05-25]
 	Updated postfix to 2.0.10 [taca 2003-05-25]
+	Updated mplayer to 0.90nb3 [dan 2003-05-25]
+	Updated gmplayer to 0.90nb3 [dan 2003-05-25]
+	Updated mencoder to 0.90nb3 [dan 2003-05-25]
