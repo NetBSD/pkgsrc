@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:18:19 tv Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/24 03:16:12 wiz Exp $
 #
 
-DISTNAME=	aspell-uk-0.50-3
+DISTNAME=	aspell-uk-0.51-0
 PKGNAME=	${DISTNAME:C/uk-(.*)-(.*)$/ukrainian-\1.\2/}
-PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/uk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,9 +13,6 @@ COMMENT=	Ukrainian language support for aspell
 
 USE_BUILDLINK3=	YES
 HAS_CONFIGURE=	YES
-
-CONFIGURE_ENV+=	ASPELL=${PREFIX}/bin/aspell
-CONFIGURE_ENV+=	WORD_LIST_COMPRESS=${PREFIX}/bin/word-list-compress
 
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
