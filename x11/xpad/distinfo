@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/02 07:19:20 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2003/10/03 09:31:12 xtraeme Exp $
 
-SHA1 (xpad-1.11.tar.bz2) = d226fcfd56097849f2cb283c92c318ec17d28ae5
-Size (xpad-1.11.tar.bz2) = 235533 bytes
+SHA1 (xpad-1.12.tar.bz2) = 39785fb183d61039383204352ba03c4ca4cb392d
+Size (xpad-1.12.tar.bz2) = 238411 bytes
 SHA1 (patch-aa) = acad079b9577710aec48c7e41b359b97eeb17b45
 SHA1 (patch-ab) = d7f8ba8946a1d09fb7c73e80b2b0079926709cb6
