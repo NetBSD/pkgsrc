@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.15 2002/07/30 02:15:42 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.16 2002/08/06 06:48:10 jlam Exp $
 #
 # This Makefile fragment is included by packages that use freetype2.
 #
@@ -49,6 +49,11 @@ BUILDLINK_FILES.freetype2+=	include/freetype2/freetype/cache/*
 BUILDLINK_FILES.freetype2+=	include/freetype2/freetype/config/*
 BUILDLINK_FILES.freetype2+=	include/freetype2/freetype/internal/*
 BUILDLINK_FILES.freetype2+=	lib/libfreetype.*
+
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|-I${BUILDLINK_DIR}/\(include/freetype2\)|-I${BUILDLINK_PREFIX.freetype2}/\1|g"
+BUILDLINK_CONFIG_WRAPPER_SED+=	\
+	-e "s|-I${BUILDLINK_PREFIX.freetype2}/\(include/freetype2\)|-I${BUILDLINK_DIR}/\1|g"
 
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.freetype2}
 BUILDLINK_TARGETS.freetype2=	freetype2-buildlink
