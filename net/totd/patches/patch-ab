@@ -1,0 +1,11 @@
+--- Makefile.in-	Wed Oct  6 19:53:01 1999
++++ Makefile.in	Wed Oct  6 19:53:11 1999
+@@ -39,7 +39,7 @@
+ 	        ${CC} ${LDFLAGS} -o ${.TARGET} ${OBJS} ${LDADD}
+ 
+ install: $(PROG)
+-	$(INSTALL) -s -m 0555 -o bin -g bin $(PROG) $(INSTALLDIR)
++	$(INSTALL) -c -s -m 0555 -o bin -g bin $(PROG) $(INSTALLDIR)
+ 
+ depend:
+ 	mkdep ${CFLAGS} ${SRCS}
