@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/01/30 15:05:17 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2004/02/07 17:05:38 wiz Exp $
 #
 
 DISTNAME=	automake-1.8.2
@@ -26,7 +26,7 @@ MAKEINFOFLAGS=		--no-split
 MAKE_ENV+=		MAKEINFOFLAGS="${MAKEINFOFLAGS}"
 
 USE_MAKEINFO=		YES
-TEXINFO_REQD=		4.0
+TEXINFO_REQD=		4.5
 INFO_FILES=		automake.info
 
 PERL5_REQD=		5.5
