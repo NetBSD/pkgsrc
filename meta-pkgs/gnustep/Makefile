@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/03 05:37:33 rh Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/03 07:16:48 rh Exp $
 #
 
 DISTNAME=	gnustep-1.5.1
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11 gnustep
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -15,6 +16,7 @@ DEPENDS+=	gnustep-preferences>1.2.0:../../x11/gnustep-preferences
 DEPENDS+=	ImageViewer-[0-9]*:../../graphics/ImageViewer
 DEPENDS+=	3DKit-[0-9]*:../../graphics/3DKit
 DEPENDS+=	GNUMail>1.0.3:../../mail/GNUMail
+DEPENDS+=	Gorm>=0.2.0:../../devel/Gorm
 
 USE_X11=	yes
 USE_BUILDLINK2=	yes
