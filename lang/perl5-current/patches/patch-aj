@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.1.1.1 2000/01/18 22:15:51 tron Exp $
+$NetBSD: patch-aj,v 1.2 2000/07/05 19:25:50 hubertf Exp $
 
---- ext/POSIX/Makefile.PL.orig	Thu Nov 26 21:13:25 1998
-+++ ext/POSIX/Makefile.PL	Sun Jan 16 21:37:36 2000
-@@ -1,7 +1,7 @@
- use ExtUtils::MakeMaker;
+--- ext/POSIX/Makefile.PL.orig	Wed Mar 22 17:23:03 2000
++++ ext/POSIX/Makefile.PL	Tue Jul  4 04:21:19 2000
+@@ -6,7 +6,7 @@
+ 	@libs = ('LIBS' => ["-lm -lc -lposix -lcposix"]);
+     }
+     else {
+-	@libs = ('LIBS' => ["-lm -lposix -lcposix"]);
++	@libs = ('LIBS' => ["-lm"]);
+     }
+ }
  WriteMakefile(
-     NAME	=> 'POSIX',
--    ($^O eq 'MSWin32' ? () : (LIBS	=> ["-lm -lposix -lcposix"])),
-+    ($^O eq 'MSWin32' ? () : (LIBS	=> ["-lm"])),
-     MAN3PODS 	=> {}, 	# Pods will be built by installman.
-     XSPROTOARG => '-noprototypes', 		# XXX remove later?
-     VERSION_FROM => 'POSIX.pm', 

@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/01/18 22:15:51 tron Exp $
+$NetBSD: patch-ab,v 1.2 2000/07/05 19:25:50 hubertf Exp $
 
---- installperl.orig	Sat Jan 16 11:31:26 1999
-+++ installperl	Sun Jan 16 21:26:37 2000
-@@ -182,7 +182,7 @@
- safe_unlink("$installbin/s$perl$ver$exe_ext");
+--- installperl.orig	Wed Mar  8 13:22:41 2000
++++ installperl	Tue Jul  4 04:17:45 2000
+@@ -224,7 +224,7 @@
+ safe_unlink("$installbin/s$perl_verbase$ver$exe_ext");
  if ($d_dosuid) {
-     copy("suidperl$exe_ext", "$installbin/s$perl$ver$exe_ext");
--    chmod(04711, "$installbin/s$perl$ver$exe_ext");
-+    chmod(04111, "$installbin/sperl$ver$exe_ext");
+     copy("suidperl$exe_ext", "$installbin/s$perl_verbase$ver$exe_ext");
+-    chmod(04711, "$installbin/s$perl_verbase$ver$exe_ext");
++    chmod(04111, "$installbin/s$perl_verbase$ver$exe_ext");
  }
  
  # Install library files.
-@@ -275,19 +275,19 @@
+@@ -326,19 +326,19 @@
  	      (-l $usrbinperl) &&
  	      ((readlink $usrbinperl) eq $expinstperl));
      }

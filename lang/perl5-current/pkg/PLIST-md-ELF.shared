@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST-md-ELF.shared,v 1.1 2000/01/18 22:27:18 tron Exp $
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/libperl.so
+@comment $NetBSD: PLIST-md-ELF.shared,v 1.2 2000/07/05 19:25:51 hubertf Exp $
+lib/perl5/5.6.0/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/libperl.so
