@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.1 2003/08/06 11:38:11 drochner Exp $
+
+--- Python/thread.c.orig	2003-04-19 17:41:53.000000000 +0200
++++ Python/thread.c	2003-07-30 20:27:45.000000000 +0200
+@@ -98,6 +98,7 @@
+ 
+ #ifdef HAVE_PTH
+ #include "thread_pth.h"
++#undef _POSIX_THREADS
+ #endif
+ 
+ #ifdef _POSIX_THREADS
