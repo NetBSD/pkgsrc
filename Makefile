@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 1997/10/03 08:58:23 agc Exp $
+# $NetBSD: Makefile,v 1.4 1997/11/27 00:01:23 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.35 1997/08/19 07:10:01 fenner Exp
 #
 
 SUBDIR += archivers
-SUBDIR += astro
+#SUBDIR += astro
 SUBDIR += audio
 SUBDIR += benchmarks
-SUBDIR += cad
-SUBDIR += chinese
+#SUBDIR += cad
+#SUBDIR += chinese
 SUBDIR += comms
 SUBDIR += converters
 SUBDIR += databases
@@ -15,10 +15,10 @@ SUBDIR += devel
 SUBDIR += editors
 SUBDIR += emulators
 SUBDIR += games
-SUBDIR += german
+#SUBDIR += german
 SUBDIR += graphics
-SUBDIR += japanese
-SUBDIR += korean
+#SUBDIR += japanese
+#SUBDIR += korean
 SUBDIR += lang
 SUBDIR += mail
 SUBDIR += math
@@ -28,12 +28,12 @@ SUBDIR += net
 SUBDIR += news
 SUBDIR += plan9
 SUBDIR += print
-SUBDIR += russian
+#SUBDIR += russian
 SUBDIR += security
 SUBDIR += shells
 SUBDIR += sysutils
 SUBDIR += textproc
-SUBDIR += vietnamese
+#SUBDIR += vietnamese
 SUBDIR += www
 SUBDIR += x11
 
