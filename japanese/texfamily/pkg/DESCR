@@ -13,7 +13,7 @@ NetBSD version of this package contains several programs:
 
 3. ASCII pTeX and tools for it
   - ASCII Publishing TeX (ptex) 2.1.10
-  - dvipsk-p1.5d (dvips with Japanese support)
+  - dvipsk-p1.5e (dvips with Japanese support)
   - mendexk2.4f (indexing tool with Japanese support)
 
 This package contains executables.
