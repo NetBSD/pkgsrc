@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/13 16:10:02 taca Exp $
+# $NetBSD: Makefile,v 1.11 2004/11/13 21:28:27 jlam Exp $
 #
 
 DISTNAME=	iconv-0.5
@@ -11,7 +11,7 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	# not available
 COMMENT=	Iconv wrapper class for Ruby
 
-USE_BUILDLINK3= # defined
+USE_BUILDLINK3= yes
 
 DIST_SUBDIR=	ruby
 USE_RUBY_EXTCONF= yes
