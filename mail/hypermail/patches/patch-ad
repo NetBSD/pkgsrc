@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2004/09/08 13:09:54 sketch Exp $
+
+--- src/proto.h.orig	2004-09-08 14:03:21.000000000 +0100
++++ src/proto.h	2004-09-08 14:03:36.000000000 +0100
+@@ -97,7 +97,9 @@
+ char *strsav(const char *);
+ char *strreplace(char *, char *);
+ void strcpymax(char *, const char *, int);
++#ifndef HAVE_STRCASESTR
+ char *strcasestr(char *, const char *);
++#endif
+ char *stripzone(char *);
+ int numstrchr(char *, char);
+ char *getvalue(char *);
