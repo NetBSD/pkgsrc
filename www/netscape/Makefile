@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/03/09 18:52:15 kristerw Exp $
+# $NetBSD: Makefile,v 1.18 2004/03/15 22:33:22 veego Exp $
 #
 
 DISTNAME=	netscape-20040123
@@ -9,6 +9,8 @@ DISTFILES=	# empty
 
 MAINTAINER=	abs@NetBSD.org
 COMMENT=	Open new window using netscape-like browser
+
+.include "../../mk/bsd.prefs.mk"
 
 DEPENDS+= ns-remote>=1.3:../../www/ns-remote
 DEPENDS+={${NETSCAPE_PREFERRED:C/:/,/g}}-[0-9]*:../../www/${NETSCAPE_PREFERRED:C/:.*//}
