@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2005/01/15 12:49:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2005/03/16 13:29:46 martti Exp $
 
-DISTNAME=		dbh-1.0.20
+DISTNAME=		dbh-1.0.22
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dbh/}
 
