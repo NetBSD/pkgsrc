@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/10/27 03:09:14 chris Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/11/29 00:14:44 chris Exp $
 bin/gpgme-config
 include/gpgme.h
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gpgme.info
@@ -12,5 +12,5 @@ lib/libgpgme.a
 lib/libgpgme.la
 lib/libgpgme.so
 lib/libgpgme.so.9
-lib/libgpgme.so.9.3
+lib/libgpgme.so.9.4
 share/aclocal/gpgme.m4
