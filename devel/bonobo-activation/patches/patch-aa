@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/04/27 08:57:58 rh Exp $
+
+--- api-docs/Makefile.in.orig	Sat Apr 27 17:49:53 2002
++++ api-docs/Makefile.in
+@@ -390,8 +390,6 @@
+ 	    echo '-- Installing '$$i ; \
+ 	    $(INSTALL_DATA) $$i $(DESTDIR)$(TARGET_DIR); \
+ 	  done; \
+-	  echo '-- Installing $(srcdir)/html/index.sgml' ; \
+-	  $(INSTALL_DATA) $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR); \
+ 	fi)
+ 
+ #

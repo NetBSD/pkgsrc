@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/04/27 08:57:58 rh Exp $
+
+--- bonobo-activation-2.0.pc.in.orig	Sat Apr 27 18:34:26 2002
++++ bonobo-activation-2.0.pc.in
+@@ -9,5 +9,5 @@
+ Version: @VERSION@
+ Description: Object activation framework for GNOME
+ Requires: glib-2.0 gmodule-2.0 ORBit-2.0 libxml-2.0
+-Libs: -L${libdir} -lbonobo-activation
++Libs: -Wl,-R${libdir} -L${libdir} -lbonobo-activation
+ Cflags: -I${includedir}
