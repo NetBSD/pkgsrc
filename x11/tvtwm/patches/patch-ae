@@ -1,0 +1,81 @@
+Index: add_window.c
+===================================================================
+RCS file: /home/siren/src/tvtwm/add_window.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- add_window.c	1999/08/08 05:46:53	1.1.1.1
++++ add_window.c	1999/08/08 05:56:47	1.2
+@@ -40,6 +40,7 @@
+ #include <stdio.h>
+ #include "twm.h"
+ #include <X11/Xatom.h>
++#include <X11/Xmu/Drawing.h>
+ #include "add_window.h"
+ #include "util.h"
+ #include "resize.h"
+@@ -220,7 +221,8 @@
+ 
+     if (Scr->VirtualDesktop) {
+ 	tmp_win->sticky = 
+-	    (short)(int)LookInList(Scr->StickyL, tmp_win->full_name, &tmp_win->class);
++	    (LookInList(Scr->StickyL, tmp_win->full_name,
++			&tmp_win->class) != NULL);
+ 	if (tmp_win->w == Scr->Panner)
+ 	    tmp_win->sticky = True;
+ 
+@@ -236,31 +238,30 @@
+     SetTWM_FLAGS(tmp_win);
+ 
+     tmp_win->highlight = Scr->Highlight && 
+-	(!(short)(int) LookInList(Scr->NoHighlight, tmp_win->full_name, 
+-	    &tmp_win->class));
++	(LookInList(Scr->NoHighlight, tmp_win->full_name, 
++	    &tmp_win->class) == NULL);
+ 
+     tmp_win->stackmode = Scr->StackMode &&
+-	(!(short)(int) LookInList(Scr->NoStackModeL, tmp_win->full_name, 
+-	    &tmp_win->class));
++	(LookInList(Scr->NoStackModeL, tmp_win->full_name, 
++	    &tmp_win->class) == NULL);
+ 
+     tmp_win->titlehighlight = Scr->TitleHighlight && 
+-	(!(short)(int) LookInList(Scr->NoTitleHighlight, tmp_win->full_name, 
+-	    &tmp_win->class));
++	(LookInList(Scr->NoTitleHighlight, tmp_win->full_name, 
++	    &tmp_win->class) == NULL);
+ 
+-    tmp_win->auto_raise = (short)(int) LookInList(Scr->AutoRaise, 
+-						  tmp_win->full_name,
+-					    &tmp_win->class);
++    tmp_win->auto_raise = (LookInList(Scr->AutoRaise, tmp_win->full_name,
++				      &tmp_win->class) != NULL);
+     if (tmp_win->auto_raise) Scr->NumAutoRaises++;
+     tmp_win->iconify_by_unmapping = Scr->IconifyByUnmapping;
+     if (Scr->IconifyByUnmapping)
+     {
+ 	tmp_win->iconify_by_unmapping = iconm ? FALSE :
+-	    !(short)(int) LookInList(Scr->DontIconify, tmp_win->full_name,
+-		&tmp_win->class);
++	    (LookInList(Scr->DontIconify, tmp_win->full_name,
++			&tmp_win->class) != NULL);
+     }
+     tmp_win->iconify_by_unmapping |= 
+-	(short)(int) LookInList(Scr->IconifyByUn, tmp_win->full_name,
+-	    &tmp_win->class);
++	(LookInList(Scr->IconifyByUn, tmp_win->full_name,
++	    &tmp_win->class) != NULL);
+ 
+     if (LookInList(Scr->WindowRingL, tmp_win->full_name, &tmp_win->class)) {
+ 	if (Scr->Ring) {
+@@ -1490,8 +1491,8 @@
+ 
+     number_cmap_windows = 0;
+ 
+-    if (/* SUPPRESS 560 */previously_installed = 
+-       (Scr->cmapInfo.cmaps == &tmp->cmaps && tmp->cmaps.number_cwins)) {
++    if ((previously_installed = 
++       ((Scr->cmapInfo.cmaps == &tmp->cmaps) && tmp->cmaps.number_cwins))) {
+ 	cwins = tmp->cmaps.cwins;
+ 	for (i = 0; i < tmp->cmaps.number_cwins; i++)
+ 	    cwins[i]->colormap->state = 0;

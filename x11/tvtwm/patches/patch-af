@@ -1,0 +1,17 @@
+Index: cursor.c
+===================================================================
+RCS file: /home/siren/src/tvtwm/cursor.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- cursor.c	1999/08/08 05:46:53	1.1.1.1
++++ cursor.c	1999/08/08 05:56:48	1.2
+@@ -208,7 +208,7 @@
+     return bm;
+ }
+ 
+-NewBitmapCursor(cp, source, mask)
++void NewBitmapCursor(cp, source, mask)
+ Cursor *cp;
+ char *source, *mask;
+ {

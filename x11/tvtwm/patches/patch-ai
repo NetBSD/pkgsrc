@@ -1,0 +1,251 @@
+Index: icons.c
+===================================================================
+RCS file: /home/siren/src/tvtwm/icons.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- icons.c	1999/08/08 05:46:53	1.1.1.1
++++ icons.c	1999/08/08 05:56:50	1.2
+@@ -116,6 +116,7 @@
+  **********************************************************************/
+ 
+ #include <stdio.h>
++#include <malloc.h>
+ #include "twm.h"
+ #include "screen.h"
+ #include "icons.h"
+@@ -123,6 +124,10 @@
+ #include "parse.h"
+ #include "util.h"
+ 
++static void
++AddOneIconRegion(char *name, short type, int x, int y, int w, int h,
++		 int grav1, int grav2, int stepx, int stepy);
++
+ #define iconWidth(w)	(w->icon.width + 2 * w->icon.bw)
+ #define iconHeight(w)	(w->icon.height + 2 * w->icon.bw)
+ 
+@@ -131,8 +136,7 @@
+ Pixmap SetIconClip();
+ #endif
+ 
+-static
+-splitEntry (ie, grav1, grav2, w, h)
++void splitEntry (ie, grav1, grav2, w, h)
+     IconEntry	*ie;
+     int		grav1, grav2;
+     int		w, h;
+@@ -185,6 +189,7 @@
+     }
+ }
+ 
++int
+ roundUp (v, multiple)
+ int	v;
+ int	multiple;
+@@ -192,6 +197,7 @@
+     return ((v + multiple - 1) / multiple) * multiple;
+ }
+ 
++void
+ PlaceIcon(tmp_win, def_x, def_y, final_x, final_y)
+ TwmWindow *tmp_win;
+ int def_x, def_y;
+@@ -206,8 +212,8 @@
+     ir_list = Scr->IconRegions;
+ 
+     while (ir_list)
+-	if (ir = (IconRegion *)MultiLookInList(ir_list, tmp_win->full_name,
+-						&tmp_win->class, &ir_list)) {
++	if ((ir = (IconRegion *)MultiLookInList(ir_list, tmp_win->full_name,
++						&tmp_win->class, &ir_list))) {
+ 	    w = roundUp (iconWidth (tmp_win), ir->stepx);
+ 	    h = roundUp (iconHeight (tmp_win), ir->stepy);
+ 	    for (ie = ir->entries; ie; ie=ie->next) {
+@@ -264,7 +270,7 @@
+     return 0;
+ }
+ 
+-IconUp (tmp_win)
++void IconUp (tmp_win)
+     TwmWindow   *tmp_win;
+ {
+     int		x, y;
+@@ -290,8 +296,10 @@
+ 
+ 	ir_list = Scr->IconRegions;
+ 	while (ir_list)
+-	    if (ir = (IconRegion *)MultiLookInList(ir_list, tmp_win->full_name,
+-						&tmp_win->class, &ir_list)) {
++	    if ((ir = (IconRegion *)MultiLookInList(ir_list,
++						    tmp_win->full_name,
++						    &tmp_win->class,
++						    &ir_list))) {
+ 		if (x >= ir->x && x < (ir->x + ir->w) &&
+ 			y >= ir->y && y < (ir->y + ir->h))
+ 		    break;
+@@ -330,8 +338,7 @@
+  * regions together
+  */
+ 
+-static
+-mergeEntries (old, ie)
++void mergeEntries (old, ie)
+     IconEntry	*old, *ie;
+ {
+     if (old->y == ie->y) {
+@@ -345,7 +352,7 @@
+     }
+ }
+ 
+-IconDown (tmp_win)
++void IconDown (tmp_win)
+     TwmWindow   *tmp_win;
+ {
+     IconEntry	*ie, *ip, *in;
+@@ -381,14 +388,16 @@
+     }
+ }
+ 
+-static int AddOneIconRegion();
+-
+-AddIconRegion(name, type, geom, itterate, grav1, grav2, stepx, stepy)
++void
++AddIconRegion(name, icontype, geom, itterate, grav1, grav2, stepx, stepy)
+ char *name;
+-short type;
++short icontype;
+ char *geom;
+ Bool itterate;
+-int grav1, grav2;
++int grav1;
++int grav2;
++int stepx;
++int stepy;
+ {
+     int mask, x, y, w, h;
+ 
+@@ -412,21 +421,21 @@
+ 
+ 	for (x1 = x ; x1 < vdtw ; x1 += Scr->MyDisplayWidth)
+ 	    for (y1 = y ; y1 < vdth ; y1 += Scr->MyDisplayHeight)
+-		AddOneIconRegion(name, type, x1, y1, w, h,
++		AddOneIconRegion(name, icontype, x1, y1, w, h,
+ 				grav1, grav2, stepx, stepy);
+     } else
+-	AddOneIconRegion(name, type, x, y, w, h, grav1, grav2, stepx, stepy);
++	AddOneIconRegion(name, icontype, x, y, w, h, grav1, grav2, stepx, stepy);
+ }
+ 
+-static
++static void
+ AddOneIconRegion(name, type, x, y, w, h, grav1, grav2, stepx, stepy)
+ char *name;
+ short type;
+ int   x, y, w, h;
+-int grav1, grav2;
++int grav1, grav2, stepx, stepy;
+ {
+     IconRegion *ir;
+-    int mask;
++/*    int mask;*/
+ 
+     ir = (IconRegion *)malloc(sizeof(IconRegion));
+     AddToList(&(Scr->IconRegions), name, type, (char *)ir);
+@@ -498,12 +507,11 @@
+ 		       width, height,
+ 		       foreground,
+ 		       background,
+-		       border_pixel,
+ 		       pmp)
+ Pixmap pm, mask;
+ int depth;
+ int width, height;
+-Pixel foreground, background, border_pixel;
++Pixel foreground, background;
+ Pixmap *pmp;
+ {
+     if ((*pmp = XCreatePixmap(dpy, Scr->Root, width,
+@@ -658,7 +666,7 @@
+     } *cached;
+     Window image;
+     XSetWindowAttributes attributes;
+-    Pixmap pm, clip;
++    Pixmap pm /*, clip*/;
+     Bool isXpm;
+ 
+     /* check cache first */
+@@ -702,14 +710,13 @@
+ 
+ 	cached->depth = isXpm?Scr->d_depth:1;
+ 
+-	AddToList(&Scr->Icons, name, LTYPE_EXACT_NAME, cached);
++	AddToList(&Scr->Icons, name, LTYPE_EXACT_NAME, (char *) cached);
+     }
+ 
+     if (!pm_n_mask_to_pm(cached->pm, cached->mask, cached->depth,
+ 			    cached->width, cached->height,
+ 			    tmp_win->iconc.fore,
+ 			    tmp_win->iconc.back,
+-			    tmp_win->icon_border,
+ 			    &pm))
+ 	return False;
+ 
+@@ -772,7 +779,6 @@
+ 			width, height,
+ 			tmp_win->iconc.fore,
+ 			tmp_win->iconc.back,
+-			tmp_win->icon_border,
+ 			&newpm))
+ 	return False;
+ 
+@@ -819,6 +825,7 @@
+  * CreateIconWindows Actually creates the windows representing the icon.
+  */
+ 
++void
+ CreateIconWindows(tmp_win)
+ TwmWindow *tmp_win;
+ {
+@@ -1005,6 +1012,7 @@
+ 
+ #define max(x,y) ((x)>(y)?(x):(y))
+ 
++void
+ ConfigureIconWindows(tmp_win)
+ TwmWindow *tmp_win;
+ {
+@@ -1102,6 +1110,7 @@
+  * or SqueezeIcon has been turned on for this window.
+  */
+ 
++void
+ ShapeIconWindows(tmp_win)
+ TwmWindow *tmp_win;
+ {
+@@ -1187,6 +1196,7 @@
+  * PlaceIconWindows figures out where to put it.
+  */
+ 
++void
+ PlaceIconWindows(tmp_win, def_x, def_y)
+ TwmWindow *tmp_win;
+ int def_x, def_y;
+@@ -1217,7 +1227,7 @@
+  * Finally, here is the top level function.
+  */
+ 
+-CreateIconWindow(tmp_win, def_x, def_y)
++void CreateIconWindow(tmp_win, def_x, def_y)
+ TwmWindow *tmp_win;
+ int def_x, def_y;
+ {
+@@ -1234,7 +1244,7 @@
+     return;
+ }
+ 
+-DestroyIconWindow(tmp_win)
++void DestroyIconWindow(tmp_win)
+ TwmWindow *tmp_win;
+ {
+     TwmIcon *icon = &(tmp_win->icon);

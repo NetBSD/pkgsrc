@@ -1,0 +1,194 @@
+Index: events.c
+===================================================================
+RCS file: /home/siren/src/tvtwm/events.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- events.c	1999/08/08 05:46:53	1.1.1.1
++++ events.c	1999/08/08 05:56:49	1.2
+@@ -392,7 +392,7 @@
+  */
+ Bool DispatchEvent ()
+ {
+-    extern void RestartTwm();
++/*    extern void RestartTwm();*/
+ 
+     Window w = Event.xany.window;
+     StashEventTime (&Event);
+@@ -683,7 +683,7 @@
+  */
+ 
+ void
+-HandleFocusIn(event)
++/* ARGSUSED */ HandleFocusIn(event)
+ XFocusInEvent *event;
+ {
+ 
+@@ -714,7 +714,7 @@
+ }
+ 
+ void
+-HandleFocusOut(event)
++/* ARGSUSED */ HandleFocusOut(event)
+ XFocusOutEvent *event;
+ {
+ #ifdef TRACE_FOCUS
+@@ -740,11 +740,12 @@
+     if (Tmp_win) {
+ 	event = LastFocusEvent(Event.xany.window,&Event);
+ 
+-	if (event)
++	if (event) {
+ 	    if (event->type == FocusIn)
+ 		HandleFocusIn(event);
+ 	    else
+-		HandleFocusOut(event);
++		    HandleFocusOut(event);
++	}
+     }
+ }
+ 
+@@ -972,9 +973,9 @@
+     Atom actual = None;
+     int actual_format;
+     unsigned long nitems, bytesafter;
+-    unsigned long valuemask;		/* mask for create windows */
+-    XSetWindowAttributes attributes;	/* attributes for create windows */
+-    Pixmap pm;
++/*    unsigned long valuemask;		 mask for create windows */
++/*    XSetWindowAttributes attributes;	 attributes for create windows */
++/*    Pixmap pm; */
+ 
+     /* watch for standard colormap changes */
+     if (Event.xproperty.window == Scr->Root) {
+@@ -1126,9 +1127,9 @@
+  ***********************************************************************
+  */
+ 
+-RedoIconName()
++void RedoIconName(void)
+ {
+-    int x, y;
++/*    int x, y;*/
+ 
+     if (Tmp_win->list)
+     {
+@@ -1184,7 +1185,7 @@
+ 		XUngrabPointer(dpy, CurrentTime);
+ 	    }
+ 	}
+-    } else if (Event.xclient.message_type = _XA_TWM_RESTART) {
++    } else if (Event.xclient.message_type == _XA_TWM_RESTART) {
+         RestartTwm(CurrentTime);
+     }
+ }
+@@ -1571,11 +1572,12 @@
+      */
+     if (Event.xreparent.event == Scr->VirtualDesktop) {
+ 	if (XFindContext(dpy, Event.xreparent.window, ScreenContext, &junk)
+-	    == XCNOENT)
++	    == XCNOENT) {
+ 	    if (Event.xreparent.parent == Scr->VirtualDesktop)
+ 		XAddToSaveSet(dpy, Event.xreparent.window);
+ 	    else
+-		XRemoveFromSaveSet(dpy, Event.xreparent.window);
++		    XRemoveFromSaveSet(dpy, Event.xreparent.window);
++	}
+ #ifdef DEBUG_EVENTS
+ 	else
+ 	    fprintf(stderr, "\tone of ours\n");
+@@ -2047,7 +2049,7 @@
+ 
+ 
+ 
+-static do_menu (menu, w)
++static void do_menu (menu, w)
+     MenuRoot *menu;			/* menu to pop up */
+     Window w;				/* invoking window or None */
+ {
+@@ -2120,7 +2122,7 @@
+ 
+     if (XFindContext (dpy, Event.xany.window, VirtualContext, (caddr_t *) &Tmp_win) != XCNOENT)
+     {
+-	HandlePannerMove(&Event, Tmp_win);
++	HandlePannerMove((XButtonEvent *) &Event, Tmp_win);
+ 	return;
+     }
+     if (ButtonPressed != -1 && !InfoLines) /* want menus if we have info box */
+@@ -2131,11 +2133,12 @@
+ 	Cancel = TRUE;
+ 	CurrentDragX = origDragX;
+ 	CurrentDragY = origDragY;
+-	if (!menuFromFrameOrWindowOrTitlebar)
+-	if (Scr->OpaqueMove && DragWindow != None) {
+-	    XMoveWindow (dpy, DragWindow, origDragX, origDragY);
+-	} else {
+-	    MoveOutline(None, 0, 0, 0, 0, 0, 0);
++	if (!menuFromFrameOrWindowOrTitlebar) {
++		if (Scr->OpaqueMove && DragWindow != None) {
++			XMoveWindow (dpy, DragWindow, origDragX, origDragY);
++		} else {
++			MoveOutline(None, 0, 0, 0, 0, 0, 0);
++		}
+ 	}
+ 	XUnmapWindow(dpy, Scr->SizeWindow);
+ 	if (!Scr->OpaqueMove)
+@@ -2878,7 +2881,7 @@
+  ***********************************************************************
+  */
+ 
+-int
++short
+ Transient(w, propw)
+     Window w, *propw;
+ {
+@@ -2947,7 +2950,7 @@
+  ***********************************************************************
+  */
+ 
+-InstallWindowColormaps (type, tmp)
++void InstallWindowColormaps (type, tmp)
+     int type;
+     TwmWindow *tmp;
+ {
+@@ -3065,7 +3068,7 @@
+  ***********************************************************************
+  */
+ 
+-InstallRootColormap()
++void InstallRootColormap(void)
+ {
+     TwmWindow *tmp;
+     if (Scr->cmapInfo.root_pushes == 0) {
+@@ -3090,20 +3093,22 @@
+     XEvent *ev;
+     char *args;
+ {
+-    if (!*args)
+-	if (ev->type == EnterNotify) {
+-	    if (ev->xcrossing.mode != NotifyGrab)
+-		*args = 1;
+-	} else if (ev->type == LeaveNotify) {
+-	    if (ev->xcrossing.mode == NotifyNormal)
+-		*args = 1;
++	if (!*args) {
++		if (ev->type == EnterNotify) {
++			if (ev->xcrossing.mode != NotifyGrab)
++				*args = 1;
++		} else if (ev->type == LeaveNotify) {
++			if (ev->xcrossing.mode == NotifyNormal)
++				*args = 1;
++		}
+ 	}
+-
+-    return (False);
++	
++	return (False);
+ }
+ 
+ 
+ 
++void
+ UninstallRootColormap()
+ {
+     char args;

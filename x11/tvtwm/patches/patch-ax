@@ -1,0 +1,149 @@
+Index: twm.h
+===================================================================
+RCS file: /home/siren/src/tvtwm/twm.h,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- twm.h	1999/08/08 05:46:53	1.1.1.1
++++ twm.h	1999/08/08 05:56:59	1.2
+@@ -39,6 +39,7 @@
+ #ifndef _TWM_
+ #define _TWM_
+ 
++#include <stdio.h>
+ #include <X11/Intrinsic.h>
+ #include <X11/cursorfont.h>
+ #include <X11/extensions/shape.h>
+@@ -51,6 +52,9 @@
+ 
+ #include "icons.h"
+ 
++#include "menus.h"
++#include "list.h"
++
+ #ifndef WithdrawnState
+ #define WithdrawnState 0
+ #endif
+@@ -388,6 +392,122 @@
+ extern Atom _XA_WM_SAVE_YOURSELF;
+ extern Atom _XA_WM_DELETE_WINDOW;
+ extern Atom _XA_TWM_FLAGS;
++
++/* Function prototypes */
++void ResizeVirtual(Window window, int width, int height);
++Pixmap XcprLocatePixmapFile (Screen *screen, _Xconst char *name, 
++			     XpmColorSymbol *trans, int numtrans,
++			     unsigned int depth, 
++			     char *srcname, int srcnamelen,
++			     int *widthp, int *heightp, int *xhotp, int *yhotp,
++			     Bool *isXpm, XpmAttributes *attribs,
++			     Pixmap *mask);
++
++Pixmap GetCursorGlyph(char *name, int *widthp, int *heightp,
++		      Pixmap *shape_mask);
++void SetFrameShape (TwmWindow *tmp);
++int ExecuteFunction(int func, char *action, struct MenuRoot *sub, Window w,
++		    TwmWindow *tmp_win, XEvent *eventp, int context,
++		    int pulldown);
++Bool AddFuncKey (char *name, int cont, int mods, int func, char *win_name,
++		 char *action);
++MenuItem *AddToMenu(MenuRoot *menu, char *item, char *action, MenuRoot *sub,
++		    int func, char *fore, char *back);
++void FocusOnRoot(void);
++void PaintEntry(MenuRoot *mr, MenuItem *mi, int exposure);
++Bool PopUpMenu (MenuRoot *menu, int x, int y, Bool center);
++MenuRoot *FindMenuRoot(char *name);
++MenuRoot *NewMenuRoot(char *name);
++void RelativeMove(TwmWindow *win, char *geom);
++void MenuStartResize(TwmWindow *tmp_win, int x, int y, int w, int h);
++void MenuEndResize(TwmWindow *tmp_win);
++void MenuDoResize(int x_root, int y_root, TwmWindow *tmp_win);
++int Execute(char *s, TwmWindow *tmp_win);
++void InitMenus(void);
++void InitTitlebarButtons(void);
++void DestroyMenu (MenuRoot *menu);
++void MakeMenu(MenuRoot *mr);
++void DeIconify(TwmWindow *tmp_win);
++void HideIconManager (void);
++Bool NeedToDefer(MenuRoot *root);
++void SendDeleteWindowMessage (TwmWindow *tmp, Time timestamp);
++void SendSaveYourselfMessage (TwmWindow *tmp, Time timestamp);
++void WarpToScreen (int n, int inc);
++void BumpWindowColormap (TwmWindow *tmp, int inc);
++void DestroyIconWindow(TwmWindow *tmp_win);
++char *current_input_line(void);
++void do_var_savecolor(int key);
++void twmrc_error_prefix (void);
++char *MkQte(char *name, char *def);
++int CreateTitleButton (char *name, int func, char *action, MenuRoot *menuroot,
++                       Bool rightside, Bool append);
++void AddIconRegion(char *name, short type, char *geom, Bool iterate,
++		   int grav1, int grav2, int stepx, int stepy);
++int do_pixmap_keyword(int keyword, char *filename);
++void NewBitmapCursor(Cursor *cp, char *source, char *mask);
++void do_squeeze_entry (name_list **list, char *name, short icontype, int justify,
++		       int num, int denom);
++void FetchWmProtocols (TwmWindow *tmp);
++void FetchWmColormapWindows (TwmWindow *tmp);
++short Transient(Window w, Window *wp);
++void def_netmask(FILE *tmpf);
++void MoveIcon(TwmWindow *tmp_win, int x, int y);
++Window MakeVirtual(TwmWindow *tmp_win, int x, int y, int width, int height,
++                   long background, long border);
++Pixmap FindPixmap (char *name, unsigned int *widthp, unsigned int *heightp,
++                   Bool *isXpm, Pixel *bg_color,
++#ifdef XPM
++		   XpmColorSymbol *colors,
++#else
++		   char *colors,
++#endif
++		   int numcolors, Pixmap *shape_mask);
++void SendSyntheticConfigureNotify(TwmWindow *tmp_win);
++void SetupFrame (TwmWindow *tmp_win, int x, int y, int w, int h, int bw,
++                 Bool sendEvent);
++void SetupWindow (TwmWindow *tmp_win, int x, int y, int w, int h, int bw);
++int parse_keyword (char *s, int *nump);
++void SimulateWinGravity (TwmWindow *tmp);
++void SetBorder (TwmWindow *tmp, Bool onoroff);
++void InstallRootColormap(void);
++void ConstrainSize (TwmWindow *tmp_win, int *widthp, int *heightp);
++void UninstallRootColormap(void);
++void SetSWM_ROOT(TwmWindow *tmp_win);
++void ReGrab(void);
++void InstallWindowColormaps (int type, TwmWindow *tmp);
++int GetColor(int kind, Pixel *what, char *name);
++void LocateStandardColormaps(void);
++void SetFocus (TwmWindow *tmp_win, Time time);
++void MakeMenus(void);
++void SetSWM_VERSION(void);
++void SetMapStateProp(TwmWindow *tmp_win, int state);
++void CreateFonts (void);
++void GetFont(MyFont *font);
++void GetGravityOffsets (TwmWindow *tmp, int *xp, int *yp);
++void RemoveSWM_VERSION();
++void AddDefaultBindings ();
++void ScrollToQuadrant(TwmWindow *tmp_win);
++void DragIcon(TwmWindow *tmp_win, XButtonEvent *ev, int pulldown);
++void DragFrame(TwmWindow *tmp_win, XButtonEvent *ev, int pulldown);
++void Iconify(TwmWindow *tmp_win, int def_x, int def_y);
++void DeIconify(TwmWindow *tmp_win);
++void IconDown (TwmWindow *tmp_win);
++void IconUp (TwmWindow *tmp_win);
++void CreateIconWindow(TwmWindow *tmp_win, int def_x, int def_y);
++void InsertRGBColormap (Atom a, XStandardColormap *maps, int nmaps,
++                        Bool replace);
++void RemoveRGBColormap (Atom a);
++void RedoIconName(void);
++void PaintMenu(MenuRoot *mr, XEvent *e);
++void RestoreWithdrawnLocation (TwmWindow *tmp);
++void PopDownMenu(void);
++void UpdateMenu(void);
++void HandlePannerMove(XButtonEvent *ev, TwmWindow *tmp_win);
++void SendTakeFocusMessage (TwmWindow *tmp, Time timestamp);
++void RaiseFrame(TwmWindow *tmp_win);
++void ResizeDesktop(int width, int height);
++void MoveOutline(Window root, int x, int y, int width, int height, int bw,
++                 int th);
+ extern Atom _XA_TWM_RESTART;
+ extern Atom _XA_TWM_PROCESS;
+ extern Atom _XA_TWM_MACHINE;

@@ -1,0 +1,16 @@
+Index: parse.h
+===================================================================
+RCS file: /home/siren/src/tvtwm/parse.h,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- parse.h	1999/08/08 05:46:53	1.1.1.1
++++ parse.h	1999/08/08 05:56:55	1.2
+@@ -125,4 +125,7 @@
+ #define D_EAST			3
+ #define D_WEST			4
+ 
++/* function prototypes */
++int ParseMenuFile(char *filename, char *menuname);
++
+ #endif /* _PARSE_ */

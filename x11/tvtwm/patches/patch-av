@@ -1,0 +1,75 @@
+Index: ssetroot.c
+===================================================================
+RCS file: /home/siren/src/tvtwm/ssetroot.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- ssetroot.c	1999/08/08 05:46:52	1.1.1.1
++++ ssetroot.c	1999/08/08 05:56:58	1.2
+@@ -37,11 +37,21 @@
+ #include <X11/Xlib.h>
+ #include <X11/Xutil.h>
+ #include <X11/Xatom.h>
++#include <X11/Xmu/CurUtil.h>
+ #include <stdio.h>
++#include <stdlib.h>
+ #include "X11/bitmaps/gray"
+ #include "X11/bitmaps/root_weave"
+ 
+ char *index();
++Cursor CreateCursorFromFiles(char *cursor_file, char *mask_file);
++Pixmap MakeModulaBitmap(), ReadBitmapFile();
++XColor NameToXColor();
++unsigned long NameToPixel();
++Cursor CreateCursorFromName();
++void SetBackgroundToBitmap(Pixmap bitmap, unsigned int width,
++			   unsigned int height);
++void FixupState(void);
+ 
+ #define Dynamic 1
+ 
+@@ -58,6 +68,7 @@
+ int unsave_past = 0;
+ Pixmap save_pixmap = (Pixmap)None;
+ 
++void
+ usage()
+ {
+     fprintf(stderr, "usage: %s [options]\n", program_name);
+@@ -79,11 +90,8 @@
+     /*NOTREACHED*/
+ }
+ 
+-Pixmap MakeModulaBitmap(), ReadBitmapFile();
+-XColor NameToXColor();
+-unsigned long NameToPixel();
+-Cursor CreateCursorFromName();
+ 
++int
+ main(argc, argv) 
+     int argc;
+     char **argv;
+@@ -310,6 +318,7 @@
+ 
+ 
+ /* Free past incarnation if needed, and retain state if needed. */
++void
+ FixupState()
+ {
+     Atom prop, type;
+@@ -345,6 +354,7 @@
+  * SetBackgroundToBitmap: Set the root window background to a caller supplied 
+  *                        bitmap.
+  */
++void
+ SetBackgroundToBitmap(bitmap, width, height)
+     Pixmap bitmap;
+     unsigned int width, height;
+@@ -382,6 +392,7 @@
+  */
+ #define BITMAP_HOT_DEFAULT 8
+ 
++Cursor
+ CreateCursorFromFiles(cursor_file, mask_file)
+     char *cursor_file, *mask_file;
+ {

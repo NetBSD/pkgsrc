@@ -1,0 +1,55 @@
+Index: lex.l
+===================================================================
+RCS file: /home/siren/src/tvtwm/lex.l,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- lex.l	1999/08/08 05:46:53	1.1.1.1
++++ lex.l	1999/08/08 05:56:51	1.2
+@@ -37,12 +37,34 @@
+  ***********************************************************************/
+ 
+ /* #include <stdio.h> */		/* lex already includes stdio.h */
++#include "twm.h"
+ #include "gram.h"
+ #include "parse.h"
+ extern char *ProgramName;
+ 
+ extern int ParseError;
+ 
++#if defined(__NetBSD__)
++#undef YY_INPUT
++#define YY_INPUT(buf,result,size) ((result) = doinput((buf),(size)))
++int
++doinput (buf, size)
++char *buf;
++int size;
++{
++        int c;
++
++        if (size == 0)
++                return (0);
++
++        if ((c = (*twmInputFunc)()) <= 0)
++                return (0);
++
++        buf[0] = c;
++        return (1);
++}
++#endif
++
+ %}
+ 
+ string				\"([^"]|\\.)*\"
+@@ -94,7 +116,10 @@
+ 				}
+ %%
+ #ifndef yywrap
+-yywrap() { return(1);}
++int yywrap() { return(1);}
++#endif
++#ifdef __NetBSD__
++int yylineno;
+ #endif
+ 
+ #undef unput

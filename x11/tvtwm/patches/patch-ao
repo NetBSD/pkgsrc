@@ -1,0 +1,25 @@
+Index: menus.h
+===================================================================
+RCS file: /home/siren/src/tvtwm/menus.h,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- menus.h	1999/08/08 05:46:53	1.1.1.1
++++ menus.h	1999/08/08 05:56:53	1.2
+@@ -143,16 +143,5 @@
+ #define COLORMAP_PREV "prev"
+ #define COLORMAP_DEFAULT "default"
+ 
+-extern void InitTitlebarButtons();
+-extern void InitMenus();
+-extern MenuRoot *NewMenuRoot();
+-extern MenuItem *AddToMenu();
+-extern Bool PopUpMenu();
+-extern MenuRoot *FindMenuRoot();
+-extern Bool AddFuncKey();
+-extern int ExecuteFunction();
+-extern int DeferExecution();
+-extern int Execute();
+-extern void FocusOnRoot();
+ 
+ #endif /* _MENUS_ */

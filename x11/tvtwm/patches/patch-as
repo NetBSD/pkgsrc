@@ -1,0 +1,24 @@
+Index: regexp.c
+===================================================================
+RCS file: /home/siren/src/tvtwm/regexp.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- regexp.c	1999/08/08 05:46:53	1.1.1.1
++++ regexp.c	1999/08/08 05:56:56	1.2
+@@ -25,14 +25,13 @@
+ #ifndef	FILE
+ #include <stdio.h>
+ #endif  /* FILE */
++#include <strings.h>
+ #ifndef	NSUBEXP
+ #include "regexp.h"
+ #endif  /* NSUBEXP */
+ #ifndef	MAGIC
+ #include "regmagic.h"
+ #endif  /* MAGIC */
+-
+-extern char *strchr();
+ 
+ /*
+  * The "internal use only" fields in regexp.h are present to pass info from
