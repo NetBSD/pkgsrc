@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/20 19:41:24 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/06 21:24:13 jlam Exp $
 bin/dspam
 bin/dspam_2sql
 bin/dspam_clean
@@ -51,21 +51,21 @@ share/dspam/cgi/templates/nav_performance.html
 share/dspam/cgi/templates/nav_preferences.html
 share/dspam/cgi/templates/nav_quarantine.html
 share/dspam/cgi/templates/nav_viewmessage.html
-share/dspam/mysql/README
-share/dspam/mysql/mysql_objects.sql.space.optimized
-share/dspam/mysql/mysql_objects.sql.speed.optimized
-share/dspam/mysql/purge.sql
-share/dspam/mysql/virtual_users.sql
-share/dspam/pgsql/README
-share/dspam/pgsql/pgsql_objects.sql
-share/dspam/pgsql/purge.sql
-share/dspam/pgsql/virtual_users.sql
+${MYSQL}share/dspam/mysql/README
+${MYSQL}share/dspam/mysql/mysql_objects.sql.space.optimized
+${MYSQL}share/dspam/mysql/mysql_objects.sql.speed.optimized
+${MYSQL}share/dspam/mysql/purge.sql
+${MYSQL}share/dspam/mysql/virtual_users.sql
+${PGSQL}share/dspam/pgsql/README
+${PGSQL}share/dspam/pgsql/pgsql_objects.sql
+${PGSQL}share/dspam/pgsql/purge.sql
+${PGSQL}share/dspam/pgsql/virtual_users.sql
 share/dspam/txt/firstrun.txt
 share/dspam/txt/firstspam.txt
 share/dspam/txt/quarantinefull.txt
 @dirrm share/dspam/txt
-@dirrm share/dspam/pgsql
-@dirrm share/dspam/mysql
+${PGSQL}@dirrm share/dspam/pgsql
+${MYSQL}@dirrm share/dspam/mysql
 @dirrm share/dspam/cgi/templates
 @dirrm share/dspam/cgi
 @dirrm share/dspam
