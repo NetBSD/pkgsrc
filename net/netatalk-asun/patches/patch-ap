@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.4 2001/05/21 18:42:21 abs Exp $
+$NetBSD: patch-ap,v 1.5 2001/05/24 17:00:58 abs Exp $
 
 --- include/atalk/paths.h.orig	Fri Aug 15 06:25:58 1997
 +++ include/atalk/paths.h
