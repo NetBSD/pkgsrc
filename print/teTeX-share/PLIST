@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/12/24 12:51:31 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/03/21 00:47:46 kei Exp $
 share/texmf/ChangeLog
 share/texmf/LICENSE.texmf
 share/texmf/aliases
@@ -10685,6 +10685,7 @@ share/texmf/tex/latex/koma-script/typearea.sty
 share/texmf/tex/latex/labels/labels.sty
 share/texmf/tex/latex/labels/olabels.sty
 share/texmf/tex/latex/listings/listings.cfg
+share/texmf/tex/latex/listings/listings.sty
 share/texmf/tex/latex/listings/lstdoc.sty
 share/texmf/tex/latex/listings/lstlang1.sty
 share/texmf/tex/latex/listings/lstlang2.sty
