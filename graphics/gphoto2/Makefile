@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2002/02/26 13:14:54 martti Exp $
+# $NetBSD: Makefile,v 1.7 2002/07/12 21:22:21 mycroft Exp $
 
-DISTNAME=	gphoto2-2.0
-PKGNAME=	gphoto-2.0
+DISTNAME=	gphoto2-2.1.0
+PKGNAME=	gphoto-2.1.0
 
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
@@ -16,6 +16,7 @@ BUILD_USES_MSGFMT=	# defined
 
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
+USE_GNU_READLINE=	rl_completion_matches
 LIBTOOL_OVERRIDE=	${WRKSRC}/ltmain.sh
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-drivers=all
@@ -26,7 +27,7 @@ CONFIGURE_ARGS+=	--without-fig2dev
 CONFIGURE_ARGS+=	--with-aalib
 CONFIGURE_ARGS+=	--with-cdk
 CONFIGURE_ARGS+=	--with-exif
-CONFIGURE_ARGS+=	--with-jpeg
+CONFIGURE_ARGS+=	--with-jpeg-prefix=${PREFIX}
 
 BUILDLINK_DEPENDS.libusb=   libusb>=0.1.5
 
@@ -34,6 +35,7 @@ BUILDLINK_DEPENDS.libusb=   libusb>=0.1.5
 .include "../../devel/cdk/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/libusb/buildlink.mk"
+.include "../../devel/readline/buildlink.mk"
 .include "../../graphics/aalib/buildlink.mk"
 .include "../../graphics/libexif/buildlink.mk"
 .include "../../graphics/jpeg/buildlink.mk"
