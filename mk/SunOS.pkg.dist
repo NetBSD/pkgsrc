@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: SunOS.pkg.dist,v 1.21 2002/09/27 09:51:48 wiz Exp $
+#	$NetBSD: SunOS.pkg.dist,v 1.22 2002/10/22 12:53:19 wiz Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -398,8 +398,6 @@
         lib
 	    terminfo
             ..
-        ..
-	locale
         ..
         misc
         ..
