@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2003/03/11 13:22:31 markd Exp $
+$NetBSD: patch-ab,v 1.5 2003/05/22 02:57:14 markd Exp $
 
---- kcalc/Makefile.in.orig	Fri Jan 17 08:58:06 2003
+--- kcalc/Makefile.in.orig	Thu May  8 00:08:45 2003
 +++ kcalc/Makefile.in
-@@ -247,22 +247,26 @@ x_includes = @x_includes@
+@@ -271,22 +271,26 @@ x_includes = @x_includes@
  x_libraries = @x_libraries@
  AM_CPPFLAGS = -D_GNU_SOURCE -D_ISOC99_SOURCE
  bin_PROGRAMS = kcalc
@@ -35,7 +35,7 @@ $NetBSD: patch-ab,v 1.4 2003/03/11 13:22:31 markd Exp $
  kcalc_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  pics_DATA = 
-@@ -280,24 +284,29 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -304,37 +308,48 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -73,10 +73,7 @@ $NetBSD: patch-ab,v 1.4 2003/03/11 13:22:31 markd Exp $
 +kcalc_OBJECTS = kcalc_main.$(OBJEXT)
 +kcalc_DEPENDENCIES = libkcalc_main.la
  
- DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -306,15 +315,21 @@ LDFLAGS = @LDFLAGS@
- LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
  am__depfiles_maybe = depfiles
 -#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dlabel.Plo ./$(DEPDIR)/dummy.Po \
@@ -104,10 +101,10 @@ $NetBSD: patch-ab,v 1.4 2003/03/11 13:22:31 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/optiondialog.Plo ./$(DEPDIR)/stats.Plo
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
-@@ -336,14 +351,15 @@ CXXLD = $(CXX)
+@@ -355,14 +370,15 @@ CXXLD = $(CXX)
+ #>+ 2
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
- CXXFLAGS = @CXXFLAGS@
 -DIST_SOURCES = $(kcalc_la_SOURCES) $(kcalc_SOURCES)
 +DIST_SOURCES = $(kcalc_la_SOURCES) $(libkcalc_main_la_SOURCES) \
 +	$(kcalc_SOURCES)
@@ -122,7 +119,7 @@ $NetBSD: patch-ab,v 1.4 2003/03/11 13:22:31 markd Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -390,6 +406,8 @@ clean-libLTLIBRARIES:
+@@ -409,6 +425,8 @@ clean-libLTLIBRARIES:
  	done
  kcalc.la: $(kcalc_la_OBJECTS) $(kcalc_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kcalc_la_LDFLAGS) $(kcalc_la_OBJECTS) $(kcalc_la_LIBADD) $(LIBS)
@@ -131,7 +128,7 @@ $NetBSD: patch-ab,v 1.4 2003/03/11 13:22:31 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -430,9 +448,10 @@ distclean-compile:
+@@ -449,9 +467,10 @@ distclean-compile:
  	-rm -f *.tab.c
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dlabel.Plo@am__quote@
@@ -143,16 +140,16 @@ $NetBSD: patch-ab,v 1.4 2003/03/11 13:22:31 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/optiondialog.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/stats.Plo@am__quote@
  
-@@ -541,7 +560,7 @@ distclean-tags:
- 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+@@ -592,7 +611,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=cr32-app-kcalc.png cr48-app-kcalc.png optiondialog.h kcalc.desktop kcalclogo.xpm configure.in.in cr16-app-kcalc.png ToDo version.h 
-+KDE_DIST=version.h cr32-app-kcalc.png Makefile.am.rej kcalclogo.xpm configure.in.in kcalc.desktop cr48-app-kcalc.png optiondialog.h cr16-app-kcalc.png ToDo 
++KDE_DIST=version.h cr32-app-kcalc.png kcalclogo.xpm configure.in.in kcalc.desktop cr48-app-kcalc.png optiondialog.h cr16-app-kcalc.png ToDo 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -670,9 +689,6 @@ uninstall-am: uninstall-kde-icons  unins
+@@ -735,9 +754,6 @@ uninstall-am: uninstall-kde-icons  unins
  
  messages:
  	$(XGETTEXT) *.cpp -o $(podir)/kcalc.pot
@@ -162,7 +159,7 @@ $NetBSD: patch-ab,v 1.4 2003/03/11 13:22:31 markd Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
-@@ -682,16 +698,16 @@ kcalc.moc: $(srcdir)/kcalc.h
+@@ -747,16 +763,16 @@ kcalc.moc: $(srcdir)/kcalc.h
  	$(MOC) $(srcdir)/kcalc.h -o kcalc.moc
  
  #>+ 3
@@ -184,7 +181,7 @@ $NetBSD: patch-ab,v 1.4 2003/03/11 13:22:31 markd Exp $
  
  #>+ 2
  docs-am:
-@@ -718,33 +734,33 @@ force-reedit:
+@@ -783,33 +799,33 @@ force-reedit:
  
  
  #>+ 11
@@ -231,7 +228,7 @@ $NetBSD: patch-ab,v 1.4 2003/03/11 13:22:31 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -757,6 +773,6 @@ kde-rpo-clean:
+@@ -822,6 +838,6 @@ kde-rpo-clean:
  optiondialog.o: optiondialog.moc 
  kcalc.lo: kcalc.moc 
  optiondialog.lo: optiondialog.moc 
