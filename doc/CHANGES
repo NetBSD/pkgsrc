@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.71 2002/09/26 17:26:54 jschauma Exp $
+$NetBSD: CHANGES,v 1.72 2002/09/26 17:29:48 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2980,3 +2980,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated latex2html to 2002.2nb1 [wiz 2002-09-26]
 	Updated nawk to 20020628 [jschauma 2002-09-26]
 	Update pedisassem to 0.23 [jschauma 2002-09-26]
+	Updated gimp-print to 4.2.2 [drochner 2002-09-26]
