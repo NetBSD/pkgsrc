@@ -1,2 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:17 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/03 14:03:02 wiz Exp $
 bin/autotrace
+bin/autotrace-config
+include/autotrace/autotrace.h
+include/autotrace/types.h
+lib/libautotrace.a
+share/aclocal/autotrace.m4
+@dirrm include/autotrace
