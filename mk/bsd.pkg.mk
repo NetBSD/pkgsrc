@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.620 2000/11/27 22:24:49 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.621 2000/11/29 01:21:21 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -3016,7 +3016,7 @@ print-PLIST:
 	RM_ELFLIBS='';							\
 	case "$$shlib_type" in						\
 	"ELF")								\
-		RMELFLIBS='-e /.*\/lib[^\/]*\.so\.[0-9]*$$/d		\
+		RMELFLIBS='-e /.*\/lib[^\/]*\.so\.[0-9]*$$/d';		\
 	esac ;								\
 	${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED}							\
