@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2000/06/01 11:23:27 rh Exp $
+# $NetBSD: Makefile.common,v 1.4 2000/06/21 00:46:09 jlam Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.2
@@ -10,10 +10,10 @@ HOMEPAGE=		http://www.freetype.org/
 
 DEPENDS+=		gettext-0.10.*:../../devel/gettext
 
-USE_PKGLIBTOOL=		yes
+USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-locale-dir=${PREFIX}/share/locale
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
