@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/03/26 02:27:36 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2004/05/03 03:55:43 snj Exp $
 
 DISTNAME=	kmysqladmin-0.5.1
 PKGREVISION=	6
@@ -9,15 +9,15 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=       http://www.webeifer.de/alwin/programs/kmysqladmin/
 COMMENT=	MySQL administration GUI
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 
 MYSQLDIR=		${BUILDLINK_PREFIX.mysql-client}
 CONFIGURE_ARGS+=	--with-mysql-includes=${MYSQLDIR}/include/mysql
 CONFIGURE_ARGS+=	--with-mysql-libs=${MYSQLDIR}/lib/mysql
 
-.include "../../databases/mysql-client/buildlink2.mk"
-.include "../../x11/kde2/buildlink2.mk"
-.include "../../x11/kdebase2/buildlink2.mk"
+.include "../../databases/mysql-client/buildlink3.mk"
+.include "../../x11/kde2/kde2.mk"
+.include "../../x11/kdebase2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
