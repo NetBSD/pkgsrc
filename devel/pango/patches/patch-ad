@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.4 2002/12/22 18:06:22 jmmv Exp $
+
+--- pango/pangox-fontmap.c.orig	Mon Mar 25 21:22:52 2002
++++ pango/pangox-fontmap.c
+@@ -874,7 +874,7 @@ pango_x_font_map_read_aliases (PangoXFon
+   int n;
+ 
+   if (!files_str)
+-    files_str = g_strdup ("~/.pangox_aliases:" SYSCONFDIR "/pango/pangox.aliases");
++    files_str = g_strdup ("~/.pangox_aliases:" SYSCONFDIR "/pangox.aliases");
+ 
+   files = pango_split_file_list (files_str);
+   
