@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/18 17:46:36 jlam Exp $
+bin/pgtksh
