@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/03 15:15:10 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/03/14 16:06:46 rillig Exp $
 #
 
 DISTNAME=		xeno-1.2-src-040418
@@ -32,7 +32,7 @@ SITES_xen12-com2-support-040522.diff=ftp://ftp.NetBSD.org/pub/NetBSD/arch/xen/mi
 .endif
 
 post-extract:
-	@${CP} ${FILESDIR}/gcc333-stdarg.h ${WRKSRC}/include/stdarg.h
+	@${CP} ${FILESDIR}/stdarg.h ${WRKSRC}/include/stdarg.h
 	@${CP} ${WRKDIR}/xen12-addtl-ide-dma-040522/drivers/ide/* ${WRKSRC}/drivers/ide/
 
 do-install:
