@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:30 jlam Exp $
 
 _ZLIB_H=	/usr/include/zlib.h
 
@@ -40,15 +40,10 @@ BUILTIN_PKG.zlib=	zlib-1.1.4nb1
 .        endif
 .      endfor
 .    endif
-MAKEFLAGS+=	BUILTIN_PKG.zlib=${BUILTIN_PKG.zlib}
+BUILDLINK_VARS+=	BUILTIN_PKG.zlib
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.zlib=${IS_BUILTIN.zlib}
-.endif
-
-CHECK_BUILTIN.zlib?=	no
-.if !empty(CHECK_BUILTIN.zlib:M[yY][eE][sS])
-USE_BUILTIN.zlib=	yes
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.zlib
+.endif	# IS_BUILTIN.zlib
 
 .if !defined(USE_BUILTIN.zlib)
 USE_BUILTIN.zlib?=	${IS_BUILTIN.zlib}
@@ -76,6 +71,11 @@ USE_BUILTIN.zlib=	no
 .  endif
 .endif	# USE_BUILTIN.zlib
 
+CHECK_BUILTIN.zlib?=	no
+.if !empty(CHECK_BUILTIN.zlib:M[nN][oO])
+
 .if !empty(USE_BUILTIN.zlib:M[nN][oO])
 BUILDLINK_DEPENDS.zlib+=	zlib>=1.2.1
 .endif
+
+.endif	# CHECK_BUILTIN.zlib
