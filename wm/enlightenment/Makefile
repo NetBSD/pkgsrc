@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/10/15 12:22:13 tv Exp $
+# $NetBSD: Makefile,v 1.25 2004/11/15 07:53:33 sketch Exp $
 #
 
 DISTNAME=		enlightenment-0.16.7.1
@@ -39,9 +39,6 @@ SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@X11BASE@,${X11BASE},g'
 
 post-install:
-	for FILE in `${GREP} "\.directory$$" ${PKGDIR}/PLIST`; do \
-		${TOUCH} ${PREFIX}/$${FILE}; \
-	done
 	${FIND} ${PREFIX}/share/enlightenment/themes -type d -print | \
 	${XARGS} ${CHMOD} ${BINMODE}
 	${FIND} ${PREFIX}/share/enlightenment/themes -type f -print | \
