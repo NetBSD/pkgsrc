@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/03 20:40:39 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/01/03 21:32:38 tron Exp $
 etc/gcc-2.95.3.mk
 ${PKGNAME}/bin/c++
 ${PKGNAME}/bin/c++filt
@@ -207,12 +207,17 @@ ${PKGNAME}/man/man1/cccp.1
 ${PKGNAME}/man/man1/g++.1
 ${PKGNAME}/man/man1/g77.1
 ${PKGNAME}/man/man1/gcc.1
+@unexec install-info --delete %D/info/chill.info %D/info/dir
 info/chill.info
+@unexec install-info --delete %D/info/cpp.info %D/info/dir
 info/cpp.info
+@exec install-info %D/info/cpp.info %D/info/dir
 info/cpp.info-1
 info/cpp.info-2
 info/cpp.info-3
+@unexec install-info --delete %D/info/g77.info %D/info/dir
 info/g77.info
+@exec install-info %D/info/g77.info %D/info/dir
 info/g77.info-1
 info/g77.info-10
 info/g77.info-11
@@ -234,7 +239,9 @@ info/g77.info-6
 info/g77.info-7
 info/g77.info-8
 info/g77.info-9
+@unexec install-info --delete %D/info/gcc.info %D/info/dir
 info/gcc.info
+@exec install-info %D/info/gcc.info %D/info/dir
 info/gcc.info-1
 info/gcc.info-10
 info/gcc.info-11
