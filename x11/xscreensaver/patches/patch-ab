@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1999/01/05 11:34:39 frueauf Exp $
+
+--- hacks/Makefile.in-orig	Sun Nov 22 09:00:56 1998
++++ hacks/Makefile.in	Tue Jan  5 02:17:55 1999
+@@ -41,7 +41,7 @@
+ # Note: see comment in ../driver/Makefile.in for explanation of X_LIBS, etc.
+ #
+ HACK_PRE	= $(LIBS) $(X_LIBS)
+-HACK_POST	= $(X_PRE_LIBS) -lXt -lX11 -lXext $(X_EXTRA_LIBS) -lm
++HACK_POST	= -lXt $(X_PRE_LIBS) -lXext -lX11 $(X_EXTRA_LIBS) -lm
+ HACK_LIBS	= $(HACK_PRE)            @HACK_LIBS@ $(HACK_POST)
+ XPM_LIBS	= $(HACK_PRE) @XPM_LIBS@ @HACK_LIBS@ $(HACK_POST)
+ XLOCK_LIBS	= $(HACK_LIBS)
