@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/03 18:49:54 reed Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/27 00:53:10 heinz Exp $
 #
 
 DISTNAME=		enlightenment-0.16.6
@@ -24,9 +24,9 @@ post-install:
 	for FILE in `${GREP} "\.directory$$" ${PKGDIR}/PLIST`; do \
 		${TOUCH} ${PREFIX}/$${FILE}; \
 	done
-	${FIND} ${PREFIX}/share/enlightenment/themes -type d | \
+	${FIND} ${PREFIX}/share/enlightenment/themes -type d -print | \
 	${XARGS} ${CHMOD} ${BINMODE}
-	${FIND} ${PREFIX}/share/enlightenment/themes -type f | \
+	${FIND} ${PREFIX}/share/enlightenment/themes -type f -print | \
 	${XARGS} ${CHMOD} ${SHAREMODE}
 
 .include "../../audio/esound/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 21:39:16 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/27 00:53:11 heinz Exp $
 #
 
 DISTNAME=	pysol-4.81
@@ -32,9 +32,9 @@ do-install:
 post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@(cd ${PREFIX}; \
-	  ${FIND} share/pysol \( -type f -or -type l \) | \
+	  ${FIND} share/pysol \( -type f -or -type l \) -print | \
 	    sort >> ${PLIST_SRC}; \
-	  for DIR in `${FIND} share/pysol -type d | sort -r`; do \
+	  for DIR in `${FIND} share/pysol -type d -print | sort -r`; do \
 	  ${ECHO} "@dirrm $$DIR" >> ${PLIST_SRC}; \
 	  done)
 

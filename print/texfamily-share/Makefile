@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:24:29 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/27 00:53:10 heinz Exp $
 
 DISTNAME=	TeXfamily-share-1.2.1
 PKGREVISION=	4
@@ -54,13 +54,13 @@ do-install:
 post-install:
 	@cd ${PREFIX}; \
 	 ${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}; \
-	 ${FIND} share/texmf.local -type f|sort >> ${PLIST_SRC}; \
-	 for LINK in `${FIND} share/texmf.local -type l`; do \
+	 ${FIND} share/texmf.local -type f -print |sort >> ${PLIST_SRC}; \
+	 for LINK in `${FIND} share/texmf.local -type l -print`; do \
 		set - X `${FILE} $$LINK`; \
 		${ECHO} "@exec ${LN} -s $$6 %D/$$LINK" >>${PLIST_SRC}; \
 		${ECHO} "@unexec ${RM} -f %D/$$LINK" >>${PLIST_SRC}; \
 	 done; \
-	 for DIR in `${FIND} share/texmf.local -type d | sort -r`; do \
+	 for DIR in `${FIND} share/texmf.local -type d -print | sort -r`; do \
 	 	if [ -z "`ls $$DIR`" ]; then \
 			${ECHO} "@exec ${MKDIR} %D/$$DIR" >>${PLIST_SRC}; \
 	 	fi; \
