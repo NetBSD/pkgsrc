@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/10 01:33:28 hubertf Exp $
+
+--- docs/Makefile.in.orig	Sun Oct  3 18:22:08 1999
++++ docs/Makefile.in	Sun Oct  3 18:22:19 1999
+@@ -77,7 +77,7 @@
+ LIB_LDADD = @LIB_LDADD@
+ LN_S = @LN_S@
+ MAINT = @MAINT@
+-MAKEINFO = @MAKEINFO@
++MAKEINFO = @MAKEINFO@ --no-split
+ NM = @NM@
+ OBJDUMP = @OBJDUMP@
+ PACKAGE = @PACKAGE@
