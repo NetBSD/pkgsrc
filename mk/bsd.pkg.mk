@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.216 1999/02/16 03:23:04 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.217 1999/02/21 14:29:58 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -252,7 +252,7 @@ BUILD_DEPENDS+=		${BZCAT}:${PKGSRCDIR}/archivers/bzip2
 .endif
 EXTRACT_CMD?=		${BZCAT}
 EXTRACT_BEFORE_ARGS?=	<
-EXTRACT_AFTER_ARGS?=	| /bin/pax -r
+EXTRACT_AFTER_ARGS?=	| /usr/bin/tar -xf -
 .else
 .if exists(/bin/pax) && (${OPSYS} != "NetBSD")
 EXTRACT_CMD?=		/bin/pax
