@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2002/10/06 12:08:59 magick Exp $
+# $NetBSD: Makefile,v 1.30 2002/10/06 12:12:05 magick Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/22 22:16:53 gj Exp
 
 DISTNAME=	xemacs-packages
-PKGNAME=	xemacs-packages-1.8
-PKGREVISION=	1
+PKGNAME=	xemacs-packages-1.9
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/packages/ \
 		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs/packages/ \
