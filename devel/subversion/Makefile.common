@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2004/09/25 21:30:43 epg Exp $
+# $NetBSD: Makefile.common,v 1.16 2004/11/19 04:01:59 epg Exp $
 
 DISTNAME=		subversion-${SVNVER}
 CATEGORIES=		devel
@@ -26,3 +26,5 @@ CONFIGURE_ARGS+=	--with-neon=${BUILDLINK_PREFIX.neon}
 CONFIGURE_ARGS+=	--with-ssl
 
 BUILDLINK_DEPENDS.subversion-base=	subversion-base>=${SVNVER}
+
+.include "../../devel/gettext-lib/buildlink3.mk"
