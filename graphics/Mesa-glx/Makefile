@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/07/26 10:38:14 zuntum Exp $
+# $NetBSD: Makefile,v 1.22 2001/08/27 14:35:09 tron Exp $
 
 DISTNAME=	glx-20000813
 PKGNAME=	Mesa-${DISTNAME}
@@ -14,7 +14,7 @@ HOMEPAGE=	http://utah-glx.sourceforge.net/
 COMMENT=	OpenGL like graphics library with GLX hardware acceleration
 
 BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 BUILD_DEPENDS+=	tcl>=8.3.2nb1:../../lang/tcl
 
 BROKEN=		Package is outdated and has security problems.

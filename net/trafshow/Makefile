@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/06/11 06:34:47 jlam Exp $
-# $FreeBSD: ports/net/trafshow/Makefile,v 1.14 2000/06/28 12:53:15 alex Exp $
-#
+# $NetBSD: Makefile,v 1.11 2001/08/27 14:35:13 tron Exp $
 
 DISTNAME=	trafshow-3.1
 CATEGORIES=	net
@@ -15,7 +13,7 @@ MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://soft.risp.ru/trafshow/index.shtml
 COMMENT=	Full screen visualization of the network traffic
 
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 
 GNU_CONFIGURE=	yes
 ALL_TARGET=	trafshow
