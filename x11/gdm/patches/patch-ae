@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.4 2004/01/22 10:11:16 jmmv Exp $
+$NetBSD: patch-ae,v 1.5 2004/04/01 18:49:37 jmmv Exp $
 
---- config/Makefile.in.orig	2003-12-31 19:31:32.000000000 +0100
+--- config/Makefile.in.orig	2004-03-16 00:14:53.000000000 +0100
 +++ config/Makefile.in
 @@ -23,7 +23,7 @@ bindir = @bindir@
  sbindir = @sbindir@
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.4 2004/01/22 10:11:16 jmmv Exp $
  sharedstatedir = @sharedstatedir@
  localstatedir = @localstatedir@
  libdir = @libdir@
-@@ -303,11 +303,11 @@ gettextfoo.h: XKeepsCrashing Xsession.in
+@@ -301,11 +301,11 @@ gettextfoo.h: XKeepsCrashing Xsession.in
  install-data-hook: gdm.conf Xsession gnome.desktop default.desktop CDE.desktop Default PostSession PreSession
  	if test '!' -d $(DESTDIR)$(confdir); then \
  		$(mkinstalldirs) $(DESTDIR)$(confdir); \
@@ -25,10 +25,13 @@ $NetBSD: patch-ae,v 1.4 2004/01/22 10:11:16 jmmv Exp $
  	fi
  	-if cmp -s $(DESTDIR)$(confdir)/gdm.conf $(DESTDIR)$(confdir)/factory-gdm.conf > /dev/null 2>&1 ; then \
  		cp -f $(DESTDIR)$(confdir)/gdm.conf $(DESTDIR)$(confdir)/gdm.conf.orig; \
-@@ -324,16 +324,16 @@ install-data-hook: gdm.conf Xsession gno
- 	-if test -f $(DESTDIR)$(localedir)/locale.alias; then \
- 		cp -f $(DESTDIR)$(localedir)/locale.alias $(DESTDIR)$(localedir)/locale.alias.orig; \
- 	fi
+@@ -319,19 +319,16 @@ install-data-hook: gdm.conf Xsession gno
+ 	$(INSTALL_SCRIPT) $(srcdir)/XKeepsCrashing $(DESTDIR)$(confdir)/XKeepsCrashing
+ 	$(INSTALL_SCRIPT) Xsession $(DESTDIR)$(confdir)/Xsession
+ 
+-	-if test -f $(DESTDIR)$(localedir)/locale.alias; then \
+-		cp -f $(DESTDIR)$(localedir)/locale.alias $(DESTDIR)$(localedir)/locale.alias.orig; \
+-	fi
 -	$(INSTALL_DATA) $(srcdir)/locale.alias $(DESTDIR)$(localedir)/locale.alias
 +	$(INSTALL_DATA) $(srcdir)/locale.alias $(DESTDIR)$(confdir)/locale.alias
  
@@ -45,7 +48,7 @@ $NetBSD: patch-ae,v 1.4 2004/01/22 10:11:16 jmmv Exp $
  	fi
  
  	-if test -f $(DESTDIR)$(bisessdir)/Default.desktop; then \
-@@ -364,7 +364,7 @@ install-data-hook: gdm.conf Xsession gno
+@@ -362,7 +359,7 @@ install-data-hook: gdm.conf Xsession gno
  
  	if test '!' -d $(DESTDIR)$(initdir); then \
  		$(mkinstalldirs) $(DESTDIR)$(initdir); \
@@ -54,7 +57,7 @@ $NetBSD: patch-ae,v 1.4 2004/01/22 10:11:16 jmmv Exp $
  	fi
  	-if test -f $(DESTDIR)$(initdir)/Default; then \
  		cp -f $(DESTDIR)$(initdir)/Default $(DESTDIR)$(initdir)/Default.orig; \
-@@ -373,13 +373,13 @@ install-data-hook: gdm.conf Xsession gno
+@@ -371,13 +368,13 @@ install-data-hook: gdm.conf Xsession gno
  
  	if test '!' -d $(DESTDIR)$(postlogindir); then \
  		$(mkinstalldirs) $(DESTDIR)$(postlogindir); \
@@ -70,7 +73,7 @@ $NetBSD: patch-ae,v 1.4 2004/01/22 10:11:16 jmmv Exp $
  	fi
  	-if test -f $(DESTDIR)$(predir)/Default; then \
  		cp -f $(DESTDIR)$(predir)/Default $(DESTDIR)$(predir)/Default.orig; \
-@@ -388,7 +388,7 @@ install-data-hook: gdm.conf Xsession gno
+@@ -386,7 +383,7 @@ install-data-hook: gdm.conf Xsession gno
  
  	if test '!' -d $(DESTDIR)$(postdir); then \
  		$(mkinstalldirs) $(DESTDIR)$(postdir); \
@@ -79,7 +82,7 @@ $NetBSD: patch-ae,v 1.4 2004/01/22 10:11:16 jmmv Exp $
  	fi
  	-if test -f $(DESTDIR)$(postdir)/Default; then \
  		cp -f $(DESTDIR)$(postdir)/Default $(DESTDIR)$(postdir)/Default.orig; \
-@@ -397,26 +397,14 @@ install-data-hook: gdm.conf Xsession gno
+@@ -395,26 +392,14 @@ install-data-hook: gdm.conf Xsession gno
  
  	if test '!' -d $(DESTDIR)$(gnomercdir); then \
  		$(mkinstalldirs) $(DESTDIR)$(gnomercdir); \
