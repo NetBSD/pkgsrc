@@ -17,8 +17,19 @@ line to /etc/inetd.conf and restart inetd:
 
     support stream tcp nowait gnats /usr/pkg/libexec/gnats/gnatsd gnatsd
 
-Add something like this into the crontab to process incoming bug reports:
+Add something like this into the a crontab for 'gnats' to process
+incoming bug reports:
 
     */5 * * * * /usr/pkg/libexec/gnats/queue-pr -r
+
+or in /etc/crontab as:
+
+    */5 * * * * gnats /usr/pkg/libexec/gnats/queue-pr -r
+      
+To accept PRs by mail you'll want some new aliases too:
+
+	gnats-admin:	postmaster
+	bugs:		"| /usr/pkg/libexec/gnats/queue-pr -q"
+	query-pr:	"| /usr/pkg/libexec/gnats/mail-query"
 
 Don't forget to run /usr/pkg/libexec/gnats/mkcat as gnats.
