@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.18 2002/12/31 17:46:12 cjep Exp $
+# $NetBSD: mksandbox,v 1.19 2003/04/13 11:28:01 cjep Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -212,6 +212,14 @@ echo "Making /var/games in $sandbox"
 $mkdirprog $sandbox/var/games
 $chownprog games:games $sandbox/var/games
 $chmodprog 2775 $sandbox/var/games
+
+echo "Making /var/run and /var/run/utmp(x) in $sandbox"
+$mkdirprog $sandbox/var/run
+cp /dev/null $sandbox/var/run/utmp
+cp /dev/null $sandbox/var/run/utmpx
+
+echo "Making /var/spool/mqueue in $sandbox"
+$mkdirprog $sandbox/var/spool/mqueue
 
 echo "Mount $src from $sandbox"
 $mkdirprog $sandbox/usr/src
