@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/12/26 05:40:48 atatat Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/29 16:25:24 atatat Exp $
 #
 
-DISTNAME=	pkgdepgraph-1.1
+DISTNAME=	pkgdepgraph-1.2
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -18,7 +18,6 @@ USE_PERL5=	YES
 EXTRACT_ONLY=	# empty
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 
 MAKE_ENV=	PKG_DBDIR=${PKG_DBDIR}
@@ -35,17 +34,21 @@ NROFF=		nroff -man
 NROFF=		nroff -mandoc
 .endif
 
+do-extract:
+	${CP} ${FILESDIR}/pkgdepgraph.pl ${WRKSRC}/pkgdepgraph.pl
+	${CP} ${FILESDIR}/pkgdepgraph.1 ${WRKSRC}/pkgdepgraph.1.in
+
 do-build:
 .for FILE in pkgdepgraph
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PKG_DBDIR@|${PKG_DBDIR}|g'	\
 		-e 's|@DISTVER@|${DISTVER}|g'		\
-		< ${FILESDIR}/${FILE}.pl 		\
+		< ${WRKSRC}/${FILE}.pl 		\
 		> ${WRKSRC}/${FILE}
 .endfor
 .for FILE in pkgdepgraph
 	${SED} -e 's|@PKG_DBDIR@|${PKG_DBDIR}|g'	\
-		< ${FILESDIR}/${FILE}.1			\
+		< ${WRKSRC}/${FILE}.1.in		\
 		> ${WRKSRC}/${FILE}.1
 	${NROFF} ${WRKSRC}/${FILE}.1 >${WRKSRC}/${FILE}.0
 .endfor
