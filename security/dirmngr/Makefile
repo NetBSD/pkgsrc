@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2004/10/23 14:41:53 shannonjr Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/04 20:20:22 shannonjr Exp $
 #
 
 DISTNAME=		dirmngr-0.5.6
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/alpha/dirmngr/
 
@@ -10,8 +11,6 @@ HOMEPAGE=		http://www.gnupg.org/aegypten2
 COMMENT=		X509 certificate and CRL downloader
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		libksba>=0.9.6
-DEPENDS+=		libassuan>=0.6.5
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -41,7 +40,9 @@ pre-configure:
 
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+BUILDLINK_DEPENDS.libksb+=	libksba>=0.9.6
 .include "../../security/libksba/buildlink3.mk"
+BUILDLINK_DEPENDS.libassuan+=	libassuan>=0.6.5
 .include "../../security/libassuan/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../databases/openldap/buildlink3.mk"
