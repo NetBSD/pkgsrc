@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2001/12/27 02:11:50 zuntum Exp $
+# $NetBSD: Makefile,v 1.11 2002/01/04 14:10:10 zuntum Exp $
 
 DISTNAME=	MPlayer-0.60pre1
 PKGNAME=	mplayer-0.60.0.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://mp.dev.hu/MPlayer/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -44,6 +45,7 @@ do-install:
 
 .include "../../audio/lame/buildlink.mk"
 .include "../../devel/SDL/buildlink.mk"
+.include "../../graphics/aalib/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
 .include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
