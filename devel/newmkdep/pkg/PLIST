@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/22 20:15:11 tron Exp $
+bin/newmkdep
