@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/10/23 15:00:48 shannonjr Exp $
+# $NetBSD: Makefile,v 1.24 2004/10/30 10:25:18 shannonjr Exp $
 #
 
 DISTNAME=	gpgme-1.0.1
@@ -26,6 +26,10 @@ LIBS.SunOS+=		-lnsl -lsocket
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
 
+# getenv_r is not detected correctly. It will be found
+# in either base system or librfuncs
+CONFIGURE_ENV+=		ac_cv_func_getenv_r=yes
+
 TEST_TARGET=		check
 
 .include "../../mk/pthread.buildlink3.mk"
@@ -46,4 +50,5 @@ INFO_FILES=		gpgme.info
 .if !empty(PKG_OPTIONS:Mgpgsm)
 .include "../../security/gnupg-devel/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gpgsm=${BUILDLINK_PREFIX.gnupg-devel}/bin/gpgsm
+CONFIGURE_ARGS+=	--with-gpg=${BUILDLINK_PREFIX.gnupg-devel}/bin/gpg2
 .endif
