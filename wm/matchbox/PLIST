@@ -1,78 +1,56 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:56 jlam Exp $
-bin/matchbox
-bin/mbcontrol
-bin/mbdock
-bin/mbmenu
-bin/minisys
-bin/minitime
-bin/minivol
-bin/miniwave
-bin/monolaunch
-lib/libmbdock.la
-man/man1/matchbox.1
-man/man1/mbcontrol.1
-man/man1/miniapm.1
-man/man1/minisys.1
-man/man1/minitime.1
-man/man1/minivol.1
-man/man1/miniwave.1
-man/man1/monolaunch.1
-share/matchbox/defaults
-share/matchbox/icon.xpm
-share/matchbox/mbdock/add.xpm
-share/matchbox/mbdock/down.xpm
-share/matchbox/mbdock/mbmenu
-share/matchbox/mbdock/mbmenu.xpm
-share/matchbox/mbdock/miniapm
-share/matchbox/mbdock/minisys
-share/matchbox/mbdock/minitime
-share/matchbox/mbdock/minivol
-share/matchbox/mbdock/miniwave
-share/matchbox/mbdock/move.xpm
-share/matchbox/mbdock/remove.xpm
-share/matchbox/mbdock/stop.xpm
-share/matchbox/mbmenu/app.xpm
-share/matchbox/mbmenu/folder.xpm
-share/matchbox/themes/bluebox/buttclosedown.xpm
-share/matchbox/themes/bluebox/buttcloseup.xpm
-share/matchbox/themes/bluebox/buttmenudown.xpm
-share/matchbox/themes/bluebox/buttmenuup.xpm
-share/matchbox/themes/bluebox/buttsmallclosedown.xpm
-share/matchbox/themes/bluebox/buttsmallcloseup.xpm
-share/matchbox/themes/bluebox/buttsmallmaxdown.xpm
-share/matchbox/themes/bluebox/buttsmallmaxup.xpm
-share/matchbox/themes/bluebox/buttsmallmindown.xpm
-share/matchbox/themes/bluebox/buttsmallminup.xpm
-share/matchbox/themes/bluebox/dialogbg.xpm
-share/matchbox/themes/bluebox/dock.cfg
-share/matchbox/themes/bluebox/theme.xml
-share/matchbox/themes/bluebox/titlebg.xpm
-share/matchbox/themes/bluebox/titleleft.xpm
-share/matchbox/themes/bluebox/titleright.xpm
-share/matchbox/themes/bluebox/titleseperator.xpm
-share/matchbox/themes/camo/close.xpm
-share/matchbox/themes/camo/closedown.xpm
-share/matchbox/themes/camo/dock.cfg
-share/matchbox/themes/camo/next.xpm
-share/matchbox/themes/camo/nextdown.xpm
-share/matchbox/themes/camo/prev.xpm
-share/matchbox/themes/camo/prevdown.xpm
-share/matchbox/themes/camo/select.xpm
-share/matchbox/themes/camo/small-close-button-down.xpm
-share/matchbox/themes/camo/small-close-button.xpm
-share/matchbox/themes/camo/small-down-button.xpm
-share/matchbox/themes/camo/small-min-button.xpm
-share/matchbox/themes/camo/smallmax.xpm
-share/matchbox/themes/camo/smallmaxdown.xpm
-share/matchbox/themes/camo/smallmin.xpm
-share/matchbox/themes/camo/smallmindown.xpm
-share/matchbox/themes/camo/theme.xml
-share/matchbox/themes/depno/dock.cfg
-share/matchbox/themes/depno/theme.xml
-@dirrm share/matchbox/themes/depno
-@dirrm share/matchbox/themes/camo
-@dirrm share/matchbox/themes/bluebox
-@dirrm share/matchbox/themes
-@dirrm share/matchbox/mbmenu
-@dirrm share/matchbox/mbdock
+@comment $NetBSD: PLIST,v 1.4 2004/09/30 11:36:33 agc Exp $
+bin/matchbox-remote
+bin/matchbox-window-manager
+share/matchbox/kbdconfig
+share/matchbox/mbnoapp.xpm
+share/themes/blondie/matchbox/accept.png
+share/themes/blondie/matchbox/close-small.png
+share/themes/blondie/matchbox/close.png
+share/themes/blondie/matchbox/dialogbottomleft.png
+share/themes/blondie/matchbox/dialogbottomright.png
+share/themes/blondie/matchbox/dialogbottomtile.png
+share/themes/blondie/matchbox/dialogtopleft.png
+share/themes/blondie/matchbox/dialogtopleft2.png
+share/themes/blondie/matchbox/dialogtopright.png
+share/themes/blondie/matchbox/dialogtopright2.png
+share/themes/blondie/matchbox/dialogtoptile.png
+share/themes/blondie/matchbox/dialogtoptile2.png
+share/themes/blondie/matchbox/hide.png
+share/themes/blondie/matchbox/menu.png
+share/themes/blondie/matchbox/next.png
+share/themes/blondie/matchbox/prev.png
+share/themes/blondie/matchbox/que.png
+share/themes/blondie/matchbox/theme.desktop
+share/themes/blondie/matchbox/theme.xml
+share/themes/blondie/matchbox/titleleft.png
+share/themes/blondie/matchbox/titleright.png
+share/themes/blondie/matchbox/titlestrip.png
+share/themes/bluebox/matchbox/buttclosedown.xpm
+share/themes/bluebox/matchbox/buttcloseup.xpm
+share/themes/bluebox/matchbox/buttmenudown.xpm
+share/themes/bluebox/matchbox/buttmenuup.xpm
+share/themes/bluebox/matchbox/buttsmallclosedown.xpm
+share/themes/bluebox/matchbox/buttsmallcloseup.xpm
+share/themes/bluebox/matchbox/buttsmallmaxdown.xpm
+share/themes/bluebox/matchbox/buttsmallmaxup.xpm
+share/themes/bluebox/matchbox/buttsmallmindown.xpm
+share/themes/bluebox/matchbox/buttsmallminup.xpm
+share/themes/bluebox/matchbox/theme.desktop
+share/themes/bluebox/matchbox/theme.xml
+share/themes/bluebox/matchbox/titlebg.xpm
+share/themes/bluebox/matchbox/titleleft.xpm
+share/themes/bluebox/matchbox/titleright.xpm
+share/themes/borillo/matchbox/blank.png
+share/themes/borillo/matchbox/close.png
+share/themes/borillo/matchbox/minimise.png
+share/themes/borillo/matchbox/next.png
+share/themes/borillo/matchbox/prev.png
+share/themes/borillo/matchbox/theme.desktop
+share/themes/borillo/matchbox/theme.xml
+@dirrm share/themes/borillo/matchbox
+@dirrm share/themes/borillo
+@dirrm share/themes/bluebox/matchbox
+@dirrm share/themes/bluebox
+@dirrm share/themes/blondie/matchbox
+@dirrm share/themes/blondie
 @dirrm share/matchbox
