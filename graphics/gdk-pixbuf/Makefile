@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20.2.1 2002/05/11 02:09:10 jlam Exp $
+# $NetBSD: Makefile,v 1.20.2.2 2002/06/21 23:05:21 jlam Exp $
 #
 
 PKGNAME=	${DISTNAME}
 PKGREVISION=	1
 COMMENT=	the GNOME image loading library
 
-USE_BUILDLINK2_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
 .include "Makefile.common"
 

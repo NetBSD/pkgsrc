@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55.2.1 2002/05/11 02:09:17 jlam Exp $
+# $NetBSD: Makefile,v 1.55.2.2 2002/06/21 23:05:30 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -15,7 +15,7 @@ CONFLICTS=		perl-5.00* perl-base-[0-9]* \
 			p5-Devel-DProf-[0-9]* p5-Devel-Peek-[0-9]* \
 			perl-mk-[0-9]*
 
-USE_BUILDLINK2_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36.2.2 2002/06/06 06:54:54 jlam Exp $
+# $NetBSD: Makefile,v 1.36.2.3 2002/06/21 23:05:52 jlam Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	1
@@ -11,7 +11,7 @@ BUILDLINK_DEPENDS.libxml2=	libxml2>=2.4.8
 BUILDLINK_DEPENDS.audiofile=	libaudiofile>=0.1.9
 BUILDLINK_DEPENDS.qt2-libs=	qt2-libs>=2.3.1nb2
 
-USE_BUILDLINK2_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096}
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"

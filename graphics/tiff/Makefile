@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39.2.1 2002/05/11 02:09:16 jlam Exp $
+# $NetBSD: Makefile,v 1.39.2.2 2002/06/21 23:05:26 jlam Exp $
 
 DISTNAME=	tiff-v3.5.7
 PKGNAME=	tiff-3.5.7
@@ -18,7 +18,7 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--noninteractive --site=${FILESDIR} --prefix=${PREFIX}
 CONFIGURE_ENV+=	CC="${CC}"
 
-USE_BUILDLINK2_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 

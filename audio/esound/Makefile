@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30.2.1 2002/05/11 02:08:58 jlam Exp $
+# $NetBSD: Makefile,v 1.30.2.2 2002/06/21 23:04:57 jlam Exp $
 
 DISTNAME=		esound-0.2.25
 CATEGORIES=		audio
@@ -8,7 +8,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.tux.org/~ricdude/EsounD.html
 COMMENT=		the Enlightened sound daemon
 
-USE_BUILDLINK2_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23.2.1 2002/05/11 02:09:20 jlam Exp $
+# $NetBSD: Makefile,v 1.23.2.2 2002/06/21 23:05:34 jlam Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -14,7 +14,7 @@ COMMENT=	Message digest wrapper utility
 
 VERSION=	20010807
 
-USE_BUILDLINK2_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
 EXTRACT_ONLY=   # empty
 WRKSRC=		${WRKDIR}

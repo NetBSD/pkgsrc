@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37.2.1 2002/06/06 06:54:54 jlam Exp $
+# $NetBSD: Makefile,v 1.37.2.2 2002/06/21 23:05:51 jlam Exp $
 
 DISTNAME=	kdebase-2.2.2
 PKGREVISION=	1
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=	qt2-designer-kde>=2.3.1nb2:../../x11/qt2-designer-kde
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_BUILDLINK2_ONLY=	YES
+USE_BUILDLINK2=	YES
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 CONFIGURE_ARGS+=	--disable-greet-lib

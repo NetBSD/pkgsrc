@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35.2.1 2002/06/06 06:54:39 jlam Exp $
+# $NetBSD: Makefile,v 1.35.2.2 2002/06/21 23:05:20 jlam Exp $
 #
 
 DISTNAME=       gd-1.8.4
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.boutell.com/gd/
 COMMENT=	graphics library for fast PNG creation
 
-USE_BUILDLINK2_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
 REPLACE_PERL=		bdftogd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5.2.1 2002/05/11 02:08:50 jlam Exp $
+# $NetBSD: Makefile,v 1.5.2.2 2002/06/21 23:04:44 jlam Exp $
 
 DISTNAME=	gzip-1.2.4a
 CATEGORIES=	archivers
@@ -12,7 +12,7 @@ COMMENT=	The "meta-package" for the GZIP compression utility
 DEPENDS+=	gzip-base-1.2.4a:../../archivers/gzip-base
 DEPENDS+=	gzip-info-1.2.4a:../../archivers/gzip-info
 
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=	yes
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes

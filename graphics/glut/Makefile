@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11.2.1 2002/05/11 02:09:11 jlam Exp $
+# $NetBSD: Makefile,v 1.11.2.2 2002/06/21 23:05:22 jlam Exp $
 
 PKGNAME=		${DISTNAME:S/MesaLib/glut/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
@@ -12,7 +12,7 @@ CONFLICTS+=		Mesa<3.2.1
 
 .include "../Mesa/Makefile.common"
 
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
 
 do-build:

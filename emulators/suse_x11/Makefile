@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18.2.1 2002/05/11 02:09:08 jlam Exp $
+# $NetBSD: Makefile,v 1.18.2.2 2002/06/21 23:05:14 jlam Exp $
 
 DISTNAME=		suse_x11-${SUSE_VERSION}
 PKGREVISION=		2
@@ -14,7 +14,7 @@ DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
 
 ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
-USE_BUILDLINK2_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7.2.1 2002/05/11 02:08:56 jlam Exp $
+# $NetBSD: Makefile,v 1.7.2.2 2002/06/21 23:04:54 jlam Exp $
 #
 
 DISTNAME=	${PRGNAME}unix
@@ -14,8 +14,8 @@ RESTRICTED=	"May not be sold without permission"
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
-USE_BUILDLINK2_ONLY=	# defined
-WRKSRC=			${WRKDIR}
+USE_BUILDLINK2=	# defined
+WRKSRC=		${WRKDIR}
 
 PRGNAME=	xbin
 EXTRACT_ONLY=	# empty

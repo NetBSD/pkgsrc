@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9.2.1 2002/05/11 02:08:50 jlam Exp $
+# $NetBSD: Makefile,v 1.9.2.2 2002/06/21 23:04:44 jlam Exp $
 
 DISTNAME=	gzip-1.2.4a
 PKGNAME=	gzip-base-1.2.4a
@@ -11,8 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/gzip/gzip.html
 COMMENT=	Compress or expand files
 
-USE_BUILDLINK2_ONLY=	yes
-
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 BUILD_TARGET=	all manlinks=so
 INSTALL_TARGET=	install manlinks=so

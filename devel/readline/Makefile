@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20.2.1 2002/05/11 02:09:06 jlam Exp $
+# $NetBSD: Makefile,v 1.20.2.2 2002/06/21 23:05:10 jlam Exp $
 #
 
 DISTNAME=	readline-4.2
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/readline/
 COMMENT=	GNU library that can recall and edit previous input
 
-USE_BUILDLINK2_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 

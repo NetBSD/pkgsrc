@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13.2.1 2002/05/11 02:09:26 jlam Exp $
+# $NetBSD: Makefile,v 1.13.2.2 2002/06/21 23:05:44 jlam Exp $
 
 DISTNAME=	libxml2-2.4.20
 CATEGORIES=	textproc
@@ -8,7 +8,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://xmlsoft.org/
 COMMENT=	XML parser library for GNOME
 
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67.2.1 2002/06/06 06:54:40 jlam Exp $
+# $NetBSD: Makefile,v 1.67.2.2 2002/06/21 23:05:23 jlam Exp $
 #
 
 DISTNAME=		imlib-1.9.14
@@ -17,7 +17,7 @@ PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 USE_GMAKE=		yes
 UNLIMIT_RESOURCES=	datasize
 
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=		yes
 
 CPPFLAGS+=		-DENABLE_NLS
 CONFIGURE_ENV+=		ac_cv_path_CONVERT_PROG="${LOCALBASE}/bin/convert"

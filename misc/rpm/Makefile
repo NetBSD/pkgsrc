@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33.2.1 2002/05/11 02:09:17 jlam Exp $
+# $NetBSD: Makefile,v 1.33.2.2 2002/06/21 23:05:31 jlam Exp $
 #
 
 DISTNAME=	rpm-2.5.4
@@ -16,7 +16,7 @@ CONFLICTS+=		rpm2cpio<1.0nb1
 
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=		yes
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL

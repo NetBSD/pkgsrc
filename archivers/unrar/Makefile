@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11.2.1 2002/05/11 02:08:56 jlam Exp $
+# $NetBSD: Makefile,v 1.11.2.2 2002/06/21 23:04:53 jlam Exp $
 
 DISTNAME=	unrar-2.71
 CATEGORIES=	archivers
@@ -13,7 +13,7 @@ RESTRICTED=	"Do not modify. Do not charge a fee for redistribution."
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
-USE_BUILDLINK2_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
 do-build:
 	cd ${WRKSRC} && ${BUILDLINK_CC} ${CFLAGS} -o unrar -D_UNIX unrar.c

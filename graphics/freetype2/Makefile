@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10.2.1 2002/05/11 02:09:10 jlam Exp $
+# $NetBSD: Makefile,v 1.10.2.2 2002/06/21 23:05:19 jlam Exp $
 #
 
 DISTNAME=	freetype-2.0.5
@@ -15,7 +15,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.freetype.org/
 COMMENT=	font rendering engine and library API
 
-USE_BUILDLINK2_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_DIRS=		${WRKSRC}/builds/unix

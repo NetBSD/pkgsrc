@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12.2.2 2002/06/06 06:54:37 jlam Exp $
+# $NetBSD: Makefile,v 1.12.2.3 2002/06/21 23:05:11 jlam Exp $
 
 DISTNAME=	zlib-1.1.4
 CATEGORIES=	devel
@@ -13,7 +13,7 @@ COMMENT=	General purpose data compression library
 
 BUILD_DEPENDS+=	libtool-base>=${LIBTOOL_VERSION}:../../devel/libtool-base
 
-USE_BUILDLINK2_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 NOT_FOR_PLATFORM=	NetBSD-*-* # in base NetBSD system
 
 # To avoid circular dependences we must not use "USE_LIBTOOL" but

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31.2.1 2002/05/11 02:08:56 jlam Exp $
+# $NetBSD: Makefile,v 1.31.2.2 2002/06/21 23:04:54 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
@@ -15,7 +15,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.info-zip.org/pub/infozip/UnZip.html
 COMMENT=	List, test and extract compressed files in a ZIP archive
 
-USE_BUILDLINK2_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
 MAKEFILE=	unix/Makefile
 ALL_TARGET=	generic_zlib unzipsfx

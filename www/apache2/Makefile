@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6.2.1 2002/05/11 02:09:28 jlam Exp $
+# $NetBSD: Makefile,v 1.6.2.2 2002/06/21 23:05:46 jlam Exp $
 
 DISTNAME=		httpd-2.0.35
 PKGNAME=		apache-2.0.35
@@ -16,7 +16,7 @@ CONFLICTS+=		ap-*-[0-9]*	# Apache-1.x DSOs
 
 BUILD_DEFS+=		USE_INET6
 
-USE_BUILDLINK2_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17.2.1 2002/06/06 06:54:33 jlam Exp $
+# $NetBSD: Makefile,v 1.17.2.2 2002/06/21 23:04:59 jlam Exp $
 
 DISTNAME=	libvorbis-1.0rc3
 PKGNAME=	libvorbis-1.0.0.7
@@ -11,7 +11,7 @@ COMMENT=	Library for the Ogg Vorbis audio encoding format
 
 #BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
-USE_BUILDLINK2_ONLY=	YES
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

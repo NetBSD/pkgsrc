@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18.2.1 2002/06/06 06:54:53 jlam Exp $
+# $NetBSD: Makefile,v 1.18.2.2 2002/06/21 23:05:48 jlam Exp $
 
 DISTNAME=	curl-7.9.6
 CATEGORIES=	www
@@ -13,7 +13,7 @@ COMMENT=	client that groks URLs
 # list it into IPv6-ready packages
 BUILD_DEFS+=	USE_INET6
 
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

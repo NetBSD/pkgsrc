@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3.2.1 2002/05/11 02:08:54 jlam Exp $
+# $NetBSD: Makefile,v 1.3.2.2 2002/06/21 23:04:50 jlam Exp $
 
 DISTNAME=	t20-squsq-3.3
 PKGNAME=	squsq-3.3
@@ -11,7 +11,7 @@ COMMENT=	Compressor/decompressor for CP/M Squeeze compressed files
 WRKSRC=		${WRKDIR}/t20-squsq
 MAKEFILE=	${FILESDIR}/Makefile
 
-USE_BUILDLINK2_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sq ${WRKSRC}/usq ${PREFIX}/bin/

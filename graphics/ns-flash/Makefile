@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15.2.1 2002/05/11 02:09:14 jlam Exp $
+# $NetBSD: Makefile,v 1.15.2.2 2002/06/21 23:05:25 jlam Exp $
 
 ONLY_FOR_PLATFORM=      *-*-i386 SunOS-*-sparc
 
@@ -40,7 +40,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 CHECK_SHLIBS=		no

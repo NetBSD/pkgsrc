@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2001/09/27 23:18:42 jlam Exp $
+# $NetBSD: Makefile,v 1.39.2.1 2002/06/21 23:05:41 jlam Exp $
 
 DISTNAME=	cdrtools-1.10
 PKGNAME=	cdrecord-1.10
@@ -11,6 +11,7 @@ COMMENT=	This program allows you to create CD's on a CD-Recorder
 
 CONFLICTS=	mkisofs-[0-9]*
 USE_GMAKE=	yes
+USE_BUILDLINK2=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/a.*//}
 TARGET_ARCH=	${MACHINE_ARCH}-netbsd-cc
