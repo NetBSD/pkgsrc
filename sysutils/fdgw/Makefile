@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/01/07 17:26:08 wennmach Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/29 18:24:29 wennmach Exp $
 #
 
-DISTNAME=	fdgw-20011216
-PKGREVISION=	1
+DISTNAME=	fdgw-20020127
 CATEGORIES=	sysutils net
 MASTER_SITES=	ftp://ftp.fml.org/pub/fdgw/source/
 
@@ -25,7 +24,7 @@ IGNORE=  "Sorry, fdgw is currently only available for i386 machines."
 IGNORE+= "Please report to ${MAINTAINER} if you succeed to port fdgw to other architectures"
 .endif
 
-# we need NetBSD source tree.
+# we need the NetBSD source tree.
 .if !exists(${BSDSRCDIR})
 IGNORE= "${PKGNAME} requires the NetBSD source tree in BSDSRCDIR (${BSDSRCDIR})"
 .endif
@@ -34,10 +33,10 @@ ALL_TARGET=	dist-build
 
 pre-fetch:
 	@ ${ECHO} "";
-	@ ${ECHO} "************************************";
+	@ ${ECHO} "********************************************************";
 	@ ${ECHO} "Please note: The install stage of fdgw requires a kernel"
 	@ ${ECHO} "             with 'pseudo-device vnd 4' enabled.";
-	@ ${ECHO} "************************************";
+	@ ${ECHO} "********************************************************";
 	@ ${ECHO} "";
 
 pre-install:
@@ -50,7 +49,7 @@ do-install:
 
 post-install:
 	@ ${ECHO} "";
-	@ ${ECHO} "************************************";
+	@ ${ECHO} "*****************************************************";
 	@ ${ECHO} "";
 	@ ${ECHO} "The floppy images are installed into ${_IMG_DST_DIR}."
 	@ ${ECHO} ""
@@ -59,7 +58,7 @@ post-install:
 	@ ${ECHO} "";
 	@ ${ECHO} "See ${HOMEPAGE} for more details, e.g. customization";
 	@ ${ECHO} "";
-	@ ${ECHO} "************************************";
+	@ ${ECHO} "*****************************************************";
 	@ ${ECHO} "";
 
 .include "../../mk/bsd.pkg.mk"
