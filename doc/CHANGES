@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3740 2003/10/27 03:57:00 itojun Exp $
+$NetBSD: CHANGES,v 1.3741 2003/10/27 13:25:05 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4253,3 +4253,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Removed lmme [wiz 2003-10-26]
 	Updated udfclient to 0.1.2 [reinoud 2003-10-26]
 	Updated bind9 to 9.2.3 [itojun 2003-10-27]
+	Updated silc-client to 0.9.14 [salo 2003-10-27]
+	Updated silc-client-icb to 0.14nb3 [salo 2003-10-27]
