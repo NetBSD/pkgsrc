@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 1999/12/07 20:21:48 rh Exp $
+$NetBSD: patch-ab,v 1.3 2000/11/26 21:59:47 ad Exp $
 
---- Local/Makefile.netbsd.orig	Tue Dec  7 21:19:47 1999
-+++ Local/Makefile.netbsd	Tue Dec  7 21:19:49 1999
-@@ -75,7 +75,7 @@
+--- Local/Makefile.netbsd.orig	Sun Nov 26 21:52:47 2000
++++ Local/Makefile.netbsd	Sun Nov 26 21:54:20 2000
+@@ -78,7 +78,7 @@
  # CHGRP_COMMAND=/usr/bin/chgrp
  # MV_COMMAND=/bin/mv
  # RM_COMMAND=/bin/rm
@@ -11,7 +11,18 @@ $NetBSD: patch-ab,v 1.2 1999/12/07 20:21:48 rh Exp $
  
  
  # The following macro can be used to change the command for building a library
-@@ -100,7 +100,7 @@
+@@ -92,8 +92,8 @@
+ # appropriate code is included in the binary. You then need to set up the
+ # runtime configuration to make use of the mechanism(s) selected.
+ 
+-# AUTH_CRAM_MD5=yes
+-# AUTH_PLAINTEXT=yes
++AUTH_CRAM_MD5=yes
++AUTH_PLAINTEXT=yes
+ 
+ 
+ # The binary directory: This variable defines where the exim binary will be
+@@ -103,7 +103,7 @@
  # installed in this directory. There is no default for this variable built into
  # the source files; it must be set in one of the local configuration files.
  
@@ -20,7 +31,7 @@ $NetBSD: patch-ab,v 1.2 1999/12/07 20:21:48 rh Exp $
  
  
  # The default distribution of Exim contains only the plain text form of the
-@@ -118,7 +118,7 @@
+@@ -121,7 +121,7 @@
  # files. Both the name of the command and the suffix that it adds to files
  # need to be defined here. See also the EXICYCLOG_MAX configuration.
  
@@ -29,7 +40,7 @@ $NetBSD: patch-ab,v 1.2 1999/12/07 20:21:48 rh Exp $
  COMPRESS_SUFFIX=gz
  
  
-@@ -134,7 +134,7 @@
+@@ -137,7 +137,7 @@
  # location of all other runtime files and directories can be changed in the
  # runtime configuration file.
  
@@ -38,7 +49,7 @@ $NetBSD: patch-ab,v 1.2 1999/12/07 20:21:48 rh Exp $
  
  
  # In some installations there may be multiple machines sharing file systems,
-@@ -238,7 +238,7 @@
+@@ -241,7 +241,7 @@
  # are defaulted in the OS/Makefile-Default file, and can be overridden
  # in local OS-specific make files.
  
@@ -47,7 +58,7 @@ $NetBSD: patch-ab,v 1.2 1999/12/07 20:21:48 rh Exp $
  
  
  # Compiling in support for embedded Perl: If you want to be able to
-@@ -281,7 +281,7 @@
+@@ -284,7 +284,7 @@
  # "panic", or "reject" to form the final file name. For example, some
  # installations may want something like this:
  
@@ -56,7 +67,7 @@ $NetBSD: patch-ab,v 1.2 1999/12/07 20:21:48 rh Exp $
  
  # which results in files with names /var/log/exim_mainlog, etc. The directory
  # in which the log files are placed must exist; Exim does not try to create
-@@ -394,7 +394,7 @@
+@@ -407,7 +407,7 @@
  # the file name, allowing sites that run two separate daemons to distinguish
  # them. Some installations may want something like this
  
@@ -65,7 +76,7 @@ $NetBSD: patch-ab,v 1.2 1999/12/07 20:21:48 rh Exp $
  
  # If PID_FILE_PATH is not defined, Exim writes a file in its spool directory
  # (see SPOOL_DIRECTORY below) with the name "exim-daemon.pid" for the standard
-@@ -443,7 +443,7 @@
+@@ -456,7 +456,7 @@
  # uid and gid.
  
  # Many installations will want something like this:
