@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/01/23 07:37:16 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/07/28 14:38:05 adam Exp $
 
 .if !defined(IMAP_UW_BUILDLINK2_MK)
 IMAP_UW_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		imap-uw
-BUILDLINK_DEPENDS.imap-uw?=	imap-uw>=2002.2
+BUILDLINK_DEPENDS.imap-uw?=	imap-uw>=2002.4
 BUILDLINK_PKGSRCDIR.imap-uw?=	../../mail/imap-uw
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.imap-uw=imap-uw
