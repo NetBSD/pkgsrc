@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2003/07/24 06:29:43 grant Exp $
+$NetBSD: patch-aa,v 1.2 2004/06/26 10:25:18 grant Exp $
 
---- netscape-installer.orig	Wed Jun 25 02:04:39 2003
+--- netscape-installer.orig	2003-06-25 02:04:39.000000000 +1000
 +++ netscape-installer
 @@ -38,7 +38,7 @@
  
