@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2003/09/04 09:38:41 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/04 01:14:12 xtraeme Exp $
 #
 
 DISTNAME=	zopeedit-0.7-src
-PKGNAME=	zopeedit-0.7
+PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	www
-MASTER_SITES=	http://www.zope.org/Members/Caseman/ExternalEditor/
+MASTER_SITES=	http://www.zope.org/Members/Caseman/ExternalEditor/0.7/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
