@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.36 2001/05/14 15:08:29 wiz Exp $
+$NetBSD: TODO,v 1.37 2001/05/14 15:25:14 jlam Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -51,8 +51,6 @@ packages TODO (Suggested new packages)
 package update TODO (Suggested package updates)
 ^^^^^^^^^^^^^^^^^^^
 	o update audio/icecast to 1.3.10 (security problems)
-	o update databases/postgresql to 7.1 and split into -client/-server packages
-		(jlam has these packages ready, will update after freeze)
 	o update editors/joe because of security problems
 	o update editors/manedit to recent version
 		(zuntum will do that)
@@ -67,10 +65,6 @@ package update TODO (Suggested package updates)
 	o update sysutils/lsof to 4.56 [atatat has new version ready]
 	o update time/devtodo to 0.1.6
 	o update wm/windowmaker to 0.65.0
-	o update www/ap-ssl to 2.8.3 (fix NULL pointer deference)
-		(jlam has a new package ready, will update after freeze)
-	o update www/php4 and assorted php4 module packages to 4.0.5
-		(jlam has a new package ready, will update after freeze)
 	o update x11/xfce to 3.8.3
 	o update/add cyrus-imapd 2.0.13
 		(skrll has a new package. Need testers for v1 -> v2
