@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h.in,v 1.4 2003/03/16 19:44:10 jschauma Exp $ */
+/* $NetBSD: lib.h.in,v 1.5 2003/04/11 14:40:36 grant Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -78,10 +78,21 @@
 #ifndef TAR_FULLPATHNAME
 #define TAR_FULLPATHNAME	"@TAR_FULLPATHNAME@"
 #endif
+
 /* Define ftp as a string, in case the ftp client is called something else */
 #ifndef FTP_CMD
 #define FTP_CMD "ftp"
 #endif
+
+/* Define gzip and bzip2, used to unpack binary packages */
+#ifndef GZIP_CMD
+#define GZIP_CMD	"gzip"
+#endif
+
+#ifndef BZIP2_CMD
+#define BZIP2_CMD	"bzip2"
+#endif
+
 #ifndef ADD_CMD
 #define ADD_CMD		"@prefix@/sbin/pkg_add"
 #endif
@@ -339,7 +350,7 @@ void    cleanup(int);
 char   *make_playpen(char *, size_t, size_t);
 char   *where_playpen(void);
 void    leave_playpen(char *);
-off_t   min_free(char *);
+uint64_t min_free(char *);
 void    save_dirs(char **c, char **p);
 void    restore_dirs(char *c, char *p);
 void    show_version(void);
