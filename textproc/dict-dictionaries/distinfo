@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/12/27 02:43:47 uebayasi Exp $
+$NetBSD: distinfo,v 1.2 2004/06/01 15:36:50 shannonjr Exp $
 
 SHA1 (dict-gazetteer-1.3.tar.gz) = d46d3e0aeb956bb2b49e1ec1cda271017eed94c4
 Size (dict-gazetteer-1.3.tar.gz) = 2857457 bytes
@@ -12,3 +12,5 @@ SHA1 (dict-wn-1.5.tar.gz) = 56cfd7200e4149504376b280e36aa37abcbe054e
 Size (dict-wn-1.5.tar.gz) = 6363650 bytes
 SHA1 (patch-aa) = fdc8ee511a2e5ebbacccae199e5e37b9c0a40666
 SHA1 (patch-ab) = 232c319e24e874703c441115c13af32c697f81c6
+SHA1 (patch-ac) = aa3956015efd2de7aff43ef0a8cc2bf2d751368f
+SHA1 (patch-ad) = 27b932ea47ec313d32548a66d975b777e42358fe
