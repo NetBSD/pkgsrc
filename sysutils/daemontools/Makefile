@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/10/22 13:42:28 zuntum Exp $
+# $NetBSD: Makefile,v 1.9 2001/10/22 19:03:42 zuntum Exp $
 # FreeBSD Id: ports/sysutils/daemontools/Makefile,v 1.8 2000/12/03 05:16:41 steve Exp
 
 DISTNAME=	daemontools-0.70
@@ -31,22 +31,19 @@ post-patch:
 	@${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
 
 post-build:
-	@${SED} \
-		-e "s!/usr/local/!${PREFIX}/!" \
-		-e "s!/service!${SERVICEDIR}!g" \
+	${SED}	-e "s,@@PREFIX@@,${PREFIX},"				\
+		-e "s,@@SERVICEDIR@@,${SERVICEDIR},g"			\
 		${FILESDIR}/${SAMPLERC} > ${WRKDIR}/${SAMPLERC}
-	@${SED} \
-		-e "s!/service!${SERVICEDIR}!g" \
+	${SED}	"s,@@SERVICEDIR@@,${SERVICEDIR},g"			\
 		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/daemontools
-	${INSTALL_DATA} ${WRKDIR}/${SAMPLERC} ${PREFIX}/share/examples/daemontools
+	${INSTALL_DATA} ${WRKDIR}/${SAMPLERC}				\
+		${PREFIX}/share/examples/daemontools
 	${INSTALL_DATA_DIR} ${SERVICEDIR}
 
-	cd ${WRKDIR}/${DISTNAME}-man && ${INSTALL_MAN} envdir.8 envuidgid.8	\
-		fghack.8 multilog.8 setlock.8 setuidgid.8 softlimit.8		\
-		supervise.8 svc.8 svok.8 svscan.8 svstat.8 tai64n.8		\
-		tai64nlocal.8 ${PREFIX}/man/man8
+	cd ${WRKDIR}/${DISTNAME}-man && 				\
+		${INSTALL_MAN} *.8 ${PREFIX}/man/man8
 
 .include "../../mk/bsd.pkg.mk"
