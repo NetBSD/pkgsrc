@@ -1,21 +1,18 @@
-$NetBSD: patch-ae,v 1.3 2002/08/25 21:49:41 jlam Exp $
+$NetBSD: patch-ae,v 1.4 2002/10/16 00:21:22 dmcmahill Exp $
 
---- config.sub.orig	Fri Jun 23 09:30:45 2000
-+++ config.sub	Wed Jun  5 19:09:07 2002
-@@ -213,7 +213,7 @@
- 		| alphaev6[78] \
- 		| we32k | ns16k | clipper | i370 | sh | sh[34] \
- 		| powerpc | powerpcle \
--		| 1750a | dsp16xx | pdp11 | mips16 | mips64 | mipsel | mips64el \
-+		| 1750a | dsp16xx | pdp11 | mips16 | mips64 | mipsel | mipseb | mips64el \
- 		| mips64orion | mips64orionel | mipstx39 | mipstx39el \
- 		| mips64vr4300 | mips64vr4300el | mips64vr4100 | mips64vr4100el \
- 		| mips64vr5000 | miprs64vr5000el | mcore \
-@@ -251,6 +251,7 @@
- 	      | clipper-* | orion-* \
- 	      | sparclite-* | pdp11-* | sh-* | powerpc-* | powerpcle-* \
- 	      | sparc64-* | sparcv9-* | sparc86x-* | mips16-* | mips64-* | mipsel-* \
-+	      | mipseb-* \
- 	      | mips64el-* | mips64orion-* | mips64orionel-* \
- 	      | mips64vr4100-* | mips64vr4100el-* | mips64vr4300-* | mips64vr4300el-* \
- 	      | mipstx39-* | mipstx39el-* | mcore-* \
+--- getopt.c.orig	Tue Jan 25 02:42:51 2000
++++ getopt.c
+@@ -79,9 +79,13 @@
+ # endif
+ #endif
+ 
++#ifdef HAVE_GETTEXT
++#include <libintl.h>
++#else
+ /* This is for other GNU distributions with internationalized messages.
+    When compiling libc, the _ macro is predefined.  */
+ #include "gettext.h"
++#endif
+ #define _(msgid)    gettext (msgid)
+ 
+ 
