@@ -1,16 +1,16 @@
-# $NetBSD: ccache.mk,v 1.6 2004/02/03 20:38:39 jlam Exp $
+# $NetBSD: ccache.mk,v 1.7 2004/02/05 03:35:20 jlam Exp $
 
 .if !defined(COMPILER_CCACHE_MK)
-COMPILER_CCACHE_MK=	defined
+COMPILER_CCACHE_MK=	one
 
-.if !empty(PKGPATH:Mdevel/ccache)
+.  if !empty(PKGPATH:Mdevel/ccache)
 IGNORE_CCACHE=	yes
 MAKEFLAGS+=	IGNORE_CCACHE=yes
-.endif
+.  endif
 
-.if defined(IGNORE_CCACHE)
+.  if defined(IGNORE_CCACHE)
 _USE_CCACHE=	NO
-.endif
+.  endif
 
 # LANGUAGES.<compiler> is the list of supported languages by the compiler.
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
@@ -18,49 +18,60 @@ _USE_CCACHE=	NO
 # 
 LANGUAGES.ccache=	c c++
 _LANGUAGES.ccache=	# empty
-.for _lang_ in ${USE_LANGUAGES}
+.  for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.ccache+=	${LANGUAGES.ccache:M${_lang_}}
-.endfor
-.if empty(_LANGUAGES.ccache)
+.  endfor
+.  if empty(_LANGUAGES.ccache)
 _USE_CCACHE=	NO
-.endif
+.  endif
 
-.if !defined(_USE_CCACHE)
+.  if !defined(_USE_CCACHE)
 _USE_CCACHE=	YES
-.endif
+.  endif
 
-.if !empty(_USE_CCACHE:M[yY][eE][sS])
-#
-# Add the dependency on ccache.
-BUILD_DEPENDS+=	ccache-[0-9]*:../../devel/ccache
-.endif
-
-EVAL_PREFIX+=	_CCACHEBASE=ccache
+.  if !empty(_USE_CCACHE:M[yY][eE][sS])
+EVAL_PREFIX+=		_CCACHEBASE=ccache
 _CCACHEBASE_DEFAULT=	${LOCALBASE}
 _CCACHEBASE?=		${LOCALBASE}
 
-.if exists(${_CCACHEBASE}/bin/ccache)
+.    if exists(${_CCACHEBASE}/bin/ccache)
 _CCACHE_DIR=	${WRKDIR}/.ccache
 _CCACHE_LINKS=	# empty
-.  if !empty(_LANGUAGES.ccache)
-PATH:=	${_CCACHE_DIR}/bin:${PATH}
-.  endif
-.  if !empty(_LANGUAGES.ccache:Mc)
+.      if !empty(_LANGUAGES.ccache:Mc)
 CC:=	${_CCACHE_DIR}/bin/${CC:T}
 _CCACHE_LINKS+=	CC
-.  endif
-.  if !empty(_LANGUAGES.ccache:Mc++)
+.      endif
+.      if !empty(_LANGUAGES.ccache:Mc++)
 CXX:=	${_CCACHE_DIR}/bin/${CXX:T}
 _CCACHE_LINKS+=	CXX
+.      endif
+.    endif
 .  endif
+.endif	# COMPILER_CCACHE_MK
 
-.  for _target_ in ${_CCACHE_LINKS}
+# The following section is included only if we're not being included by
+# bsd.prefs.mk.
+#
+.if empty(BSD_PREFS_MK:M+*)
+.  if empty(COMPILER_CCACHE_MK:Mtwo)
+COMPILER_CCACHE_MK+=	two
+
+.    if !empty(_USE_CCACHE:M[yY][eE][sS])
+.      if !empty(_LANGUAGES.ccache)
+PATH:=	${_CCACHE_DIR}/bin:${PATH}
+.      endif
+
+BUILD_DEPENDS+=	ccache-[0-9]*:../../devel/ccache
+
+.      if exists(${_CCACHEBASE}/bin/ccache)
+.        for _target_ in ${_CCACHE_LINKS}
 override-tools: ${${_target_}}
 ${${_target_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${LN} -fs ${_CCACHEBASE}/bin/ccache ${.TARGET}
-.  endfor
-.endif
-
-.endif	# COMPILER_CCACHE_MK
+.        endfor
+.      endif
+.    endif
+.  endif # COMPILER_CCACHE_MK
+.endif	 # BSD_PREFS_MK
