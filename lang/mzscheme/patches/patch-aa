@@ -1,51 +1,14 @@
-$NetBSD: patch-aa,v 1.2 2000/01/20 14:12:50 pooka Exp $
+$NetBSD: patch-aa,v 1.3 2002/08/27 16:42:07 pooka Exp $
 
---- sconfig.h.orig	Thu Oct 21 22:06:12 1999
-+++ sconfig.h	Wed Jan 12 15:09:48 2000
-@@ -285,6 +285,37 @@
+--- Makefile.in.orig	Tue Aug 27 18:32:50 2002
++++ Makefile.in	Tue Aug 27 18:46:10 2002
+@@ -228,9 +228,6 @@
+ 	cd ..; cp mzscheme/mzdyn.o $(LIBIDIR)/mzdyn.o
+ 	cd ..; $(ICP) mzscheme/libmzgc.@LIBSFX@ $(LIBIDIR)/libmzgc.@LIBSFX@
+ 	cd ..; $(ICP) mzscheme/libmzscheme.@LIBSFX@ $(LIBIDIR)/libmzscheme.@LIBSFX@
+-	cd ..; echo 'CC=@CC@' > $(BUILDINFO)
+-	cd ..; echo 'CFLAGS=@CFLAGS@ @OPTIONS@' >> $(BUILDINFO)
+-	cd ..; echo 'LIBS=@LIBS@' >> $(BUILDINFO)
  
- #endif
- 
-+  /********************* NetBSD ***********************/
-+
-+#if defined(__NetBSD__)
-+
-+# define SCHEME_PLATFORM_LIBRARY_SUBPATH "netbsd"
-+
-+# include "uconfig.h"
-+
-+# undef HAS_STANDARD_IOB
-+# define HAS_BSD_IOB
-+
-+# define STACK_GROWS_DOWN
-+
-+# define UNDERSCORE_DYNLOAD_SYMBOL_PREFIX
-+
-+# define USE_IEEE_FP_PREDS
-+# define POW_HANDLES_INF_CORRECTLY
-+
-+# define SIGSET_IS_SIGNAL
-+
-+# define USE_TM_GMTOFF_FIELD
-+
-+#if defined(__alpha__)
-+# define SIXTY_FOUR_BIT_INTEGERS
-+# define USE_DIVIDE_MAKE_INFINITY
-+#endif
-+
-+# define FLAGS_ALREADY_SET
-+
-+#endif
-+
-   /************** x86/OpenBSD with gcc ****************/
-               /* Thanks to Bengt Kleberg */
- 
-@@ -505,7 +536,7 @@
- 
-   /************** ALPHA/OSF1 with gcc ****************/
- 
--#if defined(__alpha)
-+#if defined(__alpha) && !defined(__NetBSD__)
- 
- # define SCHEME_PLATFORM_LIBRARY_SUBPATH "alpha-osf1"
+ MZFWDIR = "@FRAMEWORK_INSTALL_DIR@"/PLT_MzScheme.framework
  

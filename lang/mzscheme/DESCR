@@ -1,7 +1,5 @@
 MzScheme is an implementation of the Scheme programming language for
-Windows 95/98/NT, MacOS, Unix, and BeOS. MzScheme is R4RS-compliant
-(including the full numerical tower) and nearly R5RS-compliant (some macro
-support is lacking).
+Windows 95/98/NT, MacOS, Unix, and BeOS. MzScheme is R5RS-compliant.
 
  MzScheme also provides: 
 
