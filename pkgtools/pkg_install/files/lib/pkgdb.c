@@ -1,9 +1,9 @@
-/*	$NetBSD: pkgdb.c,v 1.4 2003/01/07 16:43:57 jschauma Exp $	*/
+/*	$NetBSD: pkgdb.c,v 1.5 2003/01/14 15:18:35 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: pkgdb.c,v 1.4 2003/01/07 16:43:57 jschauma Exp $");
+__RCSID("$NetBSD: pkgdb.c,v 1.5 2003/01/14 15:18:35 jschauma Exp $");
 #endif
 #endif
 
@@ -141,7 +141,7 @@ pkgdb_store(const char *key, const char *val)
 
 	return (*pkgdbp->put) (pkgdbp, &keyd, &vald, R_NOOVERWRITE);
 #else
-	return 0;
+	return EXIT_SUCCESS;
 #endif /* HAVE_DBOPEN */
 }
 
@@ -202,8 +202,43 @@ pkgdb_remove(const char *key)
 
 	return (*pkgdbp->del) (pkgdbp, &keyd, 0);
 #else
-	return 0;
+	return EXIT_SUCCESS;
 #endif /* HAVE_DBOPEN */
+}
+
+/* remove any entry from the cache which has a data field of `pkg' */
+int
+pkgdb_remove_pkg(const char *pkg)
+{
+	DBT     data;
+	DBT     key;
+	int	type;
+	int	ret;
+	int	cc;
+
+	if (pkgdbp == NULL) {
+		return 0;
+	}
+	cc = strlen(pkg);
+	for (ret = 1, type = R_FIRST; (*pkgdbp->seq)(pkgdbp, &key, &data, type) == 0 ; type = R_NEXT) {
+		if (cc == data.size && strncmp(data.data, pkg, cc) == 0) {
+			if (Verbose) {
+				printf("Removing file %s from pkgdb\n", (char *)key.data);
+			}
+			switch ((*pkgdbp->del)(pkgdbp, &key, 0)) {
+				case -1:
+					warn("Error removing %s from pkgdb", (char *) key.data);
+					ret = 0;
+					break;
+				case 1:
+					warn("Key %s not present in pkgdb", (char *) key.data);
+					ret = 0;
+					break;
+
+			}
+		}
+	}
+	return ret;
 }
 
 /*
