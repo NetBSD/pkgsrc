@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2002/11/08 21:23:11 is Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 19:14:54 wiz Exp $
 
 SHA1 (lmclock-1.1.tar.gz) = b4d25c9debd3695a6ab436b78ba9aa1545453610
+RMD160 (lmclock-1.1.tar.gz) = c63fe86f7f40559c67679794aecdf8852b2c1b51
 Size (lmclock-1.1.tar.gz) = 2820 bytes
