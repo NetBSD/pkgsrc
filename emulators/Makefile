@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2004/12/30 19:50:32 kristerw Exp $
+# $NetBSD: Makefile,v 1.123 2005/01/15 17:00:43 kristerw Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -70,19 +70,6 @@ SUBDIR+=	simulavr
 SUBDIR+=	snes9x
 SUBDIR+=	spim
 SUBDIR+=	stella
-SUBDIR+=	suse64_audio
-SUBDIR+=	suse64_base
-SUBDIR+=	suse64_compat
-SUBDIR+=	suse64_devel
-SUBDIR+=	suse64_glx
-SUBDIR+=	suse64_gtk
-SUBDIR+=	suse64_libc5
-SUBDIR+=	suse64_libjpeg
-SUBDIR+=	suse64_libpng
-SUBDIR+=	suse64_linux
-SUBDIR+=	suse64_vmware
-SUBDIR+=	suse64_x11
-SUBDIR+=	suse64_xforms
 SUBDIR+=	suse91_aspell
 SUBDIR+=	suse91_base
 SUBDIR+=	suse91_compat
