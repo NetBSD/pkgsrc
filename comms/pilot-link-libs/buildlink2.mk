@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/07/13 13:50:52 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/12/08 21:48:09 reed Exp $
 
 .if !defined(PILOT_LINK_LIBS_BUILDLINK2_MK)
 PILOT_LINK_LIBS_BUILDLINK2_MK=	# defined
@@ -14,6 +14,7 @@ BUILDLINK_FILES.pilot-link-libs+=       lib/libpisock++.*
 BUILDLINK_FILES.pilot-link-libs+=       lib/libpisock.*
 BUILDLINK_FILES.pilot-link-libs+=       lib/libpisync.*
 
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 
