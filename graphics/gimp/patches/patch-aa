@@ -1,20 +1,20 @@
---- configure.in.orig	Mon Jan 26 04:44:47 1998
-+++ configure.in	Fri Jan 30 03:55:00 1998
-@@ -121,7 +121,7 @@
- dnl Test for libtiff
-   if test -z "$LIBTIFF_LIB"; then
-     AC_CHECK_LIB(tiff, TIFFReadScanline,
--      TIFF='tiff'; LIBTIFF_LIB='-ltiff',
-+      TIFF='tiff'; LIBTIFF_LIB='-ltiff -lz -ljpeg',
-       AC_CHECK_LIB(tiff, TIFFWriteScanline,
-         TIFF='tiff'; LIBTIFF_LIB='-ltiff -lz -ljpeg',
-         AC_MSG_WARN(*** TIFF plug-in will not be built ***), -lz -ljpeg -lm), -lm)
-@@ -156,7 +156,7 @@
-       GIMPTCL='gimptcl'; LIBTCL_LIB="-l$with_tcl -l$with_tk $DL_LIBRARY",
-       AC_MSG_WARN(*** gimptcl plug-in will not be built ***), -lm $DL_LIBRARY),
-     AC_CHECK_LIB(tcl, Tcl_StaticPackage,
--      GIMPTCL='gimptcl'; LIBTCL_LIB="-ltcl -ltk $DL_LIBRARY",
-+      GIMPTCL='gimptcl'; LIBTCL_LIB="-ltcl80 -ltk80 $DL_LIBRARY",
-       AC_MSG_WARN(*** gimptcl plug-in will not be built ***), -lm $DL_LIBRARY))
-   fi
+--- configure.orig	Wed Apr  8 10:16:20 1998
++++ configure	Tue Apr 14 12:47:47 1998
+@@ -634,7 +634,7 @@
+ test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
  
+ 
+-test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
++test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL}'
+ 
+ echo $ac_n "checking whether build environment is sane""... $ac_c" 1>&6
+ echo "configure:641: checking whether build environment is sane" >&5
+@@ -2228,7 +2228,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  TIFF='tiff'; LIBTIFF_LIB='-ltiff'
++  TIFF='tiff'; LIBTIFF_LIB='-ltiff -lz -ljpeg'
+ else
+   echo "$ac_t""no" 1>&6
+ echo "configure: warning: *** TIFF plug-in will not be built (TIFF header files not found) ***" 1>&2
