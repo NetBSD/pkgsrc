@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.296 1999/07/13 01:02:42 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.297 1999/07/13 18:09:19 mjl Exp $
 #
 # This file is in the public domain.
 #
@@ -876,14 +876,29 @@ _FETCH_FILE=								\
 		exit 1;							\
 	fi
 
+#
+# Sort the master site list according to the patterns in MASTER_SORT
+#
+
+MASTER_SORT?=
+MASTER_SORT_REGEX?=
+MASTER_SORT_REGEX+= ${MASTER_SORT:S/./\\./g:C/.*/:\/\/[^\/]*&\//}
+
+MASTER_SORT_AWK= BEGIN { RS = " "; ORS = " "; IGNORECASE = 1 ; gl = "${MASTER_SORT_REGEX}"; }
+.for srt in ${MASTER_SORT_REGEX}
+MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt}"] = good["${srt}"] " " $$0 ; next; } 
+.endfor
+MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; } 
+SORTED_MASTER_SITES!= echo '${MASTER_SITES}' | awk '${MASTER_SORT_AWK}'
+
 .if !target(do-fetch)
 do-fetch:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_DISTDIR}
 	${_PKG_SILENT}(${_PKG_DEBUG}cd ${_DISTDIR};			\
-	 sites="${MASTER_SITES}";					\
+	 sites="${SORTED_MASTER_SITES}";				\
 	 for file in "" ${_DISTFILES}; do				\
 		if [ "X$$file" = X"" ]; then continue; fi;		\
-		${_FETCH_FILE}						\
+		 ${_FETCH_FILE}						\
 	 done)
 .if defined(_PATCHFILES)
 	${_PKG_SILENT}(${_PKG_DEBUG}cd ${_DISTDIR};			\

@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.60 1999/07/07 13:47:34 itojun Exp $
+# $NetBSD: mk.conf.example,v 1.61 1999/07/13 18:09:19 mjl Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -143,7 +143,22 @@
                                 #           arguments
                                 # Default: ${SU} - root -c
 
-
+#MASTER_SORT=        .ac.at .at .de .ch .se .fi .no
+                                # Whitespace delimited list of preferred
+                                # download locations. MASTER_SITES will be
+                                # reordered according to the hosts' address
+                                # last components.
+                                # Possible: list of domain name suffixes
+                                # Default: none
+#MASTER_SORT_REGEX=  ftp://.*/ 
+                                # Same as MASTER_SORT, but takes a regular
+                                # expression for more flexibility in matching.
+                                # Regexps defined here have higher priority
+                                # than MASTER_SORT.
+                                # This example would prefer ftp transfers
+                                # over anything else.
+                                # Possible: Regexps as in awk(1)
+                                # Default: none
 
 #
 #	Definitions used only in the packages collection
