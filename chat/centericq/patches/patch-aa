@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2004/05/07 23:18:50 hubertf Exp $
+$NetBSD: patch-aa,v 1.3 2005/04/05 12:44:17 wiz Exp $
 
---- src/icqconf.cc.orig	2003-10-26 11:46:52.000000000 +0100
+--- src/icqconf.cc.orig	2005-01-27 00:52:47.000000000 +0100
 +++ src/icqconf.cc
 @@ -27,7 +27,11 @@
  #include <dirent.h>
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.2 2004/05/07 23:18:50 hubertf Exp $
  #include <sys/statvfs.h>
  #endif
  
-@@ -427,11 +431,11 @@ void icqconf::loadsounds() {
+@@ -644,13 +648,13 @@ void icqconf::loadsounds() {
  
  	    switch(rs) {
  		case rscard:
@@ -23,16 +23,20 @@ $NetBSD: patch-aa,v 1.2 2004/05/07 23:18:50 hubertf Exp $
 -		    fo << "*\turl\tplay " << SHARE_DIR << "/url.wav" << endl;
 -		    fo << "*\temail\tplay " << SHARE_DIR << "/email.wav" << endl;
 -		    fo << "*\tonline\tplay " << SHARE_DIR << "/online.wav" << endl;
+-		    fo << "*\toffline\tplay " << SHARE_DIR << "/offline.wav" << endl;
 -		    fo << "*\tsms\tplay " << SHARE_DIR << "/sms.wav" << endl;
-+		    fo << "*\tmsg\t" AUDIO_PLAYER " " << SHARE_DIR << "/msg.wav" << endl;
-+		    fo << "*\turl\t" AUDIO_PLAYER " " << SHARE_DIR << "/url.wav" << endl;
-+		    fo << "*\temail\t" AUDIO_PLAYER " " << SHARE_DIR << "/email.wav" << endl;
-+		    fo << "*\tonline\t" AUDIO_PLAYER " " << SHARE_DIR << "/online.wav" << endl;
-+		    fo << "*\tsms\t" AUDIO_PLAYER " " << SHARE_DIR << "/sms.wav" << endl;
- 		    break;
+-		    break;
++                   fo << "*\tmsg\t" AUDIO_PLAYER " " << SHARE_DIR << "/msg.wav" << endl;
++                   fo << "*\turl\t" AUDIO_PLAYER " " << SHARE_DIR << "/url.wav" << endl;
++                   fo << "*\temail\t" AUDIO_PLAYER " " << SHARE_DIR << "/email.wav" << endl;
++                   fo << "*\tonline\t" AUDIO_PLAYER " " << SHARE_DIR << "/online.wav" << endl;
++                   fo << "*\toffline\t" AUDIO_PLAYER << SHARE_DIR << "/offline.wav" << endl;
++                   fo << "*\tsms\t" AUDIO_PLAYER " " << SHARE_DIR << "/sms.wav" << endl;
++		   break;
  
  		case rsspeaker:
-@@ -1126,7 +1130,7 @@ unsigned int icqconf::gethttpproxyport()
+ 		    fo << "*\tmsg\t!spk1" << endl;
+@@ -1433,7 +1437,7 @@ string icqconf::gethttpproxypasswd() con
  void icqconf::checkdiskspace() {
      fenoughdiskspace = true;
  
