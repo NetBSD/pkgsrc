@@ -1,4 +1,4 @@
-# $Id: Makefile.in,v 1.1.1.1 2003/08/18 17:34:55 agc Exp $
+# $Id: Makefile.in,v 1.2 2003/10/16 12:00:12 grant Exp $
 
 @SET_MAKE@
 SHELL = @SHELL@
@@ -65,7 +65,7 @@ clean:
 
 distclean: clean
 	rm -f Makefile config.h
-	rm -f config.status config.cache config.log
+	rm -f config.status config.cache config.log configure.lineno
 
 maintainer-clean: distclean
 	rm -f configure config.h.in
