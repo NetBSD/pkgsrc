@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: pkg_alternatives.sh,v 1.4 2005/01/30 12:35:22 jmmv Exp $
+# $NetBSD: pkg_alternatives.sh,v 1.5 2005/02/10 10:18:03 jmmv Exp $
 #
 # pkg_alternatives - Generic wrappers for programs with similar interfaces
 # Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -539,7 +539,23 @@ mkdir_p() {
 # Shows an usage message and exits the program with an error condition.
 #
 usage() {
-    echo "Usage: ${Prog_Name} [-gsw] [-p prefix] action [arg1 ... argN]" 1>&2
+    cat 1>&2 <<EOF
+Usage: ${Prog_Name} [options] action [arg1 ... argN]
+
+Available options:
+    -g        Select group mode (default).
+    -p dir    Set installation prefix.
+    -s        Run in silent mode.
+    -w        Select wrapper mode.
+
+Available actions in group mode:
+    auto destroy list manual rebuild register status unregister
+
+Available actions in wrapper mode:
+    auto manual register status unregister
+
+See pkg_alternatives(8) for more information.
+EOF
     exit 1
 }
 
