@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/12/14 20:01:21 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2005/03/27 15:43:35 wiz Exp $
 #
 
 DISTNAME=		Magnetic22Src
 PKGNAME=		gtkmagnetic-2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=		games
 MASTER_SITES=		http://www.ifarchive.org/if-archive/magnetic-scrolls/interpreters/magnetic/
 EXTRACT_SUFX=		.zip

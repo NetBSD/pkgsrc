@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2004/11/03 11:27:53 grant Exp $
+# $NetBSD: Makefile,v 1.11 2005/03/27 15:43:35 wiz Exp $
 #
 
 DISTNAME=	gemdropx-0.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.sonic.net/pub/users/nbs/unix/x/gemdropx/src/
 

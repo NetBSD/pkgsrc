@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2004/11/27 09:12:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2005/03/27 15:43:36 wiz Exp $
 #
 
 DISTNAME=	quake2-0.2.1
 PKGNAME=	${DISTNAME:S/quake2/quake2forge/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quake/}
 EXTRACT_SUFX=	.tar.bz2

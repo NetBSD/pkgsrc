@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2004/12/22 11:22:35 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2005/03/27 15:43:32 wiz Exp $
 #
 
 .include "../../multimedia/xine-lib/Makefile.common"
 
 PKGNAME=	${XINE_PKGNAME:S/lib/arts/}
 
+PKGREVISION=	1
 CATEGORIES=	audio
 
 DEPENDS+=	xine-lib>=1rc3a:../../multimedia/xine-lib

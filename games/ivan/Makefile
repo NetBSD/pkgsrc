@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/02/28 04:53:32 ben Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/27 15:43:35 wiz Exp $
 #
 
 DISTNAME=		ivan-0.50
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ivan/}
 
