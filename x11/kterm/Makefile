@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2003/08/24 20:28:12 itojun Exp $
+# $NetBSD: Makefile,v 1.27 2003/08/29 16:22:15 kei Exp $
 
 DISTNAME=	kterm-6.2.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 
@@ -36,7 +36,7 @@ PATCHFILES+=	KTerm-BGP-1.0.patch.gz
 .  endif
 .endif
 
-.if defined(XAW_TYPE) && (${XAW_TYPE} == "3d" || ${XAW_TYPE} == "xpm")
+.if defined(XAW_TYPE) && (${XAW_TYPE} == "3d" || ${XAW_TYPE} == "xpm" || ${XAW_TYPE} == "neXtaw")
 post-patch:
 	@${ECHO_MSG}  "===>  Applying Xaw scrollbar patch"
 	@${PATCH} ${PATCH_ARGS} < ${FILESDIR}/patch-xaw3d
