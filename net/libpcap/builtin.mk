@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2005/01/11 19:55:29 xtraeme Exp $
+# $NetBSD: builtin.mk,v 1.6 2005/01/11 20:06:12 xtraeme Exp $
 
 _LIBPCAP_H=	/usr/include/pcap.h
 
@@ -20,8 +20,10 @@ IS_BUILTIN.libpcap!=							\
 #
 .      if !defined(_LIPCAP_VERSION)
 _LIBPCAP_VERSIONS=	0.8.3  0.7.2
-_LIBPCAP_0.8.3=		NetBSD-2.99.9* NetBSD-2.99.1[0-9]* NetBSD-[3-9]*
-_LIBPCAP_0.7.2=		NetBSD-1.[56]* NetBSD-2.0* NetBSD-2.99.[1-8]
+_LIBPCAP_0.8.3=		NetBSD-2.99.9* NetBSD-2.99.1[0-9]* NetBSD-[3-9]* \
+			FreeBSD-5.3* FreeBSD-6*
+_LIBPCAP_0.7.2=		NetBSD-1.[56]* NetBSD-2.0* NetBSD-2.99.[1-8]	\
+			FreeBSD-4* FreeBSD-5.[12]*
 .        for _libpcap_version_ in ${_LIBPCAP_VERSIONS}
 .          for _pattern_ in ${_LIBPCAP_${_libpcap_version_}}
 .            if !empty(MACHINE_PLATFORM:M${_pattern_})
