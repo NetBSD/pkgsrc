@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/02/05 17:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/02/09 01:12:17 dmcmahill Exp $
 
 DISTNAME=	xdaemon-1.0
 CATEGORIES=	games x11
@@ -26,9 +26,9 @@ do-extract:
 
 do-install:
 .for pic in ${PIX}
-	${INSTALL_DATA} ${DISTDIR}/${pic} ${PREFIX}/share/xteddy/pixmaps/${pic}
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${pic} ${PREFIX}/share/xteddy/pixmaps/${pic}
 .endfor
-	${INSTALL_DATA} ${DISTDIR}/Daemon.README ${PREFIX}/share/doc/xdaemon.README
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/Daemon.README ${PREFIX}/share/doc/xdaemon.README
 	${LN} -s ${PREFIX}/bin/xteddy	${PREFIX}/bin/xdaemon
 	${LN} -s ${PREFIX}/bin/xteddy	${PREFIX}/bin/xdaemon2
 
