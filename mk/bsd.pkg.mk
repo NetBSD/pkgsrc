@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.759 2001/06/12 20:39:13 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.760 2001/06/13 07:09:33 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -243,7 +243,7 @@ LIBS+=		-L${LOCALBASE}/lib -lintl
 
 # If GNU_CONFIGURE is defined, then pass LIBS to the GNU configure script.
 .if defined(GNU_CONFIGURE)
-CONFIGURE+=	LIBS="${LIBS}"
+CONFIGURE_ENV+=	LIBS="${LIBS}"
 .endif
 
 LIBTOOL_REQD=		1.4.20010219nb6
