@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/18 20:09:16 jmmv Exp $
+bin/waimea
+man/man1/waimea.1
+share/waimea/actions/action
+share/waimea/actions/action.click-to-focus
+share/waimea/actions/action.no-mouse
+share/waimea/actions/action.non-opaque
+share/waimea/actions/action.sloppy-focus
+share/waimea/backgrounds/waimea.png
+share/waimea/config
+share/waimea/menu
+share/waimea/scripts/filelist.pl
+share/waimea/scripts/procinfo.pl
+share/waimea/scripts/stylesdir.pl
+share/waimea/styles/Default.style
+@dirrm share/waimea/styles
+@dirrm share/waimea/scripts
+@dirrm share/waimea/backgrounds
+@dirrm share/waimea/actions
+@dirrm share/waimea
