@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.117 1998/07/14 11:36:11 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.118 1998/07/14 15:53:54 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1073,8 +1073,9 @@ _PORT_USE: .USE
 		'^([^/]*/)*lib/lib[^.]+\.so\.[0-9]+\.[0-9]+$$'		\
 		${PLIST} || /usr/bin/true`;				\
 	if [ X"$$sos" != X"" ]; then					\
-		${ECHO_MSG} "===>   [Automatic shared object handling]";\
-		if [ ${OBJECT_FMT} = "ELF" ]; then			\
+		case ${SHLIB_TYPE} in					\
+		"ELF")							\
+			${ECHO_MSG} "===>   [Automatic ${SHLIB_TYPE} shared object handling]";\
 			for so in $$sos; do				\
 				so1=`${ECHO} $$so | ${SED} -e 's|\.[0-9]*$$||'`;	\
 				so2=`${ECHO} $$so1 | ${SED} -e 's|\.[0-9]*$$||'`;	\
@@ -1096,7 +1097,9 @@ _PORT_USE: .USE
 					${ECHO_MSG} "$$so";		\
 				fi;					\
 			done						\
-		else							\
+			;;						\
+		"a.out")						\
+			${ECHO_MSG} "===>   [Automatic ${SHLIB_TYPE} shared object handling]";\
 			case `${GREP} -c '^@exec ${LDCONFIG}$$' ${PLIST}` in	\
 			0)						\
 				${ECHO} "@exec ${LDCONFIG}" >> ${PLIST};	\
@@ -1104,10 +1107,15 @@ _PORT_USE: .USE
 				;;					\
 			esac;						\
 			if [ X"${PKG_VERBOSE}" != X"" ]; then		\
+				${ECHO_MSG} "$$sos";			\
 				${ECHO_MSG} "${LDCONFIG}";		\
 			fi;						\
 			${LDCONFIG};					\
-		fi;							\
+			;;						\
+		*)							\
+			${ECHO_MSG} "No shared libraries for ${MACHINE_ARCH}";	\
+			;;						\
+		esac;							\
 	fi)
 .if exists(${PKGDIR}/MESSAGE)
 	@${ECHO_MSG} "===>   Please note the following:"
