@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/02 00:08:15 kei Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/04/21 23:34:32 kei Exp $
 bin/w3m
 man/man1/w3m.1
 man/ja_JP.EUC/man1/w3m.1
@@ -38,15 +38,19 @@ share/doc/w3m/doc-jp/README.keymap
 share/doc/w3m/doc-jp/README.m17n
 share/doc/w3m/doc-jp/README.mailcap
 share/doc/w3m/doc-jp/README.menu
+share/doc/w3m/doc-jp/README.migemo
 share/doc/w3m/doc-jp/STORY.html
 share/doc/w3m/doc-jp/keymap.default
 share/doc/w3m/doc-jp/keymap.lynx
 share/doc/w3m/doc-jp/menu.default
 share/doc/w3m/doc-jp/menu.submenu
 share/doc/w3m/doc-jp/w3m.1
-@dirrm share/doc/w3m/doc
 @dirrm share/doc/w3m/doc-jp
+@dirrm share/doc/w3m/doc
 @dirrm share/doc/w3m
+lib/w3m/inflate
 lib/w3m/w3mbookmark
 lib/w3m/w3mhelperpanel
+lib/w3m/w3mimgdisplay
+lib/w3m/w3mimgsize
 @dirrm lib/w3m
