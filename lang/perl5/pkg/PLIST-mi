@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-mi,v 1.3 1998/01/28 15:33:56 hubertf Exp $
+@comment $NetBSD: PLIST-mi,v 1.4 1998/12/01 02:47:19 tv Exp $
 @comment this list changes by some files if gdbm is installed - hubertf
 bin/a2p
 bin/c2ph
@@ -23,9 +23,7 @@ bin/splain
 @exec	mkdir -p %D/lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Text/ParseWords
 @unexec	rm -fr   %D/lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/auto/Text/ParseWords
 @exec	mkdir -p %D/lib/perl5/site_perl/${MACHINE_ARCH}-netbsd
-@unexec rm -fr   %D/lib/perl5/site_perl/${MACHINE_ARCH}-netbsd
-@exec	mkdir -p %D/lib/perl5/site_perl
-@unexec rm -fr   %D/lib/perl5/site_perl
+@unexec rmdir -p %D/lib/perl5/site_perl/${MACHINE_ARCH}-netbsd 2>/dev/null || true
 lib/perl5/AnyDBM_File.pm
 lib/perl5/AutoLoader.pm
 lib/perl5/AutoSplit.pm
@@ -162,7 +160,6 @@ lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/gv.h
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/handy.h
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/hv.h
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/keywords.h
-lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/libperl.a
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/mg.h
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/nostdio.h
 lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE/op.h
