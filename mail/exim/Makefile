@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2003/09/02 11:14:16 abs Exp $
+# $NetBSD: Makefile,v 1.40 2003/09/02 12:19:36 abs Exp $
 
 DISTNAME=	exim-${EXIM_VERSION}
+PKGREVISION=	1
 CATEGORIES=	mail net
 
 MAINTAINER=	ad@NetBSD.org
