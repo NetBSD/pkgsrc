@@ -1,9 +1,13 @@
-$NetBSD: patch-ai,v 1.1 2000/02/07 03:18:13 christos Exp $
+$NetBSD: patch-ai,v 1.2 2003/11/07 16:35:51 christos Exp $
 
---- fep_hist.c.orig	Fri Nov 25 06:45:42 1988
-+++ fep_hist.c	Sun Feb  6 21:08:02 2000
-@@ -6,6 +6,8 @@
- #endif lint
+--- fep_hist.c.orig	1988-11-25 06:45:42.000000000 -0500
++++ fep_hist.c	2003-11-07 11:20:24.000000000 -0500
+@@ -3,9 +3,11 @@
+ #ifndef lint
+ static char rcsid[]=
+ "$Header: /cvsroot/pkgsrc/misc/fep/patches/patch-ai,v 1.2 2003/11/07 16:35:51 christos Exp $ (SRA)";
+-#endif lint
++#endif /* lint */
  
  #include <stdio.h>
 +#include <stdlib.h>

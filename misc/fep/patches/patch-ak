@@ -1,79 +1,89 @@
-$NetBSD: patch-ak,v 1.1 2000/02/07 03:18:14 christos Exp $
+$NetBSD: patch-ak,v 1.2 2003/11/07 16:35:51 christos Exp $
 
---- fep_vi.c.orig	Wed May 29 01:31:27 1991
-+++ fep_vi.c	Sun Feb  6 21:46:29 2000
-@@ -6,7 +6,17 @@
- #endif lint
+--- fep_set.c.orig	2003-11-07 11:18:26.000000000 -0500
++++ fep_set.c	2003-11-07 11:19:08.000000000 -0500
+@@ -3,7 +3,7 @@
+ #ifndef lint
+ static char rcsid[]=
+ "$Header: /cvsroot/pkgsrc/misc/fep/patches/patch-ak,v 1.2 2003/11/07 16:35:51 christos Exp $ (SRA)";
+-#endif lint
++#endif /* lint */
  
  #include <stdio.h>
-+#include <sys/ioctl.h>
-+#ifdef TERMIOS
-+#include <termios.h>
-+#ifdef __linux__
-+#ifndef _POSIX_VDISABLE
-+#define _POSIX_VDISABLE '\0'
-+#endif
-+#endif
-+#else
- #include <sgtty.h>
-+#endif
- #include <ctype.h>
  #include "fep_defs.h"
- #include "fep_glob.h"
-@@ -107,7 +117,7 @@
- 	/* ^X-^V   */	{"\\^X\\^V",	view_buffer},
- 	/* ^X-^X   */	{"\\^X\\^X",	expand_file_name},
- 	/* ^X-?    */	{"\\^X?",	show_bindings},
--	/* ^X-^C   */	{"\\^X\\^C",	terminate},
-+	/* ^X-^C   */	{"\\^X\\^C",	(FUNC)terminate},
- 	/* ^X-^D   */	{"\\^X\\^D",	send_eof},
- 	/* ^X-(	   */	{"\\^X(",	fep_start_script},
- 	/* ^X-)	   */	{"\\^X)",	fep_end_script},
-@@ -138,7 +148,7 @@
- 	/* ^X-^L   */	{"\\^X\\^L",	fep_repaint},
- 	/* ^X-^X   */	{"\\^X\\^X",	expand_file_name},
- 	/* ^X-?    */	{"\\^X?",	show_bindings},
--	/* ^X-^C   */	{"\\^X\\^C",	terminate},
-+	/* ^X-^C   */	{"\\^X\\^C",	(FUNC)terminate},
- 	/* ^X-^D   */	{"\\^X\\^D",	send_eof},
- 	/* ^X-^V   */	{"\\^X\\^V",	view_buffer},
- 	/* ^X-(	   */	{"\\^X(",	fep_start_script},
-@@ -161,7 +171,29 @@
- 	cft[i] = self_insert;
+@@ -67,10 +67,10 @@
+ #ifdef HASH
+ #define HASHNUM	10
+ VAR *var_htab[HASHNUM];
+-#else HASH
++#else /* HASH */
+ VAR var_top = {"top", "top", (char *)0, (VAR *)0};
+ VAR *var_list = &var_top;
+-#endif HASH
++#endif /* HASH */
  
- #define import(table,key,fn) if((int)key>0)table[(int)key]=fn
--
-+#ifdef TERMIOS
-+    /* Now, using cbreak mode
-+    import (cft, initial_ttymode.c_cc[VSTART], ignore);
-+    import (cft, initial_ttymode.c_cc[VSTOP], ignore);
-+    */
-+    import (cft, initial_ttymode.c_cc[VINTR], insert_and_flush);
-+    import (aft, initial_ttymode.c_cc[VINTR], insert_and_flush);
-+    import (cft, initial_ttymode.c_cc[VQUIT], insert_and_flush);
-+    import (cft, initial_ttymode.c_cc[VEOF], send_eof);
-+#ifdef VSWTC
-+    import (cft, initial_ttymode.c_cc[VSWTC], insert_and_flush);
-+#endif
-+    import (cft, initial_ttymode.c_cc[VSUSP], insert_and_flush);
-+#ifdef VDSUSP
-+    import (cft, initial_ttymode.c_cc[VDSUSP], self_insert);
-+#endif
-+    import (cft, initial_ttymode.c_cc[VREPRINT], reprint);
-+    import (cft, initial_ttymode.c_cc[VDISCARD], self_insert);
-+    import (cft, initial_ttymode.c_cc[VWERASE], delete_previous_word);
-+    import (cft, initial_ttymode.c_cc[VLNEXT], literal_next);
-+    import (cft, initial_ttymode.c_cc[VERASE], delete_previous_character);
-+    import (cft, initial_ttymode.c_cc[VKILL], delete_line);
-+#else
-     /* Now, using cbreak mode
-     import (cft, tchars_buf.t_startx, ignore);
-     import (cft, tchars_buf.t_stopc, ignore);
-@@ -179,6 +211,7 @@
-     import (cft, ltchars_buf.t_lnextc, literal_next);
-     import (cft, initial_ttymode.sg_erase, delete_previous_character);
-     import (cft, initial_ttymode.sg_kill, delete_line);
-+#endif
+ /*
+  * Functions
+@@ -251,12 +251,12 @@
+ 	for (; vp != (VAR *)0; vp = vp->v_next)
+ 	    printf ("%-16s %s\n", vp->v_name, vp->v_value);
+     }
+-#else HASH
++#else /* HASH */
+     register VAR *vp;
  
- #undef import
+     for (vp = var_list->v_next; vp; vp = vp->v_next)
+ 	printf ("%-16s %s\n", vp->v_name, vp->v_value);
+-#endif HASH
++#endif /* HASH */
+ }
  
+ #ifdef HASH
+@@ -273,7 +273,7 @@
+ 
+     return (sum % HASHNUM);
+ }
+-#endif HASH
++#endif /* HASH */
+ 
+ /*
+  * Get pointer to VAR.
+@@ -288,7 +288,7 @@
+ {
+ #ifdef HASH
+     register i = getindex (name);
+-#endif HASH
++#endif /* HASH */
+     VAR *vp, *last = (VAR *)0;
+ 
+ #ifdef HASH
+@@ -296,7 +296,7 @@
+ 	if (strcmp (name, vp->v_value) == 0)
+ 	    return (vp);
+     }
+-#else HASH
++#else /* HASH */
+     for (vp = var_list->v_next, last = var_list; vp; last = vp, vp = vp->v_next) {
+ 	int r;
+ 
+@@ -309,7 +309,7 @@
+ 	else if (r < 0)
+ 	    break;
+     }
+-#endif HASH
++#endif /* HASH */
+ 
+     if (alloc == 0)
+ 	return (0);
+@@ -327,9 +327,9 @@
+     else {
+ 	var_htab[i] = vp;
+     }
+-#else HASH
++#else /* HASH */
+     vp->v_next = last->v_next;
+     last->v_next = vp;
+-#endif HASH
++#endif /* HASH */
+     return (vp);
+ }
