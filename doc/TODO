@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1838 2004/06/19 06:47:40 cjep Exp $
+$NetBSD: TODO,v 1.1839 2004/06/20 01:25:09 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -319,6 +319,7 @@ Suggested package updates
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.2.1
+	o mysql-4.0.20 [xtraeme]
 	o namazu-2.0.13
 	o nano-1.2.3
 	o nap-1.5.2
@@ -399,7 +400,7 @@ Suggested package updates
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
 	o vfu-4.03
-	o vlc-0.7.2
+	o vlc-0.7.2 [xtraeme]
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o w3m-0.5.1
