@@ -1,34 +1,13 @@
-$NetBSD: patch-au,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+$NetBSD: patch-au,v 1.2 1999/08/31 22:09:43 wrstuden Exp $
 
---- man/man8/psf.8.orig	Fri Oct 30 10:32:38 1998
-+++ man/man8/psf.8	Fri Oct 30 10:34:23 1998
-@@ -90,13 +90,13 @@
- .RS
- .nf
- laser|lp|LaserWriter Plus on AppleTalk:\\
--    :sd=/usr/spool/lpd/laser:\\
--    :lp=/usr/spool/lpd/laser/null:\\
--    :lf=/var/adm/lpd-errs:pw#80:hl:\\
--    :of=:LIBDIR:/filters/ofpap:\\
--    :if=:LIBDIR:/filters/ifpaprev:\\
--    :tf=:LIBDIR:/filters/tfpaprev:\\
--    :df=:LIBDIR:/filters/dfpaprev:
-+    :sd=/usr/spool/output/laser:\\
-+    :lp=/usr/spool/output/laser/null:\\
-+    :lf=/var/log/lpd-errs:pw#80:hl:\\
-+    :of=:RESDIR:/psffilters/ofpap:\\
-+    :if=:RESDIR:/psffilters/ifpaprev:\\
-+    :tf=:RESDIR:/psffilters/tfpaprev:\\
-+    :df=:RESDIR:/psffilters/dfpaprev:
- .fi
- .RE
- .sp
-@@ -110,7 +110,7 @@
- for each printer, as has been done above.
- .LP
- Finally, there is a file in the spool directory,
--.BR /var/spool/lpd/laser ,
-+.BR /var/spool/output/laser ,
- called
- .BR .paprc ,
- which
+--- libatalk/nbp/nbp_unrgstr.c	Tue Oct  7 14:22:39 1997
++++ libatalk/nbp/nbp_unrgstr.c	Mon Aug 30 06:47:43 1999
+@@ -6,7 +6,7 @@
+ #include <sys/types.h>
+ #include <sys/param.h>
+ #include <sys/socket.h>
+-#include <sys/signal.h>
++#include <signal.h>
+ #include <sys/time.h>
+ #include <sys/errno.h>
+ #include <strings.h>

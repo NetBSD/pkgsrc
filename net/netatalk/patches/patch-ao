@@ -1,22 +1,9 @@
-$NetBSD: patch-ao,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+$NetBSD: patch-ao,v 1.2 1999/08/31 22:09:43 wrstuden Exp $
 
---- man/Makefile	1998/10/26 14:06:44	1.1
-+++ man/Makefile	1998/10/26 14:06:57
-@@ -7,7 +7,7 @@
- 
- ${ALL}: FRC
- 	cd $@; ${MAKE} ${MFLAGS} CC="${CC}" DEFS="${DEFS}" \
--	    OPTOPTS="${OPTOPTS}" DESTDIR="${DESTDIR}" MANDIR="${MANDIR}" \
-+	    OPTOPTS="${OPTOPTS}" ATALK_DESTDIR="${ATALK_DESTDIR}" MANDIR="${MANDIR}" \
- 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}"
- 
-@@ -24,7 +24,7 @@
- 	-mkdir ${MANDIR}
- 	for i in ${ALL}; \
- 	    do (cd $$i; ${MAKE} ${MFLAGS} \
--		DESTDIR="${DESTDIR}"  MANDIR="${MANDIR}" \
-+		ATALK_DESTDIR="${ATALK_DESTDIR}"  MANDIR="${MANDIR}" \
- 		SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
- 		INSTALL="${INSTALL}" install); \
+--- libatalk/atp/Makefile.inc	Wed Dec 31 16:00:00 1969
++++ libatalk/atp/Makefile.inc	Mon Aug 30 06:47:42 1999
+@@ -0,0 +1,4 @@
++.PATH: ${.CURDIR}/atp
++
++SRCS+= atp_bprint.c atp_bufs.c atp_close.c atp_open.c atp_packet.c
++SRCS+= atp_rreq.c atp_rresp.c atp_rsel.c atp_sreq.c atp_sresp.c

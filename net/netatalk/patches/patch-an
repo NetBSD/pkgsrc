@@ -1,13 +1,13 @@
-$NetBSD: patch-an,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+$NetBSD: patch-an,v 1.2 1999/08/31 22:09:43 wrstuden Exp $
 
---- etc/papd/Makefile	1998/10/26 14:02:54	1.1
-+++ etc/papd/Makefile	1998/10/26 14:03:06
-@@ -19,7 +19,7 @@
- 	    KRBDEFS="-DKRB"; \
- 	fi; \
-         ${MAKE} ${MFLAGS} CC="${CC}" ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" \
--	    OPTOPTS="${OPTOPTS}" DESTDIR="${DESTDIR}" \
-+	    OPTOPTS="${OPTOPTS}" ATALK_DESTDIR="${ATALK_DESTDIR}" \
- 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
- 	    KRBLIBS="$${KRBLIBS}" KRBLIBDIRS="$${KRBLIBDIRS}" \
+--- libatalk/asp/asp_getsess.c	Sat Aug 16 16:20:31 1997
++++ libatalk/asp/asp_getsess.c	Mon Aug 30 06:47:42 1999
+@@ -6,7 +6,7 @@
+ #include <sys/errno.h>
+ #include <sys/time.h>
+ #include <sys/types.h>
+-#include <sys/signal.h>
++#include <signal.h>
+ #include <sys/uio.h>
+ #include <sys/wait.h>
+ #include <sys/syslog.h>

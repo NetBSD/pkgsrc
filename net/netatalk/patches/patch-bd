@@ -1,0 +1,61 @@
+$NetBSD: patch-bd,v 1.1 1999/08/31 22:09:43 wrstuden Exp $
+
+--- sys/netbsd/Makefile	Sat Sep 26 08:15:09 1998
++++ sys/netbsd/Makefile	Tue Aug 31 02:15:30 1999
+@@ -1,9 +1,8 @@
+ # NetBSD specific defines, passed to subdirectories.
+ DEFS=	-DBSD4_4
+-OPTOPTS=	-O2
+ CC=	gcc -Werror -I../../sys/netbsd/
+ INSTALL=	install
+-ADDLIBS=	-lcrypt
++ADDLIBS=	-Wl,-R${LIBDIR} -lcrypt
+ 
+ ALL=	../../libatalk ../../include ../../bin ../../etc ../../man
+ 
+@@ -16,12 +15,14 @@
+ 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+-	    DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" all
++	    ATALK_DESTDIR="${ATALK_DESTDIR}" AFSDIR="${AFSDIR}" \
++	    KRBDIR="${KRBDIR}" EXAMPLEDIR="${EXAMPLEDIR}" all
+ 
+ FRC:
+ 
+ install :
+-	-mkdir ${DESTDIR} ${SBINDIR} ${BINDIR} ${ETCDIR} ${LIBDIR}
++	-mkdir ${ATALK_DESTDIR} ${SBINDIR} ${BINDIR} ${ETCDIR}
++	-mkdir ${LIBDIR} ${LIBEXECDIR} ${RESDIR} ${EXAMPLEDIR}
+ 	for i in ${ALL}; \
+ 	    do (cd $$i; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
+@@ -30,19 +31,22 @@
+ 		AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
+ 		INSTALL="${INSTALL}" $@); \
+ 	done
++	for i in `ls ../../config`; \
++		do ${INSTALL} -c ../../config/$$i ${EXAMPLEDIR}; \
++	done
+ 	rm -f ${ETCDIR}/rc.atalk
+-	sed -e s@:DESTDIR:@${DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
++	sed -e s@:DESTDIR:@${ATALK_DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
+ 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
+ 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
+ 		-e s@:INCDIR:@${INCDIR}@ \
+ 	    < ../../rc.atalk.bsd > ${ETCDIR}/rc.atalk
+ 	@echo
+-	@echo "Install is done.  If you're using a version of NetBSD"
+-	@echo "earlier than 1.3, don't forget to add lines from"
+-	@echo "services.atalk to /etc/services"
++	@echo "Install is done."
++	@echo
++	@echo "Example configuration files are in ${EXAMPLEDIR}."
+ 	@echo
+-	@echo "Don't forget to call rc.atalk in /etc/rc.local.  See README"
+-	@echo "and README.NETBSD for more information."
++	@echo "Don't forget to call rc.atalk in /etc/rc.local.  See"
++	@echo "README.NETBSD for kernel configuration information."
+ 
+ clean :
+ 	for i in ${ALL}; \

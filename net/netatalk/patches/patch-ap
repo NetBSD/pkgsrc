@@ -1,13 +1,12 @@
-$NetBSD: patch-ap,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+$NetBSD: patch-ap,v 1.2 1999/08/31 22:09:43 wrstuden Exp $
 
---- man/man1/Makefile	1998/10/26 14:07:39	1.1
-+++ man/man1/Makefile	1998/10/26 14:07:56
-@@ -16,7 +16,7 @@
- 	-mkdir ${MANDIR}/man1
- 	for i in ${SRC} ; do \
- 	    rm -f ${MANDIR}/man1/$$i; \
--	    sed -e s@:DESTDIR:@${DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
-+	    sed -e s@:DESTDIR:@${ATALK_DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
- 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
- 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
- 		-e s@:INCDIR:@${INCDIR}@ \
+--- libatalk/atp/atp_rsel.c	Thu Oct  2 00:32:56 1997
++++ libatalk/atp/atp_rsel.c	Mon Aug 30 06:47:42 1999
+@@ -9,6 +9,7 @@
+ #include <sys/errno.h>
+ #include <sys/uio.h>
+ #include <signal.h>
++#include <string.h>
+ 
+ #include <netatalk/endian.h>
+ #include <netatalk/at.h>

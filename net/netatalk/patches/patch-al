@@ -1,22 +1,8 @@
-$NetBSD: patch-al,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+$NetBSD: patch-al,v 1.2 1999/08/31 22:09:43 wrstuden Exp $
 
---- etc/Makefile	1998/10/26 14:00:23	1.1
-+++ etc/Makefile	1998/10/26 14:00:45
-@@ -10,7 +10,7 @@
- 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
- 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
--	    DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}"
-+	    ATALK_DESTDIR="${ATALK_DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}"
- 
- FRC:
- 
-@@ -27,7 +27,7 @@
- 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
- 	        SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
--		DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
-+		ATALK_DESTDIR="${ATALK_DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
- 		INSTALL="${INSTALL}" install); \
- 	done
- 
+--- libatalk/adouble/Makefile.inc	Wed Dec 31 16:00:00 1969
++++ libatalk/adouble/Makefile.inc	Mon Aug 30 06:47:42 1999
+@@ -0,0 +1,3 @@
++.PATH: ${.CURDIR}/adouble
++
++SRCS+= ad_open.c ad_flush.c ad_read.c ad_write.c

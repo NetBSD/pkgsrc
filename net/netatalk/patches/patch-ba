@@ -1,13 +1,13 @@
-$NetBSD: patch-ba,v 1.1 1999/02/23 00:31:40 wrstuden Exp $
+$NetBSD: patch-ba,v 1.2 1999/08/31 22:09:43 wrstuden Exp $
 
---- libatalk/nbp/nbp_unrgstr.c.orig	Tue Oct  7 17:22:39 1997
-+++ libatalk/nbp/nbp_unrgstr.c	Thu Feb 18 20:20:00 1999
-@@ -6,7 +6,7 @@
- #include <sys/types.h>
- #include <sys/param.h>
- #include <sys/socket.h>
--#include <sys/signal.h>
-+#include <signal.h>
- #include <sys/time.h>
- #include <sys/errno.h>
- #include <strings.h>
+--- man/man4/Makefile	Tue Feb 20 09:02:27 1996
++++ man/man4/Makefile	Mon Aug 30 06:47:44 1999
+@@ -13,7 +13,7 @@
+ 	-mkdir ${MANDIR}/man4
+ 	for i in ${SRC} ; do \
+ 	    rm -f ${MANDIR}/man4/$$i; \
+-	    sed -e s@:DESTDIR:@${DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
++	    sed -e s@:DESTDIR:@${ATALK_DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
+ 		    -e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
+ 		    -e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
+ 		    -e s@:INCDIR:@${INCDIR}@ \

@@ -1,10 +1,18 @@
-$NetBSD: patch-ai,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+$NetBSD: patch-ai,v 1.2 1999/08/31 22:09:43 wrstuden Exp $
 
-New Makefile
-
---- /dev/null	Mon Oct 26 13:21:23 1998
-+++ libatalk/compat/Makefile.inc	Mon Oct 26 13:22:39 1998
-@@ -0,0 +1,3 @@
-+.PATH: ${.CURDIR}/compat
-+
-+SRCS+=	mktemp.c getusershell.c strcasecmp.c strstr.c flock.c sigvec.c
+--- include/Makefile	Tue Feb 20 08:38:02 1996
++++ include/Makefile	Mon Aug 30 06:47:42 1999
+@@ -1,11 +1,11 @@
+-TARGETS=	atalk netatalk
++TARGETS=	atalk
+ 
+ INSTALL=	install
+ 
+ all :
+ 
+ install : all
+-	-mkdir ${DESTDIR}
++	-mkdir ${ATALK_DESTDIR}
+ 	-mkdir ${INCDIR}
+ 	for i in ${TARGETS}; do \
+ 	    rm -rf ${INCDIR}/$$i ; \
