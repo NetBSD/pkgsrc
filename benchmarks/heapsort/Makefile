@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 13:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/31 10:09:04 zuntum Exp $
 
 DISTNAME=		heapsort.c
 PKGNAME=		heapsort-1.0
@@ -16,7 +16,7 @@ do-extract:
 	${CP} ${DISTDIR}/heapsort.c ${WRKSRC}/heapsort.c
 
 do-build:
-	(cd ${WRKSRC} ; ${CC} -O2 -DUNIX -o heapsort heapsort.c -lm)
+	(cd ${WRKSRC} ; ${CC} ${CFLAGS} -DUNIX -o heapsort heapsort.c -lm)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/heapsort ${PREFIX}/bin
