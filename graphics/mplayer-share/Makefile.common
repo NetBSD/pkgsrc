@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2003/10/18 11:54:33 grant Exp $
+# $NetBSD: Makefile.common,v 1.43 2003/10/26 14:04:41 tron Exp $
 #
 
 MPLAYER_DIST_VERSION=	1.0pre1
@@ -32,11 +32,12 @@ HAS_CONFIGURE=		YES
 
 PTHREAD_OPTS+=		require
 
-CONFIGURE_ARGS+=	--prefix="${PREFIX}"
-CONFIGURE_ARGS+=	--with-extraincdir="${LOCALBASE}/include"
-CONFIGURE_ARGS+=	--with-extralibdir="${LOCALBASE}/lib"
-CONFIGURE_ARGS+=	--with-extralibdir="${X11BASE}/lib"
-CONFIGURE_ARGS+=	--disable-mpdvdkit
+CONFIGURE_ARGS+=	--prefix="${PREFIX}" \
+			--with-extraincdir="${LOCALBASE}/include" \
+			--with-extralibdir="${LOCALBASE}/lib" \
+			--with-extralibdir="${X11BASE}/lib" \
+			--disable-mpdvdkit \
+			--disable-gcc-checking \
 
 # The configure script attempts to test-execute compiled programs in /tmp,
 # but that directory may be mounted as noexec; work this around by setting
