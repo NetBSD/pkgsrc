@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/12/24 17:16:04 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2004/12/24 18:49:09 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OCAML_BUILDLINK3_MK:=	${OCAML_BUILDLINK3_MK}+
@@ -22,6 +22,22 @@ INSTALL_UNSTRIPPED=		yes
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/ocaml$$/ \
 				{ print "@comment in ocaml: " $$0; next }
+
+BUILDLINK_TARGETS+=	ocaml-wrappers
+OCAML_WRAPPERS=		ocaml ocamlc ocamlc.opt ocamlcp ocamlmklib ocamlmktop \
+			ocamlopt ocamlopt.opt
+
+ocaml-wrappers:
+	${_PKG_SILENT}${_PKG_DEBUG} \
+	for w in ${OCAML_WRAPPERS}; do \
+		${SED}  -e 's|@SH@|${SH}|g' \
+			-e 's|@OCAML_PREFIX@|${BUILDLINK_PREFIX.ocaml}|g' \
+			-e 's|@CFLAGS@|${CFLAGS}|g' \
+			-e 's|@LDFLAGS@|${LDFLAGS}|g' \
+			<${.CURDIR}/../../lang/ocaml/files/wrapper.sh \
+			>${BUILDLINK_DIR}/bin/$$w; \
+		${CHMOD} +x ${BUILDLINK_DIR}/bin/$$w; \
+	done
 
 .endif	# OCAML_BUILDLINK3_MK
 
