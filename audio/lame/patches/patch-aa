@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2001/07/31 14:23:01 drochner Exp $
+$NetBSD: patch-aa,v 1.8 2001/09/15 06:58:55 simonb Exp $
 
---- configure.orig	Sun Jul  1 22:19:07 2001
-+++ configure	Tue Jul 31 12:43:26 2001
+--- configure.orig	Mon Jul  2 06:19:07 2001
++++ configure	Sat Sep 15 16:47:18 2001
 @@ -4327,6 +4327,8 @@
    echo "$ac_t""no" 1>&6
  fi
@@ -19,3 +19,21 @@ $NetBSD: patch-aa,v 1.7 2001/07/31 14:23:01 drochner Exp $
  
   
  echo $ac_n "checking for cos in -lm""... $ac_c" 1>&6
+@@ -4415,7 +4418,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lffm  $LIBS"
++LIBS="-lffm -lm $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 4421 "configure"
+ #include "confdefs.h"
+@@ -4443,7 +4446,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  USE_LIBM="-lffm"
++  USE_LIBM="-lffm -lm"
+ else
+   echo "$ac_t""no" 1>&6
+ fi
