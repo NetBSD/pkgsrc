@@ -1,20 +1,31 @@
-$NetBSD: patch-aa,v 1.4 2001/07/14 03:51:14 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2002/03/24 14:02:36 mjl Exp $
 
---- Makefile.orig	Fri Jun 23 16:34:47 2000
-+++ Makefile	Fri Jul 13 23:48:52 2001
-@@ -1,8 +1,9 @@
- 
+--- Makefile.orig	Sat Jan 26 00:34:53 2002
++++ Makefile	Sun Mar 24 14:56:33 2002
+@@ -2,18 +2,15 @@
  SHELL=/bin/sh
+ 
+ # To assist in cross-compiling
 -CC=gcc
 +CC=${LIBTOOL} ${REALCC}
 +LD=${LIBTOOL} ${REALCC}
+ AR=ar
+ RANLIB=ranlib
+-LDFLAGS=
++LDFLAGS+=
+ 
+ # Suitably paranoid flags to avoid bugs in gcc-2.7
  BIGFILES=-D_FILE_OFFSET_BITS=64
 -CFLAGS=-Wall -Winline -O2 -fomit-frame-pointer -fno-strength-reduce $(BIGFILES)
+-
+-# Where you want it installed when you do 'make install'
+-PREFIX=/usr
+-
 +CFLAGS+=-Wall -Winline -fomit-frame-pointer -fno-strength-reduce $(BIGFILES)
  
  OBJS= blocksort.o  \
        huffman.o    \
-@@ -12,22 +13,18 @@
+@@ -23,22 +20,18 @@
        decompress.o \
        bzlib.o
  
@@ -22,35 +33,26 @@ $NetBSD: patch-aa,v 1.4 2001/07/14 03:51:14 jlam Exp $
 +all: libbz2.la bzip2 bzip2recover test
  
 -bzip2: libbz2.a bzip2.o
--	$(CC) $(CFLAGS) -o bzip2 bzip2.o -L. -lbz2
+-	$(CC) $(CFLAGS) $(LDFLAGS) -o bzip2 bzip2.o -L. -lbz2
 +bzip2: libbz2.la bzip2.o
-+	$(CC) $(CFLAGS) -static -o bzip2 bzip2.o libbz2.la
++	$(CC) $(CFLAGS) $(LDFLAGS) -static -o bzip2 bzip2.o libbz2.la
  
  bzip2recover: bzip2recover.o
--	$(CC) $(CFLAGS) -o bzip2recover bzip2recover.o
-+	$(CC) $(CFLAGS) -static -o bzip2recover bzip2recover.o
+-	$(CC) $(CFLAGS) $(LDFLAGS) -o bzip2recover bzip2recover.o
++	$(CC) $(CFLAGS) $(LDFLAGS) -static -o bzip2recover bzip2recover.o
  
 -libbz2.a: $(OBJS)
 -	rm -f libbz2.a
--	ar cq libbz2.a $(OBJS)
--	@if ( test -f /usr/bin/ranlib -o -f /bin/ranlib -o \
--		-f /usr/ccs/bin/ranlib ) ; then \
--		echo ranlib libbz2.a ; \
--		ranlib libbz2.a ; \
+-	$(AR) cq libbz2.a $(OBJS)
+-	@if ( test -f $(RANLIB) -o -f /usr/bin/ranlib -o \
+-		-f /bin/ranlib -o -f /usr/ccs/bin/ranlib ) ; then \
+-		echo $(RANLIB) libbz2.a ; \
+-		$(RANLIB) libbz2.a ; \
 -	fi
 +libbz2.la: $(OBJS)
 +	rm -f libbz2.la
-+	$(LD) $(LDFLAGS) -o libbz2.la $(OBJS:.o=.lo) -version-info 0:0	\
++	$(LD) $(LDFLAGS) -o libbz2.la $(OBJS:.o=.lo) -version-info 0:0  \
 +		-rpath $(PREFIX)/lib
  
+ check: test
  test: bzip2
- 	@cat words1
-@@ -44,8 +41,6 @@
- 	cmp sample2.tst sample2.ref
- 	cmp sample3.tst sample3.ref
- 	@cat words3
--
--PREFIX=/usr
- 
- install: bzip2 bzip2recover
- 	if ( test ! -d $(PREFIX)/bin ) ; then mkdir $(PREFIX)/bin ; fi
