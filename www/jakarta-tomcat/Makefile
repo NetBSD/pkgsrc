@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/03/28 02:46:07 jwise Exp $
+# $NetBSD: Makefile,v 1.16 2001/03/28 23:19:46 jwise Exp $
 
 DISTNAME=	${PKGNAME}-src
 PKGNAME=	jakarta-tomcat-3.2.1
@@ -9,7 +9,7 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://jakarta.apache.org/
 COMMENT=	the Apache Project's Java Servlet 2.2 and JSP 1.1 server
 
-DEPENDS+=	jakarta-servletapi:../../www/jakarta-servletapi
+DEPENDS+=	jakarta-servletapi-*:../../www/jakarta-servletapi
 
 USE_JAVA=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}
