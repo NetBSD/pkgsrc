@@ -1,6 +1,6 @@
-# $NetBSD: transform-icc-cc,v 1.1 2005/02/15 07:43:44 grant Exp $
+# $NetBSD: transform-icc-cc,v 1.2 2005/02/15 09:42:23 grant Exp $
 #
-# Copyright (c) 2004 The NetBSD Foundation, Inc.
+# Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
