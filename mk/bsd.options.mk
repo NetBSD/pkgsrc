@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.4 2004/08/05 02:10:20 jlam Exp $
+# $NetBSD: bsd.options.mk,v 1.5 2004/08/07 18:02:05 jlam Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -169,23 +169,21 @@ ${WRKDIR}/.som_done: ${WRKDIR}
 	@${ECHO} "=========================================================================="
 	@${ECHO} "The supported build options for this package are:"
 	@${ECHO} ""
-	@set -- ${PKG_SUPPORTED_OPTIONS};				\
-	printwidth=40;							\
-	while ${TEST} $$# -gt 0; do					\
-		if ${TEST} -z "$$line"; then				\
-			line=$$1;					\
-		else							\
-			line="$$line $$1";				\
-		fi;							\
-		if ${TEST} $${#line} -gt $$printwidth; then		\
-			${ECHO} "	$$line";			\
-			line=;						\
-		fi;							\
-		shift;							\
-	done;								\
-	if ${TEST} $${#line} -le $$printwidth; then			\
-		${ECHO} "	$$line";				\
-	fi
+	@${ECHO} "${PKG_SUPPORTED_OPTIONS}" | ${XARGS} -n 1 | ${SORT} |	\
+	${AWK} '							\
+		BEGIN { printwidth = 40; line = "" }			\
+		{							\
+			if (length(line) > 0)				\
+				line = line" "$$0;			\
+			else						\
+				line = $$0;				\
+			if (length(line) > 40) {			\
+				print "	"line;				\
+				line = "";				\
+			}						\
+		}							\
+		END { if (length(line) > 0) print "	"line }		\
+	'
 	@${ECHO} ""
 	@${ECHO} "You can select which build options to use by setting the following"
 	@${ECHO} "variables.  Their curent value is shown:"
