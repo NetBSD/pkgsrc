@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/10/09 11:40:40 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/10/09 23:46:14 jlam Exp $
 
 .if !defined(PYTHON15_BUILDLINK2_MK)
 PYTHON15_BUILDLINK2_MK=	# defined
@@ -6,6 +6,7 @@ PYTHON15_BUILDLINK2_MK=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_PACKAGES+=		python15
+BUILDLINK_PKGBASE.python15?=	python15
 BUILDLINK_DEPENDS.python15?=	python15>=1.5
 BUILDLINK_PKGSRCDIR.python15?=	../../lang/python15
 
@@ -15,9 +16,10 @@ BUILDLINK_DEPMETHOD.python15?=	${BUILDLINK_DEPMETHOD.python}
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.python15=python15
 BUILDLINK_PREFIX.python15_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.python15!= \
-	${GREP} "^include/" ${.CURDIR}/${BUILDLINK_PKGSRCDIR.python15}/PLIST
-BUILDLINK_FILES.python15+=	lib/python1.5/config/libpython1.5.*
+_PY15_BLNK_FILES= \
+	${BUILDLINK_PLIST_CMD.python15} |				\
+		${GREP} '^\(include\|lib.*/lib[^/]*$$\)'
+BUILDLINK_FILES.python15=	`${_PY15_BLNK_FILES}`
 BUILDLINK_TRANSFORM+=		l:python:python1.5
 
 BUILDLINK_CPPFLAGS.python15+= \
