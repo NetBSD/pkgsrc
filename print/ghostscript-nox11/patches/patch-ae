@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
+$NetBSD: patch-ae,v 1.2 2000/10/04 13:17:08 jlam Exp $
 
 --- src/contrib.mak.orig	Thu Mar 16 03:09:42 2000
-+++ src/contrib.mak	Mon May  1 20:26:23 2000
++++ src/contrib.mak
 @@ -343,7 +343,7 @@
  	$(SETPDEV) $(DD)coslw2p $(coslw_)
  
@@ -11,32 +11,30 @@ $NetBSD: patch-ae,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
  
  $(GLOBJ)gdevcslw.$(OBJ) : $(GLSRC)gdevcslw.c $(PDEVH)
  	$(GLCC) $(GLO_)gdevcslw.$(OBJ) $(C_) $(GLSRC)gdevcslw.c
-@@ -551,16 +551,18 @@
+@@ -547,7 +547,7 @@
+ $(GLOBJ)gdev3852.$(OBJ) : $(GLSRC)gdev3852.c $(PDEVH) $(gdevpcl_h)
+ 	$(GLCC) $(GLO_)gdev3852.$(OBJ) $(C_) $(GLSRC)gdev3852.c
+ 
+-### ---------- The Canon LBP-8II and LIPS III printer devices ---------- ###
++### ----------------- The Canon LBP-8II printer device ----------------- ###
  ### Note: these drivers were contributed by users.                       ###
  ### For questions about these drivers, please contact                    ###
  ###       Lauri Paatero, lauri.paatero@paatero.pp.fi                     ###
--
--lbp8_=$(GLOBJ)gdevlbp8.$(OBJ)
--$(DD)lbp8.dev : $(lbp8_) $(DD)page.dev
--	$(SETPDEV) $(DD)lbp8 $(lbp8_)
--
+@@ -556,11 +556,14 @@
+ $(DD)lbp8.dev : $(lbp8_) $(DD)page.dev
+ 	$(SETPDEV) $(DD)lbp8 $(lbp8_)
+ 
 -$(DD)lips3.dev : $(lbp8_) $(DD)page.dev
 -	$(SETPDEV) $(DD)lips3 $(lbp8_)
 -
--$(GLOBJ)gdevlbp8.$(OBJ) : $(GLSRC)gdevlbp8.c $(PDEVH)
--	$(GLCC) $(GLO_)gdevlbp8.$(OBJ) $(C_) $(GLSRC)gdevlbp8.c
-+#
-+# Use the gdevlips drivers from http://www.bukka.p.chiba-u.ac.jp/~ohmori/gs/
-+#
-+#lbp8_=$(GLOBJ)gdevlbp8.$(OBJ)
-+#$(DD)lbp8.dev : $(lbp8_) $(DD)page.dev
-+#	$(SETPDEV) $(DD)lbp8 $(lbp8_)
+ $(GLOBJ)gdevlbp8.$(OBJ) : $(GLSRC)gdevlbp8.c $(PDEVH)
+ 	$(GLCC) $(GLO_)gdevlbp8.$(OBJ) $(C_) $(GLSRC)gdevlbp8.c
++
++# For the Canon LIPS printer devices, use the gdevlips drivers from
++# http://www.bukka.p.chiba-u.ac.jp/~ohmori/gs/
 +#
 +#$(DD)lips3.dev : $(lbp8_) $(DD)page.dev
 +#	$(SETPDEV) $(DD)lips3 $(lbp8_)
-+#
-+#$(GLOBJ)gdevlbp8.$(OBJ) : $(GLSRC)gdevlbp8.c $(PDEVH)
-+#	$(GLCC) $(GLO_)gdevlbp8.$(OBJ) $(C_) $(GLSRC)gdevlbp8.c
  
  ### -------------- The Epson LP-8000 laser printer device -------------- ###
  ### Note: this driver was contributed by a user: please contact Oleg     ###
