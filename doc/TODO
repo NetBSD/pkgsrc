@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.512 2003/04/30 17:16:13 jmmv Exp $
+$NetBSD: TODO,v 1.513 2003/05/03 16:39:16 cjep Exp $
 
 Suggested new packages
 ======================
@@ -151,7 +151,6 @@ Suggested package updates
 	o jove-4.16.0.61
 	o larswm-7.2.9
 	o lcms-1.0.9
-	o leafnode-1.9.38
 	o lesstif-0.93.41
 	o libole2-2.2.8
 	o librsvg-2.2.2.1
