@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2002/12/20 06:59:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/05/28 02:33:59 jlam Exp $
 bin/cancel
 bin/cups-config
+bin/cupstestppd
 bin/disable
 bin/enable
 bin/lp
@@ -23,7 +24,7 @@ lib/libcups.a
 lib/libcups.la
 lib/libcups.so
 lib/libcups.so.2
-lib/libcups.so.2.4
+lib/libcups.so.2.5
 lib/libcupsimage.a
 lib/libcupsimage.la
 lib/libcupsimage.so
@@ -43,6 +44,7 @@ libexec/cups/cgi-bin/jobs.cgi
 libexec/cups/cgi-bin/printers.cgi
 libexec/cups/daemon/cups-lpd
 libexec/cups/daemon/cups-polld
+libexec/cups/filter/gziptoany
 libexec/cups/filter/hpgltops
 libexec/cups/filter/imagetops
 libexec/cups/filter/imagetoraster
@@ -171,7 +173,6 @@ man/man8/reject.8
 sbin/accept
 sbin/cupsaddsmb
 sbin/cupsd
-sbin/cupstestppd
 sbin/lpadmin
 sbin/lpc
 sbin/lpinfo
@@ -246,6 +247,51 @@ share/cups/templates/class-modified.tmpl
 share/cups/templates/classes.tmpl
 share/cups/templates/config-printer.tmpl
 share/cups/templates/config-printer2.tmpl
+share/cups/templates/de/add-class.tmpl
+share/cups/templates/de/add-printer.tmpl
+share/cups/templates/de/admin-op.tmpl
+share/cups/templates/de/admin.tmpl
+share/cups/templates/de/choose-device.tmpl
+share/cups/templates/de/choose-make.tmpl
+share/cups/templates/de/choose-members.tmpl
+share/cups/templates/de/choose-model.tmpl
+share/cups/templates/de/choose-serial.tmpl
+share/cups/templates/de/choose-uri.tmpl
+share/cups/templates/de/class-added.tmpl
+share/cups/templates/de/class-confirm.tmpl
+share/cups/templates/de/class-deleted.tmpl
+share/cups/templates/de/class-modified.tmpl
+share/cups/templates/de/classes.tmpl
+share/cups/templates/de/config-printer.tmpl
+share/cups/templates/de/config-printer2.tmpl
+share/cups/templates/de/error.tmpl
+share/cups/templates/de/header.tmpl
+share/cups/templates/de/job-cancel.tmpl
+share/cups/templates/de/job-hold.tmpl
+share/cups/templates/de/job-op.tmpl
+share/cups/templates/de/job-release.tmpl
+share/cups/templates/de/job-restart.tmpl
+share/cups/templates/de/jobs.tmpl
+share/cups/templates/de/modify-class.tmpl
+share/cups/templates/de/modify-printer.tmpl
+share/cups/templates/de/option-boolean.tmpl
+share/cups/templates/de/option-header.tmpl
+share/cups/templates/de/option-pickmany.tmpl
+share/cups/templates/de/option-pickone.tmpl
+share/cups/templates/de/option-trailer.tmpl
+share/cups/templates/de/printer-accept.tmpl
+share/cups/templates/de/printer-added.tmpl
+share/cups/templates/de/printer-configured.tmpl
+share/cups/templates/de/printer-confirm.tmpl
+share/cups/templates/de/printer-deleted.tmpl
+share/cups/templates/de/printer-modified.tmpl
+share/cups/templates/de/printer-purge.tmpl
+share/cups/templates/de/printer-reject.tmpl
+share/cups/templates/de/printer-start.tmpl
+share/cups/templates/de/printer-stop.tmpl
+share/cups/templates/de/printers.tmpl
+share/cups/templates/de/test-page.tmpl
+share/cups/templates/de/trailer.tmpl
 share/cups/templates/error.tmpl
 share/cups/templates/fr/add-class.tmpl
 share/cups/templates/fr/add-printer.tmpl
@@ -320,6 +366,7 @@ share/cups/templates/printer-stop.tmpl
 share/cups/templates/printers.tmpl
 share/cups/templates/test-page.tmpl
 share/cups/templates/trailer.tmpl
+share/doc/cups/CGI.txt
 share/doc/cups/ENCRYPTION.txt
 share/doc/cups/LICENSE.txt
 share/doc/cups/README.txt
@@ -327,6 +374,33 @@ share/doc/html/cups/cmp.html
 share/doc/html/cups/cmp.pdf
 share/doc/html/cups/cups.css
 share/doc/html/cups/cupsdoc.css
+share/doc/html/cups/de/documentation.html
+share/doc/html/cups/de/images/accept-jobs.gif
+share/doc/html/cups/de/images/add-class.gif
+share/doc/html/cups/de/images/add-printer.gif
+share/doc/html/cups/de/images/cancel-job.gif
+share/doc/html/cups/de/images/config-printer.gif
+share/doc/html/cups/de/images/continue.gif
+share/doc/html/cups/de/images/delete-class.gif
+share/doc/html/cups/de/images/delete-printer.gif
+share/doc/html/cups/de/images/hold-job.gif
+share/doc/html/cups/de/images/manage-classes.gif
+share/doc/html/cups/de/images/manage-jobs.gif
+share/doc/html/cups/de/images/manage-printers.gif
+share/doc/html/cups/de/images/modify-class.gif
+share/doc/html/cups/de/images/modify-printer.gif
+share/doc/html/cups/de/images/navbar.gif
+share/doc/html/cups/de/images/print-test-page.gif
+share/doc/html/cups/de/images/reject-jobs.gif
+share/doc/html/cups/de/images/release-job.gif
+share/doc/html/cups/de/images/restart-job.gif
+share/doc/html/cups/de/images/show-active.gif
+share/doc/html/cups/de/images/show-completed.gif
+share/doc/html/cups/de/images/start-class.gif
+share/doc/html/cups/de/images/start-printer.gif
+share/doc/html/cups/de/images/stop-class.gif
+share/doc/html/cups/de/images/stop-printer.gif
+share/doc/html/cups/de/index.html
 share/doc/html/cups/documentation.html
 share/doc/html/cups/fr/cups.css
 share/doc/html/cups/fr/cupsdoc.css
@@ -335,8 +409,6 @@ share/doc/html/cups/fr/images/accept-jobs.gif
 share/doc/html/cups/fr/images/add-class.gif
 share/doc/html/cups/fr/images/add-printer.gif
 share/doc/html/cups/fr/images/cancel-job.gif
-share/doc/html/cups/fr/images/cancel-jobs.gif
-share/doc/html/cups/fr/images/cancel.gif
 share/doc/html/cups/fr/images/config-printer.gif
 share/doc/html/cups/fr/images/continue.gif
 share/doc/html/cups/fr/images/delete-class.gif
@@ -371,8 +443,6 @@ share/doc/html/cups/images/accept-jobs.gif
 share/doc/html/cups/images/add-class.gif
 share/doc/html/cups/images/add-printer.gif
 share/doc/html/cups/images/cancel-job.gif
-share/doc/html/cups/images/cancel-jobs.gif
-share/doc/html/cups/images/cancel.gif
 share/doc/html/cups/images/classes.gif
 share/doc/html/cups/images/config-printer.gif
 share/doc/html/cups/images/continue.gif
@@ -382,7 +452,6 @@ share/doc/html/cups/images/cups-medium.gif
 share/doc/html/cups/images/cups-small.gif
 share/doc/html/cups/images/delete-class.gif
 share/doc/html/cups/images/delete-printer.gif
-share/doc/html/cups/images/draft.gif
 share/doc/html/cups/images/hold-job.gif
 share/doc/html/cups/images/left.gif
 share/doc/html/cups/images/logo.gif
@@ -411,6 +480,7 @@ share/doc/html/cups/ipp.html
 share/doc/html/cups/ipp.pdf
 share/doc/html/cups/overview.html
 share/doc/html/cups/overview.pdf
+share/doc/html/cups/robots.txt
 share/doc/html/cups/sam.html
 share/doc/html/cups/sam.pdf
 share/doc/html/cups/sdd.html
@@ -440,27 +510,29 @@ ${PKGLOCALEDIR}/locale/be/cups_be
 ${PKGLOCALEDIR}/locale/cs/cups_cs
 ${PKGLOCALEDIR}/locale/de/cups_de
 ${PKGLOCALEDIR}/locale/en/cups_en
+${PKGLOCALEDIR}/locale/en_US/cups_en_US
 ${PKGLOCALEDIR}/locale/es/cups_es
 ${PKGLOCALEDIR}/locale/fr/cups_fr
 ${PKGLOCALEDIR}/locale/he/cups_he
 ${PKGLOCALEDIR}/locale/it/cups_it
-${PKGLOCALEDIR}/locale/ru_RU.cp1251/cups_ru_RU.cp1251
-${PKGLOCALEDIR}/locale/ru_RU.koi8r/cups_ru_RU.koi8r
+${PKGLOCALEDIR}/locale/ru_RU/cups_ru_RU
 ${PKGLOCALEDIR}/locale/sv/cups_sv
 ${PKGLOCALEDIR}/locale/uk/cups_uk
-${PKGLOCALEDIR}/locale/uk_UA.cp1251/cups_uk_UA.cp1251
+${PKGLOCALEDIR}/locale/uk_UA/cups_uk_UA
 ${PKGLOCALEDIR}/locale/zh_CN/cups_zh_CN
-@unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/uk_UA.cp1251 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/ru_RU.koi8r 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/ru_RU.cp1251 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/uk_UA 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/ru_RU 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/C 2>/dev/null || ${TRUE}
 @dirrm share/examples/cups
 @dirrm share/doc/html/cups/images
 @dirrm share/doc/html/cups/fr/images
 @dirrm share/doc/html/cups/fr
+@dirrm share/doc/html/cups/de/images
+@dirrm share/doc/html/cups/de
 @dirrm share/doc/html/cups
 @dirrm share/doc/cups
 @dirrm share/cups/templates/fr
+@dirrm share/cups/templates/de
 @dirrm share/cups/templates
 @dirrm share/cups/model
 @dirrm share/cups/fonts
@@ -468,15 +540,6 @@ ${PKGLOCALEDIR}/locale/zh_CN/cups_zh_CN
 @dirrm share/cups/charsets
 @dirrm share/cups/banners
 @dirrm share/cups
-@unexec ${RMDIR} %D/man/fr/man8 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/fr/man5 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/fr/man3 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/fr/man1 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/fr/cat8 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/fr/cat5 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/fr/cat3 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/fr/cat1 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/fr 2>/dev/null || ${TRUE}
 @dirrm libexec/cups/filter
 @dirrm libexec/cups/daemon
 @dirrm libexec/cups/cgi-bin
