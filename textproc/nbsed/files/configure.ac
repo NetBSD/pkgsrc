@@ -1,7 +1,7 @@
-dnl $Id: configure.ac,v 1.4 2003/10/16 12:05:36 grant Exp $
+dnl $Id: configure.ac,v 1.5 2004/08/21 08:39:54 jlam Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
-AC_INIT([nbsed],[20031016],[agc@NetBSD.org])
+AC_INIT([nbsed],[20040821],[agc@NetBSD.org])
 AC_CONFIG_SRCDIR([main.c])
 AC_CONFIG_HEADER(config.h)
 AC_ARG_PROGRAM
@@ -24,9 +24,9 @@ AC_SUBST(AUTOHEADER)
 
 dnl Checks for header files.
 AC_HEADER_STDC
-AC_CHECK_HEADERS([ctype.h errno.h fcntl.h limits.h regex.h])
-AC_CHECK_HEADERS([stdlib.h stddef.h string.h sys/cdefs.h])
-AC_CHECK_HEADERS([sys/ioctl.h sys/termios.h sys/uio.h])
+AC_CHECK_HEADERS([ctype.h err.h errno.h fcntl.h limits.h regex.h])
+AC_CHECK_HEADERS([stdarg.h stddef.h stdio.h stdlib.h string.h unistd.h])
+AC_CHECK_HEADERS([sys/cdefs.h sys/ioctl.h sys/stat.h sys/types.h sys/uio.h])
 
 dnl Check for functions
 AC_CHECK_FUNCS(fgetln)
