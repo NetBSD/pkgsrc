@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/02/14 20:13:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/05 12:10:01 jmmv Exp $
 #
 
-DISTNAME=	libbonoboui-2.2.0
+DISTNAME=	libbonoboui-2.2.0.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libbonoboui/2.2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,6 +20,9 @@ USE_X11=		yes
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+CONFIGURE_ARGS+=	--enable-gtk-doc=no
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/GConf2/buildlink2.mk"
