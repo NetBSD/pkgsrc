@@ -1,13 +1,13 @@
 # New ports collection makefile for:	nmh
-# Version required:     		0.18
+# Version required:     		0.20
 # Date created:				26 July 1997
 # Whom:					Scott Blachowicz <Scott.Blachowicz@seaslug.org>
 #
-# $NetBSD: Makefile,v 1.4 1997/12/22 07:45:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/12 10:51:34 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
-DISTNAME=	nmh-0.18
+DISTNAME=	nmh-0.20
 CATEGORIES=	mail
 MASTER_SITES=   ftp://ftp.math.gatech.edu/pub/nmh/
 
@@ -15,7 +15,8 @@ MAINTAINER=     Scott.Blachowicz@seaslug.org
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --libexecdir=$(PREFIX)/libexec/nmh \
-		--sysconfdir=$(PREFIX)/etc/nmh --enable-nmh-pop
+		--sysconfdir=$(PREFIX)/etc/nmh --enable-nmh-pop \
+		--with-mts=sendmail
 
 MAN1= ali.1 anno.1 burst.1 comp.1 dist.1 flist.1 folder.1 forw.1 inc.1 \
       mark.1 mh-chart.1 mhl.1 mhmail.1 mhn.1 mhparam.1 mhpath.1 msgchk.1 msh.1 \
