@@ -1,19 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2000/09/09 20:02:27 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/09/09 20:23:49 fredb Exp $
 #
 
 DISTNAME=		srp-1.4.4
 PKGNAME=		srp-client-1.4.4
 CATEGORIES=		security net
-MASTER_SITES=		ftp://paris.arcot.com/pub/srp/ \
-			ftp://srp.stanford.edu/pub/srp/ \
-			ftp://labrea.stanford.edu/pub/srp/ \
-			ftp://ftp.kfki.hu/pub/packages/security/srp/ \
-			ftp://ftp.bandit.co.jp/pub/srp/ \
-			ftp://ftp.win.or.jp/pub/network/security/srp/ \
-			ftp://ftp.replay.com/pub/crypto/crypto/APPS/srp/
+MASTER_SITES=		ftp://ftp.win.or.jp/pub/network/security/srp/
 
 MAINTAINER=		jlam@netbsd.org
-HOMEPAGE=		http://srp.stanford.edu/srp/
+#HOMEPAGE=		http://srp.stanford.edu/srp/
 
 BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 BUILD_DEPENDS+=		automake:../../devel/automake
