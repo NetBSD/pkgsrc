@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/09/21 01:53:37 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2002/09/21 01:54:13 jlam Exp $
 #
 
 DISTNAME=	teTeX-1.0.7
@@ -22,9 +22,5 @@ NO_CHECKSUM=    yes
 NO_PATCH=       yes
 NO_CONFIGURE=   yes
 NO_BUILD=       yes
-
-do-install:
-	@${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${INSTALL_FILE} ${PKGNAME} \
-	  POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
