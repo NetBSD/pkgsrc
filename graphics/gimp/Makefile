@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.109 2004/12/28 23:18:21 reed Exp $
+# $NetBSD: Makefile,v 1.110 2005/01/04 15:20:25 adam Exp $
 
-DISTNAME=	gimp-2.0.6
-PKGREVISION=	1
+DISTNAME=	gimp-2.2.1
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.0/ \
-		ftp://ftp.cs.umn.edu/pub/gimp/v2.0/ \
-		ftp://ftp.sunet.se/pub/gnu/gimp/v2.0/ \
-		ftp://ftp.gwdg.de/pub/misc/grafik/gimp/gimp/v2.0/ \
-		ftp://ftp.minet.net/pub/gimp/v2.0/
+MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.2/ \
+		ftp://ftp.cs.umn.edu/pub/gimp/v2.2/ \
+		ftp://ftp.sunet.se/pub/gnu/gimp/v2.2/ \
+		ftp://ftp.gwdg.de/pub/misc/grafik/gimp/gimp/v2.2/ \
+		ftp://ftp.minet.net/pub/gimp/v2.2/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
@@ -47,7 +46,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--with-gimpprint-prefix=${BUILDLINK_PREFIX.gimp-print-lib}
 
 EGDIR=			${PREFIX}/share/examples/gimp-2.0
-.for f in gimprc gtkrc ps-menurc sessionrc templaterc unionrc
+.for f in controllerrc gimprc gtkrc ps-menurc sessionrc templaterc unionrc
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
