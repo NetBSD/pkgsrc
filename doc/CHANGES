@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1087 2003/01/11 02:58:21 rh Exp $
+$NetBSD: CHANGES,v 1.1088 2003/01/11 04:34:55 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -205,3 +205,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mozilla-stable to 1.0.2 [taya 2003-01-11]
 	Updated postgresql-server to 7.3.1nb1 [jlam 2003-01-11]
 	Added gnome-pilot-0.1.71 [rh 2003-01-11]
+	Updated gnome-pim to 1.4.6 [rh 2003-01-11]
