@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/19 12:54:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 1998/04/19 12:55:36 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 23:55:31 asami Exp
 #
 
@@ -6,7 +6,7 @@ DISTNAME=	cdrecord-1.6
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.fokus.gmd.de/pub/unix/cdrecord/
 
-MAINTAINER=	jmz@FreeBSD.org
+MAINTAINER=	hubertf@NetBSD.org
 
 RUN_DEPENDS=	mkisofs:${PORTSDIR}/sysutils/mkisofs
 
