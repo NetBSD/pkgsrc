@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/06/28 13:21:35 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/29 04:54:50 jlam Exp $
 
 DISTNAME=		jpilot-0.99
 PKGNAME=		jpilot-expense-0.99
@@ -13,8 +13,6 @@ COMMENT=		Expense synchronization plugin for J-Pilot
 DEPENDS+=		jpilot>=0.99:../../comms/jpilot
 
 USE_BUILDLINK_ONLY=	# defined
-USE_CONFIG_WRAPPER=	# defined
-
 USE_X11=		# defined
 USE_LIBTOOL=		# defined
 

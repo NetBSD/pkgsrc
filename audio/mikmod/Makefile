@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/06/19 16:04:18 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2001/06/29 04:54:50 jlam Exp $
 #
 
 DISTNAME=	mikmod-3.1.6-a
@@ -12,10 +12,7 @@ COMMENT=	MOD player for UNI IT XM S3M MOD MTM STM DSM MED FAR ULT 669 files
 
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
-#USE_CURSES=		yes
-
 USE_BUILDLINK_ONLY=	yes
-USE_CONFIG_WRAPPER=	yes
 
 .include "../../audio/libmikmod/buildlink.mk"
 .include "../../devel/ncurses/buildlink.mk"
