@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/08/14 04:51:46 fredb Exp $
+# $NetBSD: Makefile,v 1.32 2001/08/18 20:31:13 fredb Exp $
 
 DISTNAME=	wwwoffle-2.6d
 CATEGORIES=	www
@@ -51,12 +51,9 @@ pre-install:
 	fi
 
 post-install:
-	if [ -f ${PREFIX}/etc/wwwoffle/wwwoffle.conf.install ]; then \
-	  ${MV} ${PREFIX}/etc/wwwoffle/wwwoffle.conf.install \
-		${PREFIX}/etc/wwwoffle/wwwoffle.conf.default; \
-	else \
-	  ${CP} -p ${PREFIX}/etc/wwwoffle/wwwoffle.conf \
-	    ${PREFIX}/etc/wwwoffle/wwwoffle.conf.default; \
+	if [ ! -f ${PREFIX}/etc/wwwoffle/wwwoffle.conf.install ]; then \
+		${CP} -p ${PREFIX}/etc/wwwoffle/wwwoffle.conf \
+		  ${PREFIX}/etc/wwwoffle/wwwoffle.conf.install; \
 	fi
 	${INSTALL_PROGRAM} ${WRKSRC}/convert-cache \
 	  ${PREFIX}/sbin/wwwoffle-convert-cache
