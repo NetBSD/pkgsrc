@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3779 2003/11/03 18:38:00 jmmv Exp $
+$NetBSD: CHANGES,v 1.3780 2003/11/04 07:44:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4302,3 +4302,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated freeradius to 0.7nb4 [cube 2003-11-03]
 	Updated p0f to 2.0.3 [recht 2003-11-03]
 	Updated gforth to 0.5.0nb1 [jmmv 2003-11-03]
+	Updated x2vnc to 1.5.1 [wiz 2003-11-04]
