@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2004/10/18 09:27:18 tron Exp $
+# $NetBSD: Makefile,v 1.85 2004/10/25 08:51:23 tron Exp $
 
-DISTNAME=		mod_ssl-2.8.20-1.3.31
-PKGNAME=		ap-ssl-2.8.20
+DISTNAME=		mod_ssl-2.8.21-1.3.32
+PKGNAME=		ap-ssl-2.8.21
 CATEGORIES=		www security
 MASTER_SITES=		http://www.modssl.org/source/ \
 			ftp://ftp.pca.dfn.de/pub/tools/net/mod_ssl/source/ \
@@ -13,7 +13,7 @@ COMMENT=		SSL/TLS protocols module for Apache
 
 CONFLICTS=		apache-1.3.[0-9] apache-*modssl-[0-9]* apache6-[0-9]*
 
-BUILDLINK_DEPENDS.apache=	apache>=1.3.31
+BUILDLINK_DEPENDS.apache=	apache>=1.3.32
 
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
