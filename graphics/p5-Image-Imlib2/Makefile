@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/04 19:48:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2003/12/30 17:14:28 cjep Exp $
 #
 
 DISTNAME=	Image-Imlib2-0.12
@@ -39,7 +39,6 @@ do-test:
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build install
-
 
 .include "../../graphics/imlib2/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
