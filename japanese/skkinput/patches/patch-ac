@@ -1,0 +1,75 @@
+$NetBSD: patch-ac,v 1.1 2000/11/09 03:54:07 itohy Exp $
+
+--- skkldic.c.orig	Fri Nov 14 13:04:12 1997
++++ skkldic.c	Wed Nov  8 20:01:38 2000
+@@ -27,6 +27,13 @@
+ #include <sys/types.h>
+ #include <X11/Intrinsic.h>
+ 
++#ifdef CSRG_BASED
++#include <sys/param.h>
++#if defined(BSD) && BSD >= 199306
++#define HAVE_MKSTEMP
++#endif
++#endif
++
+ #include "commondef.h"
+ #include "buffers.h"
+ #include "config.h"
+@@ -863,7 +870,12 @@
+ {
+   FILE *fpSrc, *fpDest ;
+   unsigned long lines ;
++#ifdef HAVE_MKSTEMP
++  char tempfilename[64] ;
++  int tmpfd;
++#else
+   char *tempfilename ;
++#endif
+ 
+ #ifdef DEBUG_LDIC
+   fprintf( stderr, "Now saving ....\"%s\"\n", skkinput_local_jisyo_path ) ;
+@@ -890,7 +902,15 @@
+    * 存在しない場合はどうするのか？ */
+ 
+   /* 辞書の更新を行う際に利用されるテンポラリファイル。*/
++#ifdef HAVE_MKSTEMP
++  strcpy(tempfilename, "/tmp/skkinputXXXXXXXX");
++  if ((tmpfd = mkstemp(tempfilename)) < 0) {
++    perror("skkinput: cannot create temp file");
++    return;
++  }
++#else
+   tempfilename = tmpnam( NULL ) ;
++#endif
+ 
+   /* 局所辞書のバックアップを削除する。失敗した場合なんかは知らない。*/
+   unlink( skkinput_jisyo_backup_path ) ;
+@@ -901,12 +921,19 @@
+   skkinput_copyFile
+     ( skkinput_local_jisyo_path, tempfilename ) ;
+   /* 局所辞書のコピーが存在しない。これは不味い状態である。*/
++#ifdef HAVE_MKSTEMP
++  if( ( fpSrc = fdopen( tmpfd, "rb" ) ) == NULL ){
++    close(tmpfd);
++    return;
++  }
++#else
+   if( ( fpSrc = fopen( tempfilename, "rb" ) ) == NULL ){
+ #ifdef DEBUG_LDIC
+     fprintf( stderr, "cannot create backup jisyo...error!\n" ) ;
+ #endif
+     return ;
+   }
++#endif
+   /* 書き込めない…これは無理だ…。*/
+   if( ( fpDest = fopen( skkinput_local_jisyo_path, "wb" ) ) == NULL ){
+ #ifdef DEBUG_LDIC
+@@ -922,6 +949,7 @@
+     /* file coding system を調べ直す。*/
+     skkinput_local_jisyo_coding_system = 
+       check_skkinput_jisyo_code( skkinput_local_jisyo_path ) ;
++    unlink( tempfilename ) ;
+     return ;
+   }
+   lines = 0 ;
