@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2003/09/28 18:02:16 kristerw Exp $
+# $NetBSD: Makefile,v 1.38 2003/11/10 01:04:05 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.17
@@ -15,7 +15,7 @@ HOMEPAGE=	http://www.che.wisc.edu/octave/
 COMMENT=	High-level language, primarily intended for numerical computations
 
 BUILD_DEPENDS+=	teTeX{,2}>=1.0.7:../../print/teTeX
-DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
+DEPENDS+=	gnuplot{,-nox11}>=3.7:../../graphics/gnuplot
 
 CONFLICTS+=	octave-2.1.*
 
@@ -51,6 +51,10 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 
 GCC_VERSION!=   ${CC} --version
+
+.if empty(${CC_VERSION:Mgcc-3*})
+PKG_FAIL_REASON=	"Octave does not build with ${CC_VERSION} - please use octave-current."
+.endif
 
 post-patch:
 .if ${GCC_VERSION:C/-.*$$//} == egcs
