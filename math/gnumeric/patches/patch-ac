@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1 2000/05/30 09:16:11 rh Exp $
+
+--- plugins/lotus-123/Makefile.in.orig	Wed May 10 04:58:49 2000
++++ plugins/lotus-123/Makefile.in	Fri May 19 23:49:13 2000
+@@ -156,7 +156,7 @@
+ INCLUDES =      -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		    -I$(includedir)	-I$(top_srcdir)/src		    $(GNOME_INCLUDEDIR)
+ 
+ 
+-gnumeric_plugin_LTLIBRARIES = gnum_lotus.la
++gnumeric_plugin_LTLIBRARIES = gnum_lotus.a
+ gnum_lotus_la_LDFLAGS = -module -avoid-version
+ gnum_lotus_la_SOURCES =  	boot.c				lotus-types.h			lotus.h				lotus.c				lotus-formula.h			lotus-formula.c
+ 
+@@ -258,7 +258,9 @@
+ 
+ maintainer-clean-libtool:
+ 
+-gnum_lotus.la: $(gnum_lotus_la_OBJECTS) $(gnum_lotus_la_DEPENDENCIES)
++gnum_lotus.la: gnum_lotus.a
++
++gnum_lotus.a: $(gnum_lotus_la_OBJECTS) $(gnum_lotus_la_DEPENDENCIES)
+ 	$(LINK) -rpath $(gnumeric_plugindir) $(gnum_lotus_la_LDFLAGS) $(gnum_lotus_la_OBJECTS) $(gnum_lotus_la_LIBADD) $(LIBS)
+ 
+ tags: TAGS

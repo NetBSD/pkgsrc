@@ -1,0 +1,24 @@
+$NetBSD: patch-ah,v 1.1 2000/05/30 09:16:11 rh Exp $
+
+--- plugins/ff-csv/Makefile.in.orig	Wed May 10 04:58:58 2000
++++ plugins/ff-csv/Makefile.in	Fri May 19 23:48:56 2000
+@@ -156,7 +156,7 @@
+ INCLUDES =      -DGNOMELOCALEDIR=\""$(datadir)/locale"\" 	    -I$(includedir)	-I$(top_srcdir)/src		    $(GNOME_INCLUDEDIR)
+ 
+ 
+-gnumeric_plugin_LTLIBRARIES = gnum_csv.la
++gnumeric_plugin_LTLIBRARIES = gnum_csv.a
+ gnum_csv_la_LDFLAGS = -module -avoid-version
+ gnum_csv_la_SOURCES = csv-io.h csv-io.c
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -257,7 +257,9 @@
+ 
+ maintainer-clean-libtool:
+ 
+-gnum_csv.la: $(gnum_csv_la_OBJECTS) $(gnum_csv_la_DEPENDENCIES)
++gnum_csv.la: gnum_csv.a
++
++gnum_csv.a: $(gnum_csv_la_OBJECTS) $(gnum_csv_la_DEPENDENCIES)
+ 	$(LINK) -rpath $(gnumeric_plugindir) $(gnum_csv_la_LDFLAGS) $(gnum_csv_la_OBJECTS) $(gnum_csv_la_LIBADD) $(LIBS)
+ 
+ tags: TAGS
