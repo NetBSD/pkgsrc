@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2004/02/12 14:45:00 taca Exp $
+$NetBSD: distinfo,v 1.49 2004/02/20 16:51:55 abs Exp $
 
 SHA1 (squid-2.5.4/squid-2.5.STABLE4.tar.bz2) = 470a2697625cf6edb83ad6fe59af2e147f557e24
 Size (squid-2.5.4/squid-2.5.STABLE4.tar.bz2) = 1036704 bytes
@@ -14,8 +14,8 @@ SHA1 (squid-2.5.4/pam_auth-2.2.patch) = 2978e0bf5531fc179f9cedfbf12216efc1e715af
 Size (squid-2.5.4/pam_auth-2.2.patch) = 4878 bytes
 SHA1 (squid-2.5.4/squid-2.5.STABLE4_auth_param_doc.patch) = 88f8c093280329bb7f4624c8f9392069f977e98e
 Size (squid-2.5.4/squid-2.5.STABLE4_auth_param_doc.patch) = 9068 bytes
-SHA1 (squid-2.5.4/squid-2.5.STABLE4-errorpages.patch) = 954ebcb707deeba64bda287e7591a5d107578fdb
-Size (squid-2.5.4/squid-2.5.STABLE4-errorpages.patch) = 49938 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-errorpages.patch) = c0dad2435c475c82087ad79a074a412fa64053d6
+Size (squid-2.5.4/squid-2.5.STABLE4-errorpages.patch) = 49937 bytes
 SHA1 (squid-2.5.4/squid-2.5.STABLE4-error_load_text.patch) = 0f7a7df65346512074b0ec7bc459d5ea3f541076
 Size (squid-2.5.4/squid-2.5.STABLE4-error_load_text.patch) = 571 bytes
 SHA1 (squid-2.5.4/squid-2.5.STABLE4-xpi_mime.patch) = 257ce3058e62a209dae55c9daad77cc5579bfeb8
