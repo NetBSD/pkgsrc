@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1386 2003/02/15 19:15:55 jschauma Exp $
+$NetBSD: CHANGES,v 1.1387 2003/02/15 20:02:33 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -686,3 +686,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-vfs2 to 2.2.2nb1 [jmmv 2003-02-15]
 	Added vim-motif-6.1.0 [martti 2003-02-15]
 	Added larswm-7.2.8 [jschauma 2003-02-15]
+	Updated netatalk to 1.6.0 [fredb 2003-02-15]
