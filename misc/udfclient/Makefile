@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/03 23:19:07 reinoud Exp $
+# $NetBSD: Makefile,v 1.14 2004/11/05 21:08:30 wiz Exp $
 #
 
 DISTNAME=		UDFclient.0.3.1
@@ -12,7 +12,7 @@ MAINTAINER=		buzztoh@13thmonkey.org
 HOMEPAGE=		http://www.13thmonkey.org/udfclient/
 COMMENT=		UDF file system reader/writer for CD/CD-RW/DVD*RW/DVD-RAM and images
 
-GNU_CONFIGURE=		tes
+GNU_CONFIGURE=		yes
 
 USE_BUILDLINK3=		yes
 PTHREAD_OPTS+=		require
