@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1243 2003/12/26 09:40:40 jmmv Exp $
+$NetBSD: TODO,v 1.1244 2003/12/26 12:41:56 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -297,7 +297,6 @@ Suggested package updates
 	o teapop-0.3.8
 	o tkman-2.2
 	o top-3.5b12.10
-	o transcode-0.6.11 [veego]
 	o ttf2pt1-3.4.3
 	o tuxpaint-0.9.13
 	o tuxpaint-stamps-2003.12.23
