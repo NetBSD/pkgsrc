@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.builtin.mk,v 1.6.2.4 2004/12/31 20:25:30 tv Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.6.2.5 2005/01/10 16:15:25 tv Exp $
 
 .for _lib_ in dl
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -17,7 +17,7 @@ BUILDLINK_VARS+=	_BLNK_LIB_FOUND.${_lib_}
 
 .if !defined(IS_BUILTIN.dl)
 IS_BUILTIN.dl=		no
-.  if exists(/usr/include/dlfcn.h)
+.  if exists(/usr/include/dlfcn.h) || exists(/opt/gcc.3.3/include/dlfcn.h)
 IS_BUILTIN.dl=		yes
 .  endif
 BUILDLINK_VARS+=	IS_BUILTIN.dl

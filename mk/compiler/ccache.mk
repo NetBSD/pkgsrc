@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.20.2.2 2004/11/30 15:06:35 tv Exp $
+# $NetBSD: ccache.mk,v 1.20.2.3 2005/01/10 16:15:25 tv Exp $
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	defined
@@ -65,9 +65,9 @@ BUILD_DEPENDS+=	ccache-[0-9]*:../../devel/ccache
 #
 BUILD_ENV+=	CCACHE_HASHCC=${CC_VERSION_STRING:Q}
 
-.if defined(CCACHE_DIR) && !empty(CCACHE_DIR)
+.  if defined(CCACHE_DIR) && !empty(CCACHE_DIR)
 BUILD_ENV+=	CCACHE_DIR=${CCACHE_DIR:Q}
-.endif
+.  endif
 
 # Create symlinks for the compiler into ${WRKDIR}.
 .  for _var_ in ${_CCACHE_VARS}
