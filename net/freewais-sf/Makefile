@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/06/01 11:23:36 rh Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/14 23:11:05 wiz Exp $
 #
 
 DISTNAME=	freeWAIS-sf-2.2.12
@@ -11,7 +11,7 @@ HOMEPAGE=	http://ls6-www.informatik.uni-dortmund.de/ir/projects/freeWAIS-sf/inde
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
 
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	yes
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		PREFIX=${PREFIX}
