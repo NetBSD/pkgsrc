@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2004/09/17 08:07:12 salo Exp $
+$NetBSD: distinfo,v 1.10 2004/11/09 10:05:48 salo Exp $
 
-SHA1 (windows-all-20040916.zip) = 71e516eb5598631c8a2536a59d3bce01433264b5
-Size (windows-all-20040916.zip) = 10753677 bytes
+SHA1 (windows-all-20041107.zip) = 707f18a3737bd1a65a4a1b0ce80150df7e197082
+Size (windows-all-20041107.zip) = 11640809 bytes
 SHA1 (qt65dlls-20040704.tar.bz2) = 81fa29074676de17ee9d02fbfabdae4c941b382b
 Size (qt65dlls-20040704.tar.bz2) = 3229331 bytes
 SHA1 (qtextras-20040704.tar.bz2) = 6f4ec2e5c99835e532fbc9456545c3057e423553
