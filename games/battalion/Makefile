@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/08/27 14:06:07 garbled Exp $
+# $NetBSD: Makefile,v 1.6 1998/09/13 20:24:28 garbled Exp $
 #
 
 DISTNAME=	battalion
@@ -31,7 +31,7 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/battalion.data/battalion.sho ${PREFIX}/share/battalion/battalion.data
 	${INSTALL_MAN} ${WRKDIR}/battalionSUN4/battalion.man ${PREFIX}/man/man6/battalion.6
 	${INSTALL_DATA} ${WRKDIR}/battalionSUN4/HELP/* ${PREFIX}/share/battalion/HELP
-	${INSTALL} -c -o root -g games -m 0664 /dev/null ${PREFIX}/share/battalion/battalion_hiscore
+	${INSTALL} -c -o root -g games -m 0664 /dev/null /var/games//battalion_hiscore
 
 pre-clean:
 	@${RM} -rf ${WRKDIR}/battalionSUN4
