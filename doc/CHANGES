@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4020 2003/12/08 16:34:41 adam Exp $
+$NetBSD: CHANGES,v 1.4021 2003/12/08 17:35:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5024,3 +5024,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Mail-ClamAV-0.04 [grant 2003-12-08]
 	Added apachetop-0.8.2 [sketch 2003-12-08]
 	Updated ekg to 1.4 [adam 2003-12-08]
+	Updated pgpdump to 0.20 [taca 2003-12-08]
