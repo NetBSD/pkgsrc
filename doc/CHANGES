@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5801 2004/05/03 10:08:47 grant Exp $
+$NetBSD: CHANGES,v 1.5802 2004/05/03 12:51:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2327,3 +2327,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added sge-5.3p6 [dmcmahill 2004-05-02]
 	Updated libusb to 0.1.8 [adam 2004-05-03]
 	Added ncmpc-0.10.1 [grant 2004-05-03]
+	Updated sane-backends to 1.0.14 [adam 2004-05-03]
+	Updated sane-frontends to 1.0.12 [adam 2004-05-03]
+	Updated xsane to 0.93 [adam 2004-05-03]
