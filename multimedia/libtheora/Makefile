@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2005/02/07 15:10:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/02/09 13:53:36 wiz Exp $
 #
 
 DISTNAME=	libtheora-1.0alpha4
 CATEGORIES=	multimedia
-MASTER_SITES=	http://www.theora.org/files/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	http://downloads.xiph.org/releases/theora/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.theora.org/
