@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1844 2003/04/04 22:14:27 rh Exp $
+$NetBSD: CHANGES,v 1.1845 2003/04/04 22:39:08 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1464,3 +1464,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mrstat to 1.17 [abs 2003-04-04]
 	Added wol-0.6.0 [zuntum 2003-04-04]
 	Updated createbuildlink to 2.5 [rh 2003-04-04]
+	Added liblive-2003.04.04 [rh 2003-04-04]
