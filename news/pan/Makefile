@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/10/03 00:18:02 tv Exp $
+# $NetBSD: Makefile,v 1.36.2.1 2004/12/23 02:30:50 snj Exp $
 #
 
 DISTNAME=		pan-0.14.2
@@ -20,8 +20,8 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"
-.if (${OPSYS} != "SunOS")
-LIBS=			-lcompat
+.if (${OPSYS} != "SunOS" && ${OPSYS} != "Linux")
+LIBS+=			-lcompat
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
