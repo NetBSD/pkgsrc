@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6633 2004/07/22 12:40:05 adam Exp $
+$NetBSD: CHANGES,v 1.6634 2004/07/22 14:19:39 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3494,3 +3494,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated autorespond to 2.0.5 [schmonz 2004-07-21]
 	Updated qmail-conf to 0.60nb3 [schmonz 2004-07-21]
 	Updated gd to 2.0.28 [adam 2004-07-22]
+	Updated roundup to 0.7.6 [recht 2004-07-21]
