@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 1999/08/22 15:55:50 rh Exp $
+# $NetBSD: Makefile,v 1.6 1999/11/08 16:25:49 rh Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/11/09 09:24:20 max Exp
 #
 
-DISTNAME=	delegate5.9.3
-PKGNAME=	delegate-5.9.3
+DISTNAME=	delegate5.9.6
+PKGNAME=	delegate-5.9.6
 CATEGORIES=	net
 MASTER_SITES=	ftp://etlport.etl.go.jp/pub/DeleGate/ \
 		ftp://ftp.kyushu-u.ac.jp/pub/Net/WWW/server/delegate/ \
@@ -18,6 +18,8 @@ MASTER_SITES=	ftp://etlport.etl.go.jp/pub/DeleGate/ \
 
 MAINTAINER=	packages@NetBSD.ORG
 HOMEPAGE=	http://wall.etl.go.jp/delegate/
+
+DEPENDS+=	readline-4.0:../../devel/readline
 
 DELEGATE_MANAGER?=	root@localhost
 
