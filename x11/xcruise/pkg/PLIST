@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/26 14:25:33 minoura Exp $
+bin/xcruise
+share/doc/xcruise/README
+@dirrm share/doc/xcruise
