@@ -1,0 +1,4 @@
+--- pine/send.c	Wed Mar 18 17:57:09 1998
++++ pine/send.c	Wed Mar 18 17:59:00 1998
+@@ -0,0 +1 @@
++#define ALLOW_CHANGING_FROM
