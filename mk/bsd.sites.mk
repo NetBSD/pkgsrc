@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.9 2004/07/28 07:35:35 tron Exp $
+# $NetBSD: bsd.sites.mk,v 1.10 2004/08/07 11:01:23 wiz Exp $
 #
 # Default MASTER_SITES
 
@@ -119,10 +119,15 @@ MASTER_SITE_GNOME+=     \
 MASTER_SITE_SOURCEFORGE+=	\
 	http://aleron.dl.sourceforge.net/sourceforge/ \
 	http://belnet.dl.sourceforge.net/sourceforge/ \
+	http://cesnet.dl.sourceforge.net/sourceforge/ \
+	http://easynews.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
+	http://keihanna.dl.sourceforge.net/sourceforge/ \
+	http://mesh.dl.sourceforge.net/sourceforge/ \
 	http://optusnet.dl.sourceforge.net/sourceforge/ \
 	http://ovh.dl.sourceforge.net/sourceforge/ \
 	http://puzzle.dl.sourceforge.net/sourceforge/ \
+	http://switch.dl.sourceforge.net/sourceforge/ \
 	http://umn.dl.sourceforge.net/sourceforge/ \
 	http://unc.dl.sourceforge.net/sourceforge/ \
 	http://voxel.dl.sourceforge.net/sourceforge/ \
