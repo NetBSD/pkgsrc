@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/09/17 19:25:03 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2004/09/24 13:09:11 wiz Exp $
 # FreeBSD Id: Makefile,v 1.17 1999/04/24 09:25:32 kuriyama Exp
 
 DISTNAME=	docbook-dsssl-1.78
@@ -28,7 +28,7 @@ pre-install:
 	${INSTALL_DATA_DIR} ${INSTDIR}
 
 do-install:
-	@${CP} -Rp ${WRKSRC}/* ${INSTDIR}
+	@${CP} -rp ${WRKSRC}/* ${INSTDIR}
 	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INSTDIR}
 
 post-install:
