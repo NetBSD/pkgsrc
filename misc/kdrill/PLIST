@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2003/03/02 20:21:37 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/03/04 04:15:23 jschauma Exp $
 bin/kdrill
 lib/X11/app-defaults/KDrill
-${IMAKE_MAN_PATH}/kdrill.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/kdrill.${IMAKE_MANNEWSUFFIX}
 share/kdrill/hira.edic.gz
 share/kdrill/hiraplus.edic.gz
 share/kdrill/kata.edic.gz
