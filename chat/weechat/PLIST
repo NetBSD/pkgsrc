@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/05 17:45:32 xtraeme Exp $
+bin/weechat-curses
+man/man1/weechat.1
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/weechat.mo
