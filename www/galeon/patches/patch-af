@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.3 2004/11/12 02:24:55 kristerw Exp $
+
+--- libegg/egg-toolbar-editor.c.orig	Fri Nov 12 03:05:07 2004
++++ libegg/egg-toolbar-editor.c	Fri Nov 12 03:05:42 2004
+@@ -102,12 +102,12 @@
+ static gint
+ compare_actions (gconstpointer a, gconstpointer b)
+ {
+-  g_return_val_if_fail (GTK_IS_ACTION (a), 0);
+-  g_return_val_if_fail (GTK_IS_ACTION (b), 0);
+-
+   GValue value_a = { 0, }, value_b = { 0, };
+   const char *short_label_a, *short_label_b;
+   int ret;
++
++  g_return_val_if_fail (GTK_IS_ACTION (a), 0);
++  g_return_val_if_fail (GTK_IS_ACTION (b), 0);
+ 
+   g_value_init (&value_a, G_TYPE_STRING);
+   g_object_get_property (G_OBJECT (a), "short_label", &value_a);
