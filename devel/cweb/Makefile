@@ -1,43 +1,39 @@
-# $NetBSD: Makefile,v 1.6 2001/03/26 20:50:49 jtb Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/13 22:03:13 jtb Exp $
+#
+# XXX This package needs to be installed with the same PREFIX as teTeX
+#
 
-DISTNAME=	cweb-3.63
-CATEGORIES=	devel lang
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=web/cweb/}
+DISTNAME=		cweb-3.63
+CATEGORIES=		devel lang
+MASTER_SITES=		${MASTER_SITE_TEX_CTAN:=web/cweb/}
 
-MAINTAINER=	jtb@netbsd.org
-HOMEPAGE=	http://www-cs-faculty.stanford.edu/~knuth/cweb.html
-COMMENT=	The CWEB System of Structured Documentation
+MAINTAINER=		jtb@netbsd.org
+HOMEPAGE=		http://www-cs-faculty.stanford.edu/~knuth/cweb.html
+COMMENT=		The CWEB System of Structured Documentation
 
-DEPENDS+= 	teTeX-[0-9]*:../../print/teTeX
+DEPENDS+= 		teTeX-[0-9]*:../../print/teTeX
 
-NO_WRKSUBDIR=	YES
-WRKSRC=		${WRKDIR}
-
-EVAL_PREFIX+=	PREFIX=teTeX
+NO_WRKSUBDIR=		# defined
+WRKSRC=			${WRKDIR}
 
 post-patch:
-	@for f in ${WRKSRC}/cweb.1 ; do					\
-	${SED} -e 's:@PREFIX@:'${PREFIX}':g' < $$f > $$f.tmp		\
-	&& ${MV} $$f.tmp $$f ; done
+	${MV} ${WRKSRC}/cweb.1 ${WRKSRC}/cweb.1.dist
+	${SED} -e 's:@PREFIX@:'${PREFIX}':g' ${WRKSRC}/cweb.1.dist 	\
+	> cweb.1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cweave ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/ctangle ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/cweb.1 ${PREFIX}/man/man1
 	${INSTALL_DATA} ${WRKSRC}/cwebmac.tex 				\
-	${PREFIX}/share/texmf/tex/plain/base
+		${PREFIX}/share/texmf/tex/plain/base
 	${INSTALL_DATA_DIR} ${PREFIX}/share/cweb
 	${INSTALL_DATA} ${WRKSRC}/c++lib.w ${PREFIX}/share/cweb
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cweb
-	@for f in ${WRKSRC}/examples/*; do				\
-	i="${INSTALL_DATA} $$f ${PREFIX}/share/examples/cweb/";		\
-	${ECHO} $$i; $$i;						\
-	done
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${PREFIX}/share/examples/cweb/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cweb
-	@for f in cwebman.dvi cweave.dvi ctangle.dvi; do		\
-	i="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/cweb/";	\
-	${ECHO} $$i; $$i;						\
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} cwebman.dvi cweave.dvi 		\
+		ctangle.dvi ${PREFIX}/share/doc/cweb/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
 	${INSTALL_DATA} ${WRKSRC}/cweb.el ${PREFIX}/share/emacs/site-lisp
 
