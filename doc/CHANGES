@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8165 2004/11/29 22:17:58 seb Exp $
+$NetBSD: CHANGES,v 1.8166 2004/11/30 00:29:17 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5656,3 +5656,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gpsim-ptyusart-0.3.1 [bouyer 2004-11-29]
 	Updated wmmemmon to 1.0.1 [wiz 2004-11-29]
 	Updated graphviz to 1.16 [seb 2004-11-29]
+	Updated sudo to 1.6.8pl5 [xtraeme 2004-11-29]
