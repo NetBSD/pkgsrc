@@ -77,7 +77,7 @@
 #include    <stdlib.h>
 #include    <errno.h>
 #include    <libgen.h>
-#include    <sys/timeb.h>
+#include    <sys/time.h>
 #include    <string.h>
 #include    <strings.h>/* for strcasecmp & strncasecmp */
 #include    <wchar.h>  /* for win_t */
@@ -450,10 +450,11 @@ void XMLPlatformUtils::resetFile(FileHandle theFile)
 
 unsigned long XMLPlatformUtils::getCurrentMillis()
 {
-    timeb aTime;
-    ftime(&aTime);
-    return (unsigned long)(aTime.time*1000 + aTime.millitm);
+    struct timeval t;
+    struct timezone tz;
 
+    gettimeofday(&t, &tz);
+    return (unsigned long)(t.tv_sec*1000 + t.tv_usec);
 }
 
 XMLCh* XMLPlatformUtils::getFullPath(const XMLCh* const srcPath)
