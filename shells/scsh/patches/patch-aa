@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2002/06/06 21:54:39 cjep Exp $
+$NetBSD: patch-aa,v 1.8 2003/01/19 09:12:07 salo Exp $
 
 --- Makefile.in.orig	Mon Jun  4 06:18:51 2001
 +++ Makefile.in
@@ -39,8 +39,8 @@ $NetBSD: patch-aa,v 1.7 2002/06/06 21:54:39 cjep Exp $
  install-cig: cig
 -	$(INSTALL_PROGRAM) $(srcdir)/$(CIG) $(LIB)/cig
 -	$(INSTALL_PROGRAM) $(srcdir)/$(CIG).image $(LIB)/cig
-+	$(INSTALL_SCRIPT) $(srcdir)/$(CIG) $(LIB)/cig
-+	$(INSTALL_SCRIPT) $(srcdir)/$(CIG).image $(LIB)/cig
++	$(BSD_INSTALL_SCRIPT) $(srcdir)/$(CIG) $(LIB)/cig
++	$(BSD_INSTALL_SCRIPT) $(srcdir)/$(CIG).image $(LIB)/cig
  	$(INSTALL_DATA) $(srcdir)/$(LIBCIG) $(LIB)/cig
  	$(INSTALL_DATA) $(srcdir)/cig/libcig.h $(LIB)/cig
  
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.7 2002/06/06 21:54:39 cjep Exp $
  install-scsh: scsh
  	$(RM) $(bindir)/$(RUNNABLE)$(EXEEXT)
 -	$(INSTALL_PROGRAM) $(srcdir)/scsh/scsh$(EXEEXT) \
-+	$(INSTALL_SCRIPT) $(srcdir)/scsh/scsh$(EXEEXT) \
++	$(BSD_INSTALL_SCRIPT) $(srcdir)/scsh/scsh$(EXEEXT) \
  	    $(bindir)/$(RUNNABLE)$(EXEEXT)
 -	$(INSTALL_PROGRAM) $(srcdir)/scsh/scsh.image $(LIB)/scsh.image
 -	$(INSTALL_PROGRAM) $(srcdir)/$(LIBSCSH) $(libdir)/$(LIBSCSH)
