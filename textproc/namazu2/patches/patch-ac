@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2004/12/15 13:09:58 taca Exp $
+
+--- scripts/Makefile.in.orig	2004-12-14 23:34:55.000000000 +0900
++++ scripts/Makefile.in
+@@ -166,6 +166,7 @@ bnamazu: $(top_builddir)/config.status b
+ 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
+ gtnmz: $(top_builddir)/config.status gtnmz.in
+ 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
++	chmod +x $@
+ mailutime: $(top_builddir)/config.status mailutime.in
+ 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
+ nmzgrep: $(top_builddir)/config.status nmzgrep.in

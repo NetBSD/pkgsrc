@@ -1,6 +1,14 @@
-$NetBSD: distinfo,v 1.5 2004/05/06 13:40:21 taca Exp $
+$NetBSD: distinfo,v 1.6 2004/12/15 13:09:58 taca Exp $
 
-SHA1 (namazu-2.0.13-1.tar.gz) = 1ec8e20e12293fc008371afee98c3165dbe4017e
-Size (namazu-2.0.13-1.tar.gz) = 1046889 bytes
-SHA1 (patch-aa) = 336a7f68842d4a9ca29ce085ccded45fe0b1392f
-SHA1 (patch-ab) = 0643872e5681ca99373a2059e0b520405c62a807
+SHA1 (namazu-2.0.14.tar.gz) = 6515d1a1ed5156ea569aed0b95eb5212b2c24dc3
+Size (namazu-2.0.14.tar.gz) = 1032273 bytes
+SHA1 (patch-ab) = 5052026e67ffb0a235c8a4ba996cb4438bf7b622
+SHA1 (patch-ac) = fcb47a8433f2784f2420835a11a06d8421a25c18
+SHA1 (patch-ad) = 3707beb6136f50512cf3ab4535e978aa198d112e
+SHA1 (patch-ae) = bcd438ddcf06e6356fd04955724b539426018c41
+SHA1 (patch-af) = b9c722b372935cbca017f706c7c7a6372fbfbc69
+SHA1 (patch-ag) = 6de0499048e452a3109106d06e4bd1fdfd537ca7
+SHA1 (patch-ah) = fce8c1489d09225f9c1a402efed55f33956799a7
+SHA1 (patch-ai) = 54c60dbfda316e5777d1234dc32b739f368e3f25
+SHA1 (patch-aj) = 55076b0fbf4eb7a7b67d6214a63b9bcdb02bf2a1
+SHA1 (patch-ak) = 1d2edc78e144f9d0fe127dedc8fa3262a4f0683d

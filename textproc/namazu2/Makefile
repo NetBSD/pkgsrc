@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:18:20 tv Exp $
+# $NetBSD: Makefile,v 1.15 2004/12/15 13:09:58 taca Exp $
 # FreeBSD Id: ports/japanese/namazu2/Makefile,v 1.16 2000/10/26 20:56:25 knu Exp
 
-DISTNAME=	namazu-2.0.13-1
-PKGNAME=	namazu-2.0.13
-PKGREVISION=	1
+DISTNAME=	namazu-2.0.14
 CATEGORIES=	japanese textproc www
-MASTER_SITES=	ftp://ftp.namazu.org/namazu/stable/ \
-		http://www.namazu.org/stable/
+MASTER_SITES=	http://www.namazu.org/stable/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.namazu.org/index.html.en
@@ -15,46 +12,43 @@ COMMENT=	Full-text search system intended for easy use
 DEPENDS+=	p5-File-MMagic>=1.09:../../misc/p5-File-MMagic
 DEPENDS+=	p5-Text-Kakasi>=1.04:../../textproc/p5-Text-Kakasi
 DEPENDS+=	p5-nkf>=1.7:../../converters/p5-nkf
-.if !defined(WITH_CHASEN) || ${WITH_CHASEN} != NO
 DEPENDS+=	p5-Text-ChaSen>=1.0:../../textproc/p5-Text-ChaSen
-.endif
-
-WRKSRC=			${WRKDIR}/namazu-2.0.13
-CONFIGURE_ARGS+=	--localstatedir=${LOCALBASE}/libdata \
-			--libexecdir=${LOCALBASE}/libexec/cgi-bin
-.if defined(WITH_CHASEN) && ${WITH_CHASEN} == NO
-CONFIGURE_ARGS+=	-without-chasen
-.else
-CONFIGURE_ARGS+=	-with-chasen
-.endif
-
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
-
-USE_BUILDLINK3=		yes
-USE_PKGLOCALEDIR=	# defined
-USE_PERL5=		# defined
-GNU_CONFIGURE=		# defined
-USE_LIBTOOL=		# defined
-LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
-TEST_TARGET=		check
 
 CONFLICTS+=	namazu-[0-9]*
 
-post-build:
-	@for FILE in \
-		${PKGDIR}/DEINSTALL	\
-		${PKGDIR}/INSTALL;	\
-	do \
-		${SED}	-e 's|@CONFDIR@|${LOCALBASE}/etc/namazu|g' \
-			-e 's|@DATADIR@|${LOCALBASE}/libdata/namazu|g' \
-			-e 's|@EXAMPLEDIR@|${LOCALBASE}/share/namazu|g' \
-			< $${FILE} > ${WRKDIR}/`basename $${FILE}`; \
-	done
+USE_BUILDLINK3=		yes
+USE_PKGLOCALEDIR=	yes
+USE_PKGINSTALL=		yes
+USE_PERL5=		run
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+TEST_TARGET=		check
+
+CONFIGURE_ARGS+= 	--localstatedir=${DATADIR} \
+			--libexecdir=${PREFIX}/libexec/cgi-bin \
+			--sysconfdir=${PKG_SYSCONFBASE} \
+			--with-chasen
+
+DATADIR=		${PREFIX}/libdata
+EXAMPLESDIR=		${PREFIX}/share/examples/namazu
+EXAMPLES=		mknmzrc namazurc
+
+.include "../../mk/bsd.prefs.mk"
+
+PKG_SYSCONFSUBDIR?=	namazu
+.for f in ${EXAMPLES}
+CONF_FILES+=		${EXAMPLESDIR}/namazu/$f	${PKG_SYSCONFDIR}/$f
+.endfor
+MAKE_DIRS+=		${DATADIR}/namazu/index
+OWN_DIRS+=		${PKG_SYSCONFDIR} ${DATADIR}/namazu
 
 post-install:
-	@${TEST} -d ${LOCALBASE}/etc/namazu || ${INSTALL_DATA_DIR} ${LOCALBASE}/etc/namazu
-	@${SH} ${WRKDIR}/INSTALL ${PKGNAME} POST-INSTALL
+	${INSTALL_DATA_DIR} ${DATADIR}/namazu
+	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
+.for f in ${EXAMPLES}
+	cd ${WRKSRC}/conf; ${INSTALL_DATA} $f-sample ${EXAMPLESDIR}/$f
+.endfor
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

@@ -1,0 +1,32 @@
+$NetBSD: patch-ag,v 1.3 2004/12/15 13:09:58 taca Exp $
+
+--- nmz/util.c.orig	2004-03-21 00:25:10.000000000 +0900
++++ nmz/util.c
+@@ -63,7 +63,7 @@
+  */
+ 
+ static void reverse_byte_order (void*, int, int);
+-static char decode_uri_sub(char c1, char c2);
++static int decode_uri_sub(int c1, int c2);
+ 
+ /* 
+  * Reverse byte order. It's type independent.
+@@ -85,14 +85,14 @@ reverse_byte_order (void *p, int n, int 
+     }
+ }
+ 
+-static char 
+-decode_uri_sub(char c1, char c2)
++static int
++decode_uri_sub(int c1, int c2)
+ {
+-    char c;
++    int c;
+ 
+     c =  ((c1 >= 'A' ? (toupper(c1) - 'A') + 10 : (c1 - '0'))) * 16;
+     c += ( c2 >= 'A' ? (toupper(c2) - 'A') + 10 : (c2 - '0'));
+-    return c;
++    return c & 0xff;
+ }
+ 
+ /*
