@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/02/05 06:59:14 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/06/07 22:51:24 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.17 1999/04/24 09:25:32 kuriyama Exp
 
 DISTNAME=	db141
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://nwalsh.com/docbook/dsssl/
 
 BUILD_DEPENDS=	unzip:../../archivers/unzip
-DEPENDS+=	docbook-3.1:../../textproc/docbook
+DEPENDS+=	docbook>=3.1:../../textproc/docbook
 
 EXTRACT_CMD=	unzip ${DOWNLOADED_DISTFILE}
 NO_MTREE=	yes
