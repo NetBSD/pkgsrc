@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/10/06 11:23:26 martti Exp $
+
+How Is It Used?
+---------------
+Setting up Corkscrew with SSH/OpenSSH is very simple. Adding
+the following line to your ~/.ssh/config file will usually do
+the trick (replace proxy.example.com and 8080 with correct values):
+
+Host *
+	ProxyCommand ${PREFIX}/bin/corkscrew proxy.example.com 8080 %h %p
+
+Read ${PREFIX}/share/doc/corkscrew/README for further information.
+===========================================================================
