@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/09/22 21:15:36 tron Exp $
+# $NetBSD: Makefile,v 1.8 2000/09/25 22:19:19 fredb Exp $
 
 DISTNAME=		gcc-2.95.2
 CATEGORIES=		lang
@@ -37,6 +37,9 @@ WRKSRC=			${WRKDIR}/objdir
 
 post-extract:
 	${MKDIR} ${WRKSRC}
+
+post-patch:
+	${ECHO} "bogus" >${WRKSRC}/../${DISTNAME}/gcc/cstamp-h.in
 
 post-build:
 	for FILE in ${FILESDIR}/gcc.mk ${PKGDIR}/MESSAGE; do \
