@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST.netbsd,v 1.4 2001/03/24 03:55:15 fredb Exp $
+@comment $NetBSD: PLIST.netbsd,v 1.5 2001/09/14 14:17:10 skrll Exp $
 lib/libcrypto.so
-lib/libcrypto.so.1
-lib/libcrypto.so.1.0
+lib/libcrypto.so.200
+lib/libcrypto.so.200.0
 lib/libssl.so
-lib/libssl.so.1
-lib/libssl.so.1.0
+lib/libssl.so.200
+lib/libssl.so.200.0
