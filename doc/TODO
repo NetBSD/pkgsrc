@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1030 2003/11/15 09:13:23 wiz Exp $
+$NetBSD: TODO,v 1.1031 2003/11/15 10:21:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -214,6 +214,7 @@ Suggested package updates
 	o gkrellm-volume-2.1.9 [pkgsrc-wip]
 	o glade-2.0.1
 	o global-4.6
+	o glpk-4.2
 	o gnats-4.0 [pkgsrc-wip]
 	o gnocatan-0.8.0
 	o gnome-core-2.4
