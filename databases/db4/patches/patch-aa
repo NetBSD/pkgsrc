@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2003/12/07 00:51:07 epg Exp $
+$NetBSD: patch-aa,v 1.4 2003/12/07 02:30:31 epg Exp $
 
 --- ../dist/Makefile.in.orig	Fri Nov 28 13:50:06 2003
 +++ ../dist/Makefile.in
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.3 2003/12/07 00:51:07 epg Exp $
  libtso=		$(libtso_base)-$(LIBVERSION)@MODSUFFIX@
  libtso_static=	$(libtso_base)-$(LIBVERSION).a
  libtso_target=	$(libtso_base)-$(LIBVERSION).la
-@@ -833,11 +833,8 @@ install_utilities:
+@@ -833,11 +833,10 @@ install_utilities:
  	    ($(mkdir) -p $(DESTDIR)$(bindir) && \
  	    $(chmod) $(dmode) $(DESTDIR)$(bindir))
  	@for i in $(UTIL_PROGS); do \
@@ -69,8 +69,10 @@ $NetBSD: patch-aa,v 1.3 2003/12/07 00:51:07 epg Exp $
 -		$(INSTALLER) $$i $(DESTDIR)$(bindir)/$$i; \
 -		test -f $(strip) && $(strip) $(DESTDIR)$(bindir)/$$i || true; \
 -		$(chmod) $(emode) $(DESTDIR)$(bindir)/$$i; \
-+		${BSD_INSTALL_PROGRAM} $$i \
-+		    ${DESTDIR}${bindir}/`echo $$i | sed '${transform}'`; \
++		target="${DESTDIR}${bindir}/`echo $$i | sed '${transform}'`"; \
++		$(INSTALLER) $$i $${target}; \
++		test -f $(strip) && $(strip) $${target} || true; \
++		$(chmod) $(emode) $${target}; \
  	done
  
  uninstall_utilities:
