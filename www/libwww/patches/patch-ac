@@ -1,0 +1,11 @@
+--- Library/src/HTML.c.orig	Mon Sep 14 21:59:03 1998
++++ Library/src/HTML.c	Mon Sep 14 21:59:13 1998
+@@ -22,7 +22,7 @@
+ #include "WWWUtil.h"
+ #include "WWWCore.h"
+ #include "WWWHTML.h"
+-#include "HText.h"
++#include "HTextImp.h"
+ #include "HTStyle.h"
+ #include "HTML.h"
+ 
