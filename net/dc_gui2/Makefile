@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2003/07/13 13:52:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/16 10:56:57 wiz Exp $
 #
 
-DISTNAME=	dc_gui2-0.74
-PKGREVISION=	1
+DISTNAME=	dc_gui2-0.75
 CATEGORIES=	net
 MASTER_SITES=	http://www.ac2i.tzo.com/dctc/ \
 		http://brainz.servebeer.com/dctc/
@@ -11,7 +10,7 @@ MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.ac2i.tzo.com/dctc/
 COMMENT=	graphical user interface for DCTC
 
-DEPENDS+=	dctc>=0.85.3:../../net/dctc
+DEPENDS+=	dctc>=0.85.4:../../net/dctc
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
@@ -25,9 +24,6 @@ CPPFLAGS+=	-DNO_PRINTF_LOCALE
 post-configure:
 	@${ECHO} '#ifndef MSG_NOSIGNAL' >> ${WRKSRC}/config.h
 	@${ECHO} '# define MSG_NOSIGNAL 0' >> ${WRKSRC}/config.h
-	@${ECHO} '#endif' >> ${WRKSRC}/config.h
-	@${ECHO} '#ifndef ENODATA' >> ${WRKSRC}/config.h
-	@${ECHO} '# define ENODATA ENOMSG' >> ${WRKSRC}/config.h
 	@${ECHO} '#endif' >> ${WRKSRC}/config.h
 	@sleep 5
 	@${TOUCH} ${WRKSRC}/stamp-h ${WRKSRC}/stamp-h.in
