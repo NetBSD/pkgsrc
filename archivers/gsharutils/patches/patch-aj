@@ -1,13 +1,15 @@
-$NetBSD: patch-aj,v 1.1 2001/07/15 11:44:51 jlam Exp $
+$NetBSD: patch-aj,v 1.2 2002/11/18 08:03:15 salo Exp $
 
---- configure.orig	Sun Dec  3 19:44:54 1995
-+++ configure
-@@ -3581,6 +3581,8 @@
-   CATALOGS="$new_CATALOGS"
- fi
+--- po/Makefile.in.in.orig	Mon Dec  4 17:19:48 1995
++++ po/Makefile.in.in	Mon Nov 18 04:06:43 2002
+@@ -28,8 +28,8 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ datadir = $(prefix)/@DATADIRNAME@
+-localedir = $(datadir)/locale
+-gnulocaledir = $(prefix)/share/locale
++localedir = $(prefix)/$(PKGLOCALEDIR)/locale
++gnulocaledir = $(localedir)
+ gettextsrcdir = $(prefix)/share/gettext
+ subdir = po
  
-+DATADIRNAME=${PKGLOCALEDIR}
-+
- 
- 
- trap '' 1 2 15
