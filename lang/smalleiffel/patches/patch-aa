@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 1999/10/12 08:01:33 jlam Exp $
+$NetBSD: patch-aa,v 1.2 1999/10/13 19:03:39 jlam Exp $
 
 --- lib_se/frozen_string_list.e.orig	Sat Jun  5 14:51:11 1999
-+++ lib_se/frozen_string_list.e	Mon Jun 28 04:00:01 1999
++++ lib_se/frozen_string_list.e	Wed Oct 13 05:10:40 1999
 @@ -111,7 +111,7 @@
  -----------------------------------------------------------------------------
  -- Frozen list of other names :
@@ -11,3 +11,11 @@ $NetBSD: patch-aa,v 1.1 1999/10/12 08:01:33 jlam Exp $
     fz_bit_foo:                 STRING is "BIT ";
     fz_char:                    STRING is "char";
     fz_close_c_comment:         STRING is "*/";
+@@ -148,6 +148,7 @@
+    fz_java_lang_object:        STRING is "java/lang/Object";
+    fz_jvm_root:                STRING is "_any"
+    fz_main:                    STRING is "main";
++   fz_man:                     STRING is "doc/smalleiffel";
+    fz_new:                     STRING is "new";
+    fz_new_chunk:               STRING is "new_chunk";
+    fz_null:                    STRING is "NULL";
