@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 1999/09/03 20:05:50 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/10/23 14:06:59 tron Exp $
 bin/gmc
+bin/gmc-client
 bin/mc
 bin/mcedit
 bin/mcmfmt
@@ -8,6 +9,8 @@ bin/plain-gmc
 etc/CORBA/servers/gmc.gnorba
 etc/mc.global
 lib/mc/FAQ
+lib/mc/bin/mc.csh
+lib/mc/bin/mc.sh
 lib/mc/bin/mcfn_install
 lib/mc/desktop-scripts/README.desktop
 lib/mc/desktop-scripts/startup.links
@@ -34,6 +37,7 @@ lib/mc/extfs/urar
 lib/mc/extfs/uzip
 lib/mc/extfs/uzoo
 lib/mc/layout
+lib/mc/mc.csh
 lib/mc/mc-gnome.ext
 lib/mc/mc.ext
 lib/mc/mc.hint
@@ -41,6 +45,7 @@ lib/mc/mc.hint.es
 lib/mc/mc.hlp
 lib/mc/mc.lib
 lib/mc/mc.menu
+lib/mc/mc.sh
 lib/mc/syntax/ada95.syntax
 lib/mc/syntax/c.syntax
 lib/mc/syntax/changelog.syntax
@@ -89,8 +94,10 @@ share/locale/hu/LC_MESSAGES/mc.mo
 share/locale/it/LC_MESSAGES/mc.mo
 share/locale/ja/LC_MESSAGES/mc.mo
 share/locale/ko/LC_MESSAGES/mc.mo
+share/locale/nl/LC_MESSAGES/mc.mo
 share/locale/no/LC_MESSAGES/mc.mo
 share/locale/pl/LC_MESSAGES/mc.mo
+share/locale/pt_BR/LC_MESSAGES/mc.mo
 share/locale/ro/LC_MESSAGES/mc.mo
 share/locale/ru/LC_MESSAGES/mc.mo
 share/locale/sv/LC_MESSAGES/mc.mo
