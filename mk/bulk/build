@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.43 2004/09/22 16:42:29 mason Exp $
+# $NetBSD: build,v 1.44 2004/11/12 15:39:22 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -352,7 +352,7 @@ echo "Post processing bulk build results..."
 #rm $DEPENDSTREEFILE $DEPENDSFILE $SUPPORTSFILE $INDEXFILE $ORDERFILE
 
 # Perl was wiped, reinstall it!
-( cd lang/perl5 && ${BMAKE} bulk-install )
+( cd lang/perl58 && ${BMAKE} bulk-install )
 perl mk/bulk/post-build | ${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results `date +%Y-%m-%d`" $ADMIN
 
 # Done!
