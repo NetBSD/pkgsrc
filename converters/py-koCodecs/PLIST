@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/17 05:06:50 shell Exp $
-${PYSITELIB}/KoreanCodecs.pth
+@comment $NetBSD: PLIST,v 1.2 2002/07/07 16:03:16 jschauma Exp $
+${PYSITELIB}/korean.pth
 ${PYSITELIB}/korean/__init__.py
 ${PYSITELIB}/korean/__init__.pyc
+${PYSITELIB}/korean/aliases.py
+${PYSITELIB}/korean/aliases.pyc
 ${PYSITELIB}/korean/c/__init__.py
 ${PYSITELIB}/korean/c/__init__.pyc
 ${PYSITELIB}/korean/c/_koco.so
@@ -9,6 +11,7 @@ ${PYSITELIB}/korean/c/cp949.py
 ${PYSITELIB}/korean/c/cp949.pyc
 ${PYSITELIB}/korean/c/euc_kr.py
 ${PYSITELIB}/korean/c/euc_kr.pyc
+${PYSITELIB}/korean/c/hangul.so
 ${PYSITELIB}/korean/cp949.py
 ${PYSITELIB}/korean/cp949.pyc
 ${PYSITELIB}/korean/euc_kr.py
@@ -37,6 +40,8 @@ ${PYSITELIB}/korean/python/cp949.py
 ${PYSITELIB}/korean/python/cp949.pyc
 ${PYSITELIB}/korean/python/euc_kr.py
 ${PYSITELIB}/korean/python/euc_kr.pyc
+${PYSITELIB}/korean/python/hangul.py
+${PYSITELIB}/korean/python/hangul.pyc
 ${PYSITELIB}/korean/python/iso_2022_kr.py
 ${PYSITELIB}/korean/python/iso_2022_kr.pyc
 ${PYSITELIB}/korean/python/johab.py
