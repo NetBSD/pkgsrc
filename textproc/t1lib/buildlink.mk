@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/27 13:33:35 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/30 20:07:22 jlam Exp $
 #
 # This Makefile fragment is included by packages that use t1lib.
 #
@@ -17,7 +17,7 @@ T1LIB_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.t1lib?=	t1lib>=1.0.1
+BUILDLINK_DEPENDS.t1lib?=	t1lib>=1.1.1
 DEPENDS+=	${BUILDLINK_DEPENDS.t1lib}:../../textproc/t1lib
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.t1lib=t1lib

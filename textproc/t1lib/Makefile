@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2001/06/29 19:45:30 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/07/30 20:07:22 jlam Exp $
 #
 
-DISTNAME=	t1lib-1.0.1
+DISTNAME=	t1lib-1.1.1
+WRKSRC=		${WRKDIR}/T1-1.1.1
 CATEGORIES=	textproc devel graphics
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=libs/graphics/} \
 		ftp://ftp.neuroinformatik.ruhr-uni-bochum.de/pub/software/t1lib/
@@ -13,10 +14,10 @@ COMMENT=	Library for generating bitmaps from Adobe Type 1 fonts
 USE_BUILDLINK_ONLY=	# defined
 GNU_CONFIGURE=		# defined
 USE_GMAKE=		# defined
-USE_LIBTOOL=		# defined
 USE_X11BASE=		# defined
+USE_LIBTOOL=		# defined
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-WRKSRC=		${WRKDIR}/T1-1.0.1
 ALL_TARGET=	without_doc
 
 post-install:
@@ -28,7 +29,7 @@ post-install:
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/t1lib
 	cd ${WRKSRC}/examples; \
-	  ${PAX} -rw FontDataBase README.t1example1 t1example1.c t1lib.config \
+	  ${PAX} -rw FontDataBase t1example1.c t1lib.config \
 	      ${PREFIX}/share/examples/t1lib
 	${SED}	-e 's|@@X11BASE@@|${X11BASE}|g' \
 		-e 's|@@LOCALBASE@@|${LOCALBASE}|g' \
