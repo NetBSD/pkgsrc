@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3539 2003/09/26 11:03:16 martti Exp $
+$NetBSD: CHANGES,v 1.3540 2003/09/26 11:24:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3948,3 +3948,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated maradns to 1.0.18 [xtraeme 2003-09-26]
 	Added fix-mime-charset-0.4.0 [wiz 2003-09-26]
 	Added xfce4-4.0.0 [martti 2003-09-26]
+	Updated xosd to 2.2.5 [jmmv 2003-09-26]
+	Updated xmms-osd to 2.2.5 [jmmv 2003-09-26]
