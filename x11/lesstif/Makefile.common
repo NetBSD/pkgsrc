@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2001/09/19 16:50:40 drochner Exp $
+# $NetBSD: Makefile.common,v 1.15 2001/11/29 19:46:14 jlam Exp $
 
 DISTNAME=		lesstif-${LESSTIF_VERSION}
 LESSTIF_VERSION=	0.93.0
@@ -13,7 +13,6 @@ MASTER_SITES=		ftp://ftp.hungry.com/pub/hungry/lesstif/srcdist/ \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.lesstif.org/
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 USE_X11BASE=		# defined
