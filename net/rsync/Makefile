@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 1998/11/05 00:24:37 mycroft Exp $
+# $NetBSD: Makefile,v 1.14 1998/11/26 23:34:13 hubertf Exp $
 #
 
-DISTNAME=	rsync-2.2.0
+DISTNAME=	rsync-2.2.1
 CATEGORIES=	net
 MASTER_SITES=	ftp://samba.anu.edu.au/pub/rsync/  \
 		ftp://sunsite.auc.dk/pub/unix/rsync/  \
