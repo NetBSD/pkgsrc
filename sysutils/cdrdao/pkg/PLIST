@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/18 15:13:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/10/18 05:46:58 rh Exp $
 bin/cdrdao
 man/man1/cdrdao.1
+share/cdrdao/drivers
 share/doc/cdrdao/COPYING
 share/doc/cdrdao/CREDITS
 share/doc/cdrdao/INSTALL
@@ -41,3 +42,4 @@ share/examples/cdrdao/wav2dao.pl
 @dirrm share/examples/cdrdao
 @dirrm share/doc/cdrdao/testtocs
 @dirrm share/doc/cdrdao
+@dirrm share/cdrdao
