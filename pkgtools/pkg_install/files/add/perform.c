@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.21 2004/04/21 20:11:55 tv Exp $	*/
+/*	$NetBSD: perform.c,v 1.22 2004/04/28 15:38:17 tv Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.21 2004/04/21 20:11:55 tv Exp $");
+__RCSID("$NetBSD: perform.c,v 1.22 2004/04/28 15:38:17 tv Exp $");
 #endif
 #endif
 
@@ -145,6 +145,8 @@ pkg_do(const char *pkg)
 	strlcpy(playpen, FirstPen, sizeof(playpen));
 	memset(buildinfo, '\0', sizeof(buildinfo));
 	inPlace = 0;
+
+	umask(DEF_UMASK);
 
 	/* Are we coming in for a second pass, everything already extracted?
 	 * (Slave mode) */
@@ -378,7 +380,7 @@ pkg_do(const char *pkg)
 
 	/* make sure dbdir actually exists! */
 	if (!(isdir(dbdir) || islinktodir(dbdir))) {
-		if (fexec("mkdir", "-m", "755", "-p", dbdir, NULL)) {
+		if (fexec("mkdir", "-p", dbdir, NULL)) {
 			errx(EXIT_FAILURE,
 			    "Database-dir %s cannot be generated, aborting.",
 			    dbdir);
@@ -741,7 +743,6 @@ ignore_replace_depends_check:
 	if (!NoRecord && !Fake) {
 		char    contents[FILENAME_MAX];
 
-		umask(DEF_UMASK);
 #ifndef __INTERIX
 		if (getuid() != 0)
 			warnx("not running as root - trying to record install anyway");
