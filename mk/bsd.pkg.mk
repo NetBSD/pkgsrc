@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.574 2000/09/15 09:14:21 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.575 2000/09/15 09:18:21 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -3046,7 +3046,7 @@ fake-pkg: ${PLIST} ${DESCR}
 	size_this=`${MAKE} ${MAKEFLAGS} print-pkg-size-this`;		\
 	size_depends=`${MAKE} ${MAKEFLAGS} print-pkg-size-depends`;	\
 	${ECHO} $$size_this >${SIZE_PKG_FILE};				\
-	expr $$size_this + $$size_depends >${SIZE_ALL_FILE} || ${TRUE}
+	${ECHO} $$size_this $$size_depends + p | ${DC} >${SIZE_ALL_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 		if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then		\
 		${ECHO_MSG} "${_PKGSRC_IN}> Registering installation for ${PKGNAME}"; \
