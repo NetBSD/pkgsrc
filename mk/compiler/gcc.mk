@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.23 2004/02/03 22:32:22 jlam Exp $
+# $NetBSD: gcc.mk,v 1.24 2004/02/03 22:35:05 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -199,18 +199,21 @@ PKG_SKIP_REASON=	"Unable to satisfy dependency: ${_GCC_DEPENDS}"
 # Ensure that the correct rpath is passed to the linker if we need to
 # link against gcc shared libs.
 #
-.  if !empty(_CC:M${LOCALBASE}/*)
-_GCC_SUBPREFIX=		${_CC:H:S/\/bin$//:S/${LOCALBASE}\///:S/${LOCALBASE}//}/
-.  else
 _GCC_SUBPREFIX!=	\
 	if ${PKG_INFO} -qe ${_GCC_PKGBASE}; then			\
 		${PKG_INFO} -f ${_GCC_PKGBASE} |			\
 		${GREP} "File:.*bin/gcc" |				\
 		${SED} -e "s/.*File: *//;s/bin\/gcc.*//;q";		\
 	else								\
-		${ECHO} "not_found/";					\
+		case ${_CC} in						\
+		${LOCALBASE}/*)						\
+			${ECHO} "${_CC:H:S/\/bin$//:S/${LOCALBASE}\///:S/${LOCALBASE}//}/" ; \
+			;;						\
+		*)							\
+			${ECHO} "not_found/";				\
+			;;						\
+		esac;							\
 	fi
-.  endif
 _GCC_PREFIX=		${LOCALBASE}/${_GCC_SUBPREFIX}
 _GCC_ARCHDIR!=		\
 	if [ -x ${_GCC_PREFIX}bin/gcc ]; then				\
