@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.8 2004/06/02 12:25:35 tron Exp $
+
+--- frontends/rnews.c.orig	Wed Jan  7 23:47:19 2004
++++ frontends/rnews.c	Wed Jun  2 14:19:30 2004
+@@ -822,10 +822,12 @@
+     message_handlers_warn(1, message_log_syslog_err);
+     message_handlers_die(1, message_log_syslog_err);
+ 
++#if !defined(__FreeBSD__) && !defined(__bsdi__) && !defined (__NetBSD__)
+     if (setgid(getegid()) < 0)
+         die("cannot setgid to %lu", (unsigned long) getegid());
+     if (setuid(geteuid()) < 0)
+         die("cannot setuid to %lu", (unsigned long) geteuid());
++#endif
+ 
+     if (!innconf_read(NULL))
+         exit(1);
