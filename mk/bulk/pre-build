@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.27.2.3 2003/08/26 21:58:07 jlam Exp $
+# $NetBSD: pre-build,v 1.27.2.4 2003/08/31 06:37:16 jlam Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -77,10 +77,17 @@ if [ -d ${PKG_DBDIR} ]; then
 	cd ${PKG_DBDIR}
 	for pkg in *
 	do
-		if `pkg_info -K ${DEPOTBASE} -qe $pkg`; then
-			echo pkg_delete -r $pkg
-			pkg_delete -K ${DEPOTBASE} -r $pkg
-		elif `pkg_info -K ${PKG_DBDIR} -qe $pkg`; then
+		case "${DEPOTBASE}" in
+		"${PKG_DBDIR}")
+			;;
+		*)
+			if `pkg_info -K ${DEPOTBASE} -qe $pkg`; then
+				echo pkg_delete -r $pkg
+				pkg_delete -K ${DEPOTBASE} -r $pkg
+			fi
+			;;
+		esac
+		if `pkg_info -K ${PKG_DBDIR} -qe $pkg`; then
 			echo pkg_delete -r $pkg
 			pkg_delete -K ${PKG_DBDIR} -r $pkg
 		fi
@@ -89,10 +96,17 @@ if [ -d ${PKG_DBDIR} ]; then
 	# to deinstall
 	for pkg in *
 	do
-		if `pkg_info -K ${DEPOTBASE} -qe $pkg`; then
-			echo pkg_delete -f $pkg
-			pkg_delete -K ${DEPOTBASE} -f $pkg
-		elif `pkg_info -K ${PKG_DBDIR} -qe $pkg`; then
+		case "${DEPOTBASE}" in
+		"${PKG_DBDIR}")
+			;;
+		*)
+			if `pkg_info -K ${DEPOTBASE} -qe $pkg`; then
+				echo pkg_delete -f $pkg
+				pkg_delete -K ${DEPOTBASE} -f $pkg
+			fi
+			;;
+		esac
+		if `pkg_info -K ${PKG_DBDIR} -qe $pkg`; then
 			echo pkg_delete -f $pkg
 			pkg_delete -K ${PKG_DBDIR} -f $pkg
 		fi
