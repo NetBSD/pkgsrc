@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/01 11:47:22 jmmv Exp $
+
+SHA1 (libsigc++-1.0.4.tar.gz) = 15a687edc5f64a317ef40f4df04dc5adeccfb88d
+Size (libsigc++-1.0.4.tar.gz) = 212089 bytes
+SHA1 (patch-aa) = 5e4bf439221264c9997e3491e461efcb87cf7849
+SHA1 (patch-ab) = c5938da194d91e0608ecdfd6bc95f8ca1928fda4
