@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/04/02 19:50:01 jdolecek Exp $
+
+SHA1 (suse91/i586/XFree86-Mesa-4.3.99.902-40.i586.rpm) = 560f39d2a96a1f5df7f0b5001821adf0105e6325
+RMD160 (suse91/i586/XFree86-Mesa-4.3.99.902-40.i586.rpm) = 94615f439cadb85db5c8fc7d94201f2a52ac9895
+Size (suse91/i586/XFree86-Mesa-4.3.99.902-40.i586.rpm) = 6152698 bytes
+SHA1 (suse91/i586/XFree86-Mesa-devel-4.3.99.902-40.i586.rpm) = a9172864b4bb019548d0158e06afb675ccb6a327
+RMD160 (suse91/i586/XFree86-Mesa-devel-4.3.99.902-40.i586.rpm) = 5f47dd63595c2a780059d719b89789c1a14b2845
+Size (suse91/i586/XFree86-Mesa-devel-4.3.99.902-40.i586.rpm) = 1073151 bytes
