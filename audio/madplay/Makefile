@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2001/02/07 13:58:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/09 13:12:23 simonb Exp $
 #
 
-DISTNAME=	mad-0.12.3b
+DISTNAME=	mad-0.12.4b
 PKGNAME=	${DISTNAME:S/mad/madplay/}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mad/} \
