@@ -1,19 +1,19 @@
-$NetBSD: patch-ab,v 1.6 2001/01/28 07:15:29 itojun Exp $
-support for kame scopeid extension (assumes that link scope = interface)
+$NetBSD: patch-ab,v 1.7 2001/11/27 03:38:42 itojun Exp $
 
---- lib/lwres/getnameinfo.c-	Sun Jan 28 15:34:19 2001
-+++ lib/lwres/getnameinfo.c	Sun Jan 28 16:13:15 2001
-@@ -63,6 +63,9 @@
- #include <sys/socket.h>
+--- lib/lwres/getnameinfo.c.orig	Sat Jul 14 08:34:02 2001
++++ lib/lwres/getnameinfo.c	Tue Jul 17 10:14:33 2001
+@@ -66,6 +66,10 @@
+ #include <lwres/net.h>
+ #include <lwres/netdb.h>
  
- #include <netinet/in.h>
 +#ifdef __KAME__
 +#include <net/if.h>
 +#endif
++
+ #include "assert_p.h"
  
- #include <stdio.h>
- #include <string.h>
-@@ -219,13 +222,11 @@
+ #define SUCCESS 0
+@@ -214,13 +218,11 @@
  		    ((const struct sockaddr_in6 *)sa)->sin6_scope_id) {
  			char *p = numaddr + strlen(numaddr);
  			const char *stringscope = NULL;
