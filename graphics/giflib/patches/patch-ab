@@ -1,7 +1,6 @@
-$NetBSD: patch-ab,v 1.3 1998/08/07 10:40:47 agc Exp $
-
---- util/Makefile.orig	Thu Jun 26 13:22:30 1997
-+++ util/Makefile	Tue Jul 14 15:46:43 1998
+$NetBSD: patch-ab,v 1.4 1998/09/14 20:20:00 garbled Exp $
+--- util/Makefile.orig	Thu Jun 26 10:22:30 1997
++++ util/Makefile	Mon Sep 14 12:53:28 1998
 @@ -22,12 +22,13 @@
  # X_INC_DIR = /server/sun4/usr/new/lib/X11R4
  
@@ -52,7 +51,7 @@ $NetBSD: patch-ab,v 1.3 1998/08/07 10:40:47 agc Exp $
  
  .c:
 -	$(CC) $(CFLAGS) $< $(GIF_LIB) -lm $(LDFLAGS) -o $*
-+	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $< $(GIF_LIB) -lm $(LDFLAGS) -o $*
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $< $(GIF_LIB) -lm $(LDFLAGS) -L$(X_LIB_DIR) $(XLIBS) -o $*
  
  uninstall-utils:
  	(cd $(DEST); rm -f $(BINARIES) $(RLE) $(IRIS) $(SCRIPTS))
