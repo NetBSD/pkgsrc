@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.13 1999/10/27 10:46:55 fredb Exp $
+#	$NetBSD: cross.mk,v 1.14 1999/12/18 02:14:38 wrstuden Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -30,7 +30,7 @@ BINUTILS_WRKSRC=	${WRKDIR}/${BINUTILS_DISTNAME}
 CROSS_DISTFILES+=	${BINUTILS_DISTNAME}.tar.gz
 MASTER_SITES+=		${MASTER_SITE_GNU:=/binutils/}
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
-DEPENDS+=		cross-binutils-2.9.1.0:../../cross/binutils
+DEPENDS+=		cross-binutils-2.9.1.1:../../cross/binutils
 PLIST_PRE+=		${COMMON_DIR}/PLIST-binutils
 
 AS_FOR_TARGET=		${BINUTILS_WRKSRC}/gas/as-new
