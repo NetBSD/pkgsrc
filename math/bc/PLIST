@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/29 23:57:38 reed Exp $
+bin/bc
+bin/dc
+man/man1/bc.1
+man/man1/dc.1
+info/bc.info
+info/dc.info
