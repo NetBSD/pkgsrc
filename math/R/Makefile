@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2004/03/08 20:27:14 minskim Exp $
+# $NetBSD: Makefile,v 1.51 2004/03/11 21:04:47 markd Exp $
 
 DISTNAME=		R-1.8.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/}
 EXTRACT_SUFX=		.tgz
@@ -119,5 +119,5 @@ post-install:
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../math/blas/buildlink2.mk"
-.include "../../x11/tk83/buildlink2.mk"
+.include "../../x11/tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
