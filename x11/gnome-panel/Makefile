@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2004/03/26 02:27:59 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2004/04/01 18:46:01 jmmv Exp $
 #
 
-DISTNAME=		gnome-panel-2.4.2
-PKGREVISION=		6
+DISTNAME=		gnome-panel-2.6.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.4/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -12,7 +11,6 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 panel application
 
 DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
-DEPENDS+=		gnome-icon-theme>=1.0.9:../../graphics/gnome-icon-theme
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
@@ -38,19 +36,24 @@ GCONF2_SCHEMAS+=	workspace-switcher.schemas
 GCONF2_SCHEMAS+=	window-list.schemas
 GCONF2_ENTRIES=		panel-default-setup.entries
 
-BUILDLINK_DEPENDS.GConf2+=	GConf2>=2.4.0.1nb1
-
 .include "../../devel/GConf2/schemas.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
+.include "../../mail/evolution-data-server/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gnome2-control-center/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
