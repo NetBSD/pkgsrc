@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.12 2002/09/25 00:02:40 seb Exp $
+# $NetBSD: pyversion.mk,v 1.13 2002/10/09 11:06:13 jlam Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -8,11 +8,11 @@ PYTHON_PYVERSION_MK=	defined
 PYTHON_VERSION_DEFAULT?=	21
 PYTHON_VERSIONS_ACCEPTED?=	22 21 20
 
-BUILDLINK_DEPENDS.python15?=	python15>=1.5
-BUILDLINK_DEPENDS.python20?=	python20>=2.0
-BUILDLINK_DEPENDS.python21?=	python21>=2.1
-BUILDLINK_DEPENDS.python21pth?=	python21-pth>=2.1
-BUILDLINK_DEPENDS.python22?=	python22>=2.2
+BUILDLINK_DEPENDS.python15?=		python15>=1.5
+BUILDLINK_DEPENDS.python20?=		python20>=2.0
+BUILDLINK_DEPENDS.python21?=		python21>=2.1
+BUILDLINK_DEPENDS.python21-pth?=	python21-pth>=2.1
+BUILDLINK_DEPENDS.python22?=		python22>=2.2
 
 # transform the list into individual variables
 .for pv in ${PYTHON_VERSIONS_ACCEPTED}
@@ -93,7 +93,7 @@ PYVERSSUFFIX=	2.1
 PYPKGPREFIX=	py21
 .elif ${_PYTHON_VERSION} == "21pth"
 PYPKGSRCDIR=	../../lang/python21-pth
-PYDEPENDENCY=	${BUILDLINK_DEPENDS.python21pth}:${PYPKGSRCDIR}
+PYDEPENDENCY=	${BUILDLINK_DEPENDS.python21-pth}:${PYPKGSRCDIR}
 PYVERSSUFFIX=	2p1
 PYPKGPREFIX=	py21pth
 .  if defined(USE_BUILDLINK2)
