@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.2 2003/11/01 08:28:47 grant Exp $
+
 --- src/test_grabbag/cuesheet/Makefile.in.orig	2003-10-31 14:49:11.000000000 +1100
 +++ src/test_grabbag/cuesheet/Makefile.in	2003-10-31 14:49:39.000000000 +1100
 @@ -144,8 +144,8 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 2003/11/01 08:28:47 grant Exp $
+
 --- src/flac/Makefile.in.orig	2003-01-26 05:42:28.000000000 +1100
 +++ src/flac/Makefile.in	2003-10-31 14:37:03.000000000 +1100
 @@ -158,10 +158,10 @@
