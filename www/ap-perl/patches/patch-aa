@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2001/10/01 08:36:44 jlam Exp $
+$NetBSD: patch-aa,v 1.5.2.1 2002/06/30 15:31:16 jlam Exp $
 
 --- apaci/Makefile.tmpl.orig	Tue Nov 24 11:38:52 1998
 +++ apaci/Makefile.tmpl	Fri Apr 30 20:36:05 1999
@@ -10,15 +10,6 @@ $NetBSD: patch-aa,v 1.5 2001/10/01 08:36:44 jlam Exp $
 +   $(MP_STATIC_OBJS_PIC) $(DYNALOADER_OBJ_PIC)
  
  all: lib
- 
-@@ -58,7 +58,7 @@
- 
- libperl.so: $(MP_OBJS_PIC)
- 	$(MP_RM) $@
--	$(MP_LD) $(MP_LDFLAGS_SHLIB) -o $@ $(MP_OBJS_PIC) $(MP_LIBS)
-+	ld $(MP_LDFLAGS_SHLIB:S/-Wl,//g) -o $@ $(MP_OBJS_PIC) $(MP_LIBS:S/-Wl,//g:N*.a)
- 
- .SUFFIXES: .xs .c .o .lo
  
 @@ -94,7 +94,8 @@
  
