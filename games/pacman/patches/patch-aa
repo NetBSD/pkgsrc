@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/21 22:58:26 garbled Exp $
+--- Makefile.in.orig	Mon Jun  7 10:49:02 1999
++++ Makefile.in	Tue Jul 20 23:59:02 1999
+@@ -4,9 +4,10 @@
+ datadir =	@datadir@
+ bindir =	@bindir@
+ 
++CPPFLAGS+=	$(CFLAGS)
+ OBJF =          pacman.o objects.o fontblowup.o
+ DATAFILES =     pacman.dat
+-EXTERN_LIBS =   -lclan -lclanlayer2
++EXTERN_LIBS =   $(LDFLAGS) -lclan -lclanlayer2
+ 
+ all: pacman
+ 
+@@ -29,11 +30,11 @@
+ 
+ pacman: $(OBJF) $(DATAFILES)
+ 	@echo "Building executable pacman..."
+-	@g++ $(EXTERN_LIBS) -o pacman $(OBJF)
++	@g++ $(EXTERN_LIBS) -DDATAFILE=\"$(datadir)/pacman/pacman.dat\" -o pacman $(OBJF)
+ 
+ %.o : %.cpp
+ 	@echo "Compiling $<"
+-	@$(CXX) -c $(CPPFLAGS) $(CXXFLAGS) -O3 -Wall $< -o $@
++	@$(CXX) -c $(CPPFLAGS) $(CXXFLAGS) -DDATAFILE=\"$(datadir)/pacman/pacman.dat\" -O3 -Wall  $< -o $@
+ %.dat : %.scr
+ 	@echo "Building datafile $<"
+ 	@datafile_compiler $< $@
