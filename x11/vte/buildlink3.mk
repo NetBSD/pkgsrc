@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:17 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/04/01 18:49:52 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 VTE_BUILDLINK3_MK:=	${VTE_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nvte}
 BUILDLINK_PACKAGES+=	vte
 
 .if !empty(VTE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.vte+=		vte>=0.11.10nb1
+BUILDLINK_DEPENDS.vte+=		vte>=0.11.10nb2
 BUILDLINK_PKGSRCDIR.vte?=	../../x11/vte
 
 BUILDLINK_FILES.vte+=	lib/vte/decset
