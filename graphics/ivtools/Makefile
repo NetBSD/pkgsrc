@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2004/08/22 03:20:49 markd Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/01 20:49:47 markd Exp $
 
-DISTNAME=	ivtools-1.2.1
+DISTNAME=	ivtools-1.2.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ivtools/}
 EXTRACT_SUFX=	.tgz
