@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2000/09/11 15:41:40 jwise Exp $
+# $NetBSD: Makefile,v 1.100 2000/09/26 08:54:45 soren Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -73,7 +73,6 @@
     SUBDIR += py-zpublisher
     SUBDIR += spfc
     SUBDIR += squid
-    SUBDIR += squid-current
     SUBDIR += surfraw
     SUBDIR += swish-e
     SUBDIR += tcl-cgi
