@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 1999/10/28 00:33:09 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2001/04/28 11:07:35 zuntum Exp $
 
 --- themes/Makefile.in.orig	Mon Apr 26 10:53:58 1999
 +++ themes/Makefile.in	Mon Oct 25 18:10:44 1999
@@ -9,7 +9,7 @@ $NetBSD: patch-ac,v 1.1 1999/10/28 00:33:09 jlam Exp $
 -	  if test ! -d $(DESTDIR)$(pkgdatadir)/themes/$$i ; then \
  	    echo "Installing $$i theme in $(DESTDIR)$(pkgdatadir)/themes" ; \
  	    $(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/themes/$$i ; \
- 	    $(CP) $$i/???* $(DESTDIR)$(pkgdatadir)/themes/$$i ; \
+	    $(CP) $(srcdir)/$$i/???* $(DESTDIR)$(pkgdatadir)/themes/$$i ; \
  	    $(CHMOD) 755 $(DESTDIR)$(pkgdatadir)/themes/$$i ; \
  	    $(CHMOD) 644 $(DESTDIR)$(pkgdatadir)/themes/$$i/???* ; \
  	    rm -f $(DESTDIR)$(pkgdatadir)/themes/$$i/MAIN.in ; \
@@ -17,7 +17,7 @@ $NetBSD: patch-ac,v 1.1 1999/10/28 00:33:09 jlam Exp $
 -	    echo "ALERT!  Not overwriting theme $$i in $(DESTDIR)$(pkgdatadir)/themes.  You will need to update this theme manually." ; \
 -	  fi ; \
  	done
--	@if test ! -f $(HOME)/.active.tags ; then $(CP) active.tags $(HOME)/.active.tags ; \
+-	@if test ! -f $(HOME)/.active.tags ; then $(CP) $(srcdir)/active.tags $(HOME)/.active.tags ; \
 -	   else echo "Not installing $(HOME)/.active.tags -- File exists." ; fi
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
