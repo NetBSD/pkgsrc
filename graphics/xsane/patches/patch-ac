@@ -1,0 +1,30 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/04/06 05:57:31 rh Exp $
+
+--- frontend/Makefile.in.orig	Thu Mar 25 16:42:21 1999
++++ frontend/Makefile.in	Mon Apr  5 19:46:35 1999
+@@ -29,7 +29,7 @@
+ 
+ CC = @CC@
+ INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/include -I$(top_srcdir)/include \
+-	@GTK_CFLAGS@ @INCLUDES@
++	@GTK_CFLAGS@ @INCLUDES@ -I${LOCALBASE}/include
+ DEFS = @DEFS@
+ CPPFLAGS = @CPPFLAGS@
+ CFLAGS = @CFLAGS@
+@@ -38,7 +38,7 @@
+ GTK_LIBS = @GTK_LIBS@
+ GIMP_LIBS = @GIMP_LIBS@
+ 
+-LIBTOOL = ../libtool
++LIBTOOL = @LIBTOOL@
+ MINST	= --mode=install
+ MLINK	= --mode=link
+ XSCAN	= @XSCAN@
+@@ -66,7 +66,6 @@
+ 	  $(LIBTOOL) $(MINST) $(INSTALL_PROGRAM) $${program} \
+ 	    $(bindir)/$${program}; \
+ 	done
+-	$(INSTALL_DATA) $(srcdir)/sane-style.rc $(datadir)/sane-style.rc
+ 	$(INSTALL_DATA) $(srcdir)/xsane-logo.xpm $(datasanedir)/xsane-logo.xpm
+ 
+ xsane: $(XSANE_OBJS) $(LIBSANEI) $(LIBLIB)
