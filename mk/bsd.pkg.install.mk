@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.26 2002/09/19 09:02:40 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.27 2002/09/19 10:20:50 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -179,13 +179,19 @@ FILES_SUBST+=		OWN_DIRS_PERMS=${OWN_DIRS_PERMS:Q}
 #	directories needed to use the package.  It is either YES or NO
 #	and defaults to YES.
 #
+# PKG_RCD_SCRIPTS indicates whether to automatically install rc.d scripts
+#	to ${RCD_SCRIPTS_DIR}.  It is either YES or NO and defaults to
+#	NO.  This variable only takes effect if ${PKG_CONFIG} == "YES".
+#
 # These values merely set the defaults for INSTALL/DEINSTALL scripts, but
 # they may be overridden by resetting them in the environment.
 #
 PKG_CREATE_USERGROUP?=	YES
 PKG_CONFIG?=		YES
+PKG_RCD_SCRIPTS?=	NO
 FILES_SUBST+=		PKG_CREATE_USERGROUP=${PKG_CREATE_USERGROUP}
 FILES_SUBST+=		PKG_CONFIG=${PKG_CONFIG}
+FILES_SUBST+=		PKG_RCD_SCRIPTS=${PKG_RCD_SCRIPTS}
 
 # Substitute for various programs used in the DEINSTALL/INSTALL scripts and
 # in the rc.d scripts.
