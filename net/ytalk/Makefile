@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 1999/09/13 14:54:37 jlam Exp $
+# $NetBSD: Makefile,v 1.5 1999/12/31 12:22:36 tron Exp $
 
 DISTNAME=       ytalk-3.1.1
 CATEGORIES=	net
-MASTER_SITES=   http://www.eleves.ens.fr:8080/home/espel/ytalk/\
-		${MASTER_SITE_SUNSITE:=system/network/chat/}
+MASTER_SITES=   ${MASTER_SITE_SUNSITE:=system/network/chat/}
 
 MAINTAINER=	mike@ethmoid.org
 HOMEPAGE=	http://www.eleves.ens.fr:8080/home/espel/ytalk/
