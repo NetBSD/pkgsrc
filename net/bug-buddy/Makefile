@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2003/12/13 00:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/12/14 23:54:09 xtraeme Exp $
 #
 
-DISTNAME=		bug-buddy-2.2.0
-PKGREVISION=		7
+DISTNAME=		bug-buddy-2.4.0
 CATEGORIES=		net gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/bug-buddy/2.2/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/bug-buddy/2.4/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		sab@posix.org.uk
@@ -26,4 +25,5 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../devel/libglade2/buildlink2.mk"
+.include "../../x11/gnome-desktop/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
