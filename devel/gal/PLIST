@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:35 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/16 03:20:18 rh Exp $
 include/gal/util/e-util.h
 include/gal/util/e-xml-utils.h
 include/gal/util/e-cache.h
 include/gal/util/e-i18n.h
 include/gal/util/e-bit-array.h
 include/gal/util/e-sorter.h
+include/gal/util/e-iconv.h
 include/gal/util/e-text-event-processor-emacs-like.h
 include/gal/util/e-text-event-processor-types.h
 include/gal/util/e-text-event-processor.h
+include/gal/util/e-unicode-i18n.h
+include/gal/widgets/e-canvas-background.h
 include/gal/widgets/e-hsv-utils.h
 include/gal/widgets/e-selection-model-array.h
 include/gal/widgets/e-selection-model-simple.h
@@ -126,8 +129,8 @@ include/gal/widgets/e-categories-master-list-dialog-model.h
 include/gal/widgets/e-categories-master-list-dialog.h
 include/gal/widgets/e-categories-master-list.h
 include/gal/widgets/e-reflow-model.h
-lib/libgal.so.14.0
-lib/libgal.so.14
+lib/libgal.so.19.0
+lib/libgal.so.19
 lib/libgal.so
 lib/libgal.la
 lib/libgal.a
@@ -184,6 +187,7 @@ ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gal.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gal.mo

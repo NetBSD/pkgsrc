@@ -1,4 +1,4 @@
-This the G App Libs (GAL).
+This is the G App Lib (GAL).
 
 This module contains some library functions that came from Gnumeric
 and Evolution.  The idea is to reuse those widgets across various

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2001/10/12 16:27:43 rh Exp $
+# $NetBSD: Makefile,v 1.20 2002/01/16 03:20:18 rh Exp $
 
-DISTNAME=		gal-0.14
+DISTNAME=		gal-0.19
 CATEGORIES=		gnome devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/gal/}
 EXTRACT_SUFX=		.tar.bz2
@@ -9,8 +9,6 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Gnome Application Libraries
 
-DEPENDS+=		libunicode>=0.4:../../textproc/libunicode
-
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
@@ -18,6 +16,7 @@ USE_X11BASE=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../converters/libiconv/buildlink.mk"
+.include "../../textproc/libunicode/buildlink.mk"
 .include "../../sysutils/gnome-vfs/buildlink.mk"
 .include "../../print/gnome-print/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
