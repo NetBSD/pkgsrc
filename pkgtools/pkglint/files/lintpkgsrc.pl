@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.90 2004/06/27 22:47:38 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.91 2004/06/28 09:55:44 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -40,6 +40,10 @@ if (! getopts('BDE:I:K:LM:OP:RSVdg:hilmopru', \%opt) || $opt{h} ||
 	    defined($opt{E})))
     { usage_and_exit(); }
 $| = 1;
+
+# Horrible kludge to ensure we have a value for testing in conditionals, but
+# gets removed in the final evaluation
+my $magic_undefined = 'M_a_G_i_C_UNDEFINED';
 
 get_default_makefile_vars(); # $default_vars
 
@@ -81,10 +85,9 @@ if ($opt{D} && @ARGV)
 							$opt{o}, $opt{m});
 	if ($opt{r})
 	    {
-	    safe_chdir("$pkgdistdir");
 	    verbose("Unlinking 'bad' distfiles\n");
 	    foreach my $distfile (@baddist)
-		{ unlink($distfile); }
+		{ unlink("$pkgdistdir/$distfile"); }
 	    }
 	}
 
@@ -1011,6 +1014,8 @@ sub parse_makefile_vars
 		}
 	    }
 	}
+    foreach my $key (keys %vars)
+	{ $vars{$key} =~ s/$magic_undefined//; }
     \%vars;
     }
 
@@ -1023,7 +1028,7 @@ sub parse_expand_vars
 	if (defined(${$vars}{$1}))
 	    { $line = $`.${$vars}{$1}.$'; }
 	else
-	    { $line = $`.$'; }
+	    { $line = $`.$magic_undefined.$'; }
 	}
     $line;
     }
@@ -1037,7 +1042,7 @@ sub parse_expand_vars_dumb
 	if (defined(${$vars}{$1}))
 	    { $line = $`.${$vars}{$1}.$'; }
 	else
-	    { $line = $`.$'; }
+	    { $line = $`.$magic_undefined.$'; }
 	}
     $line;
     }
@@ -1127,6 +1132,7 @@ sub safe_chdir
     {
     my($dir) = @_;
 
+    debug("chdir: $dir");
     if (! chdir($dir))
 	{ fail("Unable to chdir($dir): $!"); }
     }
@@ -1278,16 +1284,16 @@ sub scan_pkgsrc_distfiles_vs_distinfo
 	if (@distwarn)
 	    { verbose(@distwarn); }
 	verbose("checksum mismatches\n");
-	safe_chdir("$pkgdistdir");
+	safe_chdir($pkgdistdir);
 	foreach my $sum (keys %sumfiles)
 	    {
 	    if ($sum eq 'Size')
 		{
-		foreach (@{$sumfiles{$sum}})
+		foreach my $file (@{$sumfiles{$sum}})
 		    {
-		    if (! -f $_ || -S $_ != $distfiles{$_}{sum})
+		    if (! -f $file || -S $file != $distfiles{$_}{sum})
 			{
-			print $_, " (Size)\n";
+			print $file, " (Size)\n";
 			$bad_distfiles{$_} = 1;
 			}
 		    }
@@ -1308,6 +1314,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo
 		}
 	    close(DIGEST);
 	    }
+	safe_chdir('/'); # Do not want to stay in $pkgdistdir
 	}
     (sort keys %bad_distfiles);
     }
