@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2741 2003/07/12 05:56:19 epg Exp $
+$NetBSD: CHANGES,v 1.2742 2003/07/12 06:51:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2751,7 +2751,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gcalctool to 4.2.83nb1 [jmmv 2003-07-11]
 	Updated libxml2 to 2.5.8 [wiz 2003-07-11]
 	Updated libxslt to 1.0.31 [wiz 2003-07-11]
-	Updated spicalc to 1.1.2 [zuntum 2003-07-12]
+	Updated sipcalc to 1.1.2 [zuntum 2003-07-12]
 	Updated polsms to 1.9.2d [zuntum 2003-07-12]
 	Updated poink to 1.6 [zuntum 2003-07-12]
 	Updated p0f to 1.8.3 [zuntum 2003-07-12]
