@@ -3,7 +3,7 @@
 # Date created:		5 December 1996
 # Whom:			Bernd Rosauer <br@schiele-ct.de>
 #
-# $NetBSD: Makefile,v 1.2 1997/11/23 16:28:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1997/11/25 14:10:45 agc Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -55,8 +55,8 @@ post-install:
 	${INSTALL_INFO} ${PREFIX}/info/kpathsea.info ${PREFIX}/info/dir
 	${INSTALL_INFO} ${PREFIX}/info/dvips.info ${PREFIX}/info/dir
 	${INSTALL_INFO} ${PREFIX}/info/fontname.info ${PREFIX}/info/dir
-	@find ${PREFIX}/share/texmf/fonts/{pk,tfm} -type d -print | \
-		xargs chmod 1777
+	@find ${PREFIX}/share/texmf/fonts/pk ${PREFIX}/share/texmf/fonts/tfm \
+		-type d -print | xargs chmod 1777
 	@${SETENV} PREFIX=${PREFIX} ${SH} ${PKGDIR}/INSTALL
 
 .include <bsd.port.mk>
