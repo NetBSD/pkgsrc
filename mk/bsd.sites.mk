@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.14 2004/10/05 18:03:51 jdolecek Exp $
+# $NetBSD: bsd.sites.mk,v 1.15 2004/10/11 19:44:06 tv Exp $
 #
 # Default MASTER_SITES
 
@@ -293,6 +293,14 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://mymirror.asiaosc.org/openoffice/ \
 	ftp://ftp.kr.freebsd.org/pub/openoffice/ \
 	http://www.fs.tum.de/~mrauch/OpenOffice/download/
+
+MASTER_SITE_CYGWIN+= \
+	http://mirror.mcs.anl.gov/cygwin/ \
+	http://mirrors.kernel.org/sources.redhat.com/cygwin/ \
+	http://mirrors.rcn.net/pub/sourceware/cygwin/ \
+	http://mirrors.xmission.com/cygwin/ \
+	ftp://ftp.ring.gr.jp/archives/pc/gnu-win32/ \
+	ftp://ftp.funet.fi/pub/mirrors/cygwin.com/pub/cygwin/
  
 # The primary backup site. 
 MASTER_SITE_BACKUP?=	\
