@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5234 2004/03/12 16:06:40 reed Exp $
+$NetBSD: CHANGES,v 1.5235 2004/03/12 16:47:59 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1441,3 +1441,5 @@ Changes to the packages collection and infrastructure in 2004:
         Updated sketch to 0.6.16 [jmmv 2004-03-12]
         Renamed sketch to skencil [jmmv 2004-03-12]
 	Updated lsof to 4.71 [atatat 2004-03-12]
+	Updated ssh2 to 3.2.9.1 [seb 2004-03-12]
+	Updated ssh2-nox11 to 3.2.9.1 [seb 2004-03-12]
