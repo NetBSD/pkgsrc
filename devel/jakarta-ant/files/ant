@@ -59,6 +59,4 @@ if [ "$JIKESPATH" != "" ] ; then
   fi
 fi
 
-echo LOCALCLASSPATH=$LOCALCLASSPATH
-
 $JAVACMD -classpath "$LOCALCLASSPATH" -Dant.home="${ANT_HOME}" $ANT_OPTS org.apache.tools.ant.Main "$@"
