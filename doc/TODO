@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.766 2003/08/04 15:47:55 jtb Exp $
+$NetBSD: TODO,v 1.767 2003/08/05 06:57:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -66,7 +66,7 @@ Suggested package updates
 	o Amaya-8.1a
 	o ImageViewer-0.6.3
 	o R-1.7.1
-	o TeXmacs-1.0.1.20
+	o TeXmacs-1.0.1.21
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o angband-3.0.3
@@ -107,6 +107,7 @@ Suggested package updates
 	o festival-1.4.3
 	o findutils-4.1.20
 	o fltk-1.1.3
+	o fontconfig-2.2.0
 	o foomatic-2.9.1 [jlam]
 	o fox-1.0.42
 	o fsviewer-0.2.5
@@ -188,6 +189,7 @@ Suggested package updates
 	o nap-1.5.2
 	o napshare-1.2
 	o neon-0.24.0
+	o nessus-2.0.7 [pkg/22356]
 	o net-snmp-5.0.7 [pkg/19939]
 	o net-snmp-5.0.8
 	o netatalk-1.6.3 [pkg/21930]
