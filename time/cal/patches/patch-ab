@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2003/01/03 22:22:11 jmmv Exp $
+$NetBSD: patch-ab,v 1.3 2003/09/24 10:53:36 jmmv Exp $
 
---- cal.c.orig	Thu Jul 11 21:36:33 1996
-+++ cal.c
-@@ -122,6 +122,7 @@ BASIC DATA STRUCTURE:                   
+--- cal.c.orig	Thu Jul 11 20:36:33 1996
++++ cal.c	Wed Sep 24 11:30:56 2003
+@@ -122,6 +122,7 @@
  #include <ctype.h>
  #include <string.h>
  #include <sys/types.h>
@@ -10,18 +10,18 @@ $NetBSD: patch-ab,v 1.2 2003/01/03 22:22:11 jmmv Exp $
   
  #ifndef max
  #define max(a,b) (((a)>(b))?(a):(b))
-@@ -130,6 +131,10 @@ BASIC DATA STRUCTURE:                   
+@@ -130,6 +131,10 @@
  /* Note: Other unix systems may require this next re-define to work. */
  /* I believe that SCO is one such system.  Please send in any fixes  */
  /* needed to get your system running.                                */
-+#if (defined(BSD) && BSD >= 199306)
++#if (defined(BSD) && BSD >= 199306) || defined (sun)
 +#define stricmp(a,b) strcasecmp(a,b) /* case-insensitive string comparison */
 +#endif
 + 
  #ifdef __linux__          /* Make linux compatible with stricmp() */
  #define stricmp(a,b) strcasecmp(a,b) /* case-insensitive string comparison */
  #endif
-@@ -1401,8 +1406,8 @@ FILE *efopen(const char *file, const cha
+@@ -1401,8 +1406,8 @@
              strcpy(str, ".");
              strcpy(str, file);
              if ((fp = fopen(str, mode)) == NULL) {
