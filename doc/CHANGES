@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3371 2003/09/14 17:41:51 recht Exp $
+$NetBSD: CHANGES,v 1.3372 2003/09/14 17:45:21 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3685,3 +3685,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bsdgrep-devel to 20030914 [cjep 2003-09-14]
 	Updated roundup to 0.6.1 [recht 2003-09-14]
 	Updated py-pyrex to 0.8.1 [recht 2003-09-14]
+	Updated py-Numeric to 23.1 [recht 2003-09-14]
