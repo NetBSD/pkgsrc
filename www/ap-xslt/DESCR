@@ -9,4 +9,3 @@ the XSL file will be opened. Should the DOCTYPE be "tutorial", the
 XSL file opened would be tutorial_html.xsl. The content-type returned
 to the browser is text/html. The translation occurs transparently
 to the user.
-
