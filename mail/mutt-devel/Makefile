@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/09/21 12:25:59 tron Exp $
+# $NetBSD: Makefile,v 1.13 2001/10/27 07:00:52 jlam Exp $
 
 DISTNAME=		mutt-1.3.21i
 CATEGORIES=		mail
@@ -14,7 +14,6 @@ BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 BUILD_USES_MSGFMT=	YES
-#USE_LIBINTL=		YES
 
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
