@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2000/01/20 21:17:24 tron Exp $
+# $NetBSD: Makefile,v 1.38 2000/02/15 10:29:35 agc Exp $
 
 DISTNAME=		gnome-core-1.0.55
 CATEGORIES=		x11 gnome
@@ -37,10 +37,10 @@ pre-configure:
 
 post-install:
 	@if [ -x ${PREFIX}/bin/cpumemusage_applet ]; then \
-	  ${CP} ${PKGDIR}/PLIST ${PLIST_SRC}; \
+	  ${CP} ${PKGDIR}/PLIST.${OPSYS} ${PLIST_SRC}; \
 	else \
 	  ${EGREP} -v '/((cpumem|disk)usage|(cpu|mem|multi|swap)load)_applet' \
-	  <${PKGDIR}/PLIST >${PLIST_SRC}; \
+	  <${PKGDIR}/PLIST.${OPSYS} >${PLIST_SRC}; \
 	fi
 
 .include "../../mk/bsd.prefs.mk"

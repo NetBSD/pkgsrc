@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2000/01/20 14:25:20 tron Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.1 2000/02/15 10:29:36 agc Exp $
 bin/another_clock_applet
 bin/asclock_applet
 bin/battery_applet
@@ -26,8 +26,6 @@ bin/gnomepager_applet
 bin/jbc_applet
 bin/life_applet
 bin/mini_commander_applet
-bin/mixer_applet
-bin/modemlights_applet
 bin/multiload_applet
 bin/panel
 bin/save-session
@@ -54,8 +52,6 @@ etc/CORBA/servers/help-browser.gnorba
 etc/CORBA/servers/jbc_applet.gnorba
 etc/CORBA/servers/life_applet.gnorba
 etc/CORBA/servers/mini-commander_applet.gnorba
-etc/CORBA/servers/mixer_applet.gnorba
-etc/CORBA/servers/modemlights_applet.gnorba
 etc/CORBA/servers/multiload_applet.gnorba
 etc/CORBA/servers/panel.gnorba
 etc/CORBA/servers/tasklist_applet.gnorba
@@ -88,12 +84,10 @@ share/applets/Monitors/diskusage_applet.desktop
 share/applets/Monitors/memload_applet.desktop
 share/applets/Monitors/swapload_applet.desktop
 share/applets/Multimedia/.directory
-share/applets/Multimedia/mixer_applet.desktop
 share/applets/Network/.directory
 share/applets/Network/clockmail_applet.desktop
 share/applets/Network/dialer_applet.desktop
 share/applets/Network/mailcheck_applet.desktop
-share/applets/Network/modemlights_applet.desktop
 share/applets/Network/webcontrol_applet.desktop
 share/applets/Utility/.directory
 share/applets/Utility/charpick_applet.desktop
