@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1998/05/31 13:24:06 frueauf Exp $
+# $NetBSD: Makefile,v 1.25 1998/06/03 12:55:56 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -14,7 +14,8 @@ MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs-20.3/ \
 		ftp://ftp.gw.com/mirrors/pub/unix/xemacs/xemacs-20.3/
 DISTFILES=	xemacs-20.3.tar.gz xemacs-20.3-info.tar.gz
 
-OPSYS!=		uname -s
+.include "../../mk/bsd.prefs.mk"
+
 .if (${OPSYS} == "FreeBSD")
 MAINTAINER=	me@FreeBSD.org
 WITH_SOUND=	--with-sound=native
