@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/06/01 11:23:41 rh Exp $
+# $NetBSD: Makefile,v 1.18 2000/06/21 01:17:52 jlam Exp $
 #
 
 DISTNAME=		rsaref
@@ -15,7 +15,7 @@ MIRROR_DISTFILE=	no
 IS_INTERACTIVE=		yes # requires options to be set in order to use
 LICENSE=		no-commercial-use
 
-USE_PKGLIBTOOL=		yes
+USE_LIBTOOL=		yes
 MAKEFILE=		unix/makefile
 ALL_TARGET=		librsaref.la
 
