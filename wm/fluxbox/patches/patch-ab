@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.9 2004/05/13 04:29:13 xtraeme Exp $
+$NetBSD: patch-ab,v 1.10 2004/09/02 21:56:32 xtraeme Exp $
 
---- util/Makefile.in.orig	2004-05-13 06:01:43.000000000 +0200
-+++ util/Makefile.in	2004-05-13 06:02:50.000000000 +0200
+--- util/Makefile.in.orig	2004-09-02 23:16:03.000000000 +0200
++++ util/Makefile.in	2004-09-02 23:16:38.000000000 +0200
 @@ -94,7 +94,7 @@
  SUBDIRS = fbrun
  INCLUDES = -I$(top_srcdir)/src -I$(top_srcdir)/src/FbTk
@@ -9,8 +9,8 @@ $NetBSD: patch-ab,v 1.9 2004/05/13 04:29:13 xtraeme Exp $
 -bin_PROGRAMS = bsetroot
 +bin_PROGRAMS =
  bsetroot_SOURCES = bsetroot.cc bsetroot.hh
- bsetroot_LDADD = ../src/FbRootWindow.o ../src/I18n.o \
- 			../src/FbAtoms.o ../src/FbTk/libFbTk.a
+ bsetroot_LDADD = ../src/FbRootWindow.o ../src/FbAtoms.o \
+ 			../src/FbTk/libFbTk.a
 @@ -108,7 +108,7 @@
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = $(top_builddir)/config.h

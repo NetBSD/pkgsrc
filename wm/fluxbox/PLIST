@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/05/13 04:29:13 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/02 21:56:32 xtraeme Exp $
 bin/fbrun
 bin/fbsetbg
 bin/fluxbox
@@ -13,21 +13,14 @@ share/fluxbox/init
 share/fluxbox/keys
 share/fluxbox/menu
 share/fluxbox/nls/C/fluxbox.cat
-share/fluxbox/nls/POSIX
-share/fluxbox/nls/US_ASCII
 share/fluxbox/nls/bg_BG/fluxbox.cat
 share/fluxbox/nls/da_DK/fluxbox.cat
 share/fluxbox/nls/de_DE/fluxbox.cat
-share/fluxbox/nls/en
-share/fluxbox/nls/en_US
-share/fluxbox/nls/es
 share/fluxbox/nls/es_ES/fluxbox.cat
 share/fluxbox/nls/et_EE/fluxbox.cat
-share/fluxbox/nls/fr
 share/fluxbox/nls/fr_FR/fluxbox.cat
 share/fluxbox/nls/it_IT/fluxbox.cat
 share/fluxbox/nls/ja_JP/fluxbox.cat
-share/fluxbox/nls/lv
 share/fluxbox/nls/lv_LV/fluxbox.cat
 share/fluxbox/nls/nl_NL/fluxbox.cat
 share/fluxbox/nls/pl_PL/fluxbox.cat
