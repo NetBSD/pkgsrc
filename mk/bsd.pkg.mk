@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.317 1999/08/21 01:17:59 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.318 1999/08/21 19:27:27 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1549,7 +1549,7 @@ root-deinstall:
 	${_PKG_SILENT}${_PKG_DEBUG} \
 	found=`${PKG_INFO} -e "${PKGNAME:C/-[^-]*$/-[0-9]*/}" || ${TRUE}` ; \
 	if [ "$$found" != "" ]; then \
-		${ECHO_CMD} ${PKG_DELETE} ${root-install-flags} $$found || ${TRUE} ; \
+		${ECHO} Running ${PKG_DELETE} ${root-install-flags} $$found ; \
 		${PKG_DELETE} ${root-install-flags} $$found || ${TRUE} ; \
 	fi
 	@${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
