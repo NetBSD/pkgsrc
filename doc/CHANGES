@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6182 2004/06/07 17:01:49 cube Exp $
+$NetBSD: CHANGES,v 1.6183 2004/06/07 17:43:51 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2843,3 +2843,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xisp to 2.7p1 [minskim 2004-06-07]
 	Updated gkrellm to 2.2.1nb1 [cube 2004-06-07]
 	Updated gkrellm-server to 2.2.1nb1 [cube 2004-06-07]
+	Added dmassage-0.6 [xtraeme 2004-06-07]
