@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.29 2001/12/26 21:20:26 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.30 2002/01/01 18:21:27 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -896,12 +896,6 @@ NMH_PAGER?= more
 # default pager for use in nmh.
 # Possible: any editor.
 # Default: more
-
-NS_ENCRYPTION?=	export
-# Used to decide if export or US version of Netscape should be
-# installed.
-# Possible: export, us
-# Default: export
 
 #NS_PREFERRED=
 # Used by netscape to determine preferred browser to open
