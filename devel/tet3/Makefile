@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:13:29 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/19 21:47:00 minskim Exp $
 
 DISTNAME=	tet3.3h-unsup.src
 PKGNAME=	tet3-3.3h
@@ -12,7 +12,7 @@ COMMENT=	The Open Group test harness
 
 WRKSRC=		${WRKDIR}/src
 HAS_CONFIGURE=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 REPLACE_PERL=	../contrib/suite/src/common.pl ../contrib/NTperldemo/ts/tc1.pl
 REPLACE_PERL+=	../contrib/NTperldemo/ts/tc2.pl ../contrib/NTperldemo/ts/tc3.pl
@@ -31,7 +31,7 @@ post-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/tet3/lib
 	cd ${WRKSRC}/../lib && ${PAX} -rwpe . ${PREFIX}/tet3/lib
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 PTHREAD_OPTS=	native	# only native threads make sense
 
@@ -39,5 +39,5 @@ PTHREAD_OPTS=	native	# only native threads make sense
 PKG_SKIP_REASON=	"Native threads are needed for this package"
 .endif
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
