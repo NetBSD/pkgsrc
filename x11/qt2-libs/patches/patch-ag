@@ -1,0 +1,25 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/10/19 07:41:16 skrll Exp $
+
+--- tools/designer/designer/Makefile.in.orig	Wed Oct  4 10:56:06 2000
++++ tools/designer/designer/Makefile.in
+@@ -6,15 +6,15 @@
+ CXXFLAGS=	$(SYSCONF_CXXFLAGS_QT) $(SYSCONF_CXXFLAGS) -DDESIGNER
+ CC	=	$(SYSCONF_CC) $(QT_C_MT)
+ CFLAGS	=	$(SYSCONF_CFLAGS) -DDESIGNER
+-INCPATH =	-I../shared -I../util -I../../../src/3rdparty/zlib
+-LFLAGS	=	$(SYSCONF_LFLAGS_QT) $(SYSCONF_RPATH_QT) $(SYSCONF_LFLAGS) $(QT_LFLAGS_MT)
+-LIBS	=	$(SUBLIBS) -lqutil -L$(QTDIR)/lib -lqutil -L$(QTDIR)/lib $(SYSCONF_LIBS_QT) $(SYSCONF_LIBS) $(SYSCONF_LIBS_QTAPP)
++INCPATH =	-I../shared -I../util #-I../../../src/3rdparty/zlib
++LFLAGS	=	$(SYSCONF_LFLAGS_QT) $(SYSCONF_RPATH_QT) $(SYSCONF_LFLAGS) $(QT_LFLAGS_MT) $(SYSCONF_RPATH_X11) $(SYSCONF_RPATH_OPENGL)
++LIBS	=	$(SUBLIBS) ../util/libqutil.la $(SYSCONF_LIBS_QT) $(SYSCONF_LIBS) $(SYSCONF_LIBS_QTAPP)
+ MOC	=	$(SYSCONF_MOC)
+-UIC	=	$(SYSCONF_UIC)
++UIC	=	../uic/uic
+ 
+ ####### Target
+ 
+-DESTDIR = $(QTDIR)/bin/
++DESTDIR = 
+ VER_MAJ = 1
+ VER_MIN = 0
+ VER_PATCH = 0
