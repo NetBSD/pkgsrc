@@ -1,13 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/10 17:47:38 cjep Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 AUDIOFILE_BUILDLINK3_MK:=	${AUDIOFILE_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+) 
+.if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	audiofile
 .endif
 
-.if !empty(AUDIOFILE_BUILDLINK3_MK:M+) 
+.if !empty(AUDIOFILE_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		audiofile
 BUILDLINK_DEPENDS.audiofile?=	libaudiofile>=0.2.1
 BUILDLINK_PKGSRCDIR.audiofile?=	../../audio/libaudiofile
