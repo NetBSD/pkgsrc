@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2005/02/16 02:21:36 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.32 2005/02/18 00:48:05 xtraeme Exp $
 
 DISTNAME=		mysql-4.1.10
 CATEGORIES=		databases
@@ -35,6 +35,12 @@ CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR}
 CONFIGURE_ARGS+=	--with-named-z-libs=z
 CONFIGURE_ARGS+=	--without-libwrap
 CONFIGURE_ARGS+=	--with-named-curses-libs="-lcurses -ltermcap"
+
+.if !empty(LOWER_OPSYS:Mirix5*)
+CFLAGS+=		-DIRIX5 -DNEEDS_BSTRING_H
+# libgen is incorrectly detected
+CONFIGURE_ENV+=		ac_cv_lib_gen_p2open="no"
+.endif
 
 # We always use our own readline, either system- or pkgsrc-supplied.
 CONFIGURE_ARGS+=	--without-readline
