@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/08/01 23:50:19 mjl Exp $
+# $NetBSD: Makefile,v 1.13 2001/08/06 16:25:44 tron Exp $
 
 DISTNAME=		gnucash-1.6.1
 CATEGORIES=		finance
@@ -43,6 +43,9 @@ CPPFLAGS+=		-I${WRKSRC}/include
 post-extract:
 	${MKDIR} ${WRKSRC}/include
 	${LN} -s /usr/include/db.h ${WRKSRC}/include/db_185.h
+.if !exists(/usr/include/wctype.h)
+	${TOUCH} ${WRKSRC}/include/wctype.h
+.endif
 .endif
 
 .include "../../mk/bsd.pkg.mk"
