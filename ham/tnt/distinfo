@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:24:06 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 13:47:18 agc Exp $
 
-MD5 (tnt-1.9.1.tar.bz2) = 3fbd9bc029611a462c7864cf79994ffa
+SHA1 (tnt-1.9.1.tar.bz2) = d3842367acdb970e4c65f5fc62bf8347e024de7a
+Size (tnt-1.9.1.tar.bz2) = 742180 bytes
