@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.3 2003/06/06 22:54:05 abs Exp $
+# $Id: optimize_gcc.mk,v 1.4 2003/06/08 12:44:10 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and probably quite broken by design.
@@ -27,19 +27,21 @@ PKGBASE=${.CURDIR:C:.*/::}
 
 COPT_FLAGS+=-ffast-math -fomit-frame-pointer
 
-PKG_EXCLUDE_OMIT_FRAME_POINTER=lua4
-PKG_EXCLUDE_O3=
-.if defined(USE_GCC3)
+PKG_EXCLUDE_RENAME_REGISTERS+=
+PKG_EXCLUDE_OMIT_FRAME_POINTER+=lua4
+.if defined(USE_GCC3) # 1.6.1 needs this, but not 1.6T
+PKG_EXCLUDE_RENAME_REGISTERS+=perl5 perl58 ORBit
+.else
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=mozilla phoenix qt3-libs kdeedu3
-PKG_EXCLUDE_O3+=perl5 perl58
 .endif
 
-.if empty(PKG_EXCLUDE_OMIT_FRAME_POINTER:M${PKGBASE})
-COPT_FLAGS+=-fomit-frame-pointer
+.if !empty(PKG_EXCLUDE_OMIT_FRAME_POINTER:M${PKGBASE})
+COPT_FLAGS:=    ${COPT_FLAGS:S/-fomit-frame-pointer//}
 .endif
 
-.if !empty(PKG_EXCLUDE_O3:M${PKGBASE})
-COPT_FLAGS:=	${COPT_FLAGS:S/-O3//}
+# -O3 implies -finline-functions and -frename-registers
+.if !empty(PKG_EXCLUDE_RENAME_REGISTERS:M${PKGBASE})
+COPT_FLAGS:=	${COPT_FLAGS:S/-O3/-finline-functions/}
 .endif
 
 CFLAGS+=${COPT_FLAGS}
