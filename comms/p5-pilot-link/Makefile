@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/09/21 07:52:51 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/10/27 19:47:52 seb Exp $
 
 DISTNAME=		pilot-link.0.9.5
 PKGNAME=		p5-pilot-link-0.1
@@ -18,11 +18,6 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/PDA/Pilot/.packlist
 EXTRACT_ELEMENTS=	${DISTNAME}/tools/Perl5
 WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
 
-# Force this to come at the end of the "make all" command to override
-# OTHERLDFLAGS setting in perl-generated Makefile.
-#
-ALL_TARGET+=		OTHERLDFLAGS="${LDFLAGS}"
-
 pre-configure:
 	@cd ${WRKSRC};							\
 	${SED}	-e "s|@prefix@|${PREFIX}|g"				\
@@ -31,10 +26,6 @@ pre-configure:
 		-e "s|\(-I.*\)\(',\)|\1 ${CPPFLAGS}\2|"			\
 		Makefile.PL.in > Makefile.PL
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
-
 .include "../../comms/pilot-link-libs/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
-
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
