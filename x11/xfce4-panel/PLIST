@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/26 10:58:02 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/03 05:34:09 martti Exp $
 bin/xfce4-panel
 etc/xfce4/xfce4rc
 etc/xfce4/xfce4rc.ca
@@ -37,6 +37,7 @@ lib/xfce4/panel-plugins/libsystembuttons.a
 lib/xfce4/panel-plugins/libsystembuttons.la
 lib/xfce4/panel-plugins/libsystembuttons.so
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce4-panel.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfce4-panel.mo
@@ -52,8 +53,11 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfce4-panel.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfce4-panel.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/xfce4-panel.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfce4-panel.mo
 share/xfce4/doc/C/images/clock-properties.png
@@ -67,6 +71,17 @@ share/xfce4/doc/C/images/nooptions-properties.png
 share/xfce4/doc/C/images/panel-settings.png
 share/xfce4/doc/C/images/systembuttons-properties.png
 share/xfce4/doc/C/xfce4-panel.html
+share/xfce4/doc/fr/images/clock-properties.png
+share/xfce4/doc/fr/images/default_panel.png
+share/xfce4/doc/fr/images/handle-popup.png
+share/xfce4/doc/fr/images/item-popup.png
+share/xfce4/doc/fr/images/launcher-properties.png
+share/xfce4/doc/fr/images/mailcheck-properties.png
+share/xfce4/doc/fr/images/menuitem-properties.png
+share/xfce4/doc/fr/images/nooptions-properties.png
+share/xfce4/doc/fr/images/panel-settings.png
+share/xfce4/doc/fr/images/systembuttons-properties.png
+share/xfce4/doc/fr/xfce4-panel.html
 share/xfce4/themes/Crystal/README
 share/xfce4/themes/Crystal/edit.png
 share/xfce4/themes/Crystal/file1.png
