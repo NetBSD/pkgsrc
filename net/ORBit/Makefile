@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2001/01/14 12:19:34 tron Exp $
+# $NetBSD: Makefile,v 1.44 2001/01/19 21:39:34 tron Exp $
 #
 
 DISTNAME=		ORBit-0.5.6
@@ -25,6 +25,12 @@ CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=		-I${LOCALBASE}/include		# libintl.h
 
 INFO_FILES=		libIDL.info
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == SunOS)
+DEPENDS+=		tcp_wrappers>=7.6:../../security/tcp_wrappers
+.endif
 
 pre-configure:
 	cd ${WRKSRC}/popt && autoconf
