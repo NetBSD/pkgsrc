@@ -1,18 +1,18 @@
-$NetBSD: patch-ah,v 1.1 2002/11/26 12:32:21 jmmv Exp $
+$NetBSD: patch-ah,v 1.2 2004/12/03 13:42:47 adam Exp $
 
---- config/Makefile.in.orig	Mon Mar 25 17:50:27 2002
+--- config/Makefile.in.orig	2004-09-23 01:16:17.000000000 +0000
 +++ config/Makefile.in
-@@ -23,7 +23,8 @@ bindir = @bindir@
+@@ -158,7 +158,8 @@ prefix = @prefix@
+ program_transform_name = @program_transform_name@
  sbindir = @sbindir@
- libexecdir = @libexecdir@
- datadir = @datadir@
+ sharedstatedir = @sharedstatedir@
 -sysconfdir = @sysconfdir@
 +realsysconfdir = @sysconfdir@
 +sysconfdir = @datadir@/examples/@PACKAGE@
- sharedstatedir = @sharedstatedir@
- localstatedir = @localstatedir@
- libdir = @libdir@
-@@ -219,7 +220,7 @@ maintainer-clean-generic clean mostlycle
+ target_alias = @target_alias@
+ EXTRA_DIST = imrc.in im_palette.pal im_palette-small.pal im_palette-tiny.pal
+ sysconf_DATA = imrc im_palette.pal im_palette-small.pal im_palette-tiny.pal
+@@ -331,7 +332,7 @@ uninstall-am: uninstall-info-am uninstal
  
  
  imrc: imrc.in
