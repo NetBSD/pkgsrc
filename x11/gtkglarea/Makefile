@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/10/23 00:00:54 tron Exp $
+# $NetBSD: Makefile,v 1.12 2000/02/05 15:48:52 wiz Exp $
 
 DISTNAME=	gtkglarea-1.2.1
 CATEGORIES=	x11 graphics
@@ -28,5 +28,5 @@ post-install:
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
 	${LN} -fs ${PREFIX}/share/aclocal/gtkgl.m4 \
 	  ${LOCALBASE}/share/aclocal/gtkgl.m4
-	
+
 .include "../../mk/bsd.pkg.mk"
