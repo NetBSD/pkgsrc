@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/23 01:32:33 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/24 01:10:31 xtraeme Exp $
 
 DISTNAME=	    jftpgw-0.13.4
 CATEGORIES=	    net
@@ -22,7 +22,7 @@ CONF_FILES=		${EGDIR}/jftpgw.conf ${PKG_SYSCONFDIR}/jftpgw.conf
 
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	post-build
-SUBST_FILES.config=	${WRKSRC}/jftpgw.conf.sample
+SUBST_FILES.config=	jftpgw.conf.sample
 SUBST_SED.config=	-e "s/nobody/root/"
 
 .include "../../mk/bsd.pkg.mk"
