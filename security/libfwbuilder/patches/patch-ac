@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2004/10/14 15:21:25 tv Exp $
+
+--- src/fwbuilder/Makefile.in.orig	2004-10-14 11:18:44.000000000 -0400
++++ src/fwbuilder/Makefile.in
+@@ -293,7 +293,6 @@ depend:
+ install_lib: libfwbuilder.la
+ 	$(mkinstalldirs) $(DESTDIR)$(libdir)
+ 	$(LTINSTALL) -c $(INSTALL_STRIP) libfwbuilder.la $(DESTDIR)$(libdir)
+-	rm -f $(DESTDIR)$(libdir)/libfwbuilder.la
+ 
+ install_headers: $(HEADERS)
+ 	$(mkinstalldirs) $(DESTDIR)$(includedir)
