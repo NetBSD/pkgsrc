@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/19 19:54:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/02/05 18:44:47 dmcmahill Exp $
 #
 
 DISTNAME=	wampager-0.9.1
@@ -23,4 +23,5 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wampager ${PREFIX}/bin
 
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
