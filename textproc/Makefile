@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.189 2003/01/17 06:50:09 salo Exp $
+# $NetBSD: Makefile,v 1.190 2003/02/16 02:04:22 salo Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -173,6 +173,7 @@ SUBDIR+=	ruby-erb
 SUBDIR+=	ruby-eruby
 SUBDIR+=	ruby-html-parser
 SUBDIR+=	ruby-nqxml
+SUBDIR+=	ruby-rdoc
 SUBDIR+=	ruby-rdtool
 SUBDIR+=	ruby-rttool
 SUBDIR+=	sablotron
