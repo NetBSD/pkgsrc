@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 13:51:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/18 15:59:13 itojun Exp $
 
 DISTNAME=	micq-0.4.6.p1
 PKGNAME=	${DISTNAME:S/p//}
@@ -16,5 +16,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/micq ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/micq
 	${INSTALL_MAN} ${WRKSRC}/../README ${PREFIX}/share/doc/micq
+	${INSTALL_MAN} ${WRKSRC}/../micq.1 ${PREFIX}/man/man1
 
 .include "../../mk/bsd.pkg.mk"
