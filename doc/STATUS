@@ -1,4 +1,4 @@
-$NetBSD: STATUS,v 1.30 2004/07/09 15:42:09 xtraeme Exp $
+$NetBSD: STATUS,v 1.31 2004/07/09 15:43:15 xtraeme Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -70,7 +70,7 @@ security/openssl           Y                 Y      Y        N         Y
 shells/tcsh                Y        Y        Y      Y        Y         Y
 wm/blackbox                Y        Y        Y      Y
 www/apache                 Y        Y        Y      Y        Y         Y
-www/firefox-gtk2		    Y	
+www/firefox-gtk2		    Y		    Y
 www/links                  Y        Y        Y      Y                  Y
 www/lynx                   Y        Y        N*     Y                  Y
 ---------------------------------------------------------------------------
