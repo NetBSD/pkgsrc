@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.73 2005/02/15 23:06:16 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.74 2005/02/16 14:26:49 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -155,3 +155,5 @@ Pullup ticket 290 - requested by Min Sik Kim
 security fix for awstats
 Pullup ticket 291 - requested by Stoned Elipot
 security fix for sympa
+Pullup ticket 289 - requested by Matthias Drochner
+security fix for python
