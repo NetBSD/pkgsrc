@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 1999/02/11 19:17:34 tv Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/08/13 14:06:59 agc Exp $
 bin/zsh
 @exec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak; echo %D/%F) >/etc/shells
 @unexec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak) >/etc/shells
-bin/zsh-3.0.5
+bin/${PKGNAME}
 @unexec install-info --delete %D/info/zsh.info %D/info/dir
 info/zsh.info
 @exec install-info %D/info/zsh.info %D/info/dir

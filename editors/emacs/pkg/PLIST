@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.22 1999/04/08 12:54:08 agc Exp $
+@comment $NetBSD: PLIST,v 1.23 1999/08/13 14:06:56 agc Exp $
 bin/emacs
-bin/emacs-20.3
+bin/${PKGNAME}
 bin/emacs-etags
 bin/emacs-ctags
 bin/emacsclient

@@ -1,258 +1,258 @@
-@comment $NetBSD: PLIST,v 1.3 1997/11/06 10:01:27 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/08/13 14:06:58 agc Exp $
 bin/dotfile
-bin/dotfile-2.0
+bin/${PKGNAME}
 man/man1/dotfile.1.gz
-share/dotfile-2.0/Generator/bitmaps/Down
-share/dotfile-2.0/Generator/bitmaps/act_folder.xbm
-share/dotfile-2.0/Generator/bitmaps/file.xbm
-share/dotfile-2.0/Generator/bitmaps/folder.xbm
-share/dotfile-2.0/Generator/bitmaps/idx.xbm
-share/dotfile-2.0/Generator/bitmaps/scissors.xbm
-share/dotfile-2.0/Generator/bitmaps/new.xbm
-share/dotfile-2.0/Generator/bitmaps/GeneratorLogo.gif
-share/dotfile-2.0/Generator/bitmaps/folder_center.xbm
-share/dotfile-2.0/Generator/bitmaps/Left
-share/dotfile-2.0/Generator/bitmaps/Right
-share/dotfile-2.0/Generator/bitmaps/Up
-share/dotfile-2.0/Generator/bitmaps/ComboBox.xbm
-share/dotfile-2.0/Generator/oldVersions/1.1/tcsh
-share/dotfile-2.0/Generator/oldVersions/1.1/Emacs
-share/dotfile-2.0/Generator/oldVersions/1.1/fvwm
-share/dotfile-2.0/Generator/oldVersions/1.1/Fvwm
-share/dotfile-2.0/Generator/update-from-1.1.tcl
-share/dotfile-2.0/Generator/types.tcl
-share/dotfile-2.0/Generator/system.tcl.in
-share/dotfile-2.0/Generator/system.tcl
-share/dotfile-2.0/Generator/setup.tcl
-share/dotfile-2.0/Generator/setPages.tcl
-share/dotfile-2.0/Generator/save.tcl
-share/dotfile-2.0/Generator/parse.tcl
-share/dotfile-2.0/Generator/menus.tcl
-share/dotfile-2.0/Generator/makeHelp.tcl
-share/dotfile-2.0/Generator/makeHelp
-share/dotfile-2.0/Generator/mail.tcl
-share/dotfile-2.0/Generator/load.tcl
-share/dotfile-2.0/Generator/import.tcl
-share/dotfile-2.0/Generator/helpfile.data
-share/dotfile-2.0/Generator/help.tcl
-share/dotfile-2.0/Generator/help.html
-share/dotfile-2.0/Generator/generatedHelp
-share/dotfile-2.0/Generator/generate.tcl
-share/dotfile-2.0/Generator/functions.tcl
-share/dotfile-2.0/Generator/TAGS
-share/dotfile-2.0/Generator/fillouts.tcl
-share/dotfile-2.0/Generator/extOptMenu.tcl
-share/dotfile-2.0/Generator/export.tcl
-share/dotfile-2.0/Generator/edit.tcl
-share/dotfile-2.0/Generator/dotfile.tcl
-share/dotfile-2.0/Generator/dialog.tcl
-share/dotfile-2.0/Generator/details.tcl
-share/dotfile-2.0/Generator/combo.tcl
-share/dotfile-2.0/Generator/color.tcl
-share/dotfile-2.0/Generator/bytecompile.tcl
-share/dotfile-2.0/Generator/browser.tcl
-share/dotfile-2.0/Generator/Warranty
-share/dotfile-2.0/Generator/versionUpdate.tcl
-share/dotfile-2.0/Generator/Copying
-share/dotfile-2.0/Generator/util.tcl
-share/dotfile-2.0/fvwm2/save-files/distrib.save
-share/dotfile-2.0/fvwm2/save-files/imada.save
-share/dotfile-2.0/fvwm2/exports/contents
-share/dotfile-2.0/fvwm2/exports/distrib.export
-share/dotfile-2.0/fvwm2/exports/imada.export
-share/dotfile-2.0/fvwm2/style.template
-share/dotfile-2.0/fvwm2/paths.template
-share/dotfile-2.0/fvwm2/mouse.template
-share/dotfile-2.0/fvwm2/miscellaneous.template
-share/dotfile-2.0/fvwm2/menus.template
-share/dotfile-2.0/fvwm2/main.template
-share/dotfile-2.0/fvwm2/keys.template
-share/dotfile-2.0/fvwm2/info
-share/dotfile-2.0/fvwm2/helpfile.data
-share/dotfile-2.0/fvwm2/help.html
-share/dotfile-2.0/fvwm2/generatedHelp
-share/dotfile-2.0/fvwm2/fvwmrc_convert.in.44
-share/dotfile-2.0/fvwm2/fvwmrc_convert.in
-share/dotfile-2.0/fvwm2/fvwmrc_convert
-share/dotfile-2.0/fvwm2/fvwm2parser.tcl
-share/dotfile-2.0/fvwm2/functions.template
-share/dotfile-2.0/fvwm2/font.tcl
-share/dotfile-2.0/fvwm2/decor.template
-share/dotfile-2.0/fvwm2/colorsfonts.template
-share/dotfile-2.0/fvwm2/buttons.template
-share/dotfile-2.0/fvwm2/README
-share/dotfile-2.0/fvwm2/FvwmWinList.template
-share/dotfile-2.0/fvwm2/FvwmTalk.template
-share/dotfile-2.0/fvwm2/FvwmScroll.template
-share/dotfile-2.0/fvwm2/FvwmPager.template
-share/dotfile-2.0/fvwm2/FvwmIdent.template
-share/dotfile-2.0/fvwm2/FvwmIconMan.template
-share/dotfile-2.0/fvwm2/FvwmIconBox.template
-share/dotfile-2.0/fvwm2/FvwmButtons.template
-share/dotfile-2.0/fvwm2/FvwmBanner.template
-share/dotfile-2.0/fvwm2/FvwmBacker.template
-share/dotfile-2.0/fvwm2/FvwmAuto.template
-share/dotfile-2.0/fvwm2/virtual.template
-share/dotfile-2.0/fvwm2/FvwmAudio.template
-share/dotfile-2.0/fvwm2/tools.tcl
-share/dotfile-2.0/fvwm2/bytecompile
-share/dotfile-2.0/bash/save-files/author-export-1.save
-share/dotfile-2.0/bash/save-files/author-export-2.save
-share/dotfile-2.0/bash/exports/author-export-1.export
-share/dotfile-2.0/bash/exports/author-export-2.export
-share/dotfile-2.0/bash/exports/contents
-share/dotfile-2.0/bash/sysLimits.template
-share/dotfile-2.0/bash/prompting.template
-share/dotfile-2.0/bash/promptWidget.template
-share/dotfile-2.0/bash/path.template
-share/dotfile-2.0/bash/main.template
-share/dotfile-2.0/bash/mail.template
-share/dotfile-2.0/bash/logo8.gif
-share/dotfile-2.0/bash/logo1.gif
-share/dotfile-2.0/bash/job.template
-share/dotfile-2.0/bash/info
-share/dotfile-2.0/bash/helpfile.data
-share/dotfile-2.0/bash/help.html
-share/dotfile-2.0/bash/generatedHelp
-share/dotfile-2.0/bash/fileDir.template
-share/dotfile-2.0/bash/errorHandling.template
-share/dotfile-2.0/bash/completion.template
-share/dotfile-2.0/bash/commLine.template
-share/dotfile-2.0/bash/commHist.template
-share/dotfile-2.0/bash/bindKey.template
-share/dotfile-2.0/bash/alias.template
-share/dotfile-2.0/bash/TODO
-share/dotfile-2.0/bash/version.template
-share/dotfile-2.0/bash/README
-share/dotfile-2.0/bash/ttyApp.template
-share/dotfile-2.0/bash/bytecompile
-share/dotfile-2.0/tcsh/save-files/standard.save
-share/dotfile-2.0/tcsh/save-files/complete.save
-share/dotfile-2.0/tcsh/exports/contents
-share/dotfile-2.0/tcsh/exports/standard.export
-share/dotfile-2.0/tcsh/time.template
-share/dotfile-2.0/tcsh/promptWidget.template
-share/dotfile-2.0/tcsh/prompt.template
-share/dotfile-2.0/tcsh/path.template
-share/dotfile-2.0/tcsh/misc.template
-share/dotfile-2.0/tcsh/main.template
-share/dotfile-2.0/tcsh/logout.template
-share/dotfile-2.0/tcsh/limit.template
-share/dotfile-2.0/tcsh/jobs.template
-share/dotfile-2.0/tcsh/info
-share/dotfile-2.0/tcsh/history.template
-share/dotfile-2.0/tcsh/helpfile.data
-share/dotfile-2.0/tcsh/help.html
-share/dotfile-2.0/tcsh/generatedHelp
-share/dotfile-2.0/tcsh/files.template
-share/dotfile-2.0/tcsh/editor.template
-share/dotfile-2.0/tcsh/dirs.template
-share/dotfile-2.0/tcsh/completion_user.template
-share/dotfile-2.0/tcsh/completion_misc.template
-share/dotfile-2.0/tcsh/bindings.template
-share/dotfile-2.0/tcsh/alias.template
-share/dotfile-2.0/tcsh/addset.template
-share/dotfile-2.0/tcsh/watch.template
-share/dotfile-2.0/tcsh/TAGS
-share/dotfile-2.0/tcsh/util.tcl
-share/dotfile-2.0/tcsh/bytecompile
-share/dotfile-2.0/emacs/local/local.template
-share/dotfile-2.0/emacs/save-files/Emacs.save
-share/dotfile-2.0/emacs/exports/Emacs.export
-share/dotfile-2.0/emacs/exports/contents
-share/dotfile-2.0/emacs/saving.template
-share/dotfile-2.0/emacs/python.template
-share/dotfile-2.0/emacs/outline-mode.template
-share/dotfile-2.0/emacs/modes-general.template
-share/dotfile-2.0/emacs/misc.template
-share/dotfile-2.0/emacs/main.template
-share/dotfile-2.0/emacs/info
-share/dotfile-2.0/emacs/html-helper-mode.template
-share/dotfile-2.0/emacs/hilit-mode.template
-share/dotfile-2.0/emacs/helpfile.data
-share/dotfile-2.0/emacs/helper.template
-share/dotfile-2.0/emacs/help.html
-share/dotfile-2.0/emacs/generatedHelp
-share/dotfile-2.0/emacs/comint-mode.template
-share/dotfile-2.0/emacs/c-mode.template
-share/dotfile-2.0/emacs/abbrev.template
-share/dotfile-2.0/emacs/TAGS
-share/dotfile-2.0/emacs/HELP
-share/dotfile-2.0/emacs/util.tcl
-share/dotfile-2.0/emacs/ChangeLog
-share/dotfile-2.0/emacs/terminal.template
-share/dotfile-2.0/emacs/tcl-mode.template
-share/dotfile-2.0/emacs/bytecompile
-share/dotfile-2.0/rtin/save-files/rtin.save
-share/dotfile-2.0/rtin/exports/contents
-share/dotfile-2.0/rtin/exports/rtin.export
-share/dotfile-2.0/rtin/helpfile.data
-share/dotfile-2.0/rtin/main.template
-share/dotfile-2.0/rtin/info
-share/dotfile-2.0/rtin/rtin-mod.template
-share/dotfile-2.0/rtin/help.html
-share/dotfile-2.0/rtin/generatedHelp
-share/dotfile-2.0/rtin/rtinparser.tcl
-share/dotfile-2.0/rtin/bytecompile
-share/dotfile-2.0/elm/README
-share/dotfile-2.0/elm/viewingcharset.template
-share/dotfile-2.0/elm/viewer.template
-share/dotfile-2.0/elm/version.template
-share/dotfile-2.0/elm/textencoding.template
-share/dotfile-2.0/elm/signature.template
-share/dotfile-2.0/elm/quoting.template
-share/dotfile-2.0/elm/optionmenu.template
-share/dotfile-2.0/elm/navigation.template
-share/dotfile-2.0/elm/main.template
-share/dotfile-2.0/elm/layout.template
-share/dotfile-2.0/elm/info
-share/dotfile-2.0/elm/generel.template
-share/dotfile-2.0/elm/folderdecision.template
-share/dotfile-2.0/elm/foldercommunication.template
-share/dotfile-2.0/elm/elmrc
-share/dotfile-2.0/elm/elm-parser.tcl
-share/dotfile-2.0/elm/editor.template
-share/dotfile-2.0/elm/editingheaders.template
-share/dotfile-2.0/elm/behavior.template
-share/dotfile-2.0/elm/aliasmenu.template
-share/dotfile-2.0/elm/viewingheaders.template
-share/dotfile-2.0/elm/bytecompile
-share/dotfile-2.0/fvwm1/save-files/system.save
-share/dotfile-2.0/fvwm1/exports/contents
-share/dotfile-2.0/fvwm1/exports/system.export
-share/dotfile-2.0/fvwm1/paths.template
-share/dotfile-2.0/fvwm1/modes.template
-share/dotfile-2.0/fvwm1/menus.template
-share/dotfile-2.0/fvwm1/main.template
-share/dotfile-2.0/fvwm1/info
-share/dotfile-2.0/fvwm1/fonts.template
-share/dotfile-2.0/fvwm1/colors.template
-share/dotfile-2.0/fvwm1/tools.tcl
-share/dotfile-2.0/fvwm1/README
-share/dotfile-2.0/fvwm1/ressources.template
-share/dotfile-2.0/fvwm1/bytecompile
-@dirrm share/dotfile-2.0/tcsh/save-files
-@dirrm share/dotfile-2.0/tcsh/exports
-@dirrm share/dotfile-2.0/tcsh
-@dirrm share/dotfile-2.0/rtin/save-files
-@dirrm share/dotfile-2.0/rtin/exports
-@dirrm share/dotfile-2.0/rtin
-@dirrm share/dotfile-2.0/fvwm2/save-files
-@dirrm share/dotfile-2.0/fvwm2/exports
-@dirrm share/dotfile-2.0/fvwm2
-@dirrm share/dotfile-2.0/fvwm1/save-files
-@dirrm share/dotfile-2.0/fvwm1/exports
-@dirrm share/dotfile-2.0/fvwm1
-@dirrm share/dotfile-2.0/emacs/save-files
-@dirrm share/dotfile-2.0/emacs/local
-@dirrm share/dotfile-2.0/emacs/exports
-@dirrm share/dotfile-2.0/emacs
-@dirrm share/dotfile-2.0/elm
-@dirrm share/dotfile-2.0/bash/save-files
-@dirrm share/dotfile-2.0/bash/exports
-@dirrm share/dotfile-2.0/bash
-@dirrm share/dotfile-2.0/Generator/oldVersions/1.1
-@dirrm share/dotfile-2.0/Generator/oldVersions
-@dirrm share/dotfile-2.0/Generator/bitmaps
-@dirrm share/dotfile-2.0/Generator
-@dirrm share/dotfile-2.0
+share/${PKGNAME}/Generator/bitmaps/Down
+share/${PKGNAME}/Generator/bitmaps/act_folder.xbm
+share/${PKGNAME}/Generator/bitmaps/file.xbm
+share/${PKGNAME}/Generator/bitmaps/folder.xbm
+share/${PKGNAME}/Generator/bitmaps/idx.xbm
+share/${PKGNAME}/Generator/bitmaps/scissors.xbm
+share/${PKGNAME}/Generator/bitmaps/new.xbm
+share/${PKGNAME}/Generator/bitmaps/GeneratorLogo.gif
+share/${PKGNAME}/Generator/bitmaps/folder_center.xbm
+share/${PKGNAME}/Generator/bitmaps/Left
+share/${PKGNAME}/Generator/bitmaps/Right
+share/${PKGNAME}/Generator/bitmaps/Up
+share/${PKGNAME}/Generator/bitmaps/ComboBox.xbm
+share/${PKGNAME}/Generator/oldVersions/1.1/tcsh
+share/${PKGNAME}/Generator/oldVersions/1.1/Emacs
+share/${PKGNAME}/Generator/oldVersions/1.1/fvwm
+share/${PKGNAME}/Generator/oldVersions/1.1/Fvwm
+share/${PKGNAME}/Generator/update-from-1.1.tcl
+share/${PKGNAME}/Generator/types.tcl
+share/${PKGNAME}/Generator/system.tcl.in
+share/${PKGNAME}/Generator/system.tcl
+share/${PKGNAME}/Generator/setup.tcl
+share/${PKGNAME}/Generator/setPages.tcl
+share/${PKGNAME}/Generator/save.tcl
+share/${PKGNAME}/Generator/parse.tcl
+share/${PKGNAME}/Generator/menus.tcl
+share/${PKGNAME}/Generator/makeHelp.tcl
+share/${PKGNAME}/Generator/makeHelp
+share/${PKGNAME}/Generator/mail.tcl
+share/${PKGNAME}/Generator/load.tcl
+share/${PKGNAME}/Generator/import.tcl
+share/${PKGNAME}/Generator/helpfile.data
+share/${PKGNAME}/Generator/help.tcl
+share/${PKGNAME}/Generator/help.html
+share/${PKGNAME}/Generator/generatedHelp
+share/${PKGNAME}/Generator/generate.tcl
+share/${PKGNAME}/Generator/functions.tcl
+share/${PKGNAME}/Generator/TAGS
+share/${PKGNAME}/Generator/fillouts.tcl
+share/${PKGNAME}/Generator/extOptMenu.tcl
+share/${PKGNAME}/Generator/export.tcl
+share/${PKGNAME}/Generator/edit.tcl
+share/${PKGNAME}/Generator/dotfile.tcl
+share/${PKGNAME}/Generator/dialog.tcl
+share/${PKGNAME}/Generator/details.tcl
+share/${PKGNAME}/Generator/combo.tcl
+share/${PKGNAME}/Generator/color.tcl
+share/${PKGNAME}/Generator/bytecompile.tcl
+share/${PKGNAME}/Generator/browser.tcl
+share/${PKGNAME}/Generator/Warranty
+share/${PKGNAME}/Generator/versionUpdate.tcl
+share/${PKGNAME}/Generator/Copying
+share/${PKGNAME}/Generator/util.tcl
+share/${PKGNAME}/fvwm2/save-files/distrib.save
+share/${PKGNAME}/fvwm2/save-files/imada.save
+share/${PKGNAME}/fvwm2/exports/contents
+share/${PKGNAME}/fvwm2/exports/distrib.export
+share/${PKGNAME}/fvwm2/exports/imada.export
+share/${PKGNAME}/fvwm2/style.template
+share/${PKGNAME}/fvwm2/paths.template
+share/${PKGNAME}/fvwm2/mouse.template
+share/${PKGNAME}/fvwm2/miscellaneous.template
+share/${PKGNAME}/fvwm2/menus.template
+share/${PKGNAME}/fvwm2/main.template
+share/${PKGNAME}/fvwm2/keys.template
+share/${PKGNAME}/fvwm2/info
+share/${PKGNAME}/fvwm2/helpfile.data
+share/${PKGNAME}/fvwm2/help.html
+share/${PKGNAME}/fvwm2/generatedHelp
+share/${PKGNAME}/fvwm2/fvwmrc_convert.in.44
+share/${PKGNAME}/fvwm2/fvwmrc_convert.in
+share/${PKGNAME}/fvwm2/fvwmrc_convert
+share/${PKGNAME}/fvwm2/fvwm2parser.tcl
+share/${PKGNAME}/fvwm2/functions.template
+share/${PKGNAME}/fvwm2/font.tcl
+share/${PKGNAME}/fvwm2/decor.template
+share/${PKGNAME}/fvwm2/colorsfonts.template
+share/${PKGNAME}/fvwm2/buttons.template
+share/${PKGNAME}/fvwm2/README
+share/${PKGNAME}/fvwm2/FvwmWinList.template
+share/${PKGNAME}/fvwm2/FvwmTalk.template
+share/${PKGNAME}/fvwm2/FvwmScroll.template
+share/${PKGNAME}/fvwm2/FvwmPager.template
+share/${PKGNAME}/fvwm2/FvwmIdent.template
+share/${PKGNAME}/fvwm2/FvwmIconMan.template
+share/${PKGNAME}/fvwm2/FvwmIconBox.template
+share/${PKGNAME}/fvwm2/FvwmButtons.template
+share/${PKGNAME}/fvwm2/FvwmBanner.template
+share/${PKGNAME}/fvwm2/FvwmBacker.template
+share/${PKGNAME}/fvwm2/FvwmAuto.template
+share/${PKGNAME}/fvwm2/virtual.template
+share/${PKGNAME}/fvwm2/FvwmAudio.template
+share/${PKGNAME}/fvwm2/tools.tcl
+share/${PKGNAME}/fvwm2/bytecompile
+share/${PKGNAME}/bash/save-files/author-export-1.save
+share/${PKGNAME}/bash/save-files/author-export-2.save
+share/${PKGNAME}/bash/exports/author-export-1.export
+share/${PKGNAME}/bash/exports/author-export-2.export
+share/${PKGNAME}/bash/exports/contents
+share/${PKGNAME}/bash/sysLimits.template
+share/${PKGNAME}/bash/prompting.template
+share/${PKGNAME}/bash/promptWidget.template
+share/${PKGNAME}/bash/path.template
+share/${PKGNAME}/bash/main.template
+share/${PKGNAME}/bash/mail.template
+share/${PKGNAME}/bash/logo8.gif
+share/${PKGNAME}/bash/logo1.gif
+share/${PKGNAME}/bash/job.template
+share/${PKGNAME}/bash/info
+share/${PKGNAME}/bash/helpfile.data
+share/${PKGNAME}/bash/help.html
+share/${PKGNAME}/bash/generatedHelp
+share/${PKGNAME}/bash/fileDir.template
+share/${PKGNAME}/bash/errorHandling.template
+share/${PKGNAME}/bash/completion.template
+share/${PKGNAME}/bash/commLine.template
+share/${PKGNAME}/bash/commHist.template
+share/${PKGNAME}/bash/bindKey.template
+share/${PKGNAME}/bash/alias.template
+share/${PKGNAME}/bash/TODO
+share/${PKGNAME}/bash/version.template
+share/${PKGNAME}/bash/README
+share/${PKGNAME}/bash/ttyApp.template
+share/${PKGNAME}/bash/bytecompile
+share/${PKGNAME}/tcsh/save-files/standard.save
+share/${PKGNAME}/tcsh/save-files/complete.save
+share/${PKGNAME}/tcsh/exports/contents
+share/${PKGNAME}/tcsh/exports/standard.export
+share/${PKGNAME}/tcsh/time.template
+share/${PKGNAME}/tcsh/promptWidget.template
+share/${PKGNAME}/tcsh/prompt.template
+share/${PKGNAME}/tcsh/path.template
+share/${PKGNAME}/tcsh/misc.template
+share/${PKGNAME}/tcsh/main.template
+share/${PKGNAME}/tcsh/logout.template
+share/${PKGNAME}/tcsh/limit.template
+share/${PKGNAME}/tcsh/jobs.template
+share/${PKGNAME}/tcsh/info
+share/${PKGNAME}/tcsh/history.template
+share/${PKGNAME}/tcsh/helpfile.data
+share/${PKGNAME}/tcsh/help.html
+share/${PKGNAME}/tcsh/generatedHelp
+share/${PKGNAME}/tcsh/files.template
+share/${PKGNAME}/tcsh/editor.template
+share/${PKGNAME}/tcsh/dirs.template
+share/${PKGNAME}/tcsh/completion_user.template
+share/${PKGNAME}/tcsh/completion_misc.template
+share/${PKGNAME}/tcsh/bindings.template
+share/${PKGNAME}/tcsh/alias.template
+share/${PKGNAME}/tcsh/addset.template
+share/${PKGNAME}/tcsh/watch.template
+share/${PKGNAME}/tcsh/TAGS
+share/${PKGNAME}/tcsh/util.tcl
+share/${PKGNAME}/tcsh/bytecompile
+share/${PKGNAME}/emacs/local/local.template
+share/${PKGNAME}/emacs/save-files/Emacs.save
+share/${PKGNAME}/emacs/exports/Emacs.export
+share/${PKGNAME}/emacs/exports/contents
+share/${PKGNAME}/emacs/saving.template
+share/${PKGNAME}/emacs/python.template
+share/${PKGNAME}/emacs/outline-mode.template
+share/${PKGNAME}/emacs/modes-general.template
+share/${PKGNAME}/emacs/misc.template
+share/${PKGNAME}/emacs/main.template
+share/${PKGNAME}/emacs/info
+share/${PKGNAME}/emacs/html-helper-mode.template
+share/${PKGNAME}/emacs/hilit-mode.template
+share/${PKGNAME}/emacs/helpfile.data
+share/${PKGNAME}/emacs/helper.template
+share/${PKGNAME}/emacs/help.html
+share/${PKGNAME}/emacs/generatedHelp
+share/${PKGNAME}/emacs/comint-mode.template
+share/${PKGNAME}/emacs/c-mode.template
+share/${PKGNAME}/emacs/abbrev.template
+share/${PKGNAME}/emacs/TAGS
+share/${PKGNAME}/emacs/HELP
+share/${PKGNAME}/emacs/util.tcl
+share/${PKGNAME}/emacs/ChangeLog
+share/${PKGNAME}/emacs/terminal.template
+share/${PKGNAME}/emacs/tcl-mode.template
+share/${PKGNAME}/emacs/bytecompile
+share/${PKGNAME}/rtin/save-files/rtin.save
+share/${PKGNAME}/rtin/exports/contents
+share/${PKGNAME}/rtin/exports/rtin.export
+share/${PKGNAME}/rtin/helpfile.data
+share/${PKGNAME}/rtin/main.template
+share/${PKGNAME}/rtin/info
+share/${PKGNAME}/rtin/rtin-mod.template
+share/${PKGNAME}/rtin/help.html
+share/${PKGNAME}/rtin/generatedHelp
+share/${PKGNAME}/rtin/rtinparser.tcl
+share/${PKGNAME}/rtin/bytecompile
+share/${PKGNAME}/elm/README
+share/${PKGNAME}/elm/viewingcharset.template
+share/${PKGNAME}/elm/viewer.template
+share/${PKGNAME}/elm/version.template
+share/${PKGNAME}/elm/textencoding.template
+share/${PKGNAME}/elm/signature.template
+share/${PKGNAME}/elm/quoting.template
+share/${PKGNAME}/elm/optionmenu.template
+share/${PKGNAME}/elm/navigation.template
+share/${PKGNAME}/elm/main.template
+share/${PKGNAME}/elm/layout.template
+share/${PKGNAME}/elm/info
+share/${PKGNAME}/elm/generel.template
+share/${PKGNAME}/elm/folderdecision.template
+share/${PKGNAME}/elm/foldercommunication.template
+share/${PKGNAME}/elm/elmrc
+share/${PKGNAME}/elm/elm-parser.tcl
+share/${PKGNAME}/elm/editor.template
+share/${PKGNAME}/elm/editingheaders.template
+share/${PKGNAME}/elm/behavior.template
+share/${PKGNAME}/elm/aliasmenu.template
+share/${PKGNAME}/elm/viewingheaders.template
+share/${PKGNAME}/elm/bytecompile
+share/${PKGNAME}/fvwm1/save-files/system.save
+share/${PKGNAME}/fvwm1/exports/contents
+share/${PKGNAME}/fvwm1/exports/system.export
+share/${PKGNAME}/fvwm1/paths.template
+share/${PKGNAME}/fvwm1/modes.template
+share/${PKGNAME}/fvwm1/menus.template
+share/${PKGNAME}/fvwm1/main.template
+share/${PKGNAME}/fvwm1/info
+share/${PKGNAME}/fvwm1/fonts.template
+share/${PKGNAME}/fvwm1/colors.template
+share/${PKGNAME}/fvwm1/tools.tcl
+share/${PKGNAME}/fvwm1/README
+share/${PKGNAME}/fvwm1/ressources.template
+share/${PKGNAME}/fvwm1/bytecompile
+@dirrm share/${PKGNAME}/tcsh/save-files
+@dirrm share/${PKGNAME}/tcsh/exports
+@dirrm share/${PKGNAME}/tcsh
+@dirrm share/${PKGNAME}/rtin/save-files
+@dirrm share/${PKGNAME}/rtin/exports
+@dirrm share/${PKGNAME}/rtin
+@dirrm share/${PKGNAME}/fvwm2/save-files
+@dirrm share/${PKGNAME}/fvwm2/exports
+@dirrm share/${PKGNAME}/fvwm2
+@dirrm share/${PKGNAME}/fvwm1/save-files
+@dirrm share/${PKGNAME}/fvwm1/exports
+@dirrm share/${PKGNAME}/fvwm1
+@dirrm share/${PKGNAME}/emacs/save-files
+@dirrm share/${PKGNAME}/emacs/local
+@dirrm share/${PKGNAME}/emacs/exports
+@dirrm share/${PKGNAME}/emacs
+@dirrm share/${PKGNAME}/elm
+@dirrm share/${PKGNAME}/bash/save-files
+@dirrm share/${PKGNAME}/bash/exports
+@dirrm share/${PKGNAME}/bash
+@dirrm share/${PKGNAME}/Generator/oldVersions/1.1
+@dirrm share/${PKGNAME}/Generator/oldVersions
+@dirrm share/${PKGNAME}/Generator/bitmaps
+@dirrm share/${PKGNAME}/Generator
+@dirrm share/${PKGNAME}
