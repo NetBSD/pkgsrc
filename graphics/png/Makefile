@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2000/03/21 22:07:57 tron Exp $
+# $NetBSD: Makefile,v 1.17 2000/03/21 23:24:24 tron Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:44 max Exp
 
 DISTNAME=       libpng-1.0.6
 PKGNAME=        png-1.0.6
 CATEGORIES=     graphics
-MASTER_SITES=   ftp://ftp.uu.net/graphics/png/src/ \
+MASTER_SITES=   ftp://ftp.cdrom.com/pub/png/src/ \
+		ftp://swrinde.nde.swri.edu/pub/png/src/ \
 		ftp://ftp.fu-berlin.de/unix/graphics/png/src/
 
 MAINTAINER=     packages@netbsd.org
