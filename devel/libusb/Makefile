@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/03/03 15:26:58 veego Exp $
+# $NetBSD: Makefile,v 1.6 2002/05/08 17:43:40 drochner Exp $
 #
 
 DISTNAME=	libusb-0.1.5
@@ -13,6 +13,6 @@ COMMENT=	USB access library
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.pkg.mk"
