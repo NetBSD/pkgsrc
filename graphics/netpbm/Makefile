@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2000/05/17 18:41:21 tron Exp $
+# $NetBSD: Makefile,v 1.39 2000/05/20 11:02:07 tron Exp $
 
 DISTNAME=	netpbm-9.2
 CATEGORIES=	graphics
@@ -17,6 +17,12 @@ USE_LIBTOOL=	yes
 INSTALL_TARGET=	install.dev install
 MAKE_ENV+=	ECHO="${ECHO}"
 MAKEFILE=	GNUmakefile
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == NetBSD && ${MACHINE_ARCH} == arm32
+CFLAGS=
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/shhopt/shhopt.h ${PREFIX}/include
