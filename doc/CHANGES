@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8118 2004/11/28 23:04:55 wiz Exp $
+$NetBSD: CHANGES,v 1.8119 2004/11/28 23:09:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5602,3 +5602,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kdepim3 to 3.3.1nb2 [kleink 2004-11-28]
 	Updated criticalmass to 0.99 [snj 2004-11-28]
 	Updated p5-MIME-Base64 to 3.05 [wiz 2004-11-28]
+	Updated p5-MIME-tools to 5.145 [wiz 2004-11-28]
