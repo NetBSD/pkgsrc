@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.14 2002/01/03 00:19:01 kristerw Exp $
+$NetBSD: patch-aa,v 1.15 2002/12/14 15:14:26 kristerw Exp $
 --- makefile.unix.orig	Wed Jan  2 01:32:01 2002
 +++ makefile.unix	Wed Jan  2 18:44:08 2002
 @@ -32,7 +32,6 @@
