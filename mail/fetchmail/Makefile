@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2003/11/12 03:39:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.137 2004/01/06 07:06:30 jlam Exp $
 
 DISTNAME=	fetchmail-6.2.5
 PKGREVISION=	1
@@ -10,9 +10,11 @@ MAINTAINER=	frueauf@NetBSD.org
 HOMEPAGE=	http://catb.org/~esr/fetchmail/
 COMMENT=	Batch mail retrieval/forwarding utility for pop2, pop3, apop, imap
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -28,7 +30,7 @@ LDFLAGS+=		${CFLAGS}
 FETCHMAIL_USE_SSL?=	YES
 
 .if defined(FETCHMAIL_USE_SSL) && ${FETCHMAIL_USE_SSL} == YES
-.  include "../../security/openssl/buildlink2.mk"
+.  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 .else
 CONFIGURE_ARGS+=	--without-ssl
@@ -79,5 +81,5 @@ post-install:
 	   fetchmail-FAQ.html fetchmail-features.html \
 	   design-notes.html ${FDOC}
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
