@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1 1998/10/28 01:29:16 hubertf Exp $
+
+--- doscmd.c.BAK	Wed Oct 28 01:57:30 1998
++++ doscmd.c	Wed Oct 28 01:58:17 1998
+@@ -581,7 +581,11 @@
+ 	SET16(sc.sc_fs, 0x0000);
+ 	SET16(sc.sc_gs, 0x0000);
+ 	
++#if defined(__LIBC12_SOURCE__)
+ 	sc.sc_mask = 0;
++#else
++	sigemptyset(&sc.sc_mask);
++#endif
+ 	sc.sc_onstack = 0;
+ 
+ 	if (tflag) {
