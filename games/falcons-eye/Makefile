@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/03/07 17:13:49 snj Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/15 19:43:12 ben Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
@@ -20,16 +20,27 @@ WRKSRC=			${WRKDIR}
 USE_BUILDLINK3=		yes
 USE_X11=		yes
 
-post-patch:
-	@${MV} ${WRKSRC}/include/config.h ${WRKSRC}/config.h-pre
-	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g'                         \
-		-e 's|@GZIP_PROGRAM@|'`${ECHO} ${GZIP_CMD} | ${AWK} '{ print $$1 }'`'|g' \
-		< ${WRKSRC}/config.h-pre > ${WRKSRC}/include/config.h
-	@${RM} -f ${WRKSRC}/config.h-pre
-	@${SED} 's@XXXPREFIXXXX@${PREFIX}@g' \
-		<${WRKSRC}/src/fe-config.in >${WRKSRC}/src/fe-config
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Configuring program paths."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	include/config.h src/fe-config.in
+SUBST_SED.paths=	-e "s,XXXPREFIXXXX,${PREFIX},g" \
+			-e "s,@GZIP_PROGRAM@,${GZIP_CMD:M*gzip},g"
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+SUBST_CLASSES+=		unixconf
+SUBST_MESSAGE.unixconf=	"Configuring to use NetBSD pre-sets."
+SUBST_STAGE.unixconf=	post-patch
+SUBST_FILES.unixconf=	include/unixconf.h
+SUBST_SED.unixconf=	-e 's,^\/\* \#define BSD 1 \*\/,\#define BSD 1,' \
+			-e 's,^\#define SYSV,\/\* \#define SYSV \*\/,' \
+			-e 's,^\#define LINUX,\/\* \#define LINUX \*\/,'
+.endif
 
 pre-configure:
+	${CP} ${WRKSRC}/src/fe-config.in ${WRKSRC}/src/fe-config
 	@${CHMOD} 755 ${WRKSRC}/sys/unix/setup.sh
 
 pre-install:
