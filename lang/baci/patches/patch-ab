@@ -1,8 +1,29 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/07/25 12:44:34 wulf Exp $
+$NetBSD: patch-ab,v 1.2 2005/02/19 15:40:54 wiz Exp $
 
---- interp/baiutils.c.orig	Mon Jul 24 00:25:52 2000
-+++ interp/baiutils.c	Mon Jul 24 00:26:49 2000
-@@ -171,8 +171,8 @@
+--- interp/baiutils.c.orig	1999-08-31 18:19:18.000000000 +0200
++++ interp/baiutils.c
+@@ -1,6 +1,7 @@
+  /* BenAri Concurrent PCODE Interpreter Utilities */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <assert.h>
+ 
+@@ -10,12 +11,7 @@
+ #include "random.h"
+ #include "bainterp.h"
+ 
+-extern int fprintf(FILE*,const char*,...);
+-extern int fclose(FILE*);
+-extern int printf(const char*,...);
+-extern int atoi(char*);
+ extern int build_cbtab();
+-extern int sscanf(const char*, const char*,...);
+ 
+ FNAME_STRING interp_pname;
+ 
+@@ -171,8 +167,8 @@ void chooseproc()
  
     d = PMAXP1;
     suspended = active = 0;
@@ -13,7 +34,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/07/25 12:44:34 wulf Exp $
     while ( ((!ptab[look].active) || (ptab[look].suspend>=0) ||
              (ptab[look].tabix < 0)) && (d >= 0) ){
  /* keep looking until a called process that is active and not
-@@ -189,7 +189,7 @@
+@@ -189,7 +185,7 @@ void chooseproc()
        ps = deadlock;
     }
     else {
