@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 1998/09/05 22:05:39 garbled Exp $
+# $NetBSD: Makefile,v 1.8 1998/10/21 20:00:59 garbled Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/02/16 13:32:59 andreas Exp
 #
 
+    SUBDIR += benchfft
     SUBDIR += bonnie
     SUBDIR += bytebench
     SUBDIR += dhrystone

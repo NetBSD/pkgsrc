@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/10/03 20:41:00 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/10/21 20:00:59 garbled Exp $
 # FreeBSD Id: Makefile,v 1.38 1998/04/13 00:51:58 jseger Exp
 #
 
@@ -9,6 +9,7 @@
 #    SUBDIR += eispack
 #    SUBDIR += femlab
 #    SUBDIR += fftpack
+    SUBDIR += fftw
 #    SUBDIR += freefem
 #    SUBDIR += fudgit
 #    SUBDIR += gnuplot
