@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/10/02 19:45:09 dillo Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/14 12:54:31 dillo Exp $
 #
 
 DISTNAME=		iselect-1.2.0
@@ -8,8 +8,6 @@ MASTER_SITES=		http://www.engelschall.com/sw/iselect/distrib/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.engelschall.com/sw/iselect/
 COMMENT=		Curses based Interactive Selection Tool
-
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 
 USE_BUILDLINK_ONLY=	# defined
 GNU_CONFIGURE=		# defined
