@@ -1,8 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2003/11/06 20:32:57 fredb Exp $
+$NetBSD: MESSAGE,v 1.4 2003/12/07 16:32:59 fredb Exp $
 
-THERE ARE NO MAN PAGES. All installed documentation
-is accessible through
+THERE ARE NO MAN PAGES. All installed documentation is accessible through
 
 	file://localhost${PREFIX}/share/doc/html/ntp4/index.html
 
@@ -12,8 +11,6 @@ User to user support is available at
 
 and online docs are viewable through NTP's home at
 
-	http://www.ntp.org/
-or
-	http://www.eecis.udel.edu/~ntp/
+	http://www.ntp.org/documentation.html
 
 ===========================================================================
