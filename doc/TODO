@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2815 2005/01/03 00:49:48 minskim Exp $
+$NetBSD: TODO,v 1.2816 2005/01/03 10:53:05 martti Exp $
 
 Suggested new packages
 ======================
@@ -798,7 +798,6 @@ Suggested package updates
 	o openmotif-2.2.4
 	o openntpd-3.6.1p1
 	o openoffice-1.1.4
-	o openoffice-linux-1.1.4
 	o openvpn-1.6.0
 	o opera7-7.54u1
 	o oregano-0.40.1
