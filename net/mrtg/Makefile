@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2004/05/08 07:37:40 snj Exp $
+# $NetBSD: Makefile,v 1.50 2004/06/15 17:12:13 xtraeme Exp $
 
 DISTNAME=	mrtg-2.10.13
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		ftp://ftp.sunet.se/pub/network/monitoring/mrtg/ \
@@ -27,10 +28,12 @@ HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
 COMMENT=	The Multi-Router Traffic Grapher
 
 USE_BUILDLINK3=	YES
+USE_X11=	YES
 USE_PERL5=	YES
 PERL5_REQD+=	5.6.1
-USE_X11=	YES
 GNU_CONFIGURE=	YES
+USE_PKGINSTALL=	YES
+
 BUILD_DEFS+=	USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
@@ -41,6 +44,10 @@ CONFIGURE_ARGS+=	--with-z-inc=${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-png-lib=${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--with-png-inc=${LOCALBASE}/include
 .endif
+
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+
+CONF_FILES=	${EGDIR}/mrtg.conf ${PKG_SYSCONFDIR}/mrtg.conf
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/mrtg.conf.example \
@@ -53,7 +60,7 @@ post-build:
 	    >${WRKDIR}/envstat2mrtg
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/etc/mrtg
+	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mrtg
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mrtg
 	for FILE in ${WRKSRC}/doc/*; do \
@@ -69,7 +76,7 @@ do-install:
 	for FILE in ${WRKSRC}/images/*.png; do \
 	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/mrtg; \
 	done
-	${INSTALL_DATA} ${WRKDIR}/mrtg.conf.example ${PREFIX}/etc/mrtg
+	${INSTALL_DATA} ${WRKDIR}/mrtg.conf.example ${EGDIR}/mrtg.conf
 	for FILE in netstat2mrtg sys2mrtg envstat2mrtg; do \
 	  ${INSTALL_SCRIPT} ${WRKDIR}/$$FILE ${PREFIX}/libexec; \
 	done
