@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 21:31:38 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/04 04:38:54 grant Exp $
 #
 
 DISTNAME=		libole2-0.2.4
@@ -13,7 +13,7 @@ COMMENT=		OLE2 streams parsing library for GNOME
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_BUILDLINK2=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../devel/glib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
