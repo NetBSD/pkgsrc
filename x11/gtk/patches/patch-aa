@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.7 1999/03/04 08:54:37 tron Exp $
+$NetBSD: patch-aa,v 1.8 1999/03/05 11:32:22 tron Exp $
 
 --- configure.orig	Thu Feb 25 12:02:28 1999
-+++ configure	Thu Mar  4 00:01:06 1999
++++ configure	Fri Mar  5 12:13:21 1999
+@@ -22,7 +22,7 @@
+ #
+ GTK_MAJOR_VERSION=1
+ GTK_MINOR_VERSION=2
+-GTK_MICRO_VERSION=0
++GTK_MICRO_VERSION=12
+ GTK_INTERFACE_AGE=0
+ GTK_BINARY_AGE=0
+ GTK_VERSION=$GTK_MAJOR_VERSION.$GTK_MINOR_VERSION.$GTK_MICRO_VERSION
 @@ -1600,6 +1600,7 @@
    ac_tool_prefix=
  fi
