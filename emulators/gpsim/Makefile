@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/04/26 22:34:17 snj Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/02 20:08:14 bouyer Exp $
 #
 
 DISTNAME=	gpsim-0.21.2
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.dattalo.com/gnupic/
 
