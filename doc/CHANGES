@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9156 2005/02/16 02:28:25 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9157 2005/02/16 08:54:28 manu Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -894,3 +894,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sympa to 4.1.2nb2 [seb 2005-02-15]
 	Updated mysql4-client to 4.1.10 [xtraeme 2005-02-16]
 	Updated mysql4-server to 4.1.10 [xtraeme 2005-02-16]
+	Added hobbitclient-0.3 [manu 2005-02-16]

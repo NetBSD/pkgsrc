@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.541 2005/02/15 18:23:38 drochner Exp $
+# $NetBSD: Makefile,v 1.542 2005/02/16 08:54:28 manu Exp $
 #
 
 COMMENT=	Networking tools
@@ -128,6 +128,7 @@ SUBDIR+=	gtm
 SUBDIR+=	hesiod
 SUBDIR+=	hf6to4
 SUBDIR+=	hlfl
+SUBDIR+=	hobbitclient
 SUBDIR+=	hobbitmon
 SUBDIR+=	host
 SUBDIR+=	howl
