@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2002/12/22 12:22:06 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2004/07/10 16:11:59 minskim Exp $
 
---- Makefile.orig	Tue May  7 17:20:50 1996
+--- Makefile.orig	2004-07-10 11:05:04.000000000 -0500
 +++ Makefile
 @@ -20,7 +20,7 @@ CC = gcc
  
@@ -20,7 +20,23 @@ $NetBSD: patch-aa,v 1.3 2002/12/22 12:22:06 jmmv Exp $
  LIBS_freebsd = -lm
  AUDIODIR_freebsd=PCux/
  CONFIG_freebsd = PCux/freebsd_
-@@ -250,7 +250,7 @@ OBJ_SPLITMOD = split$O time$O st_read$O 
+@@ -175,6 +175,15 @@ EXE_freebsd = 
+ UI_freebsd = Unix/
+ SHELL_freebsd = /bin/sh
+ 
++CFLAGS_netbsd = -O2 -funroll-loops -finline-functions
++LIBS_netbsd = -lm -lossaudio
++AUDIODIR_netbsd=PCux/
++CONFIG_netbsd = PCux/netbsd_
++O_netbsd = .o
++EXE_netbsd = 
++UI_netbsd = Unix/
++SHELL_netbsd = /bin/sh
++
+ CFLAGS_aix = -O
+ LIBS_aix = -lm
+ AUDIODIR_aix = Aix/
+@@ -250,7 +259,7 @@ OBJ_SPLITMOD = split$O time$O st_read$O 
  display$O prefs$O autoinit$O $(UI)ui$O empty$O color$O version$O \
  st_virt$O automaton$O
  
@@ -29,7 +45,7 @@ $NetBSD: patch-aa,v 1.3 2002/12/22 12:22:06 jmmv Exp $
  
  config.h: $(CONFIG)config.h 
  	rm -f config.h
-@@ -272,9 +272,8 @@ version.c: Makefile
+@@ -272,9 +281,8 @@ version.c: Makefile
  install: 
  	$(INSTALL) $(INST_BIN_OPT) tracker $(BIN_DIR)
  	$(INSTALL) $(INST_BIN_OPT) randomize $(BIN_DIR)
@@ -41,3 +57,4 @@ $NetBSD: patch-aa,v 1.3 2002/12/22 12:22:06 jmmv Exp $
  
  # no manpage available, use the texinfo manual.
  install.man:
+-
