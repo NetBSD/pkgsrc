@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/23 13:16:09 salo Exp $
+share/freeciv/stdsounds.soundspec
+share/freeciv/stdsounds/amb18.wav
+share/freeciv/stdsounds/bang10.wav
+share/freeciv/stdsounds/cfx01.wav
+share/freeciv/stdsounds/cfx11.wav
+share/freeciv/stdsounds/chineseprc09.wav
+share/freeciv/stdsounds/foot3.wav
+share/freeciv/stdsounds/gong10.wav
+share/freeciv/stdsounds/guncock.wav
+share/freeciv/stdsounds/inh2o.wav
+share/freeciv/stdsounds/metbrk.wav
+share/freeciv/stdsounds/plopp.wav
+share/freeciv/stdsounds/r_exp3.wav
+share/freeciv/stdsounds/rhino.wav
+share/freeciv/stdsounds/wall01.wav
+share/freeciv/stdsounds/woodbrk.wav
+@dirrm share/freeciv/stdsounds
