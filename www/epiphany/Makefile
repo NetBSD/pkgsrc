@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/02/14 17:21:54 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/19 13:34:27 jmmv Exp $
 #
 
 DISTNAME=	epiphany-1.0.7
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	YES
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
@@ -22,17 +22,17 @@ USE_PKGLOCALEDIR=	YES
 GCONF2_SCHEMAS=		epiphany.schemas
 
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libbonoboui/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../net/ORBit2/buildlink2.mk"
-.include "../../sysutils/gnome-vfs2/buildlink2.mk"
-.include "../../sysutils/nautilus/buildlink2.mk"
-.include "../../textproc/intltool/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libbonoboui/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/nautilus/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../www/mozilla-gtk2/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../www/mozilla-gtk2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
