@@ -28,10 +28,10 @@ WWAARRNNIINNGG
      _s_i_g_n_a_t_u_r_e_s _p_r_o_v_i_d_e_d _w_h_e_r_e _p_o_s_s_i_b_l_e _(_s_e_e _t_h_e --ss _o_p_t_i_o_n_)_, _o_r_, _f_a_i_l_i_n_g _t_h_a_t_,
      _u_s_e _t_h_e --MM _f_l_a_g _t_o _e_x_t_r_a_c_t _t_h_e _p_a_c_k_a_g_e _f_i_l_e_, _a_n_d _i_n_s_p_e_c_t _i_t_s _c_o_n_t_e_n_t_s _a_n_d
      _s_c_r_i_p_t_s _t_o _e_n_s_u_r_e _i_t _p_o_s_e_s _n_o _d_a_n_g_e_r _t_o _y_o_u_r _s_y_s_t_e_m_'_s _i_n_t_e_g_r_i_t_y_.  _P_a_y
-     _p_a_r_t_i_c_u_l_a_r _a_t_t_e_n_t_i_o_n _t_o _a_n_y _+_I_N_S_T_A_L_L_, _+_D_E_I_N_S_T_A_L_L_, _+_R_E_Q_U_I_R_E _o_r _+_M_T_R_E_E___D_I_R_S
-     _f_i_l_e_s_, _a_n_d _i_n_s_p_e_c_t _t_h_e _+_C_O_N_T_E_N_T_S _f_i_l_e _f_o_r @@ccwwdd_, @@mmooddee _(_c_h_e_c_k _f_o_r _s_e_t_u_i_d_)_,
-     @@ddiirrrrmm_, @@eexxeecc_, _a_n_d @@uunneexxeecc _d_i_r_e_c_t_i_v_e_s_, _a_n_d_/_o_r _u_s_e _t_h_e pkg_info(_1) _c_o_m_m_a_n_d
-     _t_o _e_x_a_m_i_n_e _t_h_e _p_a_c_k_a_g_e _f_i_l_e_.
+     _p_a_r_t_i_c_u_l_a_r _a_t_t_e_n_t_i_o_n _t_o _a_n_y _+_I_N_S_T_A_L_L_, _+_D_E_I_N_S_T_A_L_L_, _+_R_E_Q_U_I_R_E_, _o_r
+     _+_M_T_R_E_E___D_I_R_S _f_i_l_e_s_, _a_n_d _i_n_s_p_e_c_t _t_h_e _+_C_O_N_T_E_N_T_S _f_i_l_e _f_o_r @@ccwwdd_, @@mmooddee _(_c_h_e_c_k
+     _f_o_r _s_e_t_u_i_d_)_, @@ddiirrrrmm_, @@eexxeecc_, _a_n_d @@uunneexxeecc _d_i_r_e_c_t_i_v_e_s_, _a_n_d_/_o_r _u_s_e _t_h_e
+     pkg_info(_1) _c_o_m_m_a_n_d _t_o _e_x_a_m_i_n_e _t_h_e _p_a_c_k_a_g_e _f_i_l_e_.
 
 OOPPTTIIOONNSS
      The following command line arguments are supported:
@@ -132,7 +132,7 @@ OOPPTTIIOONNSS
      --uu      If the package that's being installed is already installed,
              either in the same or a different version, an update is per-
              formed.  If this is specified twice, then any dependant packages
-             that are too old will also be updated to fulfill the dependecy.
+             that are too old will also be updated to fulfill the dependency.
              See below for a more detailed description of the process.
 
      --VV      Print version number and exit.
@@ -154,7 +154,7 @@ OOPPTTIIOONNSS
      a URL pointing at a file available on an ftp or web site.  Thus you may
      extract files directly from their anonymous ftp or WWW locations (e.g.,
      ppkkgg__aadddd ftp://ftp.NetBSD.org/pub/NetBSD/pack-
-     ages/1.5/i386/shells/bash-2.04.tgz or ppkkgg__aadddd http://www.exam-
+     ages/2.0/i386/shells/bash-3.0nb1.tgz or ppkkgg__aadddd http://www.exam-
      ple.org/packages/screen-4.0.tbz).  Note:  For ftp transfers, if you wish
      to use _p_a_s_s_i_v_e _m_o_d_e ftp in such transfers, set the variable _F_T_P___P_A_S_-
      _S_I_V_E___M_O_D_E to some value in your environment.  Otherwise, the more stan-
@@ -191,10 +191,10 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 these required packages are not currently installed, an
                 attempt is made to find and install it; if the missing package
                 cannot be found or installed, the installation is terminated.
-                If the --uu option was specified twice, required packages that
-                are installed, but with too old of a version, are also
-                updated.  The dependant packages are found according to the
-                normal PKG_PATH rules.
+                If the --uu option was specified twice, any required packages
+                that are installed, but which have a version number that is
+                considered to be too old, are also updated.  The dependant
+                packages are found according to the normal PKG_PATH rules.
 
            4.   A search is made for any @@ooppttiioonn directives which control how
                 the package is added to the system.  The only currently imple-
@@ -327,9 +327,9 @@ EEXXAAMMPPLLEESS
      You can grab a compiled binary package from remote location, by specify-
      ing a URL.  The URL can be put into an environment variable, PKG_PATH.
 
-     # pkg_add -v ftp://ftp.NetBSD.org/pub/NetBSD/packages/1.5/i386/All/mozilla-0.8.1.tgz
+     # pkg_add -v ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/All/mozilla-1.7.3nb2.tgz
 
-     # export PKG_PATH=ftp://ftp.NetBSD.org/pub/NetBSD/packages/1.5/i386/All
+     # export PKG_PATH=ftp://ftp.NetBSD.org/pub/NetBSD/packages/2.0/i386/All
      # pkg_add -v mozilla
 
 SSEEEE AALLSSOO
@@ -359,4 +359,4 @@ BBUUGGSS
 
      Sure to be others.
 
-NetBSD 2.0                      April 11, 2004                      NetBSD 2.0
+NetBSD 2.0                     December 10, 2004                    NetBSD 2.0
