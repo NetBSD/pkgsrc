@@ -1,28 +1,19 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 14:38:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/14 12:55:30 zuntum Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/07/12 22:59:19 steve Exp $
 
-DISTNAME=       pcre-2.08
-CATEGORIES=     devel
-MASTER_SITES=   ftp://ftp.cus.cam.ac.uk/pub/software/programs/pcre/
+DISTNAME=	pcre-3.4
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcre/}			\
+		ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/	\
+		ftp://pcre.sourceforge.net/pub/pcre/
 
 MAINTAINER=	proff@netbsd.org
+HOMEPAGE=	http://www.pcre.org/
 COMMENT=	Perl Compatible Regular Expressions library
 
-do-configure:
-	${SED} -e '/^CC/s/.*/CC=${CC}/' \
-	       -e '/^CFLAGS/s/.*/CFLAGS=${CFLAGS}/' \
-	       -e '/^RANLIB/s/.*/RANLIB=${RANLIB}/' \
-	    ${WRKSRC}/Makefile > ${WRKSRC}/Makefile.new
-	${MV} ${WRKSRC}/Makefile.new ${WRKSRC}/Makefile
+GNU_CONFIGURE=	yes
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pgrep ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/libpcre.a ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/libpcreposix.a ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/pcreposix.h ${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/pcre.h ${PREFIX}/include
-	${INSTALL_MAN} ${WRKSRC}/pcre.3 ${PREFIX}/man/man3
-	${INSTALL_MAN} ${WRKSRC}/pcreposix.3 ${PREFIX}/man/man3
-	${INSTALL_MAN} ${WRKSRC}/pgrep.1 ${PREFIX}/man/man1
+USE_LIBTOOL=	yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.pkg.mk"
