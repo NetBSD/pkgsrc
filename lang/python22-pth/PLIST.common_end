@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common_end,v 1.1.1.1 2002/10/25 10:48:48 drochner Exp $
+@comment $NetBSD: PLIST.common_end,v 1.2 2003/06/06 17:31:20 drochner Exp $
 @dirrm lib/python2p2/xml/sax
 @dirrm lib/python2p2/xml/parsers
 @dirrm lib/python2p2/xml/dom
@@ -13,6 +13,8 @@
 @dirrm lib/python2p2/lib-dynload
 @dirrm lib/python2p2/hotshot
 @dirrm lib/python2p2/encodings
+@dirrm lib/python2p2/email/test/data
+@dirrm lib/python2p2/email/test
 @dirrm lib/python2p2/email
 @dirrm lib/python2p2/distutils/command
 @dirrm lib/python2p2/distutils
