@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/09/27 18:50:11 grant Exp $
+# $NetBSD: Makefile,v 1.21 2003/10/03 20:13:52 xtraeme Exp $
 #
 
 DISTNAME=	xft-2.1.2
@@ -28,6 +28,14 @@ PKGCONFIG_OVERRIDE=	${WRKSRC}/xft.pc.in
 MAKE_ENV+=		EGREP="${EGREP}"
 
 BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8.2
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
+PLIST_SUBST+=		LIBXFT="@comment "
+.else
+PLIST_SUBST+=		LIBXFT=""
+.endif
 
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
