@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/25 04:48:00 snj Exp $
+# $NetBSD: Makefile,v 1.14.2.1 2004/07/29 21:54:34 agc Exp $
 
 DISTNAME=		cfs-1.4.1
 PKGREVISION=		1
@@ -29,6 +29,7 @@ CFS_SUBST+=		cmkkey->cfs_mkkey	CMKKEY->CFS_MKKEY
 CFS_SUBST+=		cname->cfs_name		CNAME->CFS_NAME
 CFS_SUBST+=		cpasswd->cfs_passwd	CPASSWD->CFS_PASSWD
 
+.include "../../mk/compiler.mk"
 .include "../../mk/bsd.prefs.mk"
 
 MAKE_ENV+=		OPSYS="${OPSYS}"
@@ -50,7 +51,9 @@ CFS_SUBST+=		getpassword->getpass
 CFLAGS+=		-DHAVE_GETPASS
 CFS_BUILD_SCRIPT=	${WRKSRC}/netbsd_make_with_bad_rpcgen
 .elif ${OPSYS} == "SunOS"
+.  if !empty(CC_VERSION:Mgcc)
 CFLAGS+=		-traditional
+.  endif
 CFLAGS+=		-DPROTOTYPES=1
 CFLAGS+=		-DSOLARIS2X -DPORTMAP -DPTMX
 MAKE_ENV+=		MAKE=${MAKE_PROGRAM}
@@ -59,7 +62,9 @@ MAKE_ENV+=		COMPAT=
 MAKE_ENV+=		RPCOPTS=
 CFS_BUILD_SCRIPT=	${WRKSRC}/make_with_bad_rpcgen
 .elif ${OPSYS} == "Linux"
+.  if !empty(CC_VERSION:Mgcc)
 CFLAGS+=		-traditional
+.  endif
 CFLAGS+=		-DPROTOTYPES=1
 CFLAGS+=		-U__OPTIMIZE__ -U__STDC__ -Dd_fileno=d_ino
 MAKE_ENV+=		MAKE=${MAKE_PROGRAM}
@@ -76,25 +81,25 @@ DOCDIR=			${PREFIX}/share/doc/cfs
 RCD_SCRIPTS=		cfsd
 
 post-extract:
-	${RM} -f ${WRKSRC}/esm.1
+	@${RM} -f ${WRKSRC}/esm.1
 
 post-patch:
-	cd ${WRKSRC}; for file in *; do					\
+	@cd ${WRKSRC}; for file in *; do				\
 		${MV} -f $${file} $${file}.presubst;			\
 		dest=`${ECHO} $${file} | ${SED} ${CFS_SUBST_SED}`;	\
 		${SED} ${CFS_SUBST_SED} $${file}.presubst > $${dest};	\
 		${RM} -f $${file}.presubst;				\
 	done
-	${CHMOD} +x ${CFS_BUILD_SCRIPT}
+	@${CHMOD} +x ${CFS_BUILD_SCRIPT}
 
 pre-build:
-	${SED}	-e "s|@AWK@|${AWK}|g"					\
+	@${SED}	-e "s|@AWK@|${AWK}|g"					\
 		-e "s|@MV@|${MV}|g"					\
 		${FILESDIR}/unansi.sh > ${WRKSRC}/unansi
-	${CHMOD} +x ${WRKSRC}/unansi
+	@${CHMOD} +x ${WRKSRC}/unansi
 
 do-build:
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
 		${SH} ${CFS_BUILD_SCRIPT} ${ALL_TARGET}
 
 post-install:
