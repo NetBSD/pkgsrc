@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5532 2004/04/11 13:18:05 taca Exp $
+$NetBSD: CHANGES,v 1.5533 2004/04/11 13:29:49 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1904,3 +1904,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added anacron-2.3 [jmmv 2004-04-11]
 	Updated p5-nkf to 1.7 [taca 2004-04-11]
 	Updated ruby-rdtool to 0.6.14nb3 [taca 2004-04-11]
+	Updated nabi to 0.13 [minskim 2004-04-11]
