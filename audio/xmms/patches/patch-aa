@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2004/04/23 15:28:13 xtraeme Exp $
+$NetBSD: patch-aa,v 1.8 2004/05/06 14:48:57 drochner Exp $
 
---- Input/cdaudio/cdaudio.c.orig	2004-04-23 17:20:46.000000000 +0200
-+++ Input/cdaudio/cdaudio.c	2004-04-23 17:23:52.000000000 +0200
-@@ -214,7 +214,11 @@
+--- Input/cdaudio/cdaudio.c.orig	2004-05-06 17:52:36.000000000 +0200
++++ Input/cdaudio/cdaudio.c	2004-05-06 17:54:45.000000000 +0200
+@@ -305,7 +305,11 @@
   	FILE *mounts;
   	struct mntent *mnt;
  #elif defined(HAVE_GETMNTINFO)
@@ -14,65 +14,3 @@ $NetBSD: patch-aa,v 1.7 2004/04/23 15:28:13 xtraeme Exp $
   	int entries;
  #endif
  
-@@ -398,7 +402,7 @@
- 	if (cdda_fd < 0)
- 		return;
- 
--	ioctl(cdda_fd, XMMS_PAUSE);
-+	ioctl(cdda_fd, XMMS_PAUSE, 0);
- 	close(cdda_fd);
- 	cdda_fd = -1;
- 	stop_timeout_id = gtk_timeout_add(STOP_DELAY * 100, stop_timeout, NULL);
-@@ -409,11 +413,11 @@
- 	if (p)
- 	{
- 		pause_time = get_time();
--		ioctl(cdda_fd, XMMS_PAUSE);
-+		ioctl(cdda_fd, XMMS_PAUSE, 0);
- 	}
- 	else
- 	{
--		ioctl(cdda_fd, XMMS_RESUME);
-+		ioctl(cdda_fd, XMMS_RESUME, 0);
- 		pause_time = -1;
- 	}
- 	is_paused = p;
-@@ -554,9 +558,11 @@
- 	struct cd_sub_channel_info subinfo;
- 	subchnl.address_format = CD_MSF_FORMAT;
- 	subchnl.data_format = CD_CURRENT_POSITION;
-+	subchnl.track = 0;
- 	subchnl.data_len = sizeof(subinfo);
- 	subchnl.data = &subinfo;
--	ioctl(cdda_fd, CDIOCREADSUBCHANNEL, &subchnl);
-+	if (ioctl(cdda_fd, CDIOCREADSUBCHANNEL, &subchnl))
-+		return (-1);
- 
- 	return(LBA(subchnl.data->what.position.absaddr.msf));
- }
-@@ -591,6 +597,7 @@
- {
- 	struct ioc_toc_header tochdr;
- 	struct ioc_read_toc_entry tocentry;
-+	struct cd_toc_entry tocentrydata;
- 	int i;
- 
- 	if (ioctl(fd, CDIOREADTOCHEADER, &tochdr))
-@@ -601,6 +608,8 @@
- 		tocentry.address_format = CD_MSF_FORMAT;
- 
- 		tocentry.starting_track = i;
-+		tocentry.data = &tocentrydata;
-+		tocentry.data_len = sizeof(tocentrydata);
- 		if (ioctl(fd, CDIOREADTOCENTRYS, &tocentry))
- 			return FALSE;
- 		info->track[i].minute =
-@@ -617,6 +626,8 @@
- 	tocentry.address_format = CD_MSF_FORMAT;
- 
- 	tocentry.starting_track = 0xAA;
-+	tocentry.data = &tocentrydata;
-+	tocentry.data_len = sizeof(tocentrydata);
- 	if (ioctl(fd, CDIOREADTOCENTRYS, &tocentry))
- 		return FALSE;
- 	info->leadout.minute = tocentry.data->addr.msf.minute;
