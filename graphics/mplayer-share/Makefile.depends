@@ -1,25 +1,28 @@
-# $NetBSD: Makefile.depends,v 1.3 2002/08/07 12:53:06 veego Exp $
+# $NetBSD: Makefile.depends,v 1.4 2002/08/28 07:00:48 jlam Exp $
 
 DEPENDS+=	mplayer-share-${MPLAYER_PKG_VERSION}${PKGREVISION:Dnb${PKGREVISION}}:../../graphics/mplayer-share
 
+.include "../../lang/gcc/Makefile.gcc"
+
 .if (${OPSYS} == "NetBSD")
-.include "../../devel/binutils/buildlink.mk"
+.  include "../../devel/binutils/buildlink2.mk"
 .endif
 
 .if ${MACHINE_ARCH} == "i386"
 DEPENDS+=	win32-codecs>=011227:../../graphics/win32-codecs
-.if ${MPLAYER_USE_REALMEDIA} == "YES"
+.  if ${MPLAYER_USE_REALMEDIA} == "YES"
 DEPENDS+=	realplayer>=8:../../audio/realplayer
-.endif
+.  endif
 .endif
 
-.include "../../audio/mad/buildlink.mk"
-.include "../../devel/SDL/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/libungif/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../lang/gcc/Makefile.gcc"
-.include "../../misc/libdvdread/buildlink.mk"
-.include "../../mk/ossaudio.buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+USE_X11=	# defined
+
+.include "../../audio/mad/buildlink2.mk"
+.include "../../devel/SDL/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/libungif/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../misc/libdvdread/buildlink2.mk"
+
+.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
