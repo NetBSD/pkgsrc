@@ -1,0 +1,3 @@
+This package provides the dvdnav plugin for GStreamer, which allows navigation
+of menus contained in DVDs.  You'll probably want to install the dvdread plugin
+(from the gst-plugins-dvdread package), too.
