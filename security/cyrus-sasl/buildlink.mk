@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/11/21 22:22:10 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/03/07 21:42:28 jlam Exp $
 #
 # This Makefile fragment is included by packages that use cyrus-sasl.
 #
@@ -27,6 +27,10 @@ BUILDLINK_FILES.cyrus-sasl+=		include/sasl.h
 BUILDLINK_FILES.cyrus-sasl+=		include/saslplug.h
 BUILDLINK_FILES.cyrus-sasl+=		include/saslutil.h
 BUILDLINK_FILES.cyrus-sasl+=		lib/libsasl.*
+
+.if defined(USE_PAM)
+.include "../../security/PAM/buildlink.mk"
+.endif
 
 BUILDLINK_TARGETS.cyrus-sasl=		cyrus-sasl-buildlink
 BUILDLINK_TARGETS.cyrus-sasl+=		cyrus-sasl-buildlink-config-wrapper
