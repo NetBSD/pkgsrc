@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2898 2003/07/26 13:58:27 jmmv Exp $
+$NetBSD: CHANGES,v 1.2899 2003/07/26 21:29:42 chris Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2963,3 +2963,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated snort-mysql to 2.0.1 [salo 2003-07-26]
 	Updated snort-pgsql to 2.0.1 [salo 2003-07-26]
 	Added gmencoder-0.1.0 [jmmv 2003-07-26]
+	Updated sylpheed to 0.9.4 [chris 2003-07-26]
+
