@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/26 10:42:59 martti Exp $
+bin/xfce-mcs-manager
+bin/xfce-setting-show
+include/xfce4/xfce-mcs-manager/manager-plugin.h
+lib/pkgconfig/xfce-mcs-manager.pc
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfce-mcs-manager.mo
+share/xfce4/doc/C/images/settings_manager.png
+share/xfce4/doc/C/images/smgr_from_panel.png
+share/xfce4/doc/C/images/smgr_from_root_menu.png
+share/xfce4/doc/C/images/smgr_from_setup_button.png
+share/xfce4/doc/C/xfce-mcs-manager.html
+@dirrm share/xfce4/doc/C/images
+@dirrm share/xfce4/doc/C
+@dirrm share/xfce4/doc
+@dirrm include/xfce4/xfce-mcs-manager
