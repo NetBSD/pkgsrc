@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/18 13:32:48 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/21 05:08:52 salo Exp $
 #
 
 DISTNAME=	faad2-1.1
@@ -8,7 +8,6 @@ MASTER_SITES=	http://faac.sourceforge.net/files/
 MAINTAINER=	dillo@giga.or.at
 HOMEPAGE=	http://faac.sourceforge.net/
 COMMENT=	AAC decoding library
-
 
 RESTRICTED=	Dolby doesn't allow binary distributions
 NO_BIN_ON_FTP=	${RESTRICTED}
@@ -32,6 +31,17 @@ pre-configure:
 		${AUTOMAKE} --add-missing;				\
 		${AUTOCONF};						\
 	done
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == "SunOS")
+post-configure:
+	${CP} ${WRKSRC}/common/faad/getopt.* ${WRKSRC}/frontend
+	${CP} ${WRKSRC}/frontend/Makefile ${WRKSRC}/frontend/Makefile.orig
+	${SED} -e "s|^faad_SOURCES.*|& getopt.c|" \
+	       -e "s|^faad_OBJECTS.*|& getopt.$$(OBJEXT)|" \
+	${WRKSRC}/frontend/Makefile.orig > ${WRKSRC}/frontend/Makefile
+.endif
 
 .include "../../audio/libsndfile/buildlink2.mk"
 .include "../../mk/automake.mk"
