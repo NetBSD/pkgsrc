@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2002/06/16 18:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/19 18:58:00 mycroft Exp $
 
-DISTNAME=	ogle_gui-0.8.3
+DISTNAME=	ogle_gui-0.8.5
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.dtek.chalmers.se/groups/dvd/dist/
 
@@ -8,7 +8,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.dtek.chalmers.se/groups/dvd/
 COMMENT=	GUI for the Ogle DVD player
 
-DEPENDS+=	ogle>=0.8.3:../../graphics/ogle
+DEPENDS+=	ogle>=0.8.5:../../graphics/ogle
 # Normally, we would use the "../../devel/libglade/buildlink.mk" file,
 # but this doesn't work here, because ogle_gui wants libxml2 and the
 # buildlink file for libglade would also link it with libxml1.
