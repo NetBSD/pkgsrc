@@ -1,6 +1,6 @@
-#!/bin/sh -e
+#!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.3 2004/04/08 18:48:53 abs Exp $
+# $Id: pkg_chk.sh,v 1.4 2004/04/13 14:36:23 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
