@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.6 2003/03/15 13:06:12 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.7 2003/03/17 08:29:54 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -269,3 +269,10 @@ directory '@exec', '${MKDIR}', '-p', '%D/lib/${MOZILLA}/plugins' are created.
 
 this commit fixes this problem.
 	[taya, ticket #1208]
+
+graphics/xpaint/distinfo			1.7
+graphics/xpaint/patches/patch-ag		1.2
+
+don't try and do ${XMFMF} -a because that produces 'xmkmf -a -a' which
+causes an error.  This builds and runs on alpha now.
+	[dmcmahill, ticket #1217]
