@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.5 2003/09/10 17:31:43 gavan Exp $
+# $NetBSD: INSTALL,v 1.6 2003/09/19 00:53:58 jlam Exp $
 
 FONT_PROGS="@FONT_PROGS@"
 X11BASE=@X11BASE@
@@ -41,11 +41,12 @@ POST-INSTALL)
 	${RM} -f ${HOSTDEF}.bak
 	${ECHO} "done."
 	case ${X11BASE} in
-		*openwin) ${ECHO} -n "Patching OpenWindows templates..."
-			  ${SED} "${SITEDEF_SUBST_SED}" ${X11_SITEDEF} > ${SITEDEF}
-			  ${SED} "${SV4LIB_SUBST_SED}" ${X11_SV4LIB} > ${SV4LIB}
-			  ${ECHO} "done."
-			  ;;
+	*openwin)
+		${ECHO} -n "Patching OpenWindows templates..."
+		${SED} "${SITEDEF_SUBST_SED}" ${X11_SITEDEF} > ${SITEDEF}
+		${SED} "${SV4LIB_SUBST_SED}" ${X11_SV4LIB} > ${SV4LIB}
+		${ECHO} "done."
+		;;
 	esac
 	;;
 esac
