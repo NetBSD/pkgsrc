@@ -1,0 +1,14 @@
+--- /dev/null	Thu Jul 30 00:12:10 1998
++++ Makefile	Thu Jul 30 00:24:00 1998
+@@ -0,0 +1,11 @@
++INSTALL= /usr/bin/install -c -g bin -o bin -m 0644
++all:
++	cd source && make netbsd
++install:
++	$(INSTALL) man6/* $(PREFIX)/man/man6
++	mkdir -p $(PREFIX)/share/imaze/sound
++	mkdir -p $(PREFIX)/share/imaze/labs
++	$(INSTALL) labs/* $(PREFIX)/share/imaze/labs
++	$(INSTALL) sounds/* $(PREFIX)/share/imaze/sound
++	$(INSTALL) IMaze.ad $(PREFIX)/lib/X11/app-defaults/IMaze
++	cd source && make install
