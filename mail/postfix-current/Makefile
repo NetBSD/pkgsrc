@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2001/01/17 14:31:23 itojun Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/04 06:10:23 itojun Exp $
 
-DISTNAME=	snapshot-20001217
-PKGNAME=	postfix-20001217
+DISTNAME=	snapshot-20010202
+PKGNAME=	postfix-20010202
 CATEGORIES=	mail
 MASTER_SITES=	ftp://postfix.cloud9.net/experimental/
 
-PATCHFILES=	postfix-20001217snap-v6-20010117a.diff.gz 
+PATCHFILES=	postfix-20010202snap-v6-20010204a.diff.gz 
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 PATCH_DIST_STRIP+=	-p1
 
@@ -59,7 +59,7 @@ pre-install:
 	    ${PREFIX}/share/doc/postfix ${PREFIX}/libexec/postfix
 	${CHOWN} root:wheel ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 	${CHMOD} 755 ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
-	${RM} ${WRKSRC}/conf/*.orig
+	-${RM} -f ${WRKSRC}/conf/*.orig
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${PREFIX}/etc
