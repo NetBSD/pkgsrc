@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 1998/09/04 19:29:06 christos Exp $
+$NetBSD: patch-af,v 1.3 1998/10/09 11:32:15 christos Exp $
 
 *** old/commands.c	Fri Sep  4 11:22:06 1998
 --- commands.c	Fri Sep  4 11:21:28 1998
@@ -586,7 +586,7 @@ $NetBSD: patch-af,v 1.2 1998/09/04 19:29:06 christos Exp $
   		turnon(match_priority, M_PRIORITY(c - 'A' + 1));
   	    when 'x' : xflg = 1;
   	    when 'i' : icase = 1;
-+ 	    when 'D' : dups = FALSE;
++ 	    when 'D' : dups = TRUE;
   	    otherwise:
   		print("pick: unknown flag: %c\n", argv[0][1]);
   		clear_msg_list(ret_list);
