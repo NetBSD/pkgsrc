@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2000/03/28 21:41:44 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.8 2000/08/16 01:52:15 wiz Exp $
 
 --- configs/netbsd-g++-static.orig	Tue Jul 20 04:45:11 1999
 +++ configs/netbsd-g++-static	Thu Oct 21 14:15:45 1999
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.7 2000/03/28 21:41:44 dmcmahill Exp $
  # Compiling
  SYSCONF_CXX		= g++
  SYSCONF_CC		= gcc
-+SYSCONF_CXX_LIB		= $(LIBTOOL) --cplusplus --mode=compile g++
++SYSCONF_CXX_LIB		= $(LIBTOOL) --mode=compile g++
  
  # Compiling with support libraries
  SYSCONF_CXXFLAGS_X11	= -I/usr/X11R6/include
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.7 2000/03/28 21:41:44 dmcmahill Exp $
  
  # Linking applications
 -SYSCONF_LINK		= g++
-+SYSCONF_LINK		= $(LIBTOOL) --cplusplus --mode=link g++
++SYSCONF_LINK		= $(LIBTOOL) --mode=link g++
  SYSCONF_LFLAGS		= 
  SYSCONF_LIBS		= 
  
