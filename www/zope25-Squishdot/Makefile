@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:56:15 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/22 04:14:45 martti Exp $
 #
 
 DISTNAME=	Squishdot-1-5-0
@@ -9,7 +9,7 @@ MASTER_SITES=	http://squishdot.org/Download/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.squishdot.org/
-COMMENT=	news publishing and discussion product for Zope
+COMMENT=	News publishing and discussion product for Zope
 
 ZOPE_COPYPRODUCT= zope-std-copyproduct-short
 
