@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/01/08 02:11:35 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2001/02/16 14:38:57 wiz Exp $
 #
 
 DISTNAME=		pth-1.3.7
@@ -7,6 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=pth/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/pth/pth.html
+COMMENT=		GNU Portable Thread library
 
 CONFLICTS=		pth-current-*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/18 23:52:39 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 14:38:59 wiz Exp $
 #
 
 DISTNAME=	${PY_DISTNAME}
@@ -8,6 +8,7 @@ MASTER_SITES=	${PY_MASTER_SITES}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.python.org/idle/
+COMMENT=	IDLE - The Integrated DeveLopment Environment for Python
 
 DEPENDS+=	py-Tk>=${PY_VERSION}:../../x11/py-Tk
 

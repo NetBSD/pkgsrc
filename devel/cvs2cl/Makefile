@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/09/08 07:55:13 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 14:38:21 wiz Exp $
 #
 
 DISTNAME=	cvs2cl-1.117
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	# Nothing
 
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.red-bean.com/~kfogel/cvs2cl.shtml
+COMMENT=	CVS-log-message-to-ChangeLog conversion script
 
 USE_PERL5=	YES
 NO_BUILD=	YES

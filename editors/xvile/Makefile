@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2000/09/07 09:09:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.29 2001/02/16 14:40:56 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -11,6 +11,7 @@ MASTER_SITES=		ftp://ftp.clark.net/pub/dickey/vile/ \
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		packages@netbsd.org
+COMMENT=		VI Like Emacs, X11 version -- a fully "X aware" vi work-alike
 
 USE_PERL5=		# defined
 USE_X11BASE=		# defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2001/02/03 08:07:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.37 2001/02/16 14:38:21 wiz Exp $
 #
 
 DISTNAME=	cvs-1.11
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.cvshome.org/pub/${DISTNAME}/ \
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.cvshome.org/
+COMMENT=	Concurrent Versions System
 
 GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes

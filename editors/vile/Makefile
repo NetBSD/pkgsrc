@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/01/07 01:48:19 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2001/02/16 14:40:53 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:55:09 gj Exp
 
 DISTNAME=		vile-9.0
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.clark.net/pub/dickey/vile/ \
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		packages@netbsd.org
+COMMENT=		VI Like Emacs.  a vi "workalike", with many additional features
 
 USE_PERL5=		# defined
 USE_CURSES=		# defined

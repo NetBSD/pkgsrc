@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/10/29 09:00:45 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 14:46:08 wiz Exp $
 #
 
 DISTNAME=	ksc5601fonts-20001029
@@ -6,6 +6,7 @@ CATEGORIES=	fonts x11 korean
 DISTFILES=	${KAIST} ${BAEKMUK} ${MIZI} ${HANYANG} ${PINETREE}
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	X11 fonts for KSC 5601 standard
 
 USE_X11BASE=	yes
 EXTRACT_ONLY=	# empty

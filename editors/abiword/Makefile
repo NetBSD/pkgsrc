@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/12/03 04:33:16 mycroft Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/16 14:40:48 wiz Exp $
 #
 
 # According to AbiSource's explanation of their trademark rights,
@@ -16,6 +16,7 @@ DISTFILES=	${ABISRC} ${ABIDISTFILES} ${EXPATSRC} ${ICONVSRC} \
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.abisource.com/
+COMMENT=	Open Source cross-platform word processor
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/unzip:../../archivers/unzip
 DEPENDS+=	ispell-*:../../textproc/ispell

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/30 03:20:51 minoura Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 14:39:06 wiz Exp $
 
 DISTNAME=		w32api-0.4-20001122-bjy
 PKGNAME=		w32api-0.4nb2
@@ -8,6 +8,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME:S/-bjy//}
 
 MAINTAINER=		oki@yha.att.ne.jp
 HOMEPAGE=		http://www.acc.umu.se/~anorland/gnu-win32/
+COMMENT=		Free headers and libraries for the Win32 API
 
 BUILD_DEPENDS+=		${PREFIX}/cross/i386-netbsdpe/bin/gcc:../../cross/i386-netbsdpe
 

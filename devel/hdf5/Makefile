@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/01/24 21:07:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 14:38:31 wiz Exp $
 #
 
 DISTNAME=	hdf5-1.2.2
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://hdf.ncsa.uiuc.edu/HDF5/hdf5-1.2.2/src/ \
 
 MAINTAINER=	jtb@netbsd.org
 HOMEPAGE=	http://hdf.ncsa.uiuc.edu/HDF5/
+COMMENT=	Hierarchical Data Format (version 5)
 
 DEPENDS+=	jpeg-[0-9]*:../../graphics/jpeg
 

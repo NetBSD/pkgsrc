@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/09/25 15:59:59 wulf Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 14:39:01 wiz Exp $
 # FreeBSD: ports/devel/sdcc/Makefile,v 1.5 2000/04/15 15:13:38 knu Exp
 
 DISTNAME=	sdcc-2.1.9Ea
@@ -8,6 +8,7 @@ MASTER_SITES=	http://web.kd0yu.com/sdcc/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://sdcc.sourceforge.net/
+COMMENT=	Cross compile 8051 code
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=      yes

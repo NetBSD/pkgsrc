@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/12/17 12:00:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 14:46:34 wiz Exp $
 #
 
 DISTNAME=       gnofin-0.8.4
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnofin/}
 
 MAINTAINER=	mellon@isc.org
 HOMEPAGE=	http://gnofin.sourceforge.net/
+COMMENT=	Personal checking/savings account management program
 
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk

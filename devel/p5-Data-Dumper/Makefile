@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/09/05 09:25:20 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/16 14:38:47 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:11 jfitz Exp
 
 DISTNAME=	Data-Dumper-2.101
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/Data-Dumper/Dumper.html
+COMMENT=	perl5 module for stringified perl data structures
 
 # Some perl packages install their own versions of this module.
 # Can't simply define USE_PERL5.

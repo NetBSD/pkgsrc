@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/01/03 13:59:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 14:39:03 wiz Exp $
 #
 
 DISTNAME=	smpeg-0.4.1
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://ftp.linuxgames.com/loki/open-source/smpeg/
 
 MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=	http://www.lokigames.com/development/smpeg.php3
+COMMENT=	SDL MPEG Player Library
 
 DEPENDS+=	SDL>=1.1.5nb1:../../devel/SDL
 DEPENDS+=	gtk+-1.*:../../x11/gtk

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/01/24 18:44:58 he Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/16 14:38:39 wiz Exp $
 #
 
 DISTNAME=		libstroke-0.3
@@ -8,6 +8,7 @@ MASTER_SITES=		http://www.etla.net/libstroke/
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.etla.net/libstroke/
+COMMENT=		Stroke translation library
 
 DEPENDS+=		tcl>=8.3.2:../../lang/tcl
 

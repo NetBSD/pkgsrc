@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/11/25 11:33:04 tron Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/16 14:40:55 wiz Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/22 22:16:53 gj Exp
 
 DISTNAME=	xemacs-packages
@@ -23,6 +23,7 @@ DISTFILES=	xemacs-base-1.46-pkg.tar.gz xemacs-devel-1.30-pkg.tar.gz \
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
+COMMENT=	Common elisp packages for xemacs 21
 
 DEPENDS+=	xemacs>=21.1.9:../../editors/xemacs
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/14 17:45:20 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 14:38:36 wiz Exp $
 #
 
 DISTNAME=	libnet-1.0.1b
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.packetfactory.net/libnet/
+COMMENT=	C library for portable packet creation and injection
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

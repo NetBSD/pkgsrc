@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/05/08 18:20:34 ross Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/16 14:40:50 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/17 07:01:28 obrien Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.std.com/src/editors/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	explorer@netbsd.org
+COMMENT=	Joe's own editor
 
 ALL_TARGET=	joe
 WRKSRC=		${WRKDIR}/joe

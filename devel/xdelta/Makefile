@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/08/14 18:08:14 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/16 14:39:06 wiz Exp $
 #
 
 DISTNAME=		xdelta-0.22
@@ -7,6 +7,7 @@ MASTER_SITES=		ftp://www.xcf.berkeley.edu/pub/xdelta/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://scam.XCF.Berkeley.EDU/~jmacd/xdelta.html
+COMMENT=		Enhanced diff that works on binary files
 
 DEPENDS+=		glib-1.2.*:../../devel/glib
 DEPENDS+=		gdbm>=1.7.3:../../databases/gdbm

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/01/26 05:21:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 14:38:31 wiz Exp $
 #
 
 DISTNAME=	isect-1.0
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://home.netcom.com/pub/users/tgagne/
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://home.netcom.com/~tgagne/
+COMMENT=	open source middleware daemon
 
 DEPENDS+=	libwww-5.*:../../www/libwww
 

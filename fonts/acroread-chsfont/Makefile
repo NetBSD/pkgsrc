@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/12 20:40:18 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 14:46:02 wiz Exp $
 #
 
 DISTNAME=	chsfont
 CATEGORIES=	fonts
+
+COMMENT=	Asian Font Packs for Acrobat Reader 4.0 (Chinese Simplified)
 
 DEPENDS+=	acroread-font-share-4.0:../../fonts/acroread-font-share
 

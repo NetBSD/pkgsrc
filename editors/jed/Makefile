@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/01/29 11:34:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/16 14:40:50 wiz Exp $
 #
 
 DISTNAME=		jed0.98-7
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://space.mit.edu/pub/davis/jed/v0.98/ \
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://space.mit.edu/%7Edavis/jed.html
+COMMENT=		Texteditor with many features, extensible through S-Lang functions
 
 DEPENDS+=		libslang-*:../../devel/libslang
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/01/15 18:46:26 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/16 14:40:50 wiz Exp $
 #
 
 DISTNAME=	hexedit-1.1.0
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.src.tgz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.chez.com/prigaux/hexedit.html
+COMMENT=	to view and edit files in hexadecimal or ASCII
 
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib	# for -lncurses

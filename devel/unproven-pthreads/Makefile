@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/01/09 16:14:20 briggs Exp $
+# $NetBSD: Makefile,v 1.20 2001/02/16 14:39:05 wiz Exp $
 #
 
 DISTNAME=		unproven-pthreads-0.17
@@ -7,6 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.flame.org/pub/netbsd/
 
 MAINTAINER=		explorer@netbsd.org
+COMMENT=		(MIT) POSIX threads library, hacked by Michael Graff
 
 #ONLY_FOR_PLATFORM=	NetBSD-*-sparc
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \

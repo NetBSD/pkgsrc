@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/10/22 20:01:52 tsarna Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/16 14:38:58 wiz Exp $
 #
 
 DISTNAME=	${PY_DISTNAME}
@@ -9,6 +9,7 @@ MASTER_SITES=	${PY_MASTER_SITES}
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/doc/current/lib/module-curses.html
+COMMENT=	Enhanced curses module for Python
 
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 

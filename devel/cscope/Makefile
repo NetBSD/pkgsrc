@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/11/11 17:49:24 tron Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/16 14:38:21 wiz Exp $
 
 DISTNAME=	cscope-15.0bl2
 PKGNAME=	cscope-15.0.2
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cscope/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://cscope.sourceforge.net/
+COMMENT=	interactive C program browser
 
 GNU_CONFIGURE=	YES
 USE_CURSES=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/11/11 17:49:24 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 14:38:38 wiz Exp $
 
 DISTNAME=		libsigc++-1.0.1
 CATEGORIES=		devel
@@ -6,6 +6,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libsigc/}
 
 MAINTAINER=		bsieker@freenet.de
 HOMEPAGE=		http://libsigc.sourceforge.net/
+COMMENT=		libsigc++ is provides a callback system for C++ programs
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARG=		--disable-threads

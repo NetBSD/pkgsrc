@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/10/08 23:25:30 abs Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/16 14:38:27 wiz Exp $
 #
 
 DISTNAME=	global-4.0.1
@@ -7,6 +7,7 @@ MASTER_SITES=   http://www.tamacom.com/global/
 
 MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://www.tamacom.com/global/
+COMMENT=	Source code tag system including web browser output
 
 USE_PERL5=	yes
 MANCOMPRESSED_IF_MANZ=	yes

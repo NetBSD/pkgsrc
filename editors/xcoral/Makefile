@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/09/28 20:40:03 soren Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 14:40:55 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/26 02:16:00 steve Exp
 #
 
@@ -7,6 +7,7 @@ CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=editors/}
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	Multiwindow mouse-based text editor for X
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes

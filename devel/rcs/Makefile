@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/07/02 08:46:51 agc Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/16 14:38:59 wiz Exp $
 #
 
 DISTNAME=		rcs-5.7
@@ -7,6 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=rcs/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/rcs/rcs.html
+COMMENT=		GNU Revision Control System - version control software
 
 ONLY_FOR_PLATFORM=	SunOS-*-*	# in NetBSD base system
 

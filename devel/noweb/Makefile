@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/02/06 03:30:09 jtb Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/16 14:38:44 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/09/15 07:22:06 tg Exp
 #
 
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.cs.virginia.edu/~nr/noweb/
+COMMENT=		Simple, extensible literate-programming tool
 
 DEPENDS=		icon-9.3.*:../../lang/icon
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/01/12 23:34:50 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/16 14:38:18 wiz Exp $
 
 DISTNAME=		bison-1.28
 CATEGORIES=		devel
@@ -6,6 +6,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=bison/}
 
 MAINTAINER=		thorpej@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/bison/bison.html
+COMMENT=		GNU yacc(1) replacement
 
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 

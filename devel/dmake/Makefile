@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/15 12:46:21 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 14:38:23 wiz Exp $
 #
 
 DISTNAME=	dmake-v4.1-src-export.all-unknown-all
@@ -10,6 +10,7 @@ MASTER_SITES=	http://dmake.wticorp.com/SourceDistribution/ \
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://dmake.wticorp.com/
+COMMENT=	portable make supported by many platforms
 
 MAKEFILE=	makefile
 ALL_TARGET=	linux

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/11/14 23:36:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 14:38:32 wiz Exp $
 #
 
 DISTNAME=	its4-1.1.1
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cigital.com/its4/
+COMMENT=	static C/C++ code scanner for potential security problems
 
 LICENSE=        no-commercial-use
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/13 17:42:22 itojun Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 14:39:02 wiz Exp $
 #
 
 # pkgsrc/mail/sendmail (as of 8.11.0) specifically wants 1999, not 2000.
@@ -16,6 +16,7 @@ EXTRACT_SUFX=	.cpio
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://akpublic.research.att.com/sw/tools/sfio/
+COMMENT=	Safe and Fast IO library
 
 NO_WRKSUBDIR=	yes
 

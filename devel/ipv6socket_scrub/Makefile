@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/18 22:46:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/16 14:38:31 wiz Exp $
 # KAME Id: Makefile,v 1.6 1999/11/28 14:36:04 itojun Exp
 #
 
@@ -11,6 +11,7 @@ EXTRACT_SUFX=		.tar
 
 MAINTAINER=		itojun@kame.net
 HOMEPAGE=		http://www.sun.com/solaris/ipv6/
+COMMENT=		checks IPv6 portability in source code
 
 DECOMPRESS_CMD=		${CAT}
 EXTRACT_BEFORE_ARGS=	-xf

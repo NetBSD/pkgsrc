@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/09/13 10:41:59 tron Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/16 14:40:52 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/12 02:19:40 obrien Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
 EXTRACT_SUFX=		.msg.gz
 
 MAINTAINER=		packages@netbsd.org
+COMMENT=		Unix version of Rob Pike's editor for plan9
 
 NO_WRKSUBDIR=		yes
 EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
