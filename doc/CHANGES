@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.154 2002/10/03 19:44:20 wiz Exp $
+$NetBSD: CHANGES,v 1.155 2002/10/03 23:51:56 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3100,3 +3100,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added autoconf213-2.13 [wiz 2002-10-03]
 	Removed autoconf-devel [wiz 2002-10-03]
 	Removed automake-devel [wiz 2002-10-03]
+	Updated adzap to 20021003 [simonb 2002-10-04]
