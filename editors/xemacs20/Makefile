@@ -3,7 +3,7 @@
 # Date created:				26 August 1997
 # Whom:					Michael Elbel (me)
 #
-# $NetBSD: Makefile,v 1.13 1998/02/15 10:41:05 frueauf Exp $
+# $NetBSD: Makefile,v 1.14 1998/02/20 12:09:51 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -61,9 +61,13 @@ MAN1=		ctags.1 etags.1 gnuattach.1 gnuclient.1 gnudoit.1 \
 # <bsd.own.mk>, which includes it.
 
 .if (${OPSYS} == "FreeBSD")
+.if exists(/etc/make.conf)
 .include "/etc/make.conf"
+.endif
 .else
+.if exists(/etc/mk.conf)
 .include "/etc/mk.conf"
+.endif
 .endif
 
 .if defined(MANZ)
