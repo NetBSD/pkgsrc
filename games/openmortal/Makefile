@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/03/06 17:32:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/02 21:48:17 xtraeme Exp $
 #
 
-DISTNAME=	openmortal-0.6
+DISTNAME=	openmortal-0.7
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openmortal/}
 EXTRACT_SUFX=	.tar.bz2
