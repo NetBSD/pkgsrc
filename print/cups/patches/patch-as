@@ -1,0 +1,30 @@
+$NetBSD: patch-as,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- pstoraster/Makefile.orig	Thu Jul 29 16:33:30 1999
++++ pstoraster/Makefile	Sun Nov 28 21:06:28 1999
+@@ -120,11 +120,11 @@
+ #
+ 
+ install:	$(TARGETS)
+-	-$(MKDIR) $(SERVERROOT)/filter
+-	$(CP) pstoraster $(SERVERROOT)/filter
+-	-$(LN) pstoraster $(SERVERROOT)/filter/pdftops
+-	-$(MKDIR) $(DATADIR)/pstoraster
+-	$(CP) $(DFILES) $(DATADIR)/pstoraster
++	-$(BSD_INSTALL_PROGRAM_DIR) $(EXECDIR)/filter
++	$(LIBTOOL) $(BSD_INSTALL_PROGRAM) pstoraster $(EXECDIR)/filter
++	-$(LN) pstoraster $(EXECDIR)/filter/pdftops
++	-$(BSD_INSTALL_DATA_DIR) $(DATADIR)/pstoraster
++	$(BSD_INSTALL_DATA) $(DFILES) $(DATADIR)/pstoraster
+ 
+ #
+ # genarch - generate the architecture configuration file.
+@@ -158,7 +158,7 @@
+ 
+ pstoraster:	pstoraster.o libgs.a ../Makedefs ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o pstoraster pstoraster.o libgs.a \
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o pstoraster pstoraster.o libgs.a \
+ 		$(LIBJPEG) $(LIBZ) $(LIBS) -lm
+ pstoraster.o:	arch.h ../config.h ../Makedefs
+ 

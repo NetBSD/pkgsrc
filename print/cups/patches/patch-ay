@@ -1,0 +1,22 @@
+$NetBSD: patch-ay,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- scheduler/job.c.orig	Tue Oct 12 14:29:30 1999
++++ scheduler/job.c	Sun Nov 28 21:06:29 1999
+@@ -604,7 +604,7 @@
+       argv[6] = NULL;
+ 
+     if (filters[i].filter[0] != '/')
+-      sprintf(command, "%s/filter/%s", ServerRoot, filters[i].filter);
++      sprintf(command, "%s/filter/%s", ExecRoot, filters[i].filter);
+     else
+       strcpy(command, filters[i].filter);
+ 
+@@ -662,7 +662,7 @@
+   if (strncmp(printer->device_uri, "file:", 5) != 0)
+   {
+     sscanf(printer->device_uri, "%254[^:]", method);
+-    sprintf(command, "%s/backend/%s", ServerRoot, method);
++    sprintf(command, "%s/backend/%s", ExecRoot, method);
+ 
+     argv[0] = printer->device_uri;
+     if (num_filters)

@@ -1,0 +1,33 @@
+$NetBSD: patch-aw,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- scheduler/conf.c.orig	Sun Oct 10 11:41:09 1999
++++ scheduler/conf.c	Sun Nov 28 21:06:29 1999
+@@ -76,6 +76,8 @@
+   { "ServerAdmin",	ServerAdmin,		VAR_STRING,	sizeof(ServerAdmin) },
+   { "ServerRoot",	ServerRoot,		VAR_STRING,	sizeof(ServerRoot) },
+   { "DocumentRoot",	DocumentRoot,		VAR_STRING,	sizeof(DocumentRoot) },
++  { "ConfRoot",		ConfRoot,		VAR_STRING,	sizeof(ConfRoot) },
++  { "ExecRoot",		ExecRoot,		VAR_STRING,	sizeof(ExecRoot) },
+   { "SystemGroup",	SystemGroup,		VAR_STRING,	sizeof(SystemGroup) },
+   { "AccessLog",	AccessLog,		VAR_STRING,	sizeof(AccessLog) },
+   { "ErrorLog",		ErrorLog,		VAR_STRING,	sizeof(ErrorLog) },
+@@ -168,7 +170,9 @@
+   gethostname(ServerName, sizeof(ServerName));
+   sprintf(ServerAdmin, "root@%s", ServerName);
+   strcpy(ServerRoot, CUPS_SERVERROOT);
+-  strcpy(DocumentRoot, CUPS_DATADIR "/doc");
++  strcpy(DocumentRoot, CUPS_DOCDIR);
++  strcpy(ConfRoot, CUPS_CONFDIR);
++  strcpy(ExecRoot, CUPS_EXECDIR);
+   strcpy(AccessLog, "logs/access_log");
+   strcpy(ErrorLog, "logs/error_log");
+ 
+@@ -272,7 +276,7 @@
+   * Read the MIME type and conversion database...
+   */
+ 
+-  sprintf(directory, "%s/conf", ServerRoot);
++  sprintf(directory, "%s", ConfRoot);
+ 
+   MimeDatabase = mimeNew();
+   mimeMerge(MimeDatabase, directory);

@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- data/Makefile.orig	Fri Jul 30 10:22:10 1999
++++ data/Makefile	Sun Nov 28 21:06:28 1999
+@@ -48,8 +48,8 @@
+ #
+ 
+ install:
+-	-$(MKDIR) $(DATADIR)/data
+-	$(CP) $(FILES) $(DATADIR)/data
++	-$(BSD_INSTALL_DATA_DIR) $(DATADIR)/data
++	$(BSD_INSTALL_DATA) $(FILES) $(DATADIR)/data
+ 
+ #
+ # End of "$Id: patch-al,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $".

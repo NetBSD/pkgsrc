@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- Makedefs.in.orig	Fri Oct 22 13:37:34 1999
++++ Makedefs.in	Sun Nov 28 21:09:21 1999
+@@ -65,11 +65,11 @@
+ #
+ 
+ ARFLAGS	=	crvs
+-CFLAGS	=	@CFLAGS@ $(OPTIM) -I.. $(OPTIONS)
++CFLAGS	=	@CPPFLAGS@ @CFLAGS@ $(OPTIM) -I.. $(OPTIONS)
+ DSOLIBS	=	@DSOLIBS@
+ IMGLIBS	=	@IMGLIBS@ -lm
+ LDFLAGS	=	@LDFLAGS@ $(OPTIM)
+-LIBS	=	-L../cups -lcups $(NETLIBS) @LIBS@
++LIBS	=	../cups/libcups.la $(NETLIBS) @LIBS@
+ NETLIBS	=	@NETLIBS@
+ OPTIM	=	@OPTIM@
+ OPTIONS	=
+@@ -111,6 +111,9 @@
+ 
+ BINDIR		=	@bindir@
+ DATADIR		=	@CUPS_DATADIR@
++DOCDIR		=	@CUPS_DOCDIR@
++CONFDIR		=	@CUPS_CONFDIR@
++EXECDIR		=	@CUPS_EXECDIR@
+ INCLUDEDIR	=	$(includedir)
+ LIBDIR		=	$(libdir)
+ LOCALEDIR	= 	@CUPS_LOCALEDIR@
+@@ -123,10 +126,13 @@
+ #
+ 
+ .SILENT:
+-.SUFFIXES:	.a .c .gz .h .o .z .1 .5 .8
++.SUFFIXES:	.a .c .gz .h .lo .o .z .1 .5 .8
+ .c.o:
+ 	echo Compiling $<...
+ 	$(CC) $(CFLAGS) -c $<
++.c.lo:
++	echo Compiling $<...
++	$(LIBTOOL) $(CC) $(CFLAGS) -c $<
+ .1.z .5.z .8.z .1.gz .5.gz .8.gz:
+ 	echo Formatting $<...
+ 	$(NROFF) -man $< >t

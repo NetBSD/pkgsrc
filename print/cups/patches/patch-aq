@@ -1,0 +1,44 @@
+$NetBSD: patch-aq,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- man/Makefile.orig	Mon Jun 21 11:27:44 1999
++++ man/Makefile	Sun Nov 28 21:06:28 1999
+@@ -41,7 +41,7 @@
+ # Make everything...
+ #
+ 
+-all:	$(CAT1) $(CAT5) $(CAT8)
++all:	# $(CAT1) $(CAT5) $(CAT8)
+ 
+ #
+ # Clean all config and object files...
+@@ -54,24 +54,15 @@
+ #
+ 
+ install:
+-	-$(MKDIR) $(MANDIR)/man1
+-	$(CP) $(MAN1) $(MANDIR)/man1
++	-$(BSD_INSTALL_DATA_DIR) $(MANDIR)/man1
++	$(BSD_INSTALL_DATA) $(MAN1) $(MANDIR)/man1
+ 	$(LN) lp.1 $(MANDIR)/man1/cancel.1
+-	-$(MKDIR) $(MANDIR)/man5
+-	$(CP) $(MAN5) $(MANDIR)/man5
+-	-$(MKDIR) $(MANDIR)/man8
+-	$(CP) $(MAN8) $(MANDIR)/man8
++	-$(BSD_INSTALL_DATA_DIR) $(MANDIR)/man5
++	$(BSD_INSTALL_DATA) $(MAN5) $(MANDIR)/man5
++	-$(BSD_INSTALL_DATA_DIR) $(MANDIR)/man8
++	$(BSD_INSTALL_DATA) $(MAN8) $(MANDIR)/man8
+ 	$(LN) accept.8 $(MANDIR)/man8/reject.8
+ 	$(LN) enable.8 $(MANDIR)/man8/disable.8
+-	-$(MKDIR) $(MANDIR)/cat1
+-	$(CP) $(CAT1) $(MANDIR)/cat1
+-	$(LN) lp.$(CAT) $(MANDIR)/cat1/cancel.$(CAT)
+-	-$(MKDIR) $(MANDIR)/cat5
+-	$(CP) $(CAT5) $(MANDIR)/cat5
+-	-$(MKDIR) $(MANDIR)/cat8
+-	$(CP) $(CAT8) $(MANDIR)/cat8
+-	$(LN) accept.$(CAT) $(MANDIR)/cat8/reject.$(CAT)
+-	$(LN) enable.$(CAT) $(MANDIR)/cat8/disable.$(CAT)
+ 
+ #
+ # End of "$Id: patch-aq,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $".

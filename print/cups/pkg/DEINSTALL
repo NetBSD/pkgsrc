@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+#
+
+PKGNAME=$1
+
+case $2 in
+DEINSTALL)
+	;;
+POST-DEINSTALL)
+	/bin/cat << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove the
+following directories:
+
+	/etc/cups
+	/var/cups
+===========================================================================
+EOF
+	;;
+*)
+	echo "Unexpected argument: $2"
+	exit 1
+	;;
+esac
+exit 0
