@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.67 1999/09/09 22:10:56 tron Exp $
+# $NetBSD: Packages.txt,v 1.68 1999/09/12 01:40:02 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -1348,10 +1348,11 @@ variable.
  =============
 
  * precompiled binary packages:
-   Please contact us for directions on how to provide your precompiled
-   binary packages.
-   [XXX - need more info here - do we have a incoming-dir for such things
-          on ftp.netbsd.org? - hubertf]
+   Our policy is that we accept only binaries from NetBSD developers to
+   guarantee that the packages don't contain any trojan horses etc. 
+   This is not to piss anyone off but rather to protect our users!
+   You're still free to put up your home-made binary packages and tell
+   the world where to get them. 
 
  * packages:
    First, check that your package is complete, compiles and runs well; see
