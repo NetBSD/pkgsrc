@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/10/23 13:15:07 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2001/10/24 22:11:11 jlam Exp $
 
 DISTNAME=		control-center-1.4.0.1
 CATEGORIES=		x11 gnome
@@ -27,10 +27,10 @@ CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR}
 post-patch:
 	@${ECHO} >>${WRKSRC}/control-center/cappletConf.sh.in ""
 
-.include "../../mk/x11.buildlink.mk"
-.include "../../graphics/gdk-pixbuf/buildlink.mk"
+.include "../../devel/popt/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
+.include "../../graphics/gdk-pixbuf/buildlink.mk"
 .include "../../sysutils/gnome-vfs/buildlink.mk"
 .include "../../x11/gnome-libs/buildlink.mk"
-.include "../../devel/popt/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
