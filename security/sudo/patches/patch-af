@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.9 2001/11/19 17:27:24 jlam Exp $
+$NetBSD: patch-af,v 1.10 2002/01/17 16:32:05 taca Exp $
 
---- configure.in.orig	Fri Mar 24 15:14:04 2000
+--- configure.in.orig	Thu Jan 17 08:37:34 2002
 +++ configure.in
-@@ -59,7 +59,6 @@
+@@ -111,7 +111,6 @@
  test "$mandir" = '${prefix}/man' && mandir='$(prefix)/man'
  test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
  test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.9 2001/11/19 17:27:24 jlam Exp $
  
  dnl
  dnl Deprecated --with options (these all warn or generate an error)
-@@ -167,6 +166,19 @@
+@@ -231,6 +230,19 @@
  		;;
  esac])
  
@@ -30,18 +30,18 @@ $NetBSD: patch-af,v 1.9 2001/11/19 17:27:24 jlam Exp $
  AC_ARG_WITH(passwd, [  --without-passwd        don't use passwd/shadow file for authentication],
  [case $with_passwd in
      yes)	;;
-@@ -1466,7 +1478,9 @@
+@@ -1621,7 +1633,9 @@
  dnl
  if test "$with_kerb5" = "yes"; then
-     AC_DEFINE(HAVE_KERB5)
+     AC_DEFINE(HAVE_KERB5, 1, [Define if you use Kerberos V.])
 -    if test -f "/usr/local/include/krb5.h"; then
-+    if test -f "/usr/include/krb5/krb5.h"; then
-+	CPPFLAGS="$CPPFLAGS -I/usr/include/krb5";
-+    elif test -f "/usr/local/include/krb5.h"; then
++     if test -f "/usr/include/krb5/krb5.h"; then
++ 	CPPFLAGS="$CPPFLAGS -I/usr/include/krb5";
++     elif test -f "/usr/local/include/krb5.h"; then
  	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
      elif test -f "/usr/local/kerberos/include/krb5.h"; then
  	CPPFLAGS="$CPPFLAGS -I/usr/local/kerberos/include"
-@@ -1476,7 +1490,9 @@
+@@ -1633,7 +1647,9 @@
  	echo 'Unable to locate kerberos 5 include files, you will have to edit the Makefile and add -I/path/to/krb/includes to CPPFLAGS'
      fi
  
@@ -52,7 +52,7 @@ $NetBSD: patch-af,v 1.9 2001/11/19 17:27:24 jlam Exp $
  	SUDO_LDFLAGS="${SUDO_LDFLAGS} -L/usr/local/lib"
      elif test -f "/usr/local/kerberos/lib/libkrb5.a"; then
  	SUDO_LDFLAGS="${SUDO_LDFLAGS} -L/usr/local/kerberos/lib"
-@@ -1486,7 +1502,7 @@
+@@ -1645,7 +1661,7 @@
  	echo 'Unable to locate kerberos 5 libraries, you will have to edit the Makefile and add -L/path/to/krb/libs to SUDO_LDFLAGS'
      fi
  
