@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/03/19 17:00:12 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/03/19 17:00:32 tv Exp $
 
 DISTNAME=	napshare-1.3
 CATEGORIES=	net
@@ -12,7 +12,7 @@ USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 GTKCFLAGS_CMD=	${BUILDLINK_PREFIX.gtk}/bin/gtk-config --cflags
-CFLAGS+=	${GTKCFLAGS:sh}
+CFLAGS+=	${GTKCFLAGS_CMD:sh}
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
