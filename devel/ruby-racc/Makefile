@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/12/30 17:13:47 taca Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 21:33:44 grant Exp $
 # FreeBSD: ports/devel/ruby-racc/Makefile,v 1.20 2001/01/27 09:54:30 knu Exp
 
 DISTNAME=	${RACC_DISTFILE}
@@ -6,7 +6,7 @@ PKGNAME?=	${RACC_NAME}-${RACC_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${RACC_SITES}
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RACC_HOMEPAGE}
 COMMENT=	LALR(1) parser generator for Ruby
 

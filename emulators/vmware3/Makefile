@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/01 07:48:29 jdolecek Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 21:36:24 grant Exp $
 
 DISTNAME=	VMware-workstation-3.2.1-2237
 PKGNAME=	vmware-3.2.1
@@ -13,7 +13,7 @@ MASTER_SITES=	http://www4.vmware.com/software/ \
 		ftp://vmware.wespe.de/pub/software/ \
 		ftp://mirror.aarnet.edu.au/pub/vmware/software/
 
-MAINTAINER=	jdolecek@netbsd.org
+MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://www.vmware.com/
 COMMENT=	VMware emulator 3.x
 

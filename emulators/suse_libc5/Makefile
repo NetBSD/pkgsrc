@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/05/27 08:24:16 kei Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/17 21:36:10 grant Exp $
 
 DISTNAME=		shlibs5
 PKGNAME=		suse_libc5-${SUSE_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=a2/}
 EXTRACT_SUFX=		.rpm
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for libc5 binaries
 

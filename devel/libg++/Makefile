@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2003/06/23 11:23:25 seb Exp $
+# $NetBSD: Makefile,v 1.26 2003/07/17 21:31:25 grant Exp $
 #
 
 DISTNAME=	libg++-${GXXVERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=libg++/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	GNU C++ Class Library
 
 .if !exists(/usr/lib/libstdc++.so.2.0) && !exists(/usr/lib/libstdc++.so)

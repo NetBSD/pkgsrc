@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/25 21:01:35 seb Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:33:16 grant Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
@@ -13,7 +13,7 @@ DISTFILES=		${DISTNAME}-${MAINFILEEXT}${EXTRACT_SUFX} \
 			pvs-${VERSION}-emacs19${EXTRACT_SUFX} \
 			pvs-${VERSION}-libraries${EXTRACT_SUFX}
 
-MAINTAINER=		jschauma@netbsd.org
+MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://pvs.csl.sri.com/
 COMMENT=		The PVS Specification and Verification System
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/13 14:46:14 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 21:37:02 grant Exp $
 #
 
 DISTNAME=	fcpackage.2_1
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/fontconfig
 CATEGORIES=	fonts gnome
 MASTER_SITES=	http://fontconfig.org/release/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://fontconfig.org/
 COMMENT=	Library for configuring and customizing font access
 

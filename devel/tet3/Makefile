@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/17 17:39:03 agc Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 21:34:09 grant Exp $
 
 DISTNAME=	tet3.3h-unsup.src
 PKGNAME=	tet3-3.3h
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://tetworks.opengroup.org/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://tetworks.opengroup.org/
 COMMENT=	The Open Group test harness
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/06/02 01:20:34 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 21:32:07 grant Exp $
 #
 
 DISTNAME=	Bit-Vector-6.3
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5biv
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Bit/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/Bit-Vector/Vector.html
 COMMENT=	Efficient base class implementing bit vectors
 

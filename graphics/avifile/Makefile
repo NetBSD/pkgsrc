@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/06/02 01:19:31 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 21:40:10 grant Exp $
 
 DISTNAME=	avifile-0.53.5
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://ernie.eit.uni-kl.de/avifile/			\
 		http://divx.euro.ru/					\
 		http://www.toon.eu.org/divx/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://avifile.sourceforge.net/
 COMMENT=	MPEG-4 (DivX) video player library
 

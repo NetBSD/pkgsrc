@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:38:17 grant Exp $
 
 DISTNAME=		EXCH314S
 PKGNAME=		exchess-3.14
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://pc.astro.brandeis.edu/BRAG/people/dch/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://pc.astro.brandeis.edu/BRAG/people/dch/chess.html
 COMMENT=		experimental chess engine
 

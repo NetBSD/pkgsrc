@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/06/02 01:20:17 jschauma Exp $
+# $NetBSD: Makefile,v 1.25 2003/07/17 21:33:17 grant Exp $
 #
 
 DISTNAME=		pwlib_1.4.4
@@ -12,7 +12,7 @@ COUNTRY_MIRRORS=	at us1 us2 ru de cz
 MASTER_SITES+=		ftp://www.${COUNTRY}.openh323.org/bin/
 .endfor
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.openh323.org/
 COMMENT=		Portable Windows Libary
 

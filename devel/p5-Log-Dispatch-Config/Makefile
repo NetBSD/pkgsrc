@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/06/02 01:20:26 jschauma Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 21:32:41 grant Exp $
 
 DISTNAME=	Log-Dispatch-Config-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ SVR4_PKGNAME=	p5ldi
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Configure Log::Dispatch with a config file, a la Java's log4j
 
 DEPENDS+=	p5-Test-Harness>=2.01:../../devel/p5-Test-Harness

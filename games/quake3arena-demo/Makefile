@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/04/10 01:28:18 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:39:18 grant Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
 PKGNAME=	quake3arena-demo-1.11.6
@@ -8,7 +8,7 @@ MASTER_SITES=	http://download1.activision.com/activision/quake3/demo/ \
 		http://download2.activision.com/activision/quake3/demo/
 EXTRACT_SUFX=	.sh
 
-MAINTAINER=	wiz@netbsd.org
+MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.quake3arena.com/
 COMMENT=	Quake 3 Arena -- first person shooter (linux demo)
 
