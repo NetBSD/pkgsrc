@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.4 2000/06/02 00:13:54 dmcmahill Exp $
+
+--- configure.in.orig	Tue Apr 11 12:13:32 2000
++++ configure.in	Thu Jun  1 13:56:23 2000
+@@ -401,4 +401,5 @@
+      case "$host_cpu" in
+      mips*) CCDLFLAGS=-fPIC ;;
++     sparc) CCDLFLAGS=-fPIC ;;
+      *) ;;
+      esac ;;
