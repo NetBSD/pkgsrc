@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2001/03/06 04:19:59 itojun Exp $
+
+--- configure-	Tue Mar  6 13:16:16 2001
++++ configure	Tue Mar  6 13:16:36 2001
+@@ -3322,7 +3322,8 @@
+   cat conftest.$ac_ext >&5
+   rm -rf conftest*
+   CATOBJEXT=.mo
+-		   DATADIRNAME=lib
++# For Solaris, make DATADIRNAME share.
++		   DATADIRNAME=share
+ fi
+ rm -f conftest*
+ 		INSTOBJEXT=.mo
