@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.739 2001/05/17 15:01:43 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.740 2001/05/18 02:08:17 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -143,6 +143,7 @@ GMAKE?=			gmake
 .else
 MAKE_PROGRAM=		${MAKE}
 .endif
+CONFIGURE_ENV+=		MAKE="${MAKE_PROGRAM}"
 
 .if defined(USE_KERBEROS)
 RESTRICTED?=		uses Kerberos encryption code
