@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4947 2004/02/22 01:40:45 minskim Exp $
+$NetBSD: CHANGES,v 1.4948 2004/02/22 01:43:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -965,3 +965,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-IO-Tee-0.64 [minskim 2004-02-22]
 	Added p5-Text-Reform-1.11 [minskim 2004-02-22]
 	Added p5-DBI-Shell-11.9 [minskim 2004-02-22]
+	Added libtcpa-1.1b [schmonz 2004-02-22]
