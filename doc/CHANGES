@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.171 2002/10/05 04:11:53 rh Exp $
+$NetBSD: CHANGES,v 1.172 2002/10/05 05:58:03 markd Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3118,3 +3118,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ap-ssl to 2.8.11 [tron 2002-10-04]
 	Updated anjuta to 0.1.9nb2 [rh 2002-10-05]
 	Updated libglade to 0.17nb2 [rh 2002-10-05]
+	Added kile-1.2 [markd 2002-10-05]
