@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/18 08:44:16 mjl Exp $
+$NetBSD: distinfo,v 1.2 2003/04/23 11:56:33 mjl Exp $
 
-SHA1 (multitail-1.8.tgz) = 70c039d6f33d6342694ac8423c0bb1cf636adce4
-Size (multitail-1.8.tgz) = 14484 bytes
-SHA1 (patch-aa) = 9d410326341d93cde7798624e0ddfd1a1c6cb8af
-SHA1 (patch-ab) = c539e3ba0722f0daefba802b9a0eed1de15ecb91
+SHA1 (multitail-2.0.tgz) = e83251af642072aeff48e414e113ae8e0652bcfa
+Size (multitail-2.0.tgz) = 15727 bytes
+SHA1 (patch-aa) = 4fe2321d04a09f36dfb4b0cccefe2a31e794ae0c
+SHA1 (patch-ab) = 2beacedc3279f386480bbe22b7c61a87795bdda1

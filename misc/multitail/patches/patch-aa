@@ -1,24 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/18 08:44:16 mjl Exp $
+$NetBSD: patch-aa,v 1.2 2003/04/23 11:56:33 mjl Exp $
 
---- Makefile.orig	2003-04-17 19:37:46.000000000 +0200
-+++ Makefile	2003-04-18 10:36:37.000000000 +0200
-@@ -2,8 +2,8 @@
- 
- CC=gcc
- 
+--- Makefile.orig	Tue Apr 22 18:47:56 2003
++++ Makefile	Wed Apr 23 13:48:18 2003
+@@ -5,2 +5,2 @@
 -CFLAGS=-O2 -Wall
--LDFLAGS=-lncurses
-+CFLAGS=-O2 -Wall -DKEY_RESIZE=KEY_REFRESH
-+LDFLAGS=-lcurses
- VERSION=1.8
- 
- OBJS=mt.o
-@@ -12,7 +12,7 @@
- 
- multitail: $(OBJS)
- 	$(CC) -Wall -W $(OBJS) $(LDFLAGS) -o multitail
+-LDFLAGS=-lncurses -lutil
++CFLAGS+=-O2 -Wall -DKEY_RESIZE=-1
++LDFLAGS+=-lcurses
+@@ -15 +15 @@
 -	strip multitail
 +	# strip multitail
- 
- install: multitail
- 	cp multitail /usr/local/bin
