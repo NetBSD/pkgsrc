@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/25 21:34:05 jtb Exp $
+
+--- configure.in.orig	Thu Mar 16 12:10:25 2000
++++ configure.in
+@@ -10,7 +10,9 @@
+ AC_PROG_CC
+ AC_PROG_MAKE_SET
+ AC_PROG_INSTALL
+-AC_PROG_RANLIB
++
++AC_PATH_PROG(LIBTOOL, libtool, libtool)
++AC_SUBST(LIBTOOL)
+ 
+ AC_CHECK_PROGS(INDENT, indent gindent, echo)
+ AC_SUBST(INDENT)
