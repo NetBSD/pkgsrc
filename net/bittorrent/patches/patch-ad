@@ -1,0 +1,87 @@
+$NetBSD: patch-ad,v 1.1 2004/03/09 10:33:22 recht Exp $
+
+--- BitTorrent/track.py.orig	2004-02-26 05:06:06.000000000 +0100
++++ BitTorrent/track.py	2004-03-09 11:11:03.000000000 +0100
+@@ -148,9 +148,9 @@
+             for y, dat in dl.items():
+                 self.times[x][y] = 0
+                 if not dat.get('nat',1):
+-                    self.becache1.setdefault(downloadid,{})[y] = Bencached(bencode({'ip': dat['ip'], 
++                    self.becache1.setdefault(x,{})[y] = Bencached(bencode({'ip': dat['ip'], 
+                         'port': dat['port'], 'peer id': y}))
+-                    self.becache2.setdefault(downloadid,{})[y] = Bencached(bencode({'ip': dat['ip'], 
++                    self.becache2.setdefault(x,{})[y] = Bencached(bencode({'ip': dat['ip'], 
+                         'port': dat['port']}))
+         self.reannounce_interval = config['reannounce_interval']
+         self.save_dfile_interval = config['save_dfile_interval']
+@@ -351,6 +351,9 @@
+                     peers[myid] = {'ip': ip, 'port': port, 'left': left, "local_override" : local_override}
+                 else:
+                     peers[myid] = {'ip': ip, 'port': port, 'left': left}
++                if not self.natcheck or local_override:
++                    self.becache1.setdefault(infohash,{})[myid] = Bencached(bencode({'ip': ip, 'port': port, 'peer id': myid}))
++                    self.becache2.setdefault(infohash,{})[myid] = Bencached(bencode({'ip': ip, 'port': port}))
+             else:
+                 peers[myid]['left'] = left
+             if params.get('event', '') == 'completed':
+@@ -365,26 +368,25 @@
+                 peers[myid]['nat'] = 0
+         else:
+             if peers.has_key(myid) and peers[myid]['ip'] == ip:
+-                if not peers[myid].get('nat',1):
++                try:
+                     del self.becache1[infohash][myid]
+                     del self.becache2[infohash][myid]
++                except KeyError:
++                    pass
+                 del peers[myid]
+                 del ts[myid]
+         data = {'interval': self.reannounce_interval}
+-        cache1 = self.cache1.setdefault(infohash, [])
+-        cache2 = self.cache2.setdefault(infohash, [])
+-        if params.get('no_peer_id',0):
+-            cache = cache2
+-        else:
+-            cache = cache1
+         if rsize > 0:
++            if params.get('no_peer_id', 0):
++                cache = self.cache2.setdefault(infohash, [])
++                b = self.becache2
++            else:
++                cache = self.cache1.setdefault(infohash, [])
++                b = self.becache1
+             if len(cache) < rsize:
+-                del cache1[:]
+-                cache1.extend(self.becache1[infohash].values())
+-                shuffle(cache1)
+-                del cache2[:]
+-                cache2.extend(self.becache2[infohash].values())
+-                shuffle(cache2)
++                del cache[:]
++                cache.extend(b.setdefault(infohash, {}).values())
++                shuffle(cache)
+             data['peers'] = cache[-rsize:]
+             del cache[-rsize:]
+         else:
+@@ -403,7 +405,7 @@
+             else:
+                 record['nat'] += 1
+         if result:
+-            self.becache1.setdefault(downloadid,{})[peerid] = Bencached(bencode({'ip': ip, 'port': port, 'peer id': myid}))
++            self.becache1.setdefault(downloadid,{})[peerid] = Bencached(bencode({'ip': ip, 'port': port, 'peer id': peerid}))
+             self.becache2.setdefault(downloadid,{})[peerid] = Bencached(bencode({'ip': ip, 'port': port}))
+ 
+     def save_dfile(self):
+@@ -420,9 +422,11 @@
+         for x in self.times.keys():
+             for myid, t in self.times[x].items():
+                 if t < self.prevtime:
+-                    if not self.downloads[x][myid].get('nat',1):
++                    try:
+                         del self.becache1[x][myid]
+                         del self.becache2[x][myid]
++                    except KeyError:
++                        pass
+                     del self.times[x][myid]
+                     del self.downloads[x][myid]
+         self.prevtime = time()
