@@ -14,3 +14,5 @@ dragging of postscript files into GGv, moving the postscript display by
 dragging the mouse in the pager window or the main window.  GGv can display
 more than one document at the same time.  Also, the transparent support for
 compressed postscript and pdf are handy.
+
+This is the version of GGv for GNOME 2.
