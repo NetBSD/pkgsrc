@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/05 04:13:43 rh Exp $
+emul/linux/etc/pluggerrc
+emul/linux/usr/bin/plugger-4.0
+lib/mozilla-linux/plugins/plugger.so
