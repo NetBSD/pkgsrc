@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 1999/12/27 23:53:44 hubertf Exp $
+
+--- Makefile.in.orig	Tue Dec 28 00:40:39 1999
++++ Makefile.in	Tue Dec 28 00:42:39 1999
+@@ -1,6 +1,6 @@
+ CC = @CC@
+ CFLAGS = @CFLAGS@
+-LIBS = @LIBS@
++LIBS = -ledit -ltermcap
+ 
+ all: sftp rsftp sftpserv
+ 
