@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.18 1999/03/08 10:53:57 agc Exp $
-#
+# $NetBSD: Makefile,v 1.19 1999/03/14 15:07:20 tron Exp $
 
-DISTNAME=	knews-1.0b.0
-PKGNAME=	knews-1.0b0
+DISTNAME=	knews-1.0b.1
+PKGNAME=	knews-1.0b1
 CATEGORIES=	news x11
 MASTER_SITES=	http://www.matematik.su.se/~kjj/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.matematik.su.se/~kjj/
 
+DEPENDS+=	faces-1.6.1:../../mail/faces
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-1.0.3:../../graphics/png
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
+CONFLICTS=	knews-1.0b0
+
 USE_IMAKE=	yes
-WRKSRC=		${WRKDIR}/knews
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -22,7 +23,7 @@ WRKSRC=		${WRKDIR}/knews
 # DOMAIN_FILE to a file from which the domain name will be read.
 post-extract:
 .if !defined(DOMAIN_FILE) && !defined(DOMAIN_NAME)
-	@${ECHO_MSG} "Type \"${MAKE} DOMAIN_NAME=xyz\" to set the domain name."
+	@${ECHO_MSG} "Type \"make DOMAIN_NAME=xyz\" to set the domain name."
 .elif defined(DOMAIN_FILE)
 	@${ECHO_MSG} "Reading \"From:\" domain from file \"${DOMAIN_FILE}\"."
 .else

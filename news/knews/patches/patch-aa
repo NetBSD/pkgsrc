@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 11:11:08 agc Exp $
+$NetBSD: patch-aa,v 1.4 1999/03/14 15:07:21 tron Exp $
 
---- configure.h.orig	Fri Jan  9 18:16:11 1998
-+++ configure.h	Thu Apr 23 00:54:08 1998
+--- configure.h.orig	Tue Dec 29 04:47:02 1998
++++ configure.h	Tue Mar  9 06:26:51 1999
 @@ -14,7 +14,7 @@
   *
   *  If you don't have sendmail, use /bin/false :-).
@@ -11,27 +11,20 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 11:11:08 agc Exp $
  /* #define MAIL_COMMAND "/usr/lib/sendmail -t"  */
  
  
-@@ -34,7 +34,7 @@
- /* #define DOMAIN_FILE "/your/file/here"  */
- /* #define DOMAIN_NAME "your_domain_here" */
- 
--#define DOMAIN_HACK	1
-+#define DOMAIN_HACK	0
- 
- 
- 
-@@ -86,8 +86,8 @@
-  *  library search paths in knews.tmpl for libjpeg and libpng.
+@@ -84,9 +84,9 @@
+  *  libcompface.
   */
  
 -#define HAVE_JPEG	0
 -#define HAVE_PNG	0
+-#define HAVE_COMPFACE	0
++#define HAVE_COMPFACE	1
 +#define HAVE_JPEG	1
 +#define HAVE_PNG	1
  
  
  
-@@ -139,7 +139,7 @@
+@@ -138,7 +138,7 @@
   *
   *  Knews*backgroundPixmap:	~/dir/texture.xpm
   */
