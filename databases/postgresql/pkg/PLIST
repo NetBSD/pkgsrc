@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1998/06/22 14:00:16 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.7 1998/07/15 12:40:14 agc Exp $
 etc/rc.d/pgsql.sh
 @PGUSER@/.profile
 @PGUSER@/bin/cleardbdir
@@ -273,7 +273,6 @@ share/doc/pgsql/src/sgml/xfunc.sgml
 share/doc/pgsql/src/sgml/xindex.sgml
 share/doc/pgsql/src/sgml/xoper.sgml
 share/doc/pgsql/src/sgml/xtypes.sgml
-@unexec /sbin/ldconfig || /usr/bin/true
 @dirrm share/doc/pgsql/src/graphics
 @dirrm share/doc/pgsql/src/sgml
 @dirrm share/doc/pgsql/src
