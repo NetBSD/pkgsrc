@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/05 02:56:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/04/12 23:09:37 dmcmahill Exp $
 #
 
 DISTNAME=	kmap-0.5.6
@@ -13,8 +13,8 @@ DEPENDS+=	nmap-2.12:../../net/nmap
 
 USE_X11BASE=		yes	# To get this near KDE
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=--with-qt-includes=${X11BASE}/include/qt \
-		--with-qt-libraries=${X11BASE}/lib
+CONFIGURE_ENV+=	QTDIR=${X11BASE}/qt1
+CONFIGURE_ARGS+=--with-qt-dir=${X11BASE}/qt1
 
 post-patch:
 	cd ${WRKSRC}/kmap ; \
