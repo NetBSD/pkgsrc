@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/09/06 06:29:42 lukem Exp $
+# $NetBSD: Makefile,v 1.14 2004/10/30 01:01:09 xtraeme Exp $
 
 DISTNAME=	mailman-2.1.4
 PKGREVISION=	1
@@ -24,7 +24,7 @@ GNU_CONFIGURE_PREFIX=	${EXECDIR}
 MAKE_FLAGS+=		DIRSETGID=${TRUE}
 
 EXECDIR=		${PREFIX}/lib/mailman
-MAILMAN_DATADIR?=	/var/db/mailman
+MAILMAN_DATADIR?=	${VARBASE}/db/mailman
 EGDIR=                  ${PREFIX}/share/examples/mailman
 DOCDIR=                 ${PREFIX}/share/doc/mailman
 MAILMAN_USER?= 		mailman
