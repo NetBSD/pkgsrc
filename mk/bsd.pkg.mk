@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1015 2002/07/24 19:42:21 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1016 2002/07/28 12:51:07 schmonz Exp $
 #
 # This file is in the public domain.
 #
@@ -87,12 +87,12 @@ JAVA_HOME?=		${JDK_HOME}
 JAVA_HOME?=		${LOCALBASE}/java
 .    endif
 .  elif ${PKG_JVM} == "sun-jdk14"
-BUILD_DEPENDS+=		sun-jdk-[0-9]*:../../lang/sun-jdk14
-DEPENDS+=		sun-jre-[0-9]*:../../lang/sun-jre14
+BUILD_DEPENDS+=		sun-jdk14-[0-9]*:../../lang/sun-jdk14
+DEPENDS+=		sun-jre14-[0-9]*:../../lang/sun-jre14
 JAVA_HOME?=		${LOCALBASE}/java
 .  elif ${PKG_JVM} == "sun-jdk13"
-BUILD_DEPENDS+=		sun-jdk-[0-9]*:../../lang/sun-jdk13
-DEPENDS+=		sun-jre-[0-9]*:../../lang/sun-jre13
+BUILD_DEPENDS+=		sun-jdk13-[0-9]*:../../lang/sun-jdk13
+DEPENDS+=		sun-jre13-[0-9]*:../../lang/sun-jre13
 .    if ${OPSYS} == "Darwin"
 JAVA_HOME?=		/usr
 .    else
@@ -102,13 +102,13 @@ JAVA_HOME?=		${LOCALBASE}/java
 .    if ${MACHINE_PLATFORM:MNetBSD-1.5Z[A-Z]-i386} != "" || \
 	${MACHINE_PLATFORM:MNetBSD-1.[6-9]*-i386} != "" || \
 	${MACHINE_PLATFORM:MLinux-*-i386} != ""
-BUILD_DEPENDS+=         sun-jdk-[0-9]*:../../lang/sun-jdk14
-DEPENDS+=               sun-jre-[0-9]*:../../lang/sun-jre14
+BUILD_DEPENDS+=         sun-jdk14-[0-9]*:../../lang/sun-jdk14
+DEPENDS+=               sun-jre14-[0-9]*:../../lang/sun-jre14
 .    elif ${MACHINE_PLATFORM:MNetBSD-*-i386} != "" || \
 	${MACHINE_PLATFORM:MDarwin-*-*} != "" || \
 	${MACHINE_PLATFORM:MLinux-*-i386} != ""
-BUILD_DEPENDS+=		sun-jdk-[0-9]*:../../lang/sun-jdk13
-DEPENDS+=		sun-jre-[0-9]*:../../lang/sun-jre13
+BUILD_DEPENDS+=		sun-jdk13-[0-9]*:../../lang/sun-jdk13
+DEPENDS+=		sun-jre13-[0-9]*:../../lang/sun-jre13
 .    endif
 .    if ${OPSYS} == "Darwin"
 JAVA_HOME?=		/usr
@@ -116,7 +116,8 @@ JAVA_HOME?=		/usr
 JAVA_HOME?=		${LOCALBASE}/java
 .    endif
 .  elif ${PKG_JVM} == "blackdown-jdk13"
-DEPENDS+=		blackdown-jdk-[0-9]*:../../lang/blackdown-jdk13
+BUILD_DEPENDS+=		blackdown-jdk13-[0-9]*:../../lang/blackdown-jdk13
+DEPENDS+=		blackdown-jre13-[0-9]*:../../lang/blackdown-jre13
 JAVA_HOME?=		${LOCALBASE}/java
 .  elif ${PKG_JVM} == "kaffe"
 DEPENDS+=		kaffe-[0-9]*:../../lang/kaffe
