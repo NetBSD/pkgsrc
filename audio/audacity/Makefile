@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/07/22 09:54:05 agc Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/31 02:42:48 wiz Exp $
 #
 
 DISTNAME=	audacity-src-0.96
@@ -18,7 +18,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--without-xaudio --with-libmpeg3
 USE_GMAKE=	yes
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=	yes
 
 # XXX Internal compiler error with -O2
 .if (${MACHINE_ARCH} == alpha)
@@ -35,8 +35,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/audacity ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/audacity-help.htb ${PREFIX}/share
 
-.include "../../audio/id3lib/buildlink.mk"
-.include "../../audio/lame/buildlink.mk"
-.include "../../devel/libmpeg3/buildlink.mk"
-.include "../../x11/wxGTK/buildlink.mk"
+.include "../../audio/id3lib/buildlink2.mk"
+.include "../../audio/lame/buildlink2.mk"
+.include "../../devel/libmpeg3/buildlink2.mk"
+.include "../../x11/wxGTK/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
