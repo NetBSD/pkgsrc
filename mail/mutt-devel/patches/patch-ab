@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.4 2004/07/21 22:37:10 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2004/08/05 03:24:39 jlam Exp $
 
---- Makefile.in.orig	Wed Jul 21 17:56:30 2004
+--- Makefile.in.orig	Sun Feb  1 13:24:01 2004
 +++ Makefile.in
-@@ -113,11 +113,11 @@ EXTRA_PROGRAMS = mutt_dotlock pgpring ma
+@@ -26,6 +26,7 @@ datadir = @datadir@
+ sysconfdir = @sysconfdir@
+ sharedstatedir = @sharedstatedir@
+ localstatedir = @localstatedir@
++localedir = $(prefix)/share/locale
+ libdir = @libdir@
+ infodir = @infodir@
+ mandir = @mandir@
+@@ -113,11 +114,11 @@ EXTRA_PROGRAMS = mutt_dotlock pgpring ma
  
  SUBDIRS = m4 po intl doc contrib $(IMAP_SUBDIR)
  
@@ -16,3 +24,12 @@ $NetBSD: patch-ab,v 1.4 2004/07/21 22:37:10 jlam Exp $
  mutt_SOURCES = $(BUILT_SOURCES) 	addrbook.c alias.c attach.c base64.c browser.c buffy.c color.c         crypt.c cryptglue.c 	commands.c complete.c compose.c copy.c curs_lib.c curs_main.c date.c 	edit.c enter.c flags.c init.c filter.c from.c getdomain.c 	handler.c hash.c hdrline.c headers.c help.c hook.c keymap.c 	main.c mbox.c menu.c mh.c mx.c pager.c parse.c pattern.c 	postpone.c query.c recvattach.c recvcmd.c 	rfc822.c rfc1524.c rfc2047.c rfc2231.c 	score.c send.c sendlib.c signal.c sort.c 	status.c system.c thread.c charset.c history.c lib.c 	muttlib.c editmsg.c utf8.c mbyte.c wcwidth.c 	url.c ascii.c mutt_idna.c
  
  
+@@ -140,7 +141,7 @@ makedoc_DEPENDENCIES = 
+ 
+ CPP = @CPP@
+ 
+-DEFS = -DPKGDATADIR=\"$(pkgdatadir)\" -DSYSCONFDIR=\"$(sysconfdir)\" 	-DBINDIR=\"$(bindir)\" -DMUTTLOCALEDIR=\"$(datadir)/locale\" 	-DHAVE_CONFIG_H=1
++DEFS = -DPKGDATADIR=\"$(pkgdatadir)\" -DSYSCONFDIR=\"$(sysconfdir)\" 	-DBINDIR=\"$(bindir)\" -DMUTTLOCALEDIR=\"$(localedir)\" 	-DHAVE_CONFIG_H=1
+ 
+ 
+ INCLUDES = -I. -I$(top_srcdir) $(IMAP_INCLUDES) -Iintl
