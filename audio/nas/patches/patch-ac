@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2000/08/04 01:31:56 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2002/10/18 14:02:13 jlam Exp $
 
 --- server/nasd.conf.eg.orig	Sat Jan  1 22:03:50 2000
 +++ server/nasd.conf.eg	Thu Aug  3 21:11:29 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.4 2000/08/04 01:31:56 jlam Exp $
  inputsection
  
 -	device		"/dev/dsp1"		# the SB emulation on my PAS16
-+	device		"/dev/audio"
++	device		"@DEVOSSAUDIO@"
  	maxrate		11025
  	minrate		4000			# Kind of redundant
  	maxfrags	3			# We want really low latency
@@ -16,7 +16,7 @@ $NetBSD: patch-ac,v 1.4 2000/08/04 01:31:56 jlam Exp $
  # These are used by voxware only for now.
  outputsection
 -	device		"/dev/dsp"		# the full 16 bit interface!
-+	device		"/dev/audio"
++	device		"@DEVOSSAUDIO@"
  	maxrate		33000			# is flakey on my OPTi mb at 44
  	minrate		5000			# Redundant again
  	maxfrags	3			# Low latency (for doom!)
