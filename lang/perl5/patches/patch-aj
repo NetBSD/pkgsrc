@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.5 2002/12/24 00:56:54 jschauma Exp $
+
+--- makedepend.SH.orig	Mon Dec 23 19:33:45 2002
++++ makedepend.SH	Mon Dec 23 19:34:27 2002
+@@ -196,7 +196,8 @@
+     $echo "Updating $mf..."
+     $echo "# If this runs make out of memory, delete /usr/include lines." \
+ 	>> $mf.new
+-    $sed 's|^\(.*\$(OBJ_EXT):\) *\(.*/.*\.c\) *$|\1 \2; '"$defrule \2|" .deptmp \
++    $sed 's|^\(.*\$(OBJ_EXT):\) *\(.*/.*\.c\) *$|\1 \2; '"$defrule \2|" .deptmp |\
++    $sed -e 's|^0$||' \
+        >>$mf.new
+ else
+     $MAKE hlist || ($echo "Searching for .h files..."; \
