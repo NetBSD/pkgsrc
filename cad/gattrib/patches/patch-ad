@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2004/10/02 00:50:14 dmcmahill Exp $
+
+--- src/x_gtksheet.c.orig	Sun Feb 22 19:00:23 2004
++++ src/x_gtksheet.c
+@@ -27,6 +27,11 @@
+ /*------------------------------------------------------------------
+  * Includes required to run graphical widgets.
+  *------------------------------------------------------------------*/
++
++#ifdef HAVE_CONFIG_H
++#include "config.h"
++#endif
++
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <gtk/gtk.h>
