@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2004/11/12 18:40:14 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/28 05:46:43 taca Exp $
 
 DISTNAME=	tag104
-PKGNAME=	${RUBY_PKGNAMEPREFIX}tag-1.0.4
+PKGNAME=	${RUBY_PKGPREFIX}-tag-1.0.4
 CATEGORIES=	www ruby
 MASTER_SITES=	http://www.moonwolf.com/ruby/archive/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,8 +16,6 @@ BUILD_DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
 GTAR=		${PREFIX}/bin/${GNU_PROGRAM_PREFIX}tar
 
 WRKSRC=		${WRKDIR}
-DIST_SUBDIR=	ruby
-USE_RUBY_RD=	# defined
 NO_CONFIGURE=	# defined
 
 do-build:
@@ -28,6 +26,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/tag/ja
 	${INSTALL_DATA} ${WRKSRC}/tag.html ${RUBY_DOCDIR}/tag/ja
 
-.include "../../textproc/ruby-rdtool/Makefile.common"
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
+.include "../../textproc/ruby-rdtool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
