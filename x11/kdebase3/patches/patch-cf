@@ -1,0 +1,15 @@
+$NetBSD: patch-cf,v 1.1.1.1 2002/05/31 13:19:01 skrll Exp $
+
+--- kmenuedit/main.cpp.orig	Mon Feb 11 20:09:39 2002
++++ kmenuedit/main.cpp
+@@ -31,7 +31,9 @@
+ static const char *description = I18N_NOOP("KDE Menu editor");
+ static const char *version = "0.4";
+ 
+-int main( int argc, char **argv )
++extern "C" int kdemain( int argc, char **argv );
++
++int kdemain( int argc, char **argv )
+ {
+     KAboutData aboutData("kmenuedit", I18N_NOOP("KDE Menu Editor"),
+ 			 version, description, KAboutData::License_GPL,

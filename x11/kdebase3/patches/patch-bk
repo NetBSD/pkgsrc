@@ -1,0 +1,199 @@
+$NetBSD: patch-bk,v 1.1.1.1 2002/05/31 13:18:59 skrll Exp $
+
+--- kicker/Makefile.in.orig	Mon May 13 23:57:45 2002
++++ kicker/Makefile.in
+@@ -292,19 +292,23 @@
+ SUBDIRS = share core ui buttons . proxy taskmanager taskbar applets extensions menuext data
+ 
+ bin_PROGRAMS = kicker
+-lib_LTLIBRARIES = kicker.la
++lib_LTLIBRARIES = libkicker_main.la kicker.la
+ 
+ CLEANFILES = dummy.cpp
+ 
+-kicker_la_LIBADD = core/libkicker_core.la  buttons/libkicker_buttons.la \
++libkicker_main_la_LIBADD = core/libkicker_core.la  buttons/libkicker_buttons.la \
+ 	ui/libkicker_ui.la share/libkickermain.la $(LIB_KIO) 
+ 
+ 
+-kicker_la_SOURCES = dummy.cpp
+-kicker_la_LDFLAGS = $(KDE_PLUGIN) -no-undefined -module $(all_libraries)
++libkicker_main_la_SOURCES = dummy.cpp
++libkicker_main_la_LDFLAGS = $(KDE_PLUGIN) $(all_libraries)
+ 
+-kicker_LDADD = kicker.la
+-kicker_SOURCES = dummy.cpp
++kicker_la_LIBADD = libkicker_main.la
++kicker_la_SOURCES = kicker_main.cpp
++kicker_la_LDFLAGS = -module -avoid-version $(all_libraries)
++
++kicker_LDADD = libkicker_main.la
++kicker_SOURCES = kicker_main.cpp
+ kicker_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ autostart_DATA = panel.desktop
+@@ -315,21 +319,26 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+-kicker_la_DEPENDENCIES = core/libkicker_core.la \
++kicker_la_DEPENDENCIES = libkicker_main.la
++am_kicker_la_OBJECTS = kicker_main.lo
++#>- kicker_la_OBJECTS = $(am_kicker_la_OBJECTS)
++#>+ 1
++kicker_la_OBJECTS = kicker_main.lo
++libkicker_main_la_DEPENDENCIES = core/libkicker_core.la \
+ 	buttons/libkicker_buttons.la ui/libkicker_ui.la \
+ 	share/libkickermain.la
+-am_kicker_la_OBJECTS = dummy.lo
+-#>- kicker_la_OBJECTS = $(am_kicker_la_OBJECTS)
++am_libkicker_main_la_OBJECTS = dummy.lo
++#>- libkicker_main_la_OBJECTS = $(am_libkicker_main_la_OBJECTS)
+ #>+ 1
+-kicker_la_OBJECTS = dummy.lo
++libkicker_main_la_OBJECTS = dummy.lo
+ bin_PROGRAMS = kicker$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+-am_kicker_OBJECTS = dummy.$(OBJEXT)
++am_kicker_OBJECTS = kicker_main.$(OBJEXT)
+ #>- kicker_OBJECTS = $(am_kicker_OBJECTS)
+ #>+ 1
+-kicker_OBJECTS = dummy.$(OBJEXT)
+-kicker_DEPENDENCIES = kicker.la
++kicker_OBJECTS = kicker_main.$(OBJEXT)
++kicker_DEPENDENCIES = libkicker_main.la
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -337,7 +346,8 @@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+-@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Plo $(DEPDIR)/dummy.Po
++@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Plo $(DEPDIR)/kicker_main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kicker_main.Po
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ #>- $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 2
+@@ -357,7 +367,8 @@
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CXXFLAGS = @CXXFLAGS@
+-DIST_SOURCES = $(kicker_la_SOURCES) $(kicker_SOURCES)
++DIST_SOURCES = $(kicker_la_SOURCES) $(libkicker_main_la_SOURCES) \
++	$(kicker_SOURCES)
+ DATA = $(autostart_DATA)
+ 
+ 
+@@ -367,7 +378,7 @@
+ 	uninstall-recursive check-recursive installcheck-recursive
+ DIST_COMMON = AUTHORS ChangeLog Makefile.am Makefile.in
+ DIST_SUBDIRS = $(SUBDIRS)
+-SOURCES = $(kicker_la_SOURCES) $(kicker_SOURCES)
++SOURCES = $(kicker_la_SOURCES) $(libkicker_main_la_SOURCES) $(kicker_SOURCES)
+ 
+ #>- all: all-recursive
+ #>+ 1
+@@ -414,11 +425,13 @@
+ 
+ clean-libLTLIBRARIES:
+ 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+-#>- kicker.la: $(kicker_la_OBJECTS) $(kicker_la_DEPENDENCIES) 
+-#>+ 2
+-@KDE_USE_CLOSURE_TRUE@kicker.la: kicker.la.closure $(kicker_la_OBJECTS) $(kicker_la_DEPENDENCIES) 
+-@KDE_USE_CLOSURE_FALSE@kicker.la: $(kicker_la_OBJECTS) $(kicker_la_DEPENDENCIES) 
++kicker.la: $(kicker_la_OBJECTS) $(kicker_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(libdir) $(kicker_la_LDFLAGS) $(kicker_la_OBJECTS) $(kicker_la_LIBADD) $(LIBS)
++#>- libkicker_main.la: $(libkicker_main_la_OBJECTS) $(libkicker_main_la_DEPENDENCIES) 
++#>+ 2
++@KDE_USE_CLOSURE_TRUE@libkicker_main.la: libkicker_main.la.closure $(libkicker_main_la_OBJECTS) $(libkicker_main_la_DEPENDENCIES) 
++@KDE_USE_CLOSURE_FALSE@libkicker_main.la: $(libkicker_main_la_OBJECTS) $(libkicker_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libkicker_main_la_LDFLAGS) $(libkicker_main_la_OBJECTS) $(libkicker_main_la_LIBADD) $(LIBS)
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+@@ -454,7 +467,8 @@
+ 	-rm -f *.tab.c
+ 
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kicker_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kicker_main.Po@am__quote@
+ 
+ distclean-depend:
+ 	-rm -rf $(DEPDIR)
+@@ -738,17 +752,17 @@
+ .NOEXPORT:
+ 
+ #>+ 8
+-kicker.la.closure: $(kicker_la_OBJECTS) $(kicker_la_DEPENDENCIES)
+-	@echo "int main() {return 0;}" > kicker_la_closure.cpp
+-	@$(LTCXXCOMPILE) -c kicker_la_closure.cpp
+-	$(CXXLINK) kicker_la_closure.lo $(kicker_la_LDFLAGS) $(kicker_la_OBJECTS) $(kicker_la_LIBADD) $(LIBS)
+-	@rm -f kicker_la_closure.* kicker.la.closure
+-	@echo "timestamp" > kicker.la.closure
++libkicker_main.la.closure: $(libkicker_main_la_OBJECTS) $(libkicker_main_la_DEPENDENCIES)
++	@echo "int main() {return 0;}" > libkicker_main_la_closure.cpp
++	@$(LTCXXCOMPILE) -c libkicker_main_la_closure.cpp
++	$(CXXLINK) libkicker_main_la_closure.lo $(libkicker_main_la_LDFLAGS) $(libkicker_main_la_OBJECTS) $(libkicker_main_la_LIBADD) $(LIBS)
++	@rm -f libkicker_main_la_closure.* libkicker_main.la.closure
++	@echo "timestamp" > libkicker_main.la.closure
+ 
+ 
+ #>+ 3
+ clean-closures:
+-	-rm -f  kicker.la.closure
++	-rm -f  libkicker_main.la.closure
+ 
+ #>+ 2
+ docs-am:
+@@ -761,11 +775,11 @@
+ 
+ 
+ #>+ 11
+-kicker_la.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++kicker_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kicker_main.cpp  
+ 	@echo 'creating kicker_la.all_cpp.cpp ...'; \
+ 	rm -f kicker_la.all_cpp.files kicker_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kicker_la.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in kicker_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kicker_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kicker_la.all_cpp.final; \
+ 	done; \
+@@ -773,11 +787,23 @@
+ 	rm -f kicker_la.all_cpp.final kicker_la.all_cpp.files
+ 
+ #>+ 11
+-kicker.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++libkicker_main_la.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++	@echo 'creating libkicker_main_la.all_cpp.cpp ...'; \
++	rm -f libkicker_main_la.all_cpp.files libkicker_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkicker_main_la.all_cpp.final; \
++	for file in dummy.cpp ; do \
++	  echo "#include \"$$file\"" >> libkicker_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkicker_main_la.all_cpp.final; \
++	done; \
++	cat libkicker_main_la.all_cpp.final libkicker_main_la.all_cpp.files  > libkicker_main_la.all_cpp.cpp; \
++	rm -f libkicker_main_la.all_cpp.final libkicker_main_la.all_cpp.files
++
++#>+ 11
++kicker.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kicker_main.cpp  
+ 	@echo 'creating kicker.all_cpp.cpp ...'; \
+ 	rm -f kicker.all_cpp.files kicker.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kicker.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in kicker_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kicker.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kicker.all_cpp.final; \
+ 	done; \
+@@ -786,7 +812,7 @@
+ 
+ #>+ 3
+ clean-final:
+-	-rm -f kicker_la.all_cpp.cpp kicker.all_cpp.cpp
++	-rm -f kicker_la.all_cpp.cpp libkicker_main_la.all_cpp.cpp kicker.all_cpp.cpp
+ 
+ #>+ 2
+ final:
