@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2001/11/23 10:22:54 tron Exp $
+$NetBSD: patch-aa,v 1.8 2002/03/22 14:59:02 tron Exp $
 
 --- src/Makefile.in.orig	Wed Apr  4 09:01:12 2001
-+++ src/Makefile.in	Fri Nov 23 10:56:52 2001
++++ src/Makefile.in	Fri Mar 22 15:47:06 2002
 @@ -12,6 +12,8 @@
  cgi_suffix	= @cgi_suffix@
  top_srcdir	= @top_srcdir@
@@ -117,7 +117,7 @@ $NetBSD: patch-aa,v 1.7 2001/11/23 10:22:54 tron Exp $
 -		echo "$(INSTALL_FILE) $(srcdir)/mime.conf $(sysconfdir)"; \
 -		$(INSTALL_FILE) $(srcdir)/mime.conf $(sysconfdir); \
 -	fi
-+	$(INSTALL_FILE) squid.conf $(DEFAULT_CONFIG_FILE).default
++	$(INSTALL_FILE) squid.conf $(prefix)/share/examples/squid
 +#	@if test -f $(DEFAULT_CONFIG_FILE) ; then \
 +#		echo "$@ will not overwrite existing $(DEFAULT_CONFIG_FILE)" ; \
 +#	else \
@@ -125,7 +125,7 @@ $NetBSD: patch-aa,v 1.7 2001/11/23 10:22:54 tron Exp $
 +#		$(INSTALL_FILE) squid.conf $(DEFAULT_CONFIG_FILE); \
 +#	fi
 +
-+	$(INSTALL_FILE) $(srcdir)/mime.conf $(DEFAULT_MIME_TABLE).default
++	$(INSTALL_FILE) $(srcdir)/mime.conf $(prefix)/share/examples/squid
 +#	@if test -f $(DEFAULT_MIME_TABLE) ; then \
 +#		echo "$@ will not overwrite existing $(DEFAULT_MIME_TABLE)" ; \
 +#	else \
