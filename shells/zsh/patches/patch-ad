@@ -1,0 +1,11 @@
+--- Makefile.in.orig	Thu Jan  1 06:21:45 1998
++++ Makefile.in	Thu Jan  1 06:21:54 1998
+@@ -52,7 +52,7 @@
+ CPPFLAGS = @CPPFLAGS@
+ DEFS     = @DEFS@
+ CFLAGS   = @CFLAGS@
+-LDFLAGS  = @LDFLAGS@
++LDFLAGS  = @LDFLAGS@ -s
+ LIBS     = @LIBS@
+ 
+ # ========== YOU SHOULDN'T HAVE TO CHANGE ANYTHING BELOW HERE ==========
