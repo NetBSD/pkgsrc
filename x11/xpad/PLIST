@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/02 07:19:20 xtraeme Exp $
+bin/xpad
+man/man1/xpad.1
+share/applications/xpad.desktop
+share/icons/hicolor/128x128/apps/xpad.png
+share/icons/hicolor/16x16/apps/xpad.png
+share/icons/hicolor/22x22/apps/xpad.png
+share/icons/hicolor/32x32/apps/xpad.png
+share/icons/hicolor/48x48/apps/xpad.png
+share/icons/hicolor/64x64/apps/xpad.png
+share/icons/hicolor/96x96/apps/xpad.png
+share/icons/hicolor/scalable/apps/xpad.svg
+${PKGLOCALEDIR}/locale/dk/LC_MESSAGES/xpad.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/xpad.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xpad.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xpad.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xpad.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xpad.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/xpad.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xpad.mo
+share/pixmaps/xpad.png
