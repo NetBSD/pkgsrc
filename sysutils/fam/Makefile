@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/04/04 09:24:58 recht Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/14 20:53:08 adam Exp $
 #
 
 DISTNAME=		fam-2.7.0
@@ -19,8 +19,8 @@ USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
-
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS} -DNDEBUG"
 
 EGDIR=			${PREFIX}/share/examples/fam
 CONF_FILES=		${EGDIR}/fam.conf ${PKG_SYSCONFDIR}/fam.conf
