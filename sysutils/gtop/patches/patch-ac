@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2003/09/30 22:09:04 mycroft Exp $
+$NetBSD: patch-ac,v 1.3 2003/10/14 20:58:38 tron Exp $
 
---- procview.c.orig	2001-02-15 00:57:30.000000000 +0000
-+++ procview.c	2003-09-30 22:07:29.000000000 +0000
-@@ -96,14 +96,14 @@
+--- procview.c.orig	2001-02-15 01:57:30.000000000 +0100
++++ procview.c	2003-10-14 22:56:08.000000000 +0200
+@@ -96,29 +96,29 @@
  \
  static int cmp_ ## NAME (const ProcProcData **P, const ProcProcData **Q) \
  { \
@@ -19,7 +19,16 @@ $NetBSD: patch-ac,v 1.2 2003/09/30 22:09:04 mycroft Exp $
  }
  
  #define CMP_INT2(NAME,V1,V2) \
-@@ -118,7 +118,7 @@
+ \
+ static int cmp_ ## NAME (const ProcProcData **P, const ProcProcData **Q) \
+ { \
+-	  return (*P)->d->sort_order * ((*P)->p-> ## V1 + (*P)->p-> ## V2 - (\
+-                               (*Q)->p-> ## V1 + (*Q)->p-> ## V2)); \
++	  return (*P)->d->sort_order * ((*P)->p-> V1 + (*P)->p-> V2 - (\
++                               (*Q)->p-> V1 + (*Q)->p-> V2)); \
+ }
+ 
+ #define CMP_STR(NAME) \
  \
  static int cmp_ ## NAME (const ProcProcData **P, const ProcProcData **Q) \
  { \
