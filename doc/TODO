@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3304 2005/03/26 12:09:11 adrianp Exp $
+$NetBSD: TODO,v 1.3305 2005/03/26 17:29:42 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -532,7 +532,6 @@ Suggested package updates
 	o iozone-3.233
 	o ipcheck-0.219
 	o ircd-hybrid-7.0.4
-	o ircservices-5.0.46
 	o iroffer-1.309
 	o iselect-1.3.0
 	o ispell-gaeilge-3.6
