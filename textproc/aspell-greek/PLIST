@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/17 03:52:04 salo Exp $
+lib/aspell/el.multi
+lib/aspell/el.rws
+lib/aspell/greek.alias
+share/aspell/el.dat
+share/aspell/el_phonet.dat
