@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.373 2003/03/15 08:28:48 jmmv Exp $
+$NetBSD: TODO,v 1.374 2003/03/15 13:02:01 kei Exp $
 
 Suggested new packages
 ======================
@@ -237,7 +237,6 @@ Suggested package updates
 	o tcl/tk-8.4.2 [bjoern]
 	o tcpdump-3.7.2
 	o ted-2.13
-	o teTeX2-2.0.2
 	o texmacs-1.0.1.8
 	o tightvnc-1.2.8
 	o ttf2pt1-3.4.3
