@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/03 15:06:36 cube Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/01 17:15:48 agc Exp $
 #
 
 DISTNAME=	beacon-1.1-0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://dast.nlanr.net/Projects/Beacon/releases/
 
 MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://dast.nlanr.net/Projects/Beacon/
-COMMENT=	Multicast supervison tool
+COMMENT=	Multicast supervision tool
 
 GNU_CONFIGURE=	YES
 USE_BUILDLINK3=	YES
