@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.20 2000/06/21 03:53:35 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2000/11/09 03:34:13 hubertf Exp $
 #
 
-DISTNAME=	pine4.21
-PKGNAME=	pico-3.7
+DISTNAME=	pine4.30
+PKGNAME=	pico-3.8
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
 
-MAINTAINER=	root@garbled.net
+MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.washington.edu/pine/
 
 USE_LIBTOOL=	# defined
@@ -18,6 +18,8 @@ BUILDNAME= so5
 .else
 BUILDNAME= neb
 .endif
+
+MAKE_ENV+=	STRIPFLAG=	# debug...
 
 do-build:
 	cd ${WRKSRC} && ./build ${BUILDNAME} CC="${LIBTOOL} ${CC}" \
