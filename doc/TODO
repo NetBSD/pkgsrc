@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2161 2004/09/23 16:09:46 martti Exp $
+$NetBSD: TODO,v 1.2162 2004/09/23 19:54:52 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -251,7 +251,6 @@ Suggested package updates
 	o fop-0.20.5
 	o fox-1.2.9
 	o freeciv-1.14.2
-	o freeradius-1.0.1 [adrianp]
 	o freetds-0.62.3
 	o fsviewer-0.2.5
 	o gaim-1.0.0
