@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8188 2004/11/30 17:20:10 taca Exp $
+$NetBSD: CHANGES,v 1.8189 2004/11/30 17:34:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4570,7 +4570,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rhythmbox to 0.8.7 [hira 2004-10-07]
 	Updated tuxpaint to 0.9.14 [wiz 2004-10-07]
 	Updated tuxpaint-stamps to 2004.10.03 [wiz 2004-10-07]
-	Added tuxpaint-config to 0.0.5 [wiz 2004-10-07]
+	Added tuxpaint-config-0.0.5 [wiz 2004-10-07]
 	Updated epiphany to 1.4.3 [jmmv 2004-10-07]
 	Updated exim to 4.43 [abs 2004-10-07]
 	Updated exim-exiscan to 4.43_28 [abs 2004-10-07]
@@ -5684,3 +5684,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pwlib to 1.8.3 [adam 2004-11-30]
 	Added ruby16-zlib-0.6.0 [taca 2004-11-30]
 	Updated ruby18 to 1.8.1nb1 [taca 2004-11-30]
+	Updated magicpoint to 1.10anb4 [taca 2004-11-30]
