@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.16 2003/09/29 21:30:28 jschauma Exp $
+# $NetBSD: buildlink2.mk,v 1.17 2003/11/23 07:22:10 salo Exp $
 
 .if !defined(MESALIB_BUILDLINK2_MK)
 MESALIB_BUILDLINK2_MK=	# defined
@@ -15,7 +15,6 @@ BUILDLINK_PREFIX.MesaLib_DEFAULT=	${LOCALBASE}
 CPPFLAGS+=		-DGLX_GLXEXT_LEGACY
 CFLAGS+=		-DGLX_GLXEXT_LEGACY
 
-BUILDLINK_FILES.MesaLib+=	include/GL/GL*.h
 BUILDLINK_FILES.MesaLib+=	include/GL/gl.h
 BUILDLINK_FILES.MesaLib+=	include/GL/glext.h
 BUILDLINK_FILES.MesaLib+=	include/GL/gl_mangle.h
