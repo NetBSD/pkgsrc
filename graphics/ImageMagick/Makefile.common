@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2004/09/27 11:04:24 adam Exp $
+# $NetBSD: Makefile.common,v 1.17 2004/09/28 11:00:47 adam Exp $
 
 IM_MAJOR_VER=		6.0.8
 IM_MINOR_VER=		3
@@ -26,4 +26,4 @@ WRKSRC=		${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
 # For things for which we do not specify an explicit dependency above, disable
 # so that we don't cause implicit "hidden" dependencies.
 CONFIGURE_ARGS+=	--without-dps --without-fpx --without-hdf \
-			--without-jbig --without-threads --without-wmf
+			--without-jbig --without-threads
