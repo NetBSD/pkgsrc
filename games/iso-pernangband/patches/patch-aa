@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2001/10/21 17:10:14 hubertf Exp $
+$NetBSD: patch-aa,v 1.3 2003/12/20 19:52:59 ben Exp $
 
---- Makefile.orig	Sun May 20 07:01:06 2001
+--- Makefile.orig	2001-05-20 07:01:06.000000000 -0700
 +++ Makefile
-@@ -132,14 +132,14 @@
+@@ -132,14 +132,14 @@ CXX = g++
  ## Variation -- Only support "main-x11.c" (not "main-gcu.c")
  ##
  # CFLAGS = -Wall -O1 -pipe -g -D"USE_ISOV_X11" -D"USE_TRANSPARENCY"
@@ -20,3 +20,12 @@ $NetBSD: patch-aa,v 1.2 2001/10/21 17:10:14 hubertf Exp $
  
  
  ##
+@@ -242,7 +242,7 @@ install: testing
+ #
+ 
+ testing: $(OBJS)
+-	$(CC) $(CFLAGS) -o testing $(OBJS) $(LDFLAGS) $(LIBS)
++	$(CXX) $(CFLAGS) -o testing $(OBJS) $(LDFLAGS) $(LIBS)
+ 
+ 
+ #
