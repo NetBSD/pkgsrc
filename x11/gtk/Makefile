@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2004/01/05 23:47:11 jlam Exp $
+# $NetBSD: Makefile,v 1.93 2004/01/07 03:15:54 jlam Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		5
@@ -11,10 +11,9 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gtk.org/
 COMMENT=		The GIMP Toolkit - libraries for building X11 user interfaces
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
 BUILD_USES_MSGFMT=	yes
-USE_BUILDLINK3=		yes
+
+USE_BUILDLINK2=		yes
 USE_PERL5=		build
 USE_X11BASE=		yes
 USE_GMAKE=		yes
@@ -67,8 +66,8 @@ pre-configure:
 post-install:
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
 	${LN} -fs ${PREFIX}/share/aclocal/gtk.m4 \
-		${LOCALBASE}/share/aclocal/gtk.m4
+	  ${LOCALBASE}/share/aclocal/gtk.m4
 
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/glib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
