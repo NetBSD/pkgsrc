@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2000/01/13 00:35:06 wiz Exp $
+
+--- client/gl_vidlinuxglx.c~	Tue Dec 21 18:45:54 1999
++++ client/gl_vidlinuxglx.c	Thu Jan 13 01:02:59 2000
+@@ -20,7 +20,6 @@
+ #include <termios.h>
+ #include <sys/ioctl.h>
+ #include <sys/stat.h>
+-#include <sys/vt.h>
+ #include <stdarg.h>
+ #include <stdio.h>
+ #include <signal.h>
