@@ -13,6 +13,5 @@ and does so efficiently.
 Please do not expect the VIC20, C128 and PET emulators to be as good
 as the C64 one, as they are still under construction.
 
-The current version emulates the C64, the C128 (save the 80 columns
-screen, 2MHz and C64 mode), the VIC20, the CBM-II line (B128, B256),
-and all the PET models.
+The current version emulates the C64, the C128, the VIC20, the CBM-II
+line (B128, B256), and all the PET models.
