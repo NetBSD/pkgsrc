@@ -1,17 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2004/01/09 22:48:16 jlam Exp $
+$NetBSD: patch-ag,v 1.2 2004/07/24 03:32:24 jlam Exp $
 
---- servers/slapd/Makefile.in.orig	Mon Mar 31 11:48:17 2003
+--- servers/slapd/Makefile.in.orig	Mon Apr 12 14:07:40 2004
 +++ servers/slapd/Makefile.in
-@@ -312,7 +312,7 @@ veryclean-local-srv: FORCE
- 		fi; \
- 	done
- 
--install-local-srv: install-slapd install-conf install-schema install-tools
-+install-local-srv: install-slapd install-tools
- 
- install-slapd: FORCE
- 	-$(MKDIR) $(DESTDIR)$(libexecdir)
-@@ -363,17 +363,14 @@ install-schema: FORCE
+@@ -401,17 +401,14 @@ install-schema: FORCE
  		else \
  			echo "PRESERVING EXISTING SCHEMA FILE $$SD" ; \
  		fi ; \
