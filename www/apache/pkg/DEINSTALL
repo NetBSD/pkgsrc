@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2000/09/06 06:17:56 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+POST-DEINSTALL)
+	SERVERROOT=${PKG_PREFIX}/etc/httpd
+	LOGDIR=/var/log/httpd
+	SPOOLDIR=/var/spool/httpd
+
+	rmdir ${SPOOLDIR}/proxy 2>/dev/null || true
+	rmdir ${SPOOLDIR} 2>/dev/null || true
+	rmdir ${LOGDIR} 2>/dev/null || true
+	rmdir ${SERVERROOT}/ssl.prm 2>/dev/null || true
+	rmdir ${SERVERROOT}/ssl.key 2>/dev/null || true
+	rmdir ${SERVERROOT}/ssl.csr 2>/dev/null || true
+	rmdir ${SERVERROOT}/ssl.crt 2>/dev/null || true
+	rmdir ${SERVERROOT}/ssl.crl 2>/dev/null || true
+	rmdir ${SERVERROOT} 2>/dev/null || true
+
+	cat << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove the
+following directories:
+
+	${SERVERROOT}
+	${LOGDIR}
+	${SPOOLDIR}
+===========================================================================
+EOF
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
