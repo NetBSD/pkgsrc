@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.22 2002/10/03 15:54:00 taya Exp $
+$NetBSD: patch-ad,v 1.23 2002/12/04 15:20:29 taya Exp $
 
 diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp ./xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp
 --- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp	Sat Sep 29 05:12:51 2001
-+++ ./xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp	Sun Sep  8 00:46:20 2002
++++ ./xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp	Wed Nov 13 14:21:20 2002
 @@ -132,6 +132,15 @@
      }
  }

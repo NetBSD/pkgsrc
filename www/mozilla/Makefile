@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.106 2002/10/19 15:00:02 taya Exp $
+# $NetBSD: Makefile,v 1.107 2002/12/04 15:20:27 taya Exp $
 
 MOZILLA=	mozilla
 MOZILLA_BIN=	mozilla-bin
-MOZ_VER=	1.1
-PKGREVISION=	1
-EXTRACT_SUFX=	.tar.gz
+MOZ_VER=	1.2.1
+EXTRACT_SUFX=	.tar.bz2
 
 COMMENT=	Open-source version of the Netscape browser
 
