@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/02/06 02:47:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/03/09 13:36:49 markd Exp $
 share/doc/kde/HTML/eu/common/1.png
 share/doc/kde/HTML/eu/common/10.png
 share/doc/kde/HTML/eu/common/2.png
@@ -532,6 +532,7 @@ share/kde/locale/eu/LC_MESSAGES/noatun.mo
 share/kde/locale/eu/LC_MESSAGES/nsplugin.mo
 share/kde/locale/eu/LC_MESSAGES/passwords.mo
 share/kde/locale/eu/LC_MESSAGES/pitchablespeed.mo
+share/kde/locale/eu/LC_MESSAGES/ppdtranslations.mo
 share/kde/locale/eu/LC_MESSAGES/privacy.mo
 share/kde/locale/eu/LC_MESSAGES/qeditor.mo
 share/kde/locale/eu/LC_MESSAGES/quanta.mo

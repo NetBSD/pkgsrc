@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/05 22:33:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/03/09 13:36:49 markd Exp $
 share/doc/kde/HTML/de/KRegExpEditor/common
 share/doc/kde/HTML/de/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/de/KRegExpEditor/index.docbook
@@ -353,6 +353,9 @@ share/doc/kde/HTML/de/kcron/kcronstart.png
 share/doc/kde/HTML/de/kcron/newtask.png
 share/doc/kde/HTML/de/kcron/newvariable.png
 share/doc/kde/HTML/de/kcron/print.png
+share/doc/kde/HTML/de/kdat/common
+share/doc/kde/HTML/de/kdat/index.cache.bz2
+share/doc/kde/HTML/de/kdat/index.docbook
 share/doc/kde/HTML/de/kdebugdialog/common
 share/doc/kde/HTML/de/kdebugdialog/index.cache.bz2
 share/doc/kde/HTML/de/kdebugdialog/index.docbook
@@ -428,6 +431,15 @@ share/doc/kde/HTML/de/kget/kget5.png
 share/doc/kde/HTML/de/kghostview/common
 share/doc/kde/HTML/de/kghostview/index.cache.bz2
 share/doc/kde/HTML/de/kghostview/index.docbook
+share/doc/kde/HTML/de/kgpg/common
+share/doc/kde/HTML/de/kgpg/editor.png
+share/doc/kde/HTML/de/kgpg/index.cache.bz2
+share/doc/kde/HTML/de/kgpg/index.docbook
+share/doc/kde/HTML/de/kgpg/keygen.png
+share/doc/kde/HTML/de/kgpg/keymanage.png
+share/doc/kde/HTML/de/kgpg/keys.png
+share/doc/kde/HTML/de/kgpg/kicker.png
+share/doc/kde/HTML/de/kgpg/options.png
 share/doc/kde/HTML/de/kgpgcertmanager/common
 share/doc/kde/HTML/de/kgpgcertmanager/index.cache.bz2
 share/doc/kde/HTML/de/kgpgcertmanager/index.docbook
@@ -1827,6 +1839,7 @@ share/kde/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/khelpcenter
 @dirrm share/doc/kde/HTML/de/khangman
 @dirrm share/doc/kde/HTML/de/kgpgcertmanager
+@dirrm share/doc/kde/HTML/de/kgpg
 @dirrm share/doc/kde/HTML/de/kghostview
 @dirrm share/doc/kde/HTML/de/kget
 @dirrm share/doc/kde/HTML/de/kgamma
@@ -1843,6 +1856,7 @@ share/kde/locale/de/flag.png
 @dirrm share/doc/kde/HTML/de/kdesu
 @dirrm share/doc/kde/HTML/de/kdeprint
 @dirrm share/doc/kde/HTML/de/kdebugdialog
+@dirrm share/doc/kde/HTML/de/kdat
 @dirrm share/doc/kde/HTML/de/kcron
 @dirrm share/doc/kde/HTML/de/kcontrol/windowmanagement
 @dirrm share/doc/kde/HTML/de/kcontrol/useragent

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/05 22:33:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/09 13:36:49 markd Exp $
 share/doc/kde/HTML/cs/common/1.png
 share/doc/kde/HTML/cs/common/10.png
 share/doc/kde/HTML/cs/common/2.png
@@ -511,7 +511,6 @@ share/kde/locale/cs/LC_MESSAGES/kpersonalizer.mo
 share/kde/locale/cs/LC_MESSAGES/kpf.mo
 share/kde/locale/cs/LC_MESSAGES/kpilot.mo
 share/kde/locale/cs/LC_MESSAGES/kpoker.mo
-share/kde/locale/cs/LC_MESSAGES/kpovmodeler.mo
 share/kde/locale/cs/LC_MESSAGES/kppp.mo
 share/kde/locale/cs/LC_MESSAGES/kppplogview.mo
 share/kde/locale/cs/LC_MESSAGES/kprinter.mo
@@ -629,7 +628,6 @@ share/kde/locale/cs/LC_MESSAGES/lockout.mo
 share/kde/locale/cs/LC_MESSAGES/lskat.mo
 share/kde/locale/cs/LC_MESSAGES/lyrics.mo
 share/kde/locale/cs/LC_MESSAGES/mediacontrol.mo
-share/kde/locale/cs/LC_MESSAGES/megami.mo
 share/kde/locale/cs/LC_MESSAGES/minitoolsplugin.mo
 share/kde/locale/cs/LC_MESSAGES/naughtyapplet.mo
 share/kde/locale/cs/LC_MESSAGES/nexscope.mo
@@ -639,7 +637,6 @@ share/kde/locale/cs/LC_MESSAGES/passwords.mo
 share/kde/locale/cs/LC_MESSAGES/pitchablespeed.mo
 share/kde/locale/cs/LC_MESSAGES/privacy.mo
 share/kde/locale/cs/LC_MESSAGES/qeditor.mo
-share/kde/locale/cs/LC_MESSAGES/quanta.mo
 share/kde/locale/cs/LC_MESSAGES/quicklauncher.mo
 share/kde/locale/cs/LC_MESSAGES/secpolicy.mo
 share/kde/locale/cs/LC_MESSAGES/spy.mo

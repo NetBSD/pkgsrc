@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/06 12:34:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/03/09 13:36:50 markd Exp $
 share/doc/kde/HTML/ru/KRegExpEditor/common
 share/doc/kde/HTML/ru/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/ru/KRegExpEditor/index.docbook
@@ -616,6 +616,8 @@ share/kde/locale/ru/LC_MESSAGES/desktop_kdevelop.mo
 share/kde/locale/ru/LC_MESSAGES/desktop_quanta.mo
 share/kde/locale/ru/LC_MESSAGES/devicesapplet.mo
 share/kde/locale/ru/LC_MESSAGES/dirfilterplugin.mo
+share/kde/locale/ru/LC_MESSAGES/display.mo
+share/kde/locale/ru/LC_MESSAGES/dockbarextension.mo
 share/kde/locale/ru/LC_MESSAGES/domtreeviewer.mo
 share/kde/locale/ru/LC_MESSAGES/drkonqi.mo
 share/kde/locale/ru/LC_MESSAGES/dub.mo
@@ -676,10 +678,15 @@ share/kde/locale/ru/LC_MESSAGES/kblackbox.mo
 share/kde/locale/ru/LC_MESSAGES/kbounce.mo
 share/kde/locale/ru/LC_MESSAGES/kbruch.mo
 share/kde/locale/ru/LC_MESSAGES/kbugbuster.mo
+share/kde/locale/ru/LC_MESSAGES/kcachegrind.mo
 share/kde/locale/ru/LC_MESSAGES/kcalc.mo
 share/kde/locale/ru/LC_MESSAGES/kcardchooser.mo
 share/kde/locale/ru/LC_MESSAGES/kcharselect.mo
 share/kde/locale/ru/LC_MESSAGES/kcharselectapplet.mo
+share/kde/locale/ru/LC_MESSAGES/kcm_kviewcanvasconfig.mo
+share/kde/locale/ru/LC_MESSAGES/kcm_kviewgeneralconfig.mo
+share/kde/locale/ru/LC_MESSAGES/kcm_kviewpluginsconfig.mo
+share/kde/locale/ru/LC_MESSAGES/kcm_kviewviewerpluginsconfig.mo
 share/kde/locale/ru/LC_MESSAGES/kcmaccess.mo
 share/kde/locale/ru/LC_MESSAGES/kcmaccessibility.mo
 share/kde/locale/ru/LC_MESSAGES/kcmarts.mo
@@ -701,6 +708,7 @@ share/kde/locale/ru/LC_MESSAGES/kcmicons.mo
 share/kde/locale/ru/LC_MESSAGES/kcminfo.mo
 share/kde/locale/ru/LC_MESSAGES/kcminput.mo
 share/kde/locale/ru/LC_MESSAGES/kcmioslaveinfo.mo
+share/kde/locale/ru/LC_MESSAGES/kcmkabconfig.mo
 share/kde/locale/ru/LC_MESSAGES/kcmkamera.mo
 share/kde/locale/ru/LC_MESSAGES/kcmkclock.mo
 share/kde/locale/ru/LC_MESSAGES/kcmkded.mo
@@ -764,6 +772,7 @@ share/kde/locale/ru/LC_MESSAGES/kdesu.mo
 share/kde/locale/ru/LC_MESSAGES/kdesud.mo
 share/kde/locale/ru/LC_MESSAGES/kdevtipofday.mo
 share/kde/locale/ru/LC_MESSAGES/kdf.mo
+share/kde/locale/ru/LC_MESSAGES/kdgantt.mo
 share/kde/locale/ru/LC_MESSAGES/kdialog.mo
 share/kde/locale/ru/LC_MESSAGES/kdict.mo
 share/kde/locale/ru/LC_MESSAGES/kdictapplet.mo
@@ -796,6 +805,7 @@ share/kde/locale/ru/LC_MESSAGES/kfile_ogg.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_pcx.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_pdf.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_png.mo
+share/kde/locale/ru/LC_MESSAGES/kfile_pnm.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_po.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_ps.mo
 share/kde/locale/ru/LC_MESSAGES/kfile_rfc822.mo
@@ -815,6 +825,7 @@ share/kde/locale/ru/LC_MESSAGES/kfmclient.mo
 share/kde/locale/ru/LC_MESSAGES/kfontinst.mo
 share/kde/locale/ru/LC_MESSAGES/kfontviewpart.mo
 share/kde/locale/ru/LC_MESSAGES/kfouleggs.mo
+share/kde/locale/ru/LC_MESSAGES/kgamma.mo
 share/kde/locale/ru/LC_MESSAGES/kgantt.mo
 share/kde/locale/ru/LC_MESSAGES/kget.mo
 share/kde/locale/ru/LC_MESSAGES/kghostview.mo
@@ -834,6 +845,7 @@ share/kde/locale/ru/LC_MESSAGES/kio.mo
 share/kde/locale/ru/LC_MESSAGES/kio_audiocd.mo
 share/kde/locale/ru/LC_MESSAGES/kio_devices.mo
 share/kde/locale/ru/LC_MESSAGES/kio_finger.mo
+share/kde/locale/ru/LC_MESSAGES/kio_fish.mo
 share/kde/locale/ru/LC_MESSAGES/kio_floppy.mo
 share/kde/locale/ru/LC_MESSAGES/kio_help.mo
 share/kde/locale/ru/LC_MESSAGES/kio_imap4.mo
@@ -845,7 +857,9 @@ share/kde/locale/ru/LC_MESSAGES/kio_nfs.mo
 share/kde/locale/ru/LC_MESSAGES/kio_nntp.mo
 share/kde/locale/ru/LC_MESSAGES/kio_pop3.mo
 share/kde/locale/ru/LC_MESSAGES/kio_print.mo
+share/kde/locale/ru/LC_MESSAGES/kio_settings.mo
 share/kde/locale/ru/LC_MESSAGES/kio_sftp.mo
+share/kde/locale/ru/LC_MESSAGES/kio_sieve.mo
 share/kde/locale/ru/LC_MESSAGES/kio_smb.mo
 share/kde/locale/ru/LC_MESSAGES/kio_smbro.mo
 share/kde/locale/ru/LC_MESSAGES/kio_smtp.mo
@@ -867,6 +881,7 @@ share/kde/locale/ru/LC_MESSAGES/kmail.mo
 share/kde/locale/ru/LC_MESSAGES/kmailcvt.mo
 share/kde/locale/ru/LC_MESSAGES/kmathtool.mo
 share/kde/locale/ru/LC_MESSAGES/kmcop.mo
+share/kde/locale/ru/LC_MESSAGES/kmenuapplet.mo
 share/kde/locale/ru/LC_MESSAGES/kmenuedit.mo
 share/kde/locale/ru/LC_MESSAGES/kmessedwords.mo
 share/kde/locale/ru/LC_MESSAGES/kmid.mo
@@ -942,6 +957,9 @@ share/kde/locale/ru/LC_MESSAGES/ksplashthemes.mo
 share/kde/locale/ru/LC_MESSAGES/kstars.mo
 share/kde/locale/ru/LC_MESSAGES/kstart.mo
 share/kde/locale/ru/LC_MESSAGES/kstartperf.mo
+share/kde/locale/ru/LC_MESSAGES/kstyle_keramik_config.mo
+share/kde/locale/ru/LC_MESSAGES/kstyle_plastik_config.mo
+share/kde/locale/ru/LC_MESSAGES/ksvgplugin.mo
 share/kde/locale/ru/LC_MESSAGES/ksync.mo
 share/kde/locale/ru/LC_MESSAGES/ksysguard.mo
 share/kde/locale/ru/LC_MESSAGES/ksystemtrayapplet.mo
@@ -968,10 +986,13 @@ share/kde/locale/ru/LC_MESSAGES/kuser.mo
 share/kde/locale/ru/LC_MESSAGES/kview.mo
 share/kde/locale/ru/LC_MESSAGES/kview_scale.mo
 share/kde/locale/ru/LC_MESSAGES/kviewbrowserplugin.mo
+share/kde/locale/ru/LC_MESSAGES/kviewcanvas.mo
+share/kde/locale/ru/LC_MESSAGES/kvieweffectsplugin.mo
 share/kde/locale/ru/LC_MESSAGES/kviewpresenterplugin.mo
 share/kde/locale/ru/LC_MESSAGES/kviewscannerplugin.mo
 share/kde/locale/ru/LC_MESSAGES/kviewshell.mo
 share/kde/locale/ru/LC_MESSAGES/kviewtemplateplugin.mo
+share/kde/locale/ru/LC_MESSAGES/kviewviewer.mo
 share/kde/locale/ru/LC_MESSAGES/kwalletmanager.mo
 share/kde/locale/ru/LC_MESSAGES/kweather.mo
 share/kde/locale/ru/LC_MESSAGES/kwifimanager.mo
@@ -981,11 +1002,14 @@ share/kde/locale/ru/LC_MESSAGES/kwin_b2_config.mo
 share/kde/locale/ru/LC_MESSAGES/kwin_cde_config.mo
 share/kde/locale/ru/LC_MESSAGES/kwin_default_config.mo
 share/kde/locale/ru/LC_MESSAGES/kwin_glow_config.mo
+share/kde/locale/ru/LC_MESSAGES/kwin_icewm_config.mo
 share/kde/locale/ru/LC_MESSAGES/kwin_keramik_config.mo
 share/kde/locale/ru/LC_MESSAGES/kwin_modernsys_config.mo
+share/kde/locale/ru/LC_MESSAGES/kwin_plastik_config.mo
 share/kde/locale/ru/LC_MESSAGES/kwin_quartz_config.mo
 share/kde/locale/ru/LC_MESSAGES/kwireless.mo
 share/kde/locale/ru/LC_MESSAGES/kworldclock.mo
+share/kde/locale/ru/LC_MESSAGES/kwriteconfig.mo
 share/kde/locale/ru/LC_MESSAGES/kxkb.mo
 share/kde/locale/ru/LC_MESSAGES/kxmlrpcd.mo
 share/kde/locale/ru/LC_MESSAGES/kxsconfig.mo
@@ -1008,6 +1032,7 @@ share/kde/locale/ru/LC_MESSAGES/libkonq.mo
 share/kde/locale/ru/LC_MESSAGES/libkpimexchange.mo
 share/kde/locale/ru/LC_MESSAGES/libkscan.mo
 share/kde/locale/ru/LC_MESSAGES/libkscreensaver.mo
+share/kde/locale/ru/LC_MESSAGES/libksieve.mo
 share/kde/locale/ru/LC_MESSAGES/libksirtet.mo
 share/kde/locale/ru/LC_MESSAGES/libksync.mo
 share/kde/locale/ru/LC_MESSAGES/libtaskbar.mo
@@ -1147,7 +1172,7 @@ share/kde/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/kandy
 @dirrm share/doc/kde/HTML/ru/kalzium
 @dirrm share/doc/kde/HTML/ru/juk
-@comment dirrm share/doc/kde/HTML/ru/common
+@dirrm share/doc/kde/HTML/ru/common
 @dirrm share/doc/kde/HTML/ru/atlantik
 @dirrm share/doc/kde/HTML/ru/artsbuilder
 @dirrm share/doc/kde/HTML/ru/amor

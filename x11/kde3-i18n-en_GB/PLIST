@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/06 02:47:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/09 13:36:49 markd Exp $
 share/doc/kde/HTML/en_GB/kaddressbook/common
 share/doc/kde/HTML/en_GB/kaddressbook/index.cache.bz2
 share/doc/kde/HTML/en_GB/kaddressbook/index.docbook
@@ -202,6 +202,8 @@ share/doc/kde/HTML/en_GB/kdm/kdmrc-ref.docbook
 share/doc/kde/HTML/en_GB/kfind/common
 share/doc/kde/HTML/en_GB/kfind/index.cache.bz2
 share/doc/kde/HTML/en_GB/kfind/index.docbook
+share/doc/kde/HTML/en_GB/khelpcenter/common
+share/doc/kde/HTML/en_GB/khelpcenter/contact.docbook
 share/doc/kde/HTML/en_GB/khelpcenter/faq/about.docbook
 share/doc/kde/HTML/en_GB/khelpcenter/faq/common
 share/doc/kde/HTML/en_GB/khelpcenter/faq/configkde.docbook
@@ -225,9 +227,14 @@ share/doc/kde/HTML/en_GB/khelpcenter/glossary/common
 share/doc/kde/HTML/en_GB/khelpcenter/glossary/index.cache.bz2
 share/doc/kde/HTML/en_GB/khelpcenter/glossary/index.docbook
 share/doc/kde/HTML/en_GB/khelpcenter/glossary/kdeprintingglossary.docbook
+share/doc/kde/HTML/en_GB/khelpcenter/help.docbook
+share/doc/kde/HTML/en_GB/khelpcenter/index.cache.bz2
+share/doc/kde/HTML/en_GB/khelpcenter/index.docbook
+share/doc/kde/HTML/en_GB/khelpcenter/links.docbook
 share/doc/kde/HTML/en_GB/khelpcenter/quickstart/common
 share/doc/kde/HTML/en_GB/khelpcenter/quickstart/index.cache.bz2
 share/doc/kde/HTML/en_GB/khelpcenter/quickstart/index.docbook
+share/doc/kde/HTML/en_GB/khelpcenter/support.docbook
 share/doc/kde/HTML/en_GB/khelpcenter/userguide/about-desktop.docbook
 share/doc/kde/HTML/en_GB/khelpcenter/userguide/common
 share/doc/kde/HTML/en_GB/khelpcenter/userguide/first-impressions.docbook
@@ -256,6 +263,8 @@ share/doc/kde/HTML/en_GB/khelpcenter/userguide/ug-faq.docbook
 share/doc/kde/HTML/en_GB/khelpcenter/visualdict/common
 share/doc/kde/HTML/en_GB/khelpcenter/visualdict/index.cache.bz2
 share/doc/kde/HTML/en_GB/khelpcenter/visualdict/index.docbook
+share/doc/kde/HTML/en_GB/khelpcenter/welcome.docbook
+share/doc/kde/HTML/en_GB/khelpcenter/whatiskde.docbook
 share/doc/kde/HTML/en_GB/kicker/common
 share/doc/kde/HTML/en_GB/kicker/index.cache.bz2
 share/doc/kde/HTML/en_GB/kicker/index.docbook
