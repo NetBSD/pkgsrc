@@ -60,15 +60,16 @@ static const char * const skip[] = {
 
 static void		pkgfind(const char *, const char *);
 static void		showpkg(const char *, const char *, const char *);
-static int		getcomment(const char *, char **);
+static int		getstring(const char *, const char *, char **);
 static int		checkskip(const struct dirent *);
 static int		partialmatch(const char *, const char *);
 static int		exactmatch(const char *, const char *);
 static void		usage(void);
 
-static int		(*search)(const char *, const char *);
+static int		(*match)(const char *, const char *);
 
-static int		Cflag, cflag, qflag;
+static const char	*search;
+static int		cflag, qflag, xflag;
 
 int
 main(int argc, char *argv[])
@@ -78,24 +79,29 @@ main(int argc, char *argv[])
 
 	setprogname("pkgfind");
 
-	/* default searches have partial matches */
-	search = partialmatch;
+	/* default matches are partial matches */
+	match = partialmatch;
+	/* no special searches by default */
+	search = NULL;
 
-	Cflag = cflag = qflag = 0;
+	cflag = qflag = xflag = 0;
 
-	while ((ch = getopt(argc, argv, "Ccqx")) != -1) {
+	while ((ch = getopt(argc, argv, "CcMqx")) != -1) {
 		switch (ch) {
 		case 'C':	/* search in comments */
-			Cflag = 1;
+			search = "COMMENT";
 			break;
 		case 'c':	/* case sensitive */
 			cflag = 1;
+			break;
+		case 'M':	/* search for maintainer */
+			search = "MAINTAINER";
 			break;
 		case 'q':	/* quite, don't output comment */
 			qflag = 1;
 			break;
 		case 'x':	/* exact matches */
-			search = exactmatch;
+			match = exactmatch;
 			break;
 		default:
 			usage();
@@ -123,7 +129,7 @@ pkgfind(const char *path, const char *pkg)
 	struct dirent **cat, **list;
 	int ncat, nlist, i, j;
 	char tmp[PATH_MAX];
-	char *text, *comment = NULL;
+	char *text = NULL;
 	struct stat sb;
 
 	if ((ncat = scandir(path, &cat, checkskip, alphasort)) < 0)
@@ -149,16 +155,14 @@ pkgfind(const char *path, const char *pkg)
 			}
 			if (stat(tmp, &sb) < 0 || !S_ISDIR(sb.st_mode))
 				continue;
-			if (Cflag) {
+			if (search != NULL) {
 				(void)strncat(tmp, "/Makefile", sizeof(tmp));
-				if (getcomment(tmp, &comment) == 0 ||
-				    comment == NULL)
+				if (getstring(tmp, search, &text) == 0)
 					continue;
-				text = comment;
 			} else {
 				text = list[j]->d_name;
 			}
-			if ((*search)(text, pkg))
+			if ((*match)(text, pkg))
 				showpkg(path, cat[i]->d_name, list[j]->d_name);
 			free(list[j]);
 		}
@@ -181,12 +185,12 @@ showpkg(const char *path, const char *cat, const char *pkg)
 			err(EXIT_FAILURE, "malloc");
 		(void)snprintf(mk, len, "%s/%s/%s/Makefile", path, cat, pkg);
 
-		if (getcomment(mk, &comment) == 0) {
+		if (getstring(mk, "COMMENT", &comment) == 0) {
 			if ((mk = realloc(mk, len + 7)) == NULL)
 				err(EXIT_FAILURE, "malloc");
 			(void)snprintf(mk, len+7, "%s/%s/%s/Makefile.common",
 			    path, cat, pkg);
-			(void)getcomment(mk, &comment);
+			(void)getstring(mk, "COMMENT", &comment);
 		}
 		free(mk);
 	}
@@ -198,7 +202,7 @@ showpkg(const char *path, const char *cat, const char *pkg)
 }
 
 static int
-getcomment(const char *file, char **comment)
+getstring(const char *file, const char *string, char **nstring)
 {
 	char line[120], *p;
 	FILE *fp;
@@ -209,14 +213,16 @@ getcomment(const char *file, char **comment)
 		if ((p = strchr(line, '\n')) == NULL)
 			continue;
 		*p = '\0';
-		if (strncmp(line, "COMMENT", 7))
+		if (strncmp(line, string, strlen(string)) != 0)
 			continue;
-		p = line + 7;
+		p = line + strlen(string);
 		if (*++p == '=')
 			p++;
 		while (*p != '\0' && isspace((unsigned char)*p))
 			p++;
-		*comment = strdup(p);
+		if (*p == '\0')
+			continue;
+		*nstring = strdup(p);
 		(void)fclose(fp);
 		return 1;
 	}
@@ -268,6 +274,6 @@ exactmatch(const char *s, const char *find)
 static void
 usage(void)
 {
-	(void)fprintf(stderr, "Usage: %s [-Ccqx] keyword [...]\n", getprogname());
+	(void)fprintf(stderr, "Usage: %s [-CcMqx] keyword [...]\n", getprogname());
 	exit(EXIT_FAILURE);
 }
