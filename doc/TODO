@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2079 2004/08/27 10:50:26 abs Exp $
+$NetBSD: TODO,v 1.2080 2004/08/27 11:44:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -254,6 +254,7 @@ Suggested package updates
 	o gnunet-0.6.3a
 	o gnutls-1.0.17
 	o gogo-3.11p1
+	o gossip-0.7.7
 	o gpsdrive-2.09
 	o gqmpeg-0.91.1
 	o grace-5.1.17
@@ -285,7 +286,7 @@ Suggested package updates
 	o latex2rtf-1.9.15
 	o lavaps-2.5
 	o lbreakout-2.5
-	o leafnode-1.10.4
+	o leafnode-1.10.5
 	o libcddb-0.9.5
 	o libggi-2.0.5
 	o libgii-0.8.5
@@ -342,6 +343,7 @@ Suggested package updates
 	o ns-flash-6.0.79
 	o nslint-2.1a3
 	o nulib2-2.0.2
+	o nut-10.3
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
 	o onyx-5.1.1
@@ -396,7 +398,7 @@ Suggested package updates
 	o snd-7.5
 	o snes9x-1.42
 	o snownews-1.5.3
-	o socat-1.4.0.0
+	o socat-1.4.0.1
 	o sox-12.17.5
 	o sqlite-3.0.2
 	o squid-2.5.6 [taca]
