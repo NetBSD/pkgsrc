@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1 2002/01/21 11:28:16 wiz Exp $
+
+--- anal/pvoc/makef.orig	Sun May 16 20:04:33 1999
++++ anal/pvoc/makef
+@@ -6,7 +6,7 @@
+ 
+ OBJS =  main.o $T/pvanal.o $T/filopen.o $T/sfheader.o \
+ 	$T/soundin.o $T/ulaw.o $T/aiff.o $T/wave.o $T/ieee80.o $T/memalloc.o \
+-	$T/pvoc.o $T/fft.o $T/dsputil.o $T/window.o $T/winX11.o $T/winascii.o \
++	$T/pvoc.o $T/fft.o $T/dsputil.o $T/window.o $T/winascii.o \
+ 	$T/winEPS.o $T/aifc.o $T/getstring.o
+ 
+ pvocs:	pvanal
