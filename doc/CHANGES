@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5367 2004/03/29 23:40:52 wiz Exp $
+$NetBSD: CHANGES,v 1.5368 2004/03/29 23:51:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1604,3 +1604,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ogle_gui to 0.9.2nb3 [wiz 2004-03-29]
 	Updated bittorrent to 3.4.1a [wiz 2004-03-29]
 	Updated bittorrent-gui to 3.4.1a [wiz 2004-03-29]
+	Updated p5-XML-LibXML to 1.57 [wiz 2004-03-29]
