@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_delete.1,v 1.5 2003/09/23 07:13:50 grant Exp $
+.\" $NetBSD: pkg_delete.1,v 1.6 2004/02/07 10:37:52 grant Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -126,14 +126,13 @@ For most packages, the prefix will
 be set automatically to the installed location by
 .Xr pkg_add 1 .
 .It Fl R
-Like the
-.Fl r
-option, this does a recursive delete.
-The
+This option triggers a recursive delete of the given package and any
+packages it depends on, unless some other package still needs a
+dependent package.
+This
 .Fl R
-option deletes the given package and any packages required by
-it, unless some other package still needs them.
-This can be used to delete a package and all the packages it needs.
+option can be used to clean up by deleting a package and all its
+then-unneeded dependent packages.
 .It Fl r
 .Nm
 first builds a list of all packages that require (directly and indirectly)
@@ -141,6 +140,10 @@ the one being deleted.
 It then deletes these packages using
 .Nm
 with the given options before deleting the user specified package.
+This
+.Fl r
+option can be used to recursively delete a package and all of the
+packages which depend on that package.
 .It Fl V
 Print version number and exit.
 .It Fl v
