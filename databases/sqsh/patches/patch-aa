@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2001/06/09 15:01:58 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2004/03/29 01:50:39 grant Exp $
 
---- configure.orig	Tue Jan  5 21:33:39 1999
-+++ configure	Tue May 22 00:50:38 2001
-@@ -1095,7 +1095,7 @@
- 	# The basic client libraries that are always needed
- 	# on all platforms.
- 	#
--	SYBASE_LIBS="-lblk -lcs -lct -lcomn -ltcl -lintl"
-+	SYBASE_LIBS="-lct"
- 
- 	MAJOR_VERSION=`echo $SYBASE_VERSION | cut -d '.' -f 1`
- 
-@@ -1146,6 +1146,8 @@
+--- configure.orig	1999-01-06 13:33:39.000000000 +1100
++++ configure
+@@ -1146,6 +1146,8 @@ echo "configure:1127: checking Open Clie
  			SYBASE_OS="-lm -ldl -ldgc";;
  		aix*)
  			SYBASE_OS="-lm";;
@@ -20,7 +11,7 @@ $NetBSD: patch-aa,v 1.3 2001/06/09 15:01:58 wiz Exp $
  		*)
  			SYBASE_OS="-lm -ldl";;
  	esac
-@@ -1301,7 +1303,7 @@
+@@ -1301,7 +1303,7 @@ else
  			CPPFLAGS="${CPPFLAGS} -L${READLINE_LIBDIR}"
  		fi
  
