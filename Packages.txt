@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.112 2000/09/15 22:05:46 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.113 2000/09/18 10:24:59 abs Exp $
 ###########################################################################
 
 			==========================
@@ -1457,7 +1457,7 @@ have to do that yourself, and this may not be what you want.
  ======================================
 
 If your package uses a different distribution method from .tar.gz, take a
-look at the package for plan9/sam, which uses a gzipped shell archive
+look at the package for editors/sam, which uses a gzipped shell archive
 (shar), but the quick solution is to set EXTRACT_SUFX to the name after the
 DISTNAME field, and add the following to your package's Makefile:
 
@@ -1472,7 +1472,7 @@ DISTNAME field, and add the following to your package's Makefile:
 
 Your package doesn't create a subdirectory for itself (like GNU software
 does, for instance), but extracts itself in the current directory: see
-plan9/sam again, but the quick answer is:
+editors/sam again, but the quick answer is:
 
 > NO_WRKSUBDIR=   yes
 
