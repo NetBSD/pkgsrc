@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2003/02/18 14:56:04 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/07/25 09:14:11 jmmv Exp $
 bin/gnome2-terminal
 lib/bonobo/servers/gnome-terminal.server
 share/applications/gnome-terminal.desktop
 share/gconf/schemas/gnome-terminal.schemas
 share/gnome-terminal/glade/gnome-terminal.glade2
-share/gnome/help/gnome-terminal/C/gnome-terminal.xml
 share/gnome/help/gnome-terminal/C/figures/gnome-terminal-default.png
 share/gnome/help/gnome-terminal/C/figures/gnome-terminal-tabbed.png
 share/gnome/help/gnome-terminal/C/figures/terminal_window.png
+share/gnome/help/gnome-terminal/C/gnome-terminal.xml
 share/gnome/help/gnome-terminal/C/legal.xml
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gnome-terminal.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnome-terminal.mo
@@ -22,17 +24,21 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-terminal.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-terminal.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnome-terminal.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-terminal.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-terminal.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-terminal.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-terminal.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-terminal.mo
@@ -46,5 +52,9 @@ share/pixmaps/gnome-terminal.png
 @dirrm share/gnome/help/gnome-terminal/C/figures
 @dirrm share/gnome/help/gnome-terminal/C
 @dirrm share/gnome/help/gnome-terminal
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/gnome-terminal/glade
 @dirrm share/gnome-terminal
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in gnome2-dirs: @dirrm share/applications
+@comment in bonobo-activation: @dirrm lib/bonobo/servers
