@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1811 2003/03/31 20:51:00 jschauma Exp $
+$NetBSD: CHANGES,v 1.1812 2003/03/31 21:00:30 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1355,3 +1355,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added mldonkey-2.04rc1 [jmmv 2003-03-31]
 	Updated wxGTK to 2.4.0 [jmmv 2003-03-31]
 	Updated pvs to 3.1 [jschauma 2003-03-31]
+	Added lmule-1.1.13 [jmmv 2003-03-31]
