@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/14 04:25:52 hubertf Exp $
+
+--- config.h.in.orig	Thu Dec 14 04:28:34 2000
++++ config.h.in
+@@ -138,3 +138,6 @@
+ #define BX_WITH_SDL 0
+ 
+ #define USE_LOADER 0
++
++/* This is only present on post-1.5 NetBSD-current systems: */
++/* #undef HAVE_UVM_PARAM_H */

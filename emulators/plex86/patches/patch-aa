@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/14 04:25:52 hubertf Exp $
+
+--- configure.in.orig	Sun Dec 10 23:29:39 2000
++++ configure.in
+@@ -20,6 +20,7 @@
+ AC_CHECK_SIZEOF(unsigned int, 0)
+ AC_CHECK_SIZEOF(unsigned long, 0)
+ AC_CHECK_SIZEOF(unsigned long long, 0)
++AC_CHECK_HEADER(uvm/uvm_param.h, HAVE_UVM_PARAM_H=1)
+ AC_CHECK_FUNCS(select, AC_DEFINE(HAVE_SELECT))
+ AC_CHECK_LIB(dl, dlopen,
+   LIBDL='-ldl',

@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/14 04:25:52 hubertf Exp $
+
+--- kernel/host-netbsd.c.orig	Thu Dec 14 04:29:42 2000
++++ kernel/host-netbsd.c
+@@ -25,7 +25,7 @@
+ 
+ #undef NETBSD_PLEX86_DEBUG
+ 
+-#if __NetBSD_Version__ > 105000000
++#if __NetBSD_Version__ > 105000000 && defined(HAVE_UVM_PARAM_H)
+ #include <uvm/uvm_extern.h>
+ #include <uvm/uvm_param.h>
+ #else
