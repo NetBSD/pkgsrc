@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.787 2001/07/13 11:28:23 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.788 2001/07/15 12:40:03 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1732,7 +1732,7 @@ real-su-install: ${MESSAGE}
 		for manpage in $$newmanpages; do			\
 			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
 			if [ -h ${PREFIX}/$$manpage.gz ]; then		\
-				set - `${FILE} ${PREFIX}/$$manpage.gz | ${SED} -e 's|\.gz$$||'`; \
+				set - `${FILE_CMD} ${PREFIX}/$$manpage.gz | ${SED} -e 's|\.gz$$||'`; \
 				shift `expr $$# - 1`;			\
 				${RM} -f ${PREFIX}/$$manpage;		\
 				${LN} -s $${1} ${PREFIX}/$$manpage;	\
@@ -1751,7 +1751,7 @@ real-su-install: ${MESSAGE}
 		for manpage in $$newmanpages; do			\
 			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
 			if [ -h ${PREFIX}/$$manpage ]; then		\
-				set - `${FILE} ${PREFIX}/$$manpage`;	\
+				set - `${FILE_CMD} ${PREFIX}/$$manpage`;	\
 				shift `expr $$# - 1`;			\
 				${RM} -f ${PREFIX}/$$manpage.gz; 	\
 				${LN} -s $${1}.gz ${PREFIX}/$$manpage.gz; \
@@ -1944,7 +1944,7 @@ show-shlib-type:
 	if [ "X${MKPIC}" != "Xno" -a "X${NOPIC}" = "X" ]; then		\
 		${ECHO} "int main() { exit(0); }" > a.$$$$.c;		\
 		${CC} ${CFLAGS} a.$$$$.c -o a.$$$$.out;			\
-		case `${FILE} a.$$$$.out` in				\
+		case `${FILE_CMD} a.$$$$.out` in			\
 		*ELF*dynamically*)					\
 			sotype=ELF ;;					\
 		*shared*library*)					\
