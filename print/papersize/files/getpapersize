@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: getpapersize,v 1.1.1.1 1998/11/09 17:55:22 agc Exp $
+# $NetBSD: getpapersize,v 1.2 1999/09/05 18:38:55 kim Exp $
 #
 # Small shell script to show the default papersize for packages
 #
@@ -15,7 +15,7 @@ set $pkgs
 while [ $# -gt 0 ]; do
 	case $1 in
 	a2ps)
-		f=@localbase@/etc/a2ps.cfg
+		f=@localbase@/etc/a2ps-site.cfg
 		if [ -e $f ]; then
 			echo -n "$1 has default papersize: "
 			awk '/^Options: --medium=/ { gsub(".*=", "", $0); print $0; }' $f
