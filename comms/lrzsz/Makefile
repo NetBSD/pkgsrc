@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/09/23 07:49:37 yyamano Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/21 08:19:57 minskim Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/10/10 06:53:29 obrien Exp
 
 DISTNAME=	lrzsz-0.12.20
@@ -9,7 +9,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ohse.de/uwe/software/lrzsz.html
 COMMENT=	Receive/Send files via X/Y/ZMODEM protocol.  (unrestrictive)
 
-USE_BUILDLINK2=		# defined
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		# defined
 USE_PKGLOCALEDIR=	# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-catgets

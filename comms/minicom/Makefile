@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/01/22 07:51:12 grant Exp $
+# $NetBSD: Makefile,v 1.39 2004/02/21 08:24:11 minskim Exp $
 
 DISTNAME=	minicom-1.83.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -16,8 +16,10 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS+=	gkermit-[0-9]*:../../comms/gkermit
 DEPENDS+=	lrzsz-[0-9]*:../../comms/lrzsz
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/src
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
@@ -42,5 +44,5 @@ pre-install:
 	${SH} ${SCRIPTDIR}/create-dev-link
 .endif
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
