@@ -1,0 +1,12 @@
+--- xneko.c.orig	Tue Jun  1 03:46:10 1993
++++ xneko.c	Wed Feb 18 00:34:58 1998
+@@ -139,6 +139,9 @@
+ 
+ #include <stdio.h>
+ 
++#include <stdlib.h>
++#include <string.h>
++
+ #include <signal.h>
+ #include <math.h>
+ #include <sys/time.h>
