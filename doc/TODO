@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3 2002/11/23 09:50:58 dillo Exp $
+$NetBSD: TODO,v 1.4 2002/11/25 04:29:30 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -71,7 +71,6 @@ Suggested package updates
 	o autotrace-0.31.1
 	o balsa-1.4.1
 	o balsa-2.0.3
-	o bash-2.05b
 	o binutils-2.13.1
 	o bison-1.75
 	o bzflag-1.7e6
