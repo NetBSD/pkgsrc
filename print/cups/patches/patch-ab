@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.11 2001/08/18 04:41:46 jlam Exp $
+$NetBSD: patch-ab,v 1.12 2001/12/14 23:18:16 jlam Exp $
 
---- Makefile.orig	Mon Aug  6 15:37:08 2001
-+++ Makefile
+--- Makefile.orig	Tue Oct 30 15:37:13 2001
++++ Makefile	Fri Dec 14 17:33:21 2001
 @@ -60,8 +60,6 @@
  		echo Installing in $$dir... ;\
  		(cd $$dir; $(MAKE) $(MFLAGS) install) || exit 1;\
@@ -11,14 +11,34 @@ $NetBSD: patch-ab,v 1.11 2001/08/18 04:41:46 jlam Exp $
  	echo Installing in data...
  	(cd data; $(MAKE) $(MFLAGS) install)
  	echo Installing in doc...
-@@ -86,10 +84,6 @@
- 		$(INSTALL_SCRIPT) cups.sh $(prefix)/$(INITDIR)/rc3.d/S99cups; \
- 		$(INSTALL_DIR) $(prefix)/$(INITDIR)/rc5.d; \
- 		$(INSTALL_SCRIPT) cups.sh $(prefix)/$(INITDIR)/rc5.d/S99cups; \
+@@ -77,30 +75,6 @@
+ 	echo Installing cups-config script...
+ 	$(INSTALL_DIR) $(bindir)
+ 	$(INSTALL_SCRIPT) cups-config $(bindir)/cups-config
+-	echo Installing startup script...
+-	if test "x$(INITDIR)" != "x"; then \
+-		$(INSTALL_DIR) $(BUILDROOT)$(INITDIR)/init.d; \
+-		$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDIR)/init.d/cups; \
+-		$(INSTALL_DIR) $(BUILDROOT)$(INITDIR)/rc0.d; \
+-		$(INSTALL_SCRIPT) cups.sh  $(BUILDROOT)$(INITDIR)/rc0.d/K00cups; \
+-		$(INSTALL_DIR) $(BUILDROOT)$(INITDIR)/rc2.d; \
+-		$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDIR)/rc2.d/S99cups; \
+-		$(INSTALL_DIR) $(BUILDROOT)$(INITDIR)/rc3.d; \
+-		$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDIR)/rc3.d/S99cups; \
+-		$(INSTALL_DIR) $(BUILDROOT)$(INITDIR)/rc5.d; \
+-		$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDIR)/rc5.d/S99cups; \
 -	fi
 -	if test "x$(INITDIR)" = "x" -a "x$(INITDDIR)" != "x"; then \
--		$(INSTALL_DIR) $(prefix)/$(INITDDIR); \
--		$(INSTALL_SCRIPT) cups.sh $(prefix)/$(INITDDIR)/cups; \
- 	fi
+-		$(INSTALL_DIR) $(BUILDROOT)$(INITDDIR); \
+-		if test "$(INITDDIR)" = "/System/Library/StartupItems/CUPS"; then \
+-			$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDDIR)/CUPS; \
+-			$(INSTALL_DATA) cups.plist $(BUILDROOT)$(INITDDIR)/StartupParameters.plist; \
+-			$(INSTALL_DIR) $(BUILDROOT)$(INITDDIR)/Resources/English.lproj; \
+-			$(INSTALL_DATA) cups.strings $(BUILDROOT)$(INITDDIR)/Resources/English.lproj/Localizable.strings; \
+-		else \
+-			$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDDIR)/cups; \
+-		fi \
+-	fi
  
  
+ #
