@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2004/12/16 13:22:23 taca Exp $
+# $NetBSD: Makefile,v 1.10 2005/01/28 14:08:02 taca Exp $
 # FreeBSD: ports/textproc/eruby/Makefile,v 1.9 2000/12/12 14:04:26 knu Exp
 
 DISTNAME=	eruby-${ERUBY_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.modruby.net/archive/
 
@@ -15,6 +15,7 @@ COMMENT=	Interprets Ruby code embedded in a text file
 CONFLICTS+=	ruby[1-9][0-9]-eruby-*
 
 USE_BUILDLINK3=		yes
+RUBY_HAS_ARCHLIB=	yes
 ERUBY_VERSION=		1.0.5
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${RUBY} configure.rb

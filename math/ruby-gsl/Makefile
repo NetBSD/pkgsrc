@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/11/27 16:27:45 taca Exp $
+# $NetBSD: Makefile,v 1.6 2005/01/28 14:08:01 taca Exp $
 
 DISTNAME=	ruby-gsl-0.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-gsl-0.2.0
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ruby-gsl/}
 
@@ -9,6 +10,7 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://ruby-gsl.sourceforge.net/
 COMMENT=	Wrapper of the GNU Scientific Library (GSL) for Ruby
 
+RUBY_HAS_ARCHLIB=	yes
 USE_BUILDLINK3=		yes
 USE_RUBY_EXTCONF=	yes
 INSTALL_TARGET=		site-install

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/16 07:10:16 taca Exp $
+# $NetBSD: Makefile,v 1.8 2005/01/28 14:08:01 taca Exp $
 #
 
 DISTNAME=	newfile-1.0.14
@@ -9,9 +9,9 @@ MAINTAINER=	flynn@energyhq.es.eu.org
 HOMEPAGE=	http://newfile.sourceforge.net/
 COMMENT=	Tool for creating starter files in various languages
 
-USE_BUILDLINK3=	YES
-NO_BUILD=	YES
-GNU_CONFIGURE=	YES
+USE_BUILDLINK3=	yes
+NO_BUILD=	yes
+GNU_CONFIGURE=	yes
 
 .include "../../lang/ruby/rubyversion.mk"
 
