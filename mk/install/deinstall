@@ -1,6 +1,6 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.26 2004/04/07 14:25:41 tv Exp $
+# $NetBSD: deinstall,v 1.27 2004/04/12 11:49:09 chris Exp $
 
 eval set -- ${PKG_USERS}
 for userset; do
@@ -239,7 +239,7 @@ EOF
 		if [ -n "${RCD_SCRIPTS}" ]; then
 			${CAT} << EOF
 
-You many also want to remove any settings in rc.conf that you may have
+You may also want to remove any settings in rc.conf that you may have
 made in order to use ${PKGNAME}.
 EOF
 		fi
