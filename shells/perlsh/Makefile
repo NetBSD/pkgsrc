@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/30 10:41:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/18 04:31:31 snj Exp $
 # Cjep: Makefile,v 1.3 2003/04/20 16:21:44 cjep Exp
 
 DISTNAME=	psh-1.8
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Term-ReadKey>=2.21:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-Term-ReadLine>=1.12:../../devel/p5-Term-ReadLine
 DEPENDS+=	p5-BSD-Resource>=1.15:../../devel/p5-BSD-Resource
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 PKG_SHELL=	${PREFIX}/bin/psh
 
