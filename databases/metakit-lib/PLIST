@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:22 jlam Exp $
-include/mk4.h
-include/mk4.inl
-include/mk4io.h
-include/mk4str.h
-include/mk4str.inl
-lib/libmk4.la

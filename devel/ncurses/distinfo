@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.11 2004/03/08 13:26:03 wiz Exp $
-
-SHA1 (ncurses-5.4.tar.gz) = c0dfaf2c4d383915f898a97c8caeace8a0a2c8b7
-Size (ncurses-5.4.tar.gz) = 2154022 bytes
-SHA1 (patch-aa) = 436c8b4ad94efa1144a0506f05b23a8a36af37fa
-SHA1 (patch-ab) = f5399f83b013345685530042b28f91e37a8e66e2
-SHA1 (patch-ac) = a27f115e6d3654ac0b57667435be48d9c798ea0f
-SHA1 (patch-ad) = f9ad26a687a8da6883bdc2eb4c2a7fb414896e70

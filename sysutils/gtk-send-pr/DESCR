@@ -1,6 +1,0 @@
-This is a GTK2 based tool, similar to send-pr(1), but with some nice
-features:
-
-	o User friendly UI
-	o Uses libesmtp to deliver mail to any SMTP server
-	o Really free code (BSD licensed)

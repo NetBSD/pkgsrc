@@ -1,5 +1,0 @@
-librsvg is Raph's scalable vector graphics library.  It provides support for
-SVG graphics, and is used by the GNOME 2 desktop.
-
-This package provides the RSVG pixbuf loader and the RSVG theme engine for
-the GTK2 toolkit.

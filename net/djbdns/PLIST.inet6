@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.inet6,v 1.1 2004/09/01 20:07:35 schmonz Exp $
-bin/dnsip6

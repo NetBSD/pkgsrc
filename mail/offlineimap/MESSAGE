@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/08/10 10:09:21 seb Exp $
-
-To use a graphical user interface with ${PKGNAME} you could install
-the py-Tk package from the x11 category.
-
-===========================================================================

@@ -1,7 +1,0 @@
-"Text::Quoted" examines the structure of some text which may contain
-multiple different levels of quoting, and turns the text into a nested
-data structure.
-
-The structure is an array reference containing hash references for
-each paragraph belonging to the same author.  Each level of quoting
-recursively adds another list reference.

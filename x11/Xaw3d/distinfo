@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/06/12 15:46:03 jschauma Exp $
-
-SHA1 (Xaw3d-1.5.tar.gz) = ba10e9f9a376932eed9696006e34d4618a6f588d
-Size (Xaw3d-1.5.tar.gz) = 284420 bytes
-SHA1 (patch-aa) = 03401df288a0658399d475d59e6f8f8cd01ab520
-SHA1 (patch-ab) = 0233ff209e06c8a699c23907be3af442ed099ff1

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 15:05:12 skrll Exp $
-
-SHA1 (untex-1.3.tar.gz) = c3e566ab673c3d2d829e9478b24d9a8d3cdb8ad8
-Size (untex-1.3.tar.gz) = 4687 bytes
-SHA1 (patch-aa) = fc34662a7de2bd81ca6b5e752fc47caf97883477

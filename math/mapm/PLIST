@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/22 17:33:28 drochner Exp $
-bin/mapm-calc
-include/m_apm.h
-lib/libmapm.a
-share/doc/mapm/README
-share/doc/mapm/algorithms.used
-share/doc/mapm/function.ref
-@dirrm share/doc/mapm

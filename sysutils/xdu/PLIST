@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 02:59:29 jschauma Exp $
-bin/xdu
-lib/X11/app-defaults/XDu
-${IMAKE_MAN_DIR}/xdu.${IMAKE_MANNEWSUFFIX}

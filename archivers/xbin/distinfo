@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 11:21:10 agc Exp $
-
-SHA1 (xbinunix.c) = 20db911814c29c5f236d5dc2a27fe25c7a5f61fb
-Size (xbinunix.c) = 18563 bytes
-SHA1 (xbin.man) = 2e223e6a02a2436f29c586fa711ee5ad3bbf591d
-Size (xbin.man) = 3277 bytes

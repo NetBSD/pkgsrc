@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/06/29 13:11:20 seb Exp $
-
-SHA1 (guile-pg-0.07.tar.gz) = f232cd752a5640af222de5016d57cc192219091e
-Size (guile-pg-0.07.tar.gz) = 212233 bytes
-SHA1 (patch-aa) = 025a6d3eec84e972f259fb979ae26a42fea1aced
-SHA1 (patch-ab) = 49b7c64f2f8eeb24ae75dd85c627e59327b6db08
-SHA1 (patch-ac) = 90f1dd2d86d532d4b847c4c85e9f54e0d909cef6
-SHA1 (patch-ad) = 056a914c8f35630fdd9546447bbf6c3c2bf138ca
-SHA1 (patch-ae) = 85745986f5438619e4748e72ba772f0eb1b251dd

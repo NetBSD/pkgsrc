@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:55:44 zuntum Exp $
-bin/spellcast
-man/man6/spellcast.6
-share/doc/spellcast/spelllist.ps
-@dirrm share/doc/spellcast

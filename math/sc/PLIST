@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:34:11 zuntum Exp $
-bin/sc
-bin/scqref
-bin/psc
-man/man1/sc.1
-man/man1/psc.1
-share/sc/tutorial.sc
-@dirrm share/sc

@@ -1,4 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/21 05:03:18 grant Exp $
-
-SHA1 (fastfs.c) = 6a5c920815d1c54a9143e7aa2544e5b83bfa0a27
-Size (fastfs.c) = 3564 bytes

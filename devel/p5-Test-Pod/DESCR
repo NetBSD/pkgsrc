@@ -1,2 +1,0 @@
-The Test::Pod Perl module permits to check the validity of a POD file, and
-report its result in standard Test::Simple fashion.

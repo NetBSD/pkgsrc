@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:01:44 zuntum Exp $
-bin/xbuffy
-man/man1/xbuffy.1
-lib/X11/app-defaults/XBuffy

@@ -1,3 +1,0 @@
-autoswc is an utility that automatically generates system wide cache files
-for use with configure scripts created by GNU autoconf, and specially by
-those executed within pkgsrc.

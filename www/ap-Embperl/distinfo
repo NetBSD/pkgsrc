@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:02:30 skrll Exp $
-
-SHA1 (HTML-Embperl-1.2.0.tar.gz) = dd022431682777ea46870b54ed3fb1b810e3de52
-Size (HTML-Embperl-1.2.0.tar.gz) = 254872 bytes
-SHA1 (patch-aa) = 84f571837cb69c556539195fd740b698856a73f9
-SHA1 (patch-ab) = 30ad449b639ebae16e7c45f1c7c6bc41a3554fc7

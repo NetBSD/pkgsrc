@@ -1,7 +1,0 @@
-Coda is a distributed file system.  Among its features are disconnected
-operation, good security model, server replication and persistent client
-side caching.
-
-For more info, contact <coda@cs.cmu.edu> or visit http://www.coda.cs.cmu.edu.
-
-This package contains the client-side programs.

@@ -1,4 +1,0 @@
-HTML::StickyQuery is a sub class of the HTML::Parser and uses it to
-parse HTML document and add QUERY_STRING to href attributes.
-
-You can assign Session ID or any form data without using cookie.

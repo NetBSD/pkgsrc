@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/11/10 16:42:40 adam Exp $
-bin/gcelestia
-etc/gconf/schemas/celestia.schemas
-share/applications/celestia.desktop
-share/pixmaps/celestia.png

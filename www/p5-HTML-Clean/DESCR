@@ -1,9 +1,0 @@
-The HTML::Clean module encapsulates a number of common techniques for
-minimizing the size of HTML files.  You can typically save between 10% and
-50% of the size of a HTML file using these methods.  It provides the
-following features:
-
-	Remove unneeded whitespace (beginning of line, etc.)
-	Remove unneeded META elements
-	Remove HTML comments (except for styles, javascript and SSI)
-	Replace tags with equivilant shorter tags (<strong> --> <b>, etc.)

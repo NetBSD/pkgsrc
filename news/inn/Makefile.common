@@ -1,6 +1,0 @@
-# $NetBSD: Makefile.common,v 1.1 2003/07/29 16:27:26 wiz Exp $
-#
-
-INN_PREFIX?=	${PREFIX}/inn
-INN_DATA_DIR?=	/var/news
-INN_SPOOL?=	${INN_DATA_DIR}/spool

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/02/24 23:15:55 cube Exp $
-
-SHA1 (gkrellweather-2.0.6.tgz) = c54f5e48879158f25db9ec4e5226cd0ca686861f
-Size (gkrellweather-2.0.6.tgz) = 20399 bytes
-SHA1 (patch-aa) = ab3068c247a1e8cc2c9f636aa5b10d317c93ac04

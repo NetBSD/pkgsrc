@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/04 02:19:13 uebayasi Exp $
-@comment $OpenBSD: PLIST,v 1.1.1.1 2001/07/12 19:17:24 naddy Exp $
-bin/ksh93
-man/man1/ksh93.1

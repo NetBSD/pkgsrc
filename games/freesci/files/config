@@ -1,6 +1,0 @@
-gfx_driver=sdl
-pcmout_driver=sdl
-midiout_driver=unixraw
-midi_device=adlibemu
-# for full-screen mode:
-# gfx.sdl.fullscreen=yes

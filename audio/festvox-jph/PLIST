@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:16:07 zuntum Exp $
-share/festival/lib/voices/english/jph_diphone/festvox/jph_diphone.scm
-share/festival/lib/voices/english/jph_diphone/festvox/jphdiph.msec
-share/festival/lib/voices/english/jph_diphone/festvox/jphgain.dat
-share/festival/lib/voices/english/jph_diphone/group/jph_di_resLPC.group
-@dirrm share/festival/lib/voices/english/jph_diphone/group
-@dirrm share/festival/lib/voices/english/jph_diphone/festvox
-@dirrm share/festival/lib/voices/english/jph_diphone

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/23 07:19:38 mrg Exp $
-bin/gocr
-include/gocr.h
-lib/libPgm2asc.a
-man/man1/gocr.1

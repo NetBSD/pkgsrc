@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/27 00:02:34 wiz Exp $
-sbin/pkg_chk
-man/man8/pkg_chk.8

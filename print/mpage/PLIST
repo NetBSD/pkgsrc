@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:52 zuntum Exp $
-bin/mpage
-man/man1/mpage.1.gz
-share/mpage/CP850.PC
-share/mpage/ISO+STD+OTH
-share/mpage/ISO-8859.1
-share/mpage/ISO-Latin.1
-share/mpage/ISO-Latin.2
-@dirrm share/mpage

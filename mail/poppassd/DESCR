@@ -1,2 +1,0 @@
-poppassd is password update daemon, using passwd and/or smbpasswd
-command as back end.  It has integrated into qpopper package.

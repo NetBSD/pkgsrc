@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/05 08:44:57 wiz Exp $
-bin/mcrypt
-bin/mdecrypt
-man/man1/mcrypt.1
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/mcrypt.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/mcrypt.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/mcrypt.mo
-${PKGLOCALEDIR}/locale/es_AR/LC_MESSAGES/mcrypt.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/mcrypt.mo

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/13 04:14:21 uebayasi Exp $
-${EMACS_LISPPREFIX}/ruby-mode/inf-ruby.el
-${EMACS_LISPPREFIX}/ruby-mode/inf-ruby.elc
-${EMACS_LISPPREFIX}/ruby-mode/ruby-mode.el
-${EMACS_LISPPREFIX}/ruby-mode/ruby-mode.elc
-${EMACS_LISPPREFIX}/ruby-mode/rubydb3x.el
-${EMACS_LISPPREFIX}/ruby-mode/rubydb3x.elc
-@dirrm ${EMACS_LISPPREFIX}/ruby-mode

@@ -1,6 +1,0 @@
-CDD is as the name implies, an attempt at a DD utility for CD's of all
-flavors.  CDD will do its best to copy CD audio data, CD-ROM data in both
-raw and "cooked" forms to a directory of the users choice.
-
-CDD doesn't support every CD-ROM drive, though it supports many common
-ones, including those that support the new MMC command set.

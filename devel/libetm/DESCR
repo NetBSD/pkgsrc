@@ -1,3 +1,0 @@
-Exception and Termination Manager (ETM), a simple(-minded) library to manage
-exceptional conditions that arise during program execution, and to provide
-for orderly program shutdown.

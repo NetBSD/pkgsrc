@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 04:17:35 jschauma Exp $
-bin/xless
-lib/X11/xless.help
-lib/X11/app-defaults/XLess
-lib/X11/app-defaults/XLess-color
-${IMAKE_MAN_DIR}/xless.${IMAKE_MANNEWSUFFIX}.gz

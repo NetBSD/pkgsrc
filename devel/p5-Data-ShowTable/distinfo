@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:35 wiz Exp $
-
-SHA1 (Data-ShowTable-3.3.tar.gz) = f8adb78d8eb3c012fe692632b08518ece513fb4d
-Size (Data-ShowTable-3.3.tar.gz) = 94369 bytes
-SHA1 (patch-aa) = 6970446aaedd817df35bd3ec4b15fe741be0c5db

@@ -1,3 +1,0 @@
-! $NetBSD: XEphem.ad,v 1.1 2000/12/12 17:29:51 drochner Exp $
-
-XEphem.ShareDir: @PREFIX@/share/xephem

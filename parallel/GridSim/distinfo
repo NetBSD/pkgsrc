@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/09/07 17:12:24 jschauma Exp $
-
-SHA1 (gridsimtoolkit-3.0.zip) = 735362f3a6cb6bebf84b59e8d57ea6eaeaf60c05
-Size (gridsimtoolkit-3.0.zip) = 1704824 bytes
-SHA1 (gridsimtoolkit-3.0-patch2.zip) = 8b38bbd57d8d8aa47073f180b877f53b550022bf
-Size (gridsimtoolkit-3.0-patch2.zip) = 229165 bytes

@@ -1,8 +1,0 @@
-$NetBSD: README,v 1.1.1.1 2001/07/16 17:04:02 cjones Exp $
-
-Here are a couple of example config files.  ONE of these should be
-installed in apache's tcl_modules directory.  The nsd.tcl file will
-probably take less editing.
-
-Note that neither of these config files will actually work without
-installing OpenACS.

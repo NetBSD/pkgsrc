@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:10 wiz Exp $
-
-SHA1 (batchftp102.tar.gz) = 8d4e21719e9c1e8114e254ef7329cc192e824635
-Size (batchftp102.tar.gz) = 20507 bytes
-SHA1 (patch-aa) = c283ff8b714ace51b2723ce12d0077eb2ee5e5aa

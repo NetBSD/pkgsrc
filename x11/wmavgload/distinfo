@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2001/06/13 20:31:34 wiz Exp $
-
-SHA1 (wmavgload-0.7.0.tar.gz) = 9225ced4e799a900a18374613396b500740f13a8
-Size (wmavgload-0.7.0.tar.gz) = 11643 bytes
-SHA1 (patch-aa) = 9dce260a116de702c835047d588d2f9505c71b71
-SHA1 (patch-ab) = bc4c969344e7a64abdb4283e33dbf24c3b227b5e

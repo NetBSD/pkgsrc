@@ -1,9 +1,0 @@
-$NetBSD: patch-ai,v 1.1 2002/03/14 14:54:52 wiz Exp $
-
---- ../gcc-2.95.2/gcc/config/sparc/xm-netbsd.h.orig	Sat Sep 16 00:17:42 2000
-+++ ../gcc-2.95.2/gcc/config/sparc/xm-netbsd.h	Sat Sep 16 00:17:42 2000
-@@ -0,0 +1,4 @@
-+/* Configuration for GCC for Sun SPARC running NetBSD as host.  */
-+
-+#include <sparc/xm-sparc.h>
-+#include <xm-netbsd.h>

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/09/08 16:10:08 wiz Exp $
-
-SHA1 (vis5d+-1.2.1.tar.gz) = d99ec14fd8e6e482ab360abbd00adf36e7fd541b
-Size (vis5d+-1.2.1.tar.gz) = 2278840 bytes
-SHA1 (patch-aa) = 114ed11fbf8368554d1f57562a3423010cd155ba
-SHA1 (patch-ab) = 923d373d343ede9ec621e6514ff3ad6dcbce777b
-SHA1 (patch-ac) = 1389db298fe78372b048899a72f87bb7ffcf4e58

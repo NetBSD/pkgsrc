@@ -1,7 +1,0 @@
-If you have been led to believe that associative arrays in perl
-don't preserve order, and if you have ever craved for that feature,
-this module is for you.  Simply declare a "tie" for the hash variable
-that you want to be order-preserving, and forget that limitation
-ever existed.  You can do other nifty things with the tied hash object
-that you may be used to doing with arrays, like Push(), Pop() and
-Splice().

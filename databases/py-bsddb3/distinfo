@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/03/04 15:55:18 minskim Exp $
-
-SHA1 (bsddb3-4.2.4.tar.gz) = 8fd531d6e310c0dbae8a46c88d04671ef0feb20d
-Size (bsddb3-4.2.4.tar.gz) = 508095 bytes
-SHA1 (patch-aa) = d19ba6ae428f3e27029c0ed23694230cc0b82656

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2004/05/19 13:09:44 adam Exp $
-
-SHA1 (soup-0.7.11.tar.bz2) = 47b185b57311053eb8a30c655981b7136c228923
-Size (soup-0.7.11.tar.bz2) = 323824 bytes
-SHA1 (patch-aa) = de13b122ace8ef9a4abd2d860ca4d2e99483df74
-SHA1 (patch-ab) = 4a1ec8c278a3b1cc0343dc3edca2f7dec8d25583
-SHA1 (patch-ac) = da73ee261bd8e4247738d99210a2ed12c0315a13
-SHA1 (patch-ad) = 5d14207d9b8f6c634016f098f876c66438ebdabf
-SHA1 (patch-ae) = 9f33467fae553b666fb9890197fd7b15dde78722

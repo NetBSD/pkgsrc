@@ -1,6 +1,0 @@
-NuLib is a disk and file archive program, similar in principle to PKZIP. 
-Instead of ZIP archives, it manipulates NuFX archives, which are usually
-identified with ".SHK", ".SDK", or ".BXY".
-
-The ".SHK" file extension is derived from ShrinkIt, the de facto
-archiving standard for Apple II computers.

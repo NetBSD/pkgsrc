@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:27 jlam Exp $
-bin/mm-config
-include/mm.h
-lib/libmm.la
-man/man1/mm-config.1
-man/man3/mm.3

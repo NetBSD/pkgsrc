@@ -1,8 +1,0 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/02/29 05:57:44 uebayasi Exp $
-
---- config.h.orig	Tue Oct 23 16:22:09 2001
-+++ config.h
-@@ -1,2 +1,2 @@
- #define HAVE_QUEUE_H
--#define HAVE_VM_OFFSET_T
-+#undef HAVE_VM_OFFSET_T

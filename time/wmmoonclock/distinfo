@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/10/27 13:40:30 bouyer Exp $
-
-SHA1 (wmMoonClock-1.27.tar.gz) = bbc27a11ff99505fe4b872019f214f305cee6c5b
-Size (wmMoonClock-1.27.tar.gz) = 155197 bytes
-SHA1 (patch-aa) = 6b9d2459c7b92bee200c06f543a85ce429b8cd7b

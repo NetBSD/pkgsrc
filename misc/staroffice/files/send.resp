@@ -1,6 +1,0 @@
-POST @@@SITE@@@/servlet/EComActionServlet/ECom.WelcomePageInfo;$sessionid$@@@SESS@@@ HTTP/1.0
-Content-type: application/x-www-form-urlencoded
-Content-length: 45
-
-WelcomePageAction/form.goToRegsiter=Register
-

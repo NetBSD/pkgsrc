@@ -1,9 +1,0 @@
-  Convert::BER is a perl object class implementation to encode
-and decode objects as described by ITU-T standard X.209 (ASN.1)
-using Basic Encoding Rules (BER)
-
-  Copyright (c) 1995-7 Graham Barr <gbarr@pobox.com>.
-  All rights reserved.
-
-  This program is free software; you can redistribute it and/or
-modify it under the same terms as Perl itself.

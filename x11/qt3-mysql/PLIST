@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:10:07 jlam Exp $
-qt3/plugins/sqldrivers/libqsqlmysql.la
-@unexec ${RMDIR} %D/qt3/plugins/sqldrivers 2>/dev/null || ${TRUE}

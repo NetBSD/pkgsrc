@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/12/14 00:21:36 jschauma Exp $
-
-SHA1 (bbpager-0.3.1.tar.gz) = a0a6708e7badb62d5e8cbbac276ccdc4eb109ea4
-Size (bbpager-0.3.1.tar.gz) = 81686 bytes
-SHA1 (patch-aa) = b82d730bb85d59df9cfc916865935b6f13988bc4
-SHA1 (patch-ab) = 0086f41b642bc8770d19995302701748823386c3

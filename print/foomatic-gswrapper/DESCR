@@ -1,6 +1,0 @@
-The foomatic-gswrapper script runs Ghostscript in a more controlled and
-makes debugging much easier by letting you see Ghostscript error messsages.
-The wrapper is required if you print jobs from the Windows PostScript
-driver (which writes jobs that generate advisory output that causes trouble
-under plain Ghostscript).  Some other software may produce such jobs; the
-wrapper is probably a good idea in general.          

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/05/10 15:06:20 wiz Exp $
-
-SHA1 (so51a_lnx_01.tar) = 0ac0cb1151c44003c7f350693ed412ee917013a3
-Size (so51a_lnx_01.tar) = 70393856 bytes
-SHA1 (so51a_lnx_49.tar) = 613bac5d2384b0a86984aa2e441546d7221ee972
-Size (so51a_lnx_49.tar) = 75128320 bytes
-SHA1 (patch-aa) = cf6e07bcfe0ffdaa74d4d3c08691d3eb4bd7f09b

@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.sasl,v 1.1.1.1 2004/03/06 15:04:12 grant Exp $
-share/examples/postfix/smtpd.conf

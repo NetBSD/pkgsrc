@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/06/28 12:11:01 agc Exp $
-
-SHA1 (xldlas-0.85-source.tgz) = 84434282d0fcba0745fe6d1bfdc8baf5d7842fbd
-Size (xldlas-0.85-source.tgz) = 119146 bytes
-SHA1 (patch-aa) = bef0fed51b6081b5ff1d245695907f4853880fe4
-SHA1 (patch-ab) = 88c45901cf3095e5f86ef0f1e50832292278cf46

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/05/11 03:33:57 snj Exp $
-
-SHA1 (cim-3.30.tar.gz) = 8636ac8d1eaee793769051af60140af80b82b22f
-Size (cim-3.30.tar.gz) = 416809 bytes
-SHA1 (patch-aa) = f05149918e1a47017f9dbdcf0a3adaec6033a2b2
-SHA1 (patch-ab) = 247f63ecbcccbafa84f1ae8b97a616d24591275d

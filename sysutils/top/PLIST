@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/07/11 19:53:06 cube Exp $
-bin/top
-man/man1/top.1

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 15:05:07 skrll Exp $
-
-SHA1 (rtfm-1.0.tar.gz) = 6b31c9b36394eb7f59cc4dbff61a431107193214
-Size (rtfm-1.0.tar.gz) = 3874 bytes
-SHA1 (patch-aa) = cdcf101635badb9d416b2cf076cc7bca3948439e
-SHA1 (patch-ab) = 07e82f17359ba58beef39bc7b84254e5e4b16075

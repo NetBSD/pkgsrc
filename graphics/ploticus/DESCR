@@ -1,9 +1,0 @@
-Ploticus is a new free software package for Unix that creates graphical data
-displays for web pages and intranets, paper reports, posters, slides, or
-interactive use.  Ploticus is script-driven and can be invoked automatically
-(automated) from web servers and other programs.  Ploticus can work with flat
-ascii or spreadsheet data sets that can include numerics and text as well as
-dates and times in a wide variety of notations.  It also has built-in
-capability of computing frequency distributions, cross-tabs, medians,
-quartiles, and curve fitting.  It is the successor to IPL, a freeware plotting
-program by the same author, released in 1989.

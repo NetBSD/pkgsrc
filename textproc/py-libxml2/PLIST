@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/04 11:47:17 recht Exp $
-${PYSITELIB}/drv_libxml2.py
-${PYSITELIB}/drv_libxml2.pyc
-${PYSITELIB}/drv_libxml2.pyo
-${PYSITELIB}/libxml2.py
-${PYSITELIB}/libxml2.pyc
-${PYSITELIB}/libxml2.pyo
-${PYSITELIB}/libxml2mod.so

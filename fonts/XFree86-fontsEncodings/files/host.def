@@ -1,8 +1,0 @@
-/* $NetBSD: host.def,v 1.2 2004/03/28 22:06:15 xtraeme Exp $ */
-
-#define ProjectRoot @PREFIX@
-
-#define BuildFonts YES
-#define HasPerl NO
-#define MakeCmd @MAKE@
-#define ImakeCmd @IMAKE@

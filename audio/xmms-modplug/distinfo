@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2004/03/14 07:15:49 ben Exp $
-
-SHA1 (modplugxmms-2.05.tar.gz) = ccb307fc7490a94aad2aadb5dac4e4e96aa7892f
-Size (modplugxmms-2.05.tar.gz) = 242595 bytes
-SHA1 (patch-ac) = 894ceefe4fe405b7ca5b3a5ec824b54de4b1f117
-SHA1 (patch-ad) = 55fcd439905303d3666bf2b8676e3aeeede7ea0f
-SHA1 (patch-ae) = 5f9ba3568d9c2cdad0305624e9eeb00594e97d83

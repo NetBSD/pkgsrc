@@ -1,4 +1,0 @@
-isync is a command line utility for synchronizing a remote IMAP mailbox
-with a local maildir-style mailbox. This is useful for working in
-disconnected mode, such as on a laptop. Modifications made locally and
-remotely are synchronized so that no message status flags are lost.

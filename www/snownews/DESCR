@@ -1,3 +1,0 @@
-Snownews is a small console RSS/RDF newsreader. It will handle RSS 1.0
-feeds that comply with the W3C RDF specification, but will also support
-userland's 0.91 and 2.0 versions.

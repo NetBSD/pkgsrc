@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:26 zuntum Exp $
-bin/makeztxt
-share/doc/makeztxt/COPYING
-share/doc/makeztxt/ChangeLog
-share/doc/makeztxt/README
-@dirrm share/doc/makeztxt

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2004/03/11 13:28:37 seb Exp $
-bin/jsed
-man/man1/jsed.1
-share/doc/ja-sed/OREADME.MB
-share/doc/ja-sed/README.MB
-@dirrm share/doc/ja-sed

@@ -1,4 +1,0 @@
-BTree Folders are useful for situations where you need to store a lot of
-objects in a single folder, usually of the same type. They make use of Zope's
-optimized BTree implementation. They also provide a user interface optimized
-for a large number of objects.

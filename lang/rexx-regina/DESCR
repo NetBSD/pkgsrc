@@ -1,7 +1,0 @@
-Regina is a Rexx interpreter that has been ported to most Unix
-platforms and also to OS/2, eCS, DOS, Win9x/Me/NT/2k/XP, Amiga, QNX,
-BeOS, MacOS X, EPOC32, AtheOS, OpenVMS and OpenEdition.  Rexx is a
-programming language that was designed to be easy to use for
-inexperienced programmers yet powerful enough for experienced users.
-It is also a language ideally suited as a macro language for other
-applications.

@@ -1,9 +1,0 @@
-Pavel occasionally extracts a useful subset of the LambdaMOO (the site)
-database, which can then be fetched by others and used to start a new
-server running LambdaMOO (the software). This starting database is
-called "LambdaCore". (Often people on LambdaMOO and other MOOs will
-refer to this part of the database as simply "the core".) It includes
-utility objects for manipulating strings and other data, generic
-classes for users and rooms and so on, objects that provide access to
-Gopher and other Internet services, a mail/newsgroup system, an
-extensive help system, and, well, generally a lot of stuff.

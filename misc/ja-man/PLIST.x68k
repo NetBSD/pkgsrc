@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST.x68k,v 1.1.1.1 2002/05/31 13:01:23 seb Exp $
-man/${JAMANDIR}/cat1/loadfont.cat1
-man/${JAMANDIR}/cat1/loadkmap.cat1
-man/${JAMANDIR}/cat1/palette.cat1
-man/${JAMANDIR}/cat1/tvctrl.cat1
-man/${JAMANDIR}/man1/loadfont.1
-man/${JAMANDIR}/man1/loadkmap.1
-man/${JAMANDIR}/man1/palette.1
-man/${JAMANDIR}/man1/tvctrl.1

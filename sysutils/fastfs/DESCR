@@ -1,3 +1,0 @@
-fastfs turns on/off delayed I/O on a filesystem. It is intended for
-use with restore(8) to speed up full filesystem restores as much as
-500%.

@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/08/14 13:29:56 dmcmahill Exp $
-
-To use, add the following to your .octaverc:
-
-  LOADPATH = [ '${OCT_LOCALVEROCTFILEDIR}/octave-forge:${OCT_LOCALVERFCNFILEDIR}/octave-forge//:', LOADPATH ];
-  EXEC_PATH = [ '${OCT_LOCALVERARCHLIBDIR}:', EXEC_PATH ];
-
-===========================================================================

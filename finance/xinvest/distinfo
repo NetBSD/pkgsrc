@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/10/08 12:33:23 jlam Exp $
-
-SHA1 (xinvest-2.6.tar.gz) = 6593e1ba8025f17032c8bf3227aad7588a364cd4
-Size (xinvest-2.6.tar.gz) = 262494 bytes
-SHA1 (patch-aa) = c3a26cb5779886112af31661934698cd76979e79
-SHA1 (patch-ab) = 7a1709d68a91e2983c73cd565b24467244e6c4ab

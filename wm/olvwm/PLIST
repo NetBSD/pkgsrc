@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 03:32:34 jschauma Exp $
-bin/olvwm
-lib/help/olvwm.info
-${IMAKE_MAN_DIR}/olvwm.${IMAKE_MANNEWSUFFIX}
-${IMAKE_FILEMAN_DIR}/olvwmrc.${IMAKE_MANNEWSUFFIX}

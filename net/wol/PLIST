@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.6 2004/03/09 16:07:32 seb Exp $
-bin/wol
-bin/wol-bootptab
-bin/wol-dhcpdconf
-man/man1/wol.1
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/wol.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/wol.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/wol.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/wol.mo

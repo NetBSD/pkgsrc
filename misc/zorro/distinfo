@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:52:22 agc Exp $
-
-SHA1 (zorro-1.1p8.tar.gz) = 216c1b1c3c652791f89661c92abb39059d5086ce
-Size (zorro-1.1p8.tar.gz) = 14672 bytes
-SHA1 (patch-aa) = 4424f317aeaa08e359544471ef7c716ebf7685ab
-SHA1 (patch-ab) = 426b97beb92837f8f1c63ae7c0b6937cfd75ff93

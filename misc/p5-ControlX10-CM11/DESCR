@@ -1,7 +1,0 @@
-The CM11A is a bi-directional X10 controller that connects to a serial
-port and transmits commands via AC power line to X10 devices. This
-module translates human-readable commands (eg. 'A2', 'AJ') into the
-Interface Communication Protocol accepted by the CM11A. Both the send
-(control output) and receive (monitor external events and status)
-operations are supported by the module. The module also handles
-checksums and retries failed transmissions.

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/07/22 18:02:10 kristerw Exp $
-
-SHA1 (mu-conference-0.6.0.tar.gz) = cc81619378a86c6c449c4122586c353102d4876e
-Size (mu-conference-0.6.0.tar.gz) = 56272 bytes
-SHA1 (jcr-0.1.2.tar.gz) = 057c4e2fb13148a105c8631cea211bdb9c28115b
-Size (jcr-0.1.2.tar.gz) = 147439 bytes
-SHA1 (patch-aa) = 51cafdb9f8f8696788b82e506c297a0d8545f8eb
-SHA1 (patch-ab) = 9cd1511636302e71106199fc08497a300b03bc28

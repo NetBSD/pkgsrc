@@ -1,6 +1,0 @@
-An improved whois client which attempts to find the correct
-server. If it can't guess, then it will default to whois.arin.net
-for IPv4 addresses, whois.6bone.net for IPv6 addresses, and
-whois.networksolutions.com for domains.
-
-This whois is written by Marco d'Itri.

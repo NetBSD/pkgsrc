@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/02/11 18:34:18 ben Exp $
-
-SHA1 (zsnes136src.tar.gz) = 40c053ac022c098bac5f7acc8413a464a1c7690d
-Size (zsnes136src.tar.gz) = 901081 bytes
-SHA1 (patch-ab) = 571dd1af70c06f1747a213c3d5326eff76049247
-SHA1 (patch-ac) = 2573d074daac09b2cfc1369e86fe688f777ca1e6
-SHA1 (patch-ad) = 8bbecedccc5a85dfe7d843f9de75a9498195eed6

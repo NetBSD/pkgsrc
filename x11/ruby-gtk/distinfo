@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2001/12/16 08:18:18 jmc Exp $
-
-SHA1 (ruby/ruby-gtk-0.25.tar.gz) = 8ccf112fd7c760a3bed9e9c59addb48735be22c0
-Size (ruby/ruby-gtk-0.25.tar.gz) = 257279 bytes
-SHA1 (patch-aa) = b9aa5335a9c5563b00c01559c4d047458a87339d

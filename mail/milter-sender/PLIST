@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/27 17:57:33 manu Exp $
-sbin/milter-sender
-etc/rc.d/milter-sender.sh

@@ -1,6 +1,0 @@
-Texi2roff is an unmaintained program program to convert Texinfo to troff.
-Beverly Erlebacher wrote the program and made the last release in the late
-1980's. William Bader produced a patch in 1996 adding numerous commands and
-other functionality. Alain Knaff added a translation table to generate man
-pages, and uses it to generate the manuals for mtools.  Ben Collver
-integrated William Bader's and Alain Knaff's changes and made minor cleanups.

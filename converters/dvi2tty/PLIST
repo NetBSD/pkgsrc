@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:50:50 zuntum Exp $
-bin/disdvi
-bin/dvi2tty
-man/man1/dvi2tty.1

@@ -1,5 +1,0 @@
-The BuDDy Binary Decision Diagrams (BDD) library presented here was made
-as part of a ph.d. project on model checking of finite state machines.
-The library has evolved from a simple introduction to BDDs to a full blown
-BDD package with all the standard BDD operations, reordering and a wealth
-of documentation.

@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.46 2004/11/02 22:24:35 wiz Exp $
+# $NetBSD: tools.mk,v 1.46.2.1 2004/11/22 22:48:05 tv Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -17,13 +17,9 @@ PREPEND_PATH+=	${TOOLS_DIR}/bin
 TOOLS_SHELL?=		${SH}
 _TOOLS_WRAP_LOG=	${WRKLOG}
 
-.PHONY: do-tools
-.if !target(do-tools)
+.PHONY: do-tools override-tools
 do-tools: override-tools
-.endif
-
-.PHONY: override-tools
-override-tools: # empty
+override-tools: .OPTIONAL
 
 # Create shell scripts in ${TOOLS_DIR}/bin that simply return an error
 # status for each of the GNU auto* tools, which should cause GNU configure
@@ -125,8 +121,6 @@ _TOOLS=		awk grep lex m4 make patch sed yacc
 
 .if defined(_IGNORE_USE_GNU_TOOLS)
 USE_GNU_TOOLS:=		# empty
-.else
-USE_GNU_TOOLS?=		# empty
 .endif
 
 # These platforms already have GNU versions of the tools in the base

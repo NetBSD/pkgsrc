@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/03 21:51:54 cube Exp $
-
-SHA1 (jpeginfo-1.6.0.tar.gz) = 198814d72020c967272b36c6b64711b66cdf6e01
-Size (jpeginfo-1.6.0.tar.gz) = 64772 bytes
-SHA1 (patch-aa) = 8f0aed5432a5f41eaba0090cbee17aeb3b7bc5b2

@@ -1,6 +1,0 @@
-gnome2-session provides the following components:
-* The GNOME session manager.
-* The GNOME session manager configuration program and several other
-  session management related utilities. 
-* The GNOME session manager proxy, which handles basic session
-  management for applications that do not support XSM.

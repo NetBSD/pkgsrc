@@ -1,7 +1,0 @@
-  MailServ provides a World Wide Web interface to several types of mailing
-list servers.  Users can select commands, enter information, and press
-buttons to send email commands to the mail server.
-
-  MailServ does not provide the actual mailing list services (you'll need
-to have an existing mailing list management program to do that), but what
-do you expect -- MailServ is free!

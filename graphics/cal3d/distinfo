@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/10 09:14:34 garbled Exp $
-
-SHA1 (cal3d-0.9.1.tar.bz2) = 2e0765caddc972f05f70d3a255862ced1276e039
-Size (cal3d-0.9.1.tar.bz2) = 2871094 bytes
-SHA1 (patch-aa) = dc308a6e7d0322a354b502d3ca6e9a01e497fa78
-SHA1 (patch-ab) = ad981dda0675e4fd83b0550a81d107bbffb73607
-SHA1 (patch-ac) = 079f524fa683faea92e44ce9f4d437cbd4b6051a
-SHA1 (patch-ad) = 9c016c70610c4846c085c33ad6eabafed6385f0a
-SHA1 (patch-ae) = c4be228afe745be9e97896e99cdaa9a5d1b03882

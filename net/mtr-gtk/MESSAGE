@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/05/06 17:42:12 jmmv Exp $
-
-	${PREFIX}/sbin/mtr-gtk is setuid "root".
-
-        Please read about potential security issues in
-		${PREFIX}/share/doc/mtr-gtk/SECURITY
-
-===========================================================================

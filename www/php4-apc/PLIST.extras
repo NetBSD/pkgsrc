@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.extras,v 1.2 2004/11/02 20:08:15 jdolecek Exp $
-share/doc/${PKGBASE}/INSTALL
-share/doc/${PKGBASE}/LICENSE
-share/doc/${PKGBASE}/NOTICE
-@dirrm share/doc/${PKGBASE}

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:24:50 zuntum Exp $
-bin/fiz
-bin/zoo
-man/man1/fiz.1.gz
-man/man1/zoo.1.gz

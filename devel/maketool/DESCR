@@ -1,4 +1,0 @@
-Maketool is a simple GTK based GUI front end for GNU make.
-Figures out what targets are available and presents them in a menu.
-Runs make and detects compiler errors in the output, allowing you
-to click on the errors to edit the corresponding source.

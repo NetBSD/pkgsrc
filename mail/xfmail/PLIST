@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:01:46 zuntum Exp $
-bin/xfmail
-man/man1/xfmail.1
-share/doc/xfmail/Copyright
-@dirrm share/doc/xfmail

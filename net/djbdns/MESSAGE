@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2004/09/01 20:07:35 schmonz Exp $
-
-If you plan to run dnscache, tinydns, or axfrdns services, consider
-installing the djbdns-run package.
-
-===========================================================================

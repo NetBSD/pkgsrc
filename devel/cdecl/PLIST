@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:40 zuntum Exp $
-bin/cdecl
-bin/c++decl
-man/man1/cdecl.1
-man/man1/c++decl.1
-share/examples/cdecl/testset
-share/examples/cdecl/testset++
-@dirrm share/examples/cdecl

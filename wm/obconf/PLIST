@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/13 21:10:21 xtraeme Exp $
-bin/obconf
-share/applications/obconf.desktop
-share/obconf/obconf.glade
-@dirrm share/obconf
-@comment in gnome2-dirs: @dirrm share/applications

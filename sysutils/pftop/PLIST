@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/05 15:08:33 peter Exp $
-sbin/pftop
-man/man8/pftop.8

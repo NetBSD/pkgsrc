@@ -1,8 +1,0 @@
-Simulators for MMIX, a RISC machine designed by Professor Donald Knuth
-to replace MIX in the ultimate editions of his monumental opus
-``The Art of Computer Programming''.
-
-The programs are described in
-
-  MMIXware by Donald E. Knuth
-  Lecture Notes in Computer Science 1750 (Springer Verlag, Heidelberg, 1999).

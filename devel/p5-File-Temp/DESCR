@@ -1,9 +1,0 @@
-File::Temp - provides functions for generating temporary files
-
-This module can be used to generate temporary files (providing a filename
-and filehandle) or directories.
-Possible race conditions are avoided and some security checks are performed
-(eg making sure the sticky bit is set on world writeable temp directories).
-
-It could be considered to be in a beta state since it has only been
-tested on six operating systems.

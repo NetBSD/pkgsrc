@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2004/02/13 17:39:55 jschauma Exp $
-@exec ${LN} -s %D/${ACROREAD}/Browsers/${PLATFORM}/nppdf.so %D/lib/netscape/netscape7/plugins/nppdf.so
-lib/netscape/netscape7/plugins/nppdf.so

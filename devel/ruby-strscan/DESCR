@@ -1,4 +1,0 @@
-StrScanner is a fast string scanner class for Ruby.  It is very useful
-in writing a parser.
-
-Author:	Minero Aoki <aamine@dp.u-netsurf.ne.jp>

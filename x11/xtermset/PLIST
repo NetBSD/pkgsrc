@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/08 11:45:48 hubertf Exp $
-bin/xtermset
-man/man1/xtermset.1
-man/man5/terms.5
-share/xtermset/terms

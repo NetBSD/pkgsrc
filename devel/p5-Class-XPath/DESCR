@@ -1,5 +1,0 @@
-Class::XPath is a Perl module which adds XPath-style matching to
-your object trees. This means that you can find nodes using an
-XPath-esque query with match() from anywhere in the tree. Also,
-the xpath() method returns a unique path to a given node which can
-be used as an identifier.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/05/08 01:28:36 reed Exp $
-
-SHA1 (ed-0.2.tar.gz) = abb61231a3baeb988b145ffe97cdbaea8f651d93
-Size (ed-0.2.tar.gz) = 185913 bytes
-SHA1 (patch-aa) = 21e217b85b6f52d07df9ae7127aba94857c9633e
-SHA1 (patch-ab) = a7084f14042de9e582b6be15d48e412cd5e22339

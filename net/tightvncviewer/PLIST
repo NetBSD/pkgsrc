@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2003/03/03 02:56:00 jschauma Exp $
-bin/vncviewer
-lib/X11/app-defaults/Vncviewer
-${IMAKE_MAN_DIR}/vncviewer.${IMAKE_MANNEWSUFFIX}
-share/doc/vncviewer/README
-@dirrm share/doc/vncviewer

@@ -1,7 +1,0 @@
-GOCR is an optical character recognition program, released under the GNU 
-General Public License. It reads images in many formats (pnm, pbm, pgm, ppm, 
-some pcx and tga image files (or PNM from stdin); if PNM-tools installed and
-running linux-like system you can also use pnm.gz, pnm.bz2, png, jpg, tiff,
-gif, bmp and others) and outputs a text file. You do not have to train the
-program or store large font bases. Simply call gocr from the command line
-and get your results.

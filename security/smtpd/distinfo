@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/02/08 14:27:35 grant Exp $
-
-SHA1 (smtpd-2.0.tar.gz) = 7c619e01a1e7b1baa23435159ba67894d5550188
-Size (smtpd-2.0.tar.gz) = 62605 bytes
-SHA1 (patch-smtpd-2.0-RBL.gz) = 180bfcca83cb5e0523cf5d983083ed83bacdde7f
-Size (patch-smtpd-2.0-RBL.gz) = 3829 bytes
-SHA1 (patch-aa) = 937e7d97d9060b848328b6cc084378f9cb334a00
-SHA1 (patch-ab) = 717ffbe58c771967ef2ce6a1ea56003535929ccf

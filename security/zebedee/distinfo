@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/03/20 15:16:30 taca Exp $
-
-SHA1 (zebedee-2.3.1.tar.gz) = c0b7b753adc94a6ff123ea5663f4398f9c2a95d7
-Size (zebedee-2.3.1.tar.gz) = 149856 bytes
-SHA1 (patch-aa) = 95006d7f7ad1246270a480f609dc98ffbd2f34c7
-SHA1 (patch-ab) = 8fb781f2c6fe5807a196ceb2f0f0eb0a09053288

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.30 2004/11/22 13:31:46 adam Exp $
-
-SHA1 (abiword-2.0.14.tar.bz2) = 1ecbf566da6fda5af401e8025ffe2a6c3092f9d9
-Size (abiword-2.0.14.tar.bz2) = 22587062 bytes
-SHA1 (patch-aa) = a35ff56401929065244d2018003537d7fb1f6ea8
-SHA1 (patch-ab) = 27c48de3374288c7f6d6749ff18ebeedf91cb3ab
-SHA1 (patch-ac) = a8ba221c53832a3cab97f23b0cb07f94cd351f56
-SHA1 (patch-ad) = 15b34ebdfde5bf94360ad11ad3693843bd509030

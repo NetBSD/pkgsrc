@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/10/18 21:10:03 jlam Exp $
-
-SHA1 (javadeps-1.1.zip) = 7ded1f1a0ec5d8bc7c1c6cf78f252cffc22025fb
-Size (javadeps-1.1.zip) = 146544 bytes
-SHA1 (patch-aa) = ed9df1b28acd53f188af85a16bdeda980fb629ba

@@ -1,9 +1,0 @@
-$NetBSD: patch-aj,v 1.1.1.1 2004/01/26 13:34:46 jmmv Exp $
-
---- Lib/shape.cc.orig	Wed Jun  7 19:11:08 2000
-+++ Lib/shape.cc
-@@ -24,2 +24,4 @@
- 
-+#include <math.h>
-+
- #ifdef RCSID

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/05/21 05:27:59 tron Exp $
-
-SHA1 (gtkglarea-1.2.2.tar.gz) = acb8bc15b4ae64f579d72433b9a281134d061e40
-Size (gtkglarea-1.2.2.tar.gz) = 173949 bytes
-SHA1 (patch-aa) = 5c0e4542c291035943758d040136cc5abb8b1f2c

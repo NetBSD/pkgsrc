@@ -1,4 +1,0 @@
-Portable C source code to support platforms not covered by
-iButton-TMEX. Example implementations include Linux, BeOS and
-Win32 for the serial port adapter DS9097U utilizing the
-DS2480 Serial 1-Wire Line Driver.

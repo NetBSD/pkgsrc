@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2001/12/19 10:16:37 tron Exp $
-
-SHA1 (xcolors.tar.gz) = 5be585937c0a5076175635bd68366a0d2438c798
-Size (xcolors.tar.gz) = 6309 bytes
-SHA1 (patch-aa) = ef21290248d2747e50ecb065a55b7a82d2959d48

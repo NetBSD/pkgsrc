@@ -1,8 +1,0 @@
-# $NetBSD: Setup.in,v 1.2 2000/10/22 20:01:52 tsarna Exp $
-#
-*shared*
-_curses _cursesmodule.c -DHAVE_NCURSES_H -I@LOCALBASE@/include \
-	-L@LOCALBASE@/lib -R@LOCALBASE@/lib -lncurses
-#
-# NetBSD curses (doesn't work):
-# _curses _cursesmodule.c -lcurses

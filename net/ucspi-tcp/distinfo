@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2001/10/22 13:51:06 zuntum Exp $
-
-SHA1 (ucspi-tcp-0.88.tar.gz) = 793b4189795b563085602c030dd8aa0d206ddc0e
-Size (ucspi-tcp-0.88.tar.gz) = 53019 bytes
-SHA1 (ucspi-tcp-0.88-man-20010502.tar.gz) = 8a96957788202b546166fcbbd6aec0511fc4796d
-Size (ucspi-tcp-0.88-man-20010502.tar.gz) = 7593 bytes

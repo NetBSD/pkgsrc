@@ -1,8 +1,0 @@
-This is an extension of the HTTP::Request suite. It allows easy
-processing of forms in a user agent by filling out fields,
-querying fields, selections and buttons and pressing buttons. It
-uses HTML::TreeBuilder generated parse trees of documents
-(especially the forms parts extracted with extract_links) and
-generates its own internal representation of forms from which
-it then generates the request objects to process the form
-application.

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2002/03/19 16:28:32 itojun Exp $
-bin/vicq
-man/man1/vicq.1
-share/examples/vicq/vicqrc.example
-@dirrm share/examples/vicq

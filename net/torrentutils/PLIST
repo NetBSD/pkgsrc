@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/04 15:47:34 wiz Exp $
-bin/torrenttool
-bin/defrag
-man/man1/torrenttool.1
-man/man1/defrag.1

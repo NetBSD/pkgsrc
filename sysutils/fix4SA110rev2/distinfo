@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/07/31 09:17:45 abs Exp $
-
-SHA1 (fix4SA110rev2.c) = c7043743e482087322b4dce346649af5b221ae36
-Size (fix4SA110rev2.c) = 8170 bytes
-SHA1 (fix4SA110rev2.README) = 7ffd9c6dc9c311c4cc47d7544fb2e89961108f3a
-Size (fix4SA110rev2.README) = 2724 bytes
-SHA1 (patch-aa) = c07eff77ea24c1f3b0d3b7bc13a8e7825075e4ae

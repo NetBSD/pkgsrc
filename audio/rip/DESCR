@@ -1,4 +1,0 @@
-rip is a wrapper for rippers and encoders which provides a common
-interface for ripping any CD audio track and encoding it into
-MP3, Ogg Vorbis, or FLAC. Manual and CDDB based renaming schemes
-are available for naming and tagging your ripped tracks.

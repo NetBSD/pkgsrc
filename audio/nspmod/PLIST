@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:37 zuntum Exp $
-bin/nspmod
-man/man1/nspmod.1

@@ -1,5 +1,0 @@
-Argus is a system and network monitoring application. It will monitor
-anything you ask it to monitor (TCP + UDP applications, IP connectivity,
-SNMP OIDS, Programs, Databases, etc), presents a nice clean, easy to view
-web interface, it can send alerts numerous ways (such as via pager) and
-can automatically escalate if someone falls asleep.

@@ -1,7 +1,0 @@
-RATS, the Rough Auditing Tool for Security, is a security auditing utility
-for C and C++ code. RATS scans source code, finding potentially dangerous
-function calls.
-The goal of this project is not to definitively find bugs (yet).
-The current goal is to provide a reasonable starting point for performing
-manual security audits.
-RATS is released under version 2 of the GNU Public License (GPL).

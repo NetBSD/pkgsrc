@@ -1,7 +1,0 @@
-xmms-mad is an input plugin for xmms that uses libmad to decode MPEG
-layer 1/2/3 file and streams. Current featured include:
-	local mp3 file playback
-	shoutchast/icecast stream playback
-	seeking
-	ID3 tag parsing
-	http header parsing

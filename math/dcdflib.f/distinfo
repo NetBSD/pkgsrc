@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 08:45:39 agc Exp $
-
-SHA1 (dcdflib.f-1.1.tar.gz) = 9b5d730a9f8ac46bb3e1b202c91c444382316dbb
-Size (dcdflib.f-1.1.tar.gz) = 62269 bytes
-SHA1 (patch-aa) = c27575c82fcefa55df6d75449f4b112d7e3cdbe8
-SHA1 (patch-ab) = 45f4ccf4192da712a5cd8c64b37e3638e9fa6a7a

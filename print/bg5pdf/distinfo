@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/07/12 20:13:39 wiz Exp $
-
-SHA1 (bg5pdf-1.0.0.tar.gz) = f050a1995c0a40f0578dffb04055bab6195b032e
-Size (bg5pdf-1.0.0.tar.gz) = 55208 bytes
-SHA1 (patch-aa) = 20c5b83cf1ee0b6ba2514a00b0a307ca93a99aa9

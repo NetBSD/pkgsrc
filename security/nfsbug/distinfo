@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/02/22 19:30:52 jlam Exp $
-
-SHA1 (nfsBugFerret.tgz) = 6b0b2d25fadd3156cf0f8851d72b6d6070dc528c
-Size (nfsBugFerret.tgz) = 12446 bytes
-SHA1 (nfsShell.c) = 195b76e2faa069e607c6a8991c835f5482f0911f
-Size (nfsShell.c) = 47258 bytes
-SHA1 (patch-aa) = b28b48831632d2ffe8e103589c9fbf5b3e840d02
-SHA1 (patch-ab) = 92908f57337c9fd2857720f14027f426809c669a
-SHA1 (patch-ac) = fcf34bf55208f49215a219801b2be5c4ef55eded

@@ -1,7 +1,0 @@
-colorize is a log colorize perl script, with some ugly functions:
- * Many known log format (including: daemon [classic log format],
-   squid [and oops], apache [access, error], xferlog, exim, and more)
- * Extreme regexp matches (email, url, size, address, version, file etc.)
- * Some usefull matches (user, service, protocol)
- * Theme support (with multiple config files)
- * HTML output support (with valid HTML and CSS code)

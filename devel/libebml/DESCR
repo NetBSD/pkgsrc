@@ -1,4 +1,0 @@
-EBML, or Extensible Binary Meta-Language, is a simple XML like binary
-language for describing data in structured style. EBML was originally
-designed for use in the Matroska project, but the developers saw that
-EBML was very flexible and extensible.

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/01/19 11:06:19 grant Exp $
-
-SHA1 (ScrollZ-1.9.tar.gz) = 8f6325fbf90df6e7116dae6326e533000a6f897a
-Size (ScrollZ-1.9.tar.gz) = 881624 bytes
-SHA1 (patch-aa) = cc294dd91f1f383e8ee4d5b75b71e02ff4d8d774

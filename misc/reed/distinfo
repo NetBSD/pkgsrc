@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/11/09 13:37:19 wiz Exp $
-
-SHA1 (reed-5.4.tar.gz) = e8c43add662576590597c8989e06011a3e80e93f
-Size (reed-5.4.tar.gz) = 32414 bytes
-SHA1 (patch-aa) = b35a3066d11e8926834f492c425652c59fef1335

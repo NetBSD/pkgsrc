@@ -1,4 +1,0 @@
-qsubst reads its options to get a list of files.  For each file on this
-list, it then replaces the first string with the second string wherever
-possible in that file, depending on user input.  The result is written
-back onto the original file.

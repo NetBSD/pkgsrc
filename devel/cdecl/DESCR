@@ -1,5 +1,0 @@
-Cdecl is a program which will turn English-like phrases such as "declare
-foo as array 5 of pointer to function returning int" into C declarations
-such as "int (*foo[5])()".  It can also translate the C into the pseudo-
-English.  And it handles typecasts, too.  Plus C++.  And in this version
-it has command line editing and history with the GNU readline library.

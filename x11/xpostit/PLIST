@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 04:17:29 jschauma Exp $
-bin/xpostit
-${IMAKE_MAN_DIR}/xpostit.${IMAKE_MANNEWSUFFIX}
-lib/X11/app-defaults/XPostit
-lib/X11/app-defaults/XPostit-color

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:21 zuntum Exp $
-bin/hfssh
-bin/hfs
-bin/xhfs
-man/man1/hfssh.1
-man/man1/hfs.1
-man/man1/xhfs.1

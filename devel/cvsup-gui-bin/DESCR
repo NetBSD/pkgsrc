@@ -1,5 +1,0 @@
-cvsup GUI client only. Grab the cvsup package for non-GUI client,
-server and documentation.
-
-The binary is for NetBSD 1.5/i386/ELF systems, and compiled by
-Markus Kurek <Markus.Kurek@t-online.de>.

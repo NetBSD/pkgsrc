@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/09/17 08:16:46 jlam Exp $
-bin/bon_csv2html
-bin/bon_csv2txt
-man/man1/bon_csv2html.1
-man/man1/bon_csv2txt.1
-man/man8/bonnie++.8
-man/man8/zcav.8
-sbin/bonnie++
-sbin/zcav

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/05/07 01:50:15 danw Exp $
-
-SHA1 (hptools-src-3.0.8.tar.gz) = a0e8b934eeb2f83d858c4aa67d52779d69e51608
-Size (hptools-src-3.0.8.tar.gz) = 438065 bytes
-SHA1 (patch-aa) = e311d10f2c10a08c03aab93891ea7dbe9924f763
-SHA1 (patch-ab) = 1ce7fbb60a1f6ab4877c0298a72596cb773b23e4
-SHA1 (patch-ac) = e1a7e026ab75df83601da555d350a03e05622a60
-SHA1 (patch-ad) = 65e49a4c80080731ef19fbe8fb6542f93c3ffd79
-SHA1 (patch-ae) = 8b57a5c56cde0dd7e777e1a77cc938894e0d92f9

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 18:40:33 xtraeme Exp $
-man/man8/postal-list.8
-man/man8/postal.8
-man/man8/rabid.8
-sbin/postal
-sbin/postal-list
-sbin/rabid

@@ -1,6 +1,0 @@
-Theora is Xiph.Org's first publicly released video codec, intended for
-use within the Ogg's project's Ogg multimedia streaming system.  Theora
-is derived directly from On2's VP3 codec; currently the two are nearly
-identical, varying only in encapsulating decoder tables in the bitstream
-headers, but Theora will make use of this extra freedom in the future to
-improve over what is possible with VP3.

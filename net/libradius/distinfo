@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/11/10 08:46:51 xtraeme Exp $
-
-SHA1 (libradius-linux-20040827.tar.gz) = 27abd1390d16befe290ded70579bfdda8fabe68f
-Size (libradius-linux-20040827.tar.gz) = 15791 bytes
-SHA1 (patch-aa) = 8f28804cf1c92ae230663392cd2ad0258404d665

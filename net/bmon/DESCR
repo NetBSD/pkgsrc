@@ -1,7 +1,0 @@
-Bmon is an interface bandwidth monitor.  It is able to generate and
-draw three types of diagrams: The overview diagram which is a list of
-all interfaces and their send/receive rates.  A very MRTG like
-graphical diagram in ASCII showing the rate over a specific time
-period in a bar diagram.  The details diagram which contains all
-counters of an interface such as total bytes sent/received, errors,
-compressed packets and so on.

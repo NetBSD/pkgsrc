@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/11 00:08:11 rh Exp $
-share/GNUstep/System/Library/Bundles/SSL.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Bundles/SSL.bundle/SSL
-share/GNUstep/System/Library/Bundles/SSL.bundle/stamp.make
-@dirrm share/GNUstep/System/Library/Bundles/SSL.bundle/Resources
-@dirrm share/GNUstep/System/Library/Bundles/SSL.bundle

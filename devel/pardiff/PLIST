@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:25:45 zuntum Exp $
-bin/diffp
-bin/pardiff
-man/man1/diffp.1
-man/man1/pardiff.1

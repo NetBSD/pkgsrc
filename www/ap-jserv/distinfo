@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/01/14 15:19:46 jwise Exp $
-
-SHA1 (ApacheJServ-1.1.2.tar.gz) = 0e1618a40785a6f34669b6b2ef6958b868f3e891
-Size (ApacheJServ-1.1.2.tar.gz) = 770638 bytes
-SHA1 (patch-aa) = 41e03fd458430e000629c5af29dcd42a1e366f2b
-SHA1 (patch-ab) = bd1de609f0ef106718718d3437151354c628e2ce
-SHA1 (patch-ac) = 8beb08182fdd3ae6fa35726479f4a23025a5a958
-SHA1 (patch-ad) = 6fafae8e5ac3333967d4d5a6e63905c99f27362a

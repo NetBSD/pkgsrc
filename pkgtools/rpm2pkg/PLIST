@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:19:10 zuntum Exp $
-sbin/rpm2pkg
-man/man8/rpm2pkg.8

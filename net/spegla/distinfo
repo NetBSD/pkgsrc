@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2004/09/16 20:14:05 minskim Exp $
-
-SHA1 (spegla-1.1.tar.gz) = 97829070f201a7be6b3a71bd62b761c8d5c903b0
-Size (spegla-1.1.tar.gz) = 91450 bytes
-SHA1 (patch-aa) = 3a928ae8ee490b56dd572a1bf9428e50e163a797
-SHA1 (patch-ab) = 4423d6943f625c806a4321684f0a332269f58908

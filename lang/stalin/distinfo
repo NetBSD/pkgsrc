@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2001/06/25 17:49:32 jtb Exp $
-
-SHA1 (stalin-0.9.tgz) = e2f98792fcfb582d031b480bc9fe4b800681ddd5
-Size (stalin-0.9.tgz) = 12652154 bytes
-SHA1 (patch-aa) = dd9f3fcd1d38fc64a22a79049a55c472444435ae
-SHA1 (patch-ab) = 2fde348b86616e2d790c687be55038e420e920bf
-SHA1 (patch-ac) = a8db35d48e30c0fc309c9d854115d17cfd42fab6
-SHA1 (patch-ad) = f07e6f35f1bf5b0eb116dd8f9b589ca86eb99d71
-SHA1 (patch-ae) = e64ded48229b6b6ac2d23a1572423b1583cceeef
