@@ -1,0 +1,25 @@
+--- port.C.orig	Mon Oct 27 09:29:35 1997
++++ port.C	Sun Aug 23 21:11:00 1998
+@@ -30,6 +30,10 @@
+   #endif
+ #elif defined(FREEBSD)
+ #include <machine/cpufunc.h>
++#elif defined(NETBSD)
++#include <sys/types.h>
++#include <machine/sysarch.h>
++#include <machine/pio.h>	/* XXX x86-specific */
+ #elif defined(BSDI)
+ #include <machine/inline.h>
+ #elif defined(LYNX)
+@@ -60,6 +64,11 @@
+ #elif defined(FREEBSD)
+   if ((devio = fopen("/dev/io", "r+")) == NULL) {
+     perror("fopen /dev/io");
++    return;
++  }
++#elif defined(NETBSD)
++  if (i386_iopl(3) != 0) {
++    perror("i386_iopl");
+     return;
+   }
+ #elif defined(LYNX)
