@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 1999/04/26 19:25:05 garbled Exp $
+# $NetBSD: Makefile,v 1.37 1999/07/18 21:54:17 tron Exp $
 #
 
 DISTNAME=	ghostscript-5.50
@@ -10,6 +10,11 @@ MASTER_SITES=	ftp://ftp.cs.wisc.edu/ghost/aladdin/gs550/ \
 DISTFILES=	${GS_SOURCES} ${GS_FONTS_STD} ${GS_FONTS_OTHER} \
 		${HP850_DRV} ${PDF_SEC}
 
+PATCH_SITES=	http://www.cs.wisc.edu/~ghost/aladdin/relnotes/gs550/
+PATCHFILES=	990524.txt 990220c.txt 990220b.txt 990220a.txt 990220.txt \
+		990120a.txt 990120.txt 990117.txt 990115a.txt 981222.txt \
+		981221.txt 981220.txt
+
 MAINTAINER=	explorer@netbsd.org
 HOMEPAGE=	http://www.cs.wisc.edu/~ghost/index.html
 
@@ -20,6 +25,7 @@ DEPENDS=	png-1.0.3:../../graphics/png
 .include "../../mk/bsd.prefs.mk"
 
 USE_X11=	yes
+DIST_SUBDIR=	${DISTNAME:C/-.*$//}
 EXTRACT_ONLY=	${GS_SOURCES}
 WRKSRC=		${WRKDIR}/gs5.50
 MAKEFILE=	unix-gcc.mak
@@ -55,9 +61,16 @@ PAPERSIZE_DEF=	-DA4
 SCRIPT_SUFFIX=	.batch
 
 post-extract:
-	${LN} -s ${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ${WRKSRC}/jpeg
-	cd ${WRKSRC} && unzip -uLa ${DISTDIR}/${HP850_DRV}
-	${CP} ${DISTDIR}/${PDF_SEC} ${WRKSRC}
+	${LN} -fs ${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ${WRKSRC}/jpeg
+	cd ${WRKSRC} && unzip -uLa ${_DISTDIR}/${HP850_DRV}
+	${LN} -fs ${_DISTDIR}/${PDF_SEC} ${WRKSRC}
+
+pre-patch:
+	@${LN} -fs . ${WRKSRC}/lib
+	@${LN} -fs . ${WRKSRC}/src
+
+post-patch:
+	@${RM} -f ${WRKSRC}/lib ${WRKSRC}/src
 
 do-configure:
 	@${SETENV} WRKSRC=${WRKSRC} PREFIX=${PREFIX} \
@@ -70,9 +83,9 @@ do-build:
 pre-install:
 	@${MKDIR} ${PREFIX}/share/ghostscript ${PREFIX}/bin ${PREFIX}/man/man1
 	(cd ${PREFIX}/share/ghostscript ; \
-			${GTAR} -xzf ${DISTDIR}/${GS_FONTS_STD})
+			${GTAR} -xzf ${_DISTDIR}/${GS_FONTS_STD})
 	(cd ${PREFIX}/share/ghostscript/fonts ; \
-			${GTAR} -xzf ${DISTDIR}/${GS_FONTS_OTHER})
+			${GTAR} -xzf ${_DISTDIR}/${GS_FONTS_OTHER})
 
 post-install:
 	strip ${PREFIX}/bin/gs
