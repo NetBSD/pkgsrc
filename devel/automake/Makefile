@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2004/03/08 20:42:17 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2004/03/19 10:41:48 wiz Exp $
 #
 
 DISTNAME=	automake-1.8.3
@@ -32,7 +32,9 @@ INFO_FILES=		automake.info
 
 PERL5_REQD+=		5.5
 
-TEST_TARGET=		check
+# doesn't work because buildlink3 hides scripts
+# from autoconf too well
+#TEST_TARGET=		check
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
