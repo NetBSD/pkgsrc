@@ -1,4 +1,4 @@
-# $NetBSD: extension.buildlink.mk,v 1.1 2001/09/25 17:36:44 drochner Exp $
+# $NetBSD: extension.buildlink.mk,v 1.2 2001/10/29 05:45:09 jmc Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -75,10 +75,12 @@ IGNORE="${PKGNAME} needs dynamic loading"
 .endif
 .endif
 
+.if exists(${PYTHONBIN})
 PYINC!=	${PYTHONBIN} -c "import distutils.sysconfig; \
 	print distutils.sysconfig.get_python_inc(0, \"\")"
 PYSITELIB!=	${PYTHONBIN} -c "import distutils.sysconfig; \
 		print distutils.sysconfig.get_python_lib(0, 0, \"\")"
+.endif
 
 .if defined(PYDISTUTILSPKG)
 PYSETUP?=		setup.py
