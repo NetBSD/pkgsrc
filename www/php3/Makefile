@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/03/27 03:20:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.24 2001/04/30 03:46:34 jlam Exp $
 #
 
 DISTNAME=	php-${PHP_VERSION}
@@ -11,7 +11,7 @@ MAINTAINER=	cjs@netbsd.org
 HOMEPAGE=	http://www.php.net/
 COMMENT=	PHP3 HTML-embedded programming language with database connectivity
 
-BUILD_DEPENDS+=	perl-5.*:../../lang/perl5
+BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
 DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm
 
 .include "../../mk/bsd.prefs.mk"
