@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/11/14 21:54:13 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/11/29 17:38:54 jmmv Exp $
 bin/epiphany
 include/epiphany-1.4/epiphany/ephy-bookmarks.h
 include/epiphany-1.4/epiphany/ephy-command-manager.h
@@ -32,16 +32,16 @@ share/applications/bme.desktop
 share/applications/epiphany.desktop
 share/doc/epiphany/EphyCommandManager.html
 share/doc/epiphany/EphyEmbed.html
-share/doc/epiphany/EphyEmbedPersist.html
-share/doc/epiphany/EphyEmbedSingle.html
 share/doc/epiphany/EphyNodeDb.html
-share/doc/epiphany/EphyPermissionManager.html
 share/doc/epiphany/EphyTab.html
 share/doc/epiphany/EphyWindow.html
 share/doc/epiphany/ch01.html
 share/doc/epiphany/ch02.html
 share/doc/epiphany/epiphany-EphyEmbedFactory.html
+share/doc/epiphany/epiphany-EphyEmbedPersist.html
+share/doc/epiphany/epiphany-EphyEmbedSingle.html
 share/doc/epiphany/epiphany-EphyGlade.html
+share/doc/epiphany/epiphany-EphyPermissionManager.html
 share/doc/epiphany/epiphany-ephy-cookie-manager.html
 share/doc/epiphany/epiphany-ephy-password-manager.html
 share/doc/epiphany/epiphany-ephy-session.html
@@ -52,6 +52,7 @@ share/doc/epiphany/index.html
 share/doc/epiphany/index.sgml
 share/doc/epiphany/left.png
 share/doc/epiphany/right.png
+share/doc/epiphany/style.css
 share/doc/epiphany/up.png
 share/epiphany/art/epiphany-bookmarks.png
 share/epiphany/art/epiphany-close-tab.png
