@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.30 2003/09/16 17:21:36 grant Exp $
+# $NetBSD: pre-build,v 1.31 2003/11/20 00:02:59 hubertf Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -149,9 +149,13 @@ if [ "$CVS_USER" != "" ]; then
 	fi
 	echo Performing CVS update - this will take some time
 	su - ${CVS_USER} -c 'stty sane ; setenv CVS_RSH ssh ; cd '${USR_PKGSRC}' ; cvs -q update -Pd '"${CVS_FLAGS}"
+        if [ $? != 0 ]
+        then
+                echo CVS update not successful, aborting.
+                exit 1
+        fi
 	echo CVS update done.
 fi
-
 
 #
 # Remove old/broken distfiles and binary packages
