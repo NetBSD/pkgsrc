@@ -1,0 +1,28 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2002/06/06 14:27:03 manu Exp $
+
+Quickstart quide:
+
+0) Choose a home for emech, where the user running emech will have write 
+   permission. For instance, /var/run/emech
+
+1) cp ${PREFIX}/share/example/emech/sample.set ${PREFIX}/etc/mech.set
+
+2) vi ${PREFIX}/etc/mech.set
+-- look through the file for sections to change,  you will have to remove 
+   lines in order to get the bot to work. Check the file completely!
+
+3) genuser /var/run/emech/emech.users
+-- It seems that things work better with a DNS address in the hostmask 
+   instead of an IP address..
+
+4) cd /var/tun/emech/
+-- the user that will be running emech needs write access to this directory
+
+5) ${PREFIX}/bin/mech -f ${PREFIX}/etc/mech.set
+-- The full path to the binary is mandatory.
+
+6) See documentation in ${PREFIX}/share/example/emech/mech.help and on
+   http://www.energymech.net/docs/
+
+===========================================================================
