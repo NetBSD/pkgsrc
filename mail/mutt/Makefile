@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2000/02/09 01:12:13 tron Exp $
+# $NetBSD: Makefile,v 1.42 2000/05/09 18:09:06 tron Exp $
 
-DISTNAME=	mutt-${MUTT_VERSION}
+DISTNAME=	mutt-1.2i
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.mutt.org/pub/mutt/ \
-		ftp://ftp.gbnet.net/pub/mutt-international/ \
 		ftp://ftp.funet.fi/pub/unix/mail/mutt/ \
 		ftp://ftp.uib.no/pub/mutt/ \
 		ftp://uiarchive.cso.uiuc.edu/pub/packages/mail/mutt/
@@ -14,12 +13,17 @@ HOMEPAGE=	http://www.mutt.org/
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
 
+MIRROR_DISTFILE=no
+RESTRICTED=	"Contains PGP code"
+
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 CONFIGURE_ARGS+= --with-curses=${LOCALBASE} --with-exec-shell=/bin/ksh \
 		 --with-docdir=${PREFIX}/share/doc/mutt \
 		 --enable-pop --enable-imap
 LDFLAGS+=	-s
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/i//}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,16 +38,3 @@ DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 .endif
 
 .include "../../mk/bsd.pkg.mk"
-
-MUTT_BASE_VERSION=	1.0.1
-.if defined(MUTT_INTERNATIONAL) && ${MUTT_INTERNATIONAL} == YES
-MUTT_VERSION=		${MUTT_BASE_VERSION}i
-
-MIRROR_DISTFILE=	no
-RESTRICTED=		"Contains PGP code"
-WRKSRC=			${WRKDIR}/${DISTNAME:C/i$//}
-.else
-MUTT_VERSION=		${MUTT_BASE_VERSION}
-
-WRKSRC=			${WRKDIR}/${DISTNAME}-us
-.endif
