@@ -1,0 +1,82 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/05/06 07:23:28 sakamoto Exp $
+
+--- test/Makefile.orig	Fri Mar 26 00:26:43 1999
++++ test/Makefile	Mon Apr 26 13:52:17 1999
+@@ -48,53 +48,55 @@
+ 
+ include ../makeinclude
+ 
+-$(ALL):  ../lib/$(LIBNAME)
++CXX_:=	$(LIBTOOL) --mode=link $(CXX)
++LDLIBS:= ../src/$(LIBNAME) $(LDLIBS)
++GLDLIBS:= ../src/$(LIBNAME) $(GLDLIBS)
+ 
+-.SUFFIXES: .cxx .c .o .fl .h
++$(ALL):  ../src/$(LIBNAME)
+ 
+-.cxx:
+-	$(CXX) -I.. $(CXXFLAGS) $< -L../lib -lfltk $(LDLIBS) -o $@
++.SUFFIXES: .cxx .c .lo .fl .h
+ 
+-.cxx.o:
+-	$(CXX) -I.. $(CXXFLAGS) $< -c
++.cxx.lo:
++	$(LIBTOOL) --mode=compile $(CXX) -I.. $(CXXFLAGS) -c $<
+ 
+ .fl.cxx .fl.h:
+ 	../fluid/fluid -c $<
+ 
+ .fl:
+ 	../fluid/fluid -c $<
+-	$(CXX) -I.. $(CXXFLAGS) $@.cxx -L../lib -lfltk $(LDLIBS) -o $@
++	$(LIBTOOL) --mode=link $(CXX) -I.. $(CXXFLAGS) $@.cxx \
++		$(LIB_) $(LDLIBS) -o $@
+ 
+ # Other programs needing special "help"...
+-CubeView: CubeMain.o CubeView.o CubeViewUI.o
+-	$(CXX) -I.. $(CXXFLAGS) CubeMain.o CubeView.o CubeViewUI.o \
+-		-L../lib -lfltk $(GLDLIBS) -o $@
+-CubeMain.o: CubeViewUI.h CubeView.h
+-CubeView.o: CubeView.h
++CubeView: CubeMain.lo CubeView.lo CubeViewUI.lo
++	$(CXX_) -I.. $(CXXFLAGS) CubeMain.lo CubeView.lo CubeViewUI.lo \
++		$(GLDLIBS) -o $@
++CubeMain.lo: CubeViewUI.h CubeView.h
++CubeView.lo: CubeView.h
+ 
+ cube: cube.cxx
+-	$(CXX) -I.. $(CXXFLAGS) cube.cxx -L../lib -lfltk $(GLDLIBS) -o $@
++	$(CXX_) -I.. $(CXXFLAGS) cube.cxx $(GLDLIBS) -o $@
+ fractals: fractals.cxx
+-	$(CXX) -I.. $(CXXFLAGS) fractals.cxx -L../lib -lfltk $(GLDLIBS) -o $@
++	$(CXX_) -I.. $(CXXFLAGS) fractals.cxx $(GLDLIBS) -o $@
+ fullscreen: fullscreen.cxx
+-	$(CXX) -I.. $(CXXFLAGS) fullscreen.cxx -L../lib -lfltk $(GLDLIBS) -o $@
++	$(CXX_) -I.. $(CXXFLAGS) fullscreen.cxx $(GLDLIBS) -o $@
+ glpuzzle: glpuzzle.cxx
+-	$(CXX) -I.. $(CXXFLAGS) glpuzzle.cxx -L../lib -lfltk $(GLDLIBS) -o $@
++	$(CXX_) -I.. $(CXXFLAGS) glpuzzle.cxx $(GLDLIBS) -o $@
+ gl_overlay: gl_overlay.cxx
+-	$(CXX) -I.. $(CXXFLAGS) gl_overlay.cxx -L../lib -lfltk $(GLDLIBS) -o $@
++	$(CXX_) -I.. $(CXXFLAGS) gl_overlay.cxx $(GLDLIBS) -o $@
+ shiny: shiny.cxx shiny_panel.cxx
+-	$(CXX) -I.. $(CXXFLAGS) shiny.cxx -L../lib -lfltk $(GLDLIBS) -o $@
++	$(CXX_) -I.. $(CXXFLAGS) shiny.cxx $(GLDLIBS) -o $@
+ keyboard: keyboard.cxx keyboard_ui.cxx
+-	$(CXX) -I.. $(CXXFLAGS) keyboard.cxx -L../lib -lfltk $(LDLIBS) -o $@
++	$(CXX_) -I.. $(CXXFLAGS) keyboard.cxx $(LDLIBS) -o $@
+ mandelbrot: mandelbrot.cxx mandelbrot_ui.cxx
+-	$(CXX) -I.. $(CXXFLAGS) mandelbrot.cxx -L../lib -lfltk $(LDLIBS) -o $@
++	$(CXX_) -I.. $(CXXFLAGS) mandelbrot.cxx $(LDLIBS) -o $@
+ shape: shape.cxx
+-	$(CXX) -I.. $(CXXFLAGS) shape.cxx -L../lib -lfltk $(GLDLIBS) -o $@
++	$(CXX_) -I.. $(CXXFLAGS) shape.cxx $(GLDLIBS) -o $@
+ 
+ # If you have libjpeg installed, you might want to try this test program:
+ 
+ jpeg_image: jpeg_image.cxx
+-	$(CXX) -I.. $(CXXFLAGS) -I../../../local/jpeg-6b -L../../../local/jpeg-6b jpeg_image.cxx -L../lib -lfltk $(LDLIBS) -ljpeg -lXext -o $@
++	$(CXX_) -I.. $(CXXFLAGS) -I../../../local/jpeg-6b -L../../../local/jpeg-6b jpeg_image.cxx $(LDLIBS) -ljpeg -lXext -o $@
+ 
+ depend:
+ 	$(MAKEDEPEND) -I.. $(CXXFLAGS) $(CPPFILES) > makedepend
