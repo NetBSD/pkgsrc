@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2002/04/29 10:43:16 wiz Exp $
+$NetBSD: distinfo,v 1.4 2002/06/23 14:42:00 kent Exp $
 
 SHA1 (skill-4.1.tgz) = d4f548347c34462156276f96185afa9862621338
 Size (skill-4.1.tgz) = 45923 bytes
 SHA1 (patch-aa) = fc94b72896cb1d1023bb9a254540eb28bf5479cf
+SHA1 (patch-ab) = aad60006de98aba965a9cc5c8f0cfc6b358e5c3c

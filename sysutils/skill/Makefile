@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2002/04/29 10:43:16 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2002/06/23 14:42:00 kent Exp $
 #
 
 DISTNAME=	skill-4.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://fast.cs.utah.edu/pub/skill/
 EXTRACT_SUFX=	.tgz
