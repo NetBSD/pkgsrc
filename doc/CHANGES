@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5751 2004/04/27 11:57:45 adam Exp $
+$NetBSD: CHANGES,v 1.5752 2004/04/27 12:33:03 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2259,3 +2259,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated t1utils to 1.32 [adam 2004-04-27]
 	Updated R to 1.9.0 [markd 2004-04-27]
 	Updated TeXmacs to 1.0.3.7 [adam 2004-04-27]
+	Updated openssh to 3.8.1nb2 [markd 2004-04-27]
