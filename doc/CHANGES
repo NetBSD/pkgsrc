@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7413 2004/10/12 18:32:23 tv Exp $
+$NetBSD: CHANGES,v 1.7414 2004/10/13 07:28:19 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4626,3 +4626,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kmplayer to 0.8.3a [markd 2004-10-12]
 	Updated mp3asm to 0.1.3-1 [itohy 2004-10-12]
 	Updated gzip-base to 1.2.4b [tv 2004-10-12]
+	Updated gcalctool to 4.4.20 [jmmv 2004-10-12]
