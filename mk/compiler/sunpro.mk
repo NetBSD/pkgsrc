@@ -1,7 +1,9 @@
-# $NetBSD: sunpro.mk,v 1.19 2004/02/18 11:13:54 jlam Exp $
+# $NetBSD: sunpro.mk,v 1.20 2004/02/18 13:32:38 jlam Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
-COMPILER_SUNPRO_MK=	one
+COMPILER_SUNPRO_MK=	defined
+
+.include "../../mk/bsd.prefs.mk"
 
 SUNWSPROBASE?=	/opt/SUNWspro
 
@@ -11,54 +13,43 @@ SUNWSPROBASE?=	/opt/SUNWspro
 #
 LANGUAGES.sunpro=	c c++
 _LANGUAGES.sunpro=	# empty
-.  for _lang_ in ${USE_LANGUAGES}
+.for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.sunpro+=	${LANGUAGES.sunpro:M${_lang_}}
-.  endfor
+.endfor
 
 _SUNPRO_DIR=	${WRKDIR}/.sunpro
 _SUNPRO_LINKS=	# empty
-.  if exists(${SUNWSPROBASE}/bin/cc)
+.if exists(${SUNWSPROBASE}/bin/cc)
 _SUNPRO_CC=	${_SUNPRO_DIR}/bin/cc
 _SUNPRO_LINKS+=	_SUNPRO_CC
 PKG_CC=		${_SUNPRO_CC}
 CC=		${PKG_CC:T}
-.  endif
-.  if exists(${SUNWSPROBASE}/bin/CC)
+.endif
+.if exists(${SUNWSPROBASE}/bin/CC)
 _SUNPRO_CXX=	${_SUNPRO_DIR}/bin/CC
 _SUNPRO_LINKS+=	_SUNPRO_CXX
 PKG_CXX=	${_SUNPRO_CXX}
 CXX=		${PKG_CXX:T}
-.  endif
+.endif
 
 _COMPILER_LD_FLAG=	# empty
 
-.  if exists(${SUNWSPROBASE}/bin/cc)
+.if exists(${SUNWSPROBASE}/bin/cc)
 CC_VERSION_STRING!=	${SUNWSPROBASE}/bin/cc -V 2>&1 || ${TRUE}
 CC_VERSION!=		${SUNWSPROBASE}/bin/cc -V 2>&1 | ${GREP} '^cc'
-.  else
+.else
 CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		cc: Sun C
-.  endif
-.endif	# COMPILER_SUNPRO_MK
-
-# The following section is included only if we're not being included by
-# bsd.prefs.mk.
-#
-.if empty(BSD_PREFS_MK)
-.  if empty(COMPILER_SUNPRO_MK:Mtwo)
-COMPILER_SUNPRO_MK+=	two
+.endif
 
 # Prepend the path to the compiler to the PATH.
-.    if !empty(_LANGUAGES.sunpro)
-.      if empty(PREPEND_PATH:M${_SUNPRO_DIR}/bin)
+.if !empty(_LANGUAGES.sunpro)
 PREPEND_PATH+=	${_SUNPRO_DIR}/bin
-PATH:=		${_SUNPRO_DIR}/bin:${PATH}
-.      endif
-.    endif
+.endif
 
 # Create compiler driver scripts in ${WRKDIR}.
-.    for _target_ in ${_SUNPRO_LINKS}
-.      if !target(${${_target_}})
+.for _target_ in ${_SUNPRO_LINKS}
+.  if !target(${${_target_}})
 override-tools: ${${_target_}}        
 ${${_target_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
@@ -67,7 +58,7 @@ ${${_target_}}:
 	 ${ECHO} 'exec ${SUNWSPROBASE}/bin/${${_target_}:T} "$$@"';	\
 	) > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
-.      endif
-.    endfor
-.  endif # COMPILER_SUNPRO_MK
-.endif	 # BSD_PREFS_MK
+.  endif
+.endfor
+
+.endif	# COMPILER_SUNPRO_MK
