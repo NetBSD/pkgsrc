@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2004/12/28 23:18:18 reed Exp $
+# $NetBSD: Makefile,v 1.21 2005/03/31 19:15:23 drochner Exp $
 
-DISTNAME=	scribus-1.1.7
-PKGREVISION=	2
+DISTNAME=	scribus-1.2.1
 CATEGORIES=	print
-MASTER_SITES=	http://scribus.planetmirror.com/
+MASTER_SITES=	http://www.scribus.org.uk/downloads/1.2.1/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.scribus.net/
@@ -21,10 +21,13 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=        --with-qt-dir=${QTDIR} \
 			--with-extra-libs=${LOCALBASE}/lib \
 			--with-extra-includes=${LOCALBASE}/include
+# avoid CUPS libs to be pulled in
+CONFIGURE_ENV+=		ac_cv_prog_hacups=no
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
