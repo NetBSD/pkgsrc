@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/02/14 22:50:04 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/06/20 10:55:24 jmmv Exp $
 bin/cm
 info/opencm.info.gz
 share/examples/opencm/opencm.conf
@@ -25,6 +25,7 @@ share/opencm/help/mv.help
 share/opencm/help/note.help
 share/opencm/help/notes.help
 share/opencm/help/opt-basic.help
+share/opencm/help/opt-debugging.help
 share/opencm/help/opt-obscure.help
 share/opencm/help/opt-server.help
 share/opencm/help/rebind.help
