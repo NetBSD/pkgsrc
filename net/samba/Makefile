@@ -1,13 +1,13 @@
 # New ports collection makefile for:	samba
-# Version required:			1.9.18p1
+# Version required:			1.9.18p3
 # Date created:				11th Feb 1995
 # Whom:					gpalmer
 #
-# $NetBSD: Makefile,v 1.5 1998/01/13 13:10:19 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/02/21 21:20:09 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/10/23 15:17:43 max Exp
 #
 
-DISTNAME=	samba-1.9.18p1
+DISTNAME=	samba-1.9.18p3
 CATEGORIES=	net
 MASTER_SITES=	ftp://samba.anu.edu.au/pub/samba/
 
