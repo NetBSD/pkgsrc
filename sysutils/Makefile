@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2001/08/13 10:32:39 zuntum Exp $
+# $NetBSD: Makefile,v 1.107 2001/08/13 14:54:16 zuntum Exp $
 #
 
 COMMENT=	System utilities
@@ -58,6 +58,7 @@ SUBDIR+=	osname
 SUBDIR+=	pcvt-utils
 SUBDIR+=	psmisc
 SUBDIR+=	pstree
+SUBDIR+=	qlogtools
 SUBDIR+=	roller
 SUBDIR+=	rtty
 SUBDIR+=	ruby-syslog
