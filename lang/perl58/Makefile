@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2004/11/04 22:51:58 jklos Exp $
+# $NetBSD: Makefile,v 1.54 2004/11/07 16:20:11 wiz Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -9,7 +9,6 @@ PERL5_RC_VERS=	# empty
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
 PKGNAME=	perl${PERL5_PKGSUFFIX}-${PERL5_VERS}
-PKGREVISION=	1
 SNAPSHOT_SITES=	# empty
 .else
 .  if !empty(PERL5_SNAPSHOT)
@@ -25,7 +24,7 @@ SNAPSHOT_SITES=	http://www.cpan.org/authors/id/J/JH/JHI/
 .  endif
 .endif
 
-PERL5_VERS=	5.8.4
+PERL5_VERS=	5.8.5
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	${SNAPSHOT_SITES} \
 		${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
@@ -91,7 +90,6 @@ PERL5_PKGSUFFIX=	# empty
 CONFLICTS+=		perl-thread-[0-9]*
 CONFIGURE_ARGS+=	-Uuseithreads
 .else
-PKGREVISION=		1
 PERL5_ARCHLIB=		${PREFIX}/lib/perl5/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi
 PERL5_PKGSUFFIX=	-thread
 CONFLICTS+=		perl-[0-9]*
