@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 1999/03/05 11:32:22 tron Exp $
+$NetBSD: patch-aa,v 1.9 1999/03/09 22:44:58 tron Exp $
 
 --- configure.orig	Thu Feb 25 12:02:28 1999
-+++ configure	Fri Mar  5 12:13:21 1999
++++ configure	Tue Mar  9 23:23:53 1999
 @@ -22,7 +22,7 @@
  #
  GTK_MAJOR_VERSION=1
@@ -36,3 +36,16 @@ $NetBSD: patch-aa,v 1.8 1999/03/05 11:32:22 tron Exp $
  
  
  echo $ac_n "checking for extra flags to get ANSI library prototypes""... $ac_c" 1>&6
+@@ -7356,10 +7358,12 @@
+     top_srcdir="$ac_dots$ac_given_srcdir" ;;
+   esac
+ 
++if false; then
+   case "$ac_given_INSTALL" in
+   [/$]*) INSTALL="$ac_given_INSTALL" ;;
+   *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+   esac
++fi
+ 
+   echo creating "$ac_file"
+   rm -f "$ac_file"
