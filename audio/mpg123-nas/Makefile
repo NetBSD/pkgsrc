@@ -1,66 +1,17 @@
-# $NetBSD: Makefile,v 1.3 2002/08/31 14:25:37 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/28 12:24:06 markd Exp $
 #
 
-DISTNAME=	mpg123-0.59r
-PKGNAME=	mpg123-nas-0.59.18
-CATEGORIES=	audio
-MASTER_SITES=	http://www.mpg123.de/mpg123/ \
-		http://www-ti.informatik.uni-tuebingen.de/~hippm/mpg123/
-
-PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/ \
-		http://www.unix-ag.org/Linux-Alpha/Packages/
-PATCHFILES=	mpg123-059r-v6-20000713b.diff.gz l3.diff.gz
-
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.mpg123.de/
+PKGNAME=	mpg123${TARGET_SUFFIX}-${MPG123_VERSION}
+PKGREVISION=	1
 COMMENT=	Command-line player for mpeg layer 1, 2 and 3 audio with NAS output
 
-BUILD_DEFS+=	USE_INET6
-DIST_SUBDIR=	mpg123
-FILESDIR=	${.CURDIR}/../mpg123/files
+TARGET_SUFFIX=	-nas
 
 CONFLICTS+=	mpg123-[0-9]*
 
-USE_X11BASE=		# defined
-USE_BUILDLINK2=		# defined
+USE_X11BASE=	# defined
 
-# for OBJECT_FMT
-.include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "i386"
-.if ${OBJECT_FMT} == "ELF"
-ALL_TARGET=	netbsd-i386-elf
-.else
-ALL_TARGET=	netbsd-i386
-.endif
-.elif ${MACHINE_ARCH} == "arm32"
-ALL_TARGET=	netbsd-arm32
-.elif ${MACHINE_ARCH} == "m68k"
-ALL_TARGET=	netbsd-m68k
-.else
-ALL_TARGET=	${LOWER_OPSYS}
-.endif
-
-.if ${OPSYS} == "SunOS"
-ALL_TARGET=	solaris-gcc
-.endif
-
-.if defined(USE_INET6) && ${USE_INET6} == "YES"
-CPPFLAGS+=	-DINET6
-.endif
-
-MAKE_FLAGS+=	PREFIX="${PREFIX}"
-
-pre-patch:
-	${LN} -s . ${WRKSRC}/mpg123
-
-post-patch:
-	${RM} -f ${WRKSRC}/mpg123
-	${CP} ${FILESDIR}/decode_i586_.s ${WRKSRC}/
-	cd ${WRKSRC} ; ${MV} decode_i586.s decode_i586.s.orig ;\
-	${SED} \
-		-e 's@^/@#/@g' \
-		<decode_i586.s.orig >decode_i586.s
+.include "../mpg123/Makefile.common"
 
 .include "../../audio/nas/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
