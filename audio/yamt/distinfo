@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2002/07/21 15:41:34 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 20:39:56 agc Exp $
 
 SHA1 (yamt-0.5.tar.gz) = 8f5113c68c769cf19d4a03dd742bba2e13ffcae4
+RMD160 (yamt-0.5.tar.gz) = fc1667564a5525512844eeb13eae6dd3c538d2cc
 Size (yamt-0.5.tar.gz) = 261074 bytes

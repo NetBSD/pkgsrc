@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2004/10/18 13:24:47 cube Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 20:39:52 agc Exp $
 
 SHA1 (sox-12.17.6.tar.gz) = d3e8548814daee5f2d6ace04afc2789ae6e74e58
+RMD160 (sox-12.17.6.tar.gz) = 30975ee4a87cbedb2552d30f5141bb1d8215a64e
 Size (sox-12.17.6.tar.gz) = 444125 bytes
 SHA1 (patch-aa) = 90a7d6da429853257d289d084e6485a3925eb849
