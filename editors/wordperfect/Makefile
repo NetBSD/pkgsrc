@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/08/25 01:07:29 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/09/08 13:33:15 jlam Exp $
 
 DISTNAME=		wordperfect-personal-8
 CATEGORIES=		editors
@@ -9,7 +9,7 @@ DISTFILES=		GUILG00.GZ
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://linux.corel.com/products/wp8/
 
-DEPENDS+=		suse_linux>=6.1:../../emulators/suse_linux
+DEPENDS+=		suse_libc5>=6.1:../../emulators/suse_libc5
 
 LICENSE=		no-commercial-use
 MIRROR_DISTFILE=	no
