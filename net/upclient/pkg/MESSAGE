@@ -1,0 +1,10 @@
+To fully configure the upclient, you need to
+
+1. Register at http://uptime.hexon.cx/register.html
+2. Confirm your account as stated in the mail you get
+3. Login on the web site and add a host, note the host ID
+4. Copy @PREFIX@/etc/upclient.conf.example to @PREFIX@/etc/upclient.conf
+   and enter your values for the HostID, Login, Password and Interval.
+5. Start upclient via @PREFIX@/etc/rc.d/upclient.sh either manually
+   or via /etc/rc.local.
+6. Watch your host show up on the list.
