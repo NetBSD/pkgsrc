@@ -1,0 +1,20 @@
+--- configure.h.orig	Sun Aug 18 14:11:26 1996
++++ configure.h	Sun Nov 30 16:33:59 1997
+@@ -14,7 +14,7 @@
+  *
+  *  If you don't have sendmail, use /bin/false :-).
+  */
+-/* #define MAIL_COMMAND "/usr/sbin/sendmail -t" */
++#define MAIL_COMMAND "/usr/sbin/sendmail -t"
+ /* #define MAIL_COMMAND "/usr/lib/sendmail -t"  */
+ 
+ 
+@@ -42,7 +42,7 @@
+ /* #define DOMAIN_NAME "/your/file/here"  */
+ /* #define DOMAIN_NAME "your_domain_here" */
+ 
+-#define DOMAIN_HACK	1
++#define DOMAIN_HACK	0
+ 
+ 
+ 
