@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.29 2003/04/04 01:02:39 salo Exp $
+# $NetBSD: Makefile.common,v 1.30 2003/04/09 14:57:32 drochner Exp $
 #
 
-MPLAYER_DIST_VERSION=	0.90rc5
+MPLAYER_DIST_VERSION=	0.90
 #PKGREVISION=		0
 
 # This variable is used in all packages which depend on this package
 # XXX Add 10, as the "rc" version numbers were used up for the "pre" versions.
-MPLAYER_PKG_VERSION=	0.90rc15
+MPLAYER_PKG_VERSION=	0.90
 
 DISTNAME=		MPlayer-${MPLAYER_DIST_VERSION}
 CATEGORIES?=		graphics
@@ -29,7 +29,6 @@ NO_SRC_ON_FTP=		"prohibited by USAs DMCA"
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 HAS_CONFIGURE=		YES
-USE_GNU_GETTEXT=	YES
 
 PTHREAD_OPTS+=		require
 
@@ -37,6 +36,7 @@ CONFIGURE_ARGS+=	--prefix="${PREFIX}"
 CONFIGURE_ARGS+=	--with-extraincdir="${LOCALBASE}/include"
 CONFIGURE_ARGS+=	--with-cdparanoiaincdir="${LOCALBASE}/include/cdparanoia"
 CONFIGURE_ARGS+=	--with-extralibdir="${LOCALBASE}/lib"
+CONFIGURE_ARGS+=	--with-extralibdir="${X11BASE}/lib"
 CONFIGURE_ARGS+=	--disable-mpdvdkit
 CONFIGURE_ARGS+=	--enable-faad
 CONFIGURE_ARGS+=	--disable-arts
