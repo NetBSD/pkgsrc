@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/07/30 08:08:13 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/03 21:28:40 jlam Exp $
 #
 
 DISTNAME=		gnome-applets-1.2.1
@@ -16,6 +16,7 @@ DEPENDS+=		libgtop-*:../../devel/libgtop
 USE_GMAKE=		yes
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
