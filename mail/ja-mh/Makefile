@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/11/29 05:09:42 taca Exp $
-# FreeBSD Id: Makefile,v 1.13 1999/02/10 18:13:21 motoyuki Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/15 14:05:52 wiz Exp $
 
 DISTNAME=	mh-6.8.4-JP-3.05
 PKGNAME=	ja-mh6-3.05
+PKGREVISION=	1
 CATEGORIES=	japanese mail
 MASTER_SITES=	ftp://ftp.chem.eng.himeji-tech.ac.jp/pub/net/mh/
 
