@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1292 2003/10/02 14:41:42 gavan Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1293 2003/10/02 15:45:31 gavan Exp $
 #
 # This file is in the public domain.
 #
@@ -73,6 +73,16 @@ build-defs-message: ${WRKDIR}
 .if defined(OBJECT_FMT)
 MAKE_ENV+=	OBJECT_FMT="${OBJECT_FMT}"
 .endif
+
+# Allow variables to be set on a per-OS basis
+OPSYSVARS+=	CFLAGS CPPFLAGS LDFLAGS LIBS
+.for _var_ in ${OPSYSVARS:O}
+.  if defined(${_var_}.${OPSYS})
+${_var_}+=	${${_var_}.${OPSYS}}
+.  elif defined(${_var_}.*)
+${_var_}+=	${${_var_}.*}
+.  endif
+.endfor
 
 ##### Build crypto packages by default.
 MKCRYPTO?=		yes
