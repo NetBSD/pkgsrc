@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2003/05/04 21:42:52 seb Exp $
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/elib.info
+@comment $NetBSD: PLIST,v 1.4 2003/06/23 10:43:35 seb Exp $
 info/elib.info
 info/elib.info-1
 info/elib.info-2
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/elib.info
 ${EMACS_LISPPREFIX}/elib/stack-f.el
 ${EMACS_LISPPREFIX}/elib/stack-f.elc
 ${EMACS_LISPPREFIX}/elib/stack-m.el
