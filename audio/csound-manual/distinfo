@@ -1,13 +1,24 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:33 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/21 22:07:03 wiz Exp $
 
 SHA1 (csound/ascii.zip) = 821012d1cee03d114bf95e930c34d46d80d4e6c7
+Size (csound/ascii.zip) = 199193 bytes
 SHA1 (csound/espanol.zip) = 85d76e6c05e5ebd631001d7c83e9fe1d15865969
+Size (csound/espanol.zip) = 892241 bytes
 SHA1 (csound/html.zip) = 1de339d163cbda8b1591c22a5869ea52932f1e62
+Size (csound/html.zip) = 513562 bytes
 SHA1 (csound/manual1.zip) = bd40c091886161ee6600dcc2a901a4cf553c5b09
+Size (csound/manual1.zip) = 1306289 bytes
 SHA1 (csound/manual2.zip) = a48665afc35222db97482d3847b033c254b1ac92
+Size (csound/manual2.zip) = 1451660 bytes
 SHA1 (csound/spplmnt1.zip) = f85cde6d4af0731c74a6536e9a02ebe4343ddea4
+Size (csound/spplmnt1.zip) = 286066 bytes
 SHA1 (csound/spplmnt2.zip) = ec745212d8b599bdb2b78b81f4d1060dddc9241d
+Size (csound/spplmnt2.zip) = 295022 bytes
 SHA1 (csound/spplmtxt.zip) = 06cecaf412ef792f70ffc83bf539307890f8c3b1
+Size (csound/spplmtxt.zip) = 24774 bytes
 SHA1 (csound/toots.zip) = 10f3d6b9d181db9e8bb4503d151e88a01392df94
+Size (csound/toots.zip) = 190195 bytes
 SHA1 (csound/update1.zip) = fa242ff06e0f012c23513670a4beba1d00c962dd
+Size (csound/update1.zip) = 298739 bytes
 SHA1 (csound/update2.zip) = 6bc3e1421975bb4e26f8d5b24879621f789b907a
+Size (csound/update2.zip) = 497735 bytes
