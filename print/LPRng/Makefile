@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/12/13 00:31:05 kei Exp $
+# $NetBSD: Makefile,v 1.5 2001/01/12 13:08:48 dent Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/10/21 00:57:27 steve Exp
 #
 
@@ -8,7 +8,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	jlam@netbsd.org
-HOMEPAGE=	http://www.astart.com/LPRng.html
+HOMEPAGE=	http://www.lprng.com/
 
 DEPENDS+=		LPRng-core-3.6.26:../../print/LPRng-core
 DEPENDS+=		LPRng-doc-3.6.13:../../print/LPRng-doc
