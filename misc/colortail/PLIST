@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:46 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/13 23:01:42 jschauma Exp $
 bin/colortail
+man/man1/colortail.1
 share/examples/colortail/conf.daemon
 share/examples/colortail/conf.kernel
 share/examples/colortail/conf.messages
