@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2004/02/25 21:50:40 christos Exp $
+
+--- agent/mibgroup/ucd_snmp.h.orig	2004-02-25 16:25:12.000000000 -0500
++++ agent/mibgroup/ucd_snmp.h	2004-02-25 15:36:25.000000000 -0500
+@@ -36,6 +36,10 @@
+ config_arch_require(freebsd5, ucd-snmp/memory_freebsd2)
+ config_arch_require(netbsd1, ucd-snmp/vmstat_netbsd1)
+ config_arch_require(netbsd1, ucd-snmp/memory_netbsd1)
++config_arch_require(netbsd, ucd-snmp/vmstat_netbsd1)
++config_arch_require(netbsd, ucd-snmp/memory_netbsd1)
++config_arch_require(netbsdelf, ucd-snmp/vmstat_netbsd1)
++config_arch_require(netbsdelf, ucd-snmp/memory_netbsd1)
+ config_arch_require(openbsd2, ucd-snmp/vmstat_netbsd1)
+ config_arch_require(openbsd2, ucd-snmp/memory_netbsd1)
+ config_arch_require(openbsd3, ucd-snmp/vmstat_netbsd1)
