@@ -1,21 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:21:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/22 12:06:45 agc Exp $
 
-DISTNAME=	asp2php0.73.4
-PKGNAME=	asp2php-0.73.4
+DISTNAME=	asp2php-0.75.24
 CATEGORIES=	www
-MASTER_SITES=	http://home.i1.net/~naken/asp2php/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	http://home.swbell.net/mikekohn/asp2php/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://home.i1.net/~naken/asp2php/
+MAINTAINER=	shell@shellhung.org
+HOMEPAGE=	http://asp2php.naken.cc/
 COMMENT=	converts asp pages to php pages
 
 WRKSRC=		${WRKDIR}/asp2php
-
-ALL_TARGET=	default
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/asp2php ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/unipiss ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
