@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2004/10/15 14:50:06 tv Exp $
+# $NetBSD: Makefile,v 1.28 2004/11/02 20:34:03 wiz Exp $
 #
 
 DISTNAME=		cassowary-0.60
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		math
 MASTER_SITES=		http://www.cs.washington.edu/research/constraints/cassowary/
 
@@ -18,7 +18,7 @@ USE_LIBTOOL=		# defined
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-fd-solver
-CONFIGURE_ARGS+=	--with-gtl=${BUILDLINK_PREFIX.gtl}
+CONFIGURE_ARGS+=	--with-gtl=${BUILDLINK_PREFIX.gtl0}
 
 PLIST_SUBST+=		GUILE14_SUBDIR=${GUILE14_SUBDIR}
 
@@ -26,11 +26,11 @@ YACC=			bison -y
 
 UNLIMIT_RESOURCES=	datasize memorysize
 
-.include "../../mk/bsd.prefs.mk"
+CXXFLAGS+=		-Wno-deprecated
 
 post-install:
 	cd ${PREFIX}/lib/cassowary && ${RMDIR} -p bench
 
-.include "../../devel/gtl/buildlink3.mk"
+.include "../../devel/gtl0/buildlink3.mk"
 .include "../../lang/guile14/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
