@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1998/09/07 22:58:24 mycroft Exp $
+# $NetBSD: Makefile,v 1.20 1998/09/07 23:20:04 mycroft Exp $
 #
 
 DISTNAME=		xmame-0.34b2.2
@@ -37,10 +37,10 @@ post-patch:
 	(cd ${WRKSRC}/src/unix && ${MV} netbsd_i386.c netbsd.c)
 
 do-install:
-	(cd ${WRKSRC} && ${INSTALL_PROGRAM} ${ALL_TARGET} ${PREFIX}/bin/xmame)
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} xmame.${DISPLAY_METHOD} ${PREFIX}/bin/xmame)
 	(cd ${WRKSRC}/doc && ${INSTALL_MAN} xmame.man ${PREFIX}/man/man6/xmame.6)
-	${MKDIR} ${MAMEDIR}
-	(cd ${WRKSRC}/doc && ${INSTALL_DATA} xmamerc ${MAMEDIR}/xmamerc)
-	@${ECHO} Remember to set MAMEDIR to ${MAMEDIR}.
+	${MKDIR} ${ROMPATH}
+	(cd ${WRKSRC}/doc && ${INSTALL_DATA} xmamerc ${ROMPATH}/xmamerc)
+	@${ECHO} Remember to set ROMPATH to ${ROMPATH}.
 
 .include "../../mk/bsd.pkg.mk"
