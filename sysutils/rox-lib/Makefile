@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/21 23:46:58 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/14 13:25:22 drochner Exp $
 #
 
 DISTNAME=	ROX-Lib-0.1.4
@@ -17,6 +17,7 @@ DIST_SUBDIR=	rox
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+USE_BUILDLINK2=	yes
 
 WRKSRC=		${WRKDIR}/ROX-Lib
 
@@ -36,5 +37,5 @@ do-install:
 	${CP} -Rf ${WRKSRC} ${PREFIX}/share/rox
 
 .include "../../lang/python/application.mk"
-.include "../../x11/pygtk/buildlink.mk"
+.include "../../x11/pygtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
