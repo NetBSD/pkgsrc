@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2270 2003/05/21 10:12:12 wiz Exp $
+$NetBSD: CHANGES,v 1.2271 2003/05/21 14:09:51 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2002,3 +2002,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pgpdump to 0.18 [yyamano 2003-05-20]
 	Updated links to 2.1.0.10 [wiz 2003-05-21]
 	Updated links-gui to 2.1.0.10 [wiz 2003-05-21]
+	Updated audit-packages to 1.15 [seb 2003-05-21]
