@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2001/06/21 18:55:02 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2001/06/21 20:16:27 jlam Exp $
 
 --- Makefile.in.orig	Tue Aug  8 15:19:31 2000
 +++ Makefile.in
@@ -50,7 +50,15 @@ $NetBSD: patch-aa,v 1.5 2001/06/21 18:55:02 jlam Exp $
  
  CC_SWITCHES_NO_STUBS = ${CFLAGS} ${CFLAGS_WARNING} ${SHLIB_CFLAGS} \
  -I${UNIX_DIR} -I${GENERIC_DIR} \
-@@ -389,7 +390,7 @@
+@@ -371,6 +372,7 @@
+ 	rm -f ${TK_LIB_FILE}
+ 	@MAKE_LIB@
+ 	$(RANLIB) ${TK_LIB_FILE}
++	${TOUCH} ${TK_LIB_FILE}
+ 
+ ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
+ 	rm -f ${STUB_LIB_FILE}
+@@ -389,7 +391,7 @@
  
  
  wish: $(WISH_OBJS) $(TK_LIB_FILE) $(TK_STUB_LIB_FILE)
@@ -59,7 +67,7 @@ $NetBSD: patch-aa,v 1.5 2001/06/21 18:55:02 jlam Exp $
  		@TK_BUILD_LIB_SPEC@ \
  		$(WISH_LIBS) $(TK_CC_SEARCH_FLAGS) -o wish
  
-@@ -400,12 +401,12 @@
+@@ -400,12 +402,12 @@
  	make tcltest
  
  tktest: ${TCL_BIN_DIR}/tcltest $(TKTEST_OBJS) $(TK_LIB_FILE)
@@ -74,7 +82,7 @@ $NetBSD: patch-aa,v 1.5 2001/06/21 18:55:02 jlam Exp $
  		@TK_BUILD_LIB_SPEC@ \
  		$(WISH_LIBS) $(TK_LD_SEARCH_FLAGS) -lXt -o xttest
  
-@@ -456,7 +457,7 @@
+@@ -456,7 +458,7 @@
  	    chmod +x $(UNIX_DIR)/mkLinks; \
  	    fi
  	@echo "Installing $(TK_LIB_FILE) to $(LIB_INSTALL_DIR)/"
