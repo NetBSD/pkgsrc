@@ -1,6 +1,6 @@
-$NetBSD: patch-i386-ab,v 1.1 2001/05/08 23:58:45 dmcmahill Exp $
+$NetBSD: patch-i386-ab,v 1.2 2002/08/05 00:34:57 dmcmahill Exp $
 
---- setupwfc.orig	Tue Aug  8 20:24:35 2000
+--- setupwfc.orig	Thu Apr 18 02:32:45 2002
 +++ setupwfc
 @@ -378,7 +378,7 @@
  		PLATFORM=hp
