@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.131 1998/07/31 14:55:38 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.132 1998/08/04 10:28:08 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1605,11 +1605,12 @@ lib-depends:
 misc-depends:
 .if defined(DEPENDS)
 .if !defined(NO_DEPENDS)
-	@for dir in ${DEPENDS}; do					\
-		package="`${ECHO} \"$$dir\" | ${SED} -e 's/:.*//'`";	\
-		dir=`${ECHO} $$dir | ${SED} -e 's/.*://'`;		\
-		if /usr/sbin/pkg_info -qe "$$package"; then		\
-			${ECHO_MSG} "===>  ${PKGNAME} depends on installed package: $$package";	\
+	@(/bin/sh -f -c 'for dir in ${DEPENDS}; do			\
+		package="`${ECHO} \"$$dir\" | ${SED} -e s/:.\*//`";	\
+		dir="`${ECHO} \"$$dir\" | ${SED} -e s/.\*://`";		\
+		found=`/usr/sbin/pkg_info -e "$$package"`;		\
+		if [ "X$$found" != X"" ]; then		\
+			${ECHO_MSG} "===>  ${PKGNAME} depends on installed package: $$package - $$found found";	\
 		else							\
 			${ECHO_MSG} "===>  ${PKGNAME} depends on package: $$package";	\
 			target=${DEPENDS_TARGET};			\
@@ -1620,7 +1621,7 @@ misc-depends:
 				(cd $$dir; ${MAKE} ${.MAKEFLAGS} $$target);	\
 			fi						\
 		fi							\
-	done
+	done')
 .endif
 .else
 	@${DO_NADA}
