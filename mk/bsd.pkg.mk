@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1171 2003/04/17 15:33:26 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1172 2003/04/25 20:05:18 jmmv Exp $
 #
 # This file is in the public domain.
 #
@@ -1406,10 +1406,10 @@ batch-check-distfiles:
 # check for any vulnerabilities in the package
 # Please do not modify the leading "@" here
 check-vulnerable:
-	@if [ -f ${DISTDIR}/vulnerabilities ]; then			\
+	@if [ -f ${PKGVULNDIR}/vulnerabilities ]; then			\
 		${SETENV} PKGNAME="${PKGNAME}"				\
 			${AWK} '/#.*/ { next }				\
-				{ s = sprintf("${PKG_ADMIN} pmatch \"%s\" %s && ${ECHO} \"*** WARNING - %s vulnerability in %s - see %s for more information ***\"", $$1, ENVIRON["PKGNAME"], $$2, ENVIRON["PKGNAME"], $$3); system(s); }' < ${DISTDIR}/vulnerabilities || ${FALSE}; \
+				{ s = sprintf("${PKG_ADMIN} pmatch \"%s\" %s && ${ECHO} \"*** WARNING - %s vulnerability in %s - see %s for more information ***\"", $$1, ENVIRON["PKGNAME"], $$2, ENVIRON["PKGNAME"], $$3); system(s); }' < ${PKGVULNDIR}/vulnerabilities || ${FALSE}; \
 	fi
 
 .if !target(do-fetch)
@@ -3761,19 +3761,19 @@ SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
 
 show-vulnerabilities:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${DISTDIR}/vulnerabilities ]; then			\
-		${AWK} '/^${PKGBASE}[-<>=]+[0-9]/ { print $$0 }' ${DISTDIR}/vulnerabilities; \
+	if [ -f ${PKGVULNDIR}/vulnerabilities ]; then			\
+		${AWK} '/^${PKGBASE}[-<>=]+[0-9]/ { print $$0 }' ${PKGVULNDIR}/vulnerabilities; \
 	else								\
 		${ECHO} "No vulnerabilities list found.";		\
 	fi
 
 show-vulnerabilities-html:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${DISTDIR}/vulnerabilities ]; then			\
+	if [ -f ${PKGVULNDIR}/vulnerabilities ]; then			\
 		${AWK} '/^${PKGBASE}[-<>=]+[0-9]/ { gsub("\<", "\\&lt;", $$1);	\
 			 gsub("\>", "\\&gt;", $$1);			\
 			 printf("<LI><STRONG>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n", $$1, $$2, $$3, $$3) }' \
-			${DISTDIR}/vulnerabilities;			\
+			${PKGVULNDIR}/vulnerabilities;			\
 	fi
 
 
@@ -4164,8 +4164,8 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		done;							\
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${DISTDIR}/vulnerabilities ]; then			\
-		allvul="`${AWK} '/#.*/ { next } NF > 0 { cmd = sprintf(\"${PKG_INFO} -e \\\"%s\\\"\", $$1); system(cmd) }' ${DISTDIR}/vulnerabilities`"; \
+	if [ -f ${PKGVULNDIR}/vulnerabilities ]; then			\
+		allvul="`${AWK} '/#.*/ { next } NF > 0 { cmd = sprintf(\"${PKG_INFO} -e \\\"%s\\\"\", $$1); system(cmd) }' ${PKGVULNDIR}/vulnerabilities`"; \
 		for vul in "" $$allvul; do				\
 			if [ "X$$vul" = "X" ]; then continue; fi;	\
 			if [ "$$vul" = "${PKGNAME}" ]; then		\

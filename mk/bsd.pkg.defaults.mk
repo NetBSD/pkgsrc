@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.140 2003/04/17 13:04:56 agc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.141 2003/04/25 20:05:19 jmmv Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -137,6 +137,13 @@ PACKAGES?=       ${_PKGSRCDIR}/packages
 # Store generated packages on a per-architecture base
 # Possible: any path you like
 # Default: /usr/pkgsrc/packages
+
+PKGVULNDIR?=     ${DISTDIR}
+# Specifies where the `vulnerabilities' file is located.  This variable
+# is used by the audit-packages program and by pkgsrc itself to do security
+# checks before building/installing programs.
+# Possible: any path you like
+# Default: /usr/pkgsrc/distfiles
 
 #PASSIVE_FETCH=
 # Use ftp(1) in passive mode, for use behind filtering firewalls. 
