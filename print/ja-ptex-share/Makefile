@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/03/29 12:42:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2003/04/10 20:10:18 grant Exp $
 
 DISTNAME=	ptex-texmf-2.1
 PKGNAME=	ja-ptex-share-2.1
@@ -28,24 +28,20 @@ TEXMFLOCAL=		${PREFIX}/share/texmf.local
 do-install:
 	${INSTALL_DATA_DIR} ${TEXMFLOCAL}
 .if defined(EXTRACT_USING_PAX)
-	cd ${TEXMFLOCAL}; \
-	${DECOMPRESS_CMD} \
-	${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} | ${PAX} -r
-	cd ${TEXMFLOCAL}/fonts; \
+	cd ${TEXMFLOCAL} && \
+		${PAX} -O -zrf ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
+	cd ${TEXMFLOCAL}/fonts && \
 	for f in jis nmin-ngoth standard morisawa; do \
-		${DECOMPRESS_CMD} \
-		${DISTDIR}/${DIST_SUBDIR}/$$f${EXTRACT_SUFX} | ${PAX} -r; \
+		${PAX} -O -zrf ${DISTDIR}/${DIST_SUBDIR}/$$f${EXTRACT_SUFX}; \
 		${MV} ${TEXMFLOCAL}/fonts/$$f/tfm ${TEXMFLOCAL}/fonts/tfm/$$f;\
 		${MV} ${TEXMFLOCAL}/fonts/$$f/vf ${TEXMFLOCAL}/fonts/vf/$$f;\
 	done
 .else
-	cd ${TEXMFLOCAL}; \
-	${DECOMPRESS_CMD} \
-	${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} | ${GTAR} -xpf -
-	cd ${TEXMFLOCAL}/fonts; \
+	cd ${TEXMFLOCAL} && \
+		${GTAR} -zxpf ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}
+	cd ${TEXMFLOCAL}/fonts && \
 	for f in jis nmin-ngoth standard morisawa; do \
-		${DECOMPRESS_CMD} \
-		${DISTDIR}/${DIST_SUBDIR}/$$f${EXTRACT_SUFX} | ${GTAR} -xpf -;\
+		${GTAR} -zxpf ${DISTDIR}/${DIST_SUBDIR}/$$f${EXTRACT_SUFX}; \
 		${MV} ${TEXMFLOCAL}/fonts/$$f/tfm ${TEXMFLOCAL}/fonts/tfm/$$f;\
 		${MV} ${TEXMFLOCAL}/fonts/$$f/vf ${TEXMFLOCAL}/fonts/vf/$$f;\
 	done
