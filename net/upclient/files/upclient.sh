@@ -2,6 +2,7 @@
 
 if [ -x @PREFIX@/bin/upclient ]
 then
-	su -m nobody -c @PREFIX@/bin/upclient
+	@INSTALL@ -o nobody -m 644 /dev/null /var/run/upclient.pid
+	@SU@ -m nobody -c @PREFIX@/bin/upclient >/dev/null
 	echo -n ' upclient'
 fi

@@ -1,36 +1,45 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/04/06 20:10:00 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2000/01/21 01:35:43 hubertf Exp $
 
---- Makefile.orig	Sat Apr  3 11:47:04 1999
-+++ Makefile	Sun Apr  4 06:31:51 1999
-@@ -1,7 +1,7 @@
- # Uptime Client Makefile
+--- config.h.orig	Mon Jan 10 21:35:01 2000
++++ config.h	Fri Jan 21 01:36:24 2000
+@@ -16,7 +16,11 @@
+  * Ultrix   --> #define PLATFORM_CODE  3
+  * Solaris  --> #define PLATFORM_CODE  4
+  */
++#ifdef __NetBSD__
++#define PLATFORM_CODE		 1
++#else
+ #define PLATFORM_CODE		-1
++#endif
  
- # Location of config file (for example /etc/upclient.conf)
--CONFIGFILE = upclient.conf
-+CONFIGFILE = ${PREFIX}/etc/upclient.conf
+ #if   (PLATFORM_CODE == 0)
+ #	define PLATFORM_LINUX
+@@ -49,8 +53,8 @@
+  * If you haven't registered yourself yet, go to
+  * http://www.uptimes.net/register.html
+  */
+-#define LOGINNAME		"Enter your loginname here"
+-#define PASSWORD		"Enter your password here"
++#define LOGINNAME		"@UPCLIENT_LOGIN@"
++#define PASSWORD		"@UPCLIENT_PASSWORD@"
  
  
- ################
-@@ -13,7 +13,7 @@
- 	@echo "You must specify the system which you want to compile for:"
- 	@echo ""
- 	@echo "make linux		Linux"
--	@echo "make freebsd		FreeBSD"
-+	@echo "make bsd		FreeBSD, NetBSD, OpenBSD, BSDi
- 	@echo "make solaris		Solaris"
- 	@echo ""
  
-@@ -24,11 +24,11 @@
- 		CFLAGS='-DLINUX -DCONFIGFILE=\"$(CONFIGFILE)\"' \
- 		upclient
+@@ -61,7 +65,7 @@
+  * column on http://www.uptimes.net/hosts.html.
+  * If your host isn't in the list, click "add host"
+  */
+-#define HOSTID			0
++#define HOSTID			@UPCLIENT_HOSTID@
  
--freebsd:
-+bsd:
- 	$(MAKE) CC=gcc \
- 		LDFLAGS= \
- 		OBJECTS= \
--		CFLAGS='-DFREEBSD -DCONFIGFILE=\"$(CONFIGFILE)\"' \
-+		CFLAGS='-DxxxBSD -DCONFIGFILE=\"$(CONFIGFILE)\"' \
- 		upclient
  
- solaris:
+ 
+@@ -125,7 +129,7 @@
+  *
+  * Where should the client write it's pidfile?
+  */
+-#define PIDFILE			"<path-to>/upclient.pid"
++#define PIDFILE			"/var/run/upclient.pid"
+ 
+ 
+ 
