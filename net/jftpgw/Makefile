@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/24 01:10:31 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/09/18 12:47:33 uebayasi Exp $
 
 DISTNAME=	    jftpgw-0.13.4
 CATEGORIES=	    net
@@ -19,6 +19,14 @@ CONFIGURE_ARGS+=	--enable-sftp
 RCD_SCRIPTS=		jftpgw
 EGDIR=			${PREFIX}/share/examples/jftpgw
 CONF_FILES=		${EGDIR}/jftpgw.conf ${PKG_SYSCONFDIR}/jftpgw.conf
+
+SUBST_CLASSES+=		log
+SUBST_STAGE.log=	post-patch
+SUBST_FILES.log=	active.c bindport.c cache.c cmds.c config.c \
+			ftpread.c fw_auth_cmds.c jftpgw.c log.c log.h \
+			login.c openport.c passive.c states.c std_cmds.c \
+			util.c
+SUBST_SED.log=		-e "s,\([[:space:]]\)\(log(\),\1x\2,"
 
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	post-build
