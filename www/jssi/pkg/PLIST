@@ -1,41 +1,41 @@
-@comment $NetBSD: PLIST,v 1.2 2000/01/20 05:03:35 jwise Exp $
-lib/ApacheJSSI.jar
-doc/jssi/generate_javadoc
-doc/jssi/images/java-apache-project.gif
-doc/jssi/index.html
-doc/jssi/install.html
-doc/jssi/parameterprop.html
-doc/jssi/traditionalssi.html
-doc/jssi/javadoc/packages.html
-doc/jssi/javadoc/Package-org.apache.java.io.html
-doc/jssi/javadoc/org.apache.java.io.PositionReader.html
-doc/jssi/javadoc/Package-org.apache.java.util.html
-doc/jssi/javadoc/org.apache.java.util.SGMLTag.html
-doc/jssi/javadoc/Package-org.apache.servlet.ssi.html
-doc/jssi/javadoc/org.apache.servlet.ssi.ParseContext.html
-doc/jssi/javadoc/org.apache.servlet.ssi.SpecialTagHandler.html
-doc/jssi/javadoc/org.apache.servlet.ssi.AbstractParseContext.html
-doc/jssi/javadoc/org.apache.servlet.ssi.ConfigTagHandler.html
-doc/jssi/javadoc/tree.html
-doc/jssi/javadoc/org.apache.servlet.ssi.DelegateHttpServletRequest.html
-doc/jssi/javadoc/org.apache.servlet.ssi.EchoTagHandler.html
-doc/jssi/javadoc/org.apache.servlet.ssi.ExampleTagHandler.html
-doc/jssi/javadoc/org.apache.servlet.ssi.FLastModTagHandler.html
-doc/jssi/javadoc/org.apache.servlet.ssi.FSizeTagHandler.html
-doc/jssi/javadoc/org.apache.servlet.ssi.HREFParameterPropagator.html
-doc/jssi/javadoc/org.apache.servlet.ssi.IncludeTagHandler.html
-doc/jssi/javadoc/org.apache.servlet.ssi.OSServletOutputStream.html
-doc/jssi/javadoc/org.apache.servlet.ssi.PageParser.html
-doc/jssi/javadoc/org.apache.servlet.ssi.PageParserServlet.html
-doc/jssi/javadoc/org.apache.servlet.ssi.ParamPropContext.html
-doc/jssi/javadoc/org.apache.servlet.ssi.ParameterPropagatingSSI.html
-doc/jssi/javadoc/org.apache.servlet.ssi.SSI.html
-doc/jssi/javadoc/org.apache.servlet.ssi.SSIContext.html
-doc/jssi/javadoc/org.apache.servlet.ssi.SSIHttpServletResponse.html
-doc/jssi/javadoc/org.apache.servlet.ssi.SSIOutputStream.html
-doc/jssi/javadoc/org.apache.servlet.ssi.SSITagHandler.html
-doc/jssi/javadoc/org.apache.servlet.ssi.ServletTagHandler.html
-doc/jssi/javadoc/AllNames.html
-@dirrm doc/jssi/javadoc/
-@dirrm doc/jssi/images
-@dirrm doc/jssi
+@comment $NetBSD: PLIST,v 1.3 2000/05/09 20:53:19 jwise Exp $
+lib/java/ApacheJSSI.jar
+share/doc/java/jssi/generate_javadoc
+share/doc/java/jssi/images/java-apache-project.gif
+share/doc/java/jssi/index.html
+share/doc/java/jssi/install.html
+share/doc/java/jssi/parameterprop.html
+share/doc/java/jssi/traditionalssi.html
+share/doc/java/jssi/javadoc/packages.html
+share/doc/java/jssi/javadoc/Package-org.apache.java.io.html
+share/doc/java/jssi/javadoc/org.apache.java.io.PositionReader.html
+share/doc/java/jssi/javadoc/Package-org.apache.java.util.html
+share/doc/java/jssi/javadoc/org.apache.java.util.SGMLTag.html
+share/doc/java/jssi/javadoc/Package-org.apache.servlet.ssi.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.ParseContext.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.SpecialTagHandler.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.AbstractParseContext.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.ConfigTagHandler.html
+share/doc/java/jssi/javadoc/tree.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.DelegateHttpServletRequest.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.EchoTagHandler.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.ExampleTagHandler.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.FLastModTagHandler.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.FSizeTagHandler.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.HREFParameterPropagator.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.IncludeTagHandler.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.OSServletOutputStream.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.PageParser.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.PageParserServlet.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.ParamPropContext.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.ParameterPropagatingSSI.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.SSI.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.SSIContext.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.SSIHttpServletResponse.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.SSIOutputStream.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.SSITagHandler.html
+share/doc/java/jssi/javadoc/org.apache.servlet.ssi.ServletTagHandler.html
+share/doc/java/jssi/javadoc/AllNames.html
+@dirrm share/doc/java/jssi/javadoc/
+@dirrm share/doc/java/jssi/images
+@dirrm share/doc/java/jssi
