@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5060 2004/03/02 17:26:36 wiz Exp $
+$NetBSD: CHANGES,v 1.5061 2004/03/02 20:45:18 chris Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1118,3 +1118,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ffcall to 1.9 [adam 2004-03-02]
 	Updated lincity to 1.12.0 [adam 2004-03-02]
 	Updated bozohttpd to 20040218nb2 [wiz 2004-03-02]
+	Updated sylpheed to 0.9.10 [chris 2004-03-02]
