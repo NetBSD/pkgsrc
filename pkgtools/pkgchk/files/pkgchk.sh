@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.24 2001/12/24 14:15:56 abs Exp $
+# $Id: pkgchk.sh,v 1.25 2001/12/27 19:45:01 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -52,7 +52,7 @@ check_packages_installed()
 	else
 	    if [ -n "$opt_B" ];then
 		current_build_ver=`get_build_ver`
-		installed_build_ver=`cat /var/db/pkg/$PKGNAME/+BUILD_VERSION | sed "s:^${real_pkgsrcdir}/::"`
+		installed_build_ver=`cat /var/db/pkg/$PKGNAME/+BUILD_VERSION | sed "s:^.*/pkgsrc/::"`
 		if [ x"$current_build_ver" != x"$installed_build_ver" ];then
 		    echo "$PKGNAME: build version information mismatch"
 		    MISMATCH_TODO="$MISMATCH_TODO $PKGNAME"
