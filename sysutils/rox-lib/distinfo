@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:40:56 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/03/23 10:20:10 rxg Exp $
 
-SHA1 (rox/ROX-Lib-0.1.4.tgz) = 2c932be74fb16bed94ddf147aa0d1223dc790caa
-RMD160 (rox/ROX-Lib-0.1.4.tgz) = ebe26767d3c3ca61e67b30cdd159db1f715f7886
-Size (rox/ROX-Lib-0.1.4.tgz) = 21962 bytes
+SHA1 (rox/rox-lib-1.9.17.tgz) = bca8dc9e03001acd77824d952c19506496722ff7
+RMD160 (rox/rox-lib-1.9.17.tgz) = 561bd3a52fc171e832d4ee6895b1d439c40d6660
+Size (rox/rox-lib-1.9.17.tgz) = 121373 bytes
