@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5806 2004/05/03 18:26:46 jmmv Exp $
+$NetBSD: CHANGES,v 1.5807 2004/05/03 20:57:24 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2336,3 +2336,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ffcall to 1.9nb1 [jmmv 2004-05-03]
 	Updated nautilus to 2.6.1 [jmmv 2004-05-03]
 	Updated zenity to 2.6.1 [jmmv 2004-05-03]
+	Updated GConf2 to 2.6.1 [jmmv 2004-05-03]
+	Updated GConf2-ui to 2.6.1 [jmmv 2004-05-03]
