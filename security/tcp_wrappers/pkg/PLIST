@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/19 21:18:16 tron Exp $
+bin/safe_finger
+bin/tcpdchk
+bin/tcpdmatch
+bin/try-from
+lib/libwrap.a
+libexec/tcpd
+man/man3/hosts_access.3
+man/man5/hosts_access.5
+man/man5/hosts_options.5
+man/man8/tcpd.8
+man/man8/tcpdchk.8
+man/man8/tcpdmatch.8
+share/doc/tcp_wrappers/README
+share/doc/tcp_wrappers/README.NIS
+share/doc/tcp_wrappers/README.ipv6
+@dirrm share/doc/tcp_wrappers

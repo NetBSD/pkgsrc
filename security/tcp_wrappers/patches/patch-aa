@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/19 21:18:16 tron Exp $
+
+--- Makefile.orig	Mon Aug 21 19:59:52 2000
++++ Makefile	Fri Jan 19 21:55:43 2001
+@@ -44,7 +44,7 @@
+ #REAL_DAEMON_DIR=/usr/etc
+ #
+ # SysV.4 Solaris 2.x OSF AIX
+-#REAL_DAEMON_DIR=/usr/sbin
++REAL_DAEMON_DIR=/usr/sbin
+ #
+ # BSD 4.4
+ #REAL_DAEMON_DIR=/usr/libexec
