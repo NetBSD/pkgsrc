@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/03/30 01:51:46 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/09 20:42:59 minskim Exp $
 
 DISTNAME=	tkpiechart-5.4
 CATEGORIES=	graphics
@@ -16,11 +16,12 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-pre-patch:
-	for f in source.tcl instapkg.tcl; do				\
-		${MV} ${WRKSRC}/$$f ${WRKSRC}/$$f-prepatch;		\
-		${SED} -e '/Id/s|\$$||g' ${WRKSRC}/$$f-prepatch > ${WRKSRC}/$$f; \
-	done
+SUBST_CLASSES+=		patch
+SUBST_MESSAGE.patch=	"Remove version numbers for required packages."
+SUBST_STAGE.patch=	post-patch
+SUBST_FILES.patch=	demo demo.tcl instapkg.tcl piechart.htm
+SUBST_SED.patch=	-e '/require/s/stooop 3.7/stooop/g' \
+			-e '/require/s/switched 1.4/switched/g'
 
 post-patch:
 	${CHMOD} a+x ${WRKSRC}/instapkg.tcl
