@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.243 2004/05/25 21:51:42 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.244 2004/05/27 09:28:15 recht Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -753,6 +753,11 @@ CUPS_USER?=	lp
 # temporary files in the /var/spool/cups/tmp directory.
 # Possible: any user name
 # Default: lp
+
+# CYRUS_IDLE
+# use METHOD for IMAP IDLE
+# METHOD is poll, idled or no
+# Default: not defined
 
 CYRUS_GROUP?=	mail
 # Used in cyrus-imapd, cyrus-imapd21, cyrus-sasl, and cyrus-sasl2 to

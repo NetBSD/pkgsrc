@@ -1,0 +1,24 @@
+$NetBSD: patch-bb,v 1.1 2004/05/27 09:28:16 recht Exp $
+
+--- lib/hash.c.orig	2003-10-22 20:50:12.000000000 +0200
++++ lib/hash.c	2004-05-27 11:09:07.000000000 +0200
+@@ -300,7 +300,7 @@
+ 		    void *rock)
+ {
+       unsigned i;
+-      bucket *temp;
++      bucket *temp, *temp_next;
+ 
+       for (i=0;i<table->size; i++)
+       {
+@@ -308,8 +308,9 @@
+             {
+                   for (temp = (table->table)[i];
+                         NULL != temp;
+-                        temp = temp -> next)
++                        temp = temp_next)
+                   {
++			temp_next = temp->next;
+                         func(temp -> key, temp->data, rock);
+                   }
+             }
