@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2002/03/28 13:57:17 kent Exp $
+# $NetBSD: Makefile,v 1.10 2002/03/29 10:47:58 kent Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
-PKGNAME=		gcc-ssp-2.95.3
-PKGREVISION=		
+PKGNAME=		gcc-ssp-2.95.3.4
+PKGVERSION=		${GCC_VERSION}
+PKGREVISION=
 PKGBASENAME=		gcc-ssp
 CATEGORIES=		lang security
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
@@ -12,9 +13,9 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.trl.ibm.com/projects/security/ssp/
 COMMENT=		GNU Compiler Collection with Stack-smashing protection
 
-MASTER_SITES+=		http://www.trl.ibm.com/projects/security/ssp/gcc2_95_3/
-SSP_PATCH=		protector-2.95.3-2.tar.gz
+SSP_PATCH=		protector-2.95.3-4.tar.gz
 DISTFILES+=		${DISTNAME}.tar.gz ${SSP_PATCH}
+SITES_protector-2.95.3-4.tar.gz=	http://www.trl.ibm.com/projects/security/ssp/gcc2_95_3/
 PATCHDIR=		../gcc/patches
 GCC_FILESDIR=		${FILESDIR}/../../gcc/files
 
@@ -39,8 +40,7 @@ INFO_FILES=		# Not instal info files.
 
 MESSAGE_SUBST+=		MAKE=${MAKE} \
 			PKGBASENAME=${PKGBASENAME}
-PLIST_SUBST+=		MACHINE_GCC_PLATFORM=${MACHINE_GNU_PLATFORM} \
-			PKGBASENAME=${PKGBASENAME}
+PLIST_SUBST+=		PKGBASENAME=${PKGBASENAME}
 SRCDIR=			${WRKDIR}/${DISTNAME}
 WRKSRC=			${WRKDIR}/objdir
 

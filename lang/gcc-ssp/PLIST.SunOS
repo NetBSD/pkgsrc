@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST.SunOS,v 1.1 2001/11/01 00:32:27 zuntum Exp $
-${MACHINE_GCC_PLATFORM}/include/_G_config.h
-${MACHINE_GCC_PLATFORM}/include/assert.h
-bin/${MACHINE_GCC_PLATFORM}-gcc
+@comment $NetBSD: PLIST.SunOS,v 1.2 2002/03/29 10:47:59 kent Exp $
+${MACHINE_GNU_PLATFORM}/include/_G_config.h
+${MACHINE_GNU_PLATFORM}/include/assert.h
+bin/${MACHINE_GNU_PLATFORM}-gcc
 bin/c++
 bin/c++filt
 bin/chill
@@ -222,91 +222,91 @@ info/gcc.info-6
 info/gcc.info-7
 info/gcc.info-8
 info/gcc.info-9
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/SYSCALLS.c.X
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/cc1
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/cc1chill
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/cc1obj
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/cc1plus
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/chillrt0.o
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/collect2
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/cpp
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/crt1.o
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/crtbegin.o
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/crtend.o
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/crti.o
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/crtn.o
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/f771
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/gcrt1.o
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/gmon.o
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/README
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/assert.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/curses.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/exception
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/g2c.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/iso646.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/limits.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/math.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/new
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/new.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/objc/NXConstStr.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/objc/Object.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/objc/Protocol.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/objc/encoding.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/objc/hash.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/objc/objc-api.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/objc/objc-list.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/objc/objc.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/objc/sarray.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/objc/thr.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/objc/typedstream.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/proto.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/stdarg.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/stdbool.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/stddef.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/sys/stream.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/syslimits.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/typeinfo
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-alpha.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-arc.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-c4x.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-clipper.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-h8300.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-i860.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-i960.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-m32r.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-m88k.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-mips.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-mn10200.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-mn10300.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-pa.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-ppc.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-pyr.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-sh.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-sparc.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-spur.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/va-v850.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/varargs.h
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/jc1
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/jvgenmain
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/libchill.a
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/libg2c.a
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/libgcc.a
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/libobjc.a
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/libstdc++.a
-lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/specs
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/SYSCALLS.c.X
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/cc1
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/cc1chill
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/cc1obj
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/cc1plus
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/chillrt0.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/collect2
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/cpp
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/crt1.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/crtbegin.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/crtend.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/crti.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/crtn.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/f771
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/gcrt1.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/gmon.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/README
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/assert.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/curses.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/exception
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/g2c.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/iso646.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/limits.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/math.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/new
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/new.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/objc/NXConstStr.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/objc/Object.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/objc/Protocol.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/objc/encoding.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/objc/hash.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/objc/objc-api.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/objc/objc-list.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/objc/objc.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/objc/sarray.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/objc/thr.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/objc/typedstream.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/proto.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/stdarg.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/stdbool.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/stddef.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/sys/stream.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/syslimits.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/typeinfo
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-alpha.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-arc.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-c4x.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-clipper.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-h8300.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-i860.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-i960.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-m32r.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-m88k.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-mips.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-mn10200.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-mn10300.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-pa.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-ppc.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-pyr.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-sh.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-sparc.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-spur.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/va-v850.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/varargs.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/jc1
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/jvgenmain
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/libchill.a
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/libg2c.a
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/libgcc.a
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/libobjc.a
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/libstdc++.a
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/specs
 lib/libiberty.a
 lib/libstdc++.a.2.10.0
 man/man1/cccp.1
 man/man1/g++.1
 man/man1/g77.1
 man/man1/gcc.1
-@dirrm lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/sys
-@dirrm lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/objc
-@dirrm lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include
-@dirrm lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}
-@dirrm lib/gcc-lib/${MACHINE_GCC_PLATFORM}
+@dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/sys
+@dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/objc
+@dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include
+@dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}
+@dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}
 @dirrm lib/gcc-lib
 @dirrm include/g++-3/std
 @dirrm include/g++-3
-@dirrm ${MACHINE_GCC_PLATFORM}/include
-@dirrm ${MACHINE_GCC_PLATFORM}
+@dirrm ${MACHINE_GNU_PLATFORM}/include
+@dirrm ${MACHINE_GNU_PLATFORM}
