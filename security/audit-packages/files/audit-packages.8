@@ -1,4 +1,4 @@
-.\" $NetBSD: audit-packages.8,v 1.7 2004/05/17 19:28:19 reed Exp $
+.\" $NetBSD: audit-packages.8,v 1.8 2004/06/06 08:28:54 agc Exp $
 .Dd May 12, 2004
 .Os
 .Dt AUDIT-PACKAGES 8
@@ -112,14 +112,14 @@ weak-ssl-authentication
 .El
 .Pp
 By default, the vulnerabilities file is stored in the
-.Pa @PKGVULNDIR@
+@PKGVULNDIR@
 directory.
 This can be changed by defining the environment variable
 .Ev PKGVULNDIR
 to the directory containing the vulnerabilities file.
 .Sh ENVIRONMENT
 These variables can also be defined in the
-.Pa @PKG_SYSCONFDIR@/audit-packages.conf
+@PKG_SYSCONFDIR@/audit-packages.conf
 file.
 .Pp
 .Bl -tag -width PKGVULNDIR
@@ -131,9 +131,10 @@ file.
 Specifies optional arguments for the ftp client.
 .El
 .Sh FILES
-.Pa @PKGVULNDIR@/pkg-vulnerabilities
 .Pp
-.Pa @PKG_SYSCONFDIR@/audit-packages.conf
+@PKGVULNDIR@/pkg-vulnerabilities
+.Pp
+@PKG_SYSCONFDIR@/audit-packages.conf
 .\" .Sh EXAMPLES
 .Sh EXAMPLES
 The
@@ -155,19 +156,19 @@ daily security script).
 The
 .Nm download-vulnerability-list
 command can be forced to use IPv4 with the following setting in
-.Pa @PKG_SYSCONFDIR@/audit-packages.conf :
+@PKG_SYSCONFDIR@/audit-packages.conf :
 .Pp
 export FETCH_ARGS="-4"
 .Sh SEE ALSO
 .Xr pkg_info 1 ,
 .Xr mk.conf 5 ,
 .Xr packages 7 ,
-.Pa @PKGSRCDIR@/mk/bsd.pkg.defaults.mk
+@PKGSRCDIR@/mk/bsd.pkg.defaults.mk
 and
 .Rs
 .%T "Documentation on the NetBSD Package System"
 .Re
-.Pa @PKGSRCDIR@/Packages.txt
+@PKGSRCDIR@/Packages.txt
 .Sh HISTORY
 The
 .Nm
