@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/04 23:16:36 mjl Exp $
+$NetBSD: distinfo,v 1.2 2004/11/29 14:48:03 he Exp $
 
-SHA1 (BerkeleyDB-0.25.tar.gz) = 1b18758215f8bb2dddfb0393e4f90b74182750f5
-Size (BerkeleyDB-0.25.tar.gz) = 126076 bytes
+SHA1 (BerkeleyDB-0.26.tar.gz) = 12c43aec728bbd8f37e485b61addbc53fd6c0d95
+Size (BerkeleyDB-0.26.tar.gz) = 129723 bytes
