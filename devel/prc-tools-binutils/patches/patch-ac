@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+
+--- tools/Makefile.in.orig	Fri Jan 19 05:51:55 2001
++++ tools/Makefile.in	Fri Jan 19 05:52:58 2001
+@@ -15,7 +15,7 @@
+ CFLAGS = @CFLAGS@
+ CXX = @CXX@
+ CXXFLAGS = @CXXFLAGS@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = @LDFLAGS@ @LIBS@
+ 
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@

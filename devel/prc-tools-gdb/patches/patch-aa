@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+
+--- Makefile.in.orig	Mon Feb  7 20:37:04 2000
++++ Makefile.in	Fri Jan 19 06:54:08 2001
+@@ -21,6 +21,8 @@
+ host_subdirs = $(configured_subdirs) doc tools
+ target_subdirs = crt libc libm
+ 
++all: all-gdb
++
+ # This target will only work if you are willing to do all your building as
+ # a user who can write to your install directory, i.e., if you build as root
+ # or if you're on an unprotected file system like Windows.
+@@ -34,6 +37,11 @@
+ 	    if (cd $${dir} && $(MAKE) all info); then true; else exit 1; fi; \
+ 	  fi; \
+ 	done
++
++all-gdb:
++	if [ -f ./gdb/Makefile ]; then \
++	  if (cd gdb && $(MAKE)); then true; else exit 1; fi; \
++	fi
+ 
+ all-gcc:
+ 	if [ -f ./gcc/Makefile ]; then \

@@ -1,0 +1,63 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+
+--- tools/def.l.orig	Tue Apr 24 08:15:48 2001
++++ tools/def.l	Tue Apr 24 08:16:23 2001
+@@ -36,7 +36,7 @@
+ #include "def.tab.h"
+ #include "pfdheader.h"
+ 
+-static char *dup(const char *s);
++static char *my_dup(const char *s);
+ %}
+ 
+ %x comment
+@@ -65,14 +65,14 @@
+ 
+ <sstr>\'		|
+ <dstr>\"		{ BEGIN(INITIAL); *strp = '\0';
+-			  yylval.str = dup(str_buffer); return STR; }
++			  yylval.str = my_dup(str_buffer); return STR; }
+ 
+ <sstr,dstr>\\\n		lineno++;
+ <sstr,dstr>\n		{ einfo(E_FILELINE | E_WARNING,
+ 				"string constant terminated by end of line");
+ 			  lineno++;
+ 			  BEGIN(INITIAL); *strp = '\0';
+-			  yylval.str = dup(str_buffer); return STR; }
++			  yylval.str = my_dup(str_buffer); return STR; }
+ 
+ <sstr,dstr>\\[0-7]{1,3}	*strp++ = (char)strtol(&yytext[1], NULL, 8);
+ 
+@@ -94,13 +94,13 @@
+ \<			{ strp = str_buffer; BEGIN(fstr); }
+ 
+ <fstr>\>		{ BEGIN(INITIAL); *strp = '\0';
+-			  yylval.str = dup (str_buffer); return FNAME; }
++			  yylval.str = my_dup (str_buffer); return FNAME; }
+ 
+ <fstr>\n		{ einfo (E_FILELINE | E_WARNING,
+ 				 "filename terminated by end of line");
+ 			  lineno++;
+ 			  BEGIN(INITIAL); *strp = '\0';
+-			  yylval.str = dup (str_buffer); return FNAME; }
++			  yylval.str = my_dup (str_buffer); return FNAME; }
+ 
+ <fstr>[^\n\>]+		{ strcpy (strp, yytext); strp += yyleng; }
+ 
+@@ -148,7 +148,7 @@
+ 
+ 	/* Other words ("identifiers", but for us they're unquoted strings): */
+ 
+-[A-Za-z_][A-Za-z0-9_]*	{ yylval.str = dup(yytext); return STR; }
++[A-Za-z_][A-Za-z0-9_]*	{ yylval.str = my_dup(yytext); return STR; }
+ 
+ 	/* Punctuation: */
+ 
+@@ -166,6 +166,6 @@
+ extern struct string_store *lexer_store;
+ 
+ static char *
+-dup(const char *s) {
++my_dup(const char *s) {
+   return insert_string(lexer_store, s);
+   }
