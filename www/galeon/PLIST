@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2004/10/05 18:32:47 abs Exp $
+@comment $NetBSD: PLIST,v 1.24 2004/11/27 00:52:49 abs Exp $
 bin/galeon
 bin/galeon-config-tool
 lib/bonobo/servers/GNOME_Galeon_Automation.server
@@ -21,11 +21,12 @@ share/galeon/default-prefs.js
 share/galeon/fetch_favicon.xpm
 share/galeon/freshmeat.png
 share/galeon/galeon-bookmark-alias-mark.png
-share/galeon/galeon-bookmark.png
 share/galeon/galeon-default.png
 share/galeon/galeon-download.png
 share/galeon/galeon-egg-ui-toolbar.xml
 share/galeon/galeon-egg-ui.xml
+share/galeon/galeon-entry.png
+share/galeon/galeon-filter.png
 share/galeon/galeon-folder.png
 share/galeon/galeon-history.png
 share/galeon/galeon-insecure.png
@@ -159,6 +160,10 @@ share/gnome/help/galeon/es/other-tools.xml
 share/gnome/help/galeon/es/plugins.xml
 share/gnome/help/galeon/es/preface.xml
 share/gnome/help/galeon/es/preferences.xml
+share/omf/galeon/galeon-C.omf
+share/omf/galeon/galeon-es.omf
+share/pixmaps/galeon.png
+share/sounds/galeon/clicked.wav
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/galeon-2.0.mo
@@ -209,10 +214,6 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/galeon-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/galeon-2.0.mo
-share/omf/galeon/galeon-C.omf
-share/omf/galeon/galeon-es.omf
-share/pixmaps/galeon.png
-share/sounds/galeon/clicked.wav
 @dirrm share/sounds/galeon
 @comment in xdg-dirs: @dirrm share/sounds
 @comment in xdg-dirs: @dirrm share/pixmaps
