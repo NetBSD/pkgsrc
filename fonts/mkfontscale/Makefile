@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/05/31 15:33:07 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2002/07/17 18:13:48 wiz Exp $
 #
 
 DISTNAME=	mkfontscale-20020524
@@ -13,4 +13,11 @@ USE_IMAKE=	yes
 
 WRKSRC=		${WRKDIR}/mkfontscale
 
+.include "../../mk/bsd.prefs.mk"
+
+.if !exists(${X11BASE}/include/X11/fonts/fontenc.h)
+IGNORE=		"Needs the fontenc.h header file, which comes with newer XFree versions."
+.endif
+
+.include "../../graphics/freetype2/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
