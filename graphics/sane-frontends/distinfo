@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2003/06/29 10:18:22 rh Exp $
+$NetBSD: distinfo,v 1.8 2004/05/03 12:48:16 adam Exp $
 
-SHA1 (sane-frontends-1.0.11.tar.gz) = d9d1485738e9457cc1468c3781279272d95c1886
-Size (sane-frontends-1.0.11.tar.gz) = 184844 bytes
+SHA1 (sane-frontends-1.0.12.tar.gz) = e2a088e12627ff2af401061d1ee4aeab014fe231
+Size (sane-frontends-1.0.12.tar.gz) = 202872 bytes
