@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2004/04/19 17:58:25 drochner Exp $
+$NetBSD: distinfo,v 1.5 2004/10/07 10:02:09 tron Exp $
 
 SHA1 (vcdimager-0.7.20.tar.gz) = b75c9253bbd9f72f8b64b739e0c15bed5ac83bde
 Size (vcdimager-0.7.20.tar.gz) = 954324 bytes
 SHA1 (patch-aa) = 6cf7c87a391e25addb324c37a9f929813725c712
+SHA1 (patch-ab) = 6304d85224534797f52e14d283d79cf1e2be2f3f
