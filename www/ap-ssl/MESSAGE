@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2002/09/24 12:30:45 wiz Exp $
+$NetBSD: MESSAGE,v 1.4 2002/11/19 23:03:53 jlam Exp $
 
 You will need to generate certificates and keys for your server before
 Apache will start with mod_ssl support.  Please read
@@ -8,11 +8,19 @@ Apache will start with mod_ssl support.  Please read
 
 for more information on how to do this.
 
-In order to start Apache with mod_ssl support, you need to run Apache
-with "apachectl startssl" instead of "apachectl start".  The SSL-specific
-configuration parts of the default httpd.conf are bracketed by:
+The SSL-specific configuration parts of the default httpd.conf are
+bracketed by:
 
   <IfDefine SSL>
   </IfDefine>
+
+In order to start Apache with mod_ssl support, you need to run Apache
+with "apachectl startssl" instead of "apachectl start".  This may be done
+by adding:
+
+	apache=YES
+	apache_start="startssl"
+
+to /etc/rc.conf.
 
 ===========================================================================
