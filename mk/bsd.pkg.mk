@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1343 2004/01/12 10:08:37 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1344 2004/01/13 00:40:25 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2403,27 +2403,29 @@ post-configure: ${_CONFIGURE_POSTREQ}
 
 # Build
 
-BUILD_DIRS?=	${WRKSRC}
+BUILD_DIRS?=		${WRKSRC}
+BUILD_MAKE_FLAGS?=	${MAKE_FLAGS}
 
 .PHONY: do-build
 .if !target(do-build)
 do-build:
 .  for DIR in ${BUILD_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
 .  endfor
 .endif
 
 #Test
 
-TEST_DIRS?=	${BUILD_DIRS}
-TEST_ENV+=	${MAKE_ENV}
+TEST_DIRS?=		${BUILD_DIRS}
+TEST_ENV+=		${MAKE_ENV}
+TEST_MAKE_FLAGS?=	${MAKE_FLAGS}
 
 .PHONY: do-test
 .if !target(do-test)
 do-test:
 .  if defined(TEST_TARGET) && !empty(TEST_TARGET)
 .    for DIR in ${TEST_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${TEST_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${TEST_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${TEST_ENV} ${MAKE_PROGRAM} ${TEST_MAKE_FLAGS} -f ${MAKEFILE} ${TEST_TARGET}
 .    endfor
 .  else
 	@${DO_NADA}
@@ -2432,13 +2434,14 @@ do-test:
 
 # Install
 
-INSTALL_DIRS?=	${BUILD_DIRS}
+INSTALL_DIRS?=		${BUILD_DIRS}
+INSTALL_MAKE_FLAGS?=	${MAKE_FLAGS}
 
 .PHONY: do-install
 .if !target(do-install)
 do-install:
 .  for DIR in ${INSTALL_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
 .  endfor
 .endif
 
