@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/02/06 01:10:25 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2000/06/16 12:01:02 tron Exp $
 
---- ./Makefile.orig	Thu Oct 14 01:17:18 1999
-+++ ./Makefile	Sun Feb  6 01:15:00 2000
-@@ -1,7 +1,7 @@
- # Anyone who knows how to make Makefiles please help out.
- # I have no clue but this appears to work fairly well
- # be sure to use gmake
+--- Makefile.orig	Sat Jun 10 00:18:38 2000
++++ Makefile	Fri Jun 16 13:56:56 2000
+@@ -5,8 +5,8 @@
+ # Most options that were here and soem that weren't have been moved to config.h
+ # edit that file to set up options.
+ #
 -CC = gcc
-+# CC = gcc
--CFLAGS = -O4 -Wall -DUNIX -DANSI_COLOR 
-+CFLAGS += -Wall -DUNIX -DANSI_COLOR 
- CFLAGS += -DMAX_CONTACTS=255
- CFLAGS += -DUSE_MREADLINE
- #CFLAGS += -DCOLOR_SCHEME_A
+-CFLAGS = -O4 -Wall -DUNIX 
++#CC = gcc
++CFLAGS += -Wall -DUNIX 
+ CFLAGS += -DENGLISH_LANG
+ #CFLAGS += -DBULGARIAN_LANG
+ #CFLAGS += -DPOLISH_LANG
