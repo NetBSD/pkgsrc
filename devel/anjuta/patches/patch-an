@@ -1,27 +1,25 @@
-$NetBSD: patch-an,v 1.1 2004/02/26 16:25:53 cube Exp $
+$NetBSD: patch-an,v 1.2 2004/04/21 15:01:28 jmmv Exp $
 
---- src/launcher.c.orig	2003-11-27 09:37:16.000000000 +0100
+--- src/launcher.c.orig	2004-04-08 06:15:31.000000000 +0200
 +++ src/launcher.c
-@@ -23,7 +23,12 @@
+@@ -23,7 +23,9 @@
  #include <unistd.h>
  #include <fcntl.h>
  #include <signal.h>
 +#ifdef HAVE_PTY_H
  #include <pty.h>
 +#endif
-+#ifdef HAVE_UTIL_H
-+#include <util.h>
-+#endif
  #include <assert.h>
  #include <gnome.h>
  #include <termios.h>
-@@ -902,6 +907,9 @@ anjuta_launcher_fork (AnjutaLauncher *la
- 					ECHOCTL | ISIG | ICANON | IEXTEN | NOFLSH | TOSTOP);
- //	termios_flags.c_lflag |= 0;
- 	termios_flags.c_cc[VMIN] = 0;
-+#ifndef __MAX_BAUD
-+#define	__MAX_BAUD B230400
-+#endif
- 	cfsetospeed(&termios_flags, __MAX_BAUD);
- 	tcsetattr(pty_master_fd, TCSANOW, &termios_flags);
+@@ -37,6 +39,10 @@
+ #include "anjuta-marshalers.h"
+ #include "anjuta.h"
  
++#ifndef __MAX_BAUD
++#define __MAX_BAUD B230400
++#endif
++
+ #define FILE_BUFFER_SIZE 1024
+ /*
+ static gboolean
