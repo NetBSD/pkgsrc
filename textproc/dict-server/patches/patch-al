@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.3 2003/09/30 21:50:55 seb Exp $
+$NetBSD: patch-al,v 1.4 2004/06/01 08:55:34 shannonjr Exp $
 
---- dictfmt.c.orig	2002-08-23 17:33:10.000000000 +0000
+--- dictfmt.c.orig	2002-08-23 11:33:10.000000000 -0600
 +++ dictfmt.c
 @@ -369,7 +369,7 @@ static void help( FILE *out_stream )
             several words to have the same definition\n\
@@ -11,3 +11,11 @@ $NetBSD: patch-al,v 1.3 2003/09/30 21:50:55 seb Exp $
             head words will not be copied to .dict file",
        0 };
     const char        **p = help_msg;
+@@ -685,6 +685,7 @@ int main( int argc, char **argv )
+ 	 fmt_newline();
+       }
+  skip:
++      ;
+    }
+ 
+    fmt_newheadword(NULL,0);
