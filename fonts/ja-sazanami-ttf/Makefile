@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/06 05:16:23 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2005/04/05 16:10:03 agc Exp $
 
 DISTNAME=		sazanami-${SAZANAMI_VERS}
 PKGNAME=		ja-sazanami-ttf-${SAZANAMI_VERS}
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		yamajun@ofug.net
 HOMEPAGE=		http://wiki.fdiary.net/font/?sazanami
-COMMENT=		Truely free Japanese TrueType font
+COMMENT=		Truly free Japanese TrueType font
 
 SAZANAMI_VERS=		20040629
 FONTS_TTF_DIRS=		${PREFIX}/lib/X11/fonts/TTF
