@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.146 2002/10/03 05:05:59 lukem Exp $
+$NetBSD: CHANGES,v 1.147 2002/10/03 07:05:06 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3071,8 +3071,8 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated apache to 2.0.42 [itojun 2002-10-02]
 	Updated socks5 to 1.0.2nb1 [grant 2002-10-02]
 	Added oss-3.97d [jlam 2002-10-02]
-	Added ee-1.4.5a [cjep 2002-10-02]
 	Updated php4 to 4.1.2nb1 [wiz 2002-10-03]
 	Updated gtexinfo to 4.2 [seb 2002-10-03]
 	Updated sendmail to 8.12.6nb1 [itojun 2002-10-03]
 	Updated cdrecord-devel to 1.10.34nb1 [lukem 2002-10-03]
+	Added easyedit-1.4.5a [cjep 2002-10-03]
