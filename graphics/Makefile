@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.275 2004/01/26 12:40:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.276 2004/01/26 12:46:22 jmmv Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -150,7 +150,6 @@ SUBDIR+=	libwmf
 SUBDIR+=	ljpeg
 SUBDIR+=	magicpoint
 SUBDIR+=	mgl
-SUBDIR+=	mjpegtools
 SUBDIR+=	mng
 SUBDIR+=	moz-bin-flash
 SUBDIR+=	moz-flash
