@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2000/07/26 19:03:23 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2001/01/15 11:46:41 hubertf Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -25,7 +25,7 @@ POST-INSTALL)
 			atalkd.conf \
 			papd.conf
 		do
-			if [ ! -f ${ETCDIR}/${file} -a -f ${PKG_PREFIX}/etc/${file}]
+			if [ ! -f ${ETCDIR}/${file} -a -f ${PKG_PREFIX}/etc/${file} ]
 			then
 				echo "  ${ETCDIR}/${file}"
 				cp ${PKG_PREFIX}/etc/${file} ${ETCDIR}/${file}
