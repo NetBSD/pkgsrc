@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.24 2004/11/13 21:28:28 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2005/02/25 09:10:18 adam Exp $
 
-DISTNAME=		hdf5-1.6.2
-PKGREVISION=		1
-CATEGORIES=		devel
-MASTER_SITES=		ftp://hdf.ncsa.uiuc.edu/HDF5/hdf5-1.6.2/src/ \
-			ftp://sunsite.doc.ic.ac.uk/packages/HDF/HDF5/hdf5-1.6.2/src/ \
-			http://www.go.dlr.de/fresh/unix/src/misc/
+DISTNAME=	hdf5-1.6.3
+CATEGORIES=	devel
+MASTER_SITES=	ftp://hdf.ncsa.uiuc.edu/HDF5/hdf5-1.6.3/src/ \
+		ftp://sunsite.doc.ic.ac.uk/packages/HDF/HDF5/hdf5-1.6.3/src/ \
+		http://www.go.dlr.de/fresh/unix/src/misc/
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://hdf.ncsa.uiuc.edu/HDF5/
-COMMENT=		Hierarchical Data Format (new generation)
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://hdf.ncsa.uiuc.edu/HDF5/
+COMMENT=	Hierarchical Data Format (new generation)
 
-GNU_CONFIGURE=		# defined
-# XXX can't enable this until we have a shared libsz
-#CONFIGURE_ARGS+=	--with-szlib
 USE_BUILDLINK3=		yes
-USE_LIBTOOL=		# defined
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-szlib
 TEST_TARGET=		check
 
 post-install:
@@ -28,7 +26,6 @@ post-install:
 	cd ${WRKSRC}/doc/html && ${PAX} -rw . ${PREFIX}/share/doc/html/hdf5
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/html/hdf5
 
+.include "../../archivers/szip/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-# XXX see above
-#.include "../../archivers/szip/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
