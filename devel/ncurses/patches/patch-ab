@@ -16,3 +16,26 @@
  do
  	nc_dir=`eval echo $nc_symbol`
  	if test -f $nc_dir/curses.h ; then
+@@ -1283,12 +1283,7 @@
+     do
+        nc_test=`echo $nc_name | sed -e 's/*//'`
+        if test "x$nc_test" = "x$nc_name" ; then
+-	  case "$nc_name" in
+-	  *.gz) nc_form=gzip;     nc_name=`basename $nc_name .gz`;;
+-	  *.Z)  nc_form=compress; nc_name=`basename $nc_name .Z`;;
+-	  *.0)	nc_form=BSDI; nc_format=yes;;
+-	  *)    nc_form=cat;;
+-	  esac
++	  nc_form=cat
+ 	  break
+        fi
+     done
+@@ -1392,7 +1387,7 @@
+ BSDI)
+ cat >>man/edit_man.sh <<NC_EOF
+ 	# BSDI installs only .0 suffixes in the cat directories
+-	target="\`echo \$target|sed -e 's/\.[1-9]\+.\?/.0/'\`"
++	target="\`echo \$target|sed -e 's/\.[1-9]\(\.gz|\.Z\)\{0,1\}/.0\1/'\`"
+ NC_EOF
+   ;;
+ esac
