@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/04/05 23:44:40 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/04/14 14:08:56 jlam Exp $
 #
 
 DISTNAME=	canuum-1.0
@@ -17,6 +17,7 @@ MANLANG=	ja
 MAN1=		canuum.1
 MAKE_ARGS=	PREFIX=${PREFIX}
 WRKSRC=		${WRKDIR}/Canna35b2/canuum
+USE_X11BASE=	yes
 
 post-extract:
 	@${GTAR} -xzf ${DISTDIR}/Canna35b2.tar.gz -C ${WRKDIR} \
