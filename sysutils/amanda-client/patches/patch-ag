@@ -1,3 +1,4 @@
+$NetBSD: patch-ag,v 1.2 2000/03/16 13:58:46 wiz Exp $
 --- changer-src/scsi-chio.c.orig	Wed Jul  8 00:04:04 1998
 +++ changer-src/scsi-chio.c	Mon Mar  6 15:26:26 2000
 @@ -119,25 +119,41 @@
