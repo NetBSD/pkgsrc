@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3990 2003/12/05 23:17:27 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3991 2003/12/05 23:26:19 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4985,4 +4985,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tinyproxy to 1.6.2 [xtraeme 2003-12-05]
 	Added libsoup-1.99.26 [xtraeme 2003-12-05]
 	Updated bitlbee to 0.82 [xtraeme 2003-12-05]
-	Updated libtasn1 to 0.2.6 [xtraeme 2003-12-05] 
+	Updated libtasn1 to 0.2.6 [xtraeme 2003-12-05]
+	Added libgpg-error-0.6 [xtraeme 2003-12-05] 
