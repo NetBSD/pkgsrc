@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/28 16:49:41 agc Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/19 08:37:30 jlam Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-1-src
@@ -18,7 +18,6 @@ GNU_CONFIGURE=	YES
 OPENCM_VERSION=	opencm-0.1.0alpha16
 
 CONF_FILES=	${PREFIX}/share/examples/opencm/opencm.conf ${PKG_SYSCONFDIR}/opencm.conf
-RCD_SCRIPTS=	opencm
 INFO_FILES=	opencm.info
 
 CPPFLAGS+=	-D__unix__
