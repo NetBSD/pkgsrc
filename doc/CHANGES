@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8320 2004/12/08 08:58:31 martti Exp $
+$NetBSD: CHANGES,v 1.8321 2004/12/09 16:07:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5826,3 +5826,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ispell-romanian to 20031216 [markd 2004-12-07]
 	Downgraded xfce4-minicmd-plugin to 0.2.0nb5 [martti 2004-12-08]
 	Downgraded xfce4-taskbar-plugin to 0.1.0nb1 [martti 2004-12-08]
+	Updated spegla to 1.1p4 [wiz 2004-12-09]
