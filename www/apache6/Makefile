@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2004/10/03 00:18:24 tv Exp $
+# $NetBSD: Makefile,v 1.92 2004/10/06 23:27:19 heinz Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -123,7 +123,7 @@ LINK_LIBGCC_LDFLAGS+=	-lgcc_s
 .endif
 
 # Use operating system's db1 functions (where available)
-USE_DB185=		# defined
+USE_DB185=		yes
 
 .include "../../databases/db/buildlink3.mk"
 BUILDLINK_DEPENDS.db=	db>=2.7.7
