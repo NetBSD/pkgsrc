@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.746 2002/12/10 14:32:01 schmonz Exp $
+$NetBSD: CHANGES,v 1.747 2002/12/10 16:08:34 taya Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3904,3 +3904,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pkglint to 3.38 [wiz 2002-12-10]
 	Updated scummvm to 0.3.0 [wiz 2002-12-10]
 	Updated pkglint to 3.39 [schmonz 2002-12-10]
+	Updated phoenix to 0.5 [taya 2002-12-10]
