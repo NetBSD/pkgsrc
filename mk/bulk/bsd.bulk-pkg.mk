@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.26 2001/05/09 02:39:31 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.27 2001/05/09 02:54:38 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -158,6 +158,7 @@ bulk-package:
 		${ECHO_MSG} '' ; \
 		${ECHO_MSG} '' ; \
 		${ECHO_MSG} '###' ; \
+		${ECHO_MSG} '###' `date`: ; \
 		${ECHO_MSG} '### ${MAKE} ${.TARGET} for ${PKGNAME}' ; \
 		${ECHO_MSG} '### Current pkg count: ' `${LS} -l ${PKG_DBDIR} | ${GREP} ^d | ${WC} -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
 		${ECHO_MSG} '###' ; \
@@ -238,7 +239,7 @@ bulk-package:
 			done ; \
 		fi ;\
 		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
-			${SHCOMMENT} "Install required depends via binarypkgs" ; \
+			${SHCOMMENT} "Install required depends via binarypkgs XXX" ; \
 			${ECHO_MSG} "BULK> Installing packages which are required to build ${PKGNAME}." ;\
 			for pkgdir in `${GREP} "^${PKGPATH} " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'` ${BULK_PREREQ} ; do \
 				pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ; \
