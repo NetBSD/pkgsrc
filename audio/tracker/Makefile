@@ -1,25 +1,24 @@
-# $NetBSD: Makefile,v 1.8 1998/04/17 09:37:22 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/20 11:56:20 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.29 1996/12/20 23:46:22 ache Exp 
 #
 
-DISTNAME=       tracker-5.3
-CATEGORIES=     audio
-MASTER_SITES=   ftp://ftp.ens.fr/pub/dmi/users/espie/beta/
-EXTRACT_SUFX=   .tgz
+DISTNAME=		tracker-5.3
+CATEGORIES=		audio
+MASTER_SITES=		ftp://ftp.ens.fr/pub/dmi/users/espie/beta/
+EXTRACT_SUFX=		.tgz
 
-# FreeBSD maintainer
-MAINTAINER=     ache@FreeBSD.ORG
+MAINTAINER=		packages@netbsd.org
 
-RESTRICTED=     "Non-redistributable beta"
+RESTRICTED=		"Non-redistributable beta"
 MIRROR_DISTFILE=	no
 
-WRKSRC=         ${WRKDIR}/tracker
-MAKE_FLAGS=     MACHINE=netbsd CC=${CC} INSTALL="${INSTALL}" \
+WRKSRC=			${WRKDIR}/tracker
+MAKE_FLAGS=		MACHINE=netbsd CC=${CC} INSTALL="${INSTALL}" \
 		INST_BIN_OPT="-c -s -m ${BINMODE} -o ${BINOWN} -g ${BINGRP}" \
 		INST_MAN_OPT="-c -m 644 -o ${BINOWN} -g ${BINGRP}" \
-		COMPRESSION_FILE=${PREFIX}/etc/compression_methods \
-		-f
-INFO_FILES=	tracker
+		COMPRESSION_FILE=${PREFIX}/etc/compression_methods -f
+
+INFO_FILES=		tracker
 
 pre-install:
 	cd ${WRKSRC}/Docs && \

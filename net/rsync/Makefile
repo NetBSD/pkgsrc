@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:39 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:30 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/01/03 10:14:21 obrien Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://samba.anu.edu.au/pub/rsync/  \
 		ftp://ftp.sunet.se/pub/unix/admin/rsync/  \
 		ftp://ftp.fu-berlin.de/pub/unix/network/rsync/
 
-MAINTAINER=     obrien@FreeBSD.org
+MAINTAINER=     packages@netbsd.org
 
 GNU_CONFIGURE=	yes
 MAN1=		rsync.1

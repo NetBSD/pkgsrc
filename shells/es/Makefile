@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:48 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:32 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.4 1996/11/18 11:39:46 asami Exp
 #
 
@@ -7,7 +7,7 @@ PKGNAME=	es-0.9a1
 CATEGORIES=	shells
 MASTER_SITES=   ftp://ftp.sys.toronto.edu/pub/es/
 
-MAINTAINER=	erich@FreeBSD.org
+MAINTAINER=	packages@netbsd.org
 
 MANCOMPRESSED=	yes
 MAN1=		es.1

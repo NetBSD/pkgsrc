@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:44 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/20 11:56:31 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/12 02:19:38 obrien Exp
 #
 
@@ -7,7 +7,7 @@ PKGNAME=	rc-1.5b1
 CATEGORIES=	plan9
 MASTER_SITES=   ftp://ftp.sys.toronto.edu/pub/rc/
 
-MAINTAINER=	erich@FreeBSD.org
+MAINTAINER=	packages@netbsd.org
 
 NO_WRKSUBDIR=	yes
 MANCOMPRESSED=	yes

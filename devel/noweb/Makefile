@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:21 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/20 11:56:22 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/09/15 07:22:06 tg Exp
 #
 
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.cs.virginia.edu/pub/nr/
 EXTRACT_SUFX=	.tgz
 ONLY_FOR_ARCHS=	i386
 
-MAINTAINER=	tg@freebsd.org
+MAINTAINER=	packages@netbsd.org
 
 BUILD_DEPENDS=	icont:${PORTSDIR}/lang/icon
 RUN_DEPENDS=	iconx:${PORTSDIR}/lang/icon

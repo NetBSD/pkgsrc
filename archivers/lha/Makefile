@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:08 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:18 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.9 1996/12/15 02:05:58 max Exp 
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	archivers
 MASTER_SITES=   ftp://ftp.leo.chubu.ac.jp/pub/tools/
 EXTRACT_SUFX=   .tgz
 
-MAINTAINER=     ache@FreeBSD.ORG
+MAINTAINER=     packages@netbsd.org
 
 MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP} BINMODE=${BINMODE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:07 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:17 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.9 1996/12/07 09:28:40 max Exp 
 #
 
@@ -6,7 +6,7 @@ DISTNAME=       bzip-0.21
 CATEGORIES=	archivers
 MASTER_SITES=   http://www.cs.man.ac.uk/arch/people/j-seward/
 
-MAINTAINER=     andreas@klemm.gtn.com
+MAINTAINER=     packages@netbsd.org
 
 NO_CDROM=       "Restrictive copyright (don't sell for profit)"
 MAN1=		bzip.1 bunzip.1

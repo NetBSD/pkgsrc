@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:17 agc Exp $
-# $FreeBSD Id: Makefile,v 1.15 1998/02/18 22:19:58 hoek Exp
+# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:21 frueauf Exp $
+# FreeBSD Id: Makefile,v 1.15 1998/02/18 22:19:58 hoek Exp
 #
 
 DISTNAME=       uudeview-0.5.13
@@ -7,7 +7,7 @@ CATEGORIES=	converters
 MASTER_SITES=	http://www.uni-frankfurt.de/~fp/uudeview/Apps/frank/  \
 		ftp://tsx-11.mit.edu/pub/linux/sources/usr.bin/
 
-MAINTAINER=	hoek@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
 
 LIB_DEPENDS=	uu.1.:${PORTSDIR}/converters/uulib
 

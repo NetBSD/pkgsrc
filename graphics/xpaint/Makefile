@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:27 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:24 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/29 12:17:50 tg Exp
 #
 
@@ -6,7 +6,7 @@ DISTNAME=       xpaint-2.5
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://www.danbbs.dk/~torsten/xpaint/
 
-MAINTAINER=	ports@freebsd.org
+MAINTAINER=	packages@netbsd.org
 
 LIB_DEPENDS=    jpeg.7.:${PORTSDIR}/graphics/jpeg \
 		tiff.3.:${PORTSDIR}/graphics/tiff \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:30 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/20 11:56:25 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
@@ -24,7 +24,7 @@ PATCH_DIST_ARGS= -d ${WRKSRC}/lib -E ${PATCH_DIST_STRIP}
 PATCH_DIST_ARGS= -d ${WRKSRC}/lib --forward --quiet -E ${PATCH_DIST_STRIP}
 .endif
 
-MAINTAINER=	peter@FreeBSD.org
+MAINTAINER=	packages@netbsd.org
 
 BUILD_DEPENDS=	tclsh8.0:${PORTSDIR}/lang/tcl80
 RUN_DEPENDS=	wish8.0:${PORTSDIR}/x11/tk80

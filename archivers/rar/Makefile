@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:08 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/04/20 11:56:18 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=   ftp://ftp.inetpros.net/pub/rar/ \
 EXTRACT_SUFX=   .exe
 ONLY_FOR_ARCHS=	i386
 
-MAINTAINER=     ache@FreeBSD.ORG
+MAINTAINER=     packages@netbsd.org
 
 NO_PACKAGE=     Only unmodified original package can be distributed
 
