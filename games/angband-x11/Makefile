@@ -1,27 +1,27 @@
-# $NetBSD: Makefile,v 1.13 2002/07/26 22:06:46 jschauma Exp $
+# $NetBSD: Makefile,v 1.14 2002/08/16 03:12:13 jschauma Exp $
 #
 
-DISTNAME=		angband-3.0.1
-PKGNAME=		angband-x11-3.0.1
-CATEGORIES=		games x11
+DISTNAME=	angband-3.0.1
+PKGNAME=	angband-x11-3.0.1
+CATEGORIES=	games x11
 MASTER_SITES=	ftp://clockwork.dementia.org/angband/Source/
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${SPOILERFILE}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${SPOILERFILE}
 
-MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://thangorodrim.angband.org/
-COMMENT=		Tolkien based variant of Moria for X11 displays
+MAINTAINER=	root@garbled.net
+HOMEPAGE=	http://thangorodrim.angband.org/
+COMMENT=	Tolkien based variant of Moria for X11 displays
 
-CONFLICTS=		angband-tty-[0-9]*
+CONFLICTS=	angband-tty-[0-9]*
 
-EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_X11=			yes
-USE_NCURSES=		# defined
+USE_X11=	yes
+USE_NCURSES=	# defined
 
-SPOILERFILE=		angband-spoilers.tar.gz
+SPOILERFILE=	angband-spoilers.tar.gz
 
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS=		--with-setgid=games --prefix=${PREFIX}
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--with-setgid=games --prefix=${PREFIX}
 
 .if (${MACHINE_ARCH} == arm32)
 . include "../../lang/gcc/Makefile.gcc"

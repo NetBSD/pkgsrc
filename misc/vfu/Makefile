@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/07/24 22:48:23 jschauma Exp $
+# $NetBSD: Makefile,v 1.26 2002/08/16 03:12:13 jschauma Exp $
 #
 
 DISTNAME=	vfu-3.04
@@ -12,20 +12,20 @@ HOMEPAGE=	http://www.biscom.net/~cade/away/vfu/
 COMMENT=	Small, handy, easy-to-use file manager
 
 USE_BUILDLINK_ONLY=	# defined
-#USE_PERL5=		# defined
+#USE_PERL5=	# defined
 USE_NCURSES=	# defined
 
-DOCDIR=			${PREFIX}/share/doc/vfu
-EGDIR=			${PREFIX}/share/examples/vfu
+DOCDIR=		${PREFIX}/share/doc/vfu
+EGDIR=		${PREFIX}/share/examples/vfu
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
+DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
+INSTALL_FILE=	${WRKDIR}/INSTALL
 
-FILES_SUBST=		CAT=${CAT:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST=	CAT=${CAT:Q}
+FILES_SUBST+=	CHMOD=${CHMOD:Q}
+FILES_SUBST+=	CMP=${CMP:Q}
+FILES_SUBST+=	CP=${CP:Q}
+FILES_SUBST+=	RM=${RM:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 do-build:

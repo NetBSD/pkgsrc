@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/06/30 01:24:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2002/08/16 03:12:12 jschauma Exp $
 # FreeBSD: ports/audio/xamp/Makefile,v 1.5 1999/08/25 04:36:22 obrien Exp
 #
 
@@ -33,20 +33,20 @@ SKIN_DATA=	bfamp.tar.gz chrome.tar.gz mmxamp.tar.gz
 SKIN_DIR=	${PREFIX}/lib/X11/xamp
 
 post-patch:
-		for f in about.cpp aboutData.cpp readmex.h; do \
-			${MV} ${WRKSRC}/$$f ${WRKSRC}/$$f.tmp; \
-			${SED} -e 's:/usr/X11R6:'${PREFIX}':g' < ${WRKSRC}/$$f.tmp > \
+	for f in about.cpp aboutData.cpp readmex.h; do \
+		${MV} ${WRKSRC}/$$f ${WRKSRC}/$$f.tmp; \
+		${SED} -e 's:/usr/X11R6:'${PREFIX}':g' < ${WRKSRC}/$$f.tmp > \
 			${WRKSRC}/$$f; \
-		done
+	done
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/xamp ${PREFIX}/bin
-		${INSTALL_MAN} ${WRKSRC}/xamp.1 ${PREFIX}/man/man1
-		@${INSTALL_DATA_DIR} ${SKIN_DIR}/bfamp-xamp
-		${INSTALL_DATA} ${WRKDIR}/bfamp-xamp/*.bmp ${SKIN_DIR}/bfamp-xamp
-		@${INSTALL_DATA_DIR} ${SKIN_DIR}/chrome-xamp
-		${INSTALL_DATA} ${WRKDIR}/chrome-xamp/*.bmp ${SKIN_DIR}/chrome-xamp
-		@${INSTALL_DATA_DIR} ${SKIN_DIR}/mmxxamp-xamp
-		${INSTALL_DATA} ${WRKDIR}/mmxxamp-xamp/*.bmp ${SKIN_DIR}/mmxxamp-xamp
+	${INSTALL_PROGRAM} ${WRKSRC}/xamp ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/xamp.1 ${PREFIX}/man/man1
+	@${INSTALL_DATA_DIR} ${SKIN_DIR}/bfamp-xamp
+	${INSTALL_DATA} ${WRKDIR}/bfamp-xamp/*.bmp ${SKIN_DIR}/bfamp-xamp
+	@${INSTALL_DATA_DIR} ${SKIN_DIR}/chrome-xamp
+	${INSTALL_DATA} ${WRKDIR}/chrome-xamp/*.bmp ${SKIN_DIR}/chrome-xamp
+	@${INSTALL_DATA_DIR} ${SKIN_DIR}/mmxxamp-xamp
+	${INSTALL_DATA} ${WRKDIR}/mmxxamp-xamp/*.bmp ${SKIN_DIR}/mmxxamp-xamp
 
 .include "../../mk/bsd.pkg.mk"
