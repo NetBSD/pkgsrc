@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/05/14 00:35:24 jtb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:32 tron Exp $
 bin/mailq
 @exec ${CHMOD} u+s %D/bin/mailq
 @exec ${CHOWN} ${NULLMAILER_USER}:${NULLMAILER_GROUP} %D/bin/mailq
@@ -29,8 +29,8 @@ share/doc/nullmailer/TODO
 @exec ${CHOWN} -R ${NULLMAILER_USER}:${NULLMAILER_GROUP} /var/nullmailer/*
 @dirrm libexec/nullmailer
 @dirrm share/doc/nullmailer
-@unexec ${RMDIR} ${PKG_SYSCONFDIR}/nullmailer 2>/dev/null || true
-@unexec ${RMDIR} /var/nullmailer/queue 2>/dev/null || true
-@unexec ${RMDIR} /var/nullmailer/tmp 2>/dev/null || true
-@unexec ${RM} -f /var/nullmailer/trigger 2>/dev/null || true
-@unexec ${RMDIR} /var/nullmailer 2>/dev/null || true
+@unexec ${RMDIR} ${PKG_SYSCONFDIR}/nullmailer 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} /var/nullmailer/queue 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} /var/nullmailer/tmp 2>/dev/null || ${TRUE}
+@unexec ${RM} -f /var/nullmailer/trigger 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} /var/nullmailer 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:47 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:31 tron Exp $
 bin/ali
 bin/anno
 bin/burst
@@ -148,4 +148,4 @@ share/doc/nmh/README
 share/doc/nmh/TODO
 @dirrm libexec/nmh
 @dirrm share/doc/nmh
-@unexec ${RMDIR} %D/etc/nmh 2>/dev/null || true
+@unexec ${RMDIR} %D/etc/nmh 2>/dev/null || ${TRUE}

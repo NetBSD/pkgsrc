@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:35 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:19 tron Exp $
 bin/libtool
 bin/libtoolize
 include/ltdl.h
@@ -31,4 +31,4 @@ share/libtool/ltconfig
 share/libtool/ltmain.sh
 @dirrm share/libtool/libltdl
 @dirrm share/libtool
-@unexec ${RMDIR} %D/share/aclocal 2>/dev/null || true
+@unexec ${RMDIR} %D/share/aclocal 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:09 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:02:01 tron Exp $
 bin/freetemp
 bin/random_effect
 bin/xb_check
@@ -16,4 +16,4 @@ share/doc/xbanner/rnd_doc.html
 share/doc/xbanner/stars.gif
 share/doc/xbanner/xb_check.html
 @dirrm share/doc/xbanner
-@unexec ${RMDIR} -p %D/lib/X11/app-defaults 2>/dev/null || true
+@unexec ${RMDIR} -p %D/lib/X11/app-defaults 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/07/19 14:18:48 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/12/09 16:01:45 tron Exp $
 bin/scrollkeeper-config
 bin/scrollkeeper-get-cl
 bin/scrollkeeper-get-content-list
@@ -245,8 +245,8 @@ share/scrollkeeper/doc/scrollkeeper_manual/C/writingomffiles.html
 @dirrm share/scrollkeeper/doc/scrollkeeper_manual
 @dirrm share/scrollkeeper/doc
 @dirrm share/scrollkeeper
-@unexec ${RMDIR} %D/share/omf/scrollkeeper || true
-@unexec ${RMDIR} %D/share/omf || true
+@unexec ${RMDIR} %D/share/omf/scrollkeeper || ${TRUE}
+@unexec ${RMDIR} %D/share/omf || ${TRUE}
 @dirrm share/doc/scrollkeeper-0.2
 @exec ${MKDIR} %D/var/lib/scrollkeeper
 @exec scrollkeeper-rebuilddb

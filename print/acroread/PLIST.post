@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST.post,v 1.3 2002/06/26 10:29:54 seb Exp $
+@comment $NetBSD: PLIST.post,v 1.4 2002/12/09 16:01:36 tron Exp $
 @exec ${MKDIR} %D/lib/netscape/plugins
-@unexec ${RMDIR} %D/lib/netscape/plugins 2>/dev/null || true
-@unexec ${RMDIR} %D/lib/netscape 2>/dev/null || true
+@unexec ${RMDIR} %D/lib/netscape/plugins 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/netscape 2>/dev/null || ${TRUE}
 @exec ln -sf ../../Resource/Font %D/Acrobat4/Reader/${PLATFORM}/fonts
 @unexec ${RM} -f %D/Acrobat4/Reader/${PLATFORM}/fonts
 @exec ln -sf ../res %D/Acrobat4/Reader/${PLATFORM}/res

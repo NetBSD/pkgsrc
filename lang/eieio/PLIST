@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/18 15:14:24 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/09 16:01:30 tron Exp $
 ${LISPDIR}/eieio.el
 ${LISPDIR}/eieio.elc
 ${LISPDIR}/eieio-comp.el
@@ -16,4 +16,4 @@ ${LISPDIR}/compare-strings.elc
 @unexec ${INSTALL_INFO} --delete %D/info/eieio.info %D/info/dir
 info/eieio.info
 @exec ${INSTALL_INFO} %D/info/eieio.info %D/info/dir
-@unexec ${RMDIR} %D/${LISPDIR} 2>/dev/null || true
+@unexec ${RMDIR} %D/${LISPDIR} 2>/dev/null || ${TRUE}
