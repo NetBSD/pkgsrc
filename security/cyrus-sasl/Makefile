@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/09/07 07:37:37 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2002/09/18 21:15:16 jlam Exp $
 
 DISTNAME=		cyrus-sasl-1.5.27
 SVR4_PKGNAME=		csasl
@@ -75,9 +75,6 @@ PKG_GROUPS=		${CYRUS_GROUP}
 PKG_USERS=		${CYRUS_USER}:${CYRUS_GROUP}::::${SH}
 RCD_SCRIPTS=		sasl_pwcheck saslauthd
 OWN_DIRS=		${PREFIX}/lib/sasl
-
-DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 
 post-extract:
 	cd ${WRKSRC}; ${RM} -f include/md5.h

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/04/27 11:20:52 yyamano Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/18 21:15:10 jlam Exp $
 
 PKGNAME=	courier-auth-${BASE_VERS}
 PKGREVISION?=	1
@@ -28,8 +28,6 @@ CONF_FILES_PERMS+=	${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}	\
 .endfor
 RCD_SCRIPTS=		authdaemond
 
-DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
 
 do-install:
