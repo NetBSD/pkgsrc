@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/21 14:17:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/06/06 14:58:29 mjl Exp $
 lib/anomy-sanitizer/bin/Anomy/HTMLCleaner.pm
 lib/anomy-sanitizer/bin/Anomy/Log.pm
 lib/anomy-sanitizer/bin/Anomy/MIMEStream.pm
@@ -17,6 +17,7 @@ sbin/simplify
 share/doc/anomy-sanitizer/CHANGELOG.sanitizer
 share/doc/anomy-sanitizer/CREDITS
 share/doc/anomy-sanitizer/README.sanitizer
+share/doc/anomy-sanitizer/UNICODE.TXT
 share/doc/anomy-sanitizer/contrib/anomy.m4
 share/doc/anomy-sanitizer/contrib/check_for_virus
 share/doc/anomy-sanitizer/contrib/postfix.txt
