@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.831 2003/09/04 11:48:45 wiz Exp $
+$NetBSD: TODO,v 1.832 2003/09/04 13:03:20 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -139,7 +139,6 @@ Suggested package updates
 	o gnustep-0.8.9
 	o gpa-0.6.1
 	o gphoto2-2.1.2
-	o gq-0.6.0 [pkg/21284]
 	o grace-5.1.12
 	o grepmail-5.20
 	o gstreamer-0.6.3
