@@ -1,0 +1,29 @@
+$NetBSD: patch-bo,v 1.1.1.1 2004/04/19 23:25:29 taya Exp $
+
+diff -ru ../Orig/mozilla/nsprpub/configure.in ./nsprpub/configure.in
+--- ../Orig/mozilla/nsprpub/configure.in	2003-12-16 04:58:56.000000000 +0900
++++ ./nsprpub/configure.in	2004-01-31 21:30:19.000000000 +0900
+@@ -930,6 +930,9 @@
+     DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
+     MDCPUCFG_H=_freebsd.cfg
+     PR_MD_CSRCS=freebsd.c
++    if test "$LIBRUNPATH"; then
++        DSO_LDOPTS="$DSO_LDOPTS -Wl,-R$LIBRUNPATH"
++    fi
+     ;;
+ 
+ *-hpux*)
+@@ -2182,7 +2185,12 @@
+ 	        _PTHREAD_LDFLAGS="-lc_r"
+ 	    fi
+ 	    ;;
+-    *-openbsd*|*-bsdi*|*-netbsd*)
++    *-netbsd*)
++	    if test "$ac_cv_have_dash_pthread" = "yes"; then
++	        _PTHREAD_LDFLAGS="-pthread"
++	    fi
++	    ;;
++    *-openbsd*|*-bsdi*)
+ 	    AC_DEFINE(_THREAD_SAFE)
+ 	    dnl -pthread links in -lc_r, so don't specify it explicitly.
+ 	    if test "$ac_cv_have_dash_pthread" = "yes"; then
