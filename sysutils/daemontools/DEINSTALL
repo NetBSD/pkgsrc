@@ -1,14 +1,11 @@
-#! /bin/sh
-#
-# $NetBSD: DEINSTALL,v 1.1 2001/10/31 22:53:02 zuntum Exp $
-#
+# $NetBSD: DEINSTALL,v 1.2 2004/05/02 17:50:05 xtraeme Exp $
 
 case "$2" in
 	DEINSTALL) rmdir 2>/dev/null @@SERVICEDIR@@ || cat <<EOF
 
 =============================================================
-Note that /service directory was not removed. If you
-no longer need it, remove it by hand.
+Your service directory @@SERVICEDIR@@ was not removed.
+If you no longer need it, remove it by hand.
 =============================================================
 
 EOF
