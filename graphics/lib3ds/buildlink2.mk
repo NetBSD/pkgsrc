@@ -1,8 +1,8 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/03/12 22:07:28 jschauma Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/05/24 08:08:57 salo Exp $
 #
 # This Makefile fragment is included by packages that use lib3ds.
 #
-# This file was created automatically using createbuildlink 2.0.
+# This file was created automatically using createbuildlink 2.6.
 #
 
 .if !defined(LIB3DS_BUILDLINK2_MK)
@@ -14,26 +14,7 @@ BUILDLINK_PKGSRCDIR.lib3ds?=		../../graphics/lib3ds
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.lib3ds=lib3ds
 BUILDLINK_PREFIX.lib3ds_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/atmosphere.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/background.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/camera.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/chunk.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/ease.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/file.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/float.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/io.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/light.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/material.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/matrix.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/mesh.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/node.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/quat.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/shadow.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/tcb.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/tracks.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/types.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/vector.h
-BUILDLINK_FILES.lib3ds+=	include/lib3ds/viewport.h
+BUILDLINK_FILES.lib3ds+=	include/lib3ds/*
 BUILDLINK_FILES.lib3ds+=	lib/lib3ds.*
 
 .include "../../graphics/Mesa/buildlink2.mk"
