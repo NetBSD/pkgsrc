@@ -1,9 +1,9 @@
-$NetBSD: patch-ba,v 1.1 1999/12/12 00:08:52 mjl Exp $
+$NetBSD: patch-ba,v 1.2 2000/04/10 18:29:12 rh Exp $
 
---- bladeenc/system.h.orig	Sat Dec 11 04:37:30 1999
-+++ bladeenc/system.h	Sat Dec 11 04:38:33 1999
-@@ -39,7 +39,7 @@
- #define			BEOS_PPC				18
+--- bladeenc/system.h.orig	Tue Feb 22 21:46:44 2000
++++ bladeenc/system.h	Mon Apr 10 20:25:50 2000
+@@ -40,7 +40,7 @@
+ #define			BEOS_X86				19
  
  #ifndef	SYSTEM
 -#	define		SYSTEM		LINUX_I386		/* Set current system here, select */
