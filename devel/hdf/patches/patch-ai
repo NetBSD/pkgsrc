@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.4 2001/03/25 01:09:51 jtb Exp $
+$NetBSD: patch-ai,v 1.5 2001/04/19 00:56:34 jtb Exp $
 
---- /dev/null	Sun Mar 25 00:38:45 2001
+--- /dev/null	Thu Apr 19 00:41:39 2001
 +++ mfhdf/ncdump/Makefile
-@@ -0,0 +1,34 @@
+@@ -0,0 +1,33 @@
 +PROG= ncdump
 +PROGNAME= hdfncdump
 +
@@ -15,13 +15,12 @@ $NetBSD: patch-ai,v 1.4 2001/03/25 01:09:51 jtb Exp $
 +MANDIR= ${PREFIX}/man
 +
 +CPPFLAGS+= -I${.CURDIR}/../libsrc
-+CPPFLAGS+= @SWAP@
 +
 +LDFLAGS+= -L${.CURDIR}/../libsrc
 +LDFLAGS+= -L${.CURDIR}/../../hdf/src
 +LDFLAGS+= -Wl,-R${JPEGBASE} -L${JPEGBASE}
 +
-+LDADD+= -lmfhdf -ldf -ljpeg -lz -lm
++LDADD+= -lmfhdf -ldf -ljpeg -lz
 +
 +NOGCCERROR= 1
 +

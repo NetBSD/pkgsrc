@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/04/14 21:43:41 jtb Exp $
+# $NetBSD: Makefile,v 1.10 2001/04/19 00:56:33 jtb Exp $
 
 DISTNAME=	HDF4.1r4
 PKGNAME=	hdf-4.1r4
@@ -44,21 +44,6 @@ post-patch:
 	${WRKSRC}/mfhdf/ncdump/hdfncdump.1
 	${MV} -f ${WRKSRC}/mfhdf/ncgen/ncgen.1			\
 	${WRKSRC}/mfhdf/ncgen/hdfncgen.1
-
-# XXX Don't compile this file with optimization.
-pre-configure:
-	${CC} ${FILESDIR}/bytesex.c -o ${WRKSRC}/bytesex
-
-SWAP=	`${WRKSRC}/bytesex`
-
-do-configure:
-	@for f in libsrc dumper ncgen ncdump; do		\
-		${SED} -e 's:@SWAP@:'${SWAP}':g'		\
-		${WRKSRC}/mfhdf/$$f/Makefile >			\
-		${WRKSRC}/mfhdf/$$f/Makefile.tmp		\
-		&& ${MV} ${WRKSRC}/mfhdf/$$f/Makefile.tmp	\
-		${WRKSRC}/mfhdf/$$f/Makefile;			\
-	done
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/mfhdf/fortran/netcdf_hdf.inc \

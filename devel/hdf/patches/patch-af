@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.5 2001/03/25 01:09:50 jtb Exp $
+$NetBSD: patch-af,v 1.6 2001/04/19 00:56:34 jtb Exp $
 
---- /dev/null	Sun Mar 25 00:38:24 2001
+--- mfhdf/libsrc/Makefile.orig	Thu Apr 19 00:17:24 2001
 +++ mfhdf/libsrc/Makefile
 @@ -0,0 +1,27 @@
 +.PATH: ${.CURDIR} ${.CURDIR}/../fortran ${.CURDIR}/../fortran/config
@@ -13,7 +13,7 @@ $NetBSD: patch-af,v 1.5 2001/03/25 01:09:50 jtb Exp $
 +	putget.c putgetg.c sharray.c string.c var.c hdfsds.c mfsd.c	\
 +	nssdc.c xdrposix.c jackets-fbsd.c mfsdf.c mfsdff.f
 +
-+CPPFLAGS+= -Dunix -DHDF -DNDEBUG @SWAP@
++CPPFLAGS+= -Dunix -DHDF -DNDEBUG -DNETLONG=int
 +CPPFLAGS+= -I${.CURDIR} -I${.CURDIR}/../../hdf/src
 +
 +NOLINT= 1
