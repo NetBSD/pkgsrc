@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/06/08 18:26:02 bad Exp $
+# $NetBSD: Makefile,v 1.5 1999/08/18 08:46:53 agc Exp $
 
 DISTNAME=		majordomo-1.94.4
 CATEGORIES=		mail
@@ -37,6 +37,8 @@ EXDIR=			${PREFIX}/share/examples/majordomo
 EXDIRS=			archives archives/example-l digests digests/example-l-digest lists
 EXFILES=		example-l.passwd example-l.info
 EXLISTS=		example-l example-l-digest
+
+BUILD_DEFS+=		MAJORDOMO_USER MAJORDOMO_GROUP MAJORDOMO_TMPDIR
 
 require-uid:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
