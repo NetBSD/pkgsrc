@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1 2005/01/25 14:50:39 jschauma Exp $
+
+--- ../pr/src/io/prprf.c.orig	Tue Dec 21 11:15:40 2004
++++ ../pr/src/io/prprf.c	Tue Dec 21 11:29:27 2004
+@@ -51,7 +51,13 @@
+ ** Note: on some platforms va_list is defined as an array,
+ ** and requires array notation.
+ */
+-#if (defined(LINUX) && defined(__powerpc__)) || \
++#if (defined(LINUX) && defined(__x86_64__))
++#define VARARGS_ASSIGN(foo, bar) __va_copy((foo), (bar))
++#elif (defined (__NetBSD__) && \
++       (defined(__amd64__) || \
++       (defined(__powerpc__) && __NetBSD_Version__ >= 105000000)))
++#define VARARGS_ASSIGN(foo, bar) __va_copy((foo), (bar))
++#elif (defined(LINUX) && defined(__powerpc__)) || \
+     (defined(LINUX) && defined(__s390__)) || \
+     (defined(LINUX) && defined(__s390x__)) || \
+     defined(WIN16) || defined(QNX) || \

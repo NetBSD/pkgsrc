@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1 2005/01/25 14:50:39 jschauma Exp $
+
+--- ../pr/src/Makefile.in.orig	2003-05-13 18:23:58.000000000 -0700
++++ ../pr/src/Makefile.in
+@@ -164,6 +164,12 @@ OS_LIBS		= -ldl
+ endif
+ endif
+ 
++ifeq ($(OS_ARCH),NetBSD)
++ifeq ($(USE_PTHREADS), 1)
++OS_LIBS		= -lpthread
++endif
++endif
++
+ ifeq ($(OS_ARCH),HP-UX)
+ ifeq ($(USE_PTHREADS), 1)
+ ifeq (,$(filter-out B.10.10 B.10.20,$(OS_RELEASE)))
