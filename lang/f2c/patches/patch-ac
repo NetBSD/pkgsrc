@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.13 2002/01/22 16:47:23 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.14 2004/09/15 20:56:31 dmcmahill Exp $
 
 Much cleanup of the script.  Added various options such as
 -O    for optimization
@@ -31,7 +31,7 @@ Also only pass -m* to the C compiler not f2c.
 -PATH=/usr/local/bin:/bin:/usr/bin
 -
 +#!/bin/sh
-+PATH=/bin:/usr/bin:@PREFIX@/bin
++PATH=$PATH:/bin:/usr/bin:@PREFIX@/bin
 +#USAGESTART
  # f77-style shell script to compile and load fortran, C, and assembly codes
 -
@@ -165,7 +165,7 @@ Also only pass -m* to the C compiler not f2c.
 -### about multiple definitions of COMMON blocks.
 -#CC=${CC_f2c:-'cc -common'}
 -CC=${CC_f2c:-'cc'}
-+CC=${CC_f2c:-'cc '}
++CC=${CC_f2c:-'@CC@ '}
  EFL=${EFL:-efl}
  EFLFLAGS=${EFLFLAGS:-'system=portable deltastno=10'}
  RATFOR=${RATFOR:-ratfor}
@@ -176,7 +176,7 @@ Also only pass -m* to the C compiler not f2c.
 +F2C=${F2C:-@PREFIX@/bin/f2c}
 +F2CFLAGS=${F2CFLAGS:='-Aw8 -Nn802 -Nx400'}
 +S2DBLFLAG="-R"
-+CPP=${CPP:-/usr/bin/cpp}
++CPP=${CPP:-'@CPP@ '}
  rc=0
  trap "rm -f $s $t; exit \$rc" 0
  OUTF=a.out
@@ -447,7 +447,7 @@ Also only pass -m* to the C compiler not f2c.
 -### about unnecessary -l options.
 +case $cOPT 
 +in 
-+  2) $CC $CFLAGS -o $OUTF -u _MAIN__ $OFILES $LIBS $FLIBS 
++  2) $CC $CFLAGS -o $OUTF @MAIN@ $OFILES $LIBS $FLIBS 
 +     ;; 
 +esac
  

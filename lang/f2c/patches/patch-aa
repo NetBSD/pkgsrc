@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2004/09/14 22:09:40 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.14 2004/09/15 20:56:31 dmcmahill Exp $
 
 --- Makefile.orig	Tue Sep 14 16:47:52 2004
 +++ Makefile
-@@ -0,0 +1,43 @@
+@@ -0,0 +1,47 @@
 +# Top level Makefile for f2c, libF77, and libI77
 +
 +all: f2c libF77/libF77.la libI77/libI77.la  f2c-f77 man
@@ -44,5 +44,9 @@ $NetBSD: patch-aa,v 1.13 2004/09/14 22:09:40 dmcmahill Exp $
 +	${BSD_INSTALL_MAN} ./f2c.1 ${PREFIX}/man/man1
 +	${BSD_INSTALL_MAN} ./f2c.0 ${PREFIX}/man/cat1
 +
-+f2c-f77: fc
-+	sed 's!@PREFIX@!${PREFIX}!g' fc > f2c-f77
++f2c-f77: fc f2c hello.f
++	./src/f2c -Aw8 -Nn802 -Nx400 hello.f
++	$(CC) $(CFLAGS) -c hello.c
++	main=`$(NM) hello.o | ${AWK} 'BEGIN{x=""} {gsub(/\|/,""); for(i=1; i<=NF; i=i+1){if($$i ~ /MAIN/){x="-u " $$i}}} END{print x}'` ; \
++	${ECHO} "Adding $$main to f2c-f77 script" ; \
++	sed -e 's;@PREFIX@;${PREFIX};g' -e 's;@CC@;${CC};g' -e 's;@CPP@;${CPP};g' -e "s;@MAIN@;$$main;g" fc > f2c-f77
