@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2408 2004/11/22 11:52:08 xtraeme Exp $
+$NetBSD: TODO,v 1.2409 2004/11/22 13:04:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -287,6 +287,7 @@ Suggested package updates
 	o ap-layout-3.2.1
 	o ap-mp3-0.40
 	o ap-ssl-2.8.22
+	o ap-xslt-1.3.8
 	o ap2-transform-0.6.0
 	o apachetop-0.9
 	o apcupsd-3.10.16
@@ -311,6 +312,7 @@ Suggested package updates
 	o astyle-1.15.3
 	o atlc-4.2.11
 	o auctex-11.53
+	o audacity-1.2.3
 	o autogen-5.6.4
 	o avidemux-2.0.34
 	o avl-2.0.1
@@ -365,7 +367,7 @@ Suggested package updates
 	o clisp-2.33.2
 	o cmake-2.0.5
 	o cmp3-2.0pre6
-	o cocoon-2.1.5
+	o cocoon-2.1.6
 	o codeville-0.1.9
 	o columba-1.0RC1
 	o common-mml-1.2.16
@@ -431,7 +433,7 @@ Suggested package updates
 	o eblook-1.6.1
 	o ed2k-gtk-gui-0.6.3
 	o edb-1.0.5
-	o efax-gtk-2.2.12
+	o efax-gtk-2.2.13
 	o efont-unicode-0.4.2
 	o eggdrop-1.6.17
 	o egtk-0.3.6
@@ -548,6 +550,7 @@ Suggested package updates
 	o guile-oops-1.0.2
 	o guile-pg-0.22 [pkgsrc-wip]
 	o guile-www-1.1.1
+	o gv-3.6.0
 	o hackbot-2.21
 	o hashcash-1.13
 	o haskell-mode-1.45
@@ -629,7 +632,7 @@ Suggested package updates
 	o lavaps-2.6
 	o lcab-1.011
 	o lcc-4.2
-	o leafnode-1.10.6
+	o leafnode-1.10.7
 	o lesstif-0.93.97
 	o libast-0.6
 	o libcdaudio-0.99.12
@@ -640,7 +643,7 @@ Suggested package updates
 	o libfwbuilder-2.0.3
 	o libhydrogen-0.9.0
 	o libiconv-1.9.2
-	o libidn-0.5.10
+	o libidn-0.5.11
 	o libjit-0.0.4
 	o libksba-0.9.9
 	o liblive-2004.11.09a
@@ -939,7 +942,7 @@ Suggested package updates
 	o qwspritefield-1.7
 	o qwt-0.4.0
 	o racoon-20040818a
-	o raine-0.41.2
+	o raine-0.42.0
 	o randread-0.2
 	o raptor-1.4.2
 	o rasmol-2.7.2.1.1
@@ -1064,6 +1067,7 @@ Suggested package updates
 	o tileworld-1.2.1
 	o tinc-1.0.2
 	o tinyproxy-1.6.3
+	o tkcvs-7.2.2
 	o tkdesk-2.0
 	o tkdiff-4.0.2
 	o tkgate-1.8.5
