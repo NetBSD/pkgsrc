@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2004/01/06 07:08:13 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2004/01/21 22:19:30 heinz Exp $
 
 DISTNAME=	Mail-SpamAssassin-${PKGVERSION}
-PKGNAME=	spamassassin-2.61
+PKGNAME=	spamassassin-2.63
 PKGREVISION=	# empty
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail
@@ -152,7 +152,6 @@ post-install:
 	@${TEST} -r ${PLIST_ADD} && ${RM} ${PLIST_ADD} ; :
 	@ # ninja image is in the static PLIST
 	@${INSTALL_DATA} ${WRKSRC}/ninjabutton.png ${HTMLDIR}/
-	@${INSTALL_DATA} ${FILESDIR}/change_summary.txt ${DOCDIR}/
 .for f in CONTRIB_CERT COPYRIGHT INSTALL License README TRADEMARK USAGE	\
 		sample-nonspam.txt sample-spam.txt spamd/README.spamd	\
 		spamd/README.spamd-vpopmail
