@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/02/16 13:46:30 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2001/06/11 06:34:20 jlam Exp $
 #
 
 DISTNAME=	vipec-2.0.4
@@ -20,8 +20,7 @@ EVAL_PREFIX+=	QT2DIR=qt2-libs
 # make sure configure finds png
 CPPFLAGS+=              -I${LOCALBASE}/include
 CONFIGURE_ENV+=	"QTDIR=${QT2DIR}/qt2" \
-		USER_LDFLAGS="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib" \
-		CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"
+		USER_LDFLAGS="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
 CONFIGURE_ARGS+=	"--with-qt-dir=${QT2DIR}/qt2"
 
 post-patch:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/05/22 09:32:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/11 06:34:37 jlam Exp $
 #
 
 DISTNAME=		libgdgeda-1.6
@@ -13,7 +13,7 @@ DEPENDS+=		png>=1.0.11:../../graphics/png
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-CONFIGURE_ENV+=		CPPFLAGS="-I${PREFIX}/include"
+CPPFLAGS+=		-I${PREFIX}/include
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 

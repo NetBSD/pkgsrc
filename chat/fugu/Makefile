@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/16 21:00:26 lukem Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/11 06:34:20 jlam Exp $
 #
 
 DISTNAME=	fugu-1.0
@@ -13,7 +13,7 @@ DEPENDS+=	rsaref-2.0p3:../../security/rsaref/
 DEPENDS+=	py-Pmw>=0.8.5:../../x11/py-Pmw/
 
 GNU_CONFIGURE= 	YES
-CONFIGURE_ENV+=	LDFLAGS="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib" \
-		CPPFLAGS="-I${LOCALBASE}/include -I${LOCALBASE}/include/rsaref"
+LDFLAGS+=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/rsaref
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/04/02 20:06:14 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/06/11 06:34:36 jlam Exp $
 #
 
 DISTNAME=	gqview-0.10.1
@@ -17,8 +17,6 @@ USE_LIBINTL=	yes
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	ac_cv_path_GNOME_CONFIG=no
-CONFIGURE_ENV+=	CFLAGS="${CFLAGS}"
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 # for libpng recognition

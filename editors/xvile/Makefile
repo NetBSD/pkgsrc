@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/02/16 14:40:56 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2001/06/11 06:34:32 jlam Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -26,7 +26,6 @@ CONFIGURE_ARGS+=	--with-libdir-path=${FILTERDIR}
 # Until the source catches up to the current Perl API, we need PERL_POLLUTE
 # to look like an older perl.
 CPPFLAGS+=		-DPERL_POLLUTE=1
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 MAKEFILE=		makefile
 INSTALL_TARGET=		install install-perl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/05/22 09:32:20 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2001/06/11 06:34:35 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/02/14 07:55:45 asami Exp
 #
 
@@ -37,7 +37,6 @@ GD_MINOR=	9
 MAKE_ENV+=	GD_MAJOR="${GD_MAJOR}" GD_MINOR="${GD_MINOR}" COMPILER="${CC}"
 
 EVAL_PREFIX+=	XPMDIR=xpm
-MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=	-I${LOCALBASE}/include/freetype			# freetype.h
 CPPFLAGS+=	-I${LOCALBASE}/include				# png.h
 CPPFLAGS+=	-I${XPMDIR}/include -I${XPMDIR}/include/X11	# xpm.h

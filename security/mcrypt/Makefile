@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:49:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/11 06:34:48 jlam Exp $
 
 DISTNAME=	mcrypt-2.5.5
 CATEGORIES=	security devel
@@ -15,6 +15,5 @@ USE_LIBTOOL=	yes
 USE_LIBINTL=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"

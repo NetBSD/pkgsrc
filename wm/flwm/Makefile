@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/11 06:34:53 jlam Exp $
 #
 
 DISTNAME=	flwm-0.25
@@ -15,7 +15,7 @@ DEPENDS+=	fltk-*:../../x11/fltk
 USE_X11BASE=	# defined
 
 GNU_CONFIGURE=	# defined
-CONFIGURE_ENV+=	X_LIBS="-lGL" CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ENV+=	X_LIBS="-lGL"
 CPPFLAGS+=	-I${X11PREFIX}/include
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/06/11 02:05:09 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/11 06:34:29 jlam Exp $
 #
 
 DISTNAME=	rpc2-1.10
@@ -23,6 +23,5 @@ LTCONFIG_OVERRIDE= ${WRKSRC}/ltconfig
 
 CONFIGURE_ENV+=	ac_cv_search_tgetent="-ltermcap"
 CONFIGURE_ENV+=	PERL=${PERL5}
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"

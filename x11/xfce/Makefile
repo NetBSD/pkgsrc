@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/04/02 20:06:15 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2001/06/11 06:34:59 jlam Exp $
 
 DISTNAME=		xfce-3.6.3
 CATEGORIES=		x11
@@ -28,8 +28,6 @@ CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc
 CONFIGURE_ARGS+=	--enable-imlib=${IMLIBDIR}
-
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 # work around bug in configure script
 CONFIGURE_ENV+=		gt_cv_func_gettext_libintl="yes"

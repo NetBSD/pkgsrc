@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2001/05/26 13:28:40 rh Exp $
+# $NetBSD: Makefile,v 1.66 2001/06/11 06:34:57 jlam Exp $
 
 DISTNAME=		gnome-core-1.4.0.4
 CATEGORIES=		x11 gnome
@@ -28,7 +28,6 @@ LOCALSTATEDIR=		/var/gnome
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR}
 CPPFLAGS+=		-I${LOCALBASE}/include	# libintl.h
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 USE_PERL5=		YES
 PERL_SCRIPTS=		help-browser/gnome-convert help-browser/gnome-download

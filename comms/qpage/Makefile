@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 13:56:23 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/11 06:34:22 jlam Exp $
 #
 
 DISTNAME=	qpage-3.3
@@ -14,8 +14,8 @@ ONLY_FOR_PLATFORM=	SunOS-*-*        # untested on NetBSD
 
 GNU_CONFIGURE=	yes
 
-MAKE_ENV+=	CPPFLAGS="`${AWK} -F: '/^uucp:/ { 			\
-	printf(\"-DDAEMONUSER=%s -DDAEMONGROUP=%s\", $$3, $$4); }'	\
-	/etc/passwd`"
+CPPFLAGS+=	`${AWK} -F: '/^uucp:/ { 				\
+		printf(\"-DDAEMONUSER=%s -DDAEMONGROUP=%s\", $$3, $$4); }' \
+		/etc/passwd`
 
 .include "../../mk/bsd.pkg.mk"
