@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6968 2004/08/22 00:15:16 schmonz Exp $
+$NetBSD: CHANGES,v 1.6969 2004/08/22 01:09:46 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4015,3 +4015,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed kimagemapeditor [markd 2004-08-21]
 	Updated qmail to 1.03nb9 [schmonz 2004-08-22]
 	Removed netqmail [schmonz 2004-08-22]
+	Updated kmplayer to 0.8.3rc4 [markd 2004-08-22]
