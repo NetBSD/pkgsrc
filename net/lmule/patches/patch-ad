@@ -1,0 +1,32 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/03/31 20:58:41 jmmv Exp $
+
+--- src/Preferences.cpp.orig	2003-03-27 09:04:13.000000000 +0100
++++ src/Preferences.cpp	2003-03-27 09:05:40.000000000 +0100
+@@ -22,6 +22,10 @@
+ #include <config.h>
+ #endif // HAVE_CONFIG_H
+ 
++#if !defined(USG) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__FreeBSD__)
++#include <sys/param.h>
++#endif
++
+ #include "wintypes.h"
+ #include "Preferences.h"
+ #include <time.h>
+@@ -41,11 +45,16 @@
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ 
++#if (defined(BSD) && (BSD >= 199103))
++#define MAX_PATH MAXPATHLEN
++#else
+ #define MAX_PATH 2048
++#endif
+ 
+ extern int sprintf(char *__restrict __s,__const char*__restrict __format,...) __attribute__ ((__format__ (__printf__, 2,3)));
+ 
+ #ifdef __FreeBSD__
++#elif defined(__NetBSD__)
+ extern long long atoll(char *s);
+ #endif /* __FreeBSD__ */
+ 

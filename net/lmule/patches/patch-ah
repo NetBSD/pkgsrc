@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1.1.1 2003/03/31 20:58:41 jmmv Exp $
+
+--- src/otherfunctions.cpp.orig	2003-03-27 09:06:24.000000000 +0100
++++ src/otherfunctions.cpp	2003-03-27 09:06:56.000000000 +0100
+@@ -546,6 +546,7 @@
+ }
+ 
+ #ifdef __FreeBSD__   
++#elif defined(__NetBSD__)
+ long long atoll( char * s ){
+ return  strtoll(s, (char **)NULL, 10);
+ }

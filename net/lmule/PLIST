@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/31 20:58:41 jmmv Exp $
+bin/lmule
+share/applications/lmule.desktop
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/lmule.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/lmule.mo
+${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/lmule.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/lmule.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/lmule.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/lmule.mo
+share/pixmaps/lmule.xpm
+@comment in gnome2-dirs: @dirrm share/applications

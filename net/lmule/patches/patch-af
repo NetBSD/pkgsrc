@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/03/31 20:58:41 jmmv Exp $
+
+--- src/SharedFileList.cpp.orig	2003-03-30 16:24:44.000000000 +0200
++++ src/SharedFileList.cpp	2003-03-30 16:26:48.000000000 +0200
+@@ -37,7 +37,9 @@
+ #include <unistd.h>
+ 
+ #ifdef __FreeBSD__
++#elif defined(__NetBSD__) || defined(__OpenBSD__)
+ #include <libgen.h>
++#include <sys/param.h>
+ #endif
+ 
+ CSharedFileList::CSharedFileList(CPreferences* in_prefs,CServerConnect* in_server,CKnownFileList* in_filelist){
