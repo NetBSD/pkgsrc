@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1717 2004/05/07 11:14:50 jmmv Exp $
+$NetBSD: TODO,v 1.1718 2004/05/07 12:43:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -263,7 +263,7 @@ Suggested package updates
 	o libnet-1.1.1
 	o libole2-2.2.8
 	o licq-1.2.7
-	o liferea-0.4.7d
+	o liferea-0.4.8
 	o lilypond-2.2
 	o lmbench-2.0.4
 	o lout-3.29
@@ -272,11 +272,12 @@ Suggested package updates
 	o maildrop-1.6.3
 	o maradns-1.0.21
 	o marbles-1.0.6
-	o matchbox-0.8
+	o matchbox-0.8.2
 	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o mimedefang-2.42
 	o minicom-2.1
+	o mkvtoolnix-0.8.9
 	o mono-0.31
 	o mowitz-0.3.0
 	o moz-bin-plugger-1.5.1
@@ -295,7 +296,7 @@ Suggested package updates
 	o nosefart-2.1
 	o ns-flash-6.0.79
 	o nslint-2.1a3
-	o nut-9.12
+	o nut-9.13
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
 	o onyx-5.1.1
