@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/04/12 23:19:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/04/27 08:03:43 tron Exp $
 lib/python1.5/site-packages/_numpymodule.so
 lib/python1.5/site-packages/fast_umathmodule.so
 lib/python1.5/site-packages/fftpack.so
@@ -33,7 +33,6 @@ lib/python1.5/site-packages/RandomArray.pyo
 lib/python1.5/site-packages/UserArray.py
 lib/python1.5/site-packages/UserArray.pyc
 lib/python1.5/site-packages/UserArray.pyo
-@dirrm lib/python1.5/site-packages
 share/doc/py-Numeric/doc.html
 share/doc/py-Numeric/home.html
 @dirrm share/doc/py-Numeric
