@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/31 13:42:33 skrll Exp $
+$NetBSD: patch-aa,v 1.2 2002/06/21 15:36:31 skrll Exp $
 
 --- kcalc/Makefile.am.orig	Wed May  8 19:31:32 2002
 +++ kcalc/Makefile.am
-@@ -1,20 +1,22 @@
+@@ -1,20 +1,23 @@
  
  bin_PROGRAMS = kcalc
 -lib_LTLIBRARIES = kcalc.la
@@ -14,6 +14,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 13:42:33 skrll Exp $
 +libkcalc_main_la_LIBADD = $(LIB_KDEUI) -lm
 +
 +kcalc_la_SOURCES = kcalc_main.cpp
++kcalc_la_LIBADD = libkcalc_main.la
 +kcalc_la_LDFLAGS = $(all_libraries) -module -avoid-version
  
  METASOURCES = AUTO
@@ -31,7 +32,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 13:42:33 skrll Exp $
  kcalc_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  pics_DATA = 
-@@ -29,6 +31,3 @@
+@@ -29,6 +32,3 @@
  
  messages:
  	$(XGETTEXT) *.cpp -o $(podir)/kcalc.pot
