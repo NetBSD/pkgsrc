@@ -1,0 +1,213 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/18 09:36:01 rh Exp $
+share/GNUstep/System/Applications/Gorm.app/Gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/MenusPalette.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/palette.table
+share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/0Menus
+share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormWindowInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormWindowSizeInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/WindowDrag.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/WindowsPalette.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/palette.table
+share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/1Windows
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/ControlsPalette.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormBoxInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormButtonInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormCellInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormFormInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormMatrixInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormPopUpButtonInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormSliderInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormStepperInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormTextFieldInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/palette.table
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/2Controls
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/ContainersPalette.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormBrowserInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormTableColumnInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormTableColumnSizeInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormTableViewInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/palette.table
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/3Containers
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/DataPalette.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormComboBoxInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormDateFormatterInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormImageViewInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNumberFormatterInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormTextViewInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/palette.table
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/4Data
+share/GNUstep/System/Applications/Gorm.app/Resources/ClassInformation.plist
+share/GNUstep/System/Applications/Gorm.app/Resources/Defaults.plist
+share/GNUstep/System/Applications/Gorm.app/Resources/Gorm.desktop
+share/GNUstep/System/Applications/Gorm.app/Resources/Gorm.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormAction.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormActionSelected.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormClass.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormCustomClassInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/GormEHCoil.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormEHLine.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormEVCoil.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormEVLine.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormFilesOwner.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormFirstResponder.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormFontManager.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormImage.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormInfo.plist
+share/GNUstep/System/Applications/Gorm.app/Resources/GormLinkImage.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormMHCoil.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormMHLine.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormMVCoil.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormMVLine.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormMenu.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormObject.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormOutlet.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormOutletSelected.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormSound.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormSourceTag.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormTargetTag.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormUnknown.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormViewSizeInspector.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/GormWindow.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/Gorm.app/Resources/Sunday_seurat.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/bezel_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/button_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/centeralign_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/date_formatter.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/iconAbove_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/iconBelow_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/iconBottomLeft_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/iconBottomRight_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/iconBottom_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/iconCenterLeft_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/iconCenterRight_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/iconCenter_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/iconLeft_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/iconOnly_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/iconRight_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/iconTopLeft_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/iconTopRight_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/iconTop_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/justifyalign_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/leftalign_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/line_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/naturalalign_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/noBorder_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/number_formatter.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/photoframe_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/ridge_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/rightalign_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/titleOnly_nib.tiff
+share/GNUstep/System/Applications/Gorm.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/Gorm
+share/GNUstep/System/Applications/Gorm.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/library_paths.openapp
+share/GNUstep/System/Applications/GormTest.app/GormTest
+share/GNUstep/System/Applications/GormTest.app/Resources/GormTest.desktop
+share/GNUstep/System/Applications/GormTest.app/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/GormTest.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/GormTest
+share/GNUstep/System/Applications/GormTest.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/library_paths.openapp
+share/GNUstep/System/Developer/Palettes/0Menus.palette/Resources/Info-gnustep.plist
+share/GNUstep/System/Developer/Palettes/0Menus.palette/Resources/MenusPalette.tiff
+share/GNUstep/System/Developer/Palettes/0Menus.palette/Resources/palette.table
+share/GNUstep/System/Developer/Palettes/0Menus.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/0Menus
+share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/GormWindowInspector.gorm
+share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/GormWindowSizeInspector.gorm
+share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/Info-gnustep.plist
+share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/WindowDrag.tiff
+share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/WindowsPalette.tiff
+share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources/palette.table
+share/GNUstep/System/Developer/Palettes/1Windows.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/1Windows
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/ControlsPalette.tiff
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormBoxInspector.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormButtonInspector.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormCellInspector.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormFormInspector.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormMatrixInspector.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormPopUpButtonInspector.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormSliderInspector.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormStepperInspector.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/GormTextFieldInspector.gorm
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/Info-gnustep.plist
+share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources/palette.table
+share/GNUstep/System/Developer/Palettes/2Controls.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/2Controls
+share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/ContainersPalette.tiff
+share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormBrowserInspector.gorm
+share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormTableColumnInspector.gorm
+share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormTableColumnSizeInspector.gorm
+share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/GormTableViewInspector.gorm
+share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/Info-gnustep.plist
+share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources/palette.table
+share/GNUstep/System/Developer/Palettes/3Containers.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/3Containers
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/DataPalette.tiff
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormComboBoxInspector.gorm
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormDateFormatterInspector.gorm
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormImageViewInspector.gorm
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormNumberFormatterInspector.gorm
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/GormTextViewInspector.gorm
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/Info-gnustep.plist
+share/GNUstep/System/Developer/Palettes/4Data.palette/Resources/palette.table
+share/GNUstep/System/Developer/Palettes/4Data.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu/4Data
+@dirrm share/GNUstep/System/Developer/Palettes/4Data.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Developer/Palettes/4Data.palette/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/System/Developer/Palettes/4Data.palette/ix86
+@dirrm share/GNUstep/System/Developer/Palettes/4Data.palette/Resources
+@dirrm share/GNUstep/System/Developer/Palettes/4Data.palette
+@dirrm share/GNUstep/System/Developer/Palettes/3Containers.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Developer/Palettes/3Containers.palette/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/System/Developer/Palettes/3Containers.palette/ix86
+@dirrm share/GNUstep/System/Developer/Palettes/3Containers.palette/Resources
+@dirrm share/GNUstep/System/Developer/Palettes/3Containers.palette
+@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/ix86
+@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette/Resources
+@dirrm share/GNUstep/System/Developer/Palettes/2Controls.palette
+@dirrm share/GNUstep/System/Developer/Palettes/1Windows.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Developer/Palettes/1Windows.palette/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/System/Developer/Palettes/1Windows.palette/ix86
+@dirrm share/GNUstep/System/Developer/Palettes/1Windows.palette/Resources
+@dirrm share/GNUstep/System/Developer/Palettes/1Windows.palette
+@dirrm share/GNUstep/System/Developer/Palettes/0Menus.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Developer/Palettes/0Menus.palette/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/System/Developer/Palettes/0Menus.palette/ix86
+@dirrm share/GNUstep/System/Developer/Palettes/0Menus.palette/Resources
+@dirrm share/GNUstep/System/Developer/Palettes/0Menus.palette
+@dirrm share/GNUstep/System/Applications/GormTest.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/GormTest.app/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/System/Applications/GormTest.app/ix86
+@dirrm share/GNUstep/System/Applications/GormTest.app/Resources
+@dirrm share/GNUstep/System/Applications/GormTest.app
+@dirrm share/GNUstep/System/Applications/Gorm.app/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/Gorm.app/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/System/Applications/Gorm.app/ix86
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/ix86
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/ix86
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/ix86
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/ix86
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/ix86/${LOWER_OPSYS}elf/gnu-gnu-gnu
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/ix86/${LOWER_OPSYS}elf
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/ix86
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources
+@dirrm share/GNUstep/System/Applications/Gorm.app
