@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2001/03/31 13:06:34 zuntum Exp $
+# $NetBSD: Makefile,v 1.12 2001/04/03 06:06:49 zuntum Exp $
 #
 
-DISTNAME=	epic4-0.10.1
+DISTNAME=	epic4-1.0
 CATEGORIES=	chat
-MASTER_SITES=	ftp://ftp.magenet.com/pub/epic/EPIC4-BETA/		\
-		ftp://ftp.icm.edu.pl/vol/rzm0/irc/EPIC/EPIC4-BETA/	\
-		ftp://ftp.archive.de.uu.net/pub/unix/irc/epic/EPIC4-BETA/ \
-		ftp://ftp.nl.uu.net/pub/unix/irc/epic/EPIC4-BETA/
+MASTER_SITES=	ftp://ftp.magenet.com/pub/epic/EPIC4-PRODUCTION/	\
+		ftp://ftp.icm.edu.pl/vol/rzm0/irc/EPIC/EPIC4-PRODUCTION/	\
+		ftp://ftp.archive.de.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/ \
+		ftp://ftp.nl.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}				\
 		epic4pre2-help.tar.gz
