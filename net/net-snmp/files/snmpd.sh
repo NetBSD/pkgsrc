@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: snmpd.sh,v 1.2 2003/09/12 12:07:19 uebayasi Exp $
+# $NetBSD: snmpd.sh,v 1.3 2004/05/14 15:40:53 adam Exp $
 #
 # PROVIDE: snmpd
 # REQUIRE: DAEMON
@@ -14,7 +14,7 @@ rcvar=$name
 command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
 snmpd_flags="-s -S d"		# log using syslog LOG_DAEMON
-command_args="-P ${pidfile}"
+command_args="-p ${pidfile}"
 
 if [ -f @PKG_SYSCONFDIR@/snmpd.conf ]; then
 	command_args="${command_args} -c @PKG_SYSCONFDIR@/snmpd.conf"
