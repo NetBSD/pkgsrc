@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2322 2004/11/08 11:03:00 adam Exp $
+$NetBSD: TODO,v 1.2323 2004/11/08 13:33:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -298,7 +298,7 @@ Suggested package updates
 	o cups-1.1.21
 	o curl-7.12.2
 	o cvs2cl-2.55
-	o cvsweb-3.0.3
+	o cvsweb-3.0.4
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
 	o daapd-0.2.3
@@ -346,8 +346,10 @@ Suggested package updates
 	o fugu-1.2.3
 	o galeon-1.3.18
 	o gbib-0.1.2
+	o gcc-3.4.3
 	o gdm-2.6.0.5
 	o generator-0.35
+	o gentoo-0.11.53
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
@@ -357,11 +359,14 @@ Suggested package updates
 	o gmpc-0.11.2
 	o gnomeicu-0.99.5
 	o gnunet-0.6.4a
+	o gnutls-1.0.22
 	o gogo-3.11p1
 	o gossip-0.7.7
 	o gpsdrive-2.09
 	o grace-5.1.17
 	o gramps-1.0.8
+	o gsasl-0.2.0
+	o gtk-send-pr-0.4
 	o gtkballs-3.1.4
 	o gtkglext-1.0.6
 	o gtksee-0.5.6 [pkg/26372]
@@ -410,7 +415,7 @@ Suggested package updates
 	o libcddb-0.9.6
 	o libcomprex-0.3.3
 	o libhydrogen-0.9.0
-	o libidn-0.5.8
+	o libidn-0.5.9
 	o libmpeg3-1.5.4
 	o libnet-1.1.2.1 [wip/libnet11|adrianp]
 	o libnids-1.19
@@ -418,6 +423,7 @@ Suggested package updates
 	o libopendaap-0.2.3
 	o libtiff-3.7.0
 	o libxklavier-1.10 [breaks gnome-2.8]
+	o libxklavier-1.11
 	o libxml2-2.6.15
 	o licq-1.3.0
 	o lilypond-2.4
@@ -467,6 +473,7 @@ Suggested package updates
 	o nut-10.8
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
+	o ogmtools-1.5
 	o onyx-5.1.1
 	o openal-20040816
 	o openoffice-1.1.3
@@ -485,7 +492,6 @@ Suggested package updates
 	o p5-libapreq2-2.04.03
 	o p7zip-4.10
 	o pdmenu-1.2.81
-	o perl-5.8.5
 	o pgplot-5.2 [grant]
 	o php-5.0.2
 	o phppgadmin-3.4.1 [pkg/26539|recht]
@@ -565,6 +571,7 @@ Suggested package updates
 	o tkdesk-2.0
 	o tkgate-1.8.5
 	o tkman-2.2
+	o top-3.5b13
 	o transcalc-0.14
 	o treecc-0.3.2 [pkg/27013]
 	o tripwire-2.3.1 [see also pkg/22362]
@@ -581,7 +588,7 @@ Suggested package updates
 	o vlc-0.8.0
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vsftpd-2.01 [pkg/26811]
-	o vttest-20030301
+	o vttest-20041107
 	o wavesurfer-1.5.3
 	o wdm-1.27
 	o wesnoth-0.8.7
