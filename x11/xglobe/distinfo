@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/01/18 23:27:46 kristerw Exp $
+$NetBSD: distinfo,v 1.4 2004/07/06 22:08:17 hubertf Exp $
 
 SHA1 (xglobe/LE.400.gif) = acfe3f73a9513b312e2c65403b6b4242c53d9c1a
 Size (xglobe/LE.400.gif) = 50083 bytes
@@ -8,7 +8,7 @@ SHA1 (xglobe/mggd.gif) = d5ae718be9d6a8be98acf92991fc97940c194e85
 Size (xglobe/mggd.gif) = 899276 bytes
 SHA1 (xglobe/xglobe-0.5.tar.gz) = ba436e1105462577dd9fb1cbedcec93dd58e4e3a
 Size (xglobe/xglobe-0.5.tar.gz) = 982309 bytes
-SHA1 (patch-aa) = c49daeced419d152cb102884a2fd334f5e2e3400
-SHA1 (patch-ab) = 505aecb15dfbde425463322b9d372bea5be2c217
+SHA1 (patch-aa) = 1721613b6f73a3cd7e911aaada9f29abe5b47f73
+SHA1 (patch-ab) = d3629dd5e0c4940127938491e1911f1f88a4e1b7
 SHA1 (patch-ac) = 3548c21bad7c95f1a5abd8884fa474a297c33b90
-SHA1 (patch-ad) = 0da8a3a6ec05802746291344373d26c57dcd567e
+SHA1 (patch-ad) = fcc4b34402ec7ff2ceedb5391bb9553f891783fc
