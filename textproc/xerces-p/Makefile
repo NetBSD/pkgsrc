@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/12 19:23:24 manu Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/17 19:58:53 manu Exp $
 #
 
-DISTNAME=	XML-Xerces-1.3.3
+DISTNAME=	XML-Xerces-1.3.5
 CATEGORIES=	textproc
 MASTER_SITES=	http://xml.apache.org/dist/xerces-p/
 
@@ -15,10 +15,13 @@ DEPENDS+=   swig>=1.1p5:../../devel/swig
 DEPENDS+=   xerces-c>=1.3.0:../../textproc/xerces-c
 DEPENDS+=   icu>=1.7:../../textproc/icu
 
+USE_PERL5=  # defined
+PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/XML/Xerces/.packlist
+
 MAKE_ENV+=	XERCES_LIB=/usr/pkg/lib
 MAKE_ENV+=	XERCES_INCLUDE=/usr/pkg/include
 
 do-build:
-	cd ${WRKSRC} && perl Makefile.PL && make 
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL && make
 
 .include "../../mk/bsd.pkg.mk"
