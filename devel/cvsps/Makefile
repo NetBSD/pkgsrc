@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2004/01/22 08:24:28 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/26 01:10:07 schmonz Exp $
 #
 
-DISTNAME=	cvsps-1.3.3
+DISTNAME=	cvsps-2.0rc1
 CATEGORIES=	devel
 MASTER_SITES=	${HOMEPAGE}
 
@@ -9,9 +9,7 @@ MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://www.cobite.com/cvsps/
 COMMENT=	Generates 'patchset' information from a CVS repository
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
-
-ALL_TARGET=	cvsps
 
 .include "../../mk/bsd.pkg.mk"
