@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 1998/07/26 22:13:17 frueauf Exp $
+bin/golddig
+bin/makelev
+man/man6/golddig.6
+share/golddig/scores
+share/golddig/goldlev001
+share/golddig/goldlev002
+share/golddig/goldlev003
+share/golddig/goldlev004
+share/golddig/goldlev005
+share/golddig/goldlev006
+share/golddig/goldlev007
+share/golddig/goldlev008
+share/golddig/goldlev009
+share/golddig/goldlev010
+share/golddig/goldlev011
+share/golddig/goldlev012
+share/golddig/goldlev013
+share/golddig/goldlev014
+share/golddig/goldlev015
+share/golddig/goldlev016
+share/golddig/goldlev017
+share/golddig/goldlev018
+share/golddig/default
+@dirrm share/golddig
