@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/11/13 21:28:27 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/12/19 18:18:34 minskim Exp $
 
 DISTNAME=		jpilot-syncmal_0.71.2
 PKGNAME=		jpilot-syncmal-0.71.2
@@ -31,5 +31,6 @@ PLIST_SUBST+=		PLUGINSDIR=${PLUGINSDIR:S/${PREFIX}\///}
 
 .include "../../comms/jpilot/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
