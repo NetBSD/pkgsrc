@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/28 10:33:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/09 11:10:32 skrll Exp $
 #
 
 .include "../libtool/Makefile.common"
@@ -17,7 +17,6 @@ USE_GTEXINFO=	yes
 # error. Simply making sure the info-files get re-done works here.
 post-extract:
 	${RM} -f ${WRKSRC}/doc/libtool.info*
-	${CP} ${FILESDIR}/fdl.texi ${WRKSRC}/doc
 
 do-build:
 	cd ${WRKSRC}/doc ; ${MAKE_PROGRAM}
