@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.14 2001/09/27 05:12:55 itojun Exp $
+$NetBSD: patch-ah,v 1.15 2001/12/03 08:21:23 martti Exp $
 
---- Makefile.in.orig	Tue Sep 18 14:06:22 2001
-+++ Makefile.in	Thu Sep 27 13:59:36 2001
+--- Makefile.in.orig	Mon Nov 12 00:34:23 2001
++++ Makefile.in	Mon Dec  3 09:07:51 2001
 @@ -9,6 +9,7 @@
  mandir=@mandir@
  mansubdir=@mansubdir@
@@ -27,7 +27,7 @@ $NetBSD: patch-ah,v 1.14 2001/09/27 05:12:55 itojun Exp $
  AR=@AR@
  RANLIB=@RANLIB@
  INSTALL=@INSTALL@
-@@ -97,7 +99,7 @@
+@@ -98,7 +100,7 @@
  	$(LD) -o $@ $(SSHOBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
  
  sshd$(EXEEXT): libssh.a	$(LIBCOMPAT) $(SSHDOBJS)
@@ -36,16 +36,23 @@ $NetBSD: patch-ah,v 1.14 2001/09/27 05:12:55 itojun Exp $
  
  scp$(EXEEXT): $(LIBCOMPAT) libssh.a scp.o
  	$(LD) -o $@ scp.o $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
-@@ -173,7 +175,7 @@
+@@ -176,13 +178,13 @@
  	autoreconf
- 	(cd scard ; $(MAKE) -f Makefile.in distprep)
+ 	(cd scard && $(MAKE) -f Makefile.in distprep)
  
 -install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files host-key
 +install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files
  install-nokeys: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files
  
  scard-install:
-@@ -187,6 +189,7 @@
+ 	(cd scard && $(MAKE) DESTDIR=$(DESTDIR) install)
+ 
+-install-files: scard-install
++install-files:
+ 	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
+ 	$(srcdir)/mkinstalldirs $(DESTDIR)$(sbindir)
+ 	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)
+@@ -190,6 +192,7 @@
  	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/$(mansubdir)1
  	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/$(mansubdir)8
  	$(srcdir)/mkinstalldirs $(DESTDIR)$(libexecdir)
@@ -53,7 +60,7 @@ $NetBSD: patch-ah,v 1.14 2001/09/27 05:12:55 itojun Exp $
  	$(INSTALL) -m $(SSH_MODE) -s ssh $(DESTDIR)$(bindir)/ssh
  	$(INSTALL) -m 0755 -s scp $(DESTDIR)$(bindir)/scp
  	$(INSTALL) -m 0755 -s ssh-add $(DESTDIR)$(bindir)/ssh-add
-@@ -213,23 +216,11 @@
+@@ -216,23 +219,11 @@
  	if [ ! -d $(DESTDIR)$(sysconfdir) ]; then \
  		$(srcdir)/mkinstalldirs $(DESTDIR)$(sysconfdir); \
  	fi
@@ -80,7 +87,7 @@ $NetBSD: patch-ah,v 1.14 2001/09/27 05:12:55 itojun Exp $
  	fi
  	if [ ! -f $(DESTDIR)$(sysconfdir)/moduli ]; then \
  		if [ -f $(DESTDIR)$(sysconfdir)/primes ]; then \
-@@ -267,10 +258,10 @@
+@@ -270,10 +261,10 @@
  	./ssh-keygen -t rsa -f $(DESTDIR)$(sysconfdir)/ssh_host_rsa_key -N ""
  
  uninstallall:	uninstall
