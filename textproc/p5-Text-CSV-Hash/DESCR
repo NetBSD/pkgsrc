@@ -1,0 +1,3 @@
+Text::CSV_Hash provides single hash based methods for loading,
+saving, and comparing CSV files. Will handle standard quoting and
+entries with newlines.
