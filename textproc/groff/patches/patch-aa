@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/05/14 14:08:09 wiz Exp $
+
+--- src/include/Makefile.sub.orig	Sun Jun 18 12:13:58 2000
++++ src/include/Makefile.sub
+@@ -30,12 +30,12 @@
+ 	@$(SHELL) $(top_srcdir)/gendef.sh defs.h \
+ 	"PROG_PREFIX=\"$(g)\"" \
+ 	"DEVICE=\"$(DEVICE)\"" \
+-	"FONTPATH=\"$(fontpath)\"" \
+-	"MACROPATH=\"$(tmacpath)\"" \
+-	"INDEX_SUFFIX=\"$(indexext)\"" \
+-	"COMMON_WORDS_FILE=\"$(common_words_file)\"" \
+-	"DEFAULT_INDEX_DIR=\"$(indexdir)\"" \
+-	"DEFAULT_INDEX_NAME=\"$(indexname)\"" \
+-	"DEFAULT_INDEX=\"$(indexdir)/$(indexname)\""
++	"FONTPATH=\"$(PREFIX)/share/groff/font:/usr/share/groff_font\"" \
++	"MACROPATH=\"$(PREFIX)/share/groff/tmac:/usr/share/tmac\"" \
++	"INDEX_SUFFIX=\".i\"" \
++	"COMMON_WORDS_FILE=\"/usr/share/dict/eign\"" \
++	"DEFAULT_INDEX_DIR=\"/usr/share/dict/papers\"" \
++	"DEFAULT_INDEX_NAME=\"Ind\"" \
++	"DEFAULT_INDEX=\"/usr/share/dict/papers/Ind\""
+ 
+ FORCE:
