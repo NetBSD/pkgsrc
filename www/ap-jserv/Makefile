@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/02/28 18:32:19 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2002/07/24 19:45:30 jlam Exp $
 
 DISTNAME=	ApacheJServ-1.1.2
 PKGNAME=	ap-jserv-1.1.2
@@ -12,8 +12,7 @@ COMMENT=	older Java Servlet engine for Apache Server
 DEPENDS+=	{apache-1.3.9*,apache-1.3.[1-9][0-9]*,apache6-1.3.9*,apache6-1.3.[1-9][0-9]*}:../../www/apache
 # yes, this needs _exactly_ version 2.0
 DEPENDS+=	jsdk-2.0:../../www/jsdk20
-# For "apxs":
-BUILD_DEPENDS=	perl>=${PERL5_REQD}:../../lang/perl5
+USE_PERL5=	build	# for "apxs"
 
 .include "../../mk/bsd.prefs.mk"
 

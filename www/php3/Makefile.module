@@ -1,12 +1,13 @@
-# $NetBSD: Makefile.module,v 1.2 2002/03/02 18:48:24 jlam Exp $
+# $NetBSD: Makefile.module,v 1.3 2002/07/24 19:45:31 jlam Exp $
 
 .include "../../www/php3/Makefile.common"
 
 PKGNAME=		php-${MODNAME}-${BASE_VERS}
 PKGREVISION?=		# empty
 
-BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 DEPENDS+=		php-${BASE_VERS}*:../../www/php3
+
+USE_PERL5=		build
 
 PKGMODNAME=		${MODNAME:S/-/_/}
 MODULESDIR=		${WRKSRC}/functions
