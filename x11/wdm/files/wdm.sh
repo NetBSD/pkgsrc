@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: wdm.sh,v 1.1 2003/02/23 17:33:31 salo Exp $
+# $NetBSD: wdm.sh,v 1.2 2003/05/07 18:27:07 jmmv Exp $
 #
 
 # PROVIDE: wdm
@@ -13,7 +13,7 @@ name="wdm"
 rcvar=$name
 command="@PREFIX@/bin/${name}"
 pidfile="/var/run/${name}.pid"
-required_files="@PREFIX@/lib/X11/wdm/wdm-config"
+required_files="@PKG_SYSCONFDIR@/wdm-config"
 extra_commands="reload"
 
 load_rc_config $name
