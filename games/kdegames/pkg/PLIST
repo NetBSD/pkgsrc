@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 1999/09/15 18:26:01 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 1999/12/06 20:26:19 bouyer Exp $
 bin/kabalone
 bin/kasteroids
 bin/kblackbox
@@ -113,7 +113,6 @@ share/kde/apps/kabalone/toolbar/ab-stop.xpm
 share/kde/apps/kabalone/toolbar/help.xpm
 share/kde/apps/kabalone/toolbar/hint.xpm
 share/kde/apps/kabalone/toolbar/undo.xpm
-share/kde/apps/kasteroids/sprites/.pbm
 share/kde/apps/kasteroids/sprites/bg.ppm
 share/kde/apps/kasteroids/sprites/bits/bits0.pbm
 share/kde/apps/kasteroids/sprites/bits/bits0.ppm
