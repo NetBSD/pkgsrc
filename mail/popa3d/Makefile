@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2001/05/29 12:11:27 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/07/21 17:16:12 wiz Exp $
 #
 
-DISTNAME=	popa3d-0.4
-PKGNAME=	popa3d-0.4nb1
+DISTNAME=	popa3d-0.4.9.1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.openwall.com/popa3d/ \
 		ftp://ftp.openwall.com/pub/projects/popa3d/ \
 		ftp://ftp.false.com/pub/security/popa3d/
-
-PATCHFILES=	popa3d-0.4-gnu-md5-alignment.diff.gz
-PATCH_SITES=	${MASTER_SITES}
-PATCH_DIST_ARGS=	-d ${WRKDIR} -s
 
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.openwall.com/popa3d/
@@ -40,7 +35,7 @@ do-install:
 	${INSTALL_PROGRAM} -o popa3d -g popa3d -m 700 ${WRKSRC}/popa3d \
 		${PREFIX}/libexec
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/popa3d
-	cd ${WRKSRC} && ${INSTALL_DATA} COPYING DESIGN INSTALL \
+	cd ${WRKSRC} && ${INSTALL_DATA} DESIGN INSTALL LICENSE \
 		${PREFIX}/share/doc/popa3d
 
 .include "../../mk/bsd.pkg.mk"
