@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.28 2004/01/03 18:49:59 reed Exp $
+# $NetBSD: Makefile,v 1.29 2004/04/03 17:01:03 taca Exp $
 
 DISTNAME=	kterm-6.2.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 
 # the following patch includes NFS xauth patch, and kamo's wd0.2 patch.
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES+=	kterm-620-0213-20030825.diff.gz
+PATCHFILES=	kterm-620-0213-20030825.diff.gz
 PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	sakamoto@NetBSD.org
+HOMEPAGE=	# none
 COMMENT=	Multi-lingual terminal emulator for X
 
 USE_BUILDLINK2=	YES
