@@ -1,4 +1,4 @@
-/* nbconfig.h.in.  Generated from configure.ac by autoheader.  */
+/* nbcompat/nbconfig.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Define to 1 if the `getpgrp' function requires zero arguments. */
 #undef GETPGRP_VOID
@@ -377,9 +377,6 @@
 /* Define to 1 if the system has the type `u_int8_t'. */
 #undef HAVE_U_INT8_T
 
-/* Define to 1 if you have the <vis.h> header file. */
-#undef HAVE_VIS_H
-
 /* Define to 1 if you have the `vprintf' function. */
 #undef HAVE_VPRINTF
 
@@ -424,7 +421,13 @@
 #undef size_t
 
 
+/* Define to 1 if you have the <vis.h> header file. */
+#undef HAVE_VIS_H
+
 /* NBCOMPAT template section follows. */
+
+/* Define to 1 if the `vis' function is built into the library. */
+#undef HAVE_NBCOMPAT_VIS
 
 /* Define to 1 if the `statfs' function is built into the library. */
 #undef HAVE_NBCOMPAT_STATFS
