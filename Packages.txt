@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.39 1998/07/16 06:50:46 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.40 1998/07/31 15:24:13 tv Exp $
 ###########################################################################
 
 			==========================
@@ -782,11 +782,30 @@ Before outlining the process performed by the NetBSD package system in the
 next section, here's a brief discussion on where programs are installed,
 and which variables influence this.
 
-The variable PREFIX indicates where all files of the final program shall be
-installed. It is usually set to $LOCALBASE (/usr/pkg), its value becomes
-that of $X11BASE if either USE_IMAKE or USE_X11 is set. The value ${PREFIX}
-needs to be put into the various places in the program's source where paths
-to these files are encoded; see sections 4.3 and 6.2 for details on this.
+The automatic variable PREFIX indicates where all files of the final
+program shall be installed.  It is usually set to $LOCALBASE (/usr/pkg),
+though its value becomes that of $X11BASE if USE_IMAKE, USE_MOTIF, or
+USE_X11 is set.  The value ${PREFIX} needs to be put into the various
+places in the program's source where paths to these files are encoded; see
+sections 4.3 and 6.2 for details on this.
+
+When choosing which of these variables to use, follow the following rules:
+
+ * ${PREFIX} always points to the location where the current pkg will be
+   installed.  When referring to a pkg's own installation path, use ${PREFIX}.
+
+ * ${LOCALBASE} is where all non-X11 pkgs are installed.  If you need to
+   construct a -I or -L argument to the compiler to find includes and
+   libraries installed by another non-X11 pkg, use ${LOCALBASE}.
+
+ * ${X11BASE} is where the actual X11 distribution is installed.  When looking
+   for _standard_ X11 includes (not those installed by a pkg), use ${X11BASE}.
+
+ * X11 based pkgs are special in that they may be installed in either
+   X11BASE or LOCALBASE depending on a configuration option in /etc/mk.conf.  
+   If you need to find includes or libraries installed by a pkg that has
+   USE_IMAKE, USE_MOTIF, or USE_X11 in its pkg Makefile, you need to use
+   _both_ of ${X11BASE} and ${LOCALBASE}.
 
 
  7.2 Main targets
