@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2001/09/14 15:38:20 wiz Exp $
+
+--- configure.bak	Fri Aug 10 07:23:07 2001
++++ configure	Fri Aug 10 07:23:08 2001
+@@ -9814,7 +9814,7 @@
+ EOF
+ 
+ cat >> confdefs.h <<EOF
+-#define SERVER_CONFIG_FILE "conf/$progname.conf"
++#define SERVER_CONFIG_FILE "etc/httpd/$progname.conf"
+ EOF
+ 
+ cat >> confdefs.h <<EOF

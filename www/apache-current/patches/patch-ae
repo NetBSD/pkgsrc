@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2001/04/08 10:55:22 itojun Exp $
+$NetBSD: patch-ae,v 1.3 2001/09/14 15:38:09 wiz Exp $
 
 --- docs/conf/httpd-std.conf.orig	Mon Mar 26 01:54:48 2001
 +++ docs/conf/httpd-std.conf	Sun Apr  8 12:05:13 2001
@@ -42,7 +42,7 @@ $NetBSD: patch-ae,v 1.2 2001/04/08 10:55:22 itojun Exp $
  # to be found.
  #
 -TypesConfig conf/mime.types
-+TypesConfig /usr/pkg/etc/httpd/mime.types
++TypesConfig PKG_PREFIX/etc/httpd/mime.types
  
  #
  # DefaultType is the default MIME type the server will use for a document
@@ -51,7 +51,7 @@ $NetBSD: patch-ae,v 1.2 2001/04/08 10:55:22 itojun Exp $
  #
  <IfModule mod_mime_magic.c>
 -    MIMEMagicFile conf/magic
-+    MIMEMagicFile /usr/pkg/etc/httpd/magic
++    MIMEMagicFile PKG_PREFIX/etc/httpd/magic
  </IfModule>
  
  #

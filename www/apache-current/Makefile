@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/07/18 21:04:42 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/09/14 15:38:08 wiz Exp $
 
 DISTNAME=		httpd-2_0_16-beta
 PKGNAME=		apache-2.0.16
@@ -47,6 +47,13 @@ AP_LIBS=	srclib/apr/shmem/unix/mm/libmm.la \
 post-patch:
 	${RM} ${WRKSRC}/docs/conf/*.orig
 	(cd ${WRKSRC}; ${LN} -s ${LOCALBASE}/bin/libtool)
+
+pre-configure:
+	${CP} ${WRKSRC}/config.layout ${WRKSRC}/config.layout.bak
+	${SED} -e 's:PKG_PREFIX:${PREFIX}:g' ${WRKSRC}/config.layout.bak > ${WRKSRC}/config.layout
+	${CP} ${WRKSRC}/docs/conf/httpd-std.conf ${WRKSRC}/docs/conf/httpd-std.conf.bak
+	${SED} -e 's:PKG_PREFIX:${PREFIX}:g' ${WRKSRC}/docs/conf/httpd-std.conf.bak > ${WRKSRC}/docs/conf/httpd-std.conf
+	${RM} ${WRKSRC}/docs/conf/httpd-std.conf.bak ${WRKSRC}/config.layout.bak
 
 pre-install:
 	for i in ${AP_LIBS}; do \
