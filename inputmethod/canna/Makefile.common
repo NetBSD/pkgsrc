@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2003/07/17 21:43:34 grant Exp $
+# $NetBSD: Makefile.common,v 1.4 2003/07/29 19:53:19 jmmv Exp $
 #
 # Canna common makefile.
 #
@@ -22,8 +22,6 @@ PATCHDIR=	${.CURDIR}/../canna/patches
 # "Pkgsrc" version.
 CANNA_VERSION=	3.6pl3
 
-CANNA_OWNER?=	daemon
-CANNA_GROUP?=	daemon
 CANNA_SPOOL=	${DESTDIR}/var/spool/canna
 CANNA_MODE=	0755
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/29 19:42:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/29 19:53:20 jmmv Exp $
 #
 .include "../canna/Makefile.common"
 
@@ -10,7 +10,16 @@ USE_BUILDLINK2=	# defined
 USE_PKGINSTALL=	YES
 INSTALL_TARGET=	instserver
 
-OWN_DIRS_PERMS=	${CANNA_SPOOL} ${CANNA_OWNER} ${CANNA_GROUP} ${CANNA_MODE}
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=	CANNA_USER CANNA_GROUP
+MESSAGE_SUBST+=	CANNA_USER="${CANNA_USER}"
+MESSAGE_SUBST+=	CANNA_GROUP="${CANNA_GROUP}"
+
+PKG_GROUPS=	${CANNA_GROUP}
+PKG_USERS=	${CANNA_USER}:${CANNA_GROUP}::Canna\\ user
+
+OWN_DIRS_PERMS=	${CANNA_SPOOL} ${CANNA_USER} ${CANNA_GROUP} ${CANNA_MODE}
 
 RCD_SCRIPTS=	canna
 
