@@ -1,48 +1,13 @@
-$NetBSD: patch-ab,v 1.8 1999/10/28 02:40:24 hubertf Exp $
+$NetBSD: patch-ab,v 1.9 2000/12/17 09:39:53 hubertf Exp $
 
---- sdr/src/sip_common.c.orig	Thu Jul 15 18:00:03 1999
-+++ sdr/src/sip_common.c	Sat Oct  2 20:42:19 1999
-@@ -41,6 +41,9 @@
- #include <sys/uio.h>
- #endif
+--- ../src/Makefile.template.orig	Sat Dec 16 09:15:29 2000
++++ ../src/Makefile.template
+@@ -88,7 +88,7 @@
+ $(SDR_UI_FILES): tcl2c
  
-+#ifdef HAVE_SYS_INTTYPES_H
-+#include <inttypes.h>
-+#endif
- #include "dns.h"
- #include "prototypes.h"
- #include <tcl.h>
-@@ -252,7 +255,7 @@
- 	  addr.s_addr=0;
- 	  len=res_mkquery(QUERY, hostname, C_IN, T_MX, NULL, NULL, NULL, buf, 200);
- 	  if (len==-1) perror("res_mkquery");
--	  len=res_send(buf, len, ans, 2000);
-+	  len=res_send(buf, len, (u_char *)ans, 2000);
- 	  if (len==-1) perror("res_send");
- 	  ans[0]=htonl(ans[0]);
- 	  ans[1]=htonl(ans[1]);
-@@ -318,8 +321,8 @@
- 		    } else {
- 			/*it's compressed*/
- 		        if(*tstr==0) tstr+=2;
--			resstr += dn_expand(ans, ans+len, tstr-1, resstr, 
--					    200-strlen(resstr));
-+			resstr += dn_expand((u_char *)ans, (u_char *)(ans+len),
-+					    tstr-1, resstr, 200-strlen(resstr));
- 			tstr+=1;
- 			ctr=0;
- 		    }
-@@ -1251,8 +1254,13 @@
-     }
-     fprintf (stderr,"clen=%d\n", clen);
-     ptr=find_end_of_header(data, len);
-+#ifdef HAVE_SYS_INTTYPES_H
-+    fprintf (stderr,"eoh at %x, start at %x, len: %d\n", (intptr_t)ptr,
-+	   (intptr_t)data, len);
-+#else
-     fprintf (stderr,"eoh at %x, start at %x, len: %d\n", (unsigned int)ptr, 
- 	   (unsigned int)data, len);
-+#endif
+ parsed_plugins.tcl: ../src/plugin2tcl.tcl
+-	tclsh8.0 ../src/plugin2tcl.tcl
++	tclsh ../src/plugin2tcl.tcl
  
-     if (ptr==NULL) return 0;
- 
+ uweb: $(WWWOBJS)
+ 	$(CC) -ggdb -o uweb $(WWWOBJS) $(LIBS)
