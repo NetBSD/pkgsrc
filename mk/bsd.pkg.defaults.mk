@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.48 2002/04/03 23:10:41 hubertf Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.49 2002/04/04 13:58:25 seb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -545,6 +545,12 @@ FOX_USE_XUNICODE?=	YES
 # http://www.ab.wakwak.com/~tino/jatk/fox/ (in japanese) for more information.
 # Possible: YES, NO
 # Default: YES
+
+GAWK_ENABLE_PORTALS?=	NO
+# Used by gawk package to enable/disable handling file names that start with
+# `/p/' as a 4.4 BSD type portal file, i.e., a two-way pipe for `|&'.
+# Possible: YES, NO
+# Default: NO
 
 #GQMPEG_NO_JAPANESE?=	yes
 # Can be enabled to handle keep gqmpeg from interpreting ID3 tags
