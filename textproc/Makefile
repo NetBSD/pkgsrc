@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.260 2004/09/26 04:48:49 epg Exp $
+# $NetBSD: Makefile,v 1.261 2004/10/31 21:46:41 jdolecek Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -194,7 +194,7 @@ SUBDIR+=	p5-libxml
 SUBDIR+=	p5-libxml-enno
 SUBDIR+=	par
 SUBDIR+=	php4-domxml
-SUBDIR+=	php4-wddx
+SUBDIR+=	php-wddx
 SUBDIR+=	php4-xslt
 SUBDIR+=	postgresql-autodoc
 SUBDIR+=	psgml-mode
