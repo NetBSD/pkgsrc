@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2002/03/13 17:36:49 fredb Exp $
+# $NetBSD: Makefile,v 1.26 2002/07/17 12:45:29 rh Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/11/18 17:35:16 vanilla Exp
 #
 
 DISTNAME=	glade-0.6.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=   http://glade.pn.org/ \
 		${MASTER_SITE_GNOME:=stable/sources/glade/}
@@ -18,6 +18,7 @@ USE_X11BASE=	yes
 #CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -I${LOCALBASE}/include"
 CONFIGURE_ENV+=	LOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=--with-bonobo
+CONFIGURE_ARGS+=--localstatedir=${X11PREFIX}/var/lib
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/glade
