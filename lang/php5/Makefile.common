@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.2 2004/10/30 05:46:21 grant Exp $
+# $NetBSD: Makefile.common,v 1.3 2004/11/02 21:03:03 jdolecek Exp $
 #
 
-DISTNAME?=		php-${PHP5_VERSION}
+DISTNAME?=		php-${PHP_BASE_VERS}
 CATEGORIES+=		www
 MASTER_SITES?=		http://www.php.net/distributions/ \
 			http://php3.de/distributions/ \
@@ -12,7 +12,7 @@ DISTINFO_FILE=		${.CURDIR}/../../lang/php5/distinfo
 MAINTAINER?=		tech-pkg@NetBSD.org
 HOMEPAGE?=		http://www.php.net/
 
-PHP5_VERSION=		5.0.2
+PHP_BASE_VERS=		5.0.2
 
 BUILD_DEFS=		USE_INET6
 
