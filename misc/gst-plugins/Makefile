@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/24 16:36:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/24 17:35:41 jmmv Exp $
 #
 
 DISTNAME=		gst-plugins-0.6.4
@@ -30,6 +30,12 @@ CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 
 GCONF2_SCHEMAS+=	gstreamer.schemas
+
+SUBST_CLASSES+=		devoss
+SUBST_MESSAGE.devoss=	"Fixing path to OSS audio device."
+SUBST_STAGE.devoss=	pre-configure
+SUBST_FILES.devoss=	sys/oss/*.c
+SUBST_SED.devoss=	-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
 
 pre-install:
 	${ECHO} "install:" >${WRKSRC}/gst-libs/ext/ffmpeg/Makefile
