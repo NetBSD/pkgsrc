@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.Linux,v 1.9 2004/09/23 11:41:10 abs Exp $
+# $NetBSD: cpuflags.Linux,v 1.10 2004/11/03 18:16:27 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 if [ "$1" = -v ] ; then
@@ -117,6 +117,8 @@ if [ -n "$FLAGS" ]; then
 3.1:-march=r6000:-cpu=r6000
 3.1:-march=r8000:-cpu=r8000
 3.1:-mcpu=21264a:-mcpu=21264
+3.1:-mcpu=7400:-mcpu=750
+3.1:-mcpu=7450:-mcpu=750
 3.1:-mtune=r2000:-cpu=r2000
 3.1:-mtune=r3000:-cpu=r3000
 3.1:-mtune=r3900:-cpu=r3900
@@ -131,8 +133,8 @@ if [ -n "$FLAGS" ]; then
 3.3:-march=c3:-march=i586
 3.3:-march=winchip-c6:-march=i586
 3.3:-march=winchip2:-march=i586
-3.4:-march=athlon64:-march=athlon-xp
 3.4:-march=athlon-fx:-march=athlon-xp
+3.4:-march=athlon64:-march=athlon-xp
 3.4:-march=c3-2:-march=c3
 3.4:-march=k8:-march=athlon-xp
 3.4:-march=nocona:-march=pentium4
