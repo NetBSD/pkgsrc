@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2004/12/24 10:03:54 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.21 2005/03/05 13:49:36 wiz Exp $
 bin/pango-querymodules
 include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-break.h
@@ -81,7 +81,6 @@ share/doc/pango/pango.devhelp
 share/doc/pango/pango.html
 share/doc/pango/rendering.html
 share/doc/pango/right.png
-share/doc/pango/style.css
 share/doc/pango/tools.html
 share/doc/pango/up.png
 @dirrm share/doc/pango
