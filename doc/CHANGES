@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9078 2005/02/09 05:39:06 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9079 2005/02/09 05:49:02 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -798,3 +798,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ezmlm-idx to 0.434 [schmonz 2005-02-08]
 	Updated ploticus to 2.31 [adam 2005-02-08]
 	Added memcached-1.1.11 [xtraeme 2005-02-09]
+	Added libaura-2.0 [xtraeme 2005-02-09]
+	Added libdfui-3.0 [xtraeme 2005-02-09]
+	Added libinstaller-4.0 [xtraeme 2005-02-09]
