@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.13 2004/12/29 12:16:56 agc Exp $	*/
+/*	$NetBSD: file.c,v 1.14 2005/02/04 09:10:13 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: file.c,v 1.29 1997/10/08 07:47:54 charnier Exp";
 #else
-__RCSID("$NetBSD: file.c,v 1.13 2004/12/29 12:16:56 agc Exp $");
+__RCSID("$NetBSD: file.c,v 1.14 2005/02/04 09:10:13 jlam Exp $");
 #endif
 #endif
 
@@ -540,6 +540,42 @@ move_file(char *dir, char *fname, char *to)
 		cleanup(0);
 		errx(2, "could not perform 'mv %s %s'", fpath, to);
 	}
+}
+
+void
+move_files(const char *dir, const char *pattern, const char *to)
+{
+	char	fpath[MaxPathSize];
+	glob_t	globbed;
+	int	i;
+
+	(void) snprintf(fpath, sizeof(fpath), "%s/%s", dir, pattern);
+	if ((i=glob(fpath, GLOB_NOSORT, NULL, &globbed)) != 0) {
+		switch(i) {
+		case GLOB_NOMATCH:
+			warn("no files matching ``%s'' found", fpath);
+			break;
+		case GLOB_ABORTED:
+			warn("globbing aborted");
+			break;
+		case GLOB_NOSPACE:
+			warn("out-of-memory during globbing");
+			break;
+		default:
+			warn("unknown error during globbing");
+			break;
+		}
+		return;
+	}
+
+	/* Moving globbed files -- we just use mv(1) to do the job */
+	for (i=0; i<globbed.gl_pathc; i++)
+		if (fexec("mv", globbed.gl_pathv[i], to, NULL)) {
+			cleanup(0);
+			errx(2, "could not perform 'mv %s %s'", globbed.gl_pathv[i], to);
+		}
+
+	return;
 }
 
 void
