@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2003/10/08 20:58:05 reed Exp $
+# $NetBSD: Makefile,v 1.19 2003/12/24 13:02:00 jmmv Exp $
 
 DISTNAME=	TeXmacs-1.0.1-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.texmacs.org/pub/TeXmacs/targz/
 
@@ -10,7 +10,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.texmacs.org
 COMMENT=	GNU TeXmacs (free scientific text editor)
 
-DEPENDS+=	teTeX{,2}>=1.0:../../print/teTeX
+DEPENDS+=	teTeX>=1.0:../../print/teTeX
 
 ALL_TARGET=	TEXMACS
 
