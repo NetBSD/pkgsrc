@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1999/10/22 00:54:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.28 1999/10/26 01:50:04 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.35 1997/08/19 07:10:01 fenner Exp
 #
 
@@ -108,7 +108,7 @@ README-all.html:
 	fi
 .endfor
 	@echo "."
-	@sort -t '">' +2 <$@.new >$@.newsorted
+	@sort -f -t '">' +2 <$@.new >$@.newsorted
 	@wc -l $@.newsorted | awk '{ print $$1 }'  >$@.npkgs
 	@cat templates/README.all \
 	| ${SED} \
