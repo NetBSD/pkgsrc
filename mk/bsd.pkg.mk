@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1284 2003/09/14 16:41:30 danw Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1285 2003/09/15 10:27:12 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -4246,7 +4246,7 @@ print-summary-data:
 	else								\
 		${ECHO} "onlyfor ${PKGPATH} ${ONLY_FOR_ARCHS}";		\
 	fi;
-	if [ "${NOT_FOR_OPSYS}" = "" ]; then				\
+	@if [ "${NOT_FOR_OPSYS}" = "" ]; then				\
 		${ECHO} "notfor ${PKGPATH} any";			\
 	else								\
 		${ECHO} "notfor ${PKGPATH} not ${NOT_FOR_OPSYS}";	\
