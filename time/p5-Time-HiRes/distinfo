@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2002/11/15 02:50:24 heinz Exp $
+$NetBSD: distinfo,v 1.3 2003/02/15 09:43:52 salo Exp $
 
-SHA1 (Time-HiRes-1.38.tar.gz) = bdf4203d567c228894b39cdf83d8219a9e8b8893
-Size (Time-HiRes-1.38.tar.gz) = 24176 bytes
+SHA1 (Time-HiRes-1.42.tar.gz) = 2ec1fda7b284ead00c21823785155c5f65ed9304
+Size (Time-HiRes-1.42.tar.gz) = 26912 bytes
 SHA1 (patch-aa) = 1d8935dba28d16468675c4c52bd910750ae59bb5
