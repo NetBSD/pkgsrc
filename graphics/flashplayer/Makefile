@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:10 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/11/23 15:48:21 agc Exp $
 #
 
 PKGNAME=	${DISTNAME:C/-/player-/}
@@ -12,7 +12,7 @@ PATCHDIR=	${.CURDIR}/${COMMONDIR}/patches
 FILESDIR=	${.CURDIR}/${COMMONDIR}/files
 
 do-build:
-		cd ${WRKSRC}/Player && make
+		cd ${WRKSRC}/Player && ${SETENV} ${MAKE_ENV} ${MAKE}
 
 do-install:
 		cd ${WRKSRC}/Player && ${INSTALL_PROGRAM} swfplayer ${PREFIX}/bin
