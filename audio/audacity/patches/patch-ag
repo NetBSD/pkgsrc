@@ -1,0 +1,18 @@
+$NetBSD: patch-ag,v 1.3 2004/04/20 18:02:16 ben Exp $
+
+--- locale/sv.po.orig	Thu Apr  8 18:41:06 2004
++++ locale/sv.po
+@@ -5,11 +5,11 @@
+ #
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: PACKAGE VERSION\n"
++"Project-Id-Version: Audicity Swedish Translation.\n"
+ "POT-Creation-Date: 2004-02-01 07:48-0800\n"
+ "PO-Revision-Date: 2004-02-04 15:19+0100\n"
+ "Last-Translator: Lars Carlsson <musselasse@hotmail.com>\n"
+-"Language-Team: LANGUAGE <LL@li.org>\n"
++"Language-Team: Swedish <sv@li.org>\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=iso-8859-1\n"
+ "Content-Transfer-Encoding: 8bit\n"
