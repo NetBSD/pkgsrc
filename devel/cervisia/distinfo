@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:13 wiz Exp $
-
-SHA1 (cervisia-1.0.tar.gz) = 774986da81e5305c61bb04249a96212149fb4085
-Size (cervisia-1.0.tar.gz) = 416034 bytes
-SHA1 (patch-aa) = eba4978886e8d9126b22bf54944fabc302eb78a4
-SHA1 (patch-ac) = 337dd8751c23d125e86efd583cb57baac858a3e7
