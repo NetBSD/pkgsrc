@@ -1,4 +1,4 @@
-<!-- $NetBSD: editing.xml,v 1.4 2004/12/23 18:08:16 ben Exp $ -->
+<!-- $NetBSD: editing.xml,v 1.5 2005/03/08 01:22:41 xtraeme Exp $ -->
 
 <appendix id="editing">
   <title>Editing guidelines for the pkgsrc guide</title>
@@ -126,7 +126,7 @@
         <para>
           Until the webserver on www.NetBSD.org is really updated
           automatically to pick up changes to the pkgsrc guide
-          automatically, also run <command>make install-htdoc
+          automatically, also run <command>make install-htdocs
           HTDOCSDIR=../../../htdocs</command> (or similar, adjust
           <varname>HTDOCSDIR</varname>!).
         </para>
