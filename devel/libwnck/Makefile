@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/05/02 11:54:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/22 17:04:39 jmmv Exp $
 #
 
 DISTNAME=	libwnck-2.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libwnck/2.2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,5 +23,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libwnck-1.0.pc.in
 
 .include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../x11/startup-notification/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
