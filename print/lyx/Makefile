@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2001/10/25 13:55:47 martti Exp $
+# $NetBSD: Makefile,v 1.38 2001/10/25 14:18:23 martti Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/ \
 			ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/ \
 			ftp://ftp.sdsc.edu/pub/other/lyx/stable/
 
-MAINTAINER=		frueauf@netbsd.org
+MAINTAINER=		martti@netbsd.org
 HOMEPAGE=		http://www.lyx.org/
 COMMENT=		Graphical frontend for LaTeX (nearly WYSIWYG)
 
