@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1370 2004/02/11 13:24:39 wiz Exp $
+$NetBSD: TODO,v 1.1371 2004/02/12 05:31:17 snj Exp $
 
 Suggested new packages
 ======================
@@ -136,7 +136,6 @@ Suggested package updates
 	o blib-1.1.5
 	o blinkensim-2.5
 	o blinkentools-2.5
-	o bochs-2.1
 	o boehm-gc-6.3alpha2
 	o bomberclone-0.11.2
 	o bzflag-1.10.4
