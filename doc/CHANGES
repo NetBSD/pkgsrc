@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4243 2003/12/24 09:55:22 jmmv Exp $
+$NetBSD: CHANGES,v 1.4244 2003/12/24 10:16:39 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5330,3 +5330,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added xmms-meta-timidity-0.1 [ben 2003-12-23]
 	Updated adzap to 20031105 [simonb 2003-12-24]
 	Updated pkglint to 3.66 [jmmv 2003-12-24]
+	Added py-spreadmodule-1.4 [recht 2003-12-24]
+	Added py23-html-docs-2.3.3 [recht 2003-12-24]
