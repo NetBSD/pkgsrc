@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/04/16 22:53:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1999/04/27 23:56:21 garbled Exp $
 #
 # IMPORTANT: Before upgrading this package, please read files/README.next_rev!
 
@@ -22,6 +22,7 @@ RESTRICTED=	"no paid distribution of SCILAB"
 
 PLIST_SRC=      ${WRKDIR}/.PLIST-src
 
+USE_X11BASE=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
