@@ -1,0 +1,51 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/11/25 21:34:10 jtb Exp $
+
+--- base/Makefile.in.orig	Sat Oct 28 11:38:01 2000
++++ base/Makefile.in
+@@ -7,12 +7,11 @@
+ CPPFLAGS = @CPPFLAGS@ -I.
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+-RANLIB = @RANLIB@
++LIBTOOL= @LIBTOOL@
+ @SET_MAKE@
+ INSTALL = @INSTALL@
+ prefix = @prefix@
+ 
+-AR = ar
+ 
+ all: libs
+ 
+@@ -20,18 +19,17 @@
+            math-utils.scm vector3.scm extern-funcs.scm interaction.scm \
+            matrix3x3.scm simplex.scm
+ OBJECTS = ctl.o
+-LIBNAME = libctl.a
++LIBNAME = libctl
+ 
+ libs: $(LIBNAME)
+ 
+-libctl.a: $(OBJECTS)
++libctl: $(OBJECTS)
+ 	rm -f $@
+-	$(AR) r $@ $(OBJECTS)
+-	$(RANLIB) $@
++	@$(LIBTOOL) $(CC) -O -o $@.la $(OBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info ${VERSION}
+ 
+ install:
+ 	$(INSTALL) -d $(prefix)/lib
+-	$(INSTALL) -m 0644 $(LIBNAME) $(prefix)/lib
++	@$(LIBTOOL) --mode=install $(INSTALL) -m 0644 $(LIBNAME).la $(prefix)/lib
+ 	$(INSTALL) -d $(prefix)/include
+ 	$(INSTALL) -m 0644 ctl.h $(prefix)/include
+ 	$(INSTALL) -d $(prefix)/share/libctl/base
+@@ -41,7 +39,7 @@
+ 	$(INSTALL) -m 0644 main.c $(prefix)/share/libctl/base
+ 
+ .c.o:
+-	$(CC) -c $(CPPFLAGS) $(CFLAGS) $< -o $@
++	@$(LIBTOOL) $(CC) -c $(CPPFLAGS) $(CFLAGS) $< -o $@
+ 
+ clean: 
+-	rm -f $(OBJECTS) core $(LIBNAME)
++	rm -rf $(OBJECTS) $(OBJECTS:.o=.lo) core $(LIBNAME).la .libs
