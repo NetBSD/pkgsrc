@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:40:48 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/08/29 17:20:21 jlam Exp $
 
 .if !defined(TK_BUILDLINK2_MK)
 TK_BUILDLINK2_MK=	# defined
@@ -22,5 +22,7 @@ BUILDLINK_FILES.tk+=		lib/libtkstub83.*
 BUILDLINK_TARGETS+=	tk-buildlink
 
 tk-buildlink: _BUILDLINK_USE
+
+TKCONFIG_SH?=			${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
 
 .endif	# TK_BUILDLINK2_MK
