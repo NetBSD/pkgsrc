@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1882 2004/06/29 13:49:34 cjep Exp $
+$NetBSD: TODO,v 1.1883 2004/06/30 00:14:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -182,7 +182,6 @@ Suggested package updates
 	o blender-2.33
 	o boehm-gc-6.3alpha6 [recht]
 	o boson-0.10
-	o capc-calc-2.11.9.3
 	o centericq-4.9.12
 	o cervisia-2.1.2
 	o checkbot-1.74
@@ -208,9 +207,7 @@ Suggested package updates
 	o dmalloc-5.3.0
 	o dnetc-2.9004-482 [pkg/22390]
 	o docbook-4.3
-	o doclifter-1.9
 	o docsis-0.9.1
-	o dvd+rw-tools-5.19-1.4.9.7 [pkg/25433]
 	o dvdrip-0.50.18
 	o dvipng-1.1 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.3.11
