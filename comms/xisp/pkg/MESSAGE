@@ -1,4 +1,8 @@
-Please make sure the file /etc/ppp/options exists.
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 1999/08/26 19:01:46 jlam Exp $
+
+Please make sure the file /etc/ppp/options exists, and there is a symbolic
+link from your modem device to /dev/modem.
 
 You need to install:
 
@@ -7,5 +11,7 @@ You need to install:
         ${X11BASE}/share/examples/xisp/peers/xisp_modem   to /etc/ppp/peers
         ${X11BASE}/share/examples/xisp/peers/xisp_dialer  to /etc/ppp/peers
 
-and make sure they are executable for user "root" and group "dialer"
+and make sure the file ownerships are set for user "root" and group "dialer"
 to be able to fully use this package.
+
+===========================================================================
