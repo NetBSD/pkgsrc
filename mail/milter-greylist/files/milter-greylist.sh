@@ -1,15 +1,14 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: milter-greylist.sh,v 1.1 2004/04/12 13:55:59 tron Exp $
+# $NetBSD: milter-greylist.sh,v 1.2 2004/04/12 14:07:16 tron Exp $
 #
 
 # PROVIDE: milter-greylist
 # REQUIRE: DAEMON
 # BEFORE:  mail
 
-name="milter-greylist"
-rcvar="milter_greylist"
-command="@PREFIX@/bin/${name}"
+name="miltergreylist"
+command="@PREFIX@/bin/milter-greylist"
 command_args="-p /var/milter-greylist/milter-greylist.sock -u smmsp"
 
 if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
