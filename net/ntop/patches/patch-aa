@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1 1998/08/07 22:42:29 kim Exp $
+
+--- Makefile.in.orig	Mon Aug  3 06:43:38 1998
++++ Makefile.in	Fri Aug  7 18:22:37 1998
+@@ -76,6 +76,8 @@
+ 
+ CLEANFILES = $(PROG) $(OBJ) $(GENSRC)
+ 
++all: $(PROG)
++
+ $(PROG): $(OBJ) @V_PCAPDEP@
+ 	@rm -f $@
+ 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(OBJ) $(LIBS)
+@@ -90,12 +92,8 @@
+ 	rm -f OS.NAME
+ 
+ install: force
+-	$(INSTALL) -m 6111 -o root -g sys $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
+-	chmod gou+s $(DESTDIR)$(BINDEST)/$(PROG)
+-
+-install-man: force
+-	$(INSTALL) -m 444 -o bin -g bin $(PROG).8 \
+-	    $(DESTDIR)$(MANDEST)/man8/$(PROG).8
++	$(INSTALL) -m 6550 $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
++	$(INSTALL) -m 444 $(PROG).8 $(DESTDIR)$(MANDEST)/man8/$(PROG).8
+ 
+ lint:	$(GENSRC) force
+ 	lint -hbxn $(SRC) | \

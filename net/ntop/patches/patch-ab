@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1 1998/08/07 22:42:29 kim Exp $
+
+--- ntop.h.orig	Fri Jul 31 12:31:45 1998
++++ ntop.h	Fri Aug  7 18:07:14 1998
+@@ -16,7 +16,13 @@
+ #endif
+ 
+ #include <errno.h>
+-#include "sn_curses.h"
++#ifdef HAVE_NCURSES_H
++#include <ncurses.h>
++#else
++#ifdef HAVE_CURSES_H
++#invlude <curses.h>
++#endif
++#endif
+ #include <ctype.h>
+ #include <sys/types.h>
+ #include <unistd.h>
+@@ -38,7 +44,6 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-#include <ethertype.h>
+ #include <setjmp.h>
+ #include <pcap.h>
+ 
