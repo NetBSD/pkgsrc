@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.12 2000/10/12 15:07:44 abs Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.13 2000/11/14 17:11:43 abs Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -10,10 +10,12 @@
 .Nd a verifier for the pkgsrc tree
 .Sh SYNOPSIS
 .Nm
-.Op Fl LRdhilmor
+.Op Fl BLRdhilmor
 .Op Fl D Ar paths
 .Op Fl K Ar PACKAGES
+.Op Fl M Ar distdir
 .Op Fl P Ar PKGSRCDIR
+.Op Fl S Ar pkgsrcmap
 .Sh DESCRIPTION
 .Nm
 tries to verify the entire contents of the pkgsrc tree.
@@ -24,6 +26,8 @@ Note that it does NOT implement complete Makefile parser.
 .Pp
 .Sy Options
 .Bl -tag -width xxxxxxxxxxxx
+.It Fl B
+List packages marked as BROKEN.
 .It Fl D Ar paths
 Parse Makefiles and output contents (Useful for debugging).
 .It Fl K Ar PACKAGES
@@ -47,6 +51,8 @@ for whom the source Makefile lists
 or
 .Em RESTRICTED .
 This is intended to help those making binary packages available for ftp.
+.It Fl S Ar pkgsrcmap
+Output map of 'pkgname pkgdir pkgver'
 .It Fl V
 List any prebuilt packages in any subdirs of
 .Em PACKAGES
