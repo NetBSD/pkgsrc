@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/11/11 22:29:03 tv Exp $
+# $NetBSD: Makefile,v 1.47 2004/11/26 09:39:30 jlam Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
@@ -54,5 +54,5 @@ post-install:
 
 BUILDLINK_DEPMETHOD.dlcompat=	build
 
-.include "../../devel/dlcompat/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

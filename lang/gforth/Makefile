@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:15:01 tv Exp $
+# $NetBSD: Makefile,v 1.20 2004/11/26 09:39:30 jlam Exp $
 
 DISTNAME=		gforth-0.6.2
 PKGREVISION=	1
@@ -28,7 +28,7 @@ TEST_TARGET=	test
 KERNEL_FI=	`cd ${WRKSRC} && (${ECHO} 'prkern:'; ${ECHO} '	@${ECHO} $$(kernel_fi)'; ${ECHO}; ${CAT} Makefile) | ${MAKE} -f - prkern`
 
 # XXX Need test.
-#.include "../../devel/dlcompat/buildlink3.mk"
+#.include "../../mk/dlopen.buildlink3.mk"
 
 post-build:
 	@${ECHO}; ${ECHO} building PLIST...
