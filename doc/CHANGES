@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.688 2002/12/05 14:57:15 jschauma Exp $
+$NetBSD: CHANGES,v 1.689 2002/12/05 15:17:19 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3820,3 +3820,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated kdenetwork2 to 2.2.2nb4 [tron 2002-12-05]
 	Updated kde2 to 2.2.2nb5 [tron 2002-12-05]
 	Added xdvipresent-0.6p12 [jschauma 2002-12-05]
+	Updated Mesa to 5.0 [jschauma 2002-12-05]
+	Updated MesaLib to 5.0 [jschauma 2002-12-05]
+	Updated glu to 5.0 [jschauma 2002-12-05]
+	Updated glut to 5.0 [jschauma 2002-12-05]
