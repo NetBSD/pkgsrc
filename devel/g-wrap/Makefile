@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/06/26 16:57:07 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/15 02:18:46 jlam Exp $
 #
 
-DISTNAME=	g-wrap-0.9.4
+DISTNAME=	g-wrap-0.9.5
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.gnucash.org/pub/g-wrap/source/
 
@@ -10,9 +10,10 @@ HOMEPAGE=	http://www.cs.cmu.edu/afs/cs.cmu.edu/usr/chrislee/www/Software/g-wrap/
 
 DEPENDS+=	guile>=1.3.4:../../lang/guile
 
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
+GNU_CONFIGURE=	# defined
+CONFIGURE_ENV+=	ac_cv_path_RSCHEME="nope"
 
+USE_LIBTOOL=	# defined
 LTCONFIG_OVERRIDE= ${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.pkg.mk"
