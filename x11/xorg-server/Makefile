@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.18 2005/03/02 02:12:55 hira Exp $
+# $NetBSD: Makefile,v 1.19 2005/03/22 14:01:20 adam Exp $
 
-DISTNAME=		${DISTFILES}
-PKGNAME=		xorg-server-${XORG_VER}
-PKGREVISION=		1
-CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_XORG}
-DISTFILES=		X11R${XORG_VER}-src1.tar.gz \
-			X11R${XORG_VER}-src2.tar.gz \
-			X11R${XORG_VER}-src3.tar.gz		
+DISTNAME=	${DISTFILES}
+PKGNAME=	xorg-server-${XORG_VER}
+PKGREVISION=	1
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_XORG}
+DISTFILES=	X11R${XORG_VER}-src1.tar.gz \
+		X11R${XORG_VER}-src2.tar.gz \
+		X11R${XORG_VER}-src3.tar.gz
 
-MAINTAINER=		xtraeme@NetBSD.org
-HOMEPAGE=		http://www.x.org/
-COMMENT=		X.org X server and related programs
+MAINTAINER=	xtraeme@NetBSD.org
+HOMEPAGE=	http://www.x.org/
+COMMENT=	X.org X server and related programs
 
-USE_X11=		yes
 USE_BUILDLINK3=		yes
+USE_X11=		yes
 DISTINFO_FILE=		${.CURDIR}/../../x11/xorg-libs/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/xorg-libs/patches
 
@@ -49,10 +49,23 @@ SUBST_MESSAGE.stubs=	"Fixing stubs Makefile."
 USE_PERL5=	build # Yeah, we need this :-)
 .endif
 
+.if ${OPSYS} == "Darwin"
+BUILDLINK_PASSTHRU_DIRS+=	/System
+.else
 .include "options.mk"
 
+PLIST_SRC+=	PLIST.${OPSYS}
+PLIST_SRC+=	PLIST.common_cards
+PLIST_SRC+=	PLIST.common
+PLIST_SRC+=	PLIST.common_end
+.endif
+
 post-install:
+.if ${OPSYS} == "Darwin"
+	${CHMOD} a+r ${X11ROOT}/bin/XDarwin
+.else
 	${CHMOD} a+r ${X11ROOT}/bin/Xorg
+.endif
 
 .if ${OPSYS} == "Linux"
 .  include "../../x11/Xrender/buildlink3.mk"
