@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.2 2000/03/28 00:09:20 dmcmahill Exp $
-
---- configs/netbsd-g++-static.orig	Fri Feb 26 12:02:07 1999
-+++ configs/netbsd-g++-static	Sun Mar 26 09:44:53 2000
-@@ -1,4 +1,5 @@
+--- configs/netbsd-g++-static.orig	Fri Feb 26 17:02:07 1999
++++ configs/netbsd-g++-static	Thu Jun 15 12:37:34 2000
+@@ -1,5 +1,6 @@
  # Compiling
  SYSCONF_CXX		= g++
 +SYSCONF_CXX_LIB		= $(LIBTOOL) --mode=compile g++
  
  # Compiling with support libraries
-@@ -15,6 +16,6 @@
+ SYSCONF_CXXFLAGS_X11	= -I/usr/X11R6/include
+@@ -14,8 +15,8 @@
+ SYSCONF_LFLAGS_X11	= -L/usr/X11R6/lib
  SYSCONF_LIBS_X11	= -lX11 -lXext
  # Qt, Qt+OpenGL
 -SYSCONF_LFLAGS_QT	= -L$(QTDIR)/lib
@@ -17,7 +17,9 @@ $NetBSD: patch-aa,v 1.2 2000/03/28 00:09:20 dmcmahill Exp $
 +SYSCONF_LIBS_QT		= $(QTDIR)/src/libqt.la
  SYSCONF_LIBS_QT_OPENGL	= -lqgl
  # OpenGL
-@@ -25,37 +26,23 @@
+ SYSCONF_LFLAGS_OPENGL	= -L/usr/X11R6/lib
+@@ -24,38 +25,24 @@
+ SYSCONF_LIBS_YACC	= 
  
  # Linking applications
 -SYSCONF_LINK		= g++
@@ -51,7 +53,7 @@ $NetBSD: patch-aa,v 1.2 2000/03/28 00:09:20 dmcmahill Exp $
 -				 $(SYSCONF_AR) $(DESTDIR)$(SYSCONF_LINK_TARGET_STATIC) $(OBJECTS) $(OBJMOC) 
 +SYSCONF_LINK_TARGET = lib$(TARGET).la
 +SYSCONF_LINK_LIB	= rm -f $(SYSCONF_LINK_TARGET) ; \
-+	$(LIBTOOL) --mode=link g++ -rpath $(PREFIX)/lib -version-info $(VER_MAJ):$(VER_MIN) \
++	$(LIBTOOL) --mode=link g++ -rpath $(QTPREFIX)/lib -version-info $(VER_MAJ):$(VER_MIN) \
 +	-o $(SYSCONF_LINK_TARGET) $(OBJECTS:.o=.lo) $(OBJMOC:.o=.lo) 
  # Compiling application source
  SYSCONF_CXXFLAGS	= -O2 -fno-strength-reduce
