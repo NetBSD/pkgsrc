@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/19 10:20:36 abs Exp $
+
+--- Makefile.orig	Tue Mar 25 01:18:00 1997
++++ Makefile	Tue Mar 25 01:18:58 1997
+@@ -2,10 +2,10 @@
+ PROG= fping
+ OBJS= fping.o
+ SRC= fping.c
+-BIN= /usr/local/bin
+-MAN= /usr/man/manl
++BIN= $(PREFIX)/sbin
++MAN= $(PREFIX)/man/man8
+ MANSRC= fping.man
+-MANDST= fping.l
++MANDST= fping.8
+ 
+ #
+ # Interval is the minimum amount of time between sending a ping packet to 
