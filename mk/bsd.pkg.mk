@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1144 2003/02/22 05:47:00 uebayasi Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1145 2003/02/23 14:36:57 jmmv Exp $
 #
 # This file is in the public domain.
 #
@@ -854,6 +854,37 @@ MASTER_SITE_XEMACS+=	\
 	ftp://mirror.nucba.ac.jp/mirror/xemacs/ \
 	ftp://ring.aist.go.jp/pub/text/xemacs/ \
 	ftp://ring.asahi-net.or.jp/pub/text/xemacs/
+
+MASTER_SITE_APACHE+=	\
+	http://www.apache.org/dist/ \
+	http://mirrors.midco.net/pub/apache.org/ \
+	http://apache.mirror.digitalspace.net/ \
+	http://apache.mirrorcentral.com/dist/ \
+	http://www.rge.com/pub/infosystems/apache/ \
+	http://mirrors.ccs.neu.edu/Apache/dist/ \
+	http://www.apache.inetcosmos.org/dist/ \
+	http://www.ibiblio.org/pub/packages/infosystems/WWW/servers/apache/ \
+	http://apache.ttlhost.com/ \
+	http://apache.towardex.com/ \
+	http://mirrors.theonlinerecordstore.com/apache/ \
+	http://apache.oregonstate.edu/ \
+	http://mirror.telentente.com/pub/apache/dist/ \
+	http://www.tux.org/pub/net/apache/dist/ \
+	http://apache.secsup.org/dist/ \
+	http://ftp.epix.net/apache/ \
+	ftp://ftp.rge.com/pub/infosystems/apache/ \
+	ftp://ftp.epix.net/pub/apache/ \
+	ftp://ftp.ccs.neu.edu/net/mirrors/Apache/dist/ \
+	ftp://ftp.tux.org/pub/net/apache/dist/ \
+	ftp://ftp.apache.inetcosmos.org/pub/apache/dist/ \
+	ftp://www.ibiblio.org/pub/packages/infosystems/WWW/servers/apache/ \
+	ftp://ftp.knowledge.com/pub/mirrors/apache/dist/ \
+	ftp://ftp.sunsite.utk.edu/pub/apache/dist/ \
+	ftp://ftp.oregonstate.edu/pub/apache/ \
+	ftp://apache.secsup.org/pub/apache/dist/ \
+	ftp://mirror.telentente.com/pub/apache/dist/ \
+	ftp://mirrors.midco.net/pub/apache.org/ \
+	http://nagoya.apache.org/mirror/
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
