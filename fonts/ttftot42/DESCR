@@ -1,0 +1,13 @@
+  TrueType fonts cannot be converted to Type 1 fonts without loss of
+quality, since conversion introduces rounding errors and loses hinting
+information.  Therefore, newer PostScript interpreters (Adobe
+PostScript since version 2013, ghostscript since 5.03) include a
+TrueType rasterizers.  To use a TrueType font with them, it has to be
+embedded in a PostScript font dictionary; this format is called Type 42.
+
+  This program generates such Type 42 fonts from TrueType fonts.  It
+can also generate Adobe Font Metrics files (AFM files), including
+kerning information.
+
+  Not yet supported are TrueType Collections and the creation of CID
+keyed fonts from large TrueType fonts (East Asian or Unicode fonts).
