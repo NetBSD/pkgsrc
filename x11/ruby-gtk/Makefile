@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/05/02 11:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/05/03 21:12:21 wiz Exp $
 # FreeBSD: ports/x11-toolkits/ruby-gtk/Makefile,v 1.16 2000/10/15 15:45:59 knu Exp
 
 DISTNAME=	ruby-gtk-0.25
@@ -12,14 +12,12 @@ MAINTAINER=	taca@netbsd.org
 HOMEPAGE=	http://www.ruby-lang.org/gtk/en/
 COMMENT=	Ruby interface to Gtk+ toolkits
 
-DEPENDS+=	ruby-base>=1.6.7nb1:../../lang/ruby-base
+USE_BUILDLINK2=	yes
 
 DIST_SUBDIR=	ruby
 USE_RUBY_EXTCONF= yes
 
 INSTALL_TARGET=	site-install
-
-DEPENDS+=	imlib>=1.9.14nb3:../../graphics/imlib
 
 DOCS_EN=	README README.EXT doc/rbbr.rb
 DOCS_JA=	README.ja README.EXT.ja
@@ -38,6 +36,9 @@ post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/gtk/testgtk
 	${INSTALL_DATA} ${WRKSRC}/sample/testgtk/* \
 		${RUBY_EXAMPLESDIR}/gtk/testgtk
+
+.include "../../lang/ruby-base/buildlink2.mk"
+.include "../../graphics/imlib/buildlink2.mk"
 
 .include "../../lang/ruby-base/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
