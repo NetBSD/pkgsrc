@@ -1,0 +1,57 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/27 17:37:51 jlam Exp $
+
+--- src/num_put_float.cpp.orig	Thu Jul 13 21:53:26 2000
++++ src/num_put_float.cpp
+@@ -43,13 +43,15 @@
+ 
+ # ifdef __STL_UNIX
+ 
++# if !defined(__NetBSD__)  // values.h not supplied with NetBSD
+ # include <values.h>
++# endif
+ 
+ # if defined (__sun) 
+ #  include <floatingpoint.h>
+ # endif
+ 
+-# if !defined(__STL_USE_GLIBC) && !defined(__FreeBSD__)   // dwa 1/10/00 - nan.h not supplied with gcc
++# if !defined(__STL_USE_GLIBC) && !defined(__FreeBSD__) && !defined(__NetBSD__)   // dwa 1/10/00 - nan.h not supplied with gcc
+ // DEC & Solaris need this
+ #  include <nan.h>
+ # endif
+@@ -95,7 +97,7 @@
+ # endif
+   inline bool _Stl_is_inf(double x)        { return isinf(x); }
+   inline bool _Stl_is_neg_inf(double x)    { return isinf(x) < 0; }
+-#elif defined(__unix) && !defined(__FreeBSD__) /* (__sgi) || defined (__sun) IRIX , Solaris, others ? */
++#elif defined(__unix) && !defined(__FreeBSD__) && !defined(__NetBSD__) /* (__sgi) || defined (__sun) IRIX , Solaris, others ? */
+   inline bool _Stl_is_nan_or_inf(double x) { return IsNANorINF(x); }
+   inline bool _Stl_is_inf(double x)        { return IsNANorINF(x) && IsINF(x); }
+   inline bool _Stl_is_neg_inf(double x)    { return (IsINF(x)) && (x < 0.0); }
+@@ -124,7 +126,7 @@
+   bool _Stl_is_inf(double x)        { return !isfinite(x); }
+   bool _Stl_is_neg_inf(double x)    { return !isfinite(x) && signbit(x); }
+   bool _Stl_is_neg_nan(double x)    { return isnan(x) && signbit(x); }
+-#elif defined (__FreeBSD__)
++#elif defined (__FreeBSD__) || defined (__NetBSD__)
+  inline bool _Stl_is_nan_or_inf(double x) { return !finite(x); }
+  inline bool _Stl_is_inf(double x)        {
+    return _Stl_is_nan_or_inf(x) && ! isnan(x);
+@@ -193,7 +195,7 @@
+      { return _ldfcvt(*(long_double*)&x, n, pt, sign); }
+ #  endif
+ 
+-#elif defined (__unix)  && !defined(__FreeBSD__)/* defined(__sgi) IRIX */
++#elif defined (__unix)  && !defined(__FreeBSD__) && !defined(__NetBSD__) /* defined(__sgi) IRIX */
+   inline char* _Stl_ecvtR(double x, int n, int* pt, int* sign, char* buf)
+     { return ecvt_r(x, n, pt, sign, buf); }
+   inline char* _Stl_fcvtR(double x, int n, int* pt, int* sign, char* buf)
+@@ -203,7 +205,7 @@
+   inline char* _Stl_qfcvtR(long double x, int n, int* pt, int* sign, char* buf)
+     { return qfcvt_r(x, n, pt, sign, buf); }
+ 
+-#elif defined (__FreeBSD__)
++#elif defined (__FreeBSD__) || defined (__NetBSD__)
+ 
+ /*
+  * Copyright (c) 1995-1997 The Apache Group.  All rights reserved.
