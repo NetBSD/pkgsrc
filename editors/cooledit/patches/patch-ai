@@ -1,0 +1,33 @@
+$NetBSD: patch-ai,v 1.1.1.1 2002/07/07 19:45:39 dmcmahill Exp $
+
+--- editor/shell.c.orig	Sat Oct 27 14:36:12 2001
++++ editor/shell.c
+@@ -437,8 +437,8 @@
+ {
+     CWidget *w;
+     struct running_shell *r;
+-    int i, count = 0, do_redraw = 0;
+-    r = &running_shell[i = (int) data];
++    long int i, count = 0, do_redraw = 0;
++    r = &running_shell[i = (long int) data];
+     if (r->shell_pipe != fd) {
+ 	printf ("huh??\n");
+     }
+@@ -560,7 +560,7 @@
+     char *argv[] =
+     {0, 0};
+     pid_t p;
+-    int i;
++    long int i;
+     i = restart_shell (0, name, 0);
+     argv[0] = hme_i (SCRIPT_FILE, i);
+     savefile (argv[0], s, strlen (s), 0700);
+@@ -585,7 +585,7 @@
+     char *argv[] =
+     {0, 0};
+     pid_t p = 0;
+-    int i;
++    long int i;
+ 
+     i = restart_shell (0, name, 0);
+     argv[0] = hme_i (SCRIPT_FILE, i);
