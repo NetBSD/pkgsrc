@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9715 2005/04/01 19:10:24 bouyer Exp $
+$NetBSD: CHANGES,v 1.9716 2005/04/01 20:00:17 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1855,3 +1855,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Added jakarta-tomcat-5.5.7 [abs 2005-04-01]
 	Added teem-1.8.0 [jschauma 2005-04-01]
 	Updated xentools20 to 2.0.3nb4 [bouyer 2005-04-01]
+	Updated libosip to 2.2.0 [drochner 2005-04-01]
+	Added partysip-2.2.1 [drochner 2005-04-01]
+	Updated scribus to 1.2.1 [drochner 2005-04-01]
+	Updated gimp-ufraw to 0.4 [drochner 2005-04-01]
