@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2005/03/23 21:44:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.31 2005/03/26 03:49:03 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -4126,7 +4126,7 @@ ${PKGLOCALEDIR}/locale/l10n/zw/flag.png
 @comment in kde: @dirrm share/kde/config
 @comment in kde: @dirrm share/kde/autostart
 @dirrm share/kde/apps/systemview
-@dirrm share/kde/apps/remoteview
+@comment in kde: @dirrm share/kde/apps/remoteview
 @dirrm share/kde/apps/plugin
 @dirrm share/kde/apps/naughtyapplet/pics
 @dirrm share/kde/apps/naughtyapplet
