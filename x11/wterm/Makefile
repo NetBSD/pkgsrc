@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/01/03 18:50:00 reed Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/25 23:15:44 minskim Exp $
 
 DISTNAME=	wterm-6.2.9
 PKGREVISION=	3
@@ -12,7 +12,7 @@ COMMENT=	NeXTStep(tm) style X11 terminal emulator for WindowMaker
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 CONFIGURE_ARGS+= --enable-utmp --enable-wtmp
 CONFIGURE_ARGS+= --enable-xpm-background --enable-transparency
@@ -27,5 +27,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/wtermthai.tiff \
 		${PREFIX}/share/WindowMaker/Icons
 
-.include "../../wm/windowmaker/buildlink2.mk"
+.include "../../wm/windowmaker/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
