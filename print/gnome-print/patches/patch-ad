@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2004/04/27 15:21:15 adam Exp $
+
+--- installer/gnome-font-install.c.orig	2004-04-27 10:33:08.000000000 +0000
++++ installer/gnome-font-install.c
+@@ -26,6 +26,7 @@
+ #include <parser.h>
+ #include <xmlmemory.h>
+ /* End of ugly thing */
++#include <ft2build.h>
+ #include <freetype/freetype.h>
+ #include <libgnome/gnome-defs.h>
+ #include <libgnome/gnome-util.h>

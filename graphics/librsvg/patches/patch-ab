@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/05/14 17:47:27 rh Exp $
+$NetBSD: patch-ab,v 1.2 2004/04/27 15:19:53 adam Exp $
 
---- test-ft-gtk.c.orig	Wed Mar 28 20:44:42 2001
+--- test-ft-gtk.c.orig	2001-03-28 18:44:42.000000000 +0000
 +++ test-ft-gtk.c
 @@ -25,7 +25,7 @@
  #include <stdio.h>
@@ -11,3 +11,11 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/05/14 17:47:27 rh Exp $
  #include <math.h>
  #include <sys/time.h>
  #include <unistd.h>
+@@ -34,6 +34,7 @@
+ 
+ #include <gdk-pixbuf/gdk-pixbuf.h>
+ 
++#include <ft2build.h>
+ #include <freetype/freetype.h>
+ 
+ #include <libart_lgpl/art_misc.h>

@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.16 2004/04/27 15:21:15 adam Exp $
+
+--- libgnomeprint/gnome-font-private.h.orig	2004-04-27 10:25:31.000000000 +0000
++++ libgnomeprint/gnome-font-private.h
+@@ -22,6 +22,7 @@
+ 
+ BEGIN_GNOME_DECLS
+ 
++#include <ft2build.h>
+ #include <freetype/freetype.h>
+ #include <libgnomeprint/gp-character-block.h>
+ #include <libgnomeprint/gp-fontmap.h>

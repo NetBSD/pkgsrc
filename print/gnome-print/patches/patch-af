@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2004/04/27 15:21:15 adam Exp $
+
+--- installer/gf-ttf.c.orig	2004-04-27 10:34:48.000000000 +0000
++++ installer/gf-ttf.c
+@@ -32,6 +32,7 @@
+ #include <fcntl.h>
+ #include <string.h>
+ #include <ctype.h>
++#include <ft2build.h>
+ #include <freetype/freetype.h>
+ 
+ #include "gf-ttf.h"
