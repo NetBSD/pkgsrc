@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/04/20 15:04:19 cjep Exp $
+# $NetBSD: Makefile,v 1.11 2002/09/29 06:29:38 jlam Exp $
 #
 
 DISTNAME=		angband-283
@@ -14,6 +14,7 @@ COMMENT=		Tolkien based variant of Moria for tty/console displays
 
 CONFLICTS=		angband-x11-[0-9]*
 
+USE_BUILDLINK2=		# defined
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 MAKEFILE=		Makefile.std
@@ -22,8 +23,7 @@ ALL_TARGET=		angband
 SPOILERFILE=		angband-spoilers.tar.gz
 
 .if (${MACHINE_ARCH} == arm32)
-. include "../../lang/gcc/Makefile.gcc"
-MAKE_FLAGS+= 		CC=${CC}
+. include "../../lang/gcc/buildlink2.mk"
 .endif
 
 do-install:
