@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/11/01 21:36:44 jdolecek Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/11/02 21:52:13 kristerw Exp $
 #
 # Net_Socket was bundled with PHP 4.x, but has been pushed to pear
 # in PHP 5.x. If we build for PHP4, use the bundled version, otherwise 
@@ -17,7 +17,7 @@ BUILDLINK_PACKAGES+=	pear-netsocket
 .if !empty(NETSOCKET_BUILDLINK3_MK:M+)
 
 BUILDLINK_DEPENDS.pear-netsocket+=	pear-Net_Socket>=1.0.1
-BUILDLINK_PKGSRCDIR.pear-netsocket?=	../../wip/pear-Net_Socket
+BUILDLINK_PKGSRCDIR.pear-netsocket?=	../../net/pear-Net_Socket
 BUILDLINK_DEPMETHOD.pear-netsocket?=	full
 
 .endif	# NETSOCKET_BUILDLINK3_MK
