@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/27 22:09:09 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/30 07:59:32 martti Exp $
 #
 
 DISTINFO_FILE=		${.CURDIR}/../../shells/bash2/distinfo
@@ -10,7 +10,7 @@ CONFLICTS=		bash-[0-9]*
 .include "../../shells/bash2/Makefile"
 
 WRKSRC:=		${WRKDIR}/${DISTNAME}
-PKGNAME:=		static-${PKGNAME}
+PKGNAME:=		static-${DISTNAME}
 COMMENT:=		Statically-linked version of the ${COMMENT}
 
 LDFLAGS+=		-static
