@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2328 2003/05/26 08:59:13 wiz Exp $
+$NetBSD: CHANGES,v 1.2329 2003/05/26 10:38:15 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2164,3 +2164,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cyrus-sasl to 2.1.13 [martti 2003-05-26]
 	Updated cyrus-imapd to 2.1.13 [martti 2003-05-26]
 	Updated mldonkey to 2.5.0 [wiz 2003-05-26]
+	Updated ap-xslt to 1.1nb4 [grant 2003-05-26]
