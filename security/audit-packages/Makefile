@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2004/04/09 16:06:59 jschauma Exp $
+# $NetBSD: Makefile,v 1.46 2004/04/11 18:14:53 jschauma Exp $
 
 DISTNAME=	audit-packages-1.29
 CATEGORIES=	security pkgtools
@@ -20,14 +20,6 @@ INSTALLATION_DIRS=	man/cat8 man/man8 sbin
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
-# This doesn't create readable manual pages. "mandoc" should be added
-# to zoularis.
-NROFF=		nroff -man
-.else
-NROFF=		nroff -mandoc
-.endif
-
 do-build:
 	@for f in audit-packages audit-packages.0 audit-packages.8 	\
 		download-vulnerability-list; do				\
@@ -46,10 +38,10 @@ do-build:
 			-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'	\
 			${FILESDIR}/$$f > ${WRKSRC}/$$f;		\
 	done
-.if ${OPSYS} == "IRIX"
-	${CP} ${FILESDIR}/audit-packages.0 ${WRKSRC}/audit-packages.0
-.else
-	${NROFF} ${WRKSRC}/audit-packages.8 >${WRKSRC}/audit-packages.0
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
+	# pre-created man-pages are "mandoc" pages, these OS need "man",
+	# so regen the .0 page
+	nroff -man ${WRKSRC}/audit-packages.8 >${WRKSRC}/audit-packages.0
 .endif
 
 do-install:
