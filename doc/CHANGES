@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9562 2005/03/22 17:20:02 wiz Exp $
+$NetBSD: CHANGES,v 1.9563 2005/03/22 17:23:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1568,3 +1568,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed nautilus-media [jmmv 2005-03-22]
 	Added ximian-connector-2.2.0 [jmmv 2005-03-22]
 	Updated gnome to 2.10.0 [jmmv 2005-03-22]
+	Updated DatLib to 2.3 [wiz 2005-03-22]
+	Updated DatUtil to 2.15 [wiz 2005-03-22]
