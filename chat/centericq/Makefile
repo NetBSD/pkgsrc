@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2003/11/12 03:39:39 jschauma Exp $
+# $NetBSD: Makefile,v 1.33 2003/12/14 04:14:04 xtraeme Exp $
 #
 
-DISTNAME=	centericq-4.9.6
-PKGREVISION=	2
+DISTNAME=	centericq-4.9.9
 CATEGORIES=	chat
 MASTER_SITES=	http://konst.org.ua/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -52,6 +51,9 @@ CPPFLAGS+=		-DAUDIO_PLAYER=\"\\\"${SOX_PREFIX}/bin/play\\\"\"
 #
 CONFIGURE_ENV+=		ac_cv_lib_iconv_iconv=yes
 .endif
+
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/centericq.1 ${PREFIX}/man/man1/
 
 .include "../../mk/bsd.pkg.mk"
 
