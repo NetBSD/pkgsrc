@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2004/05/13 04:29:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2004/09/02 21:56:32 xtraeme Exp $
 #
 
-DISTNAME=	fluxbox-0.9.9
+DISTNAME=	fluxbox-0.9.10
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fluxbox/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,12 +17,10 @@ USE_X11=	YES
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 
-.include "../../mk/bsd.prefs.mk"
-
-FLUXBOX_USE_XINERAMA?=	NO
-.if !empty(FLUXBOX_USE_XINERAMA:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-xinerama
-.endif
+
+.include "../../mk/bsd.prefs.mk"
 
 FLUXBOX_USE_KDE?=	NO
 .if !empty(FLUXBOX_USE_KDE:M[Yy][Ee][Ss])
