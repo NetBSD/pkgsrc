@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2002/08/25 19:22:53 jlam Exp $
+# $NetBSD: Makefile.common,v 1.4 2002/08/26 21:20:32 tron Exp $
 
 CATEGORIES?=	graphics
 MASTER_SITES?=	ftp://ftp.mostang.com/pub/sane/sane-${SANE_VERSION}/ \
@@ -20,3 +20,5 @@ PLIST_SUBST+=	SANE_MICRO=${SANE_MICRO}
 PLIST_SUBST+=	SANE_VERSION=${SANE_VERSION}
 
 CONFLICTS+=	sane<=1.0.3
+
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
