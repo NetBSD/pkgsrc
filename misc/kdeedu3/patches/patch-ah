@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1 2005/02/20 11:31:11 markd Exp $
+
+--- kstars/kstars/indi/Makefile.am.orig	2004-07-18 05:52:58.000000000 +1200
++++ kstars/kstars/indi/Makefile.am
+@@ -40,7 +40,6 @@ install-exec-hook:
+ 	$(LN_S) lx200generic $(DESTDIR)$(bindir)/lx200_16
+ 	rm -f $(DESTDIR)$(bindir)/lx200gps
+ 	$(LN_S) lx200generic $(DESTDIR)$(bindir)/lx200gps
+-	chmod +s $(DESTDIR)$(bindir)/fliccd
+ 
+ uninstall-local:
+ 	rm $(DESTDIR)$(bindir)/lx200autostar $(DESTDIR)$(bindir)/lx200_16 $(DESTDIR)$(bindir)/lx200gps

@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2005/02/20 11:31:11 markd Exp $
+
+--- kstars/kstars/indi/lilxml.h.orig	2004-06-25 21:10:04.000000000 +1200
++++ kstars/kstars/indi/lilxml.h	2005-02-19 15:01:32.000000000 +1300
+@@ -189,7 +189,7 @@
+     \param name the name of the XML attribute to retrieve its value.
+     \return the value string of an XML element on success. NULL on failure.
+ */
+-extern char *findXMLAttValu (XMLEle *ep, char *name);
++extern const char *findXMLAttValu (XMLEle *ep, char *name);
+ 
+ /** \brief Handy wrapper to read one xml file.
+     \param fp pointer to FILE to read.
