@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.33 2005/03/24 22:42:58 jlam Exp $
+# $NetBSD: pyversion.mk,v 1.34 2005/03/24 22:44:37 jlam Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -139,9 +139,6 @@ BUILD_DEPENDS+=	py15-distutils-*:../../devel/py-distutils
 
 PTHREAD_OPTS=	require
 .include "../../mk/pthread.buildlink3.mk"
-.if ${PTHREAD_TYPE} == "pth"
-.  include "../../devel/pth/buildlink3.mk"
-.endif
 .if defined(PYTHON_FOR_BUILD_ONLY)
 BUILD_DEPMETHOD.python?=	build
 .endif
