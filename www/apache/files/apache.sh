@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: apache.sh,v 1.6 2000/09/14 02:31:04 jlam Exp $
+# $NetBSD: apache.sh,v 1.7 2000/09/20 06:08:42 jlam Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
@@ -24,7 +24,13 @@ case ${cmd} in
 start)
 	if [ -x ${command} -a -f ${conffile} ]; then
 		echo "Starting ${name}."
-		${command} ${apache_start}
+		${command} ${apache_start} > /dev/null
+	fi
+	;;
+stop)
+	if [ -x ${command} -a -f ${pidfile} ]; then
+		echo "Stopping ${name}."
+		${command} stop > /dev/null
 	fi
 	;;
 restart)
