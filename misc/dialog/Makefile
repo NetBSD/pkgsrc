@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/11/30 03:20:16 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.11 2002/04/22 13:07:51 tron Exp $
 
 DISTNAME=       dialog-0.6z
 CATEGORIES=	misc
@@ -10,6 +9,8 @@ COMMENT=	Display dialog boxes from shell scripts
 
 USE_BUILDLINK_ONLY=	# defined
 USE_GMAKE=		# defined
+
+INCOMPAT_CURSES=	1.5 1.5.*
 
 EGDIR=			${PREFIX}/share/examples/dialog
 EGFILES=		checklist guage infobox inputbox menubox msgbox
