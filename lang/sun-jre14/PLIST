@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2002/09/03 19:50:52 jschauma Exp $
-COPYRIGHT
+@comment $NetBSD: PLIST,v 1.4 2002/10/13 07:45:35 jlam Exp $
 CHANGES
+COPYRIGHT
+ControlPanel.html
 LICENSE
 README
-ControlPanel.html
 Welcome.html
 bin/ControlPanel
 bin/java
@@ -16,38 +16,6 @@ bin/rmiregistry
 bin/servertool
 bin/tnameserv
 javaws-1_0_1_02-linux-int.zip
-lib/i386/awt_robot
-lib/i386/client/Xusage.txt
-lib/i386/client/libjsig.so
-lib/i386/client/libjvm.so
-lib/i386/jvm.cfg
-lib/i386/libJdbcOdbc.so
-lib/i386/libawt.so
-lib/i386/libcmm.so
-lib/i386/libdcpr.so
-lib/i386/libdt_socket.so
-lib/i386/libfontmanager.so
-lib/i386/libhprof.so
-lib/i386/libioser12.so
-lib/i386/libjaas_unix.so
-lib/i386/libjava.so
-lib/i386/libjavaplugin_jni.so
-lib/i386/libjawt.so
-lib/i386/libjcov.so
-lib/i386/libjdwp.so
-lib/i386/libjpeg.so
-lib/i386/libjsig.so
-lib/i386/libjsound.so
-lib/i386/libmlib_image.so
-lib/i386/libnet.so
-lib/i386/libnio.so
-lib/i386/librmi.so
-lib/i386/libverify.so
-lib/i386/libzip.so
-lib/i386/native_threads/libhpi.so
-lib/i386/server/Xusage.txt
-lib/i386/server/libjsig.so
-lib/i386/server/libjvm.so
 lib/audio/soundbank.gm
 lib/charsets.jar
 lib/cmm/CIEXYZ.pf
@@ -81,6 +49,38 @@ lib/fonts/LucidaTypewriterBoldOblique.ttf
 lib/fonts/LucidaTypewriterOblique.ttf
 lib/fonts/LucidaTypewriterRegular.ttf
 lib/fonts/fonts.dir
+lib/i386/awt_robot
+lib/i386/client/Xusage.txt
+lib/i386/client/libjsig.so
+lib/i386/client/libjvm.so
+lib/i386/jvm.cfg
+lib/i386/libJdbcOdbc.so
+lib/i386/libawt.so
+lib/i386/libcmm.so
+lib/i386/libdcpr.so
+lib/i386/libdt_socket.so
+lib/i386/libfontmanager.so
+lib/i386/libhprof.so
+lib/i386/libioser12.so
+lib/i386/libjaas_unix.so
+lib/i386/libjava.so
+lib/i386/libjavaplugin_jni.so
+lib/i386/libjawt.so
+lib/i386/libjcov.so
+lib/i386/libjdwp.so
+lib/i386/libjpeg.so
+lib/i386/libjsig.so
+lib/i386/libjsound.so
+lib/i386/libmlib_image.so
+lib/i386/libnet.so
+lib/i386/libnio.so
+lib/i386/librmi.so
+lib/i386/libverify.so
+lib/i386/libzip.so
+lib/i386/native_threads/libhpi.so
+lib/i386/server/Xusage.txt
+lib/i386/server/libjsig.so
+lib/i386/server/libjvm.so
 lib/images/cursors/cursors.properties
 lib/images/cursors/invalid32x32.gif
 lib/images/cursors/motif_CopyDrop32x32.gif
@@ -541,6 +541,10 @@ plugin/i386/ns610/libjavaplugin_oji140.so
 @dirrm plugin/i386/ns4
 @dirrm plugin/i386
 @dirrm plugin
+@dirrm man/man1
+@dirrm man/ja_JP.eucJP/man1
+@dirrm man/ja_JP.eucJP
+@dirrm man
 @dirrm lib/zi/Pacific
 @dirrm lib/zi/Indian
 @dirrm lib/zi/Europe
@@ -592,11 +596,7 @@ plugin/i386/ns610/libjavaplugin_oji140.so
 @dirrm lib/cmm
 @dirrm lib/audio
 @exec ${MKDIR} %D/lib/applet
-@dirrm lib/applet
-@dirrm lib
-@dirrm man/man1
-@dirrm man/ja_JP.eucJP/man1
-@dirrm man/ja_JP.eucJP
-@dirrm man
+@unexec ${RMDIR} %D/lib/applet 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib 2>/dev/null || ${TRUE}
 @dirrm bin
-@unexec ${RMDIR} %D 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} -p %D 2>/dev/null || ${TRUE}

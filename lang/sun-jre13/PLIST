@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/07/27 21:54:32 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/10/13 07:45:34 jlam Exp $
 CHANGES
 COPYRIGHT
 ControlPanel.html
@@ -197,4 +197,4 @@ plugin/i386/ns600/libjavaplugin_oji.so
 @dirrm bin/i386/green_threads
 @dirrm bin/i386
 @dirrm bin
-@unexec ${RMDIR} %D
+@unexec ${RMDIR} -p %D 2>/dev/null || ${TRUE}
