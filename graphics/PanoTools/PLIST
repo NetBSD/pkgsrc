@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/19 07:55:34 rh Exp $
+bin/ptcrypt
+bin/pteditor
+bin/ptpicker
+${JAVA_HOME}/lib/${MACHINE_ARCH}/libpano12.lib.so
+share/PanoTools/ptcrypt.jar
+share/PanoTools/pteditor.jar
+share/PanoTools/ptpicker.jar
+share/doc/PanoTools/COPYRIGHT_TIFF
+share/doc/PanoTools/Copying.html
+share/doc/PanoTools/Optimizer_Script.txt
+share/doc/PanoTools/README_JPEG
+share/doc/PanoTools/Readme.html
+share/doc/PanoTools/Readme.txt
+share/doc/PanoTools/Stitcher_Script.txt
+@dirrm share/doc/PanoTools
+@dirrm share/PanoTools
