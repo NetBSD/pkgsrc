@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/07/10 16:03:47 agc Exp $
+# $NetBSD: Makefile,v 1.13 2000/07/11 14:53:37 agc Exp $
 #
 
 DISTNAME=	vipec-2.0.1
@@ -14,9 +14,9 @@ GNU_CONFIGURE=	yes
 USE_PKGLIBTOOL=	yes
 USE_X11=	yes
 
-CONFIGURE_ENV+=	"QTDIR=`${PKG_INFO} -qp qt2 | ${AWK} '{ print $$2 }'`/qt2" \
+CONFIGURE_ENV+=	"QTDIR=`${MAKE} show-qt2-prefix`/qt2" \
 		all_libraries="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
-CONFIGURE_ARGS+=	"--with-qt-dir=`${PKG_INFO} -qp qt2 | ${AWK} '{ print $$2 }'`/qt2"
+CONFIGURE_ARGS+=	"--with-qt-dir=`${MAKE} show-qt2-prefix`/qt2"
 
 post-extract:
 	${MV} -f ${WRKSRC}/bin/start_vipec_help ${WRKSRC}/bin/start_vipec_help.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/07/10 15:08:15 agc Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/11 14:53:38 agc Exp $
 #
 
 DISTNAME=	cervisia-0.5.0
@@ -14,9 +14,9 @@ DEPENDS+=	cvs-1.10:../../devel/cvs
 
 USE_X11BASE=		yes	# To get this near KDE
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=	"QTDIR=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1"
-CONFIGURE_ARGS+=--with-qt-includes=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1/include \
-		--with-qt-libraries=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1/lib \
+CONFIGURE_ENV+=	"QTDIR=`${MAKE} show-qt1-prefix`/qt1"
+CONFIGURE_ARGS+=--with-qt-includes=`${MAKE} show-qt1-prefix`/qt1/include \
+		--with-qt-libraries=`${MAKE} show-qt1-prefix`/qt1/lib \
 		--with-extra-includes=${LOCALBASE}/include \
 		--with-extra-libs=${LOCALBASE}/lib
 
