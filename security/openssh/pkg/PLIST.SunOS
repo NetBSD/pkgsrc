@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.1 2001/01/10 16:05:53 tron Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.2 2001/02/21 18:55:37 tron Exp $
 bin/scp
 bin/slogin
 bin/ssh
@@ -16,7 +16,7 @@ man/man1/ssh.1
 man/man8/sftp-server.8
 man/man8/sshd.8
 sbin/sshd
-share/examples/ssh/ssh_config
-share/examples/ssh/ssh_prng_cmds
-share/examples/ssh/sshd_config
+share/examples/openssh/ssh_config
+share/examples/openssh/ssh_prng_cmds
+share/examples/openssh/sshd_config
 @dirrm share/examples/ssh

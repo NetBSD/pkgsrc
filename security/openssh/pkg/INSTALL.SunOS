@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL.SunOS,v 1.1 2001/01/10 16:05:53 tron Exp $
+# $NetBSD: INSTALL.SunOS,v 1.2 2001/02/21 18:55:37 tron Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -10,7 +10,7 @@ PRE-INSTALL)
 	;;
 POST-INSTALL)
 	SSH_CONF_DIR=@SSH_CONF_DIR@
-	SSH_EXAMPLE_DIR=${PKG_PREFIX}/share/examples/ssh
+	SSH_EXAMPLE_DIR=${PKG_PREFIX}/share/examples/openssh
 	INSTALL_DATA="@INSTALL_DATA@"
 
 	if [ ! -d ${SSH_CONF_DIR} ]
