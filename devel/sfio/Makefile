@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/11/02 21:18:13 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/12/28 05:10:24 wiz Exp $
 #
 
 DISTNAME=       sfio_1998.src.unix
@@ -14,7 +14,7 @@ NO_WRKSUBDIR=	yes
 
 do-extract:
 	@${MKDIR} ${WRKDIR}
-	cd ${WRKDIR} ; pax -r < ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+	cd ${WRKDIR} ; ${PAX} -r < ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 
 post-patch:
 	${MV} ${WRKSRC}/man/man3/sfio.3 ${WRKSRC}/man/man3/sfio.3.in
