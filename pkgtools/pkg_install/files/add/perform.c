@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.9 2003/09/02 08:28:23 jlam Exp $	*/
+/*	$NetBSD: perform.c,v 1.10 2003/09/09 13:34:17 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.9 2003/09/02 08:28:23 jlam Exp $");
+__RCSID("$NetBSD: perform.c,v 1.10 2003/09/09 13:34:17 jlam Exp $");
 #endif
 #endif
 
@@ -86,8 +86,9 @@ installprereq(const char *name, int *errc)
 	if (Verbose)
 		printf("Loading it from %s.\n", name);
 	path_setenv("PKG_PATH");
-	if (vsystem("%s/pkg_add -s %s %s%s%s %s%s %s%s%s %s%s",
+	if (vsystem("%s/pkg_add -K %s -s %s %s%s%s %s%s %s%s%s %s%s",
 			BINDIR,
+			_pkgdb_getPKGDB_DIR(),
 			get_verification(),
 			NoView ? "-L " : "",
 			View ? "-w " : "",
@@ -124,7 +125,7 @@ pkg_do(const char *pkg)
 	char    replace_to[FILENAME_MAX];
 	int	replacing = 0;
 	char   *where_to, *extract;
-	char   *dbdir;
+	char   dbdir[FILENAME_MAX];
 	const char *exact;
 	FILE   *cfile;
 	int     errc;
@@ -297,18 +298,17 @@ pkg_do(const char *pkg)
 	if (fexists(VIEWS_FNAME))
 		is_depoted_pkg = TRUE;
 	
-	dbdir = _pkgdb_getPKGDB_DIR();
-	(void) snprintf(LogDir, sizeof(LogDir), "%s/%s", dbdir, PkgName);
-
-	/* check if the dbdir is wrong because this is a depoted package */
+	/*
+	 * Depoted packages' dbdir is the same as DEPOTBASE.  Non-depoted
+	 * packages' dbdir comes from the command-line or the environment.
+	 */
 	if (is_depoted_pkg) {
-		if ((p = find_plist(&Plist, PLIST_CWD))) {
-			if (strcmp(p->name, LogDir) != 0) {
-				warnx("%s is not the depot directory for %s.",
-					dbdir, PkgName);
-				goto success;
-			}
-		}
+		p = find_plist(&Plist, PLIST_CWD);
+		(void) strlcpy(dbdir, dirname_of(p->name), sizeof(dbdir));
+		(void) strlcpy(LogDir, p->name, sizeof(LogDir));
+	} else {
+		(void) strlcpy(dbdir, _pkgdb_getPKGDB_DIR(), sizeof(dbdir));
+		(void) snprintf(LogDir, sizeof(LogDir), "%s/%s", dbdir, PkgName);
 	}
 
 	/* make sure dbdir actually exists! */
@@ -634,12 +634,18 @@ ignore_replace_depends_check:
 		}
 	}
 
-	/* Now finally extract the entire show if we're not going direct */
-	if (!inPlace && !Fake)
-	    if (!extract_plist(".", &Plist)) {
-		errc = 1;
-		goto fail;
-	    }
+	/*
+	 * Now finally extract the entire show if we're not going direct.
+	 * We need to reset the package dbdir so that extract_plist()
+	 * updates the correct pkgdb.byfile.db database.
+	 */
+	if (!inPlace && !Fake) {
+		_pkgdb_setPKGDB_DIR(dbdir);
+		if (!extract_plist(".", &Plist)) {
+			errc = 1;
+			goto fail;
+		}
+	}
 
 	if (!Fake && fexists(MTREE_FNAME)) {
 		if (Verbose)
@@ -785,8 +791,9 @@ ignore_replace_depends_check:
 	/* Add the package to a default view. */
 	if (!Fake && !NoView && is_depoted_pkg) {
 		if (Verbose) {
-			printf("%s/pkg_view %s%s %s%s %sadd %s\n",
+			printf("%s/pkg_view -d %s %s%s %s%s %sadd %s\n",
 				BINDIR,
+				dbdir,
 				View ? "-w " : "",
 				View ? View : "",
 				Viewbase ? "-W " : "",
@@ -794,8 +801,9 @@ ignore_replace_depends_check:
 				Verbose ? "-v " : "",
 				PkgName);
 		}
-		vsystem("%s/pkg_view %s%s %s%s %sadd %s",
+		vsystem("%s/pkg_view -d %s %s%s %s%s %sadd %s",
 				BINDIR,
+				dbdir,
 				View ? "-w " : "",
 				View ? View : "",
 				Viewbase ? "-W " : "",

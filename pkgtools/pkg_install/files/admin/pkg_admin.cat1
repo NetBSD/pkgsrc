@@ -8,81 +8,97 @@ SSYYNNOOPPSSIISS
 
 DDEESSCCRRIIPPTTIIOONN
      This command performs various administrative tasks around the NetBSD
-     Packages System.  Available commands are:
+     Packages System.
+
+OOPPTTIIOONNSS
+     The following command-line options are supported:
 
      --KK _p_k_g___d_b_d_i_r
-            Set _p_k_g___d_b_d_i_r as the package database directory.  If this option
-            isn't specified, then the package database directory is taken from
-            the value of the environment variable PKG_DBDIR if it's set, oth-
-            erwise it defaults to _/_v_a_r_/_d_b_/_p_k_g.
-
-     --VV     Print version number and exit.
+             Set _p_k_g___d_b_d_i_r as the package database directory.  If this option
+             isn't specified, then the package database directory is taken
+             from the value of the environment variable PKG_DBDIR if it's set,
+             otherwise it defaults to _/_v_a_r_/_d_b_/_p_k_g.
 
      --ss _s_f_x___p_a_t_t_e_r_n
-            Set the shell glob pattern for package suffices when matching
-            package names for llssaallll and llssbbeesstt.  The default pattern is
-            ".t[bg]z".
+             Set the shell glob pattern for package suffices when matching
+             package names for llssaallll and llssbbeesstt.  The default pattern is
+             ".t[bg]z".
+
+     --VV      Print version number and exit.
+
+     The following commands are supported:
+
+     aadddd _p_k_g _._._.
+             For each listed package, write the absolute pathnames of the
+             files listed in its +CONTENTS file together with the package they
+             belong to into the package database.  This should be used only by
+             pkg_view(1).
 
      cchheecckk [_p_k_g _._._.]
-            Use this command to check the files belonging to some or all of
-            the packages installed on the local machine against their MD5
-            checksum noted in their +CONTENTS files.  If no additional argu-
-            ment is given, the files of all installed packages are checked,
-            else only the named packages will be checked (wildcards can be
-            used here, see pkg_info(1)).
+             Use this command to check the files belonging to some or all of
+             the packages installed on the local machine against their MD5
+             checksum noted in their +CONTENTS files.  If no additional argu-
+             ment is given, the files of all installed packages are checked,
+             else only the named packages will be checked (wildcards can be
+             used here, see pkg_info(1)).
 
-            The packages' +CONTENTS files will be parsed and the MD5 checksum
-            will be checked for every file found.  A warning message is print-
-            ed if the expected checksum differs from the checksum of the file
-            on disk.
+             The packages' +CONTENTS files will be parsed and the MD5 checksum
+             will be checked for every file found.  A warning message is
+             printed if the expected checksum differs from the checksum of the
+             file on disk.
 
-     dduummpp   Dump the contents of the package database, similar to ppkkgg__iinnffoo --FF.
-            Columns are printed for the keyfield used in the pkgdb - the file-
-            name -, and the data field - the package the file belongs to.
+     ddeelleettee _p_k_g _._._.
+             For each listed package, remove all file entries in the package
+             database that belong to the package.  This should be used only by
+             pkg_view(1).
 
-     llssaallll //ddiirr//ppkkggppaatttteerrnn
+     dduummpp    Dump the contents of the package database, similar to ppkkgg__iinnffoo
+             --FF.  Columns are printed for the keyfield used in the pkgdb - the
+             filename -, and the data field - the package the file belongs to.
 
-     llssbbeesstt //ddiirr//ppkkggppaatttteerrnn
-            List all/best package matching pattern in the given directory.
-            Can be used to work around limitations of /bin/sh and other file-
-            name globbing mechanisms.  This option implements matching of pkg-
-            wildcards against arbitrary files, useful mainly in the build sys-
-            tem itself.  See pkg_info(1) for a description of the pattern.
+     llssaallll _/_d_i_r_/_p_k_g_p_a_t_t_e_r_n
 
-            Example:
+     llssbbeesstt _/_d_i_r_/_p_k_g_p_a_t_t_e_r_n
+             List all/best package matching pattern in the given directory.
+             Can be used to work around limitations of /bin/sh and other file-
+             name globbing mechanisms.  This option implements matching of
+             pkg-wildcards against arbitrary files, useful mainly in the build
+             system itself.  See pkg_info(1) for a description of the pattern.
 
-            yui# cd /usr/pkgsrc/packages/i386ELF/All/
-            yui# ls unzip*
-            unzip-5.40.tgz  unzip-5.41.tgz
-            yui# pkg_admin lsall 'unzip*'
-            /usr/pkgsrc/packages/i386ELF/All/unzip-5.40.tgz
-            /usr/pkgsrc/packages/i386ELF/All/unzip-5.41.tgz
-            yui# pkg_admin lsall 'unzip>=5.40'
-            /usr/pkgsrc/packages/i386ELF/All/unzip-5.40.tgz
-            /usr/pkgsrc/packages/i386ELF/All/unzip-5.41.tgz
-            yui# pkg_admin lsall 'unzip>=5.41'
-            /usr/pkgsrc/packages/i386ELF/All/unzip-5.41.tgz
-            yui# pkg_admin lsbest 'unzip>=5.40'
-            /usr/pkgsrc/packages/i386ELF/All/unzip-5.41.tgz
-            yui# pkg_admin lsall /usr/pkgsrc/packages/i386ELF/All/'{mit,unproven}-pthread*'
-            /usr/pkgsrc/packages/i386ELF/All/mit-pthreads-1.60b6.tgz
-            /usr/pkgsrc/packages/i386ELF/All/unproven-pthreads-0.15.tgz
+             Example:
 
-     ppmmaattcchh ppaatttteerrnn ppkkgg
-            Returns true if pkg matches pattern, false else.
+             yui# cd /usr/pkgsrc/packages/i386ELF/All/
+             yui# ls unzip*
+             unzip-5.40.tgz  unzip-5.41.tgz
+             yui# pkg_admin lsall 'unzip*'
+             /usr/pkgsrc/packages/i386ELF/All/unzip-5.40.tgz
+             /usr/pkgsrc/packages/i386ELF/All/unzip-5.41.tgz
+             yui# pkg_admin lsall 'unzip>=5.40'
+             /usr/pkgsrc/packages/i386ELF/All/unzip-5.40.tgz
+             /usr/pkgsrc/packages/i386ELF/All/unzip-5.41.tgz
+             yui# pkg_admin lsall 'unzip>=5.41'
+             /usr/pkgsrc/packages/i386ELF/All/unzip-5.41.tgz
+             yui# pkg_admin lsbest 'unzip>=5.40'
+             /usr/pkgsrc/packages/i386ELF/All/unzip-5.41.tgz
+             yui# pkg_admin lsall /usr/pkgsrc/packages/i386ELF/All/'{mit,unproven}-pthread*'
+             /usr/pkgsrc/packages/i386ELF/All/mit-pthreads-1.60b6.tgz
+             /usr/pkgsrc/packages/i386ELF/All/unproven-pthreads-0.15.tgz
+
+     ppmmaattcchh _p_a_t_t_e_r_n _p_k_g
+             Returns true if _p_k_g matches _p_a_t_t_e_r_n, otherwise returns false.
 
      rreebbuuiilldd
-            Rebuild the package database mapping from scratch, scanning subdi-
-            rectories in _/_v_a_r_/_d_b_/_p_k_g for _+_C_O_N_T_E_N_T_S files, parsing them and
-            writing the resulting absolute pathnames together with the package
-            they belong to into the package database.
+             Rebuild the package database mapping from scratch, scanning sub-
+             directories in _/_v_a_r_/_d_b_/_p_k_g for _+_C_O_N_T_E_N_T_S files, parsing them and
+             writing the resulting absolute pathnames together with the pack-
+             age they belong to into the package database.
 
-            This option is intended to be used for upgrading from non-pkgdb-
-            pkg_* tools to pkgdb-pkg_* tools, further manipulation of the
-            pkgdb will be done by pkg_add(1), pkg_delete(1), and
-            pkg_create(1).
+             This option is intended to be used for upgrading from non-pkgdb-
+             pkg_* tools to pkgdb-pkg_* tools, further manipulation of the
+             pkgdb will be done by pkg_add(1), pkg_delete(1), and
+             pkg_create(1).
 
-            Needs to be run as root.
+             Needs to be run as root.
 
 EENNVVIIRROONNMMEENNTT
      PKG_DBDIR
@@ -95,7 +111,8 @@ FFIILLEESS
      /var/db/pkg/<pkg>/+CONTENTS
 
 SSEEEE AALLSSOO
-     pkg_add(1), pkg_create(1), pkg_delete(1), pkg_info(1), packages(7)
+     pkg_add(1), pkg_create(1), pkg_delete(1), pkg_info(1), pkg_view(1),
+     packages(7)
 
 HHIISSTTOORRYY
      The ppkkgg__aaddmmiinn command first appeared in NetBSD 1.4.
@@ -103,4 +120,4 @@ HHIISSTTOORRYY
 AAUUTTHHOORRSS
      The ppkkgg__aaddmmiinn command was written by Hubert Feyrer.
 
-NetBSD 1.6.1_STABLE             August 4, 2002                               2
+NetBSD 1.6.1_STABLE            September 8, 2003                             2
