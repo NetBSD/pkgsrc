@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.618 2002/11/27 11:04:12 agc Exp $
+$NetBSD: CHANGES,v 1.619 2002/11/27 14:41:21 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3741,3 +3741,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pth to 1.4.1nb6 [skrll 2002-11-26]
 	Updated vile to 9.3 [agc 2002-11-27]
 	Updated xvile to 9.3 [agc 2002-11-27]
+	Added splint-3.0.1.6 [mjl 2002-11-27]
