@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3380 2003/09/15 00:43:32 jschauma Exp $
+$NetBSD: CHANGES,v 1.3381 2003/09/15 05:08:07 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3691,8 +3691,10 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated py-curl to 7.10.6 [recht 2003-09-14]
 	Added dega-1.07 [jmmv 2003-09-14]
 	Added p5-Set-IntSpan-1.07 [gson 2003-09-14]
+	Updated libnbcompat to 20030914 [grant 2003-09-14]
 	Updated horde to 2.2.4 [bouyer 2003-09-14]
 	Updated imp to 3.2.2 [bouyer 2003-09-14]
 	Updated samba to 2.2.8nb4 [jlam 2003-09-14]
 	Updated gsl to 1.4nb2 [dmcmahill 2003-09-14]
 	Added ruby-gsl-0.1.9 [dmcmahill 2003-09-14]
+	Updated pax to 20030915 [grant 2003-09-15]
