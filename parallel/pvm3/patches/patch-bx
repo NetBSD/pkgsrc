@@ -1,0 +1,26 @@
+$NetBSD: patch-bx,v 1.1 2004/07/19 22:41:16 dmcmahill Exp $
+
+--- rm/Makefile.aimk.orig	Thu Aug 28 21:20:11 1997
++++ rm/Makefile.aimk	Thu Mar 25 02:03:29 2004
+@@ -43,4 +43,6 @@
+ 
+ $(XDIR)/srm$(EXESFX):  srm$(EXESFX)
++	${MKDIR} $(XDIR)/.libs
++	-cp .libs/srm$(EXESFX) $(XDIR)/.libs
+ 	cp srm$(EXESFX) $(XDIR)
+ 
+@@ -52,9 +54,12 @@
+ local:	srm$(EXESFX)
+ 
++LTCC=		$(LIBTOOL) --mode=compile $(CC)
++LTCC_LINK=	$(LIBTOOL) --mode=link $(CC) ${PVM_STATIC}  
++
+ srm$(EXESFX):	srm.o $(XDIR)
+-	$(CC) $(CFLAGS) -o $@ srm.o $(LIBS)
++	$(LTCC_LINK) $(CFLAGS) -o $@ srm.lo $(LIBS)
+ 
+ srm.o:  $(SDIR)/srm.c $(HEADERS) $(PVMLIBDEP) $(XDIR)
+-	$(CC) $(CFLAGS) -c $(SDIR)/srm.c
++	$(LTCC) $(CFLAGS) -c $(SDIR)/srm.c
+ 
+ again:

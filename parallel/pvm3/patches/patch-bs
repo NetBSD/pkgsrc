@@ -1,0 +1,31 @@
+$NetBSD: patch-bs,v 1.1 2004/07/19 22:41:16 dmcmahill Exp $
+
+--- console/Makefile.aimk.orig	Thu Aug 28 18:12:54 1997
++++ console/Makefile.aimk	Wed Mar 24 18:39:55 2004
+@@ -37,17 +37,21 @@
+ 
+ $(PVMLDIR)/pvm$(EXESFX):	pvm$(EXESFX)
++	${MKDIR} $(PVMLDIR)/.libs
++	-cp .libs/pvm$(EXESFX) $(PVMLDIR)/.libs
+ 	cp pvm$(EXESFX) $(PVMLDIR)
+ 
++LTCC=	${LIBTOOL} --mode=compile ${CC}
++
+ pvm$(EXESFX):	$(OBJ) $(PVMLIBDEP) $(TRCLIBDEP)
+-	$(CC) $(CFLAGS) -o pvm$(EXESFX) $(OBJ) $(LIBS)
++	${LIBTOOL} --mode=link $(CC) ${PVM_STATIC} $(CFLAGS) -o pvm$(EXESFX) $(OBJ:.o=.lo) $(LIBS)
+ 
+ cons.o:	$(SDIR)/cons.c
+-	$(CC) $(CFLAGS) -c $(SDIR)/cons.c
++	$(LTCC) $(CFLAGS) -c $(SDIR)/cons.c
+ cmds.o:	$(SDIR)/cmds.c
+-	$(CC) $(CFLAGS) -c $(SDIR)/cmds.c
++	$(LTCC) $(CFLAGS) -c $(SDIR)/cmds.c
+ job.o:	$(SDIR)/job.c
+-	$(CC) $(CFLAGS) -c $(SDIR)/job.c
++	$(LTCC) $(CFLAGS) -c $(SDIR)/job.c
+ trc.o:	$(SDIR)/trc.c
+-	$(CC) $(CFLAGS) -c $(SDIR)/trc.c
++	$(LTCC) $(CFLAGS) -c $(SDIR)/trc.c
+ 
+ clean:

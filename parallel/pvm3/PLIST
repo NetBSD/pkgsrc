@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/11/09 15:24:25 is Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/07/19 22:41:16 dmcmahill Exp $
 pvm3/bin/${PVM_ARCH}/dbwtest
 pvm3/bin/${PVM_ARCH}/fgexample
 pvm3/bin/${PVM_ARCH}/fmaster1
@@ -123,9 +123,25 @@ pvm3/lib/pvmgetarch.cmd
 pvm3/lib/pvmtmparch
 pvm3/lib/xpvm
 pvm3/lib/${PVM_ARCH}/libfpvm3.a
+pvm3/lib/${PVM_ARCH}/libfpvm3.la
+pvm3/lib/${PVM_ARCH}/libfpvm3.so
+pvm3/lib/${PVM_ARCH}/libfpvm3.so.3
+pvm3/lib/${PVM_ARCH}/libfpvm3.so.3.4
 pvm3/lib/${PVM_ARCH}/libgpvm3.a
+pvm3/lib/${PVM_ARCH}/libgpvm3.la
+pvm3/lib/${PVM_ARCH}/libgpvm3.so
+pvm3/lib/${PVM_ARCH}/libgpvm3.so.3
+pvm3/lib/${PVM_ARCH}/libgpvm3.so.3.4
 pvm3/lib/${PVM_ARCH}/libpvm3.a
+pvm3/lib/${PVM_ARCH}/libpvm3.la
+pvm3/lib/${PVM_ARCH}/libpvm3.so
+pvm3/lib/${PVM_ARCH}/libpvm3.so.3
+pvm3/lib/${PVM_ARCH}/libpvm3.so.3.4
 pvm3/lib/${PVM_ARCH}/libpvmtrc.a
+pvm3/lib/${PVM_ARCH}/libpvmtrc.la
+pvm3/lib/${PVM_ARCH}/libpvmtrc.so
+pvm3/lib/${PVM_ARCH}/libpvmtrc.so.3
+pvm3/lib/${PVM_ARCH}/libpvmtrc.so.3.4
 pvm3/lib/${PVM_ARCH}/pvm
 pvm3/lib/${PVM_ARCH}/pvmd3
 pvm3/lib/${PVM_ARCH}/pvmgs
