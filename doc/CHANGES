@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1254 2003/01/28 01:19:35 uebayasi Exp $
+$NetBSD: CHANGES,v 1.1255 2003/01/28 03:42:56 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -450,3 +450,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dopewars to 1.5.8nb1 [jmmv 2003-01-27]
 	Updated xpuyopuyo to 0.9.1nb1 [jmmv 2003-01-27]
 	Updated superlu to 2.0nb2 [uebayasi 2003-01-28]
+	Updated tk-expect to 5.38 [markd 2003-01-28]
