@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.4 2004/02/14 13:55:19 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/09 03:44:30 garbled Exp $
 #
 
-DISTNAME=		genecys-0.1
-PKGNAME=		genecys-client-0.1
+DISTNAME=		genecys-0.2
+PKGNAME=		genecys-client-0.2
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=genecys/}
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://genecys.sourceforge.net/
+HOMEPAGE=		http://www.genecys.org/
 COMMENT=		Client for Genecys MMORPG
 
-DEPENDS=		genecys-data>=0.1:../../games/genecys-data
+DEPENDS=		genecys-data>=0.2:../../games/genecys-data
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_DIRS=		${WRKSRC}/common ${WRKSRC}/client
-BUILD_DIRS=		${WRKSRC}/common ${WRKSRC}/client
+#CONFIGURE_DIRS=		${WRKSRC}/common ${WRKSRC}/client
+#BUILD_DIRS=		${WRKSRC}/common ${WRKSRC}/client
 LIBS+=			-lm
+CONFIGURE_ARGS+=	--disable-server --disable-metaserver --disable-utils
 CONFIGURE_ARGS+=	--with-cal3d=${BUILDLINK_PREFIX.cal3d}
 CONFIGURE_ARGS+=	--with-openrm=${BUILDLINK_PREFIX.OpenRM}
 

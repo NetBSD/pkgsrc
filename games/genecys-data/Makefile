@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/10 22:01:22 garbled Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/09 03:44:30 garbled Exp $
 #
 
-DISTNAME=		genecys-data-0.1
+DISTNAME=		genecys-data-0.2
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=genecys/}
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://genecys.sourceforge.net/
+HOMEPAGE=		http://www.genecys.org/
 COMMENT=		Game datafiles for Genecys
 
 WRKSRC=			${WRKDIR}
