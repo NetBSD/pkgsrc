@@ -61,9 +61,6 @@
 /* Define to 1 if you have the <getopt.h> header file. */
 #undef HAVE_GETOPT_H
 
-/* Define to 1 if you have the `getopt_long' function. */
-#undef HAVE_GETOPT_LONG
-
 /* Define to 1 if you have the `getpassphrase' function. */
 #undef HAVE_GETPASSPHRASE
 
@@ -157,6 +154,9 @@
 
 /* Define to 1 if you have the `mkstemp' function. */
 #undef HAVE_MKSTEMP
+
+/* Define to 1 if the `getopt_long' function is built into the library. */
+#undef HAVE_NBCOMPAT_GETOPT_LONG
 
 /* Define to 1 if the `statfs' function is built into the library. */
 #undef HAVE_NBCOMPAT_STATFS
