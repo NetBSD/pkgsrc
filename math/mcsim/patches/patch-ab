@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/26 23:02:38 jtb Exp $
+
+--- mod/Makefile.orig	Wed Nov 22 22:39:24 2000
++++ mod/Makefile
+@@ -97,8 +97,8 @@
+ #
+ #>>>>  Define the COMPILER name and LINKER name here only.
+ 
+-CC = gcc
+-LINK = gcc
++#CC =
++LINK = $(CC)
+ 
+ #>>>>  Define PATHS
+ #	The include path should be a directory containing header
+@@ -137,13 +137,13 @@
+ #>>>> To compile with OPTIMIZATION uncomment the following lines
+ #
+ DEBUG_SYMBOLS = -DNDEBUG
+-C_OPTIM_FLAG = -O
++C_OPTIM_FLAG = -O2
+ L_OPTIM_FLAG =
+ 
+ #
+ #>>>> Include any special warning flags 
+ #
+-WARNINGS = -Wall
++WARNINGS = -ansi
+ 
+ #--------------------
+ #****  You shouldn't need to change these lines.  They are dependent

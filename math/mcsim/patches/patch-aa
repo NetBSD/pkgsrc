@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/26 23:02:38 jtb Exp $
+
+--- doc/mcsim.texinfo.orig	Sat Nov 15 02:14:40 1997
++++ doc/mcsim.texinfo
+@@ -1,10 +1,14 @@
+ \input texinfo @c -*-texinfo-*-
+ @comment %**start of header (This is for running Texinfo on a region.)
+-@setfilename mcsimdoc
++@setfilename mcsim
+ @settitle MCSim User' Manual
+ @setchapternewpage odd
+ @comment %**end of header (This is for running Texinfo on a region.)
+ 
++@dircategory Monte Carlo Simulation
++@direntry
++* MCSim: (mcsim).		A Monte Carlo Simulation Program.
++@end direntry
+ 
+ @comment  the following is just for the texinfo file
+ @ifinfo
