@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.7 2000/11/09 03:35:34 hubertf Exp $
+$NetBSD: patch-aa,v 1.8 2000/12/17 17:07:58 jlam Exp $
 
---- Makefile.orig	Wed Oct 25 01:52:21 2000
+--- Makefile.orig	Thu Nov  2 16:04:11 2000
 +++ Makefile
-@@ -276,7 +276,7 @@
+@@ -272,7 +272,7 @@
+ #	gradually-increasing intervals, starting at 2800-2900, and becoming
+ #	permanent at 48,300.
+ 
+-EXTRACFLAGS=
++#EXTRACFLAGS=
+ 
+ 
+ # Extra linker flags (additional/alternative libraries, etc.)
+@@ -285,7 +285,7 @@
  #SPECIALS=
  EXTRASPECIALS=
  # *** TEMPORARY FOR PINE BUILD ***
@@ -11,12 +20,12 @@ $NetBSD: patch-aa,v 1.7 2000/11/09 03:35:34 hubertf Exp $
  SPECIALS=GSSDIR=$(GSSDIR)
  # *** TEMPORARY FOR PINE BUILD ***
  
-@@ -423,7 +423,7 @@
+@@ -432,7 +432,7 @@
  	@echo Building c-client for $(OS)...
  	echo $(SPECIALS) $(EXTRASPECIALS) > c-client/SPECIALS
  	$(CD) c-client;$(MAKE) $(OS) BUILDOPTIONS="$(BUILDOPTIONS)" \
 -	 $(SPECIALS) $(EXTRASPECIALS)
-+	 $(SPECIALS) $(EXTRASPECIALS) PREFIX=$(PREFIX) CC="$(CC)"
++	 $(SPECIALS) $(EXTRASPECIALS) PREFIX=$(PREFIX) CC="${LIBTOOL} $(CC)"
  	echo $(OS) > OSTYPE
  	$(TOUCH) rebuild
  
