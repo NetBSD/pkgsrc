@@ -3,7 +3,8 @@
 # Date created:         1 Apr 1997
 # Whom:                 junker@jazz.snu.ac.kr
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/28 23:19:05 augustss Exp $
+# $NetBSD: Makefile,v 1.2 1997/11/01 00:56:26 augustss Exp $
+# FreeBSD Id: Makefile,v 1.4 1997/08/09 23:37:33 fenner Exp 
 #
 
 DISTNAME=		splay-0.5
@@ -11,6 +12,7 @@ CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SUNSITE}
 MASTER_SITE_SUBDIR=	apps/sound/players/
 
+# FreeBSD maintainer
 MAINTAINER=		junker@jazz.snu.ac.kr
 
 GNU_CONFIGURE=		yes
