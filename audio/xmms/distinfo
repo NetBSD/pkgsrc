@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2001/08/11 20:51:24 fredb Exp $
+$NetBSD: distinfo,v 1.7 2001/08/29 22:41:02 jlam Exp $
 
 SHA1 (xmms-1.2.5.tar.gz) = 64d64a6db0b08ba91a135229437c384da7dba1e5
 Size (xmms-1.2.5.tar.gz) = 2414840 bytes
@@ -12,8 +12,8 @@ SHA1 (patch-ai) = d05ba576dc40dd29d59c571fbab369d83fbe0b06
 SHA1 (patch-aj) = 95e965c5033dea5d2b0be2a22058f19504da0031
 SHA1 (patch-ak) = 9c89fc3014c1109b14f56c4bdaae7782f2531529
 SHA1 (patch-al) = 3150ee9972911c5152f14a0771d9e9a2cbcb107f
-SHA1 (patch-am) = 3f44eb6ea71c47133482142f4d18ff60c230763c
-SHA1 (patch-an) = 9055b76be68766955311b8f388afd60c604c0c34
+SHA1 (patch-am) = 0de11b998fcf90f64c2e8442edc427e3bc49653c
+SHA1 (patch-an) = 2a622693d825c631e36f73bc35a9639c40071564
 SHA1 (patch-ao) = 428e1083a104358d752ddc483310a97764cb6979
 SHA1 (patch-ap) = 493a4d81960b4d11548b8f277c00b8315339ac02
 SHA1 (patch-aq) = 3eb19fbebfc0ea68cd6703b6b3d1a706406b1aee

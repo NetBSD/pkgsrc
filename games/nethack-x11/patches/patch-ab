@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2001/06/26 19:11:04 jlam Exp $
+$NetBSD: patch-ab,v 1.6 2001/08/29 22:41:13 jlam Exp $
 
 --- sys/unix/Makefile.src.orig	Sat Aug  5 13:52:57 2000
 +++ sys/unix/Makefile.src	Thu Aug 10 19:28:31 2000
@@ -8,7 +8,7 @@ $NetBSD: patch-ab,v 1.5 2001/06/26 19:11:04 jlam Exp $
  
 -CFLAGS = -O -I../include
 -LFLAGS =
-+CFLAGS += -I../include -I${X11BASE}/include
++CFLAGS += -I../include -I${BUILDLINK_X11_DIR}/include
 +LFLAGS = ${LDFLAGS}
  
  # The Qt and Be window systems are written in C++, while the rest of

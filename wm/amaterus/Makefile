@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/29 04:54:56 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/08/29 22:41:22 jlam Exp $
 
 DISTNAME=	amaterus-0.34.1
 CATEGORIES=	wm
@@ -10,7 +10,6 @@ COMMENT=	GTK+ window manager
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK_ONLY=	YES
-USE_X11=		YES
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/amaterus
@@ -19,4 +18,5 @@ post-install:
 
 .include "../../textproc/libxml/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/07/13 04:49:10 kei Exp $
+# $NetBSD: Makefile,v 1.12 2001/08/29 22:41:08 jlam Exp $
 #
 
 DISTNAME=		wv-0.6.5
@@ -13,11 +13,10 @@ COMMENT=		Microsoft Word 6, 7, 8, and 9 (95/97/2000) doc to HTML/LaTeX converter
 #CONFLICTS+=		libgetopt-*
 
 USE_BUILDLINK_ONLY=	YES
-USE_X11=		YES
+REPLACE_BUILDLINK=	wv-incconfig wv-libconfig
+
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
-
-EVAL_PREFIX=		XPMDIR=xpm
 MAKE_ENV+=		RM="${RM} -f"
 
 post-install:
@@ -28,7 +27,8 @@ post-install:
 
 .include "../../converters/libiconv/buildlink.mk"
 .include "../../devel/glib/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../graphics/libwmf/buildlink.mk"
 .include "../../graphics/ImageMagick/buildlink.mk"
+.include "../../graphics/libwmf/buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

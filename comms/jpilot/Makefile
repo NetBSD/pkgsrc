@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/08/27 14:35:06 tron Exp $
+# $NetBSD: Makefile,v 1.21 2001/08/29 22:41:07 jlam Exp $
 #
 
 DISTNAME=		jpilot-0.99
@@ -17,7 +17,6 @@ CONFLICTS+=		jpilot-libplugin-*
 USE_BUILDLINK_ONLY=	# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
-USE_X11=		# defined
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_DIR}"
@@ -45,4 +44,5 @@ post-install:
 .include "../../comms/pilot-link-libs/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

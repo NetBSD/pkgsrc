@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2001/06/30 09:01:34 zuntum Exp $
+$NetBSD: distinfo,v 1.5 2001/08/29 22:41:24 jlam Exp $
 
 SHA1 (ion-20010523.tar.gz) = d2eb29d8cd193d4b2bf1e630f4bbac7bd47979d6
 Size (ion-20010523.tar.gz) = 146376 bytes
 SHA1 (patch-aa) = ae5fd844f89bf11d64f1f977219d70e8f868289c
-SHA1 (patch-ab) = 736e1dd6d2ba3fca8932abed69e6e44a0f02f8c0
+SHA1 (patch-ab) = 1cb5844d831db2c205142f8fe295002b646b66e8
 SHA1 (patch-ac) = 302f20d54304164612d04636642a88d0565da75d
