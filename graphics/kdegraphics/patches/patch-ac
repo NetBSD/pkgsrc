@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 1999/01/04 20:25:49 tron Exp $
+
+--- kfax/libtiffax/tiffiop.h.orig	Sat Jul  5 16:41:59 1997
++++ kfax/libtiffax/tiffiop.h	Mon Jan  4 19:36:12 1999
+@@ -34,6 +34,10 @@
+  * a port.h file that reflects the system capabilities.
+  * Doing this obviates all the dreck done in tiffcomp.h.
+  */
++#if defined(__NetBSD__)
++#define unix 42
++#endif
++
+ #if defined(unix) || defined(__unix)
+ #include "port.h"
+ #include "tiffconf.h"
