@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/01/08 05:03:46 fredb Exp $
+# $NetBSD: Makefile,v 1.25 2000/02/12 23:45:09 tron Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -25,7 +25,7 @@ PLIST_SRC=	${WRKDIR}/PLIST
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wermit ${PREFIX}/bin/kermit
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	for OPT in ${MANINSTALL} x; do \
+	for OPT in ${MANINSTALL}; do \
 	  case $$OPT in \
 	    catinstall) \
 		nroff -man ${WRKSRC}/ckuker.nr > ${WRKSRC}/kermit.0; \
