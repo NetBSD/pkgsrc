@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.8 2004/04/05 22:39:42 martin Exp $
+
+--- Makefile.in.orig	2004-03-08 11:00:02.000000000 +0100
++++ Makefile.in	2004-04-05 02:31:25.000000000 +0200
+@@ -41,7 +41,7 @@
+ 		rm $$i/Makefile; \
+ 	done
+ 
+-install: install-dirs install-bin install-man install-data
++install: install-dirs install-bin install-man install-conf install-data
+ 
+ install-bin:
+ 	@for i in $(SUBDIRS); do \
