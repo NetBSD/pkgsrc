@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/11/01 16:08:02 itojun Exp $
+# $NetBSD: Makefile,v 1.15 2000/11/04 00:08:49 lukem Exp $
 
 DISTNAME=		suse_base-6.3
 CATEGORIES=		emulators
@@ -35,7 +35,7 @@ USE_LIBINTL=		yes
 .if exists(/usr/include/libintl.h)
 LIBINTL=		-lintl
 .else
-LIBINTL=		-L${LOCALBASE} -lintl
+LIBINTL=		-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lintl 
 .endif
 
 do-build:
