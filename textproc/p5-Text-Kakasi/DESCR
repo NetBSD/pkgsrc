@@ -1,0 +1,5 @@
+Text::Kakasi - Kakasi library module for perl.
+
+This is a module to use Kakasi, which is a language processing
+filter to convert Kanji characters to Hiragana, Katakana or
+Roman alphabetic Japanese, from perl.
