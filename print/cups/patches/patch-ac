@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.3 2000/12/07 20:33:06 jlam Exp $
+
+--- conf/cupsd.conf.in.orig	Fri Sep 29 13:42:53 2000
++++ conf/cupsd.conf.in
+@@ -213,8 +213,8 @@
+ # program is run...
+ #
+ 
+-#User lp
+-#Group sys
++User @CUPS_USER@
++Group @CUPS_GROUP@
+ 
+ #
+ # RIPCache: the amount of memory that each RIP should use to cache

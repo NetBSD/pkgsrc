@@ -1,31 +1,99 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.2 2000/07/12 20:09:40 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.3 2000/12/07 20:33:06 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
+USER=@CUPS_USER@
+
+LOGDIR=/var/log/cups
+REQUESTDIR=/var/spool/cups
+SAMPLECONFDIR=${PKG_PREFIX}/share/examples/cups
+CONFDIR=/etc/cups
+CONFFILES="classes.conf client.conf cupsd.conf mime.convs mime.types printers.conf"
+
 case ${STAGE} in
 DEINSTALL)
+	# Remove configuration files if they don't differ from the default
+	# config file.
+	#
+	for file in ${CONFFILES}
+	do
+		FILE=${CONFDIR}/${file}
+		SAMPLEFILE=${SAMPLECONFDIR}/${file}
+		if diff -q ${FILE} ${SAMPLEFILE} >/dev/null
+		then
+			rm -f ${FILE}
+		fi
+	done
 	;;
+
 POST-DEINSTALL)
-	SERVERROOT=/etc/cups
-	LOGDIR=/var/log/cups
-	REQUESTDIR=/var/spool/cups
+	modified_files=''
+	for file in ${CONFFILES}
+	do
+		FILE=${CONFDIR}/${file}
+		if [ -f ${FILE} ]
+		then
+			modified_files="${modified_files} ${FILE}"
+		fi
+	done
+
+	rmdir ${CONFDIR}/ppd 2>/dev/null || true
+	rmdir ${CONFDIR}/interfaces 2>/dev/null || true
+	rmdir ${CONFDIR}/certs 2>/dev/null || true
+	rmdir ${CONFDIR} 2>/dev/null || true
+	rmdir ${LOGDIR} 2>/dev/null || true
+	rm -rf ${REQUESTDIR}/tmp
+	rmdir ${REQUESTDIR} 2>/dev/null || true
+
+	existing_dirs=''
+	for dir in ${CONFDIR} ${LOGDIR} ${REQUESTDIR}
+	do
+		if [ -d ${dir} ]
+		then
+			existing_dirs="${existing_dirs} ${dir}"
+		fi
+	done
 
 	cat << EOF
 ===========================================================================
-If you won't be using ${PKGNAME} any longer, you may want to remove the
-following directories:
+If you won't be using ${PKGNAME} any longer, you may want to remove:
 
-	${SERVERROOT}
-	${LOGDIR}
-	${REQUESTDIR}
+  * the \`${USER}' user 
+EOF
+	if [ -n "${modified_files}" ]
+	then
+		cat << EOF
+
+  * the following files:
+
+EOF
+		for file in ${modified_files}
+		do
+			echo "	${file}"
+		done
+	fi
+	if [ -n "${existing_dirs}" ]
+	then
+		cat << EOF
+
+  * the following directories:
+
+EOF
+		for dir in ${existing_dirs}
+		do
+			echo "	${dir}"
+		done
+	fi
+	cat << EOF
 ===========================================================================
 EOF
 	;;
+
 *)
-	echo "Unexpected argument: $2"
+	echo "Unexpected argument: ${STAGE}"
 	exit 1
 	;;
 esac
