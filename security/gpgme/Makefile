@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/11/07 13:11:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2004/11/15 09:06:32 markd Exp $
 #
 
 DISTNAME=	gpgme-1.0.1
@@ -40,9 +40,7 @@ CONFIGURE_ARGS+=	--without-pth --without-pth-test
 INFO_FILES=		gpgme.info
 
 .include "../../security/libgpg-error/buildlink3.mk"
-.if ${OPSYS} != "SunOS"
-.  include "../../devel/librfuncs/buildlink3.mk"
-.endif
+.include "../../devel/librfuncs/buildlink3.mk"
 
 ##
 ## Option to build with gpgsm. This provides SMIME support
