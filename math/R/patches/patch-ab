@@ -1,14 +1,14 @@
-$NetBSD: patch-ab,v 1.9 2001/05/03 01:54:16 jtb Exp $
+$NetBSD: patch-ab,v 1.10 2001/07/23 13:14:44 jlam Exp $
 
---- aclocal.m4.orig	Sun Jul 30 22:46:45 2000
-+++ aclocal.m4
-@@ -400,6 +400,9 @@
-   printf("number of errors %d\n", res);
-   return(res);
- }
+--- acinclude.m4.orig	Sun Jun 17 12:42:16 2001
++++ acinclude.m4
+@@ -456,6 +456,9 @@
+ 
+ extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
+ 
++int MAIN_ () { return 0; }
++int MAIN__ () { return 0; }
 +
-+void MAIN__(void){abort();}
-+
- EOF
-       changequote([, ])
-       if ${CC-cc} ${CFLAGS} -c conftest.c 1>&AC_FD_CC 2>&AC_FD_CC; then
+ int main () {
+   int a[3] = {17, 237, 2000000000}, b[2], res = 0;
+   double x[3] = {3.14159265, 123.456789, 2.3e34}, z[3];
