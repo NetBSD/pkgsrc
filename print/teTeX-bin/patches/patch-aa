@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/08/03 13:54:56 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2003/10/10 01:11:20 danw Exp $
 
 Note that POSIX uses SIGCHLD ...! - HF
 
@@ -8,7 +8,7 @@ Note that POSIX uses SIGCHLD ...! - HF
    fatal (setmode, setmode (cs_pipe[1], O_BINARY) == -1);
  #endif
  
-+#ifdef __NetBSD__
++#ifndef SIGCLD
 +  old = signal (SIGCHLD, child_died);
 +#else
    old = signal (SIGCLD, child_died);
@@ -20,7 +20,7 @@ Note that POSIX uses SIGCHLD ...! - HF
        fatal (close, close (sc_pipe[1]) == -1);
        fatal (close, close (cs_pipe[0]) == -1);
        fatal (close, close (cs_pipe[1]) == -1);
-+#ifdef __NetBSD__
++#ifndef SIGCLD
 +      fatal (signal, signal (SIGCHLD, old) == SIG_ERR);
 +#else
        fatal (signal, signal (SIGCLD, old) == SIG_ERR);
