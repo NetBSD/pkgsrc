@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2002/03/11 07:51:41 skrll Exp $
+# $NetBSD: Makefile,v 1.20 2002/03/14 18:18:19 wiz Exp $
 #
 
-DISTNAME=		libungif-4.1.0
+DISTNAME=		libungif-4.1.0b1
+PKGNAME=		libungif-4.1.0.1
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://prtr-13.ucsc.edu/pub/libungif/
 
