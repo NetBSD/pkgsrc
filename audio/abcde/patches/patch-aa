@@ -1,29 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/08/16 06:02:45 lukem Exp $
+$NetBSD: patch-aa,v 1.2 2001/10/03 21:58:28 abs Exp $
 
---- cddb-tool.orig	Thu Aug 16 07:48:11 2001
-+++ cddb-tool	Thu Aug 16 15:45:59 2001
-@@ -121,7 +121,7 @@
- 	echo '#'
- 	echo '# Track frame offsets:'
- 	NUMTRACKS=$2
--	for x in $(seq 3 $(expr $NUMTRACKS + 2))
-+	for x in $(jot $NUMTRACKS 3)
- 	do
- 		echo -e "#\t$(echo "$DISCID" | cut -f$x -d' ')"
- 	done
-@@ -137,13 +137,13 @@
- 	echo DISCID="$DISCNUM"
- 	echo "DTITLE=Unknown Artist / Unknown Album"
- 	# TTITLE0 -- TTITLEn
--	for x in $(seq 1 $NUMTRACKS)
-+	for x in $(jot $NUMTRACKS)
- 	do
- 		echo "TTITLE$(expr $x - 1)=Track $x"
- 	done
- 	echo "EXTD="
- 	# EXTT0 -- EXTTn
--	for x in $(seq 1 $NUMTRACKS)
-+	for x in $(jot $NUMTRACKS)
- 	do
- 		echo "EXTT$(expr $x - 1)="
- 	done
+--- abcde.1.orig	Wed Aug 15 23:12:25 2001
++++ abcde.1
+@@ -42,7 +42,7 @@
+ .TP
+ .B \-c [filename]
+ Specifies an additional configuration file to parse. Configuration options
+-in this file override those in /etc/abcde.conf or $HOME/.abcde.conf.
++in this file override those in /usr/pkg/etc/abcde.conf or $HOME/.abcde.conf.
+ .TP
+ .B \-C [discid]
+ Allows you to resume a session for
+@@ -91,7 +91,7 @@
+ '.mp3'. This can be modified using the OUTPUTFORMAT and VAOUTPUTFORMAT
+ variables in your abcde.conf.
+ .SH CONFIGURATION
+-abcde sources two configuration files on startup - /etc/abcde.conf and
++abcde sources two configuration files on startup - /usr/pkg/etc/abcde.conf and
+ $HOME/.abcde.conf, in that order. Here is a list of options abcde recognizes:
+ .TP
+ .B CDDBURL
