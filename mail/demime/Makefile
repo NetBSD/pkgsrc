@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/07 12:21:08 tron Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/06 19:37:01 tv Exp $
 # FreeBSD Id: ports/mail/demime/Makefile,v 1.4 2002/03/26 08:18:20 petef Exp
 
 DISTNAME=	demime-0.99c.7
@@ -23,21 +23,24 @@ USE_PERL5=	YES
 
 POD2MAN?=	${PREFIX}/bin/pod2man
 
+EGDIR=		${PREFIX}/share/examples
+CONF_FILES=	${EGDIR}/demime_junkmail.cf ${PKG_SYSCONFDIR}/demime_junkmail.cf
+
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/demime.stable ${WRKSRC}/demime.stable
 
 post-patch:
-	${SED} -e 's|/usr/lib/majordomo/demime_junkmail.cf|${PREFIX}/etc/demime_junkmail.cf|g' \
+	${SED} -e 's|/usr/lib/majordomo/demime_junkmail.cf|${PKG_SYSCONFDIR}/demime_junkmail.cf|g' \
 	       -e 's|/usr/bin/perl|${PREFIX}/bin/perl|g' \
 	       ${WRKSRC}/demime.stable >${WRKSRC}/demime
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/demime ${PREFIX}/bin/demime
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/demime_junkmail.cf \
-	  ${PREFIX}/etc
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/demime_junkmail.cf ${EGDIR}
 	${POD2MAN} ${WRKSRC}/demime > ${WRKSRC}/demime.1
 	${INSTALL_MAN} ${WRKSRC}/demime.1 ${PREFIX}/man/man1/demime.1
 
 .include "../../lang/perl5/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
