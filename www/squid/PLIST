@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.7 2002/09/15 14:39:51 grant Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/10/13 16:43:20 taca Exp $
+bin/squidclient
 etc/rc.d/squid
 @unexec ${RMDIR} %D/etc/squid 2>/dev/null || ${TRUE}
 libexec/cachemgr.cgi
+libexec/squid_unix_group
+man/man8/squid.8
+man/man8/squid_unix_group.8
 share/examples/squid/mime.conf
 share/examples/squid/squid.conf
 sbin/RunAccel
 sbin/RunCache
-sbin/client
 sbin/squid
 @dirrm share/examples/squid
 @exec ${MKDIR} ${PKG_SYSCONFDIR}

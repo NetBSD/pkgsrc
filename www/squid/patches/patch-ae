@@ -1,21 +1,13 @@
-$NetBSD: patch-ae,v 1.4 1999/11/12 16:25:30 rh Exp $
+$NetBSD: patch-ae,v 1.5 2002/10/13 16:43:21 taca Exp $
 
---- icons/Makefile.in.orig	Mon Apr 19 03:24:10 1999
-+++ icons/Makefile.in	Fri Nov 12 17:20:06 1999
-@@ -4,6 +4,7 @@
- exec_prefix	= @exec_prefix@
- top_srcdir	= @top_srcdir@
- bindir		= @bindir@
-+datadir		= @datadir@
- libexecdir      = @libexecdir@
- sysconfdir	= @sysconfdir@
- localstatedir   = @localstatedir@
-@@ -15,7 +16,7 @@
+--- icons/Makefile.in.orig	Fri Jul 12 17:38:22 2002
++++ icons/Makefile.in
+@@ -147,7 +147,7 @@ ICON2 = anthony-bomb.gif \
+ 		anthony-xpm.gif
  
- INSTALL         	= @INSTALL@
- INSTALL_FILE    	= @INSTALL_DATA@
--DEFAULT_ICON_DIR        = $(sysconfdir)/icons
-+DEFAULT_ICON_DIR        = $(datadir)/squid/icons
  
- ICONS		= anthony-binhex.gif \
- 		  anthony-bomb.gif \
+-icondir = $(datadir)/icons
++icondir = $(datadir)/squid/icons
+ icon_DATA = $(ICON1) $(ICON2)
+ EXTRA_DIST = $(ICON1) $(ICON2) icons.shar
+ DISTCLEANFILES = $(ICON1) $(ICON2)

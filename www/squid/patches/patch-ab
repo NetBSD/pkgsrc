@@ -1,30 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2001/05/01 18:07:49 wennmach Exp $
+$NetBSD: patch-ab,v 1.6 2002/10/13 16:43:21 taca Exp $
 
---- scripts/Makefile.in.orig	Sat Apr 14 11:45:19 2001
-+++ scripts/Makefile.in	Sat Apr 14 11:46:07 2001
-@@ -7,6 +7,7 @@
- exec_prefix     = @exec_prefix@
- top_srcdir      = @top_srcdir@
- bindir          = @bindir@
-+sbindir         = @sbindir@
- sysconfdir      = @sysconfdir@
- srcdir          = @srcdir@
- VPATH           = @srcdir@
-@@ -25,12 +26,12 @@
- 		echo "mkdir $(exec_prefix)"; \
- 		mkdir -p $(exec_prefix); \
- 	fi
--	@if test ! -d $(bindir); then \
--		echo "mkdir $(bindir)"; \
--		mkdir -p $(bindir); \
-+	@if test ! -d $(sbindir); then \
-+		echo "mkdir $(sbindir)"; \
-+		mkdir -p $(sbindir); \
- 	fi
--	$(INSTALL_BIN) RunCache $(bindir)
--	$(INSTALL_BIN) RunAccel $(bindir)
-+	$(INSTALL_SCRIPT) RunCache $(sbindir)
-+	$(INSTALL_SCRIPT) RunAccel $(sbindir)
+--- scripts/Makefile.in.orig	Fri Jul 12 17:38:25 2002
++++ scripts/Makefile.in
+@@ -26,7 +26,7 @@ VPATH = @srcdir@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
  
- clean:
- 
+-bindir = @bindir@
++bindir = @sbindir@
+ sbindir = @sbindir@
+ libexecdir = @libexecdir@
+ datadir = @datadir@
