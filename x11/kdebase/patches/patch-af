@@ -1,0 +1,78 @@
+diff -r -C3 kfm/kioserver.cpp kfm.new/kioserver.cpp
+*** kfm/kioserver.cpp	Mon Nov 10 01:04:24 1997
+--- kfm.new/kioserver.cpp	Fri Dec  5 18:59:59 1997
+***************
+*** 9,14 ****
+--- 9,20 ----
+  #include <dirent.h>
+  #include <sys/stat.h>
+  
++ #ifdef __FreeBSD__
++ #include <sys/param.h>
++ #include <sys/ucred.h>
++ #include <sys/mount.h>
++ #endif
++ 
+  #include <kconfig.h>
+  
+  #include "kioserver_ipc.h"
+***************
+*** 365,370 ****
+--- 371,407 ----
+  QString KIOServer::findDeviceMountPoint( const char *_device, const char *_file )
+  {
+      debugT("Finding mount point of %s\n",_device );
++     
++ #ifdef __FreeBSD__
++     if(!strcmp("/etc/mtab", _file))
++     {
++ 	struct statfs *buf;
++ 	long fsno;
++ 	int flags = MNT_WAIT;
++ 	
++ 	fsno = getfsstat(NULL, 0, flags);
++ 	buf = (struct statfs *)malloc(fsno * sizeof(struct statfs));
++ 	if(getfsstat(buf, fsno*sizeof(struct statfs), flags) == -1)
++ 	{
++ 		free(buf);
++ 		debugT("Device isn't mounted\n");
++ 		return QString(NULL);
++ 	}
++ 	else
++ 	{
++ 		int i;
++ 		for(i = 0; i < fsno; i++)
++ 			if(!strcmp(buf[i].f_mntfromname, _device))
++ 			{
++ 				QString tmpstr((const char *)buf[i].f_mntonname);
++ 				debugT("Device is mounted at %s", buf[i].f_mntonname);
++ 				free(buf);
++ 				return tmpstr;
++ 			}
++ 	}
++     }
++ 	
++ #endif /* __FreeBSD__ */
+      
+      // Get the real device name, not some link.
+      char buffer[1024];
+diff -r -C3 kfm/kioslave/main.cpp kfm.new/kioslave/main.cpp
+*** kfm/kioslave/main.cpp	Mon Nov 10 01:04:43 1997
+--- kfm.new/kioslave/main.cpp	Fri Dec  5 15:06:59 1997
+***************
+*** 224,230 ****
+      else if ( _ro )
+  	sprintf( buffer, "mount -rt %s %s %s 2>/tmp/mnt%i",_fstype, _dev, _point, t );
+      else
+! 	sprintf( buffer, "mount -rt %s %s %s 2>/tmp/mnt%i",_fstype, _dev, _point, t );
+  		
+      system( buffer );
+  
+--- 224,230 ----
+      else if ( _ro )
+  	sprintf( buffer, "mount -rt %s %s %s 2>/tmp/mnt%i",_fstype, _dev, _point, t );
+      else
+! 	sprintf( buffer, "mount -t %s %s %s 2>/tmp/mnt%i",_fstype, _dev, _point, t );
+  		
+      system( buffer );
+  
