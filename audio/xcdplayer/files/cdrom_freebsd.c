@@ -1,3 +1,5 @@
+/* $NetBSD: cdrom_freebsd.c,v 1.3 1998/08/07 10:36:19 agc Exp $ */
+
 /*
  * Copyright (C) 1990 Regents of the University of California.
  *

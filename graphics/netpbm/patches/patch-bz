@@ -1,3 +1,5 @@
+$NetBSD: patch-bz,v 1.2 1998/08/07 10:40:52 agc Exp $
+
 --- ./ppm/xpmtoppm.c.orig	Mon Jan 31 02:42:05 1994
 +++ ./ppm/xpmtoppm.c	Fri Aug 18 05:30:36 1995
 @@ -30,9 +30,8 @@

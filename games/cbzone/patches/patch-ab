@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:40:38 agc Exp $
+
 --- cbzone.script.src.orig	Sat Jul 31 10:13:56 1993
 +++ cbzone.script.src	Mon Jul 27 01:51:33 1998
 @@ -16,7 +16,7 @@

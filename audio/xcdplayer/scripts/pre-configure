@@ -1,6 +1,7 @@
 #!/bin/sh
 #
-# $Id: pre-configure,v 1.1.1.1 1997/10/28 23:19:24 augustss Exp $
+# $NetBSD: pre-configure,v 1.2 1998/08/07 10:36:20 agc Exp $
+# Id: pre-configure,v 1.1.1.1 1997/10/28 23:19:24 augustss Exp
 #
 
 cp ${CURDIR}/files/cdrom_freebsd.c ${WRKSRC}

@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:40:32 agc Exp $
+
 --- source/nc.c.orig	Thu Mar 19 22:20:23 1998
 +++ source/nc.c	Wed Jun  3 00:06:25 1998
 @@ -51,7 +51,7 @@

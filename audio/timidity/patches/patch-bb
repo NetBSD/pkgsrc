@@ -1,3 +1,5 @@
+$NetBSD: patch-bb,v 1.2 1998/08/07 10:36:16 agc Exp $
+
 --- motif_c.c.orig	Mon May 20 09:14:09 1996
 +++ motif_c.c	Sat Mar  7 13:19:57 1998
 @@ -370,15 +370,10 @@

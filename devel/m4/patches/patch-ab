@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:40:26 agc Exp $
+
 --- doc/m4.texinfo.orig	Mon Oct 31 09:07:39 1994
 +++ doc/m4.texinfo	Mon Jun 16 16:36:44 1997
 @@ -2,6 +2,7 @@

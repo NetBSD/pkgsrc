@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.4 1998/08/07 10:40:27 agc Exp $
+
 --- portlint.pl.orig	Wed Jul 15 11:43:04 1998
 +++ portlint.pl	Wed Jul 15 12:00:43 1998
 @@ -1,4 +1,4 @@
@@ -8,7 +10,7 @@
  # implemented by:
 @@ -12,6 +12,10 @@
  #
- # $Id: patch-aa,v 1.3 1998/07/15 10:37:33 frueauf Exp $
+ # $Id: patch-aa,v 1.4 1998/08/07 10:40:27 agc Exp $
  #
 +# This version contains some changes necessary for NetBSD packages
 +# done by Hubert Feyrer <hubertf@netbsd.org> and

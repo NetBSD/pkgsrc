@@ -1,3 +1,4 @@
+$NetBSD: post-install-notes,v 1.2 1998/08/07 10:40:19 agc Exp $
 
 Now that PostgreSQL is installed, you should read the documentation and
 implementation guides. These can be found at:

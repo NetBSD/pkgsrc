@@ -1,3 +1,5 @@
+$NetBSD: patch-bd,v 1.2 1998/08/07 10:36:16 agc Exp $
+
 --- /dev/null	Sat Mar  7 13:11:05 1998
 +++ sgi_a.c	Sat Mar  7 13:30:25 1998
 @@ -0,0 +1,161 @@

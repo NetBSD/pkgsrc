@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:40:39 agc Exp $
+
 --- config/crosssite.def.orig	Sat May 16 05:27:10 1998
 +++ config/crosssite.def	Fri Jun 26 16:15:22 1998
 @@ -36,9 +36,8 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-am,v 1.2 1998/08/07 10:40:22 agc Exp $
+
 --- as/readsrc.c.orig	Thu Jul 16 20:28:47 1998
 +++ as/readsrc.c	Thu Jul 16 22:30:18 1998
 @@ -220,7 +220,7 @@

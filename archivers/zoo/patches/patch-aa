@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 10:35:53 agc Exp $
+
 *** bsd.c.old	Thu Aug  8 09:34:07 1991
 --- bsd.c	Thu Jan  5 05:20:03 1995
 ***************

@@ -1,3 +1,5 @@
+$NetBSD: patch-bd,v 1.2 1998/08/07 10:40:50 agc Exp $
+
 --- ./pbm/pbmtext.c.orig	Wed Oct 27 03:27:04 1993
 +++ ./pbm/pbmtext.c	Sat Jul 20 21:48:12 1996
 @@ -105,10 +105,12 @@

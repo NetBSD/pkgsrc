@@ -1,3 +1,5 @@
+$NetBSD: porting.notes,v 1.2 1998/08/07 10:40:16 agc Exp $
+
 This was originally one distribution for UUdeview, but I have broken
 it up into ``libuu', ``uudeview'', and ``xdeview'', hopefully making
 it cleaner and more useful.

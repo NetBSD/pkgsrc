@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.4 1998/08/07 10:40:19 agc Exp $
+
 --- bin/initdb/initdb.orig	Mon Apr  6 02:05:52 1998
 +++ bin/initdb/initdb	Wed Jun 10 13:13:18 1998
 @@ -286,7 +286,7 @@

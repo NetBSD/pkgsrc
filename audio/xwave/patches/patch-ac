@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:36:23 agc Exp $
+
 --- orig/xwave/src/au.c	Mon Nov 25 13:32:18 1996
 +++ src/au.c	Sat Sep 13 04:18:56 1997
 @@ -32,7 +32,7 @@

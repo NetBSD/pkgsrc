@@ -1,3 +1,5 @@
+$NetBSD: patch-bj,v 1.2 1998/08/07 10:40:51 agc Exp $
+
 --- ./pnm/pnmconvol.c.orig	Mon Oct  4 05:11:36 1993
 +++ ./pnm/pnmconvol.c	Wed Jul  8 07:48:07 1998
 @@ -1,5 +1,10 @@

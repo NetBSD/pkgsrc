@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:25 agc Exp $
+
 *** libg++/src/ACG.cc.orig	Sat Jun 24 17:40:39 1995
 --- libg++/src/ACG.cc	Thu Apr  9 07:34:24 1998
 ***************

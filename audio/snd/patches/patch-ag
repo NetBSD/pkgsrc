@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 1998/08/07 10:36:10 agc Exp $
+
 --- snd.orig/snd-dac.c	Mon Dec 22 17:22:48 1997
 +++ snd-dac.c	Sun Feb 22 02:25:39 1998
 @@ -200,7 +200,11 @@

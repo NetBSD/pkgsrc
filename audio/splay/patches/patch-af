@@ -1,4 +1,6 @@
-]2;feyrer@yui:/usr/pkgsrc/audio/splay/work/splay-0.5 ]1;yui--- mpegsound/Makefile.in.BAK	Mon Feb 23 17:34:18 1998
+$NetBSD: patch-af,v 1.2 1998/08/07 10:36:14 agc Exp $
+
+--- mpegsound/Makefile.in.BAK	Mon Feb 23 17:34:18 1998
 +++ mpegsound/Makefile.in	Mon Feb 23 17:34:39 1998
 @@ -37,6 +37,7 @@
  AUTOMAKE = @AUTOMAKE@

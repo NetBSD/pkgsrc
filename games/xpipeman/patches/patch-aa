@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:45 agc Exp $
+
 --- /dev/null	Fri Jul 31 15:19:37 1998
 +++ xpipescores	Sat Aug  1 01:10:55 1998
 @@ -0,0 +1,20 @@

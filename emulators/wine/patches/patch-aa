@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.4 1998/08/07 10:40:35 agc Exp $
+
 --- Make.rules.in.orig	Sun Jan 18 12:50:38 1998
 +++ Make.rules.in	Sun Mar 15 23:30:47 1998
 @@ -33,6 +33,7 @@

@@ -1,4 +1,5 @@
 # .kermit -- typical ckermit init file
+# $NetBSD: dot.kermrc,v 1.2 1998/08/07 10:36:39 agc Exp $
 
 set send packet 9024		# packet size send 
 set receive packet 9024		# packet size receive

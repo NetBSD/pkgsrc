@@ -1,3 +1,5 @@
+$NetBSD: patch-aj,v 1.2 1998/08/07 10:36:10 agc Exp $
+
 --- snd.orig/snd-x0.h	Wed Dec 17 19:12:04 1997
 +++ snd-x0.h	Sun Feb 22 02:14:17 1998
 @@ -14,14 +14,14 @@

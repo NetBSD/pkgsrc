@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:55 agc Exp $
+
 --- operation.c.orig	Wed Aug 13 21:45:28 1997
 +++ operation.c	Fri Aug 29 13:47:20 1997
 @@ -43,34 +43,34 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.6 1998/08/07 10:40:50 agc Exp $
+
 --- pbmplus.h.orig	Sat Jun 20 03:42:19 1998
 +++ pbmplus.h	Sat Jun 20 03:43:47 1998
 @@ -121,2 +121,3 @@

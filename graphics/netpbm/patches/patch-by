@@ -1,3 +1,5 @@
+$NetBSD: patch-by,v 1.2 1998/08/07 10:40:52 agc Exp $
+
 --- ./pnm/tifftopnm.c.orig	Mon Oct  4 05:12:01 1993
 +++ ./pnm/tifftopnm.c	Sun Aug 13 00:35:55 1995
 @@ -54,7 +54,7 @@

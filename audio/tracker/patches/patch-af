@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/07 10:36:19 agc Exp $
+
 --- Docs/tracker.texinfo.orig	Sun Jan 18 22:18:22 1998
 +++ Docs/tracker.texinfo	Sun Jan 18 22:19:30 1998
 @@ -3,6 +3,11 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-bu,v 1.2 1998/08/07 10:40:52 agc Exp $
+
 --- ./ppm/ppmtogif.1.orig	Fri Nov 12 04:18:30 1993
 +++ ./ppm/ppmtogif.1	Sat Jul 20 21:54:02 1996
 @@ -54,7 +54,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 10:35:52 agc Exp $
+
 --- zip.h.orig	Mon Oct 21 13:34:06 1991
 +++ zip.h	Sat Jun 20 17:21:28 1998
 @@ -176,7 +176,9 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:35:52 agc Exp $
+
 --- tailor.h.orig	Mon Oct 21 13:34:28 1991
 +++ tailor.h	Sat Jun 20 17:18:04 1998
 @@ -1,10 +1,5 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.6 1998/08/07 10:40:54 agc Exp $
+
 --- xa_audio.c.orig	Mon Mar 23 18:54:59 1998
 +++ xa_audio.c	Sun Apr 26 12:04:40 1998
 @@ -4508,31 +4508,53 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:40:41 agc Exp $
+
 Fixes typo reported in PR pkg/5864 by
 Mason Loring Bliss <mason@acheron.middleboro.ma.us>
 

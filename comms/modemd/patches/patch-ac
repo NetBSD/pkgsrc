@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:36:44 agc Exp $
+
 --- incoming/ppp.c.orig	Tue Sep 10 02:35:12 1996
 +++ incoming/ppp.c	Tue Mar  3 17:19:05 1998
 @@ -46,6 +46,7 @@
