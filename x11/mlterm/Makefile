@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2003/05/02 11:57:28 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/29 07:59:15 uebayasi Exp $
 
-DISTNAME=	mlterm-2.6.2
-PKGREVISION=	1
+DISTNAME=	mlterm-2.7.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 
 MAINTAINER=	uebayasi@netbsd.org
 HOMEPAGE=	http://mlterm.sourceforge.net/
-COMMENT=	Multingual terminal emulator
+COMMENT=	Multilingual terminal emulator
 
 # CODESET is only supported on NetBSD in 1.5T and later - see <langinfo.h>
 ONLY_FOR_PLATFORM=	NetBSD-1.5[T-Z]-* NetBSD-1.5Z[A-Z]-* NetBSD-1.[6-9]*
@@ -26,6 +25,7 @@ CONFIGURE_ARGS+=	--with-imagelib=imlib
 .if exists(${X11BASE}/lib/libXft.a)
 CONFIGURE_ARGS+=	--enable-anti-alias
 .endif
+CONFIGURE_ARGS+=	--without-libiconv-prefix
 
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | \
@@ -38,8 +38,9 @@ post-patch:
 		    $${f}.orig > $$f; \
 	done
 
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
+.include "../../fonts/fontconfig/buildlink2.mk"
 .include "../../graphics/imlib/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
-
 .include "../../mk/bsd.pkg.mk"
