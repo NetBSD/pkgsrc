@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.36 2004/07/26 16:33:41 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.37 2004/07/26 16:45:26 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q2 branch:
@@ -68,4 +68,6 @@ Pullup ticket 71, requested by Grant Beattie [agc 2004-07-26]
 	Solaris fix for libpcap
 Pullup ticket 72, requested by Grant Beattie [agc 2004-07-26]
 	Build fix for scanssh
+Pullup ticket 73, requested by Grant Beattie [agc 2004-07-26]
+	Build fix for ghostscript-esp
 
