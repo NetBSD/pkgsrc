@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/07/21 17:01:16 martti Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/09 23:46:53 wiz Exp $
 #
 
 DISTNAME=	kdrill5.11.6
 PKGNAME=	kdrill-5.11.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	japanese misc
 MASTER_SITES=	http://www.bolthole.com/kdrill/
 
@@ -11,8 +11,12 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.bolthole.com/kdrill/
 COMMENT=	Kanji quiz and japanese dictionary
 
-USE_BUILDLINK2=	yes
+DEPENDS+=	edict-[0-9]*:../../misc/edict
+DEPENDS+=	kanjidic-[0-9]*:../../misc/kanjidic
+
+USE_BUILDLINK3=	yes
 USE_IMAKE=	yes
+USE_X11=	yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kdrill
@@ -23,5 +27,9 @@ post-install:
 		fullkatahira.edic; do \
 		${GZIP_CMD} -9 ${PREFIX}/share/kdrill/$$f; \
 	done
+	${GZIP_CMD} -c ${PREFIX}/share/edict/edict > \
+		${PREFIX}/share/kdrill/edict.gz
+	${GZIP_CMD} -c ${PREFIX}/share/kanjidic/kanjidic > \
+		${PREFIX}/share/kdrill/kanjidic.gz
 
 .include "../../mk/bsd.pkg.mk"
