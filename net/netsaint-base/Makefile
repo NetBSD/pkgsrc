@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 18:19:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/01/31 17:24:38 jlam Exp $
 #
 
 DISTNAME=	netsaint-0.0.6
@@ -22,7 +22,7 @@ post-configure:
 		-e 's:@@GROUP@@:${NETSAINT_GROUP}:g'
 
 post-install:
-	cd ${WRKSRC} && ${MAKE} install-config
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install-config
 	cd ${WRKDIR} && ${INSTALL_SCRIPT} netsaint-setup.sh ${PREFIX}/sbin
 
 .include "../../mk/bsd.pkg.mk"
