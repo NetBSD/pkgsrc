@@ -1,129 +1,95 @@
-$NetBSD: patch-aa,v 1.9 2002/03/23 17:16:50 kim Exp $
+$NetBSD: patch-aa,v 1.10 2002/10/13 16:43:21 taca Exp $
 
---- src/Makefile.in.orig	Wed Apr  4 03:01:12 2001
-+++ src/Makefile.in	Sat Mar 23 12:10:02 2002
-@@ -12,6 +12,8 @@
- cgi_suffix	= @cgi_suffix@
- top_srcdir	= @top_srcdir@
- bindir		= @bindir@
-+sbindir		= @sbindir@
-+datadir		= @datadir@
- libexecdir      = @libexecdir@
- sysconfdir	= @sysconfdir@
- localstatedir   = @localstatedir@
-@@ -40,14 +42,14 @@
- DEFAULT_CACHE_LOG       = $(localstatedir)/logs/cache.log
- DEFAULT_ACCESS_LOG      = $(localstatedir)/logs/access.log
- DEFAULT_STORE_LOG       = $(localstatedir)/logs/store.log
--DEFAULT_PID_FILE        = $(localstatedir)/logs/squid.pid
-+DEFAULT_PID_FILE        = /var/run/squid.pid
- DEFAULT_SWAP_DIR        = $(localstatedir)/cache
- DEFAULT_PINGER		= $(libexecdir)/$(PINGER_EXE)
- DEFAULT_UNLINKD		= $(libexecdir)/$(UNLINKD_EXE)
- DEFAULT_DISKD		= $(libexecdir)/$(DISKD_EXE)
--DEFAULT_ICON_DIR	= $(sysconfdir)/icons
--DEFAULT_ERROR_DIR	= $(sysconfdir)/errors
--DEFAULT_MIB_PATH	= $(sysconfdir)/mib.txt
-+DEFAULT_ICON_DIR	= $(datadir)/squid/icons
-+DEFAULT_ERROR_DIR	= $(datadir)/squid/errors
-+DEFAULT_MIB_PATH	= $(datadir)/squid/mib.txt
+--- src/Makefile.in.orig	Sat Jul 13 00:10:04 2002
++++ src/Makefile.in
+@@ -380,14 +380,15 @@ DEFAULT_LOG_PREFIX = $(localstatedir)/lo
+ DEFAULT_CACHE_LOG = $(DEFAULT_LOG_PREFIX)/cache.log
+ DEFAULT_ACCESS_LOG = $(DEFAULT_LOG_PREFIX)/access.log
+ DEFAULT_STORE_LOG = $(DEFAULT_LOG_PREFIX)/store.log
+-DEFAULT_PID_FILE = $(DEFAULT_LOG_PREFIX)/squid.pid
++DEFAULT_PID_FILE = /var/run/squid.pid
+ DEFAULT_SWAP_DIR = $(localstatedir)/cache
+ DEFAULT_PINGER = $(libexecdir)/@OPT_PINGER_EXE@
+ DEFAULT_UNLINKD = $(libexecdir)/$(UNLINKD_EXE)
+ DEFAULT_DISKD = $(libexecdir)/@OPT_DISKD_EXE@
+-DEFAULT_ICON_DIR = $(datadir)/icons
+-DEFAULT_ERROR_DIR = $(datadir)/errors/@ERR_DEFAULT_LANGUAGE@
+-DEFAULT_MIB_PATH = $(datadir)/mib.txt
++DEFAULT_ICON_DIR = $(datadir)/squid/icons
++DEFAULT_ERROR_DIR = $(datadir)/squid/errors/@ERR_DEFAULT_LANGUAGE@
++DEFAULT_MIB_PATH = $(datadir)/squid/mib.txt
++EXAMPLES_DIR = $(datadir)/examples/squid
  
- CC		= @CC@
- MAKEDEPEND	= @MAKEDEPEND@
-@@ -310,9 +312,9 @@
- 		echo "mkdir $(exec_prefix)"; \
- 		mkdir -p $(exec_prefix); \
- 	fi
--	-@if test ! -d $(bindir); then \
--		echo "mkdir $(bindir)"; \
--		mkdir -p $(bindir); \
-+	-@if test ! -d $(sbindir); then \
-+		echo "mkdir $(sbindir)"; \
-+		mkdir -p $(sbindir); \
- 	fi
- 	-@if test ! -d $(libexecdir); then \
- 		echo "mkdir $(libexecdir)"; \
-@@ -322,14 +324,14 @@
- 		echo "mkdir $(sysconfdir)"; \
- 		mkdir -p $(sysconfdir); \
- 	fi
--	-@if test ! -d $(localstatedir); then \
--		echo "mkdir $(localstatedir)"; \
--		mkdir -p $(localstatedir); \
--	fi
--	-@if test ! -d $(localstatedir)/logs; then \
--		echo "mkdir $(localstatedir)/logs"; \
--		mkdir -p $(localstatedir)/logs; \
--	fi
-+#	-@if test ! -d $(localstatedir); then \
-+#		echo "mkdir $(localstatedir)"; \
-+#		mkdir -p $(localstatedir); \
-+#	fi
-+#	-@if test ! -d $(localstatedir)/logs; then \
-+#		echo "mkdir $(localstatedir)/logs"; \
-+#		mkdir -p $(localstatedir)/logs; \
-+#	fi
+ DEFS = @DEFS@ -DDEFAULT_CONFIG_FILE=\"$(DEFAULT_CONFIG_FILE)\"
  
- # Michael Lupp <mike@nemesis.saar.de> wants to know about additions
- # to the install target.
-@@ -339,15 +341,15 @@
- 		(cd $$dir ; $(MAKE) $(MFLAGS) prefix="$(prefix)" $@) || exit 1; \
+@@ -819,20 +820,20 @@ CCDEPMODE = @CCDEPMODE@
+ uninstall-info-am:
+ install-dataDATA: $(data_DATA)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(datadir)
++	$(mkinstalldirs) $(DESTDIR)$(datadir)/squid
+ 	@list='$(data_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(datadir)/$$f"; \
+-	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(datadir)/$$f; \
++	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(datadir)/squid/$$f"; \
++	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(datadir)/squid/$$f; \
  	done
- 	@for f in $(PROGS); do \
--		if test -f $(bindir)/$$f; then \
--			echo $(MV) $(bindir)/$$f $(bindir)/-$$f; \
--			$(MV) $(bindir)/$$f $(bindir)/-$$f; \
-+		if test -f $(sbindir)/$$f; then \
-+			echo $(MV) $(sbindir)/$$f $(sbindir)/-$$f; \
-+			$(MV) $(sbindir)/$$f $(sbindir)/-$$f; \
- 		fi; \
--		echo $(INSTALL_BIN) $$f $(bindir); \
--		$(INSTALL_BIN) $$f $(bindir); \
--		if test -f $(bindir)/-$$f; then \
--			echo $(RM) -f $(bindir)/-$$f; \
--			$(RM) -f $(bindir)/-$$f; \
-+		echo $(INSTALL_BIN) $$f $(sbindir); \
-+		$(INSTALL_BIN) $$f $(sbindir); \
-+		if test -f $(sbindir)/-$$f; then \
-+			echo $(RM) -f $(sbindir)/-$$f; \
-+			$(RM) -f $(sbindir)/-$$f; \
- 		fi; \
+ 
+ uninstall-dataDATA:
+ 	@$(NORMAL_UNINSTALL)
+ 	@list='$(data_DATA)'; for p in $$list; do \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " rm -f $(DESTDIR)$(datadir)/$$f"; \
+-	  rm -f $(DESTDIR)$(datadir)/$$f; \
++	  echo " rm -f $(DESTDIR)$(datadir)/squid/$$f"; \
++	  rm -f $(DESTDIR)$(datadir)/squid/$$f; \
  	done
- 	@if test -n "$(UTILS)"; then \
-@@ -377,21 +379,21 @@
- 		fi; \
- 	done
- 	$(INSTALL_FILE) $(srcdir)/mib.txt $(DEFAULT_MIB_PATH)
--	$(INSTALL_FILE) squid.conf $(sysconfdir)/squid.conf.default
--	@if test -f $(sysconfdir)/squid.conf ; then \
--		echo "$@ will not overwrite existing $(sysconfdir)/squid.conf" ; \
+ install-sysconfDATA: $(sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+@@ -1031,7 +1032,7 @@ info-am:
+ install-data-am: install-data-local install-dataDATA
+ 
+ install-exec-am: install-binPROGRAMS install-libexecPROGRAMS \
+-	install-sbinPROGRAMS install-sysconfDATA
++	install-sbinPROGRAMS
+ 
+ install-info: install-info-recursive
+ 
+@@ -1049,7 +1050,7 @@ mostlyclean-am: mostlyclean-compile most
+ 
+ uninstall-am: uninstall-binPROGRAMS uninstall-dataDATA uninstall-info-am \
+ 	uninstall-libexecPROGRAMS uninstall-local \
+-	uninstall-sbinPROGRAMS uninstall-sysconfDATA
++	uninstall-sbinPROGRAMS
+ 
+ uninstall-info: uninstall-info-recursive
+ 
+@@ -1132,19 +1133,13 @@ repl_modules.c: repl_modules.sh Makefile
+ auth_modules.c: auth_modules.sh Makefile
+ 	@$(SHELL) $(srcdir)/auth_modules.sh $(AUTH_MODULES) >auth_modules.c
+ 
+-install-data-local: install-sysconfDATA install-dataDATA
+-	@if test -f $(DESTDIR)$(DEFAULT_MIME_TABLE) ; then \
+-	        echo "$@ will not overwrite existing $(DESTDIR)$(DEFAULT_MIME_TABLE)" ; \
 -	else \
--		echo "$(INSTALL_FILE) squid.conf $(sysconfdir)"; \
--		$(INSTALL_FILE) squid.conf $(sysconfdir); \
+-	        echo "$(INSTALL_DATA) $(srcdir)/mime.conf.default $(DESTDIR)$(DEFAULT_MIME_TABLE)" ;\
+-	        $(INSTALL_DATA) $(srcdir)/mime.conf.default $(DESTDIR)$(DEFAULT_MIME_TABLE); \
 -	fi
--
--	$(INSTALL_FILE) $(srcdir)/mime.conf $(sysconfdir)/mime.conf.default
--	@if test -f $(sysconfdir)/mime.conf ; then \
--		echo "$@ will not overwrite existing $(sysconfdir)/mime.conf" ; \
+-	@if test -f $(DESTDIR)$(DEFAULT_CONFIG_FILE) ; then \
+-	        echo "$@ will not overwrite existing $(DESTDIR)$(DEFAULT_CONFIG_FILE)" ; \
 -	else \
--		echo "$(INSTALL_FILE) $(srcdir)/mime.conf $(sysconfdir)"; \
--		$(INSTALL_FILE) $(srcdir)/mime.conf $(sysconfdir); \
+-	        echo "$(INSTALL_DATA) squid.conf.default $(DESTDIR)$(DEFAULT_CONFIG_FILE)"; \
+-	        $(INSTALL_DATA) squid.conf.default $(DESTDIR)$(DEFAULT_CONFIG_FILE); \
 -	fi
-+	$(INSTALL_FILE) squid.conf $(prefix)/share/examples/squid
-+#	@if test -f $(DEFAULT_CONFIG_FILE) ; then \
-+#		echo "$@ will not overwrite existing $(DEFAULT_CONFIG_FILE)" ; \
-+#	else \
-+#		echo "$(INSTALL_FILE) squid.conf $(DEFAULT_CONFIG_FILE)"; \
-+#		$(INSTALL_FILE) squid.conf $(DEFAULT_CONFIG_FILE); \
-+#	fi
++install-data-local: install-dataDATA
++	@mkdir -p $(DESTDIR)$(EXAMPLES_DIR)
++	@echo "$(INSTALL_DATA) $(srcdir)/mime.conf.default $(DESTDIR)$(EXAMPLES_DIR)/mime.conf" ;\
++	        $(INSTALL_DATA) $(srcdir)/mime.conf.default $(DESTDIR)$(EXAMPLES_DIR)/mime.conf; \
++	@echo "$(INSTALL_DATA) squid.conf.default $(DESTDIR)$(EXAMPLES_DIR)/suqid.conf"; \
++	        $(INSTALL_DATA) squid.conf.default $(DESTDIR)$(EXAMPLES_DIR)/squid.conf; \
 +
-+	$(INSTALL_FILE) $(srcdir)/mime.conf $(prefix)/share/examples/squid
-+#	@if test -f $(DEFAULT_MIME_TABLE) ; then \
-+#		echo "$@ will not overwrite existing $(DEFAULT_MIME_TABLE)" ; \
-+#	else \
-+#		echo "$(INSTALL_FILE) $(srcdir)/mime.conf $(DEFAULT_MIME_TABLE)"; \
-+#		$(INSTALL_FILE) $(srcdir)/mime.conf $(DEFAULT_MIME_TABLE); \
-+#	fi
+ 	$(mkinstalldirs) $(DESTDIR)$(DEFAULT_LOG_PREFIX)
  
- install-pinger:
- 	@f=$(PINGER_EXE); \
+ uninstall-local:

@@ -1,21 +1,13 @@
-$NetBSD: patch-ad,v 1.3 1998/12/06 12:42:00 tron Exp $
+$NetBSD: patch-ad,v 1.4 2002/10/13 16:43:21 taca Exp $
 
---- errors/Makefile.in.orig	Fri Apr 24 01:26:39 1998
-+++ errors/Makefile.in	Thu Oct  1 16:25:32 1998
-@@ -4,6 +4,7 @@
- exec_prefix	= @exec_prefix@
- top_srcdir	= @top_srcdir@
- bindir		= @bindir@
-+datadir		= @datadir@
- libexecdir      = @libexecdir@
- sysconfdir	= @sysconfdir@
- localstatedir   = @localstatedir@
-@@ -15,7 +16,7 @@
+--- errors/Makefile.in.orig	Fri Jul 12 17:38:03 2002
++++ errors/Makefile.in
+@@ -119,7 +119,7 @@ am__quote = @am__quote@
+ install_sh = @install_sh@
+ makesnmplib = @makesnmplib@
  
- INSTALL         	= @INSTALL@
- INSTALL_FILE    	= @INSTALL_DATA@
--DEFAULT_ERROR_DIR	= $(sysconfdir)/errors
-+DEFAULT_ERROR_DIR	= $(datadir)/squid/errors
+-errordir = $(datadir)/errors
++errordir = $(datadir)/squid/errors
  
- LANGUAGE		= @ERR_LANGUAGE@
+ DEFAULT_ERROR_DIR = $(errordir)
  

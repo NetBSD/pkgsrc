@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.5 2001/04/14 10:05:01 tron Exp $
+$NetBSD: patch-ak,v 1.6 2002/10/13 16:43:21 taca Exp $
 
---- src/cf.data.pre.orig	Sat Apr 14 11:54:41 2001
-+++ src/cf.data.pre	Sat Apr 14 11:56:42 2001
-@@ -858,6 +858,23 @@
+--- src/cf.data.pre.orig	Sat Oct 12 23:14:04 2002
++++ src/cf.data.pre
+@@ -923,6 +923,23 @@ DOC_START
  DOC_END
  
  
