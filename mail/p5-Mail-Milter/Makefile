@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/29 18:30:59 tv Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/25 21:55:04 tv Exp $
 #
 
-DISTNAME=	Mail-Milter-0.03
+DISTNAME=	Mail-Milter-0.06
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/} \
