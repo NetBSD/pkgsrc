@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.572 2002/11/22 01:11:14 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.573 2002/11/22 12:33:51 abs Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3682,3 +3682,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated silc-server to 0.9.8 [salo 2002-11-21]
 	Updated windowmaker to 0.80.2 [tron 2002-11-21]
 	Updated gerbv to 0.11 [dmcmahill 2002-11-21]
+	Updated mserv_irman to 0.16 [abs 2002-11-21]
