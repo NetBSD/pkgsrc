@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/09/02 10:39:04 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/11/15 15:13:12 jlam Exp $
 #
 
 DISTNAME=	cucipop-1.31
@@ -29,24 +29,22 @@ SPECIAL_PERMS+=	${PREFIX}/sbin/cucipop ${ROOT_USER} ${ROOT_GROUP} 2755
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cucipop
 PKG_SUPPORTED_OPTIONS=	db
 
+.include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdb)
+.  include "../../mk/bdb.buildlink3.mk"
 BDB_ACCEPTED=	db2
 CFLAGS+=	-DUSE_DB
 MAKE_ENV+=	LIBS=${BUILDLINK_LIBS.bdb}
 .endif
 
-.include "../../mk/bsd.prefs.mk"
-
 # to be friendly with pre-1.5 systems
-.if defined(USE_INET6) && ${USE_INET6} == "YES"
+.if defined(USE_INET6) && (${USE_INET6} == "YES")
 MAKE_ENV+=	CFLAGS_INET6=-DINET6
 .endif
 
-.if ${OPSYS} == "SunOS"
-LDFLAGS+=	-lnsl -lsocket
-.endif
+LDFLAGS.SunOS+=	-lnsl -lsocket
 
 pre-configure:
 	@(cd ${WRKSRC};							\
@@ -61,7 +59,4 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/cucipop.8 ${PREFIX}/man/man8
 	${INSTALL_MAN} ${WRKSRC}/makevpopdb.8 ${PREFIX}/man/man8
 
-.if !empty(PKG_OPTIONS:Mdb)
-.  include "../../mk/bdb.buildlink3.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"
