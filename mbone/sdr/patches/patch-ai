@@ -1,13 +1,19 @@
-$NetBSD: patch-ai,v 1.1 1998/11/05 05:32:38 mycroft Exp $
+$NetBSD: patch-ai,v 1.2 1999/01/15 23:56:47 hubertf Exp $
 
---- src/random.c.orig	Wed Aug  5 11:16:03 1998
-+++ src/random.c	Thu Nov  5 00:21:35 1998
-@@ -48,7 +48,7 @@
+--- src/random.c.orig	Wed Aug  5 17:16:03 1998
++++ src/random.c	Sat Jan 16 00:22:13 1999
+@@ -47,11 +47,13 @@
+ 
  static int randseed = 1;
  
++#ifndef __NetBSD__
  void
 -srandom(unsigned int seed)
 +srandom(unsigned long seed)
  {
  	randseed = seed;
  }
++#endif
+ 
+ #if sparc && !__SUNPRO_C
+ #ifdef __svr4__
