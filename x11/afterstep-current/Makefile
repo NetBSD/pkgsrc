@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/11/14 18:51:35 fredb Exp $
+# $NetBSD: Makefile,v 1.15 1999/11/14 20:19:03 fredb Exp $
 
 DISTNAME=		AfterStep-1.7.142
 PKGNAME=		afterstep-1.7.157
@@ -37,6 +37,7 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=		fb@enteract.com
 HOMEPAGE=		http://www.afterstep.org/
 
+BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 DEPENDS+=		asclock-1.0:../../x11/asclock
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png-1.0.3:../../graphics/png
@@ -44,7 +45,6 @@ DEPENDS+=		rplay-3.2.0b6:../../audio/rplay
 DEPENDS+=		xli-1.16:../../graphics/xli
 DEPENDS+=		xp-1.2b10:../../x11/xp
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 
 DIST_SUBDIR=		AfterStep
 GNU_CONFIGURE=		yes
