@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/12/03 02:33:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2003/12/23 18:05:57 sketch Exp $
 #
 
 DISTNAME=	gnome-audio-2.0.0
@@ -20,6 +20,8 @@ do-install:
 		${INSTALL_DATA_DIR} ${PREFIX}/share/sounds/$$dst; \
 		${INSTALL_DATA} $$f ${PREFIX}/share/sounds/$$f; \
 	done
+	${RM} ${PREFIX}/share/sounds/login.wav
+	${RM} ${PREFIX}/share/sounds/logout.wav
 	${LN} -fs startup3.wav ${PREFIX}/share/sounds/login.wav
 	${LN} -fs shutdown1.wav ${PREFIX}/share/sounds/logout.wav
 
