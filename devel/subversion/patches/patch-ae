@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.9 2004/02/23 18:19:00 epg Exp $
+$NetBSD: patch-ae,v 1.10 2004/04/04 20:51:21 epg Exp $
 
---- configure.orig	Mon Feb 23 11:17:11 2004
+--- configure.orig	Wed Mar  4 01:27:45 1970
 +++ configure
-@@ -10326,8 +10326,9 @@ echo "$as_me: WARNING: swig bindings ver
+@@ -10583,8 +10583,9 @@ echo "$as_me: WARNING: swig bindings ver
      if test "$PYTHON" != "none" -a "$SWIG_SUITABLE" = "yes" -a "$svn_swig_bindings_enable_python" = "yes"; then
        { echo "$as_me:$LINENO: \"Configuring python swig binding\"" >&5
  echo "$as_me: \"Configuring python swig binding\"" >&6;}
@@ -14,7 +14,7 @@ $NetBSD: patch-ae,v 1.9 2004/02/23 18:19:00 epg Exp $
  
  
        echo "$as_me:$LINENO: checking if swig needs -L for its libraries" >&5
-@@ -10409,7 +10410,7 @@ echo "${ECHO_T}$ac_cv_python_link" >&6
+@@ -10666,7 +10667,7 @@ echo "${ECHO_T}$ac_cv_python_link" >&6
        ### TODO: enable when the target is implemented correctly
  #      SWIG_BUILD_RULES="$SWIG_BUILD_RULES swig-pl-lib"
  #      SWIG_INSTALL_RULES="$SWIG_INSTALL_RULES install-swig-pl-lib"
@@ -23,7 +23,7 @@ $NetBSD: patch-ae,v 1.9 2004/02/23 18:19:00 epg Exp $
        SWIG_PL_COMPILE="`$PERL -MConfig -e 'print $Config{cc}'` \$(SWIG_PL_INCLUDES)"
        SWIG_PL_LINK="`$PERL -MConfig -e 'print $Config{ld}'` `$PERL -MConfig -e 'print $Config{lddlflags}'` `$PERL -MExtUtils::Embed -e ldopts`"
      fi
-@@ -10527,8 +10528,9 @@ echo "$as_me: WARNING: swig bindings ver
+@@ -10784,8 +10785,9 @@ echo "$as_me: WARNING: swig bindings ver
      if test "$PYTHON" != "none" -a "$SWIG_SUITABLE" = "yes" -a "$svn_swig_bindings_enable_python" = "yes"; then
        { echo "$as_me:$LINENO: \"Configuring python swig binding\"" >&5
  echo "$as_me: \"Configuring python swig binding\"" >&6;}
@@ -35,7 +35,7 @@ $NetBSD: patch-ae,v 1.9 2004/02/23 18:19:00 epg Exp $
  
  
        echo "$as_me:$LINENO: checking if swig needs -L for its libraries" >&5
-@@ -10610,7 +10612,7 @@ echo "${ECHO_T}$ac_cv_python_link" >&6
+@@ -10867,7 +10869,7 @@ echo "${ECHO_T}$ac_cv_python_link" >&6
        ### TODO: enable when the target is implemented correctly
  #      SWIG_BUILD_RULES="$SWIG_BUILD_RULES swig-pl-lib"
  #      SWIG_INSTALL_RULES="$SWIG_INSTALL_RULES install-swig-pl-lib"
@@ -44,7 +44,7 @@ $NetBSD: patch-ae,v 1.9 2004/02/23 18:19:00 epg Exp $
        SWIG_PL_COMPILE="`$PERL -MConfig -e 'print $Config{cc}'` \$(SWIG_PL_INCLUDES)"
        SWIG_PL_LINK="`$PERL -MConfig -e 'print $Config{ld}'` `$PERL -MConfig -e 'print $Config{lddlflags}'` `$PERL -MExtUtils::Embed -e ldopts`"
      fi
-@@ -10731,8 +10733,9 @@ echo "$as_me: WARNING: swig bindings ver
+@@ -10988,8 +10990,9 @@ echo "$as_me: WARNING: swig bindings ver
      if test "$PYTHON" != "none" -a "$SWIG_SUITABLE" = "yes" -a "$svn_swig_bindings_enable_python" = "yes"; then
        { echo "$as_me:$LINENO: \"Configuring python swig binding\"" >&5
  echo "$as_me: \"Configuring python swig binding\"" >&6;}
@@ -56,7 +56,7 @@ $NetBSD: patch-ae,v 1.9 2004/02/23 18:19:00 epg Exp $
  
  
        echo "$as_me:$LINENO: checking if swig needs -L for its libraries" >&5
-@@ -10814,7 +10817,7 @@ echo "${ECHO_T}$ac_cv_python_link" >&6
+@@ -11071,7 +11074,7 @@ echo "${ECHO_T}$ac_cv_python_link" >&6
        ### TODO: enable when the target is implemented correctly
  #      SWIG_BUILD_RULES="$SWIG_BUILD_RULES swig-pl-lib"
  #      SWIG_INSTALL_RULES="$SWIG_INSTALL_RULES install-swig-pl-lib"
