@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5463 2004/04/06 10:36:12 recht Exp $
+$NetBSD: CHANGES,v 1.5464 2004/04/06 13:28:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1812,3 +1812,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome2-media to 2.6.0nb1 [jmmv 2004-04-06]
 	Updated nautilus-media to 0.8.0nb1 [jmmv 2004-04-06]
 	Updated p5-Apache-DBI to 0.94 [recht 2004-04-06]
+	Updated gqview to 1.4.2 [adam 2004-04-06]
