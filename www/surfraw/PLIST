@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:18:54 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/06 10:58:04 jlam Exp $
 bin/W
 bin/altavista
 bin/amazon
@@ -9,34 +9,38 @@ bin/britannica
 bin/cite
 bin/cnn
 bin/currency
+bin/debbugs
+bin/debcontents
+bin/debpackages
 bin/deja
 bin/excite
 bin/fast
 bin/freshmeat
 bin/ftpsearch
 bin/google
-bin/ircsearch
 bin/jake
 bin/linuxdoc
 bin/netbsd
-bin/newscientist
 bin/pubmed
 bin/raging
 bin/rhyme
 bin/scaleplus
 bin/slashdot
+bin/sourceforge
 bin/stockquote
 bin/sundocs
 bin/sunsolve
 bin/surfraw
-bin/surfraw-netscape-remote
+bin/swhois
 bin/thesaurus
 bin/translate
 bin/webster
 bin/wetandwild
+bin/woffle
 bin/xxx
 bin/yahoo
-etc/surfraw.conf.dist
-etc/surfraw_elvi.list
-share/doc/surfraw/README
-@dirrm share/doc/surfraw
+share/doc/${PKGBASE}/README
+share/examples/${PKGBASE}/surfraw.conf
+share/examples/${PKGBASE}/surfraw_elvi.list
+@dirrm share/examples/${PKGBASE}
+@dirrm share/doc/${PKGBASE}
