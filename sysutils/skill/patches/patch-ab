@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 1999/01/05 00:32:29 kim Exp $
+
+--- machdep/bsd-44.c.ORIG	Thu Mar 20 11:20:09 1997
++++ machdep/bsd-44.c	Mon Jan  4 19:24:00 1999
+@@ -41,9 +41,9 @@
+ 	"PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP",		/* 13 - 18 */
+ 	"CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU",		/* 19 - 24 */
+ 	"XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1",	/* 25 - 30 */
+-	"USR2", "32"						/* 31 - 32 */
++	"USR2", "PWR"						/* 31 - 32 */
+ };
+-int NSig = NSIG;
++int NSig = NSIG - 1;
+ 
+ #define	SETCMD(dst,src,maxlen) {			\
+ 	if (maxlen > 0) src[maxlen] = '\0';		\
