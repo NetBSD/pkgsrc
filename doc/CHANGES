@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5034 2004/02/28 23:53:44 heinz Exp $
+$NetBSD: CHANGES,v 1.5035 2004/02/29 00:19:29 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1087,3 +1087,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tla to 1.2nb1 [recht 2004-02-28]
 	Updated gkrellm to 2.1.27 [cube 2004-02-28]
 	Updated prayer to to 1.0.8nb2 [heinz 2004-02-28]
+	Updated cairo to 0.1.17nb1 [recht 2004-02-29]
