@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.179 2005/01/27 04:16:47 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.180 2005/02/11 16:11:36 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -352,8 +352,6 @@ USE_XPKGWEDGE=	yes
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 USE_XPKGWEDGE=		yes
 _XPKGWEDGE_REQD=	1.9
-.else
-_XPKGWEDGE_REQD=	1.5
 .endif
 
 # Set X11PREFIX to reflect the install directory of X11 packages.

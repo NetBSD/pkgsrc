@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1581 2005/02/11 15:55:13 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1582 2005/02/11 16:11:36 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -214,15 +214,6 @@ PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
 PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages."
 .endif
 
-# If USE_XPKGWEDGE is set, then add a build dependency on xpkgwedge for
-# X11 packages.
-#
-.if defined(USE_X11BASE)
-.  if !empty(USE_XPKGWEDGE:M[yY][eE][sS])
-BUILD_DEPENDS+=		xpkgwedge>=${_XPKGWEDGE_REQD}:../../pkgtools/xpkgwedge
-.  endif
-.endif
-
 .if empty(DEPOT_SUBDIR)
 PKG_FAIL_REASON+=	"DEPOT_SUBDIR may not be empty."
 .endif
@@ -269,11 +260,6 @@ MAKE_PROGRAM=		${_IMAKE_MAKE}
 MAKE_PROGRAM=		${MAKE}
 .endif
 CONFIGURE_ENV+=		MAKE="${MAKE_PROGRAM:T}"
-
-.if defined(PKG_USE_KERBEROS)
-CRYPTO?=		uses Kerberos encryption code
-BUILD_DEFS+=		KERBEROS
-.endif
 
 # Distill the PERL5_REQD list into a single _PERL5_REQD value that is the
 # highest version of Perl required.
@@ -369,35 +355,6 @@ CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN_CMD:sh}
 .  endif
 .endif
 
-#
-# PKG_LIBTOOL is the path to the libtool script installed by libtool-base.
-# _LIBTOOL is the path the libtool used by the build, which could be the
-#	path to a libtool wrapper script.
-# LIBTOOL is the publicly-readable variable that should be used by
-#	Makefiles to invoke the proper libtool.
-#
-PKG_LIBTOOL?=		${LOCALBASE}/bin/libtool
-PKG_SHLIBTOOL?=		${LOCALBASE}/bin/shlibtool
-_LIBTOOL?=		${PKG_LIBTOOL}
-_SHLIBTOOL?=		${PKG_SHLIBTOOL}
-LIBTOOL?=		${PKG_LIBTOOL}
-SHLIBTOOL?=		${PKG_SHLIBTOOL}
-.if defined(USE_LIBTOOL)
-.  if defined(USE_LANGUAGES) && !empty(USE_LANGUAGES:Mfortran)
-LIBTOOL_REQD?=		1.5.10nb7
-.  endif
-LIBTOOL_REQD?=		1.5.10nb1
-BUILD_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../devel/libtool-base
-CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
-MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
-LIBTOOL_OVERRIDE?=	libtool */libtool */*/libtool
-.endif
-
-.if defined(BUILD_USES_MSGFMT) && \
-    (!exists(/usr/bin/msgfmt) || ${_USE_GNU_GETTEXT} == "yes")
-BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
-.endif
-
 EXTRACT_COOKIE=		${WRKDIR}/.extract_done
 WRAPPER_COOKIE=		${WRKDIR}/.wrapper_done
 CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
@@ -415,16 +372,9 @@ SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
 
 LIBABISUFFIX?=
 
-.if defined(USE_X11)
-X11_LDFLAGS+=		${COMPILER_RPATH_FLAG}${X11BASE}/lib${LIBABISUFFIX}
-X11_LDFLAGS+=		-L${X11BASE}/lib${LIBABISUFFIX}
-.endif
 .if !empty(USE_BUILDLINK3:M[nN][oO])
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
 LDFLAGS+=		-L${LOCALBASE}/lib
-.  if defined(USE_X11)
-LDFLAGS+=		${X11_LDFLAGS}
-.  endif
 .endif
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
 MAKE_ENV+=		LINKER_RPATH_FLAG="${LINKER_RPATH_FLAG}"
@@ -710,14 +660,6 @@ PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SITEARCH:S/^${LOCALBASE}\///}
 PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
 .endif
 
-# Handle info files
-#
-INFO_FILES?=			# default to no info files to handle
-USE_MAKEINFO?=	no		# default to not using makeinfo
-.if !empty(INFO_FILES) || empty(USE_MAKEINFO:M[nN][oO])
-. include "../../mk/texinfo.mk"
-.endif
-
 # Handle alternatives
 #
 .include "../../mk/alternatives.mk"
@@ -886,16 +828,6 @@ PKG_FAIL_REASON+='ALL_TARGET is deprecated and must be replaced with BUILD_TARGE
 # If this host is behind a filtering firewall, use passive ftp(1)
 .if defined(PASSIVE_FETCH)
 FETCH_BEFORE_ARGS += -p
-.endif
-
-# Check if we got "rman" with XFree86, for packages that need "rman".
-.if defined(USE_RMAN)
-.  if !exists(${X11BASE}/bin/rman)
-DEPENDS+=		rman-3.0.9:../../textproc/rman
-RMAN?=			${LOCALBASE}/bin/rman
-.  else
-RMAN?=			${X11BASE}/bin/rman
-.  endif
 .endif
 
 # Include popular master sites
@@ -1099,11 +1031,6 @@ BUILD_DEFS+=		IGNORE_RECOMMENDED
 # Remove some redundant dependencies from the DEPENDS list.
 .include "../../mk/reduce-depends.mk"
 DEPENDS:=	${REDUCED_DEPENDS}
-
-.if defined(USE_DIRS) && !empty(USE_DIRS) && \
-    ${PKG_INSTALLATION_TYPE} == "overwrite"
-.  include "../../mk/dirs.mk"
-.endif
 
 # Find out the PREFIX of dependencies where the PREFIX is needed at build time.
 .if defined(EVAL_PREFIX)
