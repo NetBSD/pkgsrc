@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/01/05 18:02:20 jlam Exp $
+
+--- module/xf86_mod.c.orig	Wed Jan  5 11:47:26 2000
++++ module/xf86_mod.c	Wed Jan  5 11:48:24 2000
+@@ -33,8 +33,8 @@
+ 
+ MOD_DEV("xf86", LM_DT_CHAR, -1, &newdev)
+ 
+-char *xf86_major_version = "1";
+-char *xf86_minor_version = "99b";
++char *xf86_major_version = "2";
++char *xf86_minor_version = "0";
+ 
+ static int xf86action __P((struct lkm_table *lktmp, int cmd));
+ 
