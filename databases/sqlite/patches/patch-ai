@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1 2003/12/29 20:03:31 cjep Exp $
+
+--- ../sqlite/src/func.c.orig	2003-06-28 17:20:23.000000000 +0100
++++ ../sqlite/src/func.c
+@@ -22,6 +22,7 @@
+ #include <math.h>
+ #include <stdlib.h>
+ #include <assert.h>
++#include "os.h"
+ #include "sqliteInt.h"
+ 
+ /*
