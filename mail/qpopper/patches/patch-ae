@@ -1,25 +1,42 @@
-$NetBSD: patch-ae,v 1.7 1998/09/09 07:20:32 tron Exp $
+$NetBSD: patch-ae,v 1.8 1999/09/15 21:30:59 tron Exp $
 
 --- popauth.8.orig	Fri Jul 10 01:44:08 1998
-+++ popauth.8	Wed Sep  9 09:10:57 1998
-@@ -5 +5 @@
++++ popauth.8	Wed Sep 15 23:28:17 1999
+@@ -2,25 +2,25 @@
+ .\"	
+ .\"	@(MHWARNING)
+ .\" @(#)$Id: patch-ae,v 1.8 1999/09/15 21:30:59 tron Exp $
 -.TH POPAUTH 8
 +.TH QPOPAUTH 8
-@@ -7 +7 @@
+ .SH NAME
 -popauth - manipulate POP authorization DB
 +qpopauth - manipulate POP authorization DB
-@@ -9 +9 @@
+ .SH SYNOPSIS
 -popauth
 +qpopauth
-@@ -13 +13 @@
+ \%[\-init] \%[\-list] \%[\-delete\ name] \%[\-user\ name]
+ \%[\-help]
+ .SH DESCRIPTION
 -The \fIpopauth\fR program allows a POP-subscriber to change the secret
 +The \fIqpopauth\fR program allows a POP-subscriber to change the secret
-@@ -18 +18 @@
+ value used to generate their authentication credentials.
+ In addition,
+ the super\-user or master POP user may use this program to either
+ add or remove a user, or to print public information from it.  Only the
 -super\-user may initialize the database.  \fIpopauth\fR is useful only when
 +super\-user may initialize the database.  \fIqpopauth\fR is useful only when
-@@ -23 +23 @@
+ the APOP configuration option is defined.  (This configuration option defines
+ the name of the POP authorization DB.)
+ 
+ Under normal usage,
 -\fIpopauth\fR prompts for a new secret,
 +\fIqpopauth\fR prompts for a new secret,
-@@ -41 +41 @@
+ just like the \fIpasswd\fR program.
+ It then updates the POP authorization DB accordingly.
+ 
+@@ -38,4 +38,4 @@
+ .SH ACKNOWLEDGEMENTS
+ This program was derived from MH 6.8.3
+ .SH SEE ALSO
 -popper(8)
 +qpopper(8)

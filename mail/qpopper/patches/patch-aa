@@ -1,158 +1,28 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:09:52 agc Exp $
+$NetBSD: patch-aa,v 1.3 1999/09/15 21:30:59 tron Exp $
 
-diff -rc2 popper.8 popper.8
-*** popper.8	Wed Nov 19 13:20:38 1997
---- popper.8	Thu Feb 12 15:24:04 1998
-***************
-*** 11,19 ****
-  .\" @(#)@(#)popper.8	2.3    2.3    (CCS)   4/2/91     Copyright (c) 1990 Regents of the University of California.\nAll rights reserved.\n
-  .\"
-! .TH popper 8 "August 1990"
-  .UC 6
-  .ad
-  .SH NAME
-! popper \- pop 3 server
-  .SH SYNOPSIS
-  .B /usr/etc/popper
---- 11,19 ----
-  .\" @(#)@(#)popper.8	2.3    2.3    (CCS)   4/2/91     Copyright (c) 1990 Regents of the University of California.\nAll rights reserved.\n
-  .\"
-! .TH qpopper 8 "August 1990"
-  .UC 6
-  .ad
-  .SH NAME
-! qpopper \- Qualcomm pop 3 server
-  .SH SYNOPSIS
-  .B /usr/etc/popper
-***************
-*** 25,29 ****
-  [ -b bulldir]
-  .SH DESCRIPTION
-! .I Popper
-  is an implementation of the Post Office Protocol server that runs on a
-  variety of Unix computers to manage electronic mail for Macintosh
---- 25,29 ----
-  [ -b bulldir]
-  .SH DESCRIPTION
-! .I Qpopper
-  is an implementation of the Post Office Protocol server that runs on a
-  variety of Unix computers to manage electronic mail for Macintosh
-***************
-*** 43,52 ****
-  The
-  .B \-k
-! flag enables kerberos authentication when popper has been compiled with
-  the KERBEROS define.  You must already have libraries that support Kerberos.
-  .PP
-  The
-  .B \-s
-! flag turns on statistics logging using syslog(8). At the end of each popper
-  session, the following information is logged: username, number of 
-  messages deleted, number of bytes deleted, number of message left on server,
---- 43,52 ----
-  The
-  .B \-k
-! flag enables kerberos authentication when qpopper has been compiled with
-  the KERBEROS define.  You must already have libraries that support Kerberos.
-  .PP
-  The
-  .B \-s
-! flag turns on statistics logging using syslog(8). At the end of each qpopper
-  session, the following information is logged: username, number of 
-  messages deleted, number of bytes deleted, number of message left on server,
-***************
-*** 59,63 ****
-  When the server is waiting for a command to arrive from the client, it
-  times out after the specified number of seconds and terminates the session.
-! This avoids having popper processes hang forever waiting for command input
-  from clients which have terminated abnormally.
-  A small value is ok for small to medium nets where
---- 59,63 ----
-  When the server is waiting for a command to arrive from the client, it
-  times out after the specified number of seconds and terminates the session.
-! This avoids having qpopper processes hang forever waiting for command input
-  from clients which have terminated abnormally.
-  A small value is ok for small to medium nets where
-***************
-*** 100,109 ****
-  deleted. Otherwise, the bulletin is copied as is.
-  .PP
-! When a new user checks for mail the first time, popper creates the .popbull 
-  file in the user's home directory and seeds it with the current maximum 
-  bulletin number. Thus new users do not get old bulletins.
-  .SH THE POP TRANSACTION CYCLE
-  .PP
-! The Berkeley POP server is a single program (called popper) that is
-  launched by inetd when it gets a service request on the POP TCP port.
-  (The official port number specified in RFC 1081 for POP version 3 is
---- 100,109 ----
-  deleted. Otherwise, the bulletin is copied as is.
-  .PP
-! When a new user checks for mail the first time, qpopper creates the .popbull 
-  file in the user's home directory and seeds it with the current maximum 
-  bulletin number. Thus new users do not get old bulletins.
-  .SH THE POP TRANSACTION CYCLE
-  .PP
-! The Qualcomm POP server is a single program (called qpopper) that is
-  launched by inetd when it gets a service request on the POP TCP port.
-  (The official port number specified in RFC 1081 for POP version 3 is
-***************
-*** 112,116 ****
-  POP3 servers, you can simply define both ports for use by the POP3
-  server.  This is explained in the installation instructions later on.)
-! The popper program initializes and verifies that the peer IP address is
-  registered in the local domain, logging a warning message when a
-  connection is made to a client whose IP address does not have a
---- 112,116 ----
-  POP3 servers, you can simply define both ports for use by the POP3
-  server.  This is explained in the installation instructions later on.)
-! The qpopper program initializes and verifies that the peer IP address is
-  registered in the local domain, logging a warning message when a
-  connection is made to a client whose IP address does not have a
-***************
-*** 123,127 ****
-  state (other than a request to quit.)  If authentication fails, a
-  warning message is logged and the session ends.  Once the user is
-! identified, popper changes its user and group ids to match that of the
-  user and enters the transaction state.  The server makes a temporary
-  copy of the user's maildrop which is
---- 123,127 ----
-  state (other than a request to quit.)  If authentication fails, a
-  warning message is logged and the session ends.  Once the user is
-! identified, qpopper changes its user and group ids to match that of the
-  user and enters the transaction state.  The server makes a temporary
-  copy of the user's maildrop which is
-***************
-*** 142,146 ****
-  .SH DEBUGGING
-  .PP
-! The popper program will log debugging information when the -d parameter
-  is specified after its invocation in the inetd.conf file.  Care should
-  be exercised in using this option since it generates considerable
---- 142,146 ----
-  .SH DEBUGGING
-  .PP
-! The qpopper program will log debugging information when the -d parameter
-  is specified after its invocation in the inetd.conf file.  Care should
-  be exercised in using this option since it generates considerable
-***************
-*** 149,157 ****
-  instead of syslog.
-  .PP
-! For SunOS version 3.5, the popper program is launched by inetd from
-  /etc/servers.  This file does not allow you to specify command line
-  arguments.  Therefore, if you want to enable debugging, you can specify
-! a shell script in /etc/servers to be launched instead of popper and in
-! this script call popper with the desired arguments.
-  .PP
-  You can confirm that the POP server is running on Unix by telneting to
---- 149,157 ----
-  instead of syslog.
-  .PP
-! For SunOS version 3.5, the qpopper program is launched by inetd from
-  /etc/servers.  This file does not allow you to specify command line
-  arguments.  Therefore, if you want to enable debugging, you can specify
-! a shell script in /etc/servers to be launched instead of qpopper and in
-! this script call qpopper with the desired arguments.
-  .PP
-  You can confirm that the POP server is running on Unix by telneting to
+--- config.h.in.orig	Fri Jul 10 01:44:06 1998
++++ config.h.in	Wed Sep 15 23:28:17 1999
+@@ -39,6 +39,7 @@
+ #undef DEBUG
+ #undef APOP
+ #undef POPUID
++#undef KERBEROS
+ #undef GDBM
+ /*
+  * Define this macro if your system supports special authorization
+@@ -166,6 +167,15 @@
+ 
+ /* Define if you have the <unistd.h> header file.  */
+ #undef HAVE_UNISTD_H
++
++/* Define if you have the <stdlib.h> header file.  */
++#undef HAVE_STDLIB_H
++
++/* Define if you have the <string.h> header file.  */
++#undef HAVE_STRING_H
++
++/* Define if you have the <time.h> header file.  */
++#undef HAVE_TIME_H
+ 
+ /* Define if you have the cposix library (-lcposix).  */
+ #undef HAVE_LIBCPOSIX

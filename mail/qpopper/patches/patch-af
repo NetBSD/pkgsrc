@@ -1,17 +1,13 @@
-$NetBSD: patch-af,v 1.4 1998/08/07 11:09:53 agc Exp $
+$NetBSD: patch-af,v 1.5 1999/09/15 21:30:59 tron Exp $
 
-*** popauth.c	Wed Nov 19 13:20:38 1997
---- popauth.c	Thu Feb 12 18:24:55 1998
-***************
-*** 48,52 ****
-  #endif
-  
-! #ifdef BSDI
-  #define BSD44_DBM
-  #endif
---- 48,52 ----
-  #endif
-  
-! #if defined (BSDI) || defined (__NetBSD__)
-  #define BSD44_DBM
-  #endif
+--- popauth.c.orig	Fri Jul 10 01:44:08 1998
++++ popauth.c	Wed Sep 15 23:28:17 1999
+@@ -47,7 +47,7 @@
+ #include <sys/file.h>
+ #endif
+ 
+-#ifdef BSDI
++#if defined (BSDI) || defined (__NetBSD__)
+ #define BSD44_DBM
+ #endif
+ 
