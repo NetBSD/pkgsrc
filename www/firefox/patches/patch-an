@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2004/04/29 14:13:19 adam Exp $
+
+--- gfx/src/x11shared/nsFontFreeType.h.orig	2004-04-29 12:34:09.000000000 +0000
++++ gfx/src/x11shared/nsFontFreeType.h
+@@ -110,7 +110,7 @@ protected:
+   XImage *GetXImage(PRUint32 width, PRUint32 height);
+   nsITrueTypeFontCatalogEntry *mFaceID;
+   PRUint16        mPixelSize;
+-  FTC_Image_Desc  mImageDesc;
++  FTC_ImageType   mImageDesc;
+   nsCOMPtr<nsIFreeType2> mFt2;
+ };
+ 
