@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/09/26 10:29:52 martti Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/11/05 22:11:58 dmcmahill Exp $
 
 MASTER_SITES=		http://www.xfce.org/archive/xfce-4.0.0/src/ \
 			http://linux.imp.mx/xfce4/xfce_4.0.0/src/
@@ -17,6 +17,10 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
+
+.if ${MACHINE_ARCH} == "alpha"
+GCC_REQD=		3.0
+.endif
 
 MESSAGE_SRC?=		${.CURDIR}/../../fonts/fontconfig/MESSAGE
 
