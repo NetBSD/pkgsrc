@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:58 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 10:50:01 agc Exp $
 
-MD5 (xcopilot-0.6.6.tar.gz) = 26f71da5d04d3ecffb60e5423b5ff95c
+SHA1 (xcopilot-0.6.6.tar.gz) = 91f76d1fd8fc19b6fea18853425aa3076e945d5d
+Size (xcopilot-0.6.6.tar.gz) = 343264 bytes
 SHA1 (patch-aa) = 3354ed73dfa6c05273c7f430d45bacb0c8adbcf5
 SHA1 (patch-ab) = d0e1eba65c0e8c963953856b939629fa0b99ea3c
 SHA1 (patch-ac) = a495efbbbf5b28016b4b1b0e49c7e8f8b298faf4
