@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/01/29 22:17:06 lukem Exp $
+# $NetBSD: Makefile,v 1.37 2003/03/24 03:06:34 grant Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 PKGREVISION=		3
@@ -13,17 +13,16 @@ USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 USE_GMAKE=		YES
 
-
 ONLY_FOR_PLATFORM=	SunOS-*-sparc Linux-*-*
 
 # on NetBSD, if native threads are not available, hardwire
 # included mit-pthreads, as this doesn't yet work properly with pth
-.if (${OPSYS} == "NetBSD")
-.if (exists(/usr/include/pthread.h))
+.if ${OPSYS} == "NetBSD"
+.  if exists(/usr/include/pthread.h)
 
 # native pthreads
 ONLY_FOR_PLATFORM+=	NetBSD-*-*
-.else
+.  else
 
 # force included mit-pthreads
 CONFIGURE_ARGS+=	--with-mit-threads
@@ -31,9 +30,8 @@ CONFIGURE_ARGS+=	--with-mit-threads
 # platforms on which included mit-pthreads is usable
 ONLY_FOR_PLATFORM+=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386	\
 			NetBSD-*-sparc NetBSD-*-m68k NetBSD-*-powerpc
+.  endif
 .endif
-.endif
-
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 
