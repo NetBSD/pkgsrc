@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.33 2004/01/04 23:30:04 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.34 2004/01/05 05:59:29 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -36,7 +36,7 @@
 # satisfied by a pkgsrc-installed package is handled automatically by this
 # file.
 #
-# The different variables that may be set in a buildlink2.mk file are
+# The different variables that may be set in a buildlink3.mk file are
 # described below.
 #
 # The variable name convention used in this Makefile are:
