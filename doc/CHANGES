@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6928 2004/08/17 15:50:30 minskim Exp $
+$NetBSD: CHANGES,v 1.6929 2004/08/17 16:39:19 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3888,3 +3888,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added bos-1.1 [wiz 2004-08-17]
 	Added py-Xlib-0.12 [minskim 2004-08-17]
 	Updated moss to 0.1.8 [minskim 2004-08-17]
+	Updated jwhois to 3.2.2nb7 [kleink 2004-08-17]
