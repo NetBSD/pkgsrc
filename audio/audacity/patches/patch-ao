@@ -1,33 +1,33 @@
-$NetBSD: patch-ao,v 1.1.1.1 2001/06/17 19:13:52 drochner Exp $
+$NetBSD: patch-ao,v 1.2 2001/08/02 17:45:35 drochner Exp $
 
---- prefs/AudioIOPrefs.cpp.orig	Sun Jun 17 09:15:01 2001
-+++ prefs/AudioIOPrefs.cpp	Sun Jun 17 09:15:47 2001
-@@ -45,8 +45,8 @@
- 									GetSize());
- 
- 	gPrefs->SetPath("/AudioIO");
--	wxString playDevice = gPrefs->Read("PlaybackDevice", "/dev/dsp");
--	wxString recDevice  = gPrefs->Read("RecordingDevice", "/dev/dsp");
-+	wxString playDevice = gPrefs->Read("PlaybackDevice", "/dev/sound");
-+	wxString recDevice  = gPrefs->Read("RecordingDevice", "/dev/sound");
- 	bool recordStereo;
- 	gPrefs->Read("RecordStereo", &recordStereo, false);
- 	bool duplex;
-@@ -173,7 +173,7 @@
+--- prefs/AudioIOPrefs.cpp.orig	Sun Jul 29 03:17:54 2001
++++ prefs/AudioIOPrefs.cpp	Mon Jul 30 14:20:42 2001
+@@ -52,8 +52,8 @@
+ PrefsPanel(parent)
  {
- 	/* TODO: attempt autodetection? */
  #ifdef __WXGTK__
--	mPlaybackDeviceCtrl->SetValue("/dev/dsp");
-+	mPlaybackDeviceCtrl->SetValue("/dev/sound");
+-   wxString defaultPlaybackDevice = "/dev/dsp";
+-   wxString defaultRecordingDevice = "/dev/dsp";
++   wxString defaultPlaybackDevice = "/dev/sound";
++   wxString defaultRecordingDevice = "/dev/sound";
  #endif // __WXGTK__
+ 
+ #ifdef __WXMSW__
+@@ -513,7 +513,7 @@
+ {
+    /* TODO: attempt autodetection? */
+ #ifdef __WXGTK__
+-   mPlaybackDeviceCtrl->SetValue("/dev/dsp");
++   mPlaybackDeviceCtrl->SetValue("/dev/sound");
+ #endif                          // __WXGTK__
  }
  
-@@ -184,7 +184,7 @@
- void AudioIOPrefs::SetRecordingDeviceDefault(wxCommandEvent& event)
+@@ -524,7 +524,7 @@
+ void AudioIOPrefs::SetRecordingDeviceDefault(wxCommandEvent & event)
  {
  #ifdef __WXGTK__
--	mRecordingDeviceCtrl->SetValue("/dev/dsp");
-+	mRecordingDeviceCtrl->SetValue("/dev/sound");
- #endif // __WXGTK__
+-   mRecordingDeviceCtrl->SetValue("/dev/dsp");
++   mRecordingDeviceCtrl->SetValue("/dev/sound");
+ #endif                          // __WXGTK__
  }
  
