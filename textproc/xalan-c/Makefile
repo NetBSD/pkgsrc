@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:42:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/04/28 08:59:29 skrll Exp $
 #
 
 DISTNAME=	Xalan-C_1_0-linux
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/xml-xalan/c/src
 CATEGORIES=	textproc
 MASTER_SITES=	http://xml.apache.org/dist/xalan-c/
 
-MAINTAINER=	skrll@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://xml.apache.org/xalan-c/
 COMMENT=	the Apache Project's XSLT implementation
 
