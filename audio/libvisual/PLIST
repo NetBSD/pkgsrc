@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/05 20:55:48 wiz Exp $
+include/libvisual/libvisual.h
+include/libvisual/lv_actor.h
+include/libvisual/lv_audio.h
+include/libvisual/lv_bin.h
+include/libvisual/lv_bmp.h
+include/libvisual/lv_color.h
+include/libvisual/lv_common.h
+include/libvisual/lv_cpu.h
+include/libvisual/lv_endianess.h
+include/libvisual/lv_error.h
+include/libvisual/lv_event.h
+include/libvisual/lv_fft.h
+include/libvisual/lv_input.h
+include/libvisual/lv_keysym.h
+include/libvisual/lv_libvisual.h
+include/libvisual/lv_list.h
+include/libvisual/lv_log.h
+include/libvisual/lv_mem.h
+include/libvisual/lv_morph.h
+include/libvisual/lv_palette.h
+include/libvisual/lv_param.h
+include/libvisual/lv_plugin.h
+include/libvisual/lv_random.h
+include/libvisual/lv_songinfo.h
+include/libvisual/lv_time.h
+include/libvisual/lv_video.h
+include/libvisual/lvconfig.h
+lib/libvisual.la
+lib/pkgconfig/libvisual.pc
+@dirrm include/libvisual

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/05 20:55:48 wiz Exp $
+
+SHA1 (libvisual-0.1.7.tar.gz) = 9bd8b1827962e7d209f918f42b609d111b50cc8d
+Size (libvisual-0.1.7.tar.gz) = 374096 bytes
+SHA1 (patch-aa) = 0faa93665d2615f2b85279ede67e8738ebf457a5
+SHA1 (patch-ab) = ee7a80026b024d7c8e3929970b7809bac1ebe6be
+SHA1 (patch-ac) = fd1ddd05dbbee2c1c4dd89f083588a3b0418ee3b
