@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2003/09/17 19:49:24 grant Exp $
+# $NetBSD: Makefile,v 1.103 2003/09/17 19:51:09 grant Exp $
 
 .include "Makefile.common"
 
@@ -27,8 +27,9 @@ PLIST_SUBST+=		IM_MAJOR_LIB_VER=${IM_MAJOR_LIB_VER}
 
 .include "../../mk/bsd.prefs.mk"
 
-# c++ broken as of 'gcc version 2.95.3 20010315 (release) (NetBSD nb1)'
-NOT_FOR_PLATFORM=	NetBSD-*-sparc64
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
+GCC_REQD=		3.0
+.endif
 
 # Avoid compiler bug on "mipsel" (cobalt?)
 .if (${MACHINE_ARCH} == mipsel)
