@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/05/14 14:12:27 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/05/20 05:23:28 jonb Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -10,7 +10,7 @@ PHP_MODULE_VERS=	${PHP_BASE_VERS}${PHP_PKG_VERS}
 COMMENT=		PHP4: Hypertext Preprocessor (Apache module)
 
 DEPENDS+=		php-${PHP_VERS}:../../www/php4
-DEPENDS+=		apache>=1.3:../../www/apache
+DEPENDS+=		apache{,6}>=1.3:../../www/apache
 
 # For "apxs":
 BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
