@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3005 2003/08/07 11:31:45 abs Exp $
+$NetBSD: CHANGES,v 1.3006 2003/08/08 08:14:57 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3215,4 +3215,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated kde to 3.1.3nb1 [tron 2003-08-06]
 	Added p5-XML-Twig [gson 2003-08-06]
 	Updated cpuflags to 0.56 [abs 2003-08-06]
-
+	Updated 6to4 to 1.4 [grant 2003-08-08]
