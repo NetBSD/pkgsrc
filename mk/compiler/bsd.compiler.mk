@@ -1,4 +1,4 @@
-# $NetBSD: bsd.compiler.mk,v 1.6 2004/02/02 10:53:08 jlam Exp $
+# $NetBSD: bsd.compiler.mk,v 1.7 2004/02/05 03:35:20 jlam Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -71,9 +71,9 @@ BSD_COMPILER_MK=	defined
 # XXX "c c++").  This is here for now so that ~85 packages won't
 # XXX suddenly break.
 #
-.if defined(USE_GCC_SHLIB)
+.  if defined(USE_GCC_SHLIB)
 USE_LANGUAGES?=	c c++
-.endif
+.  endif
 
 # By default, assume that the package requires a C compiler.
 USE_LANGUAGES?=	c
@@ -81,32 +81,31 @@ USE_LANGUAGES?=	c
 # Support some deprecated variables for a while.  They'll be removed
 # after the pkgsrc-2004Q1 branch is cut.
 #
-.if defined(USE_GCC2)
+.  if defined(USE_GCC2)
 GCC_REQD?=		2.8.0
 PKGSRC_COMPILER?=	gcc
-.elif defined(USE_GCC3)
+.  elif defined(USE_GCC3)
 GCC_REQD?=		3.0
 PKGSRC_COMPILER?=	gcc
-.elif defined(USE_PKGSRC_GCC)
+.  elif defined(USE_PKGSRC_GCC)
 _USE_PKGSRC_GCC=	yes
 PKGSRC_COMPILER?=	gcc
-.elif defined(USE_SUNPRO)
+.  elif defined(USE_SUNPRO)
 PKGSRC_COMPILER?=	sunpro
-.elif defined(USE_MIPSPRO)
+.  elif defined(USE_MIPSPRO)
 PKGSRC_COMPILER?=	mipspro
-.else
+.  else
 PKGSRC_COMPILER?=	gcc
-.endif
+.  endif
 
 _PKGSRC_COMPILER=	# empty
-.for _compiler_ in ${PKGSRC_COMPILER}
-.  if empty(_PKGSRC_COMPILER:M${_compiler_})
+.  for _compiler_ in ${PKGSRC_COMPILER}
+.    if empty(_PKGSRC_COMPILER:M${_compiler_})
 _PKGSRC_COMPILER:=	${_compiler_} ${_PKGSRC_COMPILER}
-.  endif
-.endfor
+.    endif
+.  endfor
+.endif	# BSD_COMPILER_MK
 
 .for _compiler_ in ${_PKGSRC_COMPILER}
 .  include "../../mk/compiler/${_compiler_}.mk"
 .endfor
-
-.endif	# BSD_COMPILER_MK
