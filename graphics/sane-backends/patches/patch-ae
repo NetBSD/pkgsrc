@@ -1,0 +1,61 @@
+$NetBSD: patch-ae,v 1.1 2002/02/16 15:10:57 mjl Exp $
+
+--- frontend/scanimage.c.orig	Sat Feb 16 12:54:39 2002
++++ frontend/scanimage.c	Sat Feb 16 13:06:23 2002
+@@ -64,6 +64,9 @@
+ }
+ Image;
+ 
++
++void damn_i386_centric_vprintf(const char *, const char **);
++
+ #define OPTION_FORMAT   1001
+ #define OPTION_MD5	1002
+ #define OPTION_BATCH_COUNT	1003
+@@ -1561,8 +1564,8 @@
+ 	                  }
+ 	                start = percent;
+ 	              }
+-	            vprintf(fmt, (va_list) arglist);
+-		    va_end(arglist);
++	            damn_i386_centric_vprintf(fmt, arglist);
++		    free(arglist);
+ 	          }
+ 	      }
+ 	        
+@@ -1910,3 +1913,35 @@
+ 
+   return status;
+ }
++
++void damn_i386_centric_vprintf(const char *fmt, const char **arglist)
++	{
++	int c;
++
++	while(c = *fmt++)
++		{
++		switch(c)
++			{
++			case '%':
++				switch(*fmt++)
++					{
++					case 'i':
++						fprintf(stdout, "%d", (int) *arglist++);
++						break;
++					case 's':
++						fputs(*arglist++, stdout);
++						break;
++					case '%':
++					default:
++						fputc('%', stdout);
++						break;
++					}
++				break;
++
++			default:
++				fputc(c, stdout);
++				break;
++			}
++		}
++	}
++
