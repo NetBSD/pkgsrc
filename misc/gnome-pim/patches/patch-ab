@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1 1999/09/03 07:25:14 rh Exp $
+
+--- gncal/timeutil.c.orig	Thu Sep  2 13:32:45 1999
++++ gncal/timeutil.c	Thu Sep  2 13:35:09 1999
+@@ -21,6 +21,12 @@
+ 	if (strlen (str) < 14)
+ 		return -1;
+ 	
++	(void) time (&t);
++	if (str [15] == 'Z')
++		my_tm = *localtime (&t);
++	else
++		my_tm = *gmtime (&t);
++
+ 	my_tm.tm_year = (digit_at (str, 0) * 1000 + digit_at (str, 1) * 100 +
+ 		digit_at (str, 2) * 10 + digit_at (str, 3)) - 1900;
+ 
+@@ -33,9 +39,6 @@
+ 	
+ 	t = mktime (&my_tm);
+ 
+-	if (str [15] == 'Z')
+-		t -= timezone;
+-	    
+ 	return t;
+ }
+ 
