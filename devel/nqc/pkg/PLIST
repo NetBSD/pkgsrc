@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/11 20:25:19 nathanw Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/14 20:38:47 nathanw Exp $
+bin/mkdata
 bin/nqc
+man/man1/nqc.1
