@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.19 2001/11/21 13:57:31 agc Exp $
+# $NetBSD: defs.Linux.mk,v 1.20 2001/11/21 14:10:07 agc Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -55,15 +55,18 @@ TYPE?=		type
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs -r
 
-DEF_UMASK?=	022
-GROUPADD?=	/usr/sbin/groupadd
+DEF_UMASK?=		022
+DEFAULT_SERIAL_DEVICE?=	/dev/null
+GROUPADD?=		/usr/sbin/groupadd
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
-NOLOGIN?=	${FALSE}
-USERADD?=	/usr/sbin/useradd
-
-ROOT_USER?=	root
-ROOT_GROUP?=	wheel
+NOLOGIN?=		${FALSE}
+PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
+ROOT_GROUP?=		wheel
+ROOT_USER?=		root
+SERIAL_DEVICES?=	/dev/null
+USERADD?=		/usr/sbin/useradd
+ZOULARISBASE?=		${DESTDIR}/usr/local/bsd
 
 _DO_LIBINTL_CHECKS=	no	# perform checks for valid libintl
 _DO_SHLIB_CHECKS=	no	# on installation, fixup PLIST for shared libs
