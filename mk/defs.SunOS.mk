@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.49 2002/12/22 10:09:46 salo Exp $
+# $NetBSD: defs.SunOS.mk,v 1.50 2003/01/06 22:29:23 grant Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -55,6 +55,8 @@ MV?=		/usr/bin/mv
 NICE?=		/usr/xpg4/bin/nice
 .if exists(/usr/bin/gpatch)
 PATCH?=		/usr/bin/gpatch -b
+.elif exists(${LOCALBASE}/bin/gpatch)
+PATCH?=		${LOCALBASE}/bin/gpatch -b
 .else
 PATCH?=		${LOCALBASE}/bin/patch -b
 .endif
