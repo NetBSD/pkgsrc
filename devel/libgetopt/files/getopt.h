@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt.h,v 1.2 2000/10/18 11:16:59 wiz Exp $	*/
+/*	$NetBSD: getopt.h,v 1.3 2005/02/11 17:29:06 tv Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -67,6 +67,11 @@ struct option {
 __BEGIN_DECLS
 int getopt_long __P((int, char * const *, const char *,
     const struct option *, int *));
+
+#ifdef __INTERIX
+/* XXX this is in libc, but not in a system header */
+extern int optreset;
+#endif
 __END_DECLS
 #endif
  
