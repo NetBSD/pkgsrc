@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/15 00:36:37 wiz Exp $
+
+diff -x *.orig -urN ./icb/c_shell.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/c_shell.c
+--- ./icb/c_shell.c	Fri Feb 24 22:20:19 1995
++++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/c_shell.c	Fri Nov 26 22:56:29 1999
+@@ -14,7 +14,7 @@
+ 	static char *usage = "usage: c_shell [command]";
+ 	int w, pid;
+ 	int shellout = 0;
+-	union wait status;
++	int status;
+ 	char *shell, *getenv();
+ 	
+ 	/* disallow use if restricted mode set */

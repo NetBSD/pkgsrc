@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/15 00:36:32 wiz Exp $
+
+--- configure.orig	Sun Apr  9 09:11:08 2000
++++ configure	Thu Aug  3 07:43:46 2000
+@@ -5241,7 +5241,7 @@
+ fi
+ if test "x$COPY_DIRECTORY" = "xpax";
+ then
+-    INSTALL_HELP_CMD='cd $(topdir)/help; pax -r -w -s ";.*/\.?CVS$$;;" -s ";.*/\.?CVS/.*;;" . $(HELP_DIR)'
++    INSTALL_HELP_CMD='cd $(topdir)/help; pax -r -w -s ";.*/\.CVS$$;;" -s ";.*/\.CVS/.*;;" . $(HELP_DIR)'
+ else
+     if test "x$COPY_DIRECTORY" = "xtar";
+     then

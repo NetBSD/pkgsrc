@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/15 00:36:28 wiz Exp $
+
+Do not alphabetically sort the GUI libs. This breaks xchat on a.out
+
+--- configure.orig	Tue Sep  5 10:11:57 2000
++++ configure	Tue Sep  5 10:16:31 2000
+@@ -5808,14 +5808,6 @@
+ tr "\n" " " < cflags2 > cflags
+ GUI_CFLAGS=`cat cflags`
+ 
+-echo $GUI_LIBS > cflags
+-tr " " "\n" < cflags > cflags2
+-sort cflags2 > cflags
+-uniq cflags > cflags2
+-tr "\n" " " < cflags2 > cflags
+-GUI_LIBS=`cat cflags`
+-rm -f cflags cflags2
+-
+ fi
+ fi
+ fi

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/15 00:36:36 wiz Exp $
+
+--- src/zenicb.el-	Sun Jul 19 18:37:51 1998
++++ src/zenicb.el	Fri Aug  4 17:34:34 2000
+@@ -211,6 +211,8 @@
+ 	      (if (not zenicb-process)
+ 		  ()
+ 		(set-marker (process-mark zenicb-process) (point-max))
++		(if (fboundp 'set-buffer-multibyte) (set-buffer-multibyte nil))
++		(set-process-coding-system zenicb-process nil nil)
+ 		(set-process-buffer zenicb-process zenicb-buffer)
+ 		(set-process-filter zenicb-process 'zenicb-filter)
+ 		(set-process-sentinel zenicb-process 'zenicb-sentinel)

@@ -1,0 +1,34 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/12/15 00:36:33 wiz Exp $
+
+--- source/irc.c.orig	Thu Aug 31 13:52:49 2000
++++ source/irc.c	Mon Sep 18 00:12:27 2000
+@@ -154,6 +154,7 @@
+ 					 * message anywhere */
+ int	qflag;				/* set if we ignore .ircrc */
+ int	bflag;				/* set if we load .ircrc before connecting */
++int	tflag;				/* don't use termcap ti/te sequences */
+ time_t	idle_time;			/* last time the user hit a key */
+ time_t  start_time;			/* epoch time we started */
+ 
+@@ -207,6 +208,8 @@
+    -b\t\tload .ircrc before connecting to a server\n\
+    -l <file>\tloads <file> in place of your .ircrc\n\
+    -I <file>\tloads <file> in place of your .ircquick\n\
++   -t\t\tdo not use termcap ti and te sequences at startup\n\
++   -T\t\tuse termcap ti and te sequences at startup (default)\n\
+    -icb\t\tuse ICB connections by default\n\
+    -irc\t\tuse IRC connections by default\n\
+        icb [same switches]  (default to -icb)\n";
+@@ -538,6 +541,12 @@
+ 					break;
+ 				case 'S':
+ 					using_server_process = 1;
++					break;
++				case 't':
++					tflag = 1;
++					break;
++				case 'T':
++					tflag = 0;
+ 					break;
+ 				case 'q':
+ 					if (bflag)

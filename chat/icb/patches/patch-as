@@ -1,0 +1,21 @@
+$NetBSD: patch-as,v 1.1.1.1 2000/12/15 00:36:39 wiz Exp $
+
+--- icb/unix.c.orig	Sun Nov 28 23:33:27 1999
++++ icb/unix.c	Sun Nov 28 23:35:51 1999
+@@ -92,13 +92,13 @@
+ pushback(c)
+ char c;
+ {
+-#ifndef SYSV
++#ifdef TIOCSTI
+ 	if (ioctl(0, TIOCSTI, &c) < 0)
+ 		perror("TIOCSTI ioctl failed");
+-#else /* SYSV */
++#else /* !TIOCSTI */
+ 	if (ungetc(c,stdin) == EOF)
+ 		perror("ungetc() failed");
+-#endif /* SYSV */
++#endif /* TIOCSTI */
+ }
+ 
+ 

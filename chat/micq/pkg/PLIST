@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/15 00:36:29 wiz Exp $
+bin/micq
+share/doc/micq/README
+@dirrm share/doc/micq
