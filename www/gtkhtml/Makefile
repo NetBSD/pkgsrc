@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/08/30 07:16:34 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/09/02 06:56:17 rh Exp $
 #
 
 DISTNAME=	gtkhtml-0.6.1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.gnome.org/
 
 DEPENDS+=	libwww>=5.2.8:../../www/libwww
 DEPENDS+=	bonobo>=0.15:../../devel/bonobo
-#DEPENDS+=	GConf>=0.5:../../devel/GConf
+DEPENDS+=	control-center>=1.2.0:../../x11/controlcenter
 DEPENDS+=	gnome-print>=0.20:../../print/gnome-print
 
 GNU_CONFIGURE=	YES
