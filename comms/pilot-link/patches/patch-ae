@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1 2002/01/30 10:05:13 dillo Exp $
+
+diff -r -u pilot-link.0.9.5/libsock/padp.c work/pilot-link.0.9.5/libsock/padp.c
+--- libsock/padp.c.orig	Tue Jun 19 07:50:11 2001
++++ libsock/padp.c	Wed Jan 30 10:09:18 2002
+@@ -173,13 +173,13 @@
+ 					   && (padp.type ==
+ 					       (unsigned char) padData)
+ 					   && (slp->id == ps->xid)
+-					   && (len == 0)) {
++					   && (len == count+tlen)) {
+ 					fprintf(stderr, "Missing ack\n");
+ 					/* Incoming padData from response to
+ 					   this transmission.  Maybe the Ack
+ 					   was lost */
+ 					/* Don't consume packet, and return success. */
+-					count = 0;
++					count = len;
+ 					goto done;
+ 					return 0;
+ 				} else if (padp.type == (unsigned char) 4) {
