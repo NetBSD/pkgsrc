@@ -1,0 +1,16 @@
+To Do
+=====
+add man page installation
+
+Done
+====
+Do correct GNU Makefile-ish things
+make a real mkdtemp thing
+get rid of BINDIR
+get rid of TAR_CMD
+REMOVE_CMD -> RM
+RMDIR_CMD -> RMDIR
+use MKDIR for mkdir -p uses via vsystem. Use mkdir(2) for all other uses.
+add digest files if MD5File not in -lc or -lmd
+try it on Darwin
+use full pathnames for utilities which are executed by vsystem()

@@ -1,0 +1,92 @@
+PKG_ADMIN(1)                NetBSD Reference Manual               PKG_ADMIN(1)
+
+NNAAMMEE
+     ppkkgg__aaddmmiinn - perform various administrative tasks to the pkg system
+
+SSYYNNOOPPSSIISS
+     ppkkgg__aaddmmiinn [--VV] _c_o_m_m_a_n_d [args ...]
+
+DDEESSCCRRIIPPTTIIOONN
+     This command performs various administrative tasks around the NetBSD
+     Packages System.  Available commands are:
+
+     --VV     Print version number and exit.
+
+     cchheecckk [_p_k_g _._._.]
+            Use this command to check the files belonging to some or all of
+            the packages installed on the local machine against their MD5
+            checksum noted in their +CONTENTS files.  If no additional argu-
+            ment is given, the files of all installed packages are checked,
+            else only the named packages will be checked (wildcards can be
+            used here, see pkg_info(1)).
+
+            The packages' +CONTENTS files will be parsed and the MD5 checksum
+            will be checked for every file found.  A warning message is print-
+            ed if the expected checksum differs from the checksum of the file
+            on disk.
+
+     dduummpp   Dump the contents of the package database, similar to ppkkgg__iinnffoo --FF.
+            Columns are printed for the keyfield used in the pkgdb - the file-
+            name -, and the data field - the package the file belongs to.
+
+     llssaallll //ddiirr//ppkkggppaatttteerrnn
+
+     llssbbeesstt //ddiirr//ppkkggppaatttteerrnn
+            List all/best package matching pattern in the given directory.
+            Can be used to work around limitations of /bin/sh and other file-
+            name globbing mechanisms.  This option implements matching of pkg-
+            wildcards against arbitrary files, useful mainly in the build sys-
+            tem itself.  See pkg_info(1) for a description of the pattern.
+
+            Example:
+
+            yui# cd /usr/pkgsrc/packages/i386ELF/All/
+            yui# ls unzip*
+            unzip-5.40.tgz  unzip-5.41.tgz
+            yui# pkg_admin lsall 'unzip*'
+            unzip-5.40.tgz
+            unzip-5.41.tgz
+            yui# pkg_admin lsall 'unzip>=5.40'
+            unzip-5.40.tgz
+            unzip-5.41.tgz
+            yui# pkg_admin lsall 'unzip>=5.41'
+            unzip-5.41.tgz
+            yui# pkg_admin lsbest 'unzip>=5.40'
+            unzip-5.41.tgz
+            yui# pkg_admin lsall /usr/pkgsrc/packages/i386ELF/All/'{mit,unproven}-pthread*'
+            /usr/pkgsrc/packages/i386ELF/All/mit-pthreads-1.60b6.tgz
+            /usr/pkgsrc/packages/i386ELF/All/unproven-pthreads-0.15.tgz
+
+     ppmmaattcchh ppaatttteerrnn ppkkgg
+            Returns true if pkg matches pattern, false else.
+
+     rreebbuuiilldd
+            Rebuild the package database mapping from scratch, scanning subdi-
+            rectories in _/_v_a_r_/_d_b_/_p_k_g for _+_C_O_N_T_E_N_T_S files, parsing them and
+            writing the resulting absolute pathnames together with the package
+            they belong to into the package database.
+
+            This option is intended to be used for upgrading from non-pkgdb-
+            pkg_* tools to pkgdb-pkg_* tools, further manipulation of the
+            pkgdb will be done by pkg_add(1), pkg_delete(1), and
+            pkg_create(1).
+
+            Needs to be run as root.
+
+EENNVVIIRROONNMMEENNTT
+     PKG_DBDIR  Where to register packages instead of _/_v_a_r_/_d_b_/_p_k_g.
+
+FFIILLEESS
+     /var/db/pkg/pkgdb.byfile.db
+     /var/db/pkg/<pkg>/+CONTENTS
+
+SSEEEE AALLSSOO
+     pkg_add(1), pkg_create(1), pkg_delete(1), pkg_info(1), packages(7)
+
+HHIISSTTOORRYY
+     The ppkkgg__aaddmmiinn command first appeared in NetBSD 1.4.
+
+AAUUTTHHOORRSS
+     The ppkkgg__aaddmmiinn command was written by Hubert Feyrer.
+
+NetBSD 1.6                      August 4, 2002                               2
