@@ -1,0 +1,17 @@
+$NetBSD: patch-ai,v 1.1 2002/07/19 03:47:01 mycroft Exp $
+
+--- testgthread.c.orig	Fri Jul 19 03:43:50 2002
++++ testgthread.c	Fri Jul 19 03:42:15 2002
+@@ -87,10 +87,10 @@
+      pthread_attr_setdetachstate (&pthread_attr, PTHREAD_CREATE_JOINABLE);
+   */
+   pthread_create (&thread, &pthread_attr, (void *(*)(void *)) func, data);
+-  return GUINT_TO_POINTER (thread);
++  return thread;
+ }
+ #define join_thread(thread) \
+-  pthread_join ((pthread_t)GPOINTER_TO_UINT (thread), NULL)
++  pthread_join ((thread), NULL)
+ #define self_thread() GUINT_TO_POINTER (pthread_self ())
+ 
+ #else /* we are not having a thread implementation, do nothing */
