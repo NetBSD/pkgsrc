@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/12/11 19:41:56 ben Exp $
+# $NetBSD: Makefile,v 1.10 2003/12/11 20:16:10 ben Exp $
 #
 
 DISTNAME=		RTF-1.10
@@ -21,6 +21,7 @@ post-patch:
 	for i in `${FIND} ${WRKSRC} -name Makefile`; do \
 		${MV} $$i $$i.bak;\
 		${SED} <$$i.bak >$$i \
+			-e 's|INSTALL = install|INSTALL = $${BSD_INSTALL}|g' \
 			-e "s|-DVARARGS|-DSTDARGS|g" \
 			-e "s|/usr/local|${PREFIX}|g" \
 			-e "s|/usr/man|${PREFIX}/man|" \
