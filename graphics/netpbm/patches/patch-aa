@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 1999/06/03 20:55:55 christos Exp $
+$NetBSD: patch-aa,v 1.7 1999/07/25 21:17:33 tron Exp $
 
 --- Makefile.orig	Wed Jan 26 06:47:35 1994
 +++ Makefile	Tue May  4 16:51:11 1999
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.6 1999/06/03 20:55:55 christos Exp $
 -TIFFINC =	-I../libtiff
 -TIFFLIB =	../libtiff/libtiff.a
 +TIFFINC =	-I$(PREFIX)/include
-+TIFFLIB =	-L$(PREFIX)/lib -ltiff -ljpeg
++TIFFLIB =	-Wl,-R$(PREFIX)/lib -L$(PREFIX)/lib -ltiff -ljpeg
  TIFFBINARIES =	tifftopnm pnmtotiff
  TIFFOBJECTS =	tifftopnm.o pnmtotiff.o
  
