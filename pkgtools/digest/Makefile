@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/03/10 15:58:56 tron Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/11 22:29:16 tron Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -21,10 +21,14 @@ MANCOMPRESSED_IF_MANZ=	YES
 PLIST_SRC=	${WRKDIR}/PLIST
 BUILD_DEFS+=	MANINSTALL
 
-MAKE_ENV+=		BINDIR=${LOCALBASE}/bin MANDIR=${LOCALBASE}/man
-MAKE_ENV+=		CPPFLAGS="${CPPFLAGS} -DVERSION=${VERSION}"
+MAKE_ENV+=	BINDIR=${LOCALBASE}/bin MANDIR=${LOCALBASE}/man
+MAKE_ENV+=	VERSION="${VERSION}"
 
 .include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == SunOS)
+MAKE_ENV+=	NETBSD_COMPATIBLE=YES
+.endif
 
 post-extract:
 	@for FILE in Makefile digest.c digest.1				\
