@@ -1,9 +1,9 @@
-$NetBSD: README,v 1.8 2004/08/19 22:15:31 schmonz Exp $
+$NetBSD: README,v 1.9 2004/08/20 23:30:30 schmonz Exp $
 
  0 Introduction
  ==============
 
-libnbcompat builds and installs a portable NetBSD-compability library
+libnbcompat builds and installs a portable NetBSD-compatibility library
 that supplies routines missing on operating systems that are used by
 the family of pkgsrc bootstrap tools.  Note that libnbcompat is very
 much a work-in-progress.  Only the functions that are directly used
@@ -14,7 +14,7 @@ this includes the following packages:
 	pkgtools/mtree
 	pkgtools/pkg_install
 
-A script, src2nbcompat is also included in the sources that simplifies
+A script, src2nbcompat, is also included in the sources that simplifies
 importing software from the NetBSD src module into pkgsrc.
 
 
