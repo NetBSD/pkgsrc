@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3366 2003/09/14 05:35:04 kim Exp $
+$NetBSD: CHANGES,v 1.3367 2003/09/14 09:10:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3677,6 +3677,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-IO-Socket-SSL to 0.95 [jlam 2003-09-13]
 	Updated gtkhtml to 1.1.10 [tron 2003-09-13]
 	Updated fetchmailconf to 6.2.4nb1 [tron 2003-09-13]
-	Updated cyrus-imap21 to 2.1.15 [jlam 2003-09-13]
+	Updated cyrus-imapd21 to 2.1.15 [jlam 2003-09-13]
 	Updated pkg_install to 20030914 [jlam 2003-09-14]
 	Updated p5-CGI to 2.98 [kim 2003-09-14]
