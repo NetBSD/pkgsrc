@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.6 2000/10/29 15:07:00 mycroft Exp $
+
+--- nsprpub/pr/src/io/prprf.c.orig	Thu Jul 15 17:30:32 1999
++++ nsprpub/pr/src/io/prprf.c	Sun Oct 29 06:32:41 2000
+@@ -36,7 +36,7 @@
+ ** and requires array notation.
+ */
+ #if (defined(LINUX) && defined(__powerpc__)) || defined(WIN16) || \
+-    defined(QNX) || (defined(__NetBSD__) && defined(__powerpc__))
++    defined(QNX)
+ #define VARARGS_ASSIGN(foo, bar) foo[0] = bar[0]
+ #else
+ #define VARARGS_ASSIGN(foo, bar) (foo) = (bar)
