@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/12/24 20:19:21 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2002/12/26 20:52:11 jlam Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		1
@@ -109,5 +109,5 @@ do-install:
 
 .include "../../devel/pth/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
-.include "../../mk/java.mk"
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
