@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2004/08/09 06:21:24 jlam Exp $
+# $NetBSD: Makefile,v 1.103 2004/08/14 02:33:51 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -45,13 +45,6 @@ USE_DIGEST=		no
 PLIST_SUBST+=		MANDIR=${MANDIR}
 PLIST_SUBST+=		PKG_TOOLS_BIN=${PKG_TOOLS_BIN}
 
-LIBNBCOMPAT_FILESDIR=	${.CURDIR}/../../pkgtools/libnbcompat/files
-LIBNBCOMPAT_SRCDIR=	${WRKDIR}/libnbcompat
-
-CPPFLAGS+=		-I${LIBNBCOMPAT_SRCDIR}
-LDFLAGS+=		-L${LIBNBCOMPAT_SRCDIR}
-LIBS+=			-lnbcompat
-
 CPPFLAGS+=		-DDEF_UMASK=${DEF_UMASK}
 
 MAKE_ENV+=		MACHINE_ARCH="${MACHINE_ARCH}"
@@ -67,16 +60,7 @@ VERSION!=		${AWK} -F '"' '/PKGTOOLS_VERSION/ {print $$2}' \
 			${FILESDIR}/lib/version.h
 
 do-extract:
-	@${CP} -Rp ${LIBNBCOMPAT_FILESDIR} ${LIBNBCOMPAT_SRCDIR}
 	@${CP} -Rp ${FILESDIR} ${WRKSRC}
-
-pre-configure:
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
-	cd ${LIBNBCOMPAT_SRCDIR} && ${SETENV}				\
-		AWK="${AWK}" CC="${CC}" CFLAGS="${CFLAGS:M*}"		\
-		CPPFLAGS="${CPPFLAGS:M*}"				\
-		${CONFIGURE_ENV:NLIBS=*} ${CONFIG_SHELL}		\
-		${CONFIGURE_SCRIPT} && ${MAKE_PROGRAM}
 
 post-install:
 	if [ ! -f ${PKG_DBDIR}/pkgdb.byfile.db ]; then			\
@@ -86,6 +70,7 @@ post-install:
 		${PKG_ADMIN} rebuild;					\
 	fi
 
+.include "../../pkgtools/libnbcompat/inplace.mk"
 .include "../../mk/bsd.pkg.mk"
 
 PREFIX:=		${PKG_TOOLS_BIN:C|/[^/]?bin$||}
