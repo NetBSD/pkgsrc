@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2001/03/20 08:47:13 rh Exp $
+# $NetBSD: Makefile,v 1.14 2001/04/22 14:13:27 rh Exp $
 #
 
-DISTNAME=	dat-4129
+DISTNAME=	dat-4134
 PKGNAME=	uvscan-${DISTNAME}
 NO_WRKSUBDIR=	yes
 CATEGORIES=	security
 MASTER_SITES=	http://download.nai.com/products/datfiles/4.x/nai/ \
-		http://gd.tuwien.ac.at/pc/nai/antivirus/datfiles/4.x/en/ \
-		ftp://ftp.tuwien.ac.at/pc/nai/antivirus/datfiles/4.x/en/
+		http://gd.tuwien.ac.at/pc/nai/antivirus/datfiles/4.x/ \
+		ftp://ftp.tuwien.ac.at/pc/nai/antivirus/datfiles/4.x/
 EXTRACT_SUFX=	.tar
 
 MAINTAINER=	packages@netbsd.org
