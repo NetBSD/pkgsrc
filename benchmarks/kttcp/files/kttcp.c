@@ -1,4 +1,4 @@
-/*	$NetBSD: kttcp.c,v 1.2 2002/06/30 19:15:57 thorpej Exp $	*/
+/*	$NetBSD: kttcp.c,v 1.3 2002/06/30 19:25:47 thorpej Exp $	*/
 
 /*
  * Copyright (c) 2002 Wasabi Systems, Inc.
@@ -81,7 +81,7 @@ main(int argc, char *argv[])
 	struct kttcp_io_args kio;
 	struct addrinfo hints, *addr, *res;
 	struct sockaddr_storage ss;
-	unsigned long long usecs, bytespersec, xmitsize;
+	unsigned long long usecs, bytespersec, bitspersec, xmitsize;
 	char connecthost[NI_MAXHOST];
 	socklen_t slen;
 	const int one = 1;
@@ -222,9 +222,13 @@ main(int argc, char *argv[])
 	usecs += kio.kio_elapsed.tv_usec;
 
 	bytespersec = kio.kio_bytesdone * 1000000LL / usecs;
+	bitspersec = bytespersec * NBBY;
 	printf("kttcp: %llu bytes in %ld.%03ld seconds ==> %llu bytes/sec\n",
 	    kio.kio_bytesdone, kio.kio_elapsed.tv_sec,
 	    kio.kio_elapsed.tv_usec / 1000, bytespersec);
+	printf("       %g (%g) Megabits/sec\n",
+	    ((double) bitspersec / 1024.0) / 1024.0,
+	    ((double) bitspersec / 1000.0) / 1000.0);
 
 	close(kio.kio_socket);
 	if (cmd == KTTCP_IO_RECV)
