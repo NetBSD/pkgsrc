@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/09/26 03:15:28 jschauma Exp $
+
+--- pdbdist.c.orig	Fri Jan 26 17:54:11 1996
++++ pdbdist.c
+@@ -628,9 +628,9 @@ int main( argc, argv )
+     return(0);
+ }
+ 
+-Dr. Mansoor Saqi                    Email mass15599@ggr.co.uk
++/*Dr. Mansoor Saqi                    Email mass15599@ggr.co.uk
+ Bioinformatics Group                Phone +44 (0)81 966 2417
+ Dept. of Biomolecular Structure
+ Glaxo Group Research
+-Greenford, Middlx, UK.
++Greenford, Middlx, UK.*/
+ 
