@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2000/06/22 08:13:14 itohy Exp $
+
+--- fig2dev/dev/Imakefile.orig	Thu Jan  6 03:30:09 2000
++++ fig2dev/dev/Imakefile	Thu Jun 22 00:03:53 2000
+@@ -22,7 +22,7 @@
+ XCOMM the party supplying this software to the X Consortium.
+ 
+ INCLUDES = -I.. -I../..
+-#ifdef JPEGINCDIR
++#ifdef USE_JPEG
+ JPEGINC = -I$(JPEGINCDIR)
+ #endif
+ 
