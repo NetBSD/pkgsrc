@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/07/26 20:24:17 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/10/05 12:33:44 frueauf Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 libexec/xscreensaver/ant
@@ -8,6 +8,7 @@ libexec/xscreensaver/blitspin
 libexec/xscreensaver/bouboule
 libexec/xscreensaver/braid
 libexec/xscreensaver/bsod
+libexec/xscreensaver/bubble3d
 libexec/xscreensaver/bubbles
 libexec/xscreensaver/cage
 libexec/xscreensaver/coral
