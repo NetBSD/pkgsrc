@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.20 2004/11/20 12:44:22 rh Exp $
+# $NetBSD: Makefile.common,v 1.21 2005/04/03 21:23:15 jdolecek Exp $
 
-SUSE_VERSION=		7.3
-
+.include "../../emulators/suse_linux/vars.mk"
 .include "../../emulators/suse_linux/arch.mk"
 
 MASTER_SITE_SUSE?=	ftp://ftp.suse.com/pub/suse/discontinued/${SUSE_ARCH}/${SUSE_VERSION}/suse/
