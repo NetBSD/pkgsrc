@@ -1,0 +1,19 @@
+$NetBSD: patch-aj,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+
+--- libxutil/Makefile.orig	2005-01-22 01:45:45.000000000 +0100
++++ libxutil/Makefile	2005-01-22 01:45:50.000000000 +0100
+@@ -62,10 +62,10 @@
+ 	fi
+ 
+ install: all
+-	mkdir -p $(prefix)/usr/lib
+-	install -m0755 $(LIB) $(prefix)/usr/lib
+-	ln -sf $(LIB_NAME).so.$(MAJOR).$(MINOR) $(prefix)/usr/lib/$(LIB_NAME).so.$(MAJOR)
+-	ln -sf $(LIB_NAME).so.$(MAJOR) $(prefix)/usr/lib/$(LIB_NAME).so
++	mkdir -p $(prefix)/${PREFIX}/lib
++	install -m0755 $(LIB) $(prefix)/${PREFIX}/lib
++	ln -sf $(LIB_NAME).so.$(MAJOR).$(MINOR) $(prefix)/${PREFIX}/lib/$(LIB_NAME).so.$(MAJOR)
++	ln -sf $(LIB_NAME).so.$(MAJOR) $(prefix)/${PREFIX}/lib/$(LIB_NAME).so
+ 
+ clean:
+ 	$(RM) *.a *.so *.so.* *.o *.rpm 

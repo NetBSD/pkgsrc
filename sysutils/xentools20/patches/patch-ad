@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+
+--- xfrd/Makefile.orig	2005-01-12 13:22:27.000000000 +0100
++++ xfrd/Makefile	2005-01-22 18:44:53.000000000 +0100
+@@ -7,7 +7,7 @@
+ XEN_ROOT  = ../..
+ include $(XEN_ROOT)/tools/Make.defs
+ 
+-XFRD_INSTALL_DIR = /usr/sbin
++XFRD_INSTALL_DIR = ${PREFIX}/sbin
+ 
+ vpath %.h      $(XEN_LIBXC)
+ INCLUDES += -I $(XEN_LIBXC)
+@@ -48,7 +48,7 @@
+ XFRD_LIBS :=
+ 
+ XFRD_LIBS += -L $(XEN_LIBXC) -lxc
+-XFRD_LIBS += -L $(XEN_LIBXUTIL) -lxutil
++XFRD_LIBS += -L $(XEN_LIBXUTIL) $(LDFLAGS) -lxutil
+ 
+ # zlib library.
+ XFRD_LIBS += -lz

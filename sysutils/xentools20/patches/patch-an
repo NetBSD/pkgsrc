@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+
+--- python/xen/xend/XendVnet.py.orig	2005-01-24 10:25:27.000000000 +0100
++++ python/xen/xend/XendVnet.py	2005-01-24 10:26:50.000000000 +0100
+@@ -14,7 +14,7 @@
+     out = None
+     try:
+         try:
+-            out = file("/proc/vnet/policy", "wb")
++            out = file("/kern/vnet/policy", "wb")
+             sxp.show(cmd, out)
+         except IOError, ex:
+             raise XendError(str(ex))

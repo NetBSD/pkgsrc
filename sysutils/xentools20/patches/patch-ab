@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+
+--- libxc/xc_private.h.orig	2005-01-22 00:49:25.000000000 +0100
++++ libxc/xc_private.h	2005-01-22 00:49:49.000000000 +0100
+@@ -16,7 +16,7 @@
+ 
+ #include "xc.h"
+ 
+-#include <xen/linux/privcmd.h>
++#include <xen/NetBSD/xenio.h>
+ 
+ #define _PAGE_PRESENT   0x001
+ #define _PAGE_RW        0x002

@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1.1.1 2005/03/07 15:59:08 bouyer Exp $
+
+--- misc/miniterm/Makefile.orig	2005-01-22 01:47:40.000000000 +0100
++++ misc/miniterm/Makefile	2005-01-22 01:48:00.000000000 +0100
+@@ -6,8 +6,8 @@
+ all: $(TARGET)
+ 
+ install: all
+-	mkdir -p $(prefix)/usr/bin
+-	install -m0755 $(TARGET) $(prefix)/usr/bin
++	mkdir -p $(prefix)/${PREFIX}/bin
++	install -m0755 $(TARGET) $(prefix)/${PREFIX}/bin
+ 
+ clean:
+ 	$(RM) *.o $(TARGET) *~
