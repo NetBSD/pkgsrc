@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2003/05/11 12:37:33 salo Exp $
+# $NetBSD: Makefile,v 1.20 2003/05/20 15:26:47 wiz Exp $
 #
 
-DISTNAME=	unrarsrc-3.2.1
+DISTNAME=	unrarsrc-3.2.2
 PKGNAME=	${DISTNAME:S/src//}
-PKGREVISION=	1
 WRKSRC=		${WRKDIR}/unrar
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.rarlab.com/rar/
