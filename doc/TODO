@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.806 2003/08/31 09:41:06 cjep Exp $
+$NetBSD: TODO,v 1.807 2003/08/31 10:56:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -85,7 +85,6 @@ Suggested package updates
 	o bzflag-1.7g2
 	o centericq-4.9.6
 	o cervisia-2.0
-	o citrix_ica-7.00.7757 [pkg/22209]
 	o courier-0.42.2 [pkg/22373]
 	o courier-0.43.1
 	o courier-auth-0.42.2 [pkg/22371]
@@ -114,6 +113,7 @@ Suggested package updates
 	o exim-4.12 [pkg/19850|ad]
 	o exim-4.22
 	o festival-1.4.3
+	o fetchmail-6.2.4 [pkg/22650]
 	o filerunner-2.5.1 [pkg/22412]
 	o findutils-4.1.20
 	o fltk-1.1.3
@@ -183,7 +183,6 @@ Suggested package updates
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
 	o libtool-1.5 [skrll]
-	o libxml-2.5.10
 	o lilypond-1.8.1
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
@@ -250,7 +249,7 @@ Suggested package updates
 	o ruby-1.8.0
 	o sablecc-2.18.1
 	o sawfish-1.3
-	o scribus-1.0.1
+	o scribus-1.0.1 [pkg/22557]
 	o sendfile-20010424
 	o skill-4.1.1
 	o slib-2.4.4 [pkg/22185]
