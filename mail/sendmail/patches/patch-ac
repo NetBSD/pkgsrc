@@ -1,0 +1,28 @@
+--- BuildTools/OS/SunOS.5.7~	Mon Jan 18 02:30:45 1999
++++ BuildTools/OS/SunOS.5.7	Wed Jun 14 11:07:52 2000
+@@ -1,14 +1,19 @@
+ #	@(#)SunOS.5.7	8.11	(Berkeley)	3/21/1998
+ define(`confCC', `gcc')
+ define(`confBEFORE', `sysexits.h')
+-define(`confMAPDEF', `-DNDBM -DNIS -DNISPLUS -DMAP_REGEX')
+-define(`confENVDEF', `-DSOLARIS=20700 ')
+-define(`confLIBS', `-lsocket -lnsl')
+-define(`confMBINDIR', `/usr/lib')
+-define(`confEBINDIR', `/usr/lib')
++define(`confMAPDEF', `-DNDBM -DNIS -DNISPLUS -DMAP_REGEX ${LDAP_CONF}')
++define(`confENVDEF', `-DSOLARIS=20700 ${DB_ENVDEF} ${LDAP_ENVDEF}')
++define(`confLIBS', `-lsocket -lnsl ${DB_LIBS} ${LDAP_LIBS} ${LDFLAGS}')
++define(`confMBINDIR', `${PREFIX}/libexec/sendmail')
++define(`confEBINDIR', `${PREFIX}/libexec/sendmail')
++define(`confSBINDIR', `${PREFIX}/sbin')
++define(`confUBINDIR', `${PREFIX}/bin')
++define(`confNROFF', `/usr/bin/cat')
++define(`confMANDOC', `')
++define(`confMANROOT', `${PREFIX}/man/man')
+ define(`confSBINGRP', `sys')
+ define(`confSTDIR', `/etc/mail')
+-define(`confHFDIR', `/etc/mail')
++define(`confHFDIR', `${PREFIX}/share/misc')
+ define(`confINSTALL', `${BUILDBIN}/install.sh')
+ define(`confDEPEND_TYPE', `CC-M')
+ PUSHDIVERT(3)

@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST.netbsd,v 1.1 2000/06/14 13:02:26 veego Exp $
+man/cat1/mailq.0
+man/cat1/newaliases.0
+man/cat5/aliases.0
+man/cat8/makemap.0
+man/cat8/smrsh.0
+man/cat8/mailstats.0
+man/cat8/praliases.0
+man/cat8/sendmail.0
