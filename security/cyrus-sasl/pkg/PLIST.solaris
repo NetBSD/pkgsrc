@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.solaris,v 1.1.1.1 2000/08/25 15:23:49 jlam Exp $
+lib/sasl/libgssapiv2.la
+lib/sasl/libgssapiv2.so.1.14
