@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.684 2001/03/12 11:23:06 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.685 2001/03/15 13:31:04 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -707,7 +707,7 @@ uptodate-pkgtools:
 		*)							\
 			${ECHO} "Your package tools need to be updated to ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} versions."; \
 			${ECHO} "The installed package tools were last updated on ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|}."; \
-			${ECHO} "Please make and install the pkgsrc/pkgtools/pkg_install package."; \
+			${ECHO} "Please \"make install\" in ../../pkgtools/pkg_install."; \
 			${FALSE} ;;					\
 		esac							\
 	fi
