@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/12 23:03:00 salo Exp $
+$NetBSD: distinfo,v 1.2 2004/09/24 12:33:16 wiz Exp $
 
-SHA1 (libogg-1.1.tar.gz) = 1021761d10de079ac86c2dc110fbaf83f60f2fca
-Size (libogg-1.1.tar.gz) = 282691 bytes
-SHA1 (patch-aa) = 1daa4d3021250d12fe371d0d73b656be393b5e7e
-SHA1 (patch-ab) = fda4456291c362297d7d993b7d1afd8f63c73059
+SHA1 (libogg-1.1.2.tar.gz) = 518569a6be397f3903d86ca8c83b943ec0e4e713
+Size (libogg-1.1.2.tar.gz) = 419959 bytes
