@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/01/18 23:57:50 recht Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/24 21:01:28 wiz Exp $
 bin/mpipython${PYVERSSUFFIX}
 ${PYINC}/Scientific/PyBSP_API.h
 ${PYINC}/Scientific/PyMPI_API.h
@@ -170,8 +170,8 @@ ${PYSITELIB}/Scientific/__init__.pyo
 ${PYSITELIB}/Scientific/indexing.py
 ${PYSITELIB}/Scientific/indexing.pyc
 ${PYSITELIB}/Scientific/indexing.pyo
-${PYSITELIB}/Scientific/${LOWER_OPSYS}1/Scientific_netcdf.so
-@dirrm ${PYSITELIB}/Scientific/${LOWER_OPSYS}1
+${PYSITELIB}/Scientific/${LOWER_OPSYS}${OSVER}/Scientific_netcdf.so
+@dirrm ${PYSITELIB}/Scientific/${LOWER_OPSYS}${OSVER}
 @dirrm ${PYSITELIB}/Scientific/Visualization
 @dirrm ${PYSITELIB}/Scientific/TkWidgets
 @dirrm ${PYSITELIB}/Scientific/Threading
