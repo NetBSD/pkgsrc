@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/02/17 17:06:50 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2001/03/20 00:07:36 fredb Exp $
 # FreeBSD Id: Makefile,v 1.28 1997/12/08 15:51:20 tg Exp
 #
 
@@ -13,9 +13,9 @@ HOMEPAGE=		http://tkman.sourceforge.net/
 COMMENT=		Tcl/Tk based manual browser
 
 DEPENDS+=		glimpse-4.1:../../textproc/glimpse
-DEPENDS+=		rman-3.0.*:../../textproc/rman
 DEPENDS+=		tk-8.3.2:../../x11/tk
 
+USE_RMAN=		yes
 USE_X11=		yes
 
 WRKSRC=			${WRKDIR}/${PKGNAME}
