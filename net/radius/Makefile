@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/04/24 22:41:53 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/24 22:44:25 tron Exp $
 #
 # Tempted to install another radius package?
 #
@@ -26,13 +26,14 @@ NO_WRKSUBDIR=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.ifmake do-build
-.if exists(/usr/lib/libkrb.a) && \
-    (defined(MAKE_EBONES) || defined(MAKE_KERBEROS4))
-CFLAGS+=	-DM_KERB -I/usr/include/kerberosIV
-RADLIBS=	-lkrb -ldes
-.endif
-.endif
+# XXX Kerberos IV support is know to be broken.
+#.ifmake do-build
+#.if exists(/usr/lib/libkrb.a) && \
+#    (defined(MAKE_EBONES) || defined(MAKE_KERBEROS4))
+#CFLAGS+=	-DM_KERB -I/usr/include/kerberosIV
+#RADLIBS=	-lkrb -ldes
+#.endif
+#.endif
 
 post-extract:
 .for FILE in ${EXTRA_FILES}
