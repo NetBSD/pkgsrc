@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/03/17 16:33:23 wiz Exp $
+
+--- os_netbsd.c.orig	2004-04-20 06:53:26.000000000 +0200
++++ os_netbsd.c
+@@ -381,7 +381,7 @@ do_scsi_cmnd_io(int fd, struct scsi_cmnd
+   sc.databuf = iop->dxferp;
+   sc.datalen = iop->dxfer_len;
+   sc.senselen = iop->max_sense_len;
+-  sc.timeout = iop->timeout == 0 ? 60000 : iop->timeout;	/* XXX */
++  sc.timeout = iop->timeout == 0 ? 60000 : (iop->timeout * 1000);	/* XXX */
+   sc.flags =
+     (iop->dxfer_dir == DXFER_NONE ? SCCMD_READ :	/* XXX */
+     (iop->dxfer_dir == DXFER_FROM_DEVICE ? SCCMD_READ : SCCMD_WRITE));
