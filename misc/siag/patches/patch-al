@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2000/02/02 04:05:06 wiz Exp $
+
+--- egon/docs/Makefile.in.orig	Tue Jul  6 03:09:23 1999
++++ egon/docs/Makefile.in	Wed Feb  2 04:16:55 2000
+@@ -83,7 +83,7 @@
+ VERSION = @VERSION@
+ XAWLIB = @XAWLIB@
+ 
+-docdir = $(prefix)/doc/siag/egon
++docdir = $(prefix)/share/doc/siag/egon
+ 
+ doc_DATA = BUGS CHANGES COPYING TODO \
+ 	commands.html concepts.html egon.gif egon.html fileformats.html \

@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1 2000/02/02 04:05:15 wiz Exp $
+
+--- xcommon/docs/Makefile.in.orig	Tue Jul  6 03:08:57 1999
++++ xcommon/docs/Makefile.in	Wed Feb  2 04:25:11 2000
+@@ -83,7 +83,7 @@
+ VERSION = @VERSION@
+ XAWLIB = @XAWLIB@
+ 
+-docdir = $(prefix)/doc/siag/xcommon
++docdir = $(prefix)/share/doc/siag/xcommon
+ 
+ doc_DATA = CHANGES TODO filesel.html
+ 
