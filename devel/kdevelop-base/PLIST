@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/09/22 08:09:26 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/12/10 06:31:05 markd Exp $
 bin/kdevassistant
 bin/kdevdesigner
 bin/kdevelop
@@ -1123,21 +1123,21 @@ share/kde/servicetypes/kdevelopplugin.desktop
 share/kde/servicetypes/kdevelopproject.desktop
 share/kde/servicetypes/kdevelopsourceformatter.desktop
 share/kde/servicetypes/kdevelopversioncontrol.desktop
-@comment dirrm share/kde/servicetypes
-@comment dirrm share/kde/services
-@comment dirrm share/kde/mimelnk/text
-@comment dirrm share/kde/mimelnk/application
-@comment dirrm share/kde/icons/locolor/32x32/actions
-@comment dirrm share/kde/icons/locolor/16x16/actions
-@comment dirrm share/kde/icons/hicolor/48x48/apps
-@comment dirrm share/kde/icons/hicolor/48x48/actions
-@comment dirrm share/kde/icons/hicolor/32x32/mimetypes
-@comment dirrm share/kde/icons/hicolor/32x32/apps
-@comment dirrm share/kde/icons/hicolor/32x32/actions
-@comment dirrm share/kde/icons/hicolor/22x22/actions
-@comment dirrm share/kde/icons/hicolor/16x16/apps
-@comment dirrm share/kde/icons/hicolor/16x16/actions
-@comment dirrm share/kde/config
+@comment in kde: @dirrm share/kde/servicetypes
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/mimelnk/text
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/actions
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/actions
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/actions
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/actions
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/actions
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/actions
+@comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/qeditorpart/highlight
 @dirrm share/kde/apps/qeditorpart
 @dirrm share/kde/apps/manager
@@ -1212,11 +1212,12 @@ share/kde/servicetypes/kdevelopversioncontrol.desktop
 @dirrm share/kde/apps/kdevabbrev/templates
 @dirrm share/kde/apps/kdevabbrev/sources
 @dirrm share/kde/apps/kdevabbrev
-@comment dirrm share/kde/apps
-@comment dirrm share/kde/applnk/Development
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/applnk/Development
 @dirrm share/doc/kde/HTML/en/kdevelop
 @dirrm share/doc/kde/HTML/en/kde_app_devel
-@comment dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm lib/kde3
 @dirrm include/kinterfacedesigner
 @dirrm include/kdevelop/propeditor
 @dirrm include/kdevelop/cppparser
