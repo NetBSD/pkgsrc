@@ -1,0 +1,15 @@
+$NetBSD: patch-an,v 1.1.1.1 2004/04/02 12:10:18 jmmv Exp $
+
+--- doc/libgtop.texi.orig	Fri Jan 21 16:19:04 2000
++++ doc/libgtop.texi	Mon May  1 14:09:27 2000
+@@ -2,6 +2,10 @@
+ @c %**start of header
+ @setfilename libgtop.info
+ @settitle LibGTop Reference Manual
++@dircategory Gnome
++@direntry
++* LibGTop: (libgtop).            A library to retrieve system information.
++@end direntry
+ @setchapternewpage odd
+ @c %**end of header
+ 
