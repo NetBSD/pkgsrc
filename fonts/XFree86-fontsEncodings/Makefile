@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/01/29 06:21:36 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/02 14:19:02 xtraeme Exp $
 
 DISTNAME=	X430src-4
 PKGNAME=	XFree86-fontsEncodings-${XF_VER}
-WRKSRC=		${WRKDIR}/xc/fonts/encodings
+PKGREVISION=	1
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
 EXTRACT_SUFX=	.tgz
@@ -15,22 +15,22 @@ DEPENDS=	XFree86-clients>=4.3.0:../../x11/XFree86-clients
 
 USE_BUILDLINK2=		yes
 NO_XFREE86_TARGETS=	# defined
+WRKSRC=			${WRKDIR}/xc/fonts/encodings
 
 post-extract:
 	@${SED} \
-		-e "s|@PREFIX@|${X11PREFIX}|g" \
+		-e "s|@PREFIX@|${X11ROOT}|g" \
 		-e "s|@MAKE@|${MAKE_PROGRAM}|g" \
 		-e "s|@IMAKE@|${IMAKE}|g" \
 		${FILESDIR}/host.def > ${WRKSRC}/host.def
 
 do-configure:
 	(cd ${WRKSRC} && \
-	${IMAKE} -DUseInstalled -I${PREFIX}/lib/X11/config \
+	${IMAKE} -DUseInstalled -I${X11ROOT}/lib/X11/config \
 		-DTOPDIR=../../.. -DCURDIR=.; \
 	${MAKE} Makefiles ; \
 	${MAKE} includes ; \
 	${MAKE} depend)
 
 .include "../../meta-pkgs/XFree86/Makefile.common"
-
 .include "../../mk/bsd.pkg.mk"
