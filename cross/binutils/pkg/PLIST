@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1999/01/04 22:37:32 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/01/07 01:07:41 tv Exp $
 lib/ldscripts/elf32_sparc.x
 lib/ldscripts/elf32_sparc.xbn
 lib/ldscripts/elf32_sparc.xn
@@ -101,7 +101,6 @@ lib/libopcodes.a
 libexec/binutils/addr2line
 libexec/binutils/ar
 libexec/binutils/dlltool
-libexec/binutils/gprof
 libexec/binutils/ld
 libexec/binutils/nlmconv
 libexec/binutils/nm
