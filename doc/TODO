@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2349 2004/11/10 01:19:59 snj Exp $
+$NetBSD: TODO,v 1.2350 2004/11/10 10:51:45 markd Exp $
 
 Suggested new packages
 ======================
@@ -423,7 +423,6 @@ Suggested package updates
 	o micq-0.4.11
 	o midnight-commander-4.6.0 [pkgsrc-wip]
 	o mikmod-3.2.1
-	o mimedefang-2.48
 	o minicom-2.1
 	o mldonkey-2.5.22
 	o mowitz-0.3.0
