@@ -1,10 +1,9 @@
-$NetBSD: patch-ad,v 1.4 2001/04/08 16:25:28 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.5 2002/03/05 21:05:53 dmcmahill Exp $
 
-Result of running 'autoconf' after patching configure.in
-no other manual changes.
+result of running autoconf on patched configure.in
 
 --- configure.orig	Mon Mar 26 07:10:37 2001
-+++ configure	Fri Mar 30 06:08:41 2001
++++ configure	Sun Mar  3 13:19:25 2002
 @@ -991,4 +991,303 @@
  fi
  
@@ -561,6 +560,17 @@ no other manual changes.
 +echo "configure:2734: checking for $ac_word" >&5
  if eval "test \"`echo '$''{'ac_cv_prog_F77'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
+@@ -2558,7 +2857,7 @@
+     # C Compiler
+     #
+-    CC=cc
+-    CC_OPTIONS='-O2 -Dnetbsd'
+-    CC_LDFLAGS="-Wl,-R${X11BASE}/lib"
++    CC="${CC}"
++    CC_OPTIONS="${CFLAGS} -Dnetbsd"
++    CC_LDFLAGS="${LDFLAGS} -Wl,-R${X11BASE}/lib"
+     CC_PICFLAGS='-fPIC'
+     # check for --export-dynamic
 @@ -2566,7 +2865,7 @@
      LDFLAGS='-Wl,--export-dynamic'
      echo $ac_n "checking if the linker accepts --export-dynamic""... $ac_c" 1>&6
@@ -592,6 +602,16 @@ no other manual changes.
 +echo "configure:2937: checking for $ac_word" >&5
  if eval "test \"`echo '$''{'ac_cv_prog_F77'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
+@@ -2670,7 +2969,7 @@
+    fi
+    FC="$F77"
+-   FC_OPTIONS='-O2'
++   FC_OPTIONS="${FFLAGS}"
+    FC_OPTIONS_O0=
+-   FC_LDFLAGS="-Wl,-R${X11BASE}/lib"
++   FC_LDFLAGS="${LDFLAGS} -Wl,-R${X11BASE}/lib"
+    FC_PICFLAGS='-fPIC'
+    # check for --export-dynamic
 @@ -2678,7 +2977,7 @@
     LDFLAGS='-Wl,--export-dynamic'
     echo $ac_n "checking if the linker accepts --export-dynamic""... $ac_c" 1>&6
