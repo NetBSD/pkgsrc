@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2003/10/24 04:35:16 fredb Exp $
+# $NetBSD: Makefile,v 1.25 2003/10/24 04:52:26 fredb Exp $
 #
 
-DISTNAME=	ntp-4.1.1a
+DISTNAME=	ntp-4.2.0
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.udel.edu/pub/ntp/ntp4/		\
 		http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/
@@ -11,19 +11,12 @@ HOMEPAGE=	http://www.ntp.org/
 COMMENT=	Network Time Protocol Version 4
 
 GNU_CONFIGURE=	YES
+#USE_BUILDLINK2=YES ***FIXME: Causes lots of "missing prototype" warnings.***
 
 CONFIGURE_ENV+=	PATH_PERL="${PERL5}"
-CONFIGURE_ENV+=	ac_cv_lib_readline_readline=no
 
 DOCDIR=		${PREFIX}/share/doc/html
 EXAMPLESDIR=	${PREFIX}/share/examples
-
-pre-configure:
-	cd ${WRKSRC} &&						\
-	    ${TOUCH} stamp-h.in COPYRIGHT			\
-		    `${FIND} . -name aclocal.m4 -print`		\
-		    `${FIND} . -name configure -print`		\
-		    `${FIND} . -name Makefile.in -print`
 
 post-install:
 	cd ${WRKSRC} &&						\
@@ -36,4 +29,24 @@ post-install:
 	${CHMOD} a+x ${DOCDIR}/ntp4 ${DOCDIR}/ntp4/hints ${DOCDIR}/ntp4/pic
 	${CHMOD} a+x ${EXAMPLESDIR}/ntp4
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+#
+# Use POSIX nanosecond timers when available, but not otherwise.
+#
+LOWER_OPSYS_VERSUFFIX=	1
+MACHINE_GNU_PLATFORM=	${LOWER_ARCH}--${LOWER_OPSYS}${LOWER_OPSYS_VERSUFFIX}
+. for __wildcard__ in 1.6[N-Z]* 2*
+.  if ${OS_VERSION:M${__wildcard__}} != ""
+LOWER_OPSYS_VERSUFFIX=	2
+.  endif
+. endfor
+#
+# Don't pick up libwww's -lmd5, until buildlink can be fixed.
+#
+CONFIGURE_ENV+=	ac_cv_lib_md5_MD5Init=no
+.endif
+
+.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
