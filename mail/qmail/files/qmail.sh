@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmail.sh,v 1.3 2004/04/10 05:30:06 schmonz Exp $
+# $NetBSD: qmail.sh,v 1.4 2004/04/27 03:05:09 schmonz Exp $
 #
 
 # PROVIDE: mail qmail
@@ -21,6 +21,8 @@ fi
 
 qmail_precmd()
 {
+	# qmail-start(8) starts the various qmail processes, then exits.
+	# qmail-send(8) is the process we want to signal later.
 	command="@SETENV@ - PATH=@QMAILDIR@/bin:$PATH qmail-start '$qmail_flags' splogger qmail"
 	command_args="&"
 	rc_flags=""
