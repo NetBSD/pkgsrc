@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 1998/06/08 10:45:17 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/06/09 07:41:48 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
-DISTNAME=		amanda-2.4.0
+DISTNAME=		amanda-2.4.0p1
 CATEGORIES=		misc
 MASTER_SITES=		ftp://ftp.cs.umd.edu/pub/amanda/
 
@@ -10,8 +10,8 @@ MAINTAINER=		packages@netbsd.org
 
 DEPENDS+=		readline-2.2:../../devel/readline
 DEPENDS+=		addnerd-1.5:../../sysutils/addnerd
-RUN_DEPENDS+=		gnuplot:../../graphics/gnuplot
-RUN_DEPENDS+=		gtar:../../archivers/gtar
+DEPENDS+=		gnuplot-3.5:../../graphics/gnuplot
+DEPENDS+=		gtar-1.12:../../archivers/gtar
 
 AMANDA_USER?=		backup
 AMANDA_GROUP=		operator
@@ -28,7 +28,7 @@ MAN8=			amadmin.8 amcheck.8 amdump.8 amflush.8 amlabel.8 \
 			amrmtape.8 amverify.8
 
 pre-install:
-	@${SETENV} ${MAKE_ENV} addnerd ${AMANDA_USER} -g ${AMANDA_GROUP}
+	@${SETENV} ${MAKE_ENV} addnerd -g ${AMANDA_GROUP} ${AMANDA_USER}
 
 post-install:
 	${LDCONFIG} || ${TRUE}
