@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.5 1999/11/27 07:48:47 rh Exp $
+$NetBSD: md5,v 1.6 2000/01/06 10:46:56 rh Exp $
 
-MD5 (delegate5.9.8.tar.gz) = a51457d7486c7f065d744c97ec20a743
+MD5 (delegate5.9.12.tar.gz) = 0ce66d63482595b6f0b22c19c66fd65f
