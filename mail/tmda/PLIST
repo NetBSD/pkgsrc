@@ -1,16 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/02/14 13:00:25 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/14 17:24:18 wiz Exp $
 bin/tmda-address
 bin/tmda-check-address
-bin/tmda-clean
 bin/tmda-filter
 bin/tmda-inject
 bin/tmda-keygen
+bin/tmda-pending
 bin/tmda-rfilter
 bin/tmda-sendmail
 ${PYSITELIB}/TMDA/Cookie.py
 ${PYSITELIB}/TMDA/Cookie.pyc
 ${PYSITELIB}/TMDA/Defaults.py
 ${PYSITELIB}/TMDA/Defaults.pyc
+${PYSITELIB}/TMDA/Deliver.py
+${PYSITELIB}/TMDA/Deliver.pyc
 ${PYSITELIB}/TMDA/Errors.py
 ${PYSITELIB}/TMDA/Errors.pyc
 ${PYSITELIB}/TMDA/FilterParser.py
@@ -42,7 +44,7 @@ ${HTMLDIR}/requirements.html
 ${HTMLDIR}/resources.html
 ${HTMLDIR}/results.html
 ${HTMLDIR}/trouble.html
-${DOCDIR}/COPYRIGHT
+${DOCDIR}/COPYING
 ${DOCDIR}/CRYPTO
 ${DOCDIR}/ChangeLog
 ${DOCDIR}/INSTALL
@@ -51,8 +53,6 @@ ${DOCDIR}/THANKS
 ${DOCDIR}/UPGRADE
 ${CONTRIBDIR}/ChangeLog
 ${CONTRIBDIR}/README.RELAY
-${CONTRIBDIR}/list2cdb
-${CONTRIBDIR}/list2dbm
 ${CONTRIBDIR}/printcdb
 ${CONTRIBDIR}/printdbm
 ${CONTRIBDIR}/qmail-smtpd_auth.patch
