@@ -1,0 +1,29 @@
+$NetBSD: patch-av,v 1.3 2005/03/15 15:58:52 wennmach Exp $
+
+Add missing lib and reorder them.
+
+--- appl/kalog/Makefile.in.orig	2005-03-11 09:39:40.000000000 +0100
++++ appl/kalog/Makefile.in	2005-03-11 09:41:58.000000000 +0100
+@@ -450,16 +450,18 @@
+ kalog_SOURCES = kalog.c
+ LDADD = \
+ 	../lib/libarlalib.la \
+-	-L../../rxdef -lkaclient -lrxdefclient \
++	../../rxdef/librxdefclient.a \
++	../../rxdef/libkaclient.a \
+ 	../../rx/librx.la \
+-	-L../../lwp -llwp @PLWP_LIB_FLAGS@ \
++	../../lwp/liblwp.a @PLWP_LIB_FLAGS@ \
+ 	../../lib/vers/libvers.la \
+ 	../../lib/ko/libko.la \
+ 	../../util/libarlautil.la \
+-	$(LIB_roken) \
+ 	$(RXKAD_LIBS) \
+ 	$(KAFS_LIBS) \
+-	$(RXKAD_LIBS) $(LIBS)
++	$(RXKAD_LIBS) \
++	$(LIBS) \
++	$(LIB_roken)
+ 
+ all: all-am
+ 
