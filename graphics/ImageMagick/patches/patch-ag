@@ -1,0 +1,54 @@
+$NetBSD: patch-ag,v 1.1 2001/11/27 01:26:49 lukem Exp $
+
+--- utilities/mogrify.c.orig	Sat Sep  8 02:03:51 2001
++++ utilities/mogrify.c
+@@ -1651,11 +1651,12 @@
+               (void) strcpy(p,format);
+             else
+               {
+-                FormatString(image_info->filename,"%.1024s:%.1024s",format,
+-                  image->filename);
+-                (void) strcpy(image->filename,image_info->filename);
++                FormatString(filename, "%.1024s:%.1024s",format,
++                  image_info->filename);
++                (void) strcpy(image->filename,filename);
+               }
+-          }
++          } else 
++            (void) strcpy(image->filename,image_info->filename);
+         /*
+           Transmogrify image as defined by the image processing options.
+         */
+@@ -1669,19 +1670,6 @@
+         */
+         if (format != (char *) NULL)
+           AppendImageFormat(format,image->filename);
+-        else
+-          if (LocaleCompare(image_info->filename,"-") != 0)
+-            {
+-              (void) strcpy(filename,image->filename);
+-              AppendImageFormat("mgk",image->filename);
+-              if (IsAccessible(image->filename))
+-                {
+-                  (void) strcat(image->filename,"~");
+-                  if (IsAccessible(image->filename))
+-                    MagickError(FileOpenError,"Unable to create temporary file",
+-                      filename);
+-                }
+-            }
+         for (p=image; p != (Image *) NULL; p=p->next)
+         {
+           (void) strcpy(p->filename,image->filename);
+@@ -1700,12 +1688,6 @@
+           scene--;
+         if (image_info->verbose)
+           DescribeImage(image,stderr,False);
+-        if ((format == (char *) NULL) && (status != False))
+-          if (LocaleCompare(image_info->filename,"-") != 0)
+-            {
+-              (void) remove(filename);
+-              (void) rename(image->filename,filename);
+-            }
+         DestroyImage(image);
+       }
+   }
