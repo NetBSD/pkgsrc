@@ -1,0 +1,44 @@
+$NetBSD: patch-ab,v 1.1 2005/03/14 14:55:25 rillig Exp $
+
+gcc-2.95.3 does not like declarations intermixed with code.
+
+Needed for NetBSD-1.6.2.
+
+--- src/options.c.orig	Mon Dec 20 00:24:26 2004
++++ src/options.c	Sat Mar 12 11:50:17 2005
+@@ -204,7 +204,7 @@ static gboolean on_read_config_realize(G
+     if (filename == NULL)
+         filename = _("NONE");
+ 
+-    gchar *text =
++    {gchar *text =
+         g_strdup_printf(_("This configuration file has been read: %s"),
+                         filename);
+ 
+@@ -212,7 +212,7 @@ static gboolean on_read_config_realize(G
+     g_free(text);
+ 
+     return FALSE;
+-}
++}}
+ 
+ static gboolean on_write_config_realize(GtkLabel * widget)
+ {
+@@ -221,7 +221,7 @@ static gboolean on_write_config_realize(
+     if (filename == NULL)
+         filename = _("NONE");
+ 
+-    gchar *text =
++    {gchar *text =
+         g_strdup_printf(_("This configuration file will be written: %s"),
+                         filename);
+ 
+@@ -229,7 +229,7 @@ static gboolean on_write_config_realize(
+     g_free(text);
+ 
+     return FALSE;
+-}
++}}
+ 
+ /* Transitions */
+ 
