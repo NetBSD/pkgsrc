@@ -1,22 +1,18 @@
-$NetBSD: patch-aa,v 1.3 2002/12/30 18:08:02 cjep Exp $
+$NetBSD: patch-aa,v 1.4 2003/08/05 10:18:41 wiz Exp $
 
---- Makefile.in.orig	Wed Jan  2 15:57:57 2002
+--- Makefile.in.orig	Tue Aug  5 10:56:30 2003
 +++ Makefile.in
-@@ -62,13 +62,14 @@ RANLIB = @RANLIB@
- UTF8   = @UTF8@
- NEWLINE = @NEWLINE@
+@@ -80,12 +80,11 @@ LINK_SIZE = @LINK_SIZE@
+ MATCH_LIMIT= @MATCH_LIMIT@
  
--INSTALL = @INSTALL@
+ INSTALL = @INSTALL@
 -INSTALL_DATA = @INSTALL_DATA@
-+INSTALL_PROGRAM = ${BSD_INSTALL_PROGRAM}
-+INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
 +INSTALL_DATA = ${BSD_INSTALL_DATA}
-+INSTALL_MAN = ${BSD_INSTALL_MAN}
  
  # LIBTOOL enables the building of shared and static libraries. It is set up
  # to do one or the other or both by ./configure.
  
 -LIBTOOL = @LIBTOOL@
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) -I. $(NEWLINE)
- LINK = $(LIBTOOL) --mode=link $(CC)
- 
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) -I. -I$(top_srcdir) $(NEWLINE) $(LINK_SIZE) $(MATCH_LIMIT)
+ @ON_WINDOWS@LINK = $(CC) $(CFLAGS) -I. -I$(top_srcdir) -L.libs
+ @NOT_ON_WINDOWS@LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) -I. -I$(top_srcdir)
