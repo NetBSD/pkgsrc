@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/03/01 01:38:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 1999/03/01 01:40:27 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -13,7 +13,7 @@ MASTER_SITES=	ftp://ftp.hpc.uh.edu/pub/fvwm/version-2/ \
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.hpc.uh.edu/fvwm/
+HOMEPAGE=	http://www.fvwm.org/
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	xpmroot-2.2:../../x11/xpmroot
