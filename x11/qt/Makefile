@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 1998/04/28 09:42:54 tron Exp $
+# $NetBSD: Makefile,v 1.12 1998/04/28 09:46:05 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/30 05:15:19 jkh Exp
 #
 
 DISTNAME=	qt-1.33
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.cdrom.com/pub/linux/sunsite/Incoming/qt-1.33.tar.gz \
+MASTER_SITES=	ftp://ftp.cdrom.com/pub/linux/sunsite/Incoming/ \
 		ftp://ftp.kde.org/pub/qt/TGZ/ \
 		ftp://ftp.troll.no/qt/source/
 
