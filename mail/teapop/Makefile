@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2002/04/29 16:44:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2002/05/07 22:49:19 hubertf Exp $
 
 DISTNAME=	teapop-0.3.4
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.toontown.org/pub/teapop/			\
 		http://www.toontown.org/pub/teapop/
@@ -34,9 +35,13 @@ CONFIGURE_ARGS+=       --with-mysql=${LOCALBASE}
 LDFLAGS+=      -L${LOCALBASE}/lib/mysql -Wl,-R${LOCALBASE}/lib/mysql
 .endif
 
+post-build:
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/teapop > ${WRKDIR}/teapop
+
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/teapop.passwd ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/teapop ${PREFIX}/etc/rc.d/teapop
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
