@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 1999/02/15 03:20:12 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/03/22 15:11:21 hubertf Exp $
 bin/vfu
 share/doc/vfu/vfurc.example
 @exec [ -f %D/etc/vfurc ] || /bin/cp -p %D/%F %D/etc/vfurc
 share/doc/vfu/COPYING
 share/doc/vfu/INSTALL
 share/doc/vfu/README
-share/doc/vfu/vfu.txt
+share/doc/vfu/VFU.txt
 @dirrm share/doc/vfu/
