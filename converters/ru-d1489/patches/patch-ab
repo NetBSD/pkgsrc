@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/07/12 21:01:17 agc Exp $
+
+--- Makefile.orig	Wed Nov  5 01:25:46 1997
++++ Makefile	Fri Jul 12 21:48:50 2002
+@@ -36,14 +36,14 @@
+ 	$(CC) $(CFLAGS) $(LDFLAGS) a2kfcnv.c -o $@
+ 
+ install: todos a2kfcnv
+-	cp todos /usr/local/bin
+-	-rm /usr/local/bin/fromdos
+-	-rm /usr/local/bin/fromwin
+-	-rm /usr/local/bin/towin
+-	ln /usr/local/bin/todos /usr/local/bin/fromdos
+-	ln /usr/local/bin/todos /usr/local/bin/fromwin
+-	ln /usr/local/bin/todos /usr/local/bin/towin
+-	cp a2kfcnv /usr/local/bin
++	cp todos $(PREFIX)/bin
++	-rm -f $(PREFIX)/bin/fromdos
++	-rm -f $(PREFIX)/bin/fromwin
++	-rm -f $(PREFIX)/bin/towin
++	ln $(PREFIX)/bin/todos $(PREFIX)/bin/fromdos
++	ln $(PREFIX)/bin/todos $(PREFIX)/bin/fromwin
++	ln $(PREFIX)/bin/todos $(PREFIX)/bin/towin
++	cp a2kfcnv $(PREFIX)/bin
+ 
+ clean:
+ 	-rm -f todos a2kfcnv
