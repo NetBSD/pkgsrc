@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.5 2001/05/24 04:28:20 jlam Exp $
+$NetBSD: patch-af,v 1.6 2001/08/10 04:50:08 jlam Exp $
 
---- src/other/spell/ispell_def.h.orig	Sat Mar 24 20:30:02 2001
-+++ src/other/spell/ispell_def.h
+--- src/other/spell/xp/ispell_def.h.orig	Sun Apr 15 12:01:24 2001
++++ src/other/spell/xp/ispell_def.h
 @@ -2,3 +2,13 @@
  #ifndef	INPUTWORDLEN
  #define INPUTWORDLEN 100
@@ -9,10 +9,10 @@ $NetBSD: patch-af,v 1.5 2001/05/24 04:28:20 jlam Exp $
 +
 +#ifdef HAVE_INTTYPES_H
 +#include <inttypes.h>
-+#define PTRSIZE intptr_t
++#define PTRSIZE	intptr_t
 +#else
-+#define PTRSIZE int
++#define PTRSIZE	int
 +#endif
 +#if !defined(HAVE_INTTYPES_H) && defined(__alpha) && defined(__NetBSD__)
-+#define PTRSIZE long
++#define PTRSIZE	long
 +#endif /* hack for 1.3 */
