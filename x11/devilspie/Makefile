@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2005/02/27 22:43:24 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/02/28 09:16:17 wiz Exp $
 
 DISTNAME=		devilspie-0.8
 CATEGORIES=		x11
 MASTER_SITES=		http://www.burtonini.com/computing/
 
-MAINTAINER=		snj@NetBSD.org
+MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.burtonini.com/blog/computers/devilspie/
 COMMENT=		Window-matching utility to customize window behavior
 
