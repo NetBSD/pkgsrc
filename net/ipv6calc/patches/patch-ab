@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2003/02/06 14:34:58 tron Exp $
+$NetBSD: patch-ab,v 1.2 2004/11/23 21:32:11 hubertf Exp $
 
---- ipv6calc/Makefile.orig	Sat Apr 20 17:49:40 2002
-+++ ipv6calc/Makefile	Thu Feb  6 15:33:38 2003
-@@ -36,7 +36,7 @@
+--- ipv6calc/Makefile.in.orig	2004-11-21 17:03:12.000000000 +0100
++++ ipv6calc/Makefile.in
+@@ -35,7 +35,7 @@ libipv6calc.a:	
+ 		cd ../ && make lib-make
  
  ipv6calc:	$(OBJS) libipv6calc.a ../lib/ipv6calcoptions.h
- 		echo "Compile: ipv6calc"
--		$(CC) -o ipv6calc $(OBJS) $(GETOBJS) -lipv6calc -L../lib/ -lcrypto
-+		$(CC) -o ipv6calc $(OBJS) $(GETOBJS) -lipv6calc -L../lib/ -lcrypto $(LDFLAGS)
+-		$(CC) -o ipv6calc $(OBJS) $(GETOBJS) -lipv6calc -L../lib/
++		$(CC) -o ipv6calc $(OBJS) $(GETOBJS) -lipv6calc -L../lib/ $(LDFLAGS)
  
  static:		ipv6calc
- 		$(CC) -o ipv6calc-static $(OBJS) $(GETOBJS) -lcrypto -static
+ 		$(CC) -o ipv6calc-static $(OBJS) $(GETOBJS) -lipv6calc -L../lib/ -static
