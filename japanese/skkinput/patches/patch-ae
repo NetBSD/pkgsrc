@@ -1,0 +1,39 @@
+$NetBSD: patch-ae,v 1.1 2000/11/09 03:54:08 itohy Exp $
+
+--- main.c.orig	Mon Mar 23 15:05:22 1998
++++ main.c	Wed Nov  8 03:07:44 2000
+@@ -110,7 +110,7 @@
+ extern void initHenkanKakuteiHashTable( void ) ;
+ extern void clearHenkanKakuteiHash( void ) ;
+ /* skksoc.c */
+-extern int  skkinput_StartCommunication( char *server_name, int port_num ) ;
++extern int  skkinput_StartCommunication( char *server_name, char *port_str ) ;
+ extern int  skkinput_CloseCommunication( void ) ;
+ /* skkldic.c */
+ extern int  set_localjisyo
+@@ -197,6 +197,7 @@
+ /* その他、skkinput が必要とする…skkInputWidget 毎には必要としない情報。*/
+ char *skkserv_host ;
+ int  skkserv_portnum ;
++char *skkserv_portstr ;
+ char *skkinput_local_jisyo_name ;
+ char *skkinput_backup_jisyo_name ;
+ char *skk_local_jisyo_name ;
+@@ -375,7 +376,7 @@
+   if( number_of_protocols > 0 ){
+ #ifndef MAIKAI_SKKSERV_TO_CONNECT_SURU
+     /* socket を作成しておく。*/
+-    skkinput_StartCommunication( skkserv_host, skkserv_portnum ) ;
++    skkinput_StartCommunication( skkserv_host, skkserv_portstr ) ;
+ #endif
+     /* 局所辞書の情報を入れておく。*/
+     set_localjisyo
+@@ -698,7 +699,7 @@
+       break ;
+       /* skkserv と通信するに利用するポート番号を設定する。*/
+     case OPTION_PORT :
+-      skkserv_portnum = atoi( argv[ i ] ) ;
++      skkserv_portstr = argv[ i ];
+       break ;
+       /* 局所辞書の名前を設定する。*/
+     case OPTION_USERDIC :
