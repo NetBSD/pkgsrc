@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2000/02/06 01:08:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/12/15 00:41:56 wiz Exp $
 
 DISTNAME=	micq-0.4.3
 PKGNAME=	ja-${DISTNAME}
-CATEGORIES=	japanese net
+CATEGORIES=	japanese chat
 MASTER_SITES=	ftp://micq.chatzone.org/pub/micq/V0.4.3/ \
 		http://www.freebsd.org/~flathill/distfiles/ \
 		http://micq.maesoft.net/
