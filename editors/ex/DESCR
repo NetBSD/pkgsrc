@@ -1,0 +1,20 @@
+The Traditional Vi
+Source Code for Modern Unix Systems
+
+The vi editor is one of the most common text editors on Unix. It
+was developed starting around 1976 by Bill Joy at UCB, who was
+tired of the ed editor. But since he used ed as a code base, access
+to the original sources has required a Unix Source Code License
+for more than twenty years. In January 2002, Caldera was so kind
+to remove usage restrictions to the Ancient Unix Code by a BSD-style
+license (see the announcement at Slashdot) and thus vi is now
+finally free.
+
+Compared to most of its many clones, the original vi is a rather
+small program (~120 KB code on i386) just with its extremely powerful
+editing interface, but lacking fancy features like multiple undo,
+multiple screens or syntax highlighting. In other words, it is a
+typical Unix program that does exactly what it should and nothing
+more. I intend to preserve this style in maintaining my port, except
+for changes to achieve POSIX.2 standards compliance, features in
+the SVr4 versions of vi, and, of course, bug fixes.
