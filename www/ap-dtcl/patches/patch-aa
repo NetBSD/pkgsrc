@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 1999/11/12 20:05:19 jwise Exp $
+--- dtcl.tcl.orig	Fri Nov 12 14:58:55 1999
++++ dtcl.tcl	Fri Nov 12 14:59:13 1999
+@@ -1360,8 +1360,8 @@
+ 
+     flush $_cgi(mailfid)
+ 
+-    if {[file executable /usr/lib/sendmail]} {
+-	exec /usr/lib/sendmail -t -odb < $_cgi(mailfile)
++    if {[file executable /usr/sbin/sendmail]} {
++	exec /usr/sbin/sendmail -t -odb < $_cgi(mailfile)
+ 	# Explanation:
+ 	# -t   means: pick up recipient from body
+ 	# -odb means: deliver in background
