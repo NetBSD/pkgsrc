@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/11/29 01:12:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2002/01/16 14:22:22 tron Exp $
 
 DISTNAME=	xchat-1.8.3
 PKGREVISION=	1
@@ -10,7 +10,6 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://xchat.org/
 COMMENT=	X11 (X Window System) IRC client, using the GTK+ toolkit
 
-DEPENDS+=	gnome-core>=1.2.0:../../x11/gnome-core
 DEPENDS+=	python>=2.0:../../lang/python
 
 USE_GMAKE=	YES
@@ -49,5 +48,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xchat
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/xchat
 
-.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../x11/gnome-core/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
