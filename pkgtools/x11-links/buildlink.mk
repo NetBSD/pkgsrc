@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/10/09 07:07:25 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/12/08 23:15:36 kristerw Exp $
 #
 # This Makefile fragment is included by packages that use X11.
 #
@@ -456,6 +456,7 @@ BUILDLINK_FILES.X11+=	lib/libXinerama.a
 BUILDLINK_FILES.X11+=	lib/libXmu.a
 BUILDLINK_FILES.X11+=	lib/libXmu.so
 BUILDLINK_FILES.X11+=	lib/libXmu.so.6
+BUILDLINK_FILES.X11+=	lib/libXmu.so.6.0
 BUILDLINK_FILES.X11+=	lib/libXmu.so.6.2
 BUILDLINK_FILES.X11+=	lib/libXmuu.a
 BUILDLINK_FILES.X11+=	lib/libXmuu.so
