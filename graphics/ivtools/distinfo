@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/12/14 12:02:17 markd Exp $
+$NetBSD: distinfo,v 1.5 2004/05/29 13:06:29 markd Exp $
 
-SHA1 (ivtools-1.1.2.tgz) = 806ef6c2e86e9e4ef786511154410488554657ae
-Size (ivtools-1.1.2.tgz) = 2159581 bytes
+SHA1 (ivtools-1.1.3.tgz) = 5aae7973be6e5b19df6c244ab91e87a9c20eb6a9
+Size (ivtools-1.1.3.tgz) = 2183696 bytes
 SHA1 (patch-aa) = 191619b7db43c47d7cc991bc33787434f0ef6948
-SHA1 (patch-ab) = d333341342e946e1bb44c332f35f1601dd29fce3
+SHA1 (patch-ab) = 538b98662592212b03afda8c82b53ec7c2bff094
 SHA1 (patch-ac) = bcda1a0b71b669ad6a4900077564c226af262708
