@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/30 19:00:01 he Exp $
+$NetBSD: distinfo,v 1.2 2004/12/05 19:14:18 he Exp $
 
-SHA1 (Exception-Class-1.14.tar.gz) = 41249fe296c8506b3405665fae3fd746a99b2346
-Size (Exception-Class-1.14.tar.gz) = 12519 bytes
+SHA1 (Exception-Class-1.19.tar.gz) = 70e5429f2e85594409b2ec6c66fb1aff00e49aea
+Size (Exception-Class-1.19.tar.gz) = 13219 bytes
