@@ -1,0 +1,4 @@
+This is a module that wraps the classes defined in Minero Aoki's
+install.rb script. It allows you to easily create your own
+installation files. It makes the process of creating installation
+scripts a bit more uniform.
