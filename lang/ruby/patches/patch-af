@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1 2000/04/11 07:35:16 sakamoto Exp $
+
+--- ext/curses/extconf.rb.orig	Tue Oct 12 18:11:25 1999
++++ ext/curses/extconf.rb	Tue Apr 11 14:53:51 2000
+@@ -3,15 +3,7 @@
+ make=false
+ have_library("mytinfo", "tgetent") if /bow/ =~ PLATFORM
+-if have_header("ncurses.h") and have_library("ncurses", "initscr")
++have_library("termcap", "tgetent") 
++if have_library("curses", "initscr")
+   make=true
+-elsif have_header("ncurses/curses.h") and have_library("ncurses", "initscr")
+-  make=true
+-elsif have_header("curses_colr/curses.h") and have_library("cur_colr", "initscr")
+-  make=true
+-else
+-  have_library("termcap", "tgetent") 
+-  if have_library("curses", "initscr")
+-    make=true
+-  end
+ end
+ 
