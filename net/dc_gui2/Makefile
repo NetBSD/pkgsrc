@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/02/09 18:47:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/20 16:23:09 jmmv Exp $
 #
 
 DISTNAME=	dc_gui2-0.75
@@ -14,7 +14,7 @@ COMMENT=	Graphical user interface for DCTC
 DEPENDS+=	dctc>=0.85.4:../../net/dctc
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 CONFIGURE_ARGS+=	--enable-manual-db-detect
 USE_GNU_TOOLS+=		make
@@ -29,8 +29,9 @@ post-configure:
 	@sleep 5
 	@${TOUCH} ${WRKSRC}/stamp-h ${WRKSRC}/stamp-h.in
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../databases/db4/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../databases/db4/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
