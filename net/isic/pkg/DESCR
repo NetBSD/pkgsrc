@@ -1,0 +1,20 @@
+ISIC (and components) is intended to test the integrity of an IP
+Stack and its component stacks (TCP, UDP, ICMP et. al.)  It does
+this by generating a controlled random packet (controlled randomness...
+wacky huh?).  The user can specify he/she/it [I'm tempted to put
+'it' before 'she' :-)] wants a stream of TCP packets.  He/she/it
+suspects that the target has weak handling of IP Options (aka
+Firewall-1).  So he/she/it does a 'tcpsic -s rand -d firewall
+-I100'.  And observes the result.
+
+A great use for ISIC would be to fire it through a firewall and
+see if the firewall leaks packets.  But of course that would be
+illegal because Network Associates owns a bogus patent on that :-)
+You could do that by setting the default route on the sending
+computer to the firewall.....  But that would be illegal.  (But I
+can't legally have a beer so do you think I care about laws?)
+
+By far the most common use for these tools is testing IDS systems.
+A day after I took the source offline and moved it to a cvs server,
+a half dozen people working on seperate home-grown IDS systems
+emailed requesting the source be put back up.
