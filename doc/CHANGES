@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8652 2005/01/08 00:16:25 schmonz Exp $
+$NetBSD: CHANGES,v 1.8653 2005/01/08 06:25:48 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -171,3 +171,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xmms-meta-timidity to 0.2 [ben 2005-01-07]
 	Updated p5-HTML-Mason to 1.28nb2 [seb 2005-01-07]
 	Updated ezmlm-idx to 0.432nb1 [schmonz 2005-01-08]
+	Updated howl to 0.9.8 [schmonz 2005-01-08]
