@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1700 2004/05/03 19:56:52 reed Exp $
+$NetBSD: TODO,v 1.1701 2004/05/03 21:00:31 mrauch Exp $
 
 Suggested new packages
 ======================
@@ -291,7 +291,6 @@ Suggested package updates
 	o onyx-5.1.1
 	o openal-20040215
 	o openh323-1.12.2
-	o openoffice-1.1.1
 	o openssh-3.8.1p1
 	o openssl-0.9.7d [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
 	o oss-3.99.1c
