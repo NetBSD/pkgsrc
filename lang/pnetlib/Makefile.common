@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.3 2004/02/27 07:37:04 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.4 2004/05/14 08:03:59 xtraeme Exp $
 #
 
-DISTNAME=	pnetlib-0.6.2
+DISTNAME=	pnetlib-0.6.4
 CATEGORIES=	lang
 MASTER_SITES=	http://www.southern-storm.com.au/download/
 
@@ -11,12 +11,16 @@ COMMENT=	DotGNU Portable .NET C SHARP class libraries
 
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
+USE_LIBTOOL=	yes
 USE_BUILDLINK3=	yes
 
 DESCR_SRC=	${.CURDIR}/../pnetlib/DESCR
 DISTINFO_FILE=	${.CURDIR}/../pnetlib/distinfo
 PATCHDIR=	${.CURDIR}/../pnetlib/patches
 PLIST_SRC=	${.CURDIR}/../pnetlib/PLIST
+
+# Ensure we export symbols in the linked shared object.
+LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 
 .include "../../mk/bsd.prefs.mk"
 
