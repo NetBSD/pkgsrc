@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 1999/02/23 18:28:35 rh Exp $
+
+--- doc/Manual.txt.orig	Wed Jan 13 13:29:59 1999
++++ doc/Manual.txt	Tue Feb 23 15:56:56 1999
+@@ -1,8 +1,3 @@
+->>>>>>>>>>>>>>>>>>>>>>>>>>>>>> HALF DONE (^_^; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+-
+-((((((( ``DeleGate Home Page'' is at http://wall.etl.go.jp/delegate/ )))))))
+-
+-
+ DELEGATED(8)              MAINTENANCE COMMANDS                 DELEGATED(8)
+ 
+ NAME
