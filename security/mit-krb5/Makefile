@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/05/10 01:18:34 kristerw Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/10 01:20:39 kristerw Exp $
 
 DISTNAME=	krb5-1.3.3
 PKGNAME=	mit-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	jlam@NetBSD.org
