@@ -1,0 +1,14 @@
+$NetBSD: patch-bh,v 1.4 2003/08/02 19:33:24 mrg Exp $
+
+--- kioslave/imap4/mimeio.cc.orig	2001-03-01 04:53:29.000000000 +1100
++++ kioslave/imap4/mimeio.cc	2003-08-03 04:36:05.000000000 +1000
+@@ -15,7 +15,8 @@
+  *                                                                         *
+  ***************************************************************************/
+ 
+-#include <iostream.h>
++#include <iostream>
++using namespace std;
+ 
+ #include "mimeio.h"
+ 
