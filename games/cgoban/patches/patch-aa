@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/01/31 21:49:17 bad Exp $
+
+--- Makefile.in.orig	Thu May 29 03:34:54 1997
++++ Makefile.in	Wed Jan 27 18:57:37 1999
+@@ -36,7 +36,7 @@
+ 
+ # Change these values to tell make where to put the binary and the man page
+ #   when it's done compiling.
+-PREFIX = /usr/games
++PREFIX = @prefix@
+ BINDIR = $(PREFIX)/bin
+ MANDIR = $(PREFIX)/man
+ 
+@@ -58,6 +58,8 @@
+ 
+ OBJS = @OBJS@
+ 
++all: cgoban-$(SYSTEM_TYPE)
++
+ cgoban-$(SYSTEM_TYPE): $(OBJS) $(OBJLIBS) wmslib/libwms-$(SYSTEM_TYPE).a
+ 	$(CC) $(LFLAGS) -o cgoban-$(SYSTEM_TYPE) $(OBJS) $(LIBS)
+ 	rm -f cgoban
+@@ -66,6 +68,8 @@
+ install:	cgoban-$(SYSTEM_TYPE) man6/cgoban.6
+ 	$(INSTALL_PROGRAM) cgoban-$(SYSTEM_TYPE) $(BINDIR)/cgoban
+ 	$(INSTALL_DATA) man6/cgoban.6 $(MANDIR)/man6/cgoban.6
++	$(INSTALL_SCRIPT) grab_cgoban $(BINDIR)/grab_cgoban
++	$(INSTALL_DATA) seigen-minoru.sgf $(PREFIX)/share/misc/seigen-minoru.sgf
+ 
+ clean:
+ 	rm -f obj-$(SYSTEM_TYPE)/*.o obj-$(SYSTEM_TYPE)/client/*.o obj-$(SYSTEM_TYPE)/gmp/*.o
