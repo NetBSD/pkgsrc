@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.13 2001/11/30 17:21:55 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.14 2002/06/26 05:40:33 jlam Exp $
 #
 # This Makefile fragment is included by packages that use freetype2.
 #
@@ -22,13 +22,13 @@ BUILDLINK_DEPENDS.freetype2?=	freetype2>=2.0.1
 # Check if we got FreeType2 distributed with XFree86 4.x or if we need to
 # depend on the freetype2 package.
 #
-.include "../../mk/bsd.prefs.mk"
+_REQUIRE_BUILTIN_FREETYPE2?=	NO
 .if exists(${X11BASE}/include/freetype2/freetype/freetype.h)
 _IS_BUILTIN_FREETYPE2!=	${EGREP} -c BuildFreetype2Library ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 _IS_BUILTIN_FREETYPE2=	0
 .endif
-.if ${_IS_BUILTIN_FREETYPE2} == "0"
+.if (${_IS_BUILTIN_FREETYPE2} == "0") && (${_REQUIRE_BUILTIN_FREETYPE2} == "NO")
 _NEED_FREETYPE2=	YES
 .else
 _NEED_FREETYPE2=	NO
