@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.15 2005/01/24 19:09:34 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.16 2005/01/24 19:10:21 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -2766,13 +2766,8 @@ CHECK_FILES_SKIP+=	${d}
 .for d o g m in ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
 CHECK_FILES_SKIP+=	${d}
 .endfor
-.undef e c d o g m
 
-CHECK_FILES_SKIP_CMD=
-.for name in ${CHECK_FILES_SKIP}
-CHECK_FILES_SKIP_CMD+=	| ${GREP} -v ${name}
-.endfor
-.undef name
+CHECK_FILES_SKIP_CMD=	| ${GREP} -v ${CHECK_FILES_SKIP:@f@-e ${f:Q}@}
 
 # Check if the generated PLIST matches the list of really installed files.
 #
