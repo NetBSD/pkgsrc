@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:52:41 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/08/04 22:45:13 seb Exp $
 
 DISTNAME=	tetex-src-${TETEX_BIN_VERS}
 PKGNAME=	teTeX2-bin-${TETEX_BIN_VERS}
@@ -16,7 +16,10 @@ DEPENDS+=	dialog-0.6z*:../../misc/dialog
 
 CONFLICTS+=	omega-[0-9]*
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	latex.info dvips.info web2c.info kpathsea.info
+
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 REPLACE_PERL=	texk/xdvik/t1mapper \
 		texk/oxdvik/t1mapper
@@ -44,5 +47,4 @@ post-install:
 
 .include "../../print/teTeX2-bin/Makefile.common"
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
