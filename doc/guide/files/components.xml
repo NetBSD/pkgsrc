@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.2 2004/11/19 18:42:39 peter Exp $ -->
+<!-- $NetBSD: components.xml,v 1.3 2004/12/02 22:20:34 dillo Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -42,6 +42,7 @@
         ${MASTER_SITE_GNOME}
         ${MASTER_SITE_GNU}
         ${MASTER_SITE_GNUSTEP}
+        ${MASTER_SITE_IFARCHIVE}
         ${MASTER_SITE_MOZILLA}
         ${MASTER_SITE_PERL_CPAN}
         ${MASTER_SITE_SOURCEFORGE}
