@@ -1,10 +1,9 @@
-$NetBSD: md5,v 1.15 2000/12/13 16:03:40 taca Exp $
+$NetBSD: md5,v 1.16 2001/04/14 10:05:01 tron Exp $
 
-MD5 (squid-2.3.STABLE4-src.tar.gz) = c38c083f44c222a8d026fa129c30b98f
-MD5 (squid-2.3.stable4-invalid_ip_acl_entry.patch) = 436eb77056bed5d45547c739d1123bd3
-MD5 (squid-2.3.stable4-ipfw_configure.patch) = 4453c53a712280a26fdca42c950bc94f
-MD5 (squid-2.3.stable4-internal_dns_rcode_table_formatting.patch) = bec46f5a1fcbd9aa1deb9d518c5c11a5
-MD5 (squid-2.3.stable4-ftp_icon_not_found.patch) = f1383b24672f9a8317c2c16302a94eaa
-MD5 (squid-2.3.stable4-accel_only_access.patch) = db8e4eb9c1712a4adde7e9aaed0b5249
-MD5 (squid-2.3.stable4-html_quoting.patch) = 68228709d011c93c2cccd9ac723fb462
-MD5 (squid-2.3.stable4-carp-assertion.patch) = c3d48a2b4fc26c0d90eb4c30ae34d3d6
+SHA1 (squid-2.4.STABLE1-src.tar.gz) = 584eb15080f52ef406e3f66511dba406ec1a40c5
+SHA1 (squid-2.4.stable1-diskd_fixed_path.patch) = 1ec289b37d0640a8d16e691659acc3776632b321
+SHA1 (squid-2.4.stable1-force_valid_blksize.patch) = 1282c7cb5b7e367f04867b9658e002dd51f00313
+SHA1 (squid-2.4.stable1-high_cpu_with_peers.patch) = 759f713faad31d13a3492ae814b2cdcba0f5fbe4
+SHA1 (squid-2.4.stable1-htcp_assertion_fix.patch) = afdbe390453cc65b375c6616be583ee84299260b
+SHA1 (squid-2.4.stable1-kill_parent_on_child_sigkill.patch) = c94ba4c220d31ea1612e5b1a84970de2c058f7a9
+SHA1 (squid-2.4.stable1-wrong_sign_on_timestamp_check.patch) = cde4530d0c9cd184b0d4c6774e4c20f81ab7179f
