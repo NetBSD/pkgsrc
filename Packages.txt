@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.267 2002/10/24 04:52:15 jlam Exp $
+# $NetBSD: Packages.txt,v 1.268 2002/10/27 21:54:05 seb Exp $
 ###########################################################################
 
 			==========================
@@ -944,6 +944,12 @@ For the values which are replaced by default, please look in bsd.pkg.mk
 
  5.4 Perl5 modules
  =================
+
+Makefile of packages providing perl5 modules should include the
+makefile fragment lang/perl5/module.mk.  It provides a do-configure
+target for the standard perl configuration for such modules as well
+as various hooks to tune this configuration.  See comments in this
+file for details.
 
 Perl5 modules will install into different places depending on the version
 of perl used during the build process.  To address this, the NetBSD
