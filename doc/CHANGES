@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2903 2003/07/27 21:43:59 jdolecek Exp $
+$NetBSD: CHANGES,v 1.2904 2003/07/27 21:49:17 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3032,3 +3032,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gmplayer to 0.90nb7 [jmmv 2003-07-27]
 	Updated mencoder to 0.90nb7 [jmmv 2003-07-27]
 	Updated psi to 0.9 [jdolecek 2003-07-27]
+	Added psi-ssl 2.0 [jdolecek 2003-07-27]
