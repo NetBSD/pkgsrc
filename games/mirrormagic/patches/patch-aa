@@ -1,0 +1,29 @@
+--- Makefile.orig	Thu Jun 11 13:25:51 1998
++++ Makefile	Thu Jun 11 13:28:21 1998
+@@ -10,7 +10,7 @@
+ 
+-GFX_PATH = -DGFX_PATH=\"./graphics\"	# path where the graphics are
+-SND_PATH = -DSND_PATH=\"./sounds\"	# path where the sounds are
+-LEVEL_PATH = -DLEVEL_PATH=\".\"		# path where the level file is
+-SCORE_PATH = -DSCORE_PATH=\".\"		# path where the score file is
+-NAMES_PATH = -DNAMES_PATH=\".\"		# path where the names file is
++GFX_PATH = -DGFX_PATH=\"${X11BASE}/share/mirrormagic/graphics\" # path where the graphics are
++SND_PATH = -DSND_PATH=\"${X11BASE}/share/mirrormagic/sounds\"	# path where the sounds are
++LEVEL_PATH = -DLEVEL_PATH=\"${X11BASE}/share/mirrormagic\"		# path where the level file is
++SCORE_PATH = -DSCORE_PATH=\"${X11BASE}/share/mirrormagic\"		# path where the score file is
++NAMES_PATH = -DNAMES_PATH=\"${X11BASE}/share/mirrormagic\"		# path where the names file is
+ # SOUNDS = -DNO_SOUNDS			# don't play any sounds
+@@ -28,3 +28,3 @@
+ # DEBUG = -DDEBUG -g -Wall
+-DEBUG = -O6
++DEBUG = -O2
+ 
+@@ -33,6 +33,6 @@
+ # SYSTEM = -DSYSV			# for systems without 'usleep()'
+-# INCL = -I/usr/include/X11R5		# for HP-UX and others
++INCL = -I${X11BASE}/include		# for HP-UX and others
+ # LIBS = -lXpm -lX11 -lm
+ # LIBS = -L/usr/lib/X11R5 -lXpm -lX11 -lm # for HP-UX and others
+-LIBS = -lXpm -lXpm -lXpm -lX11 -lm	# triple "-lXpm" because of Xpm error
++LIBS = -L${X11BASE}/lib -lXpm -lX11 -lm	# triple "-lXpm" because of Xpm error
+ 
