@@ -1,6 +1,6 @@
-$NetBSD: patch-bt,v 1.2 2004/07/30 13:07:25 dmcmahill Exp $
+$NetBSD: patch-bt,v 1.3 2004/11/12 10:45:45 adam Exp $
 
---- pvmgs/Makefile.aimk.orig	Wed Feb 16 21:49:03 2000
+--- pvmgs/Makefile.aimk.orig	2001-11-30 20:33:11.000000000 +0000
 +++ pvmgs/Makefile.aimk
 @@ -26,7 +26,7 @@ PVMXDIR		=	$(PVMBDIR)/$(PVM_ARCH)
  PVMLDIR		=	$(PVMDIR)/lib/$(PVM_ARCH)
@@ -8,10 +8,10 @@ $NetBSD: patch-bt,v 1.2 2004/07/30 13:07:25 dmcmahill Exp $
  LIBPREFIX	=	lib
 -PVMLIBDEP	=	$(PVMLDIR)/$(LIBPREFIX)$(PVMLIB).a
 +PVMLIBDEP	=	$(PVMLDIR)/$(LIBPREFIX)$(PVMLIB).la
- CFLAGS		=	$(CFLOPTS) -I$(PVMIDIR) -I$(PVMSDIR) -DIMA_$(PVM_ARCH) \
- 				$(ARCHCFLAGS)
- LIBS		=	$(LOPT) -L$(PVMLDIR) -l$(PVMLIB) $(ARCHLIB)
-@@ -39,7 +39,7 @@ PROGS		=	$(PVMXDIR)/pvm_gstat$(EXESFX) \
+ 
+ # Add -DPVMGSTIMEOUT=XXX to CFLAGS to allow timeouts for PVM group
+ # server requests, where XXX is the number of seconds for the timeout.
+@@ -45,7 +45,7 @@ PROGS		=	$(PVMXDIR)/pvm_gstat$(EXESFX) \
  
  LPROGS		=	$(PVMLDIR)/pvmgs$(EXESFX)
  
@@ -20,7 +20,7 @@ $NetBSD: patch-bt,v 1.2 2004/07/30 13:07:25 dmcmahill Exp $
  
  install:	all
  
-@@ -57,17 +57,24 @@ $(PVMLDIR):
+@@ -63,17 +63,24 @@ $(PVMLDIR):
  	- mkdir $(PVMLDIR)
  
  $(PVMXDIR)/pvm_gstat$(EXESFX):  pvm_gstat$(EXESFX)
@@ -47,7 +47,7 @@ $NetBSD: patch-bt,v 1.2 2004/07/30 13:07:25 dmcmahill Exp $
  
  $(PVMLDIR)/$(LIBGPVM)-mpp:  $(LIBGPVM)-mpp
  	cp $(LIBGPVM) $(PVMLDIR)
-@@ -75,18 +82,23 @@ $(PVMLDIR)/$(LIBGPVM)-mpp:  $(LIBGPVM)-m
+@@ -81,18 +88,23 @@ $(PVMLDIR)/$(LIBGPVM)-mpp:  $(LIBGPVM)-m
  	touch $(PVMLDIR)/$(LIBGPVM)-mpp
  
  $(PVMLDIR)/pvmgs$(EXESFX):  pvmgs$(EXESFX)
@@ -75,7 +75,7 @@ $NetBSD: patch-bt,v 1.2 2004/07/30 13:07:25 dmcmahill Exp $
  
  $(LIBGPVM)-mpp:	$(LOBJ)
  	rm -f $(LIBGPVM)
-@@ -95,7 +107,7 @@ $(LIBGPVM)-mpp:	$(LOBJ)
+@@ -101,7 +113,7 @@ $(LIBGPVM)-mpp:	$(LOBJ)
  	touch $(LIBGPVM)-mpp
  
  pvm_gstat$(EXESFX): pvm_gstat.o $(LIBGPVM) $(PVMLIBDEP)
@@ -84,7 +84,7 @@ $NetBSD: patch-bt,v 1.2 2004/07/30 13:07:25 dmcmahill Exp $
  
  clean:
  	rm -f $(DOBJ) $(LOBJ) pvmgs$(EXESFX) $(LIBGPVM) \
-@@ -110,17 +122,17 @@ lint:
+@@ -116,17 +128,17 @@ lint:
  
  #
  pvmgsu_core.o:	$(SDIR)/pvmgsu_core.c
