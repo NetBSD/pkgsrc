@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/02/14 17:21:46 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2004/02/16 22:07:48 jmmv Exp $
 #
 
 DISTNAME=		bug-buddy-2.4.2
@@ -29,8 +29,10 @@ USE_LIBTOOL=		YES
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
