@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1574 2004/04/05 02:45:44 xtraeme Exp $
+$NetBSD: TODO,v 1.1575 2004/04/05 02:48:27 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -196,7 +196,6 @@ Suggested package updates
 	o gimageview-0.2.25
 	o global-4.6
 	o glpk-4.3
-	o gnome-vfs2-2.4.3
 	o gnomeicu-0.99.5
 	o gnumeric-1.2.8
 	o gnunet-0.6.1d
