@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/10/03 00:13:04 tv Exp $
+# $NetBSD: Makefile,v 1.17 2004/10/20 10:55:46 adam Exp $
 #
 
 DISTNAME=		SDL_mixer-1.2.5
@@ -31,7 +31,6 @@ post-install:
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/playwave ${PREFIX}/bin
 
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
 
