@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/07/24 11:42:39 frueauf Exp $
+# $NetBSD: Makefile,v 1.14 1998/07/24 12:18:54 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -18,6 +18,7 @@
 #    SUBDIR += empire
 #    SUBDIR += flying
     SUBDIR += freeciv
+    SUBDIR += galaxa
 #    SUBDIR += galaxis
 #    SUBDIR += gnuchess
 #    SUBDIR += gnugo
