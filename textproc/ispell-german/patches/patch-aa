@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/15 15:26:35 wiz Exp $
+
+--- Makefile.orig	Sun Sep  3 02:57:42 2000
++++ Makefile
+@@ -45,7 +45,6 @@
+ 
+ 
+ 
+-MAKE = make
+ BUILDHASH = buildhash
+ ISPELL = ispell
+ SQ = sq
+@@ -75,7 +74,7 @@
+ 	cd dicts; sed "s/qq//g;s/\.//" abkuerzpunkt.txt $(WORTE) |sort -u > ../$@
+ 
+ install: german.hash
+-	cp german.aff german.hash `$(ISPELL) -vv |grep LIBDIR  |sed "s/.*\=//" |tr -d \"`
++	${BSD_INSTALL_DATA} german.aff german.hash `$(ISPELL) -vv |grep LIBDIR  |sed "s/.*\=//" |tr -d \"`
+ 
+ ## Swiss Ispell stuff:
+ 
