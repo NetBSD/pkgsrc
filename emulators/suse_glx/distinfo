@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 10:49:58 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/02/21 17:28:40 martti Exp $
 
-SHA1 (suse64/glx.rpm) = cd4042208af439aa990a63852507c8b11752d1e5
-Size (suse64/glx.rpm) = 978087 bytes
+SHA1 (suse64/glx-000229-53.i386.rpm) = f0035e37cad511c830c737969585921f7a01c069
+Size (suse64/glx-000229-53.i386.rpm) = 978141 bytes
