@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/01/16 07:19:07 zuntum Exp $
+# $NetBSD: Makefile,v 1.9 2002/01/21 18:51:30 zuntum Exp $
 #
 
 DISTNAME=	qmail-conf-0.60
@@ -12,14 +12,22 @@ MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.din.or.jp/~ushijima/qmail-conf/
 COMMENT=	collection of tools for setting up qmail services
 
-DEPENDS+=	qmail>=1.03:../../mail/qmail
+DEPENDS+=	qmail>=1.03nb1:../../mail/qmail
 DEPENDS+=	checkpassword-[0-9]*:../../sysutils/checkpassword
 
 ALL_TARGET=	#
 INSTALL_TARGET= setup check
 
+.include "../../mk/bsd.prefs.mk"
+
+NO_MTREE=	YES
+LOCALBASE=	/
+
 post-patch:
+	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
+	${ECHO} ${CC} ${STRIPFLAG} > ${WRKSRC}/conf-ld
 	${ECHO} ${LOCALBASE} > ${WRKSRC}/conf-ucspi-tcp
+	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} -f Makefile.ini djbdns="../djbdns-1.05"
