@@ -1,17 +1,21 @@
-# $NetBSD: Makefile,v 1.6 2000/11/18 07:24:15 itojun Exp $
+# $NetBSD: Makefile,v 1.7 2000/12/14 21:43:20 itojun Exp $
 #
 
-DISTNAME=	totd-1.1p4
+DISTNAME=	totd-1.1p5
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.pasta.cs.uit.no/pub/Vermicelli/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	feico@pasta.cs.uit.no
 HOMEPAGE=	http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html
 
-WRKSRC=         ${WRKDIR}/totd-1.1p4
+WRKSRC=         ${WRKDIR}/totd-1.1p5
 
 GNU_CONFIGURE=	YES
-# Does not regard USE_INET6 <- leave this line in for README-IPv6.html
+
+.include "../../mk/bsd.prefs.mk"
+# always IPv6 ready
+BUILD_DEFS+=	USE_INET6
 
 post-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/totd.conf.sample ${PREFIX}/etc/totd.conf.sample
