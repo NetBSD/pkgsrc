@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 1999/07/05 05:14:55 kim Exp $
+# $NetBSD: Makefile,v 1.36 1999/09/06 18:18:23 bad Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -9,6 +9,7 @@
     SUBDIR += amanda-common
     SUBDIR += amanda-server
     SUBDIR += amanda-client
+    SUBDIR += amanda-plot
     SUBDIR += asapm
     SUBDIR += cdrecord
 #    SUBDIR += cd-write
