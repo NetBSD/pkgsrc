@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.43 2001/03/06 16:14:35 wiz Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.44 2001/10/26 21:42:44 tron Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -96,7 +96,7 @@ ${SUBDIR}::
 .for __target in all fetch fetch-list package extract configure build clean \
 		cleandir distclean depend describe reinstall tags checksum \
 		makepatchsum mirror-distfiles deinstall show-downlevel \
-		show-pkgsrc-dir show-var bulk-install bulk-package \
+		show-pkgsrc-dir show-var show-vars bulk-install bulk-package \
 		${PKG_MISC_TARGETS}
 .if !target(__target)
 ${__target}: _SUBDIRUSE
