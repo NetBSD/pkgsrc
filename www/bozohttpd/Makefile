@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/27 09:04:31 itojun Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/31 12:12:58 itojun Exp $
 #
 
 DISTNAME=	bozohttpd-5.06
@@ -18,5 +18,12 @@ BUILD_DEFS+=	USE_INET6
 CPPFLAGS+=	-DINET6
 MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 .endif
+
+pre-patch:
+	${MV} ${WRKSRC}/bozohttpd.8 ${WRKSRC}/bozohttpd.8.in
+
+post-patch:
+	${SED} -e "s,@PREFIX@,${PREFIX},g" <${WRKSRC}/bozohttpd.8.in \
+	    >${WRKSRC}/bozohttpd.8
 
 .include "../../mk/bsd.pkg.mk"
