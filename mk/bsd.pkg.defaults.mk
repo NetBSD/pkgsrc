@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.174 2003/08/08 11:13:17 hubertf Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.175 2003/08/08 12:04:40 agc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -90,12 +90,12 @@ PKGSRC_MESSAGE_RECIPIENTS?=
 # Possible: any login names
 # Default: none
 
-PKGSRC_SHOW_BUILD_DEFS=yes
+PKGSRC_SHOW_BUILD_DEFS?=yes
 # Show BUILD_DEFS definitions for a package when it is being built
 # (BUILD_DEFS are extra definitions which govern how some packages are
 # built and behave)
-# Possible: defined, not defined
-# Default: defined
+# Possible: "yes", not "yes"
+# Default: "yes"
 
 PKGSRC_RUN_TEST?=	no
 # Run test target before install
