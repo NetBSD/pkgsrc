@@ -1,0 +1,61 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/12/31 21:19:50 agc Exp $
+
+Add NetBSD and Solaris platforms
+Add inb() and outb() from XFree86 sources.
+
+--- rio.cpp	1999/12/17 17:42:31	1.1
++++ rio.cpp	1999/12/17 17:44:25
+@@ -109,9 +109,53 @@
+ 	#define		CLOCK_SECOND			((int)CLOCKS_PER_SEC)
+ 	#define		DELETEARRAY				delete
+ 
++#elif defined(__NetBSD__)
++	// NetBSD g++
++	#include	<fcntl.h>
++	#include	<unistd.h>
++	#include	<machine/cpufunc.h>
++	#define		OUTPORT(p,v)			outb( p, v )
++	#define		INPORT(p)				inb( p )
++	#define		CLOCK_SECOND			CLOCKS_PER_SEC
++	#define		DELETEARRAY				delete[]
++
++#elif defined(__sun__) && defined(__svr4__)
++	// NetBSD g++
++	#include	<fcntl.h>
++	#include	<unistd.h>
++	#include	<sys/cpupart.h>
++	#include	<sys/cpuvar.h>
++	#include	<sys/ddi.h>
++	#include	<sys/sunddi.h>
++	#define		OUTPORT(p,v)			outb( p, v )
++	#define		INPORT(p)				inb( p )
++	#define		CLOCK_SECOND			CLOCKS_PER_SEC
++	#define		DELETEARRAY				delete[]
++
+ #else
+ 	// not supported
+ 	#error ! ! compiler/platform not supported ! !
++#endif
++
++#if defined(__NetBSD__)
++/* copied from the XFree86 sources */
++/* xc/programs/Xserver/hw/xfree86/common/compiler.h */
++static __inline__ unsigned int
++inb(unsigned short int port)
++{
++	unsigned char	ret;
++
++	__asm__ __volatile__("inb %1,%0" :
++		"=a" (ret) :
++		"d" (port));
++	return ret;
++}
++
++static __inline__ void
++outb(unsigned short int port, unsigned char val)
++{
++	__asm__ __volatile__("outb %0,%1" : :"a" (val), "d" (port));
++}
+ #endif
+ 
+ // port offset constants
