@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/12/14 23:15:46 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/01/05 21:59:46 xtraeme Exp $
 bin/file-roller
 lib/bonobo/libfile-roller-component.a
 lib/bonobo/libfile-roller-component.la
@@ -87,10 +87,10 @@ share/pixmaps/file-roller.png
 @dirrm share/omf/file-roller
 @comment in scrollkeeper: @dirrm share/omf
 @comment in gnome-dirs: @dirrm share/mime-info
-@dirrm share/gnome/help/file-roller/ru/figures
-@dirrm share/gnome/help/file-roller/ru
 @dirrm share/gnome/help/file-roller/uk/figures
 @dirrm share/gnome/help/file-roller/uk
+@dirrm share/gnome/help/file-roller/ru/figures
+@dirrm share/gnome/help/file-roller/ru
 @dirrm share/gnome/help/file-roller/C/figures
 @dirrm share/gnome/help/file-roller/C
 @dirrm share/gnome/help/file-roller
