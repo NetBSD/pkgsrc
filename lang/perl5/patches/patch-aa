@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 1998/08/07 11:39:04 agc Exp $
+$NetBSD: patch-aa,v 1.7 1998/08/12 02:36:47 hubertf Exp $
 
 --- Configure.orig	Fri Oct  3 18:57:39 1997
 +++ Configure	Fri Aug  7 12:31:44 1998
@@ -19,10 +19,10 @@ $NetBSD: patch-aa,v 1.6 1998/08/07 11:39:04 agc Exp $
 -	echo "Say 'sh $me', not 'sh <$me'"
 -	exit 1
 -fi
-+: if test ! -t 0; then
-+: 	echo "Say 'sh $me', not 'sh <$me'"
-+: 	exit 1
-+: fi
++# if test ! -t 0; then
++# 	echo "Say 'sh $me', not 'sh <$me'"
++# 	exit 1
++# fi
  
  : Test and see if we are running under ksh, either blatantly or in disguise.
  if (PATH=.; alias -x) >/dev/null 2>&1; then
