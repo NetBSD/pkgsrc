@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/05 10:01:19 grant Exp $
+
+SHA1 (pam_dbm-0.2.tar.gz) = 9e9404bb4d8ed1e34c8198ad8e7a2b38735beb6c
+Size (pam_dbm-0.2.tar.gz) = 109079 bytes
