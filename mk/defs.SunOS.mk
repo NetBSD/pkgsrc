@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.1 2001/06/12 12:49:55 jlam Exp $
+# $NetBSD: defs.SunOS.mk,v 1.2 2001/06/12 13:16:09 jlam Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -49,6 +49,7 @@ RMDIR?=		/usr/bin/rmdir
 SED?=		/usr/bin/sed
 SETENV?=	/usr/bin/env
 SH?=		/bin/ksh
+SORT?=		/usr/bin/sort
 SU?=		/usr/bin/su
 TAIL?=		/usr/xpg4/bin/tail
 TEST?=		/usr/bin/test
@@ -56,4 +57,5 @@ TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/usr/bin/true
 TYPE?=		/usr/bin/type
+WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs

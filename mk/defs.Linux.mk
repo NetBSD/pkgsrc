@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.1 2001/06/12 12:49:55 jlam Exp $
+# $NetBSD: defs.Linux.mk,v 1.2 2001/06/12 13:16:09 jlam Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -38,6 +38,7 @@ RMDIR?=		/bin/rmdir
 SED?=		/bin/sed
 SETENV?=	/usr/bin/env
 SH?=		/bin/sh
+SORT?=		/usr/bin/sort
 SU?=		/bin/su
 TAIL?=		/usr/bin/tail
 TEST?=		/usr/bin/test
@@ -45,4 +46,5 @@ TOUCH?=		/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/bin/true
 TYPE?=		type
+WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs -r
