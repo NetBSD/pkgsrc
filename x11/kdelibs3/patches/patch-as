@@ -1,0 +1,37 @@
+$NetBSD: patch-as,v 1.3.4.1 2004/08/13 13:05:05 agc Exp $
+
+Index: kioslave/http/kcookiejar/kcookieserver.cpp
+===================================================================
+RCS file: /home/kde/kdelibs/kioslave/http/kcookiejar/kcookieserver.cpp,v
+retrieving revision 1.50
+retrieving revision 1.51
+diff -u -p -r1.50 -r1.51
+--- kioslave/http/kcookiejar/kcookieserver.cpp	9 Jun 2003 10:56:42 -0000	1.50
++++ kioslave/http/kcookiejar/kcookieserver.cpp	20 Jul 2004 15:29:24 -0000	1.51
+@@ -131,7 +131,7 @@ bool KCookieServer::cookiesPending( cons
+   if (!KCookieJar::parseURL(url, fqdn, path))
+      return false;
+ 
+-  KCookieJar::extractDomains( fqdn, domains );
++  mCookieJar->extractDomains( fqdn, domains );
+   for( KHttpCookie *cookie = mPendingCookies->first();
+        cookie != 0L;
+        cookie = mPendingCookies->next())
+@@ -557,7 +557,7 @@ KCookieServer::setDomainAdvice(QString u
+    if (KCookieJar::parseURL(url, fqdn, dummy))
+    {
+       QStringList domains;
+-      KCookieJar::extractDomains(fqdn, domains);
++      mCookieJar->extractDomains(fqdn, domains);
+       mCookieJar->setDomainAdvice(domains[0],
+                                   KCookieJar::strToAdvice(advice));
+    }
+@@ -573,7 +573,7 @@ KCookieServer::getDomainAdvice(QString u
+    if (KCookieJar::parseURL(url, fqdn, dummy))
+    {
+       QStringList domains;
+-      KCookieJar::extractDomains(fqdn, domains);
++      mCookieJar->extractDomains(fqdn, domains);
+       advice = mCookieJar->getDomainAdvice(domains[0]);
+    }
+    return KCookieJar::adviceToStr(advice);
