@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/26 15:16:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/14 17:21:40 jlam Exp $
 #
 
 DISTNAME=	avi-xmms-1.2.2
@@ -15,9 +15,7 @@ COMMENT=	Avifile and SDL based video plugin for XMMS
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_GNU_TOOLS+=		make
-
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 .include "../../audio/xmms/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"

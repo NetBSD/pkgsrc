@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/14 03:58:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 17:21:34 jlam Exp $
 #
 
 DISTNAME=	xmms-nebulus-0.6.0
@@ -12,7 +12,6 @@ COMMENT=	Xmms plugin that uses OpenGL
 
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=	YES
 
 .include "../../audio/xmms/buildlink2.mk"

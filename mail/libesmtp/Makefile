@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/11 02:54:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/14 17:21:44 jlam Exp $
 
 DISTNAME=	libesmtp-1.0.1
 PKGREVISION=	1
@@ -16,8 +16,6 @@ USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--enable-all
 CONFIGURE_ARGS+=	--disable-isoc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/02/12 15:17:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/14 17:21:38 jlam Exp $
 #
 
 DISTNAME=		libglade-2.0.1
@@ -17,7 +17,6 @@ USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	libglade-2.0.pc.in
 
 CONFIGURE_ENV+=		jh_cv_path_python="${PYTHONBIN}"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/01/20 12:18:16 agc Exp $
+# $NetBSD: Makefile,v 1.27 2004/02/14 17:21:42 jlam Exp $
 #
 
 DISTNAME=	libggi-2.0.4.src
@@ -17,9 +17,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
 USE_X11=		yes
-
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug

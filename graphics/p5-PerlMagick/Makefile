@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2003/09/18 17:51:45 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2004/02/14 17:21:43 jlam Exp $
 
 .include "../../graphics/ImageMagick/Makefile.common"
 
@@ -15,8 +15,6 @@ FILESDIR=		${.CURDIR}/../../graphics/ImageMagick/files
 PATCHDIR=		${.CURDIR}/../../graphics/ImageMagick/patches
 
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-
 USE_BUILDLINK2=		YES
 
 USE_PERL5=		run

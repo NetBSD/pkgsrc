@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/09 18:47:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:35 jlam Exp $
 #
 
 DISTNAME=		mergeant-0.12.1
@@ -20,7 +20,6 @@ USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../databases/libgnomedb/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"

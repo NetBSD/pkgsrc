@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/22 07:15:01 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/14 17:21:33 jlam Exp $
 #
 
 DISTNAME=	sweep-0.8.2
@@ -14,15 +14,13 @@ DEPENDS+=	gnome1-dirs>=1.0:../../misc/gnome1-dirs
 
 BUILD_USES_MSGFMT=	YES
 
-GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
+USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 
-USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-oggtest
 CONFIGURE_ARGS+=	--disable-vorbistest
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/03 18:49:46 reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/14 17:21:44 jlam Exp $
 #
 
 DISTNAME=		blccc-1.99
@@ -13,8 +13,7 @@ COMMENT=		Blinkenlights Chaos Control Center
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
-
-SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+SHLIBTOOL_OVERRIDE=	libtool
 
 EGDIR=			${PREFIX}/share/examples/blccc
 

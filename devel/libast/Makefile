@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/02/11 22:56:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/14 17:21:37 jlam Exp $
 
 DISTNAME=		libast-0.5
 PKGREVISION=		6
@@ -12,7 +12,6 @@ COMMENT=		The Library of Assorted Spiffy Things
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 TEST_TARGET=		test
 
 .include "../../mk/bsd.prefs.mk"

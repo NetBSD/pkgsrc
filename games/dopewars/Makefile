@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/01/24 13:30:55 grant Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/14 17:21:40 jlam Exp $
 
 DISTNAME=		dopewars-1.5.9
 PKGREVISION=		2
@@ -13,7 +13,6 @@ COMMENT=		Make a fortune dealing drugs on the streets of New York
 
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
 

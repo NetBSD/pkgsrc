@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/15 09:13:47 markd Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/14 17:21:32 jlam Exp $
 #
 
 .include "../../devel/SDL/Makefile.common"
@@ -10,7 +10,7 @@ COMMENT=	SDL plugin to output sound through the Network Audio System
 
 CONFIGURE_ARGS+=	--enable-nas
 
-SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+SHLIBTOOL_OVERRIDE=	libtool
 
 BUILD_DIRS=		${WRKSRC}/src/audio/nas
 
