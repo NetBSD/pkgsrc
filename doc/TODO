@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.461 2003/04/12 04:29:36 rh Exp $
+$NetBSD: TODO,v 1.462 2003/04/12 14:16:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -110,7 +110,6 @@ Suggested package updates
 	o dylan-interpreter-2.3.9
 	o eclipse-2.1
 	o elm-me-2.4pl101
-	o emacs-21.3
 	o exim-4.12 [pkg/19850]
 	o exim-4.14
 	o exmh-2.6.2
@@ -159,7 +158,6 @@ Suggested package updates
 	o jove-4.16.0.61
 	o larswm-7.2.9
 	o lcms-1.0.9
-	o leim-21.3
 	o lesstif-0.93.41
 	o libole2-2.2.8
 	o librsvg-2.2.2.1
