@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1.1.1 2001/11/29 11:41:28 seb Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/11/29 13:32:27 jlam Exp $
 #
 # This Makefile fragment is included by packages that use the Hesiod name 
 # service library. 
@@ -33,7 +33,7 @@ _NEED_HESIOD=		YES
 .endif
 
 .if ${_NEED_HESIOD} == "YES"
-DEPENDS+=		${BUILDLINK_DEPENDS.hesiod}:../../net/hesiod
+BUILD_DEPENDS+=		${BUILDLINK_DEPENDS.hesiod}:../../net/hesiod
 EVAL_PREFIX+=		BUILDLINK_PREFIX.hesiod=hesiod
 BUILDLINK_PREFIX.hesiod_DEFAULT=	${LOCALBASE}
 .else
