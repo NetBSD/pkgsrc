@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1.1.1 2002/06/04 08:31:10 uebayasi Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/06/04 16:12:04 cjep Exp $
 #
 # This Makefile fragment is included by packages that use libtabe.
 #
@@ -18,7 +18,7 @@ LIBTABE_BUILDLINK_MK=	# defined
 .include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.libtabe?=	libtabe>=0.2.5
-DEPENDS+=	${BUILDLINK_DEPENDS.libtabe}:../../chinese/libtabe
+DEPENDS+=	${BUILDLINK_DEPENDS.libtabe}:../../inputmethod/libtabe
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libtabe=libtabe
 BUILDLINK_PREFIX.libtabe_DEFAULT=	${LOCALBASE}
