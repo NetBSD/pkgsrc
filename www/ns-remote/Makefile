@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2001/08/29 22:41:27 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/12/22 14:43:19 abs Exp $
 
 DISTNAME=	ns-remote
-PKGNAME=	ns-remote-1.4
+PKGNAME=	ns-remote-1.5
 CATEGORIES=	www
 MASTER_SITES=	http://home.netscape.com/newsref/std/
 DISTFILES=	remote.c vroot.h
