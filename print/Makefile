@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 1997/11/22 23:12:58 augustss Exp $
+# $NetBSD: Makefile,v 1.2 1997/11/26 15:35:36 agc Exp $
 #
 
     SUBDIR += ghostscript5
+    SUBDIR += teTeX
 
 .include <bsd.port.subdir.mk>
