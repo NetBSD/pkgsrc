@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1933 2004/07/14 08:35:00 adrianp Exp $
+$NetBSD: TODO,v 1.1934 2004/07/14 09:39:02 grant Exp $
 
 Suggested new packages
 ======================
@@ -331,7 +331,6 @@ Suggested package updates
 	o p5-Exception-Class-1.17
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
-	o php-4.3.8
 	o php-5.0.0
 	o phppgadmin-3.4 [pkg/26130]
 	o physfs-1.0.0
