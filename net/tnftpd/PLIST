@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/27 04:53:44 lukem Exp $
+libexec/tnftpd
+man/man5/ftpd.conf.5
+man/man5/ftpusers.5
+man/man8/ftpd.8
