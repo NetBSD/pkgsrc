@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.36 2004/06/02 23:20:55 heinz Exp $
+# $NetBSD: Makefile,v 1.37 2004/09/27 16:12:04 wiz Exp $
 #
 
-DISTNAME=       tar-1.13.25
-PKGNAME=	gtar-base-1.13.25
-PKGREVISION=	2
+DISTNAME=       tar-1.14
+PKGNAME=	gtar-base-1.14
 SVR4_PKGNAME=	gtarb
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://alpha.gnu.org/gnu/tar/ \
-		ftp://ftp.sunsite.org.uk/Mirrors/alpha.gnu.org/gnu/tar/ \
-		ftp://ftp.funet.fi/pub/mirrors/alpha.gnu.org/gnu/tar/
+MASTER_SITES=	${MASTER_SITE_GNU:=tar/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/tar/tar.html
 COMMENT=	The GNU tape archiver with remote magnetic tape support
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 BUILD_USES_MSGFMT=	YES
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
@@ -37,6 +35,9 @@ CONFIGURE_ARGS+=	--program-prefix=${GTAR_PROGRAM_PREFIX}
 .endif
 
 CONFIGURE_ARGS+=	--with-catgets
+# lie to configure about gettext -- it does not need GNU gettext
+CONFIGURE_ENV+=		gt_cv_func_gnugettext2_libintl=yes
+
 PLIST_SUBST+=		GTAR_PROGRAM_PREFIX=${GTAR_PROGRAM_PREFIX}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 BUILD_DEFS+=		GTAR_PROGRAM_PREFIX
@@ -48,9 +49,6 @@ PLIST_SUBST+=           GTAR_LINK=""
 .else
 PLIST_SUBST+=           GTAR_LINK="@comment "
 .endif
-
-post-patch:
-	@${TOUCH} ${WRKSRC}/po/fr.po
 
 post-install:
 	${INSTALL_MAN_DIR} ${PREFIX}/man/man1

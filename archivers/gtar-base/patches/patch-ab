@@ -1,40 +1,40 @@
-$NetBSD: patch-ab,v 1.8 2002/11/20 16:57:55 bouyer Exp $
+$NetBSD: patch-ab,v 1.9 2004/09/27 16:12:04 wiz Exp $
 
---- src/tar.c.orig	Fri Sep 21 02:11:27 2001
-+++ src/tar.c	Sun Nov 17 18:24:55 2002
-@@ -136,6 +136,7 @@
-   NEWER_MTIME_OPTION,
+--- src/tar.c.orig	2004-05-10 13:49:19.000000000 +0200
++++ src/tar.c
+@@ -196,6 +196,7 @@ enum
    NO_ANCHORED_OPTION,
    NO_IGNORE_CASE_OPTION,
+   NO_OVERWRITE_DIR_OPTION,
 +  NO_UNLINK_FIRST_OPTION,
    NO_WILDCARDS_OPTION,
    NO_WILDCARDS_MATCH_SLASH_OPTION,
    NULL_OPTION,
-@@ -233,6 +234,7 @@
+@@ -292,6 +293,7 @@ static struct option long_options[] =
    {"no-recursion", no_argument, &recursion_option, 0},
    {"no-same-owner", no_argument, &same_owner_option, -1},
    {"no-same-permissions", no_argument, &same_permissions_option, -1},
 +  {"no-unlink-first", no_argument, NULL, NO_UNLINK_FIRST_OPTION},
-   {"numeric-owner", no_argument, &numeric_owner_option, 1},
+   {"numeric-owner", no_argument, 0, NUMERIC_OWNER_OPTION},
+   {"occurrence", optional_argument, 0, OCCURRENCE_OPTION},
    {"old-archive", no_argument, 0, 'o'},
-   {"one-file-system", no_argument, 0, 'l'},
-@@ -266,6 +268,7 @@
+@@ -327,6 +329,7 @@ static struct option long_options[] =
    {"touch", no_argument, 0, 'm'},
    {"uncompress", no_argument, 0, 'Z'},
    {"ungzip", no_argument, 0, 'z'},
 +  {"unlink", no_argument, 0, 'U'},
    {"unlink-first", no_argument, 0, 'U'},
    {"update", no_argument, 0, 'u'},
-   {"use-compress-program", required_argument, 0, USE_COMPRESS_PROGRAM_OPTION},
-@@ -327,6 +330,7 @@
+   {"utc", no_argument, 0, UTC_OPTION },
+@@ -390,6 +393,7 @@ Operation modifiers:\n\
        --overwrite            overwrite existing files when extracting\n\
-       --overwrite-dir        overwrite directory metadata when extracting\n\
+       --no-overwrite-dir     preserve metadata of existing directories\n\
    -U, --unlink-first         remove each file prior to extracting over it\n\
 +      --no-unlink-first      don't remove each file prior to extracting\n\
        --recursive-unlink     empty hierarchies prior to extracting directory\n\
    -S, --sparse               handle sparse files efficiently\n\
    -O, --to-stdout            extract files to standard output\n\
-@@ -510,6 +514,7 @@
+@@ -604,6 +608,7 @@ decode_options (int argc, char **argv)
  
    owner_option = -1;
    group_option = -1;
@@ -42,14 +42,14 @@ $NetBSD: patch-ab,v 1.8 2002/11/20 16:57:55 bouyer Exp $
  
    backup_suffix_string = getenv ("SIMPLE_BACKUP_SUFFIX");
  
-@@ -843,6 +848,10 @@
- 
-       case 'U':
+@@ -916,6 +921,10 @@ decode_options (int argc, char **argv)
  	old_files_option = UNLINK_FIRST_OLD_FILES;
-+	break;
-+
-+      case NO_UNLINK_FIRST_OPTION:
-+	old_files_option = 0;
  	break;
  
-       case 'v':
++      case NO_UNLINK_FIRST_OPTION:
++	old_files_option = 0;
++	break;
++
+       case UTC_OPTION:
+ 	utc_option = true;
+ 	break;
