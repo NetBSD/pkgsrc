@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8207 2004/12/02 00:09:45 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.8208 2004/12/02 04:09:00 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5704,3 +5704,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gv to 3.6.0 [xtraeme 2004-12-01]
 	Updated wesnoth to 0.8.7 [wiz 2004-12-01]
 	Updated ng-spice to 15 [dmcmahill 2004-12-01]
+	Added proxsmtp-0.6 [jlam 2004-12-01]
