@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6949 2004/08/19 15:28:18 adam Exp $
+$NetBSD: CHANGES,v 1.6950 2004/08/19 15:32:10 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3915,3 +3915,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated getmail to 4.0.12 [schmonz 2004-08-19]
 	Added p5-CGI-Session-3.95 [wennmach 2004-08-19]
 	Updated ImageMagick to 6.0.5-2 [adam 2004-08-19]
+	Updated codeville to 0.1.8 [drochner 2004-08-19]
