@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/01/27 08:16:00 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/27 08:24:42 jtb Exp $
 
 DISTNAME=	GMT3.3.6
 PKGNAME=	GMT-3.3.6
@@ -37,6 +37,9 @@ INSTALL_TARGET= install-all
 
 post-extract:
 	${MV} -f ${WRKSRC}/www/gmt/doc/ps/ ${WRKSRC}
+
+pre-configure:
+	(cd ${WRKSRC} && autoreconf)
 	for e in ${WRKSRC}/examples/*.bat ${WRKSRC}/examples/*/*.bat; do\
 	${RM} -f $$e;							\
 	done
@@ -46,14 +49,11 @@ post-extract:
 	${MV} -f $$h.tmp $$h;				\
 	done
 .if exists(${BASH_PREFIX}/bin/bash)
-	for b in ${WKRSRC}/examples/*.bash ${WKRSRC}/examples/*/*.bash; do \
-	${SED} -e 's:\/bin:'${BASH_PREFIX}':g' < $$b > $$b.tmp &&	   \
-	${MV} -f $$b.tmp $$b;						   \
-	done
+.for b in ${WKRSRC}/examples/*.bash ${WKRSRC}/examples/*/*.bash
+${SED} -e 's:\/bin:'${BASH_PREFIX}':g' < $$b > $$b.tmp && ${MV} -f $$b.tmp $$b
+.endfor
 .endif
 
-pre-configure:
-	(cd ${WRKSRC} && autoreconf)
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gmt
