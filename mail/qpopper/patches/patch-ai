@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.2 1999/07/24 00:05:11 tron Exp $
+$NetBSD: patch-ai,v 1.3 1999/09/07 17:58:22 bad Exp $
 
 --- pop_init.c.orig	Thu Jul  9 16:44:07 1998
-+++ pop_init.c	Fri Jul  9 08:20:24 1999
++++ pop_init.c	Tue Sep  7 10:38:33 1999
 @@ -44,6 +44,8 @@
  
  #include <popper.h>
@@ -46,7 +46,7 @@ $NetBSD: patch-ai,v 1.2 1999/07/24 00:05:11 tron Exp $
  authenticate(p, addr)
       POP     *p;
 -     struct sockaddr_in *addr;
-+     struct socket *addr;
++     union sockunion *addr;
  {
  
  #ifdef KERBEROS
@@ -55,7 +55,7 @@ $NetBSD: patch-ai,v 1.2 1999/07/24 00:05:11 tron Exp $
      int auth;
    
 -    if (p->kerberos) {
-+    if (p->kerberos && addr->sa_family == AF_INET) {	/*XXX*/
++    if (p->kerberos && addr->su_family == AF_INET) {	/*XXX*/
  	strcpy(instance, "*");
  	auth = krb_recvauth(0L, 0, &ticket, KERBEROS_SERVICE, instance,
 -			    addr, (struct sockaddr_in *) NULL,
