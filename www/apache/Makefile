@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1998/09/17 18:18:54 cjs Exp $
+# $NetBSD: Makefile,v 1.20 1998/10/02 14:40:13 tv Exp $
 #
 
 DISTNAME=       apache_1.3.1
@@ -41,4 +41,8 @@ post-install:
 
 .if !defined(NOPIC)
 CONFIGURE_ARGS+=--enable-module=so --enable-shared=include
+.endif
+
+.if (${SHLIB_TYPE} == "ELF")
+CONFIGURE_ENV+=	LDFLAGS_SHLIB_EXPORT=-Wl,--export-dynamic
 .endif
