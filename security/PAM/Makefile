@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2004/01/08 19:18:00 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/12 04:31:09 jlam Exp $
 #
 
-DISTNAME=	Linux-${PKGNAME}
-PKGNAME=	PAM-0.77
+DISTNAME=	Linux-PAM-0.77
+PKGNAME=	${DISTNAME:S/Linux-//}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.kernel.org/pub/linux/libs/pam/pre/library/ \
 		ftp://ftp.kernel.org/pub/linux/libs/pam/pre/library/ \
@@ -73,6 +74,13 @@ CONF_FILES=		${EGDIR}/pam.conf ${PKG_SYSCONFBASEDIR}/pam.conf
 .for FILE in ${CFILES}
 CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
+
+post-configure:
+	cd ${WRKSRC}; for file in libpam/pam_private.h; do		\
+		${SED}	-e "s|/etc/|${PKG_SYSCONFBASEDIR}/|g"		\
+			$$file > $$file.new;				\
+		${MV} -f $$file.new $$file;				\
+	done
 
 # this is so it won't try to interactively install any configs
 pre-build:
