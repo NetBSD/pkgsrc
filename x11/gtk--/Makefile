@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 1999/03/14 17:12:53 rh Exp $
+# $NetBSD: Makefile,v 1.3 1999/03/14 17:18:28 rh Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/12 16:50:43 vanilla Exp
 #
 
 DISTNAME=	Gtk---1.0.0
 PKGNAME=	gtk---1.0.0
-CATEGORIES=	devel
+CATEGORIES=	x11 devel
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/gtk--/ \
 		ftp://gd.tuwien.ac.at/graphics/gimp/gtk/gtk--/ \
 		ftp://ftp.u-aizu.ac.jp/pub/graphics/tools/gimp/gtk/gtk--/ \
