@@ -1,7 +1,22 @@
-# $NetBSD: builtin.mk,v 1.5 2004/04/02 23:41:50 wiz Exp $
+# $NetBSD: builtin.mk,v 1.6 2004/12/03 23:03:09 jlam Exp $
 
 _OPENSSL_PKGSRC_PKGNAME=	openssl-0.9.6m
 _OPENSSL_OPENSSLV_H=		/usr/include/openssl/opensslv.h
+
+.for _lib_ in des
+.  if !defined(_BLNK_LIB_FOUND.${_lib_})
+_BLNK_LIB_FOUND.${_lib_}!=	\
+	if ${TEST} "`${ECHO} /usr/lib/lib${_lib_}.*`" != "/usr/lib/lib${_lib_}.*"; then \
+		${ECHO} "yes";						\
+	elif ${TEST} "`${ECHO} /lib/lib${_lib_}.*`" != "/lib/lib${_lib_}.*"; then \
+		${ECHO} "yes";						\
+	else								\
+		${ECHO} "no";						\
+	fi
+BUILDLINK_VARS+=	_BLNK_LIB_FOUND.${_lib_}
+.  endif
+.endfor
+.undef _lib_
 
 .if !defined(IS_BUILTIN.openssl)
 IS_BUILTIN.openssl=	no
@@ -130,6 +145,46 @@ BUILDLINK_VARS+=	_NEED_NEWER_OPENSSL
 PKG_SKIP_REASON=	\
 	"Unable to satisfy dependency: ${BUILDLINK_DEPENDS.openssl}"
 .endif
+
+# By default, we don't bother with the old DES API.
+USE_OLD_DES_API?=	no
+
+.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+BUILDLINK_PREFIX.openssl=	/usr
+#
+# If we're using the old DES API, then check to see if the old DES
+# code was factored out into a separate library and header files and
+# no longer a part of libcrypto.
+#
+.  if !empty(USE_OLD_DES_API:M[yY][eE][sS]) && \
+      !exists(${BUILDLINK_PREFIX.openssl}/include/openssl/des_old.h)
+.    if exists(${BUILDLINK_PREFIX.openssl}/include/des.h) && \
+        !empty(_BLNK_LIB_FOUND.des:M[yY][eE][sS])
+BUILDLINK_TRANSFORM+=		l:crypto:des:crypto
+WRAPPER_REORDER_CMDS+=		reorder:l:des:crypto
+.    endif
+
+BUILDLINK_TARGETS+=		buildlink-openssl-des-old.h
+.    if !target(buildlink-openssl-des-old.h)
+.PHONY: buildlink-openssl-des-old.h
+buildlink-openssl-des-old.h:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	dest="${BUILDLINK_DIR}/include/openssl/des_old.h";		\
+	if ${TEST} ! -f "$$dest"; then					\
+		for src in						\
+			${BUILDLINK_PREFIX.openssl}/include/des.h	\
+			${BUILDLINK_PREFIX.openssl}/include/openssl/des.h; \
+		do							\
+			if ${TEST} -f "$$src"; then			\
+				${MKDIR} -p `${DIRNAME} "$$dest"`;	\
+				${LN} -fs $$src $$dest;			\
+				break;					\
+			fi;						\
+		done;							\
+	fi
+.    endif
+.  endif # USE_OLD_DES_API == yes
+.endif	# USE_BUILTIN.openssl == yes
 
 .if defined(PKG_SYSCONFDIR.openssl)
 SSLCERTS=	${PKG_SYSCONFDIR.openssl}/certs
