@@ -1,10 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:37:02 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/08/31 19:19:12 wiz Exp $
 #
 
-DISTNAME=	fcpackage.2_1
-PKGNAME=	fontconfig-2.1
-PKGREVISION=	5
-WRKSRC=		${WRKDIR}/${DISTNAME}/fontconfig
+DISTNAME=	fontconfig-2.2.1
 CATEGORIES=	fonts gnome
 MASTER_SITES=	http://fontconfig.org/release/
 
@@ -18,8 +15,11 @@ BUILDLINK_DEPENDS.freetype2=  freetype2>=2.0.9
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
+USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 USE_GMAKE=		YES
+
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 PKG_SYSCONFSUBDIR=	fontconfig
 
@@ -34,13 +34,7 @@ CONFIGURE_ARGS+=	--with-x
 EGDIR=		${PREFIX}/share/examples/fontconfig
 CONF_FILES=	${EGDIR}/fonts.conf ${PKG_SYSCONFDIR}/fonts.conf
 CONF_FILES+=	${EGDIR}/fonts.dtd ${PKG_SYSCONFDIR}/fonts.dtd
-
-post-install:
-	${INSTALL_MAN} ${WRKSRC}/src/fontconfig.man \
-	    ${PREFIX}/man/man3/fontconfig.3
-.for f in fc-cache fc-list
-	${INSTALL_MAN} ${WRKSRC}/$f/$f.man ${PREFIX}/man/man1/$f.1
-.endfor
+CONF_FILES+=	${EGDIR}/local.conf ${PKG_SYSCONFDIR}/local.conf
 
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
