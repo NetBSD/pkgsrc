@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2001/09/27 23:18:14 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2001/11/29 01:12:37 hubertf Exp $
 
 DISTNAME=	xv-3.10a
-PKGNAME=	${DISTNAME}nb1
+PKGREVISION=	1
 CATEGORIES=     graphics x11
 MASTER_SITES=	ftp://ftp.cis.upenn.edu/pub/xv/ \
 		ftp://ftp.kuis.kyoto-u.ac.jp/X11/contrib/clients/xv/ \

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2001/09/22 17:48:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/29 01:12:36 hubertf Exp $
 #
 
 DISTNAME=	mpeg_encode-1.5b-src
-PKGNAME=	${DISTNAME:S/-src//}nb1
+PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	graphics net
 MASTER_SITES=	ftp://mm-ftp.cs.berkeley.edu/pub/multimedia/mpeg/encode/
 

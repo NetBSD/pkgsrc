@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/04/14 21:43:51 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/11/29 01:12:40 hubertf Exp $
 
 DISTNAME=	dcdflib.c-1.1
-PKGNAME=	dcdflib.c-1.1nb1
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	ftp://odin.mdacc.tmc.edu/pub/source/
 

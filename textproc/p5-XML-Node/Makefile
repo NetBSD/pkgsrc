@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2001/11/26 06:50:25 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/11/29 01:12:50 hubertf Exp $
 #
 
 DISTNAME=	XML-Node-0.10
-PKGNAME=	p5-${DISTNAME}nb1
+PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 SVR4_PKGNAME=	p5xno
 CATEGORIES=	textproc perl5
 MASTER_SITES=	http://belmont-shores.ics.uci.edu/pub/ \

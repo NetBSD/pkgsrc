@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.215 2001/11/27 03:03:11 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.216 2001/11/29 01:12:24 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -1977,8 +1977,15 @@ NOMAN=YES either in the environment or in /etc/mk.conf.
 
 When making fixes to an existing package it can be useful to change
 the version number in PKGNAME. To avoid conflicting with future versions
-by the original author, use a 'nb1' suffix (later versions should
-increment this to give 'nb2' and so on).
+by the original author, a 'nb1' ('nb2', ...) suffix is used on package
+versions. The "nb" is treated like a "." by the pkg tools.
+
+To set the package's revision, set the PKGREVISION variable, e.g.
+
+DISTNAME=	foo-17.42
+PKGREVISION=	9
+
+This will result in a PKGNAME of foo-17.42nb9.
 
 
  10.18 "Could not find bsd.own.mk" - what's wrong?

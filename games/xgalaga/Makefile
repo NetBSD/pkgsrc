@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2001/09/10 01:08:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/11/29 01:12:33 hubertf Exp $
 #
 
 DISTNAME=		xgalaga-2.0.34
-PKGNAME=		${DISTNAME}nb1
+PKGREVISION=		1
 CATEGORIES=		games x11
 MASTER_SITES=		http://ogresoft.dyn.ml.org/
 

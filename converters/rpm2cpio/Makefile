@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2001/11/28 05:20:43 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/11/29 01:12:28 hubertf Exp $
 # FreeBSD Id: ports/misc/rpm2cpio/Makefile,v 1.2 1999/08/25 07:22:29 obrien Exp
 
 DISTNAME=	rpm2cpio
-PKGNAME=	rpm2cpio-1.0nb1
+PKGNAME=	rpm2cpio-1.0
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.iagora.com/~espel/
 EXTRACT_SUFX=	# none

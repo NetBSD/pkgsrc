@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2001/09/23 21:01:29 tron Exp $
+# $NetBSD: Makefile,v 1.31 2001/11/29 01:12:47 hubertf Exp $
 #
 
 V=		2.05
 DV=		2.05
 DISTNAME=	bash-${V}
-PKGNAME=	${DISTNAME}nb1
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://slc2.ins.cwru.edu/pub/dist/

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2001/07/27 10:50:48 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2001/11/29 01:12:30 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/09/15 07:22:06 tg Exp
 #
 
 DISTNAME=		noweb-2.9a
-PKGNAME=		noweb-2.9anb1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.cs.virginia.edu/pub/nr/
 EXTRACT_SUFX=		.tgz

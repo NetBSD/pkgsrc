@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2001/10/25 04:13:43 fredb Exp $
+# $NetBSD: Makefile,v 1.32 2001/11/29 01:12:45 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
 DISTNAME=	teTeX-src-1.0.7
-PKGNAME=	teTeX-bin-1.0.7nb1
+PKGNAME=	teTeX-bin-1.0.7
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/teTeX-1.0
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}

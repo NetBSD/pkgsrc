@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.42 2001/09/27 23:18:09 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2001/11/29 01:12:34 hubertf Exp $
 #
 
 .include "Makefile.common"
 
 DISTNAME=	Mesa-${MESA_VERSION}
-PKGNAME=	${DISTNAME}nb1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES= 	# empty
 DISTFILES=	# empty

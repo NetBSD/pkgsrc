@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2001/03/23 14:36:04 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/11/29 01:12:38 hubertf Exp $
 
 DISTNAME=		clisp-2000-03-06
-PKGNAME=		clisp-20000306nb1
+PKGNAME=		clisp-20000306
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp2.cons.org/pub/lisp/clisp/source/ \
 			ftp://ftp.tu-darmstadt.de/pub/programming/languages/lisp/clisp/source/
