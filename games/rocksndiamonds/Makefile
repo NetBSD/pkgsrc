@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/03/06 20:08:20 heinz Exp $
+# $NetBSD: Makefile,v 1.19 2004/03/08 08:43:33 adam Exp $
 #
 
 .include "Makefile.common"
@@ -11,5 +11,3 @@ ALL_TARGET=	solaris
 ALL_TARGET=	x11
 .endif
 CONFLICTS=	rocksndiamonds-sdl-[1-9]*
-# MacOS X/Darwin always needs sdl, so use rocksndiamonds-sdl
-NOT_FOR_PLATFORM=	Darwin-*-*
