@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5592 2004/04/15 16:44:27 jmmv Exp $
+$NetBSD: CHANGES,v 1.5593 2004/04/15 20:14:30 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1970,3 +1970,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-vfs2 to 2.6.0nb1 [jmmv 2004-04-15]
 	Added gnome-vfs2-cdda-2.6.0 [jmmv 2004-04-15]
 	Added gnome-vfs2-smb-2.6.0 [jmmv 2004-04-15]
+	Updated bind to 9.2.3nb4 [tron 2004-04-15]
