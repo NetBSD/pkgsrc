@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4127 2003/12/15 00:34:40 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4128 2003/12/15 10:34:40 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5175,3 +5175,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ggv2 to 2.4.0 [xtraeme 2003-12-14]
 	Updated gnome-session to 2.4.1 [xtraeme 2003-12-14]
 	Updated gnome-themes to 2.4.1 [xtraeme 2003-12-14]
+	Updated ethereal to 0.10.0a [martti 2003-12-15]
