@@ -1,5 +1,5 @@
-$NetBSD: md5,v 1.13 2001/03/04 04:10:48 kim Exp $
+$NetBSD: md5,v 1.14 2001/03/12 07:18:06 itojun Exp $
 
-MD5 (postfix/release-20010228.tar.gz) = 6af46cc231ca1e09e60393542d5611bd
-MD5 (postfix/postfix-20010228release-v6-20010302a.diff.gz) = e8b5954bc0466239c393235319476ff7
-MD5 (postfix/postfix-20010228release-ercpt.diff) = 9f5c4c422cb27cdef1d090ca39c44c3c
+SHA1 (postfix/release-20010228.tar.gz) = a3815938b963073053e833cc8adbaed7f6c71297
+SHA1 (postfix/postfix-20010228release-v6-20010312a.diff.gz) = 6991278d09e0e3dc699650c7698973e65be2a95a
+SHA1 (postfix/postfix-20010228release-ercpt.diff) = c6abc5d57ca1a36de85dadee878b266d707ad3cd
