@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2002/06/28 09:05:16 seb Exp $
+# $NetBSD: Makefile,v 1.82 2002/06/28 17:10:16 jlam Exp $
 
 DISTNAME=		openssh-3.4p1
 PKGNAME=		openssh-3.4.0.1
@@ -42,10 +42,20 @@ SSH_PID_DIR=		${SSH_PID_DIR.${OPSYS}}
 .endif
 
 PKG_SYSCONFSUBDIR=	ssh
+MANDIR=			man
+RCD_SCRIPTS_EGDIR=	etc/rc.d
+
+PLIST_SUBST+=		MANDIR=${MANDIR}
+PLIST_SUBST+=		RCD_SCRIPTS_EGDIR=${RCD_SCRIPTS_EGDIR}
+
+.if defined(UPDATE_INTREE_OPENSSH)
+.  include "Makefile.intree"
+.endif
 
 USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${MANDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_DIR}
@@ -104,6 +114,7 @@ SUPPORT_FILES=		# empty
 .for FILE in ${SUPPS}
 SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
+OWN_DIRS=		/var/chroot/sshd
 RCD_SCRIPTS=		sshd
 
 PLIST_SRC+=		${.CURDIR}/PLIST
@@ -122,8 +133,7 @@ post-install:
 #.if defined(USE_PAM)
 #	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.freebsd ${EGDIR}/sshd.pam
 #.endif
-	${INSTALL_SCRIPT} ${WRKDIR}/sshd ${PREFIX}/etc/rc.d/sshd
-	${MKDIR} /var/chroot/sshd
+	${INSTALL_SCRIPT} ${WRKDIR}/sshd ${PREFIX}/${RCD_SCRIPTS_EGDIR}/sshd
 
 .include "../../devel/zlib/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
