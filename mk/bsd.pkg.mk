@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.756 2001/06/12 12:49:55 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.757 2001/06/12 13:17:01 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -458,14 +458,14 @@ INSTALL_DATA_DIR?= \
 INSTALL_MAN_DIR?= \
 	${INSTALL} -d -o ${MANOWN} -g ${MANGRP} -m ${BINMODE}
 
-INSTALL_MACROS=	BSD_INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-			BSD_INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
-			BSD_INSTALL_DATA="${INSTALL_DATA}" \
-			BSD_INSTALL_MAN="${INSTALL_MAN}" \
-			BSD_INSTALL_PROGRAM_DIR="${INSTALL_PROGRAM_DIR}" \
-			BSD_INSTALL_SCRIPT_DIR="${INSTALL_SCRIPT_DIR}" \
-			BSD_INSTALL_DATA_DIR="${INSTALL_DATA_DIR}" \
-			BSD_INSTALL_MAN_DIR="${INSTALL_MAN_DIR}"
+INSTALL_MACROS=	BSD_INSTALL_PROGRAM="${INSTALL_PROGRAM}"		\
+		BSD_INSTALL_SCRIPT="${INSTALL_SCRIPT}"			\
+		BSD_INSTALL_DATA="${INSTALL_DATA}"			\
+		BSD_INSTALL_MAN="${INSTALL_MAN}"			\
+		BSD_INSTALL_PROGRAM_DIR="${INSTALL_PROGRAM_DIR}"	\
+		BSD_INSTALL_SCRIPT_DIR="${INSTALL_SCRIPT_DIR}"		\
+		BSD_INSTALL_DATA_DIR="${INSTALL_DATA_DIR}"		\
+		BSD_INSTALL_MAN_DIR="${INSTALL_MAN_DIR}"
 MAKE_ENV+=	${INSTALL_MACROS}
 SCRIPTS_ENV+=	${INSTALL_MACROS}
 
@@ -610,7 +610,7 @@ SIZE_ALL_FILE=		${WRKDIR}/.SizeAll
 PKG_ARGS_COMMON=	-v -c -${COMMENT:Q}" " -d ${DESCR} -f ${PLIST}
 PKG_ARGS_COMMON+=	-l -b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
 PKG_ARGS_COMMON+=	-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
-PKG_ARGS_COMMON+=	-P "`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true|sort -u`"
+PKG_ARGS_COMMON+=	-P "`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true | ${SORT} -u`"
 .ifdef CONFLICTS
 PKG_ARGS_COMMON+=	-C "${CONFLICTS}"
 .endif
@@ -1604,7 +1604,7 @@ real-su-install: ${MESSAGE}
 			exit 1;						\
 		else							\
 			if [ ! -d ${PREFIX} ]; then			\
-				mkdir -p ${PREFIX};			\
+				${MKDIR} ${PREFIX};			\
 			fi;						\
 			${MTREE} ${MTREE_ARGS} ${PREFIX}/;		\
 		fi;							\
@@ -2216,7 +2216,7 @@ clean: pre-clean
 clean-depends:
 .if defined(BUILD_DEPENDS) || defined(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for i in `${MAKE} ${MAKEFLAGS} CLEAN_DEPENDS_LIST_TOP=YES clean-depends-list | ${SED} -e 's;\.\./[^ ]*; ;g' | ${TR} -s "[:space:]" "\n" | sort -u` ;\
+	for i in `${MAKE} ${MAKEFLAGS} CLEAN_DEPENDS_LIST_TOP=YES clean-depends-list | ${SED} -e 's;\.\./[^ ]*; ;g' | ${TR} -s "[:space:]" "\n" | ${SORT} -u` ;\
 	do 								\
 		cd ${.CURDIR}/../../$$i &&				\
 		${MAKE} ${MAKEFLAGS} CLEANDEPENDS=NO clean;		\
@@ -2301,7 +2301,7 @@ RECURSIVE_FETCH_LIST?=	YES
 
 .if !target(fetch-list)
 fetch-list:
-	@${MAKE} ${MAKEFLAGS} fetch-list-recursive RECURSIVE_FETCH_LIST=${RECURSIVE_FETCH_LIST} | sort -u
+	@${MAKE} ${MAKEFLAGS} fetch-list-recursive RECURSIVE_FETCH_LIST=${RECURSIVE_FETCH_LIST} | ${SORT} -u
 .endif # !target(fetch-list)
 
 .if !target(fetch-list-recursive)
@@ -2311,7 +2311,7 @@ fetch-list-recursive:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for dir in `${ECHO} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*//}	\
 				  ${DEPENDS:C/^[^:]*://:C/:.*//} |	\
-		    ${TR} '\040' '\012' | sort -u` ; do			\
+		    ${TR} '\040' '\012' | ${SORT} -u` ; do		\
 		cd ${.CURDIR}/$$dir &&					\
 		${MAKE} ${MAKEFLAGS} fetch-list-recursive;		\
 	done
@@ -2371,7 +2371,7 @@ makesum: fetch uptodate-digest
 	for sumfile in "" ${_CKSUMFILES}; do				\
 		if [ "X$$sumfile" = "X" ]; then continue; fi;		\
 		${DIGEST} ${DIGEST_ALGORITHM} $$sumfile >> $$newfile;	\
-		wc -c $$sumfile | ${AWK} '{ print "Size (" $$2 ") = " $$1 " bytes" }' >> $$newfile; \
+		${WC} -c $$sumfile | ${AWK} '{ print "Size (" $$2 ") = " $$1 " bytes" }' >> $$newfile; \
 	done;								\
 	for ignore in "" ${_IGNOREFILES}; do				\
 		if [ "X$$ignore" = "X" ]; then continue; fi;		\
@@ -2634,7 +2634,7 @@ install-depends: uptodate-pkgtools
 				exit 1;					\
 			fi;						\
 		fi;							\
-		if [ `${ECHO} $$found | wc -w` -gt 1 ]; then		\
+		if [ `${ECHO} $$found | ${WC} -w` -gt 1 ]; then		\
 			${ECHO} '***' "WARNING: Dependency on '$$pkg' expands to several installed packages " ; \
 			${ECHO} "    (" `${ECHO} $$found` ")." ; 	\
 			${ECHO} "    Please check if this is really intended!" ; \
@@ -2731,7 +2731,7 @@ binpkg-list:
 						release=ava[3];		\
 						print "<TR><TD>" arch ":<TD>" urls[av] "<TD>(${OPSYS} " release ")"; \
 					}				\
-				}' | sort				\
+				}' | ${SORT}				\
 			;;						\
 		esac;							\
 	fi
@@ -2761,11 +2761,11 @@ describe:
 	${ECHO} -n "|${MAINTAINER}|${CATEGORIES}|";			\
 	case "A${BUILD_DEPENDS}B${DEPENDS}C" in	\
 		ABC) ;;							\
-		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} build-depends-list|sort -u`;; \
+		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} build-depends-list | ${SORT} -u`;; \
 	esac;								\
 	${ECHO} -n "|";							\
 	if [ "${DEPENDS}" != "" ]; then				\
-		cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} run-depends-list|sort -u`; \
+		cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`; \
 	fi;								\
 	${ECHO} -n "|";							\
 	if [ "${ONLY_FOR_ARCHS}" = "" ]; then				\
@@ -2839,9 +2839,9 @@ show-vulnerabilities-html:
 
 .PHONY: README.html
 README.html: .PRECIOUS
-	@${MAKE} ${MAKEFLAGS} build-depends-list PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp1
+	@${MAKE} ${MAKEFLAGS} build-depends-list PACKAGE_NAME_TYPE=html | ${SORT} -u >> $@.tmp1
 	@[ -s $@.tmp1 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp1
-	@${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp2
+	@${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_NAME_TYPE=html | ${SORT} -u >> $@.tmp2
 	@[ -s $@.tmp2 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp2
 	@${MAKE} ${MAKEFLAGS} binpkg-list  >> $@.tmp4
 	@[ -s $@.tmp4 ] || ${ECHO} "<TR><TD><I>(no precompiled binaries available)</I>" >> $@.tmp4
@@ -2884,7 +2884,7 @@ show-var:
 print-build-depends-list:
 .if defined(BUILD_DEPENDS) || defined(DEPENDS)
 	@${ECHO} -n 'This package requires package(s) "'
-	@${ECHO} -n `${MAKE} ${MAKEFLAGS} build-depends-list | sort -u`
+	@${ECHO} -n `${MAKE} ${MAKEFLAGS} build-depends-list | ${SORT} -u`
 	@${ECHO} '" to build.'
 .endif
 .endif
@@ -2893,7 +2893,7 @@ print-build-depends-list:
 print-run-depends-list:
 .if defined(DEPENDS)
 	@${ECHO} -n 'This package requires package(s) "'
-	@${ECHO} -n `${MAKE} ${MAKEFLAGS} run-depends-list | sort -u`
+	@${ECHO} -n `${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`
 	@${ECHO} '" to run.'
 .endif
 .endif
@@ -2921,7 +2921,7 @@ print-pkg-size-this:
 		/^@ignore/ { next }					\
 		NF == 1 { print base $$1 }'				\
 		<${PLIST} 						\
-	| sort -u							\
+	| ${SORT} -u							\
 	| ${SED} -e 's, ,\\ ,g'						\
 	| ${XARGS} ${LS} -ld						\
 	| ${AWK} 'BEGIN { print("0 "); }				\
@@ -2936,7 +2936,7 @@ print-pkg-size-this:
 print-pkg-size-depends:
 	@${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true \
 	| ${XARGS} -n 1 ${SETENV} ${PKG_INFO} -e			\
-	| sort -u							\
+	| ${SORT} -u							\
 	| ${XARGS} -n 256 ${SETENV} ${PKG_INFO} -qs			\
 	| ${AWK} -- 'BEGIN { print("0 "); }				\
 		/^[0-9]+$$/ { print($$1, " + "); }			\
@@ -3010,7 +3010,7 @@ print-PLIST:
 		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
 		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
 		-e  's@${PKGNAME}@\$${PKGNAME}@' 			\
-	 | sort								\
+	 | ${SORT} \
 	 | ${AWK} '							\
 		/^@/ { print $$0; next }				\
 		/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { 	\
@@ -3044,10 +3044,10 @@ print-PLIST:
 			| ${SED}					\
 				-e s@${PREFIX}/./@@			\
 				-e '/^${PREFIX:S/\//\\\//g}\/.$$/d'	\
-			| sort -r | ${SED} ${COMMON_DIRS}` ;		\
+			| ${SORT} -r | ${SED} ${COMMON_DIRS}` ;		\
 	do								\
-		if [ `${LS} -la ${PREFIX}/$$i | wc -l` = 3 ]; then		\
-			${ECHO} @exec /bin/mkdir -p ${PREFIX}/$$i ;	\
+		if [ `${LS} -la ${PREFIX}/$$i | ${WC} -l` = 3 ]; then	\
+			${ECHO} @exec ${MKDIR} ${PREFIX}/$$i ;		\
 		fi ;							\
 		${ECHO} @dirrm $$i ;					\
 	done								\
@@ -3153,22 +3153,22 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 				${CP} ${DEINSTALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+DEINSTALL; \
 			fi;						\
 		fi;							\
-		if [ -n "${MESSAGE}" ]; then			\
-			if ${TEST} -e ${MESSAGE}; then		\
+		if [ -n "${MESSAGE}" ]; then				\
+			if ${TEST} -e ${MESSAGE}; then			\
 				${CP} ${MESSAGE} ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
 			fi;						\
 		fi;							\
-		list="`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true ECHO_MSG=${TRUE} | sort -u`" ; \
+		list="`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true ECHO_MSG=${TRUE} | ${SORT} -u`" ; \
 		for dep in $$list; do \
 			realdep="`${PKG_INFO} -e \"$$dep\" || ${TRUE}`" ; \
-			if [ `${ECHO} $$realdep | wc -w` -gt 1 ]; then 				\
+			if [ `${ECHO} $$realdep | ${WC} -w` -gt 1 ]; then \
 				${ECHO} '***' "WARNING: '$$dep' expands to several installed packages " ; \
 				${ECHO} "    (" `${ECHO} $$realdep` ")." ; \
 				${ECHO} "    Please check if this is really intended!" ; \
 				continue ; 				\
 			fi ; 						\
-		done ; 						\
-		for realdep in `${ECHO} $$list | ${XARGS} -n 1 ${SETENV} ${PKG_INFO} -e | sort -u`; do \
+		done ; 							\
+		for realdep in `${ECHO} $$list | ${XARGS} -n 1 ${SETENV} ${PKG_INFO} -e | ${SORT} -u`; do \
 			if ${TEST} -z "$$realdep"; then			\
 				${ECHO} "$$dep not installed - dependency NOT registered" ; \
 			elif [ -d ${PKG_DBDIR}/$$realdep ]; then	\
@@ -3275,12 +3275,12 @@ PERL5_COMMENT=		( ${ECHO} "@comment The following lines are automatically genera
 	${ECHO} "@comment from the installed .packlist files." )
 PERL5_PACKLIST_FILES=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
 	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
-	| sort -u
+	| ${SORT} -u
 PERL5_PACKLIST_DIRS=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
 	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
-		-e "s,^,@unexec rmdir -p %D/," \
+		-e "s,^,@unexec ${RMDIR} -p %D/," \
 		-e "s,/[^/]*$$, 2>/dev/null || true," \
-	| sort -ur
+	| ${SORT} -ur
 PERL5_GENERATE_PLIST=	${PERL5_COMMENT}; \
 			${PERL5_PACKLIST_FILES}; \
 			${PERL5_PACKLIST_DIRS}
@@ -3335,4 +3335,3 @@ ${DESCR}: ${DESCR_SRC}
 .if defined(BATCH)
 .include "../../mk/bulk/bsd.bulk-pkg.mk"
 .endif
-
