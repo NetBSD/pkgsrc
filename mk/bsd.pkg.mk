@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.710 2001/04/04 13:46:11 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.711 2001/04/04 23:14:37 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -366,7 +366,7 @@ EXTRACT_ELEMENTS?=
 # and append 2 tar blocks of zero bytes on the end, in case the archive
 # was written with a buggy version of GNU tar.
 .if defined(EXTRACT_USING_PAX)
-EXTRACT_CMD?=		{ ${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} ; dd if=/dev/zero bs=10k count=2 } | ${PAX} -r ${EXTRACT_ELEMENTS}
+EXTRACT_CMD?=		{ ${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} ; dd if=/dev/zero bs=10k count=2; } | ${PAX} -r ${EXTRACT_ELEMENTS}
 .else
 EXTRACT_CMD?=		${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
 .endif
