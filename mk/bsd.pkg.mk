@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1270 2003/09/12 05:15:04 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1271 2003/09/12 10:49:28 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -121,11 +121,6 @@ PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
 PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages."
 .endif
 
-USE_BUILDLINK2?=	no	# default to not using buildlink2
-USE_BUILDLINK3?=	no	# default to not using buildlink3
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-USE_BUILDLINK3=		yes	# pkgviews requires buildlink3
-.endif
 .if empty(USE_BUILDLINK2:M[nN][oO]) && empty(USE_BUILDLINK3:M[nN][oO])
 PKG_FAIL_REASON+=	"Please undefine USE_BUILDLINK2 or USE_BUILDLINK3."
 .endif
