@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6617 2004/07/20 17:42:30 abs Exp $
+$NetBSD: CHANGES,v 1.6618 2004/07/20 21:24:32 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3473,4 +3473,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Renamed galeon to galeon12 [abs 2004-07-20]
 	Renamed galeon-devel to galeon [abs 2004-07-20]
 	Updated galeon to 1.3.16 [abs 2004-07-20]
-
+	Updated ap-python to 2.7.10 [recht 2004-07-20]
