@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.100 2004/02/23 09:15:33 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.101 2004/03/05 19:09:56 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -10,17 +10,20 @@
 # BUILDLINK_DEPENDS+=	foo
 # .endif
 #
+# BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfoo}
+# BUILDLINK_PACKAGES+=	foo
+#
 # .if !empty(FOO_BUILDLINK3_MK:M+)
 # BUILDLINK_DEPENDS.foo+=	foo-lib>=1.0
 # BUILDLINK_RECOMMENDED.foo?=	foo-lib>=1.0nb1
 # BUILDLINK_PKGSRCDIR.foo?=	../../category/foo-lib
-# BUILDLINK_PACKAGES+=		foo
 #
 # # We want "-lbar" to eventually resolve to "-lfoo".
 # BUILDLINK_TRANSFORM+=		l:bar:foo
 #
-# .  include "../../category/baz/buildlink3.mk"
-# .endif # FOO_BUILDLINK3_MK
+# .include "../../category/baz/buildlink3.mk"
+#
+# .endif  # FOO_BUILDLINK3_MK
 #
 # BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
 # -------------8<-------------8<-------------8<-------------8<-------------
