@@ -1,85 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:58 jlam Exp $
-lib/gtk-2.0/2.4.0/engines/libcrux-engine.la
-lib/gtk-2.0/2.4.0/engines/libhcengine.la
-lib/gtk-2.0/2.4.0/engines/liblighthouseblue.la
-lib/gtk-2.0/2.4.0/engines/libmist.la
-lib/gtk-2.0/2.4.0/engines/libsmooth.la
-lib/gtk-2.0/2.4.0/engines/libthinice.la
-share/eazel-engine/arrow_down-spinner.png
-share/eazel-engine/arrow_down.png
-share/eazel-engine/arrow_left.png
-share/eazel-engine/arrow_right.png
-share/eazel-engine/arrow_up-spinner.png
-share/eazel-engine/arrow_up.png
-share/eazel-engine/check-active-default-focus.png
-share/eazel-engine/check-active-default.png
-share/eazel-engine/check-active-hilight-focus.png
-share/eazel-engine/check-active-hilight.png
-share/eazel-engine/check-active-insensitive.png
-share/eazel-engine/check-active-pressed-focus.png
-share/eazel-engine/check-active-pressed.png
-share/eazel-engine/check-default-focus.png
-share/eazel-engine/check-default.png
-share/eazel-engine/check-hilight-focus.png
-share/eazel-engine/check-hilight.png
-share/eazel-engine/check-insensitive.png
-share/eazel-engine/check-pressed-focus.png
-share/eazel-engine/check-pressed.png
-share/eazel-engine/progressbar-left.png
-share/eazel-engine/progressbar-right.png
-share/eazel-engine/progressbar.png
-share/eazel-engine/progressbar_trough.png
-share/eazel-engine/radio-active-default-focus.png
-share/eazel-engine/radio-active-default.png
-share/eazel-engine/radio-active-hilight-focus.png
-share/eazel-engine/radio-active-hilight.png
-share/eazel-engine/radio-active-insensitive.png
-share/eazel-engine/radio-active-pressed-focus.png
-share/eazel-engine/radio-active-pressed.png
-share/eazel-engine/radio-default-focus.png
-share/eazel-engine/radio-default.png
-share/eazel-engine/radio-hilight-focus.png
-share/eazel-engine/radio-hilight.png
-share/eazel-engine/radio-insensitive.png
-share/eazel-engine/radio-pressed-focus.png
-share/eazel-engine/radio-pressed.png
-share/eazel-engine/scroller-arrow-down-hilight.png
-share/eazel-engine/scroller-arrow-down-pressed.png
-share/eazel-engine/scroller-arrow-down.png
-share/eazel-engine/scroller-arrow-left-hilight.png
-share/eazel-engine/scroller-arrow-left-pressed.png
-share/eazel-engine/scroller-arrow-left.png
-share/eazel-engine/scroller-arrow-right-hilight.png
-share/eazel-engine/scroller-arrow-right-pressed.png
-share/eazel-engine/scroller-arrow-right.png
-share/eazel-engine/scroller-arrow-up-hilight.png
-share/eazel-engine/scroller-arrow-up-pressed.png
-share/eazel-engine/scroller-arrow-up.png
-share/eazel-engine/scroller-h-hilight.png
-share/eazel-engine/scroller-h-thumb-hilight.png
-share/eazel-engine/scroller-h-thumb.png
-share/eazel-engine/scroller-h-trough.png
-share/eazel-engine/scroller-h.png
-share/eazel-engine/scroller-v-hilight.png
-share/eazel-engine/scroller-v-thumb-hilight.png
-share/eazel-engine/scroller-v-thumb.png
-share/eazel-engine/scroller-v-trough.png
-share/eazel-engine/scroller-v.png
-share/eazel-engine/slider_h_thumb.png
-share/eazel-engine/slider_h_trough.png
-share/eazel-engine/slider_h_trough_focus.png
-share/eazel-engine/slider_v_thumb.png
-share/eazel-engine/slider_v_trough.png
-share/eazel-engine/slider_v_trough_focus.png
-share/eazel-engine/tab_left-unsel.png
-share/eazel-engine/tab_left.png
-share/eazel-engine/tab_right.png
-share/eazel-engine/tab_sel-bottom.png
-share/eazel-engine/tab_sel.png
-share/eazel-engine/tab_usel-bottom-left.png
-share/eazel-engine/tab_usel-bottom.png
-share/eazel-engine/tab_usel-left.png
-share/eazel-engine/tab_usel.png
+@comment $NetBSD: PLIST,v 1.10 2004/12/24 10:10:34 jmmv Exp $
 share/icons/Crux/12x12/filesystems/gnome-fs-directory.png
 share/icons/Crux/12x12/filesystems/gnome-fs-regular.png
 share/icons/Crux/192x192/filesystems/gnome-fs-directory.png
@@ -1241,7 +1160,6 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-themes.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-themes.mo
-share/themes/Crux/gtk-2.0/gtkrc
 share/themes/Crux/index.theme
 share/themes/Glider/gtk-2.0/gtkrc
 share/themes/Glider/gtk-2.0/iconrc
@@ -1711,7 +1629,6 @@ share/themes/LargePrint/pixmaps/volume-medium.png
 share/themes/LargePrint/pixmaps/volume-min.png
 share/themes/LargePrint/pixmaps/volume-mute.png
 share/themes/LargePrint/pixmaps/volume-zero.png
-share/themes/LighthouseBlue/gtk-2.0/gtkrc
 share/themes/LowContrast/gtk-2.0/gtkrc
 share/themes/LowContrast/index.theme.disabled
 share/themes/LowContrastLargePrint/gtk-2.0/gtkrc
@@ -1851,7 +1768,6 @@ share/themes/LowContrastLargePrint/pixmaps/volume-medium.png
 share/themes/LowContrastLargePrint/pixmaps/volume-min.png
 share/themes/LowContrastLargePrint/pixmaps/volume-mute.png
 share/themes/LowContrastLargePrint/pixmaps/volume-zero.png
-share/themes/Mist/gtk-2.0/gtkrc
 share/themes/Mist/index.theme
 share/themes/Mist/metacity-1/metacity-theme-1.xml
 share/themes/Ocean-Dream/index.theme
@@ -1953,51 +1869,43 @@ share/themes/Smokey/metacity-1/maximize.png
 share/themes/Smokey/metacity-1/metacity-theme-1.xml
 share/themes/Smokey/metacity-1/minimize.png
 share/themes/Smokey/metacity-1/stripes.png
-share/themes/ThinIce/gtk-2.0/gtkrc
 share/themes/Traditional/index.theme
-@dirrm share/themes/Traditional
-@dirrm share/themes/ThinIce/gtk-2.0
-@dirrm share/themes/ThinIce
+@comment in theme-dirs: @dirrm share/themes/Traditional
 @dirrm share/themes/Smokey/metacity-1
 @dirrm share/themes/Smokey-Blue/gtk-2.0
-@dirrm share/themes/Smokey-Blue
-@dirrm share/themes/Smokey
+@comment in theme-dirs: @dirrm share/themes/Smokey-Blue
+@comment in theme-dirs: @dirrm share/themes/Smokey
 @dirrm share/themes/Simple/gtk-2.0
-@comment in metacity: @dirrm share/themes/Simple
+@comment in theme-dirs: @dirrm share/themes/Simple
 @dirrm share/themes/Sandwish/metacity-1
-@dirrm share/themes/Sandwish
-@dirrm share/themes/Ocean-Dream
+@comment in theme-dirs: @dirrm share/themes/Sandwish
+@comment in theme-dirs: @dirrm share/themes/Ocean-Dream
 @dirrm share/themes/Mist/metacity-1
-@dirrm share/themes/Mist/gtk-2.0
-@dirrm share/themes/Mist
+@comment in theme-dirs: @dirrm share/themes/Mist
 @dirrm share/themes/LowContrastLargePrint/pixmaps
 @dirrm share/themes/LowContrastLargePrint/gtk-2.0
-@dirrm share/themes/LowContrastLargePrint
+@comment in theme-dirs: @dirrm share/themes/LowContrastLargePrint
 @dirrm share/themes/LowContrast/gtk-2.0
-@dirrm share/themes/LowContrast
-@dirrm share/themes/LighthouseBlue/gtk-2.0
-@dirrm share/themes/LighthouseBlue
+@comment in theme-dirs: @dirrm share/themes/LowContrast
 @dirrm share/themes/LargePrint/pixmaps
 @dirrm share/themes/LargePrint/gtk-2.0
-@dirrm share/themes/LargePrint
+@comment in theme-dirs: @dirrm share/themes/LargePrint
 @dirrm share/themes/HighContrastLargePrintInverse/pixmaps
 @dirrm share/themes/HighContrastLargePrintInverse/gtk-2.0
-@dirrm share/themes/HighContrastLargePrintInverse
+@comment in theme-dirs: @dirrm share/themes/HighContrastLargePrintInverse
 @dirrm share/themes/HighContrastLargePrint/pixmaps
 @dirrm share/themes/HighContrastLargePrint/gtk-2.0
-@dirrm share/themes/HighContrastLargePrint
+@comment in theme-dirs: @dirrm share/themes/HighContrastLargePrint
 @dirrm share/themes/HighContrastInverse/gtk-2.0
-@dirrm share/themes/HighContrastInverse
+@comment in theme-dirs: @dirrm share/themes/HighContrastInverse
 @dirrm share/themes/HighContrast/gtk-2.0
-@dirrm share/themes/HighContrast
+@comment in theme-dirs: @dirrm share/themes/HighContrast
 @dirrm share/themes/Grand-Canyon/gtk-2.0
-@dirrm share/themes/Grand-Canyon
+@comment in theme-dirs: @dirrm share/themes/Grand-Canyon
 @dirrm share/themes/Glider/metacity-1
 @dirrm share/themes/Glider/gtk-2.0
-@dirrm share/themes/Glider
-@dirrm share/themes/Crux/gtk-2.0
-@comment in metacity: @dirrm share/themes/Crux
-@comment in xdg-dirs: @dirrm share/themes
+@comment in theme-dirs: @dirrm share/themes/Glider
+@comment in theme-dirs: @dirrm share/themes/Crux
 @dirrm share/icons/Smokey-Red/48x48/filesystems
 @dirrm share/icons/Smokey-Red/48x48/emblems
 @dirrm share/icons/Smokey-Red/48x48
@@ -2090,5 +1998,3 @@ share/themes/Traditional/index.theme
 @dirrm share/icons/Crux/12x12
 @dirrm share/icons/Crux
 @comment in xdg-dirs: @dirrm share/icons
-@dirrm share/eazel-engine
-@comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/engines
