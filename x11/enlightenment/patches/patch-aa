@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.4 1999/10/28 23:50:59 jlam Exp $
+$NetBSD: patch-aa,v 1.5 1999/12/07 10:46:05 tron Exp $
 
---- configure.orig	Wed Oct 27 19:29:36 1999
-+++ configure	Thu Oct 28 16:11:37 1999
-@@ -3585,7 +3585,7 @@
+--- configure.orig	Sun Nov  7 02:21:24 1999
++++ configure	Tue Dec  7 11:32:56 1999
+@@ -3588,7 +3588,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
 -LIBS="-lttf -lm $LIBS"
 +LIBS="-lttf -lintl -lm $LIBS"
  cat > conftest.$ac_ext <<EOF
- #line 3591 "configure"
+ #line 3594 "configure"
  #include "confdefs.h"
-@@ -3613,7 +3613,7 @@
+@@ -3616,7 +3616,7 @@
  fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
