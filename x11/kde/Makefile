@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/02/15 21:38:28 tron Exp $
+# $NetBSD: Makefile,v 1.16 1999/02/17 22:46:32 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/27 00:47:46 se Exp
 #
 
@@ -11,8 +11,8 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 
 DEPENDS+=	kdeutils-1.1:../../misc/kdeutils
+DEPENDS+=	kdenetwork-1.1:../../net/kdenetwork
 #DEPENDS+=	kdegames-1.1:../../games/kdegames
-#DEPENDS+=	kdenetwork-1.1:../../net/kdenetwork
 #DEPENDS+=	kdegraphics-1.1:../../graphics/kdegraphics
 
 CONFLICTS=	kde-*
