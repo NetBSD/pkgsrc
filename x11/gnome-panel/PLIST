@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/01/16 02:30:30 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/02/16 12:36:25 jmmv Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/gnome-panel-preferences
@@ -364,6 +364,7 @@ share/pixmaps/panel-force-quit.png
 @dirrm share/omf/gnome-panel
 @comment in scrollkeeper: @dirrm share/omf
 @dirrm share/idl/gnome-panel-2.0
+@comment in ORBit2: @dirrm share/idl
 @dirrm share/gnome/panel
 @dirrm share/gnome/help/workspace-switcher/zh_TW/figures
 @dirrm share/gnome/help/workspace-switcher/zh_TW
