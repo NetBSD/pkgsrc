@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.24 2000/05/16 11:41:08 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.25 2000/05/29 19:44:28 dmcmahill Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -18,6 +18,7 @@ use strict;
 use Getopt::Std;
 use File::Find;
 my(	$pkgsrcdir,		# Base of pkgsrc tree
+	$pkgdistdir,		# Distfiles directory
 	%pkgver2dir,		# Map package-version to category/pkgname
 	%pkg2ver,		# Map pkgname to version
 	%pkgrestricted,		# RESTRICTED/LICENCE packages, by pkgname
@@ -29,7 +30,7 @@ my(	$pkgsrcdir,		# Base of pkgsrc tree
 
 $ENV{PATH} .= ':/usr/sbin';
 
-if (! &getopts('DK:LP:Rdhilmopru', \%opt) || $opt{'h'} ||
+if (! &getopts('DK:LM:P:Rdhilmopru', \%opt) || $opt{'h'} ||
 	! ( defined($opt{'d'}) || defined($opt{'i'}) || defined($opt{'l'}) ||
 	    defined($opt{'m'}) || defined($opt{'o'}) || defined($opt{'p'}) ||
 	    defined($opt{'r'}) || defined($opt{'u'}) || defined($opt{'D'}) ||
@@ -63,6 +64,12 @@ if ($opt{'D'})
     else
 	{ $pkgsrcdir = &set_pkgsrcdir; } # Check /etc/mk.conf for PKGSRCDIR
 
+    if ($opt{'M'})
+	{ $pkgdistdir = $opt{'M'}; } # override distfile dir
+    else
+	{ $pkgdistdir = "$pkgsrcdir/distfiles"; } # default
+
+
     if ($opt{'r'} && !$opt{'o'} && !$opt{'m'} && !$opt{'p'})
 	{ $opt{'o'} = $opt{'m'} = $opt{'p'} = 1; }
     if ($opt{'o'} || $opt{'m'})
@@ -73,7 +80,7 @@ if ($opt{'D'})
 								$opt{'m'});
 	if ($opt{'r'})
 	    {
-	    &safe_chdir("$pkgsrcdir/distfiles");
+	    &safe_chdir("$pkgdistdir");
 	    &verbose("Unlinking 'bad' distfiles\n");
 	    foreach (@baddist)
 		{ unlink($_); }
@@ -763,7 +770,7 @@ sub scan_pkgsrc_distfiles_vs_md5
 	}
     &verbose(" ($numpkg packages)\n");
 
-    foreach $file (&listdir("$pkgsrcdir/distfiles"))
+    foreach $file (&listdir("$pkgdistdir"))
 	{
 	if (!defined($distfiles{$file}))
 	    { push(@bad_distfiles, $file); }
@@ -773,7 +780,7 @@ sub scan_pkgsrc_distfiles_vs_md5
     if ($check_unref && @bad_distfiles)
 	{
 	&verbose(scalar(@bad_distfiles),
-			" unreferenced file(s) in '$pkgsrcdir/distfiles':\n");
+			" unreferenced file(s) in '$pkgdistdir':\n");
 	print join("\n", sort @bad_distfiles), "\n";
 	}
     if ($check_md5)
@@ -782,7 +789,7 @@ sub scan_pkgsrc_distfiles_vs_md5
 	    { &verbose(@distwarn); }
 	&verbose("md5 mismatches\n");
 	@distfiles = sort @distfiles;
-	&safe_chdir("$pkgsrcdir/distfiles");
+	&safe_chdir("$pkgdistdir");
 	open(MD5, "md5 @distfiles|") || &fail("Unable to run md5: $!");
 	while (<MD5>)
 	    {
@@ -836,6 +843,7 @@ opts:
   -L         : List each Makefile when scanned
   -P path    : Set PKGSRCDIR
   -K path    : Set basedir for prebuild packages (default PKGSRCDIR/packages)
+  -M path    : Set basedir for distfiles (default PKGSRCDIR/distfiles)
   -D [paths] : Parse Makefiles and output contents (For debugging)
 
 If pkgsrc is not in /usr/pkgsrc, set PKGSRCDIR in /etc/mk.conf
