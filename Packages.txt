@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.76 2000/01/05 19:40:21 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.77 2000/01/05 21:59:16 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -1123,10 +1123,11 @@ perform the equivalent of:
  8 Debugging
  ===========
 
-To check out all the gotchas when building a package from a FreeBSD port,
-here are the steps that I do in order to get a package working. Please note
-this is basically the same as what was explained in the previous sections,
-only with some debugging aids.
+To check out all the gotchas when building a package (wither from
+a FreeBSD port, or from scratch), here are the steps that I do in
+order to get a package working. Please note this is basically the
+same as what was explained in the previous sections, only with some
+debugging aids.
 
  - Retrieve port from FreeBSD collection
  - Fix RCS-ID in the package's Makefile, see section 4.1. 
