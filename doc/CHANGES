@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2901 2003/07/26 23:07:52 jmmv Exp $
+$NetBSD: CHANGES,v 1.2902 2003/07/27 20:04:44 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3028,3 +3028,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gmencoder to 0.1.0nb1 [jmmv 2003-07-26]
 	Updated SDL to 1.2.5nb6 [jmmv 2003-07-26]
 	Added SDL-nas-1.2.5 [jmmv 2003-07-26]
+	Updated mplayer to 0.90nb7 [jmmv 2003-07-27]
+	Updated gmplayer to 0.90nb7 [jmmv 2003-07-27]
+	Updated mencoder to 0.90nb7 [jmmv 2003-07-27]
