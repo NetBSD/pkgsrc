@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/10 13:15:03 hamajima Exp $
+bin/sq905shot
+bin/sq905view
+man/cat1/sq905shot.0
+man/cat1/sq905view.0
+man/man1/sq905shot.1
+man/man1/sq905view.1

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6194 2004/06/10 10:18:09 recht Exp $
+$NetBSD: CHANGES,v 1.6195 2004/06/10 13:17:03 hamajima Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2857,3 +2857,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cvs to 1.11.17 [grant 2004-06-10]
 	Updated python23 to 2.3.4nb1 [recht 2004-06-10]
 	Updated python23-pth to 2.3.4nb1 [recht 2004-06-10]
+	Added sq905view-0.01 [hamajima 2004-06-10]

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/06/10 13:15:03 hamajima Exp $
+
+SHA1 (sqcam_driver_for_kernel_2_6-0.1b.tar.gz) = 5bffdf65966d27fd12146b60d9ee441b6df6a6d8
+Size (sqcam_driver_for_kernel_2_6-0.1b.tar.gz) = 15196 bytes
+SHA1 (sqcam_driver_for_BSD-0.01.patch.gz) = d77af3e949a1382353dde1cbd21ef27fc3ece810
+Size (sqcam_driver_for_BSD-0.01.patch.gz) = 12459 bytes
