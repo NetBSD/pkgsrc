@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: apache.sh,v 1.18 2002/03/18 12:15:37 abs Exp $
+# $NetBSD: apache.sh,v 1.19 2002/07/02 11:57:19 wiz Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
@@ -48,7 +48,7 @@ apache_doit ()
 	${ctl_command} ${action}
 }
 
-if [ -f /etc/rc.subr ]
+if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]
 then
 	load_rc_config $name
 	run_rc_command "$1"
