@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2004/05/27 21:59:56 hubertf Exp $
+
+--- xkobo.C.orig	1996-06-14 19:27:27.000000000 +0200
++++ xkobo.C
+@@ -51,7 +51,11 @@ int             cheat_mode;
+ 
+ static int      signal_delivered = 1;
+ 
++#ifdef __NetBSD__
++static void sig_handle(int sig)
++#else
+ static void sig_handle(...)
++#endif
+ {
+     signal_delivered = 1;
+ }
