@@ -1,0 +1,9 @@
+#       $NetBSD: Makefile.libgetopt,v 1.1.1.1 1999/08/06 16:37:22 hubertf Exp $
+
+LIB=    getopt
+SRCS=   getopt_long.c
+MAN=    getopt_long.3
+
+MKPROFILE=no
+
+.include <bsd.lib.mk>

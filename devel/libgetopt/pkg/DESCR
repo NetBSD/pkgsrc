@@ -1,0 +1,2 @@
+Library for handling --long options, needed as this is not (yet)
+available with what is shipped by NetBSD.
