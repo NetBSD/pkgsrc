@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 1999/07/05 20:55:01 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/07/14 18:53:34 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
-DISTNAME=	xemacs-21.1.3
+DISTNAME=	xemacs-21.1.4
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/xemacs-21.1/ \
 		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs/xemacs-21.1/ \
@@ -59,10 +59,10 @@ pre-configure:
 	@${LN} -s /usr/include/soundcard.h ${WRKDIR}/sys
 
 post-install:
-	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/xemacs-21.1-p3
+	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/${DISTNAME}
 	@${MKDIR} ${PREFIX}/lib/xemacs
 	@if [ "X${MANZ}" != X"" ]; then \
-		${WRKSRC}/lib-src/gzip-el.sh ${PREFIX}/lib/xemacs-21.1-p3; \
+		${WRKSRC}/lib-src/gzip-el.sh ${PREFIX}/lib/${DISTNAME}; \
 		GZSUFFIX=.gz; \
 	fi; \
 	${SED} -e 's|@.GZ@|'$$GZSUFFIX'|g' ${PKGDIR}/PLIST >${PLIST_SRC}
