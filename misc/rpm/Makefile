@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/05/23 15:42:59 tv Exp $
+# $NetBSD: Makefile,v 1.12 1998/06/22 12:52:34 agc Exp $
 #
 
 DISTNAME=	rpm-2.4.12
@@ -12,7 +12,6 @@ BUILD_DEPENDS=	${PREFIX}/lib/libgdbm.a:../../databases/gdbm
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-MAN8=		rpm.8 rpm2cpio.8
 
 pre-install:
 	${MKDIR} ${PREFIX}/include/rpm

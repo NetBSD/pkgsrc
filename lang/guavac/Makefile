@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:28 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/22 12:44:30 agc Exp $
 #
 
 DISTNAME=	guavac-1.0
@@ -12,8 +12,6 @@ MASTER_SITES=	ftp://summit.stanford.edu/pub/guavac/ \
 MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=  yes
-MAN1=		guavac.1
-CAT1=		guavac.0
 
 post-install:
 	${MV} ${PREFIX}/man/cat1/guavac.man ${PREFIX}/man/cat1/guavac.0

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:34 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/22 12:52:32 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1996/11/11 05:49:31 obrien Exp
 #
 
@@ -11,6 +11,5 @@ MAINTAINER=	nobu@psrc.isac.co.jp
 
 NO_WRKSUBDIR=	yes
 MANCOMPRESSED=	yes
-MAN1=		fep.1
 
 .include "../../mk/bsd.pkg.mk"

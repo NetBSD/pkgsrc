@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/22 14:22:46 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/22 12:52:32 agc Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/02/07 22:59:16 hoek Exp
 #
 
@@ -17,8 +17,6 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--with-tclsh=${PREFIX}/bin/tclsh8.0 \
 		--with-tkconfig=${PREFIX}/lib/tk8.0 \
 		--with-tkhdir=${PREFIX}/include/tk8.0
-
-MAN1=		ical.1
 
 post-install:
 	@strip ${PREFIX}/bin/${DISTNAME}

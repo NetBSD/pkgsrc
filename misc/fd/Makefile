@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:34 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/22 12:52:31 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/01/06 06:38:33 max Exp
 #
 
@@ -19,8 +19,6 @@ MAINTAINER=	nobu@psrc.isac.co.jp
 
 ALL_TARGET=	goal
 INSTALL_TARGET=	install
-MANLANG=	ja_JP.EUC
-MAN1=		fd.1
 
 do-configure:
 	cd ${WRKSRC} ; make config
