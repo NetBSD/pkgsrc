@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:41 seb Exp $
-bin/floppyd
-bin/floppyd_installtest
+@comment $NetBSD: PLIST,v 1.2.6.1 2003/06/19 01:10:32 grant Exp $
+${NOFLOPPYD}bin/floppyd
+${NOFLOPPYD}bin/floppyd_installtest
 bin/lz
 bin/mattrib
 bin/mbadblocks
@@ -35,7 +35,7 @@ bin/uz
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/mtools.info
 info/mtools.info
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/mtools.info
-man/man1/floppyd.1
+${NOFLOPPYD}man/man1/floppyd.1
 man/man1/mattrib.1
 man/man1/mbadblocks.1
 man/man1/mcat.1
