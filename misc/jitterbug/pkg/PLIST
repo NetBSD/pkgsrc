@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/05 12:37:19 wennmach Exp $
+@JB_USER@/config/footer.html
+@exec [ -f %D/@JB_DATADIR@/footer.html ] || /bin/cp -p %D/%F %D/@JB_DATADIR@/footer.html
+@JB_USER@/config/guest.prefs
+@exec [ -f %D/@JB_DATADIR@/guest.prefs ] || /bin/cp -p %D/%F %D/@JB_DATADIR@/guest.prefs
+@JB_USER@/config/guestintro.html
+@exec [ -f %D/@JB_DATADIR@/guestintro.html ] || /bin/cp -p %D/%F %D/@JB_DATADIR@/guestintro.html
+@JB_USER@/config/intro.html
+@exec [ -f %D/@JB_DATADIR@/intro.html ] || /bin/cp -p %D/%F %D/@JB_DATADIR@/intro.html
+@JB_USER@/config/reportform.html
+@exec [ -f %D/@JB_DATADIR@/reportform.html ] || /bin/cp -p %D/%F %D/@JB_DATADIR@/reportform.html
+@JB_USER@/config/users
+@exec [ -f %D/@JB_DATADIR@/users ] || /bin/cp -p %D/%F %D/@JB_DATADIR@/users
+@JB_USER@/config/jitterbug.config
+@exec [ -f %D/etc/jitterbug/@JB_PACKAGE@ ] || /bin/cp -p %D/%F %D/etc/jitterbug/@JB_PACKAGE@
+@exec [ -f %D/etc/jitterbug/@JB_PACKAGE@.private ] || /bin/cp -p %D/%F %D/etc/jitterbug/@JB_PACKAGE@.private
+@exec [ -f %D/@JB_USER@/etc/jitterbug.auth ] || /bin/echo "@JB_USER@:*************" > %D/@JB_USER@/etc/jitterbug.auth
+@JB_USER@/bin/new_message
+@JB_USER@/bin/jitterbug
+@JB_USER@/doc/POSTINSTALL
+@JB_USER@/doc/NEWPACKAGE
+@JB_USER@/doc/CONFIG.txt
+@JB_USER@/doc/INSTALL
+@JB_USER@/doc/JitterBug.txt
+@dirrm @JB_USER@/bin
+@dirrm @JB_USER@/doc
+@dirrm @JB_USER@/config
+@CGIBINDIR@/@JB_PACKAGE@
+@CGIBINDIR@/@JB_PACKAGE@.private
+@unexec echo "If you are removing jitterbug permanently, you may wish to"
+@unexec echo "  - remove user @JB_USER@"
+@unexec echo "  - remove group @JB_GROUP@"
+@unexec echo "  - rm -rf %D/@JB_USER@"
+@unexec echo "  - rm -rf %D/etc/jitterbug"
+@unexec echo "  - remove entries in %D/etc/httpd/httpd.conf"
+@unexec echo "  - remove mail alias for @JB_PACKAGE@-bugs in /etc/aliases"
+@unexec echo "           and run newaliases"

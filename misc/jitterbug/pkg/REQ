@@ -1,0 +1,79 @@
+#!/bin/sh
+
+JB_USER=@JB_USER@
+JB_USERID=@JB_USERID@
+JB_GROUP=@JB_GROUP@
+JB_GROUPID=@JB_GROUPID@
+JB_LOCALMAIL=@JB_LOCALMAIL@
+JB_PACKAGE=@JB_PACKAGE@
+PREFIX=@PREFIX@
+ADDNERD=@LOCALBASE@/sbin/addnerd
+FILESDIR=@FILESDIR@
+
+PKG=$1
+STAGE=$2
+
+if [ "$STAGE" != "INSTALL" ];
+then
+	exit 0
+fi
+
+# Add group first 
+#
+# NB: Ahem, this will not work with NIS, kerberos or hesiod.
+# Will have to rework this, e.g. using finger (wennmach)
+
+if grep "^${JB_GROUP}:" /etc/group 2>&1 >/dev/null
+then
+	echo "Group '$JB_GROUP' already exists, proceeding."
+else
+	if awk -F: '$3 == $JB_GROUPID {print "notfree"}' /etc/group | grep notfree >/dev/null
+then
+	echo "Error: group id $JB_GROUPID already in use in /etc/group"
+	echo "Please add group '$JB_GROUP' to /etc/group manually, then restart."
+	exit 1
+else
+	echo "Adding group $JB_GROUP (gid $JB_GROUPID) to /etc/group ..."
+	echo "$JB_GROUP:*:$JB_GROUPID:" >> /etc/group
+fi
+fi
+
+# use finger to be able to use NIS, ...
+if finger ${JB_USER} 2>&1 | grep >/dev/null "no such user"
+then
+	echo "Creating '$JB_USER' user ..."
+	${ADDNERD} -h ${PREFIX} -u ${JB_USERID} -g ${JB_GROUP} ${JB_USER}
+	echo Done.
+else
+	echo "User '$JB_USER' already exists, proceeding."
+fi
+
+if grep "^${JB_LOCALMAIL}:" /etc/aliases 2>&1 >/dev/null
+then
+	echo "'${JB_LOCALMAIL}' alias already exists, proceeding."
+else
+	echo "Adding alias ${JB_LOCALMAIL} to /etc/aliases ..."
+	echo "" >> /etc/aliases
+	echo "# entry for jitterbug" >> /etc/aliases
+	echo "${JB_LOCALMAIL}: \"|${PREFIX}/${JB_USER}/bin/new_message\"" >> /etc/aliases
+	echo "Running newaliases ..."
+	newaliases
+fi
+
+if grep "^# jitterbug config for package ${JB_PACKAGE}" ${PREFIX}/etc/httpd/httpd.conf 2>&1 >/dev/null
+then
+	echo "config lines for ${JB_PACKAGE} already in ${PREFIX}/etc/httpd/httpd.conf, proceeding."
+else
+	echo "Adding config lines for ${JB_PACKAGE} to ${PREFIX}/etc/httpd/httpd.conf ..."
+	sed \
+		-e 's|%JB_PACKAGE%|@JB_PACKAGE@|g' \
+		-e 's|%JB_USER%|@JB_USER@|g' \
+		-e 's|%PREFIX%|@PREFIX@|g' \
+			<  ${FILESDIR}/httpd.conf \
+			>> ${PREFIX}/etc/httpd/httpd.conf
+	if [ -e /var/run/httpd.pid ]; then
+		echo -n "Restarting httpd ..."
+		kill -USR1 `cat /var/run/httpd.pid` 2>&1 >/dev/null || echo -n " failed."
+		echo " "
+	fi
+fi
