@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.37 2004/09/16 09:55:42 cjep Exp $
+# $NetBSD: mksandbox,v 1.38 2004/10/24 22:54:25 agc Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -34,13 +34,14 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-# Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--verbose] sandbox-dir
+# Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir] [--verbose] sandbox-dir
 #
 # A small shell script to set up a sandbox (usually for a pkgsrc bulk
 # build), using null mounts.
 
 pkgsrc=/usr/pkgsrc
 src=/usr/src
+xsrc=/usr/xsrc
 
 kernel=""
 sandboxMountDirs="/bin /sbin /lib /libexec /usr/X11R6 /usr/bin /usr/games /usr/include /usr/lib /usr/libdata /usr/libexec /usr/lkm /usr/share /usr/sbin /var/mail"
@@ -49,7 +50,7 @@ sandboxEmptyFiles="/var/run/utmp /var/run/utmpx /var/log/wtmp /var/log/wtmpx /va
 
 usage()
 {
-	echo "Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--verbose] sandbox-dir"
+	echo "Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir] [--verbose] sandbox-dir"
 	exit 1
 }
 
@@ -137,6 +138,7 @@ while [ $# -gt 0 ]; do
 	case "$1" in
 	--pkgsrc=*)	pkgsrc=`echo $1 | $sedprog -e 's|^--pkgsrc=||'` ;;
 	--src=*)	src=`echo $1 | $sedprog -e 's|^--src=||'` ;;
+	--xsrc=*)	xsrc=`echo $1 | $sedprog -e 's|^--xsrc=||'` ;;
 	--verbose)	set -x ;;
 	-*)		usage ;;
 	*)		break ;;
@@ -158,6 +160,10 @@ fi
 
 if [ ! -d $src ]; then
 	err "source directory $src does not exist."
+fi
+
+if [ ! -d $xsrc ]; then
+	err "xsrc directory $xsrc does not exist."
 fi
 
 sandbox=$1
@@ -271,6 +277,11 @@ echo "Mount $pkgsrc from $sandbox"
 $mkdirprog $sandbox/usr/pkgsrc
 $mountprog $mountflags $pkgsrc $sandbox/usr/pkgsrc
 echo "$pkgsrc /usr/pkgsrc rw \\" >> $sandbox_script
+
+echo "Mount $xsrc from $sandbox"
+$mkdirprog $sandbox/usr/xsrc
+$mountprog $mountflags -r $xsrc $sandbox/usr/xsrc
+echo "$xsrc /usr/xsrc ro \\" >> $sandbox_script
 
 echo "Mounting $packages and $distfiles from $sandbox"
 $mkdirprog $sandbox/$packages $sandbox/$distfiles
