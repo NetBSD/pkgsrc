@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/22 01:31:58 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/21 01:18:42 heinz Exp $
 #
 
 DISTNAME=       Text-Reform-1.11
@@ -14,6 +14,7 @@ COMMENT=	Manual text wrapping and reformatting
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
+USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Text/Reform/.packlist
 
 .include "../../lang/perl5/module.mk"
