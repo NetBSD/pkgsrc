@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/03 10:05:58 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/14 10:33:33 grant Exp $
 
-DISTNAME=		ncmpc-0.10.1
+DISTNAME=		ncmpc-0.11.0
 CATEGORIES=		audio
-MASTER_SITES=		http://mercury.chem.pitt.edu/~shank/
+MASTER_SITES=		http://hem.bredband.net/kaw/ncmpc/files/ \
+			http://mercury.chem.pitt.edu/~shank/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://musicpd.org/
+HOMEPAGE=		http://hem.bredband.net/kaw/ncmpc/
 COMMENT=		curses client for Music Player Daemon
 
 GNU_CONFIGURE=		yes
@@ -14,10 +15,9 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
 INCOMPAT_CURSES=	NetBSD-1.4*-* NetBSD-1.5*-*
-INCOMPAT_CURSES+=	NetBSD-1.6.*-* NetBSD-1.6_*-*
+INCOMPAT_CURSES+=	NetBSD-1.6.*-* NetBSD-1.6_*-* NetBSD-2*-*
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/03 10:05:58 grant Exp $
+$NetBSD: distinfo,v 1.2 2004/07/14 10:33:33 grant Exp $
 
-SHA1 (ncmpc-0.10.1.tar.gz) = aa0123f1ff799e02d0d33f98099098e45eab19ea
-Size (ncmpc-0.10.1.tar.gz) = 173483 bytes
+SHA1 (ncmpc-0.11.0.tar.gz) = 5adab98537fdcd88a2296b4ef738614be81d0e83
+Size (ncmpc-0.11.0.tar.gz) = 242626 bytes
