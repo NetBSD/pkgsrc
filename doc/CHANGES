@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1191 2003/01/22 08:59:06 jmmv Exp $
+$NetBSD: CHANGES,v 1.1192 2003/01/22 09:26:24 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -363,3 +363,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mozilla to 1.2.1nb4 [lukem 2003-01-22]
 	Updated linc to 1.0.1 [jmmv 2003-01-22]
 	Updated libIDL to 0.8.0 [jmmv 2003-01-22]
+	Updated ORBit2 to 2.6.0 [jmmv 2003-01-22]
