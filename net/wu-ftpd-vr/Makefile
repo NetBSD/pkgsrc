@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/03/07 16:28:20 rh Exp $
+# $NetBSD: Makefile,v 1.3 1999/05/05 16:54:04 bad Exp $
 #
 
 DISTNAME=       wu-ftpd-2.4.2-vr16
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=   ftp://ftp.vr.net/pub/wu-ftpd/ \
 		ftp://ftp.crc.ca/pub/packages/ftp/servers/wuarchive-ftpd-vr/ \
 		ftp://ftp.ahol.com/pub/mirrors/wu-ftpd/ \
-		ftp://ftp.sunet.se/pub/nir/ftp/servers/wuarchive-ftpd-vr/ \
+		ftp://ftp0.sunet.se/pub/nir/ftp/servers/wuarchive-ftpd-vr/ \
 		ftp://ftp.gtn.com/pub/server/wuftpd/
 
 MAINTAINER=     rh@netbsd.org
