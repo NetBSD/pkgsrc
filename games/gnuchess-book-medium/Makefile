@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/15 01:57:43 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/15 10:34:48 jlam Exp $
 
 DISTNAME=		medium
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
@@ -26,8 +26,7 @@ BOOK_FILE=		book.dat
 
 do-build:
 	@${ECHO} ""
-	@${ECHO} "  ** Get yourself a shower and a big mug of coffee,"
-	@${ECHO} "  ** this will take _very_ long!"
+	@${ECHO} "  ** Go to bed!  This will take _very_ long!"
 	@${ECHO} ""
 	cd ${WRKSRC} && gnuchess compile ${PGN_FILE} ${BOOK_FILE}
 
