@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/14 13:23:51 agc Exp $
+bin/nsopen
+bin/nspptview
+bin/nsxlview
+bin/pptHtml
+bin/xlHtml
+include/cole/cole.h
+lib/libcole.a
+lib/libcole.la
+lib/libcole.so
+lib/libcole.so.2
+lib/libcole.so.2.1
+man/man1/pptHtml.1
+man/man1/xlHtml.1
+share/aclocal/cole.m4
+@dirrm include/cole
