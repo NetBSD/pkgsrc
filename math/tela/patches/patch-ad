@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.4 2001/03/01 21:16:53 jtb Exp $
+$NetBSD: patch-ad,v 1.5 2001/03/09 00:32:16 jtb Exp $
 
---- Makefile.orig	Tue Dec  5 07:43:56 2000
+--- Makefile.orig	Tue Mar  6 18:25:25 2001
 +++ Makefile
 @@ -27,7 +27,7 @@
  
  GNUZIP = gzip -9
  
 -READLINEINCLUDE = -I/usr/local/include
-+#READLINEINCLUDE = -I/usr/local/include
++READLINEINCLUDE = -I${READLINE_PREFIX}/include
  SGML2PS = sgml2latex
- BASH = bash
  #HDFLIBS = /usr/local/lib/libdf.a
-@@ -114,7 +114,7 @@
+ #DLDINCLUDE =
+@@ -113,7 +113,7 @@
  OBJECTDEPS = objarithm.H object.H def.H deftyp.h Tcomplex.H error.H ctinfo.H common.H $(srcdir)/templ/tLL.H
  EXECUTABLES = testobject testil testerror testtree tela ctpp
  
