@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2002/01/12 11:00:35 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2002/03/24 19:44:33 magick Exp $
 #
 
 COMMENT=	Editors
@@ -54,6 +54,7 @@ SUBDIR+=	vim-xaw
 SUBDIR+=	wily
 SUBDIR+=	xcoral
 SUBDIR+=	xemacs
+SUBDIR+=	xemacs-current
 SUBDIR+=	xemacs-packages
 SUBDIR+=	xvile
 SUBDIR+=	yudit
