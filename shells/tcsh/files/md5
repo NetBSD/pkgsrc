@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1998/08/07 13:27:38 agc Exp $
+$NetBSD: md5,v 1.3 1998/10/03 07:06:24 kim Exp $
 
-MD5 (tcsh-6.07.tar.gz) = 18a9d8091c6da38ebdd63ab509324eb5
+MD5 (tcsh-6.08.tar.gz) = e16e0f08b324e67f654ecab554042967
