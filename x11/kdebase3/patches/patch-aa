@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.8 2003/07/30 13:34:59 markd Exp $
+$NetBSD: patch-aa,v 1.9 2003/09/17 23:18:57 markd Exp $
 
---- configure.orig	2003-07-15 22:03:59.000000000 +1200
+--- configure.orig	2003-09-11 03:00:30.000000000 +1200
 +++ configure
-@@ -31616,63 +31616,6 @@ _ACEOF
+@@ -31619,63 +31619,6 @@ _ACEOF
  
  
  
 -  echo "$as_me:$LINENO: checking sizeof(size_t) == sizeof(unsigned long)" >&5
 -echo $ECHO_N "checking sizeof(size_t) == sizeof(unsigned long)... $ECHO_C" >&6
 -  cat >conftest.$ac_ext <<_ACEOF
--/* #line $LINENO "configure" */
+-#line $LINENO "configure"
 -/* confdefs.h.  */
 -_ACEOF
 -cat confdefs.h >>conftest.$ac_ext
@@ -66,7 +66,7 @@ $NetBSD: patch-aa,v 1.8 2003/07/30 13:34:59 markd Exp $
  echo "$as_me:$LINENO: checking if it's safe to enable UTMP" >&5
  echo $ECHO_N "checking if it's safe to enable UTMP... $ECHO_C" >&6
  
-@@ -33793,6 +33736,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -33816,6 +33759,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
  
                    ac_cv_have_dpms="-lXdpms"
  
@@ -90,7 +90,7 @@ $NetBSD: patch-aa,v 1.8 2003/07/30 13:34:59 markd Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -38659,6 +38619,7 @@ fi
+@@ -38765,6 +38725,7 @@ fi
  case "$UNAME" in
  	Linux) LIBHOSTS="$LIBSENSORS" ;;
  	FreeBSD) LIBHOSTS="$LIBSENSORS -lkvm" ;;
