@@ -1,4 +1,4 @@
-/*	$NetBSD: cdefs.h,v 1.1 2004/08/23 03:32:13 jlam Exp $	*/
+/*	$NetBSD: cdefs.h,v 1.2 2004/09/11 19:01:40 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -89,6 +89,18 @@
 #  define __END_DECLS	};
 # else
 #  define __END_DECLS
+# endif
+#endif
+
+#ifndef __restrict
+/*
+ * C99 defines the restrict type qualifier keyword, which was made available
+ * in GCC 2.92.
+ */
+# if __STDC_VERSION__ >= 199901L
+#  define __restrict	restrict
+# else
+#  define __restrict	/* delete __restrict when not supported */
 # endif
 #endif
 
