@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/08/30 09:50:46 abs Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/09/05 13:07:44 wiz Exp $
 bin/faxalter
 bin/faxcover
 bin/faxmail
@@ -171,6 +171,7 @@ share/hylafax/etc_template/lutRS18.pcf
 share/hylafax/etc_template/xferfaxlog
 @dirrm share/hylafax/config_template
 @dirrm share/hylafax/etc_template
+@dirrm share/hylafax
 @dirrm libexec/hylafax
 @dirrm libdata/hylafax
 @dirrm share/doc/hylafax
