@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2005/01/06 10:38:16 adam Exp $
+# $NetBSD: Makefile,v 1.28 2005/01/12 10:58:33 adam Exp $
 
-DISTNAME=	doxygen-1.4.0.src
-PKGNAME=	doxygen-1.4.0
+DISTNAME=	doxygen-1.4.1.src
+PKGNAME=	doxygen-1.4.1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/
 
