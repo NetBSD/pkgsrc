@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/12 04:56:49 snj Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 23:14:47 wiz Exp $
 #
 
 DISTNAME=	gkrellm-1.2.13
@@ -18,6 +18,8 @@ USE_BUILDLINK3=		YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
+
+CONFLICTS+=	gkrellm-share>=2.0
 
 ALL_TARGET=		netbsd
 INSTALL_TARGET=		install_netbsd
