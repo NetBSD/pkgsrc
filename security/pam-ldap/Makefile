@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/11/19 19:08:43 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2005/01/14 05:35:33 jlam Exp $
 #
 
 DISTNAME=	pam_ldap-176
@@ -32,7 +32,7 @@ USE_PKGINSTALL=	yes
 CONF_FILES=	${EGDIR}/ldap.conf ${PKG_SYSCONFDIR}/ldap.conf
 
 .include "../../databases/openldap/buildlink3.mk"
-.include "../../security/PAM/buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
