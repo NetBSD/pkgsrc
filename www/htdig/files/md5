@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/01/26 02:32:35 fredb Exp $
+$NetBSD: md5,v 1.4 2000/02/29 23:31:33 hubertf Exp $
 
-MD5 (htdig-3.1.4.tar.gz) = 232d94f611545db64dbb747d84fd2a8b
+MD5 (htdig-3.1.5.tar.gz) = cbf4a0f2b703d9822db555a14dc96ed3
