@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/07/19 20:29:37 wiz Exp $
+
+--- sound.c.orig	2001-04-11 23:45:47.000000000 +0200
++++ sound.c
+@@ -104,6 +104,7 @@
+ #include <math.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include <unistd.h>
+ #include <sys/ioctl.h>
+ #if defined(__FreeBSD__)
+@@ -411,7 +412,7 @@ InitAudio(int argc, char **argv)
+         {
+           int desired_fragmentsize = 0; 
+ #ifdef SNDCTL_DSP_RESET
+-          if (! ioctl (audiofd, SNDCTL_DSP_RESET)) {
++          if (! ioctl (audiofd, SNDCTL_DSP_RESET, 0)) {
+             int desired_audiorate;
+             int desired_audiostereo;
+             struct SampleFormat *desired_sample_format = sample_format;
