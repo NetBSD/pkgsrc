@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2000/06/01 11:23:42 rh Exp $
+# $NetBSD: Makefile,v 1.10 2000/06/19 21:16:44 jwise Exp $
 
-DISTNAME=	ApacheJServ-1.1.1
-PKGNAME=	ap-jserv-1.1.1
+DISTNAME=	ApacheJServ-1.1.2
+PKGNAME=	ap-jserv-1.1.2
 CATEGORIES=	www
 MASTER_SITES=	http://java.apache.org/jserv/dist/
 
