@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/07 09:41:51 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/09 18:34:54 zuntum Exp $
 #
 
-DISTNAME=	queue-repair-0.8.2
+DISTNAME=	queue-repair-0.8.4
 CATEGORIES=	mail
 MASTER_SITES=	http://www.qcc.sk.ca/~charlesc/software/queue_repair/
 
