@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/09/27 13:07:13 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/09/27 13:56:33 jlam Exp $
 
 .if !defined(GCC_BUILDLINK2_MK)
 GCC_BUILDLINK2_MK=	# defined
@@ -21,10 +21,13 @@ BUILDLINK_DEPMETHOD.gcc+=	full
 BUILDLINK_DEPMETHOD.gcc?=	build
 .endif
 
-.if ${OPSYS} == "SunOS"
 BUILDLINK_PREFIX.gcc=	${LOCALBASE}
+.if ${OPSYS} == "SunOS"
+_GCC_PREFIX=		${BUILDLINK_PREFIX.gcc}
+_GCC_SUBPREFIX=		# empty
 .else
-BUILDLINK_PREFIX.gcc=	${LOCALBASE}/gcc-2.95.3
+_GCC_PREFIX=		${BUILDLINK_PREFIX.gcc}/gcc-2.95.3
+_GCC_SUBPREFIX=		gcc-2.95.3/
 .endif
 
 .if defined(USE_PKGSRC_GCC)
@@ -42,7 +45,7 @@ _GCC_PKG=		gcc-${_GCC_VERSION}
 _NEED_PKGSRC_GCC!= \
 	if ${PKG_ADMIN} pmatch '${BUILDLINK_DEPENDS.gcc}' ${_GCC_PKG}; then \
 		gccpath=`${TYPE} gcc | ${AWK} '{ print $$NF }'`;	\
-		if [ "$$gccpath" = "${BUILDLINK_PREFIX.gcc}/bin/gcc" ]; then \
+		if [ "$$gccpath" = "${_GCC_PREFIX}/bin/gcc" ]; then \
 			${ECHO} "YES";					\
 		else							\
 			${ECHO} "NO";					\
@@ -54,32 +57,32 @@ _NEED_PKGSRC_GCC!= \
 
 .if ${_NEED_PKGSRC_GCC} == "YES"
 BUILDLINK_PACKAGES+=	gcc
-PATH:=		${BUILDLINK_PREFIX.gcc}/bin:${PATH}
-CC=		${BUILDLINK_PREFIX.gcc}/bin/gcc
-CPP=		${BUILDLINK_PREFIX.gcc}/bin/cpp
-CXX=		${BUILDLINK_PREFIX.gcc}/bin/g++
-F77=		${BUILDLINK_PREFIX.gcc}/bin/g77
+PATH:=		${_GCC_PREFIX}/bin:${PATH}
+CC=		${_GCC_PREFIX}/bin/gcc
+CPP=		${_GCC_PREFIX}/bin/cpp
+CXX=		${_GCC_PREFIX}/bin/g++
+F77=		${_GCC_PREFIX}/bin/g77
 PKG_FC=		${F77}
 
-BUILDLINK_LDFLAGS.gcc=	-Wl,-R${BUILDLINK_PREFIX.gcc}/lib
+BUILDLINK_LDFLAGS.gcc=	-Wl,-R${_GCC_PREFIX}/lib
 LDFLAGS+=		${BUILDLINK_LDFLAGS.gcc}
 .endif	# _NEED_PKGSRC_GCC == YES
 
-_GCC_ARCHSUBDIR=	lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${_GCC_VERSION}
+_GCC_ARCHSUBDIR=	lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3
 
 # These file are from gcc>=2.95.3.
-BUILDLINK_FILES.gcc=	include/g++-3/*
-BUILDLINK_FILES.gcc+=	include/g++-3/*/*
-BUILDLINK_FILES.gcc+=	${_GCC_ARCHSUBDIR}/include/*
-BUILDLINK_FILES.gcc+=	${_GCC_ARCHSUBDIR}/include/*/*
-BUILDLINK_FILES.gcc+=	${_GCC_ARCHSUBDIR}/include/*/*/*
-BUILDLINK_FILES.gcc+=	${_GCC_ARCHSUBDIR}/include/*/*/*/*
-BUILDLINK_FILES.gcc+=	${_GCC_ARCHSUBDIR}/lib*.*
-BUILDLINK_FILES.gcc+=	${_GCC_ARCHSUBDIR}/specs
-BUILDLINK_FILES.gcc+=	${MACHINE_GNU_PLATFORM}/include/*
-BUILDLINK_FILES.gcc+=	${MACHINE_GNU_PLATFORM}/include/*/*
-BUILDLINK_FILES.gcc+=	lib/libiberty.*
-BUILDLINK_FILES.gcc+=	lib/libstdc++.*
+BUILDLINK_FILES.gcc=	${_GCC_SUBPREFIX}include/g++-3/*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}include/g++-3/*/*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${_GCC_ARCHSUBDIR}/include/*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${_GCC_ARCHSUBDIR}/include/*/*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${_GCC_ARCHSUBDIR}/include/*/*/*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${_GCC_ARCHSUBDIR}/include/*/*/*/*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${_GCC_ARCHSUBDIR}/lib*.*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${_GCC_ARCHSUBDIR}/specs
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${MACHINE_GNU_PLATFORM}/include/*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${MACHINE_GNU_PLATFORM}/include/*/*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}lib/libiberty.*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}lib/libstdc++.*
 
 BUILDLINK_TARGETS+=	gcc-buildlink
 
