@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:55:09 agc Exp $
+
+MD5 (zebra-0.91a.tar.gz) = cea38abb7d97fd96563077748a344ea5
+SHA1 (patch-aa) = ee8100984152dc69237b53977d63c506095cdfd2
+SHA1 (patch-ab) = 415ee0d3c18240165bfabc77d9fa6ff4c2e7ac34
+SHA1 (patch-ac) = 4bdc7ded7d39702529f774b8a809d33898c5559e
+SHA1 (patch-ad) = 7a9a1daa024b9efacefb3c469bc86dbbc36af47c
+SHA1 (patch-ae) = 0d255facaacd0521d9e5fe31698c1f7f5d4c7f61
+SHA1 (patch-af) = b3b879e8932196a8e3e9f6fe92815a817223aceb
+SHA1 (patch-ag) = 9933b1d268c2c9df5c4e718f38b28594443d58c5

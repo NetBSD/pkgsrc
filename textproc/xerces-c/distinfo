@@ -1,0 +1,19 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:55:43 agc Exp $
+
+MD5 (xerces-c-src1_3_0.tar.gz) = a4ae10402823dba553b63431cfd712dc
+SHA1 (patch-aa) = 85cb4489813102d6eed0331f86d268ea4485c6d8
+SHA1 (patch-ab) = 7d5836be474ed0edd8ffe1266e58c2d5478c6d2d
+SHA1 (patch-ac) = fc50d3a96740182f1a9f65f2e06791f8399c9770
+SHA1 (patch-ad) = 3ae75424accf4b661298cbdf12790af672768826
+SHA1 (patch-ae) = 5223e628ca53d215cd92d746bc47113c1277a414
+SHA1 (patch-af) = 7cf92c47dc62b364e4b974954cf43c8dccc709d9
+SHA1 (patch-ag) = b37a51322b6bb7e59a8b44125c96cd0e034b8302
+SHA1 (patch-ah) = 2c5e52b56eaaec856cbb3426906387ada52b72fe
+SHA1 (patch-ai) = adde8ffb50aeb24616ba64f418c529b23854e3ef
+SHA1 (patch-aj) = cc853dd9771ee0be09bbe297acea9a12708a738a
+SHA1 (patch-ak) = 615fedd6c272179b80a27c7488bb1ddf74c56ccb
+SHA1 (patch-al) = 0a07643330d0bdfc58d7c527ce46e73795a25d93
+SHA1 (patch-am) = 1761441d0afd5f63a0873bfd1cad8946e27f3ad7
+SHA1 (patch-an) = 4b8af155b34f4930075c9d22f162014117c84b62
+SHA1 (patch-ao) = 2c13b5f5b7d6edd4cf88ad8061f1f9ad981b41b5
+SHA1 (patch-ap) = b762f1c86cb273095c36ff9a4475353f8afca2ce

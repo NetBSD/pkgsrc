@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:01 agc Exp $
+
+MD5 (eperl-2.2.14.tar.gz) = 0213580b6711b5312d1873f9732ae8d6
+SHA1 (patch-aa) = cf52f03373a8b159ff895608d078fae863eaaed5
+SHA1 (patch-ab) = 09a2274193bea7052a5367d18ec2e15ed7596129
+SHA1 (patch-ac) = c876f95efa24d348c8c42fa91123d0db316315bc

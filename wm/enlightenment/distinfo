@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:20 agc Exp $
+
+MD5 (enlightenment-0.16.4.tar.gz) = d65d77e420bc7e292785075c82a23074
+SHA1 (patch-aa) = c2d9e4c5a2f52adf27437462075d098f197fb6af
+SHA1 (patch-ab) = c7982927d2870fa2eb04903f467d61f8984315c1
+SHA1 (patch-ac) = 9f3b794c818be0471ae6679d67fd79d79cc28216
+SHA1 (patch-ad) = fd1054a21481cf00468f9a72eff7ab0699d7ef75

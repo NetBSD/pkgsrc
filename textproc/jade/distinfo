@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:36 agc Exp $
+
+MD5 (jade-1.2.1.tar.gz) = 4239670ca6b578bff68b8c2e7cd1225f
+SHA1 (patch-aa) = a7a500f614f752bf889df4005751fde8550443c0
+SHA1 (patch-ab) = 1742175ec89ea8e796b4e874a488225850cf78e1
+SHA1 (patch-ac) = c96ca44b40bbcc9c588dfe40045f4d386e32998d

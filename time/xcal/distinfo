@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:53:35 agc Exp $
+
+MD5 (xcal41.tar.Z) = ae4a7ba3c63db821c73f5821ac9e0232
+SHA1 (patch-aa) = 73df8a749714996dab4f25a91ac9fb534f22cfe7
+SHA1 (patch-ab) = 847c05195281b468d8b913b26f18637964ffd43e
+SHA1 (patch-ac) = 82da3ea57db0ab225066f6b6fd354a83e8cccbc1
+SHA1 (patch-ad) = 5f8a8bc3adf0a90d996191b65599d0252a28de6e
+SHA1 (patch-ae) = d6000c3976bd672feadeda6b97cbf0a07c505418

@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:21 agc Exp $
+
+MD5 (ucd-snmp-4.1.2.tar.gz) = 378c8cf99e0845da4662fb72c956d20d
+SHA1 (patch-aa) = 42e29fb9d367e2d6fa4dc732029318cdeaab2f49
+SHA1 (patch-ab) = 8a84b33f725d63747c82f6ac983a72cea5fde8f2
+SHA1 (patch-ac) = 15553340d44a165b204bf4173e92544a807a99a6
+SHA1 (patch-ad) = 9783298ad1f0f5f9dd26b70e0f02489b6a528111
+SHA1 (patch-ae) = e42a4771cb1b657a8d991b3e55e947ba035cbeb1
+SHA1 (patch-af) = f852a27fa97b0eb2df2c1a4cd4b543dbfa338056
+SHA1 (patch-ag) = 0fb036f17a32862939ec9bd02d1a264aed6fd198
+SHA1 (patch-ah) = 6e93ab2ca5bce53fa72c2393de8357da0670a9b1
+SHA1 (patch-ai) = c82a49f494c4f119a15e58e9848db1589edadcbf
