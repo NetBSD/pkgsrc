@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.13 2004/11/04 20:41:21 shannonjr Exp $
+$NetBSD: distinfo,v 1.14 2004/11/06 17:40:15 jmmv Exp $
 
 SHA1 (gpgme-1.0.1.tar.gz) = d35fa8fc20783ea853d9e4d01fed7e1a9d3160f6
 Size (gpgme-1.0.1.tar.gz) = 815046 bytes
 SHA1 (patch-aa) = 27f98c23d89a0a030398e1e5cfefff84b23d2658
-SHA1 (patch-ab) = 5f91749ba67cf68eb21d7544a03c6047b8219891
+SHA1 (patch-ab) = c47b732622deaa2eb3269d7ae753ab553c4fa54e
 SHA1 (patch-ac) = c702392423c1ed48cca43f8e35a2c510a8d68460
 SHA1 (patch-ae) = 88d215ad657730349ffa19462799b64238a30426
 SHA1 (patch-af) = f8d035b0e2d9a245377aec33a8576e5a432d76b7
 SHA1 (patch-ag) = b499aba9894e24470b7ebb60643a3db5d36b7fd5
 SHA1 (patch-ah) = 852e362f143c754149e0600a7b7f3a47a569f41e
+SHA1 (patch-ai) = 5b7958ef6ed51936e948451e03dd835c1b90414c
