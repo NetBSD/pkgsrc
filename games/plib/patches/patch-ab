@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.4 2003/09/22 12:27:29 xtraeme Exp $
+
+--- src/js/js.h.orig	Mon Sep 22 06:05:53 2003
++++ src/js/js.h	Mon Sep 22 06:06:47 2003
+@@ -63,7 +63,11 @@
+ #  include <fcntl.h>
+ 
+ #  if defined(__FreeBSD__) || defined(__NetBSD__)
++#  if __FreeBSD_version >= 500000
++#    include <sys/joystick.h>
++#  else
+ #    include <machine/joystick.h>
++#  endif
+ #    define JS_DATA_TYPE joystick
+ #    define JS_RETURN (sizeof(struct JS_DATA_TYPE))
+ #  elif defined(__linux__)
+@@ -132,9 +136,9 @@
+ 
+ 
+ 
+-/*#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+   int          id ;
+-#endif*/
++#endif
+ #ifdef WIN32
+   JOYINFOEX    js       ;
+   UINT         js_id    ;
