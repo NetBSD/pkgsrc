@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/06/28 10:28:58 agc Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/20 13:29:17 wiz Exp $
 #
 
 DISTNAME=	ssystem-1.6
@@ -10,9 +10,8 @@ HOMEPAGE=	http://www1.las.es/~amil/ssystem/
 COMMENT=	Solar System Flyby Simulator
 
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
 
-USE_MESA=	yes
+USE_BUILDLINK2=	yes
 USE_X11BASE=	yes
 
 MAKEFILE=	Makefile.FreeBSD
@@ -30,4 +29,6 @@ do-install:
 	    ${INSTALL_DATA} ${DOC_FILES} ${X11PREFIX}/share/doc/ssystem; \
 	    ${INSTALL_DATA} hires/README ${X11PREFIX}/share/ssystem/hires
 
+.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
