@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/08/06 16:37:02 tron Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/13 14:08:51 skrll Exp $
 
 DISTNAME=	QwSpriteField1.6
 PKGNAME=	qwspritefield-1.6
@@ -13,7 +13,7 @@ CONFLICTS=	kdesupport-1.0
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/QwSpriteField
 
 QW_INCLUDES=	Pix.h QwCluster.h QwPublicList.h QwSpriteField.h
