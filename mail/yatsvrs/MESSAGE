@@ -14,4 +14,4 @@ ascy	stream	tcp	nowait	root	${LOCALBASE}/libexec/ascyd	ascyd
 
   You should add appropriate options.
 
-3. Edit yatsvrrc and yatrc2 in ${CONFDIR}.
+3. Edit yatsvrrc and yatrc2 in ${PKG_SYSCONFDIR}.
