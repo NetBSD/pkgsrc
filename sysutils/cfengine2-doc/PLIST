@@ -1,21 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/05 13:51:21 seb Exp $
-info/cfengine-Anomalies.info
-info/cfengine-Reference.info
-info/cfengine-Reference.info-1
-info/cfengine-Reference.info-2
-info/cfengine-Reference.info-3
-info/cfengine-Reference.info-4
-info/cfengine-Reference.info-5
-info/cfengine-Reference.info-6
-info/cfengine-Reference.info-7
-info/cfengine-Reference.info-8
-info/cfengine-Tutorial.info
-info/cfengine-Tutorial.info-1
-info/cfengine-Tutorial.info-2
-info/cfengine-Tutorial.info-3
-info/cfengine-Tutorial.info-4
-info/cfengine-Tutorial.info-5
-info/cfengine-Tutorial.info-6
+@comment $NetBSD: PLIST,v 1.3 2004/03/10 01:10:23 seb Exp $
 man/man8/cfengine.8
 share/doc/html/cfengine/cfengine-Reference.html
 share/doc/html/cfengine/cfengine-Tutorial.html
