@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2002/10/25 02:29:10 taca Exp $
+# $NetBSD: Makefile,v 1.63 2002/10/25 09:00:30 tron Exp $
 
 DISTNAME=		mod_ssl-2.8.12-1.3.27
 PKGNAME=		ap-ssl-2.8.12
@@ -13,7 +13,7 @@ COMMENT=		SSL/TLS protocols module for Apache
 
 CONFLICTS=		apache-1.3.[0-9] apache-*modssl-[0-9]* apache6-[0-9]*
 
-BUILDLINK_DEPENDS.apache=	apache-1.3.27
+BUILDLINK_DEPENDS.apache=	apache-1.3.27nb1
 
 USE_BUILDLINK2=		YES
 APACHE_MODULE=		YES
