@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2001/06/11 20:05:18 zuntum Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/11 20:58:32 zuntum Exp $
 #
 
 DISTNAME=	${PKGNAME:S,manedit-,manedit,}
-PKGNAME=	manedit-0.4h
+PKGNAME=	manedit-0.4j
 CATEGORIES=	editors
-MASTER_SITES=	ftp://fox.mit.edu/pub/xsw/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	ftp://wolfpack.twu.net/users/wolfpack/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://wolfpack.twu.net/ManEdit/
 COMMENT=	UNIX Manual (man, manpage) page editor, viewer, and browser for X11
 
@@ -16,14 +16,6 @@ DEPENDS+=	gtk+-*:../../x11/gtk
 WRKSRC=		${WRKDIR}/${DISTNAME}/manedit
 
 MAKE_ENV+=	CPP="${CXX}"
-
-post-patch:
-	${SED}	-e "s,@PREFIX@,${PREFIX},g" ${WRKSRC}/manedit.1		\
-		> ${WRKSRC}/manedit.1.done
-	${MV} ${WRKSRC}/manedit.1.done ${WRKSRC}/manedit.1
-	${SED}	-e "s,gtk-config,${X11BASE}/bin/gtk-config,g"		\
-		${WRKSRC}/Makefile > ${WRKSRC}/Makefile.done
-	${MV} ${WRKSRC}/Makefile.done ${WRKSRC}/Makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/manedit ${PREFIX}/bin
