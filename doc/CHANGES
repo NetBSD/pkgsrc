@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1089 2003/01/11 04:43:39 rh Exp $
+$NetBSD: CHANGES,v 1.1090 2003/01/11 07:58:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -207,3 +207,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gnome-pilot-0.1.71 [rh 2003-01-11]
 	Updated gnome-pim to 1.4.6 [rh 2003-01-11]
 	Updated pkglint to 3.42 [rh 2003-01-11]
+	Updated pkg_install to 20030111 [schmonz 2003-01-11]
