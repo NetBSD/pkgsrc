@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:29:01 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/12/15 16:19:43 agc Exp $
 
 SHA1 (depot-5.14.tar.gz) = 378e09973fcc5f42e69d3988b04fc64fde5c974a
 Size (depot-5.14.tar.gz) = 204216 bytes
 SHA1 (patch-aa) = 5b11b84bf134b292e65b05c42bf2dce277f6bc37
+SHA1 (patch-ab) = 0192d647a8c3aca8ea08c84988a02a4736f30204
+SHA1 (patch-ac) = 40a751dbdabe617e0217c4626e41e35efec200ad
+SHA1 (patch-ad) = cc1d804231036d8ac836f21a29099b55c26dbd5e
+SHA1 (patch-ae) = 929ab7e07603b887e72368782ad96229621c2b26
