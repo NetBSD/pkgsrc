@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 1999/12/24 22:30:07 pooka Exp $
+$NetBSD: patch-ac,v 1.1 1999/12/24 22:30:03 pooka Exp $
 
 --- sys/unix/Makefile.src.orig	Sat Dec 11 07:21:05 1999
-+++ sys/unix/Makefile.src	Wed Dec 22 21:45:47 1999
++++ sys/unix/Makefile.src	Wed Dec 22 22:29:15 1999
 @@ -132,8 +132,8 @@
  # flags for debugging:
  # CFLAGS = -g -I../include
@@ -9,7 +9,7 @@ $NetBSD: patch-ab,v 1.3 1999/12/24 22:30:07 pooka Exp $
 -CFLAGS = -O -I../include
 -LFLAGS = 
 +CFLAGS = -O -I../include -I${X11BASE}/include
-+LFLAGS = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib
++LFLAGS = -Wl,-R${X11BASE}/lib -L${X11BASE}
  
  # Only used for Qt interface (other interfaces are standard C)
  CXXFLAGS = -g $(CFLAGS) -I. -I$(QTDIR)/include
@@ -19,26 +19,25 @@ $NetBSD: patch-ab,v 1.3 1999/12/24 22:30:07 pooka Exp $
  # 
 -WINSRC = $(WINTTYSRC)
 -WINOBJ = $(WINTTYOBJ)
-+WINSRC = $(WINX11SRC)
-+WINOBJ = $(WINX11OBJ)
++WINSRC = $(WINQTSRC)
++WINOBJ = $(WINQTOBJ)
  
  # on some systems the termcap library is in -ltermcap or -lcurses
  # on 386 Xenix, the -ltermlib tputs() seems not to work; use -lcurses instead
-@@ -186,7 +186,7 @@
- #
- # libraries for X11
- # If USE_XPM is defined in config.h, you will also need -lXpm here.
--WINX11LIB = -lXaw -lXmu -lXext -lXt -lX11
-+WINX11LIB = -lXaw -lXmu -lXext -lXt -lX11 -lXpm
- # WINX11LIB = -lXaw -lXmu -lXt -lX11
- # WINX11LIB = -lXaw -lXmu -lXext -lXt -lXpm -lX11 -lm
+@@ -192,14 +192,14 @@
  # WINX11LIB = -lXaw -lXmu -lXpm -lXext -lXt -lX11 -lSM -lICE -lm # BSD/OS 2.0
-@@ -199,7 +199,7 @@
+ #
+ # libraries for Qt
+-WINQTLIB = -L$(QTDIR)/lib -lqt
++WINQTLIB = -L$(QTDIR)/lib -lqt -lXpm
+ #
+ # libraries for KDE (with Qt)
+ WINKDELIB = -lkdecore -lkdeui -lXext
  #
  #
  
 -WINLIB = $(WINTTYLIB)
-+WINLIB = $(WINX11LIB)
++WINLIB = $(WINQTLIB)
  
  # any other strange libraries your system needs (for Sysunix only -- the more
  # specialized targets should already be right)

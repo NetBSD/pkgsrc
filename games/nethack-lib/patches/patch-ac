@@ -1,26 +1,49 @@
-$NetBSD: patch-ac,v 1.1 1998/08/27 12:58:51 garbled Exp $
---- include/system.h.rorig	Sun Aug  9 05:31:34 1998
-+++ include/system.h	Sun Aug  9 05:31:40 1998
-@@ -82,3 +82,3 @@
+$NetBSD: patch-ac,v 1.2 1999/12/24 22:30:00 pooka Exp $
+
+--- include/system.h.orig	Sat Dec 11 07:20:51 1999
++++ include/system.h	Thu Dec 23 22:12:04 1999
+@@ -77,10 +77,10 @@
+ # if !defined(__SC__) && !defined(LINUX)
+ E  long NDECL(random);
+ # endif
+-# if !defined(SUNOS4) || defined(RANDOM)
++# if (!defined(SUNOS4) && !defined(__NetBSD__)) || defined(RANDOM)
+ E void FDECL(srandom, (unsigned int));
  # else
 -#  ifndef bsdi
 +#  if !defined(bsdi) && !defined(__NetBSD__)
  E int FDECL(srandom, (unsigned int));
-@@ -132,3 +132,3 @@
+ #  endif
+ # endif
+@@ -130,7 +130,7 @@
+ E void FDECL(qsort, (genericptr_t,size_t,size_t,
+ 		     int(*)(const genericptr,const genericptr)));
  #else
 -# if defined(BSD) || defined(ULTRIX)
 +# if (defined(BSD) || defined(ULTRIX)) && !defined(__NetBSD__)
  E  int qsort();
-@@ -398,3 +398,3 @@
+ # else
+ #  if !defined(LATTICE) && !defined(AZTEC_50)
+@@ -413,7 +413,7 @@
+ # ifdef HPUX
+ E unsigned int	FDECL(strlen, (char *));
  #  else
 -#   if !(defined(ULTRIX_PROTO) && defined(__GNUC__))
 +#   if !(defined(ULTRIX_PROTO) && defined(__GNUC__)) && !defined(__NetBSD__)
  E int	FDECL(strlen, (const char *));
-@@ -509,2 +509,3 @@
+ #   endif
+ #  endif /* HPUX */
+@@ -513,11 +513,13 @@
+ #  endif
+ # endif
  
 +#ifndef __NetBSD__
- # if defined(ULTRIX) || defined(SYSV) || defined(MICRO) || defined(VMS) || defined(MAC)
-@@ -514,2 +515,3 @@
+ # if defined(ULTRIX) || defined(SYSV) || defined(MICRO) || defined(VMS) || defined(MAC) || (defined(HPUX) && defined(_POSIX_SOURCE))
+ E time_t FDECL(time, (time_t *));
+ # else
+ E long FDECL(time, (time_t *));
  # endif /* ULTRIX */
 +#endif
  
+ #ifdef VMS
+ 	/* used in makedefs.c, but missing from gcc-vms's <time.h> */

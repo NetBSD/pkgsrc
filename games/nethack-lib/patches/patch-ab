@@ -1,14 +1,19 @@
-$NetBSD: patch-ab,v 1.1 1998/08/27 12:58:51 garbled Exp $
---- sys/unix/Makefile.top.orig	Tue Dec 10 13:20:10 1996
-+++ sys/unix/Makefile.top	Sat Aug  8 06:10:41 1998
-@@ -17,4 +17,4 @@
+$NetBSD: patch-ab,v 1.2 1999/12/24 22:30:00 pooka Exp $
+
+--- sys/unix/Makefile.top.orig	Sat Dec 11 07:21:05 1999
++++ sys/unix/Makefile.top	Wed Dec 22 20:18:19 1999
+@@ -14,17 +14,16 @@
+ # MAKE = make
+ 
+ # make NetHack
+-PREFIX	 = /usr
  GAME     = nethack
 -GAMEUID  = games
 -GAMEGRP  = bin
-+GAMEUID  = bin
++GAMEUID  = root
 +GAMEGRP  = games
  
-@@ -22,6 +22,6 @@
+ # Permissions - some places use setgid instead of setuid, for instance
  # See also the option "SECURE" in include/config.h
 -GAMEPERM = 04755
 -FILEPERM = 0644
@@ -18,19 +23,28 @@ $NetBSD: patch-ab,v 1.1 1998/08/27 12:58:51 garbled Exp $
 -DIRPERM  = 0755
 +DIRPERM  = 0775
  
-@@ -34,4 +34,4 @@
+ # GAMEDIR also appears in config.h as "HACKDIR".
+ #
+@@ -33,13 +32,13 @@
+ # therefore there should not be anything in GAMEDIR that you want to keep
+ # (if there is, you'll have to do the installation by hand or modify the
  # instructions)
--GAMEDIR  = /usr/games/lib/$(GAME)dir
--SHELLDIR = /usr/games
-+GAMEDIR  = $(LOCALBASE)/share/$(GAME)dir
-+SHELLDIR = $(LOCALBASE)/bin
+-GAMEDIR  = $(PREFIX)/games/lib/$(GAME)dir
+-SHELLDIR = $(PREFIX)/games
++GAMEDIR  = $(PREFIX)/share/$(GAME)dir
++SHELLDIR = $(PREFIX)/bin
  
-@@ -40,3 +40,3 @@
+ # per discussion in Install.X11 and Install.Qt
+ VARDATND = 
  # VARDATND = x11tiles pet_mark.xbm
 -# VARDATND = x11tiles pet_mark.xbm rip.xpm
 +VARDATND = x11tiles pet_mark.xbm rip.xpm
  
-@@ -76,5 +76,8 @@
+ VARDATD = data oracles options quest.dat rumors
+ VARDAT = $(VARDATD) $(VARDATND)
+@@ -76,9 +75,12 @@
+ $(GAME):
+ 	( cd src ; $(MAKE) )
  
 -all:	$(GAME) Guidebook $(VARDAT) dungeon spec_levs check-dlb
 +all:	$(GAME) datastuff
@@ -40,37 +54,58 @@ $NetBSD: patch-ab,v 1.1 1998/08/27 12:58:51 garbled Exp $
 +	@echo "Data Sets Built"
 +
  Guidebook:
-@@ -128,2 +131,7 @@
+ 	( cd doc ; $(MAKE) Guidebook )
  
+@@ -128,7 +130,12 @@
+ 	( cd util ; $(MAKE) dlb )
+ 	( cd dat ; ../util/dlb cf nhdat $(DATDLB) )
+ 
+-
 +binfiles: $(GAME)
 +	cp src/$(GAME) $(SHELLDIR)/$(GAME)$(GTYPE)
 +	-( cd $(GAMEDIR) ; $(CHOWN) $(GAMEUID) $(SHELLDIR)/$(GAME)$(GTYPE) ; \
-+			$(CHGRP) $(GAMEGRP) $(SHELLDIR)/$(GAME)$(GTYPE) )
++		$(CHGRP) $(GAMEGRP) $(SHELLDIR)/$(GAME)$(GTYPE) )
 +	chmod $(GAMEPERM) $(SHELLDIR)/$(GAME)$(GTYPE)
- 
-@@ -137,3 +145,2 @@
++ 
+ dofiles:
+ 	target=`sed -n					\
+ 		-e '/librarian/{' 			\
+@@ -137,16 +144,13 @@
+ 		-e '}' 					\
+ 	  	-e '$$s/.*/nodlb/p' < dat/options` ;	\
  	$(MAKE) dofiles-$${target-nodlb}
 -	cp src/$(GAME) $(GAMEDIR)
  	-rm -f $(SHELLDIR)/$(GAME)
-@@ -141,2 +148,3 @@
+ 	sed -e 's;/usr/games/lib/nethackdir;$(GAMEDIR);' \
  		-e 's;HACKDIR/nethack;HACKDIR/$(GAME);' \
-+		-e 's;XXXPREFIXXXX;$(LOCALBASE);' \
++		-e 's;XXXPREFIXXXX;$(PREFIX);' \
  		< sys/unix/nethack.sh \
-@@ -144,5 +152,2 @@
+ 		> $(SHELLDIR)/$(GAME)
  # set up their permissions
 -	-( cd $(GAMEDIR) ; $(CHOWN) $(GAMEUID) $(GAME) ; \
 -			$(CHGRP) $(GAMEGRP) $(GAME) )
 -	chmod $(GAMEPERM) $(GAMEDIR)/$(GAME)
  	-$(CHOWN) $(GAMEUID) $(SHELLDIR)/$(GAME)
-@@ -182,3 +187,3 @@
+ 	$(CHGRP) $(GAMEGRP) $(SHELLDIR)/$(GAME)
+ 	chmod $(EXEPERM) $(SHELLDIR)/$(GAME)
+@@ -182,7 +186,7 @@
+ # and a reminder
+ 	@echo You may also want to install the man pages via the doc Makefile.
  
 -install: $(GAME) $(VARDAT) dungeon spec_levs
 +install-dat: $(VARDAT) dungeon spec_levs
  # set up the directories
-@@ -197,2 +202,6 @@
+ 	-mkdir $(SHELLDIR)
+ 	-rm -rf $(GAMEDIR)
+@@ -197,6 +201,11 @@
+ 	-( cd $(GAMEDIR) ; $(CHOWN) $(GAMEUID) perm record logfile ; \
+ 			$(CHGRP) $(GAMEGRP) perm record logfile ; \
  			chmod $(FILEPERM) perm record logfile )
-+	-mkdir -p $(LOCALBASE)/share/doc/nethack
-+	cp doc/Guidebook $(LOCALBASE)/share/doc/nethack
-+	chown $(GAMEUID):$(GAMEGRP) $(LOCALBASE)/share/doc/nethack/Guidebook
-+	chmod $(FILEPERM) $(LOCALBASE)/share/doc/nethack/Guidebook
++	-mkdir -p $(PREFIX)/share/doc/nethack
++	cp doc/Guidebook $(PREFIX)/share/doc/nethack
++	chown $(GAMEUID):$(GAMEGRP) $(PREFIX)/share/doc/nethack/Guidebook
++	chmod $(FILEPERM) $(PREFIX)/share/doc/nethack/Guidebook
++
  # and a reminder
+ 	@echo You may also want to reinstall the man pages via the doc Makefile.
+ 
