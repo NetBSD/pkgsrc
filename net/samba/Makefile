@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2001/11/21 16:44:17 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2001/11/21 17:16:05 jlam Exp $
 
 DISTNAME=		samba-2.2.2
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -22,14 +22,12 @@ USE_BUILDLINK_ONLY=	# defined
 USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../devel/readline/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
 
-SAMBA_LOGDIR=		/var/log
-SAMBA_LOCKDIR=		/var/run/samba
+SAMBA_LOGDIR?=		/var/log
+SAMBA_LOCKDIR?=		/var/run/samba
 SAMBA_ETCDIR?=		${CONFDIR}/samba
 SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
-SAMBA_SHARE?=		${PREFIX}/share
+SAMBA_DATADIR=		${PREFIX}/share
 
 MAKE_ENV+=		ETCDIR=${SAMBA_ETCDIR}
 MAKE_ENV+=		LOGDIR=${SAMBA_LOGDIR}
@@ -88,7 +86,7 @@ post-extract:
 pre-install:
 	for script in ${RCD_SCRIPTS}; do				\
 		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
-                        > ${WRKDIR}/$${script};				\
+			> ${WRKDIR}/$${script};				\
 	done
 
 post-install:
@@ -115,9 +113,11 @@ post-install:
 
 	${SED} ${FILES_SUBST_SED}					\
 		${FILESDIR}/smb.conf.sample > ${WRKDIR}/smb.conf.sample
-	${INSTALL_DATA} ${WRKDIR}/smb.conf.sample ${PREFIX}/share/examples/samba
+	${INSTALL_DATA} ${WRKDIR}/smb.conf.sample ${EXAMPLESDIR}
 
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../devel/readline/buildlink.mk"
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
