@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15 2002/11/28 13:35:04 wiz Exp $
+$NetBSD: TODO,v 1.16 2002/11/29 10:49:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -92,6 +92,7 @@ Suggested package updates
 	o easytags-0.25
 	o eggdrop-1.6.13
 	o elinks-0.3.2 (0.4pre18)
+	o elm-me-2.4pl99e
 	o eterm-0.9.2
 	o evilwm-0.99.11
 	o evolution-1.1.1
@@ -102,6 +103,7 @@ Suggested package updates
 	o fox-1.0.28
 	o freeciv-1.13.0
 	o freetype-2.1.2 [pkg/19109]
+	o galeon-1.2.7
 	o gcc-3.2.1
 	o gcvs-1.0b4
 	o gd-2.0.4
