@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/19 15:45:27 seb Exp $
+
+--- Makefile.PL.orig	2002-06-22 11:35:48.000000000 +0200
++++ Makefile.PL
+@@ -14,7 +14,8 @@ my $DB_NAME ;
+ my $LIBS ;
+ my $COMPAT185 = "" ;
+ 
+-ParseCONFIG() ;
++my $DB_CPPFLAGS = $ENV{'DB_CPPFLAGS'};
++$DB_NAME = $ENV{'DB_NAME'};
+ 
+ my @files = ('DB_File.pm', glob "t/*.t") ;
+ UpDowngrade(@files);
+@@ -40,9 +41,9 @@ $OS2 = "-DOS2" if $Config{'osname'} eq '
+ 
+ WriteMakefile(
+ 	NAME 		=> 'DB_File',
+-	LIBS 		=> ["-L${LIB_DIR} $LIBS"],
++	LIBS 		=> ["$LIBS"],
+         #MAN3PODS        => {},         # Pods will be built by installman.
+-	INC		=> "-I$INC_DIR",
++	INC		=> "$DB_CPPFLAGS",
+ 	VERSION_FROM	=> 'DB_File.pm',
+ 	XSPROTOARG	=> '-noprototypes',
+ 	DEFINE		=> "-D_NOT_CORE $OS2 $VER_INFO $COMPAT185",
+@@ -51,7 +52,7 @@ WriteMakefile(
+ 	'depend'	=> { 'Makefile'          => 'config.in',
+                              'version$(OBJ_EXT)' => 'version.c'},
+ 	'clean'		=> { FILES => 'constants.h constants.xs' },
+-	'macro'		=> { INSTALLDIRS => 'perl', my_files => "@files" },
++	'macro'		=> { my_files => "@files" },
+         'dist'          => { COMPRESS => 'gzip', SUFFIX => 'gz',
+ 			     DIST_DEFAULT => 'MyDoubleCheck tardist'},    
+ 	);
