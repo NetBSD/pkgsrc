@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1502 2004/03/11 21:43:50 jmmv Exp $
+$NetBSD: TODO,v 1.1503 2004/03/12 19:58:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -138,6 +138,7 @@ Suggested package updates
 	o avidemux-2.0.20
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
+	o bittorrent-3.4.1
 	o blib-1.1.6
 	o blinkensim-2.7
 	o blinkentools-2.7
@@ -158,6 +159,7 @@ Suggested package updates
 	o cvs-1.12.3
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
+	o cyrus-sasl2-2.1.18
 	o dctc-0.85.9
 	o ddd-3.3.8
 	o delegate-8.9.1
@@ -201,10 +203,11 @@ Suggested package updates
 	o gnumeric-1.2.5
 	o gnustep-1.9.1
 	o gpsim-0.21.0 [bouyer]
+	o gqview-devel-1.5.0
 	o grepmail-5.23
 	o gsasl-0.0.14
 	o gtetrinet-0.7.4
-	o gtkglext-1.0.5
+	o gtkglext-1.0.6
 	o gtkmm-2.2.9
 	o gtksee-0.5.5.1
 	o gtranslator-1.0.1
@@ -244,7 +247,7 @@ Suggested package updates
 	o marbles-1.0.6
 	o matchbox-0.8
 	o memtest86-3.1
-	o micq-0.4.10.5
+	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o minicom-2.1
 	o mng-1.0.6
@@ -338,6 +341,7 @@ Suggested package updates
 	o w3m-0.4.2
 	o wavesurfer-1.5.3
 	o wdm-1.27
+	o wine-20040309
 	o wwwoffle-2.8a
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
 	o xanim-2.92.0 [pkg/19934]
