@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.2 2003/07/22 20:43:04 jmmv Exp $
+$NetBSD: patch-ab,v 1.3 2003/12/19 16:48:06 ben Exp $
 
---- SpiralInfo.C.orig	Sun Nov 26 07:52:43 2000
+--- SpiralInfo.C.orig	2000-11-26 07:52:43.000000000 -0800
 +++ SpiralInfo.C
-@@ -41,7 +41,7 @@
+@@ -22,7 +22,7 @@
+ 
+ #include "SpiralSound/SpiralInfo.h"
+ 
+-float RandFloat(float s=0.0f, float e=1.0f)
++float RandFloat(float s, float e)
+ {
+ 	return s+((rand()%10000/10000.0)*(e-s));
+ }
+@@ -41,7 +41,7 @@ long   SpiralInfo::MAXSAMPLE   = 32767;
  float  SpiralInfo::VALUECONV   = 1.0f/MAXSAMPLE;
  bool   SpiralInfo::WANTMIDI    = true;
  int    SpiralInfo::FILTERGRAN  = 50;
