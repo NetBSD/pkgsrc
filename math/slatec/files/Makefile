@@ -1,11 +1,15 @@
 LIB	= slatec
-
 LIBDIR	= ${PREFIX}/lib
 
-FORTRAN = %%FORTRAN%%
-FFLAGS	= -O3
+.if $(FC)=="f77" || $(FC)=="g77"
+FOPTS=-funroll-all-loops -O3
+FLIBS=-lg2c -lm
+.else
+FOPTS=-O2
+FLIBS=-lm
+.endif
 
-all:	lib$(LIB)
+all:	lib$(LIB).la
 
 OBJ= aaaaaa.o acosh.o ai.o aie.o albeta.o algams.o ali.o alngam.o alnrel.o \
 asinh.o asyik.o asyjy.o atanh.o avint.o bakvec.o balanc.o \
@@ -185,15 +189,24 @@ zbuni.o zbunk.o zdiv.o zexp.o zkscl.o zlog.o zmlri.o zmlt.o zrati.o \
 zs1s2.o zseri.o zshch.o zsqrt.o zuchk.o zunhj.o zuni1.o zuni2.o \
 zunik.o zunk1.o zunk2.o zuoik.o zwrsk.o
 
-lib$(LIB):	$(OBJ)
-	@$(LIBTOOL) --mode=link $(FORTRAN) -O -o lib$(LIB).la $(OBJ:.o=.lo) \
-	--version-info 0:0 -rpath $(LIBDIR)
+lib$(LIB).la:	$(OBJ)
+	$(LIBTOOL) --mode=link $(FC) $(FFLAGS) $(FOPTS) -o $@ $(OBJ:.o=.lo) \
+	$(LDFLAGS) $(FLIBS) --version-info 0:0 -rpath $(LIBDIR)
+
+d1mach.o:
+	$(LIBTOOL) --mode=compile $(FC) -c $<
+
+i1mach.o:
+	$(LIBTOOL) --mode=compile $(FC) -c $<
+
+r1mach.o:
+	$(LIBTOOL) --mode=compile $(FC) -c $<
 
 .f.o:
-	@$(LIBTOOL) --mode=compile $(FORTRAN) $(FFLAGS) -c $*.f
+	$(LIBTOOL) --mode=compile $(FC) $(FFLAGS) $(FOPTS) -c $<
 
-install:
-	@$(LIBTOOL) --mode=install install lib$(LIB).la $(LIBDIR)
+install:  lib$(LIB).la
+	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $? $(LIBDIR)
 
 clean:
-	rm -rf *.o *.lo .libs lib$(LIB).la
+	rm -rf $(OBJ) $(OBJ:.o=.lo) .libs lib$(LIB).la
