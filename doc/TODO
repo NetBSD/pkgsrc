@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.660 2003/06/27 10:09:34 wiz Exp $
+$NetBSD: TODO,v 1.661 2003/06/27 10:50:48 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -80,8 +80,6 @@ Suggested package updates
 	o biew-5.5.0
 	o bind-8.4.0
 	o binutils-2.14
-	o boehm-gc-6.2alpha6 [pkg/21950]
-	o boehm-gc-6.2
 	o bogofilter-0.11.2
 	o bzflag-1.7g0
 	o centericq-4.9.4
