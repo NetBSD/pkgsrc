@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/07/24 13:36:52 agc Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/04 14:48:19 agc Exp $
 #
 
 DISTNAME=	nocol-4.2beta6
@@ -12,12 +12,11 @@ USE_PERL=	yes
 
 INSTALL_TARGET=	install root
 
-.ifndef FQDN
-FQDN!=		/usr/sbin/host `/bin/hostname` | /usr/bin/awk '{ print $$1; exit }'
-.endif
-
 post-patch:
-	@${SED} -e 's|@prefix@|${PREFIX}|g' -e 's|@FQDN@|${FQDN}|g' ${FILESDIR}/answers > ${WRKSRC}/answers
+	@(hostname=`/bin/hostname`;					\
+	fqdn=`/usr/sbin/host $$hostname | /usr/bin/awk '{ print $$1; exit }'`; \
+	${SED} -e 's|@prefix@|${PREFIX}|g' -e "s|@FQDN@|$$fqdn|g" 	\
+			${FILESDIR}/answers > ${WRKSRC}/answers)
 
 do-configure:
 	(cd ${WRKSRC}; ./Configure < answers)
