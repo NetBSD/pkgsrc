@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.129 1998/07/26 22:20:22 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.130 1998/07/27 11:17:51 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -745,9 +745,19 @@ do-fetch:
 			fi ; \
 			${ECHO_MSG} ">> $$file doesn't seem to exist on this system."; \
 			for site in ${MASTER_SITES}; do \
-			    ${ECHO_MSG} ">> Attempting to fetch from $${site}."; \
+				${ECHO_MSG} ">> Attempting to fetch $$file from $${site}."; \
 				if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${file} ${FETCH_AFTER_ARGS}; then \
-					continue 2; \
+					if [ -f ${MD5_FILE} ]; then \
+						CKSUM=`${MD5} < ${DISTDIR}/$$file`; \
+						CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "\('$$file'\)"{print $$4;}' ${MD5_FILE}`; \
+						if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
+							continue 2; \
+						else \
+							${ECHO_MSG} ">> Checksum failure - trying next site."; \
+						fi; \
+					else \
+						continue 2; \
+					fi; \
 				fi \
 			done; \
 			${ECHO_MSG} ">> Couldn't fetch it - please try to retrieve this";\
