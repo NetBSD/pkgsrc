@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8380 2004/12/21 00:16:08 schmonz Exp $
+$NetBSD: CHANGES,v 1.8381 2004/12/21 00:16:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6441,3 +6441,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-SQL-Abstract-1.17 [he 2004-12-20]
 	Added p5-Class-DBI-AbstractSearch-0.05 [he 2004-12-20]
 	Added bglibs-1.019 [schmonz 2004-12-21]
+	Updated qmail-qfilter to 2.0 [schmonz 2004-12-21]
