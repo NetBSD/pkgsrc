@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.371 2005/01/08 13:20:42 minskim Exp $
+# $NetBSD: Makefile,v 1.372 2005/01/11 15:48:12 manu Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -16,6 +16,7 @@ SUBDIR+=	ap-auth-mysql
 SUBDIR+=	ap-auth-pam
 SUBDIR+=	ap-auth-pgsql
 SUBDIR+=	ap-auth-postgresql
+SUBDIR+=	ap-auth-radius
 SUBDIR+=	ap-auth-script
 SUBDIR+=	ap-bandwidth
 SUBDIR+=	ap-dav
