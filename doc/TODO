@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1562 2004/03/31 16:02:48 kei Exp $
+$NetBSD: TODO,v 1.1563 2004/04/01 13:34:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -203,6 +203,7 @@ Suggested package updates
 	o gnome-vfs2-2.4.3
 	o gnomeicu-0.99.5
 	o gnumeric-1.2.8
+	o gnunet-0.6.1d
 	o gnustep-1.9.1
 	o gpsim-0.21.0 [bouyer]
 	o gqmpeg-0.90.0
@@ -240,6 +241,7 @@ Suggested package updates
 	o libmpeg3-1.5.4
 	o libnet-1.1.1
 	o libole2-2.2.8
+	o libsndfile-1.0.9
 	o libxslt-1.1.5
 	o licq-1.2.7
 	o lilypond-2.0.3
@@ -255,7 +257,7 @@ Suggested package updates
 	o memtest86-3.1
 	o micq-0.4.11
 	o midnight-commander-4.6.0
-	o mimedefang-2.41
+	o mimedefang-2.42
 	o minicom-2.1
 	o mng-1.0.6
 	o mono-0.31
@@ -287,6 +289,7 @@ Suggested package updates
 	o p5-Devel-StackTrace-1.05
 	o p5-Exception-Class-1.17
 	o p5-Socket6-0.16
+	o p5-XML-Path-1.13 [pkg/24998]
 	o p5-XML-Writer-0.500 [pkg/24903]
 	o p5-XML-XSLT-0.47
 	o pango-1.4.0 [jmmv]
