@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/03/29 22:04:09 recht Exp $
+
+--- ttf.cpp.orig	2004-03-29 12:46:48.000000000 +0200
++++ ttf.cpp
+@@ -226,7 +226,7 @@ Face::FontFamilyName (void) const
+ 	for (i = 0; i < n; i++) {
+ 	    if ((fterror = FT_Get_Sfnt_Name (face, i, &NamePtr)) != FT_Err_Ok) {
+                     std::cout << "Warning: Can't SFNT name : " << FileName << "(" << fterror << ")" << std::endl;
+-	            return;
++	            return "unknown";
+             };
+             platform = NamePtr.platform_id;
+             encoding = NamePtr.encoding_id;
