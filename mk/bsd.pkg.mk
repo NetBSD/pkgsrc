@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1272 2003/09/12 10:54:49 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1273 2003/09/12 13:03:38 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -382,6 +382,8 @@ SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
 
 DISTINFO_FILE?=		${.CURDIR}/distinfo
 
+.include "../../mk/compiler.mk"
+
 FIX_RPATH+=		LIBS
 .if defined(USE_X11)
 X11_LDFLAGS=		# empty
@@ -420,24 +422,6 @@ MAKE_ENV+=		CXX="${CXX}"
 .endif
 .if defined(CPP) && !defined(NO_EXPORT_CPP)
 MAKE_ENV+=		CPP="${CPP}"
-.endif
-
-# Ensure the correct rpath is passed to the linker to enable packages
-# to find shared libraries from gcc. Has no effect when pkgsrc gcc is
-# not being used.
-#
-# Valid compilers are:
-#
-#	USE_GCC2    - GNU Compiler Collection 2.x
-# 	USE_GCC3    - GNU Compiler Collection 3.x
-#	USE_MIPSPRO - Silicon Graphics, Inc. MIPSpro Compiler
-#	USE_SUNPRO  - Sun Microsystems, Inc. WorkShop/Forte/Sun ONE Studio
-#	              Compiler Collection
-#
-.if !defined(USE_MIPSPRO) && !defined(USE_SUNPRO)
-.  if empty(USE_BUILDLINK2:M[nN][oO])
-.    include "../../mk/gcc.buildlink2.mk"
-.  endif
 .endif
 
 # export the flags needed to compile and link pthreaded code
