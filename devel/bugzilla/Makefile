@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/02 13:39:55 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/06 13:15:27 adrianp Exp $
 #
 
 DISTNAME=	bugzilla-2.18rc3
+PKGREVISION=	1
 CATEGORIES=	www devel
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/webtools/
 
@@ -13,7 +14,7 @@ DEPENDS+=	p5-AppConfig>=1.52:../../devel/p5-AppConfig
 DEPENDS+=	p5-CGI>=2.93:../../www/p5-CGI
 DEPENDS+=	p5-File-Spec>=0.82:../../devel/p5-File-Spec
 DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
-DEPENDS+=	p5-Template-Toolkit>=2.08:../../www/p5-Template-Toolkit
+#DEPENDS+=	p5-Template-Toolkit>=2.08:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Text-Tabs+Wrap>=2001.0131:../../textproc/p5-Text-Tabs+Wrap
 DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
 DEPENDS+=	p5-DBD-mysql>=2.1010:../../databases/p5-DBD-mysql
