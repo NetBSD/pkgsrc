@@ -1,4 +1,4 @@
-$NetBSD: README.IRIX,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+$NetBSD: README.IRIX,v 1.2 2004/09/12 17:43:37 jschauma Exp $
 
 You will need a working C compiler, either gcc or SGI's MIPS and MIPSpro
 compiler (cc/c89).  Please set the CC environment variable according to your
@@ -29,5 +29,6 @@ such as imake(1), but you may want to set some options depending on your
 local setup.  Please see pkgsrc/mk/bsd.pkg.defaults.mk and, of course,
 your compilers man pages for details.
 
-bootstrap-pkgsrc has been tested on Irix 6.5.18 on:
-	- an O2 with 1 195 MHZ IP32 Processor (R10000)
+bootstrap-pkgsrc has been tested on Irix 6.5.23f on:
+	- an O2 with 1 180 MHZ IP32 Processor (R5000) (n32 ABI)
+	- an Origin 200 with 2 180 MHZ IP27 Processors (R10000) (64 ABI)
