@@ -1,4 +1,4 @@
-.\"	$NetBSD: etcupdate.8,v 1.5 2001/11/23 19:16:38 martti Exp $
+.\"	$NetBSD: etcupdate.8,v 1.6 2001/12/01 11:42:09 martti Exp $
 .\"
 .\" Copyright (c) 2001 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -43,7 +43,7 @@
 .Pa /etc
 .Sh SYNOPSIS
 .Nm
-.Op Fl b
+.Op Fl b Ar srcdir
 .Op Fl h
 .Op Fl p Ar pager
 .Op Fl s Ar srcdir
@@ -55,9 +55,10 @@
 is a tool to update the configuration and startup files in
 .Pa /etc
 (and some other directories like
-.Pa /dev
+.Pa /dev ,
+.Pa /root
 and
-.Pa /root )
+.Pa /var )
 without the need of manually checking and modifying every file.
 The user should run this script after performing an operating system
 update (e.g. after running
@@ -67,16 +68,34 @@ in
 or after extracting the binary distribution files)
 to use the latest configuration and startup files.
 .Pp
+If the user is updating from sources (which is the default mode),
 .Nm
 will first create a copy of the new configuration and startup files
-(by either running
+by running
 .Pa make distribution
 in
-.Pa /usr/src/etc
-or extracting the given binary distribution files) and compare these
-against the currently installed files. The user is given the option
-of installing, merging or deleting each modified or missing file.
+.Pa /usr/src/etc .
 .Pp
+Instead of using sources, the user can also extract one or more binary
+distribution sets and use those files to update the currently installed
+files (see usage of the
+.Fl b Ar srcdir
+argument later in this manual page).
+Files in
+.Pa srcdir
+will be removed by
+.Nm
+when using the
+.Fl b Ar srcdir
+argument (as the
+.Pa srcdir
+directory is treated like
+.Pa temproot ) .
+.Pp
+.Nm
+compares the new files against the currently installed files.
+The user is given the option of installing, merging or deleting each
+modified or missing file.
 .Nm
 also detects if the user installs certain special files and performs
 corresponding tasks like remaking device nodes or rebuilding a database
@@ -102,31 +121,12 @@ variable.
 The location of the
 .Nx
 sources files.  By default this is
-.Pa /usr/src
+.Pa /usr/src/etc
 but it can be changed either with the
 .Fl s Ar srcdir
 argument or by defining the
 .Ev SRCDIR
 variable.
-.Pp
-If the
-.Fl b
-flag is not used,
-.Nm
-expects to find
-.Pa etc/Makefile
-within the source directory. This will be used to create the temporary
-files in
-.Pa /tmp/temproot .
-.Pp
-If the
-.Fl b
-flag is used (maybe together with the
-.Fl s Ar srcdir
-argument),
-.Nm
-uses the source directory directly as the temporary directory
-.Pa ( /tmp/temproot ) .
 .It Ev PAGER
 The pager to use when displaying files.  By default this is
 .Xr more 1
@@ -160,34 +160,26 @@ You have just upgraded your
 host from 1.5.2 to 1.5.3 and now it's time
 to update the configuration files as well.
 To update the configuration files from the sources (if you have the
-.Pa /usr/src
+.Pa /usr/src/etc
 directory):
 .Pp
 .Dl etcupdate
 .Pp
 The default location of the source files is
-.Pa /usr/src
+.Pa /usr/src/etc
 but this may be overridden with the
 .Fl s Ar srcdir
 command line argument:
 .Pp
-.Dl etcupdate -s /some/where/src
+.Dl etcupdate -s /some/where/src/etc
 .Pp
-To update the configuration files from binary distribution packages
+To update the configuration files from binary distribution sets
 do something like this:
 .Pp
-.Dl mkdir /tmp/etc
-.Dl cd /tmp/etc
-.Dl tar xf /some/where/etc.tgz
-.Dl etcupdate -b -s /tmp/etc
-.Pp
-The
-.Fl b
-flag tells
-.Nm
-that the source directory does not have any
-.Pa etc/Makefile
-but the files from the binary distribution set(s).
+.Dl mkdir /tmp/temproot
+.Dl cd /tmp/temproot
+.Dl tar xzf /some/where/etc.tgz
+.Dl etcupdate -b /tmp/temproot
 .Pp
 To get a better idea what's going on, use the
 .Fl v
