@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/07 16:30:49 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/07/13 07:09:26 jlam Exp $
 
 DISTNAME=	horde-1.2.5
 CATEGORIES=	www
@@ -29,6 +29,18 @@ MESSAGE_SUBST+=	PHPLIBDIR=${PHPLIBDIR}
 APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
 BUILD_DEFS+=		APACHE_SYSCONFDIR
 MESSAGE_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
+
+FILES_SUBST=		HORDEDIR=${HORDEDIR:S/^${PREFIX}\///}
+FILES_SUBST=		PHPLIBDIR=${PHPLIBDIR:S/^${PREFIX}\///}
+FILES_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
+FILES_SUBST+=		CAT=${CAT:Q}
+FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CMP=${CMP:Q}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST+=		RMDIR=${RMDIR:Q}
+FILES_SUBST+=		TRUE=${TRUE:Q}  
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 post-extract:
 	cd ${WRKSRC}/phplib;						\
@@ -70,21 +82,8 @@ pre-install:
 		${FILESDIR}/horde_setup.sh > ${WRKDIR}/horde_setup.sh
 	${SED}	-e "s|@HORDEDIR@|${HORDEDIR}|g"				\
 		${FILESDIR}/horde_secure.sh > ${WRKDIR}/horde_secure.sh
-	${SED}	-e "s|@HORDEDIR@|${HORDEDIR:S/^${PREFIX}\///}|g"	\
-		-e "s|@PHPLIBDIR@|${PHPLIBDIR:S/^${PREFIX}\///}|g"	\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@RM@|${RM}|g"					\
-		-e "s|@RMDIR@|${RMDIR}|g"				\
-		-e "s|@TRUE@|${TRUE}|g"					\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s|@HORDEDIR@|${HORDEDIR:S/^${PREFIX}\///}|g"	\
-		-e "s|@PHPLIBDIR@|${PHPLIBDIR:S/^${PREFIX}\///}|g"	\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@CHMOD@|${CHMOD}|g"				\
-		-e "s|@CP@|${CP}|g"					\
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:

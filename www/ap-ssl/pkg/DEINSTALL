@@ -1,11 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/04/29 20:36:48 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/07/13 07:09:24 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 CAT="@CAT@"
+CMP="@CMP@"
 RM="@RM@"
 
 SERVERROOT="@APACHE_SYSCONFDIR@"
@@ -30,7 +31,7 @@ DEINSTALL)
 	do
 		FILE=${CONFDIR}/${file}
 		SAMPLEFILE=${SAMPLECONFDIR}/${file}
-		if diff -q ${FILE} ${SAMPLEFILE} >/dev/null
+		if ${CMP} -s ${FILE} ${SAMPLEFILE}
 		then
 			${RM} -f ${FILE}
 		fi

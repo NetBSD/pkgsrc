@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/04/11 11:17:54 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/07/13 07:09:27 jlam Exp $
 #
 
 DISTNAME=	surfraw-1.0.3
@@ -18,14 +18,16 @@ INSTALL_FILE=	${WRKDIR}/INSTALL
 
 DOCDIR=		${PREFIX}/share/doc/surfraw
 
+FILES_SUBST=		CAT=${CAT:Q}
+FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CMP=${CMP:Q}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
 pre-install:
-	${SED}	-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@RM@|${RM}|g"					\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@CHMOD@|${CHMOD}|g"				\
-		-e "s|@CP@|${CP}|g"					\
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
