@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2003/03/30 04:13:31 salo Exp $
+
+Since VMware 3.x, there is a problem which might be related to shared memory
+under Linux emulation, giving as a result black screen.  Unfortunately, it's
+extremely hard to track down what's going on, so noone has been able to fix
+it yet.
+
+If you experience this problem, setting your DISPLAY environment variable
+to "localhost:0" should help.
+===========================================================================
