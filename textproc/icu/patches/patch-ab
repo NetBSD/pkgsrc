@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.3 2000/12/23 09:39:20 skrll Exp $
+$NetBSD: patch-ab,v 1.4 2003/03/21 23:44:07 salo Exp $
 
---- common/unicode/platform.h.in.orig	Tue Oct 17 23:50:27 2000
-+++ common/unicode/platform.h.in
-@@ -178,7 +178,7 @@
- #define U_NL_LANGINFO_CODESET		@U_NL_LANGINFO_CODESET@
+--- icudefs.mk.in.orig	2002-12-06 08:21:18.000000000 +0100
++++ icudefs.mk.in	2003-03-21 23:36:12.000000000 +0100
+@@ -65,7 +65,7 @@
  
- #define U_TZSET			@U_TZSET@
--#define U_TIMEZONE		@U_TIMEZONE@
-+#undef  U_TIMEZONE
- #define U_TZNAME		@U_TZNAME@
+ pkgdatadir = $(datadir)/$(PACKAGE)$(ICULIBSUFFIX)/$(VERSION)
+ pkglibdir = $(libdir)/$(PACKAGE)$(ICULIBSUFFIX)/$(VERSION)
+-pkgsysconfdir = $(sysconfdir)/$(PACKAGE)$(ICULIBSUFFIX)
++pkgsysconfdir = $(sysconfdir)
  
- /*===========================================================================*/
+ # Installation programs
+ 

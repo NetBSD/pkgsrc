@@ -1,20 +1,17 @@
-$NetBSD: patch-ac,v 1.3 2000/12/23 09:39:20 skrll Exp $
+$NetBSD: patch-ac,v 1.4 2003/03/21 23:44:07 salo Exp $
 
---- configure.orig	Mon Dec  4 23:30:03 2000
-+++ configure
-@@ -3718,6 +3718,7 @@
- 	*-*-solaris*) 	platform=U_SOLARIS ;;
- 	*-*-linux*) 	platform=U_LINUX ;;
- 	*-*-freebsd*) 	platform=U_LINUX ;;
-+	*-*-netbsd*) 	platform=U_BSD ;;
- 	*-*-aix*) 	platform=AIX ;;
- 	*-sequent-*)	platform=PTX ;;
- 	*-*-hpux*) 	platform=HPUX ;;
-@@ -3740,6 +3741,7 @@
- 	*-*-solaris*) 	ld_rpath_suf=":" ;;
- 	*-*-linux*) 	ld_rpath_suf=" " ;;
- 	*-*-freebsd*) 	ld_rpath_suf=" " ;;
-+	*-*-netbsd*) 	ld_rpath_suf=" " ;;
- 	*-*-aix*) 	ld_rpath_suf="" ;;
- 	*-sequent-*)	ld_rpath_suf="" ;;
- 	*-*-hpux*) 	ld_rpath_suf=":" ;;
+--- data/Makefile.in.orig	2002-12-13 05:07:48.000000000 +0100
++++ data/Makefile.in	2003-03-22 00:05:30.000000000 +0100
+@@ -101,9 +101,9 @@
+ 	$(MKINSTALLDIRS) $(TMPDATADIR) $(DESTDIR)$(ICUPKGDATA_DIR)
+ 	$(INVOKE) $(PKGDATA) -m $(PKGDATA_MODE) $(PKGDATA_VERSIONING) -e $(ICUDATA_ENTRY_POINT) -T $(BUILDDIR) -s $(BUILDDIR) -p $(ICUDATA_NAME) $(BUILDDIR)/icudata.lst -I $(DESTDIR)$(ICUPKGDATA_DIR)
+ 
+-install-convrtrstxt: $(DESTDIR)$(pkgsysconfdir)/convrtrs.txt
+-$(DESTDIR)$(pkgsysconfdir)/convrtrs.txt: $(UCMSRCDIR)/convrtrs.txt
+-	$(MKINSTALLDIRS) $(DESTDIR)$(pkgsysconfdir)
++install-convrtrstxt: $(DESTDIR)$(prefix)/share/examples/icu/convrtrs.txt
++$(DESTDIR)$(prefix)/share/examples/icu/convrtrs.txt: $(UCMSRCDIR)/convrtrs.txt
++	$(MKINSTALLDIRS) $(DESTDIR)$(prefix)/share/examples/icu
+ 	$(INSTALL_DATA) $< $@
+ 
+ ####
