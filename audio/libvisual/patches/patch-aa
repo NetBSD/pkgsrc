@@ -1,16 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/11/05 20:55:48 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/20 15:06:17 wiz Exp $
 
---- libvisual/lv_common.h.orig	2004-07-24 17:41:22.000000000 +0200
-+++ libvisual/lv_common.h
-@@ -6,9 +6,11 @@
- #include <libvisual/lv_mem.h>
- #include <libvisual/lv_log.h>
+--- libvisual/lv_cpu.c.orig	2005-02-09 20:20:12.000000000 +0100
++++ libvisual/lv_cpu.c
+@@ -354,7 +354,7 @@ void visual_cpu_initialize ()
+ #endif
  
-+#ifndef uint8_t
- #define uint8_t		u_int8_t
- #define uint16_t	u_int16_t
- #define uint32_t	u_int32_t
-+#endif
- 
- #ifdef __cplusplus
- extern "C" {
+ 	/* Count the number of CPUs in system */
+-#if !defined(VISUAL_OS_WIN32) && !defined(VISUAL_OS_UNKNOWN)
++#if !defined(VISUAL_OS_WIN32) && !defined(VISUAL_OS_UNKNOWN) && defined(_SC_NPROCESSORS_ONLN)
+ 	_lv_cpu_caps.nrcpu = sysconf (_SC_NPROCESSORS_ONLN);
+ 	if (_lv_cpu_caps.nrcpu == -1)
+ 		_lv_cpu_caps.nrcpu = 1;

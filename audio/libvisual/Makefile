@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/11/12 20:18:27 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/20 15:06:17 wiz Exp $
 #
 
-DISTNAME=		libvisual-0.1.7
+DISTNAME=		libvisual-0.2.0
 CATEGORIES=		audio graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvisual/}
 
@@ -19,5 +19,4 @@ GNU_CONFIGURE=		yes
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-variable
 
 .include "../../devel/pkgconfig/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
