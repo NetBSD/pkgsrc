@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2002/04/16 20:07:09 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/06/01 13:18:01 itojun Exp $
 
-DISTNAME=		httpd-2.0.35
-PKGNAME=		apache-2.0.35
+DISTNAME=		httpd-2.0.36
+PKGNAME=		apache-2.0.36
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://httpd.apache.org/dist/httpd/old/ \
