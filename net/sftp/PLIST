@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:53 zuntum Exp $
-bin/rsftp
-bin/sftp
-bin/sftpserv
-man/man1/sftp.1
-share/doc/README.sftp
