@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/04/27 20:43:09 rvb Exp $
+# $NetBSD: Makefile,v 1.12 1999/04/28 00:07:57 rvb Exp $
 #
 
 DISTNAME=	coda-5.2.2
@@ -23,5 +23,7 @@ INSTALL_TARGET=	server-install
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+
+FORCE_PKG_REGISTER= sigh
 
 .include "../../mk/bsd.pkg.mk"
