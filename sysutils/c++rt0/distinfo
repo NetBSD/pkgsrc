@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:28:59 agc Exp $
-
-SHA1 (c++rt0/c++rt0.o.PIC) = 7b15f31308893d0167f30cd5d381302bcd57f281
-Size (c++rt0/c++rt0.o.PIC) = 667 bytes
-SHA1 (c++rt0/c++rt0.o.pic) = 4c1aa645c23669fa04cabc786747ba4daae7fcce
-Size (c++rt0/c++rt0.o.pic) = 607 bytes
-SHA1 (c++rt0/README) = 5ca6492df0bef33e192e3ad1c478533445005f6c
-Size (c++rt0/README) = 444 bytes
