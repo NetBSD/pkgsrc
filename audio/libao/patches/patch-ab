@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2003/12/08 14:33:47 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2004/11/16 14:49:13 adam Exp $
 
---- src/plugins/oss/Makefile.in.orig	Sun Oct  5 03:32:51 2003
+--- src/plugins/oss/Makefile.in.orig	2004-03-19 15:49:37.000000000 +0000
 +++ src/plugins/oss/Makefile.in
-@@ -184,7 +184,7 @@ mkinstalldirs = $(SHELL) $(top_srcdir)/m
+@@ -129,7 +129,7 @@ mkinstalldirs = $(SHELL) $(top_srcdir)/m
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
 -liboss_la_LIBADD =
 +liboss_la_LIBADD = ${LIBOSSAUDIO}
- am__liboss_la_SOURCES_DIST = ao_oss.c
  @HAVE_OSS_TRUE@am__objects_1 = ao_oss.lo
  @HAVE_OSS_FALSE@am__objects_1 =
+ am_liboss_la_OBJECTS = $(am__objects_1)

@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2003/12/08 14:33:47 wiz Exp $
+$NetBSD: patch-ad,v 1.5 2004/11/16 14:49:13 adam Exp $
 
---- src/Makefile.in.orig	Sun Oct  5 03:32:49 2003
+--- src/Makefile.in.orig	2004-03-19 15:49:36.000000000 +0000
 +++ src/Makefile.in
-@@ -171,7 +171,7 @@ INCLUDES = -I$(top_builddir)/include/ao 
+@@ -117,7 +117,7 @@ INCLUDES = -I$(top_builddir)/include/ao 
  lib_LTLIBRARIES = libao.la
  
  libao_la_SOURCES = audio_out.c config.c ao_null.c ao_wav.c ao_au.c ao_raw.c ao_aixs.c ao_private.h
