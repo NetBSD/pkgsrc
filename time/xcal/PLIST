@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:19:24 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/03 03:23:26 jschauma Exp $
 bin/pscal
 bin/xcal
 bin/xcal_cal
@@ -6,8 +6,8 @@ bin/xcalev
 bin/xcalpr
 lib/X11/app-defaults/XCal
 lib/X11/app-defaults/XCal.help
-man/cat1/pscal.0
-man/cat1/xcal.0
-man/cat1/xcal_cal.0
-man/cat1/xcalev.0
-man/cat1/xcalpr.0
+${IMAKE_MAN_DIR}/pscal.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/xcal.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/xcal_cal.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/xcalev.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/xcalpr.${IMAKE_MANNEWSUFFIX}

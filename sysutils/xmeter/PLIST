@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:22 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/03 02:59:30 jschauma Exp $
 bin/xmeter
 lib/X11/app-defaults/XMeter
-man/cat1/xmeter.0
+${IMAKE_MAN_DIR}/xmeter.${IMAKE_MANNEWSUFFIX}
