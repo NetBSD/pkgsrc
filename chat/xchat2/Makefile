@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/07/02 08:04:18 minskim Exp $
+# $NetBSD: Makefile,v 1.32 2004/07/18 14:47:29 schmonz Exp $
 #
 
 DISTNAME=	xchat-2.0.10
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
 
 LDFLAGS.IRIX+=		-lX11
+LDFLAGS.Darwin+=	-lX11
 
 .include "../../mk/bsd.prefs.mk"
 
