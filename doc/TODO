@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2906 2005/01/15 21:17:20 wiz Exp $
+$NetBSD: TODO,v 1.2907 2005/01/15 21:47:02 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1059,7 +1059,6 @@ Suggested package updates
 	o snownews-1.5.6.1
 	o socat-1.4.1.0
 	o sox-12.17.7
-	o spamassassin-3.0.2 [pkg/28844]
 	o spim-7.0
 	o splint-3.1.1
 	o spruce-0.6.5
