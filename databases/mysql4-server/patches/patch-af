@@ -1,0 +1,40 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/12/20 16:00:43 martti Exp $
+
+--- configure.orig	2003-12-14 21:24:06.000000000 +0000
++++ configure	2003-12-20 12:09:09.000000000 +0000
+@@ -20886,27 +20886,11 @@
+ 
+ echo "$as_me:$LINENO: checking for ORBit" >&5
+ echo $ECHO_N "checking for ORBit... $ECHO_C" >&6
+-orbit_config_path=`which orbit-config`
+-if test -n "$orbit_config_path" -a $? = 0
+-then
+-  orbit_exec_prefix=`orbit-config --exec-prefix`
+-  orbit_includes=`orbit-config --cflags server`
+-  orbit_libs=`orbit-config --libs server`
+-  orbit_idl="$orbit_exec_prefix/bin/orbit-idl"
+-  echo "$as_me:$LINENO: result: found!" >&5
+-echo "${ECHO_T}found!" >&6
+-  cat >>confdefs.h <<\_ACEOF
+-#define HAVE_ORBIT 1
+-_ACEOF
+-
+-else
+   orbit_exec_prefix=
+   orbit_includes=
+   orbit_libs=
+   orbit_idl=
+   echo "$as_me:$LINENO: result: not found" >&5
+-echo "${ECHO_T}not found" >&6
+-fi
+ 
+ 
+ 
+@@ -21140,7 +21124,6 @@
+ else
+   bench_dirs=""
+ fi
+-bench_dirs="$bench_dirs mysql-test"
+ 
+ 
+ # Don't build readline, i have it already

@@ -1,0 +1,10 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2003/12/20 16:00:42 martti Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	${ECHO} "-------------------------------"
+	${ECHO} "Initializing MySQL databases..."
+	${ECHO} "-------------------------------"
+	${PKG_PREFIX}/bin/mysql_install_db --force
+	;;
+esac
