@@ -1,15 +1,20 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/08/29 08:28:19 jlam Exp $
+$NetBSD: patch-aa,v 1.2 1999/10/08 21:21:26 jlam Exp $
 
---- configure.orig	Tue Jul 27 15:23:30 1999
-+++ configure	Sun Aug 29 00:23:29 1999
-@@ -1630,8 +1630,10 @@
- # This can be used to rebuild libtool when needed
- LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
+--- ./configure.orig	Mon Sep 13 11:54:47 1999
++++ ./configure	Wed Oct  6 21:58:22 1999
+@@ -1479,6 +1479,7 @@
+ fi
+ 
  
 +if false; then
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-+fi
- 
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -1636,6 +1637,7 @@
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
+ exec 5>>./config.log
++fi
+ 
+ 
+ # Check whether --with-gtk-prefix or --without-gtk-prefix was given.
