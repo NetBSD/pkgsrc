@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6017 2004/05/24 18:21:08 drochner Exp $
+$NetBSD: CHANGES,v 1.6018 2004/05/25 10:38:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2639,3 +2639,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated audacity to 1.2 1 [drochner 2004-05-24]
 	Updated gnumeric to 1.2.12 [drochner 2004-05-24]
 	Updated libgsf to 1.9.1 [drochner 2004-05-24]
+	Updated mldonkey to 2.5.21 [wiz 2005-05-25]
