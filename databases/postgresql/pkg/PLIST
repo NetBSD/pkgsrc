@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/02/17 15:46:10 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/02/18 17:51:01 agc Exp $
 etc/rc.d/pgsql.sh
 pgsql/.profile
 pgsql/bin/cleardbdir
@@ -14,6 +14,7 @@ pgsql/bin/pg_passwd
 pgsql/bin/pg_version
 @unexec rm -f %D/pgsql/bin/pgtclsh
 @unexec rm -f %D/pgsql/bin/pgtksh
+@unexec rm -f %D/pgsql/bin/pgaccess
 pgsql/bin/postgres
 pgsql/bin/postmaster
 pgsql/bin/psql
@@ -206,6 +207,7 @@ share/doc/pgsql/manual/xtypes.html
 share/doc/pgsql/spi.txt
 share/doc/pgsql/trigger.txt
 share/doc/pgsql/userguide.ps
+@unexec /sbin/ldconfig || /usr/bin/true
 @dirrm share/doc/pgsql/manual
 @dirrm share/doc/pgsql
 @dirrm pgsql/bin
