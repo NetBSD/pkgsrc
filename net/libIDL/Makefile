@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/04/01 18:15:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/17 00:28:08 snj Exp $
 #
 
 DISTNAME=		libIDL-0.8.3
@@ -18,6 +18,9 @@ CONFIGURE_ENV+=		HAVE_YACC=yes
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libIDL-2.0.pc.in
 INFO_FILES=		libIDL2.info
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=		F77=${FALSE}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
