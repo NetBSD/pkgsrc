@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/05 18:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/24 22:43:49 wiz Exp $
 #
 
 DISTNAME=	mplayerplug-in-1.0
@@ -14,7 +14,7 @@ COMMENT=	Embedded video player for Mozilla
 DEPENDS+=	mplayer>=0.92:../../multimedia/mplayer
 
 WRKSRC=         ${WRKDIR}/mplayerplug-in
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 
@@ -24,4 +24,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${MOZ_PLUGDIR}
 	${INSTALL_DATA} ${WRKSRC}/mplayerplug-in.so ${MOZ_PLUGDIR}
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
