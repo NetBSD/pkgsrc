@@ -1,26 +1,25 @@
-# $NetBSD: Makefile,v 1.3 1998/11/13 01:15:16 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/11/22 19:39:48 tron Exp $
 
-DISTNAME=	clispsrc-1998-08-29
-PKGNAME=	clisp-19980829
-WRKSRC=		${WRKDIR}/clisp-1998-08-29
+DISTNAME=	clispsrc
+PKGNAME=	clisp-19980909
+WRKSRC=		${WRKDIR}/clisp-1998-09-09
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp2.cons.org/pub/lisp/clisp/snapshots/
+MASTER_SITES=	ftp://ftp2.cons.org/pub/lisp/clisp/source/
 
 MAINTAINER=	mjl@emsi.priv.at
 HOMEPAGE=	http://clisp.cons.org/~haible/clisp.html
 
+CONFLICTS=	clisp-19980829
+
 NOT_FOR_ARCHS=	alpha	# severe LP64 problems
 
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=		YES
+WRKSRC=			${WRKDIR}/clisp-1998-09-09/src
 
-post-configure:
-	( cd ${WRKSRC}/src; \
-	./makemake --prefix=${LOCALBASE} --with-readline --with-gettext --with-dynamic-ffi > Makefile )
-
-do-build:
-	( cd ${WRKSRC}/src; ${MAKE_PROGRAM} )
-
-do-install:
-	( cd ${WRKSRC}/src; ${MAKE_PROGRAM} install )
+do-configure:
+	cd ${WRKSRC}; \
+	(cd ..;./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}); \
+	./makemake --prefix=${LOCALBASE} --with-readline --with-gettext \
+	  --with-dynamic-ffi >Makefile
 
 .include "../../mk/bsd.pkg.mk"
