@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.228 2005/01/25 13:02:57 markd Exp $
+# $NetBSD: Makefile,v 1.229 2005/02/01 20:52:38 augustss Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -128,6 +128,7 @@ SUBDIR+=	kp
 SUBDIR+=	latin-words-bin
 SUBDIR+=	less
 SUBDIR+=	libcdio
+SUBDIR+=	libquantum
 SUBDIR+=	libutf
 SUBDIR+=	lile
 SUBDIR+=	loco
