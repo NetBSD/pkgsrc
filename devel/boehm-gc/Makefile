@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2003/02/17 12:32:04 kei Exp $
+# $NetBSD: Makefile,v 1.26 2003/05/09 12:53:26 jmmv Exp $
 #
 
-DISTNAME=		gc6.1
-PKGNAME=		boehm-gc-6.1
-PKGREVISION=		2
-WRKSRC=			${WRKDIR}/gc6.1
+DISTNAME=		gc6.2alpha4
+PKGNAME=		boehm-gc-6.1.994
 CATEGORIES=		devel
 MASTER_SITES=		http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/
 
@@ -36,12 +34,11 @@ post-extract:
 pre-build:
 	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
 		${WRKSRC}/doc/gc.man.in > ${WRKSRC}/doc/gc.man
+
 post-install:
 	@cd ${WRKSRC}; \
 	${MAKE} -f ${WRKSRC}/Makefile.direct bsd-libleak.a
 	${INSTALL_DATA} ${WRKSRC}/bsd-libleak.a ${PREFIX}/lib/libleak.a
-	${INSTALL_DATA} ${WRKSRC}/include/gc.h ${WRKSRC}/include/gc_cpp.h \
-	    ${WRKSRC}/include/gc_backptr.h ${PREFIX}/include
 	${INSTALL_MAN} ${WRKSRC}/doc/gc.man ${PREFIX}/man/man3/gc.3
 
 .include "../../mk/bsd.pkg.mk"
