@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1999 2004/08/03 20:35:48 wiz Exp $
+$NetBSD: TODO,v 1.2000 2004/08/04 08:54:57 recht Exp $
 
 Suggested new packages
 ======================
@@ -168,7 +168,6 @@ Suggested package updates
 	o ald-0.1.6 [pkg/26431]
 	o allegro-4.1.15
 	o anjuta-1.2.2
-	o apache-ant-1.6.2
 	o ap-jk-5.0.25
 	o apcupsd-3.10.13
 	o aqsis-0.9.1
