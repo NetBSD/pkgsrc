@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/04/24 14:14:09 rh Exp $
+$NetBSD: distinfo,v 1.2 2001/10/15 07:24:38 rh Exp $
 
-SHA1 (pan-0.9.6.tar.gz) = 6418f9825b6e6ec128c8d81404455e55b7fa78b9
-Size (pan-0.9.6.tar.gz) = 1653403 bytes
-SHA1 (patch-aa) = e82468db946c3ac70ec98e407a0bd9d452b44eaf
-SHA1 (patch-ab) = 68fac5f6014287ce10500a8f90cb7c98e7110413
-SHA1 (patch-ac) = 5019f31d50813f3f8bb2b151ae4fd3828f98326c
+SHA1 (pan-0.10.0.92.tar.bz2) = d31a2d7edd244d7de71a24b8a7b467960928abec
+Size (pan-0.10.0.92.tar.bz2) = 1295465 bytes
+SHA1 (patch-aa) = fd4b9ac61438a217fd9b8113c63a0e16f076d523
+SHA1 (patch-ab) = 57c04fdee891e4a56e05799320a173c0c9b067cc
+SHA1 (patch-ac) = 0e37927b3149140d540ff532b594520cf3d4bcab
+SHA1 (patch-ad) = e9e58268b773720815e3a594178b312e6fbd4ae5
+SHA1 (patch-ae) = 33efc0a5cc0c5e659a17131b3027d91a98c688a1
+SHA1 (patch-af) = 6f5514da2b375700e18106f11f0e6cc9f8f335cc
+SHA1 (patch-ag) = fc4dc458862dde4825c32a71cc50d6f84585071c
