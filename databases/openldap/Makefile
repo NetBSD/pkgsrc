@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2001/10/25 16:15:44 tron Exp $
+# $NetBSD: Makefile,v 1.29 2001/10/26 09:04:49 kleink Exp $
 
-DISTNAME=	openldap-2.0.17
+DISTNAME=	openldap-2.0.18
 SVR4_PKGNAME=	oldap
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
