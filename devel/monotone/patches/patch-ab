@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/08/15 14:38:38 drochner Exp $
+
+--- Makefile.in.orig	2004-08-14 14:45:22.000000000 +0200
++++ Makefile.in
+@@ -843,7 +843,7 @@ unit_tests_CPPFLAGS = -DBUILD_UNIT_TESTS
+ 
+ @STATIC_BOOST_FALSE@monotone_LDADD = lib3rdparty.a libplatform.a $(am__append_6)
+ @STATIC_BOOST_TRUE@monotone_LDADD = lib3rdparty.a $(BOOSTLIBS) libplatform.a $(am__append_6)
+-@STATIC_BOOST_FALSE@unit_tests_LDADD = lib3rdparty.a -lboost_unit_test_framework libplatform.a $(am__append_7)
++@STATIC_BOOST_FALSE@unit_tests_LDADD = lib3rdparty.a -lboost_unit_test_framework${BLIBSF} libplatform.a $(am__append_7)
+ @STATIC_BOOST_TRUE@unit_tests_LDADD = lib3rdparty.a $(BOOSTLIBS) \
+ @STATIC_BOOST_TRUE@                     @BOOST_LIBDIR@/libboost_unit_test_framework.a\
+ @STATIC_BOOST_TRUE@libplatform.a $(am__append_7)
