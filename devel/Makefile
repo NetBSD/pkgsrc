@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.416 2003/08/30 18:59:07 he Exp $
+# $NetBSD: Makefile,v 1.417 2003/08/30 19:00:44 he Exp $
 #
 
 COMMENT=	Development utilities
@@ -254,6 +254,7 @@ SUBDIR+=	p5-Devel-StackTrace
 SUBDIR+=	p5-Devel-Symdump
 SUBDIR+=	p5-Error
 SUBDIR+=	p5-Event
+SUBDIR+=	p5-Exception-Class
 SUBDIR+=	p5-Expect
 SUBDIR+=	p5-ExtUtils-F77
 SUBDIR+=	p5-File-FlockDir
