@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2001/06/30 22:15:25 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/08/30 22:56:42 elric Exp $
 
 DISTNAME=	dvdview1.1.0
-PKGNAME=	dvdview-1.1.0
+PKGNAME=	dvdview-1.1.0nb1
 CATEGORIES=	graphics
 MASTER_SITES=	http://rachmaninoff.informatik.uni-mannheim.de/dvdview/arch/
 
