@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9339 2005/02/27 13:23:35 wiz Exp $
+$NetBSD: CHANGES,v 1.9340 2005/02/27 13:24:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1173,3 +1173,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libgnomecups to 0.1.14 [jmmv 2005-02-27]
 	Updated g-wrap to 1.9.4 [wiz 2005-02-27]
 	Updated p5-HTML-Tagset to 3.04 [wiz 2005-02-27]
+	Updated p5-HTML-TableExtract to 1.09 [wiz 2005-02-27]
