@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2001/07/14 03:51:13 jlam Exp $
+$NetBSD: distinfo,v 1.6 2002/03/24 14:02:36 mjl Exp $
 
-SHA1 (bzip2-1.0.1.tar.gz) = 0a5a71eded51be0c15d9532b44060f61b564d4f5
-Size (bzip2-1.0.1.tar.gz) = 464991 bytes
-SHA1 (patch-aa) = 010dfa45e9ca95c3ea8e80253de2098beee3f847
+SHA1 (bzip2-1.0.2.tar.gz) = d47793959c0d65a4d7246e0247ed1358662d9ebf
+Size (bzip2-1.0.2.tar.gz) = 665198 bytes
+SHA1 (patch-aa) = 41c6eb68818a6d2e81ea53830727fe421fcae125
