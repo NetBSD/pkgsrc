@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.39 2002/10/26 18:11:20 bouyer Exp $
+# $NetBSD: Makefile,v 1.40 2002/11/19 20:54:11 reinoud Exp $
 
-DISTNAME=		w3c-libwww-5.3.2
-PKGNAME=		libwww-5.3.2
-PKGREVISION=		3
+DISTNAME=		w3c-libwww-5.4.0
+PKGNAME=		libwww-5.4.0
+#PKGREVISION=		1
 CATEGORIES=		www devel
 MASTER_SITES=		http://www.w3.org/Library/Distribution/ \
 			ftp://ftp.uni-hannover.de/pub/mirror/info-systems/WWW/libwww/
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.w3.org/Library/
@@ -41,7 +42,6 @@ PLIST_SUBST+=	MD5LIB="@comment "
 .else
 PLIST_SUBST+=	MD5LIB=""
 .endif
-
 
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
