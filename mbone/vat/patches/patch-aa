@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:02 agc Exp $
+$NetBSD: patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $
 
 --- configure.orig	Thu May 16 01:03:58 1996
 +++ configure	Tue Sep  9 11:36:10 1997
@@ -827,11 +827,11 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:02 agc Exp $
 -			V_LIB_TCL=$dir
 +	for p in $tclposs; do
 +		if test "`echo $d/lib/lib$p.so*`" != "$d/lib/lib$p.so*" ; then
-+			V_LIB_TCL="-L$d/lib -l$p"
++			V_LIB_TCL="-Wl,-R$d/lib -L$d/lib -l$p"
 +			break
 +		fi
 +		if test -r $d/lib/lib$p.a ; then
-+			V_LIB_TCL="-L$d/lib -l$p"
++			V_LIB_TCL="-Wl,-R$d/lib -L$d/lib -l$p"
  			break
  		fi
  	done
@@ -950,11 +950,11 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:02 agc Exp $
 -				V_LIB_TCL="-L$dir -ltcl"
 +			for p in $tclposs; do
 +				if test "`echo $dir/lib$p.so*`" != "$dir/lib$p.so*" ; then
-+					V_LIB_TCL="-L$dir -l$p"
++					V_LIB_TCL="-Wl,-R$dir -L$dir -l$p"
 +					break
 +				fi
 +				if test -r $dir/lib$p.a ; then
-+					V_LIB_TCL="-L$dir -l$p"
++					V_LIB_TCL="-Wl,-R$dir -L$dir -l$p"
 +					break
 +				fi
 +			done
@@ -1008,11 +1008,11 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:02 agc Exp $
 -			V_LIB_TK=$dir
 +	for p in $tkposs; do
 +		if test "`echo $d/lib/lib$p.so*`" != "$d/lib/lib$p.so*" ; then
-+			V_LIB_TK="-L$d/lib -l$p"
++			V_LIB_TK="-Wl,-R$d/lib -L$d/lib -l$p"
 +			break
 +		fi
 +		if test -r $d/lib/lib$p.a ; then
-+			V_LIB_TK="-L$d/lib -l$p"
++			V_LIB_TK="-Wl,-R$d/lib -L$d/lib -l$p"
  			break
  		fi
  	done
@@ -1123,11 +1123,11 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:02 agc Exp $
 -				V_LIB_TK="-L$dir -ltk"
 +			for p in $tkposs; do
 +				if test "`echo $dir/lib$p.so*`" != "$dir/lib$p.so*" ; then
-+					V_LIB_TK="-L$dir -l$p"
++					V_LIB_TK="-Wl,-R$dir -L$dir -l$p"
 +					break
 +				fi
 +				if test -r $dir/lib$p.a ; then
-+					V_LIB_TK="-L$dir -l$p"
++					V_LIB_TK="-Wl,-R$dir -L$dir -l$p"
 +					break
 +				fi
 +			done
@@ -1459,7 +1459,7 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:02 agc Exp $
 --- configure.in.tk.orig	Thu May 16 01:06:05 1996
 +++ configure.in.tk	Tue Sep  9 11:35:45 1997
 @@ -2,6 +2,7 @@
- dnl $Header: /cvsroot/pkgsrc/mbone/vat/patches/patch-aa,v 1.2 1998/08/07 11:10:02 agc Exp $ (LBL)
+ dnl $Header: /cvsroot/pkgsrc/mbone/vat/patches/patch-aa,v 1.3 1999/06/04 15:11:27 mycroft Exp $ (LBL)
  
  AC_ARG_WITH(tcl,	--with-tcl=path	specify a pathname for tcl, d=$withval, d="")
 +tclposs="tcl8.0 tcl80 tcl"
@@ -1480,11 +1480,11 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:02 agc Exp $
 -			V_LIB_TCL=$dir
 +	for p in $tclposs; do
 +		if test "`echo $d/lib/lib$p.so*`" != "$d/lib/lib$p.so*" ; then
-+			V_LIB_TCL="-L$d/lib -l$p"
++			V_LIB_TCL="-Wl,-R$d/lib -L$d/lib -l$p"
 +			break
 +		fi
 +		if test -r $d/lib/lib$p.a ; then
-+			V_LIB_TCL="-L$d/lib -l$p"
++			V_LIB_TCL="-Wl,-R$d/lib -L$d/lib -l$p"
  			break
  		fi
  	done
@@ -1545,11 +1545,11 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:02 agc Exp $
 -				V_LIB_TCL="-L$dir -ltcl"
 +			for p in $tclposs; do
 +				if test "`echo $dir/lib$p.so*`" != "$dir/lib$p.so*" ; then
-+					V_LIB_TCL="-L$dir -l$p"
++					V_LIB_TCL="-Wl,-R$dir -L$dir -l$p"
 +					break
 +				fi
 +				if test -r $dir/lib$p.a ; then
-+					V_LIB_TCL="-L$dir -l$p"
++					V_LIB_TCL="-Wl,-R$dir -L$dir -l$p"
 +					break
 +				fi
 +			done
@@ -1603,11 +1603,11 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:02 agc Exp $
 -			V_LIB_TK=$dir
 +	for p in $tkposs; do
 +		if test "`echo $d/lib/lib$p.so*`" != "$d/lib/lib$p.so*" ; then
-+			V_LIB_TK="-L$d/lib -l$p"
++			V_LIB_TK="-Wl,-R$d/lib -L$d/lib -l$p"
 +			break
 +		fi
 +		if test -r $d/lib/lib$p.a ; then
-+			V_LIB_TK="-L$d/lib -l$p"
++			V_LIB_TK="-Wl,-R$d/lib -L$d/lib -l$p"
  			break
  		fi
  	done
@@ -1668,11 +1668,11 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:02 agc Exp $
 -				V_LIB_TK="-L$dir -ltk"
 +			for p in $tkposs; do
 +				if test "`echo $dir/lib$p.so*`" != "$dir/lib$p.so*" ; then
-+					V_LIB_TK="-L$dir -l$p"
++					V_LIB_TK="-Wl,-R$dir -L$dir -l$p"
 +					break
 +				fi
 +				if test -r $dir/lib$p.a ; then
-+					V_LIB_TK="-L$dir -l$p"
++					V_LIB_TK="-Wl,-R$dir -L$dir -l$p"
 +					break
 +				fi
 +			done

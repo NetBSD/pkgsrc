@@ -1,12 +1,12 @@
-$NetBSD$
+$NetBSD: patch-ah,v 1.2 1998/08/07 11:10:04 agc Exp $
 
 --- configure.in.original	Thu Dec 11 18:14:48 1997
 +++ configure.in	Thu Dec 11 18:14:58 1997
 @@ -166,6 +166,7 @@
  *-*-netbsd*)
  	V_TARCMD="tar -h -c -f"
--	V_LIB="$V_LIB -L/usr/pkg/lib"
-+	V_LIB="$V_LIB -L/usr/pkg/lib -lossaudio"
+-	V_LIB="$V_LIB -Wl,-R/usr/pkg/lib -L/usr/pkg/lib"
++	V_LIB="$V_LIB -Wl,-R/usr/pkg/lib -L/usr/pkg/lib -lossaudio"
 +	V_OBJ_AUDIO="audio-voxware.o"
  	;;
  *-*-hpux*)
@@ -16,8 +16,8 @@ $NetBSD$
 @@ -2179,6 +2179,7 @@
  *-*-netbsd*)
  	V_TARCMD="tar -h -c -f"
--	V_LIB="$V_LIB -L/usr/pkg/lib"
-+	V_LIB="$V_LIB -L/usr/pkg/lib -lossaudio"
+-	V_LIB="$V_LIB -Wl,-R/usr/pkg/lib -L/usr/pkg/lib"
++	V_LIB="$V_LIB -Wl,-R/usr/pkg/lib -L/usr/pkg/lib -lossaudio"
 +	V_OBJ_AUDIO="audio-voxware.o"
  	;;
  *-*-hpux*)

@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 1998/08/07 11:10:04 agc Exp $
+$NetBSD: patch-ae,v 1.3 1999/06/04 15:11:27 mycroft Exp $
 
 --- configure.in.tk.freebsd	Thu Nov 20 13:22:35 1997
 +++ configure.in.tk	Fri Nov 21 13:35:46 1997
@@ -21,11 +21,11 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:10:04 agc Exp $
  	V_LIB_TCL=FAIL
 -	for p in $tclposs; do
 -		if test "`echo $d/lib/lib$p.so*`" != "$d/lib/lib$p.so*" ; then
--			V_LIB_TCL="-L$d/lib -l$p"
+-			V_LIB_TCL="-Wl,-R$d/lib -L$d/lib -l$p"
 -			break
 -		fi
 -		if test -r $d/lib/lib$p.a ; then
--			V_LIB_TCL="-L$d/lib -l$p"
+-			V_LIB_TCL="-Wl,-R$d/lib -L$d/lib -l$p"
 +	for dir in $places; do
 +		if test -r $dir ; then
 +			V_LIB_TCL=$dir
@@ -67,21 +67,21 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:10:04 agc Exp $
  		for dir in $places; do
 -			for p in $tclposs; do
 -				if test "`echo $dir/lib$p.so*`" != "$dir/lib$p.so*" ; then
--					V_LIB_TCL="-L$dir -l$p"
+-					V_LIB_TCL="-Wl,-R$dir -L$dir -l$p"
 -					break
 -				fi
 -				if test -r $dir/lib$p.a ; then
--					V_LIB_TCL="-L$dir -l$p"
+-					V_LIB_TCL="-Wl,-R$dir -L$dir -l$p"
 -					break
 -				fi
 -			done
 -			if test "$V_LIB_TCL" != FAIL; then
 +			if test -r $dir/libtcl80.so -o -r $dir/libtcl80.a; then
-+				V_LIB_TCL="-L$dir -ltcl80"
++				V_LIB_TCL="-Wl,-R$dir -L$dir -ltcl80"
 +				break
 +			fi
 +			if test -r $dir/libtcl.so -o -r $dir/libtcl.a; then
-+				V_LIB_TCL="-L$dir -ltcl"
++				V_LIB_TCL="-Wl,-R$dir -L$dir -ltcl"
  				break
  			fi
  		done
@@ -120,11 +120,11 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:10:04 agc Exp $
  	V_LIB_TK=FAIL
 -	for p in $tkposs; do
 -		if test "`echo $d/lib/lib$p.so*`" != "$d/lib/lib$p.so*" ; then
--			V_LIB_TK="-L$d/lib -l$p"
+-			V_LIB_TK="-Wl,-R$d/lib -L$d/lib -l$p"
 -			break
 -		fi
 -		if test -r $d/lib/lib$p.a ; then
--			V_LIB_TK="-L$d/lib -l$p"
+-			V_LIB_TK="-Wl,-R$d/lib -L$d/lib -l$p"
 +	for dir in $places; do
 +		if test -r $dir ; then
 +			V_LIB_TK=$dir
@@ -168,21 +168,21 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:10:04 agc Exp $
  		for dir in $places; do
 -			for p in $tkposs; do
 -				if test "`echo $dir/lib$p.so*`" != "$dir/lib$p.so*" ; then
--					V_LIB_TK="-L$dir -l$p"
+-					V_LIB_TK="-Wl,-R$dir -L$dir -l$p"
 -					break
 -				fi
 -				if test -r $dir/lib$p.a ; then
--					V_LIB_TK="-L$dir -l$p"
+-					V_LIB_TK="-Wl,-R$dir -L$dir -l$p"
 -					break
 -				fi
 -			done
 -			if test "$V_LIB_TK" != FAIL; then
 +			if test -r $dir/libtk80.so -o -r $dir/libtk80.a; then
-+				V_LIB_TK="-L$dir -ltk80"
++				V_LIB_TK="-Wl,-R$dir -L$dir -ltk80"
 +				break
 +			fi
 +			if test -r $dir/libtk.so -o -r $dir/libtk.a; then
-+				V_LIB_TK="-L$dir -ltk"
++				V_LIB_TK="-Wl,-R$dir -L$dir -ltk"
  				break
  			fi
  		done
@@ -215,11 +215,11 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:10:04 agc Exp $
  	V_LIB_TCL=FAIL
 -	for p in $tclposs; do
 -		if test "`echo $d/lib/lib$p.so*`" != "$d/lib/lib$p.so*" ; then
--			V_LIB_TCL="-L$d/lib -l$p"
+-			V_LIB_TCL="-Wl,-R$d/lib -L$d/lib -l$p"
 -			break
 -		fi
 -		if test -r $d/lib/lib$p.a ; then
--			V_LIB_TCL="-L$d/lib -l$p"
+-			V_LIB_TCL="-Wl,-R$d/lib -L$d/lib -l$p"
 +	for dir in $places; do
 +		if test -r $dir ; then
 +			V_LIB_TCL=$dir
@@ -293,21 +293,21 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:10:04 agc Exp $
  		for dir in $places; do
 -			for p in $tclposs; do
 -				if test "`echo $dir/lib$p.so*`" != "$dir/lib$p.so*" ; then
--					V_LIB_TCL="-L$dir -l$p"
+-					V_LIB_TCL="-Wl,-R$dir -L$dir -l$p"
 -					break
 -				fi
 -				if test -r $dir/lib$p.a ; then
--					V_LIB_TCL="-L$dir -l$p"
+-					V_LIB_TCL="-Wl,-R$dir -L$dir -l$p"
 -					break
 -				fi
 -			done
 -			if test "$V_LIB_TCL" != FAIL; then
 +			if test -r $dir/libtcl80.so -o -r $dir/libtcl80.a; then
-+				V_LIB_TCL="-L$dir -ltcl80"
++				V_LIB_TCL="-Wl,-R$dir -L$dir -ltcl80"
 +				break
 +			fi
 +			if test -r $dir/libtcl.so -o -r $dir/libtcl.a; then
-+				V_LIB_TCL="-L$dir -ltcl"
++				V_LIB_TCL="-Wl,-R$dir -L$dir -ltcl"
  				break
  			fi
  		done
@@ -346,11 +346,11 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:10:04 agc Exp $
  	V_LIB_TK=FAIL
 -	for p in $tkposs; do
 -		if test "`echo $d/lib/lib$p.so*`" != "$d/lib/lib$p.so*" ; then
--			V_LIB_TK="-L$d/lib -l$p"
+-			V_LIB_TK="-Wl,-R$d/lib -L$d/lib -l$p"
 -			break
 -		fi
 -		if test -r $d/lib/lib$p.a ; then
--			V_LIB_TK="-L$d/lib -l$p"
+-			V_LIB_TK="-Wl,-R$d/lib -L$d/lib -l$p"
 +	for dir in $places; do
 +		if test -r $dir ; then
 +			V_LIB_TK=$dir
@@ -432,21 +432,21 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:10:04 agc Exp $
  		for dir in $places; do
 -			for p in $tkposs; do
 -				if test "`echo $dir/lib$p.so*`" != "$dir/lib$p.so*" ; then
--					V_LIB_TK="-L$dir -l$p"
+-					V_LIB_TK="-Wl,-R$dir -L$dir -l$p"
 -					break
 -				fi
 -				if test -r $dir/lib$p.a ; then
--					V_LIB_TK="-L$dir -l$p"
+-					V_LIB_TK="-Wl,-R$dir -L$dir -l$p"
 -					break
 -				fi
 -			done
 -			if test "$V_LIB_TK" != FAIL; then
 +			if test -r $dir/libtk80.so -o -r $dir/libtk80.a; then
-+				V_LIB_TK="-L$dir -ltk80"
++				V_LIB_TK="-Wl,-R$dir -L$dir -ltk80"
 +				break
 +			fi
 +			if test -r $dir/libtk.so -o -r $dir/libtk.a; then
-+				V_LIB_TK="-L$dir -ltk"
++				V_LIB_TK="-Wl,-R$dir -L$dir -ltk"
  				break
  			fi
  		done
