@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/09/22 11:06:13 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/11/25 23:55:35 zuntum Exp $
 #
 
 DISTNAME=	popa3d-0.4.9.4
@@ -12,14 +12,13 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.openwall.com/popa3d/
 COMMENT=	secure, reliable, performant, and small pop3 server
 
-.if exists(/usr/sbin/user)
-USER_CMD=	/usr/sbin/user
-GROUP_CMD=	/usr/sbin/group
-.else
-DEPENDS+=	user>=20000313:../../sysutils/user
-USER_CMD=	${LOCALBASE}/sbin/user
-GROUP_CMD=	${LOCALBASE}/sbin/group
-.endif
+PKG_GROUP=	popa3d
+PKG_USER=	popa3d
+PKG_USER_HOME=	/nonexistent
+PKG_USER_SHELL=	/sbin/nologin
+
+INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
+DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
 
 post-patch:
 	cd ${WRKSRC} && \
@@ -28,22 +27,17 @@ post-patch:
 		${MV} params.h.new params.h
 
 do-install:
-	@if `${GROUP_CMD} info -e popa3d`; then \
-		${ECHO} Group \'popa3d\' already exists.; \
-	else \
-		${GROUP_CMD} add popa3d; \
-	fi
-	@if `${USER_CMD} info -e popa3d`; then \
-		${ECHO} User \'popa3d\' already exists.; \
-	else \
-		${USER_CMD} add -g popa3d -d /nonexistent -s /sbin/nologin \
-			popa3d; \
-	fi
-	${INSTALL_PROGRAM} -o popa3d -g popa3d -m 700 ${WRKSRC}/popa3d \
-		${PREFIX}/libexec
+	${INSTALL_PROGRAM} -m 700 ${WRKSRC}/popa3d ${PREFIX}/libexec
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/popa3d
 	cd ${WRKSRC} && ${INSTALL_DATA} DESIGN INSTALL LICENSE \
 		${PREFIX}/share/doc/popa3d
 	${INSTALL_DATA_DIR} ${PREFIX}/share/empty
 
+pre-install:
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
+
+post-install:
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

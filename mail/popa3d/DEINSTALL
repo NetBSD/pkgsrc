@@ -1,19 +1,11 @@
-# $NetBSD: DEINSTALL,v 1.1 2001/11/01 01:01:01 zuntum Exp $
-#
+# $NetBSD: DEINSTALL,v 1.2 2001/11/25 23:55:35 zuntum Exp $
 
-if [ "$2" != "POST-DEINSTALL" ]; then
-    exit 0
-fi
-
-if ! user del popa3d
-then
-    echo Removing user \'popa3d\' failed, please remove him manually.
-fi
-if ! group del popa3d
-then
-    echo Removing group  \'popa3d\' failed, please remove it manually.
-fi
-
-echo
-echo Remember to remove popa3d from /etc/inetd.conf and restart inetd.
-echo
+case "${STAGE}" in
+POST-DEINSTALL)
+	${ECHO} ===========================================================================
+	${ECHO}
+	${ECHO} Remember to remove popa3d from /etc/inetd.conf and restart inetd.
+	${ECHO}
+	${ECHO} ===========================================================================
+	;;
+esac
