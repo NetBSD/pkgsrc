@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/08/23 14:46:52 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/01/09 18:39:44 bad Exp $
 #
 
 DISTNAME=		mysql-3.22.32
@@ -25,7 +25,8 @@ MYSQL_DATADIR?=		/var/mysql
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR} \
-			--with-named-z-libs=z --with-named-curses=curses \
+			--with-named-z-libs=z \
+			--with-named-curses-libs="-lcurses -ltermcap" \
 			--without-perl --without-debug --without-bench \
 			--without-docs --with-low-memory
 
