@@ -1,11 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/30 17:56:40 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/01 19:04:28 jmmv Exp $
 
---- schemas/Makefile.in.orig	2003-12-30 18:35:38.000000000 +0100
-+++ schemas/Makefile.in	2003-12-30 18:35:56.000000000 +0100
-@@ -165,7 +165,7 @@
- X_LIBS = @X_LIBS@
- gnopernicuslocaledir = @gnopernicuslocaledir@
- 
+http://bugzilla.gnome.org/show_bug.cgi?id=134684
+
+--- schemas/Makefile.in.orig	2004-03-22 12:15:16.000000000 +0100
++++ schemas/Makefile.in
+@@ -227,7 +227,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
 -schemasdir = $(sysconfdir)/gconf/schemas
 +schemasdir = $(datadir)/gconf/schemas
  schemas_DATA = brlmonitor.schemas	\
