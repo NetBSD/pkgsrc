@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/30 08:17:03 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/31 04:18:14 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_RUBY}
 MAINTAINER=	taca@netbsd.org
 HOMEPAGE=	http://www.ruby-lang.org/en/
 COMMENT=	Ruby extension to MD5 library
+
+RUBY_VER=	1.4		# now this is for ruby 1.4 only.
 
 DISTINFO_FILE=	${RUBY_DISTINFO}
 WRKSRC=		${RUBY_WRKSRC}/ext/md5
