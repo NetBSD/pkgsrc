@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4200 2003/12/20 10:34:52 grant Exp $
+$NetBSD: CHANGES,v 1.4201 2003/12/20 13:39:44 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5260,3 +5260,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mozilla to 1.5.1nb1 [grant 2003-12-20]
 	Updated mozilla-stable to 1.4.1nb1 [grant 2003-12-20]
 	Updated MozillaFirebird to 0.7nb1 [grant 2003-12-20]
+	Updated tnftpd to 20031217nb1 [grant 2003-12-20]
