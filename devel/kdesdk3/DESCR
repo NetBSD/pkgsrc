@@ -1,1 +1,3 @@
-KDE provides an integrated X11 based environment, much like CDE.
+This is a collection of applications and tools used by KDE developers.
+It also has example code for use in learning KDE programming or starting
+a new KDE application.
