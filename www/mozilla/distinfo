@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2002/12/11 12:00:37 he Exp $
+$NetBSD: distinfo,v 1.33 2003/01/19 20:22:21 tron Exp $
 
 SHA1 (mozilla-source-1.2.1.tar.bz2) = 3af707a14eb11e3f615ad7d2225cc7205faa4d36
 Size (mozilla-source-1.2.1.tar.bz2) = 30919648 bytes
@@ -7,11 +7,10 @@ SHA1 (patch-ab) = d40ba83bad039487492690b26d28715da7dd856e
 SHA1 (patch-ac) = 91d1534e3aa3bbcd3d5e1e10c3d0577fe6ca8282
 SHA1 (patch-ad) = 7287d7cc4396062e1620990d2167a9ec7db1de1b
 SHA1 (patch-ae) = bb358c813459a65955ce1a47af27f122ab1ba65f
-SHA1 (patch-am) = c389e0200df768eaa34c5a704efd5b60fdf2f8de
+SHA1 (patch-am) = 5f8d3fcd9a03171328791763d254f5f963d198d3
 SHA1 (patch-aw) = 6d3b745337ad1a4c33c6eb557947449bc87f0822
 SHA1 (patch-ba) = dec6b0da64fda9c6593eef066acbebbd50a96d23
 SHA1 (patch-bb) = 6ad4068f3dad88dbc6c74679268f3a64a91bb2d8
 SHA1 (patch-be) = da2d741f7fbfa9538e3baab250a57b948335e2f6
-SHA1 (patch-bj) = 7c625199a11dbafec6ed43e5ca2af1538bd1fc6f
 SHA1 (patch-bm) = 90293a32a571e58884a815b4ca18616bed4fb3af
 SHA1 (patch-bn) = fe5152d4f4bb8bd791249237f0dcd14e11ba27d1
