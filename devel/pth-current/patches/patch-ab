@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2000/01/06 04:18:39 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2000/01/21 01:30:57 wiz Exp $
 
---- configure.orig	Thu Jan  6 04:49:54 2000
-+++ configure	Thu Jan  6 04:50:48 2000
-@@ -5401,6 +5401,7 @@
+--- configure.orig	Thu Jan  6 16:50:11 2000
++++ configure	Fri Jan 21 02:08:19 2000
+@@ -5606,6 +5606,7 @@
  s%@PTHREAD_O@%$PTHREAD_O%g
  s%@LIBPTHREAD_A@%$LIBPTHREAD_A%g
  s%@LIBPTHREAD_LA@%$LIBPTHREAD_LA%g
