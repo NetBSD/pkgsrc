@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2002/12/26 21:09:12 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/12/29 23:45:31 chris Exp $
 bin/sylpheed
 man/man1/sylpheed.1
+share/examples/sylpheed/mime.types
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sylpheed.mo
@@ -9,6 +10,7 @@ ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/sylpheed.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/sylpheed.mo
@@ -157,3 +159,4 @@ share/sylpheed/manual/ja/sylpheed.sgml
 @dirrm share/sylpheed/faq/de
 @dirrm share/sylpheed/faq
 @dirrm share/sylpheed
+@dirrm share/examples/sylpheed
