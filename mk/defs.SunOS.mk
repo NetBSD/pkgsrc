@@ -1,24 +1,6 @@
-# $NetBSD: defs.SunOS.mk,v 1.68 2003/09/23 07:26:24 grant Exp $
+# $NetBSD: defs.SunOS.mk,v 1.69 2003/09/24 07:40:03 grant Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
-
-# override AS, AR, CPP and LD unless they are an absolute path to
-# avoid relying on /usr/ccs/{bin,lib} in the $PATH.
-.if !defined(AS) || empty(AS:M/*)
-AS=		/usr/ccs/bin/as
-.endif
-
-.if !defined(AR) || empty(AR:M/*)
-AR=		/usr/ccs/bin/ar
-.endif
-
-.if !defined(CPP) || empty(CPP:M/*)
-CPP=		/usr/ccs/lib/cpp
-.endif
-
-.if !defined(LD) || empty(LD:M/*)
-LD=		/usr/ccs/bin/ld
-.endif
 
 AWK?=		/usr/bin/nawk
 BASENAME?=	/usr/bin/basename
