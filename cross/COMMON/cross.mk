@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp $
+#	$NetBSD: cross.mk,v 1.17 2001/01/09 13:24:46 itojun Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -98,6 +98,12 @@ EGCS_PATCHBUNDLE=	${EGCS_DISTNAME}-NetBSD-19980104.diff.gz
 EGCS_WRKSRC=		${WRKDIR}/${EGCS_DISTNAME}
 EGCS_LANGUAGES=		c # add to these below
 BUILD_DEPENDS+= autoheader:../../devel/autoconf
+
+.if defined(EGCS_MULTILIB)
+EGCS_INSTALL_LIB=install-multilib
+.else
+EGCS_INSTALL_LIB=install-libgcc
+.endif
 
 .if defined(EGCS_NO_RUNTIME) || defined(EGCS_FAKE_RUNTIME)
 EGCS_NO_CXX_RUNTIME=	yes
@@ -209,7 +215,7 @@ egcs-build:
 egcs-install:
 	@cd ${EGCS_WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${EGCS_MAKE_FLAGS} \
-		install-common install-headers install-libgcc install-driver
+		install-common install-headers ${EGCS_INSTALL_LIB} install-driver
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}
 	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-gcc ${PREFIX}/bin/${TARGET_ARCH}-cc
 	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-gcc ${TARGET_DIR}/bin/cc
