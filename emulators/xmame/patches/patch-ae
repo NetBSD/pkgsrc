@@ -1,18 +1,18 @@
-$NetBSD: patch-ae,v 1.18 2003/01/09 19:46:14 mycroft Exp $
+$NetBSD: patch-ae,v 1.19 2003/01/30 14:08:34 wiz Exp $
 
---- doc/xmamerc.dist.orig	Thu Jan  9 18:50:13 2003
-+++ doc/xmamerc.dist	Thu Jan  9 18:52:28 2003
-@@ -69,12 +69,12 @@
+--- src/unix/doc/xmamerc.dist.orig	Sun Jan 26 23:06:07 2003
++++ src/unix/doc/xmamerc.dist
+@@ -69,12 +69,12 @@ analogstick             0
  mouse                   1
  
  ### Fileio Related ###
--rompath                 /usr/games/lib/xmame/roms
+-rompath                 /usr/local/share/games/xmame/roms
 +rompath                 @ROMPATH@
  snapshot_directory      .
--cheat_file              /usr/games/lib/xmame/cheat.dat
--hiscore_file            /usr/games/lib/xmame/hiscore.dat
--history_file            /usr/games/lib/xmame/history.dat
--mameinfo_file           /usr/games/lib/xmame/mameinfo.dat
+-cheat_file              /usr/local/share/games/xmame/cheat.dat
+-hiscore_file            /usr/local/share/games/xmame/hiscore.dat
+-history_file            /usr/local/share/games/xmame/history.dat
+-mameinfo_file           /usr/local/share/games/xmame/mameinfo.dat
 +cheat_file              @SPOOLDIR@/cheat.dat
 +hiscore_file            @SPOOLDIR@/hiscore.dat
 +history_file            @SPOOLDIR@/history.dat
