@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3416 2003/09/16 22:25:03 wiz Exp $
+$NetBSD: CHANGES,v 1.3417 2003/09/16 22:59:24 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3737,3 +3737,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Deleted zephyr, renamed zephyr-current to zephyr [seb 2003-09-16]
 	Updated ethereal to 0.9.15 [xtraeme 2003-09-16]
 	Updated gtm to 4.1.12 [wiz 2003-09-16]
+	Updated ap-auth-postgresql to 1.4 [recht 2003-09-16]
