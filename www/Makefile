@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2000/01/22 16:47:11 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2000/02/09 17:45:28 abs Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -37,6 +37,7 @@
     SUBDIR += htmldoc
     SUBDIR += hypermail
 #    SUBDIR += http-analyze
+    SUBDIR += ijb
     SUBDIR += jakarta-tomcat
 # jsdk20 is disabled because the distfile must be manually downloaded.
 #    SUBDIR += jsdk20
