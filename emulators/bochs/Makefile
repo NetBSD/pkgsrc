@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.15 2001/05/25 23:01:30 kei Exp $
+# $NetBSD: Makefile,v 1.16 2001/12/13 18:03:52 fredb Exp $
 
-DISTNAME=		bochs-1.1.2
+DISTNAME=		bochs-1.3
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://bochs.sourceforge.net/
 COMMENT=		I386 machine emulator capable of running dos/windows
 
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
-#CONFIGURE_ARGS=		--enable-debugger --enable-disasm
+# These options are not enabled by default because they can adversely impact
+# performance. The number of processors can be either 1 (default), 2, or 4.
+#CONFIGURE_ARGS+=	--enable-debugger --enable-disasm
+#CONFIGURE_ARGS+=	--enable-processors=2
 USE_X11=		yes
 
 BOCHS_MAINDIR=		${PREFIX}/share/bochs
@@ -27,9 +30,13 @@ post-configure:
 
 do-install:
 	${INSTALL_DATA_DIR} ${BOCHS_BIOSDIR}
-	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-bochs-990925a ${BOCHS_BIOSDIR}
+	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-bochs-2-processors ${BOCHS_BIOSDIR}
+	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-bochs-4-processors ${BOCHS_BIOSDIR}
+	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-bochs-latest ${BOCHS_BIOSDIR}
 	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-elpin-2.40 ${BOCHS_BIOSDIR}
 	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-elpin-LICENSE ${BOCHS_BIOSDIR}
+	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-cbothamy-0.2a ${BOCHS_BIOSDIR}
+	${INSTALL_DATA} ${WRKSRC}/bios/VGABIOS-cbothamy-0.2a-README ${BOCHS_BIOSDIR}
 	${INSTALL_DATA_DIR} ${BOCHS_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs-html/00README ${BOCHS_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs-html/*.gif ${BOCHS_DOCDIR}
