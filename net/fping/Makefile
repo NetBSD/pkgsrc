@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:51:10 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/04 12:47:37 abs Exp $
 # FreeBSD Id: ports/net/fping/Makefile,v 1.10 2000/04/20 20:18:57 mharo Exp
 
 DISTNAME=	fping-2.4b2_to
 PKGNAME=	fping-2.4b2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.fping.com/download/
 
