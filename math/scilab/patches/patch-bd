@@ -1,0 +1,28 @@
+$NetBSD: patch-bd,v 1.1 1998/08/25 12:53:11 agc Exp $
+
+--- ./geci/scruteur.c.orig	Mon Jul 20 07:29:19 1998
++++ ./geci/scruteur.c	Sat Aug  8 13:10:56 1998
+@@ -14,4 +14,12 @@
+ #include <netdb.h>
+ 
++#if defined(netbsd)
++#include <ieeefp.h>
++#endif
++
++#if defined(freebsd)
++#include <floatingpoint.h>
++#endif
++
+ #include "listes_chainees.h"
+ #include "utilitaires.h"
+@@ -46,5 +54,9 @@
+   sigset_t set,oset;
+ #endif  
+-  
++
++#if defined(netbsd) || defined(freebsd)
++  fpsetmask(0);
++#endif
++
+   signal(SIGTERM,signal_arret_scruteur);
+   signal(SIGQUIT,signal_arret_scruteur);

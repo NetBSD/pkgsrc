@@ -1,0 +1,10 @@
+$NetBSD: patch-av,v 1.1 1998/08/25 12:53:10 agc Exp $
+
+--- ./pvm3/src/pvmd.c.orig	Sat Jul 18 22:31:50 1998
++++ ./pvm3/src/pvmd.c	Sat Jul 18 22:31:49 1998
+@@ -360,4 +360,5 @@
+ #include <sys/param.h>
+ #endif
++#include <sys/types.h>
+ #ifdef NEEDMENDIAN
+ #include <machine/endian.h>

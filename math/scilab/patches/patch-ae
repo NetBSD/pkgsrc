@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 1998/08/25 12:53:08 agc Exp $
+
+--- ./routines/Make.lib.orig	Sat Jul 18 22:35:59 1998
++++ ./routines/Make.lib	Sat Jul 18 22:40:49 1998
+@@ -21,8 +21,8 @@
+ 
+ cleanC :
+-	$(RM) $(OBJSC)
++	if [ "$(OBJSC)xx" != "xx" ]; then $(RM) $(OBJSC); fi
+ 
+ cleanF :
+-	$(RM) $(OBJSF)
++	if [ "$(OBJSF)xx" != "xx" ]; then $(RM) $(OBJSF); fi
+ 
+ F2CFILES=$(OBJSF:.o=.c)
