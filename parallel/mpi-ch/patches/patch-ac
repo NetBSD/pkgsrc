@@ -1,29 +1,18 @@
-$NetBSD: patch-ac,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+$NetBSD: patch-ac,v 1.2 1998/10/14 10:52:43 agc Exp $
+
 --- mpid/ch_p4/p4/configure.orig	Wed Jul  1 12:55:53 1998
 +++ mpid/ch_p4/p4/configure	Wed Aug  5 23:55:15 1998
-@@ -245,2 +245,9 @@
+@@ -243,6 +243,13 @@
+       DEFINE_SYSV_IPC="#define SYSV_IPC"
+     fi
  fi
-+#						Any machine running NetBSD
++#                                              Any machine running NetBSD
 +if test -n "$p4arch_NETBSD"; then
 +    P4ARCH=NETBSD
-+#    if test -n "p4comm_shared"; then
-+#      DEFINE_SYSV_IPC="#define SYSV_IPC"
-+#    fi
++    #if test -n "p4comm_shared"; then
++    #  DEFINE_SYSV_IPC="#define SYSV_IPC"
++    #fi
 +fi
  #						486 running Linux
-@@ -4617,3 +4624,4 @@
- 
--trap 'rm -f Makefile lib/Makefile alog/Makefile usc/Makefile usc/usctest/Makefile messages/Makefile include/Makefile lib_f/Makefile contrib/Makefile contrib_f/Makefile bin/Makefile doc/Makefile messages_f/Makefile misc/Makefile monitors/Makefile servers/
-Makefile; exit 1' 1 3 15
-+trap 'rm -f Makefile lib/Makefile alog/Makefile usc/Makefile usc/usctest/Makefile messages/Makefile include/Makefile lib_f/Makefile contrib/Makefile contrib_f/Makefile bin/Makefile doc/Makefile messages_f/Makefile misc/Makefile monitors/Makefile servers/
-M
-+akefile; exit 1' 1 3 15
- RANLIB='$RANLIB'
-@@ -4655,3 +4663,4 @@
- 
--CONFIG_FILES=${CONFIG_FILES-"Makefile lib/Makefile alog/Makefile usc/Makefile usc/usctest/Makefile messages/Makefile include/Makefile lib_f/Makefile contrib/Makefile contrib_f/Makefile bin/Makefile doc/Makefile messages_f/Makefile misc/Makefile monitors/
-Makefile servers/Makefile"}
-+CONFIG_FILES=${CONFIG_FILES-"Makefile lib/Makefile alog/Makefile usc/Makefile usc/usctest/Makefile messages/Makefile include/Makefile lib_f/Makefile contrib/Makefile contrib_f/Makefile bin/Makefile doc/Makefile messages_f/Makefile misc/Makefile monitors/
-M
-+akefile servers/Makefile"}
- for file in .. ${CONFIG_FILES}; do if test "x$file" != x..; then
+ if test -n "$p4arch_LINUX"; then
+     P4ARCH=LINUX
