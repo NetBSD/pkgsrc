@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.7 2003/03/19 02:12:11 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.8 2003/03/19 20:46:55 dmcmahill Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -135,6 +135,7 @@ BEGIN {
 
 /^homepage /{
 	homepage[$2] = $3;
+	gsub(/&/, "\\\\&", homepage[$2]);
 	next;
 }
 
@@ -200,8 +201,8 @@ END {
 	fflush("/dev/stdout");
 	printf("") > dependsfile;
 	for (toppkg in topdepends){
-		if (debug) printf("calling find_all_depends(%s)\n", toppkg);
-		find_all_depends(toppkg);
+		if (debug) printf("calling find_all_depends(%s, run)\n", toppkg);
+		find_all_depends(toppkg, "run");
 		if (debug) printf("%s depends on: %s, topdepends on %s\n",
 				  toppkg, alldepends[toppkg], 
 				  topdepends[toppkg]);
@@ -218,7 +219,7 @@ END {
 	fflush("/dev/stdout");
 	printf("") > builddependsfile;
 	for (toppkg in topbuilddepends){
-		find_all_depends(toppkg);
+		find_all_depends(toppkg, "build");
 		printf("%s build_depends on: %s\n",
 		       toppkg, alldepends[toppkg]) >> builddependsfile;
 	}
@@ -434,13 +435,20 @@ END {
 			}
 			close(readme);
 			close(templatefile);
-			cmd = "if [ ! -d " pkgdir " ]; then echo "pkgdir" does not exist ; exit 1 ; fi ; if [ ! -f "readmenew" ] || ! cmp -s "readme" "readmenew" ; then mv -f " readme " " readmenew " ; fi";
+			cmd = "if [ ! -d " pkgdir " ]; then exit 1 ; fi";
 			if (debug) printf("Execute:  %s\n",cmd);
 			rc = system(cmd);
 			if (rc != 0) {
-				printf("**** WARNING ****\nCould not create %s (rc=%d)\n",
-				       readmenew,rc) > "/dev/stderr";
+				printf("\n**** WARNING ****\nPackage directory %s\n",
+				       pkgdir) > "/dev/stderr";
+				printf("Does not exist.  This is probably ") > "/dev/stderr";
+				printf("due to an incorrect DEPENDS line.\n") > "/dev/stderr";
+				printf("Try running:  grep %s */*/Makefile\n", fulldir2pkgdir(pkgdir)) > "/dev/stderr";
+				printf("or:  grep %s */*/buildlink2.mk\n", fulldir2pkgdir(pkgdir)) > "/dev/stderr";
+				printf("to find the problem\n", pkgdir) > "/dev/stderr";
 				printf("**** ------- ****\n") > "/dev/stderr";
+			} else {
+				copy_readme(readmenew, readme);
 			}
 		}
 		printf("\n");
@@ -516,15 +524,8 @@ END {
 			}
 			close(readme);
 			close(templatefile);
-			cmd = "if [ ! -f "readmenew" ]; then mv -f " readme " " readmenew " ; fi ; if ! cmp -s " readme" "readmenew" ; then mv -f " readme " " readmenew " ; fi ";
-			if (debug) printf("Execute:  %s\n",cmd);
-			rc=system(cmd);
-			if (rc != 0) {
-				printf("**** WARNING ****\nCould not create %s (rc=%d)\n",
-				       readmenew,rc) > "/dev/stderr";
-				printf("**** ------- ****\n") > "/dev/stderr";
-			}
-	    
+			copy_readme(readmenew, readme);
+   
 			gsub(/href=\"/, "href=\""category"/", pkgs);
 			allcat = sprintf("%s<TR><TD VALIGN=TOP><a href=\"%s/%s\">%s</a>: %s<TD>\n",
 					 allcat, category, readme_name, 
@@ -535,9 +536,9 @@ END {
 	close(top_make);
 
 	printf("Generating toplevel readmes:\n");
-	templatefile=PKGSRCDIR "/templates/README.top";
+	templatefile = PKGSRCDIR "/templates/README.top";
 	fatal_check_file(templatefile);
-	readmenew=PKGSRCDIR "/"readme_name;
+	readmenew = PKGSRCDIR "/"readme_name;
 	printf("\t%s\n", readmenew);
 	print "" > readme;
 	while((getline < templatefile) > 0){
@@ -548,19 +549,12 @@ END {
 	}
 	close(readme);
 	close(templatefile);
-	cmd="if [ ! -f "readmenew" ]; then mv -f "readme " " readmenew " ; fi ; if ! cmp -s "readme" "readmenew" ; then mv -f " readme " " readmenew " ; fi ";
-	if (debug) printf("Execute:  %s\n",cmd);
-	rc = system(cmd);
-	if (rc != 0) {
-		printf("**** WARNING ****\nCould not create %s (rc=%d)\n",
-		       readmenew,rc) > "/dev/stderr";
-		printf("**** ------- ****\n") > "/dev/stderr";
-	}
+	copy_readme(readmenew, readme);
 
 	templatefile = PKGSRCDIR "/templates/README.all";
 	fatal_check_file(templatefile);
 	readmenew = PKGSRCDIR "/README-all.html";
-	printf("\t%s\n",readmenew);
+	printf("\t%s\n", readmenew);
 # sort the pkgs
 	sfile = TMPDIR"/unsorted";
 	spipe = "sort  " sfile;
@@ -589,23 +583,16 @@ END {
 	}
 	close(readme);
 	close(templatefile);
-	cmd = "if [ ! -f "readmenew" ]; then mv -f "readme " " readmenew " ; fi ; if ! cmp -s "readme" "readmenew" ; then mv -f " readme " " readmenew " ; fi ";
-	if (debug) printf("Execute:  %s\n",cmd);
-	rc = system(cmd);
-	if (rc != 0) {
-		printf("**** WARNING ****\nCould not create %s (rc=%d)\n",
-		       readmenew,rc) > "/dev/stderr";
-		printf("**** ------- ****\n") > "/dev/stderr";
-	}
+	copy_readme(readmenew, readme);
 
 	close("/dev/stderr");
 	exit 0;
 } 
 
-function find_all_depends(pkg, pkgreg, i, deps, depdir){
+function find_all_depends(pkg, type, pkgreg, i, deps, depdir, topdep){
 # pkg is the package directory, like math/scilab
 
-#    printf("find_all_depends(%s)\n",pkg);
+#    printf("find_all_depends(%s, %s)\n", pkg, type);
 # if we find the package already has been fully depended
 # then return the depends list
 	if (pkg in alldepends){
@@ -616,16 +603,23 @@ function find_all_depends(pkg, pkgreg, i, deps, depdir){
 
 # if this package has no top dependencies, enter an empty flat dependency
 # list for it.
-	if (topdepends[pkg] ~ "^[ \t]*$") {
+	if( type == "run" ) {
+# we only want DEPENDS
+		topdep = topdepends[pkg];
+	} else {
+# we want BUILD_DEPENDS and DEPENDS
+		topdep = topdepends[pkg] " " topbuilddepends[pkg];
+	}
+	if (topdep ~ "^[ \t]*$") {
 		alldepends[pkg] = " ";
 		if (debug) printf("\t%s has no depends(%s).  Returning %s\n",
-				  pkg, topdepends[pkg], alldepends[pkg]);
+				  pkg, topdep, alldepends[pkg]);
 		return(alldepends[pkg]);
 	}
     
 # recursively gather depends that each of the depends has
 	pkgreg = reg2str(pkg);
-	split(topdepends[pkg], deps);
+	split(topdep, deps);
 	i = 1;
 	alldepends[pkg] = " ";
 	while ( i in deps ) {
@@ -645,7 +639,7 @@ function find_all_depends(pkg, pkgreg, i, deps, depdir){
 # we depend on may also have depended on
 # deps[i].
 		if (alldepends[pkg] !~ reg2str(deps[i])){
-		  alldepends[pkg] = alldepends[pkg] " " deps[i] " " find_all_depends(depdir);
+		  alldepends[pkg] = alldepends[pkg] " " deps[i] " " find_all_depends(depdir, type);
 		} 
 		else {
 		  if (debug) printf("\t%s is already listed in %s\n",
@@ -719,5 +713,50 @@ function fatal_check_file(file, cmd){
 		close("/dev/stderr");
 		exit(1);
 	}
+}
+
+# 'new' is the newly created README.html file
+# 'old' is the existing (possibly not present) README.html file
+#
+#  This function copies over the 'new' file if the 'old' one does
+#  not exist or if they are different.  In addition, the 'new' one
+#  which is a temporary file is removed at the end
+
+function copy_readme(old, new, cmd, rc) {
+
+#	if the README.html file does not exist at all then copy over
+#	the one we created
+
+	cmd = "if [ ! -f "old" ]; then cp " new " " old " ; fi";
+	if (debug) printf("copy_readme()  execute:  %s\n",cmd);
+	rc = system(cmd);
+	if (rc != 0) {
+		printf("**** WARNING ****\nThe command\n  %s\n", cmd) > "/dev/stderr";
+		printf("failed with result code %d\n", rc) > "/dev/stderr";
+		printf("**** ------- ****\n") > "/dev/stderr";
+	}
+
+#	Compare the existing README.html file to the one we created.  If they are 
+#	not the same, then copy over the one we created
+
+	cmd = " if ! cmp -s "new" "old" ; then mv -f " new " " old " ; fi";
+	if (debug) printf("copy_readme()  execute:  %s\n",cmd);
+	rc = system(cmd);
+	if (rc != 0) {
+		printf("**** WARNING ****\nThe command\n  %s\n", cmd) > "/dev/stderr";
+		printf("failed with result code %d\n", rc) > "/dev/stderr";
+		printf("**** ------- ****\n") > "/dev/stderr";
+	}
+
+#	If the temp file still exists, then delete it
+	cmd = " if [ -f "new" ]; then rm -f "new" ; fi";
+	if (debug) printf("copy_readme()  execute:  %s\n",cmd);
+	rc = system(cmd);
+	if (rc != 0) {
+		printf("**** WARNING ****\nThe command\n  %s\n", cmd) > "/dev/stderr";
+		printf("failed with result code %d\n", rc) > "/dev/stderr";
+		printf("**** ------- ****\n") > "/dev/stderr";
+	}
+
 }
 
