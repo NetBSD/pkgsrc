@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.60 2004/01/26 22:19:16 seb Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.61 2004/01/27 02:32:56 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -98,41 +98,51 @@ _BLNK_PACKAGES+=	${_pkg_}
 .  endif
 .endfor
 
-DEPENDS?=	# empty
-BUILD_DEPENDS?=	# empty
-
-.for _pkg_ in ${_BLNK_DEPENDS}
-#
 # Add the proper dependency on each package pulled in by buildlink3.mk
 # files.  BUILDLINK_DEPMETHOD.<pkg> contains a list of either "full" or
 # "build", and if any of that list if "full" then we use a full dependency
 # on <pkg>, otherwise we use a build dependency on <pkg>.  By default,
 # we use a full dependency.
 #
-.  if !defined(BUILDLINK_DEPMETHOD.${_pkg_})
+# We skip the dependency calculation for some phases since they never
+# use the dependency information.
+#
+_BLNK_PHASES_SKIP_DEPENDS=	fetch patch tools buildlink configure build
+.if !(_BLNK_PHASES_SKIP_DEPENDS:M${PKG_PHASE})
+_BLNK_ADD_TO.DEPENDS=		# empty
+_BLNK_ADD_TO.BUILD_DEPENDS=	# empty
+_BLNK_ADD_TO.RECOMMENDED=	# empty
+.  for _pkg_ in ${_BLNK_DEPENDS}
+.    if !defined(BUILDLINK_DEPMETHOD.${_pkg_})
 BUILDLINK_DEPMETHOD.${_pkg_}=	full
+.    endif
+.    if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
+_BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.DEPENDS
+_BLNK_RECMETHOD.${_pkg_}=	_BLNK_ADD_TO.RECOMMENDED
+.    elif !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mbuild)
+_BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.BUILD_DEPENDS
 .  endif
-.  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
-_BLNK_DEPMETHOD.${_pkg_}=	DEPENDS
-_BLNK_RECMETHOD.${_pkg_}=	RECOMMENDED
-.  elif !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mbuild)
-_BLNK_DEPMETHOD.${_pkg_}=	BUILD_DEPENDS
-.  endif
-.  if defined(BUILDLINK_DEPENDS.${_pkg_}) && \
-      defined(BUILDLINK_PKGSRCDIR.${_pkg_})
-.    for _depend_ in ${BUILDLINK_DEPENDS.${_pkg_}}
-.      if empty(${_BLNK_DEPMETHOD.${_pkg_}}:M${_depend_}\:*)
+.    if defined(BUILDLINK_DEPENDS.${_pkg_}) && \
+        defined(BUILDLINK_PKGSRCDIR.${_pkg_})
+.      for _depend_ in ${BUILDLINK_DEPENDS.${_pkg_}}
+.        if empty(${_BLNK_DEPMETHOD.${_pkg_}}:M${_depend_}\:*)
 ${_BLNK_DEPMETHOD.${_pkg_}}+=	${_depend_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
-.      endif
-.    endfor
-.  endif
-.  if defined(BUILDLINK_RECOMMENDED.${_pkg_}) && \
-      defined(_BLNK_RECMETHOD.${_pkg_}) && \
-      defined(BUILDLINK_PKGSRCDIR.${_pkg_})
-.    for _rec_ in ${BUILDLINK_RECOMMENDED.${_pkg_}}
-${_BLNK_RECMETHOD.${_pkg_}}+= \
-	${_rec_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
-.    endfor
+.        endif
+.      endfor
+.    endif
+.    if defined(BUILDLINK_RECOMMENDED.${_pkg_}) && \
+        defined(BUILDLINK_PKGSRCDIR.${_pkg_})
+.      for _rec_ in ${BUILDLINK_RECOMMENDED.${_pkg_}}
+.        if empty(${_BLNK_RECMETHOD.${_pkg_}}:M${_depend_}\:*)
+${_BLNK_RECMETHOD.${_pkg_}}+=	${_rec_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
+.        endif
+.      endfor
+.    endif
+.  endfor
+.endif
+.for _depmethod_ in DEPENDS BUILD_DEPENDS RECOMMENDED
+.  if !empty(_BLNK_ADD_TO.${_depmethod_})
+${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 .  endif
 .endfor
 
