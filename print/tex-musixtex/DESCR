@@ -1,0 +1,18 @@
+MusixTeX is a set of TeX macros to typeset polyphonic, orchestral or
+polyphonic music. 
+
+This is the typical way one would process a MusixTeX file:
+
+	musixtex foo
+	musixflx foo
+	musixtex foo
+
+This will give you foo.dvi which then can be processed like any other
+.dvi.  Use dvips to convert it into a postscript file or print it to a
+Postscript printer.  Then ps2pdf may be used to convert the Postscript
+file into a PDF file.
+
+The full documentation of MusixTeX will be found in
+${LOCALBASE}/share/texmf/doc/musixtex/.  It's highly recommended that
+you either print out musixdoc.ps directly or use a PDF viewer to print
+musixdoc.pdf and put the resulting hardcopy in a loose-leaf binder.
