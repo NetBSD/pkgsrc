@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.138 2001/02/09 14:32:27 agc Exp $
+# $NetBSD: Packages.txt,v 1.139 2001/02/09 14:48:39 agc Exp $
 ###########################################################################
 
 			==========================
@@ -1793,6 +1793,11 @@ e.g:
 
 	cd .../pkgsrc/<category>/<pkgname>
 	cvs import pkgsrc/<category>/<pkgname> TNF pkgsrc-base
+
+
+and remember to move the directory from which you imported out of
+the way, or cvs will complain the next time you "cvs update" your
+source tree.
 
 Packages derived from a FreeBSD port should be imported with a vendor tag
 of "FREEBSD" and a release tag of "FreeBSD-current-YYYY-MM-DD" (YYYY-MM-DD
