@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3181 2003/08/31 21:18:53 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3182 2003/08/31 22:34:32 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3437,3 +3437,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated icewm to 1.2.12 [xtraeme 2003-08-31]
 	Updated icewm-gnome to 1.2.12 [xtraeme 2003-08-31]
 	Updated icewm-imlib to 1.2.12 [xtraeme 2003-08-31]
+	Updated quake3arena to 1.32b [xtraeme 2003-08-31]
