@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/07 11:20:58 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/12 17:36:40 seb Exp $
 
 DISTNAME=		Apache-Session-Wrapper-0.17
 PKGNAME=		p5-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/~drolsky/Apache-Session-Wrapper-0.17/
+HOMEPAGE=		http://search.cpan.org/dist/Apache-Session-Wrapper/
 COMMENT=		Perl5 module doing a wrapper around Apache::Session
 
 DEPENDS+=               p5-Apache-Session>=1.6:../../www/p5-Apache-Session
