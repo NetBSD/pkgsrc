@@ -1,5 +1,3 @@
-$NetBSD: MESSAGE.pre,v 1.1 1998/07/22 12:08:24 is Exp $
-
 This is the NetBSD package for ICSI-finger, a more advanced version of
 GNU finger.
 
