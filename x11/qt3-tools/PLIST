@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/08/27 09:13:50 skrll Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/10/28 08:46:45 skrll Exp $
 qt3/bin/assistant
 qt3/bin/designer
 qt3/bin/linguist
@@ -16,14 +16,16 @@ qt3/lib/libqui.la
 qt3/lib/libqui.so
 qt3/lib/libqui.so.1
 qt3/lib/libqui.so.1.0
-qt3/mkspecs/netbsd-g++/qmake.conf
-qt3/mkspecs/netbsd-g++/qplatformdefs.h
+qt3/mkspecs/aix-64/qmake.conf
+qt3/mkspecs/aix-64/qplatformdefs.h
 qt3/mkspecs/aix-g++/qmake.conf
 qt3/mkspecs/aix-g++/qplatformdefs.h
 qt3/mkspecs/aix-xlc/qmake.conf
 qt3/mkspecs/aix-xlc/qplatformdefs.h
 qt3/mkspecs/bsdi-g++/qmake.conf
 qt3/mkspecs/bsdi-g++/qplatformdefs.h
+qt3/mkspecs/cygwin-g++/qmake.conf
+qt3/mkspecs/cygwin-g++/qplatformdefs.h
 qt3/mkspecs/darwin-g++/qmake.conf
 qt3/mkspecs/darwin-g++/qplatformdefs.h
 qt3/mkspecs/default
@@ -74,8 +76,8 @@ qt3/mkspecs/macx-mwerks/qplatformdefs.h
 qt3/mkspecs/macx-pbuilder/Info.plist.app
 qt3/mkspecs/macx-pbuilder/qmake.conf
 qt3/mkspecs/macx-pbuilder/qplatformdefs.h
-qt3/mkspecs/aix-64/qmake.conf
-qt3/mkspecs/aix-64/qplatformdefs.h
+qt3/mkspecs/netbsd-g++/qmake.conf
+qt3/mkspecs/netbsd-g++/qplatformdefs.h
 qt3/mkspecs/openbsd-g++/qmake.conf
 qt3/mkspecs/openbsd-g++/qplatformdefs.h
 qt3/mkspecs/openunix-cc/qmake.conf
@@ -96,10 +98,10 @@ qt3/mkspecs/solaris-64/qmake.conf
 qt3/mkspecs/solaris-64/qplatformdefs.h
 qt3/mkspecs/solaris-cc/qmake.conf
 qt3/mkspecs/solaris-cc/qplatformdefs.h
+qt3/mkspecs/solaris-g++-64/qmake.conf
+qt3/mkspecs/solaris-g++-64/qplatformdefs.h
 qt3/mkspecs/solaris-g++/qmake.conf
 qt3/mkspecs/solaris-g++/qplatformdefs.h
-qt3/mkspecs/solaris-g++-64/qplatformdefs.h
-qt3/mkspecs/solaris-g++-64/qmake.conf
 qt3/mkspecs/solaris-kcc/qmake.conf
 qt3/mkspecs/solaris-kcc/qplatformdefs.h
 qt3/mkspecs/sunos-g++/qmake.conf
@@ -141,57 +143,58 @@ qt3/plugins/designer/libwizards.a
 qt3/plugins/designer/libwizards.la
 qt3/plugins/designer/libwizards.so
 @dirrm qt3/plugins/designer
-@dirrm qt3/mkspecs/netbsd-g++
-@dirrm qt3/mkspecs/aix-g++
-@dirrm qt3/mkspecs/aix-xlc
-@dirrm qt3/mkspecs/bsdi-g++
-@dirrm qt3/mkspecs/darwin-g++
-@dirrm qt3/mkspecs/dgux-g++
-@dirrm qt3/mkspecs/freebsd-g++
-@dirrm qt3/mkspecs/hpux-acc
-@dirrm qt3/mkspecs/hpux-cc
-@dirrm qt3/mkspecs/hpux-g++
-@dirrm qt3/mkspecs/hpux-n64
-@dirrm qt3/mkspecs/hpux-o64
-@dirrm qt3/mkspecs/hurd-g++
-@dirrm qt3/mkspecs/irix-64
-@dirrm qt3/mkspecs/irix-g++
-@dirrm qt3/mkspecs/irix-n32
-@dirrm qt3/mkspecs/irix-o32
-@dirrm qt3/mkspecs/linux-cxx
-@dirrm qt3/mkspecs/linux-g++
-@dirrm qt3/mkspecs/linux-icc
-@dirrm qt3/mkspecs/linux-kcc
-@dirrm qt3/mkspecs/linux-pgcc
-@dirrm qt3/mkspecs/mac9-mwerks
-@dirrm qt3/mkspecs/macx-g++
-@dirrm qt3/mkspecs/macx-mwerks
-@dirrm qt3/mkspecs/macx-pbuilder
-@dirrm qt3/mkspecs/aix-64
-@dirrm qt3/mkspecs/openbsd-g++
-@dirrm qt3/mkspecs/openunix-cc
-@dirrm qt3/mkspecs/openunix-g++
-@dirrm qt3/mkspecs/qnx-g++
-@dirrm qt3/mkspecs/reliant-64
-@dirrm qt3/mkspecs/reliant-cds
-@dirrm qt3/mkspecs/sco-cc
-@dirrm qt3/mkspecs/sco-g++
-@dirrm qt3/mkspecs/solaris-64
-@dirrm qt3/mkspecs/solaris-cc
-@dirrm qt3/mkspecs/solaris-g++
-@dirrm qt3/mkspecs/solaris-g++-64
-@dirrm qt3/mkspecs/solaris-kcc
-@dirrm qt3/mkspecs/sunos-g++
-@dirrm qt3/mkspecs/tru64-cxx
-@dirrm qt3/mkspecs/tru64-g++
-@dirrm qt3/mkspecs/ultrix-g++
-@dirrm qt3/mkspecs/unixware-g++
-@dirrm qt3/mkspecs/unixware7-cc
-@dirrm qt3/mkspecs/unixware7-g++
-@dirrm qt3/mkspecs/win32-borland
-@dirrm qt3/mkspecs/win32-g++
-@dirrm qt3/mkspecs/win32-icc
-@dirrm qt3/mkspecs/win32-msvc
-@dirrm qt3/mkspecs/win32-visage
 @dirrm qt3/mkspecs/win32-watcom
+@dirrm qt3/mkspecs/win32-visage
+@dirrm qt3/mkspecs/win32-msvc
+@dirrm qt3/mkspecs/win32-icc
+@dirrm qt3/mkspecs/win32-g++
+@dirrm qt3/mkspecs/win32-borland
+@dirrm qt3/mkspecs/unixware7-g++
+@dirrm qt3/mkspecs/unixware7-cc
+@dirrm qt3/mkspecs/unixware-g++
+@dirrm qt3/mkspecs/ultrix-g++
+@dirrm qt3/mkspecs/tru64-g++
+@dirrm qt3/mkspecs/tru64-cxx
+@dirrm qt3/mkspecs/sunos-g++
+@dirrm qt3/mkspecs/solaris-kcc
+@dirrm qt3/mkspecs/solaris-g++-64
+@dirrm qt3/mkspecs/solaris-g++
+@dirrm qt3/mkspecs/solaris-cc
+@dirrm qt3/mkspecs/solaris-64
+@dirrm qt3/mkspecs/sco-g++
+@dirrm qt3/mkspecs/sco-cc
+@dirrm qt3/mkspecs/reliant-cds
+@dirrm qt3/mkspecs/reliant-64
+@dirrm qt3/mkspecs/qnx-g++
+@dirrm qt3/mkspecs/openunix-g++
+@dirrm qt3/mkspecs/openunix-cc
+@dirrm qt3/mkspecs/openbsd-g++
+@dirrm qt3/mkspecs/netbsd-g++
+@dirrm qt3/mkspecs/macx-pbuilder
+@dirrm qt3/mkspecs/macx-mwerks
+@dirrm qt3/mkspecs/macx-g++
+@dirrm qt3/mkspecs/mac9-mwerks
+@dirrm qt3/mkspecs/linux-pgcc
+@dirrm qt3/mkspecs/linux-kcc
+@dirrm qt3/mkspecs/linux-icc
+@dirrm qt3/mkspecs/linux-g++
+@dirrm qt3/mkspecs/linux-cxx
+@dirrm qt3/mkspecs/irix-o32
+@dirrm qt3/mkspecs/irix-n32
+@dirrm qt3/mkspecs/irix-g++
+@dirrm qt3/mkspecs/irix-64
+@dirrm qt3/mkspecs/hurd-g++
+@dirrm qt3/mkspecs/hpux-o64
+@dirrm qt3/mkspecs/hpux-n64
+@dirrm qt3/mkspecs/hpux-g++
+@dirrm qt3/mkspecs/hpux-cc
+@dirrm qt3/mkspecs/hpux-acc
+@dirrm qt3/mkspecs/freebsd-g++
+@dirrm qt3/mkspecs/dgux-g++
+@dirrm qt3/mkspecs/darwin-g++
+@dirrm qt3/mkspecs/cygwin-g++
+@dirrm qt3/mkspecs/bsdi-g++
+@dirrm qt3/mkspecs/aix-xlc
+@dirrm qt3/mkspecs/aix-g++
+@dirrm qt3/mkspecs/aix-64
 @dirrm qt3/mkspecs
