@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3373 2003/09/14 17:51:50 recht Exp $
+$NetBSD: CHANGES,v 1.3374 2003/09/14 18:05:44 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3687,3 +3687,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated py-pyrex to 0.8.1 [recht 2003-09-14]
 	Updated py-Numeric to 23.1 [recht 2003-09-14]
 	Updated py-docutils to 0.3 [recht 2003-09-14]
+	Updated py-curl to 7.10.6 [recht 2003-09-14]
