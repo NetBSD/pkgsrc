@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.13 2001/04/22 06:37:38 fredb Exp $
+
 --- Makefile.orig	Mon Apr  2 16:48:09 2001
 +++ Makefile	Mon Apr  2 16:50:24 2001
 @@ -18,11 +18,11 @@
