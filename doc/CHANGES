@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6103 2004/06/03 09:25:38 shannonjr Exp $
+$NetBSD: CHANGES,v 1.6104 2004/06/03 10:15:34 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2761,3 +2761,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated squirrelmail to 1.4.3nb1 [bouyer 2004-06-02]
 	Updated aterm to 0.4.2b5 [recht 2004-06-02]
 	Updated ngrep to 1.42nb1 [recht 2004-06-02]
+	Added florist [shannonjr 2004-06-03]
