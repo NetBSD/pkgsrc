@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.446 2000/05/31 16:59:44 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.447 2000/05/31 21:25:48 jwise Exp $
 #
 # This file is in the public domain.
 #
@@ -74,9 +74,9 @@ JAVA_HOME?=		${LOCALBASE}/kaffe
 .endif
 CLASSPATH?=		${JAVA_HOME}/lib/classes.zip:.
 PATH:=			${PATH}:${JAVA_HOME}/bin
-MAKE_ENV+=		CLASSPATH=${CLASSPATH}
-CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH}
-SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH}
+MAKE_ENV+=		CLASSPATH=${CLASSPATH} JAVA_HOME=${JAVA_HOME}
+CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH} JAVA_HOME=${JAVA_HOME}
+SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH} JAVA_HOME=${JAVA_HOME}
 .endif
 
 .if defined(USE_MOTIF)
