@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4611 2004/01/26 17:14:32 epg Exp $
+$NetBSD: CHANGES,v 1.4612 2004/01/26 19:58:28 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -491,7 +491,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libksba04 0.4.7nb1 [kleink 2004-01-25]
 	Updated mplayer to 1.0rc3nb1 [tron 2004-01-25]
 	Updated gmplayer to 1.0rc3nb1 [tron 2004-01-25]
-	Updated mencode to 1.0rc3nb1 [tron 2004-01-25]
+	Updated mencoder to 1.0rc3nb1 [tron 2004-01-25]
 	Updated balsa2 2.0.16 [rh 2004-01-26]
 	Updated cucipop 1.31nb1 [grant 2004-01-26]
 	Updated gtk-gnutella to 0.93.3 [adam 2004-01-26]
