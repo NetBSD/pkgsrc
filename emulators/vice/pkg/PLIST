@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 1998/09/07 08:38:46 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/09/07 10:17:19 garbled Exp $
 bin/x64
 bin/x128
 bin/xvic
 bin/xpet
 bin/c1541
 bin/petcat
+@unexec install-info --delete %D/info/vice.info %D/info/dir
 info/vice.info
 info/vice.info-1
 info/vice.info-2
 info/vice.info-3
 info/vice.info-4
+@exec install-info %D/info/vice.info %D/info/dir
 man/man1/c1541.1
 man/man1/petcat.1
 man/man1/vice.1
