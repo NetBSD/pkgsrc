@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2003/03/19 21:07:54 jlam Exp $
+# $NetBSD: Makefile.common,v 1.3 2003/03/22 22:09:02 jmc Exp $
 #
 # This Makefile fragment should be included _below_ and SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
@@ -16,7 +16,7 @@ FILESDIR=		${.CURDIR}/../cyrus-sasl/files
 PATCHDIR=		${.CURDIR}/../cyrus-sasl/patches
 
 .if defined(SASL_PLUGIN) && !empty(SASL_PLUGIN:M[yY][eE][sS])
-DEPENDS+=		cyrus-sasl>=1.5.27
+DEPENDS+=		cyrus-sasl>=1.5.27:../../security/cyrus-sasl
 .endif
 
 USE_BUILDLINK2=		YES
