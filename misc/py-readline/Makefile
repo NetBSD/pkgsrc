@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/07/13 01:20:12 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2000/07/20 15:30:08 tron Exp $
 #
 
 DISTNAME=	py152
@@ -12,7 +12,7 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/doc/tut/interacting.html
 
 DEPENDS+=	python-1.5.2:../../lang/python
-DEPENDS+=	readline-4.0:../../devel/readline
+DEPENDS+=	readline>=4.0:../../devel/readline
 
 DIST_SUBDIR=	python
 ALL_TARGET=	default
