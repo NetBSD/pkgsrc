@@ -1,7 +1,6 @@
-diff -u team-3.1/Makefile ./Makefile
---- team-3.1/Makefile	Sat Jul  1 17:33:24 1995
-+++ ./Makefile	Sat Jul  1 17:53:20 1995
-@@ -1,25 +1,8 @@
+--- Makefile-orig	Fri May 22 15:35:18 1998
++++ Makefile	Fri May 22 15:36:25 1998
+@@ -1,25 +1,10 @@
 -CFLAGS		=-O
 -LDFLAGS		=-s
 +PROG=	team
@@ -12,11 +11,12 @@ diff -u team-3.1/Makefile ./Makefile
 +MANDIR=	${PREFIX}/man
  
 -DEST=		
-+CFLAGS+= -DHAVE_PARAM_H
++MANINSTALL= catinstall maninstall
  
 -MI		=$(DEST)/usr/
 -MD		=$(DEST)/usr/
--
++CFLAGS+= -DHAVE_PARAM_H -DHAVE_WAIT_H
+ 
 -M1X		=1
 -
 -BIND		=$(MD)bin/
