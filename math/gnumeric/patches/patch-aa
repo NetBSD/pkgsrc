@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.10 2000/11/25 14:21:24 rh Exp $
+$NetBSD: patch-aa,v 1.11 2001/03/18 03:05:08 mjl Exp $
 
---- plugins/gb/excel-gb-interior.c.orig	Sat Nov 18 12:07:53 2000
-+++ plugins/gb/excel-gb-interior.c
+--- plugins/gb/excel-gb-interior.c.orig	Thu Feb 15 02:27:05 2001
++++ plugins/gb/excel-gb-interior.c	Sun Mar 18 02:01:52 2001
 @@ -14,7 +14,6 @@
+ #include "sheet.h"
  #include "cell.h"
- #include "rendered-value.h"
  #include "parse-util.h"
 -#include "command-context-corba.h"
  #include "selection.h"
