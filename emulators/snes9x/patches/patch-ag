@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.4 2002/07/14 07:44:44 kristerw Exp $
---- unix/unix.cpp.orig	Tue Sep 18 08:03:40 2001
-+++ unix/unix.cpp	Sun Jul 14 04:09:32 2002
+$NetBSD: patch-ag,v 1.5 2003/09/21 18:22:16 kristerw Exp $
+--- unix/unix.cpp.orig	2001-09-18 06:03:40.000000000 +0000
++++ unix/unix.cpp	2003-09-21 17:59:18.000000000 +0000
 @@ -51,7 +51,7 @@
  #include <ctype.h>
  #include <dirent.h>
@@ -140,7 +140,7 @@ $NetBSD: patch-ag,v 1.4 2002/07/14 07:44:44 kristerw Exp $
 +           size = hid_report_size(rd, hid_input, &report_id);
 +           priv_joy_data[i].offset = (report_id != 0);
 +#endif
-+           if ((priv_joy_data[i].data_buf = malloc(size)) == NULL)
++           if ((priv_joy_data[i].data_buf = (char*)malloc(size)) == NULL)
 +           {
 +               printf("error: couldn't malloc %d bytes\n", size);
 +               hid_dispose_report_desc(rd);
@@ -194,7 +194,7 @@ $NetBSD: patch-ag,v 1.4 2002/07/14 07:44:44 kristerw Exp $
 +               if (interesting_hid)
 +               {
 +                   h.next = priv_joy_data[i].hids;
-+                   priv_joy_data[i].hids = malloc(sizeof *(priv_joy_data[i].hids));
++                   priv_joy_data[i].hids = (struct hid_item *)malloc(sizeof *(priv_joy_data[i].hids));
 +                   if (priv_joy_data[i].hids == NULL)
 +                   {
 +                       printf("error: Not enough memory for joystick.\n");
@@ -317,6 +317,32 @@ $NetBSD: patch-ag,v 1.4 2002/07/14 07:44:44 kristerw Exp $
  
  #ifdef MMAP_SOUND 
     if (ioctl (so.sound_fd, SNDCTL_DSP_GETCAPS, &J) < 0)
+@@ -1485,14 +1719,14 @@
+ 	so.sixteen_bit = TRUE;
+ 
+     so.stereo = stereo;
+-    if (ioctl (so.sound_fd, SNDCTL_DSP_STEREO, &so.stereo) < 0)
++    if (ioctl (so.sound_fd, SNDCTL_DSP_STEREO, (void *)&so.stereo) < 0)
+     {
+ 	perror ("ioctl SNDCTL_DSP_STEREO");
+ 	return (FALSE);
+     }
+     
+     so.playback_rate = Rates[mode & 0x07];
+-    if (ioctl (so.sound_fd, SNDCTL_DSP_SPEED, &so.playback_rate) < 0)
++    if (ioctl (so.sound_fd, SNDCTL_DSP_SPEED, (void *)&so.playback_rate) < 0)
+     {
+ 	perror ("ioctl SNDCTL_DSP_SPEED");
+ 	return (FALSE);
+@@ -1517,7 +1751,7 @@
+ 	perror ("ioctl SNDCTL_DSP_SETFRAGMENT");
+ 	return (FALSE);
+     }
+-    ioctl (so.sound_fd, SNDCTL_DSP_GETBLKSIZE, &so.buffer_size);
++    ioctl (so.sound_fd, SNDCTL_DSP_GETBLKSIZE, (void *)&so.buffer_size);
+     
+ #ifdef MMAP_SOUND
+     J = PCM_ENABLE_OUTPUT;
 @@ -1541,7 +1775,7 @@
  }
  #endif
