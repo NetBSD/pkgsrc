@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/25 16:09:46 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/25 18:50:03 minskim Exp $
 #
 
 DISTNAME=	fuse-utils-0.6.2
@@ -10,10 +10,10 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://fuse-emulator.sourceforge.net/
 COMMENT=	ZX Spectrum Emulator utilities
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 
-.include "../../emulators/libspectrum/buildlink2.mk"
+.include "../../emulators/libspectrum/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
