@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/10/28 22:58:13 seb Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/28 22:59:59 seb Exp $
 #
 
 DISTNAME=	icu-1.7
@@ -14,8 +14,6 @@ WRKSRC=		${WRKDIR}/icu/source
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 USE_BUILDLINK2=	YES
-
-CONFIGURE_ARGS+= --disable-threads
 
 .include "../../mk/endian.mk"
 
