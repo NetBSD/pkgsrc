@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2002/06/06 02:14:02 thorpej Exp $
+$NetBSD: patch-ae,v 1.2 2002/06/12 23:26:26 wiz Exp $
 
 --- config.sub.orig	Fri Jun 23 09:30:45 2000
 +++ config.sub	Wed Jun  5 19:09:07 2002
@@ -15,7 +15,7 @@ $NetBSD: patch-ae,v 1.1 2002/06/06 02:14:02 thorpej Exp $
  	      | clipper-* | orion-* \
  	      | sparclite-* | pdp11-* | sh-* | powerpc-* | powerpcle-* \
  	      | sparc64-* | sparcv9-* | sparc86x-* | mips16-* | mips64-* | mipsel-* \
-+	      | mipseb-* |
++	      | mipseb-* \
  	      | mips64el-* | mips64orion-* | mips64orionel-* \
  	      | mips64vr4100-* | mips64vr4100el-* | mips64vr4300-* | mips64vr4300el-* \
  	      | mipstx39-* | mipstx39el-* | mcore-* \
