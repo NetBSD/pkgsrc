@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2002/01/29 10:53:42 wiz Exp $
+
+--- linux/sw_draw.c.orig	Thu Sep 20 11:08:10 2001
++++ linux/sw_draw.c
+@@ -166,6 +166,8 @@
+ {
+     DWORD i,j,color32;
+ 
++    pthread_yield_np();
++
+     NGNoTransp = 0;             // Set this value to 1 within the appropriate
+                                 // video mode if you want to add a custom
+                                 // transparency routine or hardware
