@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/03/23 21:30:12 markd Exp $
 bin/artsc-config
 bin/artscat
 bin/artsd
@@ -9,6 +9,7 @@ bin/artsshell
 bin/artswrapper
 bin/mcopidl
 include/arts/anyref.h
+include/arts/arts_export.h
 include/arts/artsflow.h
 include/arts/artsflow.idl
 include/arts/artsversion.h
@@ -89,6 +90,7 @@ include/arts/unixconnection.h
 include/arts/unixserver.h
 include/arts/weakreference.h
 include/artsc/artsc.h
+include/artsc/artsc_export.h
 lib/libartsc.la
 lib/libartscbackend.la
 lib/libartsdsp.la
