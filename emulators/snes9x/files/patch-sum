@@ -1,9 +1,11 @@
-$Id: patch-sum,v 1.3 2000/11/16 02:27:05 wiz Exp $
+$Id: patch-sum,v 1.4 2001/03/13 13:46:56 wiz Exp $
 
-MD5 (patch-aa) = c956a4c089ee4c5d6fe59702360767d2
-MD5 (patch-ab) = 626e8bc7e260ff83708e13ef54e61cdd
-MD5 (patch-ac) = ad48bfa7a5b65c581c67ababd09cca99
-MD5 (patch-ad) = 79cf18843562488e62fdbaf503dd50c4
-MD5 (patch-ae) = 2ce2c9ae1a0abb2c42a4a4139b6d1a8e
-MD5 (patch-af) = 91cf512e0262622edc62d30e45e5d76a
-MD5 (patch-ag) = 466a9ed4c567fa7e69615eb3bbc754b9
+SHA1 (patch-aa) = 7dcd4e19e5b79d5504f138c204bfd9a6a13f2e44
+SHA1 (patch-ab) = 24d7428994478da9a185227b63be03ebccdb88c0
+SHA1 (patch-ac) = 4998ed2fcc6f8c69696d04c4792d281e6a88c186
+SHA1 (patch-ad) = d6996524a0ac7dc4313979c7d6bfdfa68a8818d2
+SHA1 (patch-ae) = b197f858ed7c3e23ea0bc808f2114bb11f68b6c2
+SHA1 (patch-af) = 9de3b9420fcef7217561afa1bd3c4be234588a19
+SHA1 (patch-ag) = 23660a32dd160870117eee49dec7e3b9b3767e66
+SHA1 (patch-ah) = 60bd35e51faca36fbd8d8d6354487554af17fe7a
+SHA1 (patch-ai) = 7243ef63d42a3d867bdb8611f01d7090f65f51ef
