@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1.1.1 2004/09/26 01:12:17 dmcmahill Exp $
+$NetBSD: patch-ah,v 1.1 2004/10/01 22:56:11 dmcmahill Exp $
 
 --- doc/Makefile.in.orig	Thu Jul 29 16:58:47 2004
 +++ doc/Makefile.in

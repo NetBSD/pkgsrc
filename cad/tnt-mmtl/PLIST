@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/26 01:12:12 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.1 2004/10/01 22:56:10 dmcmahill Exp $
 bin/bem
 bin/calcCAP
 bin/calcRL
-bin/tnt
+bin/tnt-mmtl
 bin/tnt.tcl
 lib/bem1.0/bem.tcl
 lib/bem1.0/bem_gpge.itcl
