@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/11/27 11:03:31 agc Exp $
+# $NetBSD: Makefile,v 1.35 2003/05/05 17:38:41 grant Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -43,9 +43,9 @@ CONFIGURE_ARGS+=	--with-screen=Xaw
 CONFIGURE_ARGS+=	--with-xpm
 
 post-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/perl/vileget ${PREFIX}/bin/xvileget
-	@${INSTALL_DATA_DIR} ${EGDIR}
-	@for f in filters/spell.rc filters/filters.rc		\
+	${INSTALL_SCRIPT} ${WRKSRC}/perl/vileget ${PREFIX}/bin/xvileget
+	${INSTALL_DATA_DIR} ${EGDIR}
+	for f in filters/spell.rc filters/filters.rc		\
 		macros/digraphs.rc macros/pictmode.rc		\
 		macros/manpage.rc visvile/visvile.rc; do	\
 		${INSTALL_DATA} ${WRKSRC}/$$f ${EGDIR};		\
