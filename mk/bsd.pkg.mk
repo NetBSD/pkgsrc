@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.821 2001/10/04 21:48:12 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.822 2001/10/04 22:01:54 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1297,7 +1297,8 @@ show-downlevel:
 .if !target(show-installed-depends)
 show-installed-depends:
 .  if defined(DEPENDS)
-	@for i in ${DEPENDS:C/:.*$//:Q:S/\ / /g} ; do			\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for i in ${DEPENDS:C/:.*$//:Q:S/\ / /g} ; do			\
 		echo "$$i =>" `${PKG_INFO} -e $$i` ;			\
 	done
 .  endif
