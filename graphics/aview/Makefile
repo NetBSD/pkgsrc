@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/01/30 12:05:27 agc Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/05 21:34:55 agc Exp $
 #
 
 DISTNAME=	aview-1.3.0rc1
@@ -23,11 +23,10 @@ USE_BUILDLINK_ONLY=	yes
 .include "../../mk/bsd.prefs.mk"
 
 .if (${MACHINE_ARCH} == "i386")
-FILES_SUBST= BIN_PROGRAMS="aview aaflip"
+FILES_SUBST+= BIN_PROGRAMS="aview aaflip"
 .else
-FILES_SUBST= BIN_PROGRAMS="aview"
+FILES_SUBST+= BIN_PROGRAMS="aview"
 .endif
-FILES_SUBST_SED=  ${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/-e s!@/}
 
 pre-configure:
 	@${SED} ${FILES_SUBST_SED} ${WRKSRC}/Makefile.in > ${WRKDIR}/Makefile.in
@@ -49,4 +48,5 @@ post-install:
 
 .include "../../graphics/aalib/buildlink.mk"
 .include "../../graphics/netpbm/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
