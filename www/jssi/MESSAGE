@@ -1,0 +1,16 @@
+=============================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 02:17:12 zuntum Exp $
+
+To install Apache-JSSI for use with Apache Server's mod_jserv (from the
+ap-jserv package), add the following line to your httpd.conf:
+
+	ApJServAction .jhtml /servlets/org.apache.servlet.ssi.SSI
+
+and the following line to your zone.properties:
+
+	repositories=${PREFIX}/lib/java/ApacheJSSI.jar
+
+To use Apache-JSSI with others servlet engines, see the appropriate
+documentation.
+
+=============================================================================

@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:19:02 zuntum Exp $
+share/httpd/htdocs/waplet/waplet.jar
+share/doc/waplet/README
+share/doc/waplet/COPYING
+share/doc/waplet/Parser.java
+share/doc/waplet/Tag.java
+share/doc/waplet/waplet.java
+share/examples/waplet/sample.html
+share/examples/waplet/wap_content.wml
+@dirrm share/httpd/htdocs/waplet
+@unexec rmdir %D/share/httpd/htdocs 2>/dev/null || true
+@unexec rmdir %D/share/httpd 2>/dev/null || true
+@dirrm share/doc/waplet
+@dirrm share/examples/waplet

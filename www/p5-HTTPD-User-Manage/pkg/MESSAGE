@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2001/07/17 23:04:11 wiz Exp $
-
-To use the script, please read the the manual
-  ${PREFIX}/share/docs/user_manage/user_manage.html
-
-to configure it properly.
-
-===========================================================================

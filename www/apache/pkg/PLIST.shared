@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.shared,v 1.2 2001/03/13 20:52:29 jlam Exp $
-lib/httpd/mod_define.so
-lib/httpd/mod_proxy.so
-lib/httpd/httpd.exp
-@dirrm lib/httpd

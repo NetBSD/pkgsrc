@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/08/29 20:09:38 nra Exp $
-bin/snarf
-man/man1/snarf.1

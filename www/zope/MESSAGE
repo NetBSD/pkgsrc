@@ -1,0 +1,9 @@
+==============================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 02:19:11 zuntum Exp $
+
+Zope is now installed.
+
+The command "zope-install" will create instances of Zope for use with
+Apache. Run it without any arguments for help and usage information.
+
+==============================================================================

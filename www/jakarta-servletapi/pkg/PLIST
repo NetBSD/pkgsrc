@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/06/21 13:12:26 abs Exp $
-lib/java/servlet.jar
-share/doc/java/jakarta-servletapi/README
-share/doc/java/jakarta-servletapi/LICENSE

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/23 20:05:44 kim Exp $
-libexec/cgi-bin/cvsweb.cgi
-share/examples/cvsweb/cvsweb.conf.default
-@dirrm share/examples/cvsweb
