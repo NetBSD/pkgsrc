@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2001/05/18 13:26:23 abs Exp $
+$NetBSD: patch-ab,v 1.9 2002/02/24 21:42:56 wiz Exp $
 
---- hacks/Makefile.in.orig	Fri May 18 13:27:34 2001
+--- hacks/Makefile.in.orig	Sun Feb 24 10:56:29 2002
 +++ hacks/Makefile.in
-@@ -363,6 +363,12 @@
+@@ -428,6 +428,12 @@
  .c.o:
  	$(CC) -c $(INCLUDES) $(DEFS) $(CFLAGS) $(X_CFLAGS) $<
  

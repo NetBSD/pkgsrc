@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.4 2002/02/24 21:42:56 wiz Exp $
+
+--- driver/Makefile.in.orig	Sun Feb 24 18:19:18 2002
++++ driver/Makefile.in
+@@ -762,7 +762,7 @@
+ 
+ 
+ xscreensaver-demo: @PREFERRED_DEMO_PROGRAM@
+-	$(INSTALL_PROGRAM) @PREFERRED_DEMO_PROGRAM@ $@
++	cp -p @PREFERRED_DEMO_PROGRAM@ $@
+ 
+ xscreensaver-demo-Xm: $(DEMO_OBJS) $(MOTIF_OBJS)
+ 	$(CC) $(LDFLAGS) -o $@ $(DEMO_OBJS) $(MOTIF_OBJS) $(LIBS) $(X_LIBS) \
