@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 1998/09/04 18:33:46 christos Exp $
+
+*** old/curs_io.c	Fri Sep  4 11:22:07 1998
+--- curs_io.c	Fri Sep  4 11:21:28 1998
+***************
+*** 56,62 ****
+      if (is_tty)
+  	savetty();
+  
+! #if defined(SYSV) || defined(AIX)
+      eofc = _tty.c_cc[VEOF];
+  #else
+  #ifdef BSD
+--- 56,62 ----
+      if (is_tty)
+  	savetty();
+  
+! #if defined(SYSV) || defined(AIX) || defined(POSIX)
+      eofc = _tty.c_cc[VEOF];
+  #else
+  #ifdef BSD

@@ -1,0 +1,9 @@
+The "Mail User's Shell" (MUSH) is a "Mail User Agent" (MUA) that is
+designed to manage electronic mail on most UNIX systems.  That is,
+mush is used by users to read mail, sort it, edit it, delete it,
+or use it to act as an interface to send mail to others.  A Mail
+Transport Agent (MTA) is the program which mush communicates with
+that actually -delivers- mail.
+
+Mush is copyright (c) 1986, 1987, 1988, 1989, 1990, 1991 by Dan Heller.
+All Rights Reserved.   This software is not in the public domain.

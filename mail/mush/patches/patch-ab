@@ -1,0 +1,48 @@
+$NetBSD: patch-ab,v 1.1 1998/09/04 18:33:46 christos Exp $
+
+*** old/file.c	Fri Sep  4 11:22:07 1998
+--- file.c	Fri Sep  4 11:21:28 1998
+***************
+*** 115,121 ****
+  	    return buf; /* it may be wanted for creating */
+  	}
+  	*isdir = -1;
+! 	return sys_errlist[errno];
+      }
+      *isdir = ((stat_buf.st_mode & S_IFMT) == S_IFDIR);
+      return buf;
+--- 115,121 ----
+  	    return buf; /* it may be wanted for creating */
+  	}
+  	*isdir = -1;
+! 	return (char *) sys_errlist[errno];
+      }
+      *isdir = ((stat_buf.st_mode & S_IFMT) == S_IFDIR);
+      return buf;
+***************
+*** 396,401 ****
+--- 396,402 ----
+      register int     total = 0;
+      char 	     file[MAXPATHLEN], buf[HDRSIZ], *start = s, c;
+      register char    *p, *b = buf, *fpath;
++     static char gpat[] = "/?*=*?/\052";
+  
+      do  {
+  	if (!(p = get_name_n_addr(s, NULL, file)))
+***************
+*** 409,415 ****
+  	 * \052 is a * for broken compilers that would do a comment.
+  	 */
+  	if (force || *file == '+' || *file == '~' ||
+! 		*file == '|' || *file == '/' && !glob(file, "/?*=*?/\052")) {
+  	    int isdir;
+  	    /* open either "file" or &file[1] */
+  	    if (*file == '|') {
+--- 410,416 ----
+  	 * \052 is a * for broken compilers that would do a comment.
+  	 */
+  	if (force || *file == '+' || *file == '~' ||
+! 		*file == '|' || *file == '/' && !glob(file, gpat)) {
+  	    int isdir;
+  	    /* open either "file" or &file[1] */
+  	    if (*file == '|') {
