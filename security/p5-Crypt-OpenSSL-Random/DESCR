@@ -1,0 +1,2 @@
+Crypt::OpenSSL::Random is a thin XS wrapper around the pseudo-random number
+generator functions contained in the OpenSSL crypto library.
