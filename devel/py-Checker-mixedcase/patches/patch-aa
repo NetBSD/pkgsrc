@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/01/29 16:27:53 drochner Exp $
+
+--- setup.py.orig	Sun Jan 13 17:55:12 2002
++++ setup.py	Tue Jan 29 16:27:22 2002
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/python
++#!/usr/bin/env python
+ 
+ """To use this setup script to install PyChecker:
+ 
+@@ -10,7 +10,7 @@
+ 
+ import sys
+ import os
+-import tempfile
++#import tempfile
+ 
+ from distutils.core import setup
+ from distutils import sysconfig
+@@ -34,10 +34,11 @@
+     script_suffix = ''
+     if sys.platform == 'win32' :
+         script_suffix = '.bat'
+-    LOCAL_SCRIPT = 'pychecker' + script_suffix
+-    LOCAL_SCRIPT = os.path.join(tempfile.gettempdir(), LOCAL_SCRIPT)
++    LOCAL_SCRIPT = 'pyChecker' + sys.version[:3]
++    LOCAL_SCRIPT = os.path.join('./', LOCAL_SCRIPT)
+     remove_file(LOCAL_SCRIPT)
+ 
++    doc_dir = '@PREFIX@/share/doc/@PYPKGPREFIX@-Checker/'
+     install_dir = sysconfig.get_python_lib() + os.sep + 'pychecker'
+     checker_py = install_dir + os.sep + 'checker.py'
+     py_exe = sys.executable
+@@ -64,7 +65,7 @@
+           author_email          = "pychecker@metaslash.com",
+           url                   = "http://pychecker.sourceforge.net/",
+           packages              = [ 'pychecker' ],
+-          data_files            = [ (install_dir, DOC_FILES) ],
++          data_files            = [ (doc_dir, DOC_FILES) ],
+           scripts               = [ LOCAL_SCRIPT, ],
+           long_description      = LONG_DESCRIPTION
+          )

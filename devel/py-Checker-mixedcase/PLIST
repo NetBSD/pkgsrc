@@ -1,0 +1,41 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/29 16:27:53 drochner Exp $
+bin/pyChecker${PYVERSSUFFIX}
+${PYSITELIB}/pychecker/CodeChecks.py
+${PYSITELIB}/pychecker/CodeChecks.pyc
+${PYSITELIB}/pychecker/Config.py
+${PYSITELIB}/pychecker/Config.pyc
+${PYSITELIB}/pychecker/OP.py
+${PYSITELIB}/pychecker/OP.pyc
+${PYSITELIB}/pychecker/OptionTypes.py
+${PYSITELIB}/pychecker/OptionTypes.pyc
+${PYSITELIB}/pychecker/Stack.py
+${PYSITELIB}/pychecker/Stack.pyc
+${PYSITELIB}/pychecker/Warning.py
+${PYSITELIB}/pychecker/Warning.pyc
+${PYSITELIB}/pychecker/__init__.py
+${PYSITELIB}/pychecker/__init__.pyc
+${PYSITELIB}/pychecker/checker.py
+${PYSITELIB}/pychecker/checker.pyc
+${PYSITELIB}/pychecker/function.py
+${PYSITELIB}/pychecker/function.pyc
+${PYSITELIB}/pychecker/msgs.py
+${PYSITELIB}/pychecker/msgs.pyc
+${PYSITELIB}/pychecker/options.py
+${PYSITELIB}/pychecker/options.pyc
+${PYSITELIB}/pychecker/printer.py
+${PYSITELIB}/pychecker/printer.pyc
+${PYSITELIB}/pychecker/python.py
+${PYSITELIB}/pychecker/python.pyc
+${PYSITELIB}/pychecker/utils.py
+${PYSITELIB}/pychecker/utils.pyc
+${PYSITELIB}/pychecker/warn.py
+${PYSITELIB}/pychecker/warn.pyc
+share/doc/${PYPKGPREFIX}-Checker/CHANGELOG
+share/doc/${PYPKGPREFIX}-Checker/COPYRIGHT
+share/doc/${PYPKGPREFIX}-Checker/KNOWN_BUGS
+share/doc/${PYPKGPREFIX}-Checker/MAINTAINERS
+share/doc/${PYPKGPREFIX}-Checker/README
+share/doc/${PYPKGPREFIX}-Checker/TODO
+share/doc/${PYPKGPREFIX}-Checker/VERSION
+@dirrm ${PYSITELIB}/pychecker
+@dirrm share/doc/${PYPKGPREFIX}-Checker
