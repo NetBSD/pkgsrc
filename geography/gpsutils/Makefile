@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/04 20:57:47 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/04 21:21:01 jschauma Exp $
 #
 
 DISTNAME=		gpsutils-0.4.0
 WRKSRC=			${WRKDIR}/gpsutils-0.4.0/src
-CATEGORIES=		gis
+CATEGORIES=		geography
 MASTER_SITES=		http://www.wombat.ie/gps/
 
 MAINTAINER=		hdp@cs.nmsu.edu
