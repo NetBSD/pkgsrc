@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/05/22 03:07:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/07/30 15:14:15 markd Exp $
 share/doc/kde/HTML/uk/common/1.png
 share/doc/kde/HTML/uk/common/10.png
 share/doc/kde/HTML/uk/common/2.png
@@ -144,6 +144,7 @@ share/kde/locale/uk/LC_MESSAGES/dub.mo
 share/kde/locale/uk/LC_MESSAGES/extensionproxy.mo
 share/kde/locale/uk/LC_MESSAGES/ffrs.mo
 share/kde/locale/uk/LC_MESSAGES/filetypes.mo
+share/kde/locale/uk/LC_MESSAGES/flashkard.mo
 share/kde/locale/uk/LC_MESSAGES/fontinst.mo
 share/kde/locale/uk/LC_MESSAGES/htmlsearch.mo
 share/kde/locale/uk/LC_MESSAGES/imagerename_plugin.mo
@@ -158,6 +159,7 @@ share/kde/locale/uk/LC_MESSAGES/kabcformat_binary.mo
 share/kde/locale/uk/LC_MESSAGES/kaboodle.mo
 share/kde/locale/uk/LC_MESSAGES/kaccess.mo
 share/kde/locale/uk/LC_MESSAGES/kaddressbook.mo
+share/kde/locale/uk/LC_MESSAGES/kalarmdgui.mo
 share/kde/locale/uk/LC_MESSAGES/kandy.mo
 share/kde/locale/uk/LC_MESSAGES/kaphorism.mo
 share/kde/locale/uk/LC_MESSAGES/kappfinder.mo
@@ -273,6 +275,7 @@ share/kde/locale/uk/LC_MESSAGES/kdmconfig.mo
 share/kde/locale/uk/LC_MESSAGES/kdmgreet.mo
 share/kde/locale/uk/LC_MESSAGES/kdvi.mo
 share/kde/locale/uk/LC_MESSAGES/kedit.mo
+share/kde/locale/uk/LC_MESSAGES/keduca.mo
 share/kde/locale/uk/LC_MESSAGES/kenolaba.mo
 share/kde/locale/uk/LC_MESSAGES/kfax.mo
 share/kde/locale/uk/LC_MESSAGES/kfifteenapplet.mo
@@ -323,6 +326,7 @@ share/kde/locale/uk/LC_MESSAGES/kinetd.mo
 share/kde/locale/uk/LC_MESSAGES/kio_audiocd.mo
 share/kde/locale/uk/LC_MESSAGES/kio_devices.mo
 share/kde/locale/uk/LC_MESSAGES/kio_finger.mo
+share/kde/locale/uk/LC_MESSAGES/kio_fish.mo
 share/kde/locale/uk/LC_MESSAGES/kio_floppy.mo
 share/kde/locale/uk/LC_MESSAGES/kio_imap4.mo
 share/kde/locale/uk/LC_MESSAGES/kio_lan.mo
@@ -378,7 +382,6 @@ share/kde/locale/uk/LC_MESSAGES/kpartsaver.mo
 share/kde/locale/uk/LC_MESSAGES/kpat.mo
 share/kde/locale/uk/LC_MESSAGES/kpersonalizer.mo
 share/kde/locale/uk/LC_MESSAGES/kpf.mo
-share/kde/locale/uk/LC_MESSAGES/kpilot.mo
 share/kde/locale/uk/LC_MESSAGES/kpovmodeler.mo
 share/kde/locale/uk/LC_MESSAGES/kppp.mo
 share/kde/locale/uk/LC_MESSAGES/kppplogview.mo
@@ -453,9 +456,9 @@ share/kde/locale/uk/LC_MESSAGES/kxkb.mo
 share/kde/locale/uk/LC_MESSAGES/kxmlrpcd.mo
 share/kde/locale/uk/LC_MESSAGES/kxsconfig.mo
 share/kde/locale/uk/LC_MESSAGES/libkcalsystem.mo
-share/kde/locale/uk/LC_MESSAGES/libkdegames.mo
 share/kde/locale/uk/LC_MESSAGES/libkdehighscores.mo
 share/kde/locale/uk/LC_MESSAGES/libkdenetwork.mo
+share/kde/locale/uk/LC_MESSAGES/libkdepim.mo
 share/kde/locale/uk/LC_MESSAGES/libkicker.mo
 share/kde/locale/uk/LC_MESSAGES/libkickermenu_kdeprint.mo
 share/kde/locale/uk/LC_MESSAGES/libkickermenu_konsole.mo
@@ -497,7 +500,6 @@ share/kde/locale/uk/entry.desktop
 share/kde/locale/uk/flag.png
 @comment dirrm share/kde/locale/uk/LC_MESSAGES
 @comment dirrm share/kde/locale/uk
-@comment dirrm share/kde/locale
 @dirrm share/doc/kde/HTML/uk/kspell
 @dirrm share/doc/kde/HTML/uk/kioslave
 @dirrm share/doc/kde/HTML/uk/kinfocenter/protocols
@@ -507,4 +509,3 @@ share/kde/locale/uk/flag.png
 @dirrm share/doc/kde/HTML/uk/kaddressbook
 @comment dirrm share/doc/kde/HTML/uk/common
 @comment dirrm share/doc/kde/HTML/uk
-@comment dirrm share/doc/kde/HTML
