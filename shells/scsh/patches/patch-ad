@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.5 2005/01/24 21:24:48 tv Exp $
+
+--- scsh/syscalls1.c.orig	2005-01-24 16:23:12.000000000 -0500
++++ scsh/syscalls1.c
+@@ -671,7 +671,9 @@ s48_value scsh_fsync(s48_value sch_fdes)
+ 
+ s48_value scsh_sync()
+ {
++#if !defined(__INTERIX)
+   sync();
++#endif
+   return S48_UNSPECIFIC;
+ }
+ 

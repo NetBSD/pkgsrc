@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.7 2004/04/21 12:08:10 dillo Exp $
+$NetBSD: distinfo,v 1.8 2005/01/24 21:24:47 tv Exp $
 
 SHA1 (scsh-0.6.6.tar.gz) = 5d38ec103e1cb885e634bb3475e8912ac892067b
 Size (scsh-0.6.6.tar.gz) = 4332223 bytes
 SHA1 (patch-aa) = e4456d514815c1a8db0e2c655f37272421ef0007
 SHA1 (patch-ab) = 5a8ba9cfe463c791f8478366933c335683e38c3b
 SHA1 (patch-ac) = e4270b345de59978440e6accec9bcd80c83f6f6e
+SHA1 (patch-ad) = c67946758a5424ff6c1fb91693c8aa01158eb6e4
 SHA1 (patch-ae) = 3838934816cf23f1975d15f3dfd3ce8fae10ee40
 SHA1 (patch-af) = faddb025c3bada2d321b693217104dc986a8a90f
