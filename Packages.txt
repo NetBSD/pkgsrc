@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.70 1999/10/31 19:45:15 rh Exp $
+# $NetBSD: Packages.txt,v 1.71 1999/11/17 15:57:45 agc Exp $
 ###########################################################################
 
 			==========================
@@ -1000,7 +1000,7 @@ perform the equivalent of:
    be no variable to fix this, you can redefine it with the do-*
    target.  (Note that redefining the target itself instead of the
    do-* target is a bad idea, as the pre-* and post-* targets won't be
-   called anymore, etc.) You will not usually ned to do this.
+   called anymore, etc.) You will not usually need to do this.
 
  * reinstall:
    If you did a "make install" and you noticed some file was not installed
