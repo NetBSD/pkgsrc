@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/01/08 05:07:36 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2000/01/10 00:16:11 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
@@ -21,9 +21,19 @@ NO_CDROM=		${RESTRICTED}
 NO_WRKSUBDIR=		yes
 EXTRACT_CMD=		${DOWNLOADED_DISTFILE} >/dev/null
 
+KERNEL=			/`sysctl machdep.booted_kernel | sed 's/.* = //'`
+
 pre-extract:
-	@${ECHO} You must have COMPAT_12 enabled in your kernel,
-	@${ECHO} else extraction \(and running the program\) will fail.
+	@if (${NM} ${KERNEL} | ${GREP} -q compat_12 && \
+		${NM} ${KERNEL} | ${GREP} -q exec_aout); then true; \
+	else \
+		${ECHO} "****************************************************";\
+		${ECHO} Make can not proceed! In order to extract \(and run\); \
+		${ECHO} this package, you must have have booted from a kernel; \
+		${ECHO} with options COMPAT_12 \(and EXEC_AOUT, if ELF\).; \
+		${ECHO} "****************************************************";\
+		false; \
+	fi
 	@${CHMOD} a+x ${DISTDIR}/${DISTFILES}
 
 do-build:
