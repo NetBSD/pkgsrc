@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/07/19 11:38:33 jlam Exp $
+
+--- dtool.in.orig	Fri Jun 25 08:20:58 1999
++++ dtool.in	Mon Jul 19 06:36:42 1999
+@@ -28,7 +28,8 @@
+ 
+ USAGE="usage: dtool [-o] [-d] [-m] [-a host] [-w host] [-k] [-s] [-h]"
+ 
+-PIDFILE=/etc/dhid.pid
++PIDFILE=/var/run/dhid.pid
++DHID=@PREFIX@/libexec/dhid
+ 
+ 
+ usage()
+@@ -77,7 +78,7 @@
+       ;;
+       
+     s)
+-      if ( /usr/sbin/dhid ); then
++      if ( $DHID ); then
+         echo "Starting dhid daemon."
+       fi
+       ;;

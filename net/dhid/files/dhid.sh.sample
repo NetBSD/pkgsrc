@@ -1,0 +1,6 @@
+#!/bin/sh
+DHID=@PREFIX@/libexec/dhid
+if [ -f ${DHID} ]; then
+	${ECHO} -n " dhid"
+	${DHID}
+fi

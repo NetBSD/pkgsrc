@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/07/19 11:38:33 jlam Exp $
+
+--- dtool.1.orig	Wed Jun 23 20:22:09 1999
++++ dtool.1	Mon Jul 19 06:34:03 1999
+@@ -13,7 +13,7 @@
+ .BR dtool
+ command and its usage.
+ .BR dtool 
+-is now a simple bash script that emulates the behaviour
++is now a simple shell script that emulates the behaviour
+ of the former administration utility to DHIS. It allows to send
+ online, offline, mail and staus query. It also provides a good way to
+ start and stop the daemon manually. Registration, password changes
