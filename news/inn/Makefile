@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2004/02/01 01:43:30 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2004/04/11 17:33:47 snj Exp $
 
 DISTNAME=		inn-${INN_VERSION}
 PKGREVISION=		1
@@ -22,7 +22,7 @@ INN_VERSION=		2.3.5
 BUILD_DEFS+=		INN_DATA_DIR
 FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR}
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${INN_PREFIX}
@@ -120,5 +120,5 @@ post-install:
 		${INSTALL_DATA} $$FILE ${EXAMPLEDIR};			\
 	done
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
