@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/03/07 21:12:56 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/03/07 21:13:24 jlam Exp $
 #
 # This package is a placeholder to signify that the base PHP3 package already
 # has the PCRE functionality.  It *must* have the same version number as the
@@ -6,7 +6,7 @@
 #
 DISTNAME=		php-pcre-${BASE_VERS}
 BASE_VERS=		3.0.18
-PKGVERSION=		1
+PKGREVISION=		1
 CATEGORIES=		www php devel
 DISTFILES=		# empty
 
