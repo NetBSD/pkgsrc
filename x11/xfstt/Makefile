@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/01 20:06:11 salo Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/24 15:30:34 grant Exp $
 #
 
 DISTNAME=		xfstt-1.6
@@ -11,7 +11,7 @@ COMMENT=		TrueType font server for X11
 
 USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 
 # There isn't really any l10n yet, only some preliminary i18n support.
