@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2001/04/30 06:11:09 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/05/22 21:12:20 jlam Exp $
 
-DISTNAME=	imp-2.2.4
+DISTNAME=	imp-2.2.5
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.horde.org/pub/imp/tarballs/
 
@@ -8,7 +8,7 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.horde.org/imp/
 COMMENT=	Internet Messaging Program
 
-DEPENDS+=	horde-1.2.4:../../www/horde
+DEPENDS+=	horde-1.2.5:../../www/horde
 DEPENDS+=	php-imap>3.0.17:../../www/php4-imap
 
 NO_CONFIGURE=	# defined
@@ -50,7 +50,7 @@ post-patch:
 			$${file}.orig > $${file};			\
 	done
 	cd ${WRKSRC}/scripts;						\
-	for file in impsetup.pl pine2imp.pl; do				\
+	for file in pine2imp.pl; do					\
 		${MV} -f $${file} $${file}.orig;			\
 		${SED}	-e "s|/usr/bin/perl|${PERL5}|g"			\
 			-e "s|/usr/local/|${LOCALBASE}/|g"		\

@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2001/04/30 06:11:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/05/22 21:12:21 jlam Exp $
 share/doc/imp/CHANGES
 share/doc/imp/COPYING
 share/doc/imp/CREDITS
 share/doc/imp/DATABASE
 share/doc/imp/HELP
 share/doc/imp/INSTALL
+share/doc/imp/KNOWN_BUGS
 share/doc/imp/PACKAGES
 share/doc/imp/README
 share/doc/imp/SECURITY
@@ -734,7 +735,6 @@ share/horde/imp/poppassd.php3
 share/horde/imp/prefs.php3
 share/horde/imp/remote_login.php3
 share/horde/imp/scripts/imp-cleanup.cron
-share/horde/imp/scripts/impsetup.pl
 share/horde/imp/scripts/pine2imp.pl
 share/horde/imp/scripts/realsecure.sh
 share/horde/imp/select.php3
