@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2000/08/22 14:07:54 ad Exp $
+$NetBSD: patch-ad,v 1.2 2000/08/22 15:40:12 dmcmahill Exp $
 
 --- lib/libfon.c.orig	Tue Aug 22 14:54:21 2000
 +++ lib/libfon.c	Tue Aug 22 14:54:35 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.1 2000/08/22 14:07:54 ad Exp $
  
  #ifdef WORDS_BIGENDIAN
 -#include <byteswap.h>
-+#include <sys/bswap.h>
++#include <machine/bswap.h>
  #endif
  
  struct fon_font *
