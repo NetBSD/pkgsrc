@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/17 21:47:51 grant Exp $
+# $NetBSD: Makefile,v 1.18 2003/08/02 20:25:27 seb Exp $
 
 DISTNAME=	octave-2.1.33
 PKGNAME=	octave-2.1.34
@@ -20,7 +20,6 @@ COMMENT=	High-level language, primarily intended for numerical computations
 
 BUILD_DEPENDS+= teTeX>=1.0.7:../../print/teTeX
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
-DEPENDS+=	readline>=4.0:../../devel/readline
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 USE_GCC3=YES
@@ -28,6 +27,7 @@ USE_GCC3=YES
 .endif
 
 USE_X11=	yes
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_FORTRAN=	yes
@@ -37,8 +37,11 @@ CONFIGURE_ARGS+=--enable-shared --enable-rpath
 CONFIGURE_ARGS+=-prefix=${PREFIX}
 
 CONFIGURE_ENV+=	FFLAGS="${CFLAGS}" OBJECT_FMT="${OBJECT_FMT}"
-LDFLAGS+=	-L${PREFIX}/lib
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
+
+USE_GNU_READLINE=		# defined
+BUILDLINK_DEPENDS.readline=	readline>=4.0
+LDFLAGS+=	-L${BUILDLINK_PREFIX.readline}/lib
 
 INFO_FILES=	octave.info liboctave.info
 LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 \
@@ -65,5 +68,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/$f ${PREFIX}/share/doc/html/octave
 .endfor
 
+.include "../../devel/readline/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
