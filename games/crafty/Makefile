@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2000/11/10 17:34:10 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/14 04:42:43 jlam Exp $
 
-DISTNAME=		crafty-17.14
+DISTNAME=		crafty-18.1
 CATEGORIES=		games
-MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/ \
-			ftp://ftp.cis.uab.edu/pub/hyatt/common/ \
-			ftp://ftp.cis.uab.edu/pub/hyatt/v17/
+MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/v18/ \
+			ftp://ftp.cis.uab.edu/pub/hyatt/ \
+			ftp://ftp.cis.uab.edu/pub/hyatt/common/
 DISTFILES=		${CRAFTY_DISTFILES}
 DISTFILES+=		${CRAFTY_STARTPGN} ${CRAFTY_DOCFILES}
 
@@ -57,7 +57,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${BOOKDIR}
 	${INSTALL_DATA} ${WRKDIR}/books.bin ${BOOKDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	for file in ${DISTFILES}; do \
+	for file in ${CRAFTY_DOCFILES}; do \
 		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$${file} ${DOCDIR}; \
 	done
 
