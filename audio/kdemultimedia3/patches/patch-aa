@@ -1,49 +1,49 @@
-$NetBSD: patch-aa,v 1.4 2003/03/11 13:33:47 markd Exp $
+$NetBSD: patch-aa,v 1.5 2003/05/22 03:05:40 markd Exp $
 
---- configure.orig	Fri Jan 17 08:49:45 2003
+--- configure.orig	Thu May  8 00:05:31 2003
 +++ configure
-@@ -26406,6 +26406,40 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -27200,6 +27200,40 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
    eval "ac_cv_lib_vm='-lXxf86dga -lXxf86vm'"
-+
-+	lib=Xxf86dga
-+	shared_lib_found=no
-+	for i in ${LDFLAGS}; do
-+		case "$i" in
-+		-L*)
-+			dir=`echo $i | sed "s,^-L,,"`
-+			if [ -e $dir/lib${lib}.so ] ||
-+			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
-+				shared_lib_found=yes
-+				break;
-+			fi
-+		esac
-+	done
-+	if [ "$shared_lib_found" = "no" ]; then
-+		eval "ac_cv_lib_vm=no"
-+	fi
-+
-+	lib=Xxf86vm
-+	shared_lib_found=no
-+	for i in ${LDFLAGS}; do
-+		case "$i" in
-+		-L*)
-+			dir=`echo $i | sed "s,^-L,,"`
-+			if [ -e $dir/lib${lib}.so ] ||
-+			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
-+				shared_lib_found=yes
-+				break;
-+			fi
-+		esac
-+	done
-+	if [ "$shared_lib_found" = "no" ]; then
-+		eval "ac_cv_lib_vm=no"
-+	fi
++ 
++ 	lib=Xxf86dga
++ 	shared_lib_found=no
++ 	for i in ${LDFLAGS}; do
++ 		case "$i" in
++ 		-L*)
++ 			dir=`echo $i | sed "s,^-L,,"`
++ 			if [ -e $dir/lib${lib}.so ] ||
++ 			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++ 				shared_lib_found=yes
++ 				break;
++ 			fi
++ 		esac
++ 	done
++ 	if [ "$shared_lib_found" = "no" ]; then
++ 		eval "ac_cv_lib_vm=no"
++ 	fi
++ 
++ 	lib=Xxf86vm
++ 	shared_lib_found=no
++ 	for i in ${LDFLAGS}; do
++ 		case "$i" in
++ 		-L*)
++ 			dir=`echo $i | sed "s,^-L,,"`
++ 			if [ -e $dir/lib${lib}.so ] ||
++ 			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++ 				shared_lib_found=yes
++ 				break;
++ 			fi
++ 		esac
++ 	done
++ 	if [ "$shared_lib_found" = "no" ]; then
++ 		eval "ac_cv_lib_vm=no"
++ 	fi
  else
    echo "$as_me: failed program was:" >&5
- cat conftest.$ac_ext >&5
-@@ -28047,7 +28081,7 @@ fi;
+ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -28947,7 +28981,7 @@ fi;
  
  if test "x$au_enable_default" = xyes; then
    case "$target" in
@@ -52,7 +52,7 @@ $NetBSD: patch-aa,v 1.4 2003/03/11 13:33:47 markd Exp $
        au_enable_oss=yes
        ;;
      *-*-bsdi2.0)
-@@ -32038,7 +32072,7 @@ fi
+@@ -33020,7 +33054,7 @@ fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_ossaudio_main" >&5
  echo "${ECHO_T}$ac_cv_lib_ossaudio_main" >&6
  if test $ac_cv_lib_ossaudio_main = yes; then
@@ -61,33 +61,33 @@ $NetBSD: patch-aa,v 1.4 2003/03/11 13:33:47 markd Exp $
  fi
  
  
-@@ -33074,8 +33108,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -34105,8 +34139,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
 -                x11_dga2=yes
 -
-+	lib=Xxf86dga
-+	shared_lib_found=no
-+	for i in ${LDFLAGS}; do
-+		case "$i" in
-+		-L*)
-+			dir=`echo $i | sed "s,^-L,,"`
-+			if [ -e $dir/lib${lib}.so ] ||
-+			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
-+				shared_lib_found=yes
-+				break;
-+			fi
-+		esac
-+	done
-+	if [ "$shared_lib_found" = "yes" ]; then
-+		x11_dga2=yes
-+	fi
-+  
++ 	lib=Xxf86dga
++ 	shared_lib_found=no
++ 	for i in ${LDFLAGS}; do
++ 		case "$i" in
++ 		-L*)
++ 			dir=`echo $i | sed "s,^-L,,"`
++ 			if [ -e $dir/lib${lib}.so ] ||
++ 			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++ 				shared_lib_found=yes
++ 				break;
++ 			fi
++ 		esac
++ 	done
++ 	if [ "$shared_lib_found" = "yes" ]; then
++ 		x11_dga2=yes
++ 	fi
++   
  else
    echo "$as_me: failed program was:" >&5
- cat conftest.$ac_ext >&5
-@@ -33130,7 +33179,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -34160,7 +34209,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -110,7 +110,7 @@ $NetBSD: patch-aa,v 1.4 2003/03/11 13:33:47 markd Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -33186,7 +33250,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -34215,7 +34279,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -133,7 +133,7 @@ $NetBSD: patch-aa,v 1.4 2003/03/11 13:33:47 markd Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -33785,10 +33864,10 @@ _ACEOF
+@@ -34807,10 +34886,10 @@ _ACEOF
      ;;
  
    NetBSD)

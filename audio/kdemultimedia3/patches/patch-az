@@ -1,8 +1,8 @@
-$NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
+$NetBSD: patch-az,v 1.5 2003/05/22 03:05:40 markd Exp $
 
---- noatun/Makefile.in.orig	Fri Jan 17 08:49:41 2003
+--- noatun/Makefile.in.orig	Thu May  8 00:05:29 2003
 +++ noatun/Makefile.in
-@@ -330,22 +330,25 @@ SUBDIRS = pics library modules  .
+@@ -381,22 +381,25 @@ SUBDIRS = pics library modules  .
  
  KDE_ICON = AUTO
  
@@ -35,7 +35,7 @@ $NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
  applnk_DATA = noatun.desktop
  applnkdir = $(kde_appsdir)/Multimedia
  
-@@ -363,25 +366,31 @@ subdir = noatun
+@@ -414,25 +417,31 @@ subdir = noatun
  mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
  CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
@@ -78,8 +78,8 @@ $NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
  am_noatun20update_OBJECTS = noatun20update.$(OBJEXT)
  #>- noatun20update_OBJECTS = $(am_noatun20update_OBJECTS)
  #>+ 1
-@@ -394,13 +403,19 @@ LDFLAGS = @LDFLAGS@
- LIBS = @LIBS@
+@@ -442,13 +451,19 @@ noatun20update_DEPENDENCIES =
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
  am__depfiles_maybe = depfiles
 -#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/joinhandler.Plo \
@@ -105,10 +105,10 @@ $NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -421,8 +436,8 @@ CXXLD = $(CXX)
+@@ -468,8 +483,8 @@ CXXLD = $(CXX)
+ #>+ 2
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
- CXXFLAGS = @CXXFLAGS@
 -DIST_SOURCES = $(noatun_la_SOURCES) $(noatun_SOURCES) \
 -	$(noatun20update_SOURCES)
 +DIST_SOURCES = $(libnoatun_main_la_SOURCES) $(noatun_la_SOURCES) \
@@ -116,8 +116,8 @@ $NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
  DATA = $(applnk_DATA) $(presets_DATA) $(update_DATA)
  
  
-@@ -432,7 +447,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
- 	uninstall-recursive check-recursive installcheck-recursive
+@@ -480,7 +495,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+ 	check-recursive installcheck-recursive
  DIST_COMMON = COPYING Makefile.am Makefile.in TODO
  DIST_SUBDIRS = $(SUBDIRS)
 -SOURCES = $(noatun_la_SOURCES) $(noatun_SOURCES) $(noatun20update_SOURCES)
@@ -125,7 +125,7 @@ $NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -477,6 +492,36 @@ clean-kde_moduleLTLIBRARIES:
+@@ -525,6 +540,36 @@ clean-kde_moduleLTLIBRARIES:
  	  echo "rm -f \"$${dir}/so_locations\""; \
  	  rm -f "$${dir}/so_locations"; \
  	done
@@ -153,7 +153,7 @@ $NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
 +	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
 +	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
 +	  dir="`echo $$p | sed -e 's|/[^/]*$$||'`"; \
-+	  test -z "$dir" && dir=.; \
++	  test "$$dir" = "$$p" && dir=.; \
 +	  echo "rm -f \"$${dir}/so_locations\""; \
 +	  rm -f "$${dir}/so_locations"; \
 +	done
@@ -162,7 +162,7 @@ $NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
  noatun.la: $(noatun_la_OBJECTS) $(noatun_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(kde_moduledir) $(noatun_la_LDFLAGS) $(noatun_la_OBJECTS) $(noatun_la_LIBADD) $(LIBS)
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
-@@ -550,10 +595,11 @@ mostlyclean-compile:
+@@ -598,10 +643,11 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -175,8 +175,8 @@ $NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
  
  distclean-depend:
  	-rm -rf ./$(DEPDIR)
-@@ -738,7 +784,7 @@ distclean-tags:
- 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+@@ -822,7 +868,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=artsvideo.idl preset.jazz cr48-app-noatun.png preset.trance joinhandler.h preset.eclecticguitar FILES cr128-app-noatun.png avideoframe.h CHANGES preset.metal cr22-app-noatun.png configure.in.in noatun.upd noatun.desktop preset.dance cr32-app-noatun.png preset.zero avideoframe.cc cr16-app-noatun.png cr64-app-noatun.png 
@@ -184,7 +184,7 @@ $NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -783,9 +829,11 @@ distdir: $(DISTFILES)
+@@ -873,9 +919,11 @@ distdir: $(DISTFILES)
  check-am: all-am
  check: check-recursive
  all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(DATA)
@@ -197,7 +197,7 @@ $NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
  
  install: install-recursive
  install-exec: install-exec-recursive
-@@ -804,7 +852,6 @@ install-strip:
+@@ -894,7 +942,6 @@ install-strip:
  mostlyclean-generic:
  
  clean-generic:
@@ -205,7 +205,7 @@ $NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
  
  distclean-generic:
  	-rm -f Makefile $(CONFIG_CLEAN_FILES)
-@@ -817,10 +864,12 @@ maintainer-clean-generic:
+@@ -907,10 +954,12 @@ maintainer-clean-generic:
  clean: kde-rpo-clean  clean-recursive
  
  #>- clean-am: clean-binPROGRAMS clean-generic clean-kde_moduleLTLIBRARIES \
@@ -221,7 +221,7 @@ $NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
  
  distclean: distclean-recursive
  
-@@ -841,9 +890,9 @@ info-am:
+@@ -931,9 +980,9 @@ info-am:
  install-data-am: install-kde-icons   install-applnkDATA \
  	install-presetsDATA install-updateDATA install-updatePROGRAMS
  
@@ -233,7 +233,7 @@ $NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
  
  install-info: install-info-recursive
  
-@@ -862,43 +911,42 @@ mostlyclean-am: mostlyclean-compile most
+@@ -960,27 +1009,28 @@ ps-am:
  
  #>- uninstall-am: uninstall-applnkDATA uninstall-binPROGRAMS \
  #>- 	uninstall-info-am uninstall-kde_moduleLTLIBRARIES \
@@ -251,44 +251,37 @@ $NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
  
  uninstall-info: uninstall-info-recursive
  
- .PHONY: $(RECURSIVE_TARGETS) GTAGS all all-am check check-am clean \
+ .PHONY: $(RECURSIVE_TARGETS) CTAGS GTAGS all all-am check check-am clean \
  	clean-binPROGRAMS clean-generic clean-kde_moduleLTLIBRARIES \
--	clean-libtool clean-recursive clean-updatePROGRAMS distclean \
--	distclean-compile distclean-depend distclean-generic \
--	distclean-libtool distclean-recursive distclean-tags distdir \
--	dvi dvi-am dvi-recursive info info-am info-recursive install \
--	install-am install-applnkDATA install-binPROGRAMS install-data \
+-	clean-libtool clean-recursive clean-updatePROGRAMS ctags \
+-	ctags-recursive distclean distclean-compile distclean-depend \
+-	distclean-generic distclean-libtool distclean-recursive \
+-	distclean-tags distdir dvi dvi-am dvi-recursive info info-am \
+-	info-recursive install install-am install-applnkDATA \
+-	install-binPROGRAMS install-data install-data-am \
+-	install-data-recursive install-exec install-exec-am \
+-	install-exec-recursive install-info install-info-am \
+-	install-info-recursive install-kde_moduleLTLIBRARIES \
 +	clean-libLTLIBRARIES clean-libtool clean-recursive \
-+	clean-updatePROGRAMS distclean distclean-compile \
-+	distclean-depend distclean-generic distclean-libtool \
-+	distclean-recursive distclean-tags distdir dvi dvi-am \
-+	dvi-recursive info info-am info-recursive install install-am \
-+	install-applnkDATA install-binPROGRAMS install-data \
- 	install-data-am install-data-recursive install-exec \
- 	install-exec-am install-exec-recursive install-info \
- 	install-info-am install-info-recursive \
--	install-kde_moduleLTLIBRARIES install-man install-presetsDATA \
--	install-recursive install-strip install-updateDATA \
--	install-updatePROGRAMS installcheck installcheck-am installdirs \
--	installdirs-am installdirs-recursive maintainer-clean \
--	maintainer-clean-generic maintainer-clean-recursive mostlyclean \
--	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
--	mostlyclean-recursive tags tags-recursive uninstall \
--	uninstall-am uninstall-applnkDATA uninstall-binPROGRAMS \
--	uninstall-info-am uninstall-info-recursive \
--	uninstall-kde_moduleLTLIBRARIES uninstall-presetsDATA \
++	clean-updatePROGRAMS ctags ctags-recursive distclean \
++	distclean-compile distclean-depend distclean-generic \
++	distclean-libtool distclean-recursive distclean-tags distdir \
++	dvi dvi-am dvi-recursive info info-am info-recursive install \
++	install-am install-applnkDATA install-binPROGRAMS install-data \
++	install-data-am install-data-recursive install-exec \
++	install-exec-am install-exec-recursive install-info \
++	install-info-am install-info-recursive \
 +	install-kde_moduleLTLIBRARIES install-libLTLIBRARIES \
-+	install-man install-presetsDATA install-recursive install-strip \
-+	install-updateDATA install-updatePROGRAMS installcheck \
-+	installcheck-am installdirs installdirs-am \
-+	installdirs-recursive maintainer-clean maintainer-clean-generic \
-+	maintainer-clean-recursive mostlyclean mostlyclean-compile \
-+	mostlyclean-generic mostlyclean-libtool mostlyclean-recursive \
-+	tags tags-recursive uninstall uninstall-am uninstall-applnkDATA \
-+	uninstall-binPROGRAMS uninstall-info-am \
-+	uninstall-info-recursive uninstall-kde_moduleLTLIBRARIES \
+ 	install-man install-presetsDATA install-recursive install-strip \
+ 	install-updateDATA install-updatePROGRAMS installcheck \
+ 	installcheck-am installdirs installdirs-am \
+@@ -991,13 +1041,11 @@ uninstall-info: uninstall-info-recursive
+ 	tags-recursive uninstall uninstall-am uninstall-applnkDATA \
+ 	uninstall-binPROGRAMS uninstall-info-am \
+ 	uninstall-info-recursive uninstall-kde_moduleLTLIBRARIES \
+-	uninstall-presetsDATA uninstall-recursive uninstall-updateDATA \
 +	uninstall-libLTLIBRARIES uninstall-presetsDATA \
- 	uninstall-recursive uninstall-updateDATA \
++	uninstall-recursive uninstall-updateDATA \
  	uninstall-updatePROGRAMS
  
  
@@ -298,7 +291,7 @@ $NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
  messages:
  	$(EXTRACTRC) `find . -name "*.rc" -o -name "*.ui"` > rc.cpp
  	$(XGETTEXT) rc.cpp `find . -name "*.cc" -o -name "*.cpp" -o -name "*.h"` -o $(podir)/noatun.pot
-@@ -951,33 +999,33 @@ force-reedit:
+@@ -1050,33 +1098,33 @@ force-reedit:
  
  
  #>+ 11
