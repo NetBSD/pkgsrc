@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.23 2003/10/03 19:39:19 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.24 2003/10/06 10:51:04 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -472,15 +472,14 @@ _BLNK_LT_ARCHIVE_FILTER_AWK_SCRIPT.${_pkg_}=	# empty
 #
 _BLNK_LT_ARCHIVE_FILTER_AWK_SCRIPT.${_pkg_}+=				\
 	/^dependency_libs=/ {						\
-		line = $$0;						\
-		line = gensub("/usr(/lib/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
-		line = gensub("${DEPOTBASE}/[^/ 	]*(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
-		line = gensub("${X11BASE}(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_X11_DIR}\\1", "g", line); \
-		line = gensub("${LOCALBASE}(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
-		line = gensub("-L/usr/lib[^/ 	]*[ 	]*", "", "g", line); \
-		line = gensub("-L${X11BASE}/[^ 	]*[ 	]*", "", "g", line); \
-		line = gensub("-L${LOCALBASE}/[^ 	]*[ 	]*", "", "g", line); \
-		print line;						\
+		gsub("/usr(/lib/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1"); \
+		gsub("${DEPOTBASE}/[^/ 	]*(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1"); \
+		gsub("${X11BASE}(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_X11_DIR}\\1"); \
+		gsub("${LOCALBASE}(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1"); \
+		gsub("-L/usr/lib[^/ 	]*[ 	]*", "");		\
+		gsub("-L${X11BASE}/[^ 	]*[ 	]*", "");		\
+		gsub("-L${LOCALBASE}/[^ 	]*[ 	]*", "");	\
+		print;							\
 		next;							\
 	}
 .  if (${PKG_INSTALLATION_TYPE} == "overwrite") ||			\
@@ -492,12 +491,11 @@ _BLNK_LT_ARCHIVE_FILTER_AWK_SCRIPT.${_pkg_}+=				\
 #
 _BLNK_LT_ARCHIVE_FILTER_AWK_SCRIPT.${_pkg_}+=				\
 	/^libdir=/ {							\
-		line = $$0;						\
-		line = gensub("/usr(/lib/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
-		line = gensub("${DEPOTBASE}/[^/ 	]*(/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
-		line = gensub("${X11BASE}(/[^ 	]*)", "${BUILDLINK_X11_DIR}\\1", "g", line); \
-		line = gensub("${LOCALBASE}(/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
-		print line;						\
+		gsub("/usr(/lib/[^ 	]*)", "${BUILDLINK_DIR}\\1");	\
+		gsub("${DEPOTBASE}/[^/ 	]*(/[^ 	]*)", "${BUILDLINK_DIR}\\1"); \
+		gsub("${X11BASE}(/[^ 	]*)", "${BUILDLINK_X11_DIR}\\1"); \
+		gsub("${LOCALBASE}(/[^ 	]*)", "${BUILDLINK_DIR}\\1");	\
+		print;							\
 		next;							\
 	}
 .  endif
