@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/06 11:06:02 rh Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/11 09:19:53 rh Exp $
 #
 
-DISTNAME=		xine-lib-1-beta9
+DISTNAME=		xine-lib-1-beta10
 PKGNAME=		${DISTNAME:S/-beta/.0rc/}
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
@@ -23,17 +23,22 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool-nofpic
 
 CONFIGURE_ARGS+=	--with-w32-path='${PREFIX}/lib/win32'
+CONFIGURE_ENV+=		have_libpng="yes"
+CONFIGURE_ENV+=		PNG_CFLAGS="-I${PREFIX}/include"
+CONFIGURE_ENV+=		PNG_LIBS="-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lpng"
 
+.include "../../audio/esound/buildlink2.mk"
+.include "../../audio/flac/buildlink2.mk"
+.include "../../audio/libvorbis/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"
-.include "../../audio/flac/buildlink2.mk"
-.include "../../audio/esound/buildlink2.mk"
-.include "../../audio/libvorbis/buildlink2.mk"
-.include "../../graphics/xvidcore/buildlink2.mk"
 .include "../../graphics/aalib/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../graphics/mng/buildlink2.mk"
-.include "../../sysutils/gnome-vfs2/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/xvidcore/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
