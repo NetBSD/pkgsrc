@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/01/16 21:11:50 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2002/01/17 11:31:57 drochner Exp $
 #
 
 DISTNAME=	xmlrpc-0.9.8-990621
-PKGNAME=	py-xmlrpc-0.9.8
+PKGNAME=	${PYPKGPREFIX}-xmlrpc-0.9.8
 CATEGORIES=	net
 MASTER_SITES=	http://www.pythonware.com/downloads/
 EXTRACT_SUFX=	.zip
