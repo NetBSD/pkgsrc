@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2003/05/09 08:02:30 martti Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2003/09/26 20:04:37 recht Exp $
 bin/lyx
 bin/noweb2lyx
 bin/reLyX
@@ -29,6 +29,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/lyx.mo
 share/lyx/CREDITS
+share/lyx/bind/aqua.bind
 share/lyx/bind/broadway.bind
 share/lyx/bind/cua.bind
 share/lyx/bind/cyrkeys.bind
@@ -158,10 +159,10 @@ share/lyx/examples/fr_ExemplesTableaux.lyx
 share/lyx/examples/fr_Foils.lyx
 share/lyx/examples/fr_ListesPuces.lyx
 share/lyx/examples/fr_Minipage.lyx
-share/lyx/examples/fr_MultiColonnes.lyx
 share/lyx/examples/fr_exemple_brut.lyx
 share/lyx/examples/fr_exemple_lyxifie.lyx
 share/lyx/examples/fr_mathed.lyx
+share/lyx/examples/fr_multicol.lyx
 share/lyx/examples/fr_splash.lyx
 share/lyx/examples/he_example_raw.lyx
 share/lyx/examples/he_he_example_lyxified.lyx
@@ -807,6 +808,7 @@ share/lyx/layouts/llncs.layout
 share/lyx/layouts/ltugboat.layout
 share/lyx/layouts/lyxmacros.inc
 share/lyx/layouts/manpage.layout
+share/lyx/layouts/memoir.layout
 share/lyx/layouts/mwart.layout
 share/lyx/layouts/mwbk.layout
 share/lyx/layouts/mwrep.layout
@@ -892,6 +894,7 @@ share/lyx/templates/elsart.lyx
 share/lyx/templates/g-brief-de.lyx
 share/lyx/templates/g-brief-en.lyx
 share/lyx/templates/hollywood.lyx
+share/lyx/templates/ijmpd.lyx
 share/lyx/templates/kluwer.lyx
 share/lyx/templates/koma-letter2.lyx
 share/lyx/templates/latex8.lyx
@@ -908,6 +911,7 @@ share/lyx/tex/lyxskak.sty
 share/lyx/tex/revtex.cls
 share/lyx/textclass.lst
 share/lyx/ui/default.ui
+share/lyx/xfonts/PSres.upr
 share/lyx/xfonts/cmex10.pfb
 share/lyx/xfonts/cmmi10.pfb
 share/lyx/xfonts/cmr10.pfb
