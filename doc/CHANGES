@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5571 2004/04/14 09:04:40 wiz Exp $
+$NetBSD: CHANGES,v 1.5572 2004/04/14 09:14:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1945,3 +1945,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated epiphany-extensions to 0.8.2 [jmmv 2004-04-13]
 	Updated libxklavier to 1.02 [jmmv 2004-04-14]
 	Updated audit-packages to 1.30 [wiz 2004-04-14]
+	Updated lame to 3.96 [adam 2004-04-14]
