@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.module,v 1.1.1.1 2004/10/29 20:31:54 jdolecek Exp $
+# $NetBSD: Makefile.module,v 1.2 2004/10/30 05:46:21 grant Exp $
 
-.include "../../wip/php5/Makefile.common"
+.include "../../lang/php5/Makefile.common"
 
 PKGNAME?=		php-${MODNAME}-${PHP5_VERSION}
 PKGREVISION?=		# empty
@@ -13,7 +13,7 @@ PLIST_SUBST+=		MODNAME=${PKGMODNAME}
 
 EXTRACT_ELEMENTS?=	${DISTNAME}/ext/${PKGMODNAME}
 WRKSRC?=		${WRKDIR}/${EXTRACT_ELEMENTS}
-DISTINFO_FILE?=		${PKGDIR}/../../wip/php5/distinfo
+DISTINFO_FILE?=		${PKGDIR}/../../lang/php5/distinfo
 
 PHPIZE?=		${BUILDLINK_PREFIX.php}/bin/phpize
 PHP_CONFIG?=		${BUILDLINK_PREFIX.php}/bin/php-config
@@ -28,8 +28,8 @@ USE_LIBTOOL=		YES
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 
-PLIST_SRC=		${.CURDIR}/../../wip/php5/PLIST.module
-MESSAGE_SRC=		${.CURDIR}/../../wip/php5/MESSAGE.module
+PLIST_SRC=		${.CURDIR}/../../lang/php5/PLIST.module
+MESSAGE_SRC=		${.CURDIR}/../../lang/php5/MESSAGE.module
 MESSAGE_SUBST+=		MODNAME=${PKGMODNAME}
 MESSAGE_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 
@@ -53,4 +53,4 @@ do-module-install:
 	${INSTALL_DATA} ${MODULESDIR}/${PKGMODNAME}.so	\
 	    ${PREFIX}/${PHP_EXTENSION_DIR}
 
-.include "../../wip/php5/buildlink3.mk"
+.include "../../lang/php5/buildlink3.mk"
