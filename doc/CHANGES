@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6683 2004/07/26 17:37:02 minskim Exp $
+$NetBSD: CHANGES,v 1.6684 2004/07/26 19:03:10 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3573,3 +3573,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added crypto++-5.1 [minskim 2004-07-26]
 	Updated gcc34-ada to 3.4.1nb1 [shannonjr 2004-07-26]
 	Updated mathomatic to 11.3b [minskim 2004-07-26]
+	Updated keychain to 2.3.4 [schmonz 2004-07-26]
