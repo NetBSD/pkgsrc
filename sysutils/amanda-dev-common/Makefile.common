@@ -1,0 +1,36 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2002/05/02 13:28:15 bouyer Exp $
+#
+# common make file fragment shared by all amanda-* pkgs.
+#
+
+VERS=			2.4.3b3
+DISTNAME?=		amanda-${VERS}
+CATEGORIES=		sysutils
+MASTER_SITES?=		http://download.sourceforge.net/amanda/
+
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.amanda.org/
+
+.if ${OPSYS} == "NetBSD"
+AMANDA_GROUP?=		operator
+.elif ${OPSYS} == "SunOS"
+AMANDA_GROUP?=		sysadmin
+.endif
+
+AMANDA_USER?=		backup
+AMANDA_VAR?=		/var/amanda
+
+BUILD_DEFS+=		AMANDA_USER AMANDA_GROUP AMANDA_SMB AMANDA_VAR
+
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-user=${AMANDA_USER}
+CONFIGURE_ARGS+=	--with-group=${AMANDA_GROUP}
+CONFIGURE_ARGS+=	--with-owner=root
+CONFIGURE_ARGS+=	--with-mmap
+CONFIGURE_ARGS+=	--with-amandahosts
+CONFIGURE_ARGS+=	--localstatedir=${AMANDA_VAR}
+CONFIGURE_ARGS+=	--with-gnutar-listdir=${AMANDA_VAR}/gnutar-lists
+CONFIGURE_ARGS+=	--with-dump-honor-nodump
