@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25 2002/12/04 13:54:36 wiz Exp $
+$NetBSD: TODO,v 1.26 2002/12/04 16:23:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -171,7 +171,6 @@ Suggested package updates
 	o mgp-1.09a
 	o mixer.app-1.8.0
 	o mkfontscale-20020618 (needs freetype-2.1.1)
-	o mozilla-1.2.1
 	o mrproject-0.7
 	o multi-gnome-terminal-1.6.1
 	o mysql-4.0.3
