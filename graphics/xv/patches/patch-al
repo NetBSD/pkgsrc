@@ -1,14 +1,17 @@
-$NetBSD: patch-al,v 1.1 2001/04/05 13:57:16 wiz Exp $
+$NetBSD: patch-al,v 1.2 2002/10/06 16:26:57 he Exp $
 
 This patch is based on
 http://www.mit.edu/afs/athena/contrib/graphics/src/xv/patches/png/xvpng.diff
 It was edited to fit into the NetBSD Packages Collection! - HF
 
+It is also modified by
+ftp://ftp.trilon.com/pub/xv/patches/mp-tiff-patch
+
 ---------------------------------------------------------------------------
 
 
---- xv.h.orig	Sun Jun 13 03:41:34 1999
-+++ xv.h	Sun Jun 13 03:53:34 1999
+--- xv.h.orig	Fri Aug  9 17:09:14 2002
++++ xv.h
 @@ -8,8 +8,8 @@
  #include "config.h"
  
@@ -128,7 +131,15 @@ It was edited to fit into the NetBSD Packages Collection! - HF
  #undef WHERE
  
  
-@@ -1506,12 +1526,12 @@
+@@ -1289,6 +1309,7 @@
+ void xv_getwd               PARM((char *, size_t));
+ char *xv_strstr             PARM((char *, char *));
+ FILE *xv_fopen              PARM((char *, char *));
++void xv_mktemp              PARM((char *, char *));
+ void Timer                  PARM((int));
+ 
+ /*************************** XVCOLOR.C ***************************/
+@@ -1506,12 +1527,12 @@
  
  
  /*************************** XVDIAL.C ***************************/
@@ -146,7 +157,13 @@ It was edited to fit into the NetBSD Packages Collection! - HF
  void DSetActive            PARM((DIAL *, int));
  void DRedraw               PARM((DIAL *));
  int  DTrack                PARM((DIAL *, int, int));
-@@ -1653,6 +1673,13 @@
+@@ -1648,11 +1669,18 @@
+ void JPEGSaveParams        PARM((char *, int));
+ 
+ /**************************** XVTIFF.C ***************************/
+-int   LoadTIFF             PARM((char *, PICINFO *));
++int   LoadTIFF             PARM((char *, PICINFO *, int));
+ void  CreateTIFFW          PARM((void));
  void  TIFFDialog           PARM((int));
  int   TIFFCheckEvent       PARM((XEvent *));
  void  TIFFSaveParams       PARM((char *, int));
