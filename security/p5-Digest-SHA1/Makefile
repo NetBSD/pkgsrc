@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/11/26 06:50:17 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/07 22:34:25 seb Exp $
 #
 
 DISTNAME=		Digest-SHA1-2.00
@@ -12,11 +12,8 @@ COMMENT=		perl5 module for SHA1
 
 CONFLICTS+=		p5-Digest-MD5<=2.12
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Digest/SHA1/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
