@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.own.mk,v 1.7 1998/08/30 04:44:56 lukem Exp $
+#	$NetBSD: bsd.own.mk,v 1.8 1998/10/04 02:29:35 hubertf Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -78,15 +78,25 @@ NETBSD_CURRENT!= /usr/bin/uname -r | /usr/bin/sed -e 's|^1\.3[C-Z]$$|yes|'
 .if (${NETBSD_CURRENT} == "yes")
 # Systems on which UVM is the standard VM system.
 .if	(${MACHINE} == "alpha") || \
+	(${MACHINE} == "arm32") || \
+	(${MACHINE} == "atari") || \
+	(${MACHINE} == "bebox") || \
 	(${MACHINE} == "hp300") || \
+	(${MACHINE} == "i386") || \
 	(${MACHINE} == "mac68k") || \
+	(${MACHINE} == "macppc") || \
+	(${MACHINE} == "ofppc") || \
 	(${MACHINE} == "mvme68k") || \
-	(${MACHINE} == "sparc")
+	(${MACHINE} == "pc532") || \
+	(${MACHINE} == "sparc") || \
+	(${MACHINE} == "sparc64")
 UVM?=		yes
 .endif
 
 # Systems that use UVM's new pmap interface.
-.if	(${MACHINE} == "alpha")
+.if	(${MACHINE} == "alpha") || \
+	(${MACHINE} == "i386") || \
+	(${MACHINE} == "pc532")
 PMAP_NEW?=	yes
 .endif
 
