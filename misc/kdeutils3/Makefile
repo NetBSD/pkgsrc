@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/01/02 09:12:28 skrll Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/17 03:34:03 markd Exp $
 
 DISTNAME=	kdeutils-3.0.5a
 COMMENT=	Utilities for the KDE integrated X11 desktop
@@ -9,6 +9,8 @@ USE_BUILDLINK2=		YES
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
+
 
 .include "../../mk/bsd.prefs.mk"
 
