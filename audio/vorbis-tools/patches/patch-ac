@@ -1,0 +1,47 @@
+$NetBSD: patch-ac,v 1.5 2003/09/05 19:16:23 explorer Exp $
+
+diff -ur oggenc/oggenc.c.orig oggenc/oggenc.c
+--- oggenc/oggenc.c.orig	2002-07-11 19:55:11.000000000 -0700
++++ oggenc/oggenc.c	2003-09-05 12:09:59.000000000 -0700
+@@ -613,6 +613,8 @@
+ 
+ 				break;
+ 			case 'a':
++				if (strlen(optarg) == 0)
++					break;
+ 				opt->artist = realloc(opt->artist, (++opt->artist_count)*sizeof(char *));
+ 				opt->artist[opt->artist_count - 1] = strdup(optarg);
+ 				break;
+@@ -625,10 +627,14 @@
+ 				opt->comments[opt->comment_count - 1] = strdup(optarg);
+ 				break;
+ 			case 'd':
++				if (strlen(optarg) == 0)
++					break;
+ 				opt->dates = realloc(opt->dates, (++opt->date_count)*sizeof(char *));
+ 				opt->dates[opt->date_count - 1] = strdup(optarg);
+ 				break;
+             case 'G':
++				if (strlen(optarg) == 0)
++					break;
+                 opt->genre = realloc(opt->genre, (++opt->genre_count)*sizeof(char *));
+                 opt->genre[opt->genre_count - 1] = strdup(optarg);
+                 break;
+@@ -637,6 +643,8 @@
+ 				exit(0);
+ 				break;
+ 			case 'l':
++				if (strlen(optarg) == 0)
++					break;
+ 				opt->album = realloc(opt->album, (++opt->album_count)*sizeof(char *));
+ 				opt->album[opt->album_count - 1] = strdup(optarg);
+ 				break;
+@@ -647,6 +655,8 @@
+ 					opt->serial = 0; /* Failed, so just set to zero */
+ 				break;
+ 			case 't':
++				if (strlen(optarg) == 0)
++					break;
+ 				opt->title = realloc(opt->title, (++opt->title_count)*sizeof(char *));
+ 				opt->title[opt->title_count - 1] = strdup(optarg);
+ 				break;
