@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4336 2004/01/03 23:23:03 tron Exp $
+$NetBSD: CHANGES,v 1.4337 2004/01/03 23:34:19 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -36,3 +36,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated silc-server to 0.9.16 [salo 2004-01-03]
 	Updated tiff to 3.6.1 [reed 2004-01-3]
 	Added oidentd-2.0.7 [tron 2004-01-03]
+	Updated xpkgwedge to 1.9 [jlam 2004-01-03]
