@@ -1,13 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+$NetBSD: patch-ab,v 1.2 2002/01/03 11:10:36 abs Exp $
 
---- Lib/Makefile.orig	Sun Jun  4 11:49:23 2000
+--- Lib/Makefile.orig	Sun Jun  4 10:49:23 2000
 +++ Lib/Makefile
-@@ -1,4 +1,4 @@
+@@ -1,6 +1,6 @@
 -CPPFLAGS=-I../Jpeg -I../Zlib
 +CPPFLAGS=-I${LOCALBASE}/include
  # Comment out the following line if you use egcs :
- CXXFLAGS=-O3 -Wall -fno-rtti -fno-exceptions
+-CXXFLAGS=-O3 -Wall -fno-rtti -fno-exceptions
++CXXFLAGS=-O3 -Wall -fno-rtti -fno-exceptions ${CFLAGS}
  
+ INCLUDES= adpcm.h        cxform.h       graphic.h      script.h       sqrt.h\
+ 	bitmap.h       displaylist.h  matrix.h       shape.h        swf.h\
 @@ -34,10 +34,20 @@
  #	bitstream.o
  #	dump.o

@@ -1,16 +1,16 @@
-$NetBSD: patch-af,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+$NetBSD: patch-af,v 1.2 2002/01/03 11:10:36 abs Exp $
 
---- Kflash/kflash.cc.orig	Sat Aug 26 05:46:33 2000
-+++ Kflash/kflash.cc	Sat Aug 26 05:47:50 2000
-@@ -443,7 +443,11 @@
- 	FlashSettings(flashHandle, PLAYER_LOOP);
+--- Player/main.c.orig	Thu Jun  8 07:56:11 2000
++++ Player/main.c
+@@ -559,7 +559,11 @@
  
- 	if (enableSound) {
+         FlashGraphicInitX11(flashHandle, dpy, movie, onRoot);
+ 
 +#ifdef __NetBSD__
-+		FlashSoundInit(flashHandle, "/dev/sound");
++	FlashSoundInit(flashHandle, "/dev/sound");
 +#else
- 		FlashSoundInit(flashHandle, "/dev/dsp");
+ 	FlashSoundInit(flashHandle, "/dev/dsp");
 +#endif
- 	}
- }
+ 
+ 	FlashSetGetUrlMethod(flashHandle, showUrl, 0);
  

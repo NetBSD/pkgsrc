@@ -1,16 +1,39 @@
-$NetBSD: patch-ag,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+$NetBSD: patch-ag,v 1.2 2002/01/03 11:10:36 abs Exp $
 
---- Player/main.c.orig	Thu Jun  8 08:56:11 2000
-+++ Player/main.c
-@@ -559,7 +559,11 @@
+--- Plugin/Makefile.orig	Tue Sep 28 13:13:38 1999
++++ Plugin/Makefile
+@@ -21,7 +21,7 @@
  
-         FlashGraphicInitX11(flashHandle, dpy, movie, onRoot);
+ PLUGIN_DEFINES= -DXP_UNIX
+ OPTIMIZER=
+-FLASH=../Lib
++FLASH=${LOCALBASE}/include/flash
  
-+#ifdef __NetBSD__
-+	FlashSoundInit(flashHandle, "/dev/sound");
-+#else
- 	FlashSoundInit(flashHandle, "/dev/dsp");
-+#endif
+ # Solaris
+ #LIBCXX=/usr/lib/libC.so
+@@ -31,12 +31,12 @@
+ # Solaris (Sun compiler/linker)
+ #SHARED=-G
+ # FreeBSD
+-#SHARED=-Bshareable
++SHARED=-Bshareable
+ # Linux
+-SHARED=-shared
++#SHARED=-shared
  
- 	FlashSetGetUrlMethod(flashHandle, showUrl, 0);
+-CFLAGS=  $(OPTIMIZER) $(PLUGIN_DEFINES) -I$(FLASH) -I/usr/X11R6/include
+-LDFLAGS= $(FLASH)/libflash.a $(LIBCXX) ../Jpeg/libjpeg.a ../Zlib/libz.a
++CFLAGS=  $(OPTIMIZER) -fPIC $(PLUGIN_DEFINES) -I$(FLASH) -I${X11BASE}/include
++LDFLAGS= -lflash $(LIBCXX) -L${LOCALBASE}/lib -R${LOCALBASE}/lib -L${X11BASE}/lib -R${X11BASE}/lib -lXt -lX11 -ljpeg -lz -lossaudio
  
+ SRC= plugin.c npunix.c
+ OBJ= plugin.o npunix.o
+@@ -48,7 +48,7 @@
+ $(SHAREDTARGET): $(OBJ) $(FLASH)/libflash.a
+ 	$(LD) $(SHARED) -o $(SHAREDTARGET) $(OBJ) $(LDFLAGS)
+ 
+-plugin.o: $(FLASH)/flash.h
++plugin.o: ${LOCALBASE}/include/flash/flash.h
+ 
+ clean:
+ 	$(RM) $(OBJ) $(SHAREDTARGET)
