@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/06 12:32:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/12 12:07:25 wiz Exp $
 #
 
 DISTNAME=	licq-1.2.6
@@ -24,10 +24,8 @@ USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 WRKSRC=		${WRKDIR:=/${DISTNAME}/plugins/qt-gui}
 
-# window.cpp: In method `void CWindow::wprintf(char *, ...)':
-# window.cpp:150: invalid use of undefined type `struct __window'
-# /usr/include/curses.h:220: forward declaration of `struct __window'
-USE_NCURSES=	yes
+PATCHDIR=	${.CURDIR}/../licq-gui-console/patches
+DISTINFO_FILE=	${.CURDIR}/../licq-gui-console/distinfo
 
 .include "../../x11/qt3-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
