@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/09/11 22:17:07 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2002/09/12 00:35:09 wiz Exp $
 #
 
 DISTNAME=		cheesetracker-0.5.5
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.reduz.com.ar/cheesetracker/
 COMMENT=		impulse tracker clone
 
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
-DEPENDS+=		gtk-->=1.2.10:../../x11/gtk--
 
 GCC_VERSION!=           gcc --version
 .if (${GCC_VERSION:C/-.*$$//} == egcs)
@@ -19,6 +18,7 @@ GCC_VERSION!=           gcc --version
 .  include "../../lang/gcc/Makefile.gcc"
 .endif
 
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV=		CXXFLAGS="${CXXFLAGS}"
@@ -32,5 +32,6 @@ post-extract:
 	${CP} ${LOCALBASE}/share/automake/install-sh ${WRKSRC}/install-sh
 	${CP} ${LOCALBASE}/share/automake/mkinstalldirs ${WRKSRC}/mkinstalldirs
 
-.include "../../mk/pthread.buildlink.mk"
+.include "../../x11/gtk--/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
