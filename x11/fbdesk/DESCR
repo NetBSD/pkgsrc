@@ -1,7 +1,8 @@
 FbDesk is a fluxbox-util application that creates and manage icons on your
-Fluxbox desktop. Features:
+desktop. It is for window managers that support EWMH (NET WM). Features:
 
-*  XPM and PNG image loading
+* Transparent text and icon (using XRENDER)
+* XPM and PNG image loading
 * Antialias text
 * UTF-8 and multibyte support
 * Vertical text
