@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:27:59 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/24 15:23:47 grant Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
@@ -32,7 +32,7 @@ CPPFLAGS+=		-Dunix
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}-stable
 USE_BUILDLINK2=		YES
 
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 MAKEFILE=		GNUmakefile
 
 USE_PERL5=		build
