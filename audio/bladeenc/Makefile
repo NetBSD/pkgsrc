@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/05/24 20:39:35 tv Exp $
+# $NetBSD: Makefile,v 1.4 1999/06/07 16:16:17 hubertf Exp $
 #
 
 DISTNAME=		BladeEnc-076-bsd-i386
@@ -8,7 +8,7 @@ MASTER_SITES=		http://home.swipnet.se/~w-82625/encoder/binaries/
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://bladeenc.home.ml.org/
+HOMEPAGE=		http://bladeenc.cjb.net
 
 NO_BUILD=
 
