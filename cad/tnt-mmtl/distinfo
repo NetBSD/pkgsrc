@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2004/10/01 22:56:10 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 14:59:25 agc Exp $
 
 SHA1 (tnt-1.2.2.tar.gz) = bd089863ca2cd939009253e83f4ab75317191047
+RMD160 (tnt-1.2.2.tar.gz) = 1a2ba68a93ee21590bb25a3eacf85d3773c3e77d
 Size (tnt-1.2.2.tar.gz) = 2020099 bytes
 SHA1 (patch-aa) = 779955877d1cec32b441c16d615a1e400888c0b1
 SHA1 (patch-ab) = 6a57255b994f0ea4063a2c256fe0ba689a210ba7

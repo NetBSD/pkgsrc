@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.10 2005/01/11 03:16:24 dmcmahill Exp $
+$NetBSD: distinfo,v 1.11 2005/02/23 14:59:24 agc Exp $
 
 SHA1 (geda/geda-gsymcheck-20041228.tar.gz) = fc9441a0023d48332f52cfa2297f760ed147c76c
+RMD160 (geda/geda-gsymcheck-20041228.tar.gz) = f971d19b0bfbc5e212bc2c6a070df9e45d493b9e
 Size (geda/geda-gsymcheck-20041228.tar.gz) = 131057 bytes
