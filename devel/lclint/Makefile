@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 14:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/08/20 02:53:52 hubertf Exp $
 #
 
 VERSION=	2.5q
@@ -17,6 +17,6 @@ GNU_CONFIGURE=  YES
 PLIST_SUBST+=	VERSION=${VERSION}
 
 do-build:
-	cd ${WRKSRC}; unset CFLAGS; ${GMAKE}
+	cd ${WRKSRC}; unset CFLAGS CPPFLAGS; ${MAKE_PROGRAM}
 
 .include "../../mk/bsd.pkg.mk"
