@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8531 2004/12/30 18:06:33 kristerw Exp $
+$NetBSD: CHANGES,v 1.8532 2004/12/30 19:43:22 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6710,3 +6710,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added pdbar-0.5.1 [minskim 2004-12-30]
 	Updated tcl to 8.4.8nb1 [kristerw 2004-12-30]
 	Updated avr-libc to 1.0.4 [kristerw 2004-12-30]
+	Updated xmame to 0.89nb1 [kristerw 2004-12-30]
