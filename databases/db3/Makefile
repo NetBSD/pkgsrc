@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/08/25 19:22:04 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/08/28 16:10:28 jlam Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	db3-3.11.2
@@ -13,7 +13,7 @@ PATCH_SITES=	http://www.sleepycat.com/update/3.3.11/
 PATCHFILES=	patch.3.3.11.1 patch.3.3.11.2
 PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet -p0
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKDIR}/${DISTNAME}/build_unix/libtool
 GNU_CONFIGURE=		yes
