@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/10/29 07:56:21 elric Exp $
+# $NetBSD: Makefile,v 1.26 2002/12/01 15:37:58 salo Exp $
 #
 
 DISTNAME=	balsa-1.4.0
@@ -15,11 +15,11 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_X11BASE=		yes
 USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--disable-more-warnings --without-esmtp \
 			--enable-pcre 
-CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 
 CONFIGURE_ARGS+=        --with-ssl=${BUILDLINK_PREFIX.openssl}
 
