@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- Makefile.orig	Mon Jun 21 14:59:04 1999
++++ Makefile	Sun Nov 28 21:06:28 1999
+@@ -28,7 +28,7 @@
+ # Directories to make...
+ #
+ 
+-DIRS	=	cups backend berkeley cgi-bin filter man pstoraster \
++DIRS	=	cups backend berkeley cgi-bin filter locale man pstoraster \
+ 		scheduler systemv
+ 
+ #

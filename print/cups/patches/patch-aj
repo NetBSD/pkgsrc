@@ -1,0 +1,68 @@
+$NetBSD: patch-aj,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- cups/Makefile.orig	Fri Oct 22 11:53:09 1999
++++ cups/Makefile	Sun Nov 28 21:06:28 1999
+@@ -63,13 +63,20 @@
+ #
+ 
+ install:	all
+-	-$(MKDIR) $(INCLUDEDIR)/cups
+-	$(CP) $(HEADERS) $(INCLUDEDIR)/cups
+-	-$(MKDIR) $(LIBDIR)
+-	$(CP) $(LIBCUPS) $(LIBDIR)
+-	if test $(LIBCUPS) != "libcups.a"; then \
+-		$(LN) $(LIBCUPS) `basename $(LIBCUPS) .1`; \
+-	fi
++	-$(BSD_INSTALL_DATA_DIR) $(INCLUDEDIR)/cups
++	$(BSD_INSTALL_DATA) $(HEADERS) $(INCLUDEDIR)/cups
++	-$(BSD_INSTALL_DATA_DIR) $(LIBDIR)
++	$(LIBTOOL) $(BSD_INSTALL_DATA) $(LIBCUPS) $(LIBDIR)
++
++#
++# libcups.la
++#
++
++libcups.la:	$(LIBOBJS:.o=.lo)
++	echo Linking $@...
++	$(RM) $@
++	$(LIBTOOL) $(CC) -o $@ $(LIBOBJS:.o=.lo) -rpath $(LIBDIR) \
++		-version-info 1:0
+ 
+ #
+ # libcups.so.1, libcups.sl.1
+@@ -120,9 +127,9 @@
+ # testhttp (dependency on static CUPS library is intentional)
+ #
+ 
+-testhttp:	testhttp.o libcups.a
++testhttp:	testhttp.o $(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o $@ testhttp.o libcups.a $(NETLIBS)
++	$(CC) $(LDFLAGS) -o $@ testhttp.o .libs/libcups.a $(NETLIBS)
+ 
+ testhttp.o:	http.h ../Makedefs
+ 
+@@ -130,9 +137,9 @@
+ # testmime (dependency on static CUPS library is intentional)
+ #
+ 
+-testmime:	testmime.o libcups.a
++testmime:	testmime.o $(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o $@ testmime.o libcups.a
++	$(CC) $(LDFLAGS) -o $@ testmime.o .libs/libcups.a
+ 
+ testmime.o:	mime.h ../Makedefs
+ 
+@@ -140,9 +147,9 @@
+ # testppd (dependency on static CUPS library is intentional)
+ #
+ 
+-testppd:	testppd.o libcups.a
++testppd:	testppd.o $(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o $@ testppd.o libcups.a $(NETLIBS)
++	$(CC) $(LDFLAGS) -o $@ testppd.o .libs/libcups.a $(NETLIBS)
+ 
+ testppd.o:	ppd.h ../Makedefs
+ 

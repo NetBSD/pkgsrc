@@ -1,0 +1,22 @@
+$NetBSD: patch-au,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- scheduler/classes.c.orig	Wed Sep 22 14:08:40 1999
++++ scheduler/classes.c	Sun Nov 28 21:06:29 1999
+@@ -300,7 +300,7 @@
+   * Open the classes.conf file...
+   */
+ 
+-  sprintf(line, "%s/conf/classes.conf", ServerRoot);
++  sprintf(line, "%s/classes.conf", ConfRoot);
+   if ((fp = fopen(line, "r")) == NULL)
+     return;
+ 
+@@ -470,7 +470,7 @@
+   * Create the classes.conf file...
+   */
+ 
+-  sprintf(temp, "%s/conf/classes.conf", ServerRoot);
++  sprintf(temp, "%s/classes.conf", ConfRoot);
+   if ((fp = fopen(temp, "w")) == NULL)
+   {
+     LogMessage(LOG_ERROR, "Unable to save classes.conf - %s", strerror(errno));

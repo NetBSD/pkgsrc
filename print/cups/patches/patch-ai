@@ -1,0 +1,136 @@
+$NetBSD: patch-ai,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- configure.orig	Thu Nov  4 10:34:48 1999
++++ configure	Sun Nov 28 21:06:28 1999
+@@ -556,6 +556,9 @@
+   :
+ fi
+ 
++# Use libtool to build shared libraries.
++#
++if false; then
+ if test "$enable_shared" != "no"; then
+ 	case "$uname" in
+ 		SunOS* | UNIX_S*)
+@@ -597,6 +600,11 @@
+ 	LIBCUPSIMAGE="libcupsimage.a"
+ 	DSO=":"
+ fi
++else
++	LIBCUPS="libcups.la"
++	LIBCUPSIMAGE="libcupsimage.la"
++	DSO=":"
++fi
+ 
+ for ac_prog in mawk gawk nawk awk
+ do
+@@ -1820,7 +1828,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lpng  $LIBS"
++LIBS="-lpng -lz -lm  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 1826 "configure"
+ #include "confdefs.h"
+@@ -1865,7 +1873,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-ltiff  $LIBS"
++LIBS="-ltiff -ljpeg -lz -lm  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 1871 "configure"
+ #include "confdefs.h"
+@@ -1903,9 +1911,9 @@
+ fi
+ 
+ 
+-echo $ac_n "checking for deflateInit in -lz""... $ac_c" 1>&6
+-echo "configure:1908: checking for deflateInit in -lz" >&5
+-ac_lib_var=`echo z'_'deflateInit | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for deflate in -lz""... $ac_c" 1>&6
++echo "configure:1908: checking for deflate in -lz" >&5
++ac_lib_var=`echo z'_'deflate | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+@@ -1917,10 +1925,10 @@
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */
+-char deflateInit();
++char deflate();
+ 
+ int main() {
+-deflateInit()
++deflate()
+ ; return 0; }
+ EOF
+ if { (eval echo configure:1927: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+@@ -2795,11 +2803,16 @@
+ 	libdir="/usr/lib32"
+ fi
+ 
++if false; then
+ if test "$prefix" = "/usr"; then
+ 	CUPS_SERVERROOT="/var/cups"
+ else
+ 	CUPS_SERVERROOT="$prefix/var/cups"
+ fi
++else
++	# NetBSD's CUPS runtime files go into /var/cups
++	CUPS_SERVERROOT="/var/cups"
++fi
+ cat >> confdefs.h <<EOF
+ #define CUPS_SERVERROOT "$CUPS_SERVERROOT"
+ EOF
+@@ -2811,6 +2824,10 @@
+ 		CUPS_LOCALEDIR="$prefix/share/locale"
+ 		;;
+ 
++	FreeBSD* | NetBSD* | OpenBSD*)
++		CUPS_LOCALEDIR="$prefix/share/cups/locale"
++		;;
++
+ 	OSF1)
+ 		CUPS_LOCALEDIR="$prefix/lib/nls/msg"
+ 		;;
+@@ -2834,6 +2851,27 @@
+ 
+ 
+ 
++CUPS_DOCDIR="$prefix/share/doc/cups"
++cat >> confdefs.h <<EOF
++#define CUPS_DOCDIR "$CUPS_DOCDIR"
++EOF
++
++
++
++CUPS_CONFDIR="/etc/cups"
++cat >> confdefs.h <<EOF
++#define CUPS_CONFDIR "$CUPS_CONFDIR"
++EOF
++
++
++
++CUPS_EXECDIR="$prefix/libexec/cups"
++cat >> confdefs.h <<EOF
++#define CUPS_EXECDIR "$CUPS_EXECDIR"
++EOF
++
++
++
+ trap '' 1 2 15
+ cat > confcache <<\EOF
+ # This file is a shell script that caches the results of configure
+@@ -2996,6 +3034,9 @@
+ s%@CUPS_SERVERROOT@%$CUPS_SERVERROOT%g
+ s%@CUPS_LOCALEDIR@%$CUPS_LOCALEDIR%g
+ s%@CUPS_DATADIR@%$CUPS_DATADIR%g
++s%@CUPS_DOCDIR@%$CUPS_DOCDIR%g
++s%@CUPS_CONFDIR@%$CUPS_CONFDIR%g
++s%@CUPS_EXECDIR@%$CUPS_EXECDIR%g
+ 
+ CEOF
+ EOF

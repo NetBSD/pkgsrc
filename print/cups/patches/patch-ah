@@ -1,0 +1,18 @@
+$NetBSD: patch-ah,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- config.h.in.orig	Thu Nov  4 08:35:00 1999
++++ config.h.in	Sun Nov 28 21:06:28 1999
+@@ -34,9 +34,12 @@
+  * Where are files stored?
+  */
+ 
+-#define CUPS_LOCALEDIR	"/usr/lib/locale"
++#define CUPS_LOCALEDIR	"/usr/share/cups/locale"
+ #define CUPS_SERVERROOT	"/var/cups"
+ #define CUPS_DATADIR	"/usr/share/cups"
++#define CUPS_DOCDIR	"/usr/share/doc/cups"
++#define CUPS_CONFDIR	"/etc/cups"
++#define CUPS_EXECDIR	"/usr/libexec/cups"
+ 
+ /*
+  * Do we have various image libraries?

@@ -1,0 +1,27 @@
+$NetBSD: patch-ax,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- scheduler/conf.h.orig	Sat Aug 28 12:17:51 1999
++++ scheduler/conf.h	Sun Nov 28 21:06:29 1999
+@@ -39,7 +39,7 @@
+  * Globals...
+  */
+ 
+-VAR char		ConfigurationFile[256]	VALUE(CUPS_SERVERROOT "/conf/cupsd.conf"),
++VAR char		ConfigurationFile[256]	VALUE(CUPS_CONFDIR "/cupsd.conf"),
+ 					/* Configuration file to use */
+ 			ServerName[256]		VALUE(""),
+ 					/* FQDN for server */
+@@ -47,8 +47,12 @@
+ 					/* Administrator's email */
+ 			ServerRoot[1024]	VALUE(CUPS_SERVERROOT),
+ 					/* Root directory for scheduler */
+-			DocumentRoot[1024]	VALUE(CUPS_DATADIR "/doc"),
++			DocumentRoot[1024]	VALUE(CUPS_DOCDIR),
+ 					/* Root directory for documents */
++			ConfRoot[1024]		VALUE(CUPS_CONFDIR),
++					/* Root dir for configuration files */
++			ExecRoot[1024]		VALUE(CUPS_EXECDIR),
++					/* Root dir for CUPS executables */
+ 			SystemGroup[32],
+ 					/* System group name */
+ 			AccessLog[1024]		VALUE("logs/access_log"),
