@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5639 2004/04/18 18:14:39 snj Exp $
+$NetBSD: CHANGES,v 1.5640 2004/04/18 19:03:46 kim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2057,3 +2057,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated fam to 2.7.0nb1 [jmmv 2004-04-18]
 	Removed apla [snj 2004-04-18]
 	Removed avifile-devel [snj 2004-04-18]
+	Updated roller to 1.18 [kim 2004-04-18]
