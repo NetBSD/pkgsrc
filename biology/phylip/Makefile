@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/08/16 23:58:35 ben Exp $
+# $NetBSD: Makefile,v 1.8 2005/03/30 20:44:21 kristerw Exp $
 
 DISTNAME=	phylip-3.61
 CATEGORIES=	biology
@@ -14,6 +14,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
+USE_X11=	yes
 MAKE_FLAGS+=	CC=${CC}
 
 do-install:
