@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2002/04/05 16:27:27 jlam Exp $
+# $NetBSD: Makefile.common,v 1.28 2002/04/13 06:49:43 jlam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution.
@@ -11,15 +11,14 @@
 
 DISTNAME?=		postgresql-${DIST_VERS}
 CATEGORIES+=		databases
-PGSQL_SITES=		http://www.postgresql.org/ftpsite/ \
-			ftp://ftp.postgresql.org/pub/ \
-			ftp://ftp.de.postgresql.org/pub/ \
-			ftp://ch.postgresql.org/mirror/postgresql/ \
-			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/ \
-			ftp://looking-glass.usask.ca/pub/postgresql/ \
-			ftp://ftp.sunsite.auc.dk/mirrors/postgresql/ \
-			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/
-MASTER_SITES?=		${PGSQL_SITES:=source/v${DIST_VERS}/}
+MASTER_SITES?=		http://www.postgresql.org/ftpsite/source/v${DIST_VERS}/ \
+			ftp://ftp.postgresql.org/pub/source/v${DIST_VERS}/ \
+			ftp://ftp.de.postgresql.org/pub/source/v${DIST_VERS}/ \
+			ftp://ch.postgresql.org/mirror/postgresql/source/v${DIST_VERS}/ \
+			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/source/v${DIST_VERS}/ \
+			ftp://looking-glass.usask.ca/pub/postgresql/source/v${DIST_VERS}/ \
+			ftp://ftp.sunsite.auc.dk/mirrors/postgresql/source/v${DIST_VERS}/ \
+			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/source/v${DIST_VERS}/
 
 MAINTAINER?=		jlam@netbsd.org
 HOMEPAGE?=		http://www.postgresql.org/
