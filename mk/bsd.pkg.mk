@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.973.2.9 2002/08/21 05:19:41 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.973.2.10 2002/08/21 22:01:32 jlam Exp $
 #
 # This file is in the public domain.
 #
