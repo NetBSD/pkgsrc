@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.18 2001/01/16 16:01:22 taya Exp $
+$NetBSD: patch-ab,v 1.19 2001/02/17 11:03:28 taya Exp $
 
 diff -ru ../Orig/mozilla/configure.in ./configure.in
---- ../Orig/mozilla/configure.in	Wed Dec 27 07:19:13 2000
-+++ ./configure.in	Mon Jan 15 15:36:25 2001
-@@ -367,9 +367,6 @@
+--- ../Orig/mozilla/configure.in	Sat Feb 10 06:30:09 2001
++++ ./configure.in	Sat Feb 17 02:07:20 2001
+@@ -380,9 +380,6 @@
  LIB_SUFFIX=a
  TARGET_MD_ARCH=unix
  DIRENT_INO=d_ino
@@ -13,7 +13,7 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
  
  MOZ_JPEG_CFLAGS=
  MOZ_JPEG_LIBS='-L$(DIST)/lib -ljpeg'
-@@ -719,31 +716,18 @@
+@@ -734,31 +731,18 @@
      if $CC -E - -dM </dev/null | grep __ELF__ >/dev/null; then
          DLL_SUFFIX=".so"
          DSO_PIC_CFLAGS='-fPIC -DPIC'
@@ -52,7 +52,7 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
      fi
      ;;
  
-@@ -1000,11 +984,6 @@
+@@ -1003,11 +987,6 @@
  
  esac
  
@@ -64,7 +64,7 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
  dnl Only one oddball right now (QNX), but this gives us flexibility
  dnl if any other platforms need to override this in the future.
  AC_DEFINE_UNQUOTED(D_INO,$DIRENT_INO)
-@@ -1219,12 +1198,6 @@
+@@ -1244,12 +1223,6 @@
      AM_PATH_GTK($GTK_VERSION,,
        AC_MSG_ERROR(Test for GTK failed.))
  
@@ -77,7 +77,7 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
  dnl ========================================================
  dnl =							   =
  dnl = --with-java-supplement				   =
-@@ -1726,13 +1699,6 @@
+@@ -1755,13 +1728,6 @@
  AC_SUBST(GLIB_CFLAGS)
  AC_SUBST(GLIB_LIBS)
  
@@ -91,7 +91,7 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
  dnl Checks for typedefs, structures, and compiler characteristics.
  dnl ========================================================
  AC_C_CONST
-@@ -2100,6 +2066,9 @@
+@@ -2147,6 +2113,9 @@
  				CXXFLAGS="$CXXFLAGS -mt" 
  			fi
  			;;
