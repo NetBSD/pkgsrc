@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2004/05/28 22:31:50 xtraeme Exp $
+$NetBSD: distinfo,v 1.11 2004/10/06 02:40:55 tv Exp $
 
-SHA1 (jikes-1.21.tar.bz2) = fb480862f10b0fce9f0eeb58652fa4bf181428c4
-Size (jikes-1.21.tar.bz2) = 614741 bytes
+SHA1 (jikes-1.22.tar.bz2) = 55bc20b609827e132e047d6c89084d4981905e11
+Size (jikes-1.22.tar.bz2) = 616655 bytes
 SHA1 (patch-aa) = 5b9271b45eaa2126e866bfee8d7e7789518ed27f
 SHA1 (patch-ab) = f5234321a55354b37c34efe7ba99af468e5b4963

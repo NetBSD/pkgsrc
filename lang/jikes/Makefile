@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2004/05/28 22:31:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.27 2004/10/06 02:40:55 tv Exp $
 #
 
-DISTNAME=	jikes-1.21
+DISTNAME=	jikes-1.22
 CATEGORIES=	lang java
-MASTER_SITES=	http://oss.software.ibm.com/pub/jikes/1.21/
+MASTER_SITES=	http://oss.software.ibm.com/pub/${DISTNAME:S,-,/,}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
