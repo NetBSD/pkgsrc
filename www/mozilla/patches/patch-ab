@@ -1,9 +1,8 @@
-$NetBSD: patch-ab,v 1.30 2004/01/17 00:04:49 taya Exp $
+$NetBSD: patch-ab,v 1.31 2004/04/24 10:35:23 grant Exp $
 
-diff -ru ../Orig/mozilla/configure.in ./configure.in
---- ../Orig/mozilla/configure.in	2003-12-12 08:30:36.000000000 +0900
-+++ ./configure.in	2004-01-16 23:17:19.000000000 +0900
-@@ -959,6 +959,9 @@
+--- configure.in.orig	2003-12-12 10:30:36.000000000 +1100
++++ configure.in
+@@ -959,6 +959,9 @@ case "$target" in
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -13,7 +12,7 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
      ;; 
  
  *-hpux*)
-@@ -1248,6 +1251,13 @@
+@@ -1248,6 +1251,13 @@ case "$target" in
      if test "$LIBRUNPATH"; then
  	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
      fi
@@ -27,7 +26,16 @@ diff -ru ../Orig/mozilla/configure.in ./configure.in
      ;;
  
  *-nto*) 
-@@ -2192,9 +2202,6 @@
+@@ -1478,7 +1488,7 @@ dnl the qsort routine under solaris is f
+        MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_FLAGS) $(DSO_LDOPTS) -o $@'
+        MKSHLIB_FORCE_ALL='-Qoption ld -z,allextract'
+        MKSHLIB_UNFORCE_ALL=''
+-       DSO_LDOPTS='-G -Qoption ld -z,muldefs -h $@'
++       DSO_LDOPTS='-G -z muldefs -h $@'
+        AR_LIST="$AR t"
+        AR_EXTRACT="$AR x"
+        AR_DELETE="$AR d"
+@@ -2192,9 +2202,6 @@ then
  				CXXFLAGS="$CXXFLAGS -mt" 
  			fi
  			;;
