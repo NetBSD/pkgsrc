@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/11 20:08:11 tv Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/11 20:53:00 tv Exp $
 #
 
 DISTNAME=		cygwin-1.5.11-1
@@ -23,8 +23,9 @@ do-build: # nothing
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/usr/bin/cygwin1.dll ${PREFIX}/bin/
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/emul/cygwin ${PREFIX}/emul/cygwin/bin
 	@for f in ${WRKSRC}/usr/bin/*.exe; do \
-		${INSTALL_LIB} $$f ${PREFIX}/emul/cygwin/bin/; \
+		${INSTALL_LIB} $$f ${PREFIX}/emul/cygwin/bin/$$(basename $$f); \
 	done
 .for f in ${SYMLINKS}
 	${LN} -sf ../emul/cygwin/bin/$f.exe ${PREFIX}/bin/cygwin-$f
