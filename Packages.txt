@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.17 1998/02/08 18:15:08 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.18 1998/02/08 18:17:33 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -797,7 +797,7 @@ only with some debugging aids.
    beginning of any PLIST file (see section 5). 
  - make
  - If something is not ok, fix; for patches: fix the file, then re-generate
-   the diff: 'diff -bu foo foo.orig >../../patches/patch-xx' (mv patch-xx
+   the diff: 'diff -bu foo.orig foo >../../patches/patch-xx' (mv patch-xx
    patch-xx.orig before); If there's no foo.orig from a previous patch, be
    sure to have an old version of the file somewhere; re-iterate :)
  - If all builds OK: touch /tmp/bla
