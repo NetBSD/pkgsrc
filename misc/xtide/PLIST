@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:30:02 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/22 21:14:46 jmmv Exp $
 bin/xtide
 bin/tide
 sbin/xttpd
@@ -7,5 +7,6 @@ man/man1/tide.1
 man/man8/xttpd.8
 share/xtide/harmonics.txt
 share/xtide/offsets.xml
-share/examples/xtide.conf
+share/examples/xtide/xtide.conf
 @dirrm share/xtide
+@dirrm share/examples/xtide
