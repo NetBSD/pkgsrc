@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/08/22 17:38:56 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/06/09 20:21:08 tron Exp $
 # FreeBSD ID: Makefile,v 1.8 1997/01/06 12:04:12 jkh Exp
 #
 
@@ -7,7 +7,7 @@ PKGNAME=	${DISTNAME:S/.src//}
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	audio
 MASTER_SITES=	http://radscan.com/nas/ \
-		${MASTER_SITE_XCONTRIB:=audio/nas/}
+		ftp://ftp.uni-duisburg.de/Sound/NAS/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://radscan.com/nas.html
