@@ -3,7 +3,7 @@
 # Date created:		17 Oct 1994
 # Whom:			torstenb
 #
-# $NetBSD: Makefile,v 1.3 1998/01/06 02:01:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/24 20:29:42 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.8 1996/11/21 11:27:26 asami Exp
 #
 
@@ -25,6 +25,6 @@ MAN1= 		audiocompose.1 audiosend.1 extcompose.1 \
 MAN4=		mailcap.4
 
 post-patch:
-	rm -f ${WRKDIR}/mm2.7/src/bin/*.orig
+	${RM} -f ${WRKDIR}/mm2.7/src/bin/*.orig
 
 .include <bsd.port.mk>
