@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4864 2004/02/16 20:53:03 recht Exp $
+$NetBSD: CHANGES,v 1.4865 2004/02/16 21:21:15 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -875,3 +875,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Scalar-List-Utils-1.13 [minskim 2004-02-16]
 	Updated nicotine to 1.0.7 [hubertf 2004-02-16]
 	Updated roundup to 0.6.5 [recht 2004-02-16]
+	Updated trafshow to 4.0 [snj 2004-02-16]
