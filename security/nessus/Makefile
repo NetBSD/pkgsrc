@@ -1,22 +1,21 @@
-# $NetBSD: Makefile,v 1.10 1999/10/22 23:55:49 tron Exp $
+# $NetBSD: Makefile,v 1.11 2000/07/30 11:22:00 frueauf Exp $
 #
 
-DISTNAME=	nessus-990318
-CATEGORIES=	net security x11
-MASTER_SITES=	ftp://ftp.nessus.org/pub/nessus/nessus-stable/
-EXTRACT_SUFX=	.tgz
+DISTNAME=	nessus-${VERS}
+MASTER_SITES=	# empty
+DISTFILES=	# empty
+.include	"../nessus/Makefile.common"
 
-MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://www.nessus.org/
-
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
+DEPENDS+=	nessus-core-${VERS}:../nessus-core
+DEPENDS+=	nessus-plugins-${VERS}:../nessus-plugins
 
 USE_X11=	yes
-GNU_CONFIGURE=	YES
+EXTRACT_ONLY=	# empty
+NO_CHECKSUM=	yes
+NO_PATCH=	yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
-post-install:
-	${TOUCH} ${PREFIX}/share/nessus/reports/.keepme
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc
-	${MV} ${PREFIX}/share/nessus/Manual ${PREFIX}/share/doc/nessus.txt
+do-install:	# empty
 
 .include "../../mk/bsd.pkg.mk"
