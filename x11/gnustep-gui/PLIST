@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/18 09:23:26 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/03 04:06:14 rh Exp $
 share/GNUstep/System/Headers/AppKit/AppKit.h
 share/GNUstep/System/Headers/AppKit/AppKitDefines.h
 share/GNUstep/System/Headers/AppKit/AppKitExceptions.h
@@ -85,6 +85,8 @@ share/GNUstep/System/Headers/AppKit/NSMenuView.h
 share/GNUstep/System/Headers/AppKit/NSNibConnector.h
 share/GNUstep/System/Headers/AppKit/NSNibDeclarations.h
 share/GNUstep/System/Headers/AppKit/NSNibLoading.h
+share/GNUstep/System/Headers/AppKit/NSOpenGL.h
+share/GNUstep/System/Headers/AppKit/NSOpenGLView.h
 share/GNUstep/System/Headers/AppKit/NSOpenPanel.h
 share/GNUstep/System/Headers/AppKit/NSOutlineView.h
 share/GNUstep/System/Headers/AppKit/NSPageLayout.h
@@ -532,6 +534,7 @@ share/GNUstep/System/Libraries/Resources/PrinterTypes/English.lproj/Xerox_DocuTe
 share/GNUstep/System/Libraries/Resources/PrinterTypes/English.lproj/Xerox_MajestiK_5765.ppd
 share/GNUstep/System/Libraries/Resources/PrinterTypes/French.lproj/Linotronic_300.ppd
 share/GNUstep/System/Libraries/Resources/PrinterTypes/German.lproj/Linotronic_300.ppd
+share/GNUstep/System/Libraries/Resources/PrinterTypes/GSProlog.ps
 share/GNUstep/System/Libraries/Resources/PrinterTypes/Italian.lproj/Linotronic_300.ppd
 share/GNUstep/System/Libraries/Resources/PrinterTypes/Printers
 share/GNUstep/System/Libraries/Resources/PrinterTypes/Spanish.lproj/Linotronic_300.ppd
@@ -540,18 +543,10 @@ share/GNUstep/System/Libraries/Resources/gnustep-gui/Resources/English.lproj/Loc
 share/GNUstep/System/Libraries/Resources/gnustep-gui/Resources/Italian.lproj/Localizable.strings
 share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/libgnustep-gui.so
 share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/libgnustep-gui.so.${PKGVERSION}
-share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/Contents/Info.plist
-share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/Contents/Resources
 share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/Resources/Info.plist
 share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/RTFConverter
-share/GNUstep/System/Library/Bundles/libgmodel.bundle/Contents/Info.plist
-share/GNUstep/System/Library/Bundles/libgmodel.bundle/Contents/Resources
 share/GNUstep/System/Library/Bundles/libgmodel.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Bundles/libgmodel.bundle/Resources/Info.plist
 share/GNUstep/System/Library/Bundles/libgmodel.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/libgmodel
-share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Contents/Info.plist
-share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Contents/Resources
 share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/English.lproj/StandardPicker.strings
 share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/French.lproj/StandardPicker.strings
 share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/GSCMYKColorPicker.tiff
@@ -559,14 +554,10 @@ share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/GSGray
 share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/GSHSBColorPicker.tiff
 share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/GSRGBColorPicker.tiff
 share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/Info.plist
 share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/Swedish.lproj/StandardPicker.strings
 share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/StandardPicker
-share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle/Contents/Info.plist
-share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle/Contents/Resources
 share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle/Resources/GSWheelColorPicker.tiff
 share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle/Resources/Info.plist
 share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/WheelPicker
 share/GNUstep/System/Library/Model/ColorPanel.gmodel
 share/GNUstep/System/Library/Model/SavePanel.gmodel
@@ -595,7 +586,6 @@ share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-g
 @dirrm share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
 @dirrm share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle/Resources
-@dirrm share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle/Contents
 @dirrm share/GNUstep/System/Library/ColorPickers/WheelPicker.bundle
 @dirrm share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
 @dirrm share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
@@ -604,20 +594,17 @@ share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-g
 @dirrm share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/French.lproj
 @dirrm share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources/English.lproj
 @dirrm share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Resources
-@dirrm share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle/Contents
 @dirrm share/GNUstep/System/Library/ColorPickers/StandardPicker.bundle
 @dirrm share/GNUstep/System/Library/ColorPickers
 @dirrm share/GNUstep/System/Library/Bundles/libgmodel.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
 @dirrm share/GNUstep/System/Library/Bundles/libgmodel.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
 @dirrm share/GNUstep/System/Library/Bundles/libgmodel.bundle/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/Bundles/libgmodel.bundle/Resources
-@dirrm share/GNUstep/System/Library/Bundles/libgmodel.bundle/Contents
 @dirrm share/GNUstep/System/Library/Bundles/libgmodel.bundle
 @dirrm share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
 @dirrm share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
 @dirrm share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/Resources
-@dirrm share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/Contents
 @dirrm share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle
 @dirrm share/GNUstep/System/Library/Bundles/TextConverters
 @dirrm share/GNUstep/System/Libraries/Resources/gnustep-gui/Resources/Italian.lproj
