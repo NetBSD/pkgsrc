@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/12/19 11:16:39 agc Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/12/23 08:42:18 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use openbox.
 #
@@ -9,7 +9,7 @@
 OPENBOX_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			openbox
-BUILDLINK_DEPENDS.openbox?=		openbox>=3.0
+BUILDLINK_DEPENDS.openbox?=		openbox>=3.1
 BUILDLINK_PKGSRCDIR.openbox?=		../../wm/openbox
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.openbox=openbox
