@@ -24,9 +24,15 @@ done
  find @@EMULSUBDIR@@/* -type l | sort |
  (while read LINK
   do
-   set - X `file $LINK`; \
-   echo "@exec ln -s $6 %D/$LINK"
-   echo "@unexec rm -f %D/$LINK"
+   set - X `file $LINK`
+   if cd `dirname $LINK` && test -f $6
+   then
+    echo $LINK
+   else
+    echo "@exec ln -s $6 %D/$LINK"
+    echo "@unexec rm -f %D/$LINK"
+   fi
+   cd $TMPDIR
   done)
  find @@EMULSUBDIR@@/* -type d | sort -r |
  awk '{print("@unexec rmdir %D/"$1" >/dev/null 2>&1 || true")}') >$PLIST
