@@ -1,0 +1,12 @@
+$NetBSD: patch-aq,v 1.1 2004/04/10 05:30:06 schmonz Exp $
+
+--- spawn.c.orig	1998-06-15 06:53:16.000000000 -0400
++++ spawn.c
+@@ -5,6 +5,7 @@
+ #include "substdio.h"
+ #include "byte.h"
+ #include "str.h"
++#include "alloc.h"
+ #include "stralloc.h"
+ #include "select.h"
+ #include "exit.h"
