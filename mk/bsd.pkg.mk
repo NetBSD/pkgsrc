@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.433 2000/05/07 01:58:41 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.434 2000/05/11 08:14:35 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2028,12 +2028,12 @@ makesum: fetch
 		${ECHO} "" >> ${MD5_FILE}
 	${_PKG_SILENT}(${_PKG_DEBUG}cd ${DISTDIR};			\
 	for sumfile in "" ${_CKSUMFILES}; do				\
-		if [ "X$$sumfile" = X"" ]; then continue; fi;		\
+		if [ "X$$sumfile" = "X" ]; then continue; fi;		\
 		${MD5} $$sumfile >> ${MD5_FILE};			\
 	done)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for ignore in "" ${_IGNOREFILES}; do				\
-		if [ "X$$sumfile" = X"" ]; then continue; fi;		\
+		if [ "X$$ignore" = "X" ]; then continue; fi;		\
 		${ECHO} "MD5 ($$ignore) = IGNORE" >> ${MD5_FILE};	\
 	done
 .endif
