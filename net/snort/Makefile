@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/04/10 22:01:10 rh Exp $
+# $NetBSD: Makefile,v 1.18 2002/04/14 09:49:46 rh Exp $
 #
 
 DISTNAME=	snort-1.8.6
@@ -19,7 +19,10 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-libpcap-includes=${BUILDLINK_DIR}/include
 CONFIGURE_ARGS+=	--with-libpcap-libraries=${BUILDLINK_DIR}/lib
 
-#WRKSRC=		${WRKDIR}/snort
+.if defined(SNORT_USE_PGSQL)
+.include	"../../databases/postgresql-lib/buildlink.mk"
+CONFIGURE_ARGS+=	--with-postgresql=${BUILDLINK_DIR}
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} -m 700 -o ${ROOT_USER} -g ${ROOT_GROUP} /var/log/snort

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.50 2002/04/12 01:50:34 hubertf Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.51 2002/04/14 09:49:46 rh Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1144,6 +1144,11 @@ SDIST_PAWD?= pwd
 # Used to decide whether perl scripting support will be compiled.
 # Possible: YES, NO
 # Default: YES
+
+#SNORT_USE_PGSQL=
+# Used in snort package to enable use of postgresql
+# Possible: defined, not defined
+# Default: not defined
 
 #SPARC_TARGET_ARCH= sparcv7
 # Select SPARC target architecture under Solaris.
