@@ -1,17 +1,14 @@
-$NetBSD: patch-ac,v 1.5 2000/08/30 21:38:44 tron Exp $
+$NetBSD: patch-ac,v 1.6 2004/03/30 01:51:18 minskim Exp $
 
---- demo.orig	Wed Aug 30 16:47:27 2000
-+++ demo	Wed Aug 30 16:49:34 2000
-@@ -6,10 +6,10 @@
+--- demo.orig	2000-03-26 04:21:54.000000000 -0600
++++ demo
+@@ -6,3 +6,3 @@ set rcsId {$Id: demo,v 1.42.1.1 2000/03/
  
 -if {[catch {package require stooop 3.7}]} {
 +if {[catch {package require stooop}]} {
      # in case stooop package is not installed
-     source stooop.tcl
- }
+@@ -11,3 +11,3 @@ if {[catch {package require stooop 3.7}]
  namespace import stooop::*
 -if {[catch {package require switched 1.4}]} {
 +if {[catch {package require switched}]} {
      # in case switched package is not installed
-     source switched.tcl
- }
