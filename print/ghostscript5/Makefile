@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/06/22 13:04:38 agc Exp $
+# $NetBSD: Makefile,v 1.18 1998/06/30 21:38:49 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/13 11:22:43 asami Exp
 #
 
@@ -6,9 +6,10 @@ DISTNAME=	ghostscript-5.10
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.cs.wisc.edu/ghost/aladdin/gs510/ \
 		ftp://ftp.cs.wisc.edu/ghost/aladdin/fonts/ \
-		ftp://bonk.ethz.ch/gs-driver-distrib/
+		ftp://bonk.ethz.ch/gs-driver-distrib/ \
+		http://www.ozemail.com.au/~geoffk/pdfencrypt/
 DISTFILES=	${GS_SOURCES} ${GS_FONTS_STD} ${GS_FONTS_OTHER} \
-		${HP850_DRV}
+		${HP850_DRV} ${PDF_SEC}
 
 MAINTAINER=	explorer@netbsd.org
 
@@ -36,6 +37,9 @@ GS_FONTS_OTHER=	ghostscript-fonts-other-4.40.tar.gz
 # Additional driver HP 850, see http://bonk.ethz.ch/hp850/hp850.html
 HP850_DRV=	hp850.zip
 
+# PostScript source to decode encrypted PDF files
+PDF_SEC=	pdf_sec.ps
+
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
@@ -56,6 +60,7 @@ post-extract:
 	${LN} -s ${PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6a ${WRKSRC}/jpeg-6a
 	${LN} -s ${PKGSRCDIR}/graphics/png/${WRKDIR:T}/libpng-0.96 ${WRKSRC}/libpng
 	cd ${WRKSRC} && unzip -La ${DISTDIR}/${HP850_DRV}
+	${CP} ${DISTDIR}/${PDF_SEC} ${WRKSRC}
 
 do-configure:
 	@${SETENV} PORTSDIR=${.CURDIR}/../.. WRKSRC=${WRKSRC} \
