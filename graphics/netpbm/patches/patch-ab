@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.15 2005/01/18 14:16:20 adam Exp $
+$NetBSD: patch-ab,v 1.16 2005/02/17 11:36:01 adam Exp $
 
---- converter/other/Makefile.orig	2004-10-16 20:53:14.000000000 +0000
+--- converter/other/Makefile.orig	2005-02-05 17:48:28.000000000 +0000
 +++ converter/other/Makefile
-@@ -98,6 +98,13 @@ HEADERLINKS = pm_config.h pm.h pbm.h pgm
+@@ -104,6 +104,13 @@ HEADERLINKS = pm_config.h pm.h pbm.h pgm
  
  include $(SRCDIR)/Makefile.common
  
