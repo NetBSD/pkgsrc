@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/06/11 06:34:18 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2001/06/19 07:04:58 jlam Exp $
 #
 
 DISTNAME=       mpg123-0.59r
@@ -16,6 +16,8 @@ COMMENT=	Command-line player for mpeg layer 1, 2 and 3 audio
 
 BUILD_DEFS+=	USE_INET6
 DIST_SUBDIR=	mpg123
+
+USE_BUILDLINK_ONLY=	# defined
 
 # for OBJECT_FMT
 .include "../../mk/bsd.prefs.mk"
