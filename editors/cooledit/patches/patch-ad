@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/07/07 19:45:39 dmcmahill Exp $
+
+--- widget/mad.c.orig	Sat Oct 27 14:36:12 2001
++++ widget/mad.c
+@@ -24,6 +24,16 @@
+ 
+ #include "mad.h"
+ 
++#include "config.h"
++
++#ifdef HAVE_STRING_H
++#include <string.h>
++#endif
++
++#ifdef HAVE_STDLIB_H
++#include <stdlib.h>
++#endif
++
+ #undef malloc
+ #undef calloc
+ #undef strdup
