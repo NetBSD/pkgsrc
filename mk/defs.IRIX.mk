@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.6 2002/12/03 20:20:59 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.7 2002/12/03 20:53:41 agc Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -92,6 +92,7 @@ USERADD?=		${FALSE}
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}		# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	no		# GNU make is not standard
+_OPSYS_HAS_JAVA=	no		# Java is not standard
 _OPSYS_HAS_MANZ=	no		# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no		# libossaudio is available
 _OPSYS_LIBTOOL_REQD=	1.4.20010614nb9 # base version of libtool required
