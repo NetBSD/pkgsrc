@@ -1,0 +1,76 @@
+$NetBSD: patch-ah,v 1.1 2002/06/17 22:13:45 agc Exp $
+
+--- src/utmp.c	2002/06/17 21:59:32	1.1
++++ src/utmp.c	2002/06/17 22:03:43
+@@ -39,6 +39,7 @@
+ #  undef HAVE_UTMPX_H
+ #endif
+ #ifdef HAVE_UTMPX_H
++# include <utmp.h>
+ # include <utmpx.h>
+ # define USE_SYSV_UTMP
+ #else
+@@ -95,7 +96,11 @@
+ 
+ #  ifdef HAVE_UTMPX_H
+ #    undef WTMP_FILENAME
+-#    define WTMP_FILENAME WTMPX_FILE
++#    if defined(WTMPX_FILE)
++#      define WTMP_FILENAME WTMPX_FILE
++#    else
++#      define WTMP_FILENAME _PATH_WTMPX
++#    endif
+ #    define update_wtmp updwtmpx
+ #  else				/* HAVE_UTMPX_H */
+ 
+@@ -179,7 +184,7 @@
+   privileges(INVOKE);
+ #ifdef HAVE_UTMPX_H
+   getutmp(&utmp, &utmp2);
+-  getutid(&utmp2);		/* position to entry in utmp file */
++  getutxid(&utmp);		/* position to entry in utmp file */
+ #else
+   getutid(&utmp);		/* position to entry in utmp file */
+ #endif
+@@ -203,16 +208,15 @@
+   /*
+    * write a utmp entry to the utmp file
+    */
+-  utmpname(UTMP_FILENAME);
++  utmpxname(UTMP_FILENAME);
+ #ifdef HAVE_UTMPX_H
+   getutmp(&utmp, &utmp2);
+-  pututline(&utmp2);
+   pututxline(&utmp);
+ #else
+   pututline(&utmp);
+ #endif
+   update_wtmp(WTMP_FILENAME, &utmp);
+-  endutent();			/* close the file */
++  endutxent();			/* close the file */
+   privileges(REVERT);
+ }
+ 
+@@ -228,16 +232,16 @@
+     return;			/* entry not made */
+ 
+   privileges(INVOKE);
+-  utmpname(UTMP_FILENAME);
+-  setutent();
+-  if (getutid(&utmp) == NULL)
++  utmpxname(UTMP_FILENAME);
++  setutxent();
++  if (getutxid(&utmpx) == NULL)
+     return;
+-  utmp.ut_type = DEAD_PROCESS;
++  utmpx.ut_type = DEAD_PROCESS;
+   utmp.ut_time = time(NULL);
+-  pututline(&utmp);
++  pututxline(&utmpx);
+   getutmpx(&utmp, &utmpx);
+   update_wtmp(WTMP_FILENAME, &utmpx);
+-  endutent();
++  endutxent();
+   privileges(REVERT);
+ 
+ #else /* HAVE_UTMPX_H */
