@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.5 2004/10/28 01:08:15 xtraeme Exp $
+$NetBSD: patch-am,v 1.6 2004/11/09 06:11:48 xtraeme Exp $
 
---- scripts/mysqld_safe.sh.orig	2004-10-22 02:35:28.000000000 +0200
-+++ scripts/mysqld_safe.sh	2004-10-22 02:38:30.000000000 +0200
+--- scripts/mysqld_safe.sh.orig	2004-11-09 06:54:47.000000000 +0100
++++ scripts/mysqld_safe.sh	2004-11-09 06:57:33.000000000 +0100
 @@ -253,6 +253,14 @@
    fi
  fi
@@ -59,7 +59,7 @@ $NetBSD: patch-am,v 1.5 2004/10/28 01:08:15 xtraeme Exp $
  #fi
  
 -echo "`date +'%y%m%d %H:%M:%S  mysqld started'`" >> $err_log
-+datemsg "mysqld started"
++datemsg  "mysqld started"
  while true
  do
    rm -f $safe_mysql_unix_port $pid_file	# Some extra safety
@@ -72,25 +72,25 @@ $NetBSD: patch-am,v 1.5 2004/10/28 01:08:15 xtraeme Exp $
      break
    fi
  
-@@ -329,7 +335,7 @@
-       numofproces=`ps xa | grep -v "grep" | grep -c $ledir/$MYSQLD`
-     fi
+@@ -324,7 +330,7 @@
+     # kill -9 is used or the process won't react on the kill.
+     numofproces=`ps xa | grep -v "grep" | grep "$ledir/$MYSQLD\>" | grep -c "pid-file=$pid_file"`
  
 -    echo -e "\nNumber of processes running now: $numofproces" | tee -a $err_log
-+	datemsg -e "\nNumber of processes running now: $numofproces"
++    datemsg -e "\nNumber of processes running now: $numofproces"
      I=1
      while test "$I" -le "$numofproces"
      do 
-@@ -347,15 +353,14 @@
- 	#    echo "TEST $I - $T **"
- 	if kill -9 $T
- 	then
--	  echo "$MYSQLD process hanging, pid $T - killed" | tee -a $err_log
-+		datemsg "$MYSQLD process hanging, pid $T - killed"
- 	else 
- 	  break
- 	fi
- 	I=`expr $I + 1`
+@@ -337,16 +343,14 @@
+       #    echo "TEST $I - $T **"
+       if kill -9 $T
+       then
+-        echo "$MYSQLD process hanging, pid $T - killed" | tee -a $err_log
++	      datemsg "$MYSQLD process hanging, pid $T - killed"
+       else 
+         break
+       fi
+       I=`expr $I + 1`
      done
    fi
 -  echo "`date +'%y%m%d %H:%M:%S'`  mysqld restarted" | tee -a $err_log
@@ -99,4 +99,5 @@ $NetBSD: patch-am,v 1.5 2004/10/28 01:08:15 xtraeme Exp $
  
 -echo "`date +'%y%m%d %H:%M:%S'`  mysqld ended" | tee -a $err_log
 -echo "" | tee -a $err_log
+-
 +datemsg "mysqld ended"
