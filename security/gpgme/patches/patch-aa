@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2004/08/21 10:54:47 markd Exp $
+$NetBSD: patch-aa,v 1.5 2004/08/22 17:52:26 recht Exp $
 
---- gpgme/gpgme-config.in.orig	2004-03-08 06:45:28.000000000 +1300
-+++ gpgme/gpgme-config.in
-@@ -93,7 +93,7 @@ while test $# -gt 0; do
+--- gpgme/gpgme-config.in.orig	2004-05-21 21:49:29.000000000 +0200
++++ gpgme/gpgme-config.in	2004-08-22 17:25:14.000000000 +0200
+@@ -98,7 +98,7 @@
  	    ;;
  	--libs)
  	    if test "x$libdir" != "x/usr/lib" -a "x$libdir" != "x/lib"; then
