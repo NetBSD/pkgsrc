@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8576 2005/01/03 10:53:04 martti Exp $
+$NetBSD: CHANGES,v 1.8577 2005/01/03 11:52:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -39,3 +39,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ezmlm-idx to 0.432 [schmonz 2005-01-03]
 	Updated getmail to 4.2.6 [schmonz 2005-01-03]
 	Updated openoffice-linux to 1.1.4 [martti 2005-01-03]
+	Updated curl to 7.12.3 [wiz 2005-01-03]
