@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.74 2005/01/21 13:41:26 taca Exp $
+$NetBSD: distinfo,v 1.75 2005/01/26 15:29:03 taca Exp $
 
 SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7.tar.bz2) = 24f29e28ec62d7ab5888cd594ac7a1975ee6aa36
 Size (squid-2.5.7-2005010100/squid-2.5.STABLE7.tar.bz2) = 1051830 bytes
@@ -36,6 +36,10 @@ SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-fqdn_truncated.patch) = de02ebf44
 Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-fqdn_truncated.patch) = 4484 bytes
 SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-ldap_spaces.patch) = f0ae7e6dbb9580186f2e091d840ccf3bda348abc
 Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-ldap_spaces.patch) = 1974 bytes
+SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-header_parsing.patch) = f3fd99e7a373050b5c2d34619d9f309335bb642e
+Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-header_parsing.patch) = 44080 bytes
+SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-httpd_accel_no_pmtu_disc.patch) = 924a906c98cd5cff66115771b9e4f9d5ae5820a9
+Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-httpd_accel_no_pmtu_disc.patch) = 4113 bytes
 SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-ftp_datachannel.patch) = 1022f7166a7bd4d83c93d7d4014865f98efefea1
 Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-ftp_datachannel.patch) = 4825 bytes
 SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-short_icons_urls.patch) = e7cf53c5a7db396d8fe89cf3c585fd591cb17903
