@@ -1,35 +1,38 @@
-# $NetBSD: Makefile,v 1.4 2001/07/31 00:09:44 taca Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/19 11:03:20 taca Exp $
 
-DISTNAME=	ruby-postgres-0.6.4
-PKGNAME=	${RUBY_PKGNAMEPREFIX}postgresql-0.6.4
-CATEGORIES=	databases
-MASTER_SITES=	http://www.jp.postgresql.org/interfaces/ruby/archive/
+DISTNAME=		ruby-postgres-${VERSION}
+PKGNAME=		${RUBY_PKGNAMEPREFIX}postgresql-${VERSION}
+CATEGORIES=		databases
+MASTER_SITES=		http://www.postgresql.jp/interfaces/ruby/archive/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.jp.postgresql.org/interfaces/ruby/
-COMMENT=	Ruby extension for postgresql
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.postgresql.jp/interfaces/ruby/
+COMMENT=		Ruby extension for postgresql
 
-DEPENDS+=	postgresql-lib>=7.1:../../databases/postgresql-lib
+DEPENDS+=		postgresql-lib>=7.1:../../databases/postgresql-lib
 
-DIST_SUBDIR=	ruby
-USE_RUBY_EXTCONF= yes
-CONFIGURE_ARGS+=--with-pgsql-include-dir=${PREFIX}/include/pgsql \
-		--with-pgsql-lib-dir=${PREFIX}/lib
-INSTALL_TARGET=	site-install
+VERSION=		0.6.5
+DIST_SUBDIR=		ruby
+USE_RUBY_EXTCONF= 	yes
+CONFIGURE_ARGS+=	--with-pgsql-include-dir=${PREFIX}/include/pgsql \
+			--with-pgsql-lib-dir=${PREFIX}/lib
+INSTALL_TARGET=		site-install
 
-DOC=		README doc/postgres.html
-DOC_JA=		README.jp doc/postgres.jp.html
-EXAMPLE_LIBS=	losample.rb psqlHelp.rb
-EXAMPLE_SCRIPTS=psql.rb test1.rb test2.rb test4.rb
-REPLACE_RUBY=	sample/psql.rb sample/test1.rb sample/test2.rb sample/test4.rb
+DOC=			README README.ja doc/postgres.html doc/postgres.ja.html
+EXAMPLE_LIBS=		losample.rb psqlHelp.rb
+EXAMPLE_SCRIPTS=	psql.rb test1.rb test2.rb test4.rb
+REPLACE_RUBY=		sample/psql.rb sample/test1.rb sample/test2.rb \
+			sample/test4.rb
+
+pre-install:
+	@cd ${WRKSRC}; \
+		${CP} -p README.jp README.ja; \
+		${CP} -p doc/postgres.jp.html doc/postgres.ja.html
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/postgresql/ja
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/postgresql
 .for f in ${DOC}
 	${INSTALL_DATA} ${WRKSRC}/$f ${RUBY_DOCDIR}/postgresql
-.endfor
-.for f in ${DOC_JA}
-	${INSTALL_DATA} ${WRKSRC}/$f ${RUBY_DOCDIR}/postgresql/ja
 .endfor
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/postgresql
 .for f in ${EXAMPLE_LIBS}
