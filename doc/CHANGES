@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1896 2003/04/11 09:20:57 rh Exp $
+$NetBSD: CHANGES,v 1.1897 2003/04/11 09:25:05 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1543,3 +1543,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rsync to 2.5.6nb1 [salo 2003-04-11]
 	Added ogmtools-1.0.1 [salo 2003-04-11]
 	Updated xine-lib to 1.0rc10 [rh 2003-04-11]
+	Updated gxine to 0.3.3 [rh 2003-04-11]
