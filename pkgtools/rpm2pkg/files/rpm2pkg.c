@@ -1,8 +1,36 @@
-/*
+/*	$NetBSD: rpm2pkg.c,v 1.4 2004/02/18 21:29:37 tron Exp $	*/
 
-	$NetBSD: rpm2pkg.c,v 1.3 2002/12/09 15:16:27 tron Exp $
-
-*/
+/*-
+ * Copyright (c) 2004 The NetBSD Foundation, Inc.
+ * All rights reserved.
+ *
+ * This code is derived from software contributed to The NetBSD Foundation
+ * by Matthias Scheler.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of The NetBSD Foundation nor the names of its
+ *    contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+ * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+ * TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+ * BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
 
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -14,10 +42,27 @@
 #include <string.h>
 #include <unistd.h>
 
-#include <cpio.h>
+#include <bzlib.h>
 #include <rpmlib.h>
 #include <zlib.h>
 
+#define C_IRUSR			0000400
+#define C_IWUSR			0000200
+#define C_IXUSR			0000100
+#define C_IRGRP			0000040
+#define C_IWGRP			0000020
+#define C_IXGRP			0000010
+#define C_IROTH			0000004
+#define C_IWOTH			0000002
+#define C_IXOTH			0000001
+#define C_ISUID			0004000
+#define C_ISGID			0002000
+#define C_ISVTX			0001000
+#define C_ISDIR			0040000
+#define C_ISREG			0100000
+#define C_ISCHR			0020000
+#define C_ISLNK			0120000
+ 
 char CPIOMagic[] = {'0','7','0','7','0','1'};
 
 #define CPIO_END_MARKER		"TRAILER!!!"
@@ -31,726 +76,861 @@ char CPIOMagic[] = {'0','7','0','7','0','1'};
 
 #define CP_IFMT			0170000
 
-#define TRUE  1
-#define FALSE 0
+#define	TRUE	1
+#define	FALSE	0
 
-#define GZREAD(s,b,l) (gzread((s),(b),(l))==l)
+typedef struct ModeMapStruct {
+	unsigned long	mm_CPIOMode;
+	mode_t		mm_SysMode;
+} ModeMap;
 
-extern char *__progname;
-
-struct ModeMap
- {
-  long   mm_CPIOMode;
-  mode_t mm_SysMode;
- };
-struct ModeMap ModeMapTab[] =
- {
-  {C_IRUSR,S_IRUSR},
-  {C_IWUSR,S_IWUSR},
-  {C_IXUSR,S_IXUSR},
-  {C_IRGRP,S_IRGRP},
-  {C_IWGRP,S_IWGRP},
-  {C_IXGRP,S_IXGRP},
-  {C_IROTH,S_IROTH},
-  {C_IWOTH,S_IWOTH},
-  {C_IXOTH,S_IXOTH},
-  {C_ISUID,S_ISUID},
-  {C_ISGID,S_ISGID},
-  {C_ISVTX,S_ISVTX},
-  {0,0}
- };
+ModeMap ModeMapTab[] = {
+	{C_IRUSR, S_IRUSR},
+	{C_IWUSR, S_IWUSR},
+	{C_IXUSR, S_IXUSR},
+	{C_IRGRP, S_IRGRP},
+	{C_IWGRP, S_IWGRP},
+	{C_IXGRP, S_IXGRP},
+	{C_IROTH, S_IROTH},
+	{C_IWOTH, S_IWOTH},
+	{C_IXOTH, S_IXOTH},
+	{C_ISUID, S_ISUID},
+	{C_ISGID, S_ISGID},
+	{C_ISVTX, S_ISVTX},
+	{0, 0}
+};
 
 typedef struct PListEntryStruct PListEntry;
-struct PListEntryStruct
- {
-  PListEntry *pe_Childs[2];
-  int pe_DirEmpty;
-  mode_t pe_DirMode;
-  long pe_INode;
-  char *pe_Link;
-  char pe_Name[1];
- };
+struct PListEntryStruct {
+	PListEntry	*pe_Childs[2];
+	int		pe_DirEmpty;
+	mode_t		pe_DirMode;
+	unsigned long	pe_INode;
+	char		*pe_Link;
+	char		pe_Name[1];
+};
 
-#define pe_Left  pe_Childs[0]
-#define pe_Right pe_Childs[1]
+#define	pe_Left		pe_Childs[0]
+#define	pe_Right	pe_Childs[1]
 
 typedef void PListEntryFunc(PListEntry *,FILE *);
 
-#define PLIST_ORDER_FORWARD  0
-#define PLIST_ORDER_BACKWARD 1
+#define	PLIST_ORDER_FORWARD	0
+#define	PLIST_ORDER_BACKWARD	1
 
-PListEntry *InsertPListEntry(PListEntry **Tree,char *Name)
+#define INVERT_PLIST_ORDER(o)	(1 - (o))
 
+typedef struct FileHandleStruct {
+	FILE	*fh_File;
+	BZFILE	*fh_BZFile;
+	gzFile	*fh_GZFile;
+	off_t	fh_Pos;
+} FileHandle;
+
+static int
+InitBuffer(void **Buffer,int *BufferSize)
 {
- PListEntry *Node;
-
- while ((Node=*Tree)!=NULL)
-  Tree=&((strcmp(Name,Node->pe_Name)<0)?Node->pe_Left:Node->pe_Right);
-
- if ((Node=malloc(sizeof(PListEntry)+strlen(Name)))==NULL)
-  {
-   perror(__progname);
-   exit(EXIT_FAILURE);
-  }
-
- Node->pe_Left=NULL;
- Node->pe_Right=NULL;
- Node->pe_DirEmpty=FALSE;
- Node->pe_INode=0;
- Node->pe_Link=NULL;
- (void)strcpy(Node->pe_Name,Name);
-
- return *Tree=Node;
+	if (*Buffer == NULL) {
+		*BufferSize = sysconf(_SC_PAGESIZE) * 256;
+		if ((*Buffer = malloc(*BufferSize)) == NULL)
+			return FALSE;
+	}
+	return TRUE;
 }
 
-PListEntry *FindPListEntry(PListEntry *Tree,char *Name)
-
+static void
+Close(FileHandle *fh)
 {
- while (Tree!=NULL)
-  {
-   int Result;
+	if (fh->fh_BZFile != NULL) {
+		int	bzerror;
 
-   if ((Result=strcmp(Name,Tree->pe_Name))==0) break;
-   Tree=(Result<0)?Tree->pe_Left:Tree->pe_Right;
-  }
-
- return Tree;
+		(void)BZ2_bzReadClose(&bzerror, fh->fh_BZFile);
+		(void)fclose(fh->fh_File);
+	} else {
+		(void)gzclose(fh->fh_GZFile);
+	}
+	free(fh);
 }
 
-void PListEntryFile(PListEntry *Node,FILE *Out)
-
+static FileHandle *
+Open(int fd)
 {
- (void)fputs(Node->pe_Name,Out);
- (void)fputc('\n',Out);
+	off_t		offset;
+	char		Magic[3];
+	FileHandle	*fh;
+
+	if ((offset = lseek(fd, 0, SEEK_CUR)) < 0)
+		return NULL;
+	if (read(fd, Magic, sizeof (Magic)) != sizeof (Magic))
+		return NULL;
+	if (lseek(fd, offset, SEEK_SET) != offset)
+		return NULL;
+
+	if ((fh = calloc(1, sizeof (FileHandle))) == NULL)
+		return NULL;
+
+	if ((Magic[0] == 'B') && (Magic[1] == 'Z') && (Magic[2] == 'h')) {
+		int	bzerror;
+
+		if ((fd = dup(fd)) < 0) {
+			free(fh);
+			return NULL;
+		}
+		if ((fh->fh_File = fdopen(fd, "rb")) == NULL) {
+			perror("fdopen");
+			(void)close(fd);
+			free(fh);
+			return NULL;
+		}
+		if ((fh->fh_BZFile = BZ2_bzReadOpen(&bzerror, fh->fh_File, 0,
+		    0, NULL, 0)) == NULL) {
+			(void)fclose(fh->fh_File);
+			free(fh);
+			return (NULL);
+		}
+	} else {
+		if ((fh->fh_GZFile = gzdopen(fd, "r")) == NULL) {
+			free(fh);
+			return (NULL);
+		}
+	}
+
+	return (fh);
 }
 
-void PListEntryLink(PListEntry *Node,FILE *Out)
-
+static int
+Read(FileHandle *fh, void *buffer, int length)
 {
- (void)fprintf(Out,"@exec ln -fs %s %%D/%s\n",Node->pe_Link,Node->pe_Name);
- (void)fprintf(Out,"@unexec rm -f %%D/%s\n",Node->pe_Name);
+	int	bzerror, bytes;
+
+	bytes = (fh->fh_BZFile != NULL) ?
+	    BZ2_bzRead(&bzerror, fh->fh_BZFile, buffer, length) :
+	    gzread(fh->fh_GZFile, buffer, length);
+	if (bytes > 0)
+		fh->fh_Pos += bytes;
+
+	return (bytes == length);
 }
 
-void PListEntryMakeDir(PListEntry *Node,FILE *Out)
+static int
+SkipAndAlign(FileHandle *fh, off_t Skip)
 
 {
- if (Node->pe_DirEmpty)
-  (void)fprintf(Out,
-                "@exec mkdir -m %o -p %%D/%s\n",
-                Node->pe_DirMode,
-                Node->pe_Name);
+	off_t		NewPos;
+
+	NewPos = (fh->fh_Pos + Skip + 3) & ~3;
+	if (fh->fh_Pos == NewPos)
+		return TRUE;
+
+	if (fh->fh_GZFile != NULL) {
+		if (gzseek(fh->fh_GZFile, NewPos, SEEK_SET) == NewPos) {
+			fh->fh_Pos = NewPos;
+			return TRUE;
+		}
+		return FALSE;
+	} else {
+		static void	*Buffer = NULL;
+		static int	BufferSize = 0;
+
+		if (!InitBuffer(&Buffer, &BufferSize))
+			return FALSE;
+
+		while (fh->fh_Pos < NewPos) {
+			off_t	Length;
+			int	Chunk;
+
+			Length = NewPos - fh->fh_Pos;
+			Chunk = (Length > BufferSize) ? BufferSize : Length;
+			if (!Read(fh, Buffer, Chunk))
+				return FALSE;
+		}
+	}
+
+	return TRUE;
 }
 
-void PListEntryRemoveDir(PListEntry *Node,FILE *Out)
-
+static PListEntry *
+InsertPListEntry(PListEntry **Tree,char *Name)
 {
- (void)fprintf(Out,"@dirrm %s\n",Node->pe_Name);
+	PListEntry *Node;
+
+	while ((Node = *Tree) != NULL) {
+		Tree = &((strcmp(Name, Node->pe_Name) <0) ?
+		    Node->pe_Left : Node->pe_Right);
+	}
+
+	if ((Node = calloc(1, sizeof (PListEntry) + strlen(Name))) == NULL) {
+		perror("calloc");
+		exit(EXIT_FAILURE);
+	}
+
+	(void)strcpy(Node->pe_Name, Name);
+
+	return *Tree = Node;
 }
 
-void ProcessPList(PListEntry *Tree,PListEntryFunc Func,int Order,FILE *Out)
-
+static PListEntry *
+FindPListEntry(PListEntry *Tree, char *Name)
 {
- while (Tree!=NULL)
-  {
-   if (Tree->pe_Childs[Order]!=NULL)
-    ProcessPList(Tree->pe_Childs[Order],Func,Order,Out);
-   Func(Tree,Out);
-   Tree=Tree->pe_Childs[1-Order];
-  }
+	while (Tree != NULL) {
+		int Result;
+
+		if ((Result = strcmp(Name, Tree->pe_Name)) == 0) break;
+		Tree = (Result < 0) ? Tree->pe_Left : Tree->pe_Right;
+	}
+
+	return Tree;
 }
 
-char **ArrayAdd(char **Array,char *String)
+static void
+PListEntryFile(PListEntry *Node, FILE *Out)
 
 {
- int Old;
-
- Old=0;
- if (Array!=NULL) while (Array[Old]!=NULL) Old++;
- if ((Array=realloc(Array,sizeof(char *)*(Old+2)))==NULL) return NULL;
-
- Array[Old++]=String;
- Array[Old]=NULL;
-
- return Array;
+	(void)fputs(Node->pe_Name, Out);
+	(void)fputc('\n', Out);
 }
 
-void Usage(void)
+static void
+PListEntryLink(PListEntry *Node, FILE *Out)
 
 {
- (void)fprintf(stderr,
-               "Usage: %s [-d directory] [-f packlist] [[-i ignorepath] ...]\n"
-               "               [-p prefix] [-s strippath] rpmfile [...]\n",
-               __progname);
- exit(EXIT_FAILURE);
+	(void)fprintf(Out, "@exec ln -fs %s %%D/%s\n@unexec rm -f %%D/%s\n",
+	    Node->pe_Link, Node->pe_Name, Node->pe_Name);
 }
 
-int SkipAndAlign(gzFile In,long Skip)
+static void
+PListEntryMakeDir(PListEntry *Node, FILE *Out)
 
 {
- z_off_t Pos,NewPos;
-
- if ((Pos=gztell(In))<0) return FALSE;
-
- NewPos=(Pos+Skip+3)&(~3);
- return ((Pos==NewPos)||(gzseek(In,NewPos,SEEK_SET)==NewPos));
+	if (Node->pe_DirEmpty) {
+		(void)fprintf(Out, "@exec mkdir -m %o -p %%D/%s\n",
+		     Node->pe_DirMode, Node->pe_Name);
+	}
 }
 
-char *GetData(gzFile In,long Length)
+static void
+PListEntryRemoveDir(PListEntry *Node, FILE *Out)
 
 {
- char *Ptr;
-
- if ((Ptr=malloc(Length+1))!=NULL)
-  {
-   if (GZREAD(In,Ptr,Length)&&SkipAndAlign(In,0))
-    {
-     Ptr[Length]='\0';
-     return Ptr;
-    }
-   free(Ptr);
-  }
-
- return NULL;
+	(void)fprintf(Out, "@dirrm %s\n", Node->pe_Name);
 }
 
-int GetCPIOHeader(gzFile In,long *Fields,char **Name)
+static void
+ProcessPList(PListEntry *Tree, PListEntryFunc Func, int Order, FILE *Out)
 
 {
- char Buffer[CPIO_NUM_HEADERS*CPIO_FIELD_LENGTH];
- char *Ptr;
- int Index;
- long Value;
+	while (Tree != NULL) {
+		if (Tree->pe_Childs[Order] != NULL)
+			ProcessPList(Tree->pe_Childs[Order], Func, Order, Out);
+		Func(Tree, Out);
+		Tree = Tree->pe_Childs[INVERT_PLIST_ORDER(Order)];
+	}
+}
 
- *Name=NULL;
+static char **
+ArrayAdd(char **Array, char *String)
 
- if (!GZREAD(In,Buffer,sizeof(CPIOMagic))) return FALSE;
- if (memcmp(Buffer,CPIOMagic,sizeof(CPIOMagic))!=0) return FALSE;
+{
+	int	Old;
 
- if (gzread(In,Buffer,sizeof(Buffer))!=sizeof(Buffer)) return FALSE;
- Ptr=Buffer;
- Index=sizeof(Buffer);
- Value=0;
- while (Index-->0)
-  {
-   Value<<=4;
-   if ((*Ptr>='0')&&(*Ptr<='9')) Value+=(long)(*Ptr++-'0');
-   else
-    if ((*Ptr>='A')&&(*Ptr<='F')) Value+=(long)(*Ptr++-'A')+10;
-    else
-     if ((*Ptr>='a')&&(*Ptr<='f')) Value+=(long)(*Ptr++-'a')+10;
-     else return FALSE;
+	Old = 0;
+	if (Array != NULL) {
+		while (Array[Old] != NULL)
+			Old ++;
+	}
+	if ((Array = realloc(Array, sizeof (char *) * (Old + 2))) == NULL) {
+		perror("realloc");
+		exit(EXIT_FAILURE);
+	}
+
+	Array[Old++] = String;
+	Array[Old] = NULL;
+
+	return Array;
+}
+
+static void
+Usage(char *Progname)
+{
+	(void)fprintf(stderr, 
+	    "Usage: %s [-d directory] [-f packlist] [[-i ignorepath] ...]\n"
+	    "               [-p prefix] [-s stripcount] rpmfile [...]\n", 
+	    Progname);
+	exit(EXIT_FAILURE);
+}
+
+static char *
+GetData(FileHandle *In, unsigned long Length)
+{
+	char *Ptr;
+
+	if ((Ptr = malloc(Length + 1)) != NULL) {
+		if (Read(In, Ptr, Length) && SkipAndAlign(In, 0)) {
+			Ptr[Length] = '\0';
+			return Ptr;
+		}
+		free(Ptr);
+	}
+
+	return NULL;
+}
+
+static int
+GetCPIOHeader(FileHandle *In, unsigned long *Fields, char **Name)
+{
+	char	Buffer[CPIO_NUM_HEADERS*CPIO_FIELD_LENGTH], *Ptr;
+	int	Index;
+	unsigned long	Value;
+
+	*Name = NULL;
+
+	if (!Read(In, Buffer, sizeof (CPIOMagic)))
+		return FALSE;
+	if (memcmp(Buffer, CPIOMagic, sizeof (CPIOMagic)) != 0)
+		return FALSE;
+
+	if (!Read(In, Buffer, sizeof (Buffer)))
+		return FALSE;
+
+	Ptr = Buffer;
+	Index = sizeof (Buffer);
+	Value = 0;
+	while (Index-- > 0) {
+		Value <<= 4;
+		if ((*Ptr >= '0') && (*Ptr <= '9')) {
+			Value += (unsigned long)(*Ptr++-'0');
+		} else if ((*Ptr >= 'A') && (*Ptr <= 'F')) {
+				Value += (unsigned long)(*Ptr++-'A') + 10;
+		} else if ((*Ptr >= 'a') && (*Ptr <= 'f')) {
+				Value += (unsigned long)(*Ptr++-'a') + 10;
+		} else {
+			return FALSE;
+		}
    
-   if ((Index%CPIO_FIELD_LENGTH)==0)
-    {
-     *Fields++=Value;
-     Value=0;
-    }
-  }
+		if ((Index % CPIO_FIELD_LENGTH) == 0) {
+			*Fields++ = Value;
+			Value = 0;
+		}
+  	}
 
- Value=Fields[CPIO_HDR_NAMESIZE-CPIO_NUM_HEADERS];
- if ((*Name=GetData(In,Value))==NULL) return FALSE;
- return ((*Name)[Value-1]=='\0');
+	Value = Fields[CPIO_HDR_NAMESIZE - CPIO_NUM_HEADERS];
+	if ((*Name = GetData(In, Value)) == NULL)
+		return FALSE;
+	return ((*Name)[Value -1 ] == '\0');
 }
 
-mode_t ConvertMode(long CPIOMode)
-
+static mode_t
+ConvertMode(unsigned long CPIOMode)
 {
- mode_t Mode;
- int Index;
+	mode_t	Mode;
+	ModeMap	*Ptr;
 
- Mode=0;
- Index=0;
- while (ModeMapTab[Index].mm_CPIOMode!=0)
-  {
-   if ((CPIOMode&ModeMapTab[Index].mm_CPIOMode)!=0)
-    Mode|=ModeMapTab[Index].mm_SysMode;
-   Index++;
-  }
+	Mode = 0;
+	Ptr = ModeMapTab;
+	while (Ptr->mm_CPIOMode != 0) {
+		if ((CPIOMode & Ptr->mm_CPIOMode) != 0)
+			Mode |= Ptr->mm_SysMode;
+		Ptr++;
+	}
 
- return Mode;
+	return Mode;
 }
 
-int MakeTargetDir(char *Name,PListEntry **Dirs,int MarkNonEmpty)
-
+static int
+MakeTargetDir(char *Name, PListEntry **Dirs, int MarkNonEmpty)
 {
- char *Basename;
- PListEntry *Dir;
- struct stat Stat;
- int Result;
+	char		*Basename;
+	PListEntry	*Dir;
+	struct stat	Stat;
+	int	Result;
 
- if ((Basename=strrchr(Name,'/'))==NULL) return TRUE;
+	if ((Basename = strrchr(Name, '/')) == NULL)
+		return TRUE;
 
- *Basename='\0';
- if ((Dir=FindPListEntry(*Dirs,Name))!=NULL)
-  {
-   *Basename='/';
-   Dir->pe_DirEmpty=!MarkNonEmpty;
-   return TRUE;
-  }
+	*Basename = '\0';
+	if ((Dir = FindPListEntry(*Dirs, Name)) != NULL) {
+		*Basename = '/';
+		Dir->pe_DirEmpty = !MarkNonEmpty;
+		return TRUE;
+	}
 
- if (!MakeTargetDir(Name,Dirs,TRUE))
-  {
-   *Basename='/';
-   return FALSE;
-  }
+	if (!MakeTargetDir(Name, Dirs, TRUE)) {
+		*Basename = '/';
+		return FALSE;
+	}
 
- if (stat(Name,&Stat)==0) Result=S_ISDIR(Stat.st_mode);
- else
-  if (errno!=ENOENT) Result=FALSE;
-  else
-   if ((Result=(mkdir(Name,S_IRWXU|S_IRWXG|S_IRWXO)==0)))
-    InsertPListEntry(Dirs,Name)->pe_DirMode=S_IRWXU|S_IRWXG|S_IRWXO;
+	if (stat(Name, &Stat) == 0) {
+		Result = S_ISDIR(Stat.st_mode);
+	} else if (errno != ENOENT) {
+		Result = FALSE;
+	} else if ((Result = (mkdir(Name, S_IRWXU|S_IRWXG|S_IRWXO) == 0))) {
+		InsertPListEntry(Dirs, Name)->pe_DirMode =
+		    S_IRWXU|S_IRWXG|S_IRWXO;
+	}
 
- *Basename='/';
- return Result;
+	*Basename = '/';
+	return Result;
 }
 
-char *StrCat(char *Prefix,char *Suffix)
-
+static char
+*StrCat(char *Prefix, char *Suffix)
 {
- int Length;
- char *Str;
+	int	Length;
+	char	*Str;
 
- Length=strlen(Prefix);
- if ((Str=malloc(Length+strlen(Suffix)+1))!=NULL)
-  {
-   (void)memcpy(Str,Prefix,Length);
-   (void)strcpy(&Str[Length],Suffix);
-  }
- return Str;
+	Length = strlen(Prefix);
+	if ((Str = malloc(Length + strlen(Suffix) + 1)) == NULL) {
+	     perror("malloc");
+	     exit(EXIT_FAILURE);
+	}
+
+	(void)memcpy(Str, Prefix, Length);
+	(void)strcpy(&Str[Length], Suffix);
+
+	return Str;
 }
 
-int MakeDir(char *Name,mode_t Mode,int *OldDir)
-
+static int
+MakeDir(char *Name, mode_t Mode, int *OldDir)
 {
- struct stat Stat;
+	struct stat Stat;
 
- *OldDir=FALSE;
- if (mkdir(Name,Mode)==0) return TRUE;
+	*OldDir = FALSE;
+	if (mkdir(Name, Mode) == 0)
+		return TRUE;
 
- if ((errno!=EEXIST)||
-     (lstat(Name,&Stat)<0)||
-     !S_ISDIR(Stat.st_mode)) return FALSE;
+	if ((errno != EEXIST) || (lstat(Name, &Stat) < 0) || 
+	    !S_ISDIR(Stat.st_mode)) {
+		return FALSE;
+	}
 
- *OldDir=TRUE;
- return TRUE;
+	*OldDir = TRUE;
+	return TRUE;
 }
 
-int MakeSymLink(char *Link,char *Name)
-
+static int
+MakeSymLink(char *Link, char *Name)
 {
- struct stat Stat;
+	struct stat Stat;
 
- if (symlink(Link,Name)==0) return TRUE;
+	if (symlink(Link, Name) == 0) return TRUE;
 
- if ((errno!=EEXIST)||
-     (lstat(Name,&Stat)<0)||
-     !S_ISLNK(Stat.st_mode)) return FALSE;
+	if ((errno != EEXIST) || (lstat(Name, &Stat) < 0) || 
+	    !S_ISLNK(Stat.st_mode)) {
+		return FALSE;
+	}
 
- return ((unlink(Name)==0)&&(symlink(Link,Name)==0));
+	return ((unlink(Name) == 0) && (symlink(Link, Name) == 0));
 }
 
-int WriteFile(gzFile In,char *Name,mode_t Mode,long Length,char *Link)
-
+static int
+WriteFile(FileHandle *In, char *Name, mode_t Mode, unsigned long Length,
+    char *Link)
 {
- int Out;
- struct stat Stat;
- static void *Buffer=NULL;
- static long BufferSize=0;
+	int		Out;
+	struct stat	Stat;
+	static void	*Buffer = NULL;
+	static int	BufferSize = 0;
 
- if (lstat(Name,&Stat)==0)
-  if (!S_ISREG(Stat.st_mode)||(unlink(Name)<0)) return FALSE;
+	if ((lstat(Name, &Stat) == 0) &&
+	    (!S_ISREG(Stat.st_mode) || (unlink(Name) < 0))) {
+		return FALSE;
+	}
 
- if (Buffer==NULL)
-  {
-   BufferSize=sysconf(_SC_PAGESIZE)*256;
-   if ((Buffer=malloc(BufferSize))==NULL) return FALSE;
-  }
+	if (!InitBuffer(&Buffer, &BufferSize))
+		return FALSE;
 
- if (Link!=NULL)
-  {
-   if (link(Link,Name)<0) return FALSE;
-   Out=open(Name,O_WRONLY,Mode);
-  }
- else Out=open(Name,O_WRONLY|O_CREAT,Mode);
- if (Out<0) return FALSE;
+	if (Link != NULL) {
+		if (link(Link, Name) < 0)
+			return FALSE;
+		Out = open(Name, O_WRONLY, Mode);
+	 } else {
+		Out = open(Name, O_WRONLY|O_CREAT, Mode);
+	}
+	if (Out < 0)
+		return FALSE;
 
- while (Length>0)
-  {
-   long Chunk;
+	while (Length > 0) {
+		int	Chunk;
 
-   Chunk=(Length>BufferSize)?BufferSize:Length;
-   if (!GZREAD(In,Buffer,Chunk)) break;
-   if (write(Out,Buffer,Chunk)!=Chunk) break;
-   Length-=Chunk;
-  }
+		Chunk = (Length > BufferSize) ? BufferSize : Length;
+		if (!Read(In, Buffer, Chunk) ||
+		    (write(Out, Buffer, Chunk) != Chunk))
+			break;
+		Length -= Chunk;
+	}
 
- if ((close(Out)==0)&&(Length==0)) return SkipAndAlign(In,0);
+	if ((close(Out) == 0) && (Length == 0))
+		return SkipAndAlign(In, 0);
 
- (void)unlink(Name);
- return FALSE;
+	(void)unlink(Name);
+	return FALSE;
 }
 
-void CheckSymLinks(PListEntry **Links,PListEntry **Files,PListEntry **Dirs)
-
+static void
+CheckSymLinks(PListEntry **Links, PListEntry **Files, PListEntry **Dirs)
 {
- PListEntry *Link;
- struct stat Stat;
+	PListEntry	*Link;
 
- while ((Link=*Links)!=NULL)
-  {
-   PListEntry *Ptr;
-   char *Basename;
+	while ((Link = *Links) != NULL) {
+		struct stat	Stat;
+		PListEntry	*Ptr;
+		char		*Basename;
 
-   if (Link->pe_Left!=NULL)
-    CheckSymLinks(&Link->pe_Left,Files,Dirs);
+		if (Link->pe_Left != NULL)
+			CheckSymLinks(&Link->pe_Left, Files, Dirs);
 
-   if ((stat(Link->pe_Name,&Stat)<0)||!S_ISREG(Stat.st_mode))
-    {
-     Links=&Link->pe_Right;
-     continue;
-    }
+		if ((stat(Link->pe_Name, &Stat) < 0) ||
+		    !S_ISREG(Stat.st_mode)) {
+			Links = &Link->pe_Right;
+			continue;
+		}
 
-   (void)InsertPListEntry(Files,Link->pe_Name);
-   if ((Basename=strrchr(Link->pe_Name,'/'))!=NULL)
-    {
-     *Basename='\0';
-     if ((Ptr=FindPListEntry(*Dirs,Link->pe_Name))!=NULL)
-      Ptr->pe_DirEmpty=FALSE;
-    }
+		(void)InsertPListEntry(Files, Link->pe_Name);
+		if ((Basename = strrchr(Link->pe_Name, '/')) != NULL) {
+			*Basename = '\0';
+			if ((Ptr = FindPListEntry(*Dirs,
+			    Link->pe_Name)) != NULL)
+				Ptr->pe_DirEmpty = FALSE;
+		}
 
-   if (Link->pe_Right==NULL)
-    {
-     *Links=Link->pe_Left;
-     free(Link);
-     break;
-    }
+		if (Link->pe_Right == NULL) {
+			*Links = Link->pe_Left;
+			free(Link);
+			break;
+		}
 
-   *Links=Link->pe_Right;
-   Ptr=Link->pe_Left;
-   free(Link);
+		*Links = Link->pe_Right;
+		Ptr = Link->pe_Left;
+		free(Link);
 
-   if (Ptr==NULL) continue;
+		if (Ptr == NULL)
+			continue;
 
-   Link=*Links;
-   while (Link->pe_Left!=NULL) Link=Link->pe_Left;
-   Link->pe_Left=Ptr;
-  }
+		Link = *Links;
+		while (Link->pe_Left != NULL)
+			Link = Link->pe_Left;
+		Link->pe_Left = Ptr;
+	}
 }
 
-int main(int argc,char **argv)
-
+static int
+CheckPrefix(char *Prefix, char *Name)
 {
- FILE *PList;
- char **Ignore,*Prefix;
- int Opt,Index,FD,IsSource,PathIndex,StripPath;
- PListEntry *Files,*Links,*Dirs;
- Header Hdr;
- gzFile In;
+	int	Length;
 
- PList=NULL;
- Ignore=NULL;
- Prefix=NULL;
- StripPath = 0;
- while ((Opt=getopt(argc,argv,"s:d:f:i:p:"))!=-1)
-  switch (Opt)
-   {
-    case 's':
-     StripPath=atoi(optarg);
-     if (StripPath == 0) {
-      fprintf(stderr,"Warning: -s argument to %s should be a positive integer, ignoring supplied argument\n",argv[Index]);
-     }
-     break;
-    case 'f':
-     if (PList!=NULL) (void)fclose(PList);
-     if ((PList=fopen(optarg,"a"))==NULL)
-      {
-       perror(optarg);
-       return EXIT_FAILURE;
-      }
-     break;
-    case 'i':
-     if ((Ignore=ArrayAdd(Ignore,optarg))==NULL)
-      {
-       perror(__progname);
-       exit(EXIT_FAILURE);
-      }
-     break;
-    case 'd':
-     if (chdir(optarg))
-      {
-       perror(optarg);
-       return EXIT_FAILURE;
-      }
-     break;
-    case 'p':
-     Prefix=optarg;
-     break;
-    default:
-     Usage();
-   }
+	Length = strlen(Prefix);
+	return ((strncmp(Prefix, Name, Length) == 0) && 
+	    ((Name[Length] == '\0') || (Name[Length] == '/')));
+}
 
- if (Prefix!=NULL)
-  {
-   int Length;
+static char *
+StripPrefix(char *Name, int Count)
+{
+	char *NewName;
 
-   Length=strlen(Prefix);
-   if (Length==0) Prefix=NULL;
-   else
-    if ((Prefix[Length-1]!='/')&&((Prefix=StrCat(Prefix,"/"))==NULL))
-     {
-      perror(__progname);
-      exit(EXIT_FAILURE);
-     }
-  }
+	if (Count <= 0)
+		return Name;
 
- argc-=optind;
- argv+=optind;
- if (argc==0) Usage();
+	NewName = Name;
+	while (Count-- > 0) {
+		NewName = strchr(NewName, '/');
+		if (NewName == NULL)
+			return NULL;
+		NewName++;
+	}
+	(void)memmove(Name, NewName, strlen(NewName) + 1);
 
- Files=NULL;
- Links=NULL;
- Dirs=NULL;
- for (Index=0; Index<argc; Index++)
-  {
-   PListEntry *Last;
+	return Name;
+}
 
-   if ((FD=open(argv[Index],O_RDONLY,0))<0)
-    {
-     perror(argv[Index]);
-     return EXIT_FAILURE;
-    }
+int
+main(int argc, char **argv)
+{
+	char		*Progname;
+	FILE		*PListFile;
+	char		**Ignore, *Prefix;
+	int		Opt, Index, FD, IsSource, StripCount;
+	PListEntry	*Files, *Links, *Dirs;
+	Header		Hdr;
+	FileHandle	*In;
 
-   switch (rpmReadPackageHeader(FD,&Hdr,&IsSource,NULL,NULL))
-    {
-     case 0:
-      break;
-     case 1:
-      (void)fprintf(stderr,"%s: file is not an RPM package.\n",argv[Index]);
-      return EXIT_FAILURE;
-     default:
-      (void)fprintf(stderr,"%s: error reading header.\n",argv[Index]);
-      return EXIT_FAILURE;
-    }
+	Progname = strrchr(argv[0], '/');
+	if (Progname == NULL)
+		Progname = argv[0];
+	else
+		Progname ++;
 
-   if ((In=gzdopen(FD,"r"))==NULL)
-    {
-     (void)fprintf(stderr,"%s: cannot read cpio data.\n",argv[Index]);
-     return EXIT_FAILURE;
-    }
+	PListFile = NULL;
+	Ignore = NULL;
+	Prefix = NULL;
+	StripCount = 0;
+	while ((Opt = getopt(argc, argv, "s:d:f:i:p:")) != -1) {
+		switch (Opt) {
+		case 's':
+			StripCount = atoi(optarg);
+			if (StripCount <= 0) {
+     				(void)fprintf(stderr,
+				    "%s: -s argument \"%s\" "
+				    "must be a positive integer.\n",
+				    Progname, optarg);
+				return EXIT_FAILURE;
+    			}
+			break;
+		case 'f':
+			if (PListFile != NULL)
+				(void)fclose(PListFile);
+			if ((PListFile = fopen(optarg, "a")) == NULL) {
+				perror(optarg);
+				return EXIT_FAILURE;
+			}
+			break;
+		case 'i':
+			Ignore = ArrayAdd(Ignore, optarg);
+			break;
+		case 'd':
+			if (chdir(optarg)) {
+				perror(optarg);
+				return EXIT_FAILURE;
+			}
+			break;
+		case 'p':
+			if (strlen(optarg) > 0)
+				Prefix = optarg;
+			break;
+		default:
+			Usage(Progname);
+		}
+	}
 
-   Last=NULL;
-   for (;;)
-    {
-     long Fields[CPIO_NUM_HEADERS];
-     char *Name;
-     char *NewName;
-     char *TmpName;
-     mode_t Mode;
-     long Length;
+	argc -= optind;
+	argv += optind;
+	if (argc == 0)
+		Usage(Progname);
 
-     if (!GetCPIOHeader(In,Fields,&Name))
-      {
-       (void)fprintf(stderr,"%s: error in cpio header.\n",argv[Index]);
-       return EXIT_FAILURE;
-      }
-     if (strcmp(Name,CPIO_END_MARKER)==0)
-      {
-       free(Name);
-       break;
-      }
-     if (*Name=='\0') Fields[CPIO_HDR_MODE]=0;
+	if ((Prefix != NULL) && (Prefix[strlen(Prefix) - 1] != '/'))
+		Prefix = StrCat(Prefix, "/");
 
-     if (Ignore!=NULL)
-      {
-       char **Ptr;
+	Files = NULL;
+	Links = NULL;
+	Dirs = NULL;
+	for (Index = 0; Index < argc ; Index++) {
+		PListEntry	*Last;
 
-       Ptr=Ignore;
-       while (*Ptr!=NULL)
-        {
-         int Length;
+		if ((FD = open(argv[Index], O_RDONLY, 0)) < 0) {
+			perror(argv[Index]);
+			return EXIT_FAILURE;
+		}
 
-         Length=strlen(*Ptr);
-         if ((strncmp(*Ptr,Name,Length)==0)&&
-             ((Name[Length]=='\0')||(Name[Length]=='/'))) break;
-         else Ptr++;
-        }
-       if (*Ptr!=NULL) Fields[CPIO_HDR_MODE]=0;
-      }
+		switch (rpmReadPackageHeader(FD, &Hdr, &IsSource, NULL,
+		    NULL)) {
+		case 0:
+			break;
+		case 1:
+			(void)fprintf(stderr,
+			    "%s: file is not an RPM package.\n", argv[Index]);
+			return EXIT_FAILURE;
+		default:
+			(void)fprintf(stderr, "%s: error reading header.\n",
+			    argv[Index]);
+			return EXIT_FAILURE;
+		}
 
-     for (PathIndex=1; PathIndex<=StripPath; PathIndex++) {
-      NewName=Name;
-      do {
-       NewName++;
-       if (NewName[0]=='\0') {
-        fprintf(stderr,"%s: Leading path to strip too big (-s %d)\n",
-            argv[Index], StripPath);
-        return EXIT_FAILURE;
-       }
-      } while (NewName[0]!='/'); 
-      NewName++; /* We ended up with a leading /, and this must disapear */
-      TmpName=malloc(strlen(NewName));
-      if (TmpName==NULL)
-       {
-        perror(__progname);
-        exit(EXIT_FAILURE);
-       }
-      strcpy(TmpName, NewName); 
-      free(Name);
-      Name=TmpName;
-     }
+		if ((In = Open(FD)) == NULL) {
+			(void)fprintf(stderr,
+			    "%s: cannot read cpio data.\n", argv[Index]);
+			return EXIT_FAILURE;
+		}
 
-     if (Prefix!=NULL)
-      {
-       char *Fullname;
+		Last = NULL;
+		for (;;) {
+			unsigned long	Fields[CPIO_NUM_HEADERS];
+			char		*Name;
+			mode_t		Mode;
+			unsigned long Length;
 
-       if ((Fullname=StrCat(Prefix,Name))==NULL)
-        {
-        perror(__progname);
-        exit(EXIT_FAILURE);
-        }
-       free(Name);
-       Name=Fullname;
-      }
+			if (!GetCPIOHeader(In, Fields, &Name)) {
+				(void)fprintf(stderr,
+				    "%s: error in cpio header.\n",
+				    argv[Index]);
+				return EXIT_FAILURE;
+			}
+			if (strcmp(Name, CPIO_END_MARKER) == 0) {
+				free(Name);
+				break;
+			}
+			if (*Name == '\0')
+				Fields[CPIO_HDR_MODE] = 0;
 
-     Mode=ConvertMode(Fields[CPIO_HDR_MODE]);
-     Length=Fields[CPIO_HDR_FILESIZE];
-     switch (Fields[CPIO_HDR_MODE]&CP_IFMT)
-      {
-       case C_ISDIR:
-        {
-         PListEntry *Dir;
-         int OldDir;
+			if (Ignore != NULL) {
+				char **Ptr;
 
-         if (Length!=0)
-          {
-           (void)fprintf(stderr,"%s: error in cpio file.\n",argv[Index]);
-           return EXIT_FAILURE;
-          }
-         if (!MakeTargetDir(Name,&Dirs,TRUE))
-          {
-           (void)fprintf(stderr,
-                         "%s: can't create parent directories for \"%s\".\n",
-                         argv[Index],
-                         Name);
-           return EXIT_FAILURE;
-          }
+				Ptr = Ignore;
+				while (*Ptr != NULL) {
+					if (CheckPrefix(*Ptr, Name)) {
+						Fields[CPIO_HDR_MODE] = 0;
+						break;
+					}
+					Ptr++;
+				}
+			}
 
-         if (!MakeDir(Name,Mode,&OldDir))
-          {
-           (void)fprintf(stderr,
-                         "%s: can't create directory \"%s\".\n",
-                         argv[Index],
-                         Name);
-           return EXIT_FAILURE;
-          }
+			if ((Name = StripPrefix(Name, StripCount)) == NULL) {
+				(void)fprintf(stderr,
+					    "%s: Leading path to strip too "
+					    "big (-s %d)\n", 
+					    argv[Index], StripCount);
+				return EXIT_FAILURE;
+			}
 
-         if (!OldDir)
-          {
-           Dir=InsertPListEntry(&Dirs,Name);
-           Dir->pe_DirEmpty=TRUE;
-           Dir->pe_DirMode=Mode;
-          }
-         break;
-        }
-       case C_ISLNK:
-        {
-         char *Link;
-         struct stat Stat;
+			if (Prefix != NULL) {
+				char *Fullname;
 
-         if ((Link=GetData(In,Length))==NULL)
-          {
-           (void)fprintf(stderr,"%s: error in cpio file.\n",argv[Index]);
-           return EXIT_FAILURE;
-          }
+			  	Fullname = StrCat(Prefix, Name);
+				free(Name);
+				Name = Fullname;
+			}
 
-         if (!MakeTargetDir(Name,&Dirs,FALSE))
-          {
-           (void)fprintf(stderr,
-                         "%s: can't create parent directories for \"%s\".\n",
-                         argv[Index],
-                         Name);
-           return EXIT_FAILURE;
-          }
+			Mode = ConvertMode(Fields[CPIO_HDR_MODE]);
+			Length = Fields[CPIO_HDR_FILESIZE];
+			switch (Fields[CPIO_HDR_MODE] & CP_IFMT) {
+			case C_ISDIR: {
+				PListEntry	*Dir;
+				int		OldDir;
 
-         if (*Link=='/')
-          {
-           char *Ptr;
+				if (Length != 0) {
+					(void)fprintf(stderr,
+					    "%s: error in cpio file.\n",
+					argv[Index]);
+					return EXIT_FAILURE;
+				}
 
-           (void)strcpy(Link,Link+1);
-           Ptr=Name;
-           if (Prefix!=NULL) Ptr+=strlen(Prefix);
-           while ((Ptr=strchr(Ptr,'/'))!=NULL)
-            {
-             char *NewLink;
+				if (!MakeTargetDir(Name, &Dirs, TRUE)) {
+					(void)fprintf(stderr, 
+					    "%s: can't create parent "
+					    "directories for \"%s\".\n", 
+			                    argv[Index], Name);
+					return EXIT_FAILURE;
+				}
 
-             if ((NewLink=StrCat("../",Link))==NULL)
-              {
-               perror(__progname);
-               return EXIT_FAILURE;
-              }
-             free(Link);
-             Link=NewLink;
+				if (!MakeDir(Name, Mode, &OldDir)) {
+					(void)fprintf(stderr, 
+					    "%s: can't create directory "
+					    "\"%s\".\n", argv[Index], Name);
+					return EXIT_FAILURE;
+				}
 
-             Ptr++;
-            }
-          }
-         if (!MakeSymLink(Link,Name))
-          {
-           (void)fprintf(stderr,
-                         "%s: can't create symbolic link \"%s\".\n",
-                         argv[Index],
-                         Name);
-           return EXIT_FAILURE;
-          }
+				if (!OldDir) {
+					Dir = InsertPListEntry(&Dirs, Name);
+					Dir->pe_DirEmpty = TRUE;
+					Dir->pe_DirMode = Mode;
+				}
+				break;
+			}
+			case C_ISLNK: {
+				char	*Link;
 
-         InsertPListEntry(&Links,Name)->pe_Link=Link;
-         break;
-        }
-       case C_ISREG:
-        if (!MakeTargetDir(Name,&Dirs,TRUE))
-         {
-          (void)fprintf(stderr,
-                        "%s: can't create parent directories for \"%s\".\n",
-                        argv[Index],
-                        Name);
-          return EXIT_FAILURE;
-         }
+				if ((Link = GetData(In, Length)) == NULL) {
+					(void)fprintf(stderr,
+					    "%s: error in cpio file.\n",
+					argv[Index]);
+					return EXIT_FAILURE;
+				}
 
-        if ((Last!=NULL)&&(Last->pe_INode!=Fields[CPIO_HDR_INODE]))
-         Last=NULL;
+				if (!MakeTargetDir(Name, &Dirs, TRUE)) {
+					(void)fprintf(stderr, 
+					    "%s: can't create parent "
+					    "directories for \"%s\".\n", 
+			                    argv[Index], Name);
+					return EXIT_FAILURE;
+				}
 
-        if (!WriteFile(In,Name,Mode,Length,(Last!=NULL)?Last->pe_Name:NULL))
-         {
-          (void)fprintf(stderr,
-                        "%s: can't write file \"%s\".\n",
-                        argv[Index],
-                        Name);
-          return EXIT_FAILURE;
-         }
+				if (*Link == '/') {
+					char	*Ptr;
 
-        Last=InsertPListEntry(&Files,Name);
-	Last->pe_INode=Fields[CPIO_HDR_INODE];
-        break;
-       default:
-        if ((Length>0)&&(gzseek(In,(Length+3)&(~3),SEEK_CUR)<0)) break;
-      }
+					(void)memmove(Link, Link + 1,
+					    strlen(Link + 1) + 1);
+					Ptr = Name;
+					if (Prefix != NULL)
+						Ptr += strlen(Prefix);
 
-     free(Name);
-    }
+					while ((Ptr = strchr(Ptr, '/'))
+					    != NULL) {
+						char *NewLink;
 
-   (void)gzclose(In);
-   (void)close(FD);
-  }
+					    	NewLink = StrCat("../", Link);
+						free(Link);
+						Link = NewLink;
+						Ptr++;
+					}
+				}
 
- if (PList!=NULL)
-  {
-   ProcessPList(Files,PListEntryFile,PLIST_ORDER_FORWARD,PList);
-   ProcessPList(Dirs,PListEntryMakeDir,PLIST_ORDER_FORWARD,PList);
-   ProcessPList(Links,PListEntryLink,PLIST_ORDER_FORWARD,PList);
-   ProcessPList(Dirs,PListEntryRemoveDir,PLIST_ORDER_BACKWARD,PList);
-   (void)fclose(PList);
-  }
+				if (!MakeSymLink(Link, Name)) {
+					(void)fprintf(stderr, 
+					    "%s: can't create symbolic link "
+					    "\"%s\".\n", argv[Index], Name);
+					return EXIT_FAILURE;
+				}
 
- return EXIT_SUCCESS;
+		    		InsertPListEntry(&Links, Name)->pe_Link = Link;
+				break;
+			}
+			case C_ISREG:
+				if (!MakeTargetDir(Name, &Dirs, TRUE)) {
+					(void)fprintf(stderr, 
+					    "%s: can't create parent "
+					    "directories for \"%s\".\n", 
+			                    argv[Index], Name);
+					return EXIT_FAILURE;
+				}
+
+
+				if ((Last != NULL) && (Last->pe_INode != 
+				    Fields[CPIO_HDR_INODE])) {
+					Last = NULL;
+				}
+
+				if (!WriteFile(In, Name, Mode, Length,
+				    (Last != NULL)? Last->pe_Name : NULL)) {
+					(void)fprintf(stderr, 
+			                    "%s: can't write file \"%s\".\n", 
+			                    argv[Index], 
+			                    Name);
+					return EXIT_FAILURE;
+				}
+
+				Last = InsertPListEntry(&Files, Name);
+				Last->pe_INode = Fields[CPIO_HDR_INODE];
+				break;
+			default:
+				if ((Length > 0) &&
+				    !SkipAndAlign(In, Length)) {
+					(void)fprintf(stderr,
+					    "%s: error in cpio file.\n",
+					    argv[Index]);
+					return EXIT_FAILURE;
+				}
+						
+			}
+
+			free(Name);
+		}
+
+		Close(In);
+		(void)close(FD);
+	}
+
+	if (PListFile != NULL) {
+		ProcessPList(Files, PListEntryFile, PLIST_ORDER_FORWARD,
+		    PListFile);
+		ProcessPList(Dirs, PListEntryMakeDir, PLIST_ORDER_FORWARD,
+		    PListFile);
+		ProcessPList(Links, PListEntryLink, PLIST_ORDER_FORWARD,
+		    PListFile);
+		ProcessPList(Dirs, PListEntryRemoveDir, PLIST_ORDER_BACKWARD,
+		    PListFile);
+		(void)fclose(PListFile);
+	}
+
+	return EXIT_SUCCESS;
 }
