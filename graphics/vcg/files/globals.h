@@ -17,7 +17,7 @@
 /*                                                                    */
 /*--------------------------------------------------------------------*/
 
-/* $Id: globals.h,v 1.1.1.1 1999/06/13 12:47:19 sakamoto Exp $ */
+/* $Id: globals.h,v 1.2 1999/06/13 12:54:19 sakamoto Exp $ */
 
 /*
  *   Copyright (C) 1993--1995 by Georg Sander, Iris Lemke, and
@@ -43,9 +43,8 @@
 
 
 /* $Log: globals.h,v $
-/* Revision 1.1.1.1  1999/06/13 12:47:19  sakamoto
-/* Import FreeBSD's "vcg" port:
-/* A Visualization Tool for compiler graphs.
+/* Revision 1.2  1999/06/13 12:54:19  sakamoto
+/* Adapt this package to NetBSD.
 /*
  * Revision 1.1.1.1  1995/02/19 09:25:43  hsu
  * vcg - a visualization tool for compiler graphs
