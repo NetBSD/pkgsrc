@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2901 2005/01/14 14:53:49 minskim Exp $
+$NetBSD: TODO,v 1.2902 2005/01/14 15:26:23 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -837,7 +837,6 @@ Suggested package updates
 	o p5-Net-Google-0.62
 	o p5-Net-IP-1.21
 	o p5-Net-Jabber-2.0
-	o p5-Net-SNMP-5.0.1
 	o p5-Net-TFTP-0.16
 	o p5-Net-Z3950-0.46
 	o p5-OOTools-1.76

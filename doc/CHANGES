@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8754 2005/01/14 14:53:49 minskim Exp $
+$NetBSD: CHANGES,v 1.8755 2005/01/14 15:26:23 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -305,3 +305,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added afterstep1-1.8.11 [jmmv 2005-01-14]
 	Updated afterstep to 2.00.01 [jmmv 2005-01-14]
 	Updated mathomatic to 11.6d [minskim 2005-01-14]
+	Updated p5-Net-SNMP to 5.0.1 [jschauma 2005-01-14]
