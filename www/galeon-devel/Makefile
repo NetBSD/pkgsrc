@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/04/03 11:18:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/03 13:26:32 jmmv Exp $
 #
 
 DISTNAME=	galeon-1.3.14a
-PKGNAME=	${DISTNAME:S/galeon/galeon-devel/}
 PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=galeon/}
@@ -14,6 +13,8 @@ COMMENT=	GNOME2 Web browser based on gecko
 
 DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
+
+CONFLICTS+=		galeon-devel-[0-9]*
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
@@ -31,7 +32,7 @@ GCONF2_SCHEMAS=		galeon.schemas
 CONFIGURE_ARGS+=	--with-mozilla-snapshot=1.6
 CONFIGURE_ARGS+=	--enable-nautilus-view=yes
 
-EGDIR=			${PREFIX}/share/examples/galeon-devel
+EGDIR=			${PREFIX}/share/examples/galeon
 CONF_FILES=		${EGDIR}/sound/events/galeon.soundlist \
 			${PKG_SYSCONFDIR}/sound/events/galeon.soundlist
 
