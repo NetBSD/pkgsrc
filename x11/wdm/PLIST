@@ -1,31 +1,34 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/23 17:33:31 salo Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/05/06 21:03:25 jmmv Exp $
 bin/wdm
 bin/wdmLogin
-lib/X11/wdm/GiveConsole
-lib/X11/wdm/TakeConsole
-lib/X11/wdm/Xaccess
-lib/X11/wdm/Xclients
-lib/X11/wdm/Xclients.in
-lib/X11/wdm/Xresources
-lib/X11/wdm/Xservers
-lib/X11/wdm/Xservers.fs
-lib/X11/wdm/Xservers.ws
-lib/X11/wdm/Xsession
-lib/X11/wdm/Xsession.XFree86
-lib/X11/wdm/Xsession.orig
-lib/X11/wdm/Xsetup_0
-lib/X11/wdm/pixmaps/Eagle.xpm
-lib/X11/wdm/pixmaps/Earth.jpg
-lib/X11/wdm/pixmaps/Earth200x130.xpm
-lib/X11/wdm/pixmaps/GnuLinux-logo.jpg
-lib/X11/wdm/pixmaps/Stars.jpg
-lib/X11/wdm/pixmaps/StarsLogo.jpg
-lib/X11/wdm/pixmaps/gnuLogo.xpm
-lib/X11/wdm/wdm-config
-lib/X11/wdm/wdm-config.in
-lib/X11/wdm/wdmReconfig
+etc/rc.d/wdm
 man/man1/wdm.1
 man/man1/wdmLogin.1
+share/examples/wdm/GiveConsole
+share/examples/wdm/TakeConsole
+share/examples/wdm/Xaccess
+share/examples/wdm/Xclients
+share/examples/wdm/Xclients.in
+share/examples/wdm/Xresources
+share/examples/wdm/Xservers
+share/examples/wdm/Xservers.fs
+share/examples/wdm/Xservers.ws
+share/examples/wdm/Xsession
+share/examples/wdm/Xsession.XFree86
+share/examples/wdm/Xsession.orig
+share/examples/wdm/Xsetup_0
+share/examples/wdm/wdm-config
+share/examples/wdm/wdm-config.in
+share/examples/wdm/wdmReconfig
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/wdm.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/wdm.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/wdm.mo
-@dirrm lib/X11/wdm/pixmaps
+share/pixmaps/wdm/Eagle.xpm
+share/pixmaps/wdm/Earth.jpg
+share/pixmaps/wdm/Earth200x130.xpm
+share/pixmaps/wdm/GnuLinux-logo.jpg
+share/pixmaps/wdm/Stars.jpg
+share/pixmaps/wdm/StarsLogo.jpg
+share/pixmaps/wdm/gnuLogo.xpm
+@dirrm share/pixmaps/wdm
+@dirrm share/examples/wdm
