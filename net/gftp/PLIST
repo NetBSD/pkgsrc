@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/09/01 21:38:43 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/12/13 11:49:39 xtraeme Exp $
 bin/gftp
 bin/gftp-gtk
 bin/gftp-text
@@ -34,15 +34,19 @@ share/gftp/world.xpm
 share/gnome/apps/Internet/gftp.desktop
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gftp.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gftp.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gftp.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gftp.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gftp.mo
@@ -57,6 +61,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gftp.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gftp.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gftp.mo
