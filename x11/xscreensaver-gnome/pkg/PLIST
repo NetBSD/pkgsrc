@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2000/07/10 18:18:39 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/07/14 07:21:03 tron Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -184,6 +184,6 @@ man/man1/xscreensaver-demo.1
 man/man1/xscreensaver.1
 man/man1/xsublim.1
 man/man1/xteevee.1
-share/gnome/apps/Settings/Desktop/screensaver-properties.desktop
-share/control-center/Desktop/screensaver-properties.desktop
+share/gnome/apps/Settings/Desktop/xscreensaver-properties.desktop
+share/control-center/Desktop/xscreensaver-properties.desktop
 @dirrm libexec/xscreensaver
