@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/12/27 20:07:10 tron Exp $
+# $NetBSD: Makefile,v 1.37 2004/12/28 11:02:55 tron Exp $
 
 DISTNAME=	gtk-gnutella-0.95
 CATEGORIES=	net
@@ -21,16 +21,14 @@ CONFIGURE_ARGS+=	-d -e -r -s -D prefix="${PREFIX}" -D cc="${CC}" \
 			-D locale="${PREFIX}/${PKGLOCALEDIR}/locale" \
 			-D optimize="${COPTS}" -D gtkversion=2 -D yacc="yacc"
 
-.include "../../mk/bsd.prefs.mk"
-
-.if exists(${X11PREFIX}/include/gtk-2.0/gtk/gtkcellrendererprogress.h)
-post-extract:
-	cd ${WRKSRC}/src/ui/gtk/gtk2 && 		\
-	${RM} pbarcellrenderer.c pbarcellrenderer.h &&	\
-	${TOUCH} pbarcellrenderer.c pbarcellrenderer.h
-.endif
-
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+
+post-configure:
+	@if [ -f ${BUILDLINK_PREFIX.gtk2}/include/gtk-2.0/gtk/gtkcellrendererprogress.h ]; then \
+	  cd ${WRKSRC}/src/ui/gtk/gtk2 && 			\
+	  ${RM} pbarcellrenderer.c pbarcellrenderer.h &&	\
+	  ${TOUCH} pbarcellrenderer.c pbarcellrenderer.h;	\
+	fi
 
 .include "../../mk/bsd.pkg.mk"
