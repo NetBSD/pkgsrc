@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/02/22 01:49:31 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/02/22 01:52:05 jlam Exp $
 
 DISTNAME?=	courier-${DIST_VERS}
 CATEGORIES+=	mail
@@ -27,8 +27,6 @@ EGDIR=			${PREFIX}/share/examples/courier
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK3=		yes
-USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR}
