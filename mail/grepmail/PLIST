@@ -1,3 +1,1 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:00:11 zuntum Exp $
-bin/grepmail-quick
-bin/grepmail-full
+@comment $NetBSD: PLIST,v 1.2 2002/10/31 08:18:40 seb Exp $
