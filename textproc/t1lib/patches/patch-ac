@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.3 1999/09/24 01:00:04 fredb Exp $
+$NetBSD: patch-ac,v 1.4 1999/12/02 21:19:13 fredb Exp $
 
---- lib/Makefile.in.orig	Wed Aug  4 05:59:02 1999
-+++ lib/Makefile.in	Thu Sep 23 14:11:08 1999
+--- lib/Makefile.in.orig	Sun Oct 24 04:57:22 1999
++++ lib/Makefile.in	Thu Dec  2 14:44:58 1999
 @@ -15,7 +15,7 @@
  #
  # Modified by H.Kakugawa to use libtool
@@ -15,19 +15,19 @@ $NetBSD: patch-ac,v 1.3 1999/09/24 01:00:04 fredb Exp $
  		$(INSTALL_DATA) $(MAIN_TARGET) $(libdir)
  	$(LIBTOOL) --mode=install \
  		$(INSTALL_DATA) $(MAIN_HEADER) $(includedir)
--	$(MKINSTALLDIRS) $(datadir)/t1lib-$(t1lib_version).$(t1lib_revision)
--	if (test -f $(datadir)/t1lib-$(t1lib_version).$(t1lib_revision)/t1lib.config) \
+-	$(MKINSTALLDIRS) @T1LIB_DATA_DIR@
+-	if (test -f @T1LIB_DATA_DIR@/t1lib.config) \
 -	then \
 -	  echo "Alert: Global configuration file exists, installation skipped!"; \
 -	else \
--	  $(LIBTOOL) --mode=install $(INSTALL_DATA) t1lib.config $(datadir)/t1lib-$(t1lib_version).$(t1lib_revision); \
+-	  $(LIBTOOL) --mode=install $(INSTALL_DATA) t1lib.config @T1LIB_DATA_DIR@; \
 -	fi;
-+#	$(MKINSTALLDIRS) $(datadir)/t1lib-$(t1lib_version).$(t1lib_revision)
-+#	if (test -f $(datadir)/t1lib-$(t1lib_version).$(t1lib_revision)/t1lib.config) \
++#	$(MKINSTALLDIRS) @T1LIB_DATA_DIR@
++#	if (test -f @T1LIB_DATA_DIR@/t1lib.config) \
 +#	then \
 +#	  echo "Alert: Global configuration file exists, installation skipped!"; \
 +#	else \
-+#	  $(LIBTOOL) --mode=install $(INSTALL_DATA) t1lib.config $(datadir)/t1lib-$(t1lib_version).$(t1lib_revision); \
++#	  $(LIBTOOL) --mode=install $(INSTALL_DATA) t1lib.config @T1LIB_DATA_DIR@; \
 +#	fi;
  
  
