@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/05 15:02:24 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/04 13:24:32 cjep Exp $
 #
 
-DISTNAME=	GutenMark-words-20021124
+DISTNAME=	GutenMark-words-20021228
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.sandroid.org/GutenMark/Wordlists/
 DISTFILES=	${WORDLISTS} GutenMark.cfg
