@@ -1,9 +1,9 @@
 # New ports collection Makefile for:    exmh2
 # Version required:		2.0zeta
-# Date released:		1 Jan 97
+# Date created:		1 Jan 97
 # Whom:				Peter Wemm <peter@freebsd.org>
 #
-# $NetBSD: Makefile,v 1.2 1997/11/19 14:49:49 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/24 20:28:43 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.17 1997/10/06 06:49:45 peter Exp
 #
 
@@ -17,13 +17,13 @@ PATCH_SITES=	http://www.sunlabs.com/~bwelch/exmh/patches/2.0zeta/
 PATCHFILES=	ispell.patch koir.patch mime.patch seditMime.patch scan.patch \
 		addr.patch html.patch html_dpackage.patch pgpExec.patch
 
+MAINTAINER=	peter@FreeBSD.org
+
 .if defined(PATCH_DEBUG)
 PATCH_DIST_ARGS= -d ${WRKSRC}/lib -E ${PATCH_DIST_STRIP}
 .else
 PATCH_DIST_ARGS= -d ${WRKSRC}/lib --forward --quiet -E ${PATCH_DIST_STRIP}
 .endif
-
-MAINTAINER=	peter@FreeBSD.org
 
 DIST_SUBDIR=	${PKGNAME}
 
