@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2000/08/27 02:46:04 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/10 19:08:09 bad Exp $
 #
 
-DISTNAME=	grepmail-4.11
+DISTNAME=	grepmail-4.45
 CATEGORIES=	mail
-MASTER_SITES=	http://www.cs.virginia.edu/~dwc3q/code/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grepmail/}
 
 MAINTAINER=	david@fundy.net
-HOMEPAGE=	http://www.cs.virginia.edu/~dwc3q/code/index.html
+HOMEPAGE=	http://grepmail.sourceforge.net/
 
 USE_PERL5=	# defined
 CONFIGURE_ENV=	PERL=${PERL5}
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/grepmail/.packlist
 
 do-build:
 	@cd ${WRKSRC} ;						\
@@ -21,6 +22,8 @@ do-build:
 	done
 
 do-install:
+	@cd ${WRKSRC} ;						\
+	${MAKE} install
 	${INSTALL_SCRIPT} ${WRKSRC}/grepmail-1 ${PREFIX}/bin/grepmail-quick
 	${INSTALL_SCRIPT} ${WRKSRC}/grepmail-2 ${PREFIX}/bin/grepmail-full
 	${RM} -f ${PREFIX}/bin/grepmail
