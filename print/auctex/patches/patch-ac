@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/12/02 07:49:27 jtb Exp $
+$NetBSD: patch-ac,v 1.2 2001/03/01 18:50:06 jtb Exp $
 
 --- tex-site.el.orig	Sat Dec  2 07:30:00 2000
 +++ tex-site.el
@@ -7,10 +7,10 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/12/02 07:49:27 jtb Exp $
  ;; insert them here.
  
 -(defvar TeX-lisp-directory "@AUCDIR"
-+(defvar TeX-lisp-directory "%%PREFIX%%/share/emacs/site-lisp/auctex/"
++(defvar TeX-lisp-directory "@LISPDIR@/auctex/"
    "*The directory where the AUC TeX lisp files are located.")
 +
-+(defvar TeX-macro-global '("%%TEX_PREFIX%%/share/texmf/tex/")
++(defvar TeX-macro-global '("@TEX_PREFIX@/share/texmf/tex/")
 +  "Directories containing the sites TeX macro files and style files.
 +   The directory names *must* end with a slash.")
  
