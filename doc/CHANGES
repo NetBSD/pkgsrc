@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5417 2004/04/02 10:07:57 martti Exp $
+$NetBSD: CHANGES,v 1.5418 2004/04/02 10:23:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1745,3 +1745,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added Addresses-0.4.5 [rh 2004-04-02]
 	Added ht-0.7.5 [jmmv 2004-04-02]
 	Updated xfce4-menueditor to 1.05 [martti 2004-04-02]
+	Updated libsndfile to 1.0.9 [adam 2004-04-02]
