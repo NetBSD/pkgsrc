@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 1999/01/31 22:21:29 bad Exp $
+
+--- cgoban.c.orig	Sun Oct  5 00:58:37 1997
++++ cgoban.c	Sun Jan 31 23:19:14 1999
+@@ -151,12 +151,12 @@
+     {"client.protocol", "n|i|n|n|n|n|n|n|n|n", NULL, 0, NULL},
+     {"client.direct", "t|t|t|t|t|t|t|t|t|t", NULL, 0, NULL},
+     {"client.connCmd", "telnet nngs.cosmic.org 9696|"
+-       "telnet igs.nuri.net 6969|"
++       "telnet igs.joyjoy.net 6969|"
+        "telnet|telnet|telnet|telnet|telnet|telnet|telnet|telnet",
+        NULL, 0, NULL},
+     {"client.username", "|||||||||", NULL, 0, NULL},
+     {"client.password", "|||||||||", NULL, 0, NULL},
+-    {"client.address", "nngs.cosmic.org|igs.nuri.net|micro.ee.nthu.edu.tw|"
++    {"client.address", "nngs.cosmic.org|igs.joyjou.net|micro.ee.nthu.edu.tw|"
+        "jet.ncic.ac.cn|grizu.uni-regensburg.de|||||",
+        NULL, 0, NULL},
+     {"client.port", "9696|6969|9696|9696|9696|9696|9696|9696|9696|9696",
