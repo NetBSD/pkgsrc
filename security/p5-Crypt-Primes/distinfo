@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/10/01 00:33:14 mcr Exp $
+$NetBSD: distinfo,v 1.2 2004/02/22 22:24:38 heinz Exp $
 
-SHA1 (Crypt-Primes-0.49.tar.gz) = 8da71a3b2631890ab610f20853cb154f99026067
-Size (Crypt-Primes-0.49.tar.gz) = 136219 bytes
+SHA1 (Crypt-Primes-0.50.tar.gz) = 1b61c6693b7d703514082ddb5821cdfd45274e81
+Size (Crypt-Primes-0.50.tar.gz) = 136299 bytes
