@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2004/11/08 18:19:41 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.22 2004/11/12 12:39:12 xtraeme Exp $
 
 DISTNAME=		mysql-4.1.7
 CATEGORIES=		databases
@@ -61,6 +61,7 @@ CONFIGURE_ARGS+=	--enable-assembler
 CONFIGURE_ENV+=		F77=${FALSE}
 
 CPPFLAGS+=		-Dunix
+CFLAGS+=		-DUSE_OLD_FUNCTIONS # 3.23.x compat
 
 # force HAVE_CURSES_H on Solaris since the configure script is broken
 # and does not properly detect this, breaking the build later on.
