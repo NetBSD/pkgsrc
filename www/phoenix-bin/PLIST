@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2003/04/14 19:56:28 grant Exp $
-bin/phoenix-linux
+@comment $NetBSD: PLIST,v 1.2 2003/04/14 22:59:31 grant Exp $
+@comment this PLIST intentionally left blank
