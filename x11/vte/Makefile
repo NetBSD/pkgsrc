@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/11/06 16:52:57 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2004/11/06 17:00:11 minskim Exp $
 #
 
 DISTNAME=	vte-0.11.11
@@ -26,8 +26,6 @@ CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 PKGCONFIG_OVERRIDE+=    vte.pc.in
-
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
