@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/03/14 20:01:43 skrll Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/14 20:15:59 skrll Exp $
 
 DISTNAME=	kdebase-2.1
 CATEGORIES=	x11 kde
@@ -47,8 +47,8 @@ post-install:
 	${CP} kdmrc kdmrc.new ; \
 	${SED} \
 		-e 's|^\(GreetString\)=.*|\1=Welcome to ${OPSYS}! [HOSTNAME]|' \
+		-e 's|^#\(LogoPixmap\)=.*|\1=${PREFIX}/share/kde/icons/Daemon.png|' \
 		<kdmrc.new >kdmrc ; \
-	${ECHO} 'LogoPixmap=${PREFIX}/share/kde/icons/Daemon.png' >>kdmrc ; \
 	${RM} kdmrc.new
 	@${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/share/kde/icons
 	@${INSTALL_DATA} ${DISTDIR}/Daemon.README \
