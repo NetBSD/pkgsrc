@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2461 2003/06/08 20:19:35 fredb Exp $
+$NetBSD: CHANGES,v 1.2462 2003/06/08 21:26:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2385,3 +2385,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated anomy-sanitizer to 1.60 [kim 2003-06-08]
 	Updated cpuflags to 0.48 [abs 2003-06-08]
 	Updated binutils to 2.13.2.1 [fredb 2003-06-08]
+	Updated naim to 0.11.5.9 [wiz 2003-06-08]
