@@ -1,15 +1,18 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/07/06 18:04:40 agc Exp $
+$NetBSD: patch-ab,v 1.2 2005/02/24 10:59:56 bad Exp $
 
---- libfwbuilder-config.in	2004/07/06 11:44:26	1.1
-+++ libfwbuilder-config.in	2004/07/06 11:45:40
-@@ -167,8 +167,8 @@
- stat_lib=
- for i in $all_flags; do
-     case "$i" in
--    -L/usr/lib) ;;
--    -I/usr/include) ;;
-+    -L*) ;;
-+    -I*) ;;
-     *.a) stat_libs="$stat_libs $i" ;;
-     -l*) rev_libs="$i $rev_libs" ;;
-     *)
+--- qmake.inc.in.orig	Wed Sep  8 07:34:44 2004
++++ qmake.inc.in	Wed Dec 15 17:36:00 2004
+@@ -43,12 +43,10 @@
+ 	migration.path          =$(DDIR)@TEMPLATE_DIR@/migration
+ 	doc.path                =$(DDIR)@DOCDIR@
+ 
+-	CONFIG                 += warn_on debug
++	CONFIG                 += warn_on
+ 	INCLUDEPATH            += /usr/include @XML_CFLAGS_Q@ @XSLT_CFLAGS_Q@ @PTHREAD_CFLAGS_Q@ @OPENSSL_CFLAGS_Q@ @LWRES_CFLAGS_Q@
+ 	QMAKE_CFLAGS_DEBUG     += -Wno-unused-parameter
+-	QMAKE_CFLAGS_RELEASE   += -Wno-unused-parameter
+ 	QMAKE_CXXFLAGS_DEBUG   += -Wno-unused-parameter
+-	QMAKE_CXXFLAGS_RELEASE += -Wno-unused-parameter
+ 	LIBS                   += @PTHREAD_LIBS@ @XML_LIBS@ @XSLT_LIBS@ @OPENSSL_LIBS@ @LIBSNMP_LIBS@ @LWRES_LIBS@ @LIBS@
+ }
+ 

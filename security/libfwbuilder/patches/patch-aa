@@ -1,37 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/07/06 18:04:40 agc Exp $
-
---- acinclude.m4.old	Sun Jun  1 05:25:09 2003
-+++ acinclude.m4	Sun Jun  1 05:25:31 2003
-@@ -81,19 +81,19 @@
-     ],[
- 	echo
- 
--dnl      if test "${ac_cv_lib_snmp_init_snmp+set}" = "set"; then
--dnl        unset ac_cv_lib_snmp_init_snmp
--dnl      fi
--dnl
--dnl      save_LIBS="$LIBS"
--dnl      LIBS="$LIBS -ldes"
--dnl      AC_CHECK_LIB($ac_snmplib_name, init_snmp,
--dnl      [
--dnl          LIBS="$save_LIBS"
--dnl          LIBSNMP_LIBS="-ldes -l$ac_snmplib_name"
--dnl	  HAVE_LIBSNMP="1"
--dnl          AC_DEFINE(HAVE_LIBSNMP)
--dnl      ])
-+      if test "${ac_cv_lib_snmp_init_snmp+set}" = "set"; then
-+        unset ac_cv_lib_snmp_init_snmp
-+      fi
-+
-+      save_LIBS="$LIBS"
-+      LIBS="$LIBS -ldes"
-+      AC_CHECK_LIB($ac_snmplib_name, init_snmp,
-+      [
-+          LIBS="$save_LIBS"
-+          LIBSNMP_LIBS="-ldes -l$ac_snmplib_name"
-+	  HAVE_LIBSNMP="1"
-+          AC_DEFINE(HAVE_LIBSNMP)
-+      ])
-     ])
-   ])
- 
+--- configure      2004/07/06 11:44:26     1.1
++++ configure      2004/07/06 11:45:40
+10032c10032
+< . runqmake.sh
+---
+> $SHELL runqmake.sh
