@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2004/05/10 19:15:53 danw Exp $
+# $NetBSD: Makefile,v 1.78 2004/07/23 23:51:21 jlam Exp $
 
 DISTNAME=		openldap-2.1.30
 SVR4_PKGNAME=		oldap
@@ -6,7 +6,7 @@ CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.OpenLDAP.org/
 COMMENT=		Lightweight directory access protocol server and client package
 
