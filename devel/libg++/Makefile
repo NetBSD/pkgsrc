@@ -1,12 +1,12 @@
 # New ports collection makefile for:	libg++
-# Version required:	2.8.1.1
+# Version required:	2.8.1.1a
 # Date created:		8 April 1998
 # Whom:			tv@netbsd.org
 #
-# $NetBSD: Makefile,v 1.1 1998/04/09 13:58:51 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/04/12 23:16:16 tv Exp $
 #
 
-GXXVERSION=	2.8.1.1		# used by internal Makefile
+GXXVERSION=	2.8.1.1a	# used by internal Makefile
 DISTNAME=	libg++-${GXXVERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU}
