@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.133 2003/12/05 05:33:17 reed Exp $
+# $NetBSD: bsd.prefs.mk,v 1.134 2003/12/10 13:59:07 grant Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -152,13 +152,24 @@ OBJECT_FMT?=		Mach-O
 .include <bsd.own.mk>
 
 # /usr/share/mk/bsd.own.mk on NetBSD 1.3 does not define OBJECT_FMT
-.if ${MACHINE_PLATFORM:MNetBSD-1.3*} != ""
+.if !empty(MACHINE_PLATFORM:MNetBSD-1.3*)
 .  if ${MACHINE_ARCH} == "alpha" || \
       ${MACHINE_ARCH} == "mipsel" || ${MACHINE_ARCH} == "mipseb" || \
       ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc64"
 OBJECT_FMT?=		ELF
 .  else
 OBJECT_FMT?=		a.out
+.  endif
+# override what bootstrap-pkgsrc sets, which isn't right for NetBSD
+# 1.4.
+# XXX other ELF platforms in 1.4 need to be added to here.
+.elif !empty(MACHINE_PLATFORM:MNetBSD-1.4*)
+.  if ${MACHINE_ARCH} == "alpha" || \
+      ${MACHINE_ARCH} == "mipsel" || ${MACHINE_ARCH} == "mipseb" || \
+      ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc64"
+OBJECT_FMT=		ELF
+.  else
+OBJECT_FMT=		a.out
 .  endif
 .endif
 
