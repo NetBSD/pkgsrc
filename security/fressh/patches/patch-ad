@@ -1,0 +1,307 @@
+$NetBSD: patch-ad,v 1.1 2003/09/21 08:35:54 jmc Exp $
+
+--- crypto/ssh_crypto_openssl.c.orig	2003-09-21 03:06:28.000000000 +0000
++++ crypto/ssh_crypto_openssl.c	2003-09-21 03:26:42.000000000 +0000
+@@ -50,7 +50,11 @@
+ #include <openssl/opensslv.h>
+ 
+ #if OPENSSL_VERSION_NUMBER >= 0x00903000L
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++#define TO_CBLOCK(x)	((DES_cblock *)(x))
++#else
+ #define TO_CBLOCK(x)	((des_cblock *)(x))
++#endif
+ #else
+ #define	TO_CBLOCK(x)	(x)
+ #endif
+@@ -431,7 +435,11 @@
+ 	FUNC_DECL(ssh_des_initialize);
+ 
+ 	int err;
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++	DES_cblock key;
++#else
+ 	des_cblock key;
++#endif
+ 	ssh_des_t *key_data;
+ 
+ 	if (klen < 8) {
+@@ -444,12 +452,21 @@
+ 	if (key_data == NULL)
+ 		return NULL;
+ 
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++	memcpy(key, session_key, sizeof(DES_cblock));
++	DES_set_odd_parity(TO_CBLOCK(key));
++	if (!DES_is_weak_key(TO_CBLOCK(key)))
++		(void) DES_set_key(TO_CBLOCK(key), &key_data->des_ks);
++	else
++		err = 1;
++#else
+ 	memcpy(key, session_key, sizeof(des_cblock));
+ 	des_set_odd_parity(TO_CBLOCK(key));
+ 	if (!des_is_weak_key(TO_CBLOCK(key)))
+ 		(void) des_set_key(TO_CBLOCK(key), key_data->des_ks);
+ 	else
+ 		err = 1;
++#endif
+ 
+ 	memset(key_data->des_ivec[0], 0, sizeof(key_data->des_ivec[0]));
+ 	memset(key_data->des_ivec[1], 0, sizeof(key_data->des_ivec[1]));
+@@ -477,8 +494,13 @@
+ 		ssh_des_t *key_data)
+ {
+ 
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++	DES_ncbc_encrypt(clear, enc, length, &key_data->des_ks,
++			 TO_CBLOCK(key_data->des_ivec[0]), DES_ENCRYPT);
++#else
+ 	des_ncbc_encrypt(clear, enc, length, key_data->des_ks,
+ 			 TO_CBLOCK(key_data->des_ivec[0]), DES_ENCRYPT);
++#endif
+ }
+ 
+ void
+@@ -486,8 +508,13 @@
+ 		ssh_des_t *key_data)
+ {
+ 
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++	DES_ncbc_encrypt(enc, clear, length, &key_data->des_ks,
++			 TO_CBLOCK(key_data->des_ivec[1]), DES_DECRYPT);
++#else
+ 	des_ncbc_encrypt(enc, clear, length, key_data->des_ks,
+ 			 TO_CBLOCK(key_data->des_ivec[1]), DES_DECRYPT);
++#endif
+ }
+ #endif /* WITH_CIPHER_DES */
+ 
+@@ -528,7 +555,11 @@
+ 	FUNC_DECL(ssh_3des_initialize);
+ 
+ 	int i, j;
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++	DES_cblock key[3];
++#else
+ 	des_cblock key[3];
++#endif
+ 	ssh_3des_t *key_data;
+ 
+ 	if (klen < 16) {
+@@ -540,6 +571,22 @@
+ 		return NULL;
+ 
+ 	for (i = j = 0; i < 3; i++) {
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++		memcpy(key[i], session_key + j, sizeof(DES_cblock));
++		DES_set_odd_parity(TO_CBLOCK(key[i]));
++		if (DES_is_weak_key(TO_CBLOCK(key[i])))
++			break;
++		(void) DES_set_key(TO_CBLOCK(key[i]), &key_data->des_ks[i]);
++		/*
++		 * when keying from a passphrase (after md5) we will run
++		 * out of keying material after two keys, so be *very*
++		 * general about how big we expect the keying material
++		 * to be.
++		 */
++		j += sizeof(DES_cblock);
++		if (j + sizeof(DES_cblock) > klen)
++			j = 0;
++#else
+ 		memcpy(key[i], session_key + j, sizeof(des_cblock));
+ 		des_set_odd_parity(TO_CBLOCK(key[i]));
+ 		if (des_is_weak_key(TO_CBLOCK(key[i])))
+@@ -554,6 +601,7 @@
+ 		j += sizeof(des_cblock);
+ 		if (j + sizeof(des_cblock) > klen)
+ 			j = 0;
++#endif
+ 	}
+ 
+ 	memset(key_data->des_ivec[0], 0, sizeof(key_data->des_ivec[0]));
+@@ -588,7 +636,11 @@
+ 	FUNC_DECL(ssh_des3_initialize);
+ 
+ 	int i;
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++	DES_cblock key;
++#else
+ 	des_cblock key;
++#endif
+ 	ssh_des3_t *key_data;
+ 	u_int8_t key1ofb[24] = {
+ 		0x10, 0x23, 0x66, 0x20, 0x10, 0x1d, 0xb7, 0x37,
+@@ -655,6 +707,17 @@
+ 
+ 		temp = key1ofb;
+ 		for (i = 0; i < 3; i++) {
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++			memcpy(&key, temp, sizeof(DES_cblock));
++			DES_set_odd_parity(TO_CBLOCK(&key));
++			if (DES_is_weak_key(TO_CBLOCK(&key)))
++				weak++;
++			(void) DES_set_key(TO_CBLOCK(&key),
++					   &key_data->des_ks[i]);
++			temp += sizeof(DES_cblock);
++		}
++		memset(&key, 0, sizeof(DES_cblock));
++#else
+ 			memcpy(&key, temp, sizeof(des_cblock));
+ 			des_set_odd_parity(TO_CBLOCK(&key));
+ 			if (des_is_weak_key(TO_CBLOCK(&key)))
+@@ -664,10 +727,22 @@
+ 			temp += sizeof(des_cblock);
+ 		}
+ 		memset(&key, 0, sizeof(des_cblock));
++#endif
+ 		memset(key1ofb, 0, 24);
+ 
+ 		temp = key2ofb;
+ 		for (i = 3; i < 6; i++) {
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++			memcpy(&key, temp, sizeof(DES_cblock));
++			DES_set_odd_parity(TO_CBLOCK(&key));
++			if (DES_is_weak_key(TO_CBLOCK(&key)))
++				weak++;
++			(void) DES_set_key(TO_CBLOCK(&key),
++					   &key_data->des_ks[i]);
++			temp += sizeof(DES_cblock);
++		}
++		memset(&key, 0, sizeof(DES_cblock));
++#else
+ 			memcpy(&key, temp, sizeof(des_cblock));
+ 			des_set_odd_parity(TO_CBLOCK(&key));
+ 			if (des_is_weak_key(TO_CBLOCK(&key)))
+@@ -677,6 +752,7 @@
+ 			temp += sizeof(des_cblock);
+ 		}
+ 		memset(&key, 0, sizeof(des_cblock));
++#endif
+ 		memset(key2ofb, 0, 24);
+ 		break;
+ 	case SSH_ROLE_CLIENT:
+@@ -688,6 +764,17 @@
+ 
+ 		temp = key2ofb;
+ 		for (i = 0; i < 3; i++) {
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++			memcpy(&key, temp, sizeof(DES_cblock));
++			DES_set_odd_parity(TO_CBLOCK(&key));
++			if (DES_is_weak_key(TO_CBLOCK(&key)))
++				weak++;
++			(void) DES_set_key(TO_CBLOCK(&key),
++					   &key_data->des_ks[i]);
++			temp += sizeof(DES_cblock);
++		}
++		memset(&key, 0, sizeof(DES_cblock));
++#else
+ 			memcpy(&key, temp, sizeof(des_cblock));
+ 			des_set_odd_parity(TO_CBLOCK(&key));
+ 			if (des_is_weak_key(TO_CBLOCK(&key)))
+@@ -697,10 +784,22 @@
+ 			temp += sizeof(des_cblock);
+ 		}
+ 		memset(&key, 0, sizeof(des_cblock));
++#endif
+ 		memset(key2ofb, 0, 24);
+ 
+ 		temp = key1ofb;
+ 		for (i = 3; i < 6; i++) {
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++			memcpy(&key, temp, sizeof(DES_cblock));
++			DES_set_odd_parity(TO_CBLOCK(&key));
++			if (DES_is_weak_key(TO_CBLOCK(&key)))
++				weak++;
++			(void) DES_set_key(TO_CBLOCK(&key),
++					   &key_data->des_ks[i]);
++			temp += sizeof(DES_cblock);
++		}
++		memset(&key, 0, sizeof(DES_cblock));
++#else
+ 			memcpy(&key, temp, sizeof(des_cblock));
+ 			des_set_odd_parity(TO_CBLOCK(&key));
+ 			if (des_is_weak_key(TO_CBLOCK(&key)))
+@@ -710,6 +809,7 @@
+ 			temp += sizeof(des_cblock);
+ 		}
+ 		memset(&key, 0, sizeof(des_cblock));
++#endif
+ 		memset(key1ofb, 0, 24);
+ 		break;
+ 	}
+@@ -737,12 +837,21 @@
+ 		 ssh_3des_t *key_data)
+ {
+ 
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++	DES_ncbc_encrypt(clear, enc, length, &key_data->des_ks[0],
++			 TO_CBLOCK(key_data->des_ivec[0]), DES_ENCRYPT);
++	DES_ncbc_encrypt(enc, enc, length, &key_data->des_ks[1],
++			 TO_CBLOCK(key_data->des_ivec[1]), DES_DECRYPT);
++	DES_ncbc_encrypt(enc, enc, length, &key_data->des_ks[2],
++			 TO_CBLOCK(key_data->des_ivec[2]), DES_ENCRYPT);
++#else
+ 	des_ncbc_encrypt(clear, enc, length, key_data->des_ks[0],
+ 			 TO_CBLOCK(key_data->des_ivec[0]), DES_ENCRYPT);
+ 	des_ncbc_encrypt(enc, enc, length, key_data->des_ks[1],
+ 			 TO_CBLOCK(key_data->des_ivec[1]), DES_DECRYPT);
+ 	des_ncbc_encrypt(enc, enc, length, key_data->des_ks[2],
+ 			 TO_CBLOCK(key_data->des_ivec[2]), DES_ENCRYPT);
++#endif
+ }
+ 
+ void
+@@ -750,12 +859,21 @@
+ 		 ssh_3des_t *key_data)
+ {
+ 
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++	DES_ncbc_encrypt(enc, clear, length, &key_data->des_ks[2],
++			 TO_CBLOCK(key_data->des_ivec[3]), DES_DECRYPT);
++	DES_ncbc_encrypt(clear, clear, length, &key_data->des_ks[1],
++			 TO_CBLOCK(key_data->des_ivec[4]), DES_ENCRYPT);
++	DES_ncbc_encrypt(clear, clear, length, &key_data->des_ks[0],
++			 TO_CBLOCK(key_data->des_ivec[5]), DES_DECRYPT);
++#else
+ 	des_ncbc_encrypt(enc, clear, length, key_data->des_ks[2],
+ 			 TO_CBLOCK(key_data->des_ivec[3]), DES_DECRYPT);
+ 	des_ncbc_encrypt(clear, clear, length, key_data->des_ks[1],
+ 			 TO_CBLOCK(key_data->des_ivec[4]), DES_ENCRYPT);
+ 	des_ncbc_encrypt(clear, clear, length, key_data->des_ks[0],
+ 			 TO_CBLOCK(key_data->des_ivec[5]), DES_DECRYPT);
++#endif
+ 
+ }
+ 
+@@ -764,9 +882,15 @@
+ 		 ssh_des3_t *key_data)
+ {
+ 
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++	DES_ede3_cbc_encrypt(clear, enc, length, &key_data->des_ks[0],
++			     &key_data->des_ks[1], &key_data->des_ks[2],
++			     TO_CBLOCK(key_data->des_ivec[0]), DES_ENCRYPT);
++#else
+ 	des_ede3_cbc_encrypt(clear, enc, length, key_data->des_ks[0],
+ 			     key_data->des_ks[1], key_data->des_ks[2],
+ 			     TO_CBLOCK(key_data->des_ivec[0]), DES_ENCRYPT);
++#endif
+ }
+ 
+ void
+@@ -774,9 +898,15 @@
+ 		 ssh_des3_t *key_data)
+ {
+ 
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++	DES_ede3_cbc_encrypt(enc, clear, length, &key_data->des_ks[3],
++			     &key_data->des_ks[4], &key_data->des_ks[5],
++			     TO_CBLOCK(key_data->des_ivec[1]), DES_DECRYPT);
++#else
+ 	des_ede3_cbc_encrypt(enc, clear, length, key_data->des_ks[3],
+ 			     key_data->des_ks[4], key_data->des_ks[5],
+ 			     TO_CBLOCK(key_data->des_ivec[1]), DES_DECRYPT);
++#endif
+ 
+ }
+ 

@@ -1,0 +1,23 @@
+$NetBSD: patch-ae,v 1.1 2003/09/21 08:35:55 jmc Exp $
+
+--- crypto/ssh_des.h.orig	2003-09-21 03:02:53.000000000 +0000
++++ crypto/ssh_des.h	2003-09-21 03:04:13.000000000 +0000
+@@ -16,12 +16,18 @@
+ #ifndef _SSH_DES_H
+ #define _SSH_DES_H
+ 
++#include "openssl/opensslv.h"
+ #include "openssl/des.h"
+ struct ssh_cipher;
+ 
+ typedef struct {
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++	DES_key_schedule des_ks;
++	DES_cblock	 des_ivec[2];	/* Two directions, same key! */
++#else
+ 	des_key_schedule des_ks;
+ 	des_cblock	 des_ivec[2];	/* Two directions, same key! */
++#endif
+ } ssh_des_t;
+ 
+ void ssh_des_attach(struct ssh_cipher *);
