@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1506 2004/03/12 22:18:56 wiz Exp $
+$NetBSD: TODO,v 1.1507 2004/03/12 23:13:57 snj Exp $
 
 Suggested new packages
 ======================
@@ -225,7 +225,6 @@ Suggested package updates
 	o kaffe-1.1.4 [pkg/24507]
 	o lavaps-2.4
 	o leafnode-1.9.50
-	o libaudiofile-0.2.6
 	o libcaca-0.9
 	o libebml-0.6.4
 	o libesmtp-1.0.2
@@ -282,7 +281,6 @@ Suggested package updates
 	o ploticus-2.20
 	o postgresql-7.4.1 [pkgsrc-wip]
 	o psi-0.9.1
-	o py-gtk-2.2.0
 	o py-psycopg-1.1.10
 	o py-sqlite-0.5.0 [pkg/24663]
 	o pygtk-0.6.11
@@ -338,7 +336,6 @@ Suggested package updates
 	o w3m-0.4.2
 	o wavesurfer-1.5.3
 	o wdm-1.27
-	o wine-20040309
 	o wwwoffle-2.8a
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
 	o xanim-2.92.0 [pkg/19934]
