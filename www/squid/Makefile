@@ -1,19 +1,11 @@
-# $NetBSD: Makefile,v 1.51 2001/09/18 16:24:57 tron Exp $
+# $NetBSD: Makefile,v 1.52 2001/10/09 19:01:49 tron Exp $
 
-DISTNAME=	squid-2.4.STABLE1-src
-PKGNAME=	squid-2.4.1nb2
+DISTNAME=	squid-2.4.STABLE2-src
+PKGNAME=	squid-2.4.2
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.4/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
 		ftp://ftp1.au.squid-cache.org/pub/squid/squid-2/STABLE/
-
-PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.4/bugs/
-PATCHFILES=	squid-2.4.stable1-diskd_fixed_path.patch \
-		squid-2.4.stable1-force_valid_blksize.patch \
-		squid-2.4.stable1-high_cpu_with_peers.patch \
-		squid-2.4.stable1-htcp_assertion_fix.patch \
-		squid-2.4.stable1-kill_parent_on_child_sigkill.patch \
-		squid-2.4.stable1-wrong_sign_on_timestamp_check.patch
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.squid-cache.org/
