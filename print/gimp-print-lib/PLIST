@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/08/04 21:34:38 seb Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/03/02 14:56:07 drochner Exp $
 bin/gimpprint-config
 include/gimp-print/gimp-print.h
 info/gimpprint.info
@@ -11,7 +11,7 @@ lib/libgimpprint.a
 lib/libgimpprint.la
 lib/libgimpprint.so
 lib/libgimpprint.so.2
-lib/libgimpprint.so.2.0
+lib/libgimpprint.so.2.1
 man/man1/gimpprint-config.1
 man/man3/gimpprint.3
 man/man7/gimpprint-color.7
@@ -129,6 +129,7 @@ share/gimp-print/doc/manual-html/print-color.png
 share/gimp-print/doc/manual-html/print-main.png
 share/gimp-print/doc/manual-html/print-setup.png
 share/gimp-print/doc/users-guide.pdf
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gimp-print.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gimp-print.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gimp-print.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gimp-print.mo
