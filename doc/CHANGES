@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6151 2004/06/05 22:13:49 rh Exp $
+$NetBSD: CHANGES,v 1.6152 2004/06/05 22:52:26 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2807,3 +2807,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added daapd-0.2.2b [nathanw 2004-06-05]
 	Added pine-pgp-filters-1.1 [reed 2004-06-05]
 	Added mpfr-2.0.3 [rh 2004-06-06]
+	Updated jgrasp t0 1.7.0 [jschauma 2004-06-06]
