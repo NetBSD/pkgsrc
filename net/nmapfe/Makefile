@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 22:51:28 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/21 17:10:56 martti Exp $
 #
 
 DISTNAME=	nmap-3.30
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=     salo@NetBSD.org
 HOMEPAGE=	http://www.insecure.org/nmap/
-COMMENT=	graphical front end to the nmap port scanner
+COMMENT=	Graphical front end to the nmap port scanner
 
 DEPENDS+=	nmap-[23].*:../../net/nmap
 

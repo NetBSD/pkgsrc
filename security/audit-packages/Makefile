@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/07/17 22:52:51 grant Exp $
+# $NetBSD: Makefile,v 1.25 2003/07/21 17:20:06 martti Exp $
 
 DISTNAME=	audit-packages-1.16
 WRKSRC=		${WRKDIR}
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	agc@NetBSD.org
-COMMENT=	tools to show vulnerabilities in installed packages
+COMMENT=	Tools to show vulnerabilities in installed packages
 
 NO_CHECKSUM=    yes
 

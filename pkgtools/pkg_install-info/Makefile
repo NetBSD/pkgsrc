@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:52:15 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:14:08 martti Exp $
 #
 
 DISTNAME=		pkg_install-info-${VERSION}
@@ -9,7 +9,7 @@ DISTFILES=		# empty
 
 MAINTAINER=		seb@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/texinfo/texinfo.html
-COMMENT=		standalone GNU info file installation utility
+COMMENT=		Standalone GNU info file installation utility
 
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined

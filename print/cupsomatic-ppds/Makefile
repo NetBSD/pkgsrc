@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:52:25 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:16:19 martti Exp $
 
 DISTNAME=	all-com-ppds
 PKGNAME=	cupsomatic-ppds-20010515
@@ -22,7 +22,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL:=${subdir}/}
 
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.linuxprinting.org/cups-doc.html
-COMMENT=	free software printer drivers for use with CUPS
+COMMENT=	Free software printer drivers for use with CUPS
 
 CONFLICTS+=	cupsomatic-200012??
 

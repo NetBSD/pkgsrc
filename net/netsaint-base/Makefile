@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/06/23 11:16:33 adam Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/21 17:10:53 martti Exp $
 #
 
 DISTNAME=		netsaint-0.0.7
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.netsaint.org/download/
 
 MAINTAINER=		murray@river-styx.org
 HOMEPAGE=		http://www.netsaint.org/
-COMMENT=		network monitor
+COMMENT=		Network monitor
 
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:51:40 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 17:11:09 martti Exp $
 #
 
 DISTNAME=		publicfile-0.52
@@ -7,7 +7,7 @@ MASTER_SITES=		http://cr.yp.to/publicfile/
 
 MAINTAINER=		zuntum@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/publicfile.html
-COMMENT=		secure read-only HTTP and FTP servers
+COMMENT=		Secure read-only HTTP and FTP servers
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp

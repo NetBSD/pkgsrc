@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:51:29 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:10:56 martti Exp $
 #
 
 DISTNAME=	nsca-1.1.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://netsaint.sourceforge.net/download/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://netsaint.sourceforge.net/docs/0_0_6/addons.html\#nsca
-COMMENT=	submit passive NetSaint checks results to another server
+COMMENT=	Submit passive NetSaint checks results to another server
 
 DEPENDS+=	netsaint-base-[0-9]*:../../net/netsaint-base
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:51:36 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 17:11:07 martti Exp $
 #
 
 DISTNAME=	pen-0.10.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://siag.nu/pub/pen/					\
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://siag.nu/pen/
-COMMENT=	load balancer for "simple" tcp based protocols
+COMMENT=	Load balancer for "simple" tcp based protocols
 
 GNU_CONFIGURE=	YES
 

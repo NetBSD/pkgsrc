@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:52:59 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:20:12 martti Exp $
 #
 
 DISTNAME=	mirrordir-0.10.49
@@ -7,7 +7,7 @@ MASTER_SITES=	http://mirrordir.sourceforge.net/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mirrordir.sourceforge.net/
-COMMENT=	directory mirroring tool
+COMMENT=	Directory mirroring tool
 
 USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes

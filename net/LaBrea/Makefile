@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:50:57 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/21 17:10:16 martti Exp $
 #
 
 DISTNAME=	LaBrea2_3
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.hackbusters.net/LaBrea/
-COMMENT=	builds tarpits/honeypots for scanners
+COMMENT=	Builds tarpits/honeypots for scanners
 
 USE_BUILDLINK2=	YES
 

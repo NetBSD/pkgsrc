@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:42:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 17:14:09 martti Exp $
 #
 
 DISTNAME=	pkgsurvey-0.0
@@ -8,7 +8,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	agc@pkgsrc.org
-COMMENT=	utility to collate pkg information, and mail to central census site
+COMMENT=	Utility to collate pkg information, and mail to central census site
 
 NO_CHECKSUM=    yes
 NO_CONFIGURE=   yes

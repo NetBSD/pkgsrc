@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/10/06 22:31:11 seb Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/21 17:11:00 martti Exp $
 #
 
 DISTNAME=	Net-Daemon-0.36
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/libnet/FAQ.html
-COMMENT=	perl5 module for writing networking daemons
+COMMENT=	Perl5 module for writing networking daemons
 
 DEPENDS+= 	{p5-Data-Dumper-[0-9]*,perl>=5.6.1nb2}:${PERL5_PKGSRCDIR}
 

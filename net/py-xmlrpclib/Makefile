@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:51:44 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:11:12 martti Exp $
 #
 
 DISTNAME=	xmlrpc-0.9.8-990621
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.pythonware.com/products/xmlrpc/
-COMMENT=	implementation of the XML-RPC protocol for Python
+COMMENT=	Implementation of the XML-RPC protocol for Python
 
 NO_BUILD=	yes
 

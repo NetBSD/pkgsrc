@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:52:32 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:16:24 martti Exp $
 
 DISTNAME=	ptex-texmf-2.1
 PKGNAME=	ja-ptex-share-2.1
@@ -16,7 +16,7 @@ DISTFILES=	ptex-texmf-2.1${EXTRACT_SUFX} \
 
 MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.ascii.co.jp/pb/ptex/
-COMMENT=	library files for pTeX
+COMMENT=	Library files for pTeX
 
 DEPENDS+=	teTeX2>=2.0.1:../../print/teTeX2
 
