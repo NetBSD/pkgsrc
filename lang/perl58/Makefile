@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2004/11/23 17:32:36 jlam Exp $
+# $NetBSD: Makefile,v 1.62 2004/11/25 22:02:49 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -8,19 +8,19 @@ PERL5_RC_VERS=	# empty
 
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
-PKGNAME=	perl${PERL5_PKGSUFFIX}-${PERL5_VERS}
-PKGREVISION=	2
+PKGNAME=	perl-${PERL5_VERS}
+PKGREVISION=	3
 SNAPSHOT_SITES=	# empty
 .else
 .  if !empty(PERL5_SNAPSHOT)
 DISTNAME=	perl@${PERL5_SNAPSHOT}
-PKGNAME=	perl${PERL5_PKGSUFFIX}-${PERL5_VERS}beta${PERL5_SNAPSHOT}
+PKGNAME=	perl-${PERL5_VERS}beta${PERL5_SNAPSHOT}
 SNAPSHOT_SITES=	http://www.iki.fi/jhi/
 EXTRACT_SUFX=	.tbz
 WRKSRC=		${WRKDIR}/perl
 .  else # !empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}-RC${PERL5_RC_VERS}
-PKGNAME=	perl${PERL5_PKGSUFFIX}-${PERL5_VERS}rc${PERL5_RC_VERS}
+PKGNAME=	perl-${PERL5_VERS}rc${PERL5_RC_VERS}
 SNAPSHOT_SITES=	http://www.cpan.org/authors/id/J/JH/JHI/
 .  endif
 .endif
@@ -39,7 +39,7 @@ CONFLICTS=	perl-5.00* perl-base-[0-9]* \
 		p5-CGI-2.66 p5-CGI-2.75 p5-CGI-2.75.[0-2] \
 		p5-Data-Dumper-2.1[0-9][0-9] p5-Data-Dumper-[0-9][0-9] \
 		p5-Devel-DProf-[0-9]* p5-Devel-Peek-[0-9]* \
-		perl-mk-[0-9]*
+		perl-mk-[0-9]* perl-thread-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -149,20 +149,16 @@ PERL5_HINTS_LDDLFLAGS=	# empty
 
 PERL5_HINTS_LDFLAGS+=	${LOCLIBRPATHFLAGS}
 
-# If perl58 is built with threads support, then name the package
-# "perl-thread", otherwise it's just "perl" as usual.
-#
-PERL5_USE_THREADS?=	no
+.include "../../mk/dlopen.buildlink3.mk"
+
+PERL5_USE_THREADS?=	${DLOPEN_REQUIRE_PTHREADS}
 .if !empty(PERL5_USE_THREADS:M[nN][oO])
-PERL5_PKGSUFFIX=	# empty
-CONFLICTS+=		perl-thread-[0-9]*
 CONFIGURE_ARGS+=	-Uuseithreads
 .else
 .  include "../../mk/pthread.buildlink3.mk"
 PERL5_ARCHLIB=		${PREFIX}/lib/perl5/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi
-PERL5_PKGSUFFIX=	-thread
-CONFLICTS+=		perl-[0-9]*
 CONFIGURE_ARGS+=	-Duseithreads
+CFLAGS+=		${PTHREAD_CFLAGS}
 PERL5_HINTS_LDFLAGS+=	${PTHREAD_LDFLAGS}
 PERL5_HINTS_LDDLFLAGS+=	${PTHREAD_LDFLAGS}
 LIBSWANTED+=		${PTHREAD_LIBS:M-l*:S/^-l//}
