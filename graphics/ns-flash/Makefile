@@ -1,26 +1,25 @@
-# $NetBSD: Makefile,v 1.13 2002/03/17 03:37:57 jmc Exp $
+# $NetBSD: Makefile,v 1.14 2002/03/21 07:38:35 martti Exp $
 #
-
-FLASH_VERS=		${PKGNAME:S/ns-flash-//}
 
 ONLY_FOR_PLATFORM=      *-*-i386 SunOS-*-sparc
 
 .include "../../mk/bsd.prefs.mk"
 
 .if (${MACHINE_ARCH} == "i386")
-PKGNAME=		ns-flash-5.0r47
+FLASH_VERS=		5.0r47
 DEPENDS+=		suse_compat>=6.3:../../emulators/suse_compat
 DEPENDS+=		suse_x11>=6.3:../../emulators/suse_x11
 DISTUNAME=		linux
 WRKNAME=		flash_linux
 .elif ${MACHINE_ARCH} == "sparc" && ${OPSYS} == "SunOS"
-PKGNAME=		ns-flash-5.0r52
+FLASH_VERS=		5.0r52
 DISTUNAME=		solaris
 WRKNAME=		flash_solaris
 .else
 # Defaults so lintpkgsrc is happy
-PKGNAME=		ns-flash-5.0
+FLASH_VERS=		5.0
 .endif
+PKGNAME=		ns-flash-${FLASH_VERS:S/r/./}
 
 DISTNAME=		flash_${DISTUNAME}
 DIST_SUBDIR=		flash/${FLASH_VERS}
