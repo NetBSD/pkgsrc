@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2001/06/29 04:54:53 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/08/15 19:50:30 jlam Exp $
 
-.include "../../games/freeciv-share/Makefile.common"
-
-PKGNAME=		${DISTNAME:S/-/-client-gtk-/}nb1
+PKGNAME=		${DISTNAME:S/-/-client-gtk-/}
 COMMENT=		Freeciv client with GTK+ interface
 
-BUILD_USES_MSGFMT=	# defined
 DEPENDS+=		freeciv-share-${FC_VERS}:../../games/freeciv-share
 
 USE_X11=		# defined
@@ -15,6 +12,8 @@ CONFIGURE_ARGS+=	--disable-server
 CONFIGURE_ARGS+=	--disable-make-data
 CONFIGURE_ARGS+=	--enable-client=gtk
 CONFIGURE_ARGS+=	--program-transform-name="s,civclient,civclient-gtk,"
+
+.include "../freeciv-share/Makefile.common"
 
 do-install:
 	cd ${WRKSRC}/client; ${SETENV} ${MAKE_ENV} \
