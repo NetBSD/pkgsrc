@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/08/31 19:55:56 jdolecek Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/03 18:49:52 reed Exp $
 
 MODNAME=		pdf
 PKGNAME=		php-pdflib-${PHP_BASE_VERS}
+PKGREVISION=		1
 CATEGORIES+=		print
 PKGREVISION=		# empty
 COMMENT=		PHP4 extension for PDFlib on-the-fly PDF generation

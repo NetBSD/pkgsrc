@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/08 14:27:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/03 18:49:53 reed Exp $
 #
 
 DISTNAME=	idesk-0.3.5
+PKGREVISION=	1
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://idesk.timmfin.net/releases/
 

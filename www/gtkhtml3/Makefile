@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2003/12/28 23:37:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/03 18:49:55 reed Exp $
 #
 
 DISTNAME=	gtkhtml-3.0.9
 PKGNAME=	${DISTNAME:S/gtkhtml/gtkhtml3/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkhtml/3.0/}
 EXTRACT_SUFX=	.tar.bz2

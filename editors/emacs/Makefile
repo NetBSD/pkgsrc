@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2003/08/09 10:48:08 seb Exp $
+# $NetBSD: Makefile,v 1.65 2004/01/03 18:49:39 reed Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-21.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 
