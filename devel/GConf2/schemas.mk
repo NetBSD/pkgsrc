@@ -1,4 +1,4 @@
-# $NetBSD: schemas.mk,v 1.4 2003/12/28 14:24:49 jmmv Exp $
+# $NetBSD: schemas.mk,v 1.5 2003/12/28 14:34:08 jmmv Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GConf2 schema files.  It takes care of registering them in the GConf2
@@ -9,8 +9,11 @@
 #    GCONF2_CONFIG_SOURCE - URI of the global configuration database.
 #    GCONF2_SCHEMAS_DIR   - Directory where .schemas files are installed.
 #
-# The following variables can be defined by a package to register .schemas
-# files:
+# The following variables can be defined by a package to register .entries
+# and .schemas files:
+#    GCONF2_ENTRIES - A list of .entries files to register.  When using this
+#                     variable, packages need to be fixed to not register
+#                     them and to install those files to GCONF2_SCHEMAS_DIR.
 #    GCONF2_SCHEMAS - A list of .schemas files to register.  When using this
 #                     variable, packages need to be fixed to not register
 #                     them and to install those files to GCONF2_SCHEMAS_DIR.
