@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7032 2004/08/29 16:34:09 recht Exp $
+$NetBSD: CHANGES,v 1.7033 2004/08/29 19:49:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4100,3 +4100,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated wwwoffle to 2.8c [recht 2004-08-29]
 	Added rzip-2.0 [recht 2004-08-29]
 	Added phpldapadmin-0.9.4b [recht 2004-08-29]
+	Updated torrentutils to 0.3.0nb2 [wiz 2004-08-29]
