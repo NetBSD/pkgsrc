@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2001/04/13 04:32:43 jwise Exp $
+# $NetBSD: Makefile,v 1.86 2001/04/16 17:41:41 jtb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -39,6 +39,7 @@ SUBDIR+=	opensp
 SUBDIR+=	p5-Convert-ASN1
 SUBDIR+=	p5-Convert-BER
 SUBDIR+=	p5-Filter
+SUBDIR+=	p5-Pod-POM
 SUBDIR+=	p5-Text-BibTeX
 SUBDIR+=	p5-Text-CSV_XS
 SUBDIR+=	p5-Text-DelimMatch
