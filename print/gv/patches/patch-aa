@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 1998/12/23 23:21:26 frueauf Exp $
+$NetBSD: patch-aa,v 1.6 2000/12/08 16:23:16 jlam Exp $
 
---- config.Unix.orig	Sat Jun  7 00:00:00 1997
-+++ config.Unix	Thu Dec 24 00:12:17 1998
-@@ -32,10 +32,10 @@
+--- config.Unix.orig	Fri Jun  6 18:00:00 1997
++++ config.Unix
+@@ -32,10 +32,11 @@
  XCOMM --------------------------------------------------------------------
  XCOMM  Destination directories.
  XCOMM --------------------------------------------------------------------
@@ -12,12 +12,13 @@ $NetBSD: patch-aa,v 1.5 1998/12/23 23:21:26 frueauf Exp $
 -      GV_MANDIR    = /usr/local/man/man1/
 +      GV_BINDIR    = $(BINDIR)
 +      GV_DOCDIR    = $(BINDIR)/../share/doc/gv
++      GV_HTMLDIR   = $(BINDIR)/../share/doc/html/gv
 +      GV_LIBDIR    = $(LIBDIR)/gv/
 +      GV_MANDIR    = $(MANDIR)
  
  XCOMM --------------------------------------------------------------------
  XCOMM --- The name of the Xaw3d library.
-@@ -110,7 +110,7 @@
+@@ -110,7 +111,7 @@
  XCOMM --------------------------------------------------------------------
  XCOMM --- Use extra code for setenv() and getenv() ?
  XCOMM --------------------------------------------------------------------
