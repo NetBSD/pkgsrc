@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/18 21:22:27 hwr Exp $
+etc/ldapfilter.conf
+etc/ldapsearchprefs.conf
+etc/ldapfriendly
+etc/ldaptemplates.conf
+lib/libldap.a
+lib/liblber.a
+lib/libldap.so.1.0
+lib/liblber.so.1.0
