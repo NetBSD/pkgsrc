@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
+
+--- camel/camel-remote-store.c.orig	Tue Apr 24 17:56:15 2001
++++ camel/camel-remote-store.c
+@@ -23,6 +23,11 @@
+  *
+  */
+ 
++#ifdef	_POSIX_THREAD_SYSCALL_SOFT
++#undef	_POSIX_THREAD_SYSCALL_SOFT
++#endif
++#define	_POSIX_THREAD_SYSCALL_SOFT	0
++
+ #include <config.h>
+ 
+ #include <sys/time.h>
