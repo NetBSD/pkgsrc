@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.140 2001/02/16 13:06:17 wiz Exp $
+# $NetBSD: Packages.txt,v 1.141 2001/02/17 15:09:51 skrll Exp $
 ###########################################################################
 
 			==========================
@@ -668,7 +668,7 @@ which does a lot of the donkey work for you.
    delete the files created in the original distribution. See pkg_delete(1)
    and pkg_create(1) for more information.
 
- * pkg/MESSAGE
+ * pkg/MESSAGE:
    Display this file after installation of the package.
    Useful for things like legal notices on almost-free software, etc.
    Please note that you can modify variables in it easily by using
@@ -855,7 +855,7 @@ here, as it just "knows" how to build both static and dynamic
 libraries from a set our source files, thus being platform
 independent. 
 
-Here's how to use libtool in a pkg in six simple steps:
+Here's how to use libtool in a pkg in seven simple steps:
 
 1. Add USE_LIBTOOL= yes to the package Makefile.
 
@@ -1183,8 +1183,7 @@ perform the equivalent of:
    then current versions of the corresponding packages get compiled and
    installed.  This is similar to manually noting which packages are
    currently installed, then performing a series of "make deinstall" and
-   and "make install" (or whatever DEPENDS_TARGET is set to) for these
-   packages.
+   "make install" (or whatever DEPENDS_TARGET is set to) for these packages.
 
    You can use the "update" target to resume package updating in case a
    previous "make update" was interrupted for some reason.  However, in
