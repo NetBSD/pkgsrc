@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.18 1999/04/13 15:31:06 agc Exp $
+# $NetBSD: Makefile,v 1.19 1999/06/13 16:23:52 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
 DISTNAME=	xv-3.10a
+PKGNAME=	${DISTNAME}pl1
 CATEGORIES=     graphics x11
 MASTER_SITES=	ftp://ftp.cis.upenn.edu/pub/xv/ \
 		ftp://ftp.kuis.kyoto-u.ac.jp/X11/contrib/clients/xv/ \
@@ -19,6 +20,7 @@ HOMEPAGE=	http://www-vis.lbl.gov/software/xv.html
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	ghostscript-5.50:../../print/ghostscript5
+DEPENDS+=	png-1.0.3:../png
 
 USE_IMAKE=	yes
 
