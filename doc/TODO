@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3232 2005/03/19 02:58:33 wiz Exp $
+$NetBSD: TODO,v 1.3233 2005/03/19 09:17:15 seb Exp $
 
 Suggested new packages
 ======================
@@ -516,7 +516,6 @@ Suggested package updates
 	o gputils-0.13.0
 	o grace-5.1.18
 	o grap-1.32
-	o graphviz-2.2 [pkg/28596]
 	o grepmail-5.3030
 	o gri-2.12.8
 	o gsed-4.1.4
