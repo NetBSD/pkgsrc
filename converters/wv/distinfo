@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:35:21 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 16:28:03 agc Exp $
 
-MD5 (wv-0.6.0.tar.gz) = 0addb073d247c550824976196cbaa8b8
+SHA1 (wv-0.6.0.tar.gz) = 512a98113b21cdd9be91c6818c71a50a8e7b2f23
+Size (wv-0.6.0.tar.gz) = 1216840 bytes
 SHA1 (patch-aa) = d867db00334bda21aa640fe238713f786f0b363e
 SHA1 (patch-ab) = 2dab7d7b2fb7a5d532094a3831ec1738b07affb1
 SHA1 (patch-ac) = 8774f3d8fb5f920b040ea6656db6f08d50a0e904
