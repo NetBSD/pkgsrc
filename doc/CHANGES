@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1333 2003/02/11 04:15:30 jlam Exp $
+$NetBSD: CHANGES,v 1.1334 2003/02/11 04:23:17 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -572,3 +572,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated spamassassin to 2.44nb1 [heinz 2003-02-09]
 	Updated rdesktop to 1.1.0nb1 [grant 2003-02-10]
 	Updated sun-jre13 to 1.0.7nb1 [jlam 2003-02-10]
+	Updated blackdown-jdk13 to 1nb2 [jlam 2003-02-10]
+	Updated jdk to 1.1.8nb4 [jlam 2003-02-10]
+	Updated kaffe to 1.0.7nb1 [jlam 2003-02-10]
+	Updated sun-jdk13 to 1.0.7nb1 [jlam 2003-02-10]
+	Updated sun-jdk14 to 1.0.1 [jlam 2003-02-10]

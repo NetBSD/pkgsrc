@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/01/29 11:13:28 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/02/11 04:23:15 jlam Exp $
 
 DISTNAME=	j2sdk-1_4_1_01-linux-i586
 PKGNAME=	sun-jdk14-1.0.1
@@ -20,6 +20,7 @@ post-extract:
 			${RM} -f $$i;					\
 		fi;							\
 	done
+	${LN} -sf . ${WRKSRC}/jre
 
 _FETCH_MESSAGE= \
 	${ECHO} "======================================================================"; \

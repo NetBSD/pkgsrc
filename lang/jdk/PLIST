@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/03 23:48:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/02/11 04:23:14 jlam Exp $
 CHANGES
 COPYRIGHT
 LICENSE
@@ -463,6 +463,8 @@ include/verify.h
 include/wrap.h
 include/zip.h
 index.html
+@exec	${LN} -sf . %D/jre
+@unexec	${RM} -f %D/jre
 lib/appletviewer.properties.default
 lib/awt.properties.default
 lib/classes.zip
