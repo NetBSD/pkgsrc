@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2002/03/21 12:35:14 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.40 2002/03/24 18:47:38 dmcmahill Exp $
 #
 
-DISTNAME=		pth-1.4.0
-PKGREVISION=		1
+DISTNAME=		pth-1.4.1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=pth/}
 
@@ -23,11 +22,12 @@ CFLAGS:=		${CFLAGS:S/-O2/-O0/}
 
 # for PLIST
 PTH_MAJOR=		14
-PTH_MINOR=		20
+PTH_MINOR=		21
 PLIST_SUBST+=		PTH_MAJOR=${PTH_MAJOR} PTH_MINOR=${PTH_MINOR}
 
 test: build
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} test
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} test | \
+		tee ${WRKSRC}/test.log
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pth/
