@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.715 2003/07/13 14:01:06 wiz Exp $
+$NetBSD: TODO,v 1.716 2003/07/13 14:36:49 dillo Exp $
 
 Suggested new packages
 ======================
@@ -80,7 +80,6 @@ Suggested package updates
 	o binutils-2.14
 	o bzflag-1.7g0
 	o cervisia-2.0
-	o clisp-2.30
 	o courier-0.42.2
 	o courier-imap-2.0
 	o crafty-19.1
