@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2000/09/03 10:05:28 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2003/03/09 19:46:52 jschauma Exp $
 --- Makefile.orig	Thu Jan 16 17:31:58 1997
 +++ Makefile	Wed Apr 12 21:03:39 2000
 @@ -23,7 +23,7 @@
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.7 2000/09/03 10:05:28 wiz Exp $
  # ------------------------------------------------------------
 -CFLAGS     = -O  -I/usr/local/X11/include -I/usr/demo/SOUND/ -I./.
 -
-+CFLAGS     = -O $(DEFS) -I$(X11BASE)/include -I./.
++CFLAGS     += -O $(DEFS) -I$(X11BASE)/include -I./.
 +DATADIR	= $(PREFIX)/share/battalion/
 +VARDIR = /var/games/
 +DEFS = -DDATADIR=\"$(DATADIR)\" -DVARDIR=\"$(VARDIR)\"
@@ -45,7 +45,7 @@ $NetBSD: patch-aa,v 1.7 2000/09/03 10:05:28 wiz Exp $
  #         (USEFUL TO POINT TO WHERE THE MESA LIBRARIES RESIDE)
  # ------------------------------------------------------------
 -LIBFLAGS     = 
-+LIBFLAGS     = -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib -lcompat
++LIBFLAGS     = ${LDFLAGS} -L$(X11BASE)/lib -lcompat
  
  # you should now be able to type 'make' and everything should be fine ...
  
