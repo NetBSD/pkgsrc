@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/07/21 23:30:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.35 2004/07/24 22:45:15 recht Exp $
 
 DISTNAME=	postfix-2.2-20040628
 CATEGORIES=	mail
@@ -98,14 +98,14 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
 .endif
 
 ## .if defined(POSTFIX_USE_PGSQL) && ${POSTFIX_USE_PGSQL} == "YES"
-## .  include "../../databases/postgresql-lib/buildlink3.mk"
+## .  include "../../mk/pgsql.buildlink3.mk"
 ## .  include "../../security/openssl/buildlink3.mk"
 ## PATCHFILES+=		postfix-pg.postfix-2.0.0.2.patch
 ## PATCH_SITES+=		http://www.mat.cc/postfix/
 ## PATCH_DIST_STRIP=	-p1
 ##
-## CCARGS+=	-DHAS_PGSQL -I${BUILDLINK_PREFIX.postgresql-lib}/include/pgsql
-## AUXLIBS+=	-L${BUILDLINK_PREFIX.postgresql-lib}/lib -lpq \
+## CCARGS+=	-DHAS_PGSQL -I${PGSQL_PREFIX}/include/pgsql
+## AUXLIBS+=	-L${PGSQL_PREFIX}/lib -lpq \
 ##		-L${BUILDLINK_PREFIX.openssl}/lib -lcrypt
 ## .endif
 

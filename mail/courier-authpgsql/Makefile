@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/07/14 21:43:48 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/07/24 22:45:15 recht Exp $
 
 PKGNAME=	courier-authpgsql-${BASE_VERS}
 COMMENT=	Courier PostgreSQL authentication module
@@ -11,8 +11,8 @@ USE_PKGINSTALL=		yes
 INSTALL_EXTRA_TMPL=	${.CURDIR}/../courier-auth/INSTALL
 
 CONFIGURE_ARGS+=	--with-authpgsql
-CONFIGURE_ARGS+=	--with-pgsql-includes=${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
-CONFIGURE_ARGS+=	--with-pgsql-libs=${BUILDLINK_PREFIX.postgresql-lib}/lib
+CONFIGURE_ARGS+=	--with-pgsql-includes=${PGSQL_PREFIX}/include/postgresql
+CONFIGURE_ARGS+=	--with-pgsql-libs=${PGSQL_PREFIX}/lib
 
 GEN_FILES=		authpgsqlrc
 FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
@@ -23,7 +23,7 @@ CONF_FILES_PERMS+=	${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}	\
 			${ROOT_USER} ${ROOT_GROUP} 0600
 .endfor
 
-.include "../../databases/postgresql-lib/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 
 post-build:
 	cd ${WRKSRC}/authlib;						\

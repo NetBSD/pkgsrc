@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/27 05:44:22 snj Exp $
+# $NetBSD: Makefile,v 1.15 2004/07/24 22:45:15 recht Exp $
 
 DISTNAME=		ruby-postgres-${VERSION}
 PKGNAME=		${RUBY_PKGNAMEPREFIX}postgresql-${VERSION}
@@ -15,8 +15,8 @@ USE_BUILDLINK3=		yes
 VERSION=		0.7.1
 DIST_SUBDIR=		ruby
 USE_RUBY_EXTCONF= 	yes
-CONFIGURE_ARGS+=	--with-pgsql-include-dir=${PREFIX}/include/postgresql \
-			--with-pgsql-lib-dir=${PREFIX}/lib
+CONFIGURE_ARGS+=	--with-pgsql-include-dir=${PGSQL_PREFIX}/include/postgresql \
+			--with-pgsql-lib-dir=${PGSQL_PREFIX}/lib
 INSTALL_TARGET=		site-install
 
 DOC=			README README.ja doc/postgres.html doc/postgres.ja.html
@@ -42,7 +42,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/sample/$f ${RUBY_EXAMPLESDIR}/postgresql
 .endfor
 
-.include "../../databases/postgresql-lib/buildlink3.mk"
 .include "../../lang/ruby-base/Makefile.common"
 .include "../../lang/ruby-base/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

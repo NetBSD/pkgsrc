@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/05/08 19:48:27 snj Exp $
+# $NetBSD: Makefile,v 1.20 2004/07/24 22:45:16 recht Exp $
 #
 
 DISTNAME=		mod_aolserver-1.1
@@ -17,7 +17,7 @@ USE_BUILDLINK3=	YES
 CONFIGURE_ARGS+=	--with-database=postgres
 CONFIGURE_ARGS+=	--with-mm=${BUILDLINK_PREFIX.libmm}
 
-CPPFLAGS+=	-I${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
+CPPFLAGS+=	-I${PGSQL_PREFIX}/include/postgresql
 CFLAGS+=	`${APXS} -q CFLAGS CFLAGS_SHLIB`
 
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
@@ -28,8 +28,8 @@ post-install:
 		${WRKSRC}/tcl_modules/nsd.ini.sample \
 		${PREFIX}/share/examples/mod_aolserver
 
-.include "../../databases/postgresql-lib/buildlink3.mk"
 .include "../../devel/libmm/buildlink3.mk"
 .include "../../lang/tcl83/buildlink3.mk"
 .include "../../www/apache/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

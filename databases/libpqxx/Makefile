@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/05/08 05:25:12 snj Exp $
+# $NetBSD: Makefile,v 1.11 2004/07/24 22:45:15 recht Exp $
 #
 
 .include "../../databases/libpqxx/Makefile.common"
@@ -15,12 +15,11 @@ USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	libpqxx.pc.in
 
 GNU_CONFIGURE=		yes
-PG_PREFIX=		${BUILDLINK_PREFIX.postgresql-lib}
-CONFIGURE_ARGS+=	--with-postgres-lib=${PG_PREFIX}/lib
-CONFIGURE_ARGS+=	--with-postgres-include=${PG_PREFIX}/include/postgresql
+CONFIGURE_ARGS+=	--with-postgres-lib=${PGSQL_PREFIX}/lib
+CONFIGURE_ARGS+=	--with-postgres-include=${PGSQL_PREFIX}/include/postgresql
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
 
-.include "../../databases/postgresql-lib/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

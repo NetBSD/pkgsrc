@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/05/09 06:48:40 snj Exp $
+# $NetBSD: Makefile,v 1.29 2004/07/24 22:45:14 recht Exp $
 #
 
 DISTNAME=		gtksql-0.3
@@ -17,7 +17,7 @@ USE_BUILDLINK3=		yes
 USE_X11BASE=		# defined
 MAKE_ENV+=		MCFLAGS="${CFLAGS}"
 
-.include "../../databases/postgresql-lib/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
