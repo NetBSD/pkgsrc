@@ -1,13 +1,12 @@
-diff -crP -x *.ps elk-3.0.orig/src/dump-vanilla.c elk-3.0/src/dump-vanilla.c
-*** elk-3.0.orig/src/dump-vanilla.c.orig	Thu Jun 29 13:55:51 1995
---- elk-3.0/src/dump-vanilla.c	Thu Sep  7 15:00:35 1995
+*** src/dump-vanilla.c.orig	Thu Jun 29 13:55:51 1995
+--- src/dump-vanilla.c	Thu Sep  7 15:00:35 1995
 ***************
 *** 12,17 ****
 --- 12,21 ----
   
   extern void *sbrk();
   
-+ #if defined(__FreeBSD__)
++ #if defined(__FreeBSD__) || defined(__NetBSD__)
 + extern etext;
 + #endif
 + 
@@ -33,7 +32,7 @@ diff -crP -x *.ps elk-3.0.orig/src/dump-vanilla.c elk-3.0/src/dump-vanilla.c
       close (afd);
   #if defined(__bsdi__)
       data_start = N_DATADDR(hdr);
-+ #elif defined (__FreeBSD__)
++ #elif defined (__FreeBSD__) || defined(__NetBSD__)
 +     data_start = (int) &etext;
   #else
       data_start = hdr.a_text;
@@ -45,9 +44,8 @@ diff -crP -x *.ps elk-3.0.orig/src/dump-vanilla.c elk-3.0/src/dump-vanilla.c
       data_end = (unsigned)sbrk (0);
   #if !defined(__bsdi__)
       data_end = (data_end + pagemask) & ~pagemask;
-diff -crP -x *.ps elk-3.0.orig/src/print.c elk-3.0/src/print.c
-*** elk-3.0.orig/src/print.c.orig	Mon Aug  7 09:28:42 1995
---- elk-3.0/src/print.c	Thu Sep  7 14:58:28 1995
+*** src/print.c.orig	Mon Aug  7 09:28:42 1995
+--- src/print.c	Thu Sep  7 14:58:28 1995
 ***************
 *** 6,11 ****
 --- 6,12 ----
