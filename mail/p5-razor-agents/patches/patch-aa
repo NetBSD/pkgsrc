@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2003/12/01 00:24:15 heinz Exp $
+$NetBSD: patch-aa,v 1.5 2004/03/12 22:55:23 heinz Exp $
 
---- Makefile.PL.orig	Tue Aug  5 20:02:43 2003
+--- Makefile.PL.orig	Mon Dec  8 08:17:48 2003
 +++ Makefile.PL
-@@ -138,7 +138,7 @@ sub MY::install {
+@@ -141,7 +141,7 @@ sub MY::install {
  
  # begin razor-agents
  install_razor_agents ::
@@ -11,12 +11,11 @@ $NetBSD: patch-aa,v 1.4 2003/12/01 00:24:15 heinz Exp $
  # end razor-agents
  
  };
-@@ -149,6 +149,17 @@ install_razor_agents ::
-   $inherited =~ s/(\$\(INSTALL\w*MAN1DIR\))/$1$man5/gm;
+@@ -152,6 +152,16 @@ install_razor_agents ::
+   $inherited =~ s/(\$\((?:DEST)?INSTALL\w*MAN1DIR\))/$1$man5/gm;
  
    return $inherited . $install_razor_agents;
 +}
-+
 +
 +sub MY::libscan {
 +  my ($self, $path) = @_;
