@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6310 2004/06/25 13:57:32 wiz Exp $
+$NetBSD: CHANGES,v 1.6311 2004/06/25 14:57:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3060,3 +3060,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gossip to 0.7.6 [jmmv 2004-06-25]
 	Updated xmms-musepack to 1.00 [jmmv 2004-06-25]
 	Added p7zip-0.80 [wiz 2004-06-25]
+	Updated p5-Jcode to 0.86 [taca 2004-06-25]
