@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9407 2005/03/03 10:29:13 is Exp $
+$NetBSD: CHANGES,v 1.9408 2005/03/03 12:02:59 garbled Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1255,3 +1255,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-SVN-Simple to 0.27 [epg 2005-03-03]
 	Updated p5-SVN-Mirror to 0.56 [epg 2005-03-03]
 	Updated svk to 0.30 [epg 2005-03-03]
+    Updated mpi-ch to 1.2.6 [garbled 2005-03-03]
