@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.1 2002/10/07 08:54:45 wiz Exp $
+$NetBSD: patch-an,v 1.2 2002/10/07 12:44:36 wiz Exp $
 
 --- doc/devel/calendar/cal-client/Makefile.in.orig	Sun Oct  6 16:58:03 2002
 +++ doc/devel/calendar/cal-client/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-an,v 1.1 2002/10/07 08:54:45 wiz Exp $
  
  
 -GTKDOC_LIBS =  	$(BONOBO_VFS_GNOME_LIBS)						$(BONOBO_CONF_LIBS)							$(top_builddir)/calendar/cal-client/.libs/libcal-client-static.al 	$(top_builddir)/calendar/cal-util/.libs/libcal-util-static.al		$(top_builddir)/libical/src/libical/.libs/libical-static.al		$(top_builddir)/libversit/.libs/libversit.al				$(top_builddir)/libwombat/libwombat.la
-+GTKDOC_LIBS =  	$(BONOBO_VFS_GNOME_LIBS)						$(BONOBO_CONF_LIBS)							-L$(top_builddir)/calendar/cal-client -lcal-client-static 	-L$(top_builddir)/calendar/cal-util -lcal-util-static		-L$(top_builddir)/libical/src/libical -lical-static		-L$(top_builddir)/libversit -lversit				$(top_builddir)/libwombat/libwombat.la
++GTKDOC_LIBS =  	$(BONOBO_VFS_GNOME_LIBS)						$(BONOBO_CONF_LIBS)							$(top_builddir)/calendar/cal-client/libcal-client-static.la 	$(top_builddir)/calendar/cal-util/libcal-util-static.la		$(top_builddir)/libical/src/libical/libical-static.la		$(top_builddir)/libversit/libversit.la				$(top_builddir)/libwombat/libwombat.la
  
  
  GTKDOC_CC = $(LIBTOOL) --mode=compile $(CC)
