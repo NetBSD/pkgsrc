@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 10:40:29 agc Exp $
+$NetBSD: patch-aa,v 1.4 2000/08/30 19:15:59 jwise Exp $
 
 --- tkcvs/doinstall.orig	Tue Jan  9 22:17:52 1996
 +++ tkcvs/doinstall	Fri Oct 31 09:21:23 1997
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 10:40:29 agc Exp $
  # Find a Tk interpreter.
   
 -WISH=`which wish4.0`
-+WISH=`which wish8.0`
++WISH=`which wish`
  if [ ! -f $WISH ]; then
 -  WISH=`which wish4.1`
 +  WISH=`which wish4.1`
