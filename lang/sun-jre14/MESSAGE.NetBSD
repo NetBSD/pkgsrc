@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.5 2004/02/28 00:44:34 lukem Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.6 2004/04/02 10:12:34 jmmv Exp $
 
 In order to be able to run the JVM, you will need to compile your kernel
 with the following options:
@@ -8,7 +8,7 @@ options		COMPAT_LINUX
 
 Then, you need to add the following line to your /etc/fstab:
 
-procfs /proc procfs rw,linux
+procfs /emul/linux/proc procfs rw,linux
 
 Furthermore, the data segment size set by your shell's 'ulimit' builtin
 must be at least 262144 -- please refer to your shell's manual page for
