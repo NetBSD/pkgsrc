@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/01/20 12:18:17 agc Exp $
+# $NetBSD: Makefile,v 1.33 2004/04/24 01:15:12 wiz Exp $
 #
 
 DISTNAME=       xart19980415
@@ -13,15 +13,15 @@ HOMEPAGE=	http://linux01.gwdg.de/~rhohen/linux.html
 COMMENT=	Paint program (enhanced xpaint)
 
 WRKSRC=		${WRKDIR}/19980415
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_IMAKE=      YES
 
 post-extract:
-	${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755
+	${FIND} ${WRKSRC} -type d -exec ${CHMOD} 755 {} \;
 	${FIND} ${WRKSRC} -type f -print | ${XARGS} ${CHMOD} 644
 
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
