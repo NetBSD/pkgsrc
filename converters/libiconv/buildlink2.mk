@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/10 16:06:37 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/03/07 05:58:31 jlam Exp $
 
 .if !defined(ICONV_BUILDLINK2_MK)
 ICONV_BUILDLINK2_MK=	# defined
@@ -10,11 +10,19 @@ BUILDLINK_PKGSRCDIR.iconv?=	../../converters/libiconv
 
 .if defined(USE_GNU_ICONV)
 _NEED_ICONV=		YES
+_BLNK_LIBICONV_FOUND=	NO
 .else
 .  if exists(/usr/include/iconv.h)
 _NEED_ICONV=		NO
+_BLNK_LIBICONV_LIST!=	${ECHO} /usr/lib/libiconv.*
+.    if ${_BLNK_LIBICONV_LIST} != "/usr/lib/libiconv.*"
+_BLNK_LIBICONV_FOUND=	YES
+.    else
+_BLNK_LIBICONV_FOUND=	NO
+.    endif
 .  else
 _NEED_ICONV=		YES
+_BLNK_LIBICONV_FOUND=	NO
 .  endif
 _INCOMPAT_ICONV?=	# should be set from defs.${OPSYS}.mk
 INCOMPAT_ICONV?=	# empty
@@ -29,8 +37,16 @@ _NEED_ICONV=		YES
 BUILDLINK_PACKAGES+=		iconv
 EVAL_PREFIX+=			BUILDLINK_PREFIX.iconv=libiconv
 BUILDLINK_PREFIX.iconv_DEFAULT=	${LOCALBASE}
+BUILDLINK_LIBICONV_LDADD=	-L${BUILDLINK_PREFIX.iconv}/lib
+BUILDLINK_LIBICONV_LDADD+=	-Wl,-R${BUILDLINK_PREFIX.iconv}/lib
+BUILDLINK_LIBICONV_LDADD+=	-liconv
 .else
 BUILDLINK_PREFIX.iconv=		/usr
+.  if ${_BLNK_LIBICONV_FOUND} == "YES"
+BUILDLINK_LIBICONV_LDADD=	-liconv
+.  else
+BUILDLINK_LIBICONV_LDADD=	# empty
+.  endif
 .endif
 
 BUILDLINK_FILES.iconv=		include/iconv.h
