@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2003/03/02 16:22:43 taca Exp $
+# $NetBSD: Makefile,v 1.79 2003/03/25 17:44:22 taca Exp $
 
-DISTNAME=	squid-2.5.STABLE1
-PKGNAME=	squid-2.5.1
-PKGREVISION=	4
+DISTNAME=	squid-2.5.STABLE2
+PKGNAME=	squid-2.5.2
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -10,74 +9,8 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE1-external_acl_user.patch \
-		squid-2.5.STABLE1-auth_digest.patch \
-		squid-2.5.STABLE1-external_acl_auth_segfault.patch \
-		squid-2.5.STABLE1-distclean_icons.patch \
-		squid-2.5.STABLE1-error-http-ident.patch \
-		squid-2.5.STABLE1-disable-ident-lookups.patch \
-		squid-2.5.STABLE1-disable-http-violations.patch \
-		squid-2.5.STABLE1-proxy_auth.patch \
-		squid-2.5.STABLE1-max_user_ip.patch \
-		squid-2.5.STABLE1-cache_dir_docs.patch \
-		squid-2.5.STABLE1-load_icons.patch \
-		squid-2.5.STABLE1-referer_log.patch \
-		squid-2.5.STABLE1-ldap_auth.patch \
-		squid-2.5.STABLE1-addlang.patch \
-		squid-2.5.STABLE1-pthreads.patch \
-		squid-2.5.STABLE1-strwordtok.patch \
-		squid-2.5.STABLE1-wccp.patch \
-		squid-2.5.STABLE1-memstat.patch \
-		squid-2.5.STABLE1-aufs.patch \
-		squid-2.5.STABLE1-acl_leak.patch \
-		squid-2.5.STABLE1-ext_acl_comma.patch \
-		squid-2.5.STABLE1-request_entity.patch \
-		squid-2.5.STABLE1-ext_acl_exit.patch \
-		squid-2.5.STABLE1-uninstall.patch \
-		squid-2.5.STABLE1-cachemgr.patch \
-		squid-2.5.STABLE1-auth-proxy.patch \
-		squid-2.5.STABLE1-dnsserver.patch \
-		squid-2.5.STABLE1-spaces.patch \
-		squid-2.5.STABLE1-flags_open.patch \
-		squid-2.5.STABLE1-ldap_group-compile.patch \
-		squid-2.5.STABLE1-aufs_performance.patch \
-		squid-2.5.STABLE1-RunCache.patch \
-		squid-2.5.STABLE1-rebuild_assert.patch \
-		squid-2.5.STABLE1-offline_mode.patch \
-		squid-2.5.STABLE1-S.patch \
-		squid-2.5.STABLE1-chroot.patch \
-		squid-2.5.STABLE1-aufs_reentrant.patch \
-		squid-2.5.STABLE1-relnote11.patch \
-		squid-2.5.STABLE1-ldap_group.patch \
-		squid-2.5.STABLE1-offline_toggle.patch \
-		squid-2.5.STABLE1-failure_ratio.patch \
-		squid-2.5.STABLE1-hostnames.patch \
-		squid-2.5.STABLE1-sbrk.patch \
-		squid-2.5.STABLE1-log_mime_hdrs.patch \
-		squid-2.5.STABLE1-peer_select_alg.patch \
-		squid-2.5.STABLE1-mempoolstat.patch \
-		squid-2.5.STABLE1-copy_offset.patch \
-		squid-2.5.STABLE1-select_fds_hist.patch \
-		squid-2.5.STABLE1-select_stat.patch \
-		squid-2.5.STABLE1-pidfile.patch \
-		squid-2.5.STABLE1-http_reply_max_size.patch \
-		squid-2.5.STABLE1-cachemgr_non_get.patch \
-		squid-2.5.STABLE1-authsheme_realloc.patch \
-		squid-2.5.STABLE1-ftp_abort.patch \
-		squid-2.5.STABLE1-helper_stats.patch \
-		squid-2.5.STABLE1-delay_pools_docs.patch \
-		squid-2.5.STABLE1-auth_connection.patch \
-		squid-2.5.STABLE1-authenticate_program_docs.patch \
-		squid-2.5.STABLE1-with_aufs_threads_trap.patch \
-		squid-2.5.STABLE1-shutdown_assert.patch \
-		squid-2.5.STABLE1-cachemgr_passwd.patch \
-		squid-2.5.STABLE1-etc_hosts_fdleak.patch \
-		squid-2.5.STABLE1-openssl097.patch \
-		squid-2.5.STABLE1-HEAD_bad_headers.patch \
-		squid-2.5.STABLE1-time_acl_list.patch \
-		squid-2.5.STABLE1-CONNECT_pipeline.patch \
-		squid-2.5.STABLE1-winbind.patch \
-		squid-2.5.STABLE1-mib.patch
+PATCHFILES=	squid-2.5.STABLE2-concurrent_external_acl.patch \
+		squid-2.5.STABLE2-external_acl_crash.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@netbsd.org
@@ -85,7 +18,11 @@ HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 
 USE_PERL5=	build
-DIST_SUBDIR=	squid-2.5.1
+DIST_SUBDIR=	squid-2.5.2
+DOCDIR=		${PREFIX}/share/doc/squid
+EXAMPLESDIR=	${PREFIX}/share/examples/squid
+
+DOCFILES=	ChangeLog RELEASENOTES.html doc/debug-sections.txt
 
 # Configuration directory location which can be overwritten by the user.
 PKG_SYSCONFSUBDIR?=	squid
@@ -107,10 +44,8 @@ PLIST_SRC=		${WRKDIR}/PLIST
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-src//}
 RCD_SCRIPTS=		squid
 
-CONF_FILES+=		${PREFIX}/share/examples/squid/mime.conf \
-				${PKG_SYSCONFDIR}/mime.conf
-CONF_FILES+=		${PREFIX}/share/examples/squid/squid.conf \
-				${PKG_SYSCONFDIR}/squid.conf
+CONF_FILES+=		${EXAMPLESDIR}/mime.conf ${PKG_SYSCONFDIR}/mime.conf
+CONF_FILES+=		${EXAMPLESDIR}/squid.conf ${PKG_SYSCONFDIR}/squid.conf
 
 # Configuration options which can be overwritten by the user.
 SQUID_CONFIGURE_ARGS?=	--disable-internal-dns \
@@ -138,19 +73,24 @@ OPTIONAL_FILES+= libexec/squid_unix_group libexec/wb_auth libexec/wb_group
 OPTIONAL_FILES+= libexec/wb_ntlmauth man/man8/squid_unix_group.8
 
 pre-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/squid
+	@${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/errors
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/icons
 
 post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	@cd ${WRKSRC};						\
+	for i in ${DOCFILES}; do				\
+		${INSTALL_DATA} $$i ${DOCDIR};			\
+	done
 	@(							\
 	for FILE in ${OPTIONAL_FILES}; do			\
 	  ${TEST} ! -e ${PREFIX}/$$FILE || ${ECHO} $$FILE;	\
 	done;							\
 	cd ${WRKSRC}/errors;					\
-	for i in *; do \
+	for i in *; do						\
 		${TEST} -d $$i &&				\
 		(${LS} $$i/ERR_* |				\
 		${SED} -e 's@^@share/squid/errors/@';		\
