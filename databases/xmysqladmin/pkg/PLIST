@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/05 17:20:11 bad Exp $
+bin/xmysqladmin
+share/xmysqladmin/mysql.xpm
+share/xmysqladmin
