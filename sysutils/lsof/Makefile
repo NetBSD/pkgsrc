@@ -3,7 +3,7 @@
 # Date created:         Sat July 20, 1996
 # Whom:                 David O'Brien (obrien@FreeBSD.org)
 #
-# $NetBSD: Makefile,v 1.1 1998/04/01 15:02:36 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/04/02 09:35:38 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
@@ -29,30 +29,24 @@ CONFIGURE_ARGS=		-n freebsd
 CONFIGURE_ARGS=		-n netbsd
 .endif
 
+MAKE_FLAGS=		UVM=${UVM}
+
 MAN1=			lsof.1
 
 SRCBALL_NAME=		${DISTNAME:S/_W$//}
 
-pre-extract:
-	@if [ "X${UVM}" != X""  ]; then					\
-		${ECHO} ""; 						\
-		${ECHO} "This package does not yet work with UVM.";	\
-		${ECHO} ""; 						\
-		${FALSE};						\
-        fi
-
 post-extract:
 	@( cd ${WRKDIR} ; \
-	EXPMD5=`/usr/bin/grep MD5 README.${SRCBALL_NAME} | sed 's/^[ ]*//'` ; \
+	EXPMD5=`${GREP} MD5 README.${SRCBALL_NAME} | ${SED} 's/^[ ]*//'` ; \
 	CALCMD5=`${MD5} ${SRCBALL_NAME}.tar` ; \
 	if [ "$${EXPMD5}"X != "$${CALCMD5}"X ]; then \
-		echo "Expected and calculated MD5 signatures don't agree." ; \
-		echo "($$EXPMD5 != $$CALCMD5)" ; \
-		exit 1 ; \
+		${ECHO} "Expected and calculated MD5 signatures don't agree." ; \
+		${ECHO} "($$EXPMD5 != $$CALCMD5)" ; \
+		${FALSE} ; \
 	fi ; \
 	${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS:S/z//} ${SRCBALL_NAME}.tar \
 	)
-	@( cd ${WRKSRC} ; echo "y" | ./Inventory || exit 1 )
+	@( cd ${WRKSRC} ; ${ECHO} "y" | ./Inventory || exit 1 )
 
 do-install:
 	${INSTALL} ${COPY} ${STRIP} -o ${BINOWN} -g ${BINGRP} -m 2755 -g kmem \
@@ -60,6 +54,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/lsof.man ${PREFIX}/man/man1/lsof.1
 	@${MKDIR} ${PREFIX}/share/lsof
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/* ${PREFIX}/share/lsof
-	@/bin/chmod 0444 ${PREFIX}/share/lsof/00*
+	@chmod 0444 ${PREFIX}/share/lsof/00*
 
 .include <bsd.port.mk>
