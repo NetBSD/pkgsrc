@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/02/09 14:21:16 bad Exp $
+# $NetBSD: Makefile,v 1.9 1999/02/09 14:47:58 bad Exp $
 #
 
 DISTNAME=	gnuplot-3.7
@@ -12,5 +12,6 @@ HOMEPAGE=	http://www.gnu.org/software/gnuplot/gnuplot.html
 USE_X11=	yes
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+= --without-gd --without-png --without-plot --with-x
 
 .include "../../mk/bsd.pkg.mk"
