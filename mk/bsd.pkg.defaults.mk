@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.253 2004/06/22 23:53:52 xtraeme Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.254 2004/06/26 06:03:41 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -2214,7 +2214,7 @@ XEN12_USE_COM2?=	NO
 #MASTER_SITE_SUNSITE=	http://public.planetmirror.com.au/pub/sunsite/
 #MASTER_SITE_SUSE=	http://public.planetmirror.com.au/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ 
 #MASTER_SITE_TEX_CTAN=	http://public.planetmirror.com.au/pub/tex-archive/
-#MASTER_SITE_SOURCEFORGE=http://flow.dl.sourceforge.net/sourceforge/ \
+#MASTER_SITE_SOURCEFORGE=http://optusnet.dl.sourceforge.net/sourceforge/ \
 #			http://public.planetmirror.com.au/pub/sourceforge/
 #MASTER_SITE_XCONTRIB=	http://public.planetmirror.com.au/pub/X11/contrib/
 #MASTER_SITE_XEMACS=	ftp://ftp.au.xemacs.org/pub/xemacs/
