@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2003/10/26 22:51:34 kristerw Exp $
+# $NetBSD: Makefile.common,v 1.46 2003/11/03 00:59:05 kristerw Exp $
 #
 
 MPLAYER_DIST_VERSION=	1.0pre1
@@ -14,7 +14,7 @@ MASTER_SITES=		http://www.mplayerhq.hu/MPlayer/releases/ \
 			ftp://ftp.mplayerhq.hu/MPlayer/releases/ \
 			ftp://ftp2.mplayerhq.hu/MPlayer/releases/
 EXTRACT_SUFX=		.tar.bz2
-DIST_SUBDIR=		mplayer
+DIST_SUBDIR=		mplayer-${MPLAYER_PKG_VERSION}
 
 MAINTAINER?=		tech-pkg@NetBSD.org
 HOMEPAGE?=		http://www.mplayerhq.hu/
