@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2002/11/28 09:43:41 tron Exp $
+# $NetBSD: Makefile,v 1.37 2002/11/28 10:04:36 tron Exp $
 
 DISTNAME=       make-3.80
 PKGNAME=        gmake-3.80
@@ -11,7 +11,7 @@ COMMENT=	GNU version of 'make' utility
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--program-prefix="g" --without-libiconv-prefix
+CONFIGURE_ARGS+=	--program-prefix="g"
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 TEXINFO_OVERRIDE=	YES
