@@ -1,0 +1,13 @@
+$NetBSD: patch-cd,v 1.1 2004/04/26 07:46:11 agc Exp $
+
+--- include/schily.h	2004/04/26 07:40:33	1.1
++++ include/schily.h	2004/04/26 07:40:49
+@@ -115,7 +115,7 @@
+ extern	int	fspawnv_nowait __PR((FILE *, FILE *, FILE *,
+ 					const char *, int, char *const*));
+ extern	int	fgetline __PR((FILE *, char *, int));
+-extern	int	fgetstr __PR((FILE *, char *, int));
++extern	int	schily_fgetstr __PR((FILE *, char *, int));
+ extern	void	file_raise __PR((FILE *, int));
+ extern	int	fileclose __PR((FILE *));
+ extern	FILE	*fileluopen __PR((int, const char *));
