@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2001/01/26 21:47:15 jtb Exp $
+# $NetBSD: Makefile,v 1.62 2001/02/06 03:03:48 jun Exp $
 #
 
     SUBDIR += balsa
@@ -24,6 +24,7 @@
     SUBDIR += mailwrapper
     SUBDIR += majordomo
     SUBDIR += metamail
+    SUBDIR += mew
     SUBDIR += mhonarc
     SUBDIR += mush
     SUBDIR += mutt
