@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1997/10/29 00:40:28 augustss Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/15 11:39:10 agc Exp $
 # New ports collection makefile for:	xmmix
 # Version required:     1.2-pl2
 # Date created:		97-10-24
@@ -14,6 +14,6 @@ MAINTAINER=	augustss@cs.chalmers.se
 USE_IMAKE=	yes
 REQUIRES_MOTIF=	yes
 
-MAN1=		xmmix.1
+CAT1=		xmmix.0
 
 .include <bsd.port.mk>
