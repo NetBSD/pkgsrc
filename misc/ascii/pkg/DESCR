@@ -1,0 +1,5 @@
+This is a handy little utility that recognizes many different ways of
+naming an ASCII character (hex, octal, binary, decimal, C escape, ISO
+character table pair, slang names, and others) and prints out all the
+equivalents.  A CGI script that can be used to enable access over the
+Web is included.
