@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/13 06:32:18 minskim Exp $
+$NetBSD: distinfo,v 1.2 2004/06/07 06:12:16 minskim Exp $
 
-SHA1 (xchat-systray-integration-2.4.0-src.tar.gz) = fd7326ca53e81c142b04ebd279b94e2eaa10c3b6
-Size (xchat-systray-integration-2.4.0-src.tar.gz) = 42250 bytes
+SHA1 (xchat-systray-integration-2.4.5-src.tar.gz) = d7bad0f60c1944ce385e5799eb08a45a081365ab
+Size (xchat-systray-integration-2.4.5-src.tar.gz) = 57953 bytes
+SHA1 (patch-aa) = bbe8568fa41a7a4b3f6929a3a58251ab3e133d72
