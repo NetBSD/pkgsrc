@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2004/10/28 10:32:23 gavan Exp $
+# $NetBSD: Makefile.common,v 1.40 2004/10/30 13:28:40 grant Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -108,4 +108,5 @@ post-patch:
 		${FILESDIR}/qmake.conf > ${WRKSRC}/qmake.conf
 	for dir in ${WRKSRC}/mkspecs/*; do \
 		${CP} ${WRKSRC}/qmake.conf $${dir}; \
+		${RM} -f $${dir}/*.orig; \
 	done
