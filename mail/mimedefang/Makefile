@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/04/06 14:01:52 tv Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/25 04:03:16 snj Exp $
 
 DISTNAME=		mimedefang-2.40
 PKGREVISION=		1
@@ -18,7 +18,7 @@ DEPENDS+=		p5-MIME-Base64>=2.11:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-MIME-tools>=5.411.1:../../mail/p5-MIME-tools
 DEPENDS+=		spamassassin>=2.31:../../mail/spamassassin
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PERL5=		YES
 GNU_CONFIGURE=		YES
 PKG_SYSCONFSUBDIR?=	mimedefang
@@ -86,6 +86,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/suggested-minimum-filter-for-windows-clients ${EGDIR}/mimedefang-filter
 	${INSTALL_DATA} ${WRKSRC}/SpamAssassin/spamassassin.cf ${EGDIR}/sa-mimedefang.cf
 
-.include "../../mail/libmilter/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mail/libmilter/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
