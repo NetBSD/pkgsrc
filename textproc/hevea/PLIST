@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:50 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/29 22:57:14 jtb Exp $
 bin/hacha
 bin/hevea
+bin/esponja
 bin/imagen
+share/hevea/alltt.hva
 share/hevea/amsmath.hva
 share/hevea/articlecommon.hva
 share/hevea/babel.hva
@@ -16,11 +18,14 @@ share/hevea/hevea.sty
 share/hevea/html/article.hva
 share/hevea/html/book.hva
 share/hevea/html/color.hva
+share/hevea/html/colortbl.hva
 share/hevea/html/commongraphic.hva
 share/hevea/html/fancysection.hva
+share/hevea/html/fancyvrb.hva
 share/hevea/html/graphics.hva
 share/hevea/html/graphicx.hva
 share/hevea/html/hevea.hva
+share/hevea/html/png.hva
 share/hevea/html/report.hva
 share/hevea/html/seminar.hva
 share/hevea/html/sword.hva
@@ -37,6 +42,7 @@ share/hevea/index.hva
 share/hevea/info/article.hva
 share/hevea/info/book.hva
 share/hevea/info/color.hva
+share/hevea/info/colortbl.hva
 share/hevea/info/fancysection.hva
 share/hevea/info/hevea.hva
 share/hevea/info/report.hva
@@ -44,22 +50,31 @@ share/hevea/info/seminar.hva
 share/hevea/iso-symb.hva
 share/hevea/keyval.hva
 share/hevea/latexcommon.hva
+share/hevea/listings.hva
+share/hevea/lstlang1.hva
+share/hevea/lstlang2.hva
+share/hevea/lstlang3.hva
 share/hevea/makeidx.hva
 share/hevea/mathaccents.hva
+share/hevea/mathop.hva
 share/hevea/moreverb.hva
 share/hevea/multind.hva
 share/hevea/next_motif.gif
 share/hevea/packages.hva
+share/hevea/plain.hva
 share/hevea/previous_motif.gif
+share/hevea/program.hva
 share/hevea/spaces.hva
 share/hevea/text/article.hva
 share/hevea/text/book.hva
 share/hevea/text/color.hva
+share/hevea/text/colortbl.hva
 share/hevea/text/fancysection.hva
 share/hevea/text/hevea.hva
 share/hevea/text/report.hva
 share/hevea/text/seminar.hva
 share/hevea/text/symb.hva
+share/hevea/underscore.hva
 share/hevea/url.hva
 share/hevea/verbatim.hva
 share/hevea/xxdate.exe
