@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: apache.sh,v 1.19 2002/07/02 11:57:19 wiz Exp $
+# $NetBSD: apache.sh,v 1.20 2002/07/07 00:45:18 tv Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
@@ -19,9 +19,11 @@ rcvar=$name
 command="@PREFIX@/sbin/httpd"
 ctl_command="@PREFIX@/sbin/apachectl"
 required_files="@PKG_SYSCONFDIR@/httpd.conf"
+extra_commands="reload"
 start_cmd="apache_doit start"
 stop_cmd="apache_doit stop"
 restart_cmd="apache_doit restart"
+reload_cmd="apache_doit reload"
 
 # "${apache_start}" is the subcommand sent to apachectl to control how
 # httpd is started.  It's value may be overridden in:
@@ -43,6 +45,7 @@ apache_doit ()
 {
 	case $1 in
 	start)	action=${apache_start} ;;
+	reload)	action=graceful ;;
 	*)	action=$1 ;;
 	esac
 	${ctl_command} ${action}
