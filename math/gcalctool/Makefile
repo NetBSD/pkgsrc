@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/21 16:57:12 martti Exp $
+# $NetBSD: Makefile,v 1.9 2003/08/26 16:12:48 junyoung Exp $
 #
 
 DISTNAME=		gcalctool-4.2.83
@@ -11,7 +11,7 @@ HOMEPAGE=		http://calctool.sourceforge.net/
 COMMENT=		Gtk2+ version of calctool
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS+=		gnome-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
