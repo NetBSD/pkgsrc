@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9526 2005/03/20 17:52:55 jmmv Exp $
+$NetBSD: CHANGES,v 1.9527 2005/03/21 04:05:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1427,3 +1427,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated screws to 0.54nb3 [jmmv 2005-03-20]
 	Removed wmessage [jmmv 2005-03-20]
 	Updated screws to 0.56 [jmmv 2005-03-20]
+	Updated djbdns to 1.05nb6 [schmonz 2005-03-21]
