@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/12/22 17:05:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/28 22:03:05 jlam Exp $
 # FreeBSD: ports/audio/xmp/Makefile,v 1.5 2000/04/08 21:24:59 mharo Exp
 #
 
@@ -12,6 +12,7 @@ MAINTAINER=	rxg@ms25.url.com.tw
 HOMEPAGE=	http://xmp.sourceforge.net/
 COMMENT=	Player for many different Amiga and PC module formats
 
+USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-alsa \
 		--disable-oss \
@@ -28,5 +29,4 @@ CONF_FILES+=	${EGDIR}/xmp.conf ${PKG_SYSCONFDIR}/xmp.conf
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

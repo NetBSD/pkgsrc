@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/12/07 10:12:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/01/28 22:04:15 jlam Exp $
 #
 
 DISTNAME=	gentoo-0.11.34
@@ -11,10 +11,11 @@ COMMENT=	Two-pane filemanager using GTK+, 100% GUI configurable
 
 BUILD_USES_MSGFMT=	YES
 
-GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_X11=	YES
+USE_X11=		YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
@@ -24,5 +25,5 @@ CONF_FILES+=	${EGDIR}/gentoogtkrc ${PKG_SYSCONFDIR}/gentoogtkrc
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
+
 .include "../../mk/bsd.pkg.mk"

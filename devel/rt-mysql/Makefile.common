@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2002/09/19 21:40:45 atatat Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/01/28 22:03:16 jlam Exp $
 
 DISTNAME=      	rt-2-0-13
 CATEGORIES=	devel
@@ -23,6 +23,8 @@ RT_DB_PASS?=	changemeplease
 
 RT_WEB_USER?=	nobody
 RT_WEB_GROUP?=	nobody
+
+USE_PKGINSTALL=	yes
 
 PKGDIR=		${.CURDIR}/../../devel/rt-mysql
 DISTINFO_FILE=	${PKGDIR}/distinfo
@@ -122,5 +124,4 @@ pre-build:
 	${ECHO} '#define DATABASE_LIBRARY_PATH "${RT_DB_PATH}"' >> config.h; \
 	${ECHO} '#define RT_GROUP "${RT_GROUP}"' >> config.h )
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

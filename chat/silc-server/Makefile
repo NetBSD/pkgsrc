@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/01/26 14:10:44 salo Exp $
+# $NetBSD: Makefile,v 1.21 2003/01/28 22:03:07 jlam Exp $
 
 DISTNAME=		silc-server-0.9.12
 CATEGORIES=		chat security
@@ -13,9 +13,11 @@ MAINTAINER=		salo@netbsd.org
 HOMEPAGE=		http://www.silcnet.org/
 COMMENT=                Server for the Secure Internet Live Conferencing (SILC) protocol
 
+USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
+
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
-USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/lib/silcmath/mpi/libtool
 
@@ -76,5 +78,4 @@ post-install:
 		> ${PREFIX}/share/examples/silcd/motd.txt.default
 
 .include "../../devel/glib/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

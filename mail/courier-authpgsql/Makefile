@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/01/05 20:14:30 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/28 22:03:29 jlam Exp $
 
 PKGNAME=		courier-authpgsql-${BASE_VERS}
 PKGREVISION=		1
@@ -8,6 +8,7 @@ DEPENDS+=		courier-auth>=${BASE_VERS}:../../mail/courier-auth
 
 .include "../../mail/courier-auth/Makefile.authdaemond"
 
+USE_PKGINSTALL=		yes
 CONFIGURE_ARGS+=	--with-authpgsql
 CONFIGURE_ARGS+=	--with-pgsql-includes=${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
 CONFIGURE_ARGS+=	--with-pgsql-libs=${BUILDLINK_PREFIX.postgresql-lib}/lib
@@ -37,5 +38,4 @@ do-install:
 		${PREFIX}/share/doc/html/courier
 
 .include "../../databases/postgresql-lib/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

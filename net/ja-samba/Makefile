@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/01/10 07:43:31 cjep Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/28 22:03:51 jlam Exp $
 
 DISTNAME=		samba-${SAMBA_BASE_VERSION}-ja-${SAMBA_JA_VERSION}
 PKGNAME=		ja-samba-${SAMBA_BASE_VERSION}.${SAMBA_JA_VERSION}
@@ -16,11 +16,12 @@ SAMBA_BASE_VERSION=	2.2.4
 SAMBA_JA_VERSION=	1.0
 CONFLICTS+=		samba-[0-9]*
 
-GNU_CONFIGURE=		# defined
-USE_LIBTOOL=		# defined
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
 
@@ -147,5 +148,4 @@ post-install:
 .include "../../devel/readline/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

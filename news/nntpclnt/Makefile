@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/09/18 21:16:24 tron Exp $
+# $NetBSD: Makefile,v 1.18 2003/01/28 22:03:59 jlam Exp $
 
 DISTNAME=	nntpclnt-1.6.1
 PKGREVISION=	3
@@ -17,6 +17,7 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 
 ALL_TARGET=	inews
 PKG_GROUPS=	news
+USE_PKGINSTALL=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,6 +39,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/nntpclnt.3 ${PREFIX}/man/man3/
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/nntp
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
-

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/09/23 07:07:02 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/28 22:03:50 jlam Exp $
 #
 
 DISTNAME=	dhid-4.0.1
@@ -11,6 +11,7 @@ COMMENT=	Dynamic Host Information System client daemon
 
 DEPENDS+=	gmp-[0-9]*:../../devel/gmp
 
+USE_PKGINSTALL=	yes
 RCD_SCRIPTS=	dhid
 
 do-install:
@@ -23,5 +24,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/WHATSNEW ${PREFIX}/share/doc/dhid
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dhid
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

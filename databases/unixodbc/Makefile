@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/09/20 21:26:30 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/28 22:03:13 jlam Exp $
 
 PKGNAME=		unixodbc-${ODBC_BASE_VERS}
 PKGREVISION=		1
@@ -8,6 +8,7 @@ CONFLICTS+=		iodbc-[0-9]*
 
 .include "../../databases/unixodbc/Makefile.common"
 
+USE_PKGINSTALL=		yes
 CONFIGURE_ARGS+=	--disable-gui
 
 PLIST_SUBST+=		UNIXODBC_DRIVERS_DIR=${UNIXODBC_DRIVERS_DIR}
@@ -30,5 +31,4 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/odbcinst.ini ${EGDIR}/odbcinst.ini
 
 .include "../../devel/readline/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

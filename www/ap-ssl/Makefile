@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2002/11/19 23:03:53 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2003/01/28 22:04:26 jlam Exp $
 
 DISTNAME=		mod_ssl-2.8.12-1.3.27
 PKGNAME=		ap-ssl-2.8.12
@@ -17,6 +17,7 @@ CONFLICTS=		apache-1.3.[0-9] apache-*modssl-[0-9]* apache6-[0-9]*
 BUILDLINK_DEPENDS.apache=	apache>=1.3.27nb1
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 APACHE_MODULE=		YES
 
 GNU_CONFIGURE=		YES
@@ -100,5 +101,4 @@ post-install:
 .include "../../security/openssl/buildlink2.mk"
 .include "../../www/apache/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

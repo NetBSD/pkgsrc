@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/01/04 20:01:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2003/01/28 22:04:34 jlam Exp $
 #
 
 DISTNAME=		gtk+-2.2.0
@@ -16,6 +16,7 @@ COMMENT=		Gimp toolkit. Libraries for building X11 user interfaces
 
 BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 USE_GMAKE=		yes
@@ -58,5 +59,4 @@ post-install:
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

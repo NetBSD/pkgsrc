@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/11/07 03:48:00 dillo Exp $
+# $NetBSD: Makefile,v 1.25 2003/01/28 22:03:36 jlam Exp $
 #
 
 DISTNAME=	popa3d-0.5.9
@@ -19,6 +19,7 @@ PKG_GROUPS=	${POPA3D_GROUP}
 PKG_USERS=	${POPA3D_USER}:${POPA3D_GROUP}
 
 USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
 
 RCD_SCRIPTS=	popa3d
 
@@ -40,5 +41,4 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/empty
 
 .include "../../security/tcp_wrappers/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
