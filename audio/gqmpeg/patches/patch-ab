@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.20 2002/03/18 08:21:13 wiz Exp $
+
+--- src/Makefile.in.orig	Mon Mar 18 09:11:54 2002
++++ src/Makefile.in
+@@ -105,7 +105,7 @@
+ INCLUDES = -I$(srcdir) -I$(builddir)    \
+ 	-I$(top_srcdir) -I$(top_builddir)       \
+ 	-DLOCALEDIR=\""$(localedir)"\"		\
+-	-I$(includedir) $(GTK_CFLAGS) \
++	$(GTK_CFLAGS) \
+ 	$(GDK_PIXBUF_CFLAGS)
+ 
+ 
