@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.911 2003/09/29 21:32:04 jschauma Exp $
+$NetBSD: TODO,v 1.912 2003/09/30 07:14:52 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -98,7 +98,6 @@ Suggested package updates
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
 	o bins-1.1.23
-	o bogofilter-0.14.5.4 [pkg/22983]
 	o bomberclone-0.10.1
 	o bzflag-1.7g2
 	o cervisia-2.0
