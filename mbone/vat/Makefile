@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/05/09 15:24:43 frueauf Exp $
+# $NetBSD: Makefile,v 1.13 1998/05/23 15:42:59 tv Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/09/11 03:54:43 fenner Exp 
 #
 
@@ -20,7 +20,7 @@ GSM_DIR=	${PKGSRCDIR}/audio/gsm
 GSM_WORK=	${GSM_DIR}/${WRKDIR:T}/gsm-1.0-pl10
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= ${MACHINE_ARCH}--netbsd --with-gsm=${GSM_WORK}
+CONFIGURE_ARGS+= --with-gsm=${GSM_WORK}
 INSTALL_TARGET=	install install-man
 MAN1=		vat.1
 

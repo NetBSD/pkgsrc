@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1998/04/22 14:22:41 agc Exp $
+# $NetBSD: Makefile,v 1.22 1998/05/23 15:42:58 tv Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -28,7 +28,7 @@ DEPENDS+=	jpeg-6a:../../graphics/jpeg
 DEPENDS+=	Xaw3d-1.3:../../x11/Xaw3d
 DEPENDS+=	png-0.96:../../graphics/png
 
-HAS_CONFIGURE=	yes
+GNU_CONFIGURE=	yes
 
 WITH_DIALOGS=	--with-dialogs=athena3d
 
@@ -37,8 +37,7 @@ WITH_MULE=	--with-mule
 DISTFILES+=	xemacs-20.3-mule.tar.gz
 .endif
 
-CONFIGURE_ARGS+=	${ARCH}--`echo ${OPSYS}|tr [A-Z] [a-z]` --prefix=${PREFIX} \
-		--site-includes=${PREFIX}/include \
+CONFIGURE_ARGS+=--site-includes=${PREFIX}/include \
 		${WITH_SOUND} \
 		--site-libraries=${PREFIX}/lib \
 		--sitelispdir="${PREFIX}/lib/xemacs/site-lisp ${PREFIX}/share/xemacs/site-lisp" \
