@@ -1,0 +1,28 @@
+$NetBSD: patch-ae,v 1.1 1998/11/24 21:01:46 tv Exp $
+
+--- doc/example.conf.orig	Tue Nov 24 15:57:46 1998
++++ doc/example.conf	Tue Nov 24 15:59:33 1998
+@@ -302,8 +302,7 @@
+ #
+ # When your server gets fuller, you will notice delays when trying to
+ # connect to your server's primary listening port. Via the Port lines
+-# it is possible to specify additional ports (both AF_UNIX and AF_INET)
+-# for ircd to listen to.
++# it is possible to specify additional ports for ircd to listen to.
+ # De facto ports are: 6667 - standard; 6660-6669 - additional client
+ # ports; 7000 - original Undernet port; 4400, 7777 - used mainly for
+ # server-to-server connections.
+@@ -312,12 +311,11 @@
+ # On a side note, the /UPING command uses port 7007/udp. If your server
+ # is located behind a firewall, you may want to make another hole in it
+ # for this port.
+-# P:<hostmask, or path>:::<port number>
++# P:<hostmask>:::<port number>
+ 
+ P::::4400
+ P::::7000
+ P:*.nl:::6666
+-P:/tmp/.ircd:::6667
+ 
+ #
+ # Well, you have now reached the end of this sample configuration file
