@@ -1,32 +1,35 @@
-$NetBSD: patch-ab,v 1.4 2004/03/10 18:37:48 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2004/08/15 12:06:34 wiz Exp $
 
---- db.c.orig	2004-02-15 22:36:00.000000000 +0100
+--- db.c.orig	2004-08-07 05:03:16.000000000 +0200
 +++ db.c
-@@ -23,11 +23,12 @@
- #include "meal.h"
- #include "options.h"
- #include "util.h"
--#ifndef DOS
-+#ifdef DOS
- #include <tgmath.h>
- #else
- #include <math.h>
- #endif
-+#include <errno.h>
- #include <stdio.h>
- #include <stdlib.h>
+@@ -29,6 +29,7 @@
  #include <string.h>
-@@ -691,7 +692,13 @@ void make_filenames(void)
-  sprintf(versionfile,"%s/%s","NUTDB",versionfile1);
+ #include <sys/stat.h>
+ #include <ctype.h>
++#include <errno.h>
+  
+ #ifndef NUTDIR
+ char nutdir1[]=".nutdb";
+@@ -739,9 +740,22 @@ strcpy(subuser,sub);
+  sprintf(versionfile,"%s/%s/%s","NUTDB",subuser,versionfile1);
  #else
  sprintf(nutdir,"%s/%s",getenv("HOME"),nutdir1);
 -mkdir (nutdir, 0700 );
 +if (mkdir(nutdir, S_IRWXU|S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH) != 0) {
-+     if (errno != EEXIST) {
-+             printf("Cannot create %s/%s: %s\n", getenv("HOME"), nutdir1,
-+                     strerror(errno));
-+             exit(1);
-+     }
++    if (errno != EEXIST) {
++	printf("Cannot create %s: %s\n", nutdir,
++	       strerror(errno));
++	exit(1);
++    }
++}
+ sprintf(nutdirsubuser,"%s/%s/%s",getenv("HOME"),nutdir1,subuser);
+ mkdir (nutdirsubuser, 0700 );
++if (mkdir(nutdirsubuser, S_IRWXU|S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH) != 0) {
++    if (errno != EEXIST) {
++	printf("Cannot create %s: %s\n", nutdirsubuser,
++	       strerror(errno));
++	exit(1);
++    }
 +}
  sprintf(USDAjoined,"%s/%s",FOODDIR,USDAjoined1);
  sprintf(globalFOOD,"%s/%s",FOODDIR,globalFOOD1);
