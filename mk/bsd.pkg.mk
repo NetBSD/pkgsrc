@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.498 2000/07/06 15:37:49 hubertf Exp $			\
+#	$NetBSD: bsd.pkg.mk,v 1.499 2000/07/06 16:45:21 hubertf Exp $			\
 #
 # This file is in the public domain.
 #
@@ -2288,6 +2288,21 @@ checksum: fetch
 		  fi) ;							\
 	fi
 .endif
+
+
+# Install binary pkg, without strict uptodate-check first
+# (XXX should be able to snarf via FTP. Later...)
+bin-install:
+	@if [ -f ${PKGFILE} ] ; then 					\
+		${ECHO_MSG} "Installing from binary pkg ${PKGFILE}" ;	\
+		${PKG_ADD} ${PKGFILE} ; 				\
+	else 				 				\
+		${SHCOMMENT} Cycle through some FTP server here ;\
+		${ECHO_MSG} "Installing from source" ;			\
+		${MAKE} ${MAKEFLAGS} package &&				\
+		${MAKE} ${MAKEFLAGS} clean ;				\
+	fi
+
 
 ################################################################
 # The special package-building targets
