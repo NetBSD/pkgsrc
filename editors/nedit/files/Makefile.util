@@ -1,0 +1,9 @@
+CC=cc
+AR=ar
+
+# For editres, add -DEDITRES to CFLAGS and -lXmu to LIBS
+CFLAGS=-O -I/usr/X11R6/include -DUSE_DIRENT -DUSE_LPR_PRINT_CMD
+ARFLAGS=-ur
+LIBS= -L/usr/X11R6/lib -lm -lXm -lXpm -lXext -lXt -lSM -lICE -lX11
+
+include Makefile.common
