@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/08/01 05:48:14 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/23 02:39:34 jlam Exp $
 
 DISTNAME=	Chinput-3.0
 CATEGORIES=	inputmethod
@@ -8,10 +8,8 @@ MAINTAINER=	rxg@netbsd.org
 HOMEPAGE=	http://www.opencjk.org/~yumj/project-chinput.html
 COMMENT=	Chinese input server
 
-DEPENDS+=	unicon-im>=1.2:../../inputmethod/unicon-im
-
+USE_BUILDLINK2=	yes
 USE_X11BASE=	yes
-PTHREAD_OPTS+=	require
 
 ALL_TARGET=	chinput
 
@@ -33,6 +31,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Chinput
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/Chinput
 
-.include "../../mk/pthread.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../inputmethod/unicon-im/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
