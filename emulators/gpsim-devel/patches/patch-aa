@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/29 20:51:51 bouyer Exp $
+
+--- gui/Makefile.in.orig	2004-06-04 19:40:29.000000000 +0200
++++ gui/Makefile.in	2004-06-04 19:46:48.000000000 +0200
+@@ -117,13 +117,13 @@
+ AWK = @AWK@
+ CC = @CC@
+ CCDEPMODE = @CCDEPMODE@
+-CFLAGS = @CFLAGS@ -D DATADIR=\"~/.gpsim/\"
++CFLAGS = @CFLAGS@ -DDATADIR=\"~/.gpsim/\"
+ CPP = @CPP@
+-CPPFLAGS = @CPPFLAGS@ -D DATADIR=\"~/.gpsim/\"
++CPPFLAGS = @CPPFLAGS@ -DDATADIR=\"~/.gpsim/\"
+ CXX = @CXX@
+ CXXCPP = @CXXCPP@
+ CXXDEPMODE = @CXXDEPMODE@
+-CXXFLAGS = @CXXFLAGS@ -D DATADIR=\"~/.gpsim/\"
++CXXFLAGS = @CXXFLAGS@ -DDATADIR=\"~/.gpsim/\"
+ CYGPATH_W = @CYGPATH_W@
+ DEFS = @DEFS@
+ DEPDIR = @DEPDIR@
