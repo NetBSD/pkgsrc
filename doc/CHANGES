@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3765 2003/10/30 23:24:50 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3766 2003/10/30 23:38:53 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4284,3 +4284,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnucash to 1.8.4nb2 [jmmv 2003-10-30]
 	Updated pyca to 0.6.6.20031021 [xtraeme 2003-10-30]
 	Updated dropbear to 0.38 [xtraeme 2003-10-30]
+	Updated pen to 0.12.0 [xtraeme 2003-10-30]
