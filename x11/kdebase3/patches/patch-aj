@@ -1,0 +1,16 @@
+$NetBSD: patch-aj,v 1.4 2003/08/02 19:33:21 mrg Exp $
+
+--- kcontrol/kfontinst/kfontinst/FontEngine.cpp.orig	2003-08-03 03:46:55.000000000 +1000
++++ kcontrol/kfontinst/kfontinst/FontEngine.cpp	2003-08-03 03:47:02.000000000 +1000
+@@ -36,8 +36,9 @@
+ #include <ctype.h>
+ #include <string.h>
+ #include <stdlib.h>
+-#include <fstream.h>
+-#include <iostream.h>
++#include <fstream>
++#include <iostream>
++using namespace std;
+ #include <stdio.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>

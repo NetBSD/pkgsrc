@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.4 2003/08/02 19:33:20 mrg Exp $
+
+--- kcontrol/kfontinst/kfontinst/AfmCreator.cpp.orig	2003-05-07 21:44:02.000000000 +1000
++++ kcontrol/kfontinst/kfontinst/AfmCreator.cpp	2003-08-03 02:40:17.000000000 +1000
+@@ -43,7 +43,7 @@
+ #include <kdeversion.h>
+ #include <stdio.h>
+ #include <string.h>
+-#include <fstream.h>
++#include <fstream>
+ 
+ static const char * constNotDef     = ".notdef";
+ static const char * constKfiComment = "Comment kfontinst ";
