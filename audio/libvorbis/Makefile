@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/08/27 14:35:05 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/10/04 03:49:54 jlam Exp $
 
 DISTNAME=	libvorbis-1.0rc2
 PKGNAME=	libvorbis-1.0.0.6
@@ -9,11 +9,13 @@ MAINTAINER=	lukem@netbsd.org
 HOMEPAGE=	http://www.xiph.org/ogg/vorbis/
 COMMENT=	Library for the Ogg Vorbis audio encoding format
 
-USE_BUILDLINK_ONLY=	YES
-BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
-BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
+BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
+BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
+USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--with-ogg-prefix=${BUILDLINK_DIR}
+
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
