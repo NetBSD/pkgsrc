@@ -1,72 +1,14 @@
-$NetBSD: patch-aa,v 1.10 2000/10/12 14:56:45 jlam Exp $
+$NetBSD: patch-aa,v 1.11 2000/10/15 04:50:11 jlam Exp $
 
---- INSTALL.orig	Thu Oct 12 04:52:50 2000
-+++ INSTALL
-@@ -104,6 +104,8 @@
+--- misc/run_tic.in.orig	Mon Oct  9 18:57:35 2000
++++ misc/run_tic.in
+@@ -113,6 +113,9 @@
+ 	exit 1
+ fi
  
- 	libncurses_p.a (profile)
- 
-+	libncurses.la (libtool)
++# For NetBSD pkgsrc, don't bother with setting a symbolic link.
++exit 0
 +
-     If you do not specify any models, the normal and debug libraries will be
-     configured.  Typing `configure' with no arguments is equivalent to:
- 
-@@ -126,6 +128,13 @@
-     and SunOS with gcc, but more work needs to be done to make shared libraries
-     work on other systems.
- 
-+    If you have libtool installed, you can type
-+
-+	./configure --with-libtool
-+
-+    to generate the appropriate static and/or shared libraries for your
-+    platform using libtool.
-+
-     You can make curses and terminfo fall back to an existing file of termcap
-     definitions by configuring with --enable-termcap.  If you do this, the
-     library will search /etc/termcap before the terminfo database, and will
-@@ -176,7 +185,8 @@
-     The terminfo(5) manual page must be preprocessed with tbl(1) before
-     being formatted by nroff(1).  Modern man(1) implementations tend to do
-     this by default, but you may want to look at your version's manual page
--    to be sure.
-+    to be sure.  You may also install the manual pages after preprocessing
-+    with tbl(1) by specifying the configure option --with-manpage-tbl.
- 
-     If the system already has a curses library that you need to keep using
-     for some bizarre binary-compatibility reason, you'll need to distinguish
-@@ -494,6 +504,10 @@
- 	NOTE:  a few systems build shared libraries with fixed pathnames; this
- 	option probably will not work for those configurations.
- 
-+     --with-libtool
-+	Generate libraries with libtool.  If this option is selected, then
-+	it overrides all other library model specifications.
-+
-     --with-manpage-format=XXX
- 	Tell the configure script how you would like to install man-pages.  The
- 	option value must be one of these:  gzip, compress, BSDI, normal,
-@@ -513,6 +527,11 @@
- 	this on systems that do not support symbolic links will result in
- 	copying the man-page for each alias.
- 
-+    --with-manpage-tbl
-+	Tell the configure script that you with to preprocess the manpages
-+	by running them through tbl to generate tables understandable by
-+	nroff.
-+
-     --with-normal
- 	Generate normal (i.e., static) libraries (default).
- 
-@@ -557,6 +576,11 @@
-     --without-ada
- 	Suppress the configure script's check for Ada95, do not build the
- 	Ada95 binding and related demo.
-+
-+    --without-curses-h
-+	Don't install the ncurses header with the name "curses.h".  Rather,
-+	install as "ncurses.h" and modify the installed headers and manpages
-+	accordingly.
- 
-     --without-cxx
- 	XSI curses declares "bool" as part of the interface.  C++ also declares
+ # Make a symbolic link to provide compatibility with applications that expect
+ # to find terminfo under /usr/lib.  That is, we'll _try_ to do that.  Not
+ # all systems support symbolic links, and those that do provide a variety
