@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2000/12/17 09:27:24 jlam Exp $
+# $NetBSD: Makefile,v 1.113 2000/12/17 19:56:31 jlam Exp $
 #
 
     SUBDIR += Mosaic
@@ -82,6 +82,7 @@
     SUBDIR += php3-snmp
     SUBDIR += php4
     SUBDIR += php4-gd
+    SUBDIR += php4-imap
     SUBDIR += php4-pgsql
     SUBDIR += py-pcgi
     SUBDIR += py-zpublisher
