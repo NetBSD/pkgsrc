@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/05/15 21:09:56 jtb Exp $
+
+--- browser/Mmakefile.orig	Mon Apr  2 15:50:21 2001
++++ browser/Mmakefile
+@@ -39,7 +39,6 @@
+ 			-I$(TRACE_DIR) \
+ 			-I$(LIBRARY_DIR) \
+ 			-I$(RUNTIME_DIR) \
+-			-I$(BOEHM_GC_DIR) \
+ 			-I$(BOEHM_GC_DIR)/include \
+ 		"
+ 
+@@ -53,7 +52,7 @@
+ MCS	=	$(M_ENV) $(MC) --split-c-files -c --cflags "$(ALL_CFLAGS)"
+ MGNUC	=	$(M_ENV) $(SCRIPTS_DIR)/mgnuc
+ MGNUCFLAGS =	$(DLL_CFLAGS)
+-LDFLAGS	=	-L$(LIBRARY_DIR) -L$(RUNTIME_DIR) -L$(BOEHM_GC_DIR)
++LDFLAGS	=	-L$(LIBRARY_DIR) -L$(RUNTIME_DIR) -L$(BOEHM_GC_DIR)/lib
+ LDLIBS	=	-l$(STD_LIB_NAME) -l$(RT_LIB_NAME) \
+ 		` case "$(GRADE)" in 					\
+ 		    *.par*.gc*.prof*)	echo "-lpar_gc_prof" ;;		\

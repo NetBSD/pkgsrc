@@ -1,0 +1,21 @@
+$NetBSD: patch-ai,v 1.1.1.1 2001/05/15 21:09:57 jtb Exp $
+
+--- profiler/Mmakefile.orig	Mon Feb 19 14:51:41 2001
++++ profiler/Mmakefile
+@@ -24,7 +24,6 @@
+ 			-I$(TRACE_DIR) \
+ 			-I$(LIBRARY_DIR) \
+ 			-I$(RUNTIME_DIR) \
+-			-I$(BOEHM_GC_DIR) \
+ 			-I$(BOEHM_GC_DIR)/include \
+ 		"
+ MCD	=	$(M_ENV) $(MC) --generate-dependencies
+@@ -50,7 +49,7 @@
+ 				echo $(BOEHM_GC_DIR)/libpar_gc_prof.$A ;; \
+ 			*.par*.gc*)	echo $(BOEHM_GC_DIR)/libpar_gc.$A ;; \
+ 			*.gc*.prof*)	echo $(BOEHM_GC_DIR)/libgc_prof.$A ;; \
+-			*.gc*)		echo $(BOEHM_GC_DIR)/libgc.$A ;; \
++			*.gc*)		echo -L$(BOEHM_GC_DIR)/lib -lgc ;; \
+ 		    esac \
+ 		` $(MATH_LIB)
+ MSL	=	MERCURY_SP_LIB_DIR=$(LIBRARY_DIR) $(SCRIPTS_DIR)/msl

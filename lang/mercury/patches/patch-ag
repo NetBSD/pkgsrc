@@ -1,0 +1,21 @@
+$NetBSD: patch-ag,v 1.1.1.1 2001/05/15 21:09:57 jtb Exp $
+
+--- runtime/Mmakefile.orig	Mon Apr  2 15:52:13 2001
++++ runtime/Mmakefile
+@@ -17,7 +17,6 @@
+ CFLAGS		= -g $(DLL_CFLAGS)
+ MGNUC		= MERCURY_ALL_C_INCL_DIRS=" \
+ 			-I$(RUNTIME_DIR) \
+-			-I$(BOEHM_GC_DIR) \
+ 			-I$(BOEHM_GC_DIR)/include \
+ 			" \
+ 		  $(SCRIPTS_DIR)/mgnuc 
+@@ -160,7 +159,7 @@
+ OBJS		= $(CFILES:.c=.$O)
+ PIC_OBJS	= $(CFILES:.c=.$(EXT_FOR_PIC_OBJECTS))
+ 
+-LDFLAGS		= -L$(BOEHM_GC_DIR)
++LDFLAGS		= -L$(BOEHM_GC_DIR)/lib
+ LDLIBS		= \
+ 		` case "$(GRADE)" in 					\
+ 		    *.par*.gc*.prof*)	echo "-lpar_gc_prof" ;;		\
