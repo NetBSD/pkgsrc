@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2245 2004/10/21 06:30:39 xtraeme Exp $
+$NetBSD: TODO,v 1.2246 2004/10/21 10:24:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -299,6 +299,7 @@ Suggested package updates
 	o lavaps-2.5
 	o lbreakout-2.5.1
 	o leafnode-1.10.6
+	o lftp-3.0.10
 	o libcddb-0.9.6
 	o libidn-0.5.8
 	o libmpeg3-1.5.4
@@ -442,7 +443,7 @@ Suggested package updates
 	o wavesurfer-1.5.3
 	o wdm-1.27
 	o wesnoth-0.8.5
-	o wine-20040914
+	o wine-20041019
 	o wmakerconf-2.9.2
 	o wmweather-2.4.3
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
