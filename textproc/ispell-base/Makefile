@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/03/29 12:42:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2003/05/05 16:53:12 jmmv Exp $
 #
 
 DISTNAME=	ispell-3.1.20
@@ -9,7 +9,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.cs.ucla.edu/pub/ispell-3.1/
 
 PATCH_SITES=	ftp://kdstevens.com/pub/stevens/
-PATCHFILES=    ispell-patch1.gz
+PATCHFILES=	ispell-patch1.gz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/ispell/ispell.html
