@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.28 2005/01/16 02:56:24 grant Exp $
+# $NetBSD: bootstrap,v 1.29 2005/01/20 22:36:06 agc Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -207,12 +207,11 @@ Darwin)
 	;;
 DragonFly)
 	root_group=wheel
-	need_pax=no
+	need_pax=yes
 	need_mtree=no
 	need_bsd_install=no
 	need_sed=no
 	set_opsys=no
-	check_prog paxprog pax
 	check_prog tarprog tar
 	check_prog mtreeprog mtree
 	machine_arch=`uname -p`
