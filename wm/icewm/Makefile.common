@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2004/09/01 11:08:46 recht Exp $
+# $NetBSD: Makefile.common,v 1.39 2004/11/09 07:58:14 xtraeme Exp $
 
 DISTNAME=		icewm-1.2.16
 CATEGORIES=		x11 wm
@@ -7,13 +7,13 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=icewm/}
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://icewm.sourceforge.net/
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
-USE_X11=		# defined
+USE_X11=		yes
 USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		yes
-USE_PKGLOCALEDIR=	# defined
-BUILD_USES_MSGFMT=	# defined
+USE_PKGLOCALEDIR=	yes
+BUILD_USES_MSGFMT=	yes
 
 DISTINFO_FILE=		${.CURDIR}/../../wm/icewm/distinfo
 FILESDIR=		${.CURDIR}/../../wm/icewm/files
