@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:55:02 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:28:42 martti Exp $
 #
 
 DISTNAME=		Time-HiRes-1.49
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Time/}
 
 MAINTAINER=		bad@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/author/JHI/Time-HiRes/
-COMMENT=		perl5 module for high resolution time, sleep, and alarm
+COMMENT=		Perl5 module for high resolution time, sleep, and alarm
 
 USE_BUILDLINK2=		YES
 

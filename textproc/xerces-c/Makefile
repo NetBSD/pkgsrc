@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 22:54:55 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/21 17:27:56 martti Exp $
 #
 
 DISTNAME=	xerces-c-src1_7_0
@@ -9,7 +9,7 @@ MASTER_SITES=	http://xml.apache.org/dist/xerces-c/stable/archives/Xerces-C_${DIS
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://xml.apache.org/xerces-c/
-COMMENT=	validating C++ XML parser with DOM and SAX support
+COMMENT=	Validating C++ XML parser with DOM and SAX support
 
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES

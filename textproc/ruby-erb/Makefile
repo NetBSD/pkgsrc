@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:54:49 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 17:27:51 martti Exp $
 #
 
 DISTNAME=	erb-1.4.3
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www2a.biglobe.ne.jp/~seki/ruby/
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www2a.biglobe.ne.jp/~seki/ruby/
-COMMENT=	implementation of eRuby (embedded ruby)
+COMMENT=	Implementation of eRuby (embedded ruby)
 
 DIST_SUBDIR=	ruby
 USE_RUBY=	# defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 22:54:52 grant Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/21 17:27:53 martti Exp $
 #
 
 DISTNAME=	subtitleripper-0.3-1
@@ -9,7 +9,7 @@ WRKSRC=		${WRKDIR}/subtitleripper
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/subtitleripper/
-COMMENT=	sub title ripping program
+COMMENT=	Sub title ripping program
 
 DEPENDS+=	gocr-[0-9]*:../../textproc/gocr
 
