@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/07/22 12:08:23 is Exp $
+# $NetBSD: Makefile,v 1.2 1999/07/05 20:45:43 tron Exp $
 #
 
 DISTNAME=	icsi-finger-1.0.27
@@ -9,11 +9,15 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	is@netbsd.org
 
+USE_X11=	yes
+
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
+
 XMPLD=		${PREFIX}/share/examples/icsi-finger
 XMPLDT=		${XMPLD}/targets
 
 pre-configure:
-		-${RM} -f ${WRKSRC}/config.h
+		${RM} -f ${WRKSRC}/config.h
 		${SED}	-e s@/usr/local@${PREFIX}@	\
 			-e s@/usr/pkg@${PREFIX}@	\
 			files/config.h.netbsd > ${WRKSRC}/config.h
@@ -25,7 +29,7 @@ pre-configure:
 			${WRKSRC}/support/inetd.conf-add
 		${MV} -f ${WRKSRC}/support/rc.local-add \
 			${WRKSRC}/support/rc.local-add.bak
-		${SED}     -e s@/usr/local/bin/@${PREFIX}/sbin/g@      \
+		${SED}  -e s@/usr/local/bin/@${PREFIX}/sbin/g@      \
 			${WRKSRC}/support/rc.local-add.bak > \
 			${WRKSRC}/support/rc.local-add
 		for i in ${WRKSRC}/src/targets/x-.busy \
@@ -35,8 +39,8 @@ pre-configure:
 				$$i.bak > $$i ; \
 			${RM} -f $$i.bak ; \
 		done
-		${SED} -e s@/usr/pkg@${PREFIX}@g pkg/MESSAGE.pre | \
-			fmt > pkg/MESSAGE
+		${SED} -e s@/usr/pkg@${PREFIX}@g ${PKGDIR}/MESSAGE | \
+			fmt >${WRKDIR}/MESSAGE
 
 do-${INSTALL}:
 		${INSTALL} -c -m 755 ${WRKSRC}/src/finger ${PREFIX}/bin/gfinger
@@ -58,6 +62,4 @@ do-${INSTALL}:
 		(cd ${WRKSRC}/src; ${MAKE} ${INSTALL}.man)
 		(cd ${WRKSRC}/src; ${MAKE} TARGETD=${XMPLDT} ${INSTALL}.targets )
 
-pre-clean:
-		-${RM} pkg/MESSAGE
 .include "../../mk/bsd.pkg.mk"
