@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.165 2004/08/27 06:29:09 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.166 2004/09/21 15:01:39 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -275,8 +275,8 @@ PKG_PHASE?=		none
 PHASES_AFTER_FETCH=	fetch ${PHASES_AFTER_EXTRACT}
 PHASES_AFTER_EXTRACT=	extract ${PHASES_AFTER_PATCH}
 PHASES_AFTER_PATCH=	patch ${PHASES_AFTER_TOOLS}
-PHASES_AFTER_TOOLS=	tools ${PHASES_AFTER_BUILDLINK}
-PHASES_AFTER_BUILDLINK=	buildlink ${PHASES_AFTER_CONFIGURE}
+PHASES_AFTER_TOOLS=	tools ${PHASES_AFTER_WRAPPER}
+PHASES_AFTER_WRAPPER=	wrapper ${PHASES_AFTER_CONFIGURE}
 PHASES_AFTER_CONFIGURE=	configure ${PHASES_AFTER_BUILD}
 PHASES_AFTER_BUILD=	build ${PHASES_AFTER_INSTALL}
 PHASES_AFTER_INSTALL=	install ${PHASES_AFTER_PACKAGE}

@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.25 2004/08/27 06:29:09 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.26 2004/09/21 15:01:41 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	defined
@@ -46,6 +46,14 @@ _LINKER_RPATH_FLAG=	-rpath
 
 # MIPSPro passes rpath directives to the linker using "-Wl,-rpath,".
 _COMPILER_RPATH_FLAG=	-Wl,${_LINKER_RPATH_FLAG},
+
+# MIPSPro supports compiling/linking objects for several ABIs: n32, o32,
+# and 64 bit.
+#
+_COMPILER_ABI_FLAG.32=	-n32	# ABI == "32" is an alias for ABI == "n32"
+_COMPILER_ABI_FLAG.o32=	# empty
+_COMPILER_ABI_FLAG.n32=	-n32
+_COMPILER_ABI_FLAG.64=	-64
 
 # Prepend the path to the compiler to the PATH.
 .if !empty(_LANGUAGES.mipspro)

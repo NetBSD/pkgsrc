@@ -1,0 +1,270 @@
+# $NetBSD: logic,v 1.1 2004/09/21 15:01:41 jlam Exp $
+#
+# Copyright (c) 2004 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. All advertising materials mentioning features or use of this software
+#    must display the following acknowledgement:
+#        This product includes software developed by the NetBSD
+#        Foundation, Inc. and its contributors.
+# 4. Neither the name of The NetBSD Foundation nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+
+# Empty out the argument buffer and fill up the command buffer.
+skipargs=0
+while ! queue_is_empty argbuf; do
+	#
+	# Grab the next argument from the head of the argument buffer
+	# and return it in $arg.
+	#
+	argok=no
+	while $test "$argok" = "no"; do
+		pop_queue argbuf arg
+		$debug_log $wrapperlog "    (logic) pop:  $arg"
+		#
+		# Toggle whether we want to transform $arg or if we
+		# want to pass it unmodified into the command buffer.
+		#
+		if $test $skipargs -eq 0; then
+			do_transform=yes
+		else
+			skipargs=`$expr $skipargs - 1`
+			do_transform=no
+			argok=yes
+			continue
+		fi
+
+		case $arg in
+		######################################################
+		# Split direct paths to shared libraries into the
+		# "-Ldir -llib" equivalent
+		######################################################
+		/*/lib*.so|/*/lib*.so.[0-9]*)
+			dir="${arg%/lib*}"
+			lib="${arg#$dir/lib}"
+			case $lib in
+			*/*)		argok=yes; continue ;;
+			*.so)		lib="${lib%.so}" ;;
+			*.so.[0-9]*)	lib="${lib%.so.[0-9]*}" ;;
+			esac
+			prepend_queue argbuf "-l$lib"
+			$debug_log $wrapperlog "    (logic) pre:  -l$lib"
+			prepend_queue argbuf "-L$dir"
+			$debug_log $wrapperlog "    (logic) pre:  -L$dir"
+			;;
+		/*/lib*.dylib)  # Darwin      
+			dir="${arg%/lib*.dylib}"
+			lib="${arg#$dir/lib}" 
+			case $lib in
+			*/*)		argok=yes; continue ;;
+			*.[0-9]*.dylib)	lib="${lib%%.[0-9]*.dylib}" ;;
+			*.dylib)	lib="${lib%.dylib}" ;;
+			esac
+			prepend_queue argbuf "-l$lib"
+			$debug_log $wrapperlog "    (logic) pre:  -l$lib"
+			prepend_queue argbuf "-L$dir"
+			$debug_log $wrapperlog "    (logic) pre:  -L$dir"
+			;;
+		######################################################
+		# Merge "-Wl,-R -Wl,/dir" into a single "-Wl,-R/dir".
+		# Same for -Wl,-L, -Wl,-rpath and -Wl,-rpath-link.
+		######################################################
+		-Wl,-[LR])
+			if queue_is_empty argbuf; then
+				argok=yes
+				continue
+			fi
+			pop_queue argbuf nextarg
+			$debug_log $wrapperlog "    (logic) pop:  $nextarg"
+			shquote "${nextarg#-Wl,}"; nextarg="$shquoted"
+			$debug_log $wrapperlog "    (logic) pre:  $arg$nextarg"
+			prepend_queue argbuf "$arg$nextarg"
+			;;
+		-Wl,-rpath|-Wl,-rpath-link|-Wl,--rpath)
+			if queue_is_empty argbuf; then
+				argok=yes
+				continue
+			fi
+			pop_queue argbuf nextarg
+			$debug_log $wrapperlog "    (logic) pop:  $nextarg"
+			shquote "${nextarg#-Wl,}"; nextarg="$shquoted"
+			$debug_log $wrapperlog "    (logic) pre:  $arg,$nextarg"
+			prepend_queue argbuf "$arg,$nextarg"
+			;;
+		######################################################
+		# Remove rpath options that try to add relative paths
+		# to the runtime library search path.  This basically
+		# cleans up after lazy programmers who can't write
+		# Makefiles.
+		######################################################
+		-R[!/]*|-Wl,-R[!/]*|\
+		-Wl,-rpath,[!/]*|-Wl,-rpath-link,[!/]*|-Wl,--rpath,[!/]*)
+			$debug_log $wrapperlog "    (logic) drop: $arg"
+			;;
+		######################################################
+		# Remove consecutive, repeated library options.
+		######################################################
+		-l*)
+			if queue_is_empty argbuf; then
+				argok=yes
+				continue
+			fi
+			head_queue argbuf nextarg
+			while $test "$nextarg" = "$arg"; do
+				pop_queue argbuf nextarg
+				$debug_log $wrapperlog "    (logic) drop: $nextarg"
+				if queue_is_empty argbuf; then
+					break
+				else
+					head_queue argbuf nextarg
+				fi
+			done
+			argok=yes
+			;;
+		######################################################
+		# The -o option takes an extra argument that should
+		# be passed unmodified.
+		#######################################################
+		-o)
+			skipargs=1
+			argok=yes
+			;;
+		######################################################
+		# GNU ld uses "--dynamic-linker /path/to/shared/object"
+		# to set the dynamic linker code for ELF executables.
+		######################################################
+		--dynamic-linker)
+			skipargs=1
+			argok=yes
+			;;
+		######################################################
+		# Darwin's linker uses:
+		#
+		#	-dylib_file /path/shlib:/path2/shlib
+		#	-dylib_install_name /path/shlib
+		#	-install_name /path/shlib
+		#
+		# to pass the installed locations for the shared
+		# libraries to the linker, and we need to pass the extra
+		# argument unmodified.  The purpose of
+		# -seg_addr_table_filename is more obscure, but Darwin's
+		# imake rules use it.
+		######################################################
+		-dylib_file|-dylib_install_name|-install_name|\
+		-seg_addr_table_filename)
+			skipargs=1
+			argok=yes
+			;;
+		######################################################
+		# Leave all else untouched.
+		######################################################
+		*)
+			argok=yes
+		esac
+	done
+
+	# Try to look up the transformed $arg in the cache, but if
+	# not there, then apply the transformations and save the result
+	# in the cache.
+	#
+	case $do_transform in
+	yes)
+		. $cache
+		case $cachehit in
+		yes)
+			# The cache was hit and $arg is set.
+			$debug_log $wrapperlog "    (logic) to:   $arg [cached]"
+			;;
+		*)
+			# Apply transformations to $arg.
+			addtocache=no
+			case $skip_transform in
+			yes)	
+				$debug_log $wrapperlog "    (logic) to:   $arg [untransformed]"
+				;;
+			*)
+				shquote "$arg"; cachearg="$shquoted"
+				case $arg in
+				-*|/*)
+					arg=`$echo "X$arg" | $Xsed @_WRAP_TRANSFORM_SED@`
+					$debug_log $wrapperlog "    (logic) to:   $arg"
+					addtocache=yes
+					;;
+				*)
+					$debug_log $wrapperlog "    (logic) to:   $arg [untransformed]"
+					;;
+				esac
+
+				# Apply wrapper-specific transformations
+				# to $arg.
+				#
+				. $transform
+				;;
+			esac
+
+			# Re-create the cache file if we're adding to it.
+			case $updatecache,$addtocache in
+			yes,yes)
+				shquote "$arg"; cachedarg="$shquoted"
+				$cat >> $cache_body << EOF
+$cachearg) arg=$cachedarg; cachehit=yes ;;
+EOF
+				$cat $cache_header \
+				     $cache_body \
+				     $cache_footer > $cache
+				;;
+			esac
+			;;
+		esac
+		case $arg in
+		######################################################
+		# Split -l options along whitespace.  This disallows
+		# library names with whitespace, but it allows us to
+		# handle transformations that look like, e.g.
+		# "-lreadline" -> "-ledit -ltermcap".
+		######################################################
+		-l*)
+			for lib in $arg; do
+				append_queue cmdbuf "$lib"
+				$debug_log $wrapperlog "    (logic) push: $lib"
+			done
+			;;
+		######################################################
+		# Everything is goes into the command buffer unchanged.
+		######################################################
+		*)
+			append_queue cmdbuf "$arg"
+			$debug_log $wrapperlog "    (logic) push: $arg"
+			;;
+		esac
+		;;
+	*)
+		append_queue cmdbuf "$arg"
+		$debug_log $wrapperlog "    (logic) push: $arg"
+		;;
+	esac
+done

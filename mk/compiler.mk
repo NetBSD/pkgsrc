@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.34 2004/07/04 00:38:15 wiz Exp $
+# $NetBSD: compiler.mk,v 1.35 2004/09/21 15:01:39 jlam Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -131,5 +131,11 @@ _PKGSRC_COMPILER:=	${_COMPILER} ${_PKGSRC_COMPILER}
 .for _compiler_ in ${_PKGSRC_COMPILER}
 .  include "../../mk/compiler/${_compiler_}.mk"
 .endfor
+
+.if defined(ABI) && !empty(ABI)
+_WRAP_EXTRA_ARGS.CC+=	${_COMPILER_ABI_FLAG.${ABI}}
+_WRAP_EXTRA_ARGS.CXX+=	${_COMPILER_ABI_FLAG.${ABI}}
+_WRAP_EXTRA_ARGS.LD+=	${_LINKER_ABI_FLAG.${ABI}}
+.endif
 
 .endif	# BSD_COMPILER_MK
