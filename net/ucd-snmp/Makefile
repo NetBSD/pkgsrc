@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2002/04/11 09:44:04 tron Exp $
+# $NetBSD: Makefile,v 1.42 2002/05/25 06:37:32 tron Exp $
 
 DISTNAME=	ucd-snmp-4.2.4
 CATEGORIES=	net
@@ -28,7 +28,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 #LDFLAGS+=	-L${BUILDLINK_DIR}/lib
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-defaults --with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers} --with-logfile="/var/log/snmpd"
+CONFIGURE_ARGS+=--with-defaults --with-logfile="/var/log/snmpd"
+CONFIGURE_ARGS+=--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ARGS+=--with-mib-modules="smux host"
 # NOTE: if you do not allow dummy values some tools such as
 # scotty/tkined may ignore results when they shouldn't.
@@ -42,6 +43,7 @@ CONFIGURE_ARGS+=--enable-ipv6
 .else
 CONFIGURE_ARGS+=--disable-ipv6
 .endif
+CONFIGURE_SCRIPT=	${SH} -x ./configure
 
 # this might make it easier to use scotty's mibs, and local ones too
 CONFIGURE_ARGS+=--with-mibdirs="${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tcl/tnm2.1.10/mibs:${PREFIX}/lib/tnm2.1.8/mibs:/usr/local/share/snmp/mibs"
