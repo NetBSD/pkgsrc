@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.11 2002/01/18 22:27:35 mjl Exp $
+$NetBSD: patch-aa,v 1.12 2003/12/12 10:20:53 adam Exp $
 
 --- makefiles/Makefile.netbsd.orig	Sat Aug 18 01:02:55 2001
 +++ makefiles/Makefile.netbsd	Wed Oct 31 00:18:05 2001
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.11 2002/01/18 22:27:35 mjl Exp $
  # -DREPLACE_SCOPE to the CFLAGS. See the README file for more information.
  #
 -CFLAGS=-O -I/usr/X11R6/include -DUSE_DIRENT -DUSE_LPR_PRINT_CMD
-+CFLAGS+=-O -DUSE_DIRENT -DUSE_LPR_PRINT_CMD
++CFLAGS+=-DUSE_DIRENT -DUSE_LPR_PRINT_CMD
  ARFLAGS=-ur
 -LIBS= -L/usr/X11R6/lib -lm -lXm -lXpm -lXext -lXt -lSM -lICE -lX11
 +LIBS= ${LDFLAGS} ${MOTIFLIB} -lm -lXpm -lXext -lXt -lSM -lICE -lX11
