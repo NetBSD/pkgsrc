@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.2 1997/11/13 07:35:37 thorpej Exp $
+#	$NetBSD: Makefile,v 1.3 1997/11/13 08:17:23 thorpej Exp $
 #
 # New ports collection makefile for:    cdrecord
 # Version required:     1.5
@@ -20,13 +20,13 @@ MAN1=		cdrecord.1
 USE_GMAKE=	yes
 
 do-build:
-	@cd ${WRKSRC}/lib && ../Gmake
-	@cd ${WRKSRC}/cdrecord && ../Gmake
+	@cd ${WRKSRC}/lib && ../Gmake PREFIX=${PREFIX}
+	@cd ${WRKSRC}/cdrecord && ../Gmake PREFIX=${PREFIX}
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/cdrecord/OBJ/i386-freebsd-cc/cdrecord \
+	@${INSTALL_PROGRAM} ${WRKSRC}/cdrecord/OBJ/i386-netbsd-cc/cdrecord \
 	 ${PREFIX}/bin
 	@${INSTALL_MAN} ${WRKSRC}/cdrecord/cdrecord.1 ${PREFIX}/man/man1
-	@cd /dev && ln -sf /dev/rworm0.ctl sgx
+#	@cd /dev && ln -sf /dev/rworm0.ctl sgx
 
 .include <bsd.port.mk>
