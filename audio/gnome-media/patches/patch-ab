@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/08/30 08:41:44 rh Exp $
+$NetBSD: patch-ab,v 1.2 2001/08/13 18:38:55 rh Exp $
 
---- gmix/Makefile.in.orig	Thu Jul 15 07:55:54 1999
-+++ gmix/Makefile.in	Sun Aug 29 17:59:04 1999
-@@ -135,7 +135,7 @@
- gmix_SOURCES =  	gmix.c
+--- gmix/Makefile.in.orig	Tue Jun 12 18:58:12 2001
++++ gmix/Makefile.in
+@@ -146,7 +146,7 @@
+ gmix_SOURCES =  	gmix.c gmix.h prefs.c prefs.h
  
  
--gmix_LDADD =  	$(GNOME_LIBDIR) $(GNOMEUI_LIBS) $(INTLLIBS)
-+gmix_LDADD =  	$(GNOME_LIBDIR) $(GNOMEUI_LIBS) $(INTLLIBS) -lossaudio
+-gmix_LDADD =  	$(GNOME_LIBDIR) $(GNOMEUI_LIBS) $(INTLLIBS) $(GMIX_LIBS)
++gmix_LDADD =  	$(GNOME_LIBDIR) $(GNOMEUI_LIBS) $(INTLLIBS) $(GMIX_LIBS) -lossaudio
  
  
- Audio_DATA = gmix.desktop
+ Audio_in_files = gmix.desktop.in
