@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/22 14:22:44 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/05/22 18:44:57 tron Exp $
 
 DISTNAME=	mutt-0.91.1i
 CATEGORIES=	mail
@@ -15,7 +15,7 @@ DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 RESTRICTED=	"Uses PGP"
 MIRROR_DISTFILE= no
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --with-curses=${PREFIX}
+CONFIGURE_ARGS+= --with-curses=${PREFIX} --with-exec-shell=/bin/ksh
 CONFIGURE_ENV+=	LDFLAGS=-s
 
 MAN1=		mutt.1
