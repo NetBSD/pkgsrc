@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.706 2003/07/12 12:03:30 zuntum Exp $
+$NetBSD: TODO,v 1.707 2003/07/12 12:05:49 zuntum Exp $
 
 Suggested new packages
 ======================
@@ -202,7 +202,6 @@ Suggested package updates
 	o p5-Net-SNMP-4.1.0 [pkg/21782]
 	o p5-XML-LibXML-1.54
 	o pcre-4.3
-	o pekwm-0.1.3 [pkg/21852]
 	o php4-4.3.2
 	o pfaedit-20030506
 	o pine-4.56
