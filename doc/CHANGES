@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1873 2003/04/09 02:46:09 gehenna Exp $
+$NetBSD: CHANGES,v 1.1874 2003/04/09 05:06:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1495,3 +1495,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bins to 1.1.21 [martti 2003-04-08]
 	Updated imapfilter to 0.8.7 [seb 2003-04-08]
 	Updated cvsync to 0.19.1 [gehenna 2003-04-09]
+	Updated ja-samba to 2.2.7.2.1.0 [taca 2003-04-09]
