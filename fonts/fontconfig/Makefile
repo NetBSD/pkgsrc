@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/24 01:57:01 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/24 02:00:26 jlam Exp $
 #
 
 DISTNAME=	fontconfig-2.2.1
@@ -12,7 +12,7 @@ COMMENT=	Library for configuring and customizing font access
 
 # This can use 2.0.5 but things which use it (ala pango) require 2.0.9 so make
 # sure to keep in step
-BUILDLINK_DEPENDS.freetype2=  freetype2>=2.0.9
+BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.0.9
 
 .include "../../mk/bsd.prefs.mk"
 
