@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.1 1997/12/14 23:59:26 thorpej Exp $
+#	$NetBSD: Makefile,v 1.2 1997/12/29 04:18:05 hubertf Exp $
 #
 # New ports collection makefile for:	ttcp
 # Version required:	???
@@ -16,6 +16,8 @@ EXTRACT_SUFX=	.tar
 EXTRACT_BEFORE_ARGS=-C ttcp -xf
 
 MAINTAINER=	thorpej@NetBSD.ORG
+
+MAN1=		ttcp.1
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ttcp ${PREFIX}/bin
