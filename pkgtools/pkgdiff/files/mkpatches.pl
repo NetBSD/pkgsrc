@@ -1,6 +1,6 @@
 #!@PERL5@
 #
-# $NetBSD: mkpatches.pl,v 1.9 2004/01/10 05:40:40 jlam Exp $
+# $NetBSD: mkpatches.pl,v 1.10 2004/08/15 16:49:49 dillo Exp $
 #
 # mkpatches: creates a set of patches patch-aa, patch-ab, ...
 #   in work/.newpatches by looking for *.orig files in and below
@@ -19,6 +19,7 @@ use Cwd;
 use File::Spec;
 
 my $patchdir;
+my $old_patchdir;
 my $wrkdir;
 my $l=0;
 
@@ -52,6 +53,9 @@ EOF
 $wrkdir=`@MAKE@ show-var VARNAME=WRKDIR` or
     die ("can't find WRKDIR -- wrong dir?");
 chomp($wrkdir);
+$old_patchdir=`@MAKE@ show-var VARNAME=PATCHDIR` or
+    die ("can't find PATCHDIR -- wrong dir?");
+chomp($old_patchdir);
 
 if ($opt_d) {
     $patchdir = cwd()."/$opt_d";
@@ -86,8 +90,7 @@ foreach (sort <handle>) {
     $new = File::Spec->abs2rel( $complete, $wrksrc );
     $old = File::Spec->abs2rel( $path, $wrksrc );
     if ( -f $complete ) {
-	$patchfile = ("aa".."zz")[$l];
-	$patchfile =~ s/^/patch-/;
+	$patchfile = patch_name($new);
 	if ($opt_v) {
 	    print "$patchfile -> $complete\n";
 	}
@@ -103,5 +106,24 @@ foreach (sort <handle>) {
     } else {
 	print ("$new doesn't exist, though $old does\n");
     }
-    $l++;
+}
+
+sub patch_name # filename
+{
+    my $name = shift;
+    my $pname, $l;
+
+    $pname = `grep -l -- '^\+\+\+ $name\$' $old_patchdir/patch-*`;
+    chomp($pname);
+    if ($pname) {
+	$pname =~ s!.*/!!;
+	return $pname;
+    }
+
+    for ($l=0; ; $l++) {
+	$pname = 'patch-' . ("aa" .. "zz")[$l];
+	if (! -f "$old_patchdir/$pname" and ! -f "$patchdir/$pname") {
+	    return $pname;
+	}
+    }
 }
