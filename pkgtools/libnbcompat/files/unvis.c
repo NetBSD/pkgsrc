@@ -1,4 +1,4 @@
-/*	$NetBSD: unvis.c,v 1.7 2004/08/23 03:32:13 jlam Exp $	*/
+/*	$NetBSD: unvis.c,v 1.8 2004/12/03 00:09:02 grant Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -35,7 +35,7 @@
 #if 0
 static char sccsid[] = "@(#)unvis.c	8.1 (Berkeley) 6/4/93";
 #else
-__RCSID("$NetBSD: unvis.c,v 1.7 2004/08/23 03:32:13 jlam Exp $");
+__RCSID("$NetBSD: unvis.c,v 1.8 2004/12/03 00:09:02 grant Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -67,6 +67,12 @@ __warn_references(unvis,
 #endif
 #endif
 
+/* work around namespace clash with NetBSD 1.4 (and earlier) */
+#ifdef __unvis13
+#undef __unvis13
+#define __unvis13 __nbcompat_unvis13
+#endif
+
 /*
  * decode driven by state machine
  */
@@ -96,7 +102,7 @@ unvis(cp, c, astate, flag)
  * unvis - decode characters previously encoded by vis
  */
 int
-__unvis13(cp, c, astate, flag)
+__nbcompat_unvis13(cp, c, astate, flag)
 	char *cp;
 	int c;
 	int *astate, flag;
