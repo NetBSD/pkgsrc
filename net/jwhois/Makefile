@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/05/02 18:01:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.37 2004/05/02 19:15:18 xtraeme Exp $
 #
 
 DISTNAME=		jwhois-3.2.2
@@ -21,9 +21,9 @@ LIBS.SunOS+=		-lnsl -lsocket
 
 INFO_FILES=		jwhois.info
 
-BUILD_DEFS+=		ENABLE_CACHE
+BUILD_DEFS+=		JWHOIS_ENABLE_CACHE
 
-.if defined(ENABLE_CACHE)
+.if defined(JWHOIS_ENABLE_CACHE)
 CONFIGURE_ARGS+=	--with-cache
 .endif
 
