@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/07/29 15:19:14 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/07/30 20:23:31 jlam Exp $
 #
 
 DISTNAME=	grace-5.1.4
@@ -15,17 +15,15 @@ MAINTAINER=	drochner@netbsd.org
 HOMEPAGE=	http://plasma-gate.weizmann.ac.il/Grace/
 COMMENT=	GRaphing, Advanced Computation and Exploration of data
 
-DEPENDS+=	pdflib>=3.0:../../print/pdflib
 #DEPENDS+=	fftw-*:../../math/fftw
 
-USE_GMAKE=	YES
-USE_FORTRAN=	YES
-GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=	--enable-grace-home=${PREFIX}/grace \
-		--with-extra-incpath=${BUILDLINK_DIR}/include
-
-ALL_TARGET=
-MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+USE_BUILDLINK_ONLY=	YES
+USE_GMAKE=		YES
+USE_FORTRAN=		YES
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--enable-grace-home=${PREFIX}/grace
+CONFIGURE_ARGS+=	--with-extra-incpath=${BUILDLINK_DIR}/include
+MAKE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 post-install:
 	${RM} -f ${PREFIX}/bin/xmgrace
@@ -36,6 +34,7 @@ post-install:
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/tiff/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
+.include "../../print/pdflib/buildlink.mk"
 .include "../../textproc/t1lib/buildlink.mk"
 .include "../../x11/Xbae/buildlink.mk"
 .include "../../x11/lesstif/buildlink.mk"
