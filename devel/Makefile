@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.355 2002/11/29 18:10:49 drochner Exp $
+# $NetBSD: Makefile,v 1.356 2002/12/11 12:11:55 cjep Exp $
 #
 
 COMMENT=	Development utilities
@@ -125,6 +125,7 @@ SUBDIR+=	guile-www
 SUBDIR+=	haskell-mode
 SUBDIR+=	hdf
 SUBDIR+=	hdf5
+SUBDIR+=	hptools
 SUBDIR+=	id-utils
 SUBDIR+=	idiff
 SUBDIR+=	ipv6socket_scrub
