@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/07/17 22:51:26 grant Exp $
+# $NetBSD: Makefile,v 1.25 2003/07/30 10:41:24 jmmv Exp $
 
 DISTNAME=	netatalk-1.6.2
 CATEGORIES=	net print
@@ -13,6 +13,7 @@ GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 USE_PERL5=	YES
+USE_PKGINSTALL=	YES
 USE_LIBTOOL=	YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
@@ -53,5 +54,4 @@ pre-install:
 #.include "../../databases/db3/buildlink2.mk"
 .include "../../devel/rx/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
