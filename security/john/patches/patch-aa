@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2003/11/18 14:03:14 xtraeme Exp $
+
+--- Makefile.orig	2003-11-18 14:51:45.000000000 +0100
++++ Makefile	2003-11-18 14:52:31.000000000 +0100
+@@ -13,11 +13,11 @@
+ SED = sed
+ NULL = /dev/null
+ CPPFLAGS = -E
+-CFLAGS = -c -Wall -O2 -fomit-frame-pointer
++CFLAGS += -c
+ ASFLAGS = -c
+ LDFLAGS = -s
+-OPT_NORMAL = -funroll-loops
+-OPT_INLINE = -finline-functions
++OPT_NORMAL = 
++OPT_INLINE =
+ 
+ JOHN_VERSION = 1.6
+ JOHN_ARCHIVE = john-$(JOHN_VERSION)
