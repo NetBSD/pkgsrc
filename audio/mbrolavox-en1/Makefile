@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/04/14 04:50:26 proff Exp $
+# $NetBSD: Makefile,v 1.4 1999/06/09 17:05:36 agc Exp $
 
 DISTNAME=	mbrolavox-en1-980910
 WRKSRC=		${WRKDIR}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 
 DEPENDS+=	mbrola-linux-301g1:../mbrola-linux
 
-LICENSE=	non-commercial-use
+LICENSE=	no-commercial-use
 
 EXTRACT_CMD=	unzip
 EXTRACT_BEFORE_ARGS=
