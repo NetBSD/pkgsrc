@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/05/25 08:55:19 epg Exp $
+
+Index: threadproc/unix/proc.c
+===================================================================
+RCS file: /home/cvspublic/apr/threadproc/unix/proc.c,v
+retrieving revision 1.62
+diff -a -u -r1.62 proc.c
+--- threadproc/unix/proc.c	6 Jan 2003 23:44:38 -0000	1.62
++++ apr/threadproc/unix/proc.c
+@@ -474,7 +474,11 @@
+         waitpid_options |= WNOHANG;
+     }
+ 
+-    if ((pstatus = waitpid(proc->pid, &exit_int, waitpid_options)) > 0) {
++    do {
++        pstatus = waitpid(proc->pid, &exit_int, waitpid_options);
++    } while (pstatus < 0 && errno == EINTR);
++
++    if (pstatus > 0) {
+         proc->pid = pstatus;
+ 
+         if (WIFEXITED(exit_int)) {
