@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2004/04/11 07:42:10 snj Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/11 13:12:40 taca Exp $
 #
 
-DISTNAME=	nkf-1.7
-PKGNAME=	p5-nkf-1.7
+DISTNAME=	nkf204
+PKGNAME=	p5-nkf-2.04
 SVR4_PKGNAME=	p5nkf
 CATEGORIES=	japanese converters
-MASTER_SITES=	ftp://ftp.sra.co.jp/pub/cmd/nkf/
+MASTER_SITES=	http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
+HOMEPAGE=	http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/
 COMMENT=	Perl library for Network Kanji code conversion Filter
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/NKF
+WRKSRC=			${WRKDIR}/${DISTNAME}/NKF.mod
 USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/NKF/.packlist
 
