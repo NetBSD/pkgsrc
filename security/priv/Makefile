@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/03/04 02:57:00 simonb Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/28 11:27:54 uebayasi Exp $
 #
 
 DISTNAME=	priv-1.0-beta2
@@ -9,17 +9,12 @@ MASTER_SITES=	ftp://ftp.thistledown.com.au/pub/simonb/
 MAINTAINER=	simonb@NetBSD.org
 COMMENT=	Execute commands as a different user
 
-GNU_CONFIGURE=	yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-PLIST_SRC=	${WRKDIR}/plist
+USE_BUILDLINK3=	YES
+GNU_CONFIGURE=	YES
+USE_PKGINSTALL=	YES
 
-.include "../../mk/bsd.prefs.mk"
-
-PRIV_CONF_DIR?=	${LOCALBASE}/etc
-
-CONFIGURE_ARGS+=	--sysconfdir=${PRIV_CONF_DIR}
-
-post-install:
-	${SED} -e 's|@PRIV_CONF_DIR@|${PRIV_CONF_DIR}|g' ${PKGDIR}/PLIST > ${PLIST_SRC}
+OWN_DIRS=	${PKG_SYSCONFDIR}/priv
 
 .include "../../mk/bsd.pkg.mk"
