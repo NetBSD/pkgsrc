@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1993 2003/04/21 02:10:48 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.1994 2003/04/21 02:30:15 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1675,3 +1675,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ipa to 1.3.3 [cjep 2003-04-20]
 	Added gnome-applets-2.2.1 as gnome2-applets [rh 2003-04-21]
 	Added dinotrace-mode-9.1i [dmcmahill 2003-04-20]
+	Added gnome-games-2.2.1 as gnome2-games [rh 2003-04-21]
