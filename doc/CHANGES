@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5394 2004/03/31 12:39:00 recht Exp $
+$NetBSD: CHANGES,v 1.5395 2004/03/31 13:24:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1635,3 +1635,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtkglext to 0.7.1nb5 [snj 2004-03-31]
 	Updated xsane to 0.90nb4 [tron 2004-03-31]
 	Updated balsa2 to 2.0.17 [recht 2004-03-31]
+	Updated mplayer to 1.0rc3nb2 [wiz 2004-03-31]
+	Updated gmplayer to 1.0rc3nb2 [wiz 2004-03-31]
+	Updated mencoder to 1.0rc3nb2 [wiz 2004-03-31]
