@@ -4,7 +4,7 @@
 # Date created:         17 Nov 1996
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.5 1998/01/30 13:56:59 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/03/07 18:55:32 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/09/07 22:08:13 ache Exp 
 #
 
@@ -15,8 +15,7 @@ MASTER_SITES=   ftp://ftp.cdrom.com/pub/demos/music/samples/ \
 TIINS=          dgguspat.zip
 DISTFILES=      ${TIINS} ${DISTNAME}.tar.gz
 
-# FreeBSD maintainer
-MAINTAINER=     ache@FreeBSD.ORG
+MAINTAINER=     mycroft@NetBSD.ORG
 
 BUILD_DEPENDS=  unzip:${PORTSDIR}/archivers/unzip
 LIB_DEPENDS=	ncurses.3.4:${PORTSDIR}/devel/ncurses
