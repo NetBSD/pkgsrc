@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.278 2002/03/14 13:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.279 2002/03/22 23:02:59 tron Exp $
 #
 
 COMMENT=	Networking tools
@@ -25,6 +25,7 @@ SUBDIR+=	bounce
 SUBDIR+=	bridged
 SUBDIR+=	cftp
 SUBDIR+=	choparp
+SUBDIR+=	chrony
 SUBDIR+=	cia
 SUBDIR+=	cidr
 SUBDIR+=	citrix_ica
