@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2002/12/17 14:45:13 drochner Exp $
+$NetBSD: patch-ac,v 1.9 2004/06/22 14:05:39 minskim Exp $
 
 --- include/shmbutil.h.orig	Mon May  6 19:58:39 2002
 +++ include/shmbutil.h	Tue Dec 17 15:27:20 2002
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.8 2002/12/17 14:45:13 drochner Exp $
  #  include <wchar.h>
  #  include <wctype.h>
 -#  if defined (HAVE_MBSRTOWCS) /* system is supposed to support XPG5 */
-+#  if defined (HAVE_MBSRTOWCS) /* system is supposed to support XPG5 */ && !defined(__NetBSD__)
++#  if defined (HAVE_MBSRTOWCS) /* system is supposed to support XPG5 */ && defined (HAVE_WCTYPE_T)
  #    define HANDLE_MULTIBYTE      1
  #  endif
  #endif /* HAVE_WCTYPE_H && HAVE_WCHAR_H */
