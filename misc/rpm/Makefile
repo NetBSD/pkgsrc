@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/07/31 04:14:09 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2000/09/10 12:02:48 wiz Exp $
 #
 
 DISTNAME=	rpm-2.5.4
@@ -16,5 +16,8 @@ USE_GMAKE=	yes
 
 pre-install:
 	${MKDIR} ${PREFIX}/include/rpm
+
+post-install:
+	${SH} ${PKGDIR}/INSTALL ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
