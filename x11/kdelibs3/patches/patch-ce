@@ -1,6 +1,6 @@
-$NetBSD: patch-ce,v 1.3 2004/02/04 13:58:40 markd Exp $
+$NetBSD: patch-ce,v 1.4 2004/03/09 11:22:23 markd Exp $
 
---- kioslave/file/Makefile.in.orig	2004-01-26 08:24:45.000000000 +1300
+--- kioslave/file/Makefile.in.orig	2004-03-05 01:30:03.000000000 +1300
 +++ kioslave/file/Makefile.in
 @@ -475,7 +475,7 @@ SOURCES = $(kio_file_la_SOURCES)
  all: docs-am  all-am
