@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4788 2004/02/11 13:42:36 jmmv Exp $
+$NetBSD: CHANGES,v 1.4789 2004/02/11 15:22:24 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -782,3 +782,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgtkhtml to 2.4.1nb5 [xtraeme 2004-02-11]
 	Updated clamav to 0.66 [recht 2004-02-11]
 	Updated gtk-doc to 1.0 [jmmv 2004-02-11]
+	Updated mutt to 1.4.2 [tron 2004-02-11]
