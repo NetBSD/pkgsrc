@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1997/10/13 15:09:19 agc Exp $
+# $NetBSD: Makefile,v 1.7 1997/10/23 20:26:23 agc Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 #
 
@@ -22,6 +22,7 @@
 #    SUBDIR += jive
 #    SUBDIR += kp
 #    SUBDIR += less
+    SUBDIR += libutf
 #    SUBDIR += lile
 #    SUBDIR += logsurfer
 #    SUBDIR += mc
