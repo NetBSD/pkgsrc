@@ -1,0 +1,71 @@
+$NetBSD: patch-ah,v 1.1 1998/08/30 17:46:27 garbled Exp $
+--- scripts/results.orig	Fri Jul 31 12:55:19 1998
++++ scripts/results	Sun Aug 30 08:42:03 1998
+@@ -2,20 +2,20 @@
+ 
+ # $Id: patch-ah,v 1.1 1998/08/30 17:46:27 garbled Exp $
+ 
+-OS=`../scripts/os`
+-CONFIG=`../scripts/config`
+-RESULTS=results/$OS
+-BASE=../$RESULTS/`uname -n`
++OS=`XXXPREFIXXXX/bin/lmbench/os`
++CONFIG=`XXXPREFIXXXX/bin/lmbench/config`
++RESULTS=XXXPREFIXXXX/share/lmbench/results/$OS
++BASE=$RESULTS/`uname -n`
+ EXT=0
+ 
+-if [ ! -f "../bin/$OS/$CONFIG" ]
++if [ ! -f "XXXPREFIXXXX/share/lmbench/$CONFIG" ]
+ then	echo "No config file?"
+ 	exit 1
+ fi
+-. ../bin/$OS/$CONFIG
++. XXXPREFIXXXX/share/lmbench/$CONFIG
+ 
+-if [ ! -d ../$RESULTS ]
+-then	mkdir -p ../$RESULTS
++if [ ! -d $RESULTS ]
++then	mkdir -p $RESULTS
+ fi
+ RESULTS=$BASE
+ while [ -f $RESULTS ]
+@@ -23,33 +23,33 @@
+ 	RESULTS=$BASE.$EXT
+ done
+ 
+-cd ../bin/$OS 
++cd XXXPREFIXXXX/share/lmbench/results/$OS 
+ if [ "X$SYNC_MAX" = X ]; then echo "No SYNC_MAX variable."; exit 1; fi
+ if [ $SYNC_MAX -gt 1 ]
+ then	SYNC_PID=1; export SYNC_PID
+ 	while [ $SYNC_PID -le $SYNC_MAX ]
+ 	do	echo Results $SYNC_PID going to ${RESULTS}.$SYNC_PID
+-		../../scripts/lmbench $CONFIG 2>../${RESULTS}.$SYNC_PID &
++		XXXPREFIXXXX/bin/lmbench/lmbench XXXPREFIXXXX/share/lmbench/$CONFIG 2>${RESULTS}.$SYNC_PID &
+ 		SYNC_PID=`expr $SYNC_PID + 1`
+ 	done; wait
+ else	echo Results going to ${RESULTS}
+ 	SYNC_PID=1
+ 	SYNC_MAX=1
+ 	export SYNC_PID SYNC_MAX
+-	../../scripts/lmbench $CONFIG 2>../${RESULTS}
++	XXXPREFIXXXX/bin/lmbench/lmbench XXXPREFIXXXX/share/lmbench/$CONFIG 2>${RESULTS}
+ fi
+ 
+ if [ X$MAIL = Xyes ]
+ then	echo Mailing results
+ 	if [ $SYNC_MAX -gt 1 ]
+ 	then	(echo ---- $INFO ---; cat $INFO; 
+-		for i in ../${RESULTS}.*
++		for i in ${RESULTS}.*
+ 		do	echo ---- $i ----; cat $i
+ 		done) | mail lmbench2@bitmover.com 
+ 	else	(echo ---- $INFO ---
+ 		cat $INFO 
+ 		echo ---- $RESULTS ---
+-		cat ../$RESULTS) | mail lmbench2@bitmover.com 
++		cat $RESULTS) | mail lmbench2@bitmover.com 
+ 	fi
+ fi
+ exit 0

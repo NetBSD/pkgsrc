@@ -1,0 +1,70 @@
+$NetBSD: patch-ai,v 1.1 1998/08/30 17:46:27 garbled Exp $
+--- scripts/lmbench.orig	Fri Jul 31 12:55:19 1998
++++ scripts/lmbench	Sun Aug 30 09:05:29 1998
+@@ -7,7 +7,7 @@
+ # $Id: patch-ai,v 1.1 1998/08/30 17:46:27 garbled Exp $
+ 
+ # Make sure we can find: ./cmd, df, and netstat
+-PATH=.:../../scripts:$PATH:/etc:/usr/etc:/sbin:/usr/sbin
++PATH=.:XXXPREFIXXXX/bin/lmbench:$PATH:/etc:/usr/etc:/sbin:/usr/sbin
+ export PATH
+ 
+ if [ -f $1 ]
+@@ -179,9 +179,9 @@
+ if [ $MP = Y ]; then synchronize $SYNC/lat_unix; fi
+ lat_unix
+ if [ $MP = Y ]
+-then	if [ $SYNC_MAX = $SYNC_PID ]; then cp hello /tmp/hello; fi
++then	if [ $SYNC_MAX = $SYNC_PID ]; then cp XXXPREFIXXXX/bin/lmbench/hello /tmp/hello; fi
+ 	synchronize $SYNC/lat_proc
+-else	cp hello /tmp/hello
++else	cp XXXPREFIXXXX/bin/lmbench/hello /tmp/hello
+ fi
+ lat_proc fork
+ lat_proc exec
+@@ -225,14 +225,14 @@
+ if [ $SYNC_PID = $SYNC_MAX ]
+ then	date > /dev/tty
+ 	echo Local networking > /dev/tty
+-	if [ ! -d ../../src/webpage-lm ]
++	if [ ! -d XXXPREFIXXXX/share/lmbench/webpage-lm ]
+ 	then	(cd ../../src && tar xf webpage-lm.tar)
+ 		sync
+ 		sleep 1
+ 	fi
+ 	SERVERS="lat_udp lat_tcp lat_rpc lat_connect bw_tcp"
+ 	for server in $SERVERS; do $server -s; done
+-	DOCROOT=../../src/webpage-lm lmhttp 8008 &
++	DOCROOT=XXXPREFIXXXX/share/lmbench/webpage-lm lmhttp 8008 &
+ 	sleep 2;
+ 	for i in localhost
+ 	do
+@@ -246,14 +246,14 @@
+ 		bw_tcp $i
+ 		bw_tcp -$i
+ 		# I want a hot cache number
+-		lat_http $i 8008 < ../../src/webpage-lm/URLS > /dev/null 2>&1
+-		lat_http $i 8008 < ../../src/webpage-lm/URLS
++		lat_http $i 8008 < XXXPREFIXXXX/share/lmbench/webpage-lm/URLS > /dev/null 2>&1
++		lat_http $i 8008 < XXXPREFIXXXX/share/lmbench/webpage-lm/URLS
+ 		lat_http -$i 8008
+ 	done
+ 
+ 	for remote in $REMOTE 
+ 	do	echo Networking to $remote > /dev/tty
+-		rcp $SERVERS lmhttp ../../src/webpage-lm.tar ${remote}:/tmp
++		rcp $SERVERS lmhttp XXXPREFIXXXX/share/lmbench/webpage-lm.tar ${remote}:/tmp
+ 		for server in $SERVERS
+ 		do	$RSH $remote -n /tmp/$server -s &
+ 		done
+@@ -266,8 +266,8 @@
+ 		lat_connect $remote; lat_connect -$remote;
+ 		bw_tcp $remote; bw_tcp -$remote 
+ 		# I want a hot cache number
+-		lat_http $remote 8008 < ../../src/webpage-lm/URLS > /dev/null 2>&1
+-		lat_http $remote 8008 < ../../src/webpage-lm/URLS
++		lat_http $remote 8008 < XXXPREFIXXXX/share/lmbench/webpage-lm/URLS > /dev/null 2>&1
++		lat_http $remote 8008 < XXXPREFIXXXX/share/lmbench/webpage-lm/URLS
+ 		lat_http -$remote 8008
+ 		RM=
+ 		for server in $SERVERS

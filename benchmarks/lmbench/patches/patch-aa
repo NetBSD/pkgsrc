@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 1998/08/30 17:46:26 garbled Exp $
+--- src/Makefile.orig	Fri Jul 31 12:55:18 1998
++++ src/Makefile	Sun Aug 30 06:32:41 1998
+@@ -30,7 +30,7 @@
+ O= ../bin/unknown
+ D= ../doc
+ TRUE=/bin/true
+-OS=`../scripts/os`
++OS=`../scripts/os.orig`
+ TARGET=`../scripts/target`
+ BINDIR=../bin/$(OS)
+ CONFIG=../bin/$(OS)/`../scripts/config`
+@@ -130,7 +130,7 @@
+ 
+ bsd:
+ 	@if [ ! -d $(BINDIR) ]; then mkdir -p $(BINDIR); fi
+-	$(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS) -Duint='unsigned int'" all
++	$(MAKE) CC="$(CC)" all
+ 
+ Wall:
+ 	@if [ ! -d $(BINDIR) ]; then mkdir -p $(BINDIR); fi

@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1 1998/08/30 17:46:26 garbled Exp $
+--- src/lib_udp.h.orig	Sat Aug 29 12:50:41 1998
++++ src/lib_udp.h	Sat Aug 29 12:50:53 1998
+@@ -9,6 +9,5 @@
+ int	udp_connect(char *host, u_long prog, int rdwr);
+ void	sock_optimize(int sock, int rdwr);
+ int	sockport(int);
+-bool_t	pmap_set(u_long prognum, u_long versnum, u_long protocol, u_short port);
+ bool_t	pmap_unset(u_long prognum, u_long versnum);
+ 

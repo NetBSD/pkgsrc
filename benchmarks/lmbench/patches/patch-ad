@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 1998/08/30 17:46:26 garbled Exp $
+--- src/lat_rpc.c.orig	Sat Aug 29 12:59:45 1998
++++ src/lat_rpc.c	Sat Aug 29 13:00:08 1998
+@@ -132,7 +132,9 @@
+ }
+ 
+ static void xact_prog_1();
++#ifndef __NetBSD__
+ bool_t	pmap_set(u_long prognum, u_long versnum, u_long protocol, u_short port);
++#endif
+ bool_t	pmap_unset(u_long prognum, u_long versnum);
+ 
+ void

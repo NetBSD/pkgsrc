@@ -1,0 +1,18 @@
+$NetBSD: patch-ag,v 1.1 1998/08/30 17:46:26 garbled Exp $
+--- scripts/os.orig	Sun Aug 30 05:38:55 1998
++++ scripts/os	Sun Aug 30 05:40:06 1998
+@@ -1,10 +1,10 @@
+ #!/bin/sh
+ 
+ OS=bloat-os
+-if [ -f ../scripts/gnu-os ]
+-then	OS=`../scripts/gnu-os | sed s/unknown-//`
++if [ -f XXXPREFIXXXX/bin/lmbench/gnu-os ]
++then	OS=`XXXPREFIXXXX/bin/lmbench/gnu-os | sed s/unknown-//`
+ fi
+-if [ -f ../../scripts/gnu-os ]
+-then	OS=`../../scripts/gnu-os | sed s/unknown-//`
++if [ -f XXXPREFIXXXX/bin/lmbench/gnu-os ]
++then	OS=`XXXPREFIXXXX/bin/lmbench/gnu-os | sed s/unknown-//`
+ fi
+ echo $OS
