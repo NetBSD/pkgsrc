@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.455 2003/04/09 13:44:47 wiz Exp $
+$NetBSD: TODO,v 1.456 2003/04/09 14:07:00 markd Exp $
 
 Suggested new packages
 ======================
@@ -252,8 +252,6 @@ Suggested package updates
 	o swig-1.3.17
 	o t1lib-5.0.0
 	o tcl/tk-8.4.2 [bjoern]
-	o ted-2.13 [pkg/20785]
-	o ted-2.14
 	o texmacs-1.0.1.10
 	o tightvnc-1.2.8
 	o tkman-2.2
