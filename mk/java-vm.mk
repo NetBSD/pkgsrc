@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.7 2003/01/29 20:52:01 jlam Exp $
+# $NetBSD: java-vm.mk,v 1.8 2003/02/06 10:17:38 dmcmahill Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -173,7 +173,8 @@ _PKG_JVM=	${_PKG_JVM_FIRSTACCEPTED}
 #
 .if !defined(_PKG_JVM)
 # force an error
-	error: no acceptable JVM found
+PKG_FAIL_REASON=	"no acceptable JVM found"
+_PKG_JVM=		"none"
 .endif
 
 BUILDLINK_DEPENDS.jdk?=			jdk-[0-9]*
