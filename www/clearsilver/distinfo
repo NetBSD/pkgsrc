@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2004/03/22 20:07:48 epg Exp $
+$NetBSD: distinfo,v 1.3 2004/11/29 00:08:57 epg Exp $
 
-SHA1 (clearsilver-0.9.7.tar.gz) = 182a29587a7094741fce4ed13101532ef359153a
-Size (clearsilver-0.9.7.tar.gz) = 377694 bytes
-SHA1 (patch-aa) = 29274a2f89f33fc16dad7529f142a3971717761f
+SHA1 (./clearsilver-0.9.13.tar.gz) = 947c328fb200aa6f3869c51bf115fe91d9944fa6
+Size (./clearsilver-0.9.13.tar.gz) = 365908 bytes
+SHA1 (patch-aa) = a336841bb190e179842b88694791303bcde211de
+SHA1 (patch-ab) = 23824d0023220a698bac8a1a7f6d45042095edd9

@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2004/11/29 00:08:57 epg Exp $
+
+--- ruby/ext/hdf/extconf.rb.orig	2004-11-28 05:02:14.000000000 -0500
++++ ruby/ext/hdf/extconf.rb
+@@ -5,6 +5,9 @@ require 'mkmf'
+ # dir_config("hdf","../../..","../../../libs")
+ dir_config("hdf")
+ 
++$libs = append_library($libs, 'neo_cgi')
++$libs = append_library($libs, 'z')
++
+ if have_header("ClearSilver.h") && have_library("neo_utl","hdf_init") && have_library("neo_cs","cs_init")
+   create_makefile("hdf")
+ end
