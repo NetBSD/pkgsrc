@@ -1,0 +1,2 @@
+Provides a perl interface to the lchown() system call, on platforms that
+support it.
