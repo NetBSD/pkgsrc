@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.4 2003/01/20 01:31:21 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.5 2003/02/08 06:47:52 yyamano Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -342,9 +342,9 @@ END {
 			}
 			
 			if (MULTIARCH == "no"){
-				cmd="ls -1 "PACKAGES "/" 
-					PKGREPOSITORYSUBDIR "/" 
-					wildcard[toppkg] PKG_SUFX 
+				cmd="ls -1 "PACKAGES "/" \
+					PKGREPOSITORYSUBDIR "/" \
+					wildcard[toppkg] PKG_SUFX \
 					" 2>/dev/null";
 				if (debug) {
 				  printf("Checking for binary package with %s\n",
