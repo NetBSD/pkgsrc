@@ -1,0 +1,11 @@
+--- client-src/Makefile.in.old	Tue Feb 23 10:34:37 1999
++++ client-src/Makefile.in	Tue Feb 23 10:35:09 1999
+@@ -167,7 +167,7 @@
+ 
+ SUFFIXES =		.sh .pl
+ 
+-libexec_PROGRAMS =	versionsuffix		@BUILD_CLIENT_PROGS_LIBEXEC@
++libexec_PROGRAMS =	@BUILD_CLIENT_PROGS_LIBEXEC@
+ 
+ # these are used for testing only:
+ TEST_PROGS = getfsent

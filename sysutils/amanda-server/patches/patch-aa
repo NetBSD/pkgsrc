@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/02/23 17:03:42 bouyer Exp $
+
+--- configure.orig	Sat Jul 18 10:34:33 1998
++++ configure	Sat Jul 18 10:35:03 1998
+@@ -4204,6 +4204,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+@@ -4249,6 +4250,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ # Extract the first word of "gcc", so it can be a program name with args.
+ set dummy gcc; ac_word=$2

@@ -1,0 +1,21 @@
+--- example/chg-scsi.conf.old	Tue Feb 23 16:44:39 1999
++++ example/chg-scsi.conf	Tue Feb 23 16:46:38 1999
+@@ -2,6 +2,8 @@
+ number_configs	2
+ eject		1	# Tapedrives need an eject command
+ sleep		5	# Seconds to wait until the tape gets ready
++			# The driver first sleeps for <sleep>/2 seconds,
++			# then pool the drive every seconds.
+ cleanmax	10 	# How many times could a cleaning tape get used
+ changerdev 	/dev/sch0
+ #
+@@ -13,7 +15,8 @@
+ startuse	0	# The slots associated with the drive 0
+ enduse		9	# 
+ statfile 	/usr/local/etc/amanda/tape5-slot  # The file where the actual slot is stored
+-cleancart	20	# the slot where the cleaningcartridge for drive 0 is located
++cleancart	-1	# the slot where the cleaningcartridge for drive 0 is
++			# located. -1 means none.
+ cleanfile	/usr/local/etc/amanda/tape0-clean # The file where the cleanings are recorded
+ usagecount	/usr/local/etc/amanda/backup/totaltime
+ 

@@ -1,0 +1,11 @@
+--- Makefile.in.old	Tue Feb 23 10:37:10 1999
++++ Makefile.in	Tue Feb 23 10:38:36 1999
+@@ -157,7 +157,7 @@
+ AUTOCONF = @AUTOCONF@ --localdir=config
+ 
+ SUBDIRS=config		\
+-	common-src	client-src	tape-src	\
++	client-src	\
+ 	server-src	restore-src	recover-src	\
+ 	changer-src	amplot		man		\
+ 	example
