@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2002/01/21 11:20:40 agc Exp $
+# $NetBSD: Makefile.common,v 1.5 2002/10/03 14:25:04 wiz Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
@@ -19,13 +19,14 @@ COMMENT=		functional language
 USE_GMAKE=		yes
 MAKEFILE=		GNUmakefile
 ALL_TARGET=		default
+GNU_CONFIGURE=		yes
+AUTOMAKE_REQD=		1.4
 
 DYLAN_VERSION=		2.3.6
 
 # other architecture changes will be gratefully received
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-powerpc
 
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 USE_PERL5=		yes
 
 USE_LIBTOOL=		yes
@@ -51,8 +52,12 @@ post-patch:
 		${SED} -e 's|@prefix@|${PREFIX}|g' $$f.in > $$f;	\
 	done
 
-post-configure:
-	cd ${WRKSRC}; ./autogen.sh --prefix=${PREFIX} ${AUTOGEN_TARGET}
+pre-configure:
+	cd ${WRKSRC} && ${ACLOCAL}
+	cd ${WRKSRC} && ${PREFIX}/bin/libtoolize --force --copy
+	cd ${WRKSRC} && ${AUTOHEADER}
+	cd ${WRKSRC} && ${AUTOCONF}
 
 .include "../../x11/gtk/buildlink.mk"
+.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
