@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.402 2003/03/22 03:16:20 salo Exp $
+$NetBSD: TODO,v 1.403 2003/03/22 03:41:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -122,8 +122,6 @@ Suggested package updates
 	o gcvs-1.0
 	o gd-2.0.4
 	o gdm-2.4.1.1
-	o getmail-2.3.11 [pkg/19707]
-	o getmail-3.0.4 [pkg/19707]
 	o gftp-2.0.14 [pkg/20250]
 	o ghostscript-8.00 (apfl)
 	o gimp-print-4.2.5
