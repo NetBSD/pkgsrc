@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/03/13 17:37:07 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/22 00:16:58 jlam Exp $
 #
 
 DISTNAME=	gfract-0.21
@@ -11,8 +11,7 @@ MAINTAINER=	collver@linuxfreemail.com
 HOMEPAGE=	http://www.cs.Helsinki.FI/u/salerma/gfract/
 COMMENT=	gtk-based fractal program
 
-USE_BUILDLINK_ONLY=	yes
-
+USE_BUILDLINK2=	yes
 USE_X11=	yes
 ALL_TARGET=	gfract
 
@@ -36,7 +35,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/gfract.xpm ${PREFIX}/share/gfract/
 	${INSTALL_PROGRAM} ${WRKSRC}/gfract ${PREFIX}/bin/
 
-.include "../../graphics/png/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/09/10 16:06:42 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2002/09/22 00:14:06 jlam Exp $
 
 DISTNAME=		ee-0.3.12
 PKGREVISION=		2
@@ -9,17 +9,19 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Image viewer based on imlib by the Rasterman.  Gtk clone of xv
 
-GNU_CONFIGURE=		# defined
+USE_BUILDLINK2=		# defined
+USE_X11BASE=		# defined
 USE_GMAKE=		# defined
+
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 LOCALSTATEDIR=		/var/gnome
 
+GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
-			--with-glib-prefix=${BUILDLINK_DIR}
+			--with-glib-prefix=${BUILDLINK_PREFIX.glib}
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 
-.include "../../x11/gnome-core/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
