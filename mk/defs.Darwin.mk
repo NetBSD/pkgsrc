@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.74 2004/05/06 06:32:22 adam Exp $
+# $NetBSD: defs.Darwin.mk,v 1.75 2004/05/12 14:10:18 jschauma Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -155,3 +155,14 @@ LOCALBASE?=		${DESTDIR}/usr/pkg
 _OPSYS_MAX_CMDLEN!=	/usr/sbin/sysctl -n kern.argmax
 CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
 .endif
+
+# If games are to be installed setgid, then SETGIDGAME is set to 'yes'
+# (it defaults to 'no' as per bsd.pkg.defaults.mk).
+# Set the group and mode to meaningful values in that case (defaults to
+# BINOWN, BINGRP and BINMODE as per bsd.pkg.defaults.mk).
+# FIXME: Adjust to work on this system and enable the lines below.
+#.if !(empty(SETGIDGAME:M[yY][eE][sS]))
+#GAMEOWN=		games
+#GAMEGRP=		games
+#GAMEMODE=		2555
+#.endif
