@@ -1,6 +1,4 @@
-#	$NetBSD: Makefile,v 1.1.1.1 2003/07/11 14:50:37 seb Exp $
-
-.include "${.CURDIR}/Makefile.inc"
+#	$NetBSD: Makefile,v 1.2 2003/07/20 15:37:47 seb Exp $
 
 SUBDIR=		lib
 
@@ -10,3 +8,4 @@ SUBDIR+=	sysctl
 .endif
 
 .include <bsd.subdir.mk>
+.include "${.CURDIR}/Makefile.inc"
