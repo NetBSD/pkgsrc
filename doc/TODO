@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.440 2003/04/02 12:20:03 wiz Exp $
+$NetBSD: TODO,v 1.441 2003/04/03 10:14:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -97,6 +97,7 @@ Suggested package updates
 	o crafty-19.1
 	o crossfire-1.5.0
 	o ctwm-3.6 [pkg/20648]
+	o curl-7.10.4
 	o db4-4.1.25 [pkg/20289]
 	o dctc-0.85.1
 	o dia-0.91 [pkg/20750]
@@ -104,6 +105,7 @@ Suggested package updates
 	o distcc-2.0.1
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
+	o eclipse-2.1
 	o elm-me-2.4pl101
 	o emacs-21.3
 	o exim-4.12 [pkg/19850]
@@ -182,6 +184,7 @@ Suggested package updates
 	o napshare-1.2
 	o neon-0.23.8
 	o nessus-2.0.1 [pkg/20796]
+	o nessus-2.0.3
 	o net-snmp-5.0.7 [pkg/19939]
 	o net-snmp-5.0.8
 	o netscape-7.02
@@ -242,6 +245,7 @@ Suggested package updates
 	o ted-2.13 [pkg/20785]
 	o texmacs-1.0.1.8
 	o tightvnc-1.2.8
+	o tkman-2.2
 	o ttf2pt1-3.4.3
 	o vfu-4.00
 	o vm-7.14
