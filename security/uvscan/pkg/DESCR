@@ -1,4 +1,4 @@
-  uvscan is an evaluation VirusScan running on NetBSD under Linux
+uvscan is an evaluation VirusScan running on NetBSD under Linux
 emulation.
 
         THIS IS AN EVALUATION COPY OF THIS SOFTWARE.
@@ -7,5 +7,5 @@ emulation.
         the software from Network Associates, Inc. or
         stop using it and remove it from your computer. 
 
-  Please see ${PREFIX}/share/doc/uvscan/license.txt for more
-information!
+Please see ${PREFIX}/share/doc/uvscan/license.txt for more
+information.
