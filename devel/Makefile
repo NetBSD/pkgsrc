@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2001/04/25 14:58:05 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.201 2001/04/25 17:44:36 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -150,11 +150,18 @@ SUBDIR+=	p5-Tie-IxHash
 SUBDIR+=	p5-Time-HiRes
 SUBDIR+=	p5-TimeDate
 SUBDIR+=	p5-perl-headers
+SUBDIR+=	palmos-includes
 SUBDIR+=	patch
 SUBDIR+=	pccts
 SUBDIR+=	pcre
 SUBDIR+=	pedisassem
+SUBDIR+=	pilrc
 SUBDIR+=	popt
+SUBDIR+=	prc-tools
+SUBDIR+=	prc-tools-base
+SUBDIR+=	prc-tools-binutils
+SUBDIR+=	prc-tools-gcc
+SUBDIR+=	prc-tools-gdb
 SUBDIR+=	prcs
 SUBDIR+=	pth
 SUBDIR+=	ptl2
