@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.353 2003/02/18 19:54:11 jschauma Exp $
+# $NetBSD: Makefile,v 1.354 2003/02/18 22:12:44 mjl Exp $
 #
 
 COMMENT=	Networking tools
@@ -240,6 +240,7 @@ SUBDIR+=	soup
 SUBDIR+=	speakfreely
 SUBDIR+=	speedtouch
 SUBDIR+=	spegla
+SUBDIR+=	spread
 SUBDIR+=	srsh
 SUBDIR+=	ssync
 SUBDIR+=	stripes
