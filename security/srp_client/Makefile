@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/03/27 03:20:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2001/06/06 21:43:56 jtb Exp $
 #
 
 DISTNAME=		srp-1.4.4
@@ -13,6 +13,8 @@ COMMENT=		client programs using Secure Remote Password protocol
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake-1.4:../../devel/automake
 DEPENDS+=		gmp>=2.0.2:../../devel/gmp
+
+LICENSE=		srp_client-license
 
 CRYPTO=			yes
 GNU_CONFIGURE=		yes
