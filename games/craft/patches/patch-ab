@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2001/12/19 10:26:47 tron Exp $
+$NetBSD: patch-ab,v 1.3 2001/12/19 10:51:19 tron Exp $
 
 --- win.hc.orig	Wed Mar 19 07:21:21 1997
 +++ win.hc	Thu Sep 24 11:48:49 1998
@@ -8,8 +8,8 @@ $NetBSD: patch-ab,v 1.2 2001/12/19 10:26:47 tron Exp $
       {win_handler_init = true;
 -      if (! f_exists (".windefaults.params"))
 -         system ("cp /home/hua/craft/.windefaults.params .");
-+      if (! f_exists ("~/.windefaults.params"))
-+         system ("cp /usr/X11R6/share/craft/.windefaults.params ~/.windefaults.params");
++      if (! f_exists (".windefaults.params"))
++         system ("cp " CRAFT_DIR ".windefaults.params .windefaults.params");
        win_defaults = new paramreader (".windefaults");
       }.
  

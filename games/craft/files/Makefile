@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1 1999/08/11 22:20:57 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/19 10:51:19 tron Exp $
 #
 #---------------------------------------------------------------------
 #
 # The following assigns must be changed according to your system
 #
 
-GCC=gcc
-GPP=g++
+GCC=	${CC}
+GPP=	${CXX}
 
 XLIB=${X11BASE}/lib
-CPPFLAGS=-I${X11BASE}/include -DCRAFT_DIR=\"${PREFIX}/share/craft/\"
+CPPFLAGS=-I${X11BASE}/include -DCRAFT_DIR=\\\"${PREFIX}/share/craft/\\\"
 
 #
 #--------------------------------------------------------------------
@@ -21,7 +21,6 @@ OBJ=	xtimer.o option_menu.o setupedit.o robot.o land.o ship.o building.o \
 	objects.o xstring.o id_handler.o color_trans.o masks.o buttons.o lru.o scroller.o \
 	selector.o cmap_selector.o getline.o file_selector.o history.o craft.o
 
-CFLAGS=-O2 -fexpensive-optimizations -finline-functions
 HCC=hcc/hcc
 CMP=${HCC} -compiler ${GCC} ${CPPFLAGS} ${CFLAGS} -c
 
@@ -39,6 +38,9 @@ craft: ${OBJ}
 	${CMP} $*
 
 ${OBJ}: hcc/hcc
+
+hcc/hcc: hcc/hcc.cc
+	${GPP} ${CFLAGS} $< -o hcc/hcc
 
 install: craft
 	${BSD_INSTALL_PROGRAM} craft ${PREFIX}/bin
