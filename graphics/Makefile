@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.292 2004/02/10 09:17:43 garbled Exp $
+# $NetBSD: Makefile,v 1.293 2004/02/20 13:44:29 drochner Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -45,6 +45,7 @@ SUBDIR+=	clanlib
 SUBDIR+=	claraocr
 SUBDIR+=	compface
 SUBDIR+=	cqcam
+SUBDIR+=	dcraw
 SUBDIR+=	denemo
 SUBDIR+=	dia
 SUBDIR+=	dumpmpeg
