@@ -1,5 +1,5 @@
 # $OpenBSD: Makefile,v 1.5 2001/11/21 01:17:43 naddy Exp $
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:42:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/05/28 01:22:43 uebayasi Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
@@ -21,7 +21,7 @@ NO_SRC_ON_FTP=	${RESTRICTED}
 # needs pdksh
 ONLY_FOR_PLATFORM=	NetBSD-*
 
-ASTKSH_VERSION=	2002-12-21
+ASTKSH_VERSION=	2003-04-22
 
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
