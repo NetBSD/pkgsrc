@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2004/11/22 23:10:55 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2004/11/23 00:02:49 jlam Exp $
+
+.include "../../www/apache2/Makefile.common"
 
 PKGNAME=	apr-${APR_VERSION}.${APACHE_VERSION}
 PKGREVISION=	1
@@ -35,7 +37,14 @@ APU_CONFIGURE_ARGS= \
 		--without-gdbm
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "options.mk"
+
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-configure
+SUBST_FILES.conf=	apr/config.layout apr-util/config.layout
+SUBST_SED.conf=		-e "s,@PREFIX@,${PREFIX},g"
+SUBST_MESSAGE.conf=	"Fixing harcoded paths."
 
 do-configure:
 	@cd ${WRKSRC}/apr && ${SETENV} ${CONFIGURE_ENV} ./configure \
@@ -50,12 +59,4 @@ post-install:
 	@${CHMOD} ${PKGDIRMODE} ${PREFIX}/include/apr-0
 	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/include/apr-0/
 
-SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	pre-configure
-SUBST_FILES.conf=	apr/config.layout apr-util/config.layout
-SUBST_SED.conf=		-e "s,@PREFIX@,${PREFIX},g"
-SUBST_MESSAGE.conf=	"Fixing harcoded paths."
-
-.include "../../www/apache2/Makefile.common"
-.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
