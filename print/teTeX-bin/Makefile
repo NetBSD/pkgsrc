@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2003/07/17 22:52:40 grant Exp $
+# $NetBSD: Makefile,v 1.44 2003/08/04 22:02:30 seb Exp $
 
 DISTNAME=	teTeX-src-1.0.7
 PKGNAME=	teTeX-bin-1.0.7
@@ -27,6 +27,7 @@ USE_GMAKE=		yes
 USE_X11=		yes
 CFLAGS+=		-Dunix
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=		latex.info dvips.info web2c.info kpathsea.info
 
 GNU_CONFIGURE=		yes
@@ -88,5 +89,4 @@ post-install:
 .include "../../graphics/png/buildlink2.mk"
 .include "../../www/libwww/buildlink2.mk"
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
