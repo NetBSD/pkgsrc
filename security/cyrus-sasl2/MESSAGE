@@ -1,5 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/01/09 19:37:48 jlam Exp $
+$NetBSD: MESSAGE,v 1.2 2005/03/08 18:22:39 bad Exp $
+
+${PKGNAME} by default does *not* install any authentication plugin modules.
+Until the necessary authentication plugin modules are installed, e.g.
+security/cy2-crammd5 or security/cy2-gssapi, you will probably get errors
+about "no appropriate mechs available".
 
 ${PKGNAME} will use the following directory as the default
 path to its plugin modules:
@@ -11,6 +16,6 @@ SASL_PATH variable to a colon-delimted list of directories in the shell
 environment.
 
 To allow plaintext authentication without using the sasldb mechanism, the
-security/cyrus-saslauthd package should be installed.
+package security/cyrus-saslauthd should be installed.
 
 ===========================================================================
