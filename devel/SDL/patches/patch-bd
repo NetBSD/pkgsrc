@@ -1,0 +1,22 @@
+$NetBSD: patch-bd,v 1.1 2003/07/26 23:05:34 jmmv Exp $
+
+--- src/audio/nas/Makefile.in.orig	2002-10-06 22:34:56.000000000 +0200
++++ src/audio/nas/Makefile.in
+@@ -135,7 +135,7 @@ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@
+ X_PRE_LIBS = @X_PRE_LIBS@
+-libaudio_nas_la_LDFLAGS = 
++libaudio_nas_la_LDFLAGS = -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) $(SHARED_SYSTEM_LIBS)
+ libaudio_nas_la_LIBADD = 
+ libaudio_nas_la_OBJECTS =  SDL_nasaudio.lo
+ CFLAGS = @CFLAGS@
+@@ -212,7 +212,7 @@ distclean-libtool:
+ maintainer-clean-libtool:
+ 
+ libaudio_nas.la: $(libaudio_nas_la_OBJECTS) $(libaudio_nas_la_DEPENDENCIES)
+-	$(LINK)  $(libaudio_nas_la_LDFLAGS) $(libaudio_nas_la_OBJECTS) $(libaudio_nas_la_LIBADD) $(LIBS)
++	$(LINK) -rpath $(libdir) $(libaudio_nas_la_LDFLAGS) $(libaudio_nas_la_OBJECTS) $(libaudio_nas_la_LIBADD) $(LIBS)
+ 
+ tags: TAGS
+ 
