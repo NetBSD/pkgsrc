@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/03/10 11:53:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/09/22 07:13:56 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -9,6 +9,10 @@ COMMENT=	XFce4 settings manager
 
 PKGCONFIG_OVERRIDE=	xfce-mcs-manager/xfce-mcs-manager.pc.in
 
+CFLAGS+=	${PTHREAD_CFLAGS}
+LIBS+=		${PTHREAD_LDFLAGS}
+
 .include "../../x11/libxfce4gui/buildlink3.mk"
 .include "../../x11/libxfce4mcs/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
