@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/09/05 09:05:21 explorer Exp $
+# $NetBSD: Makefile,v 1.4 1998/09/17 00:48:02 garbled Exp $
 # FreeBSD: Makefile,v 1.20 1998/08/27 16:38:02 markm Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://psych.psy.uq.oz.au/pub/Crypto/SSL/
 MAINTAINER=		explorer@netbsd.org
 HOMEPAGE=		http://www.psy.uq.oz.au/~ftp/Crypto/
 
-ONLY_FOR_ARCHS=		i386 sparc m68k
+ONLY_FOR_ARCHS=		i386 sparc m68k alpha
 DEPENDS=		rsaref-2.0:../../security/rsaref
 
 USE_PERL5=		yes
@@ -26,7 +26,6 @@ post-extract:
 
 post-configure:
 	${CP} ${WRKSRC}/rsaref/rsaref.h ${WRKSRC}/include/rsaref.h
-	(${PATCH} <${FILESDIR}/Makefile.patch)
 
 post-install:
 .if !defined(NOPORTDOCS)
