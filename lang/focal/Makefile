@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/11 17:15:02 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/28 05:06:28 snj Exp $
 #
 
 DISTNAME=		focal
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://home.tiscali.be/be042720/44/focal.htm
 COMMENT=		Interpreted programming language
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 FOCALDOCDIR=	${PREFIX}/share/doc/focal
 

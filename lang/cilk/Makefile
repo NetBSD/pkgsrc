@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:43 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/28 05:06:28 snj Exp $
 
 DISTNAME=		cilk-5.3.1
 PKGREVISION=		2
@@ -13,7 +13,7 @@ COMMENT=		Multithreaded parallel programming language based on ANSI C
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386 -*-*mipse[bl] *-*-powerpc *-*-sparc
 
 GNU_CONFIGURE=		# defined
-USE_BUILDLINK2=	 	# defined
+USE_BUILDLINK3=	 	yes
 USE_GNU_TOOLS+=		make
 USE_PERL5=		yes
 USE_LIBTOOL=		yes
@@ -33,5 +33,5 @@ post-install:
 		${PREFIX}/share/examples/cilk
 	${INSTALL_DATA} ${WRKSRC}/FAQ/cilk-faq.info ${PREFIX}/info
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
