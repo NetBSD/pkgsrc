@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.7 2002/02/10 19:05:57 tron Exp $
+
+--- src/Makefile.in.orig	Wed Jan 23 14:31:20 2002
++++ src/Makefile.in	Sun Feb 10 19:54:49 2002
+@@ -107,7 +107,7 @@
+ DEFS = @DEFS@ \
+   -DBISON_SIMPLE=\"$(pkgdatadir)/bison.simple\" \
+   -DBISON_HAIRY=\"$(pkgdatadir)/bison.hairy\" \
+-  -DLOCALEDIR=\"$(datadir)/locale\"
++  -DLOCALEDIR=\"$(prefix)/$(PKGLOCALEDIR)/locale\"
+ 
+ 
+ CFLAGS = @CFLAGS@ $(WARNING_CFLAGS) $(WERROR_CFLAGS)
