@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 14:15:55 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/04 16:02:36 taca Exp $
 
 DISTNAME=	htmlsplit102
 PKGNAME=	${RUBY_PKGNAMEPREFIX}htmlsplit-1.0.2
@@ -12,7 +12,6 @@ COMMENT=	Ruby HTML split/join library
 
 DIST_SUBDIR=	ruby
 WRKSRC=		${WRKDIR}
-USE_RUBY=	yes
 USE_RUBY_RD=	# defined
 NO_CONFIGURE=	# defined
 
