@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1 2004/10/01 19:20:27 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/02/03 23:46:58 tron Exp $
 
 DISTNAME=		${MOZ_BIN}-java-1.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www lang
 MASTER_SITES=		# empty
 DISTFILES=		# empty
