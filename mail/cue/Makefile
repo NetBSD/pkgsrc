@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2004/10/28 03:17:41 itojun Exp $
+# $NetBSD: Makefile,v 1.40 2004/12/05 23:03:58 cube Exp $
 
 DISTNAME=	cue-snap-20041025
 PKGNAME=	cue-20041025
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://sh.wide.ad.jp/WIDE/free-ware/cue/snap/
 
@@ -33,6 +34,8 @@ CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--enable-idea
 .endif
 
+CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cue ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cue
@@ -41,4 +44,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/cue.hlp  ${PREFIX}/share/doc/cue
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
