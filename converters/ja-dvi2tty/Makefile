@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/11 07:18:38 snj Exp $
+# $NetBSD: Makefile,v 1.6 2004/11/13 21:28:27 jlam Exp $
 
 DISTNAME=	dvi2tty5.0
 PKGNAME=	ja-dvi2tty-5.0
@@ -21,7 +21,7 @@ DIST_SUBDIR=	ja-dvi2tty
 
 LICENSE=	no-commercial-use
 
-USE_BUILDLINK3=	# defined
+USE_BUILDLINK3=	yes
 MAKE_FLAGS+=	CFLAGS="${CFLAGS} -DDEFPAGER='\"${PREFIX}/bin/jless\"'"
 
 do-install:
