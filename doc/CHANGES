@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1056 2003/01/09 09:05:27 jmmv Exp $
+$NetBSD: CHANGES,v 1.1057 2003/01/09 09:48:28 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -154,3 +154,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated createbuildlink to 2.4 [uebayasi 2003-01-09]
 	Added driftnet-0.1.6 [hubertf 2003-01-09]
 	Updated Xft2 to 2.1nb2 [jmmv 2003-01-09]
+	Updated gnome-vfs to 1.0.5 [rh 2003-01-09]
