@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2001/04/14 10:05:01 tron Exp $
+$NetBSD: patch-aa,v 1.6 2001/07/29 16:41:19 tron Exp $
 
---- src/Makefile.in.orig	Sat Apr 14 11:38:49 2001
-+++ src/Makefile.in	Sat Apr 14 11:42:36 2001
+--- src/Makefile.in.orig	Sun Jul 29 18:14:54 2001
++++ src/Makefile.in	Sun Jul 29 18:20:14 2001
 @@ -12,6 +12,8 @@
  cgi_suffix	= @cgi_suffix@
  top_srcdir	= @top_srcdir@
@@ -11,13 +11,7 @@ $NetBSD: patch-aa,v 1.5 2001/04/14 10:05:01 tron Exp $
  libexecdir      = @libexecdir@
  sysconfdir	= @sysconfdir@
  localstatedir   = @localstatedir@
-@@ -35,19 +37,19 @@
- 
- DEFAULT_PREFIX		= $(prefix)
- DEFAULT_CONFIG_FILE     = $(sysconfdir)/squid.conf
--DEFAULT_MIME_TABLE	= $(sysconfdir)/mime.conf
-+DEFAULT_MIME_TABLE	= $(datadir)/squid/mime.conf
- DEFAULT_DNSSERVER       = $(libexecdir)/$(DNSSERVER_EXE)
+@@ -40,14 +42,14 @@
  DEFAULT_CACHE_LOG       = $(localstatedir)/logs/cache.log
  DEFAULT_ACCESS_LOG      = $(localstatedir)/logs/access.log
  DEFAULT_STORE_LOG       = $(localstatedir)/logs/store.log
@@ -96,7 +90,7 @@ $NetBSD: patch-aa,v 1.5 2001/04/14 10:05:01 tron Exp $
  		fi; \
  	done
  	@if test -n "$(UTILS)"; then \
-@@ -377,20 +379,20 @@
+@@ -377,21 +379,21 @@
  		fi; \
  	done
  	$(INSTALL_FILE) $(srcdir)/mib.txt $(DEFAULT_MIB_PATH)
@@ -111,7 +105,11 @@ $NetBSD: patch-aa,v 1.5 2001/04/14 10:05:01 tron Exp $
 -	$(INSTALL_FILE) $(srcdir)/mime.conf $(sysconfdir)/mime.conf.default
 -	@if test -f $(sysconfdir)/mime.conf ; then \
 -		echo "$@ will not overwrite existing $(sysconfdir)/mime.conf" ; \
-+	$(INSTALL_FILE) squid.conf $(datadir)/squid/squid.conf.default
+-	else \
+-		echo "$(INSTALL_FILE) $(srcdir)/mime.conf $(sysconfdir)"; \
+-		$(INSTALL_FILE) $(srcdir)/mime.conf $(sysconfdir); \
+-	fi
++	$(INSTALL_FILE) squid.conf $(DEFAULT_CONFIG_FILE).default
 +#	@if test -f $(DEFAULT_CONFIG_FILE) ; then \
 +#		echo "$@ will not overwrite existing $(DEFAULT_CONFIG_FILE)" ; \
 +#	else \
@@ -120,13 +118,12 @@ $NetBSD: patch-aa,v 1.5 2001/04/14 10:05:01 tron Exp $
 +#	fi
 +
 +	$(INSTALL_FILE) $(srcdir)/mime.conf $(DEFAULT_MIME_TABLE).default
-+	@if test -f $(DEFAULT_MIME_TABLE) ; then \
-+		echo "$@ will not overwrite existing $(DEFAULT_MIME_TABLE)" ; \
- 	else \
--		echo "$(INSTALL_FILE) $(srcdir)/mime.conf $(sysconfdir)"; \
--		$(INSTALL_FILE) $(srcdir)/mime.conf $(sysconfdir); \
-+		echo "$(INSTALL_FILE) $(srcdir)/mime.conf $(DEFAULT_MIME_TABLE)"; \
-+		$(INSTALL_FILE) $(srcdir)/mime.conf $(DEFAULT_MIME_TABLE); \
- 	fi
++#	@if test -f $(DEFAULT_MIME_TABLE) ; then \
++#		echo "$@ will not overwrite existing $(DEFAULT_MIME_TABLE)" ; \
++#	else \
++#		echo "$(INSTALL_FILE) $(srcdir)/mime.conf $(DEFAULT_MIME_TABLE)"; \
++#		$(INSTALL_FILE) $(srcdir)/mime.conf $(DEFAULT_MIME_TABLE); \
++#	fi
  
  install-pinger:
+ 	@f=$(PINGER_EXE); \

@@ -1,30 +1,32 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.4 1999/01/29 19:26:37 bad Exp $
+# $NetBSD: INSTALL,v 1.5 2001/07/29 16:41:19 tron Exp $
 #
 
 PKGNAME=$1
-DEFCONF=${PKG_PREFIX}/share/squid/squid.conf.default
+CONFDIR=${PKG_PREFIX}/share/squid/
+SQUIDCONF=squid.conf
+MIMECONF=mime.conf
 
 case $2 in
     PRE-INSTALL)
 	;;
     POST-INSTALL)
 	echo ""
-	echo "    o you DO need running nameservice to start and run ${PKGNAME}"
+	echo "    o You DO need running nameservice to start and run ${PKGNAME}".
 	echo ""
-	echo "    o use the ${PKGNAME} proxy and caching WWW Server by"
+	echo "    o Use the ${PKGNAME} proxy and caching WWW Server by"
 	echo "      configuring your WWW Navigator (Netscape, Mosaic,...)"
 	echo "      to use it as a proxy server."
 	echo ""
-	echo "    o copy \"${DEFCONF}\" to \"/etc/squid.conf\""
-	echo "      and edit it as required. You should pay attention to"
-	echo "      the ACTUAL locations of the cache \"spool\" logfiles"
-	echo "      and pidfile."
+	echo "    o Copy \"${CONFDIR}${SQUIDCONF}.default\" to \"${SQUIDCONF}\""
+	echo "      and \"${CONFDIR}${MIMECONF}.default\" to \"${MIMECONF}\""
+	echo "      and edit them as required. You should pay attention to the"
+	echo "      ACTUAL locations of the cache \"spool\" logfiles and pidfile."
 	echo ""
 	;;
     *)
-	echo "Unexpected Argument $2!!"
+	echo "Unexpected Argument ${2}."
 	exit 1
 	;;
 esac

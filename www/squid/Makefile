@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2001/05/01 18:07:48 wennmach Exp $
+# $NetBSD: Makefile,v 1.47 2001/07/29 16:41:18 tron Exp $
 
 DISTNAME=	squid-2.4.STABLE1-src
-PKGNAME=	squid-2.4.1
+PKGNAME=	squid-2.4.1nb1
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.4/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -22,17 +22,15 @@ COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
 
 GNU_CONFIGURE=	# defined
-CONFIGURE_ARGS+= --sysconfdir=/etc \
+CONFIGURE_ARGS+= --sysconfdir=${PREFIX}/etc/squid \
 		--localstatedir=/var/squid \
 		${SQUID_CONFIGURE_ARGS}
-CONFIGURE_ENV+=	CACHE_HTTP_PORT=${SQUID_HTTP_PORT} \
-		CACHE_ICP_PORT=${SQUID_ICP_PORT} \
-		PERL=${PERL5}
+CONFIGURE_ENV+=	PERL=${PERL5}
 
-BUILD_DEFS+=	SQUID_CONFIGURE_ARGS SQUID_HTTP_PORT SQUID_ICP_PORT
+BUILD_DEFS+=	SQUID_CONFIGURE_ARGS
 MAKEFILE=	makefile
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" PKG_PREFIX="${PREFIX}"
-PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/PLIST.share
+PLIST_SRC=	${WRKDIR}/PLIST
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
 .include "../../mk/bsd.prefs.mk"
@@ -41,15 +39,9 @@ SQUID_CONFIGURE_ARGS?=	--enable-cachemgr-hostname=localhost \
 			--enable-delay-pools \
 			--enable-icmp \
 			--enable-ipf-transparent \
+			--enable-kill-parent-hack \
 			--enable-snmp \
 			--enable-underscores
-SQUID_HTTP_PORT?=	3128
-SQUID_ICP_PORT?=	3130
-
-.if ${OPSYS} == "SunOS"
-DEPENDS+=	egcs-1.1.2:../../lang/egcs
-MAKE_ENV+=	CPPFLAGS= CFLAGS=
-.endif
 
 post-configure:
 	@cd ${WRKSRC}/include && \
@@ -61,7 +53,7 @@ post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/squid.sh >${WRKDIR}/squid.sh
 
 pre-install:
-	@-rm -f ${WRKDIR}/PLIST.share
+	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/errors
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/icons
@@ -73,11 +65,8 @@ pre-install:
 	ls anthony-*.gif | ${SED} -e 's@^@share/squid/icons/@';	\
 	${ECHO} "@dirrm share/squid/icons";			\
 	${ECHO} "share/squid/mib.txt";				\
-	${ECHO} "share/squid/mime.conf";				\
-	${ECHO} "share/squid/mime.conf.default";			\
-	${ECHO} "share/squid/squid.conf.default";			\
 	${ECHO} "@dirrm share/squid";				\
-	) > ${WRKDIR}/PLIST.share
+	) >>${PLIST_SRC}
 
 post-install:
 	${INSTALL_DATA_DIR} /var/squid
