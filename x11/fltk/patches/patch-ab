@@ -1,13 +1,48 @@
-$NetBSD: patch-ab,v 1.3 1999/10/31 03:00:36 jlam Exp $
+$NetBSD: patch-ab,v 1.4 2000/08/04 03:38:15 jlam Exp $
 
---- makeinclude.in.orig	Thu Mar 25 10:26:28 1999
-+++ makeinclude.in	Sat Oct 30 00:30:16 1999
-@@ -42,7 +42,7 @@
- CXXFLAGS	=@CXXFLAGS@ @X_CFLAGS@
+--- makeinclude.in.orig	Mon Jun  5 17:20:17 2000
++++ makeinclude.in	Thu Aug  3 23:13:46 2000
+@@ -34,14 +34,15 @@
+ 
+ # compiler names:
+-CXX		=@CXX@
+-CC		=@CC@
++CXX		=${LIBTOOL} @CXX@
++CC		=${LIBTOOL} @CC@
+ MAKEDEPEND	=@MAKEDEPEND@
+ 
+ # flags for C++ compiler:
+-CFLAGS		=@CFLAGS@ @X_CFLAGS@
+-CXXFLAGS	=@CXXFLAGS@ @X_CFLAGS@
++CFLAGS		=@CFLAGS@ @X_CFLAGS@ @CPPFLAGS@
++CXXFLAGS	=@CXXFLAGS@ @X_CFLAGS@ @CPPFLAGS@
  
  # program to make the archive:
--LIBNAME		=@LIBNAME@
-+LIBNAME		=libfltk.la
+ LIBNAME		=@LIBNAME@
++FLTKLIB		=../src/libfltk.la
  LIBCOMMAND	=@LIBCOMMAND@
  RANLIB		=@RANLIB@
- DSONAME		=@DSONAME@
+@@ -50,5 +51,5 @@
+ 
+ # libraries to link with:
+-LDLIBS		=@LDFLAGS@ @LIBS@ -lX11 -lXext @X_EXTRA_LIBS@ -lm
++LDLIBS		=$(GLDLIBS)
+ GLDLIBS		=@LDFLAGS@ @LIBS@ @GLLIB@ -lX11 -lXext @X_EXTRA_LIBS@ -lm
+ 
+@@ -61,13 +62,13 @@
+ .cxx:
+ 	echo Compiling and linking $@...
+-	$(CXX) -I.. -L../lib $(CXXFLAGS) $< -lfltk $(LDLIBS) -o $@
++	$(CXX) -I.. -L../lib $(CXXFLAGS) $< $(FLTKLIB) $(LDLIBS) -o $@
+ 
+ .c.o:
+ 	echo Compiling $@...
+-	$(CC) -I.. $(CXXFLAGS) $< -c
++	$(CC) -I.. $(CXXFLAGS) -c $<
+ 
+ .cxx.o:
+ 	echo Compiling $@...
+-	$(CXX) -I.. $(CXXFLAGS) $< -c
++	$(CXX) -I.. $(CXXFLAGS) -c $<
+ 
+ #
