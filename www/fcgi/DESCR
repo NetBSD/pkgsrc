@@ -1,0 +1,12 @@
+FastCGI is an open extension to CGI that provides high performance for
+all Internet applications without the penalties of Web server APIs.
+
+FastCGI is designed to be layered on top of existing Web server APIs.
+For instance, the mod_fastcgi Apache module adds FastCGI support to
+the Apache server.  FastCGI can also be used, with reduced
+functionality and reduced performance, on any Web server that supports
+CGI.
+
+This FastCGI Developer's Kit is designed to make developing FastCGI
+applications easy.  The kit currently supports FastCGI applications
+written in C/C++, Perl, Tcl, and Java.
