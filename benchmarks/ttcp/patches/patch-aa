@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2001/04/17 11:57:42 tron Exp $
+$NetBSD: patch-aa,v 1.2 2002/03/26 16:30:03 abs Exp $
 
---- Makefile.orig	Sat Mar  7 13:39:48 1998
-+++ Makefile	Sat Mar  7 13:40:07 1998
-@@ -0,0 +1,9 @@
+--- Makefile.orig	Tue Mar 26 16:19:05 2002
++++ Makefile
+@@ -0,0 +1,13 @@
 +
 +PROG=	ttcp
 +
@@ -10,5 +10,9 @@ $NetBSD: patch-aa,v 1.1 2001/04/17 11:57:42 tron Exp $
 +MANDIR=${PREFIX}/man
 +
 +MANINSTALL=	maninstall catinstall
++
++.if ${OPSYS} == "Linux"
++CATDEPS=
++.endif
 +
 +.include <bsd.prog.mk>
