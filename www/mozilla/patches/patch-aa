@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.12 2000/06/19 04:17:27 soren Exp $
+
 diff -ru ../mozilla-current.orig/mozilla/build/unix/nspr_my_config.mk.in ./build/unix/nspr_my_config.mk.in
 --- ../mozilla-current.orig/mozilla/build/unix/nspr_my_config.mk.in	Tue Jun 15 08:36:02 1999
 +++ ./build/unix/nspr_my_config.mk.in	Sun Jun  4 14:06:22 2000
