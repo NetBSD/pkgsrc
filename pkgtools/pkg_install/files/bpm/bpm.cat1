@@ -1,4 +1,4 @@
-BPM(1)                      NetBSD Reference Manual                     BPM(1)
+BPM(1)                  NetBSD General Commands Manual                  BPM(1)
 
 NNAAMMEE
      bbppmm - menu-based binary package manager
@@ -14,7 +14,7 @@ DDEESSCCRRIIPPTTIIOONN
 
      --bb _b_a_s_e_U_R_L
              Specify a base URL from which to download binary packages.  The
-             default URL is _f_t_p_:_/_/_f_t_p_._n_e_t_b_s_d_._o_r_g_/_p_u_b_/_N_e_t_B_S_D_/_p_a_c_k_a_g_e_s.
+             default URL is _f_t_p_:_/_/_f_t_p_._N_e_t_B_S_D_._o_r_g_/_p_u_b_/_N_e_t_B_S_D_/_p_a_c_k_a_g_e_s.
 
      --hh      Print a help message and then exit.
 
@@ -42,11 +42,11 @@ DDEESSCCRRIIPPTTIIOONN
      that the machine architecture or operating system release string have
      been wrongly interpreted, and that it will be necessary to override this
      values by means of the command line options.  Within a category, a list
-     of packages will be displayed, and by selecting one using the number as-
-     signed to it, the package will be downloaded automatically, and in-
-     stalled, using the pkg_add(1) utility.  It is also possible to change the
-     category currently being examined, and to quit from the utility, simply
-     by selecting the appropriate choices on the menu.
+     of packages will be displayed, and by selecting one using the number
+     assigned to it, the package will be downloaded automatically, and
+     installed, using the pkg_add(1) utility.  It is also possible to change
+     the category currently being examined, and to quit from the utility, sim-
+     ply by selecting the appropriate choices on the menu.
 
 EENNVVIIRROONNMMEENNTT
      The environment variables which govern the behaviour of ftp(1) and
@@ -58,4 +58,4 @@ SSEEEE AALLSSOO
 AAUUTTHHOORRSS
      The bbppmm utility was written by Alistair Crooks <agc@NetBSD.org>.
 
-NetBSD 1.6.1                   December 21, 2003                             1
+NetBSD 2.0                     December 21, 2003                    NetBSD 2.0
