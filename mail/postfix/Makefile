@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2002/06/17 19:42:08 tron Exp $
+# $NetBSD: Makefile,v 1.66 2002/07/03 11:11:12 hubertf Exp $
 
 DISTNAME=	postfix-1.1.11
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 
@@ -83,7 +84,8 @@ pre-configure:
 	    > ${WRKSRC}/src/global/mail_params.h
 
 do-configure:
-	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} makefiles)
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} -f Makefile.init makefiles \
+	'CCARGS=${CCARGS}' 'AUXLIBS=${AUXLIBS}' )
 
 post-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
