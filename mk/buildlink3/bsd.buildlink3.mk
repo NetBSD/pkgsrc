@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.150 2004/08/27 06:29:09 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.151 2004/08/27 08:38:22 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -1619,6 +1619,7 @@ ${BUILDLINK_DIR}/bin/.libtool-fix-la:					\
 # Seed the common transforming cache with obvious values that greatly
 # speed up the wrappers.
 #
+_BLNK_RPATH_FLAGS=	# empty
 .for _rflag_ in \
 	-Wl,-R -Wl,-rpath, -Wl,--rpath, -Wl,-rpath-link, -Wl,--rpath-link
 .  if empty(_BLNK_RPATH_FLAGS:M${_rflag_})
