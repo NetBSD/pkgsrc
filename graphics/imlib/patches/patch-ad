@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.6 2001/08/23 04:47:54 jlam Exp $
+$NetBSD: patch-ad,v 1.7 2002/03/29 18:01:14 wiz Exp $
 
---- configure.in.orig	Wed Aug  1 00:12:24 2001
+--- configure.in.orig	Fri Mar 22 15:51:24 2002
 +++ configure.in
 @@ -32,6 +32,8 @@
  	fi
@@ -33,7 +33,7 @@ $NetBSD: patch-ad,v 1.6 2001/08/23 04:47:54 jlam Exp $
     AC_SUBST(GMODULE_LIBS)
     AC_SUBST(GMODULE_FLAGS)
  fi
-@@ -153,7 +155,9 @@
+@@ -139,7 +141,9 @@
    GX_LIBS="$GTK_LIBS"
  fi
  
@@ -44,18 +44,7 @@ $NetBSD: patch-ad,v 1.6 2001/08/23 04:47:54 jlam Exp $
  
  SUPPORT_LIBS=""
  
-@@ -245,8 +249,8 @@
- dnl Test for libtiff
- AC_CHECK_LIB(tiff, TIFFReadScanline,
-   AC_CHECK_HEADER(tiffio.h,
--    TIFFLIBS="-ltiff"
--    SUPPORT_LIBS="$SUPPORT_LIBS -ltiff"; AC_DEFINE(HAVE_LIBTIFF),
-+    TIFFLIBS="-ltiff -ljpeg -lz"
-+    SUPPORT_LIBS="$SUPPORT_LIBS -ltiff -ljpeg -lz"; AC_DEFINE(HAVE_LIBTIFF),
-     AC_MSG_WARN(*** Native TIFF support will not be built (TIFF header files not found) ***)),
-   AC_CHECK_LIB(tiff, TIFFWriteScanline,
-     AC_CHECK_HEADER(tiffio.h,
-@@ -334,6 +338,7 @@
+@@ -309,6 +313,7 @@
  AC_SUBST(CPPFLAGS)
  AC_SUBST(X_CFLAGS)
  AC_SUBST(LDFLAGS)
