@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 14:17:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/26 14:54:19 bad Exp $
 
 DISTNAME=	MySQLdb-0.1.3
 PKGNAME=	py-mysqldb-0.1.3
@@ -10,7 +10,7 @@ HOMEPAGE=	http://starship.python.net/crew/adustman/MySQLdb.html
 COMMENT=	MySQL interface for Python
 
 DEPENDS+=	python>=2.0:../../lang/python
-DEPENDS+=	mysql-client-3.22.32:../../databases/mysql-client
+DEPENDS+=	mysql-client>=3.23.35:../../databases/mysql-client
 
 ALL_TARGET=	default
 

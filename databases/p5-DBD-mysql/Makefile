@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/16 14:17:32 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/03/26 14:54:19 bad Exp $
 #
 
 DISTNAME=		Msql-Mysql-modules-1.2215
@@ -10,7 +10,7 @@ MAINTAINER=		bad@netbsd.org
 HOMEPAGE=		http://www.mysql.com.org/
 COMMENT=		perl DBI/DBD driver for MySQL databases
 
-DEPENDS+=		mysql-client-3.22.32:../../databases/mysql-client
+DEPENDS+=		mysql-client>=3.23.35:../../databases/mysql-client
 DEPENDS+=		p5-DBI>=1.13:../../databases/p5-DBI
 DEPENDS+=		p5-Data-Dumper>=2.101:../../devel/p5-Data-Dumper
 DEPENDS+=		p5-Data-ShowTable-3.3:../../devel/p5-Data-ShowTable
