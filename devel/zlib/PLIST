@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:23 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/12 21:19:50 adam Exp $
 include/zconf.h
 include/zlib.h
 lib/libz.a
 lib/libz.la
 lib/libz.so
-lib/libz.so.0
-lib/libz.so.0.1
+lib/libz.so.1
+lib/libz.so.1.2
+man/man3/zlib.3
