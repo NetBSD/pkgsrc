@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2001/06/12 20:33:04 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/09/18 21:56:29 skrll Exp $
 
-DISTNAME=		cyrus-imapd-1.6.24
-PKGNAME=		${DISTNAME}nb1
+DISTNAME=		cyrus-imapd-2.0.16
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 			ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/
@@ -10,8 +9,8 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://asg.web.cmu.edu/cyrus/imapd/
 COMMENT=		IMAP server
 
-DEPENDS+=		tcl>=8.3.2:../../lang/tcl
 DEPENDS+=		cyrus-sasl>=1.5.24nb2:../../security/cyrus-sasl
+DEPENDS+=		db3>=2.9:../../databases/db3
 
 LICENSE=		cyrus-imapd-license
 
@@ -33,8 +32,10 @@ CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER}
 CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP}
 CONFIGURE_ARGS+=	--with-cyrus-prefix=${PREFIX}/cyrus
 CONFIGURE_ARGS+=	--with-statedir=/var/run
-CONFIGURE_ARGS+=	--with-sasldir=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-sasl=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+CONFIGURE_ARGS+=	--with-dbdir=${LOCALBASE}
+CONFIGURE_ARGS+=	--without-ucdsnmp
 CONFIGURE_ARGS+=	--without-notify
 CONFIGURE_ARGS+=	--without-zephyr
 CONFIGURE_ARGS+=	--enable-netscapehack
@@ -80,7 +81,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/imapd.conf ${EGDIR}
 	${INSTALL_DATA_DIR} ${HTMLDIR}
-	cd ${WRKSRC}/doc/html; ${INSTALL_DATA} *.html ${HTMLDIR}
+	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html ${HTMLDIR}
+	cd ${WRKSRC}/master/conf; ${INSTALL_DATA} *.conf ${EGDIR}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
