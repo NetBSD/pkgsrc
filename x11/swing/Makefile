@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.19 2002/12/31 15:44:31 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2003/01/29 20:24:49 jlam Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
+PKGREVISION=	1
+WRKSRC=		${WRKDIR}/swing-1.1.1fcs
 CATEGORIES=	devel x11
-MASTER_SITES=	# none
+MASTER_SITES=	# empty
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.javasoft.com/products/jfc/
+DOWNLOAD=	http://java.sun.com/products/jfc/download.archive.html
 COMMENT=	Sun's Java Foundation Classes (the Swing UI toolkit), version 1.1.1
-
-BUILD_DEPENDS+=        urlget>=1.3:../../www/urlget
 
 RESTRICTED=	"Read license before redistributing the Java(tm) Foundation Classes"
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -21,58 +22,43 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 LICENSE=	sun-swing-license
 
 USE_JAVA=	run
-WRKSRC=		${WRKDIR}/swing-1.1.1fcs
-NO_PATCH=
-NO_CONFIGURE=
-NO_BUILD=
+NO_PATCH=	yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
-.include "../../mk/bsd.prefs.mk"
+_FETCH_MESSAGE= \
+	${ECHO} "======================================================================"; \
+	${ECHO} ; \
+	${ECHO} " The file ${DISTNAME}${EXTRACT_SUFX} containing the"; \
+	${ECHO} " Java(tm) Foundation Classes must be fetched into:"; \
+	${ECHO} ""; \
+	${ECHO} "	${DISTDIR}"; \
+	${ECHO} " from:"; \
+	${ECHO} "	${DOWNLOAD}"; \
+	${ECHO} ; \
+	${ECHO} "======================================================================"
 
-TEMPDIR?=	/tmp
-TEMPFILE!=	echo ${TEMPDIR}/swing.location.$$$$
-URLGET?=	${LOCALBASE}/bin/urlget
-
-pre-fetch:
-	@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
-		if [ ! -x ${URLGET} ]; then				\
-			${MAKE} install-depends DEPENDS=;		\
-		fi;							\
-	fi
-
-do-fetch:
-	-@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ] ; then	\
-		${URLGET} -p http://java.sun.com/Download3		\
-			referer=					\
-			protocol="FTP Download"				\
-			download-name=${DISTNAME}${EXTRACT_SUFX}	\
-			config-file=swing111.config			\
-			platform=zip					\
-			domain-checked=					\
-			> ${TEMPFILE};					\
-		${FETCH_CMD} -o ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}	\
-			`${GREP} ftp:// ${TEMPFILE} |			\
-			${SED} -e 's|.*\(ftp://.*.zip\).*|\1|'`;	\
-	fi
+SWINGDIR=	${PREFIX}/lib/java/swing
+EGDIR=		${PREFIX}/share/examples/swing
+HTMLDIR=	${PREFIX}/share/doc/html/swing
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/java/swing
-	${INSTALL_DATA} -c -m 644 ${WRKSRC}/swingall.jar ${PREFIX}/lib/java
-	${INSTALL_DATA} -c -m 644 ${WRKSRC}/beaninfo.jar ${PREFIX}/lib/java/swing
-	${INSTALL_DATA} -c -m 644 ${WRKSRC}/mac.jar ${PREFIX}/lib/java/swing
-	${INSTALL_DATA} -c -m 644 ${WRKSRC}/motif.jar ${PREFIX}/lib/java/swing
-	${INSTALL_DATA} -c -m 644 ${WRKSRC}/multi.jar ${PREFIX}/lib/java/swing
-	${INSTALL_DATA} -c -m 644 ${WRKSRC}/swing.jar ${PREFIX}/lib/java/swing
-	${INSTALL_DATA} -c -m 644 ${WRKSRC}/windows.jar ${PREFIX}/lib/java/swing
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/swing
-	cd ${WRKSRC}/doc && ${PAX} -rwpe . ${PREFIX}/share/doc/java/swing
-	${INSTALL_DATA} -c -m 644 ${WRKSRC}/CHANGES.txt ${PREFIX}/share/doc/java/swing
-	${INSTALL_DATA} -c -m 644 ${WRKSRC}/LICENSE.txt ${PREFIX}/share/doc/java/swing
-	${INSTALL_DATA} -c -m 644 ${WRKSRC}/README.html ${PREFIX}/share/doc/java/swing
-	${INSTALL_DATA} -c -m 644 ${WRKSRC}/README.txt ${PREFIX}/share/doc/java/swing
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/swing
-	cd ${WRKSRC}/examples && ${PAX} -rwpe . ${PREFIX}/share/examples/java/swing
-	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/share/doc/java/swing \
-		${PREFIX}/share/examples/java/swing
+	${INSTALL_DATA_DIR} ${SWINGDIR}
+	${INSTALL_DATA} ${WRKSRC}/swingall.jar ${PREFIX}/lib/java
+	${INSTALL_DATA} ${WRKSRC}/beaninfo.jar ${SWINGDIR}
+	${INSTALL_DATA} ${WRKSRC}/mac.jar ${SWINGDIR}
+	${INSTALL_DATA} ${WRKSRC}/motif.jar ${SWINGDIR}
+	${INSTALL_DATA} ${WRKSRC}/multi.jar ${SWINGDIR}
+	${INSTALL_DATA} ${WRKSRC}/swing.jar ${SWINGDIR}
+	${INSTALL_DATA} ${WRKSRC}/windows.jar ${SWINGDIR}
+	${INSTALL_DATA_DIR} ${HTMLDIR}
+	cd ${WRKSRC}/doc && ${PAX} -rw . ${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/CHANGES.txt ${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE.txt ${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.html ${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.txt ${HTMLDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
+	cd ${WRKSRC}/examples && ${PAX} -rw . ${EGDIR}
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
