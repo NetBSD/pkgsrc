@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:54:37 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/28 14:33:09 jlam Exp $
 bin/netmaj
 bin/netmaj1
 bin/plview
@@ -17,7 +17,6 @@ lib/netmaj/proxyserver
 lib/netmaj/server
 lib/netmaj/server.pf
 lib/netmaj/server_kill
-@dirrm lib/netmaj
 share/doc/html/netmaj/bluechip.gif
 share/doc/html/netmaj/bluechip5.gif
 share/doc/html/netmaj/bluemark.gif
@@ -117,3 +116,4 @@ share/doc/html/netmaj/title.gif
 share/doc/html/netmaj/ton.gif
 share/doc/html/netmaj/tonh.gif
 @dirrm share/doc/html/netmaj
+@dirrm lib/netmaj

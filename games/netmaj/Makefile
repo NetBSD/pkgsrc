@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/22 09:58:59 kei Exp $
+# $NetBSD: Makefile,v 1.2 2001/11/28 14:33:09 jlam Exp $
 #
 
 DISTNAME=		netmaj-2.0.7
@@ -10,17 +10,19 @@ MAINTAINER=		kei@netbsd.org
 HOMEPAGE=		http://www.sfc.wide.ad.jp/~kusune/netmaj/
 COMMENT=		mahjongg game with network and 1-4 player(s) support
 
-USE_PERL5=		YES
+USE_BUILDLINK_ONLY=	YES
 WRKSRC=			${WRKDIR}/netmaj
 
+INSTALL_TARGET=		install install-pf
+HTMLDIR=		${PREFIX}/share/doc/html/netmaj
+
 do-build:
-			cd ${WRKSRC}; \
-			${MAKE} libs; ${MAKE};
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} libs
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
 
-do-install:
-			cd ${WRKSRC}; \
-			${MAKE} install install-pf; \
-			${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/netmaj; \
-			${INSTALL_DATA} html/* ${PREFIX}/share/doc/html/netmaj
+post-install:
+	${INSTALL_DATA_DIR} ${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/html/* ${HTMLDIR}
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
