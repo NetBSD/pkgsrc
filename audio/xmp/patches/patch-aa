@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/28 01:25:40 hubertf Exp $
+
+--- Makefile.orig	Sat Sep 16 01:24:09 2000
++++ Makefile	Sat Sep 16 01:25:45 2000
+@@ -15,6 +15,7 @@
+ DDIRS	= lib docs etc src scripts debian
+ CFILES	=
+ DCFILES	= Makefile.rules.old config.log config.status config.cache
++ETCDIR	= ${PREFIX}/etc
+ 
+ all: xmp
+ 
+@@ -42,8 +43,8 @@
+ 
+ install::
+ 	@echo
+-	@echo "  Installation complete. To customize, copy /etc/xmp.conf to"
+-	@echo "  \$$HOME/.xmp/xmp.conf and /etc/xmp-modules.conf to \$$HOME/.xmp/modules.conf"
++	@echo "  Installation complete. To customize, copy ${PREFIX}/etc/xmp.conf to"
++	@echo "  \$$HOME/.xmp/xmp.conf and ${PREFIX}/etc/xmp-modules.conf to \$$HOME/.xmp/modules.conf"
+ 	@echo
+ 	@echo "  Please report bugs to xmp-bugs@helllabs.org."
+ 	@echo
