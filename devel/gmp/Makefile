@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/11/22 13:58:28 adam Exp $
+# $NetBSD: Makefile,v 1.32 2004/12/18 15:43:19 grant Exp $
 
 DISTNAME=	gmp-4.1.4
 CATEGORIES=	devel math
@@ -21,6 +21,11 @@ CONFIGURE_ARGS+=	--enable-cxx --without-readline
 INFO_FILES=		gmp.info
 
 TEST_TARGET=		check
+
+.include "../../mk/bsd.prefs.mk"
+.if !empty(LOWER_OPSYS:Mirix5) && !empty(ABI)
+ABI=			o32
+.endif
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 # The configure script thinks gcc 2.95 for ARM is too buggy to use.
