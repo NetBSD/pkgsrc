@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6909 2004/08/16 19:38:04 minskim Exp $
+$NetBSD: CHANGES,v 1.6910 2004/08/16 20:17:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3866,3 +3866,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-funge-0.2beta1 [minskim 2004-08-16]
 	Updated libnbcompat to 20040814 [jlam 2004-08-16]
 	Added weewm-0.0.2 [minskim 2004-08-16]
+	Added wipe-2.2.0 [minskim 2004-08-16]
