@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/08/30 21:23:44 jtb Exp $
+
+SHA1 (ksi-3.4.1.tar.gz) = 8ebba1e0775f29bce2662716ea8cc7d0ab0fe778
+Size (ksi-3.4.1.tar.gz) = 1509920 bytes
+SHA1 (patch-aa) = b361c1dd64726cac15f3c0aea469f45cb433a044
