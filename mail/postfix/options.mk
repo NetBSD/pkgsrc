@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2005/03/22 10:43:50 cjs Exp $
+# $NetBSD: options.mk,v 1.17 2005/03/28 07:07:49 jlam Exp $
 
 # Global and legacy options
 
@@ -19,7 +19,7 @@ AUXLIBS+=	${BUILDLINK_LDFLAGS.${BDB_TYPE}} ${BDB_LIBS}
 .endif
 
 ###
-### STARTTLS support (http://mirrors.loonybin.net/postfix_tls/)
+### STARTTLS support
 ###
 .if !empty(PKG_OPTIONS:Mtls)
 .  include "../../security/openssl/buildlink3.mk"
