@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.72 2002/09/25 09:34:22 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.73 2002/11/14 04:01:56 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -607,7 +607,7 @@ sub readmakefile {
 			if ($includefile =~ /\"([^\"]+)\"/) {
 				$includefile = $1;
 			}
-			if ($includefile =~ /\/mk\//) {
+			if ($includefile =~ /\/mk\/bsd/) {
 				# we don't want to include the whole
 				# bsd.pkg.mk or bsd.prefs.mk files
 				$contents .= $_;
