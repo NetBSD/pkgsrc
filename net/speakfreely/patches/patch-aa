@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2000/04/27 03:29:44 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2002/10/25 10:30:37 wiz Exp $
 
 --- Makefile.orig	Sat Sep 18 11:29:44 1999
 +++ Makefile	Sat Jan 15 12:34:29 2000
@@ -74,7 +74,7 @@ $NetBSD: patch-aa,v 1.3 2000/04/27 03:29:44 jlam Exp $
 +# Crypto
 +.if defined(USE_CRYPTO) && $(USE_CRYPTO) == "YES"
 +.if defined(HAVE_LIBCRYPTO) && $(HAVE_LIBCRYPTO) == "YES"
-+CRYPTOFLAGS =	-I$(SSLBASE)/include/openssl
++CRYPTOFLAGS =	-I$(SSLBASE)/include
 +CRYPTOLIBS =	des/des.a -Wl,-R$(SSLBASE)/lib -L$(SSLBASE)/lib -lcrypto
 +CRYPTOOBJS =	deslib.o
 +.else
@@ -95,8 +95,8 @@ $NetBSD: patch-aa,v 1.3 2000/04/27 03:29:44 jlam Exp $
 +.endif
 +
 +.if defined(HAVE_GSM) && ${HAVE_GSM} == "YES"
-+GSMFLAGS =	-I${LOCALBASE}/include
-+GSMLIBS =	-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -lgsm
++GSMFLAGS =	-I${BUILDLINK_PREFIX.gsm}/include
++GSMLIBS =	-Wl,-R${BUILDLINK_PREFIX.gsm}/lib -L${BUILDLINK_PREFIX.gsm}/lib -lgsm
 +GSMOBJS =
 +.else
 +GSMFLAGS =	-Igsm/inc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/06/17 10:54:11 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/25 10:30:36 wiz Exp $
 #
 
 DISTNAME=		speak_freely-7.2
@@ -10,8 +10,7 @@ MAINTAINER=		johnam@mail.kemper.org
 HOMEPAGE=		http://www.fourmilab.ch/speakfree/unix/
 COMMENT=		Internet "phone" for UNIX
 
-DEPENDS+=		gsm-1.0.10:../../audio/gsm
-
+USE_BUILDLINK2=		YES
 NO_CONFIGURE=		YES
 USE_PERL5=		YES
 
@@ -35,7 +34,7 @@ CCFLAGS+=		-DHALF_DUPLEX
 
 .if defined(USE_CRYPTO) && ${USE_CRYPTO} == "YES"
 HAVE_LIBCRYPTO=		YES
-.include "../../security/openssl/buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
 
 .if defined(USE_IDEA) && ${USE_IDEA} == "YES"
 LICENSE=		no-commercial-use
@@ -62,4 +61,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/busy.au ${SOUNDDIR}
 	${INSTALL_DATA} ${WRKSRC}/ring.au ${SOUNDDIR}
 
+.include "../../audio/gsm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
