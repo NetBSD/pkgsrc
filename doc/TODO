@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2400 2004/11/19 19:15:45 wiz Exp $
+$NetBSD: TODO,v 1.2401 2004/11/19 19:44:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -561,7 +561,6 @@ Suggested package updates
 	o host-20040812 [cjep,talking to greg woods about this]
 	o hot-babe-0.1.4
 	o hp2xx-3.4.4
-	o hpijs-1.7.1
 	o httperf-0.8
 	o httptunnel-3.3
 	o hugu-3.1.01
