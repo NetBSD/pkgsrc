@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.27 2002/06/21 17:28:44 abs Exp $
+# $NetBSD: defs.Linux.mk,v 1.28 2002/07/15 16:24:01 schmonz Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -67,6 +67,7 @@ MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=		${FALSE}
 PKG_TOOLS_BIN?=		${ZOULARISBASE}/sbin
+ROOT_CMD?=		${SU} - root -c
 ROOT_GROUP?=		wheel
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
