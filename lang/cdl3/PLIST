@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/23 02:04:23 minskim Exp $
+bin/cdlc
+include/cdl3rts.h
+include/predef.h
+include/predef.k3
+lib/libcdlrts.a
+lib/libcdlrts.la
+lib/libcdlrts.so
+lib/libcdlrts.so.0
+lib/libcdlrts.so.0.0
+man/man1/cdlc.1
+man/man3/cdl-converting.3
+man/man3/cdl-debug.3
+man/man3/cdl-input.3
+man/man3/cdl-integer.3
+man/man3/cdl-io.3
+man/man3/cdl-output.3
+man/man3/cdl-string.3
+man/man3/cdl-system.3
+man/man3/cdlrts.3
+man/mann/cdl-fubar-transient.n
+man/mann/cdlfubar.n
+share/doc/cdl3/cdl3-manual-${PKGVERSION}.ps
+@dirrm share/doc/cdl3
