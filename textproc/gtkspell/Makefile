@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2002/12/24 06:10:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/15 00:25:47 salo Exp $
 #
 
 DISTNAME=		gtkspell-2.0.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc devel
 MASTER_SITES=		http://gtkspell.sourceforge.net/download/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://gtkspell.sourceforge.net/
 COMMENT=		Spell checking GtkTextView widget
-
-BUILDLINK_DEPMETHOD.ltdl=	build
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
@@ -19,8 +17,7 @@ USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/gtkspell-2.0.pc.in
 
-.include "../../textproc/libpspell/buildlink2.mk"
+.include "../../textproc/aspell/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/libtool/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
