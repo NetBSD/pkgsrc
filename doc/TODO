@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2746 2004/12/24 22:02:59 jlam Exp $
+$NetBSD: TODO,v 1.2747 2004/12/25 02:56:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -339,7 +339,7 @@ Suggested package updates
 	o bibtex2html-1.74 [requires ocaml>=3.07]
 	o bins-1.1.27
 	o bioperl-1.4
-	o blender-2.35
+	o blender-2.36
 	o blitz++-0.8
 	o bmp-0.9.7 [pkg/28672]
 	o boaconstructor-0.3.1
@@ -534,7 +534,6 @@ Suggested package updates
 	o gnucash-1.8.10
 	o gnumeric-1.4.1
 	o gnumeric0-0.76
-	o gnupg-1.4.0 [wiz]
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.39
 	o gogo-3.11p1
@@ -556,8 +555,7 @@ Suggested package updates
 	o gtksee-0.5.6 [pkg/26372]
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
-	o gtranslater-1.0.2
-	o gtranslator-1.0.1
+	o gtranslator-1.0.2
 	o guile-1.6.7
 	o guile-oops-1.0.2
 	o guile-www-1.1.1
