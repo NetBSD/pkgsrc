@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2004/03/26 02:27:45 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2004/11/30 18:26:40 wiz Exp $
 #
 
 DISTNAME=	edesktop-1.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty

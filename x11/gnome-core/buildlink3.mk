@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:18:31 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/11/30 18:26:41 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_CORE_BUILDLINK3_MK:=	${GNOME_CORE_BUILDLINK3_MK}+
@@ -11,8 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-core}
 BUILDLINK_PACKAGES+=	gnome-core
 
 .if !empty(GNOME_CORE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.gnome-core+=		gnome-core>=1.4.2nb10
-BUILDLINK_RECOMMENDED.gnome-core+=	gnome-core>=1.4.2nb14
+BUILDLINK_DEPENDS.gnome-core+=		gnome-core>=1.4.2nb16
 BUILDLINK_PKGSRCDIR.gnome-core?=	../../x11/gnome-core
 .endif	# GNOME_CORE_BUILDLINK3_MK
 
