@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.65 1999/07/28 10:14:57 agc Exp $
+# $NetBSD: mk.conf.example,v 1.66 1999/07/28 10:16:58 agc Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -64,7 +64,7 @@
                                 # Possible: any path you like
                                 # Default: /usr/pkgsrc/distfiles
 
-#DIST_PATH=	${PKGSRCDIR}/distfiles:${HOME}/distfiles
+#DIST_PATH=	/cdrom/0/distfiles:${HOME}/distfiles
                                 # colon-delimited list of directories
                                 # in which to search for ${DISTFILES} and
                                 # ${PATCHFILES}. If the requested file is
@@ -76,7 +76,8 @@
                                 # ${DISTDIR}. ${DIST_PATH} directories will
                                 # will be searched before ${DISTDIR}, letting
                                 # a CD hold the main distfiles archive, and
-                                # local ${DISTDIR} hold any updated distfiles.
+                                # local ${DISTDIR} hold any updated distfiles,
+                                # for example.
                                 # Possible: any directories
                                 # Default: none
 
