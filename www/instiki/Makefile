@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/15 16:18:39 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/31 04:54:07 minskim Exp $
 
 DISTNAME=	instiki-0.9.2
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://rubyforge.org/frs/download.php/2515/
 EXTRACT_SUFX=	.tgz
@@ -24,12 +25,19 @@ REPLACE_RUBY=		instiki
 
 INSTIKI_DIR=	${PREFIX}/share/${PKGBASE}
 
-post-patch:
-	${MV} ${WRKSRC}/instiki ${WRKSRC}/instiki.tmp
-	${TR} -d '\015' < ${WRKSRC}/instiki.tmp > ${WRKSRC}/instiki
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	app/controllers/wiki.rb
+SUBST_SED.paths=							\
+	-e 's,File.dirname(__FILE__) + "/../../storage,"${VARBASE}/instiki,g'
 
 .include "../../lang/ruby/replace.mk"
 .include "../../lang/ruby/rubyversion.mk"
+
+post-patch:
+	${MV} ${WRKSRC}/instiki ${WRKSRC}/instiki.tmp
+	${TR} -d '\015' < ${WRKSRC}/instiki.tmp > ${WRKSRC}/instiki
 
 do-install:
 	${INSTALL_DATA_DIR} ${INSTIKI_DIR}
