@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/02/21 07:14:44 itojun Exp $
+# $NetBSD: Makefile,v 1.13 2000/02/22 17:43:23 veego Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -66,6 +66,13 @@ OPTIM+=			-DBUFFERED_LOGS
 CFLAGS+=		-O6 -fomit-frame-pointer -fexpensive-optimizations
 .endif
 
+.if (${OPSYS} == "SunOS")
+DEPENDS+=		db-2.7.7:../../databases/db
+LDFLAGS+=		-Wl,-R/usr/ucblib -L/usr/ucblib -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
+CONFIGURE_ENV+=		INCLUDES="-I${LOCALBASE}/include/db2"
+CONFIGURE_ENV+=		LIBS="-ldbm -ldb2"
+.endif
+
 PLIST_SRC=		${WRKDIR}/PLIST
 
 BUILD_DEFS+=		APACHE_PERF_TUNING APACHE_SUEXEC USE_INET6
@@ -91,7 +98,7 @@ BUILD_DEFS+=		APACHE_PERF_TUNING APACHE_SUEXEC USE_INET6
 #		| ${PATCH} ${PATCH_ARGS}
 
 post-patch:
-	@${FIND} ${WRKSRC}/htdocs -name '*.orig' | xargs ${RM}
+	@${FIND} ${WRKSRC}/htdocs -name '*.orig' | xargs ${RM} -f
 	@${CHMOD} +x ${WRKSRC}/${CONFIGURE_SCRIPT}
 
 post-build:
@@ -107,7 +114,7 @@ post-install:
 	  ${MKDIR} ${PREFIX}/lib/httpd
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 .for FILE in man/man8/suexec.8 sbin/suexec
-	@if [ -e ${PREFIX}/${FILE} ]; then \
+	@if ${TEST} -e ${PREFIX}/${FILE} ; then \
 	  ${ECHO} ${FILE} >>${PLIST_SRC}; \
 	fi
 .endfor
