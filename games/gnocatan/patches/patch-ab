@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2003/12/14 17:44:32 wiz Exp $
+
+--- client/player.c.orig	Mon Oct 13 01:02:06 2003
++++ client/player.c
+@@ -217,10 +217,10 @@ static gint player_insert_summary_row_be
+ 		gchar *points, void *data, GdkColor *colour, gboolean new)
+ {
+ 	gchar *row_data[3];
++	GtkStyle *current_style = gtk_style_new();
+ 	row_data[0] = "";
+ 	row_data[1] = name;
+ 	row_data[2] = points;
+-	GtkStyle *current_style = gtk_style_new();
+ 	current_style->fg[0] = *colour;
+ 	current_style->bg[0] = player_bg;
+ 	if (new) {
