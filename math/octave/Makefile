@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/01/27 00:53:11 heinz Exp $
+# $NetBSD: Makefile,v 1.44 2004/02/09 03:26:39 jlam Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.17
@@ -56,13 +56,13 @@ PKG_FAIL_REASON=	"Octave does not build with ${CC_VERSION} - please use octave-c
 .endif
 
 post-patch:
-.if !empty(CC_VERSION:Megcs*)
-	@EGCS_VERSION=`${CC} -v 2>&1 | ${AWK} '{print $$4}'`; \
-	if [ $$EGCS_VERSION -lt 19981201 ]; then \
-		cd ${WRKSRC}; \
-		for FILE in ${PATCHDIR}/egcs-patch-*; do \
-		  ${PATCH} ${PATCH_ARGS} <$$FILE; \
-		done; \
+.if !empty(CC_VERSION:Mgcc-2.8.1)
+	@EGCS_VERSION=`${CC} -v 2>&1 | ${AWK} '{print $$4}'`;		\
+	if [ $$EGCS_VERSION -lt 19981201 ]; then			\
+		cd ${WRKSRC};						\
+		for FILE in ${PATCHDIR}/egcs-patch-*; do		\
+			${PATCH} ${PATCH_ARGS} < $$FILE;		\
+		done;							\
 	fi
 .endif
 
