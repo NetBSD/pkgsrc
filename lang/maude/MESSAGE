@@ -1,6 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 00:24:05 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2003/12/31 01:20:35 kristerw Exp $
 
-Kernel option COMPAT_LINUX is required for the package to work.
+In order for the maude binary to find the .maude files you should set
+the environment variable MAUDE_LIB to point to ${PREFIX}/share/maude.
 
 ===========================================================================
