@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.624 2005/04/01 18:36:56 jschauma Exp $
+# $NetBSD: Makefile,v 1.625 2005/04/03 01:04:23 epg Exp $
 #
 
 COMMENT=	Development utilities
@@ -428,6 +428,7 @@ SUBDIR+=	p5-PerlIO-via-symlink
 SUBDIR+=	p5-Proc-Daemon
 SUBDIR+=	p5-Regexp-Shellish
 SUBDIR+=	p5-SDL
+SUBDIR+=	p5-String-Format
 SUBDIR+=	p5-SVN-Mirror
 SUBDIR+=	p5-SVN-Simple
 SUBDIR+=	p5-Safe-Hole
