@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/06/20 08:55:52 sakamoto Exp $
-etc/rc.d/ja_freewnn
+@comment $NetBSD: PLIST,v 1.3 2004/08/02 01:01:42 minskim Exp $
 man/ja_JP.EUC/man1/atod.1
 man/ja_JP.EUC/man1/atof.1
 man/ja_JP.EUC/man1/dtoa.1
