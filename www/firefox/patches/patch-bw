@@ -1,4 +1,4 @@
-$NetBSD: patch-bw,v 1.2 2004/06/15 20:05:54 reinoud Exp $
+$NetBSD: patch-bw,v 1.3 2004/06/15 23:19:50 reinoud Exp $
 
 diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha.cpp ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha.cpp
 --- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha.cpp	2001-09-29 05:12:52.000000000 +0900
@@ -23,8 +23,8 @@ diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha
 +"	.prologue 1\n"					\
 +"	lda $1,"#n"\n"					\
 +"	br $31,$SharedStub..ng\n"			\
-+"	.end _ZN14nsXPTCStubBase5Stub"#n"Ev"		\
-+"       .elseif  "#n" < 100 \n"				\
++"	.end _ZN14nsXPTCStubBase5Stub"#n"Ev\n"		\
++"      .elseif  "#n" < 100 \n"				\
 +"	.globl _ZN14nsXPTCStubBase6Stub"#n"Ev\n"	\
 +"	.ent _ZN14nsXPTCStubBase6Stub"#n"Ev\n"		\
 +"_ZN14nsXPTCStubBase6Stub"#n"Ev:\n"			\
@@ -45,7 +45,7 @@ diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha
 +"	.prologue 1\n"					\
 +"	lda $1,"#n"\n"					\
 +"	br $31,$SharedStub..ng\n"			\
-+"	.end _ZN14nsXPTCStubBase7Stub"#n"Ev"		\
++"	.end _ZN14nsXPTCStubBase7Stub"#n"Ev\n"		\
 +"	.else\n"					\
 +"	.err \"stub number "#n"> 1000 not yet supported\"\n" \
 +"	.endif\n"					\
