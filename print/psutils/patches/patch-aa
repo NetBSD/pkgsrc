@@ -1,0 +1,86 @@
+$NetBSD: patch-aa,v 1.1 1998/11/09 18:02:36 agc Exp $
+
+Read default papersize from a configuration file at run-time.
+If it's not in the correct format, or it's not found, default to
+the papersize that was compiled in.
+
+--- psutil.c	1998/10/30 16:48:18	1.1
++++ psutil.c	1998/11/09 16:18:30
+@@ -19,6 +19,7 @@
+ 
+ #include <string.h>
+ #include <sys/types.h>
++#include <sys/param.h>
+ #include <sys/stat.h>
+ 
+ #define iscomment(x,y) (strncmp(x,y,strlen(y)) == 0)
+@@ -64,12 +65,68 @@
+    { NULL, 0, 0 }
+ };
+ 
++/* bounds-checking strncpy */
++static char *
++strnncpy(char *to, size_t tosize, char *from, size_t cc)
++{
++	size_t	len;
++
++	if ((len = cc) >= tosize - 1) {
++		len = tosize - 1;
++	}
++	(void) strncpy(to, from, len);
++	to[len] = 0;
++	return to;
++}
++
++#if (defined(BSD) && BSD >= 199306)
++#include <ctype.h>
++
++/* read PAPERSIZE from file */
++static int
++readconfig(char *name, size_t namesize)
++{
++	FILE	*fp;
++	char	 buf[BUFSIZ];
++	char	*cp;
++	int	 found;
++
++	found = 0;
++	if ((fp = fopen("@prefix@/etc/psutils.cfg", "r")) != (FILE *) NULL) {
++		while (fgets(buf, sizeof(buf), fp) != (char *) NULL) {
++			buf[strlen(buf) - 1] = 0;
++			for (cp = buf ; *cp && *cp != '\n' && isspace(*cp) ; cp++) {
++			}
++			if (*cp == '#') {
++				continue;
++			}
++			if (strncmp(cp, "PAPERSIZE=", 10) == 0) {
++				for (cp += 10; *cp && isspace(*cp) ; cp++) {
++				}
++				if (*cp != 0) {
++					(void) strnncpy(name, namesize, cp, strlen(cp));
++					found = 1;
++					break;
++				}
++			}
++		}
++		(void) fclose(fp);
++	}
++	return found;
++}
++#endif
++
+ /* return pointer to paper size struct or NULL */
+ Paper* findpaper(char *name)
+ {
+    Paper *pp;
++   char	papersize[BUFSIZ];
++
++   if (!readconfig(papersize, sizeof(papersize))) {
++	(void) strnncpy(papersize, sizeof(papersize), name, strlen(name));
++   }
+    for (pp = papersizes; PaperName(pp); pp++) {
+-      if (strcmp(PaperName(pp), name) == 0) {
++      if (strcmp(PaperName(pp), papersize) == 0) {
+ 	 return pp;
+       }
+    }
