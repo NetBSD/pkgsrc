@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:28 agc Exp $
-# Based on FreeBSD ports/games/quakeserver
-# FreeBSD: ports/games/quakeserver/Makefile,v 1.20 1999/08/31 06:44:23 mharo Exp
-#
+# $NetBSD: Makefile,v 1.9 2002/01/24 12:35:53 tron Exp $
 
 DISTNAME=	quake106
 PKGNAME=	quakedata-1.0
 CATEGORIES=	games
-MASTER_SITES=	ftp://ftp.cdrom.com/pub/quake/planetquake/threewave/unix/ \
+MASTER_SITES=	ftp://ftp.fu-berlin.de/pc/msdos/games/idgames/idstuff/quake/ \
 		ftp://ftp.idsoftware.com/idstuff/quake/
 EXTRACT_SUFX=	.zip
 
