@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5249 2004/03/12 22:57:46 heinz Exp $
+$NetBSD: CHANGES,v 1.5250 2004/03/12 23:43:17 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1430,7 +1430,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated yacas to 1.0.56 [dmcmahill 2004-03-11]
 	Updated tkirc2 to 2.46nb1 [minskim 2004-03-12]
 	Added ed-0.2 [reed 2004-03-11]
-	Updated ruby-base to 1.6.8.nb3  [taca 2004-03-12]
+	Updated ruby-base to 1.6.8.nb3 [taca 2004-03-12]
 	Added ruby-fcgi [taca 2004-03-12]
 	Added ruby-amrita [taca 2004-03-12]
 	Updated quirc to 0.9.84 [minskim 2004-03-12]
@@ -1438,8 +1438,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xdeview to 0.5.18nb2 [tron 2004-03-12]
 	Updated py-gtk2 to 2.2.0 [recht 2004-03-12]
 	Updated wine to 20040309 [adam 2004-03-12]
-        Updated sketch to 0.6.16 [jmmv 2004-03-12]
-        Renamed sketch to skencil [jmmv 2004-03-12]
+	Updated sketch to 0.6.16 [jmmv 2004-03-12]
+	Renamed sketch to skencil [jmmv 2004-03-12]
 	Updated lsof to 4.71 [atatat 2004-03-12]
 	Updated ssh2 to 3.2.9.1 [seb 2004-03-12]
 	Updated ssh2-nox11 to 3.2.9.1 [seb 2004-03-12]
@@ -1458,3 +1458,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated crimsonfields to 0.4.1 [wiz 2004-03-12]
 	Updated covered-current to 20040211 [dmcmahill 2004-03-12]
 	Updated p5-razor-agents to 2.40 [heinz 2004-03-12]
+	Removed avi-xmms [snj 2004-03-12]
