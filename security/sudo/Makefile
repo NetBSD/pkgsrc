@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/06/06 11:07:19 mjl Exp $
+# $NetBSD: Makefile,v 1.24 2000/07/26 15:12:08 veego Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/12 03:24:41 obrien Exp
 #
 
@@ -44,6 +44,8 @@ CONFIGURE_ARGS+=--without-kerb5
 
 CONFIGURE_ARGS+=--with-nbsdops --disable-path-info
 
+PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+
 # The UPGRADE file has important information on upgrading from a previous
 # version of sudo.
 #
@@ -53,6 +55,7 @@ pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
 
 post-install:
+	${CAT} ${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS} > ${PLIST_SRC}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/sudo
 	${INSTALL_DATA} ${WRKSRC}/sudoers ${PREFIX}/share/examples/sudo/sudoers
 	${INSTALL_DATA} ${WRKSRC}/sample.sudoers \
