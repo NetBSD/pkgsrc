@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/10/06 09:25:06 tron Exp $
+# $NetBSD: Makefile,v 1.31 2004/10/12 07:24:58 seb Exp $
 
 DISTNAME=	kde-3.3.0
 PKGREVISION=	1
@@ -17,7 +17,7 @@ DEPENDS+=	kdeadmin-3.3.0nb1:../../misc/kdeadmin3
 DEPENDS+=	kdeedu-3.3.0nb1:../../misc/kdeedu3
 DEPENDS+=	kdegames-3.3.0nb1:../../games/kdegames3
 DEPENDS+=	kdegraphics-3.3.0nb1:../../graphics/kdegraphics3
-DEPENDS+=	kdemultimedia-3.3.0nb1:../../multimedia/kdemultimedia3
+DEPENDS+=	kdemultimedia-3.3.0nb2:../../multimedia/kdemultimedia3
 DEPENDS+=	kdenetwork-3.3.0nb1:../../net/kdenetwork3
 DEPENDS+=	kdepim-3.3.0nb1:../../misc/kdepim3
 DEPENDS+=	kdetoys-3.3.0nb1:../../games/kdetoys3
