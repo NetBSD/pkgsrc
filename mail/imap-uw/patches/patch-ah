@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 1998/12/07 20:48:16 tv Exp $
+
+--- src/osdep/unix/env_unix.c.orig	Mon Dec  7 15:48:04 1998
++++ src/osdep/unix/env_unix.c	Mon Dec  7 15:48:21 1998
+@@ -812,7 +812,7 @@
+   FILE *f = fopen (file,"r");
+ 				/* no file or ill-advised usage */
+   if (!(f && (s = fgets (tmp,MAILTMPLEN,f)) && (t = strchr (s,'\n')) &&
+-	(flag ||
++	(1 ||
+ 	 (!strcmp (s,"I accept the risk for IMAP toolkit 4.1.\n") &&
+ 	  (s = fgets (tmp,MAILTMPLEN,f)) && (t = strchr (s,'\n')))))) return;
+   do {
