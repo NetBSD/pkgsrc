@@ -1,21 +1,16 @@
-$NetBSD: distinfo,v 1.65 2004/06/06 01:12:52 grant Exp $
+$NetBSD: distinfo,v 1.66 2004/06/21 16:13:23 martti Exp $
 
-SHA1 (postfix/postfix-2.0.20.tar.gz) = ffedae380952a5afc2c3f6b5e610b099e10e3c91
-Size (postfix/postfix-2.0.20.tar.gz) = 1354414 bytes
-SHA1 (postfix/tls+ipv6-1.24-pf-2.0.20.patch.gz) = ff6d08bb950eb8b038fe518b7132705518270486
-Size (postfix/tls+ipv6-1.24-pf-2.0.20.patch.gz) = 258462 bytes
-SHA1 (postfix/postfix-pg.postfix-2.0.0.2.patch) = 70a58f5bd6f8d833dd7cf3d90613f64eeae45f4b
-Size (postfix/postfix-pg.postfix-2.0.0.2.patch) = 27423 bytes
-SHA1 (patch-aa) = 39a89a28cec3fd264dbda97633e34695eaad01e9
+SHA1 (postfix/postfix-2.1.3.tar.gz) = 1c08947afa33a1cf1477954d906aa8d95922ea6f
+Size (postfix/postfix-2.1.3.tar.gz) = 1971632 bytes
+SHA1 (postfix/postfix-2.1.1-canonical_classes.diff) = f97f8879a7a047db062ba8f53f71c71b7d811667
+Size (postfix/postfix-2.1.1-canonical_classes.diff) = 9645 bytes
+SHA1 (postfix/tls+ipv6-1.24-pf-2.1.1.patch.gz) = cfb133eb1b67554fc228d6afb4c4659efd3d2c73
+Size (postfix/tls+ipv6-1.24-pf-2.1.1.patch.gz) = 256320 bytes
+SHA1 (patch-aa) = ca3d2739c35c89056b2f0c19a2cbcb9e018013c6
 SHA1 (patch-ab) = ac4c75fb7a36491edf03b54915c7a47461748b4d
 SHA1 (patch-ac) = b0d26742fe8496b2fd4729a41fecadc275e71cf2
-SHA1 (patch-ad) = 60d98330d4b20508c03bb0bccebbe564ffea621f
-SHA1 (patch-ae) = 2a118fb905c469f8a2e947c3e91b5d4e82c5bb6e
-SHA1 (patch-af) = 9b0521751704fd1377d8215dc16a873c1d5ca032
-SHA1 (patch-ag) = 1753a7bfe9929fc3eabc02b07cdcb9fae4e351d2
+SHA1 (patch-ae) = 98ff7efe8338d4e6e05e311d070237d726161af2
+SHA1 (patch-af) = c5fc75f8f9499ed533bd30e162ec8784e446d288
+SHA1 (patch-ag) = 292b3b5d87f4688930fd654edfc5cb83ca8a2652
 SHA1 (patch-ah) = 6beedd15ee3a7cfd46cf3ed0b9ee579b9906300b
-SHA1 (patch-ai) = 475737812dd2025ae52ba9eab7569119d251eed6
-SHA1 (patch-ba) = e0ed2e41db1cfaf5d924578e536d809ff8623e2d
-SHA1 (patch-bb) = ba4cf4020ee26c3e43bd816f549ad6557a484110
-SHA1 (patch-bc) = 07ee685f6c607a5ee7ea723c4a36729a9c662ba1
-SHA1 (patch-bd) = 380f3947559667784584c05c0d38eb3ce61a13d5
+SHA1 (patch-ai) = e7284d9b3d7b83def7994269867e443fc0394d40

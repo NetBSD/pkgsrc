@@ -1,8 +1,12 @@
-# $NetBSD: Makefile,v 1.131 2004/05/21 08:10:41 martti Exp $
+# $NetBSD: Makefile,v 1.132 2004/06/21 16:13:23 martti Exp $
 
-DISTNAME=	postfix-2.0.20
+DISTNAME=	postfix-2.1.3
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
+
+PATCHFILES+=		postfix-2.1.1-canonical_classes.diff
+PATCH_SITES+=		ftp://ftp.gw.com/pub/people/kim/patches/
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
@@ -50,7 +54,7 @@ BUILD_DEFS+=	USE_SASL2
 
 .if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
 .  include "../../security/openssl/buildlink3.mk"
-PATCHFILES+=		tls+ipv6-1.24-pf-2.0.20.patch.gz
+PATCHFILES+=		tls+ipv6-1.24-pf-2.1.1.patch.gz
 PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.24/
 PATCH_DIST_STRIP=	-p1
 
@@ -96,17 +100,17 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
 		-lmysqlclient -lz -lm
 .endif
 
-.if defined(POSTFIX_USE_PGSQL) && ${POSTFIX_USE_PGSQL} == "YES"
-.  include "../../databases/postgresql-lib/buildlink3.mk"
-.  include "../../security/openssl/buildlink3.mk"
-PATCHFILES+=		postfix-pg.postfix-2.0.0.2.patch
-PATCH_SITES+=		http://www.mat.cc/postfix/
-PATCH_DIST_STRIP=	-p1
-
-CCARGS+=	-DHAS_PGSQL -I${BUILDLINK_PREFIX.postgresql-lib}/include/pgsql
-AUXLIBS+=	-L${BUILDLINK_PREFIX.postgresql-lib}/lib -lpq \
-		-L${BUILDLINK_PREFIX.openssl}/lib -lcrypt
-.endif
+## .if defined(POSTFIX_USE_PGSQL) && ${POSTFIX_USE_PGSQL} == "YES"
+## .  include "../../databases/postgresql-lib/buildlink3.mk"
+## .  include "../../security/openssl/buildlink3.mk"
+## PATCHFILES+=		postfix-pg.postfix-2.0.0.2.patch
+## PATCH_SITES+=		http://www.mat.cc/postfix/
+## PATCH_DIST_STRIP=	-p1
+##
+## CCARGS+=	-DHAS_PGSQL -I${BUILDLINK_PREFIX.postgresql-lib}/include/pgsql
+## AUXLIBS+=	-L${BUILDLINK_PREFIX.postgresql-lib}/lib -lpq \
+##		-L${BUILDLINK_PREFIX.openssl}/lib -lcrypt
+## .endif
 
 .if defined(USE_SASL2) && ${USE_SASL2} == "YES"
 USING_SASL=	YES
@@ -140,7 +144,7 @@ MAKE_ENV=	CC="${CC}" OPT="${CFLAGS}"
 MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
 
 POSTFIX_CONF_FILES=	conf/main.cf src/util/sys_defs.h postfix-install
-POSTFIX_CONF_FILES+=	conf/sample-misc.cf src/global/mail_params.h
+POSTFIX_CONF_FILES+=	src/global/mail_params.h
 
 FILES_SUBST+=	SHAREDIR=${SHAREDIR}
 MESSAGE_SUBST+=	SHAREDIR=${SHAREDIR}
