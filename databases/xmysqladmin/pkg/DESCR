@@ -1,0 +1,4 @@
+xMySQLadmin is a front end to the MySQL database engine.
+It allows reloads, refresh, status check, process control, isamcheck,
+grant/revoke privileges, creating databases, drop databases, create,
+alter, drop, and browse tables.
