@@ -1,0 +1,9 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/09/07 00:34:04 jwise Exp $
+--- xfsound/xfplay.orig	Wed Aug 25 08:07:46 1999
++++ xfsound/xfplay	Mon Sep  6 19:59:42 1999
+@@ -2,4 +2,4 @@
+ #
+ # This script is part of XFce
+ #
+-sox $1 -t .raw -r 8000 - > /dev/dsp
++audioplay -i -q $1

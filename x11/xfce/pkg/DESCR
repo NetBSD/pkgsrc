@@ -1,0 +1,9 @@
+XFce is an easy-to-use and easy-to-configure environment,
+closely resembling CDE in appearance.  XFCE uses the popular
+GTK+ toolkit for X11, and features drag'n drop support,
+pulldown menus and color icons, 3D widgets, etc. It
+also includes its own Window Manager (xfwm), a backdrop 
+manager (xfbd), a file manager (xftree), a clock/calendar
+(xfclock) and a system sound manager (xfsound) and
+a user friendly interface for mouse configuration (xfmouse).
+Visit HTTP://www.xfce.org/ to see what XFce looks like.
