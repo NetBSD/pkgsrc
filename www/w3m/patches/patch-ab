@@ -1,0 +1,49 @@
+$NetBSD: patch-ab,v 1.4 2000/04/21 03:54:44 itohy Exp $
+
+Fix problems where:
+ 1. Suspend the job w3m belongs to, not w3m only.
+ 2. Automatic creation of ~/.w3m fails.
+ 3. "w3m ." using internal listing function, select a file, and w3m crashes.
+
+--- main.c.orig	Thu Apr  6 10:25:00 2000
++++ main.c	Fri Apr 21 01:06:37 2000
+@@ -139,9 +139,8 @@
+ 
+   BookmarkFile = NULL;
+   rc_dir = expandName(RC_DIR);
+-  i = strlen(rc_dir);
+-  if (i > 1 && rc_dir[i] == '/')
+-    rc_dir[i] = '\0';
++  for (p = rc_dir + strlen(rc_dir) - 1; p > rc_dir && *p == '/'; p--)
++    *p = '\0';
+   config_file = rcFile("config");
+ 
+   /* argument search 1 */
+@@ -1357,7 +1356,17 @@
+     shell = "/bin/sh";
+   system(shell);
+ #else /* SIGSTOP */
++#ifdef SIGTSTP	/* BSD */
++  signal(SIGTSTP, SIG_DFL);	/* just in case */
++  /*
++   * Note: If susp() was called from SIGTSTP handler,
++   *	unblocking SIGTSTP would be required here.
++   *	Currently not.
++   */
++  kill(0, SIGTSTP);	/* stop whole job, not a single process */
++#else
+   kill(getpid(), SIGSTOP);
++#endif
+ #endif /* SIGSTOP */
+   fmInit();
+   displayBuffer(Currentbuf, B_FORCE_REDRAW);
+@@ -1758,7 +1767,8 @@
+   parseURL2(a->url,&u,baseURL(Currentbuf));
+   if (u.scheme == Currentbuf->currentURL.scheme &&
+       u.port == Currentbuf->currentURL.port &&
+-      strcasecmp(u.host,Currentbuf->currentURL.host) == 0 &&
++      (u.host == Currentbuf->currentURL.host ||
++      strcasecmp(u.host,Currentbuf->currentURL.host) == 0) &&
+       strcmp(u.file,Currentbuf->currentURL.file) == 0) {
+     /* index within this buffer */
+     local_label = u.label;
