@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/02/11 03:07:47 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.10 2002/05/20 17:12:31 cjep Exp $
 
 DISTNAME=	xwrits-2.19
 CATEGORIES=	x11
@@ -10,7 +10,6 @@ COMMENT=	Wrist break reminder for prevention of repetitive stress injuries
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK_ONLY=	YES
-
 
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
