@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 1998/12/04 11:36:29 frueauf Exp $
+# $NetBSD: Makefile,v 1.9 1998/12/05 12:36:18 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.38 1998/04/13 00:51:58 jseger Exp
 #
 
     SUBDIR += R
+    SUBDIR += abs
 #    SUBDIR += apc
 #    SUBDIR += blas
 #    SUBDIR += calc
