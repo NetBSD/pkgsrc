@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2003/07/24 16:49:07 jschauma Exp $
+# $NetBSD: Makefile,v 1.106 2003/09/15 00:19:17 dmcmahill Exp $
 #
 
 COMMENT=	Mathematics
@@ -76,6 +76,7 @@ SUBDIR+=	randlib
 SUBDIR+=	rlab
 SUBDIR+=	ruby-bigfloat
 SUBDIR+=	ruby-bitvector
+SUBDIR+=	ruby-gsl
 SUBDIR+=	sc
 SUBDIR+=	scilab
 SUBDIR+=	slatec
