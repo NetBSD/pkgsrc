@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/13 20:54:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/07 22:46:04 wiz Exp $
 bin/paragui-config
 include/paragui/paraconfig.h
 include/paragui/paraconfig_gnu.h
@@ -49,7 +49,6 @@ include/paragui/pgwidgetdnd.h
 include/paragui/pgwidgetlist.h
 include/paragui/pgwidgetlistex.h
 include/paragui/pgwindow.h
-lib/libparagui-1.0.so
 lib/libparagui-1.0.so.4
 lib/libparagui-1.0.so.4.0
 lib/libparagui.a
