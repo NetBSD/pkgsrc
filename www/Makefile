@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.191 2002/05/10 06:30:41 kei Exp $
+# $NetBSD: Makefile,v 1.192 2002/05/17 18:07:14 zuntum Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -51,6 +51,7 @@ SUBDIR+=	cronolog
 SUBDIR+=	curl
 SUBDIR+=	cvsweb
 SUBDIR+=	dillo
+SUBDIR+=	elinks
 SUBDIR+=	galeon
 SUBDIR+=	galway
 SUBDIR+=	glibwww
