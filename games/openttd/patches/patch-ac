@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/03/30 15:12:48 wiz Exp $
+
+--- makefiledir/Makefile.config_writer.orig	2004-12-24 06:33:41.000000000 +0600
++++ makefiledir/Makefile.config_writer
+@@ -80,6 +80,7 @@ $(MAKE_CONFIG):	
+ 	$(call CONFIG_LINE,UNIX:=$(UNIX))
+ 	$(call CONFIG_LINE,OSX:=$(OSX))
+ 	$(call CONFIG_LINE,FREEBSD:=$(FREEBSD))
++	$(call CONFIG_LINE,NETBSD:=$(NETBSD))
+ 	$(call CONFIG_LINE,MORPHOS:=$(MORPHOS))
+ 	$(call CONFIG_LINE,BEOS:=$(BEOS))
+ 	$(call CONFIG_LINE,SUNOS:=$(SUNOS))
