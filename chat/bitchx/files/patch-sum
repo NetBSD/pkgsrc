@@ -1,4 +1,5 @@
-$Id: patch-sum,v 1.1.1.1 2000/12/15 23:16:34 wiz Exp $
+$Id: patch-sum,v 1.2 2000/12/16 14:02:48 wiz Exp $
 
 MD5 (patch-aa) = b1e2ea9a5248dc679292107cfde46762
 MD5 (patch-ab) = 77fa5fb610b19fd851a3753c0554ed81
+MD5 (patch-ac) = afa40750dab7567dd51830914fdac479
