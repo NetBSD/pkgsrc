@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2001/04/02 15:15:27 agc Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/08 10:55:21 itojun Exp $
 
-DISTNAME=		httpd-2_0_15-alpha
-PKGNAME=		apache-2.0.15
+DISTNAME=		httpd-2_0_16-beta
+PKGNAME=		apache-2.0.16
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://www.netbsd.org/images/logos/
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--with-ssl=/usr/include --enable-tls
 .endif
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--enable-rewrite
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/srclib/pcre/ltconfig \
 			${WRKSRC}/srclib/apr/build/ltconfig \
@@ -36,7 +37,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/srclib/pcre/ltconfig \
 			${WRKSRC}/srclib/apr-util/xml/expat/conftools/ltconfig \
 			${WRKSRC}/ltconfig
 
-WRKSRC=			${WRKDIR}/httpd-2_0_15
+WRKSRC=			${WRKDIR}/httpd-2_0_16
 
 LIBS=	srclib/apr/shmem/unix/mm/libmm.la \
 	srclib/apr/libapr.la \
@@ -45,6 +46,7 @@ LIBS=	srclib/apr/shmem/unix/mm/libmm.la \
 
 post-patch:
 	${RM} ${WRKSRC}/docs/conf/*.orig
+	(cd ${WRKSRC}; ${LN} -s ${LOCALBASE}/bin/libtool)
 
 pre-install:
 	for i in ${LIBS}; do \
