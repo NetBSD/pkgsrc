@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/08/20 13:56:47 grant Exp $
+# $NetBSD: Makefile,v 1.13 2002/08/21 03:54:02 grant Exp $
 
 PKGNAME=		realplayer-8.0.1
 WRKSRC=			${WRKDIR}/RealPlayer8
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.bin
 .include "../../mk/bsd.prefs.mk"
 .if ${MACHINE} == "i386"
 DISTNAME=		rp8_linux20_libc6_i386_cs2
-.elseif ${MACHINE} == "sparc"
+.elif ${MACHINE} == "sparc"
 DISTNAME=		rp8_solaris27_sparc_cs2
 .endif
 
@@ -20,7 +20,7 @@ COMMENT=		RealAudio and RealVideo player
 .if ${OPSYS} == "NetBSD"
 . if ${MACHINE} == "i386"
 DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
-. elseif ${MACHINE} == "sparc"
+. elif ${MACHINE} == "sparc"
 .  if !exists(/emul/svr4/usr/lib/ld.so)
 IGNORE=	"${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
 .  endif
