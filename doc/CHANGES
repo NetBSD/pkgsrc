@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1933 2003/04/14 18:36:05 cjep Exp $
+$NetBSD: CHANGES,v 1.1934 2003/04/14 20:03:57 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1590,3 +1590,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added xlreader-0.9.0 [zuntum 2003-04-14]
 	Added mozilla-flash-bin-6.0.69 [grant 2003-04-14]
 	Added qadsl-1.2 [cjep 2003-04-14]
+	Added phoenix-bin-0.5 [grant 2003-04-14]
+	Deleted phoenix-linux, renamed to phoenix-bin [grant 2003-04-14]
