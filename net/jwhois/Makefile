@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/10/31 15:08:29 tv Exp $
+# $NetBSD: Makefile,v 1.14 2001/10/31 15:11:24 tv Exp $
 #
 
 DISTNAME=		jwhois-3.0.1
@@ -11,7 +11,7 @@ COMMENT=		Configurable WHOIS client
 
 USE_BUILDLINK_ONLY=	# defined
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--sysconfdir=/usr/pkg/etc
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc
 CONFIGURE_ARGS+=	--localstatedir=/var/db
 CONFIGURE_ARGS+=	--with-cache
 
