@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/01/03 14:03:02 wiz Exp $
+$NetBSD: distinfo,v 1.5 2002/09/22 00:08:36 jlam Exp $
 
 SHA1 (autotrace-0.29.tar.gz) = f503eec18bd76fa25d0ac3913505057163fd9818
 Size (autotrace-0.29.tar.gz) = 212608 bytes
-SHA1 (patch-ab) = 2aa7a9bb4d42591384aae0d24488c06df9c31e7c
