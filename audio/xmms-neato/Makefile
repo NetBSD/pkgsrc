@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/22 07:15:01 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/12 03:57:03 snj Exp $
 #
 
 DISTNAME=	neato
@@ -11,12 +11,11 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.rpi.edu/~mullr/xmms/
 COMMENT=	Circle effect XMMS plugin
 
-USE_BUILDLINK2=	yes
-USE_X11=	yes
-USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes
+USE_BUILDLINK3=	yes
+USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
-LTCONFIG_OVERRIDE= ${WRKSRC}/ltconfig
+USE_X11=	yes
 
 GNU_CONFIGURE=	YES
 
@@ -32,5 +31,5 @@ post-extract:
 	${CHMOD} +x install-sh ; \
 	${MAKE} distclean
 
-.include "../../audio/xmms/buildlink2.mk"
+.include "../../audio/xmms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
