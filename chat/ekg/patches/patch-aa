@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2002/04/03 22:47:01 hubertf Exp $
+$NetBSD: patch-aa,v 1.3 2002/06/13 08:18:37 martti Exp $
 
---- src/Makefile.in.orig	Wed Apr  3 19:10:13 2002
+--- src/Makefile.in.orig	Fri May 17 22:44:51 2002
 +++ src/Makefile.in
-@@ -21,7 +21,7 @@
- all:	ekg @do_ioctl@
+@@ -18,7 +18,7 @@
+ all:	ekg @ioctld@
  
  ekg:	$(OBJS) $(LOBJS)
--	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LOBJS) $(LIBS) 
-+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LOBJS) $(LIBS) -Wl -R${LOCALBASE}/lib
+-	$(CC) $(CFLAGS) -o ekg $(OBJS) $(LOBJS) $(LIBS) 
++	$(CC) $(CFLAGS) -o ekg $(OBJS) $(LOBJS) $(LIBS) -Wl -R${LOCALBASE}/lib
  
- ioctl_daemon:	ioctl_daemon.c
- 	$(CC) ioctl_daemon.c -o $(IOCTL_DAEMON_NAME)
+ ioctld:	ioctld.c
+ 	$(CC) $(CFLAGS) ioctld.c -o ioctld
