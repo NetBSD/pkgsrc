@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/05/15 07:56:43 rh Exp $
+# $NetBSD: Makefile,v 1.4 2001/05/16 20:23:40 tron Exp $
 
 DISTNAME=	gftp-2.0.8
 CATEGORIES=	net
@@ -12,7 +12,8 @@ COMMENT=	multithreaded ftp client for *NIX based machines running X11R6
 
 DEPENDS+=	gtk+>=1.2.3:../../x11/gtk
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	CFLAGS="-I${LOCALBASE}/include -D_POSIX_THREAD_SYSCALL_SOFT=1 ${CFLAGS}"
+USE_LIBINTL=	YES
 
 .include "../../mk/bsd.pkg.mk"
