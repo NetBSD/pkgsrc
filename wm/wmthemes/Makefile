@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/10/30 09:49:31 jmc Exp $
+# $NetBSD: Makefile,v 1.9 2001/12/19 15:35:40 tron Exp $
 
 #
 # There is no distinfo file since the files change contents so often on the
@@ -33,6 +33,11 @@ BUILD_DEFS+=	WINDOWMAKER_THEMES
 
 WINDOWMAKER_THEMES?=	FreeBSD-theme-0.52
 
+THEME_FILES=
+.for FILE in ${WINDOWMAKER_THEMES}
+THEME_FILES+=	${FILE}${EXTRACT_SUFX}
+.endfor
+
 do-install:
 	@${RM} -f ${PLIST_SRC}
 	@${TOUCH} ${PLIST_SRC}
@@ -62,8 +67,3 @@ do-install:
 	done
 
 .include "../../mk/bsd.pkg.mk"
-
-THEME_FILES=
-.for FILE in ${WINDOWMAKER_THEMES}
-THEME_FILES+=	${FILE}${EXTRACT_SUFX}
-.endfor
