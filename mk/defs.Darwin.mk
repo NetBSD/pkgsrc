@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.64 2003/12/16 23:07:42 heinz Exp $
+# $NetBSD: defs.Darwin.mk,v 1.65 2004/01/27 16:11:47 agc Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -38,7 +38,7 @@ LDD?=		/usr/bin/otool -L
 LN?=		/bin/ln
 LS?=		/bin/ls
 M4?=		/usr/bin/m4 
-MAIL?=		/usr/bin/mail
+MAIL_CMD?=	/usr/bin/mail
 MKDIR?=		/bin/mkdir -p
 MTREE?=		/usr/sbin/mtree
 MV?=		/bin/mv
