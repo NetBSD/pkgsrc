@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/05/13 11:42:43 taca Exp $
+# $NetBSD: Makefile,v 1.21 2004/05/30 07:04:26 minskim Exp $
 
 DISTNAME=       lha-114i
 PKGNAME=	lha-114.9
@@ -11,7 +11,10 @@ MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=	http://www2m.biglobe.ne.jp/~dolphin/lha/lha-unix.htm
 COMMENT=	Archive files using LZW compression (.lzh files)
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=	yes
+NO_CONFIGURE=	yes
 
 MAKE_FLAGS=	MAKE="${MAKE_PROGRAM}"
 
@@ -21,6 +24,8 @@ MAKE_FLAGS+=	MACHINE="-DSYSTIME_HAS_NO_TM -DMKTIME -DUSESTRCASECMP -DSYSV_SYSTEM
 .else
 MAKE_FLAGS+=	MACHINE="-DSYSTIME_HAS_NO_TM -DMKTIME -DUSESTRCASECMP -DSYSV_SYSTEM_DIR"
 .endif
+
+INSTALLATION_DIRS=	bin man/ja_JP.EUC/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/lha ${PREFIX}/bin/
