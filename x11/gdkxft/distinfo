@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/09/04 09:01:25 rh Exp $
+$NetBSD: distinfo,v 1.2 2002/03/22 22:06:36 mycroft Exp $
 
-SHA1 (gdkxft-1.0.tar.gz) = 2b0739263770db4ffdeeb0cb0d7a3aab98fa3cc1
-Size (gdkxft-1.0.tar.gz) = 129474 bytes
+SHA1 (gdkxft-1.5.tar.gz) = 03ba38e129123d18423582219a5d365691547c92
+Size (gdkxft-1.5.tar.gz) = 213224 bytes
