@@ -1,8 +1,26 @@
-$NetBSD: patch-aa,v 1.10 2004/03/31 19:41:21 tron Exp $
+$NetBSD: patch-aa,v 1.11 2004/04/06 07:15:53 jmmv Exp $
 
---- configure.orig	2003-08-26 18:42:14.000000000 +0200
-+++ configure	2004-03-31 21:33:30.000000000 +0200
-@@ -28920,7 +28920,7 @@
+--- configure.orig	2004-03-16 18:13:21.000000000 +0100
++++ configure
+@@ -31048,13 +31048,13 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #ifndef RTLD_LAZY
+ #  define RTLD_LAZY 0
+ #endif
+-int pthread_create;
++int gettext;
+ int main () {
+     void *handle, *global, *local;
+-    global = &pthread_create;
+-    handle = dlopen ("libpthread.so", RTLD_GLOBAL | RTLD_LAZY);
++    global = &gettext;
++    handle = dlopen ("libintl.so", RTLD_GLOBAL | RTLD_LAZY);
+     if (!handle) return 0;
+-    local = dlsym (handle, "pthread_create");
++    local = dlsym (handle, "gettext");
+     return global == local;
+ }
+ _ACEOF
+@@ -31714,7 +31714,7 @@ if test x"$have_threads" != xno; then
      # both CPPFLAG and LIBS.
      # One of them does for most gcc versions and some other platforms/compilers
      # too and could be considered as the canonical way to go.
@@ -11,7 +29,7 @@ $NetBSD: patch-aa,v 1.10 2004/03/31 19:41:21 tron Exp $
        glib_save_CFLAGS="$CFLAGS"
        CFLAGS="$CFLAGS -$flag"
        if test "$cross_compiling" = yes; then
-@@ -31199,7 +31199,7 @@
+@@ -34181,7 +34181,7 @@ fi
  #  b) libtool doesn't recognize -pthread as a library dependency.
  #
  case $host in
