@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.nolinguas,v 1.3 1999/03/20 00:17:20 tron Exp $
+@comment $NetBSD: PLIST.nolinguas,v 1.4 1999/04/16 20:08:16 jlam Exp $
 GNUstep/Apps/WPrefs.app/WPrefs
 GNUstep/Apps/WPrefs.app/WPrefs.tiff
 GNUstep/Apps/WPrefs.app/WPrefs.xpm
@@ -155,7 +155,7 @@ include/wraster.h
 lib/libWINGs.a
 lib/libWMaker.a
 lib/libwraster.a
-lib/libwraster.so.2.0
+lib/libwraster.so.2.1
 man/man1/geticonset.1
 man/man1/getstyle.1
 man/man1/seticons.1
@@ -220,69 +220,8 @@ share/WindowMaker/Icons/xdvi.tiff
 share/WindowMaker/Icons/xdvi.xpm
 share/WindowMaker/Icons/xv.tiff
 share/WindowMaker/Icons/xv.xpm
-share/WindowMaker/Pixmaps/Ant.xpm
-share/WindowMaker/Pixmaps/Antennae.xpm
-share/WindowMaker/Pixmaps/Bee48x48.xpm
-share/WindowMaker/Pixmaps/Beer.xpm
-share/WindowMaker/Pixmaps/Bird.xpm
-share/WindowMaker/Pixmaps/Book.xpm
-share/WindowMaker/Pixmaps/Bookshelf.xpm
-share/WindowMaker/Pixmaps/Brain.xpm
-share/WindowMaker/Pixmaps/BulletHole.xpm
-share/WindowMaker/Pixmaps/CashRegister.xpm
-share/WindowMaker/Pixmaps/Clipboard.xpm
-share/WindowMaker/Pixmaps/Cola.xpm
-share/WindowMaker/Pixmaps/ColorGNU.xpm
-share/WindowMaker/Pixmaps/Correspondence.dir.xpm
-share/WindowMaker/Pixmaps/CrystalSkull.dir.xpm
-share/WindowMaker/Pixmaps/Daemon.xpm
-share/WindowMaker/Pixmaps/Detergent.dir.xpm
-share/WindowMaker/Pixmaps/DoomII.xpm
-share/WindowMaker/Pixmaps/Draw.xpm
-share/WindowMaker/Pixmaps/EscherCube.xpm
-share/WindowMaker/Pixmaps/EscherTriangle.xpm
-share/WindowMaker/Pixmaps/Fish5.dir.xpm
-share/WindowMaker/Pixmaps/Football.xpm
-share/WindowMaker/Pixmaps/FootballUS.xpm
-share/WindowMaker/Pixmaps/Gear.xpm
-share/WindowMaker/Pixmaps/Ghost.xpm
-share/WindowMaker/Pixmaps/HP-16C-48.xpm
-share/WindowMaker/Pixmaps/HandOpen.xpm
-share/WindowMaker/Pixmaps/HandPointing.xpm
-share/WindowMaker/Pixmaps/HandPointingLeft.xpm
-share/WindowMaker/Pixmaps/HandPunch.xpm
-share/WindowMaker/Pixmaps/HandReach.xpm
-share/WindowMaker/Pixmaps/HeroSandwich.dir.xpm
-share/WindowMaker/Pixmaps/LadyBug48x48.xpm
-share/WindowMaker/Pixmaps/Microphone.xpm
-share/WindowMaker/Pixmaps/Netscape.xpm
-share/WindowMaker/Pixmaps/NewsAgent.xpm
-share/WindowMaker/Pixmaps/PDF.xpm
-share/WindowMaker/Pixmaps/Padlock.xpm
-share/WindowMaker/Pixmaps/Paint.xpm
-share/WindowMaker/Pixmaps/Pencils.24.xpm
-share/WindowMaker/Pixmaps/Penguin.xpm
-share/WindowMaker/Pixmaps/Radio.xpm
-share/WindowMaker/Pixmaps/Reference.xpm
-share/WindowMaker/Pixmaps/Rumi.xpm
-share/WindowMaker/Pixmaps/Snail.xpm
-share/WindowMaker/Pixmaps/T2-Film.xpm
-share/WindowMaker/Pixmaps/TagIcon.xpm
-share/WindowMaker/Pixmaps/TapeIcon1.xpm
-share/WindowMaker/Pixmaps/TrueDie48.xpm
-share/WindowMaker/Pixmaps/WheelbarrowFull.xpm
-share/WindowMaker/Pixmaps/WordEditor.xpm
-share/WindowMaker/Pixmaps/Wrench-12bit.xpm
-share/WindowMaker/Pixmaps/bomb2.xpm
-share/WindowMaker/Pixmaps/inspect.xpm
-share/WindowMaker/Pixmaps/monitor.xpm
-share/WindowMaker/Pixmaps/paint.xpm
-share/WindowMaker/Pixmaps/tile.black.xpm
-share/WindowMaker/Pixmaps/tile.snow.xpm
 share/WindowMaker/Pixmaps/tile.tiff
 share/WindowMaker/Pixmaps/tile.xpm
-share/WindowMaker/Pixmaps/tile2.xpm
-share/WindowMaker/Pixmaps/xv.xpm
 share/WindowMaker/README
 share/WindowMaker/README.themes
 share/WindowMaker/SoundSets/.keep_me
@@ -312,22 +251,9 @@ share/WindowMaker/Styles/RednBlue.style
 share/WindowMaker/Styles/Summer.style
 share/WindowMaker/Styles/Traditional.style
 share/WindowMaker/Styles/VioletBlue.style
-share/WindowMaker/Themes/Checker.themed/checker.xpm
-share/WindowMaker/Themes/Checker.themed/style
 share/WindowMaker/Themes/Default.style
-share/WindowMaker/Themes/LeetWM.themed/LeetWM.jpg
-share/WindowMaker/Themes/LeetWM.themed/LeetWMMenutb1.jpg
-share/WindowMaker/Themes/LeetWM.themed/LeetWMMenutb2.jpg
-share/WindowMaker/Themes/LeetWM.themed/LeetWMTile1.jpg
-share/WindowMaker/Themes/LeetWM.themed/LeetWMtb1.jpg
-share/WindowMaker/Themes/LeetWM.themed/LeetWMtb2.jpg
-share/WindowMaker/Themes/LeetWM.themed/style
-share/WindowMaker/Themes/Night.themed/SeaNight.jpeg
-share/WindowMaker/Themes/Night.themed/style
 share/WindowMaker/Themes/OpenStep.style
 share/WindowMaker/Themes/Pastel.style
-share/WindowMaker/Themes/STEP2000.themed/BlueImage2.jpeg
-share/WindowMaker/Themes/STEP2000.themed/style
 share/WindowMaker/Themes/SteelBlueSilk.style
 share/WindowMaker/autostart.sh
 share/WindowMaker/exitscript.sh
@@ -356,6 +282,7 @@ share/WindowMaker/menu.sl
 share/WindowMaker/menu.tr
 share/WindowMaker/menu.zh_TW.Big5
 share/WindowMaker/plmenu
+share/WindowMaker/plmenu.dk
 share/WindowMaker/plmenu.fr
 share/WindowMaker/plmenu.hr
 share/WindowMaker/wmmacros
@@ -377,10 +304,6 @@ share/doc/WindowMaker/README.KDE
 @dirrm share/WindowMaker/SoundSets
 @dirrm share/WindowMaker/Sounds
 @dirrm share/WindowMaker/Styles
-@dirrm share/WindowMaker/Themes/Checker.themed
-@dirrm share/WindowMaker/Themes/LeetWM.themed
-@dirrm share/WindowMaker/Themes/Night.themed
-@dirrm share/WindowMaker/Themes/STEP2000.themed
 @dirrm share/WindowMaker/Themes
 @dirrm share/WindowMaker
 @dirrm share/doc/WindowMaker

@@ -1,20 +1,18 @@
-$NetBSD: patch-ab,v 1.7 1999/02/14 21:39:29 tron Exp $
+$NetBSD: patch-ab,v 1.8 1999/04/16 20:08:16 jlam Exp $
 
---- configure.orig	Wed Jan 20 16:00:00 1999
-+++ configure	Sun Feb 14 22:32:41 1999
-@@ -1300,8 +1300,9 @@
+--- configure.orig	Thu Apr  1 11:49:36 1999
++++ configure	Wed Apr 14 02:43:30 1999
+@@ -1302,7 +1302,8 @@
    echo "$ac_t""no" 1>&6
  fi
  
 -# Always use our own libtool.
--LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 +# Use NetBSD's pkglibtool
 +if false; then
-+#LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
  # Check for any special flags to pass to ltconfig.
- libtool_flags=
-@@ -1345,6 +1346,7 @@
+@@ -1347,6 +1348,7 @@
  ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }

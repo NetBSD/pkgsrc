@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 1999/02/02 10:24:11 tron Exp $
+$NetBSD: patch-aa,v 1.6 1999/04/16 20:08:16 jlam Exp $
 
---- doc/Makefile.in.orig	Wed Jan 20 10:00:00 1999
-+++ doc/Makefile.in	Sun Jan 31 04:52:26 1999
-@@ -126,7 +126,7 @@
+--- doc/Makefile.in.orig	Thu Apr  1 11:49:35 1999
++++ doc/Makefile.in	Wed Apr 14 02:41:54 1999
+@@ -127,7 +127,7 @@
  	for i in $$list; do \
  	  if test -f $(srcdir)/$$i; then file=$(srcdir)/$$i; \
  	  else file=$$i; fi; \
 -	  ext=`echo $$i | sed -e 's/^.*\\.//'`; \
-+	  ext=`echo $$i | sed -e 's/^.*\\.//' -e 's/[a-z]*$$//'`; \
++	  ext=`echo $$i | sed -e 's/^.*\\.//; s/[a-z]*$$//'`; \
  	  inst=`echo $$i | sed -e 's/\\.[0-9a-z]*$$//'`; \
  	  inst=`echo $$inst | sed '$(transform)'`.$$ext; \
  	  echo " $(INSTALL_DATA) $$file $(DESTDIR)$(man1dir)/$$inst"; \
