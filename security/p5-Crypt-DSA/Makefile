@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/10/02 16:59:05 mcr Exp $
+# $NetBSD: Makefile,v 1.3 2001/10/03 02:31:19 hubertf Exp $
 #
 
 DISTNAME=		Crypt-DSA-0.12
@@ -11,11 +11,11 @@ MAINTAINER=		packages@netbsd.org
 COMMENT=		perl5 module for the DSA public key algorithm
 
 # XXX: really want p5-Digest-SHA1...waiting for update
-DEPENDS+=		p5-Digest-MD5-*:../../security/p5-Digest-MD5
-DEPENDS+=		p5-Math-Pari-*:../../math/p5-Math-Pari
-DEPENDS+=		p5-Crypt-Random-*:../../security/p5-Crypt-Random
-DEPENDS+=		p5-Data-Buffer-*:../../devel/p5-Data-Buffer
-DEPENDS+=		p5-Convert-PEM-*:../../textproc/p5-Convert-PEM
+DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
+DEPENDS+=		p5-Math-Pari-[0-9]*:../../math/p5-Math-Pari
+DEPENDS+=		p5-Crypt-Random-[0-9]*:../../security/p5-Crypt-Random
+DEPENDS+=		p5-Data-Buffer-[0-9]*:../../devel/p5-Data-Buffer
+DEPENDS+=		p5-Convert-PEM-[0-9]*:../../textproc/p5-Convert-PEM
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/DSA/.packlist
