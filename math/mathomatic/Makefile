@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/31 18:14:08 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/17 17:08:37 minskim Exp $
 #
 
-DISTNAME=		am-10.9b
-PKGNAME=		mathomatic-10.9b
+DISTNAME=		am
+PKGNAME=		mathomatic-11.0b
 CATEGORIES=		math
 MASTER_SITES=		http://www.panix.com/~gesslein/
 EXTRACT_SUFX=		.tgz
@@ -14,6 +14,7 @@ COMMENT=		Small portable symbolic math program
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/am
+DIST_SUBDIR=		${PKGNAME}
 USE_BUILDLINK3=		yes
 NO_CONFIGURE=		yes
 MAKEFILE=		makefile

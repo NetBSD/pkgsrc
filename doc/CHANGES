@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5627 2004/04/17 17:01:04 seb Exp $
+$NetBSD: CHANGES,v 1.5628 2004/04/17 17:08:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2045,3 +2045,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added same-1.3 [minskim 2004-04-17]
 	Updated mldonkey to 2.5.18 [wiz 2004-04-17]
 	updated graphviz to 1.12 [seb 2004-04-17]
+	Updated mathomatic to 11.0b [minskim 2004-04-17]
