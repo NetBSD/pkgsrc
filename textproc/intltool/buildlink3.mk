@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/10/02 13:58:58 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/12/25 12:05:59 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 INTLTOOL_BUILDLINK3_MK:=	${INTLTOOL_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nintltool}
 BUILDLINK_PACKAGES+=	intltool
 
 .if !empty(INTLTOOL_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.intltool+=	intltool>=0.31.3
+BUILDLINK_DEPENDS.intltool+=	intltool>=0.32.1
 BUILDLINK_PKGSRCDIR.intltool?=	../../textproc/intltool
 BUILDLINK_DEPMETHOD.intltool?=	build
 .endif	# INTLTOOL_BUILDLINK3_MK
