@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6112 2004/06/03 21:33:54 shannonjr Exp $
+$NetBSD: CHANGES,v 1.6113 2004/06/03 22:10:00 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2771,4 +2771,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rconfig to 0.32 [abs 2004-06-03]
 	Removed gccAda-3.4 [shannonjr 2004-06-03]
 	Removed gcc-3.4 [shannonjr 2004-06-03]
+	Removed florist [shannonjr 2004-06-03]
 
