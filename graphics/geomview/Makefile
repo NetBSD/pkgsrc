@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/05/01 22:37:13 jtb Exp $
+# $NetBSD: Makefile,v 1.9 2001/05/02 14:49:37 jtb Exp $
 
 DISTNAME=		geomview-1.8.1
 CATEGORIES=		graphics math
@@ -10,13 +10,19 @@ COMMENT=		Interactive geometry viewing program
 
 CONFLICTS=		ImageMagick-*	# both have a program named 'animate'
 
-GNU_CONFIGURE=		YES
-USE_X11=		YES
-USE_MOTIF=		YES
-USE_MESA=		YES
+GNU_CONFIGURE=		yes
+USE_X11=		yes
+USE_MOTIF=		yes
+USE_MESA=		yes
+
+.if ${HAVE_BUILTIN_MESA} == "NO"
+EVAL_PREFIX+=		MESABASE=Mesa
+.else
+MESABASE=		${X11BASE}
+.endif
 
 CONFIGURE_ARGS+=	--without-xforms
-CONFIGURE_ARGS+=	--with-opengl=${X11BASE}
+CONFIGURE_ARGS+=	--with-opengl=${MESABASE}
 CONFIGURE_ARGS+=	--with-motif=${MOTIFBASE}
 CONFIGURE_ENV+=		CPPFLAGS="-Dunix -Dalloca=__builtin_alloca"
 
