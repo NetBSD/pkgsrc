@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/06/16 21:37:16 mjl Exp $
+
+--- makefile.orig	Wed Jun 16 23:07:37 1999
++++ makefile	Wed Jun 16 23:20:05 1999
+@@ -1,10 +1,10 @@
+ all : bin
+ 
+ PROG=sci
+-INSTALL=/usr/local/bin
+-MAN=/usr/man/man1
+-COPT=-DUSLEEP
+-CURSES=-lncurses
++INSTALL=${PREFIX}/bin
++MAN=${PREFIX}/man/man1
++COPT=-DUSLEEP -I${PREFIX}/include
++CURSES=-L${PREFIX}/lib -lncurses
+ 
+ $(PROG).o : $(PROG).c
+ 	gcc  -O3 $(COPT) -Wall -pedantic -c $(PROG).c
+@@ -27,6 +27,6 @@
+ 	rm -f *.bak
+ install :
+ 	cp sci $(INSTALL)
+-	cp sci.1.gz $(MAN)
++	cp sci.1 $(MAN)
+ 
+ bin : $(PROG)

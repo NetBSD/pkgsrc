@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/06/16 21:37:15 mjl Exp $
+
+--- sci.c.orig	Wed Jun 16 23:12:11 1999
++++ sci.c	Wed Jun 16 23:12:23 1999
+@@ -70,7 +70,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <time.h>
+-#include <curses.h>
++#include <ncurses.h>
+ #include <signal.h>
+ #include <unistd.h>
+ #include <ctype.h>
