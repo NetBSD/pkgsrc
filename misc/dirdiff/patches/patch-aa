@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/24 07:08:20 agc Exp $
+
+--- Makefile	2003/07/24 07:02:17	1.1
++++ Makefile	2003/07/24 07:03:14
+@@ -2,12 +2,12 @@
+ #
+ # In fact all we have to make is the libfilecmp.so.0.0 library.
+ 
+-BINDIR=$(DESTDIR)/usr/bin
+-LIBDIR=$(DESTDIR)/usr/lib
++BINDIR=$(DESTDIR)${PREFIX}/bin
++LIBDIR=$(DESTDIR)${PREFIX}/lib
+ INSTALL=install
+ 
+ # You may need to change the -I arguments depending on your system
+-CFLAGS=-O3 -I/usr/include/tcl8.3/ -I/usr/include/tcl
++CFLAGS=-O3 -I${PREFIX}/include
+ 
+ all:	libfilecmp.so.0.0
+ 
