@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/31 12:37:00 recht Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/07/23 15:09:57 recht Exp $
 bin/balsa
 bin/balsa-ab
 lib/bonobo/servers/GNOME_Balsa.server
@@ -90,13 +90,9 @@ share/sounds/balsa/startup.wav
 @dirrm share/gnome/help/balsa/C/figures
 @dirrm share/gnome/help/balsa/C
 @dirrm share/gnome/help/balsa
-@comment in gnome-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/examples/balsa
 @dirrm share/balsa/pixmaps
 @dirrm share/balsa
 @comment in xdg-dirs: @dirrm share/applications
-@comment in scrollkeeper: @dirrm libdata/scrollkeeper/db/index
-@comment in scrollkeeper: @dirrm libdata/scrollkeeper/db/TOC
-@comment in scrollkeeper: @dirrm libdata/scrollkeeper/db
 @comment in libbonobo: @dirrm lib/bonobo/servers
-@comment in xdg-dirs: @dirrm etc/sound/events
