@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1998/07/13 01:53:49 tv Exp $
+# $NetBSD: Makefile,v 1.27 1998/07/13 16:55:58 tv Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -53,7 +53,7 @@
 #    SUBDIR += p5-BSD-Resource
 #    SUBDIR += p5-C-Scan
 #    SUBDIR += p5-ConfigReader
-#    SUBDIR += p5-Curses
+    SUBDIR += p5-Curses
     SUBDIR += p5-Data-Dumper
 #    SUBDIR += p5-Data-Flow
 #    SUBDIR += p5-Data-ShowTable
@@ -71,7 +71,7 @@
 #    SUBDIR += p5-Include
 #    SUBDIR += p5-IniConf
 #    SUBDIR += p5-Ioctl
-#    SUBDIR += p5-PV
+    SUBDIR += p5-PV
 #    SUBDIR += p5-Penguin
 #    SUBDIR += p5-Penguin-Easy
 #    SUBDIR += p5-Proc-Simple

@@ -1,9 +1,5 @@
-# New ports collection makefile for:	p5-Curses
-# Version required:			1.02
-# Date created:				October 17th 1996
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $Id: Makefile,v 1.1.1.1 1998/07/13 15:50:36 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/07/13 16:55:59 tv Exp $
+# FreeBSD Id: Makefile,v 1.8 1998/04/04 13:58:26 vanilla Exp
 #
 
 DISTNAME=	Curses-1.02
@@ -12,17 +8,14 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN}
 MASTER_SITE_SUBDIR=	Curses
 
-MAINTAINER=	jfitz@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
+
+DEPENDS=	ncurses-1.9.9g:../../devel/ncurses
 
 USE_PERL5=	YES
 
-MAN3=		Curses.3
-MANPREFIX=	${PREFIX}/lib/perl5
-
-pre-configure:
-		@ ln -s ${WRKSRC}/hints/c-freebsd.ncurses.h ${WRKSRC}/c-config.h
-
 do-configure:
-		@ cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
+		@${LN} -sf ${WRKSRC}/hints/c-netbsd.ncurses.h ${WRKSRC}/c-config.h
+		@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
