@@ -1,0 +1,7 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 00:54:27 zuntum Exp $
+
+You can run the tty NetHack by simply typing: "nethack"
+or with "nethack tty"
+
+======================================================================

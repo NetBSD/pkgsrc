@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/30 15:13:25 dmcmahill Exp $
-bin/spiceprm
-share/doc/spiceprm/README
-share/examples/spiceprm/EXAMPLES
-@dirrm share/doc/spiceprm
-@dirrm share/examples/spiceprm

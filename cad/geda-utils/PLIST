@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:48:10 zuntum Exp $
+bin/gmk_sym
+bin/convert_sym
+bin/smash_megafile
+bin/sarlacc_schem
+bin/sarlacc_sym
