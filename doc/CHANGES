@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9680 2005/03/29 18:48:30 wiz Exp $
+$NetBSD: CHANGES,v 1.9681 2005/03/29 20:53:49 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1816,3 +1816,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated amarok to 1.2.3 [seb 2005-03-29]
 	Updated posh to 0.3.14 [jmmv 2005-03-29]
 	Updated uim to 0.4.6 [wiz 2005-03-29]
+	Added mdf2iso-0.2.2 [xtraeme 2005-03-29]
