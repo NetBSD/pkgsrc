@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1.1.1 1999/08/02 05:45:01 sakamoto Exp $
+$NetBSD: patch-ae,v 1.2 1999/09/03 04:24:10 sakamoto Exp $
 
 --- ./configure.orig	Tue Apr  6 12:12:18 1999
-+++ ./configure	Wed Jul 28 11:29:10 1999
++++ ./configure	Thu Sep  2 14:57:48 1999
 @@ -705,5 +705,5 @@
      fi
      ;;
