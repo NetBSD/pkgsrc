@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2004/09/20 15:45:32 erh Exp $
+# $NetBSD: Makefile.common,v 1.24 2005/01/22 11:14:06 jdolecek Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -87,8 +87,8 @@ _COMPAT16_LIBSTDCXX=	YES
 DEPENDS+=	gtk2+>=2.4:../../x11/gtk2
 .    elif ${OPSYS} == "NetBSD" && ${MOZ_PLATFORM} == "linux"
 DEPENDS+=	suse_x11>=9.1:../../emulators/${SUSE_DIR_PREFIX}_x11
-DEPENDS+=	suse_gtk2>=9.1:../../emulators/${SUSE_DIR_PREFIX}_gtk2
-DEPENDS+=	suse_locale>=9.1:../../emulators/${SUSE_DIR_PREFIX}_locale
+DEPENDS+=	suse_gtk2>=9.1:../../emulators/suse91_gtk2
+DEPENDS+=	suse_locale>=9.1:../../emulators/suse91_locale
 .    else
 DEPENDS+=	gtk2+>=2.2:../../x11/gtk2
 .    endif
