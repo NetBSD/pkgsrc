@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.446 2004/02/23 17:54:44 minskim Exp $
+# $NetBSD: Makefile,v 1.447 2004/02/24 23:44:04 cube Exp $
 #
 
 COMMENT=	Networking tools
@@ -83,9 +83,12 @@ SUBDIR+=	gethost
 SUBDIR+=	gftp
 SUBDIR+=	gftp-gtk1
 SUBDIR+=	gini
+SUBDIR+=	gkrellm-multiping
 SUBDIR+=	gkrellm-ping
 SUBDIR+=	gkrellm-snmp
 SUBDIR+=	gkrellm-wireless
+SUBDIR+=	gkrellm1-snmp
+SUBDIR+=	gkrellm1-wireless
 SUBDIR+=	gnapfetch
 SUBDIR+=	gnapster
 SUBDIR+=	gnet
