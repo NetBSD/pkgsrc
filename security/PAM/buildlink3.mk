@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2004/02/12 01:59:38 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2004/02/12 02:35:07 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PAM_BUILDLINK3_MK:=	${PAM_BUILDLINK3_MK}+
@@ -26,8 +26,18 @@ BUILDLINK_USE_BUILTIN.pam=	YES
 BUILDLINK_USE_BUILTIN.pam=	NO
 .endif
 
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mpam)
+.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+    !empty(BUILDLINK_IS_BUILTIN.pam:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.pam=	YES
+.endif
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.pam=	NO
+.endif
+.if !empty(PREFER_NATIVE:Mpam) && \
+    !empty(BUILDLINK_IS_BUILTIN.pam:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.pam=	YES
+.endif
+.if !empty(PREFER_PKGSRC:Mpam)
 BUILDLINK_USE_BUILTIN.pam=	NO
 .endif
 
