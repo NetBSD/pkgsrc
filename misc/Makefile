@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2002/12/13 17:28:15 cjep Exp $
+# $NetBSD: Makefile,v 1.144 2002/12/26 20:56:00 tsarna Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -39,6 +39,7 @@ SUBDIR+=	gnome-pim
 SUBDIR+=	gnome-utils
 SUBDIR+=	gone
 SUBDIR+=	gperiodic
+SUBDIR+=	gpsdrive
 SUBDIR+=	granulate
 SUBDIR+=	heyu
 SUBDIR+=	hitchhiker
