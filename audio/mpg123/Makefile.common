@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2003/10/18 11:32:39 grant Exp $
+# $NetBSD: Makefile.common,v 1.11 2003/10/23 21:39:52 grant Exp $
 
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
@@ -48,6 +48,8 @@ ALL_TARGET=	netbsd-arm${TARGET_SUFFIX}
 .    endif # MPG123_ARM_FIXED64
 .  elif ${MACHINE_ARCH} == "m68k"
 ALL_TARGET=	netbsd-m68k${TARGET_SUFFIX}
+.  else
+ALL_TARGET=	netbsd
 .  endif
 .else
 ALL_TARGET=	${LOWER_OPSYS}${TARGET_SUFFIX}
