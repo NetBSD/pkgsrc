@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2003/12/08 18:33:53 drochner Exp $
+
+--- gcc/ada/cstreams.c.orig	2003-12-01 15:24:51.000000000 -0700
++++ gcc/ada/cstreams.c
+@@ -180,7 +180,7 @@ __gnat_full_name (nam, buffer)
+ #elif defined (MSDOS)
+   _fixpath (nam, buffer);
+ 
+-#elif defined (sgi)
++#elif defined (sgi) || defined (__NetBSD__)
+ 
+   /* Use realpath function which resolves links and references to .. and ..
+      on those Unix systems that support it. Note that GNU/Linux provides it but

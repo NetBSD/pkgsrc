@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/08/21 18:28:17 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/08 18:33:53 drochner Exp $
 #
 
 PKGNAME=		gcc3${GCC3_PKGMODIF}-ada-${GCC_VERSION}
@@ -9,7 +9,9 @@ INFO_FILES+=	gnat_ug_wnt.info gnat_rm.info gnat-style.info
 
 .include "../../lang/gcc3-c/buildaddon.mk"
 
+PTHREAD_OPTS+=  require native
 CONFIGURE_ARGS+=	--enable-languages="ada"
+CONFIGURE_ARGS+=	--enable-threads=yes
 
 #
 # Bootstrap section. Define something to make the pkg usable.
@@ -17,7 +19,7 @@ CONFIGURE_ARGS+=	--enable-languages="ada"
 # To make things more interesting, we need a gcc with ada support to build
 # ada support.
 # A gcc tree with compiler driver and gnatbind should be in ADA_BOOT_PATH.
-#ADA_BOOT_PATH=		/path/to/adagcc
+#ADA_BOOT_PATH=               /path/to/adagcc
 # Use this if a special compiler driver is needed to compile ada programs
 # (as seen in linux installations).
 #GNATGCC_ADA_DRIVER=	gnatgcc
@@ -47,6 +49,14 @@ ONLY_FOR_PLATFORM=	sorry_need_ada_compiler
 # End of bootstrap section
 #
 
+post-patch:
+	(cd files; \
+		${CP} adasignal.c ${WRKSRC}/gcc/ada; \
+		${CP} ada_lwp_self.c ${WRKSRC}/gcc/ada; \
+		for i in *.adb *.ads ; do \
+		${CP} $$i ${WRKSRC}/gcc/ada; \
+	done )
+
 post-buildlink:
 	${LN} -sf ${ADA_BOOT_GNATBIND} ${BUILDLINK_DIR}/bin
 
@@ -63,10 +73,18 @@ do-build:
 	(cd ${WRKSRC}/gcc/ada && ${MV} targtyps.o.sav targtyps.o)
 	(cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib_and_tools)
 
+post-build:
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
+	${ECHO} "ADA_INCLUDE_PATH+=${GCC_ARCHDIR}/adainclude" >> ${WRKDIR}/gcc3.mk
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gcc/gnat1 ${GCC_ARCHDIR}
 	(cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} \
 		ada.install-common ada.install-info install-gnatlib)
 	${RM} -f ${GCC_ARCHDIR}/adalib/lib*.so
 
+post-install:
+	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${GCC_PREFIX}/mk/ada.mk
+
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
