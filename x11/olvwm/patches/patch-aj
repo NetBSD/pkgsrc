@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1.1.1 2000/06/16 14:18:57 pooka Exp $
+
+--- winicon.c.orig	Sat Jan  8 00:39:24 2000
++++ winicon.c	Sat Jan  8 00:40:50 2000
+@@ -52,6 +52,10 @@
+ * forward-declared functions
+ ***************************************************************************/
+ 
++static int	heightTopIcon();
++static int	heightBottomIcon();
++static int	widthBothIcon();
++
+ /***************************************************************************
+ * private event functions
+ ***************************************************************************/

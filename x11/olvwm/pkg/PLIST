@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/06/16 14:18:53 pooka Exp $
+bin/olvwm
+lib/help/olvwm.info
+man/cat1/olvwm.0
+man/cat1/olvwmrc.1

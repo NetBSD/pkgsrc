@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/06/16 14:18:55 pooka Exp $
+
+--- gif.c.orig	Sat Jan  8 00:19:38 2000
++++ gif.c	Sat Jan  8 00:20:25 2000
+@@ -56,7 +56,10 @@
+ 	int     disposal;
+ } Gif89 = { -1, -1, -1, 0 };
+ 
+-extern XImage* ReadImage();
++static XImage* ReadImage();
++static int ReadColorMap();
++static int DoExtension();
++static int GetDataBlock();
+ 
+ XImage *ReadGIF(dpy, fd, pNcolors, pColors)
+ Display *dpy;
