@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/01 01:43:30 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/07/22 01:04:35 schmonz Exp $
 # FreeBSD Id: ports/sysutils/ucspi-tcp/Makefile,v 1.12 2000/07/10 01:41:24 steve Exp
 
 DISTNAME=	ucspi-tcp-0.88
@@ -9,13 +9,15 @@ MASTER_SITES=	http://cr.yp.to/ucspi-tcp/				\
 DISTFILES=	${DISTNAME}.tar.gz					\
 		${DISTNAME}-man-20010502.tar.gz
 
-MAINTAINER=	zuntum@NetBSD.org
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://cr.yp.to/ucspi-tcp.html
 COMMENT=	Command-line tools for building TCP client-server applications
 
-RESTRICTED=	"Redistribution of modified package is forbidden"
+RESTRICTED=	"modified source and binaries may not be distributed"
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
+
+USE_BUILDLINK3=	yes
 
 ALL_TARGET=	it
 INSTALL_TARGET=	setup check
@@ -24,16 +26,15 @@ INSTALL_TARGET=	setup check
 GCC_REQD+=	3.0
 .endif
 
-post-configure:
-	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
+do-configure:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
 	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
+	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
 
 post-install:
 	cd ${WRKDIR}/${DISTNAME}-man &&					\
-	${INSTALL_MAN} tcpserver.1 tcprules.1 tcprulescheck.1 argv0.1	\
-		fixcrio.1 recordio.1 tcpclient.1 who@.1 date@.1		\
-		finger@.1 http@.1 tcpcat.1 mconnect.1 addcr.1 delcr.1	\
-		rblsmtpd.1 ${PREFIX}/man/man1
+	for i in *.1; do						\
+		${INSTALL_MAN} $${i} ${PREFIX}/man/man1;		\
+	done
 
 .include "../../mk/bsd.pkg.mk"
