@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 21:40:35 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/21 16:51:40 martti Exp $
 #
 
 DISTNAME=	freetype-2.1.4
@@ -15,7 +15,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.freetype.org/
-COMMENT=	font rendering engine and library API
+COMMENT=	Font rendering engine and library API
 
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES

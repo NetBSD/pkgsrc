@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:37:33 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 16:47:09 martti Exp $
 
 DISTNAME=		Font-AFM-1.18
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		fonts perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Font/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
-COMMENT=		perl5 modules for parsing PostScript font metrics files
+COMMENT=		Perl5 modules for parsing PostScript font metrics files
 
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Font/AFM/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:40:30 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 16:51:39 martti Exp $
 
 DISTNAME=	filmgimp-0.15
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=filmgimp/}
 
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://filmgimp.sourceforge.org/
-COMMENT=	motion picture editing tool
+COMMENT=	Motion picture editing tool
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes

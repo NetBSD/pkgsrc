@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:41:10 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/21 16:51:44 martti Exp $
 
 DISTNAME=		gri-2.12.5
 CATEGORIES=		graphics
@@ -7,7 +7,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://gri.sourceforge.net
-COMMENT=		language for scientific graphics applications
+COMMENT=		Language for scientific graphics applications
 
 BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
 

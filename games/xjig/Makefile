@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:39:37 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/21 16:50:02 martti Exp $
 #
 
 DISTNAME=		xjig-2.4
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		tech-pkg@NetBSD.org
-COMMENT=		jigsaw puzzle
+COMMENT=		Jigsaw puzzle
 
 USE_IMAKE=		yes
 ALL_TARGET=		xjig xjig.0

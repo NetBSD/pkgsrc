@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:39:09 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/21 16:49:58 martti Exp $
 #
 
 DISTNAME=	newvox-1.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.libsdl.org/projects/newvox/src/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/projects/newvox/index.html
-COMMENT=	voxel-style landscape rendering fly-by
+COMMENT=	Voxel-style landscape rendering fly-by
 
 USE_BUILDLINK2=	YES
 USE_X11=	YES

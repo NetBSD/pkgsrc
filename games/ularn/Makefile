@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/19 08:54:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 16:50:01 martti Exp $
 
 DISTNAME=		ularn
 PKGNAME=		ularn-6.12.92
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.win.tue.nl/pub/games/larn/
 
 MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.win.tue.nl/games/roguelike/larn/
-COMMENT=		fantasy roguelike game based on vintage larn
+COMMENT=		Fantasy roguelike game based on vintage larn
 
 HAS_CONFIGURE=          # defined
 CONFIGURE_ENV+=         PREFIX=${LOCALBASE}

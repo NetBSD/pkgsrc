@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/19 08:54:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/21 16:51:41 martti Exp $
 #
 
 DISTNAME=	gfract-0.21
@@ -9,7 +9,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} gfract-palettes-0.1.tar.gz
 
 MAINTAINER=	collver1@comcast.net
 HOMEPAGE=	http://www.cs.Helsinki.FI/u/salerma/gfract/
-COMMENT=	gtk-based fractal program
+COMMENT=	Gtk-based fractal program
 
 USE_BUILDLINK2=	yes
 USE_X11=	yes

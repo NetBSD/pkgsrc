@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:43:10 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 16:51:54 martti Exp $
 #
 
 DISTNAME=		xine-ui-0.9.20
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://xinehq.de/
-COMMENT=		skinned xlib-based xine gui
+COMMENT=		Skinned xlib-based xine gui
 
 BUILD_USES_MSGFMT=	YES
 BUILDLINK_DEPENDS.curl=	curl>7.10.2

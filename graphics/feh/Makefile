@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 21:40:28 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/21 16:51:38 martti Exp $
 #
 
 DISTNAME=	feh-1.2.6
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.linuxbrit.co.uk/downloads/
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.linuxbrit.co.uk/feh/
-COMMENT=	advanced image viewer
+COMMENT=	Advanced image viewer
 
 DEPENDS+=	wget-[0-9]*:../../net/wget
 

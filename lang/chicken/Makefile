@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:44:03 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 16:54:00 martti Exp $
 #
 
 DISTNAME=	chicken-1.0
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.call-with-current-continuation.org/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.call-with-current-continuation.org/chicken.html
-COMMENT=	scheme to C compiler, handling R5RS
+COMMENT=	Scheme to C compiler, handling R5RS
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

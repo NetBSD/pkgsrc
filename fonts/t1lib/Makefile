@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:37:38 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 16:47:09 martti Exp $
 
 DISTNAME=	t1lib-1.3.1
 CATEGORIES=	fonts devel graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=libs/graphics/} \
 		ftp://ftp.foolabs.com/pub/xpdf/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-COMMENT=	library for generating bitmaps from Adobe Type 1 fonts
+COMMENT=	Library for generating bitmaps from Adobe Type 1 fonts
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
