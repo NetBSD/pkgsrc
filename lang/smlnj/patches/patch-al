@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.1 2003/03/21 22:54:42 wiz Exp $
+$NetBSD: patch-al,v 1.2 2004/04/09 23:19:37 snj Exp $
 
---- src/runtime/objs/mk.x86-netbsd.orig	Mon Nov  6 16:41:04 2000
+--- src/runtime/objs/mk.x86-netbsd.orig	2004-01-31 15:24:42.000000000 +0100
 +++ src/runtime/objs/mk.x86-netbsd
 @@ -9,7 +9,7 @@ MAKE =		gmake
  
@@ -8,6 +8,6 @@ $NetBSD: patch-al,v 1.1 2003/03/21 22:54:42 wiz Exp $
  CC =		gcc -ansi
 -CFLAGS =	-O2
 +CFLAGS =	@CFLAGS@
- CPP =		gcc -x c -E -P -ansi
+ CPP =		gcc -x assembler-with-cpp -E -P
  #CPP =		/usr/bin/cpp -P
  
