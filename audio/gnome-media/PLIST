@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:16:41 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:03:54 skrll Exp $
 bin/cddbslave
 bin/cddbsubmit
 bin/gmix
@@ -70,11 +70,11 @@ share/pixmaps/gnome-vumeter.png
 share/mime-info/grecord.keys
 share/mime-info/grecord.mime
 @dirrm share/omf/gnome-media
-@exec /bin/mkdir -p /usr/X11R6/share/gnome/help/gmix/it/stylesheet-images
+@exec /bin/mkdir -p %D/share/gnome/help/gmix/it/stylesheet-images
 @dirrm share/gnome/help/gmix/it/stylesheet-images
 @dirrm share/gnome/help/gmix/it/figures
 @dirrm share/gnome/help/gmix/it
-@exec /bin/mkdir -p /usr/X11R6/share/gnome/help/gmix/C/stylesheet-images
+@exec /bin/mkdir -p %D/share/gnome/help/gmix/C/stylesheet-images
 @dirrm share/gnome/help/gmix/C/stylesheet-images
 @dirrm share/gnome/help/gmix/C/figures
 @dirrm share/gnome/help/gmix/C

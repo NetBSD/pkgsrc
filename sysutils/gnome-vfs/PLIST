@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/12/29 11:07:45 abs Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/05 22:03:56 skrll Exp $
 bin/gnome-vfs-config
 etc/gnome-vfs-mime-magic
 etc/vfs/modules/default-modules.conf
@@ -145,7 +145,7 @@ share/locale/wa/LC_MESSAGES/gnome-vfs.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-vfs.mo
 share/mime-info/gnome-vfs.keys
 share/mime-info/gnome-vfs.mime
-@exec /bin/mkdir -p /usr/X11R6/share/gtk-doc/html/gnome-vfs
+@exec /bin/mkdir -p %D/share/gtk-doc/html/gnome-vfs
 @dirrm share/gtk-doc/html/gnome-vfs
 @dirrm lib/vfs/modules
 @dirrm lib/vfs/extfs

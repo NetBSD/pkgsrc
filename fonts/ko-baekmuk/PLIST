@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:49:05 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:03:55 skrll Exp $
 lib/X11/fonts/local/batang10.pcf.gz
 lib/X11/fonts/local/batang10b.pcf.gz
 lib/X11/fonts/local/batang12.pcf.gz
@@ -41,5 +41,5 @@ lib/X11/fonts/local/hline16.pcf.gz
 lib/X11/fonts/local/hline18.pcf.gz
 lib/X11/fonts/local/hline20.pcf.gz
 lib/X11/fonts/local/hline24.pcf.gz
-@exec /usr/X11R6/bin/mkfontdir %D/lib/X11/fonts/local
-@unexec /usr/X11R6/bin/mkfontdir %D/lib/X11/fonts/local
+@exec ${X11BASE}/bin/mkfontdir %D/lib/X11/fonts/local
+@unexec ${X11BASE}/bin/mkfontdir %D/lib/X11/fonts/local

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:49:08 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:03:56 skrll Exp $
 lib/X11/fonts/local/mzgt16e.pcf.gz
 lib/X11/fonts/local/mzgt16h.pcf.gz
 lib/X11/fonts/local/mzgt16h1.pcf.gz
@@ -8,5 +8,5 @@ lib/X11/fonts/local/mzpg16e.pcf.gz
 lib/X11/fonts/local/mzpg16h.pcf.gz
 lib/X11/fonts/local/mzsm16e.pcf.gz
 lib/X11/fonts/local/mzsm16h.pcf.gz
-@exec /usr/X11R6/bin/mkfontdir %D/lib/X11/fonts/local
-@unexec /usr/X11R6/bin/mkfontdir %D/lib/X11/fonts/local
+@exec ${X11BASE}/bin/mkfontdir %D/lib/X11/fonts/local
+@unexec ${X11BASE}/bin/mkfontdir %D/lib/X11/fonts/local

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.920 2002/01/29 15:07:55 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.921 2002/02/05 22:03:57 skrll Exp $
 #
 # This file is in the public domain.
 #
@@ -507,6 +507,9 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		PKGNAME=${PKGNAME}					\
 		PKGLOCALEDIR=${PKGLOCALEDIR}				\
 		PKGVERSION=${PKGVERSION:C/nb[0-9]*$//}			\
+		LOCALBASE=${LOCALBASE}					\
+		X11BASE=${X11BASE}					\
+		X11PREFIX=${X11PREFIX}					\
 		SVR4_PKGNAME=${SVR4_PKGNAME}				\
 		CHGRP=${CHGRP:Q}					\
 		CHMOD=${CHMOD:Q}					\
