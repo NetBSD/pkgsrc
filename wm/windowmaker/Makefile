@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2002/11/07 18:29:35 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2002/11/21 16:08:49 tron Exp $
 
-VERS=			0.80.1
+VERS=			0.80.2
 DISTNAME=		WindowMaker-${VERS}
 PKGNAME=		windowmaker-${VERS}
 # PKGREVISION=		1
