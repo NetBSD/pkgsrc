@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2558 2003/06/23 11:26:49 adam Exp $
+$NetBSD: CHANGES,v 1.2559 2003/06/23 11:50:55 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2536,3 +2536,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated netsaint-base to 0.0.7nb3 [adam 2003-06-23]
 	Updated ups-nut-cgi to 1.2.1nb2 [adam 2003-06-23]
 	Updated webalizer to 2.1.10nb1 [adam 2003-06-23]
+	Updated pax to 20030622 [grant 2003-06-23]
