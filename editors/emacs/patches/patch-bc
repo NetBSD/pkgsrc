@@ -1,0 +1,7 @@
+--- /dev/null	Sat Feb 27 22:07:19 1999
++++ lisp/site-init.el	Sat Feb 27 22:14:40 1999
+@@ -0,0 +1,4 @@
++;; NetBSD puts info files in /usr/share.
++(setq Info-default-directory-list
++      (cons "/usr/share/info/"
++	    Info-default-directory-list))
