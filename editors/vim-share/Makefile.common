@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2001/03/07 15:52:01 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2001/04/19 13:55:17 wiz Exp $
 
 VIM_VERSION=		5.7
 
@@ -16,7 +16,7 @@ HOMEPAGE=		http://www.vim.org
 GNU_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 
-DIGEST_FILE=		${.CURDIR}/../vim-share/files/md5
+DISTINFO_FILE=		${.CURDIR}/../vim-share/distinfo
 PATCHDIR=		${WRKDIR}/.patches
 
 pre-patch:
