@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/01/23 03:56:11 mellon Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/26 18:56:14 garbled Exp $
 #
 
 DISTNAME=       gnucash-1.1.25
@@ -17,6 +17,7 @@ DEPENDS +=	XmHTML-1.1.5:../../x11/XmHTML
 DEPENDS +=	guile-1.3:../../lang/guile
 DEPENDS +=	libperl-5.00404:../../lang/libperl
 
+USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-guile=${PREFIX} --with-perl-includes=${PREFIX}/lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE
 USE_GMAKE=	yes

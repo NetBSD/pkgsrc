@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/04/05 05:08:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 1999/04/26 18:56:13 garbled Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
@@ -32,6 +32,7 @@ DEPENDS+=	nmh-1.0:../../mail/nmh
 DEPENDS+=	mm-2.7:../../mail/metamail
 
 DIST_SUBDIR=	${PKGNAME}
+USE_X11=	yes
 
 WISH=		wish8.0
 TCLSH=		tclsh8.0

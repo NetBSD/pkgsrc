@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/04/01 13:38:45 agc Exp $
+# $NetBSD: Makefile,v 1.8 1999/04/26 18:56:15 garbled Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/22 19:55:25 jseger Exp
 #
 
@@ -12,6 +12,7 @@ MAINTAINER=	shanee@augusta.de
 DEPENDS+=	tk-8.0.5:../../x11/tk80
 
 NO_BUILD=	yes
+USE_X11=	yes
 
 post-patch:
 	( cd ${WRKSRC} ; ${SED} 's|/usr/local|'${PREFIX}'|g' \

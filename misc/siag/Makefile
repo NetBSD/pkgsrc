@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/04/10 02:25:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1999/04/26 18:56:15 garbled Exp $
 
 DISTNAME=       siag-3.1.11
 CATEGORIES=     misc textproc math
@@ -14,6 +14,7 @@ DEPENDS+=	guile-1.3:../../lang/guile
 
 GNU_CONFIGURE=  yes
 USE_GMAKE=	yes
+USE_X11=	yes
 
 CFLAGS+=	-Dunix
 LDFLAGS+=	-Wl,-R${X11BASE}/lib

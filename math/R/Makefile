@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/02/20 22:48:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1999/04/26 18:56:15 garbled Exp $
 #
 
 DISTNAME=	R-0.63.1
@@ -22,6 +22,7 @@ DEPENDS+=	f2c-19980913:../../lang/f2c
 .endif
 DEPENDS+=	readline-2.2:../../devel/readline
 
+USE_X11=	yes
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-readline --with-x
