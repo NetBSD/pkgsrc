@@ -1,14 +1,14 @@
-/*	$NetBSD: pkgdb.c,v 1.12 2003/09/02 01:37:05 jlam Exp $	*/
+/*	$NetBSD: pkgdb.c,v 1.13 2003/09/02 08:28:35 jlam Exp $	*/
 
-#include <nbcompat.h>
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#include <nbcompat.h>
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: pkgdb.c,v 1.12 2003/09/02 01:37:05 jlam Exp $");
+__RCSID("$NetBSD: pkgdb.c,v 1.13 2003/09/02 08:28:35 jlam Exp $");
 #endif
 
 /*
@@ -253,7 +253,7 @@ pkgdb_remove_pkg(const char *pkg)
 	return ret;
 }
 
-#else /* if !HAVE_DBOPEN */
+#else /* !HAVE_DBOPEN */
 
 int	pkgdb_open(int mode) { return -1; }
 void	pkgdb_close(void) {}

@@ -35,10 +35,10 @@
  */
 
 
-#include <nbcompat.h>
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#include <nbcompat.h>
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
@@ -65,7 +65,7 @@
 #include "lib.h"
 
 #ifndef lint
-__RCSID("$NetBSD: fexec.c,v 1.1 2003/09/01 16:27:14 jlam Exp $");
+__RCSID("$NetBSD: fexec.c,v 1.2 2003/09/02 08:28:32 jlam Exp $");
 #endif
 
 static int	vfcexec(const char *, const char *, va_list);
