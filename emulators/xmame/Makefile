@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 1999/02/20 22:48:28 hubertf Exp $
+# $NetBSD: Makefile,v 1.30 1999/04/03 21:45:16 mycroft Exp $
 #
 
-DISTNAME=		xmame-0.34b8.1
+DISTNAME=		xmame-0.35b8.1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://xmame.retrogames.com/download/
 EXTRACT_SUFX=		.tgz
@@ -40,7 +40,7 @@ NETBSD_DGA=		no
 
 post-patch:
 	(cd ${WRKSRC}/doc && ${SED} 's|@ROMPATH@|${ROMPATH}|;s|@SPOOLDIR@|${SPOOLDIR}|' xmamerc.dist >xmamerc)
-	(cd ${WRKSRC}/src/unix && ${MV} netbsd_i386.c netbsd.c)
+	(cd ${WRKSRC}/src/unix/sound-drivers && ${MV} netbsd_i386.c netbsd.c)
 
 do-install:
 	(cd ${WRKSRC} && ${INSTALL_PROGRAM} xmame.${DISPLAY_METHOD} ${PREFIX}/bin/xmame)
