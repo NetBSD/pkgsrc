@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1245 2003/08/24 08:51:11 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1246 2003/08/26 20:15:23 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -145,17 +145,24 @@ PKG_FAIL_REASON+= "${PKGNAME} uses imake, but the buildlink-x11 package was foun
 .  endif
 .endif	# USE_IMAKE
 
+.if defined(USE_GNU_TOOLS) && !empty(USE_GNU_TOOLS:Mmake)
+_USE_GMAKE=		yes
+.endif
+
+# XXX USE_GMAKE is redundant since USE_GNU_TOOLS+=make accomplishes the
+# XXX same thing but by using the more general tools.mk framework.  This
+# XXX variable should eventually be reaped from pkgsrc.
+#
 .if defined(USE_GMAKE)
-.  if ${_OPSYS_HAS_GMAKE} == "no"
-BUILD_DEPENDS+=		gmake>=3.78:../../devel/gmake
-.  endif
+_USE_GMAKE=		yes
+.endif
+
+.if defined(_USE_GMAKE)
 MAKE_PROGRAM=		${GMAKE}
-.else
-.  if defined(USE_IMAKE)
+.elif defined(USE_IMAKE)
 MAKE_PROGRAM=		${_IMAKE_MAKE}
-.  else
+.else
 MAKE_PROGRAM=		${MAKE}
-.  endif
 .endif
 CONFIGURE_ENV+=		MAKE="${MAKE_PROGRAM}"
 
@@ -4324,7 +4331,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 .  if defined(USE_PERL5) && (${USE_PERL5} == "run")
 	@${ECHO} "PERL=`${PERL5} --version 2>/dev/null | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
 .  endif
-.  ifdef USE_GMAKE
+.  ifdef _USE_GMAKE
 	@${ECHO} "GMAKE=`${GMAKE} --version | ${GREP} Make`" >> ${BUILD_INFO_FILE}
 .  endif
 .  if ${CHECK_SHLIBS} == "YES"
