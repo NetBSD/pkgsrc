@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2078 2003/04/29 21:38:05 jtb Exp $
+$NetBSD: CHANGES,v 1.2079 2003/04/29 21:54:18 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1782,3 +1782,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added phoenix-bin-realplayer-1.0 [kei 2003-04-29]
 	Updated poppassd to 4.0.5nb1 [taca 2003-04-29]
 	Updated vm to 7.14 [jtb 2003-04-29]
+	Updated qcad to 1.5.4 [jtb 2003-04-29]
