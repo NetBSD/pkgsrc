@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3276 2003/09/08 12:14:07 wiz Exp $
+$NetBSD: CHANGES,v 1.3277 2003/09/08 12:29:04 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3571,3 +3571,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dnetc to 2.8018.472 [jmmv 2003-09-08]
 	Updated xscreensaver to 4.13 [wiz 2003-09-08]
 	Updated xscreensaver-gnome to 4.13 [wiz 2003-09-08]
+	Updated xmlcatmgr to 1.0 [jmmv 2003-09-08]
