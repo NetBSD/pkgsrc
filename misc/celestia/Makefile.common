@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/11/12 15:12:00 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/11/16 14:34:39 adam Exp $
 
 DISTNAME=	celestia-${CELESTIA_VERS}
 CATEGORIES=	misc x11
@@ -17,7 +17,6 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
-#CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
 CONFIGURE_ARGS+=	--with-lua --with-glut
 
 CXXFLAGS+=	-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
