@@ -1,0 +1,13 @@
+Curl is a tool for getting files with URL syntax, supporting FTP,
+HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. Curl supports HTTP
+POST, HTTP PUT, FTP uploading, HTTP form based upload, proxies,
+cookies, user+password authentication and a busload of other useful
+tricks.
+
+The main use for curl is when you want to get or send files
+automatically to or from a site using one of the supported protocols.
+
+Curl is free and open software that compiles under just about any Unix
+as well as win32 systems. It is a product of efforts from many
+authors, with Daniel Stenberg being main author and project
+maintainer.
