@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8134 2004/11/29 08:24:29 martin Exp $
+$NetBSD: CHANGES,v 1.8135 2004/11/29 09:08:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5621,3 +5621,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ja-mh6 to 3.05 [taca 2004-11-29]
 	Updated dspam to 3.2.3 [xtraeme 2004-11-29]
 	Updated open2300 and open2300-mysql to 1.8 [martin 2004-11-29]
+	Updated cln to 1.1.9 [adam 2004-11-29]
+	Updated ImageMagick to 6.1.5-7 [adam 2004-11-29]
