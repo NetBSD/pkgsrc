@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/05/18 11:58:05 recht Exp $
+# $NetBSD: Makefile,v 1.20 2004/05/19 01:27:03 jschauma Exp $
 #
 
 DISTNAME=	patch-2.5.4
@@ -15,6 +15,10 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
+
+# This is the package that provides gpatch!  So don't create a
+# circular dependency.
+_OPSYS_GPATCH_REQD=	NO
 
 .if defined(GNU_PROGRAM_PREFIX)
 CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
