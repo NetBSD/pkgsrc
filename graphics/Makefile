@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2001/07/11 08:28:11 zuntum Exp $
+# $NetBSD: Makefile,v 1.146 2001/07/12 21:34:45 dillo Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -16,6 +16,7 @@ SUBDIR+=	apla
 SUBDIR+=	autotrace
 SUBDIR+=	avifile
 SUBDIR+=	avifile-devel
+SUBDIR+=	barcode
 SUBDIR+=	blender
 SUBDIR+=	camediaplay
 SUBDIR+=	cdlabelgen
