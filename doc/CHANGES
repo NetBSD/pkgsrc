@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6081 2004/05/31 19:01:51 heinz Exp $
+$NetBSD: CHANGES,v 1.6082 2004/06/01 04:31:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2711,3 +2711,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pcb-current to 20040530 [dmcmahill 2004-05-31]
 	Updated gail to 1.6.5 [recht 2004-05-31]
 	Updated spamassassin to 2.63nb2 [heinz 2004-05-31]
+	Updated unzip to 5.51 [minskim 2004-06-01]

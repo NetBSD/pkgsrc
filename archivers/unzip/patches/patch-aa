@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 1998/12/30 04:06:35 tv Exp $
+$NetBSD: patch-aa,v 1.4 2004/06/01 04:31:42 minskim Exp $
 
---- unzip.h.orig	Sat Oct 18 18:58:07 1997
-+++ unzip.h	Sat Jun 20 18:33:18 1998
-@@ -175,10 +175,15 @@
+--- unzip.h.orig	2004-05-22 20:04:23.000000000 -0500
++++ unzip.h
+@@ -258,11 +258,16 @@ freely, subject to the following restric
  #endif
  
  /* used to remove arguments in function prototypes for non-ANSI C */
@@ -14,7 +14,8 @@ $NetBSD: patch-aa,v 1.3 1998/12/30 04:06:35 tv Exp $
  #  define OF(a) a
  #else
  #  define OF(a) ()
-+#endif
  #endif
++#endif
  
  /* enable the "const" keyword only if MODERN and if not otherwise instructed */
+ #ifdef MODERN
