@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2004/01/25 07:43:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.49 2004/01/26 10:10:56 xtraeme Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in mk/buildlink[23]/bsd.buildlink[23].mk
@@ -29,10 +29,7 @@ PLIST_SRC.files=	${PLIST_SRC}.files
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !exists(${X11BASE}/include/X11/X.h) && \
-	!empty(USE_PKGSRC_XFREE86:M[Yy][Ee][Ss])
-DEPENDS+=	XFree86-libs>=4.3.0:../../x11/XFree86-libs
-.elif !exists(${X11BASE}/include/X11/X.h)
+.if !exists(${X11BASE}/include/X11/X.h)
 PKG_FAIL_REASON=	"${PKGNAME} requires X headers to be installed"
 .endif
 
