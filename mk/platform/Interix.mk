@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.1 2004/10/06 20:51:47 jlam Exp $
+# $NetBSD: Interix.mk,v 1.2 2004/10/09 03:49:13 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -59,8 +59,6 @@ PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
-# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
-# and remove this comment.
 RSH?=		/usr/bin/rsh
 SED?=		${LOCALBASE}/bin/nbsed
 SETENV?=	/bin/env
@@ -98,7 +96,11 @@ MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 NOLOGIN?=		/bin/false
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 PKGDIRMODE?=		775
+.if ${BINOWN} == 197108
+ROOT_CMD?=		${SU} - "$$(id -un 197108)" -c
+.else
 ROOT_CMD?=		${SU} - ${ROOT_USER} -c
+.endif
 ROOT_USER?=		${BINOWN}
 ROOT_GROUP?=		131616 # +Administrators or native language equivalent
 TOUCH_FLAGS?=
@@ -157,11 +159,6 @@ _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 
 DEFAULT_SERIAL_DEVICE?=	/dev/tty00
 SERIAL_DEVICES?=	/dev/tty00 /dev/tty01 /dev/tty02 /dev/tty03
-
-# Interix needs -D_ALL_SOURCE everywhere; little compiles without it.
-.if ${CPPFLAGS:M-D_ALL_SOURCE} == ""
-CPPFLAGS+=		-D_ALL_SOURCE
-.endif
 
 # poll(2) is broken; try to work around it by making autoconf believe
 # it's missing.  (Packages without autoconf will need explicit fixing.)
