@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2004/04/25 05:21:05 snj Exp $
+# $NetBSD: Makefile,v 1.63 2004/04/28 10:18:36 uebayasi Exp $
 #
 
 DISTNAME=	cvsync-0.24.15
@@ -9,11 +9,15 @@ MAINTAINER=	gehenna@NetBSD.ORG
 HOMEPAGE=	http://www.cvsync.org/
 COMMENT=	Portable incremental cvs repository syncer
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 USE_GNU_TOOLS+=	make
+INSTALLATION_DIRS=	bin man/man1
 
 MAKE_ENV+=	PTHREAD_TYPE=${PTHREAD_TYPE}
+MAKE_ENV+=	PTHREAD_PREFIX=${BUILDLINK_PREFIX.pthread}
 
 EGDIR=		${PREFIX}/share/examples/cvsync
 CONF_FILES+=	${EGDIR}/cvsync.conf ${PKG_SYSCONFDIR}/cvsync.conf
