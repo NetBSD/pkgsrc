@@ -1,0 +1,26 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/11/08 19:05:33 adrianp Exp $
+
+To complete the setup you will need to read the INSTALL guide in order
+to setup mySQL properly.  In particular secion 3 of the document deals
+with database setup.  
+
+You will need to make Mantis accessible through your HTTP server.
+If you are running Apache then you may add the following lines to httpd.conf:
+
+	Include ${PKG_SYSCONFDIR}/httpd/mantis.conf
+
+to make Mantis accessible through:
+	
+	http://www.domain.com/mantis/index.php
+
+You can also use the following URL to check your installation:
+	
+	http://www.domain.com/mantis/admin/index.php
+
+IMPORTANT SECURITY NOTES:
+
+	* Change your database password from the default and update your
+	  config_inc.php to reflect the new password.
+	* Once Mantis is running correctly remove the admin directory.
+===========================================================================
