@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/08/24 12:33:38 agc Exp $
+$NetBSD: patch-ab,v 1.2 1999/08/24 12:13:00 sakamoto Exp $
 
-*** sourceold/unix/makefile	Tue Sep  3 08:48:13 1996
---- source/unix/makefile	Tue Dec  3 22:49:24 1996
+*** source/unix/makefile.orig	Sun Feb  2 21:16:04 1997
+--- source/unix/makefile	Tue Aug 24 20:30:57 1999
 ***************
 *** 28,44 ****
   # Use libXXX.a if you want to force static linking of the libraries.
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/08/24 12:33:38 agc Exp $
 ! LIBPNGINC = -I${PREFIX}/include
   #LIBPNGLIB = $(PNGDIR)/libpng.a
 ! #LIBPNGLIB = -L$(PNGDIR) -lpng
-! LIBPNGLIB = -L${PREFIX}/lib -lpng
+! LIBPNGLIB = -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib -lpng
   
 ! #ZLIBDIR = $(SRCDIR)/zlib
 ! #ZLIBINC = -I$(ZLIBDIR)
@@ -40,7 +40,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/08/24 12:33:38 agc Exp $
   # This is the suffix for object files.
   OBJ     = .o
 ***************
-*** 55,61 ****
+*** 55,66 ****
   #X11 = /usr/local/X11R6
   #X11 = /usr/openwin        # for some SunOS systems
   #X11 = /usr/lpp/X11        # for some AIX systems
@@ -48,7 +48,12 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/08/24 12:33:38 agc Exp $
   
   # You probably won't need to change these if you have the X11 variable
   #   above set properly...
---- 55,61 ----
+  XLIBINC = -I$(X11)/include
+! XLIBLIB = -L$(X11)/lib -lX11
+  
+  # Libraries for the SVGA Linux version
+  SLIBLIB = -lvga -lvgagl
+--- 55,66 ----
   #X11 = /usr/local/X11R6
   #X11 = /usr/openwin        # for some SunOS systems
   #X11 = /usr/lpp/X11        # for some AIX systems
@@ -56,8 +61,13 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/08/24 12:33:38 agc Exp $
   
   # You probably won't need to change these if you have the X11 variable
   #   above set properly...
+  XLIBINC = -I$(X11)/include
+! XLIBLIB = -Wl,-rpath,$(X11)/lib -L$(X11)/lib -lX11
+  
+  # Libraries for the SVGA Linux version
+  SLIBLIB = -lvga -lvgagl
 ***************
-*** 901,907 ****
+*** 910,916 ****
                             config.h             \
                             $(SRCDIR)/frame.h    \
                             $(SRCDIR)/optout.h   \
@@ -65,4 +75,4 @@ $NetBSD: patch-ab,v 1.1.1.1 1998/08/24 12:33:38 agc Exp $
                             $(SRCDIR)/png_pov.h  \
                             $(SRCDIR)/point.h    \
                             $(SRCDIR)/povproto.h \
---- 901,906 ----
+--- 910,915 ----
