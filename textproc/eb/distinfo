@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.6 2003/02/08 12:38:08 cjep Exp $
+$NetBSD: distinfo,v 1.7 2003/03/11 23:37:27 wiz Exp $
 
 SHA1 (eb/eb-3.2.3.tar.gz) = 1812f7773f5352403d3fd40a5d7c75b0f02c4ea8
 Size (eb/eb-3.2.3.tar.gz) = 1011232 bytes
-SHA1 (eb/LIST) = 03cc7f7c41b415fd7ea9c119ee1cb9c445617cdd
-Size (eb/LIST) = 9136 bytes
-SHA1 (eb/LIST-ja) = f21e7765c637ad13beb8171edf70b0587f298e19
-Size (eb/LIST-ja) = 10737 bytes
+SHA1 (eb/LIST) = d1d476a5a529c61aa30b99f48d1f22da9cbf57ff
+Size (eb/LIST) = 9253 bytes
+SHA1 (eb/LIST-ja) = 85647a7aadf3197d27cbe285dc410aa94dbbc8c2
+Size (eb/LIST-ja) = 10841 bytes
 SHA1 (eb/cencro-1.0.tar.gz) = 3b5c692fc8273e0e61c6b28e29a30875d9f609ad
 Size (eb/cencro-1.0.tar.gz) = 1666 bytes
 SHA1 (eb/chujiten-2.3.tar.gz) = 7d995a898666ab611e58d3d0087df0c1a62938d1
