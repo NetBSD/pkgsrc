@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 1999/05/06 07:30:17 sakamoto Exp $
+# $NetBSD: Makefile,v 1.91 1999/05/28 21:11:14 mjl Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -93,6 +93,7 @@
     SUBDIR += wmthemes
 #    SUBDIR += wm2
     SUBDIR += wterm
+    SUBDIR += x2x
     SUBDIR += x3270
 #    SUBDIR += xalarm
 #    SUBDIR += xantfarm
