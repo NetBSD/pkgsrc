@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/10/15 21:29:45 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/12/28 21:43:12 jmmv Exp $
 include/libgtkhtml-3.1/gtkhtml/gtkhtml-compat.h
 include/libgtkhtml-3.1/gtkhtml/gtkhtml-embedded.h
 include/libgtkhtml-3.1/gtkhtml/gtkhtml-enums.h
@@ -178,6 +178,7 @@ ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gtkhtml-3.1.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gtkhtml-3.1.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gtkhtml-3.1.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gtkhtml-3.1.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gtkhtml-3.1.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtkhtml-3.1.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtkhtml-3.1.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gtkhtml-3.1.mo
