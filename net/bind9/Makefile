@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/07/19 11:20:30 martti Exp $
+# $NetBSD: Makefile,v 1.41 2002/07/24 12:55:56 grant Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -16,6 +16,10 @@ DIST_SUBDIR=	bind/${BIND_VERSION}
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=	USE_INET6
 # No need to set USE_INET6, will auto-detect.
+
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/lib/bind/libtool
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-threads	# Until we have real threads
