@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6299 2004/06/24 15:28:59 dillo Exp $
+$NetBSD: CHANGES,v 1.6300 2004/06/24 16:57:45 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3015,6 +3015,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmame to 0.83.1 [kristerw 2004-06-21]
 	Updated xmess to 0.83.1 [kristerw 2004-06-21]
 	Updated rconfig to 0.33 [abs 2004-06-21]
+	Added ap2-auth-pgsql-2.0.2b [darcy 2004-06-21]
 	Updated wmi to 8 [salo 2004-06-22]
 	Updated screws to 0.54 [xtraeme 2004-06-22]
 	Updated p5-Device-Modem to 1.36 [grant 2004-06-22]
@@ -3044,3 +3045,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated R to 1.9.1 [markd 2004-06-24]
 	Updated mit-krb5 to 1.3.4 [jlam 2004-06-24]
 	Added freedroid-1.02 [dillo 2004-06-24]
+	Updated postgresql to 7.3.6 [darcy 2004-06-24]
