@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2001/02/26 20:19:50 tron Exp $
+# $NetBSD: Makefile,v 1.60 2001/03/27 03:20:26 hubertf Exp $
 
 DISTNAME=		gnome-core-1.2.4
 CATEGORIES=		x11 gnome
@@ -12,7 +12,7 @@ DEPENDS+=		gdk-pixbuf-gnome>=0.9.0nb1:../../graphics/gdk-pixbuf-gnome
 DEPENDS+=		libghttp>=1.0.4:../../www/libghttp
 DEPENDS+=		libxml-*:../../textproc/libxml
 DEPENDS+=		xscreensaver-gnome>=3.25nb1:../xscreensaver-gnome
-BUILD_DEPENDS+=		msgfmt:../../devel/gettext
+BUILD_USES_MSGFMT=	yes
 
 USE_LIBINTL=		YES
 USE_X11BASE=		YES

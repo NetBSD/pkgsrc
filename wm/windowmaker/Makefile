@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/03/11 16:59:03 mjl Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/27 03:20:20 hubertf Exp $
 
 DISTNAME=		WindowMaker-0.64.0
 PKGNAME=		windowmaker-0.64.0
@@ -11,8 +11,8 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.windowmaker.org/
 COMMENT=		GNUStep-compliant NEXTSTEP(tm) window manager clone
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
-BUILD_DEPENDS+=		gettextize:../../devel/gettext
+BUILD_DEPENDS+=		automake-1.4:../../devel/automake
+BUILD_USES_MSGFMT=	yes
 DEPENDS+=		libproplist-0.10.*:../../devel/libproplist
 DEPENDS+=		libungif-*:../../graphics/libungif
 DEPENDS+=		jpeg-6b:../../graphics/jpeg

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/03/05 20:11:26 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2001/03/27 03:20:05 hubertf Exp $
 #
 
 DISTNAME=		xfmail-1.4.7
@@ -10,7 +10,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://xfmail.slappy.org/
 COMMENT=		Xforms based mail application for Unix operating systems
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoheader:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 DEPENDS+=		gdbm>=1.7.3:../../databases/gdbm
 DEPENDS+=		xforms>=0.88nb1:../../x11/xforms
 DEPENDS+=		glib-*:../../devel/glib

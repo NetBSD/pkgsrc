@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:51:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/27 03:20:14 hubertf Exp $
 
 DISTNAME=	xpp-1.0
 CATEGORIES=	print x11
@@ -8,7 +8,7 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://cups.sourceforge.net/xpp/index.html
 COMMENT=	X Printing Panel
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 DEPENDS+=	cups>=1.1.1:../../print/cups
 DEPENDS+=	fltk>=1.0.9:../../x11/fltk
 

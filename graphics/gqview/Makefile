@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/03/15 14:55:23 zuntum Exp $
+# $NetBSD: Makefile,v 1.16 2001/03/27 03:20:00 hubertf Exp $
 #
 
 DISTNAME=	gqview-0.10.1
@@ -11,7 +11,7 @@ COMMENT=	another gtk-based graphic file viewer
 
 DEPENDS+=	gdk-pixbuf>=0.9.0:../../graphics/gdk-pixbuf
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-BUILD_DEPENDS+=	msgfmt:../../devel/gettext
+BUILD_USES_MSGFMT=	yes
 
 USE_LIBINTL=	yes
 USE_X11BASE=	yes
