@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.14 1999/10/22 23:35:04 tron Exp $
+$NetBSD: patch-aa,v 1.15 1999/11/22 11:23:43 agc Exp $
 
---- configure.orig	Mon Aug 23 23:31:31 1999
-+++ configure	Sun Aug 29 00:36:21 1999
+--- configure.orig	Thu Oct  7 18:52:16 1999
++++ configure	Mon Nov 22 11:20:03 1999
 @@ -22,8 +22,8 @@
  #
  GTK_MAJOR_VERSION=1
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.14 1999/10/22 23:35:04 tron Exp $
  GTK_BINARY_AGE=6
  GTK_VERSION=$GTK_MAJOR_VERSION.$GTK_MINOR_VERSION.$GTK_MICRO_VERSION
  ac_help="$ac_help
-@@ -1389,6 +1389,7 @@
+@@ -1391,6 +1391,7 @@
  
  
  # Check for any special flags to pass to ltconfig.
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.14 1999/10/22 23:35:04 tron Exp $
  libtool_flags="--cache-file=$cache_file"
  test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
  test "$enable_static" = no && libtool_flags="$libtool_flags --disable-static"
-@@ -1541,6 +1542,7 @@
+@@ -1543,6 +1544,7 @@
  
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.14 1999/10/22 23:35:04 tron Exp $
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
-@@ -4076,7 +4078,7 @@
+@@ -4087,7 +4089,7 @@
  
  # AM_GTK_GNU_GETTEXT above substs $DATADIRNAME
  # this is the directory where the *.{mo,gmo} files are installed
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.14 1999/10/22 23:35:04 tron Exp $
  
  
  echo $ac_n "checking for extra flags to get ANSI library prototypes""... $ac_c" 1>&6
-@@ -6990,10 +6992,12 @@
+@@ -6897,10 +6899,12 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
