@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/12/19 00:53:47 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2003/03/01 11:05:08 jlam Exp $
 #
 
 VERS=		3.93.1
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--without-vorbis
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(LAME_USE_GTK)
+CONFIGURE_ENV+=		GTK_CONFIG=${BUILDLINK_PREFIX.gtk}/bin/gtk-config
 .  include "../../x11/gtk/buildlink2.mk"
 .else
 CONFIGURE_ARGS+=	--disable-analyzer
