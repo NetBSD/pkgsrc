@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7251 2004/09/25 22:20:53 rh Exp $
+$NetBSD: CHANGES,v 1.7252 2004/09/25 23:04:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4430,3 +4430,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated prboom to 2.2.5 [snj 2004-09-25]
 	Updated subversion to 1.0.8 [epg 2004-09-25]
 	Added palmpower-1.0.2 [rh 2004-09-25]
+	Updated kanjipad to 2.0.0 [wiz 2004-09-25]
