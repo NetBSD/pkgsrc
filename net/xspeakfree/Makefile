@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/07/29 03:14:18 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/31 15:02:25 jwise Exp $
 
 DISTNAME=	xspeakfree-0.8.1
 CATEGORIES=	net audio x11
@@ -8,11 +8,11 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.spearce.org/projects/xspeakfree/
 
 DEPENDS+=	speakfreely>=7.1:../../net/speakfreely
-DEPENDS+=	tk-8.0.*:../../x11/tk80
+DEPENDS+=	tk-8.3.2:../../x11/tk
 
 NO_BUILD=	yes
 
-WISH=		${LOCALBASE}/bin/wish8.0
+WISH=		${LOCALBASE}/bin/wish
 
 post-extract:
 	${MV} ${WRKSRC}/bin/xspeakfree ${WRKSRC}/bin/xspeakfree.in
