@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9306 2005/02/25 14:20:22 adam Exp $
+$NetBSD: CHANGES,v 1.9307 2005/02/25 15:06:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1071,6 +1071,22 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated oidentd to 2.0.7nb3 [tron 2005-02-24]
 	Updated sqlite3 to 3.1.3 [wiz 2005-02-24]
 	Updated sqlite to 2.8.16 [wiz 2005-02-24]
+	Updated emacs to 21.4 [drochner 2005-02-24]
+	Updated emacs-nox11 to 21.4 [drochner 2005-02-24]
+	Updated fltk to 1.1.6 [drochner 2005-02-24]
+	Added flphoto-1.2 [drochner 2005-02-24]
+	Updated gthumb to 2.6.3 [drochner 2005-02-24]
+	Updated libgda to 1.2.0 [drochner 2005-02-24]
+	Updated libgnomedb to 1.2.0 [drochner 2005-02-24]
+	Updated mergeant to 0.52 [drochner 2005-02-24]
+	Updated py-sqlite to 1.0.1 [drochner 2005-02-24]
+	Updated gramps to 1.0.10 [drochner 2005-02-24]
+	Updated qt3-scintilla to 1.5 [drochner 2005-02-24]
+	Updated py-qt3-sip to 4.2 [drochner 2005-02-24]
+	Updated py-qt3-qscintilla to 3.14 [drochner 2005-02-24]
+	Updated py-qt3-modules to 3.14 [drochner 2005-02-24]
+	Updated py-qt3-base to 3.14 [drochner 2005-02-24]
+	Updated eric3 to 3.6.2 [drochner 2005-02-24]
 	Updated szip to 2.0 [adam 2005-02-24]
 	Updated hdf to 4.2r1 [adam 2005-02-24]
 	Updated phpmyadmin to 2.6.1pl1 [adrianp 2005-02-24]
