@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1362 2004/01/27 16:11:47 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1363 2004/01/28 20:29:46 jschauma Exp $
 #
 # This file is in the public domain.
 #
@@ -4386,7 +4386,11 @@ print-summary-data:
 show-license show-licence:
 	@if [ "${LICENSE}" != "" ]; then				\
 		if [ -e ${_PKGSRCDIR}/licenses/${LICENSE} ]; then	\
-			${CAT} ${_PKGSRCDIR}/licenses/${LICENSE};	\
+			if [ "${PAGER}" != "" ]; then			\
+				${PAGER} ${_PKGSRCDIR}/licenses/${LICENSE};\
+			else						\
+				${CAT} ${_PKGSRCDIR}/licenses/${LICENSE};\
+			fi						\
 		else							\
 			${ECHO} "Generic ${LICENSE} information not available"; \
 			${ECHO} "See the package description (pkg_info -d ${PKGNAME}) for more information."; \
