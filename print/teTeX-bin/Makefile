@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/01/02 01:32:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2000/01/04 18:53:33 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -28,7 +28,6 @@ CONFIGURE_ARGS+=--without-texinfo \
 		--without-dialog \
 		--disable-multiplatform \
 		--enable-ipc \
-		--enable-auto-core \
 		--with-epsfwin \
 		--with-hp2627win \
 		--with-mftalkwin \
@@ -40,12 +39,19 @@ CONFIGURE_ARGS+=--without-texinfo \
 		--with-system-pnglib \
 		--with-pnglib-libdir=${LOCALBASE}/lib \
 		--with-pnglib-include=${LOCALBASE}/include \
-		--with-system-zlib \
-		--with-zlib-libdir=/usr/lib \
-		--with-zlib-include=/usr/include
+		--with-system-zlib 
 .include "../../mk/bsd.prefs.mk"
 .if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
 CONFIGURE_ARGS+=--enable-a4
+.endif
+
+.if ${OPSYS} != "SunOS"
+CONFIGURE_ARGS+=--enable-auto-core \
+		--with-zlib-libdir=/usr/lib \
+		--with-zlib-include=/usr/include
+.else
+CONFIGURE_ARGS+= --with-zlib-libdir=${LOCALBASE}/lib \
+		--with-zlib-include=${LOCALBASE}/include
 .endif
 
 CONFIGURE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
