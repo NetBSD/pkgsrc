@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2004/04/24 22:46:12 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2004/05/14 22:08:16 jmmv Exp $
 
 DISTNAME=		WindowMaker-0.80.2
-PKGNAME=		windowmaker-0.80.2
+PKGNAME=		${DISTNAME:S/WindowMaker/windowmaker/}
 PKGREVISION=		3
 CATEGORIES=		x11 wm windowmaker
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/source/release/ \
@@ -49,7 +49,7 @@ CONF_FILES+=		${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
 #	gnome		enable support for GNOME window manager hints
 #	openlook	enable support for OPEN LOOK(tm) window manager hints
 #	lite		remove Window Maker redundancies with KDE and GNOME
-#			(this option is broke in WindowMaker 0.65.x)
+#			(this option is broken in WindowMaker 0.65.x)
 #
 WINDOWMAKER_OPTIONS?=	gnome kde openlook
 
