@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2000/12/26 18:25:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.60 2000/12/27 17:28:40 hubertf Exp $
 
 DISTNAME=		gimp-1.2.0
 CATEGORIES=		graphics
@@ -49,11 +49,6 @@ PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 LDFLAGS+=		-Wl,-E
 .endif
 
-post-configure:
-	@${ECHO_MSG} "--> now configuring in ${GIMP_DATA}"
-	@(cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${CONFIGURE_ENV} \
-		./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
-
 pre-build:
 	@if [ "$$DISPLAY" = "" ]; then \
 		${ECHO} "${DISTNAME} can only be built under X11."; \
@@ -62,6 +57,9 @@ pre-build:
 	${LINK.c} -o ${WRKSRC}/docs/pdb_self_doc ${FILESDIR}/pdb_self_doc.c
 
 post-install:
+	@${ECHO_MSG} "--> now configuring in ${GIMP_DATA}"
+	(cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${CONFIGURE_ENV} \
+		./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
 	(cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
 		 ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
