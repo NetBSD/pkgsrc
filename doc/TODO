@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.203 2003/01/19 23:39:45 wiz Exp $
+$NetBSD: TODO,v 1.204 2003/01/20 08:29:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -128,7 +128,6 @@ Suggested package updates
 	o gnuplot-3.7.3 [pkg/19663]
 	o gpa-0.6.0
 	o gpgme-0.4.0
-	o grepmail-4.91
 	o grub-0.93
 	o gsed-4.0.5
 	o gtetrinet-0.5.2
@@ -187,7 +186,7 @@ Suggested package updates
 	o napshare-1.2
 	o ncurses-5.3
 	o neon-0.23.6
-	o net-snmp-5.0.7
+	o net-snmp-5.0.7 [pkg/19939]
 	o netpbm-10.8
 	o netscape-7.01
 	o neXtaw-0.13.0
