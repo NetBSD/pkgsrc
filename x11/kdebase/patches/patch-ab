@@ -1,0 +1,11 @@
+--- kappfinder/pics/Makefile.in.orig	Sun Feb  1 01:27:32 1998
++++ kappfinder/pics/Makefile.in	Fri Mar 20 02:05:38 1998
+@@ -133,7 +133,7 @@
+ 
+ data_DATA = edit.xpm emacs.xpm gv.xpm lyx.xpm nogo.xpm pinguin.xpm \
+             xcalc.xpm xeyes.xpm xfig.xpm xftp.xpm xpaint.xpm xv.xpm plan.xpm\
+-	    applix.xpm kedit.xpm kcalc.xpm xfmail.xpm
++	    applix.xpm xfmail.xpm
+ 
+ datadir = $(kde_datadir)/kappfinder/pics
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
