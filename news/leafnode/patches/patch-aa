@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/06/16 11:34:26 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2002/09/22 10:35:48 cjep Exp $
 
---- Makefile.in.orig	Wed Apr 17 19:39:31 2002
+--- Makefile.in.orig	Fri Sep 20 11:49:58 2002
 +++ Makefile.in
-@@ -587,14 +587,14 @@
+@@ -623,14 +623,14 @@
  	done
  sysconfDATA_INSTALL = $(INSTALL_DATA)
  install-sysconfDATA: $(sysconf_DATA)
@@ -25,29 +25,29 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/06/16 11:34:26 cjep Exp $
  
  uninstall-sysconfDATA:
  	@$(NORMAL_UNINSTALL)
-@@ -995,18 +995,18 @@
+@@ -1059,18 +1059,18 @@
  	rpm -ba leafnode.spec
  
  install-data-hook: quickmkdir amiroot
 -	set -e ; for i in . leaf.node failed.postings interesting.groups \
--		out.going message.id ; do \
+-		out.going message.id temp.files ; do \
 -        mkdir -p $(DESTDIR)$(SPOOLDIR)/$$i ; \
 -	if ./amiroot ; then \
 -	 chown news:news $(DESTDIR)$(SPOOLDIR)/$$i ; \
 -	 chmod 2775      $(DESTDIR)$(SPOOLDIR)/$$i ; fi ; \
--	done 
+-	done
 -	d="`dirname $(DESTDIR)@LOCKFILE@`" ; mkdir -p "$${d}" && \
 -	if ./amiroot ; then \
 -          chown news:news "$${d}" ; \
 -	  chmod 2775 "$${d}" ; fi
 -	./quickmkdir $(DESTDIR)
 +#	set -e ; for i in . leaf.node failed.postings interesting.groups \
-+#		out.going message.id ; do \
++#		out.going message.id temp.files ; do \
 +#        mkdir -p $(DESTDIR)$(SPOOLDIR)/$$i ; \
 +#	if ./amiroot ; then \
 +#	 chown news:news $(DESTDIR)$(SPOOLDIR)/$$i ; \
 +#	 chmod 2775      $(DESTDIR)$(SPOOLDIR)/$$i ; fi ; \
-+#	done 
++#	done
 +#	d="`dirname $(DESTDIR)@LOCKFILE@`" ; mkdir -p "$${d}" && \
 +#	if ./amiroot ; then \
 +#          chown news:news "$${d}" ; \
