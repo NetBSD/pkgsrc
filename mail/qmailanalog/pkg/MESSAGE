@@ -1,7 +1,0 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2001/09/16 22:25:55 zuntum Exp $
-
-  Don't forget to add ${LOCALBASE}/qmailanalog/man to MANPATH
-  variable in your environment -- manpages are stored there.
-
-======================================================================

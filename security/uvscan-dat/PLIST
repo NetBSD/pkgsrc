@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:18:02 zuntum Exp $
+sbin/update_dat
+share/doc/uvscan/reseller.txt
+share/doc/uvscan/packing.lst
+share/uvscan/clean.dat
+share/uvscan/internet.dat
+share/uvscan/names.dat
+share/uvscan/readme.txt
+share/uvscan/scan.dat
+@dirrm share/uvscan
+@dirrm share/doc/uvscan

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/06/18 19:18:18 jlam Exp $
-bin/srpftp
-bin/srptelnet
-man/man1/srpftp.1
-man/man1/srptelnet.1

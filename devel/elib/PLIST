@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:22 zuntum Exp $
+${LISPDIR}/stack-f.el
+${LISPDIR}/stack-f.elc
+${LISPDIR}/stack-m.el
+${LISPDIR}/stack-m.elc
+${LISPDIR}/queue-f.el
+${LISPDIR}/queue-f.elc
+${LISPDIR}/queue-m.el
+${LISPDIR}/queue-m.elc
+${LISPDIR}/elib-node.el
+${LISPDIR}/elib-node.elc
+${LISPDIR}/bintree.el
+${LISPDIR}/bintree.elc
+${LISPDIR}/avltree.el
+${LISPDIR}/avltree.elc
+${LISPDIR}/string.el
+${LISPDIR}/string.elc
+${LISPDIR}/read.el
+${LISPDIR}/read.elc
+${LISPDIR}/cookie.el
+${LISPDIR}/cookie.elc
+${LISPDIR}/dll.el
+${LISPDIR}/dll.elc
+${LISPDIR}/dll-debug.el
+${LISPDIR}/dll-debug.elc
+@dirrm ${LISPDIR}

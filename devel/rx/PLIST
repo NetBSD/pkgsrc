@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:40 zuntum Exp $
+include/rxposix.h
+@unexec	install-info --delete	%D/info/rx.info %D/info/dir
+info/rx.info
+@exec	install-info		%D/info/rx.info %D/info/dir
+lib/librx.a
+lib/librx.la
+lib/librx.so
+lib/librx.so.0
+lib/librx.so.0.0

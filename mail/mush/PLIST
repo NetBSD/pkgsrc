@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:00:36 zuntum Exp $
+bin/mush
+man/man1/mush.1
+share/misc/Mushrc
+share/misc/cmd_help

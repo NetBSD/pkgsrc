@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:42 zuntum Exp $
+${RUBY_ARCHLIBDIR}/md5.so
+${RUBY_DOCDIR}/md5/md5.txt
+${RUBY_DOCDIR}/md5/ja/md5.txt.ja
+@dirrm ${RUBY_DOCDIR}/md5/ja
+@dirrm ${RUBY_DOCDIR}/md5

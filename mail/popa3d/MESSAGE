@@ -1,0 +1,11 @@
+=================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 01:01:01 zuntum Exp $
+
+In order to enable POP service, you should add the following line
+to your /etc/inetd.conf:
+
+ pop3 stream tcp nowait root ${PREFIX}/libexec/popa3d popa3d
+
+and send a HUP signal to inetd.
+
+=================================================================

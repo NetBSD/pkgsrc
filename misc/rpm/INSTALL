@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2001/11/01 01:29:26 zuntum Exp $
+#
+
+PKGNAME=$1
+STAGE=$2
+
+MKDIR="@MKDIR@"
+
+RPM=${PKG_PREFIX}/bin/rpm
+RPMDIR=/var/pkg/lib/rpm
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+
+POST-INSTALL)
+	${MKDIR} ${RPMDIR}
+	if ! ${RPM} -qa 2>/dev/null
+	then
+		echo "${PKGNAME}: initializing the RPM database..."
+		${RPM} --initdb
+	fi
+	;;
+
+*)
+	echo "Unexpected argument ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

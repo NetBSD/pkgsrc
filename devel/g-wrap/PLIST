@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:34 zuntum Exp $
+bin/g-wrap-config
+include/g-wrap-runtime-guile.h
+info/g-wrap.info
+lib/libg-wrap-runtime-guile.a
+lib/libg-wrap-runtime-guile.la
+lib/libg-wrap-runtime-guile.so
+lib/libg-wrap-runtime-guile.so.2
+lib/libg-wrap-runtime-guile.so.2.0
+share/aclocal/g-wrap.m4
+share/guile/g-wrap.scm
+share/guile/g-wrap/g-translate.scm
+share/guile/g-wrap/guile-types.scm
+share/guile/g-wrap/output-file.scm
+share/guile/g-wrap/sorting.scm
+share/guile/g-wrapped/gw-runtime-spec.scm
+share/guile/g-wrapped/libgw-runtime.a
+share/guile/g-wrapped/libgw-runtime.la
+share/guile/g-wrapped/libgw-runtime.so
+share/guile/g-wrapped/libgw-runtime.so.0
+share/guile/g-wrapped/libgw-runtime.so.0.0
+@dirrm share/guile/g-wrapped
+@dirrm share/guile/g-wrap

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/30 23:32:29 taca Exp $
-${SITE_LISP}/inf-ruby.el
-${SITE_LISP}/inf-ruby.elc
-${SITE_LISP}/ruby-mode.el
-${SITE_LISP}/ruby-mode.elc
-${SITE_LISP}/rubydb3x.el
-${SITE_LISP}/rubydb3x.elc

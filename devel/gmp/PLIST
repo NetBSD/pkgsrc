@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:51 zuntum Exp $
+include/gmp.h
+@unexec install-info --delete --info-dir=%D/info %D/info/gmp.info
+info/gmp.info
+@exec install-info --info-dir=%D/info %D/info/gmp.info
+info/gmp.info-1
+info/gmp.info-2
+info/gmp.info-3
+info/gmp.info-4
+lib/libgmp.a
+lib/libgmp.la
+lib/libgmp.so
+lib/libgmp.so.4
+lib/libgmp.so.4.1

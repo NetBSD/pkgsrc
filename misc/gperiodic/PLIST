@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:14 zuntum Exp $
+bin/gperiodic
+man/man1/gperiodic.1
+share/locale/de/LC_MESSAGES/gperiodic.mo
+share/locale/es/LC_MESSAGES/gperiodic.mo
+share/locale/fr/LC_MESSAGES/gperiodic.mo
+share/locale/nl/LC_MESSAGES/gperiodic.mo
+share/locale/pt/LC_MESSAGES/gperiodic.mo
+share/locale/it/LC_MESSAGES/gperiodic.mo

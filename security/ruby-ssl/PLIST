@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:44 zuntum Exp $
+${RUBY_SITEARCHLIBDIR}/ssl.so
+${RUBY_SITELIBDIR}/buffering.rb
+${RUBY_SITELIBDIR}/net/https.rb
+${RUBY_SITELIBDIR}/net/protocols.rb
+${RUBY_SITELIBDIR}/net/telnets.rb
+${RUBY_SITELIBDIR}/ssl.rb
+${RUBY_DOCDIR}/ssl/ChangeLog
+${RUBY_DOCDIR}/ssl/README
+${RUBY_EXAMPLESDIR}/ssl/cli.rb
+${RUBY_EXAMPLESDIR}/ssl/login.rb
+${RUBY_EXAMPLESDIR}/ssl/sample.crt
+${RUBY_EXAMPLESDIR}/ssl/sample.key
+${RUBY_EXAMPLESDIR}/ssl/svr.rb
+${RUBY_EXAMPLESDIR}/ssl/verify_cb.rb
+${RUBY_EXAMPLESDIR}/ssl/wget.rb
+${RUBY_EXAMPLESDIR}/ssl/wget2.rb
+${RUBY_EXAMPLESDIR}/ssl/x509.rb
+@dirrm ${RUBY_DOCDIR}/ssl
+@dirrm ${RUBY_SITELIBDIR}/net
+@dirrm ${RUBY_EXAMPLESDIR}/ssl

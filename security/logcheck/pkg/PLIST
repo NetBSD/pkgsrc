@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/17 15:00:48 nra Exp $
-bin/logtail
-etc/logcheck.hacking.sample
-etc/logcheck.ignore.sample
-etc/logcheck.sh
-etc/logcheck.violations.ignore.sample
-etc/logcheck.violations.sample
