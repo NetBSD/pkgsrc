@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1711 2004/05/05 15:41:14 cjep Exp $
+$NetBSD: TODO,v 1.1712 2004/05/05 15:59:39 salo Exp $
 
 Suggested new packages
 ======================
@@ -276,7 +276,6 @@ Suggested package updates
 	o midnight-commander-4.6.0
 	o mimedefang-2.42
 	o minicom-2.1
-	o mkvtoolnix-0.8.8
 	o mono-0.31
 	o mowitz-0.3.0
 	o moz-bin-plugger-1.5.1
