@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/03/05 06:13:21 jmc Exp $
+# $NetBSD: Makefile,v 1.9 2002/03/28 13:57:17 kent Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
@@ -18,27 +18,20 @@ DISTFILES+=		${DISTNAME}.tar.gz ${SSP_PATCH}
 PATCHDIR=		../gcc/patches
 GCC_FILESDIR=		${FILESDIR}/../../gcc/files
 
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-
 # Please let me know what platforms this package works or doesn't work on.
 #ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc
 #
 # Build error for NetBSD/alpha
-NOT_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-powerpc NetBSD-*-macppc \
+NOT_FOR_PLATFORM=	NetBSD-*-alpha \
+			NetBSD-*-powerpc NetBSD-*-macppc \
 			NetBSD-*-prep NetBSD-*-bebox NetBSD-*-ofppc \
 			NetBSD-*-amigappc NetBSD-*-sandpoint
 
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == "NetBSD") && (${OBJECT_FMT} == "ELF")
-MACHINE_GCC_PLATFORM=	${MACHINE_GNU_PLATFORM}elf
-.else
-MACHINE_GCC_PLATFORM=	${MACHINE_GNU_PLATFORM}
-.endif
+BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 USE_GMAKE=		YES
 HAS_CONFIGURE=		YES
-CONFIGURE_ARGS=		--host=${MACHINE_GCC_PLATFORM} \
+CONFIGURE_ARGS=		--host=${MACHINE_GNU_PLATFORM} \
 			--prefix=${GCC_PREFIX} \
 			--enable-shared
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
@@ -46,7 +39,7 @@ INFO_FILES=		# Not instal info files.
 
 MESSAGE_SUBST+=		MAKE=${MAKE} \
 			PKGBASENAME=${PKGBASENAME}
-PLIST_SUBST+=		MACHINE_GCC_PLATFORM=${MACHINE_GCC_PLATFORM} \
+PLIST_SUBST+=		MACHINE_GCC_PLATFORM=${MACHINE_GNU_PLATFORM} \
 			PKGBASENAME=${PKGBASENAME}
 SRCDIR=			${WRKDIR}/${DISTNAME}
 WRKSRC=			${WRKDIR}/objdir
@@ -57,10 +50,6 @@ WRKSRC=			${WRKDIR}/objdir
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
 
 GCC_PREFIX=		${LOCALBASE}/${PKGBASENAME}
-.if ${MACHINE_PLATFORM:MNetBSD-*-sparc}
-PLIST_SRC=		${PKGDIR}/PLIST.NetBSD-sparc
-PLIST_SRC+=		${PKGDIR}/PLIST
-.endif
 .else
 .if (${CC} != gcc)
 ALL_TARGET=		bootstrap
@@ -68,18 +57,24 @@ ALL_TARGET=		bootstrap
 GCC_PREFIX=		${LOCALBASE}
 PLIST_SRC=		${PKGDIR}/PLIST.SunOS
 MESSAGE=		${PKGDIR}/MESSAGE.SunOS
-CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
+#CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
 .endif
 
 post-extract:
 	${MKDIR} ${WRKSRC}
 	cd ${WRKSRC}/../${DISTNAME}/gcc/config; \
 	${CP} ${GCC_FILESDIR}/xm-netbsd.h .; \
-	for ARCH in arm arm i386 m68k sh sparc vax; do \
+	${CP} ${GCC_FILESDIR}/xm-target64.h .; \
+	for FILE in ${GCC_FILESDIR}/*_* ; do \
+	  ARCH=`basename $${FILE} | cut -d_ -f1`; \
+	  DEST=`basename $${FILE} | sed -e "s/$${ARCH}_//"`; \
 	  ${MKDIR} $${ARCH}; \
-	  ${CP} ${GCC_FILESDIR}/$${ARCH}_netbsd-elf.h $${ARCH}/netbsd-elf.h; \
+	  ${CP} $${FILE} $${ARCH}/$${DEST}; \
 	done; \
-	${CP} ${GCC_FILESDIR}/sparc_netbsd-elf-common.h sparc/netbsd-elf-common.h
+	cd ${WRKSRC}/../${DISTNAME}; \
+	for i in gcc/config/alpha/netbsd-elf.h gcc/config/arm/t-netbsd gcc/config/mips/x-netbsd libf2c/libF77/dtime_.c libf2c/libF77/etime_.c; do \
+	  ${RM} $${i};\
+	done
 
 post-patch:
 	${ECHO} "bogus" >${WRKSRC}/../${DISTNAME}/gcc/cstamp-h.in
@@ -110,13 +105,21 @@ post-build:
 
 pre-install:
 #	${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${INSTALL_FILE} any PRE-INSTALL
+#	This is not needed because of no info.
 
 .if (${OPSYS} != SunOS)
 post-install:
-	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/curses.h ${PREFIX}/${PKGBASENAME}/bin/cc
+	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/curses.h ${PREFIX}/${PKGBASENAME}/bin/cc
 	${LN} -s gcc ${PREFIX}/${PKGBASENAME}/bin/cc
 	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGBASENAME}.mk
 	${RM} -fr ${GCC_PREFIX}/info
+.else
+# remove empy file and directories that show up when one
+# does make install; make deinstall; make install
+post-install:
+	-cd ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include && \
+	${RM} -f fixed && \
+	${RMDIR} v7 v9
 .endif
 
 .include "../../mk/bsd.pkg.mk"
