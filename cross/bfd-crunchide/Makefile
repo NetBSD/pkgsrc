@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:10:55 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/08/02 02:02:30 kristerw Exp $
 
 DISTNAME=	bfd-crunchide-1.1
+PKGREVISION=	1
 CATEGORIES=	cross
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -8,7 +9,7 @@ DISTFILES=	# empty
 MAINTAINER=	sakamoto@NetBSD.org
 COMMENT=	crunchide using libbfd. Used for cross-building distributions
 
-DEPENDS=	cross-binutils>=2.9.1.1:../binutils
+BUILD_DEPENDS=	cross-binutils>=2.15.0.0:../binutils
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
@@ -16,13 +17,10 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 USE_CROSSBASE=	yes
-BFD_VERSION=	2.9.1
 CPPFLAGS+=	-I${PREFIX}/include
-MAKE_ENV+=	BFD_VERSION=${BFD_VERSION} \
-		LIBS="${BFD_LIBS}"
+MAKE_ENV+=	LIBS="${BFD_LIBS}"
 
-FIX_RPATH+=	BFD_LIBS
-BFD_LIBS=	-L${PREFIX}/lib -Wl,${RPATH_FLAG}${PREFIX}/lib -lbfd-${BFD_VERSION} -liberty
+BFD_LIBS=	${PREFIX}/lib/libbfd.a ${PREFIX}/lib/libiberty.a ${PREFIX}/lib/libintl.a
 
 do-extract:
 	@${MKDIR} ${WRKSRC}
