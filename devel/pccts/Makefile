@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/02/25 04:47:22 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/11/10 00:35:07 grant Exp $
 #
 
 DISTNAME=	pccts133mr22
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.polhode.com/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	David Maxwell <david@maxwell.net>
+MAINTAINER=	david@maxwell.net
 HOMEPAGE=	http://www.polhode.com/pccts.html
 COMMENT=	Purdue Compiler Construction Tool Set
 
