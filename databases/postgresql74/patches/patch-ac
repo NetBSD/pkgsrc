@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/06/25 14:51:23 taca Exp $
+
+--- configure.orig	Thu Jun 24 10:36:51 2004
++++ configure
+@@ -337,7 +337,7 @@ localstatedir='${prefix}/var'
+ libdir='${exec_prefix}/lib'
+ includedir='${prefix}/include'
+ oldincludedir='/usr/include'
+-docdir='${prefix}/doc'
++docdir='${prefix}/share/doc'
+ mandir='${prefix}/man'
+ 
+ ac_prev=
