@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/04/13 21:55:23 snj Exp $
+# $NetBSD: Makefile,v 1.24 2004/04/22 23:15:02 snj Exp $
 # $FreeBSD Id: Makefile,v 1.13 1997/07/17 15:13:03 max Exp
 #
 
@@ -8,7 +8,7 @@ PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		OpenLook Toolkit libs, includes, and man pages
 
 DEPENDS=		xview-config>=3.2.1nb2:../../x11/xview-config
