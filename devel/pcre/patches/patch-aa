@@ -1,77 +1,22 @@
-$NetBSD: patch-aa,v 1.1 2001/05/14 12:55:30 zuntum Exp $
+$NetBSD: patch-aa,v 1.2 2001/11/30 10:20:02 martti Exp $
 
---- Makefile.in.orig	Tue Aug 22 11:05:43 2000
-+++ Makefile.in
-@@ -43,7 +43,6 @@
- # is set to "a" instead of "la", which causes the shared libraries not to be
- # installed.
+--- Makefile.in.orig	Mon Oct 29 16:51:17 2001
++++ Makefile.in	Sat Nov 24 10:47:36 2001
+@@ -62,13 +62,14 @@
+ UTF8   = @UTF8@
+ NEWLINE = @NEWLINE@
  
--LIBTOOL = @LIBTOOL@
- LIBSUFFIX = @LIBSUFFIX@
- 
- # These are the version numbers for the shared libraries
-@@ -56,9 +55,10 @@
- # A copy of install-sh is in this distribution and is used by default.      #
- #---------------------------------------------------------------------------#
- 
--INSTALL = ./install-sh -c
--INSTALL_DATA = ${INSTALL} -m 644
--
+-INSTALL = @INSTALL@
+-INSTALL_DATA = @INSTALL_DATA@
 +INSTALL_PROGRAM = ${BSD_INSTALL_PROGRAM}
 +INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
 +INSTALL_DATA = ${BSD_INSTALL_DATA}
 +INSTALL_MAN = ${BSD_INSTALL_MAN}
  
- #---------------------------------------------------------------------------#
- # For almost all systems, the command to create a library is "ar cq", but   #
-@@ -78,7 +78,7 @@
- OBJ = maketables.o get.o study.o pcre.o
- LOBJ = maketables.lo get.lo study.lo pcre.lo
+ # LIBTOOL enables the building of shared and static libraries. It is set up
+ # to do one or the other or both by ./configure.
  
--all:            libtool libpcre.$(LIBSUFFIX) libpcreposix.$(LIBSUFFIX) pcretest pcregrep
-+all:            libpcre.$(LIBSUFFIX) libpcreposix.$(LIBSUFFIX) pcretest pcregrep
+-LIBTOOL = @LIBTOOL@
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) -I. $(NEWLINE)
+ LINK = $(LIBTOOL) --mode=link $(CC)
  
- libtool:        config.guess config.sub ltconfig ltmain.sh
- 		@if test "$(LIBTOOL)" = "./libtool"; then \
-@@ -112,7 +112,7 @@
- 		@echo '--- Building shared library: libpcre'
- 		@echo ' '
- 		-rm -f libpcre.la
--		./libtool $(CC) -version-info '$(PCRELIBVERSION)' -o libpcre.la -rpath $(LIBDIR) $(LOBJ)
-+		$(LIBTOOL) $(CC) -version-info '$(PCRELIBVERSION)' -o libpcre.la -rpath $(LIBDIR) $(LOBJ)
- 
- libpcreposix.a: pcreposix.o
- 		@echo ' '
-@@ -127,7 +127,7 @@
- 		@echo '--- Building shared library: libpcreposix'
- 		@echo ' '
- 		-rm -f libpcreposix.la
--		./libtool $(CC) -version-info '$(PCREPOSIXLIBVERSION)' -o libpcreposix.la -rpath $(LIBDIR) pcreposix.lo
-+		$(LIBTOOL) $(CC) -version-info '$(PCREPOSIXLIBVERSION)' -o libpcreposix.la -rpath $(LIBDIR) pcreposix.lo
- 
- pcre.o:         chartables.c pcre.c pcre.h internal.h config.h Makefile
- 		$(LIBTOOL) $(CC) -c $(CFLAGS) $(UTF8) pcre.c
-@@ -163,9 +163,9 @@
- 		$(LIBTOOL) $(INSTALL_DATA) libpcreposix.$(LIBSUFFIX) $(DESTDIR)/$(LIBDIR)/libpcreposix.$(LIBSUFFIX)
- 		$(INSTALL_DATA) pcre.h $(DESTDIR)/$(INCDIR)/pcre.h
- 		$(INSTALL_DATA) pcreposix.h $(DESTDIR)/$(INCDIR)/pcreposix.h
--		$(INSTALL_DATA) doc/pcre.3 $(DESTDIR)/$(MANDIR)/man3/pcre.3
--		$(INSTALL_DATA) doc/pcreposix.3 $(DESTDIR)/$(MANDIR)/man3/pcreposix.3
--		$(INSTALL_DATA) doc/pcregrep.1 $(DESTDIR)/$(MANDIR)/man1/pcregrep.1
-+		$(INSTALL_MAN) doc/pcre.3 $(DESTDIR)/$(MANDIR)/man3/pcre.3
-+		$(INSTALL_MAN) doc/pcreposix.3 $(DESTDIR)/$(MANDIR)/man3/pcreposix.3
-+		$(INSTALL_MAN) doc/pcregrep.1 $(DESTDIR)/$(MANDIR)/man1/pcregrep.1
- 		@if test "$(LIBTOOL)" = "./libtool"; then \
- 		  echo ' '; \
- 		  echo '--- Rebuilding pcregrep to use installed shared library ---'; \
-@@ -175,8 +175,8 @@
- 		  echo $(CC) $(CFLAGS) -o pcretest pcretest.o -L$(DESTDIR)/$(LIBDIR) -lpcre -lpcreposix; \
- 		  $(CC) $(CFLAGS) -o pcretest pcretest.o -L$(DESTDIR)/$(LIBDIR) -lpcre -lpcreposix; \
- 		fi
--		$(INSTALL)	pcregrep $(DESTDIR)/$(BINDIR)/pcregrep
--		$(INSTALL)	pcre-config $(DESTDIR)/$(BINDIR)/pcre-config
-+		$(INSTALL_PROGRAM)	.libs/pcregrep $(DESTDIR)/$(BINDIR)/pcregrep
-+		$(INSTALL_SCRIPT)	pcre-config $(DESTDIR)/$(BINDIR)/pcre-config
- 
- # We deliberately omit dftables and chartables.c from 'make clean'; once made
- # chartables.c shouldn't change, and if people have edited the tables by hand,
