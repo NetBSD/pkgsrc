@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2004/03/27 22:07:32 tron Exp $
+# $NetBSD: Makefile.common,v 1.16 2004/04/21 21:09:31 cube Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -25,7 +25,7 @@ MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 		BUILDLINK_DIR="${BUILDLINK_DIR}"
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
-BUILD_DEFS+=    USE_INET6 USE_TCPWRAPPERS USE_LDAP USE_DB2 \
+BUILD_DEFS+=    USE_INET6 USE_TCPWRAPPERS USE_OPENLDAP USE_DB2 \
 		USE_SASL USE_SASL2 USE_STARTTLS USE_DB4
 DESCR_SRC=	${WRKDIR}/.DESCR_SRC
 
