@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.3 1998/08/07 13:57:34 tv Exp $
+$NetBSD: patch-ad,v 1.4 1998/08/16 21:53:15 tv Exp $
 
 --- configure.orig	Fri May  2 10:37:26 1997
-+++ configure	Thu Aug  6 08:29:37 1998
-@@ -2096,36 +2096,8 @@
++++ configure	Sun Aug 16 17:47:27 1998
+@@ -2096,36 +2096,9 @@
  
  _CUT_HERE_
  
@@ -34,12 +34,12 @@ $NetBSD: patch-ad,v 1.3 1998/08/07 13:57:34 tv Exp $
 -#ifdef alliant
 -loadnum=4
 -#else
--loadnum=3
+ loadnum=3
 -#endif
  
  EOF
  $CPP $DEFS conftest.c 2>/dev/null | sed -e '1,/_CUT_HERE_/d' > conftest.out
-@@ -2620,17 +2592,6 @@
+@@ -2620,17 +2593,6 @@
  rm -f /tmp/conftest*
  
  test -n "$silent" || echo "checking for vsprintf"
@@ -57,7 +57,7 @@ $NetBSD: patch-ad,v 1.3 1998/08/07 13:57:34 tv Exp $
  test -n "$verbose" && \
  echo "	defining USEVARARGS"
  echo "#define" USEVARARGS "1" >> confdefs.h
-@@ -2639,12 +2600,6 @@
+@@ -2639,12 +2601,6 @@
  \${ac_uA}USEVARARGS\${ac_uB}USEVARARGS\${ac_uC}1\${ac_uD}
  \${ac_eA}USEVARARGS\${ac_eB}USEVARARGS\${ac_eC}1\${ac_eD}
  "
