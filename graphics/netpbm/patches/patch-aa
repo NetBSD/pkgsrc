@@ -1,64 +1,71 @@
-$NetBSD: patch-aa,v 1.9 2000/05/17 10:13:20 tron Exp $
+$NetBSD: patch-aa,v 1.10 2000/06/05 00:36:31 wiz Exp $
 
---- Makefile.config.orig	Tue May  9 02:32:59 2000
-+++ Makefile.config	Wed May 17 11:34:31 2000
+--- Makefile.config.orig	Thu Jun  1 19:17:32 2000
++++ Makefile.config	Mon Jun  5 01:35:05 2000
 @@ -29,8 +29,8 @@
  #
  # For cygwin, only static libraries work, so set STATICLIB = Y  .
  
--#STATICLIB = Y
 -STATICLIB = N
-+STATICLIB = Y
+-#STATICLIB = Y
 +#STATICLIB = N
++STATICLIB = Y
  
  # The following are commands for the build process to use.  These values
  # do not get built into anything.
-@@ -38,12 +38,13 @@
- # The C compiler (including macro preprocessor)
+@@ -39,14 +39,15 @@
+ #Tru64:
  #CC =		cc
  #CC =		gcc
--CC =		gcc -fpcc-struct-return
-+#CC =		gcc -fpcc-struct-return
+-CC =		gcc
++#CC =		gcc
  
  # The linker.
+-LD = $(CC)
++#LD = $(CC)
  #LD = ld
+ #Tru64:
  #LD = cc
--LD = gcc 
-+#LD = gcc 
+ #LD = gcc 
 +LD = $(LIBTOOL) --mode=link $(CC)
  
  # Normally the man pages are installed using "install".  But via this
  # variable, you can use something else, for example a script that
-@@ -57,7 +58,7 @@
+@@ -59,7 +60,7 @@
+ # MAKE is set automatically by Make to what was used to invoke Make.
  SHELL =	/bin/sh
- # Solaris:
- #INSTALL = /usr/ucb/install
+ 
 -INSTALL = install
 +INSTALL = install -c
- AR= ar
- RANLIB=	ranlib
+ # Solaris:
+ #INSTALL = /usr/ucb/install
+ #Tru64:
+@@ -73,7 +74,7 @@
  
-@@ -66,7 +67,7 @@
+ # C compiler options
  
- # On DEC Tru64 4.0F (at least), you need -DLONG_32 for ppmtompeg.
- #CFLAGS = -O2 -std1 DLONG_32 $(CDEBUG)
 -CFLAGS = -pedantic -O2 -Wall -Wno-uninitialized $(CDEBUG)
 +CFLAGS += -pedantic -Wall -Wno-uninitialized $(CDEBUG)
+ # On DEC Tru64 4.0F (at least), you need -DLONG_32 for ppmtompeg.
+ #Tru64:
+ #CFLAGS = -O2 -std1 DLONG_32 $(CDEBUG)
+@@ -87,7 +88,7 @@
+   
+ # linker options.  
  
- # EXE is a suffix that the linker puts on any executable it generates.
- # In cygwin, this is .exe and most program deal with its existence without
-@@ -89,7 +90,7 @@
- #LDFLAGS = -R$(INSTALLLIBS)
- #If the linker is gcc (e.g. NetBSD):
- #LDFLAGS = -Wl,--rpath,$(INSTALLLIBS)
 -LDFLAGS =
 +#LDFLAGS =
- 
- # Linker options for created Netpbm shared libraries.
- 
-@@ -126,13 +127,13 @@
+ # Eunice users may want to use -noshare so that the executables can
+ # run standalone:
+ #LDFLAGS = -noshare
+@@ -139,11 +140,11 @@
  # but otherwise will not.
  
+ # Use the Tiff library included with Netpbm:
+-TIFFHDR_DIR = $(SRCDIR)/libtiff
+-TIFFLIB_DIR = $(SRCDIR)/libtiff
++#TIFFHDR_DIR = $(SRCDIR)/libtiff
++#TIFFLIB_DIR = $(SRCDIR)/libtiff
  #NetBSD:
 -#TIFFHDR_DIR = $(LOCALBASE)/include
 -#TIFFLIB_DIR = $(LOCALBASE)/lib
@@ -67,16 +74,14 @@ $NetBSD: patch-aa,v 1.9 2000/05/17 10:13:20 tron Exp $
  # OSF, Tru64:
  #TIFFHDR_DIR = /usr/local1/DEC/include
  #TIFFLIB_DIR = /usr/local1/DEC/lib
--TIFFHDR_DIR = $(SRCDIR)/libtiff
--TIFFLIB_DIR = $(SRCDIR)/libtiff
-+#TIFFHDR_DIR = $(SRCDIR)/libtiff
-+#TIFFLIB_DIR = $(SRCDIR)/libtiff
- 
- # Put the location of your JPEG library here.
- # If you want to build the jpeg converters or tiff
-@@ -151,8 +152,8 @@
+@@ -164,11 +165,11 @@
+ # at least JPEGLIB_DIR here, or the tiff converters will not build at
  # all.
  
+-JPEGLIB_DIR = /usr/lib/jpeg
+-JPEGHDR_DIR = /usr/include/jpeg
++#JPEGLIB_DIR = /usr/lib/jpeg
++#JPEGHDR_DIR = /usr/include/jpeg
  # Netbsd:
 -#JPEGLIB_DIR = ${LOCALBASE}/lib
 -#JPEGHDR_DIR = ${LOCALBASE}/include
@@ -85,20 +90,14 @@ $NetBSD: patch-aa,v 1.9 2000/05/17 10:13:20 tron Exp $
  # OSF, Tru64:
  #JPEGLIB_DIR = /usr/local1/DEC/lib
  #JPEGHDR_DIR = /usr/local1/DEC/include
-@@ -160,8 +161,8 @@
- #JPEGHDR_DIR = /usr/local/include
- #JPEGLIB_DIR = NONE
- #JPEGHDR_DIR = NONE
--JPEGLIB_DIR = /usr/lib/jpeg
--JPEGHDR_DIR = /usr/include/jpeg
-+#JPEGLIB_DIR = /usr/lib/jpeg
-+#JPEGHDR_DIR = /usr/include/jpeg
- 
- 
- # Put the location of your PNG library here.  If you want to build the
-@@ -171,8 +172,8 @@
+@@ -186,11 +187,11 @@
+ # here.  If you do not have the PNG library, and still want to
  # successully build everything else, put NONE for these.
  
+-PNGLIB_DIR = /lib
+-PNGHDR_DIR = /usr/include/png
++#PNGLIB_DIR = /lib
++#PNGHDR_DIR = /usr/include/png
  # NetBSD:
 -#PNGLIB_DIR = $(LOCALBASE)/lib
 -#PNGHDR_DIR = $(LOCALBASE)/include
@@ -107,18 +106,7 @@ $NetBSD: patch-aa,v 1.9 2000/05/17 10:13:20 tron Exp $
  # OSF/Tru64:
  #PNGLIB_DIR = /usr/local1/DEC/lib
  #PNGHDR_DIR = /usr/local1/DEC/include
-@@ -182,8 +183,8 @@
- # No PNG:
- #PNGLIB_DIR = NONE
- #PNGHDR_DIR = NONE
--PNGLIB_DIR = /lib
--PNGHDR_DIR = /usr/include/png
-+#PNGLIB_DIR = /lib
-+#PNGHDR_DIR = /usr/include/png
- 
- 
- # And the Utah Raster Toolkit (aka URT aka RLE) library:
-@@ -275,8 +276,8 @@
+@@ -296,8 +297,8 @@
  #be a rule in the makefiles to make whatever the fliename turns out to be.
  #Only .a and .so work.
  ifeq ($(STATICLIB),Y)
