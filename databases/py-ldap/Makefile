@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/03/26 02:27:37 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/25 13:36:29 recht Exp $
 
 DISTNAME=	python-ldap-2.0.0pre15
 PKGNAME=	${PYPKGPREFIX}-ldap-2.0.0pre15
@@ -12,7 +12,7 @@ COMMENT=	LDAP client API for Python
 
 PYTHON_VERSIONS_ACCEPTED=	21pth 22pth 23pth
 PYDISTUTILSPKG=			yes
-USE_BUILDLINK2=			yes
+USE_BUILDLINK3=			yes
 
 SUBST_CLASSES+=			setup
 SUBST_STAGE.setup=		pre-configure
@@ -20,8 +20,8 @@ SUBST_FILES.setup=		${WRKSRC}/setup.cfg
 SUBST_SED.setup=		-e "s|/usr/local/openldap-REL_ENG_2_1|${BUILDLINK_PREFIX.cyrus-sasl}/lib ${BUILDLINK_PREFIX.openldap}|" 	\
 				-e "s|/usr/include/sasl|${BUILDLINK_PREFIX.cyrus-sasl}/include/sasl|"
 
-.include "../../databases/openldap/buildlink2.mk"
-.include "../../security/cyrus-sasl2/buildlink2.mk"
+.include "../../databases/openldap/buildlink3.mk"
+.include "../../security/cyrus-sasl2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "pth"
