@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/05/20 11:09:17 hubertf Exp $
+
+--- src/pl-incl.h.orig	2004-01-05 10:43:45.000000000 +0100
++++ src/pl-incl.h
+@@ -206,7 +206,7 @@ gcc.
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+ 
+ #ifndef __unix__
+-#if defined(_AIX) || defined(__APPLE__) || defined(__unix) || defined(__BEOS__)
++#if defined(_AIX) || defined(__APPLE__) || defined(__unix) || defined(__BEOS__) || defined(__NetBSD__)
+ #define __unix__ 1
+ #endif
+ #endif
