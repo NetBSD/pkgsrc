@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2001/08/13 14:54:16 zuntum Exp $
+# $NetBSD: Makefile,v 1.108 2001/09/17 05:42:16 zuntum Exp $
 #
 
 COMMENT=	System utilities
@@ -90,6 +90,7 @@ SUBDIR+=	xbattbar
 SUBDIR+=	xcdroast
 SUBDIR+=	xdu
 SUBDIR+=	xhfs
+SUBDIR+=	xnc
 SUBDIR+=	xosview
 SUBDIR+=	xps
 SUBDIR+=	xuvmstat
