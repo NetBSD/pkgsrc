@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1 2001/05/25 06:16:18 rh Exp $
+
+--- composer/e-msg-composer.c.orig	Wed May 23 18:05:52 2001
++++ composer/e-msg-composer.c
+@@ -73,6 +73,10 @@
+ 
+ #define GNOME_GTKHTML_EDITOR_CONTROL_ID "OAFIID:GNOME_GtkHTML_Editor"
+ 
++#ifdef send 
++#undef send
++#endif
++
+ 
+ #define DEFAULT_WIDTH 600
+ #define DEFAULT_HEIGHT 500
