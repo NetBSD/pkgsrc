@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_chk.8,v 1.8 2005/02/28 00:43:48 wiz Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.9 2005/03/26 00:46:40 hubertf Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
@@ -164,7 +164,7 @@ If a tag starts with an
 .Em /
 then it is checked for as a readable filename.
 .It
-Tags cannot contain a hypen
+Tags cannot contain a hyphen
 .Sq -
 or plus
 .Sq + .
@@ -192,7 +192,7 @@ The default set of tags used to determine which packages to match
 in
 .Pa pkgchk.conf
 are equivalent to the output of the following with
-any spaces converted to hypens (-): hostname -s, hostname, uname
+any spaces converted to hyphens (-): hostname -s, hostname, uname
 -srm, uname -sr, uname -sm, uname -s, uname -r, uname -m.
 If
 .Pa /usr/X11R6/lib/libX11.so
