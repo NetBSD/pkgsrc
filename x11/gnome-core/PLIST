@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2002/09/14 02:46:56 rh Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/01/30 11:14:43 jmmv Exp $
 bin/deskguide_applet
 bin/gmenu
 bin/gnome-about
@@ -1149,8 +1149,8 @@ share/pixmaps/splash/gnome-splash.png
 @dirrm share/gnome/help/mailcheck_applet
 @exec ${MKDIR} %D/share/gnome/help/lgpl/C/stylesheet-images
 @dirrm share/gnome/help/lgpl/C/stylesheet-images
-@dirrm share/gnome/help/lgpl/C
-@dirrm share/gnome/help/lgpl
+@comment in gnome1-dirs: @dirrm share/gnome/help/lgpl/C
+@comment in gnome1-dirs: @dirrm share/gnome/help/lgpl
 @dirrm share/gnome/help/help-browser/wa
 @dirrm share/gnome/help/help-browser/uk
 @dirrm share/gnome/help/help-browser/no
@@ -1171,8 +1171,8 @@ share/pixmaps/splash/gnome-splash.png
 @dirrm share/gnome/help/help-browser
 @exec ${MKDIR} %D/share/gnome/help/gpl/C/stylesheet-images
 @dirrm share/gnome/help/gpl/C/stylesheet-images
-@dirrm share/gnome/help/gpl/C
-@dirrm share/gnome/help/gpl
+@comment in gnome1-dirs: @dirrm share/gnome/help/gpl/C
+@comment in gnome1-dirs: @dirrm share/gnome/help/gpl
 @exec ${MKDIR} %D/share/gnome/help/gnome-terminal/no/stylesheet-images
 @dirrm share/gnome/help/gnome-terminal/no/stylesheet-images
 @dirrm share/gnome/help/gnome-terminal/no
@@ -1233,8 +1233,8 @@ share/pixmaps/splash/gnome-splash.png
 @dirrm share/gnome/help/fish_applet
 @exec ${MKDIR} %D/share/gnome/help/fdl/C/stylesheet-images
 @dirrm share/gnome/help/fdl/C/stylesheet-images
-@dirrm share/gnome/help/fdl/C
-@dirrm share/gnome/help/fdl
+@comment in gnome1-dirs: @dirrm share/gnome/help/fdl/C
+@comment in gnome1-dirs: @dirrm share/gnome/help/fdl
 @exec ${MKDIR} %D/share/gnome/help/desk-guide_applet/it/stylesheet-images
 @dirrm share/gnome/help/desk-guide_applet/it/stylesheet-images
 @dirrm share/gnome/help/desk-guide_applet/it/figures
@@ -1277,18 +1277,19 @@ share/pixmaps/splash/gnome-splash.png
 @dirrm share/gnome/help/clock_applet/C/figures
 @dirrm share/gnome/help/clock_applet/C
 @dirrm share/gnome/help/clock_applet
-@unexec ${RMDIR} %D/share/gnome/apps/Utilities 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome/apps/System 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome/apps/Settings/Session 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome/apps/Settings/Desktop 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome/apps/Settings 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome/apps/Multimedia 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome/apps/Internet 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome/apps/Graphics 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome/apps/Games 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome/apps/Development 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome/apps/Applications 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome/apps 2>/dev/null || ${TRUE}
+@comment in gnome1-dirs: @dirrm share/gnome/help
+@comment in gnome1-dirs: @dirrm share/gnome/apps/Utilities
+@comment in gnome1-dirs: @dirrm share/gnome/apps/System
+@comment in gnome1-dirs: @dirrm share/gnome/apps/Settings/Session
+@comment in gnome1-dirs: @dirrm share/gnome/apps/Settings/Desktop
+@comment in gnome1-dirs: @dirrm share/gnome/apps/Settings
+@comment in gnome1-dirs: @dirrm share/gnome/apps/Multimedia
+@comment in gnome1-dirs: @dirrm share/gnome/apps/Internet
+@comment in gnome1-dirs: @dirrm share/gnome/apps/Graphics
+@comment in gnome1-dirs: @dirrm share/gnome/apps/Games
+@comment in gnome1-dirs: @dirrm share/gnome/apps/Development
+@comment in gnome1-dirs: @dirrm share/gnome/apps/Applications
+@comment in gnome1-dirs: @dirrm share/gnome/apps
 @unexec ${RMDIR} %D/share/gnome-terminal/glade 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gnome-terminal 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gnome-about 2>/dev/null || ${TRUE}
