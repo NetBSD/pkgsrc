@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/03/24 21:12:57 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2005/04/05 11:50:25 wiz Exp $
 
 DISTNAME=	imm36a1
 PKGNAME=	imm-3.6a1
@@ -11,10 +11,10 @@ HOMEPAGE=	http://tonnant.itd.nrl.navy.mil/ipresearch/imm.html
 COMMENT=	Internet Image(or other data) Multicaster (and receiver)
 
 DEPENDS+=       xv>=3.10:../../graphics/xv
-DEPENDS+=	tk>=8.3.2:../../x11/tk83
 
 WRKSRC=		${WRKDIR}/${DISTNAME}.src
 USE_X11=	yes
 BUILD_TARGET=	netbsd
 
+.include "../../x11/tk83/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
