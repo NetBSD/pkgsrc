@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/04/24 23:00:54 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.36 2001/04/28 02:37:59 dmcmahill Exp $
 #
 
 COMMENT=	CAD tools
@@ -27,6 +27,8 @@ SUBDIR+=	ntesla
 SUBDIR+=	oregano
 SUBDIR+=	pcb
 SUBDIR+=	qcad
+SUBDIR+=	simian
+SUBDIR+=	simian-docs
 SUBDIR+=	spice
 SUBDIR+=	spiceprm
 SUBDIR+=	verilog
