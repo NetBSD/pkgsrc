@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/22 08:02:16 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/11 16:12:06 snj Exp $
 #
 
 DISTNAME=	xsqlmenu-2.10
@@ -10,7 +10,7 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.jlab.org/~saw/xsqlmenu/
 COMMENT=	X based GUI for MySQL
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_X11=	yes
 USE_GNU_TOOLS+=	make
 MAKE_ENV+=	MAKE=${MAKE_PROGRAM}
@@ -22,9 +22,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/xsqlmenu.lsm ${PREFIX}/share/doc/xsqlmenu
 	${INSTALL_DATA} ${WRKSRC}/[A-Z][A-Z]* ${PREFIX}/share/doc/xsqlmenu
 
-.include "../../databases/mysql-client/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../x11/xforms/buildlink2.mk"
+.include "../../databases/mysql-client/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/xforms/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
