@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/02/11 08:55:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2004/07/04 10:25:42 mrg Exp $
 #
 
 .include "Makefile.common"
-
-PKGREVISION=		7
 
 CONFIGURE_ARGS+=	--disable-pixbuf-loader
 
