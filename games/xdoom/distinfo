@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2005/02/23 23:12:04 agc Exp $
+$NetBSD: distinfo,v 1.11 2005/02/24 22:39:03 minskim Exp $
 
 SHA1 (doomsrc.zip) = ffd07e0bd95b7c6ba0cd003fb6ff5ebd535d6f99
 RMD160 (doomsrc.zip) = c88e57b3cc72ca8bbfacbe138f8a3c69a13bf2e1
@@ -6,7 +6,7 @@ Size (doomsrc.zip) = 362698 bytes
 SHA1 (doom-1.8.wad.gz) = e43334e5f31d93cadaf8f1ede6cd432f9b0aca68
 RMD160 (doom-1.8.wad.gz) = 5d951d1f685bedd68033a332a6581b5056213c21
 Size (doom-1.8.wad.gz) = 1756050 bytes
-SHA1 (patch-aa) = 6b9927779c14d2a91238c531e7429a86835656df
+SHA1 (patch-aa) = ff3a5f3acb186c1de4e7e0f542274db8b8c908e7
 SHA1 (patch-ab) = 32d4389a7fc2413d19fe8f66d6da9205effa710a
 SHA1 (patch-ac) = d47c6e1388f3d2d7ea5dbc074c5bec34adf14f1f
 SHA1 (patch-ad) = cb8e892e9fa561960da46c0bfea61bcf65246458
@@ -29,7 +29,7 @@ SHA1 (patch-at) = 96e5a88b7f250c35b148353d77eb6e598e35c661
 SHA1 (patch-au) = ce66a255347aa3ec6ec0c7826e352e5b53a0e69d
 SHA1 (patch-av) = 494568bf3298195523c689125ad664d59d16e901
 SHA1 (patch-aw) = 431b990ad5bcf32fc5152c4b4331ce2bc85aba8b
-SHA1 (patch-ax) = 7d046d27880b3e7d6fd99a9d8ed029f7e9f52544
+SHA1 (patch-ax) = 6f0d83a0cecd8c7ee81ed280871ce4ee560443fb
 SHA1 (patch-ay) = 8c6cebc66117e9a4493e3c83ce29a16d60374179
 SHA1 (patch-az) = 48690eebd65de95b7ce4fd73390b46ffd6a58085
 SHA1 (patch-ba) = d8e41ed9d277145cd776ca5dc18e1c82cbefc8b7
