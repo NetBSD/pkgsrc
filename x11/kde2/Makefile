@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2004/01/26 15:46:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2004/02/07 10:40:44 wiz Exp $
 
 DISTNAME=	kde-2.2.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,16 +10,16 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	"meta-package" for the KDE integrated X11 desktop
 
-DEPENDS+=	kdeartwork-2.2.2nb3:../../misc/kdeartwork2
-DEPENDS+=	kdeaddons-2.2.2nb3:../../misc/kdeaddons2
-DEPENDS+=	kdeadmin-2.2.2nb5:../../misc/kdeadmin2
-DEPENDS+=	kdegames-2.2.2nb4:../../games/kdegames2
-DEPENDS+=	kdegraphics-2.2.2nb5:../../graphics/kdegraphics2
-DEPENDS+=	kdemultimedia-2.2.2nb4:../../multimedia/kdemultimedia2
-DEPENDS+=	kdenetwork-2.2.2nb7:../../net/kdenetwork2
-DEPENDS+=	kdepim-2.2.2nb5:../../misc/kdepim2
-DEPENDS+=	kdetoys-2.2.2nb4:../../games/kdetoys2
-DEPENDS+=	kdeutils-2.2.2nb4:../../misc/kdeutils2
+DEPENDS+=	kdeartwork-2.2.2nb4:../../misc/kdeartwork2
+DEPENDS+=	kdeaddons-2.2.2nb4:../../misc/kdeaddons2
+DEPENDS+=	kdeadmin-2.2.2nb6:../../misc/kdeadmin2
+DEPENDS+=	kdegames-2.2.2nb5:../../games/kdegames2
+DEPENDS+=	kdegraphics-2.2.2nb6:../../graphics/kdegraphics2
+DEPENDS+=	kdemultimedia-2.2.2nb5:../../multimedia/kdemultimedia2
+DEPENDS+=	kdenetwork-2.2.2nb8:../../net/kdenetwork2
+DEPENDS+=	kdepim-2.2.2nb6:../../misc/kdepim2
+DEPENDS+=	kdetoys-2.2.2nb5:../../games/kdetoys2
+DEPENDS+=	kdeutils-2.2.2nb5:../../misc/kdeutils2
 
 EXTRACT_ONLY=	# empty
 USE_X11BASE=	yes
