@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/02/03 13:01:33 tv Exp $
+# $NetBSD: Makefile,v 1.8 1999/03/09 11:44:03 agc Exp $
 
     SUBDIR += binutils
     SUBDIR += i386-linux
@@ -7,5 +7,6 @@
     SUBDIR += powerpc-netbsd
     SUBDIR += sparc64-netbsd
     SUBDIR += sparc-netbsdelf
+    SUBDIR += zoularis
 
 .include "../mk/bsd.pkg.subdir.mk"
