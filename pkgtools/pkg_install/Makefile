@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2002/03/04 12:39:37 seb Exp $
+# $NetBSD: Makefile,v 1.47 2002/03/04 13:48:30 seb Exp $
 
 # Note to package maintainers:
 # To update the distfile of this pkg, cd to /usr/src/usr.sbin,
@@ -7,7 +7,7 @@
 # that file to ${MASTER_SITE_LOCAL}.
 # Also, modify PKGTOOLS_REQD value in pkgsrc/mk/bsd.pkg.mk
 # to the new value.
-DISTNAME=		pkg_install-20010724
+DISTNAME=		pkg_install-20020218
 CATEGORIES=		pkgtools
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
