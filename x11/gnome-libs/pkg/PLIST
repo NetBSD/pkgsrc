@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 1999/09/20 22:06:36 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.19 1999/09/30 13:49:41 agc Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -204,11 +204,9 @@ share/doc/gnome-libs/mime-type-handling.txt
 share/doc/gnome-libs/mkstub
 share/doc/gnome-libs/session-management.txt
 share/doc/gnome-libs/suggestions.txt
-share/doc/gnome-libs/html
 share/doc/gnome-libs/html/gnome.html
 share/doc/gnome-libs/html/gnome-decl.txt
 share/doc/gnome-libs/html/gnome-sections.txt
-share/doc/gnome-libs/html/gnome
 share/doc/gnome-libs/html/gnome/book1.html
 share/doc/gnome-libs/html/gnome/gnome-gnome-config.html
 share/doc/gnome-libs/html/gnome/gnome-gnome-defs.html
@@ -238,7 +236,6 @@ share/doc/gnome-libs/html/gnomeui.types
 share/doc/gnome-libs/html/gnomeui-scan.c
 share/doc/gnome-libs/html/gnomeui-decl.txt
 share/doc/gnome-libs/html/gnomeui-sections.txt
-share/doc/gnome-libs/html/gnomeui
 share/doc/gnome-libs/html/gnomeui/book1.html
 share/doc/gnome-libs/html/gnomeui/gnome-objects.html
 share/doc/gnome-libs/html/gnomeui/gnomeabout.html
