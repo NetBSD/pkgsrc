@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2003/07/17 21:45:57 grant Exp $
+# $NetBSD: Makefile,v 1.41 2003/10/21 11:28:10 tron Exp $
 
 DISTNAME=		evolution-1.2.4
 PKGREVISION=		3
@@ -27,7 +27,7 @@ BUILD_USES_MSGFMT=	YES
 
 # Using a wildcard here doesn't make sense because the version number of
 # "db3" is hardcoded in the "configure" script and some source modules.
-BUILDLINK_DEPENDS.db3=		db3-3.11.2
+BUILDLINK_DEPENDS.db3=		db3-3.11.2{,nb*}
 BUILDLINK_DEPENDS.libxml=	libxml>=1.8.17
 
 GNU_CONFIGURE=		YES
