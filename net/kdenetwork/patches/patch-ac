@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.5 1999/06/05 16:38:46 tron Exp $
+$NetBSD: patch-ac,v 1.6 1999/09/15 18:26:03 tron Exp $
 
---- configure.orig	Wed Apr 28 17:26:00 1999
-+++ configure	Sat Jun  5 17:54:26 1999
+--- configure.orig	Sat Sep 11 17:38:35 1999
++++ configure	Wed Sep 15 17:04:37 1999
 @@ -513,9 +513,9 @@
  # Prefer explicitly selected file to automatically selected ones.
  if test -z "$CONFIG_SITE"; then
@@ -14,7 +14,7 @@ $NetBSD: patch-ac,v 1.5 1999/06/05 16:38:46 tron Exp $
    fi
  fi
  for ac_site_file in $CONFIG_SITE; do
-@@ -2006,6 +2006,7 @@
+@@ -2005,6 +2005,7 @@
  CC=$CXX
  CFLAGS="$CXXFLAGS"
  # Always use our own libtool.
@@ -22,7 +22,7 @@ $NetBSD: patch-ac,v 1.5 1999/06/05 16:38:46 tron Exp $
  LIBTOOL='$(SHELL) $(top_builddir)/libtool --silent'
  
  
-@@ -2238,6 +2239,7 @@
+@@ -2237,6 +2238,7 @@
  ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
@@ -30,7 +30,7 @@ $NetBSD: patch-ac,v 1.5 1999/06/05 16:38:46 tron Exp $
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
-@@ -4081,37 +4083,37 @@
+@@ -4087,37 +4089,37 @@
  if test "$ac_use_path_checking" = "default"; then
  
    if test -z "$kde_htmldir"; then
@@ -79,12 +79,12 @@ $NetBSD: patch-ac,v 1.5 1999/06/05 16:38:46 tron Exp $
    fi
    if test -z "$kde_bindir"; then
      kde_bindir='\$(exec_prefix)/bin'
-@@ -4204,7 +4206,7 @@
+@@ -4210,7 +4212,7 @@
  
  echo $ac_n "checking for KDE libraries installed""... $ac_c" 1>&6
- echo "configure:4207: checking for KDE libraries installed" >&5
+ echo "configure:4213: checking for KDE libraries installed" >&5
 -ac_link='/bin/sh ./libtool --silent --mode=link ${CXX-g++} -o conftest $CXXFLAGS $all_includes $CPPFLAGS $LDFLAGS $all_libraries conftest.$ac_ext $LIBS -lkdecore $LIBQT $KDE_TEST_RPATH 1>&5'
 +ac_link='${LIBTOOL} --silent --mode=link ${CXX-g++} -o conftest $CXXFLAGS $all_includes $CPPFLAGS $LDFLAGS $all_libraries conftest.$ac_ext $LIBS -lkdecore $LIBQT $KDE_TEST_RPATH 1>&5'
  
- if { (eval echo configure:4210: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then 
+ if { (eval echo configure:4216: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then 
    echo "$ac_t""yes" 1>&6

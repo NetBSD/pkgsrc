@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 1999/06/04 00:05:51 tron Exp $
+@comment $NetBSD: PLIST,v 1.17 1999/09/15 18:26:05 tron Exp $
 bin/kappfinder
 bin/kappfinder_restart
 bin/kattraction.kss
@@ -47,6 +47,7 @@ bin/klaser.kss
 bin/klines.kss
 bin/klissie.kss
 bin/klock
+bin/kmatrix.kss
 bin/kmenuedit
 bin/kmorph3d.kss
 bin/konsole
@@ -66,6 +67,7 @@ bin/kslip.kss
 bin/kspace.kss
 bin/kstart
 bin/kswarm.kss
+bin/kthememgr
 bin/kvt
 bin/kwm
 bin/kwmcom
@@ -110,7 +112,6 @@ share/doc/kde/HTML/en/kcontrol/kcminput/input-2.html
 share/doc/kde/HTML/en/kcontrol/kcminput/input.html
 share/doc/kde/HTML/en/kcontrol/kcminput/logotp3.gif
 share/doc/kde/HTML/en/kcontrol/kcmkeys/keys-1.html
-share/doc/kde/HTML/en/kcontrol/kcmkeys/keys-2.html
 share/doc/kde/HTML/en/kcontrol/kcmkeys/keys.html
 share/doc/kde/HTML/en/kcontrol/kcmkeys/logotp3.gif
 share/doc/kde/HTML/en/kcontrol/kcmkfm/kfm-1.html
@@ -152,6 +153,12 @@ share/doc/kde/HTML/en/kcontrol/kdmconfig/kdm-backgnd.html
 share/doc/kde/HTML/en/kcontrol/kdmconfig/kdm-font.html
 share/doc/kde/HTML/en/kcontrol/kdmconfig/kdm-sess.html
 share/doc/kde/HTML/en/kcontrol/kdmconfig/kdm-users.html
+share/doc/kde/HTML/en/kcontrol/kthememgr/kthememgr-1.html
+share/doc/kde/HTML/en/kcontrol/kthememgr/kthememgr-2.html
+share/doc/kde/HTML/en/kcontrol/kthememgr/kthememgr-3.html
+share/doc/kde/HTML/en/kcontrol/kthememgr/kthememgr-4.html
+share/doc/kde/HTML/en/kcontrol/kthememgr/kthememgr.html
+share/doc/kde/HTML/en/kcontrol/kthememgr/logotp3.gif
 share/doc/kde/HTML/en/kcontrol/logotp3.gif
 share/doc/kde/HTML/en/kdehelp/contact.html
 share/doc/kde/HTML/en/kdehelp/devel.html
@@ -267,6 +274,8 @@ share/doc/kde/HTML/en/kfontmanager/logotp3.gif
 share/doc/kde/HTML/en/kikbd/advanced.gif
 share/doc/kde/HTML/en/kikbd/general.gif
 share/doc/kde/HTML/en/kikbd/kikbd-1.html
+share/doc/kde/HTML/en/kikbd/kikbd-10.html
+share/doc/kde/HTML/en/kikbd/kikbd-11.html
 share/doc/kde/HTML/en/kikbd/kikbd-2.html
 share/doc/kde/HTML/en/kikbd/kikbd-3.html
 share/doc/kde/HTML/en/kikbd/kikbd-4.html
@@ -274,6 +283,7 @@ share/doc/kde/HTML/en/kikbd/kikbd-5.html
 share/doc/kde/HTML/en/kikbd/kikbd-6.html
 share/doc/kde/HTML/en/kikbd/kikbd-7.html
 share/doc/kde/HTML/en/kikbd/kikbd-8.html
+share/doc/kde/HTML/en/kikbd/kikbd-9.html
 share/doc/kde/HTML/en/kikbd/kikbd.html
 share/doc/kde/HTML/en/kikbd/logotp3.gif
 share/doc/kde/HTML/en/kikbd/startup.gif
@@ -311,6 +321,11 @@ share/doc/kde/HTML/en/kpanel/index-4.html
 share/doc/kde/HTML/en/kpanel/index-5.html
 share/doc/kde/HTML/en/kpanel/index.html
 share/doc/kde/HTML/en/kpanel/logotp3.gif
+share/doc/kde/HTML/en/kthememgr/index-1.html
+share/doc/kde/HTML/en/kthememgr/index-2.html
+share/doc/kde/HTML/en/kthememgr/index-3.html
+share/doc/kde/HTML/en/kthememgr/index.html
+share/doc/kde/HTML/en/kthememgr/logotp3.gif
 share/doc/kde/HTML/en/kvt/index.html
 share/doc/kde/HTML/en/kwm/index-1.html
 share/doc/kde/HTML/en/kwm/index-2.html
@@ -356,6 +371,8 @@ share/kde/apps/kcmlocale/pics/flag_hr.gif
 share/kde/apps/kcmlocale/pics/flag_hu.gif
 share/kde/apps/kcmlocale/pics/flag_is.gif
 share/kde/apps/kcmlocale/pics/flag_it.gif
+share/kde/apps/kcmlocale/pics/flag_ja.gif
+share/kde/apps/kcmlocale/pics/flag_ko.gif
 share/kde/apps/kcmlocale/pics/flag_mk.gif
 share/kde/apps/kcmlocale/pics/flag_nl.gif
 share/kde/apps/kcmlocale/pics/flag_no.gif
@@ -366,6 +383,7 @@ share/kde/apps/kcmlocale/pics/flag_ro.gif
 share/kde/apps/kcmlocale/pics/flag_ru.gif
 share/kde/apps/kcmlocale/pics/flag_se.gif
 share/kde/apps/kcmlocale/pics/flag_sk.gif
+share/kde/apps/kcmlocale/pics/flag_sl.gif
 share/kde/apps/kcmlocale/pics/flag_sv.gif
 share/kde/apps/kcmlocale/pics/flag_tr.gif
 share/kde/apps/kcmlocale/pics/flag_us_eu.gif
@@ -435,6 +453,7 @@ share/kde/apps/kfm/pics/kde7.xpm
 share/kde/apps/kfm/pics/kde8.xpm
 share/kde/apps/kfm/pics/kde9.xpm
 share/kde/apps/kfm/pics/kmultiple.xpm
+share/kde/apps/kfm/pics/large-kmultiple.xpm
 share/kde/apps/kfm/pics/open.xpm
 share/kde/apps/kfm/pics/question.xpm
 share/kde/apps/kfm/pics/stopsign.xpm
@@ -450,10 +469,12 @@ share/kde/apps/kikbd/csz.kimap
 share/kde/apps/kikbd/de.kimap
 share/kde/apps/kikbd/de_ch.kimap
 share/kde/apps/kikbd/dv.kimap
+share/kde/apps/kikbd/dva.kimap
 share/kde/apps/kikbd/el1.kimap
 share/kde/apps/kikbd/el7.kimap
 share/kde/apps/kikbd/en.kimap
 share/kde/apps/kikbd/es.kimap
+share/kde/apps/kikbd/et.kimap
 share/kde/apps/kikbd/fi.kimap
 share/kde/apps/kikbd/fr.kimap
 share/kde/apps/kikbd/fr_ch.kimap
@@ -467,11 +488,14 @@ share/kde/apps/kikbd/lt.kimap
 share/kde/apps/kikbd/no.kimap
 share/kde/apps/kikbd/pl.kimap
 share/kde/apps/kikbd/plnew.kimap
+share/kde/apps/kikbd/pt-acc.kimap
+share/kde/apps/kikbd/pt.kimap
 share/kde/apps/kikbd/ro.kimap
 share/kde/apps/kikbd/ru.kimap
 share/kde/apps/kikbd/rua.kimap
 share/kde/apps/kikbd/rui.kimap
 share/kde/apps/kikbd/rum.kimap
+share/kde/apps/kikbd/rumcyr.kimap
 share/kde/apps/kikbd/ruw.kimap
 share/kde/apps/kikbd/ruwm.kimap
 share/kde/apps/kikbd/se.kimap
@@ -480,6 +504,7 @@ share/kde/apps/kikbd/sky.kimap
 share/kde/apps/kikbd/skz.kimap
 share/kde/apps/kikbd/sv.kimap
 share/kde/apps/kikbd/th.kimap
+share/kde/apps/kikbd/trq.kimap
 share/kde/apps/kikbd/ua.kimap
 share/kde/apps/kikbd/uam.kimap
 share/kde/apps/kikbd/uaw.kimap
@@ -506,7 +531,14 @@ share/kde/apps/kpanel/default/Home.kdelnk
 share/kde/apps/kpanel/default/personal_directory
 share/kde/apps/kpanel/pics/exit.xpm
 share/kde/apps/kpanel/pics/go.xpm
+share/kde/apps/kpanel/pics/kdisknav.xpm
 share/kde/apps/kpanel/pics/key.xpm
+share/kde/apps/kpanel/pics/kfm_home.xpm
+share/kde/apps/kpanel/pics/large/go.xpm
+share/kde/apps/kpanel/pics/large/kdisknav.xpm
+share/kde/apps/kpanel/pics/large/kfm_home.xpm
+share/kde/apps/kpanel/pics/large/pers_applnk.xpm
+share/kde/apps/kpanel/pics/large/window_list.xpm
 share/kde/apps/kpanel/pics/mini/go.xpm
 share/kde/apps/kpanel/pics/mini/kdisknav.xpm
 share/kde/apps/kpanel/pics/mini/mini-exit.xpm
@@ -521,6 +553,15 @@ share/kde/apps/kpanel/pics/shared.xpm
 share/kde/apps/kpanel/pics/window_list.xpm
 share/kde/apps/kscreensaver/kscience-small.gif
 share/kde/apps/kscreensaver/kscience.gif
+share/kde/apps/kthememgr/Themes/Astronique.tar.gz
+share/kde/apps/kthememgr/Themes/Bryce.tar.gz
+share/kde/apps/kthememgr/Themes/Default.tar.gz
+share/kde/apps/kthememgr/Themes/Glax.tar.gz
+share/kde/apps/kthememgr/Themes/MGBreizh.tar.gz
+share/kde/apps/kthememgr/Themes/Nostalgy.tar.gz
+share/kde/apps/kthememgr/Themes/Template.themerc
+share/kde/apps/kthememgr/Themes/Wood.tar.gz
+share/kde/apps/kthememgr/theme.mappings
 share/kde/apps/kwm/pics/bluesun.gif
 share/kde/apps/kwm/pics/close.xpm
 share/kde/apps/kwm/pics/fog-grey.gif
@@ -691,6 +732,7 @@ share/kde/locale/de/LC_MESSAGES/kpager.mo
 share/kde/locale/de/LC_MESSAGES/kpanel.mo
 share/kde/locale/de/LC_MESSAGES/krootwm.mo
 share/kde/locale/de/LC_MESSAGES/kstart.mo
+share/kde/locale/de/LC_MESSAGES/kthememgr.mo
 share/kde/locale/de/LC_MESSAGES/kvt.mo
 share/kde/locale/de/LC_MESSAGES/kwm.mo
 share/kde/locale/el/LC_MESSAGES/kcmbell.mo
@@ -842,6 +884,7 @@ share/kde/locale/fi/LC_MESSAGES/kpager.mo
 share/kde/locale/fi/LC_MESSAGES/kpanel.mo
 share/kde/locale/fi/LC_MESSAGES/krootwm.mo
 share/kde/locale/fi/LC_MESSAGES/kstart.mo
+share/kde/locale/fi/LC_MESSAGES/kthememgr.mo
 share/kde/locale/fi/LC_MESSAGES/kvt.mo
 share/kde/locale/fi/LC_MESSAGES/kwm.mo
 share/kde/locale/fr/LC_MESSAGES/kbgndwm.mo
@@ -872,6 +915,7 @@ share/kde/locale/fr/LC_MESSAGES/kpager.mo
 share/kde/locale/fr/LC_MESSAGES/kpanel.mo
 share/kde/locale/fr/LC_MESSAGES/krootwm.mo
 share/kde/locale/fr/LC_MESSAGES/kstart.mo
+share/kde/locale/fr/LC_MESSAGES/kthememgr.mo
 share/kde/locale/fr/LC_MESSAGES/kvt.mo
 share/kde/locale/fr/LC_MESSAGES/kwm.mo
 share/kde/locale/he/LC_MESSAGES/kcmbell.mo
@@ -921,6 +965,21 @@ share/kde/locale/hr/LC_MESSAGES/krootwm.mo
 share/kde/locale/hr/LC_MESSAGES/kstart.mo
 share/kde/locale/hr/LC_MESSAGES/kvt.mo
 share/kde/locale/hr/LC_MESSAGES/kwm.mo
+share/kde/locale/hs/LC_MESSAGES/kcmkwm.mo
+share/kde/locale/hs/LC_MESSAGES/kcmlocale.mo
+share/kde/locale/hs/LC_MESSAGES/kcmpanel.mo
+share/kde/locale/hs/LC_MESSAGES/kcontrol.mo
+share/kde/locale/hs/LC_MESSAGES/kde.mo
+share/kde/locale/hs/LC_MESSAGES/kdehelp.mo
+share/kde/locale/hs/LC_MESSAGES/kdm.mo
+share/kde/locale/hs/LC_MESSAGES/kdmconfig.mo
+share/kde/locale/hs/LC_MESSAGES/kfm.mo
+share/kde/locale/hs/LC_MESSAGES/konsole.mo
+share/kde/locale/hs/LC_MESSAGES/kpanel.mo
+share/kde/locale/hs/LC_MESSAGES/krootwm.mo
+share/kde/locale/hs/LC_MESSAGES/kstart.mo
+share/kde/locale/hs/LC_MESSAGES/kvt.mo
+share/kde/locale/hs/LC_MESSAGES/kwm.mo
 share/kde/locale/hu/LC_MESSAGES/kbgndwm.mo
 share/kde/locale/hu/LC_MESSAGES/kcmbell.mo
 share/kde/locale/hu/LC_MESSAGES/kcmdisplay.mo
@@ -979,6 +1038,7 @@ share/kde/locale/is/LC_MESSAGES/kpager.mo
 share/kde/locale/is/LC_MESSAGES/kpanel.mo
 share/kde/locale/is/LC_MESSAGES/krootwm.mo
 share/kde/locale/is/LC_MESSAGES/kstart.mo
+share/kde/locale/is/LC_MESSAGES/kthememgr.mo
 share/kde/locale/is/LC_MESSAGES/kvt.mo
 share/kde/locale/is/LC_MESSAGES/kwm.mo
 share/kde/locale/it/LC_MESSAGES/kbgndwm.mo
@@ -1011,6 +1071,35 @@ share/kde/locale/it/LC_MESSAGES/krootwm.mo
 share/kde/locale/it/LC_MESSAGES/kstart.mo
 share/kde/locale/it/LC_MESSAGES/kvt.mo
 share/kde/locale/it/LC_MESSAGES/kwm.mo
+share/kde/locale/ja/LC_MESSAGES/kbgndwm.mo
+share/kde/locale/ja/LC_MESSAGES/kcmbell.mo
+share/kde/locale/ja/LC_MESSAGES/kcmdisplay.mo
+share/kde/locale/ja/LC_MESSAGES/kcminfo.mo
+share/kde/locale/ja/LC_MESSAGES/kcminput.mo
+share/kde/locale/ja/LC_MESSAGES/kcmkeys.mo
+share/kde/locale/ja/LC_MESSAGES/kcmkfm.mo
+share/kde/locale/ja/LC_MESSAGES/kcmkpanel.mo
+share/kde/locale/ja/LC_MESSAGES/kcmkwm.mo
+share/kde/locale/ja/LC_MESSAGES/kcmlocale.mo
+share/kde/locale/ja/LC_MESSAGES/kcmsamba.mo
+share/kde/locale/ja/LC_MESSAGES/kcmsample.mo
+share/kde/locale/ja/LC_MESSAGES/kcmsyssound.mo
+share/kde/locale/ja/LC_MESSAGES/kcontrol.mo
+share/kde/locale/ja/LC_MESSAGES/kdehelp.mo
+share/kde/locale/ja/LC_MESSAGES/kdm.mo
+share/kde/locale/ja/LC_MESSAGES/kdmconfig.mo
+share/kde/locale/ja/LC_MESSAGES/kfind.mo
+share/kde/locale/ja/LC_MESSAGES/kfm.mo
+share/kde/locale/ja/LC_MESSAGES/kfontmanager.mo
+share/kde/locale/ja/LC_MESSAGES/kikbd.mo
+share/kde/locale/ja/LC_MESSAGES/klock.mo
+share/kde/locale/ja/LC_MESSAGES/kmenuedit.mo
+share/kde/locale/ja/LC_MESSAGES/konsole.mo
+share/kde/locale/ja/LC_MESSAGES/kpager.mo
+share/kde/locale/ja/LC_MESSAGES/kpanel.mo
+share/kde/locale/ja/LC_MESSAGES/krootwm.mo
+share/kde/locale/ja/LC_MESSAGES/kvt.mo
+share/kde/locale/ja/LC_MESSAGES/kwm.mo
 share/kde/locale/ko/LC_MESSAGES/kcmbell.mo
 share/kde/locale/ko/LC_MESSAGES/kcmdisplay.mo
 share/kde/locale/ko/LC_MESSAGES/kcminfo.mo
@@ -1121,6 +1210,7 @@ share/kde/locale/pl/LC_MESSAGES/kpager.mo
 share/kde/locale/pl/LC_MESSAGES/kpanel.mo
 share/kde/locale/pl/LC_MESSAGES/krootwm.mo
 share/kde/locale/pl/LC_MESSAGES/kstart.mo
+share/kde/locale/pl/LC_MESSAGES/kthememgr.mo
 share/kde/locale/pl/LC_MESSAGES/kvt.mo
 share/kde/locale/pl/LC_MESSAGES/kwm.mo
 share/kde/locale/pt/LC_MESSAGES/kcmbell.mo
@@ -1204,6 +1294,7 @@ share/kde/locale/ro/LC_MESSAGES/kpanel.mo
 share/kde/locale/ro/LC_MESSAGES/krootwm.mo
 share/kde/locale/ro/LC_MESSAGES/kvt.mo
 share/kde/locale/ro/LC_MESSAGES/kwm.mo
+share/kde/locale/ru/LC_MESSAGES/kbgndwm.mo
 share/kde/locale/ru/LC_MESSAGES/kcmbell.mo
 share/kde/locale/ru/LC_MESSAGES/kcmdisplay.mo
 share/kde/locale/ru/LC_MESSAGES/kcminfo.mo
@@ -1263,10 +1354,15 @@ share/kde/locale/sk/LC_MESSAGES/krootwm.mo
 share/kde/locale/sk/LC_MESSAGES/kstart.mo
 share/kde/locale/sk/LC_MESSAGES/kvt.mo
 share/kde/locale/sk/LC_MESSAGES/kwm.mo
+share/kde/locale/sl/LC_MESSAGES/kbgndwm.mo
 share/kde/locale/sl/LC_MESSAGES/kcmbell.mo
+share/kde/locale/sl/LC_MESSAGES/kcmdisplay.mo
 share/kde/locale/sl/LC_MESSAGES/kcminfo.mo
 share/kde/locale/sl/LC_MESSAGES/kcminput.mo
+share/kde/locale/sl/LC_MESSAGES/kcmkeys.mo
+share/kde/locale/sl/LC_MESSAGES/kcmkfm.mo
 share/kde/locale/sl/LC_MESSAGES/kcmkpanel.mo
+share/kde/locale/sl/LC_MESSAGES/kcmkwm.mo
 share/kde/locale/sl/LC_MESSAGES/kcmlocale.mo
 share/kde/locale/sl/LC_MESSAGES/kcmsamba.mo
 share/kde/locale/sl/LC_MESSAGES/kcmsample.mo
@@ -1274,10 +1370,20 @@ share/kde/locale/sl/LC_MESSAGES/kcmsyssound.mo
 share/kde/locale/sl/LC_MESSAGES/kcontrol.mo
 share/kde/locale/sl/LC_MESSAGES/kdehelp.mo
 share/kde/locale/sl/LC_MESSAGES/kdm.mo
+share/kde/locale/sl/LC_MESSAGES/kdmconfig.mo
+share/kde/locale/sl/LC_MESSAGES/kfind.mo
 share/kde/locale/sl/LC_MESSAGES/kfm.mo
 share/kde/locale/sl/LC_MESSAGES/kfontmanager.mo
+share/kde/locale/sl/LC_MESSAGES/kikbd.mo
+share/kde/locale/sl/LC_MESSAGES/klock.mo
+share/kde/locale/sl/LC_MESSAGES/kmenuedit.mo
+share/kde/locale/sl/LC_MESSAGES/konsole.mo
+share/kde/locale/sl/LC_MESSAGES/kpager.mo
 share/kde/locale/sl/LC_MESSAGES/kpanel.mo
 share/kde/locale/sl/LC_MESSAGES/krootwm.mo
+share/kde/locale/sl/LC_MESSAGES/kstart.mo
+share/kde/locale/sl/LC_MESSAGES/kthememgr.mo
+share/kde/locale/sl/LC_MESSAGES/kvt.mo
 share/kde/locale/sl/LC_MESSAGES/kwm.mo
 share/kde/locale/sv/LC_MESSAGES/kbgndwm.mo
 share/kde/locale/sv/LC_MESSAGES/kcmbell.mo
@@ -1386,6 +1492,17 @@ share/kde/locale/zh_TW.Big5/LC_MESSAGES/kpanel.mo
 share/kde/locale/zh_TW.Big5/LC_MESSAGES/krootwm.mo
 share/kde/locale/zh_TW.Big5/LC_MESSAGES/kvt.mo
 share/kde/locale/zh_TW.Big5/LC_MESSAGES/kwm.mo
+share/kde/sounds/KDE_Close_Window.wav
+share/kde/sounds/KDE_Logout.wav
+share/kde/sounds/KDE_Startup.wav
+share/kde/sounds/KDE_Window_DeIconify.wav
+share/kde/sounds/KDE_Window_Iconify.wav
+share/kde/sounds/KDE_Window_Maximize.wav
+share/kde/sounds/KDE_Window_Shade_Down.wav
+share/kde/sounds/KDE_Window_Shade_Up.wav
+share/kde/sounds/KDE_Window_Sticky.wav
+share/kde/sounds/KDE_Window_UnMaximize.wav
+share/kde/sounds/KDE_Window_UnSticky.wav
 share/kde/wallpapers/abnormal_fluid.jpg
 share/kde/wallpapers/absolute_zero.jpg
 share/kde/wallpapers/abstract_clay.jpg
@@ -1394,7 +1511,6 @@ share/kde/wallpapers/ancient_glyphs.jpg
 share/kde/wallpapers/aqua_ravines.jpg
 share/kde/wallpapers/banana_squishie.jpg
 share/kde/wallpapers/berries.jpg
-share/kde/wallpapers/big_leaves.jpg
 share/kde/wallpapers/blkmarble.jpg
 share/kde/wallpapers/bluegrnt.jpg
 share/kde/wallpapers/boiling_centrifuge.jpg
@@ -1527,10 +1643,15 @@ share/kde/wallpapers/whirling_spirit.jpg
 share/kde/wallpapers/wind_chill.jpg
 share/kde/wallpapers/wood1.jpg
 @dirrm share/kde/wallpapers
+@dirrm share/kde/sounds
+@dirrm share/kde/locale/hs/LC_MESSAGES
 @dirrm share/kde/apps/kwm/pics
 @dirrm share/kde/apps/kwm
+@dirrm share/kde/apps/kthememgr/Themes
+@dirrm share/kde/apps/kthememgr
 @dirrm share/kde/apps/kscreensaver
 @dirrm share/kde/apps/kpanel/pics/mini
+@dirrm share/kde/apps/kpanel/pics/large
 @dirrm share/kde/apps/kpanel/pics
 @dirrm share/kde/apps/kpanel/default
 @dirrm share/kde/apps/kpanel
@@ -1559,6 +1680,7 @@ share/kde/wallpapers/wood1.jpg
 @dirrm share/doc/kde/HTML/ru
 @dirrm share/doc/kde/HTML/en/kwm
 @dirrm share/doc/kde/HTML/en/kvt
+@dirrm share/doc/kde/HTML/en/kthememgr
 @dirrm share/doc/kde/HTML/en/kpanel
 @dirrm share/doc/kde/HTML/en/kpager
 @dirrm share/doc/kde/HTML/en/konsole
@@ -1574,6 +1696,7 @@ share/kde/wallpapers/wood1.jpg
 @dirrm share/doc/kde/HTML/en/kdehelp/kwm
 @dirrm share/doc/kde/HTML/en/kdehelp/kpanel
 @dirrm share/doc/kde/HTML/en/kdehelp
+@dirrm share/doc/kde/HTML/en/kcontrol/kthememgr
 @dirrm share/doc/kde/HTML/en/kcontrol/kdmconfig
 @dirrm share/doc/kde/HTML/en/kcontrol/kcmsyssound
 @dirrm share/doc/kde/HTML/en/kcontrol/kcmsamba
