@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2002/02/17 21:55:44 jlam Exp $
+$NetBSD: distinfo,v 1.5 2002/04/29 08:40:27 wiz Exp $
 
-SHA1 (esound-0.2.23.tar.gz) = 9d9f6d7b7e4fc7eeb1f91cdc0f366229369a3459
-Size (esound-0.2.23.tar.gz) = 294603 bytes
-SHA1 (patch-aa) = c4dbfa7116f9ce760b4dc23aa335868a0728a8e8
-SHA1 (patch-ab) = e10a9ecc1b3c2d906e0be60375ae95b2fc8aa318
-SHA1 (patch-ac) = 3f42e4438282e9b31e191fcf985b2334ff656525
+SHA1 (esound-0.2.25.tar.gz) = c72b333e666f6bd8668bc0ebe75c7e817fbfa139
+Size (esound-0.2.25.tar.gz) = 339560 bytes
+SHA1 (patch-aa) = fe632a5514073f8d898fef5182a1047b9f2a44c9
+SHA1 (patch-ab) = af59f6f254812c082566a1c483aec511deed0819
+SHA1 (patch-ac) = 8c68050320c80363b831745eb17cc0703acbaf24
