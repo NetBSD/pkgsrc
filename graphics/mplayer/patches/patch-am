@@ -1,0 +1,22 @@
+--- libao2/audio_out.h.orig	Fri Jun 22 02:34:58 2001
++++ libao2/audio_out.h	Mon Jul 30 22:10:10 2001
+@@ -13,7 +13,7 @@
+ typedef struct ao_functions_s
+ {
+ 	ao_info_t *info;
+-        int (*control)(int cmd,int arg);
++        int (*control)(int cmd,void* arg);
+         int (*init)(int rate,int channels,int format,int flags);
+         void (*uninit)();
+         void (*reset)();
+@@ -50,8 +50,10 @@
+ #define AOCONTROL_QUERY_FORMAT 3 /* test for availabilty of a format */
+ #define AOCONTROL_GET_VOLUME 4
+ #define AOCONTROL_SET_VOLUME 5
++#define AOCONTROL_SET_MIXER_DEVICE 6
+ 
+ typedef struct ao_control_vol_s {
+ 	float left;
+ 	float right;
++	int usemaster;
+ } ao_control_vol_t;

@@ -1,0 +1,196 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/12/21 23:38:52 zuntum Exp $
+
+--- configure.orig	Fri Jul  6 22:00:22 2001
++++ configure
+@@ -183,8 +183,12 @@
+ if [ "$system_name" = "FreeBSD" ]; then
+ _archlibs="-rdynamic -pthread"
+ else
++if [ "$system_name" = "NetBSD" ]; then
++_archlibs="-li386 -lpthread -lossaudio"
++else
+ _archlibs="-ldl -lpthread"
+ fi
++fi
+ 
+ # LGB: temporary files
+ 
+@@ -236,11 +240,6 @@
+  _x11incdir=-I/usr/X11/include
+ fi
+ 
+-# Lots of stuff are installed under /usr/local
+-
+-_extralibdir=-L/usr/local/lib
+-_extraincdir=-I/usr/local/include
+-
+ _skip_cc_check=no
+ _skip_as_check=no
+ if [ "$system_name" = "FreeBSD" ]; then
+@@ -280,10 +279,10 @@
+         _sdlconfig=`echo $ac_option | cut -d '=' -f 2`
+         ;;
+   --with-extralibdir=*)
+-        _extralibdir=-L`echo $ac_option | cut -d '=' -f 2`
++        _extralibdir=`echo $ac_option | cut -d '=' -f 2`
+         ;;
+   --with-extraincdir=*)
+-        _extraincdir=-I`echo $ac_option | cut -d '=' -f 2`
++        _extraincdir=`echo $ac_option | cut -d '=' -f 2`
+         ;;
+  esac
+ done
+@@ -584,13 +583,13 @@
+ #echo "DONE (${proc})."
+ 
+ 
+-$_cc $_extraincdir $_extralibdir $TMPC -o $TMPO -lvgagl -lvga > /dev/null 2>&1 && _svga=yes
++$_cc -I$_extraincdir -L$_extralibdir $TMPC -o $TMPO -lvgagl -lvga > /dev/null 2>&1 && _svga=yes
+ 
+ if [ "$system_name" = "FreeBSD" ]; then
+ $_cc $TMPC -o $TMPO -pthread > /dev/null 2>&1 || \
+  { echo "Lib pthread not found."; rm -f $TMPC $TMPO $TMPS ; exit 1; }
+ else
+-$_cc $TMPC -o $TMPO -lpthread > /dev/null 2>&1 || \
++$_cc $TMPC -I$_extraincdir -L$_extralibdir -o $TMPO -lpthread > /dev/null 2>&1 || \
+  { echo "Lib pthread not found."; rm -f $TMPC $TMPO $TMPS ; exit 1; }
+ fi
+ 
+@@ -615,12 +614,8 @@
+ 
+ # Atmosfear: added libcss autodetect
+ _css=no
+-if test -s "/usr/local/lib/libcss.so" ; then
+-	_csslibdir="/usr/local/lib/"
+-	if test -s "/usr/local/include/css.h" ; then
+-		_cssincdir="/usr/local/include"
++if [ -s "$_extralibdir/libcss.so" -a -s "$_extraincdir/css.h" ]; then
+ 		_css=yes
+-	fi	
+ else
+ 	if test -s "/usr/lib/libcss.so" ; then
+ 		_csslibdir="/usr/lib/"
+@@ -635,7 +630,7 @@
+ $_cc $TMPC -o $TMPO -ltermcap > /dev/null 2>&1 && _termcap=yes
+ 
+ _png=no
+-$_cc $_extraincdir $_extralibdir $TMPC -o $TMPO -lpng -lz -lm > /dev/null 2>&1 && _png=yes
++$_cc -I$_extraincdir -L$_extralibdir $TMPC -o $TMPO -lpng -lz -lm > /dev/null 2>&1 && _png=yes
+ 
+ _ggi=no
+ $_cc $TMPC -o $TMPO -lggi > /dev/null 2>&1 && _ggi=yes
+@@ -664,7 +659,6 @@
+ 
+ if [ $_x11 = yes ]; then
+ 
+-$_cc $TMPC -o $TMPO $_x11libdir -lX11 -lXext -lXdpms $_socklib > /dev/null 2>&1 && _xdpms=yes
+ $_cc $TMPC -o $TMPO $_x11libdir -lX11 -lXext -lXv $_socklib > /dev/null 2>&1 && _xv=yes
+ $_cc $TMPC -o $TMPO $_x11libdir -lX11 -lXext -lXxf86vm $_socklib > /dev/null 2>&1 && _vm=yes
+ 
+@@ -682,7 +676,7 @@
+ $_cc $_x11incdir $TMPC -o $TMPO $_x11libdir -lX11 -lXext -lGL -pthread $_socklib > /dev/null 2>&1 || \
+  { _gl=no; echo "GL includes not found!";}
+ else
+-$_cc $TMPC -o $TMPO $_x11libdir -lX11 -lXext -lGL $_socklib > /dev/null 2>&1 || \
++$_cc $_x11incdir $TMPC -o $TMPO $_x11libdir -lX11 -lXext -lGL -lm $_socklib > /dev/null 2>&1 || \
+  { _gl=no; echo "GL includes not found!";}
+ fi
+ 
+@@ -721,7 +715,7 @@
+ 
+ cat > $TMPC << EOF
+ #include <sys/soundcard.h>
+-int main( void ) { return 0; }
++int main( void ) {  int arg = SOUND_VERSION; }
+ EOF
+ 
+ _sys_soundcard_h=no
+@@ -729,12 +723,16 @@
+ 
+ 
+ cat > $TMPC << EOF
+-#include <sys/soundcard.h>
+-int main( void ) {  int arg = SNDCTL_DSP_SETFRAGMENT; }
++#include <soundcard.h>
++int main( void ) {  int arg = SOUND_VERSION; }
+ EOF
+ 
++_soundcard_h=no
++$_cc -o $TMPO $TMPC 2> /dev/null && _soundcard_h=yes
++
+ _oss_audio=no
+-$_cc -o $TMPO $TMPC 2> /dev/null && _oss_audio=yes
++test $_sys_soundcard_h = yes && _oss_audio=yes
++test $_soundcard_h = yes && _oss_audio=yes
+ 
+ 
+ cat > $TMPC << EOF
+@@ -778,7 +776,7 @@
+ int main( void ){ return 0; }
+ EOF
+ 
+-$_cc $_extraincdir $_extralibdir -o $TMPO -lesd $TMPC 2> /dev/null || { _esd=no; }
++$_cc -I$_extraincdir -L$_extralibdir -o $TMPO -lesd $TMPC 2> /dev/null || { _esd=no; }
+ 
+ # ---
+ 
+@@ -1015,6 +1013,13 @@
+  esac
+ done
+ 
++_datadir=$_prefix"/share/mplayer"
++
++# Lots of stuff are installed under /usr/local
++
++_extralibdir=${_prefix}/lib
++_extraincdir=${_prefix}/include
++
+ # Checking assembler (_as) compatibility...
+ as_version=`$_as --version 2>&1 | sed -n 's/^.*assembler \([0-9.]*\).*$/\1/p'`
+ echo $_echo_n "Checking assembler ($_as) ... $as_version, $_echo_c"
+@@ -1311,12 +1316,21 @@
+  _sunaudio='#undef USE_SUN_AUDIO'
+ fi
+ 
++if [ "$system_name" = "NetBSD" ]; then
++ _aosrc="$_aosrc ao_netbsd.c"
++fi
++
+ if [ "$_sys_soundcard_h" = "yes" ]; then
+  _have_soundcard_h='#define HAVE_SYS_SOUNDCARD_H 1'
+ else
+  _have_soundcard_h='#undef  HAVE_SYS_SOUNDCARD_H'
+ fi
+ 
++if [ "$_soundcard_h" = "yes" ]; then
++ _have_soundcard_h='#define HAVE_SOUNDCARD_H 1'
++else
++ _have_soundcard_h='#undef  HAVE_SOUNDCARD_H'
++fi
+ 
+ # Checking for CFLAGS
+ if [ "$_profile" != "" ] || [ "$_debug" != "" ]; then
+@@ -1524,12 +1538,12 @@
+ CC=$_cc
+ # OPTFLAGS=-O4 $_profile $_debug -march=$proc -mcpu=$proc -pipe -fomit-frame-pointer -ffast-math
+ OPTFLAGS=$CFLAGS
+-EXTRA_INC=$_extraincdir
++EXTRA_INC=-I$_extraincdir
+ WIN32_PATH=-DWIN32_PATH=\"$_win32libdir\"
+ 
+ X11_INC=$_x11incdir
+ X11DIR=$_x11libdir
+-X_LIBS=$_x11libdir $_extralibdir $_gllib $_ggilib $_sdllib $_dgalib $_x11lib $_xvlib $_vmlib $_svgalib $_libpng $_socklib
++X_LIBS=$_x11libdir -L$_extralibdir $_gllib $_ggilib $_sdllib $_dgalib $_x11lib $_xvlib $_vmlib $_svgalib $_libpng $_socklib
+ 
+ TERMCAP_LIB=$_libtermcap
+ XMM_LIBS = $_xmmplibs
+@@ -1741,7 +1755,7 @@
+ 
+ EOF
+ 
+-if [ $_mtrr = yes ]; then
++if [ $_mtrr = yes -a -e /proc/mtrr ]; then
+  echo "Please check mtrr settings at /proc/mtrr (see DOCS/MTRR)"
+  echo
+ fi
