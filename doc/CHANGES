@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9154 2005/02/15 22:34:54 peter Exp $
+$NetBSD: CHANGES,v 1.9155 2005/02/15 22:47:50 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -891,3 +891,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgfind to 20050215 [peter 2005-02-15]
 	Updated gift to 0.11.8.1 [peter 2005-02-15]
 	Updated gift-fasttrack to 0.8.9 [peter 2005-02-15]
+	Updated sympa to 4.1.2nb2 [seb 2005-02-15]
