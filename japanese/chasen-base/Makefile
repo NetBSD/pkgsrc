@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2001/04/26 01:46:32 taca Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/27 06:14:47 taca Exp $
 #
 
 DISTNAME=		chasen-${CHASEN_VERSION}
-PKGNAME=		chasen-base-${CHASEN_VERSION}${CHASEN_NBVERSION}
+PKGNAME=		chasen-base-${CHASEN_VERSION}nb3
 CATEGORIES=		japanese
 MASTER_SITES=		http://chasen.aist-nara.ac.jp/stable/chasen/
 
-PATCHFILES=		chasen-2.2.6-nmz-2.diff
+PATCHFILES=		chasen-2.2.6-nmz-3.diff
 PATCH_SITES=		${MASTER_SITES}
 PATCH_DIST_STRIP=	-p1
 
