@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.159 2004/10/05 15:28:50 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.160 2004/11/12 04:57:31 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -261,6 +261,10 @@ ${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 #				compiler/linker so that building against
 #				<pkg> will work.
 #
+# BUILDLINK_LIBS.<pkg>		contain -l... (library) options that are
+#				automatically appended to the LIBS
+#				variable when building against <pkg>.
+#
 # BUILDLINK_INCDIRS.<pkg>,
 # BUILDLINK_LIBDIRS.<pkg>,
 # BUILDLINK_RPATHDIRS.<pkg>	subdirectories of BUILDLINK_PREFIX.<pkg>
@@ -342,6 +346,7 @@ WRAPPER_VARS+=	BUILDLINK_PREFIX.${_pkg_}
 
 BUILDLINK_CPPFLAGS.${_pkg_}?=	# empty
 BUILDLINK_LDFLAGS.${_pkg_}?=	# empty
+BUILDLINK_LIBS.${_pkg_}?=	# empty
 BUILDLINK_INCDIRS.${_pkg_}?=	include
 BUILDLINK_LIBDIRS.${_pkg_}?=	lib${ABI}
 .  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
@@ -351,14 +356,15 @@ BUILDLINK_RPATHDIRS.${_pkg_}?=	# empty
 .  endif
 .endfor
 
-# BUILDLINK_CPPFLAGS and BUILDLINK_LDFLAGS contain the proper -I...
-# and -L.../-Wl,-R... options to be passed to the compiler and linker
-# to find the headers and libraries for the various packages at
-# configure/build time.  BUILDLINK_CFLAGS contains any special compiler
-# options needed when building against the various packages.
+# BUILDLINK_CPPFLAGS, BUILDLINK_LDFLAGS, and BUILDLINK_LIBS contain the
+# proper -I..., -L.../-Wl,-R..., and -l... options to be passed to the
+# compiler and linker to find the headers and libraries for the various
+# packages at configure/build time.  BUILDLINK_CFLAGS contains any special
+# compiler options needed when building against the various packages.
 #
 BUILDLINK_CPPFLAGS=	# empty
 BUILDLINK_LDFLAGS=	# empty
+BUILDLINK_LIBS=		# empty
 BUILDLINK_CFLAGS=	# empty
 
 .for _pkg_ in ${_BLNK_PACKAGES}
@@ -375,6 +381,11 @@ BUILDLINK_LDFLAGS+=	${_flag_}
 .  for _flag_ in ${BUILDLINK_CFLAGS.${_pkg_}}
 .    if empty(BUILDLINK_CFLAGS:M${_flag_})
 BUILDLINK_CFLAGS+=	${_flag_}
+.    endif
+.  endfor
+.  for _flag_ in ${BUILDLINK_LIBS.${_pkg_}}
+.    if empty(BUILDLINK_LIBS:M${_flag_})
+BUILDLINK_LIBS+=	${_flag_}
 .    endif
 .  endfor
 .  if !empty(BUILDLINK_INCDIRS.${_pkg_})
@@ -449,6 +460,12 @@ BUILDLINK_LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib${ABI}
 .  endif
 .endif
 
+CFLAGS?=	# empty
+CPPFLAGS?=	# empty
+CXXFLAGS?=	# empty
+LDFLAGS?=	# empty
+LIBS?=		# empty
+
 .for _flag_ in ${BUILDLINK_CFLAGS}
 .  if empty(CFLAGS:M${_flag_})
 CFLAGS+=	${_flag_}
@@ -457,14 +474,14 @@ CFLAGS+=	${_flag_}
 CXXFLAGS+=	${_flag_}
 .  endif
 .endfor
-.for _flag_ in ${BUILDLINK_CPPFLAGS}
-.  if empty(CPPFLAGS:M${_flag_})
-CPPFLAGS+=	${_flag_}
-.  endif
 #
 # We add BUILDLINK_CPPFLAGS to both CFLAGS and CXXFLAGS since much software
 # ignores the value of CPPFLAGS that we set in the environment.
 #
+.for _flag_ in ${BUILDLINK_CPPFLAGS}
+.  if empty(CPPFLAGS:M${_flag_})
+CPPFLAGS+=	${_flag_}
+.  endif
 .  if empty(CFLAGS:M${_flag_})
 CFLAGS+=	${_flag_}
 .  endif
@@ -475,6 +492,11 @@ CXXFLAGS+=	${_flag_}
 .for _flag_ in ${BUILDLINK_LDFLAGS}
 .  if empty(LDFLAGS:M${_flag_})
 LDFLAGS+=	${_flag_}
+.  endif
+.endfor
+.for _flag_ in ${BUILDLINK_LIBS}
+.  if empty(LIBS:M${_flag_})
+LIBS+=		${_flag_}
 .  endif
 .endfor
 
