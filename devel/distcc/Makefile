@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2003/09/11 06:45:52 martti Exp $
+# $NetBSD: Makefile,v 1.8 2003/10/05 12:03:12 martti Exp $
 
-DISTNAME=		distcc-2.10.1
+DISTNAME=		distcc-2.11
 CATEGORIES=		devel
 MASTER_SITES=		http://distcc.samba.org/ftp/distcc/
 EXTRACT_SUFX=		.tar.bz2
