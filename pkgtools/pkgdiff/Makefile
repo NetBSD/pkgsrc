@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/01/06 08:29:59 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2004/01/10 05:40:40 jlam Exp $
 #
 
 DISTNAME=	pkgdiff-0.113
@@ -46,7 +46,8 @@ INSTALLATION_DIRS+=	man/man1
 
 do-build:
 .for FILE in mkpatches patchdiff
-	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
+	${SED}	-e 's|@PREFIX@|${PREFIX}|g'		\
+		-e 's|@PERL5@|${PERL5}|g'		\
 		-e 's|@MAKE@|${MAKE}|g'			\
 		< ${FILESDIR}/${FILE}.pl 		\
 		> ${WRKSRC}/${FILE}
