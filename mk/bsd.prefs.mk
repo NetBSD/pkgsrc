@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.118.2.16 2003/08/30 09:24:22 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.118.2.17 2003/09/02 03:09:49 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()

@@ -1,4 +1,4 @@
-$NetBSD: NOTES,v 1.11 2002/12/28 23:01:25 schmonz Exp $
+$NetBSD: NOTES,v 1.11.6.1 2003/09/02 03:09:50 jlam Exp $
 
  Caching
  =======
@@ -22,14 +22,14 @@ and performing the tests above, but only building the packages is needed.
 
 Platform			Working?	Full caching?
 --------			--------	-------------
-FreeBSD 4.7			N/A		N/A
+FreeBSD 4.7
 IRIX 6.5 (jschauma)		Yes!		Yes!
-Linux				N/A		N/A
+Linux
 Darwin 5.5 (schmonz)		Yes!		No
 Darwin 6.2 (grant)		Yes!		Yes!
-NetBSD 1.5.x (gendalia)		N/A		N/A
+NetBSD 1.5.x (gendalia)
 NetBSD 1.6 (jlam)		Yes!		Yes!
-OpenBSD (cjep)			N/A		N/A
-Solaris 7			N/A		N/A
+OpenBSD (cjep)
+Solaris 7
 Solaris 8 (grant)		Yes!		Yes!
-Solaris 9 (salo)		N/A		N/A
+Solaris 9 (salo)		Yes!		Yes!
