@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/06/11 00:34:25 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/09/09 03:12:28 jlam Exp $
 #
 
 DISTNAME=       	CGI.pm-2.752
@@ -13,7 +13,7 @@ COMMENT=		perl5 module for writing forms-based CGI programs
 
 # Some perl packages install their own versions of this module.
 # Can't simply define USE_PERL5.
-DEPENDS+=		perl-{5.0*,5.6.0nb2,base-5.[6-9]*}:../../lang/perl5-base
+DEPENDS+=               {perl-5.0*,perl-5.6.0nb2,perl-base>=5.6.0,perl>=5.6.1nb2}:../../lang/perl5
 
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/CGI/.packlist
 HTMLDIR=		${PREFIX}/share/doc/html/p5-CGI
@@ -24,10 +24,9 @@ do-configure:
 post-build:
 	cd ${WRKSRC}/examples;						\
 	for file in *.cgi *.pl; do					\
-		${MV} -f $${file} $${file}.tmp;				\
 		${SED}	-e "s|^#!/.*|#!${PERL5}|g"			\
-			$${file}.tmp > $${file};			\
-		${RM} -f $${file}.tmp;					\
+			$${file} > $${file}.tmp;			\
+		${MV} -f $${file}.tmp $${file};				\
 	done;								\
 	${CHMOD} +x *.cgi;						\
 	${PERL5} make_links.pl
