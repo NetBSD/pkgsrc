@@ -1,0 +1,19 @@
+==========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2000/01/27 21:18:56 abs Exp $
+
+ a) FrameMaker requires 6.1 suse_linux shlibs.rpm, not 6.3. The problem
+    files are shlibs.rpm: lib/{ld-linux.so.2,libc.so.6,libdl.so.2}.
+	    and bash.rpm: bin/bash      (for some of the plugins)
+
+ b) FrameMaker will not run on 15 or 16 bit displays - use 8, 24, or 32
+
+ c) FrameMaker requires portmap to be running in insecure mode. Edit
+    /etc/rc.conf and add -i to "portmap_flags", and ensure /etc/hosts.deny
+    contains "portmap: ALL EXCEPT .your.doma.in, localhost"
+
+ d) For non demo use, obtain a free licence from
+	http://www.adobe.com/products/framemaker/fmlinux.html
+    install the package and run fmaddlicense, pick a company name,
+    enter 'add <key_from_Adobe> <account>', then 'done'.
+
+==========================================================================

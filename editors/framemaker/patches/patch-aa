@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/27 21:18:56 abs Exp $
+
+--- bin/scripts/fmarch.orig	Sat Dec  4 21:40:28 1999
++++ bin/scripts/fmarch	Thu Jan 27 16:09:54 2000
+@@ -17,8 +17,14 @@
+ 	;;
+ esac
+ 
+-[ -f /bin/uname ] && {
+-	case `/bin/uname -a` in
++if [ -f /bin/uname ];then
++	UNAME=/bin/uname
++else
++	UNAME=/usr/bin/uname
++fi
++
++[ -f $UNAME ] && {
++	case `$UNAME -a` in
+ 	SunOS* )
+ 		case `/bin/uname -r` in
+ 		4*)
+@@ -54,6 +60,11 @@
+ 	Linux*' 'i[3-9]86' '*)
+ 		echo linuxm.glibc2.i386
+ 		exit 0
++		;;
++	NetBSD' '*' 'i386)
++		echo linuxm.glibc2.i386
++		exit 0
++		;;
+ 	esac
+ }
+ 

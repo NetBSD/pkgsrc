@@ -1,0 +1,53 @@
+#!/bin/sh
+FMHOME=@@PREFIX@@/lib/FM556_linux
+PATH=${PATH}:${FMHOME}/bin
+export FMHOME PATH
+
+# We need portmapper to be running in 'insecure' mode.... wonderful :/
+#
+if [ -z "$FM_BYPASS_PORTMAP_CHECK" ] ; then
+    INSECURE_PORTMAP=`ps -xa -o command|grep '^portmap.*-.*i'`
+    if [ -z "$INSECURE_PORTMAP" ]; then
+	cat << END
+ABORTING: The linux FrameMaker binary requires portmap to be running in
+	  insecure mode. You should edit /etc/rc.conf and add -i to
+	  "portmap_flags", and ensure /etc/hosts.deny contains
+	      portmap: ALL EXCEPT .your.doma.in, localhost
+	  Then reboot.  If you enable -i without updating /etc/hosts.deny
+	  your machine may be vulnerable to portmap forwarding attacks.
+
+	  Set the environment var 'FM_BYPASS_PORTMAP_CHECK' to bypass.
+
+END
+	FM_ABORT=1
+    fi
+fi
+
+# For some reason it crashes on 15 or 16 bit displays... not nice
+#
+if [ -z "$FM_BYPASS_DISPLAY_DEPTH_CHECK" ] ; then
+    DEPTH=`xdpyinfo | awk '/depth of root window/ {print $5}'`
+    if [ "$DEPTH" = 15 -o "$DEPTH" = 16 ]; then
+	cat << END
+ABORTING: FrameMaker does not currently work on 15 or 16 bit displays,
+	  please set your display to 8, 24, or 32 bit.
+
+	  Set the environment var 'FM_BYPASS_DISPLAY_DEPTH_CHECK' to bypass.
+
+END
+	FM_ABORT=1
+    fi
+fi
+
+# Avoid 'show one error, fix it, then run again only to see another'
+#
+if [ -n "$FM_ABORT" ];then
+    exit
+fi
+
+if [ -n "$HOME" -a -d "$HOME" -a ! -d "$HOME/fminit" ];then
+    echo "Creating $HOME/fminit"
+    mkdir $HOME/fminit
+fi
+
+exec ${FMHOME}/bin/@@COMMAND@@ $@
