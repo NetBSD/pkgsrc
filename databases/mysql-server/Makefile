@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.4 1999/06/20 21:06:18 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/07/12 17:41:58 bad Exp $
 #
 
 DISTNAME=		mysql-3.22.22
 PKGNAME=		${DISTNAME:S/-/-server-/}
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.mysql.com/pub/mysql/Downloads/MySQL-3.22/ \
-			ftp://ftp.netcasting.net/pub/mysql/Downloads/MySQL-3.22/
+			ftp://ftp.netcasting.net/pub/mysql/Downloads/MySQL-3.22/ \
+			ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQL-3.22/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.mysql.com/
