@@ -1,12 +1,13 @@
-$NetBSD: patch-ai,v 1.1 1999/03/05 00:25:10 tron Exp $
+$NetBSD: patch-ai,v 1.2 2000/08/09 23:09:35 wiz Exp $
 
---- libIDL/Makefile.in.orig	Thu Feb 25 16:17:07 1999
-+++ libIDL/Makefile.in	Fri Mar  5 00:21:00 1999
-@@ -120,7 +120,7 @@
+--- libIDL/Makefile.in.orig	Fri Aug  4 14:29:21 2000
++++ libIDL/Makefile.in	Fri Aug  4 14:29:46 2000
+@@ -130,8 +130,7 @@
+ libIDL_la_SOURCES = parser.c parser.h lexer.c \
+ 			  ns.c util.c util.h rename.h
  
- libIDL_la_SOURCES = parser.c parser.h lexer.c 			  ns.c util.c util.h rename.h
- 
--libIDL_la_LDFLAGS = -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)				  -release $(LT_RELEASE)
+-libIDL_la_LDFLAGS = -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)	\
+-			  -release $(LT_RELEASE)
 +libIDL_la_LDFLAGS = -release $(LT_RELEASE)
  
  
