@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2005/02/20 15:56:20 wiz Exp $
+
+--- configure.orig	2005-01-24 15:43:45.000000000 +0100
++++ configure
+@@ -20355,7 +20355,7 @@ if test "${ac_cv_lib_GL_glBegin+set}" = 
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lGL  $LIBS"
++LIBS="-lGL -lXext -lm  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
