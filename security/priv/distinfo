@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/03/04 02:57:00 simonb Exp $
+$NetBSD: distinfo,v 1.5 2004/03/11 01:41:49 uebayasi Exp $
 
 SHA1 (priv-1.0-beta2.tar.gz) = dee75baaf320c5dee112376cca0bb08a635f2806
 Size (priv-1.0-beta2.tar.gz) = 34507 bytes
-SHA1 (patch-aa) = 9d74ab0540fa767fa0dbe5b5672ca0c3f60d27b9
+SHA1 (patch-ab) = e6f89b30954ac9dbe0243e755287f5f8a37011bd
