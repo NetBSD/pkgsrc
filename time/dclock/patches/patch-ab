@@ -1,11 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:17 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2003/01/07 05:48:10 jmcneill Exp $
 
-Patch from Robert Elz to make the clock behave as a clock,
-rather than a sundial.
-itojun's y2k patch
-
---- Dclock.c	2000/01/01 04:40:38	1.1
-+++ Dclock.c	2000/01/01 04:40:53
+--- Dclock.c.orig	Tue Jan  7 01:43:15 2003
++++ Dclock.c	Tue Jan  7 01:43:49 2003
 @@ -21,8 +21,6 @@
  #define CLOCK_WIDTH	256
  #define CLOCK_HEIGHT	80
@@ -44,15 +40,27 @@ itojun's y2k patch
      }
      /* The colon[0] area is blank */
      if (w->dclock.colon[0])
-@@ -629,7 +627,7 @@
+@@ -627,9 +625,9 @@
+ {
+     Boolean save_scroll = w->dclock.scroll;
      Boolean save_fade = w->dclock.fade;
-     long t;
+-    long t;
++    time_t t;
  
 -    if (!XtIsRealized(w))
 +    if (!XtIsRealized((Widget) w))
  	return;
  
      if (w->dclock.interval_id != (XtIntervalId)NULL) {
+@@ -663,7 +661,7 @@
+ {
+     char buf[11];
+     Boolean alarm_went_off = False;
+-    long t = time(0);
++    time_t t = time(0);
+     register struct tm *l_time = localtime(&t);
+     int digit_w = w->dclock.digit_w;
+     int digit_h = w->dclock.digit_h;
 @@ -802,7 +800,7 @@
  		turn_off[i] = oldmask & ~newmask;
  	    }
