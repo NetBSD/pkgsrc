@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3136 2003/08/30 01:32:49 taca Exp $
+$NetBSD: CHANGES,v 1.3137 2003/08/30 02:58:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3379,4 +3379,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ap-xslt to 1.1nb7 [xtraeme 2003-08-29]
 	Updated kterm to 6.2.0nb5 [kei 2003-08-29]
 	Added free-1.0 [hubertf 2003-08-29]
-	Updated ja-samba to 2.2.8.1.1.1 [taca 2003-08-29]
+	Updated ja-samba to 2.2.8.1.1.1 [taca 2003-08-30]
+	Updated ruby-fox to 1.0.25 [fredb 2003-08-30]
