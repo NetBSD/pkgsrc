@@ -1,24 +1,28 @@
-# $NetBSD: Makefile,v 1.3 2004/01/22 08:24:31 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/28 11:22:24 recht Exp $
 #
 
-DISTNAME=	tla-1.1pre8
-PKGNAME=	tla-1.1.0.8
+DISTNAME=	tla-1.1
 CATEGORIES=	devel
 MASTER_SITES=	http://regexps.srparish.net/src/tla/
 
-MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://arch.fifthvision.net/bin/view/Arch/WebHome
+MAINTAINER=	recht@NetBSD.org
+HOMEPAGE=	http://regexps.srparish.net/www/
 COMMENT=	Revision control system ideal for widely distributed development
 
 DEPENDS+=	patch-[0-9]*:../../devel/patch
+DEPENDS+=	diffutils-[0-9]*:../../devel/diffutils
+DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src/=build
 USE_GNU_TOOLS+=	make
 
 HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	../configure
-CONFIGURE_ARGS+=	--prefix ${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--with-gnu-diff=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}/gdiff
+CONFIGURE_ARGS+=	--with-gnu-diff3=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}/gdiff
 CONFIGURE_ARGS+=	--with-gnu-patch=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}patch
+CONFIGURE_ARGS+=	--with-gnu-tar=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}tar
 
 HTMLDIR=	${PREFIX}/share/doc/html/arch
 EXAMPLESDIR=	${PREFIX}/share/examples/arch
