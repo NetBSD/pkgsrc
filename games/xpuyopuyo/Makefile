@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/03/08 19:40:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2004/03/09 21:43:23 snj Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 PKGREVISION=		4
@@ -13,7 +13,7 @@ COMMENT=		Tetris-like puzzle game
 DEPENDS+=		gnome1-dirs>=1.5:../../misc/gnome1-dirs
 
 AUTOMAKE_REQD=		1.4
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
@@ -32,8 +32,8 @@ pre-configure:
 		> ${GNOME_CONFIG}
 	${CHMOD} +x ${GNOME_CONFIG}
 
-.include "../../audio/libmikmod/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../audio/libmikmod/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
