@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2002/10/21 15:44:13 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2002/12/24 17:50:23 jmmv Exp $
 #
 
 DISTNAME=	pspp-0.3.0
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	ftp://franz.stat.wisc.edu/pub/PSPP/ \
 		ftp://alpha.gnu.org/gnu/pspp/ \
@@ -21,8 +22,16 @@ BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-Dunix=1
-MAKE_ENV+=	pkgsysconfdir="${PREFIX}/etc/pspp"
+CONFIGURE_ARGS=	--sysconfdir="${PKG_SYSCONFDIR}"
+
+PKG_SYSCONFSUBDIR=	pspp
+EGDIR=		${PREFIX}/share/examples/pspp
+CONF_FILES=	${EGDIR}/devices ${PKG_SYSCONFDIR}/devices
+CONF_FILES+=	${EGDIR}/html-prologue ${PKG_SYSCONFDIR}/html-prologue
+CONF_FILES+=	${EGDIR}/papersize ${PKG_SYSCONFDIR}/papersize
+CONF_FILES+=	${EGDIR}/ps-prologue ${PKG_SYSCONFDIR}/ps-prologue
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
