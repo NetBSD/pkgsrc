@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/06/07 19:52:23 frueauf Exp $
+# $NetBSD: Makefile,v 1.13 1998/06/18 15:25:25 agc Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 # Note: If you want to have pine's default behaviour of not allowing
@@ -15,8 +15,6 @@ MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
 MAINTAINER=	packages@netbsd.org
 
 CONFLICTS=	pico-2.9
-
-MAN1= 		pine.1 pico.1 pilot.1
 
 post-patch:
 	${CP} -f ${WRKSRC}/pine/osdep/os-neb.h ${WRKSRC}/pine/osdep/os-neb.h.orig

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:30 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/18 15:25:24 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/17 18:47:53 max Exp
 #
 
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	Lars.Koeller@Uni-Bielefeld.DE
 
 WRKSRC=		${WRKDIR}/faces
-MAN1=		compface.1 faces.1 face_update.1 uncompface.1
-MAN3=		compface.3 uncompface.3
 
 post-configure:
 	@for f in ${WRKSRC}/Makefile ${WRKSRC}/faces.h ${WRKSRC}/x11.c; do \
