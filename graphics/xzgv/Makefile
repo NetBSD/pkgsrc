@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/03/13 17:37:19 fredb Exp $
+# $NetBSD: Makefile,v 1.14 2002/09/23 01:29:05 jlam Exp $
 
 DISTNAME=	xzgv-0.7
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Image viewer
 
 INFO_FILES=	xzgv
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
 USE_GMAKE=		yes
 
@@ -23,7 +23,6 @@ do-install:
 	@for f in xzgv xzgv-1 xzgv-2 xzgv-3 ; do \
 	${INSTALL_DATA} ${WRKSRC}/doc/$$f ${PREFIX}/info ; done
 
-.include "../../graphics/imlib/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/imlib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
