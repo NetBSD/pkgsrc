@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.22 1998/02/27 21:55:43 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -89,7 +90,7 @@
     SUBDIR += xfinans
     SUBDIR += xfishtank
 #    SUBDIR += xfm
-#    SUBDIR += xforms
+    SUBDIR += xforms
     SUBDIR += xgas
 #    SUBDIR += xgrab
 #    SUBDIR += xkeycaps
