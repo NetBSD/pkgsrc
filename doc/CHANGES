@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1141 2003/01/16 11:11:21 markd Exp $
+$NetBSD: CHANGES,v 1.1142 2003/01/17 02:10:51 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -287,3 +287,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated eggdrop to 1.6.13 [salo 2003-01-16]
 	Added aspell-german-0.50-2 [salo 2003-01-16]
 	Added fhist-1.12 [markd 2003-01-16]
+	Updated siag to 3.5.4 [uebayasi 2003-01-17]
