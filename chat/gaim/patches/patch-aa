@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.22 2004/06/03 19:13:02 minskim Exp $
+
+Workaround for http://bugzilla.gnome.org/show_bug.cgi?id=62948
+
+--- src/gtkconv.c.orig	2004-05-30 11:44:45.000000000 -0500
++++ src/gtkconv.c
+@@ -1478,6 +1478,11 @@ entry_key_press_cb(GtkWidget *entry, Gdk
+ 				if (!(event->state & (GDK_SHIFT_MASK | GDK_CONTROL_MASK)) &&
+ 					gaim_prefs_get_bool("/gaim/gtk/conversations/enter_sends"))
+ 				{
++					if (gtk_im_context_filter_keypress (GTK_TEXT_VIEW (entry)->im_context, event))
++					{
++						GTK_TEXT_VIEW (entry)->need_im_reset = TRUE;
++						return TRUE;
++					}
+ 					send_cb(NULL, conv);
+ 					return TRUE;
+ 				}
