@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/05/04 21:35:27 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/05/05 06:15:58 jmmv Exp $
 include/libgnomecanvas-2.0/libgnomecanvas/gnome-canvas-bpath.h
 include/libgnomecanvas-2.0/libgnomecanvas/gnome-canvas-clipgroup.h
 include/libgnomecanvas-2.0/libgnomecanvas/gnome-canvas-line.h
@@ -19,8 +19,8 @@ lib/libglade/2.0/libcanvas.so
 lib/libgnomecanvas-2.a
 lib/libgnomecanvas-2.la
 lib/libgnomecanvas-2.so
-lib/libgnomecanvas-2.so.601
-lib/libgnomecanvas-2.so.601.0
+lib/libgnomecanvas-2.so.600
+lib/libgnomecanvas-2.so.600.1
 lib/pkgconfig/libgnomecanvas-2.0.pc
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/libgnomecanvas-2.0.mo
