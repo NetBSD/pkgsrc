@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/30 14:23:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/09/01 17:11:02 xtraeme Exp $
 #
 
-DISTNAME=	artwiz-aleczapka
-PKGNAME=        artwiz-fonts-1.0
+DISTNAME=	artwiz-aleczapka-1.3
+PKGNAME=        ${DISTNAME:S/aleczapka/fonts/}
 CATEGORIES=	fonts
 MASTER_SITES=	http://fluxbox.org/artwiz-aleczapka/
 EXTRACT_SUFX=	.tar.bz2
