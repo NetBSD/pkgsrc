@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/31 00:05:19 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/21 14:56:07 adam Exp $
 bin/enhance
 include/libtecla.h
 lib/libtecla.a
@@ -48,8 +48,10 @@ man/man3/gl_lookup_history.3
 man/man3/gl_normal_io.3
 man/man3/gl_pending_io.3
 man/man3/gl_prompt_style.3
+man/man3/gl_query_char.3
 man/man3/gl_range_of_history.3
 man/man3/gl_raw_io.3
+man/man3/gl_read_char.3
 man/man3/gl_register_action.3
 man/man3/gl_resize_history.3
 man/man3/gl_return_status.3
