@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5539 2004/04/11 18:02:15 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.5540 2004/04/11 18:16:48 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1911,3 +1911,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gdcd to 0.2.1nb7 [xtraeme 2004-04-11]
 	Updated tcl-gdbm to 0.10 [minskim 2004-04-11]
 	Updated lcms to 1.12nb1 [dmcmahill 2004-04-11]
+	Added bmp-0.9.6 [jmmv 2004-04-11]
+	Added bmp-esound-0.9.6 [jmmv 2004-04-11]
