@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/06/27 06:15:12 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/07/22 15:31:44 rh Exp $
 #
 
-DISTNAME=	libole2-0.1.5
+DISTNAME=	libole2-0.1.6
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=unstable/sources/libole2/}
 
