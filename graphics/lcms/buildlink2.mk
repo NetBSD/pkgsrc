@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2004/02/09 12:03:27 seb Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/02/11 19:11:32 seb Exp $
 
 .if !defined(LCMS_BUILDLINK2_MK)
 LCMS_BUILDLINK2_MK=	# defined
@@ -24,7 +24,7 @@ buildlink-include-lcms: .PHONY
 .for _h_ in lcms.h icc34.h
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ! -f ${BUILDLINK_DIR}/include/lcms/${_h_} ]; then		\
-		${INSTALL_DATA_DIR} ${BUILDLINK_DIR}/include/lcms;	\
+		${MKDIR} ${BUILDLINK_DIR}/include/lcms;	\
 		${ECHO_BUILDLINK_MSG} "Linking lcms/${_h_} to ${_h_} in ${BUILDLINK_DIR}/include"; \
 		${LN} -s ${BUILDLINK_PREFIX.lcms}/include/${_h_} ${BUILDLINK_DIR}/include/lcms/${_h_}; \
 	fi
