@@ -1,5 +1,9 @@
-# $NetBSD: logic,v 1.4 2003/10/03 19:39:19 jlam Exp $
-
+# $NetBSD: logic,v 1.5 2003/10/04 10:20:09 jlam Exp $
+#
+# If the wrapper caches don't cover the $arg we're examining, then run
+# it through the transformations and any wrapper-specific post-logic
+# and cache the result.
+#
 quotedarg=no
 addtocache=no
 addtoprivatecache=no
