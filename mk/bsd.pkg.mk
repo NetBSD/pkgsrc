@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1522 2004/10/21 17:18:44 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1523 2004/10/25 18:02:20 jmmv Exp $
 #
 # This file is in the public domain.
 #
@@ -2268,10 +2268,17 @@ do-config-star-override:
 .endif
 
 PKGCONFIG_OVERRIDE_SED= \
-	-e 's|^\(Libs:.*[ 	]\)-L\([ 	]*[^ 	]*\)\(.*\)$$|\1${COMPILER_RPATH_FLAG}\2 -L\2\3|'
+	'/^Libs:.*[ 	]/s|-L\([ 	]*[^ 	]*\)|${COMPILER_RPATH_FLAG}\1 -L\1|g'
+PKGCONFIG_OVERRIDE_STAGE?=	pre-configure
 
 .if defined(PKGCONFIG_OVERRIDE) && !empty(PKGCONFIG_OVERRIDE)
+.  if ${PKGCONFIG_OVERRIDE_STAGE} == "pre-configure"
 _CONFIGURE_PREREQ+=		subst-pkgconfig
+.  elif ${PKGCONFIG_OVERRIDE_STAGE} == "post-configure"
+_CONFIGURE_POSTREQ+=		subst-pkgconfig
+.  else
+SUBST_STAGE.pkgconfig=		${PKGCONFIG_OVERRIDE_STAGE}
+.  endif
 SUBST_CLASSES+=			pkgconfig
 SUBST_MESSAGE.pkgconfig=	"Adding rpaths to pkgconfig files."
 SUBST_FILES.pkgconfig=		${PKGCONFIG_OVERRIDE:S/^${WRKSRC}\///}
