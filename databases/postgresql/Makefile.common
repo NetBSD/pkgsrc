@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.29 2002/09/01 01:14:29 jonb Exp $
+# $NetBSD: Makefile.common,v 1.30 2002/09/26 09:56:07 abs Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
-# the main sources of the PostgreSQL distribution.
+# the main sources of the PostgreSQL distribution except jdbc-postgresql.
 #
 # The PostgreSQL package naming scheme, aside from the obvious piecewise
 # packages, is as follows:
