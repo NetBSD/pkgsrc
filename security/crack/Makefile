@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 22:52:52 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/10/06 08:19:45 jlam Exp $
 # FreeBSD Id: ports/security/crack/Makefile,v 1.11 1999/09/04 19:24:50 obrien Exp
 
 DISTNAME=	crack5.0
@@ -21,12 +21,12 @@ pre-build:
 		${ECHO_MSG} "You may want to install the dict distribution into /usr/share/dict" ; \
 		${ECHO_MSG} "to increase the size of the cracking dictionary." ; \
 	fi)
-	@${SED} 's|@@PREFIX@@|${PREFIX}|g' < ${WRKSRC}/Crack > ${WRKSRC}/Crack.new
+	@${SED} 's|@@PREFIX@@|${PREFIX}|g;s|@@SH@@|${SH}|g' < ${WRKSRC}/Crack > ${WRKSRC}/Crack.new
 	@${RM} -f ${WRKSRC}/Crack && ${MV} ${WRKSRC}/Crack.new ${WRKSRC}/Crack
 	@${CHMOD} a+rx ${WRKSRC}/Crack
 
 do-build:
-	(cd ${WRKSRC} ; ./Crack -makeonly)
+	cd ${WRKSRC} ; ./Crack -makeonly
 
 do-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/libexec/crack
@@ -35,12 +35,12 @@ do-install:
 	@${CHMOD} go-rwx ${PREFIX}/share/crack
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/dict
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/crack
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/extra \
-			     ${PREFIX}/share/crack/run
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/extra
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/run
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/scripts
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/dict/1\
-			     ${PREFIX}/share/crack/dict/2 \
-		             ${PREFIX}/share/crack/dict/3
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/dict/1
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/dict/2
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/dict/3
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/run
 	@${INSTALL_DATA_DIR} ${PREFIX}/crack/run/dict
 	${INSTALL_SCRIPT} ${WRKSRC}/Crack ${PREFIX}/sbin
@@ -207,6 +207,6 @@ do-install:
 	done
 
 post-install:
-	(${PREFIX}/sbin/Crack -makedict)
+	${PREFIX}/sbin/Crack -makedict
 
 .include "../../mk/bsd.pkg.mk"
