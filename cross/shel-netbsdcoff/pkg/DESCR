@@ -1,1 +1,1 @@
-This cross-compile environment is for NetBSD/{evbsh3,dreamcast}.
+This cross-compile environment is for little-endian NetBSD/{evbsh3,dreamcast}.
