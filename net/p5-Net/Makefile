@@ -3,7 +3,8 @@
 # Date created:				September 30th 1996
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-#   $Id: Makefile,v 1.1.1.1 1997/11/22 04:52:46 hubertf Exp $
+#   $NetBSD: Makefile,v 1.2 1997/11/22 04:55:46 hubertf Exp $
+#   FreeBSD Id: Makefile,v 1.13 1997/06/27 18:38:15 jfitz Exp
 #
 
 DISTNAME=	libnet-1.0505
