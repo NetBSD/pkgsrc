@@ -1,0 +1,909 @@
+.TH EXIM 8
+.SH exim
+exim \- Mail Transfer Agent
+.SH SYNOPSIS
+.B exim
+.I "[options] arguments ..."
+.br
+.B mailq
+.I "[options] arguments ..."
+.br
+.B rmail
+.I "[options] arguments ..."
+.br
+.B rsmtp
+.I "[options] arguments ..."
+.br
+.B runq
+.I "[options] arguments ..."
+.br
+.B sendmail
+.I "[options] arguments ..."
+.SH "DESCRIPTION"
+.B Exim
+is a mail transport agent (MTA) developed at the University of
+Cambridge for use on Unix systems connected to the Internet. It is
+freely available under the terms of the GNU General Public Licence. In
+style it is similar to Smail 3, but its facilities are more extensive,
+and in particular it has some defences against mail bombs and
+unsolicited junk mail, in the form of options for refusing messages
+from particular hosts, networks, or senders.
+.PP
+Exim's command line takes the standard Unix form of a sequence of
+options, each starting with a hyphen character, followed by a number
+of arguments.  The options are compatible with the main options of
+Sendmail, and there are also some additional options, some of which
+are compatible with Smail 3.  Certain combinations of options do not
+make sense, and provoke an error if used. The form of the arguments
+depends on which options are set.
+.PP
+If Exim is called under the name mailq, it behaves as if the option
+-bp were present before any other options. This is for compatibility
+with some systems that contain a command of that name in one of the
+standard libraries, symbolically linked to /usr/lib/sendmail.
+.PP
+If Exim is called under the name rsmtp it behaves as if the option -bS
+were present before any other options, for compatibility with
+smail. The -bS option is used for reading in a number of messages in
+batched SMTP format.
+.PP
+If Exim is called under the name rmail it behaves as if the option -i
+were present before any other options, for compatibility with
+smail. The -i option is used for reading a message that should not be
+terminated by a dot on a line by itself. The name rmail is used as an
+interface by some UUCP systems.
+.PP
+If Exim is called under the name runq it behaves as if the option -q
+were present before any other options, for compatibility with
+smail. The -q option causes a single queue-runner process to be
+started.
+.SH LIMITATIONS
+For the benefit of those reading this overview to see whether Exim is
+of interest to them, its limitations are listed first.
+.TP
+.B ANSI-C
+Exim is written in ANSI C. This should not be much of a limitation
+these days. However, to help with systems that lack a true ANSI C
+library, Exim avoids making any use of the value returned by the
+sprintf() function, which is one of the main incompatibilities. It has
+its own version of strerror() for use with SunOS4 and any other system
+that lacks this function, and a macro can be defined to turn memmove()
+into bcopy() if necessary.
+.TP
+.B Filenames
+Exim uses file names that are longer than 14 characters.
+.TP
+.B Bangpaths
+Exim is intended for use as an Internet mailer, and therefore handles
+addresses in RFC 822 domain format only. It cannot handle 'bang
+paths', though simple two-component bang paths can be converted by a
+straightforward rewriting configuration.
+.TP
+.B Domains required
+Exim insists that every address it handles has a domain attached. For
+incoming local messages, domainless addresses are automatically
+qualified with a configured domain value. Configuration options
+specify from which remote systems unqualified addresses are
+acceptable.
+.TP
+.B Transports
+The only external transport currently implemented is an SMTP transport
+over a TCP/IP network (using sockets), suitable for machines on the
+Internet. However, a pipe transport is available, and there are
+facilities for writing messages to files in 'batched SMTP' format;
+this can be used to send messages to some other transport
+mechanism. Batched SMTP input is also catered for.
+.SH FEATURES
+Exim follows the same general approach of decentralized control that
+Smail 3 does. There is no central process doing overall management of
+mail delivery.  However, unlike Smail, the independent delivery
+processes share data in the form of 'hints', which makes delivery more
+efficient in some cases. The hints are kept in a number of DBM
+files. If any of these files are lost, the only effect is to change
+the pattern of delivery attempts and retries.
+.PP
+Many configuration options can be given as expansion strings, and as
+these can include file lookups, much of Exim's operation can be made
+table-driven if desired. For example, it is possible to do local
+delivery on a machine on which the users do not have accounts.
+.PP
+Regular expressions are available in a number of configuration
+parameters.
+.PP
+Domain lists can include file lookups, making it possible to support a
+large number of local domains.
+.PP
+Exim has flexible retry algorithms, applicable to mail routing as well as
+to delivery.
+.PP
+Exim contains header and envelope rewriting facilities.
+.PP
+Unqualified addresses are accepted only from specified hosts or networks.
+.PP
+Exim can perform multiple deliveries down the same SMTP channel after
+deliveries to a host have been delayed.
+.PP
+Exim can be configured to do local deliveries immediately but to leave
+remote deliveries until the message is picked up by a queue-runner
+process. This increases the likelihood of multiple messages being sent
+down a single SMTP connection.
+.PP
+When copies of a message have to be delivered to more than one remote
+host, up to a configured maximum number of remote deliveries can be
+done in parallel.
+.PP
+Exim supports optional checking of incoming return path (sender) and
+receiver addresses as they are received by SMTP.
+.PP
+SMTP calls from specific machines, optionally from specific idents,
+can be locked out, and incoming SMTP messages from specific senders
+can also be locked out.
+.PP
+It is possible to control which hosts may use the Exim host as a relay
+for onward transmission of mail; the control can be made to depend on
+the address domain.
+.PP
+Messages on the queue can be 'frozen' and 'thawed' by the
+administrator.
+.PP
+The maximum size of message can be specified.  Exim can handle a
+number of independent local domains on the same machine; each domain
+can have its own alias files, etc. These are commonly called "virtual
+domains".
+.PP
+Exim stats a user's home directory before looking for a .forward file,
+in order to detect the case of a missing NFS mount.
+.PP
+Exim contains an optional built-in mail filtering facility. This
+enables users to set up their own mail filtering in a straightfoward
+manner without the need to run an external program. There can also be
+a system filter file that applies to all messages.
+.PP
+There is support for multiple user mailboxes controlled by prefixes or
+suffixes on the user name, either via the filter mechanism or through
+multiple .forward files.
+.PP
+Periodic warnings are automatically sent to messages' senders when
+delivery is delayed - the time between warnings is configurable.
+.PP
+A queue run can be manually started to deliver just a particular
+portion of the queue, or those messages with a recipient whose address
+contains a given string.
+.PP
+Exim can be configured to run as root all the time, except when
+performing local deliveries, which it always does in a separate
+process under an appropriate uid and gid. Alternatively, it can be
+configured to run as root only when needed; in particular, it need not
+run as root when receiving incoming messages or when sending out
+messages over SMTP.
+.PP
+I have tried to make the wording of delivery failure messages clearer
+and simpler, for the benefit of those less-experienced people who are
+now using email.
+.PP
+The Exim Monitor is an optional extra; it displays information about
+Exim's processing in an X window, and an administrator can perform a
+number of control actions from the window interface.
+.SH METHOD OF OPERATION
+When Exim receives a message, it writes two files in its spool
+directory.  The first contains the envelope information, the current
+status of the message, and the headers, while the second contains the
+body of the message. The status of the message includes a complete
+list of recipients and a list of those that have already received the
+message. The header file gets updated during the course of delivery if
+necessary.
+.PP
+A message remains in the spool directory until it is completely
+delivered to its recipients or to an error address, or until it is
+deleted by an administrator or by the user who originally created
+it. In cases when delivery cannot proceed - for example, when a
+message can neither be delivered to its recipients nor returned to its
+sender, the message is marked 'frozen' on the spool, and no more
+deliveries are attempted. The administrator can thaw such messages
+when the problem has been corrected, and can also freeze individual
+messages by hand if necessary.
+.PP
+As delivery proceeds, Exim writes timestamped information about each
+address to a per-message log file; this includes any delivery error
+messages. This log is solely for the benefit of the administrator. All
+the information Exim itself needs for delivery is kept in the header
+spool file. The message log file is deleted with the spool files. If a
+message is delayed for more than a configured time, a warning message
+is sent to the sender. This is repeated whenever the same time elapses
+again without delivery being complete.
+.PP
+The main delivery processing elements of Exim are called directors,
+routers, and transports. Code for a number of these is provided, and
+compile-time options specify which ones are actually included in the
+binary. Directors handle addresses that include one of the local
+domains, routers handle remote addresses, and transports do actual
+deliveries.
+.SH TRUSTED AND ADMIN USERS
+Some Exim options are available only to "trusted users" and others are
+available only to "admin users".
+.PP
+A trusted user is root or the Exim user (if defined) or any user
+listed in the trusted_users configuration option, or any user, if the
+currently set group is one of those listed in the trusted_groups
+configuration option. Trusted users are permitted to use the -f option
+to specify the senders of messages that are passed to Exim through the
+local interface, and also to specify host names, host addresses,
+protocol names, and ident values. Thus they are able to insert
+messages into Exim's queue locally that have the characteristics of
+messages received from a remote host.
+.PP
+An admin user is root or the Exim user (if defined) or any user that
+is a member of the Exim group (if defined). The current group does not
+have to be the Exim group. Admin users are permitted to operate on
+messages in the queue, for example, to force delivery failures. It is
+also necessary to be an admin user in order to see the full
+information provided by the Exim monitor.
+.SH OPTIONS
+Exim's command options are as follows:
+.TP
+.B -bd
+Run Exim as a daemon, awaiting incoming SMTP connections. This option
+can be used only by an admin user. If either of the -d or -dm options
+are set, the daemon does not disconnect from the controlling
+terminal. By default, Exim listens for incoming connections on all the
+host's interfaces, but it can be restricted to specific interfaces by
+setting the local_interfaces option in the configuration file. The
+standard SMTP port is used, but this can be varied by means of the -oX
+option. Most commonly, the -bd option is combined with the -q<time>
+option, to cause periodic queue runs to happen as well.
+
+The process id of a daemon that is both listening and starting queue
+runners is written to a file called exim-daemon.pid in Exim's spool
+directory, unless the -oX option is used, in which case the file
+name is exim-daemon.<port-number>.pid. If a daemon is run with only
+one of -bd and -q<time>, then that option is added on to the end of
+the file name, allowing sites that run two separate daemons to
+distinguish them.
+
+It is possible to change the directory in which these pid files are
+written by changing the setting of PID_FILE_PATH in Local/Makefile.
+Further details are given in the comments in src/EDITME.
+
+The SIGHUP signal can be used to cause the daemon to re-exec itself.
+This should be done whenever Exim's configuration file is changed,
+or a new version of Exim is installed. It is not necessary to do
+this when other files (e.g. alias files) are changed.
+.TP
+.B -bf <filename>
+Run Exim in filter testing mode; the file is the filter file to be
+tested, and a test message must be supplied on the standard input.
+If there are no message-dependent tests in the filter, an empty file
+can be supplied. If the test file does not begin with the special
+line
+
+ # Exim filter
+
+then it is taken to be a normal .forward file, and is tested for
+validity under that interpretation. The result of this command,
+provided no errors are detected, is a list of the actions that Exim
+would try to take if presented with the message for real. More
+details of filter testing are given in the separate document
+entitled "Exim's User interface to mail filtering".
+
+When testing a filter file, various parameters that would normally
+be taken from the envelope recipient address of a message can be set
+by means of additional command line options. These are:
+
+ -bfd  <domain>    default is the qualify domain
+ -bfl  <local_part>default is the logged in user
+ -bfp  <local_part_prefix> default is null
+ -bfs  <local_part_suffix> default is null
+
+The local part should always be set to the incoming address with any
+prefix or suffix stripped, because that is how it appears when a
+message is actually being delivered.
+.TP
+.B -bi
+Sendmail interprets the -bi option as a request to rebuild its alias
+file. Exim does not have the concept of a single alias file, and so
+it cannot mimic this behaviour. However, calls to /usr/lib/sendmail
+-bi tend to appear in various scripts such as NIS make files, so the
+option must be recognized.
+
+If -bi is encountered, the command specified by the bi_command
+configuration option is run, under the uid and gid of the caller of
+Exim. If the -oA option is used, its value is passed to the command
+as an argument. The command set by bi_command may not contain
+arguments. The command can use the exim_dbmbuild utility, or some
+other means, to rebuild alias files if this is required. If the
+bi_command option is not set, then calling Exim with -bi is a no-op.
+.TP
+.B -bm
+Accept an incoming, locally-generated message on the current input,
+and deliver it to the addresses given as the command arguments
+(except when -t is also given - see below). Each argument can be a
+comma-separated list of RFC 822 addresses. This is the default
+option, and is assumed if no other conflicting option is present.
+The message may or may not be delivered immediately, depending on
+the setting of the -od option and the queue_only and queue_smtp
+configuration options.
+
+The format of the message must be as defined in RFC 822, except
+that, for compatibility with sendmail and smail, a line of the form
+
+ From sender Fri Jan  5 12:55 GMT 1996
+
+is permitted to appear at the start of the message. The Solaris 2
+version of the "mail" command inserts such a line, though there is
+no mention of it in the sendmail man page. The sender specified in
+this line is treated as if it were given as the argument to the -f
+option.
+.TP
+.B -bp
+List the contents of the mail queue on the current output. Each
+message on the queue is displayed as in the following example:
+
+ 25m  2.9K 0t5C6f-0000c8-00 <alice@wonderland.fict.book>
+   red.king@looking-glass.fict.book
+   <other addresses>
+
+The first line contains the amount of time the message has been on
+the queue (in this case 25 minutes), the size of the message (2.9K),
+the unique identifier for the message, and the message sender, as
+contained in the envelope. If the message is a delivery error
+message, the sender address is empty, and appears as <>. If the
+message is frozen (attempts to deliver it are suspended) then the
+text '*** frozen ***' is displayed at the end of this line.
+
+The recipients of the message (taken from the envelope, not the
+headers) are displayed on subsequent lines. Those addresses to which
+the message has already been delivered are marked with the letter D.
+If an original address gets expanded into several addresses via an
+alias or forward file, the original is displayed with a 'D' when
+deliveries for all of its child addresses are completed.
+.TP
+.B -bP
+If this option is given with no arguments, it causes the values of
+all Exim's main configuration options to be written to the standard
+output. The values of one or more specific options can be requested
+by giving their names as arguments, for example:
+
+ exim -bP qualify_domain local_domains
+
+If configure_file is given, the name of the runtime configuration
+file is output. If log_file_path or pid_file_path are given, the
+names of the directories where log files and daemon pid files are
+written are output, respectively. If these values are unset, log
+files are written in a subdirectory of the spool directory called
+log, and pid files are written directly into the spool directory.
+
+If one of the words director, router, or transport is given,
+followed by the name of an appropriate driver instance, the option
+settings for that driver are output. For example:
+
+ exim -bP transport local_delivery
+
+The generic driver options are output first, followed by the
+driver's private options. A list of the names of drivers of a
+particular type can be obtained by using one of the words
+director_list, router_list, or transport_list, and a complete list
+of all drivers with their option settings can be obtained by using
+directors, routers, or drivers.
+.TP
+.B -brt
+This option is for testing retry rules, and it must be followed by
+up to three arguments. It causes Exim to look for a retry rule that
+matches the values and to output it on the standard output. For
+example:
+
+ exim -brt bach.comp.mus
+ Retry rule: *.comp.mus  F,2h,15m; FG,4d,30m;
+
+See chapter 30 for a description of Exim's retry rules. The first
+argument, which is required, can be a complete address in the form
+local_part@domain, or it can be just a domain name. The second
+argument is an optional second domain name; if no retry rule is
+found for the first argument, the second is tried. This ties in with
+Exim's behaviour when looking for retry rules for remote hosts - if
+no rule is found that matches the host, one that matches the mail
+domain is sought. The final argument is the name of a specific
+delivery error, as used in setting up retry rules, for example
+'quota_3d'.
+.TP
+.B -brw
+This option is for testing address rewriting rules, and it must be
+followed by a single argument, consisting of either a local part
+without a domain, or a complete address with a fully-qualified
+domain. Exim outputs how this address would be rewritten for each
+possible place it might appear.
+.TP
+.B -bS
+This option is used for batched SMTP input, where messages have been
+received from some external source by an alternative transport
+mechanism. It causes Exim to accept one or more messages by reading
+SMTP on the standard input, but to generate no responses. All errors
+are reported by sending mail. If the caller is trusted, then the
+senders in the MAIL FROM commands are believed; otherwise the sender
+is always the caller of Exim. Unqualified senders and receivers are
+not rejected (there seems little point) but instead just get
+qualified. Receiver verification and administrative rejection is not
+done, even if configured. HELO and EHLO act as RSET; VRFY, EXPN, ETRN,
+HELP, and DEBUG act as NOOP; QUIT quits.
+.TP
+.B -bs
+This option causes Exim to accept one or more messages by reading SMTP
+commands on the standard input, and producing SMTP replies on the
+standard output. Some user agents use this interface as a way of
+passing locally-generated messages to the MTA. The option can also be
+used to run Exim from inetd, as an alternative to using a listening
+daemon, in which case the standard input is the connected socket. Exim
+distinguishes between the two cases by attempting to read the IP
+address of the peer connected to the standard input. If it is not a
+socket, the call to getpeername() fails, and Exim assumes it is
+dealing with a local message.
+
+If the caller of Exim is trusted, then the senders of messages are
+taken from the SMTP MAIL FROM commands. Otherwise the content of these
+commands is ignored and the sender is set up as the calling user.
+.TP
+.B -bt
+Run in address testing mode, in which each argument is taken as an
+address to be tested. The results are written to the standard
+output. If no arguments are given, Exim runs in an interactive manner,
+prompting with > for addresses to be tested. Each address is handled
+as if it were the recipient address on a message and passed to the
+appropriate directors or routers.
+.TP
+.B -bV
+Write the current version number, compilation number, and compi-
+lation date of the exim binary to the standard output.
+.TP
+.B -bv
+Verify the addresses that are given as the arguments to the command,
+and write the results to the standard output. Verification differs
+from address testing (the -bt option) in that directors and routers
+that have no_verify set are skipped, and if the address is accepted by
+a director or router that has fail_verify set, verification
+fails. This is the same logic that is used when verifying addresses on
+incoming messages (see the sender_verify and receiver_verify options).
+
+If the -v (or -d) option is not set, the output consists of a single
+line for each address, stating whether it was verified or not, and
+giving a reason in the latter case. Otherwise, more details are given
+of how the address has been handled, and in the case of aliases or
+forwarding, the generated addresses are also considered.
+.TP
+.B -C <filename>
+Read the runtime configuration from the given file instead of from
+the default file specified by the CONFIGURE_FILE compile-time set-
+ting. When this option is used by an unprivileged caller, Exim gives
+up its root privilege immediately, and runs with the real and
+effective uid and gid set to those of the caller, to avoid any
+security exposure. It does not do this if the caller is root or the
+exim user. The facility is useful for ensuring that configuration
+files are syntactically correct, but cannot be used for test
+deliveries, unless the caller is privileged, or unless it's an
+exotic configuration that does not require privilege. No check is
+made on the owner or group of the file specified by this option.
+.TP
+.B -d<number>
+Sets a debug level, causing debugging information to be written to the
+standard error file. Whitespace between -d and the number is
+optional. If no number is given, 1 is assumed, and the higher the
+number, the more output is produced. A value of zero turns debugging
+output off. A value of 9 gives the maximum amount of general
+information, 10 gives in addition details of the interpretation of
+filter files, and 11 or higher also turns on the debugging option for
+DNS lookups.
+.TP
+.B -df
+If this option is set and STDERR_FILE was defined when Exim was built,
+debugging information is written to the file defined by that variable
+instead of to the standard error file. This option provides a way of
+obtaining debugging information when Exim is run from inetd.
+.TP
+.B -dm
+This option causes information about memory allocation and freeing
+operations to be written to the standard error file.
+.TP
+.B -E
+This option specifies that an incoming message is a locally-generated
+delivery failure message. It is used internally by Exim when handling
+delivery failures and is not intended for external use. Its only
+effect is to stop Exim generating certain messages to the mailmaster,
+as otherwise message cascades could occur in some situations. As part
+of the same option, a message id may follow the characters -E. If it
+does, the log entry for the receipt of the new message contains the
+id, following 'R=', as a cross reference.
+.TP
+.B -ex
+There are a number of sendmail options starting with -oe which seem to
+be called by various programs without the leading o in the option. For
+example, the vacation program uses -eq. Exim treats all options of the
+form -ex as synonymous with the corresponding -oex options.
+.TP
+.B -F <string>
+Set the sender's full name for use when a locally-generated message
+is being accepted. In the absence of this option, the user's "gecos"
+entry from the password file is used. As users are generally
+permitted to alter their "gecos" entries, no security considerations
+are involved. White space between -F and the <string> is optional.
+.TP
+.B -f <address>
+Set the address of the sender of a locally-generated message. This
+option can normally be used only by root or the Exim user or by one
+of the configured trusted users. In other cases, the sender of a
+local message is always set up as the user who ran the exim command,
+and -f is ignored, with one exception. If the special setting -f <>
+is used by an untrusted user, it does not affect the sender for the
+purposes of managing the Sender: and From: headers, but it does have
+the effect of causing any SMTP transmissions to be sent out with
+
+ MAIL FROM: <>
+
+and local deliveries to contain
+
+ Return-path: <>
+
+when configured to contain Return-path: headers. The filtering code
+treats such a message as an error message, and won't generate
+messages as a result of reading it.
+
+White space between -f and the <string> is optional. The sender of a
+locally-generated message can also be set by an initial 'From' line
+in the message - see the description of -bm above.
+.TP
+.B -h <number>
+This option is accepted for compatibility with sendmail, but at
+present has no effect. (In sendmail it overrides the 'hop count'
+obtained by counting Received headers.)
+.TP
+.B -i
+This option, which has the same effect as -oi, specifies that a dot
+on a line by itself should not terminate an incoming, non-SMTP
+message. I can find no documentation for this option in Solaris 2.4
+sendmail, but the mailx command in Solaris 2.4 uses it.
+.TP
+.B -M
+The arguments are interpreted as a list of message ids, and Exim runs
+a delivery attempt on each message in turn. Retry hints for any of the
+addresses are overridden - this option forces Exim to try to deliver
+even if the normal retry time has not yet been reached. If any of the
+messages is frozen, it is automatically thawed before the delivery
+attempt, provided that the caller is an admin user.
+.TP
+.B -Mar <message-id> <address> <address> ...
+The first argument must be a message id, and the remaining ones must
+be email addresses. Exim adds the addresses to the list of recipi-
+ents of the message. However, if the message is active (in the middle
+of a delivery attempt), its status is not altered. This option can be
+used only by an admin user.
+.TP
+.B -Meb <message-id>
+This runs, under /bin/sh, the command defined in the shell variable
+VISUAL or, if that is not defined, EDITOR or, if that is not defined,
+the command vi, on a copy of the spool file containing the body of
+message (eb = Edit Body). If the editor exits normally, then the
+result of editing replaces the spool file. The message is locked
+during this process, so no delivery attempts can occur. Note that the
+first line of the spool file is its own name; care should be taken not
+to disturb this. The thinking behind providing this feature is that an
+administrator who has had to mess around with the addresses to get a
+message delivered might want to add some (grumbly) comment at the
+start of the message text. This option can be used only by an admin
+user.
+.TP
+.B -Mes <message-id> <address>
+There must be exactly two arguments. The first argument must be a
+message id, and the second one an email address. Exim changes the
+sender address in the message to the given address, which must be a
+fully qualified address, or '<>'. However, if the message is active
+(in the middle of a delivery attempt), its status is not altered.
+This option can be used only by an admin user.
+.TP
+.B -Mmad <message-id>
+Exim marks the all recipient addresses in the message as already
+delivered. However, if the message is active (in the middle of a
+delivery attempt), its status is not altered. This option can be used
+only by an admin user.
+.TP
+.B -Mmd <message-id> <address> <address> ...
+The first argument must be a message id, and the remaining ones must
+be email addresses. Exim marks the given addresses as already
+delivered. However, if the message is active (in the middle of a
+delivery attempt), its status is not altered. This option can be used
+only by an admin user.
+.TP
+.B -MC <transport> <hostname> <sequence number> <message id>
+This option is not intended for use by outside callers. It is used
+internally by Exim to invoke another instance of itself to deliver a
+waiting message using an existing SMTP channel, which is passed as the
+standard input and output. Details are given in chapter 43. This must
+be the final option, and the caller must be root or the Exim user in
+order to use it.
+.TP
+.B -Mc
+The arguments are interpreted as a list of message ids, and Exim runs
+a delivery attempt on each message in turn, but unlike the -M option,
+it does check for retry hints, and respects any that are found. This
+option is not very useful to external callers (except for testing). It
+is provided for internal use by Exim when it needs to re-invoke itself
+in order to regain root privilege for a delivery (see chapter 44).
+.TP
+.B -Mf
+The arguments are interpreted as a list of message ids, and each
+message is marked 'frozen'. This prevents any delivery attempts taking
+place until the message is 'thawed', either manually or as a result of
+the auto_thaw configuration option. However, if any of the messages is
+active (in the middle of a delivery attempt), its status is not
+altered. This option can be used only by an admin user.
+.TP
+.B -Mg
+The arguments are interpreted as a list of message ids, and Exim gives
+up trying to deliver those messages. A delivery error message is sent,
+containing the text 'cancelled by administrator'. However, if any of
+the messages is active, its status is not altered. This option can be
+used only by an admin user.
+.TP
+.B -Mt
+The arguments are interpreted as a list of message ids, and each
+message that was 'frozen' is now 'thawed', so that delivery attempts
+can resume. However, if any of the messages is active, its status is
+not altered. This option can be used only by an admin user.
+.TP
+.B -Mrm
+The arguments are interpreted as a list of message ids, and each
+message is completely removed from Exim's queue, and forgotten.
+However, if any of the messages is active, its status is not
+altered. This option can be used only by an admin user or by the user
+who originally caused the message to be placed on the queue.
+.TP
+.B -m
+This is apparently a synonym for -om that is accepted by sendmail, so
+Exim treats it that way too.
+.TP
+.B -N
+This is a debugging option that inhibits delivery of a message at the
+transport level. It implies at least -d1. Exim goes through many of
+the motions of delivery - it just doesn't actually transport the
+message, but instead behaves as if it had successfully done so. The
+log, for example, will contain entries as if the message had been
+delivered. Only root or the exim user are allowed to use -N with -bd,
+-q, or -M. In other words, an ordinary user can use it only when
+supplying an incoming message.
+.TP
+.B -oA <file name>
+This option is used by Sendmail in conjunction with -bi to specify an
+alternative alias file name. Exim handles -bi differently; see the
+description above.
+.TP
+.B -oB <n>
+This is a debugging option which limits the maximum number of SMTP
+deliveries down one channel to <n>, overriding the value set in the
+smtp transport. If <n> is omitted, the limit is set to 1 (no
+batching).
+.TP
+.B -odb
+This option applies to all modes in which Exim accepts incoming
+messages, including the listening daemon. It requests 'background'
+delivery of such messages, which means that the accepting process
+automatically starts another delivery process for each message
+received. Exim does not wait for such processes to complete (it can
+take some time to perform SMTP deliveries). This is the default action
+if none of the -od options are present.
+.TP
+.B -odf
+This option (compatible with smail) requests 'foreground' (syn-
+chronous) delivery when Exim has accepted a locally-generated mess-
+age. For the daemon it is exactly the same as -odb. For a single
+message received on the standard input, if the protection regime
+permits it (see chapter 44), Exim converts the reception process into
+a delivery process. In other cases, it creates a new delivery process,
+and then waits for it to complete before proceeding.
+.TP
+.B -odi
+This option is synonymous with -odf. It is provided for compati-
+bility with sendmail.
+.TP
+.B -odq
+This option applies to all modes in which Exim accepts incoming
+messages, including the listening daemon. It specifies that the
+accepting process should not automatically start a delivery attempt
+for each message received. Messages are placed on the queue, and
+remain there until a subsequent queue-running process encounters
+them. The queue_only configuration option has the same effect.
+.TP
+.B -odqr
+This option applies to all modes in which Exim accepts incoming
+messages, including the listening daemon. It causes Exim to process
+local addresses when a message is received, but not even to try
+routing remote addresses. Contrast with -odqs below, which does the
+routing, but not the delivery. The remote addresses will be picked up
+by the next queue runner. The queue_remote configuration option has
+the same effect.
+.TP
+.B -odqs
+This option is a hybrid between -odb and -odq. A delivery process is
+started for each incoming message, the addresses are all processed,
+and local deliveries are done in the normal way. However, if any SMTP
+deliveries are required, they are not done at this time. Such messages
+remain on the queue until a subsequent queue-running process
+encounters them. Because routing was done, Exim knows which messages
+are waiting for which hosts, and so a number of messages for the same
+host will get sent in a single SMTP connection. The queue_smtp
+configuration option has the same effect.
+.TP
+.B -oem
+If an error is detected while a non-SMTP message is being received
+(e.g. a malformed address), the error is reported to the sender in a
+mail message. This is the default option. After a message has been
+successfully received, any subsequent delivery errors are always
+reported in this way.
+.TP
+.B -oep
+If an error is detected while a non-SMTP message is being received,
+the error is reported by writing a message to the standard error file
+(stderr).
+.TP
+.B -oeq
+This option is supported for compatibility with sendmail, but has the
+same effect as -oep.
+.TP
+.B -oew
+This option is supported for compatibility with sendmail, but has the
+same effect as -oem.
+.TP
+.B -oi
+This option, which has the same effect as -i, specifies that a dot on
+a line by itself should not terminate an incoming, non-SMTP message.
+.TP
+.B -oMa <host address>
+This option sets the sender host address value, and can be used only
+by a trusted caller. The value is used in log entries and can appear
+in Received headers. The option is intended for use when handing to
+Exim messages received by other means.
+.TP
+.B -oMr <protocol name>
+This option sets the received protocol value, and can be used only by
+a trusted caller. The value is used in log entries and can appear in
+Received headers. The option is intended for use when handing to Exim
+messages received by other means.
+.TP
+.B -oMs <host name>
+This option sets the sender host name value, and can be used only by a
+trusted caller. The value is used in log entries and can appear in
+Received headers. The option is intended for use when handing to Exim
+messages received by other means.
+.TP
+.B -oMt <ident string>
+This option sets the sender ident value, and can be used only by a
+trusted caller. The value is used in log entries and can appear in
+Received headers. The option is intended for use when handing to Exim
+messages received by other means.
+.TP
+.B -om
+In sendmail, this option means 'me too', indicating that the sender of
+a message should receive a copy of the message if the sender appears
+in an alias expansion. Exim always does this, so the option does
+nothing.
+.TP
+.B -or <time>
+This option sets a timeout value for incoming non-SMTP messages. If it
+is not set, Exim will wait forever for the standard input. The value
+can also be set using the accept_timeout configuration vari- able. The
+format used for specifying times is described in section 7.6.
+.TP -ov
+This option has exactly the same effect as -v.
+.TP
+.B -oX <number>
+This option is relevant only when the -bd option is also given. It
+specifies an alternative TCP/IP port number for the listening daemon,
+and is useful for testing. When used, the process number of the daemon
+is written to a file whose name is exim- daemon.<number>.pid in Exim's
+spool directory.
+.TP
+.B -q
+If the -q option is not followed by a time value, it requests a single
+queue run operation. This option can be used only by an admin
+user. Exim starts up a delivery process for each (inactive) message on
+the queue in turn, and waits for it to finish before starting the next
+one. When all the queued messages have been considered, the original
+process terminates. In other words, a single pass is made over the
+waiting mail. Use -q with a time (see below) if you want this to be
+repeated periodically.
+
+Exim processes the waiting messages in an unpredictable order. It
+isn't very random, but it is likely to be different each time, which
+is all that matters. If one particular message screws up a remote MTA,
+other messages to the same MTA have a chance of getting through if
+they get tried first.
+
+However, it is possible to cause the messages to be processed in
+lexical id order, which is essentially the order in which they
+arrived, and to start this operation at a particular point by
+following the -q option with a starting message id. For example:
+
+ exim -q 0t5C6f-0000c8-00
+
+This causes Exim to skip any messages whose ids are lexically less
+than the given id. A second id can also be given to stop the queue run
+before the end. See also the -R option.
+.TP
+.B -q <time>
+This version of the -q option (which again can be run only by an admin
+user) causes Exim to run as a daemon, starting a queue-running process
+at intervals specified by the given time value (whose format is
+described in section 7.6). This form of the -q option is commonly
+combined with the -bd option, in which case a single daemon process
+handles both functions. A common way of starting up a combined daemon
+at system boot time is to use a command such as
+
+ /opt/exim/bin/exim -bd -q30m
+
+Such a daemon listens for incoming SMTP calls, and also fires up a
+queue-runner process every 30 minutes. The process id of such a daemon
+is written to a file called exim-daemon.pid in Exim's spool directory,
+unless the -oX option has been used, in which case the file is called
+exim-daemon.<port-number>.pid. The location of the pid file can be
+changed by defining PID_FILE_PATH in Local/Makefile.  If a daemon is
+started without -bd then the -q option used to start it is added to
+the pid file name.
+.TP
+.B -qf
+This option operates like -q, and may appear with or without a
+following time. The difference is that a delivery attempt is forced
+for each message, whereas with -q only those addresses that have
+passed their retry times are tried.
+.TP
+.B -qfl
+This option operates like -ql, and may appear with or without a
+following time. The difference is that a delivery attempt is forced
+for each message, whereas with -ql only those local addresses that
+have passed their retry times are tried.
+.TP
+.B -ql
+This option operates like -q, and may appear with or without a
+following time. The difference is that only local addresses are
+considered for delivery. Note that -ql cannot detect apparently remote
+addresses that actually turn out to be local when their domains get
+fully qualified.
+.TP -R <string>
+This option is similar to -q with no time value, except that, when
+scanning the messages on the queue, Exim processes only those that
+have at least one undelivered address containing the given string,
+which is checked in a case-independent way. However, once a message is
+selected, all its addresses are processed. For the first message
+containing a matching address, Exim overrides any retry information
+and forces a delivery attempt. This makes it straightforward to
+initiate delivery for all messages to a given domain after a host has
+been down for some time. When the SMTP command ETRN is permitted (see
+the smtp_etrn options), its effect is to run Exim with the -R option.
+.TP
+.B -r
+This is a documented (for sendmail) obsolete alternative name for -f.
+.TP
+.B -t
+When Exim is receiving a locally-generated, non-SMTP message on the
+current input, the -t option causes the recipients of the message to
+be obtained from the To, Cc, and Bcc headers in the message instead of
+from the command arguments. If there are any arguments, they specify
+addresses to which the message is not to be delivered. That is, the
+argument addresses are removed from the recipients list obtained from
+the headers. If a Bcc header is present, it is removed from the
+message unless there is no To or Cc header, in which case a Bcc header
+with no data is created, in accordance with RFC 822.
+.TP
+.B -v
+This option has exactly the same effect as -d1; it causes Exim to be
+'verbose' and produce some output describing what it is doing on the
+standard error file. In particular, if an SMTP connection is made, the
+SMTP dialogue is shown.
+.TP
+.B -x
+AIX uses -x for a private purpose ('mail from a local mail program has
+National Language Support extended characters in the body of the mail
+item'). It sets -x when calling the MTA from its mail command.  Exim
+ignores this option.
+.SH "SEE ALSO"
+sendmail(8), mailwrapper(8), mailer.conf(5).
+.SH AUTHOR
+This manual page was stitched together by Christoph Lameter,
+<clameter@debian.org>, from the original documentation coming with the
+sourcepackage for the Debian GNU/Linux system, and cleaned up a little
+by Tim Cutts <tjrc1@scalopus.bio.cam.ac.uk>. Modifications for NetBSD
+made by Andy Doran <ad@NetBSD.org>.
