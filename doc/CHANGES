@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1249 2003/01/27 17:27:29 atatat Exp $
+$NetBSD: CHANGES,v 1.1250 2003/01/27 19:44:32 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -445,3 +445,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added iperf-1.6.5 [seb 2003-01-27]
 	Updated cue to 20030120 [itojun 2003-01-27]
 	Updated graphopt to 0.1nb1 [atatat 2003-01-27]
+	Updated gq to 0.3.0nb1 [jmmv 2003-01-27]
