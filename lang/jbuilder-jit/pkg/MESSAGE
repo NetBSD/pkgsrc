@@ -1,0 +1,10 @@
+===================================================================
+
+In order to make use of the Inprise JBuilder JIT for the Linux JVM,
+you need to set one of the following (either will work):
+
+1. Add "-Djava.compiler=javacomp" to the java command line.
+
+2. Set "JAVA_COMPILER=javacomp" in the process environment.
+
+===================================================================
