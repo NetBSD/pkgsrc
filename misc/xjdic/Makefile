@@ -1,25 +1,29 @@
-# $NetBSD: Makefile,v 1.6 2003/11/29 04:15:43 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/02 03:17:53 wiz Exp $
 #
 
-DISTNAME=	xjdic23
-PKGNAME=	xjdic-2.3
-PKGREVISION=	2
+DISTNAME=	xjdic24
+PKGNAME=	xjdic-2.4
 WRKSRC=		${WRKDIR}
 CATEGORIES=	japanese misc
-MASTER_SITES=	http://www.bcit-broadcast.com/monash/
+MASTER_SITES=	ftp://ftp.cc.monash.edu.au/pub/nihongo/ \
+		http://japanology.arts.kuleuven.ac.be/mirrors/monash/ \
+		ftp://ftp.nrc.ca/pub/packages/nihongo/ \
+		http://www.bcit-broadcast.com/monash/ \
+		ftp://ftp.sedl.org/pub/mirrors/nihongo/ \
+		ftp://ftp.net.usf.edu/pub/monash/ \
+		ftp://ftp.u-aizu.ac.jp/pub/SciEng/nihongo/ftp.cc.monash.edu.au/ \
+		ftp://ftp.funet.fi/pub/culture/japan/mirrors/monash/pub/nihongo/
 EXTRACT_SUFX=	.tgz
-DISTFILES+=	edict.gz \
-		kanjidic.gz \
-		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.csse.monash.edu.au/~jwb/xjdic/
 COMMENT=	Japanese dictionary
 
+DEPENDS+=	edict-[0-9]*:../../misc/edict
+DEPENDS+=	kanjidic-[0-9]*:../../misc/kanjidic
+
 MESSAGE_SUBST+=	PREFIX=${PREFIX}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-
-DIST_SUBDIR=	${PKGNAME}
 
 do-install:
 		cd ${WRKSRC} ; \
@@ -40,14 +44,13 @@ do-install:
 		${INSTALL_MAN} \
 			${WRKSRC}/xjdic22.WHATSNEW \
 			${WRKSRC}/xjdic23.WHATSNEW \
-			${WRKSRC}/xjdic23.inf \
-			${WRKSRC}/xjdic23.install \
+			${WRKSRC}/xjdic24.WHATSNEW \
+			${WRKSRC}/xjdic24.inf \
+			${WRKSRC}/xjdic24.install \
 			${PREFIX}/share/doc/xjdic
 		${INSTALL_MAN} ${WRKSRC}/xjdic.1 ${PREFIX}/man/man1
-		${GZIP_CMD} -cd ${DISTDIR}/${DIST_SUBDIR}/kanjidic.gz \
-			>${PREFIX}/share/xjdic/kanjidic
-		${GZIP_CMD} -cd ${DISTDIR}/${DIST_SUBDIR}/edict.gz \
-			>${PREFIX}/share/xjdic/edict
+		${LN} -s ../edict/edict ${PREFIX}/share/xjdic/edict
+		${LN} -s ../kanjidic/kanjidic ${PREFIX}/share/xjdic/kanjidic
 		${PREFIX}/bin/xjdxgen ${PREFIX}/share/xjdic/edict
 		${PREFIX}/bin/xjdxgen ${PREFIX}/share/xjdic/kanjidic
 		${SED} \
