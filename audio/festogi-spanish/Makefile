@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.10 2001/07/14 12:37:47 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/07/18 15:19:39 wiz Exp $
 
-DISTNAME=	OGIspanish-2.0
-PKGNAME=	festogi-spanish-2.0
+DISTNAME=	OGIspanish-2.0.1
+PKGNAME=	festogi-spanish-2.0.1
 WRKSRC=		${WRKDIR}/festival
 CATEGORIES=	audio
 MASTER_SITES=	ftp://cslu.cse.ogi.edu/pub/tts/
 
 MAINTAINER=	proff@iq.org
-HOMEPAGE=	http://cslu.cse.ogi.edu/tts
+HOMEPAGE=	http://cslu.cse.ogi.edu/tts/
 COMMENT=	Festival Spanish (Mexican) language support routines (in scheme)
 
-DEPENDS+=	festival-1.4.0:../festival
+DEPENDS+=	festival>=1.4.0:../festival
 
 LICENSE=	no-commercial-use
 
@@ -21,6 +21,7 @@ FHOME=		${PREFIX}/share/festival
 post-extract:
 	@ ${CHMOD} -R a+r ${WRKSRC}
 	@ ${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755
+	@ ${RM} -R ${WRKSRC}/lib/ogi_spanish/CVS
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}

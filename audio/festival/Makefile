@@ -1,22 +1,21 @@
-# $NetBSD: Makefile,v 1.16 2001/07/14 12:37:46 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/07/18 15:19:36 wiz Exp $
 
-DISTNAME=	festival-1.4.0
+DISTNAME=	festival-1.4.1
 WRKSRC=		${WRKDIR}
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.0/ \
+MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.1/ \
+		http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/ \
 		ftp://cslu.cse.ogi.edu/pub/tts/
 DISTFILES=	${DISTNAME}.tar.gz \
-		speech_tools-1.2.0.tar.gz \
-		OGIresLPC-2.0.3.tar.gz \
-		OGIfestpatch-1.4.0.tar.gz
+		speech_tools-1.2.1.tar.gz \
+		OGIresLPC-2.0.9.tar.gz \
+		OGIfestpatch-1.4.1.2.tar.gz
 # note that OGIfestpatch above file must be extracted last. it is, however
 # this behavior not defined in pkgsrc at the time of writing
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 COMMENT=	Festival is an advanced multi-lingual speech synthesis system
-
-DEPENDS+=	nas>=1.2.5:../../audio/nas
 
 USE_GMAKE=	yes
 
@@ -75,6 +74,7 @@ do-install:
 	${INSTALL_MAN} ${FESTIVAL}/doc/festival.1 ${PREFIX}/man/man1/festival.1
 	${INSTALL_MAN} ${FESTIVAL}/doc/festival_client.1 ${PREFIX}/man/man1/festival_client.1
 
+.include "../../audio/nas/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # has to be below bsd.pkg.mk, else ${ECHO} isn't expanded correctly
