@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3746 2003/10/27 21:49:43 cube Exp $
+$NetBSD: CHANGES,v 1.3747 2003/10/28 00:41:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4261,3 +4261,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated thttpd to 2.24 [cube 2003-10-27]
 	Updated libkver to 0.3 [seb 2003-10-27]
 	Updated slrn to 0.9.8.0 [cube 2003-10-27]
+	Updated vcdimager-devel to 0.7.12nb2 [wiz 2003-10-28]
