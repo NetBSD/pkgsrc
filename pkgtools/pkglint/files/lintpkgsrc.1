@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.1 1999/04/19 07:32:10 abs Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.2 1999/04/19 17:59:05 abs Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -39,9 +39,9 @@ the same distfile with a different md5 checksum.
 .It Fl o
 Report any old distfile (not referenced by any package's md5 file).
 .It Fl r
-Remove distfiles which are not referenced in any package's md5 file, or has
-an incorrect checksum (usually due to an interrupted download). To remove
-one or the other type, additionally specify the -u or -m flag respectively.
+Remove distfiles which are not referenced from any package's md5 file, or
+have an incorrect checksum (usually due to an interrupted download). To remove
+one or the other type, additionally specify the -o or -m flag respectively.
 .El
 .Sh AUTHOR
 David Brownlee <abs@netbsd.org>
