@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/09/21 08:48:39 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2002/10/13 17:08:56 wiz Exp $
 #
 
 DISTNAME=		bonobo-1.0.18
@@ -24,6 +24,11 @@ CONFIGURE_ENV+=		X11BASE="${X11BASE}"
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+post-install:
+	-@${RMDIR} ${PREFIX}/share/libefs/html/libefs
+	-@${RMDIR} ${PREFIX}/share/libefs/html
+	-@${RMDIR} ${PREFIX}/share/libefs
 
 .include "../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
