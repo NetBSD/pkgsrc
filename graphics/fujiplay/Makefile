@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/27 22:20:00 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2005/02/21 20:26:11 hubertf Exp $
 #
 
 DISTNAME=	fujiplay
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://topo.math.u-psud.fr/~bousch/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://topo.math.u-psud.fr/~bousch/fujiplay.html
 COMMENT=	Download pictures from some Fujifilm digital cameras
 
