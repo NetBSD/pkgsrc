@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 1999/09/07 13:21:03 ad Exp $
+
+--- OS/Makefile-NetBSD.orig	Tue Sep  7 14:25:22 1999
++++ OS/Makefile-NetBSD	Tue Sep  7 13:20:08 1999
+@@ -1,7 +1,7 @@
+ # Exim: OS-specific make file for NetBSD
+ 
+ CHOWN_COMMAND=/usr/sbin/chown
+-CFLAGS=-O
++CFLAGS=-O2
+ 
+ HAVE_SA_LEN=YES
+ 
+@@ -13,5 +13,8 @@
+ EXIWHAT_PS_ARG=-ax
+ EXIWHAT_EGREP_ARG='/exim( |$$)'
+ EXIWHAT_KILL_ARG=-USR1
++
++# NetBSD always ships with Berkeley DB
++USE_DB=yes
+ 
+ # End

@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 1999/09/07 13:21:03 ad Exp $
+
+--- scripts/exim_install.orig	Mon Aug  2 16:43:03 1999
++++ scripts/exim_install	Tue Sep  7 14:36:04 1999
+@@ -96,6 +96,10 @@
+ # of in /usr/bin, and therefore not likely to be on the path. This fudge
+ # tries to cope with that.
+ 
++if [ "${CHOWN}" = "chown" -a -x /usr/sbin/chown ] ; then
++  CHOWN=/usr/sbin/chown
++fi
++
+ if [ "${CHOWN}" = "chown" -a ! -f /usr/bin/chown -a -f /usr/etc/chown ] ; then
+   CHOWN=/usr/etc/chown
+ fi
