@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2004/12/27 17:26:19 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.15 2005/01/24 10:57:27 hira Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -203,6 +203,7 @@ post-extract:
 		-e "s|@COMPILER_RPATH_FLAG@|${COMPILER_RPATH_FLAG}|g" \
 		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g" \
 		-e "s|@EGDIR@|${EGDIR}|g" \
+		-e "s|@CARDDRIVERS@|${CARDDRIVERS}|g" \
 		${FILESDIR}/host.def > ${WRKSRC}/config/cf/host.def
 	@${LN} -sf ${X11ROOT}/bin/gccmakedep ${WRKSRC}/config/util
 	@${LN} -sf ${X11ROOT}/bin/revpath ${WRKSRC}/config/util
