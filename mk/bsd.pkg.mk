@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.818 2001/10/01 21:15:11 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.819 2001/10/03 07:57:04 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -794,9 +794,10 @@ MASTER_SITE_GNOME+=	\
 	ftp://ftp.fh-rosenheim.de/pub/mirror/ftp.gnome.org/GNOME/
 
 MASTER_SITE_SOURCEFORGE+=	\
+	http://prdownloads.sourceforge.net/ \
 	ftp://ftp3.sourceforge.net/pub/sourceforge/ \
-	http://ftp1.sourceforge.net/ \
 	http://ftp2.sourceforge.net/ \
+	http://ftp1.sourceforge.net/ \
 	ftp://ftp.tuwien.ac.at/opsys/linux/sourceforge/
 
 # Empty declaration to avoid "variable MASTER_SITES recursive" error
