@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1714 2004/05/06 12:40:37 wiz Exp $
+$NetBSD: TODO,v 1.1715 2004/05/06 15:52:51 adam Exp $
 
 Suggested new packages
 ======================
@@ -375,7 +375,6 @@ Suggested package updates
 	o w3m-0.5.1
 	o wavesurfer-1.5.3
 	o wdm-1.27
-	o wine-20040505
 	o wwwoffle-2.8a
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
 	o xanalyser-1.23
