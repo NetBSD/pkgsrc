@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/01 23:03:38 garbled Exp $
+share/locale/de/LC_MESSAGES/khostchooser.mo
+share/locale/en/LC_MESSAGES/khostchooser.mo
+share/doc/HTML/en/khostchooser/index.html
+share/doc/HTML/de/khostchooser/index.html
+share/config/khostchooserrc
+share/apps/khostchooser/chooserlogo.xpm
+bin/khostchooser
+@dirrm share/doc/HTML/en/khostchooser
+@dirrm share/doc/HTML/de/khostchooser
+@dirrm share/apps/khostchooser
