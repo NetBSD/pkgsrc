@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2000/11/27 12:54:47 kei Exp $
-bin/mkhybrid
-man/man8/mkhybrid.8

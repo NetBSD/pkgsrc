@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:29:44 zuntum Exp $
+bin/disol
+bin/fmtest
+bin/kban
+bin/ktest
+bin/vfperf
+bin/vftest

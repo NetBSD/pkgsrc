@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/09/13 15:09:39 rh Exp $
-bin/mergelogs
-bin/pen
-man/man1/mergelogs.1
-man/man1/pen.1
-share/doc/pen/COPYING
-share/doc/pen/ChangeLog
-share/doc/pen/README
-@dirrm share/doc/pen

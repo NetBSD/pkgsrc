@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 1998/04/21 00:46:59 hubertf Exp $
-bin/xart
-man/cat1/xart.0
-lib/X11/app-defaults/XArt

@@ -1,0 +1,58 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:01 zuntum Exp $
+bin/snort
+man/man8/snort.8
+share/doc/snort/AUTHORS
+share/doc/snort/BUGS
+share/doc/snort/COPYING
+share/doc/snort/CREDITS
+share/doc/snort/ChangeLog
+share/doc/snort/INSTALL
+share/doc/snort/LICENSE
+share/doc/snort/NEWS
+share/doc/snort/README
+share/doc/snort/README-SNMP
+share/doc/snort/README.FLEXRESP
+share/doc/snort/README.PLUGINS
+share/doc/snort/README.Spade
+share/doc/snort/README.Spade.Usage
+share/doc/snort/README.database
+share/doc/snort/README.tcpstream
+share/doc/snort/README.xml
+share/doc/snort/RULES.SAMPLE
+share/doc/snort/SnortUsersManual.pdf
+share/doc/snort/USAGE
+share/snort/MIBS/SnortCommonMIB.txt
+share/snort/MIBS/SnortIDAlertMIB.txt
+share/snort/backdoor.rules
+share/snort/classification.config
+share/snort/ddos.rules
+share/snort/dns.rules
+share/snort/dos.rules
+share/snort/exploit.rules
+share/snort/finger.rules
+share/snort/ftp.rules
+share/snort/icmp.rules
+share/snort/info.rules
+share/snort/local.rules
+share/snort/misc.rules
+share/snort/netbios.rules
+share/snort/policy.rules
+share/snort/rpc.rules
+share/snort/rservices.rules
+share/snort/scan.rules
+share/snort/shellcode.rules
+share/snort/smtp.rules
+share/snort/snort.conf
+share/snort/sql.rules
+share/snort/telnet.rules
+share/snort/web-cgi.rules
+share/snort/web-coldfusion.rules
+share/snort/web-frontpage.rules
+share/snort/web-iis.rules
+share/snort/web-misc.rules
+share/snort/x11.rules
+@dirrm share/snort/MIBS
+@dirrm share/snort
+@dirrm share/doc/snort
+@exec install -d -m 700 -o root -g wheel /var/log/snort
+@unexec rmdir /var/log/snort 2>/dev/null || true

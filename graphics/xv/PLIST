@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:49 zuntum Exp $
+bin/xv
+bin/bggen
+bin/vdcomp
+bin/xcmap
+bin/xvpictoppm
+man/cat1/xv.0.gz
+man/cat1/bggen.0.gz
+man/cat1/vdcomp.0.gz
+man/cat1/xcmap.0.gz
+man/cat1/xvpictoppm.0.gz
+share/doc/xv/README
+share/doc/xv/xvdocs.ps
+@dirrm share/doc/xv

@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:05 zuntum Exp $
+bin/ftpcount
+bin/ftpwho
+man/man1/ftpcount.1
+man/man1/ftpwho.1
+man/man5/xferlog.5
+man/man8/ftpshut.8
+man/man8/proftpd.8
+sbin/ftpshut
+sbin/in.proftpd
+sbin/proftpd
+share/doc/proftpd/Configuration.html
+share/doc/proftpd/FAQ-config.html
+share/doc/proftpd/NEWS
+share/doc/proftpd/README
+share/doc/proftpd/README.LDAP
+share/doc/proftpd/README.PAM
+share/doc/proftpd/README.mod_sql
+share/doc/proftpd/README.modules
+share/doc/proftpd/license.txt
+share/examples/proftpd/anonymous.conf
+share/examples/proftpd/basic.conf
+share/examples/proftpd/complex-virtual.conf
+share/examples/proftpd/virtual.conf
+@dirrm share/doc/proftpd
+@dirrm share/examples/proftpd

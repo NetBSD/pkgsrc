@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1998/04/01 21:06:09 tron Exp $
-bin/mpage
-man/man1/mpage.1.gz
-share/mpage/CP850.PC
-share/mpage/ISO+STD+OTH
-share/mpage/ISO-8859.1
-share/mpage/ISO-Latin.1
-share/mpage/ISO-Latin.2
-@dirrm share/mpage

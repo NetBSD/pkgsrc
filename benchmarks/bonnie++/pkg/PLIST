@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/16 23:20:43 garbled Exp $
-sbin/bonnie++
-sbin/zcav
-man/man1/bon_csv2html.1
-man/man1/bon_csv2txt.1
-man/man8/bonnie++.8
-man/man8/zcav.8
-bin/bon_csv2html
-bin/bon_csv2txt

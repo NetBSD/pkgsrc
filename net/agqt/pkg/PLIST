@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/29 01:12:58 hubertf Exp $
-bin/ag
-bin/am
-share/doc/agqt/README
-share/doc/agqt/ChangeLog
-share/doc/agqt/agrc.sample
-@dirrm share/doc/agqt

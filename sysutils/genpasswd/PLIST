@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:12 zuntum Exp $
+bin/genpasswd
+man/man1/genpasswd.1

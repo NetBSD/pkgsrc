@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:41 zuntum Exp $
+bin/xgnuboy
+share/doc/gnuboy/README
+share/doc/gnuboy/sample.rc
+share/doc/gnuboy/CREDITS
+@dirrm share/doc/gnuboy

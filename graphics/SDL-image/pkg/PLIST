@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/07 11:32:23 rh Exp $
-bin/showimage
-include/SDL/SDL_image.h
-lib/libSDL_image-1.2.so
-lib/libSDL_image-1.2.so.0
-lib/libSDL_image-1.2.so.0.0
-lib/libSDL_image.a
-lib/libSDL_image.la
-lib/libSDL_image.so

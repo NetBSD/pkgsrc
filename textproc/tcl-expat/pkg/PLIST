@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/09/28 23:37:09 jwise Exp $
-lib/tcl/TclExpat-1.1/tclexpat.so
-lib/tcl/TclExpat-1.1/pkgIndex.tcl
-share/doc/tcl/TclExpat/README
-@dirrm lib/tcl/TclExpat-1.1
-@dirrm share/doc/tcl/TclExpat

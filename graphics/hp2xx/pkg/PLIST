@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 1999/02/11 19:17:31 tv Exp $
-bin/hp2xx
-man/man1/hp2xx.1
-@unexec install-info --delete %D/info/hp2xx.info %D/info/dir
-info/hp2xx.info
-@exec install-info %D/info/hp2xx.info %D/info/dir

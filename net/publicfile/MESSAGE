@@ -1,0 +1,8 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2001/10/31 22:58:07 zuntum Exp $
+
+  See http://cr.yp.to/publicfile.html for configuration information,
+  but note that where /usr/local is used, this package uses
+  ${PREFIX}/publicfile
+
+======================================================================

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1999/01/25 18:47:38 hubertf Exp $
-bin/gnuplot
-bin/gnuplot_x11
-man/man1/gnuplot.1
-share/gnuplot.gih

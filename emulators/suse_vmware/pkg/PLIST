@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/25 21:21:47 tron Exp $
-${EMULSUBDIR}/etc/mtab

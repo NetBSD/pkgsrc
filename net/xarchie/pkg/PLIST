@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1998/04/18 20:32:09 tron Exp $
-bin/xarchie
-lib/X11/app-defaults/Xarchie
-man/cat1/xarchie.0

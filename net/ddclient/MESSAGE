@@ -1,0 +1,9 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2001/10/31 22:55:09 zuntum Exp $
+
+1. Please register at http://www.dyndns.org/
+
+2. Copy ${PREFIX}/etc/ddclient.conf-example to ${PREFIX}/etc/ddclient.conf
+   and adjust to your needs.
+
+======================================================================

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.k12x10,v 1.1 2001/10/31 22:54:15 zuntum Exp $
+lib/X11/fonts/local/k6x10.pcf.gz
+lib/X11/fonts/local/k12x10.pcf.gz

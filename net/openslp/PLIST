@@ -1,0 +1,76 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:15 zuntum Exp $
+bin/slptool
+etc/rc.d/slpd
+include/slp.h
+lib/libslp.a
+lib/libslp.la
+lib/libslp.so
+lib/libslp.so.1
+lib/libslp.so.1.0
+sbin/slpd
+share/doc/html/openslp/IntroductionToSLP/AgentInit.jpg
+share/doc/html/openslp/IntroductionToSLP/ServiceReg.jpg
+share/doc/html/openslp/IntroductionToSLP/ServiceRqst.jpg
+share/doc/html/openslp/IntroductionToSLP/index.html
+share/doc/html/openslp/ProgrammersGuide/Callbacks.html
+share/doc/html/openslp/ProgrammersGuide/Divergence.html
+share/doc/html/openslp/ProgrammersGuide/Examples.html
+share/doc/html/openslp/ProgrammersGuide/SLPAttrCallback.html
+share/doc/html/openslp/ProgrammersGuide/SLPClose.html
+share/doc/html/openslp/ProgrammersGuide/SLPDelAttrs.html
+share/doc/html/openslp/ProgrammersGuide/SLPDereg.html
+share/doc/html/openslp/ProgrammersGuide/SLPError.html
+share/doc/html/openslp/ProgrammersGuide/SLPEscape.html
+share/doc/html/openslp/ProgrammersGuide/SLPFindAttrs.html
+share/doc/html/openslp/ProgrammersGuide/SLPFindScopes.html
+share/doc/html/openslp/ProgrammersGuide/SLPFindSrvTypes.html
+share/doc/html/openslp/ProgrammersGuide/SLPFindSrvs.html
+share/doc/html/openslp/ProgrammersGuide/SLPFree.html
+share/doc/html/openslp/ProgrammersGuide/SLPGetProperty.html
+share/doc/html/openslp/ProgrammersGuide/SLPGetRefreshInterval.html
+share/doc/html/openslp/ProgrammersGuide/SLPOpen.html
+share/doc/html/openslp/ProgrammersGuide/SLPParseSrvURL.html
+share/doc/html/openslp/ProgrammersGuide/SLPReg.html
+share/doc/html/openslp/ProgrammersGuide/SLPRegReport.html
+share/doc/html/openslp/ProgrammersGuide/SLPSetProperty.html
+share/doc/html/openslp/ProgrammersGuide/SLPSrvTypeCallback.html
+share/doc/html/openslp/ProgrammersGuide/SLPSrvURLCallback.html
+share/doc/html/openslp/ProgrammersGuide/SLPTypes.html
+share/doc/html/openslp/ProgrammersGuide/SLPUnescape.html
+share/doc/html/openslp/ProgrammersGuide/Security.html
+share/doc/html/openslp/ProgrammersGuide/Syntax.html
+share/doc/html/openslp/ProgrammersGuide/index.html
+share/doc/html/openslp/ProgrammersGuide/openslp_security_whitepaper.html
+share/doc/html/openslp/ProgrammersGuide/smalllogo.jpg
+share/doc/html/openslp/UsersGuide/CommandLine.html
+share/doc/html/openslp/UsersGuide/FileLocations.html
+share/doc/html/openslp/UsersGuide/Installation.html
+share/doc/html/openslp/UsersGuide/Optimization.html
+share/doc/html/openslp/UsersGuide/Security.html
+share/doc/html/openslp/UsersGuide/SlpConf.html
+share/doc/html/openslp/UsersGuide/SlpReg.html
+share/doc/html/openslp/UsersGuide/UserFAQ.html
+share/doc/html/openslp/UsersGuide/WhenToRunSlpd.html
+share/doc/html/openslp/UsersGuide/WhoShouldRead.html
+share/doc/html/openslp/UsersGuide/index.html
+share/doc/html/openslp/UsersGuide/smalllogo.jpg
+share/doc/html/openslp/faq.html
+share/doc/openslp/rfc1766.txt
+share/doc/openslp/rfc2165.txt
+share/doc/openslp/rfc2254.txt
+share/doc/openslp/rfc2396.txt
+share/doc/openslp/rfc2608.txt
+share/doc/openslp/rfc2609.txt
+share/doc/openslp/rfc2610.txt
+share/doc/openslp/rfc2614.txt
+share/doc/openslp/srvreg-integrity.txt
+share/doc/openslp/threat_analysis_min_security.html
+share/examples/openslp/slp.conf
+share/examples/openslp/slp.reg
+share/examples/openslp/slp.spi
+@dirrm share/examples/openslp
+@dirrm share/doc/openslp
+@dirrm share/doc/html/openslp/UsersGuide
+@dirrm share/doc/html/openslp/ProgrammersGuide
+@dirrm share/doc/html/openslp/IntroductionToSLP
+@dirrm share/doc/html/openslp

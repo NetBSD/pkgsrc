@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/04/17 11:57:42 tron Exp $
-bin/ttcp
-man/cat1/ttcp.0
-man/man1/ttcp.1

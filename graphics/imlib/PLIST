@@ -1,0 +1,65 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:51:32 zuntum Exp $
+bin/imlib_config
+bin/imlib-config
+etc/imrc
+etc/im_palette.pal
+etc/im_palette-small.pal
+etc/im_palette-tiny.pal
+include/gdk_imlib.h
+include/gdk_imlib_private.h
+include/gdk_imlib_types.h
+include/Imlib.h
+include/Imlib_private.h
+include/Imlib_types.h
+lib/libImlib.a
+lib/libImlib.la
+lib/libImlib.so
+lib/libImlib.so.10
+lib/libImlib.so.10.11
+lib/libgdk_imlib.a
+lib/libgdk_imlib.la
+lib/libgdk_imlib.so
+lib/libgdk_imlib.so.10
+lib/libgdk_imlib.so.10.11
+lib/libimlib-bmp.a
+lib/libimlib-bmp.la
+lib/libimlib-bmp.so
+lib/libimlib-gif.a
+lib/libimlib-gif.la
+lib/libimlib-gif.so
+lib/libimlib-jpeg.a
+lib/libimlib-jpeg.la
+lib/libimlib-jpeg.so
+lib/libimlib-png.a
+lib/libimlib-png.la
+lib/libimlib-png.so
+lib/libimlib-ppm.a
+lib/libimlib-ppm.la
+lib/libimlib-ppm.so
+lib/libimlib-ps.a
+lib/libimlib-ps.la
+lib/libimlib-ps.so
+lib/libimlib-tiff.a
+lib/libimlib-tiff.la
+lib/libimlib-tiff.so
+lib/libimlib-xpm.a
+lib/libimlib-xpm.la
+lib/libimlib-xpm.so
+lib/pkgconfig/imlib.pc
+lib/pkgconfig/imlibgdk.pc
+man/man1/imlib-config.1
+man/man1/imlib_config.1
+share/aclocal/imlib.m4
+share/doc/imlib/bg.gif
+share/doc/imlib/border_diag.gif
+share/doc/imlib/border_eg1.gif
+share/doc/imlib/border_eg2.gif
+share/doc/imlib/border_eg3.gif
+share/doc/imlib/curve1.gif
+share/doc/imlib/curve2.gif
+share/doc/imlib/imlib.gif
+share/doc/imlib/index.html
+@dirrm share/doc/imlib
+@exec test %D = ${LOCALBASE} || ln -fs %D/share/aclocal/imlib.m4 ${LOCALBASE}/share/aclocal/imlib.m4
+@unexec test %D = ${LOCALBASE} || rm ${LOCALBASE}/share/aclocal/imlib.m4
+@unexec rmdir %D/share/aclocal 2>/dev/null || true

@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:08 zuntum Exp $
+etc/rc.d/adsl
+libdata/alcaudsl.sys
+sbin/modem_run
+sbin/pppoa2
+share/doc/speedtouch/INSTALL-BSD
+share/doc/speedtouch/README
+share/examples/speedtouch/ppp.conf
+@dirrm share/examples/speedtouch
+@dirrm share/doc/speedtouch

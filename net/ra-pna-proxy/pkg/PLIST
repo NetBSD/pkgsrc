@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1999/09/01 20:05:19 tron Exp $
-libexec/ra-pna-proxy
-man/man8/ra-pna-proxy.8
-share/doc/ra-pna-proxy/license.txt
-@dirrm share/doc/ra-pna-proxy

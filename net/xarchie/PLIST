@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:54 zuntum Exp $
+bin/xarchie
+lib/X11/app-defaults/Xarchie
+man/cat1/xarchie.0

@@ -1,0 +1,36 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:31 zuntum Exp $
+man/man1/apsfilter.1
+man/man5/apsfilterrc.5
+share/apsfilter/SETUP
+share/apsfilter/bin/apsfilter
+share/apsfilter/bin/setup_dvips.sh
+share/apsfilter/setup/README
+share/apsfilter/setup/devices-5.50
+share/apsfilter/setup/devices-6.01
+share/apsfilter/setup/devices-6.50
+share/apsfilter/setup/printer-5.50
+share/apsfilter/setup/printer-6.01
+share/apsfilter/setup/printer-6.50
+share/apsfilter/setup/printer-cdj
+share/apsfilter/setup/printer-hpdj
+share/apsfilter/setup/printer-omni
+share/apsfilter/setup/printer-pcl3
+share/apsfilter/setup/printer-ppa
+share/apsfilter/setup/printer-ps
+share/apsfilter/setup/printer-stp
+share/apsfilter/setup/test.ps
+share/apsfilter/template/README
+share/apsfilter/template/apsfilterrc
+share/doc/apsfilter/ANNOUNCE
+share/doc/apsfilter/FAQ
+share/doc/apsfilter/HOWTO-BUGREPORTS
+share/doc/apsfilter/LICENSE
+share/doc/apsfilter/README.BSD
+share/doc/apsfilter/README.TeX
+share/doc/apsfilter/handbook.html
+share/doc/apsfilter/paper
+@dirrm share/doc/apsfilter
+@dirrm share/apsfilter/template
+@dirrm share/apsfilter/setup
+@dirrm share/apsfilter/bin
+@unexec rmdir %D/share/apsfilter 2>/dev/null || true

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2000/10/17 11:12:37 abs Exp $
-libexec/if-psprint
-man/man1/if-psprint.1

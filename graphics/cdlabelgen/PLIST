@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:21 zuntum Exp $
+bin/cdlabelgen
+man/cat1/cdlabelgen.0
+share/cdlabelgen/template.ps
+share/cdlabelgen/recycle.ps
+share/cdlabelgen/recycle.epsi
+share/cdlabelgen/mp3.eps
+share/cdlabelgen/cdda.eps
+share/cdlabelgen/cd.eps
+share/cdlabelgen/penguin.eps
+share/cdlabelgen/debian-color.eps
+share/cdlabelgen/debian-bw.eps
+@dirrm share/cdlabelgen

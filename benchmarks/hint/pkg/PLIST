@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 1999/02/10 18:49:18 explorer Exp $
-bin/hint-double
-bin/hint-int
-man/man1/hint.1

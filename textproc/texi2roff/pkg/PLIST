@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/30 11:45:41 agc Exp $
-bin/texi2roff
-man/man1/texi2roff.1

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.alpha,v 1.1 2001/10/31 23:55:50 zuntum Exp $
+${COMPAT_LIBDIR}/libcurses.so.2.1
+${COMPAT_LIBDIR}/libcurses.so.2

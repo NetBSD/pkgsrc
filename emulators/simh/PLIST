@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:20 zuntum Exp $
+bin/simh-i1401
+bin/simh-nova
+bin/simh-pdp1
+bin/simh-pdp4
+bin/simh-pdp7
+bin/simh-pdp8
+bin/simh-pdp9
+bin/simh-pdp11
+bin/simh-pdp15
+share/doc/simh/simh_doc.txt
+@dirrm share/doc/simh

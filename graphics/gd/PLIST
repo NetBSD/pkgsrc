@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:47 zuntum Exp $
+bin/bdftogd
+bin/gd2copypal
+bin/gd2topng
+bin/gdparttopng
+bin/gdtopng
+bin/pngtogd
+bin/pngtogd2
+bin/webpng
+include/gd.h
+include/gd_io.h
+include/gdcache.h
+include/gdfontg.h
+include/gdfontl.h
+include/gdfontmb.h
+include/gdfonts.h
+include/gdfontt.h
+lib/libgd.a
+lib/libgd.la
+lib/libgd.so
+lib/libgd.so.1
+lib/libgd.so.1.9

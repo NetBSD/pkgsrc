@@ -1,0 +1,18 @@
+==========================================================================
+$NetBSD: MESSAGE,v 1.1 2001/10/31 22:54:52 zuntum Exp $
+
+This package installs the BIND version 4 name server into your pkg tree,
+NOT into /usr/sbin with your other binaries.  PLEASE BE CAREFUL as to
+which named you run and which `ndc' script you use to control named.
+
+  The `named' program in this pkg is called `named4'.
+  The `ndc' script in this pkg is called `ndc4'.
+  Other BIND programs are not installed; use your system installed tools.
+
+The use of BIND 4 is not recommended as it is deprecated.  BIND 8 is
+recommended (pkgsrc/net/bind8, or /usr/sbin/named).
+If you intend to stick with BIND 4 instead of upgrading to BIND 8,
+you should delete or move out of the way `named' and `ndc' in /usr/sbin
+to eliminate confusion.
+
+==========================================================================

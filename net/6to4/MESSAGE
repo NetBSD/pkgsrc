@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2001/10/31 22:54:39 zuntum Exp $
+
+To configure this package, adjust ${PREFIX}/etc/6to4.conf from
+${PREFIX}/etc/6to4.conf-example, then start "6to4 -v start". 
+You should be able to "ping6 www.kame.net" after that.
+
+===========================================================================

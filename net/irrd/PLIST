@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:47 zuntum Exp $
+sbin/irr_check
+sbin/irr_notify
+sbin/irr_rpsl_submit
+sbin/irrd
+sbin/irrdcacher
+sbin/ripe2rpsl
+sbin/update_source

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:29:22 zuntum Exp $
+bin/mknmz-wwwoffle
+man/man1/mknmz-wwwoffle.1
+share/namazu/filter/wwwofflecache.pl

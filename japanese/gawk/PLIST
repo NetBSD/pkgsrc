@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:29:08 zuntum Exp $
+bin/jgawk
+bin/jigawk
+@unexec install-info --delete %D/info/gawk.info %D/info/dir
+info/gawk.info
+@exec install-info %D/info/gawk.info %D/info/dir
+libexec/awk/grcat
+libexec/awk/pwcat
+man/man1/jgawk.1
+man/man1/jigawk.1
+share/awk/assert.awk
+share/awk/ctime.awk
+share/awk/ftrans.awk
+share/awk/getopt.awk
+share/awk/gettime.awk
+share/awk/group.awk
+share/awk/join.awk
+share/awk/mktime.awk
+share/awk/nextfile.awk
+share/awk/ord.awk
+share/awk/passwd.awk
+share/awk/round.awk
+share/doc/ja-gawk/OREADME.MB
+share/doc/ja-gawk/README.MB
+@dirrm share/doc/ja-gawk
+@dirrm share/awk
+@dirrm libexec/awk

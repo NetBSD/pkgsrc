@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2001/10/31 22:56:33 zuntum Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+POST-DEINSTALL)
+	ETCDIR=/etc/netatalk
+
+	cat << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to
+remove the netatalk configuration file directory:
+
+	${ETCDIR}
+===========================================================================
+EOF
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

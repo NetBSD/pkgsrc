@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:45 zuntum Exp $
+bin/gsed
+man/man1/gsed.1
+@unexec install-info --delete %D/info/sed.info %D/info/dir
+info/sed.info
+@exec install-info %D/info/sed.info %D/info/dir

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/16 15:01:49 rh Exp $
-bin/gif2png
-bin/web2png
-man/man1/gif2png.1
-man/man1/web2png.1

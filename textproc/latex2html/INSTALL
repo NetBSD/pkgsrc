@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2001/10/31 22:57:15 zuntum Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+	# Rebuild the ls-R database after adding files to the teTeX tree.
+	#
+	mktexlsr
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

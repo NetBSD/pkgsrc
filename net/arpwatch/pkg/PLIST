@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 1998/04/27 18:06:38 bouyer Exp $
-sbin/arpwatch
-sbin/arpsnmp
-etc/ethercodes.dat
-man/man8/arpwatch.8
-man/man8/arpsnmp.8
-@exec /bin/mkdir /var/db/arpwatch
-@exec /usr/bin/touch /var/db/arpwatch/arp.dat

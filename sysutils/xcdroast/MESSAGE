@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2001/10/31 22:54:18 zuntum Exp $
+
+xcdroast creates its config file into ${PREFIX}/etc/xcdroast.conf.
+It will not get removed with pkg_delete(1) automatically. So if you no longer
+intend to use this package don't forget to remove it by hand.
+xcdroast doesn't work as SUID program if linked against gtk-1.2.9. Other
+options include making cdrecord SUID or using a wrapper like sudo.
+===========================================================================

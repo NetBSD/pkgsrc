@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:45:31 zuntum Exp $
+bin/netio
+share/doc/netio/netio.doc
+@dirrm share/doc/netio

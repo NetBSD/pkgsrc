@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 1997/11/06 10:04:53 agc Exp $
-bin/xosview
-lib/X11/app-defaults/XOsview
-man/man1/xosview.1.gz

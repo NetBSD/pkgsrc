@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:52 zuntum Exp $
+man/cat5/pim6sd.conf.0
+man/cat8/mtrace6.0
+man/cat8/pim6sd.0
+man/man1/pim6stat.1
+man/man5/pim6sd.conf.5
+man/man8/mtrace6.8
+man/man8/pim6sd.8
+sbin/mtrace6
+sbin/pim6sd
+sbin/pim6stat

@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2001/10/31 22:54:04 zuntum Exp $
+#
+
+USER="@NUT_USER@"
+GROUP="@NUT_GROUP@"
+USERDEL="@USERDEL@"
+GROUPDEL="@GROUPDEL@"
+
+case "$2" in
+	DEINSTALL)
+		echo "Removing user ${USER}"
+		${USERDEL} -r ${USER}
+		echo "Removing group ${GROUP}"
+		${GROUPDEL} ${GROUP}
+	;;
+esac
+exit 0

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/01/12 00:44:24 hubertf Exp $
-sbin/nc
-sbin/nc-data
-sbin/nc-rservice
-sbin/nc-xor
-man/man1/nc.1

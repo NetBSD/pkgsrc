@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/17 12:28:36 rh Exp $
-bin/viewfax
-libdata/viewfax/viewfax.tif
-man/cat1/viewfax.0
-@dirrm libdata/viewfax

@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:00:01 zuntum Exp $
+@unexec install-info --delete %D/info/zebra.info %D/info/dir
+info/zebra.info
+@exec   install-info          %D/info/zebra.info %D/info/dir
+man/man1/vtysh.1
+man/man8/bgpd.8
+man/man8/ospfd.8
+man/man8/ripd.8
+man/man8/zebra.8
+sbin/bgpd
+sbin/ospfd
+sbin/ripd
+sbin/zebra
+share/examples/zebra/bgpd.conf.sample
+share/examples/zebra/bgpd.conf.sample2
+share/examples/zebra/ospfd.conf.sample
+share/examples/zebra/ripd.conf.sample
+share/examples/zebra/zebra.conf.sample
+@dirrm share/examples/zebra

@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:45 zuntum Exp $
+bin/ipc-config
+bin/ipcx-config
+bin/rules-config
+bin/service-config
+bin/svscan-config
+bin/tcp-config
+bin/tcpx-config

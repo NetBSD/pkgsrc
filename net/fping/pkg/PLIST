@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2000/12/07 16:57:12 wiz Exp $
-sbin/fping
-man/man8/fping.8

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.elisat,v 1.1 2001/10/31 22:54:14 zuntum Exp $
+lib/X11/fonts/local/jpnhn4-iso.pcf.gz
+lib/X11/fonts/local/jpnhn4-jis.pcf.gz
+lib/X11/fonts/local/elisat10.pcf.gz

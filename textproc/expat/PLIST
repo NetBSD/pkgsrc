@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:38 zuntum Exp $
+bin/xmlwf
+include/expat.h
+lib/libexpat.a
+lib/libexpat.la
+lib/libexpat.so
+lib/libexpat.so.1
+lib/libexpat.so.1.0
+share/doc/html/expat/reference.html
+share/doc/html/expat/style.css
+@dirrm share/doc/html/expat

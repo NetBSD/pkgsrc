@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST-common,v 1.1 2001/10/31 23:31:33 zuntum Exp $
+bin/kinput2
+lib/X11/app-defaults/Kinput2
+man/cat1/kinput2.0

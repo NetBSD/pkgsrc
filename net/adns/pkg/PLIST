@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/01/08 15:51:56 lukem Exp $
-bin/adnshost
-bin/adnslogres
-bin/adnsresfilter
-include/adns.h
-lib/libadns.a
-lib/libadns.so.1.0

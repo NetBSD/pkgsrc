@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/23 04:18:10 hubertf Exp $
-bin/camediaplay
-share/doc/camediaplay/README.english
-share/doc/camediaplay/README.japanese
-share/doc/camediaplay/PROTOCOL
-man/man1/camediaplay.1.gz
-@dirrm share/doc/camediaplay

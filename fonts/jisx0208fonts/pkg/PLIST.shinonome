@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.shinonome,v 1.1 2001/01/12 15:00:10 itojun Exp $
-lib/X11/fonts/local/shnmk12.pcf.gz
-lib/X11/fonts/local/shnmk12p.pcf.gz
-lib/X11/fonts/local/shnmk12min.pcf.gz
-lib/X11/fonts/local/shnmk12maru.pcf.gz
