@@ -1,0 +1,28 @@
+$NetBSD: MESSAGE,v 1.1.1.1 2000/08/20 14:02:17 rh Exp $
+
+==========================================================================
+  Plugger has now been installed on your system.
+
+  This package is only a plugin wrapper around common multimedia
+  utilities.  If you want to use plugger to display a certain file type
+  at least one of the utilities listed for that particular file type has
+  to be present:
+
+	file type	utilities
+	---------	---------
+	MPEG video	mtv, xanim
+	Quicktime	xanim
+	midi		midiplay, timidity
+	mod		mikmod, nspmod
+	MPEG Layer 3	splay, amp, mpg123, maplay, gqmpeg
+	PNG, TIFF	ImageMagick, xv
+
+  The plugger package does not automatically depend on these utilities,
+  but all of them are available as packages. You will find them in the
+  package categories audio and graphics.
+
+  For information on adding more file types and applications, type
+  `man plugger'.  To use a different (or no) plugin for a specific file
+  type, use the Navigator/Applications preferences of your Netscape
+  browser.
+==========================================================================
