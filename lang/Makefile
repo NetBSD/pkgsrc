@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2000/08/31 14:14:21 jwise Exp $
+# $NetBSD: Makefile,v 1.58 2000/08/31 14:17:45 jwise Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -54,7 +54,7 @@
     SUBDIR += tcl
 #    SUBDIR += tcl80		# obsoleted by tcl, will be removed when all dependents are updated.
     SUBDIR += tclX80
-    SUBDIR += tclman80
+#    SUBDIR += tclman80		# obsoleted by tcl, will be removed when all dependents are updated.
     SUBDIR += ucblogo
 
 .include "../mk/bsd.pkg.subdir.mk"
