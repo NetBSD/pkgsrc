@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/03/30 05:50:13 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2000/04/10 00:06:28 jlam Exp $
 
 DISTNAME=	magicfilter-1.2
 CATEGORIES=	print
@@ -14,6 +14,7 @@ DEPENDS+=	papersize-*:../../print/papersize
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV+=	GHOSTSCRIPT=${LOCALBASE}/bin/gstty
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
