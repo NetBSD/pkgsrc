@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2004/07/11 13:40:05 wiz Exp $
+$NetBSD: distinfo,v 1.8 2004/08/02 16:14:24 wiz Exp $
 
 SHA1 (groff-1.19.1.tar.gz) = 82ba1b29b01c36bf41149ce8813cea712e3e6cbf
 Size (groff-1.19.1.tar.gz) = 2629152 bytes
@@ -6,3 +6,5 @@ SHA1 (patch-aa) = d0d1f387fefbb376eeec8ba824365cab2c1667fd
 SHA1 (patch-ab) = 3c50a8b758cf3ad9d31e449864bf07c09b396b92
 SHA1 (patch-ac) = 38f75d8261ca39aff8a37771a283c99ad39142bd
 SHA1 (patch-ae) = 18d553fe99ca6915d42de5f6edf74fc56e2fc650
+SHA1 (patch-ba) = cdafeefbde9490d0ed599a118fd34c06afac0f96
+SHA1 (patch-bb) = ddd9ef807a09eaaf7b09a3c05be3443945c67379
