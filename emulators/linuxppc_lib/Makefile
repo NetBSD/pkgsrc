@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/08/25 16:28:31 manu Exp $
+# $NetBSD: Makefile,v 1.14 2002/02/05 05:56:36 jmc Exp $
 
 DISTNAME=		linuxppc_lib-2000.4.6
 CATEGORIES=		emulators
@@ -20,8 +20,20 @@ COMMENT=		libraries to run Linux binaries on NetBSD/powerpc (includes X11)
 
 BUILD_DEPENDS+=		rpm2pkg-1.2:../../pkgtools/rpm2pkg
 
-ONLY_FOR_PLATFORM=	NetBSD-*-macppc NetBSD-*-powerpc NetBSD-*-prep \
-			NetBSD-*-bebox NetBSD-*-ofppc NetBSD-*-amigappc NetBSD-*-sandpoint
+ONLY_FOR_PLATFORM=	NetBSD-1.5[U-Z]-macppc NetBSD-1.5Z[A-Z]-macppc \
+			NetBSD-1.[6-9]*-macppc \
+			NetBSD-1.5[U-Z]-powerpc NetBSD-1.5Z[A-Z]-powerpc \
+			NetBSD-1.[6-9]*-powerpc \
+			NetBSD-1.5[U-Z]-prep NetBSD-1.5Z[A-Z]-prep \
+			NetBSD-1.[6-9]*-prep \
+			NetBSD-1.5[U-Z]-bebox NetBSD-1.5Z[A-Z]-bebox \
+			NetBSD-1.[6-9]*-bebox \
+			NetBSD-1.5[U-Z]-ofppc NetBSD-1.5Z[A-Z]-ofppc \
+			NetBSD-1.[6-9]*-ofppc \
+			NetBSD-1.5[U-Z]-amigappc NetBSD-1.5Z[A-Z]-amigappc \
+			NetBSD-1.[6-9]*-amigappc \
+			NetBSD-1.5[U-Z]-sandpoint NetBSD-1.5Z[A-Z]-sandpoint \
+			NetBSD-1.[6-9]*-sandpoint
 
 SHLIB_HANDLING=		NO
 CHECK_SHLIBS=		NO
