@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/17 22:21:03 tron Exp $
+bin/nap
+share/doc/nap/README
+share/examples/nap/nap.conf
+@dirrm share/examples/nap
+@dirrm share/doc/nap
