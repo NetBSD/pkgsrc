@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/08/30 23:27:30 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/09/27 17:07:37 grant Exp $
 #
 
 DISTNAME=	calc-2.11.8
@@ -13,6 +13,6 @@ COMMENT=	C arbitrary precision calculator
 
 USE_BUILDLINK2=	# defined
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

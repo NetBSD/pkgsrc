@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/25 16:50:27 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2003/09/27 17:07:34 grant Exp $
 
 DISTNAME=	mp3blaster-3.1.3
 PKGREVISION=	3
@@ -26,6 +26,6 @@ CONFIGURE_ARGS+=	--enable-newthreads
 .endif
 
 .include "../../audio/libvorbis/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

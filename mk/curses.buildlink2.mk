@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.11 2003/09/27 10:27:39 grant Exp $
+# $NetBSD: curses.buildlink2.mk,v 1.1 2003/09/27 17:07:34 grant Exp $
 #
 # Optionally define:
 #
@@ -6,8 +6,8 @@
 # INCOMPAT_CURSES	specify MACHINE_PLATFORM versions that are missing
 #			some needed functions.
 
-.if !defined(NCURSES_BUILDLINK2_MK)
-NCURSES_BUILDLINK2_MK=	# defined
+.if !defined(CURSES_BUILDLINK2_MK)
+CURSES_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -115,4 +115,4 @@ ncurses-curses-h:
 		${LN} -s ${BUILDLINK_PREFIX.ncurses}/include/ncurses.h ${BUILDLINK_DIR}/include/curses.h; \
 	fi
 
-.endif	# NCURSES_BUILDLINK2_MK
+.endif	# CURSES_BUILDLINK2_MK
