@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/06/21 15:10:37 agc Exp $
+# $NetBSD: Makefile,v 1.29 2002/08/01 15:54:42 wiz Exp $
 #
 
 COMMENT=	window managers (for X)
@@ -27,6 +27,7 @@ SUBDIR+=	icewm-gnome
 SUBDIR+=	icewmconf
 SUBDIR+=	ion
 SUBDIR+=	lwm
+SUBDIR+=	matchbox
 SUBDIR+=	metacity
 SUBDIR+=	olvwm
 SUBDIR+=	pwm
