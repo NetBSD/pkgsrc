@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/01 02:58:32 danw Exp $
+sbin/groupadd
+sbin/groupdel
+sbin/useradd
+sbin/userdel
