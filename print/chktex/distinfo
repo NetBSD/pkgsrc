@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/06 14:37:38 wiz Exp $
+
+SHA1 (chktex-1.6.1.tar.gz) = 8e34753861e7971616145b249383d1de9e673347
+Size (chktex-1.6.1.tar.gz) = 178324 bytes
+SHA1 (patch-aa) = 97f116b5cdc60cb100a08291972cf5d935e6c766
