@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2696 2003/07/07 23:45:57 jtb Exp $
+$NetBSD: CHANGES,v 1.2697 2003/07/08 08:55:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2694,3 +2694,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated twelf to 1.4nb1 [seb 2003-07-07]
 	Updated cvsync to 0.23.6 [gehenna 2003-07-07]
 	Added pari-galdata-2.1 [jtb 2003-07-07]
+	Added brs-4.0 [wiz 2003-07-08]
