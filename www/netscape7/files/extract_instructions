@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: extract_instructions,v 1.6 2003/01/28 20:05:41 abs Exp $
+$NetBSD: extract_instructions,v 1.7 2003/09/16 02:03:52 jschauma Exp $
 
     Now running the Netscape 7 installation program.  Note that the
     installation requires the DISPLAY environment variable to be set.
@@ -11,7 +11,8 @@ $NetBSD: extract_instructions,v 1.6 2003/01/28 20:05:41 abs Exp $
     3) On the next screen, select your preferred installation and press 'Next'.
        NOTE: Do not alter "Destination Directory"
 
-    4) Lean back and wait while the installer installs the necessary files. 
+    4) Click 'Install', lean back and wait while the installer installs
+       the necessary files. 
 
     5) Click 'Ok' on "Installation has completed."
 
