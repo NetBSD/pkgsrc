@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/06/03 14:05:12 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/06/19 23:01:28 tron Exp $
 #
 
 DISTNAME=	xplot-0.90
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://mercury.lcs.mit.edu/pub/shep/
 
 MAINTAINER=	thorpej@netbsd.org
 
+USE_X11=	yes
 GNU_CONFIGURE=	yes
 
 DOCFILES=	ANNOUNCE README README.tcp_plots demo.0 demo.1 demo.2 \
