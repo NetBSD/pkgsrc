@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2003/08/27 08:52:59 itojun Exp $
+$NetBSD: patch-ab,v 1.3 2004/02/15 08:02:23 itojun Exp $
 
---- Makefile.in.orig	2003-04-24 04:30:07.000000000 +0900
-+++ Makefile.in	2003-08-27 17:40:34.000000000 +0900
-@@ -461,7 +461,7 @@
+--- Makefile.in.orig	2004-01-30 08:33:49.000000000 +0900
++++ Makefile.in	2004-02-15 16:40:20.000000000 +0900
+@@ -473,7 +473,7 @@
   configure.lineno
  $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
  	cd $(top_srcdir) && \
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.2 2003/08/27 08:52:59 itojun Exp $
  Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
  	cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe)
  
-@@ -1233,10 +1233,10 @@
+@@ -1256,10 +1256,10 @@
  
  # Install docs and sources.
  install-data-local : doc-html
@@ -20,13 +20,13 @@ $NetBSD: patch-ab,v 1.2 2003/08/27 08:52:59 itojun Exp $
 -	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/doc/manual
 -	-cp $(srcdir)/doc/manual/* $(DESTDIR)$(pkgdatadir)/doc/manual
 +	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/chicken
-+	-for file in $(DOCFILES); do $(INSTALL_DATA) $(srcdir)/doc/$$file $(DESTDIR)$(prefix)/share/doc/chicken; done
-+	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/html/chicken
-+	-for file in $(srcdir)/doc/manual/*.html $(srcdir)/doc/manual/*.png $(srcdir)/doc/manual/*.css ; do $(INSTALL_DATA) $$file $(DESTDIR)$(prefix)/share/doc/html/chicken; done
- 	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/src
- 	-cp $(srcdir)/*.scm $(srcdir)/runtime.c $(DESTDIR)$(pkgdatadir)/src
++	-for file in $(DOCFILES); do cp $(srcdir)/doc/$$file $(DESTDIR)$(prefix)/share/doc/chicken; done
++	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/chicken/manual
++	-cp $(srcdir)/doc/manual/* $(DESTDIR)$(prefix)/share/doc/chicken/manual
  	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)
-@@ -1432,7 +1432,7 @@
+ 	./chicken-setup
+ clean-local:
+@@ -1455,7 +1455,7 @@
  .PHONY : test
  
  test :
