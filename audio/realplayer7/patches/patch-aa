@@ -1,7 +1,5 @@
-$NetBSD: patch-aa,v 1.2 2000/08/06 04:34:43 jlam Exp $
-
---- mimeinstall.sh.orig	Wed Jun  7 19:58:28 2000
-+++ mimeinstall.sh	Sat Aug  5 23:57:15 2000
+--- mimeinstall.sh.orig	Wed Aug  9 15:53:59 2000
++++ mimeinstall.sh	Tue Aug 15 02:20:41 2000
 @@ -12,9 +12,12 @@
  # 3 mimetypes (space sep)
  # 4 mime.types location
@@ -40,8 +38,8 @@ $NetBSD: patch-aa,v 1.2 2000/08/06 04:34:43 jlam Exp $
              if [ -f $mailcapdest ] ; then
  		    grep -v $1 $mailcapdest > /tmp/$$ && cp /tmp/$$ $mailcapdest && rm -f /tmp/$$
  	    fi
--	    echo "$1;`pwd`/realplay %u" >> $mailcapdest
-+	    echo "$1;@@PREFIX@@/bin/realplay %u" >> $mailcapdest
+-	    echo "$1;`pwd`/realplay \"%u\"" >> $mailcapdest
++	    echo "$1;${REALPLAY} \"%u\"" >> $mailcapdest
  	    filesmodified="$filesmodified $mailcapdest"
      done
  

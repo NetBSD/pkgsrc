@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2000/08/15 05:34:41 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/15 06:38:35 jlam Exp $
 #
 
-DISTNAME=		rp7_linux20_libc6_i386_b2
-PKGNAME=		realplayer-7nb2
+DISTNAME=		rp7_linux20_libc6_i386_cs1
+PKGNAME=		realplayer-7nb3
 WRKSRC=			${WRKDIR}/RealPlayer7
 CATEGORIES=		audio
 MASTER_SITES=		# empty
@@ -29,7 +29,7 @@ EXTRACT_CMD=		HOME=${WRKDIR} XAUTHORITY=${XAUTHORITY} ${RP_INSTALLER}
 EXTRACT_CMD=		HOME=${WRKDIR} ${RP_INSTALLER}
 .endif
 
-DOWNLOAD=		${HOMEPAGE}
+DOWNLOAD=		http://proforma.real.com/real/player/unix/unix.html
 REALPLAYER_HOME=	${PREFIX}/lib/RealPlayer7
 
 NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
@@ -37,8 +37,8 @@ NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
 do-fetch:
 	@if [ ! -f ${RP_INSTALLER} ]; then \
 	    ${ECHO_MSG} "==============================================================="; \
-	    ${ECHO_MSG} "  RealPlayer 7 for Linux 2.0 (libc6 i386) must be fetched into"; \
-	    ${ECHO_MSG} "  ${DISTDIR} from"; \
+	    ${ECHO_MSG} "  RealPlayer 7 for Linux 2.x (libc6 i386, Self-Extracting) must"; \
+	    ${ECHO_MSG} "  be fetched into ${DISTDIR} from"; \
 	    ${ECHO_MSG} "  ${DOWNLOAD}."; \
 	    ${ECHO_MSG} "==============================================================="; \
 	    ${FALSE}; \
