@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1.1.1 2002/05/31 15:02:58 skrll Exp $
+
+--- flow/gsl/gslcommon.c.orig	Thu May 30 13:24:35 2002
++++ flow/gsl/gslcommon.c
+@@ -23,7 +23,9 @@
+ #include <fcntl.h>
+ #include <sys/utsname.h>
+ #include <string.h>
++#if !defined(__NetBSD__)
+ #include <sched.h>
++#endif
+ #include <errno.h>
+ #include <sys/poll.h>
+ #include <sys/stat.h>
