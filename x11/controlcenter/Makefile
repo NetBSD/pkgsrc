@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 1999/04/12 19:46:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/26 17:17:05 tron Exp $
 #
 
-DISTNAME=	control-center-1.0.4
+DISTNAME=	control-center-1.0.5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 		ftp://ftp.circ.us.eu.org/mirrors/ftp.gnome.org/sources/ \
