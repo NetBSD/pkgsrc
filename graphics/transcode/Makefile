@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/09/03 13:26:20 adam Exp $
+# $NetBSD: Makefile,v 1.16 2003/09/17 16:40:43 jmmv Exp $
 
 DISTNAME=	transcode-0.6.9
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.theorie.physik.uni-goettingen.de/~ostreich/transcode/
 COMMENT=	Command line video-stream processing tool
 
-BUILD_DEPENDS+=		nasm>=0.98.36:../../devel/nasm-devel
+BUILD_DEPENDS+=		nasm>=0.98.36:../../devel/nasm
 
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
