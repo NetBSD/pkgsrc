@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1017 2002/07/29 07:25:38 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1018 2002/07/29 20:54:28 schmonz Exp $
 #
 # This file is in the public domain.
 #
@@ -80,53 +80,47 @@ PKG_JVM?=		kaffe
 .    endif
 .  endif
 .  if ${PKG_JVM} == "jdk"
+_JAVA_PKGNAME=		jdk
+_JAVA_HOME=		${_JAVA_PREFIX}
 DEPENDS+=		jdk-[0-9]*:../../lang/jdk
-.    if defined(JDK_HOME)
-JAVA_HOME?=		${JDK_HOME}
-.    else
-JAVA_HOME?=		${LOCALBASE}/java
-.    endif
 .  elif ${PKG_JVM} == "sun-jdk14"
+_JAVA_PKGNAME=		sun-jdk14
+_JAVA_HOME=		${_JAVA_PREFIX}
 BUILD_DEPENDS+=		sun-jdk14-[0-9]*:../../lang/sun-jdk14
 DEPENDS+=		sun-jre14-[0-9]*:../../lang/sun-jre14
-JAVA_HOME?=		${LOCALBASE}/java
 .  elif ${PKG_JVM} == "sun-jdk13"
+_JAVA_PKGNAME=		sun-jdk13
+_JAVA_HOME=		${_JAVA_PREFIX}
 BUILD_DEPENDS+=		sun-jdk13-[0-9]*:../../lang/sun-jdk13
 DEPENDS+=		sun-jre13-[0-9]*:../../lang/sun-jre13
-.    if ${OPSYS} == "Darwin"
-JAVA_HOME?=		/usr
-.    else
-JAVA_HOME?=		${LOCALBASE}/java
-.    endif
 .  elif ${PKG_JVM} == "sun-jdk"
 .    if ${MACHINE_PLATFORM:MNetBSD-1.5Z[A-Z]-i386} != "" || \
 	${MACHINE_PLATFORM:MNetBSD-1.[6-9]*-i386} != "" || \
 	${MACHINE_PLATFORM:MLinux-*-i386} != ""
+_JAVA_PKGNAME=		sun-jdk14
+_JAVA_HOME=		${_JAVA_PREFIX}
 BUILD_DEPENDS+=         sun-jdk14-[0-9]*:../../lang/sun-jdk14
 DEPENDS+=               sun-jre14-[0-9]*:../../lang/sun-jre14
 .    elif ${MACHINE_PLATFORM:MNetBSD-*-i386} != "" || \
 	${MACHINE_PLATFORM:MDarwin-*-*} != "" || \
 	${MACHINE_PLATFORM:MLinux-*-i386} != ""
+_JAVA_PKGNAME=		sun-jdk13
+_JAVA_HOME=		${_JAVA_PREFIX}
 BUILD_DEPENDS+=		sun-jdk13-[0-9]*:../../lang/sun-jdk13
 DEPENDS+=		sun-jre13-[0-9]*:../../lang/sun-jre13
 .    endif
-.    if ${OPSYS} == "Darwin"
-JAVA_HOME?=		/usr
-.    else
-JAVA_HOME?=		${LOCALBASE}/java
-.    endif
 .  elif ${PKG_JVM} == "blackdown-jdk13"
+_JAVA_PKGNAME=		blackdown-jdk13
+_JAVA_HOME=		${_JAVA_PREFIX}/java/blackdown-1.3.1
 BUILD_DEPENDS+=		blackdown-jdk13-[0-9]*:../../lang/blackdown-jdk13
 DEPENDS+=		blackdown-jre13-[0-9]*:../../lang/blackdown-jre13
-JAVA_HOME?=		${LOCALBASE}/java
 .  elif ${PKG_JVM} == "kaffe"
+_JAVA_PKGNAME=		kaffe
+_JAVA_HOME=		${_JAVA_PREFIX}
 DEPENDS+=		kaffe-[0-9]*:../../lang/kaffe
-JAVA_HOME?=		${LOCALBASE}/kaffe
 .  endif
-.  if exists(${JAVA_HOME}/lib/classes.zip)
-CLASSPATH?=		${JAVA_HOME}/lib/classes.zip:.
-.  endif
-PATH:=			${PATH}:${JAVA_HOME}/bin
+_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/${_JAVA_PKGNAME}
+EVAL_PREFIX+=		_JAVA_PREFIX=${_JAVA_PKGNAME}
 MAKE_ENV+=		JAVA_HOME=${JAVA_HOME}
 CONFIGURE_ENV+=		JAVA_HOME=${JAVA_HOME}
 SCRIPTS_ENV+=		JAVA_HOME=${JAVA_HOME}
@@ -1557,6 +1551,18 @@ MAKEFLAGS+= ${def:C/=.*//}=${_dir_${def:C/=.*//}}
 .      endif
 .    endif
 .  endfor
+.endif
+
+.if defined(USE_JAVA)
+JAVA_HOME?=		${_JAVA_HOME}
+.  if exists(${JAVA_HOME}/lib/classes.zip)
+_JAVA_CLASSES_ZIP=	${JAVA_HOME}/lib/classes.zip:
+.  endif
+.  if exists(${JAVA_HOME}/lib/tools.jar)
+_JAVA_TOOLS_JAR=	${JAVA_HOME}/lib/tools.jar:
+.  endif
+CLASSPATH?=		${_JAVA_CLASSES_ZIP}${_JAVA_TOOLS_JAR}.
+PATH:=			${PATH}:${JAVA_HOME}/bin
 .endif
 
 .if !target(show-pkgsrc-dir)
