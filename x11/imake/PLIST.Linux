@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST.Linux,v 1.1.1.1 2004/01/24 08:43:25 xtraeme Exp $
+man/man1/ccmakedep.1x
+man/man1/cleanlinks.1x
+man/man1/gccmakedep.1x
+man/man1/imake.1x
+man/man1/lndir.1x
+man/man1/makedepend.1x
+man/man1/makeg.1x
+man/man1/makestrs.1x
+man/man1/mergelib.1x
+man/man1/mkdirhier.1x
+man/man1/mkhtmlindex.1x
+man/man1/pswrap.1x
+man/man1/revpath.1x
+man/man1/rman.1x
+man/man1/xmkmf.1x
