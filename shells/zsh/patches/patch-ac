@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.10 2002/08/25 21:50:52 jlam Exp $
+$NetBSD: patch-ac,v 1.11 2004/02/02 08:48:40 uebayasi Exp $
 
---- zshconfig.ac.orig	Wed Oct 24 11:16:27 2001
-+++ zshconfig.ac	Thu Jul 18 17:59:09 2002
-@@ -915,7 +915,7 @@
+--- zshconfig.ac.orig	2003-10-28 08:47:44.000000000 -0600
++++ zshconfig.ac
+@@ -926,7 +926,7 @@ AC_CHECK_FUNCS(strftime difftime gettime
  	       select poll \
  	       readlink lstat lchown faccessx fchdir ftruncate \
  	       fseeko ftello \
