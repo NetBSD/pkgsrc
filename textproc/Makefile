@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2001/10/01 16:36:01 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2001/10/02 11:00:45 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -48,8 +48,10 @@ SUBDIR+=	makeztxt
 SUBDIR+=	mminstance
 SUBDIR+=	openjade
 SUBDIR+=	opensp
+SUBDIR+=	p5-Convert-ASCII-Armour
 SUBDIR+=	p5-Convert-ASN1
 SUBDIR+=	p5-Convert-BER
+SUBDIR+=	p5-Convert-PEM
 SUBDIR+=	p5-Filter
 SUBDIR+=	p5-Pod-POM
 SUBDIR+=	p5-Text-Autoformat
