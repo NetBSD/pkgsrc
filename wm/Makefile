@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2004/01/28 22:44:08 snj Exp $
+# $NetBSD: Makefile,v 1.59 2004/01/29 22:07:20 snj Exp $
 #
 
-COMMENT=	Window managers (for X)
+COMMENT=	Window managers (for X) and related tools
 
 SUBDIR+=	3ddesktop
 SUBDIR+=	9wm
