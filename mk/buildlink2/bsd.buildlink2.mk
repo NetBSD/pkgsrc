@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.51 2002/11/20 08:05:04 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.52 2002/11/20 22:24:58 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -861,7 +861,13 @@ _HIDE_PROGS.autoconf=	bin/autoconf	bin/autoconf-2.13		\
 			bin/autoupdate	bin/autoupdate-2.13		\
 			bin/ifnames	bin/ifnames-2.13
 _HIDE_PROGS.automake=	bin/aclocal	bin/aclocal-1.4			\
-			bin/automake	bin/automake-1.4
+					bin/aclocal-1.5			\
+					bin/aclocal-1.6			\
+					bin/aclocal-1.7			\
+			bin/automake	bin/automake-1.4		\
+					bin/automake-1.5		\
+					bin/automake-1.6		\
+					bin/automake-1.7
 
 do-buildlink: hide-autotools
 hide-autotools:	# empty
