@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2000/05/11 20:04:05 christos Exp $
+lib/perl5/man/man3/CGI::Fast.3
+lib/perl5/man/man3/CGI::Carp.3
+lib/perl5/man/man3/CGI::Pretty.3
+lib/perl5/man/man3/CGI::Push.3
+lib/perl5/man/man3/CGI.3
+lib/perl5/man/man3/CGI::Switch.3
+lib/perl5/man/man3/CGI::Apache.3
+lib/perl5/man/man3/CGI::Cookie.3
+lib/perl5/site_perl/CGI/Util.pm
+lib/perl5/site_perl/CGI/Carp.pm
+lib/perl5/site_perl/CGI/Fast.pm
+lib/perl5/site_perl/CGI/Push.pm
+lib/perl5/site_perl/CGI/Pretty.pm
+lib/perl5/site_perl/CGI/Cookie.pm
+lib/perl5/site_perl/CGI/Apache.pm
+lib/perl5/site_perl/CGI/Switch.pm
+lib/perl5/site_perl/CGI.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/CGI/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/CGI
