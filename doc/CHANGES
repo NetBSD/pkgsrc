@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7980 2004/11/25 14:15:59 adam Exp $
+$NetBSD: CHANGES,v 1.7981 2004/11/25 14:19:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5416,3 +5416,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xpdf to 3.00pl1 [dillo 2004-11-25]
 	Updated gimp-print-cups to 4.2.7 [adam 2004-11-25]
         Updated gimp-print-escputil to 4.2.7 [adam 2004-11-25]
+	Updated libmm to 1.3.1 [adam 2004-11-25]
