@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6083 2004/06/01 15:04:22 taya Exp $
+$NetBSD: CHANGES,v 1.6084 2004/06/01 16:51:13 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2714,3 +2714,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated unzip to 5.51 [minskim 2004-06-01]
 	Updated mozilla to 1.6nb3 [taya 2004-06-01]
 	Updated mozilla-gtk2 to 1.6nb4 [taya 2004-06-01]
+	Updated ion to 20040601 [cube 2004-06-01]
