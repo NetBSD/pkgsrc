@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/14 11:52:10 jtb Exp $
+bin/yplot
+bin/yplotl
+share/doc/yplot/ytut.ps
+share/examples/yplot/demo1.i
+share/examples/yplot/demo2.i
+share/examples/yplot/demo3.i
+share/examples/yplot/demo4.i
+share/examples/yplot/demo5.i
+share/examples/yplot/demo6.i
+share/yorick/1.4/doc/yplot.doc
+share/yorick/1.4/startup/yplot.i
+share/yorick/1.4/startup/yplot_body.i
+share/yorick/1.4/startup/yplotl.i
+@dirrm share/examples/yplot
+@dirrm share/doc/yplot

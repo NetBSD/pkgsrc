@@ -1,0 +1,73 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/02/14 11:52:11 jtb Exp $
+
+--- ps.c.orig	Wed Feb 14 09:22:25 2001
++++ ps.c
+@@ -28,12 +28,12 @@
+ 
+ 	PLplot PostScript device driver.
+ */
+-#include "plDevs.h"
++#include "plplot/plDevs.h"
+ 
+ #ifdef PLD_ps
+ 
+-#include "plplotP.h"
+-#include "drivers.h"
++#include "plplot/plplotP.h"
++#include "plplot/drivers.h"
+ 
+ #include <string.h>
+ #include <time.h>
+@@ -133,8 +133,8 @@
+ 
+     dev = (PSDev *) pls->dev;
+ 
+-    dev->xold = UNDEFINED;
+-    dev->yold = UNDEFINED;
++    dev->xold = PL_UNDEFINED;
++    dev->yold = PL_UNDEFINED;
+ 
+     plP_setpxl(pxlx, pxly);
+ 
+@@ -400,8 +400,8 @@
+ {
+     PSDev *dev = (PSDev *) pls->dev;
+ 
+-    dev->xold = UNDEFINED;
+-    dev->yold = UNDEFINED;
++    dev->xold = PL_UNDEFINED;
++    dev->yold = PL_UNDEFINED;
+ 
+     pls->page++;
+     fprintf(OF, "%%%%Page: %d %d\n", (int) pls->page, (int) pls->page);
+@@ -487,8 +487,8 @@
+ 
+ 	fprintf(OF, " S\n%d W", width);
+ 
+-	dev->xold = UNDEFINED;
+-	dev->yold = UNDEFINED;
++	dev->xold = PL_UNDEFINED;
++	dev->yold = PL_UNDEFINED;
+ 	break;
+     }
+     case PLSTATE_COLOR0:
+@@ -514,7 +514,7 @@
+ 
+ /* Reinitialize current point location. */
+ 
+-    if (dev->xold != UNDEFINED && dev->yold != UNDEFINED) {
++    if (dev->xold != PL_UNDEFINED && dev->yold != PL_UNDEFINED) {
+ 	fprintf(OF, " %d %d M \n", (int)dev->xold, (int)dev->yold);
+     }
+ }
+@@ -591,8 +591,8 @@
+ 	pls->bytecnt += strlen(outbuf);
+ 	pls->linepos += 21;
+     }
+-    dev->xold = UNDEFINED;
+-    dev->yold = UNDEFINED;
++    dev->xold = PL_UNDEFINED;
++    dev->yold = PL_UNDEFINED;
+     fprintf(OF, " F ");
+ }
+ 
