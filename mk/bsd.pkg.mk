@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1594 2005/02/22 21:01:10 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1595 2005/02/25 13:05:52 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -3765,17 +3765,17 @@ checksum: fetch uptodate-digest
 	if [ ! -f ${DISTINFO_FILE} ]; then				\
 		${ECHO_MSG} "=> No checksum file.";			\
 	else								\
-		(cd ${DISTDIR}; OK="true";				\
+		(cd ${DISTDIR}; OK="true"; missing=""; 			\
 		  for file in "" ${_CKSUMFILES}; do			\
 		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
-			alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DISTINFO_FILE}`; \
-			for a in $$alg; do				\
-				if [ "X$$alg" = "X" ]; then		\
-					${ECHO_MSG} "=> No checksum recorded for $$file."; \
-					OK="false";			\
-				else					\
+			filesummed=false;				\
+			for a in ${DIGEST_ALGORITHMS}; do		\
+				CKSUM2=`${AWK} 'NF == 4 && $$1 == "'$$a'" && $$2 == "('$$file')" && $$3 == "=" {print $$4;}' ${DISTINFO_FILE}`; \
+				case "$${CKSUM2}" in			\
+				"")	${ECHO_MSG} "=> No $$a checksum recorded for $$file."; \
+					;;				\
+				*)	filesummed=true;		\
 					CKSUM=`${DIGEST} $$a < $$file`;	\
-					CKSUM2=`${AWK} '$$1 == "'$$a'" && $$2 == "('$$file')"{print $$4;}' ${DISTINFO_FILE}`; \
 					if [ "$$CKSUM2" = "IGNORE" ]; then \
 						${ECHO_MSG} "=> Checksum for $$file is set to IGNORE in checksum file even though"; \
 						${ECHO_MSG} "   the file is not in the "'$$'"{IGNOREFILES} list."; \
@@ -3785,9 +3785,13 @@ checksum: fetch uptodate-digest
 					else				\
 						${ECHO_MSG} "=> Checksum $$a mismatch for $$file."; \
 						OK="false";		\
-					fi;				\
-				fi;					\
+					fi ;;				\
+				esac;					\
 			done;						\
+			case "$$filesummed" in				\
+			false)	missing="$$missing $$file";		\
+				OK=false ;;				\
+			esac;						\
 		  done;							\
 		  for file in "" ${_IGNOREFILES}; do			\
 		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
@@ -3802,6 +3806,10 @@ checksum: fetch uptodate-digest
 			fi;						\
 		  done;							\
 		  if [ "$$OK" != "true" ]; then				\
+			case "$$missing" in				\
+			"")	;;					\
+			*)	${ECHO_MSG} "Missing checksums for $$missing";;	\
+			esac;						\
 			${ECHO_MSG} "Make sure the Makefile and checksum file (${DISTINFO_FILE})"; \
 			${ECHO_MSG} "are up to date.  If you want to override this check, type"; \
 			${ECHO_MSG} "\"${MAKE} NO_CHECKSUM=yes [other args]\"."; \
