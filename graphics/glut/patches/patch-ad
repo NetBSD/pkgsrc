@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2003/11/18 16:10:56 jschauma Exp $
+
+--- src-glut/Makefile.am.orig	2003-11-07 11:36:19.000000000 -0500
++++ src-glut/Makefile.am	2003-11-17 23:48:12.000000000 -0500
+@@ -8,8 +8,7 @@
+ lib_LTLIBRARIES = libglut.la
+ EXTRA_PROGRAMS = capturexfont
+ 
+-#libglut_la_LDFLAGS = -version-info @LIBGLUT_VERSION_INFO@ -L../@GLU_DIR@
+-libglut_la_LDFLAGS = -L../@GLU_DIR@
++libglut_la_LDFLAGS = -version-info @LIBGLUT_VERSION_INFO@ -L../@GLU_DIR@
+ libglut_la_LIBADD = -lGLU
+ libglut_la_SOURCES = \
+ 	glutwin32.h \

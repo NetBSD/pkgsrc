@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2003/09/29 21:30:28 jschauma Exp $
+# $NetBSD: Makefile,v 1.53 2003/11/18 16:10:55 jschauma Exp $
 #
 
 PKGNAME=	Mesa-${MESA_VERSION}
@@ -12,8 +12,6 @@ CONFLICTS=	Mesa-glx-[0-9]*
 
 pre-patch:	# empty
 
-.include "Makefile.common"
-
 USE_BUILDLINK2=	yes
 
 USE_X11BASE=	yes
@@ -22,7 +20,10 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 EXTRACT_ONLY=	# empty
 
+post-patch:	# empty
 do-install:	# empty
+
+.include "Makefile.common"
 
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/glu/buildlink2.mk"

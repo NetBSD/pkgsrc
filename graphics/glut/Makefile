@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2003/11/09 02:23:18 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2003/11/18 16:10:56 jschauma Exp $
 
 PKGNAME=		${DISTNAME:S/MesaLib/glut/}
-PKGREVISION=		1
+PKGREVISION=		2
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${DISTNAME:S/MesaLib/MesaDemos/}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
@@ -17,6 +17,8 @@ USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
 CONFIGURE_DIRS=		${WRKSRC}
 BUILD_DIRS=		${WRKSRC}/src-glut
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/GL
@@ -27,6 +29,7 @@ post-install:
 	done
 
 .include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # must be below bsd.pkg.mk to overwrite values
