@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/12/07 02:38:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2003/03/09 19:46:54 jschauma Exp $
 
 DISTNAME=	quake-v6-bsd-kame
 PKGNAME=	quake6-0.0
@@ -33,5 +33,5 @@ PKG_FAIL_REASON= "${PKGNAME} requires IPv6 support"
 # "bindir" setting is very non-standard for GNU autoconf
 CONFIGURE_ARGS+=--disable-asmopt --bindir=/bin
 
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
