@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/10/18 01:50:02 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/11/19 22:59:58 jlam Exp $
 
 .if !defined(APACHE_BUILDLINK2_MK)
 APACHE_BUILDLINK2_MK=	# defined
@@ -17,8 +17,9 @@ BUILDLINK_DEPMETHOD.apache+=	full
 EVAL_PREFIX+=				BUILDLINK_PREFIX.apache=apache
 BUILDLINK_PREFIX.apache_DEFAULT=	${LOCALBASE}
 
-BUILDLINK_FILES.apache=		include/httpd/*/*.[ch]
-BUILDLINK_FILES.apache+=	include/httpd/*.[ch]
+BUILDLINK_FILES.apache=		include/httpd/*
+BUILDLINK_FILES.apache+=	lib/libapr.*
+BUILDLINK_FILES.apache+=	lib/libaprutil.*
 
 BUILDLINK_TARGETS+=	apache-buildlink
 
