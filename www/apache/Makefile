@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2000/09/12 19:39:02 thorpej Exp $
+# $NetBSD: Makefile,v 1.51 2000/09/20 05:14:12 jlam Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -106,7 +106,7 @@ post-install:
 	cd ${PREFIX}/lib/httpd; ${MV} libproxy.so mod_proxy.so
 .endif
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
-	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache.sh
+	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
