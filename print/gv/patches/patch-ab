@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.6 2004/12/08 03:51:54 minskim Exp $
+
+--- src/ps.c.orig	Mon Nov 15 14:43:29 2004
++++ src/ps.c
+@@ -501,15 +501,15 @@ unc_ok:
+       doc->beginheader = position;
+       section_len = line_len;
+     } else if (iscomment(line,"%PDF-") && cmd_scan_pdf) {
+-      
+-      /* PDF hack to set DELAYSAFER on interpreter invocation */
+-      pdf_delaysafer_hack = 1;
+-
+       struct document *retval = NULL;
+       FILE *tmpfile = (FILE*)NULL;
+       char *filename_dsc;
+       char cmd[512];
+       char s[512];
++      
++      /* PDF hack to set DELAYSAFER on interpreter invocation */
++      pdf_delaysafer_hack = 1;
++
+       filename_dsc=file_getTmpFilename(NULL,filename_raw);
+       sprintf(cmd,cmd_scan_pdf,filename,filename_dsc);
+       INFMESSAGE(is PDF)

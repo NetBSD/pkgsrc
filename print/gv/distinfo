@@ -1,4 +1,7 @@
-$NetBSD: distinfo,v 1.8 2004/12/01 21:24:30 xtraeme Exp $
+$NetBSD: distinfo,v 1.9 2004/12/08 03:51:54 minskim Exp $
 
 SHA1 (gv-3.6.0.tar.gz) = fbe0d9c3ca514dba9a83ba8fe3d6f79489a1c69c
 Size (gv-3.6.0.tar.gz) = 542676 bytes
+SHA1 (patch-aa) = 8dc4c7882e5416ec4773905e2f8700cdbea1c2cf
+SHA1 (patch-ab) = c2738bfc2db5f041fb0e1c73eff55c2b1895093c
+SHA1 (patch-ac) = eb1007d4a10b7e9bfcfa22ecd19d2694914ab208

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2004/12/01 21:24:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.46 2004/12/08 03:51:54 minskim Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 #
 
@@ -17,6 +17,7 @@ GNU_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/gv
 
 USE_MAKEINFO=		yes
+TEXINFO_REQD=		4.2
 INFO_FILES=		gv.info
 
 XAW_TYPE=		3d
