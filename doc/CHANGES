@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7689 2004/11/04 11:47:47 abs Exp $
+$NetBSD: CHANGES,v 1.7690 2004/11/04 12:03:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5064,4 +5064,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated unrar to 3.4.3 [adam 2004-11-04]
 	Updated libsigc++2 to 2.0.6 [adam 2004-11-04]
 	Updated id3v2 to 0.1.11 [abs 2004-11-04]
-
+	Updated glibmm24 to 2.4.5 [adam 2004-11-04]
