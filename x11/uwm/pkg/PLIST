@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/23 03:10:59 itohy Exp $
+bin/uwm
+man/cat1/uwm.0
+lib/X11/uwm/system.uwmrc
+@dirrm lib/X11/uwm

@@ -1,0 +1,94 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/12/23 03:10:59 itohy Exp $
+
+--- uwm.c.orig	Sun Oct 23 22:21:55 1988
++++ uwm.c	Thu Dec 23 00:21:02 1999
+@@ -42,6 +42,15 @@
+ #include "uwm.h"
+ #include <ctype.h>
+ 
++#ifdef CSRG_BASED
++#undef MIN
++#undef MAX
++#include <sys/param.h>
++#if defined(BSD) && BSD >= 199306
++#define HAVE_MKSTEMP
++#endif
++#endif
++
+ #ifdef PROFIL
+ #include <signal.h>
+ /*
+@@ -369,7 +378,7 @@
+     if (IFontInfo == NULL) {
+         fprintf(stderr, "uwm: Unable to open icon font '%s', using server default.\n",
+                 IFontName);
+-	IFontInfo = XQueryFont(dpy, DefaultGC(dpy, scr)->gid);
++	IFontInfo = XQueryFont(dpy, XGContextFromGC(DefaultGC(dpy, scr)));
+ 	fallbackIFont = True;
+     }
+     PFontInfo = XLoadQueryFont(dpy, PFontName);
+@@ -379,7 +388,7 @@
+ 	if (fallbackIFont)
+ 	    PFontInfo = IFontInfo;
+ 	else
+-	    PFontInfo = XQueryFont(dpy, DefaultGC(dpy, scr)->gid);
++	    PFontInfo = XQueryFont(dpy, XGContextFromGC(DefaultGC(dpy, scr)));
+ 	fallbackPFont = True;
+     }
+     MFontInfo = XLoadQueryFont(dpy, MFontName);
+@@ -389,7 +398,7 @@
+ 	if (fallbackIFont || fallbackPFont)
+ 	    MFontInfo = fallbackPFont ? PFontInfo : IFontInfo;
+ 	else
+-	    MFontInfo = XQueryFont(dpy, DefaultGC(dpy, scr)->gid);
++	    MFontInfo = XQueryFont(dpy, XGContextFromGC(DefaultGC(dpy, scr)));
+ 	fallbackMFont = True;
+     }
+ 
+@@ -685,7 +694,11 @@
+  */
+ InitBindings()
+ {
++#ifdef HAVE_MKSTEMP
++    int fd;
++#else
+     char *mktemp();
++#endif
+     char *tempfile;		/* Temporary filename. */
+     register FILE *fp;		/* Temporary file pointer. */
+     register char **ptr;	/* Default bindings string array pointer. */
+@@ -699,15 +712,26 @@
+ 	exit (1);
+     }
+     strcpy (tempfile, TEMPFILE);
++#ifdef HAVE_MKSTEMP
++    if ((fd = mkstemp(tempfile)) < 0 || (fp = fdopen(fd, "r+")) == NULL) {
++        perror("uwm: cannot create temp file");
++        exit(1);
++    }
++#else
+     sfilename = mktemp(tempfile);
+     if ((fp = fopen(tempfile, "w")) == NULL) {
+         perror("uwm: cannot create temp file");
+         exit(1);
+     }
++#endif
+     for (ptr = DefaultBindings; *ptr; ptr++) {
+         fputs(*ptr, fp);
+         fputc('\n', fp);
+     }
++#ifdef HAVE_MKSTEMP
++    rewind(fp);
++    yyin = fp;
++#else
+     fclose(fp);
+ 
+     /*
+@@ -717,6 +741,7 @@
+         perror("uwm: cannot open temp file");
+         exit(1);
+     }
++#endif
+     Lineno = 1;
+     yyparse();
+     fclose(yyin);
