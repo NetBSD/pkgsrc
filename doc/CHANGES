@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4317 2004/01/01 19:15:13 cjep Exp $
+$NetBSD: CHANGES,v 1.4318 2004/01/01 20:07:00 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -12,3 +12,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gap to 4.3.5 [cjep 2004-01-01]
 	Updated moz-mplayer to 1.0 [salo 2004-01-01]
 	Added awhois-1.61 [cjep 2004-01-01]
+	Updated xfstt to 1.6 [salo 2004-01-01]
