@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1025 2003/11/13 20:29:50 grant Exp $
+$NetBSD: TODO,v 1.1026 2003/11/14 11:25:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -122,7 +122,7 @@ Suggested new packages
 Suggested package updates
 =========================
 
-	o Amaya-8.1a
+	o Amaya-8.2
 	o ImageViewer-0.6.3
 	o Lesstif-0.93.91
 	o MozillaFirebird-0.7
@@ -380,7 +380,7 @@ Suggested package updates
 	o w3m-0.4.2
 	o wavesurfer-1.5.3 [requires tk-8.4.2]
 	o wdm-1.26
-	o wget-1.9
+	o wget-1.9.1
 	o wmbiff-0.4.17
 	o wv2-0.2
 	o wwwoffle-2.7h
