@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12 2002/09/20 11:18:03 jlam Exp $
+$NetBSD: CHANGES,v 1.13 2002/09/20 11:27:31 abs Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2914,3 +2914,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated feh to 1.2.1 [rh 2002-09-20]
 	Added kyim-1.0 [jlam 2002-09-20]
 	Removed kyahoo [jlam 2002-09-20]
+	Updated ns-remote to 1.7 [abs 2002-09-20]
