@@ -1,10 +1,7 @@
 ==========================================================================
-$NetBSD: MESSAGE.pre,v 1.4 1999/10/05 07:58:41 jlam Exp $
+$NetBSD: MESSAGE.pre,v 1.5 2000/06/28 15:02:33 agc Exp $
 
 NOTES:
-
-* You MUST define the environment variable USE_LOCALBASE_FOR_X11 in
-  /etc/mk.conf in order to allow pkgsrc to work with this special package.
 
 * You MUST set the environment variable XAPPLRESDIR in /etc/profile and
   /etc/csh.login by hand in order to make pkgs built with xpkgwedge run
