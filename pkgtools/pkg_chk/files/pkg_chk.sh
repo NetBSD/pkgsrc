@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.8 2004/09/03 10:19:17 abs Exp $
+# $Id: pkg_chk.sh,v 1.9 2004/11/30 19:32:10 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -384,6 +384,7 @@ unset PKG_PATH || true
 
 test -n "$MAKE" || MAKE="@MAKE@"
 test -n "$MAKECONF" || MAKECONF="@MAKECONF@"
+
 if [ ! -f $MAKECONF ] ; then
     if [ -f /etc/mk.conf ] ; then
 	MAKECONF=/etc/mk.conf
@@ -474,12 +475,17 @@ if [ -n "$opt_c" -o -n "$opt_l" ];then
 
 	taglist["*"] = "*"
     }
-    function and_expr_with_dict(expr, dict, ary, i, r) {
+    function and_expr_with_dict(expr, dict, ary, i, r, d) {
 	split(expr,ary,/\+/);
 	r = 1;
-	for (i in ary)
-		if (! (ary[i] in dict))
+	for (i in ary) {
+		if (ary[i] ~ /^\//) {
+			if (getline d < ary[i] == -1)
+			    { r = 0; break ;}
+		}
+		else if (! (ary[i] in dict))
 			{ r = 0; break ;}
+	}
 	return r;
     }
     {
@@ -489,21 +495,11 @@ if [ -n "$opt_c" -o -n "$opt_l" ];then
     need = 0;
     for (f = 1 ; f<=NF ; ++f) {			# For each word on the line
 	if (sub("^-", "", $f)) { 	# If it begins with a '-'
-		if ($f ~ /\+/) {	# If it is a ANDed tag expression
-			if (and_expr_with_dict($f, taglist))
-				next;		# If it is true, discard
-		} else {			# If it is a simple tag
-			if ($f in taglist)	# If match, discard
-				next;
-		}
+		if (and_expr_with_dict($f, taglist))
+			next;		# If it is true, discard
 	} else {
-		if ($f ~ /\+/) {	# If it is a ANDed tag expression
-			if (and_expr_with_dict($f, taglist))
-				need = 1;	# If it is true, note needed
-		} else {			# If it is a simple tag
-			if ($f in taglist)	# If match, note needed
-				need = 1;
-		}
+		if (and_expr_with_dict($f, taglist))
+			need = 1;	# If it is true, note needed
 	}
     }
     if (NF == 1 || need)
