@@ -1,42 +1,27 @@
-# $NetBSD: Makefile,v 1.14 2004/01/15 09:57:13 markd Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/15 11:03:12 markd Exp $
 
-DISTNAME=	kdelibs-3.1.5
-PKGNAME=	kdelibdocs-3.1.5
+DISTNAME=	kdelibs-3.2.0
+PKGNAME=	kdelibdocs-3.2.0
 CATEGORIES=	x11 devel
 
 COMMENT=	KDE library documentation
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
-BUILD_DEPENDS+=		kdoc>=3.0:../../textproc/kdoc
-DEPENDS+=		qt3-docs>=3.1.1:../../x11/qt3-docs
+BUILD_DEPENDS+=		doxygen>=1.3.5nb2:../../devel/doxygen
 
-NO_CONFIGURE=		yes
+USE_BUILDLINK2=		YES
+ALL_TARGET=		apidox
+INSTALL_TARGET=		install-data-local
 
-EVAL_PREFIX+=		QT3DIR=qt3-docs
-DOCINSTALLDIR=		${PREFIX}/share/doc/kde/HTML/en
-
-do-build:
-	${MKDIR} ${WRKDIR}/kdelibs
-	${SETENV} PATH=${LOCALBASE}/bin:${PATH} ${LOCALBASE}/bin/qt2kdoc \
-		--outdir=${WRKDIR}/kdelibs/kdoc-reference		\
-		${QT3DIR}/qt3/doc/html
-	${SETENV} PATH=${LOCALBASE}/bin:${PATH} ${LOCALBASE}/bin/makekdedoc \
-		--srcdir=${WRKSRC}					\
-		--outputdir=${WRKDIR}/kdelibs				\
-		--libdir=${WRKDIR}/kdelibs/kdoc-reference
-
-do-install:
-	cd ${WRKDIR};							\
-	DOCDIRS="`${FIND} kdelibs -type d -print | ${SORT}`";		\
+post-install:
+	cd ${WRKSRC};							\
+	DOCDIRS="arts dcop interfaces kabc kate kdecore kdefx kdeprint kdeui khtml kio kjs kmdi kparts kresources kutils kwallet libkmid"; \
 	for d in $${DOCDIRS}; do					\
-	    ${ECHO} creating directory ${DOCINSTALLDIR}/$${d};		\
-	    ${INSTALL_DATA_DIR} ${DOCINSTALLDIR}/$${d};			\
-	done ;								\
-	DOCFILES="`${FIND} kdelibs -type f -print | ${SORT}`";		\
-	(for f in $${DOCFILES}; do					\
-	    ${ECHO} installing ${DOCINSTALLDIR}/$${f};			\
-	    ${INSTALL_DATA} $${f} ${DOCINSTALLDIR}/$${f};		\
-	done)
+		(cd $${d}; ${GMAKE} install-apidox);			\
+	done
+
+.include "../../meta-pkgs/kde3/buildlink2.mk"
+.include "../../x11/kdelibs3/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
