@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:06:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/23 19:37:30 jlam Exp $
 #
 
 PKGNAME=	qt2-examples-${QTVERSION}
-
 COMMENT=	QT2 Tutorial, example code and HTML documentation
 
 .include "../qt2-libs/Makefile.common"
 
-DEPENDS+=	qt2-libs-${QTVERSION}:../../x11/qt2-libs
+NO_BUILDLINK_ONLY=		yes
+BUILDLINK_DEPENDS.qt2-libs=	qt2-libs-${QTVERSION}
 
 CONFIGURE_ENV+=	QTDIR=${QTPREFIX}
 
 do-build:
-	@MFS="`find ${WRKSRC}/examples ${WRKSRC}/tutorial -name Makefile -print`"; \
+	@MFS="`${FIND} ${WRKSRC}/examples ${WRKSRC}/tutorial -name Makefile -print`"; \
 	(for M in $${MFS}; do \
 	    ${SED} \
 		-e "s:\\\$$[({]X11BASE[})]:${X11BASE}:g" \
@@ -25,15 +25,16 @@ do-build:
 
 do-install:
 	@cd ${WRKSRC}; \
-	DIRS="`find examples tutorial -type d -print | sort`"; \
+	DIRS="`${FIND} examples tutorial -type d -print | ${SORT}`"; \
 	(for d in $${DIRS}; do \
 	    ${ECHO} creating ${QTPREFIX}/$${d}; \
 	    ${INSTALL_DATA_DIR} ${QTPREFIX}/$${d}; \
 	done); \
-	ETFILES="`find  examples tutorial -type f ! -name "Makefile.in" -print | sort`"; \
+	ETFILES="`${FIND} examples tutorial -type f ! -name "Makefile.in" -print | ${SORT}`"; \
 	(for f in $${ETFILES}; do \
 	    ${ECHO} installing ${QTPREFIX}/$${f}; \
 	    ${INSTALL_DATA} $${f} ${QTPREFIX}/$${f}; \
 	done)
 
+.include "../../x11/qt2-libs/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
