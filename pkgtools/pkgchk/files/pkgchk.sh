@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.15 2001/09/27 21:13:47 abs Exp $
+# $Id: pkgchk.sh,v 1.16 2001/09/28 09:58:15 abs Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
 # TODO: Handle updates with dependencies via binary packages
@@ -128,7 +128,7 @@ run_cmd()
     echo $1
     if [ -z "$opt_n" ];then
         sh -c "$1" || FAIL=1
-	if [ FAIL=1 ] ; then
+	if [ -n "$FAIL" ] ; then
             echo "** '$1' failed"
             if [ "$FAILOK" != 1 ]; then
                 exit 1
