@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/07/27 11:49:11 simonb Exp $
+# $NetBSD: Makefile,v 1.21 2004/08/01 04:35:33 jlam Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
@@ -11,49 +11,78 @@ COMMENT=	Anti-virus toolkit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-CLAMAV_VERSION=	0.75
+CLAMAV_VERSION=		0.75.1
 
 USE_BUILDLINK3=		yes
-GNU_CONFIGURE=		yes
-USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
-# disable the configure check for user and group:
+
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-clamav
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-dbdir=${VIRUSDBDIR}
 CONFIGURE_ARGS+=	--with-uid=${CLAMAV_USER}
 CONFIGURE_ARGS+=	--with-group=${CLAMAV_GROUP}
 CONFIGURE_ARGS+=	--with-tcpwrappers
 
-BUILD_DEFS+=	CLAMAV_USER CLAMAV_GROUP USE_MILTER
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=	CLAMAV_USER CLAMAV_GROUP
+FILES_SUBST+=	CLAMAV_USER=${CLAMAV_USER}
+MESSAGE_SUBST+=	CLAMAV_USER=${CLAMAV_USER}
+
+USE_PKGINSTALL=		yes
+DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
 
 RCD_SCRIPTS=	clamd
 PKG_GROUPS+=    ${CLAMAV_GROUP}
 PKG_USERS+=     ${CLAMAV_USER}:${CLAMAV_GROUP}::Clamav\\ User
 
+VIRUSDBDIR=	${VARBASE}/clamav
 EGDIR=		${PREFIX}/share/examples/clamav
-CONF_FILES=	${EGDIR}/clamav.conf ${PKG_SYSCONFDIR}/clamav.conf
-CONF_FILES+=	${EGDIR}/freshclam.conf ${PKG_SYSCONFDIR}/freshclam.conf
-PLIST_SRC=	${PKGDIR}/PLIST
+FILES_SUBST+=	VIRUSDBDIR=${VIRUSDBDIR}
 
-.include "../../mk/bsd.prefs.mk"
-.if defined(USE_MILTER) && !empty(USE_MILTER:M[yY][eE][sS])
-.include "../../mail/libmilter/buildlink3.mk"
+OWN_DIRS_PERMS=		${VIRUSDBDIR} ${CLAMAV_USER} ${CLAMAV_GROUP} 0775
+CONF_FILES=		# empty
+CONF_FILES_PERMS=	# empty
+.for _file_ in clamav.conf freshclam.conf
+CONF_FILES+=		${EGDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_}
+.endfor
+.for _file_ in daily.cvd main.cvd
+CONF_FILES_PERMS+=	${EGDIR}/${_file_} ${VIRUSDBDIR}/${_file_}	\
+			${CLAMAV_USER} ${CLAMAV_GROUP} 0664
+.endfor
+.undef _file_
+
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} CFGINST=${EGDIR} DBINST=${EGDIR}
+
+# Global and legacy options
+.if defined(USE_MILTER)
+.  if !defined(PKG_OPTIONS.milter)
+.    if defined(USE_MILTER) && !empty(USE_MILTER:M[yY][eE][sS])
+PKG_OPTIONS.milter+=	milter
+.    endif
+.  endif
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.clamav
+PKG_SUPPORTED_OPTIONS=	milter
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mmilter)
+.  include "../../mail/libmilter/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-milter
-PLIST_SRC+=		${PKGDIR}/PLIST.milter
+PLIST_SUBST+=		MILTER=
 .else
 CONFIGURE_ARGS+=	--disable-milter
 # XXX --disable-milter doesn't work as expected, so we need this
 CONFIGURE_ENV+=		ac_cv_header_libmilter_mfapi_h=no
+PLIST_SUBST+=		MILTER="@comment "
 .endif
-
-# for freshclam to work it must own the share/clamav dir
-post-install:
-	${CHOWN} -R ${CLAMAV_USER}:${CLAMAV_GROUP} ${PREFIX}/share/clamav
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
-
 .include "../../mk/pthread.buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
