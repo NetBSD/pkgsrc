@@ -1,5 +1,5 @@
---- gdbm.texinfo.BAK	Sun Oct 26 03:45:23 1997
-+++ gdbm.texinfo	Sun Oct 26 03:46:09 1997
+--- gdbm.texinfo.orig	Fri May 20 00:14:11 1994
++++ gdbm.texinfo	Fri May  8 13:45:20 1998
 @@ -2,6 +2,9 @@
  @comment %**start of header (This is for running Texinfo on a region.)
  @setfilename gdbm.info
@@ -10,13 +10,3 @@
  @c @setchapternewpage odd
  @comment %**end of header (This is for running Texinfo on a region.)
  
---- Makefile.in	1997/11/20 11:43:20	1.1
-+++ Makefile.in	1997/11/20 11:44:10
-@@ -94,6 +94,7 @@
- 
- install: libgdbm.a gdbm.h gdbm.info
- 	$(INSTALL_DATA) libgdbm.a $(libdir)/libgdbm.a
-+	$(RANLIB) $(libdir)/libgdbm.a
- 	$(INSTALL_DATA) gdbm.h $(includedir)/gdbm.h
- 	$(INSTALL_DATA) $(srcdir)/gdbm.3 $(man3dir)/gdbm.3
- 	$(INSTALL_DATA) $(srcdir)/gdbm.info $(infodir)/gdbm.info
