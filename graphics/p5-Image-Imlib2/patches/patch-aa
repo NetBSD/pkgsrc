@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/21 16:17:42 kim Exp $
+
+Ugly trick to get rid of multiple X libraries that won't be found.
+
+--- Build.PL.orig	Sun Aug 31 11:15:33 2003
++++ Build.PL	Sun Sep 21 10:27:12 2003
+@@ -19,7 +19,7 @@
+   print "Found imlib2 $version";
+ }
+ 
+-my $libs = `$CONFIG --libs`;
++my $libs = `@IMLIB2LIBS@`;
+ my $cflags = `$CONFIG --cflags`;
+ 
+ my $build = Module::Build->new(
