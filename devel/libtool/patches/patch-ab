@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.13 2001/01/09 18:37:46 bad Exp $
+$NetBSD: patch-ab,v 1.14 2001/01/15 15:18:24 jlam Exp $
 
---- ltmain.in.orig0	Sat May 27 03:53:15 2000
-+++ ltmain.in	Tue Jan  9 19:21:17 2001
+--- ltmain.in.orig	Fri May 26 21:53:15 2000
++++ ltmain.in
 @@ -819,6 +819,7 @@
      old_convenience=
      deplibs=
@@ -55,13 +55,10 @@ $NetBSD: patch-ab,v 1.13 2001/01/09 18:37:46 bad Exp $
  	*)
  	  # Add libc to deplibs on all other systems.
  	  deplibs="$deplibs -lc"
-@@ -2146,6 +2169,17 @@
- 	if test "$thread_safe" = yes && test -n "$thread_safe_flag_spec"; then
- 	  eval flag=\"$thread_safe_flag_spec\"
- 	  linkopts="$linkopts $flag"
-+          wllinkopts="$wllinkopts $wl$flag"
-+	fi
-+
+@@ -2103,6 +2126,16 @@
+ 	  $run eval '$echo "X$include_expsyms" | $SP2NL >> "$export_symbols"'
+ 	fi
+ 
 +	# Check whether we need to link in c++rt0.o on a.out because of
 +	# constructors/destructors
 +	if test -n "$ctor_check_cmd"; then
@@ -70,6 +67,16 @@ $NetBSD: patch-ab,v 1.13 2001/01/09 18:37:46 bad Exp $
 +	  if $run eval "$cmd" ; then
 +	    cppopts="$cpprt0"
 +	  fi
++	fi
++
+ 	if test -n "$convenience"; then
+ 	  if test -n "$whole_archive_flag_spec"; then
+ 	    eval libobjs=\"\$libobjs $whole_archive_flag_spec\"
+@@ -2146,6 +2179,7 @@
+ 	if test "$thread_safe" = yes && test -n "$thread_safe_flag_spec"; then
+ 	  eval flag=\"$thread_safe_flag_spec\"
+ 	  linkopts="$linkopts $flag"
++          wllinkopts="$wllinkopts $wl$flag"
  	fi
  
  	# Do each of the archive commands.
