@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/07/12 23:39:49 mycroft Exp $
+# $NetBSD: Makefile,v 1.20 2002/07/15 18:05:49 mycroft Exp $
 
 DISTNAME=		evolution-1.0.8
 CATEGORIES=		mail time gnome
@@ -36,6 +36,7 @@ REPLACE_PERL+=		tools/evolution-addressbook-clean.in
 REPLACE_PERL+=		tools/killev
 CONFIGURE_ARGS+=	--with-openldap --without-static-ldap
 CONFIGURE_ARGS+=	--enable-nntp=yes
+CONFIGURE_ARGS+=	--with-krb5=/usr --with-krb4=/usr
 CONFIGURE_ARGS+=	--with-db3-includes=${LOCALBASE}/include/db3
 CONFIGURE_ARGS+=	--with-db3-libs=${LOCALBASE}/lib
 CONFIGURE_ENV+=		CFLAGS="-D_POSIX_THREAD_SYSCALL_SOFT=1 ${CFLAGS}"
