@@ -1,11 +1,9 @@
-$NetBSD: patch-cb,v 1.2 2002/10/14 09:45:54 skrll Exp $
+$NetBSD: patch-cb,v 1.3 2003/01/17 02:59:51 markd Exp $
 
 --- khtml/java/kjava.policy.in.orig	Wed Nov 15 19:57:40 2000
 +++ khtml/java/kjava.policy.in
-@@ -1,4 +1,4 @@
+@@ -1,3 +1,3 @@
 -grant codeBase "file:@prefix@/share/apps/kjava/-"
 +grant codeBase "file:@kde_datadir@/kjava/-"
  {
      permission java.security.AllPermission;
--};
-+};
