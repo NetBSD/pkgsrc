@@ -1,0 +1,6 @@
+This version of mdsetimage has been written to make use of libbfd. This
+enables it to work for object file formats not normally supported on a
+host.
+
+This version is intended for cross-building snapshots. It is not needed
+to build snapshots of the host architecture type.
