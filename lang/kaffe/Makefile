@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2002/06/23 05:13:10 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2002/07/27 21:26:21 jschauma Exp $
 #
 
-DISTNAME=		kaffe-1.0.6
-PKGREVISION=		2
+DISTNAME=		kaffe-1.0.7
 CATEGORIES=		lang
-MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/
+MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/v1.0.x-production/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.kaffe.org/
@@ -18,7 +17,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc
 
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_PREFIX=	${PREFIX}/kaffe
+GNU_CONFIGURE_PREFIX=	${PREFIX}/java/kaffe
 CONFIGURE_ARGS+=	--with-includes=""
 CONFIGURE_ARGS+=	--with-libraries=""
 CPPFLAGS+=		-Dunix
@@ -33,9 +32,10 @@ CPPFLAGS+=		-Dunix
 CONFIGURE_ENV+=		VM_LIBS="-lc"
 .endif
 
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/license.terms \
-		${PREFIX}/kaffe/share
+		${PREFIX}/java/kaffe/share
 
 test:
 	@cd ${WRKSRC}/test && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} check
