@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.16 2003/11/01 16:45:13 salo Exp $
+@comment $NetBSD: PLIST,v 1.17 2003/11/18 18:14:32 salo Exp $
 bin/silc
 lib/silc/libsilc-1.0.so
-lib/silc/libsilc-1.0.so.2
-lib/silc/libsilc-1.0.so.2.0
+lib/silc/libsilc-1.0.so.3
+lib/silc/libsilc-1.0.so.3.0
 lib/silc/libsilc.la
 lib/silc/libsilc.so
 lib/silc/libsilcclient-1.0.so
@@ -16,7 +16,6 @@ lib/silc/modules/cast.sim.so
 lib/silc/modules/md5.sim.so
 lib/silc/modules/none.sim.so
 lib/silc/modules/rc5.sim.so
-lib/silc/modules/rc6.sim.so
 lib/silc/modules/rsa.sim.so
 lib/silc/modules/sha1.sim.so
 lib/silc/modules/twofish.sim.so
@@ -79,6 +78,7 @@ share/silc/help/lastlog
 share/silc/help/layout
 share/silc/help/levels
 share/silc/help/list
+share/silc/help/listkeys
 share/silc/help/load
 share/silc/help/log
 share/silc/help/me
