@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.19 1999/07/27 03:20:38 mycroft Exp $
+$NetBSD: patch-aa,v 1.20 1999/11/10 08:01:29 soren Exp $
 
---- makefile.unix.orig	Sat Mar 27 14:28:37 1999
-+++ makefile.unix	Sat Apr  3 14:19:27 1999
-@@ -39,7 +39,7 @@
- # GNU MAKE is MANDATORY !!!
- # so please give me the path...
- # if GNU make is "native" use this
--MAKE	= make
-+MAKE	= gmake
- # else ...
- # MAKE=/usr/people/jantonio/bin/gmake
- 
-@@ -109,14 +109,14 @@
+--- makefile.unix.orig	Fri Nov  5 18:26:11 1999
++++ makefile.unix	Wed Nov 10 08:42:32 1999
+@@ -131,14 +131,14 @@
  # *** Select destination directory for your compiled program , manual page
  # and binary distribution ( if you want to... )
  # ( only needed to install, not to compile... )
@@ -29,7 +20,7 @@ $NetBSD: patch-aa,v 1.19 1999/07/27 03:20:38 mycroft Exp $
  
  
  ##############################################################################
-@@ -139,7 +139,9 @@
+@@ -161,7 +161,9 @@
  # JSLIB   = -lXi
  
  # On iX86 based OS's, if supported, you can use standard joystick driver
@@ -40,7 +31,7 @@ $NetBSD: patch-aa,v 1.19 1999/07/27 03:20:38 mycroft Exp $
  
  # Linux FM-TOWNS game PAD joystick emulation support
  # Thanks to Osamu Kurati for provided patch
-@@ -159,8 +161,8 @@
+@@ -181,8 +183,8 @@
  # *** If your system supports query audio buffer size (like IRIX or Linux )
  # you might decide to use these feature. Otherwise, you should use a 
  # timer based audio code.
@@ -51,17 +42,7 @@ $NetBSD: patch-aa,v 1.19 1999/07/27 03:20:38 mycroft Exp $
  
  # *** When using timer, you should provide the frequency to generate audio sample
  # frames in your system. See readme.unix notes about these item
-@@ -239,16 +241,18 @@
- # uncomment following section to support them ( you should have libxpm 
- # available :-) )
- # COMMENT IT if your are not compiling for normal x11
--# XPM	= -DHAS_XPM
--# XPMLIB	= -lXpm
-+XPM	= -DHAS_XPM
-+XPMLIB	= -lXpm
-  
- # *** If you don't have the MIT-Shared Memory X Extensions, comment the
- # following: ( Test if available by mean of xdpyinfo command )
+@@ -267,8 +269,10 @@
  MSHM	= -DUSE_MITSHM
  
  #if you are running xfree86 and wnat to use DGA, uncomment the following:
@@ -74,32 +55,18 @@ $NetBSD: patch-aa,v 1.19 1999/07/27 03:20:38 mycroft Exp $
  
  # *** If you have the XIL library (Solaris 2.5.1 and higher), uncomment
  # the following lines:
-@@ -259,8 +263,8 @@
+@@ -279,8 +283,8 @@
  # X11INC		= -I/usr/include/X11
  # X11LIB		= -L/usr/lib/X11
  # standard location for XFree86
 -X11INC		= -I/usr/X11R6/include
 -X11LIB		= -L/usr/X11R6/lib
-+X11INC		= -I${PREFIX}/include
-+X11LIB		= -L${PREFIX}/lib -Wl,-R${PREFIX}/lib
++X11INC			= -I${PREFIX}/include
++X11LIB			= -L${PREFIX}/lib -Wl,-R${PREFIX}/lib
  # for Sun systems
  # X11INC		= -I/usr/openwin/include
  # X11LIB		= -L/usr/openwin/lib
-@@ -277,11 +281,11 @@
- 
- # OpenGL include path
- 
--GLINCPATH= /usr/src/Mesa-3.0/include
-+GLINCPATH= ${PREFIX}/include
- 
- # OpenGL library path
- 
--GLLIBPATH= /usr/src/Mesa-3.0/lib
-+GLLIBPATH= ${PREFIX}/lib
- 
- # OpenGL libs
- 
-@@ -314,11 +318,12 @@
+@@ -305,13 +309,12 @@
  ######## Alpha/Linux
  # ARCH  = linux_alpha
  ######## ix86/Linux
@@ -107,27 +74,35 @@ $NetBSD: patch-aa,v 1.19 1999/07/27 03:20:38 mycroft Exp $
 +# ARCH  = linux_i386
  ######## ix86/FreeBSD and ix86/BSDi
  # ARCH  = FREEBSD
- ######## ix86/NetBSD
+-######## ix86/NetBSD
 -# ARCH  = netbsd_i386
-+ARCH  = netbsd
-+MACHINE  = $(shell uname -m)
+-######## Alpha/NetBSD
+-# ARCH  = netbsd_alpha
++######## NetBSD
++ARCH	= netbsd
++MACHINE	= $(shell uname -m)
  ######## Sparc/SunOS ( no sound )
  # ARCH  = sunos
  ######## ix86/Solaris
-@@ -360,7 +365,11 @@
+@@ -362,8 +365,15 @@
  DEFS.linux_alpha   = -DLSB_FIRST -DAXP_ASM -DALIGN_INTS -DALIGN_SHORTS -D__LP64__
  DEFS.linux_i386    = -DLSB_FIRST -DX86_ASM
  DEFS.FREEBSD       = -DLSB_FIRST -DX86_ASM
 -DEFS.netbsd_i386   = -DLSB_FIRST -DX86_ASM
+-DEFS.netbsd_alpha  = -DLSB_FIRST -DAXP_ASM -DALIGN_INTS -DALIGN_SHORTS -D__LP64__
 +ifeq (${MACHINE},i386)
-+DEFS.netbsd        = -DLSB_FIRST -DX86_ASM -DNETBSD
++DEFS.netbsd	   = -DLSB_FIRST -DX86_ASM -DNETBSD
 +else
-+DEFS.netbsd        = -DLSB_FIRST -DDALIGN_INTS -DALIGN_SHORTS -DNETBSD
++ifeq (${MACHINE},alpha)
++DEFS.netbsd	   = -DLSB_FIRST -DAXP_ASM -DALIGN_INTS -DALIGN_SHORTS -D__LP64__
++else
++DEFS.netbsd	   = -DLSB_FIRST -DDALIGN_INTS -DALIGN_SHORTS -DNETBSD
++endif
 +endif
  DEFS.sunos	   = -DCLOCKS_PER_SEC=1000000 -DALIGN_INTS -DALIGN_SHORTS
  DEFS.solaris	   = -DALIGN_INTS -DALIGN_SHORTS
  DEFS.solaris_i386  = -DLSB_FIRST -Dsolaris
-@@ -385,12 +394,14 @@
+@@ -390,6 +400,7 @@
  LIBS.irix_al       = -laudio
  LIBS.aix           = -lUMSobj
  LIBS.unixware7	   = -lsocket
@@ -135,10 +110,12 @@ $NetBSD: patch-aa,v 1.19 1999/07/27 03:20:38 mycroft Exp $
  
  ##############################################################################
  # **** Architecture dependent cflags. Only change if you know what're you doing...
- ##############################################################################
- CFLAGS.linux_powerpc = -fsigned-char
- CFLAGS.aix	     = -I/usr/include/UMS -I/usr/lpp/som/include
-+CFLAGS.netbsd	     = -fstrength-reduce -funroll-loops -fomit-frame-pointer
+@@ -401,6 +412,8 @@
+ CFLAGS.next_sparc    = -traditional-cpp
+ CFLAGS.macosx_i386   = -traditional-cpp
+ CFLAGS.macosx_ppc    = -traditional-cpp
++CFLAGS.netbsd	     = -fstrength-reduce -funroll-loops -fomit-frame-pointer \
++							-fno-strict-aliasing
  
  #############################################################################
  # **** Display dependent libs. Only change if you know what're you doing...
