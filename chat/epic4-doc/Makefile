@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/03 15:50:00 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/02 12:41:25 wiz Exp $
 #
 
-PKGNAME=	epic4-doc-1.0
 DISTNAME=	epic4pre2-help
+PKGNAME=	epic4-doc-1.0
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.epicsol.org/pub/epic/EPIC4-BETA/	\
 		ftp://ftp.icm.edu.pl/pub/unix/irc/EPIC/EPIC4-BETA/
