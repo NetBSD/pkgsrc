@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/08/25 16:15:52 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/12 16:58:57 jlam Exp $
 
 DISTNAME=	CmdLine
 PKGNAME=	cmdline-${PKG_VERS}
@@ -24,6 +24,7 @@ MOREUSRDEFS+=	-DHAVE_READLINE_READLINE_H
 MOREUSRLIBS+=	${LDFLAGS} -lreadline -ltermcap
 .endif
 
+MAKE_ENV+=	OPT="${CXXFLAGS}"
 MAKE_ENV+=	MOREUSRDEFS="${MOREUSRDEFS}"
 MAKE_ENV+=	MOREUSRLIBS="${MOREUSRLIBS}"
 
