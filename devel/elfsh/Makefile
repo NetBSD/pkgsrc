@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/15 17:34:24 ben Exp $
+# $NetBSD: Makefile,v 1.11 2004/10/21 17:42:45 reed Exp $
 #
 
 VERS=		0.51b3
@@ -6,13 +6,11 @@ DISTNAME=	elfsh-${VERS}-portable
 PKGNAME=	elfsh-${VERS}
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://elfsh.segfault.net/files/ \
-	http://devhell.org/projects/elfsh/files/ \
-	http://www.hert.org/projects/elfsh/files/
+MASTER_SITES=	http://elfsh.segfault.net/files/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://devhell.org/projects/elfsh/
+HOMEPAGE=	http://elfsh.segfault.net/
 COMMENT=	ELF format exploration shell
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
