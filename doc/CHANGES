@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6842 2004/08/10 15:14:16 adrianp Exp $
+$NetBSD: CHANGES,v 1.6843 2004/08/10 18:48:46 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3783,3 +3783,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated thunderbird to 0.7.3 [taya 2004-08-10]
 	Updated thunderbird-gtk2 to 0.7.3 [taya 2004-08-10]
 	Updated cvsgraph to 1.4.1 [adrianp 2004-08-10]
+	Updated libnbcompat to 20040809 [jlam 2004-08-10]

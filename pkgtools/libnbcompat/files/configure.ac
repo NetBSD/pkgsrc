@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.44 2004/08/06 16:55:09 jlam Exp $
+dnl $NetBSD: configure.ac,v 1.45 2004/08/10 18:47:55 jlam Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -32,16 +32,17 @@ dnl Checks for header files.
 AC_HEADER_STDC
 AC_HEADER_TIME
 
-AC_CHECK_HEADERS([arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
-	errno.h fcntl.h fnmatch.h fts.h inttypes.h libutil.h limits.h \
-	machine/endian.h memory.h ndir.h netdb.h netinet/in6_machtypes.h \
-	paths.h pwd.h stdint.h stdlib.h stringlist.h strings.h \
-	string.h sys/bitypes.h sys/byteorder.h sys/cdefs.h sys/dir.h \
-	sys/endian.h sys/file.h sys/mkdev.h sys/ndir.h \
-	sys/param.h sys/time.h sys/ttycom.h \
-	sys/stat.h sys/statfs.h sys/statvfs.h sys/vfs.h sys/types.h \
-	sys/vfs.h termcap.h termios.h time.h tzfile.h unistd.h util.h \
-	utmp.h
+dnl Used by bits.c to check for sizes of integer types
+AC_CHECK_HEADERS([inttypes.h sys/types.h sys/bitypes.h bind/bitypes.h \
+	netinet/in6_machtypes.h])
+
+AC_CHECK_HEADERS([assert.h dirent.h err.h errno.h fcntl.h fnmatch.h fts.h \
+	grp.h libutil.h limits.h machine/endian.h memory.h ndir.h paths.h \
+	pwd.h stdint.h stdio.h stdlib.h stringlist.h strings.h string.h \
+	sys/byteorder.h sys/cdefs.h sys/dir.h sys/endian.h sys/file.h \
+	sys/mkdev.h sys/ndir.h sys/param.h sys/time.h sys/ttycom.h \
+	sys/stat.h sys/statfs.h sys/statvfs.h sys/types.h sys/vfs.h \
+	termcap.h termios.h time.h tzfile.h unistd.h util.h utmp.h
 ])
 AC_CHECK_HEADERS([sys/mount.h], [:], [:], [
 	AC_INCLUDES_DEFAULT
@@ -126,6 +127,7 @@ dnl Check that this vis.h has *vis()-related functions because Solaris'
 dnl vis.h doesn't.  Also, only consider the header found if it defines
 dnl all of the functions that we need.
 dnl
+pkg_use_nbcompat_vis=yes
 AC_CHECK_HEADERS([vis.h], [
 	AC_MSG_TRY_COMPILE([for VIS_WHITE in vis.h], pkg_cv_have_vis_white, [
 		#include <sys/types.h>
@@ -135,7 +137,7 @@ AC_CHECK_HEADERS([vis.h], [
 		AC_CHECK_FUNCS([strunvis strvis strsvis],
 			[pkg_use_nbcompat_vis=no],
 			[pkg_use_nbcompat_vis=yes; break])
-	], [pkg_use_nbcompat_vis=yes])
+	])
 ])
 
 if test $pkg_use_nbcompat_vis = yes; then
@@ -185,13 +187,12 @@ AC_FUNC_MALLOC
 AC_FUNC_STRERROR_R
 AC_FUNC_VPRINTF
 
-AC_REPLACE_FUNCS([err fgetln fnmatch fparseln getenv \
-	isblank lchflags lchmod lchown lutimes mkstemp mkdtemp \
-	setprogname snprintf strdup strerror strlcat strlcpy \
+AC_REPLACE_FUNCS([err fgetln fnmatch fparseln getenv isblank lchflags \
+	lchmod lchown lutimes mkstemp mkdtemp setgroupent setpassent \
+	setprogname snprintf statvfs strdup strerror strlcat strlcpy \
 	strmode strsep strtoll usleep utimes
 ])
 
-AC_CHECK_FUNCS([setgroupent setgrent setpassent setpwent])
 AC_CHECK_FUNCS([bcopy bzero memset memcpy setlocale])
 AC_CHECK_FUNCS([getmode setmode])
 AC_CHECK_FUNCS([getmode setmode], [:], [
@@ -271,17 +272,10 @@ AC_CHECK_FUNCS([getpassphrase getpgrp memmove select])
 
 AC_CHECK_FUNC(getpgrp, [AC_FUNC_GETPGRP])
 
-AC_CHECK_FUNC(statvfs, [:], [
-	AC_DEFINE(HAVE_NBCOMPAT_STATVFS, 1)
-	AH_TEMPLATE([HAVE_NBCOMPAT_STATVFS], [
-		Define to 1 if the `statvfs' function is built into the library.
-	])
-	AC_LIBOBJ(statvfs)
-	AC_CHECK_MEMBERS([struct statfs.f_fsize], [:], [:],
-		[ #include <sys/statfs.h> ])
-	AC_CHECK_MEMBERS([struct statfs.f_iosize], [:], [:],
-		[ #include <sys/statfs.h> ])
-])
+AC_CHECK_MEMBERS([struct statfs.f_fsize], [:], [:],
+	[ #include <sys/statfs.h> ])
+AC_CHECK_MEMBERS([struct statfs.f_iosize], [:], [:],
+	[ #include <sys/statfs.h> ])
 
 if test $ac_cv_type_long_long = yes; then
 

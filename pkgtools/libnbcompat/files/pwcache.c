@@ -1,4 +1,4 @@
-/*	$NetBSD: pwcache.c,v 1.5 2004/03/12 15:21:13 grant Exp $	*/
+/*	$NetBSD: pwcache.c,v 1.6 2004/08/10 18:47:55 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -78,7 +78,7 @@
 #if 0
 static char sccsid[] = "@(#)cache.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: pwcache.c,v 1.5 2004/03/12 15:21:13 grant Exp $");
+__RCSID("$NetBSD: pwcache.c,v 1.6 2004/08/10 18:47:55 jlam Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -86,8 +86,8 @@ __RCSID("$NetBSD: pwcache.c,v 1.5 2004/03/12 15:21:13 grant Exp $");
 #include <sys/param.h>
 
 #include <assert.h>
-#include <grp.h>
-#include <pwd.h>
+#include <nbcompat/grp.h>
+#include <nbcompat/pwd.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -122,25 +122,11 @@ __weak_alias(pwcache_groupdb,_pwcache_groupdb)
  * function pointers to various name lookup routines.
  * these may be changed as necessary.
  */
-static	int		(*_pwcache_setgroupent)(int)		=
-#if HAVE_SETGROUPENT
-	setgroupent;
-#elif HAVE_SETGRENT
-	setgrent;
-#else
-	NULL
-#endif
+static	int		(*_pwcache_setgroupent)(int)		= setgroupent;
 static	void		(*_pwcache_endgrent)(void)		= endgrent;
 static	struct group *	(*_pwcache_getgrnam)(const char *)	= getgrnam;
 static	struct group *	(*_pwcache_getgrgid)(gid_t)		= getgrgid;
-static	int		(*_pwcache_setpassent)(int)		=
-#if HAVE_SETPASSENT
-	setpassent;
-#elif HAVE_SETGRENT
-	setpwent;
-#else
-	NULL
-#endif
+static	int		(*_pwcache_setpassent)(int)		= setpassent;
 static	void		(*_pwcache_endpwent)(void)		= endpwent;
 static	struct passwd *	(*_pwcache_getpwnam)(const char *)	= getpwnam;
 static	struct passwd *	(*_pwcache_getpwuid)(uid_t)		= getpwuid;

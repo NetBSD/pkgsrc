@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.1 2004/08/06 16:55:09 jlam Exp $
+$NetBSD: README,v 1.2 2004/08/10 18:47:55 jlam Exp $
 
  0 Introduction
  ==============
@@ -43,16 +43,19 @@ breakage seep in.  Proper methodology for updating this package is:
 *NOTE* the most recent libnbcompat.
 *NOTE*
 
-libnbcompat-20040805 has been tested to build and install correctly
+libnbcompat-20040809 has been tested to build and install correctly
 on the following operating systems:
 
 	FreeBSD-4.8/i386	<jlam@NetBSD.org>
-	IRIX 6.5		<jschauma@NetBSD.org>
+	FreeBSD-5.2.1/i386	<seb@NetBSD.org>
+	IRIX 6.5		<schmonz@NetBSD.org>
 	MacOS X 10.3.4		<schmonz@NetBSD.org>
+	MacOS X 10.3.5		<masahiro@wide.ad.jp>
 	NetBSD-1.6.2/i386	<jlam@NetBSD.org>
-	NetBSD-2.0_BETA/i386	<hubertf@NetBSD.org>
-	Red Hat Linux 7.3	<schmonz@NetBSD.org>
-	Solaris 9/sparc		<salo@NetBSD.org>
+	NetBSD-2.0_BETA/i386	<wiz@NetBSD.org>
+	Red Hat Linux 8.0	<cube@NetBSD.org>
+	Solaris 8		<sketch@NetBSD.org>
+	Solaris 9		<sketch@NetBSD.org>
 
 
  3 Usage
