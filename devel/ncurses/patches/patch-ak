@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 1999/07/06 07:51:06 jlam Exp $
+
+--- panel/panel.h.orig	Wed Feb 11 07:14:01 1998
++++ panel/panel.h	Fri Jul  2 02:47:22 1999
+@@ -36,7 +36,7 @@
+ #ifndef _PANEL_H
+ #define _PANEL_H
+ 
+-#include <curses.h>
++#include <ncurses.h>
+ 
+ typedef struct panel
+ {

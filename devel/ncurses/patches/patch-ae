@@ -1,0 +1,42 @@
+$NetBSD: patch-ae,v 1.1 1999/07/06 07:51:05 jlam Exp $
+
+--- mk-1st.awk.orig	Wed Feb 11 07:13:53 1998
++++ mk-1st.awk	Fri Jul  2 02:58:54 1999
+@@ -187,10 +187,17 @@
+ 			}
+ 			else
+ 			{
++				if ( $2 == "c++" ) {
++					cplusplus="--cplusplus"
++					compile="CXX"
++				} else {
++					cplusplus=""
++					compile="CC"
++				}
+ 				end_name = lib_name;
+ 				printf "../lib/%s : $(%s_OBJS)\n", lib_name, OBJS
+-				printf "\t$(AR) $(AR_OPTS) $@ $?\n"
+-				printf "\t$(RANLIB) $@\n"
++				printf "\tcd ../lib && $(LIBTOOL) %s --mode=link $(%s) -o %s $(%s_OBJS:.o=.lo) -rpath $(INSTALL_PREFIX)$(libdir) -version-info $(NCURSES_MAJOR):$(NCURSES_MINOR)\n", cplusplus, compile, lib_name, OBJS
++
+ 				if ( target == "vxworks" )
+ 				{
+ 					printf "\t$(LD) $(LD_OPTS) $? -o $(@:.a=.o)\n"
+@@ -199,15 +206,8 @@
+ 				print  "install \\"
+ 				print  "install.libs \\"
+ 				printf "install.%s :: $(INSTALL_PREFIX)$(libdir) ../lib/%s\n", name, lib_name
+-				printf "\t@echo installing ../lib/%s as $(INSTALL_PREFIX)$(libdir)/%s \n", lib_name, lib_name
+-				printf "\t$(INSTALL_DATA) ../lib/%s $(INSTALL_PREFIX)$(libdir)/%s \n", lib_name, lib_name
+-				if ( overwrite == "yes" && lib_name == "libncurses.a" )
+-				{
+-					printf "\t@echo linking libcurses.a to libncurses.a \n"
+-					printf "\t-@rm -f $(INSTALL_PREFIX)$(libdir)/libcurses.a \n"
+-					printf "\t(cd $(INSTALL_PREFIX)$(libdir) && $(LN_S) libncurses.a libcurses.a)\n"
+-				}
+-				printf "\t$(RANLIB) $(INSTALL_PREFIX)$(libdir)/%s\n", lib_name
++				printf "\t@echo installing ../lib/%s in $(INSTALL_PREFIX)$(libdir)\n", lib_name
++				printf "\tcd ../lib && $(LIBTOOL) %s --mode=install $(INSTALL_DATA) %s $(INSTALL_PREFIX)$(libdir)\n", cplusplus, lib_name
+ 				if ( target == "vxworks" )
+ 				{
+ 					printf "\t@echo installing ../lib/lib%s.o as $(INSTALL_PREFIX)$(libdir)/lib%s.o\n", name, name
