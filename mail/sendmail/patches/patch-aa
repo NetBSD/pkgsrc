@@ -1,7 +1,10 @@
-$NetBSD: patch-aa,v 1.11 2000/07/24 04:22:34 itojun Exp $
---- devtools/OS/NetBSD-	Mon Jul 24 12:38:53 2000
-+++ devtools/OS/NetBSD	Mon Jul 24 12:40:56 2000
-@@ -5,7 +5,8 @@
+$NetBSD: patch-aa,v 1.12 2000/07/26 15:09:25 veego Exp $
+
+--- devtools/OS/NetBSD-orig	Fri Apr 28 07:46:10 2000
++++ devtools/OS/NetBSD	Wed Jul 26 13:05:56 2000
+@@ -3,13 +3,15 @@
+ define(`confENVDEF', ` -DNETISO')
+ define(`confDEPEND_TYPE', `CC-M')
  define(`confSTDIO_TYPE', `torek')
 -define(`confSBINGRP', `wheel')
 -define(`confUBINOWN', `root')
@@ -15,3 +18,8 @@ $NetBSD: patch-aa,v 1.11 2000/07/24 04:22:34 itojun Exp $
 +define(`confMANOWN', `${BSD_MANOWN}')
 +define(`confMANGRP', `${BSD_MANGRP}')
  define(`confMAN1EXT', `0')
+ define(`confMAN3EXT', `0')
+ define(`confMAN4EXT', `0')
+ define(`confMAN5EXT', `0')
+ define(`confMAN8EXT', `0')
++define(`confLDOPTS', `${LDFLAGS}')
