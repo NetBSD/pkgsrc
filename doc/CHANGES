@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3101 2003/08/25 19:35:28 recht Exp $
+$NetBSD: CHANGES,v 1.3102 2003/08/25 20:25:32 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3337,3 +3337,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tnftp to 20030825 [lukem 2003-08-25]
 	Updated py-gtk2 to 1.99.18 [recht 2003-08-25]
 	Updated py-ORBit to 1.99.7 [recht 2003-08-25]
+	Updated parchive to 1.1nb1 [fredb 2003-08-25]
