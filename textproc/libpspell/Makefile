@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/01/15 01:05:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/24 13:49:40 wiz Exp $
 #
 
 DISTNAME=	pspell-.12.2
 PKGNAME=	lib${DISTNAME:S/-./-0./}
+PKGREVISION=	1
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pspell/}
 

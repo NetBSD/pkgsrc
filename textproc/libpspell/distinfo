@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.4 2002/01/15 01:05:14 wiz Exp $
+$NetBSD: distinfo,v 1.5 2002/01/24 13:49:40 wiz Exp $
 
 SHA1 (pspell-.12.2.tar.gz) = dc3f2757433d5e79d7bf024f55111e00f91905b7
 Size (pspell-.12.2.tar.gz) = 434193 bytes
+SHA1 (patch-aa) = 8baf2f8a4d41e61277aef439c87d1f172b482e1d
+SHA1 (patch-ab) = a6ef26433470bcbd45184f6ea5081056eae4a90c
