@@ -1,0 +1,541 @@
+--- configure.in.tk.freebsd	Thu Nov 20 13:22:35 1997
++++ configure.in.tk	Fri Nov 21 13:35:46 1997
+@@ -8,23 +8,23 @@
+ 		echo "'$d' is not a directory"
+ 		exit 1
+ 	fi
+-	V_INCLUDE_TCL=-I$d/include
+-	if test ! -r $d/include/tcl.h ; then
+-		echo "can't find tcl.h in $d/include"
++	V_INCLUDE_TCL=-I$d
++	if test ! -r $d/tcl.h ; then
++		echo "can't find tcl.h in $d"
+ 		exit 1
+ 	fi
++	places="$d/lib/libtcl8.0.so \
++		$d/lib/libtcl8.0.a \
++		$d/lib/libtcl.so \
++		$d/lib/libtcl.a"
+ 	V_LIB_TCL=FAIL
+-	for p in $tclposs; do
+-		if test "`echo $d/lib/lib$p.so*`" != "$d/lib/lib$p.so*" ; then
+-			V_LIB_TCL="-L$d/lib -l$p"
+-			break
+-		fi
+-		if test -r $d/lib/lib$p.a ; then
+-			V_LIB_TCL="-L$d/lib -l$p"
++	for dir in $places; do
++		if test -r $dir ; then
++			V_LIB_TCL=$dir
+ 			break
+ 		fi
+ 	done
+-	if test "$V_LIB_TCL" = FAIL ; then
++	if test $V_LIB_TCL = FAIL ; then
+ 		echo "can't find libtcl.a in $d/lib"
+ 		exit 1
+ 	fi
+@@ -51,6 +51,8 @@
+ 			$prefix/include \
+ 			$x_includes/tk \
+ 			$x_includes \
++			/usr/pkg/include \
++			/usr/pkg/include/tcl8.0 \
+ 			/usr/local/include \
+ 			/usr/local/include/tcl8.0 \
+ 			/usr/contrib/include \
+@@ -66,12 +68,13 @@
+ 			exit 1
+ 		fi
+ 	fi
+-	AC_CHECK_LIB(tcl8.0, main, V_LIB_TCL="-ltcl8.0", V_LIB_TCL="FAIL")
++	AC_CHECK_LIB(tcl80, main, V_LIB_TCL="-ltcl80", V_LIB_TCL="FAIL")
+ 	if test "$V_LIB_TCL" = FAIL; then
+ 		echo "checking for libtcl.a"
+ 		places="\
+ 			$prefix/lib \
+ 			$x_libraries \
++			/usr/pkg/lib \
+ 			/usr/contrib/lib \
+ 			/usr/local/lib \
+ 			/usr/lib \
+@@ -80,17 +83,12 @@
+ 			/import/tcl/lib/tcl8.0 \
+ 			"
+ 		for dir in $places; do
+-			for p in $tclposs; do
+-				if test "`echo $dir/lib$p.so*`" != "$dir/lib$p.so*" ; then
+-					V_LIB_TCL="-L$dir -l$p"
+-					break
+-				fi
+-				if test -r $dir/lib$p.a ; then
+-					V_LIB_TCL="-L$dir -l$p"
+-					break
+-				fi
+-			done
+-			if test "$V_LIB_TCL" != FAIL; then
++			if test -r $dir/libtcl80.so -o -r $dir/libtcl80.a; then
++				V_LIB_TCL="-L$dir -ltcl80"
++				break
++			fi
++			if test -r $dir/libtcl.so -o -r $dir/libtcl.a; then
++				V_LIB_TCL="-L$dir -ltcl"
+ 				break
+ 			fi
+ 		done
+@@ -106,6 +104,7 @@
+ 	echo "checking for tcl/init.tcl"
+ 	V_LIBRARY_TCL=FAIL
+ 	places="/usr/local/lib/tcl8.0 \
++		/usr/pkg/lib/tcl8.0 \
+ 		/usr/contrib/lib/tcl8.0 \
+ 		/usr/lib/tcl8.0 \
+ 		/usr/lib/tk/tcl8.0 \
+@@ -114,7 +113,6 @@
+ 		$x_libraries/tcl8.0 \
+ 		/usr/local/lib/tcl \
+ 		/usr/lib/tcl \
+-		/usr/libdata/tcl \
+ 		/usr/lib/tk/tcl \
+ 		/import/tcl/lib/tcl \
+ 		$prefix/lib/tcl \
+@@ -142,23 +140,23 @@
+ 		echo "'$d' is not a directory"
+ 		exit 1
+ 	fi
+-	V_INCLUDE_TK=-I$d/include
+-	if test ! -r $d/include/tk.h ; then
+-		echo "can't find tk.h in $d/include"
++	V_INCLUDE_TK=-I$d
++	if test ! -r $d/tk.h ; then
++		echo "can't find tk.h in $d"
+ 		exit 1
+ 	fi
++	places="$d/lib/libtk8.0.so \
++		$d/lib/libtk8.0.a \
++		$d/lib/libtk.so \
++		$d/lib/libtk.a"
+ 	V_LIB_TK=FAIL
+-	for p in $tkposs; do
+-		if test "`echo $d/lib/lib$p.so*`" != "$d/lib/lib$p.so*" ; then
+-			V_LIB_TK="-L$d/lib -l$p"
+-			break
+-		fi
+-		if test -r $d/lib/lib$p.a ; then
+-			V_LIB_TK="-L$d/lib -l$p"
++	for dir in $places; do
++		if test -r $dir ; then
++			V_LIB_TK=$dir
+ 			break
+ 		fi
+ 	done
+-	if test "$V_LIB_TK" = FAIL ; then
++	if test $V_LIB_TK = FAIL ; then
+ 		echo "can't find libtk.a in $d/lib"
+ 		exit 1
+ 	fi
+@@ -179,9 +177,11 @@
+ 	AC_TEST_CPP([#include <tk.h>], V_INCLUDE_TK="", V_INCLUDE_TK=FAIL)
+ 	if test "$V_INCLUDE_TK" = FAIL; then
+ 		echo "checking for tk.h"
+-		V_INCLUDE_TK=""
++		V_INCLUDE_TK="FAIL"
+ 		places="\
+ 			$prefix/include \
++			/usr/pkg/include \
++			/usr/pkg/include/tk8.0 \
+ 			/usr/local/include \
+ 			/usr/local/include/tk8.0 \
+ 			/usr/contrib/include \
+@@ -204,10 +204,11 @@
+ 			exit 1
+ 		fi
+ 	fi
+-	AC_CHECK_LIB(tk8.0, main, V_LIB_TK="-ltk4.1", V_LIB_TK="FAIL")
++	AC_CHECK_LIB(tk80, main, V_LIB_TK="-ltk80", V_LIB_TK="FAIL")
+ 	if test "$V_LIB_TK" = FAIL; then
+ 		echo "checking for libtk.a"
+ 		places="/usr/local/lib \
++			/usr/pkg/lib \
+ 			/usr/contrib/lib \
+ 			/usr/lib \
+ 			/usr/lib/tk \
+@@ -217,17 +218,12 @@
+ 			$prefix/lib \
+ 			$x_libraries"
+ 		for dir in $places; do
+-			for p in $tkposs; do
+-				if test "`echo $dir/lib$p.so*`" != "$dir/lib$p.so*" ; then
+-					V_LIB_TK="-L$dir -l$p"
+-					break
+-				fi
+-				if test -r $dir/lib$p.a ; then
+-					V_LIB_TK="-L$dir -l$p"
+-					break
+-				fi
+-			done
+-			if test "$V_LIB_TK" != FAIL; then
++			if test -r $dir/libtk80.so -o -r $dir/libtk80.a; then
++				V_LIB_TK="-L$dir -ltk80"
++				break
++			fi
++			if test -r $dir/libtk.so -o -r $dir/libtk.a; then
++				V_LIB_TK="-L$dir -ltk"
+ 				break
+ 			fi
+ 		done
+@@ -243,6 +239,7 @@
+ 	echo "checking for tk/tk.tcl"
+ 	V_LIBRARY_TK=FAIL
+ 	places="/usr/local/lib/tk8.0 \
++		/usr/pkg/lib/tk8.0 \
+ 		/usr/contrib/lib/tk8.0 \
+ 		/usr/lib/tk8.0 \
+ 		/usr/lib/tk/tk8.0 \
+--- configure.freebsd	Thu Dec 11 17:52:08 1997
++++ configure	Thu Dec 11 17:53:07 1997
+@@ -1585,23 +1585,23 @@
+ 		echo "'$d' is not a directory"
+ 		exit 1
+ 	fi
+-	V_INCLUDE_TCL=-I$d/include
+-	if test ! -r $d/include/tcl.h ; then
+-		echo "can't find tcl.h in $d/include"
++	V_INCLUDE_TCL=-I$d
++	if test ! -r $d/tcl.h ; then
++		echo "can't find tcl.h in $d"
+ 		exit 1
+ 	fi
++	places="$d/lib/libtcl8.0.so \
++		$d/lib/libtcl8.0.a \
++		$d/lib/libtcl.so \
++		$d/lib/libtcl.a"
+ 	V_LIB_TCL=FAIL
+-	for p in $tclposs; do
+-		if test "`echo $d/lib/lib$p.so*`" != "$d/lib/lib$p.so*" ; then
+-			V_LIB_TCL="-L$d/lib -l$p"
+-			break
+-		fi
+-		if test -r $d/lib/lib$p.a ; then
+-			V_LIB_TCL="-L$d/lib -l$p"
++	for dir in $places; do
++		if test -r $dir ; then
++			V_LIB_TCL=$dir
+ 			break
+ 		fi
+ 	done
+-	if test "$V_LIB_TCL" = FAIL ; then
++	if test $V_LIB_TCL = FAIL ; then
+ 		echo "can't find libtcl.a in $d/lib"
+ 		exit 1
+ 	fi
+@@ -1646,6 +1646,8 @@
+ 			$prefix/include \
+ 			$x_includes/tk \
+ 			$x_includes \
++			/usr/pkg/include \
++			/usr/pkg/include/tcl8.0 \
+ 			/usr/local/include \
+ 			/usr/local/include/tcl8.0 \
+ 			/usr/contrib/include \
+@@ -1661,23 +1663,23 @@
+ 			exit 1
+ 		fi
+ 	fi
+-	echo $ac_n "checking for main in -ltcl8.0""... $ac_c" 1>&6
+-echo "configure:1666: checking for main in -ltcl8.0" >&5
+-ac_lib_var=`echo tcl8.0'_'main | sed 'y%./+-%__p_%'`
++	echo $ac_n "checking for main in -ltcl80""... $ac_c" 1>&6
++echo "configure:1668: checking for main in -ltcl80" >&5
++ac_lib_var=`echo tcl80'_'main | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-ltcl8.0  $LIBS"
++LIBS="-ltcl80  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+-#line 1674 "configure"
++#line 1676 "configure"
+ #include "confdefs.h"
+ 
+ int main() {
+ main()
+ ; return 0; }
+ EOF
+-if { (eval echo configure:1681: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
++if { (eval echo configure:1683: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+   rm -rf conftest*
+   eval "ac_cv_lib_$ac_lib_var=yes"
+ else
+@@ -1692,7 +1694,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  V_LIB_TCL="-ltcl8.0"
++  V_LIB_TCL="-ltcl80"
+ else
+   echo "$ac_t""no" 1>&6
+ V_LIB_TCL="FAIL"
+@@ -1703,6 +1705,7 @@
+ 		places="\
+ 			$prefix/lib \
+ 			$x_libraries \
++			/usr/pkg/lib \
+ 			/usr/contrib/lib \
+ 			/usr/local/lib \
+ 			/usr/lib \
+@@ -1711,17 +1714,12 @@
+ 			/import/tcl/lib/tcl8.0 \
+ 			"
+ 		for dir in $places; do
+-			for p in $tclposs; do
+-				if test "`echo $dir/lib$p.so*`" != "$dir/lib$p.so*" ; then
+-					V_LIB_TCL="-L$dir -l$p"
+-					break
+-				fi
+-				if test -r $dir/lib$p.a ; then
+-					V_LIB_TCL="-L$dir -l$p"
+-					break
+-				fi
+-			done
+-			if test "$V_LIB_TCL" != FAIL; then
++			if test -r $dir/libtcl80.so -o -r $dir/libtcl80.a; then
++				V_LIB_TCL="-L$dir -ltcl80"
++				break
++			fi
++			if test -r $dir/libtcl.so -o -r $dir/libtcl.a; then
++				V_LIB_TCL="-L$dir -ltcl"
+ 				break
+ 			fi
+ 		done
+@@ -1737,6 +1735,7 @@
+ 	echo "checking for tcl/init.tcl"
+ 	V_LIBRARY_TCL=FAIL
+ 	places="/usr/local/lib/tcl8.0 \
++		/usr/pkg/lib/tcl8.0 \
+ 		/usr/contrib/lib/tcl8.0 \
+ 		/usr/lib/tcl8.0 \
+ 		/usr/lib/tk/tcl8.0 \
+@@ -1745,7 +1744,6 @@
+ 		$x_libraries/tcl8.0 \
+ 		/usr/local/lib/tcl \
+ 		/usr/lib/tcl \
+-		/usr/libdata/tcl \
+ 		/usr/lib/tk/tcl \
+ 		/import/tcl/lib/tcl \
+ 		$prefix/lib/tcl \
+@@ -1780,23 +1778,23 @@
+ 		echo "'$d' is not a directory"
+ 		exit 1
+ 	fi
+-	V_INCLUDE_TK=-I$d/include
+-	if test ! -r $d/include/tk.h ; then
+-		echo "can't find tk.h in $d/include"
++	V_INCLUDE_TK=-I$d
++	if test ! -r $d/tk.h ; then
++		echo "can't find tk.h in $d"
+ 		exit 1
+ 	fi
++	places="$d/lib/libtk8.0.so \
++		$d/lib/libtk8.0.a \
++		$d/lib/libtk.so \
++		$d/lib/libtk.a"
+ 	V_LIB_TK=FAIL
+-	for p in $tkposs; do
+-		if test "`echo $d/lib/lib$p.so*`" != "$d/lib/lib$p.so*" ; then
+-			V_LIB_TK="-L$d/lib -l$p"
+-			break
+-		fi
+-		if test -r $d/lib/lib$p.a ; then
+-			V_LIB_TK="-L$d/lib -l$p"
++	for dir in $places; do
++		if test -r $dir ; then
++			V_LIB_TK=$dir
+ 			break
+ 		fi
+ 	done
+-	if test "$V_LIB_TK" = FAIL ; then
++	if test $V_LIB_TK = FAIL ; then
+ 		echo "can't find libtk.a in $d/lib"
+ 		exit 1
+ 	fi
+@@ -1815,12 +1813,12 @@
+ 	fi
+ else
+ 	cat > conftest.$ac_ext <<EOF
+-#line 1819 "configure"
++#line 1817 "configure"
+ #include "confdefs.h"
+ #include <tk.h>
+ EOF
+ ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+-{ (eval echo configure:1824: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++{ (eval echo configure:1822: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+ ac_err=`grep -v '^ *+' conftest.out`
+ if test -z "$ac_err"; then
+   rm -rf conftest*
+@@ -1835,9 +1833,11 @@
+ rm -f conftest*
+ 	if test "$V_INCLUDE_TK" = FAIL; then
+ 		echo "checking for tk.h"
+-		V_INCLUDE_TK=""
++		V_INCLUDE_TK="FAIL"
+ 		places="\
+ 			$prefix/include \
++			/usr/pkg/include \
++			/usr/pkg/include/tk8.0 \
+ 			/usr/local/include \
+ 			/usr/local/include/tk8.0 \
+ 			/usr/contrib/include \
+@@ -1860,14 +1860,14 @@
+ 			exit 1
+ 		fi
+ 	fi
+-	echo $ac_n "checking for main in -ltk8.0""... $ac_c" 1>&6
+-echo "configure:1865: checking for main in -ltk8.0" >&5
+-ac_lib_var=`echo tk8.0'_'main | sed 'y%./+-%__p_%'`
++	echo $ac_n "checking for main in -ltk80""... $ac_c" 1>&6
++echo "configure:1865: checking for main in -ltk80" >&5
++ac_lib_var=`echo tk80'_'main | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-ltk8.0  $LIBS"
++LIBS="-ltk80  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 1873 "configure"
+ #include "confdefs.h"
+@@ -1891,7 +1891,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  V_LIB_TK="-ltk4.1"
++  V_LIB_TK="-ltk80"
+ else
+   echo "$ac_t""no" 1>&6
+ V_LIB_TK="FAIL"
+@@ -1900,6 +1900,7 @@
+ 	if test "$V_LIB_TK" = FAIL; then
+ 		echo "checking for libtk.a"
+ 		places="/usr/local/lib \
++			/usr/pkg/lib \
+ 			/usr/contrib/lib \
+ 			/usr/lib \
+ 			/usr/lib/tk \
+@@ -1909,17 +1910,12 @@
+ 			$prefix/lib \
+ 			$x_libraries"
+ 		for dir in $places; do
+-			for p in $tkposs; do
+-				if test "`echo $dir/lib$p.so*`" != "$dir/lib$p.so*" ; then
+-					V_LIB_TK="-L$dir -l$p"
+-					break
+-				fi
+-				if test -r $dir/lib$p.a ; then
+-					V_LIB_TK="-L$dir -l$p"
+-					break
+-				fi
+-			done
+-			if test "$V_LIB_TK" != FAIL; then
++			if test -r $dir/libtk80.so -o -r $dir/libtk80.a; then
++				V_LIB_TK="-L$dir -ltk80"
++				break
++			fi
++			if test -r $dir/libtk.so -o -r $dir/libtk.a; then
++				V_LIB_TK="-L$dir -ltk"
+ 				break
+ 			fi
+ 		done
+@@ -1935,6 +1931,7 @@
+ 	echo "checking for tk/tk.tcl"
+ 	V_LIBRARY_TK=FAIL
+ 	places="/usr/local/lib/tk8.0 \
++		/usr/pkg/lib/tk8.0 \
+ 		/usr/contrib/lib/tk8.0 \
+ 		/usr/lib/tk8.0 \
+ 		/usr/lib/tk/tk8.0 \
+@@ -2078,12 +2075,12 @@
+ fi
+ 
+ cat > conftest.$ac_ext <<EOF
+-#line 2082 "configure"
++#line 2079 "configure"
+ #include "confdefs.h"
+ #include <sys/audioio.h>
+ EOF
+ ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+-{ (eval echo configure:2087: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++{ (eval echo configure:2084: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+ ac_err=`grep -v '^ *+' conftest.out`
+ if test -z "$ac_err"; then
+   rm -rf conftest*
+@@ -2099,12 +2096,12 @@
+ V_OBJ_AUDIO="$V_OBJ_AUDIO $x"
+ 
+ cat > conftest.$ac_ext <<EOF
+-#line 2103 "configure"
++#line 2100 "configure"
+ #include "confdefs.h"
+ #include <sun/audioio.h>
+ EOF
+ ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+-{ (eval echo configure:2108: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++{ (eval echo configure:2105: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+ ac_err=`grep -v '^ *+' conftest.out`
+ if test -z "$ac_err"; then
+   rm -rf conftest*
+@@ -2228,7 +2225,7 @@
+ 		;;
+ 	*-*-linux*)
+ 		echo $ac_n "checking for dlopen in -ldl""... $ac_c" 1>&6
+-echo "configure:2232: checking for dlopen in -ldl" >&5
++echo "configure:2229: checking for dlopen in -ldl" >&5
+ ac_lib_var=`echo dl'_'dlopen | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -2236,7 +2233,7 @@
+   ac_save_LIBS="$LIBS"
+ LIBS="-ldl  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+-#line 2240 "configure"
++#line 2237 "configure"
+ #include "confdefs.h"
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+@@ -2247,7 +2244,7 @@
+ dlopen()
+ ; return 0; }
+ EOF
+-if { (eval echo configure:2251: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
++if { (eval echo configure:2248: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+   rm -rf conftest*
+   eval "ac_cv_lib_$ac_lib_var=yes"
+ else
+@@ -2272,7 +2269,7 @@
+ 	esac
+ 	if test ! -z "$V_LIB_DL" ; then
+ 		echo $ac_n "checking for main in -l$V_LIB_DL""... $ac_c" 1>&6
+-echo "configure:2276: checking for main in -l$V_LIB_DL" >&5
++echo "configure:2273: checking for main in -l$V_LIB_DL" >&5
+ ac_lib_var=`echo $V_LIB_DL'_'main | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -2280,14 +2277,14 @@
+   ac_save_LIBS="$LIBS"
+ LIBS="-l$V_LIB_DL $V_STATIC $LIBS"
+ cat > conftest.$ac_ext <<EOF
+-#line 2284 "configure"
++#line 2281 "configure"
+ #include "confdefs.h"
+ 
+ int main() {
+ main()
+ ; return 0; }
+ EOF
+-if { (eval echo configure:2291: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
++if { (eval echo configure:2288: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+   rm -rf conftest*
+   eval "ac_cv_lib_$ac_lib_var=yes"
+ else
