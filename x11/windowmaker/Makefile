@@ -1,24 +1,42 @@
-# $NetBSD: Makefile,v 1.11 1998/07/04 09:19:09 mycroft Exp $
-# FreeBSD Id: Makefile,v 1.1.1.1 1997/11/04 10:33:43 tg Exp
-#
+# $NetBSD: Makefile,v 1.12 1998/07/12 21:24:51 tron Exp $
 
-DISTNAME=		WindowMaker-0.6.3
-PKGNAME=		windowmaker-0.6.3
+DISTNAME=		WindowMaker-0.16.1
+PKGNAME=		windowmaker-0.16.1
 CATEGORIES=		x11
-MASTER_SITES=		http://isolation.ml.org/oxygen/wm/bin/ \
-			ftp://wm.wep.net/pub/WindowMaker/
+MASTER_SITES=		ftp://ftp.windowmaker.org/pub/beta/srcs/ \
+			ftp://ftp.windowmaker.org/pub/contrib/icons/
+DISTFILES+=		${DISTNAME}${EXTRACT_SUFX}\
+			WindowMaker-data.tar.gz
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		magick@bundy.lip.owl.de
 
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png-0.96:../../graphics/png
+DEPENDS+=		tiff-3.4:../../graphics/tiff
+BUILD_DEPENDS=		bison:../../devel/bison
+#libPropList needs bison for the parser. Yacc runs through, but WMaker crashes
+#afterwards
+
+CONFIGURE_ENV+=		INSTALL="${INSTALL}" \
+			INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
+			INSTALL_DATA="${INSTALL_DATA}" \
+			INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+
+CONFLICTS=		windowmaker-0.6.3
 
 USE_X11=		yes
 GNU_CONFIGURE=		yes
-MAKE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
+CONFIGURE_ARGS+=	--with-gfx-incs=-I${LOCALBASE}/include \
+			--with-gfx-libs=-L${LOCALBASE}/lib \
 
-INFO_FILES= 		wmaker.info
+pre-configure:
+	@(cd ${WRKSRC} && tar xvzf libPropList.tar.gz && cd libPropList && \
+	 ./configure && ${MAKE})
+
+post-install:
+	(cd ${WRKDIR}/WindowMaker-data/pixmaps/ ; for i in * ; do \
+	 ${INSTALL_DATA} $$i ${PREFIX}/share/WindowMaker/Pixmaps/ ; \
+	 done )
 
 .include "../../mk/bsd.pkg.mk"
