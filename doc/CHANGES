@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4103 2003/12/14 17:58:35 wiz Exp $
+$NetBSD: CHANGES,v 1.4104 2003/12/14 19:59:15 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5136,3 +5136,19 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated guile to 1.6.4 [wiz 2003-12-14]
 	Updated gnocatan to 0.8.0.0 [wiz 2003-12-14]
 	Added gpgme03 [wiz 2003-12-14]
+	Updated GConf2 to 2.4.0.1 [jmmv 2003-12-14]
+	Updated GConf2-ui to 2.4.0.1 [jmmv 2003-12-14]
+	Updated ORBit2 to 2.8.2 [jmmv 2003-12-14]
+	Updated gail to 1.4.1 [jmmv 2003-12-14]
+	Updated gnome-vfs2 to 2.4.1 [jmmv 2003-12-14]
+	Updated libbonobo to 2.4.2 [jmmv 2003-12-14]
+	Updated libbonoboui to 2.4.1 [jmmv 2003-12-14]
+	Updated libgnome to 2.4.0 [jmmv 2003-12-14]
+	Updated libgnomecanvas to 2.4.0 [jmmv 2003-12-14]
+	Updated libgnomeprint to 2.4.0 [jmmv 2003-12-14]
+	Updated libgnomeprintui to 2.4.0 [jmmv 2003-12-14]
+	Updated libgnomeui to 2.4.0.1 [jmmv 2003-12-14]
+	Updated libgtkhtml to 2.4.1 [jmmv 2003-12-14]
+	Updated libwnck to 2.4.0.1 [jmmv 2003-12-14]
+	Updated libgsf to 1.8.2nb3 [jmmv 2003-12-14]
+	Updated libgnomedb to 1.0.0nb3 [jmmv 2003-12-14]
