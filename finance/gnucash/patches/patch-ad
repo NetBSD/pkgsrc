@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/12/11 13:53:26 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2001/07/01 16:03:30 tron Exp $
 
---- src/engine/Makefile.in.orig	Mon Jun 26 10:12:50 2000
-+++ src/engine/Makefile.in	Mon Jun 26 17:07:28 2000
-@@ -124,7 +124,7 @@
+--- src/engine/Makefile.in.orig	Mon Jun 11 08:32:04 2001
++++ src/engine/Makefile.in	Sun Jul  1 10:49:57 2001
+@@ -168,7 +168,7 @@
  lib_LTLIBRARIES = libgncengine.la
  
  # Build hell from main.c and libhello.la
--libgncengine_la_SOURCES =    AccInfo.c   Account.c   Backend.c   DateUtils.c   FileIO.c   Group.c   LedgerUtils.c   Query.c   Queue.c   Scrub.c   Session.c   Transaction.c   TransLog.c   date.c   util.c   GNCId.c   guid.c   md5.c
-+libgncengine_la_SOURCES =    AccInfo.c   Account.c   Backend.c   DateUtils.c   FileIO.c   Group.c   LedgerUtils.c   Query.c   Queue.c   Scrub.c   Session.c   Transaction.c   TransLog.c   date.c   util.c   GNCId.c   guid.c   md5.c asprintf.c
+-libgncengine_la_SOURCES =    Account-xml-parser-v1.c   Account.c   Backend.c   Commodity-xml-parser-v1.c   DateUtils.c   GNCId.c   Group.c   Ledger-xml-parser-v1.c   NetIO.c   Query-xml-parser-v1.c   Query.c   Scrub.c   TransLog.c   Transaction-xml-parser-v1.c   Transaction.c   date.c   gnc-account-xml-v2.c   gnc-associate-account.c   gnc-book.c   gnc-commodity-xml-v2.c   gnc-commodity.c   gnc-engine-util.c   gnc-engine.c   gnc-event.c   gnc-numeric.c   gnc-pricedb-xml-v1.c   gnc-pricedb.c   gnc-transaction-xml-v2.c   guid.c   io-example-account.c   io-gncbin-r.c   io-gncxml-gen.c   io-gncxml-r.c   io-gncxml-v2.c   io-utils.c   kvp_frame.c   md5.c   sixtp-dom-generators.c   sixtp-dom-parsers.c   sixtp-kvp-parser.c   sixtp-stack.c   sixtp-to-dom-parser.c   sixtp-utils.c   sixtp-xml-write-utils.c   sixtp.c
++libgncengine_la_SOURCES =    Account-xml-parser-v1.c   Account.c   Backend.c   Commodity-xml-parser-v1.c   DateUtils.c   GNCId.c   Group.c   Ledger-xml-parser-v1.c   NetIO.c   Query-xml-parser-v1.c   Query.c   Scrub.c   TransLog.c   Transaction-xml-parser-v1.c   Transaction.c   date.c   gnc-account-xml-v2.c   gnc-associate-account.c   gnc-book.c   gnc-commodity-xml-v2.c   gnc-commodity.c   gnc-engine-util.c   gnc-engine.c   gnc-event.c   gnc-numeric.c   gnc-pricedb-xml-v1.c   gnc-pricedb.c   gnc-transaction-xml-v2.c   guid.c   io-example-account.c   io-gncbin-r.c   io-gncxml-gen.c   io-gncxml-r.c   io-gncxml-v2.c   io-utils.c   kvp_frame.c   md5.c   sixtp-dom-generators.c   sixtp-dom-parsers.c   sixtp-kvp-parser.c   sixtp-stack.c   sixtp-to-dom-parser.c   sixtp-utils.c   sixtp-xml-write-utils.c   sixtp.c    asprintf.c
  
  
- libgncengine_la_LDFLAGS = -version-info 1:1:1
+ libgncengine_la_LDFLAGS = -version-info 2:3:1

@@ -1,39 +1,48 @@
-# $NetBSD: Makefile,v 1.10 2001/06/11 06:34:32 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.11 2001/07/01 16:03:30 tron Exp $
 
-DISTNAME=		gnucash-1.4.12
+DISTNAME=		gnucash-1.6.0
 CATEGORIES=		finance
 MASTER_SITES=		http://www.linas.org/pub/gnucash/gnucash/sources/stable/ \
 			ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
-MAINTAINER=		drankin@bohemians.lexington.ky.us
+MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Personal double-entry accounting program
 
-DEPENDS+=		gnome-libs>=1.0.40:../../x11/gnome-libs
 DEPENDS+=		eperl-2.2.14:../../textproc/eperl
-DEPENDS+=		g-wrap>=0.9.5:../../devel/g-wrap
+DEPENDS+=		g-wrap>=1.1.10:../../devel/g-wrap
 DEPENDS+=		guile-slib-2c8:../../devel/guile-slib
+DEPENDS+=		guppi>=0.35.5nb1:../../math/guppi
 DEPENDS+=		libperl>=${LIBPERL5_REQD}:../../lang/libperl
+DEPENDS+=		popt>=1.5:../../devel/popt
 DEPENDS+=		swig-1.1p5:../../devel/swig
-DEPENDS+=		libxml>=1.8.7:../../textproc/libxml
 
 LIBPERL5_REQD=		${PERL5_REQD}
 
-USE_GMAKE=		# defined
-USE_PERL5=		# defined
-USE_X11=		# defined
-USE_LIBINTL=		# defined
-USE_LIBTOOL=		# defined
+USE_GMAKE=		YES
+USE_PERL5=		YES
+USE_X11BASE=		YES
+USE_LIBINTL=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE+=	${WRKSRC}/ltconfig
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-guile-config=${LOCALBASE}/bin/guile-config
 CONFIGURE_ARGS+=	--without-motif --without-included-gettext
 CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
 
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 CPPFLAGS+=		-I${LOCALBASE}/include
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == NetBSD)
+CPPFLAGS+=		-I${WRKSRC}/include
+
+post-extract:
+	${MKDIR} ${WRKSRC}/include
+	${LN} -s /usr/include/db.h ${WRKSRC}/include/db_185.h
+.endif
 
 .include "../../mk/bsd.pkg.mk"
