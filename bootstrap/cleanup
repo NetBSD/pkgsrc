@@ -1,9 +1,9 @@
 #! /bin/sh
 
-# $NetBSD: cleanup,v 1.4 2004/03/18 14:19:22 grant Exp $
+# $NetBSD: cleanup,v 1.5 2004/03/31 23:46:14 jschauma Exp $
 #
 
-wrkdir=work
+wrkdir=${1:-work}
 
 if [ -d /usr/ccs/bin -a -x /usr/ccs/bin/make ]; then
         PATH=/usr/ccs/bin:$PATH; export PATH
