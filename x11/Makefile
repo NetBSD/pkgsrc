@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.375 2004/12/24 10:08:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.376 2004/12/24 17:19:32 jmmv Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -149,6 +149,7 @@ SUBDIR+=	kmessage
 SUBDIR+=	kterm
 SUBDIR+=	lablgtk
 SUBDIR+=	lablgtk2
+SUBDIR+=	labltk
 SUBDIR+=	lesstif
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4mcs
@@ -162,6 +163,7 @@ SUBDIR+=	multi-aterm
 SUBDIR+=	multi-gnome-terminal
 SUBDIR+=	neXtaw
 SUBDIR+=	numlockx
+SUBDIR+=	ocaml-graphics
 SUBDIR+=	oneko
 SUBDIR+=	openmotif
 SUBDIR+=	p5-Tk
