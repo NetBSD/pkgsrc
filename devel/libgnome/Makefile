@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/12/24 06:09:56 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/03 15:26:57 jmmv Exp $
 #
 
 DISTNAME=	libgnome-2.0.4
@@ -7,7 +7,7 @@ CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.0/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@hispabsd.org
+MAINTAINER=	jmmv@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Core GNOME2 library (non-graphical)
 
