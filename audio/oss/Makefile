@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/11/14 10:09:06 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2004/01/05 20:50:01 jlam Exp $
 
 DISTNAME=	oss-${OSS_VERSION}	# Overridden below
 PKGNAME=	oss-${OSS_VERSION}
@@ -14,6 +14,8 @@ ONLY_FOR_PLATFORM=	NetBSD-1.6-i386 NetBSD-1.6.*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-1.6_*-i386
 OSVERSION_SPECIFIC=	yes
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 DISTNAME=		oss${OSS_VERSION:S/.//g}-netbsd-v1.6.1
 OSS_VERSION=		3.9.8b
 
@@ -23,7 +25,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 
@@ -47,6 +49,7 @@ SUPPORT_FILES+=		${OSSLIBDIR}/${FILE} /etc/${FILE}
 .endfor
 SUPPORT_FILES+=		${OSSLIBDIR}/license.asc.eval ${OSSLIBDIR}/license.asc
 RCD_SCRIPTS=		oss
+INSTALLATION_DIRS=	bin sbin
 
 post-extract:
 	${MKDIR} ${WRKSRC}

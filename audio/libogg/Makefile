@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/12/08 14:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/05 20:52:56 jlam Exp $
 
 DISTNAME=	libogg-1.1
 CATEGORIES=	devel audio
@@ -8,7 +8,9 @@ MAINTAINER=	lukem@NetBSD.org
 HOMEPAGE=	http://www.xiph.org/ogg/
 COMMENT=	Ogg project codecs library
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

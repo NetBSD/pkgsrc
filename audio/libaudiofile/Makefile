@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/10/05 10:17:15 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2004/01/05 20:52:56 jlam Exp $
 
 DISTNAME=		audiofile-0.2.4
 PKGNAME=		lib${DISTNAME}
@@ -11,7 +11,9 @@ MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://andromeda.68k.org/~michael/audiofile/
 COMMENT=		Sound library for SGI audio file
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
