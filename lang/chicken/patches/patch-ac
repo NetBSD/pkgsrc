@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2003/05/21 19:43:04 seb Exp $
+$NetBSD: patch-ac,v 1.2 2004/06/02 06:56:07 itojun Exp $
 
---- chicken-config.in.orig	2003-03-14 21:51:58.000000000 +0000
-+++ chicken-config.in
-@@ -48,7 +48,11 @@ esac
+--- chicken-config.in.orig	2004-05-21 06:21:00.000000000 +0900
++++ chicken-config.in	2004-06-02 15:31:38.000000000 +0900
+@@ -49,7 +49,11 @@
  # standard library directory.
  case "%libdir%" in
      /usr/lib|"") LIBDIR=;;
