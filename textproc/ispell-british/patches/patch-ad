@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/03/14 12:12:21 agc Exp $
+$NetBSD: patch-ad,v 1.2 2004/12/01 12:23:30 markd Exp $
 
 Don't build the programs - use the ones from the base system.
 
---- Makefile	1995/10/11 04:30:25	1.102
-+++ Makefile	2001/03/14 10:59:01
-@@ -196,7 +196,7 @@
+--- Makefile.orig	2001-07-26 09:51:45.000000000 +1200
++++ Makefile
+@@ -234,7 +234,7 @@ showversion:	ispell
  	  mv y.tab.o $@; \
  	  rm -f y.tab.c
  
@@ -12,4 +12,4 @@ Don't build the programs - use the ones from the base system.
 +all-languages:
  	$(MAKE) LANGUAGE_TARGET=all SHELLDEBUG=$(SHELLDEBUG) language-subdirs
  
- install: config.sh all install-basic install-dictbuild install-languages
+ install: config.sh all install-basic install-deformatters
