@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7322 2004/10/02 15:46:11 jmmv Exp $
+$NetBSD: CHANGES,v 1.7323 2004/10/02 15:49:14 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4522,3 +4522,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added mail-notification-0.6.2 [jmmv 2004-10-02]
 	Added suse_fileutils-7.3 [dmcmahill 2004-10-02]
 	Updated libxklavier to 1.04 [jmmv 2004-10-02]
+	Updated apache2 to 2.0.52 [reed 2004-10-02]
