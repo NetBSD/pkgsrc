@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/02 21:00:44 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/05 04:47:28 jlam Exp $
 
-DISTNAME=	buildlink-x11-0.4
+DISTNAME=	buildlink-x11-0.5
 CATEGORIES=	pkgtools devel x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,7 +13,6 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	# defined
 NO_WRKSUBDIR=	# defined
 NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
 NO_MTREE=	# defined
 USE_X11BASE=	# defined
 
@@ -43,10 +42,16 @@ pre-install:
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
+do-build:
+	${SED} ${FILES_SUBST_SED}					\
+		${FILESDIR}/buildlink-xmkmf.in > ${WRKSRC}/buildlink-xmkmf
+
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/config
 	${INSTALL_DATA} ${FILESDIR}/buildlinkX11.def ${PREFIX}/lib/X11/config
 	${INSTALL_DATA} ${FILESDIR}/buildlinkX11.rules ${PREFIX}/lib/X11/config
+	${INSTALL_SCRIPT} ${WRKSRC}/buildlink-xmkmf			\
+		${PREFIX}/bin/buildlink-xmkmf
 
 post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.778 2001/07/04 23:44:27 perry Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.779 2001/07/05 04:47:27 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -94,15 +94,19 @@ SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH} JAVA_HOME=${JAVA_HOME}
 # The check for the existence of ${X11BASE}/lib/X11/config/xpkgwedge.def
 # is to catch users of xpkgwedge<1.0.
 #
+XMKMF?=			${XMKMF_CMD} ${XMKMF_FLAGS}
+XMKMF_FLAGS?=		-a
 .if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
     exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
 X11PREFIX=		${LOCALBASE}
 XMKMF_CMD?=		${X11PREFIX}/bin/pkgxmkmf
-XMKMF_FLAGS?=		-a
 .else
 X11PREFIX=		${X11BASE}
+.if exists(${X11PREFIX}/lib/X11/config/buildlinkX11.def)
+XMKMF_CMD?=		${X11PREFIX}/bin/buildlink-xmkmf
+.else
 XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
-XMKMF_FLAGS?=		-a
+.endif
 .endif
 .if defined(USE_BUILDLINK_ONLY)
 XMKMF_FLAGS+=		-DBuildLink
@@ -110,7 +114,6 @@ XMKMF_FLAGS+=		-DBuildLink
 XMKMF_FLAGS+=		-DBuildLinkX11
 .endif
 .endif
-XMKMF?=			${XMKMF_CMD} ${XMKMF_FLAGS}
 
 .if defined(USE_MOTIF12)
 USE_MOTIF=		# defined
@@ -138,7 +141,7 @@ MOTIFBASE?=		${X11PREFIX}
 BUILD_DEPENDS+=		xpkgwedge>=1.5:../../pkgtools/xpkgwedge
 .endif
 .if defined(USE_BUILDLINK_ONLY)
-BUILD_DEPENDS+=		buildlink-x11>=0.4:../../pkgtools/buildlink-x11
+BUILD_DEPENDS+=		buildlink-x11>=0.5:../../pkgtools/buildlink-x11
 BUILDLINK_DIR?=		${WRKDIR}/.buildlink
 MAKE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
 MAKE_ENV+=		PKGSRC_CPPFLAGS="${CPPFLAGS}"
@@ -956,7 +959,11 @@ CONFIGURE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}
 HAS_CONFIGURE=		yes
 .if ${X11PREFIX} == ${LOCALBASE}
+.if defined(USE_BUILDLINK_X11)
+CONFIGURE_ARGS+=        --x-libraries=${BUILDLINK_DIR}/lib --x-includes=${BUILDLINK_DIR}/include
+.else
 CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/include
+.endif
 .endif
 .endif
 
