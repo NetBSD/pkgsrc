@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 #
-# $NetBSD: mkpatches.pl,v 1.4 2001/03/31 17:24:03 skrll Exp $
+# $NetBSD: mkpatches.pl,v 1.5 2001/05/24 17:02:44 abs Exp $
 #
 # mkpatches: creates a set of patches patch-aa, patch-ab, ...
 #   in work/.newpatches by looking for *.orig files in and below
@@ -34,7 +34,7 @@ sub create_patchdir {
 
 # read command line arguments
 
-getopts('d:h');
+getopts('d:hv');
 
 if ($opt_h) {
 		($prog) = ($0 =~ /([^\/]+)$/);
@@ -42,6 +42,7 @@ if ($opt_h) {
 usage: $prog [-d output-directory]
     -d dirname	directory to put the resulting patches into;
 		defaults to \$WRKDIR/.newpatches
+    -v   	verbose - list .orig files as processed
 EOF
 		exit 0;
 };
@@ -87,7 +88,14 @@ foreach (sort <handle>) {
     if ( -f $complete ) {
 	$patchfile = ("aa".."zz")[$l];
 	$patchfile =~ s/^/patch-/;
+	if ($opt_v) {
+	    print "$patchfile -> $complete\n";
+	}
 	$diff=`pkgdiff $old $new`;
+	if ( $? ) {
+		print "$old\n$diff\n";
+		exit 1;
+	}
 	if ( "$diff" eq "" ) {
 		print ("$new and $old don't differ\n");
 	} else {
