@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/01/09 09:12:52 recht Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/24 15:29:40 wiz Exp $
 #
 
 DISTNAME=		ZODB3-3.2
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/3-/-/}
 CATEGORIES=		databases
 MASTER_SITES=		http://zope.org/Products/ZODB3.2/3.2/
 
