@@ -1,0 +1,108 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/15 10:54:45 wulf Exp $
+
+--- Makefile.netbsd.orig	Thu Apr 27 22:18:57 2000
++++ Makefile.netbsd	Mon May 15 20:05:31 2000
+@@ -1,9 +1,9 @@
+ ###############################################################################
+ #                                                                             #
+-# This is the Makefile of dpbox-5.08 for NetBSD                               #
++# This is the Makefile of dpbox-6.00.00 for NetBSD                            #
+ #                                                                             #
+-# Version:     1.0.0                                                          #
+-# Date   :     16 September 1999                                              #
++# Version:     1.2.0                                                          #
++# Date   :     15 May 2000                                                    #
+ # Author :     Berndt Josef Wulf, VK5ABN                                      #
+ #                                                                             #
+ ###############################################################################
+@@ -19,11 +19,13 @@
+ INSTALL_CONF	= ${INSTALL} -m 440
+ MKDIR		= mkdir -p
+ LN		= ln -sf
+-
++CHMOD		= /bin/chmod
++SED		= /usr/bin/sed
+ prefix		= /usr/pkg
+ bindir		= $(prefix)/bin
+ sbindir		= $(prefix)/sbin
+ confdir		= $(prefix)/share/dpbox/conf
++exampledir	= $(prefix)/share/examples/dpbox/conf
+ docdir		= $(prefix)/share/doc/dpbox
+ landir		= $(prefix)/share/dpbox/language
+ spooldir	= /var/spool/dpbox
+@@ -100,7 +102,8 @@
+ 	$(INSTALL_PROGRAM) dpputlinks $(bindir)
+ 	$(INSTALL_PROGRAM) dpcodeconv $(bindir)
+ 	$(INSTALL_PROGRAM) dpmybbs $(bindir)
+-	$(INSTALL) -m 555 ../cgi/dpboxcgi/dphttp $(bindir)
++	$(SED) "s,/installdir,$(bindir)," < ../cgi/dpboxcgi/dphttp > $(bindir)/dphttp
++	$(CHMOD) 555 $(bindir)/dphttp
+ 
+ 	$(MKDIR) $(docdir)
+ 	$(INSTALL_DATA) ../document/* $(docdir)
+@@ -148,6 +151,9 @@
+ 	  echo "*  and manually adjust the configuration files where      *"; \
+ 	  echo "*  necessary.                                             *"; \
+ 	  echo "*                                                         *"; \
++	  echo "*  A number of example configuration files can be found   *"; \
++	  echo "*  in the ${exampledir} directory.   *"; \
++	  echo "*                                                         *"; \
+ 	  echo "***********************************************************"; \
+ 	else \
+ 	  $(MKDIR) $(confdir); \
+@@ -158,9 +164,20 @@
+ 	  $(INSTALL_CONF) ../sf/* $(confdir)/sf; \
+ 	fi
+ 
++	$(MKDIR) $(exampledir); \
++	$(INSTALL_CONF) ../dpbox.ini $(exampledir)/dpbox.ini; \
++	$(MKDIR) $(exampledir)/system; \
++	$(INSTALL_CONF) ../system/* $(exampledir)/system ; \
++	$(MKDIR) $(exampledir)/sf ; \
++	$(INSTALL_CONF) ../sf/* $(exampledir)/sf; \
++
+ 	@if [ -e ${cgidir} ]; then \
+ 	  echo "installing cgi-scripts"; \
+-	  $(INSTALL) -m 755 ../cgi/cgi/* $(cgidir); \
++          for i in `ls -1 ../cgi/cgi`; \
++          do \
++	    $(SED) "s,/installdir,$(bindir)," < ../cgi/cgi/$$i > $(cgidir)/$$i; \
++	    $(CHMOD) 555 $(cgidir)/$$i; \
++	  done; \
+ 	  $(INSTALL_DATA) ../cgi/dpboxcgi/*.html $(cgidir); \
+ 	fi
+ 
+@@ -171,11 +188,23 @@
+ 	  $(INSTALL_DATA) ../cgi/dpbox/pic/* $(httpdir)/dpbox/pic; \
+ 	fi
+ 
+-	@echo 
+-	@echo dpbox installation complete
+-	@echo 
+-	@echo Now edit the configuration files in $(confdir) and 
+-	@echo $(confdir)/dpbox.ini!!!
++	@echo
++	@echo "***********************************************************"
++	@echo "*                                                         *"
++	@echo "* The installation of dpbox is now completed.             *"
++	@echo "*                                                         *"
++	@echo "* Please read the documentation provided with this        *"
++	@echo "* package carefully and edit all configuration files      *"
++	@echo "* to reflect your system setup!                           *"
++	@echo "*                                                         *"
++	@echo "* The documentation can be found in                       *"
++	@echo "*             $(docdir)                    *"
++	@echo "*                                                         *"
++	@echo "* The configuration files are located in                  *"
++	@echo "*             $(confdir)                   *"
++	@echo "*                                                         *"
++	@echo "***********************************************************"
++	@echo
+ 
+ clean:
+ 	$(RM)  *.o *~ .*~ *.orig *.bak *.s *.core  
+@@ -193,4 +222,3 @@
+ ifeq (.depend,$(wildcard .depend))
+ include .depend
+ endif
+-
