@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.2.1 2003/04/16 15:43:03 grant Exp $
+$NetBSD: patch-ad,v 1.1.2.2 2003/04/20 09:58:37 grant Exp $
 
 --- src/Makefile.in.orig	2003-04-09 18:01:40.000000000 +0200
 +++ src/Makefile.in	2003-04-16 08:07:17.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.1.2.1 2003/04/16 15:43:03 grant Exp $
  AMTAR = @AMTAR@
  AWK = @AWK@
 -CC = @CC@
-+CC = @CC@ -DPREFIX=\"@prefix@\"
++CC = @CC@ -DPKG_SYSCONFDIR=\"@sysconfdir@\"
  DEPDIR = @DEPDIR@
  
  INCLUDES = @INCLUDES@
