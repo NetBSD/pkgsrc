@@ -1,0 +1,57 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/13 18:55:41 drochner Exp $
+
+--- configure.orig	Wed Feb  5 22:54:49 2003
++++ configure	Wed Feb  5 22:56:46 2003
+@@ -7908,43 +7908,6 @@
+ # Honor aclocal flags
+ ACLOCAL="$ACLOCAL $ACLOCAL_FLAGS"
+ 
+-echo "$as_me:$LINENO: checking for X86 architecture" >&5
+-echo $ECHO_N "checking for X86 architecture... $ECHO_C" >&6
+-case ${target_cpu} in
+-  i?86) echo "$as_me:$LINENO: result: found, compiling MMX optimized code" >&5
+-echo "${ECHO_T}found, compiling MMX optimized code" >&6
+-	cat >>confdefs.h <<\_ACEOF
+-#define ENABLE_MMX 1
+-_ACEOF
+-
+-	cat >>confdefs.h <<\_ACEOF
+-#define CPU_x86 1
+-_ACEOF
+-
+-
+-
+-if true; then
+-  ENABLE_MMX_TRUE=
+-  ENABLE_MMX_FALSE='#'
+-else
+-  ENABLE_MMX_TRUE='#'
+-  ENABLE_MMX_FALSE=
+-fi
+-
+-
+-
+-if true; then
+-  ENABLE_CPU_x86_TRUE=
+-  ENABLE_CPU_x86_FALSE='#'
+-else
+-  ENABLE_CPU_x86_TRUE='#'
+-  ENABLE_CPU_x86_FALSE=
+-fi
+-
+-	;;
+-
+-  *)    echo "$as_me:$LINENO: result: no" >&5
+-echo "${ECHO_T}no" >&6
+ 
+ 
+ if false; then
+@@ -7965,8 +7928,6 @@
+   ENABLE_CPU_x86_FALSE=
+ fi
+ 
+-	;;
+-esac
+ 
+ 
+ LINUX_COMMENT="//"
