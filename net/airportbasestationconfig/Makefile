@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/03/31 20:25:04 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.12 2002/06/30 15:02:51 schmonz Exp $
 
 DISTNAME=	configurator_152
 PKGNAME=	${BINNAME}-1.5.2
@@ -14,7 +14,7 @@ USE_JAVA=	YES
 
 PLIST_SUBST+=	BINNAME=${BINNAME} JARNAME=${JARNAME}
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-powerpc
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-powerpc Darwin-*-*
 
 BINNAME=	airportbasestationconfig
 DOCDIR=		${PREFIX}/share/doc/${BINNAME}
@@ -24,7 +24,7 @@ LIBDIR=		${PREFIX}/lib/${BINNAME}
 .include "../../mk/bsd.prefs.mk"
 
 # "jdk" and "kaffe" packages don't work.
-.if ${MACHINE_ARCH} == i386
+.if ${MACHINE_ARCH} == i386 || ${OPSYS} == "Darwin"
 PKG_JVM=	sun-jdk
 .elif ${MACHINE_ARCH} == powerpc
 PKG_JVM=	blackdown-jdk13
