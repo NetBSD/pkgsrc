@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/22 07:54:07 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/08 04:50:51 snj Exp $
 
 DISTNAME=		binutils-2.12.1
 PKGNAME=		cross-h8300-hms-binutils-2.12.1
@@ -13,7 +13,7 @@ COMMENT=		h8300-hms cross utility
 H8300_PREFIX=		${PREFIX}/libexec/cross-h8300-hms
 
 WRKSRC=			${WRKDIR}/objdir
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_MAKEINFO=		yes
 HAS_CONFIGURE=		yes

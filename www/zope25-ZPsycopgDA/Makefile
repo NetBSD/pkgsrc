@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/04/16 17:21:34 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/08 05:25:12 snj Exp $
 #
 
 DISTNAME=	psycopg-1.1.11
@@ -11,8 +11,8 @@ HOMEPAGE=	http://initd.org/software/psycopg
 COMMENT=	PostgreSQL database adapter for Zope
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 .include "../../www/zope25/product.mk"
-.include "../../databases/py-psycopg/buildlink2.mk"
+.include "../../databases/py-psycopg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
