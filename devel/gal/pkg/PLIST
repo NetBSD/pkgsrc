@@ -1,21 +1,15 @@
-@comment $NetBSD: PLIST,v 1.10 2001/05/22 16:07:24 rh Exp $
+@comment $NetBSD: PLIST,v 1.11 2001/05/25 06:12:53 rh Exp $
 include/gal/util/e-util.h
 include/gal/util/e-xml-utils.h
 include/gal/util/e-cache.h
 include/gal/util/e-i18n.h
 include/gal/util/e-bit-array.h
-include/gal/util/e-sorter-array.h
 include/gal/util/e-sorter.h
 include/gal/util/e-text-event-processor-emacs-like.h
 include/gal/util/e-text-event-processor-types.h
 include/gal/util/e-text-event-processor.h
-include/gal/widgets/e-categories-master-list-array.h
-include/gal/widgets/e-categories-master-list-dialog-model.h
-include/gal/widgets/e-categories-master-list-dialog.h
-include/gal/widgets/e-categories-master-list.h
-include/gal/widgets/e-charset-picker.h
 include/gal/widgets/e-hsv-utils.h
-include/gal/widgets/e-reflow-model.h
+include/gal/widgets/e-reflow-sorted.h
 include/gal/widgets/e-selection-model-array.h
 include/gal/widgets/e-selection-model-simple.h
 include/gal/widgets/e-selection-model.h
@@ -123,26 +117,24 @@ include/gal/shortcut-bar/e-icon-bar.h
 include/gal/shortcut-bar/e-shortcut-bar.h
 include/gal/shortcut-bar/e-shortcut-model.h
 include/gal/shortcut-bar/e-vscrolled-bar.h
-include/gal/unicode/gunicode.h
-lib/libgal.so.7.0
-lib/libgal.so.7
+lib/libgal.so.6.0
+lib/libgal.so.6
 lib/libgal.so
 lib/libgal.la
 lib/libgal.a
 lib/galConf.sh
-share/gal/0.8/glade/e-categories-master-list-dialog.glade
-share/gal/0.8/glade/gal-categories.glade
-share/gal/0.8/glade/gal-define-views.glade
-share/gal/0.8/glade/gal-view-new-dialog.glade
+share/etable/0.7/glade/e-table-config.glade
+share/etable/0.7/glade/e-table-field-chooser.glade
+share/etable/0.7/glade/e-table-group.glade
+share/gal/0.7/glade/gal-categories.glade
+share/gal/0.7/glade/gal-define-views.glade
+share/gal/0.7/glade/gal-view-new-dialog.glade
 share/gal/html/gal-api.sgml
 share/gal/html/gal.hierarchy
 share/gal/html/gal.signals
 share/gal/html/gal.types
 share/gal/html/gal-decl.txt
 share/gal/html/gal-sections.txt
-share/etable/0.8/glade/e-table-config.glade
-share/etable/0.8/glade/e-table-group.glade
-share/etable/0.8/glade/e-table-field-chooser.glade
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gal.mo
@@ -169,15 +161,14 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gal.mo
 @exec mkdir -p -m 0755 %D/share/gal/html/gal
 @dirrm share/gal/html/gal
 @dirrm share/gal/html
-@dirrm share/gal/0.8/glade
-@dirrm share/gal/0.8
+@dirrm share/gal/0.7/glade
+@dirrm share/gal/0.7
 @dirrm share/gal
-@dirrm share/etable/0.8/glade
-@dirrm share/etable/0.8
+@dirrm share/etable/0.7/glade
+@dirrm share/etable/0.7
 @dirrm share/etable
 @dirrm include/gal/widgets
 @dirrm include/gal/util
-@dirrm include/gal/unicode
 @dirrm include/gal/shortcut-bar
 @dirrm include/gal/menus
 @dirrm include/gal/e-text
