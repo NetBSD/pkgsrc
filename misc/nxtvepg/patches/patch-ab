@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/02/18 19:17:24 tron Exp $
+
+--- pod2help.pl.orig	Sun Dec 31 00:08:28 2000
++++ pod2help.pl	Sun Feb 18 20:10:13 2001
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!@localbase@/perl
+ #
+ #  Perl script to convert POD manpage to help menu & popups
+ #

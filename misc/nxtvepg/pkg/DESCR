@@ -1,0 +1,6 @@
+nxtvepg is a decoder and browser for Nextview - a subscription-free
+electronic TV program guide transmittet via TeleText. Nextview
+currently is broadcasted in Germany, Austria, Switzerland, and France
+and covers the schedules of all major TV networks in these
+countries. It uses the bktr driver for data acquisition through a 
+TV tuner card.
