@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/09/03 01:57:21 kim Exp $
+# $NetBSD: Makefile,v 1.29 2001/09/04 00:29:26 kim Exp $
 #
 
 DISTNAME=	tcsh-6.11
@@ -34,7 +34,7 @@ post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@${ECHO} ${NLSDIR}/C/tcsh.cat >> ${PLIST_SRC}
 	@for i in 						\
-	    et:ISO_8859-1:et:EE					\
+	    et:ISO_8859-15:et:EE				\
 	    finnish:ISO_8859-1:fi:FI				\
 	    french:ISO_8859-1:fr:BE:CA:CH:FR			\
 	    german:ISO_8859-1:de:AT:CH:DE			\
@@ -43,7 +43,7 @@ post-install:
 	    ja:EUC:ja:JP					\
 	    russian:KOI8-R:ru:SU				\
 	    spanish:ISO_8859-1:es:ES				\
-	    ukrainian:ISO_8859-1:uk:UA				\
+	    ukrainian:KOI8-U:uk:UA				\
 	    ;							\
 	do							\
 	    OIFS="${IFS}";					\
