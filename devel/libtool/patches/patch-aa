@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.9 2000/05/31 17:25:56 rh Exp $
+$NetBSD: patch-aa,v 1.10 2000/06/04 17:56:17 rh Exp $
 
---- ltconfig.in.orig	Wed May 31 19:08:31 2000
-+++ ltconfig.in	Wed May 31 19:13:22 2000
+--- ltconfig.in.orig	Sat May 27 03:58:57 2000
++++ ltconfig.in	Sun Jun  4 19:35:00 2000
 @@ -1194,11 +1194,11 @@
  
    netbsd*)
@@ -12,8 +12,8 @@ $NetBSD: patch-aa,v 1.9 2000/05/31 17:25:56 rh Exp $
        archive_cmds='$LD -Bshareable $libobjs $deplibs $linkopts -o $lib'
        # can we support soname and/or expsyms with a.out? -oliva
 +    else
-+      archive_cmds='$CC -shared $libobjs $deplibs $linkopts ${wl}-soname $wl$soname -o $lib'
-+      archive_expsym_cmds='$CC -shared $libobjs $deplibs $linkopts ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      archive_cmds='$CC -shared $libobjs $deplibs $wllinkopts ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds='$CC -shared $libobjs $deplibs $wllinkopts ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
      fi
      ;;
  
