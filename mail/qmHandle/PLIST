@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:01:09 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/07/22 00:52:36 schmonz Exp $
 bin/qmHandle
-share/doc/qmHandle.README
+share/doc/qmHandle/README
+@dirrm share/doc/qmHandle
