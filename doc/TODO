@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2775 2004/12/26 22:22:35 wiz Exp $
+$NetBSD: TODO,v 1.2776 2004/12/26 22:56:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -532,7 +532,6 @@ Suggested package updates
 	o grap-1.32
 	o grepmail-5.3030
 	o gri-2.12.8
-	o gsasl-0.2.3
 	o gsed-4.1.2
 	o gst-plugins-0.8.6
 	o gtar-1.15
