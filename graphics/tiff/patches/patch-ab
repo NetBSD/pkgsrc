@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.11 2001/08/23 00:07:18 abs Exp $
+$NetBSD: patch-ab,v 1.12 2002/03/05 10:33:36 martti Exp $
 
---- html/Makefile.in.orig	Mon Mar 27 17:05:55 2000
-+++ html/Makefile.in
-@@ -76,8 +76,6 @@
+--- html/Makefile.in.orig	Tue Jul 17 15:13:37 2001
++++ html/Makefile.in	Mon Mar  4 16:02:59 2002
+@@ -77,8 +77,6 @@
  	v3.5.1.html		\
  	v3.5.2.html		\
  	v3.5.3.html		\
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.11 2001/08/23 00:07:18 abs Exp $
  	${NULL}
  IMAGES=\
  	images/back.gif		\
-@@ -85,6 +83,8 @@
+@@ -86,6 +84,8 @@
  	images/cat.gif		\
  	images/cover.jpg	\
  	images/cramps.gif	\

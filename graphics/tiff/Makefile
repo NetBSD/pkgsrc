@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.36 2002/01/05 22:30:12 tron Exp $
+# $NetBSD: Makefile,v 1.37 2002/03/05 10:33:35 martti Exp $
 
-DISTNAME=	tiff-v3.5.5
-PKGNAME=	tiff-3.5.5
+DISTNAME=	tiff-v3.5.7
+PKGNAME=	tiff-3.5.7
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.libtiff.org/ \
-		ftp://ftp.onshore.com/pub/libtiff/
+		ftp://ftp.remotesensing.org/pub/libtiff/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 # need DISTFILES above for adding lzw-files to it if USE_GIF is defined
 # in mk.conf
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.libtiff.org/
-COMMENT=	library and tools for reading and writing TIFF data files
+COMMENT=	Library and tools for reading and writing TIFF data files
 
 USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	--noninteractive --site=${FILESDIR}
+CONFIGURE_ARGS=	--noninteractive --site=${FILESDIR} --prefix=${PREFIX}
 CONFIGURE_ENV+=	CC="${CC}"
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2001/08/23 00:07:18 abs Exp $
+$NetBSD: patch-aa,v 1.11 2002/03/05 10:33:35 martti Exp $
 
---- configure.orig	Mon Mar 20 18:20:42 2000
-+++ configure
-@@ -486,7 +486,7 @@
+--- configure.orig	Thu Nov 15 18:21:05 2001
++++ configure	Mon Mar  4 16:02:34 2002
+@@ -487,7 +487,7 @@
  
  checkCompiler()
  {
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.10 2001/08/23 00:07:18 abs Exp $
      if isGNU $compiler; then
  	ISGCC=yes
      else
-@@ -512,7 +512,7 @@
+@@ -513,7 +513,7 @@
      $RM dummy dummy.o
      capture $compiler -o dummy ${C_ANSI} dummy.c && {
  	CC=$compiler;
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.10 2001/08/23 00:07:18 abs Exp $
  	test -z "${ENVOPTS-}"   && ENVOPTS="${C_ANSI-}"
  	return 0
      }
-@@ -1661,6 +1661,7 @@
+@@ -1705,6 +1705,7 @@
  	    -[LR]/*)	echo "$i" ;;
  	    -L*)	echo "$i" | sed 's;^-L;-L../;' ;;
  	    -R*)	echo "$i" | sed 's;^-R;-R../;' ;;
