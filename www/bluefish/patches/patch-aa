@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2000/08/16 05:38:35 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2000/08/16 16:11:50 jlam Exp $
 
 --- configure.in.orig	Sun May 14 11:36:13 2000
-+++ configure.in	Tue Aug 15 09:13:11 2000
++++ configure.in	Wed Aug 16 11:51:29 2000
 @@ -94,6 +94,7 @@
    AC_MSG_ERROR(GTK was not detected, or a sufficent version was not found. This is a bad thing)
  fi
@@ -10,13 +10,14 @@ $NetBSD: patch-aa,v 1.3 2000/08/16 05:38:35 jlam Exp $
  AC_CHECK_LIB(gdk_imlib, main,  
     [ LIBS="$LIBS -lgdk_imlib"
     AC_SUBST(IMLIB)
-@@ -109,6 +110,12 @@
+@@ -109,6 +110,13 @@
  ,
  AC_DEFINE(HAVE_LIBGDK_IMLIB,0)
  )
 +else
 +   GDK_IMLIB_CFLAGS="`imlib-config --cflags-gdk`"
 +   GDK_IMLIB_LIBS="`imlib-config --libs-gdk`"
++   GDK_IMLIB_LIBS="$GDK_IMLIB_LIBS `imlib-config --libs`"
 +   CFLAGS="$CFLAGS $GDK_IMLIB_CFLAGS"
 +   LIBS="$LIBS $GDK_IMLIB_LIBS"
 +fi
