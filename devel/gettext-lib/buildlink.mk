@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/05/28 06:07:16 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/05/28 06:08:57 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gettext.
 #
@@ -39,6 +39,12 @@ BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 
 .if defined(GNU_CONFIGURE)
+#
+# Add -lintl to LIBS in CONFIGURE_ENV to work around broken gettext.m4:
+# gettext.m4 does not add -lintl where it should, and the resulting
+# configure script fails to detect if libintl.a is the genuine GNU gettext
+# or not.
+#
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 CFLAGS+=		-I${BUILDLINK_INCDIR}
