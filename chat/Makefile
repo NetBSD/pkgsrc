@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/11/30 23:34:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.26 2001/12/19 14:11:24 tron Exp $
 #
 
 COMMENT=	communication programs
@@ -8,6 +8,8 @@ SUBDIR+=	blackened
 SUBDIR+=	bnc
 SUBDIR+=	dircproxy
 SUBDIR+=	epic4
+SUBDIR+=	everybuddy
+SUBDIR+=	everybuddy-gnome
 SUBDIR+=	fugu
 SUBDIR+=	gaim
 SUBDIR+=	gale
