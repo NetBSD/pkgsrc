@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2001/04/30 03:46:34 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2001/05/05 21:06:26 fredb Exp $
 
 MOZ_VER=	0.8.1
 DISTNAME=	mozilla-source-${MOZ_VER}
@@ -34,7 +34,8 @@ CONFIGURE_ARGS=	--disable-tests \
 		--with-png=${LOCALBASE} \
 		--enable-mathml \
 		--enable-svg \
-		--with-extensions=cookie,irc,wallet,xmlextras,xml-rpc
+		--with-extensions=cookie,irc,wallet,xmlextras,xml-rpc \
+		--without-pthreads
 
 .if  ${MACHINE_ARCH} == "m68k"
 DBG=
