@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/01/24 12:21:35 skrll Exp $
+# $NetBSD: Makefile,v 1.17 2002/09/23 10:26:22 jlam Exp $
 
 DISTNAME=	quake-v6-bsd-kame
 PKGNAME=	quake6-0.0
@@ -13,7 +13,8 @@ DEPENDS=	quakedata-[0-9]*:../../games/quakedata
 
 WRKSRC=		${WRKDIR}/quakeforge
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=	yes
+USE_X11=	yes
 
 post-extract:
 	cd ${WRKSRC}; ${FIND} . -name \*.o -exec ${RM} {} \;
@@ -32,6 +33,5 @@ IGNORE=		"${PKGNAME} requires IPv6 support"
 # "bindir" setting is very non-standard for GNU autoconf
 CONFIGURE_ARGS+=--disable-asmopt --bindir=/bin
 
-.include "../../graphics/Mesa/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/Mesa/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
