@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2000/12/19 13:58:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.51 2000/12/25 02:16:07 martin Exp $
 
 DISTNAME=	mozilla-source
 PKGNAME=	mozilla-0.6
@@ -69,10 +69,6 @@ post-extract:
 .include "../../mk/bsd.prefs.mk"
 
 pre-configure:
-.if defined(USE_INET6) && ${USE_INET6} == YES
-	${ECHO} "USE_IPV6 = 1" >>${WRKSRC}/nsprpub/config/NetBSD.mk
-	${ECHO} "DEFINES += -D_PR_INET6 -D_PR_HAVE_GETHOSTBYNAME2" >>${WRKSRC}/nsprpub/config/NetBSD.mk
-.endif
 	(cd ${WRKSRC} && autoconf)
 
 post-build:
