@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2002/10/08 17:27:19 wiz Exp $
+# $NetBSD: Makefile.common,v 1.16 2002/10/21 16:09:51 wiz Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
@@ -7,8 +7,6 @@ MASTER_SITES+=		${MASTER_SITE_GNOME:=stable/sources/mc/}
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.gnome.org/mc/
 
-DEPENDS+=		libslang-[0-9]*:../../devel/libslang
-DEPENDS+=		glib>=1.2.0:../../devel/glib
 BUILD_USES_MSGFMT=	yes
 
 CONFLICTS+=		mc-[0-9]* gmc-[0-9]*
@@ -16,8 +14,8 @@ CONFLICTS+=		mc-[0-9]* gmc-[0-9]*
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/mc/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/mc/patches
 
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
-USE_LIBINTL=		yes
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--without-included-gettext
@@ -36,8 +34,9 @@ CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 LIBS+=			-lm -ltermcap		# -lslang
-LIBS+=			-lintl			# check for gettext is broken
-CPPFLAGS+=		-I${LOCALBASE}/include	# slang.h
 CPPFLAGS+=		-Dunix
 
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/glib/buildlink2.mk"
+.include "../../devel/libslang/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
