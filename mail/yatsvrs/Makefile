@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/11/15 23:21:30 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/19 03:20:29 taca Exp $
 #
 
 DISTNAME=		yatsvrs-5.00p4
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 YATSVR_LOGFAC?=		LOG_LOCAL4
 YATSVR_MINGID?=		1001
 YATSVR_MAXGID?=		64999
-CONFDIR=		/etc/yatsvr5
+CONFDIR=		${PKG_SYSCONFDIR}/yatsvr5
 OLDCONFDIR=		${PREFIX}/etc/yat
 DOCS=			IMPORTANT README UPDATE doc/YATCONF doc/YATEXT4
 DOCDIR=			${PREFIX}/share/doc/yatsvr5
