@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/05/26 06:36:11 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/05/26 06:46:31 jlam Exp $
 #
 # This Makefile fragment is included by packages that use Mesa.
 #
@@ -16,7 +16,7 @@
 .if !defined(MESA_BUILDLINK_MK)
 MESA_BUILDLINK_MK=	# defined
 
-MESA_REQD?=		3.4.1
+MESA_REQD?=		3.2.1
 
 # We double-list because we're not sure if the files are in ${X11BASE}
 # or in ${LOCALBASE}.
