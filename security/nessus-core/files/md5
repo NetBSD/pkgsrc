@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/10/15 17:19:51 frueauf Exp $
+$NetBSD: md5,v 1.4 2000/11/12 04:32:03 frueauf Exp $
 
-MD5 (nessus-core-1.0.5.tar.gz) = e5636b91642588c4bff8c69b582e3e01
+MD5 (nessus-core-1.0.6.tar.gz) = d904ae36d5d7a8e22d538a5e48a7a23e
