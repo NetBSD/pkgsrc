@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2000/03/08 12:01:49 agc Exp $
+# $NetBSD: Makefile,v 1.7 2000/12/12 17:29:51 drochner Exp $
 
-DISTNAME=	xephem-3.2.3
+DISTNAME=	xephem-3.4
 CATEGORIES=	x11
-MASTER_SITES=	http://www.clearskyinstitute.com/xephem/xephem/ \
+MASTER_SITES=	http://www.clearskyinstitute.com/xephem/ \
 		ftp://iraf.noao.edu/contrib/xephem/ \
 		ftp://star.rl.ac.uk/pub/iraf/contrib/xephem/ \
 		ftp://iphcip1.physik.uni-mainz.de/pub/xephem/ \
@@ -31,33 +31,21 @@ pre-build:
 PERL_SCRIPTS= astorb2edb.pl mpcorb2edb.pl tle2edb.pl
 
 post-install:
-	@${SED} s,@PREFIX@,${PREFIX}, ${WRKSRC}/XEphem.ad > ${WRKDIR}/XEphem
+	${SED} s,@PREFIX@,${PREFIX}, ${FILESDIR}/XEphem.ad > ${WRKDIR}/XEphem
 	${INSTALL_DATA} ${WRKDIR}/XEphem ${PREFIX}/lib/X11/app-defaults
-	@${MKDIR} ${PREFIX}/share/xephem/auxil \
-		${PREFIX}/share/xephem/catalogs \
-		${PREFIX}/share/xephem/tools \
-		${PREFIX}/share/doc/xephem
-	(cd ${WRKSRC}/auxil; ${INSTALL_DATA} README jupiter.9910 logo.gif \
-		mars.9910 mars_db marsmap.fts \
-		moon.fts moon_db saturne.9910 uranus.9910 \
-		xephem.hlp xephem_sites \
-		${PREFIX}/share/xephem/auxil)
-	(cd ${WRKSRC}/catalogs; ${INSTALL_DATA} ISS.edb Messier.edb NGC.edb \
-		SAC.edb YBS.edb asteroids.edb comets.edb hickson.edb \
-		${PREFIX}/share/xephem/catalogs)
+	${MKDIR} ${PREFIX}/share/xephem/tools
+	(cd ${WRKSRC}; ${CP} -R auxil catalogs fifos fits \
+	 ${PREFIX}/share/xephem)
 	(cd ${WRKSRC}/tools; ${INSTALL_DATA} README \
 			${PREFIX}/share/xephem/tools; \
 		${INSTALL_SCRIPT} extract.awk jost2edb.awk\
 			${PREFIX}/share/xephem/tools)
-	@(cd ${WRKSRC}/tools; for file in ${PERL_SCRIPTS}; do \
+	(cd ${WRKSRC}/tools; for file in ${PERL_SCRIPTS}; do \
 		${SED} 1s,@LOCALBASE@,${LOCALBASE}, $$file \
 			> ${WRKDIR}/$$file; \
-	done)
-	for file in ${PERL_SCRIPTS}; do \
 		${INSTALL_SCRIPT} ${WRKDIR}/$$file \
 			${PREFIX}/share/xephem/tools; \
-	done
-	(cd ${WRKDIR}/${DISTNAME}; ${INSTALL_DATA} Copyright README \
-		${PREFIX}/share/doc/xephem)
+	done)
+	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/xephem
 
 .include "../../mk/bsd.pkg.mk"
