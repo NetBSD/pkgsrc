@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.2 2002/08/12 12:06:36 dmcmahill Exp $
+$NetBSD: patch-ag,v 1.3 2003/11/11 10:17:39 wiz Exp $
 
---- install.sh.orig	Sat Jan 27 16:55:57 2001
+--- install.sh.orig	Tue Sep  4 05:11:45 2001
 +++ install.sh
-@@ -28,7 +28,7 @@
+@@ -28,7 +28,7 @@ if [ "$FOUND" = "" ] ; then
      while : ; do
  	echo "Where would you like the sample X10 configuration installed?"
  	echo "The default is $HOME/.x10config"
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.2 2002/08/12 12:06:36 dmcmahill Exp $
  	if [ "$WHERE" = "" ]  ; then
  	    FOUND=$HOME/.x10config
  	    break
-@@ -56,38 +56,30 @@
+@@ -56,14 +56,9 @@ if [ ! -f $FOUND ] ; then
  		    ;;
  	    esac
  	    echo "To which port is the CM11 attached?"
@@ -27,12 +27,16 @@ $NetBSD: patch-ag,v 1.2 2002/08/12 12:06:36 dmcmahill Exp $
 +	    TTY=$WHERE
 +	    break
  	done
- 	sed "s;^TTY.*;TTY	$TTY;" x10config > $FOUND
- fi
+ 	sed "s;^TTY.*;OPTION TTY	$TTY;" x10config > $FOUND
+ 
+@@ -71,29 +66,22 @@ fi
  
  echo "X10 configuration file at $FOUND will be used."
  
--eval `sed -n "s/^TTY[ 	]*/TTY=/p" $FOUND`
+-eval `sed -n "s/^TTY[ 	]*/TTY=/p" $FOUND `
+-if [ "$TTY" = "" ] ; then
+-    eval `sed -n "s/^OPTION[ 	]*TTY[ 	]*/TTY=/p" $FOUND `
+-fi
 -
 -#Check TTY permisions
 -set `ls -l $TTY` none
@@ -65,5 +69,7 @@ $NetBSD: patch-ag,v 1.2 2002/08/12 12:06:36 dmcmahill Exp $
 +		fi
 +	fi
  fi
- 
+-
  # Directories: spool and lock 
+ # get the lockdir and spooldir compile options by using the hidden option 'list'
+ eval `./heyu list`
