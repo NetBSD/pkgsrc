@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2001/07/11 15:16:20 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.24 2001/07/18 01:14:23 dmcmahill Exp $
 #
 
-DISTNAME=	scilab-2.6.src
-PKGNAME=	scilab-2.6nb1
+DISTNAME=	${SCIBASE}.src
+PKGNAME=	${SCIBASE}nb1
+SCIBASE=	scilab-2.6
 WRKSRC=		${WRKDIR}/${DISTNAME:.src=}
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/
@@ -16,7 +17,7 @@ DEPENDS+=	pvm-3.4.3:../../parallel/pvm3
 
 # needs full floating point math.  Once the FPC code for alpha is integrated
 # this line can be changed to only exclude older versions of the operating
-# system.
+# system.  Additionally, -mieee will need to be added.
 NOT_FOR_PLATFORM=	*-*-alpha
 
 USE_FORTRAN=		yes
@@ -33,6 +34,7 @@ CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE}
 PVM_ROOT?=	${LOCALBASE}/pvm3
 CONFIGURE_ENV+=	PVM_ROOT=${PVM_ROOT}
 CONFIGURE_ENV+=	X11BASE=${X11BASE}
+PLIST_SUBST+=	SCIBASE=${SCIBASE}
 
 # remove some stuff which is broken in the distfile.  The config's
 # are links to ../config (ie circular).
@@ -50,11 +52,11 @@ pre-install:
 	cd ${WRKSRC}/examples && ${MAKE_PROGRAM} distclean
 
 post-install:
-	${INSTALL_DATA} ${PREFIX}/${PKGNAME}/X11_defaults/Xscilab \
+	${INSTALL_DATA} ${PREFIX}/${SCIBASE}/X11_defaults/Xscilab \
 		${X11BASE}/lib/X11/app-defaults
-	${INSTALL_DATA} ${PREFIX}/${PKGNAME}/X11_defaults/Metanet-color \
+	${INSTALL_DATA} ${PREFIX}/${SCIBASE}/X11_defaults/Metanet-color \
 		${X11BASE}/lib/X11/app-defaults
-	${LN} -sf ${X11BASE}/bin/xless ${PREFIX}/${PKGNAME}/bin/xless
+	${LN} -sf ${X11BASE}/bin/xless ${PREFIX}/${SCIBASE}/bin/xless
 
 # the "SCI=0 && unset SCI" is done because some of the tests really will
 # fail if SCI is set to anything.
