@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/08/01 20:39:54 jschauma Exp $
+# $NetBSD: Makefile,v 1.19 2003/08/08 09:38:40 grant Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -14,7 +14,7 @@ MASTER_SITES=		ftp://ftp.netscape.com/pub/netscape7/${SUB}/ \
 
 MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://channels.netscape.com/ns/browsers/default.jsp
-COMMENT=		Netscape Browser/Mail- and Newsreader suite version 7
+COMMENT=		Netscape Browser, Mail and Newsreader suite, version 7
 
 RESTRICTED=		"No re-distribution without agreement from Netscape"
 NO_SRC_ON_CDROM=	${RESTRICTED}
