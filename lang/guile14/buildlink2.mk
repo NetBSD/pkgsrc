@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/01/16 17:02:25 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/01/17 04:43:06 uebayasi Exp $
 
 .if !defined(GUILE14_BUILDLINK2_MK)
 GUILE14_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		guile14
-BUILDLINK_DEPENDS.guile14?=	guile14>=1.4nb1
+BUILDLINK_DEPENDS.guile14?=	guile14>=1.4nb2
 BUILDLINK_PKGSRCDIR.guile14?=	../../lang/guile14
 
 # Put only 'bin/guile' and 'bin/guile-config' at ${BUILDLINK_DIR}
