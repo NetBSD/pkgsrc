@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2003/08/23 15:02:28 drochner Exp $
+$NetBSD: patch-ae,v 1.3 2003/08/25 17:57:54 drochner Exp $
 
 --- sip/qtsqlmod.sip.orig	2003-08-17 14:27:48.000000000 +0200
 +++ sip/qtsqlmod.sip	2003-08-22 20:01:46.000000000 +0200
@@ -13,7 +13,7 @@ $NetBSD: patch-ae,v 1.2 2003/08/23 15:02:28 drochner Exp $
  DEFINES = @BL_DEFINES@
  
 -sip3:unix:LIBS += -L@BL_DESTDIR@ -lqttablecmodule -lqtcmodule -L@BL_SIPMODDIR@ -lsip
-+sip3:unix:LIBS += -L@BL_DESTDIR@ -lqttablecmodule -lqtcmodule -L@BL_SIPMODDIR@ -Wl,-R@BL_SIPMODDIR@ -lsip
++sip3:unix:LIBS += -L@BL_DESTDIR@ ../qttable/libqttablecmodule.la -lqtcmodule -L@BL_SIPMODDIR@ -Wl,-R@BL_SIPMODDIR@ -lsip
  sip3:win32:LIBS += @BL_DESTDIR@\libqttablec.lib @BL_DESTDIR@\libqtc.lib @BL_SIPMODDIR@\libsip.lib @BL_PYLIB@
  
  sip4:win32:LIBS += @BL_PYLIB@
