@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2001/03/14 05:18:55 kei Exp $
+# $NetBSD: Makefile,v 1.120 2001/03/20 19:46:17 jwise Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -45,6 +45,7 @@ SUBDIR+=	htmldoc
 SUBDIR+=	htmllint
 SUBDIR+=	hypermail
 SUBDIR+=	ijb
+SUBDIR+=	jakarta-servletapi
 SUBDIR+=	jakarta-tomcat
 SUBDIR+=	jsdk20
 SUBDIR+=	jssi
