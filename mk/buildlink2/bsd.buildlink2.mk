@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.95 2003/08/27 11:29:57 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.96 2003/09/02 06:59:50 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -88,9 +88,7 @@ MAKE_ENV+=		BUILDLINK_CACHE_ALL=yes
 
 .if defined(USE_X11)
 USE_X11_LINKS?=		YES
-.  if !empty(USE_X11_LINKS:M[nN][oO])
-.    include "../../mk/x11.buildlink2.mk"
-.  else
+.  if empty(USE_X11_LINKS:M[nN][oO])
 BUILD_DEPENDS+=		x11-links>=0.12:../../pkgtools/x11-links
 _BLNK_X11_DIR=		${LOCALBASE}/share/x11-links
 .  endif
@@ -332,6 +330,12 @@ _BLNK_UNPROTECT+=	s:${_BLNK_MANGLE_DIR.${_dir_}}:${${_dir_}}
 
 _BLNK_TRANSFORM+=	${_BLNK_PROTECT}
 #
+# Change references to ${DEPOTBASE}/<pkg> into ${LOCALBASE} so that
+# "overwrite" packages think headers and libraries for "pkgviews" packages
+# are just found in the default view.
+#
+_BLNK_TRANSFORM+=	depot:${DEPOTBASE}:${LOCALBASE}
+#
 # Convert direct paths to shared libraries into "-Ldir -llib" equivalents.
 #
 _BLNK_TRANSFORM+=	p:${X11BASE}
@@ -399,15 +403,20 @@ _REPLACE_BUILDLINK= \
 # When "unbuildlinkifying" a file, we must remove references to the
 # buildlink directories and change any -llib to the proper replacement
 # libraries (-lreadline -> -ledit, etc.).  Redundant -Idir and -Ldir
-# options are removed to optimize the resulting file.
+# options are removed to optimize the resulting file.  Also, prefer the
+# .la files in ${LOCALBASE}/lib over the ones in ${DEPOTBASE}/*/lib when
+# creating new .la files.  This makes "overwrite" packages look and feel
+# more like they would without the pkgviews integration.
 #
-REPLACE_BUILDLINK_SED?=		# empty
-_REPLACE_BUILDLINK_SED=		${REPLACE_BUILDLINK_SED}
-_REPLACE_BUILDLINK_SED+=	${LIBTOOL_ARCHIVE_UNTRANSFORM_SED}
+LIBTOOL_ARCHIVE_UNTRANSFORM_SED?=	# empty
+_LIBTOOL_ARCHIVE_UNTRANSFORM_SED+=	${LIBTOOL_ARCHIVE_UNTRANSFORM_SED}
+REPLACE_BUILDLINK_SED?=			# empty
+_REPLACE_BUILDLINK_SED=			${REPLACE_BUILDLINK_SED}
+_REPLACE_BUILDLINK_SED+=		${_LIBTOOL_ARCHIVE_UNTRANSFORM_SED}
 
 SUBST_CLASSES+=			unbuildlink
 SUBST_STAGE.unbuildlink=	post-build
-SUBST_MESSAGE.unbuildlink= \
+SUBST_MESSAGE.unbuildlink=	\
 	"Fixing buildlink references in files-to-be-installed."
 SUBST_FILES.unbuildlink=	${_REPLACE_BUILDLINK}
 SUBST_SED.unbuildlink=		${_REPLACE_BUILDLINK_SED}
