@@ -1,39 +1,30 @@
-# $NetBSD: Makefile,v 1.16 2004/12/29 15:42:37 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2005/03/30 13:49:28 adam Exp $
 
-DISTNAME=		efax-gtk-1.0.1b.src
-PKGNAME=		efax-gtk-1.0.1b
-PKGREVISION=		6
-CATEGORIES=		comms
-MASTER_SITES=		http://www.cvine.freeserve.co.uk/efax-gtk/
-EXTRACT_SUFX=		.tgz
+DISTNAME=	efax-gtk-2.2.15.src
+PKGNAME=	efax-gtk-2.2.15
+CATEGORIES=	comms
+MASTER_SITES=	http://www.cvine.freeserve.co.uk/efax-gtk/
+EXTRACT_SUFX=	.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.cvine.freeserve.co.uk/efax-gtk/
-COMMENT=		GTK frontend for efax
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.cvine.freeserve.co.uk/efax-gtk/
+COMMENT=	GTK frontend for efax
 
-DEPENDS+=		efax>=0.9:../../comms/efax
+DEPENDS+=	efax>=0.9:../../comms/efax
 
-WRKSRC=			${WRKDIR}/efax-gtk
-GNU_CONFIGURE=		YES
-USE_BUILDLINK3= 	YES
-USE_PKGINSTALL=		YES
-
-CONFIGURE_ARGS+=	--with-spooldir=${VARBASE}/spool/efax
+WRKSRC=			${WRKDIR}/${PKGNAME}
+USE_BUILDLINK3= 	yes
+USE_PKGINSTALL=		yes
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-spooldir=${VARBASE}/spool/efax
 
-EGDIR=			${PREFIX}/share/examples/efax-gtk
+EGDIR=			${PREFIX}/share/examples
 CONF_FILES=		${EGDIR}/efax-gtkrc ${PKG_SYSCONFDIR}/efax-gtkrc
 
-BUILD_TARGET=		efax-gtk
-
-post-extract:
-	${GZIP_CMD} -d ${WRKSRC}/efax-gtk.1.gz
-
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/efax-gtk
-
-.include "../../devel/libsigc++10/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
-.include "../../x11/gtk--/buildlink3.mk"
+.include "../../devel/libsigc++2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtkmm24/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
