@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.79 2000/01/14 09:20:47 rh Exp $
+# $NetBSD: Packages.txt,v 1.80 2000/01/14 10:32:35 abs Exp $
 ###########################################################################
 
 			==========================
@@ -59,7 +59,7 @@ is a description of all the terminology used within this document:
 
  * The NetBSD package system:
    This is the part of the NetBSD operating system handling building
-   (compiling), installing and removing of packages.
+   (compiling), installing, and removing of packages.
 
  * Distfile:
    This term describes the file or files that are provided by the author
@@ -124,8 +124,8 @@ directory may be rooted somewhere else, probably somewhere below /cdrom.
 Please consult your CDROM's documentation for the exact location!
 
 
- 1.2 How to do
- =============
+ 1.2 How to use
+ ==============
 
 If you have the files on a CDROM or downloaded them to your hard disk, you
 can install them with the following command (be sure to su to root first):
@@ -136,12 +136,14 @@ If you have FTP access and you don't want to download the packages via FTP
 prior to installation, you can do this automatically by giving pkg_add an
 ftp-URL:
 
-	pkg_add ftp://ftp.netbsd.org/pub/packages/`sysctl -n hw.machine_arch`/All/package.tgz
+	pkg_add ftp://ftp.netbsd.org/pub/NetBSD/packages/<OS Ver>/<arch>/All/package.tgz
 
-Please note that sysctl is used here to automatically determine the right
-set of binary files. Also note that any packages needed to run the package
-in question will be installed, too, assuming they are present where you
-install from.
+If there is any doubt, the sysctl utility can be used to determine the
+<OS Ver>, and <arch> by running "sysctl kern.osrelease hw.machine_arch".
+
+Also note that any prerequisite packages needed to run the package in
+question will be installed, too, assuming they are present where you install
+from.
 
 After you've installed packages, be sure to have /usr/pkg in your $PATH so
 you can actually start the just installed program.
@@ -183,12 +185,15 @@ directory /usr/pkgsrc does exist. Then, simply start "sup -v
 
 There is one gotcha: The distribution file (i.e. the unmodified source)
 must exist on your system for the packages system to be able to build it.
-If it's not, then ftp(1) is used to fetch the distribution files
+If it does not, then ftp(1) is used to fetch the distribution files
 automatically.
 
 You can overwrite some of the major distribution sites to fit to sites
 that are close to your own. Have a look at /usr/pkgsrc/mk/mk.conf.example
-to find some examples. This may save some of your bandwith and time.
+to find some examples. This may save some of your bandwidth and time.
+
+When you have selected your settings, install your configuration into
+/etc/mk.conf
 
 If you don't have a permanent Internet connection and you want to know
 which files to download, "make fetch-list" will tell you what you'll need.
@@ -211,7 +216,7 @@ at the shell prompt to install the various components into the correct
 places on your system.
 
 Taking the top system utility as an example, we can install it on our
-system by building as shown in A.1.
+system by building as shown in appendix A.1.
 
 The program is installed under the default root of the packages tree -
 /usr/pkg. Should this not conform to your tastes, simply set the LOCALBASE
@@ -237,7 +242,9 @@ X11 tree.  We are looking at ways to change this.
 
 Some packages look in /etc/mk.conf to alter some configuration options
 at build time. Have a look at /usr/pkgsrc/mk/mk.conf.example to get an
-overview of what you can set there.
+overview of what you can set there. Environment variables such as
+LOCALBASE, and X11BASE can also be set in /etc/mk.conf to save having
+to remember to set them each time you want to use pkgsrc.
 
 
  3 Making a precompiled package
@@ -424,7 +431,7 @@ to do
 in the package directory.
 
 Besides taking care of any FreeBSDisms, be sure to provide patches to
-replace any occurance of /usr/local in any "Makefile"s in the original
+replace any occurrence of /usr/local in any "Makefile"s in the original
 package with ${PREFIX}.
 
 When you have finished a package, remember to generate the checksums
@@ -452,7 +459,7 @@ witticisms.
  * pkg/DESCR:
    A multi-line description of the piece of software.  This should include
    any credits where they are due.  Please bear in mind that others do not
-   share your sense of humour (or spelling idiosyncracies), and that others
+   share your sense of humour (or spelling idiosyncrasies), and that others
    will read everything that you write here.
 
  * pkg/PLIST:
@@ -718,7 +725,7 @@ FreeBSD port, if only from an aesthetic viewpoint.
 
 NetBSD supports many different machines, with different object formats
 like a.out and ELF, and varying abilities to do shared library and
-dynamic loading at all. To accompany this, verying commands and options
+dynamic loading at all. To accompany this, varying commands and options
 have to be passed to the compiler, linker etc. to get the Right Thing,
 which can be pretty annoying especially if you don't have all the
 machines at your hand to test things.  The "libtool" pkg can help
@@ -800,7 +807,7 @@ RCS IDs) and section 4.3 for gotchas on using patches from FreeBSD ports.
 
 One of the biggest problems with FreeBSD ports is that too many of
 them assume they will install into /usr/local, instead of honouring
-any ${PREFX} setting properly.  To change this, add something like the
+any ${PREFIX} setting properly.  To change this, add something like the
 following into your package Makefile:
 
 pre-configure:
@@ -939,7 +946,7 @@ The main targets used during the build process defined in bsd.pkg.mk are:
    system calls, and library routines which are available in NetBSD. 
    This is the process known as configuration, and is usually
    automated.  In most cases, a script is supplied with the source,
-   and its invokcation results in generation of header files,
+   and its invocation results in generation of header files,
    Makefiles, etc.
 
    If the program doesn't come with its own configure script, one can be
@@ -1314,7 +1321,7 @@ NetBSD platforms).
 isn't specified, it defaults to ``install''. If the file contains a '/', it
 is interpreted as a regular file - otherwise, the name is taken to be an
 executable file, and the PATH is searched for <file>. If the regular file
-is not found, or the exectable file is not in the path, then the
+is not found, or the executable file is not in the path, then the
 pre-requisite package will be built from the sources in <directory
 containing the package to build>. The DEPENDS definition specifies a
 package name (which contains its version number), and the directory
@@ -1365,7 +1372,7 @@ Your package may conflict with other packages a user might already have
 installed on his system, e.g. if your package installs the same set of
 files like another package in our pkgsrc tree.
 
-In this case you can set CONFLICTS to a space seperated list of packages
+In this case you can set CONFLICTS to a space separated list of packages
 (including version string) your package conflicts with.
 
 For example pkgsrc/x11/Xaw3d and pkgsrc/x11/Xaw-Xpm install provide the
@@ -1398,8 +1405,8 @@ software was released, and they put up a new distfile without changing the
 package's version number. If a package is already in pkgsrc at that time, 
 the md5 checksum will no longer match. The correct way to work around this
 is to update the package's md5 checksum to match the package on the master
-site (beware, any mirrors may not be upto date yet!), and to remove the 
-old distfile from ftp.netbsdorg's /pub/NetBSD/packages/distfiles directory.
+site (beware, any mirrors may not be up to date yet!), and to remove the 
+old distfile from ftp.netbsd.org's /pub/NetBSD/packages/distfiles directory.
 Furthermore, a mail to the package's author seems appropriate making sure
 the distfile was really updated on purpose, and that no trojan horse or so
 crept in.
