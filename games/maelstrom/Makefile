@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/01/03 17:26:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2000/07/30 05:46:24 jlam Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-2.0.6
@@ -18,11 +18,14 @@ STREK=			Star_Trek.tar.gz
 SWARS=			Star_Wars.tar.gz
 
 EXTRACT_ONLY=		${DISTNAME}
-
 WRKSRC=			${WRKDIR}/Maelstrom
 
 USE_X11BASE=		yes
-MAKE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP}
+EVAL_PREFIX+=		XPMDIR=xpm
+MAKE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP} XPMDIR=${XPMDIR}
+
+jlam:	
+	@echo ${MAKE_ENV}
 
 post-install:
 	cd ${PREFIX}/share/maelstrom && \
