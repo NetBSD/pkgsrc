@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5831 2004/05/06 04:40:04 cube Exp $
+$NetBSD: CHANGES,v 1.5832 2004/05/06 09:10:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2367,3 +2367,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mkvtoolnix to 0.8.8 [salo 2004-05-05]
 	Added antonym-1.9 [tv 2004-05-05]
 	Updated ion to 20040407 [cube 2004-05-06]
+	Updated metacity to 2.8.1 [jmmv 2004-05-06]
