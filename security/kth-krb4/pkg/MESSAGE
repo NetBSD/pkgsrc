@@ -1,5 +1,5 @@
 ===============================================================================
-$NetBSD: MESSAGE,v 1.3 2001/01/29 11:34:41 wiz Exp $
+$NetBSD: MESSAGE,v 1.4 2001/08/02 12:46:50 wennmach Exp $
 
 Kth-krb4 now has been installed on your system.
 
@@ -10,7 +10,8 @@ ${PREFIX}/share/examples/kth-krb4.
 
 At a minimum, to configure a Kerberos client, copy 
 ${PREFIX}/share/examples/kth-krb4/{krb.conf,krb.realms} to /etc and
-customize them. Also, apply the patches provided in services.diff to
-/etc/services.
+customize them. Also, apply the patches provided in services-1.4.2.diff
+(for NetBSD-1.4.2) or services-1.5.diff (for NetBSD-1.5/1.5.1) 
+to /etc/services.
 
 ===============================================================================
