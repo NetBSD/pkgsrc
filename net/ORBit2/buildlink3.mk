@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/04/01 18:16:17 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/04/13 21:34:18 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ORBIT2_BUILDLINK3_MK:=	${ORBIT2_BUILDLINK3_MK}+
@@ -13,6 +13,11 @@ BUILDLINK_PACKAGES+=	ORBit2
 .if !empty(ORBIT2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.ORBit2+=	ORBit2>=2.10.0
 BUILDLINK_PKGSRCDIR.ORBit2?=	../../net/ORBit2
+
+PRINT_PLIST_AWK+=	/^@dirrm lib\/orbit-2.0$$/ \
+				{ print "@comment in ORBit2: " $$0; next; }
+PRINT_PLIST_AWK+=	/^@dirrm share\/idl$$/ \
+				{ print "@comment in ORBit2: " $$0; next; }
 .endif	# ORBIT2_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
