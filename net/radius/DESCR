@@ -1,5 +1,0 @@
-RADIUS is a standard authentication protocol.  The Merit AAA Server is
-an enhanced version which adds proxying using realms.  This package also
-includes enhancements by MR.NET for supporting S/Key passwords, proxying
-requests to an FTP server, restricting the number of simultaneous logins
-for any given account, and for defaulting the authentication realm.
