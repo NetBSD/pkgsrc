@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2003/11/12 01:31:53 salo Exp $
+# $NetBSD: Makefile,v 1.14 2003/12/13 00:45:26 wiz Exp $
 #
 
 DISTNAME=		gnome-terminal-2.0.2
 PKGNAME=		${DISTNAME:S/-/2-/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.0/}
 EXTRACT_SUFX=		.tar.bz2

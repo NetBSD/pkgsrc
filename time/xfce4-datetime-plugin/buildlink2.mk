@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/12/03 05:14:20 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/13 00:45:25 wiz Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-datetime-plugin.
 #
@@ -9,7 +9,7 @@
 XFCE4_DATETIME_PLUGIN_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-datetime-plugin
-BUILDLINK_DEPENDS.xfce4-datetime-plugin?=		xfce4-datetime-plugin>=0.2
+BUILDLINK_DEPENDS.xfce4-datetime-plugin?=		xfce4-datetime-plugin>=0.2nb1
 BUILDLINK_PKGSRCDIR.xfce4-datetime-plugin?=		../../time/xfce4-datetime-plugin
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-datetime-plugin=xfce4-datetime-plugin

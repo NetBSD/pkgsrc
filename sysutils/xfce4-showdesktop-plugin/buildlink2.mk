@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/09/27 06:57:16 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/12/13 00:45:25 wiz Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-showdesktop-plugin.
 #
@@ -9,7 +9,7 @@
 XFCE4_SHOWDESKTOP_PLUGIN_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-showdesktop-plugin
-BUILDLINK_DEPENDS.xfce4-showdesktop-plugin?=		xfce4-showdesktop-plugin>=0.1.1
+BUILDLINK_DEPENDS.xfce4-showdesktop-plugin?=		xfce4-showdesktop-plugin>=0.1.1nb1
 BUILDLINK_PKGSRCDIR.xfce4-showdesktop-plugin?=		../../sysutils/xfce4-showdesktop-plugin
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-showdesktop-plugin=xfce4-showdesktop-plugin
