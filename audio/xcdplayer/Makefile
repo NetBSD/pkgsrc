@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2001/10/25 17:26:01 agc Exp $
+# $NetBSD: Makefile,v 1.11 2003/02/25 02:22:29 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/04/01 23:08:24 swallace Exp
 #
 
 DISTNAME=       xcdplayer-2.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.x.org/R5contrib/ \
 		ftp://ftp.cdrom.com/pub/X11/R5contrib/
