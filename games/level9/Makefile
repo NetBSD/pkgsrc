@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2003/09/28 09:13:57 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/10/01 20:21:40 dillo Exp $
 #
 
 DISTNAME=		Level9_3.0_Source
 PKGNAME=		level9-3.0
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}/Unix
 CATEGORIES=		games
 MASTER_SITES=		http://www.ifarchive.org/if-archive/level9/interpreters/level9/
@@ -13,8 +14,9 @@ HOMEPAGE=		http://www.ifarchive.org/if-archive/level9/interpreters/level9/
 COMMENT=		Curses port of the Level 9 text adventure interpreter
 
 USE_BUILDLINK2=		yes
-# uses halfkey (present since 1.6M), but still doesn't work
-USE_NCURSES=		yes
+# uses halfkey (present since 1.6M)
+INCOMPAT_CURSES+=	NetBSD-1.4[Y-Z]* NetBSD-1.5* NetBSD-1.6 NetBSD-1.6.*
+INCOMPAT_CURSES+=	NetBSD-1.6[A-L]*
 
 post-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
