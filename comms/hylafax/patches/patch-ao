@@ -1,0 +1,31 @@
+$NetBSD: patch-ao,v 1.6 2003/09/23 21:39:48 abs Exp $
+
+--- hfaxd/User.c++.orig	Sat Feb  8 22:49:53 2003
++++ hfaxd/User.c++
+@@ -218,7 +218,7 @@ HylaFAXServer::userName(u_int id)
+     if (id == uid)				// user currently logged in
+ 	return (const char*) the_user;
+     if (id == FAXUID_ANON)			// anonymous user
+-	return "fax";
++	return FAX_USER;
+     if (idcache == NULL)			// load cache from file
+ 	fillIDCache();
+     const fxStr* hit = idcache->find(id);	// check cache
+@@ -237,7 +237,7 @@ HylaFAXServer::userID(const char* name, 
+ {
+     if (name == the_user)
+ 	id = uid;
+-    else if (strcmp(name, "fax") == 0)
++    else if (strcmp(name, FAX_USER) == 0)
+ 	id = FAXUID_ANON;
+     else {
+ 	if (idcache == NULL)
+@@ -324,7 +324,7 @@ HylaFAXServer::findUser(FILE* db, const 
+     if (faxuid < FAXUID_MAX)
+ 	SetBit(FAXUID_RESV);			// reserved uid
+     else
+-	logError("Internal error, \"fax\" UID (%u) too large.", faxuid);
++	logError("Internal error, \"" FAX_USER "\" UID (%u) too large.", faxuid);
+     SetBit(FAXUID_ANON);			// anonymous uid is reserved
+     while (nextRecord(db, line, sizeof (line))) {
+ 	if (line[0] == '!')
