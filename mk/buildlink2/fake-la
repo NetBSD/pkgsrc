@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@BUILDLINK_SHELL@
 #
-# $NetBSD: fake-la,v 1.7 2003/12/03 18:37:35 erh Exp $
+# $NetBSD: fake-la,v 1.8 2003/12/08 13:38:19 salo Exp $
 
 AR="@AR@"
 AWK="@AWK@"
