@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/08/23 19:25:40 tron Exp $
+# $NetBSD: Makefile,v 1.13 1998/08/23 19:29:51 tron Exp $
 #
 
 DISTNAME=		xmame-0.33b6.1
@@ -9,10 +9,10 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		mycroft@NetBSD.ORG
 HOMEPAGE=		http://drake.dit.upm.es/~mame/
 
-CONFLICTS=		xmame-0.30.1
-
 RUN_DEPENDS=		unzip:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
+
+CONFLICTS=		xmame-0.30.1
 
 USE_X11=		yes
 USE_GMAKE=		yes
@@ -34,7 +34,7 @@ post-patch:
 	${MV} ${WRKSRC}/src/unix/netbsd_i386.c ${WRKSRC}/src/unix/netbsd.c
 
 post-install:
-	${MKDIR} -p ${MAMEDIR}
+	${MKDIR} ${MAMEDIR}
 	${CP} ${WRKSRC}/doc/xmamerc ${MAMEDIR}/xmamerc
 	@${ECHO} Remember to set MAMEDIR to ${MAMEDIR}.
 
