@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/06 09:59:06 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/09/24 16:42:07 jlam Exp $
 include/gc.h
 include/gc_cpp.h
 lib/libgc.a
 lib/libleak.a
-man/man3/gc.3.gz
+man/man3/gc.3
