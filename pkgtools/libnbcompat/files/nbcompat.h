@@ -103,16 +103,14 @@ struct {								\
 #define	LIST_INIT(head) do {						\
 	(head)->lh_first = NULL;					\
 } while (/*CONSTCOND*/0)
-#endif
+#endif /* HAVE_SYS_QUEUE_H */
 
 #ifndef LIST_EMPTY
 #define	LIST_EMPTY(head)		((head)->lh_first == NULL)
 #endif
-
 #ifndef LIST_FIRST
 #define	LIST_FIRST(head)		((head)->lh_first)
 #endif
-
 #ifndef LIST_NEXT
 #define	LIST_NEXT(elm, field)		((elm)->field.le_next)
 #endif
@@ -165,14 +163,18 @@ struct {								\
 		(head)->tqh_last = (elm)->field.tqe_prev;		\
 	*(elm)->field.tqe_prev = (elm)->field.tqe_next;			\
 } while (/*CONSTCOND*/0)
+#endif /* HAVE_SYS_QUEUE_H */
 
-/*
- * Tail queue access methods.
- */
+#ifndef TAILQ_EMPTY
 #define	TAILQ_EMPTY(head)		((head)->tqh_first == NULL)
+#endif
+#ifndef TAILQ_FIRST
 #define	TAILQ_FIRST(head)		((head)->tqh_first)
+#endif
+#ifndef TAILQ_NEXT
 #define	TAILQ_NEXT(elm, field)		((elm)->field.tqe_next)
-
+#endif
+#ifndef TAILQ_FOREACH
 #define TAILQ_FOREACH(var, head, field)					\
 	for ((var) = ((head)->tqh_first);				\
 		(var);							\
