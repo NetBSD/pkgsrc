@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2004/02/11 12:20:03 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2004/02/11 17:14:13 jmmv Exp $
 
 DISTNAME=		glib-2.2.3
-PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/glib/glib2/}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.2/ \
@@ -14,6 +14,7 @@ HOMEPAGE=		http://www.gtk.org/docs/glib_toc.html
 COMMENT=		Some useful routines for C programming
 
 BUILD_USES_MSGFMT=	yes
+
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
