@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/03/15 01:48:06 fredb Exp $
+# $NetBSD: Makefile,v 1.40 2002/03/15 01:58:35 fredb Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.14
@@ -32,14 +32,14 @@ BUILD_DEFS+=	USE_LDAP USE_XFACE
 DIST_SUBDIR=	xemacs
 EXTRA_FILES=	${DISTNAME}-elc.tar.gz ${DISTNAME}-info.tar.gz
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-PLIST_SUBST+=	DISTNAME
+PLIST_SUBST+=	DISTNAME="${DISTNAME}"
 
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(MANZ)
-PLIST_SUBST+=	ELSUFX=.gz
+PLIST_SUBST+=	ELSUFX='.gz'
 .else
-PLIST_SUBST+=	ELSUFX=
+PLIST_SUBST+=	ELSUFX=''
 .endif
 
 .if (${XAW_TYPE} == "standard")
