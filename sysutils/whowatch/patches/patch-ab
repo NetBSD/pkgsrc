@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2000/08/11 23:47:51 itojun Exp $
+BSD curses: use strlen(s) on waddnstr(w, s, 0)
+ncurses: pirnt nothing on waddnstr(w, s, 0)
+the code assumes ncurses behavior.  be explicit about the requirement.
+--- screen.c-	Fri Aug 11 22:05:43 2000
++++ screen.c	Fri Aug 11 22:06:00 2000
+@@ -118,3 +118,4 @@
+ 			i--;
+-			waddnstr(w->wd, q, p - q);
++			if (p - q != 0)
++				waddnstr(w->wd, q, p - q);
+ 			wattrset(w->wd, COLOR_PAIR(*p));
