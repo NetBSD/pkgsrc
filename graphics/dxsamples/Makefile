@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2002/03/13 17:37:05 fredb Exp $
+# $NetBSD: Makefile,v 1.9 2002/12/05 21:44:31 drochner Exp $
 
-DISTNAME=	dxsamples-4.1.3
-PKGREVISION=	1
+DISTNAME=	dxsamples-4.2.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.research.ibm.com/dx/srcDownload/srcArchive/
 
