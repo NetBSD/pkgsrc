@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/11/17 18:29:20 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/11/17 18:47:19 jlam Exp $
 
 DISTNAME=		db-4.2.52
 PKGNAME=		${DISTNAME:S/db/db4/}
@@ -47,10 +47,15 @@ CONFIGURE_ENV+=		LIBSO_LIBS="${LIBSO_LIBS}"
 
 # DB4 only want pthreads because it's really after POSIX 1003.1
 # inter-process mutexes.  In this case, we only care to use the native
-# threads.
+# threads.  We also only care if we're using a non-GCC compiler since
+# we have code to use GCC assembly for mutexes instead of 1003.1
+# mutexes.
 #
+.include "../../mk/compiler.mk"
+.if empty(PKGSRC_COMPILER:Mgcc)
 PTHREAD_OPTS+=		native
-.include "../../mk/pthread.buildlink3.mk"
+.  include "../../mk/pthread.buildlink3.mk"
+.endif
 
 post-install:
 	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/doc/html/db4
