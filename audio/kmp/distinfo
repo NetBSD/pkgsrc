@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/05/02 04:30:09 grant Exp $
+
+SHA1 (kmp-0.01.tar.bz2) = 7da2b6b71b9c41ca7429479c683cbbfc62d980c1
+Size (kmp-0.01.tar.bz2) = 486474 bytes
+SHA1 (patch-aa) = 8ca65b5df3b68b18773ca0b9c34b3e5cde21bdd6
