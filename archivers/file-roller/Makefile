@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2003/12/13 00:45:21 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/12/14 23:15:46 xtraeme Exp $
 #
 
-DISTNAME=	file-roller-2.2.4
-PKGREVISION=	3
+DISTNAME=	file-roller-2.4.1
 CATEGORIES=	archivers gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.2/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.4/}
 
 MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://fileroller.sourceforge.net/
@@ -22,9 +21,9 @@ USE_PKGLOCALEDIR=	yes
 GCONF2_SCHEMAS=		file-roller.schemas
 
 .include "../../devel/GConf2/schemas.mk"
+.include "../../devel/libbonobo/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../devel/libgnome/buildlink2.mk"
-.include "../../devel/bonobo-activation/buildlink2.mk"
 .include "../../devel/libglade2/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../sysutils/gnome-vfs2/buildlink2.mk"
