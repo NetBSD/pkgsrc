@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/09/02 08:46:24 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/09/08 17:29:46 agc Exp $
 
 DISTNAME=	xephem-3.1
 CATEGORIES=	x11
@@ -18,7 +18,7 @@ USE_PERL5=	yes
 USE_IMAKE=	yes
 USE_MOTIF=	yes
 
-LICENSE=	non-commercial-use
+LICENSE=	no-commercial-use
 
 pre-configure:
 	@(cd ${LIBSRC} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} \
