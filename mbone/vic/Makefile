@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/01/26 23:15:11 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2000/09/01 17:58:05 jwise Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/11 03:54:53 fenner Exp
 #
 
@@ -7,6 +7,8 @@ PKGNAME=	${DISTNAME:S/src//}
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	mbone tk80
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/conferencing/vic/
+
+BROKEN=		This package has not yet been updated to work with tcl-8.3.2.
 
 MAINTAINER=	is@netbsd.org
 HOMEPAGE=	http://www-nrg.ee.lbl.gov/vic/
