@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5027 2004/02/28 18:32:39 jschauma Exp $
+$NetBSD: CHANGES,v 1.5028 2004/02/28 18:37:27 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1080,3 +1080,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kdeutils to 3.2.0nb1 [jmmv 2004-02-28]
 	Added acpi-iasl [uebayasi 2004-02-28]
 	Updated eclipse to 2.1.2 [jschauma 2004-02-28]
+	Updated xboing to 2.4nb2 [snj 2004-02-28]
