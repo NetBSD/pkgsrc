@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/06/16 21:37:16 mjl Exp $
+$NetBSD: md5,v 1.2 2000/12/15 14:45:35 mjl Exp $
 
-MD5 (sci.0.3.8.tar.gz) = 3a7b1d10ad6fca3e2fdbe416dd683941
+MD5 (sci-0.5.6.tar.gz) = 5394bd56294fa2b8200d539bf34aff7c
