@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.5 2002/03/29 10:47:59 kent Exp $
+$NetBSD: distinfo,v 1.6 2002/04/05 19:20:54 kent Exp $
 
 SHA1 (gcc-2.95.3.tar.gz) = 535d27038d161c0e7c2662702e11a48aa97ef622
 Size (gcc-2.95.3.tar.gz) = 12911721 bytes
-SHA1 (protector-2.95.3-4.tar.gz) = c2eb0e3e2fc27133d27e563efc1cc9fb37044652
-Size (protector-2.95.3-4.tar.gz) = 17094 bytes
+SHA1 (protector-2.95.3-5.tar.gz) = 0e0909e8e10cd0a50e6c46ecfeb1e5f1c73c49b7
+Size (protector-2.95.3-5.tar.gz) = 17095 bytes
 SHA1 (patch-aa) = 92e1f8ee1bd0873417fe3768d25b0a3d5f97cb23
 SHA1 (patch-ab) = 06bf6155ace97794578a827f1ed66afed75aa8e9
 SHA1 (patch-ac) = aa4b7d81ac28b47a9f25ad8bae40c8e0c6184c97
 SHA1 (patch-ad) = 9eb1a304e432515ba62a1fc7e80920e89c30aa3d
-SHA1 (patch-ae) = 8197ce6b522b2899907ebfebf7d61ca532e4add9
+SHA1 (patch-ae) = 59035f3c62300e6190cfffb49a49b28e90939f41
 SHA1 (patch-af) = 85bd1eeffb2a84bff06be8b3cb73091b1d50bc60
 SHA1 (patch-ag) = 0c76dd4e1f83ef0e3109986df851df832a73f068
 SHA1 (patch-ah) = 664c351a65ee004c2d616e067f150e6c42db630c
