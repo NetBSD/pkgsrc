@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/02 00:22:20 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/05/23 00:59:15 kim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PICO_BUILDLINK3_MK:=	${PICO_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npico}
 BUILDLINK_PACKAGES+=	pico
 
 .if !empty(PICO_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.pico+=	pico>=4.6
+BUILDLINK_DEPENDS.pico+=	pico>=4.7
 BUILDLINK_PKGSRCDIR.pico?=	../../editors/pico
 .endif	# PICO_BUILDLINK3_MK
 
