@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/01/16 12:33:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/24 02:19:20 uebayasi Exp $
 
 DISTNAME=       dictd-1.8.0
 PKGNAME=        dict-client-1.8.0
@@ -21,5 +21,6 @@ FILESDIR=	${.CURDIR}/../../textproc/dict-server/files
 PATCHDIR=	${.CURDIR}/../../textproc/dict-server/patches
 DISTINFO_FILE=	${.CURDIR}/../../textproc/dict-server/distinfo
 
+# XXX This is needed by libltdl.
 .include "../../devel/libtool/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
