@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/08/25 21:50:15 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2003/03/16 14:25:36 cjep Exp $
 #
 
 DISTNAME=		sniffit.0.3.5
@@ -12,7 +12,8 @@ COMMENT=		Packet sniffer program
 
 NOT_FOR_PLATFORM=	*-*-alpha	# severe LP64 loss
 
-HAS_CONFIGURE=		YES
+GNU_CONFIGURE=		YES
+CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 USE_BUILDLINK2=		YES
 ALL_TARGET=
 
