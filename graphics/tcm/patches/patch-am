@@ -1,0 +1,17 @@
+$NetBSD: patch-am,v 1.1.1.1 2001/02/24 01:30:07 jtb Exp $
+
+--- sd/tr/trdiagram.c.orig	Fri Jun 18 15:30:17 1999
++++ sd/tr/trdiagram.c
+@@ -32,7 +32,11 @@
+ #include "trgraph.h"
+ #include "trview.h"
+ #include "diagramchecks.h"
+- 
++#ifdef __NetBSD__
++#include <limits.h>
++#define MAXINT INT_MAX
++#endif
++
+ TRDiagram::TRDiagram(Config *c, TRWindow *d, TRViewer *v, TRGraph *g): 
+ 		Diagram(c,d,v,g) {
+ 	UpdateNodeType(1);

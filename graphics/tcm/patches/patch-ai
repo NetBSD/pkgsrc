@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1.1.1 2001/02/24 01:30:06 jtb Exp $
+
+--- sd/dv/esddiagram.c.orig	Thu Feb 22 17:36:02 2001
++++ sd/dv/esddiagram.c
+@@ -56,7 +56,9 @@
+ #include "miniellipse.h"
+ #include "esddiagram.h"
+ #include <stdio.h>
++#ifndef __NetBSD__
+ #include <values.h>
++#endif
+ 
+ const int ESDDiagram::MINI_ELLIPSE_WIDTH = 8;
+ const int ESDDiagram::MINI_ELLIPSE_HEIGHT = 8;

@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/02/24 01:30:05 jtb Exp $
+
+--- st/Makefile.orig	Wed Dec 20 13:32:45 2000
++++ st/Makefile
+@@ -10,8 +10,8 @@
+ 
+ tcmt:   $(TBOBJECTS) tcmt.o
+ 	$(PURIFY) $(CC) $(CFLAGS) $(TBOBJECTS) tcmt.o \
+-	$(LIB_DIR)/libtable.a $(LIB_DIR)/libeditor.a $(LIB_DIR)/libgui.a \
+-         -o $@ $(LDFLAGS) $(LIB_DIR)/libglobal.a $(LDLIBS)
++	-L$(LIB_DIR) -ltable -leditor -lgui \
++         -o $@ $(LDFLAGS) -lglobal $(LDLIBS)
+ 	chmod a+rx $@
+ 	$(STRIP) $@
+ 	$(MV) $@ $(BIN_DIR)
