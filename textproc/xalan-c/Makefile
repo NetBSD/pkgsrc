@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/02/11 04:20:16 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/18 23:25:13 minskim Exp $
 #
 
 DISTNAME=	Xalan-C_1_6-src
@@ -13,6 +13,7 @@ COMMENT=	XSLT processor of the Apache Project
 WRKSRC=		${WRKDIR}/xml-xalan/c/src/xalanc
 USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
+USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
 .if ${LOWER_OPSYS} == "SunOS"
