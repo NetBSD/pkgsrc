@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/03/11 16:32:03 taca Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/12 10:21:33 taca Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
@@ -12,6 +12,7 @@ COMMENT=	Apache module that embeds Ruby interpreter within
 
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
+APACHE_MODULE=	YES
 DIST_SUBDIR=	ruby
 USE_RUBY=	YES
 RUBY_REQD=	1.6
