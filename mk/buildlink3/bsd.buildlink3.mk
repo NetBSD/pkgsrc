@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.122 2004/03/16 16:19:37 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.123 2004/03/16 18:23:26 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -14,6 +14,7 @@
 # BUILDLINK_PACKAGES+=	foo
 #
 # .if !empty(FOO_BUILDLINK3_MK:M+)
+# BUILDLINK_PKGBASE.foo+=	foo-lib
 # BUILDLINK_DEPENDS.foo+=	foo-lib>=1.0
 # BUILDLINK_RECOMMENDED.foo?=	foo-lib>=1.0nb1
 # BUILDLINK_PKGSRCDIR.foo?=	../../category/foo-lib
