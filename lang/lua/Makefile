@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2004/02/24 00:05:26 cube Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/05 02:31:06 xtraeme Exp $
 
-DISTNAME=	lua-5.0.1
-PKGREVISION=	1
+DISTNAME=	lua-5.0.2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
 		ftp://ftp.ntua.gr/pub/lang/lua/ \
@@ -16,28 +15,20 @@ MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
 		http://mirrors.sunsite.dk/lua/ \
 		http://ftp.chg.ru/pub/lang/lua/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc@bjan.freeshell.org
 HOMEPAGE=	http://www.lua.org/
 COMMENT=	Powerful light-weight language for extending applications
 
-USE_BUILDLINK3= yes
-MAKE_ENV+=	NOGCCERROR=yes
-
-BUILD_DIRS=	${WRKSRC}/objdir
-
-post-extract:
-	${MKDIR} ${BUILD_DIRS}
-
-post-patch:
-	${CP} ${WRKSRC}/doc/lua.1 ${BUILD_DIRS}/lua
-	${CP} ${WRKSRC}/doc/luac.1 ${BUILD_DIRS}/luac
+USE_BUILDLINK3=	yes
+ALL_TARGET=	all so
+INSTALL_TARGET=	install soinstall
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/lua
-	cd ${WRKSRC}; ${INSTALL_DATA} README COPYRIGHT	\
+	cd ${WRKSRC}; ${INSTALL_DATA} README COPYRIGHT  \
 		HISTORY ${PREFIX}/share/doc/lua
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/lua
-	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.gif	\
+	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.gif  \
 		${PREFIX}/share/doc/html/lua
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/lua
 	cd ${WRKSRC}/test && ${INSTALL_DATA} README *.lua \
