@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:07 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/03 00:47:49 fredb Exp $
 
-MD5 (hanterm-3.1.3.tar.gz) = 2cf836a7bdfbcccd2239c64fbf4b4577
+SHA1 (hanterm-3.1.4.tar.gz) = 6b88d880f78a85e46ffc7d1c448148ba551dff8f
+Size (hanterm-3.1.4.tar.gz) = 219740 bytes
 SHA1 (patch-aa) = ecb7dc3d4a4b155b3d71e873f3ce5b56c2d6a91f
