@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/01/04 17:49:41 bouyer Exp $
+# $NetBSD: Makefile,v 1.18 2000/09/26 11:09:27 agc Exp $
 #
 
 DISTNAME=	mtools-3.9.5
@@ -13,10 +13,16 @@ HOMEPAGE=	http://www.tux.org/pub/knaff/mtools/
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-CPPFLAGS+=	-I${X11BASE}/include
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
-
 INFO_FILES=	mtools.info
+
+.include "../../mk/bsd.prefs.mk"
+
+.ifdef MTOOLS_ENABLE_FLOPPYD
+USE_X11=	yes
+CPPFLAGS+=	-I${X11BASE}/include
+CONFIGURE_ARGS+=	--enable-floppyd
+.endif
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
@@ -27,12 +33,12 @@ post-patch:
 	@${RM} ${WRKSRC}/mtools
 
 post-install:
-	@if [ -x ${PREFIX}/bin/floppyd ]; then \
-	  ${CP} ${PKGDIR}/PLIST ${PLIST_SRC}; \
-	else \
-	  ${ECHO} ${RM} -f ${PREFIX}/man/man1/floppyd.1; \
-	  ${RM} -f ${PREFIX}/man/man1/floppyd.1; \
-	  ${GREP} -v /floppyd ${PKGDIR}/PLIST >${PLIST_SRC}; \
-	fi \
+.ifdef MTOOLS_ENABLE_FLOPPYD
+	${RM} -f ${PREFIX}/man/man1/floppyd.1
+	${RM} -f ${PREFIX}/bin/floppyd ${PREFIX}/bin/floppyd_installtest
+	${GREP} -v /floppyd ${PKGDIR}/PLIST >${PLIST_SRC}
+.else
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+.endif
 
 .include "../../mk/bsd.pkg.mk"
