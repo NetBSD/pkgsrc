@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/22 13:47:40 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2003/12/03 13:11:18 jmmv Exp $
 
-SHA1 (fastdep-0.15.tar.gz) = 483512eb8cfb149e6c380f39565c578deb6878f7
-Size (fastdep-0.15.tar.gz) = 59321 bytes
-SHA1 (patch-aa) = afde90825836a48a64289afead2e15b26d713d18
+SHA1 (fastdep-0.16.tar.gz) = e249ac93129f81e0aff791a442ef2dfd05edad9f
+Size (fastdep-0.16.tar.gz) = 70374 bytes
