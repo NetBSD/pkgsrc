@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:07:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/06/24 06:02:11 jlam Exp $
 
 DISTNAME=	xwatchwin
 PKGNAME=	xwatchwin-1.1.1
@@ -10,7 +10,7 @@ COMMENT=	watch a window on another X server
 
 PLIST_SRC=	${PKGDIR}/PLIST.${LOWER_OPSYS}
 
-USE_X11BASE=	yes
+USE_BUILDLINK2=	yes
 USE_IMAKE=	yes
 
 .include "../../mk/bsd.pkg.mk"
