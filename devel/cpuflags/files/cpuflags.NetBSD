@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.49 2004/06/06 22:59:30 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.50 2004/06/09 20:51:11 cube Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -85,7 +85,6 @@ case $hw_machine_arch in
 	*586-class*)			FLAGS='-march=pentium'		;;
 	*686-class*)			FLAGS='-march=pentiumpro'	;;
     esac
-    FLAGS='-march=pentium3 -mno-sse'
     ;;
 
     m68k) case $hw_model in				   # Examples
