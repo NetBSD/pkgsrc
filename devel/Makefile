@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.191 2001/04/02 14:36:13 agc Exp $
+# $NetBSD: Makefile,v 1.192 2001/04/05 13:15:13 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -34,6 +34,7 @@ SUBDIR+=	cxref
 SUBDIR+=	ddd
 SUBDIR+=	diffutils
 SUBDIR+=	dmake
+SUBDIR+=	dmalloc
 SUBDIR+=	doc++
 SUBDIR+=	electricfence
 SUBDIR+=	ffcall
