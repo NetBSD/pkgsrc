@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/08/21 20:09:29 heinz Exp $
+# $NetBSD: Makefile,v 1.21 2003/09/17 16:24:37 grant Exp $
 #
 
 DISTNAME=		gmp-4.1.2
@@ -16,8 +16,10 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-cxx --without-readline
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-M4=			${PREFIX}/bin/gm4
+USE_GCC_SHLIB=		# defined
+
 INFO_FILES=		gmp.info
+M4=			${PREFIX}/bin/gm4
 
 TEST_TARGET=		check
 
