@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1999/12/15 21:14:23 windsor Exp $
+$NetBSD: md5,v 1.3 2000/04/02 02:56:28 wiz Exp $
 
-MD5 (compupic-current-i386-Linux.tar.gz) = 2587878b5ec23e7dea9c1b335d6966a5
+MD5 (compupic-5.0.1033-i386-netbsd.tar.gz) = d42e65530f88a9fd2f9c4016572fc851
