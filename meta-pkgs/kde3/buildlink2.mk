@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/07/30 12:55:40 markd Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/08/04 20:37:04 drochner Exp $
 #
 # This Makefile fragment is included by packages that use the KDE3
 # configure-and-build process.
@@ -41,12 +41,12 @@ KDE3_BUILDLINK2_MK=	# defined
 # All KDE3 packages satisfy the requirements for USE_X11BASE.  This also
 # forces all KDE3 packages to have a common installation prefix.
 #
-USE_X11BASE=		YES
+USE_X11=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
-KDEDIR?=		${X11PREFIX}
-QTDIR?=			${X11PREFIX}/qt3
+KDEDIR?=		${PREFIX}
+QTDIR?=			${PREFIX}/qt3
 
 CONFIGURE_ARGS+=	--datadir="${KDEDIR}/share/kde"
 CONFIGURE_ARGS+=	--with-qt-dir="${QTDIR}"

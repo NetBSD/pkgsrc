@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/08/04 07:45:27 jmc Exp $
+# $NetBSD: Makefile,v 1.11 2003/08/04 20:37:05 drochner Exp $
 
 DISTNAME=	kdelibs-3.1.3
 PKGNAME=	kdelibdocs-3.1.3
@@ -11,7 +11,6 @@ COMMENT=	KDE library documentation
 BUILD_DEPENDS+=		kdoc>=3.0:../../textproc/kdoc
 DEPENDS+=		qt3-docs>=3.1.1:../../x11/qt3-docs
 
-USE_X11BASE=		yes
 NO_CONFIGURE=		yes
 
 EVAL_PREFIX+=		QT3DIR=qt3-docs

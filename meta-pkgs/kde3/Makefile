@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/30 12:55:40 markd Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/04 20:37:04 drochner Exp $
 
 DISTNAME=	kde-3.1.3
 CATEGORIES=	meta-pkgs x11 kde
@@ -24,7 +24,6 @@ DEPENDS+=	quanta-3.1.3:../../www/quanta3
 
 EXTRACT_ONLY=	# empty
 USE_BUILDLINK2=	yes
-USE_X11BASE=	yes
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
