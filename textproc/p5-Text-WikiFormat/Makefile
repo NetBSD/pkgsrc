@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/02/24 16:26:02 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/02/27 10:54:12 wiz Exp $
 #
 
 DISTNAME=	Text-WikiFormat-0.72
@@ -15,7 +15,7 @@ DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
 
 USE_BUILDLINK3=		YES
 USE_LANGUAGES=		# empty
-PERL5_USES_MODULE_BUILD=	YES
+PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
