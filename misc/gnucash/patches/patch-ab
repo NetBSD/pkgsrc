@@ -1,0 +1,13 @@
+--- Makefile.init.orig	Wed Mar  3 13:57:37 1999
++++ Makefile.init	Wed Mar  3 13:57:48 1999
+@@ -1,10 +1,6 @@
+ # Generated automatically from Makefile.init.in by configure.
+ # -*-makefile-*-
+ 
+-
+-
+-export SHELL=/bin/bash
+-
+ srcdir  = .
+ 
+ prefix=/usr/pkg
