@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: configure,v 1.1 1998/07/17 04:43:25 tsarna Exp $
+# $NetBSD: configure,v 1.2 1998/07/20 13:09:24 frueauf Exp $
 # FreeBSD Id: configure,v 1.1.1.1 1995/03/26 18:08:54 joerg Exp
 #
 # Author:		Jörg Wunsch <joerg@FreeBSD.org>
@@ -38,6 +38,10 @@ cat > ${WRKSRC}/Makefile.inc <<*EOF*
 #
 
 LOCALPREFIX = ${PREFIX}
+
+# Make sure we always install man- and catpages to have a consistent PLIST
+
+MANINSTALL= catinstall maninstall
 *EOF*
 
 # a simple Makefile to make all the subdirs
