@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6236 2004/06/20 19:07:06 dillo Exp $
+$NetBSD: CHANGES,v 1.6237 2004/06/20 19:35:00 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2969,3 +2969,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mysql4-client to 4.0.20 [xtraeme 2004-06-20]
 	Updated sylpheed-gtk2 to 0.9.11 [xtraeme 2004-06-20]
 	Updated cdrdao to 1.1.9 [dillo 2004-06-20]
+	Added pearpc-0.2.0 [xtraeme 2004-06-20]
