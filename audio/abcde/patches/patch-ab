@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2001/08/17 05:48:09 lukem Exp $
+$NetBSD: patch-ab,v 1.3 2001/09/14 22:32:13 wiz Exp $
 
---- abcde.orig	Thu Aug 16 07:39:29 2001
-+++ abcde	Fri Aug 17 15:32:59 2001
+--- abcde.orig	Wed Aug 15 23:39:29 2001
++++ abcde
 @@ -552,7 +552,7 @@
  			fi
  			# List out disc title/author and contents
@@ -29,6 +29,24 @@ $NetBSD: patch-ab,v 1.2 2001/08/17 05:48:09 lukem Exp $
  				do
  					echo $TRACK: $(grep ^TTITLE$(expr $TRACK - 1)= $ABCDETEMPDIR/cddbread.$X | cut -f2- -d= | tr -d \\r\\n) >> "$ABCDETEMPDIR/cddbchoices"
  				done
+@@ -757,7 +757,7 @@
+ 			echo $DEFAULTSTYLE >&2
+ 			VARIOUSARTISTSTYLE=$DEFAULTSTYLE
+ 		fi
+-		VARIOUSARTISTSTYLE=$(echo $VARIOUSARTISTSTYLE | xargs printf %d)
++		VARIOUSARTISTSTYLE=$(echo 0$VARIOUSARTISTSTYLE | xargs printf %d)
+ 		# If they press Enter, then the default style (0) was chosen
+ 		while [ $VARIOUSARTISTSTYLE -lt 0 ] || [ $VARIOUSARTISTSTYLE -gt 6 ]; do
+ 			echo "Invalid selection. Please choose a number between 1 and 6."
+@@ -765,7 +765,7 @@
+ 
+ 
+ 			read VARIOUSARTISTSTYLE
+-			VARIOUSARTISTSTYLE=$(echo $VARIOUSARTISTSTYLE | xargs printf %d)
++			VARIOUSARTISTSTYLE=$(echo 0$VARIOUSARTISTSTYLE | xargs printf %d)
+ 		done
+ 		if [ "$VARIOUSARTISTSTYLE" = "0" ]; then
+ 			VARIOUSARTISTSTYLE=$DEFAULTSTYLE
 @@ -926,17 +926,11 @@
  	WAVOUTPUTDIR="$OUTPUTDIR"
  fi
