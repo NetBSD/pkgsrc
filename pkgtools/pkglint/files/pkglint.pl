@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.84 2003/03/29 12:34:11 jmmv Exp $
+# $NetBSD: pkglint.pl,v 1.85 2003/04/19 03:05:16 rh Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -732,10 +732,12 @@ sub checkmakefile {
 
 	$filesdir = "files";
 	$filesdir = $1 if ($whole =~ /\nFILESDIR[+?]?=[ \t]*([^\n]+)\n/);
+	$filesdir = $1 if ($whole =~ /\nFILESDIR:?=[ \t]*([^\n]+)\n/);
 	$filesdir =~ s/\$\{.CURDIR\}/./;
 
 	$patchdir = "patches";
 	$patchdir = $1 if ($whole =~ /\nPATCHDIR[+?]?=[ \t]*([^\n]+)\n/);
+	$patchdir = $1 if ($whole =~ /\nPATCHDIR:?=[ \t]*([^\n]+)\n/);
 	$patchdir =~ s/\$\{.CURDIR\}/./;
 	$patchdir =~ s/\${PKGSRCDIR}/..\/../;
 
@@ -744,14 +746,17 @@ sub checkmakefile {
 	    $pkgdir = ".";
 	}
 	$pkgdir = $1 if ($whole =~ /\nPKGDIR[+?]?=[ \t]*([^\n]+)\n/);
+	$pkgdir = $1 if ($whole =~ /\nPKGDIR:?=[ \t]*([^\n]+)\n/);
 	$pkgdir =~ s/\$\{.CURDIR\}/./;
 
 	$scriptdir = "scripts";
 	$scriptdir = $1 if ($whole =~ /\nSCRIPTDIR[+?]?=[ \t]*([^\n]+)\n/);
+	$scriptdir = $1 if ($whole =~ /\nSCRIPTDIR:?=[ \t]*([^\n]+)\n/);
 	$scriptdir =~ s/\$\{.CURDIR\}/./;
 
 	$distinfo = "distinfo";
 	$distinfo = $1 if ($whole =~ /\nDISTINFO_FILE[+?]?=[ \t]*([^\n]+)\n/);
+	$distinfo = $1 if ($whole =~ /\nDISTINFO_FILE:?=[ \t]*([^\n]+)\n/);
 	$distinfo =~ s/\$\{.CURDIR\}/./;
 	$distinfo =~ s/\${PKGSRCDIR}/..\/../;
 
