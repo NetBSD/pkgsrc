@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/14 17:21:34 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/12 04:05:56 snj Exp $
 #
 
 DISTNAME=	xmms-nebulus-0.6.0
@@ -10,10 +10,10 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://nebulus.tuxfamily.org/
 COMMENT=	Xmms plugin that uses OpenGL
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
-.include "../../audio/xmms/buildlink2.mk"
-.include "../../devel/SDL/buildlink2.mk"
+.include "../../audio/xmms/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
