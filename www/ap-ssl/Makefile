@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/04/21 02:17:38 explorer Exp $
+# $NetBSD: Makefile,v 1.15 2000/04/24 13:45:52 tron Exp $
 #
 
 DISTNAME=	mod_ssl-2.6.3-1.3.12
@@ -6,13 +6,13 @@ PKGNAME=	ap-ssl-2.6.3
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.modssl.org/source/
 
-MAINTAINER=	tv@netbsd.org
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.modssl.org/
 
-DEPENDS=	openssl-0.9.*:../../security/openssl
-DEPENDS+=	apache-1.3.12*:../../www/apache
+DEPENDS+=	openssl>=0.9.5:../../security/openssl
+DEPENDS+=	apache-1.3.12:../../www/apache
 # For "apxs":
-BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
+BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
 
 CONFLICTS=	apache-1.3.[0123456789] apache-*modssl-* apache6-*
 
@@ -22,18 +22,18 @@ HAS_CONFIGURE=	yes
 
 fetch-depends:
 .if !defined(USE_RSAREF2) || ${USE_RSAREF2} != YES && ${USE_RSAREF2} != NO
-	@${ECHO}
-	@${ECHO} The variable USE_RSAREF2 must be set to either YES or NO
-	@${ECHO} in order to build this package.  People with no RSA
-	@${ECHO} license MUST set this variable to YES.  Users outside
-	@${ECHO} the USA MUST set this variable to NO.  RSA licensees may
-	@${ECHO} choose -- NO is faster.
+	@${ECHO} ""
+	@${ECHO} "The variable USE_RSAREF2 must be set to either YES or NO"
+	@${ECHO} "in order to build this package.  People with no RSA"
+	@${ECHO} "license MUST set this variable to YES.  Users outside"
+	@${ECHO} "the USA MUST set this variable to NO.  RSA licensees may"
+	@${ECHO} "choose -- NO is faster."
 	@${FALSE}
 .endif
 
 CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs --with-ssl=${PREFIX}
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
-CONFIUGRE_ARGS+=	--with-rsa=${PREFIX}/lib
+CONFIGURE_ARGS+=	--with-rsa=${PREFIX}/lib
 .endif
 
 post-install:
