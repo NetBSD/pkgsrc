@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.40 2002/12/16 09:18:56 salo Exp $
+# $NetBSD: defs.Darwin.mk,v 1.41 2002/12/18 06:18:14 schmonz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -85,6 +85,11 @@ PKG_CREATE_USERGROUP?=	NO				# XXX - Until then
 _DO_SHLIB_CHECKS=	yes	# on installation, fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	yes	# GNU make is standard
+.if ${OS_VERSION} >= 6.0
+_OPSYS_HAS_INET6=	yes	# IPv6 is standard
+.else
+_OPSYS_HAS_INET6=	no	# IPv6 is not standard
+.endif
 _OPSYS_HAS_JAVA=	yes	# Java is standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
