@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2001/02/27 08:48:38 tron Exp $
+
+--- i18n/Makefile.in.orig	Fri Jun 23 18:35:27 2000
++++ i18n/Makefile.in	Tue Feb 27 09:38:18 2001
+@@ -81,7 +81,7 @@
+ 
+ AUTOMAKE_OPTIONS = gnits
+ 
+-localedir = $(prefix)/share/locale
++localedir = $(prefix)/$(PKGLOCALEDIR)/locale
+ 
+ ALL_POFILES = @ALL_POFILES@
+ ALL_MOFILES = @ALL_MOFILES@

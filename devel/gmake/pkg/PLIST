@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2000/07/27 13:55:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/02/27 08:48:16 tron Exp $
 bin/gmake
 @unexec install-info --delete %D/info/make.info %D/info/dir
 info/make.info
@@ -14,12 +14,12 @@ info/make.info-9
 info/make.info-10
 @exec install-info %D/info/make.info %D/info/dir
 man/man1/gmake.1
-share/locale/de/LC_MESSAGES/make.mo
-share/locale/es/LC_MESSAGES/make.mo
-share/locale/fr/LC_MESSAGES/make.mo
-share/locale/ja/LC_MESSAGES/make.mo
-share/locale/ko/LC_MESSAGES/make.mo
-share/locale/nl/LC_MESSAGES/make.mo
-share/locale/pl/LC_MESSAGES/make.mo
-share/locale/pt_BR/LC_MESSAGES/make.mo
-share/locale/ru/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/make.mo
