@@ -1,0 +1,7 @@
+Pod::Simple is a Perl library for parsing text in the Pod ("plain
+old documentation") markup language that is typically used for
+writing documentation for Perl and for Perl modules.
+
+Pod formatters can use Pod::Simple to parse Pod documents into
+produce renderings of them in plain ASCII, in HTML, or in any number
+of other formats.
