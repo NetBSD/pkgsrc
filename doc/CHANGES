@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5337 2004/03/29 02:18:21 snj Exp $
+$NetBSD: CHANGES,v 1.5338 2004/03/29 02:48:39 perry Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1565,3 +1565,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-XML-Writer to 0.500 [minskim 2004-03-29]
 	Updated sqsh to 1.7nb3 [grant 2004-03-29]
 	Updated metamail to 2.7nb4 [snj 2004-03-29]
+	Updated clisp to 2.33 [perry 2004-03-29]
