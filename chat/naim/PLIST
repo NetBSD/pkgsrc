@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2003/07/25 10:13:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/09/24 10:14:12 xtraeme Exp $
+bin/extractbuddy.sh
 bin/naim
 bin/nicq
 bin/nirc
 bin/nlily
-bin/sendim.sh
 include/firetalk.h
 include/naim/modutil.h
 include/naim/naim.h
