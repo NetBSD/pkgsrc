@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6462 2004/07/06 09:56:38 adam Exp $
+$NetBSD: CHANGES,v 1.6463 2004/07/06 13:34:09 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3269,3 +3269,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xwpe-1.5.29a [xtraeme 2004-07-06]
 	Updated libkver to 0.5 [cube 2004-07-06]
 	Updated gtk-gnutella to 0.93.4 [adam 2004-07-06]
+	Updated pygtk to 0.6.11 [recht 2004-07-06]
