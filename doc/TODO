@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.109 2002/12/25 00:53:54 wiz Exp $
+$NetBSD: TODO,v 1.110 2002/12/25 01:15:38 uebayasi Exp $
 
 Suggested new packages
 ======================
@@ -75,7 +75,6 @@ Suggested package updates
 	o binutils-2.13.1
 	o bitchx-1.0c19 [pkg/19296]
 	o bluefish-0.8
-	o bochs-2.0
 	o bonnie++-1.03
 	o bzflag-1.7g0
 	o canna-lib-3.6.1 [pkg/19340]
