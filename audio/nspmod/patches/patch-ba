@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.2 1998/08/07 10:36:06 agc Exp $
+$NetBSD: patch-ba,v 1.3 1998/11/24 07:35:18 hubertf Exp $
 
 *** Makefile.orig	Sun Sep 17 09:18:20 1995
 --- Makefile	Fri Mar  6 05:56:27 1998
@@ -39,8 +39,8 @@ $NetBSD: patch-ba,v 1.2 1998/08/07 10:36:06 agc Exp $
 + CFLAGS_OS = -Wall
 + CFLAGS_OS += -DDAC_DEV=\"/dev/audio\"
 + CFLAGS_OS += -pedantic
-+ CFLAGS_OPT = -g
-+ CFLAGS_HIOPT = -O2 -funroll-loops
++ CFLAGS_OPT = -O6
++ CFLAGS_HIOPT = -O6 -funroll-loops
 + LDFLAGS_OS =
 + LIBS_OS =
 + DACIO_ARCH = dacio-netbsd.c
