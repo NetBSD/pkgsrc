@@ -1,5 +1,12 @@
-@comment $NetBSD: PLIST,v 1.14 2004/07/06 11:32:49 abs Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/10/05 22:09:23 tv Exp $
 bin/sun14-java
+bin/sun14-keytool
+bin/sun14-orbd
+bin/sun14-policytool
+bin/sun14-rmid
+bin/sun14-rmiregistry
+bin/sun14-servertool
+bin/sun14-tnameserv
 java/sun-1.4/.systemPrefs/.system.lock
 java/sun-1.4/.systemPrefs/.systemRootModFile
 java/sun-1.4/CHANGES

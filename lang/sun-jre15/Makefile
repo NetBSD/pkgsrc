@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/10/05 21:36:15 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/05 22:09:23 tv Exp $
 
 DISTNAME=	jre-1_5_0-linux-i586
 PKGNAME=	sun-jre15-5.0
+PKGREVISION=	1
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 Runtime Environment 1.5.0
@@ -10,7 +11,8 @@ SHORT=		JRE
 
 WRKSRC=		${WRKDIR}/jre1.5.0
 USE_PKGINSTALL=	yes
-JAVA_WRAPPERS=	java
+JAVA_WRAPPERS=	java javaws keytool orbd policytool rmid rmiregistry \
+		servertool tnameserv
 OWN_DIRS=	${JAVA_HOME}
 OWN_DIRS+=	${JAVA_HOME}/lib
 OWN_DIRS+=	${JAVA_HOME}/lib/applet
