@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/13 21:18:15 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/05 06:20:29 kristerw Exp $
 share/doc/db2latex/AUTHOR
 share/doc/db2latex/COPYING
 share/doc/db2latex/COPYRIGHT
@@ -550,6 +550,7 @@ share/examples/db2latex/test_theorem/test.pdf
 share/examples/db2latex/test_theorem/test.tex
 share/examples/db2latex/test_theorem/test.xml
 share/examples/db2latex/test_theorem/test.xsl
+share/xml/catalog
 share/xsl/db2latex/VERSION.xml
 share/xsl/db2latex/abstract.mod.xsl
 share/xsl/db2latex/admonition.mod.xsl
@@ -640,6 +641,7 @@ share/xsl/db2latex/xref.mod.xsl
 @dirrm share/xsl/db2latex/common
 @dirrm share/xsl/db2latex
 @dirrm share/xsl
+@dirrm share/xml
 @dirrm share/examples/db2latex/test_theorem
 @dirrm share/examples/db2latex/test_tables
 @dirrm share/examples/db2latex/test_subfig/figures
