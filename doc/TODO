@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.952 2003/10/17 15:01:00 jmmv Exp $
+$NetBSD: TODO,v 1.953 2003/10/18 03:29:31 grant Exp $
 
 Suggested new packages
 ======================
@@ -109,6 +109,7 @@ Suggested package updates
 	o ImageViewer-0.6.3
 	o Lesstif-0.93.91
 	o MozillaFirebird-0.7
+	o MozillaFirebird-bin-0.7 [grant]
 	o Ngraph-6.3.20 [pkg/22800]
 	o R-1.8.0
 	o TeXmacs-1.0.2.3
@@ -233,8 +234,9 @@ Suggested package updates
 	o mimedefang-2.38
 	o minicom-2.1
 	o mowitz-0.3.0
-	o mozilla-1.4.1
-	o mozilla-thunderbird-0.2
+	o mozilla-1.5
+	o mozilla-bin-1.5 [grant]
+	o mozilla-thunderbird-0.3
 	o mplayer-1.0pre2
 	o mrproject-0.9.1
 	o mtools-3.9.9
