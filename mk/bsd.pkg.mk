@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1065 2002/10/08 11:01:50 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1066 2002/10/13 08:01:27 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -86,24 +86,21 @@ _JDK_DEPMETHOD=		BUILD_DEPENDS
 .  endif
 .  if ${PKG_JVM} == "jdk"
 _JAVA_PKGBASE=		jdk
-_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/jdk-1.1.8
-_JAVA_HOME=		${_JAVA_PREFIX}
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.1.8
 DEPENDS+=		jdk-[0-9]*:../../lang/jdk
 .  elif ${PKG_JVM} == "sun-jdk14"
 _JAVA_PKGBASE=		sun-jdk14
-_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.4.0
-_JAVA_HOME=		${_JAVA_PREFIX}
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.4.0
 ${_JDK_DEPMETHOD}+=	sun-jdk14-[0-9]*:../../lang/sun-jdk14
 DEPENDS+=		sun-jre14-[0-9]*:../../lang/sun-jre14
 UNLIMIT_RESOURCES+=	datasize
 .  elif ${PKG_JVM} == "sun-jdk13"
 _JAVA_PKGBASE=		sun-jdk13
 .    if ${OPSYS} == "Darwin"
-_JAVA_PREFIX_DEFAULT=	/usr
+_JAVA_HOME_DEFAULT=	/usr
 .    else
-_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.3.1
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.3.1
 .    endif
-_JAVA_HOME=		${_JAVA_PREFIX}
 ${_JDK_DEPMETHOD}+=	sun-jdk13-[0-9]*:../../lang/sun-jdk13
 DEPENDS+=		sun-jre13-[0-9]*:../../lang/sun-jre13
 .  elif ${PKG_JVM} == "sun-jdk"
@@ -111,8 +108,7 @@ DEPENDS+=		sun-jre13-[0-9]*:../../lang/sun-jre13
 	${MACHINE_PLATFORM:MNetBSD-1.[6-9]*-i386} != "" || \
 	${MACHINE_PLATFORM:MLinux-*-i[3456]86} != ""
 _JAVA_PKGBASE=		sun-jdk1[34]*
-_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.4.0
-_JAVA_HOME=		${_JAVA_PREFIX}
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.4.0
 ${_JDK_DEPMETHOD}+=	sun-jdk1[34]-[0-9]*:../../lang/sun-jdk14
 DEPENDS+=		sun-jre1[34]-[0-9]*:../../lang/sun-jre14
 .    elif ${MACHINE_PLATFORM:MNetBSD-*-i386} != "" || \
@@ -120,29 +116,26 @@ DEPENDS+=		sun-jre1[34]-[0-9]*:../../lang/sun-jre14
 	${MACHINE_PLATFORM:MLinux-*-i[3456]86} != ""
 _JAVA_PKGBASE=		sun-jdk1[34]*
 .    if ${OPSYS} == "Darwin"
-_JAVA_PREFIX_DEFAULT=	/usr
+_JAVA_HOME_DEFAULT=	/usr
 .    else
-_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.3.1
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.3.1
 .    endif
-_JAVA_HOME=		${_JAVA_PREFIX}
 ${_JDK_DEPMETHOD}+=	sun-jdk1[34]-[0-9]*:../../lang/sun-jdk13
 DEPENDS+=		sun-jre1[34]-[0-9]*:../../lang/sun-jre13
 .    endif
 UNLIMIT_RESOURCES+=	datasize
 .  elif ${PKG_JVM} == "blackdown-jdk13"
 _JAVA_PKGBASE=		blackdown-jdk13
-_JAVA_PREFIX_DEFAULT=	${LOCALBASE}
-_JAVA_HOME=		${_JAVA_PREFIX}/java/blackdown-1.3.1
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/blackdown-1.3.1
 ${_JDK_DEPMETHOD}+=	blackdown-jdk13-[0-9]*:../../lang/blackdown-jdk13
 DEPENDS+=		blackdown-jre13-[0-9]*:../../lang/blackdown-jre13
 .  elif ${PKG_JVM} == "kaffe"
 _JAVA_PKGBASE=		kaffe
-_JAVA_PREFIX_DEFAULT=	${LOCALBASE}
-_JAVA_HOME=		${_JAVA_PREFIX}/java/kaffe
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/kaffe
 DEPENDS+=		kaffe-[0-9]*:../../lang/kaffe
 .  endif
 .  undef _UNUSED_DEPENDS
-EVAL_PREFIX+=		_JAVA_PREFIX=${_JAVA_PKGBASE}
+EVAL_PREFIX+=		_JAVA_HOME=${_JAVA_PKGBASE}
 .endif
 
 # Set the default BUILDLINK_DIR, BUILDLINK_X11PKG_DIR,  BUILDLINK_X11_DIR so
