@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.49 2002/04/04 13:58:25 seb Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.50 2002/04/12 01:50:34 hubertf Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -721,6 +721,11 @@ IRCD_HYBRID_NETWORK_DESC?=	Package Source Network
 # Possible: 5, 2, not defined
 # Default: not defined
 # [XXX: configure will locate pgpv or pgp]
+
+#IRSSI_USE_PERL=	YES
+# Build irssi with perl so you can load scripts written in perl.
+# Possible: YES, not defined
+# Default: not defined
 
 #JB_FQHOSTNAME=
 # Used by jitterbug package to include the fully-qualified domain name
