@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/12 10:28:45 rh Exp $
+libexec/identd
