@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/28 17:50:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2003/08/08 11:12:31 hubertf Exp $
 #
 
 DISTNAME=	fluxbox-0.9.4
@@ -19,25 +19,25 @@ GNU_CONFIGURE=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
-FLUKEBOX_USE_XINERAMA?=	NO
-.if !empty(FLUKEBOX_USE_XINERAMA:M[Yy][Ee][Ss])
+FLUXBOX_USE_XINERAMA?=	NO
+.if !empty(FLUXBOX_USE_XINERAMA:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-xinerama
 .endif
 
-FLUKEBOX_USE_KDE?=	NO
-.if !empty(FLUKEBOX_USE_KDE:M[Yy][Ee][Ss])
+FLUXBOX_USE_KDE?=	NO
+.if !empty(FLUXBOX_USE_KDE:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-kde
 .endif
 
-FLUKEBOX_USE_GNOME?=	NO
-.if !empty(FLUKEBOX_USE_GNOME:M[Yy][Ee][Ss])
+FLUXBOX_USE_GNOME?=	NO
+.if !empty(FLUXBOX_USE_GNOME:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-gnome
 .elseif
 CONFIGURE_ARGS+=	--disable-gnome
 .endif
 
-FLUKEBOX_USE_XFT?=	YES
-.if !empty(FLUKEBOX_USE_XFT:M[Yy][Ee][Ss])
+FLUXBOX_USE_XFT?=	YES
+.if !empty(FLUXBOX_USE_XFT:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-xft
 .include "../../fonts/Xft2/buildlink2.mk"
 .elseif
