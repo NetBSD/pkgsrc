@@ -1,0 +1,11 @@
+--- ./dict.c.org	Sun Jun 19 17:05:23 1994
++++ ./dict.c	Thu Mar 28 20:51:18 1996
+@@ -28,7 +28,7 @@
+ #include <stdio.h>
+ #include <ctype.h>
+ #include <string.h>
+-#include <malloc.h>
++#include <stdlib.h>
+ #include "kakasi.h"
+ #include "J2.h"
+ 
