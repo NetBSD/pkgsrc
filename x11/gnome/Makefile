@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2002/03/13 17:37:55 fredb Exp $
+# $NetBSD: Makefile,v 1.29 2002/03/16 08:45:40 rh Exp $
 
-DISTNAME=	gnome-1.4.0.5
-PKGREVISION=	1
+DISTNAME=	gnome-1.4.0.6
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -24,7 +23,7 @@ DEPENDS+=	gnome-media>=1.2.0:../../audio/gnome-media
 DEPENDS+=	gnome-pim>=1.4.0:../../misc/gnome-pim
 DEPENDS+=	gnome-users-guide>=1.2:../gnome-users-guide
 DEPENDS+=	gnome-utils>=1.4.1:../../misc/gnome-utils
-DEPENDS+=	evolution>=0.15nb1:../../mail/evolution
+DEPENDS+=	evolution>=1.0.2:../../mail/evolution
 DEPENDS+=	gnumeric>=0.75:../../math/gnumeric0
 DEPENDS+=	gtk-->=1.2.5:../gtk--
 DEPENDS+=	gtk-engines>=0.12:../gtk-engines
