@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.282 1999/06/14 01:56:52 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.283 1999/06/23 17:06:21 christos Exp $
 #
 # This file is in the public domain.
 #
@@ -48,6 +48,9 @@ LOCALBASE?=		${DESTDIR}/usr/pkg
 DEF_UMASK?=		022
 X11BASE?=		${DESTDIR}/usr/openwin
 .elif (${OPSYS} == "OpenBSD")
+DEF_UMASK?=		022
+NOMANCOMPRESS?=		yes
+.elif (${OPSYS} == "Linux")
 DEF_UMASK?=		022
 NOMANCOMPRESS?=		yes
 .endif
@@ -164,14 +167,8 @@ FETCH_CMD?=		/usr/bin/ftp
 # By default, distfiles have no restrictions placed on them
 MIRROR_DISTFILE?=	yes
 
-TOUCH?=			/usr/bin/touch
 TOUCH_FLAGS?=		-f
 
-.if (${OPSYS} == "SunOS")
-PATCH?=			${LOCALBASE}/bin/patch -b
-.else
-PATCH?=			/usr/bin/patch
-.endif
 PATCH_STRIP?=		-p0
 PATCH_DIST_STRIP?=	-p0
 .if defined(PATCH_DEBUG) || defined(PKG_VERBOSE)
@@ -220,7 +217,7 @@ EXTRACT_ELEMENTS?=
 .if defined(EXTRACT_USING_PAX)
 EXTRACT_CMD?=		(${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} ; dd if=/dev/zero bs=10k count=2) | ${PAX} -r ${EXTRACT_ELEMENTS}
 .else
-EXTRACT_CMD?=		${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | /usr/bin/tar xf - ${EXTRACT_ELEMENTS}
+EXTRACT_CMD?=		${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | ${GTAR} xf - ${EXTRACT_ELEMENTS}
 .endif
 
 # Figure out where the local mtree file is
@@ -232,11 +229,6 @@ MTREE_FILE=	${PKGSRCDIR}/mk/${OPSYS}.pkg.dist
 .endif
 .endif # ! MTREE_FILE
 
-.if (${OPSYS} == "SunOS")
-MTREE_CMD?=	${LOCALBASE}/bsd/bin/mtree
-.else
-MTREE_CMD?=	/usr/sbin/mtree
-.endif
 MTREE_ARGS?=	-U -f ${MTREE_FILE} -d -e -p
 
 # Debugging levels for this file, dependent on PKG_DEBUG_LEVEL definition
@@ -350,18 +342,6 @@ MESSAGE_FILE=		${PKGDIR}/MESSAGE
 BUILD_VERSION_FILE=	${WRKDIR}/BuildVersion
 BUILD_INFO_FILE=	${WRKDIR}/BuildInfo
 
-.if (${OPSYS} == "SunOS")
-PKG_ADD?=	${LOCALBASE}/bsd/bin/pkg_add
-PKG_CREATE?=	${LOCALBASE}/bsd/bin/pkg_create
-PKG_DELETE?=	${LOCALBASE}/bsd/bin/pkg_delete
-PKG_INFO?=	${LOCALBASE}/bsd/bin/pkg_info
-.else
-PKG_ADD?=	/usr/sbin/pkg_add
-PKG_CREATE?=	/usr/sbin/pkg_create
-PKG_DELETE?=	/usr/sbin/pkg_delete
-PKG_INFO?=	/usr/sbin/pkg_info
-.endif
-
 .ifndef PKG_ARGS
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -l
 PKG_ARGS+=		-b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
@@ -415,8 +395,14 @@ IDENT?=		${LOCALBASE}/bin/ident
 LDCONFIG?=	/usr/bin/true
 LN?=		/usr/bin/ln
 MKDIR?=		/usr/bin/mkdir -p
+MTREE?=		${LOCALBASE}/bsd/bin/mtree
 MV?=		/usr/bin/mv
+PATCH?=		${LOCALBASE}/bin/patch -b
 PAX?=		/bin/pax
+PKG_ADD?=	${LOCALBASE}/bsd/bin/pkg_add
+PKG_CREATE?=	${LOCALBASE}/bsd/bin/pkg_create
+PKG_DELETE?=	${LOCALBASE}/bsd/bin/pkg_delete
+PKG_INFO?=	${LOCALBASE}/bsd/bin/pkg_info
 RM?=		/usr/bin/rm
 RMDIR?=		/usr/bin/rmdir
 SED?=		/usr/bin/sed
@@ -425,9 +411,53 @@ SH?=		/bin/ksh
 SU?=		/usr/bin/su
 TAIL?=		/usr/xpg4/bin/tail
 TEST?=		/usr/bin/test
+TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/usr/bin/true
 TYPE?=		/usr/bin/type
+.elif (${OPSYS} == "Linux")
+AWK?=		/usr/bin/awk
+BASENAME?=	/bin/basename
+CAT?=		/bin/cat
+CHMOD?=		/bin/chmod
+CHOWN?=		/usr/sbin/chown
+CHGRP?=		/usr/bin/chgrp
+CP?=		/bin/cp
+ECHO?=		/bin/echo
+EGREP?=		/bin/egrep
+FALSE?=		/usr/false
+FILE?=		/usr/bin/file
+GREP?=		/usr/grep
+GTAR?=		/bin/tar
+GUNZIP_CMD?=	/usr/bin/gunzip -f
+GZCAT?=		/bin/zcat
+GZIP?=		-9
+GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
+ID?=		/usr/bin/id
+IDENT?=		/usr/bin/ident
+LDCONFIG?=	/sbin/ldconfig
+LN?=		/bin/ln
+MKDIR?=		/bin/mkdir -p
+MTREE?=		${LOCALBASE}/bsd/bin/mtree
+MV?=		/bin/mv
+PATCH?=		/usr/bin/patch
+PAX?=		/usr/local/bsd/bin/pax
+PKG_ADD?=	${LOCALBASE}/bsd/bin/pkg_add
+PKG_CREATE?=	${LOCALBASE}/bsd/bin/pkg_create
+PKG_DELETE?=	${LOCALBASE}/bsd/bin/pkg_delete
+PKG_INFO?=	${LOCALBASE}/bsd/bin/pkg_info
+RM?=		/bin/rm
+RMDIR?=		/bin/rmdir
+SED?=		/bin/sed
+SETENV?=	/usr/bin/env
+SH?=		/bin/sh
+SU?=		/bin/su
+TAIL?=		/usr/bin/tail
+TEST?=		/bin/test
+TOUCH?=		/bin/touch
+TR?=		/usr/bin/tr
+TRUE?=		/bin/true
+TYPE?=		type
 .else
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
@@ -451,8 +481,14 @@ IDENT?=		/usr/bin/ident
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 MKDIR?=		/bin/mkdir -p
+MTREE?=		/usr/sbin/mtree
 MV?=		/bin/mv
+PATCH?=		/usr/bin/patch
 PAX?=		/bin/pax
+PKG_ADD?=	/usr/sbin/pkg_add
+PKG_CREATE?=	/usr/sbin/pkg_create
+PKG_DELETE?=	/usr/sbin/pkg_delete
+PKG_INFO?=	/usr/sbin/pkg_info
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
 SED?=		/usr/bin/sed
@@ -461,6 +497,7 @@ SH?=		/bin/sh
 SU?=		/usr/bin/su
 TAIL?=		/usr/bin/tail
 TEST?=		/bin/test
+TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/usr/bin/true
 TYPE?=		type
@@ -1107,7 +1144,7 @@ root-install:
 			if [ ! -d ${PREFIX} ]; then			\
 				mkdir -p ${PREFIX};			\
 			fi;						\
-			${MTREE_CMD} ${MTREE_ARGS} ${PREFIX}/;		\
+			${MTREE} ${MTREE_ARGS} ${PREFIX}/;		\
 		fi;							\
 	else								\
 		${ECHO_MSG} "Warning: not superuser, can't run mtree."; \
@@ -1132,7 +1169,7 @@ root-install:
 .endfor
 	${_PKG_SILENT}(${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
 		'^([^/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
-		${PLIST_SRC} || /usr/bin/true`;				\
+		${PLIST_SRC} || ${TRUE}`;				\
 	if [ X"${MANCOMPRESSED}" != X"" -a X"${MANZ}" = X"" ]; then	\
 		${ECHO_MSG} "===>   [Automatic manual page handling]";	\
 		${ECHO_MSG} "===>   Decompressing manual pages for ${PKGNAME}";	\
