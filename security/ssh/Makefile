@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 1999/09/06 05:30:19 sommerfeld Exp $
+# $NetBSD: Makefile,v 1.59 1999/09/08 22:18:04 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -13,7 +13,6 @@ HOMEPAGE=		http://www.cs.hut.fi/ssh/
 
 RESTRICTED=		"Crypto; export-controlled"
 MIRROR_DISTFILE=	no
-IS_INTERACTIVE=		YES
 LICENSE=		no-commercial-use
 
 CFLAGS=			-O2
