@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/21 21:55:25 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/21 22:48:22 adrianp Exp $
 
 DISTNAME=	mod_auth_ldap2.16
 PKGNAME=	ap2-auth-ldap-2.16
@@ -16,7 +16,7 @@ APACHE_MODULE_NAME=	mod_auth_ldap
 USE_LIBTOOL=		YES
 CPPFLAGS+=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lldap -llber
 
-BUILDLINK_DEPENDS.apache?=      apache>=2.0.47
+BUILDLINK_DEPENDS.apache+=	apache>=2.0.47
 
 CONFIGURE_ARGS+=	--with-apxs=${APXS}
 CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap}
