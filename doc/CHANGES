@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2476 2003/06/10 09:58:19 wiz Exp $
+$NetBSD: CHANGES,v 1.2477 2003/06/10 10:13:28 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2420,3 +2420,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dctc to 0.84.1nb2 [wiz 2003-06-10]
 	Updated cfengine2 to 2.0.7p3nb1 [wiz 2003-06-10]
 	Updated ap2-subversion to 0.23.0nb1 [wiz 2003-06-10]
+	Updated pango to 1.2.3 [jmmv 2003-06-10]
