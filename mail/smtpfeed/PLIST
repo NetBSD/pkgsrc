@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:01:22 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/21 11:25:23 taca Exp $
 libexec/smtpfeed
 share/doc/smtpfeed/COPYRIGHT
 share/doc/smtpfeed/FEATURES
@@ -17,4 +17,6 @@ share/doc/smtpfeed/RELEASE.NOTE
 share/doc/smtpfeed/SIGNAL
 share/doc/smtpfeed/SIGNAL.j
 share/doc/smtpfeed/TODO
+share/man/man8/smtpeed.8
+share/man/cat8/smtpeed.0
 @dirrm share/doc/smtpfeed
