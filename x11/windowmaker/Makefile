@@ -1,10 +1,10 @@
 # New ports collection makefile for:	WindowMaker
 # Version required:	0.6.3
 # Date created:		August 13, 1997
-# Whom (FreeBSD):	handy@physics.montana.edu
-# Whom (NetBSD):	explorer@netbsd.org
+# Whom:			handy@physics.montana.edu (FreeBSD)
+# 			explorer@netbsd.org (NetBSD)
 #
-# $NetBSD: Makefile,v 1.2 1998/01/09 09:27:33 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/25 00:27:34 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/11/04 10:33:43 tg Exp
 #
 
