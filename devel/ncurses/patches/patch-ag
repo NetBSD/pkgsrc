@@ -1,13 +1,52 @@
-$NetBSD: patch-ag,v 1.1 1999/07/06 07:51:05 jlam Exp $
+$NetBSD: patch-ag,v 1.2 2000/01/15 18:39:31 jlam Exp $
 
---- test/Makefile.in.orig	Wed Feb 11 07:14:05 1998
-+++ test/Makefile.in	Tue Jun 29 05:10:01 1999
-@@ -65,7 +65,7 @@
- MATH_LIB	= @MATH_LIB@
+--- progs/Makefile.in.orig	Sat May 30 20:07:33 1998
++++ progs/Makefile.in	Sat Jan 15 11:24:46 2000
+@@ -102,7 +102,7 @@
+ AUTO_SRC = \
+ 	termsort.c
  
- LD		= @LD@
--LINK		= $(CC)
-+LINK		= $(LIBTOOL) --mode=link $(CC)
+-PROGS = tic$x toe$x infocmp$x clear$x tput$x tset$x
++PROGS = tic$x toe$x infocmp$x
  
- LDFLAGS		= @LD_MODEL@ @TEST_ARGS@ @LIBS@ @EXTRA_LIBS@ @LOCAL_LDFLAGS@ @LDFLAGS@
+ TESTPROGS = mvcur$x tctest$x hardscroll$x hashmap$x
  
+@@ -122,32 +122,22 @@
+ uninstall.libs:
+ 
+ install.progs: $(PROGS) $(INSTALL_PREFIX)$(bindir)
+-	$(INSTALL_PROGRAM) tic$x     $(INSTALL_PREFIX)$(bindir)/tic$x
+-	$(INSTALL_PROGRAM) toe$x     $(INSTALL_PREFIX)$(bindir)/toe$x
+-	$(INSTALL_PROGRAM) infocmp$x $(INSTALL_PREFIX)$(bindir)/infocmp$x
+-	$(INSTALL_PROGRAM) clear$x   $(INSTALL_PREFIX)$(bindir)/clear$x
+-	$(INSTALL_PROGRAM) tput$x    $(INSTALL_PREFIX)$(bindir)/tput$x
+-	$(INSTALL_PROGRAM) tset$x    $(INSTALL_PREFIX)$(bindir)/tset$x
++	$(LIBTOOL) $(INSTALL_PROGRAM) tic$x     $(INSTALL_PREFIX)$(bindir)/tic$x
++	$(LIBTOOL) $(INSTALL_PROGRAM) toe$x     $(INSTALL_PREFIX)$(bindir)/toe$x
++	$(LIBTOOL) $(INSTALL_PROGRAM) infocmp$x $(INSTALL_PREFIX)$(bindir)/infocmp$x
+ 	@echo "linking captoinfo to tic"
+ 	-@rm -f $(INSTALL_PREFIX)$(bindir)/captoinfo$x
+ 	(cd $(INSTALL_PREFIX)$(bindir) && $(LN_S) tic$x captoinfo$x)
+ 	@echo "linking infotocap to tic"
+ 	-@rm -f $(INSTALL_PREFIX)$(bindir)/infotocap$x
+ 	(cd $(INSTALL_PREFIX)$(bindir) && $(LN_S) tic$x infotocap$x)
+-	@echo "linking reset to tset"
+-	-@rm -f $(INSTALL_PREFIX)$(bindir)/reset$x
+-	(cd $(INSTALL_PREFIX)$(bindir) && $(LN_S) tset$x reset$x)
+ 
+ uninstall.progs:
+-	-@rm -f $(INSTALL_PREFIX)$(bindir)/tic$x
+-	-@rm -f $(INSTALL_PREFIX)$(bindir)/toe$x
+-	-@rm -f $(INSTALL_PREFIX)$(bindir)/infocmp$x
+-	-@rm -f $(INSTALL_PREFIX)$(bindir)/clear$x
+-	-@rm -f $(INSTALL_PREFIX)$(bindir)/tput$x
+-	-@rm -f $(INSTALL_PREFIX)$(bindir)/tset$x
++	-@$(LIBTOOL) rm -f $(INSTALL_PREFIX)$(bindir)/tic$x
++	-@$(LIBTOOL) rm -f $(INSTALL_PREFIX)$(bindir)/toe$x
++	-@$(LIBTOOL) rm -f $(INSTALL_PREFIX)$(bindir)/infocmp$x
+ 	-@rm -f $(INSTALL_PREFIX)$(bindir)/captoinfo$x
+ 	-@rm -f $(INSTALL_PREFIX)$(bindir)/infotocap$x
+-	-@rm -f $(INSTALL_PREFIX)$(bindir)/reset$x
+ 
+ $(INSTALL_PREFIX)$(bindir) :
+ 	$(srcdir)/../mkinstalldirs $@
