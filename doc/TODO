@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1642 2004/04/19 15:31:31 wiz Exp $
+$NetBSD: TODO,v 1.1643 2004/04/19 15:32:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -143,7 +143,6 @@ Suggested package updates
 	o arj-3.10.19
 	o audacity-1.2.0
 	o avidemux-2.0.20
-	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
 	o bluefish-0.13
 	o boehm-gc-6.3alpha2
