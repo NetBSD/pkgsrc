@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9316 2005/02/26 10:08:57 wiz Exp $
+$NetBSD: CHANGES,v 1.9317 2005/02/26 11:53:41 bad Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1114,3 +1114,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-DateTime to 0.27 [wiz 2005-02-26]
 	Updated links to 2.1.0.17 [wiz 2005-02-26]
 	Updated links-gui to 2.1.0.17 [wiz 2005-02-26]
+	Updated libfwbuilder to 2.0.6 [bad 2005-02-26]
+	Updated fwbuilder to 2.0.6 [bad 2005-02-26]
