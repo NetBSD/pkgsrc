@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.165 1998/09/17 15:47:08 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.166 1998/09/21 12:22:47 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1190,10 +1190,10 @@ _PORT_USE: .USE
 			;;						\
 		esac;							\
 	fi)
-.if exists(${PKGDIR}/MESSAGE)
+.ifdef MESSAGE_FILE
 	@${ECHO_MSG} "===>   Please note the following:"
 	@${ECHO_MSG} ""
-	@${CAT} ${PKGDIR}/MESSAGE
+	@${CAT} ${MESSAGE_FILE}
 	@${ECHO_MSG} ""
 .endif
 .if !defined(NO_PKG_REGISTER)
@@ -1838,32 +1838,40 @@ fake-pkg: ${PLIST} ${DESCR}
 .if defined(FORCE_PKG_REGISTER)
 	@${RM} -rf ${PKG_DBDIR}/${PKGNAME}
 .endif
-	@if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then \
+	@if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then			\
 		${ECHO_MSG} "===>  Registering installation for ${PKGNAME}"; \
-		${MKDIR} ${PKG_DBDIR}/${PKGNAME}; \
+		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
 		${PKG_CMD} ${PKG_ARGS} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
-		${CP} ${DESCR} ${PKG_DBDIR}/${PKGNAME}/+DESC; \
-		${CP} ${COMMENT} ${PKG_DBDIR}/${PKGNAME}/+COMMENT; \
-		if [ -f ${PKGDIR}/INSTALL ]; then \
-			${CP} ${PKGDIR}/INSTALL ${PKG_DBDIR}/${PKGNAME}/+INSTALL; \
-		fi; \
-		if [ -f ${PKGDIR}/DEINSTALL ]; then \
-			${CP} ${PKGDIR}/DEINSTALL ${PKG_DBDIR}/${PKGNAME}/+DEINSTALL; \
-		fi; \
-		if [ -f ${PKGDIR}/REQ ]; then \
-			${CP} ${PKGDIR}/REQ ${PKG_DBDIR}/${PKGNAME}/+REQUIRE; \
-		fi; \
-		if [ -f ${PKGDIR}/MESSAGE ]; then \
-			${CP} ${PKGDIR}/MESSAGE ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
-		fi; \
+		${CP} ${DESCR} ${PKG_DBDIR}/${PKGNAME}/+DESC;		\
+		${CP} ${COMMENT} ${PKG_DBDIR}/${PKGNAME}/+COMMENT;	\
+		if [ -n "${INSTALL_FILE}" ]; then			\
+			if [ -e ${INSTALL_FILE} ]; then			\
+				${CP} ${INSTALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+INSTALL; \
+			fi;						\
+		fi;							\
+		if [ -n "${DEINSTALL_FILE}" ]; then			\
+			if [ -e ${DEINSTALL_FILE} ]; then		\
+				${CP} ${DEINSTALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+DEINSTALL; \
+			fi;						\
+		fi;							\
+		if [ -n "${REQ_FILE}" ]; then				\
+			if [ -e ${REQ_FILE} ]; then			\
+				${CP} ${REQ_FILE} ${PKG_DBDIR}/${PKGNAME}/+REQUIRE; \
+			fi;						\
+		fi;							\
+		if [ -n "${MESSAGE_FILE}" ]; then			\
+			if [ -e ${MESSAGE_FILE} ]; then			\
+				${CP} ${MESSAGE_FILE} ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
+			fi;						\
+		fi;							\
 		for dep in `${MAKE} package-depends ECHO_MSG=${TRUE} | sort -u`; do \
-			if [ -d ${PKG_DBDIR}/$$dep ]; then \
+			if [ -d ${PKG_DBDIR}/$$dep ]; then		\
 				if ! ${GREP} ^${PKGNAME}$$ ${PKG_DBDIR}/$$dep/+REQUIRED_BY \
-					>/dev/null 2>&1; then \
+					>/dev/null 2>&1; then		\
 					${ECHO} ${PKGNAME} >> ${PKG_DBDIR}/$$dep/+REQUIRED_BY; \
-				fi; \
-			fi; \
-		done; \
+				fi;					\
+			fi;						\
+		done;							\
 	fi
 .endif
 
