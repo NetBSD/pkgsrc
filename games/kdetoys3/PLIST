@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 13:49:16 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/02 09:12:25 skrll Exp $
 bin/amor
 bin/kaphorism
 bin/kmoon
@@ -586,8 +586,9 @@ share/kde/icons/locolor/32x32/apps/ktux.png
 @comment dirrm share/kde/icons/hicolor/32x32/apps
 @comment dirrm share/kde/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/kworldclock/pics
-@dirrm share/kde/apps/kworldclock/maps/depths
-@comment dirrm share/kde/apps/kworldclock
+@unexec ${RMDIR} %D/share/kde/apps/kworldclock/maps/depths >/dev/null || true
+@unexec ${RMDIR} %D/share/kde/apps/kworldclock/maps >/dev/null || true
+@unexec ${RMDIR} %D/share/kde/apps/kworldclock >/dev/null || true
 @dirrm share/kde/apps/kweather
 @dirrm share/kde/apps/ktux/sprites
 @dirrm share/kde/apps/ktux

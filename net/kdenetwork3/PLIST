@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 13:59:26 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/02 09:12:30 skrll Exp $
 bin/dsirc
 bin/kdict
 bin/kit
@@ -447,6 +447,8 @@ share/kde/apps/kppp/Provider/Taiwan/HiNet
 share/kde/apps/kppp/Provider/Taiwan/SeedNet
 share/kde/apps/kppp/Provider/Ukraine/.directory
 share/kde/apps/kppp/Provider/Ukraine/Adamant
+share/kde/apps/kppp/Provider/Ukraine/IPTelecom
+share/kde/apps/kppp/Provider/Ukraine/NuVse
 share/kde/apps/kppp/Provider/United_Kingdom/.directory
 share/kde/apps/kppp/Provider/United_Kingdom/Demon%032Green%0322120666
 share/kde/apps/kppp/Provider/United_Kingdom/Demon%032Purple%0322121666
@@ -727,6 +729,8 @@ share/kde/apps/kppp/Rules/Switzerland/Swisscom_Remote.rst
 share/kde/apps/kppp/Rules/Switzerland/Swisscom_Surf.rst
 share/kde/apps/kppp/Rules/TEMPLATE
 share/kde/apps/kppp/Rules/Turkey/Turk_Telekom_Internet.rst
+share/kde/apps/kppp/Rules/Ukraine/IPTelecom_hourly.rst
+share/kde/apps/kppp/Rules/Ukraine/NuVse_hourly.rst
 share/kde/apps/kppp/Rules/Ukraine/TEMPLATE.uk
 share/kde/apps/kppp/Rules/Ukraine/Utel_Unet.rst
 share/kde/apps/kppp/Rules/United_Kingdom/BirminghamCable_Local.rst

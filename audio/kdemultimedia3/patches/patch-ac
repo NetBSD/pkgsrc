@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
+$NetBSD: patch-ac,v 1.2 2003/01/02 09:12:21 skrll Exp $
 
---- kaboodle/Makefile.in.orig	Tue May 14 01:53:25 2002
+--- kaboodle/Makefile.in.orig	Sat Dec 28 14:04:00 2002
 +++ kaboodle/Makefile.in
-@@ -293,7 +293,7 @@
+@@ -292,7 +292,7 @@ INCLUDES = -I$(kde_includes)/kio -I$(kde
  
  SUBDIRS = pics actions
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
  
  libkaboodlepart_la_SOURCES = conf.cpp \
  	controls.cpp \
-@@ -307,24 +307,26 @@
+@@ -306,24 +306,26 @@ libkaboodlepart_la_SOURCES = conf.cpp \
  libkaboodlepart_la_LDFLAGS = $(KDE_RPATH) $(KDE_PLUGIN) $(all_libraries) 
  libkaboodlepart_la_LIBADD = $(LIB_KFILE) $(LIB_KPARTS) -lqtmcop -lkmedia2_idl -lsoundserver_idl -lartskde
  
@@ -21,8 +21,8 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
 +kaboodle_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) -module -avoid-version
 +
 +libkaboodle_main_la_SOURCES = main.cpp \
- 	kaboodleapp.cpp \
- 	userinterface.cpp
+ 		      kaboodleapp.cpp \
+ 		      userinterface.cpp
  
  
 -kaboodle_la_LIBADD = libkaboodlepart.la
@@ -45,7 +45,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
  applnk_DATA = kaboodle.desktop
  applnkdir = $(kde_appsdir)/Multimedia
  
-@@ -337,15 +339,20 @@
+@@ -336,14 +338,19 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -59,21 +59,19 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
 +libkaboodle_main_la_DEPENDENCIES = libkaboodlepart.la
 +am_libkaboodle_main_la_OBJECTS = main.lo kaboodleapp.lo userinterface.lo
 +#>- libkaboodle_main_la_OBJECTS = $(am_libkaboodle_main_la_OBJECTS)
- #>+ 5
+ #>+ 4
 -kaboodle_la_final_OBJECTS = kaboodle_la.all_cpp.lo 
--kaboodle_la_nofinal_OBJECTS = main.lo kaboodleapp.lo userinterface.lo \
--	kaboodle_la_meta_unload.lo 
+-kaboodle_la_nofinal_OBJECTS = main.lo kaboodleapp.lo userinterface.lo
 -@KDE_USE_FINAL_FALSE@kaboodle_la_OBJECTS = $(kaboodle_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kaboodle_la_OBJECTS = $(kaboodle_la_final_OBJECTS)
 +libkaboodle_main_la_final_OBJECTS = libkaboodle_main_la.all_cpp.lo 
-+libkaboodle_main_la_nofinal_OBJECTS = main.lo kaboodleapp.lo userinterface.lo \
-+	libkaboodle_main_la_meta_unload.lo 
++libkaboodle_main_la_nofinal_OBJECTS = main.lo kaboodleapp.lo userinterface.lo
 +@KDE_USE_FINAL_FALSE@libkaboodle_main_la_OBJECTS = $(libkaboodle_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkaboodle_main_la_OBJECTS = $(libkaboodle_main_la_final_OBJECTS)
  libkaboodlepart_la_DEPENDENCIES =
  am_libkaboodlepart_la_OBJECTS = conf.lo controls.lo engine.lo \
  	kaboodle_factory.lo kaboodle_part.lo player.lo videoembed.lo
-@@ -360,11 +367,11 @@
+@@ -357,11 +364,11 @@ libkaboodlepart_la_nofinal_OBJECTS = con
  bin_PROGRAMS = kaboodle$(EXEEXT)
  PROGRAMS = $(bin_PROGRAMS)
  
@@ -88,19 +86,42 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -373,8 +380,9 @@
+@@ -370,23 +377,26 @@ LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/conf.Plo $(DEPDIR)/controls.Plo \
--	@AMDEP_TRUE@	$(DEPDIR)/dummy.Po $(DEPDIR)/engine.Plo \
--	@AMDEP_TRUE@	$(DEPDIR)/kaboodle_factory.Plo \
-+	@AMDEP_TRUE@	$(DEPDIR)/engine.Plo $(DEPDIR)/kaboodle_factory.Plo \
-+	@AMDEP_TRUE@	$(DEPDIR)/kaboodle_main.Plo \
-+	@AMDEP_TRUE@	$(DEPDIR)/kaboodle_main.Po \
- 	@AMDEP_TRUE@	$(DEPDIR)/kaboodle_part.Plo \
- 	@AMDEP_TRUE@	$(DEPDIR)/kaboodleapp.Plo $(DEPDIR)/main.Plo \
- 	@AMDEP_TRUE@	$(DEPDIR)/player.Plo $(DEPDIR)/userinterface.Plo \
-@@ -398,8 +406,8 @@
+ #>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/conf.Plo $(DEPDIR)/controls.Plo \
+-#>- @AMDEP_TRUE@	$(DEPDIR)/dummy.Po $(DEPDIR)/engine.Plo \
+-#>- @AMDEP_TRUE@	$(DEPDIR)/kaboodle_factory.Plo \
++#>- @AMDEP_TRUE@	$(DEPDIR)/engine.Plo $(DEPDIR)/kaboodle_factory.Plo \
++#>- @AMDEP_TRUE@	$(DEPDIR)/kaboodle_main.Plo \
++#>- @AMDEP_TRUE@	$(DEPDIR)/kaboodle_main.Po \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/kaboodle_part.Plo \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/kaboodleapp.Plo $(DEPDIR)/main.Plo \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/player.Plo $(DEPDIR)/userinterface.Plo \
+ #>- @AMDEP_TRUE@	$(DEPDIR)/videoembed.Plo
+-#>+ 15
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/kaboodle_la.all_cpp.P $(DEPDIR)/libkaboodlepart_la.all_cpp.P  $(DEPDIR)/conf.Plo $(DEPDIR)/controls.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/dummy.Po $(DEPDIR)/engine.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kaboodle_factory.Plo \
++#>+ 17
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/libkaboodle_main_la.all_cpp.P $(DEPDIR)/libkaboodlepart_la.all_cpp.P  $(DEPDIR)/conf.Plo $(DEPDIR)/controls.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/engine.Plo $(DEPDIR)/kaboodle_factory.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kaboodle_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kaboodle_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kaboodle_part.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kaboodleapp.Plo $(DEPDIR)/main.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/player.Plo $(DEPDIR)/userinterface.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/videoembed.Plo
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   $(DEPDIR)/conf.Plo $(DEPDIR)/controls.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/dummy.Po $(DEPDIR)/engine.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kaboodle_factory.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/engine.Plo $(DEPDIR)/kaboodle_factory.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kaboodle_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kaboodle_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kaboodle_part.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kaboodleapp.Plo $(DEPDIR)/main.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/player.Plo $(DEPDIR)/userinterface.Plo \
+@@ -411,8 +421,8 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
@@ -111,7 +132,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
  DATA = $(applnk_DATA) $(data_DATA) $(kde_services_DATA)
  
  
-@@ -409,7 +417,7 @@
+@@ -422,7 +432,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  	uninstall-recursive check-recursive installcheck-recursive
  DIST_COMMON = AUTHORS Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
@@ -120,7 +141,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -458,6 +466,8 @@
+@@ -471,6 +481,8 @@ clean-libLTLIBRARIES:
  	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
  kaboodle.la: $(kaboodle_la_OBJECTS) $(kaboodle_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kaboodle_la_LDFLAGS) $(kaboodle_la_OBJECTS) $(kaboodle_la_LIBADD) $(LIBS)
@@ -129,7 +150,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
  #>- libkaboodlepart.la: $(libkaboodlepart_la_OBJECTS) $(libkaboodlepart_la_DEPENDENCIES) 
  #>+ 2
  @KDE_USE_CLOSURE_TRUE@libkaboodlepart.la: libkaboodlepart.la.closure $(libkaboodlepart_la_OBJECTS) $(libkaboodlepart_la_DEPENDENCIES) 
-@@ -499,9 +509,10 @@
+@@ -512,9 +524,10 @@ distclean-compile:
  
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/conf.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/controls.Plo@am__quote@
@@ -141,16 +162,16 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kaboodle_part.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kaboodleapp.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Plo@am__quote@
-@@ -677,7 +688,7 @@
+@@ -690,7 +703,7 @@ distclean-tags:
  
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=README-USERS kaboodle.desktop kaboodle_part.h conf.h kaboodle_factory.h engine.h kaboodlepartui.rc kaboodle_component.desktop videoembed.h player.h kaboodleapp.h kaboodleui.rc controls.h userinterface.h 
-+KDE_DIST=kaboodleapp.h kaboodle_factory.h libkaboodlepart.la.closure engine.h controls.h kaboodlepartui.rc kaboodleui.rc README-USERS kaboodle.desktop kaboodle_component.desktop kaboodle_part.h conf.h videoembed.h player.h dummy.cpp userinterface.h 
+-KDE_DIST=engine.h kaboodle_factory.h kaboodleapp.h kaboodle_part.h userinterface.h controls.h conf.h player.h kaboodleui.rc videoembed.h kaboodle.desktop README-USERS kaboodlepartui.rc kaboodle_component.desktop 
++KDE_DIST=kaboodleapp.h kaboodle_factory.h engine.h controls.h kaboodlepartui.rc kaboodleui.rc README-USERS kaboodle.desktop kaboodle_component.desktop kaboodle_part.h conf.h videoembed.h player.h userinterface.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -739,7 +750,6 @@
+@@ -752,7 +765,6 @@ install-strip:
  mostlyclean-generic:
  
  clean-generic:
@@ -158,7 +179,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
  
  distclean-generic:
  	-rm -f Makefile $(CONFIG_CLEAN_FILES) stamp-h stamp-h[0-9]*
-@@ -818,9 +828,6 @@
+@@ -831,9 +843,6 @@ uninstall-info: uninstall-info-recursive
  	uninstall-libLTLIBRARIES uninstall-recursive
  
  
@@ -168,91 +189,98 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
  messages: rc.cpp
  	$(XGETTEXT) rc.cpp *.cpp *.h -o $(podir)/kaboodle.pot
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
-@@ -891,16 +898,16 @@
+@@ -850,26 +859,30 @@ libkaboodlepart.la.closure: $(libkaboodl
  
- 
- #>+ 12
--kaboodle_la_meta_unload.cpp:  kaboodleapp.moc userinterface.moc
--	@echo 'creating kaboodle_la_meta_unload.cpp'
--	@-rm -f kaboodle_la_meta_unload.cpp
-+libkaboodle_main_la_meta_unload.cpp:  kaboodleapp.moc userinterface.moc
-+	@echo 'creating libkaboodle_main_la_meta_unload.cpp'
-+	@-rm -f libkaboodle_main_la_meta_unload.cpp
- 	@if test ${kde_qtver} = 2; then \
--		echo 'static const char * _metalist_kaboodle_la[] = {' > kaboodle_la_meta_unload.cpp ;\
--		cat  kaboodleapp.moc userinterface.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kaboodle_la_meta_unload.cpp ;\
--		echo '0};' >> kaboodle_la_meta_unload.cpp ;\
--		echo '#include <kunload.h>' >> kaboodle_la_meta_unload.cpp ;\
--		echo '_UNLOAD(kaboodle_la)' >> kaboodle_la_meta_unload.cpp ;\
--	else echo > kaboodle_la_meta_unload.cpp; fi
-+		echo 'static const char * _metalist_libkaboodle_main_la[] = {' > libkaboodle_main_la_meta_unload.cpp ;\
-+		cat  kaboodleapp.moc userinterface.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkaboodle_main_la_meta_unload.cpp ;\
-+		echo '0};' >> libkaboodle_main_la_meta_unload.cpp ;\
-+		echo '#include <kunload.h>' >> libkaboodle_main_la_meta_unload.cpp ;\
-+		echo '_UNLOAD(libkaboodle_main_la)' >> libkaboodle_main_la_meta_unload.cpp ;\
-+	else echo > libkaboodle_main_la_meta_unload.cpp; fi
- 
- 
- #>+ 12
-@@ -918,14 +925,14 @@
  
  #>+ 3
- clean-moc-classes:
--	-rm -f  kaboodle_la_meta_unload.cpp libkaboodlepart_la_meta_unload.cpp
-+	-rm -f  libkaboodle_main_la_meta_unload.cpp libkaboodlepart_la_meta_unload.cpp
+-engine.moc: $(srcdir)/engine.h
+-	$(MOC) $(srcdir)/engine.h -o engine.moc
++kaboodle_part.moc: $(srcdir)/kaboodle_part.h
++	$(MOC) $(srcdir)/kaboodle_part.h -o kaboodle_part.moc
+ 
+ #>+ 3
+-userinterface.moc: $(srcdir)/userinterface.h
+-	$(MOC) $(srcdir)/userinterface.h -o userinterface.moc
++controls.moc: $(srcdir)/controls.h
++	$(MOC) $(srcdir)/controls.h -o controls.moc
+ 
+ #>+ 3
+ kaboodleapp.moc: $(srcdir)/kaboodleapp.h
+ 	$(MOC) $(srcdir)/kaboodleapp.h -o kaboodleapp.moc
+ 
+ #>+ 3
+-kaboodle_part.moc: $(srcdir)/kaboodle_part.h
+-	$(MOC) $(srcdir)/kaboodle_part.h -o kaboodle_part.moc
++userinterface.moc: $(srcdir)/userinterface.h
++	$(MOC) $(srcdir)/userinterface.h -o userinterface.moc
+ 
+ #>+ 3
+ kaboodle_factory.moc: $(srcdir)/kaboodle_factory.h
+ 	$(MOC) $(srcdir)/kaboodle_factory.h -o kaboodle_factory.moc
+ 
+ #>+ 3
++conf.moc: $(srcdir)/conf.h
++	$(MOC) $(srcdir)/conf.h -o conf.moc
++
++#>+ 3
+ player.moc: $(srcdir)/player.h
+ 	$(MOC) $(srcdir)/player.h -o player.moc
+ 
+@@ -878,16 +891,12 @@ videoembed.moc: $(srcdir)/videoembed.h
+ 	$(MOC) $(srcdir)/videoembed.h -o videoembed.moc
+ 
+ #>+ 3
+-controls.moc: $(srcdir)/controls.h
+-	$(MOC) $(srcdir)/controls.h -o controls.moc
+-
+-#>+ 3
+-conf.moc: $(srcdir)/conf.h
+-	$(MOC) $(srcdir)/conf.h -o conf.moc
++engine.moc: $(srcdir)/engine.h
++	$(MOC) $(srcdir)/engine.h -o engine.moc
+ 
+ #>+ 3
+ clean-metasources:
+-	-rm -f  engine.moc userinterface.moc kaboodleapp.moc kaboodle_part.moc kaboodle_factory.moc player.moc videoembed.moc controls.moc conf.moc
++	-rm -f  kaboodle_part.moc controls.moc kaboodleapp.moc userinterface.moc kaboodle_factory.moc conf.moc player.moc videoembed.moc engine.moc
+ 
+ #>+ 3
+ clean-closures:
+@@ -904,19 +913,19 @@ force-reedit:
+ 
  
  #>+ 11
--kaboodle_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kaboodleapp.cpp $(srcdir)/userinterface.cpp kaboodle_la_meta_unload.cpp  
-+kaboodle_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaboodle_main.cpp  
- 	@echo 'creating kaboodle_la.all_cpp.cpp ...'; \
- 	rm -f kaboodle_la.all_cpp.files kaboodle_la.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> kaboodle_la.all_cpp.final; \
--	for file in main.cpp kaboodleapp.cpp userinterface.cpp kaboodle_la_meta_unload.cpp ; do \
-+	for file in kaboodle_main.cpp ; do \
- 	  echo "#include \"$$file\"" >> kaboodle_la.all_cpp.files; \
- 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kaboodle_la.all_cpp.final; \
- 	done; \
-@@ -933,7 +940,19 @@
- 	rm -f kaboodle_la.all_cpp.final kaboodle_la.all_cpp.files
- 
- #>+ 11
--libkaboodlepart_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/conf.cpp $(srcdir)/controls.cpp $(srcdir)/engine.cpp $(srcdir)/kaboodle_factory.cpp $(srcdir)/kaboodle_part.cpp $(srcdir)/player.cpp $(srcdir)/videoembed.cpp libkaboodlepart_la_meta_unload.cpp   kaboodle_part.moc controls.moc kaboodleapp.moc userinterface.moc kaboodle_factory.moc conf.moc player.moc videoembed.moc engine.moc 
-+libkaboodle_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kaboodleapp.cpp $(srcdir)/userinterface.cpp libkaboodle_main_la_meta_unload.cpp  
+-kaboodle_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kaboodleapp.cpp $(srcdir)/userinterface.cpp  userinterface.moc kaboodleapp.moc
+-	@echo 'creating kaboodle_la.all_cpp.cpp ...'; \
+-	rm -f kaboodle_la.all_cpp.files kaboodle_la.all_cpp.final; \
+-	echo "#define KDE_USE_FINAL 1" >> kaboodle_la.all_cpp.final; \
++libkaboodle_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kaboodleapp.cpp $(srcdir)/userinterface.cpp  kaboodleapp.moc userinterface.moc
 +	@echo 'creating libkaboodle_main_la.all_cpp.cpp ...'; \
 +	rm -f libkaboodle_main_la.all_cpp.files libkaboodle_main_la.all_cpp.final; \
 +	echo "#define KDE_USE_FINAL 1" >> libkaboodle_main_la.all_cpp.final; \
-+	for file in main.cpp kaboodleapp.cpp userinterface.cpp libkaboodle_main_la_meta_unload.cpp ; do \
+ 	for file in main.cpp kaboodleapp.cpp userinterface.cpp ; do \
+-	  echo "#include \"$$file\"" >> kaboodle_la.all_cpp.files; \
+-	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kaboodle_la.all_cpp.final; \
 +	  echo "#include \"$$file\"" >> libkaboodle_main_la.all_cpp.files; \
 +	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkaboodle_main_la.all_cpp.final; \
-+	done; \
-+	cat libkaboodle_main_la.all_cpp.final libkaboodle_main_la.all_cpp.files  > libkaboodle_main_la.all_cpp.cpp; \
+ 	done; \
+-	cat kaboodle_la.all_cpp.final kaboodle_la.all_cpp.files > kaboodle_la.all_cpp.cpp; \
+-	rm -f kaboodle_la.all_cpp.final kaboodle_la.all_cpp.files
++	cat libkaboodle_main_la.all_cpp.final libkaboodle_main_la.all_cpp.files > libkaboodle_main_la.all_cpp.cpp; \
 +	rm -f libkaboodle_main_la.all_cpp.final libkaboodle_main_la.all_cpp.files
-+
-+#>+ 11
-+libkaboodlepart_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/conf.cpp $(srcdir)/controls.cpp $(srcdir)/engine.cpp $(srcdir)/kaboodle_factory.cpp $(srcdir)/kaboodle_part.cpp $(srcdir)/player.cpp $(srcdir)/videoembed.cpp $(srcdir)/libkaboodlepart_la_meta_unload.cpp   kaboodle_part.moc controls.moc kaboodleapp.moc userinterface.moc kaboodle_factory.moc conf.moc player.moc videoembed.moc engine.moc 
+ 
+ #>+ 11
+-libkaboodlepart_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/conf.cpp $(srcdir)/controls.cpp $(srcdir)/engine.cpp $(srcdir)/kaboodle_factory.cpp $(srcdir)/kaboodle_part.cpp $(srcdir)/player.cpp $(srcdir)/videoembed.cpp  kaboodle_factory.moc kaboodle_part.moc player.moc conf.moc engine.moc videoembed.moc controls.moc
++libkaboodlepart_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/conf.cpp $(srcdir)/controls.cpp $(srcdir)/engine.cpp $(srcdir)/kaboodle_factory.cpp $(srcdir)/kaboodle_part.cpp $(srcdir)/player.cpp $(srcdir)/videoembed.cpp  kaboodle_part.moc controls.moc kaboodle_factory.moc conf.moc player.moc videoembed.moc engine.moc
  	@echo 'creating libkaboodlepart_la.all_cpp.cpp ...'; \
  	rm -f libkaboodlepart_la.all_cpp.files libkaboodlepart_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> libkaboodlepart_la.all_cpp.final; \
-@@ -945,11 +964,11 @@
- 	rm -f libkaboodlepart_la.all_cpp.final libkaboodlepart_la.all_cpp.files
- 
- #>+ 11
--kaboodle.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
-+kaboodle.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaboodle_main.cpp  
- 	@echo 'creating kaboodle.all_cpp.cpp ...'; \
- 	rm -f kaboodle.all_cpp.files kaboodle.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> kaboodle.all_cpp.final; \
--	for file in dummy.cpp ; do \
-+	for file in kaboodle_main.cpp ; do \
- 	  echo "#include \"$$file\"" >> kaboodle.all_cpp.files; \
- 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kaboodle.all_cpp.final; \
- 	done; \
-@@ -958,20 +977,20 @@
+@@ -929,20 +938,20 @@ libkaboodlepart_la.all_cpp.cpp: $(srcdir
  
  #>+ 3
  clean-final:
--	-rm -f kaboodle_la.all_cpp.cpp libkaboodlepart_la.all_cpp.cpp kaboodle.all_cpp.cpp
-+	-rm -f kaboodle_la.all_cpp.cpp libkaboodle_main_la.all_cpp.cpp libkaboodlepart_la.all_cpp.cpp kaboodle.all_cpp.cpp
+-	-rm -f kaboodle_la.all_cpp.cpp libkaboodlepart_la.all_cpp.cpp
++	-rm -f libkaboodle_main_la.all_cpp.cpp libkaboodlepart_la.all_cpp.cpp
  
  #>+ 2
  final:
@@ -272,4 +300,36 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
 +	$(MAKE) libkaboodle_main_la_OBJECTS="$(libkaboodle_main_la_nofinal_OBJECTS)" libkaboodlepart_la_OBJECTS="$(libkaboodlepart_la_nofinal_OBJECTS)" install-am
  #>+ 3
  cvs-clean:
- 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean
+ 	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
+@@ -952,21 +961,21 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
+ 
+ #>+ 19
+-controls.o: controls.moc 
+-userinterface.lo: userinterface.moc 
+-kaboodle_part.o: kaboodle_part.moc 
+ videoembed.lo: videoembed.moc 
+-kaboodleapp.o: kaboodleapp.moc 
+-kaboodleapp.lo: kaboodleapp.moc 
+ videoembed.o: videoembed.moc 
+-kaboodle_factory.o: kaboodle_factory.moc 
+-engine.lo: engine.moc 
+-kaboodle_factory.lo: kaboodle_factory.moc 
+ conf.o: conf.moc 
+-kaboodle_part.lo: kaboodle_part.moc 
+ player.o: player.moc 
+-player.lo: player.moc 
+ userinterface.o: userinterface.moc 
++kaboodleapp.o: kaboodleapp.moc 
++kaboodle_factory.o: kaboodle_factory.moc 
+ controls.lo: controls.moc 
++engine.lo: engine.moc 
++kaboodle_factory.lo: kaboodle_factory.moc 
+ engine.o: engine.moc 
++controls.o: controls.moc 
+ conf.lo: conf.moc 
++kaboodleapp.lo: kaboodleapp.moc 
++player.lo: player.moc 
++kaboodle_part.o: kaboodle_part.moc 
++userinterface.lo: userinterface.moc 
++kaboodle_part.lo: kaboodle_part.moc 

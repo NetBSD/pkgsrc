@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.3 2002/08/25 19:23:36 jlam Exp $
+$NetBSD: patch-ai,v 1.4 2003/01/02 09:12:33 skrll Exp $
 
---- kcontrol/access/Makefile.in.orig	Tue Jun 25 19:31:44 2002
+--- kcontrol/access/Makefile.in.orig	Fri Dec 27 18:19:11 2002
 +++ kcontrol/access/Makefile.in
-@@ -292,16 +292,20 @@
+@@ -291,16 +291,20 @@ INCLUDES = $(all_includes)
  
  bin_PROGRAMS = kaccess
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ai,v 1.3 2002/08/25 19:23:36 jlam Exp $
  
  kcm_access_la_SOURCES = kcmaccess.cpp 
  kcm_access_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
-@@ -319,15 +323,11 @@
+@@ -318,27 +322,32 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES) $(lib_LTLIBRARIES)
  
@@ -38,10 +38,9 @@ $NetBSD: patch-ai,v 1.3 2002/08/25 19:23:36 jlam Exp $
 +kaccess_la_DEPENDENCIES = libkaccess_main.la
 +am_kaccess_la_OBJECTS = kaccess_main.lo
  #>- kaccess_la_OBJECTS = $(am_kaccess_la_OBJECTS)
--#>+ 5
+-#>+ 4
 -kaccess_la_final_OBJECTS = kaccess_la.all_cpp.lo 
--kaccess_la_nofinal_OBJECTS = kaccess.lo main.lo \
--	kaccess_la_meta_unload.lo 
+-kaccess_la_nofinal_OBJECTS = kaccess.lo main.lo
 -@KDE_USE_FINAL_FALSE@kaccess_la_OBJECTS = $(kaccess_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kaccess_la_OBJECTS = $(kaccess_la_final_OBJECTS)
 +#>+ 1
@@ -49,17 +48,14 @@ $NetBSD: patch-ai,v 1.3 2002/08/25 19:23:36 jlam Exp $
  kcm_access_la_DEPENDENCIES =
  am_kcm_access_la_OBJECTS = kcmaccess.lo
  #>- kcm_access_la_OBJECTS = $(am_kcm_access_la_OBJECTS)
-@@ -337,14 +337,23 @@
- 	kcm_access_la_meta_unload.lo 
- @KDE_USE_FINAL_FALSE@kcm_access_la_OBJECTS = $(kcm_access_la_nofinal_OBJECTS)
- @KDE_USE_FINAL_TRUE@kcm_access_la_OBJECTS = $(kcm_access_la_final_OBJECTS)
+ #>+ 1
+ kcm_access_la_OBJECTS = kcmaccess.lo
 +libkaccess_main_la_DEPENDENCIES =
 +am_libkaccess_main_la_OBJECTS = kaccess.lo main.lo
 +#>- libkaccess_main_la_OBJECTS = $(am_libkaccess_main_la_OBJECTS)
-+#>+ 5
++#>+ 4
 +libkaccess_main_la_final_OBJECTS = libkaccess_main_la.all_cpp.lo 
-+libkaccess_main_la_nofinal_OBJECTS = kaccess.lo main.lo \
-+	libkaccess_main_la_meta_unload.lo 
++libkaccess_main_la_nofinal_OBJECTS = kaccess.lo main.lo
 +@KDE_USE_FINAL_FALSE@libkaccess_main_la_OBJECTS = $(libkaccess_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkaccess_main_la_OBJECTS = $(libkaccess_main_la_final_OBJECTS)
  bin_PROGRAMS = kaccess$(EXEEXT)
@@ -76,19 +72,31 @@ $NetBSD: patch-ai,v 1.3 2002/08/25 19:23:36 jlam Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -352,8 +361,9 @@
+@@ -346,13 +355,16 @@ CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
--@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/kaccess.Plo \
--	@AMDEP_TRUE@	$(DEPDIR)/kcmaccess.Plo $(DEPDIR)/main.Plo
-+@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/kaccess.Plo $(DEPDIR)/kaccess_main.Plo \
-+	@AMDEP_TRUE@	$(DEPDIR)/kaccess_main.Po $(DEPDIR)/kcmaccess.Plo \
-+	@AMDEP_TRUE@	$(DEPDIR)/main.Plo
+-#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/kaccess.Plo \
+-#>- @AMDEP_TRUE@	$(DEPDIR)/kcmaccess.Plo $(DEPDIR)/main.Plo
+-#>+ 5
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/kaccess_la.all_cpp.P  $(DEPDIR)/dummy.Po $(DEPDIR)/kaccess.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kcmaccess.Plo $(DEPDIR)/main.Plo
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   $(DEPDIR)/dummy.Po $(DEPDIR)/kaccess.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kcmaccess.Plo $(DEPDIR)/main.Plo
++#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/kaccess.Plo $(DEPDIR)/kaccess_main.Plo \
++#>- @AMDEP_TRUE@	$(DEPDIR)/kaccess_main.Po $(DEPDIR)/kcmaccess.Plo \
++#>- @AMDEP_TRUE@	$(DEPDIR)/main.Plo
++#>+ 7
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/libkaccess_main_la.all_cpp.P  $(DEPDIR)/kaccess.Plo $(DEPDIR)/kaccess_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kaccess_main.Po $(DEPDIR)/kcmaccess.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/main.Plo
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   $(DEPDIR)/kaccess.Plo $(DEPDIR)/kaccess_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kaccess_main.Po $(DEPDIR)/kcmaccess.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/main.Plo
+ 
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
- #>- $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
- #>+ 2
-@@ -374,13 +384,13 @@
+ #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+@@ -374,13 +386,13 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(kaccess_la_SOURCES) $(kcm_access_la_SOURCES) \
@@ -104,7 +112,7 @@ $NetBSD: patch-ai,v 1.3 2002/08/25 19:23:36 jlam Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -453,6 +463,8 @@
+@@ -453,6 +465,8 @@ kaccess.la: $(kaccess_la_OBJECTS) $(kacc
  @KDE_USE_CLOSURE_TRUE@kcm_access.la: kcm_access.la.closure $(kcm_access_la_OBJECTS) $(kcm_access_la_DEPENDENCIES) 
  @KDE_USE_CLOSURE_FALSE@kcm_access.la: $(kcm_access_la_OBJECTS) $(kcm_access_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(kde_moduledir) $(kcm_access_la_LDFLAGS) $(kcm_access_la_OBJECTS) $(kcm_access_la_LIBADD) $(LIBS)
@@ -113,7 +121,7 @@ $NetBSD: patch-ai,v 1.3 2002/08/25 19:23:36 jlam Exp $
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
  	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -487,8 +499,9 @@
+@@ -487,8 +501,9 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -124,25 +132,16 @@ $NetBSD: patch-ai,v 1.3 2002/08/25 19:23:36 jlam Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kcmaccess.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Plo@am__quote@
  
-@@ -583,7 +596,7 @@
+@@ -583,7 +598,7 @@ distclean-tags:
  
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=kaccess.desktop kaccess.h configure.in.in kcmaccess.desktop 
+-KDE_DIST=kaccess.h kcmaccess.desktop configure.in.in kaccess.desktop 
 +KDE_DIST=configure.in.in kcmaccess.desktop kaccess.desktop kaccess.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -670,7 +683,7 @@
- 
- #>- install-exec-am: install-binPROGRAMS install-libLTLIBRARIES
- #>+ 1
--install-exec-am: install-kde_moduleLTLIBRARIES install-binPROGRAMS install-libLTLIBRARIES
-+install-exec-am: install-binPROGRAMS install-libLTLIBRARIES install-kde_moduleLTLIBRARIES
- 
- install-info: install-info-am
- 
-@@ -713,9 +726,6 @@
+@@ -713,21 +728,18 @@ uninstall-am: uninstall-binPROGRAMS unin
  messages:
  	$(XGETTEXT) $(kaccess_la_SOURCES) -o $(podir)/kaccess.pot
  	$(XGETTEXT) $(kcm_access_la_SOURCES) -o $(podir)/kcmaccess.pot
@@ -152,108 +151,84 @@ $NetBSD: patch-ai,v 1.3 2002/08/25 19:23:36 jlam Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
-@@ -756,19 +766,6 @@
  
- 
- #>+ 12
--kaccess_la_meta_unload.cpp:  kaccess.moc
--	@echo 'creating kaccess_la_meta_unload.cpp'
--	@-rm -f kaccess_la_meta_unload.cpp
--	@if test ${kde_qtver} = 2; then \
--		echo 'static const char * _metalist_kaccess_la[] = {' > kaccess_la_meta_unload.cpp ;\
--		cat  kaccess.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kaccess_la_meta_unload.cpp ;\
--		echo '0};' >> kaccess_la_meta_unload.cpp ;\
--		echo '#include <kunload.h>' >> kaccess_la_meta_unload.cpp ;\
--		echo '_UNLOAD(kaccess_la)' >> kaccess_la_meta_unload.cpp ;\
--	else echo > kaccess_la_meta_unload.cpp; fi
--
--
--#>+ 12
- kcm_access_la_meta_unload.cpp:  kcmaccess.moc
- 	@echo 'creating kcm_access_la_meta_unload.cpp'
- 	@-rm -f kcm_access_la_meta_unload.cpp
-@@ -781,16 +778,29 @@
- 	else echo > kcm_access_la_meta_unload.cpp; fi
- 
- 
-+#>+ 12
-+libkaccess_main_la_meta_unload.cpp:  kaccess.moc
-+	@echo 'creating libkaccess_main_la_meta_unload.cpp'
-+	@-rm -f libkaccess_main_la_meta_unload.cpp
-+	@if test ${kde_qtver} = 2; then \
-+		echo 'static const char * _metalist_libkaccess_main_la[] = {' > libkaccess_main_la_meta_unload.cpp ;\
-+		cat  kaccess.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkaccess_main_la_meta_unload.cpp ;\
-+		echo '0};' >> libkaccess_main_la_meta_unload.cpp ;\
-+		echo '#include <kunload.h>' >> libkaccess_main_la_meta_unload.cpp ;\
-+		echo '_UNLOAD(libkaccess_main_la)' >> libkaccess_main_la_meta_unload.cpp ;\
-+	else echo > libkaccess_main_la_meta_unload.cpp; fi
-+
-+
  #>+ 3
- clean-moc-classes:
--	-rm -f  kaccess_la_meta_unload.cpp kcm_access_la_meta_unload.cpp
-+	-rm -f  kcm_access_la_meta_unload.cpp libkaccess_main_la_meta_unload.cpp
+-kcmaccess.moc: $(srcdir)/kcmaccess.h
+-	$(MOC) $(srcdir)/kcmaccess.h -o kcmaccess.moc
+-
+-#>+ 3
+ kaccess.moc: $(srcdir)/kaccess.h
+ 	$(MOC) $(srcdir)/kaccess.h -o kaccess.moc
+ 
++#>+ 3
++kcmaccess.moc: $(srcdir)/kcmaccess.h
++	$(MOC) $(srcdir)/kcmaccess.h -o kcmaccess.moc
++
+ #>+ 8
+ kcm_access.la.closure: $(kcm_access_la_OBJECTS) $(kcm_access_la_DEPENDENCIES)
+ 	@echo "int main() {return 0;}" > kcm_access_la_closure.cpp
+@@ -739,7 +751,7 @@ kcm_access.la.closure: $(kcm_access_la_O
+ 
+ #>+ 3
+ clean-metasources:
+-	-rm -f  kcmaccess.moc kaccess.moc
++	-rm -f  kaccess.moc kcmaccess.moc
+ 
+ #>+ 3
+ clean-closures:
+@@ -756,33 +768,33 @@ force-reedit:
+ 
  
  #>+ 11
--kaccess_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaccess.cpp $(srcdir)/main.cpp kaccess_la_meta_unload.cpp   kaccess.moc kcmaccess.moc 
-+kaccess_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaccess_main.cpp   kaccess.moc kcmaccess.moc 
- 	@echo 'creating kaccess_la.all_cpp.cpp ...'; \
- 	rm -f kaccess_la.all_cpp.files kaccess_la.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> kaccess_la.all_cpp.final; \
--	for file in kaccess.cpp main.cpp kaccess_la_meta_unload.cpp ; do \
-+	for file in kaccess_main.cpp ; do \
- 	  echo "#include \"$$file\"" >> kaccess_la.all_cpp.files; \
- 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kaccess_la.all_cpp.final; \
- 	done; \
-@@ -810,11 +820,23 @@
- 	rm -f kcm_access_la.all_cpp.final kcm_access_la.all_cpp.files
- 
- #>+ 11
--kaccess.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
-+libkaccess_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaccess.cpp $(srcdir)/main.cpp libkaccess_main_la_meta_unload.cpp  
+-kaccess_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaccess.cpp $(srcdir)/main.cpp  kaccess.moc
+-	@echo 'creating kaccess_la.all_cpp.cpp ...'; \
+-	rm -f kaccess_la.all_cpp.files kaccess_la.all_cpp.final; \
+-	echo "#define KDE_USE_FINAL 1" >> kaccess_la.all_cpp.final; \
++libkaccess_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaccess.cpp $(srcdir)/main.cpp  kaccess.moc
 +	@echo 'creating libkaccess_main_la.all_cpp.cpp ...'; \
 +	rm -f libkaccess_main_la.all_cpp.files libkaccess_main_la.all_cpp.final; \
 +	echo "#define KDE_USE_FINAL 1" >> libkaccess_main_la.all_cpp.final; \
-+	for file in kaccess.cpp main.cpp libkaccess_main_la_meta_unload.cpp ; do \
+ 	for file in kaccess.cpp main.cpp ; do \
+-	  echo "#include \"$$file\"" >> kaccess_la.all_cpp.files; \
+-	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kaccess_la.all_cpp.final; \
 +	  echo "#include \"$$file\"" >> libkaccess_main_la.all_cpp.files; \
 +	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkaccess_main_la.all_cpp.final; \
-+	done; \
-+	cat libkaccess_main_la.all_cpp.final libkaccess_main_la.all_cpp.files  > libkaccess_main_la.all_cpp.cpp; \
-+	rm -f libkaccess_main_la.all_cpp.final libkaccess_main_la.all_cpp.files
-+
-+#>+ 11
-+kaccess.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kaccess_main.cpp  
- 	@echo 'creating kaccess.all_cpp.cpp ...'; \
- 	rm -f kaccess.all_cpp.files kaccess.all_cpp.final; \
- 	echo "#define KDE_USE_FINAL 1" >> kaccess.all_cpp.final; \
--	for file in dummy.cpp ; do \
-+	for file in kaccess_main.cpp ; do \
- 	  echo "#include \"$$file\"" >> kaccess.all_cpp.files; \
- 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kaccess.all_cpp.final; \
  	done; \
-@@ -823,20 +845,20 @@
+-	cat kaccess_la.all_cpp.final kaccess_la.all_cpp.files > kaccess_la.all_cpp.cpp; \
+-	rm -f kaccess_la.all_cpp.final kaccess_la.all_cpp.files
++	cat libkaccess_main_la.all_cpp.final libkaccess_main_la.all_cpp.files > libkaccess_main_la.all_cpp.cpp; \
++	rm -f libkaccess_main_la.all_cpp.final libkaccess_main_la.all_cpp.files
  
  #>+ 3
  clean-final:
--	-rm -f kaccess_la.all_cpp.cpp kcm_access_la.all_cpp.cpp kaccess.all_cpp.cpp
-+	-rm -f kaccess_la.all_cpp.cpp kcm_access_la.all_cpp.cpp libkaccess_main_la.all_cpp.cpp kaccess.all_cpp.cpp
+-	-rm -f kaccess_la.all_cpp.cpp
++	-rm -f libkaccess_main_la.all_cpp.cpp
  
  #>+ 2
  final:
--	$(MAKE) kaccess_la_OBJECTS="$(kaccess_la_final_OBJECTS)" kcm_access_la_OBJECTS="$(kcm_access_la_final_OBJECTS)" all-am
-+	$(MAKE) kcm_access_la_OBJECTS="$(kcm_access_la_final_OBJECTS)" libkaccess_main_la_OBJECTS="$(libkaccess_main_la_final_OBJECTS)" all-am
+-	$(MAKE) kaccess_la_OBJECTS="$(kaccess_la_final_OBJECTS)" all-am
++	$(MAKE) libkaccess_main_la_OBJECTS="$(libkaccess_main_la_final_OBJECTS)" all-am
  #>+ 2
  final-install:
--	$(MAKE) kaccess_la_OBJECTS="$(kaccess_la_final_OBJECTS)" kcm_access_la_OBJECTS="$(kcm_access_la_final_OBJECTS)" install-am
-+	$(MAKE) kcm_access_la_OBJECTS="$(kcm_access_la_final_OBJECTS)" libkaccess_main_la_OBJECTS="$(libkaccess_main_la_final_OBJECTS)" install-am
+-	$(MAKE) kaccess_la_OBJECTS="$(kaccess_la_final_OBJECTS)" install-am
++	$(MAKE) libkaccess_main_la_OBJECTS="$(libkaccess_main_la_final_OBJECTS)" install-am
  #>+ 2
  no-final:
--	$(MAKE) kaccess_la_OBJECTS="$(kaccess_la_nofinal_OBJECTS)" kcm_access_la_OBJECTS="$(kcm_access_la_nofinal_OBJECTS)" all-am
-+	$(MAKE) kcm_access_la_OBJECTS="$(kcm_access_la_nofinal_OBJECTS)" libkaccess_main_la_OBJECTS="$(libkaccess_main_la_nofinal_OBJECTS)" all-am
+-	$(MAKE) kaccess_la_OBJECTS="$(kaccess_la_nofinal_OBJECTS)" all-am
++	$(MAKE) libkaccess_main_la_OBJECTS="$(libkaccess_main_la_nofinal_OBJECTS)" all-am
  #>+ 2
  no-final-install:
--	$(MAKE) kaccess_la_OBJECTS="$(kaccess_la_nofinal_OBJECTS)" kcm_access_la_OBJECTS="$(kcm_access_la_nofinal_OBJECTS)" install-am
-+	$(MAKE) kcm_access_la_OBJECTS="$(kcm_access_la_nofinal_OBJECTS)" libkaccess_main_la_OBJECTS="$(libkaccess_main_la_nofinal_OBJECTS)" install-am
+-	$(MAKE) kaccess_la_OBJECTS="$(kaccess_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkaccess_main_la_OBJECTS="$(libkaccess_main_la_nofinal_OBJECTS)" install-am
  #>+ 3
  cvs-clean:
- 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean
+ 	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
+@@ -792,7 +804,7 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
+ 
+ #>+ 5
++kcmaccess.lo: kcmaccess.moc 
+ kaccess.lo: kaccess.moc 
+ kcmaccess.o: kcmaccess.moc 
+ kaccess.o: kaccess.moc 
+-kcmaccess.lo: kcmaccess.moc 

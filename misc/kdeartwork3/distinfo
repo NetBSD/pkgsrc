@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/10/14 09:13:49 skrll Exp $
+$NetBSD: distinfo,v 1.5 2003/01/02 09:12:27 skrll Exp $
 
-SHA1 (kdeartwork-3.0.4.tar.bz2) = 0f3318986981bfa25d3bcddda5dfe7b4989b2831
-Size (kdeartwork-3.0.4.tar.bz2) = 10910760 bytes
+SHA1 (kdeartwork-3.0.5a.tar.bz2) = decc46a3c2be6ab564cc6dee2e3f1aea19655df9
+Size (kdeartwork-3.0.5a.tar.bz2) = 10915790 bytes
