@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1693 2004/05/02 19:53:30 xtraeme Exp $
+$NetBSD: TODO,v 1.1694 2004/05/02 19:55:30 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -310,7 +310,6 @@ Suggested package updates
 	o py-psycopg-1.1.10
 	o pygtk-0.6.11
 	o pysol-4.82
-	o qt-3.3.2
 	o rep-gtk-0.17
 	o rox-1.2.2
 	o rox-session-0.1.22
