@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.183 2001/01/17 00:19:14 pooka Exp $
+# $NetBSD: Makefile,v 1.184 2001/01/18 13:12:58 itojun Exp $
 #
 
     SUBDIR += adns
@@ -11,7 +11,7 @@
     SUBDIR += bind4
     SUBDIR += bind8
     SUBDIR += bind9
-    SUBDIR += bind9-current
+#   SUBDIR += bind9-current
     SUBDIR += bing
     SUBDIR += bounce
     SUBDIR += cftp
