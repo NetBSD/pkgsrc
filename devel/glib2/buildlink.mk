@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2002/08/25 19:22:28 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2002/09/10 16:06:39 wiz Exp $
 #
 # This Makefile fragment is included by packages that use glib2.
 #
@@ -17,7 +17,7 @@ GLIB2_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.glib2?=	glib2>=2.0.1nb1
+BUILDLINK_DEPENDS.glib2?=	glib2>=2.0.6nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.glib2}:../../devel/glib2
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.glib2=glib2

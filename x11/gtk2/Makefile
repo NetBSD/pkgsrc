@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2002/09/06 22:33:16 rh Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/10 16:06:53 wiz Exp $
 #
 
 DISTNAME=		gtk+-2.0.6
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.0/ \
@@ -12,8 +13,6 @@ MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gtk.org/
 COMMENT=		Gimp toolkit. Libraries for building X11 user interfaces
-
-BUILDLINK_DEPENDS.glib2=glib2>=2.0.6
 
 BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK_ONLY=	yes

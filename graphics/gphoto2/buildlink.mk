@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/02/26 13:14:55 martti Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/09/10 16:06:42 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gphoto2.
 #
@@ -13,7 +13,7 @@ GPHOTO2_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.gphoto2?=	gphoto>=2.0
+BUILDLINK_DEPENDS.gphoto2?=	gphoto>=2.1.0nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.gphoto2}:../../graphics/gphoto2
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.gphoto2=gphoto2
