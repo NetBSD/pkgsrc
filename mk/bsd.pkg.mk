@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.571 2000/09/14 11:27:56 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.572 2000/09/15 08:35:15 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -508,6 +508,7 @@ CHOWN?=		/usr/bin/chown
 CHGRP?=		/usr/bin/chgrp
 CP?=		/usr/bin/cp
 CUT?=		/usr/bin/cut
+DC?=		/usr/bin/dc
 ECHO?=		/usr/ucb/echo
 EGREP?=		/usr/xpg4/bin/egrep
 FALSE?=		/usr/bin/false
@@ -551,6 +552,7 @@ CHOWN?=		/usr/sbin/chown
 CHGRP?=		/usr/bin/chgrp
 CP?=		/bin/cp
 CUT?=		/bin/cut
+DC?=		/usr/bin/dc
 ECHO?=		/bin/echo
 EGREP?=		/bin/egrep
 FALSE?=		/bin/false
@@ -594,6 +596,7 @@ CHOWN?=		/usr/sbin/chown
 CHGRP?=		/usr/bin/chgrp
 CP?=		/bin/cp
 CUT?=		/usr/bin/cut
+DC?=		/usr/bin/dc
 ECHO?=		echo				# Shell builtin
 EGREP?=		/usr/bin/egrep
 FALSE?=		false				# Shell builtin
@@ -2854,9 +2857,10 @@ print-pkg-size-this:
 	| sort -u							\
 	| ${SED} -e 's, ,\\ ,g'						\
 	| xargs ls -ld							\
-	| ${AWK} 'BEGIN { sum=0; }					\
-		  { sum+=$$5; }						\
-		  END { printf("%d\n", sum); }'
+	| ${AWK} 'BEGIN { print("0"); }					\
+		  { print($$1, " +"); }					\
+		  END { print("p"); }'					\
+	| ${DC}
 
 # Sizes of required pkgs (only)
 # 
@@ -2864,15 +2868,16 @@ print-pkg-size-this:
 # dependencies are all installed
 print-pkg-size-depends:
 	@${MAKE} ${MAKEFLAGS} print-pkg-size-depends-help 		\
-	| ${AWK} 'BEGIN { sum=0; }					\
-		  { sum+=$$1; }						\
-		  END { printf("%d\n", sum); }'
+	| ${AWK} 'BEGIN { print("0"); }					\
+		  { print($$1, " +"); }			\
+		  END { print("p"); }'					\
+	| ${DC}
 # need this in a make look to prevent the shell clobbering the depends
 # also includes size of depends of depends (XXX)
 print-pkg-size-depends-help:
 .for dep in ${DEPENDS}
 	@pkg="${dep:C/:.*//}";						\
-	${PKG_INFO} -qS "$$pkg"
+	${PKG_INFO} -qS "$$pkg" | ${HEAD} -1
 .endfor
 
 
