@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/12/22 13:04:38 seb Exp $
+
+--- Makefile.in.orig	Wed Dec 18 08:39:40 2002
++++ Makefile.in	Wed Dec 18 08:40:02 2002
+@@ -94,5 +94,5 @@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
+-SUBDIRS = pub src contrib inputs doc 
++SUBDIRS = pub src contrib inputs
+ 
+ EXTRA_DIST = acconfig.h DOCUMENTATION doc/cfengine.8 COPYING ChangeLog INSTALL NEWS README
