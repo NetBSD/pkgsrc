@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/03/16 02:01:11 taca Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/28 04:36:05 taca Exp $
 #
 
 DISTNAME=	nqxml-1.1.3p1
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME:S/p/./}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/p/./}
 CATEGORIES=	textproc ruby
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nqxml/} \
 		http://rrr.jin.gr.jp/download/
@@ -11,7 +11,6 @@ MAINTAINER=	neumann@s-direktnet.de
 HOMEPAGE=	http://nqxml.sourceforge.net/
 COMMENT=	XML parser written in pure Ruby
 
-DIST_SUBDIR=	ruby
 USE_RUBY=	yes
 NO_BUILD=	yes
 
@@ -24,11 +23,7 @@ CONTRIB_LIB=	autodis_1.rb autodis_2.rb
 TESTS=		dispatchertester.rb oasis.rb streamingparsertester.rb test.rb \
 		testresource.rb tokenizertester.rb treeparsertester.rb \
 		writertester.rb
-REPLACE_RUBY=	examples/dumpXML.rb examples/parseTestStream.rb \
-		examples/parseTestTree.rb examples/printEntityClassNames.rb \
-		examples/reverseTags.rb examples/reverseText.rb \
-		examples/write.rb examples/writeManualDoc.rb \
-		examples/writeParsedDoc.rb tests/oasis.rb tests/test.rb
+REPLACE_RUBY_DIRS=	${WRKSRC}/examples ${WRKSRC}/tests
 
 do-install:
 	cd ${WRKSRC}; ${RUBY} install.rb
@@ -50,5 +45,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/tests/$f ${RUBY_EXAMPLESDIR}/nqxml/tests
 .endfor
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
