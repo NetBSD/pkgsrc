@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:41 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/23 06:55:05 uebayasi Exp $
 bin/bonobo-application-ps
 bin/ggv
 share/locale/de/LC_MESSAGES/ggv.mo
@@ -7,6 +7,7 @@ share/locale/sv/LC_MESSAGES/ggv.mo
 share/locale/es/LC_MESSAGES/ggv.mo
 share/locale/ro/LC_MESSAGES/ggv.mo
 share/locale/ru/LC_MESSAGES/ggv.mo
+share/locale/hr/LC_MESSAGES/ggv.mo
 share/locale/hu/LC_MESSAGES/ggv.mo
 share/locale/pt/LC_MESSAGES/ggv.mo
 share/locale/no/LC_MESSAGES/ggv.mo
@@ -27,7 +28,6 @@ share/locale/uk/LC_MESSAGES/ggv.mo
 share/locale/gl/LC_MESSAGES/ggv.mo
 share/locale/lt/LC_MESSAGES/ggv.mo
 share/locale/sk/LC_MESSAGES/ggv.mo
-share/locale/zh_TW.Big5/LC_MESSAGES/ggv.mo
 share/locale/zh_CN.GB2312/LC_MESSAGES/ggv.mo
 share/locale/tr/LC_MESSAGES/ggv.mo
 share/pixmaps/gnome-ghostview.png
