@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST.dynamic,v 1.1.1.1 2001/06/05 04:08:28 jtb Exp $
+lib/zsh/libzsh-4.0.1.so
+lib/zsh/4.0.1/zsh/rlimits.so
+lib/zsh/4.0.1/zsh/sched.so
+lib/zsh/4.0.1/zsh/cap.so
+lib/zsh/4.0.1/zsh/clone.so
+lib/zsh/4.0.1/zsh/example.so
+lib/zsh/4.0.1/zsh/files.so
+lib/zsh/4.0.1/zsh/mapfile.so
+lib/zsh/4.0.1/zsh/mathfunc.so
+lib/zsh/4.0.1/zsh/parameter.so
+lib/zsh/4.0.1/zsh/stat.so
+lib/zsh/4.0.1/zsh/termcap.so
+lib/zsh/4.0.1/zsh/terminfo.so
+lib/zsh/4.0.1/zsh/zftp.so
+lib/zsh/4.0.1/zsh/zprof.so
+lib/zsh/4.0.1/zsh/zpty.so
+lib/zsh/4.0.1/zsh/zutil.so
+lib/zsh/4.0.1/zsh/compctl.so
+lib/zsh/4.0.1/zsh/complete.so
+lib/zsh/4.0.1/zsh/complist.so
+lib/zsh/4.0.1/zsh/computil.so
+lib/zsh/4.0.1/zsh/deltochar.so
+lib/zsh/4.0.1/zsh/zle.so
+lib/zsh/4.0.1/zsh/zleparameter.so
+@dirrm lib/zsh/4.0.1/zsh
+@dirrm lib/zsh/4.0.1
+@dirrm lib/zsh
