@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.898 2002/12/24 17:22:52 jmmv Exp $
+$NetBSD: CHANGES,v 1.899 2002/12/24 17:37:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4240,3 +4240,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added libgphoto2-2.1.1 [wiz 2002-12-24]
 	Updated gphoto2 to 2.1.1 [wiz 2002-12-24]
 	Updated udunits to 1.11.7nb1 [jmmv 2002-12-24]
+	Updated libexif to 0.5.8 [wiz 2002-12-24]
