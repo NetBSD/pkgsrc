@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2004/02/12 14:45:00 taca Exp $
+# $NetBSD: Makefile,v 1.103 2004/03/04 17:05:50 taca Exp $
 
-DISTNAME=	squid-2.5.STABLE4
-PKGNAME=	squid-2.5.4
-PKGREVISION=	8
+DISTNAME=	squid-2.5.STABLE5
+PKGNAME=	squid-2.5.5
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -10,46 +9,8 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE4-reconfigure_message.patch \
-		squid-2.5.STABLE4-digest_auth_pwchange.patch \
-		squid-2.5.STABLE4-redirect_login_space.patch \
-		squid-2.5.STABLE4-fqdnnegcache.patch \
-		pam_auth-2.2.patch \
-		squid-2.5.STABLE4_auth_param_doc.patch \
-		squid-2.5.STABLE4-errorpages.patch \
-		squid-2.5.STABLE4-error_load_text.patch \
-		squid-2.5.STABLE4-xpi_mime.patch \
-		squid-2.5.STABLE4-size_overflow.patch \
-		squid-2.5.STABLE4-extacl_auth_loop.patch \
-		squid-2.5.STABLE4-squid_ldap_group.patch \
-		squid-2.5.STABLE4-positive_dns_ttl.patch \
-		squid-2.5.STABLE4-gopherhtml.patch \
-		squid-2.5.STABLE4-netroute.patch \
-		squid-2.5.STABLE4-synflood.patch \
-		squid-2.5.STABLE4-fqdn.patch \
-		squid-2.5.STABLE4-connect_cleanup.patch \
-		squid-2.5.STABLE4-pconn_post.patch \
-		squid-2.5.STABLE4-ftp_put.patch \
-		squid-2.5.STABLE4-pconn-load.patch \
-		squid-2.5.STABLE4-icon_urls.patch \
-		squid-2.5.STABLE4-redirector_access.patch \
-		squid-2.5.STABLE4-pconn-lifo.patch \
-		squid-2.5.STABLE4-cache_peer_maxconn.patch \
-		squid-2.5.STABLE4-pid_filename_none.patch \
-		squid-2.5.STABLE4-dns_namelength.patch \
-		squid-2.5.STABLE4-urllogin_acl.patch \
-		squid-2.5.STABLE4-russian.patch \
-		squid-2.5.STABLE4-redirlog.patch \
-		squid-2.5.STABLE4-pinger.patch \
-		squid-2.5.STABLE4-partial_reload.patch \
-		squid-2.5.STABLE4-ldap_tls.patch \
-		squid-2.5.STABLE4-ldap_group_bufsize.patch \
-		squid-2.5.STABLE4-http_workarounds.patch \
-		squid-2.5.STABLE4-empty_proxy_auth.patch \
-		squid-2.5.STABLE4-ftp_telnet.patch \
-		squid-2.5.STABLE4-ntlm_auth_popups.patch \
-		squid-2.5.STABLE4-ldap_group-S.patch \
-		squid-2.5.STABLE4-ipcache_purge.patch
+PATCHFILES=	squid-2.5.STABLE5-ntlm_assert.patch \
+		squid-2.5.STABLE5-ldap.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
@@ -58,7 +19,7 @@ COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 USE_PERL5=	build
-DIST_SUBDIR=	squid-2.5.4
+DIST_SUBDIR=	squid-2.5.5
 DOCDIR=		${PREFIX}/share/doc/squid
 EXAMPLESDIR=	${PREFIX}/share/examples/squid
 
