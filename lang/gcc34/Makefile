@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/09/21 13:32:40 shannonjr Exp $
+# $NetBSD: Makefile,v 1.16 2004/10/30 12:06:59 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -192,6 +192,7 @@ do-configure:
 do-build:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} bootstrap)
 .if !empty(BUILD_ADA:M[Yy][Ee][Ss])
+	(cd ${WRKDIR}/obj/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib-shared)
 	(cd ${WRKDIR}/obj/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} gnatlib_and_tools)
 .endif
 

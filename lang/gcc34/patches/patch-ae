@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.2 2004/07/30 14:37:45 shannonjr Exp $
+$NetBSD: patch-ae,v 1.3 2004/10/30 12:06:59 shannonjr Exp $
 
 --- gcc/ada/Makefile.in.orig	2004-01-26 14:57:32.000000000 -0700
 +++ gcc/ada/Makefile.in
-@@ -1292,6 +1292,54 @@ ifeq ($(strip $(filter-out %x86_64 linux
+@@ -1292,6 +1292,58 @@ ifeq ($(strip $(filter-out %x86_64 linux
    LIBRARY_VERSION := $(LIB_VERSION)
  endif
  
@@ -27,6 +27,8 @@ $NetBSD: patch-ae,v 1.2 2004/07/30 14:37:45 shannonjr Exp $
 +
 +  THREADSLIB=-pthread
 +  EXTRA_GNATRTL_TASKING_OBJS=adasignal.o ada_lwp_self.o dummy_pthreads.o
++  GNATLIB_SHARED=gnatlib-shared-dual
++  LIBRARY_VERSION := $(LIB_VERSION)
 +
 +endif
 +
@@ -50,6 +52,8 @@ $NetBSD: patch-ae,v 1.2 2004/07/30 14:37:45 shannonjr Exp $
 +
 +  THREADSLIB=-pthread
 +  EXTRA_GNATRTL_TASKING_OBJS=adasignal.o ada_lwp_self.o dummy_pthreads.o
++  GNATLIB_SHARED=gnatlib-shared-dual
++  LIBRARY_VERSION := $(LIB_VERSION)
 +
 +endif
 +
