@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2001/12/02 06:56:45 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2002/01/01 06:12:38 jlam Exp $
 
 DISTNAME=		mod_ssl-2.8.5-1.3.22
 PKGNAME=		ap-ssl-2.8.5
@@ -26,35 +26,34 @@ MAKE_ENV+=		SSL_RPATH_LDFLAGS="-R${SSLBASE}/lib"
 
 PKG_SYSCONFSUBDIR?=	httpd
 
-EGDIR=		${PREFIX}/share/examples/mod_ssl
-CONF_FILES=	${EGDIR}/apache_start.conf				\
-		${PKG_SYSCONFDIR}/apache_start.conf
-SUPPORT_FILES=	${EGDIR}/ssl.crl/Makefile.crl				\
-		${PKG_SYSCONFDIR}/ssl.crl/Makefile.crl
-SUPPORT_FILES+=	${EGDIR}/ssl.crl/README.CRL				\
-		${PKG_SYSCONFDIR}/ssl.crl/README.CRL
-SUPPORT_FILES+=	${EGDIR}/ssl.crt/Makefile.crt				\
-		${PKG_SYSCONFDIR}/ssl.crt/Makefile.crt
-SUPPORT_FILES+=	${EGDIR}/ssl.crt/README.CRT				\
-		${PKG_SYSCONFDIR}/ssl.crt/README.CRT
-SUPPORT_FILES+=	${EGDIR}/ssl.crt/ca-bundle.crt				\
-		${PKG_SYSCONFDIR}/ssl.crt/ca-bundle.crt
-SUPPORT_FILES+=	${EGDIR}/ssl.csr/README.CSR				\
-		${PKG_SYSCONFDIR}/ssl.csr/README.CSR
-SUPPORT_FILES+=	${EGDIR}/ssl.key/README.KEY				\
-		${PKG_SYSCONFDIR}/ssl.key/README.KEY
-SUPPORT_FILES+=	${EGDIR}/ssl.prm/README.PRM				\
-		${PKG_SYSCONFDIR}/ssl.prm/README.PRM
+EGDIR=			${PREFIX}/share/examples/mod_ssl
+OWN_DIRS=		${PKG_SYSCONFDIR}/ssl.crl
+OWN_DIRS+=		${PKG_SYSCONFDIR}/ssl.crt
+OWN_DIRS+=		${PKG_SYSCONFDIR}/ssl.csr
+OWN_DIRS+=		${PKG_SYSCONFDIR}/ssl.prm
+OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/ssl.key			\
+			${ROOT_USER} ${ROOT_GROUP} 0700
+
+CONF_FILES=		${EGDIR}/apache_start.conf			\
+			${PKG_SYSCONFDIR}/apache_start.conf
+SUPPORT_FILES=		# empty
+SUPPS=			ssl.crl/Makefile.crl ssl.crl/README.CRL		\
+			ssl.crt/Makefile.crt ssl.crt/README.CRT		\
+			ssl.crt/ca-bundle.crt ssl.crt/README.CSR	\
+			ssl.key/README.KEY ssl.prm/README.PRM
+.for FILE in ${SUPPS}
+SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+.endfor
 
 post-extract:
 	cd ${WRKSRC}/pkg.contrib; ${MV} -f loadcacert.cgi loadcacert.cgi.in
 	cd ${WRKSRC}/pkg.sslsup; ${MV} -f mkcert.sh mkcert.sh.in
 
 post-build:
-	${SED}	-e "s|^#!/.*|#!${PERL5}|g"				\
+	@${SED}	-e "s|^#!/.*|#!${PERL5}|g"				\
 		${WRKSRC}/pkg.contrib/loadcacert.cgi.in 		\
 		> ${WRKSRC}/pkg.contrib/loadcacert.cgi
-	${SED} ${FILES_SUBST_SED}					\
+	@${SED} ${FILES_SUBST_SED}					\
 		${WRKSRC}/pkg.sslsup/mkcert.sh.in			\
 		> ${WRKSRC}/pkg.sslsup/mkcert.sh
 
