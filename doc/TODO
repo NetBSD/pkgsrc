@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1603 2004/04/13 02:46:15 minskim Exp $
+$NetBSD: TODO,v 1.1604 2004/04/13 13:51:34 adam Exp $
 
 Suggested new packages
 ======================
@@ -261,7 +261,6 @@ Suggested package updates
 	o napshare-1.2
 	o net-snmp-5.1.1
 	o netatalk-1.6.3 [pkg/21930]
-	o ngrep-1.42
 	o nosefart-1.92j-mls
 	o ns-flash-6.0.79
 	o nsd-2.0.2

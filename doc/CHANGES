@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5564 2004/04/13 09:59:29 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5565 2004/04/13 13:51:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1938,3 +1938,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated flwm to 1.0.0nb1 [xtraeme 2004-04-12]
 	Updated fltk to 1.1.5rc1 [xtraeme 2004-04-12]
 	Added xextensions-1.0.1 [xtraeme 2004-04-12]
+	Updated ngrep to 1.42 [adam 2004-04-13]
