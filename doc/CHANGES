@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4534 2004/01/21 21:09:20 kristerw Exp $
+$NetBSD: CHANGES,v 1.4535 2004/01/21 22:23:52 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -377,3 +377,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gcc3 to 3.3nb6 [abs 2004-01-21]
 	Updated gq to 1.0beta1 [cube 2004-01-21]
 	Added xnodecor-0.1 [kristerw 2004-01-21]
+	Updated spamassassin to 2.63 [heinz 2004-01-21]
