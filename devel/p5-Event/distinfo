@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/06/10 06:11:28 explorer Exp $
+$NetBSD: distinfo,v 1.2 2002/01/12 17:47:20 explorer Exp $
 
-MD5 (Event-0.81.tar.gz) = f29e83990147802f5b40d83b655cd8c7
-Size (Event-0.81.tar.gz) 244015 bytes
+SHA1 (Event-0.83.tar.gz) = 0d6406d544ed9958106c2e0793fb9e8eebf08741
+Size (Event-0.83.tar.gz) = 244770 bytes
