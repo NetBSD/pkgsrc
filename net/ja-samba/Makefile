@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/05/27 15:59:08 taca Exp $
+# $NetBSD: Makefile,v 1.16 2003/05/28 08:59:47 taca Exp $
 
 .include "Makefile.common"
 
@@ -47,8 +47,7 @@ CONFIGURE_ARGS+=	--with-ldapsam
 PLIST_SUBST+=		SAMBA_LDAP=""
 .else
 PLIST_SUBST+=		SAMBA_LDAP="@comment "
-MESSAGE_SRC=		${.CURDIR}/MESSAGE.smbpasswd \
-			${.CURDIR}/MESSAGE.security
+MESSAGE_SRC=		${.CURDIR}/MESSAGE.smbpasswd
 SMBPASSWD_FILE=		/dev/null ${SAMBA_PRIVATE}/smbpasswd		\
 			${ROOT_USER} ${ROOT_GROUP} 0600
 .endif
