@@ -1,0 +1,7 @@
+--- common/player.c.orig	Fri Feb 20 03:46:27 1998
++++ common/player.c	Fri Feb 20 03:46:27 1998
+@@ -127,3 +127,3 @@
+ #endif
+-#ifdef RPLAY_SOUND
++#ifdef RPLAY_SND
+   new->play_count=0;

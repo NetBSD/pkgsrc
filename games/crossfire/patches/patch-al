@@ -1,0 +1,7 @@
+--- config/crossfire.cf.orig	Fri Feb 20 03:51:12 1998
++++ config/crossfire.cf	Fri Feb 20 03:27:46 1998
+@@ -292,3 +292,3 @@
+ 
+-SOUND_DEF = -DRPLAY_SOUND
++SOUND_DEF = -DRPLAY_SND
+ #endif

@@ -1,0 +1,42 @@
+--- server/sounds.c.orig	Fri Feb 20 03:46:30 1998
++++ server/sounds.c	Fri Feb 20 03:46:30 1998
+@@ -23,3 +23,3 @@
+ {
+-#ifdef RPLAY_SOUND
++#ifdef RPLAY_SND
+   char  buf[MAX_BUF], name_buf[MAX_BUF];
+@@ -76,3 +76,3 @@
+       if (rplay_set(sound_table[num_sounds], RPLAY_APPEND,
+-		    RPLAY_SOUND, name_buf,
++		    RPLAY_SND, name_buf,
+ 		    RPLAY_VOLUME, volume,
+@@ -96,3 +96,3 @@
+ {
+-#ifdef RPLAY_SOUND
++#ifdef RPLAY_SND
+   char *p;
+@@ -133,3 +133,3 @@
+ {
+-#ifdef RPLAY_SOUND
++#ifdef RPLAY_SND
+   if (volume > pl->play_count * 8)
+@@ -160,3 +160,3 @@
+     }
+-#ifdef RPLAY_SOUND
++#ifdef RPLAY_SND
+   if ((sound_num >= NROF_SOUNDS) || (sound_table[sound_num] == NULL))
+@@ -178,3 +178,3 @@
+     player *pl;
+-#ifdef RPLAY_SOUND
++#ifdef RPLAY_SND
+     int volume;
+@@ -186,3 +186,3 @@
+     }
+-#ifdef RPLAY_SOUND
++#ifdef RPLAY_SND
+     if (sound_table[sound_num] == NULL)
+@@ -201,3 +201,3 @@
+ 	    }
+-#ifdef RPLAY_SOUND
++#ifdef RPLAY_SND
+ 	    if ((pl->rplay_fd > 0) &&
