@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2002/05/02 13:28:15 bouyer Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/09/05 18:07:54 jschauma Exp $
 #
 # common make file fragment shared by all amanda-* pkgs.
 #
@@ -11,10 +11,11 @@ MASTER_SITES?=		http://download.sourceforge.net/amanda/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 
-.if ${OPSYS} == "NetBSD"
-AMANDA_GROUP?=		operator
-.elif ${OPSYS} == "SunOS"
+.if ${OPSYS} == "SunOS"
 AMANDA_GROUP?=		sysadmin
+.else
+# NetBSD, Linux and Darwin
+AMANDA_GROUP?=		operator
 .endif
 
 AMANDA_USER?=		backup

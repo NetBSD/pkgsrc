@@ -1,13 +1,12 @@
-# $NetBSD: Makefile.common,v 1.8 2002/08/25 21:50:54 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2002/09/05 18:07:54 jschauma Exp $
 #
 # common make file fragment shared by all amanda-* pkgs.
 #
 
-.if ${OPSYS} == "NetBSD"
-AMANDA_GROUP?=		operator
-.elif ${OPSYS} == "SunOS"
+.if ${OPSYS} == "SunOS"
 AMANDA_GROUP?=		sysadmin
-.elif ${OPSYS} == "Darwin"
+.else
+# NetBSD, Linux and Darwin
 AMANDA_GROUP?=		operator
 .endif
 
