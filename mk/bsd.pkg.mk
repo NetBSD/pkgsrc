@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1428 2004/03/29 06:49:04 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1429 2004/03/29 06:52:23 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -279,21 +279,6 @@ _PERL5_STRICTEST_REQD=	${_version_}
 .endfor
 _PERL5_REQD=	${_PERL5_STRICTEST_REQD}
 
-# _PERL58_PATTERNS contains perl versions >=5.8.0 but before 6.0.
-_PERL58_PATTERNS=	5.8* 5.9* 5.[1-9][0-9]*
-
-_NEED_PERL58?=	no
-.for _pattern_ in ${_PERL58_PATTERNS}
-.  if !empty(_PERL5_REQD:M${_pattern_})
-_NEED_PERL58=	yes
-.  endif
-.endfor
-.if !empty(_NEED_PERL58:M[yY][eE][sS])
-PERL5_PKGSRCDIR?=	../../lang/perl58
-.else
-PERL5_PKGSRCDIR?=	../../lang/perl5
-.endif
-
 # Convert USE_PERL5 to be two-valued: either "build" or "run" to denote
 # whether we want a build-time or run-time dependency on perl.
 #
@@ -305,6 +290,7 @@ USE_PERL5:=		run
 _PERL5_DEPMETHOD=	DEPENDS
 .  endif
 _PERL5_DEPENDS=		perl>=${_PERL5_REQD}
+PERL5_PKGSRCDIR?=	../../lang/perl58
 .  if !defined(BUILDLINK_DEPENDS.perl)
 ${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
 .  endif
