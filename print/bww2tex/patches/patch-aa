@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/01/23 18:16:41 fredb Exp $
+
+--- grammar.y.orig	Sun Jan 19 16:02:42 2003
++++ grammar.y	Sun Jan 19 16:02:59 2003
+@@ -697,18 +697,15 @@
+ 
+     if (argc > 1)   /* if a file was named, open it for reading*/
+     {
+-        if(! strncmp(argv[1],"help",4))
++        if(! strncmp(argv[1],"help",4) || ! strncmp(argv[1],"--help",4)
++		|| ! strncmp(argv[1],"-h",4))
+         {
+-            printf("%s","bmw2tex [input [output]]\n"
+-                "The extension .bww will be added to the input"
+-                " file name if .bmw or .bww is not already present\n"
+-                "The extension .tex will be added to the output"
+-                " file name if not already present\n"
+-                "If an output file name is not given,"
+-                " the input file name with .bww or .bmw replaced\n by"
+-                " .tex will be used.\n"
+-                "If no file names are given, stdin and stdout"
+-                " will be used.\n");
++            printf("usage: bmw2tex [ input [ output ] ]\n\n"
++"Bagpipe Music Writer Gold to BagpipeTeX converter.\n\n"
++"If an extension is not specified for the input file, \".bmw\" or \".bww\"\n"
++"will be assumed.  If an extension is not specified for the output file,\n"
++"\".tex\" is used.  If no file names are given, standard input and\n"
++"output are used.\n\n");
+             exit(0);
+               }
+ 
