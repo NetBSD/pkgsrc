@@ -1,6 +1,6 @@
 --- Makefile.orig	Tue Jun  1 03:46:11 1993
-+++ Makefile	Wed Feb 18 00:38:04 1998
-@@ -1,8 +1,16 @@
++++ Makefile	Thu May 28 10:08:17 1998
+@@ -1,8 +1,17 @@
  #	@(#)Makefile	8.1 (Berkeley) 5/31/93
  
  PROG=	xneko
@@ -14,6 +14,7 @@
 +LDADD+=		-L${X11BASE}/lib -lX11 -lm
 +
 +MANDIR=        ${X11BASE}/man
++MANINSTALL=    catinstall maninstall
 +
 +BINOWN=        bin
 +BINDIR=        ${X11BASE}/bin
