@@ -1,12 +1,18 @@
---- libtiff/Makefile.in.orig	Tue Sep  2 19:54:19 1997
-+++ libtiff/Makefile.in	Mon Dec  1 00:20:35 1997
-@@ -197,7 +197,8 @@
+--- libtiff/Makefile.in.orig	Tue Sep  2 18:54:19 1997
++++ libtiff/Makefile.in	Wed May 13 10:26:19 1998
+@@ -197,7 +197,14 @@
  	@rm -f libtiff_pic.a
  	@${AR} cq libtiff_pic.a `lorder ${OBJS} | tsort -q`
  	${RANLIB} libtiff_pic.a
 -	${LD} -x -Bshareable -Bforcearchive -o libtiff.@DSOSUF@ libtiff_pic.a
-+	if [ `uname -m` != "alpha" ]; then  ${LD} -x -Bshareable -Bforcearchive -o libtiff.@DSOSUF@ libtiff_pic.a ; fi
-+	if [ `uname -m` = "alpha" ]; then  ${LD} -x -Bshareable -o libtiff.@DSOSUF@ libtiff_pic.a ; fi
++	case `uname -m` in						\
++	alpha)								\
++		${LD} -x -Bshareable -o libtiff.@DSOSUF@ libtiff_pic.a ;; \
++	pmax)								\
++ 		${LD} -x -shared -o libtiff.@DSOSUF@ -soname libtiff.so.${DIST_MAJOR} --whole-archive libtiff_pic.a --no-whole-archive ;; \
++	*)								\
++		${LD} -x -Bshareable -Bforcearchive -o libtiff.@DSOSUF@ libtiff_pic.a ;; \
++	esac
  	rm -f libtiff_pic.a
  	touch $@
  # linux ELF shared lib rule
