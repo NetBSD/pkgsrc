@@ -1,19 +1,19 @@
---- Makefile.orig	Thu Jul 16 14:23:29 1998
-+++ Makefile	Thu Jul 16 14:25:55 1998
-@@ -14,9 +14,15 @@
+--- Makefile.orig	Sun Mar 29 00:54:57 1998
++++ Makefile	Wed Jul 22 17:17:23 1998
+@@ -1,4 +1,4 @@
+ CC = cc 
+-CFLAGS = -g -O3 -Wall -DNETWORK_DB -Ilibscsi -Ist
+-LDFLAGS = -Llibscsi -lscsi -Lst -lst
++CFLAGS = -g -O3 -Wall -DNETWORK_DB -I${PREFIX}/include -Ist
++LDFLAGS = -L${PREFIX}/lib -lscsi -Lst -lst
  
- STRIPZEROS_OBJECTS = stripzeros.o
+@@ -16,5 +16,8 @@
  
 -all: cdd pcmplay stripzeros
-+all: scsilib stlib cdd pcmplay stripzeros
++all: stlib cdd pcmplay stripzeros
  
  $(CDD_OBJECTS): cdd.h
-+
-+scsilib:
-+	cd libscsi; make
 +
 +stlib:
 +	cd st; make
  
- pcmplay: $(PCMPLAY_OBJECTS)
- 	$(CC) $(CFLAGS) -o $@ $(PCMPLAY_OBJECTS) $(LDFLAGS) -lossaudio
