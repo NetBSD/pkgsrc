@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 1999/11/25 14:32:43 tron Exp $
+$NetBSD: patch-aa,v 1.5 2000/05/19 03:58:57 jlam Exp $
 
---- Makefile.orig	Wed Jan 27 23:40:30 1999
-+++ Makefile	Thu Nov 25 15:22:08 1999
-@@ -32,7 +32,7 @@
+--- Makefile.orig	Mon Nov 15 15:20:34 1999
++++ Makefile	Tue May  2 15:37:12 2000
+@@ -110,7 +110,7 @@
  
  
  # *** TEMPORARY FOR PINE 4.10 BUILD ***
@@ -11,12 +11,12 @@ $NetBSD: patch-aa,v 1.4 1999/11/25 14:32:43 tron Exp $
  # *** TEMPORARY FOR PINE 4.10 BUILD ***
  
  # Normal command to build IMAP toolkit:
-@@ -392,7 +392,7 @@
+@@ -402,7 +402,7 @@
  # *** TEMPORARY FOR PINE 4.10 BUILD ***
  	echo GSSDIR=$(GSSDIR) >> c-client/EXTRASPECIALS
  # *** TEMPORARY FOR PINE 4.10 BUILD ***
--	$(CD) c-client;$(MAKE) $(OS) BUILDOPTIONS='$(BUILDOPTIONS)' $(EXTRASPECIALS)
-+	$(CD) c-client;$(MAKE) $(OS) BUILDOPTIONS='$(BUILDOPTIONS)' $(EXTRASPECIALS) PREFIX=$(PREFIX) CC="$(CC)"
+-	$(CD) c-client;$(MAKE) $(OS) BUILDOPTIONS="$(BUILDOPTIONS)" $(EXTRASPECIALS)
++	$(CD) c-client;$(MAKE) $(OS) BUILDOPTIONS="$(BUILDOPTIONS)" $(EXTRASPECIALS) PREFIX=$(PREFIX) CC="$(CC)"
  	echo $(OS) > OSTYPE
  	$(TOUCH) rebuild
  

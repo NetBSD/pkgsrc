@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2000/04/10 03:21:02 simonb Exp $
+# $NetBSD: Makefile,v 1.11 2000/05/19 03:58:55 jlam Exp $
 #
 
-DISTNAME=       imap-4.5
-PKGNAME=        imap-uw-4.5
+DISTNAME=       imap-4.7c2
+PKGNAME=        imap-uw-4.7c2
 CATEGORIES=     mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -10,16 +10,22 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.washington.edu/imap/
 
-USE_LIBTOOL=	yes
+USE_LIBTOOL=	# defined
+
+WRKSRC=		${WRKDIR}/imap-4.7c
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
 INST_LIB=	${LIBTOOL} ${INSTALL_DATA}
-MESSAGE_FILE=	${WRKDIR}/.MESSAGE
+DOC_DIR=	${PREFIX}/share/doc/imap-uw
 
 do-configure:
-	@${SED} -e 's|@PREFIX@|${PREFIX}|' ${WRKSRC}/src/imapd/imapd.8c >${WRKSRC}/imapd.8
-	@${SED} -e 's|@PREFIX@|${PREFIX}|' ${WRKSRC}/src/ipopd/ipopd.8c >${WRKSRC}/ipopd.8
-	@${SED} -e 's|@PREFIX@|${PREFIX}|' ${PKGDIR}/MESSAGE >${MESSAGE_FILE}
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
+		< ${WRKSRC}/src/imapd/imapd.8c > ${WRKDIR}/imapd.8
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
+		< ${WRKSRC}/src/ipopd/ipopd.8c > ${WRKDIR}/ipopd.8
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
+		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 do-build:
 	cd ${WRKSRC} && ${MAKE} neb PREFIX=${PREFIX} CC="${LIBTOOL} ${CC}"
@@ -32,9 +38,13 @@ do-install:
 	${INST_PROG} ${WRKSRC}/ipopd/ipop3d ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/mtest/mtest ${PREFIX}/sbin
 	${LN} -sf ${PREFIX}/libexec/imapd ${PREFIX}/sbin/rimapd
-	${INSTALL_MAN} ${WRKSRC}/imapd.8 ${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/ipopd.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKDIR}/imapd.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKDIR}/ipopd.8 ${PREFIX}/man/man8
 	${LN} -sf ipopd.8 ${PREFIX}/man/man8/ipop2d.8
 	${LN} -sf ipopd.8 ${PREFIX}/man/man8/ipop3d.8
+	${INSTALL_DATA_DIR} ${DOC_DIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/FAQ ${DOC_DIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/RELNOTES ${DOC_DIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${DOC_DIR}
 
 .include "../../mk/bsd.pkg.mk"
