@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/06/17 03:49:15 tv Exp $
+# $NetBSD: Makefile,v 1.38 2004/07/18 09:38:26 schmonz Exp $
 #
 
 PKGNAME=	${DISTNAME:C/-/-base-/}
@@ -49,10 +49,6 @@ CONFIGURE_ENV+=		lt_cv_path_NM="nm -p"
 CONFIGURE_ENV+=		lt_cv_path_NM="nm -B"
 .endif
 
-.if ${OPSYS} == "Darwin"
-.  include "../../devel/dlcompat/buildlink3.mk"
-.endif
-
 BUILD_SHLIBTOOL?=	YES
 
 .PHONY: fix-libtool
@@ -79,4 +75,5 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/shlibtool ${PREFIX}/bin/shlibtool
 .endif
 
+.include "../../devel/dlcompat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
