@@ -1,5 +1,5 @@
---- configure.h.orig	Sun Aug 18 14:11:26 1996
-+++ configure.h	Sun Nov 30 16:33:59 1997
+--- configure.h.orig	Fri Jan  9 18:16:11 1998
++++ configure.h	Thu Apr 23 00:54:08 1998
 @@ -14,7 +14,7 @@
   *
   *  If you don't have sendmail, use /bin/false :-).
@@ -9,8 +9,8 @@
  /* #define MAIL_COMMAND "/usr/lib/sendmail -t"  */
  
  
-@@ -42,7 +42,7 @@
- /* #define DOMAIN_NAME "/your/file/here"  */
+@@ -34,7 +34,7 @@
+ /* #define DOMAIN_FILE "/your/file/here"  */
  /* #define DOMAIN_NAME "your_domain_here" */
  
 -#define DOMAIN_HACK	1
@@ -18,3 +18,23 @@
  
  
  
+@@ -86,8 +86,8 @@
+  *  library search paths in knews.tmpl for libjpeg and libpng.
+  */
+ 
+-#define HAVE_JPEG	0
+-#define HAVE_PNG	0
++#define HAVE_JPEG	1
++#define HAVE_PNG	1
+ 
+ 
+ 
+@@ -139,7 +139,7 @@
+  *
+  *  Knews*backgroundPixmap:	~/dir/texture.xpm
+  */
+-#define HAVE_XPM		0
++#define HAVE_XPM		1
+ 
+ 
+ /*  If your system doesn't have the POSIX sigaction() function, defining
