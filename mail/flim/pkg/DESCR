@@ -1,0 +1,20 @@
+FLIM is a library to provide basic features about message
+representation or encoding.
+
+std11.el	--- STD 11 (RFC 822) parser and utility
+mime.el	--- to provide various services about MIME-entities
+  mime-def.el --- Definitions about MIME format
+  mime-parse.el --- MIME parser
+  mel.el --- MIME encoder/decoder
+	mel-b-dl.el --- base64 (B-encoding) encoder/decoder
+	mel-b-ccl.el --- base64 (B-encoding) encoder/decoder
+	mel-b-en.el --- base64 (B-encoding) encoder/decoder
+	mel-q-ccl.el --- quoted-printable and Q-encoding
+			 encoder/decoder (using CCL)
+	mel-q.el--- quoted-printable and Q-encoding
+			encoder/decoder
+	mel-u.el--- unofficial backend for uuencode
+	mel-g.el--- unofficial backend for gzip64
+  eword-decode.el --- encoded-word decoder
+  eword-encode.el --- encoded-word encoder
+mailcap.el	--- mailcap parser and utility
