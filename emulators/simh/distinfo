@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 10:49:56 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/08/20 23:58:14 soren Exp $
 
-SHA1 (sim_2.3d.tar.gz) = 6529c150c6081f405001e09910fe4c3fb0bbc5c3
-Size (sim_2.3d.tar.gz) = 260457 bytes
-SHA1 (patch-aa) = ddee282f93ca959de4fb778856d6e64706e19c22
+SHA1 (simhv29-11.zip) = c09544b7a48825cda96ef47a432f81b712827bcc
+Size (simhv29-11.zip) = 1172434 bytes
