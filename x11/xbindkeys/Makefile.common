@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2003/09/17 15:08:35 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/09/25 21:24:45 wiz Exp $
 #
 
 DISTNAME=	xbindkeys-1.5.5
@@ -10,7 +10,7 @@ HOMEPAGE=	http://hocwp.free.fr/xbindkeys/xbindkeys.html
 COMMENT=	Launches shell commands with your keyboard or your mouse
 
 DISTINFO_FILE=	${.CURDIR}/../../x11/xbindkeys/distinfo
-PATCH_DIR=	${.CURDIR}/../../x11/xbindkeys/patches
+PATCHDIR=	${.CURDIR}/../../x11/xbindkeys/patches
 
 USE_BUILDLINK2=	yes
 USE_X11=	yes
