@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/08/06 02:23:34 fredb Exp $
+# $NetBSD: Makefile,v 1.22 2000/09/03 13:07:40 wiz Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -9,10 +9,11 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
 
 MAINTAINER=	hubertf@netbsd.org
+HOMEPAGE=	http://www.tug.org/tetex/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=	teTeX-share-1.0.*:../teTeX-share
-DEPENDS+=	dialog-0.6z:../../misc/dialog
+DEPENDS+=	dialog>=0.6z:../../misc/dialog
 DEPENDS+=	libwww>=5.2.8:../../www/libwww
 DEPENDS+=	png>=1.0.6:../../graphics/png
 
