@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:41:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/10/25 16:48:03 kristerw Exp $
 #
 
 DISTNAME=	x10_heyu
 PKGNAME=	x10_heyu-1.33
 WRKSRC=		${WRKDIR}/heyu.dir
 CATEGORIES=	misc
-MASTER_SITES=	http://heyu.tanj.com/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
+# MASTER_SITES=	http://heyu.tanj.com/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	damon@brodiefamily.org
