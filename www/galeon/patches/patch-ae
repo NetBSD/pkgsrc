@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2001/08/29 14:02:29 taya Exp $
+
+diff -ru ../Orig/galeon-0.12/src/GaleonWrapper.cpp ./src/GaleonWrapper.cpp
+--- ../Orig/galeon-0.12/src/GaleonWrapper.cpp	Sat Aug 18 08:48:17 2001
++++ ./src/GaleonWrapper.cpp	Fri Aug 24 14:22:37 2001
+@@ -220,7 +220,7 @@
+ 
+ 	if (!preview)
+ 	{
+-		result = print->Print (DOMWindow, options, NULL);
++		result = print->Print (DOMWindow, options, (nsIPrintListener *)NULL);
+ 	}
+ 	else
+ 	{

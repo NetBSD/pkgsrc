@@ -1,8 +1,9 @@
-$NetBSD: patch-ac,v 1.1 2001/08/21 20:09:59 tron Exp $
+$NetBSD: patch-ac,v 1.2 2001/08/29 14:02:29 taya Exp $
 
---- src/mozilla.cpp.orig	Thu Aug 16 18:03:34 2001
-+++ src/mozilla.cpp	Thu Aug 16 19:21:01 2001
-@@ -1046,6 +1046,28 @@
+diff -ru ../Orig/galeon-0.12/src/mozilla.cpp ./src/mozilla.cpp
+--- ../Orig/galeon-0.12/src/mozilla.cpp	Wed Aug 15 16:43:13 2001
++++ ./src/mozilla.cpp	Fri Aug 24 14:21:54 2001
+@@ -1117,6 +1117,28 @@
   * into a form which mozilla can use.
   * @locStr: The unicode string to encode
   */
@@ -31,7 +32,7 @@ $NetBSD: patch-ac,v 1.1 2001/08/21 20:09:59 tron Exp $
  extern "C" PRUnichar *
  mozilla_locale_to_unicode (const gchar *locStr)
  {
-@@ -1060,7 +1082,9 @@
+@@ -1131,7 +1153,9 @@
  	}
  
  	/* count the number of wide characters which will be produced */
@@ -42,7 +43,7 @@ $NetBSD: patch-ac,v 1.1 2001/08/21 20:09:59 tron Exp $
  	if (count == -1)
  	{
  		/* hmm, shouldnt happen but fallback to utf8 */
-@@ -1070,7 +1094,7 @@
+@@ -1141,7 +1165,7 @@
  
  	/* allocate and decode */
  	wide = g_new0 (wchar_t, count + 1);
