@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32.2.2 2002/06/30 06:31:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.32.2.3 2002/06/30 14:30:37 jlam Exp $
 #
 
 V=		2.05
@@ -14,7 +14,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
 COMMENT=	The GNU Bourne Again Shell
 
+# bash is needed to bootstrap buildlink2 on Darwin.
 USE_BUILDLINK2=		no
+
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		INSTALL_SCRIPT='${INSTALL_SCRIPT}'
 
@@ -45,6 +47,9 @@ post-patch:
 		${MV} -f $${file}.fixed $${file};			\
 	done
 
+# Symlink the correct gettext libraries and headers into a private directory
+# that is placed in the library and header search paths.
+#
 pre-configure:
 	cd ${GETTEXT_PREFIX};						\
 	for file in include/libintl.h lib/libintl.*; do			\
