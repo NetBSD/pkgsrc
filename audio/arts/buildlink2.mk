@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/21 22:32:25 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/10/07 05:09:58 jlam Exp $
 
 .if !defined(ARTS_BUILDLINK2_MK)
 ARTS_BUILDLINK2_MK=	# defined
@@ -12,6 +12,8 @@ BUILDLINK_PKGSRCDIR.arts?=	../../audio/arts
 EVAL_PREFIX+=			BUILDLINK_PREFIX.arts=arts
 BUILDLINK_PREFIX.arts_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.arts!=	${GREP} "^\(include\|lib\)" ${.CURDIR}/../../audio/arts/PLIST
+
+.include "../../mk/ossaudio.buildlink2.mk"
 
 BUILDLINK_TARGETS+=		arts-buildlink
 
