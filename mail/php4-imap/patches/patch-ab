@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/10/16 05:39:57 jlam Exp $
+
+--- php_imap.c.orig	Wed May 30 13:27:49 2001
++++ php_imap.c
+@@ -432,7 +432,11 @@
+ 	ZEND_INIT_MODULE_GLOBALS(imap, php_imap_init_globals, NULL)
+ 
+ 
+-#if 1
++/*
++ * Use the installed c-client linkage.c to determine which drivers and
++ * authenticators are linked in.
++ */
++#if 0
+ #ifndef PHP_WIN32
+ 	mail_link(&unixdriver);		/* link in the unix driver */
+ #endif
