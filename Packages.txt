@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.216 2001/11/29 01:12:24 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.217 2001/11/30 01:26:32 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -2041,41 +2041,7 @@ unconditionally prevent users from generating binary packages!
  ==============================
 
 Some packages need curses functionality that wasn't present in NetBSD's own
-curses prior to 1.4Y. For packages using such functionality there are two
-options, setting USE_CURSES or including ../../devel/ncurses/buildlink.mk
-in the package's Makefile.
-
-
- 10.20.1 USE_CURSES
- ===================
-
-If USE_CURSES is set in a package's Makefile, NEED_NCURSES is set
-automatically to YES or NO, depending on whether a dependency on ncurses is
-needed on this system. You can use this variable to e.g. add arguments to
-configure to tell the package whether to use ncurses.
-
-Additionally, you can set REPLACE_NCURSES to some filenames; in each of
-these files, each occurrence of 'ncurses' is replaced by 'curses' if the
-package doesn't need ncurses. You may need this in some cases if ncurses
-are installed, and the package's configure script prefers ncurses.
-
-For example, in pkgsrc/mail/mutt, the relevant lines are:
-
-	USE_CURSES=		YES
-	REPLACE_NCURSES=	configure configure.in
-	...
-	.include "../../mk/bsd.prefs.mk"
-
-	.if defined(NEED_NCURSES) && ${NEED_NCURSES} == "YES"
-	CONFIGURE_ARGS+=	--with-curses=${LOCALBASE}
-	.endif
-
-Please note that the check for NEED_NCURSES has to be below the
-inclusion of bsd.prefs.mk, since the variable is set there.
-
-
- 10.20.2 devel/ncurses/buildlink.mk
- ==================================
+curses prior to 1.4Y.
 
 If ../../devel/ncurses/buildlink.mk is included in a package's Makefile,
 then a curses library and headers with ncurses functionality are linked
