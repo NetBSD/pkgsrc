@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9323 2005/02/26 17:28:42 jmmv Exp $
+$NetBSD: CHANGES,v 1.9324 2005/02/26 17:50:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1150,3 +1150,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated nautilus-cd-burner to 2.8.7 [jmmv 2005-02-26]
 	Updated gnome to 2.8.3 [jmmv 2005-02-26]
 	Updated gnome-devel to 2.8.3 [jmmv 2005-02-26]
+	Updated p5-WWW-Mechanize to 1.12 [wiz 2005-02-26]
