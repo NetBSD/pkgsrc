@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/05/22 11:27:01 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/14 14:21:43 dmcmahill Exp $
 #
 
-DISTNAME=	latex-mk-1.0
-PKGREVISION=	1
+DISTNAME=	latex-mk-1.1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=latex-mk/}
 
@@ -12,8 +11,8 @@ COMMENT=	Makefile fragments and scripts for managing LaTeX documents
 
 GNU_CONFIGURE=	YES
 
-post-install:
-	${RM} -fr ${PREFIX}/share/latex-mk/testsuite
+TEST_DIRS=	${WRKSRC}
+TEST_TARGET=	check
 
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
