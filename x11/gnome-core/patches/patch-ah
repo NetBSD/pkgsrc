@@ -1,0 +1,14 @@
+--- applets/battery/read-battery.h.orig	Thu Jul 15 13:59:25 1999
++++ applets/battery/read-battery.h	Thu Jul 15 14:41:22 1999
+@@ -18,6 +18,11 @@
+ #include <fcntl.h>
+ #include <machine/apm_bios.h>
+ #define APMDEV "/dev/apm"
++#elif defined(__NetBSD__)
++#include <sys/ioctl.h>
++#include <machine/apmvar.h>
++#include <fcntl.h>
++#define APMDEV "/dev/apm"
+ #endif
+ 
+ /* Prototypes */ 
