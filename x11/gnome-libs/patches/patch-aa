@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 1999/11/15 18:47:56 rh Exp $
+$NetBSD: patch-aa,v 1.8 2000/03/13 22:25:47 tron Exp $
 
---- configure.orig	Thu Oct  7 04:32:56 1999
-+++ configure	Mon Nov 15 19:18:04 1999
+--- configure.orig	Tue Feb 22 15:29:37 2000
++++ configure	Mon Mar 13 23:08:16 2000
 @@ -2077,7 +2077,9 @@
  fi
  
@@ -20,8 +20,8 @@ $NetBSD: patch-aa,v 1.7 1999/11/15 18:47:56 rh Exp $
 +gnomelocaledir='${prefix}/share/locale'
  
  
- echo $ac_n "checking for main in -lm""... $ac_c" 1>&6
-@@ -10370,7 +10372,7 @@
+ echo $ac_n "checking for floor in -lm""... $ac_c" 1>&6
+@@ -10496,7 +10498,7 @@
  GTKXMHTML_LIBS="-lgtkxmhtml $LIBGTKXMHTML_LIBS"
  ZVT_LIBS="-lzvt $UTIL_LIBS $GTK_LIBS"
  
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.7 1999/11/15 18:47:56 rh Exp $
  GNOME_INCLUDEDIR='-I${includedir} -DNEED_GNOMESUPPORT_H -I${pkglibdir}/include'
  GNOME_IDLDIR='-I${datadir}/idl'
  
-@@ -10967,10 +10969,10 @@
+@@ -11093,10 +11095,10 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
@@ -45,7 +45,7 @@ $NetBSD: patch-aa,v 1.7 1999/11/15 18:47:56 rh Exp $
  
    echo creating "$ac_file"
    rm -f "$ac_file"
-@@ -11240,10 +11242,10 @@
+@@ -11366,10 +11368,10 @@
        *) # Relative path.
          ac_sub_cache_file="$ac_dots$cache_file" ;;
        esac
