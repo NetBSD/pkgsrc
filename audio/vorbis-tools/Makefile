@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2003/09/05 19:16:36 explorer Exp $
+# $NetBSD: Makefile,v 1.27 2003/12/08 14:43:48 wiz Exp $
 
-DISTNAME=	vorbis-tools-1.0
-PKGNAME=	vorbis-tools-1.0.0.8
-PKGREVISION=	6
+DISTNAME=	vorbis-tools-1.0.1
 CATEGORIES=	audio
-MASTER_SITES=	http://www.vorbis.com/files/1.0/unix/
+MASTER_SITES=	http://www.vorbis.com/files/1.0.1/unix/
 
 MAINTAINER=	lukem@NetBSD.org
 HOMEPAGE=	http://www.vorbis.com/
@@ -28,9 +26,11 @@ PLIST_SUBST+=	DISTNAME="${DISTNAME}"
 
 PTHREAD_OPTS+=	require
 
+.include "../../audio/flac/buildlink2.mk"
 .include "../../audio/libao/buildlink2.mk"
 .include "../../audio/libogg/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
+.include "../../audio/speex/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../www/curl/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
