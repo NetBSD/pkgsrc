@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/10/18 15:20:39 veego Exp $
+# $NetBSD: Makefile,v 1.26 2001/12/25 20:50:00 wiz Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -30,7 +30,6 @@ CONFIGURE_ARGS+=	--without-server --without-restore
 CONFIGURE_ENV+=         ac_cv_lib_intl_main=no
 CONFIGURE_ENV+=         ac_cv_lib_termcap_tgetent=no
 CONFIGURE_ENV+=         ac_cv_lib_curses_tgetent=no
-CONFIGURE_ENV+=         ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=         ac_cv_lib_ncurses_tgetent=no
 CONFIGURE_ENV+=         ac_cv_lib_readline_readline=no
 
