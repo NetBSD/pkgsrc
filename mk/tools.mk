@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.22 2004/01/29 10:19:10 grant Exp $
+# $NetBSD: tools.mk,v 1.23 2004/02/03 08:57:20 grant Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -115,7 +115,7 @@ ${TOOLS_DIR}/bin/makeinfo: ${_GNU_MISSING}
 # defining e.g. USE_GNU_TOOLS+="awk sed".  Version numbers are not
 # considered.
 
-_TOOLS=		awk grep m4 make patch sed
+_TOOLS=		awk grep lex m4 make patch sed yacc
 
 .if defined(_IGNORE_USE_GNU_TOOLS)
 USE_GNU_TOOLS:=		# empty
@@ -130,11 +130,13 @@ USE_GNU_TOOLS?=		# empty
 _TOOLS_OPSYS_HAS_GNU.awk+=	FreeBSD-*-* Linux-*-* NetBSD-*-* OpenBSD-*-*
 _TOOLS_OPSYS_HAS_GNU.grep+=	Darwin-*-* FreeBSD-*-* Linux-*-*
 _TOOLS_OPSYS_HAS_GNU.grep+=	NetBSD-*-* OpenBSD-*-*
+_TOOLS_OPSYS_HAS_GNU.lex+=	FreeBSD-*-* Linux-*-* NetBSD-*-* OpenBSD-*-*
 _TOOLS_OPSYS_HAS_GNU.m4+=	# empty
 _TOOLS_OPSYS_HAS_GNU.make+=	Darwin-*-*
 _TOOLS_OPSYS_HAS_GNU.patch+=	Darwin-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
 _TOOLS_OPSYS_HAS_GNU.patch+=	OpenBSD-*-*
 _TOOLS_OPSYS_HAS_GNU.sed+=	Linux-*-* NetBSD-*-*
+_TOOLS_OPSYS_HAS_GNU.yacc+=	FreeBSD-*-* Linux-*-* NetBSD-*-* OpenBSD-*-*
 
 # These platforms have GNUish versions of the tools available in the base
 # system, which we already define as ${AWK}, ${SED}, etc. (refer to
@@ -143,19 +145,24 @@ _TOOLS_OPSYS_HAS_GNU.sed+=	Linux-*-* NetBSD-*-*
 #
 _TOOLS_REPLACE_OPSYS.awk+=	SunOS-*-*
 _TOOLS_REPLACE_OPSYS.grep+=	SunOS-*-*
+_TOOLS_REPLACE_OPSYS.lex+=	# empty
 _TOOLS_REPLACE_OPSYS.m4+=	# empty
 _TOOLS_REPLACE_OPSYS.make+=	# empty
 _TOOLS_REPLACE_OPSYS.patch+=	SunOS-*-*
 _TOOLS_REPLACE_OPSYS.sed+=	SunOS-*-*
+_TOOLS_REPLACE_OPSYS.yacc+=	# empty
 
 # These platforms have completely unusable versions of these tools, and
 # no suitable replacement is available.
 #
 _TOOLS_OPSYS_INCOMPAT.awk+=	IRIX-*-*
 _TOOLS_OPSYS_INCOMPAT.grep+=	# empty
+_TOOLS_OPSYS_INCOMPAT.lex+=	# empty
 _TOOLS_OPSYS_INCOMPAT.m4+=	# empty
 _TOOLS_OPSYS_INCOMPAT.make+=	# empty
+_TOOLS_OPSYS_INCOMPAT.patch+=	# empty
 _TOOLS_OPSYS_INCOMPAT.sed+=	# empty
+_TOOLS_OPSYS_INCOMPAT.yacc+=	# empty
 
 # Default to not requiring GNU tools.
 .for _tool_ in ${_TOOLS}
@@ -229,6 +236,23 @@ _TOOLS_OVERRIDE.grep=	NO
 MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
 .endif
 
+.if ${_TOOLS_REPLACE.lex} == "YES"
+_TOOLS_OVERRIDE.lex=	YES
+_TOOLS_PROGNAME.lex=	${LEX}
+.endif
+.if (${_TOOLS_NEED_GNU.lex} == "YES") && empty(PKGPATH:Mdevel/flex)
+BUILD_DEPENDS+=		flex>=2.5:../../devel/flex
+_TOOLS_OVERRIDE.lex=	YES
+_TOOLS_PROGNAME.lex=	${LOCALBASE}/bin/flex
+.  if exists(${_TOOLS_PROGNAME.lex})
+LEX:=			${_TOOLS_PROGNAME.lex}
+.  endif
+.endif
+.if !empty(PKGPATH:Mdevel/flex)
+_TOOLS_OVERRIDE.lex=	NO
+MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+.endif
+
 .if ${_TOOLS_REPLACE.m4} == "YES"
 _TOOLS_OVERRIDE.m4=	YES
 _TOOLS_PROGNAME.m4=	${M4}
@@ -294,6 +318,23 @@ SED:=			${_TOOLS_PROGNAME.sed}
 .endif
 .if !empty(PKGPATH:Mtextproc/gsed)
 _TOOLS_OVERRIDE.sed=	NO
+MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+.endif
+
+.if ${_TOOLS_REPLACE.yacc} == "YES"
+_TOOLS_OVERRIDE.yacc=	YES
+_TOOLS_PROGNAME.yacc=	${YACC}
+.endif
+.if (${_TOOLS_NEED_GNU.yacc} == "YES") && empty(PKGPATH:Mdevel/bison)
+BUILD_DEPENDS+=		bison>=1.0:../../devel/bison
+_TOOLS_OVERRIDE.yacc=	YES
+_TOOLS_PROGNAME.yacc=	${LOCALBASE}/bin/bison
+.  if exists(${_TOOLS_PROGNAME.yacc})
+YACC:=			${_TOOLS_PROGNAME.yacc} -y
+.  endif
+.endif
+.if !empty(PKGPATH:Mdevel/yacc)
+_TOOLS_OVERRIDE.yacc=	NO
 MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
 .endif
 
