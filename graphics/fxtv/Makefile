@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2000/09/09 14:44:41 veego Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/13 21:45:06 tron Exp $
 
-DISTNAME=	fxtv-1.02
+DISTNAME=	fxtv-1.03
 CATEGORIES=	graphics
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tgz
