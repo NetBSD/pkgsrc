@@ -1,0 +1,16 @@
+$NetBSD: patch-at,v 1.1 2002/02/13 12:43:57 drochner Exp $
+
+--- src/uipp/dxuilib/Network.C.orig	Mon May 22 18:02:44 2000
++++ src/uipp/dxuilib/Network.C	Wed Feb 13 12:54:36 2002
+@@ -1191,11 +1191,7 @@
+ extern
+ FILE* yyin;			/* parser input stream	  */
+ 
+-#if defined(USING_BISON)
+-int yylineno;
+-#else
+ extern int yylineno;			/* lexer line number      */
+-#endif
+ 
+ extern int yyparse();
+ }
