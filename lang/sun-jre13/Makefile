@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/07/27 21:54:31 jschauma Exp $
+# $NetBSD: Makefile,v 1.23 2002/08/29 14:07:30 wiz Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 DISTNAME=	j2re-1_3_1_02-linux-i386
@@ -13,6 +13,5 @@ NO_CONFIGURE=	# defined
 
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
-
 
 .include "../../lang/sun-jre13/Makefile.common"
