@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2000/08/24 22:55:21 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2004/10/08 23:33:35 kristerw Exp $
 
 --- Makefile.in.orig	Thu Aug 13 16:12:55 1998
-+++ Makefile.in
-@@ -15,7 +15,7 @@
- CFLAGS= @CFLAGS@ -I. -I$(srcdir) -I$(INCDIR) \
- 	-DCC_CMD=\"@CC_CMD@\" -DLDCONFIG_CMD=\"@LDCONFIG@\" -DLD_CMD=\"@LD@\" \
- 	-DGREP_CMD=\"@GREP@\" -DFILE_CMD=\"@FILE_CMD@\"
--LIBS= @LIBS@
-+LIBS= -Wl,-R. @LIBS@
- OBJS= dync.o
- EXE= dync
- 
++++ Makefile.in	Sat Oct  9 01:25:39 2004
 @@ -32,8 +32,9 @@
  	@./$(EXE) -f tests/1.c root > tests/1.out
  	@diff tests/1.exp tests/1.out
