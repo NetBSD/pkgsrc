@@ -1,4 +1,4 @@
-/*	$NetBSD: tar.c,v 1.8 2004/06/20 10:11:02 grant Exp $	*/
+/*	$NetBSD: tar.c,v 1.9 2004/08/21 03:28:56 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -36,15 +36,19 @@
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
+
 #include <nbcompat.h>
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-#if defined(__RCSID) && !defined(lint)
+#if !defined(lint)
 #if 0
 static char sccsid[] = "@(#)tar.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: tar.c,v 1.8 2004/06/20 10:11:02 grant Exp $");
+__RCSID("$NetBSD: tar.c,v 1.9 2004/08/21 03:28:56 jlam Exp $");
 #endif
 #endif /* not lint */
 
@@ -1328,10 +1332,12 @@ tar_gnutar_exclude_one(const char *line, size_t len)
 		else if (line[i] == '?') {
 			sbuf[j++] = '.';
 			continue;
-		} else if (!isalnum(line[i]) && !isblank(line[i]))
+		} else if (!isalnum((unsigned char)line[i]) &&
+		    !isblank((unsigned char)line[i]))
 			sbuf[j++] = '\\';
 		sbuf[j++] = line[i];
 	}
+	sbuf[j] = '\0';
 	/* don't need the .*\/ ones if we start with /, i guess */
 	if (line[0] != '/') {
 		(void)snprintf(rabuf, sizeof rabuf, "/.*\\/%s$//", sbuf);
