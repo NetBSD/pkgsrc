@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 1999/11/21 22:12:58 tron Exp $
+# $NetBSD: Makefile,v 1.10 2000/05/03 16:40:34 mjl Exp $
 #
 
-DISTNAME=	mod_fastcgi_2.2.1
-PKGNAME=	ap-fastcgi-2.2.1
+DISTNAME=	mod_fastcgi_2.2.2
+PKGNAME=	ap-fastcgi-2.2.2
 CATEGORIES=	www
-MASTER_SITES=	http://fastcgi.idle.com/dist/
+MASTER_SITES=	http://www.fastcgi.com/dist/
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.fastcgi.com/
