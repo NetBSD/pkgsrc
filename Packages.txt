@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.203 2001/10/17 18:35:42 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.204 2001/10/24 20:06:19 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1531,6 +1531,10 @@ buildlink.mk files:
     USE_X11	-->	.include "../../mk/x11.buildlink.mk"
     USE_XAW	-->	.include "../../mk/xaw.buildlink.mk"
     USE_XPM	-->	.include "../../graphics/xpm/buildlink.mk"
+
+x11.buildlink.mk must be included before other buildlink.mk files that test
+for whether X11_BUILDLINK_MK is defined.  In general, x11.buildlink.mk
+should be included before all other buildlink.mk files.
 
 Packages that have an explicit dependency on ncurses should set USE_NCURSES
 to the reason why the system curses is insufficient, and include
