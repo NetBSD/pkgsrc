@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/03/22 16:10:12 jmmv Exp $
+
+--- layout/Makefile.in.orig	2005-01-10 18:46:19.000000000 +0100
++++ layout/Makefile.in
+@@ -190,7 +190,7 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ NULL = 
+ 
+-menudir = $(sysconfdir)/xdg/menus
++menudir = $(datadir)/examples/$(PACKAGE)/xdg/menus
+ 
+ menu_DATA = \
+ 	applications.menu		\

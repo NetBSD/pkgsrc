@@ -1,0 +1,76 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/22 16:10:12 jmmv Exp $
+bin/gnome-menu-spec-test
+include/gnome-menus/menu-tree.h
+lib/libgnome-menu.la
+lib/pkgconfig/libgnome-menu.pc
+share/desktop-directories/Accessibility.directory
+share/desktop-directories/Accessories.directory
+share/desktop-directories/Applications.directory
+share/desktop-directories/Development.directory
+share/desktop-directories/Edutainment.directory
+share/desktop-directories/Games.directory
+share/desktop-directories/Graphics.directory
+share/desktop-directories/Internet.directory
+share/desktop-directories/Multimedia.directory
+share/desktop-directories/Office.directory
+share/desktop-directories/Other.directory
+share/desktop-directories/Settings-Accessibility.directory
+share/desktop-directories/Settings.directory
+share/desktop-directories/System-Settings.directory
+share/desktop-directories/System-Tools.directory
+share/examples/gnome-menus/xdg/menus/applications.menu
+share/examples/gnome-menus/xdg/menus/preferences.menu
+share/examples/gnome-menus/xdg/menus/settings.menu
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-menus.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-menus.mo
+@dirrm share/examples/gnome-menus/xdg/menus
+@dirrm share/examples/gnome-menus/xdg
+@dirrm share/examples/gnome-menus
+@dirrm share/desktop-directories
+@dirrm include/gnome-menus
