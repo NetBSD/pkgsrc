@@ -1,6 +1,6 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.15 2002/11/17 08:58:50 salo Exp $
+# $NetBSD: deinstall,v 1.16 2002/11/21 10:11:57 jlam Exp $
 
 eval set -- ${PKG_USERS}
 for userset; do
@@ -112,7 +112,13 @@ POST-DEINSTALL)
 	eval set -- ${ALL_DIRS}
 	for dir; do
         	if [ "${_PKG_CONFIG}" = "YES" ]; then
-			${RMDIR} -p "${dir}" 2>/dev/null || ${TRUE}
+			if [ -f "${dir}/.pkgsrc" ]; then
+				dirowner=`${HEAD} -1 "${dir}/.pkgsrc"`
+				if [ "${dirowner}" = "${PKGBASE}" ]; then
+					${RM} -f "${dir}/.pkgsrc"
+					${RMDIR} -p "${dir}" 2>/dev/null || ${TRUE}
+				fi
+			fi
 			is_make_dir=`					\
 				eval set -- ${ALL_MAKE_DIRS};		\
 				is_make_dir=0;				\
