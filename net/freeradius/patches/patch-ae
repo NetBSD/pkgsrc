@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1 2003/07/30 14:50:11 jmmv Exp $
+
+--- Makefile.orig	2003-07-30 16:05:43.000000000 +0200
++++ Makefile
+@@ -22,7 +22,6 @@ clean:
+ install:
+ 	@$(MAKE) $(MFLAGS) WHAT_TO_MAKE=$@ common
+ 	$(INSTALL) -d -m 755	$(R)$(mandir);
+-	$(INSTALL) -d -m 755	$(R)$(RUNDIR);
+ 	$(INSTALL) -d -m 700	$(R)$(logdir);
+ 	$(INSTALL) -d -m 700	$(R)$(radacctdir);
+ 	for i in 1 5 8; do \
+@@ -31,6 +30,8 @@ install:
+ 			$(INSTALL) -m 644 $$p $(R)$(mandir)/man$$i; \
+ 		done \
+ 	done
++
++install-etc:
+ 	@echo "Creating/updating files in $(R)$(raddbdir)"; \
+ 	$(INSTALL) -d -m 755	$(R)$(raddbdir); \
+ 	cd raddb; \
