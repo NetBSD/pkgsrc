@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: do-install,v 1.3 2000/08/28 23:03:56 wiz Exp $
+# $NetBSD: do-install,v 1.1 2001/10/26 12:54:24 agc Exp $
 #
 
 cd $WRKSRC
