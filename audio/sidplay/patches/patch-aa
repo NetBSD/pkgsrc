@@ -1,13 +1,47 @@
-$NetBSD: patch-aa,v 1.3 1999/07/04 14:41:15 frueauf Exp $
+$NetBSD: patch-aa,v 1.4 2000/06/20 21:12:10 pooka Exp $
 
---- console/Makefile.in.orig	Thu Jun 17 08:59:51 1999
-+++ console/Makefile.in	Wed Jun 23 23:50:39 1999
-@@ -25,7 +25,7 @@
- LIBM			= @LIBM@
- LIBIOS			= @LIBIOS@
- SIDLIB          = -L$(TOPDIR)/libsidplay -lsidplay
--LIBS			= @LIBS@ $(LIBM) $(LIBIOS) $(SIDLIB)
-+LIBS			= @LIBS@ $(LIBM) $(LIBIOS) $(SIDLIB) @LIBAUDIO@
+--- Makefile.in.orig	Wed May 31 21:52:44 2000
++++ Makefile.in	Tue Jun 20 00:23:09 2000
+@@ -61,6 +61,7 @@
+ host_triplet = @host@
+ CP = @CP@
+ CXX = @CXX@
++LIBAUDIO = @LIBAUDIO@
+ MAKEINFO = @MAKEINFO@
+ PACKAGE = @PACKAGE@
+ SIDPLAY_INCLUDES = @SIDPLAY_INCLUDES@
+@@ -80,13 +81,13 @@
+ bin_PROGRAMS = sidplay sid2wav sidcon
  
- #--------------------------------------------------------------
+ sidplay_SOURCES = sidplay.cpp
+-sidplay_LDADD = audiodrv.o @SIDPLAY_LDFLAGS@ -lsidplay
++sidplay_LDADD = audiodrv.o @SIDPLAY_LDFLAGS@ -lsidplay @LIBAUDIO@
  
+ sid2wav_SOURCES = sid2wav.cpp
+-sid2wav_LDADD = @SIDPLAY_LDFLAGS@ -lsidplay
++sid2wav_LDADD = @SIDPLAY_LDFLAGS@ -lsidplay @LIBAUDIO@
+ 
+ sidcon_SOURCES = sidcon.cpp
+-sidcon_LDADD = @SIDPLAY_LDFLAGS@ -lsidplay
++sidcon_LDADD = @SIDPLAY_LDFLAGS@ -lsidplay @LIBAUDIO@
+ 
+ INCLUDES = @SIDPLAY_INCLUDES@
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -123,7 +124,7 @@
+ 
+ DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = gtar
++TAR = tar
+ GZIP_ENV = --best
+ DEP_FILES =  .deps/audiodrv.P .deps/sid2wav.P .deps/sidcon.P \
+ .deps/sidplay.P
+@@ -278,7 +279,7 @@
+ 	@for file in $(DISTFILES); do \
+ 	  d=$(srcdir); \
+ 	  if test -d $$d/$$file; then \
+-	    cp -pr $$d/$$file $(distdir)/$$file; \
++	    cp -pr $$/$$file $(distdir)/$$file; \
+ 	  else \
+ 	    test -f $(distdir)/$$file \
+ 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
