@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/27 20:23:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/25 19:30:39 wiz Exp $
 bin/aclocal
+bin/aclocal-${PKG_DIR_VERSION}
 bin/automake
+bin/automake-${PKG_DIR_VERSION}
 @unexec ${INSTALL_INFO} --delete %D/info/automake.info %D/info/dir
 info/automake.info
 @exec ${INSTALL_INFO} %D/info/automake.info %D/info/dir
