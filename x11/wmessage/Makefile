@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/10/06 06:07:22 jlam Exp $
+# $NetBSD: Makefile,v 1.5 1999/10/06 07:43:10 jlam Exp $
 
 DISTNAME=	wmessage-0.8
 CATEGORIES=	x11
@@ -9,6 +9,6 @@ HOMEPAGE=	http://www.ozemail.com.au/~crn/wmessage/
 
 DEPENDS+=	windowmaker-0.61.*:../../x11/windowmaker
 
-USE_X11BASE=	yes
+USE_X11=	yes
 
 .include "../../mk/bsd.pkg.mk"
