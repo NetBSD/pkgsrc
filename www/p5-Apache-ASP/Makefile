@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/04/15 20:39:47 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/02/15 09:26:25 agc Exp $
 #
 
 DISTNAME=		Apache-ASP-0.05
@@ -10,9 +10,9 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/Apache-ASP/ASP.html
 
 # all other needs are already pulled in by p5-libwww
-BUILD_DEPENDS=		${PREFIX}/lib/perl5/site_perl/URI/URL.pm:../../www/p5-libwww \
-			${PREFIX}/lib/perl5/site_perl/MLDBM.pm:../../devel/p5-MLDBM \
-			${PREFIX}/lib/httpd/mod_perl.so:../../www/ap-perl
+BUILD_DEPENDS=		${PREFIX}/lib/perl5/site_perl/URI/URL.pm:../../www/p5-libwww
+BUILD_DEPENDS+=		${PREFIX}/lib/perl5/site_perl/MLDBM.pm:../../devel/p5-MLDBM
+BUILD_DEPENDS+=		${PREFIX}/lib/httpd/mod_perl.so:../../www/ap-perl
 RUN_DEPENDS:=		${BUILD_DEPENDS}
 
 USE_PERL5=		YES

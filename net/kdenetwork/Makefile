@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 1999/12/06 20:44:58 bouyer Exp $
+# $NetBSD: Makefile,v 1.38 2000/02/15 09:26:23 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -11,10 +11,10 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.kde.org/
 
-DEPENDS=		gdbm-1.7.3:../../databases/gdbm \
-			uulib-0.5.13:../../converters/uulib \
-			kdesupport-1.1.2:../../converters/kdesupport \
-			kdebase-1.1.2:../../x11/kdebase
+DEPENDS=		gdbm-1.7.3:../../databases/gdbm
+DEPENDS+=		uulib-0.5.13:../../converters/uulib
+DEPENDS+=		kdesupport-1.1.2:../../converters/kdesupport
+DEPENDS+=		kdebase-1.1.2:../../x11/kdebase
 
 NOT_FOR_PLATFORM=	*-*-alpha	# LP64/ELF problems
 
