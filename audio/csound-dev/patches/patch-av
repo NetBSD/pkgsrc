@@ -1,0 +1,17 @@
+$NetBSD: patch-av,v 1.1 2004/01/23 19:34:09 kristerw Exp $
+
+--- csound.c.orig	Fri Jan 23 20:13:03 2004
++++ csound.c	Fri Jan 23 20:14:09 2004
+@@ -696,10 +696,12 @@
+       if (!tty_attr_set)
+         inchar_tty_init();          /* initialise terminal if not done yet */
+       /* otherwise poll stdin for input (currently UNIX only) */
++      {
+       unsigned char ch;
+       /* IV - Jan 30 2003 */
+       if ((int) read(0, &ch, 1) > 0 && (int) ch != '\0')
+         c = (char) ch;
++      }
+ #endif
+     }
+     /* return whatever was read */
