@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2004/02/16 23:44:14 jmmv Exp $
+$NetBSD: distinfo,v 1.7 2004/02/26 17:14:35 minskim Exp $
 
-SHA1 (gcalctool-4.3.44.tar.bz2) = ffb2c4bcb86180e8b34b2b0d9f698204bb0bba9b
-Size (gcalctool-4.3.44.tar.bz2) = 610762 bytes
+SHA1 (gcalctool-4.3.46.tar.bz2) = 4253999ff5e62c8dfb1a0231407f35feb415a936
+Size (gcalctool-4.3.46.tar.bz2) = 609321 bytes
