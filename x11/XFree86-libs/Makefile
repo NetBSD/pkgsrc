@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/02 14:15:27 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/02 17:59:12 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-libs-${XF_VER}
@@ -21,8 +21,7 @@ DEPENDS=		imake>=4.3.0:../../x11/imake
 
 .include "../../mk/bsd.prefs.mk"
 
-FILES_SUBST+=		PKGBASE=${PKGBASE}
-FILES_SUBST+=		X11ROOT=${X11ROOT}
+MESSAGE_SUBST+=		X11PREFIX=${X11PREFIX}
 
 .if ${OPSYS} == "NetBSD"
 PLIST_SUBST+=		MANPAGE_SUFFIX=${IMAKE_MANNEWSUFFIX}
