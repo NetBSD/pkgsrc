@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:33 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/08 14:12:50 drochner Exp $
 #
 
-DISTNAME=	libcdaudio-0.99.9
-PKGREVISION=	1
+DISTNAME=	libcdaudio-0.99.10
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libcdaudio/}
 
@@ -13,5 +12,6 @@ COMMENT=	Multi-platform CD player development library
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+PKGCONFIG_OVERRIDE=	libcdaudio.pc.in
 
 .include "../../mk/bsd.pkg.mk"
