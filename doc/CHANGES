@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3344 2003/09/12 17:49:09 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3345 2003/09/12 19:42:37 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3659,3 +3659,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gnome2-user-docs-2.0.6 [xtraeme 2003-09-12]
 	Added yelp-2.2.2 [xtraeme 2003-09-12]
 	Updated gnome2 to 2.2.6 [xtraeme 2003-09-12]
+	Updated pico to 4.6nb1 [tron 2003-09-12]
