@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2753 2003/07/12 11:50:02 jtb Exp $
+$NetBSD: CHANGES,v 1.2754 2003/07/12 11:57:30 zuntum Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2773,3 +2773,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gimageview to 0.2.23 [zuntum 2003-07-12]
 	Updated gcc to 2.95.3nb4 [jtb 2003-07-12]
 	Updated gpc to 2.1nb3 [jtb 2003-07-12]
+	Updated qvwm to 1.1.12 [zuntum 2003-07-12]
