@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 10:36:18 agc Exp $
+
 diff -u -r ../../work/tracker/Arch/PCux/audio.c ./Arch/PCux/audio.c
 --- ../../work/tracker/Arch/PCux/audio.c	Thu Oct 30 00:58:14 1997
 +++ ./Arch/PCux/audio.c	Thu Oct 30 00:46:12 1997

@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.2 1998/08/07 10:40:39 agc Exp $
+
 --- include/config.h.orig	Sat Feb  7 22:26:21 1998
 +++ include/config.h	Sun Feb 22 05:52:23 1998
 @@ -882,4 +882,4 @@

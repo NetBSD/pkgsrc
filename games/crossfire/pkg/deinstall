@@ -1,4 +1,7 @@
 #!/usr/pkg/bin/perl
+#
+# $NetBSD: deinstall,v 1.2 1998/08/07 10:40:40 agc Exp $
+#
 open (FILE,"XXXLOCALBASEXXX/etc/rplay.conf");
 open (OUT,">tmp");
 @data = <DATA>;

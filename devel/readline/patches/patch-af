@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/08/07 10:40:28 agc Exp $
+
 --- history.h	Thu Jul 23 12:13:23 1998
 +++ history.h	Thu May 22 22:37:53 1997
 @@ -22,6 +22,10 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 1998/08/07 10:40:19 agc Exp $
+
 --- scripts/mysql_install_db.sh.orig	Sun Jun 14 23:02:32 1998
 +++ scripts/mysql_install_db.sh	Sun Jun 14 23:05:16 1998
 @@ -34,7 +34,7 @@

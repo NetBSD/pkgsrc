@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:35:52 agc Exp $
+
 --- zip.1.orig	Mon Oct 21 13:33:32 1991
 +++ zip.1	Sat Jun 20 17:36:55 1998
 @@ -6,11 +6,11 @@

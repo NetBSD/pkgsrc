@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:18 agc Exp $
+
 --- ./configure.org	Thu Jan  9 06:22:00 1997
 +++ ./configure	Sun Mar 30 04:25:11 1997
 @@ -3148,7 +3148,7 @@

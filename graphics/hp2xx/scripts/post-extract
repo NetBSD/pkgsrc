@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD: post-extract,v 1.2 1998/08/07 10:40:48 agc Exp $
+#
  
 echo "Running post-extract script"
 

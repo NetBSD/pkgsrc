@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:36:27 agc Exp $
+
 --- doc/README.orig	Wed May  6 23:40:54 1998
 +++ doc/README	Wed May  6 23:41:08 1998
 @@ -3,6 +3,4 @@

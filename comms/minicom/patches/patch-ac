@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:36:42 agc Exp $
+
 --- updown.c.orig	Sun Oct 13 13:56:18 1996
 +++ updown.c	Sun Oct 13 13:58:54 1996
 @@ -150,7 +150,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-bh,v 1.2 1998/08/07 10:40:51 agc Exp $
+
 --- ./pnm/pnmarith.1.orig	Sun Aug 13 00:08:22 1995
 +++ ./pnm/pnmarith.1	Sun Aug 13 00:08:46 1995
 @@ -4,7 +4,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 10:40:39 agc Exp $
+
 --- server/input.c.orig	Fri Feb 20 03:46:30 1998
 +++ server/input.c	Fri Feb 20 03:46:30 1998
 @@ -1407,3 +1407,3 @@

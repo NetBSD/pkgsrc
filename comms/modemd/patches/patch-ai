@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.2 1998/08/07 10:36:46 agc Exp $
+
 --- Makefile.inc.orig	Tue Sep 10 02:21:46 1996
 +++ Makefile.inc	Thu Mar 19 22:12:34 1998
 @@ -1 +1,3 @@

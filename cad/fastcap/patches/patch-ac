@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:36:26 agc Exp $
+
 --- /dev/null	Fri May  8 09:34:20 1998
 +++ README.docs	Fri May  8 11:07:04 1998
 @@ -0,0 +1,7 @@

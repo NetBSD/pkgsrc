@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:32 agc Exp $
+
 --- source/server.c.orig	Thu Mar 19 22:20:24 1998
 +++ source/server.c	Wed Jun  3 00:06:18 1998
 @@ -54,7 +54,7 @@

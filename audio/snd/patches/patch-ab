@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:36:09 agc Exp $
+
 --- snd.orig/cmus.h	Thu Jan 22 15:08:02 1998
 +++ cmus.h	Sun Feb 22 02:04:51 1998
 @@ -17,7 +17,7 @@

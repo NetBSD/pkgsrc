@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:36:13 agc Exp $
+
 --- src/cmd/cmd.cc.orig	Sat Aug  9 16:31:03 1997
 +++ src/cmd/cmd.cc	Sat Aug  9 16:31:15 1997
 @@ -15,7 +15,7 @@

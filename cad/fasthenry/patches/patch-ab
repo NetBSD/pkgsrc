@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1998/08/07 10:36:27 agc Exp $
+
 --- src/zbuf/Makefile.default.orig	Wed May  6 23:28:17 1998
 +++ src/zbuf/Makefile.default	Wed May  6 23:28:26 1998
 @@ -44,5 +44,5 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.3 1998/08/07 10:40:18 agc Exp $
+
 --- client/Makefile.in.orig	Tue Jun 30 08:14:37 1998
 +++ client/Makefile.in	Fri Jul 17 12:20:34 1998
 @@ -42,8 +42,8 @@

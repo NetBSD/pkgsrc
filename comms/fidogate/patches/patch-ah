@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1998/08/07 10:36:37 agc Exp $
+
 --- src/toss/Makefile.orig	Thu Jul 16 10:50:11 1998
 +++ src/toss/Makefile	Thu Jul 16 10:54:04 1998
 @@ -42,19 +42,19 @@

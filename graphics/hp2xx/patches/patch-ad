@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/08/07 10:40:48 agc Exp $
+
 --- sources/getopt.c.orig	Thu Jul  9 11:38:13 1998
 +++ sources/getopt.c	Thu Jul  9 11:39:08 1998
 @@ -41,4 +41,6 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 10:36:36 agc Exp $
+
 --- src/ffx/Makefile.orig	Thu Jul 16 10:48:36 1998
 +++ src/ffx/Makefile	Thu Jul 16 10:52:46 1998
 @@ -27,12 +27,12 @@

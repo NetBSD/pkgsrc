@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1998/08/07 10:40:26 agc Exp $
+
 --- misc/run_tic.sh.orig	Sun Dec  1 00:10:08 1996
 +++ misc/run_tic.sh	Sun Jun 21 00:19:09 1998
 @@ -109,6 +109,7 @@

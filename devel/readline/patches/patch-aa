@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.4 1998/08/07 10:40:28 agc Exp $
+
 --- display.c.old	Sat Jan 10 16:57:37 1998
 +++ display.c	Sat Jan 10 17:06:06 1998
 @@ -622,7 +622,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/08/07 10:36:07 agc Exp $
+
 *** configure.bak	Fri Feb  2 03:30:38 1996
 --- configure	Fri Jun 13 19:14:52 1997
 ***************

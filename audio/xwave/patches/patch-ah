@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 1998/08/07 10:36:24 agc Exp $
+
 --- orig/xwave/src/graphics.c	Mon Nov 25 13:33:43 1996
 +++ src/graphics.c	Sat Sep 13 04:28:37 1997
 @@ -30,7 +30,7 @@

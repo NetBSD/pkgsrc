@@ -1,3 +1,5 @@
+$NetBSD: patch-al,v 1.2 1998/08/07 10:40:21 agc Exp $
+
 --- as/pops.c.orig	Thu Jul 16 20:24:45 1998
 +++ as/pops.c	Thu Jul 16 20:25:42 1998
 @@ -72,7 +72,7 @@

@@ -1,5 +1,7 @@
 #!/bin/sh -
 #
+# $NetBSD: create-dev-link,v 1.4 1998/08/07 10:36:44 agc Exp $
+#
 #	pre-install script for Minicom port to FreeBSD 2.x
 
 echo ""

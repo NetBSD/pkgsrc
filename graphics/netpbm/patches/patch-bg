@@ -1,3 +1,5 @@
+$NetBSD: patch-bg,v 1.2 1998/08/07 10:40:50 agc Exp $
+
 --- ./pnm/Makefile.orig	Tue Jul  7 22:02:33 1998
 +++ ./pnm/Makefile	Wed Jul  8 07:43:20 1998
 @@ -61,19 +61,21 @@

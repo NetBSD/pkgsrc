@@ -1,3 +1,5 @@
+$NetBSD: patch-ak,v 1.2 1998/08/07 10:36:10 agc Exp $
+
 --- snd.orig/snd-x1.h	Thu Jan 22 15:08:49 1998
 +++ snd-x1.h	Sun Feb 22 02:14:34 1998
 @@ -328,7 +328,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-bw,v 1.2 1998/08/07 10:40:52 agc Exp $
+
 --- ./ppm/ppmtoxpm.1.orig	Mon Jan 31 06:49:48 1994
 +++ ./ppm/ppmtoxpm.1	Fri Aug 18 05:30:35 1995
 @@ -8,20 +8,20 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ba,v 1.2 1998/08/07 10:40:50 agc Exp $
+
 --- ./pnm/anytopnm.orig	Mon Oct  4 05:11:29 1993
 +++ ./pnm/anytopnm	Sat Jul 20 22:19:05 1996
 @@ -53,7 +53,7 @@

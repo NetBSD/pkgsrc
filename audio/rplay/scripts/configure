@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD: configure,v 1.2 1998/08/07 10:36:08 agc Exp $
+
 
 chmod -R +w ${WRKSRC}
 echo -n "Removing disgusting malloc.h includes.  Please wait.."

@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 10:36:43 agc Exp $
+
 --- minicom.c.orig	Sat Sep 27 17:03:30 1997
 +++ minicom.c	Fri Jan  9 19:59:13 1998
 @@ -530,7 +530,8 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/07 10:36:45 agc Exp $
+
 --- incoming/modemd.8.orig	Mon Sep  9 09:02:45 1996
 +++ incoming/modemd.8	Tue Mar  3 17:19:07 1998
 @@ -16,7 +16,9 @@
