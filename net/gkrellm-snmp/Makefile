@@ -1,25 +1,18 @@
-# $NetBSD: Makefile,v 1.11 2004/01/24 14:50:05 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/24 23:34:11 cube Exp $
+#
 
-DISTNAME=		gkrellm_snmp-0.18
-PKGNAME=		gkrellm-snmp-0.18
-PKGREVISION=		6
-CATEGORIES=		net sysutils
-MASTER_SITES=		http://triq.net/gkrellm/
+DISTNAME=	gkrellm_snmp-0.21
+PKGNAME=	${DISTNAME:S/_/-/}
+CATEGORIES=	net
+MASTER_SITES=	http://triq.net/gkrellm/
 
-MAINTAINER=		jasper@pointless.net
-HOMEPAGE=		http://triq.net/gkrellm.html
-COMMENT=		Simple SNMP monitor for gkrellm
+MAINTAINER=	cube@NetBSD.org
+HOMEPAGE=	http://triq.net/gkrellm_snmp.html
+COMMENT=	GKrellM plugin to display values collected from a SNMP agent
 
-USE_BUILDLINK2=		# defined
-USE_GNU_TOOLS+=		make
+USE_BUILDLINK2=	YES
 
-do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
-	${INSTALL_PROGRAM} ${WRKSRC}/gkrellm_snmp.so ${PREFIX}/lib/gkrellm/plugins/
-
-.include "../../graphics/imlib/buildlink2.mk"
-.include "../../net/ucd-snmp/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../sysutils/gkrellm/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../net/net-snmp/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
