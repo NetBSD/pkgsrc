@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 1999/07/04 00:53:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.98 1999/07/09 18:38:58 jwise Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -57,6 +57,7 @@
 #    SUBDIR += libdnd
 #    SUBDIR += libsx
 #    SUBDIR += lupe
+     SUBDIR += lwm
 #    SUBDIR += mlvwm
 #    SUBDIR += mouseclock
 #    SUBDIR += neXtaw
