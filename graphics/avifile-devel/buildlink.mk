@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/08/17 21:14:08 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/08/19 09:02:53 zuntum Exp $
 #
 # This Makefile fragment is included by packages that use avifile-devel.
 #
@@ -35,9 +35,9 @@ BUILDLINK_CONFIG.avifile-devel=	${BUILDLINK_PREFIX.avifile-devel}/bin/avifile-co
 BUILDLINK_CONFIG_WRAPPER.avifile-devel=${BUILDLINK_DIR}/bin/avifile-config
 
 .if defined(USE_CONFIG_WRAPPER)
-AVIFILE-DEVEL_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.avifile-devel}
-CONFIGURE_ENV+=			AVIFILE-DEVEL_CONFIG="${AVIFILE-DEVEL_CONFIG}"
-MAKE_ENV+=			AVIFILE-DEVEL_CONFIG="${AVIFILE-DEVEL_CONFIG}"
+AVIFILE_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.avifile-devel}
+CONFIGURE_ENV+=			AVIFILE_CONFIG="${AVIFILE_CONFIG}"
+MAKE_ENV+=			AVIFILE_CONFIG="${AVIFILE_CONFIG}"
 .endif
 
 pre-configure: ${BUILDLINK_TARGETS.avifile-devel}
