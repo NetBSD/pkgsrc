@@ -1,9 +1,4 @@
-# New ports collection makefile for:	logo
-# Version required:	4.6
-# Date created:		18 Feb 1999
-# Whom:			proff
-#
-# $NetBSD: Makefile,v 1.3 1999/04/15 20:39:44 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/07/08 10:49:39 agc Exp $
 
 DISTNAME=	ucblogo-4.6
 CATEGORIES=	lang
