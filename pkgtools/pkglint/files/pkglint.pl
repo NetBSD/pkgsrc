@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.98 2004/02/23 12:33:29 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.99 2004/04/12 01:02:19 salo Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -80,6 +80,14 @@ if (-e <$portdir/../Packages.txt>) {
 	print "OK: checking category Makefile.\n" if ($verbose);
 	&category_check;
 	exit 0;
+}
+
+if (-e <$portdir/../../Packages.txt>) {
+	if ($portdir eq ".") {
+		$category = basename(dirname($ENV{'PWD'}));
+	} else {
+		$category = basename(dirname($portdir));
+	}
 }
 
 #
@@ -902,6 +910,13 @@ EOF
 			" (BUILD_)DEPENDS, use (BUILD_)DEPENDS+= instead.");
 	}
 
+	# whole file: check for pkgsrc-wip remnants
+	#
+	if ($whole =~ /\/wip\//
+	 && $category ne "wip") {
+		&perror("FATAL: possible pkgsrc-wip pathname detected.");
+	}
+
 	#
 	# whole file: full path name
 	#
@@ -982,6 +997,12 @@ EOF
 			&perror("FATAL: $i has to be set by \"=\", ".
 				"not by \"$1\".");
 		}
+	}
+
+	# check for pkgsrc-wip remnants in CATEGORIES
+	if ($tmp =~ /\nCATEGORIES=[ \t]*.*wip.*\n/
+	 && $category ne "wip") {
+		&perror("FATAL: don't forget to remove \"wip\" from CATEGORIES.");
 	}
 
 	# check the URL
