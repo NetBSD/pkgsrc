@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 13:30:56 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/10 03:36:59 snj Exp $
 #
 
 DISTNAME=	pag-0.91
@@ -11,11 +11,11 @@ HOMEPAGE=	http://pancake.host.sk/
 COMMENT=	Platform Arcade Game
 
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_NCURSES=	yes # missing function stdscr
 
 ALL_TARGET=	compile
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../graphics/aalib/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../graphics/aalib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
