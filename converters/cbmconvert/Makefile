@@ -1,15 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/05/22 18:09:12 tv Exp $
+# $NetBSD: Makefile,v 1.2 1999/05/22 20:14:37 tv Exp $
 
 DISTNAME=		cbmconvert-2.0.5
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.funet.fi/pub/cbm/crossplatform/converters/unix/
 
 MAINTAINER=		packages@netbsd.org
-#HOMEPAGE=		http://www.cs.cmu.edu/~dsladic/vice/vice.html
 
 ALL_TARGET=		unix
-
-# override in Makefile
 MAKE_FLAGS=		CC="${CC}" CFLAGS="${CFLAGS}"
 
 do-install:
