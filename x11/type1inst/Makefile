@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/25 01:27:28 groo Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/01 12:19:44 wiz Exp $
 #
 
 DISTNAME=		type1inst-0.6.1
 CATEGORIES=		x11
-MASTER_SITES=		http://sunsite.unc.edu/pub/Linux/X11/xutils/
+MASTER_SITES=		${MASTER_SITE_SUNSITE:=X11/xutils/}
 
 MAINTAINER=		groo@netbsd.org
 
