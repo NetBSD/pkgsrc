@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.4 1998/09/27 18:37:51 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/11/26 14:23:47 frueauf Exp $
 #
 
-DISTNAME=		pkglint-1.66
+DISTNAME=		pkglint-1.67
 CATEGORIES=		pkgtools devel
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/Documentation/netbsd/Packages.txt
+
+CONFLICTS=		pkglint-1.66
 
 USE_PERL5=		YES
 
