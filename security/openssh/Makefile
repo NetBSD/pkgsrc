@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/27 13:49:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2000/01/27 13:52:35 hubertf Exp $
 #
 
 DISTNAME=		openssh-1.2.1pre26
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://thermo.stat.ncsu.edu/pub/openssh/files/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.openssh.org/
 
-CONFLICTS=		ssh-*
+CONFLICTS=		ssh-[0-9]*
 
 USE_PERL5=		yes
 
