@@ -1,8 +1,16 @@
-$NetBSD: patch-bd,v 1.1.1.1 2003/02/18 22:11:55 mjl Exp $
+$NetBSD: patch-bd,v 1.2 2003/02/22 23:37:15 mjl Exp $
 
---- Makefile.in.orig	2003-02-18 22:12:03.000000000 +0100
-+++ Makefile.in	2003-02-18 22:19:29.000000000 +0100
-@@ -25,7 +25,7 @@
+--- Makefile.in.orig	2003-02-19 09:53:03.000000000 +0100
++++ Makefile.in	2003-02-19 09:52:48.000000000 +0100
+@@ -5,6 +5,7 @@
+ bindir=@bindir@
+ sbindir=@sbindir@
+ libdir=@libdir@
++includedir=@includedir@
+ mandir=@mandir@
+ mansubdir=@mansubdir@
+ sysconfdir=@sysconfdir@
+@@ -25,7 +26,7 @@
  #Rules: major  -- inc for incompatible change
  #     : minor  -- inc for bugfix or forward compatible change
  
@@ -11,7 +19,7 @@ $NetBSD: patch-bd,v 1.1.1.1 2003/02/18 22:11:55 mjl Exp $
  
  PATHS= 
  
-@@ -33,8 +33,8 @@
+@@ -33,7 +34,7 @@
  LD=@LD@
  CFLAGS=@CFLAGS@
  CPPFLAGS=-I. -I$(srcdir) @CPPFLAGS@ $(PATHS) @DEFS@
@@ -20,8 +28,7 @@ $NetBSD: patch-bd,v 1.1.1.1 2003/02/18 22:11:55 mjl Exp $
  LIBS=@LIBS@
  THLDFLAGS=@THLDFLAGS@
  THLIBS=@THLIBS@
- AR=@AR@
-@@ -51,8 +51,10 @@
+@@ -51,8 +52,10 @@
  PERL=@PERL@
  ENT=@ENT@
  EXEEXT=@EXEEXT@
@@ -33,7 +40,7 @@ $NetBSD: patch-bd,v 1.1.1.1 2003/02/18 22:11:55 mjl Exp $
  
  LIBSP_OBJS= alarm.o events.o memory.o sp.o
  
-@@ -123,8 +125,11 @@
+@@ -123,8 +126,11 @@
  	$(INSTALL) -m 0755 libspread.$(LIBVERSION).dylib $(DESTDIR)$(libdir)/libspread.$(LIBVERSION).dylib
  	(cd $(DESTDIR)$(libdir); $(SOFTLINK) libspread.$(LIBVERSION).dylib libspread.dylib)
  
@@ -47,7 +54,7 @@ $NetBSD: patch-bd,v 1.1.1.1 2003/02/18 22:11:55 mjl Exp $
  
  install-libspread.so:	libspread.so
  	$(INSTALL) -m 0755 libspread.so $(DESTDIR)$(libdir)/libspread.so.$(LIBVERSION)
-@@ -142,8 +147,11 @@
+@@ -142,8 +148,11 @@
  	$(INSTALL) -m 0755 libtspread.$(LIBVERSION).dylib $(DESTDIR)$(libdir)/libtspread.$(LIBVERSION).dylib
  	(cd $(DESTDIR)$(libdir); $(SOFTLINK) libtspread.$(LIBVERSION).dylib libtspread.dylib)
  
@@ -61,7 +68,7 @@ $NetBSD: patch-bd,v 1.1.1.1 2003/02/18 22:11:55 mjl Exp $
  
  install-libtspread.so:	libtspread.so
  	$(INSTALL) -m 0755 libtspread.so $(DESTDIR)$(libdir)/libtspread.so.$(LIBVERSION)
-@@ -152,17 +160,17 @@
+@@ -152,17 +161,17 @@
  spread$(EXEEXT): $(SPREADOBJS)
  	$(LD) -o $@ $(SPREADOBJS) $(LDFLAGS) $(LIBS)
  
@@ -85,7 +92,25 @@ $NetBSD: patch-bd,v 1.1.1.1 2003/02/18 22:11:55 mjl Exp $
  
  spsimple_user$(EXEEXT): simple_user.o libspread.a
  	$(LD) -o $@ simple_user.o $(LDFLAGS) libspread.a $(LIBS) 
-@@ -235,11 +243,11 @@
+@@ -211,6 +220,7 @@
+ install-files:
+ 	$(buildtoolsdir)/mkinstalldirs $(DESTDIR)$(bindir)
+ 	$(buildtoolsdir)/mkinstalldirs $(DESTDIR)$(sbindir)
++	$(buildtoolsdir)/mkinstalldirs $(DESTDIR)$(includedir)
+ 	$(buildtoolsdir)/mkinstalldirs $(DESTDIR)$(mandir)
+ 	$(buildtoolsdir)/mkinstalldirs $(DESTDIR)$(mandir)/$(mansubdir)1
+ 	$(buildtoolsdir)/mkinstalldirs $(DESTDIR)$(mandir)/$(mansubdir)3
+@@ -222,6 +232,9 @@
+ 	$(INSTALL) -m 0755 -s spread$(EXEEXT) $(DESTDIR)$(sbindir)/spread$(EXEEXT)
+ 	$(INSTALL) -m 644 libspread.a $(DESTDIR)$(libdir)/libspread.a
+ 	$(INSTALL) -m 644 libtspread.a $(DESTDIR)$(libdir)/libtspread.a
++	$(INSTALL) -m 644 sp.h $(DESTDIR)$(includedir)/spread/sp.h
++	$(INSTALL) -m 644 sp_func.h $(DESTDIR)$(includedir)/spread/sp_func.h
++	$(INSTALL) -m 644 sp_events.h $(DESTDIR)$(includedir)/spread/sp_events.h
+ 	$(INSTALL) -m 644 docs/spread.1.out $(DESTDIR)$(mandir)/$(mansubdir)1/spread.1
+ 	$(INSTALL) -m 644 docs/spuser.1.out $(DESTDIR)$(mandir)/$(mansubdir)1/spuser.1
+ 	$(INSTALL) -m 644 docs/sptuser.1.out $(DESTDIR)$(mandir)/$(mansubdir)1/sptuser.1
+@@ -235,11 +248,11 @@
  	if [ ! -d $(DESTDIR)$(sysconfdir) ]; then \
  		$(buildtoolsdir)/mkinstalldirs $(DESTDIR)$(sysconfdir); \
  	fi
