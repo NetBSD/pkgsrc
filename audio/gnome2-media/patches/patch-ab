@@ -1,19 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/04/25 04:49:42 rh Exp $
-
---- Makefile.in.orig	2003-02-06 01:52:32.000000000 +1000
-+++ Makefile.in
-@@ -160,13 +160,12 @@ always_built_SUBDIRS = cddb-slave2
- SUBDIRS = po $(always_built_SUBDIRS) \
- 	  @PROGRAMS_VUMETER@ \
- 	  @PROGRAMS_GMIX@ \
--	  @PROGRAMS_GNOME_CD@ \
- 	  @PROGRAMS_GRECORD@ \
- 	  @PROGRAMS_GSTPROPS@
+$NetBSD: patch-ab,v 1.2 2003/12/31 02:30:22 xtraeme Exp $
+--- gmix/gmix.c.orig	2003-12-09 09:38:15.000000000 +0000
++++ gmix/gmix.c	2003-12-09 09:39:40.000000000 +0000
+@@ -60,7 +60,7 @@
+ #ifdef HAVE_LINUX_SOUNDCARD_H 
+ #include <linux/soundcard.h>
+ #else 
+-#include <machine/soundcard.h>
++#include <sys/soundcard.h>
+ #endif
+ #endif
  
- 
- DIST_SUBDIRS = po $(always_built_SUBDIRS) \
--	       vu-meter gmix grecord gnome-cd gstreamer-properties
-+	       vu-meter gmix grecord gstreamer-properties
- 
- 
- EXTRA_DIST = gnome-media.spec.in configure acinclude.m4 COPYING-DOCS \
