@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/08/09 10:44:48 seb Exp $
+# $NetBSD: Makefile,v 1.28 2003/09/19 05:18:35 dent Exp $
 #
 
 DISTNAME=	readline-4.3
@@ -11,7 +11,7 @@ PATCHFILES=	readline43-001 readline43-002 readline43-003 readline43-004 \
 		readline43-005
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/readline/
+HOMEPAGE=	http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html
 COMMENT=	GNU library that can recall and edit previous input
 
 USE_BUILDLINK2=		# defined
