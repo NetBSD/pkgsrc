@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.539 2000/08/13 09:07:45 veego Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.540 2000/08/16 01:23:31 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2878,11 +2878,19 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 .if !target(print-PLIST)
 print-PLIST:
 	@${ECHO} '@comment $$'NetBSD'$$'
-	@${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
+	@shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;		\
+	RM_ELFLIBS='';							\
+	case "$$shlib_type" in						\
+	"ELF")								\
+		RMELFLIBS='-e /.*\/lib[^\/]*\.so\.[0-9]*$$/d		\
+			   -e /.*\/lib[^\/]*\.so$$/d' ;			\
+	esac ;								\
+	${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED}							\
 		-e  s@${PREFIX}/./@@ 					\
 		-e  s@${LOWER_OPSYS}@\$${LOWER_OPSYS}@ 			\
 		-e  s@${MACHINE_ARCH}@\$${MACHINE_ARCH}@ 		\
+		$$RMELFLIBS 						\
 	 | sort								\
 	 | ${AWK} '							\
 		{ 							\
