@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/05 04:56:56 groo Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/12 14:43:21 wulf Exp $
 #
 
 DISTNAME=		ocaml-3.00
@@ -10,9 +10,24 @@ HOMEPAGE=		http://caml.inria.fr/ocaml/
 
 DEPENDS+=		tk-8.0.*:../../x11/tk80
 
+USE_GMAKE=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-prefix ${LOCALBASE} -tklibs -L${LOCALBASE}/lib -tkdefs "-I${LOCALBASE}/include/tcl8.0 -I${LOCALBASE}/include/tk8.0" -libs "-Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib"
 
 ALL_TARGET=		world
+
+pre-install:
+			if ${TEST} ${MACHINE_ARCH} = 'i386'; then \
+			  cd ${WRKSRC}; \
+			  ${MAKE} opt; \
+			  ${MAKE} ocamlc.opt; \
+			  ${MAKE} ocamlopt.opt; \
+			fi
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${MACHINE_ARCH} == "i386")
+PLIST_SRC=	${PKGDIR}/PLIST.opt ${PKGDIR}/PLIST
+.endif
 
 .include "../../mk/bsd.pkg.mk"
