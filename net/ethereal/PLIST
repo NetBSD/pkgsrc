@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2005/01/21 00:33:24 salo Exp $
+@comment $NetBSD: PLIST,v 1.20 2005/03/14 15:09:28 salo Exp $
 bin/capinfos
 bin/dftest
 bin/editcap
@@ -8,6 +8,7 @@ bin/mergecap
 bin/tethereal
 bin/text2pcap
 lib/ethereal/plugins/${PKGVERSION}/acn.la
+lib/ethereal/plugins/${PKGVERSION}/agentx.la
 lib/ethereal/plugins/${PKGVERSION}/artnet.la
 lib/ethereal/plugins/${PKGVERSION}/asn1.la
 lib/ethereal/plugins/${PKGVERSION}/ciscosm.la
@@ -27,7 +28,9 @@ lib/ethereal/plugins/${PKGVERSION}/rdm.la
 lib/ethereal/plugins/${PKGVERSION}/rlm.la
 lib/ethereal/plugins/${PKGVERSION}/rtnet.la
 lib/ethereal/plugins/${PKGVERSION}/rudp.la
+lib/ethereal/plugins/${PKGVERSION}/stats_tree.la
 lib/ethereal/plugins/${PKGVERSION}/v5ua.la
+lib/ethereal/plugins/${PKGVERSION}/xml.la
 lib/libethereal.la
 lib/libwiretap.la
 man/man1/capinfos.1
