@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.4 2002/09/05 23:25:27 rh Exp $
+$NetBSD: patch-ag,v 1.5 2004/05/06 10:03:54 recht Exp $
 
---- e-util/e-dbhash.c.orig	Mon Oct 22 23:54:12 2001
+--- e-util/e-dbhash.c.orig	2001-10-22 15:54:12.000000000 +0200
 +++ e-util/e-dbhash.c
 @@ -16,9 +16,9 @@
  #include "md5-utils.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-ag,v 1.4 2002/09/05 23:25:27 rh Exp $
  #endif
  
  struct _EDbHashPrivate 
-@@ -37,9 +37,9 @@
+@@ -37,9 +37,9 @@ e_dbhash_new (const char *filename)
  
  	db_version (&major, &minor, &patch);
  
