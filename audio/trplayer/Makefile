@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/02/07 18:09:26 fredb Exp $
+# $NetBSD: Makefile,v 1.4 2003/02/23 01:59:59 jmc Exp $
 #
 
 DISTNAME=	trplayer-1.2.0
@@ -10,12 +10,18 @@ MAINTAINER=	fredb@netbsd.org
 HOMEPAGE=	http://www.linux-speakup.org/trplayer.html
 COMMENT=	Text-mode Realmedia Player
 
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == "NetBSD")
+. if (${MACHINE_ARCH} == "i386")
 BUILD_DEPENDS+=	rpm2pkg>=1.2:../../pkgtools/rpm2pkg
 DEPENDS+=	realplayer>=8.0.1:../../audio/realplayer
 DEPENDS+=	suse_base>=7.3:../../emulators/${SUSE_DIR_PREFIX}_base
 DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_libc5>=7.3:../../emulators/${SUSE_DIR_PREFIX}_libc5
 DEPENDS+=	suse_slang>=7.3:../../emulators/${SUSE_DIR_PREFIX}_slang
+. endif
+.endif
 
 INTERACTIVE_STAGE=	fetch		# XXX Not really!
 #INTERACTIVE_STAGE=	install-depends
