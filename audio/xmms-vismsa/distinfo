@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/18 02:52:20 hubertf Exp $
+$NetBSD: distinfo,v 1.2 2001/08/23 14:12:45 jlam Exp $
 
 SHA1 (vismsa-xmms-plugin-0.2.tar.gz) = c3e44f2097e6f0c6ed1b41fa652e41650f0722ee
 Size (vismsa-xmms-plugin-0.2.tar.gz) = 13694 bytes
-SHA1 (patch-aa) = 086a4c864d1d2f34006bbda227a6b47eba122fc3
+SHA1 (patch-aa) = acd0a7bab79e8b11441a87e581359a1ece1d0260
