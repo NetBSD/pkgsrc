@@ -1,0 +1,74 @@
+--- pine/mailcmd.c.orig	Sun Jul 19 01:00:42 1998
++++ pine/mailcmd.c	Sun Jul 19 01:06:24 1998
+@@ -316,9 +316,7 @@
+ 	}
+ 	else{
+ 	    prompt[0] = '\0';
+-	    if(!state->nr_mode
+-	       && (IS_NEWS(stream)
+-		   || (state->context_current->use & CNTXT_INCMNG))){
++	    if(!state->nr_mode){
+ 		char nextfolder[MAXPATH];
+ 
+ 		strcpy(nextfolder, state->cur_folder);
+@@ -445,14 +443,7 @@
+ 	    char ret = 'n';
+ 	    int  in_inbox = !strucmp(state->cur_folder,state->inbox_name);
+ 
+-	    if(!state->nr_mode && state->context_current
+-	       && ((NEWS_TEST(state->context_current)
+-		    && context_isambig(state->cur_folder))
+-		   || ((state->context_current->use & CNTXT_INCMNG)
+-		       && (in_inbox
+-			   || folder_index(state->cur_folder,
+-					   state->context_current,
+-					   FI_FOLDER) >= 0)))){
++	    if(!state->nr_mode && state->context_current){
+ 		char	    nextfolder[MAXPATH];
+ 		MAILSTREAM *nextstream = NULL;
+ 		long	    recent_cnt;
+@@ -463,8 +454,8 @@
+ 				     state->context_current, &recent_cnt))){
+ 			if(!in_inbox){
+ 			    sprintf(prompt, "No more %ss.  Return to \"%s\"",
+-				    (state->context_current->use&CNTXT_INCMNG)
+-				      ? "incoming folder" : "news group", 
++				    NEWS_TEST(state->context_current)
++				      ? "news group" : "folder", 
+ 				    state->inbox_name);
+ 			    ret = want_to(prompt, 'y', 'x', NO_HELP, WT_NORM);
+ 			    if(ret == 'y'){
+@@ -475,15 +466,15 @@
+ 			}
+ 			else
+ 			  q_status_message1(SM_ORDER, 0, 2, "No more %ss",
+-				     (state->context_current->use&CNTXT_INCMNG)
+-				        ? "incoming folder" : "news group");
++				      NEWS_TEST(state->context_current)
++				        ? "news group" : "folder");
+ 
+ 			break;
+ 		    }
+ 
+ 		    sprintf(prompt, "View next %s \"%s\" (%s recent)? ",
+-			    (state->context_current->use & CNTXT_INCMNG)
+-			      ? "Incoming folder" : "news group",
++			    NEWS_TEST(state->context_current)
++			      ? "news group" : "folder", 
+ 			    nextfolder,
+ 			    recent_cnt ? long2string(recent_cnt) : "some");
+ 
+@@ -1248,12 +1239,9 @@
+ 	}
+ 
+ 	if(!state->nr_mode
+-	   && ((IS_NEWS(state->mail_stream)
+-		|| ((state->context_current->use & CNTXT_INCMNG)
+-		    && context_isambig(state->cur_folder)))
+ 	       && (msgno == next_sorted_flagged(F_UNDEL|F_UNSEEN,
+ 						state->mail_stream,
+-						msgno, &opts)))){
++						msgno, &opts))){
+ 	    char nextfolder[MAXPATH];
+ 
+ 	    strcpy(nextfolder, state->cur_folder);
