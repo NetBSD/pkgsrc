@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/01/19 12:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/02/17 15:31:34 wiz Exp $
 #
 
-DISTNAME=	radmind-1.4.0
+DISTNAME=	radmind-1.5.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://rsug.itd.umich.edu/software/radmind/files/
 EXTRACT_SUFX=	.tgz
