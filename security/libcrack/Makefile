@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:52:57 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:20:10 martti Exp $
 #
 
 DISTNAME=	cracklib,2.7
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.users.dircon.co.uk/~crypto/
-COMMENT=	password checking library
+COMMENT=	Password checking library
 
 USE_LIBTOOL=	YES
 USE_BUILDLINK2=	YES

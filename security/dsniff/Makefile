@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 22:52:53 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/21 17:20:07 martti Exp $
 # $OpenBSD: Makefile,v 1.13 2000/06/19 18:38:55 dugsong Exp $
 
 DISTNAME=	dsniff-2.3
@@ -7,7 +7,7 @@ MASTER_SITES+=	http://monkey.org/~dugsong/dsniff/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://monkey.org/~dugsong/dsniff/
-COMMENT=	password sniffer
+COMMENT=	Password sniffer
 
 DEPENDS+=	libnet-[0-9]*:../../devel/libnet
 # libnids provides static library only, thus it isn't necessary at run-time,

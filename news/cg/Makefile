@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 22:52:07 grant Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/21 17:11:53 martti Exp $
 #
 
 DISTNAME=	cg-0.4
@@ -7,7 +7,7 @@ MASTER_SITES=	http://ftp.giga.or.at/pub/nih/cg/
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://ftp.giga.or.at/pub/nih/cg/
-COMMENT=	semi-automatic newsgroup binary downloader
+COMMENT=	Semi-automatic newsgroup binary downloader
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES

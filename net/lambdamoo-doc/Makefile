@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:51:19 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:10:46 martti Exp $
 
 DISTNAME=	lambdamoo-doc-1.8.0p6
 WRKSRC=		${WRKDIR}
@@ -10,7 +10,7 @@ DISTFILES=	ProgrammersManual.texinfo HelpSystem-02Jun93.txt
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ccs.neu.edu/home/eostrom/muds/lambdamoo.html
-COMMENT=	documentation for lambdamoo
+COMMENT=	Documentation for lambdamoo
 
 EXTRACT_CMD=	:
 

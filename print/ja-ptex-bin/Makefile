@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:52:32 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 17:16:24 martti Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
@@ -12,7 +12,7 @@ DISTFILES+=	mendexk${MENDEXK_VERS}${EXTRACT_SUFX}
 
 MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.ascii.co.jp/pb/ptex/
-COMMENT=	publishing TeX (pTeX)
+COMMENT=	Publishing TeX (pTeX)
 
 # XXX ${MAKE_VARIABLES} won't be extracted here.  strange...
 SITES_dvipsk-jpatch-p1.6.tar.gz= \

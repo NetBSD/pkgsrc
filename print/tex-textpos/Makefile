@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:52:43 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 17:16:28 martti Exp $
 #
 
 NAME=		textpos
@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/supported/${NAME}/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 # HOMEPAGE=	
-COMMENT=	absolute positioning of text on the LaTeX page
+COMMENT=	Absolute positioning of text on the LaTeX page
 
 DIST_SUBDIR=	${NAME}
 DISTFILES=	textpos.ins LICENCE README textpos.dtx VERSION

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 22:50:58 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/21 17:10:19 martti Exp $
 #
 
 DISTNAME=		ORBit2-2.6.0
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://orbit-resource.sourceforge.net/
-COMMENT=		high-performance CORBA ORB with C language support
+COMMENT=		High-performance CORBA ORB with C language support
 
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES

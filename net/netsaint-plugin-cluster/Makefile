@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:51:27 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:10:54 martti Exp $
 #
 
 DISTNAME=	check_cluster
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.c
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://netsaint.sourceforge.net/
-COMMENT=	host and service cluster plugin for NetSaint
+COMMENT=	Host and service cluster plugin for NetSaint
 
 DEPENDS+=	netsaint-base-[0-9]*:../../net/netsaint-base
 

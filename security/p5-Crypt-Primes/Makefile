@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:53:04 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:20:16 martti Exp $
 #
 
 DISTNAME=		Crypt-Primes-0.49
@@ -10,7 +10,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 #HOMEPAGE=	
-COMMENT=		perl5 module for provable prime number generation
+COMMENT=		Perl5 module for provable prime number generation
 
 DEPENDS+=		p5-Math-Pari-[0-9]*:../../math/p5-Math-Pari
 DEPENDS+=		p5-Crypt-Random-[0-9]*:../../security/p5-Crypt-Random

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:52:18 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:14:08 martti Exp $
 #
 
 DISTNAME=	pkgmanpages-19991222
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/
-COMMENT=	manual page(s) for the packages collection
+COMMENT=	Manual page(s) for the packages collection
 
 NO_BUILD=	yes
 

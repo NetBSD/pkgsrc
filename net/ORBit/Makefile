@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2003/07/17 22:50:57 grant Exp $
+# $NetBSD: Makefile,v 1.91 2003/07/21 17:10:18 martti Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ORBit/0.${ORBIT_MAJOR}/}
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
-COMMENT=		high-performance CORBA ORB with support for the C language
+COMMENT=		High-performance CORBA ORB with support for the C language
 
 USE_BUILDLINK2=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/12 01:10:59 zuntum Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:20:12 martti Exp $
 #
 
 DISTNAME=	p0f-1.8.3
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.stearns.org/p0f/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dawszy@arhea.net
-COMMENT=	passive OS fingerprinting tool
+COMMENT=	Passive OS fingerprinting tool
 
 USE_BUILDLINK2=	yes
 USE_PKGINSTALL=	yes

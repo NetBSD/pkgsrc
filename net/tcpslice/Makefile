@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/08/25 21:50:17 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/21 17:11:24 martti Exp $
 
 DISTNAME=	tcpslice-1.2a1
 PKGNAME=	tcpslice-1.2.0.1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/
 
 MAINTAINER=	seb@pbox.org
-COMMENT=	tool for extracting portions of tcpdump's packet trace files
+COMMENT=	Tool for extracting portions of tcpdump's packet trace files
 
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/03/14 19:37:52 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/21 17:10:30 martti Exp $
 #
 
 DISTNAME=		coda-4.6.6
@@ -11,7 +11,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		rvb@cs.cmu.edu
 HOMEPAGE=		http://www.coda.cs.cmu.edu/
-COMMENT=		client programs for a replicated high-performance network file system
+COMMENT=		Client programs for a replicated high-performance network file system
 
 DEPENDS+=		gdbm>=1.8.3:../../databases/gdbm
 DEPENDS+=		readline>=4.0:../../devel/readline

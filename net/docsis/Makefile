@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:51:07 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:10:34 martti Exp $
 #
 
 DISTNAME=	docsis-0.7.5-RELEASE
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://docsis.sourceforge.net/
-COMMENT=	utility for manipulating DOCSIS-compliant cable modems
+COMMENT=	Utility for manipulating DOCSIS-compliant cable modems
 
 BUILD_DEPENDS+=	bison>=1.25:../../devel/bison
 USE_BUILDLINK2=	# defined
