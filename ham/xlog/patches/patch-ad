@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2004/02/18 22:18:28 wulf Exp $
+
+--- src/callbacks_otherdialogs.c.orig	2004-01-12 00:54:45.000000000 +1030
++++ src/callbacks_otherdialogs.c	2004-02-19 09:40:49.000000000 +1030
+@@ -1748,7 +1748,9 @@
+ 	fclose (finfo.fd);
+ 	dup2 (saved_fd, STDERR_FILENO);
+ 	close (saved_fd);
++#ifndef __NetBSD__
+ 	stderr = fdopen (STDERR_FILENO, "w");
++#endif
+ 	hamlibresult = start_hamlib (preferences.radio, preferences.device,
+ 				     RIG_DEBUG_NONE, preferences.polltime);
+ #endif /* WANT_HAMLIB */
