@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/11 17:17:19 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/11 18:24:52 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -32,9 +32,12 @@ post-build:
 do-install:
 	${INSTALL_DATA_DIR} ${MOZILLA_LIB}
 	cd ${WRKSRC} && ${PAX} -rw -pm . ${MOZILLA_LIB}
-	cd ${MOZILLA_LIB} && \
-		${FIND} . -perm -u+x | ${XARGS} ${CHMOD} +x; \
-		${FIND} . -perm -u+r | ${XARGS} ${CHMOD} +r
+	@${FIND} ${MOZILLA_LIB} -type f -print \
+		| ${XARGS} ${CHMOD} a+r
+	@${FIND} ${MOZILLA_LIB} \( -type f -o -perm +x \) -print \
+		| ${XARGS} ${CHMOD} a+rx
+	@${FIND} ${MOZILLA_LIB} -type d -print \
+		| ${XARGS} ${CHMOD} a+rx
 	${INSTALL_SCRIPT} ${WRKDIR}/mozilla.sh ${PREFIX}/bin/mozilla-${PLATFORM}
 
 post-install:
