@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/08/16 03:10:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/08/16 03:20:46 hubertf Exp $
 #
 
 DISTNAME=	dspectogram-1.2
@@ -14,6 +14,7 @@ DEPENDS+=	xmms>=1.2.5:../../audio/xmms
 
 USE_X11=	yes
 USE_LIBTOOL=	yes
+MAKE_ENV+=	GTK_CONFIG=${BUILDLINK_CONFIG_WRAPPER.gtk}
 
 pre-build:
 		cd ${WRKSRC} ; ${MAKE} clean
