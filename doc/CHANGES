@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.425 2002/10/31 08:21:06 seb Exp $
+$NetBSD: CHANGES,v 1.426 2002/10/31 12:10:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2308,6 +2308,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated kaffe to 1.0.7 [jschauma 2002-07-27]
 	Added blackdown-jre13 [jschauma 2002-07-27]
 	Updated blackdown-jdk13 to 1.3.1 [jschauma 2002-07-27]
+	Added standalone-tcsh to 6.12.00 [agc 2002-07-27]
 	Updated qmail to 1.03nb3 [schmonz 2002-07-28]
 	Updated uae to 0.8.22 [kristerw 2002-07-28]
 	Added winbind-2.2.5 [jlam 2002-07-29]
@@ -2867,6 +2868,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated w3m to 0.3.1 [uebayasi 2002-09-15]
 	Added lookup-1.3 [uebayasi 2002-09-15]
 	Updated aperture to 2.0nb3 [tron 2002-09-15]
+	Updated tcsh to 6.12.00nb1 [kim 2002-09-15]
 	Added ja-dvipdfm-0.13.2c [uebayasi 2002-09-16]
 	Updated auctex to 11.11 [uebayasi 2002-09-16]
 	Added acroread5-chsfont-5.0 [uebayasi 2002-09-16]
@@ -3467,3 +3469,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated latex-mk to 0.9.1 [dmcmahill 2002-10-30]
 	Updated aalib-x11 to 1.4.0.4nb2 [jlam 2002-10-31]
 	Updated grepmail to 4.80 [seb 2002-10-31]
+	Updated standalone-tcsh to 6.12.00nb1 [wiz 2002-10-31]
