@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/11/29 14:13:27 seb Exp $
+# $NetBSD: Makefile,v 1.2 2001/11/30 12:16:07 seb Exp $
 
-DISTNAME=	pkgcvsupdate-0.1
+DISTNAME=	pkgcvsupdate-0.2
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -28,11 +28,13 @@ DIFF?=		diff
 
 do-build:
 	${SED} 					\
+	  -e 's|@AWK@|${AWK}|g'			\
 	  -e 's|@BASENAME@|${BASENAME}|g'	\
 	  -e 's|@DIRNAME@|${DIRNAME}|g'		\
 	  -e 's|@GREP@|${GREP}|g'		\
 	  -e 's|@LS@|${LS}|g'			\
 	  -e 's|@MAKE@|${MAKE}|g'		\
+	  -e 's|@SED@|${SED}|g'			\
 	  -e 's|@TEST@|${TEST}|g'		\
 		< ${FILESDIR}/pkgcvsupdate.sh 	\
 		> ${WRKSRC}/pkgcvsupdate
