@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 1999/04/25 18:46:30 tv Exp $
+$NetBSD: patch-aa,v 1.11 1999/11/19 11:53:01 agc Exp $
 
---- configure.orig	Sun Apr 25 07:17:03 1999
-+++ configure	Sun Apr 25 07:23:45 1999
-@@ -2133,7 +2133,7 @@
+--- configure.orig	Thu Sep  9 01:10:48 1999
++++ configure	Fri Nov 19 11:26:56 1999
+@@ -2238,7 +2238,7 @@
  fi
  rm -f confcache
  
@@ -10,8 +10,8 @@ $NetBSD: patch-aa,v 1.10 1999/04/25 18:46:30 tv Exp $
 +if false; then
  # Actually configure libtool.  ac_aux_dir is where install-sh is found.
  CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
- LD="$LD" NM="$NM" RANLIB="$RANLIB" LN_S="$LN_S" \
-@@ -2141,6 +2141,7 @@
+ LD="$LD" LDFLAGS="$LDFLAGS" LIBS="$LIBS" \
+@@ -2247,6 +2247,7 @@
  ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.10 1999/04/25 18:46:30 tv Exp $
  
  # Reload cache, that may have been modified by ltconfig
  if test -r "$cache_file"; then
-@@ -2151,7 +2152,7 @@
+@@ -2257,7 +2258,7 @@
    > $cache_file
  fi
  
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.10 1999/04/25 18:46:30 tv Exp $
  # This can be used to rebuild libtool when needed
  LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
  
-@@ -2176,7 +2177,7 @@
+@@ -2282,7 +2283,7 @@
  then
    libtool_build_static_libs='yes'
  fi
