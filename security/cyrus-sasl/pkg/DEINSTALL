@@ -1,0 +1,40 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2000/12/10 09:43:38 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+USER=@CYRUS_USER@
+GROUP=@CYRUS_GROUP@
+
+SASLDB=/etc/sasldb.db
+PWCHECKDIR=/var/pwcheck
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+
+POST-DEINSTALL)
+	rm -rf ${PWCHECKDIR}
+	cat << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove
+
+  * the \`${USER}' user
+
+  * the \`${GROUP}' group
+
+  * the following files:
+
+	${SASLDB}
+===========================================================================
+EOF
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

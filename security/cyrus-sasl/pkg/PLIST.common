@@ -1,27 +1,14 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2000/08/25 15:23:49 jlam Exp $
-include/cyrus-sasl/hmac-md5.h
-include/cyrus-sasl/md5.h
-include/cyrus-sasl/md5global.h
-include/cyrus-sasl/sasl.h
-include/cyrus-sasl/saslplug.h
-include/cyrus-sasl/saslutil.h
+@comment $NetBSD: PLIST.common,v 1.2 2000/12/10 09:43:38 jlam Exp $
+bin/sasl-config
+etc/rc.d/pwcheck
+include/hmac-md5.h
+include/sasl.h
+include/saslplug.h
+include/saslutil.h
 lib/libsasl.a
 lib/libsasl.la
 lib/libsasl.so.8.8
-lib/sasl/libanonymous.a
-lib/sasl/libanonymous.la
-lib/sasl/libanonymous.so.1.15
-lib/sasl/libcrammd5.a
-lib/sasl/libcrammd5.la
-lib/sasl/libcrammd5.so.1.15
-lib/sasl/libdigestmd5.a
-lib/sasl/libdigestmd5.la
-lib/sasl/libdigestmd5.so.0.17
-lib/sasl/libplain.a
-lib/sasl/libplain.la
-lib/sasl/libplain.so.1.14
-sbin/sasldblistusers
-sbin/saslpasswd
+man/man3/sasl.3
 man/man3/sasl_authorize_t.3
 man/man3/sasl_done.3
 man/man3/sasl_callbacks.3
@@ -46,8 +33,20 @@ man/man3/sasl_server_start.3
 man/man3/sasl_server_step.3
 man/man3/sasl_setprop.3
 man/man3/sasl_usererr.3
-man/man3/sasl.3
 man/man8/sasldblistusers.8
 man/man8/saslpasswd.8
-@dirrm lib/sasl
-@dirrm include/cyrus-sasl
+sbin/pwcheck
+sbin/sasldblistusers
+sbin/saslpasswd
+share/doc/html/cyrus-sasl/draft-leach-digest-sasl-05.txt
+share/doc/html/cyrus-sasl/draft-newman-auth-scram-03.txt
+share/doc/html/cyrus-sasl/gssapi.html
+share/doc/html/cyrus-sasl/index.html
+share/doc/html/cyrus-sasl/programming.html
+share/doc/html/cyrus-sasl/rfc1321.txt
+share/doc/html/cyrus-sasl/rfc2095.txt
+share/doc/html/cyrus-sasl/rfc2104.txt
+share/doc/html/cyrus-sasl/rfc2222.txt
+share/doc/html/cyrus-sasl/rfc2245.txt
+share/doc/html/cyrus-sasl/sysadmin.html
+@dirrm share/doc/html/cyrus-sasl

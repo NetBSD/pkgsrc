@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2000/12/10 09:43:38 jlam Exp $
+
+--- plugins/cram.c.orig	Sat Mar 11 21:20:00 2000
++++ plugins/cram.c
+@@ -425,7 +425,7 @@
+ 
+     HMAC_MD5_CTX tmphmac;
+     char *digest_str = NULL;
+-    UINT4 digest[4];
++    u_int32_t digest[4];
+ 
+     VL(("CRAM-MD5 Step 2\n"));
+     VL(("Clientin: %s\n",clientin));
