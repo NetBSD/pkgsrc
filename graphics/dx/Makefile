@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/16 15:22:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/08 19:48:45 dmcmahill Exp $
 
 DISTNAME=	dx-4.1.0
 CATEGORIES=	graphics
@@ -14,5 +14,9 @@ USE_MOTIF=	yes
 USE_MESA=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+
+#override ARCH to avoid picking up a bad ${ARCH} during the build
+MAKE_ENV+=	ARCH=""
+CONFIGURE_ENV+=	ARCH=""
 
 .include "../../mk/bsd.pkg.mk"
