@@ -1,58 +1,54 @@
-# $NetBSD: post-cache,v 1.7 2002/10/30 00:23:00 jlam Exp $
+# $NetBSD: post-cache,v 1.8 2002/12/22 19:02:44 jlam Exp $
 
 *)
+	# $qarg contains a correctly-quoted $arg
 	case $arg in
 	*[\`\"\$\\]*)
-		arg=`@ECHO@ X$arg | $Xsed -e "$sed_quote_subst"`
-		case $arg in
+		qarg=`@ECHO@ "X$arg" | $Xsed -e "$sed_quote_subst"`
+		quotedarg=yes
+		;;
+	*)
+		qarg="$arg"
+		;;
+	esac
+	case $qarg in
 		*[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
-			arg="\"$arg\""
-			;;
-		esac
-		case $updatecache in
-		yes)
-			newarg=`@ECHO@ X$arg | $Xsed -e "$sed_quote_subst"`
-			@ECHO@ "$arg) arg=\"$newarg\" ;; #1" >> $cache
-			cacheupdated=yes
-			;;
-		esac
+		qarg="\"$qarg\""
+		quotedarg=yes
 		;;
-	*[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
-		arg="\"$arg\""
-		case $updatecache in
-		yes)
-			newarg=`@ECHO@ X$arg | $Xsed -e "$sed_quote_subst"`
-			@ECHO@ "$arg) arg=\"$newarg\" ;; #2" >> $cache
-			cacheupdated=yes
-			;;
-		esac
-		;;
+	esac
+	searcharg="$qarg"
+
+	case $arg in
 	-D*)
-		arg=`@ECHO@ X$arg | $Xsed -e "$sed_quote_subst"`
-		case $arg in
-		*[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
-			arg="\"$arg\""
-			;;
-		esac
-		case $updatecache in
-		yes)
-			newarg=`@ECHO@ X$arg | $Xsed -e "$sed_quote_subst"`
-			@ECHO@ "$arg) arg=\"$newarg\" ;; #3" >> $cache
-			cacheupdated=yes
-			;;
-		esac
+		arg="$qarg"
+		addtocache=yes
 		;;
         -[ILRl]*|-Wl,*|/usr/lib/lib*|@LOCALBASE@/*/lib*|@X11BASE@/*/lib*)
-		newarg=`@ECHO@ "X$arg" | $Xsed \
-			@_BLNK_TRANSFORM_SED@ \
-		`
-		case $updatecache in
-		yes)
-			@ECHO@ "$arg) arg=\"$newarg\" ;; #4" >> $cache
-			cacheupdated=yes
+		arg=`@ECHO@ "X$qarg" | $Xsed @_BLNK_TRANSFORM_SED@`
+		addtocache=yes
+		;;
+	*)
+		arg="$qarg"
+		addtocache=no
+		;;
+	esac
+	case $updatecache,$addtocache,$cacheall,$quotedarg in
+	yes,yes,yes,*|yes,yes,no,no)
+		case $arg in
+		*[\`\"\$\\]*)
+			cachearg=`@ECHO@ "X$arg" | $Xsed -e "$sed_quote_subst"`
+			;;
+		*)
+			cachearg="$arg"
 			;;
 		esac
-		arg="$newarg"
+		@CAT@ >> $cache << EOF
+$searcharg)
+	arg="$cachearg"
+	;;
+EOF
+		cacheupdated=yes
 		;;
 	esac
 	;;
