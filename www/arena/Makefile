@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/02/06 03:49:47 fredb Exp $
+# $NetBSD: Makefile,v 1.18 2000/02/09 01:01:20 fredb Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -17,7 +17,8 @@ DEPENDS+=		libwww-5.2.8:../../www/libwww
 DEPENDS+=		png-1.0.3:../../graphics/png
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-NOT_FOR_PLATFORM=	*-*-alpha	#Runs, displays black screen
+#XXX "black screen" fixed for 16-bit displays on mac68k, not verified on alpha.
+#NOT_FOR_PLATFORM=	*-*-alpha	#Runs, displays black screen
 
 GNU_CONFIGURE=		yes
 MAKEFILE=		makefile
