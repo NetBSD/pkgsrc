@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2000/01/31 20:56:49 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2000/04/28 15:27:00 drochner Exp $
 
-DISTNAME=	dx-4.0.10
+DISTNAME=	dx-4.1.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.research.ibm.com/dx/srcDownload/srcArchive/
 
