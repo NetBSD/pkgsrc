@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1 2002/12/02 20:29:49 drochner Exp $
+
+--- src/Makefile.in.orig	Mon Dec  2 21:06:43 2002
++++ src/Makefile.in	Mon Dec  2 21:08:06 2002
+@@ -162,7 +162,7 @@
+ 
+ xcdroast_CFLAGS = $(GNUCFLAGS) $(GDK_PIXBUF_CFLAGS) $(EXTRA_CFLAGS) -DPRE_PREFIX="\"$(prefix)\"" -DPRE_LIBDIR="\"$(XCDRLIB_PREFIX)\"" -DCDRTOOLS_PREFIX="\"$(CDRTOOLS_PREFIX)\"" -DSYSCONFDIR="\"$(sysconfdir)\""
+ xcdroast_LDFLAGS = $(GTK_LIBS) $(GDK_PIXBUF_LIBS) $(EXTRA_LDFLAGS)
+-xcdroast_LDADD = @LIBINTL@ @ALLOCA@
++xcdroast_LDADD = @LIBINTL@ @ALLOCA@ $(LIBOSSAUDIO)
+ 
+ wavplay_SOURCES = wavplay.c wav_id.c tools.c largefile.h xcdroast.h
+ wavplay_CFLAGS = $(GNUCFLAGS) $(EXTRA_CFLAGS)
+@@ -207,7 +207,7 @@
+ am_wavplay_OBJECTS = wavplay-wavplay.$(OBJEXT) wavplay-wav_id.$(OBJEXT) \
+ 	wavplay-tools.$(OBJEXT)
+ wavplay_OBJECTS = $(am_wavplay_OBJECTS)
+-wavplay_LDADD = $(LDADD)
++wavplay_LDADD = $(LDADD) $(LIBOSSAUDIO)
+ wavplay_DEPENDENCIES =
+ am_xcdroast_OBJECTS = xcdroast-main.$(OBJEXT) xcdroast-init.$(OBJEXT) \
+ 	xcdroast-tools.$(OBJEXT) xcdroast-xtools.$(OBJEXT) \

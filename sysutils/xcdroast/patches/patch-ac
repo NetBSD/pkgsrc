@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2002/10/27 21:46:12 martin Exp $
+$NetBSD: patch-ac,v 1.7 2002/12/02 20:29:49 drochner Exp $
 
---- io.c.orig	Tue Jul 17 12:39:11 2001
-+++ io.c
-@@ -16,6 +16,14 @@
+--- src/io.c.orig	Sun Nov 24 20:02:58 2002
++++ src/io.c	Mon Dec  2 20:21:20 2002
+@@ -19,6 +19,14 @@
  #include <sys/wait.h>
  #include <signal.h>
  #include <time.h>
@@ -17,12 +17,12 @@ $NetBSD: patch-ac,v 1.6 2002/10/27 21:46:12 martin Exp $
  #if defined(linux) || defined(__FreeBSD__)
  # include <sys/soundcard.h>
  # include <sys/ioctl.h>
-@@ -996,22 +1004,22 @@ GList *get_dsp_devices() {
- GList *dsp;
- GList *loop;
+@@ -1200,22 +1208,22 @@
  struct stat buf;
--#ifdef sun
-+#if defined(sun) || (defined(__NetBSD__) && !defined(HAVE_OSS))
+ #endif
+ 
+-#if defined(sun) || defined(aix) || defined(__OpenBSD__)
++#if defined(sun) || defined(aix) || defined(__OpenBSD__) || (defined(__NetBSD__) && !defined(HAVE_OSS))
  gchar *audiodev;
  #endif
  	dsp = NULL;
@@ -40,15 +40,15 @@ $NetBSD: patch-ac,v 1.6 2002/10/27 21:46:12 martin Exp $
  		dsp = g_list_append(dsp,"/dev/dsp1");
  	}
  #endif
--#ifdef sun
-+#if defined(sun) || (defined(__NetBSD__) && !defined(HAVE_OSS))
+-#if defined(sun) || defined(__OpenBSD__)
++#if defined(sun) || defined(__OpenBSD__) || (defined(__NetBSD__) && !defined(HAVE_OSS))
  	/* check if the user has any special audio-hardware running,
  	   which set the AUDIODEV-environment-variable */
  	audiodev = getenv("AUDIODEV");
-@@ -1066,15 +1074,15 @@ gchar *audiodev;
- gchar *gen_mix_from_dspdev(gchar *dsp, gchar *ret) {
- gchar tmp[MAXLINE];
+@@ -1297,15 +1305,15 @@
  struct stat buf;
+ # endif
+ #endif
 -#if defined(linux) || defined(__FreeBSD__)
 +#if defined(linux) || defined(__FreeBSD__) || (defined(__NetBSD__) && defined(HAVE_OSS))
  gchar tmp2[MAXLINE];
@@ -64,29 +64,29 @@ $NetBSD: patch-ac,v 1.6 2002/10/27 21:46:12 martin Exp $
  		strcpy(tmp,dsp+8);
  		g_snprintf(tmp2,MAXLINE,"/dev/mixer%s",tmp);
  
-@@ -1084,7 +1092,7 @@ gchar tmp2[MAXLINE];
+@@ -1315,7 +1323,7 @@
  		}	
  	}	
  #endif
--#ifdef sun
-+#if defined(sun) || (defined(__NetBSD__) && !defined(HAVE_OSS))
+-#if defined(sun) || defined(__OpenBSD__)
++#if defined(sun) || defined(__OpenBSD__) || (defined(__NetBSD__) && !defined(HAVE_OSS))
  
  	g_snprintf(tmp,MAXLINE,"%s%s",dsp,"ctl");
  
-@@ -2362,10 +2370,10 @@ gint count;
- 
- gint query_mixer() {
+@@ -2795,10 +2803,10 @@
+ #if !(defined(__MACH__) && defined(__APPLE__)) 
  gint mix;
+ #endif
 -#if defined(linux) || defined(__FreeBSD__)
 +#if defined(linux) || defined(__FreeBSD__) || (defined(__NetBSD__) && defined(HAVE_OSS))
  gint val;
  #endif
--#ifdef sun
-+#if defined(sun) || (defined(__NetBSD__) && !defined(HAVE_OSS))
+-#if defined(sun) || defined(__OpenBSD__)
++#if defined(sun) || defined(__OpenBSD__) || (defined(__NetBSD__) && !defined(HAVE_OSS))
  audio_info_t ainfo;
  #endif
  #ifdef hpux
-@@ -2380,7 +2388,7 @@ struct audio_gains again;
+@@ -2813,7 +2821,7 @@
  		return -1;
  	}
  
@@ -95,25 +95,25 @@ $NetBSD: patch-ac,v 1.6 2002/10/27 21:46:12 martin Exp $
  
  	dodebug(10,"quering mixer %s\n", setupdata.mix_device);
  	mix = open(setupdata.mix_device, O_RDWR);
-@@ -2400,7 +2408,7 @@ struct audio_gains again;
+@@ -2833,7 +2841,7 @@
  	return ((val & 0x7f) + ((val >> 8) & 0x7f))/2;
  
  #endif
--#ifdef sun
-+#if defined(sun) || (defined(__NetBSD__) && !defined(HAVE_OSS))
+-#if defined(sun) || defined(__OpenBSD__)
++#if defined(sun) || defined(__OpenBSD__) || (defined(__NetBSD__) && !defined(HAVE_OSS))
  
  	dodebug(10,"quering mixer %s\n", setupdata.mix_device);
  	mix = open(setupdata.mix_device, O_RDONLY);
-@@ -2450,7 +2458,7 @@ struct audio_gains again;
- 
- gint set_mixer(gint val) {
+@@ -2921,7 +2929,7 @@
+ #if !(defined(__MACH__) && defined(__APPLE__)) 
  gint mix;
--#ifdef sun
-+#if defined(sun) || (defined(__NetBSD__) && !defined(HAVE_OSS))
+ #endif
+-#if defined(sun) || defined(__OpenBSD__)
++#if defined(sun) || defined(__OpenBSD__) || (defined(__NetBSD__) && !defined(HAVE_OSS))
  audio_info_t ainfo;
  #endif
- #ifdef hpux
-@@ -2464,7 +2472,7 @@ struct audio_gains again;
+ #ifdef aix
+@@ -2939,7 +2947,7 @@
  		return -1;
  	}
  
@@ -122,22 +122,12 @@ $NetBSD: patch-ac,v 1.6 2002/10/27 21:46:12 martin Exp $
  
  	dodebug(10,"setting mixer %s to %d\n", setupdata.mix_device, val);
  	mix = open(setupdata.mix_device, O_RDWR);
-@@ -2482,7 +2490,7 @@ struct audio_gains again;
+@@ -2957,7 +2965,7 @@
  	close(mix);
  
  #endif 
--#ifdef sun
-+#if defined(sun) || (defined(__NetBSD__) && !defined(HAVE_OSS))
+-#if defined(sun) || defined(__OpenBSD__)
++#if defined(sun) || defined(__OpenBSD__) || (defined(__NetBSD__) && !defined(HAVE_OSS))
  
  	dodebug(10,"setting mixer %s to %d\n", setupdata.mix_device, val);
  	mix = open(setupdata.mix_device, O_WRONLY);
-@@ -3275,6 +3283,9 @@ gint ret,found;
- 		/* got the message that no medium is present?
- 		   in this case, ignore return code */ 
- 		if (strstr(line,"medium not present")) {
-+			found = 1;
-+		}
-+		if (strstr(line,"Device not ready")) {
- 			found = 1;
- 		}
- 	}
