@@ -1,0 +1,67 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/21 11:58:59 salo Exp $
+bin/mergeant
+share/application-registry/mergeant.applications
+share/applications/mergeant.desktop
+share/gnome/help/mergeant/C/topic.dat
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/mergeant.mo
+share/mergeant/dtd/mergeant.dtd
+share/mergeant/plugins/libPnetaddr.a
+share/mergeant/plugins/libPnetaddr.la
+share/mergeant/plugins/libPnetaddr.so
+share/mergeant/plugins/libPnetaddr.so.0
+share/mergeant/plugins/libPnetaddr.so.0.0
+share/mergeant/plugins/libPpicts.a
+share/mergeant/plugins/libPpicts.la
+share/mergeant/plugins/libPpicts.so
+share/mergeant/plugins/libPpicts.so.0
+share/mergeant/plugins/libPpicts.so.0.0
+share/mergeant/plugins/libPsample.a
+share/mergeant/plugins/libPsample.la
+share/mergeant/plugins/libPsample.so
+share/mergeant/plugins/libPsample.so.0
+share/mergeant/plugins/libPsample.so.0.0
+share/mime-info/mergeant.keys
+share/mime-info/mergeant.mime
+share/omf/mergeant/mergeant-C.omf
+share/pixmaps/document-icons/gnome-application-x-mergeant.png
+share/pixmaps/mergeant/mergeant.png
+share/pixmaps/mergeant/mergeant_connect.png
+share/pixmaps/mergeant/mergeant_connect_small.png
+share/pixmaps/mergeant/mergeant_disconnect.png
+share/pixmaps/mergeant/mergeant_disconnect_small.png
+share/pixmaps/mergeant/mergeant_foot.png
+share/pixmaps/mergeant/mergeant_forms.png
+share/pixmaps/mergeant/mergeant_queries.png
+share/pixmaps/mergeant/mergeant_rels.png
+share/pixmaps/mergeant/mergeant_rels_small.png
+share/pixmaps/mergeant/mergeant_sequences.png
+share/pixmaps/mergeant/mergeant_tables.png
+share/pixmaps/mergeant/query-view-query_16x16.png
+share/pixmaps/mergeant/query-view-table_16x16.png
+share/pixmaps/mergeant/query-view-view_16x16.png
+@dirrm share/pixmaps/mergeant
+@dirrm share/omf/mergeant
+@dirrm share/mergeant/plugins
+@dirrm share/mergeant/dtd
+@dirrm share/mergeant
+@exec ${MKDIR} %D/share/gnome/help/mergeant/C/stylesheet-images
+@dirrm share/gnome/help/mergeant/C/stylesheet-images
+@exec ${MKDIR} %D/share/gnome/help/mergeant/C/images
+@dirrm share/gnome/help/mergeant/C/images
+@dirrm share/gnome/help/mergeant/C
+@dirrm share/gnome/help/mergeant

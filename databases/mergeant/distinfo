@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/02/21 11:58:55 salo Exp $
+
+SHA1 (mergeant-0.10.0.tar.gz) = 5625457fec6a5da1f026922894d47c8422c8ba95
+Size (mergeant-0.10.0.tar.gz) = 1336787 bytes
+SHA1 (patch-aa) = 44c5ccfb615f35f7102cf3324f7a304a43e89218
+SHA1 (patch-ab) = f8675a317f867dc9996f6e5ac51ab2dd41500f06

@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/02/21 11:58:59 salo Exp $
+
+--- src/Makefile.in.orig	2003-02-21 10:24:54.000000000 +0100
++++ src/Makefile.in	2003-02-21 11:25:12.000000000 +0100
+@@ -141,7 +141,7 @@
+ mergeant_LDADD =  	$(MERGEANT_LIBS) 	$(top_builddir)/lib/libmergeant.la 	query-fields/libqueryfields.a
+ 
+ 
+-mergeant_LDFLAGS = -export-dynamic -dlopen
++mergeant_LDFLAGS = -export-dynamic
+ mergeant_DEPENDENCIES = query-fields/libqueryfields.a
+ 
+ DTD_FILES = mergeant.dtd

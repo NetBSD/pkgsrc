@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/21 11:58:59 salo Exp $
+
+--- src/mergeant.c.orig	2003-01-10 04:18:38.000000000 +0100
++++ src/mergeant.c	2003-02-21 10:44:18.000000000 +0100
+@@ -38,6 +38,9 @@
+ /* main interface callbacks */
+ #include <libgnomedb/libgnomedb.h>
+ 
++#ifdef HAVE_LOCALE_H
++#include <locale.h>
++#endif
+ 
+ static gint prepare_app (ConfManager * conf);
+ 
