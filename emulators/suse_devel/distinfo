@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 10:49:57 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/02/21 17:44:44 martti Exp $
 
 SHA1 (suse64/bin86.rpm) = 1f95b02ac913df4ce5a5e5040e27fb3b077fd0f6
 Size (suse64/bin86.rpm) = 56119 bytes
@@ -10,8 +10,8 @@ SHA1 (suse64/gcc.rpm) = f83eb48283767fa268c894ff2a6327cfecd1f81e
 Size (suse64/gcc.rpm) = 1214646 bytes
 SHA1 (suse64/gpp.rpm) = 4a2fec0dcca350f8799f2f1fbe244783c4b0e32b
 Size (suse64/gpp.rpm) = 1076707 bytes
-SHA1 (suse64/libc.rpm) = 600b89fcd499102ba9b8fd0a31dc530011c187c0
-Size (suse64/libc.rpm) = 7252859 bytes
+SHA1 (suse64/libc-2.1.3-204.i386.rpm) = 98016802548e5714389079cd253c470e7a165e5a
+Size (suse64/libc-2.1.3-204.i386.rpm) = 7255109 bytes
 SHA1 (suse64/linclude.rpm) = 899011a598e56a4b5adf82e6692a7a5bd37cc91d
 Size (suse64/linclude.rpm) = 1897912 bytes
 SHA1 (suse64/make.rpm) = 3e7b22b6a811e28e782f0cd0013977adf5970963
