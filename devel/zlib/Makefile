@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/03/05 13:05:44 salo Exp $
+# $NetBSD: Makefile,v 1.18 2003/03/05 13:09:28 salo Exp $
 
 DISTNAME=	zlib-1.1.4
 PKGREVISION=	1
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
 
 USE_BUILDLINK2=		# defined
 HAS_CONFIGURE=		# defined
-#NOT_FOR_PLATFORM=	NetBSD-1.[4-9]*-* # in base NetBSD system
+NOT_FOR_PLATFORM=	NetBSD-1.[4-9]*-* # in base NetBSD system
 
 # To avoid circular dependences we must not use "USE_LIBTOOL" but
 # depend on the "libtool-base" package manually.
