@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9256 2005/02/22 00:20:59 wiz Exp $
+$NetBSD: CHANGES,v 1.9257 2005/02/22 00:38:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1019,3 +1019,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated openvpn to 1.6.0 [bad 2005-02-22]
 	Updated links to 2.1.0.16 [wiz 2005-02-22]
 	Updated links-gui to 2.1.0.16 [wiz 2005-02-22]
+	Added p5-Pod-Coverage-0.17 [wiz 2005-02-22]
+	Added p5-Array-Compare-1.11 [wiz 2005-02-22]
+	Added p5-Test-Memory-Cycle-1.00 [wiz 2005-02-22]
+	Added p5-Test-Pod-Coverage-1.06 [wiz 2005-02-22]
+	Added p5-Test-Warn-0.08 [wiz 2005-02-22]
