@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2002/12/26 05:40:48 atatat Exp $
+# $NetBSD: INSTALL,v 1.2 2003/03/06 21:13:13 atatat Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -11,11 +11,13 @@ PRE-INSTALL)
 
 POST-INSTALL)
 	echo "============================================================"
-	echo "Note that in order to facilitate the use of this package"
-	echo "on "\""client machines"\"", the dependency of this package upon"
-	echo "the "\""graphviz"\"" package (located in graphics/graphviz) has"
-	echo "been removed.  You must install the "\""graphviz"\"" package in"
-	echo "order to view the data that this program generates."
+	echo "Note that in order to facilitate the use of this package on"
+	echo ""\""client machines"\"", the dependency of this package upon the"
+	echo ""\""graphviz"\"" package (located in graphics/graphviz) has been"
+	echo "removed.  You must install the "\""graphviz"\"" package in order"
+	echo "to view the graph data that this program generates, though"
+	echo "much of the functionality of this program does not require"
+	echo "you to look at the graphs."
 	echo "============================================================"
 	;;
 

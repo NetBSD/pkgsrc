@@ -1,25 +1,44 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: pkgdepgraph.pl,v 1.2 2002/12/26 05:40:48 atatat Exp $
+# Copyright (c) 2002, 2003 by Andrew Brown <atatat@netbsd.org>
+# Absolutely no warranty.
+
+# $NetBSD: pkgdepgraph.pl,v 1.3 2003/03/06 21:13:13 atatat Exp $
 # pkgdepgraph: @DISTVER@
 
 use strict;
 
 use Getopt::Std;
-my($opts, %opt, $usecolor, $group, $locations, $order, $versions) = ('cd:glov');
-my($pkg_dbdir);
-die("usage: $0 [-d pkg_dbdir] [-cglov]\n") if (!getopts($opts, \%opt));
-$usecolor = $opt{c};
+my($opts, %opt) = ('CcDd:fgLlO:oP:Rt:vU:');
+my($iam, $usecolor, $group, $locations, $order, $versions);
+my($limit, $delete, $rebuild, $force, $outofdate, $update, $clean);
+my($pkg_dbdir, $pkgsrcdir);
+
+($iam = $0) =~ s:.*/::;
+die("usage: $iam [-CcDfgLloRv] [-d pkg_dbdir] [-O package] [-P pkgsrcdir]\n",
+    " " x (length($iam) + 8), "[-t target] [-U package] [data ...]\n")
+    if (!getopts($opts, \%opt));
+
+$usecolor = 0;
 $pkg_dbdir = $opt{d} || $ENV{'PKG_DBDIR'} || "/var/db/pkg";
+$pkgsrcdir = $opt{P} || $ENV{'PKGSRCDIR'} || "/usr/pkgsrc";
 $group = $opt{g};
 $locations = $opt{l};
 $order = $opt{o};
 $versions = $opt{v};
+$delete = $opt{D};
+$rebuild = $opt{t} || "install" if (defined($opt{R}));
+$force = $opt{f};
+$outofdate = $opt{O};
+$update = $opt{U};
+$limit = $opt{L};
+$clean = $opt{c} ? "clean" : "";
+$clean = $opt{C} ? "CLEANDEPENDS=YES clean" : $clean;
 
 my(@pkgs, $pkg, $req, %req, @reqs, @rreqs);
 my(%clusters, $closeme);
-my(%where, %leaf, $pkgcnt, $num, %num, @num, %ord, @ord, $suffix);
-my(%color, $color1, $color2, $ecolor, %vuln);
+my(%where, $pkgcnt, $num, %num, @num, %ord, @ord, $suffix);
+my(%color, $color, %vuln);
 my(%need, $label);
 my($recolor, @graph);
 
@@ -65,7 +84,6 @@ $pkgcnt = @pkgs;
 ##
 foreach $pkg (@pkgs) {
     $where{$pkg} = $pkg;
-    $leaf{$pkg} = 1 unless (defined($leaf{$pkg}));
     open(R, "<$pkg_dbdir/$pkg/+BUILD_INFO") ||
 	die("$pkg: +BUILD_INFO: $!\n");
     while (<R>) {
@@ -78,7 +96,6 @@ foreach $pkg (@pkgs) {
     next if (!open(R, "<$pkg_dbdir/$pkg/+REQUIRED_BY"));
     while ($req = <R>) {
 	chomp($req);
-	$leaf{$pkg} = 0;
 	$req{$req}->{$pkg} = 1;
     }
 }
@@ -161,17 +178,16 @@ foreach $pkg (@pkgs) {
 }
 
 ##
-## Create a hash of clusters of package prefixes, with counts
+## create a hash of clusters of package prefixes, with counts.  later,
+## clusters that have more than one member can be marked as subgraphs.
 ##
-map({ $a=""; map({ $a .= $_; $clusters{$a}++; } /([^-_]*[-_])/g); } @pkgs);
+map({ $a = ""; map({ $a .= $_; $clusters{$a}++; } /([^-_]*[-_])/g); } @pkgs);
 
 ##
 ## impose some sort of order on the pkgs by assigning them numbers
 ## that indicate their height in the graph
 ##
-foreach $pkg (@pkgs) {
-    order(1, $pkg);
-}
+map(order(1, $_), @pkgs);
 
 ##
 ## assign each pkg a group number, and count the number of pkgs in
@@ -193,11 +209,80 @@ foreach $pkg (sort(byord @pkgs)) {
 }
 
 ##
+## if we want to check a specific pkg for rebuild impact... 
+##
+if ($outofdate) {
+    $usecolor = 1;
+    $outofdate = canonicalize($outofdate);
+
+    if ($color{$outofdate} ne "red") {
+	$color{$outofdate} = "red";
+	$need{$outofdate} = "$outofdate (forced)";
+    }
+}
+
+##
+## if we want to update a specific package, mark all non-related
+## packages as "green"
+##
+if ($update) {
+    $update = canonicalize($update);
+
+    # these things will need to be checked
+    @reqs = sort(keys %{$req{$update}});
+    @rreqs = recurse(@reqs);
+
+    # check each pkg to see if it will be affected
+    foreach $pkg (@pkgs) {
+	# these pkgs are dependencies
+	if (grep($pkg eq $_, ($update, @reqs, @rreqs))) {
+	    if ($force && $color{$pkg} ne "red") {
+		# we want to force rebuild of *all* dependencies
+		$color{$pkg} = "red";
+		$need{$pkg} = "$pkg (forced)";
+	    }
+	}
+	# these packages do not depend on any of $update's dependencies
+	else {
+	    delete($color{$pkg});
+	    delete($need{$pkg});
+	}
+    }
+}
+
+##
+## "delete" output, ordered with "least depended on" first
+##
+if ($delete) {
+    map(print("$_\n"),
+	reverse(sort(byord grep(color($_) ne "green", @pkgs))));
+    exit(0);
+}
+
+##
+## "rebuild" output for sh(1), with just leaves listed
+##
+if ($rebuild) {
+    map(printf("( pkg_info -qe %s || " .
+	       "( cd %s/%s && " .
+	       "make %s%s )) &&\n",
+	       ($need{$_} || $_) =~ /(.*)-.*/,
+	       $pkgsrcdir, $where{$_},
+	       $rebuild,
+	       $clean ? " && make $clean" : ""),
+	grep(color($_) ne "green" && $ord{$_} == 1, @pkgs));
+    print("true\n");
+    exit(0);
+}
+
+##
 ## show left overs as a graph
 ##
-print("digraph \"packages\" {\n");
+printf("digraph \"%s\" {\n",
+       $limit ? "out of date packages" : "packages");
 foreach $pkg (sort(bynum @pkgs)) {
-    $color1 = color($pkg);
+    $color = color($pkg);
+    next if ($limit && $color eq "green");
     $label = $pkg;
     $label =~ s/(.*)-.*/$1/ if (!$versions);
     $label = "($ord{$pkg}) $label" if ($order);
@@ -208,22 +293,28 @@ foreach $pkg (sort(bynum @pkgs)) {
 	$label .= "\\n[$vuln{$pkg}]";
     }
     $suffix = "\t// \#$ord{$pkg}, group $num{$pkg}, $num[$num{$pkg}] members, $pkgcnt pkgs";
-    $suffix .= ", LEAF" if ($leaf{$pkg});
+    $suffix .= ", LEAF" if ($ord{$pkg} == 1);
     $a = "";
+    $b = 0;
     foreach ($pkg =~ /([^-_]*[-_])/g) {
 	last if ($clusters{$a .= $_} <= 1 || !$group);
+	next if ($b && $clusters{$a} >= $b);
 	printf("subgraph \"cluster_%s\" {\n", substr($a, 0, -1));
+	$b = $clusters{$a};
 	$closeme .= "}\n";
     }
-    printf("\"%s\" [color=\"%s\",label=\"%s\"];$suffix\n", $pkg , $color1, $label);
+    printf("\"%s\" [color=\"%s\",label=\"%s\"];$suffix\n", $pkg,
+	   $usecolor ? $color : "black", $label);
     print($closeme);
     $closeme = "";
     @reqs = sort(keys %{$req{$pkg}});
     $suffix =~ s/, LEAF$//;
     $suffix .= ", EDGE";
     foreach $req (@reqs) {
-	$color2 = color($req);
-	printf("\"%s\" -> \"%s\" [color=\"%s\"];$suffix\n", $req, $pkg, $color2);
+	$color = color($req);
+	next if ($limit && $color eq "green");
+	printf("\"%s\" -> \"%s\" [color=\"%s\"];$suffix\n", $req, $pkg,
+	       $usecolor ? $color : "black");
     }
 }
 print("}\n");
@@ -239,6 +330,26 @@ sub recurse {
 	map($list{$_} = $_, @list, recurse(@list));
     }
     sort(keys %list);
+}
+
+##
+## canonicalize a pkg name based on what we have installed
+##
+sub canonicalize {
+    my($canon);
+    my($pkg) = @_;
+
+    # attempt to find actual pkg, first by argument given...
+    ($canon) = grep($pkg eq $_, @pkgs);
+
+    # ...then by comparing against the internal list sans version numbers
+    ($canon) = grep(($a = $_) =~ s/(.*)-.*/$1/ && $pkg eq $a, @pkgs)
+        if (!defined($canon));
+
+    die("package '$update' not found\n")
+        if (!defined($canon));
+
+    $canon;
 }
 
 ##
@@ -258,10 +369,7 @@ sub number {
 ##
 sub color {
     my($pkg) = @_;
-    if (! $usecolor) {
-	"black";
-    }
-    elsif ($color{$pkg}) {
+    if ($color{$pkg}) {
 	$color{$pkg};
     }
     else {
