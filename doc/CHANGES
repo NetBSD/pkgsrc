@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2628 2003/06/29 23:45:15 gson Exp $
+$NetBSD: CHANGES,v 1.2629 2003/06/30 00:00:26 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2618,3 +2618,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Geography-Countries-1.4 [gson 2003-06-29]
 	Added swiftsurf-1.2.5 [jtb 2003-06-29]
 	Added py-dns-1.0.0b3 [gson 2003-06-29]
+	Updated tinyscheme to 1.33 [jtb 2003-06-29]
