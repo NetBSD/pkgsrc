@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.164 2002/10/04 15:48:33 kei Exp $
+$NetBSD: CHANGES,v 1.165 2002/10/04 16:11:38 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3110,3 +3110,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated x2vnc to 1.4 [hubertf 2002-10-04]
 	Added otpCalc-0.96 [hubertf 2002-10-04]
 	Updated Mule-UCS to 0.84nb1 [kei 2002-10-04]
+	Added pclock-0.13.1 [hubertf 2002-10-04]
