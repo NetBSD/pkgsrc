@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.5 2004/07/10 16:33:01 minskim Exp $
+$NetBSD: distinfo,v 1.6 2004/07/27 22:25:31 agc Exp $
 
 SHA1 (tracker-5.3.tgz) = b0973d6a9c363caebd3a71547412f42b0681f323
 Size (tracker-5.3.tgz) = 454803 bytes
 SHA1 (patch-aa) = 9274dcc7d394638325da08b85fa57974f9d13577
 SHA1 (patch-ab) = d12637496bb73192c25a67d6eae4da1775798c4e
-SHA1 (patch-ac) = 8627c4b530957e056d791a94f935f818970f1dc0
-SHA1 (patch-ad) = 98bc1802a888159ea9e4d779ac781ce9865b4311
+SHA1 (patch-ac) = 965c5e4c7eee7cbf73de4056055ff4fac1fe2db5
 SHA1 (patch-ae) = 85a1d61b5adedcf378fbed90f5337610b30c365b
 SHA1 (patch-af) = e159f31d04f3e1ced666197d303ff0aa39a474b6
