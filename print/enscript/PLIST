@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:39 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/27 14:46:16 cjep Exp $
 bin/diffpp
 bin/enscript
 bin/mkafmmap
@@ -76,9 +76,9 @@ share/enscript/vms.enc
 share/enscript/zcmi.afm
 share/enscript/zd.afm
 @dirrm share/enscript
-share/locale/de/LC_MESSAGES/enscript.mo
-share/locale/es/LC_MESSAGES/enscript.mo
-share/locale/fi/LC_MESSAGES/enscript.mo
-share/locale/fr/LC_MESSAGES/enscript.mo
-share/locale/nl/LC_MESSAGES/enscript.mo
-share/locale/sl/LC_MESSAGES/enscript.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/enscript.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/enscript.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/enscript.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/enscript.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/enscript.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/enscript.mo
