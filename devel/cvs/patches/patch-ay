@@ -1,0 +1,15 @@
+$NetBSD: patch-ay,v 1.1 2000/02/23 01:32:12 mycroft Exp $
+
+--- src/run.c.orig	Thu Dec 18 10:18:50 1997
++++ src/run.c	Tue Feb 22 20:25:09 2000
+@@ -188,6 +188,10 @@
+ #endif
+     if (pid == 0)
+     {
++#ifdef SETXID_SUPPORT
++	if (flags & RUN_UNSETXID)
++	    (void) setgid (getgid ());
++#endif
+ 	if (shin != 0)
+ 	{
+ 	    (void) dup2 (shin, 0);
