@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2001/04/03 17:06:16 skrll Exp $
+# $NetBSD: Makefile.common,v 1.8 2001/04/17 16:56:15 skrll Exp $
 #
 
 DISTNAME=	libtool-ml-20010219
@@ -14,5 +14,5 @@ HOMEPAGE=	http://www.gnu.org/software/libtool/libtool.html
 CONFLICTS=	glibtool-*
 GNU_CONFIGURE=	yes
 
-FILESDIR=	${.CURDIR}/../libtool/files
+DISTINFO_FILE=	${.CURDIR}/../libtool/distinfo
 PATCHDIR=	${.CURDIR}/../libtool/patches
