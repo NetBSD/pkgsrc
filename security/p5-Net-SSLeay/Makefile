@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/09/27 07:25:06 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/27 07:29:39 jlam Exp $
 
 DISTNAME=	Net_SSLeay.pm-1.08
 PKGNAME=	p5-Net-SSLeay-1.08
@@ -12,6 +12,8 @@ COMMENT=	perl5 module for using OpenSSL
 USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Net/SSLeay/.packlist
 MAKE_PARAMS=	${SSLBASE}
+
+USE_OPENSSL_VERSION=	OPENSSL_VERSION_096A
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
