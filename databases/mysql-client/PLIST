@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/01/20 23:20:36 lukem Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/06/29 22:28:17 seb Exp $
 bin/msql2mysql
 bin/mysql
 bin/mysqlcheck
@@ -39,9 +39,7 @@ include/mysql/sslopt-case.h
 include/mysql/sslopt-longopts.h
 include/mysql/sslopt-usage.h
 include/mysql/sslopt-vars.h
-@unexec ${INSTALL_INFO} --delete %D/info/mysql.info %D/info/dir
 info/mysql.info
-@exec ${INSTALL_INFO} %D/info/mysql.info %D/info/dir
 lib/mysql/libmysqlclient.a
 lib/mysql/libmysqlclient.la
 lib/mysql/libmysqlclient.so
