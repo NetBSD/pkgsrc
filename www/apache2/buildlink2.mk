@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/12/03 15:40:02 epg Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2004/03/22 19:50:16 reed Exp $
 
 .if !defined(APACHE_BUILDLINK2_MK)
 APACHE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		apache
-BUILDLINK_DEPENDS.apache?=	apache>=2.0.48nb2
+BUILDLINK_DEPENDS.apache?=	apache>=2.0.49
 BUILDLINK_PKGSRCDIR.apache?=	../../www/apache2
 BUILDLINK_DEPMETHOD.apache?=	build
 
