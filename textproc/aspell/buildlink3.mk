@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/12/24 02:55:53 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/12/31 14:26:47 minskim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ASPELL_BUILDLINK3_MK:=	${ASPELL_BUILDLINK3_MK}+
@@ -14,5 +14,7 @@ BUILDLINK_PACKAGES+=	aspell
 BUILDLINK_DEPENDS.aspell+=	aspell>=0.60.2
 BUILDLINK_PKGSRCDIR.aspell?=	../../textproc/aspell
 .endif	# ASPELL_BUILDLINK3_MK
+
+BUILDLINK_FILES.aspell=	bin/aspell bin/prezip-bin bin/word-list-compress
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
