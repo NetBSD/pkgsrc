@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2861 2003/07/22 17:49:04 taca Exp $
+$NetBSD: CHANGES,v 1.2862 2003/07/22 18:36:43 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2903,3 +2903,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added py-qt3-qscintilla-3.7 [drochner 2003-07-22]
 	Added eric3-3.2 [drochner 2003-07-22]
 	Deleted ruby-ossl, renamed to ruby-openssl [taca 2003-07-22]
+	Updated docbook-xsl to 1.61.3 [jmmv 2003-07-22]
