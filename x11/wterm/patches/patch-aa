@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/05/03 18:03:29 rh Exp $
+
+--- doc/Makefile.in.orig	Sun Jan 10 10:32:31 1999
++++ doc/Makefile.in	Sat Apr  3 08:52:21 1999
+@@ -57,7 +57,7 @@
+ distclean:
+ 
+ install: rxvt.1
+-	$(INSTALL_DATA) rxvt.1 $(DESTDIR)$(mandir)/$(manprefix)rxvt.$(manext)
++	$(INSTALL_DATA) rxvt.1 $(DESTDIR)$(mandir)/$(manprefix)wterm.$(manext)
+ 
+ uninstall:
+ 	-cd $(mandir); $(RMF) $(manprefix)rxvt.$(manext)
