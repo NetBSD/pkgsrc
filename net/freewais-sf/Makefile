@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/14 23:11:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/27 06:07:43 jlam Exp $
 #
 
 DISTNAME=	freeWAIS-sf-2.2.12
@@ -9,21 +9,21 @@ MASTER_SITES=	ftp://ls6-ftp.cs.uni-dortmund.de/pub/src/freeWAIS-sf/
 MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	http://ls6-www.informatik.uni-dortmund.de/ir/projects/freeWAIS-sf/index.html
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
+BUILD_DEPENDS=	${PERL5}:../../lang/perl5
 
-USE_LIBTOOL=	yes
+USE_LIBTOOL=	# defined
 
-HAS_CONFIGURE=		yes
+HAS_CONFIGURE=		# defined
 CONFIGURE_ENV+=		PREFIX=${PREFIX}
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} \
-				-Darchname=${MACHINE_ARCH}-${LOWER_OPSYS}
+			-Darchname=${MACHINE_ARCH}-${LOWER_OPSYS}
 INSTALL_TARGET=	install install.man
 
 INFO_FILES=	fwsf.info
 
 post-build:
-	(cd ${WRKSRC}/doc/SF; makeinfo fwsf.texi)
+	cd ${WRKSRC}/doc/SF; makeinfo fwsf.texi
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/SF/fwsf.info* ${PREFIX}/info
