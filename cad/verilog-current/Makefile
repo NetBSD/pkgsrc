@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2004/06/07 01:09:50 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.41 2004/09/02 01:55:47 dmcmahill Exp $
 #
 
 DISTNAME=	verilog-${SNAPDATE}
@@ -16,9 +16,8 @@ CONFLICTS+=	verilog-[0-9]*
 
 USE_BUILDLINK3=	yes
 BUILD_DEPENDS+= bison-[0-9]*:../../devel/bison
-BUILD_DEPENDS+= gperf>=2.7.2:../../devel/gperf
 
-SNAPDATE=	20040606
+SNAPDATE=	20040828
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	lex make
 CONFIGURE_ARGS+=	--without-ipal
@@ -28,5 +27,6 @@ TEST_TARGET=	check
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
