@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/08/25 21:51:10 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/11 14:22:33 cjep Exp $
 
 DISTNAME=	xbattbar_1.4.2
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -17,7 +17,7 @@ USE_X11BASE=	# defined
 USE_IMAKE=	# defined
 
 .if !exists(/usr/include/machine/apmvar.h)
-IGNORE+=	"APM is not available for ${MACHINE_PLATFORM}"
+PKG_FAIL_REASON=	"APM is not available for ${MACHINE_PLATFORM}"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
