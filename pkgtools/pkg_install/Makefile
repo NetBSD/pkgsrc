@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2003/03/28 21:14:27 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2003/04/11 14:33:49 grant Exp $
 
 # Notes to package maintainers:
 #
@@ -53,7 +53,11 @@ post-install:
 		${PKG_ADMIN} rebuild ; \
 	fi
 
-.include "../../databases/db/buildlink2.mk"
+# db1 support is only known to work on NetBSD, so we leave it out for
+# on other platforms.
+.if ${OPSYS} == "NetBSD"
+.  include "../../databases/db/buildlink2.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
 
 PREFIX:=		${PKG_TOOLS_BIN:C|/[^/]?bin$||}
