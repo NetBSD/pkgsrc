@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/04/17 01:14:19 snj Exp $
+# $NetBSD: Makefile,v 1.6 2004/06/25 17:09:27 adrianp Exp $
 #
 
-DISTNAME=		gnuplot-3.7.3
+DISTNAME=		gnuplot-4.0.0
 PKGNAME=                ${DISTNAME:C/-/-nox11-/}
 SVR4_PKGNAME=		gplot
 CATEGORIES=		graphics
@@ -10,8 +10,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnuplot/} \
 			ftp://ftp.cc.monash.edu.au/pub/gnuplot/
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://sourceforge.net/projects/gnuplot/
-COMMENT=		Gnuplot is a nice plotting utility
+HOMEPAGE=		http://gnuplot.sourceforge.net/
+COMMENT=		Portable interactive, function plotting utility 
 
 CONFLICTS+=		gnuplot-[0-9]*
 
@@ -20,7 +20,8 @@ USE_BUILDLINK3=		YES
 USE_GNU_READLINE=	YES
 GNU_CONFIGURE=		YES
 
-INFO_FILES=	gnuplot.info
+USE_MAKEINFO=		YES
+INFO_FILES=		gnuplot.info
 
 CONFIGURE_ARGS+=	--with-pdf
 CONFIGURE_ARGS+=	--with-plot=${LOCALBASE}
@@ -29,6 +30,6 @@ CONFIGURE_ARGS+=	--without-x
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../graphics/plotutils-nox11/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/gd/buildlink3.mk"
 .include "../../print/pdflib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
