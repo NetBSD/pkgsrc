@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2019 2004/08/10 14:30:06 taya Exp $
+$NetBSD: TODO,v 1.2020 2004/08/10 20:42:08 heinz Exp $
 
 Suggested new packages
 ======================
@@ -384,7 +384,6 @@ Suggested package updates
 	o snes9x-1.42
 	o snownews-1.5.3
 	o socat-1.4.0.0
-	o spamassassin-2.64
 	o sqlite-3.0.2
 	o squid-2.5.6 [taca]
 	o srp_client-1.7.5 [jlam]
