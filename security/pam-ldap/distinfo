@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2004/11/19 19:08:43 jlam Exp $
+$NetBSD: distinfo,v 1.6 2005/01/12 02:30:09 xtraeme Exp $
 
 SHA1 (pam_ldap-176.tar.gz) = 44dcbe0b8f0e458d1d86023e5722c2cb7359ef5a
 Size (pam_ldap-176.tar.gz) = 121531 bytes
 SHA1 (patch-aa) = 16c78741ddc11de08457fc19faec92a674550050
+SHA1 (patch-ab) = 42162879090b8b722d2494566bd03f2918c42930
