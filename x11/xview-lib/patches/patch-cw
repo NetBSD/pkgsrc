@@ -1,7 +1,7 @@
-$NetBSD: patch-cw,v 1.1 2001/12/20 09:20:05 tron Exp $
+$NetBSD: patch-cw,v 1.2 2001/12/20 09:22:04 tron Exp $
 
 --- lib/libxview/textsw/txt_again.c.orig	Tue Jun 29 07:17:32 1993
-+++ lib/libxview/textsw/txt_again.c	Thu Dec 20 10:09:17 2001
++++ lib/libxview/textsw/txt_again.c	Thu Dec 20 10:11:57 2001
 @@ -28,6 +28,8 @@
  Pkg_private Es_index textsw_do_input();
  Pkg_private Es_index textsw_do_pending_delete();
@@ -60,7 +60,7 @@ $NetBSD: patch-cw,v 1.1 2001/12/20 09:20:05 tron Exp $
  static int
  #ifdef ANSI_FUNC_PROTO
  textsw_scanf(register string_t *ptr_to_string, register char  *fmt, ...)
-@@ -705,6 +735,39 @@
+@@ -705,6 +735,38 @@
  
  #endif /* OW_I18N */
  }
@@ -84,12 +84,11 @@ $NetBSD: patch-cw,v 1.1 2001/12/20 09:20:05 tron Exp $
 +    int             result;
 +    va_list         args;
 +
++    memset(&_strbuf, '\0', sizeof(_strbuf));
 +    _strbuf._flags = __SRD;
 +    _strbuf._bf._base = _strbuf._p = (char *) TXTSW_STRING_BASE(ptr_to_string);
 +    _strbuf._bf._size = _strbuf._r = TXTSW_STRING_LENGTH(ptr_to_string);
 +    _strbuf._read = eofread;
-+    _strbuf._ub._base = NULL;
-+    _strbuf._lb._base = NULL;
 +    VA_START(args, fmt);
 +    result = __svfscanf(&_strbuf, fmt, args);
 +    va_end(args);
