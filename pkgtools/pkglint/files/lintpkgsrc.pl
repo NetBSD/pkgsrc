@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.74 2003/01/02 22:58:42 schmonz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.75 2003/01/24 15:00:41 atatat Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -31,12 +31,13 @@ my(	$pkglist,		# list of Pkg packages
 
 $ENV{PATH} .= ':/usr/sbin';
 
-if (! getopts('BDK:LM:OP:RSVdg:hilmopru', \%opt) || $opt{h} ||
+if (! getopts('BDE:I:K:LM:OP:RSVdg:hilmopru', \%opt) || $opt{h} ||
 	! ( defined($opt{d}) || defined($opt{g}) || defined($opt{i}) ||
 	    defined($opt{l}) || defined($opt{m}) || defined($opt{o}) ||
 	    defined($opt{p}) || defined($opt{r}) || defined($opt{u}) ||
 	    defined($opt{B}) || defined($opt{D}) || defined($opt{R}) ||
-	    defined($opt{O}) || defined($opt{S}) || defined($opt{V}) ))
+	    defined($opt{O}) || defined($opt{S}) || defined($opt{V}) ||
+	    defined($opt{E})))
     { usage_and_exit(); }
 $| = 1;
 
@@ -242,6 +243,11 @@ if ($opt{D} && @ARGV)
 	}
     if ($opt{l})
 	{ pkglint_all_pkgsrc($pkgsrcdir, $pkglint_flags); }
+    if ($opt{E})
+	{
+	scan_pkgsrc_makefiles($pkgsrcdir);
+	store_pkgsrc_makefiles($opt{E});
+	}
     }
 exit;
 
@@ -1075,6 +1081,11 @@ sub scan_pkgsrc_makefiles
 
     if ($pkglist) # Already done
 	{ return; }
+    if ($opt{I})
+	{
+	load_pkgsrc_makefiles($opt{I});
+	return;
+	}
     $pkglist = new PkgList;
     @categories = list_pkgsrc_categories($pkgsrcdir);
     verbose("Scanning pkgsrc Makefiles: ");
@@ -1242,6 +1253,26 @@ sub scan_pkgsrc_distfiles_vs_distinfo
     (sort keys %bad_distfiles);
     }
 
+sub load_pkgsrc_makefiles
+    {
+    open(STORE, "<$_[0]") || die("Cannot read pkgsrc store from $_[0]: $!\n");
+    my ($pkgver, $pkgcnt, $pkgnum);
+    $pkglist = new PkgList;
+    while (<STORE>)
+	{ eval $_; }
+    close(STORE);
+    }
+
+sub store_pkgsrc_makefiles
+    {
+    open(STORE, ">$_[0]") || die("Cannot save pkgsrc store to $_[0]: $!\n");
+    my $was = select(STORE);
+    $pkglist->store;
+    print("verbose(\"...done\\n\");\n");
+    select($was);
+    close(STORE);
+    }
+
 # Remember to update manual page when modifying option list
 #
 sub usage_and_exit
@@ -1261,6 +1292,8 @@ Prebuilt package options:		Makefile options:
   -V : List known vulnerabilities
 
 Misc:
+  -E file : Export the internal pkgsrc database to file
+  -I file : Import the internal pkgsrc database to file (for use with -i)
   -g file : Generate 'pkgname pkgdir pkgver' map in file
   -l	  : Pkglint all packages
   -r	  : Remove bad files (Without -m -o -p or -V implies all, can use -R)
@@ -1342,6 +1375,14 @@ sub pkgs
     return;
     }
 
+sub store
+    {
+    my $self = shift;
+    my @pkgs = keys %{$self->{_pkgs}};
+    print("\$pkgcnt = ", scalar(@pkgs), ";\n");
+    map($self->{_pkgs}{$_}->store, keys %{$self->{_pkgs}});
+    }
+
 # Pkgs is all versions of a given package (eg: apache-1.x and apache-2.x)
 #
 package Pkgs;
@@ -1391,6 +1432,15 @@ sub latestver
     ($self->pkgver())[0];
     }
 
+sub store
+    {
+    my $self = shift;
+    print("\$pkgnum++;\n");
+    print("verbose(\"\\rReading pkgsrc database: ",
+	  "\$pkgnum / \$pkgcnt pkgs\");\n");
+    map($self->{_pkgver}{$_}->store, keys %{$self->{_pkgver}});
+    }
+
 # PkgVer is a unique package+version
 #
 package PkgVer;
@@ -1400,8 +1450,8 @@ sub new
     my $class = shift;
     my $self = {};
     bless $self, $class;
-    $self->{_pkg} = $1;
-    $self->{_ver} = $2;
+    $self->{_pkg} = $_[0];
+    $self->{_ver} = $_[1];
     return $self;
     }
 
@@ -1429,4 +1479,22 @@ sub ver
     {
     my $self = shift;
     $self->{_ver};
+    }
+
+sub vars
+    {
+    my $self = shift;
+    grep(!/^_(pkg|ver)$/, keys %{$self});
+    }
+
+sub store
+    {
+    my $self = shift;
+    my $data;
+    print("\$pkgver = \$pkglist->add(\"$self->{_pkg}\", \"$self->{_ver}\");\n");
+    foreach ($self->vars)
+	{
+	($data = $self->{$_}) =~ s/([\\\$\@\%\"])/\\$1/g;
+	print("\$pkgver->var(\"$_\", \"$data\");\n");
+	}
     }
