@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1116 2002/12/26 20:52:13 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1117 2002/12/27 06:53:45 uebayasi Exp $
 #
 # This file is in the public domain.
 #
@@ -1064,7 +1064,7 @@ ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
 # Don't build a package if it's broken.
 ################################################################
 
-.if !defined(NO_IGNORE)
+.if !defined(NO_SKIP)
 .  if (defined(NO_BIN_ON_CDROM) && defined(FOR_CDROM))
 PKG_FAIL_REASON+= "${PKGNAME} may not be placed in binary form on a CDROM:" \
          "    "${NO_BIN_ON_CDROM:Q}
@@ -1120,7 +1120,7 @@ __PLATFORM_OK?=	yes
 .    endif	# MACHINE_PLATFORM
 .  endfor	# __tmp__
 .  if !defined(__PLATFORM_OK)
-PKG_FAIL_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
+PKG_SKIP_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
 .  endif	# !__PLATFORM_OK
 
 #
@@ -1129,7 +1129,7 @@ PKG_FAIL_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
 .  if defined(PKG_FAIL_REASON) || defined(PKG_SKIP_REASON)
 fetch checksum extract patch configure all build install package \
 update install-depends:
-.    if defined(IGNORE_SILENT)
+.    if defined(SKIP_SILENT)
 	@${DO_NADA}
 .    else
 	@for str in ${PKG_FAIL_REASON} ${PKG_SKIP_REASON} ; \
@@ -1140,8 +1140,8 @@ update install-depends:
 .    if defined(PKG_FAIL_REASON)
 	@${FALSE}
 .    endif
-.  endif # IGNORE
-.endif # !NO_IGNORE
+.  endif # SKIP
+.endif # !NO_SKIP
 
 # Add these defs to the ones dumped into +BUILD_DEFS
 BUILD_DEFS+=	PKGPATH
@@ -1236,7 +1236,7 @@ install: build
 # Disable package
 .if defined(NO_PACKAGE) && !target(package)
 package:
-.  if defined(IGNORE_SILENT)
+.  if defined(SKIP_SILENT)
 	@${DO_NADA}
 .  else
 	@${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} may not be packaged: ${NO_PACKAGE}."
@@ -3008,7 +3008,7 @@ real-su-undo-replace:
 # re-distributed freely
 mirror-distfiles:
 .if !defined(NO_SRC_ON_FTP)
-	@${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} fetch NO_IGNORE=yes NO_CHECK_DEPENDS=yes
+	@${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} fetch NO_SKIP=yes NO_CHECK_DEPENDS=yes
 .endif
 
 
