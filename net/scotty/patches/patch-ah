@@ -1,8 +1,17 @@
-$NetBSD: patch-ah,v 1.1 1998/09/18 17:45:09 agc Exp $
+$NetBSD: patch-ah,v 1.2 2000/07/05 12:34:00 he Exp $
 
---- tkined.sh.in.orig	Fri Sep 13 09:30:41 1996
-+++ tkined.sh.in	Fri Sep 13 09:26:21 1996
-@@ -0,0 +1,3 @@
-+#!/bin/sh
-+export TCLLIBPATH="@PREFIX@/lib/tkined1.4.8 @PREFIX@/lib/tnm2.1.8"
-+exec @PREFIX@/bin/tkined1.4.8 $*
+--- ../unix/tkined-wrap.c.in.dist	Wed Jul  5 13:23:37 2000
++++ ../unix/tkined-wrap.c.in	Wed Jul  5 13:18:29 2000
+@@ -0,0 +1,12 @@
++#include <unistd.h>
++#include <stdlib.h>
++
++int
++main(argc, argv)
++	int argc;
++	char **argv;
++{
++	setenv("TCLLIBPATH", "@prefix@/lib/tkined@TKI_VERSION@ @prefix@/lib/tnm@TNM_VERSION@", 1);
++	execv("@prefix@/bin/tkined@TKI_VERSION@", argv);
++	exit(1);
++}
