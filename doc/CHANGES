@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4465 2004/01/14 23:55:30 jlam Exp $
+$NetBSD: CHANGES,v 1.4466 2004/01/15 09:03:31 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -226,3 +226,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated silc-client to 1.0.1 [salo 2004-01-14]
 	Updated amule to 1.2.4 [jmmv 2004-01-14]
 	Updated pkg_install to 20040114 [jlam 2004-01-14]
+	Updated p5-XML-Checker to 0.13 [xtraeme 2004-01-15]
