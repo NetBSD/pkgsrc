@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2001/11/26 13:08:24 martti Exp $
+# $NetBSD: Makefile,v 1.41 2001/12/17 14:24:50 martti Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -7,7 +7,7 @@
 
 DISTNAME=	abiword-${ABIWORD_VERS}
 PKGNAME=	abiword-personal-${ABIWORD_VERS}
-ABIWORD_VERS=	0.9.5
+ABIWORD_VERS=	0.9.6.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=abiword/}
 DIST_SUBDIR=	abisuite
