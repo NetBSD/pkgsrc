@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.2.2 2004/05/30 09:02:09 grant Exp $
+
+--- src/verify.c.orig	Fri May  7 18:23:09 2004
++++ src/verify.c
+@@ -1270,7 +1270,7 @@ for (h = header_list; h != NULL; h = h->
+       uschar *verb = US"is";
+       int len;
+ 
+-      while (*t != ':') *tt++ = *t++;
++      while (*t != ':' && tt < &hname[sizeof(hname)-2]) *tt++ = *t++;
+       *tt = 0;
+ 
+       /* Arrange not to include any white space at the end in the
