@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 15:51:50 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/04/19 14:55:30 zuntum Exp $
 #
 
 
@@ -8,5 +8,6 @@ SUBDIR+=	7plus
 SUBDIR+=	dpbox
 SUBDIR+=	tfkiss
 SUBDIR+=	tnt
+SUBDIR+=	wwl
 
 .include "../mk/bsd.pkg.subdir.mk"
