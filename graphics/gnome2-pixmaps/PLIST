@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/01 18:35:51 jmmv Exp $
-share/pixmaps/advanced-directory.png
+@comment $NetBSD: PLIST,v 1.5 2005/03/22 16:09:27 jmmv Exp $
 share/pixmaps/apple-green.png
 share/pixmaps/apple-red.png
 share/pixmaps/gnome-aorta.png
 share/pixmaps/gnome-applets.png
-share/pixmaps/gnome-applications.png
 share/pixmaps/gnome-background-image.png
 share/pixmaps/gnome-background-pattern.png
 share/pixmaps/gnome-background.png
@@ -27,7 +25,6 @@ share/pixmaps/gnome-debian.png
 share/pixmaps/gnome-diskfree.png
 share/pixmaps/gnome-emacs.png
 share/pixmaps/gnome-eterm.png
-share/pixmaps/gnome-favorites.png
 share/pixmaps/gnome-file-c.png
 share/pixmaps/gnome-file-h.png
 share/pixmaps/gnome-folder.png
@@ -46,19 +43,13 @@ share/pixmaps/gnome-log.png
 share/pixmaps/gnome-logo-icon-transparent.png
 share/pixmaps/gnome-logo-icon.png
 share/pixmaps/gnome-logo-large.png
-share/pixmaps/gnome-mailcheck.png
 share/pixmaps/gnome-mdi.png
 share/pixmaps/gnome-mnemonic.png
-share/pixmaps/gnome-modem.png
-share/pixmaps/gnome-money.png
-share/pixmaps/gnome-monitor.png
 share/pixmaps/gnome-month.png
 share/pixmaps/gnome-mouse.png
-share/pixmaps/gnome-networktool.png
 share/pixmaps/gnome-news.png
 share/pixmaps/gnome-note.png
 share/pixmaps/gnome-qeye.png
-share/pixmaps/gnome-session.png
 share/pixmaps/gnome-set-time.png
 share/pixmaps/gnome-spider.png
 share/pixmaps/gnome-squeak.png
@@ -72,7 +63,6 @@ share/pixmaps/gnome-term.png
 share/pixmaps/gnome-tigert.png
 share/pixmaps/gnome-touristinfo.png
 share/pixmaps/gnome-user-interface.png
-share/pixmaps/gnome-util.png
 share/pixmaps/gnome-week.png
 share/pixmaps/gnome-windows.png
 share/pixmaps/gnome-word.png
@@ -80,7 +70,6 @@ share/pixmaps/gnome-workspace.png
 share/pixmaps/gnome-xterm.png
 share/pixmaps/gtkvim.png
 share/pixmaps/kterm.xpm
-share/pixmaps/launcher-program.png
 share/pixmaps/monitor.png
 share/pixmaps/vnterm.xpm
 @comment in xdg-dirs: @dirrm share/pixmaps

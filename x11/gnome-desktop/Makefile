@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2005/02/26 17:24:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2005/03/22 16:09:27 jmmv Exp $
 #
 
-DISTNAME=		gnome-desktop-2.8.3
+DISTNAME=		gnome-desktop-2.10.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.8/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.10/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -21,11 +21,12 @@ USE_PERL5=		yes
 USE_X11=		yes
 USE_LIBTOOL=		yes
 
-BUILDLINK_DEPENDS.gnome2-pixmaps+=	gnome2-pixmaps>=2.8.1
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 
-.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/gnome2-pixmaps/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
