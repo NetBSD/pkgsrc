@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/07/19 12:22:17 martin Exp $
+# $NetBSD: Makefile,v 1.18 2001/07/19 12:28:03 martin Exp $
 #
 
 DISTNAME=		stunnel-3.15
@@ -24,5 +24,4 @@ pre-configure:
 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
 
 .include "../../security/openssl/buildlink.mk"
-.include "../../devel/pth/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
