@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.3 2000/09/03 14:54:01 wiz Exp $
 bin/lftp
 bin/lftpget
 etc/lftp.conf
