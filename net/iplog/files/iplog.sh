@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: iplog,v 1.1.1.1 2003/04/06 11:06:04 hubertf Exp $
+# $NetBSD: iplog.sh,v 1.1 2003/07/30 15:41:54 jmmv Exp $
 #
 # PROVIDE: iplog
 # REQUIRE: SERVERS
@@ -9,9 +9,8 @@
 
 name="iplog"
 rcvar=${name}
-command="%PREFIX%/sbin/${name}"
+command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
 
 load_rc_config ${name}	
-
 run_rc_command "$1"
