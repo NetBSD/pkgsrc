@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7997 2004/11/25 19:46:36 snj Exp $
+$NetBSD: CHANGES,v 1.7998 2004/11/25 19:55:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5433,3 +5433,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gifsicle to 1.41 [snj 2004-11-25]
 	Updated Cg-compiler-1.3beta2 [minskim 2004-11-25]
 	Updated easyedit to 1.4.6 [snj 2004-11-25]
+	Updated py-pexpect to 0.999 [minskim 2004-11-25]
