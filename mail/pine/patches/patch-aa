@@ -40,15 +40,15 @@
 -pico:		main.c libpico.a
 -		$(CC) $(CFLAGS) main.c libpico.a $(LIBS) -o pico
 +libpico.so.1.3:	osdep.c osdep.h $(SOFILES)
-+ 		ld -Bshareable -x -o libpico.so.1.3 $(SOFILES)
++		ld -Bshareable -x -o libpico.so.1.3 $(SOFILES)
 + 
 +pico:		main.c libpico.so.1.3
-+ 		$(CC) $(CFLAGS) main.c -L. -lpico $(LIBS) -o pico
++		$(CC) $(CFLAGS) main.c -L. -lpico $(LIBS) -o pico
  
 -pilot:		pilot.c libpico.a
 -		$(CC) $(CFLAGS) pilot.c libpico.a $(LIBS) -o pilot
 +pilot:		pilot.c libpico.so.1.3
-+ 		$(CC) $(CFLAGS) pilot.c -L. -lpico $(LIBS) -o pilot
++		$(CC) $(CFLAGS) pilot.c -L. -lpico $(LIBS) -o pilot
 + 
 +.c.so:		; $(CC) -fPIC -DPIC -c $(CFLAGS) ${@:.so=.c} -o $@
  
@@ -60,4 +60,4 @@
 + 
  clean:
 -		rm -f *.a *.o *~ osdep.c osdep.h pico pilot
-+ 		rm -f *.a *.so.1.3 *.o *.so *~ osdep.c osdep.h pico pilot
++		rm -f *.a *.so.1.3 *.o *.so *~ osdep.c osdep.h pico pilot
