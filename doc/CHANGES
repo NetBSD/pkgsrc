@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8191 2004/11/30 21:21:32 perry Exp $
+$NetBSD: CHANGES,v 1.8192 2004/12/01 03:51:22 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5687,3 +5687,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated magicpoint to 1.10anb4 [taca 2004-11-30]
 	Updated pkg_chk to 1.52 [abs 2004-11-30]
 	Updated sunclock to 1.5 [perry 2004-11-30]
+	Added elscreen-1.3.2 [uebayasi 2004-12-01]
