@@ -1,40 +1,40 @@
-# New ports collection makefile for: pgp
+# New ports collection makefile for:	pgp2
 # Version required:     2.6.3(i)a
-# International PGP homepage is http://www.ifi.uio.no/pgp/
-#
 # Date created:         8 Jul 1995 (ache@FreeBSD.ORG)
 # Whom:                 tv@NetBSD.ORG
 #
-# $NetBSD: Makefile,v 1.2 1998/03/18 02:58:52 tv Exp $
+# $NetBSD: Makefile,v 1.3 1998/03/19 12:10:42 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
+DISTNAME=	pgp263is
+WRKSRC=		${WRKDIR}/src
+CATEGORIES=	security
+# International PGP homepage is http://www.ifi.uio.no/pgp/
+MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/pgp/2.x/src/ \
+		ftp://ftp.kiarchive.ru/pub/unix/crypto/pgp/
+
+MAINTAINER=	packages@NetBSD.ORG
+
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
-PKGNAME=        pgp-2.6.3a
+PKGNAME=	pgp-2.6.3a
 LIB_DEPENDS+=	rsaref.2.:${PORTSDIR}/security/rsaref
 RSAINC=		-I${PREFIX}/include
 RSALIBS=	-L${PREFIX}/lib -lrsaref
 RSAOBJS=	rsaglue2.o
 CFLAGS=		-DUSA
 .else
-PKGNAME=        pgp-2.6.3ia
+PKGNAME=	pgp-2.6.3ia
 RSAINC=
 RSALIBS=
 RSAOBJS=	rsaglue1.o
 CFLAGS=
 .endif
 
-CATEGORIES=	security
-DISTNAME=       pgp263is
-MASTER_SITES=   ftp://ftp.ifi.uio.no/pub/pgp/2.x/src/ \
-		ftp://ftp.kiarchive.ru/pub/unix/crypto/pgp/
-WRKSRC=         ${WRKDIR}/src
-RESTRICTED=     "Cryptographic software"
-PGPLIB=         ${PREFIX}/lib/pgp
+RESTRICTED=	"Cryptographic software"
+PGPLIB=		${PREFIX}/lib/pgp
 CFLAGS+=	-DPGP_SYSTEM_DIR=\\\"${PGPLIB}/\\\"
 IS_INTERACTIVE=	yes
-
-MAINTAINER=	packages@NetBSD.ORG
 
 MAN1=		pgp.1
 
@@ -64,12 +64,12 @@ pre-fetch:
 .endif
 
 post-extract:
-	cd ${WRKDIR} && $(EXTRACT_CMD) -xf pgp263ii.tar && rm -f pgp263ii.tar
+	cd ${WRKDIR} && ${EXTRACT_CMD} -xf pgp263ii.tar && ${RM} -f pgp263ii.tar
 
 do-build:
 	cd ${WRKSRC} && ${MAKE} all CC=${CC} LD=${CC} OBJS_EXT="${OBJS_EXT}" \
-		CFLAGS="${CFLAGS} ${RSAINC} ${ASMFLAG} -O2 -DUNIX -DIDEA32 -DMAX_NAMELEN=255" \
-		RSALIBS="${RSALIBS}" RSAOBJS="${RSAOBJS}"
+		CFLAGS="${CFLAGS} ${RSAINC} ${ASMFLAG} -O2 -DUNIX -DIDEA32 \
+		-DMAX_NAMELEN=255" RSALIBS="${RSALIBS}" RSAOBJS="${RSAOBJS}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pgp ${PREFIX}/bin
