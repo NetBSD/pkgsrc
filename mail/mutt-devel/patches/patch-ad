@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.5 2002/01/30 23:03:25 jlam Exp $
+
+--- Makefile.in.orig	Wed Jan 30 17:50:34 2002
++++ Makefile.in	Wed Jan 30 17:56:07 2002
+@@ -144,7 +144,7 @@
+ 
+ INCLUDES = -I. -I$(top_srcdir) $(IMAP_INCLUDES) -Iintl
+ 
+-CPPFLAGS = @CPPFLAGS@ -I$(includedir)
++CPPFLAGS = @CPPFLAGS@
+ 
+ non_us_sources = pgp.c pgpinvoke.c pgpkey.c pgplib.c sha1.c 	pgpmicalg.c gnupgparse.c sha1.h 	doc/language.txt doc/language50.txt OPS.PGP doc/PGP-Notes.txt 	OPS.MIX remailer.c remailer.h pgpewrap.c		contrib/pgp2.rc contrib/pgp5.rc contrib/gpg.rc 	mutt_ssl.c mutt_ssl.h README.SSL mutt_ssl_nss.c 	pgppacket.c pgppacket.h
+ 
