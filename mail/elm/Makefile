@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/10/27 15:33:23 bouyer Exp $
+# $NetBSD: Makefile,v 1.24 2002/10/27 16:55:05 bouyer Exp $
 
 DISTNAME=		elm2.5.5
 PKGNAME=		elm-2.5.5
@@ -8,8 +8,6 @@ MASTER_SITES=		ftp://ftp.virginia.edu/pub/elm/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.instinct.org/elm/
 COMMENT=		ELM Mail User Agent (without ME extensions)
-
-USE_BUILDLINK2=         YES
 
 CONFLICTS+=		mm-[0-9]* metamail-[0-9]*
 CONFLICTS+=		elm-me-[0-9]*
