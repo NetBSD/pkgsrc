@@ -1,0 +1,17 @@
+$NetBSD: patch-av,v 1.1.2.2 2004/10/18 17:03:48 agc Exp $
+
+--- libtiff/tif_thunder.c.orig	2003-07-11 08:25:25.000000000 +0200
++++ libtiff/tif_thunder.c	2004-10-18 16:25:33.000000000 +0200
+@@ -91,8 +91,10 @@
+ 			} else
+ 				lastpixel |= lastpixel << 4;
+ 			npixels += n;
+-			for (; n > 0; n -= 2)
+-				*op++ = (tidataval_t) lastpixel;
++			if (npixels < maxpixels) {
++				for (; n > 0; n -= 2)
++					*op++ = (tidataval_t) lastpixel;
++			}
+ 			if (n == -1)
+ 				*--op &= 0xf0;
+ 			lastpixel &= 0xf;
