@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2000/11/09 22:28:58 mycroft Exp $
+
+--- aclocal.m4.orig	Sat May 27 16:34:36 2000
++++ aclocal.m4	Thu Nov  9 22:21:28 2000
+@@ -1164,7 +1164,7 @@
+ 		  [CATOBJEXT=.gmo
+ 		   DATADIRNAME=share],
+ 		  [CATOBJEXT=.mo
+-		   DATADIRNAME=lib])
++		   DATADIRNAME=${LOCALEBASE}])
+ 		INSTOBJEXT=.mo
+ 	      fi
+ 	    fi

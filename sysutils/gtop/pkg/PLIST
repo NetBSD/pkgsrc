@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/05/31 22:24:57 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/11/09 22:28:22 mycroft Exp $
 bin/gtop
 share/gnome/apps/System/gtop.desktop
 share/gtoprc
@@ -21,6 +21,28 @@ share/gnome/help/gtop/C/memory.html
 share/gnome/help/gtop/C/more-info.html
 share/gnome/help/gtop/C/preferences.html
 share/gnome/help/gtop/C/processes.html
+${LOCALEBASE}/locale/ca/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/cs/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/da/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/de/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/el/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/es/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/fr/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/ga/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/gl/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/hu/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/it/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/ja/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/ko/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/lt/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/no/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/pt/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/ru/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/sv/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/pl/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/uk/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/zh_CN.GB2312/LC_MESSAGES/gtop.mo
+${LOCALEBASE}/locale/zh_TW.Big5/LC_MESSAGES/gtop.mo
 share/pixmaps/gnome-gtop.png
 @dirrm share/gnome/help/gtop/C/figs
 @dirrm share/gnome/help/gtop/C
