@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9125 2005/02/13 13:12:14 grant Exp $
+$NetBSD: CHANGES,v 1.9126 2005/02/13 13:55:53 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -860,3 +860,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkglint to 4.03 [rillig 2005-02-12]
 	Updated clamav to 0.82 [grant 2005-02-12]
 	Added distmp3-0.1.9 [grant 2005-02-13]
+	Updated bittorrent to 3.4.2nb2 [recht 2005-02-13]
