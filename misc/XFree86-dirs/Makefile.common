@@ -1,0 +1,42 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/03/28 21:55:49 xtraeme Exp $
+#
+
+XFREE86_DIRS_VERSION=	1.0
+
+WRKSRC=		${WRKDIR}
+USE_LANGUAGES=	# empty
+USE_PKGINSTALL=	yes
+NO_EXTRACT=	# defined
+NO_CHECKSUM=	# defined
+NO_BUILDLINK=	# defined
+NO_CONFIGURE=	# defined
+NO_BUILD=	# defined
+NO_XFREE86_TARGETS=	# defined
+
+XFREE86_DIRS=	bin
+XFREE86_DIRS+=	include
+XFREE86_DIRS+=	include/X11
+XFREE86_DIRS+=	include/X11/bitmaps
+XFREE86_DIRS+=	lib
+XFREE86_DIRS+=	lib/X11
+XFREE86_DIRS+=	lib/X11/app-defaults
+XFREE86_DIRS+=	lib/X11/config
+XFREE86_DIRS+=	lib/X11/doc
+XFREE86_DIRS+=	lib/X11/etc
+XFREE86_DIRS+=	lib/X11/fonts
+XFREE86_DIRS+=	lib/X11/fs
+XFREE86_DIRS+=	${MAN_DIR}
+XFREE86_DIRS+=	${LIBMAN_DIR}
+XFREE86_DIRS+=	${KERNMAN_DIR}
+XFREE86_DIRS+=	${FILEMAN_DIR}
+XFREE86_DIRS+=	${MISCMAN_DIR}
+
+.include "../../mk/bsd.prefs.mk"
+.include "../../meta-pkgs/XFree86/Makefile.common"
+
+.if ${XFREE86_DIRS_REGISTER} == "yes"
+_SORTED!=	${ECHO} ${XFREE86_DIRS} | ${TR} -s ' \t' '\n' | ${SORT}
+MAKE_DIRS+=	${_SORTED:S/^/${X11ROOT}\//}
+.endif
+
+do-install:	# nothing
