@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2002/04/17 04:40:43 fredb Exp $
+
+--- fdesign/Imakefile.orig	Tue Apr  2 11:33:21 2002
++++ fdesign/Imakefile
+@@ -59,7 +61,7 @@
+ 
+ FORMSLIBDIR     = $(TOP)/lib
+ FORMSINCDIR     = $(FORMSLIBDIR)       
+-FORMSLIB        = -L$(FORMSLIBDIR) -lforms
++FORMSLIB        = -L$(FORMSLIBDIR) -lforms -ljpeg -lXpm $(LDFLAGS)
+ DEPFORMSLIB     = $(FORMSLIBDIR)/libforms.a
+ 
+ #if !UseSystemXpm
+@@ -80,7 +82,7 @@
+ 		  -Ispec \
+ 		  -Ixpm \
+ 		  -I. \
+-		  -I/usr/local/include \
++		  -I${BUILDLINK_DIR}/include \
+ 		  /* Don't remove this line */
+ 
+ EXTRA_LIBRARIES	= \

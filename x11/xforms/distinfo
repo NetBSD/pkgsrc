@@ -1,26 +1,9 @@
-$NetBSD: distinfo,v 1.5 2001/08/09 13:45:43 wiz Exp $
 
-SHA1 (xforms-alpha/bxform-088.tgz) = a82b5e2d3c9841323e54003c3d2fbf5e506fbd42
-Size (xforms-alpha/bxform-088.tgz) = 1197562 bytes
-SHA1 (xforms-arm32/bxform-088.tgz) = f07e8e0a744278afc2fc86c51b442fab7c36197c
-Size (xforms-arm32/bxform-088.tgz) = 1067594 bytes
-SHA1 (xforms-i386/bxform-088-ELF.tgz) = 3097a16a87d72fda0dca10f3aa9d52d328b83ab5
-Size (xforms-i386/bxform-088-ELF.tgz) = 851405 bytes
-SHA1 (xforms-i386/bxform-088.tgz) = 943f8052846d375ca1eb30d221a5b0777fd19945
-Size (xforms-i386/bxform-088.tgz) = 887615 bytes
-SHA1 (xforms-m68k/bxform-088.tgz) = c1299ff67eaa245d1fe789b8a5b2b7c38506a0e7
-Size (xforms-m68k/bxform-088.tgz) = 842740 bytes
-SHA1 (xforms-mipsel/bxform-088.tgz) = ac279319dd924263b613ac3a3e4462d3c5866b34
-Size (xforms-mipsel/bxform-088.tgz) = 1097766 bytes
-SHA1 (xforms-ns32k/bxform-088.tgz) = 9730944f4534c384e6f994164ccdc9d122dc9d4f
-Size (xforms-ns32k/bxform-088.tgz) = 818317 bytes
-SHA1 (xforms-powerpc/bxform-088.tgz) = 7076c4933054da54affcccd67e995626f3dfbc99
-Size (xforms-powerpc/bxform-088.tgz) = 1014785 bytes
-SHA1 (xforms-sparc/bxform-088-ELF.tgz) = 081be01417707d739cb71f3fa473fdc7e32eced5
-Size (xforms-sparc/bxform-088-ELF.tgz) = 673651 bytes
-SHA1 (xforms-sparc/bxform-088.tgz) = 7c364dad70b65b1b613f54f3b693c958d9c4b27a
-Size (xforms-sparc/bxform-088.tgz) = 1017705 bytes
-SHA1 (xforms-SunOS-i386/bxform-088.tgz) = 724683ad7e9eb2cf99da9dfe558daca910bb8e32
-Size (xforms-SunOS-i386/bxform-088.tgz) = 899727 bytes
-SHA1 (xforms-SunOS-sparc/bxform-088.tgz) = 9b13e36c4440f4d3a84dc232489f06d0b8a8e449
-Size (xforms-SunOS-sparc/bxform-088.tgz) = 1123327 bytes
+
+SHA1 (xforms-0.9999.tgz) = d88d24a37ab4fe37fbcb8b85f0c6a727638db217
+Size (xforms-0.9999.tgz) = 1040128 bytes
+SHA1 (patch-aa) = 70eb79d4e724c8694aa6a5b1b5324cfc45d3c3da
+SHA1 (patch-ab) = 9e0ed487588d7df9293351b37c3a6065df3537a7
+SHA1 (patch-ac) = 618542e755d3ea6a9a7616422fe79cfec7527a96
+SHA1 (patch-ad) = 1cbf52d63b2538008e48e63fab1e090c7c03982d
+SHA1 (patch-ae) = ccf27ff1e0c2f95a26f4b4365825ae7d511081f6

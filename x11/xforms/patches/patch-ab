@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.3 2002/04/17 04:40:41 fredb Exp $
+
+--- demos/Imakefile.orig	Mon Apr  1 10:56:26 2002
++++ demos/Imakefile
+@@ -106,7 +106,7 @@
+ DEPOBJS		= $(DEPSRCS:.c=.o)
+ PROGRAMS	= $(DEMOSRCS:.c=)
+ 
+-JPEGLIBLOC	= /usr/local/lib
++JPEGLIBLOC	= ${BUILDLINK_DIR}/lib
+ 
+ #if Solaris64Bit
+ LDPRELIB	= -L/usr/openwin/lib/sparcv9
+@@ -120,7 +120,7 @@
+ 
+ FORMSLIBDIR     = $(TOP)/lib
+ FORMSINCDIR     = $(FORMSLIBDIR)       
+-FORMSLIB        = -L$(FORMSLIBDIR) -lforms
++FORMSLIB        = -L$(FORMSLIBDIR) -lforms -ljpeg -lXpm $(LDFLAGS)
+ DEPFORMSLIB     = $(FORMSLIBDIR)/libforms.a
+ 
+ #if !UseSystemXpm
+@@ -138,7 +138,7 @@
+ 		  -I$(FORMSINCDIR) \
+ 		  -Ifd \
+ 		  -I. \
+-		  -I/usr/local/include \
++		  -I${BUILDLINK_DIR}/include \
+ 		  /* Don't remove this line */
+ 
+ EXTRA_LIBRARIES	= \
