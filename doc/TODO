@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2178 2004/09/28 16:01:22 wiz Exp $
+$NetBSD: TODO,v 1.2179 2004/09/28 22:29:32 grant Exp $
 
 Suggested new packages
 ======================
@@ -156,6 +156,10 @@ Suggested new packages
 	Exult
 	http://exult.sourceforge.net/
 	Open source game engine for Ultima 7
+
+	pgpool
+	http://www2b.biglobe.ne.jp/~caco/pgpool/index-e.html
+	PostgreSQL connection pooling layer
 
 	Sunbird
 	http://www.mozilla.org/projects/calendar/sunbird.html
