@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7530 2004/10/23 07:13:37 jdolecek Exp $
+$NetBSD: CHANGES,v 1.7531 2004/10/23 07:49:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4823,3 +4823,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated subversion to 1.1.1 [epg 2004-10-23]
 	Added gnotime-2.2.0 [jdolecek 2004-10-23]
 	Added ptimetracker-1.7.2 [jdolecek 2004-10-23]
+	Updated bash to 3.0nb1 [minskim 2004-10-23]
