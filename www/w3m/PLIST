@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/09/15 13:09:36 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/11/28 05:24:16 itojun Exp $
 bin/w3m
 man/man1/w3m.1
 man/ja_JP.EUC/man1/w3m.1
@@ -16,6 +16,9 @@ share/doc/w3m/doc/README.dict
 share/doc/w3m/doc/README.func
 share/doc/w3m/doc/README.img
 share/doc/w3m/doc/README.m17n
+share/doc/w3m/doc/README.mouse
+share/doc/w3m/doc/README.pre_form
+share/doc/w3m/doc/README.tab
 share/doc/w3m/doc/STORY.html
 share/doc/w3m/doc/keymap.default
 share/doc/w3m/doc/keymap.lynx
@@ -37,6 +40,9 @@ share/doc/w3m/doc-jp/README.m17n
 share/doc/w3m/doc-jp/README.mailcap
 share/doc/w3m/doc-jp/README.menu
 share/doc/w3m/doc-jp/README.migemo
+share/doc/w3m/doc-jp/README.mouse
+share/doc/w3m/doc-jp/README.pre_form
+share/doc/w3m/doc-jp/README.tab
 share/doc/w3m/doc-jp/STORY.html
 share/doc/w3m/doc-jp/keymap.default
 share/doc/w3m/doc-jp/keymap.lynx
