@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/12 10:39:34 cjep Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/11 07:33:28 snj Exp $
 #
 
 DISTNAME=	Text-Iconv-1.2
@@ -12,9 +12,9 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.linguistik.uni-erlangen.de/~mxp/
 COMMENT=	Perl interface to iconv() codeset conversion function
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Text/Iconv/.packlist
 
-.include "../../converters/libiconv/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
