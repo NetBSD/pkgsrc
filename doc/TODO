@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22 2002/12/02 21:37:43 jmmv Exp $
+$NetBSD: TODO,v 1.23 2002/12/02 22:25:41 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -99,6 +99,7 @@ Suggested package updates
 	o evolution-1.1.1
 	o exim-{,html-}4.10 [pkg/19231]
 	o fags-0.2.0
+	o fetchmail-6.1.3 [pkg/19242]
 	o fileroller-2.0
 	o fltk-1.1.1
 	o fluxbox-0.1.13 [pkg/19224]
