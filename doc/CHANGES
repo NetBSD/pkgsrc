@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.302 2002/10/18 17:07:11 jlam Exp $
+$NetBSD: CHANGES,v 1.303 2002/10/18 21:57:48 abs Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3314,3 +3314,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated tuxpaint-stamps to 2002.10.16 [wiz 2002-10-18]
 	Updated w3 to 4.0b47 [minoura 2002-10-18]
 	Added pyca-0.6.5.20020902 [jlam 2002-10-18]
+	Added p5-Number-Latin-1.01 [abs 2002-10-18]

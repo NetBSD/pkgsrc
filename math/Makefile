@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2002/10/16 15:41:14 jschauma Exp $
+# $NetBSD: Makefile,v 1.85 2002/10/18 21:57:47 abs Exp $
 #
 
 COMMENT=	Mathematics
@@ -59,6 +59,7 @@ SUBDIR+=	p5-Math-BigInteger
 SUBDIR+=	p5-Math-Interpolate
 SUBDIR+=	p5-Math-MatrixReal
 SUBDIR+=	p5-Math-Pari
+SUBDIR+=	p5-Number-Latin
 SUBDIR+=	p5-Spreadsheet-WriteExcel
 SUBDIR+=	pari
 SUBDIR+=	php4-bcmath
