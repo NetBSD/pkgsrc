@@ -1,9 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/07/08 01:48:38 garbled Exp $
---- Makefile.in.orig	Sat Jul  7 18:53:29 2001
-+++ Makefile.in	Sat Jul  7 18:53:40 2001
-@@ -90,7 +90,7 @@
+$NetBSD: patch-aa,v 1.2 2002/02/28 14:52:19 martti Exp $
+
+--- Makefile.in.orig	Tue Jan 29 11:45:19 2002
++++ Makefile.in	Thu Feb 28 15:29:16 2002
+@@ -98,7 +98,7 @@
  
- SUBDIRS = po src
+ SUBDIRS = libexif po src intl art pixmaps packaging
  
 -gtkamdocdir = $(prefix)/doc/gtkam
 +gtkamdocdir = $(prefix)/share/doc/gtkam

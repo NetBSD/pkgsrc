@@ -1,26 +1,48 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:51:25 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/28 14:52:19 martti Exp $
+bin/gexif
 bin/gtkam
-share/gtkam/pixmaps/camera.xpm
-share/gtkam/pixmaps/close_image.xpm
-share/gtkam/pixmaps/configure.xpm
-share/gtkam/pixmaps/delete_images.xpm
-share/gtkam/pixmaps/exit.xpm
-share/gtkam/pixmaps/fliph.xpm
-share/gtkam/pixmaps/flipv.xpm
-share/gtkam/pixmaps/folder.xpm
-share/gtkam/pixmaps/get_index.xpm
-share/gtkam/pixmaps/get_index_empty.xpm
-share/gtkam/pixmaps/get_selected_images.xpm
-share/gtkam/pixmaps/no_thumbnail.xpm
-share/gtkam/pixmaps/open_image.xpm
-share/gtkam/pixmaps/print_image.xpm
-share/gtkam/pixmaps/refresh.xpm
-share/gtkam/pixmaps/resize.xpm
-share/gtkam/pixmaps/rotc.xpm
-share/gtkam/pixmaps/save_current_image.xpm
+include/libexif-gtk/gtk-exif-browser.h
+include/libexif-gtk/gtk-exif-content-list.h
+include/libexif-gtk/gtk-exif-entry-ascii.h
+include/libexif-gtk/gtk-exif-entry-copyright.h
+include/libexif-gtk/gtk-exif-entry-date.h
+include/libexif-gtk/gtk-exif-entry-exposure.h
+include/libexif-gtk/gtk-exif-entry-flash.h
+include/libexif-gtk/gtk-exif-entry-generic.h
+include/libexif-gtk/gtk-exif-entry-number.h
+include/libexif-gtk/gtk-exif-entry-option.h
+include/libexif-gtk/gtk-exif-entry-rational.h
+include/libexif-gtk/gtk-exif-entry-resolution.h
+include/libexif-gtk/gtk-exif-entry-version.h
+include/libexif-gtk/gtk-exif-entry.h
+include/libexif/exif-content.h
+include/libexif/exif-data.h
+include/libexif/exif-entry.h
+include/libexif/exif-format.h
+include/libexif/exif-result.h
+include/libexif/exif-tag.h
+include/libexif/exif-utils.h
+lib/pkgconfig/libexif-gtk.pc
+lib/pkgconfig/libexif.pc
 share/doc/gtkam/AUTHORS
 share/doc/gtkam/COPYING
 share/doc/gtkam/MANUAL
+share/gtkam/pixmaps/camera.xpm
+share/gtkam/pixmaps/configure.xpm
+share/gtkam/pixmaps/delete_images.xpm
+share/gtkam/pixmaps/exit.xpm
+share/gtkam/pixmaps/folder.xpm
+share/gtkam/pixmaps/save_current_image.xpm
+share/images/gtkam/gtkam-audio.png
+share/images/gtkam/gtkam-camera.png
+share/images/gtkam/gtkam-folder-camera.png
+share/images/gtkam/gtkam-folder.png
+share/images/gtkam/gtkam-lock.png
+share/images/gtkam/gtkam-new.png
+@dirrm include/libexif-gtk
+@dirrm include/libexif
+@dirrm share/doc/gtkam
 @dirrm share/gtkam/pixmaps
 @dirrm share/gtkam
-@dirrm share/doc/gtkam
+@dirrm share/images/gtkam
+@dirrm share/images
