@@ -1,0 +1,3 @@
+libspectrum is a library designed to make the input and output of some
+ZX Spectrum emulator files slightly easier.  It is intended to be usable
+on Unix variants, Win32 and MacOSX.
