@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.19 2005/02/23 16:33:10 agc Exp $
+$NetBSD: distinfo,v 1.20 2005/02/24 16:05:25 wiz Exp $
 
-SHA1 (sqlite-2.8.15.tar.gz) = 53c8a6dd2f87c500c6944987988053acacaee05b
-RMD160 (sqlite-2.8.15.tar.gz) = bbcc23361b27173a246f983def5f3b4cceef2b0e
-Size (sqlite-2.8.15.tar.gz) = 963232 bytes
-SHA1 (patch-aa) = 8f8f3608b10ed93b52c2dba6b70c93ba4aa6c485
-SHA1 (patch-ab) = e1dda14c980b8c014292ce46989bf210aaa2e10f
+SHA1 (sqlite-2.8.16.tar.gz) = 7bef329f78628de252c289bda7cea6f86adcc42e
+RMD160 (sqlite-2.8.16.tar.gz) = df60e84f16ccd8b6b8e86dabfe6bf40f6a3dc136
+Size (sqlite-2.8.16.tar.gz) = 981834 bytes
+SHA1 (patch-aa) = 8ba9f2a37a920af97e8590ab2a3ecc54ca7f77d5
+SHA1 (patch-ab) = f0c06296050aab865bdeb4b82edeeec6264bde43
