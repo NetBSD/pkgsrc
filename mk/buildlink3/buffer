@@ -1,12 +1,10 @@
-# $NetBSD: buffer,v 1.4 2004/01/27 08:23:45 jlam Exp $
+# $NetBSD: buffer,v 1.5 2004/01/29 07:14:30 jlam Exp $
 #
-# Fill the buffer if it's empty, and shift the arguments.  The next
-# argument checked by the cache and logic files is taken from the
-# first non-empty buffer.  We avoid using "eval" so that we can skip
-# having to specially quote the argument using "sed".
+# Push arguments onto the argument stack and shift the arguments.  The
+# next argument checked by the cache and logic files is take from the
+# the top of the stack.
 #
-case ${buf1}${buf2}${buf3}${buf4}${buf5} in
-"")
+if $test -z "$depth"; then
 	arg="$1"; shift
 	#
 	# Marshall any group of consecutive arguments into a single
@@ -41,16 +39,8 @@ case ${buf1}${buf2}${buf3}${buf4}${buf5} in
 		while $test $# -gt 0; do
 			case "$dirlist" in
 			"$1"|"$1 "*) ;;
-			*" $1 "*|*" $1") ;;
-			*)	dirlist="$dirlist $1"
-				if   $test -z "$buf1"; then buf1="$R$1"
-				elif $test -z "$buf2"; then buf2="$R$1"
-				elif $test -z "$buf3"; then buf3="$R$1"
-				elif $test -z "$buf4"; then buf4="$R$1"
-				elif $test -z "$buf5"; then buf5="$R$1"
-				else exit 2
-				fi
-				;;
+			*" $1 "*|*" $1")	 ;;
+			*) dirlist="$1 $dirlist" ;;
 			esac
 			shift
 		done
@@ -58,25 +48,19 @@ case ${buf1}${buf2}${buf3}${buf4}${buf5} in
 		if $test -n "$allargs"; then
 			set -- $allargs
 		fi
+		for dir in $dirlist; do
+			depth=${depth}0
+			eval stack${depth}="\$R\$dir"
+		done
 		;;
 	*)
-		if   $test -z "$buf1"; then buf1="$arg"
-		elif $test -z "$buf2"; then buf2="$arg"
-		elif $test -z "$buf3"; then buf3="$arg"
-		elif $test -z "$buf4"; then buf4="$arg"
-		elif $test -z "$buf5"; then buf5="$arg"
-		else exit 2
-		fi
+		depth=${depth}0
+		eval stack${depth}="\$arg"
 		;;
 	esac
-	;;
-esac
-#
-# Re-fetch $arg from the first non-empty buffer.
-#
-if   $test -n "$buf1"; then arg="$buf1"; buf1=
-elif $test -n "$buf2"; then arg="$buf2"; buf2=
-elif $test -n "$buf3"; then arg="$buf3"; buf3=
-elif $test -n "$buf4"; then arg="$buf4"; buf4=
-elif $test -n "$buf5"; then arg="$buf5"; buf5=
 fi
+#
+# Re-fetch $arg from the top of the stack.
+#
+eval arg="\$stack${depth}"
+depth=${depth%0}
