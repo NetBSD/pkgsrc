@@ -1,0 +1,4 @@
+$NetBSD: md5,v 1.1.1.1 1999/12/21 13:20:33 pooka Exp $
+
+MD5 (vim-5.5-src.tar.gz) = c3014937c2b9f4ea471a8274715e846c
+MD5 (vim-5.5-rt.tar.gz) = 26d122c71bb413b59b019e730cd563a6

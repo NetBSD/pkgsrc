@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/21 13:20:33 pooka Exp $
+
+--- ctags/Makefile.in.orig	Thu Sep 16 08:02:20 1999
++++ ctags/Makefile.in	Sat Nov 20 11:42:47 1999
+@@ -79,14 +79,14 @@
+ #
+ manext	= 1
+ man1dir	= $(mandir)/man1
+-CMAN	= $(CTAGS_PROG).$(manext)
+-EMAN	= $(ETAGS_PROG).$(manext)
++CMAN	= vim-$(CTAGS_PROG).$(manext)
++EMAN	= vim-$(ETAGS_PROG).$(manext)
+ 
+ #
+ # destinations for installed files
+ #
+-CTAGS_EXEC	= $(CTAGS_PROG)$(SUFFIX)
+-ETAGS_EXEC	= $(ETAGS_PROG)$(SUFFIX)
++CTAGS_EXEC	= vim-$(CTAGS_PROG)
++ETAGS_EXEC	= vim-$(ETAGS_PROG)
+ DEST_CTAGS	= $(bindir)/$(CTAGS_EXEC)
+ DEST_ETAGS	= $(bindir)/$(ETAGS_EXEC)
+ DEST_CMAN	= $(man1dir)/$(CMAN)
