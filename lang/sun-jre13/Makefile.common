@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2003/02/05 03:37:44 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2003/03/17 21:25:38 jschauma Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 CATEGORIES=	lang
@@ -68,7 +68,7 @@ do-install:
 .else
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}
-	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}
+	cd ${WRKSRC} && ${PAX} -rwp ma . ${PREFIX}
 .endif
 
 .if ${OPSYS} != "NetBSD"
