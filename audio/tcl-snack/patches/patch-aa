@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2002/08/26 02:26:26 gson Exp $
+$NetBSD: patch-aa,v 1.3 2004/11/27 10:48:51 gson Exp $
 
---- Makefile.in.orig	Wed Jul 17 04:03:15 2002
+--- Makefile.in.orig	2004-02-10 03:10:42.000000000 -0800
 +++ Makefile.in
-@@ -1,10 +1,10 @@
+@@ -1,10 +1,13 @@
++prefix=@prefix@
++exec_prefix=@exec_prefix@
++
  # The path to the tcl.h header file
  
 -TCL_INCPATH = @TCL_SRC_DIR@/generic
@@ -15,11 +18,11 @@ $NetBSD: patch-aa,v 1.2 2002/08/26 02:26:26 gson Exp $
  
  # The path to the X11 include files
  
-@@ -28,6 +28,7 @@
+@@ -28,6 +31,7 @@
  TCL_VERSION = @TCLVER@
  
  CC        = @CC@
 +TCL_CC	  = ${CC}
  
- INCLUDES  = ${XINCLUDES} -I${TCL_INCPATH} -I${TK_INCPATH} @AINC@ @NISTINC@
+ INCLUDES  = ${XINCLUDES} @TCL_INCLUDE_SPEC@ -I${TCL_INCPATH} -I${TK_INCPATH} @AINC@ @NISTINC@
  
