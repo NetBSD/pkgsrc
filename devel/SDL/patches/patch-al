@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.5 2003/06/04 17:53:13 abs Exp $
+$NetBSD: patch-al,v 1.6 2004/07/26 20:42:28 dillo Exp $
 
---- src/audio/openbsd/SDL_openbsdaudio.c.orig	Wed Mar  6 11:23:02 2002
-+++ src/audio/openbsd/SDL_openbsdaudio.c	Wed Jun  4 17:09:16 2003
+--- src/audio/openbsd/SDL_openbsdaudio.c.orig	2004-02-18 18:21:59.000000000 +0100
++++ src/audio/openbsd/SDL_openbsdaudio.c
 @@ -37,6 +37,7 @@
  #include <sys/stat.h>
  #include <sys/types.h>
@@ -108,3 +108,13 @@ $NetBSD: patch-al,v 1.5 2003/06/04 17:53:13 abs Exp $
  ",  
      info.monitor_gain,
      info.blocksize,
+@@ -388,6 +399,9 @@
+     	spec->channels = 1;
+     AUDIO_INITINFO(&info);
+     info.play.sample_rate = spec->freq;
++    info.blocksize = spec->size;
++    info.hiwat = 5;
++    info.lowat = 3;
+     (void)ioctl(audio_fd, AUDIO_SETINFO, &info);
+     (void)ioctl(audio_fd, AUDIO_GETINFO, &info);
+     spec->freq  = info.play.sample_rate;
