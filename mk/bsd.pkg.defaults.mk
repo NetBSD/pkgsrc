@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.77 2002/07/30 18:42:14 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.78 2002/08/07 12:46:49 veego Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -925,10 +925,17 @@ MAJORDOMO_USER?= majordom
 # Possible: any
 # Default: majordom
 
-MPLAYER_FONT?= iso-8859-1/arial-18
-# Used by the mplayer-share package to display subtitles and the timer
+MPLAYER_FONT?= iso-8859-1/arial-14
+# Used by the mplayer-share package to display subtitles and the timer.
 # Possible: any font directory which contains the mplayer font.desc
-# Default: iso-8859-1/arial-18
+# Default: iso-8859-1/arial-14
+
+MPLAYER_USE_REALMEDIA?= NO
+# Used by mplayer to enable realmedia support by using the realplayer
+# libraries. Note that this only works on i386 and also adds a
+# dependency for the linux emulation to this package.
+# Possible: YES, NO
+# Default: NO
 
 #MOTIF_TYPE?=	openmotif
 # Used by motif.buildlink.mk to choose which Motif-2.0-compatible
