@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7095 2004/09/04 16:11:13 jmmv Exp $
+$NetBSD: CHANGES,v 1.7096 2004/09/04 16:55:06 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4192,3 +4192,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated loudmouth to 0.17 [jmmv 2004-09-04]
 	Updated gossip to 0.7.8 [jmmv 2004-09-04]
 	Updated gconf-editor to 2.6.2nb1 [jmmv 2004-09-04]
+	Updated dasher to 3.2.11 [jmmv 2004-09-04]
