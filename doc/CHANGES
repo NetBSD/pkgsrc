@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5565 2004/04/13 13:51:34 adam Exp $
+$NetBSD: CHANGES,v 1.5566 2004/04/13 14:08:25 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1935,7 +1935,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated smokeping to 1.28 [kim 2004-04-12]
 	Updated ogmtools to 1.3 [salo 2004-04-12]
 	Added cvs2svn-0.0.0.916 [seb 2004-04-12]
-	Updated flwm to 1.0.0nb1 [xtraeme 2004-04-12]
-	Updated fltk to 1.1.5rc1 [xtraeme 2004-04-12]
-	Added xextensions-1.0.1 [xtraeme 2004-04-12]
+	Updated flwm to 1.0.0nb1 [xtraeme 2004-04-13]
+	Updated fltk to 1.1.5rc1 [xtraeme 2004-04-13]
+	Added xextensions-1.0.1 [xtraeme 2004-04-13]
 	Updated ngrep to 1.42 [adam 2004-04-13]
+	Added uptimec-0.2p1 [xtraeme 2004-04-13]
