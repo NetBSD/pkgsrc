@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:10:34 agc Exp $
+
+MD5 (tclticker-1.1.tar.gz) = f5d964a30de359d8bc02d994e5a80aef
+SHA1 (patch-aa) = a22d202cf4b1121f5fc6714f8582e322d769ae76
+SHA1 (patch-ab) = 43ea1075437ee63b3672fc31d752e74a1e194997

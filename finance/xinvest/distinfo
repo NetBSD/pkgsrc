@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:10:36 agc Exp $
+
+MD5 (xinvest-2.6.tar.gz) = 41b3dd9d62a2ed933209eac975d60f7d
+SHA1 (patch-aa) = c3a26cb5779886112af31661934698cd76979e79
+SHA1 (patch-ab) = 7a1709d68a91e2983c73cd565b24467244e6c4ab
