@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2004/12/10 23:32:34 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2005/03/17 11:01:44 markd Exp $
 #
 
 DISTNAME=	arpwatch-2.1a11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/
 
@@ -14,6 +14,7 @@ GNU_CONFIGURE=	yes
 
 LIBS+=		${BUILDLINK_LDADD.libpcap}
 
+MAKE_ENV+=	VARBASE=${VARBASE}
 PLIST_SUBST+=	VARBASE=${VARBASE}
 
 SUBST_CLASSES+=		paths
