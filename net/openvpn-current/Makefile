@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/03 19:46:51 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/03 19:47:49 jlam Exp $
 #
 
 DISTNAME=	openvpn-2.0_beta15
@@ -25,6 +25,10 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 LIBS+=		-ldes
 
+.include "../../archivers/liblzo/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/openvpn
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/openvpn/config
@@ -37,7 +41,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/sample-keys/* \
 		${PREFIX}/share/examples/openvpn/keys
 
-.include "../../archivers/liblzo/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
