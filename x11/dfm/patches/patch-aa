@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2001/10/21 10:50:00 wiz Exp $
+
+--- configure.orig	Tue May  1 22:58:11 2001
++++ configure
+@@ -2064,8 +2064,8 @@
+ fi
+ 
+ 
+-CPPFLAGS="$CPPFLAGS $X_CFLAGS -I/usr/local/include"
+-LIBS="$LIBS $X_LIBS -L/usr/local/lib"
++CPPFLAGS="$CPPFLAGS $X_CFLAGS"
++LIBS="$LIBS $X_LIBS"
+ 
+ ALL_LINGUAS="de da ru"
+ # Extract the first word of "ranlib", so it can be a program name with args.
