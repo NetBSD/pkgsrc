@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2001/02/08 19:05:01 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2001/05/15 17:43:21 jlam Exp $
 
---- Makedefs.in.orig	Fri Feb  2 11:37:43 2001
+--- Makedefs.in.orig	Mon Apr 30 13:53:01 2001
 +++ Makedefs.in
 @@ -48,11 +48,11 @@
  # Installation programs...
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.8 2001/02/08 19:05:01 jlam Exp $
 -INSTALL_SCRIPT	=	$(CP)
 +INSTALL_BIN	=	$(LIBTOOL) $(BSD_INSTALL_PROGRAM)
 +INSTALL_DATA	=	$(BSD_INSTALL_DATA)
-+INSTALL_LIB	=	$(LIBTOOL) $(BSD_INSTALL_PROGRAM)
++INSTALL_LIB	=	$(LIBTOOL) $(BSD_INSTALL_DATA)
 +INSTALL_MAN	=	$(BSD_INSTALL_MAN)
 +INSTALL_SCRIPT	=	$(BSD_INSTALL_SCRIPT)
  INSTALL_SYSV	=	@INSTALL_SYSV@
