@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/10/18 12:45:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/10/28 09:03:48 wiz Exp $
 share/tuxpaint/stamps/cartoon/tux/tux-drat.png
 share/tuxpaint/stamps/cartoon/tux/tux-kiss1.png
 share/tuxpaint/stamps/cartoon/tux/tux-kiss2.png
@@ -169,6 +169,8 @@ share/tuxpaint/stamps/misc/symbols/music/note_100.txt
 share/tuxpaint/stamps/misc/symbols/music/rest_025.dat
 share/tuxpaint/stamps/misc/symbols/music/rest_025.png
 share/tuxpaint/stamps/misc/symbols/music/rest_025.txt
+share/tuxpaint/stamps/misc/symbols/shapes/hand.dat
+share/tuxpaint/stamps/misc/symbols/shapes/hand.png
 share/tuxpaint/stamps/misc/symbols/shapes/heart.png
 share/tuxpaint/stamps/misc/symbols/shapes/pawprint.dat
 share/tuxpaint/stamps/misc/symbols/shapes/pawprint.png
@@ -208,8 +210,14 @@ share/tuxpaint/stamps/photo/food/fruit/raspberry.png
 share/tuxpaint/stamps/photo/food/fruit/raspberry.txt
 share/tuxpaint/stamps/photo/food/fruit/strawberry.png
 share/tuxpaint/stamps/photo/food/fruit/strawberry.txt
-share/tuxpaint/stamps/photo/food/fruit/walnut.png
-share/tuxpaint/stamps/photo/food/fruit/walnut.txt
+share/tuxpaint/stamps/photo/food/nuts/almond.png
+share/tuxpaint/stamps/photo/food/nuts/almond.txt
+share/tuxpaint/stamps/photo/food/nuts/pecan.png
+share/tuxpaint/stamps/photo/food/nuts/pecan.txt
+share/tuxpaint/stamps/photo/food/nuts/walnut.png
+share/tuxpaint/stamps/photo/food/nuts/walnut.txt
+share/tuxpaint/stamps/photo/food/nuts/walnut_shelled.png
+share/tuxpaint/stamps/photo/food/nuts/walnut_shelled.txt
 share/tuxpaint/stamps/photo/food/utensils/nutcracker.png
 share/tuxpaint/stamps/photo/food/utensils/nutcracker.txt
 share/tuxpaint/stamps/photo/food/utensils/pepper_grinder.png
@@ -278,6 +286,8 @@ share/tuxpaint/stamps/photo/money/us/coins/025quarter.png
 share/tuxpaint/stamps/photo/money/us/coins/025quarter.txt
 share/tuxpaint/stamps/photo/money/us/coins/050kennedy-halfdollar.png
 share/tuxpaint/stamps/photo/money/us/coins/050kennedy-halfdollar.txt
+share/tuxpaint/stamps/photo/money/us/coins/100sacagawea.png
+share/tuxpaint/stamps/photo/money/us/coins/100sacagawea.txt
 share/tuxpaint/stamps/photo/plants/flowers/iris.png
 share/tuxpaint/stamps/photo/plants/flowers/iris.txt
 share/tuxpaint/stamps/photo/plants/flowers/marigold.dat
@@ -357,6 +367,7 @@ share/tuxpaint/stamps/photo/zzz_SORT/clothespin_new.png
 share/tuxpaint/stamps/photo/zzz_SORT/clothespin_old.png
 share/tuxpaint/stamps/photo/zzz_SORT/key.png
 share/tuxpaint/stamps/photo/zzz_SORT/rubberduck.png
+share/tuxpaint/stamps/photo/zzz_SORT/rubberduck.wav
 share/tuxpaint/stamps/photo/zzz_SORT/trophy_cup.png
 share/tuxpaint/stamps/photo/zzz_SORT/usps_mailbox.png
 share/tuxpaint/stamps/seasonal/halloween/bat_left.png
@@ -389,6 +400,7 @@ share/tuxpaint/stamps/seasonal/halloween/spider.wav
 @dirrm share/tuxpaint/stamps/photo/household
 @dirrm share/tuxpaint/stamps/photo/food/vegetables
 @dirrm share/tuxpaint/stamps/photo/food/utensils
+@dirrm share/tuxpaint/stamps/photo/food/nuts
 @dirrm share/tuxpaint/stamps/photo/food/fruit
 @dirrm share/tuxpaint/stamps/photo/food/dishes
 @dirrm share/tuxpaint/stamps/photo/food
