@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3121 2005/02/26 16:40:35 wiz Exp $
+$NetBSD: TODO,v 1.3122 2005/02/26 17:22:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -785,7 +785,6 @@ Suggested package updates
 	o p5-Cache-Simple-TimedExpiry-0.23
 	o p5-Class-Trigger-0.09
 	o p5-Compress-Bzip2-1.03
-	o p5-Compress-Zlib-1.34
 	o p5-Convert-BER-1.3101
 	o p5-Crypt-CBC-2.12
 	o p5-Crypt-CipherSaber-0.61
