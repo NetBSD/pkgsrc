@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.1 2001/04/17 16:03:20 skrll Exp $
+$NetBSD: patch-aq,v 1.2 2001/04/19 06:47:00 skrll Exp $
 
 --- kscd/config.h.std.orig	Wed Aug 23 06:31:58 2000
 +++ kscd/config.h.std
@@ -41,3 +41,12 @@ $NetBSD: patch-aq,v 1.1 2001/04/17 16:03:20 skrll Exp $
  
  /* Please have a look at void KSCD::playClicked() in kscd.cpp. You will find
     there the following code:
+@@ -154,8 +160,6 @@
+ Try either one there ( THAT IS IN kscd.cpp NOT HERE ), and tell me which version 
+ works for you. -- thanks !
+ */
+-
+-#endif
+ 
+ 
+ /*************************************************************************
