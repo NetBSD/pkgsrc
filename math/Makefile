@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2004/05/13 04:15:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.114 2004/06/01 21:45:27 kristerw Exp $
 #
 
 COMMENT=	Mathematics
@@ -79,7 +79,6 @@ SUBDIR+=	py-pytables
 SUBDIR+=	py-rpy
 SUBDIR+=	quadpack
 SUBDIR+=	randlib
-SUBDIR+=	rlab
 SUBDIR+=	ruby-bigfloat
 SUBDIR+=	ruby-bitvector
 SUBDIR+=	ruby-gsl
