@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.60 2002/12/13 08:37:22 martti Exp $
+$NetBSD: TODO,v 1.61 2002/12/13 19:11:06 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -105,7 +105,6 @@ Suggested package updates
 	o evilwm-0.99.11 [pkg/19257]
 	o evolution-1.1.1
 	o fags-0.2.0
-	o fetchmail-6.1.3 [pkg/19242]
 	o fileroller-2.0
 	o fltk-1.1.1
 	o fox-1.0.28
