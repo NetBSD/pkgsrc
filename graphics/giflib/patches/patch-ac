@@ -1,0 +1,20 @@
+--- doc/index.html.orig	Mon Sep 14 20:18:13 1998
++++ doc/index.html	Mon Sep 14 20:18:25 1998
+@@ -25,7 +25,7 @@
+ maintainers for general distribution.</P>
+ 
+ The util directory includes programs to clip, rotate, scale, and
+-position GIF images.  It includes an X11 viewer, code to dump GIFs to
++position GIF images.  It includes code to dump GIFs to
+ an Epson-compatible printer in graphics mode, and many conversion
+ utilities.  These are no replacement for an interactive graphics
+ editor, but they can be very useful for scripted image generation or
+@@ -65,8 +65,6 @@
+ <DD>convert images saved as GIF to 24-bit RGB image(s)
+ <DT><a href="gif2rle.html">gif2rle</a>
+ <DD>convert images saved as GIF to RLE (Utah raster toolkit) format
+-<DT><a href="gif2x11.html">gif2x11</a>
+-<DD>display images saved as GIF files under X window system
+ <DT><a href="raw2gif.html">raw2gif</a>
+ <DD>convert raw 8-bit image data into GIF files
+ <DT><a href="rgb2gif.html">rgb2gif</a>
