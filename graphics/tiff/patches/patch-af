@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.6 2002/03/05 10:33:36 martti Exp $
+$NetBSD: patch-af,v 1.7 2004/01/03 18:33:24 reed Exp $
 
---- tools/Makefile.in.orig	Tue Jul 17 15:13:37 2001
-+++ tools/Makefile.in	Mon Mar  4 16:09:50 2002
-@@ -48,10 +48,10 @@
+--- tools/Makefile.in.orig	Fri Nov 21 19:35:56 2003
++++ tools/Makefile.in
+@@ -48,10 +48,10 @@ OPTIMIZER=@OPTIMIZER@
  IPATH	= -I. -I${SRCDIR} -I${LIBDIR}
  CFLAGS	= @ENVOPTS@ ${COPTS} ${OPTIMIZER} ${IPATH}
  #
@@ -15,15 +15,14 @@ $NetBSD: patch-af,v 1.6 2002/03/05 10:33:36 martti Exp $
  LIBPORT	= @LIBPORT@
  MACHLIBS= @MACHDEPLIBS@
  LIBS	= ${LIBTIFF} ${LIBJPEG} ${LIBGZ} ${LIBPORT} ${MACHLIBS}
-@@ -111,10 +111,8 @@
- 	    true; \
+@@ -114,9 +114,8 @@ all:	${TARGETS}
  	fi
  install: all
--	${INSTALL} -idb nostrip -idb tiff.sw.tools -m 755 		\
+ 	${INSTALL} -idb tiff.sw.tools -m 755 				\
 -		-dir ${DESTDIR}@DIR_BIN@
--	${INSTALL} -idb nostrip -idb tiff.sw.tools -m 755 		\
+-	${INSTALL} -idb tiff.sw.tools -m 755 				\
 -		-F ${DESTDIR}@DIR_BIN@ -O ${TARGETS}
-+	${INSTALL} -idb tiff.sw.tools -m 755 -dir @DIR_BIN@
++		-dir @DIR_BIN@
 +	${LIBTOOL} ${BSD_INSTALL_PROGRAM} ${TARGETS} @DIR_BIN@
  	@if [ "@LIBIMAGE@" = yes ]; then 				\
  	    ${INSTALL} -idb tiff.sw.tools -m 755 			\
