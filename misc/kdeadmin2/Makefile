@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/12/05 12:23:39 tron Exp $
+# $NetBSD: Makefile,v 1.9 2002/12/13 21:43:32 tron Exp $
 
 DISTNAME=	kdeadmin-2.2.2
 PKGREVISION=	2
@@ -21,6 +21,5 @@ CONFIGURE_ARGS+=	--without-shadow
 
 .include "../../x11/kde2/buildlink2.mk"
 .include "../../x11/kdebase2/buildlink2.mk"
-.include "../../textproc/libxslt/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
