@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1554 2005/01/10 18:34:48 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1555 2005/01/11 13:39:19 jmmv Exp $
 #
 # This file is in the public domain.
 #
@@ -163,6 +163,8 @@ PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
 .if (${PKG_INSTALLATION_TYPE} == "overwrite") && (${PLIST_TYPE} != "static")
 PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages."
 .endif
+
+PREPEND_PATH+=		${LOCALBASE}/bin
 
 .if defined(USE_IMAKE)
 PREPEND_PATH+=		${X11BASE}/bin
@@ -468,7 +470,7 @@ CONFIGURE_ENV+=		COMPILER_RPATH_FLAG="${COMPILER_RPATH_FLAG}"
 
 MAKE_FLAGS?=
 MAKEFILE?=		Makefile
-MAKE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
+MAKE_ENV+=		PATH=${LOCALBASE}/bin:${X11BASE}/bin:${PATH}
 MAKE_ENV+=		PREFIX=${PREFIX} LOCALBASE=${LOCALBASE}
 MAKE_ENV+=		X11BASE=${X11BASE} CFLAGS="${CFLAGS}"
 MAKE_ENV+=		CPPFLAGS="${CPPFLAGS}" FFLAGS="${FFLAGS}"
@@ -1109,7 +1111,7 @@ PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
 
 CONFIGURE_DIRS?=	${WRKSRC}
 CONFIGURE_SCRIPT?=	./configure
-CONFIGURE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
+CONFIGURE_ENV+=		PATH=${LOCALBASE}/bin:${X11BASE}/bin:${PATH}
 
 .if defined(GNU_CONFIGURE)
 #
@@ -1186,7 +1188,7 @@ BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
 
 # Passed to most of script invocations
 SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR}			\
-	PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin			\
+	PATH=${LOCALBASE}/bin:${X11BASE}/bin:${PATH}			\
 	WRKDIR=${WRKDIR} WRKSRC=${WRKSRC} PATCHDIR=${PATCHDIR}		\
 	SCRIPTDIR=${SCRIPTDIR} FILESDIR=${FILESDIR}			\
 	_PKGSRCDIR=${_PKGSRCDIR} PKGSRCDIR=${PKGSRCDIR} DEPENDS="${DEPENDS}" \
