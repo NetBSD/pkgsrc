@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/07/10 01:14:02 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2004/05/13 18:21:04 minskim Exp $
 
 --- Makefile.orig	Sat Jun 23 13:33:05 2001
 +++ Makefile
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/07/10 01:14:02 wiz Exp $
 -CFLAGS=$(PROFLAGS) -O -fno-strength-reduce $(SCHEDFLAGS) $(DEBUGFLAGS)
 -LDFLAGS=$(PROFLAGS) $(DEBUGFLAGS)
 +#CFLAGS=$(PROFLAGS) -O -fno-strength-reduce $(SCHEDFLAGS) $(DEBUGFLAGS)
-+LDFLAGS=$(PROFLAGS) $(DEBUGFLAGS) -lossaudio
++LDFLAGS=$(PROFLAGS) $(DEBUGFLAGS) ${LIBOSSAUDIO}
  
  
  BINARY=tfmx-play
