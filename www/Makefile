@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.252 2003/04/29 13:44:08 kei Exp $
+# $NetBSD: Makefile,v 1.253 2003/04/29 13:50:10 kei Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -151,8 +151,8 @@ SUBDIR+=	p5-libwww
 SUBDIR+=	phoenix
 SUBDIR+=	phoenix-bin
 SUBDIR+=	phoenix-bin-acroread
-SUBDIR+=	phoenix-bin-java
 SUBDIR+=	phoenix-bin-flash
+SUBDIR+=	phoenix-bin-java
 SUBDIR+=	phoenix-bin-nightly
 SUBDIR+=	phoenix-bin-realplayer
 SUBDIR+=	php-FastTemplate
