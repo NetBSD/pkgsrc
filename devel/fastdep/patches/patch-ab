@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2003/12/22 10:31:45 jmmv Exp $
+
+--- MappedFile.cc.orig	2003-10-29 17:44:39.000000000 +0100
++++ MappedFile.cc
+@@ -7,6 +7,7 @@
+ #include <sys/mman.h>
+ #include <unistd.h>
+ #include <fcntl.h>
++#include <stdio.h>
+ 
+ #endif
+ 
