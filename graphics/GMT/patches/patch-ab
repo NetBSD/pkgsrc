@@ -1,0 +1,57 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/26 22:48:15 jtb Exp $
+
+--- src/makegmt.macros.in.orig	Fri Jul 14 02:10:54 2000
++++ src/makegmt.macros.in
+@@ -26,7 +26,7 @@
+ mansection	= @mansection@
+ 
+ # Compiler, if $CC not set in environment
+-CC		= @CC@
++#CC		= @CC@
+ 
+ # Link flags if $LDFLAGS is not set in environment
+ LDFLAGS		= @LDFLAGS@
+@@ -46,12 +46,14 @@
+ # Misc. Standard Utilities:
+ #---------------------------------------------------------------
+ INSTALL		= @INSTALL@
++INSTALL_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_SCRIPT	= @INSTALL_SCRIPT@
++INSTALL_DATA	= @INSTALL_DATA@
+ AWK		= @AWK@
+ AS		= @AS@
+ AR		= @AR@
+-RANLIB		= @RANLIB@
+ CSH		= @CSH@
+-LD		= @LD@
++LIBTOOL		= @LIBTOOL@
+ #---------------------------------------------------------------
+ #	Misc. macros for Cygwin
+ #	Normally empty, EXE=.exe and WIN32=_WIN32 under Cygwin
+@@ -71,7 +73,7 @@
+ #	Required path to netcdf (with lib & include)
+ #---------------------------------------------------------------
+ #
+-NETCDF		 = $(NETCDFHOME)
++NETCDF		 = @NETCDF@
+ #---------------------------------------------------------------
+ #	Required path to GMT home (used as $GMTHOME by users)
+ #---------------------------------------------------------------
+@@ -82,7 +84,7 @@
+ #	Compiler switches (set a total of one only)
+ #-------------------------------------------------------------------------------
+ #
+-CC_OPT = @CC_OPT@
++#CC_OPT = @CC_OPT@
+ #
+ #-------------------------------------------------------------------------------
+ # For your information, here are some CC_OPT options known to work on other systems:
+@@ -92,7 +94,7 @@
+ #CC_OPT	= -mieee -O2				# Dec Alpha/Alpha PC Linux
+ #CC_OPT	= -Aa +Ofltacc +O1 +Olibcalls		# HPUX
+ #CC_OPT	= -Daux -O				# A/UX
+-#CC_OPT	= -O -ansi -pedantic			# Gnu gcc compiler
++CC_OPT	= -O2 -ansi -pedantic			# Gnu gcc compiler
+ #CC_OPT	= -O -Xc		 		# Sun Solaris
+ #CC_OPT	= -O -w					# SGI IRIX
+ #CC_OPT	= -O2					# IBM AIX
