@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1949 2004/07/19 10:14:08 recht Exp $
+$NetBSD: TODO,v 1.1950 2004/07/19 14:04:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -320,6 +320,7 @@ Suggested package updates
 	o ns-flash-6.0.79
 	o nsd-2.1.1
 	o nslint-2.1a3
+	o nulib2-2.0.2
 	o nut-9.17
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
