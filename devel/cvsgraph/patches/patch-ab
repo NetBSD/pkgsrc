@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/12/09 14:25:00 mjl Exp $
+
+--- cvsgraph.1.orig	Sun Dec  9 15:02:14 2001
++++ cvsgraph.1	Sun Dec  9 15:03:18 2001
+@@ -46,7 +46,7 @@
+ \fBCvsGraph\fR starts with reading a configuration file. If the \fB\-c\fR option
+ is given on the commandline, then it is read. Otherwise, \fBcvsgraph\fR first
+ looks for a configuration file in the current directory using \fI./cvsgraph.conf\fR
+-and, if not found, tries to open \fI/usr/local/etc/cvsgraph.conf\fR.
++and, if not found, tries to open \fI@PKG_SYSCONFDIR@/cvsgraph.conf\fR.
+ If still no configuration file is read an error message is issued and
+ \fBcvsgraph\fR terminates. The format of the configuration file is
+ described in \fBcvsgraph.conf(5)\fR. Configuration parameters entered on
+@@ -85,7 +85,7 @@
+ .SH "FILES"
+ .LP
+ .TP
+-\fI/usr/local/etc/cvsgraph.conf\fR
++\fI@PKG_SYSCONFDIR@/cvsgraph.conf\fR
+ Configuration file read for default layout parameters.
+ .SH "AUTHOR"
+ \fBCvsGraph\fR is written and maintained by B. Stultiens.
