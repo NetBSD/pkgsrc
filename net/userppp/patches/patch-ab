@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/07 17:26:58 ad Exp $
+
+--- ppp/Makefile	Tue Nov  7 15:40:44 2000
++++ ppp/Makefile	Tue Nov  7 15:40:49 2000
+@@ -123,7 +123,6 @@
+ # Note, uucplock.c and libutil.h do not really belong here !
+ CFLAGS+=-I. -I../libhack
+ SRCS+=uucplock.c
+-BINDIR=/usr/sbin
+ 
+ .PATH: ${.CURDIR}/../libhack
+ 
