@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/09/02 02:43:35 abs Exp $
+# $NetBSD: Makefile,v 1.23 2002/10/04 11:20:24 jlam Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		1
@@ -40,7 +40,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5.3*-i386 NetBSD-1.5Z?-i386 \
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+= 	--with-stlport4-home=${PREFIX}
-CONFIGURE_ARGS+= 	--with-jdk-home=${JAVA_HOME}
+CONFIGURE_ARGS+= 	--with-jdk-home=${PKG_JAVA_HOME}
 
 TEMP?=			${WRKSRC}
 
