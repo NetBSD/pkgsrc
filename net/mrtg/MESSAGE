@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2002/12/22 17:50:44 cjep Exp $
+$NetBSD: MESSAGE,v 1.5 2004/06/15 17:12:13 xtraeme Exp $
 
 The Multi Router Traffic Grapher is now installed.  Do note that two
 programs have changed names to more readily reflect their MRTG-specific
@@ -10,8 +10,5 @@ function; make sure to prefix them with "mrtg":
 
 The documentation can be found at ${PREFIX}/share/doc/mrtg/index.html;
 there is a .txt version there as well.
-
-A sample config file collecting various datas from a NetBSD machine can
-be found in ${PREFIX}/etc/mrtg/.
 
 ===========================================================================
