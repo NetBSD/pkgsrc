@@ -1,7 +1,8 @@
+$NetBSD: patch-ag,v 1.2 1999/12/25 23:45:23 wiz Exp $
 --- /dev/null	Thu Nov 27 19:03:38 1997
 +++ scsi.h	Thu Nov 27 19:07:58 1997
 @@ -0,0 +1,86 @@
-+/*	$OpenBSD: scsi.h,v 1.1 1996/06/12 11:21:37 deraadt Exp $	*/
++/*	OpenBSD Id: scsi.h,v 1.1 1996/06/12 11:21:37 deraadt Exp 	*/
 +
 +/* Copyright (c) 1994 HD Associates (hd@world.std.com)
 + * All rights reserved.
