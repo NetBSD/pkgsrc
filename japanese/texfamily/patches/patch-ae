@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2001/12/08 01:02:48 kei Exp $
+$NetBSD: patch-ae,v 1.3 2002/01/14 18:07:28 wiz Exp $
 
 --- texk/dvi2ps-3.2j/Makefile.orig	Mon Sep 11 18:16:11 2000
 +++ texk/dvi2ps-3.2j/Makefile
@@ -28,15 +28,15 @@ $NetBSD: patch-ae,v 1.2 2001/12/08 01:02:48 kei Exp $
  # FREETYPE -- FTLIB, FTINC
  # VFLIB    -- FTLIB, FTINC, VFLIB, VFLIBINC
 -FTLIB = -L${PREFIX}/lib -lttf
-+FTLIB = -R${PREFIX} -L${PREFIX}/lib -lttf
++FTLIB = -R${PREFIX}/lib -L${PREFIX}/lib -lttf
  FTINC = -I${PREFIX}/include/freetype
 -VFLIB = -L${PREFIX}/lib -lVFlib2
-+VFLIB = -R${PREFIX} -L${PREFIX} -lVFlib2 -lttf -lintl
++VFLIB = -R${PREFIX}/lib -L${PREFIX}/lib -lVFlib2 -lttf -lintl
  VFLIBINC = -I${PREFIX}/include
  
  # kpathsea
 -KPSELIB = -L${PREFIX}/lib -lkpathsea
-+KPSELIB = -R${PREFIX} -L${PREFIX}/lib -lkpathsea
++KPSELIB = -R${PREFIX}/lib -L${PREFIX}/lib -lkpathsea
  KPSEINC = -I${PREFIX}/include -DKPATHSEA
  
  #
