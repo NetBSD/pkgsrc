@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/20 11:14:07 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/17 00:08:50 taya Exp $
 
 PKGREVISION=	1
 MOZILLA=	MozillaFirebird
@@ -20,5 +20,7 @@ MAKE_ENV+=	MOZ_PHOENIX=1
 CONFIGURE_ARGS+=	--disable-mailnews
 CONFIGURE_ARGS+=	--disable-composer
 CONFIGURE_ARGS+=	--enable-extensions=default,-irc
+
+BUILD_MATHML=	# defined
 
 .include "../../www/mozilla/Makefile.common"
