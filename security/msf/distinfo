@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/01/14 23:36:38 adrianp Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 13:10:08 agc Exp $
 
 SHA1 (framework-2.3.tar.gz) = 547ce0d895605a24fe2308f0154ba6633043447a
+RMD160 (framework-2.3.tar.gz) = b46efa4ba547e71e56c55e077e9293441be55bc4
 Size (framework-2.3.tar.gz) = 2330788 bytes

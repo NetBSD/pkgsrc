@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/10/04 14:51:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 12:51:45 agc Exp $
 
 SHA1 (eurosym-1.0.tar.gz) = 74eaf4b17ee96cc67a3f8d708bdae08debe256cd
+RMD160 (eurosym-1.0.tar.gz) = d7d5ff56f05ef2ec8e6289251a965730303693ca
 Size (eurosym-1.0.tar.gz) = 26209 bytes

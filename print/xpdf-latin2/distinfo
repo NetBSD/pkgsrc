@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2003/03/25 14:07:01 salo Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 12:51:46 agc Exp $
 
 SHA1 (xpdf-latin2-20021022/xpdf-latin2.tar.gz) = e5fbf01c758c670973a34e67d56790c0b9e9eda4
+RMD160 (xpdf-latin2-20021022/xpdf-latin2.tar.gz) = 7dd1f32d0e857789983d64ee71fedfde13123947
 Size (xpdf-latin2-20021022/xpdf-latin2.tar.gz) = 1435 bytes

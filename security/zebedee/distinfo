@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/22 16:26:58 adam Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 13:10:14 agc Exp $
 
 SHA1 (zebedee-2.5.2.tar.gz) = fcb01f358f1b7166df60191ad8c507e1dbe58c8a
+RMD160 (zebedee-2.5.2.tar.gz) = 0d3f688c118c061dc0115e1c26b152c550e9b8d9
 Size (zebedee-2.5.2.tar.gz) = 175463 bytes
 SHA1 (patch-aa) = 57defd640f2a2d313f83b80bd3e860da1a79eedd
 SHA1 (patch-ab) = 8fb781f2c6fe5807a196ceb2f0f0eb0a09053288

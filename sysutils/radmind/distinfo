@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/02/17 15:31:34 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 13:40:56 agc Exp $
 
 SHA1 (radmind-1.5.0.tgz) = ee685126ba38afa34649f1d15bc2dfaa5d0e6294
+RMD160 (radmind-1.5.0.tgz) = 7b685e357c45e40bb238c68482abe467d8073030
 Size (radmind-1.5.0.tgz) = 341574 bytes
 SHA1 (patch-aa) = 6df4a37c77f27b792a8bd82d9583df57fde5756f
 SHA1 (patch-ab) = 72d62009c8db10597c8507e696dc2dde6fe36239

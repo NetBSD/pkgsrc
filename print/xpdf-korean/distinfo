@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/07/28 11:55:08 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 12:51:46 agc Exp $
 
 SHA1 (xpdf-korean-2004-jul-27.tar.gz) = 27d8201f8df33f22af3902b32c46132bd9739176
+RMD160 (xpdf-korean-2004-jul-27.tar.gz) = df6c793dd81dcaf4e6842942c16f6b4ce4b66899
 Size (xpdf-korean-2004-jul-27.tar.gz) = 470270 bytes
