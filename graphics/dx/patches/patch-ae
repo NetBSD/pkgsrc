@@ -1,0 +1,30 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/10/01 11:23:15 drochner Exp $
+--- src/exec/dpexec/loader.c.orig	Sat Jun  5 22:25:38 1999
++++ src/exec/dpexec/loader.c	Mon Sep 27 00:27:49 1999
+@@ -85,7 +85,7 @@
+ #endif /* hp700 */
+ 
+ 
+-#if defined(sun4) || defined(solaris) || defined(sgi) || defined(alphax) || defined(aviion) || defined(linux) || defined(cygwin) || defined(freebsd)
++#if defined(sun4) || defined(solaris) || defined(sgi) || defined(alphax) || defined(aviion) || defined(linux) || defined(cygwin) || defined(freebsd) || defined(__NetBSD__)
+ 
+ #include <dlfcn.h>
+ typedef void *Handle;
+@@ -574,7 +574,7 @@
+ #endif  /* hp700 */
+ 
+ 
+-#if defined(sun4) || defined(solaris) || defined(sgi) || defined(alphax) || defined(aviion) || defined(linux) || defined(cygwin) || defined(freebsd)
++#if defined(sun4) || defined(solaris) || defined(sgi) || defined(alphax) || defined(aviion) || defined(linux) || defined(cygwin) || defined(freebsd) || defined(__NetBSD__)
+ 
+ 
+ #define __ROUTINES_DEF
+@@ -852,7 +852,7 @@
+     return ERROR;
+ }
+ 
+-Error DXUnloadObjFile(char *fname)
++Error DXUnloadObjFile(char *fname, char *envvar)
+ {
+     /* the unload routine needs the entry point address, which we
+      * wouldn't need to save unless this is an important function.
