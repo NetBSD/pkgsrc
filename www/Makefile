@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.269 2003/08/20 11:26:17 markd Exp $
+# $NetBSD: Makefile,v 1.270 2003/08/28 09:50:45 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -219,7 +219,7 @@ SUBDIR+=	zope-confera
 SUBDIR+=	zope25
 SUBDIR+=	zope25-AbracadabraObject
 SUBDIR+=	zope25-BTreeFolder
-SUBDIR+=	zope25-BTreeFolder
+SUBDIR+=	zope25-BTreeFolder2
 SUBDIR+=	zope25-BackTalk
 SUBDIR+=	zope25-CMF
 SUBDIR+=	zope25-CMFPlone
