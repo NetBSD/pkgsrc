@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/03/27 03:19:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2001/04/13 00:56:26 jtb Exp $
 
 DISTNAME=	GMT3.3.6
 PKGNAME=	GMT-3.3.6
@@ -17,16 +17,16 @@ MAINTAINER=	jtb@netbsd.org
 HOMEPAGE=	http://imina.soest.hawaii.edu/gmt/
 COMMENT=	Generic Mapping Tools
 
-DEPENDS+=	netcdf>=3.0:../../devel/netcdf
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+DEPENDS+=	netcdf>=3.2:../../devel/netcdf
+BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 
 EXTRACT_SUFFIX= .tar.bz2
 WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_X11=	YES
-USE_XAW=	YES
+USE_X11=	yes
+USE_XAW=	yes
 DIST_SUBDIR=	GMT
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 EVAL_PREFIX+=	NETCDF=netcdf
 
 CONFIGURE_ARGS+="--includedir=${PREFIX}/include/gmt"
@@ -43,32 +43,29 @@ post-extract:
 
 pre-configure:
 	(cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf)
-	for e in ${WRKSRC}/examples/*.bat			\
-	${WRKSRC}/examples/*/*.bat; do				\
-	${RM} -f $$e;						\
-	done
-	for h in ${WRKSRC}/examples/do_view.bash		\
-	${WRKSRC}/examples/do_view.csh ; do			\
-	${SED} -e 's:ghostview:gv:g' < $$h > $$h.tmp &&		\
-	${MV} -f $$h.tmp $$h;					\
+	${RM} -f ${WRKSRC}/examples/*.bat ${WRKSRC}/examples/*/*.bat
+	for f in ${WRKSRC}/examples/do_view.bash			\
+		${WRKSRC}/examples/do_view.csh; do			\
+		${SED} -e 's:ghostview:gv:g' $$f > $$f.tmp &&		\
+		${MV} -f $$f.tmp $$f;					\
 	done
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gmt
-	for f in GMT_Docs.ps GMT_Tutorial.ps ; do			\
+	for f in GMT_Docs.ps GMT_Tutorial.ps; do			\
 	${INSTALL_DATA} ${WRKSRC}/ps/$$f ${PREFIX}/share/doc/gmt;	\
 	done
 	(cd ${PREFIX}/share/doc/html/gmt/doc && ${LN} -sf		\
 	../../../gmt ps)
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gmt/tutorial
 	for f in bermuda.grd quakes.cpt ship.xyz us.grd data quakes.ngdc \
-	topo.cpt ; do							 \
+	topo.cpt; do							 \
 	${INSTALL_DATA} ${WRKSRC}/tutorial/$$f				 \
 	${PREFIX}/share/examples/gmt/tutorial;				 \
 	done;
 	${INSTALL_DATA} ${WRKSRC}/../share/* ${PREFIX}/share/gmt
 	for i in ${WRKSRC}/examples/*.bash ${WRKSRC}/examples/*.csh	\
-	${WRKSRC}/examples/README.SCRIPTS ; do				\
+	${WRKSRC}/examples/README.SCRIPTS; do				\
 	${INSTALL_DATA} $$i ${PREFIX}/share/examples/gmt;		\
 	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gmt
@@ -78,9 +75,9 @@ post-install:
 	${PREFIX}/share/examples/gmt;					\
 	done
 	for i in 01 02 03 04 05 06 07 08 09 10 				\
-	11 12 13 14 15 16 17 18 19 20 ; do				\
+	11 12 13 14 15 16 17 18 19 20; do				\
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gmt/ex$$i;		\
-	for j in ${WRKSRC}/examples/ex$$i/* ; do			\
+	for j in ${WRKSRC}/examples/ex$$i/*; do				\
 	${INSTALL_DATA} $$j ${PREFIX}/share/examples/gmt/ex$$i;		\
 	done;								\
 	done
