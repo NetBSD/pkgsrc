@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/20 09:47:37 jun Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/09 05:37:43 jun Exp $
 
-DISTNAME=	semi-1.14.3
+DISTNAME=	semi-1.14.4
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/semi/semi-1.14-for-flim-1.14/
 
