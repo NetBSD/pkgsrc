@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/29 18:45:03 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/09 23:59:55 wiz Exp $
 #
 
 DISTNAME=		entropy-${ENTROPY_VERSION}
@@ -43,7 +43,7 @@ ENTROPY_STORE_TYPE?=	tree
 CONFIGURE_ARGS+=	--with-tree
 .elif ${ENTROPY_STORE_TYPE} == "mysql"
 CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE}
-.include "../../databases/mysql-client/buildlink2.mk"
+.include "../../databases/mysql-client/buildlink3.mk"
 .elif ${ENTROPY_STORE_TYPE} != "monolithic"
 .error unknown ENTROPY_STORE_TYPE: ${ENTROPY_STORE_TYPE}
 .endif
