@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/06/02 05:05:21 itojun Exp $
+
+--- Makefile.orig	Mon Dec  4 15:45:02 2000
++++ Makefile	Sat Jun  2 14:02:22 2001
+@@ -87,6 +87,7 @@
+ 	route.c vif.c timer.c mrt.c pim6.c pim6_proto.c rp.c crc.c trace.c\
+ 	cfparse.y cftoken.l
+ CLEANFILES+= lex.yy.c y.tab.c y.tab.h
++YFLAGS+=-d
+ 
+ .if (${OPSYS} == "BSD/OS")
+ CC=	gcc
+@@ -121,6 +122,6 @@
+ 
+ realinstall:
+ 	install ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} \
+-		${INSTALLFLAGS} pim6sd ${.CURDIR}/pim6stat ${DESTDIR}${BINDIR}
++		${INSTALLFLAGS} ${.CURDIR}/pim6stat ${DESTDIR}${BINDIR}
+ 
+ .include <bsd.prog.mk>
