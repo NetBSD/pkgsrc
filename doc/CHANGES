@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4780 2004/02/10 22:06:23 garbled Exp $
+$NetBSD: CHANGES,v 1.4781 2004/02/11 03:23:57 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -772,5 +772,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nautilus to 2.4.2nb2 [jmmv 2004-02-10]
 	Added py-gnutls-0.2 [minskim 2004-02-10]
 	Updated py-jpCodecs to 1.4.10 [minskim 2004-02-10]
-    Added genecys-data-0.1 [garbled 2004-02-10]
-    Added genecys-client-0.1 [garbled 2004-02-10]
+	Added genecys-data-0.1 [garbled 2004-02-10]
+	Added genecys-client-0.1 [garbled 2004-02-10]
+	Updated jabberd to 1.4.3nb1 [xtraeme 2004-02-11]
