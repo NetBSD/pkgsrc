@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/09/26 03:30:00 jschauma Exp $
+$NetBSD: patch-aa,v 1.2 2004/08/19 16:55:31 ben Exp $
 
---- Makefile.orig	Thu May 17 13:27:07 2001
+--- Makefile.orig	Thu May 17 12:27:07 2001
 +++ Makefile
 @@ -5,20 +5,20 @@
  ######################################################################
@@ -35,3 +35,72 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/09/26 03:30:00 jschauma Exp $
  
  # documentation. 
  # If you want to install documents automagically, type:
+@@ -67,16 +67,16 @@ clean:
+ 	-cd src/ ; rm $(PROGRAMS) core
+ 
+ install: all 
+-	@if [ ! -O "$(BINDIR)" ] ; then \
+-	echo "File $(BINDIR) doesn't belong to you!" ;  exit 1 ; fi 
++#	@if [ ! -O "$(BINDIR)" ] ; then \
++#	echo "File $(BINDIR) doesn't belong to you!" ;  exit 1 ; fi 
+ 	@cd src ; cp $(PROGRAMS) $(BINDIR)
+ 
+-	@if [ ! -O "$(MANDIR)" ] ; then \
+-	echo "File $(MANDIR) doesn't belong to you!" ;  exit 1 ; fi 
++#	@if [ ! -O "$(MANDIR)" ] ; then \
++#	echo "File $(MANDIR) doesn't belong to you!" ;  exit 1 ; fi 
+ 	@cd man1 ; cp $(MANUALS) $(MANDIR)/man1
+ 
+-	@if [ ! -O "$(DATADIR)" ] ; then \
+-	echo "File $(DATADIR) doesn't belong to you!" ;  exit 1 ; fi 
++#	@if [ ! -O "$(DATADIR)" ] ; then \
++#	echo "File $(DATADIR) doesn't belong to you!" ;  exit 1 ; fi 
+ 	-cd $(DATADIR) ; mkdir genpak ; 
+ 	@cd data ; cp -i $(DATAFILES) $(DATADIR)/genpak
+ 
+@@ -99,8 +99,8 @@ filelist:
+ 		echo "$(DATADIR)/genpak/"$$i >> FILES.TXT ; done
+ 
+ docs:
+-	@if [ ! -O "$(TREE)" ] ; \
+-	then echo "File $(TREE) doesn't belong to you!" ; exit 1 ; fi ; \
++#	@if [ ! -O "$(TREE)" ] ; \
++#	then echo "File $(TREE) doesn't belong to you!" ; exit 1 ; fi ; \
+ 	if [ ! -e $(DOCDIR) ] ; \
+ 		then mkdir $(DOCDIR) ; fi ; \
+ 	if [ ! -e $(DOCDIR)/gp ] ; then \
+@@ -110,15 +110,15 @@ docs:
+ 
+ uninstall:
+ 
+-	@if [ ! -O "$(BINDIR)" ] ; \
+-		then echo "Directory $(BINDIR) doesn't belong to you!" ; \
+-		exit 1 ; fi
++#	@if [ ! -O "$(BINDIR)" ] ; \
++#		then echo "Directory $(BINDIR) doesn't belong to you!" ; \
++#		exit 1 ; fi
+ 	@echo Removing programs...
+ 	@cd $(BINDIR) ; rm -f $(PROGRAMS)
+ 
+-	@if [ ! -O "$(MANDIR)" ] ; \
+-		then echo "Directory $(MANDIR) doesn't belong to you!" ;  \
+-		exit 1 ; fi
++#	@if [ ! -O "$(MANDIR)" ] ; \
++#		then echo "Directory $(MANDIR) doesn't belong to you!" ;  \
++#		exit 1 ; fi
+ 	
+ 	@echo Removing manuals...
+ 	@cd $(MANDIR)/man1 ; rm -f $(MANUALS) 
+@@ -127,9 +127,9 @@ uninstall:
+ 	@echo Are you sure you really want to remove this data? '(yes/no) '
+ 	@read ANSWER ; if [ $ANSWER != "yes" ] ; then \
+ 		echo OK, leaving $(DATADIR)/genpak untouched ; else \
+-	if [ ! -O "$(DATADIR)" ] ; \
+-		then echo "Directory $(DATADIR) doesn\'t belong to you!" ; \
+-	exit 1 ; fi ; \
++#	if [ ! -O "$(DATADIR)" ] ; \
++#		then echo "Directory $(DATADIR) doesn\'t belong to you!" ; \
++#	exit 1 ; fi ; \
+ 	cd $(DATADIR)/genpak ; rm -f $(DATAFILES) ; fi
+ 	-cd $(DATADIR) ; rmdir genpak
+ 	@echo
