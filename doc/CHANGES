@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3422 2003/09/17 12:04:05 jmmv Exp $
+$NetBSD: CHANGES,v 1.3423 2003/09/17 12:05:39 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3743,5 +3743,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ap-auth-postgresql to 1.4 [recht 2003-09-16]
 	Updated openssh to 3.7.1.1 [grant 2003-09-16]
 	Updated pkg_tarup to 1.5 [erh 2003-09-16]
-	Updated darcnes to 20010401nb1 [wiz 20030917]
+	Updated darcnes to 20010401nb1 [wiz 2003-09-17]
 	Updated kopete to 0.7.2 [jmmv 2003-09-17]
