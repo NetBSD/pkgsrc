@@ -1,38 +1,29 @@
-# $NetBSD: Makefile,v 1.66 2004/02/26 14:04:20 fredb Exp $
+# $NetBSD: Makefile,v 1.67 2004/03/03 14:01:00 adam Exp $
 #
 
-DISTNAME=		lynx2.8.4rel.1
-PKGNAME=		lynx-2.8.4.1.4
-PKGREVISION=		2
-CATEGORIES=		www
-MASTER_SITES=		http://lynx.isc.org/lynx2.8.4/ \
-			ftp://lynx.isc.org/lynx2.8.4/ \
-			ftp://ftp.nl.uu.net/pub/unix/www/lynx/lynx2.8.4/ \
-			ftp://ftp.netlab.is.tsukuba.ac.jp/pub/network/WWW/lynx/lynx2.8.4/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	lynx2.8.5
+WRKSRC=		${WRKDIR}/lynx2-8-5
+PKGNAME=	lynx-2.8.5
+CATEGORIES=	www
+MASTER_SITES=	http://lynx.isc.org/${DISTNAME}/ \
+		ftp://ftp.nl.uu.net/pub/unix/www/lynx/${DISTNAME}/ \
+		ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/${DISTNAME}/ \
+		ftp://ftp.netlab.is.tsukuba.ac.jp/pub/network/WWW/lynx/${DISTNAME}/
+EXTRACT_SUFX=	.tar.bz2
 
-PATCH_SITES=		http://lynx.isc.org/lynx2.8.4/patches/ \
-			ftp://lynx.isc.org/lynx/lynx2.8.4/patches/ \
-			ftp://ftp.nl.uu.net/pub/unix/www/lynx/lynx2.8.4/patches/ \
-			ftp://ftp.netlab.is.tsukuba.ac.jp/pub/network/WWW/lynx/lynx2.8.4/patches/
-PATCHFILES=		lynx2.8.4rel.1a.patch lynx2.8.4rel.1b.patch \
-			lynx2.8.4rel.1c.patch lynx2.8.4rel.1d.patch
-PATCH_DIST_STRIP=	-p1
-
-MAINTAINER=		fredb@NetBSD.org
-HOMEPAGE=		http://lynx.isc.org/
-COMMENT=		Alphanumeric display oriented World-Wide Web Client
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+MAINTAINER=	fredb@NetBSD.org
+HOMEPAGE=	http://lynx.isc.org/
+COMMENT=	Alphanumeric display oriented World-Wide Web Client
 
 BUILD_USES_MSGFMT=	yes
 
-WRKSRC=			${WRKDIR}/lynx2-8-4
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-INSTALL_TARGET=		install-bin install-cfg install-help install-lss
-INSTALL_TARGET+=	install-doc install-man
+USE_GNU_TOOLS+=		make
+INSTALL_TARGET=		install-full install-lss
 MAKEFILE=       	makefile
 
 BUILD_DEFS+=		LYNX_SCREEN_LIB USE_SOCKS USE_INET6
@@ -40,12 +31,9 @@ BUILD_DEFS+=		LYNX_SCREEN_LIB USE_SOCKS USE_INET6
 .include "../../mk/bsd.prefs.mk"
 
 # For nls/gettext
+CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--with-nls-datadir=${PREFIX}/share
 CONFIGURE_ARGS+=	--without-included-gettext
-
-.if ${OPSYS} != "IRIX"
-CONFIGURE_ARGS+=	--enable-nls
-.endif
 
 # With SSL, lynx can get https:// and snews:// URL's.
 CONFIGURE_ARGS+=	--with-ssl
@@ -67,6 +55,8 @@ CONFIGURE_ARGS+=	--enable-source-cache
 # Experimental features
 CONFIGURE_ARGS+=	--enable-file-upload
 CONFIGURE_ARGS+=	--enable-justify-elts
+CONFIGURE_ARGS+=	--enable-kbd-layout
+CONFIGURE_ARGS+=	--enable-nested-tables
 CONFIGURE_ARGS+=	--enable-prettysrc
 CONFIGURE_ARGS+=	--enable-read-eta
 
@@ -76,8 +66,11 @@ CONFIGURE_ARGS+=	--enable-read-eta
 USE_NCURSES=		color
 .  include "../../devel/ncurses/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-color-style
-.elif ${LYNX_SCREEN_LIB} == "curses"
+.elif ${LYNX_SCREEN_LIB} == curses
 .  include "../../mk/curses.buildlink3.mk"
+.  if !empty(MACHINE_PLATFORM:MNetBSD-1.5*-i386)
+CONFIGURE_ARGS+=	--enable-color-style
+.  endif
 .else
 pre-configure:
 	@${ECHO} '****************************************************'
@@ -115,8 +108,9 @@ CONFIGURE_ARGS+= 	--with-socks5
 CONFIGURE_ARGS+=       --enable-ipv6
 .endif
 
-pre-install:
-	${RM} -f ${WRKSRC}/CHANGES.orig
+# problem encountered with zh_TW.po, maybe it will be fixed in the future
+post-extract:
+	${RM} ${WRKSRC}/po/zh_TW.po
 
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/lynx
