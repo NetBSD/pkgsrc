@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.53 2004/01/21 08:04:29 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.54 2004/01/21 18:18:13 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -132,6 +132,7 @@ ${_BLNK_RECMETHOD.${_pkg_}}+= \
 .  endif
 .endfor
 
+.if !empty(PHASES_AFTER_BUILDLINK:M${PKG_PHASE})
 # Generate default values for:
 #
 # BUILDLINK_IS_BUILTIN.<pkg>	"yes" or "no" for whether <pkg> is provided
@@ -671,6 +672,16 @@ _BLNK_PASSTHRU_RPATHDIRS+=	${BUILDLINK_PASSTHRU_RPATHDIRS}
 #
 _BLNK_PASSTHRU_RPATHDIRS:=	${_BLNK_PASSTHRU_RPATHDIRS:N/usr/lib}
 
+# Resolve the path to ${WRKDIR} completely in case it's a symlink.
+.if !defined(_BLNK_WRKDIR)
+_BLNK_WRKDIR!=	if [ -d ${WRKDIR} ]; then				\
+			cd ${WRKDIR}; ${PWD_CMD};			\
+		else							\
+			${ECHO} ${WRKDIR};				\
+		fi
+MAKEFLAGS+=	_BLNK_WRKDIR="${_BLNK_WRKDIR}"
+.endif
+
 _BLNK_MANGLE_DIRS=	# empty
 _BLNK_MANGLE_DIRS+=	${BUILDLINK_DIR}
 _BLNK_MANGLE_DIRS+=	${BUILDLINK_X11_DIR}
@@ -718,6 +729,12 @@ _BLNK_UNPROTECT_DIRS+=	${WRKDIR}
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_X11_DIR}
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_DIR}
 
+# Transform all references to the physical path to ${WRKDIR} into ${WRKDIR}.
+#
+.if ${_BLNK_WRKDIR} != ${WRKDIR}
+_BLNK_TRANSFORM+=	mangle:${_BLNK_WRKDIR}:${WRKDIR}
+.endif
+#
 # Protect work directories and the dependency directories from all the
 # transformations we're about to do.
 #
@@ -1588,3 +1605,4 @@ ${_BLNK_TRANSFORM_SEDFILE} ${_BLNK_UNTRANSFORM_SEDFILE}: ${_BLNK_GEN_TRANSFORM}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${_BLNK_GEN_TRANSFORM}		\
 		${_BLNK_TRANSFORM}
+.endif	# BUILDLINK_PHASES
