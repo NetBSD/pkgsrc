@@ -1,4 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/03/22 03:15:09 kim Exp $
+# $NetBSD: Makefile,v 1.2 1999/03/22 04:29:53 kim Exp $
+#
+# Tempted to install another radius package?
+#
+#	Please consider e-mailing ${MAINTAINER} first with your concerns.
+#	It would be nice to just fold new extensions into this code, and
+#	avoid a myriad of incompatible radiusd incarnations.
 #
 
 DISTNAME=	radius-3.6B
