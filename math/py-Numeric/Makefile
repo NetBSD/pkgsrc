@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/24 09:20:35 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/05/04 19:38:44 tron Exp $
 
 DISTNAME=	NumPy-11
 PKGNAME=	py-Numeric-1.1
@@ -8,8 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@endicor.com
 
-BUILD_DEPENDS=	python:../../lang/python
-RUN_DEPENDS=	python:../../lang/python
+DEPENDS+=	python-1.5.1:../../lang/python
 
 WRKSRC=		${WRKDIR}/LLNLDistribution/Numerical
 ALL_TARGET=	default
