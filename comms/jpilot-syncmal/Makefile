@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2001/03/01 20:57:59 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/02 00:04:26 jlam Exp $
 
 DISTNAME=		jpilot-syncmal_0.60
 PKGNAME=		jpilot-syncmal-0.60
 CATEGORIES=		comms
 MASTER_SITES=		http://people.atl.mediaone.net/jasonday/code/syncmal/
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=		malsync_2.0.5.src${EXTRACT_SUFX}
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://people.atl.mediaone.net/jasonday/code/syncmal/syncmal.html
 COMMENT=		MAL synchronization plugin for J-Pilot
 
-BUILD_DEPENDS+=		${MALSRC}/client/unix/MAL31UserConfig.c:${MALDIR}:patch
 DEPENDS+=		jpilot>=0.99:../../comms/jpilot
-
-MALDIR=			${PKGSRCDIR}/comms/malsync
-MALSRC=			${MALDIR}/${WRKDIR:T}/malsync
 
 GNU_CONFIGURE=		# defined
 USE_X11=		# defined
@@ -28,14 +26,11 @@ EVAL_PREFIX+=		GTKDIR=gtk+
 EVAL_PREFIX+=		JPILOTDIR=jpilot
 EVAL_PREFIX+=		PILOTLINKDIR=pilot-link
 CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}"
-CONFIGURE_ARGS+=	--with-mal-source="${MALSRC}"
+CONFIGURE_ARGS+=	--with-mal-source="${WRKSRC}/../malsync"
 CONFIGURE_ARGS+=	--with-plugin-prefix="${JPILOTDIR}/include/jpilot"
 CONFIGURE_ARGS+=	--with-pilot-prefix="${PILOTLINKDIR}"
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/.libs/libsyncmal.so ${PLUGINSDIR}
-
-pre-clean:
-	@cd ${MALDIR} && ${MAKE} clean
 
 .include "../../mk/bsd.pkg.mk"
