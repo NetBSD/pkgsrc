@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/01 04:18:22 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/12/28 03:33:30 wiz Exp $
 bin/base64-decode
 bin/base64-encode
 bin/qp-decode
@@ -8,6 +8,7 @@ info/vm.info
 info/vm.info-1
 info/vm.info-2
 info/vm.info-3
+info/vm.info-4
 @exec install-info --info-dir=%D/info %D/info/vm.info
 share/emacs/site-lisp/vm/pixmaps/audio_stamp-colorful.xpm
 share/emacs/site-lisp/vm/pixmaps/audio_stamp-simple.xpm
