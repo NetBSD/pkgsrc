@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/06/26 16:14:42 grant Exp $
+$NetBSD: distinfo,v 1.3 2004/06/26 19:33:02 grant Exp $
 
 SHA1 (win32codecs-20040626.tar.bz2) = ba7927c33dd384428071cd7cc7a0443a39edfbe7
 Size (win32codecs-20040626.tar.bz2) = 7093871 bytes
@@ -6,5 +6,5 @@ SHA1 (qt6dlls-20040626.tar.bz2) = 1a9813846e3460a0b25551b24b77d0cb012cc645
 Size (qt6dlls-20040626.tar.bz2) = 2628348 bytes
 SHA1 (qtextras-20040626.tar.bz2) = 05ea93ebc43e188ae1c679a9d9c7557edb811e22
 Size (qtextras-20040626.tar.bz2) = 701356 bytes
-SHA1 (rp9win32codecs-20040626.tar.bz2) = c41f2333bed747e868375cfadb0b5da541bd3485
-Size (rp9win32codecs-20040626.tar.bz2) = 528088 bytes
+SHA1 (rp9codecs-win32-20040626.tar.bz2) = 2ec5a35ab035e4e5e27cc4c8779014af9877eb6d
+Size (rp9codecs-win32-20040626.tar.bz2) = 528186 bytes
