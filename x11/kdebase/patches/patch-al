@@ -1,17 +1,32 @@
-$NetBSD: patch-al,v 1.1 1998/11/10 22:23:02 tron Exp $
+$NetBSD: patch-al,v 1.2 1999/10/23 02:06:07 hubertf Exp $
 
---- kdm/kdmconfig.cpp.orig	Thu Mar 26 17:37:16 1998
-+++ kdm/kdmconfig.cpp	Tue Nov 10 22:46:06 1998
-@@ -119,10 +119,10 @@
+--- kdm/kdmconfig.cpp.orig	Fri Apr 23 15:12:54 1999
++++ kdm/kdmconfig.cpp	Mon Oct 11 17:22:02 1999
+@@ -134,10 +134,26 @@
                 _shutdownButton = KNone;
            _shutdown         = new QString( kc->readEntry(  "Shutdown"));
            if( _shutdown->isNull())
--               *_shutdown = "/sbin/halt";
++#ifdef    __NetBSD__
 +               *_shutdown = "/sbin/shutdown -h now";
++#else /* !__NetBSD__ */
++#ifdef    __SVR4
++               *_shutdown = "/usr/sbin/halt";
++#else /* !__SVR4 */
+                *_shutdown = "/sbin/halt";
++#endif /* __SVR4 */
++#endif /* __NetBSD__ */
            _restart          = new QString( kc->readEntry(   "Restart"));
            if( _restart->isNull())
 -               *_restart = "/sbin/reboot";
++#ifdef    __NetBSD__
 +               *_restart = "/sbin/shutdown -r now";
++#else /* !__NetBSD__ */
++#ifdef    __SVR4
++               *_shutdown = "/usr/sbin/reboot";
++#else /* !__SVR4 */
++               *_shutdown = "/sbin/reboot";
++#endif /* __SVR4 */
++#endif /* __NetBSD__ */
       } else
            _shutdownButton   = KNone;
       if( kc->hasKey( "GUIStyle")) {
