@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.147 2003/05/14 04:11:48 salo Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.148 2003/05/15 11:31:49 salo Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -701,6 +701,11 @@ GNU_PROGRAM_PREFIX?=	g
 # This is the prefix to add for GNU programs, like gls or gnutouch.
 # Possible: g, gnu, empty, ...
 # Default: g
+
+GOLEM_WITH_SOUND?=	NO
+# Used by golem package to determine whether to enable sound support.
+# Possible: YES, NO
+# Default: NO
 
 #GQMPEG_NO_JAPANESE?=	yes
 # Can be enabled to handle keep gqmpeg from interpreting ID3 tags
