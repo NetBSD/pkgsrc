@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/06/17 07:54:05 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/25 22:14:10 skrll Exp $
 bin/appletproxy
 bin/chooser
 bin/conttest
@@ -360,6 +360,9 @@ lib/kde3/konq_listview.so
 lib/kde3/konq_shellcmdplugin.a
 lib/kde3/konq_shellcmdplugin.la
 lib/kde3/konq_shellcmdplugin.so
+lib/kde3/konq_sidebar.a
+lib/kde3/konq_sidebar.la
+lib/kde3/konq_sidebar.so
 lib/kde3/konq_sidebartree_bookmarks.a
 lib/kde3/konq_sidebartree_bookmarks.la
 lib/kde3/konq_sidebartree_bookmarks.so
@@ -372,6 +375,9 @@ lib/kde3/konq_sidebartree_history.so
 lib/kde3/konq_sound.a
 lib/kde3/konq_sound.la
 lib/kde3/konq_sound.so
+lib/kde3/konqsidebar_tree.a
+lib/kde3/konqsidebar_tree.la
+lib/kde3/konqsidebar_tree.so
 lib/kde3/kwin_b2.a
 lib/kde3/kwin_b2.la
 lib/kde3/kwin_b2.so
@@ -650,6 +656,11 @@ lib/libksgrd.la
 lib/libksgrd.so
 lib/libksgrd.so.0
 lib/libksgrd.so.0.0
+lib/libksmserver_main.a
+lib/libksmserver_main.la
+lib/libksmserver_main.so
+lib/libksmserver_main.so.0
+lib/libksmserver_main.so.0.0
 lib/libkwin.a
 lib/libkwin.la
 lib/libkwin.so

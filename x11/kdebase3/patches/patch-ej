@@ -1,6 +1,6 @@
-$NetBSD: patch-ej,v 1.1.1.1 2002/05/31 13:19:19 skrll Exp $
+$NetBSD: patch-ej,v 1.2 2002/06/25 22:14:12 skrll Exp $
 
---- kxkb/Makefile.in.orig	Mon May 13 23:57:57 2002
+--- kxkb/Makefile.in.orig	Tue Jun 25 19:31:39 2002
 +++ kxkb/Makefile.in
 @@ -292,11 +292,11 @@
  
@@ -132,6 +132,15 @@ $NetBSD: patch-ej,v 1.1.1.1 2002/05/31 13:19:19 skrll Exp $
 +KDE_DIST=pixmap.h kxkb.h kcmmisc.h configure.in.in kcmlayout.h kxkbbindings.cpp extension.h kxkb.desktop LICENSE keyboard.desktop uninstall.desktop rules.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -672,7 +684,7 @@
+ 
+ #>- install-exec-am: install-binPROGRAMS install-libLTLIBRARIES
+ #>+ 1
+-install-exec-am: install-kde_moduleLTLIBRARIES install-binPROGRAMS install-libLTLIBRARIES
++install-exec-am: install-binPROGRAMS install-libLTLIBRARIES install-kde_moduleLTLIBRARIES
+ 
+ install-info: install-info-am
  
 @@ -722,9 +734,6 @@
  messages: 
