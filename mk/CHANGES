@@ -37,15 +37,6 @@ Notable changes:
   the wrapper scripts in bsd.wrapper.mk.  These values will not be seen by 
   non-wrappered programs anymore.
 
-* EVAL_PREFIX:  In order to allow this to be set before the requested 
-  package is installed, this now creates variables that do not call pkg_info 
-  until the variable itself is evaluated.  This means that such variables 
-  should not be used in := expressions or .if/.for arguments.
-
-* PATH/PREPEND_PATH:  Similarly to EVAL_PREFIX, PREPEND_PATH takes effect 
-  when the variable PATH is actually expanded.  So don't use := on PATH; 
-  only add to PREPEND_PATH.
-
 * "depends":  This is a new phase of the build which executes between 
   "checksum" and "extract".  It factors out the dependency handling into its 
   own stage, to separate the logic and make it easier to follow in 
