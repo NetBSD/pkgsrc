@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.17 2005/01/24 19:24:37 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.18 2005/01/24 19:49:23 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -92,14 +92,14 @@ _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
 BUILD_DEFS?=		# empty
 BUILD_DEPENDS?=		# empty
 BUILD_TARGET?=		all
+COMMENT?=		(no description)
+CONFIGURE_DIRS?=	${WRKSRC}
+CONFIGURE_SCRIPT?=	./configure
 DEPENDS?=		# empty
 DESCR_SRC?=		${PKGDIR}/DESCR
 DIGEST_ALGORITHM?=	SHA1
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 DISTINFO_FILE?=		${PKGDIR}/distinfo
-COMMENT?=		(no description)
-CONFIGURE_DIRS?=	${WRKSRC}
-CONFIGURE_SCRIPT?=	./configure
 EXTRACT_ONLY?=		${DISTFILES}
 EXTRACT_SUFX?=		.tar.gz
 INSTALL_DIRS?=		${BUILD_DIRS}
