@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2004/11/23 16:56:33 jschauma Exp $
+$NetBSD: distinfo,v 1.15 2005/01/25 18:06:44 jschauma Exp $
 
-SHA1 (j2sdk-1_3_1_13-linux-i586.bin) = e672313ebe1e78620ce171649103b2a7cc8a5dbb
-Size (j2sdk-1_3_1_13-linux-i586.bin) = 26653147 bytes
+SHA1 (j2sdk-1_3_1_15-linux-i586.bin) = 35fcec334745670d9c33c7b8dbc4916c353267c0
+Size (j2sdk-1_3_1_15-linux-i586.bin) = 26654349 bytes
