@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.1.2.3 2003/08/28 09:48:20 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.1.2.4 2003/08/28 10:21:52 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -59,14 +59,14 @@ EOF
 		case "$action" in
 		transform)
 			@CAT@ >> $sedfile << EOF
-s|-$1$2[ 	]$|-$1$3 |g
+s|-$1$2\([ 	]\)$|-$1$3\1|g
 s|-$1$2$|-$1$3|g
 s|-$1$2/|-$1$3/|g
 EOF
 			;;
 		untransform)
 			@CAT@ >> $sedfile << EOF
-s|-$1$3[ 	]$|-$1$2 |g
+s|-$1$3\([ 	]\)$|-$1$2\1|g
 s|-$1$3$|-$1$2|g
 s|-$1$3/|-$1$2/|g
 EOF
@@ -77,7 +77,7 @@ EOF
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|-$1$2[ 	]|-$1$3 |g
+s|-$1$2\([ 	]\)|-$1$3\1|g
 s|-$1$2$|-$1$3|g
 s|-$1$2/|-$1$3/|g
 EOF
@@ -88,17 +88,17 @@ EOF
 		case "$action" in
 		transform)
 			@CAT@ >> $sedfile << EOF
-s|$2\(/[^ 	"':;]*/lib[^ 	/"':;]*\.la\)[ 	]|$3\1 |g
+s|$2\(/[^ 	"':;]*/lib[^ 	/"':;]*\.la\)\([ 	]\)|$3\1\2|g
 s|$2\(/[^ 	"':;]*/lib[^ 	/"':;]*\.la\)$|$3\1|g
-s|$2\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)[ 	]|$3\1 |g
+s|$2\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)\([ 	]\)|$3\1\2|g
 s|$2\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)$|$3\1|g
 EOF
 			;;
 		untransform)
 			@CAT@ >> $sedfile << EOF
-s|$3\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)[ 	]|$2\1 |g
+s|$3\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)\([ 	]\)|$2\1\2|g
 s|$3\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)$|$2\1|g
-s|$3\(/[^ 	"':;]*/lib[^ 	/"':;]*\.la\)[ 	]|$2\1 |g
+s|$3\(/[^ 	"':;]*/lib[^ 	/"':;]*\.la\)\([ 	]\)|$2\1\2|g
 s|$3\(/[^ 	"':;]*/lib[^ 	/"':;]*\.la\)$|$2\1|g
 EOF
 			;;
@@ -130,7 +130,7 @@ EOF
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|$2[ 	]| |g
+s|$2\([ 	]\)|\1|g
 s|$2$||g
 s|$2/[^ 	"':;]*||g
 EOF
@@ -149,7 +149,7 @@ EOF
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|$2[ 	]|$3 |g
+s|$2\([ 	]\)|$3\1|g
 s|$2$|$3|g
 EOF
 			;;
