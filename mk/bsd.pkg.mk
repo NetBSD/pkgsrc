@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.585 2000/10/13 23:18:00 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.586 2000/10/15 11:31:41 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -757,7 +757,7 @@ DEPENDS+=		${LESSTIF_DEPENDS}
 .else
 DEPENDS+=		${LESSTIF_DEPENDS}
 .endif
-.endif
+.endif	# USE_MOTIF
 
 # Check if we got Xpm distributed with XFree86 4.0 or newer or if we
 # need to use the package.
@@ -775,7 +775,18 @@ XPMDIR_DEFAULT=		${X11BASE}
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 XPMDIR_DEFAULT=		${X11PREFIX}
 .endif
+.endif	# USE_XPM
+
+# If USE_MESA is set, depend on Mesa (or Mesa-glx if USE_GLX is defined and
+# Mesa/GLX is not included in XFree86)
+.if defined(USE_MESA)
+.if (defined(USE_GLX) && ${HAVE_BUILTIN_MESA} == "NO")
+DEPENDS+=		Mesa-glx>=20000813:../../graphics/Mesa-glx
+.else
+DEPENDS+=		Mesa>=3.2.1:../../graphics/Mesa
 .endif
+.undef __BUILTIN_MESA
+.endif	# USE_MESA
 
 # Popular master sites
 MASTER_SITE_XCONTRIB+=	\
