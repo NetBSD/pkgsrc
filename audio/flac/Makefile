@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/10/14 18:07:10 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2004/10/18 14:23:29 ben Exp $
 
 DISTNAME=	flac-1.1.1
 PKGREVISION=	1
@@ -23,6 +23,13 @@ CONFIGURE_ENV+=		ac_cv_path_XMMS_CONFIG="no"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
+.endif
+
+.if !empty(MACHINE_PLATFORM:M*-*-ppc)
+.if ${OPSYS} != "Darwin"
+CONFIGURE_ARGS+=	--disable-asm-optimizations
+CONFIGURE_ARGS+=	--disable-altivec
+.endif
 .endif
 
 # This version of flac doesn't build with SunPro yet.
