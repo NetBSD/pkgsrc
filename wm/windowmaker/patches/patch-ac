@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2001/10/07 13:08:32 rh Exp $
+$NetBSD: patch-ac,v 1.5 2001/12/25 15:10:50 wiz Exp $
 
---- wrlib/Makefile.in.orig	Fri Oct  5 02:52:35 2001
+--- wrlib/Makefile.in.orig	Tue Dec 18 06:44:16 2001
 +++ wrlib/Makefile.in
-@@ -106,7 +106,7 @@
+@@ -99,7 +99,7 @@
  
  lib_LTLIBRARIES = libwraster.la
  
