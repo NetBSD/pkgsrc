@@ -1,0 +1,22 @@
+#! /bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 1998/09/05 03:21:12 garbled Exp $
+#
+
+case "$2" in
+        DEINSTALL) cat <<EOF
+
+==========================================================================
+
+Note that the inn spool directory (/var/spool/news) and log directory
+(/usr/pkg/log) are NOT deleted by the pkg_delete process.  Please remove
+these directories and all their contents manually, if they are no longer
+needed. Files in /usr/pkg/etc have not been deleted either, if you wish
+to remove them you will need to do so manually as well.
+
+==========================================================================
+
+EOF
+        ;;
+esac
+

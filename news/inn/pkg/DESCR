@@ -1,0 +1,10 @@
+This is the public release of version 2.1 of InterNet News (INN). This work
+is sponsored by the Internet Software Consortium.
+
+InterNetNews is a complete Usenet system.  The cornerstone of the package
+is innd, an NNTP server that multiplexes all I/O. Newsreading is handled
+by a separate server, nnrpd, that is spawned for each client.  Both innd
+and nnrpd have some slight variances from the NNTP protocol.
+
+You can set the environment variable INN_SPOOL to whatever you like to 
+change the default spool directory when building this pkg.
