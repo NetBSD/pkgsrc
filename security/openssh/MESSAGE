@@ -1,20 +1,11 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.2 2001/12/05 17:03:56 wiz Exp $
+$NetBSD: MESSAGE,v 1.3 2002/02/05 04:17:31 jlam Exp $
 
-If "starter" configuration files were installed (in ${SSH_CONF_DIR})
-when the package was installed, be sure to examine them (and the man pages
-for ssh and sshd) to determine whether you want to make any changes.
+                           *===* NOTICE *===*
 
-Copies of the example configuration files are installed in
-${PREFIX}/share/examples/openssh, so those can still be used for reference
-after you have made changes to those installed in ${SSH_CONF_DIR}, or if
-you had existing configuration files, which would not be overwritten in
-the installation process.
+The config files for ${PKGNAME} must be located in:
 
-In general, you will want to set up /etc/rc.local to start sshd at boot
-time.  Something like the following should do the job:
+	${PKG_SYSCONFDIR}
 
-# Run sshd if installed and configured
-${PREFIX}/etc/rc.d/sshd
-
+and the example files are located in ${EGDIR}.
 ==========================================================================
