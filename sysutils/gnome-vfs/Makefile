@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/02/14 17:21:52 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2004/02/21 18:28:06 kristerw Exp $
 
 DISTNAME=		gnome-vfs-1.0.5
 PKGREVISION=		5
@@ -30,5 +30,6 @@ CONFIGURE_ARGS+=	--with-libiconv=yes
 .include "../../archivers/bzip2/buildlink2.mk"
 .include "../../databases/gnome-mime-data/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/GConf/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
