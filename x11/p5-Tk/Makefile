@@ -3,8 +3,8 @@
 # Date created:				October 21st 1996
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-#   $NetBSD: Makefile,v 1.2 1997/11/22 05:24:50 hubertf Exp $
-#   FreeBSD Id: Makefile,v 1.14 1997/09/14 04:00:00 jfitz Exp
+# $NetBSD: Makefile,v 1.3 1998/01/25 00:07:17 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.14 1997/09/14 04:00:00 jfitz Exp
 #
 
 DISTNAME=	Tk402.002
@@ -37,7 +37,6 @@ MAN3=		Bundle::Tk.3 Tk::Adjuster.3 Tk::After.3 \
 		Tk::Xrm.3 Tk::demos::widget_lib::WidgetDemo.3 \
 		Tk::pTk.3 Tk::widgets.3 blib.3
 MAN3PREFIX=	${PREFIX}/lib/perl5
-
 
 do-configure:
 		@ cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
