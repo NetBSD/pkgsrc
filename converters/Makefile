@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2002/05/10 16:08:56 jschauma Exp $
+# $NetBSD: Makefile,v 1.43 2002/05/25 23:23:40 rh Exp $
 #
 
 COMMENT=	document format and character code converters
@@ -25,6 +25,7 @@ SUBDIR+=	recode
 SUBDIR+=	rpm2cpio
 SUBDIR+=	rtf2html
 SUBDIR+=	ruby-iconv
+SUBDIR+=	tex2rtf
 SUBDIR+=	ttf2pt1
 SUBDIR+=	txt2html
 SUBDIR+=	txt2man
