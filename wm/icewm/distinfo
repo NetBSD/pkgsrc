@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/08/22 10:58:34 martti Exp $
+$NetBSD: distinfo,v 1.8 2002/08/25 21:51:34 jlam Exp $
 
 SHA1 (icewm-1.2.0.tar.gz) = bef4daba4bb94120f08f90755a9bc3518c254c21
 Size (icewm-1.2.0.tar.gz) = 684306 bytes

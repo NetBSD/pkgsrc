@@ -1,5 +1,5 @@
 ======================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 22:11:37 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2002/08/25 21:52:44 jlam Exp $
 
 The rxvt binary is able to use greek keyboard extensions and
 multibyte character encodings. Due to errors in the current
@@ -9,5 +9,5 @@ for users in other locales).
 
 The multibyte character encoding support is compiled in, but
 by default disabled. To enable it, please edit the file 
-${X11BASE}/lib/X11/app-defaults/Rxvt.
+${PREFIX}/lib/X11/app-defaults/Rxvt.
 ======================================================================

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:40:28 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/08/25 21:52:27 jlam Exp $
 
 .if !defined(XBAE_BUILDLINK2_MK)
 XBAE_BUILDLINK2_MK=	# defined

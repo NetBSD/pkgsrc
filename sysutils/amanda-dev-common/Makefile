@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/02 13:28:15 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/25 21:50:54 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		amaco
 
 COMMENT=		Libraries and binaries used by both the client and server parts of amanda
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-dev-common/Makefile.common"

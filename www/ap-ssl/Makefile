@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2002/08/01 01:03:17 mycroft Exp $
+# $NetBSD: Makefile,v 1.59 2002/08/25 21:51:52 jlam Exp $
 
 DISTNAME=		mod_ssl-2.8.10-1.3.26
 PKGNAME=		ap-ssl-2.8.10
@@ -14,13 +14,19 @@ COMMENT=		SSL/TLS protocols module for Apache
 
 CONFLICTS=		apache-1.3.[0-9] apache-*modssl-[0-9]* apache6-[0-9]*
 
-DEPENDS+=		apache-1.3.26nb4:../../www/apache
+BUILDLINK_DEPENDS.apache=	apache-1.3.26nb4
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
+APACHE_MODULE=		YES
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${_USE_RPATH} == "yes"
 MAKE_ENV+=		SSL_RPATH_LDFLAGS="-R${SSLBASE}/lib"
+.endif
 
 PKG_SYSCONFSUBDIR?=	httpd
 
@@ -93,7 +99,8 @@ post-install:
 	cd ${WRKSRC}/pkg.sslcfg; ${INSTALL_DATA} README.PRM *.prm	\
 		${EGDIR}/ssl.prm
 
-.include "../../security/openssl/buildlink.mk"
-.include "../../www/apache/buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../www/apache/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

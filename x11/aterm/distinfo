@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/08/03 13:00:29 hubertf Exp $
+$NetBSD: distinfo,v 1.6 2002/08/25 21:52:30 jlam Exp $
 
 SHA1 (aterm-0.4.2.tar.gz) = 8ce3f1fcdc12805068ff5acde6f130a22e1f5b9b
 Size (aterm-0.4.2.tar.gz) = 312730 bytes
