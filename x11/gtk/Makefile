@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/07/19 21:21:20 tv Exp $
+# $NetBSD: Makefile,v 1.15 1998/07/24 01:57:01 tv Exp $
 
 DISTNAME=	gtk+-1.0.4
 CATEGORIES=	x11
@@ -8,15 +8,13 @@ MASTER_SITES=	ftp://ftp.gimp.org/pub/gtk/v1.0/ \
 
 MAINTAINER=	bsieker@techfak.uni-bielefeld.de
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/libtool:../../devel/libtool
-
 CONFLICTS=	gtk+-1.0.0
 
+USE_LIBTOOL=	yes
 USE_X11=	yes
 
 GNU_CONFIGURE=  yes
-CONFIGURE_ENV=	LIBTOOL=${LOCALBASE}/bin/libtool \
-		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
+CONFIGURE_ENV=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 		INSTALL_DATA="${INSTALL_DATA}"
 
 CFLAGS=		-pipe -O2

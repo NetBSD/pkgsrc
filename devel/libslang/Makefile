@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/07/15 14:15:59 tv Exp $
+# $NetBSD: Makefile,v 1.10 1998/07/24 01:57:00 tv Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:41 max Exp 
 #
 
@@ -9,10 +9,8 @@ MASTER_SITES=   ftp://space.mit.edu/pub/davis/slang/
 
 MAINTAINER=     packages@netbsd.org
 
-BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
-
 GNU_CONFIGURE=  yes
-MAKE_ENV=	LIBTOOL=${PREFIX}/bin/libtool
+USE_LIBTOOL=	yes
 WRKSRC=         ${WRKDIR}/slang
 
 .include "../../mk/bsd.pkg.mk"
