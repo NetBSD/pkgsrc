@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/03/10 14:12:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/06/27 07:09:26 epg Exp $
 
-DISTNAME=	fvwm-2.5.7
+DISTNAME=	fvwm-2.5.10
 PKGNAME=	${DISTNAME:S/fvwm/&-devel/}
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--without-rplay-library
 CONFIGURE_ARGS+=	--without-stroke-library
 
 post-install:
+	${INSTALL_MAN} ${WRKSRC}/modules/FvwmGtk/FvwmGtk.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/fvwm
 	cd ${WRKSRC}/sample.fvwmrc && ${INSTALL_DATA} \
 		`${LS} | ${GREP} -v Makefile` \
