@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2004/11/17 21:10:51 snj Exp $
+# $NetBSD: Makefile,v 1.23 2005/04/02 19:54:01 jdolecek Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	quake3arena-demo-1.11.6
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/quake3/linux/ \
@@ -17,7 +17,8 @@ CONFLICTS=	quake3arena-[0-9]*
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Linux"
-DEPENDS+=	suse_linux>=6.3:../../emulators/${SUSE_DIR_PREFIX}_linux
+DEPENDS+=	suse_base>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
+DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_base
 DEPENDS+=	suse_glx>=6.4:../../emulators/${SUSE_DIR_PREFIX}_glx
 .include "../../emulators/suse_linux/Makefile.application"
 .else
