@@ -1,0 +1,50 @@
+$NetBSD: patch-al,v 1.1.1.1 2005/02/16 22:17:34 jschauma Exp $
+
+--- ./src/rt/Rmakefile.orig	2005-02-15 14:43:54.000000000 -0500
++++ ./src/rt/Rmakefile	2005-02-15 14:52:48.000000000 -0500
+@@ -5,9 +5,8 @@
+ 
+ OPT = -O
+ MACH = -DBSD
+-CFLAGS = -I../common -L../lib $(OPT) $(MACH)
++CFLAGS += -I../common -L../lib $(OPT) $(MACH) ${LDFLAGS}
+ SPECIAL = aed
+-CC = cc
+ MLIB = -lm
+ LINT = lint
+ LINTFLAGS = -DBSD
+@@ -16,21 +15,21 @@
+ # The following are user-definable:
+ #
+ DESTDIR = .
+-INSTDIR = /usr/local/bin
++INSTDIR = @WRKSRC@/radiance/bin
+ INSTALL = cp
+ 
+ #
+ # The following paths must exist and be relative to root:
+ #
+-DEVDIR = $(INSTDIR)/dev
+-LIBDIR = /usr/local/lib/ray
++DEVDIR = @WRKSRC@/radiance/dev
++LIBDIR = @WRKSRC@/radiance/lib
+ 
+ #
+ # Library routines:
+ #
+ RLIB = ../lib/libradiance.a
+ RCLIB = ../lib/libraycalls.a
+-LIBS = -lrt $(MLIB)
++LIBS = -lrt $(MLIB) ${LDFLAGS}
+ 
+ #
+ # Device drivers for rvu (see also devtable.c):
+@@ -159,7 +158,7 @@
+ # end of dispersion compiles.
+ 
+ devcomm.o:	devcomm.c
+-	$(CC) $(CFLAGS) -DDEVPATH=\"$(DEVDIR)\" -c devcomm.c
++	$(CC) $(CFLAGS) -DDEVPATH=\"@PREFIX@/radiance/dev\" -c devcomm.c
+ 
+ aed.o:	aed.c
+ 	$(CC) $(CFLAGS) -Daed_init=dinit -c aed.c
