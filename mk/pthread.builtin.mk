@@ -1,4 +1,4 @@
-# $NetBSD: pthread.builtin.mk,v 1.3 2004/11/26 08:12:59 jlam Exp $
+# $NetBSD: pthread.builtin.mk,v 1.4 2004/11/26 08:18:30 jlam Exp $
 
 .for _lib_ in pthread c_r rt
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -38,6 +38,7 @@ CHECK_BUILTIN.pthread?=	no
 
 .if !empty(USE_BUILTIN.pthread:M[yY][eE][sS])
 BUILDLINK_PREFIX.pthread=	/usr
+BUILDLINK_CFLAGS.pthread=	# empty
 BUILDLINK_LDFLAGS.pthread=	# empty
 
 # only pass -pthread on platforms known to support it.
