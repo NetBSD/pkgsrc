@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7828 2004/11/11 23:42:49 seb Exp $
+$NetBSD: CHANGES,v 1.7829 2004/11/12 01:46:51 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5236,3 +5236,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kde to 3.3.1nb1 [tron 2004-11-11]
 	Updated libxml2 to 2.6.16 [recht 2004-11-11]
 	Added p5-Module-CoreList-1.97 [seb 2004-11-11]
+	Moved p5-ExtUtils-XSBuilder from www to devel [seb 2004-11-12]
