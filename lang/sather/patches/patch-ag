@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 2003/03/10 06:25:36 jmc Exp $
+$NetBSD: patch-ag,v 1.3 2003/04/29 23:40:03 jtb Exp $
 
 --- System/Common/CONFIG.proto.orig	Wed Nov  3 18:48:17 1999
 +++ System/Common/CONFIG.proto
@@ -13,7 +13,7 @@ $NetBSD: patch-ag,v 1.2 2003/03/10 06:25:36 jmc Exp $
 +VERSION:		"1.2.1";
 +C_COMPILER:		"@CC@";
 +CC_OPTIONS:		"-I@GC_PREFIX@/include";
-+GC_LINK:		"-L@GC_PREFIX@/lib -Wl,${_OPSYS_RPATH_NAME}@GC_PREFIX@/lib -lgc";
++GC_LINK:		"-L@GC_PREFIX@/lib -Wl,@_OPSYS_RPATH_NAME@@GC_PREFIX@/lib -lgc";
  LINK_OPTIONS:		"-lm";
 -MAKE_COMMAND:		"make";
 +MAKE_COMMAND:		"@GMAKE@";
