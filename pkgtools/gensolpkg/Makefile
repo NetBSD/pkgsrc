@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 1999/11/30 13:14:56 agc Exp $
+# $NetBSD: Makefile,v 1.8 2000/01/04 12:06:58 agc Exp $
 #
 
-DISTNAME=	gensolpkg-1.5
+DISTNAME=	gensolpkg-1.6
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
