@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 09:54:22 wiz Exp $
+$NetBSD: distinfo,v 1.3 2001/10/29 01:16:44 wiz Exp $
 
-SHA1 (Image-Size-2.91.tar.gz) = b3967bedbed97339f33561a1ff30ff0d1ff011e7
-Size (Image-Size-2.91.tar.gz) = 65055 bytes
+SHA1 (Image-Size-2.94.tar.gz) = ea9925d615b8a707490466309f6745fb2e2ab393
+Size (Image-Size-2.94.tar.gz) = 119517 bytes
