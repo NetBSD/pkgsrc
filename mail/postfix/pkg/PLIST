@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/04/09 08:10:21 simonb Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/04/10 00:19:18 bad Exp $
 etc/mailer.conf.postfix
 libexec/postfix/bounce
 libexec/postfix/cleanup
@@ -113,5 +113,8 @@ share/postfix/virtual
 @dirrm share/doc/postfix
 @dirrm libexec/postfix
 @exec mkdir -p /etc/postfix
+@exec if [ ! -f /etc/postfix/main.cf ]; then cp %D/share/postfix/main.cf /etc/postfix ; fi
+@exec if [ ! -f /etc/postfix/master.cf ]; then cp %D/share/postfix/master.cf /etc/postfix ; fi
+@exec if [ ! -d /var/spool/postfix ]; then mkdir /var/spool/postfix; chmod 755 /var/spool/postfix ; fi
 @exec ln -sf %D/share/postfix/postfix-script /etc/postfix
 @unexec rm -f /etc/postfix/postfix-script
