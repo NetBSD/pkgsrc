@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.663 2003/06/28 10:56:43 jmmv Exp $
+$NetBSD: TODO,v 1.664 2003/06/28 11:48:18 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -279,7 +279,6 @@ Suggested package updates
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre20
 	o yacas-1.0.55
-	o yasm-0.2.2 [pkg/21850]
 	o ysm-2.9.0
 	o yudit-2.7.5
 	o zenicb 1.31 (needs merge with lots of local changes)
