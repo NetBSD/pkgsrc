@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.50 2001/07/09 14:31:58 fredb Exp $
+# $NetBSD: bsd.prefs.mk,v 1.51 2001/07/10 11:13:31 tron Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -270,7 +270,9 @@ SERIAL_DEVICES?=	/dev/null
 PKG_TOOLS_BIN?=		/usr/sbin
 .elif (${OPSYS} == "SunOS")
 LOCALBASE?=             ${DESTDIR}/usr/local
-ZOULARISBASE?=		${LOCALBASE}/bsd
+.if !defined(ZOULARISBASE)
+ZOULARISBASE:=		${LOCALBASE}/bsd
+.endif
 PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
 
 .if (${X11BASE} == "/usr/openwin")
