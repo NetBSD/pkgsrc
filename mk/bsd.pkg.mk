@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1487 2004/08/05 02:10:20 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1488 2004/08/07 15:58:59 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -508,26 +508,68 @@ _NEED_PATCH=		YES
 USE_GNU_TOOLS+=		patch
 .endif
 
-PATCH_STRIP?=		-p0
-PATCH_DIST_STRIP?=	-p0
 .if defined(PATCH_DEBUG) || defined(PKG_VERBOSE)
 PATCH_DEBUG_TMP=	yes
-PATCH_ARGS?=		-d ${WRKSRC} -E ${PATCH_STRIP}
-PATCH_DIST_ARGS?=	-d ${WRKSRC} -E ${PATCH_DIST_STRIP}
 .else
 PATCH_DEBUG_TMP=	no
+.endif
+
+PATCH_STRIP?=		-p0
+.if ${PATCH_DEBUG_TMP} == "yes"
+PATCH_ARGS?=		-d ${WRKSRC} -E ${PATCH_STRIP}
+.else
 PATCH_ARGS?=		-d ${WRKSRC} --forward --quiet -E ${PATCH_STRIP}
-PATCH_DIST_ARGS?=	-d ${WRKSRC} --forward --quiet -E ${PATCH_DIST_STRIP}
 .endif
 .if defined(BATCH)
 PATCH_ARGS+=		--batch
-PATCH_DIST_ARGS+=	--batch
 .endif
-.if defined(_PATCH_CAN_BACKUP) && ${_PATCH_CAN_BACKUP} == "yes"
+.if defined(_PATCH_CAN_BACKUP) && (${_PATCH_CAN_BACKUP} == "yes")
 PATCH_ARGS+=		${_PATCH_BACKUP_ARG} .orig
-PATCH_DIST_ARGS+=	${_PATCH_BACKUP_ARG} .orig_dist
 .endif
-PATCH_FUZZ_FACTOR?=	-F0			# Default to zero fuzz
+PATCH_FUZZ_FACTOR?=	-F0	# Default to zero fuzz
+
+# The following variables control how "distribution" patches are extracted
+# and applied to the package sources.
+#
+# PATCH_DIST_STRIP is a patch option that sets the pathname strip count.
+# PATCH_DIST_ARGS is the list of arguments to pass to the patch command.
+# PATCH_DIST_CAT is the command that outputs the patch to stdout.
+#
+# For each of these variables, there is a patch-specific variant that
+# may be set, i.e. PATCH_DIST_STRIP.<patch>, PATCH_DIST_ARGS.<patch>,
+# PATCH_DIST_CAT.<patch>.
+#
+PATCH_DIST_STRIP?=		-p0
+.for i in ${PATCHFILES}
+PATCH_DIST_STRIP.${i:S/=/--/}?=	${PATCH_DIST_STRIP}
+.  if defined(PATCH_DIST_ARGS)
+PATCH_DIST_ARGS.${i:S/=/--/}?=	${PATCH_DIST_ARGS}
+.  elif ${PATCH_DEBUG_TMP} == "yes"
+PATCH_DIST_ARGS.${i:S/=/--/}?=	-d ${WRKSRC} -E ${PATCH_DIST_STRIP.${i:S/=/--/}}
+.  else
+PATCH_DIST_ARGS.${i:S/=/--/}?=	-d ${WRKSRC} --forward --quiet -E ${PATCH_DIST_STRIP.${i:S/=/--/}}
+.  endif
+.endfor
+.if defined(BATCH)
+PATCH_DIST_ARGS+=		--batch
+.  for i in ${PATCHFILES}
+PATCH_DIST_ARGS.${i:S/=/--/}+=	--batch
+.  endfor
+.endif
+.if defined(_PATCH_CAN_BACKUP) && (${_PATCH_CAN_BACKUP} == "yes")
+PATCH_DIST_ARGS+=		${_PATCH_BACKUP_ARG} .orig_dist
+.  for i in ${PATCHFILES}
+PATCH_DIST_ARGS.${i:S/=/--/}+=	${_PATCH_BACKUP_ARG} .orig_dist
+.  endfor
+.endif
+PATCH_DIST_CAT?=	{ case $$patchfile in				\
+			  *.Z|*.gz) ${GZCAT} $$patchfile ;;		\
+			  *.bz2)    ${BZCAT} $$patchfile ;;		\
+			  *)	    ${CAT} $$patchfile ;;		\
+			  esac; }
+.for i in ${PATCHFILES}
+PATCH_DIST_CAT.${i:S/=/--/}?=	{ patchfile=${i}; ${PATCH_DIST_CAT}; }
+.endfor
 
 EXTRACT_SUFX?=		.tar.gz
 
@@ -2021,26 +2063,15 @@ _LOCALPATCHFILES=	${_DFLT_LOCALPATCHFILES}
 do-patch: uptodate-digest
 .  if defined(PATCHFILES)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patches for ${PKGNAME}"
+.    for i in ${PATCHFILES}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR};			\
-	  for i in ${PATCHFILES}; do					\
-		if [ ${PATCH_DEBUG_TMP} = yes ]; then			\
-			${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patch $$i" ; \
-		fi;							\
-		case $$i in						\
-			*.Z|*.gz)					\
-				${GZCAT} $$i | ${PATCH} ${PATCH_DIST_ARGS} \
-				|| { ${ECHO} Patch $$i failed ; exit 1; } ; \
-				;;					\
-			*.bz2)						\
-				${BZCAT} $$i | ${PATCH} ${PATCH_DIST_ARGS} \
-				|| { ${ECHO} Patch $$i failed ; exit 1; } ; \
-				;;					\
-			*)						\
-				${PATCH} ${PATCH_DIST_ARGS} < $$i	\
-				|| { ${ECHO} Patch $$i failed ; exit 1; } ; \
-				;;					\
-		esac;							\
-	  done
+	if [ ${PATCH_DEBUG_TMP} = yes ]; then				\
+		${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patch ${i}"; \
+	fi;								\
+	${PATCH_DIST_CAT.${i:S/=/--/}} |				\
+	${PATCH} ${PATCH_DIST_ARGS.${i:S/=/--/}}			\
+		|| { ${ECHO} "Patch ${i} failed"; exit 1; }
+.    endfor
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	patchlist="";							\
