@@ -1,3 +1,5 @@
+# $NetBSD: smb.conf.sample,v 1.5 1999/11/16 21:23:05 jlam Exp $
+#
 # This is the main Samba configuration file. You should read the
 # smb.conf(5) manual page in order to understand the options listed
 # here. Samba has a huge number of configurable options (perhaps too
@@ -154,7 +156,7 @@
 # Un-comment the following to provide a specific roving profile share
 # the default is to use the user's home directory
 ;[Profiles]
-;    path = /usr/local/samba/profiles
+;    path = __PREFIX__/samba/profiles
 ;    browseable = no
 ;    guest ok = yes
 
