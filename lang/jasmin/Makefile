@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/10/18 21:12:11 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/12/26 20:52:10 jlam Exp $
 #
 
 DISTNAME=	jasmin-1.06
@@ -28,5 +28,5 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}/jasmin
 	${LN} -s ${PREFIX}/jasmin/bin/jasmin ${PREFIX}/bin/jasmin
 
-.include "../../mk/java.mk"
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

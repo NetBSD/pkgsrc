@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/18 21:10:02 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/12/26 20:52:10 jlam Exp $
 #
 
 DISTNAME=	javadeps-1.1
@@ -31,5 +31,5 @@ do-install:
 	cd ${WRKSRC}/doc; ${PAX} -rwpe . ${PREFIX}/share/doc/jdeps
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/jdeps ${PREFIX}/share/doc/jdeps
 
-.include "../../mk/java.mk"
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

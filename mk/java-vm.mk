@@ -1,8 +1,8 @@
-# $NetBSD: java.mk,v 1.8 2002/12/25 04:48:20 jlam Exp $
+# $NetBSD: java-vm.mk,v 1.1 2002/12/26 20:52:14 jlam Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
-# build-time or at run-time.  java.mk will:
+# build-time or at run-time.  java-vm.mk will:
 #
 #	* set PKG_JVM and PKG_JAVA_HOME to the name of the JVM used and
 #	  to the directory in which the JVM is installed, respectively;
@@ -20,8 +20,8 @@
 # PKG_JVMS_ACCEPTED is a package-settable list of JVMs that may be used as
 #	possible dependencies for the package.
 
-.if !defined(JAVA_MK)
-JAVA_MK=	# defined
+.if !defined(JAVA_VM_MK)
+JAVA_VM_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -254,4 +254,4 @@ MAKE_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
 CONFIGURE_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
 SCRIPTS_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
 
-.endif	# JAVA_MK
+.endif	# JAVA_VM_MK

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/18 21:43:09 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/12/26 20:52:13 jlam Exp $
 #
 
 DISTNAME=	xt
@@ -33,5 +33,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/xt
 	cd ${WRKDIR}/demo && ${PAX} -rwpp . ${PREFIX}/share/examples/java/xt
 
-.include "../../mk/java.mk"
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1115 2002/12/25 12:32:32 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1116 2002/12/26 20:52:13 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -55,7 +55,7 @@ _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
 
 INTERACTIVE_STAGE?=	none
 
-.if !defined(JAVA_MK)
+.if !defined(JAVA_VM_MK)
 .if defined(USE_JAVA)
 BUILD_DEFS+=		PKG_JVM
 .  if !defined(PKG_JVM)
@@ -136,7 +136,7 @@ SCRIPTS_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
 
 PATH:=			${PKG_JAVA_HOME}/bin:${PATH}
 .endif
-.endif	! JAVA_MK
+.endif	! JAVA_VM_MK
 
 # Set the default BUILDLINK_DIR, BUILDLINK_X11PKG_DIR,  BUILDLINK_X11_DIR so
 # that if no buildlink2.mk files are included, then they still point to

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/10/18 21:05:28 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/12/26 20:52:10 jlam Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
@@ -42,7 +42,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/java/ant
 	${INSTALL_DATA} ${WRKSRC}/WHATSNEW ${PREFIX}/share/doc/java/ant
 
-.include "../../mk/java.mk"
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
 
 CLASSPATH:=	${CLASSPATH}:${LOCALBASE}/lib/java/crimson.jar
