@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2000/08/02 10:53:49 agc Exp $
+# $NetBSD: Makefile,v 1.11 2001/01/21 23:43:13 veego Exp $
 #
 
-DISTNAME=	gensolpkg-1.8
+DISTNAME=	gensolpkg-1.9
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	agc@netbsd.org
-HOMEPAGE=	http://www.westley.demon.co.uk/software.html
+MAINTAINER=	veego@netbsd.org
 
 ONLY_FOR_PLATFORM=	SunOS-*-*	# uses Solaris pkgmk(1)
 
