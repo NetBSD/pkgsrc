@@ -1,8 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/09/27 10:58:44 rh Exp $
-#
-# This Makefile fragment is included by packages that use gnustep-base.
-#
-# This file was created automatically using createbuildlink 2.0.
+# $NetBSD: buildlink2.mk,v 1.2 2002/09/27 23:56:30 rh Exp $
 #
 
 .if !defined(GNUSTEP_BASE_BUILDLINK2_MK)
@@ -15,6 +11,9 @@ BUILDLINK_PKGSRCDIR.gnustep-base?=	../../devel/gnustep-base
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnustep-base=gnustep-base
 BUILDLINK_PREFIX.gnustep-base_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.gnustep-base=	share/GNUstep/System/Headers/Foundation/*
+BUILDLINK_FILES.gnustep-base+=	share/GNUstep/System/Headers/gnustep/base/*
+BUILDLINK_FILES.gnustep-base+=	share/GNUstep/System/Headers/gnustep/unicode/*
+BUILDLINK_FILES.gnustep-base+=	share/GNUstep/System/Headers/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/*
 BUILDLINK_FILES.gnustep-base+=	share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/libgnustep-base.*
 
 .include "../../devel/gmp/buildlink2.mk"
