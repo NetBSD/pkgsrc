@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.76 1998/04/24 09:15:57 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.77 1998/04/25 00:01:21 hubertf Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -42,8 +42,6 @@ NetBSD_MAINTAINER=	agc@netbsd.org
 #				  "FreeBSD," "NetBSD," or "OpenBSD" as appropriate.
 # PORTSDIR		- The root of the ports tree.  Defaults:
 #					FreeBSD/OpenBSD: /usr/ports
-#			  In NetBSD, this definition is unnecessary. However, for
-#			  completeness, the default is
 #					NetBSD:          /usr/pkgsrc
 # DISTDIR 		- Where to get gzip'd, tarballed copies of original sources
 #				  (default: ${PORTSDIR}/distfiles).
@@ -364,19 +362,21 @@ DEF_UMASK?=		0022
 .include "${.CURDIR}/Makefile.${ARCH}"
 .endif
 
-# NetBSD uses relative paths within the pkgsrc tree,
-# so there is no need for a PORTSDIR definition.
+# These need to be absolute since we don't know how deep in the ports
+# tree we are and thus can't go relative.  They can, of course, be overridden
+# by individual Makefiles or local system make configuration.
 .if (${OPSYS} == "NetBSD")
+PORTSDIR?=		/usr/pkgsrc
 LOCALBASE?=		${DESTDIR}/usr/pkg
 .else
 PORTSDIR?=		/usr/ports
 LOCALBASE?=		${DESTDIR}/usr/local
 .endif
 X11BASE?=		${DESTDIR}/usr/X11R6
-DISTDIR?=		../../distfiles
+DISTDIR?=		${PORTSDIR}/distfiles
 _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
-PACKAGES?=		../../packages
-TEMPLATES?=		../../templates
+PACKAGES?=		${PORTSDIR}/packages
+TEMPLATES?=		${PORTSDIR}/templates
 
 .if exists(${.CURDIR}/patches.${ARCH}-${OPSYS})
 PATCHDIR?=		${.CURDIR}/patches.${ARCH}-${OPSYS}
@@ -429,26 +429,26 @@ BUILD_DEPENDS+=	${EXEC_DEPENDS}
 RUN_DEPENDS+=	${EXEC_DEPENDS}
 .endif
 .if defined(USE_GMAKE)
-BUILD_DEPENDS+=		${GMAKE}:../../devel/gmake
+BUILD_DEPENDS+=		${GMAKE}:${PORTSDIR}/devel/gmake
 MAKE_PROGRAM=		${GMAKE}
 .else
 MAKE_PROGRAM=		${MAKE}
 .endif
 .if defined(USE_PERL5)
-BUILD_DEPENDS+=		perl5.00404:../../lang/perl5
-RUN_DEPENDS+=		perl5.00404:../../lang/perl5
+BUILD_DEPENDS+=		perl5.00404:${PORTSDIR}/lang/perl5
+RUN_DEPENDS+=		perl5.00404:${PORTSDIR}/lang/perl5
 .endif
 .if defined(INFO_FILES)
 USE_GTEXINFO=		yes
 .endif
 .if defined(USE_GTEXINFO)
-BUILD_DEPENDS+=		${LOCALBASE}/bin/install-info:../../devel/gtexinfo
-RUN_DEPENDS+=		${LOCALBASE}/bin/install-info:../../devel/gtexinfo
+BUILD_DEPENDS+=		${LOCALBASE}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+RUN_DEPENDS+=		${LOCALBASE}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 .endif
 
 
-.if exists(../../../Makefile.inc)
-.include "../../../Makefile.inc"
+.if exists(${PORTSDIR}/../Makefile.inc)
+.include "${PORTSDIR}/../Makefile.inc"
 .endif
 
 # Don't change these!!!  These names are built into the _TARGET_USE macro,
@@ -578,7 +578,7 @@ WRKSRC?=		${WRKDIR}/${DISTNAME}
 
 .if defined(WRKOBJDIR)
 # XXX Is pwd -P available in FreeBSD's /bin/sh?
-__canonical_PORTSDIR!=	cd ../..; pwd -P
+__canonical_PORTSDIR!=	cd ${PORTSDIR}; pwd -P
 __canonical_CURDIR!=	cd ${.CURDIR}; pwd -P
 PORTSUBDIR=		${__canonical_CURDIR:S,${__canonical_PORTSDIR}/,,}
 .endif
@@ -836,7 +836,7 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
           PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin \
 		  WRKDIR=${WRKDIR} WRKSRC=${WRKSRC} PATCHDIR=${PATCHDIR} \
 		  SCRIPTDIR=${SCRIPTDIR} FILESDIR=${FILESDIR} \
-		  PORTSDIR=${.CURDIR}/../.. DEPENDS="${DEPENDS}" \
+		  PORTSDIR=${PORTSDIR} DEPENDS="${DEPENDS}" \
 		  PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
 
 .if defined(BATCH)
@@ -970,7 +970,7 @@ all:
 	@cd ${.CURDIR} && ${SETENV} CURDIR=${.CURDIR} DISTNAME=${DISTNAME} \
 	  DISTDIR=${DISTDIR} WRKDIR=${WRKDIR} WRKSRC=${WRKSRC} \
 	  PATCHDIR=${PATCHDIR} SCRIPTDIR=${SCRIPTDIR} \
-	  FILESDIR=${FILESDIR} PORTSDIR=${.CURDIR}/../.. PREFIX=${PREFIX} \
+	  FILESDIR=${FILESDIR} PORTSDIR=${PORTSDIR} PREFIX=${PREFIX} \
 	  DEPENDS="${DEPENDS}" BUILD_DEPENDS="${BUILD_DEPENDS}" \
 	  RUN_DEPENDS="${RUN_DEPENDS}" X11BASE=${X11BASE} \
 	${ALL_HOOK}
@@ -1675,7 +1675,7 @@ package-name:
 
 .if !target(package-path)
 package-path:
-	@pwd | sed s@`cd ${.CURDIR}/../.. ; pwd`/@@g
+	@pwd | sed s@`cd ${PORTSDIR} ; pwd`/@@g
 .endif
 
 # Show (recursively) all the packages this package depends on.
