@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.128 2000/03/26 07:59:30 enami Exp $
+# $NetBSD: mk.conf.example,v 1.129 2000/03/26 19:56:25 fredb Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -12,6 +12,11 @@
 # ************************************************************************
 # NOTE TO PEOPLE EDITING THIS FILE - USE LEADING SPACES, NOT LEADING TABS.
 # ************************************************************************
+
+# Deal with namespace issues. BSD_PKG_MK is always defined when "make"
+# is invoked in pkgsrc, but never in src or xsrc. Don't forget to close
+# the conditional with ".endif"!
+.ifndef BSD_PKG_MK
 
 #
 #	Firstly, definitions for NetBSD and package collection
@@ -724,3 +729,5 @@ PAPERSIZE=	A4
 #MASTER_SITE_TEX_CTAN=	ftp://sunsite.org.uk/pub/packages/tex/uk-tex/
 #MASTER_SITE_SUNSITE=	ftp://sunsite.org.uk/pub/Mirrors/sunsite.unc.edu/pub/Linux/
 #MASTER_SITE_BACKUP=	ftp://sunsite.org.uk/pub/packages/NetBSD/packages/distfiles/
+
+.endif # BSD_PKG_MK
