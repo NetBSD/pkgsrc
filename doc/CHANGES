@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5231 2004/03/12 11:15:17 adam Exp $
+$NetBSD: CHANGES,v 1.5232 2004/03/12 13:10:07 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1437,3 +1437,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xdeview to 0.5.18nb2 [tron 2004-03-12]
 	Updated py-gtk2 to 2.2.0 [recht 2004-03-12]
 	Updated wine to 20040309 [adam 2004-03-12]
+        Updated sketch to 0.6.16 [jmmv 2004-03-12]
+        Renamed sketch to skencil [jmmv 2004-03-12]
