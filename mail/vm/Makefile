@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/07/17 21:47:10 grant Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/31 16:12:09 seb Exp $
 
 DISTNAME=	vm-7.17
 CATEGORIES=	mail
@@ -20,6 +20,9 @@ HOMEPAGE=	http://www.wonderworks.com/vm/
 COMMENT=	VM (View Mail) is an advanced mail user agent for Emacs
 
 .include "../../mk/emacs.mk"
+
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
 
 .if ${EMACS_FLAVOR} == "xemacs"
 INFODIR=	${PREFIX}/lib/xemacs/site-packages/info
@@ -50,5 +53,4 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} qp-decode qp-encode		\
 		base64-decode base64-encode ${BINDIR}
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
