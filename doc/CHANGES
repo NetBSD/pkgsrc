@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1704 2003/03/21 18:42:23 seb Exp $
+$NetBSD: CHANGES,v 1.1705 2003/03/21 20:05:05 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1215,3 +1215,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ezmlm-idx to 0.40nb1 [jmmv 2003-03-21]
 	Updated dillo to 0.7.1.2 [jmmv 2003-03-21]
 	Updated openssl to 0.9.6gnb2 [seb 2003-03-21]
+	Updated troffcvt to 1.04nb1 [jmmv 2003-03-21]
