@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1816 2003/04/01 08:32:30 rh Exp $
+$NetBSD: CHANGES,v 1.1817 2003/04/01 08:34:04 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1362,3 +1362,4 @@ Changes to the packages collection and infrastructure in 2003:
 		[mrg 2003-04-10]
 	Updated gnustep-make to 1.6.0 [rh 2003-04-01]
 	Updated gnustep-objc to 1.2.3 [rh 2003-04-01]
+	Updated gnustep-base to 1.6.0 [rh 2003-04-01]
