@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/12/04 17:20:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/01/23 17:36:59 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/tcltklib.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/tcltk.rb
 ${RUBY_DOCDIR}/tcltklib/MANUAL.ja
@@ -12,6 +12,8 @@ ${RUBY_EXAMPLESDIR}/tcltklib/sample2.rb
 ${RUBY_EXAMPLESDIR}/tcltklib/demo/lines0.tcl
 ${RUBY_EXAMPLESDIR}/tcltklib/demo/lines1.rb
 ${RUBY_EXAMPLESDIR}/tcltklib/demo/lines2.rb
+${RUBY_EXAMPLESDIR}/tcltklib/demo/lines3.rb
+${RUBY_EXAMPLESDIR}/tcltklib/demo/lines4.rb
 ${RUBY_EXAMPLESDIR}/tcltklib/demo/safeTk.rb
 @dirrm ${RUBY_EXAMPLESDIR}/tcltklib/demo
 @dirrm ${RUBY_EXAMPLESDIR}/tcltklib
