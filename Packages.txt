@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.106 2000/08/16 19:08:20 dmcmahill Exp $
+# $NetBSD: Packages.txt,v 1.107 2000/08/17 15:53:58 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -895,12 +895,6 @@ Here's how to use libtool in a pkg in six simple steps:
    include the ELF symlink files (.so.major, .so); those are added
    automatic.  
 
-Do not use pkglibtool!  Previously, the package system used its
-own version of libtool from pkgtools.  However, over time, this
-version became outdated and is now deprecated.  You may see some
-definitions of USE_PKGLIBTOOL in existing packages that still use
-this outdated version of libtool.  Please do not use this definition
-in new packages!
 
  6.3 Using libtool on GNU packages that already support libtool
  ==============================================================
@@ -913,6 +907,7 @@ overridden, using the devel/libtool instead of the pkg's own libtool.
 If the pkg already has an original "libtool" which we can replace with
 devel/libtool you may have to specify LIBTOOL_OVERRIDE to the package
 Makefile.
+
 
  6.4 Gotchas of FreeBSD ports
  ============================
