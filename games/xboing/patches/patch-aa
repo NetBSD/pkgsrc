@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2002/08/10 02:27:47 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.6 2002/09/23 10:21:19 jlam Exp $
 
 --- Imakefile.orig	Fri Nov 22 02:28:46 1996
 +++ Imakefile
@@ -14,8 +14,8 @@ $NetBSD: patch-aa,v 1.5 2002/08/10 02:27:47 dmcmahill Exp $
  
 -    XPMLIB 				= -L/usr/X11/lib -lXpm
 -    XPMINCLUDE 			= -I/usr/X11/include/X11
-+    XPMLIB 			= -L$(BUILDLINK_DIR)/lib -lXpm
-+    XPMINCLUDE 			= -I$(BUILDLINK_DIR)/include/X11
++    XPMLIB 			= -L$(X11BASE)/lib -lXpm
++    XPMINCLUDE 			= -I$(X11BASE)/include/X11
      XBOINGINCLUDE 		= -I./include
 -    LEVEL_INSTALL_DIR 	= $(XBOING_DIR)/levels
 +    LEVEL_INSTALL_DIR 		= $(XBOING_DIR)/levels
@@ -43,7 +43,7 @@ $NetBSD: patch-aa,v 1.5 2002/08/10 02:27:47 dmcmahill Exp $
      AUDIO_SRC 		= audio/LINUXaudio.c
      AUDIO_INCLUDE 	=
 -    AUDIO_LIB 		= 
-+    AUDIO_LIB 		= -lossaudio
++    AUDIO_LIB 		= $(LIBOSSAUDIO)
  #endif /* linux */
  
  #if defined(svr4) && defined(COMPILE_IN_AUDIO)
