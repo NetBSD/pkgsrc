@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2001/02/07 09:56:45 tron Exp $
+# $NetBSD: Makefile,v 1.61 2001/02/13 11:38:23 kei Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -98,6 +98,8 @@ post-extract:
 	${CP} ${FILESDIR}/ap_include_extern.h ${WRKSRC}/src/include
 	${CP} ${WRKDIR}/${SSL_DISTNAME}/pkg.eapi/*.c ${WRKSRC}/src/ap
 	${CP} ${WRKDIR}/${SSL_DISTNAME}/pkg.eapi/*.h ${WRKSRC}/src/include
+	${CHMOD} a-x ${WRKSRC}/htdocs/README.rus ${WRKSRC}/htdocs/index.* \
+	    ${WRKSRC}/htdocs/apache_pb.gif
 
 pre-patch:
 	cd ${WRKSRC} && ${CAT}						\
