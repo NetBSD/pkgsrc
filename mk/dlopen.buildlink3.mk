@@ -1,41 +1,30 @@
-# $NetBSD: dlopen.buildlink3.mk,v 1.6 2004/11/26 01:58:47 jlam Exp $
+# $NetBSD: dlopen.buildlink3.mk,v 1.7 2004/11/26 07:05:19 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles and
 # buildlink3.mk files for the packages that use dlopen().
-#
-# DLOPEN_REQUIRE_PTHREADS is a user- and package-settable yes/no variable
-#	whose value decides whether pthread.buildlink3.mk is automatically
-#	included or not.  Its default value depends on whether native
-#	pthreads exist.
-#
-# Including pthread.buildlink3.mk is deferred until bsd.pkg.mk.
 #
 DLOPEN_BUILDLINK3_MK:=	${DLOPEN_BUILDLINK3_MK}+
 
 .include "../../mk/bsd.prefs.mk"
 
-# The following platforms require pthreads to be linked into the
-# application if it uses dlopen() or else the applications will core
-# dump when they dlopen a shared module that _is_ linked with pthread
-# support.
-#
-_DLOPEN_REQUIRE_PTHREAD_PLATFORMS=					\
-	NetBSD-2.[0-9]-* NetBSD-2.[0-8][0-9]*-* NetBSD-2.9[0-8]*-*	\
-	NetBSD-2.99.[0-9]-* NetBSD-2.99.10-*
+.if !empty(DLOPEN_BUILDLINK3_MK:M+)
+CHECK_BUILTIN.dl:=	yes
+.include "../../mk/dlopen.builtin.mk"
+CHECK_BUILTIN.dl:=	no
+.endif	# DLOPEN_BUILDLINK3_MK
 
-_DLOPEN_REQUIRE_PTHREADS?=	no
-.for _pattern_ in ${_DLOPEN_REQUIRE_PTHREAD_PLATFORMS}
-.  if !empty(MACHINE_PLATFORM:M${_pattern_})
-.    if !empty(PREFER_NATIVE_PTHREADS:M[yY][eE][sS])
-_DLOPEN_REQUIRE_PTHREADS=	yes
-.    endif
-.  endif
-.endfor
+DL_AUTO_VARS?=	no
 
-.if defined(DLOPEN_REQUIRE_PTHREADS)
-_DLOPEN_REQUIRE_PTHREADS:=	${DLOPEN_REQUIRE_PTHREADS}
+.if !empty(USE_BUILTIN.dl)
+BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Ndl}
+BUILDLINK_PACKAGES+=		dl
+BUILDLINK_BUILTIN_MK.dl=	../../mk/dlopen.builtin.mk
+BUILDLINK_AUTO_VARS.dl=		${DL_AUTO_VARS}
+.elif ${OPSYS} == "Darwin"
+.  include "../../devel/dlcompat/buildlink3.mk"
+BUILDLINK_AUTO_VARS.dlcompat=	${DL_AUTO_VARS}
 .else
-DLOPEN_REQUIRE_PTHREADS=	${_DLOPEN_REQUIRE_PTHREADS}
+PKG_SKIP_REASON=	"${PKGNAME} requires a working dlopen()."
 .endif
 
 .if !empty(DLOPEN_BUILDLINK3_MK:M+)
@@ -43,15 +32,9 @@ DLOPEN_REQUIRE_PTHREADS=	${_DLOPEN_REQUIRE_PTHREADS}
 # Define user-visible DL_{CFLAGS,LDFLAGS,LIBS} as compiler options used
 # to compile/link code that uses dl*() functions.
 #
-.  if !empty(_DLOPEN_REQUIRE_PTHREADS:M[yY][eE][sS])
-DL_CFLAGS=	${PTHREAD_CFLAGS}
-DL_LDFLAGS=	${PTHREAD_LDFLAGS}
-DL_LIBS=	${PTHREAD_LIBS}
-.  else
-DL_CFLAGS=	# empty
-DL_LDFLAGS=	# empty
-DL_LIBS=	# empty
-.  endif
+DL_CFLAGS=	${BUILDLINK_CFLAGS.dl}
+DL_LDFLAGS=	${BUILDLINK_LDFLAGS.dl}
+DL_LIBS=	${BUILDLINK_LIBS.dl}
 CONFIGURE_ENV+=	DL_CFLAGS="${DL_CFLAGS}"
 CONFIGURE_ENV+=	DL_LDFLAGS="${DL_LDFLAGS}"
 CONFIGURE_ENV+=	DL_LIBS="${DL_LIBS}"
