@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2002/03/22 06:57:34 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/04/17 10:22:28 shell Exp $
 #
 
-DISTNAME=	IO-Tty-1.00
+DISTNAME=	IO-Tty-1.02
 PKGNAME=	p5-${DISTNAME:C/T/t/}
 SVR4_PKGNAME=	p5itt
 CATEGORIES=	devel perl5
