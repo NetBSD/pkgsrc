@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1484 2004/03/09 01:01:32 minskim Exp $
+$NetBSD: TODO,v 1.1485 2004/03/09 13:59:01 markd Exp $
 
 Suggested new packages
 ======================
@@ -225,7 +225,6 @@ Suggested package updates
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o jpilot-0.99.7 [pkg/24635]
 	o kaffe-1.1.4 [pkg/24507]
-	o kdevelop-3.0.1
 	o lavaps-2.4
 	o leafnode-1.9.50
 	o libaudiofile-0.2.6
