@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2002/10/03 12:08:46 markd Exp $
+
+--- kpilot/conduits/expense/Makefile.am.orig	Tue Jun 25 00:07:11 2002
++++ kpilot/conduits/expense/Makefile.am	Thu Oct  3 15:23:42 2002
+@@ -14,7 +14,7 @@
+ libexpenseconduit_la_SOURCES = expenseConduit.ui setupDialog.cc \
+ 	expense.cc expense-factory.cc
+ libexpenseconduit_la_LDFLAGS = $(KDE_RPATH) -L../../lib
+-libexpenseconduit_la_LIBADD  =  -lkpilot
++libexpenseconduit_la_LIBADD  =  ../../lib/libkpilot.la
+ 
+ # this option you can leave out. Just, if you use "make dist", you need it
+ noinst_HEADERS = expense.h setupDialog.h 
