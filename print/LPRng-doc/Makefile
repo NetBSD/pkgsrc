@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/04/10 20:10:18 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/04/16 18:02:00 jmc Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/10/21 00:57:27 steve Exp
 #
 
@@ -18,8 +18,8 @@ NO_BUILD=	yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/LPRng
-	${PAX} -O -zr -s "#^${DISTNAME}/#${PREFIX}/share/doc/LPRng/#" \
-		'*.dvi' '*.gif' '*.html' '*.ps' '*.txt' \
-		-f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
+	${PAX} -O -zr -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
+		-s "#^${DISTNAME}/#${PREFIX}/share/doc/LPRng/#" \
+		'*.dvi' '*.gif' '*.html' '*.ps' '*.txt'
 
 .include "../../mk/bsd.pkg.mk"
