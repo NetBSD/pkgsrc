@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/01 18:51:26 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/16 13:47:17 jmmv Exp $
 bin/gconf-editor
 man/man1/gconf-editor.1
 share/applications/gconf-editor.desktop
@@ -17,11 +17,13 @@ ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gconf-editor.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gconf-editor.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gconf-editor.mo
@@ -71,5 +73,5 @@ share/pixmaps/gconf-editor/folder-closed.png
 share/pixmaps/gconf-editor/folder-open.png
 share/pixmaps/gconf-editor/stock-about-16.png
 @dirrm share/pixmaps/gconf-editor
-@comment in xdg-dirs: share/pixmaps
-@comment in xdg-dirs: share/applications
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/applications
