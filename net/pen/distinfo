@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/04/13 11:43:25 cjep Exp $
+$NetBSD: distinfo,v 1.6 2003/10/30 23:36:30 xtraeme Exp $
 
-SHA1 (pen-0.10.1.tar.gz) = 9684db94c03a8244076f7367b59617b41b867466
-Size (pen-0.10.1.tar.gz) = 88753 bytes
+SHA1 (pen-0.12.0.tar.gz) = e583532f81c5961e26ec625009e2b09a99690ef0
+Size (pen-0.12.0.tar.gz) = 94808 bytes
