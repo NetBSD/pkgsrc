@@ -1,24 +1,19 @@
-# $NetBSD: Makefile,v 1.18 2004/04/11 05:00:33 snj Exp $
+# $NetBSD: Makefile,v 1.19 2004/09/21 01:40:17 dmcmahill Exp $
 #
 
-DISTNAME=	fastcap-2.0-15Jul92
-PKGNAME=	fastcap-2.0.19920715
+DISTNAME=	fastcap-2.0-18Sep92
+PKGNAME=	fastcap-2.0.19920918
 CATEGORIES=	cad
-MASTER_SITES=	ftp://rle-vlsi.mit.edu/pub/fastcap/ \
-		ftp://rle-vlsi.mit.edu/pub/fastcap/postscript/
-DISTFILES=	fastcap-2.0-15Jul92.tar.Z \
-		ug.ps.Z \
-		mtt.ps.Z \
-		tcad.ps.Z
+MASTER_SITES=	http://www.rle.mit.edu/cpg/codes/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://kontiki.mit.edu/rle/research/info_research_proj.html
+HOMEPAGE=	http://www.rle.mit.edu/cpg/research_codes.htm
 COMMENT=	Fast 3-D capacitance solver
 
-DIST_SUBDIR=	fastcap
-EXTRACT_ONLY=	fastcap-2.0-15Jul92.tar.Z
+BUILD_DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
 
-WRKSRC=		${WRKDIR}/fastcap
+WRKSRC=		${WRKDIR}
 USE_BUILDLINK3=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
@@ -27,6 +22,15 @@ CONFIGURE_ARGS=		4
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
 .endif
+
+post-patch:
+	${CHMOD} 755 ${WRKSRC}/config
+
+post-build:
+	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} manual
+.for file in mtt tcad ug
+	cd ${WRKSRC}/doc && dvips -o ${file}.ps ${file}.dvi
+.endfor
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/fastcap ${PREFIX}/bin
@@ -71,12 +75,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/testrun.sh ${PREFIX}/share/examples/fastcap
 	${INSTALL_DATA} ${WRKSRC}/examples/via.neu ${PREFIX}/share/examples/fastcap
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fastcap
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/mtt.ps.Z ${PREFIX}/share/doc/fastcap
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/tcad.ps.Z ${PREFIX}/share/doc/fastcap
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/ug.ps.Z ${PREFIX}/share/doc/fastcap
-.for file in mtt.ps.Z tcad.ps.Z ug.ps.Z
-	uncompress -f ${PREFIX}/share/doc/fastcap/${file}
-.endfor
+	${INSTALL_DATA} ${WRKSRC}/doc/mtt.ps  ${PREFIX}/share/doc/fastcap
+	${INSTALL_DATA} ${WRKSRC}/doc/tcad.ps  ${PREFIX}/share/doc/fastcap
+	${INSTALL_DATA} ${WRKSRC}/doc/ug.ps  ${PREFIX}/share/doc/fastcap
 	${INSTALL_DATA} ${WRKSRC}/README.docs ${PREFIX}/share/doc/fastcap
 
 .include "../../mk/bsd.pkg.mk"
