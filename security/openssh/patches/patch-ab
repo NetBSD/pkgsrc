@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2001/08/17 19:49:10 kim Exp $
+$NetBSD: patch-ab,v 1.5 2001/09/27 05:12:55 itojun Exp $
 
---- configure.in.orig	Mon May 28 20:21:44 2001
-+++ configure.in	Fri Aug 17 22:06:34 2001
-@@ -131,7 +131,7 @@
+--- configure.in.orig	Wed Sep 26 07:39:38 2001
++++ configure.in	Thu Sep 27 13:51:32 2001
+@@ -138,7 +138,7 @@
          )
  	;;
  *-*-netbsd*)
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.4 2001/08/17 19:49:10 kim Exp $
  	;;
  *-*-freebsd*)
  	check_for_libcrypt_later=1
-@@ -151,7 +151,7 @@
+@@ -158,7 +158,7 @@
  *-*-solaris*)
  	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
  	LDFLAGS="$LDFLAGS -L/usr/local/lib -R/usr/local/lib" 
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.4 2001/08/17 19:49:10 kim Exp $
  	AC_DEFINE(PAM_SUN_CODEBASE)
  	AC_DEFINE(LOGIN_NEEDS_UTMPX)
  	AC_DEFINE(LOGIN_NEEDS_TERM)
-@@ -432,6 +432,7 @@
+@@ -454,6 +454,7 @@
  
  # Check whether user wants TCP wrappers support
  TCPW_MSG="no" 
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.4 2001/08/17 19:49:10 kim Exp $
  AC_ARG_WITH(tcp-wrappers,
  	[  --with-tcp-wrappers     Enable tcpwrappers support],
  	[
-@@ -441,6 +442,8 @@
+@@ -463,6 +464,8 @@
  			AC_MSG_CHECKING(for libwrap)
  			AC_TRY_LINK(
  				[
@@ -37,7 +37,7 @@ $NetBSD: patch-ab,v 1.4 2001/08/17 19:49:10 kim Exp $
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
  				],
-@@ -449,14 +452,17 @@
+@@ -471,14 +474,17 @@
  					AC_MSG_RESULT(yes)
  					AC_DEFINE(LIBWRAP)
  					TCPW_MSG="yes" 
@@ -54,4 +54,4 @@ $NetBSD: patch-ab,v 1.4 2001/08/17 19:49:10 kim Exp $
 +AC_SUBST(TCPW_LIB)
  
  dnl    Checks for library functions.
- AC_CHECK_FUNCS(arc4random atexit b64_ntop bcopy bindresvport_sa clock fchown fchmod freeaddrinfo futimes gai_strerror getcwd getaddrinfo getgrouplist getnameinfo getrlimit getrusage getttyent getusershell glob inet_aton inet_ntoa inet_ntop innetgr login_getcapbool md5_crypt memmove mkdtemp on_exit openpty realpath rresvport_af setdtablesize setenv setegid seteuid setlogin setproctitle setresgid setreuid setrlimit setsid setvbuf sigaction sigvec snprintf strerror strlcat strlcpy strmode strsep strtok_r sysconf tcgetpgrp utimes vsnprintf vhangup vis waitpid _getpty __b64_ntop)
+ AC_CHECK_FUNCS(arc4random atexit b64_ntop bcopy bindresvport_sa clock dirname fchown fchmod freeaddrinfo futimes gai_strerror getcwd getaddrinfo getgrouplist getopt getnameinfo getrlimit getrusage getttyent glob inet_aton inet_ntoa inet_ntop innetgr login_getcapbool md5_crypt memmove mkdtemp on_exit openpty readpassphrase realpath rresvport_af setdtablesize setenv setegid seteuid setlogin setproctitle setresgid setreuid setrlimit setsid setvbuf sigaction sigvec snprintf strerror strlcat strlcpy strmode strsep sysconf tcgetpgrp utimes vsnprintf vhangup waitpid _getpty __b64_ntop)
