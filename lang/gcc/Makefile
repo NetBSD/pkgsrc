@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/02/28 23:49:18 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/28 23:51:12 jlam Exp $
 
 DISTNAME=		gcc-2.95.2
 CATEGORIES=		lang
@@ -33,7 +33,7 @@ GCC_VERSION=		${PKGNAME:C/.*-//}
 MESSAGE_SUBST+=		MAKE=${MAKE}
 PLIST_SUBST+=		GCC_VERSION=${GCC_VERSION} \
 			MACHINE_GCC_PLATFORM=${MACHINE_GCC_PLATFORM}
-SRCDIR=			${WRKDIR}/${PKGNAME}
+SRCDIR=			${WRKDIR}/${DISTNAME}
 WRKSRC=			${WRKDIR}/objdir
 
 .include "../../mk/bsd.prefs.mk"
