@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4406 2004/01/09 19:38:02 jlam Exp $
+$NetBSD: CHANGES,v 1.4407 2004/01/09 19:45:27 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -131,3 +131,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added darkice-0.13.2 [xtraeme 2004-01-09]
 	Added jgrasp-1.6.4 [jschauma 2004-01-09]
 	Updated cyrus-sasl2 to 2.1.15nb2 [jlam 2004-01-09]
+	Added cyrus-saslauthd-2.1.17 [jlam 2004-01-09]

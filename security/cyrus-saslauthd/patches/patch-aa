@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/09 19:44:10 jlam Exp $
+
+--- Makefile.am.orig	Wed Sep 24 15:36:09 2003
++++ Makefile.am
+@@ -30,11 +30,8 @@ INCLUDES	= -I$(top_srcdir)/include -I$(t
+ DEFS            = @DEFS@ -DSASLAUTHD_CONF_FILE_DEFAULT=\"@sysconfdir@/saslauthd.conf\" -I. -I$(srcdir) -I..
+ 
+ 
+-dist-hook: saslauthd.8
++dist-hook: saslauthd.mdoc
+ 
+-saslauthd.8: saslauthd.mdoc
+-	nroff -mdoc $(srcdir)/saslauthd.mdoc > $(srcdir)/saslauthd.8
+-
+-install-data-local: saslauthd.8
+-	$(mkinstalldirs) $(DESTDIR)$(mandir)/cat8
+-	$(INSTALL_DATA) $(srcdir)/saslauthd.8 $(DESTDIR)$(mandir)/cat8/saslauthd.8
++install-data-local: saslauthd.mdoc
++	$(mkinstalldirs) $(DESTDIR)$(mandir)/man8
++	$(INSTALL_DATA) $(srcdir)/saslauthd.mdoc $(DESTDIR)$(mandir)/man8/saslauthd.8
