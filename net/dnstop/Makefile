@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/30 21:13:35 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/25 00:44:46 wiz Exp $
 #
 
-DISTNAME=	dnstop
-PKGNAME=	dnstop-20021030
+DISTNAME=	dnstop-20021224
 CATEGORIES=	net
 MASTER_SITES=	http://dnstop.measurement-factory.com/src/
-DISTFILES=	dnstop.c Makefile
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} dnstop.8
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://dnstop.measurement-factory.com/src/
@@ -13,10 +12,10 @@ COMMENT=	Diagnose tcpdump trace for DNS queries/replies
 
 WRKSRC=		${WRKDIR}
 
-do-extract:
-	${CP} ${DISTDIR}/dnstop.c ${DISTDIR}/Makefile ${WRKSRC}
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dnstop ${PREFIX}/bin
+	${INSTALL_MAN} ${DISTDIR}/dnstop.8 ${PREFIX}/man/man8
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dnstop
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/share/doc/dnstop
 
 .include "../../mk/bsd.pkg.mk"
