@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.11 2004/02/13 19:36:38 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.12 2004/02/13 19:37:26 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use libgtkhtml.
 #
@@ -14,19 +14,8 @@ BUILDLINK_PKGSRCDIR.libgtkhtml?=	../../www/libgtkhtml
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libgtkhtml=libgtkhtml
 BUILDLINK_PREFIX.libgtkhtml_DEFAULT=	${X11PREFIX}
-BUILDLINK_FILES.libgtkhtml=	include/gtkhtml-2.0/libgtkhtml/css/*
-BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/document/*
-BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/dom/core/*
-BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/dom/events/*
-BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/dom/html/*
-BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/dom/traversal/*
-BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/dom/views/*
-BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/dom/*
-BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/graphics/*
-BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/layout/html/*
-BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/layout/*
-BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/util/*
-BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/view/*
+BUILDLINK_FILES.libgtkhtml=	include/gtkhtml-2.0/libgtkhtml/*/*/*
+BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/*/*
 BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/*
 BUILDLINK_FILES.libgtkhtml+=	lib/libgtkhtml-2.*
 
