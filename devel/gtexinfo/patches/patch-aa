@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.10 2003/07/02 05:27:05 grant Exp $
+
+--- makeinfo/makeinfo.h.orig	Mon May 12 23:12:32 2003
++++ makeinfo/makeinfo.h
+@@ -272,7 +272,9 @@ DECLARE (int, expensive_validation, 0);
+ /* Stuff for splitting large files.  The numbers for Emacs
+    texinfo-format-buffer are much smaller, but memory capacities have
+    increased so much, 50k info files seem a bit tiny these days.  */
+-#define DEFAULT_SPLIT_SIZE 300000
++
++/* XXX: reduced to 50000 for pkgsrc consistency */
++#define DEFAULT_SPLIT_SIZE 50000
+ DECLARE (int, splitting, 1);    /* Defaults to true for now. */
+ 
+ #define skip_whitespace() \
