@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/11/25 19:41:32 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2003/04/19 07:14:39 rh Exp $
 
 DISTNAME=		suse_linux-7.3
 CATEGORIES=		emulators
@@ -12,6 +12,7 @@ COMMENT=		Linux compatibility package collection
 DEPENDS+=		suse_audio>=7.3:../suse_audio
 DEPENDS+=		suse_libjpeg>=7.3:../suse_libjpeg
 DEPENDS+=		suse_libpng>=7.3:../suse_libpng
+DEPENDS+=		suse_libtiff>=7.3:../suse_libtiff
 DEPENDS+=		suse_glx>=7.3:../suse_glx
 DEPENDS+=		suse_gtk>=7.3:../suse_gtk
 DEPENDS+=		suse_xforms>=7.3:../suse_xforms

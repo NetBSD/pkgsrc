@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2003/02/20 12:35:11 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2003/04/19 07:14:39 rh Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -62,6 +62,7 @@ SUBDIR+=	suse_gtk
 SUBDIR+=	suse_libc5
 SUBDIR+=	suse_libjpeg
 SUBDIR+=	suse_libpng
+SUBDIR+=	suse_libtiff
 SUBDIR+=	suse_linux
 SUBDIR+=	suse_openmotif
 SUBDIR+=	suse_slang
