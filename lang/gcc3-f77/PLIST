@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2003/07/08 15:05:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/08 16:07:04 drochner Exp $
 ${GCC_SUBPREFIX}/bin/g77
+${GCC_SUBPREFIX}/info/g77.info
 ${GCC_SUBPREFIX}/lib/gcc-lib/${GCC_PLATFORM}/${PKGVERSION}/f771
 ${GCC_SUBPREFIX}/lib/gcc-lib/${GCC_PLATFORM}/${PKGVERSION}/include/g2c.h
 ${GCC_SUBPREFIX}/lib/libfrtbegin.a
