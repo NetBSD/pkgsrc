@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/01/29 11:10:24 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2003/02/07 23:31:11 hubertf Exp $
 
 DISTNAME=	j2re-1_3_1_07-linux-i586
 PKGNAME=	sun-jre13-1.0.7
@@ -38,9 +38,11 @@ _FETCH_MESSAGE= \
 	${ECHO} " The file ${DISTNAME}${EXTRACT_SUFX} containing the"; \
 	${ECHO} " Java(tm) 2 Runtime Environment, Standard Edition must be fetched"; \
 	${ECHO} " into:"; \
-	${ECHO} "	${DISTDIR}"; \
+	${ECHO} "	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"; \
 	${ECHO} " from:"; \
 	${ECHO} "	${DOWNLOAD}"; \
+	${ECHO} ; \
+	${ECHO} " Choose 'Linux self-extracting file' from the 'JRE' column."; \
 	${ECHO} ; \
 	${ECHO} "======================================================================"
 
