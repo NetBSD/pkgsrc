@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/11/08 10:07:02 xtraeme Exp $
+# $NetBSD: options.mk,v 1.2 2004/11/08 14:55:23 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmess
@@ -21,5 +21,5 @@ PKG_SKIP_REASON+=	"Only one display method is allowed."
 
 .if !empty(PKG_OPTIONS:Mesound)
 MAKE_FLAGS+=		SOUND_ESOUND=1
-.inclUde "../../audio/esound/buildlink3.mk"
+.include "../../audio/esound/buildlink3.mk"
 .endif
