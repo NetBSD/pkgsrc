@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7185 2004/09/20 23:44:00 wiz Exp $
+$NetBSD: CHANGES,v 1.7186 2004/09/20 23:57:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4292,3 +4292,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libntlm to 0.3.3 [wiz 2004-09-20]
 	Updated libidn to 0.5.5 [wiz 2004-09-20]
 	Updated libcddb to 0.9.5 [wiz 2004-09-20]
+	Updated biew to 5.6.1 [wiz 2004-09-20]
