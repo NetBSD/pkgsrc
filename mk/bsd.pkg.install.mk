@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.58 2004/04/27 12:06:11 tv Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.59 2004/04/27 14:00:16 agc Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -110,11 +110,11 @@ FILES_SUBST+=		PKG_GROUPS=${PKG_GROUPS:Q}
 # compile without changing something.
 #
 .if !empty(OPSYS:MInterix)
-.for user in ${PKG_USERS}
-.if !defined(BROKEN) && !empty(PKG_GROUPS:M${user:C/:.*//})
+.  for user in ${PKG_USERS}
+.    if !defined(BROKEN) && !empty(PKG_GROUPS:M${user:C/:.*//})
 BROKEN:=		"User and group '${user:C/:.*//}' cannot have the same name on Interix"
-.endif
-.endfor
+.    endif
+.  endfor
 .endif
 
 .if !empty(PKG_USERS)
