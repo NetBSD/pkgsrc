@@ -1,30 +1,31 @@
-# $NetBSD: Makefile,v 1.11 2000/01/15 18:46:31 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2000/05/22 00:49:52 hubertf Exp $
 #
 
-DISTNAME=	vfu-1.51
+DISTNAME=	vfu-3.00
 CATEGORIES=	misc
-MASTER_SITES=	http://www.biscom.net/~cade/away/
-EXTRACT_SUFX=	-source.tgz
+MASTER_SITES=	http://www.biscom.net/~cade/away/vfu/ \
+		ftp://metalab.unc.edu/pub/Linux/utils/file/managers/
+EXTRACT_SUFX=	.src.tar.gz
 
 MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://www.biscom.net/~cade/vfu/
+HOMEPAGE=	http://www.biscom.net/~cade/away/vfu/
 
-DEPENDS=	ncurses>=4.2:../../devel/ncurses
+DEPENDS=	ncurses>=5.0:../../devel/ncurses
 
-MAKE_FLAGS+=	CCDEF="-DVFU_RCPATH1=\\\"${PREFIX}/etc/\\\" -DVFU_RCPATH2=\\\"${PREFIX}/\\\" -D__unix__" \
-		LDDEF="${LDFLAGS}"
+USE_PERL5=	yes
 
 do-build:
-	cd ${WRKSRC}/vslib ; \
-	 ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
-	cd ${WRKSRC}/vfu ; \
-	 ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
-	cd ${WRKSRC}/ftparc ; \
-	 ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
+	cd ${WRKSRC} ; \
+	 ${SETENV} ${MAKE_ENV} ${SH} build.netbsd
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/vfu/vfu  ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/ftparc/ftparc  ${PREFIX}/bin
+	cd ${WRKSRC} ; \
+	${INSTALL_PROGRAM} vfu/vfu ftparc/ftparc ${PREFIX}/bin
+	for i in rx_auto rx_deb rx_ftp rx_tar rx_zip ; do \
+		echo $$i ; \
+		${SED} 's,/usr/bin/perl,${LOCALBASE}/bin/perl,' <${WRKSRC}/rx/$$i >${WRKSRC}/rx/$$i.new ; \
+		${INSTALL_SCRIPT} ${WRKSRC}/rx/$$i.new ${PREFIX}/bin/$$i ; \
+	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vfu
 	${INSTALL_DATA} \
 		${WRKSRC}/COPYING \
