@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2004/12/14 00:30:22 kleink Exp $
+
+--- listener.c.orig	2003-04-13 11:14:36.000000000 +0200
++++ listener.c	2004-12-14 01:26:50.000000000 +0100
+@@ -221,7 +221,8 @@
+ 
+ #ifdef LIBWRAP
+ 	if (lc->lc_args.la_use_wrappers) {
+-		request_init(&req, RQ_DAEMON, isdigit(lc->lc_args.la_port[0]) ?
++		request_init(&req, RQ_DAEMON,
++			isdigit((unsigned char)lc->lc_args.la_port[0]) ?
+ 			pname : lc->lc_args.la_port, RQ_FILE, fd, NULL);
+ 		fromhost(&req);
+ 		if (hosts_access(&req) == 0) {
