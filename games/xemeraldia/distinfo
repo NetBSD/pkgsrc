@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:39 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 23:12:04 agc Exp $
 
 SHA1 (xemeraldia-0.3.tar.gz) = 23034527a0fcd6188d7b4cd57b4129b16bf3ddc6
+RMD160 (xemeraldia-0.3.tar.gz) = 870c4c4d856665d31ce4c1d81ade921297fa09a7
 Size (xemeraldia-0.3.tar.gz) = 16454 bytes
 SHA1 (xemeraldia-0.3to0.31.patch.gz) = bcc6bd6c91a542962a2b5e4012f80a9fecc6f652
+RMD160 (xemeraldia-0.3to0.31.patch.gz) = 8698c77b120e860b29d6d6a33c2abe7660db3979
 Size (xemeraldia-0.3to0.31.patch.gz) = 2400 bytes
 SHA1 (patch-aa) = 0a6bf6be729bf289a940c39c76f7aba921dcc981
 SHA1 (patch-ab) = dd8d2cca732bd3dbd0598e0484067a8c8aba306f
