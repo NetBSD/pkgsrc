@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1998/07/25 01:50:26 tsarna Exp $
+# $NetBSD: Makefile,v 1.23 1998/08/23 08:00:42 garbled Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -26,6 +26,7 @@
 #    SUBDIR += jbigkit
     SUBDIR += jpeg
     SUBDIR += kdegraphics
+    SUBDIR += magicpoint
     SUBDIR += mpeg-lib
 #    SUBDIR += mpeg2codec
 #    SUBDIR += mpeg2play
