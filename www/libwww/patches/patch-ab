@@ -1,11 +1,18 @@
---- Library/src/HTMemLog.c.orig	Wed Feb 19 06:04:55 1997
-+++ Library/src/HTMemLog.c	Mon Jun  9 16:29:21 1997
-@@ -17,7 +17,7 @@
- #ifdef WWW_MSWINDOWS
- #define OPEN_FLAGS	O_WRONLY|O_CREAT|O_TRUNC
- #else /* WWW_MSWINDOWS */
--#define OPEN_FLAGS	O_WRONLY|O_CREAT|O_TRUNC|O_SYNC
-+#define OPEN_FLAGS	O_WRONLY|O_CREAT|O_TRUNC
- #endif /* !WWW_MSWINDOWS */
+--- configure.orig	Tue Jul 14 07:36:55 1998
++++ configure	Tue Jul 14 07:38:11 1998
+@@ -1432,6 +1432,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
  
- PRIVATE size_t		LogBuffSize = 1024; /* default size is 1k */
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+@@ -1477,6 +1478,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ echo $ac_n "checking whether ${MAKE-make} sets \${MAKE}""... $ac_c" 1>&6
+ echo "configure:1483: checking whether ${MAKE-make} sets \${MAKE}" >&5

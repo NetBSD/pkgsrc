@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/07/12 04:05:50 tv Exp $
+# $NetBSD: Makefile,v 1.13 1998/07/14 16:56:50 tv Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -21,7 +21,7 @@
 #    SUBDIR += harvest
 #    SUBDIR += http-analyze
 #    SUBDIR += libpics
-#    SUBDIR += libwww
+    SUBDIR += libwww
 #    SUBDIR += linemode
 #    SUBDIR += linux-netscape4
     SUBDIR += lynx

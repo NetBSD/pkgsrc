@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/07/14 16:56:52 tv Exp $
 bin/w3c
 bin/webbot
 bin/www
@@ -148,10 +149,7 @@ include/w3c-libwww/wwwsys.h
 lib/libpics.a
 lib/libwww.a
 lib/libwww.la
-lib/libwww.so
-lib/libwww.so.5.3
-@exec /sbin/ldconfig -m %B
-@unexec /sbin/ldconfig -R
+lib/libwww.so.1.0
 share/doc/libwww/User/Applications.html
 share/doc/libwww/User/Architecture/A.gif
 share/doc/libwww/User/Architecture/Alert.html
