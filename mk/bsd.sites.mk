@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.15 2004/10/11 19:44:06 tv Exp $
+# $NetBSD: bsd.sites.mk,v 1.16 2004/10/22 13:32:18 ben Exp $
 #
 # Default MASTER_SITES
 
@@ -76,7 +76,6 @@ MASTER_SITE_R_CRAN+=    \
 	http://www.stats.bris.ac.uk/R/src/
 
 MASTER_SITE_TEX_CTAN+= \
-	ftp://ftp.wustl.edu/packages/TeX/ \
 	ftp://ftp.funet.fi/pub/TeX/CTAN/ \
 	ftp://ftp.tex.ac.uk/public/ctan/tex-archive/ \
 	ftp://ftp.dante.de/tex-archive/
