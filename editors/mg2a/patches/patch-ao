@@ -1,0 +1,156 @@
+$NetBSD: patch-ao,v 1.1 2003/09/22 20:22:37 tron Exp $
+
+--- echo.c.orig	1988-07-03 19:50:08.000000000 +0200
++++ echo.c	2003-09-22 22:20:46.000000000 +0200
+@@ -6,23 +6,15 @@
+  * of the display screen. Used by the entire
+  * known universe.
+  */
+-/*
+- * The varargs lint directive comments are 0 an attempt to get lint to shup
+- * up about CORRECT usage of varargs.h.  It won't.
+- */
+ #include	"def.h"
+ #include	"key.h"
+-#ifdef	LOCAL_VARARGS
+-#include	"varargs.h"
+-#else
+-#include	<varargs.h>
+-#endif
++#include	<stdarg.h>
+ #ifndef NO_MACRO
+ #  include	"macro.h"
+ #endif
+ 
+ static int	veread();
+-VOID		ewprintf();
++VOID		ewprintf(char *, ...);
+ static VOID	eformat();
+ static VOID	eputi();
+ static VOID	eputl();
+@@ -111,20 +103,13 @@
+  * place. This is always a new message, there is no auto
+  * completion, and the return is echoed as such.
+  */
+-/*VARARGS 0*/
+-ereply(va_alist)
+-va_dcl
++ereply(char *fp, char *buf, int nbuf, ...)
+ {
+ 	va_list pvar;
+-	register char *fp, *buf;
+-	register int nbuf;
+ 	register int i;
+ 
+-	va_start(pvar);
+-	fp = va_arg(pvar, char *);
+-	buf = va_arg(pvar, char *);
+-	nbuf = va_arg(pvar, int);
+-	i = veread(fp, buf, nbuf, EFNEW|EFCR, &pvar);
++	va_start(pvar, nbuf);
++	i = veread(fp, buf, nbuf, EFNEW|EFCR, pvar);
+ 	va_end(pvar);
+ 	return i;
+ }
+@@ -138,24 +123,18 @@
+  * new prompt), an EFFUNC (autocomplete), or EFCR (echo
+  * the carriage return as CR).
+  */
+-/* VARARGS 0 */
+-eread(va_alist)
+-va_dcl
++eread(char *fp, char *buf, int nbuf, int flag, ...)
+ {
+ 	va_list pvar;
+-	char *fp, *buf;
+-	int nbuf, flag, i;
+-	va_start(pvar);
+-	fp   = va_arg(pvar, char *);
+-	buf  = va_arg(pvar, char *);
+-	nbuf = va_arg(pvar, int);
+-	flag = va_arg(pvar, int);
+-	i = veread(fp, buf, nbuf, flag, &pvar);
++	int i;
++
++	va_start(pvar, flag);
++	i = veread(fp, buf, nbuf, flag, pvar);
+ 	va_end(pvar);
+ 	return i;
+ }
+ 
+-static veread(fp, buf, nbuf, flag, ap) char *fp; char *buf; va_list *ap; {
++static veread(fp, buf, nbuf, flag, ap) char *fp; char *buf; va_list ap; {
+ 	register int	cpos;
+ 	register int	i;
+ 	register int	c;
+@@ -425,22 +404,18 @@
+  * echo line. The formatting is done by a call
+  * to the standard formatting routine.
+  */
+-/*VARARGS 0 */
+ VOID
+-ewprintf(va_alist)
+-va_dcl
++ewprintf(char *fp, ...)
+ {
+ 	va_list pvar;
+-	register char *fp;
+ 
+ #ifndef NO_MACRO
+ 	if(inmacro) return;
+ #endif
+-	va_start(pvar);
+-	fp = va_arg(pvar, char *);
++	va_start(pvar, fp);
+ 	ttcolor(CTEXT);
+ 	ttmove(nrow-1, 0);
+-	eformat(fp, &pvar);
++	eformat(fp, pvar);
+ 	va_end(pvar);
+ 	tteeol();
+ 	ttflush();
+@@ -459,7 +434,7 @@
+ static VOID
+ eformat(fp, ap)
+ register char *fp;
+-register va_list *ap;
++va_list ap;
+ {
+ 	register int c;
+ 	char	kname[NKNAME];
+@@ -473,7 +448,7 @@
+ 			c = *fp++;
+ 			switch (c) {
+ 			case 'c':
+-				(VOID) keyname(kname, va_arg(*ap, int));
++				(VOID) keyname(kname, va_arg(ap, int));
+ 				eputs(kname);
+ 				break;
+ 
+@@ -488,22 +463,22 @@
+ 				break;
+ 
+ 			case 'd':
+-				eputi(va_arg(*ap, int), 10);
++				eputi(va_arg(ap, int), 10);
+ 				break;
+ 
+ 			case 'o':
+-				eputi(va_arg(*ap, int), 8);
++				eputi(va_arg(ap, int), 8);
+ 				break;
+ 
+ 			case 's':
+-				eputs(va_arg(*ap, char *));
++				eputs(va_arg(ap, char *));
+ 				break;
+ 
+ 			case 'l':/* explicit longword */
+ 				c = *fp++;
+ 				switch(c) {
+ 				case 'd':
+-					eputl((long)va_arg(*ap, long), 10);
++					eputl((long)va_arg(ap, long), 10);
+ 					break;
+ 				default:
+ 					eputc(c);
