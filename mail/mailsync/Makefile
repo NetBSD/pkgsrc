@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/18 11:28:24 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2002/05/18 11:30:24 zuntum Exp $
 #
 
 DISTNAME=	mailsync_4.3-2
+PKGNAME=	mailsync-4.3.2
 CATEGORIES=	mail
 MASTER_SITES=	http://unc.dl.sourceforge.net/mailsync/
 
