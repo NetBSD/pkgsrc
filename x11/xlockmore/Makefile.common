@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2004/01/25 16:52:53 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/03/12 19:06:55 jlam Exp $
 #
 # This Makefile.common is included by:
 #
@@ -26,6 +26,7 @@ PLIST_SRC?=		${.CURDIR}/../xlockmore/PLIST
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
+USE_LANGUAGES=		c c++
 USE_X11BASE=		YES
 
 .include "../../mk/bsd.prefs.mk"
