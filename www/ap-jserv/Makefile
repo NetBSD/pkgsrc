@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/07/24 19:45:30 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2002/10/10 01:01:12 jlam Exp $
 
 DISTNAME=	ApacheJServ-1.1.2
 PKGNAME=	ap-jserv-1.1.2
@@ -21,11 +21,11 @@ USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/src/scripts/build/unix/ltconfig
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --with-apxs=${LOCALBASE}/sbin/apxs --with-jdk-home=${JAVA_HOME} \
+CONFIGURE_ARGS+= --with-apxs=${LOCALBASE}/sbin/apxs --with-jdk-home=${PKG_JAVA_HOME} \
 	--with-JSDK=${PREFIX}/lib/java/jsdk.jar --with-logdir=/var/log/httpd \
 	--with-servlets=${LOCALBASE}/share/httpd/servlets -enable-EAPI
 
 .include "../../mk/bsd.pkg.mk"
 
-JSDK_HOME=	${JAVA_HOME}/jsdk
+JSDK_HOME=	${PKG_JAVA_HOME}/jsdk
 BUILD_DEFS+=	JSDK_HOME

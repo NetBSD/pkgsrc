@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/06/12 20:34:04 jwise Exp $
+# $NetBSD: Makefile,v 1.17 2002/10/10 01:01:12 jlam Exp $
 
 DISTNAME=	Cocoon-1.8.2
 PKGNAME=	cocoon-1.8.2
@@ -62,5 +62,5 @@ do-install:
 
 .include "../../mk/bsd.pkg.mk"
 
-CLASSPATH:=${CLASSPATH}:${LOCALBASE}/lib/java/fop.jar:${LOCALBASE}/lib/java/xalan.jar:${LOCALBASE}/lib/java/bsf.jar:${LOCALBASE}/lib/java/xerces.jar:${LOCALBASE}/lib/java/servlet.jar:${JAVA_HOME}/lib/classes.zip:${JAVA_HOME}/lib/tools.jar
+CLASSPATH:=${CLASSPATH}:${LOCALBASE}/lib/java/fop.jar:${LOCALBASE}/lib/java/xalan.jar:${LOCALBASE}/lib/java/bsf.jar:${LOCALBASE}/lib/java/xerces.jar:${LOCALBASE}/lib/java/servlet.jar:${PKG_JAVA_HOME}/lib/classes.zip:${PKG_JAVA_HOME}/lib/tools.jar
 MAKE_ENV+=	CLASSPATH=${CLASSPATH}

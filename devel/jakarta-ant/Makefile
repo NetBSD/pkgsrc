@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/09/26 09:54:36 abs Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/10 01:01:10 jlam Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
@@ -26,7 +26,8 @@ do-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${SCRIPTS_ENV} ${SH} bootstrap.sh
 
 post-build:
-	${SED} -e 's,@PREFIX@,${PREFIX},g' -e 's,@JAVA_HOME@,${JAVA_HOME},g' \
+	${SED}	-e 's,@PREFIX@,${PREFIX},g'				\
+		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'			\
 		< ${FILESDIR}/ant > ${WRKDIR}/ant
 
 do-install:
