@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2004/01/24 13:30:56 grant Exp $
+# $NetBSD: Makefile,v 1.17 2004/03/10 03:27:01 snj Exp $
 #
 
 DISTNAME=		nighthawk-2.1
 CATEGORIES=		x11 games
-MASTER_SITES=		http://jsno.downunder.net.au/proj_linux/nighthawk.html
+MASTER_SITES=		${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=		.tgz
 
 PATCH_SITES=		${MASTER_SITES}
@@ -12,10 +12,10 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		hubertf@NetBSD.org
 HOMEPAGE=		http://jsno.arafuraconnect.com.au/proj_linux/nighthawk.html
-COMMENT=		C=64 Paradroid clone
+COMMENT=		C64 Paradroid clone
 
 WRKSRC=			${WRKDIR}/nighthawk
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
 
@@ -38,5 +38,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/nighthawk/README
 	${INSTALL} -o ${ROOT_USER} -g games -m 664 /dev/null /var/games/nighthawk.scores
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
