@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9454 2005/03/07 12:55:53 augustss Exp $
+$NetBSD: CHANGES,v 1.9455 2005/03/07 14:17:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1327,3 +1327,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated abiword-plugins to 2.2.5 [adam 2005-03-07]
 	Updated gimp-docs to 2.0.7 [adam 2005-03-07]
 	Updated wxhaskell to 0.9 [augustss 2005-03-07]
+	Updated xfce4-weather-plugin to 0.4.9 [adam 2005-03-07]
