@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.83 2003/03/28 20:22:23 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.84 2003/03/29 12:34:11 jmmv Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1159,7 +1159,7 @@ EOF
 	}
 
 	push(@varnames, split(/\s+/, <<EOF));
-DISTNAME PKGNAME SVR4_PKGNAME CATEGORIES MASTER_SITES MASTER_SITE_SUBDIR
+DISTNAME PKGNAME SVR4_PKGNAME WRKSRC CATEGORIES MASTER_SITES MASTER_SITE_SUBDIR
 EXTRACT_SUFX DISTFILES
 EOF
 
