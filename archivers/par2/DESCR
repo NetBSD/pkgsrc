@@ -1,0 +1,10 @@
+par2cmdline is a PAR 2.0 compatible file verification and repair tool.
+
+See http://parchive.sourceforge.net for details of PAR 2.0 specification
+and discussion of all things PAR.
+
+WHAT EXACTLY IS PAR2CMDLINE?
+
+par2cmdline is a program for creating and using PAR2 files to detect
+damage in data files and repair them if necessary. It can be used with
+any kind of file.
