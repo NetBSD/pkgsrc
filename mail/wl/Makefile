@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/01/25 03:49:42 uebayasi Exp $
+# $NetBSD: Makefile,v 1.11 2003/01/28 02:56:23 uebayasi Exp $
 
 DISTNAME=	wl-2.10.0
 CATEGORIES=	mail
@@ -21,6 +21,21 @@ INFO_FILES=	wl.info wl-ja.info
 
 DOCDIR=		${PREFIX}/share/doc/wl
 EXAMPLESDIR=	${PREFIX}/share/examples/wl
+
+PLIST_SRC=	${WRKDIR}/PLIST
+
+post-build:
+	@${CAT} ${PKGDIR}/PLIST.header >${PLIST_SRC}
+	@( \
+		cd ${WRKSRC}; \
+		${FIND} * -name '*.elc' | \
+		while read f; do \
+			g=$$(basename $$f); \
+			echo '$${EMACS_LISPPREFIX}/wl/'$${g%.elc}.el; \
+			echo '$${EMACS_LISPPREFIX}/wl/'$$g; \
+		done \
+	) | ${SORT} >>${PLIST_SRC}
+	@${CAT} ${PKGDIR}/PLIST.footer >>${PLIST_SRC}
 
 post-install:
 	@${INSTALL_DATA_DIR} ${DOCDIR}/en ${DOCDIR}/ja
