@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/12/13 14:38:52 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/07/20 14:52:45 frueauf Exp $
 bin/fetchmail
 man/man1/fetchmail.1
 share/doc/fetchmail/README
@@ -13,6 +13,7 @@ ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/fetchmail.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/fetchmail.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/fetchmail.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/fetchmail.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/fetchmail.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/fetchmail.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/fetchmail.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/fetchmail.mo
