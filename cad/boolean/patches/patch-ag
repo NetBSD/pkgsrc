@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/11/18 17:57:27 dmcmahill Exp $
+
+--- ../src/drivers/doubledc.h.orig	Fri Sep 15 11:50:52 2000
++++ ../src/drivers/doubledc.h	Thu Nov 16 08:54:32 2000
+@@ -25,4 +25,7 @@
+ #include <math.h>
+ 
++// needed to pull in the classes from wx/geometry.h
++#define wxUSE_GEOMETRY 1
++
+ #include "wxmatrix.h"
+ #include "wx/image.h"

@@ -1,0 +1,24 @@
+The program is a viewer and editor for: 
+  -GDSII files, KEY files (own made extended GDSII in ascii format) and
+   DAVID MANN files (flash format for mask plotting) 
+
+Features: 
+ -It allows to draw primitives on a chosen layer, and to manipulate them.
+ -stack oriented tools allows zooming while drawing new primitives and
+  editing them. This also makes it possible to draw extremely accurate. 
+ -primitives on the layers or/can be transparent  colors and fill patterns
+  can be set on a layer basis 
+ -drawing order of layers can be changed 
+ -a hiearchy of pictures, named structures, can be handled and manipulated
+ -saving as a bitmap and other formats. 
+ -measuring distances 
+ -adding user defined properties to primitives 
+
+
+ -boolean OR AND EXOR A-B B-A 
+ -positive and negative process offset 
+ -circle recognition in polygon and polyline data. 
+ -move copy delete etc. 
+ -transformations (scaling , rotation , moving) 
+ -flatten the hiearchy of the drawing 
+ -drivers for CNC (laser and milling machinery) 
