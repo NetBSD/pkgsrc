@@ -1,4 +1,4 @@
-$NetBSD: README.Linux,v 1.2 2005/02/15 09:39:06 grant Exp $
+$NetBSD: README.Linux,v 1.3 2005/02/16 11:02:50 grant Exp $
 
 Please read the general README file as well.
 
@@ -14,6 +14,9 @@ directory:
 
 	env CC=/opt/intel_cc_80/bin/icc LDFLAGS=-static-libcxa \
 		ac_cv___attribute__=yes ./bootstrap
+
+note: icc 8.1 needs the `-i-static' argument instead of
+-static-libcxa.
 
 icc supports __attribute__, but the GNU configure test uses a nested
 function, which icc does not support. #undef'ing __attribute__ has the
