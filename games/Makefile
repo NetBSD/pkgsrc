@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2003/04/11 00:15:12 salo Exp $
+# $NetBSD: Makefile,v 1.166 2003/04/12 17:22:24 zuntum Exp $
 #
 
 COMMENT=	Games
@@ -34,6 +34,7 @@ SUBDIR+=	crafty-book-large
 SUBDIR+=	crafty-book-medium
 SUBDIR+=	crafty-book-small
 SUBDIR+=	crafty-doc
+SUBDIR+=	criticalmass
 SUBDIR+=	crossfire-cli
 SUBDIR+=	crossfire-srv
 SUBDIR+=	dipmap
