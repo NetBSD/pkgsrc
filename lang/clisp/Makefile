@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/03/14 07:44:21 jmc Exp $
+# $NetBSD: Makefile,v 1.25 2002/10/25 18:40:53 wiz Exp $
 
 DISTNAME=		clisp-2.27
 CATEGORIES=		lang
@@ -12,7 +12,7 @@ COMMENT=		CLISP, a Common Lisp implementation
 
 NOT_FOR_PLATFORM=	*-*-alpha	# severe LP64 problems
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 CONFIGURE_ENV+=		CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"
 GNU_CONFIGURE=		YES
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
@@ -42,5 +42,5 @@ pre-build:
 	cd ${WRKSRC}/avcall && ${MAKE}
 	cd ${WRKSRC}/callback && ${MAKE}
 
-.include "../../devel/readline/buildlink.mk"
+.include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
