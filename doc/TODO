@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.873 2003/09/16 22:25:05 wiz Exp $
+$NetBSD: TODO,v 1.874 2003/09/16 23:00:53 recht Exp $
 
 Suggested new packages
 ======================
@@ -75,7 +75,6 @@ Suggested package updates
 	o Xrender-0.8.3
 	o amanda-2.4.4p1 [pkg/22756]
 	o anjuta-1.0.2
-	o ap-auth-postgresql-1.4 [pkg/22518]
 	o atari800-1.3.1
 	o autogen-5.5.6
 	o avidemux-2.0.14
