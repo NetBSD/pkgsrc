@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 1999/09/15 18:26:00 tron Exp $
+# $NetBSD: Makefile,v 1.25 1999/09/15 18:44:14 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
 DISTNAME=	kdesupport-1.1.2
 CATEGORIES=	converters kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic/source/bz2/ \
+MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic/source/bz2/ \
 		ftp://ftp.de.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic/source/bz2/
 EXTRACT_SUFX=	.tar.bz2
 
