@@ -1,8 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/25 14:07:22 recht Exp $
-#
-# This Makefile fragment is included by packages that use python23.
-#
-# This file was created automatically using createbuildlink-3.0.
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/25 14:10:29 recht Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -18,7 +14,7 @@ BUILDLINK_DEPENDS.python23?=		python23>=2.3.3
 BUILDLINK_PKGSRCDIR.python23?=		../../lang/python23
 
 .if defined(BUILDLINK_DEPMETHOD.python)
-BUILDLINK_DEPMETHOD.python23pth?=	${BUILDLINK_DEPMETHOD.python}
+BUILDLINK_DEPMETHOD.python23?=	${BUILDLINK_DEPMETHOD.python}
 .endif
 
 BUILDLINK_TRANSFORM+=		l:python:python2.3
