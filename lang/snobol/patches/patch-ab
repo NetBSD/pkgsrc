@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/03/11 06:01:56 wiz Exp $
+
+--- ./Makefile2.m4.orig	Thu Aug  7 07:34:47 1997
++++ ./Makefile2.m4	Sat Mar 11 04:24:21 2000
+@@ -48,13 +48,13 @@
+ SNOLIB_FILE=snolib.a
+ 
+ # directory name for default SNOLIB (used by -INCLUDE and LOAD())
+-SNOLIB_DIR=/usr/local/lib/snobol4
++SNOLIB_DIR=${PREFIX}/lib/snobol4
+ 
+ # default name for installed binary
+-BINDEST=/usr/local/bin/snobol4
++BINDEST=${PREFIX}/bin/snobol4
+ 
+ # default name for installed man page
+-MANDEST=/usr/local/man/man1/snobol4.1
++MANDEST=${PREFIX}/man/man1/snobol4.1
+ 
+ ########
+ # default lib source files
