@@ -1,5 +1,5 @@
 #!/bin/sh
-LINUX_KERN_OSREL=`sysctl -n emul.linux.kern.osrelease 2>/dev/null`
+LINUX_KERN_OSREL=`/sbin/sysctl -n emul.linux.kern.osrelease 2>/dev/null`
 if [ -z "$LINUX_KERN_OSREL" -o "$LINUX_KERN_OSREL" = "2.0.38" ]
 then
  OPERADIR=$HOME/.opera
@@ -21,4 +21,5 @@ then
  done
 fi
 
+unset LD_LIBRARY_PATH
 exec @EMULDIR@/bin/bash /usr/bin/opera "$@"
