@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7793 2004/11/09 15:18:24 adam Exp $
+$NetBSD: CHANGES,v 1.7794 2004/11/09 16:24:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5190,3 +5190,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ogmtools to 1.5 [salo 2004-11-09]
 	Updated gg2 to 2.2.2 [adam 2004-11-09]
 	Updated delegate to 8.9.6 [adam 2004-11-09]
+	Updated horde to 2.2.7 [adam 2004-11-09]
