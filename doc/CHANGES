@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8986 2005/01/31 09:25:04 adam Exp $
+$NetBSD: CHANGES,v 1.8987 2005/01/31 23:59:42 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -690,3 +690,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wesnoth to 0.8.9 [wiz 2005-01-31]
 	Updated instiki to 0.9.2nb1 [minskim 2005-01-31]
 	Updated xpaint to 2.7.3 [adam 2005-01-31]
+	Updated generator to 0.35 [xtraeme 2005-01-31]
