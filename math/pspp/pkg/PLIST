@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/26 18:54:43 frueauf Exp $
+bin/pspp
+etc/pspp/devices
+etc/pspp/html-prologue
+etc/pspp/papersize
+etc/pspp/ps-prologue
+@unexec %D/bin/install-info --delete %D/info/pspp.info %D/info/dir
+info/pspp.info
+info/pspp.info-1
+info/pspp.info-2
+info/pspp.info-3
+info/pspp.info-4
+info/pspp.info-5
+info/pspp.info-6
+info/pspp.info-7
+info/pspp.info-8
+@exec %D/bin/install-info %D/info/pspp.info %D/info/dir
+share/doc/pspp/NEWS
+share/doc/pspp/README
+share/doc/pspp/TODO
+@dirrm etc/pspp
+@dirrm share/doc/pspp

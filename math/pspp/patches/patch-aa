@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/10/26 18:54:43 frueauf Exp $
+
+--- Makefile.in.orig	Sun Oct 18 01:59:38 1998
++++ Makefile.in	Mon Oct 26 10:51:34 1998
+@@ -97,7 +97,7 @@
+ 
+ SUBDIRS = doc intl po lib src config tests
+ 
+-pkgdocdir = $(prefix)/doc/@PACKAGE@
++pkgdocdir = $(prefix)/share/doc/@PACKAGE@
+ pkgdoc_DATA = NEWS README TODO
+ noinst_DATA = AUTHORS THANKS
+ 
