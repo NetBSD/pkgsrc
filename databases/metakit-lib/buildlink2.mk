@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/12/04 18:47:15 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/30 22:56:21 cjep Exp $
 #
 # This Makefile fragment is included by packages that use metakit-lib.
 #
@@ -20,7 +20,6 @@ BUILDLINK_FILES.metakit-lib+=	include/mk4io.h
 BUILDLINK_FILES.metakit-lib+=	include/mk4str.h
 BUILDLINK_FILES.metakit-lib+=	include/mk4str.inl
 BUILDLINK_FILES.metakit-lib+=	lib/libmk4.*
-
 
 BUILDLINK_TARGETS+=	metakit-lib-buildlink
 
