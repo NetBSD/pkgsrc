@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.440 2002/11/02 02:49:57 rh Exp $
+$NetBSD: CHANGES,v 1.441 2002/11/02 04:11:31 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3505,3 +3505,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated kde3 to 3.0.4nb1 [wiz 2002-11-01]
 	Added gbib-0.1.1b [rh 2002-11-02]
 	Added bug-buddy-2.2.0 [rh 2002-11-02]
+	Added eog-1.0.3 as eog2 [rh 2002-11-02]
