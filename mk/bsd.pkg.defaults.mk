@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.189 2003/10/19 07:43:24 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.190 2003/11/07 13:55:02 dmcmahill Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1879,6 +1879,13 @@ USE_SJ3?= YES
 # Used to specify SOCKS firewall support
 # Set this to the version of socks necessary.
 # Possible: 4, 5, not defined
+# Default: not defined
+
+#USE_TETEX2=
+# Used to specify the use of teTeX2 instead of
+# teTeX (version 1) for packages which need to
+# make a decision.
+# Possible: defined, not defined
 # Default: not defined
 
 USE_WNN4?= YES
