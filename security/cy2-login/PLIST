@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/19 22:28:23 jlam Exp $
+lib/sasl2/liblogin.a
+lib/sasl2/liblogin.la
+lib/sasl2/liblogin.so
+lib/sasl2/liblogin.so.2
+lib/sasl2/liblogin.so.2.12
