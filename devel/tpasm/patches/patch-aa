@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/15 13:02:35 dmcmahill Exp $
+
+--- Makefile.orig	Mon Jan  1 17:49:51 2001
++++ Makefile	Sun Apr 15 08:42:56 2001
+@@ -60,3 +60,13 @@
+ 
+ install :
+-	cp tpasm /usr/local/bin
++	${BSD_INSTALL_PROGRAM} tpasm ${PREFIX}/bin
++	${BSD_INSTALL_DATA_DIR}  ${PREFIX}/libdata/tpasm
++	${BSD_INSTALL_DATA} include/8051.inc ${PREFIX}/libdata/tpasm/8051.inc
++	${BSD_INSTALL_DATA} include/80c390.inc ${PREFIX}/libdata/tpasm/80c390.inc
++	${BSD_INSTALL_DATA} include/p16c505.inc ${PREFIX}/libdata/tpasm/p16c505.inc
++	${BSD_INSTALL_DATA} include/picmacros.inc ${PREFIX}/libdata/tpasm/picmacros.inc
++
++# suffix rules
++.c.o:
++	${CC} ${CFLAGS} ${CPPFLAGS} -o $@ -c $<
++
