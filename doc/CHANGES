@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3465 2003/09/20 14:17:34 salo Exp $
+$NetBSD: CHANGES,v 1.3466 2003/09/20 16:14:43 chris Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3858,3 +3858,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bind9 to 9.2.2p2 [itojun 2003-09-20]
 	Updated nmap to 3.45 [salo 2003-09-20]
 	Updated nmapfe to 0.9.5nb9 [salo 2003-09-20]
+	Updated p5-Convert-UUlib to 0.31 [chris 2003-09-20]
+	Updated p5-MailTools to 1.59 [chris 2003-09-20]
