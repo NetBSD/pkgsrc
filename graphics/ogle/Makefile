@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2002/06/16 18:12:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/07/12 18:29:29 mycroft Exp $
 
-DISTNAME=	ogle-0.8.3
+DISTNAME=	ogle-0.8.4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.dtek.chalmers.se/groups/dvd/dist/
 
@@ -13,6 +13,7 @@ DEPENDS+=	liba52>=0.7.3:../../audio/liba52
 BUILDLINK_DEPENDS.libxml2=	libxml2>=2.4.19
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5[Y-Z]*-i386 NetBSD-1.[6-9]*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-1.6[D-Z]*-powerpc NetBSD-1.[7-9]*-powerpc
 
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 #CONFIGURE_ARGS+=--enable-obsdaudio

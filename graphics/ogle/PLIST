@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/06/16 18:12:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/07/12 18:29:29 mycroft Exp $
 bin/ifo_dump
 bin/ogle
 include/ogle/dvd.h
@@ -10,8 +10,8 @@ lib/ogle/libmsgevents.so.4
 lib/ogle/libmsgevents.so
 lib/ogle/libmsgevents.la
 lib/ogle/libmsgevents.a
-lib/ogle/libdvdcontrol.so.6.0
-lib/ogle/libdvdcontrol.so.6
+lib/ogle/libdvdcontrol.so.7.0
+lib/ogle/libdvdcontrol.so.7
 lib/ogle/libdvdcontrol.so
 lib/ogle/libdvdcontrol.la
 lib/ogle/libdvdcontrol.a
