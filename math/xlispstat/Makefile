@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/09/05 23:13:07 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.10 2000/09/07 04:10:32 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.7 1998/08/20 07:35:21 asami Exp
 #
 
@@ -22,5 +22,7 @@ ALL_TARGET=		xlispstat
 .if ${OPSYS} == "SunOS"
 MAKE_ENV+=		CPPFLAGS=
 .endif
+
+MAKE_ENV+=	DISPLAY=	# Prevent 'Rejected connection'
 
 .include "../../mk/bsd.pkg.mk"
