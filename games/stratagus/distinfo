@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/17 12:29:14 wiz Exp $
+
+SHA1 (stratagus-2.1-src.tar.gz) = 33181d57e018825a450f1e8c0ec31b0887cbd39c
+Size (stratagus-2.1-src.tar.gz) = 995686 bytes
+SHA1 (patch-aa) = 2f1403d58b3a745845c3b3e94abb7cf65b00194d
