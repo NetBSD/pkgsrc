@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/02/11 05:41:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/12 11:13:39 jmmv Exp $
 #
 
 DISTNAME=	metacity-2.6.3
@@ -25,6 +25,14 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/src/libmetacity-private.pc.in
 
 GCONF2_SCHEMAS=		metacity.schemas
+
+.include "../../mk/bsd.prefs.mk"
+
+.if exists(${X11BASE}/lib/libXinerama.so)
+CONFIGURE_ENV+=		USE_XINERAMA=yes
+.else
+CONFIGURE_ENV+=		USE_XINERAMA=no
+.endif
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
