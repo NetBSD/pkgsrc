@@ -1,8 +1,8 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.5 2001/11/21 15:43:01 jlam Exp $
+# $NetBSD: deinstall,v 1.6 2001/11/25 18:54:57 jlam Exp $
 
-ALL_FILES="${CONF_FILES} ${SUPPORT_FILES}"
+ALL_FILES="${ALL_FILES} ${CONF_FILES} ${SUPPORT_FILES}"
 set -- ${RCD_SCRIPTS}
 while [ $# -gt 0 ]
 do
@@ -19,7 +19,7 @@ do
 	ALL_FILES="${ALL_FILES} ${samplefile} ${file}"
 done
 
-ALL_MAKE_DIRS="${MAKE_DIRS}"
+ALL_MAKE_DIRS="${ALL_MAKE_DIRS} ${MAKE_DIRS}"
 set -- ${MAKE_DIRS_PERMS}
 while [ $# -gt 0 ]
 do
@@ -27,7 +27,7 @@ do
 	shift; shift; shift; shift
 	ALL_MAKE_DIRS="${ALL_MAKE_DIRS} ${dir}"
 done
-ALL_DIRS="${ALL_MAKE_DIRS} ${OWN_DIRS}"
+ALL_DIRS="${ALL_DIRS} ${ALL_MAKE_DIRS} ${OWN_DIRS}"
 set -- ${OWN_DIRS_PERMS}
 while [ $# -gt 0 ]
 do
