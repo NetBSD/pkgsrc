@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2004/12/05 23:03:58 cube Exp $
+# $NetBSD: Makefile,v 1.41 2004/12/18 16:09:49 grant Exp $
 
 DISTNAME=	cue-snap-20041025
 PKGNAME=	cue-20041025
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--with-canna=${BUILDLINK_PREFIX.canna}
 CONFIGURE_ARGS+=	--without-canna
 .endif
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
-.if defined(USE_IDEA)
+.if defined(USE_IDEA) && !empty(USE_IDEA:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-idea
 .endif
 
