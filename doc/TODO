@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2639 2004/12/03 13:31:10 adam Exp $
+$NetBSD: TODO,v 1.2640 2004/12/03 13:42:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -545,7 +545,6 @@ Suggested package updates
 	o gtranslator-1.0.1
 	o guile-gtk-0.40.90 [in wip]
 	o guile-oops-1.0.2
-	o guile-pg-0.23 [pkgsrc-wip]
 	o guile-www-1.1.1
 	o hackbot-2.21
 	o haskell-mode-1.45
