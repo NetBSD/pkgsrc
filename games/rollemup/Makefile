@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/08/31 02:35:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2000/09/08 13:34:23 jlam Exp $
 #
 
 DISTNAME=	Rollemup
@@ -36,7 +36,8 @@ ONLY_FOR_PLATFORM=	*-*-i386
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-DEPENDS=	suse_linux>=6.1:../../emulators/suse_linux
+DEPENDS=	suse_compat>=6.1:../../emulators/suse_compat
+DEPENDS=	suse_x11>=6.1:../../emulators/suse_x11
 CHECK_SHLIBS=	no
 .endif
 
