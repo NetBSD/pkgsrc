@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.123 2003/11/27 00:03:53 taya Exp $
+# $NetBSD: Makefile,v 1.124 2003/12/20 10:33:31 grant Exp $
 
+PKGREVISION=	1
 MOZILLA=	mozilla
 MOZILLA_BIN=	mozilla-bin
 MOZ_VER=	1.5.1
