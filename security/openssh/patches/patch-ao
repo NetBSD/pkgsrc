@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2000/07/07 08:11:04 elric Exp $
+
+--- fake-getaddrinfo.c.orig	Fri Jul  7 00:46:59 2000
++++ fake-getaddrinfo.c	Thu Jul  6 21:07:02 2000
+@@ -86,7 +86,7 @@
+ 			return EAI_MEMORY;
+ 	}
+ 	
+-	if (inet_addr(hostname) != -1) {
++	if (inet_addr(hostname) != INADDR_NONE) {
+ 		if (NULL != (*res = malloc_ai(port, inet_addr(hostname))))
+ 			return 0;
+ 		else
