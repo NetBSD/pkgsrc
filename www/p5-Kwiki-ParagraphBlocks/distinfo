@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/12/27 15:23:19 jlam Exp $
+$NetBSD: distinfo,v 1.2 2004/12/27 15:31:51 jlam Exp $
 
-SHA1 (Kwiki-PreformattedBlocks-0.11.tar.gz) = 0e16ade43bea8d792d9ec8443be276038aac1489
-Size (Kwiki-PreformattedBlocks-0.11.tar.gz) = 7708 bytes
+SHA1 (Kwiki-ParagraphBlocks-0.12.tar.gz) = dc1a06b94c56e8768d57beb45ed34e587172d8dc
+Size (Kwiki-ParagraphBlocks-0.12.tar.gz) = 7953 bytes
