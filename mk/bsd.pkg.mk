@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1520 2004/10/16 22:37:29 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1521 2004/10/21 17:00:10 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -4488,6 +4488,7 @@ _PRINT_PLIST_DIRS_CMD=	\
 _PRINT_LA_LIBNAMES=	${SETENV} ECHO=${ECHO:Q} GREP=${GREP:Q} SORT=${SORT:Q} \
 			${SH} ${.CURDIR}/../../mk/scripts/print-la-libnames
 
+.if !empty(LIBTOOLIZE_PLIST:M[yY][eE][sS])
 _PRINT_PLIST_LIBTOOLIZE_FILTER?=					\
 	(								\
 	  if ${TEST} -d ${WRKDIR}; then					\
@@ -4512,6 +4513,9 @@ _PRINT_PLIST_LIBTOOLIZE_FILTER?=					\
 	  fi;								\
 	  ${RM} -f "$$fileslist" "$$libslist";				\
 	)
+.else
+_PRINT_PLIST_LIBTOOLIZE_FILTER?=	${CAT}
+.endif
 
 .PHONY: print-PLIST
 .if !target(print-PLIST)
@@ -4959,10 +4963,12 @@ BEGIN {									\
 .if ${PLIST_TYPE} == "dynamic"
 _PLIST_AWK_LIBTOOL?=	# empty
 .else
+.  if !empty(LIBTOOLIZE_PLIST:M[yY][eE][sS])
 _PLIST_AWK_LIBTOOL?=							\
 /^[^@].*\.la$$/ {							\
 	system("cd ${PREFIX} && ${_PRINT_LA_LIBNAMES} " $$0)		\
 }
+.  endif
 .endif
 
 # _PLIST_AWK_SCRIPT hold the complete awk script for plist target.
