@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.295 1999/07/10 00:11:55 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.296 1999/07/13 01:02:42 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1666,6 +1666,7 @@ makepatchsum:
 			if [ "X$$sumfile" = X"" ]; then continue; fi;	\
 			case $$sumfile in				\
 			patch-local-*) ;;				\
+			*.orig) continue ;;				\
 			*)						\
 				${ECHO} "MD5 ($$sumfile) = `${SED} -e '/\$$NetBSD.*/d' $$sumfile | ${MD5}`" >> ${PATCH_SUM_FILE}; \
 			esac;						\
