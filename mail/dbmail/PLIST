@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/09 03:21:07 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/09 04:17:39 schmonz Exp $
 lib/dbmail/libauthdbmail.la
 lib/dbmail/lib${SQLDB}dbmail.la
 lib/dbmail/libsortdbmail.la
@@ -15,4 +15,6 @@ sbin/dbmail-pop3d
 sbin/dbmail-smtp
 sbin/dbmail-users
 sbin/dbmail-util
+share/examples/dbmail/dbmail.conf
+@dirrm share/examples/dbmail
 @dirrm lib/dbmail
