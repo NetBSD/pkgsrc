@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/12/25 19:32:51 wiz Exp $
+
+SHA1 (figlet-fonts-20021023/contributed.tar.gz) = a23ecfdb54301e93b6578c3c465ba84c8f861d4f
+Size (figlet-fonts-20021023/contributed.tar.gz) = 1393560 bytes
+SHA1 (figlet-fonts-20021023/international.tar.gz) = 4bdc505f82305debf8108b725ac418f404a8bcb0
+Size (figlet-fonts-20021023/international.tar.gz) = 3683121 bytes
+SHA1 (figlet-fonts-20021023/ms-dos.tar.gz) = 2bc48e0f1da9d585b7030a6986781525181c6357
+Size (figlet-fonts-20021023/ms-dos.tar.gz) = 2414 bytes
