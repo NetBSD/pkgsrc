@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:15 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:36 jlam Exp $
 
 _X11_EXTENSIONS_RENDER_H=	${X11BASE}/include/X11/extensions/render.h
 
@@ -20,15 +20,10 @@ _RENDER_MINOR!=	\
 		${_X11_EXTENSIONS_RENDER_H}
 _RENDER_VERSION=	${_RENDER_MAJOR}${_RENDER_MINOR}
 BUILTIN_PKG.render=	render-${_RENDER_VERSION}
-MAKEFLAGS+=		BUILTIN_PKG.render=${BUILTIN_PKG.render}
+BUILDLINK_VARS+=	BUILTIN_PKG.render
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.render=${IS_BUILTIN.render}
-.endif
-
-CHECK_BUILTIN.render?=	no
-.if !empty(CHECK_BUILTIN.render:M[yY][eE][sS])
-USE_BUILTIN.render=	yes
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.render
+.endif	# IS_BUILTIN.render
 
 .if !defined(USE_BUILTIN.render)
 USE_BUILTIN.render?=	${IS_BUILTIN.render}
@@ -48,6 +43,9 @@ USE_BUILTIN.render!=	\
 .  endif
 .endif	# USE_BUILTIN.render
 
+CHECK_BUILTIN.render?=	no
+.if !empty(CHECK_BUILTIN.render:M[nN][oO])
+
 .if !empty(USE_BUILTIN.render:M[nN][oO])
 BUILDLINK_DEPENDS.render+=	render>=0.8
 .endif
@@ -56,3 +54,5 @@ BUILDLINK_DEPENDS.render+=	render>=0.8
 BUILDLINK_PREFIX.render=	${X11BASE}
 USE_X11=			yes
 .endif
+
+.endif	# CHECK_BUILTIN.render
