@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2000/12/10 09:46:13 jlam Exp $
+
+--- tools/mkimap.orig	Tue Jan  4 15:52:22 2000
++++ tools/mkimap
+@@ -35,7 +35,7 @@
+ 	$conf = $1;
+ 	print "i will configure directory $conf.\n";
+     }
+-    if (/^sieveuserhomedir:\s(1|t|yes|on)/) {
++    if (/^sieveusehomedir:\s(1|t|yes|on)/) {
+ 	$nosievedir = 1;
+ 	print "you are storing sieve scripts in user's home directories.\n";
+     }
