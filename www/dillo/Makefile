@@ -1,24 +1,24 @@
-# $NetBSD: Makefile,v 1.5 2002/03/13 17:37:51 fredb Exp $
+# $NetBSD: Makefile,v 1.6 2002/04/29 11:57:03 rh Exp $
 #
 
-DISTNAME=	dillo-0.6.4
+DISTNAME=	dillo-0.6.5
 PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dillo/}
+MASTER_SITES=	http://dillo.cipsga.org.br/download/
 
 MAINTAINER=	Benjamin.Wong@cc.gatech.edu
-HOMEPAGE=	http://dillo.sourceforge.net/
-COMMENT=	very small and fast graphical web-browser
+HOMEPAGE=	http://dillo.cipsga.org.br/
+COMMENT=	Very small and fast graphical web-browser
 
 USE_BUILDLINK_ONLY=	yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dillo
-	${INSTALL_DATA} ${WRKSRC}/dillorc ${PREFIX}/share/examples/dillo
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dillo
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/dillo
 
-.include	"../../devel/pth/buildlink.mk"
+
 .include	"../../graphics/jpeg/buildlink.mk"
 .include	"../../graphics/png/buildlink.mk"
 .include	"../../x11/gtk/buildlink.mk"

@@ -1,4 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/06 16:15:41 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/04/29 11:57:03 rh Exp $
 bin/dillo
-share/examples/dillo/dillorc
-@dirrm share/examples/dillo
+etc/dillorc
+share/doc/dillo/Cache.txt
+share/doc/dillo/Cookies.txt
+share/doc/dillo/Dillo.txt
+share/doc/dillo/Dw.txt
+share/doc/dillo/DwImage.txt
+share/doc/dillo/DwPage.txt
+share/doc/dillo/DwStyle.txt
+share/doc/dillo/DwTable.txt
+share/doc/dillo/DwWidget.txt
+share/doc/dillo/HtmlParser.txt
+share/doc/dillo/IO.txt
+share/doc/dillo/Images.txt
+share/doc/dillo/Makefile
+share/doc/dillo/Makefile.am
+share/doc/dillo/Makefile.in
+share/doc/dillo/NC_design.txt
+share/doc/dillo/README
+@dirrm share/doc/dillo
