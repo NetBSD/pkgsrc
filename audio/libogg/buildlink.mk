@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/08/14 14:46:30 lukem Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/11/06 21:57:49 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libogg.
 #
@@ -12,8 +12,8 @@
 # (4) Add ${BUILDLINK_DIR}/lib to the front of the linker's library search
 #     path.
 
-.if !defined(LIGOGG_BUILDLINK_MK)
-LIGOGG_BUILDLINK_MK=	# defined
+.if !defined(LIBOGG_BUILDLINK_MK)
+LIBOGG_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
@@ -33,4 +33,4 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.libogg}
 pre-configure: ${BUILDLINK_TARGETS.libogg}
 libogg-buildlink: _BUILDLINK_USE
 
-.endif	# LIGOGG_BUILDLINK_MK
+.endif	# LIBOGG_BUILDLINK_MK
