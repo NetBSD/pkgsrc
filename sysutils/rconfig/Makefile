@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2003/10/03 13:13:14 abs Exp $
+# $NetBSD: Makefile,v 1.18 2003/10/06 08:58:01 abs Exp $
 
-DISTNAME=	rconfig-0.22
+DISTNAME=	rconfig-0.23
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.mono.org/abs/tools/rconfig/
 
