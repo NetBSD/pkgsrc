@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2001/11/26 06:50:15 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/10 15:34:40 martti Exp $
 #
 
-DISTNAME=		Crypt-Rijndael-0.04
+DISTNAME=		Crypt-Rijndael-0.05
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5crj
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
 MAINTAINER=		packages@netbsd.org
-#HOMEPAGE=	
 COMMENT=		perl5 module of the Rijndael symmetric key algorithm
 
 USE_BUILDLINK_ONLY=	YES
