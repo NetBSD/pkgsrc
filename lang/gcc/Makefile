@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/02/28 23:28:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/28 23:49:18 jlam Exp $
 
 DISTNAME=		gcc-2.95.2
 CATEGORIES=		lang
@@ -10,10 +10,10 @@ COMMENT=		GNU Compiler Collection
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/bison:../../devel/bison
 
-# NetBSD-arm32, NetBSD-i386 and NetBSD-m68k are the only tested platforms
-# so far. If you got it working on other platforms please add them.
+# The platforms listed below are the only tested platforms so far.
+# If you get gcc working on other platforms, then please add them.
 ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
-			SunOS-*-* NetBSD-*-sparc
+			NetBSD-*-sparc SunOS-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
