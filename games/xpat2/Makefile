@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/08 01:24:49 snj Exp $
+# $NetBSD: Makefile,v 1.11 2004/08/01 17:55:05 jschauma Exp $
 # FreeBSD: ports/games/xpat2/Makefile,v 1.11 2000/04/14 12:27:59 asami Exp
 
 DISTNAME=	xpat2-1.06
@@ -19,12 +19,12 @@ USE_X11BASE=	YES
 
 MAKE_ENV+=	XPMDIR="${BUILDLINK_PREFIX.xpm}" XMKMF="${XMKMF}"
 
-SUPPORT_FILES_PERMS=	/dev/null /var/games/xpat.log games games 0644
+SUPPORT_FILES_PERMS=	/dev/null /var/games/xpat.log ${GAMEOWN} ${GAMEGRP} ${GAMEMODE}
 MAKE_DIRS=		/var/games
 
 post-install:
-	${CHOWN} root.games ${PREFIX}/bin/xpat2
-	${CHMOD} 2555 ${PREFIX}/bin/xpat2
+	${CHOWN} ${GAMEOWN}.${GAMEGRP} ${PREFIX}/bin/xpat2
+	${CHMOD} ${GAMEMODE} ${PREFIX}/bin/xpat2
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
