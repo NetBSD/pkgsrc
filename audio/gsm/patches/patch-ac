@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1 1998/12/31 05:51:01 garbled Exp $
+--- src/code.c.orig	Mon Dec 28 11:04:16 1998
++++ src/code.c	Mon Dec 28 11:04:46 1998
+@@ -11,6 +11,7 @@
+ 
+ #ifdef	HAS_STDLIB_H
+ #include	<stdlib.h>
++#include	<string.h>
+ #else
+ #	include "proto.h"
+ 	extern char	* memcpy P((char *, char *, int));
