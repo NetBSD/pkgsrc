@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/11/28 05:20:47 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/11/14 23:46:01 jlam Exp $
 #
 
 DISTNAME=	cvs2cl-1.117
@@ -10,14 +10,14 @@ MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.red-bean.com/~kfogel/cvs2cl.shtml
 COMMENT=	CVS-log-message-to-ChangeLog conversion script
 
-USE_BUILDLINK_ONLY=	YES
-NO_BUILD=		YES
-EXTRACT_CMD=		${ECHO}
-WRKSRC=			${WRKDIR}
+USE_BUILDLINK2=	YES
+NO_BUILD=	YES
+EXTRACT_CMD=	${ECHO}
+WRKSRC=		${WRKDIR}
 
 do-install:
 	${INSTALL_SCRIPT} ${DISTDIR}/${DISTNAME} \
 		${LOCALBASE}/bin/${DISTNAME:C/-.*$//}
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
