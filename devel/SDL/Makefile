@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/08/25 19:22:17 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2002/08/27 08:25:52 martti Exp $
 #
 
 DISTNAME=	SDL-1.2.3
@@ -57,7 +57,7 @@ post-configure:
 
 .include "../../audio/esound/buildlink.mk"
 .include "../../graphics/Mesa/buildlink.mk"
-.include "../../graphics/aalib-x11/buildlink.mk"
+.include "../../graphics/aalib-x11/buildlink2.mk"
 .include "../../mk/pthread.buildlink.mk"
 .include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
