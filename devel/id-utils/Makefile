@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/03/22 16:08:31 bad Exp $
+# $NetBSD: Makefile,v 1.10 1999/03/22 16:14:24 bad Exp $
 # FreeBSD Id: Makefile,v 1.4 1996/11/18 10:22:47 asami Exp
 #
 
@@ -8,13 +8,6 @@ MASTER_SITES=	${MASTER_SITE_GNU:=/id-utils/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/idutils/idutils.html
-
-OPSYS!=		uname -s
-.if (${OPSYS} == "FreeBSD")
-# agc - don't do this if we're on NetBSD
-# FreeBSD use emacs to byte-compile a .el file
-BUILD_DEPENDS=	emacs:../../editors/emacs
-.endif
 
 INFO_FILES=	id-utils.info
 GNU_CONFIGURE=	yes
