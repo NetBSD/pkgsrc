@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2000/12/12 01:30:48 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2000/12/13 08:31:01 garbled Exp $
 #
 
     SUBDIR += abuse
@@ -23,7 +23,8 @@
     SUBDIR += crafty-book-medium
     SUBDIR += crafty-book-small
     SUBDIR += crafty-doc
-    SUBDIR += crossfire
+    SUBDIR += crossfire-cli
+    SUBDIR += crossfire-srv
     SUBDIR += dopewars
     SUBDIR += eus-demo
     SUBDIR += exchess
