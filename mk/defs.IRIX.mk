@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.13 2002/12/18 06:18:14 schmonz Exp $
+# $NetBSD: defs.IRIX.mk,v 1.14 2002/12/23 22:34:00 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -30,12 +30,7 @@ GTAR?=		${LOCALBASE}/bin/tar
 .else
 GTAR?=		/sbin/tar
 .endif
-.if exists(${ZOULARISBASE}/bin/gzip)
-GUNZIP_CMD?=	${ZOULARISBASE}/bin/gunzip -f
-GZCAT?=		${ZOULARISBASE}/bin/zcat
-GZIP?=		-9
-GZIP_CMD?=	${ZOULARISBASE}/bin/gzip -nf ${GZIP}
-.elif exists(${LOCALBASE}/bin/gzip)
+.if exists(${LOCALBASE}/bin/gzip)
 GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
 GZCAT?=		${LOCALBASE}/bin/zcat
 GZIP?=		-9
@@ -50,7 +45,7 @@ MKDIR?=		/sbin/mkdir -p
 .if exists(${LOCALBASE}/sbin/mtree)
 MTREE?=		${LOCALBASE}/sbin/mtree
 .endif
-MTREE?=		${ZOULARISBASE}/bin/mtree
+MTREE?=		${LOCALBASE}/bin/mtree
 MV?=		/sbin/mv
 NICE?=		/sbin/nice
 PATCH?=		/usr/sbin/patch -b
@@ -119,13 +114,6 @@ _STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
 .endif
 
 LOCALBASE?=             ${DESTDIR}/usr/pkg
-.if !defined(ZOULARISBASE)
-.  if exists(${LOCALBASE}/bsd)
-ZOULARISBASE:=		${LOCALBASE}/bsd
-.  else
-ZOULARISBASE:=		${LOCALBASE}
-.  endif
-.endif
 .if exists(${LOCALBASE}/sbin/pkg_info)
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 .endif
