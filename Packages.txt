@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.99 2000/07/20 12:58:11 rh Exp $
+# $NetBSD: Packages.txt,v 1.100 2000/07/21 06:56:35 rh Exp $
 ###########################################################################
 
 			==========================
@@ -1090,9 +1090,9 @@ perform the equivalent of:
    ability to automatically update the current package along with the
    dependent packages you have installed.
 
-   Resuming an interrupted 'make update' will only work as long as the
+   Resuming an interrupted "make update" will only work as long as the
    package tree remains unchanged.  If the source code for one of the
-   packages to be updated has been changed, resuming 'make update' will
+   packages to be updated has been changed, resuming "make update" will
    most certainly fail!
 
    The following variables can be used either on the command line or in
@@ -1112,9 +1112,9 @@ perform the equivalent of:
       "make" or "make update".
 
     - REINSTALL:
-      Use "reinstall" instead of ${DEPENDS_TARGET} for every package
-      that gets updated.  Be sure you know the implications of using
-      the "reinstall" target when using this variable.
+      Deinstall each package before installing (making ${DEPENDS_TARGET}).
+      This may be necessary if the "clean-update" target (see below) was
+      called after interrupting a running "make update".
 
  * clean-update:
    Clean the source tree for all packages that would get updated if
