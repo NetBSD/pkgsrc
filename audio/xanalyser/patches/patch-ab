@@ -1,24 +1,19 @@
-$NetBSD: patch-ab,v 1.3 2004/05/03 16:25:07 minskim Exp $
+$NetBSD: patch-ab,v 1.4 2004/05/03 17:00:42 minskim Exp $
 
 --- src/DSP.cc.orig	2001-12-01 19:05:15.000000000 -0600
 +++ src/DSP.cc
-@@ -14,8 +14,8 @@
+@@ -14,8 +14,13 @@
  #include <math.h>
  #include <errno.h>
  #include <string.h>
 -#include <values.h>
--#include <byteswap.h>
 +#include <limits.h>
++#ifdef __linux__
+ #include <byteswap.h>
++#else
 +#include <sys/bswap.h>
++#define bswap_16 bswap16
++#endif
  
  #include "DSP.h"
  
-@@ -168,7 +168,7 @@ DSP::swapbuffer (void* buffer, int count
-     int n = count / 2;
- 
-     for (int i = n; i != 0; i--) {
--	*tmp_buffer = bswap_16 (*tmp_buffer);
-+	*tmp_buffer = bswap16 (*tmp_buffer);
- 	tmp_buffer++;
-     }
- }
