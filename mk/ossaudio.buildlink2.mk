@@ -1,13 +1,13 @@
-# $NetBSD: ossaudio.buildlink2.mk,v 1.7 2002/10/03 08:58:05 jlam Exp $
+# $NetBSD: ossaudio.buildlink2.mk,v 1.8 2002/10/03 20:24:33 jlam Exp $
 #
 # This file should be included by Makefiles for packages that use OSS.
-# By checking the value of OSS after including this file, it's possible to
-# check whether audio/oss is installed, or if ossaudio OSS emulation should
-# be used instead:
+# By checking the value of HAVE_OSS after including this file, it's possible
+# to check whether audio/oss is installed, or if ossaudio OSS emulation
+# should be used instead:
 #
 #	.include "../../mk/ossaudio.buildlink2.mk"
 #
-#	.if defined(OSS) && (${OSS} == "YES")
+#	.if defined(HAVE_OSS) && (${HAVE_OSS} == "YES")
 #	CONFIGURE_ENV+=		ac_cv_libossaudio__oss_ioctl=no
 #	.endif
 #
@@ -16,10 +16,10 @@ OSSAUDIO_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-_OSS_INSTALLED!=	if ${PKG_INFO} -qe oss; then echo YES; else echo NO; fi
-OSS=			${_OSS_INSTALLED}
+_HAVE_OSS!=	if ${PKG_INFO} -qe oss; then echo YES; else echo NO; fi
+HAVE_OSS?=		${_HAVE_OSS}
 
-.if ${OSS} == "YES"
+.if defined(HAVE_OSS) && (${HAVE_OSS} == "YES")
 .  include "../../audio/oss/buildlink2.mk"
 .else
 BUILDLINK_PREFIX.ossaudio=	/usr
