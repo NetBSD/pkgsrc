@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/28 15:59:49 wiz Exp $
 bin/pcre-config
 bin/pcregrep
 bin/pcretest
@@ -6,6 +6,7 @@ include/pcre.h
 include/pcreposix.h
 lib/libpcre.la
 lib/libpcreposix.la
+lib/pkgconfig/libpcre.pc
 man/man1/pcregrep.1
 man/man1/pcretest.1
 man/man3/pcre.3
