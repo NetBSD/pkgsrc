@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.781 2001/07/05 17:22:59 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.782 2001/07/07 17:10:36 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -1110,6 +1110,10 @@ BUILD_DEFS+=	CONFIGURE_ENV CONFIGURE_ARGS
 BUILD_DEFS+=	OBJECT_FMT LICENSE RESTRICTED
 BUILD_DEFS+=	NO_SRC_ON_FTP NO_SRC_ON_CDROM
 BUILD_DEFS+=	NO_BIN_ON_FTP NO_BIN_ON_CDROM
+
+.if defined(OSVERSION_SPECIFIC)
+BUILD_DEFS+=	OSVERSION_SPECIFIC
+.endif # OSVERSION_SPECIFIC
 
 .if !target(all)
 all: build
