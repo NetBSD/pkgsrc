@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/30 23:25:16 taca Exp $
+${RUBY_SITELIBDIR}/optparse.rb
+${RUBY_SITELIBDIR}/optparse/shellwords.rb
+${RUBY_SITELIBDIR}/optparse/time.rb
+${RUBY_SITELIBDIR}/optparse/uri.rb
+@dirrm ${RUBY_SITELIBDIR}/optparse
+${RUBY_DOCDIR}/optparse/ChangeLog
+${RUBY_DOCDIR}/optparse/README.en
+${RUBY_DOCDIR}/optparse/ja/FIRSTSTEP.ja.rd
+${RUBY_DOCDIR}/optparse/ja/README.ja
+${RUBY_DOCDIR}/optparse/ja/optparse.ja.rd
+@dirrm ${RUBY_DOCDIR}/optparse/ja
+${RUBY_DOCDIR}/optparse/optparse.en.rd
+${RUBY_DOCDIR}/optparse/optparse.rlog
+@dirrm ${RUBY_DOCDIR}/optparse
+${RUBY_EXAMPLESDIR}/optparse/cmd-ls.rb
+${RUBY_EXAMPLESDIR}/optparse/cmd.rb
+${RUBY_EXAMPLESDIR}/optparse/getopts.test.en
+${RUBY_EXAMPLESDIR}/optparse/ja/getopts.test
+${RUBY_EXAMPLESDIR}/optparse/ja/jfold.rb
+@dirrm ${RUBY_EXAMPLESDIR}/optparse/ja
+${RUBY_EXAMPLESDIR}/optparse/opttest.rb
+@dirrm ${RUBY_EXAMPLESDIR}/optparse

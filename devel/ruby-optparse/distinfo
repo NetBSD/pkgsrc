@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/06/30 23:25:16 taca Exp $
+
+SHA1 (ruby/optparse-0.8.2.tar.gz) = 4630b2b198f2a49c05aa32ece3f27f9956d15f86
+Size (ruby/optparse-0.8.2.tar.gz) = 82855 bytes
