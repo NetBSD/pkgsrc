@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.895 2002/01/06 20:03:22 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.896 2002/01/06 23:01:31 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -1243,9 +1243,9 @@ MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt}"] = good["${srt}"] " " $$0
 MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; }
 
 SORT_SITES_CMD= ${ECHO} $$unsorted_sites | ${AWK} '${MASTER_SORT_AWK}'
-ORDERED_SITES= ${MASTER_SITE_OVERRIDE} `${SORT_SITES_CMD}`
+ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} `${SORT_SITES_CMD}`
 .else
-ORDERED_SITES= ${MASTER_SITE_OVERRIDE} $$unsorted_sites
+ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} $$unsorted_sites
 .endif
 
 #
@@ -1275,7 +1275,7 @@ _FETCH_ALLFILES= ${MKDIR} ${_DISTDIR};
 _FETCH_ALLFILES+= cd ${_DISTDIR};
 .    for fetchfile in ${_ALLFILES}
 _FETCH_ALLFILES+= 							\
-	unsorted_sites="${SITES_${fetchfile:T}} ${MASTER_SITE_BACKUP}";	\
+	unsorted_sites="${SITES_${fetchfile:T}} ${_MASTER_SITE_BACKUP}"; \
 	sites="${ORDERED_SITES}";					\
 	file="${fetchfile}";						\
 	bfile="${fetchfile:T}";						\
