@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.6 1999/06/09 17:05:35 agc Exp $
+# $NetBSD: Makefile,v 1.7 1999/10/11 10:33:01 proff Exp $
 
-DISTNAME=	festvox-rab8-1.3.1
+DISTNAME=	festvox-rab8-1.4.0
 WRKSRC=		${WRKDIR}/festival
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.3.1/
+MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.0/
 DISTFILES=	festvox_rablpc8k.tar.gz
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 
-DEPENDS+=	festival-1.3.1:../festival \
-		festlex-poslex-1.3.1:../festlex-poslex \
-		festlex-oald-1.3.1:../festlex-oald
-
-LICENSE=	no-commercial-use
+DEPENDS+=	festival-1.4.0:../festival \
+		festlex-poslex-1.4.0:../festlex-poslex \
+		festlex-oald-1.4.0:../festlex-oald
 
 CONFLICTS=	festvox-rab16-*
 
