@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/03/08 19:19:15 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2002/03/13 23:25:47 wiz Exp $
 
 --- Makefile.orig	Mon Jul 30 03:32:36 2001
 +++ Makefile
@@ -29,6 +29,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/03/08 19:19:15 wiz Exp $
    #highscoredir=/var/lib/games
  endif
  
+@@ -30,7 +30,7 @@
+     level.c intro.c text.c status.c transition.c hiscore.c dialog.c \
+     options.c fullscreen.c
+ 
+-SDL_MIXER=-lSDL_mixer
++SDL_MIXER=-lSDL_mixer -lsmpeg
+ SDL_LIB=$(SDL_LDFLAGS) $(SDL_MIXER) 
+ SDL_CFLAGS := $(shell $(SDLCONFIG) --cflags)
+ SDL_LDFLAGS := $(shell $(SDLCONFIG) --libs)
 @@ -103,14 +103,14 @@
  	   sed 's/\$$VERDATE/$(VERDATE)/' > $@
  

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/08 19:19:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/13 23:25:46 wiz Exp $
 bin/icebreaker
 man/man6/icebreaker.6
 share/doc/icebreaker/README
@@ -9,4 +9,3 @@ share/icebreaker/penguin.bmp
 share/icebreaker/penguinicon_32.bmp
 @dirrm share/icebreaker
 @dirrm share/doc/icebreaker
-@dirrm man/man6
