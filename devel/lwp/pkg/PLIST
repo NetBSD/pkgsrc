@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/29 09:45:10 fredb Exp $
+include/lwp/lock.h
+include/lwp/lwp.h
+include/lwp/preempt.h
+include/lwp/timer.h
+@dirrm include/lwp
+lib/liblwp.a
+@comment -- not yet -- lib/liblwp.la
+lib/liblwp.so.1.0
