@@ -1,15 +1,13 @@
-$NetBSD: patch-ad,v 1.1 2000/03/20 16:55:37 agc Exp $
+$NetBSD: patch-ad,v 1.2 2004/01/29 11:49:50 grant Exp $
 
-Use gcc in place of cc, mainly for Solaris.
-
---- support/genmk/makefile	2000/03/20 16:36:13	1.1
-+++ support/genmk/makefile	2000/03/20 16:36:24
-@@ -9,7 +9,7 @@
+--- support/genmk/makefile.orig	1998-06-09 00:45:10.000000000 +1000
++++ support/genmk/makefile
+@@ -9,7 +9,7 @@ OBJ=genmk.o
  # see pccts/h/pcctscfg.h
  #CFLAGS=-I../../h -DPC
  CFLAGS=-I../../h
 -CC=cc
-+CC=gcc
++#CC=cc
  BAG=../../bin/bag
  
  genmk: $(OBJ) $(SRC) ../../h/pcctscfg.h
