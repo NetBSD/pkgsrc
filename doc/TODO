@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.123 2003/01/03 14:58:37 wiz Exp $
+$NetBSD: TODO,v 1.124 2003/01/03 16:35:04 lukem Exp $
 
 Suggested new packages
 ======================
@@ -81,8 +81,6 @@ Suggested package updates
 	o bzflag-1.7g0
 	o capc-calc-2.11.6
 	o cdlabelgen-2.5.0
-	o cdrecord-1.11a39 [pkg/19073]
-	o cdrecord-2.0
 	o centericq-4.9.1
 	o cfengine-1.6.5 [pkg/19459|seb]
 	o citrix-ica [pkg/19210]
