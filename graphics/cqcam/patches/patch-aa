@@ -1,0 +1,111 @@
+--- Makefile.orig	Mon Oct 27 15:07:06 1997
++++ Makefile	Sun Aug 23 20:39:57 1998
+@@ -13,9 +13,9 @@
+ # OS-specific stuff: uncomment all of the lines for your OS of choice
+ 
+ # Linux (people with Alphas probably need to enable -DBROKEN_IO_H)
+-CFLAGS = -O2
+-LDFLAGS = -s
+-DEFS += -DLINUX # -DBROKEN_IO_H
++#CFLAGS = -O2
++#LDFLAGS = -s
++#DEFS += -DLINUX # -DBROKEN_IO_H
+ 
+ # QNX
+ #CFLAGS = -O2 -T1
+@@ -23,10 +23,17 @@
+ #DEFS += -DQNX
+ 
+ # FreeBSD
+-#CFLAGS = -O2 -I/usr/X11R6/include -I/usr/local/include
+-#LDFLAGS = -L/usr/local/lib -L/usr/X11R6/lib
++#CFLAGS = -O2 -I${X11BASE}/include -I${PREFIX}/include
++#LDFLAGS = -L${PREFIX}/lib -L${X11BASE}/lib
+ #DEFS += -DFREEBSD
+ 
++# NetBSD
++CFLAGS = -O2 -I${X11BASE}/include -I${PREFIX}/include
++LDFLAGS = -L${PREFIX}/lib -L${X11BASE}/lib
++DEFS += -DNETBSD
++# XXX Until we work out a way to use this on non-x86
++LDLIBS += -li386
++
+ # BSDI 3.0
+ #CFLAGS = -O2 -I/usr/X11R6/include -I/usr/local/include
+ #LDFLAGS = -L/usr/local/lib -L/usr/X11R6/lib
+@@ -44,7 +51,7 @@
+ # JPEG stuff: do you want JPEG support?  Where is your JPEG library?
+ 
+ LDLIBS += -ljpeg
+-#LDFLAGS +=  # -L/usr/local/lib
++LDFLAGS +=  # -L/usr/local/lib
+ DEFS += -DJPEG 
+ #CFLAGS += -I/usr/local/include
+ ######################################################################
+@@ -52,7 +59,7 @@
+ ######################################################################
+ # X11 stuff: where are your X11 .h and .a files?
+ 
+-LDFLAGS_X = -L/usr/X11R6/lib $(REMOTE_LDFLAGS)
++LDFLAGS_X = -L${X11BASE}/lib $(REMOTE_LDFLAGS)
+ LIBS_X = -lX11 -lXext $(REMOTE_LIBS)
+ ######################################################################
+ 
+@@ -67,27 +74,27 @@
+ #   If you're not compiling xcqcam, this section is irrelevant
+ 
+ # xview remote
+-REMOTE_OBJS = xqcctl.o               # code module for the remote
+-REMOTE_DEFS = -DREMOTE
+-REMOTE_LIBS = -lxview -lolgx         # libraries necessary for the remote
+-REMOTE_LDFLAGS = -L/usr/openwin/lib  # where to find libxview and libolgx
+-REMOTE_CFLAGS = -I/usr/openwin/include
++#REMOTE_OBJS = xqcctl.o               # code module for the remote
++#REMOTE_DEFS = -DREMOTE
++#REMOTE_LIBS = -lxview -lolgx         # libraries necessary for the remote
++#REMOTE_LDFLAGS = -L/usr/openwin/lib  # where to find libxview and libolgx
++#REMOTE_CFLAGS = -I/usr/openwin/include
+ 
+ # Tk remote
+-#REMOTE_OBJS = xqcctl-tk.o            # code module for the remote
+-#REMOTE_DEFS = -DREMOTE
+-#REMOTE_LIBS = -lm -ldl -ltk -ltcl    # libraries necessary for the remote
+-#REMOTE_LDFLAGS =
+-#REMOTE_CFLAGS =
++REMOTE_OBJS = xqcctl-tk.o            # code module for the remote
++REMOTE_DEFS = -DREMOTE
++REMOTE_LIBS = -lm -L${PREFIX}/lib -ltk80 -ltcl80    # libraries necessary for the remote
++REMOTE_LDFLAGS =
++REMOTE_CFLAGS = -I${PREFIX}/include/tcl8.0 -I${PREFIX}/include/tk8.0
+ ######################################################################
+ 
+ ######################################################################
+ # Installation information
+-BINDIR = /usr/local/bin
++BINDIR = ${PREFIX}/bin
+ BINMODE = 4711
+ BINUSER = root
+ BINGROUP = bin
+-MANDIR = /usr/local/man/man1
++MANDIR = ${PREFIX}/man/man1
+ ######################################################################
+ 
+ ######################################################################
+@@ -132,13 +139,14 @@
+ 
+ bininstall: all
+ 	@echo -n Installing binaries...
+-	@install -o $(BINUSER) -g $(BINGROUP) -m $(BINMODE) $(PROGRAMS) $(BINDIR)
++	@install -c -s -o $(BINUSER) -g $(BINGROUP) -m $(BINMODE) $(PROGRAMS) $(BINDIR)
+ 	@echo " done"
+ 
+ maninstall: cqcam.1
+ 	@echo -n Installing man pages...
+-	@install -o root -g root -m 644 cqcam.1 $(MANDIR)
+-	@ln -sf cqcam.1 $(MANDIR)/xcqcam.1
++	@install -c -o root -g wheel -m 644 cqcam.1 $(MANDIR)
++	@ln -sf cqcam.1.gz $(MANDIR)/xcqcam.1.gz
++	@ln -sf cqcam.1.gz $(MANDIR)/webcam.1.gz
+ 	@echo " done"
+ 
+ clean:
