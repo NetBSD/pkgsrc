@@ -1,0 +1,41 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/08/29 16:16:07 jwise Exp $
+--- configure.orig	Tue Aug  8 15:19:32 2000
++++ configure	Tue Aug 29 10:06:15 2000
+@@ -3338,7 +3338,7 @@
+ 	for i in $dirs ; do
+ 	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl; then
+ 		echo "$ac_t""$i" 1>&6
+-		XLIBSW="-L$i -lX11"
++		XLIBSW="-L$i -Wl,-R$i -lX11"
+ 		x_libraries="$i"
+ 		break
+ 	    fi
+@@ -3347,7 +3347,7 @@
+ 	if test "$x_libraries" = ""; then
+ 	    XLIBSW=-lX11
+ 	else
+-	    XLIBSW="-L$x_libraries -lX11"
++	    XLIBSW="-L$x_libraries -Wl,-R$x_libraries -lX11"
+ 	fi
+     fi
+     if test "$XLIBSW" = nope ; then
+@@ -4088,7 +4088,7 @@
+ if test "${SHARED_BUILD}" = "1" -a "${SHLIB_SUFFIX}" != ""; then
+     TK_SHLIB_CFLAGS="${SHLIB_CFLAGS}"
+     TK_LIB_FILE=libtk${TK_SHARED_LIB_SUFFIX}
+-    MAKE_LIB="\${SHLIB_LD} -o \${TK_LIB_FILE} \${OBJS} \$(TK_LD_SEARCH_FLAGS) ${TCL_STUB_LIB_SPEC} \${LIBS}"
++    MAKE_LIB="\${SHLIB_LD} -o \${TK_LIB_FILE:.so=.la} \${OBJS:.o=.lo} \$(TK_LD_SEARCH_FLAGS) ${TCL_STUB_LIB_SPEC} \${LIBS} -version-info 1:0"
+     RANLIB=":"
+ 
+ #    TCL_STUB_FLAGS="-DUSE_TCL_STUBS"
+@@ -4114,8 +4114,8 @@
+     else
+ 	eval TK_LIB_FLAG="-ltk`echo ${VERSION} | tr -d .`\${TK_DBGX}"
+     fi
+-    TK_BUILD_LIB_SPEC="-L`pwd` ${TK_LIB_FLAG}"
+-    TK_LIB_SPEC="-L${exec_prefix}/lib ${TK_LIB_FLAG}"
++    TK_BUILD_LIB_SPEC=libtk83.la
++    TK_LIB_SPEC="-L${exec_prefix}/lib -Wl,R${exec_prefix}/lib ${TK_LIB_FLAG}"
+     TK_BUILD_EXP_FILE=""
+     TK_EXP_FILE=""
+ else

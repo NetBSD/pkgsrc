@@ -1,0 +1,80 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/29 16:16:07 jwise Exp $
+--- Makefile.in.orig	Mon Aug 28 23:29:09 2000
++++ Makefile.in	Mon Aug 28 23:34:09 2000
+@@ -76,7 +76,7 @@
+ # The directory containing the Tcl sources and headers appropriate
+ # for this version of Tk ("srcdir" will be replaced or has already
+ # been replaced by the configure script):
+-TCL_GENERIC_DIR		= @TCL_SRC_DIR@/generic
++TCL_GENERIC_DIR		= ${PREFIX}/include/tcl/generic
+ 
+ # The directory containing the Tcl library archive file appropriate
+ # for this version of Tk:
+@@ -154,8 +154,8 @@
+ # "install" around;  better to use the install-sh script that comes
+ # with the distribution, which is slower but guaranteed to work.
+ 
+-INSTALL			= @srcdir@/install-sh -c
+-INSTALL_PROGRAM		= ${INSTALL}
++INSTALL			= ${LIBTOOL} --mode=install @srcdir@/install-sh -c
++INSTALL_PROGRAM		= ${INSTALL} -s
+ INSTALL_DATA		= ${INSTALL} -m 644
+ 
+ # The following specifies which Tcl executable to use for make targets
+@@ -203,7 +203,7 @@
+ # libraries.  See configure.in for a description of what it means.
+ # The values of the symbolis normally set by the configure script.
+ 
+-SHLIB_LD		= @SHLIB_LD@
++SHLIB_LD		= ${LIBTOOL} --mode=link @CC@
+ SHLIB_LD_LIBS		= @SHLIB_LD_LIBS@
+ 
+ # Additional search flags needed to find the various shared libraries
+@@ -233,11 +233,12 @@
+ # either.
+ #----------------------------------------------------------------
+ 
+-CC			= @CC@
++CC			= ${LIBTOOL} --mode=compile @CC@
++LD			= ${LIBTOOL} --mode=link @CC@ -Wl,-R${PREFIX}/lib -Wl,-R${X11BASE}/lib
+ 
+ CC_SWITCHES_NO_STUBS = ${CFLAGS} ${CFLAGS_WARNING} ${SHLIB_CFLAGS} \
+ -I${UNIX_DIR} -I${GENERIC_DIR} \
+--I${BMAP_DIR} -I${TCL_GENERIC_DIR} ${X11_INCLUDES} \
++-I${BMAP_DIR} -I${TCL_GENERIC_DIR} -I${PREFIX}/include ${X11_INCLUDES} \
+ ${AC_FLAGS} ${PROTO_FLAGS} \
+ ${SECURITY_FLAGS} ${MEM_DEBUG_FLAGS} ${KEYSYM_FLAGS} ${NO_DEPRECATED_FLAGS}
+ 
+@@ -389,7 +390,7 @@
+ 
+ 
+ wish: $(WISH_OBJS) $(TK_LIB_FILE) $(TK_STUB_LIB_FILE)
+-	$(CC) @LDFLAGS@ $(WISH_OBJS) \
++	$(LD) @LDFLAGS@ $(WISH_OBJS) \
+ 		@TK_BUILD_LIB_SPEC@ \
+ 		$(WISH_LIBS) $(TK_CC_SEARCH_FLAGS) -o wish
+ 
+@@ -400,12 +401,12 @@
+ 	make tcltest
+ 
+ tktest: ${TCL_BIN_DIR}/tcltest $(TKTEST_OBJS) $(TK_LIB_FILE)
+-	${CC} @LDFLAGS@ $(TKTEST_OBJS) \
++	${LD} @LDFLAGS@ $(TKTEST_OBJS) \
+ 		@TK_BUILD_LIB_SPEC@ \
+ 		$(WISH_LIBS) $(TK_CC_SEARCH_FLAGS) -o tktest
+ 
+ xttest: test.o tkTest.o tkSquare.o $(TK_LIB_FILE)
+-	${CC} @LDFLAGS@ test.o tkTest.o tkSquare.o \
++	${LD} @LDFLAGS@ test.o tkTest.o tkSquare.o \
+ 		@TK_BUILD_LIB_SPEC@ \
+ 		$(WISH_LIBS) $(TK_LD_SEARCH_FLAGS) -lXt -o xttest
+ 
+@@ -456,7 +457,7 @@
+ 	    chmod +x $(UNIX_DIR)/mkLinks; \
+ 	    fi
+ 	@echo "Installing $(TK_LIB_FILE) to $(LIB_INSTALL_DIR)/"
+-	@$(INSTALL_DATA) $(TK_LIB_FILE) $(LIB_INSTALL_DIR)/$(TK_LIB_FILE)
++	@$(INSTALL_DATA) $(TK_LIB_FILE:.so=.la) $(LIB_INSTALL_DIR)/$(TK_LIB_FILE)
+ 	@(cd $(LIB_INSTALL_DIR); $(RANLIB) $(TK_LIB_FILE))
+ 	@chmod 555 $(LIB_INSTALL_DIR)/$(TK_LIB_FILE)
+ 	@echo "Installing wish as $(BIN_INSTALL_DIR)/wish$(VERSION)"
