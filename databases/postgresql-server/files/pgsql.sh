@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.17 2002/10/19 21:32:46 jlam Exp $
+# $NetBSD: pgsql.sh,v 1.18 2002/10/19 22:26:35 jlam Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -77,7 +77,7 @@ pgsql_initdb()
 		@CHOWN@ ${pgsql_user} ${pgsql_home}
 		@CHGRP@ ${pgsql_group} ${pgsql_home}
 		@CHMOD@ 0750 ${pgsql_home}
-		doit_command="${initdb} ${common_args} ${flags}"
+		eval doit_command=\"${initdb} ${common_args} ${flags}\"
 		doit="@SU@ -m ${pgsql_user} -c '${doit_command}'"
 		eval $doit
 	fi
@@ -112,7 +112,7 @@ pgsql_doit()
 	restart)	@ECHO@ "Restarting ${name}." ;;
 	esac
 
-	doit_command="${ctl_command} ${action} ${command_args}"
+	eval doit_command=\"${ctl_command} ${action} ${command_args}\"
 	doit="@SU@ -m ${pgsql_user} -c '${doit_command}'"
 	eval $doit
 }
