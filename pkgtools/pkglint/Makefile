@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/06/24 23:40:13 abs Exp $
+# $NetBSD: Makefile,v 1.12 1999/07/02 13:57:56 agc Exp $
 #
 
 DISTNAME=		pkglint-1.72
@@ -22,6 +22,12 @@ MAKE_ENV=	PKGSRCDIR=${PKGSRCDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "SunOS"
+NROFF=		gnroff
+.else
+NROFF=		nroff
+.endif
+
 do-build:
 .for file in pkglint lintpkgsrc plist-clash
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
@@ -34,7 +40,7 @@ do-build:
 		-e 's|@PORTSDIR@|${PKGSRCDIR}|g'	\
 		< ${FILESDIR}/${file}.1			\
 		> ${WRKSRC}/${file}.1
-	nroff -mandoc ${WRKSRC}/${file}.1 >${WRKSRC}/${file}.0
+	${NROFF} -mandoc ${WRKSRC}/${file}.1 >${WRKSRC}/${file}.0
 .endfor
 
 do-install:
