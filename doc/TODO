@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.542 2003/05/10 01:37:10 jtb Exp $
+$NetBSD: TODO,v 1.543 2003/05/10 17:06:54 salo Exp $
 
 Suggested new packages
 ======================
@@ -58,7 +58,6 @@ Suggested new packages
 Suggested package updates
 =========================
 
-	o Mesa-5.0.1
 	o Mixer.app-1.8.0 [pkg/21278]
 	o R-1.7.0
 	o Xaw3d-1.5E
