@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/05/02 11:54:13 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/05/08 12:30:37 wiz Exp $
 
 .if !defined(OPENLDAP_BUILDLINK2_MK)
 OPENLDAP_BUILDLINK2_MK=	# defined
@@ -29,8 +29,6 @@ BUILDLINK_FILES.openldap+=	lib/libldap.*
 .if defined(USE_SASL) && (${USE_SASL} == "YES")
 .  include "../../security/cyrus-sasl/buildlink2.mk"
 .endif
-
-.include "../../mk/pthread.buildlink2.mk"
 
 BUILDLINK_TARGETS+=	openldap-buildlink
 
