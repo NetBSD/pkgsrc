@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2000/01/03 17:24:36 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2000/01/08 18:28:20 wiz Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -127,6 +127,7 @@
     SUBDIR += xroads
 #    SUBDIR += xrobots
 #    SUBDIR += xrubik
+    SUBDIR += xscavenger
     SUBDIR += xscrabble
 #    SUBDIR += xshisen
 #    SUBDIR += xshogi
