@@ -1,19 +1,19 @@
-$NetBSD: patch-af,v 1.4 2004/05/12 17:56:45 minskim Exp $
+$NetBSD: patch-af,v 1.5 2004/05/13 22:06:04 minskim Exp $
 
---- ../tk/unix/Makefile.in.orig	Mon Feb  7 00:54:01 2000
+--- ../tk/unix/Makefile.in.orig	2000-08-09 21:21:48.000000000 -0500
 +++ ../tk/unix/Makefile.in
-@@ -65,8 +65,8 @@
+@@ -69,8 +69,8 @@ STANDALONE_SRCS = tkx.c
  
  STANDALONE_OBJS = tkx.o
  
 -LIBTCLX = ../../tcl/unix/${TCLX_STLIB_NAME}
 -TCL = ../../tcl/unix/tcl
 +LIBTCLX = ${PREFIX}/lib/${TCLX_STLIB_NAME}
-+TCL = ${PREFIX}/bin/tcl
++TCL = ${TCLX_EXEC_PREFIX}/bin/tcl
  
- HELP_DIR = ${srcbasedir}/tk/help
+ HELP_DIR = @HELP_DIR@/tk
  
-@@ -92,29 +92,29 @@
+@@ -96,29 +96,30 @@ static: wishx.static tktest.static
  standalone: wishx.standalone tktest.standalone hello
  
  wishx: tkXAppInit.o @TKX_SHLIB_BUILD_REF@ @TKX_STLIB_BUILD_REF@ ${TCL} Makefile
@@ -21,7 +21,8 @@ $NetBSD: patch-af,v 1.4 2004/05/12 17:56:45 minskim Exp $
 -	    -o $@ || (rm -f $@; exit 1)
 +	${LD} tkXAppInit.o -o $@ -Wl,-R ${PREFIX}/lib -Wl,-R${X11BASE}/lib \
 +		-L${PREFIX}/lib -L${X11BASE}/lib \
-+		${TKX_SHLIB_NAME:C/\.so.*/.la/} -ltclx82 -ltk -ltcl -lX11 -lm
++		${TKX_SHLIB_NAME:C/\.so.*/.la/} -ltclx83 -ltk -ltcl -lX11 -lm \
++		${TCL_LIBS}
  
  wishx.static: tkXAppInit.o ${TKX_STLIB_NAME} ${LIBTCLX} Makefile
 -	${CC} ${LD_SWITCHES} tkXAppInit.o ${STATIC_LIBS} -o $@ || \
@@ -46,7 +47,7 @@ $NetBSD: patch-af,v 1.4 2004/05/12 17:56:45 minskim Exp $
 -	    ${TCL_BUILD_STUB_LIB_SPEC} ${TCL_SHLIB_LD_LIBS}
 +	${LIBTOOL} --mode=link @CC@ -o ${TKX_SHLIB_NAME:C/\.so.*/.la/} ${SOBJS:.o=.lo} \
 +		-Wl,-R${PREFIX}/lib -Wl,-R${X11BASE}/lib -rpath ${PREFIX}/lib \
-+		-L${PREFIX}/lib -L${X11BASE}/lib -ltclx82 -ltk -ltcl -lX11 -lm -version-info 1:0
++		-L${PREFIX}/lib -L${X11BASE}/lib -ltclx83 -ltk -ltcl -lX11 -lm -version-info 1:0
  
  hello:	hello.c
 -	${CC} ${LD_SWITCHES} -o $@ hello.c ${STATIC_LIBS}
@@ -54,7 +55,7 @@ $NetBSD: patch-af,v 1.4 2004/05/12 17:56:45 minskim Exp $
  
  #------------------------------------------------------------------------------
  # We need the "help" directory here so that the help command will work before
-@@ -154,15 +154,16 @@
+@@ -158,15 +159,17 @@ help.tmp:
  #
  
  tktest: ${TEST_OBJS} @TKX_SHLIB_BUILD_REF@ @TKX_STLIB_BUILD_REF@ ${TCL}
@@ -62,7 +63,8 @@ $NetBSD: patch-af,v 1.4 2004/05/12 17:56:45 minskim Exp $
 -	    -o $@ || (rm -f $@; exit 1)
 +	${LD} ${TEST_OBJS} -o $@ -Wl,-R${PREFIX}/lib -Wl,-R${X11BASE}/lib \
 +		-L${PREFIX}/lib -L${X11BASE}/lib \
-+		${TKX_SHLIB_NAME:C/\.so.*/.la/} -ltclx82 -ltk -ltcl -lX11 -lm
++		${TKX_SHLIB_NAME:C/\.so.*/.la/} -ltclx83 -ltk -ltcl -lX11 -lm \
++		${TCL_LIBS}
  
  tktest.static: ${TEST_OBJS} @TKX_STLIB_BUILD_REF@ ${TCL}
 -	${CC} ${LD_SWITCHES} ${TEST_OBJS} ${STATIC_LIBS} \
@@ -75,28 +77,30 @@ $NetBSD: patch-af,v 1.4 2004/05/12 17:56:45 minskim Exp $
  	    -o $@ || (rm -f $@; exit 1)
  
  tkTest.o: ${TK_SRC_DIR}/generic/tkTest.c
-@@ -199,7 +200,7 @@
- buildhelp:
- 	rm -rf ${HELP_DIR} help help.tmp
- 	mkdir ${HELP_DIR}
+@@ -207,9 +210,8 @@ buildhelp:
+ 	    mkdir -p @HELP_DIR@ ;\
+ 	fi
+ 	mkdir -p ${HELP_DIR}
 -	${BLDMANHELP} ${TK_SRC_DIR}/doc ${TCLX_TOOLS_SRC_DIR}/tkmanpages \
-+	${PREFIX}/bin/tcl ../../unix/tools/bldmanhelp.tcl ${TK_SRC_DIR}/doc ${TCLX_TOOLS_SRC_DIR}/tkmanpages \
++	${TCLX_EXEC_PREFIX}/bin/tcl ../../unix/tools/bldmanhelp.tcl ${TK_SRC_DIR}/doc ${TCLX_TOOLS_SRC_DIR}/tkmanpages \
  	    ${HELP_DIR} Tk.brf
+-	${INSTCOPY} ${HELP_DIR} ${INSTALL_ROOT}${TKX_INST_RUNTIME}/help
  
  #------------------------------------------------------------------------------
-@@ -212,27 +213,24 @@
+ 
+@@ -221,26 +223,25 @@ install-libraries:  install-runtime inst
  
  install-doc:
  
--install-misc: buildhelp
+-install-misc: ${BUILDHELP}
 -	${INSTCOPY} ${TKX_UNIX_SRC_DIR}/tkXAppInit.c \
 +install-misc:
 +	-${BSD_INSTALL_DATA_DIR}  ${INSTALL_ROOT}${TKX_INST_RUNTIME}
 +	${BSD_INSTALL_DATA} ${TKX_UNIX_SRC_DIR}/tkXAppInit.c \
  	    ${INSTALL_ROOT}${TKX_INST_RUNTIME}
--	${INSTCOPY} ${HELP_DIR} ${INSTALL_ROOT}${TKX_INST_RUNTIME}/help
-+	cd ${HELP_DIR} && ${GTAR} cf - . | (cd ${INSTALL_ROOT}${TCLX_INST_RUNTIME}/help && ${GTAR} xf -)
-+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INSTALL_ROOT}${TCLX_INST_RUNTIME}/help
++	${BSD_INSTALL_DATA_DIR} ${INSTALL_ROOT}${TKX_INST_RUNTIME:S|/tkX|/tclX|}/help
++	cd ${HELP_DIR} && ${GTAR} cf - . | (cd ${INSTALL_ROOT}${TKX_INST_RUNTIME:S|/tkX|/tclX|}/help && ${GTAR} xf -)
++	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INSTALL_ROOT}${TKX_INST_RUNTIME:S|/tkX|/tclX|}/help
  
  install-runtime:
 -	${INSTCOPY} tkx.tcl ${INSTALL_ROOT}${TKX_INST_RUNTIME}
