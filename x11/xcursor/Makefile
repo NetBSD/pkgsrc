@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/15 09:47:48 recht Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/16 22:52:31 jlam Exp $
 #
 
 DISTNAME=		libXcursor-1.1.1
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=    xcursor.pc.in
 
-BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8
+BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../x11/Xfixes/buildlink3.mk"
