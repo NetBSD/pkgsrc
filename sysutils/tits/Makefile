@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2003/07/21 17:24:40 martti Exp $
+# $NetBSD: Makefile,v 1.12 2003/09/26 08:16:17 agc Exp $
 #
 
-DISTNAME=       tits-1.0.3
+DISTNAME=       tits-1.1.1
 CATEGORIES=	sysutils
 MASTER_SITES=   http://www.mctavish.co.uk/tits/
 
