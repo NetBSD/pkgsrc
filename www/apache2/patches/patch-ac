@@ -1,16 +1,25 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/03/05 23:24:07 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2002/03/05 23:56:24 jlam Exp $
 
---- srclib/apr-util/build/apu-conf.m4.orig	Tue Aug 21 20:44:26 2001
-+++ srclib/apr-util/build/apu-conf.m4	Thu Dec  6 17:50:19 2001
-@@ -328,6 +328,11 @@
-     expat_include_dir="$1/include/xml"
-     expat_libs="-L$1/lib -lexpat"
-     expat_old=yes
-+  elif test -r "$1/include/expat.h"; then
-+    dnl previously installed expat
-+    expat_include_dir="$1/include"
-+    expat_libs="-Wl,-R${LOCALBASE}/lib -lexpat"
-+    expat_old=yes
-   elif test -r "$1/include/xmltok/xmlparse.h"; then
-     dnl Debian distribution
-     expat_include_dir="$1/include/xmltok"
+--- build/rules.mk.in.orig	Sun Dec 30 09:05:55 2001
++++ build/rules.mk.in
+@@ -93,6 +93,7 @@
+ INSTALL = $(LIBTOOL) --mode=install $(abs_srcdir)/build/install.sh -c
+ INSTALL_DATA = $(INSTALL) -m 644
+ INSTALL_PROGRAM = $(INSTALL) -m 755 $(INSTALL_PROG_FLAGS)
++INSTALL_SCRIPT = $(INSTALL) -m 755
+ 
+ #
+ # Standard build rules
+@@ -200,6 +201,12 @@
+ 	    test -d $(sbindir) || $(MKINSTALLDIRS) $(sbindir); \
+ 	    list='$(PROGRAMS)'; for i in $$list; do \
+ 	        $(INSTALL_PROGRAM) $$i $(sbindir); \
++	    done; \
++	fi
++	@if test -n '$(SCRIPTS)'; then \
++	    test -d $(sbindir) || $(MKINSTALLDIRS) $(sbindir); \
++	    list='$(SCRIPTS)'; for i in $$list; do \
++	        $(INSTALL_SCRIPT) $$i $(sbindir); \
+ 	    done; \
+ 	fi
+ 
