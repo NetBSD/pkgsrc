@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2003/01/04 11:20:14 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2004/07/11 13:40:06 wiz Exp $
 
---- Makefile.in.orig	Mon Sep 16 18:51:00 2002
+--- Makefile.in.orig	2004-04-07 17:33:39.000000000 +0200
 +++ Makefile.in
-@@ -169,7 +169,7 @@ tmac_an_prefix=\
+@@ -186,7 +186,7 @@ tmac_an_prefix=\
  indexext=.i
  
  # Directory containing the default index for refer.

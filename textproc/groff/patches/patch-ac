@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2003/02/25 10:17:12 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2004/07/11 13:40:06 wiz Exp $
 
---- tmac/doc.tmac.orig	Fri Jul  5 16:37:21 2002
+--- tmac/doc.tmac.orig	2003-09-16 08:42:31.000000000 +0200
 +++ tmac/doc.tmac
-@@ -906,8 +906,16 @@
+@@ -952,8 +952,16 @@
  .de Nm
  .  if !\n[doc-arg-limit] \{\
  .    ds doc-macro-name Nm

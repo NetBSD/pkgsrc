@@ -1,16 +1,14 @@
-$NetBSD: patch-ab,v 1.3 2003/07/01 10:12:55 wiz Exp $
+$NetBSD: patch-ab,v 1.4 2004/07/11 13:40:06 wiz Exp $
 
---- tmac/doc-common.orig	Thu Feb 27 15:51:49 2003
-+++ tmac/doc-common
-@@ -554,7 +554,10 @@
- .    as doc-header-string "\|.\|.\|.
- .  \}
- .  tl \*[doc-caption-font]\*[doc-header-string]\f[]\*[doc-caption-font2]\*[doc-volume]\f[]\*[doc-caption-font]\*[doc-header-string]\f[]
--.  sp \n[doc-header-space]u
-+.  ie !\n[cR] \
-+.    sp \n[doc-header-space]u
-+.  el \
-+.    sp 1v
- .  ev
- .  ns
- ..
+--- arch/misc/Makefile.sub.orig	2004-04-07 19:39:37.000000000 +0200
++++ arch/misc/Makefile.sub
+@@ -21,7 +21,7 @@ CLEANADD=shdeps.sed
+ 
+ all: shdeps.sed
+ 
+-shdeps.sed: shdeps.sh
+-	$(SHELL) $< "$(RT_SEP)" "$(SH_SEP)" "$(bindir)" > $@
++shdeps.sed: $(srcdir)/shdeps.sh
++	$(SHELL) $(srcdir)/shdeps.sh "$(RT_SEP)" "$(SH_SEP)" "$(bindir)" > $@
+ 
+ # eof
