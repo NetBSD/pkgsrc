@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/15 13:02:35 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/04/29 09:20:33 wulf Exp $
 bin/tpasm
+share/doc/tpasm/MANUAL.TXT
 libdata/tpasm/8051.inc
 libdata/tpasm/80c390.inc
 libdata/tpasm/p16c505.inc
 libdata/tpasm/picmacros.inc
+@dirrm share/doc/tpasm
 @dirrm libdata/tpasm
