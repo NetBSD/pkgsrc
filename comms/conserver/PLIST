@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/09 16:35:25 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/09 20:37:53 jlam Exp $
 bin/console
-etc/conserver.cf.example
-etc/conserver.passwd.example
 etc/rc.d/conserver
 man/man1/console.1
 man/man5/conserver.cf.5
 man/man5/conserver.passwd.5
 man/man8/conserver.8
 sbin/conserver
+share/examples/conserver/conserver.cf
+share/examples/conserver/conserver.passwd

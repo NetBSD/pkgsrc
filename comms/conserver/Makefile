@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/09 16:35:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/09 20:37:53 jlam Exp $
 # FreeBSD Id: ports/comms/conserver-com/Makefile,v 1.1 2001/12/09 14:40:12 kur iyama Exp
 
-DISTNAME=      conserver-7.1.3
+DISTNAME=      conserver-7.2.1
 CATEGORIES=    comms
 MASTER_SITES=  ftp://ftp.conserver.com/conserver/
 
@@ -9,29 +9,38 @@ MAINTAINER=    packages@netbsd.org
 HOMEPAGE=      http://www.conserver.com/
 COMMENT=       Application that allows multiple users to watch serial consoles
 
-GNU_CONFIGURE= YES
-CONFIGURE_ARGS=		--with-master=${DEFAULTHOST} \
-			--with-port=${DEFAULTPORT} \
-			--with-libwrap
+USE_BUILDLINK_ONLY=	YES
 
-DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-master=${DEFAULTHOST}
+CONFIGURE_ARGS+=	--with-port=${DEFAULTPORT}
+CONFIGURE_ARGS+=	--with-regex
+CONFIGURE_ARGS+=	--with-libwrap
 
-DEFAULTPORT?=  782
-DEFAULTHOST?=  localhost
-RCD_SCRIPTS=   conserver
+DEFAULTPORT?=	782
+DEFAULTHOST?=	localhost
+RCD_SCRIPTS=	conserver
+
+EGDIR=		${PREFIX}/share/examples/conserver
+CONF_FILES=	${EGDIR}/conserver.cf.example ${PKG_SYSCONFDIR}/conserver.cf
+CONF_FILES+=	${EGDIR}/conserver.passwd.example ${PKG_SYSCONFDIR}/conserver.passwd
+OWN_DIRS=	/var/consoles
 
 pre-install:
-	for script in ${RCD_SCRIPTS}; do                        \
-		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh \
-		>${WRKDIR}/$${script};                          \
+	@for script in ${RCD_SCRIPTS}; do				\
+		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
+			> ${WRKDIR}/$${script};				\
 	done
+	${INSTALL_DATA_DIR} ${EGDIR}
 
 post-install:
-	for script in ${RCD_SCRIPTS} ; do                       \
-		${INSTALL_SCRIPT} ${WRKDIR}/$${script}          \
-		${PREFIX}/etc/rc.d/$${script};                  \
+	for script in ${RCD_SCRIPTS}; do				\
+		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
+			${PREFIX}/etc/rc.d/$${script};			\
 	done
-	${MKDIR} /var/console
+
+.include "../../security/tcp_wrappers/buildlink.mk"
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

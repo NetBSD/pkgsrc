@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: conserver.sh,v 1.1.1.1 2002/05/09 16:35:25 hubertf Exp $
+# $NetBSD: conserver.sh,v 1.2 2002/06/09 20:37:54 jlam Exp $
 #
 # PROVIDE: conserver
 # REQUIRE: DAEMON
@@ -15,7 +15,6 @@ rcvar=$name
 command="@PREFIX@/sbin/${name}"
 required_files="@PKG_SYSCONFDIR@/conserver.cf"
 pidfile="/var/run/conserver.pid"
-extra_commands=""
 command_args="-d"              # _must_ start as daemon from rc.d;
                                # add more flags through ${${name}_flags}
 
@@ -25,5 +24,5 @@ then
        run_rc_command "$1"
 else
        @ECHO@ -n ' ${name}'
-       ${command} ${smbd_flags} ${command_args}
+       ${command} ${conserver_flags} ${command_args}
 fi
