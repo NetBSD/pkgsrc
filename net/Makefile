@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.515 2004/11/16 20:25:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.516 2004/11/17 18:07:02 xtraeme Exp $
 #
 
 COMMENT=	Networking tools
@@ -32,6 +32,7 @@ SUBDIR+=	bittornado
 SUBDIR+=	bittornado-gui
 SUBDIR+=	bittorrent
 SUBDIR+=	bittorrent-gui
+SUBDIR+=	bmon
 SUBDIR+=	boinc3-coreclient
 SUBDIR+=	boinc3-libs
 SUBDIR+=	boinc3-seti
@@ -222,6 +223,7 @@ SUBDIR+=	openh323
 SUBDIR+=	openntpd
 SUBDIR+=	openslp
 SUBDIR+=	openvpn
+SUBDIR+=	openvpn-current
 SUBDIR+=	overnet
 SUBDIR+=	p5-DNS-ZoneParse
 SUBDIR+=	p5-Geo-IP
