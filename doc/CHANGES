@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7731 2004/11/05 23:36:45 he Exp $
+$NetBSD: CHANGES,v 1.7732 2004/11/06 00:48:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5114,3 +5114,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added libvisual-nebulus-0.1.4 [wiz 2004-11-05]
 	Added libvisual-xmms-0.1.7 [wiz 2004-11-05]
 	Added p5-MasonX-Request-WithApacheSession-0.30 [he 2004-11-05]
+	Updated gmplayer to 1.0rc5nb7 [wiz 2004-11-06]
+	Updated mencoder to 1.0rc5nb3 [wiz 2004-11-06]
+	Updated mplayer to 1.0rc5nb3 [wiz 2004-11-06]
