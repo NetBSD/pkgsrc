@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.63 2004/05/05 06:55:28 martti Exp $
+$NetBSD: distinfo,v 1.64 2004/05/21 08:10:41 martti Exp $
 
 SHA1 (postfix/postfix-2.0.20.tar.gz) = ffedae380952a5afc2c3f6b5e610b099e10e3c91
 Size (postfix/postfix-2.0.20.tar.gz) = 1354414 bytes
-SHA1 (postfix/tls+ipv6-1.23-pf-2.0.20.patch.gz) = d728c4f885438f54147fc7b9863fc8e2de90c50d
-Size (postfix/tls+ipv6-1.23-pf-2.0.20.patch.gz) = 258336 bytes
+SHA1 (postfix/tls+ipv6-1.24-pf-2.0.20.patch.gz) = ff6d08bb950eb8b038fe518b7132705518270486
+Size (postfix/tls+ipv6-1.24-pf-2.0.20.patch.gz) = 258462 bytes
 SHA1 (postfix/postfix-pg.postfix-2.0.0.2.patch) = 51498e624f9fc68f33384c2355803f0b181ca64a
 Size (postfix/postfix-pg.postfix-2.0.0.2.patch) = 27419 bytes
 SHA1 (patch-aa) = 39a89a28cec3fd264dbda97633e34695eaad01e9
