@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/10/02 18:45:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/09 19:00:55 wiz Exp $
 
 DISTNAME=	apr_20020725223645
 PKGNAME=	apr-0.20020725223645
@@ -12,6 +12,7 @@ COMMENT=	Apache Portable Run-time, a system portability layer
 
 AUTOCONF_REQD=	2.50
 GNU_CONFIGURE=	yes
+USE_BUILDLINK2=	yes
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/build/ldconfig
 WRKSRC=		${WRKDIR}
@@ -35,6 +36,6 @@ do-install:
 	(cd ${WRKDIR}/apr && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
 	(cd ${WRKDIR}/apr-util && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
 
-.include "../../textproc/expat/buildlink.mk"
+.include "../../textproc/expat/buildlink2.mk"
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
