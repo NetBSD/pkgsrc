@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2243 2003/05/16 08:23:03 salo Exp $
+$NetBSD: CHANGES,v 1.2244 2003/05/16 09:05:23 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1968,3 +1968,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated boolean to 6.4 [dmcmahill 2003-05-15]
 	Added diffstat-1.33 [simonb 2003-05-16]
 	Updated larswm to 7.2.10 [salo 2003-05-16]
+	Updated aewm++ to 1.0.24 [salo 2003-05-16]
