@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/03/26 07:29:34 rh Exp $
+# $NetBSD: Makefile,v 1.25 2002/04/10 14:37:16 jlam Exp $
 #
 
 DISTNAME=		bonobo-1.0.18
@@ -23,9 +23,15 @@ GNU_CONFIGURE=		YES
 
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 CONFIGURE_ENV+=		X11BASE="${X11BASE}"
-LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
 
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+post-patch:
+	for file in `${FIND} ${WRKSRC} -name "Makefile.in"`; do		\
+		${SED}	-e "s|-I\$$(includedir)||g"			\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done
 
 .include "../../graphics/gdk-pixbuf-gnome/buildlink.mk"
 .include "../../graphics/freetype2/buildlink.mk"
