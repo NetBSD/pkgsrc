@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.580 2000/09/27 12:50:49 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.581 2000/09/28 10:50:43 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2790,13 +2790,21 @@ SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%|<p>This package has a home page at <
 SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
 .endif
 
-show-vulnerabilities: ${DISTDIR}/vulnerabilities
-	@${AWK} '/^${PKGBASE}/ { print $$0 }' ${DISTDIR}/vulnerabilities
+show-vulnerabilities:
+	@if [ -f ${DISTDIR}/vulnerabilities ]; then			\
+		${AWK} '/^${PKGBASE}/ { print $$0 }' ${DISTDIR}/vulnerabilities; \
+	else								\
+		${ECHO} "No vulnerabilities list found.";		\
+	fi
 
-show-vulnerabilities-html: ${DISTDIR}/vulnerabilities
-	@${AWK} '/^${PKGBASE}/ { gsub("\<", "\\&lt;", $$1);		\
-		 gsub("\>", "\\&gt;", $$1);				\
-		 printf("<STRONG><LI>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG>\n", $$1, $$2, $$3, $$3) }' ${DISTDIR}/vulnerabilities
+show-vulnerabilities-html:
+	@if [ -f ${DISTDIR}/vulnerabilities ]; then			\
+		${AWK} '/^${PKGBASE}/ { gsub("\<", "\\&lt;", $$1);	\
+			 gsub("\>", "\\&gt;", $$1);			\
+			 printf("<STRONG><LI>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG>\n", $$1, $$2, $$3, $$3) }' \
+			${DISTDIR}/vulnerabilities;			\
+	fi
+
 
 .PHONY: README.html
 README.html: .PRECIOUS
@@ -2809,7 +2817,7 @@ README.html: .PRECIOUS
 	@[ -s $@.tmp4 ] || ${ECHO} "<TR><TD><I>(no precompiled binaries available)</I>" >> $@.tmp4
 	@${MAKE} ${MAKEFLAGS} show-vulnerabilities-html >> $@.tmp5
 	@[ -s $@.tmp5 ] || ${ECHO} "<I>(no vulnerabilities known)</I>" >> $@.tmp5
-	@${LS} -l ${DISTDIR}/vulnerabilities | ${AWK} 'NF > 7 { printf("at %s %s %s\n", $$6, $$7, $$8) }' >> $@.tmp6
+	@${LS} -l ${DISTDIR}/vulnerabilities 2>&1 | ${AWK} 'NF > 7 { printf("at %s %s %s\n", $$6, $$7, $$8) }' >> $@.tmp6
 	@[ -s $@.tmp6 ] || ${ECHO} "<TR><TD><I>(no vulnerabilities list available)</I>" >> $@.tmp6
 	@${SED} -e 's|%%PORT%%|${PKGPATH}|g' \
 		-e '/%%PKG%%/r $@.tmp3'					\
