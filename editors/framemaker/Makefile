@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/25 00:20:21 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/31 02:35:26 hubertf Exp $
 #
 
 DISTNAME=	fmlinux
@@ -17,7 +17,7 @@ HOMEPAGE=	http://www.adobe.com/products/framemaker/fmlinux.html
 .if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386")
 # At least on 1.4.2, suse-6.3 is NOT ok, you need 6.1!
 DEPENDS+=	suse_linux>=6.1:../../emulators/suse_linux
-LDD?=		/emul/linux/usr/bin/ldd
+CHECK_SHLIBS=	no
 .endif
 
 RESTRICTED=		"Distributed only by Adobe Inc."

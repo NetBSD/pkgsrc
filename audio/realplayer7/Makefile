@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/25 00:20:21 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2000/08/31 02:35:25 hubertf Exp $
 #
 
 DISTNAME=		rp7_linux20_libc6_i386_cs1
@@ -31,7 +31,7 @@ EXTRACT_CMD=		HOME=${WRKDIR} XAUTHORITY=${XAUTHORITY} ${RP_INSTALLER}
 .else
 EXTRACT_CMD=		HOME=${WRKDIR} ${RP_INSTALLER}
 .endif
-LDD?=			/emul/linux/usr/bin/ldd
+CHECK_SHLIBS=		no
 
 DOWNLOAD=		http://proforma.real.com/real/player/unix/unix.html
 REALPLAYER_HOME=	${PREFIX}/lib/RealPlayer7
