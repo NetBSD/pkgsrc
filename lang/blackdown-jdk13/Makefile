@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2002/10/12 21:19:58 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2002/10/13 07:41:57 jlam Exp $
 #
 
 BASENAME=	j2sdk
 DISTNAME=	${EXTNAME}-${BLACKDOWN_ARCH}
 PKGNAME=	blackdown-jdk13-1
 PKGREVISION=	1
-
 COMMENT=	Linux port of the Blackdown Java(tm) Runtime Environment
 
 DEPENDS=	blackdown-jre13>=1:../../lang/blackdown-jre13
@@ -15,9 +14,12 @@ DISTNAME:=	${DISTNAME}.bin
 .endif
 
 # these are part of JRE
-do-configure:
-	@${RM} -r ${WRKSRC}/jre ${WRKSRC}/LICENSE ${WRKSRC}/CHANGES \
-		${WRKSRC}/COPYRIGHT ${WRKSRC}/README ${WRKSRC}/INSTALL
+post-extract:
+	${RM} -fr ${WRKSRC}/jre
+	${RM} -f ${WRKSRC}/LICENSE ${WRKSRC}/CHANGES			\
+		${WRKSRC}/COPYRIGHT ${WRKSRC}/README ${WRKSRC}/INSTALL	\
+		${WRKSRC}/bin/.java_wrapper
 
 .include "../../lang/blackdown-jre13/Makefile.common"
-.include "../../mk/bsd.pkg.mk"
+
+PREFIX=		${JVM_HOME}
