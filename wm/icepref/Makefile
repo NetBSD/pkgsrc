@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/21 15:09:47 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/24 22:48:07 drochner Exp $
 #
 
 DISTNAME=	icepref-1.1
@@ -12,7 +12,7 @@ COMMENT=	graphical configuration utility for IceWM
 
 WRKSRC=		${WRKDIR}/icepref
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=	yes
 
-.include "../../x11/pygtk/buildlink.mk"
+.include "../../x11/pygtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
