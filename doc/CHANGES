@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4858 2004/02/16 14:08:47 adam Exp $
+$NetBSD: CHANGES,v 1.4859 2004/02/16 15:01:39 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -868,3 +868,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated darkice to 0.14 [xtraeme 2004-02-16]
 	Updated stunnel to 4.05 [martti 2004-02-16]
 	Updated wine to 20040213 [adam 2004-02-16]
+	Updated gnome-dirs to 1.4 [jmmv 2004-02-15]
+	Updated gnome1-dirs to 1.4 [jmmv 2004-02-15]
+	Updated gnome2-dirs to 1.4 [jmmv 2004-02-15]
