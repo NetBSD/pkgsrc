@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/08/18 15:57:47 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2000/12/08 10:09:22 wiz Exp $
 
 DISTNAME=		majordomo-1.94.4
 CATEGORIES=		mail
@@ -26,7 +26,7 @@ ALL_TARGET=		wrapper
 INSTALL_TARGET=		install install-wrapper
 
 MESSAGE_FILE=		${WRKDIR}/MESSAGE
-REQ_FILE=		${WRKDIR}/REQ
+INSTALL_FILE=		${WRKDIR}/INSTALL
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 MAKEFILE=		Makefile.netbsd
 
@@ -40,11 +40,12 @@ PLIST_SUBST=		HOME=${MAJORDOMO_HOMEDIR}	\
 
 DOCDIR=			${PREFIX}/share/doc/majordomo
 DOCFILES=		Changelog FUTURE INSTALL LICENSE NEWLIST README
-DOCDOCFILES=		FAQ README.sequencer list-owner-info majordomo-faq.html \
-			majordomo.lisa6.ps majordomo.ora
+DOCDOCFILES=		FAQ README.sequencer list-owner-info \
+			majordomo-faq.html majordomo.lisa6.ps majordomo.ora
 
 EXDIR=			${PREFIX}/share/examples/majordomo
-EXDIRS=			archives archives/example-l digests digests/example-l-digest lists
+EXDIRS=			archives archives/example-l digests \
+			digests/example-l-digest lists
 EXFILES=		example-l.passwd example-l.info
 EXLISTS=		example-l example-l-digest
 
@@ -52,11 +53,13 @@ BUILD_DEFS+=		MAJORDOMO_USER MAJORDOMO_GROUP MAJORDOMO_TMPDIR
 
 require-uid:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if finger ${MAJORDOMO_USER} 2>&1 | ${GREP} "Login: ${MAJORDOMO_USER}" >/dev/null && ${GREP} -s "^${MAJORDOMO_GROUP}\:" /etc/group 2>/dev/null 1>&2 ; \
-	then \
-	:; \
-	else \
-		${MAKE} ${.MAKEFLAGS} su-require-uid; \
+	if ! ${ID} ${MAJORDOMO_USER} >/dev/null 2>&1; then		\
+		${TOUCH} "/tmp/grouptestmajordomo1.$$";			\
+		if ! ${CHGRP} ${MAJORDOMO_GROUP}			\
+			"/tmp/grouptestmajordomo1.$$" >/dev/null 2>&1; then \
+			${MAKE} ${.MAKEFLAGS} su-require-uid;		\
+		fi;							\
+		${RM} -f "/tmp/grouptestmajordomo1.$$";			\
 	fi
 
 su-require-uid:
@@ -82,7 +85,7 @@ su-require-uid:
 	fi
 
 root-require-uid:
-	@${SH} ${REQ_FILE} ${PKGNAME} INSTALL
+	@${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-configure:
 	@${SED} \
@@ -91,7 +94,11 @@ do-configure:
 		-e 's|@HOME@|${MAJORDOMO_HOMEDIR}|g' \
 		-e 's|@ADDUSER@|${ADDUSER}|g' \
 		-e 's|@ADDGROUP@|${ADDGROUP}|g' \
-		< ${PKGDIR}/REQ > ${REQ_FILE}
+		-e 's|@CHGRP@|${CHGRP}|g' \
+		-e 's|@ID@|${ID}|g' \
+		-e 's|@TOUCH@|${TOUCH}|g' \
+		-e 's|@RM@|${RM}|g' \
+		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	@${SED} \
 		-e 's|@MAJORDOMO_USER@|${MAJORDOMO_USER}|g' \
 		-e 's|@MAJORDOMO_GROUP@|${MAJORDOMO_GROUP}|g' \
@@ -126,6 +133,8 @@ pre-install:
 		-e 's:@MAJORDOMO_USER@:${MAJORDOMO_USER}:g' \
 		-e 's:@MAJORDOMO_GROUP@:${MAJORDOMO_GROUP}:g' \
 		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
+# for safety's sake, if the user/group got deleted since configuration
+	@${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
 	@${LN} -sf archive2.pl ${PREFIX}/libexec/majordomo/archive
