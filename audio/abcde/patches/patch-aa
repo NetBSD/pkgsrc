@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/08/16 06:02:45 lukem Exp $
+
+--- cddb-tool.orig	Thu Aug 16 07:48:11 2001
++++ cddb-tool	Thu Aug 16 15:45:59 2001
+@@ -121,7 +121,7 @@
+ 	echo '#'
+ 	echo '# Track frame offsets:'
+ 	NUMTRACKS=$2
+-	for x in $(seq 3 $(expr $NUMTRACKS + 2))
++	for x in $(jot $NUMTRACKS 3)
+ 	do
+ 		echo -e "#\t$(echo "$DISCID" | cut -f$x -d' ')"
+ 	done
+@@ -137,13 +137,13 @@
+ 	echo DISCID="$DISCNUM"
+ 	echo "DTITLE=Unknown Artist / Unknown Album"
+ 	# TTITLE0 -- TTITLEn
+-	for x in $(seq 1 $NUMTRACKS)
++	for x in $(jot $NUMTRACKS)
+ 	do
+ 		echo "TTITLE$(expr $x - 1)=Track $x"
+ 	done
+ 	echo "EXTD="
+ 	# EXTT0 -- EXTTn
+-	for x in $(seq 1 $NUMTRACKS)
++	for x in $(jot $NUMTRACKS)
+ 	do
+ 		echo "EXTT$(expr $x - 1)="
+ 	done
