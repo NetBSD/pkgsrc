@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile.in,v 1.7 2003/09/15 05:33:41 grant Exp $
+#	$NetBSD: Makefile.in,v 1.8 2004/08/21 06:33:39 jlam Exp $
 
 srcdir=		@srcdir@
 
@@ -22,18 +22,15 @@ INSTALL=	@INSTALL@
 
 PROG=		pax
 
-SRCS=	ar_io.c ar_subs.c buf_subs.c cpio.c file_subs.c ftree.c \
-	gen_subs.c getoldopt.c options.c pat_rep.c pax.c sel_subs.c tables.c \
-	tar.c tty_subs.c \
-	getid.c spec.c misc.c stat_flags.c pack_dev.c
-OBJS=	$(SRCS:.c=.o)
+OBJS=	ar_io.o ar_subs.o buf_subs.o cpio.o file_subs.o ftree.o \
+	gen_subs.o getoldopt.o options.o pat_rep.o pax.o sel_subs.o tables.o \
+	tar.o tty_subs.o \
+	getid.o spec.o misc.o stat_flags.o pack_dev.o
 
-.PHONY: all clean install
+all: $(PROG)
 
 .c.o:
 	$(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS) -c $<
-
-all: $(PROG)
 
 $(PROG): $(OBJS)
 	$(CCLD) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)

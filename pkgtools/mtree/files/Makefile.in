@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile.in,v 1.6 2003/09/05 18:38:58 jlam Exp $
+#	$NetBSD: Makefile.in,v 1.7 2004/08/21 06:33:39 jlam Exp $
 
 srcdir=		@srcdir@
 
@@ -22,16 +22,13 @@ INSTALL=	@INSTALL@
 
 PROG=		mtree
 
-SRCS=	compare.c crc.c create.c excludes.c misc.c mtree.c spec.c verify.c \
-	getid.c stat_flags.c pack_dev.c
-OBJS=	$(SRCS:.c=.o)
+OBJS=	compare.o crc.o create.o excludes.o misc.o mtree.o spec.o verify.o \
+	getid.o stat_flags.o pack_dev.o
 
-.PHONY: all clean install
+all: $(PROG)
 
 .c.o:
 	$(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS) -c $<
-
-all: $(PROG)
 
 $(PROG): $(OBJS)
 	$(CCLD) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
