@@ -8,13 +8,16 @@ apart from the command line MP3 player supplied with libmad (madplay):
 
 1) Supports URL style MP3 pathnames.
 
-2) The audio output is double-buffered.
+2) The audio output is double-buffered. Multiple audio backends
+   such as Sun (OSS), aRts, and pcm are supported.
 
 3) Streams can be pre-buffered using read-ahead.
 
 4) Simple keyboard controls.
 
-5) CTRL-C behaves like it does for mpg123.
+5) Playlist support.
 
-6) It can be installed setuid-root so it can adjust scheduling
+6) CTRL-C behaves like it does for mpg123.
+
+7) It can be installed setuid-root so it can adjust scheduling
 priority to reduce its susceptiblity to jitter. 

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/07/03 11:35:04 agc Exp $
+$NetBSD: distinfo,v 1.3 2004/09/22 11:16:35 scw Exp $
 
-SHA1 (mad123-0.7.1.tar.gz) = 87952f57789918387f1ef179a46f9b092f1c1ee5
-Size (mad123-0.7.1.tar.gz) = 19359 bytes
+SHA1 (mad123-0.8.3.tar.gz) = e6f19a87d00cdf509a1211cacc9911ad7ea540cf
+Size (mad123-0.8.3.tar.gz) = 24350 bytes
