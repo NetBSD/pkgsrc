@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:37:59 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 13:37:53 agc Exp $
 
-MD5 (knews-1.0b.1.tar.gz) = 850ebff7772d576314060ebe6ef81b73
+SHA1 (knews-1.0b.1.tar.gz) = b56046036d4c6688439e6730b8ae2a2eade922db
+Size (knews-1.0b.1.tar.gz) = 392225 bytes
 SHA1 (patch-aa) = b125c5b5078e809dd0483a17d83fd0f055604639
 SHA1 (patch-ab) = c91ef1a71a9bd63a64d87e59a0a441386dc3d3c0
 SHA1 (patch-ac) = 8e087270e5b0be25b161b2462b61fcdce6edea42
