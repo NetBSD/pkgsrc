@@ -1,0 +1,56 @@
+$NetBSD: patch-am,v 1.1 2005/01/24 12:46:25 seb Exp $
+
+--- libraries/libldap/cyrus.c.orig	2004-08-28 13:35:42.000000000 +0000
++++ libraries/libldap/cyrus.c
+@@ -1049,7 +1049,7 @@ ldap_int_sasl_get_option( LDAP *ld, int 
+ 				return -1;
+ 			}
+ 
+-			*(ber_len_t *)arg = *ssf;
++			*(sasl_ssf_t *)arg = *ssf;
+ 		} break;
+ 
+ 		case LDAP_OPT_X_SASL_SSF_EXTERNAL:
+@@ -1057,13 +1057,13 @@ ldap_int_sasl_get_option( LDAP *ld, int 
+ 			return -1;
+ 
+ 		case LDAP_OPT_X_SASL_SSF_MIN:
+-			*(ber_len_t *)arg = ld->ld_options.ldo_sasl_secprops.min_ssf;
++			*(sasl_ssf_t *)arg = ld->ld_options.ldo_sasl_secprops.min_ssf;
+ 			break;
+ 		case LDAP_OPT_X_SASL_SSF_MAX:
+-			*(ber_len_t *)arg = ld->ld_options.ldo_sasl_secprops.max_ssf;
++			*(sasl_ssf_t *)arg = ld->ld_options.ldo_sasl_secprops.max_ssf;
+ 			break;
+ 		case LDAP_OPT_X_SASL_MAXBUFSIZE:
+-			*(ber_len_t *)arg = ld->ld_options.ldo_sasl_secprops.maxbufsize;
++			*(sasl_ssf_t *)arg = ld->ld_options.ldo_sasl_secprops.maxbufsize;
+ 			break;
+ 
+ 		case LDAP_OPT_X_SASL_SECPROPS:
+@@ -1109,7 +1109,7 @@ ldap_int_sasl_set_option( LDAP *ld, int 
+ #else
+ 		memset(&extprops, 0L, sizeof(extprops));
+ 
+-		extprops.ssf = * (ber_len_t *) arg;
++		extprops.ssf = * (sasl_ssf_t *) arg;
+ 
+ 		sc = sasl_setprop( ctx, SASL_SSF_EXTERNAL,
+ 			(void *) &extprops );
+@@ -1121,13 +1121,13 @@ ldap_int_sasl_set_option( LDAP *ld, int 
+ 		} break;
+ 
+ 	case LDAP_OPT_X_SASL_SSF_MIN:
+-		ld->ld_options.ldo_sasl_secprops.min_ssf = *(ber_len_t *)arg;
++		ld->ld_options.ldo_sasl_secprops.min_ssf = *(sasl_ssf_t *)arg;
+ 		break;
+ 	case LDAP_OPT_X_SASL_SSF_MAX:
+-		ld->ld_options.ldo_sasl_secprops.max_ssf = *(ber_len_t *)arg;
++		ld->ld_options.ldo_sasl_secprops.max_ssf = *(sasl_ssf_t *)arg;
+ 		break;
+ 	case LDAP_OPT_X_SASL_MAXBUFSIZE:
+-		ld->ld_options.ldo_sasl_secprops.maxbufsize = *(ber_len_t *)arg;
++		ld->ld_options.ldo_sasl_secprops.maxbufsize = *(sasl_ssf_t *)arg;
+ 		break;
+ 
+ 	case LDAP_OPT_X_SASL_SECPROPS: {
