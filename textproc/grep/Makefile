@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2002/12/06 15:29:20 cjep Exp $
-# FreeBSD Id: Makefile,v 1.10 1999/01/27 07:41:16 fenner Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/25 19:50:34 wiz Exp $
+#
 
 DISTNAME=	grep-2.5
 CATEGORIES=	textproc
@@ -13,10 +13,15 @@ USE_BUILDLINK2=         YES
 BUILD_USES_MSGFMT=	YES
 TEXINFO_REQD=		4.0
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=        --program-prefix=g
+GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(GNU_PROGRAM_PREFIX)
+CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
+.endif
+PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
+BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
 .if (${OPSYS} == SunOS)
 CONFIGURE_SCRIPT=	${SH} ./configure
