@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2001/09/09 03:37:03 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2001/09/14 01:57:44 jlam Exp $
 
 DISTNAME=		lesstif-${LESSTIF_VERSION}
 LESSTIF_VERSION=	0.92.32
@@ -12,8 +12,6 @@ MASTER_SITES=		ftp://ftp.hungry.com/pub/hungry/lesstif/srcdist/ \
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.lesstif.org/
-
-CONFLICTS+=		openmotif-[0-9]*
 
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
