@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/26 03:15:28 jschauma Exp $
+
+--- Makefile.orig	Wed Aug 13 13:36:33 2003
++++ Makefile
+@@ -0,0 +1,22 @@
++CFLAGS+= -c
++LDFLAGS = -lm
++
++all: pdbalign distalign pdbdist
++
++pdbalign: pdbalign.o
++	$(CC) $(LDFLAGS) -o pdbalign pdbalign.o
++
++distalign: distalign.o
++	$(CC) $(LDFLAGS) -o distalign distalign.o
++
++pdbdist:pdbdist.o
++	$(CC) $(LDFLAGS) -o pdbdist pdbdist.o
++
++pdbalign.o: 
++	$(CC) $(CFLAGS) -o pdbalign.o pdbalign.c
++
++distalign.o: 
++	$(CC) $(CFLAGS) -o distalign.o distalign.c
++
++pdbdist.o:
++	$(CC) $(CFLAGS) -o pdbdist.o pdbdist.c

@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/09/26 03:15:28 jschauma Exp $
+
+--- distalign.c.orig	Fri Jan 26 17:53:41 1996
++++ distalign.c
+@@ -1019,9 +1019,9 @@ int main( argc, argv )
+     exit(0);
+ }
+ 
+-Dr. Mansoor Saqi                    Email mass15599@ggr.co.uk
++/*Dr. Mansoor Saqi                    Email mass15599@ggr.co.uk
+ Bioinformatics Group                Phone +44 (0)81 966 2417
+ Dept. of Biomolecular Structure
+ Glaxo Group Research
+-Greenford, Middlx, UK.
++Greenford, Middlx, UK. */
+ 
