@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/06/18 16:06:37 agc Exp $
+# $NetBSD: Makefile,v 1.12 1999/03/28 15:34:24 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
@@ -31,7 +31,7 @@ do-build:
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rar ${PREFIX}/share/rar
 	cd ${WRKSRC} && \
-		${INSTALL_PROGRAM} RAR ${PREFIX}/bin/rar && \
+		${INSTALL_SCRIPT} RAR ${PREFIX}/bin/rar && \
 		${INSTALL_MAN} Rar.Txt ${PREFIX}/man/cat1/rar.1 && \
 		${INSTALL_MAN} Rar_FAQ.Txt TechNote.Txt License.Txt Internet.Txt \
 			${PREFIX}/share/doc/rar && \
