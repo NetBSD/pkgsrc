@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.429 2002/10/31 17:58:46 wiz Exp $
+$NetBSD: CHANGES,v 1.430 2002/10/31 22:19:49 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3473,3 +3473,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated monafonts to 2.21 [toshii 2002-10-31]
 	Updated opera6 to 6.10 [tron 2002-10-31]
 	Updated pan to 0.13.1 (gtk2-pan) [wiz 2002-10-31]
+	Updated sdl to 1.2.5nb1 [jlam 2002-10-31]
