@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.415 2003/12/03 19:11:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.416 2003/12/05 14:13:00 recht Exp $
 #
 
 COMMENT=	Networking tools
@@ -86,6 +86,7 @@ SUBDIR+=	gnapfetch
 SUBDIR+=	gnapster
 SUBDIR+=	gnet
 SUBDIR+=	gnet1
+SUBDIR+=	gnetcat
 SUBDIR+=	gnubile
 SUBDIR+=	gopher
 SUBDIR+=	gtk-gnutella
