@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/10/15 14:50:06 tv Exp $
+# $NetBSD: Makefile,v 1.29 2004/12/03 14:31:28 wiz Exp $
 
 DISTNAME=	g-wrap-1.3.4
 PKGREVISION=	5
@@ -26,5 +26,5 @@ CONFIGURE_ENV+=		ac_cv_path_RSCHEME="nope"
 
 .include "../../devel/glib/buildlink3.mk"
 .include "../../lang/guile14/buildlink3.mk"
-.include "../../devel/guile-gtk/buildlink3.mk"
+.include "../../devel/guile14-gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

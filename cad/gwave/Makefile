@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/10/15 14:50:06 tv Exp $
+# $NetBSD: Makefile,v 1.22 2004/12/03 14:31:29 wiz Exp $
 #
 
 DISTNAME=	gwave-20030804
@@ -20,6 +20,6 @@ CONFIGURE_ENV+=	GRAPH=${GRAPHDIR}/bin/graph
 post-extract:
 	${RM} ${WRKSRC}/src/init_scheme_string.c
 
-.include "../../devel/guile-gtk/buildlink3.mk"
+.include "../../devel/guile14-gtk/buildlink3.mk"
 .include "../../graphics/plotutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
