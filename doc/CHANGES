@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4930 2004/02/21 01:42:34 minskim Exp $
+$NetBSD: CHANGES,v 1.4931 2004/02/21 01:46:23 gson Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -946,3 +946,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updates xmame to 0.79.1 [kristerw 2004-02-21]
 	Updated xmess to 0.79.1 [kristerw 2004-02-21]
 	Added py-matplotlib-0.32 [minskim 2004-02-21]
+	Updated p5-XML-Twig to 3.13 [gson 2004-02-21]
