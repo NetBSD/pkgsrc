@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.260 1999/04/24 18:14:57 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.261 1999/04/29 02:19:55 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -146,13 +146,14 @@ PKGDIR?=		${.CURDIR}/pkg.${MACHINE_ARCH}
 PKGDIR?=		${.CURDIR}/pkg
 .endif
 
+# USE_LOCALBASE_FOR_X11 is not currently supported.
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
-.if defined(USE_LOCALBASE_FOR_X11)
-PREFIX=			${LOCALBASE}
-BUILD_DEPENDS+=		${X11BASE}/lib/X11/config/xpkgwedge.def:${PKGSRCDIR}/pkgtools/xpkgwedge
-.else
+#.if defined(USE_LOCALBASE_FOR_X11)
+#PREFIX=			${LOCALBASE}
+#BUILD_DEPENDS+=		${X11BASE}/lib/X11/config/xpkgwedge.def:${PKGSRCDIR}/pkgtools/xpkgwedge
+#.else
 PREFIX=			${X11BASE}
-.endif
+#.endif
 .elif defined(USE_CROSSBASE)
 PREFIX=			${CROSSBASE}
 NO_MTREE=		yes
