@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/02/10 23:23:35 frueauf Exp $
+
+--- xcdroast.h-orig	Sun Nov 26 15:51:09 2000
++++ xcdroast.h	Sat Feb 10 00:03:29 2001
+@@ -80,14 +80,14 @@
+ #define SAVEMASTERTRACK "mkisofs.out"
+ 
+ /* default paths/configfile */
+-#define PREFIX "/usr/local"
++#define PREFIX "@@PREFIX@@"
+ #define LIBDIR "lib/xcdroast-0.98"
+ #define CONFIGDIR "~/.xcdroast"
+ #define CONFFILE "xcdr098.cfg"
+ #define LOGFILE "xcdr098.log"
+ #define ISOOPTFILE "isoopt.cfg"
+ #define ISOHEADERFILE "isoheader.cfg"
+-#define ROOTCONFIG "/etc/xcdroast.conf"
++#define ROOTCONFIG "@@PREFIX@@/etc/xcdroast.conf"
+ 
+ /* language stuff*/
+ #define MAXENTRIES 512 

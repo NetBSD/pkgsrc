@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2001/02/10 23:23:35 frueauf Exp $
+
+xcdrgtk (aka xcdroast) creates its config file into
+${PREFIX}/etc/xcdroast.conf. It will not get removed with pkg_delete(1)
+automatically. So if you no longer intend to use this package don't
+forget to remove it by hand.
+===========================================================================
