@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.SunOS,v 1.1 2002/06/21 11:35:16 abs Exp $
+# $NetBSD: cpuflags.SunOS,v 1.2 2002/07/13 11:27:29 wiz Exp $
 
 arch=`/usr/bin/uname -m`
 
@@ -16,8 +16,8 @@ fi
 
 # Fixup flags for old gcc
 if [ -n "$FLAGS" ]; then
-    gcc_ver=`gcc -v 2>&1 | awk '/gcc version/ {sub("egcs-","");print $3}'`
-    FLAGS=`awk -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
+    gcc_ver=`gcc -v 2>&1 | nawk '/gcc version/ {sub("egcs-","");print $3}'`
+    FLAGS=`nawk -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
 	{if (gcc_ver < $1){map[$2] = ""$3}}
 	END{if (flags in map) {print map[flags]}else {print flags}}
 	' <<EOD
