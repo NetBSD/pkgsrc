@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2004/05/08 00:32:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.65 2004/06/20 21:25:46 jmmv Exp $
 #
 
-DISTNAME=	gdm-2.6.0.2
+DISTNAME=	gdm-2.6.0.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,7 +20,7 @@ SITES_Daemon.png=	${MASTER_SITE_LOCAL}
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
 USE_BUILDLINK3=		YES
-USE_DIRS+=		xdg-1.1
+USE_DIRS+=		gnome2-1.5
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -110,6 +110,7 @@ post-install:
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
