@@ -1,0 +1,4 @@
+KSSH is a KDE front-end to ssh.
+It can work as a standard KDE application that launches ssh connections in 
+a terminal or as a konsole session. This means that you can press in any
+konsole "New Session" and then select "Secure Shell".
