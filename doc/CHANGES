@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3377 2003/09/14 21:29:57 bouyer Exp $
+$NetBSD: CHANGES,v 1.3378 2003/09/14 22:25:29 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3692,3 +3692,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Set-IntSpan-1.07 [gson 2003-09-14]
 	Updated horde to 2.2.4 [bouyer 2003-09-14]
 	Updated imp to 3.2.2 [bouyer 2003-09-14]
+	Updated samba to 2.2.8nb4 [jlam 2003-09-14]
