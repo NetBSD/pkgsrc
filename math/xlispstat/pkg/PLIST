@@ -1,0 +1,44 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/03 20:28:09 frueauf Exp $
+bin/xlispstat
+libexec/xlispstat/xlisp
+libexec/xlispstat/xlisp.wks
+share/xlispstat/Data/absorbtion.lsp
+share/xlispstat/Data/stackloss.lsp
+share/xlispstat/Data/randu.lsp
+share/xlispstat/Data/puromycin.lsp
+share/xlispstat/Data/oxygen.lsp
+share/xlispstat/Data/metabolism.lsp
+share/xlispstat/Data/leukemia.lsp
+share/xlispstat/Data/iris.lsp
+share/xlispstat/Data/heating.lsp
+share/xlispstat/Data/diabetes.lsp
+share/xlispstat/Data/car-prices.lsp
+share/xlispstat/Data/book.lsp
+share/xlispstat/Data/aircraft.lsp
+share/xlispstat/Data/tutorial.lsp
+share/xlispstat/Examples/abrasiondemo.lsp
+share/xlispstat/Examples/tour.lsp
+share/xlispstat/Examples/rotatedemo.lsp
+share/xlispstat/Examples/regdemo.lsp
+share/xlispstat/Examples/plotcontrols.lsp
+share/xlispstat/Examples/inspect.lsp
+share/xlispstat/Examples/fstat.lsp
+share/xlispstat/Examples/dataprotos.lsp
+share/xlispstat/Examples/bcdemo.lsp
+share/xlispstat/Examples/addhandrotate.lsp
+share/xlispstat/Examples/addbox.lsp
+share/xlispstat/Examples/tourdemo.lsp
+share/xlispstat/Autoload/_autoidx.lsp
+share/xlispstat/Autoload/stepper.fsl
+share/xlispstat/Autoload/oneway.fsl
+share/xlispstat/Autoload/nonlin.fsl
+share/xlispstat/Autoload/maximize.fsl
+share/xlispstat/Autoload/glim.fsl
+share/xlispstat/Autoload/bayes.fsl
+share/xlispstat/Autoload/symaclet.fsl
+share/xlispstat/xlisp.hlp
+@dirrm libexec/xlispstat
+@dirrm share/xlispstat/Autoload
+@dirrm share/xlispstat/Data
+@dirrm share/xlispstat/Examples
+@dirrm share/xlispstat
