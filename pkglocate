@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-#	$NetBSD: pkglocate,v 1.8 2003/05/31 14:20:46 jmmv Exp $
+#	$NetBSD: pkglocate,v 1.9 2004/07/04 16:12:10 jschauma Exp $
 #
 #-
 # Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -52,7 +52,7 @@ PATH=${PATH}:/usr/sbin
 
 case `pkg_info -e 'glimpse-*'` in
 glimpse-*)	grepname=agrep ;;
-*)		grepname=/usr/bin/grep ;;
+*)		grepname=grep ;;
 esac
 
 approx=""
