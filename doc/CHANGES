@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.689 2002/12/05 15:17:19 jschauma Exp $
+$NetBSD: CHANGES,v 1.690 2002/12/05 15:22:24 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3824,3 +3824,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated MesaLib to 5.0 [jschauma 2002-12-05]
 	Updated glu to 5.0 [jschauma 2002-12-05]
 	Updated glut to 5.0 [jschauma 2002-12-05]
+	Added MesaDemos-5.0 [jschauma 2002-12-05]
