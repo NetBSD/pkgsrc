@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8848 2005/01/21 12:16:59 drochner Exp $
+$NetBSD: CHANGES,v 1.8849 2005/01/21 12:25:30 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -468,3 +468,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mpgtx to 1.3.1 [drochner 2005-01-21]
 	Updated libgnomecanvasmm20 to 2.0.2 [drochner 2005-01-21]
 	Updated fontconfig to 2.2.98 [drochner 2005-01-21]
+	Updated jakarta-tomcat to 5.0.30 [abs 2005-01-21]
+
