@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2001/03/07 14:33:41 drochner Exp $
+
+--- Packages/RANLIB/setup.py.orig	Fri Sep 29 17:02:55 2000
++++ Packages/RANLIB/setup.py
+@@ -18,7 +18,7 @@
+        packages = [''],
+        package_dir = {'': 'Lib'},
+        extra_path = 'Numeric',
+-       include_dirs = ['Include'],
++       include_dirs = ['Include','../../Include'],
+        headers = headers,
+        ext_modules = [ Extension('ranlib',
+                                 ['Src/ranlibmodule.c',
