@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9762 2005/04/05 09:25:11 wiz Exp $
+$NetBSD: CHANGES,v 1.9763 2005/04/05 09:27:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1911,3 +1911,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cksfv to 1.3.4 [wiz 2005-04-05]
 	Updated p5-MIME-Types to 1.15 [wiz 2005-04-05]
 	Updated m4 to 1.4.3 [wiz 2005-04-05]
+	Updated cvsweb to 3.0.5 [wiz 2005-04-05]
