@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/12/02 06:56:42 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/04/03 23:10:43 hubertf Exp $
 
 DISTNAME=	teapop-0.3.2
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.toontown.org/pub/teapop/			\
 		http://www.toontown.org/pub/teapop/
@@ -26,6 +27,12 @@ CONFIGURE_ARGS+=--disable-apop
 
 .if defined(TEAPOP_WITHOUT_VPOP)
 CONFIGURE_ARGS+=--disable-vpop
+.endif
+
+.if defined(TEAPOP_WITH_MYSQL)
+DEPENDS+=      mysql-client>=3.23:../../databases/mysql-client
+CONFIGURE_ARGS+=       --with-mysql=${LOCALBASE}
+LDFLAGS+=      -L${LOCALBASE}/lib/mysql -Wl,-R${LOCALBASE}/lib/mysql
 .endif
 
 post-install:
