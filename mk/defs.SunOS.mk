@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.51 2003/01/10 08:44:20 jlam Exp $
+# $NetBSD: defs.SunOS.mk,v 1.52 2003/01/15 20:55:39 jlam Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -64,6 +64,7 @@ PAX?=		/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
 PKGLOCALEDIR?=	lib
 PS?=		/bin/ps
+PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/usr/bin/rm
 RMDIR?=		/usr/bin/rmdir
 SED?=		/usr/xpg4/bin/sed
