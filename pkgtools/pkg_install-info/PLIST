@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/09 22:16:10 seb Exp $
+bin/pkg_install-info
