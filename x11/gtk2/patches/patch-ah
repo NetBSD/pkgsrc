@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.8 2005/01/18 12:06:38 jmmv Exp $
+
+--- gdk-pixbuf/pixops/scale_line_22_33_mmx.S.orig	2004-08-11 16:23:31.000000000 +0200
++++ gdk-pixbuf/pixops/scale_line_22_33_mmx.S
+@@ -4,7 +4,7 @@ gcc2_compiled.:
+ .text
+ 	.align 16
+ 
+-#if !defined(__MINGW32__) && !defined(__CYGWIN__)	
++#if !defined(__MINGW32__) && !defined(__CYGWIN__) && !defined(__INTERIX)
+ 	
+ .globl _pixops_scale_line_22_33_mmx
+ 	.type	 _pixops_scale_line_22_33_mmx,@function
