@@ -1,0 +1,23 @@
+RCS manages software libraries.  It  greatly  increases
+programmer  productivity  by  providing  the following functions.
+
+1.   RCS stores and retrieves multiple revisions of  program and  other  text.
+2.   RCS maintains a complete history of changes.
+3.   RCS manages multiple lines of development.
+4.   RCS can merge multiple  lines  of  development.
+5.   RCS flags coding conflicts.
+6.   RCS resolves access conflicts.
+7.   RCS provides high-level retrieval functions.
+8.   RCS provides release and configuration control.
+9.   RCS performs automatic identification of  modules  with
+     name,  revision  number,  creation  time,  author, etc.
+10.  Provides high-level management visibility.
+11.  RCS is fully compatible with existing software development tools.
+12.  RCS' basic user  interface  is  extremely  simple.
+13.  RCS simplifies software distribution if customers main-
+     tain  sources  with  RCS  also.
+14.  RCS needs little extra space for  the  revisions  (only the differences).
+15.  RCS is implemented with reverse deltas. This means that
+     the latest revision, which is the one that is accessed most
+     often, is stored intact.  This results in fast access time for
+     the revision needed most often.
