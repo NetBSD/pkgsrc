@@ -1,0 +1,19 @@
+tamago is a multilingual enhancement for emacs with leim.
+Support
+	JIS X 0208
+	GB 2312
+	CNS 11643
+	KS C 5601
+
+C-\	enable/disable the input method from leim.
+C-u C-\	Switch the input method.
+	japanese-egg-wnn
+	japanese-egg-sj3
+	chinese-gb-egg-wnn-py
+	chinese-gb-egg-wnn-zy
+	chinese-gb-egg-wnn-qm
+	chinese-gb-egg-wnn-wb
+	chinese-cns-egg-wnn-py
+	chinese-cns-egg-wnn-zy
+	korean-egg-wnn
+You may need more Wnn or sj3 package/server.
