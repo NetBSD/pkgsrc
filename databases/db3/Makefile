@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/07/22 10:36:53 grant Exp $
+# $NetBSD: Makefile,v 1.12 2002/07/22 11:17:03 grant Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	db3-3.11.2
@@ -9,7 +9,7 @@ MAINTAINER=	wrstuden@netbsd.org
 HOMEPAGE=	http://www.sleepycat.com/
 COMMENT=	Sleepycat Software's Berkeley DB version 3
 
-PATCH_SITES=	${MASTER_SITES}
+PATCH_SITES=	http://www.sleepycat.com/update/3.3.11/
 PATCHFILES=	patch.3.3.11.1 patch.3.3.11.2
 PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet -p0
 
