@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/10/21 07:22:10 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2003/01/20 22:55:43 jschauma Exp $
 #
 
 DISTNAME=	procmail-3.22
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.procmail.org/
 COMMENT=	Local mail delivery agent
 
 USE_BUILDLINK2=	YES
-MAKE_ENV=	SHELL=${SH}
+MAKE_ENV+=	SHELL=${SH} CHMOD=${CHMOD}
 INSTALL_TARGET=	install-suid install.man
 
 .include "../../mk/bsd.prefs.mk"
