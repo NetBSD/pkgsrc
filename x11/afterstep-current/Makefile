@@ -1,37 +1,23 @@
-# $NetBSD: Makefile,v 1.15 1999/11/14 20:19:03 fredb Exp $
+# $NetBSD: Makefile,v 1.16 2000/01/13 06:35:11 fredb Exp $
 
-DISTNAME=		AfterStep-1.7.142
-PKGNAME=		afterstep-1.7.157
-CATEGORIES=		x11
-MASTER_SITES=		ftp://ftp.afterstep.org/devel/snapshots/ \
-			ftp://ftp.afterstep.org/devel/archives/1.7/ \
-	ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/snapshots/ \
-	ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/archives/1.7/
-#MASTER_SITES=		ftp://ftp.afterstep.org/pub/stable/ \
-#	ftp://ftp.digex.net/pub/X11/window-managers/afterstep/stable/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	AfterStep-1.7.164
+PKGNAME=	afterstep-1.7.165
+CATEGORIES=	x11
+MASTER_SITES=	ftp://ftp.afterstep.org/devel/snapshots/ \
+		ftp://ftp.afterstep.org/devel/archives/1.7/ \
+		ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/snapshots/ \
+		ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/archives/1.7/
+#MASTER_SITES=	ftp://ftp.afterstep.org/pub/stable/ \
+#		ftp://ftp.digex.net/pub/X11/window-managers/afterstep/stable/
+EXTRACT_SUFX=	.tar.bz2
 
-PATCH_SITES=		ftp://ftp.afterstep.org/devel/patches/ \
-			ftp://ftp.afterstep.org/devel/patches/contrib/ \
-			ftp://ftp.afterstep.org/devel/patches/archive/ \
-	ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/patches/ \
-	ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/patches/contrib/ \
-	ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/patches/archive/
-PATCHFILES=	1.7.142-01-sasha-png_jpg_warnings.patch.gz \
-		1.7.142-02-tildouf-wharf_transient_and_Audio_fix.patch.gz \
-		1.7.142-03-allanon-icons_and_wharf.patch.gz \
-		1.7.142-04-allanon-desk_and_shaped_icons_and_wharf_reswallow.patch.gz \
-		1.7.142-05-allanon-desks_and_wharf.patch.gz \
-		1.7.142-06-sasha-menus_and_more.patch.gz \
-		1.7.142-07-sasha-winfunctions_scroll.patch.gz \
-		1.7.142-08-sasha-functions-gamma-etc.patch.gz \
-		1.7.142-09-sasha-borders_myframes_more.patch.gz \
-		1.7.142-10-allanon-avoidcover.patch.gz \
-		1.7.142-11-sasha-icons_shade_gamma.patch.gz \
-		1.7.142-12-allanon-window_position_and_shaping.patch.gz \
-		1.7.142-13-sasha-titlebuttons_mapping.patch.gz \
-		1.7.142-14-allanon-randomplacement_and_texturedhandle_and_shaped_windows.patch.gz \
-		1.7.142-15-allanon-disappearing_windows.patch.gz
+PATCH_SITES=	ftp://ftp.afterstep.org/devel/patches/ \
+		ftp://ftp.afterstep.org/devel/patches/contrib/ \
+		ftp://ftp.afterstep.org/devel/patches/archive/ \
+		ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/patches/ \
+		ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/patches/contrib/ \
+		ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/patches/archive/
+PATCHFILES=		1.7.164-01-sasha-shade_titleballoons.patch.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		fb@enteract.com
