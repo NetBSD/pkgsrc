@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/11/04 20:20:22 shannonjr Exp $
+$NetBSD: distinfo,v 1.3 2004/11/05 22:12:17 jmmv Exp $
 
 SHA1 (dirmngr-0.5.6.tar.gz) = 584ee44d60b9385fcf0d0afa08f801fd05eba968
 Size (dirmngr-0.5.6.tar.gz) = 516196 bytes
-SHA1 (patch-aa) = 8f6ce061cd89cd34450e904d3a87e3508cf89847
+SHA1 (patch-aa) = 02dd8cf8224650a61d07b8353761fe51a70f5d47
 SHA1 (patch-ab) = 84b9266877b312aed33bd99fb1e509c92a73045b
+SHA1 (patch-ac) = ce9fd0eb7c095ff1494a00dd7606a039bb83928f

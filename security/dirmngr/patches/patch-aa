@@ -1,32 +1,31 @@
-$NetBSD: patch-aa,v 1.1 2004/10/23 15:02:32 shannonjr Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/05 22:12:17 jmmv Exp $
 
---- configure.ac.orig	2004-09-28 06:20:54.000000000 -0600
-+++ configure.ac
-@@ -201,7 +201,7 @@ AC_ARG_WITH(ldap,
- 
+--- configure.orig	2004-09-28 14:37:56.000000000 +0200
++++ configure
+@@ -10934,7 +10934,7 @@ else
+ fi;
  if test "x$with_ldap" = "xCHECK" ; then
    with_ldap=NOTFOUND
 -  search_incs="$kde_includes /usr/include /usr/local/include"
-+  search_incs="$kde_includes /usr/include $LOCALBASE/include"
-   AC_FIND_FILE(ldap.h, $search_incs, ldap_incdir)
-   if test -r $ldap_incdir/ldap.h ; then
-     test "x$ldap_incdir" != "x/usr/include" && LDAP_INCS="-I$ldap_incdir"
-@@ -210,7 +210,7 @@ if test "x$with_ldap" = "xCHECK" ; then
-   if test $with_ldap = FOUND ; then
-     with_ldap=NOTFOUND
++  search_incs="${BUILDLINK_PREFIX_openldap}/include"
+ 
+ ldap_incdir=NO
+ for i in $search_incs;
+@@ -10959,7 +10959,7 @@ done
      for ext in la so sl a ; do
--      AC_FIND_FILE(libldap.$ext, /usr/lib /usr/local/lib,
-+      AC_FIND_FILE(libldap.$ext, /usr/lib $LOCALBASE/lib,
-         ldap_libdir)
-       if test -r $ldap_libdir/libldap.$ext ; then
-         if test "x$ldap_libdir" != "x/usr/lib" ; then
-@@ -293,7 +293,8 @@ AC_SUBST(LDAP_SUBDIR)
  
- # Checks for header files.
- AC_HEADER_STDC
--AC_CHECK_HEADERS([string.h])
-+AC_CHECK_HEADERS([locale.h string.h])
-+
+ ldap_libdir=NO
+-for i in /usr/lib /usr/local/lib;
++for i in ${BUILDLINK_PREFIX_openldap}/lib
+ do
+   for j in libldap.$ext;
+   do
+@@ -11290,7 +11290,7 @@ _ACEOF
+ fi
  
  
- # Checks for typedefs, structures, and compiler characteristics.
+-for ac_header in string.h
++for ac_header in locale.h string.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then
