@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4271 2003/12/28 12:33:44 jmmv Exp $
+$NetBSD: CHANGES,v 1.4272 2003/12/28 14:27:50 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5400,3 +5400,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fix-mime-charset to 0.5.2 [wiz 2003-12-28]
 	Updated gif2png to 2.5.0 [wiz 2003-12-28]
 	Updated GeoIP to 1.3.1 [jmmv 2003-12-28]
+	Updated GConf2 to 2.4.0.1nb1 [jmmv 2003-12-28]
+	Updated gnome-panel to 2.4.1nb1 [jmmv 2003-12-28]
