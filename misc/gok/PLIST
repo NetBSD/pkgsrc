@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/01 19:04:43 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/19 18:50:22 jmmv Exp $
 bin/gok
 lib/bonobo/servers/GNOME_Gok.server
 lib/pkgconfig/gok-1.0.pc
@@ -47,6 +47,14 @@ share/gok/be/mouse.kbd
 share/gok/be/move-resize.kbd
 share/gok/be/quit.kbd
 share/gok/be/text-operations.kbd
+share/gok/bn/gok-controls.kbd
+share/gok/bn/hide.kbd
+share/gok/bn/launcher.kbd
+share/gok/bn/main.kbd
+share/gok/bn/mouse.kbd
+share/gok/bn/move-resize.kbd
+share/gok/bn/quit.kbd
+share/gok/bn/text-operations.kbd
 share/gok/ca/gok-controls.kbd
 share/gok/ca/hide.kbd
 share/gok/ca/launcher.kbd
@@ -145,6 +153,14 @@ share/gok/gok.rc
 share/gok/goklogo.png
 share/gok/goksound1.wav
 share/gok/goksound2.wav
+share/gok/gu/gok-controls.kbd
+share/gok/gu/hide.kbd
+share/gok/gu/launcher.kbd
+share/gok/gu/main.kbd
+share/gok/gu/mouse.kbd
+share/gok/gu/move-resize.kbd
+share/gok/gu/quit.kbd
+share/gok/gu/text-operations.kbd
 share/gok/hi/gok-controls.kbd
 share/gok/hi/hide.kbd
 share/gok/hi/launcher.kbd
@@ -162,6 +178,14 @@ share/gok/hr/mouse.kbd
 share/gok/hr/move-resize.kbd
 share/gok/hr/quit.kbd
 share/gok/hr/text-operations.kbd
+share/gok/hu/gok-controls.kbd
+share/gok/hu/hide.kbd
+share/gok/hu/launcher.kbd
+share/gok/hu/main.kbd
+share/gok/hu/mouse.kbd
+share/gok/hu/move-resize.kbd
+share/gok/hu/quit.kbd
+share/gok/hu/text-operations.kbd
 share/gok/inverse-scanning.xam
 share/gok/it/gok-controls.kbd
 share/gok/it/hide.kbd
@@ -372,6 +396,7 @@ ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gok.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gok.mo
@@ -383,8 +408,10 @@ ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gok.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gok.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gok.mo
@@ -438,8 +465,10 @@ share/pixmaps/gok.png
 @dirrm share/gok/ko
 @dirrm share/gok/ja
 @dirrm share/gok/it
+@dirrm share/gok/hu
 @dirrm share/gok/hr
 @dirrm share/gok/hi
+@dirrm share/gok/gu
 @dirrm share/gok/ga
 @dirrm share/gok/fr
 @dirrm share/gok/es
@@ -451,6 +480,7 @@ share/pixmaps/gok.png
 @dirrm share/gok/cy
 @dirrm share/gok/cs
 @dirrm share/gok/ca
+@dirrm share/gok/bn
 @dirrm share/gok/be
 @dirrm share/gok/az
 @dirrm share/gok/ar
