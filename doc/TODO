@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.18 2002/11/29 18:34:19 wiz Exp $
+$NetBSD: TODO,v 1.19 2002/12/02 10:17:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -178,7 +178,6 @@ Suggested package updates
 	o postgresql-7.3
 	o povray-3.5
 	o psi-0.8.7
-	o pwlib-1.4.2
 	o pygtk-0.6.11
 	o pygtk-1.9.13
 	o r-1.6.1 [markd]
