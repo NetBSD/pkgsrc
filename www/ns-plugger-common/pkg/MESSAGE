@@ -1,6 +1,6 @@
-$NetBSD: MESSAGE,v 1.1.1.1 2000/08/22 11:02:12 rh Exp $
-
 ==========================================================================
+$NetBSD: MESSAGE,v 1.2 2001/02/06 14:24:15 wiz Exp $
+
   Plugger has now been installed on your system.
 
   This package is only a plugin wrapper around common multimedia
@@ -25,4 +25,5 @@ $NetBSD: MESSAGE,v 1.1.1.1 2000/08/22 11:02:12 rh Exp $
   `man plugger'.  To use a different (or no) plugin for a specific file
   type, use the Navigator/Applications preferences of your Netscape
   browser.
+
 ==========================================================================

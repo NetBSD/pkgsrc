@@ -1,3 +1,6 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.2 2001/02/06 14:24:11 wiz Exp $
+
 This package is distributed under the following conditions:
 
 1. Source code distribution is fully free.
@@ -5,3 +8,5 @@ This package is distributed under the following conditions:
 the package maintainer, Nobuhiro Yasutomi (nobu@psrc.isac.co.jp).
 
 This is described in the README file in Japanese.
+
+======================================================================

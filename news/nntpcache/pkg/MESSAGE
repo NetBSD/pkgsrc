@@ -1,4 +1,5 @@
-$NetBSD: MESSAGE,v 1.3 1999/02/23 00:38:05 tv Exp $
+======================================================================
+$NetBSD: MESSAGE,v 1.4 2001/02/06 14:24:13 wiz Exp $
 
 You may want to customize
 
@@ -7,3 +8,5 @@ You may want to customize
 	${PREFIX}/etc/nntpcache/nntpcache.servers
 
 to fit your personal needs.
+
+======================================================================
