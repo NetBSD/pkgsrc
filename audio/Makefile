@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.167 2003/03/24 09:00:45 wiz Exp $
+# $NetBSD: Makefile,v 1.168 2003/03/26 22:49:14 wiz Exp $
 #
 
 COMMENT=	Audio tools
 
 SUBDIR+=	SDL-mixer
+SUBDIR+=	SDL_sound
 SUBDIR+=	abcde
 SUBDIR+=	amp
 SUBDIR+=	arts
