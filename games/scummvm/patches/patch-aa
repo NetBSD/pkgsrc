@@ -1,21 +1,14 @@
-$NetBSD: patch-aa,v 1.6 2003/08/04 08:21:05 adam Exp $
+$NetBSD: patch-aa,v 1.7 2003/08/04 19:57:16 wiz Exp $
 
---- Makefile.orig	2003-08-04 09:47:54.000000000 +0200
-+++ Makefile	2003-08-04 09:49:16.000000000 +0200
-@@ -1,6 +1,6 @@
- # $Header: /cvsroot/pkgsrc/games/scummvm/patches/patch-aa,v 1.6 2003/08/04 08:21:05 adam Exp $
+--- Makefile.orig	Wed Jul 16 22:36:38 2003
++++ Makefile
+@@ -2,3 +2,3 @@
  
 -CXX     := c++
 +#CXX     := c++
  AR      := ar cru
- RANLIB  := ranlib
- RM      := rm -f
-@@ -17,7 +17,7 @@
- # Default compilation parameters. Normally don't edit these           #
- #######################################################################
+@@ -19,3 +19,3 @@ CP      := cp
  
 -CXXFLAGS:= -g -O
 +CXXFLAGS+=${CFLAGS}
  DEFINES :=
- LDFLAGS :=
- INCLUDES:= -I. -Icommon
