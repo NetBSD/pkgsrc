@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/03/27 03:20:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.29 2001/07/14 06:35:11 jlam Exp $
 #
 
 DISTNAME=	rpm-2.5.4
@@ -14,9 +14,9 @@ BUILD_USES_MSGFMT=	yes
 
 CONFLICTS+=	rpm2cpio-*
 
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_LIBINTL=	yes
+GNU_CONFIGURE=		yes
+USE_GMAKE=		yes
+USE_BUILDLINK_ONLY=	yes
 
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
@@ -31,4 +31,6 @@ pre-install:
 post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/zlib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
