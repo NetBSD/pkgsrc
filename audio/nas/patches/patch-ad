@@ -1,0 +1,28 @@
+$NetBSD: patch-ad,v 1.6 2000/09/12 16:49:23 fredb Exp $
+
+--- server/dda/voxware/auvoxware.c.orig	Sat Mar  4 20:40:55 2000
++++ server/dda/voxware/auvoxware.c	Tue Sep 12 11:41:20 2000
+@@ -224,7 +224,11 @@
+ 	256,
+ 	3,
+ 	32,
++#ifdef __NetBSD__
++	"/dev/audio",
++#else
+ 	"/dev/dsp1",
++#endif
+ 	0
+ }, sndStatOut =
+ {
+@@ -237,7 +241,11 @@
+ 	256,
+ 	3,
+ 	32,
++#ifdef __NetBSD__
++	"/dev/audio",
++#else
+ 	"/dev/dsp",
++#endif
+ 	0
+ };
+ 
