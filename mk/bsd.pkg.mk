@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1181 2003/05/18 12:35:16 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1182 2003/05/18 13:06:56 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -831,10 +831,13 @@ MASTER_SITE_GNOME+=	\
 	ftp://ftp.mirror.ac.uk/sites/ftp.gnome.org/pub/GNOME/
 
 MASTER_SITE_SOURCEFORGE+=	\
+	http://aleron.dl.sourceforge.net/sourceforge/ \
 	http://cesnet.dl.sourceforge.net/sourceforge/ \
+	http://easynews.dl.sourceforge.net/sourceforge/ \
+	http://flow.dl.sourceforge.net/sourceforge/ \
+	http://heanet.dl.sourceforge.net/sourceforge/ \
 	http://switch.dl.sourceforge.net/sourceforge/ \
 	http://telia.dl.sourceforge.net/sourceforge/ \
-	http://flow.dl.sourceforge.net/sourceforge/ \
 	http://twtelecom.dl.sourceforge.net/sourceforge/ \
 	http://umn.dl.sourceforge.net/sourceforge/ \
 	http://unc.dl.sourceforge.net/sourceforge/ \
