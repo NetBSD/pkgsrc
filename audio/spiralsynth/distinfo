@@ -1,14 +1,17 @@
-$NetBSD: distinfo,v 1.6 2004/02/15 06:00:57 ben Exp $
+$NetBSD: distinfo,v 1.7 2004/11/25 17:24:27 ben Exp $
 
-SHA1 (SpiralSynth-0.1.7.tar.gz) = 8b66749b940c9dcfcd4a71c319ac233139014204
-Size (SpiralSynth-0.1.7.tar.gz) = 62393 bytes
-SHA1 (patch-aa) = f2c61de20ca47da2f64d4c8f78491519a7f0b94d
-SHA1 (patch-ab) = b107fccc27b3ec1e115b93aacc216b472070b792
-SHA1 (patch-ad) = 207bc32f2991f99ba2e907a417d127f0073b3d24
+SHA1 (SpiralSynth-2.0.0.tar.gz) = ea42c5b7710237139f5281cf0c4ca155c184c4cd
+Size (SpiralSynth-2.0.0.tar.gz) = 66263 bytes
+SHA1 (patch-aa) = 4555f5a2d61980d1a19c7fdddaf3671ef86ea9ef
+SHA1 (patch-ab) = 49ea69a000b68c3c6ec07fefa9f1e2a415abb0f0
+SHA1 (patch-ad) = 235afa6618c5ec5aef2ca3448388f11757918832
 SHA1 (patch-ae) = b0c36c839504ecef6c781609ebd9fef266249645
-SHA1 (patch-af) = beb35f52d7bf1facfa8fab41889fc099b55a3517
-SHA1 (patch-ag) = 87457e618774f8cf7c0d81022d14533a72203099
-SHA1 (patch-ah) = d9cc36844c1bcec3fee953108aacb01ee198fe13
+SHA1 (patch-af) = 88d1a457ad82184a1d5f34e3f56de2d8fb7daf89
+SHA1 (patch-ag) = fab78772ee8b451f60b69597c9844e7c6aae465c
+SHA1 (patch-ah) = d2ff3c4ddd4da9c96a74c3f898aa3429dcc51bb9
 SHA1 (patch-ai) = e21a111e3e52fc3c24433f248fa1bfdf566e72dd
 SHA1 (patch-aj) = 7e3e29fbfd38428d68f195db8a7f5007c1417c88
-SHA1 (patch-ak) = b50863f27c2efd5f879cb8d8462b57059e65842f
+SHA1 (patch-ak) = 67643c5abea0498f8ea046c5abd52f2d328a5538
+SHA1 (patch-al) = 7436bce933cbddcd4f869ab2cbbe27762d4273e5
+SHA1 (patch-am) = 4899c78015028a6e8047e5527362646e40a10708
+SHA1 (patch-an) = b99c57cd7aa4d5c95bbeffea6c992e9cd7b7c414
