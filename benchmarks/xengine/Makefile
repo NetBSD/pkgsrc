@@ -1,10 +1,5 @@
-# New ports collection makefile for:	xengine
-# Version required:	pl1
-# Date created:		17 January 1997
-# Whom:			FURUSAWA,Kazuhisa <furusawa@com.cs.osakafu-u.ac.jp>
-#
-# $FreeBSD: ports/benchmarks/xengine/Makefile,v 1.9 2000/02/02 22:31:24 mharo Exp $
-#
+# $NetBSD: Makefile,v 1.2 2000/04/03 15:55:23 sakamoto Exp $
+# FreeBSD Id: ports/benchmarks/xengine/Makefile,v 1.9 2000/02/02 22:31:24 mharo Exp
 
 DISTNAME=	xengine-1.0.1
 CATEGORIES=	benchmarks
@@ -13,31 +8,25 @@ DISTFILES=	part01.z patch1.z
 
 PATCH_DIST_STRIP=	-p1	# no ${PATCHFILES} but used below
 
-MAINTAINER=	kazu@jp.freebsd.org
+MAINTAINER=	sakamoto@netbsd.org
 
-BUILD_DEPENDS=	gunshar:${PORTSDIR}/archivers/gshar+gunshar
+BUILD_DEPENDS=	gunshar:../../archivers/gsharutils
 
 DIST_SUBDIR=	xengine
 NO_WRKSUBDIR=	yes
 USE_IMAKE=	yes
 
-EXTRACT_CMD=		zcat
-EXTRACT_BEFORE_ARGS=	#empty
-EXTRACT_AFTER_ARGS=	| gunshar -d $(WRKDIR)
-
-MAN1=		xengine.1
+EXTRACT_CMD=	zcat ${DOWNLOADED_DISTFILE} | gunshar
 
 pre-patch:
-	@cd $(WRKSRC) ; ${PATCH} ${PATCH_DIST_ARGS} < xengine.patch1
+	@cd ${WRKSRC} ; ${PATCH} ${PATCH_DIST_ARGS} < xengine.patch1
 
 post-install:
-.if !defined(NOPORTDOCS)
 	@${MKDIR} ${PREFIX}/share/doc/xengine
 	@${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/xengine
-.endif
 	@${ECHO} ""
 	@${ECHO} "Example value:"
 	@${ECHO} "   1067 RPMs with P100, Winner 2000PRO/X, resolution: 1152x900"
 	@${ECHO} ""
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
