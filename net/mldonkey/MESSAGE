@@ -1,9 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/03/31 15:57:35 jmmv Exp $
+$NetBSD: MESSAGE,v 1.2 2004/12/25 19:13:34 jmmv Exp $
 
-This package provides a wrapper to ease mldonkey's startup. You should use
-it to run mldonkey: ${PREFIX}/bin/mldonkey
+This package only installs mldonkey's core program, which does not have a
+GUI frontend.  To ease its management, it includes a rc.d startup script
+that will safely start the daemon as an independent and unprivileged user.
+Once started, you will be able to access it at a later time by accessing
+http://localhost:4080/.
 
-Do NOT run this program as root.
+However, if you want a GUI, install the mldonkey-gui package, which will
+be able to connect to a local core as well as a remote one.
 
 ===========================================================================

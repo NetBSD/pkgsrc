@@ -1,16 +1,39 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mldonkey.sh,v 1.2 2003/05/19 12:52:59 wiz Exp $
+# $NetBSD: mldonkey.sh,v 1.3 2004/12/25 19:13:34 jmmv Exp $
 #
-# pkgsrc script to ease mldonkey's startup.
+# KEYWORD: shutdown
+# PROVIDE: mldonkey
+# REQUIRE: DAEMON
 #
 
-if [ ! -d $HOME/mldonkey ]; then
-	echo "Creating user's directory ($HOME/mldonkey)..."
-	mkdir $HOME/mldonkey
+if [ -f /etc/rc.subr ]; then
+	. /etc/rc.subr
 fi
 
-echo "Starting mldonkey..."
-cd $HOME/mldonkey
-PATH=@PREFIX@/libexec/mldonkey:$PATH
-@PREFIX@/libexec/mldonkey/mlnet > $HOME/mldonkey/log 2>&1
+name="mldonkey"
+rcvar=${name}
+command="@PREFIX@/libexec/mldonkey/mlnet"
+command_args=">@MLDONKEY_HOME@/log 2>&1 &"
+required_dirs="@MLDONKEY_HOME@"
+mldonkey_chdir="@MLDONKEY_HOME@"
+mldonkey_group="@MLDONKEY_GROUP@"
+mldonkey_user="@MLDONKEY_USER@"
+start_cmd="mldonkey_start"
+
+mldonkey_start() {
+	if [ -f /etc/rc.subr ]; then
+		@ECHO@ "Starting mldonkey."
+	else
+		@ECHO@ " ${name}"
+	fi
+	@SU@ -l ${mldonkey_user} \
+	     -c "${command} ${mldonkey_flags} ${command_args}" &
+}
+
+if [ -f /etc/rc.subr ]; then
+	load_rc_config ${name}
+	run_rc_command "${1}"
+else
+	mldonkey_start
+fi
