@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.milter,v 1.1 2003/09/28 23:39:24 chris Exp $
+man/man1/clamav-milter.1

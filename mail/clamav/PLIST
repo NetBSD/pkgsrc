@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/09/20 01:27:18 chris Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/09/28 23:39:24 chris Exp $
 bin/clamdscan
 bin/clamscan
 bin/freshclam
@@ -9,7 +9,6 @@ lib/libclamav.la
 lib/libclamav.so
 lib/libclamav.so.1
 lib/libclamav.so.1.3
-man/man1/clamav-milter.1
 man/man1/clamdscan.1
 man/man1/clamscan.1
 man/man1/freshclam.1
