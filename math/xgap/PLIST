@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/22 19:26:57 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/27 15:28:14 cjep Exp $
+bin/xgap
 lib/gap4.3/pkg/xgap/bin/i386--netbsdelf-cc/xgap
 lib/gap4.3/pkg/xgap/doc/answers.tex
 lib/gap4.3/pkg/xgap/doc/diffgap3.tex
