@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1174 2003/04/29 20:27:50 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1175 2003/04/29 20:31:52 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1409,7 +1409,10 @@ batch-check-distfiles:
 check-vulnerable:
 	@if [ -f ${PKGVULNDIR}/vulnerabilities ]; then			\
 		${SETENV} PKGNAME="${PKGNAME}"				\
-			${AWK} '/#.*/ { next }				\
+			  PKGBASE="${PKGBASE}"				\
+			${AWK} '/^$$/ { next }				\
+				/^#.*/ { next }				\
+				$$1 !~ ENVIRON["PKGBASE"]) { next }	\
 				{ s = sprintf("${PKG_ADMIN} pmatch \"%s\" %s && ${ECHO} \"*** WARNING - %s vulnerability in %s - see %s for more information ***\"", $$1, ENVIRON["PKGNAME"], $$2, ENVIRON["PKGNAME"], $$3); system(s); }' < ${PKGVULNDIR}/vulnerabilities || ${FALSE}; \
 	fi
 
