@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.5 2001/06/20 07:28:09 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/10/30 17:41:19 drochner Exp $
 #
 
-DISTNAME=		libiconv-1.6.1
+DISTNAME=		libiconv-1.7
 CATEGORIES=		converters
 MASTER_SITES=		ftp://ftp.ilog.fr/pub/Users/haible/gnu/
 
 MAINTAINER=		rh@netbsd.org
-HOMEPAGE=		http://clisp.cons.org/~haible/packages-libiconv.html
+HOMEPAGE=		http://www.gnu.org/software/libiconv/
 COMMENT=		character set conversion library
 
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE+=	${WRKSRC}/autoconf/ltconfig
-LTCONFIG_OVERRIDE+=	${WRKSRC}/libcharset/autoconf/ltconfig
+LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/libcharset/libtool
 
 .include "../../mk/bsd.prefs.mk"
 
