@@ -1,13 +1,13 @@
-$NetBSD: patch-al,v 1.1 2001/04/05 14:06:58 wiz Exp $
+$NetBSD: patch-al,v 1.2 2001/09/08 20:03:45 jlam Exp $
 
---- tests/Performance/Startup/editor.c.orig	Wed May  3 05:12:48 2000
-+++ tests/Performance/Startup/editor.c	Wed Aug  9 19:29:43 2000
-@@ -238,7 +238,7 @@
+--- doc/man/Imakefile.orig	Fri Sep  7 22:06:56 2001
++++ doc/man/Imakefile
+@@ -3,7 +3,7 @@
+ #define IHaveSubdirs
+ #define PassCDebugFlags
  
-     strcpy(tempname, "/tmp/xmeditXXXXXX");
-     
--    if ((tfp = fopen(mktemp(tempname), "w")) == NULL) {
-+    if ((tfp = mkstemp(tempname)) == NULL) {
-        fprintf(stderr, "Warning: unable to open temp file, text not saved.\n");
-        return(False);;
-     }
+-SUBDIRS = man1 man3 man4 man5
++SUBDIRS = man1 man3 man5
+ 
+ all::
+ 

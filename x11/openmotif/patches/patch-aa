@@ -1,22 +1,16 @@
-$NetBSD: patch-aa,v 1.1 2001/04/05 14:06:56 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/09/08 20:03:44 jlam Exp $
 
---- Imakefile.orig	Thu May  4 08:30:42 2000
-+++ Imakefile	Wed Aug  9 19:29:42 2000
-@@ -57,7 +57,7 @@
- ImakeDependency(xmakefile)
- xmakefile:: Imakefile
- 	RMoveToBakFile(xmakefile)
--	$(IMAKE_CMD) -s xmakefile -DTOPDIR=$(TOP) -DCURDIR=$(CURRENT_DIR)
-+	$(IMAKE) -s xmakefile -DTOPDIR=$(TOP) -DCURDIR=$(CURRENT_DIR)
+--- bindings/Imakefile.orig	Sat Sep  8 03:30:19 2001
++++ bindings/Imakefile
+@@ -37,10 +37,10 @@
+ XCOMM HISTORY
+ XCOMM 
+ XCOMM   $TOG: Imakefile /main/8 1997/07/02 17:51:43 samborn $
+-INSTALLFLAGS = $(INSTINCFLAGS)
  
- 
- VerifyOS::
-@@ -89,7 +90,7 @@
- #ifdef UseInstalled
- TESTS_IMAKE = $(IMAKE) -DUseInstalled
- #else
--TESTS_IMAKE = ../$(IMAKE)
-+TESTS_IMAKE = $(IMAKE)
- #endif
- DIRS_TO_CREATE = $(USRLIBDIR) $(BINDIR) $(INCDIR) $(USRINCDIR) $(LIBDIR) $(XAPPLOADDIR)
- CDE_DIRS_TO_CREATE = $(USRLIBDIR) $(BINDIR) $(PROJECTROOT)/share/include
+ FILES = \
+ 	xmbind.alias \
++	CDE \
+ 	acorn \
+ 	apollo \
+ 	dec \
