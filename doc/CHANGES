@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5981 2004/05/19 05:42:38 minskim Exp $
+$NetBSD: CHANGES,v 1.5982 2004/05/19 11:38:33 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2586,3 +2586,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated audit-packages to 1.31 [reed 2004-05-17]
 	Updated py-Lupy to 0.2.1 [recht 2004-05-18]
 	Updated opensp to 1.5.1 [minskim 2004-05-19]
+	Updated rhythmbox to 0.8.4 [jmmv 2004-05-19]
