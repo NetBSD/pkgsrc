@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.100 2003/01/12 22:30:08 jschauma Exp $
+# $NetBSD: bsd.prefs.mk,v 1.101 2003/01/12 22:36:14 jschauma Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -29,7 +29,7 @@ MAKEFLAGS+=		OPSYS=${OPSYS}
 OS_VERSION!=		${UNAME} -r
 .endif
 .ifndef LOWER_OS_VERSION
-LOWER_OS_VERSION:=	${OS_VERSION:tl}
+LOWER_OS_VERSION!=	echo ${OS_VERSION} | tr A-Z a-z
 .endif
 MAKEFLAGS+=		OS_VERSION=${OS_VERSION}
 
@@ -115,7 +115,7 @@ LOWER_OPSYS?=		irix${OS_VERSION:C/\.[0-9]//}
 LOWER_VENDOR?=		sgi
 
 .elif !defined(LOWER_OPSYS)
-LOWER_OPSYS:=		${OPSYS:tl}
+LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
 .endif
 
 MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS}
