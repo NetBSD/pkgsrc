@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cdpack.sh,v 1.1.1.1 2001/04/27 18:16:42 dmcmahill Exp $
+# $NetBSD: cdpack.sh,v 1.2 2001/06/02 02:03:52 dmcmahill Exp $
 #
 # Copyright (c) 2001 Dan McMahill, All rights reserved.
 #
@@ -55,8 +55,9 @@ mkdir $TMP
 
 usage(){
 	echo "$prog - generates ISO9660 images for a multi-cd binary package collection"
-	echo "Usage:      $prog packages_directory cdimage_directory"
+	echo "Usage:      $prog [-n] [-v] [-V] [-x dir] [-X dir] packages_directory cdimage_directory"
 	echo "Example:    $prog /usr/pkgsrc/packages/netbsd-1.5/alpha/All  /images/netbsd-1.5/alpha"
+	echo "Please refer to the manual page for complete documentation."
 }
 
 clean_and_exit(){
@@ -64,10 +65,25 @@ clean_and_exit(){
 	exit 1
 }
 
+# return the full path name from a path which may
+# be a full path name or a relative path name
+fullpath(){
+    local x
+    x=$1
+    case $x in
+	/*) # do nothing, its an absolute path
+	    ;;
+	 *)  x=`pwd`/$x
+	    ;;
+    esac
+    echo $x
+}
+
 DUP=yes
 VERBOSE=no
 VERSION=no
 USE_XTRA=no
+USE_OTHERS=no
 
 while
     test -n "$1"
@@ -92,6 +108,12 @@ do
 	# extra directory to go on each CD.
 	-x) extra=$2
 	    USE_XTRA=yes
+	    shift 2
+	    ;;
+
+	# extra directory to go on only 1 CD (pkgsrc.tar.gz for example)
+	-X) others=$2
+	    USE_OTHERS=yes
 	    shift 2
 	    ;;
 
@@ -135,12 +157,16 @@ if [ ! -d $packages ]; then
 	echo "$prog:  packages directory \"$packages\" does not exist"
 	usage
 	clean_and_exit
+else
+    packages=`fullpath $packages`
 fi
 
 if [ ! -d $cddir ]; then
 	echo "$prog:  cd image directory \"$cddir\" does not exist"
 	usage
 	clean_and_exit
+else
+    cddir=`fullpath $cddir`
 fi
 
 if [ "$USE_XTRA" = "yes" -a ! -d $extra ]; then
@@ -150,18 +176,29 @@ if [ "$USE_XTRA" = "yes" -a ! -d $extra ]; then
 fi
 
 if [ "$USE_XTRA" = "yes" ]; then
-	case $extra in
-		/*) # do nothing, its an absolute path
-			;;
-		*)  extra=`pwd`/$extra
-			;;
-	esac
-	XTRA_SIZE=`du -sk $extra | awk '{print $1}'`
-	if [ "$VERBOSE" = "yes" ]; then
-		echo "Extra directory full path name is \"$extra\".  It contains $XTRA_SIZE kB."
-	fi
+    extra=`fullpath $extra`
+    XTRA_SIZE=`du -sk $extra | awk '{print $1}'`
+    if [ "$VERBOSE" = "yes" ]; then
+	echo "Extra directory full path name is \"$extra\".  It contains $XTRA_SIZE kB."
+    fi
 else
     XTRA_SIZE=0
+fi
+
+if [ "$USE_OTHERS" = "yes" -a ! -d $others ]; then
+    echo "$prog:  other files directory \"$others\" specified with -X does not exist"
+    usage
+    clean_and_exit
+fi
+
+if [ "$USE_OTHERS" = "yes" ]; then
+    others=`fullpath $others`
+    OTHER_SIZE=`du -sk $others | awk '{print $1}'`
+    if [ "$VERBOSE" = "yes" ]; then
+	echo "Other files directory full path name is \"$others\".  It contains $OTHER_SIZE kB."
+    fi
+else
+    OTHER_SIZE=0
 fi
 
 echo " "
@@ -255,9 +292,9 @@ tsort $deptree > $order
 #    cdlist   = ARGV[5];
 #
 if [ "$VERBOSE" = "yes" ]; then
-	echo "awk -f cdgen.awk $packages $cddir $deptree $order $cdlist dup=$DUP"
+    echo "awk -f @prefix@/libexec/cdgen.awk $packages $cddir $deptree $order $cdlist dup=$DUP verbose=$VERBOSE $XTRA_SIZE $OTHER_SIZE"
 fi
-awk -f @prefix@/libexec/cdgen.awk $packages $cddir $deptree $order $cdlist dup=$DUP verbose=$VERBOSE $XTRA_SIZE
+awk -f @prefix@/libexec/cdgen.awk $packages $cddir $deptree $order $cdlist dup=$DUP verbose=$VERBOSE $XTRA_SIZE $OTHER_SIZE
 
 if [ $? -ne 0 ]; then
     echo "$prog:  ERROR:  cdgen.awk has failed"
@@ -328,6 +365,14 @@ sort ${indexf}.tmp > $indexf
 # actually copy these over since the originals will
 # be deleted from their temporary directories
 #
+# Also make symlinks to the stuff in the extra directory
+# specified with the -x flag.
+#
+
+if [ $VERBOSE = "yes" ]; then
+    echo "Copying .index file to the image directories."
+fi
+
 ncds=0
 for cdname in `cat $cdlist`
 do
@@ -343,6 +388,18 @@ do
 
     ncds=$(($ncds + 1))
 done
+
+
+if [ $USE_OTHERS = "yes" ]; then
+    if [ $VERBOSE = "yes" ]; then
+	echo "Creating symlinks from $others (specified with -X) to ${cddir}/${cdname}"
+    fi
+    cdname=`tail -1 $cdlist`
+    for f in $others/*
+    do
+	(cd ${cddir}/${cdname} && ln -sf $f)
+    done
+fi
 
 #
 # Create the ISO Images
