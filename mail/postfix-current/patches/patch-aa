@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2004/03/06 15:08:32 grant Exp $
+$NetBSD: patch-aa,v 1.12 2004/06/06 13:50:41 taca Exp $
 
---- postfix-install.orig	2003-03-21 20:04:53.000000000 +0100
+--- postfix-install.orig	2004-04-15 00:45:23.000000000 +0900
 +++ postfix-install
-@@ -338,33 +338,13 @@ README files. Specify \"no\" if you do n
+@@ -354,33 +354,13 @@ HTML files. Specify \"no\" if you do not
  : ${tempdir=`pwd`}
  : ${config_directory=`bin/postconf -h -d config_directory`}
  
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.11 2004/03/06 15:08:32 grant Exp $
  
  # If a parameter is not set via the command line or environment,
  # try to use settings from installed configuration files.
-@@ -652,13 +632,3 @@ bin/postconf -c $CONFIG_DIRECTORY -e \
+@@ -715,10 +695,3 @@ bin/postconf -c $CONFIG_DIRECTORY -e \
      "sample_directory = $sample_directory" \
      "readme_directory = $readme_directory" \
  || exit 1
@@ -46,8 +46,5 @@ $NetBSD: patch-aa,v 1.11 2004/03/06 15:08:32 grant Exp $
 -# post-install processing now.
 -
 -test -n "$install_root" || {
--    export daemon_directory command_directory queue_directory sendmail_path \
--	newaliases_path mailq_path mail_owner setgid_group manpage_directory \
--	sample_directory readme_directory
--    ${SHELL} conf/post-install $post_install_options || exit 1
+-    bin/postfix post-install $post_install_options || exit 1
 -}
