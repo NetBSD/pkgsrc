@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/04/01 03:13:41 uebayasi Exp $
+# $NetBSD: Makefile,v 1.18 2002/11/17 09:02:01 salo Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/07/15 15:00:30 cracauer Exp 
 #
 
@@ -19,6 +19,8 @@ MAKE_ENV=		INSTALL_PROGRAM='${INSTALL_PROGRAM}' \
 			INSTALL_SCRIPT='${INSTALL_SCRIPT}' \
 			INSTALL_DATA='${INSTALL_DATA}'
 
+PKG_SHELL=		${PREFIX}/bin/scsh
+
 post-configure:
 	cd ${WRKSRC}; ${SED} -e '/LIBGEN/d' sysdep.h >xx ; ${MV} xx sysdep.h
 
@@ -29,4 +31,5 @@ post-install:
 	${RM} -f ${PREFIX}/share/doc/scsh
 	${LN} -fs ${PREFIX}/lib/scsh/doc ${PREFIX}/share/doc/scsh
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

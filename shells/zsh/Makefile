@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/08/25 21:50:50 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2002/11/17 09:02:02 salo Exp $
 
 DISTNAME=       zsh-4.0.6
 CATEGORIES=	shells
@@ -34,15 +34,14 @@ PLIST_SRC=	${PKGDIR}/PLIST.shlibs ${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
 
 .undef MANZ
 
+PKG_SHELL=	${PREFIX}/bin/zsh
+
 post-install:
 	@cd ${WRKSRC}/Doc; ${MAKE} install.info
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/zsh
 	@cd ${WRKSRC}/Etc; ${INSTALL_DATA} BUGS FAQ FEATURES NEWS	\
 		${PREFIX}/share/doc/zsh
-	${TOUCH} /etc/shells
-	${CP} /etc/shells /etc/shells.bak
-	(${GREP} -v ${PREFIX}/bin/zsh /etc/shells.bak || ${TRUE}; ${ECHO} ${PREFIX}/bin/zsh) >/etc/shells
-	${RM} /etc/shells.bak
 
 .include "../../mk/texinfo.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
