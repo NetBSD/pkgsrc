@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2003/05/17 01:45:41 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.99 2003/06/03 22:27:57 salo Exp $
 #
 
 COMMENT=	Databases
@@ -42,6 +42,7 @@ SUBDIR+=	p5-Apache-DBI
 SUBDIR+=	p5-DBD-CSV
 SUBDIR+=	p5-DBD-SQLite
 SUBDIR+=	p5-DBD-Sybase
+SUBDIR+=	p5-DBD-XBase
 SUBDIR+=	p5-DBD-mysql
 SUBDIR+=	p5-DBD-postgresql
 SUBDIR+=	p5-DBI
