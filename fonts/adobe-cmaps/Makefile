@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/12/23 18:01:48 sketch Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/02 21:55:43 cjep Exp $
 
-DISTNAME=	adobe-cmaps-20030126
-CATEGORIES=	print
+DISTNAME=	adobe-cmaps-20030924
+CATEGORIES=	fonts print
 MASTER_SITES=	# empty
 
 CMAP_FILES=	ac14 ag14 ai0 aj15 aj20 ak12
@@ -21,12 +21,12 @@ SITES_${FILE}+=	http://partners.adobe.com/asn/developer/technotes/fontinfo/
 DISTFILES+=	${PDFCORE_DISTFILES}
 
 MAINTAINER=	jlam@NetBSD.org
-HOMEPAGE=	http://partners.adobe.com/asn/developer/technotes/fonts.html
+HOMEPAGE=	http://partners.adobe.com/asn/acrobat/technotes.jsp
 COMMENT=	Adobe CMap files for CJK
 
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
-DIST_SUBDIR=		${PKGBASE}
+DIST_SUBDIR=		${PKGNAME_NOREV}
 USE_BUILDLINK2=		# defined
 NO_CONFIGURE=		# defined
 NO_BUILD=		# defined
