@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/05/02 11:54:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/05/05 13:50:56 jmmv Exp $
 #
 
 DISTNAME=	libgnome-2.2.0.1
@@ -33,8 +33,13 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 OWN_DIRS=	${PKG_SYSCONFDIR}/sound/events
 
 EGDIR=		${PREFIX}/share/examples/libgnome
+.if defined(PKG_SYSCONFDIR.gnome-vfs2)
+CONF_FILES=	${EGDIR}/gnome-vfs-2.0/modules/help-methods.conf \
+		${PKG_SYSCONFDIR.gnome-vfs2}/gnome-vfs-2.0/modules/help-modules.conf
+.else
 CONF_FILES=	${EGDIR}/gnome-vfs-2.0/modules/help-methods.conf \
 		${PKG_SYSCONFDIR}/gnome-vfs-2.0/modules/help-modules.conf
+.endif
 CONF_FILES+=	${EGDIR}/sound/events/gnome-2.soundlist \
 		${PKG_SYSCONFDIR}/sound/events/gnome-2.soundlist
 CONF_FILES+=	${EGDIR}/sound/events/gtk-events-2.soundlist \
