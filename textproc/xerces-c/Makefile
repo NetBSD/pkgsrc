@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/02/18 20:23:07 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2004/02/18 20:30:31 minskim Exp $
 #
 
 DISTNAME=	xerces-c-src_2_3_0
@@ -15,6 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/xercesc
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
+USE_LANGUAGES=		c c++
 
 .include "../../mk/bsd.prefs.mk"
 .if ${LOWER_OPSYS} == "SunOS"
