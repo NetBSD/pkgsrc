@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/04/26 09:35:07 tron Exp $
+# $NetBSD: Makefile,v 1.29 2002/10/06 12:08:59 magick Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/22 22:16:53 gj Exp
 
 DISTNAME=	xemacs-packages
@@ -11,20 +11,20 @@ MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/packages/ \
 		ftp://ftp.lab.kdd.co.jp/xemacs/packages/ \
 		ftp://ftp.th-darmstadt.de/pub/editors/xemacs/packages/ \
 		${MASTER_SITE_BACKUP:C|$|${DIST_SUBDIR}/|}
-DISTFILES=	xemacs-base-1.57-pkg.tar.gz xemacs-devel-1.40-pkg.tar.gz \
-		c-support-1.16-pkg.tar.gz cc-mode-1.27-pkg.tar.gz \
-		debug-1.14-pkg.tar.gz dired-1.11-pkg.tar.gz \
-		edit-utils-1.75-pkg.tar.gz efs-1.27-pkg.tar.gz \
-		fsf-compat-1.09-pkg.tar.gz gnus-1.58-pkg.tar.gz \
-		mail-lib-1.42-pkg.tar.gz \
-		mailcrypt-2.11-pkg.tar.gz mule-base-1.39-pkg.tar.gz \
-		net-utils-1.23-pkg.tar.gz os-utils-1.26-pkg.tar.gz \
-		prog-modes-1.49-pkg.tar.gz psgml-1.26-pkg.tar.gz \
-		sgml-1.08-pkg.tar.gz sh-script-1.13-pkg.tar.gz \
-		texinfo-1.20-pkg.tar.gz text-modes-1.36-pkg.tar.gz \
-		textools-1.12-pkg.tar.gz time-1.11-pkg.tar.gz \
-		vc-1.30-pkg.tar.gz vc-cc-1.18-pkg.tar.gz \
-		viper-1.31-pkg.tar.gz
+DISTFILES=	xemacs-base-1.68-pkg.tar.gz xemacs-devel-1.48-pkg.tar.gz \
+		c-support-1.16-pkg.tar.gz cc-mode-1.30-pkg.tar.gz \
+		debug-1.15-pkg.tar.gz dired-1.12-pkg.tar.gz \
+		edit-utils-1.93-pkg.tar.gz efs-1.29-pkg.tar.gz \
+		fsf-compat-1.11-pkg.tar.gz gnus-1.62-pkg.tar.gz \
+		mail-lib-1.49-pkg.tar.gz \
+		mailcrypt-2.11-pkg.tar.gz mule-base-1.42-pkg.tar.gz \
+		net-utils-1.28-pkg.tar.gz os-utils-1.28-pkg.tar.gz \
+		prog-modes-1.65-pkg.tar.gz psgml-1.33-pkg.tar.gz \
+		sgml-1.08-pkg.tar.gz sh-script-1.15-pkg.tar.gz \
+		texinfo-1.20-pkg.tar.gz text-modes-1.52-pkg.tar.gz \
+		textools-1.12-pkg.tar.gz time-1.12-pkg.tar.gz \
+		vc-1.33-pkg.tar.gz vc-cc-1.21-pkg.tar.gz \
+		viper-1.34-pkg.tar.gz
 
 MAINTAINER=	magick@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
