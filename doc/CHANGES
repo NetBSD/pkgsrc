@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.499 2002/11/10 19:38:38 jmcneill Exp $
+$NetBSD: CHANGES,v 1.500 2002/11/11 05:30:26 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3574,3 +3574,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated aperture to 2.0nb4 [tron 2002-11-10]
 	Added mozilla-linux-1.2rc1 [grant 2002-11-10]
 	Updated fluxbox to 0.1.12 [jmcneill 2002-11-10]
+	Updated tmda to 0.63 [schmonz 2002-11-11]
