@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/19 10:54:53 rh Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/21 15:24:32 wiz Exp $
 
 DISTNAME=		eog-0.6
 PKGREVISION=		1
@@ -12,11 +12,11 @@ COMMENT=		Eye of GNOME: an image viewing and cataloging program
 GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
-USE_LIBINTL=		YES
 USE_BUILDLINK2=		YES
 
 .include "../../devel/bonobo/buildlink2.mk"
 .include "../../devel/GConf/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libglade/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
