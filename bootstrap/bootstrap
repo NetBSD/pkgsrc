@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.31 2005/02/19 04:07:31 grant Exp $
+# $NetBSD: bootstrap,v 1.32 2005/03/08 15:43:10 tv Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -533,13 +533,12 @@ copy_src bmake bmake
 	run_cmd "$cpprog bsd.*.mk $prefix/share/mk")
 
 if [ -f mods/mk/$opsys.bsd.lib.mk ] ;  then
-	run_cmd "$cpprog ${wrkdir}/bmake/mk/bsd.lib.mk ${wrkdir}/bmake/mk/bsd.lib.mk.orig"
 	run_cmd "$cpprog mods/mk/$opsys.bsd.lib.mk ${wrkdir}/bmake/mk/bsd.lib.mk"
+	run_cmd "$cpprog mods/mk/$opsys.bsd.lib.mk $prefix/share/mk/bsd.lib.mk"
 fi
 
-run_cmd "$cpprog ${wrkdir}/bmake/mk/bsd.man.mk ${wrkdir}/bsd.man.mk.orig"
 if [ -f mods/mk/$opsys.bsd.man.mk ] ;  then
-	run_cmd "$cpprog mods/mk/$opsys.bsd.man.mk ${wrkdir}/bsd.man.mk"
+	run_cmd "$cpprog mods/mk/$opsys.bsd.man.mk ${wrkdir}/bmake/mk/bsd.man.mk"
 	run_cmd "$cpprog mods/mk/$opsys.bsd.man.mk $prefix/share/mk/bsd.man.mk"
 fi
 
