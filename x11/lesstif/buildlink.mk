@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/01 22:59:33 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/02 21:11:46 jlam Exp $
 #
 # This Makefile fragment is included by packages that use lesstif.
 #
@@ -64,7 +64,11 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.lesstif}
 USE_X11=	# defined
 MAKE_ENV+=	MOTIFLIB="${MOTIFLIB}"
 LDFLAGS+=	-Wl,-R${MOTIFBASE}/lib
+.if defined(USE_BUILDLINK_X11)
+MOTIFLIB?=	-Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -L${BUILDLINK_DIR}/lib -lXm -lXp
+.else
 MOTIFLIB?=	-Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -L${BUILDLINK_DIR}/lib -L${X11BASE}/lib -lXm -lXp
+.endif
 
 pre-configure: ${BUILDLINK_TARGETS.lesstif}
 lesstif-buildlink: _BUILDLINK_USE
