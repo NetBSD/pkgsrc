@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/08/27 06:29:07 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/11/26 09:39:30 jlam Exp $
 
 DISTNAME=	sqsh-2.1-src
 CATEGORIES=	databases
@@ -51,6 +51,6 @@ do-install:
 .  include "../../databases/freetds/buildlink3.mk"
 .endif
 
-.include "../../devel/dlcompat/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
