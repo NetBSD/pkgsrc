@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2000/10/15 04:50:11 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2000/10/21 22:24:47 wiz Exp $
 
 DISTNAME=		ncurses-${NC_VERS}
 NC_VERS=		5.1
@@ -7,6 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=ncurses/} \
 			ftp://dickey.his.com/ncurses/ \
 			ftp://dickey.his.com/ncurses/${NC_VERS}/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${NC_PATCH}
+
 PATCHFILES=		${DISTNAME}-20001014.patch.gz
 PATCH_SITES=		ftp://dickey.his.com/ncurses/${NC_VERS}/
 
