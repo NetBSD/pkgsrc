@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.2 1998/08/07 11:08:58 agc Exp $
+$NetBSD: patch-af,v 1.3 1998/08/25 08:54:07 agc Exp $
+
+Adjust for pkgsrc-related changes
 
 --- libF77/libF77.xsum.orig	Thu Jul  9 08:25:14 1998
 +++ libF77/libF77.xsum	Thu Jul  9 08:25:31 1998

@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:08:58 agc Exp $
+$NetBSD: patch-ab,v 1.3 1998/08/25 08:54:07 agc Exp $
+
+Set optimisation level appropriately
 
 --- src/makefile.orig	Wed Feb 25 08:18:04 1998
 +++ src/makefile	Sun Jul 19 23:14:03 1998
