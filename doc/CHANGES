@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.140 2002/10/02 13:40:57 grant Exp $
+$NetBSD: CHANGES,v 1.141 2002/10/02 20:36:23 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3070,3 +3070,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gauche to 0.6.3 [minoura 2002-10-02]
 	Updated apache to 2.0.42 [itojun 2002-10-02]
 	Updated socks5 to 1.0.2nb1 [grant 2002-10-02]
+	Added oss-3.97d [jlam 2002-10-02]
