@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.12 2004/06/04 11:45:45 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/07/05 08:00:01 jmmv Exp $
 #
 
-DISTNAME=	xosd-2.2.7
+DISTNAME=	xosd-2.2.8
 CATEGORIES=	x11
 MASTER_SITES=	http://www.ignavus.net/
 EXTRACT_SUFX=	.tar.bz2
