@@ -1,24 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/12/12 18:13:54 rh Exp $
+$NetBSD: patch-aa,v 1.2 2000/04/25 07:07:29 rh Exp $
 
---- configure.orig	Tue Apr 20 12:44:56 1999
-+++ configure	Sun Dec 12 18:24:35 1999
-@@ -2344,6 +2344,7 @@
-   ac_tool_prefix=
- fi
- 
-+if false; then
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
-@@ -2576,6 +2577,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
-+fi
- 
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
-@@ -5569,10 +5571,12 @@
+--- configure.orig	Wed Apr 19 05:45:15 2000
++++ configure	Tue Apr 25 08:39:41 2000
+@@ -6072,10 +6072,12 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
@@ -31,7 +15,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/12/12 18:13:54 rh Exp $
  
    echo creating "$ac_file"
    rm -f "$ac_file"
-@@ -5793,10 +5797,13 @@
+@@ -6345,10 +6347,13 @@
        *) # Relative path.
          ac_sub_cache_file="$ac_dots$cache_file" ;;
        esac
