@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/01/15 23:44:30 rh Exp $
+# $NetBSD: Makefile,v 1.35 2003/01/16 23:02:23 rh Exp $
 
 DISTNAME=		gnucash-1.6.8
 PKGREVISION=		3
@@ -27,6 +27,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
+CONFIGURE_ENV+=		PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig:${X11BASE}/lib/pkgconfig"
 
 .include "../../mk/bsd.prefs.mk"
 
