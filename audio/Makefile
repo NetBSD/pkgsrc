@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.257 2004/10/25 09:05:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.258 2004/11/03 03:21:44 sekiya Exp $
 #
 
 COMMENT=	Audio tools
@@ -79,6 +79,7 @@ SUBDIR+=	gnome-speech
 SUBDIR+=	gnome-vfs2-cdda
 SUBDIR+=	gogo
 SUBDIR+=	gqmpeg
+SUBDIR+=	gqmpeg-devel
 SUBDIR+=	gqmpeg-skins
 SUBDIR+=	gramofile
 SUBDIR+=	gsm
