@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/08/06 03:55:52 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2003/01/02 12:21:46 salo Exp $
 
-SHA1 (aspell-slovak-1.0.tar.bz2) = 2b518c78cf7b9fa573ed52330d4aa5dcb9b3d38b
-Size (aspell-slovak-1.0.tar.bz2) = 306315 bytes
-SHA1 (patch-aa) = d7763203ef02930ca514f5f4865a0c540c7f403e
-SHA1 (patch-ab) = 41dc93ea7a352182dc7d13df68cbd773d135a53e
+SHA1 (aspell-slovak-1.1.tar.bz2) = 1ce4b1c714bca05f2d5ad25207f9e33d59a2fd9d
+Size (aspell-slovak-1.1.tar.bz2) = 310214 bytes
+SHA1 (patch-aa) = 8faf762dd516b07029f319f285cbc0ac8f8aa8c8
+SHA1 (patch-ab) = 4fd4cdf54ab64333b2ffde27d28ca17b8946a9b5
