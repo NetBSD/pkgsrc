@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/01 18:54:30 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/05/15 13:59:15 jmmv Exp $
 bin/eog
 lib/bonobo/servers/GNOME_EOG.server
 lib/bonobo/servers/GNOME_EOG_Collection.server
@@ -21,6 +21,9 @@ share/gnome/help/eog/de/legal.xml
 share/gnome/help/eog/es/eog.xml
 share/gnome/help/eog/es/figures/eog_start_window.png
 share/gnome/help/eog/es/legal.xml
+share/gnome/help/eog/eu/eog.xml
+share/gnome/help/eog/eu/figures/eog_start_window.png
+share/gnome/help/eog/eu/legal.xml
 share/gnome/help/eog/fr/eog.xml
 share/gnome/help/eog/fr/figures/eog_start_window.png
 share/gnome/help/eog/fr/legal.xml
@@ -43,6 +46,7 @@ share/gnome/help/eog/zh_TW/eog.xml
 share/gnome/help/eog/zh_TW/figures/eog_start_window.png
 share/gnome/help/eog/zh_TW/legal.xml
 share/idl/Eog.idl
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/eog.mo
@@ -59,11 +63,13 @@ ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/eog.mo
@@ -106,6 +112,7 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/eog.mo
 share/omf/eog/eog-C.omf
 share/omf/eog/eog-de.omf
 share/omf/eog/eog-es.omf
+share/omf/eog/eog-eu.omf
 share/omf/eog/eog-fr.omf
 share/omf/eog/eog-it.omf
 share/omf/eog/eog-ja.omf
@@ -141,6 +148,8 @@ share/pixmaps/gnome-eog.png
 @dirrm share/gnome/help/eog/it
 @dirrm share/gnome/help/eog/fr/figures
 @dirrm share/gnome/help/eog/fr
+@dirrm share/gnome/help/eog/eu/figures
+@dirrm share/gnome/help/eog/eu
 @dirrm share/gnome/help/eog/es/figures
 @dirrm share/gnome/help/eog/es
 @dirrm share/gnome/help/eog/de/figures
