@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2004/02/13 14:57:20 adam Exp $
+$NetBSD: patch-ac,v 1.3 2004/03/29 08:08:13 adam Exp $
 
---- examples/sndfile-play.c.orig	2004-02-05 09:35:42.000000000 +0000
+--- examples/sndfile-play.c.orig	2004-03-14 08:34:32.000000000 +0000
 +++ examples/sndfile-play.c
 @@ -27,16 +27,21 @@
  #include <unistd.h>
@@ -26,7 +26,7 @@ $NetBSD: patch-ac,v 1.2 2004/02/13 14:57:20 adam Exp $
  	#include <fcntl.h>
  	#include <sys/ioctl.h>
  	#include <sys/audioio.h>
-@@ -57,7 +62,7 @@
+@@ -58,7 +63,7 @@
  **	Linux/OSS functions for playing a sound.
  */
  
@@ -35,7 +35,7 @@ $NetBSD: patch-ac,v 1.2 2004/02/13 14:57:20 adam Exp $
  
  static	int	linux_open_dsp_device (int channels, int srate) ;
  
-@@ -120,7 +125,7 @@ static int
+@@ -121,7 +126,7 @@ static int
  linux_open_dsp_device (int channels, int srate)
  {	int fd, stereo, temp, error ;
  
@@ -44,7 +44,7 @@ $NetBSD: patch-ac,v 1.2 2004/02/13 14:57:20 adam Exp $
  		(fd = open ("/dev/sound/dsp", O_WRONLY, 0)) == -1)
  	{	perror("linux_open_dsp_device : open ") ;
  		exit (1) ;
-@@ -486,7 +491,8 @@ win32_play (int argc, char *argv [])
+@@ -487,7 +492,8 @@ win32_play (int argc, char *argv [])
  **	Solaris.
  */
  
@@ -54,7 +54,7 @@ $NetBSD: patch-ac,v 1.2 2004/02/13 14:57:20 adam Exp $
  
  static void
  solaris_play (int argc, char *argv [])
-@@ -593,7 +599,7 @@ main (int argc, char *argv [])
+@@ -594,7 +600,7 @@ main (int argc, char *argv [])
  		return 1 ;
  		} ;
  
@@ -63,7 +63,7 @@ $NetBSD: patch-ac,v 1.2 2004/02/13 14:57:20 adam Exp $
  	#if (defined (HAVE_ALSA) && HAVE_ALSA)
  		if (access ("/proc/asound/cards", R_OK) == 0)
  			alsa_play (argc, argv) ;
-@@ -602,7 +608,8 @@ main (int argc, char *argv [])
+@@ -603,7 +609,8 @@ main (int argc, char *argv [])
  	#endif
  #elif (defined (__MACH__) && defined (__APPLE__))
  	macosx_play (argc, argv) ;
@@ -71,5 +71,5 @@ $NetBSD: patch-ac,v 1.2 2004/02/13 14:57:20 adam Exp $
 +#elif (defined (sun) && defined (unix)) || \
 +      (defined (__NetBSD__) && !defined(USE_OSS))
  	solaris_play (argc, argv) ;
- #elif (defined (_WIN32) || defined (WIN32))
+ #elif WIN32_WITH_MMREG_H
  	win32_play (argc, argv) ;
