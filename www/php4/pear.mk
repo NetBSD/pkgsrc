@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.2 2004/03/17 16:32:43 danw Exp $
+# $NetBSD: pear.mk,v 1.3 2004/03/17 19:07:51 kristerw Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -18,6 +18,8 @@ USE_BUILDLINK2=			YES
 BUILDLINK_DEPMETHOD.php4=	full
 
 .include "../../www/php4/buildlink2.mk"
+
+.include "../../mk/bsd.prefs.mk"
 
 EXTRACT_SUFX=	.tgz
 
