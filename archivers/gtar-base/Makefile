@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/11/30 11:16:19 salo Exp $
+# $NetBSD: Makefile,v 1.24 2002/12/22 01:34:38 wiz Exp $
 #
 
 DISTNAME=       tar-1.13.25
@@ -17,10 +17,14 @@ USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
-CONFIGURE_ARGS+=	--program-prefix=g
-CONFIGURE_ARGS+=	--with-catgets
-
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(GNU_PROGRAM_PREFIX)
+CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
+.endif
+CONFIGURE_ARGS+=	--with-catgets
+PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
+BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
 .if ${OPSYS} == "Darwin"
 PLIST_SRC=	${.CURDIR}/PLIST.Darwin
@@ -31,6 +35,7 @@ post-patch:
 	@${ECHO} '' >>${WRKSRC}/po/fr.po
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/gtar.1 ${PREFIX}/man/man1/gtar.1
+	${INSTALL_DATA} ${FILESDIR}/${GNU_PROGRAM_PREFIX}tar.1 \
+		${PREFIX}/man/man1/${GNU_PROGRAM_PREFIX}tar.1
 
 .include "../../mk/bsd.pkg.mk"
