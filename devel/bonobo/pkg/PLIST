@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.6 2000/12/04 15:40:51 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/12/31 14:01:44 rh Exp $
 bin/bonobo-application-x-mines
 bin/bonobo-audio-ulaw
 bin/bonobo-echo
 bin/bonobo-hello
-bin/bonobo-moniker-config
+bin/bonobo-moniker-gunzip
+bin/bonobo-moniker-http
+bin/bonobo-selector
 bin/bonobo-text-plain
-bin/bonobo-ui-extract
 bin/echo-client
 bin/efstool
+bin/gshell
 bin/libefs-config
 bin/paint-component-simple
 bin/sample-canvas-item
@@ -18,18 +20,22 @@ bin/std-moniker
 include/bonobo.h
 include/bonobo/Bonobo.h
 include/bonobo/bonobo-arg.h
+include/bonobo/bonobo-async.h
 include/bonobo/bonobo-canvas-component.h
 include/bonobo/bonobo-canvas-item.h
 include/bonobo/bonobo-client-site.h
 include/bonobo/bonobo-component-io.h
+include/bonobo/bonobo-context.h
 include/bonobo/bonobo-control-frame.h
 include/bonobo/bonobo-control.h
 include/bonobo/bonobo-desktop-window.h
-include/bonobo/bonobo-embeddable-factory.h
 include/bonobo/bonobo-embeddable.h
+include/bonobo/bonobo-event-source.h
 include/bonobo/bonobo-exception.h
 include/bonobo/bonobo-generic-factory.h
 include/bonobo/bonobo-item-container.h
+include/bonobo/bonobo-item-handler.h
+include/bonobo/bonobo-listener.h
 include/bonobo/bonobo-main.h
 include/bonobo/bonobo-moniker-util.h
 include/bonobo/bonobo-moniker.h
@@ -46,10 +52,13 @@ include/bonobo/bonobo-print.h
 include/bonobo/bonobo-progressive.h
 include/bonobo/bonobo-property-bag-client.h
 include/bonobo/bonobo-property-bag.h
+include/bonobo/bonobo-property-bag-xml.h
+include/bonobo/bonobo-property-control.h
 include/bonobo/bonobo-property-listener.h
 include/bonobo/bonobo-property-types.h
 include/bonobo/bonobo-property.h
 include/bonobo/bonobo-selector.h
+include/bonobo/bonobo-selector-widget.h
 include/bonobo/bonobo-socket.h
 include/bonobo/bonobo-storage.h
 include/bonobo/bonobo-storage-plugin.h
@@ -86,13 +95,13 @@ lib/bonobo/plugin/libstorage_fs.a
 lib/bonobo/plugin/libstorage_fs.so
 lib/libbonobo-print.la
 lib/libbonobo-print.a
-lib/libbonobo-print.so.0.0
+lib/libbonobo-print.so.2.0
 lib/libbonobo.la
 lib/libbonobo.a
 lib/libbonobo.so.2.0
 lib/libbonobox.la
 lib/libbonobox.a
-lib/libbonobox.so.0.0
+lib/libbonobox.so.2.0
 lib/libefs.a
 lib/libefs.la
 lib/libefs.so.1.0
@@ -103,11 +112,13 @@ share/bonobo/html/bonobo-sections.txt
 share/bonobo/html/bonobo.hierarchy
 share/bonobo/html/bonobo.signals
 share/bonobo/html/bonobo.types
+share/gnome/ui/gshell-ui.xml
 share/idl/Bonobo.idl
 share/idl/Echo.idl
 share/idl/bonobo-advise.idl
 share/idl/bonobo-canvas.idl
 share/idl/bonobo-client-site.idl
+share/idl/bonobo-context.idl
 share/idl/bonobo-control.idl
 share/idl/bonobo-desktop.idl
 share/idl/bonobo-embeddable.idl
@@ -122,7 +133,6 @@ share/idl/bonobo-storage.idl
 share/idl/bonobo-ui.idl
 share/idl/bonobo-unknown.idl
 share/idl/bonobo-zoomable.idl
-share/idl/bonobo.idl
 share/locale/ca/LC_MESSAGES/bonobo.mo
 share/locale/da/LC_MESSAGES/bonobo.mo
 share/locale/de/LC_MESSAGES/bonobo.mo
@@ -148,16 +158,21 @@ share/locale/sv/LC_MESSAGES/bonobo.mo
 share/locale/tr/LC_MESSAGES/bonobo.mo
 share/locale/uk/LC_MESSAGES/bonobo.mo
 share/locale/wa/LC_MESSAGES/bonobo.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/bonobo.mo
 share/mime-info/bonobo.keys
-share/oaf/application-x-mines.oafinfo
-share/oaf/audio-ulaw.oafinfo
-share/oaf/bonobo-calculator-control.oafinfo
-share/oaf/bonobo-clock-control.oafinfo
-share/oaf/echo.oafinfo
-share/oaf/hello.oafinfo
-share/oaf/paint-component-simple.oafinfo
-share/oaf/std-moniker.oafinfo
-share/oaf/text-plain.oafinfo
+share/oaf/Bonobo_Moniker_std.oafinfo
+share/oaf/Bonobo_Moniker_gzip.oafinfo
+share/oaf/Bonobo_Moniker_http.oafinfo
+share/oaf/Bonobo_Selector.oafinfo
+share/oaf/Bonobo_Sample_Mines.oafinfo
+share/oaf/Bonobo_Sample_Text.oafinfo
+share/oaf/Bonobo_Sample_Audio.oafinfo
+share/oaf/Bonobo_Sample_Clock.oafinfo
+share/oaf/Bonobo_Sample_Calculator.oafinfo
+share/oaf/Bonobo_Sample_Hello.oafinfo
+share/oaf/Bonobo_Sample_Paint.oafinfo
+share/oaf/Bonobo_Sample_CanvasItem.oafinfo
+share/oaf/Bonobo_Sample_Echo.oafinfo
 @exec mkdir -p %D/share/gnome/bonobo/docs/audio_ulaw/C/images
 @dirrm include/bonobo
 @dirrm share/bonobo/html/bonobo
@@ -168,6 +183,7 @@ share/oaf/text-plain.oafinfo
 @dirrm share/gnome/bonobo/docs/audio_ulaw
 @dirrm share/gnome/bonobo/docs
 @dirrm share/gnome/bonobo
+@dirrm share/gnome/ui
 @unexec rmdir %D/lib/pkgconfig 2>/dev/null || true
 @dirrm lib/bonobo/plugin
 @dirrm lib/bonobo
