@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: makeme,v 1.1.1.1 2004/11/10 00:46:04 epg Exp $
+# $Id: makeme,v 1.2 2005/04/06 15:48:17 epg Exp $
 # This hack won't work for every trick you can play with /usr/msrc.
 # If the Distfile sends different files to the various platforms, or
 # builds a file on the meta source machine with a special tool or
@@ -39,7 +39,7 @@ if [ -z "$HOSTTYPE" ] ; then
 		HOSTTYPE="NEXT2" ;;
 	*Solaris*|*[Ss]un[Oo][Ss]*)
 		HOSTTYPE="SUN5" ;;
-	*BSD*)
+	Darwin*|*BSD*)
 		HOSTTYPE="FREEBSD" ;;
 	BSDI*)
 		HOSTTYPE="BSDI" ;;
