@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/10 20:39:08 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/07/28 17:50:10 hubertf Exp $
 bin/fbrun
+bin/fbsetbg
 bin/fluxbox
 bin/fluxbox-generate_menu
 man/man1/fluxbox.1
@@ -11,6 +12,7 @@ share/fluxbox/nls/POSIX
 share/fluxbox/nls/US_ASCII
 share/fluxbox/nls/bg_BG/fluxbox.cat
 share/fluxbox/nls/da_DK/fluxbox.cat
+share/fluxbox/nls/de_DE/fluxbox.cat
 share/fluxbox/nls/en
 share/fluxbox/nls/en_US
 share/fluxbox/nls/es
@@ -38,6 +40,7 @@ share/fluxbox/styles/Flux
 share/fluxbox/styles/LemonSpace
 share/fluxbox/styles/Makro
 share/fluxbox/styles/MerleyKay
+share/fluxbox/styles/Meta
 share/fluxbox/styles/Minimal
 share/fluxbox/styles/Nyz
 share/fluxbox/styles/Operation
@@ -61,6 +64,7 @@ share/fluxbox/styles/qnx-photon
 @dirrm share/fluxbox/nls/fr_FR
 @dirrm share/fluxbox/nls/et_EE
 @dirrm share/fluxbox/nls/es_ES
+@dirrm share/fluxbox/nls/de_DE
 @dirrm share/fluxbox/nls/da_DK
 @dirrm share/fluxbox/nls/bg_BG
 @dirrm share/fluxbox/nls/C
