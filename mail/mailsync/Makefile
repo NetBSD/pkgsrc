@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/04/22 23:41:27 ben Exp $
+# $NetBSD: Makefile,v 1.14 2004/07/10 21:29:34 wiz Exp $
 #
 
 DISTNAME=	mailsync_4.4.4-1
@@ -13,12 +13,12 @@ COMMENT=	Mailsync is a way of synchronizing a collection of mailboxes
 WRKSRC=		${WRKDIR}/${PKGBASE}
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
-USE_GCC_SHLIB=	yes
+USE_LANGUAGES+=	c c++
 ALL_TARGET=	default
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD"
 CFLAGS+=	-fno-operator-names
 .endif
 
