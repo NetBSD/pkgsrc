@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkgdiff,v 1.6 2002/03/10 22:04:02 wiz Exp $
+# $NetBSD: pkgdiff,v 1.7 2002/04/02 10:56:48 seb Exp $
 #
 # Usage: pkgdiff newfile
 #        pkgdiff oldfile newfile
@@ -28,7 +28,7 @@ else
 fi
 
 dodiff() {
-	case x$new in
+	case x"`basename $new`" in
 		xconfigure)
 		@DIFF@ -I '\(echo .*as_me:[0-9]+:\|echo .*configure:[0-9]+:\|line [0-9]+ \"configure\)' $*
 		;;
