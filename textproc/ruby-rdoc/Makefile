@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/03/16 02:01:11 taca Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/28 04:38:37 taca Exp $
 #
 
 DISTNAME=	rdoc-beta-2
-PKGNAME=	ruby-rdoc-0.0.0.2
+PKGNAME=	${RUBY_PKGPREFIX}-rdoc-0.0.0.2
 CATEGORIES=	textproc ruby
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rdoc/}
 EXTRACT_SUFX=	.tgz
@@ -11,11 +11,10 @@ MAINTAINER=	flynn@energyhq.homeip.net
 HOMEPAGE=	http://rdoc.sourceforge.net/
 COMMENT=	Generates structured HTML documentation from Ruby source
 
-NO_BUILD=	YES
-USE_RUBY=	YES
+RUBY_VERSION=		${RUBY16_VERSION}
+USE_RUBY_INSTALL=	yes
+NO_BUILD=		yes
+NO_CONFIGURE=		yes
 
-do-install:
-		cd ${WRKSRC} && ${RUBY} install.rb
-
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
