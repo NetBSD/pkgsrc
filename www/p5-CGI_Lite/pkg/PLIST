@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/26 17:57:03 bad Exp $
+lib/perl5/man/man3/CGI_Lite.3
+lib/perl5/site_perl/CGI_Lite.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/CGI_Lite/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/CGI_Lite
