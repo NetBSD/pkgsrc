@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2004/11/03 11:17:53 grant Exp $
+# $NetBSD: Makefile,v 1.27 2004/12/28 23:18:18 reed Exp $
 #
 
 DISTNAME=	tuxpaint-0.9.14
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxpaint/} \
 		ftp://ftp.sonic.net/pub/users/nbs/unix/x/tuxpaint/source/
