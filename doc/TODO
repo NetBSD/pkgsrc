@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1731 2004/05/10 18:13:43 wiz Exp $
+$NetBSD: TODO,v 1.1732 2004/05/11 11:56:53 dillo Exp $
 
 Suggested new packages
 ======================
@@ -382,6 +382,7 @@ Suggested package updates
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
 	o xanalyser-1.23
 	o xanim-2.92.0 [pkg/19934]
+	o xbeeb-0.4.1
 	o xboard-4.2.7
 	o xdaliclock-2.20
 	o xerces-c-2.5.0 [heinz?|p5-XML-Xerces requires xerces-c-2.3.0]
