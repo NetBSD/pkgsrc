@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2004/03/10 05:02:42 reed Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/01 18:18:00 jmmv Exp $
 
-DISTNAME=		libbonobo-2.4.3
+DISTNAME=		libbonobo-2.6.0
 CATEGORIES=		devel gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libbonobo/2.4/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libbonobo/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -21,7 +21,6 @@ USE_GNU_TOOLS+=		make yacc
 PKGCONFIG_OVERRIDE=	bonobo/libbonobo-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	bonobo-activation/bonobo-activation-2.0.pc.in
 
-CONFIGURE_ARGS= 	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
