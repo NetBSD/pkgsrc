@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 1999/03/04 08:50:44 tron Exp $
+$NetBSD: patch-ab,v 1.6 1999/03/05 09:44:20 tron Exp $
 
 --- Makefile.in.orig	Wed Feb 24 23:09:14 1999
 +++ Makefile.in	Tue Mar  2 23:50:46 1999
@@ -32,7 +32,7 @@ $NetBSD: patch-ab,v 1.5 1999/03/04 08:50:44 tron Exp $
  
  
 -libglib_la_LDFLAGS =  	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) 	-release $(LT_RELEASE)
-+libglib_la_LDFLAGS =  	-release $(LT_RELEASE)
++libglib_la_LDFLAGS =  	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
  
  
  noinst_PROGRAMS = testglib testgdate testgdateparser
