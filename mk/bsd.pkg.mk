@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1347 2004/01/19 14:54:26 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1348 2004/01/19 15:04:05 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2400,6 +2400,20 @@ do-libtool-override:
 .    endfor
 .  endif
 .endif
+
+.if defined(CONFIG_STATUS_OVERRIDE)
+_CONFIGURE_POSTREQ+=	do-config-status-override
+.PHONY: do-config-status-override
+do-config-status-override:      
+.  for file in ${CONFIG_STATUS_OVERRIDE}  
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -f ${file} ]; then						\
+		${RM} -f ${file};					\
+		( ${ECHO} '#!${SH}'; ${ECHO} 'exit 0' ) > ${file};	\
+		${CHMOD} +x ${file};					\
+	fi
+.  endfor                       
+.endif 
 
 .PHONY: post-configure
 post-configure: ${_CONFIGURE_POSTREQ}
