@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.953 2003/10/18 03:29:31 grant Exp $
+$NetBSD: TODO,v 1.954 2003/10/18 03:45:36 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -307,6 +307,7 @@ Suggested package updates
 	o teapop-0.3.6
 	o tightvnc-1.2.9
 	o tin-1.6.1 [dillo]
+	o tinyproxy-1.6.2 [xtraeme]
 	o tkman-2.2
 	o tla-1.1.0.5 [replacing arch; pkg/23022]
 	o tla-1.1.0.7
