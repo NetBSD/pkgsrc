@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/04/15 10:38:19 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/17 09:37:23 agc Exp $
 #
 
 DISTNAME=       cvs-1.9
@@ -6,9 +6,6 @@ CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GNU}
 
 MAINTAINER=	lamj@stat.cmu.edu
-
-BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
-RUN_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 
 GNU_CONFIGURE=	yes
 
@@ -21,12 +18,11 @@ MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 MAN1=		cvs.1
 MAN5=		cvs.5
 MAN8=		cvsbug.8
+INFO_FILES=	cvs cvsclient
 
 post-install:
 	${RM} -f ${PREFIX}/bin/cvs
 	${INSTALL_PROGRAM} ${WRKSRC}/src/cvs ${PREFIX}/bin/
-	install-info --info-dir=${PREFIX}/info ${PREFIX}/info/cvs.info
-	install-info --info-dir=${PREFIX}/info ${PREFIX}/info/cvsclient.info
 	${SH} ${PKGDIR}/INSTALL ${DISTNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:48 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/17 09:37:25 agc Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/09/26 08:23:14 torstenb Exp
 #
 
@@ -16,15 +16,10 @@ MASTER_SITES=   ftp://ftp.math.gatech.edu/pub/zsh/ \
 
 MAINTAINER=	torstenb@FreeBSD.ORG
 
-OPSYS!=		uname -s
-.if (${OPSYS} == "NetBSD")
-BUILD_DEPENDS=  ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
-RUN_DEPENDS=    ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
-.endif
-
 GNU_CONFIGURE=	yes
 MAN1=		zsh.1 zshbuiltins.1 zshcompctl.1 zshexpn.1 zshmisc.1 \
 		zshoptions.1 zshall.1 zshparam.1 zshzle.1
+INFO_FILES=	zsh
 
 # If you want to build a static binary, uncomment the following line
 #LDFLAGS+=-static
@@ -33,9 +28,5 @@ post-install:
 	${CP} /etc/shells /etc/shells.bak
 	(${GREP} -v ${PREFIX}/bin/zsh /etc/shells.bak; ${ECHO} ${PREFIX}/bin/zsh) >/etc/shells
 	${RM} /etc/shells.bak
-	@if [ ! -f ${PREFIX}/info/dir ]; then \
-	  ${SED} -ne '1,/Menu:/p' /usr/share/info/dir > ${PREFIX}/info/dir; \
-	 fi
-	@${PREFIX}/bin/install-info ${PREFIX}/info/zsh.info ${PREFIX}/info/dir
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.63 1998/04/15 10:45:05 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.64 1998/04/17 09:37:24 agc Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -150,6 +150,7 @@ NetBSD_MAINTAINER=	agc@netbsd.org
 # USE_PERL5		- Says that the port uses perl5 for building and running.
 # USE_IMAKE		- Says that the port uses imake.
 # USE_X11		- Says that the port uses X11 (i.e., installs in ${X11BASE}).
+# USE_GTEXINFO		- Says that the package uses gtexinfo
 # NO_INSTALL_MANPAGES - For imake ports that don't like the install.man
 #						target.
 # HAS_CONFIGURE	- Says that the port has its own configure script.
@@ -279,6 +280,8 @@ NetBSD_MAINTAINER=	agc@netbsd.org
 # CAT<sect>     - The same as MAN<sect>, only for formatted manpages.
 # MANPREFIX		 -The directory prefix for ${MAN<sect>} (default: ${PREFIX}).
 # CATPREFIX     - The directory prefix for ${CAT<sect>} (default: ${PREFIX}).
+# INFO_FILES		- set to the base names of the info files you wish to be
+#			installed in the info dir file. Automatically sets USE_GTEXINFO.
 #
 # Default targets and their behaviors:
 #
@@ -432,6 +435,14 @@ MAKE_PROGRAM=		${MAKE}
 BUILD_DEPENDS+=		perl5.00404:${PORTSDIR}/lang/perl5
 RUN_DEPENDS+=		perl5.00404:${PORTSDIR}/lang/perl5
 .endif
+.if defined(INFO_FILES)
+USE_GTEXINFO=		yes
+.endif
+.if defined(USE_GTEXINFO)
+BUILD_DEPENDS+=		${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+RUN_DEPENDS+=		${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+.endif
+
 
 .if exists(${PORTSDIR}/../Makefile.inc)
 .include "${PORTSDIR}/../Makefile.inc"
@@ -1207,6 +1218,10 @@ do-build:
 .if !target(do-install)
 do-install:
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} ${MAKEFILE} ${INSTALL_TARGET})
+	@for f in ${INFO_FILES}; do		\
+		${ECHO} "install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f.info";	\
+		install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f.info;			\
+	done
 .endif
 
 # Package

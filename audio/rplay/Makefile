@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:10 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/17 09:37:22 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.sdsu.edu/pub/rplay/
 MAINTAINER=	rmallory@csusb.edu
 
 LIB_DEPENDS=    gsm.1.0:${PORTSDIR}/audio/gsm
-BUILD_DEPENDS=  ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
-RUN_DEPENDS=    ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS= "--prefix=${PREFIX}"
@@ -20,6 +18,7 @@ CONFIGURE_ENV+=        LDFLAGS=-L${PREFIX}/lib # XXX
 #USE_GMAKE=	yes
 MAN1=           rplay.1 xrplay.1 rplayd.1 rptp.1
 MAN5=		rplay.conf.5 rplay.hosts.5 rplay.servers.5
+INFO_FILES=	RPTP RPLAY rplay librplay
 
 pre-configure:
 	for f in `find ${WRKDIR} -type f -print|xargs $[GREP} -l '/usr/local'`; do \
@@ -40,9 +39,5 @@ post-install:
 	@if [ ! -f ${PREFIX}/etc/rplay.hosts ]; then \
 		${ECHO} localhost > ${PREFIX}/etc/rplay.hosts; \
 	fi
-	install-info ${PREFIX}/info/RPTP.info ${PREFIX}/info/dir
-	install-info ${PREFIX}/info/RPLAY.info ${PREFIX}/info/dir
-	install-info ${PREFIX}/info/rplay.info ${PREFIX}/info/dir
-	install-info ${PREFIX}/info/librplay.info ${PREFIX}/info/dir
 
 .include "../../mk/bsd.pkg.mk"

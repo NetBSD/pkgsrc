@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:46 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/17 09:37:25 agc Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -12,9 +12,6 @@ DISTFILES=	${TETEX_SRC} ${TETEX_LIB}
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	br@schiele-ct.de
-
-BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
-RUN_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 
 DIST_SUBDIR=	teTeX
 NO_CONFIGURE=	yes
@@ -31,11 +28,11 @@ MAN1=		afm2tfm.1 allcm.1 alldc.1 allneeded.1 amslatex.1 \
 		tangle.1 tex.1 texconfig.1 texhash.1 tftopl.1 \
 		vftovp.1 virtex.1 vptovf.1 weave.1 xdvi.1
 MAN5=		ls-R.5
+INFO_FILES=	kpathsea dvips fontname
 
 TETEX_SRC=	teTeX-src-0.4pl7.tar.gz
 TETEX_LIB=	teTeX-lib-0.4pl8.tar.gz
 WRKLIB=		${WRKDIR}/teTeX
-INSTALL_INFO=	${PREFIX}/bin/install-info
 
 pre-install:
 	@${RM} -f ${PREFIX}/share/texmf/ls-R
@@ -49,10 +46,7 @@ pre-install:
 	@${INSTALL_DATA} ${WRKLIB}/texmf.cnf ${PREFIX}/share/texmf/web2c
 
 post-install:
-	${INSTALL_INFO} ${PREFIX}/info/latex ${PREFIX}/info/dir
-	${INSTALL_INFO} ${PREFIX}/info/kpathsea.info ${PREFIX}/info/dir
-	${INSTALL_INFO} ${PREFIX}/info/dvips.info ${PREFIX}/info/dir
-	${INSTALL_INFO} ${PREFIX}/info/fontname.info ${PREFIX}/info/dir
+	${PREFIX}/bin/install-info ${PREFIX}/info/latex ${PREFIX}/info/dir
 	@chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/texmf
 	@find ${PREFIX}/share/texmf/fonts/pk ${PREFIX}/share/texmf/fonts/tfm \
 		-type d -print | xargs chmod 1777
