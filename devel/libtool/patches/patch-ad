@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2001/02/03 05:34:58 hubertf Exp $
+
+--- Makefile.in.orig	Sat May 27 13:23:32 2000
++++ Makefile.in
+@@ -82,7 +82,8 @@
+ 
+ AUTOMAKE_OPTIONS = 1.3e gnu
+ 
+-BUILD_SUBDIRS = . libltdl doc tests
++# We build the docs in a seperate pkg in NetBSD (etc.):
++BUILD_SUBDIRS = . libltdl tests
+ SUBDIRS = $(BUILD_SUBDIRS)
+ DIST_SUBDIRS = $(BUILD_SUBDIRS) $(CONF_SUBDIRS)
+ 

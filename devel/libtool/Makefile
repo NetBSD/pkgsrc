@@ -1,41 +1,19 @@
-# $NetBSD: Makefile,v 1.30 2001/01/26 16:42:44 skrll Exp $
+# $NetBSD: Makefile,v 1.31 2001/02/03 05:34:57 hubertf Exp $
 #
 
-DISTNAME=	libtool-1.3.5
-PKGNAME=	libtool-1.3.5nb11
-CATEGORIES=	devel pkgtools
-MASTER_SITES=	${MASTER_SITE_GNU:=libtool/}
+DISTFILES=	# empty
+.include "Makefile.common"
 
-MAINTAINER=	tv@netbsd.org
-HOMEPAGE=	http://www.gnu.org/software/libtool/libtool.html
+PKGNAME=	${DISTNAME}${PKGREV}
 
-CONFLICTS=	glibtool-*
-GNU_CONFIGURE=	yes
-USE_GTEXINFO=	yes
+DEPENDS+=	${DISTNAME:C/-/-base-/}${PKGREV}:../libtool-base
+DEPENDS+=	${DISTNAME:C/-/-info-/}${PKGREV}:../libtool-info
 
-# It seems the info-files distributed with libtool 1.3.5 are broken.
-# To test, type "info libtool|" and hold down space. See it stop with a
-# ``Cannot find the node "(/usr/pkg/info/libtool.info)Linking executables"''
-# error. Simply making sure the info-files get re-done works here.
-post-extract:
-	${RM} -f ${WRKSRC}/doc/libtool.info*
+NO_CONFIGURE=	yes
+NO_PATCH=	yes
+NO_BUILD=	yes
 
-test: build
-	cd ${WRKSRC} && ${MAKE} check
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_PLATFORM:MNetBSD-1.4-sparc} != "" || \
-	${MACHINE_PLATFORM:MNetBSD-1.4.[12]-sparc} != ""
-DEPENDS+=	c++rt0>=1.0:../../sysutils/c++rt0
-.endif
-
-.if ${OPSYS} == "NetBSD"
-.if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
-CONFIGURE_ARGS=	--disable-shared
-.endif
-.else
-CONFIGURE_ARGS=	--enable-ltdl-install
-.endif
+do-install:
+	@${ECHO_MSG} this is only a meta package.
 
 .include "../../mk/bsd.pkg.mk"
