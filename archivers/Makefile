@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2004/06/25 13:56:56 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2004/07/06 14:41:45 xtraeme Exp $
 #
 
 COMMENT=	Archivers
@@ -26,6 +26,7 @@ SUBDIR+=	gtar-info
 SUBDIR+=	gzip
 SUBDIR+=	gzip-base
 SUBDIR+=	gzip-info
+SUBDIR+=	gzrecover
 SUBDIR+=	ha
 SUBDIR+=	hpack
 SUBDIR+=	jamjar
