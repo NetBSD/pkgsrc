@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2003/01/05 20:12:10 jlam Exp $
+$NetBSD: patch-aa,v 1.11 2003/04/03 18:06:13 toshii Exp $
 
---- configure.in.orig	Tue Dec 17 21:07:20 2002
+--- configure.in.orig	Mon Feb  3 04:56:45 2003
 +++ configure.in
-@@ -330,6 +330,16 @@ IFS=$ac_save_IFS
+@@ -330,6 +330,16 @@
  
  
  #
@@ -19,3 +19,22 @@ $NetBSD: patch-aa,v 1.10 2003/01/05 20:12:10 jlam Exp $
  # Tcl/Tk
  #
  AC_MSG_CHECKING([whether to build with Tcl])
+@@ -373,6 +383,18 @@
+ PGAC_ARG_BOOL(with, python, no, [  --with-python           build Python interface module])
+ AC_MSG_RESULT([$with_python])
+ AC_SUBST(with_python)
++
++# If python is enabled (above), then optionally byte-compile the modules.
++AC_MSG_CHECKING([whether to byte-compile Python modules])
++if test "$with_python" = yes; then
++  PGAC_ARG_BOOL(with, python_compile, no,
++    [  --with-python-compile   byte-compile modules if Python is enabled])
++else
++  with_python_compile=no
++fi
++AC_MSG_RESULT([$with_python_compile])
++AC_SUBST([with_python_compile])
++
+ 
+ #
+ # Optionally build the Java/JDBC tools

@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2003/01/05 19:26:20 jlam Exp $
+$NetBSD: patch-ah,v 1.12 2003/04/03 18:06:13 toshii Exp $
 
 --- src/interfaces/python/GNUmakefile.orig	Thu Dec 13 13:39:04 2001
 +++ src/interfaces/python/GNUmakefile
