@@ -1,0 +1,42 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/06/05 19:03:12 nathanw Exp $
+
+--- include/salt/vtypes.h.orig	2004-04-17 17:51:40.000000000 -0400
++++ include/salt/vtypes.h	2004-06-04 18:14:53.000000000 -0400
+@@ -55,8 +55,13 @@
+ typedef unsigned char		sw_uchar;				
+ typedef short					sw_short;
+ typedef unsigned short		sw_ushort;
++#if defined(_LP64) || defined (__LP64__)
++typedef int					sw_long;
++typedef unsigned int		sw_ulong;
++#else
+ typedef long					sw_long;
+ typedef unsigned long		sw_ulong;
++#endif
+ typedef unsigned char	*	sw_octets;
+ typedef char				*	sw_string;
+ #if !defined(__VXWORKS__) || defined(__cplusplus)
+@@ -137,7 +142,7 @@
+ #		error "CPU unknown"
+ #	endif
+ 
+-#elif defined(__FreeBSD__) || defined(__NetBSD__)
++#elif defined(__FreeBSD__)
+ 
+ #	if defined(i386)
+ #		define SW_ENDIAN		1
+@@ -149,6 +154,14 @@
+ 
+ #		define SW_ENDIAN		0
+ 
++#elif defined(__NetBSD__)
++
++#	if BYTE_ORDER == LITTLE_ENDIAN
++#		define SW_ENDIAN		1
++#	else
++#		define SW_ENDIAN		0
++#	endif
++
+ #else
+ 
+ #error	"CPU unknown"
