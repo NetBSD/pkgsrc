@@ -1,4 +1,4 @@
-/*	$NetBSD: cmdtab.c,v 1.1.1.2 2005/01/03 10:08:40 lukem Exp $	*/
+/*	$NetBSD: cmdtab.c,v 1.2 2005/01/04 23:44:24 lukem Exp $	*/
 
 /*-
  * Copyright (c) 1996-2000 The NetBSD Foundation, Inc.

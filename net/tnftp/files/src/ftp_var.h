@@ -1,7 +1,7 @@
-/*	$NetBSD: ftp_var.h,v 1.2 2004/07/27 10:25:09 grant Exp $	*/
+/*	$NetBSD: ftp_var.h,v 1.3 2005/01/04 23:44:24 lukem Exp $	*/
 
 /*-
- * Copyright (c) 1996-2004 The NetBSD Foundation, Inc.
+ * Copyright (c) 1996-2005 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -48,11 +48,7 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by the University of
- *	California, Berkeley and its contributors.
- * 4. Neither the name of the University nor the names of its contributors
+ * 3. Neither the name of the University nor the names of its contributors
  *    may be used to endorse or promote products derived from this software
  *    without specific prior written permission.
  *
@@ -122,15 +118,15 @@
  * Format of command table.
  */
 struct cmd {
-	char	*c_name;	/* name of command */
-	char	*c_help;	/* help string */
-	char	 c_bell;	/* give bell when command completes */
-	char	 c_conn;	/* must be connected to use command */
-	char	 c_proxy;	/* proxy server may execute */
+	char		*c_name;	/* name of command */
+	const char	*c_help;	/* help string */
+	char	 	c_bell;		/* give bell when command completes */
+	char	 	c_conn;		/* must be connected to use command */
+	char	 	c_proxy;	/* proxy server may execute */
 #ifndef NO_EDITCOMPLETE
-	char	*c_complete;	/* context sensitive completion list */
+	const char	*c_complete;	/* context sensitive completion list */
 #endif /* !NO_EDITCOMPLETE */
-	void	(*c_handler)(int, char **); /* function to call */
+	void		(*c_handler)(int, char **); /* function to call */
 };
 
 /*
@@ -265,7 +261,8 @@ GLOBAL	char   *direction;	/* direction transfer is occurring */
 GLOBAL	char   *hostname;	/* name of host connected to */
 GLOBAL	int	unix_server;	/* server is unix, can use binary for ascii */
 GLOBAL	int	unix_proxy;	/* proxy is unix, can use binary for ascii */
-GLOBAL	char	remotepwd[MAXPATHLEN];	/* remote dir */
+GLOBAL	char	localcwd[MAXPATHLEN];	/* local dir */
+GLOBAL	char	remotecwd[MAXPATHLEN];	/* remote dir */
 GLOBAL	char   *username;	/* name of user logged in as. (dynamic) */
 
 GLOBAL	sa_family_t family;	/* address family to use for connections */

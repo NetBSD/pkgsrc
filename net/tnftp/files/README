@@ -4,8 +4,8 @@ WHAT IS TNFTP?
 `tnftp' is a `port' of the NetBSD FTP client to other systems.
 See http://www.NetBSD.org/ for more details about NetBSD.
 
-tnftp was formerly known as `lukemftp' and was renamed by Luke Mewburn
-in February 2003.
+tnftp was formerly known as `lukemftp'
+It was renamed to `tnftp' by Luke Mewburn in February 2003.
 
 The enhancements over the standard ftp client in 4.4BSD (and
 derivatives) include:

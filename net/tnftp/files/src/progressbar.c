@@ -1,4 +1,4 @@
-/*	$NetBSD: progressbar.c,v 1.2 2004/03/11 13:47:35 grant Exp $	*/
+/*	$NetBSD: progressbar.c,v 1.3 2005/01/04 23:44:24 lukem Exp $	*/
 
 /*-
  * Copyright (c) 1997-2003 The NetBSD Foundation, Inc.
@@ -39,7 +39,7 @@
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: progressbar.c,v 1.2 2004/03/11 13:47:35 grant Exp $");
+__RCSID("$NetBSD: progressbar.c,v 1.3 2005/01/04 23:44:24 lukem Exp $");
 #endif /* not lint */
 #endif
 
@@ -197,6 +197,8 @@ progressmeter(int flag)
 		return;
 
 	len += snprintf(buf + len, BUFLEFT, "\r");
+	if (prefix)
+	  len += snprintf(buf + len, BUFLEFT, "%s", prefix);
 	if (filesize > 0) {
 		ratio = (int)((double)cursize * 100.0 / (double)filesize);
 		ratio = MAX(ratio, 0);
@@ -208,6 +210,8 @@ progressmeter(int flag)
 			 * the number of stars won't exceed the buffer size 
 			 */
 		barlength = MIN(sizeof(buf) - 1, ttywidth) - BAROVERHEAD;
+		if (prefix)
+		  	barlength -= strlen(prefix);
 		if (barlength > 0) {
 			i = barlength * ratio / 100;
 			len += snprintf(buf + len, BUFLEFT,
