@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2387 2003/06/01 12:42:32 salo Exp $
+$NetBSD: CHANGES,v 1.2388 2003/06/01 12:50:48 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2264,3 +2264,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gifsicle to 1.37 [salo 2003-06-01]
 	Added xmms-liveice-1.0.0 [jmmv 2003-06-01]
 	Updated mminstance to 1.20 [salo 2003-06-01]
+	Updated t1utils to 1.27 [salo 2003-06-01]
