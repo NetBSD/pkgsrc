@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:23:12 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/10 16:06:47 wiz Exp $
 
 .if !defined(LIBIDL2_BUILDLINK2_MK)
 LIBIDL2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		idl
-BUILDLINK_DEPENDS.idl?=		libIDL>=0.7.4nb1
+BUILDLINK_DEPENDS.idl?=		libIDL>=0.7.4nb2
 BUILDLINK_PKGSRCDIR.idl?=	../../net/libIDL
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.idl=idl

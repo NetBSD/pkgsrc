@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2002/08/31 14:16:39 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2002/09/10 16:06:43 wiz Exp $
 
 DISTNAME=	ogle-0.8.5
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.dtek.chalmers.se/groups/dvd/dist/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.dtek.chalmers.se/groups/dvd/
 COMMENT=	DVD player with menus
-
-BUILDLINK_DEPENDS.libxml2=	libxml2>=2.4.19
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5.[23]*-i386 NetBSD-1.5[Y-Z]*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-1.[6-9]*-i386

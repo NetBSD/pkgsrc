@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2002/08/20 00:54:57 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/10 16:06:43 wiz Exp $
 
 DISTNAME=	ogle_gui-0.8.5
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.dtek.chalmers.se/groups/dvd/dist/
 
@@ -22,7 +23,6 @@ GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_CONFIG_WRAPPER=	yes
 #USE_LIBTOOL=		yes
-BUILDLINK_DEPENDS.libxml2=	libxml2>=2.4.19
 #LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 LDFLAGS+=	-Wl,-R${LOCALBASE}/lib/ogle -L${LOCALBASE}/lib/ogle

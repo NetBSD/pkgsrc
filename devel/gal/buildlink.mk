@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2002/03/13 17:36:49 fredb Exp $
+# $NetBSD: buildlink.mk,v 1.4 2002/09/10 16:06:38 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gal.
 #
@@ -17,7 +17,7 @@ GAL_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.gal?=		gal>=0.19nb1
+BUILDLINK_DEPENDS.gal?=		gal>=0.19.3nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.gal}:../../devel/gal
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.gal=gal
