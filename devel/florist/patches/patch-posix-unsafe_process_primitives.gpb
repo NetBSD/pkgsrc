@@ -1,0 +1,13 @@
+$NetBSD: patch-posix-unsafe_process_primitives.gpb,v 1.3 2004/06/30 11:23:43 shannonjr Exp $
+
+--- posix-unsafe_process_primitives.gpb.orig	2002-10-24 02:03:52.000000000 -0600
++++ posix-unsafe_process_primitives.gpb
+@@ -47,6 +47,8 @@ with POSIX.C,
+      Unchecked_Conversion;
+ package body POSIX.Unsafe_Process_Primitives is
+ 
++   pragma Warnings (Off);
++
+    use POSIX.C,
+        POSIX.Implementation;
+ 
