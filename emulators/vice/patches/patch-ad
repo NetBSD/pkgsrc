@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.3 2000/02/08 03:44:18 wiz Exp $
+$NetBSD: patch-ad,v 1.4 2000/08/27 14:08:35 wiz Exp $
 
---- ./src/arch/unix/x11/xaw/c64ui.c.orig	Sat Oct  2 23:05:26 1999
-+++ ./src/arch/unix/x11/xaw/c64ui.c	Sun Feb  6 22:23:11 2000
-@@ -368,6 +368,12 @@
+--- src/arch/unix/c64ui.c.orig	Thu Jul 20 23:49:46 2000
++++ src/arch/unix/c64ui.c
+@@ -448,6 +448,12 @@
  static ui_menu_entry_t c64_romset_submenu[] = {
-     { "Load default ROMs",
+     { N_("Load default ROMs"),
        (ui_callback_t) ui_set_romset, (ui_callback_data_t)"default.vrs", NULL },
-+    { "C64 Game System (GS)",
++    { N_("C64 Game System (GS)"),
 +      (ui_callback_t) ui_set_romset, (ui_callback_data_t)"64gs.vrs", NULL },
-+    { "Educator 64 (4064)",
++    { N_("Educator 64 (4064)"),
 +      (ui_callback_t) ui_set_romset, (ui_callback_data_t)"4064.vrs", NULL },
-+    { "SX-64",
++    { N_("SX-64"),
 +      (ui_callback_t) ui_set_romset, (ui_callback_data_t)"sx64.vrs", NULL },
      { "--" },
-     { "Load new kernal ROM",
+     { N_("Load new kernal ROM"),
        (ui_callback_t) ui_load_rom_file, (ui_callback_data_t)"KernalName", NULL },

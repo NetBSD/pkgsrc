@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.5 2000/02/08 11:37:55 tron Exp $
+$NetBSD: patch-ac,v 1.6 2000/08/27 14:08:35 wiz Exp $
 
---- configure.orig	Wed Nov 24 00:41:27 1999
-+++ configure	Tue Feb  8 12:22:00 2000
-@@ -3990,6 +3990,8 @@
+--- configure.orig	Tue Jul 25 00:02:45 2000
++++ configure
+@@ -4565,6 +4565,8 @@
  
  SOUND_DRIVERS=""
  
+ if test "x$is_dos" != "xyes"; then
 +# we don't want to find OSS emulation, let's use NetBSD's own interface
 +if false; then
  for ac_hdr in linux/soundcard.h machine/soundcard.h
  do
- ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
-@@ -4029,6 +4031,7 @@
+@@ -4605,6 +4607,7 @@
    echo "$ac_t""no" 1>&6
  fi
  done
@@ -19,16 +19,16 @@ $NetBSD: patch-ac,v 1.5 2000/02/08 11:37:55 tron Exp $
  
  for ac_hdr in dmedia/audio.h
  do
-@@ -5195,7 +5198,7 @@
+@@ -5776,7 +5779,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
 -LIBS="-lreadline  $LIBS"
 +LIBS="-ledit -ltermcap  $LIBS"
  cat > conftest.$ac_ext <<EOF
- #line 5201 "configure"
+ #line 5782 "configure"
  #include "confdefs.h"
-@@ -5223,7 +5226,7 @@
+@@ -5804,7 +5807,7 @@
  fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
@@ -37,25 +37,25 @@ $NetBSD: patch-ac,v 1.5 2000/02/08 11:37:55 tron Exp $
  else
    echo "$ac_t""no" 1>&6
   
-@@ -5590,7 +5593,7 @@
+@@ -6310,7 +6313,7 @@
      # For Solaris; some versions of Sun CC require a space after -R and
      # others require no space.  Words are not sufficient . . . .
      case "`(uname -sr) 2>/dev/null`" in
 -    "SunOS 5"*)
 +    "SunOS 5"*|"NetBSD "*)
        echo $ac_n "checking whether -R must be followed by a space""... $ac_c" 1>&6
- echo "configure:5596: checking whether -R must be followed by a space" >&5
+ echo "configure:6316: checking whether -R must be followed by a space" >&5
        ac_xsave_LIBS="$LIBS"; LIBS="$LIBS -R$x_libraries"
-@@ -6642,7 +6645,7 @@
+@@ -7362,7 +7365,7 @@
  
    fi
  
 -
 +if false; then
    echo $ac_n "checking for XpmCreatePixmapFromData in -lXpm""... $ac_c" 1>&6
- echo "configure:6648: checking for XpmCreatePixmapFromData in -lXpm" >&5
+ echo "configure:7368: checking for XpmCreatePixmapFromData in -lXpm" >&5
  ac_lib_var=`echo Xpm'_'XpmCreatePixmapFromData | sed 'y%./+-%__p_%'`
-@@ -6687,7 +6690,7 @@
+@@ -7407,7 +7410,7 @@
  else
    echo "$ac_t""no" 1>&6
  fi
