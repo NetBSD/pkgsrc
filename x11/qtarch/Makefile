@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2002/03/13 17:38:03 fredb Exp $
+# $NetBSD: Makefile,v 1.16 2002/03/17 15:32:00 fredb Exp $
 #
 
 DISTNAME=	qtarch-2.1-1
 PKGNAME=	qtarch-2.1
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	x11 devel
 MASTER_SITES=	ftp://qtarch.sourceforge.net/pub/qtarch/
 
