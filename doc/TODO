@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1123 2003/12/04 05:58:31 grant Exp $
+$NetBSD: TODO,v 1.1124 2003/12/04 06:50:12 junyoung Exp $
 
 Suggested new packages
 ======================
@@ -319,6 +319,7 @@ Suggested package updates
 	o pysol-4.82
 	o python-2.3.2 [recht]
 	o qt-3.2.2 [recht]
+	o qt-3.2.3
 	o rdiff-backup-0.12.6
 	o rep-gtk-0.17
 	o rox-1.2.2
