@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2449 2004/11/25 15:32:19 wiz Exp $
+$NetBSD: TODO,v 1.2450 2004/11/25 16:08:01 ben Exp $
 
 Suggested new packages
 ======================
@@ -503,7 +503,6 @@ Suggested package updates
 	o firewalk-5.0
 	o firewalk-gtk-5.0
 	o fisg-0.3.12
-	o fkiss-0.33a
 	o flim-1.14.7
 	o fluxbox-0.9.10
 	o fmsx-28
