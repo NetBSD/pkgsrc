@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/03/17 19:28:37 kim Exp $
+# $NetBSD: Makefile,v 1.4 2001/01/26 05:21:47 hubertf Exp $
 #
 
 DISTNAME=	ucd-snmp-4.0.1
@@ -44,10 +44,10 @@ post-install:
 	@for F in ${WRKSRC}/etc/* ; do \
 		${INSTALL_DATA} $$F ${PREFIX}/share/examples/ucd-snmp ; \
 	done
-	${ECHO} "Creating ${PREFIX}/etc/rc.d/snmpd.sh startup file."; \
-	${ECHO} "#!/bin/sh" > ${PREFIX}/etc/rc.d/snmpd.sh; \
-	${ECHO} "[ -x ${PREFIX}/sbin/snmpd ] && ${PREFIX}/sbin/snmpd && ${ECHO} -n ' snmpd'" >> ${PREFIX}/etc/rc.d/snmpd.sh
-	${CHMOD} 755 ${PREFIX}/etc/rc.d/snmpd.sh
+	${ECHO} "Creating ${PREFIX}/etc/rc.d/snmpd startup file."; \
+	${ECHO} "#!/bin/sh" > ${PREFIX}/etc/rc.d/snmpd; \
+	${ECHO} "[ -x ${PREFIX}/sbin/snmpd ] && ${PREFIX}/sbin/snmpd && ${ECHO} -n ' snmpd'" >> ${PREFIX}/etc/rc.d/snmpd
+	${CHMOD} 755 ${PREFIX}/etc/rc.d/snmpd
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/snmp/dlmod
 	${TOUCH} ${PREFIX}/lib/snmp/dlmod/.keepme
 

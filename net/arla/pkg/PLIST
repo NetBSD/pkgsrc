@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/10/18 16:32:59 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/01/26 05:21:46 hubertf Exp $
 include/atypes.h
 include/fs_errors.h
 include/base64.h
@@ -89,7 +89,7 @@ etc/CellServDB.default
 etc/ThisCell.default
 etc/arla.conf.default
 etc/SuidCells.default
-etc/rc.d/arlad.sh
+etc/rc.d/arlad
 share/examples/arla/lkm.conf
 share/examples/arla/services
 share/examples/arla/fstab

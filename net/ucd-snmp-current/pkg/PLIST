@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/22 21:11:39 kim Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/26 05:21:47 hubertf Exp $
 bin/encode_keychange
 bin/snmpbulkwalk
 bin/snmpcheck
@@ -15,7 +15,7 @@ bin/snmptrap
 bin/snmpusm
 bin/snmpwalk
 bin/tkmib
-etc/rc.d/snmpd.sh
+etc/rc.d/snmpd
 include/ucd-snmp/asn1.h
 include/ucd-snmp/callback.h
 include/ucd-snmp/default_store.h

@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2000/11/28 19:24:43 ad Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/01/26 05:21:45 hubertf Exp $
 etc/exim/configure
 etc/exim/mailer.conf.exim
-etc/rc.d/exim.sh
+etc/rc.d/exim
 sbin/exicyclog
 sbin/exigrep
 sbin/exim

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/02/20 22:05:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/01/26 05:21:44 hubertf Exp $
 #
 
 DISTNAME=	sj3-2.0.1.20
@@ -27,7 +27,7 @@ PLIST_SUBST=	SJ3OWNER=${SJ3OWNER} SJ3GROUP=${SJ3GROUP} DICT_DIR=${DICT_DIR} \
 INSTALL_SRC=	${PKGDIR}/INSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
 
-STARTUP_SCRIPT=	etc/rc.d/sj3.sh
+STARTUP_SCRIPT=	etc/rc.d/sj3
 STARTUP_SCRIPT_SRC=${WRKDIR}/STARTUP
 
 pre-configure:
@@ -44,12 +44,12 @@ do-configure:
 	@(cd ${WRKSRC}; xmkmf; ${MAKE} Makefiles)
 
 post-build:
-	@${ECHO} '#!/bin/sh' > ${STARTUP_SCRIPT_SRC}
-	@${ECHO} 'sj3=${PREFIX}/bin/sj3serv' >> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} 'if [ -f $$sj3 ]; then' >> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} "    echo -n ' sj3'" >> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} '	$$sj3' >> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} 'fi' >> ${STARTUP_SCRIPT_SRC}
+	@${ECHO} '#!/bin/sh'				 > ${STARTUP_SCRIPT_SRC}
+	@${ECHO} 'sj3=${PREFIX}/bin/sj3serv'		>> ${STARTUP_SCRIPT_SRC}
+	@${ECHO} 'if [ -f $$sj3 ]; then'		>> ${STARTUP_SCRIPT_SRC}
+	@${ECHO} "    echo -n ' sj3'"			>> ${STARTUP_SCRIPT_SRC}
+	@${ECHO} '	$$sj3'				>> ${STARTUP_SCRIPT_SRC}
+	@${ECHO} 'fi'					>> ${STARTUP_SCRIPT_SRC}
 	@${SED} -e 's|$${SJ3OWNER}|${SJ3OWNER}|'	\
 		-e 's|$${SJ3GROUP}|${SJ3GROUP}|'	\
 		-e 's|$${DICT_DIR}|${DICT_DIR}|'	\
