@@ -1,0 +1,9 @@
+This is the perl fnet client for those times when you just don't want to
+compile fnet on your target machine.  It was written primarily as an easy
+way to interface bots and intelligence into a standard client without the
+pain of C's string handling.  However, perl runs so large that in good
+conscience I can't suggest that one run this all of the time.
+
+As the author uses only the old C client, none of the the fancy schmancy
+TCL commands have been included here.  This release is a full featured
+client with most commands.
