@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2000/12/08 14:32:01 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2000/12/10 09:43:37 jlam Exp $
 
---- configure.orig	Fri Jul 21 04:35:50 2000
-+++ configure
-@@ -3512,6 +3512,8 @@
-   echo "$ac_t""yes" 1>&6
-   LIB_DES="-ldes";
- 				       with_des=yes
-+# we want the des code form openssl
-+				       with_des=no
- else
-   echo "$ac_t""no" 1>&6
- with_des=no
+--- include/Makefile.am.orig	Wed Mar  8 16:54:33 2000
++++ include/Makefile.am
+@@ -42,7 +42,7 @@
+ #
+ ################################################################
+ 
+-include_HEADERS = hmac-md5.h md5.h md5global.h sasl.h saslplug.h saslutil.h
++include_HEADERS = hmac-md5.h sasl.h saslplug.h saslutil.h
+ 
+ noinst_PROGRAMS = makemd5
+ 
