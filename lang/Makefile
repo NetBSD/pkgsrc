@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/02/01 01:56:32 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/02/10 15:49:19 agc Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -16,7 +16,7 @@
 #    SUBDIR += g77
 #    SUBDIR += gcl
 #    SUBDIR += gnat
-#    SUBDIR += guavac
+    SUBDIR += guavac
 #    SUBDIR += guile-iii
     SUBDIR += icon
 #    SUBDIR += idl4
