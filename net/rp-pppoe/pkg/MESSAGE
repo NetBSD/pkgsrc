@@ -1,0 +1,5 @@
+Before using the PPPoE client you have to copy the example configuration file
+"${PREFIX}/share/examples/rp-pppoe/pppoe.conf" to "/etc/ppp".
+
+Before using the PPPoE server you have to copy the example configuration file
+"${PREFIX}/share/examples/rp-pppoe/pppoe-server-options" to "/etc/ppp".
