@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/09/09 20:36:10 agc Exp $
+# $NetBSD: Makefile,v 1.10 2002/03/09 03:27:51 yyamano Exp $
 
 DISTNAME=       hpack79${USE_RSAREF2:S/YES/u/:C/[^u]*//g}src
 PKGNAME=        hpack-0.79
@@ -15,10 +15,16 @@ USE_RSAREF2=	NO
 
 MAKEFILE=       makefile
 ALL_TARGET=     hpack
-MAKE_FLAGS=	CFLAGS="-c -DBSD386 -D__UNIX__ -DPREFIX=\\\"${PREFIX}\\\" -I. ${CFLAGS} -Icrypt" \
-		CMDL="${LDFLAGS} -ltermcap"
 
 .include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+MAKE_FLAGS=	CFLAGS="-c -DBSD386 -D__UNIX__ -DPREFIX=\\\"${PREFIX}\\\" -I. ${CFLAGS} -Icrypt" \
+		CMDL="${LDFLAGS} -lcurses"
+.else
+MAKE_FLAGS=	CFLAGS="-c -DBSD386 -D__UNIX__ -DPREFIX=\\\"${PREFIX}\\\" -I. ${CFLAGS} -Icrypt" \
+		CMDL="${LDFLAGS} -ltermcap"
+.endif
+
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
 DEPENDS+=	rsaref-2.0p3:../../security/rsaref
 LDFLAGS+=	-L${LOCALBASE}/lib -lrsaref
