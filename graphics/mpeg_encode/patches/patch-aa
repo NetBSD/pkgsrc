@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/05/14 23:06:03 hubertf Exp $
+
+--- Makefile.orig	Thu Aug 17 00:16:56 1995
++++ Makefile
+@@ -36,9 +36,9 @@
+ ##############
+ # JPEG STUFF #
+ ##############
+-JPEG_LIB = jpeg/libjpeg.a
+-JPEG_DIR = -Ijpeg
+-JPEG_LIB_DIR = -Ljpeg
++JPEG_LIB = -ljpeg
++JPEG_DIR = -I${LOCALBASE}/include
++JPEG_LIB_DIR = -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
+ MP_JPEG_OBJS = jpeg.o
+ MP_JPEG_SRCS = jpeg.c
+ 
