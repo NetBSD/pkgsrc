@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.2 2002/08/25 19:23:21 jlam Exp $
+$NetBSD: patch-ag,v 1.3 2002/12/17 19:43:40 jmmv Exp $
 
---- fam/IMon.c++.orig	Tue Dec 18 11:03:37 2001
+--- fam/IMon.c++.orig	Tue Jul 16 08:14:41 2002
 +++ fam/IMon.c++
 @@ -25,6 +25,7 @@
  #include <assert.h>
@@ -10,14 +10,12 @@ $NetBSD: patch-ag,v 1.2 2002/08/25 19:23:21 jlam Exp $
  
  #if HAVE_IMON
  #ifdef __sgi
-@@ -34,7 +35,9 @@
+@@ -34,7 +35,7 @@
  #endif
  #endif
  
--#include <sys/sysmacros.h>
-+#if !defined(BSD)
-+#  include <sys/sysmacros.h>
-+#endif
+-#if !defined(__FreeBSD__)
++#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__)
+ #  include <sys/sysmacros.h>
+ #endif
  #include <unistd.h>
- 
- #include "Interest.h"
