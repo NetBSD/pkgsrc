@@ -1,11 +1,10 @@
-# $NetBSD: mipspro.mk,v 1.1 2004/02/01 00:31:00 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.2 2004/02/01 00:59:51 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	defined
 
-.include "../../mk/bsd.prefs.mk"
-
 MISPROBASE?=	/usr
+
 CC=	${MIPSPROBASE}/bin/cc
 CPP=	${MIPSPROBASE}/bin/cc -E
 CXX=	${MIPSPROBASE}/bin/CC
