@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1583 2004/04/06 10:50:49 wiz Exp $
+$NetBSD: TODO,v 1.1584 2004/04/06 13:28:43 adam Exp $
 
 Suggested new packages
 ======================
@@ -203,8 +203,6 @@ Suggested package updates
 	o gnutls-1.0.10
 	o gpsim-0.21.0 [bouyer]
 	o gqmpeg-0.91.0
-	o gqview-1.4.2
-	o gqview-devel-1.5.0
 	o grepmail-5.23
 	o grhino-0.10.0
 	o gsasl-0.0.14
