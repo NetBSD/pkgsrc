@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1208 2003/01/23 20:00:07 kristerw Exp $
+$NetBSD: CHANGES,v 1.1209 2003/01/23 21:27:09 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -386,3 +386,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pico to 4.4nb1 [martti 2003-01-23]
 	Added graphopt-0.1 [wiz 2003-01-23]
 	Updated cassowary to 0.60nb1 [kristerw 2003-01-23]
+	Updated R to 1.6.2 [markd 2003-01-23]
