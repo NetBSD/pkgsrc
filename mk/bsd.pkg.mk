@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.16 2003/08/14 07:37:01 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.17 2003/08/14 13:09:48 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -102,7 +102,7 @@ _USE_BUILDLINK3=	yes
 _USE_BUILDLINK3=	no
 .endif
 .if empty(USE_BUILDLINK2:M[nN][oO]) && empty(_USE_BUILDLINK3:M[nN][oO])
-PKG_FAIL_REASON=	"Please undefine USE_BUILDLINK2 when using pkgviews"
+PKG_FAIL_REASON=	"Please undefine USE_BUILDLINK2 when using pkgviews."
 .endif
 
 .if defined(USE_IMAKE)
