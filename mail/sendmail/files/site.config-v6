@@ -1,0 +1,1 @@
+PREPENDDEF(`confENVDEF', ``-DNETINET6=1'')
