@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2001/02/08 10:31:44 itojun Exp $
+@comment $NetBSD: PLIST,v 1.17 2001/02/27 02:54:27 itojun Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -132,6 +132,7 @@ include/isc/print.h
 include/isc/quota.h
 include/isc/random.h
 include/isc/ratelimiter.h
+include/isc/refcount.h
 include/isc/region.h
 include/isc/resource.h
 include/isc/result.h
@@ -173,8 +174,8 @@ include/omapi/types.h
 lib/libdns.a
 lib/libdns.la
 lib/libdns.so
-lib/libdns.so.3
-lib/libdns.so.3.0
+lib/libdns.so.4
+lib/libdns.so.4.0
 lib/libisc.a
 lib/libisc.la
 lib/libisc.so
