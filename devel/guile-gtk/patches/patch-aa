@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2002/12/13 15:17:45 jschauma Exp $
+
+--- Makefile.in.orig	Fri Dec 13 10:08:53 2002
++++ Makefile.in	Fri Dec 13 10:11:29 2002
+@@ -617,7 +617,7 @@
+ 	$(INSTALL_DATA) ./gtk/config.scm  $(gtkmoduledir)/config.scm
+ 	$(INSTALL_DATA) $(srcdir)/gtk/event-repl.scm $(gtkmoduledir)/event-repl.scm
+ .c.x:
+-	guile-snarf $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $< >$<.tmp && mv $<.tmp $@
++	guile-snarf $< $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) >$<.tmp && mv $<.tmp $@
+ 
+ gtk-glue.c: $(gtkdefs) $(gdkdefs) build-guile-gtk
+ 	$(BUILD) -I $(srcdir) glue $(gtkdefs) >tmpt && mv tmpt $@
