@@ -1,0 +1,23 @@
+$NetBSD: patch-bf,v 1.1.1.1 2002/05/02 13:28:16 bouyer Exp $
+
+--- changer-src/scsi-changer-driver.c.orig	Sun Feb 10 13:49:51 2002
++++ changer-src/scsi-changer-driver.c	Tue Apr 30 20:02:06 2002
+@@ -331,6 +331,18 @@
+    GenericBarCode,
+    GenericSearch,
+    GenericSenseHandler},
++  {"LXB",
++   "Overland LXB",
++   GenericMove,
++   GenericElementStatus,
++   GenericResetStatus,
++   GenericFree,
++   GenericEject,
++   GenericClean,
++   GenericRewind,
++   GenericBarCode,
++   GenericSearch,
++   GenericSenseHandler},
+   /* 
+    * And now the tape devices
+    */
