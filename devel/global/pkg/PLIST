@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 1999/01/09 04:17:01 abs Exp $
+bin/btreeop
+bin/gctags
+bin/global
+bin/gtags
+bin/htags
+bin/systags
+lib/libgloutil.a
+lib/libgloutil_pic.a
+libdata/lint/llib-lgloutil.ln
+man/cat1/btreeop.0
+man/cat1/gctags.0
+man/cat1/global.0
+man/cat1/gtags.0
+man/man1/btreeop.1
+man/man1/gctags.1
+man/man1/global.1
+man/man1/gtags.1
