@@ -1,22 +1,25 @@
-$NetBSD: patch-ae,v 1.1 2001/01/10 06:03:14 briggs Exp $
+$NetBSD: patch-ae,v 1.2 2001/03/26 13:43:50 bad Exp $
 
-*** mit-pthreads/config/config.guess.orig	Thu Dec 30 19:15:51 1999
---- mit-pthreads/config/config.guess	Tue Jan  9 22:43:12 2001
-***************
-*** 295,301 ****
-  	echo ${UNAME_MACHINE}-unknown-freebsd`echo ${UNAME_RELEASE}|sed -e 's/[-(].*//'`
-  	exit 0 ;;
-      *:NetBSD:*:*)
-! 	echo ${UNAME_MACHINE}-unknown-netbsd`echo ${UNAME_RELEASE}|sed -e 's/[-_].*/\./'`
-  	exit 0 ;;
-      *:OpenBSD:*:*)
-  	echo ${UNAME_MACHINE}-unknown-openbsd`echo ${UNAME_RELEASE}|sed -e 's/[-(].*//'`
---- 295,302 ----
-  	echo ${UNAME_MACHINE}-unknown-freebsd`echo ${UNAME_RELEASE}|sed -e 's/[-(].*//'`
-  	exit 0 ;;
-      *:NetBSD:*:*)
-! 	UNAME_PROCESSOR=`uname -p 2>/dev/null` || UNAME_PROCESSOR=$UNAME_MACHINE
-! 	echo ${UNAME_PROCESSOR}-unknown-netbsd`echo ${UNAME_RELEASE}|sed -e 's/[-_].*/\./'`
-  	exit 0 ;;
-      *:OpenBSD:*:*)
-  	echo ${UNAME_MACHINE}-unknown-openbsd`echo ${UNAME_RELEASE}|sed -e 's/[-(].*//'`
+--- configure.in.orig	Fri Mar 16 01:51:51 2001
++++ configure.in	Sat Mar 24 02:44:15 2001
+@@ -581,7 +581,10 @@
+         AC_MSG_RESULT(yes)
+         AC_DEFINE(LIBWRAP)
+         AC_DEFINE(HAVE_LIBWRAP)
+-        WRAPLIBS="-L$with_libwrap/lib -lwrap",
++	if test "$with_libwrap" != "yes"; then
++	    WRAPLIBS="-L${with_libwrap}/lib"
++	fi
++	WRAPLIBS="${WRAPLIBS} -lwrap",
+         AC_MSG_RESULT(no)
+         CPPFLAGS=${_cppflags} LDFLAGS=${_ldflags}),
+       CPPFLAGS=${_cppflags} LDFLAGS=${_ldflags})
+@@ -1951,7 +1954,7 @@
+     AC_DEFINE(HAVE_mit_thread)
+     MT_INCLUDES="-I\$(top_srcdir)/mit-pthreads/include"
+     AC_SUBST(MT_INCLUDES)
+-    MT_LD_ADD="-L \$(top_srcdir)/mit-pthreads/obj/ -lpthread"
++    MT_LD_ADD="-L\$(top_srcdir)/mit-pthreads/obj/ -lpthread"
+     AC_SUBST(MT_LD_ADD)
+     LIBS="$MT_LD_ADD $LIBS"
+     echo ""

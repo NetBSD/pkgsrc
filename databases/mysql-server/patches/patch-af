@@ -1,19 +1,25 @@
-$NetBSD: patch-af,v 1.1 2001/01/10 06:03:14 briggs Exp $
+$NetBSD: patch-af,v 1.2 2001/03/26 13:43:50 bad Exp $
 
-*** mit-pthreads/config/configure.orig	Thu Dec 30 19:15:51 1999
---- mit-pthreads/config/configure	Tue Jan  9 22:41:32 2001
-***************
-*** 1211,1216 ****
---- 1211,1222 ----
-  	# hpux-9.03.mk seems to be missing; what should this be?
-  	except="fork"
-  	;;
-+     powerpc-*-netbsd1.*)
-+ 	name=powerpc-netbsd
-+ 	sysincludes=netbsd-1.1
-+ 	except="fork lseek ftruncate pipe fstat"
-+ 	available_syscalls="sigprocmask sigaction sigsuspend"
-+ 	;;
-      sparc-*-sunos4.1.3* | sparc-*-sunos4.1.4*)
-  	name=sparc-sunos-4.1.3
-  	sysincludes=sunos-4.1.3
+--- configure.orig	Fri Mar 16 01:52:05 2001
++++ configure	Sat Mar 24 02:42:32 2001
+@@ -5004,7 +5004,10 @@
+ #define HAVE_LIBWRAP 1
+ EOF
+ 
+-        WRAPLIBS="-L$with_libwrap/lib -lwrap"
++	if test "$with_libwrap" != "yes"; then
++	    WRAPLIBS="-L${with_libwrap}/lib"
++	fi
++	WRAPLIBS="${WRAPLIBS} -lwrap"
+ else
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+@@ -10466,7 +10469,7 @@
+ 
+     MT_INCLUDES="-I\$(top_srcdir)/mit-pthreads/include"
+     
+-    MT_LD_ADD="-L \$(top_srcdir)/mit-pthreads/obj/ -lpthread"
++    MT_LD_ADD="-L\$(top_srcdir)/mit-pthreads/obj/ -lpthread"
+     
+     LIBS="$MT_LD_ADD $LIBS"
+     echo ""
