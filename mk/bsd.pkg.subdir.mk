@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.28 1999/05/17 23:34:37 tron Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.29 1999/06/28 11:42:29 agc Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -182,3 +182,20 @@ README.html: .PRECIOUS
 .for subdir in ${SUBDIR}
 	@cd ${subdir} && ${MAKE} "_THISDIR_=${_THISDIR_}${.CURDIR:T}/" ${_README_TYPE}
 .endfor
+
+.if !target(show-distfiles)
+show-distfiles:
+	@for entry in ${SUBDIR}; do					\
+		if [ -d ${.CURDIR}/$${entry}.${MACHINE} ]; then		\
+			edir=$${entry}.${MACHINE};			\
+		elif [ -d ${.CURDIR}/$${entry} ]; then			\
+			edir=$${entry};					\
+		else							\
+			OK="false";					\
+			${ECHO_MSG} "===> ${_THISDIR_}$${entry} non-existent"; \
+		fi;							\
+		if [ "$$OK" = "" ]; then				\
+			cd ${.CURDIR}/$${edir} && ${MAKE} show-distfiles; \
+		fi;							\
+	done
+.endif
