@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.561 2000/09/01 18:20:06 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.562 2000/09/05 19:13:40 veego Exp $
 #
 # This file is in the public domain.
 #
@@ -756,10 +756,14 @@ DEPENDS+=		${LESSTIF_DEPENDS}
 __BUILTIN_XPM!=		${EGREP} -c NormalLibXpm ${X11BASE}/lib/X11/config/X11.tmpl  || ${TRUE}
 .if (${__BUILTIN_XPM} == "0")
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
+XPMDIR_DEFAULT=		${X11PREFIX}
+.else
+XPMDIR_DEFAULT=		${X11BASE}
 .endif
 .undef __BUILTIN_XPM
 .else
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
+XPMDIR_DEFAULT=		${X11PREFIX}
 .endif
 .endif
 
@@ -1256,8 +1260,11 @@ show-downlevel:
 
 .if defined(EVAL_PREFIX)
 .for def in ${EVAL_PREFIX}
+.if !defined(${def:C/=.*//}_DEFAULT)
+${def:C/=.*//}_DEFAULT=	${X11PREFIX}
+.endif
 .if !defined(${def:C/=.*//})
-_dir_${def:C/=.*//} != (${PKG_INFO} -qp ${def:C/.*=//} 2>/dev/null; ${ECHO} " @cwd ${X11PREFIX}") | ${AWK} '{ print $$2; exit }'
+_dir_${def:C/=.*//} != (${PKG_INFO} -qp ${def:C/.*=//} 2>/dev/null; ${ECHO} " @cwd ${${def:C/=.*//}_DEFAULT}") | ${AWK} '{ print $$2; exit }'
 ${def:C/=.*//}=${_dir_${def:C/=.*//}}
 MAKEFLAGS+= ${def:C/=.*//}=${_dir_${def:C/=.*//}}
 .endif
