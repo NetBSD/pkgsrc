@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2001/08/17 05:48:09 lukem Exp $
+
+--- abcde.conf.orig	Thu Aug 16 08:32:10 2001
++++ abcde.conf	Fri Aug 17 15:29:59 2001
+@@ -93,7 +93,7 @@
+ #NOCDDBQUERY=n
+ 
+ # CD device you want to read from
+-#CDROM=/dev/cdrom
++#CDROM=/dev/rcd0d
+ 
+ # If you'd like to make a default location that overrides the current
+ # directory for putting mp3's, uncomment this.
