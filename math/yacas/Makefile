@@ -1,22 +1,40 @@
-# $NetBSD: Makefile,v 1.11 2003/11/07 15:27:24 gavan Exp $
+# $NetBSD: Makefile,v 1.12 2004/03/12 01:15:45 dmcmahill Exp $
 #
 
-DISTNAME=	yacas-1.0.48
+DISTNAME=	yacas-1.0.56
 CATEGORIES=	math
-MASTER_SITES=	http://www.xs4all.nl/~apinkus/backups/
+MASTER_SITES=	http://yacas.sourceforge.net/backups/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.xs4all.nl/~apinkus/yacas.html
+HOMEPAGE=	http://yacas.sourceforge.net
 COMMENT=	Yet Another Computer Algebra System
 
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 USE_GCC_SHLIB=	YES
+USE_GNU_TOOLS+=	make
+USE_LIBTOOL=	YES
+USE_X11=	YES
 
 TEST_TARGET=	test
+
+LDFLAGS+=	-Wl,-R${PREFIX}/lib/yacas
+
+# dos2unix fix on a few files
+pre-patch:
+.for __tmp__ in src/cyacas.h src/cyacas.cpp plugins/pcre/pcre_config.h
+	${MV} ${WRKSRC}/${__tmp__} ${WRKSRC}/${__tmp__}.bak
+	${CAT} ${WRKSRC}/${__tmp__}.bak | ${TR} -d "\015" >  \
+		${WRKSRC}/${__tmp__}
+.endfor
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/yacas.sh ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
-	${INSTALL_DATA} ${WRKSRC}/yacas.el ${PREFIX}/share/emacs/site-lisp
+.for __tmp__ in yacas.el yacas-names.el yacas-functions.el yacas-notebook.el \
+	yacas-notebook.sty font-latex.el
+	${INSTALL_DATA} ${WRKSRC}/YacasNotebook/${__tmp__} ${PREFIX}/share/emacs/site-lisp
+.endfor
 
+.include "../../math/gsl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
