@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.13 2000/08/16 21:23:48 tron Exp $
+$NetBSD: patch-aa,v 1.14 2000/08/30 21:59:52 martin Exp $
 
 --- config/autoconf.mk.in.orig	Wed Jul 19 21:53:00 2000
 +++ config/autoconf.mk.in	Wed Aug 16 22:16:56 2000

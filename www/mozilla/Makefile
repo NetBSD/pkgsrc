@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2000/08/28 09:14:52 jlam Exp $: Makefile,v 1.30 2000/06/17 22:14:00 tsarna Exp $
+# $NetBSD: Makefile,v 1.37 2000/08/30 21:59:52 martin Exp $: Makefile,v 1.30 2000/06/17 22:14:00 tsarna Exp $
 
 DISTNAME=	mozilla-source-M17
-PKGNAME=	mozilla-5.0m17
+PKGNAME=	mozilla-1.0m17
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/m17/src/
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mozilla.org/
 
-BUILD_DEPENDS+=	${PERL5}:../../lang/perl5
+BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
 BUILD_DEPENDS+=	autoconf:../../devel/autoconf
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 DEPENDS+=	ORBit>=0.5.1:../../net/ORBit
@@ -29,22 +29,29 @@ MOZ_LIBDIR=	${PREFIX}/lib/mozilla
 MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
 LDFLAGS+=	-Wl,-R${MOZ_LIBDIR}
 
-PLIST_SRC=	${PKGDIR}/PLIST-${OBJECT_FMT}
+PLIST_SRC=      ${PKGDIR}/PLIST-${OBJECT_FMT}
+
+SCRIPTS_ENV+=	OBJECT_FMT=${OBJECT_FMT}
+SCRIPTS_ENV+=	PLIST_SRC=${PLIST_SRC}
+SCRIPTS_ENV+=	SED=${SED}
+SCRIPTS_ENV+=	EGREP=${EGREP}
+SCRIPTS_ENV+=	CHOWN=${CHOWN}
+SCRIPTS_ENV+=	CHGRP=${CHGRP}
+SCRIPTS_ENV+=	CHMOD=${CHMOD}
+SCRIPTS_ENV+=	BINOWN=${BINOWN}
+SCRIPTS_ENV+=	BINGRP=${BINGRP}
+SCRIPTS_ENV+=	BINMODE=${BINMODE}
+
 
 pre-configure:
 	(cd ${WRKSRC} && autoconf)
 
-#do-build:
-#	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} -f client.mk build)
+post-build:
+	(cd ${WRKSRC}/dist/bin && \
+	${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. ./regxpcom && \
+	${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. ./regchrome )
 
 do-install:
-	${SED} -e "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/mozilla
-	${CHMOD} 755 ${PREFIX}/bin/mozilla
-	${INSTALL_PROGRAM_DIR} ${MOZ_LIBDIR}
-	( cd ${WRKSRC}/dist/bin; \
-	tar chf - . | (cd ${MOZ_LIBDIR}; tar xpf -) ; \
-	cd ${MOZ_LIBDIR}; \
-	${SETENV} MOZILLA_FIVE_HOME=${MOZ_LIBDIR} ./regxpcom )
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/mozilla
+	 ${SETENV} ${SCRIPTS_ENV} ${SCRIPTDIR}/moz-install
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,11 +1,125 @@
-@comment $NetBSD: PLIST-a.out,v 1.1 2000/08/16 21:23:50 tron Exp $
-@option extract-in-place
+@comment $NetBSD: PLIST-a.out,v 1.2 2000/08/30 21:59:53 martin Exp $
 bin/mozilla
-lib/mozilla/component.reg
-lib/mozilla/components/xpti.dat
-lib/mozilla/components/xptitemp.dat
+@comment begin PROGRAMS
+lib/mozilla/mozilla-bin
+lib/mozilla/nsTestSample
+lib/mozilla/nsinstall
+lib/mozilla/regExport
+lib/mozilla/regchrome
+lib/mozilla/regxpcom
+lib/mozilla/timebombgen
+lib/mozilla/vreg
+lib/mozilla/xpidl
+lib/mozilla/xpt_dump
+lib/mozilla/xpt_link
+@comment end PROGRAMS
+@comment begin SCRIPTS
+lib/mozilla/mozilla-config
+@comment end SCRIPTS
+@comment begin DSO
+lib/mozilla/components/libabsyncsvc.so.1.0
+lib/mozilla/components/libaddrbook.so.1.0
+lib/mozilla/components/libautocomplete.so.1.0
+lib/mozilla/components/libbookmarks.so.1.0
+lib/mozilla/components/libcaps.so.1.0
+lib/mozilla/components/libchardet.so.1.0
+lib/mozilla/components/libchrome.so.1.0
+lib/mozilla/components/libcookie.so.1.0
+lib/mozilla/components/libdirectory.so.1.0
+lib/mozilla/components/libdocshell.so.1.0
+lib/mozilla/components/libeditor.so.1.0
+lib/mozilla/components/libgfx_gtk.so.1.0
+lib/mozilla/components/libgfxps.so.1.0
+lib/mozilla/components/libgklayout.so.1.0
+lib/mozilla/components/libgkplugin.so.1.0
+lib/mozilla/components/libgkview.so.1.0
+lib/mozilla/components/libhistory.so.1.0
+lib/mozilla/components/libhtmlpars.so.1.0
+lib/mozilla/components/libimpText.so.1.0
+lib/mozilla/components/libimport.so.1.0
+lib/mozilla/components/libjar50.so.1.0
+lib/mozilla/components/libjsloader.so.1.0
+lib/mozilla/components/libjsurl.so.1.0
+lib/mozilla/components/liblocalmail.so.1.0
+lib/mozilla/components/liblwbrk.so.1.0
+lib/mozilla/components/libmailnews.so.1.0
+lib/mozilla/components/libmime.so.1.0
+lib/mozilla/components/libmimeemitter.so.1.0
+lib/mozilla/components/libmork.so.1.0
+lib/mozilla/components/libmozbrwsr.so.1.0
+lib/mozilla/components/libmozfind.so.1.0
+lib/mozilla/components/libmozucth.so.1.0
+lib/mozilla/components/libmozxfer.so.1.0
+lib/mozilla/components/libmsgcompose.so.1.0
+lib/mozilla/components/libmsgdb.so.1.0
+lib/mozilla/components/libmsgimap.so.1.0
+lib/mozilla/components/libmsgnews.so.1.0
+lib/mozilla/components/libnecko.so.1.0
+lib/mozilla/components/libnecko2.so.1.0
+lib/mozilla/components/libnecko_cache.so.1.0
+lib/mozilla/components/libnsappshell.so.1.0
+lib/mozilla/components/libnsgif.so.1.0
+lib/mozilla/components/libnsjpg.so.1.0
+lib/mozilla/components/libnslocale.so.1.0
+lib/mozilla/components/libnsmng.so.1.0
+lib/mozilla/components/libnspng.so.1.0
+lib/mozilla/components/libnsprefm.so.1.0
+lib/mozilla/components/liboji.so.1.0
+lib/mozilla/components/libpref.so.1.0
+lib/mozilla/components/libprofile.so.1.0
+lib/mozilla/components/libpsmglue.so.1.0
+lib/mozilla/components/librdf.so.1.0
+lib/mozilla/components/libregviewer.so.1.0
+lib/mozilla/components/librelated.so.1.0
+lib/mozilla/components/libsample.so.1.0
+lib/mozilla/components/libsearch.so.1.0
+lib/mozilla/components/libshistory.so.1.0
+lib/mozilla/components/libsigned.so.1.0
+lib/mozilla/components/libsmime.so.1.0
+lib/mozilla/components/libstrres.so.1.0
+lib/mozilla/components/libtbmb.so.1.0
+lib/mozilla/components/libtimer_gtk.so.1.0
+lib/mozilla/components/libtxmgr.so.1.0
+lib/mozilla/components/libtxtsvc.so.1.0
+lib/mozilla/components/libuconv.so.1.0
+lib/mozilla/components/libucvcn.so.1.0
+lib/mozilla/components/libucvibm.so.1.0
+lib/mozilla/components/libucvja.so.1.0
+lib/mozilla/components/libucvko.so.1.0
+lib/mozilla/components/libucvlatin.so.1.0
+lib/mozilla/components/libucvtw.so.1.0
+lib/mozilla/components/libucvtw2.so.1.0
+lib/mozilla/components/libunicharutil.so.1.0
+lib/mozilla/components/liburiloader.so.1.0
+lib/mozilla/components/liburlbarhistory.so.1.0
+lib/mozilla/components/libvcard.so.1.0
+lib/mozilla/components/libwallet.so.1.0
+lib/mozilla/components/libwalletviewers.so.1.0
+lib/mozilla/components/libwebbrwsr.so.1.0
+lib/mozilla/components/libwidget_gtk.so.1.0
+lib/mozilla/components/libxpconnect.so.1.0
+lib/mozilla/components/libxpinstall.so.1.0
+lib/mozilla/libcmt.so.1.0
+lib/mozilla/libgkgfx.so.1.0
+lib/mozilla/libgtkembedmoz.so.1.0
+lib/mozilla/libgtksuperwin.so.1.0
+lib/mozilla/libgtkxtbin.so.1.0
+lib/mozilla/libjsdom.so.1.0
+lib/mozilla/libjsj.so.1.0
+lib/mozilla/libmozjs.so.1.0
+lib/mozilla/libmsgbaseutil.so.1.0
+lib/mozilla/libnspr4.so.1.0
+lib/mozilla/libplc4.so.1.0
+lib/mozilla/libplds4.so.1.0
+lib/mozilla/libprotocol.so.1.0
+lib/mozilla/libxpcom.so.1.0
+lib/mozilla/libxpistub.so.1.0
+@comment end DSO
+@comment begin DATA
 lib/mozilla/bloaturls.txt
-lib/mozilla/chrome/installed-chrome.txt
+lib/mozilla/chrome/all-locales.rdf
+lib/mozilla/chrome/all-packages.rdf
+lib/mozilla/chrome/all-skins.rdf
 lib/mozilla/chrome/locales/en-DE/manifest.rdf
 lib/mozilla/chrome/locales/en-US/communicator/locale/PSMTaskMenu.dtd
 lib/mozilla/chrome/locales/en-US/communicator/locale/bookmarks/bm-find.dtd
@@ -241,6 +355,10 @@ lib/mozilla/chrome/locales/en-US/navigator/locale/openLocation.properties
 lib/mozilla/chrome/locales/en-US/navigator/locale/viewSource.dtd
 lib/mozilla/chrome/locales/en-US/necko/locale/necko.properties
 lib/mozilla/chrome/locales/en-US/necko/locale/redirect_loop.dtd
+lib/mozilla/chrome/overlayinfo/communicator/content/overlays.rdf
+lib/mozilla/chrome/overlayinfo/editor/content/overlays.rdf
+lib/mozilla/chrome/overlayinfo/messenger/content/overlays.rdf
+lib/mozilla/chrome/overlayinfo/navigator/content/overlays.rdf
 lib/mozilla/chrome/packages/core/communicator/content/PSMTaskMenu.xul
 lib/mozilla/chrome/packages/core/communicator/content/bookmarks/bm-find.js
 lib/mozilla/chrome/packages/core/communicator/content/bookmarks/bm-find.xul
@@ -1786,6 +1904,7 @@ lib/mozilla/chrome/skins/modern/navigator/skin/questionl.gif
 lib/mozilla/chrome/skins/modern/navigator/skin/reload.gif
 lib/mozilla/chrome/skins/modern/navigator/skin/search.gif
 lib/mozilla/chrome/skins/modern/navigator/skin/stop.gif
+lib/mozilla/component.reg
 lib/mozilla/components/absync.xpt
 lib/mozilla/components/addrbook.xpt
 lib/mozilla/components/appshell.xpt
@@ -1808,88 +1927,6 @@ lib/mozilla/components/jsconsole-clhandler.js
 lib/mozilla/components/jsurl.xpt
 lib/mozilla/components/layout_base.xpt
 lib/mozilla/components/layout_xul.xpt
-lib/mozilla/components/libabsyncsvc.so.1.0
-lib/mozilla/components/libaddrbook.so.1.0
-lib/mozilla/components/libautocomplete.so.1.0
-lib/mozilla/components/libbookmarks.so.1.0
-lib/mozilla/components/libcaps.so.1.0
-lib/mozilla/components/libchardet.so.1.0
-lib/mozilla/components/libchrome.so.1.0
-lib/mozilla/components/libcookie.so.1.0
-lib/mozilla/components/libdirectory.so.1.0
-lib/mozilla/components/libdocshell.so.1.0
-lib/mozilla/components/libeditor.so.1.0
-lib/mozilla/components/libgfx_gtk.so.1.0
-lib/mozilla/components/libgfxps.so.1.0
-lib/mozilla/components/libgklayout.so.1.0
-lib/mozilla/components/libgkplugin.so.1.0
-lib/mozilla/components/libgkview.so.1.0
-lib/mozilla/components/libhistory.so.1.0
-lib/mozilla/components/libhtmlpars.so.1.0
-lib/mozilla/components/libimpText.so.1.0
-lib/mozilla/components/libimport.so.1.0
-lib/mozilla/components/libjar50.so.1.0
-lib/mozilla/components/libjsloader.so.1.0
-lib/mozilla/components/libjsurl.so.1.0
-lib/mozilla/components/liblocalmail.so.1.0
-lib/mozilla/components/liblwbrk.so.1.0
-lib/mozilla/components/libmailnews.so.1.0
-lib/mozilla/components/libmime.so.1.0
-lib/mozilla/components/libmimeemitter.so.1.0
-lib/mozilla/components/libmork.so.1.0
-lib/mozilla/components/libmozbrwsr.so.1.0
-lib/mozilla/components/libmozfind.so.1.0
-lib/mozilla/components/libmozucth.so.1.0
-lib/mozilla/components/libmozxfer.so.1.0
-lib/mozilla/components/libmsgcompose.so.1.0
-lib/mozilla/components/libmsgdb.so.1.0
-lib/mozilla/components/libmsgimap.so.1.0
-lib/mozilla/components/libmsgnews.so.1.0
-lib/mozilla/components/libnecko.so.1.0
-lib/mozilla/components/libnecko2.so.1.0
-lib/mozilla/components/libnecko_cache.so.1.0
-lib/mozilla/components/libnsappshell.so.1.0
-lib/mozilla/components/libnsgif.so.1.0
-lib/mozilla/components/libnsjpg.so.1.0
-lib/mozilla/components/libnslocale.so.1.0
-lib/mozilla/components/libnsmng.so.1.0
-lib/mozilla/components/libnspng.so.1.0
-lib/mozilla/components/libnsprefm.so.1.0
-lib/mozilla/components/liboji.so.1.0
-lib/mozilla/components/libpref.so.1.0
-lib/mozilla/components/libprofile.so.1.0
-lib/mozilla/components/libpsmglue.so.1.0
-lib/mozilla/components/librdf.so.1.0
-lib/mozilla/components/libregviewer.so.1.0
-lib/mozilla/components/librelated.so.1.0
-lib/mozilla/components/libsample.so.1.0
-lib/mozilla/components/libsearch.so.1.0
-lib/mozilla/components/libshistory.so.1.0
-lib/mozilla/components/libsigned.so.1.0
-lib/mozilla/components/libsmime.so.1.0
-lib/mozilla/components/libstrres.so.1.0
-lib/mozilla/components/libtbmb.so.1.0
-lib/mozilla/components/libtimer_gtk.so.1.0
-lib/mozilla/components/libtxmgr.so.1.0
-lib/mozilla/components/libtxtsvc.so.1.0
-lib/mozilla/components/libuconv.so.1.0
-lib/mozilla/components/libucvcn.so.1.0
-lib/mozilla/components/libucvibm.so.1.0
-lib/mozilla/components/libucvja.so.1.0
-lib/mozilla/components/libucvko.so.1.0
-lib/mozilla/components/libucvlatin.so.1.0
-lib/mozilla/components/libucvtw.so.1.0
-lib/mozilla/components/libucvtw2.so.1.0
-lib/mozilla/components/libunicharutil.so.1.0
-lib/mozilla/components/liburiloader.so.1.0
-lib/mozilla/components/liburlbarhistory.so.1.0
-lib/mozilla/components/libvcard.so.1.0
-lib/mozilla/components/libwallet.so.1.0
-lib/mozilla/components/libwalletviewers.so.1.0
-lib/mozilla/components/libwebbrwsr.so.1.0
-lib/mozilla/components/libwidget_gtk.so.1.0
-lib/mozilla/components/libxpconnect.so.1.0
-lib/mozilla/components/libxpinstall.so.1.0
 lib/mozilla/components/locale.xpt
 lib/mozilla/components/mailnews.xpt
 lib/mozilla/components/mime.xpt
@@ -1962,6 +1999,8 @@ lib/mozilla/components/xpcom_threads.xpt
 lib/mozilla/components/xpcom_xpti.xpt
 lib/mozilla/components/xpconnect.xpt
 lib/mozilla/components/xpinstall.xpt
+lib/mozilla/components/xpti.dat
+lib/mozilla/components/xptitemp.dat
 lib/mozilla/defaults/pref/all.js
 lib/mozilla/defaults/pref/config.js
 lib/mozilla/defaults/pref/editor.js
@@ -1988,29 +2027,6 @@ lib/mozilla/defaults/wallet/SchemaConcat.tbl
 lib/mozilla/defaults/wallet/URLFieldSchema.tbl
 lib/mozilla/icons/mozicon16.xpm
 lib/mozilla/icons/mozicon50.xpm
-lib/mozilla/libcmt.so.1.0
-lib/mozilla/libgkgfx.so.1.0
-lib/mozilla/libgtkembedmoz.so.1.0
-lib/mozilla/libgtksuperwin.so.1.0
-lib/mozilla/libgtkxtbin.so.1.0
-lib/mozilla/libjsdom.so.1.0
-lib/mozilla/libjsj.so.1.0
-lib/mozilla/libmozjs.so.1.0
-lib/mozilla/libmsgbaseutil.so.1.0
-lib/mozilla/libnspr4.so.1.0
-lib/mozilla/libplc4.so.1.0
-lib/mozilla/libplds4.so.1.0
-lib/mozilla/libprotocol.so.1.0
-lib/mozilla/libxpcom.so.1.0
-lib/mozilla/libxpistub.so.1.0
-lib/mozilla/mozilla
-lib/mozilla/mozilla-bin
-lib/mozilla/mozilla-config
-lib/mozilla/nsTestSample
-lib/mozilla/nsinstall
-lib/mozilla/regExport
-lib/mozilla/regchrome
-lib/mozilla/regxpcom
 lib/mozilla/res/acceptlanguage.properties
 lib/mozilla/res/arrow.gif
 lib/mozilla/res/charsetData.properties
@@ -2067,7 +2083,6 @@ lib/mozilla/res/samples/xpconnect-sample.html
 lib/mozilla/res/samples/xpmenu.xul
 lib/mozilla/res/ua.css
 lib/mozilla/res/unixcharset.properties
-lib/mozilla/run-mozilla.sh
 lib/mozilla/searchplugins/AOLSearch.gif
 lib/mozilla/searchplugins/AOLSearch.src
 lib/mozilla/searchplugins/ClassifiedPlus.gif
@@ -2089,11 +2104,7 @@ lib/mozilla/searchplugins/Tech_News.src
 lib/mozilla/searchplugins/google.gif
 lib/mozilla/searchplugins/google.src
 lib/mozilla/splash.xpm
-lib/mozilla/timebombgen
-lib/mozilla/vreg
-lib/mozilla/xpidl
-lib/mozilla/xpt_dump
-lib/mozilla/xpt_link
+@comment end DATA
 @dirrm lib/mozilla/searchplugins
 @dirrm lib/mozilla/res/samples/sampleimages
 @dirrm lib/mozilla/res/samples
@@ -2193,6 +2204,15 @@ lib/mozilla/xpt_link
 @dirrm lib/mozilla/chrome/packages/core/communicator
 @dirrm lib/mozilla/chrome/packages/core
 @dirrm lib/mozilla/chrome/packages
+@dirrm lib/mozilla/chrome/overlayinfo/navigator/content
+@dirrm lib/mozilla/chrome/overlayinfo/navigator
+@dirrm lib/mozilla/chrome/overlayinfo/messenger/content
+@dirrm lib/mozilla/chrome/overlayinfo/messenger
+@dirrm lib/mozilla/chrome/overlayinfo/editor/content
+@dirrm lib/mozilla/chrome/overlayinfo/editor
+@dirrm lib/mozilla/chrome/overlayinfo/communicator/content
+@dirrm lib/mozilla/chrome/overlayinfo/communicator
+@dirrm lib/mozilla/chrome/overlayinfo
 @dirrm lib/mozilla/chrome/locales/en-US/necko/locale
 @dirrm lib/mozilla/chrome/locales/en-US/necko
 @dirrm lib/mozilla/chrome/locales/en-US/navigator/locale
