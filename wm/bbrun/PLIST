@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/12 00:36:21 wiz Exp $
+bin/bbrun
+share/doc/bbrun/README
+@dirrm share/doc/bbrun
