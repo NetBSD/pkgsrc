@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2004/03/07 21:10:58 minskim Exp $
-#
+# $NetBSD: Makefile,v 1.12 2004/08/13 03:22:23 minskim Exp $
 
-DISTNAME=	baekmuk-ttf-2.1
-PKGREVISION=	2
+DISTNAME=	baekmuk-ttf-2.2
 CATEGORIES=	fonts korean
-MASTER_SITES=	ftp://ftp.mizi.com/pub/baekmuk/
+MASTER_SITES=	http://kldp.net/download.php/1429/
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.mizi.co.kr/ko/prod/etc/mos-pro2.htm
+MAINTAINER=	yui@yui.pe.kr
+HOMEPAGE=	http://kldp.net/projects/baekmuk/
 COMMENT=	Baekmuk family Korean TrueType fonts
 
 USE_X11BASE=	YES
@@ -19,9 +17,9 @@ DOCDIR=		${PREFIX}/share/doc/baekmuk-ttf
 
 do-install:
 	${INSTALL_DATA_DIR} ${FONTS_TTF_DIRS}
-	cd ${WRKDIR} && ${PAX} -rw -pm *.ttf ${FONTS_TTF_DIRS}
+	${INSTALL_DATA} ${WRKSRC}/ttf/*.ttf ${FONTS_TTF_DIRS}
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${FILESDIR}/COPYRIGHT ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT* ${DOCDIR}
 
 .include "../../mk/fonts.mk"
 .include "../../mk/bsd.pkg.mk"
