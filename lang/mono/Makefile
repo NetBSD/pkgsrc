@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/02/27 04:06:05 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/28 23:41:32 recht Exp $
 #
 
 DISTNAME=	mono-0.30.1
@@ -19,6 +19,9 @@ CONFLICTS=	pnet-[0-9]*
 NOT_FOR_PLATFORM=	NetBSD-1.[0-5]*-*
 NOT_FOR_PLATFORM+=	NetBSD-1.6-* NetBSD-1.6.*-*
 NOT_FOR_PLATFORM+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[AB]-*
+# boehm-gc doesn't build on amd64/x86_64
+NOT_FOR_PLATFORM+=	*-*-amd64 *-*-x86_64
+
 
 USE_GNU_TOOLS+=		make
 USE_BUILDLINK3=		yes
