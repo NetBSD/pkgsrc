@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2743 2004/12/24 10:14:10 jmmv Exp $
+$NetBSD: TODO,v 1.2744 2004/12/24 12:30:49 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -326,7 +326,6 @@ Suggested package updates
 	o asapm-2.13
 	o ast-ksh-20040229
 	o astyle-1.15.3
-	o atk-1.9.0
 	o auctex-11.53
 	o avidemux-2.0.34
 	o avl-2.0.1
