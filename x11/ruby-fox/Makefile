@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/10/09 17:18:06 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/01/10 17:57:13 wiz Exp $
 
 DISTNAME=	FXRuby-0.99.174
 PKGNAME=	${RUBY_PKGNAMEPREFIX}fox-0.99.174
@@ -21,9 +21,9 @@ WRKSRC=		${WRKDIST}/ext/fox
 USE_BUILDLINK2=	yes
 DIST_SUBDIR=	ruby
 USE_RUBY_EXTCONF=#defined
-CONFIGURE_ARGS+=--with-fox-include=${BUILDLINK_DIR}/include/fox
-CONFIGURE_ARGS+=--with-opengl-include=${BUILDLINK_DIR}/include/GL
-CONFIGURE_ARGS+=--with-fox-lib=${BUILDLINK_DIR}/lib
+CONFIGURE_ARGS+=--with-fox-include=${BUILDLINK_PREFIX.fox}/include/fox
+CONFIGURE_ARGS+=--with-opengl-include=${BUILDLINK_PREFIX.Mesa}/include/GL
+CONFIGURE_ARGS+=--with-fox-lib=${BUILDLINK_PREFIX.fox}/lib
 
 INSTALL_TARGET=	site-install
 
@@ -43,6 +43,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/fox
 	${INSTALL_DATA} ${WRKDIST}/doc/* ${RUBY_DOCDIR}/fox
 
+.include "../../graphics/Mesa/buildlink2.mk"
 .include "../../x11/fox/buildlink2.mk"
 .include "../../lang/ruby-base/Makefile.common"
 .include "../../lang/ruby-base/buildlink2.mk"
