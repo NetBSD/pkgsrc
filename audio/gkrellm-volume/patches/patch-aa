@@ -1,15 +1,14 @@
-$NetBSD: patch-aa,v 1.3 2004/02/24 22:39:26 cube Exp $
+$NetBSD: patch-aa,v 1.4 2005/03/22 14:58:55 cube Exp $
 
---- Makefile.orig	2003-01-18 20:59:09.000000000 +0100
+--- Makefile.orig	2004-05-16 19:21:50.000000000 +0200
 +++ Makefile
-@@ -2,14 +2,14 @@
+@@ -8,14 +8,14 @@ export PACKAGE LOCALEDIR
  
  GTK_CONFIG = pkg-config gtk+-2.0
  
 -PLUGIN_DIR ?= /usr/local/lib/gkrellm2/plugins
--GKRELLM_INCLUDE = -I/usr/local/include
 +PLUGIN_DIR ?= $(PREFIX)/lib/gkrellm2/plugins
-+GKRELLM_INCLUDE = -I$(BUILDLINK_DIR)/include
+ GKRELLM_INCLUDE = -I/usr/local/include
  
  GTK_CFLAGS = `$(GTK_CONFIG) --cflags` 
  GTK_LIB = `$(GTK_CONFIG) --libs`
@@ -19,4 +18,4 @@ $NetBSD: patch-aa,v 1.3 2004/02/24 22:39:26 cube Exp $
 +LIBS = $(GTK_LIB) $(LIBOSSAUDIO)
  LFLAGS = -shared
  
- PACKAGE ?= gkrellm-volume
+ OBJS = volume.o mixer.o oss_mixer.o

@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:13:05 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/03/22 14:58:55 cube Exp $
 
-DISTNAME=	gkrellm-volume-2.1.9
-WRKSRC=		${WRKDIR}/gkrellm-volume
-PKGREVISION=	2
+DISTNAME=	gkrellm-volume-2.1.13
 CATEGORIES=	audio
 MASTER_SITES=	http://gkrellm.luon.net/files/
 
@@ -15,6 +13,7 @@ BUILD_USES_MSGFMT=	YES
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
+WRKSRC=			${WRKDIR}/gkrellm-volume
 
 MAKE_ENV+=	LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale \
 		enable_nls=1
