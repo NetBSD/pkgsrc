@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/14 13:21:18 drochner Exp $
+
+--- src/Makefile.in.orig	2003-07-14 13:47:13.000000000 +0200
++++ src/Makefile.in	2003-07-14 13:49:05.000000000 +0200
+@@ -119,7 +119,7 @@
+ @readerprefix@vcd_la_LDFLAGS = -module
+ 
+ gtkwave_LDADD = config/libwaveconfig.a @GTK_LIBS@ @XML_LIBS@ @builtin_readers_las@
+-gtkwave_LDFLAGS = -static
++gtkwave_LDFLAGS = -export-dynamic
+ 
+ gtkwave_SOURCES = \
+ 	alloc.h \
