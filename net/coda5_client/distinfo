@@ -1,7 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:12 wiz Exp $
+$NetBSD: distinfo,v 1.3 2001/04/27 19:05:45 phil Exp $
 
-SHA1 (coda-5.3.5.tgz) = ee551cd68dd7ae6a712abfb4ed81f3e87f7f2bfb
-Size (coda-5.3.5.tgz) = 1942341 bytes
-SHA1 (patch-aa) = 2b4cf67d290844fe0f2e1034825c651982dc17dd
-SHA1 (patch-ab) = 9219c89b1f77693121b6223f6b07184cdf0f0c4d
-SHA1 (patch-ac) = 99e6915433dc0efb9a8daf8215224ec20dfe26d9
+SHA1 (coda-5.3.13.tar.gz) = 6f06e73d8441f4ae7010acb2a35d0f0bde6ff7a4
+Size (coda-5.3.13.tar.gz) = 1324328 bytes
