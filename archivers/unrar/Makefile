@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/09/12 12:41:47 grant Exp $
+# $NetBSD: Makefile,v 1.23 2003/10/08 23:54:07 fredb Exp $
 #
 
 DISTNAME=	unrarsrc-3.2.2
@@ -25,5 +25,15 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} unrar ${PREFIX}/bin
 	cd ${WRKSRC} && ${INSTALL_DATA} readme.txt license.txt	\
 		${PREFIX}/share/doc/unrar
+
+.include "../../mk/bsd.prefs.mk"
+
+# Don't set _LARGEFILE_SOURCE for platforms w/o ftello() and fseeko().
+#
+.for __glob__ in NetBSD-1.5*
+.if ${MACHINE_PLATFORM:M${__glob__}} != ""
+.MAKEFLAGS+=	DEFINES=""
+.endif
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
