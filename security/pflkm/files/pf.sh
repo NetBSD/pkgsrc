@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pf.sh,v 1.1.1.1 2004/11/05 15:05:30 peter Exp $
+# $NetBSD: pf.sh,v 1.2 2005/01/18 17:36:53 peter Exp $
 #
 # PROVIDE: pf
 # REQUIRE: DAEMON
@@ -32,7 +32,7 @@ pf_start()
 pf_stop()
 {
 	echo "Disabling pf firewall."
-	${pfctl} -q -d
+	${pfctl} -q -Fa -d
 }
 
 pf_reload()
