@@ -1,20 +1,29 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:51:40 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/10/03 14:48:40 salo Exp $
 bin/cjpeg
 bin/djpeg
 bin/jpegtran
 bin/rdjpgcom
 bin/wrjpgcom
 include/jconfig.h
-include/jpeglib.h
-include/jmorecfg.h
 include/jerror.h
+include/jmorecfg.h
+include/jpeglib.h
 lib/libjpeg.a
 lib/libjpeg.la
 lib/libjpeg.so
 lib/libjpeg.so.62
 lib/libjpeg.so.62.0
-man/man1/cjpeg.1.gz
-man/man1/djpeg.1.gz
-man/man1/jpegtran.1.gz
-man/man1/rdjpgcom.1.gz
-man/man1/wrjpgcom.1.gz
+man/man1/cjpeg.1
+man/man1/djpeg.1
+man/man1/jpegtran.1
+man/man1/rdjpgcom.1
+man/man1/wrjpgcom.1
+share/doc/jpeg/coderules.doc
+share/doc/jpeg/filelist.doc
+share/doc/jpeg/install.doc
+share/doc/jpeg/jconfig.doc
+share/doc/jpeg/libjpeg.doc
+share/doc/jpeg/structure.doc
+share/doc/jpeg/usage.doc
+share/doc/jpeg/wizard.doc
+@dirrm share/doc/jpeg
