@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2003/05/29 21:08:27 seb Exp $
+$NetBSD: distinfo,v 1.4 2003/09/16 19:24:26 seb Exp $
 
-SHA1 (cfengine-2.0.7p3.tar.gz) = 8798a49c02841ecc7e493a577978fb271c57204a
-Size (cfengine-2.0.7p3.tar.gz) = 1216634 bytes
+SHA1 (cfengine-2.0.8p1.tar.gz) = 7ba589a6a7f5f231d66c6b1a41dc0757502801f3
+Size (cfengine-2.0.8p1.tar.gz) = 1240535 bytes
 SHA1 (patch-aa) = 93a957af8d124d5b6e584c1c3d3cdda73190d58c
 SHA1 (patch-ab) = caf7e63f25d0bba61d37a0060c586c84b2742fe4
 SHA1 (patch-ad) = 559b8378c1cad5e88e1eba55c7f62e2336153186
