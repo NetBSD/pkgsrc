@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/05/02 11:56:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/02 14:03:16 wiz Exp $
 
 DISTNAME=	napshare-1.1
 PKGREVISION=	1
@@ -9,14 +9,12 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://napshare.sourceforge.net/
 COMMENT=	Fully featured Gnutella P2P client made to run 24/7 unattended
 
-DEPENDS=	gtk+>=1.2.10nb4:../../x11/gtk
-
-USE_X11=	YES
+USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 
-EVAL_PREFIX+=	GTKDIR=gtk+
-CONFIGURE_ARGS+=--with-gtk-prefix="${GTKDIR}"
+CONFIGURE_ARGS+=--with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
 
-CFLAGS+=	`${GTKDIR}/bin/gtk-config --cflags`
+CFLAGS+=	`${BUILDLINK_PREFIX.gtk}/bin/gtk-config --cflags`
 
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
