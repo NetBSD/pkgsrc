@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2276 2004/10/29 11:28:46 wiz Exp $
+$NetBSD: TODO,v 1.2277 2004/10/29 12:44:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -246,6 +246,7 @@ Suggested package updates
 	o Xbae-4.50.0
 	o advancecomp-1.12
 	o afterstep-2.00.00
+	o aim-1.5.286
 	o ald-0.1.6 [pkg/26431]
 	o allegro-4.1.16
 	o amavisd-new-2.1.2 [pkg/26843]
@@ -259,6 +260,7 @@ Suggested package updates
 	o aranym-0.8.10
 	o asc-1.15.1
 	o aspell-0.60
+	o atlc-4.2.11
 	o auctex-11.53
 	o avidemux-2.0.30
 	o balsa-1.4.4
@@ -285,6 +287,8 @@ Suggested package updates
 	o conserver-8.1.8
 	o cooledit-3.17.8
 	o courier-0.47
+	o covered-0.3
+	o covered-current-20040325
 	o cpio-2.5.90
 	o crafty-19.5
 	o crimsonfields-0.4.5
@@ -317,8 +321,11 @@ Suggested package updates
 	o easytag-1.0
 	o efax-gtk-2.2.12
 	o eggdrop-1.6.17
+	o electric-7.00
 	o elk-3.99.6
 	o elm-me-2.4pl121
+	o emech-2.8.5.1
+	o epic4-2.0
 	o erlang-r10b
 	o ethereal-0.10.7
 	o ettercap-0.7.1 [wip/ettercap-NG|adrianp]
@@ -338,6 +345,7 @@ Suggested package updates
 	o freeciv-1.14.2
 	o freetds-0.62.3
 	o fsviewer-0.2.5
+	o fugu-1.2.3
 	o galeon-1.3.18
 	o gdm-2.6.0.5
 	o generator-0.35
@@ -450,6 +458,7 @@ Suggested package updates
 	o netio-123
 	o netpipe-3.6.2
 	o netscape-7.2
+	o ngspice-15c
 	o nosefart-2.1
 	o ns-flash-6.0.79
 	o nslint-2.1a3
@@ -461,6 +470,7 @@ Suggested package updates
 	o openal-20040816
 	o openoffice-1.1.3
 	o openssl-0.9.7e [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
+	o oregano-0.21
 	o oss-3.99.1h
 	o p5-Archive-Zip-1.14
 	o p5-Audio-Wav-0.03
@@ -554,6 +564,7 @@ Suggested package updates
 	o tkdesk-2.0
 	o tkgate-1.8.5
 	o tkman-2.2
+	o transcalc-0.14
 	o treecc-0.3.2 [pkg/27013]
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tunesbrowser-0.1.6
@@ -566,6 +577,7 @@ Suggested package updates
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
 	o vfu-4.03
+	o vipec-3.2.0
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vsftpd-2.01 [pkg/26811]
 	o vttest-20030301
@@ -583,6 +595,7 @@ Suggested package updates
 	o xblast-2.9.22
 	o xboard-4.2.7
 	o xchm-0.9.6
+	o xcircuit-3.2.27
 	o xdaliclock-2.20
 	o xdx-1.2
 	o xerces-c-2.5.0 [heinz?|p5-XML-Xerces requires xerces-c-2.3.0]
