@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1792 2004/05/28 22:31:50 xtraeme Exp $
+$NetBSD: TODO,v 1.1793 2004/05/28 23:00:13 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -273,7 +273,6 @@ Suggested package updates
 	o lavaps-2.4
 	o leafnode-1.9.54
 	o libcaca-0.9
-	o libesmtp-1.0.3
 	o libmpeg3-1.5.4
 	o libnet-1.1.1
 	o libole2-2.2.8
