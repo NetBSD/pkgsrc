@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8184 2004/11/30 16:05:17 adam Exp $
+$NetBSD: CHANGES,v 1.8185 2004/11/30 16:11:30 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5679,3 +5679,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-jpCodecs to 1.4.11 [taca 2004-11-30]
 	Updated glpk to 4.7 [adam 2004-11-30]
 	Updated gif2png to 2.5.1 [adam 2004-11-30]
+	Updated xdesktopwaves to 1.1 [xtraeme 2004-11-30]
