@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:28:56 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/21 18:40:48 jmc Exp $
 #
 
 DISTNAME=	psycopg-1.0.14
@@ -27,4 +27,5 @@ PY_PATCHPLIST=	yes
 .include "../../databases/postgresql-lib/buildlink2.mk"
 .include "../../lang/python/extension.mk"
 .include "../../time/py-mxDateTime/buildlink2.mk"
+.include "../../devel/pth/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
