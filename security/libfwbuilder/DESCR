@@ -1,12 +1,13 @@
-Firewall Builder is multi-platform firewall configuration and
-management tool.  It consists of a GUI and set of policy compilers for
-various firewall platforms.  Firewall Builder uses object-oriented
-approach, it helps administrator maintain a database of network
+Firewall Builder is a multi-platform firewall configuration and
+management tool.  It consists of a GUI and a set of policy compilers for
+various firewall platforms.  Firewall Builder uses an object-oriented
+approach, it helps administrators maintain a database of network
 objects and allows policy editing using simple drag-and-drop
 operations.  Firewall Builder currently supports
 
 	iptables,
-	ipfilter,
+	IP Filter,
+	ipfw,
 	OpenBSD PF, and
 	Cisco PIX
 
