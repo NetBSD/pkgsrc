@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2408 2003/06/03 14:15:53 wiz Exp $
+$NetBSD: CHANGES,v 1.2409 2003/06/03 14:37:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2289,3 +2289,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated asm2html to 1.4 [wiz 2003-06-03]
 	Updated p5-Attribute-Handlers to 0.78 [wiz 2003-06-03]
 	Updated p5-Params-Validate to 0.59 [wiz 2003-06-03]
+	Added defendguin-0.0.10 [wiz 2003-06-03]
+	Added dosbox-0.58 [wiz 2003-06-03]
