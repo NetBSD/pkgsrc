@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2514 2004/11/27 07:46:58 reed Exp $
+$NetBSD: TODO,v 1.2515 2004/11/27 10:34:27 martti Exp $
 
 Suggested new packages
 ======================
@@ -1200,7 +1200,6 @@ Suggested package updates
 	o spruce-0.6.5
 	o sqlite-3.0.7
 	o sqlrelay-0.35
-	o squirrelmail-1.5.0
 	o sqwebmail-4.0.7
 	o srp_client-1.7.5 [jlam]
 	o st-1.5.1
