@@ -1,20 +1,44 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 11:11:02 agc Exp $
-
---- configure-orig	Fri Jun 19 22:14:25 1998
-+++ configure	Mon Aug  3 16:44:56 1998
-@@ -4599,11 +4599,11 @@
- #include "confdefs.h"
- 
- #include <sys/types.h>
--#define KERNEL
--#define _KERNEL
-+/* #define KERNEL
-+#define _KERNEL */
- #include <sys/socket.h>
--#undef KERNEL
--#undef _KERNEL
-+/* #undef KERNEL
-+#undef _KERNEL */
- #include <net/route.h>
- 
- int main() {
+*** configure.in-ORIG	Mon Mar 15 18:31:43 1999
+--- configure.in	Sun Apr  4 16:42:20 1999
+***************
+*** 821,831 ****
+  
+  AC_CHECK_STRUCT_FOR([
+  #include <sys/types.h>
+- #define KERNEL
+- #define _KERNEL
+  #include <sys/socket.h>
+- #undef KERNEL
+- #undef _KERNEL
+  #include <net/route.h>
+  ], rtentry, rt_dst, no)
+  
+--- 821,827 ----
+***************
+*** 836,846 ****
+  dnl 4.4 compat
+  AC_TRY_COMPILE([
+  #include <sys/types.h>
+- #define KERNEL
+- #define _KERNEL
+  #include <sys/socket.h>
+- #undef KERNEL
+- #undef _KERNEL
+  #include <net/route.h>
+  ],[
+  
+--- 832,838 ----
+***************
+*** 857,867 ****
+  if test "x$ac_cv_RTENTRY_TYPE" = "x"; then
+  AC_TRY_COMPILE([
+  #include <sys/types.h>
+- #define KERNEL
+- #define _KERNEL
+  #include <sys/socket.h>
+- #undef KERNEL
+- #undef _KERNEL
+  #include <net/route.h>
+  ],[
+  struct rtentry rt; 
+--- 849,855 ----
