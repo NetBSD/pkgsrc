@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.185 2004/02/04 14:52:57 markd Exp $
+# $NetBSD: Makefile,v 1.186 2004/02/07 10:37:51 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
 
+SUBDIR+=	9menu
 SUBDIR+=	XFree86-docs
 SUBDIR+=	XFree86-man
-SUBDIR+=	9menu
 SUBDIR+=	ascii
 SUBDIR+=	asr-manpages
 SUBDIR+=	astrolog
