@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/10/20 11:10:29 cube Exp $
+# $NetBSD: options.mk,v 1.2 2004/10/29 07:07:44 xtraeme Exp $
 
 # Legacy options
 .if !empty(PURE_FTPD_USE_MYSQL:M[Yy][Ee][Ss])
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--with-ldap
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
-.  include "../../databases/mysql-client/buildlink3.mk"
+.  include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mysql
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.mysql-client}/include/mysql
 .endif

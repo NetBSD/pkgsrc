@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2004/08/07 14:29:20 xtraeme Exp $
+# $NetBSD: options.mk,v 1.2 2004/10/29 07:07:44 xtraeme Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.jabberd2
-PKG_SUPPORTED_OPTIONS=	db mysql mysql4 pgsql ldap pam
+PKG_SUPPORTED_OPTIONS=	db mysql pgsql ldap pam
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdb)
@@ -15,13 +15,7 @@ CONFIGURE_ARGS+=        --enable-db
 .if !empty(PKG_OPTIONS:Mmysql)
 CONFIGURE_ARGS+=        --enable-mysql
 CPPFLAGS+=              -I${BUILDLINK_PREFIX.mysql-client}/include/mysql
-.  include "../../databases/mysql-client/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mmysql4)
-CONFIGURE_ARGS+=	--enable-mysql
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.mysql-client}/include/mysql
-.  include "../../databases/mysql4-client/buildlink3.mk"
+.  include "../../mk/mysql.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)
