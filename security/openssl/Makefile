@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2002/12/07 02:39:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.64 2003/01/23 02:23:21 grant Exp $
 
 DISTNAME=		openssl-0.9.6g
 SVR4_PKGNAME=		ossl
@@ -84,7 +84,7 @@ PLIST_RSAREF=		${PKGDIR}/PLIST.rsaref
 
 .if (${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)
 CONFIGURE_SCRIPT=	Configure
-CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-${CC}
+CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-${CC:C|.*/||}
 .endif
 
 .include  "../../mk/bsd.pkg.install.mk"
