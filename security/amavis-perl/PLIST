@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:30 zuntum Exp $
-sbin/amavis
+@comment $NetBSD: PLIST,v 1.2 2003/04/17 16:17:53 manu Exp $
 sbin/amavisd
+man/man1/amavis-milter.1
+man/man5/amavisd.conf.5
+man/man8/amavisd.8
 share/doc/amavis/FAQ
 share/doc/amavis/LICENSE.sendmail
 share/doc/amavis/NEWS
