@@ -1,72 +1,61 @@
-$NetBSD: patch-aa,v 1.9 2004/07/14 20:07:16 jlam Exp $
+$NetBSD: patch-aa,v 1.10 2005/02/18 22:12:46 jlam Exp $
 
---- Makefile.in.orig	Fri Jun 11 21:38:19 2004
-+++ Makefile.in	Tue Jul 13 20:33:19 2004
-@@ -140,12 +140,12 @@
- 
+--- Makefile.in.orig	2005-01-04 19:57:19.000000000 -0500
++++ Makefile.in
+@@ -231,10 +231,11 @@ DIST_SUBDIRS = numlib md5 sha1 bdbobj gd
  
 -sbin_SCRIPTS = sharedindexinstall sharedindexsplit
 +sbin_SCRIPTS = 
  CLEANFILES = $(databin_SCRIPTS) $(man_MANS) $(sysconf_DATA) $(sbin_SCRIPTS)
  databindir = $(datadir)
--databin_SCRIPTS = mkimapdcert mkpop3dcert vchkpw2userdb makeuserdb pw2userdb
-+databin_SCRIPTS = mkimapdcert mkpop3dcert
- 
+-databin_SCRIPTS = mkimapdcert mkpop3dcert
 -binPROGRAMS = imapd pop3d maildirmake maildiracl deliverquota maildirkw
--sbinPROGRAMS = authenumerate imaplogin pop3login userdbpw courierlogger
+-sbinPROGRAMS = imaplogin pop3login
 -libexecPROGRAMS = makedatprog couriertcpd
-+binPROGRAMS = imapd pop3d
-+sbinPROGRAMS = imaplogin pop3login
-+libexecPROGRAMS = couriertcpd
+-man_MANS = couriertcpd.1 deliverquota.8 maildirmake.1 maildiracl.1 imapd.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1
++databin_SCRIPTS = mkimapdcert mkpop3dcert \
++	imapd.rc imapd-ssl.rc pop3d.rc pop3d-ssl.rc
++binPROGRAMS = imapd
++sbinPROGRAMS = couriertcpd
++libexecPROGRAMS = imaplogin courierpop3login courierpop3d
++man_MANS = couriertcpd.1 courierimapd.8 courierpop3d.8 mkimapdcert.8 mkpop3dcert.8
  
- bin_PROGRAMS = @binPROGRAMS_exec@
-@@ -155,5 +155,5 @@
- EXTRA_PROGRAMS = 
- 
--man_MANS = makeuserdb.8 userdb.8 userdbpw.8 couriertcpd.1 courierlogger.1 deliverquota.8 maildirmake.1 maildiracl.1 imapd.8 mkimapdcert.8 mkpop3dcert.8 maildirkw.1
-+man_MANS = couriertcpd.1 courier-imapd.8 mkimapdcert.8 mkpop3dcert.8
- 
- 
-@@ -169,5 +169,5 @@
- 
+@@ -250,5 +251,5 @@ sysconftool
  sysconf_DATA = imapd.dist imapd-ssl.dist pop3d.dist pop3d-ssl.dist \
 -	imapd.cnf pop3d.cnf quotawarnmsg.example
 +	imapd.cnf pop3d.cnf
  
- libexec_SCRIPTS = imapd.rc imapd-ssl.rc pop3d.rc pop3d-ssl.rc
-@@ -980,6 +980,6 @@
- 	cp $(srcdir)/maildir/maildirkw.1 .
+-libexec_SCRIPTS = imapd.rc imapd-ssl.rc pop3d.rc pop3d-ssl.rc
++libexec_SCRIPTS = 
+ HTML2TXT = `which lynx 2>/dev/null && echo "lynx -dump -nolist" && exit; echo "links -dump"`
+@@ -996,7 +997,7 @@ sharedindexsplit: maildir/sharedindexspl
+ 
+-pop3login$(EXEEXT): imap/pop3login$(EXEEXT)
+-	cp imap/pop3login$(EXEEXT) .
++courierpop3login$(EXEEXT): imap/pop3login$(EXEEXT)
++	cp imap/pop3login$(EXEEXT) ./$@
+ 
+-pop3d$(EXEEXT): imap/pop3d$(EXEEXT)
+-	cp imap/pop3d$(EXEEXT) .
++courierpop3d$(EXEEXT): imap/pop3d$(EXEEXT)
++	cp imap/pop3d$(EXEEXT) ./$@
+ 
+@@ -1044,4 +1045,7 @@ maildirkw.1: maildir/maildirkw.1
  
 -imapd.8: imap/imapd.8
 -	cp imap/imapd.8 .
-+courier-imapd.8: imap/imapd.8
++courierimapd.8: imap/imapd.8
 +	cp imap/imapd.8 ./$@
++
++courierpop3d.8: imap/courierpop3d.8
++	cp imap/courierpop3d.8 .
  
- mkimapdcert: imap/mkimapdcert
-@@ -1007,20 +1007,9 @@
- 
- install-exec-local:
--	$(mkinstalldirs) $(DESTDIR)$(libexecdir)/authlib
--	for f in `cat authlib/installlist` dummy ; do \
--		test "$$f" = "dummy" && continue ; \
--		$(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) authlib/$$f \
--			$(DESTDIR)$(libexecdir)/authlib/$$f ; done
--	for f in `cat authlib/installlist.sh` dummy ; do \
--		test "$$f" = "dummy" && continue ; \
--		$(INSTALL_SCRIPT) authlib/$$f \
--			$(DESTDIR)$(libexecdir)/authlib/$$f ; done
--	$(mkinstalldirs) $(DESTDIR)$(databindir)
--	$(INSTALL_SCRIPT) userdb/userdb.pl $(DESTDIR)$(databindir)/userdb
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
- 	test ! -x tcpd/couriertls || $(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) \
- 		tcpd/couriertls $(DESTDIR)$(bindir)/couriertls
+@@ -1074,3 +1078,3 @@ install-exec-local:
  	$(mkinstalldirs) $(DESTDIR)$(sbindir)
--	for f in mkimapdcert mkpop3dcert vchkpw2userdb makeuserdb pw2userdb userdb ; \
-+	for f in mkimapdcert mkpop3dcert ; \
+-	for f in mkimapdcert mkpop3dcert ; \
++	for f in imapd-ssl imapd mkimapdcert mkpop3dcert pop3d pop3d-ssl ; \
  		do rm -f $(DESTDIR)$(sbindir)/$$f ; \
- 		$(LN_S) $(databindir)/$$f $(DESTDIR)$(sbindir)/$$f ; done
-@@ -1028,34 +1017,8 @@
- 
+@@ -1080,17 +1084,4 @@ install-exec-local:
  install-exec-hook:
 -	chmod 444 $(DESTDIR)$(sysconfdir)/quotawarnmsg.example
 -	mkdir -p $(DESTDIR)$(sysconfdir)/shared
@@ -74,29 +63,13 @@ $NetBSD: patch-aa,v 1.9 2004/07/14 20:07:16 jlam Exp $
 -	mkdir -p $(DESTDIR)$(sysconfdir)/shared.tmp
 -	chmod 755 $(DESTDIR)$(sysconfdir)/shared.tmp
  
- # If authlib built authpam, install the PAM configuration file
- 
  install-data-local: install-man
--	for f in `cat authlib/modulelist ; . authlib/authdaemonrc ; echo $$authmodulelist ` ; do \
--		test "$$f" = "authpam" || continue ; \
--		test -d $(DESTDIR)/etc/pam.d || continue ; \
--		test -w $(DESTDIR)/etc/pam.d || continue ; \
--		test -f $(DESTDIR)/etc/pam.d/imap || \
--			$(INSTALL_DATA) $(srcdir)/imap/imapd.pam \
--			$(DESTDIR)/etc/pam.d/imap || exit 1 ;\
--		test -f $(DESTDIR)/etc/pam.d/pop3 || \
--			$(INSTALL_DATA) $(srcdir)/imap/pop3d.pam \
--			$(DESTDIR)/etc/pam.d/pop3 || exit 1 ;\
--	done
--	rm -f $(DESTDIR)$(man8dir)/pw2userdb.8
--	rm -f $(DESTDIR)$(man8dir)/vchkpw2userdb.8
--	$(LN_S) makeuserdb.8 $(DESTDIR)$(man8dir)/pw2userdb.8
--	$(LN_S) makeuserdb.8 $(DESTDIR)$(man8dir)/vchkpw2userdb.8
--	. authlib/authdaemonrc ; test "$$authdaemonvar" = "" && exit 0; \
--		$(mkinstalldirs) $(DESTDIR)$$authdaemonvar ; \
--		chmod 700 $(DESTDIR)$$authdaemonvar
--	for f in $(man_MANS); do chmod a+r $(DESTDIR)$(mandir)/*/$$f; done
--	@cat authlib/authdaemon.msg
--	@echo "Do not forget to run make install-configure"
- 
- uninstall-local:
+-	test -d $(DESTDIR)/etc/pam.d || exit 0 ; \
+-	test -w $(DESTDIR)/etc/pam.d || exit 0 ; \
+-	test -f $(DESTDIR)/etc/pam.d/imap || \
+-		$(INSTALL_DATA) $(srcdir)/imap/imapd.pam \
+-		$(DESTDIR)/etc/pam.d/imap || exit 1 ;\
+-	test -f $(DESTDIR)/etc/pam.d/pop3 || \
+-		$(INSTALL_DATA) $(srcdir)/imap/pop3d.pam \
+-		$(DESTDIR)/etc/pam.d/pop3 || exit 1
+ 	for f in $(man_MANS); do chmod a+r $(DESTDIR)$(mandir)/*/$$f; done

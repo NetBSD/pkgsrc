@@ -1,35 +1,26 @@
-$NetBSD: patch-af,v 1.5 2004/07/14 20:07:17 jlam Exp $
+$NetBSD: patch-af,v 1.6 2005/02/18 22:12:46 jlam Exp $
 
---- imapd.rc.in.orig	Tue Jul 13 03:39:46 2004
-+++ imapd.rc.in	Tue Jul 13 03:40:04 2004
-@@ -34,18 +34,13 @@
- 		LIBAUTHMODULES="$LIBAUTHMODULES @libexecdir@/authlib/$f"
- 	done
+--- imapd.rc.in.orig	2004-11-24 23:57:04.000000000 -0500
++++ imapd.rc.in
+@@ -9,6 +9,7 @@ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ bindir=@bindir@
+ libexecdir=@libexecdir@
++sbindir=@sbindir@
  
--	if test -x ${libexecdir}/authlib/authdaemond
--	then
--		@SETENV@ - DEBUG_LOGIN="$DEBUG_LOGIN" ${libexecdir}/authlib/authdaemond start
--	fi
--
- 	if test "$TLS_CACHEFILE" != ""
- 	then
- 		rm -f $TLS_CACHEFILE
- 	fi
+ if test ! -f @sysconfdir@/imapd
+ then
+@@ -35,11 +36,12 @@ start)
  
+ 	umask $IMAP_UMASK
  	@ULIMIT@ $IMAP_ULIMITD
 -	@SETENV@ - @SHELL@ -c " set -a ;
 +	@SETENV@ -i @SHELL@ -c " set -a ;
  			prefix=@prefix@ ;
  			exec_prefix=@exec_prefix@ ;
  			bindir=@bindir@ ;
-@@ -64,10 +59,6 @@
- 	;;
- stop)
- 	@libexecdir@/couriertcpd -pid=$PIDFILE -stop
--	if test -x ${libexecdir}/authlib/authdaemond
--	then
--		${libexecdir}/authlib/authdaemond stop
--	fi
- 	;;
- esac
- exit 0
+ 			libexecdir=@libexecdir@ ;
++			sbindir=@sbindir@ ;
+ 				. @sysconfdir@/imapd ; \
+ 				. @sysconfdir@/imapd-ssl ; \
+ 		IMAP_STARTTLS=$IMAPDSTARTTLS ; export IMAP_STARTTLS ; \

@@ -1,21 +1,20 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierpops.sh,v 1.10 2004/07/15 08:29:05 jlam Exp $
+# $NetBSD: courierpops.sh,v 1.11 2005/02/18 22:12:46 jlam Exp $
 #
 # Courier POP3/SSL services daemon
 #
 # PROVIDE: courierpops
 # REQUIRE: authdaemond
+# KEYWORD: shutdown
 
-if [ -f /etc/rc.subr ]; then
-	. /etc/rc.subr
-fi
+. /etc/rc.subr
 
 name="courierpops"
 rcvar=${name}
-command="@PREFIX@/libexec/courier/couriertcpd"
-ctl_command="@PREFIX@/libexec/courier/pop3d-ssl.rc"
-pidfile="/var/run/pop3d-ssl.pid"
+command="@PREFIX@/sbin/couriertcpd"
+ctl_command="@PREFIX@/sbin/pop3d-ssl"
+pidfile="@VARBASE@/run/pop3d-ssl.pid"
 required_files="@PKG_SYSCONFDIR@/pop3d @PKG_SYSCONFDIR@/pop3d-ssl"
 required_files="${required_files} @SSLCERTS@/pop3d.pem"
 required_vars="authdaemond"
@@ -59,10 +58,5 @@ courier_doit()
 	${ctl_command} ${action}
 }
 
-if [ -f /etc/rc.subr ]; then
-	load_rc_config $name
-	run_rc_command "$1"
-else
-	@ECHO@ -n " ${name}"
-	exec ${ctl_command} start
-fi
+load_rc_config $name
+run_rc_command "$1"
