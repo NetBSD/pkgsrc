@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/03/08 16:52:13 minskim Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 17:36:09 wiz Exp $
 
 SHA1 (BLT2.4z.tar.gz) = 29f719aa762f1762dbf4a3b0e60dc5356118ba2f
+RMD160 (BLT2.4z.tar.gz) = d54d9fdb6c61391c191afab4701716d18a3d928b
 Size (BLT2.4z.tar.gz) = 2200973 bytes
 SHA1 (patch-aa) = 97b967b8b0cda8e30bd24b8d89fd0b5679a9edd4
 SHA1 (patch-ab) = 37320a45666c5cb3a0da08cd7f74e9dcee5a66a0

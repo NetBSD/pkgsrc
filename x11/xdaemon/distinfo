@@ -1,20 +1,29 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:51 skrll Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 17:36:22 wiz Exp $
 
 SHA1 (xdaemon/xdaemon_bw.xbm) = 0bdf4746cd3e2dc3ce863546568e628a2cb8ce88
+RMD160 (xdaemon/xdaemon_bw.xbm) = 1c691d240ba10cedf799a801ed2286ad44896146
 Size (xdaemon/xdaemon_bw.xbm) = 37312 bytes
 SHA1 (xdaemon/xdaemon2_bw.xbm) = e5c5752db1883becf449707a1c5206f31435a0c4
+RMD160 (xdaemon/xdaemon2_bw.xbm) = e6ea944d3ef7edf8ca5059febd79801f81ab50ac
 Size (xdaemon/xdaemon2_bw.xbm) = 9721 bytes
 SHA1 (xdaemon/xdaemon_color.xpm) = f2f97bf60b75e44fca314cc2308c092ede92db2b
+RMD160 (xdaemon/xdaemon_color.xpm) = 7d1b008af24cafc5557a9e492b96704aacc1b268
 Size (xdaemon/xdaemon_color.xpm) = 58385 bytes
 SHA1 (xdaemon/xdaemon2_color.xpm) = b544424a5c54c9635e66344dcc8423ad7b17d1e4
+RMD160 (xdaemon/xdaemon2_color.xpm) = 40895e585ed93951ca5498396641f45bbef3c0ea
 Size (xdaemon/xdaemon2_color.xpm) = 33001 bytes
 SHA1 (xdaemon/xdaemon_icon.xbm) = 2490529f3d150a41a1f87e0d4a279d3ead56cdae
+RMD160 (xdaemon/xdaemon_icon.xbm) = 1205decbc6dc88102fc93fb7292f31627d3d9073
 Size (xdaemon/xdaemon_icon.xbm) = 2070 bytes
 SHA1 (xdaemon/xdaemon2_icon.xbm) = aa2fa9b6b1eedd18c413999c45ea3a7710b8c81b
+RMD160 (xdaemon/xdaemon2_icon.xbm) = 10d7dc5e96a0410f139f0f7afb3d0250c677a568
 Size (xdaemon/xdaemon2_icon.xbm) = 2070 bytes
 SHA1 (xdaemon/xdaemon_mask.xbm) = f466b978570ba77587afe11acd0e5f935519af1e
+RMD160 (xdaemon/xdaemon_mask.xbm) = 5990b2a8b460705e9a567cba15340c701a4fd835
 Size (xdaemon/xdaemon_mask.xbm) = 37318 bytes
 SHA1 (xdaemon/xdaemon2_mask.xbm) = 25d8460891089a03840b118cae88d89fb8c8efce
+RMD160 (xdaemon/xdaemon2_mask.xbm) = f2d9e4286ddd4409c07322c013f5c3e997b60756
 Size (xdaemon/xdaemon2_mask.xbm) = 9727 bytes
 SHA1 (xdaemon/Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
+RMD160 (xdaemon/Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
 Size (xdaemon/Daemon.README) = 2191 bytes
