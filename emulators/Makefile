@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2001/04/25 21:23:10 tron Exp $
+# $NetBSD: Makefile,v 1.55 2001/04/27 14:44:50 agc Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -12,6 +12,7 @@ SUBDIR+=	darcnes
 SUBDIR+=	doscmd
 SUBDIR+=	fmsx
 SUBDIR+=	freebsd_lib
+SUBDIR+=	gpsim
 SUBDIR+=	hercules
 SUBDIR+=	hercules-images
 SUBDIR+=	ia64sim
