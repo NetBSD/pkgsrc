@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 23:11:59 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/02/28 04:53:32 ben Exp $
 
-SHA1 (ivan-0.430.tar.gz) = a64d0dbd8711c89feff62796183df856febdc6e9
-RMD160 (ivan-0.430.tar.gz) = a054b027acf910075bdde4ca8030c25358c9f4db
-Size (ivan-0.430.tar.gz) = 638755 bytes
-SHA1 (patch-aa) = 74b1df465bc9143209e9b1fcede6c120b8d07368
-SHA1 (patch-ab) = 740c78263c370045f479c5d5c35e100991130806
+SHA1 (ivan-0.50.tar.gz) = e4c5ae2b9bdfd59a0ed3c87a504043df12b0f1a4
+RMD160 (ivan-0.50.tar.gz) = 7e84340cd8fdfbdaaf7fde730fc0a76b137e2e91
+Size (ivan-0.50.tar.gz) = 803651 bytes
+SHA1 (patch-aa) = a52f3945a79e12cc72d30d9609c4bf390809a5bd
+SHA1 (patch-ab) = 63f215564ee0922d1daa5240b5a3b3b4afc5db24

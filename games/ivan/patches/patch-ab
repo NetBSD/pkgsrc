@@ -1,22 +1,22 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/06/26 03:54:38 ben Exp $
+$NetBSD: patch-ab,v 1.2 2005/02/28 04:53:32 ben Exp $
 
---- FeLib/Source/feio.cpp.orig	Sun Aug  3 14:56:18 2003
+--- FeLib/Source/feio.cpp.orig	2004-10-26 12:35:47.000000000 -0700
 +++ FeLib/Source/feio.cpp
-@@ -416,7 +416,7 @@ festring iosystem::ContinueMenu(ushort T
+@@ -631,7 +631,7 @@ festring iosystem::ContinueMenu(col16 To
    int Check = 0;
    festring Buffer;
    felist List(CONST_S("Choose a file and be sorry:"), TopicColor);
 -  hFile = _findfirst(festring(DirectoryName + "*.sav").CStr(), &Found);
 +  hFile = _findfirst(festring(DirectoryName + "/*.sav").CStr(), &Found);
  
+   /* No file found */
    if(hFile == -1L)
-     {
-@@ -483,7 +483,7 @@ festring iosystem::ContinueMenu(ushort T
-   int Check = 0;
-   festring Buffer;
-   felist List(CONST_S("Choose a file and be sorry:"), TopicColor);
--  Check = findfirst(festring(DirectoryName + "*.sav").CStr(), &Found, FA_HIDDEN | FA_ARCH);
-+  Check = findfirst(festring(DirectoryName + "/*.sav").CStr(), &Found, FA_HIDDEN | FA_ARCH);
+@@ -709,7 +709,7 @@ festring iosystem::ContinueMenu(col16 To
+   /* get all filenames ending with .sav. Accepts all files even if they
+      FA_HIDDEN or FA_ARCH flags are set (ie. they are hidden or archives */
+ 
+-  Check = findfirst(festring(DirectoryName + "*.sav").CStr(),
++  Check = findfirst(festring(DirectoryName + "/*.sav").CStr(),
+ 		    &Found, FA_HIDDEN | FA_ARCH);
  
    if(Check)
-     {
