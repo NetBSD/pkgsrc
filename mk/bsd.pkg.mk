@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.322 1999/08/22 21:42:22 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.323 1999/08/24 19:03:08 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1274,7 +1274,7 @@ root-install:
 		${ECHO_MSG} "===>   Decompressing manual pages for ${PKGNAME}";	\
 		for manpage in $$newmanpages; do			\
 			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
-			if [ -L ${PREFIX}/$$manpage.gz ]; then		\
+			if [ -h ${PREFIX}/$$manpage.gz ]; then		\
 				set - `${FILE} ${PREFIX}/$$manpage.gz | ${SED} -e 's|\.gz$$||'`; \
 				shift `expr $$# - 1`;			\
 				${RM} -f ${PREFIX}/$$manpage;		\
@@ -1293,7 +1293,7 @@ root-install:
 		${ECHO_MSG} "===>   Compressing manual pages for ${PKGNAME}"; \
 		for manpage in $$newmanpages; do			\
 			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
-			if [ -L ${PREFIX}/$$manpage ]; then		\
+			if [ -h ${PREFIX}/$$manpage ]; then		\
 				set - `${FILE} ${PREFIX}/$$manpage`;	\
 				shift `expr $$# - 1`;			\
 				${RM} -f ${PREFIX}/$$manpage.gz; 	\
