@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/10/29 13:56:50 joda Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/08/05 10:04:49 seb Exp $
 bin/afslog
 bin/compile_et
 bin/ftp
@@ -65,9 +65,7 @@ include/kerberosIV/xdbm.h
 include/kerberosIV/ss/ss.h
 @dirrm include/kerberosIV/ss
 @dirrm include/kerberosIV
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/kth-krb.info
 info/kth-krb.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/kth-krb.info
 lib/libacl.a
 lib/libacl.la
 lib/libacl.so
