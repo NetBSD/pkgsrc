@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/16 18:40:03 tv Exp $
+jre/lib/i386/libjavacomp.so
+jre/lib/i386/libjavacomp_g.so
+jre/README.javacomp
+jre/LICENSE.javacomp
