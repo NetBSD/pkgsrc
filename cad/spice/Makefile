@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/10/01 17:05:14 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.11 1999/12/28 04:29:52 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/08 09:21:37 tg Exp
 #
 
@@ -37,13 +37,13 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} ; util/build NetBSD install
-	chmod a+rx ${PREFIX}/bin/spice3 ${PREFIX}/bin/nutmeg \
+	${CHMOD} a+rx ${PREFIX}/bin/spice3 ${PREFIX}/bin/nutmeg \
 	  ${PREFIX}/bin/sconvert ${PREFIX}/bin/help	\
 	  ${PREFIX}/bin/proc2mod ${PREFIX}/bin/multidec
 	strip ${PREFIX}/bin/spice3 ${PREFIX}/bin/nutmeg	\
 	  ${PREFIX}/bin/sconvert ${PREFIX}/bin/help \
 	  ${PREFIX}/bin/proc2mod ${PREFIX}/bin/multidec
-	chmod -R a+rX ${PREFIX}/share/spice3
+	${CHMOD} -R a+rX ${PREFIX}/share/spice3
 	${INSTALL_MAN} ${WRKSRC}/man/man5/mfbcap.5 ${PREFIX}/man/man5/mfbcap.5
 	${INSTALL_MAN} ${WRKSRC}/man/man1/sconvert.1 ${PREFIX}/man/man1/sconvert.1
 	${INSTALL_MAN} ${WRKSRC}/man/man1/nutmeg.1 ${PREFIX}/man/man1/nutmeg.1
