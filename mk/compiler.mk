@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.31 2004/05/09 00:04:14 grant Exp $
+# $NetBSD: compiler.mk,v 1.32 2004/05/12 21:49:39 reed Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -82,7 +82,7 @@ USE_LANGUAGES?=	c c++
 USE_LANGUAGES?=	c
 
 # Support some deprecated variables for a while.  They'll be removed
-# after the pkgsrc-2004Q1 branch is cut.
+# after the pkgsrc-2004Q2 branch is cut.
 #
 .if defined(USE_GCC2)
 GCC_REQD+=		2.8.0
