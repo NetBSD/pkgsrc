@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/15 10:45:15 jmmv Exp $
-lib/gtk-2.0/2.4.0/engines/libbluecurve.a
+@comment $NetBSD: PLIST,v 1.2 2004/06/05 10:28:41 jmmv Exp $
 lib/gtk-2.0/2.4.0/engines/libbluecurve.la
 lib/gtk-2.0/2.4.0/engines/libbluecurve.so
 share/themes/Bluecurve/gtk-2.0/gtkrc
