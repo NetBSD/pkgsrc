@@ -1,17 +1,16 @@
-$NetBSD: patch-al,v 1.2 1999/11/03 04:18:47 jlam Exp $
-
---- include/Motif-2.0/Xm/Makefile.in.orig	Mon Sep  6 17:13:39 1999
-+++ include/Motif-2.0/Xm/Makefile.in	Tue Nov  2 22:16:17 1999
-@@ -121,7 +121,7 @@
- # Lets put the headers in a sub directory to avoid
+$NetBSD: patch-al,v 1.3 1999/11/15 21:30:28 drochner Exp $
+--- include/Motif-2.0/Xm/Makefile.in.orig	Fri Nov  5 21:14:46 1999
++++ include/Motif-2.0/Xm/Makefile.in	Mon Nov 15 20:25:35 1999
+@@ -126,7 +126,7 @@
  # poluting /usr/local with more directories for default installs.
  #
--@Version_2_0_TRUE@xmdir = $(prefix)/LessTif/Motif2.0/include/Xm
-+@Version_2_0_TRUE@xmdir = $(prefix)/include/Xm
+ @Version_2_0_TRUE@xmdir = \
+-@Version_2_0_TRUE@$(prefix)/LessTif/Motif2.0/include/Xm
++@Version_2_0_TRUE@$(prefix)/include/Xm
  
- @Version_2_0_TRUE@HEADERS1_2 = 	ArrowB.h ArrowBG.h AtomMgr.h 	BaseClassP.h BulletinB.h BulletinBP.h CacheP.h CascadeB.h 	CascadeBG.h CascadeBGP.h CascadeBP.h Command.h CommandP.h 	CutPaste.h CutPasteP.h DesktopP.h DialogS.h DialogSEP.h 	DialogSP.h Display.h DisplayP.h DragC.h DragCP.h 	DragDrop.h DragIcon.h DragIconP.h DragOverS.h DragOverSP.h 	DrawingA.h DrawnB.h DrawnBP.h 	DropSMgr.h DropSMgrP.h DropTrans.h DropTransP.h ExtObjectP.h 	FileSB.h FileSBP.h Form.h FormP.h Frame.h FrameP.h 	Label.h LabelG.h LabelGP.h LabelP.h 	List.h ListP.h MainW.h MainWP.h 	MenuShell.h MenuUtilP.h MessageB.h MessageBP.h 	MwmUtil.h PanedW.h Protocols.h 	ProtocolsP.h PushB.h PushBG.h PushBGP.h PushBP.h 	RCUtilsP.h RepType.h RowColumn.h RowColumnP.h SashP.h Scale.h 	Screen.h ScreenP.h ScrollBar.h ScrollBarP.h 	ScrolledW.h SelectioB.h SelectioBP.h SeparatoG.h 	SeparatoGP.h Separator.h SeparatorP.h ShellEP.h TearOffBP.h 	TearOffP.h Text.h TextF.h TextFP.h TextFSelP.h TextInP.h 	TextOutP.h TextP.h TextSelP.h TextStrSoP.h ToggleB.h 	ToggleBG.h VaSimpleP.h 	VendorS.h VendorSEP.h VendorSP.h VirtKeys.h VirtKeysP.h 	WorldP.h XmosP.h
- 
-@@ -250,7 +250,6 @@
+ @Version_2_0_TRUE@HEADERS1_2 = \
+ @Version_2_0_TRUE@\
+@@ -296,7 +296,6 @@
  
  install-data-am: install-xmDATA install-xmHEADERS
  	@$(NORMAL_INSTALL)

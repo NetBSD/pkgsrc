@@ -1,17 +1,25 @@
-$NetBSD: patch-ap,v 1.1 1999/11/03 04:18:47 jlam Exp $
-
---- lib/Xm-2.0/Makefile.in.orig	Mon Sep  6 17:13:33 1999
-+++ lib/Xm-2.0/Makefile.in	Tue Nov  2 22:16:17 1999
-@@ -145,7 +145,7 @@
- # Lets put the headers in a sub directory to avoid
+$NetBSD: patch-ap,v 1.2 1999/11/15 21:30:28 drochner Exp $
+--- lib/Xm-2.0/Makefile.in.orig	Fri Nov  5 21:14:38 1999
++++ lib/Xm-2.0/Makefile.in	Mon Nov 15 20:33:34 1999
+@@ -185,7 +185,7 @@
  # poluting /usr/local with more directories for default installs.
  #
--@Version_2_0_TRUE@libdir = $(prefix)/LessTif/Motif2.0/lib
-+@Version_2_0_TRUE@libdir = $(prefix)/lib
+ @Version_2_0_TRUE@libdir = \
+-@Version_2_0_TRUE@$(prefix)/LessTif/Motif2.0/lib
++@Version_2_0_TRUE@$(prefix)/lib
  
- @Version_2_0_TRUE@lib_LTLIBRARIES = libXm.la
+ @Version_2_0_TRUE@lib_LTLIBRARIES = \
+ @Version_2_0_TRUE@libXm.la
+@@ -301,7 +301,7 @@
+ maintainer-clean-compile:
  
-@@ -341,7 +341,6 @@
+ .c.lo:
+-	$(LIBTOOL) --mode=compile $(COMPILE) -c -o $@ $<
++	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+ 
+ mostlyclean-libtool:
+ 	-rm -f *.lo
+@@ -588,7 +588,6 @@
  
  install-data-am:
  	@$(NORMAL_INSTALL)

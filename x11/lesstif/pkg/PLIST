@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.19 1999/11/03 04:18:48 jlam Exp $
+@comment $NetBSD: PLIST,v 1.20 1999/11/15 21:30:29 drochner Exp $
+LessTif/FAQ
 LessTif/Motif1.2/include/Mrm/MrmAppl.h
 LessTif/Motif1.2/include/Mrm/MrmDecls.h
 LessTif/Motif1.2/include/Mrm/MrmPrivate.h
@@ -374,10 +375,6 @@ man/man3/XmToggleButton.3
 man/man3/XmToggleButtonGadget.3
 man/man3/XmVendorShell.3
 man/man3/XmWorld.3
-man/man3/XtConfigureObject.3
-man/man3/XtDestroyWidget.3
-man/man3/XtManageChild.3
-man/man3/XtUnmanageChild.3
 man/man5/mwmrc.5
 share/doc/lesstif/AUTHORS
 share/doc/lesstif/Advocacy.html
@@ -389,7 +386,6 @@ share/doc/lesstif/COPYING.LIB.html
 share/doc/lesstif/CREDITS
 share/doc/lesstif/Clipboard.txt
 share/doc/lesstif/DragAndDrop.txt
-share/doc/lesstif/FAQ
 share/doc/lesstif/FAQ.html
 share/doc/lesstif/Form.txt
 share/doc/lesstif/GeoUtils.txt
@@ -410,7 +406,6 @@ share/doc/lesstif/XmStrings.txt
 share/doc/lesstif/apps.html
 share/doc/lesstif/bug-reporting.html
 share/doc/lesstif/bugs.html
-share/doc/lesstif/button.html
 share/doc/lesstif/cdrom.html
 share/doc/lesstif/core.html
 share/doc/lesstif/current.html

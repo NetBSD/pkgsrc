@@ -1,17 +1,16 @@
-$NetBSD: patch-ak,v 1.3 1999/11/03 04:18:47 jlam Exp $
-
---- include/Motif-2.0/Mrm/Makefile.in.orig	Mon Sep  6 17:13:39 1999
-+++ include/Motif-2.0/Mrm/Makefile.in	Tue Nov  2 22:16:17 1999
-@@ -121,7 +121,7 @@
- # Lets put the headers in a sub directory to avoid
+$NetBSD: patch-ak,v 1.4 1999/11/15 21:30:28 drochner Exp $
+--- include/Motif-2.0/Mrm/Makefile.in.orig	Mon Nov 15 21:15:49 1999
++++ include/Motif-2.0/Mrm/Makefile.in	Mon Nov 15 21:16:51 1999
+@@ -126,7 +126,7 @@
  # poluting /usr/local with more directories for default installs.
  #
--@Version_2_0_TRUE@mrmdir = $(prefix)/LessTif/Motif2.0/include/Mrm
-+@Version_2_0_TRUE@mrmdir = $(prefix)/include/Mrm
+ @Version_2_0_TRUE@mrmdir = \
+-@Version_2_0_TRUE@$(prefix)/LessTif/Motif2.0/include/Mrm
++@Version_2_0_TRUE@$(prefix)/include/Mrm
  
- @Version_2_0_TRUE@HEADERS1_2 = MrmAppl.h MrmDecls.h MrmPrivate.h MrmPublic.h
- 
-@@ -220,7 +220,6 @@
+ @Version_2_0_TRUE@HEADERS1_2 = \
+ @Version_2_0_TRUE@MrmAppl.h MrmDecls.h MrmPrivate.h MrmPublic.h
+@@ -230,7 +230,6 @@
  
  install-data-am: install-mrmHEADERS
  	@$(NORMAL_INSTALL)
