@@ -1,4 +1,4 @@
-Taken from Bryan Grayson's URL on xosview:
+Taken from Brian Grayson's URL on xosview:
 (http://lore.ece.utexas.edu/~bgrayson/xosview.html)
 
 xosview (or XOsview, or XOSView, take your pick!) is an application
@@ -7,3 +7,4 @@ as a graphical performance meter.
 
 Original author: 	Mike Romberg  (romberg@fsl.noaa.gov)
 Ported to NetBSD by:	Brian Grayson (bgrayson@ece.utexas.edu)
+Major FreeBSD work by:  Tom Pavel     (pavel@slac.stanford.edu)
