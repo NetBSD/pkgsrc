@@ -1,18 +1,17 @@
-$NetBSD: patch-ak,v 1.6 1999/11/24 17:38:50 hubertf Exp $
+$NetBSD: patch-ak,v 1.7 2000/04/27 13:14:52 tron Exp $
 
-diff -x *.orig -urN ./include/Motif-2.0/Mrm/Makefile.in /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/include/Motif-2.0/Mrm/Makefile.in
---- ./include/Motif-2.0/Mrm/Makefile.in	Fri Nov  5 21:14:45 1999
-+++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/include/Motif-2.0/Mrm/Makefile.in	Wed Nov 24 17:30:53 1999
-@@ -126,7 +126,7 @@
+--- include/Motif-2.0/Mrm/Makefile.in.orig	Sun Apr 16 02:38:57 2000
++++ include/Motif-2.0/Mrm/Makefile.in	Mon Apr 17 15:17:31 2000
+@@ -124,7 +124,7 @@
+ # Lets put the headers in a sub directory to avoid
  # poluting /usr/local with more directories for default installs.
  #
- @Version_2_0_TRUE@mrmdir = \
--@Version_2_0_TRUE@$(prefix)/LessTif/Motif2.0/include/Mrm
-+@Version_2_0_TRUE@$(prefix)/include/Mrm
+-@Version_2_0_TRUE@mrmdir = $(prefix)/LessTif/Motif2.0/include/Mrm
++@Version_2_0_TRUE@mrmdir = $(prefix)/include/Mrm
  
- @Version_2_0_TRUE@HEADERS1_2 = \
- @Version_2_0_TRUE@MrmAppl.h MrmDecls.h MrmPrivate.h MrmPublic.h
-@@ -230,7 +230,6 @@
+ @Version_2_0_TRUE@HEADERS1_2 = MrmAppl.h MrmDecls.h MrmPrivate.h MrmPublic.h
+ 
+@@ -223,7 +223,6 @@
  
  install-data-am: install-mrmHEADERS
  	@$(NORMAL_INSTALL)

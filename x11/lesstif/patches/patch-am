@@ -1,17 +1,7 @@
-$NetBSD: patch-am,v 1.5 1999/11/24 17:38:50 hubertf Exp $
+$NetBSD: patch-am,v 1.6 2000/04/27 13:14:53 tron Exp $
 
-diff -x *.orig -urN ./lib/Mrm/Makefile.in /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/lib/Mrm/Makefile.in
---- ./lib/Mrm/Makefile.in	Fri Nov  5 21:14:37 1999
-+++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/lib/Mrm/Makefile.in	Wed Nov 24 17:30:53 1999
-@@ -222,7 +222,7 @@
- maintainer-clean-compile:
- 
- .c.lo:
--	$(LIBTOOL) --mode=compile $(COMPILE) -c -o $@ $<
-+	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
- 
- mostlyclean-libtool:
- 	-rm -f *.lo
+--- lib/Mrm/Makefile.in.orig	Fri Nov  5 21:14:37 1999
++++ lib/Mrm/Makefile.in	Wed Nov 24 17:30:53 1999
 @@ -297,7 +297,6 @@
  
  install-data-am:

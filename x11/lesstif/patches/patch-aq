@@ -1,27 +1,17 @@
-$NetBSD: patch-aq,v 1.4 1999/11/24 17:38:51 hubertf Exp $
+$NetBSD: patch-aq,v 1.5 2000/04/27 13:14:55 tron Exp $
 
-diff -x *.orig -urN ./lib/Xm-2.0/Makefile.in /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/lib/Xm-2.0/Makefile.in
---- ./lib/Xm-2.0/Makefile.in	Fri Nov  5 21:14:38 1999
-+++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/lib/Xm-2.0/Makefile.in	Wed Nov 24 17:30:54 1999
-@@ -185,7 +185,7 @@
+--- lib/Xm-2.0/Makefile.in.orig	Sun Apr 16 02:38:50 2000
++++ lib/Xm-2.0/Makefile.in	Mon Apr 17 15:25:16 2000
+@@ -148,7 +148,7 @@
+ # Lets put the headers in a sub directory to avoid
  # poluting /usr/local with more directories for default installs.
  #
- @Version_2_0_TRUE@libdir = \
--@Version_2_0_TRUE@$(prefix)/LessTif/Motif2.0/lib
-+@Version_2_0_TRUE@$(prefix)/lib
+-@Version_2_0_TRUE@libdir = $(prefix)/LessTif/Motif2.0/lib
++@Version_2_0_TRUE@libdir = $(prefix)/lib
  
- @Version_2_0_TRUE@lib_LTLIBRARIES = \
- @Version_2_0_TRUE@libXm.la
-@@ -301,7 +301,7 @@
- maintainer-clean-compile:
+ @Version_2_0_TRUE@lib_LTLIBRARIES = libXm.la
  
- .c.lo:
--	$(LIBTOOL) --mode=compile $(COMPILE) -c -o $@ $<
-+	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
- 
- mostlyclean-libtool:
- 	-rm -f *.lo
-@@ -588,7 +588,6 @@
+@@ -344,7 +344,6 @@
  
  install-data-am:
  	@$(NORMAL_INSTALL)

@@ -1,18 +1,17 @@
-$NetBSD: patch-al,v 1.5 1999/11/24 17:38:50 hubertf Exp $
+$NetBSD: patch-al,v 1.6 2000/04/27 13:14:53 tron Exp $
 
-diff -x *.orig -urN ./include/Motif-2.0/Xm/Makefile.in /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/include/Motif-2.0/Xm/Makefile.in
---- ./include/Motif-2.0/Xm/Makefile.in	Fri Nov  5 21:14:46 1999
-+++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/include/Motif-2.0/Xm/Makefile.in	Wed Nov 24 17:30:53 1999
-@@ -126,7 +126,7 @@
+--- include/Motif-2.0/Xm/Makefile.in.orig	Sun Apr 16 02:38:58 2000
++++ include/Motif-2.0/Xm/Makefile.in	Mon Apr 17 15:19:42 2000
+@@ -124,7 +124,7 @@
+ # Lets put the headers in a sub directory to avoid
  # poluting /usr/local with more directories for default installs.
  #
- @Version_2_0_TRUE@xmdir = \
--@Version_2_0_TRUE@$(prefix)/LessTif/Motif2.0/include/Xm
-+@Version_2_0_TRUE@$(prefix)/include/Xm
+-@Version_2_0_TRUE@xmdir = $(prefix)/LessTif/Motif2.0/include/Xm
++@Version_2_0_TRUE@xmdir = $(prefix)/include/Xm
  
- @Version_2_0_TRUE@HEADERS1_2 = \
- @Version_2_0_TRUE@\
-@@ -296,7 +296,6 @@
+ @Version_2_0_TRUE@HEADERS1_2 = 	ArrowB.h ArrowBG.h AtomMgr.h 	BaseClassP.h BulletinB.h BulletinBP.h CacheP.h CascadeB.h 	CascadeBG.h CascadeBGP.h CascadeBP.h Command.h CommandP.h 	CutPaste.h CutPasteP.h DesktopP.h DialogS.h DialogSEP.h 	DialogSP.h Display.h DisplayP.h DragC.h DragCP.h 	DragDrop.h DragIcon.h DragIconP.h DragOverS.h DragOverSP.h 	DrawingA.h DrawnB.h DrawnBP.h 	DropSMgr.h DropSMgrP.h DropTrans.h DropTransP.h ExtObjectP.h 	FileSB.h Form.h FormP.h Frame.h FrameP.h 	Label.h LabelG.h LabelGP.h LabelP.h 	List.h ListP.h MainW.h MainWP.h 	MenuShell.h MenuUtilP.h MessageB.h MessageBP.h 	MwmUtil.h PanedW.h Protocols.h 	ProtocolsP.h PushB.h PushBG.h PushBGP.h PushBP.h 	RCUtilsP.h RepType.h RowColumn.h RowColumnP.h SashP.h Scale.h 	Screen.h ScreenP.h ScrollBar.h ScrollBarP.h 	ScrolledW.h SelectioB.h SelectioBP.h SeparatoG.h 	SeparatoGP.h Separator.h SeparatorP.h ShellEP.h TearOffBP.h 	TearOffP.h Text.h TextF.h TextFP.h TextFSelP.h TextInP.h 	TextOutP.h TextP.h TextSelP.h TextStrSoP.h ToggleB.h 	ToggleBG.h VaSimpleP.h 	VendorS.h VendorSEP.h VendorSP.h VirtKeys.h VirtKeysP.h 	WorldP.h XmosP.h
+ 
+@@ -253,7 +253,6 @@
  
  install-data-am: install-xmDATA install-xmHEADERS
  	@$(NORMAL_INSTALL)

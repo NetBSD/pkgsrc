@@ -1,9 +1,8 @@
-$NetBSD: patch-ac,v 1.6 1999/11/24 17:38:50 hubertf Exp $
+$NetBSD: patch-ac,v 1.7 2000/04/27 13:14:50 tron Exp $
 
-diff -x *.orig -urN ./configure /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/configure
---- ./configure	Fri Nov  5 21:15:08 1999
-+++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/configure	Wed Nov 24 17:30:51 1999
-@@ -1552,6 +1552,7 @@
+--- configure.orig	Sat Apr 15 16:40:00 2000
++++ configure	Thu Apr 27 13:17:47 2000
+@@ -1551,6 +1551,7 @@
  fi
  
  
@@ -11,7 +10,7 @@ diff -x *.orig -urN ./configure /usr/pkgsrc/x11/lesstif/work.i386.unpatched/less
  # Check for any special flags to pass to ltconfig.
  libtool_flags="--cache-file=$cache_file"
  test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
-@@ -1709,6 +1710,7 @@
+@@ -1708,6 +1709,7 @@
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
  exec 5>>./config.log
@@ -19,3 +18,45 @@ diff -x *.orig -urN ./configure /usr/pkgsrc/x11/lesstif/work.i386.unpatched/less
  
  
  if (aclocal --print-ac-dir) </dev/null >/dev/null 2>&1 && test -w `aclocal --print-ac-dir`; then
+@@ -2321,6 +2323,7 @@
+ echo "$ac_t""$debug_flag $conversions_flag $verbose_flag $production_flag" 1>&6
+ 
+ 
++if false; then
+ if ${CONFIG_SHELL-/bin/sh} ./libtool --features | grep "enable shared" > /dev/null 2>&1; then
+ 	lt_libtool_shared="yes"
+ fi
+@@ -2348,6 +2351,7 @@
+   LibtoolStatic_TRUE='#'
+   LibtoolStatic_FALSE=
+ fi
++fi
+ 
+ 
+ # Extract the first word of "ar", so it can be a program name with args.
+@@ -5595,10 +5599,12 @@
+     top_srcdir="$ac_dots$ac_given_srcdir" ;;
+   esac
+ 
++  if false; then
+   case "$ac_given_INSTALL" in
+   [/$]*) INSTALL="$ac_given_INSTALL" ;;
+   *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+   esac
++  fi
+ 
+   echo creating "$ac_file"
+   rm -f "$ac_file"
+@@ -5819,10 +5825,12 @@
+       *) # Relative path.
+         ac_sub_cache_file="$ac_dots$cache_file" ;;
+       esac
++  if false; then
+   case "$ac_given_INSTALL" in
+         [/$]*) INSTALL="$ac_given_INSTALL" ;;
+         *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+         esac
++  fi
+ 
+       echo "running ${CONFIG_SHELL-/bin/sh} $ac_sub_configure $ac_sub_configure_args --cache-file=$ac_sub_cache_file --srcdir=$ac_sub_srcdir"
+       # The eval makes quoting arguments work.

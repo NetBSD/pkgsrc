@@ -1,8 +1,16 @@
-$NetBSD: patch-ao,v 1.3 1999/11/24 17:38:51 hubertf Exp $
+$NetBSD: patch-ao,v 1.4 2000/04/27 13:14:54 tron Exp $
 
-diff -x *.orig -urN ./lib/Xlt/configure /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/lib/Xlt/configure
---- ./lib/Xlt/configure	Fri Nov  5 21:17:11 1999
-+++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/lib/Xlt/configure	Wed Nov 24 17:30:54 1999
+--- lib/Xlt/configure.orig	Sat Apr 15 16:39:57 2000
++++ lib/Xlt/configure	Thu Apr 27 13:27:55 2000
+@@ -1197,7 +1197,7 @@
+ 
+ 
+ ac_aux_dir=
+-for ac_dir in . $srcdir/.; do
++for ac_dir in $srcdir $srcdir/.. $srcdir/../..; do
+   if test -f $ac_dir/install-sh; then
+     ac_aux_dir=$ac_dir
+     ac_install_sh="$ac_aux_dir/install-sh -c"
 @@ -2316,6 +2316,7 @@
  
  
