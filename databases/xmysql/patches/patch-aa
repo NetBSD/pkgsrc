@@ -1,0 +1,53 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/05 17:21:39 bad Exp $
+
+--- Makefile.orig	Wed Nov 18 05:19:06 1998
++++ Makefile	Thu Aug  5 18:57:34 1999
+@@ -31,24 +31,24 @@
+ PROGRAM = 	xmysql
+ 
+ # PROGRAM install path
+-INSTALLPATH = /usr/local/xmysql-1.10
++INSTALLPATH = ${PREFIX}/bin
+ 
+ # pixmap location
+-XMYSQL_XPMPATH = /usr/local/xmysql-1.10
++XMYSQL_XPMPATH = ${PREFIX}/share/xmysql
+ 
+ # help path
+-XMYSQL_HELPPATH = /usr/local/xmysql-1.10
++XMYSQL_HELPPATH = ${PREFIX}/share/xmysql
+ 
+ # Compilation Details
+-CC = gcc
++CC = cc
+ STDCFLAGS = -g -c -O2 -Wall -DXMYSQL_XPMPATH=\"$(XMYSQL_XPMPATH)\" -DXMYSQL_HELPPATH=\"$(XMYSQL_HELPPATH)\"
+-STDLFLAGS = 
+-MYSQLINC = -I/usr/include/mysql
+-MYSQLLOAD = -L/usr/lib/mysql -lmysqlclient
+-XFORMLIBDIR = -L/usr/local/xforms
+-XFORMINCDIR = -I/usr/local/xforms
+-XINC = 
+-XLOAD = -L/usr/X11R6/lib  -lX11
++STDLFLAGS = ${LDFLAGS}
++MYSQLINC = -I${PREFIX}/include/mysql
++MYSQLLOAD = -Wl,-R${PREFIX}/lib/mysql -L${PREFIX}/lib/mysql -lmysqlclient
++XFORMLIBDIR =
++XFORMINCDIR = -I${X11BASE}/include/X11
++XINC = -I${X11BASE}/include
++XLOAD = -lX11
+ 
+ # objects needed for the program
+ OBJS =  Xmysql.o \
+@@ -69,8 +69,8 @@
+ 	rm -f ${PROGRAM} $(OBJS) 
+ 
+ install:
+-	install -d $(INSTALLPATH) $(XMYSQL_XPMPATH) $(XMYSQL_HELPPATH)
+-	install --mode=711 $(PROGRAM) $(INSTALLPATH)
+-	install --mode=744 mysql.xpm $(XMYSQL_XPMPATH)
+-	install --mode=744 sqlhelp.txt $(XMYSQL_HELPPATH) 
++	${BSD_INSTALL_DATA_DIR} -d $(XMYSQL_XPMPATH) $(XMYSQL_HELPPATH)
++	${BSD_INSTALL_PROGRAM} $(PROGRAM) $(INSTALLPATH)
++	${BSD_INSTALL_DATA} mysql.xpm $(XMYSQL_XPMPATH)
++	${BSD_INSTALL_DATA} sqlhelp.txt $(XMYSQL_HELPPATH) 
+ 
