@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2001/02/25 04:18:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/10/24 00:28:48 kei Exp $
 #
 
 DISTNAME=	teTeX-texmf-1.0.2
-PKGNAME=	teTeX-share-1.0.2
+PKGNAME=	teTeX-share-1.0.2nb1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
 
@@ -18,6 +18,8 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
 
+EXTRA_PATCH=	${FILESDIR}/latex.ltx.diff
+
 do-install:
 	@${ECHO} ""
 	@${ECHO} "Extracting ${DISTFILES} to ${PREFIX}/share/texmf"
@@ -30,5 +32,8 @@ do-install:
 		-C ${PREFIX}/share/texmf \
 		-X ${FILESDIR}/exclude \
 		-f ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES}
+	@cd ${PREFIX}/share/texmf/tex/latex/base && \
+	  ${PATCH} < ${EXTRA_PATCH} && \
+	  ${RM} latex.ltx.orig
 
 .include "../../mk/bsd.pkg.mk"
