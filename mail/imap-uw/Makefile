@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/01/02 21:05:50 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2001/01/13 18:39:44 jlam Exp $
 
 DISTNAME=       imap-2000a
 PKGNAME=        imap-uw-2000a
@@ -30,7 +30,7 @@ NO_CONFIGURE=	# defined
 
 USE_SSL=	# defined
 MAKE_ENV+=	SSLBASE="${SSLBASE}"
-MAKE_ENV+=	SSLCERTS="${SSL_CERT_DIR}"
+MAKE_ENV+=	SSLCERTS="${SSLCERTS}"
 ALL_TARGET+=	CC="${LIBTOOL} ${CC}"
 ALL_TARGET+=	EXTRACFLAGS="${CFLAGS}"
 ALL_TARGET+=	SPECIALAUTHENTICATORS="ssl"
@@ -68,17 +68,3 @@ do-install:
 	done
 
 .include "../../mk/bsd.pkg.mk"
-
-# The in-tree OpenSSL uses /etc/openssl/certs as the default location for
-# certificates, while the pkgsrc OpenSSL uses ${PREFIX}/certs.  Define
-# SSL_CERT_DIR appropriately using a shell expression, and make sure that
-# it's only executed once to optimize the build.
-#
-.if !defined(SSL_CERT_DIR)
-SSL_CERT_DIR!=		if ${TEST} -d /etc/openssl/certs; then	\
-				${ECHO} /etc/openssl/certs;	\
-			else					\
-				${ECHO} ${PREFIX}/certs;	\
-			fi
-MAKEFLAGS+=		SSL_CERT_DIR="${SSL_CERT_DIR}"
-.endif
