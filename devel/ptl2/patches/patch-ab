@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 1999/05/01 10:24:40 tron Exp $
+
+--- include/sys/pthread-init.h.orig Wed Apr 28 14:30:28 1999
++++ include/sys/pthread-init.h  Wed Apr 28 20:49:27 1999
+@@ -15,9 +15,9 @@
+  * Initialize the PTL
+  */
+ # ifdef __GNUC__
+-static void _pthread_inithook() __attribute__((constructor));
+-extern void _pthread_init();
+-static void _pthread_inithook() { _pthread_init(); }
++static void _pthread_inithook(void) __attribute__((constructor));
++extern void _pthread_init(void);
++static void _pthread_inithook(void) { _pthread_init(); }
+ # else
+ #  define main __pthread_main
+ # endif /*!__GNUC__*/
