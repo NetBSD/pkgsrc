@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.889 2003/09/22 03:05:38 jschauma Exp $
+$NetBSD: TODO,v 1.890 2003/09/22 09:04:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -96,6 +96,7 @@ Suggested package updates
 	o crafty-19.1
 	o crossfire-1.5.0
 	o csound-4.24.1
+	o cvsup-16.1.h [pkg/22870]
 	o cxref-1.5e
 	o dante-1.1.14
 	o dctc-0.85.5
@@ -173,6 +174,7 @@ Suggested package updates
 	o libole2-2.2.8
 	o libtool-1.5 [skrll]
 	o lilypond-1.8.2
+	o links-2.11pre12
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lwm-1.01
@@ -182,7 +184,6 @@ Suggested package updates
 	o mailman-2.1.2 [pkgsrc-wip]
 	o mailsync-5.1.0
 	o memtest86-3.0
-	o mgetty-1.1.30
 	o midnight-commander-4.6.0
 	o mimedefang-2.37
 	o minicom-2.1
@@ -192,13 +193,13 @@ Suggested package updates
 	o mrproject-0.9.1
 	o mtools-3.9.9
 	o multi-gnome-terminal-1.6.2
-	o multitail-2.8.3
+	o multitail-2.9.3
 	o mysql-3.23.54
 	o nano-1.2.2
 	o nap-1.5.2
 	o napshare-1.2
 	o nasm-0.98.38
-	o neXtaW-0.15.0
+	o neXtaW-0.15.1
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
 	o ngrep-1.41
@@ -206,11 +207,12 @@ Suggested package updates
 	o openh323-1.11.2
 	o openoffice-1.0.3.1 [skrll]
 	o openssl-0.9.7b
-	o oss-3.9.7l
+	o oss-3.9.8a
 	o p5-XML-LibXML-1.54
 	o pdmenu-1.2.81
 	o plib-1.6.0 [pkg/19015,pkg/22612]
 	o postfix-2.0.16
+	o prboom-2.2.4
 	o proftpd-1.2.9rc1
 	o pxe-1.4 [pkg/22323]
 	o pygtk-0.6.11
@@ -238,6 +240,7 @@ Suggested package updates
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
+	o staroffice-7
 	o stella-1.3
 	o swig-1.3.17 [epg]
 	o sylpheed-claws-0.9.5
@@ -251,6 +254,7 @@ Suggested package updates
 	o tin-1.6.1
 	o tkman-2.2
 	o top-3.5b12.7
+	o totd-1.4 [pkg/22882]
 	o transcode-0.6.10
 	o ttf2pt1-3.4.3
 	o tuxpaint-0.9.12
