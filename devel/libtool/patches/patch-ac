@@ -1,45 +1,68 @@
-$NetBSD: patch-ac,v 1.13 2004/10/03 00:13:31 tv Exp $
+$NetBSD: patch-ac,v 1.14 2004/12/17 16:24:22 jlam Exp $
 
 --- ltmain.sh.orig	2004-09-19 08:34:44.000000000 -0400
 +++ ltmain.sh
-@@ -197,10 +197,26 @@ func_infer_tag () {
-       case $@ in
-       # Blanks in the command may have been stripped by the calling shell,
-       # but not from the CC environment variable when configure was run.
--      " $CC "* | "$CC "* | " `$echo $CC` "* | "`$echo $CC` "* | " $CC_quoted"* | "$CC_quoted "* | " `$echo $CC_quoted` "* | "`$echo $CC_quoted` "*) ;;
-+      " $CC "* | "$CC "* | " `$echo $CC` "* | "`$echo $CC` "* | " $CC_quoted"* | "$CC_quoted "* | " `$echo $CC_quoted` "* | "`$echo $CC_quoted` "*)
-+         tagname=CC
-+         ;;
-       # Blanks at the start of $base_compile will cause this to fail
-       # if we don't check for them as well.
-       *)
-+        base_compiler=`$echo $base_compile | awk '{ print $1 }'`
-+        case $base_compiler in
-+        *cc)
-+          tagname=CC
-+          ;;
-+        *++)
-+          tagname=CXX
-+	  eval "`${SED} -n -e '/^# ### BEGIN LIBTOOL TAG CONFIG: '$tagname'$/,/^# ### END LIBTOOL TAG CONFIG: '$tagname'$/p' < $0`"
-+          ;;
-+        esac
-+        ;;
-+      esac
+@@ -184,6 +184,31 @@ func_win32_libid () {
+ # command doesn't match the default compiler.
+ # arg is usually of the form 'gcc ...'
+ func_infer_tag () {
++    # Set the commonly-used compilers for some tags.
++    tag_compilers_CC="*cc *xlc"
++    tag_compilers_CXX="*++ *CC"
++    tag_compilers_F77="*77 *fort"
++    base_compiler=`set -- "$@"; $echo $1`
++    # If $tagname still isn't set, then try to infer if the default
++    # "CC" tag applies by matching up the base compile command to some
++    # compilers commonly used for the "CC" tag.
++    if test -z "$tagname"; then
++      z=CC
++      eval "tag_compilers=\$tag_compilers_${z}"
++      if test -n "$tag_compilers"; then
++	for zp in $tag_compilers; do
++	  case $base_compiler in 
++	    $zp)
++	    # The compiler in the base compile command matches
++	    # one of the common compilers for the current tag.
++	    # Assume this is the tagged configuration we want.
++	    tagname=$z
++	    break
++	    ;;
++	  esac
++	done
++      fi
 +    fi
-+    if test -n "$available_tags" && test -z "$tagname"; then
- 	for z in $available_tags; do
- 	  if grep "^# ### BEGIN LIBTOOL TAG CONFIG: $z$" < "$progpath" > /dev/null; then
- 	    # Evaluate the configuration.
-@@ -236,8 +252,6 @@ func_infer_tag () {
- #        else
- #          $echo "$modename: using $tagname tagged configuration"
- 	fi
--	;;
--      esac
-     fi
- }
- 
-@@ -522,7 +536,7 @@ if test -z "$show_help"; then
+     if test -n "$available_tags" && test -z "$tagname"; then
+       CC_quoted=
+       for arg in $CC; do
+@@ -224,6 +249,27 @@ func_infer_tag () {
+ 	      break
+ 	      ;;
+ 	    esac
++	    # If $tagname still isn't set, then try to infer it by
++	    # matching up the base compile command to some compilers
++	    # commonly used for certain tags.
++	    base_compiler=`set -- "$@"; $echo $1`
++	    eval "tag_compilers=\$tag_compilers_${z}"
++	    if test -n "$tag_compilers"; then
++	      for zp in $tag_compilers; do
++		case $base_compiler in 
++		  $zp)
++		  # The compiler in the base compile command matches
++		  # one of the common compilers for the current tag.
++		  # Assume this is the tagged configuration we want.
++		  tagname=$z
++		  break
++		  ;;
++		esac
++	      done
++	      if test -n "$tagname"; then
++		break
++	      fi
++	    fi
+ 	  fi
+ 	done
+ 	# If $tagname still isn't set, then no tagged configuration
+@@ -522,7 +568,7 @@ if test -z "$show_help"; then
      $echo "*** Warning: inferring the mode of operation is deprecated." 1>&2
      $echo "*** Future versions of Libtool will require -mode=MODE be specified." 1>&2
      case $nonopt in
@@ -48,7 +71,7 @@ $NetBSD: patch-ac,v 1.13 2004/10/03 00:13:31 tv Exp $
        mode=link
        for arg
        do
-@@ -1306,6 +1320,13 @@ EOF
+@@ -1306,6 +1352,13 @@ EOF
  	    exit $EXIT_FAILURE
  	    ;;
  	  esac
@@ -62,7 +85,7 @@ $NetBSD: patch-ac,v 1.13 2004/10/03 00:13:31 tv Exp $
  	  if test "$prev" = rpath; then
  	    case "$rpath " in
  	    *" $arg "*) ;;
-@@ -3168,6 +3189,7 @@ EOF
+@@ -3168,6 +3221,7 @@ EOF
  	linux)
  	  major=.`expr $current - $age`
  	  versuffix="$major.$age.$revision"
@@ -70,7 +93,7 @@ $NetBSD: patch-ac,v 1.13 2004/10/03 00:13:31 tv Exp $
  	  ;;
  
  	osf)
-@@ -5364,8 +5386,16 @@ relink_command=\"$relink_command\""
+@@ -5364,8 +5418,16 @@ relink_command=\"$relink_command\""
        exit $EXIT_FAILURE
      fi
  
