@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/27 14:46:16 cjep Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/05/01 12:58:15 jmmv Exp $
 bin/diffpp
 bin/enscript
 bin/mkafmmap
 bin/over
 bin/sliceprint
 bin/states
-etc/enscript.cfg
 man/man1/diffpp.1
 man/man1/enscript.1
 man/man1/sliceprint.1
@@ -75,10 +74,12 @@ share/enscript/tir.afm
 share/enscript/vms.enc
 share/enscript/zcmi.afm
 share/enscript/zd.afm
-@dirrm share/enscript
+share/examples/enscript/enscript.cfg
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/enscript.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/enscript.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/enscript.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/enscript.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/enscript.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/enscript.mo
+@dirrm share/examples/enscript
+@dirrm share/enscript
