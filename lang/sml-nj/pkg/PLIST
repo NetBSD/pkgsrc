@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1999/12/08 15:52:59 proff Exp $
 bin/ml-burg
 bin/ml-lex
 bin/ml-yacc
@@ -6,7 +7,7 @@ lib/sml-nj/bin/.heap/sml.x86-bsd
 lib/sml-nj/bin/.heap/ml-yacc.x86-bsd
 lib/sml-nj/bin/.heap/ml-lex.x86-bsd
 lib/sml-nj/bin/.heap/ml-burg.x86-bsd
-lib/sml-nj/bin/.run/run.x86-freebsd
+lib/sml-nj/bin/.run/run.x86-netbsd
 lib/sml-nj/bin/.arch-n-opsys
 lib/sml-nj/bin/.run-sml
 lib/sml-nj/bin/ml-burg

@@ -1,3 +1,5 @@
+$NetBSD: md5,v 1.2 1999/12/08 15:52:59 proff Exp $
+
 MD5 (sml-nj/110.9.1-bin.x86-unix.tar.Z) = a8d2a792ef392a0ddd8ece325fd4b892
 MD5 (sml-nj/110.9.1-cm.tar.Z) = ee3987dbee99b5f0b59cb09c1a956a0d
 MD5 (sml-nj/110.9.1-cml.tar.Z) = 8c33edee5e75fd18600ef9f0b5b253ae
