@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.5 2002/10/13 16:43:21 taca Exp $
+$NetBSD: patch-ae,v 1.6 2003/03/02 16:22:44 taca Exp $
 
---- icons/Makefile.in.orig	Fri Jul 12 17:38:22 2002
+--- icons/Makefile.in.orig	2003-03-03 01:16:42.000000000 +0900
 +++ icons/Makefile.in
 @@ -147,7 +147,7 @@ ICON2 = anthony-bomb.gif \
  		anthony-xpm.gif
@@ -10,4 +10,4 @@ $NetBSD: patch-ae,v 1.5 2002/10/13 16:43:21 taca Exp $
 +icondir = $(datadir)/squid/icons
  icon_DATA = $(ICON1) $(ICON2)
  EXTRA_DIST = $(ICON1) $(ICON2) icons.shar
- DISTCLEANFILES = $(ICON1) $(ICON2)
+ DISTCLEANFILES = 

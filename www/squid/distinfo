@@ -1,7 +1,17 @@
-$NetBSD: distinfo,v 1.25 2003/02/19 23:44:42 taca Exp $
+$NetBSD: distinfo,v 1.26 2003/03/02 16:22:43 taca Exp $
 
 SHA1 (squid-2.5.1/squid-2.5.STABLE1.tar.bz2) = 6705006527f5fa0753e7c9f14347f36b1b787e62
 Size (squid-2.5.1/squid-2.5.STABLE1.tar.bz2) = 1006600 bytes
+SHA1 (squid-2.5.1/squid-2.5.STABLE1-external_acl_user.patch) = 9048000ac8a2e728f91968f0143a6b460999ca02
+Size (squid-2.5.1/squid-2.5.STABLE1-external_acl_user.patch) = 909 bytes
+SHA1 (squid-2.5.1/squid-2.5.STABLE1-auth_digest.patch) = 097fc3425b15d766772aa014d2ff0a0e9bd95e4c
+Size (squid-2.5.1/squid-2.5.STABLE1-auth_digest.patch) = 7305 bytes
+SHA1 (squid-2.5.1/squid-2.5.STABLE1-external_acl_auth_segfault.patch) = 02b161e4ba3e3cbe47ceab6f8e9de64aeaa33b8e
+Size (squid-2.5.1/squid-2.5.STABLE1-external_acl_auth_segfault.patch) = 2490 bytes
+SHA1 (squid-2.5.1/squid-2.5.STABLE1-distclean_icons.patch) = c0b767c4e7ef406f20788674ac32b39f56ba4b2b
+Size (squid-2.5.1/squid-2.5.STABLE1-distclean_icons.patch) = 1505 bytes
+SHA1 (squid-2.5.1/squid-2.5.STABLE1-error-http-ident.patch) = 22b3c847f6c21aee01287f13fe815d4fd6671501
+Size (squid-2.5.1/squid-2.5.STABLE1-error-http-ident.patch) = 983 bytes
 SHA1 (squid-2.5.1/squid-2.5.STABLE1-disable-ident-lookups.patch) = 8b21d1c40c85a86c575e039021b10010e0ab55a8
 Size (squid-2.5.1/squid-2.5.STABLE1-disable-ident-lookups.patch) = 695 bytes
 SHA1 (squid-2.5.1/squid-2.5.STABLE1-disable-http-violations.patch) = 18bc6685a7ee054e75f5260f6db15064671df361
@@ -132,7 +142,7 @@ SHA1 (patch-aa) = e29686a5c75635129b7e2eaf451140f10f29e081
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
 SHA1 (patch-ad) = 23a906011ffef78d070cc49c94c4f4837eb319ec
-SHA1 (patch-ae) = 33888cf772b3fb3b7c4352cc29551a2dadfb12fa
+SHA1 (patch-ae) = 5031183c7512573c8c8602d0b0541999f43343f2
 SHA1 (patch-ag) = 7a0aa328d18374a4a954f66ac1431779a303f395
 SHA1 (patch-aj) = aa2271e53602fe168604aeced6ed66d28fe47707
 SHA1 (patch-ak) = 19861281d8a9ece352ce9e881e1e60f6787933e3
