@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 1998/08/10 22:27:46 tron Exp $
+$NetBSD: patch-aa,v 1.2 2001/06/15 23:04:52 wiz Exp $
 
 --- Makefile.orig	Sun Jul 12 00:27:32 1998
 +++ Makefile	Tue Aug 11 00:14:31 1998
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.1 1998/08/10 22:27:46 tron Exp $
  
  # definition for where to install xzip executable and man page
 -DESTDIR = /usr/local
-+DESTDIR = $(X11BASE)
++DESTDIR = $(PREFIX)
  
  # --------------------
  
