@@ -1,10 +1,10 @@
-$NetBSD: patch-av,v 1.1 2001/04/29 16:15:16 dmcmahill Exp $
+$NetBSD: patch-av,v 1.2 2001/11/28 04:49:03 jlam Exp $
 
 --- src/Makefile.in.orig	Sat Sep 30 15:39:35 2000
 +++ src/Makefile.in	Sun Apr 29 04:03:44 2001
 @@ -14,4 +14,5 @@
  LIBS		= -lgc -lm @LIBS@
  ifeq ($(HAVE_LIBGC), 1)
-+LIBDIRS		= -L$(LOCALBASE)/lib
++LIBDIRS		= -L$(BUILDLINK_DIR)/lib
  else
  LIBDIRS		= -L$(PRJDIR)/support/gc

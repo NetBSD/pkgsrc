@@ -1,29 +1,29 @@
-$NetBSD: distinfo,v 1.5 2001/05/03 22:03:31 dmcmahill Exp $
+$NetBSD: distinfo,v 1.6 2001/11/28 04:49:01 jlam Exp $
 
 SHA1 (sdcc-2.2.1-src.tar.gz) = c0d448bbdc86620d87b781f62635c51ab44b2235
 Size (sdcc-2.2.1-src.tar.gz) = 2015592 bytes
-SHA1 (patch-aa) = 94c041b23f72f0bd51ef76625c450f4938811808
+SHA1 (patch-aa) = c71789e19fb6547c8307812cd1f71ec38096c02b
 SHA1 (patch-ab) = 41d6d664da79ba97061d74428dc9cd3d3329901c
 SHA1 (patch-ac) = f291412d2fd15052ff8dd86874a4f2e208cb31ff
 SHA1 (patch-ad) = 87e80d25073d3e225c2094145df64867c287ad30
-SHA1 (patch-ae) = 5f6414ea1c00524efbf95745532471035afbfd52
-SHA1 (patch-af) = eda3a2f04a7a929ba117abab5a15283a5c47ef12
+SHA1 (patch-ae) = 0192ffac7b1cd6aa7809c37e5d4e83edf7893696
+SHA1 (patch-af) = 46dacb8a7c12d64d3593ad98fdf881e583afec09
 SHA1 (patch-ag) = 966234636ef78fa4bc46bb959664f27ef386a01d
 SHA1 (patch-ah) = cd19f7fa5a3c684eaf8982a4866bb7691f368ffa
 SHA1 (patch-ai) = 35dac8265be56cc77c5547fa0bc1240d80801f72
 SHA1 (patch-aj) = 9f936132c94b4920df1a276dbebfc1f050ef7ac0
 SHA1 (patch-ak) = 412efd5a8ba3713d0efd7e7fa994deaae5e03507
-SHA1 (patch-al) = a1f8378bf7cf7a204743fdba44bdf5bd5f278a04
-SHA1 (patch-am) = d51ffefad32f11f96a6006596231aede183cb394
-SHA1 (patch-an) = 3fc879a9aa8aaf2ac9cac9e84d9c68d2be8747ef
-SHA1 (patch-ao) = 53aafbbe54ae7eb7b0ad0954352d4a0ad4650f4a
+SHA1 (patch-al) = 1f1b728bb2f7c95962b3acb6e400826e846f1156
+SHA1 (patch-am) = f1db89cf067c71a9fdf15e3a57456a9ce018e3e6
+SHA1 (patch-an) = d385cf5eaf442f4100281db60847f9ce74fad4bb
+SHA1 (patch-ao) = 48d2bd504f8c407069105c5dfbb397496035e8b2
 SHA1 (patch-ap) = 396c3de9496fe717dcccd9404472cfbe0654669e
 SHA1 (patch-aq) = ba2d4e09cb07990399c566f0b364497bdc438a37
 SHA1 (patch-ar) = 71dd271f7ad7a506a54b116d083eb77f34a23f2c
 SHA1 (patch-as) = 79a1234f35a8e072ba42e89e86989a7efe54d836
 SHA1 (patch-at) = 3a41e9e1fc8d26baa6cbef1b666481d9977a2f98
 SHA1 (patch-au) = 36e6e5470112ba8c813b98f6e2283accb9d4f115
-SHA1 (patch-av) = 21802d0892891719b116adfc5bfdab60fabd32c3
+SHA1 (patch-av) = 617d0b03b5b27124a1cff549189f73dc492bbd48
 SHA1 (patch-aw) = 8429c7adf50e82629c6638a0f722ffc08eccfd3c
 SHA1 (patch-ax) = 9729ccb4b42412ea189d55a916d0b6093fe6cba6
 SHA1 (patch-ay) = e48cff86a76fe9225e5461b29288f94e7a44f308
