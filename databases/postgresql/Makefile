@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1999/01/08 11:17:21 frueauf Exp $
+# $NetBSD: Makefile,v 1.24 1999/01/09 20:49:26 kleink Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.4.2
@@ -106,7 +106,7 @@ post-install:
 	@${SED} -e "s=!!PREFIX!!=${PREFIX}=g" -e "s=!!PGUSER!!=${PGUSER}=g" \
 		< ${FILESDIR}/pgsql.sh.tmpl > ${PREFIX}/etc/rc.d/pgsql.sh
 	@/bin/chmod 554 ${PREFIX}/etc/rc.d/pgsql.sh
-	@/usr/sbin/chown root.${PGGROUP} ${PREFIX}/etc/rc.d/pgsql.sh
+	@/usr/sbin/chown root:${PGGROUP} ${PREFIX}/etc/rc.d/pgsql.sh
 	@${INSTALL} -c -o ${PGUSER} -g ${PGGROUP} -m 444 \
 		${FILESDIR}/post-install-notes ${PREFIX}/${PGUSER}
 .if !defined(NOPORTDOCS)
