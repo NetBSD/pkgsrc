@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.7 2000/07/25 14:42:09 jlam Exp $
+$NetBSD: patch-aq,v 1.8 2000/10/23 19:45:18 jlam Exp $
 
---- lib/Xm-2.0/Makefile.am.orig	Tue Feb 15 18:52:24 2000
-+++ lib/Xm-2.0/Makefile.am	Tue Jul 25 08:18:13 2000
-@@ -68,8 +68,6 @@
+--- lib/Xm-2.0/Makefile.am.orig	Tue Aug  8 18:21:12 2000
++++ lib/Xm-2.0/Makefile.am
+@@ -69,8 +69,6 @@
  # Lets put the headers in a sub directory to avoid
  # poluting /usr/local with more directories for default installs.
  #
@@ -11,7 +11,7 @@ $NetBSD: patch-aq,v 1.7 2000/07/25 14:42:09 jlam Exp $
  lib_LTLIBRARIES=	libXm.la
  
  libXm_la_SOURCES= ${SRCS_1_2:%=../Xm/%} ${SRCS_2_0}
-@@ -86,24 +84,4 @@
+@@ -87,24 +85,4 @@
  	      rm $$i; \
  	   fi ; \
  	  done
