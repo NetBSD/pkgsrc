@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/01/07 11:47:29 uebayasi Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/01/07 13:20:38 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gtl.
 #
@@ -14,7 +14,6 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.gtl=gtl
 BUILDLINK_PREFIX.gtl_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.gtl+=	include/GTL/*
 BUILDLINK_FILES.gtl+=	lib/libGTL.*
-
 
 BUILDLINK_TARGETS+=	gtl-buildlink
 
