@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.455 2002/11/04 07:41:52 rh Exp $
+$NetBSD: CHANGES,v 1.456 2002/11/04 08:29:33 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3523,3 +3523,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added libgtop2-2.0.0 [rh 2002-11-04]
 	Added gnome2-libole2-2.2.8 [rh 2002-11-04]
 	Added gturing-0.1.1 [rh 2002-11-04]
+	Added gnome-panel-2.0.10 [rh 2002-11-04]
