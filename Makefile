@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2000/09/07 02:29:40 fredb Exp $
-# FreeBSD Id: Makefile,v 1.35 1997/08/19 07:10:01 fenner Exp
+# $NetBSD: Makefile,v 1.38 2000/12/11 14:15:31 wiz Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -22,6 +21,7 @@ SUBDIR += databases
 SUBDIR += devel
 SUBDIR += editors
 SUBDIR += emulators
+SUBDIR += finance
 SUBDIR += fonts
 SUBDIR += games
 SUBDIR += graphics
