@@ -1,12 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2004/04/10 05:53:31 schmonz Exp $
+$NetBSD: MESSAGE,v 1.7 2004/04/24 05:29:36 schmonz Exp $
 
   To be able to view manpages either add "${QMAILDIR}/man/" to the
   _default line in /etc/man.conf or specify this directory in
   MANPATH variable in your environment.
 
   To start qmail at startup, set qmail=YES in /etc/rc.conf.
-
+  To start qmail-pop3d at startup, set qmailpop3d=YES in /etc/rc.conf.
   To start qmail-smtpd at startup, set qmailsmtpd=YES in /etc/rc.conf.
 
 ===========================================================================

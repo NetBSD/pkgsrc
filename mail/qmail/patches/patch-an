@@ -1,10 +1,12 @@
-$NetBSD: patch-an,v 1.1 2004/04/10 05:30:06 schmonz Exp $
+$NetBSD: patch-an,v 1.2 2004/04/24 05:29:36 schmonz Exp $
 
 --- qmail-smtpd.c.orig	1998-06-15 06:53:16.000000000 -0400
 +++ qmail-smtpd.c
-@@ -51,12 +51,12 @@ void straynewline() { out("451 See http:
+@@ -50,13 +50,14 @@ void die_ipme() { out("421 unable to fig
+ void straynewline() { out("451 See http://pobox.com/~djb/docs/smtplf.html.\r\n"); flush(); _exit(1); }
  
  void err_bmf() { out("553 sorry, your envelope sender is in my badmailfrom list (#5.7.1)\r\n"); }
++void err_brt() { out("553 sorry, this recipient is in my badrecipientto list (#5.7.1)\r\n"); }
  void err_nogateway() { out("553 sorry, that domain isn't in my list of allowed rcpthosts (#5.7.1)\r\n"); }
 -void err_unimpl() { out("502 unimplemented (#5.5.1)\r\n"); }
 +void err_unimpl(arg) char *arg; { out("502 unimplemented (#5.5.1)\r\n"); }
@@ -18,7 +20,7 @@ $NetBSD: patch-an,v 1.1 2004/04/10 05:30:06 schmonz Exp $
  void err_qqt() { out("451 qqt failure (#4.3.0)\r\n"); }
  
  
-@@ -67,11 +67,11 @@ void smtp_greet(code) char *code;
+@@ -67,11 +68,11 @@ void smtp_greet(code) char *code;
    substdio_puts(&ssout,code);
    substdio_put(&ssout,greeting.s,greeting.len);
  }
@@ -33,7 +35,47 @@ $NetBSD: patch-an,v 1.1 2004/04/10 05:30:06 schmonz Exp $
  {
    smtp_greet("221 "); out("\r\n"); flush(); _exit(0);
  }
-@@ -232,7 +232,7 @@ void smtp_ehlo(arg) char *arg;
+@@ -96,6 +97,9 @@ stralloc liphost = {0};
+ int bmfok = 0;
+ stralloc bmf = {0};
+ struct constmap mapbmf;
++int brtok = 0;
++stralloc brt = {0};
++struct constmap mapbrt;
+ 
+ void setup()
+ {
+@@ -116,6 +120,11 @@ void setup()
+   if (bmfok == -1) die_control();
+   if (bmfok)
+     if (!constmap_init(&mapbmf,bmf.s,bmf.len,0)) die_nomem();
++
++  brtok = control_readfile(&brt,"control/badrcptto",0);
++  if (brtok == -1) die_control();
++  if (brtok)
++    if (!constmap_init(&mapbrt,brt.s,brt.len,0)) die_nomem();
+  
+   if (control_readint(&databytes,"control/databytes") == -1) die_control();
+   x = env_get("DATABYTES");
+@@ -208,6 +217,17 @@ int bmfcheck()
+   return 0;
+ }
+ 
++int brtcheck()
++{
++  int j;
++  if (!brtok) return 0;
++  if (constmap(&mapbrt,addr.s,addr.len - 1)) return 1;
++  j = byte_rchr(addr.s,addr.len,'@');
++  if (j < addr.len)
++    if (constmap(&mapbrt,addr.s + j,addr.len - j - 1)) return 1;
++  return 0;
++}
++
+ int addrallowed()
+ {
+   int r;
+@@ -232,7 +252,7 @@ void smtp_ehlo(arg) char *arg;
    smtp_greet("250-"); out("\r\n250-PIPELINING\r\n250 8BITMIME\r\n");
    seenmail = 0; dohelo(arg);
  }
@@ -42,7 +84,15 @@ $NetBSD: patch-an,v 1.1 2004/04/10 05:30:06 schmonz Exp $
  {
    seenmail = 0;
    out("250 flushed\r\n");
-@@ -316,8 +316,8 @@ int *hops;
+@@ -258,6 +278,7 @@ void smtp_rcpt(arg) char *arg; {
+   }
+   else
+     if (!addrallowed()) { err_nogateway(); return; }
++  if (!env_get("RELAYCLIENT") && brtcheck()) { err_brt(); return; }
+   if (!stralloc_cats(&rcptto,"T")) die_nomem();
+   if (!stralloc_cats(&rcptto,addr.s)) die_nomem();
+   if (!stralloc_0(&rcptto)) die_nomem();
+@@ -316,8 +337,8 @@ int *hops;
          if (flagmaybex) if (pos == 7) ++*hops;
          if (pos < 2) if (ch != "\r\n"[pos]) flagmaybey = 0;
          if (flagmaybey) if (pos == 1) flaginheader = 0;
@@ -52,7 +102,7 @@ $NetBSD: patch-an,v 1.1 2004/04/10 05:30:06 schmonz Exp $
        if (ch == '\n') { pos = 0; flagmaybex = flagmaybey = flagmaybez = 1; }
      }
      switch(state) {
-@@ -365,7 +365,7 @@ void acceptmessage(qp) unsigned long qp;
+@@ -365,7 +386,7 @@ void acceptmessage(qp) unsigned long qp;
    out("\r\n");
  }
  

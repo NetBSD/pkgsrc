@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.1 2004/04/10 05:30:06 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.2 2004/04/24 05:29:36 schmonz Exp $
 #
 
 # PROVIDE: mail
@@ -10,7 +10,8 @@
 
 name="qmailsmtpd"
 rcvar=${name}
-command="@LOCALBASE_UCSPI_TCP@/bin/tcpserver"
+required_files="@QMAILDIR@/control/rcpthosts"
+command="@LOCALBASE_NORMAL@/bin/tcpserver"
 procname=${name}
 start_precmd="qmailsmtpd_precmd"
 
@@ -20,7 +21,7 @@ fi
 
 qmailsmtpd_precmd()
 {
-	command="@SETENV@ - @LOCALBASE_UCSPI_TCP@/bin/argv0 @LOCALBASE_UCSPI_TCP@/bin/tcpserver $name $qmailsmtpd_flags -u `@ID@ -u qmaild` -g `@ID@ -g qmaild` 0 smtp @QMAILDIR@/bin/qmail-smtpd 2>&1 | @QMAILDIR@/bin/splogger smtpd 3"
+	command="@SETENV@ - @LOCALBASE_NORMAL@/bin/argv0 @LOCALBASE_NORMAL@/bin/tcpserver $name $qmailsmtpd_flags -u `@ID@ -u qmaild` -g `@ID@ -g qmaild` 0 25 @QMAILDIR@/bin/qmail-smtpd 2>&1 | @QMAILDIR@/bin/splogger smtpd 3"
 	command_args="&"
 	rc_flags=""
 }
