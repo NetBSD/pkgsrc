@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2003/08/03 01:01:32 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/08 22:22:31 seb Exp $
 bin/pinfo
-info/pinfo.info
 man/man1/pinfo.1
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/pinfo.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/pinfo.mo
