@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/10 00:20:29 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/01 15:12:10 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBTASN1_BUILDLINK3_MK:=	${LIBTASN1_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	libtasn1
 
 .if !empty(LIBTASN1_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		libtasn1
-BUILDLINK_DEPENDS.libtasn1+=	libtasn1>=0.1.2
+BUILDLINK_DEPENDS.libtasn1+=	libtasn1>=0.2.7
 BUILDLINK_PKGSRCDIR.libtasn1?=	../../security/libtasn1
 .endif # LIBTASN1_BUILDLINK3_MK
 
