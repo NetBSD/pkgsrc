@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/07/27 22:21:04 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/13 07:45:32 jlam Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 DISTNAME=	j2sdk-1_4_0-linux-i386
@@ -13,11 +13,9 @@ DEPENDS=	sun-jre14>=0:../../lang/sun-jre14
 WRKSRC=		${WRKDIR}/j2sdk1.4.0
 
 # these are part of JRE
-do-configure:
+post-extract:
 	${RM} -fr ${WRKSRC}/jre ${WRKSRC}/LICENSE ${WRKSRC}/README
 
 .include "../../lang/sun-jre14/Makefile.common"
-.include "../../mk/bsd.pkg.mk"
 
-# These need to be after bsd.pkg.mk 
-PREFIX:=	${JDK_HOME}
+PREFIX=		${JVM_HOME}
