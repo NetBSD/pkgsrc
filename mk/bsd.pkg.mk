@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1480 2004/07/27 15:56:19 xtraeme Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1481 2004/07/31 12:24:02 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -3514,7 +3514,7 @@ real-su-undo-replace:
 .PHONY: mirror-distfiles
 mirror-distfiles:
 .if !defined(NO_SRC_ON_FTP)
-	@${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} fetch NO_SKIP=yes NO_CHECK_DEPENDS=yes
+	@${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} fetch NO_SKIP=yes
 .endif
 
 
