@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2001/07/27 13:33:34 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.9 2001/08/30 10:14:24 skrll Exp $
 #
 # This Makefile fragment is included by packages that use OpenSSL.
 #
@@ -52,7 +52,7 @@ _VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096}
 .endif
 
 .if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096A}	# OpenSSL 0.9.6a
-_VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096A}
+_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096A}
 .else
 _VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096A}
 .endif
