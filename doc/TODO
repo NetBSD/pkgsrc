@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1829 2004/06/11 17:55:39 minskim Exp $
+$NetBSD: TODO,v 1.1830 2004/06/11 20:00:11 minskim Exp $
 
 Suggested new packages
 ======================
@@ -389,7 +389,6 @@ Suggested package updates
 	o top-3.5b12.10
 	o tripwire-2.3.1 [see also pkg/22362]
 	o txt2html-2.24 [wennmach]
-	o unzip-5.51
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
 	o vfu-4.03
