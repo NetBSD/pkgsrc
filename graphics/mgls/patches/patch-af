@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/11/01 16:22:39 hubertf Exp $
+
+--- utils/mglcons.sh.orig	Fri Mar  3 01:07:43 2000
++++ utils/mglcons.sh	Wed Jul 19 14:17:09 2000
+@@ -6,7 +6,7 @@
+ export MGL_DISPLAY
+ # export PLATFORM=MC-R300
+ 
+-/usr/pkg/sbin/mglsvrcons $1 < $TTY > $TTY &
++/usr/pkg/sbin/mglsvrcons $* < $TTY > $TTY &
+ sleep 1
+ mgterm -i
+ 

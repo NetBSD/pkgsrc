@@ -1,0 +1,3 @@
+ * mglx.sh wants mglsvrx, which isn't there
+ * sbin/calibconf is an empty file (plus not executable)
+ * dito for calibdata-update and mglcalibrate

@@ -1,0 +1,10 @@
+$NetBSD: patch-ah,v 1.1.1.1 2000/11/01 16:22:39 hubertf Exp $
+
+--- utils/set_mgl.sh.orig	Thu Aug 31 21:06:51 2000
++++ utils/set_mgl.sh	Wed Nov  1 14:51:53 2000
+@@ -1,4 +1,4 @@
+-MGL_DISPLAY=`ps ax |grep emsvr |grep -v grep |awk '{print "tty" $2}'`
++MGL_DISPLAY=`ps ax |grep mglsvrcons |grep -v grep |awk '{print "tty" $2}'`
+ 
+ echo "MGL_DISPLAY="$MGL_DISPLAY
+ 
