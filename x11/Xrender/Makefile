@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/02/16 18:32:36 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/19 17:37:31 minskim Exp $
 
 DISTNAME=	xrender-0.8.3
 PKGNAME=	${DISTNAME:S/x/X/}
@@ -9,6 +9,8 @@ MASTER_SITES=	http://pdx.freedesktop.org/software/fontconfig/releases/
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://fontconfig.org/
 COMMENT=	Client library for the X Rendering Extension protocol
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
