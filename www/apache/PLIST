@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/06/19 10:17:59 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/06/20 17:12:37 taca Exp $
 bin/checkgid
 bin/dbmmanage
 bin/htdigest
@@ -87,6 +87,7 @@ share/httpd/htdocs/index.html.he.iso8859-8
 share/httpd/htdocs/index.html.it
 share/httpd/htdocs/index.html.ja.jis
 share/httpd/htdocs/index.html.kr.iso-kr
+share/httpd/htdocs/index.html.lb.utf8
 share/httpd/htdocs/index.html.nl
 share/httpd/htdocs/index.html.nn
 share/httpd/htdocs/index.html.no
