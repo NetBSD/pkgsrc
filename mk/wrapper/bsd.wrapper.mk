@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.19 2005/01/18 17:25:13 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.20 2005/02/14 21:33:08 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -245,6 +245,7 @@ _WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-mipspro-cc
 _WRAP_ARG_PP.CXX=	${_WRAP_ARG_PP.CC}
 _WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
 _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
+_WRAP_ARG_PP.LIBTOOL=	${_WRAP_ARG_PP.CC}
 .endif
 
 .if !empty(PKGSRC_COMPILER:Mmipspro-ucode)
@@ -294,6 +295,7 @@ _WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-interix-ld
 _WRAP_ARG_PP.CC=	${WRAPPER_TMPDIR}/arg-pp-darwin-gcc
 _WRAP_ARG_PP.CXX=	${_WRAP_ARG_PP.CC}
 _WRAP_ARG_PP.LD=	${_WRAP_ARG_PP.CC}
+_WRAP_ARG_PP.LIBTOOL=	${_WRAP_ARG_PP.CC}
 .elif ${OPSYS} == "UnixWare"
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-unixware-gcc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
