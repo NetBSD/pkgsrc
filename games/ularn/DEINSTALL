@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2003/12/06 19:29:43 ben Exp $
+#
+
+case $2 in
+        DEINSTALL) cat << EOF
+
+	=============================================================
+	The score was not wiped out by this deletion process. If you
+	don't want it around, please remove
+	${PKG_PREFIX}/share/Ularn.
+	=============================================================
+
+EOF
+	;;
+esac
