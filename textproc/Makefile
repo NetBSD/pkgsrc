@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.227 2004/02/12 02:43:38 minskim Exp $
+# $NetBSD: Makefile,v 1.228 2004/02/14 21:45:53 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -69,6 +69,7 @@ SUBDIR+=	flyspell
 SUBDIR+=	fop
 SUBDIR+=	freepwing
 SUBDIR+=	glimpse
+SUBDIR+=	gnome-spell
 SUBDIR+=	gocr
 SUBDIR+=	grep
 SUBDIR+=	groff
