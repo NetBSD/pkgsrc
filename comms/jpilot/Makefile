@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/11/08 17:47:14 itojun Exp $
+# $NetBSD: Makefile,v 1.11 2000/11/09 14:17:06 itojun Exp $
 #
 
 DISTNAME=		jpilot-0.98.1
@@ -21,8 +21,6 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 EVAL_PREFIX+=		GTKDIR=gtk+
 CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}"
 CONFIGURE_ARGS+=	--with-pilot-prefix=${LOCALBASE}
-# workaround gettext.m4 bug - may have bad sideeffect
-CONFIGURE_ENV+=		LIBS="-L${LOCALBASE}/lib -lintl"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/jpilot/plugins
