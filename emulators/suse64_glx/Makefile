@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2002/08/02 15:36:51 grant Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/04 01:57:48 grant Exp $
 
 DISTNAME=		suse_glx-${SUSE_VERSION}
 PKGREVISION=		1
 CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE:=x3d1/}
+MASTER_SITES=		ftp://ftp.suse.com/pub/suse/discontinued/i386/update/${SUSE_VERSION}/x3d1/
 DISTFILES=		${RPMFILES}
 
 MAINTAINER=		packages@netbsd.org
@@ -18,6 +18,6 @@ EXTRACT_ONLY=		# empty
 NO_BUILD=		yes
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		glx.rpm
+RPMFILES=		glx-000229-53.i386.rpm
 
 .include "../suse64_linux/Makefile.common"
