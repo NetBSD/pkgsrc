@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printdepends,v 1.5 2001/02/01 08:28:07 dmcmahill Exp $
+# $NetBSD: printdepends,v 1.6 2001/02/17 16:45:10 wiz Exp $
 #
 # Print list of pkg dependencies suitable for tsort(1).
 # Start in /usr/pkgsrc.
@@ -12,11 +12,10 @@
 cwd=$PWD
 
 # List of all pkgs, from pkgsrc/*/Makefile
- list=`grep '^[^#].*'SUBDIR */Makefile | sed 's,/Makefile.*= *,/,'`
+ list=`grep '^[[:space:]]*'SUBDIR */Makefile | sed 's,/Makefile.*=[[:space:]]*,/,'`
 #list=`grep '^[^#].*'SUBDIR ma*/Makefile | sed 's,/Makefile.*= *,/,'`
 #list=x11/gnome
 #list='x11/xteddy x11/xsnow'
-
 
 for pkgdir in $list
 do
