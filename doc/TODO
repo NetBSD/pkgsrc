@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2467 2004/11/25 20:00:39 snj Exp $
+$NetBSD: TODO,v 1.2468 2004/11/25 20:03:46 minskim Exp $
 
 Suggested new packages
 ======================
@@ -456,7 +456,6 @@ Suggested package updates
 	o easytag-1.0
 	o eb-4.1.1
 	o eblook-1.6.1
-	o ed2k-gtk-gui-0.6.3
 	o edb-1.0.5
 	o eel-1.0.2
 	o eel2-2.8.2
