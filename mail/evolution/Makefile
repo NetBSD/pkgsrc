@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2004/04/15 09:33:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.60 2004/04/17 10:42:53 jmmv Exp $
 
 DISTNAME=		evolution-1.4.5
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		mail time gnome
 MASTER_SITES=		ftp://ftp.ximian.com/pub/source/evolution/ \
 			${MASTER_SITE_GNOME:=sources/evolution/1.4/}
@@ -14,6 +14,8 @@ COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 BUILD_USES_MSGFMT=	YES
+
+BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.3.6nb1
 
 # Using a wildcard here doesn't make sense because the version number of
 # "db3" is hardcoded in the "configure" script and some source modules
