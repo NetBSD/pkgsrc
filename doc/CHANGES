@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2509 2003/06/15 11:57:06 kei Exp $
+$NetBSD: CHANGES,v 1.2510 2003/06/15 22:20:36 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2462,3 +2462,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkgdiff to 0.111 [atatat 2003-06-14]
 	Added gcal-3.01 [atatat 2003-06-14]
 	Updated ja-jsclasses to 0.0.0.20030529 [kei 2003-06-15]
+	Updated pkglint to 3.55 [abs 2003-06-15]
