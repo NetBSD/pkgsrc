@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.981 2002/05/21 14:06:15 schmonz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.982 2002/05/22 23:15:22 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -954,31 +954,8 @@ CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/inc
 .  endif
 .endif
 
-# PKG_SYSCONFDIR is where the configuration files for a package may be found.
-# This value may be customized in various ways:
 #
-# PKG_SYSCONFBASE is the main config directory under which all package
-#	configuration files are to be found.
-#
-# PKG_SYSCONFSUBDIR is the subdirectory of PKG_SYSCONFBASE under which the
-#	configuration files for a particular package may be found.
-#
-# PKG_SYSCONFVAR is the special suffix used to distinguish any overriding
-#	values for a particular package (see next item).  It defaults to
-#	${PKGNAME}, but for a collection of related packages that should
-#	all have the same PKG_SYSCONFDIR value, it can be set in each of
-#	the package Makefiles to a common value.
-#
-# PKG_SYSCONFDIR.${PKG_SYSCONFVAR} overrides the value of ${PKG_SYSCONFDIR}
-#	for packages with the same value for PKG_SYSCONFVAR.
-#
-# Users will typically want to set PKG_SYSCONFBASE to /etc, or accept the
-# default location of ${PREFIX}/etc.
-#
-# Package maintainers may want to set PKG_SYSCONFVAR to a common value for
-# related packages, e.g. all of the amanda packages set PKG_SYSCONFVAR=amanda
-# so that the PKG_SYSCONFDIR for all of them may be tweaked by just setting
-# PKG_SYSCONFDIR.amanda in /etc/mk.conf.
+# Config file related settings - see Packages.txt
 #
 PKG_SYSCONFVAR?=	${PKGBASE}
 .if defined(PKG_SYSCONFDIR.${PKG_SYSCONFVAR})
