@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/12 00:50:02 mjl Exp $
+
+SHA1 (ocr-b.tar.gz) = 4564baed83e6dd84097af29d36aa88e792c99f3f
+Size (ocr-b.tar.gz) = 12095 bytes
+SHA1 (patch-aa) = 6251f414620449c53d642e3446716413288f5d75
