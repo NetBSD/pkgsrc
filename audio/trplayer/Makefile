@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/31 20:04:53 fredb Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/22 10:06:14 simonb Exp $
 #
 
 DISTNAME=	trplayer-1.2.0
@@ -10,7 +10,7 @@ MAINTAINER=	fredb@netbsd.org
 HOMEPAGE=	http://www.linux-speakup.org/trplayer.html
 COMMENT=	Text-mode Realmedia Player
 
-BUILD_DEPENDS+=	rpm2pkg-1.2:../../pkgtools/rpm2pkg
+BUILD_DEPENDS+=	rpm2pkg>=1.2:../../pkgtools/rpm2pkg
 DEPENDS+=	realplayer>=8.0.1:../../audio/realplayer
 DEPENDS+=	suse_base>=7.3:../../emulators/${SUSE_DIR_PREFIX}_base
 DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
