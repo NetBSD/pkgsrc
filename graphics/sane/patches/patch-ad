@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 1998/11/28 20:59:58 frueauf Exp $
+
+--- backend/abaton.c-orig	Sun Nov 22 03:54:14 1998
++++ backend/abaton.c	Sat Nov 28 11:20:23 1998
+@@ -1113,7 +1113,7 @@
+ 
+ 	case OPT_Y_RESOLUTION:
+ 	  if (s->val[OPT_PREVIEW].w || s->val[OPT_RESOLUTION_BIND].w) {
+-	    s->val[OPT_X_RESOLUTION] = *(SANE_Word *)val;
++	    s->val[OPT_X_RESOLUTION].w = *(SANE_Word *)val;
+ 	    if (info)
+ 	      *info |= SANE_INFO_RELOAD_OPTIONS;
+ 	  }
