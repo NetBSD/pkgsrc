@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/11/12 22:20:49 tron Exp $
+# $NetBSD: Makefile,v 1.22 1999/11/12 22:56:31 tron Exp $
 
 DISTNAME=	squid-2.2.STABLE5-src
 PKGNAME=	squid-2.2s5
@@ -13,15 +13,7 @@ MASTER_SITES=  \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://squid.nlanr.net/Squid/
 
-BUILD_DEPENDS=    ${LOCALBASE}/bin/perl:../../lang/perl5
-
-# Configuration options which can be overwritten by the user.
-SQUID_CONFIGURE_ARGS?=	--enable-cachemgr-hostname=localhost \
-			--enable-icmp \
-			--enable-ipf-transparent \
-			--enable-snmp
-SQUID_HTTP_PORT?=	3128
-SQUID_ICP_PORT?=	3130
+BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --sysconfdir=/etc \
@@ -38,6 +30,13 @@ PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/PLIST.share
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
 .include "../../mk/bsd.prefs.mk"
+# Configuration options which can be overwritten by the user.
+SQUID_CONFIGURE_ARGS?=	--enable-cachemgr-hostname=localhost \
+			--enable-icmp \
+			--enable-ipf-transparent \
+			--enable-snmp
+SQUID_HTTP_PORT?=	3128
+SQUID_ICP_PORT?=	3130
 
 .if ${OPSYS} == "SunOS"
 DEPENDS+=	egcs-1.1.2:../../lang/egcs
