@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1995 2004/08/03 12:09:14 recht Exp $
+$NetBSD: TODO,v 1.1996 2004/08/03 12:18:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -180,6 +180,7 @@ Suggested package updates
 	o bind-9.3
 	o bitchx-1.1
 	o blender-2.33
+	o bogofilter-0.92.4
 	o boson-0.10
 	o cdrtools-ossdvd-2.01.1.27
 	o cervisia-2.1.2
@@ -228,7 +229,7 @@ Suggested package updates
 	o fox-1.2.7
 	o freetds-0.62.3
 	o fsviewer-0.2.5
-	o gauche-0.8
+	o gauche-0.8.1
 	o gcvs-1.0
 	o gdb-6.2
 	o generator-0.35
@@ -241,9 +242,9 @@ Suggested package updates
 	o gmp-4.1.3
 	o gnomeicu-0.99.5
 	o gnucash-1.8.9
-	o gnunet-0.6.2a
+	o gnunet-0.6.3
 	o gnustep-0.9.3
-	o gnutls-1.0.16
+	o gnutls-1.0.17
 	o gogo-3.11p1
 	o gpsdrive-2.09
 	o gqmpeg-0.91.1
@@ -328,6 +329,7 @@ Suggested package updates
 	o nut-9.19
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
+	o ogmtools-1.4.1
 	o onyx-5.1.1
 	o openal-20040215
 	o openh323-1.12.2
@@ -367,6 +369,7 @@ Suggested package updates
 	o samba-2.2.9
 	o sawfish-1.3
 	o scm-5d9
+	o scmxx-0.7.3
 	o scribus-1.1.7
 	o sendfile-20010424
 	o sendmail-8.13.1 [pkgsrc-wip sendmail813]
@@ -386,12 +389,14 @@ Suggested package updates
 	o stella-1.4
 	o streamtuner-0.12.4
 	o sweep-0.8.3
+	o tcl-8.4.7
 	o tcl-expect-5.39.0
 	o tcl-itcl-3.2.1
 	o tcpreplay-2.2.2
 	o tct-1.14
 	o teapop-0.3.8
 	o texi2html-1.70
+	o tk-8.4.7
 	o tkdesk-2.0
 	o tkman-2.2
 	o tripwire-2.3.1 [see also pkg/22362]
