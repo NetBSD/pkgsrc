@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2004/05/27 00:51:39 reed Exp $
+# $NetBSD: Makefile,v 1.12 2004/08/27 13:01:35 drochner Exp $
 #
 
-DISTNAME=	opencdk-0.5.4
-PKGREVISION=	1
+DISTNAME=	opencdk-0.5.5
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/opencdk/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnutls.org/
