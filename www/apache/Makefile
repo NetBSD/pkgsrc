@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2001/04/29 21:21:13 jlam Exp $
+# $NetBSD: Makefile,v 1.68 2001/05/08 17:28:09 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -43,12 +43,14 @@ BUILD_DEFS+=		APACHE_SYSCONFDIR
 
 .if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
 APACHE_USER?=		www
+APACHE_SUEXEC_DOCROOT?=	${LOCALBASE}/share/httpd/htdocs
 SUEXEC_PATH=		/bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
 CONFIGURE_ARGS+=	--enable-suexec 				\
 			--suexec-caller=${APACHE_USER}			\
-			--suexec-safepath='${SUEXEC_PATH}'
+			--suexec-safepath='${SUEXEC_PATH}'		\
+			--suexec-docroot=${APACHE_SUEXEC_DOCROOT}
 PLIST_SRC=		${PKGDIR}/PLIST.suexec
-BUILD_DEFS+=		APACHE_USER
+BUILD_DEFS+=		APACHE_USER APACHE_SUEXEC_DOCROOT
 .endif
 
 .if !defined(NOPIC)
