@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/15 09:29:14 shell Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/01 05:48:15 jlam Exp $
 
 DISTNAME=	unicon-1.2
 PKGNAME=	unicon-im-1.2
@@ -9,8 +9,8 @@ MAINTAINER=	rxg@netbsd.org
 HOMEPAGE=	http://www.opencjk.org/~yumj/project-chinput.html
 COMMENT=	libraries and modules of Unicon
 
-USE_PTHREAD=	native pth
 USE_LIBTOOL=	YES
+PTHREAD_OPTS+=	require
 
 GNU_CONFIGURE=	YES
 
