@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/04/01 18:15:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.48 2004/04/14 16:15:30 jmmv Exp $
 #
 
 DISTNAME=		gtk+-2.4.0
@@ -14,9 +14,9 @@ HOMEPAGE=		http://www.gtk.org/
 COMMENT=		The GIMP Toolkit - libraries for building X11 user interfaces
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 USE_BUILDLINK3=		yes
+USE_DIRS+=		xdg-1.1
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/03/28 21:02:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/14 16:15:24 jmmv Exp $
 #
 
 DISTNAME=	sodipodi-0.34
@@ -9,10 +9,9 @@ MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/gnome-office/sodipodi.shtml
 COMMENT=	Open source vector graphics drawing program using SVG as native format
 
-DEPENDS+=	gnome2-dirs>=1.5:../../misc/gnome2-dirs
-
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES

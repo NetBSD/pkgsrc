@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/04/06 10:09:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/14 16:15:26 jmmv Exp $
 #
 
 DISTNAME=	nautilus-media-0.8.0
@@ -12,7 +12,6 @@ HOMEPAGE=	http://thomas.apestaart.org/projects/nautilus-media/
 COMMENT=	Multimedia add-ons for Nautilus
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 DEPENDS+=		gst-plugins-esound>=0.8.0:../../audio/gst-plugins-esound
 DEPENDS+=		gst-plugins-flac>=0.8.0:../../audio/gst-plugins-flac
 DEPENDS+=		gst-plugins-gnomevfs>=0.8.0:../../sysutils/gst-plugins-gnomevfs
@@ -22,6 +21,7 @@ DEPENDS+=		gst-plugins-vorbis>=0.8.0:../../audio/gst-plugins-vorbis
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
+USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_PERL5=		build

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/03/26 02:27:37 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2004/04/14 16:15:21 jmmv Exp $
 #
 
 DISTNAME=		glade-2.0.1
@@ -13,10 +13,10 @@ HOMEPAGE=		http://glade.gnome.org/
 COMMENT=		User interface builder for the GTK2+ toolkit and GNOME2
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES

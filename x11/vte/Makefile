@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/04/01 18:49:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/14 16:15:30 jmmv Exp $
 #
 
 DISTNAME=	vte-0.11.10
@@ -11,10 +11,10 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Terminal widget with improved accessibility and I18N support
 
-DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK3=		yes
+USE_DIRS+=		gnome2-1.2
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
