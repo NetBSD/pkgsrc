@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/10/02 08:25:13 minoura Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/09 17:38:02 wiz Exp $
 #
 
 DISTNAME=	Gauche-0.6.3
@@ -26,8 +26,9 @@ BROKEN=Test required on NetBSD/i386 a.out
 .endif
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-slib=${PREFIX}/share/slib
-CONFIGURE_ARGS+=	--with-iconv=${PREFIX} --with-iconv-lib=iconv
+USE_BUILDLINK2=	yes
+CONFIGURE_ARGS+=	--with-slib=${LOCALBASE}/share/slib
+CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.libiconv} --with-iconv-lib=iconv
 CONFIGURE_ENV+=		AS="${CC} -x assembler-with-cpp -c"
 
 INFO_FILES=		gauche-refe.info gauche-refj.info
@@ -37,6 +38,6 @@ INFO_FILES=		gauche-refe.info gauche-refj.info
 CONFIGURE_ARGS+=	--enable-multibyte=${GAUCHE_MULTIBYTE}
 .endif
 
-.include "../../converters/libiconv/buildlink.mk"
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

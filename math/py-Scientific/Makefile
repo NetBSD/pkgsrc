@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/09/21 23:46:54 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/09 17:39:55 wiz Exp $
 
 DISTNAME=	ScientificPython-2.2
 PKGNAME=	${PYPKGPREFIX}-Scientific-2.2
@@ -12,12 +12,12 @@ COMMENT=	Python modules for scientific computing
 
 CONFLICTS+=	py-Scientific-*
 
-DEPENDS+=	netcdf>=3.0:../../devel/netcdf
 DEPENDS+=	mpich>=1.2.1:../../parallel/mpi-ch
 BUILDLINK_DEPENDS.python20=	python20>=2.0.1nb1
 BUILDLINK_DEPENDS.python21=	python21>=2.1.1nb1
 PYTHON_VERSIONS_ACCEPTED=	20 21 # doesn't compile for 22
 
+USE_BUILDLINK2=	yes
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
 
@@ -41,6 +41,7 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Src/MPI/mpipython \
 		${PREFIX}/bin/mpipython${PYVERSSUFFIX}
 
+.include "../../devel/netcdf/buildlink2.mk"
 .include "../../lang/python/extension.mk"
-.include "../../math/py-Numeric/buildlink.mk"
+.include "../../math/py-Numeric/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
