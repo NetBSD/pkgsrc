@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.7 2003/07/12 09:19:19 wiz Exp $
+$NetBSD: patch-am,v 1.8 2003/12/12 22:05:55 wiz Exp $
 
---- src/cvs.h.orig	Sat Apr 26 20:11:31 2003
+--- src/cvs.h.orig	Tue Nov 11 02:20:10 2003
 +++ src/cvs.h
 @@ -367,6 +367,7 @@ extern int really_quiet, quiet;
  extern int use_editor;
@@ -18,7 +18,7 @@ $NetBSD: patch-am,v 1.7 2003/07/12 09:19:19 wiz Exp $
  extern int logoff;		/* Don't write history entry */
  
  extern int top_level_admin;
-@@ -663,6 +665,7 @@ void sleep_past PROTO ((time_t desttime)
+@@ -666,6 +668,7 @@ void sleep_past PROTO ((time_t desttime)
  #define	RUN_STDOUT_APPEND	0x0004	/* append to stdout, don't truncate */
  #define	RUN_STDERR_APPEND	0x0008	/* append to stderr, don't truncate */
  #define	RUN_SIGIGNORE		0x0010	/* ignore interrupts for command */

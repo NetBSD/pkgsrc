@@ -1,6 +1,6 @@
-$NetBSD: patch-ap,v 1.5 2003/07/12 09:19:19 wiz Exp $
+$NetBSD: patch-ap,v 1.6 2003/12/12 22:05:56 wiz Exp $
 
---- src/main.c.orig	Fri May  2 03:12:55 2003
+--- src/main.c.orig	Wed Oct  8 17:49:43 2003
 +++ src/main.c
 @@ -41,6 +41,7 @@ int really_quiet = 0;
  int quiet = 0;
@@ -18,29 +18,32 @@ $NetBSD: patch-ap,v 1.5 2003/07/12 09:19:19 wiz Exp $
  
  char *CurDir;
  
-@@ -249,6 +251,7 @@ static const char *const opt_usage[] =
+@@ -248,6 +250,7 @@ static const char *const opt_usage[] =
+     "    -r           Make checked-out files read-only.\n",
      "    -w           Make checked-out files read-write (default).\n",
-     "    -l           Turn history logging off.\n",
      "    -n           Do not execute anything that will change the disk.\n",
 +    "    -u           Don't create locks (implies -l).\n",
      "    -t           Show trace of program execution -- try with -n.\n",
      "    -v           CVS version and copyright.\n",
      "    -T tmpdir    Use 'tmpdir' for temporary files.\n",
-@@ -407,7 +410,7 @@ main (argc, argv)
+@@ -406,7 +409,7 @@ main (argc, argv)
      int help = 0;		/* Has the user asked for help?  This
  				   lets us support the `cvs -H cmd'
  				   convention to give help for cmd. */
--    static const char short_options[] = "+Qqrwtnlvb:T:e:d:Hfz:s:xa";
-+    static const char short_options[] = "+Qqrwtunlvb:T:e:d:Hfz:s:xa";
+-    static const char short_options[] = "+Qqrwtnvb:T:e:d:Hfz:s:xa";
++    static const char short_options[] = "+Qqrwtunvb:T:e:d:Hfz:s:xa";
      static struct option long_options[] =
      {
          {"help", 0, NULL, 'H'},
-@@ -537,6 +540,8 @@ main (argc, argv)
+@@ -536,6 +539,11 @@ main (argc, argv)
  		break;
  	    case 'n':
  		noexec = 1;
-+	    case 'u':			/* Fall through */
 +		nolock = 1;
- 	    case 'l':			/* Fall through */
++		logoff = 1;
++		break;
++	    case 'u':
++		nolock = 1;
  		logoff = 1;
  		break;
+ 	    case 'v':
