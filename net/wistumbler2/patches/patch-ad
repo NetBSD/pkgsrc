@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1 2004/11/07 19:57:51 itojun Exp $
+
+--- src/stumbler.c-	2004-11-08 04:54:27.000000000 +0900
++++ src/stumbler.c	2004-11-08 04:54:49.000000000 +0900
+@@ -328,8 +328,10 @@
+ 	if (naps&&!save)
+     	do_beep(maxsignal);
+ 
++#if USE_GTK
+ 	while(gtk_events_pending())
+ 		gtk_main_iteration();
++#endif
+ }
+ 
+ int wi_polling()
+@@ -345,7 +347,7 @@
+ 		wistumbler_gui_error("No wifi devices found");
+         #else
+ 		printf("No wifi devices found");
+-		if (!App.usex) working=false;
++		if (!App.usex) App.working=false;
+ 		#endif
+ 		return 0;
+ 	  } else {
