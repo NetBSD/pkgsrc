@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.583 2000/10/10 20:37:29 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.584 2000/10/12 19:05:02 skrll Exp $
 #
 # This file is in the public domain.
 #
@@ -204,9 +204,9 @@ DEPENDS+=		gtexinfo-3.12:../../devel/gtexinfo
 .if defined(USE_LIBTOOL)
 LIBTOOL=		${LOCALBASE}/bin/libtool
 # XXX: actually, here we would need something like
-# BUILD_DEPENDS+=libtool>1.3.5nb4:../../devel/libtool
+# BUILD_DEPENDS+=libtool>=1.3.5nb6:../../devel/libtool
 .if make(install-run-depends)
-DEPENDS+=		libtool>1.3.5nb4:../../devel/libtool
+DEPENDS+=		libtool>=1.3.5nb6:../../devel/libtool
 .endif
 .endif
 
