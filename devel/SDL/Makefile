@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2003/05/02 11:54:18 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2003/06/23 10:34:29 salo Exp $
 #
 
 DISTNAME=	SDL-1.2.5
@@ -10,10 +10,6 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.libsdl.org/
 COMMENT=	Simple DirectMedia Layer, a cross-platform multimedia library
 
-BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
-NASMFLAGS_ELF=		-f elf
-NASMFLAGS_a.out=	-f aoutb
-
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
@@ -24,6 +20,12 @@ USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
+NASMFLAGS_ELF=		-f elf
+NASMFLAGS_a.out=	-f aoutb
+.endif
 
 .if defined(SDL_USE_NAS)
 .  include "../../audio/nas/buildlink2.mk"
