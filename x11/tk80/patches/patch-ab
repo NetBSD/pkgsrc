@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.9 1999/04/01 13:38:46 agc Exp $
+$NetBSD: patch-ab,v 1.10 1999/04/03 00:32:43 tron Exp $
 
 Adjust for libtool operation.
 
---- Makefile.in.orig	Tue Mar  9 06:53:50 1999
-+++ Makefile.in	Thu Apr  1 13:47:14 1999
+--- Makefile.in.orig	Tue Mar  9 07:53:50 1999
++++ Makefile.in	Sat Apr  3 02:17:21 1999
 @@ -56,7 +56,9 @@
  BIN_DIR =		$(exec_prefix)/bin
  
@@ -24,14 +24,16 @@ Adjust for libtool operation.
  
  # To turn off the security checks that disallow incoming sends when
  # the X server appears to be insecure, reverse the comments on the
-@@ -148,7 +150,7 @@
+@@ -148,8 +150,8 @@
  # "install" around;  better to use the install-sh script that comes
  # with the distribution, which is slower but guaranteed to work.
  
 -INSTALL = @srcdir@/install-sh -c
+-INSTALL_PROGRAM =	${INSTALL}
 +INSTALL = install -c
- INSTALL_PROGRAM =	${INSTALL}
++INSTALL_PROGRAM =	${INSTALL} -m 755 -s
  INSTALL_DATA =		${INSTALL} -m 644
+ 
  
 @@ -307,9 +309,7 @@
  # The following target is configured by autoconf to generate either
@@ -79,7 +81,8 @@ Adjust for libtool operation.
 +	@${LIBTOOL} --mode=install $(INSTALL_DATA) ${TK_LIB_FILE:.a=.la} $(LIB_INSTALL_DIR)/$(TK_LIB_FILE)
  	@chmod 555 $(LIB_INSTALL_DIR)/$(TK_LIB_FILE)
  	@echo "Installing wish"
- 	@$(INSTALL_PROGRAM) wish $(BIN_INSTALL_DIR)/wish$(VERSION)
+-	@$(INSTALL_PROGRAM) wish $(BIN_INSTALL_DIR)/wish$(VERSION)
++	@${LIBTOOL} --mode=install $(INSTALL_PROGRAM) wish $(BIN_INSTALL_DIR)/wish$(VERSION)
  	@echo "Installing tkConfig.sh"
 -	@$(INSTALL_DATA) tkConfig.sh $(LIB_INSTALL_DIR)/tkConfig.sh
 +	@mkdir -p $(LIB_INSTALL_DIR)/tk$(VERSION)
