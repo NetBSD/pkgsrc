@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/02/17 22:13:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/17 22:40:30 jmmv Exp $
 #
 
 DISTNAME=		gnopernicus-0.7.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnopernicus/0.7/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,10 +16,25 @@ DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
+USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+PKG_SYSCONFSUBDIR=	gnopernicus
+OWN_DIRS+=		${PKG_SYSCONFDIR}/translation_tables
+EGDIR=			${PREFIX}/share/examples/gnopernicus
+
+CONF_FILES=		${EGDIR}/translation_tables/de.a2b \
+			${PKG_SYSCONFDIR}/translation_tables/de.a2b
+CONF_FILES+=		${EGDIR}/translation_tables/en_US.a2b \
+			${PKG_SYSCONFDIR}/translation_tables/en_US.a2b
+CONF_FILES+=		${EGDIR}/translation_tables/es.a2b \
+			${PKG_SYSCONFDIR}/translation_tables/es.a2b
+CONF_FILES+=		${EGDIR}/translation_tables/sv.a2b \
+			${PKG_SYSCONFDIR}/translation_tables/sv.a2b
 
 .include "../../mk/bsd.prefs.mk"
 
