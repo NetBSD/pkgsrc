@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.7 2001/04/09 01:44:39 dmcmahill Exp $
+$NetBSD: patch-ae,v 1.8 2002/03/14 22:09:35 dmcmahill Exp $
 
 use a bsd style makefile for building shared libs
 
@@ -30,7 +30,7 @@ use a bsd style makefile for building shared libs
 -## or remove both the ld and mv lines above.
 -
 +CPPFLAGS+= -Wcast-align -DNO_ONEXIT -DSkip_f2c_Undefs
-+NOGCCERROR=	yes
++NOGCCERROR=	#defined
 +MKLINT=	no
  MISC =	F77_aloc.o Version.o main.o s_rnge.o abort_.o getarg_.o iargc_.o \
  	getenv_.o signal_.o s_stop.o s_paus.o system_.o cabs.o\
