@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.9 2004/12/30 21:56:21 minskim Exp $
+$NetBSD: patch-al,v 1.10 2005/01/18 18:22:34 tv Exp $
 
---- configure.orig	2004-05-07 14:13:40.000000000 -0500
+--- configure.orig	2004-05-07 15:13:40.000000000 -0400
 +++ configure
 @@ -1440,6 +1440,8 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
@@ -16,7 +16,7 @@ $NetBSD: patch-al,v 1.9 2004/12/30 21:56:21 minskim Exp $
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
 -    Linux*|GNU*|NetBSD*)
-+    Linux*|GNU*|NetBSD*|FreeBSD*)
++    Linux*|GNU*|NetBSD*|FreeBSD*|Interix*)
  	  LDLIBRARY='libpython$(VERSION).so'
  	  BLDLIBRARY='-L. -lpython$(VERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
@@ -72,7 +72,33 @@ $NetBSD: patch-al,v 1.9 2004/12/30 21:56:21 minskim Exp $
  	dgux*) LDSHARED="ld -G";;
  	BSD/OS*/4*) LDSHARED="gcc -shared";;
  	OpenBSD*|FreeBSD*)
-@@ -13855,6 +13870,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -10104,7 +10119,8 @@ then
+ 		else
+ 			LDSHARED="ld -Bshareable ${LDFLAGS}"
+ 		fi;;
+-	NetBSD*) LDSHARED="cc -shared ${LDFLAGS}";;
++	NetBSD*) LDSHARED='$(CC) -shared ${LDFLAGS}';;
++	Interix*) LDSHARED='$(CC) -shared ${LDFLAGS}';; # XXX tv needs image-base hack
+ 	OpenUNIX*|UnixWare*)
+ 		if test "$GCC" = "yes"
+ 		then LDSHARED='$(CC) -shared'
+@@ -10137,6 +10153,7 @@ then
+ 	Linux*|GNU*) CCSHARED="-fPIC";;
+ 	BSD/OS*/4*) CCSHARED="-fpic";;
+ 	FreeBSD*|NetBSD*|OpenBSD*) CCSHARED="-fPIC";;
++	Interix*) CCSHARED="";;
+ 	OpenUNIX*|UnixWare*)
+ 		if test "$GCC" = "yes"
+ 		then CCSHARED="-fPIC"
+@@ -10196,6 +10213,7 @@ then
+ 		then
+ 			LINKFORSHARED="-Wl,--export-dynamic"
+ 		fi;;
++	Interix*) LINKFORSHARED="-Wl,-E";;
+ 	SunOS/5*) case $CC in
+ 		  *gcc*)
+ 		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null
+@@ -13855,6 +13873,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
  #include "confdefs.h"
