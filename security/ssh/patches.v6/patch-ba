@@ -1,0 +1,11 @@
+--- configure.orig	Wed Jul  7 07:44:35 1999
++++ configure	Thu Jul  8 09:34:37 1999
+@@ -1031,8 +1031,6 @@
+   egrep "yes" >/dev/null 2>&1; then
+   rm -rf conftest*
+   ipv6type=$i;
+-				ipv6lib=inet6;
+-				ipv6libdir=/usr/local/v6/lib;
+ 				CPPFLAGS="-DINET6 $CPPFLAGS"
+ fi
+ rm -f conftest*
