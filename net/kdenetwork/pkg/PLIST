@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1999/02/17 22:44:22 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/02/18 23:37:56 tron Exp $
 bin/kdecode
 bin/kmail
 bin/knu
@@ -688,7 +688,6 @@ share/kde/toolbar/mini-ktalk.xpm
 share/kde/toolbar/kcontrol.xpm
 share/kde/toolbar/mini-connect.xpm
 share/kde/toolbar/mini-clock.xpm
-@dirrm share/kde/sounds
 @dirrm share/doc/kde/HTML/it/ktalkd
 @dirrm share/doc/kde/HTML/fr/ktalkd
 @dirrm share/doc/kde/HTML/fr
