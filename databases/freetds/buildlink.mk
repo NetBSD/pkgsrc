@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/07/02 04:40:37 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/07/02 05:35:20 jlam Exp $
 #
 # This Makefile fragment is included by packages that use freetds.
 #
@@ -24,13 +24,6 @@ BUILDLINK_PREFIX.freetds=	${LOCALBASE}
 BUILDLINK_FILES.freetds=	freetds/include/*
 BUILDLINK_FILES.freetds+=	freetds/lib/*
 BUILDLINK_FILES.freetds+=	freetds/interfaces
-
-REPLACE_BUILDLINK_SED+=	\
-	-e "s|-I${BUILDLINK_DIR}/freetds/|-I${LOCALBASE}/freetds/|g"	\
-	-e "s|-L${BUILDLINK_DIR}/freetds/|-L${LOCALBASE}/freetds/|g"
-BUILDLINK_CONFIG_WRAPPER_SED+=	\
-	-e "s|-I${LOCALBASE}/freetds/|-I${BUILDLINK_DIR}/freetds/|g"	\
-	-e "s|-L${LOCALBASE}/freetds/|-L${BUILDLINK_DIR}/freetds/|g"
 
 BUILDLINK_TARGETS.freetds=	freetds-buildlink
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.freetds}
