@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6849 2004/08/11 22:16:54 minskim Exp $
+$NetBSD: CHANGES,v 1.6850 2004/08/12 03:39:55 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3791,3 +3791,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xorg-server to 6.7.0nb1 [recht 2004-08-11]
 	Updated gcc34 to 3.4.1nb4 [shannonjr 2004-08-11]
 	Updated imhangul to 0.9.11 [minskim 2004-08-11]
+	Added hre-0.9.7 [minskim 2004-08-12]
