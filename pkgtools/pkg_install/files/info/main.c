@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.10 2004/05/08 14:51:23 jlam Exp $	*/
+/*	$NetBSD: main.c,v 1.11 2004/08/20 20:09:53 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.14 1997/10/08 07:47:26 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.10 2004/05/08 14:51:23 jlam Exp $");
+__RCSID("$NetBSD: main.c,v 1.11 2004/08/20 20:09:53 jlam Exp $");
 #endif
 #endif
 
@@ -50,7 +50,7 @@ __RCSID("$NetBSD: main.c,v 1.10 2004/05/08 14:51:23 jlam Exp $");
 #include "lib.h"
 #include "info.h"
 
-static const char Options[] = "aBbcDde:fFhIiK:kLl:mNnpQ:qRrsSvV";
+static const char Options[] = ".aBbcDde:fFhIiK:kLl:mNnpQ:qRrsSvV";
 
 int     Flags = 0;
 Boolean AllInstalled = FALSE;
@@ -63,12 +63,13 @@ size_t  PlayPenSize = sizeof(PlayPen);
 char   *CheckPkg = NULL;
 size_t  termwidth = 0;
 lpkg_head_t pkgs;
+int	usedot;
 
 static void
 usage(void)
 {
 	fprintf(stderr, "%s\n%s\n%s\n%s\n",
-	    "usage: pkg_info [-BbcDdFfIikLmNnpqRrSsVvh] [-e package] [-l prefix]",
+	    "usage: pkg_info [-.BbcDdFfhIikLmNnpqRrSsVv] [-e package] [-K pkg_dbdir] [-l prefix]",
 	    "                pkg-name [pkg-name ...]",
 	    "       pkg_info -a [flags]",
 	    "       pkg_info -Q variable pkg-name [pkg-name ...]");
@@ -85,6 +86,10 @@ main(int argc, char **argv)
 	setprogname(argv[0]);
 	while ((ch = getopt(argc, argv, Options)) != -1)
 		switch (ch) {
+		case '.':
+			usedot = 1;
+			break;
+
 		case 'a':
 			AllInstalled = TRUE;
 			break;
