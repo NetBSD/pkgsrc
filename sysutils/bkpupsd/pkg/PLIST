@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/04 11:06:03 wiz Exp $
+etc/rc.d/bkpupsd.sample
+etc/upstab
+libexec/bkpupsd/battery.shutdown
+libexec/bkpupsd/line.lost
+libexec/bkpupsd/line.recover
+libexec/bkpupsd/line.shutdown
+man/cat5/upstab.0
+man/cat8/bkpupsd.0
+man/man5/upstab.5
+man/man8/bkpupsd.8
+sbin/bkpupsd
+@dirrm libexec/bkpupsd
