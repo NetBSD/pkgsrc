@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/08/06 16:02:50 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/08/10 05:18:58 schmonz Exp $
 bin/getmail
 bin/getmail_maildir
 bin/getmail_mbox
@@ -24,9 +24,6 @@ share/doc/getmail/troubleshooting.txt
 ${PYSITELIB}/getmailcore/__init__.py
 ${PYSITELIB}/getmailcore/__init__.pyc
 ${PYSITELIB}/getmailcore/__init__.pyo
-${PYSITELIB}/getmailcore/_imap4fix.py
-${PYSITELIB}/getmailcore/_imap4fix.pyc
-${PYSITELIB}/getmailcore/_imap4fix.pyo
 ${PYSITELIB}/getmailcore/_pop3ssl.py
 ${PYSITELIB}/getmailcore/_pop3ssl.pyc
 ${PYSITELIB}/getmailcore/_pop3ssl.pyo
