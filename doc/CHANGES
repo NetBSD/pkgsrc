@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7587 2004/10/28 11:32:25 markd Exp $
+$NetBSD: CHANGES,v 1.7588 2004/10/28 11:37:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4914,3 +4914,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Template-Toolkit to 2.14 [wiz 2004-10-28]
 	Updated cabextract to 1.1 [wiz 2004-10-28]
 	Updated koffice to 1.3.4 [markd 2004-10-28]
+	Updated pgpdump to 0.23 [taca 2004-10-28]
