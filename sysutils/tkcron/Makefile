@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:53:54 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:24:40 martti Exp $
 #
 
 DISTNAME=	tkcron-2.12
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.neosoft.com/languages/tcl/alcatel/code/
 EXTRACT_SUFX=	.tcl.gz
 
 MAINTAINER=	tech-pkg@NetBSD.org
-COMMENT=	graphical frontend to crontab
+COMMENT=	Graphical frontend to crontab
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 
