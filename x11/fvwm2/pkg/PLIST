@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/10 01:03:18 hubertf Exp $
 bin/fvwm2
 bin/xpmroot
 lib/X11/fvwm2/FvwmAudio
@@ -151,26 +152,26 @@ lib/X11/fvwm2/pixmaps/xterm-sun.xpm
 lib/X11/fvwm2/pixmaps/xterm.xpm
 lib/X11/fvwm2/pixmaps/xv.xpm
 lib/X11/fvwm2/pixmaps/xv2.xpm
-man/man1/fvwm2.1.gz
-man/man1/xpmroot.1.gz
-man/man1/FvwmAudio.1.gz
-man/man1/FvwmAuto.1.gz
-man/man1/FvwmBacker.1.gz
-man/man1/FvwmBanner.1.gz
-man/man1/FvwmButtons.1.gz
-man/man1/FvwmCascade.1.gz
-man/man1/FvwmCpp.1.gz
-man/man1/FvwmForm.1.gz
-man/man1/FvwmIconBox.1.gz
-man/man1/FvwmIconMan.1.gz
-man/man1/FvwmIdent.1.gz
-man/man1/FvwmM4.1.gz
-man/man1/FvwmPager.1.gz
-man/man1/FvwmSave.1.gz
-man/man1/FvwmSaveDesk.1.gz
-man/man1/FvwmScroll.1.gz
-man/man1/FvwmTalk.1.gz
-man/man1/FvwmTile.1.gz
-man/man1/FvwmWinList.1.gz
+man/cat1/fvwm2.0.gz
+man/cat1/xpmroot.0.gz
+man/cat1/FvwmAudio.0.gz
+man/cat1/FvwmAuto.0.gz
+man/cat1/FvwmBacker.0.gz
+man/cat1/FvwmBanner.0.gz
+man/cat1/FvwmButtons.0.gz
+man/cat1/FvwmCascade.0.gz
+man/cat1/FvwmCpp.0.gz
+man/cat1/FvwmForm.0.gz
+man/cat1/FvwmIconBox.0.gz
+man/cat1/FvwmIconMan.0.gz
+man/cat1/FvwmIdent.0.gz
+man/cat1/FvwmM4.0.gz
+man/cat1/FvwmPager.0.gz
+man/cat1/FvwmSave.0.gz
+man/cat1/FvwmSaveDesk.0.gz
+man/cat1/FvwmScroll.0.gz
+man/cat1/FvwmTalk.0.gz
+man/cat1/FvwmTile.0.gz
+man/cat1/FvwmWinList.0.gz
 @dirrm lib/X11/fvwm2/pixmaps
 @dirrm lib/X11/fvwm2
