@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.334 2002/09/11 20:52:19 wiz Exp $
+# $NetBSD: Makefile,v 1.335 2002/10/01 17:44:13 drochner Exp $
 #
 
 COMMENT=	Networking tools
@@ -194,7 +194,9 @@ SUBDIR+=	publicfile
 SUBDIR+=	pureftpd
 SUBDIR+=	pxe
 SUBDIR+=	py-IP
+SUBDIR+=	py-google
 SUBDIR+=	py-soaplib
+SUBDIR+=	py-soappy
 SUBDIR+=	py-xmlrpclib
 SUBDIR+=	ra-pna-proxy
 SUBDIR+=	ra-rtsp-proxy
