@@ -1,0 +1,7 @@
+--- mpeg.h.orig	Sat Jun 20 00:49:18 1998
++++ mpeg.h	Sat Jun 20 00:49:29 1998
+@@ -103,3 +103,3 @@
+ Boolean RewindMPEG PROTO((FILE *MPEGfile, ImageDesc *Image));
+-void    SetMPEGOption PROTO((MPEGOptionEnum Option, int value));
++void    SetMPEGOption PROTO((MPEGOptionEnum Option, long value));
+ Boolean GetMPEGFrame PROTO((char *Frame));
