@@ -1,4 +1,4 @@
-.\" $NetBSD: sysbuild.8,v 1.4 2002/12/08 11:37:18 jmmv Exp $
+.\" $NetBSD: sysbuild.8,v 1.5 2002/12/18 11:28:09 jmmv Exp $
 .\"
 .\" sysbuild - Automatic NetBSD system builds
 .\" Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd November 16, 2002
+.Dd December 18, 2002
 .Dt SYSBUILD 8
 .Os
 .Sh NAME
@@ -120,6 +120,32 @@ and
 .Va DESTDIR
 is set to
 .Pa $BUILDDIR/root .
+.Pp
+Depends on
+.Ql clean .
+.Pp
+This target requires
+.Ql @SYSBUILD_USER@
+privileges.
+.It build-x-release
+Build a full release of the X11R6 window system.
+.Pp
+Release files are placed inside the directory pointed by
+.Va RELEASEDIR .
+During the build,
+.Va BSDOBJDIR
+is set to
+.Pa $BUILDDIR/obj
+and
+.Va DESTDIR
+is set to
+.Pa $BUILDDIR/root .
+The source tree,
+.Va XSRCDIR ,
+is mounted below
+.Pa $BUILDDIR/root
+using
+.Xr mount_union 8 .
 .Pp
 Depends on
 .Ql clean .
@@ -255,6 +281,16 @@ variable are installed.
 This target requires
 .Ql root
 privileges.
+.It install-x-sets
+Install built X11R6 sets, placed inside
+.Pa $RELEASEDIR/binary/sets .
+Only sets specified in the
+.Va XSETS
+variable are installed.
+.Pp
+This target requires
+.Ql root
+privileges.
 .It update-srcs Op Ar dir ...
 Use
 .Xr cvs 1
@@ -331,6 +367,17 @@ The first one is the kernel that will be installed when running
 Directory which holds kernel configuration files.
 Defaults to
 .Pa @SYSBUILD_HOMEDIR@ .
+.It MOUNT_PRECMD
+Specifies a command to be called to gain privileges when running
+.Xr mount_union 8
+and
+.Xr umount 8 .
+This is not needed if you have
+.Va vfs.generic.usermount
+set to
+.Ql 1
+in
+.Xr sysctl 8 .
 .It RELEASEDIR
 Base directory which will hold release files.
 .It MAILTO
@@ -360,6 +407,9 @@ Path to
 .Nx
 source directory tree, usually
 .Pa /usr/src .
+.It XSRCDIR
+Path to X11R6 source tree, usually
+.Pa /usr/xsrc .
 .El
 .Sh SEE ALSO
 .Xr crontab 1 ,
@@ -367,6 +417,8 @@ source directory tree, usually
 .Xr mk.conf 5 ,
 .Xr cron 8 ,
 .Xr etcupdate 8 ,
+.Xr mount_union 8 ,
+.Xr umount 8 ,
 .Pa /usr/src/BUILDING
 .Sh CRON JOBS
 .Xr cron 8
