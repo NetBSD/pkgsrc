@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.29 2003/12/21 01:21:52 grant Exp $
+# $NetBSD: install,v 1.30 2004/01/08 14:19:29 grant Exp $
 
 if [ -z "${CONF_FILES}" -a -z "${CONF_FILES_PERMS}" -a			\
      -z "${SUPPORT_FILES}" -a -z "${SUPPORT_FILES_PERMS}" -o		\
@@ -274,7 +274,7 @@ EOF
 			fi
 		else
 			if [ -e "${samplefile}" ]; then
-				${ECHO} "     ${file}"
+				${ECHO} "	${file}"
 				${CP} "${samplefile}" "${file}"
 				${CHMOD} @SUPPORT_FILES_MODE@ "${file}"
 			fi
@@ -353,7 +353,6 @@ EOF
 		${CHGRP} "${group}" "${file}"
 		${CHMOD} ${mode} "${file}"
 	done
-	echo ""
 	if ! msgempty; then
 		${ECHO} "==========================================================================="
 		msgprint
