@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.91 2003/07/13 13:53:55 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2003/09/08 18:08:33 jmmv Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=		6
+PKGREVISION=		7
 
 COMMENT=		Core component of GNU Network Object Management Environment
 
@@ -13,6 +13,8 @@ DEPENDS+=		gnome-session>=1.4.2:../../x11/gnome1-session
 DEPENDS+=		gnome-panel>=1.4.2:../../x11/gnome1-panel
 BUILD_DEPENDS+=		gtk-doc>=0.9:../../textproc/gtk-doc
 BUILD_USES_MSGFMT=	YES
+
+CONFLICTS+=		gnome2-terminal-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 .if (${LOCALBASE} == ${X11PREFIX})
