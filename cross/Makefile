@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/07/17 18:51:52 wennmach Exp $
+# $NetBSD: Makefile,v 1.35 2003/07/17 19:10:56 wennmach Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -8,6 +8,7 @@ SUBDIR+=	avr-binutils
 SUBDIR+=	avr-gcc
 SUBDIR+=	avr-gdb
 SUBDIR+=	avr-libc
+SUBDIR+=	avrdude
 SUBDIR+=	bfd-crunchide
 SUBDIR+=	bfd-mdsetimage
 SUBDIR+=	binutils
