@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.936 2003/10/11 12:58:46 heinz Exp $
+$NetBSD: TODO,v 1.937 2003/10/11 16:37:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -177,7 +177,6 @@ Suggested package updates
 	o gtetrinet-0.7.4
 	o gtkglext-1.0.3
 	o gtkmm-2.2.8
-	o gtk2-2.2.4
 	o gtksee-0.5.3
 	o guile-1.6.4
 	o hatari-0.40
@@ -222,7 +221,6 @@ Suggested package updates
 	o mowitz-0.3.0
 	o mozilla-thunderbird-0.2
 	o mplayer-1.0pre2
-	o mpgtx-1.3 [pkg/19082]
 	o mrproject-0.9.1
 	o mtools-3.9.9
 	o multi-gnome-terminal-1.6.2
