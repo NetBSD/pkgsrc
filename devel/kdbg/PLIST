@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:19 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/04 20:45:31 skrll Exp $
 bin/kdbg
 share/doc/kde/HTML/de/kdbg/argspwdenv.html
 share/doc/kde/HTML/de/kdbg/breakptlist.html
@@ -48,7 +48,7 @@ share/doc/kde/HTML/ru/kdbg/threads.html
 share/doc/kde/HTML/ru/kdbg/tips.html
 share/doc/kde/HTML/ru/kdbg/types.html
 share/doc/kde/HTML/ru/kdbg/watches.html
-share/kde/applnk/Development/kdbg.kdelnk
+share/kde/applnk/Development/kdbg.desktop
 share/kde/apps/kdbg/pics/brkcond.xpm
 share/kde/apps/kdbg/pics/brkdis.xpm
 share/kde/apps/kdbg/pics/brkena.xpm
@@ -77,8 +77,10 @@ share/kde/apps/kdbg/types/kdecore.kdbgtt
 share/kde/apps/kdbg/types/kdecore3.kdbgtt
 share/kde/apps/kdbg/types/qt.kdbgtt
 share/kde/apps/kdbg/types/qt2.kdbgtt
-share/kde/icons/kdbg.xpm
-share/kde/icons/mini/mini-kdbg.xpm
+share/kde/icons/hicolor/16x16/apps/kdbg.png
+share/kde/icons/hicolor/32x32/apps/kdbg.png
+share/kde/icons/locolor/16x16/apps/kdbg.png
+share/kde/icons/locolor/32x32/apps/kdbg.png
 share/kde/locale/cs/LC_MESSAGES/kdbg.mo
 share/kde/locale/da/LC_MESSAGES/kdbg.mo
 share/kde/locale/de/LC_MESSAGES/kdbg.mo
@@ -99,9 +101,51 @@ share/kde/locale/sr/LC_MESSAGES/kdbg.mo
 share/kde/locale/sv/LC_MESSAGES/kdbg.mo
 share/kde/locale/tr/LC_MESSAGES/kdbg.mo
 share/kde/locale/zh_CN.GB2312/LC_MESSAGES/kdbg.mo
+@dirrm share/kde/locale/zh_CN.GB2312/LC_MESSAGES
+@dirrm share/kde/locale/zh_CN.GB2312
+@dirrm share/kde/locale/tr/LC_MESSAGES
+@dirrm share/kde/locale/tr
+@dirrm share/kde/locale/sv/LC_MESSAGES
+@dirrm share/kde/locale/sv
+@dirrm share/kde/locale/sr/LC_MESSAGES
+@dirrm share/kde/locale/sr
+@dirrm share/kde/locale/sk/LC_MESSAGES
+@dirrm share/kde/locale/sk
+@dirrm share/kde/locale/ru/LC_MESSAGES
+@dirrm share/kde/locale/ru
+@dirrm share/kde/locale/ro/LC_MESSAGES
+@dirrm share/kde/locale/ro
+@dirrm share/kde/locale/pt/LC_MESSAGES
+@dirrm share/kde/locale/pt
+@dirrm share/kde/locale/pl/LC_MESSAGES
+@dirrm share/kde/locale/pl
+@dirrm share/kde/locale/no_NY/LC_MESSAGES
+@dirrm share/kde/locale/no_NY
+@dirrm share/kde/locale/no/LC_MESSAGES
+@dirrm share/kde/locale/no
+@dirrm share/kde/locale/ja/LC_MESSAGES
+@dirrm share/kde/locale/ja
+@dirrm share/kde/locale/it/LC_MESSAGES
+@dirrm share/kde/locale/it
+@dirrm share/kde/locale/hu/LC_MESSAGES
+@dirrm share/kde/locale/hu
+@dirrm share/kde/locale/hr/LC_MESSAGES
+@dirrm share/kde/locale/hr
+@dirrm share/kde/locale/fr/LC_MESSAGES
+@dirrm share/kde/locale/fr
+@dirrm share/kde/locale/es/LC_MESSAGES
+@dirrm share/kde/locale/es
+@dirrm share/kde/locale/de/LC_MESSAGES
+@dirrm share/kde/locale/de
+@dirrm share/kde/locale/da/LC_MESSAGES
+@dirrm share/kde/locale/da
+@dirrm share/kde/locale/cs/LC_MESSAGES
+@dirrm share/kde/locale/cs
 @dirrm share/kde/apps/kdbg/types
 @dirrm share/kde/apps/kdbg/pics
 @dirrm share/kde/apps/kdbg
 @dirrm share/doc/kde/HTML/ru/kdbg
+@dirrm share/doc/kde/HTML/ru
 @dirrm share/doc/kde/HTML/en/kdbg
 @dirrm share/doc/kde/HTML/de/kdbg
+@dirrm share/doc/kde/HTML/de

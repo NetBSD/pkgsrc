@@ -1,41 +1,42 @@
-# $NetBSD: Makefile,v 1.9 2001/11/29 19:46:11 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/12/04 20:45:31 skrll Exp $
 
-DISTNAME=	kdevelop-1.3
+DISTNAME=	kdevelop-2.0.2
 PKGNAME=	${DISTNAME:S/-/-base-/}
 CATEGORIES=	devel kde
-MASTER_SITES=	ftp://ftp.e-technik.fh-muenchen.de/pub/unix/ide/KDevelop/
-EXTRACT_SUFX=	.tar.bz2
-
-MAINTAINER=	wulf@netbsd.org
-HOMEPAGE=       http://www.kdevelop.org/
 COMMENT=	Base modules for IDE for Unix/X11/KDE
 
+.include "../../x11/kde2/Makefile.kde2"
+
+HOMEPAGE=       http://www.kdevelop.org/
+
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=       automake>=1.4:../../devel/automake
-DEPENDS+=       kdebase-1.*:../../x11/kdebase
-DEPENDS+=       kdoc-2*:../../textproc/kdoc
-DEPENDS+=       htdig>=3.1.5:../../www/htdig
-DEPENDS+=       a2ps>=4.12:../../print/a2ps
-DEPENDS+=	kdelibdocs-1*:../../x11/kdelibdocs
+USE_BUILDLINK_ONLY=	yes
+DEPENDS+=		automake>=1.4:../../devel/automake
+DEPENDS+=		kdoc-2.2.2:../../textproc/kdoc
+DEPENDS+=		htdig>=3.1.5:../../www/htdig
+DEPENDS+=		a2ps>=4.12:../../print/a2ps
+DEPENDS+=		kdelibdocs>=2.2.2:../../x11/kdelibdocs2
+DEPENDS+=		qt2-designer-kde>=2.3.1:../../x11/qt2-designer-kde
+DEPENDS+=		kdesdk>=2.2.2:../../devel/kdesdk2
 
 CONFLICTS+=	kdevelop<=1.3
 
 USE_PERL5=	yes
-USE_X11BASE=	yes
-USE_GMAKE=	yes
-USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
 
-EVAL_PREFIX+=	QT1DIR=qt1 KDEBASEDIR=kdebase
-CONFIGURE_ARGS=	--with-extra-includes=${LOCALBASE}/include \
-		--with-extra-libs=${LOCALBASE}/lib \
-		--with-qt-dir=${QT1DIR}/qt1 \
-		--with-qtdoc-dir=${QT1DIR}/qt1/share/doc/qt/html \
-		--with-kdelibsdoc-dir=${KDEBASEDIR}/share/doc/kde/HTML/default/kdelibs \
-		--enable-kdoc2
-CONFIGURE_ENV=	"KDEDIR=${KDEBASEDIR} QTDIR=${QT1DIR}/qt1"
+REPLACE_PERL= \
+	${WRKSRC}/kdevelop/tools/processesend.pl \
+	${WRKSRC}/kdevelop/tools/processes.pl.in
 
-CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-Wl,-R${QT1DIR}/qt1/lib
+EVAL_PREFIX+=	\
+	QT2DIR=qt2 \
+	KDELIBDIR=kdelibs
 
+CONFIGURE_ARGS+= \
+	--with-qtdoc-dir=${QT2DIR}/qt2/doc/html \
+	--with-kdelibsdoc-dir=${KDELIBDIR}/share/doc/kde/HTML/en/kdelibs \
+	--enable-kdoc2
+
+.include "../../x11/kde2/buildlink.mk"
+.include "../../x11/kdebase2/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

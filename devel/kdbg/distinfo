@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:25 wiz Exp $
+$NetBSD: distinfo,v 1.3 2001/12/04 20:45:32 skrll Exp $
 
-SHA1 (kdbg-1.2.0.tar.gz) = 96478f07b92cb859af26e6c3d9dd34d980814601
-Size (kdbg-1.2.0.tar.gz) = 432392 bytes
-SHA1 (patch-aa) = 57aa30c6fcdcee87c8c1e0a535233c48e4c53c1c
+SHA1 (kdbg-1.2.2.tar.gz) = 1912f37d2fab78f9ec1ef9fe169b3426ce0e3f17
+Size (kdbg-1.2.2.tar.gz) = 466637 bytes
+SHA1 (patch-aa) = a3cc86e07f879fd2083b940f9a5011687878440b
 SHA1 (patch-ab) = b86d844c67467561e7b3a800b0bf119a06c899a4
