@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/10 10:03:23 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2000/10/15 07:20:42 veego Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp
 
 DISTNAME=	tin-1.4.4
@@ -17,21 +17,35 @@ HOMEPAGE=	http://www.tin.org/
 
 GNU_CONFIGURE=	yes
 
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(TIN_USE_INN_SPOOL) && ${TIN_USE_INN_SPOOL} == YES
+INN_DATA_DIR?=	/var/news
+.endif
+
 # Curses support too buggy to activate
 #                 --enable-curses \
 #                 --with-ncurses \
 #
-CONFIGURE_ARGS=	--with-nntp-default-server=news  \
+CONFIGURE_ARGS+= --with-nntp-default-server=news  \
 		--with-mime-default-charset=ISO-8859-1 \
 		--enable-forgery \
 		--enable-break-long-lines \
 		--with-ispell=${PREFIX}/bin/ispell \
 		--with-metamail=${PREFIX}/bin/metamail \
-		--enable-nntp-only \
 		--disable-mime-strict-charset \
 		--with-defaults-dir=${PREFIX}/etc \
 		--enable-mh-mail-handling \
 		--with-coffee
+.if defined(TIN_USE_INN_SPOOL) && ${TIN_USE_INN_SPOOL} == YES
+CONFIGURE_ARGS+= --with-inews-dir=${PREFIX}/inn/bin \
+		--with-libdir=${INN_DATA_DIR}/db \
+		--with-spooldir=${INN_DATA_DIR}/spool/articles \
+		--with-nov-dir=${INN_DATA_DIR}/spool/overview
+.else
+CONFIGURE_ARGS+= --enable-nntp-only
+.endif
+
 MAKEFILE=	makefile
 ALL_TARGET=	build
 
