@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.214 2001/11/26 22:06:58 jlam Exp $
+# $NetBSD: Packages.txt,v 1.215 2001/11/27 03:03:11 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -675,7 +675,7 @@ will compile and run perfectly on NetBSD. The files are applied
 successively in alphabetic order (as returned by a shell "patches/patch-*"
 glob expansion), so patch-aa is applied before patch-ab etc.
 
-The patch-?? files should be in diff -bu format, and apply without
+The patch-?? files should be in "diff -bu" format, and apply without
 a fuzz to avoid problems (To force patches to apply with fuzz you
 can set PATCH_FUZZ_FACTOR=-F2).  Furthermore, do not put changes
 for more than one file into a single patch-file, as this will make
