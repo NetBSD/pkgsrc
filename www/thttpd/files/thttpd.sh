@@ -1,19 +1,20 @@
 #!/bin/sh
 #
-# $NetBSD: thttpd.sh,v 1.1 2000/07/27 12:42:08 jlam Exp $
+# $NetBSD: thttpd.sh,v 1.2 2000/08/06 02:51:59 jlam Exp $
 #
 
 name="thttpd"
+command=@PREFIX@/sbin/${name}
 pidfile="/var/run/${name}.pid"
 
-command=${1:-start}
+cmd=${1:-start}
 
-case ${command} in
+case ${cmd} in
 start)
-	if [ -x @PREFIX@/sbin/thttpd -a -f /etc/thttpd.conf ]
+	if [ -x ${command} -a -f /etc/${name}.conf ]
 	then
 		echo "Starting ${name}."
-		@PREFIX@/sbin/thttpd -i ${pidfile} -C /etc/thttpd.conf
+		${command} -i ${pidfile} -C /etc/${name}.conf
 	fi
 	;;
 stop)
