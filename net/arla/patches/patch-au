@@ -1,0 +1,24 @@
+$NetBSD: patch-au,v 1.1 2000/10/18 16:32:59 wennmach Exp $
+
+We choose to install LKMs into $prefix/lkm, so we have to pay the price
+now and change startarla.
+
+--- xfs/bsd/bin/startarla.in.orig	Wed Oct 18 16:54:09 2000
++++ xfs/bsd/bin/startarla.in	Wed Oct 18 16:55:09 2000
+@@ -12,6 +12,7 @@
+ PATH="/sbin:/usr/sbin:/usr/bin:/bin:%bindir%"
+ BINDIR=%bindir%
+ CACHEDIR=%ARLACACHEDIR%
++LKMDIR=%lkmdir%
+ 
+ if [ ! -e $CACHEDIR ] ; then
+    mkdir $CACHEDIR
+@@ -27,7 +28,7 @@
+ elif [ -x /sbin/kmodload ]; then
+   kmodload $BINDIR/xfs_mod.o
+ else
+-  modload -e xfs_mod -p $BINDIR/xfs_makedev $BINDIR/xfs_mod.o
++  modload -e xfs_mod -p $BINDIR/xfs_makedev $LKMDIR/xfs_mod.o
+ fi
+ test -d /afs || mkdir /afs
+ mount_xfs /dev/xfs0 /afs
