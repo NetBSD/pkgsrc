@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8991 2005/02/01 14:28:05 hamajima Exp $
+$NetBSD: CHANGES,v 1.8992 2005/02/01 16:17:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -695,3 +695,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated squid to 2.5.7nb11 [taca 2005-02-01]
 	Updated ov519view to 0.00nb1 [hamajima 2005-02-01]
 	Updated dtcp to 20040611nb3 [hamajima 2005-02-01]
+	Updated qalculate to 0.7.2 [adam 2005-02-01]
