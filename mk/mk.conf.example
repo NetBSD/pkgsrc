@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.102 1999/11/17 04:05:28 sakamoto Exp $
+# $NetBSD: mk.conf.example,v 1.103 1999/11/17 09:13:43 agc Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -17,507 +17,532 @@
 #	Firstly, definitions for NetBSD and package collection
 #
 
-#MANZ=				# gzip manual pages at installation time
-                                # Possible: defined, not defined
-                                # Default: not defined
+#MANZ=
+# gzip manual pages at installation time
+# Possible: defined, not defined
+# Default: not defined
 
-#OBJMACHINE=			# use machine-specific object directories,
-                                # e.g. work.i386, work.sparc
-                                # Possible: defined, not defined
-                                # Default: not defined
+#OBJMACHINE=
+# use machine-specific object directories, e.g.  work.i386, work.sparc
+# Possible: defined, not defined
+# Default: not defined
 
-#WRKOBJDIR=	/usr/tmp	# build here instead of in pkgsrc
-                                # Possible: any path
-                                # Default: not defined
+#WRKOBJDIR=	/usr/tmp
+# build here instead of in pkgsrc
+# Possible: any path
+# Default: not defined
 
-#UVM=				# Use the new UVM virtual memory subsystem
-                                # XXX this variable is obsolete - UVM is no
-                                # longer optional for NetBSD 1.4 and on
-                                # Possible: defined, not defined
-                                # Default: not defined
+#UVM=
+# Use the new UVM virtual memory subsystem XXX this variable is
+# obsolete - UVM is no longer optional for NetBSD 1.4 and on
+# Possible: defined, not defined
+# Default: not defined
 
-#USETBL=			# Run raw manual pages through tbl(1) before
-                                # piping through troff(1) when formatting
-                                # manual pages.
-                                # Possible: defined, not defined
-                                # Default: not defined
+#USETBL=
+# Run raw manual pages through tbl(1) before piping through troff(1)
+# when formatting manual pages.
+# Possible: defined, not defined
+# Default: not defined
 
 
 #
 # The following values are used to manage the packages collection as a whole.
 #
 
-#LOCALBASE=	/usr/local	# Where non-X-based packages will be installed
-                                # Possible: any path
-                                # Default: /usr/pkg
+#LOCALBASE=	/usr/local
+# Where non-X-based packages will be installed
+# Possible: any path
+# Default: /usr/pkg
 
-#CROSSBASE=	/usr/pkg/cross	# Where "cross" category packages install
-                                # Possible: any path
-                                # Default: ${LOCALBASE}/cross
+#CROSSBASE=	/usr/pkg/cross
+# Where "cross" category packages install
+# Possible: any path
+# Default: ${LOCALBASE}/cross
 
-#X11BASE=	/usr/X11R6	# Where X11 is installed on the system.
-                                # (and the default install path of X11 pkgs)
-                                # Possible: any path
-                                # Default: /usr/X11R6
+#X11BASE=	/usr/X11R6
+# Where X11 is installed on the system.
+# (and the default install path of X11 pkgs)
+# Possible: any path
+# Default: /usr/X11R6
 
-#MOTIFBASE=	/usr/X11R6	# Where Motif is installed on the system.
-                                # Possible: any path
-                                # Default: /usr/X11R6
+#MOTIFBASE=	/usr/X11R6
+# Where Motif is installed on the system.
+# Possible: any path
+# Default: /usr/X11R6
 
 #DISTDIR=	${PKGSRCDIR}/distfiles
-                                # Directory where original distribution
-                                # files are stored.
-                                # Possible: any path you like
-                                # Default: /usr/pkgsrc/distfiles
+# Directory where original distribution
+# files are stored.
+# Possible: any path you like
+# Default: /usr/pkgsrc/distfiles
 
 #DIST_PATH=	/cdrom/0/distfiles:${HOME}/distfiles
-                                # colon-delimited list of directories
-                                # in which to search for ${DISTFILES} and
-                                # ${PATCHFILES}. If the requested file is
-                                # not in any of the directories in
-                                # ${DIST_PATH}, it will be downloaded into
-                                # ${DISTDIR}. If the requested file is in
-                                # one of the directories in ${DIST_PATH},
-                                # a symbolic link will be made to it from
-                                # ${DISTDIR}. ${DIST_PATH} directories will
-                                # will be searched before ${DISTDIR}, letting
-                                # a CD hold the main distfiles archive, and
-                                # local ${DISTDIR} hold any updated distfiles,
-                                # for example.
-                                # Possible: any directories
-                                # Default: none
+# colon-delimited list of directories in which to search for
+# ${DISTFILES} and ${PATCHFILES}.  If the requested file is not in any
+# of the directories in ${DIST_PATH}, it will be downloaded into
+# ${DISTDIR}.  If the requested file is in one of the directories in
+# ${DIST_PATH}, a symbolic link will be made to it from ${DISTDIR}. 
+# ${DIST_PATH} directories will will be searched before ${DISTDIR},
+# letting a CD hold the main distfiles archive, and local ${DISTDIR}
+# hold any updated distfiles, for example.
+# Possible:  any directories
+# Default: none
 
 #PACKAGES=       ${PKGSRCDIR}/packages/${MACHINE_ARCH}
-                                # Store generated packages on a per-
-                                # architecture base
-                                # Possible: any path you like
-                                # Default: /usr/pkgsrc/packages
+# Store generated packages on a per-architecture base
+# Possible: any path you like
+# Default: /usr/pkgsrc/packages
 
-#PASSIVE_FETCH=			# Use ftp(1) in passive mode, for use behind
-                                # filtering firewalls.
-                                # (Set by default in ftp(1) in NetBSD-current)
-                                # Possible: defined, not defined
-                                # Default: not defined
+#PASSIVE_FETCH=
+# Use ftp(1) in passive mode, for use behind filtering firewalls. 
+# (Set by default in ftp(1) in NetBSD-current)
+# Possible: defined, not defined
+# Default: not defined
 
-#PATCH_FUZZ_FACTOR?=		# Fuzz factor to use when applying patches.
-                                # Will only be applied when using a patch(1)
-                                # that understands -F. This should be a "?="
-                                # setting, since package Makefiles may set
-                                # this value, before /etc/mk.conf is read.
-                                # Possible: "-Fn" where n is a number, none
-                                # Default: none
+#PATCH_FUZZ_FACTOR?=
+# Fuzz factor to use when applying patches.  Will only be applied when
+# using a patch(1) that understands -F.  This should be a "?="
+# setting, since package Makefiles may set this value, before
+# /etc/mk.conf is read.
+# Possible: "-Fn" where n is a number, none
+# Default: none
 
-#ACCEPTABLE_LICENSES=	shareware no-commercial-use fee-based-commercial-use
-                                # Whitespace-delimited list of the types of
-                                # license which are acceptable for installation.
-                                # (apart from standard "free" licenses such as
-                                # Berkeley/CMU and GPL).
-                                # Possible: fee-based-commercial-use,
-                                # 	no-commercial-use, no-profit, shareware
-                                # Default: none
+#ACCEPTABLE_LICENSES=	shareware no-commercial-use no-profit fee-based-commercial-use
+# Whitespace-delimited list of the types of license which are
+# acceptable for installation.  (apart from standard "free" licenses
+# such as Berkeley/CMU and GPL).
+# Possible:  shareware, no-commercial-use, no-profit, fee-based-commercial-use
+# Default: none
 
-#SPECIFIC_PKGS=			# Don't use the default of all packages (from
-                                # the top-level of the pkgsrc tree), and use the
-                                # values of the definitions SITE_SPECIFIC_PKGS,
-                                # HOST_SPECIFIC_PKGS, GROUP_SPECIFIC_PKGS, and
-                                # USER_SPECIFIC_PKGS.
-                                # Possible: defined, not defined
-                                # Default: not defined
+#SPECIFIC_PKGS=
+# Don't use the default of all packages (from the top-level of the
+# pkgsrc tree), and use the values of the definitions
+# SITE_SPECIFIC_PKGS, HOST_SPECIFIC_PKGS, GROUP_SPECIFIC_PKGS, and
+# USER_SPECIFIC_PKGS.
+# Possible: defined, not defined
+# Default: not defined
 
-#SITE_SPECIFIC_PKGS=		# List of packages that are wanted for each
-                                # host on the site. Each package in the list
-                                # is of the form <category>/<package>.
-                                # Possible: any combination of packages
-                                # Default: not set
+#SITE_SPECIFIC_PKGS=
+# List of packages that are wanted for each host on the site.  Each
+# package in the list is of the form <category>/<package>.
+# Possible: any combination of packages
+# Default: not set
 
-#HOST_SPECIFIC_PKGS=		# List of packages that are wanted for this
-                                # particular host/machine. Each package in the
-                                # list is of the form <category>/<package>.
-                                # Possible: any combination of packages
-                                # Default: not set
+#HOST_SPECIFIC_PKGS=
+# List of packages that are wanted for this particular host/machine. 
+# Each package in the list is of the form <category>/<package>.
+# Possible: any combination of packages
+# Default: not set
 
-#GROUP_SPECIFIC_PKGS=		# List of packages that are wanted for this
-                                # group of users. Each package in the list
-                                # is of the form <category>/<package>.
-                                # Possible: any combination of packages
-                                # Default: not set
+#GROUP_SPECIFIC_PKGS=
+# List of packages that are wanted for this group of users.  Each
+# package in the list is of the form <category>/<package>.
+# Possible: any combination of packages
+# Default: not set
 
-#USER_SPECIFIC_PKGS=		# List of packages that are wanted for this
-                                # particular user. Each package in the list
-                                # is of the form <category>/<package>.
-                                # Possible: any combination of packages
-                                # Default: not set
+#USER_SPECIFIC_PKGS=
+# List of packages that are wanted for this particular user.  Each
+# package in the list is of the form <category>/<package>.
+# Possible: any combination of packages
+# Default: not set
 
-#EXTRACT_USING_PAX=		# Use pax(1) to extract archives, rather than
-                                # GNU tar.
-                                # Possible: defined, not defined
-                                # Default: not defined
+#EXTRACT_USING_PAX=
+# Use pax(1) to extract archives, rather than GNU tar.
+# Possible: defined, not defined
+# Default: not defined
 
-#FAILOVER_FETCH=		# Perform a checksum at "make fetch" time.
-                                # If the checksum doesn't match the stored
-                                # value, try to retrieve the file from the
-                                # next site in the list
-                                # Possible: defined, not defined
-                                # Default: not defined
+#FAILOVER_FETCH=
+# Perform a checksum at "make fetch" time.  If the checksum doesn't
+# match the stored value, try to retrieve the file from the next site
+# in the list
+# Possible:  defined, not defined
+# Default: not defined
 
 #MASTER_SORT=        .ac.at .at .de .ch .se .fi .no
-                                # Whitespace delimited list of preferred
-                                # download locations. MASTER_SITES will be
-                                # reordered according to the hosts' address
-                                # last components.
-                                # Possible: list of domain name suffixes
-                                # Default: none
+# Whitespace delimited list of preferred download locations. 
+# MASTER_SITES will be reordered according to the hosts' address last
+# components.
+# Possible: list of domain name suffixes
+# Default: none
+
 #MASTER_SORT_REGEX=  ftp://.*/ 
-                                # Same as MASTER_SORT, but takes a regular
-                                # expression for more flexibility in matching.
-                                # Regexps defined here have higher priority
-                                # than MASTER_SORT.
-                                # This example would prefer ftp transfers
-                                # over anything else.
-                                # Possible: Regexps as in awk(1)
-                                # Default: none
+# Same as MASTER_SORT, but takes a regular expression for more
+# flexibility in matching.  Regexps defined here have higher priority
+# than MASTER_SORT.  This example would prefer ftp transfers over
+# anything else.
+# Possible: Regexps as in awk(1)
+# Default: none
 
-#PATCH_DEBUG=			# Used to debug patches as they are applied
-                                # Possible: defined, not defined
-                                # Default: not defined
+#PATCH_DEBUG=
+# Used to debug patches as they are applied
+# Possible: defined, not defined
+# Default: not defined
 
-#PRE_ROOT_CMD=${CHMOD} -R o+w ${WRKDIR}	# Command to be run by normal user,
-                                # just before becoming root (see SU_CMD) to
-                                # install the package. For example, the
-                                # command shown would allow root to write and
-                                # modify files below ${WRKDIR}, if on an
-                                # NFS -noroot file system.
-                                # Possible: any shell commands
-                                # Default: none
+#PRE_ROOT_CMD=${CHMOD} -R o+w ${WRKDIR}
+# Command to be run by normal user, just before becoming root (see
+# SU_CMD) to install the package.  For example, the command shown
+# would allow root to write and modify files below ${WRKDIR}, if on an
+# NFS -noroot file system.
+# Possible: any shell commands
+# Default: none
 
-#SU_CMD=${SU} - root -c		# Command to perform before "make install",
-                                # if the user does not have an effective uid of
-                                # 0. A possible substitute is "sudo -u root"
-                                # Possible: su, sudo, or priv, with appropriate
-                                #           arguments
-                                # Default: ${SU} - root -c
+#SU_CMD=${SU} - root -c
+# Command to perform before "make install", if the user does not have
+# an effective uid of 0.  A possible substitute is "sudo -u root"
+# Possible: su, sudo, or priv, with appropriate arguments
+# Default: ${SU} - root -c
 
 #
 #	Definitions used only in the packages collection
 #
 
-#AMANDA_USER=	backup		# Used in the amanda packages to specify the
-                                # login user and group responsible for backups
-                                # Possible: any user name
-                                # Default: backup
-#AMANDA_SMB=                    # Used in the amanda-client package to enable
-                                # backup with smbclient
-                                # Possible: defined, not defined
-                                # Default: not defined
-#AMANDA_VAR=	/var/amanda     # Specifies the directory in which amanda puts
-                                # its logs and status files. 
-                                # Default: /var/amanda
+#AMANDA_USER=	backup
+# Used in the amanda packages to specify the login user and group
+# responsible for backups
+# Possible: any user name
+# Default: backup
 
-#APACHE_PERF_TUNING=	YES	# Optimize for maximum Apache performance.
-                                # Possible: not defined, YES
-                                # Default: not defined
+#AMANDA_SMB=
+# Used in the amanda-client package to enable backup with smbclient
+# Possible: defined, not defined
+# Default: not defined
 
-#APACHE_SUEXEC=	YES		# Enable support Switch User For Exec.
-                                # See http://www.apache.org/docs/suexec.html
-                                # for more informations.
-                                # Possible: not defined, YES
-                                # Default: not defined
+#AMANDA_VAR=	/var/amanda
+# Specifies the directory in which amanda puts its logs and status
+# files. 
+# Default: /var/amanda
 
-#BOOTSTRAP_EGCS=		# Used in egcs-current package to set
-                                # bootstrap compile (two-stage) mode.
-                                # Possible: defined, not defined
-                                # Default: not defined
+#APACHE_PERF_TUNING=	YES
+# Optimize for maximum Apache performance.
+# Possible: not defined, YES
+# Default: not defined
 
-#DEFAULT_IRC_SERVER=		# Used in ircII to set the default irc
-                                # server. 
-                                # Possible: see the list at
-                                # http://www.irchelp.org/irchelp/networks/servers/efnet.html
-                                # Default: not defined
+#APACHE_SUEXEC=	YES
+# Enable support Switch User For Exec.  See
+# http://www.apache.org/docs/suexec.html for more informations.
+# Possible: not defined, YES
+# Default: not defined
 
-#DT_LAYOUT=			# Used by dt package to specify the keyboard
-                                # layout.
-                                # Possible: US, FI, FR, GER, DV
-                                # Default: FI
+#BOOTSTRAP_EGCS=
+# Used in egcs-current package to set bootstrap compile (two-stage)
+# mode.
+# Possible: defined, not defined
+# Default: not defined
 
-#GLX_CHIPSET=			# Used to select chipset to build "Mesa-glx"
-                                # package for. Either Matrox MGA 200/400
-                                # or Riva TNT/TNT 2 can be supported.
-                                # Possible: mga, tnt
-                                # Default: mga
+#DEFAULT_IRC_SERVER=
+# Used in ircII to set the default irc server. 
+# Possible: see the list at
+# http://www.irchelp.org/irchelp/networks/servers/efnet.html
+# Default: not defined
 
-#IRRD_USE_PGP=			# Used by irrd package to specify the version
-                                # of PGP to use, if any.
-                                # Possible: 5, 2, not defined
-                                # Default: not defined
-                                # [XXX: configure will locate pgpv or pgp]
+#DT_LAYOUT=
+# Used by dt package to specify the keyboard layout.
+# Possible: US, FI, FR, GER, DV
+# Default: FI
 
-#ISPELL_EXTRA_DICT=		# Used by ispell package to specify an extra
-                                # national dictionary.
-                                # Possible: [agc - unknown]
-                                # Default: not defined
+#GLX_CHIPSET=
+# Used to select chipset to build "Mesa-glx" package for.  Either
+# Matrox MGA 200/400 or Riva TNT/TNT 2 can be supported.
+# Possible: mga, tnt
+# Default: mga
 
-#INN_DATA_DIR=			# Used by inn to specify the data directory.
-                                # Possible: any path you like
-                                # Default: /var/news
+#IRRD_USE_PGP=
+# Used by irrd package to specify the version of PGP to use, if any.
+# Possible: 5, 2, not defined
+# Default: not defined
+# [XXX: configure will locate pgpv or pgp]
 
-#ISPELL_FR=			# Used by ispell to specify a French/English
-                                # dictionary.
-                                # Possible: defined, not defined
-                                # Default: not defined
+#ISPELL_EXTRA_DICT=
+# Used by ispell package to specify an extra national dictionary.
+# Possible: [agc - unknown]
+# Default: not defined
 
-#ISPELL_LANG=			# Used by ispell to specify national dictionary
-                                # Possible: not defined, british
-                                # Default: not defined
+#INN_DATA_DIR=
+# Used by inn to specify the data directory.
+# Possible: any path you like
+# Default: /var/news
 
-#JB_PACKAGE= test		# Used by jitterbug to determine the type of
-                                # package to be installed.
-                                # Possible: test, production
-                                # Default: test
+#ISPELL_FR=
+# Used by ispell to specify a French/English
+# dictionary.
+# Possible: defined, not defined
+# Default: not defined
 
-#JB_USER=jitter			# Used by jitterbug package for username
-                                # Possible: any valid username
-                                # Default: jitter
+#ISPELL_LANG=
+# Used by ispell to specify national dictionary
+# Possible: not defined, british
+# Default: not defined
 
-#JB_USERID=509			# Used by jitterbug package for uid of
-                                # JB_USER.
-                                # Possible: any valid uid
-                                # Default: 509
+#JB_PACKAGE= test
+# Used by jitterbug to determine the type of package to be installed.
+# Possible: test, production
+# Default: test
 
-#JB_GROUP=jitter		# Used by jitterbug package for groupname
-                                # Possible: any valid groupname
-                                # Default: jitter
+#JB_USER=jitter
+# Used by jitterbug package for username
+# Possible: any valid username
+# Default: jitter
 
-#JB_GROUPID=509			# Used by jitterbug package for gid of
-                                # JB_USER.
-                                # Possible: any valid gid
-                                # Default: 509
+#JB_USERID=509
+# Used by jitterbug package for uid of JB_USER.
+# Possible: any valid uid
+# Default: 509
 
-#JB_FQHOSTNAME=			# Used by jitterbug package to include the
-                                # fully-qualified domain name of the host.
-                                # Possible: defined, not defined
-                                # default: not defined
+#JB_GROUP=jitter
+# Used by jitterbug package for groupname
+# Possible: any valid groupname
+# Default: jitter
 
-#JB_LOCALMAIL=			# Used by jitterbug package as the mail
-                                # alias to receive mail from jitterbug 
-                                # Possible: any valid mail alias
-                                # default: none
+#JB_GROUPID=509
+# Used by jitterbug package for gid of JB_USER.
+# Possible: any valid gid
+# Default: 509
 
-#KERBEROS=			# Used in many packages to specify use of
-                                # a Kerberos (or compatible) subsystem.
-                                # Requires Kerberos libraries in /usr/lib.
-                                # Possible: 4, 5, not defined
-                                # Default: not defined
+#JB_FQHOSTNAME=
+# Used by jitterbug package to include the fully-qualified domain name
+# of the host.
+# Possible: defined, not defined
+# default: not defined
 
-#KNEWS_DOMAIN_FILE=		# Used in the knews package to set the domain
-                                # name from the contents of this file.
-                                # Possible: any valid path
-                                # Default: none
+#JB_LOCALMAIL=
+# Used by jitterbug package as the mail alias to receive mail from
+# jitterbug
+# Possible: any valid mail alias
+# default: none
 
-#KNEWS_DOMAIN_NAME=		# Used in the knews package to set the domain
-                                # name.
-                                # Possible: almost anything really, usually a
-                                #           FQDN.
-                                # Default: none
+#KERBEROS=
+# Used in many packages to specify use of a Kerberos (or compatible)
+# subsystem.  Requires Kerberos libraries in /usr/lib.
+# Possible: 4, 5, not defined
+# Default: not defined
 
-#KTERM_USE_WALLPAPER=		# Used in kterm package to support wallpaper
-                                # Possible: not defined, YES
-                                # Default: not defined
+#KNEWS_DOMAIN_FILE=
+# Used in the knews package to set the domain name from the contents
+# of this file.
+# Possible: any valid path
+# Default: none
 
-#LIBWRAP_FWD=			# Used in ssh package to make libwrap also
-                                # compare against forwarded connection attempts
-                                # Possible: not defined, YES
-                                # Default: not defined
+#KNEWS_DOMAIN_NAME=
+# Used in the knews package to set the domain name.
+# Possible:  almost anything really, usually a FQDN.
+# Default: none
 
-#LPRNG_SUID=		YES	# Used by LPRng to enable setuid installation
-                                # of LPRng binaries.
-                                # Possible: YES, or NO.
-                                # Default: YES 
+#KTERM_USE_WALLPAPER=
+# Used in kterm package to support wallpaper
+# Possible: not defined, YES
+# Default: not defined
 
-#LPRNG_PRIV_PORTS=	NO	# Used by LPRng to require connections to be
-                                # from privileged ports.
-                                # Possible: YES, or NO.
-                                # Default: NO
+#LIBWRAP_FWD=
+# Used in ssh package to make libwrap also compare against forwarded
+# connection attempts
+# Possible: not defined, YES
+# Default: not defined
 
-#M68060=			# Used mostly by packages (e.g.: pgp2,
-                                # ssh) with have fast 68020/030/040 assembler
-                                # routines for multiprecision arithmetic, which
-                                # use # the 32/64bit mul/div instruction.
-                                # These instructions are software emulated 
-                                # on the 68060, thus very slow.
-                                # Set to YES when compiling for the
-                                # 68060 cpu.
-                                # Possible: not defined, YES.
-                                # Default: not defined.
+#LPRNG_SUID=		YES
+# Used by LPRng to enable setuid installation of LPRng binaries.
+# Possible: YES, or NO.
+# Default: YES 
 
-#MAJORDOMO_USER=		# Used by majordomo package as the userid
-                                # majordomo runs at.
-                                # Possible: any
-                                # Default: majordom
+#LPRNG_PRIV_PORTS=	NO
+# Used by LPRng to require connections to be from privileged ports.
+# Possible: YES, or NO.
+# Default: NO
 
-#MAJORDOMO_GROUP=		# Used by the majordomo package as the groupid
-                                # majordomo runs at.
-                                # Possible: any
-                                # Default: majordom
+#M68060=
+# Used mostly by packages (e.g.:  pgp2, ssh) with have fast
+# 68020/030/040 assembler routines for multiprecision arithmetic,
+# which use the 32/64bit mul/div instruction.  These instructions are
+# software emulated on the 68060, thus very slow.  Set to YES when
+# compiling for the 68060 cpu.
+# Possible: not defined, YES.
+# Default: not defined.
 
-#MAJORDOMO_TMPDIR=		# Used by the majordomo package as the
-                                # directory to store temp files.
-                                # Possible: any directory.
-                                # Default: /var/tmp
+#MAJORDOMO_USER=
+# Used by majordomo package as the userid majordomo runs at.
+# Possible: any
+# Default: majordom
 
-#MUTT_INTERNATIONAL=	YES	# Used to decide if international export
-                                # restricted version of "mutt" is built.
-                                # Possible: not defined, YES
-                                # Default: not defined
+#MAJORDOMO_GROUP=
+# Used by the majordomo package as the groupid majordomo runs at.
+# Possible: any
+# Default: majordom
 
-#NMH_EDITOR=			# default editor for use in nmh.
-                                # Possible: any editor.
-                                # Default: vi
+#MAJORDOMO_TMPDIR=
+# Used by the majordomo package as the directory to store temp files.
+# Possible: any directory.
+# Default: /var/tmp
 
-#NMH_MTA=	smtp		# default MTA for use in nmh.
-                                # Possible: smtp or sendmail.
-                                # Default: smtp
+#MUTT_INTERNATIONAL=	YES
+# Used to decide if international export restricted version of "mutt"
+# is built.
+# Possible: not defined, YES
+# Default: not defined
 
-#NMH_PAGER=			# default pager for use in nmh.
-                                # Possible: any editor.
-                                # Default: more
+#NMH_EDITOR=
+# default editor for use in nmh.
+# Possible: any editor.
+# Default: vi
 
-#NS_ENCRYPTION=	us		# Used to decide if export or US version
-                                # of Netscape should be installed.
-                                # Possible: export, us
-                                # Default: export
+#NMH_MTA=	smtp
+# default MTA for use in nmh.
+# Possible: smtp or sendmail.
+# Default: smtp
 
-PAPERSIZE=	A4		# Default paper size for packages.
-                                # Possible: A4, Letter, Letterdj.
-                                # Default: none
+#NMH_PAGER=
+# default pager for use in nmh.
+# Possible: any editor.
+# Default: more
 
-#PGGROUP=ingres			# Used in postgresql package as the groupname
-                                # of the database administrator
-                                # Possible: any group name
-                                # Default: ingres
+#NS_ENCRYPTION=	us
+# Used to decide if export or US version of Netscape should be
+# installed.
+# Possible: export, us
+# Default: export
 
-#PGUSER=pgsql			# Used in postgresql package as the username
-                                # of the database admin
-                                # Possible: any user name
-                                # Default: pgsql
+PAPERSIZE=	A4
+# Default paper size for packages.
+# Possible: A4, Letter, Letterdj.
+# Default: none
 
-#PGSQL_USE_TCL=			# Used in postgresql package to enable
-                                # building the Tcl/Tk interface.
-                                # Possible: YES, NO
-                                # Default: YES
+#PGGROUP=ingres
+# Used in postgresql package as the groupname of the database
+# administrator
+# Possible: any group name
+# Default: ingres
 
-#QPOPPER_SERVERMODE=		# Used in qpopper package to enable server
-                                # mode.
-                                # Possible: defined, not defined
-                                # Default: not defined
+#PGUSER=pgsql
+# Used in postgresql package as the username of the database admin
+# Possible: any user name
+# Default: pgsql
 
-#RCS_LOCALID=			# Used in cvs-current package for an RCS Id
-                                # which is expanded.
-                                # Possible: anything (within reason)
-                                # Default: none
+#PGSQL_USE_TCL=
+# Used in postgresql package to enable building the Tcl/Tk interface.
+# Possible: YES, NO
+# Default: YES
 
-#SQUID_CONFIGURE_ARGS=		# Used in squid package to set build
-                                # configuration options.
-                                # Possible: see "configure --help"
-                                # Default: --enable-cachemgr-hostname=localhost
-                                #          --enable-icmp
-                                #          --enable-ipf-transparent
-                                #          --enable-snmp
+#QPOPPER_SERVERMODE=
+# Used in qpopper package to enable server mode.
+# Possible: defined, not defined
+# Default: not defined
 
-#SQUID_HTTP_PORT=		# Used in squid package to define the default
-                                # port number for HTTP connections.
-                                # Possible: 1-65535
-                                # Default: 3128
+#RCS_LOCALID=
+# Used in cvs-current package for an RCS Id which is expanded.
+# Possible: anything (within reason)
+# Default: none
 
-#SQUID_ICTP_PORT=		# Used in squid package to define the default
-                                # port number for ICP queries.
-                                # Possible: 1-65535
-                                # Default: 3130
+#SQUID_CONFIGURE_ARGS=
+# Used in squid package to set build configuration options.
+# Possible: see "configure --help"
+# Default: --enable-cachemgr-hostname=localhost
+#          --enable-icmp
+#          --enable-ipf-transparent
+#          --enable-snmp
 
-#SSH_CONF_DIR=			# Used in ssh to set the configuration
-                                # directory.
-                                # Possible: any valid directory
-                                # Default: /etc
+#SQUID_HTTP_PORT=
+# Used in squid package to define the default port number for HTTP
+# connections.
+# Possible: 1-65535
+# Default: 3128
 
-#SSH_DONT_USE_IDEA=		# Used in ssh package to stop IDEA encryption
-                                # Possible: defined, not defined
-                                # Default: not defined
+#SQUID_ICTP_PORT=
+# Used in squid package to define the default port number for ICP
+# queries.
+# Possible: 1-65535
+# Default: 3130
 
-#SSH_RSHPATH=			# Used in ssh to specify standard rsh path
-                                # Possible: path to rsh binary
-                                # Default: /usr/bin/rsh
+#SSH_CONF_DIR=
+# Used in ssh to set the configuration directory.
+# Possible: any valid directory
+# Default: /etc
 
-#SSH_SUID=			# Used in ssh to enable setuid installation
-                                # of "ssh" binary.
-                                # Possible: YES, or NO.
-                                # Default: NO
+#SSH_DONT_USE_IDEA=
+# Used in ssh package to stop IDEA encryption
+# Possible: defined, not defined
+# Default: not defined
 
-#USE_CANNA=			# Used in kinput2 and nvi-m17n to enable Canna
-                                # kana-kanji converter support.
-                                # Possible: YES, or NO.
-                                # Default: YES
+#SSH_RSHPATH=
+# Used in ssh to specify standard rsh path
+# Possible: path to rsh binary
+# Default: /usr/bin/rsh
 
-#USE_GIF=			# Enable GIF support in qt.
- 				# (disabled per default due to licensing
- 				# problems; future revisions might have no
- 				# support at all)
-                                # Possible: defined, not defined
-                                # Default: not defined
+#SSH_SUID=
+# Used in ssh to enable setuid installation of "ssh" binary.
+# Possible: YES, or NO.
+# Default: NO
 
-#USE_INET6=			# Enable IPv6 support on certain packages.
-                                # Use IPv6-ready kernel if you define this.
-                                # Possible: not defined, YES
-                                # Default: not defined
+#USE_CANNA=
+# Used in kinput2 and nvi-m17n to enable Canna kana-kanji converter
+# support.
+# Possible: YES, or NO.
+# Default: YES
 
-#USE_INN=			# Used in trn and nn to specify use of
-                                # "inn" instead of "nntpclnt" package to
-                                # provide "inews" binary.
-                                # Possible: not defined, YES
-                                # Default: not defined
+#USE_GIF=
+# Enable GIF support in qt.  (disabled per default due to licensing
+# problems; future revisions might have no support at all)
+# Possible: defined, not defined
+# Default: not defined
 
-#USE_RSAREF2=	NO		# Use the RSA reference package
-                                # Possible: YES (US domestic only), or NO.
-                                # Default: not defined.
+#USE_INET6=
+# Enable IPv6 support on certain packages.  Use IPv6-ready kernel if
+# you define this.
+# Possible: not defined, YES
+# Default: not defined
 
-#USE_SJ3=			# Used in kinput2 to enable SJ3 kana-kanji
-                                # converter support.
-                                # Possible: YES, or NO.
-                                # Default: YES
+#USE_INN=
+# Used in trn and nn to specify use of "inn" instead of "nntpclnt"
+# package to provide "inews" binary.
+# Possible: not defined, YES
+# Default: not defined
 
-#USE_SOCKS=			# Used to specify SOCKS firewall support
-                                # Set this to the version of socks necessary.
-                                # Possible: 4, 5, not defined
-                                # Default: not defined
+#USE_RSAREF2=	NO
+# Use the RSA reference package
+# Possible: YES (US domestic only), or NO.
+# Default: not defined.
 
-#USE_WNN4=			# Used in kinput2 to enable FreeWnn (a.k.a.
-                                # Wnn4) kana-kanji converter support.
-                                # Possible: YES, or NO.
-                                # Default: YES
+#USE_SJ3=
+# Used in kinput2 to enable SJ3 kana-kanji converter support.
+# Possible: YES, or NO.
+# Default: YES
 
-#USE_XFACE=			# Used in xemacs package to build in
-                                # support for xface (pkgsrc/mail/face)
-                                # Possible: not defined, YES
-                                # Default: not defined
+#USE_SOCKS=
+# Used to specify SOCKS firewall support Set this to the version of
+# socks necessary.
+# Possible: 4, 5, not defined
+# Default: not defined
 
-#WINDOWMAKER_OPTIONS=		# Options for building windowmaker package
-                                # Used to add support for GNOME, KDE or
-                                # OPEN LOOK(tm) and to avoid redundancies
-                                # with KDE.
-                                # Possible: gnome, kde, openlook, lite
-                                # Default: gnome kde
+#USE_WNN4=
+# Used in kinput2 to enable FreeWnn (a.k.a.  Wnn4) kana-kanji
+# converter support.
+# Possible: YES, or NO.
+# Default: YES
 
-#WINDOWMAKER_THEMES=	...	# Used in wm-themes package to specify
-                                # the themes which will be installed.
-                                # Possible: see http://wm.themes.org/
-                                # Default: FreeBSD-theme
+#USE_XFACE=
+# Used in xemacs package to build in support for xface
+# (pkgsrc/mail/face)
+# Possible: not defined, YES
+# Default: not defined
 
-#XAW_TYPE=standard              # Used in various packages to specify that
-                                # libXaw is used.
-                                # Possible: standard, 3d, xpm
-                                # Default: standard
+#WINDOWMAKER_OPTIONS=
+# Options for building windowmaker package Used to add support for
+# GNOME, KDE or OPEN LOOK(tm) and to avoid redundancies with KDE.
+# Possible: gnome, kde, openlook, lite
+# Default: gnome kde
 
-#ZIP_ENCRYPTION=		# Add encryption code to zip, zip1, and unzip
-                                # Possible: defined, not defined
-                                # Default: not defined
+#WINDOWMAKER_THEMES=	...
+# Used in wm-themes package to specify the themes which will be
+# installed.
+# Possible: see http://wm.themes.org/
+# Default: FreeBSD-theme
+
+#XAW_TYPE=standard
+# Used in various packages to specify that libXaw is used.
+# Possible: standard, 3d, xpm
+# Default: standard
+
+#ZIP_ENCRYPTION=
+# Add encryption code to zip, zip1, and unzip
+# Possible: defined, not defined
+# Default: not defined
 
 #
 #	Overrides for faster or cheaper sites.
