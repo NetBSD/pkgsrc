@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/03/29 12:42:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2003/11/15 02:16:31 danw Exp $
 # FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
 #
 
@@ -6,18 +6,17 @@ DISTNAME=	docbook-4.2
 PKGREVISION=	3
 WRKSRC=		${WRKDIR}
 CATEGORIES=	textproc
-MASTER_SITES=	\
-		http://www.oasis-open.org/docbook/sgml/4.2/ \
-		http://www.oasis-open.org/docbook/sgml/4.1/ \
-		http://www.oasis-open.org/docbook/sgml/4.0/ \
-		http://www.oasis-open.org/docbook/sgml/3.1/ \
-		http://www.oasis-open.org/docbook/sgml/3.0/ \
-		http://www.oasis-open.org/docbook/sgml/2.4.1/
+MASTER_SITES=		http://www.oasis-open.org/docbook/sgml/4.2/
+SITES_docbk41.zip=	http://www.oasis-open.org/docbook/sgml/4.1/
+SITES_docbk40.zip=	http://www.oasis-open.org/docbook/sgml/4.0/
+SITES_docbk31.zip=	http://www.oasis-open.org/docbook/sgml/3.1/
+SITES_docbk30.zip=	http://www.oasis-open.org/docbook/sgml/3.0/
+SITES_docbk241.zip=	http://www.oasis-open.org/docbook/sgml/2.4.1/
 DISTFILES=	docbk241.zip docbk30.zip docbk31.zip docbk40.zip docbk41.zip \
 		docbook-4.2.zip
 
 MAINTAINER=	rh@NetBSD.ORG
-HOMEPAGE=	http://www.ora.com/davenport/
+HOMEPAGE=	http://www.oasis-open.org/docbook
 COMMENT=	SGML DTD designed for computer documentation
 
 BUILD_DEPENDS=	unzip-[0-9]*:../../archivers/unzip
