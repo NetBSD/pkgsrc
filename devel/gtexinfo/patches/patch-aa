@@ -1,0 +1,26 @@
+--- util/install-info.c	1996/10/03 23:13:36	1.12
++++ util/install-info.c	1997/10/07 13:10:54
+@@ -338,16 +338,23 @@
+    We define this function here rather than using strerror
+    because not all systems have strerror.  */
+ 
++#include <sys/param.h>
++#include <string.h>
++
+ char *
+ my_strerror (errnum)
+      int errnum;
+ {
++#if (defined(BSD) && BSD >= 199306)
++	return strerror(errnum);
++#else
+   extern char *sys_errlist[];
+   extern int sys_nerr;
+ 
+   if (errnum >= 0 && errnum < sys_nerr)
+     return sys_errlist[errnum];
+   return (char *) "Unknown error";
++#endif
+ }
+ 
+ /* This table defines all the long-named options, says whether they
