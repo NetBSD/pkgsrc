@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6106 2004/06/03 11:20:25 shannonjr Exp $
+$NetBSD: CHANGES,v 1.6107 2004/06/03 12:20:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2764,4 +2764,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added florist [shannonjr 2004-06-03]
 	Added jdbc-postgresql74 [abs 2004-06-02]
 	Added gdbada [shannonjr 2004-06-03]
-
+	Updated joe to 3.1 [adam 2004-06-03]
