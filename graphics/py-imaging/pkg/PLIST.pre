@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.pre,v 1.1.1.1 1998/12/26 23:42:01 tsarna Exp $
+lib/python1.5/site-packages/_imaging.so

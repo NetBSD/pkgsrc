@@ -1,0 +1,4 @@
+The Python Imaging Library (PIL) adds image processing capabilities to
+your Python interpreter.  This library provides extensive file format
+support, an efficient internal representation, and fairly image
+processing capabilities. 
