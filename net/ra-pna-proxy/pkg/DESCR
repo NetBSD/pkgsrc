@@ -1,0 +1,7 @@
+raproxy - RealAudio application-level firewall proxy version 3.0b1
+
+raproxy is a reference implementation of a firewall proxy. Its primary
+function is to serve as a reference for people writing RealAudio
+firewall proxies, but it may also be used in conjunction with security
+software such as the TIS Firewall Toolkit (fwtk) to allow access to
+RealAudio servers through a firewall.
