@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/07/18 15:21:00 agc Exp $
+# $NetBSD: Makefile,v 1.10 2000/08/14 18:44:12 wiz Exp $
 
 DISTNAME=		gimp-1.1.24
 PKGNAME=		${DISTNAME:S/-/-helpbrowser-/}
@@ -11,12 +11,12 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gimp.org/
 
-DEPENDS+=		${DISTNAME}:../gimp-current
+DEPENDS+=		${DISTNAME}:../../graphics/gimp-current
 DEPENDS+=		gnome-libs>=1.0.56:../../x11/gnome-libs
 
 USE_X11BASE=		yes
 USE_GMAKE=		yes
-USE_PKGLIBTOOL=		yes
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 EVAL_PREFIX+=		GTKDIR=gtk+ GNOMEDIR=gnome-libs IGIMPDIR=gimp
