@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2003/05/31 13:30:30 grant Exp $
+# $NetBSD: Makefile,v 1.73 2003/05/31 13:32:49 grant Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -109,7 +109,7 @@ APACHE_CUSTOM_CFLAGS+=	-D_FILE_OFFSET_BITS=64
 # referenced by DSOs written in C++ will resolve correctly.
 #
 .if ${OPSYS} == "NetBSD" && ${OBJECT_FMT} == "ELF"
-LINK_LIBGCC_LDFLAGS=	-Wl,--whole-archive -lgcc -Wl,--no-whole-archive
+LINK_LIBGCC_LDFLAGS=	${WHOLE_ARCHIVE_FLAG} -lgcc ${NO_WHOLE_ARCHIVE_FLAG}
 .endif
 
 # if we are using gcc3, we need to link against libgcc_s, too. This
