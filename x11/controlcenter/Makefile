@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 1999/08/20 12:10:23 rh Exp $
+# $NetBSD: Makefile,v 1.10 1999/08/22 10:59:02 frueauf Exp $
 #
 
 DISTNAME=		control-center-1.0.6
 CATEGORIES=		x11 gnome
-MASTER_SITES=		ftp://ftp.gnome.org/pub/GNOME//sources/ \
+MASTER_SITES=		ftp://ftp.gnome.org/pub/GNOME/sources/ \
 			ftp://ftp.circ.us.eu.org/mirrors/ftp.gnome.org/sources/ \
 			ftp://ftp.jimpick.com/pub/mirrors/gnome/sources/control-center/ \
 			ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/gnome-1.0/sources/ \
