@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/20 12:22:19 agc Exp $
+# $NetBSD: Makefile,v 1.19 2005/02/20 12:58:09 grant Exp $
 #
 
 # A default so lintpkgsrc is happy, overridden below
@@ -16,14 +16,14 @@ COMMENT=	Citrix(R) client for the Microsoft Windows Terminal Server
 ONLY_FOR_PLATFORM=      Linux-*-i[3-6]86 NetBSD-*-i386 NetBSD-*-sparc SunOS-*-sparc
 
 .if ${OPSYS} == "NetBSD"
-.if (${MACHINE_ARCH} == "i386")
+.  if ${MACHINE_ARCH} == "i386"
 DISTNAME=	linuxx86
 PKGNAME=	citrix_ica-7.00.77757
-.elif (${MACHINE_ARCH} == "sparc")
+.  elif ${MACHINE_ARCH} == "sparc"
 DISTNAME=       solaris
 PKGNAME=        citrix_ica-7.02.78662
 EXTRACT_SUFX=   .tar.Z
-.endif
+.  endif
 .elif ${OPSYS} == "SunOS"
 DISTNAME=	solaris
 PKGNAME=	citrix_ica-7.02.78662
@@ -34,7 +34,7 @@ PKGNAME=	citrix_ica-7.00.77757
 .endif
 
 # see http://www.citrix.com/download/unix-downloads.htm
-.if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386")
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
 DEPENDS=        suse_x11>=6.4:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
@@ -55,10 +55,10 @@ DIST_SUBDIR=    ${PKGNAME}
 CDIR=           ${PREFIX}/lib/ICAClient
 BINDIR=         ${PREFIX}/bin
 
-.if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc")
-.if !exists(/emul/svr4/usr/lib/ld.so)
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc"
+.  if !exists(/emul/svr4/usr/lib/ld.so)
 PKG_FAIL_REASON= "${PKGNAME} requires SVR4 compability - see compat_svr4(8)"
-.endif
+.  endif
 .endif
 
 PATCHDIR=${WRKDIR}/.patches
@@ -91,7 +91,7 @@ do-install:
 		< ${CDIR}/util/icalicense.sh > ${CDIR}/util/icalicense.sh.fixed
 	${MV} ${CDIR}/util/icalicense.sh.fixed ${CDIR}/util/icalicense.sh
 
-.if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386")
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
 .  include "../../emulators/suse_linux/Makefile.application"
 .endif
 
