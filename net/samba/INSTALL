@@ -1,24 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.3 2002/02/05 00:36:25 taca Exp $
+# $NetBSD: INSTALL,v 1.4 2002/02/05 05:14:46 jlam Exp $
 
 SAMBA_LOCKDIR="@SAMBA_LOCKDIR@"
 SAMBA_PRIVATE="@SAMBA_PRIVATE@"
 
 case ${STAGE} in
 POST-INSTALL)
-	# Create SMB password file
-	if [ ! -e ${SAMBA_PRIVATE}/smbpasswd ]
-	then
-		${ECHO} -n "Creating ${SAMBA_PRIVATE}/smbpasswd..."
-		${CHOWN} -R 0:0 ${SAMBA_PRIVATE}
-		${CAT} /etc/passwd | ${PKG_PREFIX}/sbin/mksmbpasswd	\
-			> ${SAMBA_PRIVATE}/smbpasswd
-		${CHMOD} 600 ${SAMBA_PRIVATE}/smbpasswd
-		${CHMOD} 500 ${SAMBA_PRIVATE}
-		echo "done."
-	fi
-
 	# Check for files in old "lock" directory.
 	if [ -e /var/run/samba ]
 	then
