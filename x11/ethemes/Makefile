@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/03 14:21:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/24 00:34:51 wiz Exp $
 
 DISTNAME=	ethemes-0.1
 CATEGORIES=	x11
@@ -29,12 +29,12 @@ E_THEMES?=	Absolute_E-DR16-199911060830.etheme \
 	E-Tech_Hydro-DR16-199912241355.etheme Ebench-DR16-199911181110.etheme \
 	Evisio-Green-DR16-199908220707.etheme \
 	FinalE-DR16-200003121555.etheme \
-	GTK+-DR16-200003031931.etheme \
+	GTK+-DR16-200004271913.etheme \
 	HackerPurple138-DR16-199908131917.etheme \
 	IReX-DR16-199912221118.etheme Industrial-DR16-199910202053.etheme \
-	Sensible-DR16-199908211837.etheme Sunset-DR16-200001061137.etheme \
+	Sensible-DR16-199908211837.etheme Sunset-DR16-200001061225.etheme \
 	X11-DR16-199910131422.etheme \
-	arctic-DR16-200003101559.etheme \
+	arctic-DR16-200006050720.etheme \
 	eMac-DR16-199912101635.etheme small-e-DR16-199908230041.etheme
 
 do-install:
