@@ -1,0 +1,40 @@
+$NetBSD: patch-am,v 1.1 1999/11/22 11:11:33 agc Exp $
+
+--- makefile.tlr	Tue Aug  4 13:17:57 1992
++++ makefile.tlr	Sat Sep 16 10:35:58 1995
+@@ -7,7 +7,7 @@
+ 	@sh -c "if test 'x$(DIRS)' != x ; then eval \
+ 		'set -e ; for dir in $(DIRS) ; do \
+ 			(cd \$$dir ; echo Make ${HERE}\$$dir ; \
+-			 	make $(MFLAGS) $(DIRMFLAGS) ) ; \
++			 	$(MAKE) $(MFLAGS) $(DIRMFLAGS) ) ; \
+ 		done' ; \
+ 	  else \
+ 		true ; \
+@@ -46,7 +46,7 @@
+ 	@sh -c "if test 'x$(DIRS)' != x  ; then eval \
+ 		'for dir in $(DIRS) ; do \
+ 			(cd \$$dir ; echo Install ${HERE}\$$dir ; \
+-			 make $(MFLAGS) $(DIRMFLAGS) install) ; \
++			 $(MAKE) $(MFLAGS) $(DIRMFLAGS) install) ; \
+ 		done' ; \
+ 	  else \
+ 		true ; \
+@@ -105,7 +105,7 @@
+ 	    'for dir in $(ALLDIRS); do \
+ 		if test -d $$dir ; then \
+ 			(cd $$dir; echo Make ${HERE}$$dir pristine ; \
+-			 make $(MFLAGS) pristine); \
++			 $(MAKE) $(MFLAGS) pristine); \
+ 		else \
+ 			true; \
+ 		fi; \
+@@ -124,7 +124,7 @@
+ 	    'for dir in $(ALLDIRS); do \
+ 		if test -d $$dir ; then \
+ 			(cd $$dir; echo Clean ${HERE}$$dir ; \
+-			 make $(MFLAGS) clean); \
++			$(MAKE) $(MFLAGS) clean); \
+ 		else \
+ 			true; \
+ 		fi; \
