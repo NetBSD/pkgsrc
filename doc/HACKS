@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.8 2003/02/07 01:19:06 dmcmahill Exp $
+# $NetBSD: HACKS,v 1.9 2003/02/08 16:27:44 dmcmahill Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -37,6 +37,7 @@ file	devel/guile-gtk//Makefile : 1.10
 	x11/qt2-libs/patches/patch-ae : 1.8
 	x11/qt2-libs/patches/patch-ae : 1.18
 	lang/gcc3/Makefile : 1.5
+	net/bing/Makefile : 1.12
 descr
 	Compiler crashes
 kcah
