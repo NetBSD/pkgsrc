@@ -1,0 +1,18 @@
+$NetBSD: patch-ag,v 1.3 2004/01/20 17:08:47 epg Exp $
+
+--- subversion/bindings/swig/perl/Makefile.PL.orig	Sun Dec  7 12:25:10 2003
++++ subversion/bindings/swig/perl/Makefile.PL
+@@ -23,11 +23,10 @@ my %config = (
+     CCFLAGS  => join(' ', $apr_cflags, `perl -MExtUtils::Embed -e ccopts`,
+ 		     ' -I.. -I../../../include -g'),
+     OBJECT => q/$(O_FILES)/,
+-    dynamic_lib => {
+-	OTHERLDFLAGS => join(' ', $apr_ldflags, (map {"-L$_"} @ldpaths),
++	LIBS => [join(' ', $apr_ldflags, (map {"-L$_"} @ldpaths),
+ 			     @ldmodules, '-lsvn_swig_perl-1',
+ 			     `swig -perl -ldflags`),
+-    },
++                ],
+ );
+ 
+ sub perlish {
