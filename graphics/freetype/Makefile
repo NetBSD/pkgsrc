@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/10/28 00:38:43 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2000/01/10 19:11:08 hubertf Exp $
 
 DISTNAME=		freetype-1.2
 CATEGORIES=		graphics textproc
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.freetype.org/pub/freetype/
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.freetype.org/
 
-DEPENDS+=		gettext-0.10.35:../../devel/gettext
+DEPENDS+=		gettext-0.10.*:../../devel/gettext
 
 USE_X11=		yes
 USE_LIBTOOL=		yes

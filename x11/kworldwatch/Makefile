@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/10/25 19:18:41 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/01/10 19:11:10 hubertf Exp $
 #
 
 DISTNAME=	kworldwatch-0.6
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hubertf@netbsd.org
 
-DEPENDS+=	gettext-0.10.35:../../devel/gettext
+DEPENDS+=	gettext-0.10.*:../../devel/gettext
 DEPENDS+=	kde-1.1.2:../../x11/kde
 
 USE_X11BASE=	YES
