@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2000/08/31 22:56:37 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2000/09/01 02:45:55 dmcmahill Exp $
 #
 
-DISTNAME=	wxGTK-2.2.0
+DISTNAME=	wxGTK-2.2.1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://wesley.informatik.uni-freiburg.de/pub/linux/wxxt/source/
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.freiburg.linux.de/~wxxt/
@@ -17,7 +16,10 @@ DEPENDS+=       tiff>=3.5.2:../../graphics/tiff
 WRKSRC=		${WRKDIR}/wxGTK
 
 USE_GMAKE=	yes
+USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-gtk --disable-threads
+CONFIGURE_ARGS+=	--with-gtk --with-libjpeg=sys --with-zlib=sys --with-libpng=sys --with-libtiff=sys  --disable-threads
+CPPFLAGS+=	-I${LOCALBASE}/include
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"
