@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 1999/12/24 22:30:00 pooka Exp $
+$NetBSD: patch-ab,v 1.3 2000/04/14 14:06:53 pooka Exp $
 
 --- sys/unix/Makefile.top.orig	Sat Dec 11 07:21:05 1999
-+++ sys/unix/Makefile.top	Wed Dec 22 20:18:19 1999
++++ sys/unix/Makefile.top	Fri Apr 14 16:44:56 2000
 @@ -14,17 +14,16 @@
  # MAKE = make
  
@@ -50,13 +50,23 @@ $NetBSD: patch-ab,v 1.2 1999/12/24 22:30:00 pooka Exp $
 +all:	$(GAME) datastuff
  	@echo "Done."
  
-+datastuff: Guidebook $(VARDAT) dungeon spec_levs check-dlb
++datastuff: Guidebook $(VARDAT) dungeon spec_levs check-dlb recover
 +	@echo "Data Sets Built"
 +
  Guidebook:
  	( cd doc ; $(MAKE) Guidebook )
  
-@@ -128,7 +130,12 @@
+@@ -88,6 +90,9 @@
+ data:
+ 	( cd dat ; $(MAKE) data )
+ 
++recover:
++	( cd util ; $(MAKE) recover )
++
+ rumors:
+ 	( cd dat ; $(MAKE) rumors )
+ 
+@@ -128,7 +133,12 @@
  	( cd util ; $(MAKE) dlb )
  	( cd dat ; ../util/dlb cf nhdat $(DATDLB) )
  
@@ -70,7 +80,7 @@ $NetBSD: patch-ab,v 1.2 1999/12/24 22:30:00 pooka Exp $
  dofiles:
  	target=`sed -n					\
  		-e '/librarian/{' 			\
-@@ -137,16 +144,13 @@
+@@ -137,16 +147,13 @@
  		-e '}' 					\
  	  	-e '$$s/.*/nodlb/p' < dat/options` ;	\
  	$(MAKE) dofiles-$${target-nodlb}
@@ -88,7 +98,7 @@ $NetBSD: patch-ab,v 1.2 1999/12/24 22:30:00 pooka Exp $
  	-$(CHOWN) $(GAMEUID) $(SHELLDIR)/$(GAME)
  	$(CHGRP) $(GAMEGRP) $(SHELLDIR)/$(GAME)
  	chmod $(EXEPERM) $(SHELLDIR)/$(GAME)
-@@ -182,7 +186,7 @@
+@@ -182,10 +189,10 @@
  # and a reminder
  	@echo You may also want to install the man pages via the doc Makefile.
  
@@ -96,8 +106,12 @@ $NetBSD: patch-ab,v 1.2 1999/12/24 22:30:00 pooka Exp $
 +install-dat: $(VARDAT) dungeon spec_levs
  # set up the directories
  	-mkdir $(SHELLDIR)
- 	-rm -rf $(GAMEDIR)
-@@ -197,6 +201,11 @@
+-	-rm -rf $(GAMEDIR)
++#	-rm -rf $(GAMEDIR)
+ 	-mkdir $(GAMEDIR) $(GAMEDIR)/save
+ 	-$(CHOWN) $(GAMEUID) $(GAMEDIR) $(GAMEDIR)/save
+ 	$(CHGRP) $(GAMEGRP) $(GAMEDIR) $(GAMEDIR)/save
+@@ -197,6 +204,14 @@
  	-( cd $(GAMEDIR) ; $(CHOWN) $(GAMEUID) perm record logfile ; \
  			$(CHGRP) $(GAMEGRP) perm record logfile ; \
  			chmod $(FILEPERM) perm record logfile )
@@ -105,6 +119,9 @@ $NetBSD: patch-ab,v 1.2 1999/12/24 22:30:00 pooka Exp $
 +	cp doc/Guidebook $(PREFIX)/share/doc/nethack
 +	chown $(GAMEUID):$(GAMEGRP) $(PREFIX)/share/doc/nethack/Guidebook
 +	chmod $(FILEPERM) $(PREFIX)/share/doc/nethack/Guidebook
++	cp util/recover $(PREFIX)/bin/recover
++	chown 0:0 $(PREFIX)/bin/recover
++	chmod 755 $(PREFIX)/bin/recover
 +
  # and a reminder
  	@echo You may also want to reinstall the man pages via the doc Makefile.
