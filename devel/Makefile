@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 1998/12/31 13:17:17 frueauf Exp $
+# $NetBSD: Makefile,v 1.47 1999/01/09 04:17:00 abs Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -32,6 +32,7 @@
     SUBDIR += gindent
     SUBDIR += glade
     SUBDIR += glib
+    SUBDIR += global
     SUBDIR += gmake
     SUBDIR += gperf
     SUBDIR += gtexinfo
