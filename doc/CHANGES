@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2868 2003/07/23 11:44:07 jmmv Exp $
+$NetBSD: CHANGES,v 1.2869 2003/07/23 15:39:06 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2910,3 +2910,9 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated qt3 to 3.1.2nb2 [tron 2003-07-23]
 	Updated streamtuner to 0.10.0 [jmmv 2003-07-23]
 	Updated win32-codecs to 030714 [jmmv 2003-07-23]
+	Updated metacity to 2.4.55 [jmmv 2003-07-23]
+	Updated gnome2-control-center to 2.2.1nb4 [jmmv 2003-07-23]
+	Updated gnome-panel to 2.2.2.2nb2 [jmmv 2003-07-23]
+	Updated gnome-session to 2.2.1nb3 [jmmv 2003-07-23]
+	Updated gnome2-utils to 2.2.1nb3 [jmmv 2003-07-23]
+	Updated gnome2-applets to 2.2.1nb3 [jmmv 2003-07-23]
