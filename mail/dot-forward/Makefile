@@ -1,30 +1,25 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 16:56:44 martti Exp $
+# $NetBSD: Makefile,v 1.8 2004/07/21 23:06:10 schmonz Exp $
 #
 
 DISTNAME=		dot-forward-0.71
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://cr.yp.to/software/
 
-MAINTAINER=		zuntum@NetBSD.org
+MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/dot-forward.html
-COMMENT=		Get qmail to use .forward files
+COMMENT=		Reads sendmail's .forward files under qmail
 
-DEPENDS+=		qmail>=1.03nb1:../../mail/qmail
+DEPENDS+=		{qmail>=1.03nb1,netqmail>=1.05}:../../mail/qmail
 
 ALL_TARGET=		it
 INSTALL_TARGET=		setup check
 
-.include "../../mk/bsd.prefs.mk"
-
-NO_MTREE=	YES
-LOCALBASE=	/
-
-RESTRICTED=		"unsure of djb's license"
+RESTRICTED=		"modified source and binaries may not be distributed"
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-post-patch:
+do-configure:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
 	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
