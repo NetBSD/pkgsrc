@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 1998/08/23 11:24:55 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/09/13 22:31:33 garbled Exp $
 bin/jetpack
 man/man6/jetpack.6
 share/jetpack/jetpack.lev000
-@unexec rm -f %D/share/jetpack/jetpack.scores
 @dirrm share/jetpack
