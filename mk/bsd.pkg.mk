@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.905 2002/01/17 13:07:15 drochner Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.906 2002/01/18 22:14:09 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -1242,7 +1242,7 @@ MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt}"] = good["${srt}"] " " $$0
 MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; }
 
 SORT_SITES_CMD= ${ECHO} $$unsorted_sites | ${AWK} '${MASTER_SORT_AWK}'
-ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} `${SORT_SITES_CMD}`
+ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} `${SORT_SITES_CMD:C/"/\"/g}`
 .else
 ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} $$unsorted_sites
 .endif
