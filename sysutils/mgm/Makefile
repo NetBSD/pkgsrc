@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:26:15 agc Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/27 21:21:41 lukem Exp $
 
 DISTNAME=	mgm-1.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.xiph.org/mgm/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	lukem@NetBSD.org
+MAINTAINER=	packages@NetBSD.org
 HOMEPAGE=	http://www.xiph.org/mgm/
 COMMENT=	Moaning Goat Meter
 
