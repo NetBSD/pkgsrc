@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7649 2004/11/01 23:15:15 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7650 2004/11/02 00:11:01 erh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5012,3 +5012,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated swapd to 1.0.2 [xtraeme 2004-11-01]
 	Updated clamsmtp to 1.1 [xtraeme 2004-11-01]
 	Updated dspam to 3.2.1 [xtraeme 2004-11-01]
+	Updated pkg_install to 20041101 [erh 2004-11-01]
