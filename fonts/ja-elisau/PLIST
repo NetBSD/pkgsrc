@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/15 20:36:57 kei Exp $
+lib/X11/fonts/local/clR5x8.pcf.gz
+lib/X11/fonts/local/elisau10.pcf.gz
+share/doc/elisau/elisa100.doc
+share/doc/elisau/elisau10.doc
+share/doc/elisau/hosoku.txt
+@dirrm share/doc/elisau
+@exec mkfontdir %D/lib/X11/fonts/local
+@unexec mkfontdir %D/lib/X11/fonts/local
