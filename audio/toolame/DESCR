@@ -1,0 +1,4 @@
+tooLAME is an optimized Mpeg Audio 1/2 Layer 2 encoder.  It is based heavily on
+    - the ISO dist10 code
+    - improvement to algorithms as part of the LAME project: www.sulaco.org/mp3
+    - work by Michael Cheng and other contributors (see CONTRIBUTORS)
