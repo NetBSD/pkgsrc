@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/02/11 11:41:01 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/02/27 20:59:20 mrauch Exp $
 
 DISTNAME=		OOo_1.0.2_LinuxIntel_install
 PKGNAME=		openoffice-linux-1.0.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		misc
 MASTER_SITES=		http://sf1.mirror.openoffice.org/stable/1.0.2/	\
 			http://www.fs.tum.de/~mrauch/OpenOffice/download/
@@ -39,14 +39,16 @@ DISPLAY= ':2'
 
 do-build:
 
-.if ${OPSYS} == "NetBSD"
-USE_PKGINSTALL=		yes
-SUPPORT_FILES=		/dev/null /emul/linux/etc/mtab
-.endif
-
 pre-install: checkforx
 	${SED}	-e "s|@@PREFIX@@|${PREFIX}|g"				\
 		< ${FILESDIR}/oo_setup.resp > ${WRKSRC}/oo_setup.resp
+.     if ${OPSYS}=="NetBSD" && !exists(/emul/linux/etc/mtab)
+	@${ECHO} 'Error: Before you are able to install and use this package,'
+	@${ECHO} '       the file /emul/linux/etc/mtab must exist.'
+	@${ECHO} '       Please create this file, e.g. by running'
+	@${ECHO} '       "touch /emul/linux/etc/mtab".'
+	@${FALSE}
+.     endif
 
 do-install:
 	-${SH} -c "cd ${WRKSRC};					\
