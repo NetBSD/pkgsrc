@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9392 2005/03/02 18:00:38 wiz Exp $
+$NetBSD: CHANGES,v 1.9393 2005/03/02 18:20:17 rxg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1234,3 +1234,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated unalz to 0.31 [minskim 2005-03-02]
 	Updated docbook-website to 2.5.0 [wiz 2005-03-02]
 	Updated netbsd-www to 1.3 [wiz 2005-03-02]
+	Updated cmp3 to 2.0.p6 [rxg 2005-03-03]
