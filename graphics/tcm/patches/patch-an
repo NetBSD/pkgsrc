@@ -1,16 +1,18 @@
-$NetBSD: patch-an,v 1.1.1.1 2001/02/24 01:30:07 jtb Exp $
+$NetBSD: patch-an,v 1.2 2001/09/12 07:35:58 jlam Exp $
 
---- ui/application.c.orig	Fri Nov 10 09:52:16 2000
+--- ui/application.c.orig	Fri Nov 10 04:52:16 2000
 +++ ui/application.c
-@@ -29,6 +29,7 @@
+@@ -29,6 +29,9 @@
  #include "system.h"
  #include "color.h"
  #include <stdlib.h>
++#ifdef LESSTIF
 +#include <iostdio.h>
++#endif
  #include <string.h>
  #include <Xm/XmStrDefs.h>
  #ifdef USE_XMIM
-@@ -41,7 +42,7 @@
+@@ -41,7 +44,7 @@
  	return Application::XErrorHandler(dpy, err_event);
  }
  
