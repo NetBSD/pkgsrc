@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/09 19:44:10 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/09 20:40:05 jlam Exp $
 
 DISTNAME=	cyrus-sasl-2.1.17
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
@@ -19,6 +19,7 @@ EXTRACT_ELEMENTS+=	${DISTNAME}/include/hmac-md5.h
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+PLIST_SRC=		${PKGDIR}/PLIST
 
 BUILD_DEFS+=		USE_PAM USE_LDAP SASL_USE_GSSAPI
 
@@ -37,6 +38,7 @@ CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.pam}
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap}
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+PLIST_SRC+=		${PKGDIR}/PLIST.ldap
 .endif
 
 .if defined(SASL_USE_GSSAPI) && !empty(SASL_USE_GSSAPI:M[yY][eE][sS])
@@ -60,9 +62,11 @@ post-build:
 		${MV} -f $$f.new $$f;					\
 	done
 
+.if defined(USE_LDAP)
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cyrus-saslauthd
 	${INSTALL_DATA} ${WRKSRC}/LDAP_SASLAUTHD \
 		${PREFIX}/share/examples/cyrus-saslauthd
+.endif
 
 .include "../../mk/bsd.pkg.mk"
