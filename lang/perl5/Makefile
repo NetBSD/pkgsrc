@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2002/12/23 16:10:45 grant Exp $
+# $NetBSD: Makefile,v 1.59 2002/12/23 16:20:49 cjep Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -158,11 +158,11 @@ post-install:
 	${RMDIR} -p ${PERL5_SITEARCH} 2>/dev/null || ${TRUE}
 	${RM} -f ${WRKDIR}/bsd.perl.mk
 	eval `${PERL5} -V:installsitelib 2>/dev/null` && \
-		echo PERL5_SITELIB=$$installsitelib >>${WRKDIR}/bsd.perl.mk     
+		echo PERL5_SITELIB=$$installsitelib >>${WRKDIR}/bsd.perl.mk
 	eval `${PERL5} -V:installsitearch 2>/dev/null` && \
-		echo PERL5_SITEARCH=$$installsitearch >>${WRKDIR}/bsd.perl.mk   
+		echo PERL5_SITEARCH=$$installsitearch >>${WRKDIR}/bsd.perl.mk
 	eval `${PERL5} -V:installarchlib 2>/dev/null` && \
-		echo PERL5_ARCHLIB=$$installarchlib >>${WRKDIR}/bsd.perl.mk     
+		echo PERL5_ARCHLIB=$$installarchlib >>${WRKDIR}/bsd.perl.mk
 	${INSTALL_DATA} ${WRKDIR}/bsd.perl.mk ${PREFIX}/share/mk/bsd.perl.mk
 
 test:
