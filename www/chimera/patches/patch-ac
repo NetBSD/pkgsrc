@@ -1,14 +1,22 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/10/19 14:23:00 fredb Exp $
+$NetBSD: patch-ac,v 1.2 2000/10/26 11:17:35 abs Exp $
 
---- port/getcwd.c.orig	Sun Mar 28 20:22:30 1999
-+++ port/getcwd.c	Wed Oct 18 18:35:25 2000
-@@ -34,7 +34,9 @@
- #include <sys/param.h>
+--- image/image_endian.h.orig	Sat Oct 21 11:36:58 2000
++++ image/image_endian.h
+@@ -48,6 +48,17 @@
+ #define __VAX__ 1
+ #endif
  
- extern char *getwd();
-+#ifndef errno
- extern int errno;
++#if defined(__NetBSD__)
++#include <sys/endian.h>
++#if BYTE_ORDER == BIG_ENDIAN
++#undef CHIMERA_LITTLE_ENDIAN
++#define  CHIMERA_BIG_ENDIAN
++#else
++#undef  CHIMERA_BIG_ENDIAN
++#define CHIMERA_LITTLE_ENDIAN
 +#endif
- 
- char *
- getcwd(buf, size)
++#endif
++
+ #if defined(__i386__) || defined(__VAX__) || defined(__MIPSEL__) || defined(__alpha__) || defined(__QNX__)
+ #undef  CHIMERA_BIG_ENDIAN
+ #define CHIMERA_LITTLE_ENDIAN

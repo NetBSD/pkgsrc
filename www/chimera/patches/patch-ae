@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1.1.1 2000/10/19 14:23:01 fredb Exp $
+$NetBSD: patch-ae,v 1.2 2000/10/26 11:17:35 abs Exp $
 
---- mxw/TextField.c.orig	Sun Mar 28 20:19:56 1999
-+++ mxw/TextField.c	Wed Oct 18 19:29:15 2000
+--- mxw/TextField.c.orig	Mon Mar 29 03:19:56 1999
++++ mxw/TextField.c
 @@ -943,7 +943,8 @@
    XSelectionRequestEvent *req = XtGetSelectionRequest(aw, *selection, NULL);
  
