@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/10 11:07:34 jtb Exp $
+
+--- stalin-32.c.orig	Sat May 15 22:34:50 1999
++++ stalin-32.c
+@@ -1,7 +1,6 @@
+ #include <stddef.h>
+ #include <assert.h>
+ #include <time.h>
+-#include <alloca.h>
+ #include <gc.h>
+ #include <string.h>
+ #include <math.h>
+@@ -371942,7 +371941,7 @@
+  t80266.s0.value.string_type = ".";
+  t80266.s1.tag = NULL_TYPE;
+  t80267.s0.tag = STRING_TYPE;
+- t80267.s0.value.string_type = "/usr/local/stalin/include";
++ t80267.s0.value.string_type = "%%PREFIX%%/lib/stalin";
+  t80267.s1.tag = NULL_TYPE;
+  t80305.s0.tag = EXTERNAL_SYMBOL_TYPE;
+  t80305.s0.value.external_symbol_type = q82;

@@ -1,0 +1,18 @@
+Stalin is an aggressively optimizing whole-program compiler for Scheme
+that does polyvariant interprocedural flow analysis, flow-directed
+interprocedural escape analysis, flow-directed lightweight CPS
+conversion, flow-directed lightweight closure conversion,
+flow-directed interprocedural lifetime analysis, automatic in-lining,
+unboxing, and flow-directed program-specific and
+program-point-specific low-level representation selection and code
+generation.
+
+Stalin is now self hosting (ie. compiles itself).  The distributed
+code is self-compiled.  Scheme->C is no longer used or needed to build
+Stalin.
+
+Stalin uses the Boehm conservative garbage collector and comes with a
+foreign-procedure interface for Xlib and OpenGL, and a version of
+QobiScheme, an extensive library of Scheme code.
+
+Stalin is now released under the GNU Public License, version 2.

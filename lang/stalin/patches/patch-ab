@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/10 11:07:34 jtb Exp $
+
+--- stalin.sc.orig	Sat Nov 18 18:48:05 2000
++++ stalin.sc
+@@ -25538,7 +25538,7 @@
+  (set! *program* "stalin")
+  (initialize-stalin!)
+  (set! *include-path*
+-       (append '(".") include-path '("/usr/local/stalin/include")))
++       (append '(".") include-path '("%%PREFIX%%/lib/stalin")))
+  (set! *bounds-checks?* (not disable-bounds-checks?))
+  (set! *memory-checks?* (not disable-memory-checks?))
+  (set! *overflow-checks?* (not disable-overflow-checks?))

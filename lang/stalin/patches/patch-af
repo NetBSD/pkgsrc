@@ -1,0 +1,41 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/12/10 11:07:35 jtb Exp $
+
+--- stalin.1.orig	Sun Dec 10 08:53:20 2000
++++ stalin.1
+@@ -607,28 +607,28 @@
+ This option can be repeated to allow passing multiple options to the C
+ compiler.
+ .SH FILES
+-.I /usr/local/stalin/include/
++.I %%PREFIX%%/lib/stalin/
+ default directory for Scheme include files and library archive files
+ .br
+-.I /usr/local/stalin/include/Scheme-to-C-compatibility.sc
++.I %%PREFIX%%/lib/stalin/Scheme-to-C-compatibility.sc
+ include file for Scheme->C compatibility
+ .br
+-.I /usr/local/stalin/include/QobiScheme.sc
++.I %%PREFIX%%/lib/stalin/QobiScheme.sc
+ include file for QobiScheme
+ .br
+-.I /usr/local/stalin/include/xlib.sc
++.I %%PREFIX%%/lib/stalin/xlib.sc
+ include file for Xlib FPI
+ .br
+-.I /usr/local/stalin/include/xlib-original.sc
++.I %%PREFIX%%/lib/stalin/xlib-original.sc
+ include file for Xlib FPI
+ .br
+-.I /usr/local/stalin/include/libstalin.a
++.I %%PREFIX%%/lib/libstalin.a
+ library archive for Xlib FPI
+ .br
+-.I /usr/local/stalin/include/gc.h
++.I %%GC_PREFIX%%/include/gc.h
+ include file for the Boehm conservative garbage collector
+ .br
+-.I /usr/local/stalin/include/libgc.a
++.I %%GC_PREFIX%%/lib/libgc.a
+ library archive for the Boehm conservative garbage collector
+ .SH SEE\ ALSO
+ .BR sci "(2), " scc "(2), " gcc "(1), " ld "(1), " alloca "(3), " gc (8)
