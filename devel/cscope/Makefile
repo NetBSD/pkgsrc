@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/06/14 02:10:57 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2000/07/28 10:33:56 wiz Exp $
 
 DISTNAME=	cscope-15.0bl2
 PKGNAME=	cscope-15.0.2
@@ -9,19 +9,11 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://cscope.sourceforge.net/
 
 GNU_CONFIGURE=	YES
+USE_CURSES=	YES
 
-.include "../../mk/bsd.prefs.mk"
-GOOD_CURSES=	1.4[S-Z] 1.4Z[A-Z] 1.[5-9]*
+.include "../../mk/bsd.pkg.mk"
 
-.for PATTERN in ${GOOD_CURSES}
-.if ${OS_VERSION:M${PATTERN}} != ""
-CURSES_GOOD?=
-.endif
-.endfor
-
-.if !defined(CURSES_GOOD)
-DEPENDS+=	ncurses>=5.0:../../devel/ncurses
-
+.if ${NEED_NCURSES} == "YES"
 CONFIGURE_ARGS+=--with-ncurses=${LOCALBASE}
 
 post-extract:
@@ -32,5 +24,3 @@ post-extract:
 		< ${FILE}.orig > ${FILE}
 .endfor
 .endif
-
-.include "../../mk/bsd.pkg.mk"
