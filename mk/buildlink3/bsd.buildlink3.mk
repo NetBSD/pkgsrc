@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.28 2003/10/13 15:55:11 veego Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.29 2003/10/18 18:24:56 tron Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -76,7 +76,7 @@ _BLNK_X11_LINKS_PACKAGE=	x11-links
 .  else
 _BLNK_X11_LINKS_PACKAGE=	# empty
 .  endif
-BUILDLINK_DEPENDS.x11-links=	x11-links>=0.16
+BUILDLINK_DEPENDS.x11-links=	x11-links>=0.17
 BUILDLINK_DEPMETHOD.x11-links=	build
 BUILDLINK_PKGSRCDIR.x11-links=	../../pkgtools/x11-links
 _BLNK_X11_LINKS_DIR=	${BUILDLINK_PREFIX.x11-links}/${X11_LINKS_SUBDIR}
