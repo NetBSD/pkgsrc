@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.49 2002/03/26 16:09:08 abs Exp $
+# $NetBSD: Makefile,v 1.50 2002/08/19 23:56:15 fredb Exp $
 #
 
 DISTNAME=		lynx2.8.4rel.1
-PKGNAME=		lynx-2.8.4.1.2
+PKGNAME=		lynx-2.8.4.1.3
 CATEGORIES=		www
-MASTER_SITES=		http://lynx.isc.org/release/ \
-			ftp://lynx.isc.org/lynx/ \
+MASTER_SITES=		http://lynx.isc.org/lynx2.8.4/ \
+			ftp://lynx.isc.org/lynx2.8.4/ \
 			ftp://ftp.nl.uu.net/pub/unix/www/lynx/lynx2.8.4/ \
 			ftp://ftp.netlab.is.tsukuba.ac.jp/pub/network/WWW/lynx/lynx2.8.4/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,7 +14,8 @@ PATCH_SITES=		http://lynx.isc.org/lynx2.8.4/patches/ \
 			ftp://lynx.isc.org/lynx/lynx2.8.4/patches/ \
 			ftp://ftp.nl.uu.net/pub/unix/www/lynx/lynx2.8.4/patches/ \
 			ftp://ftp.netlab.is.tsukuba.ac.jp/pub/network/WWW/lynx/lynx2.8.4/patches/
-PATCHFILES=		lynx2.8.4rel.1a.patch lynx2.8.4rel.1b.patch
+PATCHFILES=		lynx2.8.4rel.1a.patch lynx2.8.4rel.1b.patch \
+			lynx2.8.4rel.1c.patch
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		fredb@netbsd.org
