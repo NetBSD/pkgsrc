@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2004/10/16 18:19:54 minskim Exp $
+
+--- xtermcfg.hin.orig	Tue May 25 20:19:55 2004
++++ xtermcfg.hin
+@@ -51,6 +51,7 @@ OR IN CONNECTION WITH THE USE OR PERFORM
+ #undef HAVE_LIB_XAWPLUS		/* CF_X_ATHENA(--with-XawPlus) */
+ #undef HAVE_NCURSES_TERM_H	/* AC_CHECK_HEADERS(ncurses/term.h) */
+ #undef HAVE_PATHS_H		/* CF_LASTLOG */
++#undef HAVE_SETPGRP		/* AC_CHECK_FUNCS(setpgrp) */
+ #undef HAVE_STDLIB_H		/* AC_CHECK_HEADERS(stdlib.h) */
+ #undef HAVE_STRERROR		/* AC_CHECK_FUNCS(strerror) */
+ #undef HAVE_STRFTIME		/* AC_CHECK_FUNCS(strftime) */
