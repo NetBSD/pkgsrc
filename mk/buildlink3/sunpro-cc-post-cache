@@ -1,4 +1,4 @@
-# $NetBSD: sunpro-cc-post-cache,v 1.8 2004/07/03 20:53:59 grant Exp $
+# $NetBSD: sunpro-cc-post-cache,v 1.9 2004/07/04 08:30:46 grant Exp $
 #
 # This file implements the default action of the "cc" private cache
 # for the SunPro suite of compilers, and tells the wrapper to skip the
@@ -6,7 +6,7 @@
 # can't handle; they will instead by handled directly by
 # sunpro-cc-post-logic.
 
--[OW]*|-ansi|-f[pP][iI][cC]|-fno-gnu-keywords|-pedantic|-pthread|-shared|-static)
+-[OW]*|-ansi|--export-dynamic|-f[pP][iI][cC]|-fno-gnu-keywords|-fstrict-prototypes|-pedantic|-pthread|-shared|-static)
 	skipcache=yes
 	;;
 esac
