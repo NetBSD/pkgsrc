@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/03/12 22:33:47 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/24 19:51:40 zuntum Exp $
 #
 
 DISTNAME=	kulki-1.01
@@ -16,14 +16,7 @@ WRKSRC=		${WRKDIR}/kulki
 
 USE_GMAKE=	YES
 
-MAKE_ENV=	"MOC=${X11BASE}/qt2/bin/moc"			\
-		"CXX=${CXX}"					\
-		"CP=${CP}"					\
-		"QTDIR=${X11BASE}/qt2"				\
-		"CXXFLAGS=${CXXFLAGS}"				\
-		"X11BASE=${X11BASE}"				\
-		"PREFIX=${PREFIX}"				\
-		"LOCALBASE=${LOCALBASE}"
+MAKE_ENV=	QTDIR="${X11BASE}/qt2" MOC="${QTDIR}/bin/moc" CXX="${CXX}" CP="${CP}"
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kulki
