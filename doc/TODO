@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3200 2005/03/05 14:12:26 wiz Exp $
+$NetBSD: TODO,v 1.3201 2005/03/05 14:23:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -381,7 +381,6 @@ Suggested package updates
 	o cscope-15.5
 	o cssc-1.0.1
 	o cstream-2.5
-	o curl-7.13.1
 	o cvsweb-3.0.5
 	o cwtext-0.94
 	o cxref-1.6
