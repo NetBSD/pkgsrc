@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:30:22 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/23 15:09:53 jschauma Exp $
 #
 
 DISTNAME=	${PKGNAME}
 PKGNAME=	eclipse-2.1
-CATEGORIES=	devel
+CATEGORIES=	devel java
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jschauma/
 
 MAINTAINER=	jschauma@NetBSD.org
@@ -12,7 +12,7 @@ COMMENT=	Java IDE
 
 DEPENDS+=	apache-ant>=1.4.1:../../devel/apache-ant
 
-PKG_JVM=	sun-jdk13
+PKG_JVM=	sun-jdk14
 
 MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
 MAKE_ENV+=	ANT_HOME=${PREFIX}
