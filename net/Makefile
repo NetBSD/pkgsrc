@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.461 2004/04/02 18:13:39 recht Exp $
+# $NetBSD: Makefile,v 1.462 2004/04/09 11:33:57 grant Exp $
 #
 
 COMMENT=	Networking tools
@@ -208,6 +208,7 @@ SUBDIR+=	p5-Net-CIDR-Lite
 SUBDIR+=	p5-Net-DNS
 SUBDIR+=	p5-Net-Daemon
 SUBDIR+=	p5-Net-Gnats
+SUBDIR+=	p5-Net-Google
 SUBDIR+=	p5-Net-IP
 SUBDIR+=	p5-Net-IRC
 SUBDIR+=	p5-Net-Jabber
