@@ -1,21 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/16 18:55:04 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/02 11:59:24 seb Exp $
 bin/inform
 bin/inform-6.21
-info/inform
-info/inform-1
-info/inform-10
-info/inform-11
-info/inform-12
-info/inform-13
-info/inform-14
-info/inform-2
-info/inform-3
-info/inform-4
-info/inform-5
-info/inform-6
-info/inform-7
-info/inform-8
-info/inform-9
 share/inform/6.21/include/AdHints.h
 share/inform/6.21/include/Menus.h
 share/inform/6.21/include/NewMenu.h
