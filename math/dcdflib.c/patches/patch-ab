@@ -1,25 +1,19 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/01/29 06:13:54 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2001/02/08 06:01:06 jtb Exp $
 
---- /dev/null	Mon Jan 29 05:11:27 2001
+--- /dev/null	Thu Feb  8 05:50:43 2001
 +++ Makefile
-@@ -0,0 +1,20 @@
-+LIB	= dcdflib
+@@ -0,0 +1,14 @@
++LIB= 	dcdflib
 +
-+LIBDIR	= ${PREFIX}/lib
++SHLIB_MAJOR=0
++SHLIB_MINOR=0
 +
-+all:	lib$(LIB).la
++LIBDIR=${PREFIX}/lib
 +
-+OBJS = dcdflib.o ipmpar.o
++NOLINT=1
 +
-+lib$(LIB).la:	$(OBJS)
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $(OBJS:.o=.lo) -lm \
-+	-rpath $(LIBDIR) --version-info 0:0
++SRCS= 	dcdflib.c ipmpar.c
 +
-+.c.o:
-+	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $<
++INCS=	cdflib.h
 +
-+install: lib$(LIB).la
-+	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $? $(LIBDIR)
-+
-+clean:
-+	rm -fr *.o *.lo .libs lib$(LIB).la
++.include <bsd.lib.mk>
