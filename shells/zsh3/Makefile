@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/02/18 15:14:40 seb Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/17 09:02:02 salo Exp $
 
 DISTNAME=       zsh-3.0.8
 CATEGORIES=	shells
@@ -22,11 +22,8 @@ TEXINFO_OVERRIDE=	YES
 LDFLAGS+=	-static
 .endif
 
-post-install:
-	${TOUCH} /etc/shells
-	${CP} /etc/shells /etc/shells.bak
-	(${GREP} -v ${PREFIX}/bin/zsh /etc/shells.bak || ${TRUE}; ${ECHO} ${PREFIX}/bin/zsh) >/etc/shells
-	${RM} /etc/shells.bak
+PKG_SHELL=	${PREFIX}/bin/zsh
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

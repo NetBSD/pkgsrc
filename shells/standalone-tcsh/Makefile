@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2002/10/31 11:55:30 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/11/17 09:02:01 salo Exp $
 #
 
 NO_MTREE=		YES
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 PKGNAME=		standalone-${DISTNAME}
+
+PKG_SHELL=		/bin/tcsh
 
 .include "../../shells/tcsh/Makefile"
 

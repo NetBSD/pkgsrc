@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2002/09/26 22:06:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/11/17 09:02:00 salo Exp $
 bin/bash
-@exec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak || true; echo %D/%F) >/etc/shells
-@unexec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak || true) >/etc/shells
 bin/bashbug
 man/man1/bash.1
 man/man1/bashbug.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 17:40:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/11/17 09:02:00 salo Exp $
 # FreeBSD Id: Makefile,v 1.4 1996/11/18 11:39:46 asami Exp
 #
 
@@ -13,4 +13,7 @@ COMMENT=	Extensible shell, derived from plan9's rc
 
 MANCOMPRESSED=	yes
 
+PKG_SHELL=	${PREFIX}/bin/es
+
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
