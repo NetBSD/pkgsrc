@@ -1,10 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2004/06/20 21:08:13 xtraeme Exp $
+$NetBSD: MESSAGE,v 1.5 2004/10/29 17:47:30 xtraeme Exp $
 
-In order to use ${PKGNAME}, you'll have to install sysutils/grub.
-
-Don't forget to create the ``menu.lst'' in $ISODIR/boot/grub to specify
-what kernels you want to boot.
+Don't forget to create the ``menu.lst'' file in $ISODIR/boot/grub
+to specify what kernels you want to boot.
 
 Good luck!
 

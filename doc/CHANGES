@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7605 2004/10/29 17:39:41 tv Exp $
+$NetBSD: CHANGES,v 1.7606 2004/10/29 17:47:30 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4969,3 +4969,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated evolution to 2.0.2nb3 [jmmv 2004-10-29]
 	Added dpkg-1.10.24 [erh 2004-10-29]
 	Updated entropy to 0.8.2.418nb2 [tv 2004-10-29]
+	Updated mklivecd to 0.7 [xtraeme 2004-10-29]

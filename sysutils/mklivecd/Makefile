@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2004/07/28 20:36:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.11 2004/10/29 17:47:30 xtraeme Exp $
 
-DISTNAME=	mklivecd-0.6
+DISTNAME=	mklivecd-0.7
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -8,7 +8,8 @@ DISTFILES=	# empty
 MAINTAINER=	xtraeme@NetBSD.org
 COMMENT=	Build a NetBSD i386 Live CD via command line
 
-DEPENDS+=	{cdrecord,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrecord
+BUILD_DEPENDS+=	{cdrecord,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrecord
+BUILD_DEPENDS+=	grub>=0.95:../../sysutils/grub
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -23,16 +24,20 @@ NO_BUILD=	YES
 
 INSTALLATION_DIRS=	man/man8 sbin share/mklivecd
 
-FILES=	    KERN-LIVECD mfs_rcd personal_config
+FILES=	    KERN-LIVECD personal_config
 
 do-install:
+.for f in mfs_rcd mklivecd.sh
 	@${SED} -e "s,@PREFIX@,${PREFIX},g" \
 		-e "s,@LOCALBASE@,${LOCALBASE},g" \
+		-e "s,@TAR@,${TAR},g" \
 		-e "s,@MACHINE_ARCH@,${MACHINE_ARCH},g" \
-		${FILESDIR}/mklivecd.sh > ${WRKDIR}/mklivecd
+		${FILESDIR}/${f} > ${WRKDIR}/${f}
+.endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mklivecd
-	${INSTALL_SCRIPT} ${WRKDIR}/mklivecd ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKDIR}/mklivecd.sh ${PREFIX}/sbin/mklivecd
 	${INSTALL_MAN} ${FILESDIR}/mklivecd.8 ${PREFIX}/man/man8
+	${INSTALL_DATA} ${WRKDIR}/mfs_rcd ${PREFIX}/share/mklivecd
 .for F in ${FILES}
 	${INSTALL_DATA} ${FILESDIR}/${F} ${PREFIX}/share/mklivecd
 .endfor

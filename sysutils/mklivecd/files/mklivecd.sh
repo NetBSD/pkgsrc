@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.14 2004/05/20 02:11:41 uebayasi Exp $
+# $NetBSD: mklivecd.sh,v 1.15 2004/10/29 17:47:30 xtraeme Exp $
 #
 # Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
 # All rights reserved.
@@ -294,7 +294,7 @@ do_cdlive()
 			if [ "$verbose_mode" = "on" ]; then
 			    echo "=> Unpacking $S"
 			fi
-			tar xfzp $BASE_SETS_DIR/$S -C $ISODIR
+			@TAR@ xfzp $BASE_SETS_DIR/$S -C $ISODIR
 		    fi
 		done
 
@@ -316,7 +316,7 @@ do_cdlive()
 				if [ "$verbose_mode" = "on" ]; then
 				    echo "=> Unpacking $X"
 				fi
-				tar xfzp $X11_SETS_DIR/$X -C $ISODIR
+				@TAR@ xfzp $X11_SETS_DIR/$X -C $ISODIR
 			    fi
 			done
 		    fi
@@ -349,7 +349,7 @@ do_cdlive()
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.14 2004/05/20 02:11:41 uebayasi Exp $
+# \$NetBSD: mklivecd.sh,v 1.15 2004/10/29 17:47:30 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -370,7 +370,7 @@ load_rc_config \$name
 run_rc_command "\$1"
 _EOF_
 		# Make sure the devices are created before creating
-		# the .tbz files.
+		# the .tgz files.
 
 		showmsg "Creating devices"
 		cd $ISODIR/dev && ./MAKEDEV all
@@ -427,9 +427,9 @@ _EOF_
 		cp -f $SHAREDIR/mfs_rcd $ISODIR/etc/rc.d
 
 		SUBST_H="mount_mfs $MNT_HOME_ARGS swap /home"
-		SUBST_HT="tar xfjp /stand/mfs_home.tbz -C /"
+		SUBST_HT="@TAR@ xfzp /stand/mfs_home.tgz -C /"
 		SUBST_S="mount_mfs $MNT_PKG_SYSCONFDIR_ARGS swap /$PKG_SYSCONFDIR"
-		SUBST_ST="tar xfjp /stand/mfs_pkg_sysconfdir.tbz -C /"
+		SUBST_ST="@TAR@ xfjp /stand/mfs_pkg_sysconfdir.tgz -C /"
 
 		sed -e "s,@MNT_DEV_ARGS@,$MNT_DEV_ARGS,g" \
 		    -e "s,@MNT_ETC_ARGS@,$MNT_ETC_ARGS,g" \
@@ -442,8 +442,8 @@ _EOF_
 		for U in root var dev etc home
 		do
 		    if [ -d $ISODIR/$U ]; then
-			tar cfjp $ISODIR/stand/mfs_$U.tbz $U >/dev/null 2>&1
-			showmsg "Creating /stand/mfs_$U.tbz"
+			@TAR@ cfzp $ISODIR/stand/mfs_$U.tgz $U >/dev/null 2>&1
+			showmsg "Creating /stand/mfs_$U.tgz"
 		    fi
 		done
  
@@ -459,9 +459,9 @@ _EOF_
 		fi
                         
 		if [ -d $ISODIR/$PKG_SYSCONFDIR ]; then
-		    tar cfjp $ISODIR/stand/mfs_pkg_sysconfdir.tbz \
+		    @TAR@ cfzp $ISODIR/stand/mfs_pkg_sysconfdir.tgz \
 			$PKG_SYSCONFDIR >/dev/null 2>&1
-		    showmsg "Creating /stand/mfs_pkg_sysconfdir.tbz"
+		    showmsg "Creating /stand/mfs_pkg_sysconfdir.tgz"
 		    sed -e "s,@USRPKGETC@,$SUBST_S," \
 			-e "s,@USRPKGETCTAR@,$SUBST_ST," \
 			$ISODIR/etc/rc.d/mfs_rcd > $ISODIR/etc/rc.d/mfs_rcd.f
@@ -538,9 +538,9 @@ _EOF_
 		showmsg "Done."
 	;;
 	iso)
-		if [ ! -f $ISODIR/stand/mfs_etc.tbz ]; then
+		if [ ! -f $ISODIR/stand/mfs_etc.tgz ]; then
 			showmsg "Target iso failed!"
-			showmsg "Can't find mfs_etc.tbz file."
+			showmsg "Can't find mfs_etc.tgz file."
 			bye 1
 		fi
 
