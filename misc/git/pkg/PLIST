@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/03/16 08:52:12 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/03/28 21:38:27 frueauf Exp $
 bin/git
 bin/gitps
 bin/gitview
@@ -70,9 +70,9 @@ share/doc/git/git_toc.html
 @dirrm share/doc/git
 man/man1/git.1.gz
 man/man1/gitaction.1.gz
-man/man1/gitmount.1.gz
 man/man1/gitkeys.1.gz
-man/man1/gitrgrep.1.gz
+man/man1/gitmount.1.gz
 man/man1/gitps.1.gz
+man/man1/gitrgrep.1.gz
+man/man1/gitunpack.1.gz
 man/man1/gitview.1.gz
-man/man1/gitunpack.1
