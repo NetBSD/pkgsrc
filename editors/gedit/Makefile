@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/02/14 17:21:39 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/02/16 21:38:44 jmmv Exp $
 #
 
 DISTNAME=		gedit-2.4.1
@@ -31,8 +31,10 @@ CONFIGURE_ARGS+=	--enable-schemas-install
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/eel2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtksourceview/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
