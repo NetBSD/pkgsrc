@@ -3,7 +3,7 @@
 # Date created:		Tue Jun 10 21:58:54 CEST 1997
 # Whom:			Andreas Klemm <andreas@klemm.gtn.com>
 #
-# $NetBSD: Makefile,v 1.6 1998/01/06 04:05:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/01/15 18:38:21 chopps Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/13 11:22:43 asami Exp
 #
 
@@ -17,8 +17,14 @@ DISTFILES=	${GS_SOURCES} ${GS_FONTS_STD} ${GS_FONTS_OTHER} \
 
 MAINTAINER=	explorer@netbsd.org
 
-BUILD_DEPENDS=	${PORTSDIR}/graphics/jpeg/work/jpeg-6a:${PORTSDIR}/graphics/jpeg:extract \
-		${PORTSDIR}/graphics/png/work/libpng-0.96:${PORTSDIR}/graphics/png:extract \
+.if defined(OBJMACHINE)
+WRKDIRNAME=work.${ARCH}
+.else
+WRKDIRNAME=work
+.endif
+
+BUILD_DEPENDS=	${PORTSDIR}/graphics/jpeg/${WRKDIRNAME}/jpeg-6a:${PORTSDIR}/graphics/jpeg:extract \
+		${PORTSDIR}/graphics/png/${WRKDIRNAME}/libpng-0.96:${PORTSDIR}/graphics/png:extract \
 		unzip:${PORTSDIR}/archivers/unzip
 
 MAKE_ENV=	PORTSDIR=${PORTSDIR}
@@ -62,8 +68,8 @@ post-extract:
 	${TOUCH} ${WRKSRC}/adler32.o
 	${TOUCH} ${WRKSRC}/deflate.o
 	${TOUCH} ${WRKSRC}/trees.o
-	ln -s ${PORTSDIR}/graphics/jpeg/work/jpeg-6a ${WRKSRC}/jpeg-6a
-	ln -s ${PORTSDIR}/graphics/png/work/libpng-0.96 ${WRKSRC}/libpng
+	ln -s ${PORTSDIR}/graphics/jpeg/${WRKDIRNAME}/jpeg-6a ${WRKSRC}/jpeg-6a
+	ln -s ${PORTSDIR}/graphics/png/${WRKDIRNAME}/libpng-0.96 ${WRKSRC}/libpng
 	cd ${WRKSRC} && unzip -La ${DISTDIR}/${HP850_DRV}
 
 do-configure:
