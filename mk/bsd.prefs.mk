@@ -1,9 +1,13 @@
-# $NetBSD: bsd.prefs.mk,v 1.3 1998/08/19 16:23:40 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.4 1998/11/26 23:39:15 hubertf Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
 # statements, to make sure any variables defined in /etc/mk.conf or
 # $MAKECONF are used.
+
+# Let people know this is bsd.pkg.mk, so they can set up their
+# /etc/mk.conf accordingly  
+BSD_PKG_MK=1 
 
 .if !defined(OPSYS)
 OPSYS!= /usr/bin/uname -s
