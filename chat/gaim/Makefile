@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2003/05/02 11:54:01 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2003/05/21 17:36:02 jmmv Exp $
 #
 
-DISTNAME=	gaim-0.62
-PKGREVISION=	1
+DISTNAME=	gaim-0.63
 CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/}
 
@@ -24,7 +23,7 @@ USE_X11=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--disable-nas
-CONFIGURE_ARGS+=	--enable-perl
+CONFIGURE_ARGS+=	--disable-perl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,7 +35,6 @@ CONFIGURE_ARGS+=	--disable-screensaver
 .include "../../audio/libaudiofile/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
 .include "../../textproc/gtkspell/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
