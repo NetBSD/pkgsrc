@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/10/24 19:32:22 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2002/12/08 03:57:17 salo Exp $
 #
 
 DISTNAME=	Imaging-1.1.3
@@ -16,6 +16,7 @@ BUILDLINK_DEPENDS.python20= python20>=2.0.1nb1
 DIST_SUBDIR=    python
 ALL_TARGET=     sharedmods
 USE_BUILDLINK2=	yes
+USE_X11=	yes
 
 do-configure:
 	(cd ${WRKSRC}/libImaging; CC="cc -fPIC" LIBS="${LDFLAGS}" ./configure)
