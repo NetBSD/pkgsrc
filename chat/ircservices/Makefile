@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/10/02 22:09:46 adrianp Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/04 15:06:34 wiz Exp $
 #
 
-DISTNAME=	ircservices-5.0.40
+DISTNAME=	ircservices-5.0.41
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.esper.net/ircservices/ \
 		ftp://ftp.esper.net/ircservices/old/
