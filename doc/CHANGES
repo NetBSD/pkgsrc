@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7332 2004/10/03 22:34:10 wiz Exp $
+$NetBSD: CHANGES,v 1.7333 2004/10/03 23:20:27 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4533,3 +4533,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated squid to 2.5.6nb3 [taca 2004-10-03]
 	Updated ja-samba to 2.2.11.1.0 [taca 2004-10-03]
 	Updated ntop to 1.1nb4 [wiz 2004-10-03]
+	Updated udfclient to 0.3.1 [reinoud 2004-10-03]
+
