@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.8 2003/03/20 16:41:44 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.9 2003/03/23 01:01:59 jmc Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -6,20 +6,21 @@ File						Revision(s)
 ----						--------
 mk/texinfo.mk					1.9
 
-When comparing install-info version, ignore non [0-9.] - treat 4.0b as 4.0
+	When comparing install-info version, ignore non [0-9.] - treat 4.0b 
+	as 4.0
 	[abs]
 
 mail/imap-uw/Makefile				1.54
 
-Linux cp -R behaves differently to NetBSD when given a directory as a source
-argument. Handle differently.
+	Linux cp -R behaves differently to NetBSD when given a directory as 
+	a source argument. Handle differently.
 	[abs]
 
 devel/opencm/distinfo				1.6
 devel/opencm/patches/patch-aa			1.3
 
-Unset GZIP from the environment before calling GZIP_CMD.  Should fix problems
-shown in Hubert's bulk build.  Thanks to Yuji Yamano!
+	Unset GZIP from the environment before calling GZIP_CMD.  Should fix 
+	problems shown in Hubert's bulk build.
 	[jmmv]
 
 devel/oaf/Makefile				1.23
@@ -27,7 +28,7 @@ sysutils/gnome-vfs/Makefile			1.26
 devel/bonobo/Makefile				1.35
 www/gtkhtml/Makefile				1.27
 
-Disable gtk-doc detection; not required and causes problems.
+	Disable gtk-doc detection; not required and causes problems.
 	[jmmv]
 
 graphics/avifile-devel/Makefile			1.30
@@ -35,73 +36,73 @@ graphics/avifile-devel/buildlink2.mk		1.4
 graphics/avifile-devel/distinfo			1.13
 graphics/avifile-devel/patches/patch-ac		1.3 (new)
 
-Add suitable arguments to "avifile-config --libs" for autodetected XFree 4
-static libraries, where required. [You can't have a shared library run-time
-dependency on a static library.] This may let "apla" build again on systems
-with XFree 4 -- not tested.
+	Add suitable arguments to "avifile-config --libs" for 
+	autodetected XFree 4 static libraries, where required. 
+	[You can't have a shared library run-time dependency on a static 
+	library.] This may let "apla" build again on systems with 
+	XFree 4 -- not tested.
 	[fredb]
 
 graphics/apla/Makefile				1.14
 
-This builds again on NetBSD 1.6.1, but only against the latest version
-of avifile-devel. Bump pkgrevision.
+	This builds again on NetBSD 1.6.1, but only against the latest version
+	of avifile-devel. Bump pkgrevision.
 	[fredb]
 
 mk/bulk/bsd.bulk-pkg.mk				1.43
 
-correct the 'broken due to depends' processing.  This change makes the
-summary email list correctly the packages which are broken because of
-their dependencies.  Problem noted on Huberts most recent bulk build.
+	Correct the 'broken due to depends' processing.  This change makes the
+	summary email list correctly the packages which are broken because of
+	their dependencies.  
 	[dmcmahill]
 
 pkgtools/pkg_install/files/lib/pkgdb.c		1.7
 
-correct #ifdef misplacement.
+	Correct #ifdef misplacement.
 	[grant]
 
 pkgsrc/textproc/crimson/Makefile		1.7-1.8
 pkgsrc/textproc/crimson/distinfo		1.2
 
-Pull up changes from trunk to the netbsd-1-6-1 branch to allow this to be
-extracted.
+	Pull up changes from trunk to the netbsd-1-6-1 branch to allow 
+	this to be extracted.
 	[salo]
 
 misc/kdepim3/distinfo/distinfo			1.7
 misc/kdeutils3/distinfo				1.10
 net/kdenetwork3/distinfo			1.9
-
 misc/kdepim3/patches/patch-ai			1.1 (new)
 misc/kdeutils3/patches/patch-ao			1.1 (new)
 net/kdenetwork3/patches/patch-aa		1.1 (new)
 
-Remove some more bogus sizeof(size_t) == sizeof(unsigned int) checks.
+	Remove some more bogus sizeof(size_t) == sizeof(unsigned int) checks.
 	[skrll]
 
 x11/kdebase3/Makefile				1.18
 x11/kdebase3/distinfo				1.20
 x11/kdebase3/patches/patch-de			1.3
 
-Let platforms that don't have apm compile ksysguard. This fixes PR 18340
-and PR 20439.
+	Let platforms that don't have apm compile ksysguard. This fixes 
+	PR#18340 and PR#20439.
 	[skrll]
 
 x11/kdebase3/distinfo				1.19
 x11/kdebase3/patches/patch-aa			1.4
 
-fix typo in configure script which incorrectly determines that a prototype
-for strlcat is needed.  Unfortunately that had the effect of providing
-a bad (for 64 bit systems) prototype.
+	Fix typo in configure script which incorrectly determines that a 
+	prototype for strlcat is needed.  Unfortunately that had the effect 
+	of providing a bad (for 64 bit systems) prototype.
 	[dmcmahill]
 
 audio/kdemultimedia3/Makefile			1.13
 
-unlimit datasize to allow this to build on alpha
+	Unlimit datasize to allow this to build on alpha
 	[dmcmahill]
 
 net/kdenetwork3/distinfo			1.10
 net/kdenetwork3/patches/patch-aa		1.4
 
-fix typo in check for strlcat which caused a build failure on alpha.
+	Fix typo in check for strlcat which caused a build failure on alpha.
 	[dmcmahill]
 
 misc/kdeutils3/distinfo				1.11
@@ -109,28 +110,29 @@ misc/kdeutils3/patches/patch-ao			1.2
 misc/kdepim3/distinfo				1.8
 misc/kdepim3/patches/patch-ai			1.2
 
-fix typo in check for strlcat which caused a failure on alpha
+	Fix typo in check for strlcat which caused a failure on alpha
 	[dmcmahill]
 
 graphics/xv/distinfo				1.7
 graphics/xv/patches/patch-ab			1.6
 
-fix a broken #ifdef, noted on Linux.
+	Fix a broken #ifdef, noted on Linux.
 	[grant]
 
 misc/openoffice/distinfo			1.15
 misc/openoffice/patches/patch-eq		1.1 (new)
 
-Reduce optimisation for a particular file to avoid a gcc internal
-compiler error.
+	Reduce optimisation for a particular file to avoid a gcc internal
+	compiler error.
 	[mrauch]
 
 misc/openoffice-linux/Makefile			1.5
 misc/openoffice-linux/PLIST			1.3
 
-Automate the creation of /emul/linux/etc/mtab:
-Use the code from Johnny (jlam) again, but do an additional copy at
-pre-install, because the file has to be present during do-install already.
+	Automate the creation of /emul/linux/etc/mtab:
+	Use the code from Johnny (jlam) again, but do an additional copy at
+	pre-install, because the file has to be present during do-install 
+	already.
 	[mrauch]
 
 games/nethack-lib/Makefile.common		1.8
@@ -155,13 +157,13 @@ games/nethack-x11/patches/patch-ab		1.9
 games/nethack-x11/patches/patch-ac		1.2
 games/nethack-x11/patches/patch-ah		1.3
 
-Pullup nethack version 3.4.1 to netbsd-1-6-1 pkgsrc branch.
+	Pullup nethack version 3.4.1 to netbsd-1-6-1 pkgsrc branch.
 	[pooka]
 
 devel/mrproject/Makefile			1.10
 devel/mrproject/PLIST				1.6
 
-Make this build again, without evolution support. Bump PKGREVISION.
+	Make this build again, without evolution support. Bump PKGREVISION.
 	[wiz, ticket #1196]
 
 net/snort/DEINSTALL				delete
@@ -170,20 +172,21 @@ net/snort/PLIST					1.8
 net/snort/distinfo				1.14
 net/snort-pgsql/Makefile			1.8
 
-Snort RPC preprocessing buffer overflow when decoding fragmented RPC
-records (http://www.kb.cert.org/vuls/id/916785).
-Versions affected <1.9.1.
+	Snort RPC preprocessing buffer overflow when decoding fragmented RPC
+	records (http://www.kb.cert.org/vuls/id/916785).
+	Versions affected <1.9.1.
 	[salo, ticket #1192]
 
 comms/p5-Device-SerialPort/Makefile		1.9-1.10
 
-Makes this pkg build on 1.6.1.
+	Makes this pkg build on 1.6.1.
 	[hubertf, ticket #1197]
 
 devel/cvs/Makefile				1.59
 devel/cvs/distinfo				1.11
 
-Don't use .bz2 distfile, as it doesn't appear to exist on various mirrors
+	Don't use .bz2 distfile, as it doesn't appear to exist on various 
+	mirrors.
 	[grant, ticket #1198]
 
 mail/hypermail/Makefile				1.4
@@ -193,98 +196,124 @@ mail/hypermail/patches/patch-aa			1.2
 mail/hypermail/patches/patch-ab			1.1 (new)
 mail/hypermail/patches/patch-ac			1.1 (new)
 
-Update to 2.1.7: Many bug and security fixes; you should upgrade.
+	Update to 2.1.7: Many bug and security fixes; you should upgrade..
 	[bouyer, ticket #1201]
 
 lang/wonka/Makefile				1.5
 
-Restrict to x86 and arm as no other ports are done ATM
+	Restrict to x86 and arm as no other ports are done ATM
 	[skrll, ticket #1203]
 
 net/ethereal/Makefile				1.71
 net/ethereal/PLIST				1.7
 net/ethereal/distinfo				1.17
 
-Updated to version 0.9.10.
+	Updated to version 0.9.10.
 
-This release fixes a security hole discovered by Georgi Guninski in
-the SOCKS dissector.  All users of previous versions are encouraged
-to upgrade.  For more details see
+	This release fixes a security hole discovered by Georgi Guninski in
+	the SOCKS dissector.  All users of previous versions are encouraged
+	to upgrade.  For more details see
 
-  http://www.ethereal.com/appnotes/enpa-sa-00008.html
+	  http://www.ethereal.com/appnotes/enpa-sa-00008.html
 	[salo, ticket #1204]
 
 net/soup/patches/patch-ac			1.1 (new)
 net/soup/distinfo				1.4
 
-fix bug with static initializers which prevented compilition on 64 bit
-platforms
+	Fix bug with static initializers which prevented compilition on 64 bit
+	platforms
 	[dmcmahill, ticket #1209]
 
 mail/evolution/Makefile				1.33
 
-add --disable-gtk-doc to CONFIGURE_ARGS to allow this to build without
-an active X display.
+	Add --disable-gtk-doc to CONFIGURE_ARGS to allow this to build without
+	an active X display.
 	[dmcmahill, ticket #1211]
 
 cad/qcad/Makefile				1.10
 cad/qcad/distinfo				1.6
 cad/qcad/patches/patch-aa			1.5
 
-on alpha lower optimization level on a handful of key problem files that
-triggered a compiler error.   This package now builds and seems to run
-on NetBSD-1.6/alpha
+	On alpha lower optimization level on a handful of key problem files that
+	triggered a compiler error.   This package now builds and seems to run
+	on NetBSD-1.6/alpha
 	[dmcmahill, ticket #1213]
 
 net/ethereal/Makefile				1.72
 net/ethereal/distinfo				1.18
 
-Updated to version 0.9.11.
-(0.9.10 was improperly packaged)
+	Updated to version 0.9.11.
+	(0.9.10 was improperly packaged)
 	[salo, ticket #1214]
 
 audio/xsidplay/Makefile				1.23
 audio/xsidplay/distinfo				1.4
 audio/xsidplay/patches/patch-aa			1.8
 
-lower optimization on 8 problem files on alpha which trigger compiler
-bugs.  This package now builds on NetBSD-1.6/alpha and even seems to
-run the GUI.  Audio output not verified due to lack of hardware.
+	Lower optimization on 8 problem files on alpha which trigger compiler
+	bugs. This package now builds on NetBSD-1.6/alpha and even seems to
+	run the GUI. Audio output not verified due to lack of hardware.
 	[dmcmahill, ticket #1215]
 
 graphics/aqsis/distinfo				1.2
 graphics/aqsis/patches/patch-af			1.1 (new)
 
-use a time_t * as the argument to time(3) to let this compile on 64 bit systems.
-Fixes recently noted compile problems on alpha.
+	Use a time_t * as the argument to time(3) to let this compile on 
+	64 bit systems.  Fixes recently noted compile problems on alpha.
 	[dmcmahill, ticket #1216]
 
 www/mozilla/Makefile				1.115
 www/mozilla/files/moz-install			1.6
 
-moz-install treated element between @comment begin DIRS & @comment end DIRS in
-PLIST.
-if @exec ${MKDIR} -p %D/lib/${MOZILLA}/plugins in such a section,
-directory '@exec', '${MKDIR}', '-p', '%D/lib/${MOZILLA}/plugins' are created.
+	moz-install treated element between @comment begin DIRS & @comment 
+	end DIRS in PLIST.
+	if @exec ${MKDIR} -p %D/lib/${MOZILLA}/plugins in such a section,
+	directory '@exec', '${MKDIR}', '-p', '%D/lib/${MOZILLA}/plugins' are 
+	created.
 
-this commit fixes this problem.
+	This commit fixes this problem.
 	[taya, ticket #1208]
 
 graphics/xpaint/distinfo			1.7
 graphics/xpaint/patches/patch-ag		1.2
 
-don't try and do ${XMFMF} -a because that produces 'xmkmf -a -a' which
-causes an error.  This builds and runs on alpha now.
+	Don't try and do ${XMFMF} -a because that produces 'xmkmf -a -a' which
+	causes an error.  This builds and runs on alpha now.
 	[dmcmahill, ticket #1217]
 
 mail/mutt/Makefile				1.93
 mail/mutt/distinfo				1.13
 mail/mutt/patches/patch-af			1.4
 
-Update mutt to 1.4.1:
+	Update mutt to 1.4.1:
 
- fix a buffer overflow in mutt's IMAP client code which
- was identified by Core Security Technologies, and fixed by Edmund
- Grimley Evans.  A more detailed advisory will be published by Core
- Security.
+	 fix a buffer overflow in mutt's IMAP client code which
+	 was identified by Core Security Technologies, and fixed by Edmund
+	 Grimley Evans.  A more detailed advisory will be published by Core
+	 Security.
 	[jschauma, ticket #1223]
+
+mk/bsd.pkg.defaults.mk				1.133
+
+	provide CDRECORD_CONF.
+
+	[grant, ticket #1200]
+
+sysutils/cdrecord/MESSAGE.cdrecord.conf		1.1 (new)
+sysutils/cdrecord/Makefile			1.47
+sysutils/cdrecord/distinfo			1.9
+sysutils/cdrecord/patches/patch-ca		1.1 (new)
+sysutils/cdrecord/patches/patch-cb		1.1 (new)
+sysutils/cdrecord/patches/patch-cc		1.1 (new)
+
+	Default the config file to PKG_SYSCONFDIR/cdrecord.conf unless
+	overridden by the user via CDRECORD_CONF.
+
+	You must move your config file to the new location if you update!
+
+	Patch man pages and print a MESSAGE if CDRECORD_CONF is not set to
+	`/etc/default/cdrecord', as required by license.
+
+	Bump PKGREVISION.
+	[grant, ticket #1200]
+
