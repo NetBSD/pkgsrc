@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.9 2004/05/16 00:28:23 kristerw Exp $
+$NetBSD: patch-ae,v 1.10 2004/11/07 16:11:48 kristerw Exp $
 
---- doc/xmessrc.dist.orig	Sat May 15 23:56:37 2004
-+++ doc/xmessrc.dist	Sat May 15 23:58:14 2004
-@@ -69,17 +69,17 @@
- mouse                   1
+--- doc/xmessrc.dist.orig	Sun Nov  7 13:51:40 2004
++++ doc/xmessrc.dist	Sun Nov  7 13:53:30 2004
+@@ -66,11 +66,11 @@
+ analogstick             0
  
  ### Fileio Related ###
 -biospath                /usr/local/share/xmess/bios
@@ -18,10 +18,3 @@ $NetBSD: patch-ae,v 1.9 2004/05/16 00:28:23 kristerw Exp $
  
  ### Mess Related ###
  language                english
- fuzzycmp                1
- cheat                   0
--debug                   0
-+# debug                   0
- 
- ### Frontend Related ###
- clones                  1
