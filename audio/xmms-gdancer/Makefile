@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/10/24 22:10:46 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/21 02:00:14 jlam Exp $
 #
 
 DISTNAME=	gdancer-0.4.3
@@ -10,11 +10,11 @@ MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://figz.com/gdancer/
 COMMENT=	XMMS plugin to animate characters to the beat of the music
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-.include "../../audio/xmms/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../audio/xmms/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
