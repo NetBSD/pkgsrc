@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2000/09/03 15:20:16 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2000/11/27 07:31:59 kei Exp $
 #
 
     SUBDIR += a2ps
@@ -23,6 +23,8 @@
     SUBDIR += micq
     SUBDIR += namazu
     SUBDIR += nkf
+    SUBDIR += p5-Text-ChaSen
+    SUBDIR += p5-Text-Kakasi
     SUBDIR += p5-jcode
     SUBDIR += p5-nkf
     SUBDIR += sed
