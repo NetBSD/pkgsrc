@@ -1,0 +1,25 @@
+$NetBSD: patch-ae,v 1.1 1999/09/13 03:33:35 simonb Exp $
+
+--- common.h.orig	Sat Jul 24 07:50:33 1999
++++ common.h	Mon Sep 13 12:54:56 1999
+@@ -175,9 +175,9 @@
+ 
+ typedef struct  bit_stream_struc {
+     FILE        *pt;            /* pointer to bit stream device */
+-    unsigned char *buf;         /* bit stream buffer */
++    u_int8_t *buf;         /* bit stream buffer */
+     int         buf_size;       /* size of buffer (in number of bytes) */
+-    long        totbit;         /* bit counter of bit stream */
++    int        totbit;         /* bit counter of bit stream */
+ 
+     int         buf_byte_idx;   /* pointer to top byte in buffer */
+     int         buf_bit_idx;    /* pointer to top bit of top byte in buffer */
+@@ -212,7 +212,7 @@
+ /* The following functions are in the file "common.c" */
+ 
+ extern void 					hdr_to_frps(frame_params *fr_ps); /* interpret data in hdr str to fields in fr_ps */
+-extern void  				 *mem_alloc(unsigned long block, char *item);
++extern void  				 *mem_alloc(unsigned int block, char *item);
+ extern void    				mem_free( void **ptr_addr);
+ extern void           read_absthr();
+ 
