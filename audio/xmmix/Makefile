@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2002/10/08 12:30:57 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2003/02/25 02:22:29 jschauma Exp $
 # FreeBSD ID: Makefile,v 1.5 1997/09/08 13:37:47 tg Exp
 #
 
 DISTNAME=       xmmix-1.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=   http://mercury.hypersurf.com/~amb/download/xmmix-1.2/src/
 
