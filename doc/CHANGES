@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5929 2004/05/14 06:57:43 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5930 2004/05/14 08:06:01 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2519,3 +2519,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tcl-tclX to 8.3.5 [minskim 2004-05-13]
 	Updated tk-tclX to 8.3.5 [minskim 2004-05-13]
 	Updated treecc to 0.3.0 [xtraeme 2004-05-14]
+	Updated pnet to 0.6.4 [xtraeme 2004-05-14]
+	Updated pnetlib to 0.6.4 [xtraeme 2004-05-14]
+	Updated pnetC to 0.6.4 [xtraeme 2004-05-14]
