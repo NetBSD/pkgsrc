@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1340 2004/01/07 15:30:54 salo Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1341 2004/01/10 08:38:43 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -97,6 +97,14 @@ REINSTALL?=		NO	# reinstall upon update
 CHECK_SHLIBS?=		YES	# run check-shlibs after install
 SHLIB_HANDLING?=	YES	# do automatic shared lib handling
 NOCLEAN?=		NO	# don't clean up after update
+
+.if exists(/usr/lib/libc.dylib)
+SHLIB_TYPE=		dylib
+.elif ${OPSYS} == "AIX"
+SHLIB_TYPE=		aixlib
+.else
+SHLIB_TYPE=		${OBJECT_FMT}
+.endif
 
 PKGBASE?=		${PKGNAME:C/-[^-]*$//}
 PKGVERSION?=		${PKGNAME:C/^.*-//}
@@ -2867,11 +2875,10 @@ do-shlib-handling:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	sos=`${EGREP} -h -x '.*/lib[^/]+\.so' ${PLIST} || ${TRUE}`;	\
 	if [ "$$sos" != "" ]; then					\
-		shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;	\
 		if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 		\
-			${ECHO_MSG} "${_PKGSRC_IN}> [Automatic $$shlib_type shared object handling]"; \
+			${ECHO_MSG} "${_PKGSRC_IN}> [Automatic ${SHLIB_TYPE} shared object handling]"; \
 		fi;  							\
-		case "$$shlib_type" in					\
+		case "${SHLIB_TYPE}" in					\
 		ELF) 	;;						\
 		"a.out") 						\
 			${AWK} '${_AOUT_AWK}' <${PLIST} >${PLIST}.tmp ;	\
@@ -2966,38 +2973,6 @@ check-shlibs:
 		exit 1;							\
 	fi
 .endif # NO_PKG_REGISTER
-
-
-.if !target(show-shlib-type)
-# Show the shared lib type being built: one of ELF, a.out, dylib, or none
-.PHONY: show-shlib-type
-show-shlib-type:
-.  if exists(/usr/lib/libc.dylib)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "dylib"
-.  elif ${OPSYS} == "AIX"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "aixlib"
-.  else
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cd ${WRKDIR} &&							\
-	sotype=none;							\
-	if [ "X${MKPIC}" != "Xno" -a "X${NOPIC}" = "X" ]; then		\
-		${ECHO} "int main() { exit(0); }" > a.$$$$.c;		\
-		${CC} ${CFLAGS} a.$$$$.c -o a.$$$$.out;			\
-		case `${FILE_CMD} a.$$$$.out` in			\
-		*ELF*dynamically*)					\
-			sotype=ELF ;;					\
-		*shared*library*)					\
-			sotype="a.out" ;;				\
-		*dynamically*)						\
-			sotype="a.out" ;;				\
-		esac;							\
-	fi;								\
-	${ECHO} "$$sotype";						\
-	${RM} -f a.$$$$.c a.$$$$.out
-.  endif # libc.dylib
-.endif
 
 .PHONY: acquire-extract-lock acquire-patch-lock acquire-tools-lock
 .PHONY: acquire-buildlink-lock acquire-configure-lock acquire-build-lock
@@ -4504,8 +4479,7 @@ print-PLIST:
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	${ECHO} '@comment $$'NetBSD'$$'
 	${_PKG_SILENT}${_PKG_DEBUG}\
-	shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;		\
-	case $$shlib_type in 						\
+	case "${SHLIB_TYPE}" in 					\
 	"a.out")	genlinks=1 ;;					\
 	*)		genlinks=0 ;;					\
 	esac;								\
