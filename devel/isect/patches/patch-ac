@@ -1,36 +1,32 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/09/15 18:56:22 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2002/08/06 15:38:03 jschauma Exp $
 
---- isectd/Makefile.in.orig	Mon Sep 13 21:59:53 1999
-+++ isectd/Makefile.in	Wed Sep 15 00:09:41 1999
-@@ -142,18 +142,18 @@
- 
+--- isectd/Makefile.in.orig	Sat Aug  3 22:36:21 2002
++++ isectd/Makefile.in	Sat Aug  3 22:37:02 2002
+@@ -200,15 +200,15 @@
+ 	  CONFIG_FILES=$(subdir)/$@ $(SHELL) ./config.status
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
 -	$(mkinstalldirs) $(DESTDIR)$(bindir)
 +	$(mkinstalldirs) $(DESTDIR)$(sbindir)
  	@list='$(bin_PROGRAMS)'; for p in $$list; do \
- 	  if test -f $$p; then \
--	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
--	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
-+	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(sbindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
-+	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(sbindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
+ 	  p1=`echo $$p|sed 's/$(EXEEXT)$$//'`; \
+ 	  if test -f $$p \
+ 	     || test -f $$p1 \
+ 	  ; then \
+ 	    f=`echo $$p1|sed '$(transform);s/$$/$(EXEEXT)/'`; \
+-	   echo " $(INSTALL_PROGRAM_ENV) $(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/$$f"; \
+-	   $(INSTALL_PROGRAM_ENV) $(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/$$f; \
++	   echo " $(INSTALL_PROGRAM_ENV) $(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(sbindir)/$$f"; \
++	   $(INSTALL_PROGRAM_ENV) $(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(sbindir)/$$f; \
  	  else :; fi; \
  	done
  
- uninstall-binPROGRAMS:
- 	@$(NORMAL_UNINSTALL)
- 	list='$(bin_PROGRAMS)'; for p in $$list; do \
--	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
-+	  rm -f $(DESTDIR)$(sbindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
- 	done
+@@ -472,7 +472,7 @@
+ all-am: Makefile $(PROGRAMS)
  
- .c.o:
-@@ -466,7 +466,7 @@
- install-strip:
- 	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
  installdirs:
--	$(mkinstalldirs)  $(DESTDIR)$(bindir)
-+	$(mkinstalldirs)  $(DESTDIR)$(sbindir)
+-	$(mkinstalldirs) $(DESTDIR)$(bindir)
++	$(mkinstalldirs) $(DESTDIR)$(sbindir)
  
- 
- mostlyclean-generic:
+ install: install-am
+ install-exec: install-exec-am
