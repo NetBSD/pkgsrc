@@ -1,5 +1,6 @@
 #!/bin/sh
 #
+
 if [ -d /var/spool/fax ]; then
 	filecount="`find /var/spool/fax -type f 2>/dev/null | wc -l`"
 	if [ $filecount -eq 0 ]; then
@@ -7,3 +8,4 @@ if [ -d /var/spool/fax ]; then
 		rm -r /var/spool/fax
 	fi
 fi
+
