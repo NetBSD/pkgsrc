@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/04/10 17:05:37 agc Exp $
+# $NetBSD: Makefile,v 1.6 2002/11/11 11:10:41 mrg Exp $
 
 DISTNAME=	onyx-${VERS}
 CATEGORIES=	lang
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.canonware.com/
 COMMENT=	Embeddable stack-based threaded interpreted language
 
 # needs EL_CLIENTDATA in /usr/include/histedit.h
-ONLY_FOR_PLATFORM=	NetBSD-1.5[YZ]*-* NetBSD-1.6-*
+ONLY_FOR_PLATFORM=	NetBSD-1.5[YZ]*-* NetBSD-1.6*-* NetBSD-1.7*-*
 
 BUILD_DEPENDS=	cook-[0-9]*:../../devel/cook
 
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 # XXX
 CONFIGURE_ARGS+= --disable-threads
 
-VERS=		3.0.2
+VERS=		4.1.0
 PLIST_SUBST+=	VERS=${VERS}
 
 do-build:
