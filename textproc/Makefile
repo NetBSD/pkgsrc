@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.267 2004/11/12 06:25:22 erh Exp $
+# $NetBSD: Makefile,v 1.268 2004/11/12 06:41:55 erh Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -162,6 +162,7 @@ SUBDIR+=	p5-Text-WikiFormat
 SUBDIR+=	p5-Text-Wrapper
 SUBDIR+=	p5-XML-Checker
 SUBDIR+=	p5-XML-DOM
+SUBDIR+=	p5-XML-Encoding
 SUBDIR+=	p5-XML-Filter-BufferText
 SUBDIR+=	p5-XML-Filter-DetectWS
 SUBDIR+=	p5-XML-Filter-Reindent
@@ -186,6 +187,7 @@ SUBDIR+=	p5-XML-Sablotron
 SUBDIR+=	p5-XML-Simple
 SUBDIR+=	p5-XML-Stream
 SUBDIR+=	p5-XML-Twig
+SUBDIR+=	p5-XML-UM
 SUBDIR+=	p5-XML-Writer
 SUBDIR+=	p5-XML-Writer-String
 SUBDIR+=	p5-XML-XPath
