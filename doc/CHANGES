@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8943 2005/01/27 12:01:08 adam Exp $
+$NetBSD: CHANGES,v 1.8944 2005/01/27 12:48:20 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -623,3 +623,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated drivel to 1.2.4 [jmmv 2005-01-26]
 	Updated dillo to 0.8.4 [adam 2005-01-27]
 	Updated fontforge to 20050117 [adam 2005-01-27]
+	Updated libextractor to 0.3.11nb1 [drochner 2005-01-27]
