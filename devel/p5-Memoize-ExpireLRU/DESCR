@@ -1,0 +1,2 @@
+Memoize::ExpireLRU is a module that implements LRU expiration for
+Memoize.
