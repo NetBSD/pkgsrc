@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3038 2003/08/13 23:58:10 itojun Exp $
+$NetBSD: CHANGES,v 1.3039 2003/08/14 04:59:30 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3263,3 +3263,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated lsof to 4.68nb1 [atatat 2003-08-13]
 	Updated netris to 0.52 [wiz 2003-08-14]
 	Updated kterm to 6.2.0nb4 [itojun 2003-08-14]
+	Updated ns-remote to 1.9 [grant 2003-08-14]
