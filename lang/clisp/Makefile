@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2002/02/21 04:13:20 dillo Exp $
+# $NetBSD: Makefile,v 1.24 2002/03/14 07:44:21 jmc Exp $
 
 DISTNAME=		clisp-2.27
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
+PKGVERSION=		1
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		mjl@netbsd.org
@@ -23,6 +24,11 @@ LIBTOOL_OVERRIDE+=	${WRKSRC}/callback/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/callback/trampoline_r/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libiconv/libcharset/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libiconv/libtool ${WRKSRC}/sigsegv/libtool
+
+post-patch:
+	cp files/tramp-rs6000-netbsd.o ${WRKSRC}/../ffcall/callback/trampoline_r
+	cp files/tramp-rs6000-netbsd.s ${WRKSRC}/../ffcall/callback/trampoline_r
+	cp files/vacall-rs6000-netbsd.s ${WRKSRC}/../ffcall/callback/vacall_r
 
 do-configure:
 	cd ${WRKSRC}; \
