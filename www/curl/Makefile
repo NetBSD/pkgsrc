@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/01/14 00:31:53 seb Exp $
+# $NetBSD: Makefile,v 1.13 2002/02/19 05:48:07 itojun Exp $
 
 DISTNAME=	curl-7.9.2
 CATEGORIES=	www
@@ -9,6 +9,9 @@ MASTER_SITES=	http://curl.haxx.se/download/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://curl.haxx.se/
 COMMENT=	client that groks URLs
+
+# list it into IPv6-ready packages
+BUILD_DEFS+=	USE_INET6
 
 USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
