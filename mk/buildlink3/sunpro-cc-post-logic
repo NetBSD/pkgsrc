@@ -1,4 +1,4 @@
-# $NetBSD: sunpro-cc-post-logic,v 1.8.2.1 2004/07/13 14:00:16 agc Exp $
+# $NetBSD: sunpro-cc-post-logic,v 1.8.2.2 2004/07/30 16:06:57 agc Exp $
 #
 # Silently accept some GCC compiler arguments by silently converting
 # them to the SunPro compiler equivalents.  This makes the SunPro
@@ -27,6 +27,10 @@ case $arg in
 	#
 	arg=`$echo "X$arg" | $Xsed -e "s|^-Wl,||g" -e "s|,| |g"`
 	addtoprivatecache=yes
+	;;
+-Wl,*)
+	# Explicitly do nothing to preserve arguments to be passed to
+	# the linker.
 	;;
 -W*)
 	# In fact, SunPro compilers don't even understand any -W*
