@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6400 2004/06/30 00:31:22 wiz Exp $
+$NetBSD: CHANGES,v 1.6401 2004/06/30 07:13:32 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3184,3 +3184,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated capc-calc to 2.11.9.3 [wiz 2004-06-29]
 	Updated dvd+rw-tools to 5.19.4.9.7 [wiz 2004-06-30]
 	Updated easytag to 0.31 [wiz 2004-06-30]
+	Added p5-Log-Dispatch-DBI-0.02 [grant 2004-06-30]
