@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 2000/06/09 14:32:48 kleink Exp $
+$NetBSD: md5,v 1.3 2000/10/16 10:13:17 rh Exp $
 
-MD5 (perl-ldap-0.19.tar.gz) = 93c9bd25a602206c5ffab73288d59a9f
+MD5 (perl-ldap-0.22.tar.gz) = 5a77ffcf5333b9bf4fc6449522aa0090
