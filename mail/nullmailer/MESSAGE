@@ -1,0 +1,39 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2003/02/17 01:45:31 jtb Exp $
+
+To use nullmailer, you will need to perform the following steps:
+
+1. Create a ${PKG_SYSCONFDIR}/nullmailer/remotes file. The file should
+   contain a line with the name of your relay host and the
+   relay protocol to be used, eg.
+
+	smtp.relayhost.domain	smtp
+
+2. Back up /etc/mailer.conf and create a new mailer.conf with the
+   following lines
+
+	# Use "nullmailer" as replacement for "sendmail".
+	sendmail	${PREFIX}/libexec/nullmailer/sendmail
+	send-mail	${PREFIX}/libexec/nullmailer/sendmail
+	mailq		${PREFIX}/libexec/nullmailer/mailq
+
+3. Copy ${PKG_SYSCONFDIR}/rc.d/nullmailer to /etc/rc.d/nullmailer
+   and add
+
+	nullmailer=YES
+
+   to /etc/rc.conf. Other MTA's, (eg. sendmail, exim), should be set
+   to NO.
+
+4. Stop any other running MTA. Now start nullmailer by issuing the
+   command
+
+	/etc/rc.d/nullmailer start
+
+5. You may need to add further configuration files to the directory
+   ${PKG_SYSCONFDIR}/nullmailer.  These include the `adminaddr',
+   `defaultdomain', `defaulthost', `idhost', `me', and `pausetime'
+   files.  This will depend on your local setup.  See the
+   nullmailer(7), nullmailer-queue(8), and nullmailer-send(8) manual
+   pages for details.
+===========================================================================
