@@ -1,0 +1,23 @@
+$NetBSD: patch-af,v 1.1 2001/05/14 20:21:20 skrll Exp $
+
+--- pth.h.in.orig	Sat Mar 24 14:49:49 2001
++++ pth.h.in
+@@ -44,6 +44,7 @@
+ #include <sys/socket.h>    /* for sockaddr       */
+ #include <sys/signal.h>    /* for sigset_t       */
+ @EXTRA_INCLUDE_SYS_SELECT_H@
++@EXTRA_INCLUDE_SYS_RESOURCE_H@
+ 
+     /* fallbacks for essential typedefs */
+ #ifndef _PTHREAD_PRIVATE
+@@ -499,7 +500,10 @@
+ extern ssize_t        pth_pread(int, void *, size_t, off_t);
+ extern ssize_t        pth_pwrite(int, const void *, size_t, off_t);
+ 
++    /* additional replacement functions */
++extern pid_t          pth_wait4(pid_t, int *, int, struct rusage *);
+ END_DECLARATION
++
+ 
+     /* soft system call mapping support */
+ #if PTH_SYSCALL_SOFT && !defined(_PTH_PRIVATE)
