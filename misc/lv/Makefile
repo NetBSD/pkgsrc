@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/20 12:21:02 agc Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/17 15:22:52 xtraeme Exp $
 # FreeBSD Id: Makefile,v 1.3 1999/01/08 03:32:06 itojun Exp $
 
 DISTNAME=	lv450
@@ -13,9 +13,5 @@ COMMENT=	Powerful Multilingual File Viewer
 WRKSRC=		${WRKDIR}/${DISTNAME}/build
 GNU_CONFIGURE=	yes
 CONFIGURE_SCRIPT= ../src/configure
-
-# Causes unaligned access fault...
-# Note that the 32bit (sparc) binary works fine.
-NOT_FOR_PLATFORM= NetBSD-*-sparc64
 
 .include "../../mk/bsd.pkg.mk"
