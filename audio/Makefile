@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2000/02/17 22:47:51 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2000/02/25 01:04:11 wiz Exp $
 #
 
     SUBDIR += ac3dec
@@ -22,21 +22,21 @@
     SUBDIR += festvox-aec
     SUBDIR += festvox-don
     SUBDIR += festvox-el11
+    SUBDIR += festvox-en1
     SUBDIR += festvox-hvs
     SUBDIR += festvox-jph
     SUBDIR += festvox-kal16
     SUBDIR += festvox-kal8
     SUBDIR += festvox-ked16
     SUBDIR += festvox-ked8
-    SUBDIR += festvox-en1
     SUBDIR += festvox-mwm
     SUBDIR += festvox-ogirab
     SUBDIR += festvox-rab16
     SUBDIR += festvox-rab8
+    SUBDIR += festvox-tll
     SUBDIR += festvox-us1
     SUBDIR += festvox-us2
     SUBDIR += festvox-us3
-    SUBDIR += festvox-tll
     SUBDIR += freezetag
     SUBDIR += gdcd
     SUBDIR += gnome-audio

@@ -1,43 +1,30 @@
-# $NetBSD: Makefile,v 1.28 2000/02/18 20:25:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.29 2000/02/25 01:04:13 wiz Exp $
 # FreeBSD Id: Makefile,v 1.44 1997/09/13 20:19:28 chuckr Exp
 #
 
     SUBDIR += abiword
-#    SUBDIR += asedit
-#    SUBDIR += axe
     SUBDIR += beav
-#    SUBDIR += bpatch
     SUBDIR += bvi
-#    SUBDIR += e93
     SUBDIR += emacs
     SUBDIR += framemaker
-#    SUBDIR += gvim
     SUBDIR += hexedit
     SUBDIR += jed
     SUBDIR += joe
     SUBDIR += jove
     SUBDIR += leim
-#    SUBDIR += mule
-#    SUBDIR += mule-common
     SUBDIR += ne
     SUBDIR += nedit
-#    SUBDIR += nvi
     SUBDIR += nvi-m17n
     SUBDIR += pico
     SUBDIR += ssam
-#    SUBDIR += staroffice
-#    SUBDIR += thoteditor
-#    SUBDIR += uemacs
-#    SUBDIR += uzap
+    SUBDIR += vigor
     SUBDIR += vile
     SUBDIR += vilearn
-    SUBDIR += vigor
     SUBDIR += vim
     SUBDIR += vim-gtk
     SUBDIR += vim-share
     SUBDIR += vim-xaw
     SUBDIR += xcoral
-#    SUBDIR += xed
     SUBDIR += xemacs
     SUBDIR += xemacs-packages
     SUBDIR += xvile
