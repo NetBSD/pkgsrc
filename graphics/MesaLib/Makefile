@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/05/10 16:37:12 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2003/05/21 08:40:06 grant Exp $
 
 PKGNAME=		MesaLib-${MESA_VERSION}
 WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
@@ -14,6 +14,11 @@ CONFIGURE_ARGS+=	--without-glut
 BUILD_DIRS=		${WRKSRC}/src
 
 .include "../../mk/bsd.prefs.mk"
+
+# The sparc asm included with Mesa does not build on sparc64
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc64"
+CONFIGURE_ARGS+=	--disable-sparc
+.endif
 
 # XXX should be >= 3.4.2
 .if empty(MESA_REQD:M5.[0-9]*)
