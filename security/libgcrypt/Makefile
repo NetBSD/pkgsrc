@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/02 17:27:48 tron Exp $
+# $NetBSD: Makefile,v 1.2 2003/02/02 22:00:24 tron Exp $
 
 DISTNAME=	libgcrypt-1.1.11
 CATEGORIES=	security
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.gnu.org/directory/security/libgcrypt.html
 COMMENT=	GNU's cryptographic library
 
 USE_BUILDLINK2=		YES
+USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
 TEXINFO_OVERRIDE=	YES
@@ -21,7 +22,6 @@ TEXINFO_REQD=		4.0
 # implementations. So we use the bundled "libtool" for NetBSD-i386 ELF
 # and ours otherwise.
 .if ${MACHINE_GNU_PLATFORM} != i386--netbsdelf
-USE_LIBTOOL=		YES
 CONFIGURE_ARGS+=	--disable-asm
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
 .endif
