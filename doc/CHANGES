@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9479 2005/03/12 16:12:42 chris Exp $
+$NetBSD: CHANGES,v 1.9480 2005/03/14 15:17:19 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1356,3 +1356,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sylpheed-claws-dillo-viewer to 1.0.3 [chris 2005-03-12]
 	Updated sylpheed-claws-image-viewer to 1.0.3 [chris 2005-03-12]
 	Updated sylpheed-claws-trayicon to 1.0.3 [chris 2005-03-12]
+	Updated	ethereal to 0.10.10 [salo 2005-03-14]
