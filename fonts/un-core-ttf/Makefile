@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/16 06:13:59 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/28 14:38:03 wiz Exp $
 
 DISTNAME=	un-fonts-core-${UN_CORE_VER}
 PKGNAME=	un-core-ttf-${UN_CORE_VER}
+PKGREVISION=	1
 CATEGORIES=	fonts korean
 MASTER_SITES=	http://kldp.net/download.php/1425/
 

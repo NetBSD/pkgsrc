@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2004/01/25 20:30:50 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/12/28 14:38:03 wiz Exp $
 #
 
 DISTNAME=	dbz
 PKGNAME=	dbz-ttf-20020507
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.andrew.cmu.edu/~twm/fonts/
 EXTRACT_SUFX=	.zip
