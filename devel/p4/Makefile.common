@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2002/09/01 02:22:54 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/09/01 05:41:02 schmonz Exp $
 #
 
 P4_VERS=	2002.1
@@ -42,7 +42,11 @@ P4ARCH?=	linux52sparc
 . if	${MACHINE_ARCH} == "alpha"
 P4ARCH?=	netbsdaxp
 . elif	${MACHINE_ARCH} == "i386"
+.  if	${DISTNAME} == "p4web"
+P4ARCH?=	freebsd22
+.  else
 P4ARCH?=	netbsdx86
+.  endif
 . elif	${MACHINE_ARCH} == "sparc"
 P4ARCH?=	sunos			# XXX COMPAT_SUNOS
 . endif
