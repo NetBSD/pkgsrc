@@ -1,12 +1,7 @@
-$NetBSD: patch-ag,v 1.2 2000/09/19 20:00:04 agc Exp $
-
-Make sure CPPFLAGS is propagated through to build stage
-
-Do not install the program setuid or setgid, to avoid
-unsafe practices - see http://www.securityfocus.com/advisories/2520
+$NetBSD: patch-aa,v 1.5 2000/10/20 11:03:38 abs Exp $
 
 --- Makefile.in.orig	Mon May  3 09:03:10 1999
-+++ Makefile.in	Tue Sep 19 11:39:18 2000
++++ Makefile.in
 @@ -54,7 +54,7 @@
  DEFS = @DEFS@
  
