@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/07 16:36:47 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/01 12:47:22 markd Exp $
 
 DISTNAME=	libtunepimp-0.3.0
 PKGNAME=	${DISTNAME:S/lib//}
@@ -19,6 +19,13 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+pre-configure:
+	${ECHO} "#define HAVE_STATVFS 1" >> ${WRKSRC}/config.h.in
+.endif
 
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
