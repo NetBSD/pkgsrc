@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5026 2004/02/28 17:13:19 uebayasi Exp $
+$NetBSD: CHANGES,v 1.5027 2004/02/28 18:32:39 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1079,3 +1079,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ytalk to 3.1.1nb2 [grant 2004-02-28]
 	Updated kdeutils to 3.2.0nb1 [jmmv 2004-02-28]
 	Added acpi-iasl [uebayasi 2004-02-28]
+	Updated eclipse to 2.1.2 [jschauma 2004-02-28]
