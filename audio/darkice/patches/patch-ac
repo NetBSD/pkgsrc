@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/01/09 17:23:46 xtraeme Exp $
+
+--- src/Makefile.in.orig	2004-01-09 18:22:02.000000000 +0100
++++ src/Makefile.in	2004-01-09 18:22:19.000000000 +0100
+@@ -82,7 +82,7 @@
+ bin_PROGRAMS = darkice
+ CXXFLAGS = -O2 -pedantic -Wall @DEBUG_CXXFLAGS@ @PTHREAD_CFLAGS@
+ INCLUDES = @LAME_INCFLAGS@ @VORBIS_INCFLAGS@
+-LDADD = @PTHREAD_LIBS@ @LAME_LDFLAGS@ @VORBIS_LDFLAGS@
++LDADD = @PTHREAD_LIBS@ @LAME_LDFLAGS@ @VORBIS_LDFLAGS@ ${LIBOSSAUDIO}
+ 
+ darkice_SOURCES = AudioEncoder.h\
+                     AudioSource.h\
