@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/08/18 09:28:02 agc Exp $
+# $NetBSD: Makefile,v 1.13 1999/09/14 02:32:26 kim Exp $
 #
 # Tempted to install another radius package?
 #
@@ -31,13 +31,11 @@ MAKE_ENV+=	RADLIBS="${RADLIBS} -lskey" LIBS=-lcrypt \
 		INSTALL="${INSTALL} -c"
 
 # XXX Kerberos IV support is known to be broken.
-#.if defined(USE_KERBEROS4)
+#.if defined(KERBEROS) && ${KERBEROS} == 4
+#USE_KERBEROS=	yes
 #CFLAGS+=	-DM_KERB -I/usr/include/kerberosIV
 #RADLIBS=	-lkrb -ldes
-#RESTRICTED=	uses Kerberos encryption code
 #.endif
-
-BUILD_DEFS+=	USE_KERBEROS4
 
 .include "../../mk/bsd.prefs.mk"
 
