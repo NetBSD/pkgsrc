@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2001/08/09 08:14:12 itojun Exp $
+# $NetBSD: Makefile,v 1.43 2001/08/19 17:59:28 wiz Exp $
 
 DISTNAME=	postfix-20010228-pl04
 PKGNAME=	postfix-20010228pl4
@@ -24,7 +24,7 @@ POSTFIX_SPOOL=	/var/spool/postfix
 BUILD_DEFS+=	USE_INET6
 
 .if defined(POSTFIX_PCRE) && ${POSTFIX_PCRE} == YES
-DEPENDS+=	pcre-2.08:../../devel/pcre
+DEPENDS+=	pcre>=2.08:../../devel/pcre
 CFLAGS+=	-DHAS_PCRE -I${LOCALBASE}/include
 AUXLIBS=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lpcre
 MAKE_ENV+=	AUXLIBS="${AUXLIBS}"
