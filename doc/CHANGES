@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8169 2004/11/30 08:23:33 uebayasi Exp $
+$NetBSD: CHANGES,v 1.8170 2004/11/30 08:26:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5661,3 +5661,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated molden to 4.2 [minskim 2004-11-30]
 	Removed liece [uebayasi 2004-11-30]
 	Added riece-1.0.5 [uebayasi 2004-11-30]
+	Added gentle-97 [wiz 2004-11-30]
+	Added rsltc-2.4 [wiz 2004-11-30]
