@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 1998/04/28 15:00:52 bouyer Exp $
+bin/fly
+share/doc/fly/example.gif
+share/doc/fly/fly.html
+share/doc/fly/new.gif
+share/doc/fly/valid_html.gif
+share/examples/fly/cgi-perl-example.pl
+share/examples/fly/csh.example
+share/examples/fly/perl.example
+share/examples/fly/size.pl
+share/examples/fly/small-end.fly
+share/examples/fly/small.fly
+share/examples/fly/test.fly
+@dirrm share/examples/fly
+@dirrm share/doc/fly
