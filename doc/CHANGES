@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2732 2003/07/11 23:05:58 jmmv Exp $
+$NetBSD: CHANGES,v 1.2733 2003/07/11 23:30:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2749,3 +2749,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-panel to 2.2.2.2 [jmmv 2003-07-11]
 	Added pag-0.91 [zuntum 2003-07-11]
 	Updated gcalctool to 4.2.83nb1 [jmmv 2003-07-11]
+	Updated libxml2 to 2.5.8 [wiz 2003-07-11]
