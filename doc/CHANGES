@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7464 2004/10/18 14:38:02 tron Exp $
+$NetBSD: CHANGES,v 1.7465 2004/10/18 18:51:06 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4754,3 +4754,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated apache to 1.3.31nb7 [tron 2004-10-18]
 	Updated sox to 12.17.6 [cube 2004-10-18]
 	Updated tiff to 3.6.1nb4 [tron 2004-10-18]
+	Updated cssc to 1.00 [seb 2004-10-18]
