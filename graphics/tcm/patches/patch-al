@@ -1,0 +1,12 @@
+$NetBSD: patch-al,v 1.1.1.1 2001/02/24 01:30:07 jtb Exp $
+
+--- ui/error.c.orig	Thu Feb 22 17:59:07 2001
++++ ui/error.c
+@@ -23,6 +23,7 @@
+ #include "application.h"
+ #include "messagelogdialog.h"
+ #include <stdarg.h>
++#include <iostdio.h>
+ 
+ void error(const char *fmt ...) {
+ 	// we're not getting huge strings

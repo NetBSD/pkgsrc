@@ -1,0 +1,21 @@
+$NetBSD: patch-at,v 1.1.1.1 2001/02/24 01:30:08 jtb Exp $
+
+--- Makefile.GEN.orig	Fri Feb 23 23:59:25 2001
++++ Makefile.GEN
+@@ -62,14 +62,14 @@
+ # instances are linked in the static lib.
+ libdiagram.a:
+ 	( cp dg/dginstances.h gl/instances.h )
+-	( cd ./gl ; touch llist.c )
++	( cd ./gl ; touch llist.cc )
+ 	( $(MAKE) libglobal.a )
+ 	( cd ./dg ; $(MAKE) libdiagram.a)
+ 	( cd $(LIB_DIR) ; $(RANLIB) libdiagram.a)
+ 
+ libtable.a:
+ 	( cp tb/tbinstances.h gl/instances.h )
+-	( cd ./gl ; touch llist.c )
++	( cd ./gl ; touch llist.cc )
+ 	( $(MAKE) libglobal.a )
+ 	( cd ./tb ; $(MAKE) libtable.a)
+ 	( cd $(LIB_DIR) ; $(RANLIB) libtable.a)

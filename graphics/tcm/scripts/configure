@@ -1,0 +1,30 @@
+#! /bin/sh
+
+for f in `/usr/bin/find $WRKSRC -name Makefile`; do			   \
+	/usr/bin/sed -e 's/$(PURIFY) $(CC) $(CFLAGS)/$(CXX) $(CXXFLAGS)/g' \
+	    -e 's/$(Cc)/$(CC) $(CPPFLAGS) $(CFLAGS)/g'			   \
+	    -e 's/$(AR)/$(AR) cr/g'					   \
+	    -e 's/$(MV)/$(MV) -f/g'					   \
+	    -e 's/$(RM)/$(RM) -fr/g'					   \
+            -e 's/$(YACC) --debug/$(YACC)/g'			   	   \
+	    -e 's/$(LIB_DIR)\/libglobal.a/ -lglobal/g'	                   \
+        < $f > $f.tmp && /bin/mv -f $f.tmp $f; 				   \
+done
+
+/bin/rm -f $WRKSRC/Config.tmpl
+/bin/ln -fs $WRKSRC/Config.tmpl_netbsd $WRKSRC/Config.tmpl
+/bin/rm -f $WRKSRC/Makefile
+/bin/ln -fs $WRKSRC/Makefile.gcc $WRKSRC/Makefile
+
+for f in $WRKSRC/gl/system.c; do 					\
+	/usr/bin/sed -e 's:@PREFIX@:'$PREFIX':g'			\
+		     -e 's:@X11BASE@:'$X11BASE':g'			\
+		     -e 's:@LOCALBASE@:'$LOCALBASE':g'			\
+	< $f > $f.tmp && /bin/mv $f.tmp $f; 				\
+done
+
+for f in `/usr/bin/find $WRKSRC -name \*.c`; do				\
+	/bin/mv -f $f $f`/bin/echo c`;					\
+done
+
+/bin/mv -f $WRKSRC/gl/text2ps.cc $WRKSRC/gl/text2ps.c
