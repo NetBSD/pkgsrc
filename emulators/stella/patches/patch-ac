@@ -1,0 +1,38 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/05/18 23:14:16 tv Exp $
+
+--- makefile.orig	Sat Feb 27 09:29:46 1999
++++ makefile	Tue May 18 10:37:57 1999
+@@ -34,10 +34,8 @@
+ ##
+ ##============================================================================
+ 
+-CXX      = g++
+-LD       = g++
++LD       = ${CXX}
+ 
+-LDFLAGS  = 
+ LDLIBS   = 
+ 
+ SRC      = ..
+@@ -46,7 +44,7 @@
+ 
+ INCLUDES = -I. -I$(CORE) -I$(CORE)/m6502/src -I$(CORE)/m6502/src/bspf/src
+ 
+-CXXFLAGS = -O -Wall $(INCLUDES) $(SYS_INCLUDES)
++CXXFLAGS += $(INCLUDES) $(SYS_INCLUDES)
+ 
+ default:
+ 	@echo ""
+@@ -78,10 +76,9 @@
+ unix-x:
+ 	make xstella \
+           INCLUDES="$(INCLUDES) -I$(UI)/x11 -I$(UI)/sound" \
+-          SYS_INCLUDES="" \
++          SYS_INCLUDES="-I$(X11BASE)/include" \
+           OPTIONS="-DBSPF_UNIX" \
+-          LDFLAGS="-L/usr/X11R6/lib" \
+-          LDLIBS="-lX11 -lXext" \
++          LDLIBS="-L$(X11BASE)/lib -lX11 -lXext" \
+           OBJS="mainX11.o SndUnix.o"
+ 
+ linux-x:

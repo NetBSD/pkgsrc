@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/18 23:14:16 tv Exp $
+bin/xstella
+bin/stella-sound
+share/doc/stella/elk.doc
+share/doc/stella/okiedoke.doc
+share/doc/stella/oystron.doc
+share/doc/stella/stella.pdf
+share/doc/stella/tps.doc
+share/stella/ELK.BIN
+share/stella/OKIEDOKE.BIN
+share/stella/OYSTR29.BIN
+share/stella/TEST.BIN
+share/stella/TPS.BIN
+@dirrm share/doc/stella
+@dirrm share/stella
