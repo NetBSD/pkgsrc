@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2002/01/03 14:29:53 martti Exp $
+# $NetBSD: Makefile,v 1.6 2002/04/10 17:52:08 schmonz Exp $
 
-DISTNAME=	keychain-1.8
+DISTNAME=	keychain-1.9
 PKGNAME=	${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	http://www.ibiblio.org/gentoo/distfiles/
@@ -10,8 +10,6 @@ MAINTAINER=	martti@netbsd.org
 HOMEPAGE=	http://www.gentoo.org/projects/keychain/
 COMMENT=	Nice ssh-agent front-end
 
-DEPENDS=	psmisc-[0-9]*:../../sysutils/psmisc
-
 .if !exists(/usr/bin/ssh-agent)
 DEPENDS+=	openssh-[0-9]*:../../security/openssh
 .endif
@@ -19,7 +17,7 @@ DEPENDS+=	openssh-[0-9]*:../../security/openssh
 NO_BUILD=	# defined
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/keychain ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/keychain ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/keychain
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/keychain
 
