@@ -1,237 +1,73 @@
-$NetBSD: patch-aa,v 1.2 2000/02/28 02:34:44 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.3 2000/05/13 06:21:02 rh Exp $
 
-diff -rc2 --exclude=Makefile Makefile.in Makefile.in
-*** Makefile.in	Tue Jan  5 23:58:02 1999
---- Makefile.in	Fri Jan 22 22:01:40 1999
-***************
-*** 34,46 ****
-  #   install      -- installs everything
-  
-! default:
-! 	@echo " "
-! 	@echo "Please choose one of the following targets:"
-! 	@echo "motif           dynamically linked motif version"
-! 	@echo "motif-static    statically linked motif version"
-! 	@echo "gnome           gnome/gtk version"
-! 	@echo "gnome-static    gnome/gtk statically linked version"
-! 	@echo "qt              kde/qt version"
-! 	@echo " "
-  
-  # This inclusion must come after the first target, and after the
---- 34,38 ----
-  #   install      -- installs everything
-  
-! all:	motif
-  
-  # This inclusion must come after the first target, and after the
-***************
-*** 84,88 ****
-  DIST_TRASH += config.cache config.log config.status config.h
-  
-! tagsfiles := $(shell find -name "*.[ch]")
-  
-  TAGS: ${tagsfiles}
---- 84,88 ----
-  DIST_TRASH += config.cache config.log config.status config.h
-  
-! tagsfiles := $(shell find . -name "*.[ch]")
-  
-  TAGS: ${tagsfiles}
-***************
-*** 114,123 ****
-      -e ${GNC_BINDIR}/gnucash.qt \
-    ]
-  	$(INSTALL_DATA) src/quotes/gnc-prices ${GNC_LIBDIR}
-  
-! 	@mkdir -p ${GNC_LIBDIR}
-! 	$(INSTALL_DATA) src/swig/perl5/gnucash.pm ${GNC_LIBDIR}
-! 	$(INSTALL_DATA) src/swig/perl5/gnucash.so ${GNC_LIBDIR}
-! 	$(INSTALL_DATA) src/swig/perl5/Quote.pm ${GNC_LIBDIR}
-  
-  	@mkdir -p ${GNC_DOCDIR}
---- 114,123 ----
-      -e ${GNC_BINDIR}/gnucash.qt \
-    ]
-+ 	@mkdir -p ${GNC_LIBDIR}
-  	$(INSTALL_DATA) src/quotes/gnc-prices ${GNC_LIBDIR}
-  
-! #	$(INSTALL_DATA) src/swig/perl5/gnucash.pm ${GNC_LIBDIR}
-! #	$(INSTALL_DATA) src/swig/perl5/gnucash.so ${GNC_LIBDIR}
-! #	$(INSTALL_DATA) src/swig/perl5/Quote.pm ${GNC_LIBDIR}
-  
-  	@mkdir -p ${GNC_DOCDIR}
-diff -rc2 --exclude=Makefile src/engine/Scrub.c src/engine/Scrub.c
-*** src/engine/Scrub.c	Sat Dec 26 22:07:41 1998
---- src/engine/Scrub.c	Fri Jan 22 12:10:11 1999
-***************
-*** 29,33 ****
---- 29,35 ----
-  \********************************************************************/
-  
-+ #if 0
-  #include <nana.h>
-+ #endif
-  #include <stdio.h>
-  #include <stdlib.h>
-diff -rc2 --exclude=Makefile src/engine/Session.c src/engine/Session.c
-*** src/engine/Session.c	Mon Jan  4 02:31:09 1999
---- src/engine/Session.c	Fri Jan 22 12:13:16 1999
-***************
-*** 30,34 ****
---- 30,36 ----
-  #include <fcntl.h>
-  #include <limits.h>
-+ #if 0
-  #include <nana.h>
-+ #endif
-  #include <stdlib.h>
-  #include <string.h>
-***************
-*** 98,102 ****
-     int retval;
-  
-!    if (!sess) return EBADSLT;
-     retval = sess->errtype;
-     sess->errtype = 0;
---- 100,104 ----
-     int retval;
-  
-!    if (!sess) return ENOENT;
-     retval = sess->errtype;
-     sess->errtype = 0;
-diff -rc2 --exclude=Makefile src/engine/util.h src/engine/util.h
-*** src/engine/util.h	Mon Dec 14 03:31:25 1998
---- src/engine/util.h	Fri Jan 22 13:05:55 1999
-***************
-*** 35,38 ****
---- 35,39 ----
-  /* The debuging macros enable the setting of trace messages */
-  #include <stdio.h>
-+ #if 0
-  #include <nana.h>
-  
-***************
-*** 43,56 ****
-  #define assert I
-  
-- #define MOD_ENGINE     1
-- #define MOD_IO         2
-- #define MOD_REGISTER   3
-- #define MOD_LEDGER     4
-- #define MOD_GUI        5
-- #define MOD_SCRUB      6
-- #define MODULE_MAX     7
-- 
-- extern int loglevel[MODULE_MAX];
-- 
-  #define LERR    (1 <= loglevel[module])
-  #define LWARN   (2 <= loglevel[module])
---- 44,47 ----
-***************
-*** 70,73 ****
---- 61,85 ----
-  
-  #define DEBUGCMD(x) { if (LINFO) { x; }}
-+ #else
-+ #define assert(x)
-+ #define PERR(x...)
-+ #define PWARN(x...)
-+ #define PINFO(x...)
-+ #define DEBUG(x...)
-+ #define ENTER(x...)
-+ #define LEAVE(x...)
-+ #define DETAIL(x...)
-+ #define DEBUGCMD(x)
-+ #endif
-+ 
-+ #define MOD_ENGINE     1
-+ #define MOD_IO         2
-+ #define MOD_REGISTER   3
-+ #define MOD_LEDGER     4
-+ #define MOD_GUI        5
-+ #define MOD_SCRUB      6
-+ #define MODULE_MAX     7
-+ 
-+ extern int loglevel[MODULE_MAX];
-  
-  #include <errno.h>
-diff -rc2 --exclude=Makefile src/gnome/Makefile.in src/gnome/Makefile.in
-*** src/gnome/Makefile.in	Tue Dec 22 00:43:31 1998
---- src/gnome/Makefile.in	Fri Jan 22 12:28:31 1999
-***************
-*** 43,47 ****
-             $(shell @GNOME_CONFIG_BIN@ --libs gtk) @X_EXTRA_LIBS@ -lgnomeui \
-  	   $(shell @GNOME_CONFIG_BIN@ --libs gnome gnomeui ) \
-! 	   $(GUILELIBS) -lnana @LIBS@ # -lintl
-  
-  GNOMELIBS = @GNOMELIBS@
---- 43,47 ----
-             $(shell @GNOME_CONFIG_BIN@ --libs gtk) @X_EXTRA_LIBS@ -lgnomeui \
-  	   $(shell @GNOME_CONFIG_BIN@ --libs gnome gnomeui ) \
-! 	   $(GUILELIBS) @LIBS@ # -lintl
-  
-  GNOMELIBS = @GNOMELIBS@
-diff -rc2 --exclude=Makefile src/motif/FileBox.c src/motif/FileBox.c
-*** src/motif/FileBox.c	Tue Dec 29 03:37:39 1998
---- src/motif/FileBox.c	Fri Jan 22 13:14:16 1999
-***************
-*** 155,159 ****
-      previous_path = strdup (fileName);
-      slash = strrchr (previous_path, '/');
-!     *(slash+1) = 0x0;
-    }
-  
---- 155,162 ----
-      previous_path = strdup (fileName);
-      slash = strrchr (previous_path, '/');
-!     if (slash)
-!       *(slash+1) = 0x0;
-!     else
-!       *previous_path = 0x0;
-    }
-  
-diff -rc2 --exclude=Makefile src/swig/Makefile.in src/swig/Makefile.in
-*** src/swig/Makefile.in	Sun Jan  3 03:22:06 1999
---- src/swig/Makefile.in	Fri Jan 22 22:02:13 1999
-***************
-*** 23,27 ****
-  # See Makefile.common for information about these variables.
-  INDEP_SRCS := helperfuncs.c
-! CLEAN_SUBDIRS := guile perl5
-  ######################################################################
-  
---- 23,27 ----
-  # See Makefile.common for information about these variables.
-  INDEP_SRCS := helperfuncs.c
-! CLEAN_SUBDIRS := guile # perl5
-  ######################################################################
-  
-***************
-*** 32,36 ****
-  include @top_srcdir@/Makefile.common
-  
-! default: guile perl5
-  
-  ifeq (${HAVE_PLOTUTILS},1)
---- 32,36 ----
-  include @top_srcdir@/Makefile.common
-  
-! default: guile # perl5
-  
-  ifeq (${HAVE_PLOTUTILS},1)
-diff -rc2 --exclude=Makefile src/swig/perl5/Makefile.in src/swig/perl5/Makefile.in
-*** src/swig/perl5/Makefile.in	Sun Jan  3 15:57:48 1999
---- src/swig/perl5/Makefile.in	Fri Jan 22 12:49:10 1999
-***************
-*** 51,55 ****
-  
-  gnucash.so: ${OBJS} ../../engine/libengine.a
-! 	gcc -shared ${OBJS} ../../engine/libengine.a -lnana -o gnucash.so
-  
-  SWIG_FILTER    := %P.h %/util.h
---- 51,55 ----
-  
-  gnucash.so: ${OBJS} ../../engine/libengine.a
-! 	gcc -shared ${OBJS} ../../engine/libengine.a -o gnucash.so
-  
-  SWIG_FILTER    := %P.h %/util.h
+--- configure.orig	Mon May  8 04:31:08 2000
++++ configure	Wed May 10 10:03:47 2000
+@@ -2358,7 +2358,7 @@
+ 		 INTLLIBS=$INTLDEPS
+ 		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
+ 		 nls_cv_header_intl=intl/libintl.h
+-		 nls_cv_header_libgt=intl/libgettext.h
++		 nls_cv_header_libgt=${LOCALBASE}/share/gettext/intl/libgettext.h
+ 	       fi
+ else
+   echo "$ac_t""no" 1>&6
+@@ -2487,7 +2487,7 @@
+ 	INTLLIBS=$INTLDEPS
+ 	LIBS=`echo $LIBS | sed -e 's/-lintl//'`
+         nls_cv_header_intl=intl/libintl.h
+-        nls_cv_header_libgt=intl/libgettext.h
++        nls_cv_header_libgt=${LOCALBASE}/share/gettext/intl/libgettext.h
+       fi
+ 
+             if test "$XGETTEXT" != ":"; then
+@@ -2504,7 +2504,7 @@
+     else
+       DATADIRNAME=share
+       nls_cv_header_intl=intl/libintl.h
+-      nls_cv_header_libgt=intl/libgettext.h
++      nls_cv_header_libgt=${LOCALBASE}/share/gettext/intl/libgettext.h
+     fi
+     
+     
+@@ -4787,6 +4787,7 @@
+ s%@RANLIB@%$RANLIB%g
+ s%@CC@%$CC%g
+ s%@CPP@%$CPP%g
++s%@LIBTOOL@%${LIBTOOL}%g
+ s%@OPT_STYLE_INSTALL@%$OPT_STYLE_INSTALL%g
+ s%@LOCALE_DIR@%$LOCALE_DIR%g
+ s%@GNC_EXPANDED_LOCALE_DIR@%$GNC_EXPANDED_LOCALE_DIR%g
+@@ -5088,10 +5089,10 @@
+   set $ac_dests; ac_dest=$1; shift; ac_dests=$*
+   set $ac_sources; ac_source=$1; shift; ac_sources=$*
+ 
+-  echo "linking $srcdir/$ac_source to $ac_dest"
++  echo "linking $ac_source to $ac_dest"
+ 
+-  if test ! -r $srcdir/$ac_source; then
+-    { echo "configure: error: $srcdir/$ac_source: File not found" 1>&2; exit 1; }
++  if test ! -r $ac_source; then
++    { echo "configure: error: $ac_source: File not found" 1>&2; exit 1; }
+   fi
+   rm -f $ac_dest
+ 
+@@ -5109,15 +5110,15 @@
+   fi
+ 
+   case "$srcdir" in
+-  [/$]*) ac_rel_source="$srcdir/$ac_source" ;;
+-  *) ac_rel_source="$ac_dots$srcdir/$ac_source" ;;
++  [/$]*) ac_rel_source="$ac_source" ;;
++  *) ac_rel_source="$ac_source" ;;
+   esac
+ 
+   # Make a symlink if possible; otherwise try a hard link.
+   if ln -s $ac_rel_source $ac_dest 2>/dev/null ||
+-    ln $srcdir/$ac_source $ac_dest; then :
++    ln $ac_source $ac_dest; then :
+   else
+-    { echo "configure: error: can not link $ac_dest to $srcdir/$ac_source" 1>&2; exit 1; }
++    { echo "configure: error: can not link $ac_dest to $ac_source" 1>&2; exit 1; }
+   fi
+ done
+ EOF

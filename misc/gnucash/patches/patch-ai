@@ -1,0 +1,31 @@
+$NetBSD: patch-ai,v 1.1 2000/05/13 06:21:02 rh Exp $
+
+--- lib/g-wrap/configure.orig	Fri Mar 31 04:55:10 2000
++++ lib/g-wrap/configure	Thu May  4 11:04:27 2000
+@@ -817,7 +817,7 @@
+ 
+ 
+ # Extract the first word of "gcc", so it can be a program name with args.
+-set dummy gcc; ac_word=$2
++set dummy cc; ac_word=$2
+ echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
+ echo "configure:823: checking for $ac_word" >&5
+ if eval "test \"`echo '$''{'ac_cv_prog_CC'+set}'`\" = set"; then
+@@ -831,7 +831,7 @@
+   for ac_dir in $ac_dummy; do
+     test -z "$ac_dir" && ac_dir=.
+     if test -f $ac_dir/$ac_word; then
+-      ac_cv_prog_CC="gcc"
++      ac_cv_prog_CC="cc"
+       break
+     fi
+   done
+@@ -1552,7 +1552,7 @@
+ LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
+ 
+ # Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++#LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
