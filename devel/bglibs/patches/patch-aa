@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/12/21 00:12:29 schmonz Exp $
+
+--- insthier.c.orig	2004-11-15 15:50:28.000000000 -0500
++++ insthier.c
+@@ -15,7 +15,7 @@ void insthier(void)
+ 
+   bin = d(home, "bin", -1, -1, 0755);
+ 
+-  inc = d(home, "include", -1, -1, 0755);
++  inc = d(home, "include/bglibs", -1, -1, 0755);
+ 
+   cf(inc, "installer.h", -1, -1, 0644, "install/installer.h");
+   C(inc, sysdeps.h);
+@@ -111,7 +111,7 @@ void insthier(void)
+   CF(vmailmgr, client.h);
+   CF(vmailmgr, vpwentry.h);
+   
+-  lib = d(home, "lib", -1, -1, 0755);
++  lib = d(home, "lib/bglibs", -1, -1, 0755);
+ 
+   c(lib, "libbg.a", -1, -1, 0644);
+ 
