@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/03/07 23:46:01 salo Exp $
+
+--- doc/tinyproxy.conf.orig	2003-03-08 00:11:42.000000000 +0100
++++ doc/tinyproxy.conf	2003-03-08 00:14:15.000000000 +0100
+@@ -6,8 +6,8 @@
+ # Name of the user the tinyproxy daemon should switch to after the port
+ # has been bound.
+ #
+-User nobody
+-Group nogroup
++User @TINYPROXY_USER@
++Group @TINYPROXY_GROUP@
+ 
+ #
+ # Port to listen on.
+@@ -120,7 +120,7 @@
+ #
+ # The location of the filter file.
+ #
+-#Filter "/etc/tinyproxy/filter"
++#Filter "@PKG_SYSCONFDIR@/filter"
+ 
+ #
+ # Filter based on URLs rather than domains.

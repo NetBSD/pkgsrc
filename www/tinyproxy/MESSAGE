@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/03/07 23:46:01 salo Exp $
+
+To use tinyproxy, you will need to perform the following steps:
+
+1. In case you don't have PKG_RCD_SCRIPTS set in your /etc/mk.conf, copy
+   ${PREFIX}/etc/rc.d/tinyproxy to /etc/rc.d/tinyproxy and add
+
+	tinyproxy=YES
+
+   to /etc/rc.conf.
+
+2. Now start tinyproxy by issuing the command
+
+	/etc/rc.d/tinyproxy start
+===========================================================================
