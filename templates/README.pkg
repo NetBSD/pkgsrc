@@ -1,9 +1,10 @@
-<!-- $NetBSD: README.pkg,v 1.13 1999/12/06 23:06:45 abs Exp $ -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- $NetBSD: README.pkg,v 1.14 2000/05/31 22:16:17 wiz Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection: %%PORT%%</title>
 </head> 
-<body bgcolor=#ffffff>
+<body bgcolor="#ffffff">
 
 <a href="http://www.mckusick.com/beastie/mainpage/copyright.html">
 <img align=right src="../../templates/pkg-daemon.gif" alt="Daemon Power"
@@ -52,10 +53,11 @@ This package requires the following package(s) to run:
 Select one of the links below to <FONT COLOR=red>download</FONT> the
 package in precompiled binary form for the following machine
 architectures: 
-<UL>
+<TABLE>
 %%BIN_PKGS%%
-</UL>
+</TABLE>
 
+<p>
 The NetBSD packages collection is designed to permit
             easy <a href="../../README">installation from source</a> -
             particularly useful if the latest binary package is
