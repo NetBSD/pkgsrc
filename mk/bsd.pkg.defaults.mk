@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.155 2003/06/23 15:10:44 salo Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.156 2003/06/23 15:46:22 salo Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1172,6 +1172,12 @@ MPLAYER_ENABLE_RUNTIME_CPU_DETECTION?= YES
 # CPU type.
 # Possible: YES, NO
 # Default: YES
+
+MPLAYER_USE_MEDIALIB?= NO
+# Used by mplayer to enable optional support for Sun mediaLib library.
+# Note that this only takes effect on Solaris.
+# Possible: YES, NO
+# Default: NO
 
 #MOTIF_TYPE?=	openmotif
 # Used by motif.buildlink2.mk to choose which Motif-2.0-compatible
