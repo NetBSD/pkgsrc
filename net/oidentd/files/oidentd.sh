@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: oidentd.sh,v 1.1.1.1 2004/01/03 23:21:45 tron Exp $
+# $NetBSD: oidentd.sh,v 1.2 2004/04/12 14:18:15 tron Exp $
 #
 
 # PROVIDE: oidentd
@@ -24,12 +24,10 @@ else				# old NetBSD, Solaris, Linux, etc...
 
 	case $1 in
 	start)
-		if [ -x ${command} -a -f ${conf_file} ] ; then
-			eval ${command} && @ECHO@ -n " ${name}"
-		fi
+		${command}
 		;;
 	stop)
-		${stop_cmd}
+		pkill ${name}
 		;;
 	*)
 		@ECHO@ "Usage: $0 {start|stop}" 1>&2
