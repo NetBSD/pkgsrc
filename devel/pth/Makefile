@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2003/07/17 21:33:13 grant Exp $
+# $NetBSD: Makefile,v 1.60 2004/01/05 20:48:45 jlam Exp $
 #
 
 DISTNAME=		pth-2.0.0
@@ -11,7 +11,9 @@ COMMENT=		GNU Portable Thread library
 
 CONFLICTS=		pth-current-[0-9]* pth-syscall<1.4.1nb1
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
