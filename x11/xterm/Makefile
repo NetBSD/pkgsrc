@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/02 08:28:30 tron Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/04 12:57:56 tron Exp $
 
 DISTNAME=	xterm-164
 CATEGORIES=	x11
@@ -10,6 +10,7 @@ COMMENT=	Latest terminal emulator for the X Window System
 
 ONLY_FOR_PLATFORM=	SunOS-*-*	# in NetBSD X11 distribution
 
+USE_BUILDLINK2=	YES
 USE_IMAKE=	YES
 
 INSTALL_FILE=	${WRKDIR}/INSTALL
