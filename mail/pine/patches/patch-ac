@@ -1,5 +1,5 @@
 --- pine/makefile.neb.orig	Fri May  8 19:28:46 1998
-+++ pine/makefile.neb	Sat Jul 18 23:02:32 1998
++++ pine/makefile.neb	Sun Jul 19 00:22:00 1998
 @@ -45,9 +45,12 @@
  RM=          rm -f
  LN=          ln -s
@@ -26,3 +26,20 @@
               `cat $(CCLIENTDIR)/LDFLAGS`
  
  STDCFLAGS=   -DNETBSD -DSYSTYPE=\"NEB\" -DMOUSE
+@@ -82,13 +85,15 @@
+ 	$(CCLIENTDIR)/mail.h $(CCLIENTDIR)/osdep.h \
+ 	$(CCLIENTDIR)/rfc822.h $(CCLIENTDIR)/misc.h
+ 
++all: pine abookcpy
++
+ pine:  $(OFILES) $(LOCLIBS)
+ 	echo "char datestamp[]="\"`date`\"";" > date.c
+ 	echo "char hoststamp[]="\"`hostname`\"";" >> date.c
+ 	$(CC) $(LDFLAGS) $(CFLAGS) -o pine $(OFILES) date.c $(LIBS)
+ 
+ abookcpy:	abookcpy.o $(LOCLIBES)
+-	$(CC) $(LDFLAGS) $(CFLAGS) -o abookcpy abookcpy.o $(LIBS)
++	$(CC) $(LDFLAGS) $(CFLAGS) -o abookcpy abookcpy.o $(CCLIENTDIR)/c-client.a -lcrypt
+ 
+ pine-use:	pine-use.c
+ 	$(CC) -o pine-use pine-use.c
