@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/08/24 11:43:47 abs Exp $
+# $NetBSD: Makefile,v 1.12 2001/09/11 16:12:56 wiz Exp $
 #
 
 DISTNAME=	snort-1.8.1-RELEASE
@@ -17,11 +17,12 @@ HOMEPAGE=	http://www.snort.org/
 COMMENT=	Libpcap-based packet sniffer/logger
 
 GNU_CONFIGURE=	YES
+CONFIGURE_ARGS+=	--with-libpcap-includes=${BUILDLINK_DIR}/include
+CONFIGURE_ARGS+=	--with-libpcap-libraries=${BUILDLINK_DIR}/lib
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
-DEPENDS+=	libpcap>=0.4:../../net/libpcap
 ROOTGROUP=	root
 .endif
 
@@ -50,4 +51,5 @@ post-install:
 	done
 	${INSTALL_MAN} ${WRKSRC}/snort.8 ${PREFIX}/man/man8
 
+.include "../../net/libpcap/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
