@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/05/06 17:43:13 jmmv Exp $
+$NetBSD: MESSAGE,v 1.2.2.1 2004/01/01 22:56:24 agc Exp $
 
 To use xfstt, you will need to perform the following steps:
 
@@ -7,7 +7,7 @@ To use xfstt, you will need to perform the following steps:
    TrueType fonts from the fonts category), or copy your other TrueType
    fonts into
 
-	@PREFIX@/lib/X11/fonts/TrueType/
+	${PREFIX}/lib/X11/fonts/TrueType/
 
 2. In case you don't have PKG_RCD_SCRIPTS set in your /etc/mk.conf, copy
    ${PREFIX}/etc/rc.d/xfstt to /etc/rc.d/xfstt and add the following
