@@ -1,15 +1,29 @@
-$NetBSD: patch-af,v 1.1 2004/01/23 17:51:24 jmmv Exp $
+$NetBSD: patch-af,v 1.2 2004/04/01 18:17:29 jmmv Exp $
 
-The package does not install documentation, so avoid creating the directory
-that should contain it.
+http://bugzilla.gnome.org/show_bug.cgi?id=134247
+http://bugzilla.gnome.org/show_bug.cgi?id=134319
 
---- doc/gconf/Makefile.in.orig	2004-01-23 18:41:17.000000000 +0100
+--- doc/gconf/Makefile.in.orig	2003-12-15 02:55:42.000000000 +0000
 +++ doc/gconf/Makefile.in
-@@ -381,6 +381,7 @@ maintainer-clean-local: clean
- 	cd $(srcdir) && rm -rf sgml html $(DOC_MODULE)-decl-list.txt $(DOC_MODULE)-decl.txt
+@@ -381,18 +381,18 @@ maintainer-clean-local: clean
+ 	cd $(srcdir) && rm -rf xml html $(DOC_MODULE)-decl-list.txt $(DOC_MODULE)-decl.txt
  
  install-data-local:
-+dontdo-install-data-local:
- 	$(mkinstalldirs) $(DESTDIR)$(TARGET_DIR)
- 	(installfiles=`echo $(srcdir)/html/*`; \
+-	$(mkinstalldirs) $(DESTDIR)$(TARGET_DIR)
+-	(installfiles=`echo $(srcdir)/html/*`; \
++	installfiles=`echo $(srcdir)/html/*`; \
  	if test "$$installfiles" = '$(srcdir)/html/*'; \
+ 	then echo '-- Nothing to install' ; \
+ 	else \
++	  $(mkinstalldirs) $(DESTDIR)$(TARGET_DIR); \
+ 	  for i in $$installfiles; do \
+ 	    echo '-- Installing '$$i ; \
+ 	    $(INSTALL_DATA) $$i $(DESTDIR)$(TARGET_DIR); \
+ 	  done; \
+ 	  echo '-- Installing $(srcdir)/html/index.sgml' ; \
+ 	  $(INSTALL_DATA) $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR); \
+-	fi)
++	fi
+ 
+ #
+ # Require gtk-doc when making dist
