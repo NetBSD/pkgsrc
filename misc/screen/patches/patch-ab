@@ -1,16 +1,7 @@
-$NetBSD: patch-ab,v 1.4 1999/08/10 17:43:56 tron Exp $
+$NetBSD: patch-ab,v 1.5 1999/09/03 15:44:43 tron Exp $
 
 --- doc/Makefile.in.orig	Tue Aug 10 17:06:30 1999
 +++ doc/Makefile.in	Tue Aug 10 19:35:35 1999
-@@ -3,7 +3,7 @@
- srcdir = @srcdir@
- VPATH = @srcdir@
- 
--prefix = /usr/local
-+prefix = @prefix@
- mandir = $(prefix)/man
- infodir = $(prefix)/info
- 
 @@ -20,7 +20,8 @@
  	$(TEXI2DVI) $(srcdir)/screen.texinfo
  
