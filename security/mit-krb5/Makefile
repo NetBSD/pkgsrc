@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/06/24 14:43:29 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2004/07/24 13:55:30 jlam Exp $
 
 DISTNAME=	krb5-1.3.4
 PKGNAME=	mit-${DISTNAME}
@@ -40,7 +40,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
 # The actual KDC databases are stored in ${MIT_KRB5_STATEDIR}/krb5kdc.
-MIT_KRB5_STATEDIR?=	/var
+MIT_KRB5_STATEDIR?=	${VARBASE}
 FILES_SUBST+=		MIT_KRB5_STATEDIR=${MIT_KRB5_STATEDIR}
 
 CONFIGURE_ARGS+=	--localstatedir=${MIT_KRB5_STATEDIR}
