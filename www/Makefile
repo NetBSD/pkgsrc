@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.250 2003/04/19 04:44:58 rh Exp $
+# $NetBSD: Makefile,v 1.251 2003/04/28 23:23:05 jdolecek Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -112,6 +112,7 @@ SUBDIR+=	openacs
 SUBDIR+=	opera
 SUBDIR+=	opera-plugins
 SUBDIR+=	opera6
+SUBDIR+=	opera7
 SUBDIR+=	p5-Apache-ASP
 SUBDIR+=	p5-Apache-DBILogConfig
 SUBDIR+=	p5-Apache-DBILogger
