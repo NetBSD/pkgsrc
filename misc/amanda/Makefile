@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/08/20 15:17:12 tsarna Exp $
+# $NetBSD: Makefile,v 1.18 1998/10/19 15:56:22 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -20,7 +20,7 @@ AMANDA_GROUP=		operator
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-user=${AMANDA_USER} --with-group=${AMANDA_GROUP} \
-			--with-mmap
+			--with-mmap --with-amandahosts
 CONFIGURE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 pre-install:
