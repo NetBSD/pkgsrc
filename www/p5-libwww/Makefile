@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/02/22 00:55:37 minskim Exp $
+# $NetBSD: Makefile,v 1.36 2004/02/25 00:56:17 heinz Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/14 04:00:11 jfitz Exp
 #
 
@@ -13,12 +13,12 @@ HOMEPAGE=	http://www.linpro.no/lwp/
 COMMENT=	Perl5 library for WWW access
 
 DEPENDS+= 	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
-DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
-DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
-DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+DEPENDS+=	p5-Net>=1.09:../../net/p5-Net		# for Net::FTP>=2.58
+DEPENDS+=	p5-HTML-Parser>=3.33:../../www/p5-HTML-Parser
+DEPENDS+=	p5-URI>=1.10:../../www/p5-URI
 DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
-DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
+DEPENDS+=	p5-MIME-Base64>=2.1:../../converters/p5-MIME-Base64
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
