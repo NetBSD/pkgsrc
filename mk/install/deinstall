@@ -1,6 +1,6 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.28 2004/07/10 20:42:37 salo Exp $
+# $NetBSD: deinstall,v 1.29 2004/10/11 22:04:19 reed Exp $
 
 eval set -- ${PKG_USERS}
 for userset; do
@@ -31,7 +31,7 @@ done
 if [ "${_PKG_RCD_SCRIPTS}" = "YES" ]; then
 	eval set -- ${RCD_SCRIPTS}
 	for script; do
-		samplefile="${RCD_SCRIPTS_EXAMPLEDIR}/${script}"
+		samplefile="${PKG_PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/${script}"
 		file="${RCD_SCRIPTS_DIR}/${script}"
 		shift
 		ALL_FILES="${ALL_FILES} \"${samplefile}\" \"${file}\""

@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.31 2004/07/10 20:42:37 salo Exp $
+# $NetBSD: install,v 1.32 2004/10/11 22:04:19 reed Exp $
 
 if [ -z "${CONF_FILES}" -a -z "${CONF_FILES_PERMS}" -a			\
      -z "${SUPPORT_FILES}" -a -z "${SUPPORT_FILES_PERMS}" -o		\
@@ -311,7 +311,7 @@ EOF
 	done
 	eval set -- ${RCD_SCRIPTS}
 	for script; do
-		samplefile="${RCD_SCRIPTS_EXAMPLEDIR}/${script}"
+		samplefile="${PKG_PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/${script}"
 		file="${RCD_SCRIPTS_DIR}/${script}"
 
 		if [ "${_PKG_CONFIG}" = "NO" -o				\
