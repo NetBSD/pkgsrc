@@ -1,5 +1,5 @@
 /* config.h.in.  Generated automatically from configure.in by autoheader.  */
-/* $Id: config.h.in,v 1.3 2004/04/25 02:48:12 grant Exp $ */
+/* $Id: config.h.in,v 1.3.6.1 2005/01/07 02:25:55 salo Exp $ */
 
 
 /* Define if on AIX 3.
