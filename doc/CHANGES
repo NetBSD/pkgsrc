@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.216 2002/10/09 14:45:27 itojun Exp $
+$NetBSD: CHANGES,v 1.217 2002/10/09 21:02:50 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3166,3 +3166,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated www6to4 to 1.5 [wiz 2002-10-09]
 	Updated gnupg to 1.2.0 [itojun 2002-10-09]
 	Updated sendmail88 to 8.8.8nb1 [itojun 2002-10-09]
+	Updated qt3-tools to 3.0.4nb1 [jlam 2002-10-09]
