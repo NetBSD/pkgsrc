@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/02/17 18:18:44 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2002/08/15 21:33:07 tron Exp $
 #
 
 DISTNAME=		coda-4.6.6
@@ -15,7 +15,7 @@ DEPENDS+=		gdbm>=1.7.3:../../databases/gdbm
 DEPENDS+=		readline>=4.0:../../devel/readline
 
 # Only enable platforms that can build "lwp".
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-m68k
+ONLY_FOR_PLATFORM=	NetBSD-1.[45]*-i386 NetBSD-1.[45]*-m68k
 
 ALL_TARGET=		coda
 INSTALL_TARGET=		server-install
