@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.74 2003/12/16 23:07:42 heinz Exp $
+# $NetBSD: defs.SunOS.mk,v 1.75 2004/01/08 14:53:06 grant Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -35,7 +35,7 @@ GZIP?=		-9
 GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
 .elif exists(/usr/bin/gzip)
 GUNZIP_CMD?=	/usr/bin/gunzip -f
-GZCAT?=		/usr/bin/gzcat
+GZCAT?=		/usr/bin/gzip -cd
 GZIP?=		-9
 GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 .endif
