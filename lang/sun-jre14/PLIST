@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/08/26 21:02:53 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/03/17 22:01:43 jschauma Exp $
 .systemPrefs/.system.lock
 .systemPrefs/.systemRootModFile
 CHANGES
@@ -81,9 +81,10 @@ lib/font.properties.SuSE8.0
 lib/font.properties.ja.Redhat7.2
 lib/font.properties.ja.Redhat7.3
 lib/font.properties.ja.Redhat8.0
-lib/font.properties.ko.Redhat8.0
-lib/font.properties.zh_CN.Redhat8.0
-lib/font.properties.zh_TW.Redhat8.0
+lib/font.properties.ko.Redhat
+lib/font.properties.zh_CN.Redhat
+lib/font.properties.zh_CN.Redhat2.1
+lib/font.properties.zh_TW.Redhat
 lib/font.properties.ja.Turbo.default
 lib/font.properties.ja.Turbo6.0.default
 lib/font.properties.zh.Turbo.default
