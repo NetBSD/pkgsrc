@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/22 15:34:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/05/04 23:45:43 wiz Exp $
 bin/clara
 bin/selthresh.pl
 man/man1/clara-adv.1
@@ -10,6 +10,7 @@ share/doc/clara/FAQ
 share/doc/clara/clara-adv.html
 share/doc/clara/clara-dev.html
 share/doc/clara/clara-faq.html
+share/doc/clara/clara-glo.html
 share/doc/clara/clara-tut.html
 share/doc/clara/imre.pbm
 @dirrm share/doc/clara
