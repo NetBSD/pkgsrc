@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.376 1999/12/16 03:20:35 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.377 1999/12/23 03:12:44 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -2273,7 +2273,7 @@ binpkg-list:
 					release=ava[3];			\
 					print "<TR><TD><LI> " arch ": <TD>" urls[av] " <TD>(${OPSYS} " release ")"; \
 				}					\
-			} '						\
+			} ' | sort					\
 		;;							\
 	esac
 .endif
