@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 21:45:48 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/26 10:51:44 grant Exp $
 #
 
 DISTNAME=       cucipop-1.31
+PKGREVISION=	1
 CATEGORIES=     mail
 MASTER_SITES=	ftp://ftp.informatik.rwth-aachen.de/pub/packages/cucipop/
 
@@ -12,12 +13,17 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	The Cubic Circle POP3 mail server
 
+USE_PKGINSTALL=	YES
+
 LICENSE=	shareware
 
 BUILD_DEFS+=	USE_INET6
 
 MAKE_ENV+=	ROOT_USER="${ROOT_USER}"
 MAKE_ENV+=	ROOT_GROUP="${ROOT_GROUP}"
+
+MAKE_DIRS+=	${PREFIX}/share/cucipop/bulletins
+SPECIAL_PERMS+=	${PREFIX}/sbin/cucipop ${ROOT_USER} ${ROOT_GROUP} 2755
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,5 +42,11 @@ pre-configure:
 		${SED} -e 's|@prefix@|${PREFIX}|g' $$f > $$f.fixed &&	\
 		${MV} $$f.fixed $$f;					\
 	done)
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/cucipop ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/makevpopdb ${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/cucipop.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/makevpopdb.8 ${PREFIX}/man/man8
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:59:44 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/26 10:51:44 grant Exp $
 sbin/cucipop
 sbin/makevpopdb
 man/man8/cucipop.8.gz
 man/man8/makevpopdb.8.gz
-@dirrm share/cucipop/bulletins
-@dirrm share/cucipop
