@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.3 2003/01/18 21:17:34 bouyer Exp $
+
+--- sim_ether.c.orig	Tue Oct 22 16:34:16 2002
++++ sim_ether.c	Sat Jan 18 18:25:37 2003
+@@ -256,6 +256,14 @@
+   /* set data in passed read packet */
+   dev->read_packet->len = header->len;
+   memcpy(dev->read_packet->msg, data, header->len);
++  /*
++   * Pad packet to minimum ethernet len, in case if comes from the local
++   * host.
++   */
++  if (header->len <60) {
++	dev->read_packet->len = 60;
++	memset(dev->read_packet->msg + header->len, 0, 60 - header->len);
++  }
+ 
+ #ifdef _DEBUG
+   eth_packet_trace (dev->read_packet, "reading");
