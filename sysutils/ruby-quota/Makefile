@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2003/07/21 17:24:33 martti Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/15 14:29:18 taca Exp $
 #
 
 DISTNAME=	ruby-quota-0.5.1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://kt-www.jaist.ac.jp/~ttate/ftp/
+MASTER_SITES=	http://sourceforge.net/projects/ruby-quota/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://kt-www.jaist.ac.jp/~ttate/ruby/ruby-ext.html
+HOMEPAGE=	http://sourceforge.net/projects/ruby-quota/
 COMMENT=	Quota interface for Ruby
 
 DIST_SUBDIR=	ruby
