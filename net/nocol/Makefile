@@ -1,17 +1,24 @@
-# $NetBSD: Makefile,v 1.9 2000/08/26 17:15:05 veego Exp $
+# $NetBSD: Makefile,v 1.10 2000/08/31 18:02:22 skrll Exp $
 #
 
-DISTNAME=	nocol-4.3.1
-PKGNAME=	nocol-4.3.1nb1
-CATEGORIES=	net
-MASTER_SITES= 	http://www.netplex-tech.com/software/nocol/downloads/
+DISTNAME=		nocol-4.3.1
+PKGNAME=		nocol-4.3.1nb1
+CATEGORIES=		net
+MASTER_SITES= 		http://www.netplex-tech.com/software/nocol/downloads/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.netplex-tech.com/software/nocol/
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.netplex-tech.com/software/nocol/
 
-USE_PERL5=	yes
+HAS_CONFIGURE=		yes
+CONFIGURE_SCRIPT=	./Configure
+CONFIGURE_ARGS+=	< ${FILESDIR}/answers
 
-INSTALL_TARGET=	install root
+USE_PERL5=		yes
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/cmu-snmp/snmp/ltconfig \
+			${WRKSRC}/cmu-snmp/snmpapps/ltconfig
+
+INSTALL_TARGET=		install root
 
 post-patch:
 	@(hostname=`/bin/hostname`;					\
@@ -45,8 +52,5 @@ post-install:
 	    ${INSTALL_DATA} ${WRKSRC}/webnocol/gifs/$$f			\
 			    ${PREFIX}/share/nocol/gifs;			\
 	done
-
-do-configure:
-	(cd ${WRKSRC}; ./Configure < answers)
 
 .include "../../mk/bsd.pkg.mk"
