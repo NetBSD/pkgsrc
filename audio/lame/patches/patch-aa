@@ -1,7 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/08/08 03:12:09 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 1999/08/10 11:16:59 agc Exp $
 
---- Makefile.orig	Sun Aug  8 04:49:36 1999
-+++ Makefile	Sun Aug  8 04:49:53 1999
+Adjust for gcc, and don't use Sun compiler on Solaris.
+
+--- Makefile.orig	Tue Aug 10 11:59:27 1999
++++ Makefile	Tue Aug 10 12:04:40 1999
 @@ -13,7 +13,7 @@
  # defaults:
  PGM = lame
@@ -11,3 +13,18 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/08/08 03:12:09 hubertf Exp $
  GTK = 
  GTKLIBS = 
  SNDLIB = 
+@@ -98,10 +98,10 @@
+ ##########################################################################
+ # SunOS
+ ##########################################################################
+-ifeq ($(UNAME),SunOS) 
+-   CC = cc
+-   MAKEDEP = -xM
+-endif
++#ifeq ($(UNAME),SunOS) 
++#   CC = cc
++#   MAKEDEP = -xM
++#endif
+ 
+ 
+ ##########################################################################
