@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1.1.1 2000/12/12 02:03:46 wiz Exp $
+$NetBSD: patch-ah,v 1.2 2001/03/11 19:59:00 fredb Exp $
 
---- autoconf/Makefile.common.lib.in.orig	Wed Aug 25 17:44:20 1999
-+++ autoconf/Makefile.common.lib.in	Fri Aug 27 22:05:30 1999
+--- autoconf/Makefile.common.lib.in.orig	Fri Oct 20 06:27:57 2000
++++ autoconf/Makefile.common.lib.in	Sun Mar 11 15:16:36 2001
 @@ -4,7 +4,7 @@
  
  @MAKEFILEDEFINES@
@@ -37,8 +37,8 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/12/12 02:03:46 wiz Exp $
  
  uninstall.bin:
  
-@@ -69,12 +52,10 @@
- 		done
+@@ -80,12 +63,10 @@
+ 		fi
  
  $(PROG):	$(OBJS)
 -		$(RMF) $(PROG)
@@ -52,7 +52,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/12/12 02:03:46 wiz Exp $
  
  #
  # include dependency files if they exist
-@@ -84,14 +65,4 @@
+@@ -95,14 +76,4 @@
  #ifneq ($(wildcard .depend),)
  include .depend
  #endif
