@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.16 2001/12/19 14:20:46 tron Exp $
+# $NetBSD: buildlink.mk,v 1.17 2001/12/19 15:29:29 tron Exp $
 #
 # This Makefile fragment is included by packages that use kdelibs2.
 #
@@ -40,12 +40,17 @@ USE_OPENSSL_VERSION=		${OPENSSL_VERSION_096}
 
 .include "../../audio/libaudiofile/buildlink.mk"
 .include "../../devel/pcre/buildlink.mk"
-.if defined(USE_CUPS) && (${USE_CUPS} == "YES")
-.include "../../print/cups/buildlink.mk"
-.endif
 .include "../../security/openssl/buildlink.mk"
 .include "../../x11/qt2-libs/buildlink.mk"
 .include "../../mk/ossaudio.buildlink.mk"
+
+.if defined(USE_CUPS) && (${USE_CUPS} == "YES")
+.include "../../print/cups/buildlink.mk"
+
+PLIST_SUBST+=		CUPS=
+.else
+PLIST_SUBST+=		CUPS="@comment "
+.endif
 
 BUILDLINK_TARGETS.kdelibs2=	kdelibs2-buildlink
 BUILDLINK_TARGETS.kdelibs2+=	kdelibs2-buildlink-config-wrapper
