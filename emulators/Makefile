@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2003/12/06 17:24:15 tron Exp $
+# $NetBSD: Makefile,v 1.91 2003/12/14 04:17:35 grant Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -12,6 +12,7 @@ SUBDIR+=	compat12
 SUBDIR+=	compat13
 SUBDIR+=	compat14
 SUBDIR+=	compat14-crypto
+SUBDIR+=	compat16
 SUBDIR+=	darcnes
 SUBDIR+=	darwin_lib
 SUBDIR+=	dega
