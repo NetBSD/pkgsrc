@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/25 03:06:17 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 03:06:52 minskim Exp $
 #
 
 DISTNAME=	Glib-${DIST_VERSION}
@@ -12,6 +12,8 @@ COMMENT=	Perl bindings for Glib 2
 
 DEPENDS+=	p5-ExtUtils-Depends>=0.2:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-ExtUtils-PkgConfig>=1.03:../../devel/p5-ExtUtils-PkgConfig
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
