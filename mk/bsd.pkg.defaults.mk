@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.25 2001/12/15 20:25:37 agc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.26 2001/12/17 11:45:05 bouyer Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1328,6 +1328,14 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_SUNSITE=	ftp://sunsite.org.uk/Mirrors/sunsite.unc.edu/pub/Linux/
 #MASTER_SITE_BACKUP=	ftp://sunsite.org.uk/packages/NetBSD/packages/distfiles/ \
 #	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
+# France. This will try to fetch distfile from the distfile mirror
+# before trying ${MASTER_SITE} or the distfiles at ftp.netbsd.org
+#MASTER_SITE_OVERRIDE= \
+#	ftp://ftp2.fr.netbsd.org/pub/NetBSD/packages/distfiles/
+#MASTER_SITE_BACKUP=     \
+#	ftp://ftp2.fr.netbsd.org/pub/NetBSD/packages/distfiles/
+#MASTER_SITE_LOCAL=      \
+#	ftp://ftp.fr.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
 .if exists(${.CURDIR}/../../mk/bsd.pkg.obsolete.mk)
 .include "${.CURDIR}/../../mk/bsd.pkg.obsolete.mk"
