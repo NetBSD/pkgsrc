@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/14 17:21:56 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/11 23:34:29 xtraeme Exp $
 
 DISTNAME=	neXtaw-0.15.1
 CATEGORIES=	x11
@@ -8,7 +8,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://siag.nu/neXtaw/
 COMMENT=	NeXTstep-like widgets based on the Athena Widget set
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_X11BASE=		# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
