@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2002/01/10 06:53:02 martti Exp $
+
+--- Makefile.in.orig	Wed Jan  9 16:29:13 2002
++++ Makefile.in	Wed Jan  9 16:29:58 2002
+@@ -17,9 +17,9 @@
+ MKDIR=mkdir -p
+ RM=rm -f
+ 
+-INSTALL_PRG=install -s -m 555
+-INSTALL_SCRIPT=install -m 555
+-INSTALL_DATA=install -m 444
++INSTALL_PRG=install -c -s -m 555
++INSTALL_SCRIPT=install -c -m 555
++INSTALL_DATA=install -c -m 444
+ 
+ all:
+ 
