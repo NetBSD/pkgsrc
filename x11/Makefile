@@ -99,6 +99,7 @@
     SUBDIR += xmascot
 #    SUBDIR += xmbdfed
 #    SUBDIR += xmold
+    SUBDIR += xneko
     SUBDIR += xpns
 #    SUBDIR += xpostit
 #    SUBDIR += xpostitPlus
