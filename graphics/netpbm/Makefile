@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2001/01/14 12:40:11 tron Exp $
+# $NetBSD: Makefile,v 1.51 2001/01/14 13:17:55 tron Exp $
 
 DISTNAME=	netpbm-9.7
 CATEGORIES=	graphics
@@ -15,13 +15,19 @@ USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 
 INSTALL_TARGET=	install-dev install
-MAKE_ENV+=	CC=${CC}
+MAKE_ENV+=	CC=${CC} INSTALL="${INSTALL}"
 MAKEFILE=	GNUmakefile
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == NetBSD && ${MACHINE_ARCH} == arm32
+.if (${OPSYS} == NetBSD) && (${MACHINE_ARCH} == arm32)
 CFLAGS=
+.endif
+
+.if (${OPSYS} == SunOS)
+MAKE_ENV+=	NETWORKLD="-lsocket -lnsl"
+.else
+MAKE_ENV+=	NETWORKLD=""
 .endif
 
 post-patch:
