@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/02/12 16:53:50 recht Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/24 21:01:28 wiz Exp $
 
 DISTNAME=	ScientificPython-2.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Python//}
@@ -15,7 +15,7 @@ CONFLICTS+=	py-Scientific-*
 BUILDLINK_DEPENDS.python20=	python20>=2.0.1nb1
 BUILDLINK_DEPENDS.python21=	python21>=2.1.1nb1
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
 
@@ -23,6 +23,7 @@ MAKE_ENV+=	NETCDF_PREFIX=${LOCALBASE}
 
 EVAL_PREFIX+=	NETCDFPREFIX=netcdf MPICHPREFIX=mpich
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	OSVER=${OS_VERSION:C/^(.).*/\1/}
 
 post-build:
 	@(cd ${WRKSRC}/Src/MPI && ${SETENV} CFLAGS="${CFLAGS}" \
@@ -32,9 +33,9 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Src/MPI/mpipython \
 		${PREFIX}/bin/mpipython${PYVERSSUFFIX}
 
-.include "../../devel/netcdf/buildlink2.mk"
+.include "../../devel/netcdf/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../math/py-Numeric/buildlink2.mk"
-.include "../../parallel/mpi-ch/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../math/py-Numeric/buildlink3.mk"
+.include "../../parallel/mpi-ch/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
