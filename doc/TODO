@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.679 2003/07/03 17:32:47 seb Exp $
+$NetBSD: TODO,v 1.680 2003/07/04 11:56:55 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -206,6 +206,7 @@ Suggested package updates
 	o oss-3.9.7k
 	o p0f-1.8.3
 	o p5-Net-SNMP-4.1.0 [pkg/21782]
+	o p5-XML-LibXML-1.54
 	o pcre-4.3
 	o pekwm-0.1.3 [pkg/21852]
 	o php4-4.3.2
