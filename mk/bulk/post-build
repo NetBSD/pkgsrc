@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.39 2004/03/18 14:27:20 grant Exp $
+# $NetBSD: post-build,v 1.40 2004/03/22 21:54:48 jschauma Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -22,7 +22,11 @@ sub getconf {
 	local($var)=@_;
 	local($val);
 
-	chomp($val=`. ./$BULK_BUILD_CONF ; echo \$$var`);
+	if ($BULK_BUILD_CONF =~ /^\//) {
+		chomp($val=`. $BULK_BUILD_CONF ; echo \$$var`);
+	} else {
+		chomp($val=`. ./$BULK_BUILD_CONF ; echo \$$var`);
+	}
 	eval "\$$var=\"$val\";";
 }
 
