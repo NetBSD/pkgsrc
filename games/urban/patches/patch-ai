@@ -1,0 +1,16 @@
+$NetBSD: patch-ai,v 1.1 2005/03/14 14:48:20 rillig Exp $
+
+g++-2.95.3 does not allow class members that have the same name as the
+class.
+
+--- src/include/highscor.h.orig	Sun Jun  6 15:38:15 1999
++++ src/include/highscor.h	Sat Mar 12 11:14:51 2005
+@@ -6,7 +6,7 @@
+ /***************************************************************************/
+ struct Score {
+ 	char Name[64];
+-        int Score;
++        int S_Score;
+         int Level;
+ };
+ /***************************************************************************/
