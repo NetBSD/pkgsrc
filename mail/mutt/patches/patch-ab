@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 1999/03/04 00:26:02 tron Exp $
+
+--- configure.orig	Wed Mar  3 20:52:34 1999
++++ configure	Thu Mar  4 01:07:25 1999
+@@ -5228,6 +5228,7 @@
+ s%@DEFS@%$DEFS%g
+ s%@LDFLAGS@%$LDFLAGS%g
+ s%@LIBS@%$LIBS%g
++s%@SHELL@%/bin/sh%g
+ s%@exec_prefix@%$exec_prefix%g
+ s%@prefix@%$prefix%g
+ s%@program_transform_name@%$program_transform_name%g
