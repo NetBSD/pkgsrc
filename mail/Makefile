@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2004/06/20 19:43:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.215 2004/06/27 23:11:30 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -149,6 +149,7 @@ SUBDIR+=	queue_repair
 SUBDIR+=	rblcheck
 SUBDIR+=	ripmime
 SUBDIR+=	rmail-mime
+SUBDIR+=	rss2email
 SUBDIR+=	ruby-tmail
 SUBDIR+=	safecat
 SUBDIR+=	sendmail
