@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/11 00:05:24 rh Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/04/19 07:41:11 rh Exp $
 share/GNUstep/System/Applications/Gorm.app/Gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/0Menus
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/GormMenuAttributesInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/GormMenuAttributesInspector.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/GormMenuDrag.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/GormMenuItemAttributesInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/GormMenuItemAttributesInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/Info-gnustep.plist
@@ -120,6 +121,8 @@ share/GNUstep/System/Applications/Gorm.app/Resources/GormScrollViewAttributesIns
 share/GNUstep/System/Applications/Gorm.app/Resources/GormSetName.gorm/Gorm.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/GormSetName.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/GormSetName.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/GormShelfPref.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/GormShelfPref.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/GormSound.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/GormSoundInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/GormSoundInspector.gorm/objects.gorm
@@ -131,6 +134,8 @@ share/GNUstep/System/Applications/Gorm.app/Resources/GormViewSizeInspector.gorm/
 share/GNUstep/System/Applications/Gorm.app/Resources/GormViewSizeInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/GormWindow.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/Gorm.app/Resources/LeftArr.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/RightArr.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/Sunday_seurat.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/bezel_nib.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/button_nib.tiff
@@ -191,6 +196,7 @@ share/GNUstep/System/Library/Libraries/libGorm.so.1.0.0
 @dirrm share/GNUstep/System/Applications/GormTest.app
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormViewSizeInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormSoundInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormShelfPref.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormSetName.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormScrollViewAttributesInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormPreferences.gorm
