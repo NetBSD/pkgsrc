@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1997/12/29 03:04:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/01/23 11:42:30 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -36,7 +36,7 @@
 #    SUBDIR += p5-Image-Size
 #    SUBDIR += pgperl
 #    SUBDIR += pgplot
-#    SUBDIR += pixmap
+    SUBDIR += pixmap
 #    SUBDIR += plotmtv
     SUBDIR += png
 #    SUBDIR += povray
@@ -53,7 +53,7 @@
 #    SUBDIR += whirlgif
 #    SUBDIR += xanim
 #    SUBDIR += xaos
-#    SUBDIR += xbmbrowser
+    SUBDIR += xbmbrowser
 #    SUBDIR += xdl
 #    SUBDIR += xfig
 #    SUBDIR += xfractint
