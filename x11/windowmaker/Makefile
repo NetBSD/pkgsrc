@@ -1,31 +1,34 @@
-# $NetBSD: Makefile,v 1.24 1999/03/04 13:53:38 tron Exp $
+# $NetBSD: Makefile,v 1.25 1999/03/20 00:17:19 tron Exp $
 
-DISTNAME=		WindowMaker-0.51.0
-PKGNAME=		windowmaker-0.51.0
+DISTNAME=		WindowMaker-0.51.2
+PKGNAME=		windowmaker-0.51.2
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/beta/srcs/ \
-			ftp://ftp.windowmaker.org/pub/libs/
+			ftp://shadowmere.student.utwente.nl/pub/WindowMaker/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			WindowMaker-data.tar.gz
 
-MAINTAINER=		lamj@stat.cmu.edu
-HOMEPAGE=		http://www.windowmaker.org/
-
 DEPENDS+=		libproplist-0.8.3:../../devel/libproplist
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
 DEPENDS+=		giflib-3.0:../../graphics/giflib
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png-1.0.3:../../graphics/png
 DEPENDS+=		tiff-3.4:../../graphics/tiff
+DEPENDS+=		xpm-3.4k:../../graphics/xpm
+
+MAINTAINER=		lamj@stat.cmu.edu
+HOMEPAGE=		http://www.windowmaker.org/
 
 USE_LIBTOOL=		yes
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/share/locale \
-			--with-gfx-incs="-I${LOCALBASE}/include \
+			--with-incs-from="-I${LOCALBASE}/include \
 				-I${LOCALBASE}/include/giflib" \
-			--with-gfx-libs=-L${LOCALBASE}/lib \
 			--enable-modelock
+LDFLAGS+=		-L${LOCALBASE}/lib	# for libintl.a
+CONFIGURE_ENV+=		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
+			INSTALL_DATA="${INSTALL_DATA}" \
+			INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 # WINDOWMAKER_OPTIONS is a space-separated list of compile-time options
 # to support.  Currently supported options:
@@ -37,16 +40,13 @@ CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/share/locale \
 #
 WINDOWMAKER_OPTIONS?=	gnome kde
 
-CPPFLAGS+=		-I${LOCALBASE}/include
-LDFLAGS+=		-L${LOCALBASE}/lib
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}" \
-			INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-			INSTALL_DATA="${INSTALL_DATA}" \
-			INSTALL_SCRIPT="${INSTALL_SCRIPT}"
-
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC_WM
 
 .include "../../mk/bsd.prefs.mk"
+
+.for OPTION in ${WINDOWMAKER_OPTIONS}
+CONFIGURE_ARGS+=	--enable-${OPTION}
+.endfor
 
 # LINGUAS is a space-separated list of locales.  If it is defined, then
 # i18n-support is compiled into Window Maker and the locales specified
@@ -71,6 +71,9 @@ CONFIGURE_ARGS+=	--enable-kanji
 
 post-extract:
 	${RM} -f ${WRKDIR}/WindowMaker-data/pixmaps/tile.xpm
+	${RM} -f ${WRKSRC}/WindowMaker/Defaults/WMState \
+		 ${WRKSRC}/WindowMaker/Defaults/WMWindowAttributes \
+		 ${WRKSRC}/WindowMaker/Defaults/WindowMaker
 
 pre-configure:
 	@${ECHO} "To compile with i18n support, set the variable LINGUAS"
@@ -80,10 +83,16 @@ post-install:
 	(cd ${WRKDIR}/WindowMaker-data/pixmaps/ ; for i in * ; do \
 	 ${INSTALL_DATA} "$$i" ${PREFIX}/share/WindowMaker/Pixmaps/ ; \
 	 done )
+	${INSTALL_DATA_DIR} ${PREFIX}/share/WindowMaker/SoundSets
 	${INSTALL_DATA_DIR} ${PREFIX}/share/WindowMaker/Sounds
+	${TOUCH} ${PREFIX}/share/WindowMaker/SoundSets/.keep_me
 	${TOUCH} ${PREFIX}/share/WindowMaker/Sounds/.keep_me
-	${INSTALL_DATA} ${WRKSRC}/README.GNOME ${PREFIX}/share/WindowMaker
-	${INSTALL_DATA} ${WRKSRC}/README.KDE ${PREFIX}/share/WindowMaker
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/WindowMaker
+	${INSTALL_DATA} \
+		${WRKSRC}/README \
+		${WRKSRC}/README.GNOME \
+		${WRKSRC}/README.KDE \
+		${PREFIX}/share/doc/WindowMaker
 	@${CAT} ${PKGDIR}/PLIST.nolinguas >${PLIST_SRC}
 .if defined(LINGUAS)
 	@(for lang in ${LINGUAS}; do \
@@ -99,7 +108,3 @@ post-install:
 .endif
 
 .include "../../mk/bsd.pkg.mk"
-
-.for OPTION in ${WINDOWMAKER_OPTIONS}
-CONFIGURE_ARGS+=	--enable-${OPTION}
-.endfor
