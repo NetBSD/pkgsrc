@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3071 2003/08/19 15:48:59 agc Exp $
+$NetBSD: CHANGES,v 1.3072 2003/08/20 08:31:13 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3302,3 +3302,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gerbv to 0.14 [dmcmahill 2003-08-18]
 	Updated tgif to 4.1.43 [dmcmahill 2003-08-19]
 	Added dropbear-0.36 [agc 2003-08-19]
+	Updated tcptrace to 6.4.2 [grant 2003-08-20]
