@@ -1,8 +1,8 @@
-dnl $NetBSD: configure.ac,v 1.29 2003/09/14 07:36:15 grant Exp $
+dnl $NetBSD: configure.ac,v 1.30 2003/09/16 16:48:25 grant Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([libnbcompat], [20030914], [grant@NetBSD.org])
+AC_INIT([libnbcompat], [20030916], [grant@NetBSD.org])
 AC_CONFIG_HEADER(nbcompat/config.h)
 AC_ARG_PROGRAM
 
@@ -44,6 +44,25 @@ AC_CHECK_HEADERS([arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
 	utmp.h])
 
 AC_CHECK_HEADERS([md5.h rmd160.h sha1.h])
+
+pkg_use_nbcompat_md5=yes
+AC_CHECK_HEADERS([md5.h], [
+	AC_MSG_TRY_COMPILE([for MD5Init in md5.h], pkg_cv_have_md5init,
+		[ #include <sys/types.h>
+		  #include <md5.h> ],
+		[ MD5_CTX *f; MD5Init(f); ],
+		pkg_use_nbcompat_md5=no,
+		pkg_use_nbcompat_md5=yes,
+	)
+])
+
+if test $pkg_use_nbcompat_md5 = yes; then
+        AC_DEFINE(HAVE_NBCOMPAT_MD5INIT)
+        AH_TEMPLATE([HAVE_NBCOMPAT_MD5INIT], [
+		Define to 1 if the `MD5Init' function is built into the
+		library.
+        ])
+fi
 
 pkg_use_nbcompat_getopt_long=yes
 AC_CHECK_HEADERS([getopt.h], [
