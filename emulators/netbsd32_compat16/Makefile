@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/08 16:23:02 mrg Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/05 17:48:33 grant Exp $
 #
 
 .if ${MACHINE_ARCH} == "sparc64"
@@ -48,8 +48,9 @@ do-build:
 
 # XXX using pax to copy symlinks properly.
 do-install:
-	${INSTALL_DATA_DIR} ${COMPAT_LIBDIR} ${COMPAT_XLIBDIR} \
-		${COMPAT_LIBEXECDIR}
+	${INSTALL_DATA_DIR} ${COMPAT_LIBDIR}
+	${INSTALL_DATA_DIR} ${COMPAT_XLIBDIR}
+	${INSTALL_DATA_DIR} ${COMPAT_LIBEXECDIR}
 	(cd ${WRKDIR}/usr/lib; pax -rwv lib*.so* i18n/lib*.so* ${COMPAT_LIBDIR})
 	(cd ${WRKDIR}/usr/X11R6/lib; pax -rwv lib*.so* ${COMPAT_XLIBDIR})
 	(cd ${WRKDIR}/usr/libexec; pax -rwv ld.*so ${COMPAT_LIBEXECDIR})
