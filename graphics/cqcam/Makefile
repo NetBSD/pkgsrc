@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/02/15 09:26:21 agc Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/31 14:43:49 jwise Exp $
 #
 
 DISTNAME=		cqcam-0.45a
@@ -10,7 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.cs.duke.edu/~reynolds/cqcam/
 
 DEPENDS=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		tk-8.0.5:../../x11/tk80
+DEPENDS+=		tk-8.3.2:../../x11/tk
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 

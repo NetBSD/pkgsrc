@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/24 22:32:34 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/31 14:46:31 jwise Exp $
 #
 
 DISTNAME=		ocaml-3.00
@@ -8,11 +8,11 @@ MASTER_SITES=		ftp://ftp.inria.fr/lang/caml-light/
 MAINTAINER=		groo@netbsd.org
 HOMEPAGE=		http://caml.inria.fr/ocaml/
 
-DEPENDS+=		tk-8.0.*:../../x11/tk80
+DEPENDS+=		tk-8.3.2:../../x11/tk
 
 USE_GMAKE=		yes
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	-prefix ${LOCALBASE} -tklibs -L${LOCALBASE}/lib -tkdefs "-I${LOCALBASE}/include/tcl8.0 -I${LOCALBASE}/include/tk8.0" -libs "-Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib"
+CONFIGURE_ARGS+=	-prefix ${LOCALBASE} -tklibs -L${LOCALBASE}/lib -tkdefs "-I${LOCALBASE}/include " -libs "-Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib"
 
 ALL_TARGET=		world
 
