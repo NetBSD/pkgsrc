@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/02/18 15:14:10 seb Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/21 10:26:44 jlam Exp $
 
 DISTNAME=		gcvs-1.0a7
 CATEGORIES=		devel
@@ -10,21 +10,17 @@ COMMENT=		GTK interface for CVS
 
 CONFLICTS=		cvs-[0-9]*
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
+USE_X11=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 TEXINFO_OVERRIDE=	YES
 
-CONFIGURE_ARGS+=	--with-tclinclude="${BUILDLINK_DIR}/include"	\
-			--with-tcllib="${BUILDLINK_DIR}/lib"
+CONFIGURE_ARGS+=	--with-tclinclude="${BUILDLINK_PREFIX.tcl}/include" \
+			--with-tcllib="${BUILDLINK_PREFIX.tcl}/lib"
 
-post-patch:
-	${SED} "s,-ltcl,-ltcl83," ${WRKSRC}/configure > ${WRKSRC}/configure.done
-	${MV} -f ${WRKSRC}/configure.done ${WRKSRC}/configure
-	${CHMOD} +x ${WRKSRC}/configure
+.include "../../lang/tcl/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 
-.include "../../lang/tcl/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
