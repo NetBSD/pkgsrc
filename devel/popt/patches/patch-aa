@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2002/10/03 16:07:56 martti Exp $
+$NetBSD: patch-aa,v 1.6 2002/10/15 10:18:41 martti Exp $
 
---- configure.orig	Thu Feb 14 00:03:19 2002
-+++ configure	Thu Oct  3 18:01:35 2002
-@@ -7342,7 +7342,7 @@
+--- configure.orig	Sat Aug 31 15:22:20 2002
++++ configure	Tue Oct 15 12:05:53 2002
+@@ -12382,7 +12382,7 @@
          nls_cv_header_intl=
      nls_cv_header_libgt=
  
 -        DATADIRNAME=share
 +        DATADIRNAME=${PKGLOCALEDIR}
-     
+ 
  
          INSTOBJEXT=.mo

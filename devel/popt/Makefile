@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2002/10/03 16:07:55 martti Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/15 10:18:41 martti Exp $
 #
 
-DISTNAME=	popt-1.6.4
+DISTNAME=	popt-1.7
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.0.x/		\
-		http://gd.tuwien.ac.at/z7/utils/rpm.org/dist/rpm-4.0.x/	\
+MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.1.x/		\
+		http://gd.tuwien.ac.at/z7/utils/rpm.org/dist/rpm-4.1.x/	\
 		ftp://ftp.iks-jena.de/pub/software/unix/misc/		\
-		ftp://sunsite.cnlab-switch.ch/mirror/rpm/dist/rpm-4.0.x/
+		ftp://sunsite.cnlab-switch.ch/mirror/rpm/dist/rpm-4.1.x/
 
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Command line option parsing library
