@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.3 2003/06/16 16:33:34 drochner Exp $
+$NetBSD: distinfo,v 1.4 2004/06/23 15:54:08 minskim Exp $
 
 SHA1 (py152.tgz) = 2d648d07b1aa1aab32a3a24851c33715141779b9
 Size (py152.tgz) = 2533053 bytes
 SHA1 (patch-aa) = d8ad652ad5900da9f5384a1d577626e0d16b51ce
 SHA1 (patch-ab) = 7cbbae8a41e9e0d530561c80009c20bb838ebc15
+SHA1 (patch-ac) = 1cd8d555b70527f52c4f762b84a1d1d4464aeb47
+SHA1 (patch-ad) = 6207499c945b31e2da43ecc2dd2dd5fef195ad5b
+SHA1 (patch-ae) = 276541b325e23dbff94b306726583dab8e951884
+SHA1 (patch-af) = ffb0d78274d711c26fd92f5342b95b0365c68efb
