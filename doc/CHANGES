@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7985 2004/11/25 15:13:54 adam Exp $
+$NetBSD: CHANGES,v 1.7986 2004/11/25 15:21:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5421,3 +5421,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libdv to 0.103 [adam 2004-11-25]
 	Removed pgcc [wiz 2004-11-25]
 	Updated ne to 1.31 [adam 2004-11-25]
+	Added p5-chkjis-0.18 [taca 2004-11-25]
