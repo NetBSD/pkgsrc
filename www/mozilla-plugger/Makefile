@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/09/10 11:13:05 uebayasi Exp $
+# $NetBSD: Makefile,v 1.4 2004/09/10 11:33:35 reinoud Exp $
 #
 
 DISTNAME=		plugger-5.1.3
-PKGNAME=		mozilla-plugger-5.1.4
+PKGNAME=		mozilla-plugger-5.1.3
 CATEGORIES=		www
 MASTER_SITES=		http://fredrik.hubbe.net/plugger/
 
