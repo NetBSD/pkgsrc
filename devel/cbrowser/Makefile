@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2004/04/25 05:18:52 snj Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/31 11:21:16 minskim Exp $
 #
 
 DISTNAME=       cbrowser-0.6
-CATEGORIES=     devel tk80
+PKGREVISION=	1
+CATEGORIES=     devel tk
 MASTER_SITES=   http://www.ziplink.net/~felaco/cbrowser/
 
 MAINTAINER=     tech-pkg@NetBSD.org
@@ -10,6 +11,7 @@ HOMEPAGE=       http://www.ziplink.net/~felaco/cbrowser/
 COMMENT=        Graphical C/C++ source code browsing tool, and call graph viewer
 
 DEPENDS+=	cscope-[0-9]*:../../devel/cscope
+DEPENDS+=	tk-[0-9]*:../../x11/tk
 
 USE_BUILDLINK3=	yes
 NO_BUILD=	# defined
@@ -25,5 +27,4 @@ do-install:
 		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${PREFIX}/share/cbrowser; \
 	done
 
-.include "../../x11/tk83/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
