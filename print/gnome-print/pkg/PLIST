@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2001/03/16 17:23:45 tron Exp $
+@comment $NetBSD: PLIST,v 1.19 2001/04/06 22:12:08 rh Exp $
 bin/gnome-font-install
 include/libgnomeprint/gnome-font-dialog.h
 include/libgnomeprint/gnome-font-face.h
@@ -25,8 +25,8 @@ include/libgnomeprint/gnome-text.h
 lib/libgnomeprint.a
 lib/libgnomeprint.la
 lib/libgnomeprint.so
-lib/libgnomeprint.so.13
-lib/libgnomeprint.so.13.4
+lib/libgnomeprint.so.16
+lib/libgnomeprint.so.16.7
 lib/printConf.sh
 share/fonts/afms/adobe/pagd8a.afm
 share/fonts/afms/adobe/pagdo8a.afm
@@ -69,9 +69,11 @@ share/fonts/afms/adobe/putr8a.afm
 share/fonts/afms/adobe/putri8a.afm
 share/fonts/afms/adobe/pzcmi8a.afm
 share/fonts/afms/adobe/pzdr.afm
-share/fonts/fontmap
-share/gnome-print/0.25/profiles/PostscriptOptimized.profile
-share/gnome-print/0.25/profiles/pdf.profile
+share/fonts/fontmap2
+share/gnome-print/0.28/profiles/PostscriptOptimized.profile
+share/gnome-print/0.28/profiles/pdf.profile
+share/gnome-print/0.28/profiles/fax-g3.profile
+share/locale/az/LC_MESSAGES/gnome-print.mo
 share/locale/da/LC_MESSAGES/gnome-print.mo
 share/locale/de/LC_MESSAGES/gnome-print.mo
 share/locale/el/LC_MESSAGES/gnome-print.mo
@@ -99,8 +101,8 @@ share/locale/uk/LC_MESSAGES/gnome-print.mo
 share/locale/ca/LC_MESSAGES/gnome-print.mo
 share/locale/tr/LC_MESSAGES/gnome-print.mo
 share/locale/zh_CN.GB2312/LC_MESSAGES/gnome-print.mo
-@dirrm share/gnome-print/0.25/profiles
-@dirrm share/gnome-print/0.25
+@dirrm share/gnome-print/0.28/profiles
+@dirrm share/gnome-print/0.28
 @dirrm share/gnome-print
 @dirrm share/fonts/afms/adobe
 @dirrm share/fonts/afms
