@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:54:10 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/11 07:14:05 snj Exp $
 #
 
 DISTNAME=	btparse-0.33
@@ -10,7 +10,7 @@ HOMEPAGE=	http://starship.python.net/~gward/btOOL/
 COMMENT=	BibTeX parsing library
 
 USE_PERL5=	build
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 ALL_TARGET=	lib
 TEST_TARGET=	test
