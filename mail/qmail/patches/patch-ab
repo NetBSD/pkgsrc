@@ -1,10 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2002/05/03 10:39:01 zuntum Exp $
+$NetBSD: patch-ab,v 1.2 2004/04/10 05:30:06 schmonz Exp $
 
-Second part of QMAILQUEUE patch, as found on http://www.qmail.org/
-
---- qmail.c.orig	Mon Jun 15 04:53:16 1998
-+++ qmail.c	Tue Jan 19 09:57:36 1999
-@@ -6,14 +6,25 @@
+--- qmail.c.orig	1998-06-15 06:53:16.000000000 -0400
++++ qmail.c
+@@ -6,8 +6,17 @@
  #include "fd.h"
  #include "qmail.h"
  #include "auto_qmail.h"
@@ -23,12 +21,12 @@ Second part of QMAILQUEUE patch, as found on http://www.qmail.org/
  
  int qmail_open(qq)
  struct qmail *qq;
- {
+@@ -15,6 +24,8 @@ struct qmail *qq;
    int pim[2];
    int pie[2];
-+
-+  setup_qqargs();
  
++  setup_qqargs();
++
    if (pipe(pim) == -1) return -1;
    if (pipe(pie) == -1) { close(pim[0]); close(pim[1]); return -1; }
-
+  
