@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/27 14:11:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/30 17:16:11 taca Exp $
 bin/erb${RUBY_VER}
 bin/irb${RUBY_VER}
 bin/rdoc${RUBY_VER}
@@ -34,7 +34,6 @@ ${RUBY_DOCDIR}/pty/README.ja
 ${RUBY_DOCDIR}/shell.rd
 ${RUBY_DOCDIR}/shell.rd.ja
 ${RUBY_DOCDIR}/syslog.txt
-${RUBY_DOCDIR}/zlib.rd
 @dirrm ${RUBY_DOCDIR}
 ${RUBY_EXAMPLESDIR}/README
 ${RUBY_EXAMPLESDIR}/bigdecimal/linear.rb
@@ -260,7 +259,6 @@ ${RUBY_ARCHLIBDIR}/syck.so
 ${RUBY_ARCHLIBDIR}/syslog.so
 ${RUBY_ARCHLIBDIR}/util.h
 ${RUBY_ARCHLIBDIR}/version.h
-${RUBY_ARCHLIBDIR}/zlib.so
 @dirrm ${RUBY_ARCHLIBDIR}
 @exec ${MKDIR} %D/${RUBY_SITEARCHLIBDIR}
 @dirrm ${RUBY_SITEARCHLIBDIR}
