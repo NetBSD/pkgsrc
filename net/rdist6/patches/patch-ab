@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 1999/08/29 12:26:21 kim Exp $
+
+--- include/defs.h.orig	Mon Mar 23 18:28:14 1998
++++ include/defs.h	Sun Aug 29 07:50:07 1999
+@@ -403,7 +403,11 @@
+ extern void			error(char *, ...);
+ extern void			fatalerr(char *, ...);
+ extern void			message(int, char *, ...);
++#if	defined(NETBSD)
++extern void			setproctitle(const char *fmt, ...);
++#else
+ extern void			setproctitle(char *fmt, ...);
++#endif /* NetBSD */
+ #else
+ extern void			debugmsg();
+ extern void			error();
