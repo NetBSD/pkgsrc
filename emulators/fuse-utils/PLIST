@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/16 10:01:34 adam Exp $
+bin/listbasic
+bin/rzxdump
+bin/rzxtool
+bin/scl2trd
+bin/snapconv
+bin/tapeconv
+bin/tzxlist
+man/man1/listbasic.1
+man/man1/rzxcheck.1
+man/man1/rzxdump.1
+man/man1/rzxtool.1
+man/man1/scl2trd.1
+man/man1/snapconv.1
+man/man1/tapeconv.1
+man/man1/tzxlist.1
