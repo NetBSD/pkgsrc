@@ -1,39 +1,12 @@
-$NetBSD: patch-aa,v 1.3 2002/09/26 12:29:56 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2002/12/02 20:29:49 drochner Exp $
 
---- Makefile.orig	Tue Jul 17 14:46:26 2001
-+++ Makefile
-@@ -6,7 +6,7 @@
- # Installation prefix directory:
+--- src/gettext.h.orig	Mon Dec  2 11:48:41 2002
++++ src/gettext.h	Mon Dec  2 11:49:25 2002
+@@ -24,6 +24,7 @@
  
- #PREFIX=/usr
--PREFIX=/usr/local
-+#PREFIX=/usr/local
- PRE_LIBDIR=$(PREFIX)/lib/xcdroast-0.98
+ /* Get declarations of GNU message catalog functions.  */
+ # include <libintl.h>
++# include <locale.h>
  
- # put here the prefix where you want xcdroast to look for 
-@@ -23,9 +23,9 @@ INSTALL=/usr/bin/install -c
+ #else
  
- #---
- 
--CFLAGS=-Wall `gtk-config --cflags` `imlib-config --cflags` -DPRE_PREFIX="\"$(PREFIX)\"" -DPRE_LIBDIR="\"$(PRE_LIBDIR)\"" -DCDRTOOLS_PREFIX="\"$(CDRTOOLS_PREFIX)\""
--CFLAGS2=-Wall `glib-config --cflags --libs` -DPRE_PREFIX="\"$(PREFIX)\"" -DPRE_LIBDIR="\"$(PRE_LIBDIR)\"" -DCDRTOOLS_PREFIX="\"$(CDRTOOLS_PREFIX)\""
--LIBS=`gtk-config --libs` `imlib-config --libs` -lgdk_imlib 
-+CFLAGS=${X_CFLAGS} -Wall `gtk-config --cflags` `imlib-config --cflags` -DPRE_PREFIX="\"$(PREFIX)\"" -DPRE_LIBDIR="\"$(PRE_LIBDIR)\"" -DCDRTOOLS_PREFIX="\"$(CDRTOOLS_PREFIX)\""
-+CFLAGS2=${X_CFLAGS} -Wall `glib-config --cflags --libs` -DPRE_PREFIX="\"$(PREFIX)\"" -DPRE_LIBDIR="\"$(PRE_LIBDIR)\"" -DCDRTOOLS_PREFIX="\"$(CDRTOOLS_PREFIX)\""
-+LIBS=${X_LDFLAGS} `gtk-config --libs` `imlib-config --libs` -lgdk_imlib
- TOOLLIBS=`gtk-config --libs`
- CC=gcc
- 
-@@ -48,10 +48,10 @@ all: xcdroast wavplay rmtool vrfytool cd
- 	$(CC) $(CFLAGS) -c $<
- 
- xcdroast: $(OBJ)  
--	$(CC) $(OBJ) $(LIBS) -o xcdroast 
-+	$(CC) $(OBJ) $(LIBS) $(LIBOSSAUDIO) -o xcdroast 
- 
- wavplay: wavplay.o wav_id.o tools.o 
--	$(CC) wavplay.o wav_id.o tools.o $(TOOLLIBS) -o wavplay 
-+	$(CC) wavplay.o wav_id.o tools.o $(TOOLLIBS) $(LIBOSSAUDIO) -o wavplay 
- 	cp wavplay lib/bin 
- 
- rmtool: rmtool.o
