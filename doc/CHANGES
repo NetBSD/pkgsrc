@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3890 2003/12/02 03:59:24 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3891 2003/12/02 05:49:48 ben Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4707,3 +4707,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated spamassassin to 2.60nb2 [heinz 2003-12-01]
 	Updated ppp-mppe to 2.3.9nb2 [cube 2003-12-01]
 	Updated naim to 0.11.6.4 [xtraeme 2003-12-02]
+	Updated sendmail to 8.12.10nb2 [ben 2003-12-02]
