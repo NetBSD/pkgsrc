@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/07/24 22:44:12 recht Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/16 09:05:08 recht Exp $
 
 PKGNAME=		postgresql74-lib-${BASE_VERS}
 SVR4_PKGNAME=		pstgl
@@ -16,7 +16,8 @@ BUILD_DIRS+=		${WRKSRC}/src/pl
 
 # As told by Josh Berkus
 .include "../../mk/pthread.buildlink3.mk"
-.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native" 
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native" \
+	&& ${OPSYS} != "NetBSD"
 CONFIGURE_ARGS+=	--enable-thread-safety
 .endif
 
