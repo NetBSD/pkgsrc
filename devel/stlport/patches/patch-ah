@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.2 2002/05/20 17:43:05 cjep Exp $
+$NetBSD: patch-ah,v 1.3 2002/08/25 19:22:41 jlam Exp $
 --- stlport/stl/_config.h.orig	Sat Nov 10 19:51:04 2001
 +++ stlport/stl/_config.h	Sat Nov 10 19:51:28 2001
 @@ -174,7 +174,7 @@

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/07/31 16:16:48 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2002/08/25 19:22:31 jlam Exp $
 #
 
 DISTNAME=		libglade-0.17

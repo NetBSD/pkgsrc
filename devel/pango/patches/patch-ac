@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2002/05/10 00:45:51 rh Exp $
+$NetBSD: patch-ac,v 1.4 2002/08/25 19:22:37 jlam Exp $
 
 --- pangox.pc.in.orig	Wed Mar  6 03:20:57 2002
 +++ pangox.pc.in

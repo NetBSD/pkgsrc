@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 2002/06/10 10:03:34 sakamoto Exp $
+$NetBSD: patch-ag,v 1.3 2002/08/25 19:22:58 jlam Exp $
 
 --- Wnn/jlib/js.c.orig	Mon May 17 12:04:45 1999
 +++ Wnn/jlib/js.c	Wed Sep 22 18:37:26 1999

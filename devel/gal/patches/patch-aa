@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2002/07/12 23:38:45 mycroft Exp $
+$NetBSD: patch-aa,v 1.9 2002/08/25 19:22:28 jlam Exp $
 
 --- configure.orig	Thu Jun 20 04:40:53 2002
 +++ configure	Wed Jul 10 22:54:42 2002

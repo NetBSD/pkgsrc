@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/07/07 14:39:16 tron Exp $
+# $NetBSD: Makefile,v 1.28 2002/08/25 19:23:05 jlam Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	2

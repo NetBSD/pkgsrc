@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/08/08 16:17:06 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2002/08/25 19:21:57 jlam Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.2.7

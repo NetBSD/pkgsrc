@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/19 19:07:19 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/08/25 19:22:33 jlam Exp $
 bin/libusb-config
 include/usb.h
 lib/libusb-0.1.so

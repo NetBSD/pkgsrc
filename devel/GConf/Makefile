@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/07/18 02:19:36 rh Exp $
+# $NetBSD: Makefile,v 1.29 2002/08/25 19:22:13 jlam Exp $
 #
 
 DISTNAME=		GConf-1.0.9

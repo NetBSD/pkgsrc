@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/08/04 16:45:04 jdolecek Exp $
+# $NetBSD: Makefile,v 1.9 2002/08/25 19:23:58 jlam Exp $
 #
 
 .include "../qt3-libs/Makefile.common"

@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 2002/06/10 10:03:34 sakamoto Exp $
+$NetBSD: patch-af,v 1.3 2002/08/25 19:22:58 jlam Exp $
 
 --- ./Makefile.in.orig	Tue Mar 23 21:10:39 1999
 +++ ./Makefile.in	Thu Sep  2 14:57:48 1999

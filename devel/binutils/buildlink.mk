@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2002/05/21 11:04:12 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.4 2002/08/25 19:22:22 jlam Exp $
 #
 # This Makefile fragment is included by packages that use binutils.
 #

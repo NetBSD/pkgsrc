@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2002/06/10 09:47:28 sakamoto Exp $
+$NetBSD: patch-aa,v 1.3 2002/08/25 19:22:55 jlam Exp $
 
 --- Canna.conf-	Fri Dec  1 00:31:14 2000
 +++ Canna.conf	Fri Dec  1 00:31:36 2000

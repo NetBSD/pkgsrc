@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 2002/06/10 09:47:28 sakamoto Exp $
+$NetBSD: patch-af,v 1.3 2002/08/25 19:22:56 jlam Exp $
 
 --- lib/RKC/convert.c.orig	Wed May 22 22:02:57 1996
 +++ lib/RKC/convert.c

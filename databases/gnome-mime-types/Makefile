@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/06/07 12:16:30 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/25 19:22:07 jlam Exp $
 #
 
 DISTNAME=		gnome-mime-data-1.0.7

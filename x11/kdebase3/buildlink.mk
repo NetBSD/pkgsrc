@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1.1.1 2002/05/31 13:18:37 skrll Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/08/25 19:23:35 jlam Exp $
 #
 # This Makefile fragment is included by packages that use kdebase3.
 #

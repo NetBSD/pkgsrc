@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/05/27 15:08:15 veego Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/25 19:23:09 jlam Exp $
 
 DISTNAME=	libdvdread-0.9.3
 CATEGORIES=	misc

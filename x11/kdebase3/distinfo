@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/08/21 16:00:11 skrll Exp $
+$NetBSD: distinfo,v 1.8 2002/08/25 19:23:35 jlam Exp $
 
 SHA1 (kdebase-3.0.2.tar.bz2) = 763af0ddce718789fae3dfe2b67036dbc2d01a02
 Size (kdebase-3.0.2.tar.bz2) = 13115043 bytes

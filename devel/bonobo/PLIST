@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/07/12 19:34:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/08/25 19:22:24 jlam Exp $
 bin/bonobo-application-x-mines
 bin/bonobo-audio-ulaw
 bin/bonobo-echo

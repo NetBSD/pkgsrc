@@ -1,4 +1,4 @@
-$NetBSD: patch-ej,v 1.2 2002/06/25 22:14:12 skrll Exp $
+$NetBSD: patch-ej,v 1.3 2002/08/25 19:23:48 jlam Exp $
 
 --- kxkb/Makefile.in.orig	Tue Jun 25 19:31:39 2002
 +++ kxkb/Makefile.in

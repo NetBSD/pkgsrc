@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.5 2002/07/15 23:04:20 kristerw Exp $
+$NetBSD: patch-am,v 1.6 2002/08/25 19:22:19 jlam Exp $
 --- configure.orig	Thu Nov  8 08:28:08 2001
 +++ configure	Mon Jul 15 23:31:06 2002
 @@ -3588,10 +3588,7 @@

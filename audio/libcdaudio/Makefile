@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/08/16 02:50:02 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2002/08/25 19:21:50 jlam Exp $
 #
 
 DISTNAME=	libcdaudio-0.99.6

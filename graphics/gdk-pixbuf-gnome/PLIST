@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/05/11 11:56:59 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/08/25 19:22:47 jlam Exp $
 include/gdk-pixbuf-1.0/gdk-pixbuf/gnome-canvas-pixbuf.h
 lib/gnomecanvaspixbufConf.sh
 lib/libgnomecanvaspixbuf.so.1.0

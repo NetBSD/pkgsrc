@@ -1,4 +1,4 @@
-$NetBSD: patch-ax,v 1.1.1.1 2002/05/31 13:18:58 skrll Exp $
+$NetBSD: patch-ax,v 1.2 2002/08/25 19:23:38 jlam Exp $
 
 --- kdeprint/kjobviewer/kjobviewer_main.cpp.orig	Thu May 30 09:59:42 2002
 +++ kdeprint/kjobviewer/kjobviewer_main.cpp

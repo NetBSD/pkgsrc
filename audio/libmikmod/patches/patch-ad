@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2002/07/13 01:03:35 mycroft Exp $
+$NetBSD: patch-ad,v 1.6 2002/08/25 19:21:52 jlam Exp $
 
 --- drivers/drv_sun.c.orig	Sun Jan 13 00:58:57 2002
 +++ drivers/drv_sun.c	Thu Jul 11 02:12:04 2002

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 17:07:28 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/08/25 19:24:02 jlam Exp $
 #
 
 DISTNAME=	xview3.2p1-X11R6
@@ -16,7 +16,8 @@ DEPENDS+=	xview-clients>=3.2.1:../xview-clients
 
 NOT_FOR_PLATFORM=       *-*-alpha       # broken va_arg handling in xview-lib
 
-USE_X11=	# defined
+USE_BUILDLINK2=	# defined
+USE_X11BASE=	# defined
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	# defined

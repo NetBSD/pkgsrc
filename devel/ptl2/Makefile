@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/07/24 19:45:23 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2002/08/25 19:22:38 jlam Exp $
 
 DISTNAME=		PTL-2.1.8
 PKGNAME=		ptl-2.1.8

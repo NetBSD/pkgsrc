@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/07/01 23:19:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/08/25 19:22:51 jlam Exp $
 
 DISTNAME=	libexif-0.5.3
 CATEGORIES=	graphics

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/06/10 10:21:25 sakamoto Exp $
+$NetBSD: distinfo,v 1.3 2002/08/25 19:23:00 jlam Exp $
 
 SHA1 (sj3-2.0.1.20.tar.gz) = b1cae59065ebc9caf5e198143ceb9558c932f259
 Size (sj3-2.0.1.20.tar.gz) = 584065 bytes

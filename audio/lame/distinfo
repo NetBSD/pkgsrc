@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2002/05/25 12:47:59 hubertf Exp $
+$NetBSD: distinfo,v 1.7 2002/08/25 19:21:49 jlam Exp $
 
 SHA1 (lame-3.92.tar.gz) = 97be7804c7c89b088726124163de94b7432d5ea4
 Size (lame-3.92.tar.gz) = 970894 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2002/06/30 01:51:30 jschauma Exp $
+# $NetBSD: buildlink.mk,v 1.4 2002/08/25 19:22:36 jlam Exp $
 #
 # This Makefile fragment is included by packages that use pango.
 #

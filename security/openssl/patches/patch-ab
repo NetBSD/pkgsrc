@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2002/08/04 15:47:46 fredb Exp $
+$NetBSD: patch-ab,v 1.9 2002/08/25 19:23:18 jlam Exp $
 
 --- crypto/opensslv.h.orig	Tue Jul 30 05:34:28 2002
 +++ crypto/opensslv.h

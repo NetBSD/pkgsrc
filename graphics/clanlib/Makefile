@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/08/08 16:17:07 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2002/08/25 19:22:46 jlam Exp $
 
 DISTNAME=		ClanLib-0.4.4
 PKGREVISION=		2

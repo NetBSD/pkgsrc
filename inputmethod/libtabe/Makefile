@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/04 08:31:10 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/25 19:22:59 jlam Exp $
 #
 
 DISTNAME=	libtabe-0.2.5

@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 2002/05/20 17:43:05 cjep Exp $
+$NetBSD: patch-ag,v 1.3 2002/08/25 19:22:41 jlam Exp $
 --- stlport/typeinfo.orig	Sat Nov 10 19:38:11 2001
 +++ stlport/typeinfo	Sat Nov 10 19:39:12 2001
 @@ -23,7 +23,9 @@

@@ -1,5 +1,5 @@
 ======================================================================
-$NetBSD: MESSAGE,v 1.1 2002/05/27 15:08:15 veego Exp $
+$NetBSD: MESSAGE,v 1.2 2002/08/25 19:23:08 jlam Exp $
 
 Because of the unclear legal status of libdvdcss, we do not provide a
 package for it.  It is however needed to play encrypted DVDs.

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/07/18 09:17:27 agc Exp $
+$NetBSD: distinfo,v 1.8 2002/08/25 19:22:42 jlam Exp $
 
 SHA1 (unproven-pthreads-0.17.tar.gz) = 9f50e31da916b341e0c1ce21012bbd95b1a08a7d
 Size (unproven-pthreads-0.17.tar.gz) = 234180 bytes

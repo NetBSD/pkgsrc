@@ -1,4 +1,4 @@
-$NetBSD: patch-ci,v 1.1.1.1 2002/05/31 13:19:17 skrll Exp $
+$NetBSD: patch-ci,v 1.2 2002/08/25 19:23:41 jlam Exp $
 
 --- konqueror/client/Makefile.am.orig	Wed Aug  9 18:10:36 2000
 +++ konqueror/client/Makefile.am

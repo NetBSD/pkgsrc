@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/06/17 04:21:08 dmcmahill Exp $
+$NetBSD: distinfo,v 1.8 2002/08/25 19:23:02 jlam Exp $
 
 SHA1 (f2c-20001205.tar.gz) = f3cc1653eb962fee45d850df50890fc53448a17f
 Size (f2c-20001205.tar.gz) = 988607 bytes

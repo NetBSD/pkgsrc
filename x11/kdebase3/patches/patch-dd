@@ -1,4 +1,4 @@
-$NetBSD: patch-dd,v 1.2 2002/08/21 15:33:05 skrll Exp $
+$NetBSD: patch-dd,v 1.3 2002/08/25 19:23:45 jlam Exp $
 
 --- ksysguard/ksysguardd/FreeBSD/Memory.c.orig	Fri Sep 14 22:11:20 2001
 +++ ksysguard/ksysguardd/FreeBSD/Memory.c	Tue Aug 20 14:20:49 2002

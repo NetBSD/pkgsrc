@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2002/06/10 09:47:28 sakamoto Exp $
+$NetBSD: patch-ab,v 1.3 2002/08/25 19:22:56 jlam Exp $
 
 --- ./Imakefile.orig	Wed Nov 27 16:01:34 1996
 +++ ./Imakefile	Fri Jul 30 19:17:44 1999

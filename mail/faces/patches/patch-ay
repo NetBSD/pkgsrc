@@ -1,4 +1,4 @@
-$NetBSD: patch-ay,v 1.1 2002/07/07 14:25:53 tron Exp $
+$NetBSD: patch-ay,v 1.2 2002/08/25 19:23:05 jlam Exp $
 
 --- filters/fs2xbm.orig	Tue Nov 19 05:02:32 1991
 +++ filters/fs2xbm	Sun Jul  7 16:19:16 2002

@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.1.1.1 2002/05/31 13:18:58 skrll Exp $
+$NetBSD: patch-aw,v 1.2 2002/08/25 19:23:38 jlam Exp $
 
 --- kdeprint/kjobviewer/Makefile.in.orig	Mon May 13 23:57:42 2002
 +++ kdeprint/kjobviewer/Makefile.in

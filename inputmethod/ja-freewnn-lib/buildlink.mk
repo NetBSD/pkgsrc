@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/06/10 10:03:33 sakamoto Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/08/25 19:22:57 jlam Exp $
 #
 # This Makefile fragment is included by packages that use FreeWnn.
 #

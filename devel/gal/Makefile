@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/07/12 23:38:44 mycroft Exp $
+# $NetBSD: Makefile,v 1.24 2002/08/25 19:22:27 jlam Exp $
 
 DISTNAME=		gal-0.19.3
 CATEGORIES=		gnome devel

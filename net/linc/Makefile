@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/07/12 15:19:06 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/08/25 19:23:13 jlam Exp $
 #
 
 DISTNAME=		linc-0.5.0

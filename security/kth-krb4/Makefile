@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/07/02 11:41:15 agc Exp $
+# $NetBSD: Makefile,v 1.19 2002/08/25 19:23:15 jlam Exp $
 #
 
 DISTNAME=		krb4-1.1.1

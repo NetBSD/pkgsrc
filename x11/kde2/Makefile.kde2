@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde2,v 1.4 2002/06/07 09:04:44 cjep Exp $
+# $NetBSD: Makefile.kde2,v 1.5 2002/08/25 19:23:33 jlam Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE2-distributed packages (they all share common configure and build

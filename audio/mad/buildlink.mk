@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/05/28 00:05:08 fredb Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/08/25 19:21:53 jlam Exp $
 #
 # This Makefile fragment is included by packages that use mad.
 #
