@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2637 2003/06/30 10:20:45 wiz Exp $
+$NetBSD: CHANGES,v 1.2638 2003/06/30 10:27:25 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2629,3 +2629,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xlockmore-lite to 5.08.2 [jlam 2003-06-30]
 	Updated bash to 2.05.2.7 [uebayasi 2003-06-30]
 	Updated gopher to 3.0.5 [wiz 2003-06-30]
+	Updated readline to 4.3pl5 [uebayasi 2003-06-30]
