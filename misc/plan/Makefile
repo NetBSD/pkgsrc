@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 1999/01/29 19:49:11 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/07/15 00:15:23 mjl Exp $
 #
 
-DISTNAME=	plan-1.7.2
-WRKSRC=		${WRKDIR}/src
+DISTNAME=	plan-1.8.2
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	misc x11
 MASTER_SITES=	ftp://ftp.fu-berlin.de/pub/unix/graphics/plan/
 
@@ -16,9 +16,9 @@ ALL_TARGET=	netbsd
 pre-install:
 	${MKDIR} ${X11BASE}/libexec/plan ${X11BASE}/share/plan \
 		${X11BASE}/share/plan/holiday
-	${INSTALL_DATA} ${WRKDIR}/holiday/holiday_* ${X11BASE}/share/plan/holiday
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/holiday/holiday_* ${X11BASE}/share/plan/holiday
 .for file in HISTORY README
-	${INSTALL_DATA} ${WRKDIR}/${file} ${X11BASE}/share/plan
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/${file} ${X11BASE}/share/plan
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
