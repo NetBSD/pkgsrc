@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2003/01/28 22:03:52 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2003/02/15 05:18:09 salo Exp $
 #
 
-DISTNAME=		jwhois-3.2.0
+DISTNAME=		jwhois-3.2.1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=jwhois/}
 
@@ -19,12 +19,15 @@ CONFIGURE_ARGS+=	--with-cache
 
 INFO_FILES=		jwhois.info
 
-EGDIR=			${PREFIX}/share/examples
-CONF_FILES=		${EGDIR}/jwhois.conf ${PKG_SYSCONFDIR}/jwhois.conf
-CONF_FILES_PERMS=	/dev/null /var/db/jwhois.db			\
+EGDIR=			${PREFIX}/share/examples/jwhois
+CONF_FILES=		${EGDIR}/jwhois.conf.default	\
+			${PKG_SYSCONFDIR}/jwhois.conf
+CONF_FILES_PERMS=	/dev/null /var/db/jwhois.db	\
 			${ROOT_USER} nogroup 0664
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/example/jwhois.conf ${PREFIX}/share/examples
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/example/jwhois.conf	\
+		${EGDIR}/jwhois.conf.default
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
