@@ -1,0 +1,4 @@
+Portable implementation of the NetBSD rc.d subsystem.
+
+This package allows you to use rc.subr-style rc scripts (such as
+those included in pkgsrc) on other operating systems.
