@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.33.2.1 2004/07/06 22:39:37 agc Exp $
+# $NetBSD: mksandbox,v 1.33.2.2 2004/07/08 08:37:24 agc Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -113,7 +113,7 @@ SunOS)
 	mountprog=/sbin/mount
 	paxprog=/bin/pax
 	sedprog=/usr/xpg4/bin/sed
-	sandboxMountDirs="/bin /sbin /kernel /lib /proc /opt/SUNWspro /usr/X11R6 /usr/5bin /usr/bin /usr/ccs /usr/dt /usr/games /usr/include /usr/lib /usr/openwin /usr/share /usr/sbin /usr/ucb /usr/ucblib /usr/xpg4 /var/mail"
+	sandboxMountDirs="/bin /sbin /kernel /lib /proc /opt/SUNWspro /usr/X11R6 /usr/5bin /usr/bin /usr/ccs /usr/dt /usr/games /usr/include /usr/lib /usr/openwin /usr/share /usr/sbin /usr/ucb /usr/ucblib /usr/xpg4 /var/mail /var/sadm"
 	sandboxEmptyDirs="$sandboxEmptyDirs /usr/tmp /var/tmp"
 	;;
 *)
