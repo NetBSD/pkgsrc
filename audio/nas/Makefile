@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/02/11 07:03:37 grant Exp $
+# $NetBSD: Makefile,v 1.44 2004/04/11 16:17:20 xtraeme Exp $
 
 DISTNAME=	nas-1.6.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -14,10 +14,9 @@ COMMENT=	Network Audio System
 DEPENDS+=	p5-perl-headers-${OS_VERSION}:../../devel/p5-perl-headers
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_IMAKE=		yes
-USE_X11BASE=		yes
 
 USE_GNU_TOOLS+=		make
 
@@ -58,7 +57,7 @@ pre-configure:
 PLIST_SRC=	${PKGDIR}/PLIST.clients
 .if (${MACHINE_ARCH} == "i386") || \
     (${MACHINE_ARCH} == "sparc")
-.  include "../../mk/ossaudio.buildlink2.mk"
+.  include "../../mk/ossaudio.buildlink3.mk"
 EGDIR=		${PREFIX}/share/examples/nas
 PLIST_SRC+=	${PKGDIR}/PLIST.voxware
 CONF_FILES=	${EGDIR}/nasd.conf.eg ${PKG_SYSCONFDIR}/nasd.conf
