@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/03/14 19:37:40 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/04/23 06:01:29 wiz Exp $
 #
 
-DISTNAME=	jhead-1.9
+DISTNAME=	jhead-2.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.sentex.net/~mwandel/jhead/
 
@@ -16,10 +16,12 @@ USE_BUILDLINK2=	yes
 do-build:
 	cd ${WRKSRC} && \
 		 ${CC} ${CFLAGS} -o jhead jhead.c exif.c jpgfile.c ${LIBS}
+	${GZIP_CMD} -d ${WRKSRC}/jhead.1.gz
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/jhead
 	${INSTALL_PROGRAM} ${WRKSRC}/jhead ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/jhead.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/usage.html ${PREFIX}/share/doc/html/jhead
 
 .include "../../graphics/jpeg/buildlink2.mk"
