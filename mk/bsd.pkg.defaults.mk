@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.128 2003/01/24 10:04:58 agc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.129 2003/02/14 19:46:43 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -966,7 +966,7 @@ JSDK_HOME?= ${JAVA_HOME}/jsdk
 # Default: none
 
 LINUX_LOCALES?=								\
-	 af ar bg br ca cs cy da de el en eo es et eu fi fo fr ga gl \
+	    af ar bg br ca cs cy da de el en eo es et eu fi fo fr ga gl \
 	    he hr hu hy id is it ja ka kl ko lo lt lv nl no oc pl pt ro \
 	    ru sk sl sr sv th tr uk vi wa zh
 # Used in linux-locale package to install specify language(s)
@@ -1754,7 +1754,7 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_MOZILLA=	ftp://www.planetmirror.com.au/pub/mozilla/releases/
 #MASTER_SITE_PERL_CPAN=	ftp://www.planetmirror.com.au/pub/perl/CPAN/modules/by-module/
 #MASTER_SITE_SUNSITE=	ftp://www.planetmirror.com.au/pub/sunsite/
-#MASTER_SITE_SUSE=	ftp://www.planetmirror.com.au/pub/suse/i386/${SUSE_VERSION}/suse/
+#MASTER_SITE_SUSE=	ftp://www.planetmirror.com.au/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ 
 #MASTER_SITE_TEX_CTAN=	ftp://www.planetmirror.com.au/pub/tex-archive/
 #MASTER_SITE_SOURCEFORGE=ftp://www.planetmirror.com.au/pub/sourceforge/
 #MASTER_SITE_XCONTRIB=	ftp://www.planetmirror.com.au/pub/X11/contrib/
@@ -1793,6 +1793,16 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_BACKUP=	\
 #	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/
 
+# France
+#
+#MASTER_SITE_SUSE=      \
+#       ftp://fr2.rpmfind.net/linux/SuSE-Linux/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
+
+# Greece
+#
+#MASTER_SITE_SUSE=	\
+#	ftp://ftp.duth.gr/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
+
 # Japan
 #
 #MASTER_SITE_XCONTRIB=	ftp://ftp.ring.gr.jp/pub/X/opengroup/contrib/
@@ -1801,10 +1811,17 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_MOZILLA=	ftp://ftp.ring.gr.jp/pub/net/www/mozilla/mozilla/releases/
 #MASTER_SITE_PERL_CPAN=	ftp://ftp.ring.gr.jp/pub/lang/perl/CPAN/modules/by-module/
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.ring.gr.jp/pub/text/CTAN/
+#MASTER_SITE_SUSE=	\
+#	ftp://ftp.kddlabs.co.jp/Linux/packages/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
 #MASTER_SITE_SUNSITE=	ftp://sunsite.sut.ac.jp/pub/archives/linux/sunsite-unc/
 #MASTER_SITE_BACKUP=	\
 #	ftp://ftp.ring.gr.jp/pub/NetBSD/packages/distfiles/ \
 #	ftp://ftp.jp.netbsd.org/pub/NetBSD/packages/distfiles/
+
+# Switzerland
+#
+#MASTER_SITE_SUSE=	\
+#	ftp://sunsite.cnlab-switch.ch/mirror/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
 
 # United Kingdom
 #
@@ -1812,11 +1829,20 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_GNU=	ftp://sunsite.org.uk/packages/gnu/
 #MASTER_SITE_PERL_CPAN=	ftp://sunsite.org.uk/packages/perl/CPAN/modules/by-module/
 #MASTER_SITE_TEX_CTAN=	ftp://sunsite.org.uk/packages/tex/uk-tex/
+#MASTER_SITE_SUSE=	\
+#	ftp://ftp.mirror.ac.uk/sites/ftp.suse.com/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
 #MASTER_SITE_SUNSITE=	ftp://sunsite.org.uk/Mirrors/sunsite.unc.edu/pub/Linux/
 #MASTER_SITE_BACKUP=	ftp://sunsite.org.uk/packages/NetBSD/packages/distfiles/ \
 #	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
+
+# USA
+#
+#MASTER_SITE_SUSE=	\
+#	ftp://mirror.mcs.anl.gov/pub/ftp.suse.com/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
+
 # France. This will try to fetch distfile from the distfile mirror
 # before trying ${MASTER_SITE} or the distfiles at ftp.netbsd.org
+#
 #MASTER_SITE_OVERRIDE= \
 #	ftp://ftp2.fr.netbsd.org/pub/NetBSD/packages/distfiles/
 #MASTER_SITE_BACKUP=     \

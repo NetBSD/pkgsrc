@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1138 2003/02/09 14:59:12 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1139 2003/02/14 19:46:43 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -779,6 +779,14 @@ MASTER_SITE_SOURCEFORGE+=	\
 	ftp://ftp3.sourceforge.net/pub/sourceforge/ \
 	ftp://ftp.tuwien.ac.at/linux/sourceforge/
 
+MASTER_SITE_SUSE+=	\
+	ftp://fr2.rpmfind.net/linux/SuSE-Linux/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
+	ftp://ftp.duth.gr/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
+	ftp://ftp.kddlabs.co.jp/Linux/packages/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
+	ftp://sunsite.cnlab-switch.ch/mirror/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
+	ftp://ftp.mirror.ac.uk/sites/ftp.suse.com/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
+	ftp://mirror.mcs.anl.gov/pub/ftp.suse.com/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ 
+			
 MASTER_SITE_MOZILLA+=	\
 	ftp://ftp.mozilla.org/pub/mozilla/releases/ \
 	ftp://ftp.fu-berlin.de/pub/unix/network/www/mozilla/releases/
