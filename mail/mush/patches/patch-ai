@@ -1,0 +1,20 @@
+$NetBSD: patch-ai,v 1.1 1998/09/04 19:29:06 christos Exp $
+*** old/Mushrc	Sun Oct 21 22:24:37 1990
+--- Mushrc	Fri Sep  4 15:13:56 1998
+***************
+*** 6,12 ****
+  set \
+  	MAILRC =	".mushrc" \
+  	ALTERNATE_RC =	".mailrc" \
+! 	ALT_DEF_RC =	"/usr/lib/Mail.rc"
+  
+  # Set up the display early to allow quick exit in headers-only mode.
+  # The hdrs_only flag is true if the command line was: "mush -H".
+--- 6,12 ----
+  set \
+  	MAILRC =	".mushrc" \
+  	ALTERNATE_RC =	".mailrc" \
+! 	ALT_DEF_RC =	"/etc/mail.rc"
+  
+  # Set up the display early to allow quick exit in headers-only mode.
+  # The hdrs_only flag is true if the command line was: "mush -H".

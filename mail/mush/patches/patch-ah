@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 1998/09/04 18:33:48 christos Exp $
+$NetBSD: patch-ah,v 1.2 1998/09/04 19:29:06 christos Exp $
 
 *** old/config.h-dist	Fri Sep  4 11:21:28 1998
 --- config.h-dist	Fri Sep  4 11:21:28 1998
@@ -21,7 +21,7 @@ $NetBSD: patch-ah,v 1.1 1998/09/04 18:33:48 christos Exp $
   /* Default names and locations for files */
   #define MAILRC		".mushrc"
   #define ALTERNATE_RC	".mailrc"
-! #define DEFAULT_RC	"__PREFIX/etc/Mushrc"
+! #define DEFAULT_RC	"__PREFIX/share/misc/Mushrc"
 ! #define ALT_DEF_RC	"/etc/Mail.rc"
   #define SIGNATURE	".signature"
   #define FORTUNE		"/usr/games/fortune"

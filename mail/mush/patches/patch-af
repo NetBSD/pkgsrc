@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 1998/09/04 18:33:47 christos Exp $
+$NetBSD: patch-af,v 1.2 1998/09/04 19:29:06 christos Exp $
 
 *** old/commands.c	Fri Sep  4 11:22:06 1998
 --- commands.c	Fri Sep  4 11:21:28 1998
@@ -508,27 +508,24 @@ $NetBSD: patch-af,v 1.1 1998/09/04 18:33:47 christos Exp $
   	    turnon(glob_flags, READ_ONLY);
   	    had_error = 0;	/* return successfully anyway */
   
-*** old/version.h	Fri Sep  4 11:22:09 1998
---- version.h	Fri Sep  4 11:21:28 1998
+*** version.h	Fri Sep  4 14:29:25 1998
+--- old/version.h	Fri Sep  4 15:08:46 1998
 ***************
 *** 1,7 ****
+--- 1,11 ----
   /* @(#)version.h	(c) Copyright 1989, 1990, 1991 (Dan Heller) */
   
   #define MUSHNAME	"Mail User's Shell"
-! #define RELEASE_DATE	"beta(4) 03/19/98"
-  #define RELEASE		7
-  #define REVISION	"2"
-  #define PATCHLEVEL	6
---- 1,7 ----
-  /* @(#)version.h	(c) Copyright 1989, 1990, 1991 (Dan Heller) */
-  
-  #define MUSHNAME	"Mail User's Shell"
-! #define RELEASE_DATE	"beta(4)+dynamic 03/19/98"
++ #ifdef MSGS_DYNAMIC
++ #define RELEASE_DATE	"beta(4)+dynamic 03/19/98"
++ #else
+  #define RELEASE_DATE	"beta(4) 03/19/98"
++ #endif
   #define RELEASE		7
   #define REVISION	"2"
   #define PATCHLEVEL	6
 
-*** pick.c.orig	Fri Sep  4 12:07:59 1998
+*** old/pick.c	Fri Sep  4 12:07:59 1998
 --- pick.c	Fri Sep  4 13:12:17 1998
 ***************
 *** 11,19 ****
