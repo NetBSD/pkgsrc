@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2002/03/21 13:32:27 martti Exp $
+@comment $NetBSD: PLIST,v 1.10 2002/03/24 02:51:11 rh Exp $
 bin/gnumeric
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.a
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.la
@@ -904,6 +904,7 @@ share/mc/templates/gnumeric.desktop
 share/mime-info/gnumeric.keys
 share/mime-info/gnumeric.mime
 share/oaf/GNOME_Gnumeric.oaf
+share/omf/gnumeric/gnumeric-C.omf
 share/pixmaps/gnome-application-x-gnumeric.png
 share/pixmaps/gnome-application-x-xls.png
 share/pixmaps/gnome-gnumeric.png
@@ -996,8 +997,5 @@ share/pixmaps/gnumeric/top_border
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/templates
 @dirrm share/gnumeric/${PKGVERSION}-bonobo
 @dirrm share/gnumeric
-@dirrm share/mc/templates
-@dirrm share/mc
 @dirrm share/omf/gnumeric
-@dirrm share/omf
 @dirrm share/pixmaps/gnumeric
