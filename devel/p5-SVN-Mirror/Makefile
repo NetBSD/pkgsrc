@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2005/02/02 03:03:10 epg Exp $
+# $NetBSD: Makefile,v 1.8 2005/03/03 04:32:28 epg Exp $
 
-DISTNAME=	SVN-Mirror-0.55
+DISTNAME=	SVN-Mirror-0.56
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OurNet/CLKAO/}
