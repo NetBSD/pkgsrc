@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.7 2000/08/10 02:25:30 thorpej Exp $
+
+--- auth/kerb5.c.orig	Tue Oct 12 19:34:55 1999
++++ auth/kerb5.c	Wed Aug  9 17:34:11 2000
+@@ -266,8 +266,8 @@
+     }
+ 
+     /* Extract the name directly. Yow. */
+-    strncpy(phost, krb5_princ_component(sudo_context, princ, 1)->data,
+-	    sizeof(phost) - 1);
++    /* XXX XXX XXX */
++    strncpy(phost, princ->name.name_string.val[0], sizeof(phost) - 1);
+     phost[sizeof(phost) - 1] = '\0';
+ 
+     /*
+@@ -276,7 +276,7 @@
+      * and enctype is currently ignored anyhow.)
+      */
+     if (error = krb5_kt_read_service_key(sudo_context, NULL, princ, 0,
+-					 ENCTYPE_DES_CBC_MD5, &keyblock)) {
++					 ETYPE_DES_CBC_MD5, &keyblock)) {
+ 	/* Keytab or service key does not exist. */
+ 	log_error(NO_EXIT,
+ 		  "%s: host service key not found: %s", auth_name,
+@@ -301,7 +301,7 @@
+ 			    NULL, NULL, NULL);
+ cleanup:
+     if (packet.data)
+-	krb5_free_data_contents(sudo_context, &packet);
++	krb5_data_free(&packet);
+     krb5_free_principal(sudo_context, princ);
+ 
+     if (error)

@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.7 2000/06/06 11:07:21 mjl Exp $
+$NetBSD: patch-af,v 1.8 2000/08/10 02:25:31 thorpej Exp $
 
---- configure.in.orig	Tue Jun  6 12:49:45 2000
-+++ configure.in	Tue Jun  6 12:54:34 2000
+--- configure.in.orig	Fri Mar 24 12:14:04 2000
++++ configure.in	Wed Aug  9 17:13:17 2000
 @@ -167,6 +167,19 @@
  		;;
  esac])
@@ -44,3 +44,12 @@ $NetBSD: patch-af,v 1.7 2000/06/06 11:07:21 mjl Exp $
  	SUDO_LDFLAGS="${SUDO_LDFLAGS} -L/usr/local/lib"
      elif test -f "/usr/local/kerberos/lib/libkrb5.a"; then
  	SUDO_LDFLAGS="${SUDO_LDFLAGS} -L/usr/local/kerberos/lib"
+@@ -1486,7 +1503,7 @@
+ 	echo 'Unable to locate kerberos 5 libraries, you will have to edit the Makefile and add -L/path/to/krb/libs to SUDO_LDFLAGS'
+     fi
+ 
+-    SUDO_LIBS="${SUDO_LIBS} -lkrb5 -lk5crypto -lcom_err"
++    SUDO_LIBS="${SUDO_LIBS} -lkrb5 -lasn1 -lcrypto -lroken -lcom_err"
+     AUTH_OBJS="${AUTH_OBJS} kerb5.o"
+ fi
+ 
