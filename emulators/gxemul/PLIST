@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/30 00:30:44 xtraeme Exp $
+bin/gxemul
+man/man1/gxemul.1
+share/doc/gxemul/20041024-netbsd-arc-installed.gif
+share/doc/gxemul/20041024-netbsd-arc-installed_small.gif
+share/doc/gxemul/20041024-openbsd-arc-installed.gif
+share/doc/gxemul/20041024-openbsd-arc-installed_small.gif
+share/doc/gxemul/20041129-redhat_mips.png
+share/doc/gxemul/20041129-redhat_mips_small.png
+share/doc/gxemul/20041213-debian_4.png
+share/doc/gxemul/20041213-debian_4_small.gif
+share/doc/gxemul/20050329-netbsd-hpcmips-6.png
+share/doc/gxemul/20050329-netbsd-hpcmips-6_small.png
+share/doc/gxemul/BUGS
+share/doc/gxemul/HISTORY
+share/doc/gxemul/LICENSE
+share/doc/gxemul/README
+share/doc/gxemul/RELEASE
+share/doc/gxemul/TODO
+share/doc/gxemul/hello_mips.c
+share/doc/gxemul/hello_ppc.c
+share/doc/gxemul/maddr.gif
+share/doc/gxemul/netbsd-pmax-20040630.png
+share/doc/gxemul/netbsd-pmax-20040630_small.png
+share/doc/gxemul/openbsd-pmax-20040710.png
+share/doc/gxemul/openbsd-pmax-20040710_small.png
+share/doc/gxemul/sprite-20040711.png
+share/doc/gxemul/sprite-20040711_small.png
+share/doc/gxemul/ultrix4.5-20040706.png
+share/doc/gxemul/ultrix4.5-20040706_small.gif
+@dirrm share/doc/gxemul
