@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/21 17:01:12 martti Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/11 17:24:37 snj Exp $
 #
 
 DISTNAME=       chipmunk-1.4
@@ -11,7 +11,7 @@ COMMENT=	Shell-like tool for hardware debugging
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 
 ALL_TARGET=	chipmunk
 MAKE_ENV+=	CONFIG_OPTIONS="${CPPFLAGS}"
@@ -20,5 +20,5 @@ MAKE_ENV+=	EXTRA_LIBS=-li386
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/chipmunk ${PREFIX}/sbin/chipmunk
 
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
