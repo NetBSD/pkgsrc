@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.42 2001/06/21 02:27:12 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2001/06/26 11:34:16 wiz Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
 DISTNAME=	zebra-0.91a
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.zebra.org/pub/zebra/
-# you might need debugging, it's a developer release !
-#CFLAGS+=	-g
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} zebra-0.91a.info.tar.gz
 
 MAINTAINER=	itojun@itojun.org
 HOMEPAGE=	http://www.zebra.org/
@@ -20,6 +19,8 @@ BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 USE_BUILDLINK_ONLY=	# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--sysconfdir=/etc/zebra
+# you might need debugging, it's a developer release !
+#CFLAGS+=	-g
 
 PLIST_SRC=		# empty
 
