@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2003/07/04 16:11:55 seb Exp $
+# $NetBSD: Makefile,v 1.62 2003/07/04 16:27:24 seb Exp $
 
 DISTNAME=		gcc-2.95.3
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
 #
@@ -29,13 +29,15 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_DIRS=		${WRKDIR}/objdir
 BUILD_DIRS=		${CONFIGURE_DIRS}
 
+USE_NEW_TEXINFO=	YES
+INFO_DIR=		${GCC_PREFIX:S|^${PREFIX}/||}/info
 INFO_FILES=		chill.info cpp.info g77.info gcc.info
 
 .include "../../mk/bsd.prefs.mk"
 
 GCC_PREFIX=		${PREFIX}/${PKGNAME_NOREV}
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
+CONFIGURE_ARGS+=	--infodir=${GCC_PREFIX}/info
 
 .if ${OPSYS} == "SunOS"
 CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
@@ -111,7 +113,6 @@ post-install:
 		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # Make bootstrap with compiler != gcc possible.
