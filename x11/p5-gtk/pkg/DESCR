@@ -1,0 +1,4 @@
+This version, 0.4, of Perl/Gtk is primarily for testing against gtk+1.1.2
+and glib 1.1.3: please don't rely on it. It's does make a good sample of
+things to come, but unfortunately it also seems to include a fine selection
+of truly evil bugs.
