@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6538 2004/07/13 10:44:40 tron Exp $
+$NetBSD: CHANGES,v 1.6539 2004/07/13 11:01:44 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3372,3 +3372,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added suse_compat-9.1 as suse91_compat [tron 2004-07-13]
 	Added suse_gtk-9.1 as suse91_gtk [tron 2004-07-13]
 	Added suse_x11-9.1 as suse91_x11 [tron 2004-07-13]
+	Added xdkcal-0.9d [jmmv 2004-07-13]
