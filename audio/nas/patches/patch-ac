@@ -1,8 +1,31 @@
-$NetBSD: patch-ac,v 1.3 1998/08/23 06:26:24 garbled Exp $
---- server/include/resource.h.orig      Wed Jul 22 17:33:02 1998
-+++ server/include/resource.h   Wed Jul 22 17:33:18 1998
-@@ -65,3 +65,3 @@
- RESTYPE CreateNewResourceClass();
--unsigned long FakeClientID();
-+AuID FakeClientID();
- Bool AddResource();
+$NetBSD: patch-ac,v 1.4 2000/08/04 01:31:56 jlam Exp $
+
+--- server/nasd.conf.eg.orig	Sat Jan  1 22:03:50 2000
++++ server/nasd.conf.eg	Thu Aug  3 21:11:29 2000
+@@ -29,7 +29,7 @@
+ 
+ inputsection
+ 
+-	device		"/dev/dsp1"		# the SB emulation on my PAS16
++	device		"/dev/audio"
+ 	maxrate		11025
+ 	minrate		4000			# Kind of redundant
+ 	maxfrags	3			# We want really low latency
+@@ -41,7 +41,7 @@
+ 
+ # These are used by voxware only for now.
+ outputsection
+-	device		"/dev/dsp"		# the full 16 bit interface!
++	device		"/dev/audio"
+ 	maxrate		33000			# is flakey on my OPTi mb at 44
+ 	minrate		5000			# Redundant again
+ 	maxfrags	3			# Low latency (for doom!)
+@@ -57,7 +57,7 @@
+ #	was an 8 bit SB and the PC speaker with the voxware server.
+ #
+ #outputsection
+-#	device	"/dev/pcaudio"
++#	device		"/dev/speaker"
+ #	maxrate		8000
+ #	minrate		8000
+ #	wordsize	8
