@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/05/31 22:13:16 kristerw Exp $
+# $NetBSD: Makefile,v 1.31 2004/07/19 22:41:16 dmcmahill Exp $
 
 DISTNAME=		pvm3.4.4
 PKGNAME=		pvm-3.4.4
@@ -21,17 +21,28 @@ WRKSRC=			${WRKDIR}/pvm3
 USE_BUILDLINK3=		yes
 USE_FORTRAN=		yes
 USE_X11=		yes
+USE_LIBTOOL=		yes
 
 PVM_ROOT=		${WRKSRC}
 MAKE_ENV+=		PVM_ROOT=${WRKSRC}
 MAKE_ENV+=		PVM_ARCH=
 MAKE_ENV+=		SSH=${PVM_SSH}
+MAKE_ENV+=		MKDIR="${MKDIR}"
+MAKE_ENV+=		PVMLIB_VER=3:4
+MAKE_ENV+=		PVM_DIR=${PVM_DIR}
 ALL_TARGET=		all install
 
 # Set PVM_ARCH to the correct value for this machine platform.
 .include "arch.mk"
 
 PVM_DIR=		${PREFIX}/pvm3
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${PVM_DIR}/lib/${PVM_ARCH}
+
+post-build:
+	${CP} ${WRKSRC}/examples/${PVM_ARCH}/.libs/* \
+		${WRKSRC}/bin/${PVM_ARCH}/.libs
+	-${CP} ${WRKSRC}/gexamples/${PVM_ARCH}/.libs/* \
+		${WRKSRC}/bin/${PVM_ARCH}/.libs
 
 # avoid installing this file
 pre-install:
@@ -40,8 +51,10 @@ pre-install:
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PVM_DIR}/bin/${PVM_ARCH}
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PVM_ARCH}/*			\
-		${PVM_DIR}/bin/${PVM_ARCH}
+	for f in ${WRKSRC}/bin/${PVM_ARCH}/* ; do \
+	${ECHO} "Installing $$f" ; \
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} $$f \
+		${PVM_DIR}/bin/${PVM_ARCH}/ ; done
 
 	${INSTALL_DATA_DIR} ${PVM_DIR}/conf
 	${INSTALL_DATA} ${WRKSRC}/conf/${PVM_ARCH}.def  ${PVM_DIR}/conf
@@ -62,11 +75,18 @@ do-install:
 
 	${INSTALL_DATA_DIR} ${PVM_DIR}/include
 	${INSTALL_DATA} ${WRKSRC}/include/* ${PVM_DIR}/include
-
 	${INSTALL_PROGRAM_DIR} ${PVM_DIR}/lib/${PVM_ARCH}
-	${INSTALL_PROGRAM} ${WRKSRC}/lib/${PVM_ARCH}/pvm*		\
+.for __tmp__ in pvm pvmgs
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
+		${WRKSRC}/lib/${PVM_ARCH}/${__tmp__} ${PVM_DIR}/lib/${PVM_ARCH}/ 
+.endfor
+	${INSTALL_PROGRAM} ${WRKSRC}/lib/${PVM_ARCH}/pvmd3		\
 		${PVM_DIR}/lib/${PVM_ARCH}
-	${INSTALL_DATA} ${WRKSRC}/lib/${PVM_ARCH}/*.a ${PVM_DIR}/lib/${PVM_ARCH}
+.for __tmp__ in libgpvm3.la libpvm3.la libpvmtrc.la libfpvm3.la
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
+		${WRKSRC}/lib/${PVM_ARCH}/${__tmp__} ${PVM_DIR}/lib/${PVM_ARCH}
+.endfor
+	${LIBTOOL} --mode=finish ${PVM_DIR}/lib/${PVM_ARCH}
 	for f in `${LS} -1 ${WRKSRC}/lib`; do				\
 		if [ -f ${WRKSRC}/lib/$$f ]; then			\
 			${INSTALL_SCRIPT} ${WRKSRC}/lib/$$f ${PVM_DIR}/lib; \
