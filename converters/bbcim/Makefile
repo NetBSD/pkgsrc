@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/20 11:40:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/05 16:38:25 wiz Exp $
 #
 
 DISTNAME=       bbcim095-5
@@ -11,7 +11,7 @@ MAINTAINER=	skrll@netbsd.org
 COMMENT=	file and diskimage conversion utility for BBC Micro software
 
 WRKSRC=		${WRKDIR}/bbcim
-MAN_PAGE=	${PKGDIR}/bbcim.1
+MAN_PAGE=	${FILESDIR}/bbcim.1
 
 do-build:
 	(cd ${WRKSRC} && ${WRKSRC}/mkbbcim)
