@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/06/15 09:14:23 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/06/15 21:14:08 rh Exp $
 bin/jpilot
 share/locale/da/LC_MESSAGES/jpilot.mo
 share/locale/de/LC_MESSAGES/jpilot.mo
@@ -14,4 +14,7 @@ share/jpilot/DatebookDB.pdb
 share/jpilot/AddressDB.pdb
 share/jpilot/ToDoDB.pdb
 share/jpilot/MemoDB.pdb
+@exec install -d -m 0555 %D/lib/jpilot/plugins
 @dirrm share/jpilot
+@dirrm lib/jpilot/plugins
+@dirrm lib/jpilot
