@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/12/24 13:14:16 tron Exp $
+# $NetBSD: Makefile,v 1.9 2000/11/27 05:00:20 kei Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/06/16 16:50:06 dburr Exp
 #
 
@@ -13,5 +13,9 @@ GNU_CONFIGURE=	yes
 CFLAGS+=	-Dunix
 
 ALL_TARGET=	World
+
+post-patch:
+		@cd ${WRKSRC}; \
+		${MV} mkhybrid.8 mkhybrid.tbl
 
 .include "../../mk/bsd.pkg.mk"
