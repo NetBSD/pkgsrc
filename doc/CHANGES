@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.823 2002/12/18 17:49:24 jmmv Exp $
+$NetBSD: CHANGES,v 1.824 2002/12/18 18:10:57 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3994,3 +3994,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xsane to 0.89 [tron 2002-12-18]
 	Added pircbot-0.9.11 [jmmv 2002-12-18]
 	Added docbook-xsl-1.58.1 [jmmv 2002-12-18]
+	Updated eel2 to 2.0.8 [jmmv 2002-12-18]
