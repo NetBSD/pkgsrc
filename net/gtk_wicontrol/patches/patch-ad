@@ -1,5 +1,7 @@
---- ./config.h.in-	Mon Dec 18 04:53:05 2000
-+++ ./config.h.in	Mon Jul 30 15:13:24 2001
+$NetBSD: patch-ad,v 1.2 2001/07/30 10:28:44 wiz Exp $
+
+--- config.h.in.orig	Sun Dec 17 18:53:05 2000
++++ config.h.in
 @@ -104,6 +104,9 @@
  /* Define if you have the <argz.h> header file.  */
  #undef HAVE_ARGZ_H
@@ -10,77 +12,3 @@
  /* Define if you have the <dev/pcmcia/if_wi_ieee.h> header file.  */
  #undef HAVE_DEV_PCMCIA_IF_WI_IEEE_H
  
---- ./configure.in-	Tue Mar  6 13:55:59 2001
-+++ ./configure.in	Mon Jul 30 15:08:21 2001
-@@ -13,7 +13,7 @@ AC_HEADER_STDC
- AC_CHECK_HEADERS(sys/ioctl.h unistd.h)
- AC_CHECK_HEADER(net/if_var.h)
- AC_CHECK_HEADERS(net/if_ether.h net/ethernet.h)
--AC_CHECK_HEADERS(dev/pcmcia/if_wi_ieee.h machine/if_wavelan_ieee.h)
-+AC_CHECK_HEADERS(dev/pcmcia/if_wi_ieee.h machine/if_wavelan_ieee.h dev/ic/wi_ieee.h)
- 
- dnl Checks for typedefs, structures, and compiler characteristics.
- AC_C_CONST
-
---- ./src/callbacks.c-	Tue Mar  6 13:52:38 2001
-+++ ./src/callbacks.c	Mon Jul 30 15:14:33 2001
-@@ -28,12 +28,12 @@
- #endif
- #endif
-  
--#ifdef HAVE_DEV_PCMCIA_IF_WI_IEEE_H
-+#if defined(HAVE_DEV_PCMCIA_IF_WI_IEEE_H)
- #include <dev/pcmcia/if_wi_ieee.h>
--#else
--#ifdef HAVE_MACHINE_IF_WAVELAN_IEEE_H
-+#elif defined(HAVE_MACHINE_IF_WAVELAN_IEEE_H)
- #include <machine/if_wavelan_ieee.h>      
--#endif
-+#elif defined(HAVE_DEV_IC_WI_IEEE_H)
-+#include <dev/ic/wi_ieee.h>
- #endif
- 
- #include "callbacks.h"
-
---- ./src/main.c-	Sat Dec  2 13:49:05 2000
-+++ ./src/main.c	Mon Jul 30 15:14:41 2001
-@@ -27,13 +27,13 @@
- #include <net/ethernet.h>
- #endif
- #endif
--
--#ifdef HAVE_DEV_PCMCIA_IF_WI_IEEE_H
-+ 
-+#if defined(HAVE_DEV_PCMCIA_IF_WI_IEEE_H)
- #include <dev/pcmcia/if_wi_ieee.h>
--#else
--#ifdef HAVE_MACHINE_IF_WAVELAN_IEEE_H
--#include <machine/if_wavelan_ieee.h>
--#endif
-+#elif defined(HAVE_MACHINE_IF_WAVELAN_IEEE_H)
-+#include <machine/if_wavelan_ieee.h>      
-+#elif defined(HAVE_DEV_IC_WI_IEEE_H)
-+#include <dev/ic/wi_ieee.h>
- #endif
- 
- #include "interface.h"
-
---- ./src/wiinfo.c-	Sat Dec  2 13:08:45 2000
-+++ ./src/wiinfo.c	Mon Jul 30 15:14:45 2001
-@@ -28,12 +28,12 @@
- #endif
- #endif
-  
--#ifdef HAVE_DEV_PCMCIA_IF_WI_IEEE_H
-+#if defined(HAVE_DEV_PCMCIA_IF_WI_IEEE_H)
- #include <dev/pcmcia/if_wi_ieee.h>
--#else
--#ifdef HAVE_MACHINE_IF_WAVELAN_IEEE_H
-+#elif defined(HAVE_MACHINE_IF_WAVELAN_IEEE_H)
- #include <machine/if_wavelan_ieee.h>      
--#endif
-+#elif defined(HAVE_DEV_IC_WI_IEEE_H)
-+#include <dev/ic/wi_ieee.h>
- #endif
- 
- void 
