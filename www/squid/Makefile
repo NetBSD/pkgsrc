@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2000/05/19 07:18:55 tron Exp $
+# $NetBSD: Makefile,v 1.30 2000/08/27 02:46:08 jlam Exp $
 
 DISTNAME=	squid-2.3.STABLE3-src
 PKGNAME=	squid-2.3s3
@@ -18,15 +18,15 @@ PATCHFILES=	squid-2.3.stable3-carp_compile.patch \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.squid-cache.org/
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
+BUILD_DEPENDS+=	${PERL5}:../../lang/perl5
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=	# defined
 CONFIGURE_ARGS+= --sysconfdir=/etc \
 		--localstatedir=/var/squid \
 		${SQUID_CONFIGURE_ARGS}
 CONFIGURE_ENV+=	CACHE_HTTP_PORT=${SQUID_HTTP_PORT} \
 		CACHE_ICP_PORT=${SQUID_ICP_PORT} \
-		PERL=${LOCALBASE}/bin/perl
+		PERL=${PERL5}
 
 BUILD_DEFS+=	SQUID_CONFIGURE_ARGS SQUID_HTTP_PORT SQUID_ICP_PORT
 MAKEFILE=	makefile

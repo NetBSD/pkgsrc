@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/06/10 18:06:27 kim Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/27 02:46:07 jlam Exp $
 #
 
 DISTNAME=		roller-1.4
@@ -12,13 +12,13 @@ DEPENDS+=		logtime-*:../../sysutils/logtime
 
 .include "../../mk/bsd.prefs.mk"
 
-NO_CONFIGURE=		yes
-NO_PATCH=		yes
-USE_PERL5=		yes
+NO_CONFIGURE=		# defined
+NO_PATCH=		# defined
+USE_PERL5=		# defined
 
 MAKE_PARAMS+=		PREFIX=${PREFIX}
 MAKE_PARAMS+=		GAWK=${AWK}
-MAKE_PARAMS+=		PERL=${LOCALBASE}/bin/perl
+MAKE_PARAMS+=		PERL=${PERL5}
 MAKE_PARAMS+=		SH=${SH}
 
 ALL_TARGET=		all ${MAKE_PARAMS}

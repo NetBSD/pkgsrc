@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2000/08/08 08:18:44 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/27 02:46:05 jlam Exp $
 
 DISTNAME=	gnapfetch-0.3
 CATEGORIES=	net
@@ -8,11 +8,10 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://entropy.atlantic.net/gnapfetch/
 
 USE_PERL5=	# defined
-PERL=		${LOCALBASE}/bin/perl
 
 do-build:
-	${SED} -e "s,/usr/bin/perl,${PERL},g" < ${WRKSRC}/gnapfetch \
-		> ${WRKDIR}/gnapfetch
+	${SED} -e "s,/usr/bin/perl,${PERL5},g" \
+		< ${WRKSRC}/gnapfetch > ${WRKDIR}/gnapfetch
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/gnapfetch ${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/03/16 14:08:38 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/27 02:46:07 jlam Exp $
 #
 
 DISTNAME=		cdif-1.15
@@ -8,19 +8,18 @@ EXTRACT_SUFX=		# empty
 
 MAINTAINER=		packages@netbsd.org
 
-USE_PERL5=		yes
+USE_PERL5=		# defined
 
-NO_WRKSUBDIR=		yes
-NO_CONFIGURE=		yes
-NO_BUILD=		yes
+NO_WRKSUBDIR=		# defined
+NO_CONFIGURE=		# defined
+NO_BUILD=		# defined
 
 do-extract:
 	${MKDIR} ${WRKSRC}
 	${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}/${DISTNAME}.dist
 
-# assumes perl is in ${LOCALBASE}/bin/perl
 do-patch:
-	${SED} -e '1s@/usr/local/bin/perl@${LOCALBASE}/bin/perl@' \
+	${SED} -e '1s@/usr/local/bin/perl@${PERL5}@' \
 		< ${WRKSRC}/${DISTNAME}.dist > ${WRKSRC}/${DISTNAME}
 
 do-install:

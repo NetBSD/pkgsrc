@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/08/26 06:18:53 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/27 02:46:06 jlam Exp $
 #
 
 DISTNAME=		speak_freely-7.2
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.fourmilab.ch/speakfree/unix/
 DEPENDS+=		gsm-1.0.10:../../audio/gsm
 
 USE_PERL5=		# defined
-PERL_PATH=		${LOCALBASE}/bin/perl
 
 RESTRICTED=		Source includes crypto code
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -49,7 +48,7 @@ LICENSE=		no-commercial-use
 .endif
 
 SOUNDDIR=	${PREFIX}/share/speakfreely
-MAKE_ENV+=	PERL="${PERL_PATH}" CCFLAGS="${CCFLAGS}" \
+MAKE_ENV+=	PERL="${PERL5}" CCFLAGS="${CCFLAGS}" \
 		SOUNDDIR="${SOUNDDIR}"
 MAKE_ENV+=	USE_CRYPTO="${USE_CRYPTO}" HAVE_LIBCRYPTO="${HAVE_LIBCRYPTO}" \
 		SSLBASE="${SSLBASE}" USE_IDEA="${USE_IDEA}"

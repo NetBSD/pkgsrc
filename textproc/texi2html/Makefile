@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/04/01 14:07:56 agc Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/27 02:46:07 jlam Exp $
 #
 
 DISTNAME=		texi2html
@@ -10,17 +10,18 @@ EXTRACT_SUFX=		.shar.Z
 MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://wwwcn1.cern.ch/dci/texi2html/
 
-USE_PERL5=		YES
+USE_PERL5=		# defined
 
 EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
 
-NO_WRKSUBDIR=		yes
-NO_CONFIGURE=		yes
+NO_WRKSUBDIR=		# defined
+NO_CONFIGURE=		# defined
 
 do-build:
 	cd ${WRKSRC}; \
-		${SED} -e s@/usr/local/bin/perl@${PREFIX}/bin/perl@ texi2html >texi2html.new; \
-		${SED} -e 1,/__END__/d texi2html >texi2html.1
+		${SED} -e s@/usr/local/bin/perl@${PERL5}@ \
+			<texi2html >texi2html.new; \
+		${SED} -e 1,/__END__/d <texi2html >texi2html.1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/texi2html.new ${PREFIX}/bin/texi2html

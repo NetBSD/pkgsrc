@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/08/14 07:27:39 tron Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/27 02:46:04 jlam Exp $
 
 DISTNAME=	glx-20000813
 PKGNAME=	Mesa-${DISTNAME}
@@ -12,27 +12,26 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://utah-glx.sourceforge.net/
 
-BUILD_DEPENDS+=	${PERL}:../../lang/perl5
+BUILD_DEPENDS+=	${PERL5}:../../lang/perl5
 BUILD_DEPENDS+=	${AUTOCONF}:../../devel/autoconf
 BUILD_DEPENDS+=	${TCLSH}:../../lang/tcl80
 
 CONFLICTS+=		Mesa-*
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
-USE_LIBTOOL=		yes
-USE_X11BASE=		yes
+GNU_CONFIGURE=		# defined
+USE_GMAKE=		# defined
+USE_LIBTOOL=		# defined
+USE_X11BASE=		# defined
 CONFIGURE_ARGS+=	--enable-static --with-mesa=${MESA_WRKSRC}
 CONFIGURE_ARGS+=	--with-moduledir=${PREFIX}/lib/modules
 CONFIGURE_ENV+=		TCLSH=${TCLSH}
 
 AUTOCONF=	${LOCALBASE}/bin/autoconf
 WRKSRCDIRS=	${MESA_WRKSRC} ${WRKSRC} ${WRKSRC}/docs
-MAKE_ENV+=	PERL=${PERL}
+MAKE_ENV+=	PERL=${PERL5}
 MESA_VERSION=	3.1
 MESA_WRKSRC=	${WRKDIR}/Mesa-${MESA_VERSION}
-PERL=		${LOCALBASE}/bin/perl
 TCLSH=		${LOCALBASE}/bin/tclsh8.0
 
 pre-configure:
