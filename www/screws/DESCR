@@ -1,0 +1,13 @@
+Screws is an experimental web server with extensibility in mind. It's
+designed in a little core that processes connections and petitions, setenv
+the spected values and calls an external program or script that processes
+this and shows what it wants. By this way it's possible to customize
+every answer of the web server, and extend it as we want in a simple way.
+
+Some features are:
+ - UID/GID/CHROOT directives
+ - Dynamic Module loading (security, optimization, extensions, etc..)
+ - HSML (Embed scripts into HTML) Like PHP but using your prefered language.
+ - Support for perl, sh, python, lua, brainfuck, Java...
+ - Portable code: tested on Solaris, *BSD, GNU/Hurd, Darwin...
+ - IPv4/IPv6 support
