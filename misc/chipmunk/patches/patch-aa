@@ -1,8 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/06/23 18:18:55 drochner Exp $
+$NetBSD: patch-aa,v 1.2 1999/07/13 01:32:23 jlam Exp $
 
---- Makefile.orig	Wed Jun 23 16:49:36 1999
-+++ Makefile	Wed Jun 23 16:50:15 1999
-@@ -30,7 +30,7 @@
+--- Makefile.orig	Sun Sep  1 08:21:16 1996
++++ Makefile	Thu Jul  8 16:34:01 1999
+@@ -24,13 +24,13 @@
+        $(EXTRA_OBJS)                                            \
+        version.o      
+ 
+-LIBS = -lreadline -ltermcap 
++LIBS = -l$(LIBREADLINE) -ltermcap 
+ # mention version.o last. This causes
+ # the version number to be increased only
  # on succesful compilations.
  
  chipmunk: $(OBJS) version

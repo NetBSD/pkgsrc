@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 1999/07/13 01:32:23 jlam Exp $
+
+--- control.c.orig	Thu Mar 23 10:37:15 1995
++++ control.c	Thu Jul  8 16:34:33 1999
+@@ -26,8 +26,12 @@
+ 
+ #ifdef USE_READLINE
+ #include <dirent.h>
++#ifdef HAVE_READLINE_H
++#include <readline.h>
++#else
+ #include <readline/readline.h>
+ #include <readline/history.h>
++#endif HAVE_READLINE_H
+ #endif USE_READLINE
+ 
+ #include <sys/times.h>
