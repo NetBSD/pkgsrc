@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/03/16 09:46:42 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/03/16 11:05:29 agc Exp $
 #
 
 DISTNAME=       rcs-5.7
@@ -18,7 +18,7 @@ CONFIGURE_ENV+=	PATH=${LOCALBASE}/bin:$PATH
 post-install:
 	${RM} -f ${PREFIX}/bin/rcslog
 	${LN} -s ${PREFIX}/bin/rlog ${PREFIX}/bin/rcslog
-	${RM} -f ${PREFIX}/man/rcslog.1 ${PREFIX}/man/man1/rcslog.1.gz
+	${RM} -f ${PREFIX}/man/man1/rcslog.1 ${PREFIX}/man/man1/rcslog.1.gz
 	${LN} -s ${PREFIX}/man/man1/rlog.1 ${PREFIX}/man/man1/rcslog.1
 
 .include "../../mk/bsd.pkg.mk"
