@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7481 2004/10/20 07:49:37 jmmv Exp $
+$NetBSD: CHANGES,v 1.7482 2004/10/20 09:30:20 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4772,3 +4772,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mathomatic to 11.4c [minskim 2004-10-20]
 	Updated p5-Mail-ClamAV to 0.12 [grant 2004-10-20]
 	Updated gaim to 1.0.2 [jmmv 2004-10-20]
+	Updated evolution to 2.0.2nb2 [jmmv 2004-10-20]
