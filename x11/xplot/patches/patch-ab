@@ -2,7 +2,7 @@
 +++ tcpdump2xplot.pl	Sun Dec 14 00:45:56 1997
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl
-+#!/usr/pkg/bin/perl
++#!/usr/bin/env perl
  # -*- Perl -*-
  #
  # Copyright 1996 Massachusetts Institute of Technology
