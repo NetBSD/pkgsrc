@@ -1,28 +1,13 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/12/20 18:28:05 skrll Exp $
+$NetBSD: patch-ad,v 1.2 2000/12/21 18:14:18 skrll Exp $
 
---- configure.orig	Wed Aug 16 18:02:34 2000
-+++ configure
-@@ -1199,6 +1199,7 @@
- *-*-mips*)	icu_cv_host_frag=$srcdir/config/mh-irix ;;
- *-*-linux*) 	icu_cv_host_frag=$srcdir/config/mh-linux ;;
- *-*-freebsd*) 	icu_cv_host_frag=$srcdir/config/mh-freebsd ;;
-+*-*-netbsd*) 	icu_cv_host_frag=$srcdir/config/mh-netbsd ;;
- *-*-aix*) 	
- 	case "$CXX" in
- 	*vacpp*)icu_cv_host_frag=$srcdir/config/mh-aix-va ;;
-@@ -2959,6 +2960,7 @@
- 	*-*-solaris*) 	platform=U_SOLARIS ;;
- 	*-*-linux*) 	platform=U_LINUX ;;
- 	*-*-freebsd*) 	platform=U_LINUX ;;
-+	*-*-netbsd*) 	platform=U_NETBSD ;;
- 	*-*-aix*) 	platform=AIX ;;
- 	*-sequent-*)	platform=PTX ;;
- 	*-*-hpux*) 	platform=HPUX ;;
-@@ -2976,6 +2978,7 @@
- 	*-*-solaris*) 	ld_rpath_suf=":" ;;
- 	*-*-linux*) 	ld_rpath_suf=" " ;;
- 	*-*-freebsd*) 	ld_rpath_suf=" " ;;
-+	*-*-netbsd*) 	ld_rpath_suf=" " ;;
- 	*-*-aix*) 	ld_rpath_suf="" ;;
- 	*-sequent-*)	ld_rpath_suf="" ;;
- 	*-*-hpux*) 	ld_rpath_suf=":" ;;
+--- test/intltest/intltest.cpp.orig	Thu Dec 21 15:38:00 2000
++++ test/intltest/intltest.cpp
+@@ -411,7 +411,7 @@
+             mainDirBuffer[0]='\0';
+         }
+         mainDir=mainDirBuffer;
+-    #elif defined(_AIX) || defined(U_SOLARIS) || defined(U_LINUX) || defined(HPUX) || defined(POSIX) || defined(OS390)
++    #elif defined(_AIX) || defined(U_SOLARIS) || defined(U_LINUX) || defined(HPUX) || defined(POSIX) || defined(OS390) || defined(U_BSD)
+         char mainDirBuffer[200];
+         strcpy(mainDirBuffer, u_getDataDirectory());
+         strcat(mainDirBuffer, "/../");

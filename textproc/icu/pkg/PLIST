@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/20 18:28:01 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/12/21 18:14:21 skrll Exp $
+etc/icu/convrtrs.txt
 include/unicode/bidi.h
 include/unicode/brkiter.h
 include/unicode/calendar.h
@@ -12,6 +13,7 @@ include/unicode/datefmt.h
 include/unicode/dbbi.h
 include/unicode/dcfmtsym.h
 include/unicode/decimfmt.h
+include/unicode/docmain.h
 include/unicode/dtfmtsym.h
 include/unicode/fieldpos.h
 include/unicode/fmtable.h
@@ -28,6 +30,7 @@ include/unicode/numfmt.h
 include/unicode/parseerr.h
 include/unicode/parsepos.h
 include/unicode/platform.h
+include/unicode/pmacos.h
 include/unicode/pos2.h
 include/unicode/pos400.h
 include/unicode/putil.h
@@ -65,6 +68,7 @@ include/unicode/unifltlg.h
 include/unicode/uniset.h
 include/unicode/unistr.h
 include/unicode/unitohex.h
+include/unicode/unorm.h
 include/unicode/unum.h
 include/unicode/urep.h
 include/unicode/ures.h
@@ -77,10 +81,20 @@ include/unicode/utf32.h
 include/unicode/utf8.h
 include/unicode/utrans.h
 include/unicode/utypes.h
-lib/libicu-i18n.so
-lib/libicu-toolutil.so
-lib/libicu-uc.so
-lib/libustdio.so
+lib/icu/1.7/Makefile.inc
+lib/icu/1.7/icudata.so
+lib/icu/1.7/libicudt17l.so
+lib/icu/Makefile.inc
+lib/icu/current
+lib/libicui18n.so.17.0
+lib/libicutoolutil.so.17.0
+lib/libicuuc.so.17.0
+lib/libustdio.so.17.0
+man/man5/cnvalias.dat.5
+man/man5/convrtrs.txt.5
+man/man8/gencnval.8
+man/man8/genrb.8
+man/man8/makeconv.8
 sbin/genccode
 sbin/gencmn
 sbin/gencnval
@@ -90,35 +104,14 @@ sbin/genrb
 sbin/gentest
 sbin/gentz
 sbin/makeconv
-sbin/mkinstalldirs
 sbin/pkgdata
-share/doc/html/icu/BreakIterator.html
-share/doc/html/icu/BreakIteratorGrafik.gif
-share/doc/html/icu/Collate.html
-share/doc/html/icu/boundCL.html
-share/doc/html/icu/build_env.htm
-share/doc/html/icu/candcpp.html
-share/doc/html/icu/cintltst.html
-share/doc/html/icu/codeConv.html
-share/doc/html/icu/codestds.html
-share/doc/html/icu/collateCl.html
-share/doc/html/icu/collflow.gif
-share/doc/html/icu/conversion_interface.htm
-share/doc/html/icu/errorCod.html
-share/doc/html/icu/formatCl.html
-share/doc/html/icu/intltest.html
-share/doc/html/icu/message.html
-share/doc/html/icu/mutex.html
-share/doc/html/icu/nameConv.html
-share/doc/html/icu/number.html
-share/doc/html/icu/supp_loc.html
-share/doc/html/icu/tz.htm
-share/doc/html/icu/tzClasses.html
-share/doc/html/icu/udata.html
-share/doc/html/icu/utilCL.html
-share/icu/1.6/icudata.dat
-share/icu/Makefile.inc
-@dirrm include/unicode
-@dirrm share/icu/1.6
+share/icu/1.7/README
+share/icu/1.7/config/mh-bsd-gcc
+share/icu/mkinstalldirs
+@dirrm share/icu/1.7/config
+@dirrm share/icu/1.7
 @dirrm share/icu
-@dirrm share/doc/html/icu
+@dirrm lib/icu/1.7
+@dirrm lib/icu
+@dirrm include/unicode
+@dirrm etc/icu
