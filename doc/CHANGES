@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6503 2004/07/08 19:04:37 agc Exp $
+$NetBSD: CHANGES,v 1.6504 2004/07/08 19:26:28 erh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3313,3 +3313,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added wimon-0.2 [xtraeme 2004-07-08]
 	Updated gramofile to 1.6nb1 [agc 2004-07-08]
 	Added p5-Date-Business-1.2 [erh 2004-07-08]
+	Added p5-DBIWrapper-0.20 [erh 2004-07-08]
