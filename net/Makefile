@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.497 2004/10/09 20:48:31 mjl Exp $
+# $NetBSD: Makefile,v 1.498 2004/10/11 16:52:33 abs Exp $
 #
 
 COMMENT=	Networking tools
@@ -287,8 +287,6 @@ SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-docs
 SUBDIR+=	py-xmlrpclib
 SUBDIR+=	py-zsi
-SUBDIR+= 	pygopherd
-SUBDIR+= 	pyslsk
 SUBDIR+=	qadsl
 SUBDIR+=	quagga
 SUBDIR+=	ra-pna-proxy
@@ -384,6 +382,7 @@ SUBDIR+=	wap-utils
 SUBDIR+=	waste
 SUBDIR+=	wget
 SUBDIR+=	whatmask
+SUBDIR+=	whoson
 SUBDIR+=	wimon
 SUBDIR+=	wistumbler
 SUBDIR+=	wistumbler2
@@ -408,5 +407,7 @@ SUBDIR+=	ytalk
 SUBDIR+=	ytalk-x11
 SUBDIR+=	ywho
 SUBDIR+=	zebra
+SUBDIR+= 	pygopherd
+SUBDIR+= 	pyslsk
 
 .include "../mk/bsd.pkg.subdir.mk"
