@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.7 1999/12/25 05:28:35 kim Exp $
+$NetBSD: patch-af,v 1.8 2000/02/11 00:07:51 jlam Exp $
 
 --- sshd.c.orig	Wed May 12 07:19:29 1999
-+++ sshd.c	Fri Dec 24 22:00:08 1999
++++ sshd.c	Thu Feb 10 18:29:16 2000
 @@ -537,15 +537,26 @@
  #define O_NOCTTY        0
  #endif
@@ -589,7 +589,7 @@ $NetBSD: patch-af,v 1.7 1999/12/25 05:28:35 kim Exp $
        authentication_type = SSH_AUTH_PASSWORD;
        authenticated = 1;
        /* Success packet will be sent after loop below. */
-@@ -2281,19 +2391,22 @@
+@@ -2281,34 +2391,61 @@
        /* Process the packet. */
        switch (type)
          {
@@ -615,7 +615,10 @@ $NetBSD: patch-af,v 1.7 1999/12/25 05:28:35 kim Exp $
            /* Accept Kerberos tgt. */
            krb5data.data = packet_get_string((unsigned int *) &krb5data.length);
            
-@@ -2303,12 +2416,36 @@
+-          if (!auth_kerberos_tgt(user, &krb5data, client) ||
++          if (!auth_krb5_tgt(user, &krb5data, client) ||
+               !krb5_kuserok(ssh_context, client, user)){
+             log_msg("Kerberos tgt REFUSED for %.100s", user);
              debug("Kerberos tgt REFUSED for %.100s", user);
            }
            free(krb5data.data);
@@ -657,14 +660,18 @@ $NetBSD: patch-af,v 1.7 1999/12/25 05:28:35 kim Exp $
          case SSH_CMSG_AUTH_KERBEROS:
            if (!options.kerberos_authentication)
              {
-@@ -2316,6 +2453,7 @@
+@@ -2316,9 +2453,10 @@
                log_msg("Kerberos authentication disabled.");
                break;
              }
 +#ifdef KRB5
            /* Try Kerberos authentication. */
            krb5data.data = packet_get_string((unsigned int *) &krb5data.length);
-           if (auth_kerberos(user, &krb5data, &tkt_client))
+-          if (auth_kerberos(user, &krb5data, &tkt_client))
++          if (auth_krb5(user, &krb5data, &tkt_client))
+             {
+               char *tkt_user;
+               
 @@ -2334,6 +2472,11 @@
                    /* Client has successfully authenticated to us. */
                    log_msg("Kerberos authentication accepted %.100s for login to account %.100s from %.200s",

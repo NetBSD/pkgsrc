@@ -1,7 +1,7 @@
-$NetBSD: patch-aw,v 1.1 1999/08/18 21:58:58 thorpej Exp $
+$NetBSD: patch-aw,v 1.2 2000/02/11 00:06:36 jlam Exp $
 
---- configure.orig	Tue Jun  2 10:29:52 1998
-+++ configure	Wed Aug 18 14:18:44 1999
+--- configure.orig	Tue Jun  2 13:29:52 1998
++++ configure	Thu Feb 10 18:53:39 2000
 @@ -1,7 +1,7 @@
  #! /bin/sh
  
@@ -2290,7 +2290,14 @@ $NetBSD: patch-aw,v 1.1 1999/08/18 21:58:58 thorpej Exp $
    cat >> confdefs.h <<EOF
  #define $ac_tr_hdr 1
  EOF
-@@ -2994,7 +3249,7 @@
+@@ -2988,13 +3243,13 @@
+   if test "$ac_cv_header_gssapi_h" = "yes"; then
+     LIBS="$LIBS -L$GSSAPI/lib -lgssapi -lkrb5 -lasn1 -ldes -lroken"
+   else
+-    LIBS="$LIBS -L$GSSAPI/lib -lgssapi_krb5 -lkrb5 -lcrypto -lcom_err"
++    LIBS="$LIBS -L$GSSAPI/lib -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err"
+   fi
+   save_CPPFLAGS=$CPPFLAGS
    CPPFLAGS="-I$GSSAPI/include $CPPFLAGS"
    if test "$ac_cv_header_gssapi_h" = "yes"; then
      cat > conftest.$ac_ext <<EOF
