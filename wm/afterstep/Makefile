@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/07/16 15:21:21 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/08/27 14:35:15 tron Exp $
 
 DISTNAME=	AfterStep-1.8.9
 PKGNAME=	afterstep-1.8.9
@@ -11,7 +11,7 @@ MAINTAINER=		fredb@netbsd.org
 HOMEPAGE=		http://www.afterstep.org/
 COMMENT=		NeXT-like window manager for X11
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 # XXX
 # XXX The following would be "RUN_DEPENDS," if we had such a thing.
 # XXX

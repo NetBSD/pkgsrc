@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/11 06:34:21 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/08/27 14:35:05 tron Exp $
 
 DISTNAME=		kicq-1.0.0
 CATEGORIES=		chat kde
@@ -8,7 +8,7 @@ MAINTAINER=		magick@bundy.lip.owl.de
 HOMEPAGE=		http://kicq.sourceforge.net/
 COMMENT=		KDE ICQ client
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 DEPENDS+=		icqlib>=1.0.0:../../chat/icqlib
 DEPENDS+=		kdebase-1.1.2:../../x11/kdebase
 

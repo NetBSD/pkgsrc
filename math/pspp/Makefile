@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/06/11 06:34:43 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/08/27 14:35:11 tron Exp $
 #
 
 DISTNAME=	pspp-0.3.0
@@ -16,7 +16,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/pspp/
 COMMENT=	Program for statistical analysis of sampled data
 
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=	yes

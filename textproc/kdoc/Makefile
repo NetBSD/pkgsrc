@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/03/27 09:30:30 skrll Exp $
-#
+# $NetBSD: Makefile,v 1.7 2001/08/27 14:35:15 tron Exp $
 
 DISTNAME=	kdoc-2.1
 CATEGORIES=	textproc
@@ -12,7 +11,7 @@ MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	C++ and IDL Class Documentation Tool
 
-BUILD_DEPENDS+= autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+= autoconf>=2.13:../../devel/autoconf
 
 USE_PERL5=	yes
 USE_GMAKE=	yes

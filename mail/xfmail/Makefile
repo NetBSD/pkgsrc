@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/07/03 21:38:27 zuntum Exp $
-#
+# $NetBSD: Makefile,v 1.21 2001/08/27 14:35:10 tron Exp $
 
 DISTNAME=		xfmail-1.4.7
 CATEGORIES=		mail x11
@@ -10,7 +9,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://xfmail.slappy.org/
 COMMENT=		Xforms based mail application for Unix operating systems
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
 			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc

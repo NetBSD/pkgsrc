@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2001/06/11 06:34:54 jlam Exp $
-# FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
-#
+# $NetBSD: Makefile,v 1.37 2001/08/27 14:35:15 tron Exp $
 
 DISTNAME=		arena-0.3.62
 WRKSRC=			${WRKDIR}/Arena-0.3.62
@@ -11,8 +9,8 @@ MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.yggdrasil.com/Products/Arena/
 COMMENT=		Experimental HTML 3 browser, supports math and style sheets
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
-BUILD_USES_MSGFMT=	yes
+BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
+BUILD_USES_MSGFMT=	YES
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		libwww>=5.2.8:../../www/libwww
 DEPENDS+=		png>=1.0.11:../../graphics/png

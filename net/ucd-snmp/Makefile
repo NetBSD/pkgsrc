@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2001/03/27 03:20:12 hubertf Exp $
-# FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
-#
+# $NetBSD: Makefile,v 1.35 2001/08/27 14:35:12 tron Exp $
 
 DISTNAME=	ucd-snmp-4.1.2
 CATEGORIES=	net
@@ -13,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://net-snmp.sourceforge.net/
 COMMENT=	Extensible SNMP implementation
 
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 
 BUILD_DEFS+=	USE_INET6
 

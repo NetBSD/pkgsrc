@@ -1,4 +1,4 @@
-## $NetBSD: Makefile,v 1.38 2001/08/26 10:32:22 skrll Exp $
+## $NetBSD: Makefile,v 1.39 2001/08/27 14:35:11 tron Exp $
 
 DISTNAME=		gnome-utils-1.4.0.2
 CATEGORIES=		misc x11 gnome
@@ -9,7 +9,7 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Set of useful GNOME utilities and applications
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 BUILD_DEPENDS+=		bison-*:../../devel/bison
 BUILD_DEPENDS+=		xml-i18n-tools-*:../../textproc/xml-i18n-tools

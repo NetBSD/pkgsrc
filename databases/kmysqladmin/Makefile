@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/08/26 10:32:19 skrll Exp $
+# $NetBSD: Makefile,v 1.4 2001/08/27 14:35:07 tron Exp $
 
 DISTNAME=	kmysqladmin-0.5.1
 CATEGORIES=	databases kde
@@ -9,7 +9,7 @@ HOMEPAGE=       http://www.webeifer.de/alwin/programs/kmysqladmin/
 COMMENT=	Mysql administrators GUI
 
 BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 DEPENDS+=       kdebase>=2.1:../../x11/kdebase2
 DEPENDS+=       kdelibs>=2.1:../../x11/kdelibs2
 DEPENDS+=       qt2-libs>=2.3.0:../../x11/qt2-libs

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/05/11 14:42:31 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.11 2001/08/27 14:35:15 tron Exp $
 
 DISTNAME=	eperl-2.2.14
 CATEGORIES=	lang perl5 textproc
@@ -9,7 +8,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.engelschall.com/sw/eperl/
 COMMENT=	Interpreter/preprocessor for Perl embedded in text documents
 
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 DEPENDS=	libperl>=${LIBPERL5_REQD}:../../lang/libperl
 
 USE_PERL5=	# defined

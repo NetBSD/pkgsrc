@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/08/26 10:32:20 skrll Exp $
+# $NetBSD: Makefile,v 1.25 2001/08/27 14:35:07 tron Exp $
 
 DISTNAME=	kdbg-1.2.0
 CATEGORIES=	devel kde
@@ -10,7 +10,7 @@ HOMEPAGE=       http://members.telecom.at/~johsixt/kdbg.html
 COMMENT=	Graphical User Interface around gdb using KDE
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=	autoconf-2.13:../autoconf
+DEPENDS+=	autoconf>=2.13:../autoconf
 DEPENDS+=	automake>=1.4:../automake
 DEPENDS+=	kdevelop-base-1.*:../kdevelop-base
 

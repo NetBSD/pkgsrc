@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2001/06/11 06:34:44 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2001/08/27 14:35:11 tron Exp $
 #
 
 DISTNAME=		vatsrc-4.0b2
@@ -11,7 +11,7 @@ MAINTAINER=		mycroft@netbsd.org
 HOMEPAGE=		http://www-nrg.ee.lbl.gov/vat/
 COMMENT=		The Visual Audio Tool - multicast audioconferencing
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 DEPENDS+=		tk>=8.3.2:../../x11/tk
 DEPENDS+=		gsm-1.0.10:../../audio/gsm
 
