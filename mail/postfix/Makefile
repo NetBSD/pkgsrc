@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2004/01/23 12:03:44 martti Exp $
+# $NetBSD: Makefile,v 1.116 2004/01/28 16:03:02 martti Exp $
 
 DISTNAME=	postfix-2.0.18
 CATEGORIES=	mail
@@ -33,8 +33,8 @@ FIX_RPATH+=	AUXLIBS
 
 .if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
 .  include "../../security/openssl/buildlink3.mk"
-PATCHFILES+=		tls+ipv6-1.20-pf-2.0.16.patch.gz
-PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.20/
+PATCHFILES+=		tls+ipv6-1.21-pf-2.0.18.patch.gz
+PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.21/
 PATCH_DIST_STRIP=	-p1
 BUILD_DEFS+=		POSTFIX_USE_INET6
 
