@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/02/15 02:58:46 minskim Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/04/12 15:14:55 xtraeme Exp $
 
 DISTNAME=	xemacs-21.4.15
 CATEGORIES=	editors
@@ -10,7 +10,7 @@ COMMENT=	XEmacs text editor version 21
 
 NOT_FOR_PLATFORM=	*-*-mips*	# fails purespace dumping
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 BUILD_DEFS+=	USE_LDAP USE_XFACE XEMACS_USE_CANNA
 DIST_SUBDIR=	xemacs
@@ -48,10 +48,10 @@ MESSAGE_SUBST+=	DISTNAME="${DISTNAME}"
 #		--with-dialogs=yes \
 #		--with-widgets=yes \
 #		--with-xim=yes
-#.include "../../x11/gtk/buildlink2.mk"
+#.include "../../x11/gtk/buildlink3.mk"
 #.else
 # XXX Default is "lucid".  Due to the output of `configure --help', Lucid
-#     widgets wrap Athena, so xaw.buildlink2.mk.
+#     widgets wrap Athena, so xaw.buildlink3.mk.
 WITH_DIALOGS= \
 		--with-toolbars=yes \
 		--with-menubars=lucid \
@@ -60,7 +60,7 @@ WITH_DIALOGS= \
 		--with-widgets=lucid \
 		--with-athena=xaw \
 		--with-xim=xlib
-.include "../../mk/xaw.buildlink2.mk"
+.include "../../mk/xaw.buildlink3.mk"
 #.endif
 
 .if ${OPSYS} == "SunOS"
@@ -71,20 +71,20 @@ CONFIGURE_ARGS+=	--with_sound=none
 
 .if defined(USE_LDAP) && (${USE_LDAP} == "YES")
 WITH_LDAP=	--with-ldap
-.  include "../../databases/openldap/buildlink2.mk"
+.  include "../../databases/openldap/buildlink3.mk"
 .else
 WITH_LDAP=	--without-ldap
 .endif
 
 .if defined(USE_XFACE) && (${USE_XFACE} == "YES")
 WITH_XFACE=	--with-xface
-.  include "../../mail/faces/buildlink2.mk"
+.  include "../../mail/faces/buildlink3.mk"
 .else
 WITH_XFACE=	--without-xface
 .endif
 
 .if defined(XEMACS_USE_CANNA) && (${XEMACS_USE_CANNA} == "YES")
-.  include "../../inputmethod/canna-lib/buildlink2.mk"
+.  include "../../inputmethod/canna-lib/buildlink3.mk"
 WITH_CANNA=	--with-canna
 .else
 WITH_CANNA=	--without-canna
@@ -96,8 +96,8 @@ PLIST_SUBST+=	ELSUFX='.gz'
 PLIST_SUBST+=	ELSUFX=''
 .endif
 
-.include "../../databases/gdbm/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../databases/gdbm/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 
 INFOPATH=	${PREFIX}/info:${X11BASE}/info:/usr/local/info
 
