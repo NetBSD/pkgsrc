@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/05/30 17:57:52 tron Exp $
+$NetBSD: distinfo,v 1.6 2004/06/30 00:11:23 wiz Exp $
 
-SHA1 (dvd+rw-tools-5.17.4.8.6.tar.gz) = 635b76e3d2b8b5702b179a57bd51086fce065c59
-Size (dvd+rw-tools-5.17.4.8.6.tar.gz) = 91908 bytes
-SHA1 (patch-aa) = 49e05d0bbc8e8efba8e53d6b53dd391dddfb2310
+SHA1 (dvd+rw-tools-5.19-1.4.9.7.tar.gz) = bb891ded04afbf058170466c18401b069851923c
+Size (dvd+rw-tools-5.19-1.4.9.7.tar.gz) = 97678 bytes
+SHA1 (patch-aa) = 33096512b0bd21f62415885a3a8bac9fdba19eca
