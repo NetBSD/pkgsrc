@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1551 2004/12/29 23:19:42 minskim Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1552 2004/12/31 13:13:56 minskim Exp $
 #
 # This file is in the public domain.
 #
@@ -316,6 +316,7 @@ ${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
 .endif
 
 .if defined(USE_PERL5) && (${USE_PERL5} == "run")
+CONFIGURE_ENV+=	PERL=${PERL5:Q}
 .  if !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
 .    if exists(${PERL5})
 PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`; \
