@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.128 2003/01/03 19:09:56 wiz Exp $
+$NetBSD: TODO,v 1.129 2003/01/03 20:37:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -93,7 +93,6 @@ Suggested package updates
 	o bluefish-0.8
 	o bonnie++-1.93b
 	o bzflag-1.7g0
-	o capc-calc-2.11.6
 	o cdlabelgen-2.5.0
 	o centericq-4.9.1
 	o cfengine-1.6.5 [pkg/19459|seb]
@@ -242,6 +241,7 @@ Suggested package updates
 	o tcpreplay-1.3.1
 	o ted-2.12
 	o tightvnc-1.2.7
+	o transfig-3.2.4 [pkg/19659]
 	o ttf2pt1-3.4.3
 	o tuxpaint-2002.12.10
 	o tuxpaint-stamps-2002.12.03
@@ -252,7 +252,7 @@ Suggested package updates
 	o xalan-c-1.4
 	o xcdroast-0.98alpha13
 	o xerces-c-2.1.0 [heinz]
-	o xforms-1.0RC4
+	o xfig-3.2.4 [pkg/19660]
 	o xfstt-1.4
 	o xmcd-3.2.0
 	o xpuyopuyo-0.9.5
