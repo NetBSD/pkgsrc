@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 1999/02/17 00:02:13 tron Exp $
+# $NetBSD: Makefile,v 1.29 1999/02/17 08:34:36 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 #
 
@@ -11,8 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=       http://www.kde.org/
 
+BUILD_DEPENDS+=	${LOCALBASE}/bin/msgfmt:../../devel/gettext
 DEPENDS+=	Mesa-3.0:../../graphics/Mesa
-DEPENDS+=	gettext-0.10.35:../../devel/gettext
 DEPENDS+=	kdelibs-1.1:../../x11/kdelibs
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
