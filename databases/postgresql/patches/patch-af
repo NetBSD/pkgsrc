@@ -15,21 +15,21 @@
  ifeq ($(PORTNAME), i386_solaris)
    CFLAGS+= -fPIC
  endif
-@@ -56,10 +64,10 @@
+@@ -56,10 +64,9 @@
  endif
  	$(RANLIB) libpgtcl.a
  
 -libpgtcl.so.1: $(OBJS)
 -	$(CC) $(LDFLAGS) -shared $(OBJS) -o libpgtcl.so.1
-+libpgtcl.so.1.0: $(OBJS)
-+	$(CC) $(LDFLAGS) -shared $(OBJS) -o libpgtcl.so.1.0
- 	rm -f libpgtcl.so
+-	rm -f libpgtcl.so
 -	ln -s libpgtcl.so.1 libpgtcl.so
-+	ln -s libpgtcl.so.1.0 libpgtcl.so
++$(shlib): $(OBJS)
++	$(LD) $(LDFLAGS_SL) -o $@ $(OBJS)
++	ln -sf libpgtcl.so.1.0 libpgtcl.so
  
  .PHONY: beforeinstall-headers install-headers
  .PHONY: install install-libpgtcl
-@@ -75,11 +83,11 @@
+@@ -75,11 +82,11 @@
  install-libpgtcl: libpgtcl.a
  	$(INSTALL) $(INSTL_LIB_OPTS) libpgtcl.a $(DESTDIR)$(LIBDIR)/libpgtcl.a
  
@@ -45,3 +45,21 @@
  
  .PHONY: clean
  clean: 
+--- bin/Makefile	1998/02/18 15:50:27	1.1
++++ bin/Makefile	1998/02/18 15:50:40
+@@ -36,4 +36,5 @@
+ #
+ ifeq ($(USE_TCL), true)
+ 	$(MAKE) -C pgtclsh $@
++	$(MAKE) -C pgaccess $@
+ endif
+--- /dev/null	Wed Feb 18 15:53:20 1998
++++ bin/pgaccess/Makefile	Wed Feb 18 16:12:13 1998
+@@ -0,0 +1,7 @@
++BIN=${PREFIX}/pgsql/bin/pgaccess
++
++all: ;
++
++install:
++	sed -e 's|^#!/usr/bin/wish|#! '${PREFIX}'/pgsql/bin/pgtksh -f|' < pgaccess.tcl > ${BIN}
++	chmod 755 ${BIN}
