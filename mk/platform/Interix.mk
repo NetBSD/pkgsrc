@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.17 2005/01/18 22:36:37 tv Exp $
+# $NetBSD: Interix.mk,v 1.18 2005/01/21 02:09:10 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -185,15 +185,11 @@ SERIAL_DEVICES?=	/dev/tty00 /dev/tty01 /dev/tty02 /dev/tty03
 
 # poll(2) is broken; try to work around it by making autoconf believe
 # it's missing.  (Packages without autoconf will need explicit fixing.)
-.ifdef GNU_CONFIGURE
-CONFIGURE_ENV+=		ac_cv_header_poll_h=no ac_cv_func_poll=no
-.endif
+CONFIGURE_ENV+=		${GNU_CONFIGURE:Dac_cv_header_poll_h=no ac_cv_func_poll=no}
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
-.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
 _OPSYS_MAX_CMDLEN=	262144
-.endif
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
 # (it defaults to 'no' as per bsd.pkg.defaults.mk).
