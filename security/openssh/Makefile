@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2001/06/18 09:56:26 itojun Exp $
+# $NetBSD: Makefile,v 1.52 2001/06/18 19:54:14 tron Exp $
 
 DISTNAME=		openssh-2.9p2
 CATEGORIES=		security
@@ -78,11 +78,14 @@ MAKE_ENV+=		ASKPASS_LOCATION=${X11BASE}/bin
 MAKE_ENV+=		ASKPASS_LOCATION=${X11PREFIX}/bin
 .endif
 
+CHECK_FILES=	bin/slogin man/man1/slogin.1 \
+		share/examples/openssh/ssh_prng_cmds
+PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
+
 .if (${OPSYS} == SunOS)
 DEPENDS+=		zlib-*:../../devel/zlib
 
 INSTALL_FILE=		${WRKDIR}/INSTALL.SunOS
-PLIST_SRC=		${PKGDIR}/PLIST.SunOS
 .endif
 
 pre-configure:
@@ -107,5 +110,14 @@ pre-install:
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/sshd.sh ${PREFIX}/etc/rc.d/sshd
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	cd ${PREFIX}; \
+	for FILE in ${CHECK_FILES}; do \
+	  if [ ! -f $${FILE} ]; then \
+	    ${MV} ${PLIST_SRC} ${PLIST_SRC}.old; \
+	    ${GREP} -v "^$${FILE}" ${PLIST_SRC}.old >${PLIST_SRC}; \
+	    ${RM} ${PLIST_SRC}.old; \
+	  fi; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
