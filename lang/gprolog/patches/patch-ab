@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.3 2003/06/23 19:48:20 jtb Exp $
+
+--- configure.in.orig
++++ configure.in
+@@ -319,6 +319,7 @@
+ 		i*86*bsd*)       AC_DEFINE(M_ix86_bsd);;
+         	powerpc*linux*)  AC_DEFINE(M_powerpc_linux);;
+ 		powerpc*darwin*) AC_DEFINE(M_powerpc_darwin);;
++		powerpc*bsd*)    AC_DEFINE(M_powerpc_bsd);;
+ 		*86*cygwin*)     AC_DEFINE(M_ix86_cygwin);;
+ 		*)               AC_MSG_ERROR(unsupported architecture)
+ 	esac
