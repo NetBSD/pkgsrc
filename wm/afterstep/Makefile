@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/08/31 16:07:28 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2002/10/02 19:40:15 wiz Exp $
 
 DISTNAME=	AfterStep-1.8.11
 PKGNAME=	afterstep-1.8.11
@@ -12,10 +12,10 @@ MAINTAINER=		fredb@netbsd.org
 HOMEPAGE=		http://www.afterstep.org/
 COMMENT=		NeXT-like window manager for X11
 
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 DEPENDS+=		asclock-[0-9]*:../../time/asclock
 DEPENDS+=		xp-[0-9]*:../../x11/xp
 
+AUTOCONF_REQD=		2.13
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -37,12 +37,13 @@ post-patch:
 
 pre-configure:
 	cd ${WRKSRC} && \
-	  autoconf --localdir=autoconf autoconf/configure.in > configure; \
+	  ${AUTOCONF} --localdir=autoconf autoconf/configure.in > configure; \
 	  ${CHMOD} 755 configure; \
-	  autoheader --localdir=autoconf autoconf/configure.in > autoconf/config.h.in;
+	  ${AUTOHEADER} --localdir=autoconf autoconf/configure.in > autoconf/config.h.in;
 
 .include "../../audio/rplay/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
