@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2004/06/17 13:09:42 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/07/02 15:40:01 drochner Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-f77-${GCC_VERSION}
-PKGREVISION=    1
 COMMENT=	GNU Compiler Collection, v3 - F77 compiler
 
 INFO_FILES=	g77.info

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2004/05/22 17:48:22 abs Exp $
+# $NetBSD: Makefile,v 1.13 2004/07/02 15:40:01 drochner Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-c++-${GCC_VERSION}
-PKGREVISION=    1
 COMMENT=	GNU Compiler Collection, v3 - C++ compiler
 
 INSTLIBS=	libstdc++-v3/libsupc++/libsupc++.la			\
