@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1793 2003/03/28 12:06:10 gehenna Exp $
+$NetBSD: CHANGES,v 1.1794 2003/03/28 20:23:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1335,3 +1335,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated delegate to 8.5.2 [wiz 2003-03-28]
 	Updated ipa to 1.3.2 [wiz 2003-03-28]
 	Updated cvsync to 0.17.0 [gehenna 2003-03-28]
+	Updated pkglint to 3.48 [wiz 2003-03-28]
