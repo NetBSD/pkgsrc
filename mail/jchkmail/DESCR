@@ -1,0 +1,8 @@
+J-chkmail is a mail filtering software using the API milter of sendmail 
+(versions 8.12.0 and later). Yet another filter...
+
+j-chkmail intends to be a scalable integrated solution to fight against 
+virus and spam.
+
+In both cases, the main idea of j-chkmail is to avoid content filtering, 
+but to do behavior filtering. 
