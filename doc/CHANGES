@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9480 2005/03/14 15:17:19 salo Exp $
+$NetBSD: CHANGES,v 1.9481 2005/03/14 15:47:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1357,3 +1357,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sylpheed-claws-image-viewer to 1.0.3 [chris 2005-03-12]
 	Updated sylpheed-claws-trayicon to 1.0.3 [chris 2005-03-12]
 	Updated	ethereal to 0.10.10 [salo 2005-03-14]
+	Updated imlib2 to 1.2.0nb2 [wiz 2005-03-14]
+	Updated p5-Image-Imlib2 to 1.04 [wiz 2005-03-14]
