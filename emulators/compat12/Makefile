@@ -3,13 +3,13 @@
 # Date created:         17 Mar 1998
 # Whom:                 tv@netbsd.org
 #
-# $NetBSD: Makefile,v 1.1.1.1 1998/03/17 21:32:54 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/03/19 11:11:55 frueauf Exp $
 #
 
 DISTNAME=	compat12
-EXTRACT_SUFX=	_${ARCH}.tgz
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_LOCAL}
+EXTRACT_SUFX=	_${ARCH}.tgz
 ONLY_FOR_ARCHS=	amiga atari hp300 i386 mac68k mvme68k pc532 sparc sun3
 
 MAINTAINER=	tv@netbsd.org
@@ -23,12 +23,11 @@ pre-configure:
 	@${INSTALL} -c -m 755 ${FILESDIR}/configure ${WRKSRC}
 
 post-install:
-post-install:
 	${LDCONFIG} || ${TRUE}
 
 .include <bsd.port.mk>
 
 # for sun3x in 1.3.x, get sun3 package
 .if (${ARCH} == "sun3x")
-ARCH=	sun3
+ARCH=		sun3
 .endif
