@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2004/06/12 23:21:56 markd Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/27 00:01:42 epg Exp $
 
-DISTNAME=	gnuserv-3.12.6
+DISTNAME=	gnuserv-3.12.7
 CATEGORIES=	editors
 MASTER_SITES=	${HOMEPAGE}/src/
 
