@@ -1,4 +1,4 @@
-<!-- $NetBSD: examples.xml,v 1.1.1.1 2004/10/21 14:27:37 grant Exp $ -->
+<!-- $NetBSD: examples.xml,v 1.2 2004/12/09 18:21:15 wiz Exp $ -->
 
 <appendix id="examples">
   <title>A simple example package: bison</title>
@@ -46,12 +46,6 @@ of the &os; source tree is beyond me.</programlisting>
       <programlisting>@comment &#36;NetBSD&#36;
 bin/bison
 man/man1/bison.1.gz
-info/bison.info
-info/bison.info-1
-info/bison.info-2
-info/bison.info-3
-info/bison.info-4
-info/bison.info-5
 share/bison.simple
 share/bison.hairy</programlisting>
     </sect2>
