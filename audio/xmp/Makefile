@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/04/11 17:13:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/16 17:11:30 danw Exp $
 # FreeBSD: ports/audio/xmp/Makefile,v 1.5 2000/04/08 21:24:59 mharo Exp
 #
 
@@ -26,6 +26,13 @@ USE_BUILDLINK3=	yes
 EGDIR=		${PREFIX}/share/examples/xmp
 CONF_FILES=	${EGDIR}/xmp-modules.conf ${PKG_SYSCONFDIR}/xmp-modules.conf
 CONF_FILES+=	${EGDIR}/xmp.conf ${PKG_SYSCONFDIR}/xmp.conf
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+# XMP has no native Darwin support, so make it use the esound backend
+.include "../../audio/esound/buildlink3.mk"
+.endif
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
