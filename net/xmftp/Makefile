@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/21 10:47:31 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/23 23:55:25 jlam Exp $
 #
 
 DISTNAME=	xmftp-1.0.4
@@ -9,6 +9,7 @@ MAINTAINER=	rxg@netbsd.org
 HOMEPAGE=	http://www.cse.fau.edu/~valankar/old/xmftp/
 COMMENT=	X/Motif FTP client
 
+USE_BUILDLINK2=	yes
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 
@@ -21,7 +22,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/../CHANGES ${PREFIX}/share/doc/xmftp
 	${INSTALL_DATA} ${WRKSRC}/../FAQ ${PREFIX}/share/doc/xmftp
 
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/motif.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../mk/motif.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
