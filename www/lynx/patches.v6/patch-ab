@@ -1,6 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2000/01/15 17:44:20 hubertf Exp $
-
-Place(s) where this was (most probably...) in before:
+$NetBSD: patch-ab,v 1.2 2000/01/15 22:55:47 hubertf Exp $
 
 diff -x *.orig -urN ./WWW/Library/Implementation/HTAAFile.c /usr/pkgsrc/www/lynx/work.unpatched/lynx2-8-2/WWW/Library/Implementation/HTAAFile.c
 --- ./WWW/Library/Implementation/HTAAFile.c	Thu Jan  1 01:00:00 1970

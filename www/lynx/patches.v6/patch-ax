@@ -1,6 +1,4 @@
-$NetBSD: patch-ax,v 1.1 2000/01/15 17:44:26 hubertf Exp $
-
-Place(s) where this was (most probably...) in before:
+$NetBSD: patch-ax,v 1.2 2000/01/15 22:55:49 hubertf Exp $
 
 diff -x *.orig -urN ./makefile.in /usr/pkgsrc/www/lynx/work.unpatched/lynx2-8-2/makefile.in
 --- ./makefile.in	Fri May 28 16:04:01 1999

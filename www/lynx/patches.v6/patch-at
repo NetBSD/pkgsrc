@@ -1,6 +1,4 @@
-$NetBSD: patch-at,v 1.1 2000/01/15 17:44:25 hubertf Exp $
-
-Place(s) where this was (most probably...) in before:
+$NetBSD: patch-at,v 1.2 2000/01/15 22:55:48 hubertf Exp $
 
 diff -x *.orig -urN ./WWW/Library/Implementation/tcp.h /usr/pkgsrc/www/lynx/work.unpatched/lynx2-8-2/WWW/Library/Implementation/tcp.h
 --- ./WWW/Library/Implementation/tcp.h	Sat May  8 19:46:28 1999
