@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/09/25 14:04:55 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/09/26 08:55:05 wiz Exp $
 #
 # This Makefile fragment is included by packages that use libcroco.
 #
@@ -10,7 +10,7 @@ LIBCROCO_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libcroco
 BUILDLINK_DEPENDS.libcroco?=		libcroco>=0.2.0
-BUILDLINK_PKGSRCDIR.libcroco?=		../../wip/libcroco
+BUILDLINK_PKGSRCDIR.libcroco?=		../../textproc/libcroco
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libcroco=libcroco
 BUILDLINK_PREFIX.libcroco_DEFAULT=	${LOCALBASE}
