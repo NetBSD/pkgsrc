@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2003/02/18 14:56:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.69 2003/04/10 13:31:45 fredb Exp $
 #
 
 DISTNAME=		gnumeric-1.0.12
@@ -9,9 +9,6 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.0/}
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/gnumeric/
 COMMENT=		Spreadsheet program from the GNOME project
-
-# wctype.h is found on NetBSD 1.5R and later
-ONLY_FOR_PLATFORM=	NetBSD-1.5[R-Z]-* NetBSD-1.5Z[A-Z]-* NetBSD-1.[6-9]*-* SunOS-*-*
 
 # for Python support a shared libpython is required but not provided yet
 #BUILD_DEPENDS+=		python>=2.0:../../lang/python
