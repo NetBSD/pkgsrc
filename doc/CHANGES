@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6516 2004/07/09 15:54:13 recht Exp $
+$NetBSD: CHANGES,v 1.6517 2004/07/09 20:44:53 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3317,7 +3317,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-HTMLObject-2.22 [erh 2004-07-08]
 	Updated hylafax to 4.1.8nb3 [heinz 2004-07-08]
 	Updated cyrus-sasl2 to 2.1.18nb3 [recht 2004-07-08]
-	Added p5-Data-FormValidator-3.59 [erh 2004-07-08]
 	Updated pkglint to 3.86 [hubertf 2004-07-09]
 	Updated boehm-gc to 6.3 [recht 2004-07-09]
 	Updated kadu to 0.3.9 [adam 2004-07-09]
