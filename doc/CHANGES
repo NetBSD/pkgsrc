@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2617 2003/06/29 13:42:49 uebayasi Exp $
+$NetBSD: CHANGES,v 1.2618 2003/06/29 17:01:08 chris Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2607,3 +2607,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xosd to 2.2.2 [jmmv 2003-06-29]
 	Updated xmms-osd to 2.2.2 [jmmv 2003-06-29]
 	Updated ddskk to 20030629 [uebayasi 2003-06-29]
+	Updated tremor to 1.0.2nb3 [chris 2003-06-29]
