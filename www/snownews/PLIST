@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/27 23:04:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/15 23:52:29 wiz Exp $
 bin/opml2snow
 bin/snownews
 man/de/man1/snownews.1
 man/fr/man1/snownews.1
 man/it/man1/snownews.1
+man/man1/opml2snow.1
 man/man1/snownews.1
 man/nl/man1/snownews.1
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/snownews.mo
@@ -12,6 +13,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/snownews.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/snownews.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/snownews.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/snownews.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/snownews.mo
 @unexec ${RMDIR} %D/man/nl/man1 2> /dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/nl 2> /dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/it/man1 2> /dev/null || ${TRUE}

@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/12/27 23:04:23 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2004/02/15 23:52:29 wiz Exp $
 
---- Makefile.orig	Tue Dec 23 19:28:09 2003
+--- Makefile.orig	2004-01-23 05:13:29.000000000 -0700
 +++ Makefile
 @@ -2,7 +2,7 @@ include Makefile.inc
  
  LDFLAGS = -lncurses `xml2-config --libs` $(EXTRA_LDFLAGS)
- OBJFILES = main.o netio.o interface.o xmlparse.o updatecheck.o conversions.o dialog.o ui-support.o categories.o
+ OBJFILES = main.o netio.o interface.o xmlparse.o updatecheck.o conversions.o dialog.o ui-support.o categories.o about.o cookies.o
 -CFLAGS = -Wall -O2 -DLOCALEPATH="\"$(LOCALEPATH)\"" -DOS=\"$(shell uname)\" `xml2-config --cflags` $(EXTRA_CFLAGS)
 +CFLAGS = -Wall -DLOCALEPATH="\"$(LOCALEPATH)\"" -DOS=\"$(shell uname)\" `xml2-config --cflags` $(EXTRA_CFLAGS)
  VERSION = `grep VERSION version.h | sed s/\"//g | sed s/\#define\ VERSION\ //`
