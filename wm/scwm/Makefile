@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:21:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/29 12:05:04 wennmach Exp $
 #
 
 DISTNAME=	scwm-0.9
@@ -15,6 +15,8 @@ DEPENDS+=	gtar-1.12:../../archivers/gtar
 DEPENDS+=	readline>=4.0:../../devel/readline
 
 BROKEN=		Current release does not work with guile-1.4.0.
+
+INFO_FILES=	scwm.info
 
 EVAL_PREFIX+=	GTKDIR=gtk+
 CONFIGURE_ARGS+=	--with-guile-prefix=${LOCALBASE}	\
