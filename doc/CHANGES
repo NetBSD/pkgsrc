@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8861 2005/01/22 03:59:38 minskim Exp $
+$NetBSD: CHANGES,v 1.8862 2005/01/22 08:38:01 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -484,3 +484,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated vigor to 0.016nb1 [minskim 2005-01-22]
 	Updated cqcam to 0.45anb2 [minskim 2005-01-22]
 	Updated XF86Setup to 3.3.6nb2 [minskim 2005-01-22]
+	Updated ImageMagick to 6.1.9-1 [jdolecek 2005-01-22]
