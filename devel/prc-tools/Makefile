@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/06/12 09:08:02 grant Exp $
+# $NetBSD: Makefile,v 1.20 2004/07/04 00:23:21 wiz Exp $
 #
 
 DISTNAME=	prc-tools-2.2
@@ -42,7 +42,7 @@ ONLY_FOR_COMPILER=	gcc
 CONFIG_GUESS_OVERRIDE=	# empty
 CONFIG_SUB_OVERRIDE=	# empty
 
-USE_PKGSRC_GCC=	# defined
+GCC_REQD+=	2.8.0
 
 #CONFIGURE_ARGS+=--target=m68k-palmos
 CONFIGURE_ARGS+=--enable-targets=m68k-palmos,arm-palmos
