@@ -1,56 +1,60 @@
-#!/bin/sh
+#! /bin/sh
 #
-# $NetBSD: sasl_pwcheck.sh,v 1.1 2000/12/13 16:24:51 jlam Exp $
+# $NetBSD: sasl_pwcheck.sh,v 1.2 2001/11/21 22:22:10 jlam Exp $
 #
 # The pwcheck daemon allows UNIX password authentication with Cyrus SASL.
 #
 # PROVIDE: sasl_pwcheck
 # REQUIRE: DAEMON
 
+if [ -e /etc/rc.subr ]
+then
+	. /etc/rc.subr
+fi
 
 name="sasl_pwcheck"
-command=@PREFIX@/sbin/pwcheck
+rcvar="${name}"
+command="@PREFIX@/sbin/pwcheck"
 command_args="& sleep 2"
+extra_commands="dbinit"
 
-pid=`ps -ax | awk '{print $1,$5}' | grep ${name} | awk '{print $1}'`
+sasldb=@CONFDIR@/sasldb.db
 
-cmd=${1:-start}
-
-case ${cmd} in
-start)
-	if [ "$pid" = "" -a -x ${command} ]
+sasl_pwcheck_dbinit()
+{
+	(
+	saslpasswd=@PREFIX@/sbin/saslpasswd
+	umask 002
+	if [ -e ${sasldb} ]
 	then
-		echo "Starting ${name}."
-		${command} ${command_args}
-	fi
-	;;
-
-restart)
-	( $0 stop )
-	sleep 1
-	$0 start
-	;;
-
-stop)
-	if [ "$pid" != "" ]
-	then
-		echo "Stopping ${name}."
-		kill $pid
-	fi
-	;;
-
-status)
-	if [ "$pid" != "" ]
-	then
-		echo "${name} is running as pid ${pid}."
+		@ECHO@ "You already have an existing SASL password database"
+		@ECHO@ "Skipping empty database generation"
 	else
-		echo "${name} is not running."
+		@ECHO@ password | ${saslpasswd} -p user
+		${saslpasswd} -d user
+		@CHOWN@ @PKG_USER@ ${sasldb}
+		@CHMOD@ 0600 ${sasldb}
 	fi
-	;;
+	)
+}
 
-*)
-	echo 1>&2 "Usage: ${name} [restart|start|stop|status]"
-	exit 1
-	;;
-esac
-exit 0
+sasl_pwcheck_precmd()
+{
+	if [ ! -e ${sasldb} ]
+	then
+		@RCD_SCRIPTS_DIR@/sasl_pwcheck dbinit
+	fi
+}
+
+dbinit_cmd=sasl_pwcheck_dbinit
+start_precmd=sasl_pwcheck_precmd
+
+if [ -e /etc/rc.subr ]
+then
+	load_rc_config $name
+	run_rc_command "$1"
+else
+	@ECHO@ -n " ${name}"
+	start_precmd
+	${command} ${sasl_pwcheck_flags} ${command_args}
+fi

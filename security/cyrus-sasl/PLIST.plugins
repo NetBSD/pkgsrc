@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.plugins,v 1.1 2001/11/01 01:22:02 zuntum Exp $
+@comment $NetBSD: PLIST.plugins,v 1.2 2001/11/21 22:22:10 jlam Exp $
 lib/sasl/libanonymous.a
 lib/sasl/libanonymous.la
 lib/sasl/libanonymous.so
@@ -19,4 +19,4 @@ lib/sasl/libplain.la
 lib/sasl/libplain.so
 lib/sasl/libplain.so.1
 lib/sasl/libplain.so.1.14
-@unexec rmdir -p %D/lib/sasl 2>/dev/null || true
+@unexec ${RMDIR} -p %D/lib/sasl 2>/dev/null || ${TRUE}
