@@ -1,8 +1,9 @@
-$NetBSD: patch-ac,v 1.1 1998/09/13 17:06:09 garbled Exp $
---- src/gsm_code.c.orig	Sun Sep 13 08:04:40 1998
-+++ src/gsm_code.c	Sun Sep 13 08:05:08 1998
+$NetBSD: patch-ac,v 1.2 1998/11/05 02:46:09 mycroft Exp $
+
+--- src/gsm_code.c.orig	Sat Aug 15 15:16:48 1998
++++ src/gsm_code.c	Wed Nov  4 21:27:03 1998
 @@ -7,6 +7,7 @@
- /* $Header: /cvsroot/pkgsrc/mbone/rat/patches/patch-ac,v 1.1 1998/09/13 17:06:09 garbled Exp $ */
+ /* $Header: /cvsroot/pkgsrc/mbone/rat/patches/patch-ac,v 1.2 1998/11/05 02:46:09 mycroft Exp $ */
  
  #include	<stdlib.h>
 +#include	<string.h>
