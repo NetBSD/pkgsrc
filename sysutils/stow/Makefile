@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:53:52 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/08/05 20:38:13 seb Exp $
 #
 
 DISTNAME=	stow-1.3.3
@@ -12,9 +12,9 @@ COMMENT=	Maps several separate packages into a tree without merging them
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	stow.info
 
 .include "../../lang/perl5/buildlink2.mk"
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
