@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8141 2004/11/29 14:05:54 he Exp $
+$NetBSD: CHANGES,v 1.8142 2004/11/29 14:13:40 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5630,3 +5630,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xcompmgr to 1.1.1 [xtraeme 2004-11-29]
 	Updated libassuan to 0.6.8 [shannonjr 2004-11-29]
 	Updated p5-BSD-Resource to 1.24 [he 2004-11-29]
+	Updated p5-Archive-Tar to 1.22 [he 2004-11-29]
