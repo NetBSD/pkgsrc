@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:29 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/10 05:21:51 gson Exp $
 bin/festival
 bin/festival_client
 libexec/audsp
@@ -7,6 +7,7 @@ libexec/festival_client.naked
 man/man1/festival.1
 man/man1/festival_client.1
 share/festival/examples/Makefile
+share/festival/examples/Makefile.orig
 share/festival/examples/addr-mode.scm
 share/festival/examples/benchmark
 share/festival/examples/benchmark.orig
