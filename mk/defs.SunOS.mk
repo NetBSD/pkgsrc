@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.8 2001/11/21 12:42:24 agc Exp $
+# $NetBSD: defs.SunOS.mk,v 1.9 2001/11/21 12:53:05 agc Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -69,3 +69,5 @@ USERADD?=	/usr/sbin/useradd
 
 ROOT_USER?=	root
 ROOT_GROUP?=	root
+
+_IMAKE_MAKE=	/usr/ccs/bin/make	# program which gets invoked by imake

@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.5 2001/11/21 12:42:24 agc Exp $
+# $NetBSD: defs.Darwin.mk,v 1.6 2001/11/21 12:53:05 agc Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -58,3 +58,5 @@ USERADD?=	${FALSE}			# XXX - Fix me!
 
 ROOT_USER?=	root
 ROOT_GROUP?=	wheel
+
+_IMAKE_MAKE=	${MAKE}		# program which gets invoked by imake
