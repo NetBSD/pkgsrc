@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 2003/11/01 08:28:47 grant Exp $
+
 --- src/plugin_common/Makefile.in.orig	2003-01-26 05:42:38.000000000 +1100
 +++ src/plugin_common/Makefile.in	2003-10-31 14:41:00.000000000 +1100
 @@ -90,6 +90,7 @@
