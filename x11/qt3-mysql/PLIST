@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/13 13:33:03 skrll Exp $
+qt3/plugins/sqldrivers/libqsqlmysql.a
+qt3/plugins/sqldrivers/libqsqlmysql.la
+qt3/plugins/sqldrivers/libqsqlmysql.so
+@dirrm qt3/plugins/sqldrivers
