@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/06/06 18:26:50 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/11 23:04:48 jmmv Exp $
 #
 
 DISTNAME=		gcalctool-4.2.83
+PKGREVISION=		1
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=calctool/}
 
@@ -10,6 +11,7 @@ HOMEPAGE=		http://calctool.sourceforge.net/
 COMMENT=		gtk2+ version of calctool
 
 BUILD_USES_MSGFMT=	YES
+DEPENDS+=		gnome-dirs>=1.2:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
@@ -17,9 +19,12 @@ USE_GMAKE=		YES
 USE_X11=		YES
 USE_PKGLOCALEDIR=	yes
 
+GCONF2_SCHEMAS=		gcalctool.schemas
+
 .include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libgnome/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../textproc/scrollkeeper/buildlink2.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../mk/bsd.pkg.mk"
