@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2002/12/29 00:43:52 seb Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/12/04 04:14:05 grant Exp $
 
 .if !defined(DB_BUILDLINK2_MK)
 DB_BUILDLINK2_MK=	# defined
@@ -14,12 +14,16 @@ BUILDLINK_PREFIX.db=		/usr
 BUILDLINK_FILES.db=		include/db.h
 BUILDLINK_FILES.db+=		include/mpool.h
 BUILDLINK_CPPFLAGS.db=		# empty
+BUILDLINK_LDFLAGS.db=		# empty
+BUILDLINK_LIBS.db=		# empty
 _NEED_DB2=			NO
 .  elif exists(/usr/include/db1/db.h)
 # Linux
 BUILDLINK_PREFIX.db=		/usr
 BUILDLINK_FILES.db=		include/db1/*
 BUILDLINK_CPPFLAGS.db=		-I${BUILDLINK_PREFIX.db}/include/db1
+BUILDLINK_LDFLAGS.db=		# empty
+BUILDLINK_LIBS.db=		-ldb1
 BUILDLINK_TRANSFORM+=		l:db:db1
 _NEED_DB2=			NO
 .  endif
@@ -32,6 +36,8 @@ BUILDLINK_PREFIX.db_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.db=		include/db2/*
 BUILDLINK_FILES.db+=		lib/libdb2.*
 BUILDLINK_CPPFLAGS.db=		-I${BUILDLINK_PREFIX.db}/include/db2
+BUILDLINK_LDFLAGS.db=		-L${BUILDLINK_PREFIX.db}/lib -Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db}/lib
+BUILDLINK_LIBS.db=		-ldb2
 BUILDLINK_TRANSFORM+=		l:db:db2
 .endif
 CPPFLAGS+=			${BUILDLINK_CPPFLAGS.db}
