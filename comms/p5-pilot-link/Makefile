@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/29 20:48:08 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/16 13:56:19 wiz Exp $
 
 DISTNAME=		pilot-link.0.9.3
 PKGNAME=		p5-pilot-link-0.9.3
@@ -6,6 +6,7 @@ CATEGORIES=		comms
 MASTER_SITES=		ftp://ryeham.ee.ryerson.ca/pub/PalmOS/
 
 MAINTAINER=		packages@netbsd.org
+COMMENT=		perl interface to pilot-link library
 
 DEPENDS+=		pilot-link-0.9.3:../../comms/pilot-link
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/06/20 21:58:01 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/16 13:59:30 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/18 22:20:02 hoek Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.informatik.uni-frankfurt.de/~fp/uudeview/Apps/frank/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.informatik.uni-frankfurt.de/~fp/uudeview/
+COMMENT=	Library for uu/xx/Base64/BinHex de-/encoding
 
 # "kdesupport-2.1b" included "uu" library.
 CONFLICTS=	kdesupport-2.1b
