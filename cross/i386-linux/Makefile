@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/05 09:00:55 tron Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 14:04:56 wiz Exp $
 #
 
 DISTVERSION=		2.0.7.1
@@ -7,6 +7,7 @@ EXTRACT_ONLY=		# none of the RPM files
 MASTER_SITES=		ftp://ftp.cdrom.com/pub/linux/redhat/redhat-5.1/i386/RedHat/RPMS/
 
 MAINTAINER=		packages@netbsd.org
+COMMENT=		Cross-compile environment for iX86 Linux, libc v6
 
 BUILD_DEPENDS+=		rpm2cpio:../../misc/rpm
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoheader:../../devel/autoconf

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/05 09:00:55 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 14:05:00 wiz Exp $
 #
 
 DISTVERSION=		1.1.2
@@ -6,6 +6,7 @@ DISTFILES=		# none
 
 MAINTAINER=		peace-sacrifice@hauN.org
 HOMEPAGE=		http://chiharu.hauN.org/peace/
+COMMENT=		Cross-compile environment for PEACE/i386
 
 WRKSRC=			${WRKDIR}/${GCC_DISTNAME}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/10/03 22:10:25 christos Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/16 14:05:08 wiz Exp $
 #
 
 DISTNAME=       zoularis-20001003
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	agc@netbsd.org
 HOMEPAGE=	http://www.netbsd.org/
+COMMENT=	provides NetBSD libs, includes and utilities on Solaris
 
 WRKSRC=		${WRKDIR}/bsd
 

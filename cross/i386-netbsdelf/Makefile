@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/02/14 10:06:08 mrg Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 14:04:59 wiz Exp $
 #
 
 DISTVERSION=		1.3.0.0
@@ -6,6 +6,7 @@ DISTFILES=		# none
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/
+COMMENT=		Cross-compile environment for ELF NetBSD/i386
 
 WRKSRC=			${WRKDIR}/${BINUTILS_DISTNAME}
 

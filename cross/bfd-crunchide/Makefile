@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/01 14:24:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 14:04:54 wiz Exp $
 
 DISTNAME=	bfd-crunchide-1.0
 CATEGORIES=	cross
@@ -6,6 +6,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	sakamoto@netbsd.org
+COMMENT=	crunchide using libbfd. Used for cross-building distributions
 
 DEPENDS=	cross-binutils>=2.9.1.1:../binutils
 
