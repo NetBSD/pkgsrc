@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 1999/07/09 22:43:08 tron Exp $
+# $NetBSD: Makefile,v 1.36 1999/07/09 23:38:40 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -25,13 +25,17 @@ CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
 		"--with-qt-dir=${PREFIX}" \
 		"--with-qt-includes=${PREFIX}/include/qt"
 CFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	CXXFLAGS="${CFLAGS}" \
-		all_libraries="-L${LOCALBASE}/lib"
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OBJECT_FMT} == "a.out")
-NOT_FOR_PLATFORM=	NetBSD-*-sparc*
+.if (${OBJECT_FMT} == "a.out") && (${MACHINE_ARCH} == "sparc")
+CFLAGS+=	-static
+PLIST_SRC=	${WRKDIR}/PLIST
+
+post-install:
+	@${GREP} -v ^lib/lib.*\.so ${PKGDIR}/PLIST >${PLIST_SRC}
 .endif
+
+CONFIGURE_ENV=	CXXFLAGS="${CFLAGS}" all_libraries="-L${LOCALBASE}/lib"
 
 .include "../../mk/bsd.pkg.mk"
