@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2000/08/29 16:28:41 rh Exp $
+# $NetBSD: Makefile,v 1.6 2000/09/01 08:51:21 veego Exp $
 #
 
 DISTNAME=		bonobo-0.18
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=/unstable/sources/bonobo/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/bonobo/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
