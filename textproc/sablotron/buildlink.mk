@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/10/05 07:15:28 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/10/05 07:27:48 jlam Exp $
 #
 # This Makefile fragment is included by packages that use sablotron.
 #
@@ -27,6 +27,7 @@ BUILDLINK_FILES.sablotron+=	include/sdom.h
 BUILDLINK_FILES.sablotron+=	include/shandler.h
 BUILDLINK_FILES.sablotron+=	lib/libsablot.*
 
+.include "../../converters/libiconv/buildlink.mk"
 .include "../../textproc/expat/buildlink.mk"
 
 BUILDLINK_TARGETS.sablotron=	sablotron-buildlink
