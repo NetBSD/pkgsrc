@@ -1,9 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.15 2004/10/29 17:47:30 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.16 2004/11/04 16:29:56 xtraeme Exp $
 #
-# Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
+# Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Juan RP <xtraeme@NetBSD.org>.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -11,12 +14,15 @@
 # 1. Redistributions of source code must retain the above copyright
 #    notice, this list of conditions and the following disclaimer.
 # 2. Redistributions in binary form must reproduce the above copyright
-#    notice, this list of conditions and the following disclaimer in
-#    the documentation and/or other materials provided with the
-#    distribution.
-# 3. Neither the name of author nor the names of its contributors may
-#    be used to endorse or promote products derived from this software
-#    without specific prior written permission.
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. All advertising materials mentioning features or use of this software
+#    must display the following acknowledgement:
+#        This product includes software developed by the NetBSD
+#        Foundation, Inc. and its contributors.
+# 4. Neither the name of The NetBSD Foundation nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
 #
 # THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
 # ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
@@ -34,20 +40,21 @@
 #  mklivecd - Build a NetBSD LiveCD! for i386 machines.			 #
 # ====================================================================== #
 
-progname=$(basename $0)
-config_dir="$HOME/.mklivecd"
-pers_conffile="personal_config"
-tmp_file="/tmp/${progname}.$$"
-mntstat="$config_dir/mount.stat"
-
-MKISOFS="@LOCALBASE@/bin/mkisofs"
-CDRECORD="@LOCALBASE@/bin/cdrecord"
+: ${progname:=$(basename $0)}
+: ${config_dir:=$HOME/.mklivecd}
+: ${pers_conffile:=personal_config}
+: ${tmp_file:=/tmp/${progname}.$$}
+: ${pkgsrc_mntstat:=$config_dir/pkgsrc_mount.stat}
+: ${pkgsrcdist_mntstat:=$config_dir/pkgsrcdist_mount.stat}
+: ${MKISOFS:=@LOCALBASE@/bin/mkisofs}
+: ${CDRECORD:=@LOCALBASE@/bin/cdrecord}
 #
-# Don't modify it! they are needed for booting grub
-MKISOFS_FIXED_ARGS="-no-emul-boot -boot-load-size 30 -boot-info-table"
-BOOTDIR="boot/grub"
-BOOTIMAGE="stage2_eltorito"
-GRUB_FILES="stage2_eltorito iso9660_stage1_5"
+# Don't modify the next ones! they are needed for booting grub.
+#
+: ${MKISOFS_FIXED_ARGS:=-no-emul-boot -boot-load-size 30 -boot-info-table}
+: ${BOOTDIR:=boot/grub}
+: ${BOOTIMAGE:=stage2_eltorito}
+: ${GRUB_FILES:=stage2_eltorito iso9660_stage1_5}
 
 trap "echo; showmsg \"Process cancelled!\"; bye 127" INT QUIT
 
@@ -89,8 +96,9 @@ bye()
 
 do_conf()
 {
-	BASE_VARS="SOURCEDIR PKGSRCDIR SHAREDIR BASEDIR WORKDIR ISODIR \
-		   BASE_SETS_DIR X11_SETS_DIR BASE_SETS X11_SETS"
+	BASE_VARS="SOURCEDIR PKGSRCDIR PKGSRCDISTDIR SHAREDIR BASEDIR WORKDIR \
+		   ISODIR BASE_SETS_DIR X11_SETS_DIR BASE_SETS X11_SETS \
+		   CHROOT_SHELL"
 
 	MISC_VARS="ENABLE_X11 MKISOFS_ARGS CDRECORD_ARGS BLANK_BEFORE_BURN \
 		   CDROM_DEVICE PERSONAL_CONFIG BOOTKERN KERNEL_NAME \
@@ -103,6 +111,7 @@ do_conf()
 	# Base directories/sets
         : ${SOURCEDIR:=/usr/src}
 	: ${PKGSRCDIR:=/usr/pkgsrc}
+	: ${PKGSRCDISTDIR:=/usr/pkgsrc/distfiles}
 	: ${SHAREDIR:=@PREFIX@/share/mklivecd}
 	: ${BASEDIR:=$HOME/livecd}
 	: ${WORKDIR:=${BASEDIR}/work}
@@ -111,6 +120,7 @@ do_conf()
 	: ${X11_SETS_DIR:=${BASE_SETS_DIR}}
 	: ${BASE_SETS:=etc.tgz base.tgz comp.tgz text.tgz}
 	: ${X11_SETS:=xbase.tgz xcomp.tgz xfont.tgz xserver.tgz}
+	: ${CHROOT_SHELL:=/bin/ksh}
 
 	# Miscellaneous options
 	: ${ENABLE_X11:=no}
@@ -153,7 +163,7 @@ do_conf()
 
 EOF
 		echo "# Base directories/options" >> $config_file
-		for var in `echo $BASE_VARS | tr ' ' '\n'`
+		for var in $(echo $BASE_VARS | tr ' ' '\n')
 		do
 		    eval val=\""\$$var"\"
 		    echo "$var=\"$val\"" >> $config_file
@@ -161,7 +171,7 @@ EOF
 		echo >> $config_file
 
 		echo "# Miscellaneous options" >> $config_file
-		for var in `echo $MISC_VARS | tr ' ' '\n'`
+		for var in $(echo $MISC_VARS | tr ' ' '\n')
 		do
 		    eval val=\""\$$var"\"
 		    echo "$var=\"$val\"" >> $config_file
@@ -169,7 +179,7 @@ EOF
 		echo >> $config_file
 
 		echo "# Mount arguments" >> $config_file
-		for var in `echo $MNT_VARS | tr ' ' '\n'`
+		for var in $(echo $MNT_VARS | tr ' ' '\n')
 		do
 		    eval val=\""\$$var"\"
 		    echo "$var=\"$val\"" >> $config_file
@@ -250,19 +260,37 @@ do_cdlive()
 				cp @PREFIX@/share/grub/@MACHINE_ARCH@-/$f \
 				    $ISODIR/$BOOTDIR
 				[ "$verbose_mode" = "on" ] && \
-				    showmsg "Copying $f into $ISODIR/boot/grub."
+				    showmsg "Copying $f into $ISODIR/$BOOTDIR."
 			    else
 				showmsg "Not copying $f, already exists."
 			    fi
 		    done
-		    cp $WORKDIR/$KERNEL_NAME/netbsd $ISODIR/$BOOTDIR
+		    cp $WORKDIR/$KERNEL_NAME/netbsd $ISODIR/$BOOTDIR/$BOOTKERN
+		    [ "$verbose_mode" = "on" ] && \
+		    	showmsg "Compressing kernel $BOOTKERN..."
+		    
+		    gzip $ISODIR/$BOOTDIR/$BOOTKERN
+		    
+		    [ "$verbose_mode" = "on" ] && \
+		    	showmsg "Creating $ISODIR/$BOOTDIR/menu.lst..."
+
+		    if [ ! -f $ISODIR/$BOOTDIR/menu.lst ]; then
+		    	cat > $ISODIR/$BOOTDIR/menu.lst << _EOF_
+# Default GRUB menu file created by ${progname}.
+# Date: $(date).
+
+default 0
+timeout 10
+
+title NetBSD/$BOOTKERN kernel
+kernel --type=netbsd /$BOOTDIR/$BOOTKERN.gz
+
+_EOF_
+		    fi
+
 		    if [ $? -eq 0 ]; then
-			showmsg "boot/kernel installed.."
-			if [ "$verbose_mode" = "on" ]; then
-			    showmsg "Boot/kernel images installed!"
-			    showmsg "Next step: ${progname} base"
-			fi
-			echo
+			    showmsg "Boot/kernel files installed!"
+			showmsg "Next step: ${progname} base"
 			make clean >/dev/null 2>&1
 			rm -rf $KERNEL_NAME
 		    else
@@ -271,13 +299,10 @@ do_cdlive()
 		else
 		    echo
 		    showmsg "kernel build failed."
-		    showmsg "Boot/kernel images were not installed!"
-		    echo
+		    showmsg "Boot/kernel files were not installed!"
 		fi
 	;;
 	base)
-		chown -R root:wheel $ISODIR/$BOOTDIR
-
 		for F in ${BASE_SETS}
 		do
 		    if [ ! -f $BASE_SETS_DIR/$F ]; then
@@ -349,7 +374,7 @@ do_cdlive()
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.15 2004/10/29 17:47:30 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.16 2004/11/04 16:29:56 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -382,39 +407,54 @@ _EOF_
 		fi
 	;;
 	chroot)
-		(						    \
-		echo "export PS1=\"$KERNEL_NAME> \"";	    \
-		echo "set -o emacs";			    \
+		(					\
+		echo "export PS1=\"$KERNEL_NAME> \"";	\
+		echo "set -o emacs";			\
 		) > $ISODIR/etc/profile
 
-		if [ ! -d $ISODIR/usr/pkgsrc ]; then
-		    mkdir $ISODIR/usr/pkgsrc
+		if [ ! -d $ISODIR/usr/pkgsrc/distfiles ]; then
+		    mkdir -p $ISODIR/usr/pkgsrc/distfiles
 		fi
 
 		if [ ! -f $ISODIR/usr/share/misc/termcap ]; then
-		    cp /usr/share/misc/termcap* \
+		    cp /usr/share/misc/termcap*		\
 			$ISODIR/usr/share/misc
 		fi
 
 		showmsg "Entering into the chroot!"
 
 		if [ -d $PKGSRCDIR ]; then
-		    if [ -f $mntstat ]; then
-			count=`cat $mntstat`
+		    if [ -f $pkgsrc_mntstat ]; then
+			count=$(cat $pkgsrc_mntstat)
 			count=$(($count + 1))
-			echo $count > $mntstat
+			echo $count > $pkgsrc_mntstat
 			showmsg "pkgsrc directory already mounted."
 		    else
 			showmsg "pkgsrc directory ready."
-			echo "1" > $mntstat
+			echo "1" > $pkgsrc_mntstat
 			mount_null $PKGSRCDIR $ISODIR/usr/pkgsrc
 		    fi
 		else
 		    showmsg "Can't find $PKGSRCDIR, disabling it."
 		fi
+		
+		if [ -d $PKGSRCDISTDIR ]; then
+			if [ -f $pkgsrcdist_mntstat ]; then
+				count=$(cat $pkgsrcdist_mntstat)
+				count=$(($count +1))
+				echo $count > $pkgsrcdist_mntstat
+				showmsg "distfiles directory already mounted."
+			else
+				showmsg "distfiles directory ready."
+				echo "1" > $pkgsrcdist_mntstat
+				mount_null $PKGSRCDISTDIR $ISODIR/usr/pkgsrc/distfiles
+			fi
+		else
+			showmsg "Can't find $PKGSRCDISTDIR, disabling it."
+		fi
 
 		echo
-		chroot $ISODIR /bin/ksh
+		chroot $ISODIR $CHROOT_SHELL
 		echo
 
 		if [ ! -d $ISODIR/root ]; then
@@ -429,7 +469,7 @@ _EOF_
 		SUBST_H="mount_mfs $MNT_HOME_ARGS swap /home"
 		SUBST_HT="@TAR@ xfzp /stand/mfs_home.tgz -C /"
 		SUBST_S="mount_mfs $MNT_PKG_SYSCONFDIR_ARGS swap /$PKG_SYSCONFDIR"
-		SUBST_ST="@TAR@ xfjp /stand/mfs_pkg_sysconfdir.tgz -C /"
+		SUBST_ST="@TAR@ xfzp /stand/mfs_pkg_sysconfdir.tgz -C /"
 
 		sed -e "s,@MNT_DEV_ARGS@,$MNT_DEV_ARGS,g" \
 		    -e "s,@MNT_ETC_ARGS@,$MNT_ETC_ARGS,g" \
@@ -500,24 +540,44 @@ _EOF_
 
 		chmod -R a+rx $ISODIR/etc/rc.d
 
-		if [ ! -f $mntstat ]; then
-		    showmsg "pkgsrc was not mounted."
+		if [ ! -f $pkgsrcdist_mntstat ]; then
+			showmsg "distfiles directory was not mounted."
 		else
-		    cnt=`cat $mntstat`
-		    if [ "$cnt" -gt 1 ]; then
-			cnt=$(($cnt - 1))
-			echo $cnt > $mntstat
-			showmsg "pkgsrc still in use by mklivecd."
-		    else
-			showmsg "Unmounting pkgsrc."
-			umount -R $ISODIR/usr/pkgsrc
-			if [ $? -eq 0 ]; then
-			    rm $mntstat
+			cnt=$(cat $pkgsrcdist_mntstat)
+			if [ "$cnt" -gt 1 ]; then
+				cnt=$(($cnt - 1))
+				echo $cnt > $pkgsrcdist_mntstat
+				showmsg "distfiles directory still in use by mklivecd."
 			else
-			    echo "Can't umount $PKGSRCDIR."
+				showmsg "Unmounting distfiles directory."
+				umount -R $ISODIR/usr/pkgsrc/distfiles
+				if [ $? -eq 0 ]; then
+					rm $pkgsrcdist_mntstat
+				else
+					echo "Can't umount $PKGSRCDISTDIR."
+				fi
 			fi
-		    fi
 		fi
+
+		if [ ! -f $pkgsrc_mntstat ]; then
+			showmsg "pkgsrc directory was not mounted."
+		else
+			cnt=$(cat $pkgsrc_mntstat)
+			if [ "$cnt" -gt 1 ]; then
+				cnt=$(($cnt - 1)) 
+				echo $cnt > $pkgsrc_mntstat 
+				showmsg "pkgsrc directory still in use by mklivecd."
+			else
+				showmsg "Unmounting pkgsrc directory."
+				umount -R $ISODIR/usr/pkgsrc
+				if [ $? -eq 0 ]; then
+					rm $pkgsrc_mntstat
+				else
+					echo "Can't umount $PKGSRCDIR."
+				fi
+			fi
+		fi
+
 		if [ "$verbose_mode" = "on" ]; then
 		    showmsg "Size: $(du -sh $ISODIR)"
 		fi
@@ -538,13 +598,14 @@ _EOF_
 		showmsg "Done."
 	;;
 	iso)
+		[ -d $ISODIR/$BOOTDIR ] && chown -R root:wheel $ISODIR/$BOOTDIR
+
 		if [ ! -f $ISODIR/stand/mfs_etc.tgz ]; then
 			showmsg "Target iso failed!"
 			showmsg "Can't find mfs_etc.tgz file."
 			bye 1
 		fi
 
-		echo
 		showmsg "Removing not needed directories."
 		for RM in ${REMOVE_DIRS}
                 do
@@ -589,7 +650,7 @@ _EOF_
 checkconf()
 {
 	if [ -f $config_file ]; then
-	    [ `id -u` -ne 0 ] && showmsg "must be run as root" && bye 1
+	    [ $(id -u) -ne 0 ] && showmsg "must be run as root" && bye 1
 	    do_conf_reset; do_conf
 	else
 	    showmsg "$config_file does not exist, exiting."
@@ -601,7 +662,7 @@ checkconf()
 #  Main program								      #
 # =========================================================================== #
 
-args=`getopt c:v $*`
+args=$(getopt c:v $*)
 if [ $? -ne 0 ]; then
 	usage
 fi
