@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.10 2004/04/17 10:37:12 jmmv Exp $
+$NetBSD: patch-ab,v 1.11 2005/03/02 15:38:08 wiz Exp $
 
 http://bugzilla.gnome.org/show_bug.cgi?id=140329
 
---- gmodule/gmodule.c.orig	2004-02-24 15:00:19.000000000 +0100
-+++ gmodule/gmodule.c	2004-04-17 11:43:31.000000000 +0200
-@@ -521,6 +521,24 @@
+--- gmodule/gmodule.c.orig	2005-01-02 17:03:56.000000000 +0100
++++ gmodule/gmodule.c
+@@ -560,6 +560,24 @@ g_module_error (void)
    return g_static_private_get (&module_error_private);
  }
  
@@ -29,7 +29,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=140329
  gboolean
  g_module_symbol (GModule	*module,
  		 const gchar	*symbol_name,
-@@ -538,17 +556,28 @@
+@@ -577,17 +595,28 @@ g_module_symbol (GModule	*module,
    
    g_static_rec_mutex_lock (&g_module_global_lock);
  
