@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.21 2001/07/02 04:26:50 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.22 2001/07/02 05:03:45 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -159,7 +159,8 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 # to ${BUILDLINK_DIR} into ${LOCALBASE}.
 #
 .if defined(USE_LIBTOOL)
-REPLACE_BUILDLINK+=	`${FIND} . -name "*.lai" | ${SED} -e "s|^\./||"`
+REPLACE_BUILDLINK+=	\
+	`${FIND} . -name "*.lai" | ${SED} -e "s|^\./||" | ${SORT}`
 .endif
 
 .if defined(REPLACE_BUILDLINK)
