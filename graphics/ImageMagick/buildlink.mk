@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/09 18:24:09 zuntum Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:42 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ImageMagick.
 #
@@ -20,7 +20,7 @@ IMAGEMAGICK_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.ImageMagick?=	ImageMagick>=5.2.8
 DEPENDS+=	${BUILDLINK_DEPENDS.ImageMagick}:../../graphics/ImageMagick
 
-BUILDLINK_PREFIX.ImageMagick=	${LOCALBASE}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.ImageMagick=ImageMagick
 BUILDLINK_FILES.ImageMagick=	include/Magick++.h
 BUILDLINK_FILES.ImageMagick+=	include/Magick++/*
 BUILDLINK_FILES.ImageMagick+=	include/magick/*

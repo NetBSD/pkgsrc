@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/02 05:33:58 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:42 jlam Exp $
 #
 # This Makefile fragment is included by packages that use avifile.
 #
@@ -20,7 +20,7 @@ AVIFILE_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.avifile?=	avifile>=0.53.5
 DEPENDS+=	${BUILDLINK_DEPENDS.avifile}:../../graphics/avifile
 
-BUILDLINK_PREFIX.avifile=	${LOCALBASE}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.avifile=avifile
 BUILDLINK_FILES.avifile=	lib/libaviplay.*
 BUILDLINK_FILES.avifile+=	include/avifile/*
 BUILDLINK_FILES.avifile+=	include/avifile/wine/*
@@ -29,7 +29,7 @@ BUILDLINK_TARGETS.avifile=	avifile-buildlink
 BUILDLINK_TARGETS.avifile+=	avifile-buildlink-config-wrapper
 BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.avifile}
 
-BUILDLINK_CONFIG.avifile=	${LOCALBASE}/bin/avifile-config
+BUILDLINK_CONFIG.avifile=	${BUILDLINK_PREFIX.avifile}/bin/avifile-config
 BUILDLINK_CONFIG_WRAPPER.avifile=${BUILDLINK_DIR}/bin/avifile-config
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
