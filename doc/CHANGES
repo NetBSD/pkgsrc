@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9063 2005/02/07 09:00:48 adam Exp $
+$NetBSD: CHANGES,v 1.9064 2005/02/07 09:20:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -782,3 +782,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated nmapfe to 0.9.5nb19 [salo 2005-02-06]
 	Updated vice to 1.16 [kristerw 2005-02-06]
 	Updated ProjectCenter to 0.4.2 [adam 2005-02-07]
+	Updated Gorm to 0.9.0 [adam 2005-02-07]
