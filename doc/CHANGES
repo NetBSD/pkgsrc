@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8249 2004/12/04 16:26:19 wiz Exp $
+$NetBSD: CHANGES,v 1.8250 2004/12/04 17:28:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5753,3 +5753,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated guppi to 0.40.3nb13 [wiz 2004-12-04]
 	Updated g-wrap1 to 1.3.4nb6 [wiz 2004-12-04]
 	Updated gnucash to 1.8.9nb5 [wiz 2004-12-04]
+	Added ruby-DBD-sqlite-0.0.21 [taya 2004-12-04]
