@@ -1,36 +1,33 @@
-# $NetBSD: Makefile.common,v 1.4 2002/09/08 09:59:51 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.5 2002/10/13 07:41:58 jlam Exp $
 #
 
 RELVERSION=	1.3.1
 BLACKDOWN_REL=	FCS-02b
 RELNAME=	${RELVERSION}-02b-FCS-linux
 EXTNAME=	${BASENAME}-${RELNAME}
+CATEGORIES=	lang
 EXTRACT_SUFX=	.bin
 
 BD_SUBDIR=	JDK-${RELVERSION}/${BLACKDOWN_ARCH}/${BLACKDOWN_REL}
 MASTER_SITES=	ftp://ftp.tux.org/pub/java/${BD_SUBDIR}/ \
-	ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/${BD_SUBDIR}/ \
-	ftp://mirror.aarnet.edu.au/pub/java-linux/${BD_SUBDIR}/ \
-	ftp://ftp.informatik.hu-berlin.de/pub/Java/Linux/${BD_SUBDIR}/
-
-.if ${MACHINE_ARCH:Mi[3-6]86} != ""
-MACHINE_ARCH=i386
-.endif
+		ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/${BD_SUBDIR}/ \
+		ftp://mirror.aarnet.edu.au/pub/java-linux/${BD_SUBDIR}/ \
+		ftp://ftp.informatik.hu-berlin.de/pub/Java/Linux/${BD_SUBDIR}/
 
 .if ${MACHINE_ARCH} == "powerpc"
 BLACKDOWN_ARCH?=	ppc
+.elif !empty(MACHINE_ARCH:Mi[3-6]86)
+BLACKDOWN_ARCH?=	i386
 .else
 BLACKDOWN_ARCH?=	${MACHINE_ARCH}
 .endif
 
-.if	${BLACKDOWN_ARCH} == "arm"
+.if ${BLACKDOWN_ARCH} == "arm"
 BLACKDOWN_REL=	rc1
 EXTRACT_SUFX=	.tar.bz2
-.elif	${BLACKDOWN_ARCH} == "ppc"
+.elif ${BLACKDOWN_ARCH} == "ppc"
 DEPENDS+=	linuxppc_lib>=2000.4.2:../../emulators/linuxppc_lib
 .endif
-
-CATEGORIES=	lang
 
 MAINTAINER=	jschauma@netbsd.org
 HOMEPAGE=	http://www.blackdown.org
@@ -41,20 +38,23 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-CHECK_SHLIBS=	NO		#This would use NetBSD ldd on Linux shlibs.
+CHECK_SHLIBS=	NO	# This would use NetBSD ldd on Linux shlibs.
 
 .include "../../mk/bsd.prefs.mk"
 
-# We need to overwrite JDK_HOME, since JRE and JDK need to be
-# installed in the same directory
-JDK_HOME:=	${LOCALBASE}/java/blackdown-${RELVERSION}
+JVM_HOME=	${LOCALBASE}/java/blackdown-${RELVERSION}
 
 WRKSRC=		${WRKDIR}/${BASENAME}${RELVERSION}
 
-NO_BUILD=	yes
-NO_MTREE=	yes	# since we change PREFIX
+USE_BUILDLINK2=	# defined
+NO_CONFIGURE=	# defined
+NO_BUILD=	# defined
+NO_MTREE=	# defined, since we change PREFIX
 
-PLIST_SUBST+=	RELVERSION=${RELVERSION}
+.if ${OPSYS} == "NetBSD"
+MESSAGE_SRC=	${PKGDIR}/MESSAGE.${OPSYS}
+.endif
+
 PLIST_SUBST+=	BLACKDOWN_ARCH=${BLACKDOWN_ARCH}
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-powerpc NetBSD-*-sparc \
@@ -63,17 +63,15 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-powerpc NetBSD-*-sparc \
 .if ${EXTRACT_SUFX} == ".bin"
 EXTRACT_CMD=	${ECHO} yes | ${DISTDIR}/${DISTFILES} --nox11 > /dev/null
 post-fetch:
-	@${CHMOD} +x ${DISTDIR}/${DISTFILES}
-.endif
-
-.if ${OPSYS} == "NetBSD"
-MESSAGE_SRC=	${PKGDIR}/MESSAGE.${OPSYS}
+	${CHMOD} +x ${DISTDIR}/${DISTFILES}
 .endif
 
 post-patch:
-	@${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
-	@${FIND} ${WRKSRC} -name '*.1.gz' -print | ${XARGS} ${GUNZIP_CMD}
+	${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC} -name '*.1.gz' -print | ${XARGS} ${GUNZIP_CMD}
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${JDK_HOME}
-	cd ${WRKSRC} && ${PAX} -rw . ${JDK_HOME}
+	${INSTALL_PROGRAM_DIR} ${PREFIX}
+	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}
+
+.include "../../mk/bsd.pkg.mk"
