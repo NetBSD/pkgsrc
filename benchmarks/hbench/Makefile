@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/09/05 22:02:19 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/17 14:49:12 agc Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
@@ -16,36 +16,29 @@ WRKSRC=			${WRKDIR}/hbench-OS
 NETBSDVER!=		echo `uname -s|tr '[A-Z]' '[a-z]'``uname -r`-`uname -m`
 ARCH!=			echo `uname -m`
 
+PLIST_SRC=		${WRKDIR}/PLIST-src
+
 post-patch:
-	@if [ ${ARCH} = i386 ];then \
-		${CAT} ${PKGDIR}/PLIST.md ${PKGDIR}/PLIST.i386 ${PKGDIR}/PLIST.common >foo ;\
-	else \
-		${CAT} ${PKGDIR}/PLIST.md ${PKGDIR}/PLIST.common >foo ;\
-	fi 
-	@sed -e 's@XXXNETBSDVERXXX@${NETBSDVER}@' <foo> ${PKGDIR}/PLIST
-	@${RM} -f foo
+	@if [ ${ARCH} = i386 ];then					\
+		extrafiles=${PKGDIR}/PLIST.i386;			\
+	else								\
+		extrafiles="";						\
+	fi ;								\
+	${CAT} ${PKGDIR}/PLIST.md $$extrafiles ${PKGDIR}/PLIST.common |	\
+		${SED} -e 's@XXXNETBSDVERXXX@${NETBSDVER}@' > ${PLIST_SRC}
 
 post-configure:
-	@${MV} ${WRKSRC}/scripts/create-all-analyses foo
-	${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g' < foo > ${WRKSRC}/scripts/create-all-analyses
-	@${MV} ${WRKSRC}/scripts/create-all-latgraphs foo
-	${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g' < foo > ${WRKSRC}/scripts/create-all-latgraphs
-	@${MV} ${WRKSRC}/scripts/create-all-summaries foo
-	${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g' < foo > ${WRKSRC}/scripts/create-all-summaries
-	@${MV} ${WRKSRC}/scripts/gen-analysis foo
-	${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g' < foo > ${WRKSRC}/scripts/gen-analysis
-	@${MV} ${WRKSRC}/scripts/gen-latgraph foo
-	${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g' < foo > ${WRKSRC}/scripts/gen-latgraph
-	@${MV} ${WRKSRC}/scripts/gen-summary foo
-	${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g' < foo > ${WRKSRC}/scripts/gen-summary
-	@${MV} ${WRKSRC}/scripts/interactive-setup foo
-	${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g' < foo > ${WRKSRC}/scripts/interactive-setup
-	@${MV} ${WRKSRC}/scripts/maindriver foo
-	${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g' < foo > ${WRKSRC}/scripts/maindriver
-	@${MV} ${WRKSRC}/Results/Makefile foo
-	${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g' < foo > ${WRKSRC}/Results/Makefile
-	@${RM} -f foo
-	@chmod 0755 ${WRKSRC}/scripts/*
+	@cd ${WRKSRC};							\
+	for f in scripts/create-all-analyses				\
+		scripts/create-all-latgraphs				\
+		scripts/create-all-summaries scripts/gen-analysis	\
+		scripts/gen-latgraph scripts/gen-summary 		\
+		scripts/interactive-setup scripts/maindriver		\
+		Results/Makefile; do					\
+		${MV} $$f $$f.in;					\
+		${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g' $$f.in > $$f;	\
+	done
+	@/bin/chmod 0755 ${WRKSRC}/scripts/*
 
 do-install:
 	@${SETENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} ${SCRIPTDIR}/do-install
