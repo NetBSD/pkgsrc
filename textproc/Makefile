@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.238 2004/03/04 23:23:17 minskim Exp $
+# $NetBSD: Makefile,v 1.239 2004/03/06 18:55:56 recht Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -193,6 +193,7 @@ SUBDIR+=	py-docutils
 SUBDIR+=	py-dtml
 SUBDIR+=	py-expat
 SUBDIR+=	py-gdick
+SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-libxml2
 SUBDIR+=	py-libxslt
 SUBDIR+=	py-xml
