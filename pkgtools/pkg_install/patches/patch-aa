@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2001/03/07 01:11:49 hubertf Exp $
+$NetBSD: patch-aa,v 1.5 2002/03/04 13:48:31 seb Exp $
 
---- Makefile.orig	Wed Jan 10 03:25:36 2001
-+++ Makefile	Wed Mar  7 02:10:41 2001
+--- Makefile.orig	Fri Feb  8 19:18:50 2002
++++ Makefile
 @@ -2,5 +2,7 @@
  # Original from FreeBSD, no rcs id.
  
 -SUBDIR=lib .WAIT add admin create delete info
-+# .WAIT was introduced in post-1.5 NetBSD-current:
-+#HF#SUBDIR=lib .WAIT add admin create delete info
 +SUBDIR=lib add admin create delete info
++
++all-add all-admin all-create all-delete all-info: all-lib
  
  .include <bsd.subdir.mk>
