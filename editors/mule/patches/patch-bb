@@ -1,7 +1,7 @@
-$NetBSD: patch-bb,v 1.1.1.1 2000/11/21 05:21:14 kei Exp $
+$NetBSD: patch-bb,v 1.2 2000/12/16 03:21:16 kei Exp $
 
-*** man/texinfo.tex.orig	Fri Nov 17 16:10:16 2000
---- man/texinfo.tex	Fri Nov 17 20:00:13 2000
+*** man/texinfo.tex.orig	Fri Oct 21 13:19:39 1994
+--- man/texinfo.tex	Sat Dec 16 12:02:00 2000
 ***************
 *** 1,6 ****
 ! %% TeX macros to handle texinfo files
@@ -34,7 +34,7 @@ $NetBSD: patch-bb,v 1.1.1.1 2000/11/21 05:21:14 kei Exp $
   
   % This automatically updates the version number based on RCS.
   \def\deftexinfoversion$#1: #2 ${\def\texinfoversion{#2}}
-! \deftexinfoversion Revision: 2.133
+! \deftexinfoversion$Revision: 1.2 $
   \message{Loading texinfo package [Version \texinfoversion]:}
   
 ! % Print the version number if in a .fmt file.
