@@ -1,0 +1,33 @@
+$NetBSD: patch-ac,v 1.1.1.1 1998/11/05 08:26:03 garbled Exp $
+--- lib/Makefile.in.orig	Sun Aug 30 08:01:22 1998
++++ lib/Makefile.in	Thu Nov  5 00:48:07 1998
+@@ -15,7 +15,7 @@
+ #
+ # Modified by H.Kakugawa to use libtool
+ 
+-LIBTOOL   = ../libtool
++LIBTOOL   = @LIBTOOL@
+ SHELL     = /bin/sh
+ CC        = @CC@
+ CPP       = @CPP@
+@@ -251,15 +251,15 @@
+ 
+ install: dummy
+ 	$(LIBTOOL) --mode=install \
+-		$(INSTALL_DATA) libt1.la libt1x.la $(libdir)
++		$(INSTALL_DATA) .libs/libt1.a .libs/libt1.so.* $(libdir)
+ 	$(LIBTOOL) --mode=install \
+-		$(INSTALL_DATA) t1lib.h t1libx.h $(includedir)
+-	$(MKINSTALLDIRS) $(datadir)/t1lib-$(t1lib_version).$(t1lib_revision)
+-	if (test -f $(datadir)/t1lib-$(t1lib_version).$(t1lib_revision)/t1lib.config) \
++		$(INSTALL_DATA) t1lib.h t1lib.h $(includedir)
++	$(MKINSTALLDIRS) $(datadir)/t1lib
++	if (test -f $(datadir)/t1lib/t1lib.config) \
+ 	then \
+ 	  echo "Alert: Global configuration file exists, installation skipped!"; \
+ 	else \
+-	  $(LIBTOOL) --mode=install $(INSTALL_DATA) t1lib.config $(datadir)/t1lib-$(t1lib_version).$(t1lib_revision); \
++	  $(LIBTOOL) --mode=install $(INSTALL_DATA) t1lib.config $(datadir)/t1lib; \
+ 	fi;
+ 
+ 
