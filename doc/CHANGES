@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1577 2003/03/06 12:39:50 grant Exp $
+$NetBSD: CHANGES,v 1.1578 2003/03/06 13:55:21 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -975,3 +975,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added cvsync-0.14.0 [martin 2003-03-06]
 	Updated bind8 to 8.3.4nb1 [is 2003-03-06]
 	Updated cvsync-0.14.0nb1 [grant 2003-03-06]
+	Updated cvsync-0.14.1 [gehenna 2003-03-06]
