@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/03/18 06:44:50 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2002/03/25 01:19:50 jmc Exp $
 #
 
 DISTNAME=	ekg-20020317
@@ -17,6 +17,7 @@ USE_GMAKE=		YES
 CONFIGURE_ARGS+=	--with-readline=${PREFIX}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/man
+CONFIGURE_ARGS+=	--without-debug
 
 REPLACE_PERL=		docs/ekl.pl
 
