@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/13 13:51:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:32:46 grant Exp $
 #
 
 DISTNAME=	SDL_perl-1.19.2
@@ -7,7 +7,7 @@ PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	ftp://sdlperl.org/SDL_perl/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sdlperl.org/
 COMMENT=	Perl module for SDL
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/13 13:51:34 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:34:40 grant Exp $
 #
 
 DISTNAME=	mined-2000.7
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://towo.net/mined/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://towo.net/mined/
 COMMENT=	html-aware editor
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/06/02 01:20:02 jschauma Exp $
+# $NetBSD: Makefile,v 1.37 2003/07/17 21:35:15 grant Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://dickey.his.com/vile/ \
 			ftp://invisible-island.net/vile/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		VI Like Emacs, X11 version -- a fully "X aware" vi work-alike
 
 USE_BUILDLINK2=		# defined

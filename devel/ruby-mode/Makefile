@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:33:41 grant Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -7,7 +7,7 @@ WRKSRC=		${RUBY_WRKSRC}/misc
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www2.pos.to/~tosh/ruby/rdtool/
 COMMENT=	Ruby editing mode for Emacs
 

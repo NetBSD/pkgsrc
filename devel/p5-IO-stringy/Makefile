@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/06/02 01:20:28 jschauma Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:32:34 grant Exp $
 #
 
 DISTNAME=	IO-stringy-2.108
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5isr
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.zeegee.com/code/perl/IO-stringy/
 COMMENT=	Perl class for I/O on in-core objects like strings and arrays
 

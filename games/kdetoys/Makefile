@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/13 17:57:55 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/17 21:38:51 grant Exp $
 
 DISTNAME=	kdetoys-1.1.2
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	games kde
 MASTER_SITES=	${MASTER_SITE_LOCAL}/kde1
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	Toys for the KDE integrated X11 desktop
 

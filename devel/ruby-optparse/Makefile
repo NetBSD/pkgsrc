@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/12/30 17:09:14 taca Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 21:33:42 grant Exp $
 # FreeBSD: ports/devel/ruby-optparse/Makefile,v 1.10 2001/01/26 03:42:37 knu Exp
 
 DISTNAME=	optparse-0.8.6
@@ -6,7 +6,7 @@ PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://member.nifty.ne.jp/nokada/archive/
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://member.nifty.ne.jp/nokada/ruby.html
 COMMENT=	Yet another command line option parser for Ruby
 

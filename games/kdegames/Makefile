@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2003/07/13 17:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2003/07/17 21:38:49 grant Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:49 asami Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	games kde
 MASTER_SITES=	${MASTER_SITE_LOCAL}/kde1
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	Games for the KDE integrated X11 desktop
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2003/06/02 01:20:30 jschauma Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 21:32:29 grant Exp $
 
 DISTNAME=	Heap-0.50
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Heap/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Perl collection of routines for managing a heap data structure
 
 USE_BUILDLINK2=		YES

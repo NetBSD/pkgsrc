@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/26 04:05:51 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:35:48 grant Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 PKGREVISION=		8
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.suse.com/pub/suse/discontinued/i386/update/${SUSE_VERSI
 
 DISTFILES=		${RPMFILES}
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package
 
