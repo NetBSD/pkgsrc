@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3934 2003/12/03 18:42:33 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3935 2003/12/03 18:49:15 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4791,3 +4791,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bbapm to 0.0.1nb1 [gson 2003-12-03]
 	Updated evilwm to 0.99.17 [sketch 2003-12-03]
 	Added postal-0.62 [xtraeme 2003-12-03]
+	Added boson-0.8 [xtraeme 2003-12-03]
