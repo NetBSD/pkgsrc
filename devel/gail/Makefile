@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2004/02/14 17:21:37 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2004/04/01 18:30:06 jmmv Exp $
 #
 
-DISTNAME=	gail-1.4.1
-PKGREVISION=	2
+DISTNAME=	gail-1.6.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gail/1.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gail/1.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -16,16 +15,15 @@ USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
 USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE=	gail.pc.in
 
-CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
