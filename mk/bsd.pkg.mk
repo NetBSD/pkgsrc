@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.297 1999/07/13 18:09:19 mjl Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.298 1999/07/14 19:34:06 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1963,7 +1963,7 @@ binpkg-list:
 					if [ -f "$$j" ] ; then		\
 						${ECHO} $$i/$$j; 	\
 					fi ;				\
-				done ; 				\
+				done ; 					\
 			fi ) ; 						\
 		done | ${AWK} -F/ '					\
 			{						\
@@ -2051,7 +2051,6 @@ FTP_PKG_URL_HOST?=	ftp://ftp.netbsd.org
 FTP_PKG_URL_DIR?=	/pub/NetBSD/packages
 
 readme:
-	@if [ -f README.html ]; then ${MV} -f README.html README.html.BAK ; fi
 	@cd ${.CURDIR} && ${MAKE} README.html PKG_URL=${FTP_PKG_URL_HOST}${FTP_PKG_URL_DIR}
 .endif
 
@@ -2062,7 +2061,6 @@ CDROM_PKG_URL_HOST?=	file://localhost
 CDROM_PKG_URL_DIR?=	/usr/pkgsrc/packages
 
 cdrom-readme:
-	@if [ -f README.html ]; then ${MV} -f README.html README.html.BAK ; fi
 	@cd ${.CURDIR} && ${MAKE} README.html PKG_URL=${CDROM_PKG_URL_HOST}${CDROM_PKG_URL_DIR}
 .endif
 
@@ -2088,7 +2086,8 @@ SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%|<p>This package has a home page at <
 SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
 .endif
 
-README.html:
+.PHONY: README.html
+README.html: .PRECIOUS
 	@${MAKE} depends-list PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp1
 	@[ -s $@.tmp1 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp1
 	@${MAKE} package-depends PACKAGE_NAME_TYPE=html | sort -u >> $@.tmp2
@@ -2110,15 +2109,11 @@ README.html:
 		-e '/%%BIN_PKGS%%/r$@.tmp4'				\
 		-e '/%%BIN_PKGS%%/d'					\
 		${README_NAME} >> $@.tmp
-	@if cmp -s $@.tmp $@.BAK; then					\
-		${MV} $@.BAK $@;					\
-		${RM} $@.tmp;						\
-	else								\
+	@if ! cmp -s $@.tmp $@; then					\
 		${ECHO_MSG} "===>  Creating README.html for ${_THISDIR_}${PKGNAME}"; \
-		${MV} $@.tmp $@;					\
-		${RM} -f $@.BAK;					\
+		${MV} -f $@.tmp $@;					\
 	fi
-	@${RM} -f $@.tmp1 $@.tmp2 $@.tmp3 $@.tmp4 $@.tmp5
+	@${RM} -f $@.tmp $@.tmp1 $@.tmp2 $@.tmp3 $@.tmp4 $@.tmp5
 
 .if !target(show-pkgtools-version)
 show-pkgtools-version:
