@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/02/05 22:23:31 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2002/02/13 12:43:56 drochner Exp $
 
 DISTNAME=	dx-4.1.3
 CATEGORIES=	graphics
@@ -12,6 +12,7 @@ USE_BUILDLINK_ONLY=	yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-javadx
+CONFIGURE_ENV+=		LEX="flex -l"
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		-Wl,--export-dynamic
