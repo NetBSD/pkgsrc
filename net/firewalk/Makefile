@@ -1,23 +1,28 @@
-# $NetBSD: Makefile,v 1.7 2005/01/28 23:35:59 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2005/02/05 16:57:02 adrianp Exp $
 
-DISTNAME=	firewalk-1.0
-PKGREVISION=	1
+DISTNAME=	firewalk-5.0
 CATEGORIES=	net security
-MASTER_SITES=	http://www.packetfactory.net/Projects/firewalk/
+MASTER_SITES=	http://www.packetfactory.net/firewalk/dist/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	xs@nitric.net
 HOMEPAGE=	http://www.packetfactory.net/Projects/firewalk/
 COMMENT=	Firewalk determines the filter rules on a packet forwarding device
 
-WRKSRC=         ${WRKDIR}/${DISTNAME:C/f/F/}
+WRKSRC=         ${WRKDIR}/Firewalk
 USE_BUILDLINK3=	yes
-GNU_CONFIGURE=	# defined
+GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CFLAGS=-I${LOCALBASE}/include
-CONFIGURE_ARGS+= --with-gtk=no
 
-BUILDLINK_DEPENDS.libnet+=	libnet<=1.0.1b
+BUILDLINK_DEPENDS.libnet+=	libnet-1.1.*
 
 MAKE_ENV+=	FIREWALK_LOC=${LOCALBASE}
 
-.include "../../devel/libnet/buildlink3.mk"
+.include "../../devel/libnet11/buildlink3.mk"
+.include "../../net/libdnet/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
+
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/man/firewalk.8 ${PREFIX}/man/man8
+
 .include "../../mk/bsd.pkg.mk"
