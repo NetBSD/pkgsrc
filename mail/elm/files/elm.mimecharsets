@@ -1,0 +1,40 @@
+# Mapping from LC_CTYPE locale to MIME's charset values
+# Format is:
+#	LC_CTYPE	charset
+# LC_CTYPE is on form
+#	LL_cc.encoding
+# then also following formats are available:
+#	LL_cc		charset
+#	LL		charset
+#	*.encoding	charset
+de		ISO-8859-1
+de_DE		ISO-8859-1
+de_AT		ISO-8859-1
+de_CH		ISO-8859-1
+el		ISO-8859-7
+el_GR		ISO-8859-7
+es		ISO-8859-1
+es_ES		ISO-8859-1
+es_AR		ISO-8859-1
+es_MX		ISO-8859-1
+fr		ISO-8859-1
+fr_BE		ISO-8859-1
+fr_CA		ISO-8859-1
+fr_CH		ISO-8859-1
+fr_FR		ISO-8859-1
+ko              (unsupported)
+ko_KR           (unsupported)
+ko_KR.euc       (unsupported)
+nl		ISO-8859-1
+nl_BE		ISO-8859-1
+nl_NL		ISO-8859-1
+no		ISO-8859-1
+no_NO		ISO-8859-1
+pl		ISO-8859-2
+pl_PL		ISO-8859-2
+ru		ISO-8859-5
+ru_SU		ISO-8859-5
+sl		ISO-8859-2
+sl_CS		ISO-8859-2
+sv		ISO-8859-1
+sv_SE		ISO-8859-1
