@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:11 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:15 wiz Exp $
 
 SHA1 (cvsup-netbsd-ix86-elf-16.1.tar.gz) = 7065b68766e89166dc7ede4f2897c778ad3f1733
+Size (cvsup-netbsd-ix86-elf-16.1.tar.gz) = 1584650 bytes

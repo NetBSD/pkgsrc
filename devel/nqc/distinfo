@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:43 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:33 wiz Exp $
 
-MD5 (nqc_src_2_0_1.tar.gz) = 4e1189ccd1cb8050fa665924ef487032
+SHA1 (nqc_src_2_0_1.tar.gz) = ca9d4af2985dd29e171c10e18c95732e2926e834
+Size (nqc_src_2_0_1.tar.gz) = 129258 bytes
 SHA1 (patch-aa) = 27447768d1c9fc89521eda526d532c56271cec0d

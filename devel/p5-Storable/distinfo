@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:06 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:40 wiz Exp $
 
 SHA1 (Storable-1.0.11.tar.gz) = e255a14a8be00798e17c4065fc128ea19dddaa72
+Size (Storable-1.0.11.tar.gz) = 62997 bytes

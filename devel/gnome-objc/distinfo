@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:50 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:21 wiz Exp $
 
-MD5 (gnome-objc-1.0.40.tar.gz) = 5128635f4d8d143e5f9b4646456b3025
+SHA1 (gnome-objc-1.0.40.tar.gz) = 5a4d5805e4fd89ba0ec984fb40a1fd5740d4cb0c
+Size (gnome-objc-1.0.40.tar.gz) = 313788 bytes
 SHA1 (patch-aa) = 016522cbaae51425bd240a1d454d3d2660fc325a
