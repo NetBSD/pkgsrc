@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/18 09:57:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/12/23 08:34:36 xtraeme Exp $
 bin/gnome-panel-control
 bin/kdetrayproxy
 bin/openbox
-include/openbox/${PKGVERSION}/openbox/parse.h
-include/openbox/${PKGVERSION}/openbox/render.h
-include/openbox/${PKGVERSION}/openbox/theme.h
-include/openbox/${PKGVERSION}/openbox/version.h
+include/openbox/3.0/openbox/parse.h
+include/openbox/3.0/openbox/render.h
+include/openbox/3.0/openbox/theme.h
+include/openbox/3.0/openbox/version.h
 lib/libobparser.a
 lib/libobparser.la
 lib/libobparser.so
@@ -16,11 +16,12 @@ lib/libobrender.la
 lib/libobrender.so
 lib/libobrender.so.2
 lib/libobrender.so.2.0
-lib/pkgconfig/obparser-${PKGVERSION}.pc
-lib/pkgconfig/obrender-${PKGVERSION}.pc
+lib/pkgconfig/obparser-3.0.pc
+lib/pkgconfig/obrender-3.0.pc
 share/gnome/wm-properties/openbox.desktop
 ${PKGLOCALEDIR}/locale/en@boldquot/LC_MESSAGES/openbox.mo
 ${PKGLOCALEDIR}/locale/en@quot/LC_MESSAGES/openbox.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/openbox.mo
 share/examples/openbox/menu.xml
 share/examples/openbox/rc.xml
 share/openbox/menu.xsd
@@ -64,6 +65,6 @@ share/themes/TheBear/openbox-3/themerc
 @unexec ${RMDIR} %D/share/themes 2>/dev/null || ${TRUE}
 @dirrm share/openbox
 @comment in gnome2-dirs: @dirrm share/gnome/wm-properties
-@dirrm include/openbox/${PKGVERSION}/openbox
-@dirrm include/openbox/${PKGVERSION}
+@dirrm include/openbox/3.0/openbox
+@dirrm include/openbox/3.0
 @dirrm include/openbox
