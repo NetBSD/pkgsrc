@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/07/23 15:39:09 taca Exp $
+# $NetBSD: Makefile,v 1.5 2001/07/24 08:17:18 taca Exp $
 
 DISTNAME=	wl-2.6.0
 PKGNAME=	${DISTNAME}nb1
@@ -12,6 +12,8 @@ COMMENT=	mail/news management system with IMAP4rev1 support for Emacs
 DEPENDS+=	semi>=1.13.7:../../devel/semi
 
 INSTALL_TARGET=	install install-info
+INFO_FILES=	wl.info wl-ja.info
+
 DOCDIR=		${PREFIX}/share/doc/wl
 EXAMPLESDIR=	${PREFIX}/share/examples/wl
 DOCS=		BUGS NEWS README
