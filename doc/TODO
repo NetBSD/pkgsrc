@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3144 2005/02/28 09:34:29 wiz Exp $
+$NetBSD: TODO,v 1.3145 2005/02/28 12:44:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -617,7 +617,6 @@ Suggested package updates
 	o libcomprex-0.3.3
 	o libdnet-1.9
 	o libetpan-0.34b
-	o libevent-1.0b
 	o libextractor-0.4.2
 	o libggi-2.1
 	o libggigcp-0.9.0
