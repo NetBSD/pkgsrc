@@ -1,33 +1,12 @@
-$NetBSD: patch-au,v 1.2 1998/08/07 11:09:09 agc Exp $
+$NetBSD: patch-au,v 1.3 2001/06/25 18:00:17 jtb Exp $
 
---- /dev/null	Wed Oct  1 17:23:30 1997
-+++ config/unix/intel_netbsd/status	Wed Oct  1 17:36:09 1997
-@@ -0,0 +1,28 @@
-+System configuration:
-+
-+	Intel 486-type processor or better running BSD 4.4.lite derivative
-+
-+Latest Icon version:
-+
-+	Version 9.3
-+
-+Installer:
-+
-+	Alistair G. Crooks
-+	<agc@netbsd.org>
-+
-+Missing features:
-+
-+	None.
-+
-+Known bugs:
-+
-+	None.
-+
-+Comments:
-+
-+	None.
-+
-+Date:
-+
-+	Wed Oct  1 17:36:04 BST 1997
+--- src/iconc/Makefile.orig	Wed Jun  6 20:14:38 2001
++++ src/iconc/Makefile
+@@ -20,7 +20,6 @@
+ iconc:		$(OBJS) $(COBJS)
+ 		$(CC) -o iconc $(OBJS) $(COBJS)
+ 		cp iconc ../../bin
+-		strip ../../bin/iconc
+ 
+ $(OBJS):	../h/config.h ../h/cpuconf.h ../h/cstructs.h ../h/define.h\
+ 		../h/proto.h ../h/mproto.h ../h/typedefs.h ../h/gsupport.h \

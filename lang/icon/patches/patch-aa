@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.5 2001/06/25 18:00:16 jtb Exp $
+
+--- ipl/cfuncs/mklib.sh.orig	Sat Jun 23 09:15:23 2001
++++ ipl/cfuncs/mklib.sh
+@@ -21,8 +21,8 @@
+       ld -shared -o $LIBNAME "$@";;
+    OSF*)
+       ld -shared -expect_unresolved '*' -o $LIBNAME "$@" -lc;;
+-   Linux*|BSD/OS*|OpenBSD*)
+-      gcc -shared -o $LIBNAME -fPIC "$@";;
++   Linux*|BSD/OS*|OpenBSD*|NetBSD*)
++      $CC -shared -o $LIBNAME -fPIC "$@";;
+    FreeBSD*)
+       ld -Bshareable -o $LIBNAME "$@" -lc;;
+    *)

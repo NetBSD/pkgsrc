@@ -1,7 +1,206 @@
-$NetBSD: patch-aj,v 1.2 1998/08/07 11:09:06 agc Exp $
+$NetBSD: patch-aj,v 1.3 2001/06/25 18:00:16 jtb Exp $
 
---- /dev/null	Wed Oct  1 17:23:30 1997
-+++ config/unix/intel_netbsd/icon_pi.c	Wed Oct  1 17:32:26 1997
-@@ -0,0 +1,2 @@
-+#include "paths.h"
-+#include "../Generic/icon_pi.h"
+--- Makefile.orig	Mon Jun 11 18:04:42 2001
++++ Makefile
+@@ -14,7 +14,7 @@
+ #
+ # Default targets.
+ 
+-All:	Icont Ilib Ibin
++All:	Icont Iconc Ilib Ibin
+ 
+ config/unix/$(name)/status src/h/define.h:
+ 	:
+@@ -97,20 +97,180 @@
+ 
+ D=$(dest)
+ Install:
+-		test -d $D || mkdir $D
+-		test -d $D/bin || mkdir $D/bin
+-		test -d $D/lib || mkdir $D/lib
+-		test -d $D/doc || mkdir $D/doc
+-		test -d $D/man || mkdir $D/man
+-		test -d $D/man/man1 || mkdir $D/man/man1
+-		cp README $D
+-		cp bin/[a-qs-z]* $D/bin
+-		rm -f $D/bin/libXpm*
+-		cp lib/*.* $D/lib
+-		cp doc/*.* $D/doc
+-		cp man/man1/icont.1 $D/man/man1
++		./bin/patchstr ./bin/icont ${PREFIX}/bin/iconx
++		./bin/patchstr ./bin/iconc ${PREFIX}/lib/icon/
++		cd bin; $(BSD_INSTALL_PROGRAM) icont iconx iconc	\
++			patchstr rtt $D/bin
++		$(BSD_INSTALL_DATA_DIR) $D/lib/icon
++		$(BSD_INSTALL_DATA) lib/icon/*.* $D/lib/icon
++		$(BSD_INSTALL_DATA_DIR) $D/share/doc/icon
++		for f in ipatch colrbook colrpick fontpick palette vib	\
++		wevents xgamma; do					\
++		if [ -f bin/$$f ]; then					\
++			${BSD_INSTALL_SCRIPT} bin/$$f $D/bin;		\
++		fi;							\
++		done
++		$(BSD_INSTALL_DATA) doc/*.* $D/share/doc/icon
++		$(BSD_INSTALL_MAN) man/man1/icont.1 $D/man/man1
++
++
++# Bundle up for binary distribution.
++
++DIR=icon.$(VERSION)
++Package:
++		rm -rf $(DIR)
++		umask 002; $(MAKE) Install dest=$(DIR)
++		tar cf - icon.$(VERSION) | gzip -9 >icon.$(VERSION).tgz
++		rm -rf $(DIR)
++
++
++##################################################################
++#
++# Tests.
++
++Test    Test-icont:	; cd tests; $(MAKE) Test
++Samples Samples-icont:	; cd tests; $(MAKE) Samples
++
++Test-iconc:		; cd tests; $(MAKE) Test-iconc
++Samples-iconc:		; cd tests; $(MAKE) Samples-iconc
+ 
+ 
++#################################################################
++#
++# Run benchmarks.
++
++Benchmark:
++		$(MAKE) Benchmark-icont
++
++Benchmark-iconc:
++		cd tests/bench;		$(MAKE) benchmark-iconc
++
++Benchmark-icont:
++		cd tests/bench;		$(MAKE) benchmark-icont
++
++
++##################################################################
++#
++# Cleanup.
++#
++# "make Clean" removes intermediate files, leaving executables and library.
++# "make Pure"  also removes binaries, library, and configured files.
++
++Clean:
++		touch Makedefs
++		rm -rf icon.*
++		cd src;			$(MAKE) Clean
++		cd ipl;			$(MAKE) Clean
++		cd tests;		$(MAKE) Clean
++
++Pure:
++		touch Makedefs
++		rm -rf icon.* bin/[a-z]* lib/[a-z]*
++		cd ipl;			$(MAKE) Pure
++		cd src;			$(MAKE) Pure
++		cd tests;		$(MAKE) Pure
++		cd config/unix; 	$(MAKE) Pure
++
++
++
++#  (This is used at Arizona to prepare source distributions.)
++
++Dist-Clean:
++		rm -rf `find * -type d -name CVS`
++		rm -f `find * -type f | xargs grep -l '<<ARIZONA-[O]NLY>>'`
++#  Makefile for Version 9.4 of Icon
++#
++#  Things have changed since Version 9.3.
++#  See doc/install.htm for instructions.
++
++
++#  configuration parameters
++VERSION=v940
++name=unspecified
++dest=/must/specify/dest/
++
++
++##################################################################
++#
++# Default targets.
++
++All:	Icont Ilib Ibin
++
++config/unix/$(name)/status src/h/define.h:
++	:
++	: To configure Icon, run either
++	:
++	:	make Configure name=xxxx     [for no graphics]
++	: or	make X-Configure name=xxxx   [with X-Windows graphics]
++	:
++	: where xxxx is one of
++	:
++	@cd config/unix; ls -d [a-z]*
++	:
++	@exit 1
++
++
++##################################################################
++#
++# Code configuration.
++
++
++# Configure the code for a specific system.
++
++Configure:	config/unix/$(name)/status
++		$(MAKE) Pure >/dev/null
++		cd config/unix; $(MAKE) Setup-NoGraphics name=$(name)
++
++X-Configure:	config/unix/$(name)/status
++		$(MAKE) Pure >/dev/null
++		cd config/unix; $(MAKE) Setup-Graphics name=$(name)
++
++
++# Get the status information for a specific system.
++
++Status:
++		@cat config/unix/$(name)/status
++
++
++##################################################################
++#
++# Compilation.
++
++
++# The interpreter: icont and iconx.
++
++Icont bin/icont: Common
++		cd src/icont;		$(MAKE)
++		cd src/runtime;		$(MAKE) 
++
++
++# The compiler: rtt, the run-time system, and iconc.
++# (NO LONGER SUPPORTED OR MAINTAINED.)
++
++Iconc bin/iconc: Common
++		cd src/runtime;		$(MAKE) comp_all
++		cd src/iconc;		$(MAKE)
++
++
++# Common components.
++
++Common:		src/h/define.h
++		cd src/common;		$(MAKE)
++		cd src/rtt;		$(MAKE)
++
++
++# The Icon program library.
++
++Ilib:		bin/icont
++		cd ipl;			$(MAKE)
++
++Ibin:		bin/icont
++		cd ipl;			$(MAKE) Ibin
++
++
++##################################################################
++#
++# Installation and packaging.
+ # Bundle up for binary distribution.
+ 
+ DIR=icon.$(VERSION)
