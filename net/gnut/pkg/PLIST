@@ -1,2 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.2 2000/04/18 06:57:33 deberg Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/04/18 07:05:22 deberg Exp $
 bin/gnut
+share/doc/gnut/TUTORIAL
+share/doc/gnut/gnutrc.sample
+@dirrm share/doc/gnut
