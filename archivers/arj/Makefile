@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 21:21:06 grant Exp $
+# $NetBSD: Makefile,v 1.4 2003/12/05 18:08:33 kristerw Exp $
 # FreeBSD Id: ports/archivers/arj/Makefile,v 1.2 2002/09/17 05:17:29 ijliao Exp
 
 DISTNAME=	arj-3.10b
@@ -12,6 +12,8 @@ COMMENT=	Open-source ARJ
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/gnu/configure
+CONFIG_GUESS_OVERRIDE=	${WRKSRC}/gnu/config.guess
+CONFIG_SUB_OVERRIDE=	${WRKSRC}/gnu/config.sub
 MAKEFILE=		makefile.gnu
 
 ARJ_DOCSDIR=		${PREFIX}/share/doc/arj
