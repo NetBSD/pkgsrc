@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:01:23 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/17 11:22:38 agc Exp $
 bin/spruce
-share/locale/ca/LC_MESSAGES/spruce.mo
-share/locale/da/LC_MESSAGES/spruce.mo
-share/locale/de/LC_MESSAGES/spruce.mo
-share/locale/es/LC_MESSAGES/spruce.mo
-share/locale/fr/LC_MESSAGES/spruce.mo
-share/locale/it/LC_MESSAGES/spruce.mo
-share/locale/pt/LC_MESSAGES/spruce.mo
-share/locale/ko/LC_MESSAGES/spruce.mo
-share/locale/sk/LC_MESSAGES/spruce.mo
-share/locale/sv/LC_MESSAGES/spruce.mo
-share/locale/zh_TW.Big5/LC_MESSAGES/spruce.mo
-share/locale/ru_RU/LC_MESSAGES/spruce.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/spruce.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/spruce.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/spruce.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/spruce.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/spruce.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/spruce.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/spruce.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/spruce.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/spruce.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/spruce.mo
+${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/spruce.mo
+${PKGLOCALEDIR}/locale/ru_RU/LC_MESSAGES/spruce.mo
