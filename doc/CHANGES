@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.363 2002/10/26 15:48:55 grant Exp $
+$NetBSD: CHANGES,v 1.364 2002/10/26 16:02:13 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3391,3 +3391,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated mencoder to 0.90rc9 [wiz 2002-10-25]
 	Added python-mode-4.6 [cjep 2002-10-25]
 	Updated fileutils to 4.1.11 [grant 2002-10-26]
+	Updated less to 378 [grant 2002-10-26]
