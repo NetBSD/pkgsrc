@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2000/07/25 13:05:58 wulf Exp $
+# $NetBSD: Makefile,v 1.37 2000/10/15 14:19:27 wulf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/30 11:47:51 tg Exp 
 #
 
@@ -12,6 +12,7 @@
     SUBDIR += iodbc
     SUBDIR += jdb
     SUBDIR += jdbc-postgresql
+    SUBDIR += kpsql
     SUBDIR += mysql-client
     SUBDIR += mysql-server
     SUBDIR += openldap
