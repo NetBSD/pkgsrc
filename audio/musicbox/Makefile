@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/03/29 12:40:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/02 11:12:50 jmmv Exp $
 
 DISTNAME=	musicbox-1.01p2
 WRKSRC=		${WRKDIR}/musicbox-1.01
@@ -15,6 +15,7 @@ DEPENDS+=	qt1-1.44:../../x11/qt1
 USE_X11=	yes
 CFLAGS+=	-D${OPSYS}
 EVAL_PREFIX+=	QT1DIR=qt1
+MAKE_ENV+=	QT1DIR="${QT1DIR}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/musicbox ${PREFIX}/bin
