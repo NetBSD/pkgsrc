@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/07/27 18:51:43 jlam Exp $
+$NetBSD: distinfo,v 1.2 2002/07/17 17:36:44 wiz Exp $
 
 SHA1 (suse64/ymessenger-0.93.0-1.i386.rpm) = f88deab6388769804950f570d7915f50070d3fac
 Size (suse64/ymessenger-0.93.0-1.i386.rpm) = 103686 bytes
+SHA1 (suse73/ymessenger-0.93.0-1.i386.rpm) = f88deab6388769804950f570d7915f50070d3fac
+Size (suse73/ymessenger-0.93.0-1.i386.rpm) = 103686 bytes
