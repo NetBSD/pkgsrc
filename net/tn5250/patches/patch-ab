@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/08/04 17:00:27 rh Exp $
+
+--- tn5250.cc.orig	Mon Apr  5 18:25:45 1999
++++ tn5250.cc	Wed Aug  4 15:20:55 1999
+@@ -18,7 +18,12 @@
+ 
+ #include "config.h"
+ #include <stdlib.h>
++#include <sys/param.h>
++#if (defined(BSD) && BSD >= 199306)
++#include <unistd.h>
++#else
+ #include <getopt.h> 
++#endif
+ #include <errno.h>
+ 
+ #include "buffer.h"
