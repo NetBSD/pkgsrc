@@ -1,0 +1,6 @@
+  Gb is an embryonic attempt to provide VB compatible functionality for the
+GNOME project, particularly with respect to office (VBA) compatibility.  It is
+part of the GNOME desktop environment: a project to create a free, user
+friendly desktop environment.  As every other component of GNOME, Gnome Basic
+is free software  (Some other people like to call this OpenSource software)
+and it is licensed under the terms of the GNU GPL.
