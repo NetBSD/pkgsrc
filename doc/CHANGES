@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4073 2003/12/13 17:59:24 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4074 2003/12/13 18:12:34 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3366,3 +3366,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated intltool to 0.28 [jmmv 2003-12-13]
 	Updated libkver to 0.4 [seb 2003-12-13]
 	Added vte-0.11.10 [xtraeme 2003-12-13]
+	Added gtk-send-pr-0.3 [xtraeme 2003-12-13]
