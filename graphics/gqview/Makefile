@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/08/28 09:43:10 rh Exp $
+# $NetBSD: Makefile,v 1.3 1999/10/24 16:46:27 tron Exp $
 # FreeBSD Id: Makefile,v 1.7 1998/12/09 06:59:39 vanilla Exp
 #
 
@@ -10,8 +10,7 @@ EXTRACT_SUFX=	.src.tgz
 MAINTAINER=	rxg@ms25.url.com.tw
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Haven/5235/
 
-DEPENDS=	gtk+-1.2.4:../../x11/gtk \
-		imlib-1.9.4:../../graphics/imlib
+DEPENDS=	imlib-*:../../graphics/imlib
 
 USE_X11BASE=	yes
 ALL_TARGET=	gqview
