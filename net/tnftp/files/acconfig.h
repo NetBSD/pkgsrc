@@ -1,4 +1,4 @@
-/* $Id: acconfig.h,v 1.1 2004/03/11 13:01:01 grant Exp $ */
+/* $Id: acconfig.h,v 1.2 2004/04/25 02:48:12 grant Exp $ */
 
 @TOP@
 @BOTTOM@
@@ -65,6 +65,9 @@
 
 /* Define if strptime() is declared in <time.h> */
 #undef HAVE_STRPTIME_D
+
+/* Define if we have poll() and it is not emulated */
+#undef HAVE_POLL
 
 /*
  * Define this if compiling with SOCKS (the firewall traversal library).
