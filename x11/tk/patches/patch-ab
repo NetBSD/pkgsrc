@@ -1,45 +1,100 @@
-$NetBSD: patch-ab,v 1.5 2001/04/18 18:15:41 jwise Exp $
+$NetBSD: patch-ab,v 1.6 2001/05/24 02:58:30 jlam Exp $
 
---- configure.orig	Tue Aug  8 19:19:32 2000
+--- configure.orig	Tue Aug  8 15:19:32 2000
 +++ configure
-@@ -1873,6 +1873,7 @@
- 		SHLIB_LD="ld -Bshareable -x"
+@@ -1581,6 +1581,7 @@
+ 
+     do64bit_ok=no
+     fullSrcDir=`cd $srcdir; pwd`
++    RPATH_FLAG=""
+     EXTRA_CFLAGS=""
+     TCL_EXPORT_FILE_SUFFIX=""
+     UNSHARED_LIB_SUFFIX=""
+@@ -1870,7 +1871,6 @@
+   
+ 		# NetBSD/SPARC needs -fPIC, -fpic will not do.
+ 		SHLIB_CFLAGS="-fPIC"
+-		SHLIB_LD="ld -Bshareable -x"
  		SHLIB_LD_LIBS=""
  		SHLIB_SUFFIX=".so"
-+		SHARED_LIB_SUFFIX=".so"
  		DL_OBJS="tclLoadDl.o"
- 		DL_LIBS=""
- 		LDFLAGS=""
-@@ -3338,7 +3339,7 @@
+@@ -1891,13 +1891,23 @@
+ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+   egrep "yes" >/dev/null 2>&1; then
+   rm -rf conftest*
+-  echo "$ac_t""yes" 1>&6
++  
++		    echo "$ac_t""yes" 1>&6
++		    SHLIB_LD='${TCL_CC} -shared -Wl,-x'
++		    RPATH_FLAG='-Wl,-rpath,'
++		    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+ 		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
++		
+ else
+   rm -rf conftest*
+-  echo "$ac_t""no" 1>&6
++  
++		    echo "$ac_t""no" 1>&6
++		    SHLIB_LD="ld -Bshareable -x"
++		    RPATH_FLAG='-R'
++		    LD_SEARCH_FLAGS='-R${LIB_RUNTIME_DIR}'
+ 		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1.0'
+ 		
++		
+ fi
+ rm -f conftest*
+ 
+@@ -3332,13 +3342,17 @@
+ 
+     if test "$no_x" = yes; then
+ 	echo $ac_n "checking for X11 libraries""... $ac_c" 1>&6
+-echo "configure:3336: checking for X11 libraries" >&5
++echo "configure:3346: checking for X11 libraries" >&5
+ 	XLIBSW=nope
+ 	dirs="/usr/unsupported/lib /usr/local/lib /usr/X386/lib /usr/X11R6/lib /usr/X11R5/lib /usr/lib/X11R5 /usr/lib/X11R4 /usr/openwin/lib /usr/X11/lib /usr/sww/X11/lib"
  	for i in $dirs ; do
  	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl; then
  		echo "$ac_t""$i" 1>&6
 -		XLIBSW="-L$i -lX11"
-+		XLIBSW="-L$i -Wl,-R$i -lX11"
++		if test "${RPATH_FLAG}" != ""; then
++		    XLIBSW="-L$i ${RPATH_FLAG}$i -lX11"
++		else
++		    XLIBSW="-L$i -lX11"
++		fi
  		x_libraries="$i"
  		break
  	    fi
-@@ -3347,7 +3348,7 @@
+@@ -3347,12 +3361,16 @@
  	if test "$x_libraries" = ""; then
  	    XLIBSW=-lX11
  	else
 -	    XLIBSW="-L$x_libraries -lX11"
-+	    XLIBSW="-L$x_libraries -Wl,-R$x_libraries -lX11"
++	    if test "${RPATH_FLAG}" != ""; then
++		XLIBSW="-L$x_libraries ${RPATH_FLAG}$x_libraries -lX11"
++	    else
++		XLIBSW="-L$x_libraries -lX11"
++	    fi
  	fi
      fi
      if test "$XLIBSW" = nope ; then
-@@ -3415,8 +3416,8 @@
- if test "x${x_libraries}" != "x"; then
-     LIB_RUNTIME_DIR="${LIB_RUNTIME_DIR}:${x_libraries}"
+ 	echo $ac_n "checking for XCreateWindow in -lXwindow""... $ac_c" 1>&6
+-echo "configure:3356: checking for XCreateWindow in -lXwindow" >&5
++echo "configure:3374: checking for XCreateWindow in -lXwindow" >&5
+ ac_lib_var=`echo Xwindow'_'XCreateWindow | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -3417,6 +3435,10 @@
  fi
--if test "${TCL_LD_SEARCH_FLAGS}" = '-L${LIB_RUNTIME_DIR}'; then
--    LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -L/g'`
-+if test "${TCL_LD_SEARCH_FLAGS}" = '-Wl,-rpath,${LIB_RUNTIME_DIR}'; then
+ if test "${TCL_LD_SEARCH_FLAGS}" = '-L${LIB_RUNTIME_DIR}'; then
+     LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -L/g'`
++elif test "${TCL_LD_SEARCH_FLAGS}" = '-R${LIB_RUNTIME_DIR}'; then
++    LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -R/g'`
++elif test "${TCL_LD_SEARCH_FLAGS}" = '-Wl,-rpath,${LIB_RUNTIME_DIR}'; then
 +    LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -Wl,-rpath,/g'`
  fi
  
  # The statement below is very tricky!  It actually *evaluates* the
-@@ -4088,7 +4089,7 @@
+@@ -4088,7 +4110,7 @@
  if test "${SHARED_BUILD}" = "1" -a "${SHLIB_SUFFIX}" != ""; then
      TK_SHLIB_CFLAGS="${SHLIB_CFLAGS}"
      TK_LIB_FILE=libtk${TK_SHARED_LIB_SUFFIX}
@@ -48,14 +103,23 @@ $NetBSD: patch-ab,v 1.5 2001/04/18 18:15:41 jwise Exp $
      RANLIB=":"
  
  #    TCL_STUB_FLAGS="-DUSE_TCL_STUBS"
-@@ -4114,8 +4115,8 @@
+@@ -4111,11 +4133,17 @@
+ if test "$SHARED_BUILD" = 0 -o $TCL_NEEDS_EXP_FILE = 0; then
+     if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
+ 	eval TK_LIB_FLAG="-ltk${VERSION}\${TK_DBGX}"
++	eval TK_BUILD_LIB_SPEC="libtk${VERSION}\${TK_DBGX}.la"
      else
  	eval TK_LIB_FLAG="-ltk`echo ${VERSION} | tr -d .`\${TK_DBGX}"
++	eval TK_BUILD_LIB_SPEC="libtk`echo ${VERSION} | tr -d .`\${TK_DBGX}.la"
++    fi
++    if test "${RPATH_FLAG}" != ""; then
++	TK_LIB_SPEC_RPATH="${RPATH_FLAG}${exec_prefix}/lib"
++    else
++	TK_LIB_SPEC_RPATH=""
      fi
 -    TK_BUILD_LIB_SPEC="-L`pwd` ${TK_LIB_FLAG}"
 -    TK_LIB_SPEC="-L${exec_prefix}/lib ${TK_LIB_FLAG}"
-+    TK_BUILD_LIB_SPEC=libtk83.la
-+    TK_LIB_SPEC="-L${exec_prefix}/lib -Wl,-R${exec_prefix}/lib ${TK_LIB_FLAG}"
++    TK_LIB_SPEC="-L${exec_prefix}/lib ${TK_LIB_SPEC_RPATH} ${TK_LIB_FLAG}"
      TK_BUILD_EXP_FILE=""
      TK_EXP_FILE=""
  else
