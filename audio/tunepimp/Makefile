@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:13:10 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/07 16:36:47 tv Exp $
 
 DISTNAME=	libtunepimp-0.3.0
 PKGNAME=	${DISTNAME:S/lib//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/
 
@@ -18,6 +18,7 @@ USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
+USE_LANGUAGES=		c c++
 
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
