@@ -1,0 +1,39 @@
+$NetBSD: patch-ag,v 1.1 1998/09/05 03:21:12 garbled Exp $
+--- expire/Makefile.orig	Fri Aug 28 12:07:54 1998
++++ expire/Makefile	Fri Aug 28 12:08:47 1998
+@@ -85,25 +85,25 @@
+ 
+ ##  Low-level install actions.
+ $D$(PATHBIN)/convdate:		convdate
+-	$(LIBTOOL) ../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
++	../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
+ $D$(PATHBIN)/expire:		expire
+-	$(LIBTOOL) ../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
++	../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
+ $D$(PATHBIN)/expireover:		expireover
+-	$(LIBTOOL) ../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
++	../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
+ $D$(PATHBIN)/expireindex:		expireindex
+-	$(LIBTOOL) ../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
++	../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
+ $D$(PATHBIN)/fastrm:		fastrm
+-	$(LIBTOOL) ../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
++	../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
+ $D$(PATHBIN)/grephistory:	grephistory
+-	$(LIBTOOL) ../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
++	../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
+ $D$(PATHBIN)/makeactive:	makeactive
+-	$(LIBTOOL) ../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
++	../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
+ $D$(PATHBIN)/makehistory:	makehistory
+-	$(LIBTOOL) ../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
++	../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
+ $D$(PATHBIN)/newsrequeue:	newsrequeue
+-	$(LIBTOOL) ../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
++	../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
+ $D$(PATHBIN)/prunehistory:	prunehistory
+-	$(LIBTOOL) ../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
++	../installit.sh $(OWNER) -m 0555 -b .OLD $? $@
+ 
+ ##  Dependencies.  Default list, below, is probably good enough.
+ depend:		Makefile $(SOURCES)
