@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/21 11:31:36 jmmv Exp $
+
+--- configure.orig	2003-02-21 12:28:56.000000000 +0100
++++ configure
+@@ -7098,6 +7098,7 @@ fi
+   test -n "$AWK" && break
+ done
+ 
++if false; then
+ # Extract the first word of "pkg-config", so it can be a program name with args.
+ set dummy pkg-config; ac_word=$2
+ echo "$as_me:7103: checking for $ac_word" >&5
+@@ -7146,6 +7147,7 @@ echo "$as_me: error:
+ *** <http://www.freedesktop.org/software/pkgconfig/>." >&2;}
+    { (exit 1); exit 1; }; }
+ fi
++fi
+ 
+ ac_config_files="$ac_config_files Makefile gnome-common.spec macros/Makefile macros2/Makefile bin/Makefile doc/Makefile"
+ cat >confcache <<\_ACEOF
