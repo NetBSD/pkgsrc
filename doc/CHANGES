@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7761 2004/11/08 10:40:10 adam Exp $
+$NetBSD: CHANGES,v 1.7762 2004/11/08 11:01:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5155,5 +5155,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added wistumbler2-gtk-2.00pre9 [jmmv 2004-11-07]
 	Updated flodo to v4 [mrg 2004-11-08]
 	Updated wmakerconf to 2.9.2 [adam 2004-11-08]
-	Updated sane-backeds to 1.0.15 [adam 2004-11-08]
+	Updated sane-backends to 1.0.15 [adam 2004-11-08]
 	Updated gentoo to 0.11.53 [adam 2004-11-08]
