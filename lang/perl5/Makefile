@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2004/05/05 03:14:33 jschauma Exp $
+# $NetBSD: Makefile,v 1.84 2004/07/03 14:13:06 wiz Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -212,12 +212,6 @@ post-install:
 		echo PERL5_ARCHLIB=$$installarchlib >>${WRKDIR}/bsd.perl.mk
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mk
 	${INSTALL_DATA} ${WRKDIR}/bsd.perl.mk ${PREFIX}/share/mk/bsd.perl.mk
-
-.if ${OPSYS} == "AIX"
-# Perl doesn't like building with gcc on AIX
-CC=/usr/bin/cc
-.undef USE_GCC3
-.endif
 
 .include "module.mk"
 .include "../../mk/bsd.pkg.mk"
