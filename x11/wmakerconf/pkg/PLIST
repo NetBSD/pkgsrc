@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/05/23 08:56:01 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/08/29 10:34:46 tron Exp $
 bin/wmakerconf
 bin/mkpreview
 share/locale/fr/LC_MESSAGES/wmakerconf.mo
@@ -62,31 +62,3 @@ share/wmakerconf/MANUAL
 share/wmakerconf/ABOUT-NLS
 share/wmakerconf/NLS-TEAM1
 @dirrm share/wmakerconf
-@dirrm share/locale/fr/LC_MESSAGES
-@dirrm share/locale/es/LC_MESSAGES
-@dirrm share/locale/ru/LC_MESSAGES
-@dirrm share/locale/hu/LC_MESSAGES
-@dirrm share/locale/da/LC_MESSAGES
-@dirrm share/locale/it/LC_MESSAGES
-@dirrm share/locale/pt/LC_MESSAGES
-@dirrm share/locale/el/LC_MESSAGES
-@dirrm share/locale/fi/LC_MESSAGES
-@dirrm share/locale/de/LC_MESSAGES
-@dirrm share/locale/ca/LC_MESSAGES
-@dirrm share/locale/ja/LC_MESSAGES
-@dirrm share/locale/cz/LC_MESSAGES
-@dirrm share/locale/tr/LC_MESSAGES
-@dirrm share/locale/fr
-@dirrm share/locale/es
-@dirrm share/locale/ru
-@dirrm share/locale/hu
-@dirrm share/locale/da
-@dirrm share/locale/it
-@dirrm share/locale/pt
-@dirrm share/locale/el
-@dirrm share/locale/fi
-@dirrm share/locale/de
-@dirrm share/locale/ca
-@dirrm share/locale/ja
-@dirrm share/locale/cz
-@dirrm share/locale/tr
