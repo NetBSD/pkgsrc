@@ -1,15 +1,15 @@
-$NetBSD: patch-bc,v 1.1 1999/05/30 18:18:33 tron Exp $
+$NetBSD: patch-bc,v 1.2 2000/04/27 01:05:09 kim Exp $
 
---- postsuper/Makefile.orig	Sun May 30 18:49:14 1999
-+++ postsuper/Makefile	Sun May 30 18:49:14 1999
+--- postsuper/Makefile.orig	Wed Apr 26 20:25:56 2000
++++ postsuper/Makefile	Wed Apr 26 20:39:40 2000
 @@ -0,0 +1,12 @@
-+#	$NetBSD: patch-bc,v 1.1 1999/05/30 18:18:33 tron Exp $
++#	$NetBSD: patch-bc,v 1.2 2000/04/27 01:05:09 kim Exp $
 +.include "../conf/main.cf"
 +PROG=	postsuper
 +BINDIR=${command_directory}
 +
 +DPADD+= ${LIBPGLOBAL} ${LIBPUTIL}
-+LDADD+= ${LIBPGLOBAL} ${LIBPUTIL}
++LDADD+= ${LIBPGLOBAL} ${LIBPUTIL} ${AUXLIBS}
 +
 +# XXX
 +NOMAN=1

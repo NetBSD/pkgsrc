@@ -1,9 +1,9 @@
-$NetBSD: patch-aj,v 1.3 1999/09/12 00:14:53 simonb Exp $
+$NetBSD: patch-aj,v 1.4 2000/04/27 01:05:07 kim Exp $
 
---- local/Makefile.orig	Sun May 30 18:49:13 1999
-+++ local/Makefile	Sun May 30 18:49:13 1999
+--- local/Makefile.orig	Wed Apr 26 20:25:54 2000
++++ local/Makefile	Wed Apr 26 20:38:30 2000
 @@ -0,0 +1,18 @@
-+#	$NetBSD: patch-aj,v 1.3 1999/09/12 00:14:53 simonb Exp $
++#	$NetBSD: patch-aj,v 1.4 2000/04/27 01:05:07 kim Exp $
 +
 +.include "../conf/main.cf"
 +PROG=	local
@@ -15,7 +15,7 @@ $NetBSD: patch-aj,v 1.3 1999/09/12 00:14:53 simonb Exp $
 +	local_expand.c
 +
 +DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
-+LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL} ${AUXLIBS}
 +
 +# XXX
 +NOMAN=1
