@@ -1,0 +1,10 @@
+$NetBSD: patch-ad,v 1.1.1.1 1998/12/31 14:25:30 frueauf Exp $
+
+--- mklang.pl-orig	Sat Aug  9 23:45:37 1997
++++ mklang.pl	Thu Dec 31 14:17:31 1998
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/bin/env perl
+ #
+ #This could probably be sed, but I'm feeling lazy.
+ #
