@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 1998/12/21 10:29:41 frueauf Exp $
+
+--- configure.orig	Fri Dec  4 08:06:25 1998
++++ configure	Sun Dec 20 09:54:23 1998
+@@ -3290,6 +3290,14 @@
+   *linux)
+     DLLFLAGS=-export-dynamic
+     ;;
++  *netbsd*)
++    if ${CPP} - -dM </dev/null | grep -q __ELF__; then
++      DLLFLAGS="-export-dynamic"
++      SHLIBLDFLAGS="-shared"
++    else
++      SHLIBLDFLAGS="-Bshareable"
++    fi
++    ;;
+   *sgi*)
+     SHLIBLDFLAGS="-shared"
+     ;;
