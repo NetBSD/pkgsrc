@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2000/03/18 17:43:16 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2000/04/09 03:53:16 jlam Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -64,8 +64,8 @@ pre-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
-	cd ${PREFIX}; ${MV} include/libpq++.H include/libpq++.h
-	cd ${PREFIX}/include; ${RMDIR} -p port/netbsd
+	cd ${PREFIX}; ${MV} include/pgsql/libpq++.H include/pgsql/libpq++.h
+	cd ${PREFIX}/include/pgsql; ${RMDIR} -p port/netbsd
 
 .for PROG in ecpg pg_dump pg_id pg_passwd pg_version postgres psql
 	strip ${PREFIX}/bin/${PROG}
