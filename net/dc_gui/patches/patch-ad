@@ -1,92 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2002/11/03 21:32:25 wiz Exp $
+$NetBSD: patch-ad,v 1.5 2002/11/11 14:01:33 wiz Exp $
 
---- src/dctc_process.c.orig	Sat Nov  2 18:01:44 2002
+--- src/dctc_process.c.orig	Sat Nov  9 17:00:01 2002
 +++ src/dctc_process.c
-@@ -463,7 +463,7 @@ static void user__fnc(const GString *s)
- 		vsize=lu.share_size;
- 	
- 		if(vsize>(1024.0*1024.0*1024.0))
--			g_string_sprintf(fsize,"%'.2fGB",vsize/(1024.0*1024.0*1024.0));
-+			g_string_sprintf(fsize,"%.2fGB",vsize/(1024.0*1024.0*1024.0));
- 		else if(vsize>(1024.0*1024.0))
- 			g_string_sprintf(fsize,"%.2fMB",vsize/(1024.0*1024.0));
- 		else if(vsize>(1024.0))
-@@ -565,9 +565,9 @@ static void update_users_info(void)
- 	}
- 
- 	if( (amount/(1024.0*1024.0*1024.0)) > 1024.0)
--		sprintf(buf,"%'d users (%'.2lfTB)",clst->rows,amount/(1024.0*1024.0*1024.0*1024.0));
-+		sprintf(buf,"%d users (%.2fTB)",clst->rows,amount/(1024.0*1024.0*1024.0*1024.0));
- 	else
--		sprintf(buf,"%'d users (%'.2lfGB)",clst->rows,amount/(1024.0*1024.0*1024.0));
-+		sprintf(buf,"%d users (%.2fGB)",clst->rows,amount/(1024.0*1024.0*1024.0));
- 	w=get_widget_by_widget_name("users_info_label");
- 	if(w==NULL)
- 		return;
-@@ -722,7 +722,7 @@ static void uinfo_fnc(const GString *s)
- 	fsize=g_string_new("");
- 	
- 	if(vsize>(1024.0*1024.0*1024.0))
--		g_string_sprintf(fsize,"%'.2fGB",vsize/(1024.0*1024.0*1024.0));
-+		g_string_sprintf(fsize,"%.2fGB",vsize/(1024.0*1024.0*1024.0));
- 	else if(vsize>(1024.0*1024.0))
- 		g_string_sprintf(fsize,"%.2fMB",vsize/(1024.0*1024.0));
- 	else if(vsize>(1024.0))
-@@ -1169,7 +1169,7 @@ static void srest_fnc(const GString *s)
- 					nickuinfo.cnx_type[0]='\0';	/* no information available */
- 				}
- 				sscanf(size,"%lu",&fsize);
--				sprintf(buf_size,"%'lu",fsize);
-+				sprintf(buf_size,"%lu",fsize);
- 
- 				sscanf(dl_ratio,"%u/%u",&free_slot,&ttl_slot);
- 
-@@ -2938,7 +2938,7 @@ static void recursive_insert_new_user_cl
- 
- 		nw[UFLC_TREE_COL]=new_leaf->c.file.filename+cur_string_pos;
- 		nw[UFLC_SIZE_COL]=bf;
--		sprintf(bf,"%'lu",new_leaf->c.file.file_size);
-+		sprintf(bf,"%lu",new_leaf->c.file.file_size);
- 
- 		leaf_node=gtk_ctree_insert_node(ctree,*last_inserted_node,NULL,nw,5,NULL,NULL,NULL,NULL,TRUE,TRUE);	/* it is a leaf */
- 		gtk_ctree_node_set_row_data_full(ctree,leaf_node, new_leaf, (void*)free_user_file_cl_entry);
-@@ -3783,7 +3783,7 @@ void second_level_glst_end_fnc(GtkCTree 
- 																gtk_ctree_node_set_text(ctree,cnode,2,strv[i]+temp_str_len);
- #else
- 																char buf_size[64];
--																sprintf(buf_size,"%'lu",cur_size);
-+																sprintf(buf_size,"%lu",cur_size);
- 																gtk_ctree_node_set_text(ctree,cnode,2,buf_size);
- #endif
- 																gce->c.active_segment.remote_file_size=cur_size;
-@@ -3890,7 +3890,7 @@ static void second_level_add_newly_creat
- 				unsigned long cur_size;
- 
- 				cur_size=strtoul(f4[2],NULL,10);
--				sprintf(buf_size,"%'lu",cur_size);
-+				sprintf(buf_size,"%lu",cur_size);
- 
- 				ent_array[0]=f4[0];
- 				ent_array[1]=f4[1];
-@@ -3936,7 +3936,7 @@ static void second_level_add_newly_creat
- 					char out_range[512];
- 					unsigned long lower, upper;
- 					sscanf(f2[1],"[%lu;%lu]",&lower,&upper);
--					sprintf(out_range,"[%'lu : %'lu]",lower,upper);
-+					sprintf(out_range,"[%lu : %lu]",lower,upper);
- 
- 					ent_array[0]="";
- 					ent_array[1]=f2[0];
-@@ -4050,7 +4050,7 @@ static void first_level_glst_end_fnc(Gtk
- 				missing_bytes=gce_root->c.root.gdl_size-gce_root->c.root.received_bytes;
- 
- 				spd_str=g_string_new("");
--				g_string_sprintf(spd_str,"%'15lu (%.2f%%) ",gce_root->c.root.received_bytes,100.0*(double)gce_root->c.root.received_bytes/(double)gce_root->c.root.gdl_size);
-+				g_string_sprintf(spd_str,"%15lu (%.2f%%) ",gce_root->c.root.received_bytes,100.0*(double)gce_root->c.root.received_bytes/(double)gce_root->c.root.gdl_size);
- 
- 				cur_size=gce_root->c.root.received_bytes-gce_root->c.root.byte_offset;		/* number of bytes downloaded */
- 				duration=time(NULL)-gce_root->c.root.start_time;
-@@ -4058,11 +4058,11 @@ static void first_level_glst_end_fnc(Gtk
+@@ -4100,11 +4100,11 @@ static void first_level_glst_end_fnc(Gtk
  				spd=(double)(gce_root->c.root.last_10sec_speed)/10.0;		/* compute the speed of the last 10 seconds */
  				if(spd<1024.0)
  				{
@@ -100,12 +16,3 @@ $NetBSD: patch-ad,v 1.4 2002/11/03 21:32:25 wiz Exp $
  				}
  
  				/* Estimated Time to Arrival computation: now (in second) + missing_bytes/spd */
-@@ -4145,7 +4145,7 @@ void glst_end_fnc(const GString *in)
- 			unsigned long size_gdl=strtoul(k[2],NULL,10);
- 
- 			/* remove an entry with the same gdl_id */
--			sprintf(buf_size,"%'lu",size_gdl);
-+			sprintf(buf_size,"%lu",size_gdl);
- 
- 			/* add a new entry in the root list */
- 			gce=new_gdl_ct_entry_as_root(	strtoul(k[0],NULL,10),

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2002/11/03 21:32:24 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/11/11 14:01:32 wiz Exp $
 #
 
-DISTNAME=	dc_gui-0.64
+DISTNAME=	dc_gui-0.65
 CATEGORIES=	net
 MASTER_SITES=	http://www.ac2i.tzo.com/dctc/
 
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.ac2i.tzo.com/dctc/
 COMMENT=	graphical user interface for DCTC
 
-DEPENDS+=	dctc>=0.83.7:../../net/dctc
+DEPENDS+=	dctc>=0.83.8:../../net/dctc
 
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=	--enable-manual-db-detect
 USE_GMAKE=	YES
 
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
+CPPFLAGS+=	-DNO_PRINTF_LOCALE
 
 post-configure:
 	@${ECHO} '#ifndef MSG_NOSIGNAL' >> ${WRKSRC}/config.h
