@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/10/12 06:11:39 kim Exp $
+# $NetBSD: Makefile,v 1.5 1998/12/06 12:48:50 tron Exp $
 #
 
 DISTNAME=	squid-2.0.PATCH2
@@ -19,6 +19,8 @@ CONFLICTS=	squid-1.1.21 \
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://squid.nlanr.net/Squid/
+
+IGNORE=		"can be found in \"pkgsrc/www/squid\""
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--sysconfdir=/etc \
