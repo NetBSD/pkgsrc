@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/06/22 12:27:08 agc Exp $
+# $NetBSD: Makefile,v 1.16 1998/07/10 17:57:47 tv Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	hubertf@netbsd.org
 
 GNU_CONFIGURE=	yes
 #USE_GMAKE=	yes
-CONFIGURE_ARGS+=	${MACHINE_ARCH}--netbsd --with-pop --with-x --with-x-toolkit=lucid
+CONFIGURE_ARGS+=	--with-pop --with-x --with-x-toolkit=lucid
 OPSYS!=         uname -s
 MAKE_ENV+=	INSTALL_STRIP=${STRIPFLAG} \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
