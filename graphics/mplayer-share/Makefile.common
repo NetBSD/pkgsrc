@@ -1,0 +1,48 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2002/05/25 07:51:22 veego Exp $
+
+MPLAYER_DIST_VERSION=	0.90pre4
+MPLAYER_PKG_VERSION=	${MPLAYER_DIST_VERSION:S/pre/rc/}
+
+DISTNAME=		MPlayer-${MPLAYER_DIST_VERSION}
+PKGREVISION=1
+CATEGORIES?=		graphics
+MASTER_SITES=		http://www.mplayerhq.hu/MPlayer/releases/ \
+			http://www2.mplayerhq.hu/MPlayer/releases/ \
+			ftp://ftp.mplayerhq.hu/MPlayer/releases/ \
+			ftp://ftp2.mplayerhq.hu/MPlayer/releases/
+EXTRACT_SUFX=		.tar.bz2
+DIST_SUBDIR=		mplayer
+
+MAINTAINER?=		svs@ropnet.ru,zuntum@netbsd.org
+HOMEPAGE?=		http://www.mplayerhq.hu/
+
+PATCHDIR=		${.CURDIR}/../../graphics/mplayer-share/patches
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
+
+RESTRICTED?=		"unsure of the license"
+#	see http://www.mplayerhq.hu/DOCS/users_against_developers.html#binary
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+#	no source on the ftp server because of the css source code in it
+NO_SRC_ON_FTP=		${RESTRICTED}
+
+USE_X11=		YES
+USE_GMAKE=		YES
+HAS_CONFIGURE=		YES
+
+USE_PTHREAD=		native pth
+
+CONFIGURE_ARGS+=	--prefix="${PREFIX}"
+CONFIGURE_ARGS+=	--with-extraincdir="${BUILDLINK_DIR}/include"
+CONFIGURE_ARGS+=	--with-extralibdir="${LOCALBASE}/lib"
+CONFIGURE_ARGS+=	--with-win32libdir="${LOCALBASE}/lib/win32"
+#CONFIGURE_ARGS+=	--enable-dvdread
+CONFIGURE_ARGS+=	--disable-mpdvdkit
+
+# The configure script attempts to test-execute compiled programs in /tmp,
+# but that directory may be mounted as noexec; work this around by setting
+# TMPDIR to ${WRKDIR}
+CONFIGURE_ENV+=		TMPDIR=${WRKDIR}
+
+.include "../../devel/binutils/buildlink.mk"
+.include "../../lang/gcc/Makefile.gcc"
