@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1 1998/09/13 01:28:27 garbled Exp $
+--- Makefile.in.orig	Sat Sep 12 17:57:48 1998
++++ Makefile.in	Sat Sep 12 17:59:28 1998
+@@ -76,13 +76,13 @@
+ all: $(CONFIGURED) ical
+ 
+ ical: $(LIB3) $(LIB2) $(LIB1) $(OBJS) main.o
+-	$(CXXLINKER) -o $@ $(OBJS) main.o $(LIBS)
++	$(CXXLINKER) -o $@ $(OBJS) main.o -Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib $(LIBS)
+ 
+ ical-bundle: $(LIB3) $(LIB2) $(LIB1) $(OBJS) mbundle.o
+-	$(CXXLINKER) -o $@ $(OBJS) mbundle.o $(BLIBS)
++	$(CXXLINKER) -o $@ $(OBJS) mbundle.o -Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib $(BLIBS)
+ 
+ ical-tiny: $(LIB3) $(LIB2) $(LIB1) $(OBJS) mbundle.o
+-	$(CXXLINKER) -o $@ $(OBJS) mbundle.o $(TINY_BLIBS)
++	$(CXXLINKER) -o $@ $(OBJS) mbundle.o -Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib $(TINY_BLIBS)
+ 
+ $(LIB1): FRC
+ 	@echo making in calendar
