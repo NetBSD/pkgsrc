@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/10/29 23:45:35 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/11/27 18:10:03 mycroft Exp $
 bin/sawfish
 bin/sawfish-capplet
 bin/sawfish-client
@@ -14,32 +14,32 @@ info/sawfish.info-5
 @exec install-info --info-dir=%D/info %D/info/sawfish.info
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/DOC
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gradient.la
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gradient.a
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gradient.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gtk-style
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/libgradient.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/libgradient.so.0.0
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/libselection.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/libselection.so.0.0
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/libx.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/libx.so.0.0
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish-about
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish-menu
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/flippers.la
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/flippers.a
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/flippers.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/gradient.la
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/libflippers.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/libflippers.so.0.0
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/libgradient.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/libgradient.so.0.0
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/libplay-sample.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/libplay-sample.so.0.0
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/libselection.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/libselection.so.0.0
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/libx.a
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/libx.so.0.0
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/gradient.a
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/gradient.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/play-sample.la
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/play-sample.a
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/play-sample.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/selection.la
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/selection.a
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/selection.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/x.la
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/x.a
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/x.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/selection.la
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/selection.a
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/selection.so
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/x.la
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/x.a
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/x.so
 share/control-center/Sawfish/.directory
 share/control-center/Sawfish/.order
 share/control-center/Sawfish/appearance-properties.desktop
