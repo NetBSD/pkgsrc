@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.6 2002/01/19 12:54:52 drochner Exp $
+# $NetBSD: pyversion.mk,v 1.7 2002/01/29 19:21:58 drochner Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -8,6 +8,7 @@ PYTHON_PYVERSION_MK=	defined
 PYTHON_VERSION_DEFAULT?=	21
 PYTHON_VERSIONS_ACCEPTED?=	22 21 20
 
+BUILDLINK_DEPENDS.python15?=	python15>=1.5
 BUILDLINK_DEPENDS.python20?=	python20>=2.0
 BUILDLINK_DEPENDS.python21?=	python21>=2.1
 BUILDLINK_DEPENDS.python22?=	python22>=2.2
@@ -26,6 +27,9 @@ _PYTHON_VERSION_21_INSTALLED=	yes
 .endif
 .if exists(${LOCALBASE}/bin/python2.0)
 _PYTHON_VERSION_20_INSTALLED=	yes
+.endif
+.if exists(${LOCALBASE}/bin/python1.5)
+_PYTHON_VERSION_15_INSTALLED=	yes
 .endif
 
 #
@@ -85,6 +89,13 @@ PYPKGPREFIX=	py21
 PYDEPENDENCY=	${BUILDLINK_DEPENDS.python20}:../../lang/python20
 PYVERSSUFFIX=	2.0
 PYPKGPREFIX=	py20
+.elif ${_PYTHON_VERSION} == "15"
+PYDEPENDENCY=	${BUILDLINK_DEPENDS.python15}:../../lang/python15
+PYVERSSUFFIX=	1.5
+PYPKGPREFIX=	py15
+.if !defined(PYTHON_DISTUTILS_BOOTSTRAP)
+BUILD_DEPENDS+=	py15-distutils-*:../../devel/py-distutils
+.endif
 .endif
 
 PYTHONBIN=	${LOCALBASE}/bin/python${PYVERSSUFFIX}
