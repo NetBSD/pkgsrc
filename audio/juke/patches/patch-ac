@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/03/06 22:30:57 salo Exp $
+
+--- MANUAL.orig	2000-09-27 09:06:52.000000000 +0200
++++ MANUAL	2003-02-26 17:38:28.000000000 +0100
+@@ -22,8 +22,8 @@
+ 
+ I hope that the format is kind of self explaining.
+ 
+-The configuration file can be saved as /etc/juke.conf or
+-~/.juke.conf. The later is used if both files exists.
++The configuration file can be saved as @PKG_SYSCONFDIR@/juke.conf
++or ~/.juke.conf. The later is used if both files exists.
+ 
+ 3 Usage
+ 
