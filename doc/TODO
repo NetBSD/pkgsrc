@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2195 2004/10/04 09:22:22 minskim Exp $
+$NetBSD: TODO,v 1.2196 2004/10/04 12:19:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -178,7 +178,7 @@ Suggested package updates
 =========================
 
 	o ImageViewer-0.6.3
-	o TeXmacs-1.0.4.2
+	o TeXmacs-1.0.4.3
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0.10 [pkg/26695]
@@ -253,9 +253,7 @@ Suggested package updates
 	o festival-1.4.3
 	o file-4.10
 	o findutils-4.1.20
-	o firefox-bin-0.10.1
-	o firefox-gtk2-bin-0.10.1
-	o firefox-0.10.1
+	o firefox-bin-0.10.1 [not available yet]
 	o firewalk-5.0
 	o firewalk-gtk-5.0
 	o fluxbox-0.9.10
@@ -474,7 +472,9 @@ Suggested package updates
 	o xerces-j-2.6.2
 	o xinvest-2.6.9
 	o xine-1-rc6a
+	o xmame-0.87
 	o xmcd-3.3.0
+	o xmess-0.87
 	o xmlstarlet-0.9.5
 	o xmms-alarm-0.3.5
 	o xmms-crossfade-0.3.7
