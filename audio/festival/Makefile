@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/04/10 01:28:03 grant Exp $
+# $NetBSD: Makefile,v 1.24 2003/04/27 16:38:48 cjep Exp $
 
 DISTNAME=	festival-1.4.1
 PKGREVISION=	1
@@ -84,8 +84,8 @@ do-install:
 
 # has to be below bsd.pkg.mk, else ${ECHO} isn't expanded correctly
 PKG_COMPILER!=	case "`${CC} -v 2>&1`" in *2.6.*) ${ECHO} gcc26;;\
-                                          *2.7.*) ${ECHO} gcc27;;\
-                                          *2.8.*) ${ECHO} gcc28;;\
-					  *2.95.*) ${ECHO} gcc295;;\
-                                          *egcs*) ${ECHO} egcs;;\
-                                       esac
+					*2.7.*) ${ECHO} gcc27;;\
+					*2.8.*) ${ECHO} gcc28;;\
+					*2.95.*) ${ECHO} gcc295;;\
+					*egcs*) ${ECHO} egcs;;\
+					esac
