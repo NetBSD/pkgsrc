@@ -1,0 +1,8 @@
+$NetBSD: patch-ae,v 1.1 1998/08/27 12:58:52 garbled Exp $
+--- sys/unix/Makefile.doc.orig	Sat Aug  8 00:35:44 1998
++++ sys/unix/Makefile.doc	Sat Aug  8 00:36:41 1998
+@@ -33,3 +33,3 @@
+ GAME	= nethack
+-MANDIR	= /usr/man/man6
++MANDIR	= $(LOCALBASE)/man/man6
+ MANEXT	= 6

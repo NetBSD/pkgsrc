@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1 1998/08/27 12:58:51 garbled Exp $
+--- include/config.h.orig	Sat Aug  8 06:06:46 1998
++++ include/config.h	Sat Aug  8 06:08:27 1998
+@@ -298,8 +298,8 @@
+ /* path and file name extension for compression program */
+-# define COMPRESS "/usr/ucb/compress"	     /* Lempel-Ziv compression */
+-# define COMPRESS_EXTENSION ".Z"	     /* compress's extension */
++/* # define COMPRESS "/usr/ucb/compress"	     /* Lempel-Ziv compression */
++/* # define COMPRESS_EXTENSION ".Z"	     /* compress's extension */
+ 
+ /* An example of one alternative you might want to use: */
+-/* # define COMPRESS "/usr/local/bin/gzip"   /* FSF gzip compression */
+-/* # define COMPRESS_EXTENSION ".gz"	     /* normal gzip extension */
++# define COMPRESS "/usr/bin/gzip"   /* FSF gzip compression */
++# define COMPRESS_EXTENSION ".gz"	     /* normal gzip extension */
+ #endif
+@@ -333,3 +333,3 @@
+ # ifndef HACKDIR
+-#  define HACKDIR "/usr/games/lib/nethackdir"	/* nethack directory */
++#  define HACKDIR "XXXLOCALBASEXXX/share/nethackdir"	/* nethack directory */
+ # endif
+@@ -429,3 +429,3 @@
+ 
+-/*#define VISION_TABLES	/* use vision tables generated at compile time */
++#define VISION_TABLES	/* use vision tables generated at compile time */
+ #ifndef VISION_TABLES
+@@ -467,3 +467,3 @@
+ #define EXP_ON_BOTL	/* Show experience on bottom line */
+-/* #define SCORE_ON_BOTL	/* added by Gary Erickson (erickson@ucivax) */
++#define SCORE_ON_BOTL	/* added by Gary Erickson (erickson@ucivax) */
+ 

@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.1 1998/08/27 12:58:51 garbled Exp $
+--- include/system.h.rorig	Sun Aug  9 05:31:34 1998
++++ include/system.h	Sun Aug  9 05:31:40 1998
+@@ -82,3 +82,3 @@
+ # else
+-#  ifndef bsdi
++#  if !defined(bsdi) && !defined(__NetBSD__)
+ E int FDECL(srandom, (unsigned int));
+@@ -132,3 +132,3 @@
+ #else
+-# if defined(BSD) || defined(ULTRIX)
++# if (defined(BSD) || defined(ULTRIX)) && !defined(__NetBSD__)
+ E  int qsort();
+@@ -398,3 +398,3 @@
+ #  else
+-#   if !(defined(ULTRIX_PROTO) && defined(__GNUC__))
++#   if !(defined(ULTRIX_PROTO) && defined(__GNUC__)) && !defined(__NetBSD__)
+ E int	FDECL(strlen, (const char *));
+@@ -509,2 +509,3 @@
+ 
++#ifndef __NetBSD__
+ # if defined(ULTRIX) || defined(SYSV) || defined(MICRO) || defined(VMS) || defined(MAC)
+@@ -514,2 +515,3 @@
+ # endif /* ULTRIX */
++#endif
+ 
