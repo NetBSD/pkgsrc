@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2004/11/14 08:00:14 jlam Exp $
+# $NetBSD: hacks.mk,v 1.4 2004/12/10 23:12:47 jlam Exp $
 
 .include "../../mk/compiler.mk"
 
@@ -33,4 +33,20 @@ CFLAGS+=	-DDEBUGGING -g -msoft-quad-float -O2
 .if !empty(CC_VERSION:Mgcc*) && !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
 PKG_HACKS+=		powerpc-codegen
 BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
+.endif
+
+### [Fri Dec 10 18:09:51 EST 2004 : jlam]
+### On VAX, feeding a base "NaN" to nawk causes nawk to core dump since
+### it tries to interpret it as a number, which causes an FP exception.
+### Modify files that pass through nawk to not have bare "NaN"s.
+###
+.if !empty(MACHINE_PLATFORM:M*-*-vax)
+PKG_HACKS+=		NaN-vax-exception
+.PHONY: NaN-vax-exception
+pre-configure: NaN-vax-exception
+NaN-vax-exception:
+	cd ${WRKSRC}; for file in MANIFEST; do				\
+		${MV} $$file $$file.NaN;				\
+		${SED} -e "s,NaN,*NaN*,g" $$file.NaN > $$file;		\
+	done
 .endif
