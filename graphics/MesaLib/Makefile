@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/11/18 16:10:55 jschauma Exp $
+# $NetBSD: Makefile,v 1.27 2004/01/05 11:47:33 jlam Exp $
 
 PKGNAME=		MesaLib-${MESA_VERSION}
 PKGREVISION=		2
@@ -6,10 +6,12 @@ WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
 MAINTAINER=		rh@NetBSD.org
 COMMENT=		Graphics library similar to SGI's OpenGL
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 .include "../../graphics/Mesa/Makefile.common"
 
-USE_BUILDLINK2=		yes
-USE_X11BASE=		yes
+USE_BUILDLINK3=		yes
+USE_X11=		yes
 USE_PKGINSTALL=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-glut
@@ -34,7 +36,3 @@ post-install:
 	done
 
 .include "../../mk/bsd.pkg.mk"
-
-# must be below bsd.pkg.mk to overwrite values
-PREFIX=		${LOCALBASE}
-X11PREFIX=	${LOCALBASE}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/12/03 16:47:25 erh Exp $
+# $NetBSD: Makefile,v 1.28 2004/01/05 11:42:20 jlam Exp $
 #
 
 DISTNAME=	bzip2-1.0.2
@@ -9,8 +9,10 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sources.redhat.com/bzip2/
 COMMENT=	Block-sorting file compressor
 
-USE_BUILDLINK2=		# defined
-USE_LIBTOOL=		# defined
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
 MAKE_ENV+=		REALCC="${BUILDLINK_CC}"
 
 .include "../../mk/bsd.prefs.mk"
@@ -20,6 +22,7 @@ BZIP_CFLAGS=           -Wall -Winline -fomit-frame-pointer -fno-strength-reduce
 .endif
 
 MAKE_ENV+=             BZIP_CFLAGS="${BZIP_CFLAGS}"
+INSTALLATION_DIRS=	bin include lib man/man1
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_DATA} ${WRKSRC}/libbz2.la ${PREFIX}/lib
