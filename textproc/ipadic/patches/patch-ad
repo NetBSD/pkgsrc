@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/05/31 13:00:53 seb Exp $
+$NetBSD: patch-ad,v 1.2 2004/05/06 13:34:19 taca Exp $
 
---- Makefile.am.orig	Thu Mar 22 05:41:31 2001
+--- Makefile.am.orig	2003-09-13 14:37:17.000000000 +0900
 +++ Makefile.am
-@@ -28,11 +28,6 @@
- 	$(MKDICDIR)/mkary -l -o chadic.ary chadic.int
+@@ -18,11 +18,6 @@ chadic.da: 
+ 	$(MKDICDIR)/makeda chadic *.dic
  
  install-data-local:
 -	if test -f @CHASEN_CHASENRC_PATH@  ; then \
@@ -12,5 +12,5 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/05/31 13:00:53 seb Exp $
 -		cp chasenrc @CHASEN_CHASENRC_PATH@ ;\
 -	fi
  
- sjis-dist: distdir
- 	cp -R ipadic-@VERSION@ ipadic-sjis-@VERSION@
+ sjis-dist: dist
+ 	gtar xzvf ipadic-@VERSION@.tar.gz

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/05/31 13:00:53 seb Exp $
+$NetBSD: distinfo,v 1.2 2004/05/06 13:34:19 taca Exp $
 
-SHA1 (ipadic-2.4.4.tar.gz) = 056b6c9991b762b2fd4776e89728a55cf6e2e154
-Size (ipadic-2.4.4.tar.gz) = 2873402 bytes
-SHA1 (patch-aa) = 472b22da1b79d7bc3d212767277e928d786ccd56
-SHA1 (patch-ab) = ed29e17cd2bfe2f0fe3732f8ca757a798dfb5b3d
-SHA1 (patch-ad) = ebce7f05ae7711b9dbda9dbdaa8e8e5caa5e4f20
-SHA1 (patch-ae) = cccab60a47d8be8ee156b1867bd21553068b9b11
+SHA1 (ipadic-2.7.0.tar.gz) = 52784d8abb3361eafec83ab543be63cf087f9eb2
+Size (ipadic-2.7.0.tar.gz) = 4300102 bytes
+SHA1 (patch-aa) = a5d0f0fea5ccd4190d51a37b3c09a91c03979c8f
+SHA1 (patch-ab) = e7b45abf36010febd79dd3e9ee2580dd509716cc
+SHA1 (patch-ad) = c143a17a24cae23ab5ee9372a52c2ce3e59fe3ce
+SHA1 (patch-ae) = b074d3515465260a078e74945dbcc69efbb6aaf9
