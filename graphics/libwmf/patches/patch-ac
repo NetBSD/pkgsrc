@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.1 2000/08/05 02:36:38 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2000/08/06 14:18:50 wiz Exp $
 
---- xgd-1.7.3/Makefile.in.orig	Thu Dec 16 10:31:47 1999
-+++ xgd-1.7.3/Makefile.in	Fri Aug  4 20:18:39 2000
+--- xgd-1.7.3/Makefile.in.orig	Thu Dec 16 16:31:47 1999
++++ xgd-1.7.3/Makefile.in	Sun Aug  6 15:23:04 2000
+@@ -29,7 +29,7 @@
+ 
+ #If you don't have FreeType and/or Xpm installed, including the
+ #header files, uncomment this (default).
+-CFLAGS=@CFLAGS@ @DEFS@ -I../ @ZLIB_CFLAGS@ @TTF_CFLAGS@ @XPM_CFLAGS@
++CFLAGS=@CFLAGS@ @DEFS@ -I../ @ZLIB_CFLAGS@ @TTF_CFLAGS@ @XPM_CFLAGS@ -I${LOCALBASE}/include
+ #If you do have FreeType and/or Xpm fully installed, uncomment a
+ #variation of this and comment out the line above. See also LIBS below.
+ #CFLAGS=-O -DHAVE_XPM -DHAVE_LIBTTF
 @@ -45,7 +45,9 @@
  
  #Typical install locations for freetype, zlib, xpm and libpng header files.
