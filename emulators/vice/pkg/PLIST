@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/05/18 08:45:51 tv Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/02/08 03:44:18 wiz Exp $
 bin/c1541
 bin/petcat
 bin/x128
@@ -13,6 +13,7 @@ info/vice.info-2
 info/vice.info-3
 info/vice.info-4
 info/vice.info-5
+info/vice.info-6
 @exec install-info %D/info/vice.info %D/info/dir
 man/man1/c1541.1
 man/man1/petcat.1
@@ -43,6 +44,7 @@ share/doc/vice/vice_14.html
 share/doc/vice/vice_15.html
 share/doc/vice/vice_16.html
 share/doc/vice/vice_toc.html
+share/doc/vice/Win32-Howto.txt
 share/vice/C128/basic
 share/vice/C128/chargen
 share/vice/C128/c64s.vpl
@@ -55,6 +57,8 @@ share/vice/C128/godot.vpl
 share/vice/C128/kernal
 share/vice/C128/pc64.vpl
 share/vice/C128/position.vkm
+share/vice/C128/vdc_deft.vpl
+share/vice/C128/z80bios
 share/vice/C64/4064.vrs
 share/vice/C64/64gs.vrs
 share/vice/C64/basic
@@ -87,8 +91,9 @@ share/vice/CBM-II/rom128l.vrs
 share/vice/CBM-II/rom256h.vrs
 share/vice/CBM-II/rom256l.vrs
 share/vice/CBM-II/white.vpl
+share/vice/DRIVES/d1541II
+share/vice/DRIVES/dos1001
 share/vice/DRIVES/dos1541
-share/vice/DRIVES/dos1541II
 share/vice/DRIVES/dos1571
 share/vice/DRIVES/dos1581
 share/vice/DRIVES/dos2031
