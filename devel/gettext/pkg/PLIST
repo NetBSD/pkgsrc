@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/12/23 00:14:16 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/12/28 20:18:54 tron Exp $
 bin/gettext
 bin/gettextize
 bin/msgcmp
