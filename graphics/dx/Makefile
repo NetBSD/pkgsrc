@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2002/12/05 21:44:30 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2003/03/09 19:17:56 jschauma Exp $
 
 DISTNAME=	dx-4.2.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.research.ibm.com/dx/srcDownload/srcArchive/
 
@@ -25,7 +26,8 @@ MAKE_ENV+=		ARCH=""
 CONFIGURE_ENV+=		ARCH=""
 
 .include "../../devel/netcdf/buildlink2.mk"
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../graphics/freetype-lib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2002/09/22 00:18:25 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2003/03/09 19:17:56 jschauma Exp $
 
 DISTNAME=		geomview-1.8.1
+PKGREVISION=		1
 CATEGORIES=		graphics math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=geomview/}
 
@@ -41,7 +42,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/html/pix/*			\
 	${PREFIX}/share/doc/html/geomview/pix
 
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../mk/motif.buildlink2.mk"
 
 .include "../../mk/texinfo.mk"
