@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/08/13 20:37:25 abs Exp $
+# $NetBSD: Makefile,v 1.23 1999/08/31 18:51:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
@@ -16,13 +16,14 @@ CONFIGURE_ENV+=		PREFIX=${PREFIX}
 CONFIGURE_SCRIPT=	Configure
 CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} -Doptimize="${CFLAGS}" \
 			-Darchname=${MACHINE_ARCH}-${LOWER_OPSYS} \
-			-Dusemymalloc=false
+			-Dcc=gcc -Dusemymalloc=false
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
 PLIST_SRC=      	${WRKDIR}/.PLIST_SRC
+MAKE_ENV+=		CFLAGS=
 .endif
 
 test:
