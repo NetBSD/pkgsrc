@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.end,v 1.1 2001/01/12 15:00:10 itojun Exp $
+@dirrm share/doc/jisx0208fonts
+@exec %D/bin/mkfontdir %D/lib/X11/fonts/local
+@unexec %D/bin/mkfontdir %D/lib/X11/fonts/local

@@ -11,7 +11,7 @@ all: ${PCF}
 
 prepare::
 	for i in ${BDF0}; do \
-		ln -s $$i; \
+		ln -sf $$i; \
 	done
 
 install::
