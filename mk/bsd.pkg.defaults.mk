@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.281 2004/09/14 08:34:52 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.282 2004/09/21 17:51:30 xtraeme Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -174,6 +174,10 @@ VARBASE?=	/var
 X11ROOT_PREFIX?=	XFree86
 .elif defined(X11_TYPE) && !empty(X11_TYPE:Mxorg)
 X11ROOT_PREFIX?=	xorg
+USE_BUILTIN.fixesext=	yes
+USE_BUILTIN.Xfixes=	yes
+USE_BUILTIN.render=	yes
+USE_BUILTIN.randrext=	yes
 .else
 X11ROOT_PREFIX?=	# empty
 .endif
