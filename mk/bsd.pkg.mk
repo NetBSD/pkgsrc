@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.900 2002/01/10 02:51:30 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.901 2002/01/11 14:41:42 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -425,8 +425,15 @@ BUILD_DIR?=		${WRKOBJDIR}/${PKGPATH}
 BUILD_DIR?=		${.CURDIR}
 .endif # WRKOBJDIR
 
+# If OBJHOSTNAME is set, use first component of hostname in directory name
 # If OBJMACHINE is set, use ${MACHINE_ARCH} in the working directory name
-.ifdef OBJMACHINE
+.if defined(OBJHOSTNAME)
+.  if !defined(_HOSTNAME)
+_HOSTNAME!= ${UNAME} -n
+MAKEFLAGS+= _HOSTNAME=${_HOSTNAME}
+.  endif
+WRKDIR_BASENAME?=	work.${_HOSTNAME:C|\..*||}
+.elif defined(OBJMACHINE)
 WRKDIR_BASENAME?=	work.${MACHINE_ARCH}
 .else
 WRKDIR_BASENAME?=	work
