@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/28 22:41:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/29 08:51:04 xtraeme Exp $
 #
 
 DISTNAME=	pekwm-0.1.3
@@ -20,8 +20,8 @@ USE_PKGINSTALL=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !exists(${X11BASE}/include/X11/extensions/Xinerama.h)
-CONFIGURE_ARGS+=	--disable-xinerama
+.if exists(${X11BASE}/include/X11/extensions/Xinerama.h)
+CONFIGURE_ARGS+=	--enable-xinerama
 .endif
 
 CONFIGURE_ARGS+=	--enable-harbour
