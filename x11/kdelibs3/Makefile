@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/05/02 11:57:27 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2003/05/13 10:01:54 markd Exp $
 
 DISTNAME=	kdelibs-3.1.1
 PKGREVISION=	2
@@ -44,7 +44,8 @@ FOO_MAIN_FILES= \
 .include "../../x11/kde3/Makefile.foo_main"
 
 FIXUP_FILES= \
-	kspell/ksconfig.cpp
+	kspell/ksconfig.cpp \
+	kio/kssl/kopenssl.cc
 
 pre-configure:
 	@for i in ${FIXUP_FILES}; do \
