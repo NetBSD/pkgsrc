@@ -1,4 +1,4 @@
-$NetBSD: README.Interix,v 1.3 2004/03/11 20:47:56 tv Exp $
+$NetBSD: README.Interix,v 1.4 2004/03/12 00:16:42 tv Exp $
 
 Please read the general README file as well.
 
@@ -33,6 +33,19 @@ remains as case-insensitive, then "bootstrap" will require the
 =====
 
 KNOWN CAVEATS
+
+* It is not necessary, in general, to have a "root" user on the Windows
+  system; any member of the local Administrators group will suffice. 
+  However, some packages currently assume that the user named "root" is
+  the privileged user (these will eventually be fixed).  To accomodate
+  these, you may create such a user; make sure it is in the local group
+  Administrators.
+
+* The popular Interix binary packages from http://www.interopsystems.com/
+  use OpenBSD's pkg_* tools and occupy the /var/db/pkg directory (though
+  the packages install to /usr/local).  If you want to have both kinds of
+  packages installed in the system, supply "--pkgdbdir=DIRECTORY" to
+  "bootstrap" to use an alternative package database directory.
 
 * As of this writing, the necessary Interix support stubs have not yet been
   added to pkgsrc/mk.
