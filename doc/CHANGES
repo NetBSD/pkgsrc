@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5290 2004/03/22 08:27:13 martti Exp $
+$NetBSD: CHANGES,v 1.5291 2004/03/22 11:49:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1507,3 +1507,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ndtpd to 3.1.5 [uebayasi 2004-03-21]
 	Updated xpmroot to 2.4.18 [martti 2004-03-22]
 	Updated fvwm2 to 2.4.18 [martti 2004-03-22]
+	Updated xvile to 9.4 [wiz 2004-03-22]
