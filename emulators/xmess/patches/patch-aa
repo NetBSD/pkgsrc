@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.17 2003/04/13 17:37:48 kristerw Exp $
---- makefile.unix.orig	Sun Apr 13 18:22:02 2003
-+++ makefile.unix	Sun Apr 13 18:31:53 2003
+$NetBSD: patch-aa,v 1.18 2003/05/27 12:43:16 kristerw Exp $
+--- makefile.unix.orig	Mon May 26 22:09:26 2003
++++ makefile.unix	Tue May 27 14:07:48 2003
 @@ -33,7 +33,7 @@
  ###########################################################################
  
@@ -28,6 +28,15 @@ $NetBSD: patch-aa,v 1.17 2003/04/13 17:37:48 kristerw Exp $
  
  
  ###########################################################################
+@@ -106,7 +106,7 @@
+ ###########################################################################
+ 
+ # gcc on x86
+-CFLAGS = -O -Wall -Wno-unused
++# CFLAGS = -O -Wall -Wno-unused
+ 
+ # gcc on x86 with some optimizations
+ # CFLAGS = -O2 -Wall -Wno-unused -mcpu=i686 -fomit-frame-pointer \
 @@ -397,7 +397,7 @@
  ###########################################################################
  
@@ -46,7 +55,7 @@ $NetBSD: patch-aa,v 1.17 2003/04/13 17:37:48 kristerw Exp $
  
  # FreeBSD
  # ARCH  = freebsd
-@@ -555,7 +555,7 @@
+@@ -560,7 +560,7 @@
  X11_MITSHM = 1
  
  # Use Xv extension for hardware scaling.
@@ -55,7 +64,7 @@ $NetBSD: patch-aa,v 1.17 2003/04/13 17:37:48 kristerw Exp $
  
  # Enable XFree86 DGA.  This also causes "make install" to set the suid bit 
  # on the executable.
-@@ -575,8 +575,8 @@
+@@ -580,8 +580,8 @@
  # X11LIB		= -L/usr/lib/X11
  
  # Standard location for XFree86
