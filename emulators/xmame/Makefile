@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2000/08/23 23:14:24 tron Exp $
+# $NetBSD: Makefile,v 1.39 2000/11/05 00:43:30 mycroft Exp $
 #
 
-DISTNAME=		xmame-0.37b4.1
+DISTNAME=		xmame-0.37b6.1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tgz
@@ -56,7 +56,7 @@ post-patch:
 do-install:
 	(cd ${WRKSRC} && ${INSTALL_PROGRAM} xmame.${DISPLAY_METHOD} \
 		${PREFIX}/bin/xmame)
-	(cd ${WRKSRC}/doc && ${INSTALL_MAN} xmame.man \
+	(cd ${WRKSRC}/doc && ${INSTALL_MAN} xmame.6 \
 		${PREFIX}/man/man6/xmame.6)
 	${MKDIR} ${ROMPATH}
 	(cd ${WRKSRC}/doc && ${INSTALL_DATA} xmamerc ${ROMPATH}/xmamerc)
