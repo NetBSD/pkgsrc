@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/09/08 10:00:19 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/12 21:19:58 jschauma Exp $
 #
 
 BASENAME=	j2sdk
@@ -9,6 +9,10 @@ PKGREVISION=	1
 COMMENT=	Linux port of the Blackdown Java(tm) Runtime Environment
 
 DEPENDS=	blackdown-jre13>=1:../../lang/blackdown-jre13
+
+.if ${MACHINE_ARCH} == "powerpc"
+DISTNAME:=	${DISTNAME}.bin
+.endif
 
 # these are part of JRE
 do-configure:
