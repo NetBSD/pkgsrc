@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/02/28 09:30:01 tron Exp $
+# $NetBSD: Makefile,v 1.34 2001/03/05 11:33:47 itojun Exp $
 
 DISTNAME=	sendmail.8.11.3
 PKGNAME=	sendmail-8.11.3
@@ -7,13 +7,13 @@ MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
 		ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/
 
-#PATCH_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/smtpfeed/
-#PATCHFILES=	sendmail8.11.2+3.4W.patch.gz
-#PATCH_DIST_ARGS=-d ${WRKSRC}/sendmail -E ${PATCH_DIST_STRIP}
-#.if !(defined(PATCH_DEBUG) || defined(PKG_VERBOSE))
-#PATCH_DIST_ARGS+=--forward --quiet
-#.endif
-#PATCH_DIST_STRIP=	-p1
+PATCH_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/smtpfeed/
+PATCHFILES=	sendmail8.11.3+3.4W.patch.gz
+PATCH_DIST_ARGS=-d ${WRKSRC}/sendmail -E ${PATCH_DIST_STRIP}
+.if !(defined(PATCH_DEBUG) || defined(PKG_VERBOSE))
+PATCH_DIST_ARGS+=--forward --quiet
+.endif
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.sendmail.org/
@@ -58,7 +58,7 @@ post-patch:
 	${CP} ${PKGDIR}/DESCR ${DESCR_SRC}
 	${ECHO} '---' >> ${DESCR_SRC}
 	${ECHO} -n 'compiled features:' >> ${DESCR_SRC}
-#	${ECHO} -n ' WIDE' >> ${DESCR_SRC}
+	${ECHO} -n ' WIDE' >> ${DESCR_SRC}
 .if defined(USE_INET6) && ${USE_INET6} == YES
 	${CAT} ${FILESDIR}/site.config.m4-v6 >> ${SITECONFIG}
 	${ECHO} -n ' INET6' >> ${DESCR_SRC}
