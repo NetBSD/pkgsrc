@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2002/12/01 02:00:13 salo Exp $
+# $NetBSD: Makefile,v 1.11 2002/12/06 16:50:02 jmmv Exp $
 
-DISTNAME=		dopewars-1.5.0
+DISTNAME=		dopewars-1.5.8
 CATEGORIES=		games
 MASTER_SITES=		http://bellatrix.pcl.ox.ac.uk/~ben/dopewars/ \
 			${MASTER_SITE_SOURCEFORGE:=dopewars/} \
@@ -19,8 +19,10 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-ncurses
 CONFIGURE_ARGS+=	--enable-networking
 CONFIGURE_ARGS+=	--disable-gui-client
-# datadir is the place the score file is saved
-CONFIGURE_ARGS+=	--datadir=/var/games
+CONFIGURE_ARGS+=	--disable-glib2
+CONFIGURE_ARGS+=	--without-esd
+CONFIGURE_ARGS+=	--without-sdl
+CONFIGURE_ARGS+=	--localstatedir=/var/games
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
