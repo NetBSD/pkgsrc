@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/08/17 19:47:39 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/12/13 17:19:26 jmmv Exp $
 bin/intltool-extract
 bin/intltool-merge
 bin/intltool-prepare
@@ -10,6 +10,7 @@ man/man8/intltool-prepare.8
 man/man8/intltool-update.8
 man/man8/intltoolize.8
 share/aclocal/intltool.m4
+share/intltool/XML/Parser/Style/OrigTree.pm
 share/intltool/intltool-extract.in
 share/intltool/intltool-merge.in
 share/intltool/intltool-po-Makefile.in.in-patch-1
@@ -19,5 +20,9 @@ share/intltool/intltool-po-Makefile.in.in-patch-4
 share/intltool/intltool-po-Makefile.in.in-patch-5
 share/intltool/intltool-po-Makefile.in.in-patch-6
 share/intltool/intltool-po-Makefile.in.in-patch-7
+share/intltool/intltool-po-Makefile.in.in-patch-8
 share/intltool/intltool-update.in
+@dirrm share/intltool/XML/Parser/Style
+@dirrm share/intltool/XML/Parser
+@dirrm share/intltool/XML
 @dirrm share/intltool
