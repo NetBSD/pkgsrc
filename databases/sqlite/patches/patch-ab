@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2004/09/08 15:55:48 salo Exp $
+$NetBSD: patch-ab,v 1.8 2005/02/24 16:05:25 wiz Exp $
 
---- ../sqlite/configure.orig	2004-02-29 16:18:31.000000000 +0100
-+++ ../sqlite/configure	2004-09-08 06:17:32.000000000 +0200
-@@ -18376,8 +18376,8 @@
+--- ../sqlite-2.8.16/configure.orig	2005-02-14 01:22:04.000000000 +0100
++++ ../sqlite-2.8.16/configure
+@@ -18376,8 +18376,8 @@ if test "$program_prefix" = "NONE"; then
  fi
  
  

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2004/10/03 00:13:23 tv Exp $
+# $NetBSD: Makefile,v 1.29 2005/02/24 16:05:25 wiz Exp $
 
-DISTNAME=		sqlite-2.8.15
-PKGREVISION=		2
+DISTNAME=		sqlite-2.8.16
 CATEGORIES=		databases
 MASTER_SITES=		http://www.hwaci.com/sw/sqlite/ \
 			http://www.sqlite.org/
@@ -16,7 +15,7 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	../sqlite/configure
+CONFIGURE_SCRIPT=	../sqlite-2.8.16/configure
 CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ENV+=		config_TARGET_READLINE_INC="-I${BUILDLINK_PREFIX.readline}/include"
 
@@ -29,7 +28,7 @@ post-extract:
 	${MKDIR} ${WRKSRC}
 
 post-install:
-	${INSTALL_MAN} ${WRKDIR}/sqlite/sqlite.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKDIR}/sqlite-2.8.16/sqlite.1 ${PREFIX}/man/man1
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
