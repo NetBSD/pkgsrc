@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/03/07 22:42:06 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/04/06 02:03:00 abs Exp $
 #
 
 DISTNAME=	web-server-1.0
@@ -8,9 +8,9 @@ DISTFILES=	# empty
 
 MAINTAINER=	packages@netbsd.org
 
-DEPENDS+=	ap-auth-cookie-1.6:../../www/ap-auth-cookie
-DEPENDS+=	apache-1.3.1:../../www/apache
-DEPENDS+=	lynx-2.8:../../www/lynx
+DEPENDS+=	ap-auth-cookie-1.6.1:../../www/ap-auth-cookie
+DEPENDS+=	apache-1.3.3.2:../../www/apache
+DEPENDS+=	lynx-2.8.1:../../www/lynx
 DEPENDS+=	glimpse-4.1:../../textproc/glimpse
 
 EXTRACT_ONLY=	# empty

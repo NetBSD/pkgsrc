@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/08/20 15:16:52 tsarna Exp $
+# $NetBSD: Makefile,v 1.11 1999/04/06 02:03:01 abs Exp $
 #
 
 DISTNAME=	compat11
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	_${ARCH}.tgz
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.netbsd.org/Releases/formal-1.1/index.html
 
-DEPENDS+=	compat12:../../emulators/compat12
+DEPENDS+=	compat12-1.2.1:../../emulators/compat12
 
 ONLY_FOR_ARCHS=	amiga atari hp300 i386 mac68k mvme68k pc532 sparc sun3
 
