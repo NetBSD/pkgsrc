@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.5 1999/03/12 16:32:08 tron Exp $
+
 --- Makefile.orig	Fri Jan 17 20:10:55 1997
 +++ Makefile	Fri Mar 12 17:20:39 1999
 @@ -4,11 +4,12 @@
