@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 1998/04/28 22:55:14 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/07/14 21:47:15 tron Exp $
+bin/kdecode
 bin/kmail
 bin/knu
 bin/korn
 bin/krn
+share/apps/kmail/pics/kmmsgforwarded.xpm
+share/apps/kmail/pics/kmmsgqueued.xpm
+share/apps/kmail/pics/kmmsgsent.xpm
 share/apps/kmail/pics/feather_white.xpm
 share/apps/kmail/pics/pub_key_red.xpm
 share/apps/kmail/pics/attach.xpm
@@ -67,7 +71,6 @@ share/doc/HTML/en/kmail/index-3.html
 share/doc/HTML/en/kmail/index-4.html
 share/doc/HTML/en/kmail/index-5.html
 share/doc/HTML/en/kmail/index-6.html
-share/doc/HTML/en/kmail/index-7.html
 share/doc/HTML/en/kmail/logotp3.gif
 share/doc/HTML/en/knu/index-1.html
 share/doc/HTML/en/knu/index-2.html
@@ -75,6 +78,8 @@ share/doc/HTML/en/knu/index-3.html
 share/doc/HTML/en/knu/index-4.html
 share/doc/HTML/en/knu/index-5.html
 share/doc/HTML/en/knu/index-6.html
+share/doc/HTML/en/knu/knu-finger.gif
+share/doc/HTML/en/knu/index-7.html
 share/doc/HTML/en/knu/logotp3.gif
 share/doc/HTML/en/knu/knu-host.gif
 share/doc/HTML/en/knu/knu-traceroute.gif
@@ -123,8 +128,6 @@ share/locale/sk/LC_MESSAGES/kmail.mo
 share/locale/sk/LC_MESSAGES/krn.mo
 share/locale/sk/LC_MESSAGES/knu.mo
 share/locale/sk/LC_MESSAGES/kppp.mo
-share/locale/cr/LC_MESSAGES/kppp.mo
-share/locale/cr/LC_MESSAGES/krn.mo
 share/locale/de/LC_MESSAGES/kmail.mo
 share/locale/de/LC_MESSAGES/krn.mo
 share/locale/de/LC_MESSAGES/knu.mo
@@ -154,8 +157,20 @@ share/locale/pl/LC_MESSAGES/kppp.mo
 share/locale/pl/LC_MESSAGES/kmail.mo
 share/locale/pl/LC_MESSAGES/krn.mo
 share/locale/pl/LC_MESSAGES/knu.mo
-share/locale/cr/LC_MESSAGES/kmail.mo
-share/locale/cr/LC_MESSAGES/knu.mo
+share/locale/hr/LC_MESSAGES/kmail.mo
+share/locale/hr/LC_MESSAGES/knu.mo
+share/locale/hr/LC_MESSAGES/kppp.mo
+share/locale/hr/LC_MESSAGES/krn.mo
+share/locale/ro/LC_MESSAGES/krn.mo
+share/locale/ca/LC_MESSAGES/kppp.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/kmail.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/krn.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/knu.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/kppp.mo
+share/locale/pt_BR/LC_MESSAGES/kmail.mo
+share/locale/pt_BR/LC_MESSAGES/krn.mo
+share/locale/pt_BR/LC_MESSAGES/knu.mo
+share/locale/pt_BR/LC_MESSAGES/kppp.mo
 @dirrm share/doc/HTML/en/krn
 @dirrm share/doc/HTML/en/kmail
 @dirrm share/doc/HTML/en/knu

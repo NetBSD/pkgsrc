@@ -1,31 +1,22 @@
-# $NetBSD: Makefile,v 1.13 1998/07/04 05:11:14 mycroft Exp $
+# $NetBSD: Makefile,v 1.14 1998/07/14 21:47:15 tron Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
-DISTNAME=	kdenetwork-beta4-1
-PKGNAME=	kdenetwork-4.1b
+DISTNAME=	kdenetwork-1.0
 CATEGORIES=	net kde
-MASTER_SITES=	ftp://ftp.appl-opt.physik.uni-essen.de/pub/linux/kde/stable/Beta4/distribution/tgz/source/ \
-		ftp://ftp.net.lut.ac.uk/kde/stable/Beta4/distribution/tgz/source/ \
- 		ftp://ftp.caldera.com/pub/mirrors/kde/stable/Beta4/distribution/tgz/source/
-EXTRACT_SUFX=	.src.tar.bz2
+MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/ \
+		ftp://ftp.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/
 
 MAINTAINER=	tron@netbsd.org
 
-BUILD_DEPENDS=	bzip2:../../archivers/bzip2 \
-		moc:../../x11/qt \
-		${LOCALBASE}/lib/libgdbm.a:../../databases/gdbm
+DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
 DEPENDS+=	giflib-3.0:../../graphics/giflib
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	qt-1.33:../../x11/qt
 DEPENDS+=	uulib-0.5.13:../../converters/uulib
-DEPENDS+=	kdelibs-4.1b:../../x11/kdelibs
-DEPENDS+=	kdesupport-4.1b:../../converters/kdesupport
-DEPENDS+=	kdebase-4.1b:../../x11/kdebase
-
-EXTRACT_CMD=		bzip2
-EXTRACT_BEFORE_ARGS=	-d <
-EXTRACT_AFTER_ARGS=	| pax -r
+DEPENDS+=	kdelibs-1.0:../../x11/kdelibs
+DEPENDS+=	kdesupport-1.0:../../converters/kdesupport
+DEPENDS+=	kdebase-1.0:../../x11/kdebase
 
 USE_X11=	yes
 HAS_CONFIGURE=	yes
@@ -38,7 +29,5 @@ CONFIGURE_ENV=	KDEDIR=${PREFIX} \
 		INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
-
-WRKSRC=		${WRKDIR}/kdenetwork
 
 .include "../../mk/bsd.pkg.mk"
