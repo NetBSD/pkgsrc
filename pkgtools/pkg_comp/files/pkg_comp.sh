@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.8 2003/07/20 15:54:47 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.9 2003/07/20 16:05:04 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, Julio Merino <jmmv@netbsd.org>
@@ -380,6 +380,9 @@ pkg_makeroot()
 
     if [ "$NETBSD_RELEASE" != "no" ]; then
         BUILD_TARGET=install pkg_build pkgtools/libkver
+        echo "LD_PRELOAD=/usr/lib/libkver.so; export LD_PRELOAD" >> $DESTDIR/etc/shrc
+        echo "setenv LD_PRELOAD /usr/lib/libkver.so" >> $DESTDIR/etc/csh.login
+        echo "setenv LD_PRELOAD /usr/lib/libkver.so" >> $DESTDIR/etc/csh.cshrc
     fi
 
     if [ "$USE_GCC3" = "yes" ]; then
