@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 1998/07/19 15:23:52 tv Exp $
-lib/libimapuw.so.0.0
+@comment $NetBSD: PLIST,v 1.2 1998/08/05 14:46:32 tv Exp $
+lib/libimapuw.so.1.0
 libexec/imapd
 libexec/ipop2d
 libexec/ipop3d
