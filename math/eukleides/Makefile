@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:03 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/31 12:36:44 kristerw Exp $
 # FreeBSD Id: ports/math/eukleides/Makefile,v 1.1 2002/06/04 18:40:20 ijliao Exp
 
-DISTNAME=	eukleides.0.9.0
-PKGNAME=	eukleides-0.9.0
+DISTNAME=	eukleides.1.0.1
+PKGNAME=	eukleides-1.0.1
 CATEGORIES=	math
 MASTER_SITES=	http://perso.wanadoo.fr/obrecht/download/
 
