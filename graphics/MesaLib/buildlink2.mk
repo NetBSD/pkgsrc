@@ -1,9 +1,9 @@
-# $NetBSD: buildlink2.mk,v 1.15 2003/08/26 01:43:52 jschauma Exp $
+# $NetBSD: buildlink2.mk,v 1.16 2003/09/29 21:30:28 jschauma Exp $
 
 .if !defined(MESALIB_BUILDLINK2_MK)
 MESALIB_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../graphics/Mesa/version.mk"
 
 BUILDLINK_DEPENDS.MesaLib?=	MesaLib>=${MESA_VERSION}
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
@@ -25,6 +25,7 @@ BUILDLINK_FILES.MesaLib+=	include/GL/xmesa.h
 BUILDLINK_FILES.MesaLib+=	include/GL/xmesa_x.h
 BUILDLINK_FILES.MesaLib+=	include/GL/xmesa_xf86.h
 BUILDLINK_FILES.MesaLib+=	lib/libGL.*
+BUILDLINK_FILES.MesaLib+=	lib/libOSMesa.*
 
 USE_X11=			# defined
 
