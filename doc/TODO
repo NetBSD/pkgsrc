@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.903 2003/09/25 22:04:21 recht Exp $
+$NetBSD: TODO,v 1.904 2003/09/25 22:15:31 recht Exp $
 
 Suggested new packages
 ======================
@@ -165,7 +165,6 @@ Suggested package updates
 	o host-20030604
 	o hp2xx-3.4.4
 	o hpijs-1.4.1
-	o hping-2.0.0.2 [pkg/22320]
 	o icepref-2.2
 	o inn-2.4.0
 	o iozone-3.196
