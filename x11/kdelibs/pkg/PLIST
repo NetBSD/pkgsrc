@@ -1,18 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1998/07/15 12:51:37 agc Exp $
-lib/libkdecore.so.1.0
-lib/libkdecore.la
-lib/libkdeui.so.1.0
-lib/libkdeui.la
-lib/libjscript.so.0.90
-lib/libjscript.la
-lib/libkhtmlw.so.1.0
-lib/libkhtmlw.la
-lib/libkfile.so.1.0
-lib/libkfile.la
-lib/libkfm.so.1.0
-lib/libkfm.la
-lib/libmediatool.so.1.0
-lib/libmediatool.la
+@comment $NetBSD: PLIST,v 1.9 1998/07/20 00:01:57 tv Exp $
 include/kpixmap.h
 include/kled.h
 include/kcontainer.h
@@ -114,6 +100,20 @@ include/kcombiview.h
 include/kpreview.h
 include/xview.h
 include/kfilepreview.h
+lib/libkdecore.a
+lib/libkdecore.so.1.0
+lib/libkdeui.a
+lib/libkdeui.so.1.0
+lib/libjscript.a
+lib/libjscript.so.0.90
+lib/libkhtmlw.a
+lib/libkhtmlw.so.1.0
+lib/libkfile.a
+lib/libkfile.so.1.0
+lib/libkfm.a
+lib/libkfm.so.1.0
+lib/libmediatool.a
+lib/libmediatool.so.1.0
 share/apps/kde/pics/arrow_up.xbm
 share/apps/kde/pics/arrow_down.xbm
 share/apps/kde/pics/arrow_left.xbm
