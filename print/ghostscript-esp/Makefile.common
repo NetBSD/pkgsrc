@@ -1,0 +1,104 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2002/09/18 22:28:15 jlam Exp $
+
+DISTNAME=	espgs-${GS_VERS}-source
+BASEGS_VERS=	7.05
+GS_VERS=	${BASEGS_VERS}.5
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
+CATEGORIES=	print
+MASTER_SITES=	ftp://ftp.easysw.com/pub/ghostscript/ \
+		ftp://ftp2.easysw.com/pub/ghostscript/ \
+		ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/ghostscript/ \
+		ftp://ftp.mpg.goe.ni.schule.de/pub/internet/printing/ghostscript/ \
+		ftp://ftp.ntua.gr/pub/gnu/ghostscript/ \
+		ftp://ftp.fisek.com.tr/pub/ghostscript/
+EXTRACT_SUFX=   .tar.bz2
+
+MAINTAINER=	jlam@netbsd.org
+HOMEPAGE=	http://www.cups.org/ghostscript.html
+
+CONFLICTS+=	ghostscript{,-nox11}-[0-9]*
+CONFLICTS+=	ghostscript-esp{,-nox11}-[0-9]*
+CONFLICTS+=	ghostscript-gnu{,-nox11,-x11}-[0-9]*
+
+DEPENDS+=	ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
+
+USE_BUILDLINK2=		# defined
+USE_GMAKE=		# defined
+GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=	--with-ijs
+CONFIGURE_ARGS+=	--with-gimp-print
+CONFIGURE_ARGS+=	--without-omni
+
+DIST_SUBDIR=		ghostscript
+GS_SRCS=		${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=		${GS_SRCS}
+EXTRACT_ONLY=		${GS_SRCS}
+
+# Adobe's JPEG implementation in their PDF/PS documents is non-standard,
+# so we can't use an already installed libjpeg.so.
+#
+JPEG_SRCS=		jpegsrc.v6b.tar.gz
+JPEG_WRKSRC=		${WRKDIR}/jpeg-6b
+SITES_${JPEG_SRCS}=	ftp://ftp.uu.net/graphics/jpeg/
+DISTFILES+=		${JPEG_SRCS}
+EXTRACT_ONLY+=		${JPEG_SRCS}
+
+DISTINFO_FILE=		${.CURDIR}/../ghostscript-esp/distinfo
+FILESDIR=		${.CURDIR}/../ghostscript-esp/files
+PATCHDIR=		${.CURDIR}/../ghostscript-esp/patches
+PLIST_SRC=		${.CURDIR}/../ghostscript-esp/PLIST
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
+CFLAGS+=		-DA4
+.endif
+CFLAGS+=		-DHAVE_MKSTEMP=1
+
+.if ${OPSYS} == "SunOS"
+LDFLAGS+=		-L${ZOULARISBASE}/lib -Wl,-R${ZOULARISBASE}/lib
+.endif
+
+REPLACE_PERL=		lib/fixmswrd.pl
+
+CUPS_CONFDIR?=		${PKG_SYSCONFBASE}/cups
+GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/Resource
+GSDATADIR=		${PREFIX}/share/ghostscript/${BASEGS_VERS}
+DOCDIR=			${PREFIX}/share/doc/ghostscript
+EGDIR=			${PREFIX}/share/examples/ghostscript
+HTMLDIR=		${PREFIX}/share/doc/html/ghostscript
+LIBDIR=			${GSDATADIR}/lib
+
+PLIST_SUBST+=		GS_VERS=${BASEGS_VERS}
+
+CONF_FILES=	${EGDIR}/pstoraster.convs ${CUPS_CONFDIR}/pstoraster.convs
+
+post-extract:
+	${MKDIR} ${WRKSRC}/bin
+	${MKDIR} ${WRKSRC}/obj
+	${RM} -f ${WRKSRC}/jpeg
+	${LN} -s ${JPEG_WRKSRC} ${WRKSRC}/jpeg
+	cd ${WRKSRC}/lib; for file in gs_res.ps; do			\
+		${SED}  -e "s|/Resource/|${GS_RESOURCEDIR}/|g"		\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done
+
+# Reinstall the gs binary so that it's properly stripped.
+post-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/gs ${PREFIX}/bin/gs
+	${INSTALL_SCRIPT} ${WRKSRC}/pstoraster/pstoraster		\
+		${PREFIX}/libexec/cups/filter
+	${INSTALL_DATA} ${WRKSRC}/pstoraster/pstoraster.convs ${EGDIR}
+
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../print/cups/buildlink2.mk"
+.include "../../print/gimp-print-lib/buildlink2.mk"
+
+.include "../../mk/bsd.pkg.install.mk"
+.include "../../mk/bsd.pkg.mk"
+
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
+CFLAGS+=	-O0
+.endif
