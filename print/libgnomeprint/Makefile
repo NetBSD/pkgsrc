@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2003/11/14 11:48:57 adam Exp $
+# $NetBSD: Makefile,v 1.20 2003/12/14 19:51:04 jmmv Exp $
 #
 
-DISTNAME=		libgnomeprint-2.2.1.2
-PKGREVISION=		3
+DISTNAME=		libgnomeprint-2.4.0
 CATEGORIES=		print gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomeprint/2.2/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomeprint/2.4/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -33,8 +32,10 @@ BUILD_DEFS+=		USE_CUPS
 .if defined(USE_CUPS) && !empty(USE_CUPS:M[Yy][Ee][Ss])
 .include "../../print/cups/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-cups
+PLIST_SUBST+=		USE_CUPS=
 .else
 CONFIGURE_ARGS+=	--without-cups
+PLIST_SUBST+=		USE_CUPS="@comment "
 .endif
 
 .if ${OPSYS} == "Darwin"
@@ -43,10 +44,11 @@ CONFIGURE_ARGS+=	--without-cups
 CONFIGURE_ENV+=		libltdl_cv_shlibext=so
 .endif
 
-.include "../../graphics/freetype2/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/libbonobo/buildlink2.mk"
 .include "../../devel/pango/buildlink2.mk"
-.include "../../devel/glib2/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/libart2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
