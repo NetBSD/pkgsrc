@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.30 2003/08/23 09:35:30 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.31 2003/08/23 09:45:53 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2601,7 +2601,7 @@ real-su-install: ${MESSAGE}
 do-shlib-handling:
 .if ${SHLIB_HANDLING} == "YES"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	sos=`${EGREP} -h -x '.*/lib[^/]+\.so\.[0-9]+(\.[0-9]+)+' ${PLIST} || ${TRUE}`; \
+	sos=`${EGREP} -h -x '.*/lib[^/]+\.so' ${PLIST} || ${TRUE}`; \
 	if [ "$$sos" != "" ]; then					\
 		shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;	\
 		if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 		\
@@ -2648,7 +2648,7 @@ do-shlib-handling:
 				}					\
 				{ lines[NR] = $$0 }			\
 				END {					\
-					for (i = 1 ; i <= linkc ; i++)	\
+					for (i = 0 ; i <= linkc ; i++)	\
 						for (j = 1 ; j < NR ; j++) \
 							if (lines[j] == links[i]) \
 								lines[j] = "@comment " lines[j]; \
@@ -2741,7 +2741,7 @@ do-shlib-handling:
 				}					\
 				{ lines[NR] = $$0 }			\
 				END {					\
-					for (i = 1 ; i <= linkc ; i++)	\
+					for (i = 0 ; i <= linkc ; i++)	\
 						for (j = 1 ; j <= NR ; j++) \
 							if (lines[j] == links[i]) \
 								lines[j] = "@comment " lines[j]; \
@@ -2803,24 +2803,28 @@ check-shlibs:
 	bins=`${PKG_INFO} -qL ${PKGNAME} | { ${EGREP} -h '/(bin|sbin|libexec)/' || ${TRUE}; }`; \
 	if [ "${OBJECT_FMT}" = "ELF" ]; then				\
 		shlibs=`${PKG_INFO} -qL ${PKGNAME} | { ${EGREP} -h '/lib/lib.*.so' || ${TRUE}; }`; \
+	elif [ "${OBJECT_FMT}" = "Mach-O" ]; then			\
+		shlibs=`${PKG_INFO} -qL ${PKGNAME} | { ${EGREP} -h '/lib/lib.*.dylib' || ${TRUE}; }`; \
 	else								\
 		shlibs="";						\
 	fi;								\
-	if [ X${LDD} = X ]; then					\
-		ldd=`${TYPE} ldd | ${AWK} '{ print $$NF }'`;		\
+	if [ "X${LDD}" = X ]; then					\
+		ldd=`${TYPE} ldd 2>/dev/null | ${AWK} '{ print $$NF }'`;\
 	else								\
 		ldd="${LDD}";						\
 	fi;								\
-	for i in $${bins} $${shlibs}; do				\
-		err=`{ $$ldd $$i 2>&1 || ${TRUE}; } | { ${GREP} "not found" || ${TRUE}; }`; \
-		if [ "${PKG_VERBOSE}" != "" ]; then			\
-			${ECHO} "$$ldd $$i";				\
-		fi;							\
-		if [ "$$err" != "" ]; then				\
-			${ECHO} "$$i: $$err";				\
-			error=1;					\
-		fi;							\
-	done;								\
+	if [ -x "$$ldd" ]; then						\
+		for i in $${bins} $${shlibs}; do			\
+			err=`{ $$ldd $$i 2>&1 || ${TRUE}; } | { ${GREP} "not found" || ${TRUE}; }`; \
+			if [ "${PKG_VERBOSE}" != "" ]; then		\
+				${ECHO} "$$ldd $$i";			\
+			fi;						\
+			if [ "$$err" != "" ]; then			\
+				${ECHO} "$$i: $$err";			\
+				error=1;				\
+			fi;						\
+		done;							\
+	fi;								\
 	if [ "$$error" = 1 ]; then					\
 		${ECHO} "*** The above programs/libs will not find the listed shared libraries"; \
 		${ECHO} "    at runtime. Please fix the package (add -Wl,-R.../lib in the right places)!"; \
@@ -4473,26 +4477,32 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 .  endif
 .  if ${CHECK_SHLIBS} == "YES"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
+	case "${LDD}" in						\
+	"")	ldd=`${TYPE} ldd 2>/dev/null | ${AWK} '{ print $$NF }'`;; \
+	*)	ldd="${LDD}";						\
+	esac;								\
 	case "${OBJECT_FMT}" in						\
 	ELF)	bins=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^(bin|sbin|libexec)\// { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
 		libs=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^lib\/lib.*\.so\.[0-9]+$$/ { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
-		for i in "" $$libs; do					\
-			${TEST} "$$i" = "" && continue;			\
-			${ECHO} "PROVIDES=$$i" >> ${BUILD_INFO_FILE};	\
-		done;							\
-		case "${LDD}" in					\
-		"")	ldd=`${TYPE} ldd | ${AWK} '{ print $$NF }'`;;	\
-		*)	ldd="${LDD}";					\
-		esac;							\
 		if ${TEST} "$$bins" != "" -o "$$libs" != ""; then 	\
 			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} 'NF == 3 { print $$3 }' | ${SORT} -u`; \
-			for req in "" $$requires; do			\
-				${TEST} "$$req" = "" && continue;	\
-				${ECHO} "REQUIRES=$$req" >> ${BUILD_INFO_FILE};	\
-			done;						\
 		fi;							\
-        	;;							\
-	esac
+		;;							\
+	Mach-O)	bins=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^(bin|sbin|libexec)\// { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
+		libs=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^lib\/lib.*\.dylib/ { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
+		if ${TEST} "$$bins" != "" -o "$$libs" != ""; then 	\
+			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} 'NF > 1 { print $$1 }' | ${SORT} -u`; \
+		fi;							\
+		;;							\
+	esac;								\
+	for i in "" $$libs; do						\
+		${TEST} "$$i" = "" && continue;				\
+		${ECHO} "PROVIDES=$$i" >> ${BUILD_INFO_FILE};		\
+	done;								\
+	for req in "" $$requires; do					\
+		${TEST} "$$req" = "" && continue;			\
+		${ECHO} "REQUIRES=$$req" >> ${BUILD_INFO_FILE};		\
+	done
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} "_PKGTOOLS_VER=${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}

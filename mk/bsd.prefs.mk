@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.118.2.11 2003/08/22 07:15:46 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.118.2.12 2003/08/23 09:45:55 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -334,6 +334,8 @@ PATCHDIR?=		${.CURDIR}/patches
 SCRIPTDIR?=		${.CURDIR}/scripts
 FILESDIR?=		${.CURDIR}/files
 PKGDIR?=		${.CURDIR}
+
+_PKGSRC_DEPS?=		# empty
 
 # If WRKOBJDIR is set, use that tree to build
 .if defined(WRKOBJDIR)
