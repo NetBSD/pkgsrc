@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.5 1998/11/12 15:48:34 agc Exp $
+$NetBSD: patch-aa,v 1.6 2001/07/24 16:00:02 nra Exp $
 
---- xmcd_d/Imakefile.orig	Wed Oct 28 03:03:18 1998
-+++ xmcd_d/Imakefile	Wed Nov  4 22:07:57 1998
-@@ -43,7 +43,7 @@
-  * #include "Motif.tmpl"
-  * #include "Motif.rules"
-  */
+--- xmcd_d/Imakefile.orig	Mon Jul 23 14:32:31 2001
++++ xmcd_d/Imakefile	Mon Jul 23 14:33:21 2001
+@@ -54,7 +54,7 @@
+ SYS_LIBRARIES= $(LIBCDDB)
+ #endif
+ 
 -LOCAL_LIBRARIES= XmClientLibs
 +LOCAL_LIBRARIES= ${MOTIFLIB} XawClientLibs
  

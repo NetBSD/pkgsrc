@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2000/09/09 17:33:13 wiz Exp $
+$NetBSD: patch-af,v 1.2 2001/07/24 16:00:02 nra Exp $
 
---- libdi_d/config.sh.orig	Sat Feb  5 08:26:23 2000
-+++ libdi_d/config.sh
-@@ -1770,7 +1770,7 @@
+--- libdi_d/config.sh.orig	Mon Jul 23 13:52:09 2001
++++ libdi_d/config.sh	Mon Jul 23 13:52:36 2001
+@@ -2001,7 +2001,7 @@
  # Get platform information
  OS_SYS=`(uname -s) 2>/dev/null`
  OS_REL=`(uname -r) 2>/dev/null`
