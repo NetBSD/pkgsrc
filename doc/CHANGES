@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3441 2003/09/18 14:16:16 jmmv Exp $
+$NetBSD: CHANGES,v 1.3442 2003/09/18 14:45:23 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3830,3 +3830,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added kde-i18n-ss-3.1.4 [markd 2003-09-18]
 	Added mp3splt-1.9 [wiz 2003-09-18]
 	Updated createbuildlink to 2.7 [jmmv 2003-09-18]
+	Added p5-Unicode-String-2.06 [xtraeme 2003-09-18]
