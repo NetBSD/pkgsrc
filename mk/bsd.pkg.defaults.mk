@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.126 2003/01/20 23:39:35 kristerw Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.127 2003/01/21 08:24:32 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1095,6 +1095,22 @@ MUTT_USE_SSL?= YES
 # Enable SSL in mutt (for pop and imap connections).
 # Possible: YES, NO
 # Default: YES
+
+#MYSQL_USER?=		mysql
+# The username of the mysql administrator.
+# Possible: any user name
+# Default: mysql
+
+#MYSQL_GROUP?=		mysql
+# The group of the mysql administrator.
+# Possible: any group name
+# Default: mysql
+
+#MYSQL_DATADIR?=	/var/mysql
+# Home directory of the mysql administrator and location of the
+# database files. 
+# Possible: any directory
+# Default: /var/mysql
 
 NMH_EDITOR?= vi
 # default editor for use in nmh.
