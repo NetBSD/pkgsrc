@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.4 2004/01/13 20:56:31 kristerw Exp $
+$NetBSD: distinfo,v 1.5 2004/08/27 18:52:00 jlam Exp $
 
 SHA1 (sather-1.2.1.tar.gz) = 434f6b9c69d63a022c83f3693011415ad9730cb1
 Size (sather-1.2.1.tar.gz) = 4458088 bytes
 SHA1 (patch-aa) = d326038193ce2fb459ed19f9ab2ae2b6dce1ace3
 SHA1 (patch-ab) = e45f8a8230d1fbe3fc72babbecfa8148699f7906
 SHA1 (patch-ac) = 586cdebde7a2c1b49f9b75a33d26980a2c0397f3
-SHA1 (patch-ad) = 96a1fc6948a46826dbca52825a9d796bc80d8620
+SHA1 (patch-ad) = 687a05fe5d20757e82a366f04c9c3905f14b5271
 SHA1 (patch-ae) = c1aed9437daf2a03303f06850700f40a91da4a17
-SHA1 (patch-af) = 374d9e854a29c33b004a3062bf2fe6f97e568d9b
-SHA1 (patch-ag) = c319a48f31a751b320b68967105ce15d7300a5ca
+SHA1 (patch-af) = 601bd3f55f16917d525c29813c23999264c883e2
+SHA1 (patch-ag) = c16f121bac6197284eef907c96e9f903b35835b2
 SHA1 (patch-ah) = 9dad48a3bc7e6af65eb51ae6070b8e67cab9ca2b
 SHA1 (patch-ai) = 93b1a0f2a932c9f0024fbf795eae9cdb0dd6f534
 SHA1 (patch-aj) = f9f4d36335fe4c20fa01f4ff6cba59edeb0deab7
