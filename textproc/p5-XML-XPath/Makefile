@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/09/25 15:16:21 seb Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/03 22:14:46 kristerw Exp $
 
 DISTNAME=	XML-XPath-1.08
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ SVR4_PKGNAME=	p5xxp
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
-MAINTAINER=	packages@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sergeant.org
 COMMENT=	XML XPath software
 
