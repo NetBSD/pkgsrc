@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.137 2002/10/02 13:32:01 grant Exp $
+$NetBSD: CHANGES,v 1.138 2002/10/02 13:34:36 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2577,7 +2577,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Removed p5-Mail-SpamAssassin [hubertf 2002-08-29]
 	Updated verilog-current to 20020828 [dmcmahill 2002-08-29]
 	Updated netatalk to 1.5.3.1nb1 [abs 2002-08-28]
-	Updated apache to 2.0.40 [martti 2002-08-28]
+	Updated apache2 to 2.0.40 [martti 2002-08-28]
 	Updated isakmpd to 20020830 [martti 2002-08-30]
 	Updated sketch to 0.6.13 [drochner 2002-08-30]
 	Updated spamassassin to 2.31nb1 [abs 2002-08-30]
