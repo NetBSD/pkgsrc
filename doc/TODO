@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1115 2003/12/03 13:24:14 jmmv Exp $
+$NetBSD: TODO,v 1.1116 2003/12/03 17:17:21 recht Exp $
 
 Suggested new packages
 ======================
@@ -135,7 +135,6 @@ Suggested package updates
 	o abiword-2.0.1
 	o amanda-2.4.4p1
 	o anjuta-1.0.2
-	o aspell-0.50.4.1 [recht]
 	o atari800-1.3.1
 	o autoconf-2.58 [wiz]
 	o automake-1.7.9 [wiz]
@@ -246,7 +245,6 @@ Suggested package updates
 	o hpijs-1.4.1
 	o hylafax-4.1.8
 	o icepref-2.2
-	o icu-2.6.1 [recht]
 	o inn-2.4.0
 	o iozone-3.203
 	o irssi-0.8.8 [pkg/23560]
