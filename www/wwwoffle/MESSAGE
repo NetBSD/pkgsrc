@@ -1,13 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2004/04/23 22:43:20 reed Exp $
+$NetBSD: MESSAGE,v 1.5 2004/10/11 22:14:51 reed Exp $
 
 1) To enable "wwwwoffled" to start on boot on NetBSD-1.5 or newer,
-please copy "${RCD_SCRIPTS_EXAMPLEDIR}/wwwoffled" to "/etc/rc.d/" and add
+please copy "${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/wwwoffled" to "/etc/rc.d/" and add
 "wwwoffled=YES" to /etc/rc.conf. To do the same on older systems,
 add the following to /etc/rc.local:
 
-if [ -x ${RCD_SCRIPTS_EXAMPLEDIR}/wwwoffle ]; then
-    ${RCD_SCRIPTS_EXAMPLEDIR}/wwwoffle
+if [ -x ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/wwwoffle ]; then
+    ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/wwwoffle
 fi
 
 2) The hooks are present to to use the package version of "htdig",
