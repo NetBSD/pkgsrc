@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2002/08/25 21:52:24 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2002/09/15 13:09:36 uebayasi Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -11,8 +11,8 @@ HOMEPAGE=	http://www2u.biglobe.ne.jp/~hsaka/w3m/
 USE_BUILDLINK2=	yes
 
 W3M_VERS=	${W3M_BASE_VERS}-m17n-${W3M_M17N_VERS}
-W3M_BASE_VERS=	0.3
-W3M_M17N_VERS=	20020316
+W3M_BASE_VERS=	0.3.1
+W3M_M17N_VERS=	20020717
 
 # w3m source with m17n patch applied.
 W3M_SRC=	${DISTNAME}${EXTRACT_SUFX}
