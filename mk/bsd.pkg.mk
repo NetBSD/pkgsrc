@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1063 2002/10/04 11:19:26 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1064 2002/10/07 21:47:51 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -355,10 +355,6 @@ DEPENDS+=		Xaw3d-1.5:../../x11/Xaw3d
 .if defined(BUILD_USES_MSGFMT) && \
     (!exists(/usr/bin/msgfmt) || ${OPSYS} == SunOS)
 BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
-.endif
-
-.if defined(BUILD_USES_GETTEXT_M4)
-BUILD_DEPENDS+=		{gettext-0.10.35nb1,gettext-m4-[0-9]*}:../../devel/gettext-m4
 .endif
 
 EXTRACT_COOKIE=		${WRKDIR}/.extract_done
