@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/05/09 20:53:18 jwise Exp $
+# $NetBSD: Makefile,v 1.4 2000/06/22 14:23:26 jwise Exp $
 
 DISTNAME=	ApacheJSSI-1.1.2
 PKGNAME=	jssi-1.1.2
@@ -29,6 +29,7 @@ do-install:
 	${MKDIR} ${PREFIX}/share/doc/java/jssi
 	(cd ${WRKSRC}/../../docs ; ${GTAR} pcf - .) | \
 		(cd ${PREFIX}/share/doc/java/jssi ; ${GTAR} pxvf -)
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/java/jssi
 
 .include "../../mk/bsd.pkg.mk"
 
