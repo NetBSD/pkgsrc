@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 1998/12/06 01:25:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 1998/12/26 15:59:56 garbled Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/02/16 13:32:59 andreas Exp
 #
 
-PKG_MISC_TARGETS?=	benchmark
+PKG_MISC_TARGETS?=	benchmark results
 
     SUBDIR += benchfft
     SUBDIR += bonnie

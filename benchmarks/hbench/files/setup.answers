@@ -3,13 +3,11 @@
 
 
 
+@wrksrc@/conf/full.test
 
+@wrksrc@/XXX
+@wrksrc@
 
-
-
-
-
-
+@pwd@/results
 @pwd@/conf/@hostname@.run
-
 
