@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2004/03/26 02:27:45 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/01 19:17:24 jmmv Exp $
 
-DISTNAME=	gnome-base-2.4.2
-PKGREVISION=	3
+DISTNAME=	gnome-base-2.6.0
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,17 +9,17 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for basic components of the GNOME desktop
 
-DEPENDS+=	gdm>=2.4.4.7:../../x11/gdm
-DEPENDS+=	gnome-icon-theme>=1.0.9:../../graphics/gnome-icon-theme
-DEPENDS+=	gnome-panel>=2.4.2:../../x11/gnome-panel
-DEPENDS+=	gnome-session>=2.4.2:../../x11/gnome-session
-DEPENDS+=	gnome2-control-center>=2.4.0:../../x11/gnome2-control-center
-DEPENDS+=	gnome2-terminal>=2.4.2:../../x11/gnome2-terminal
-DEPENDS+=	gnome-vfs2>=2.4.2:../../sysutils/gnome-vfs2
-DEPENDS+=	metacity>=2.6.3:../../wm/metacity
-DEPENDS+=	nautilus>=2.4.2:../../sysutils/nautilus
+DEPENDS+=	gdm>=2.6.0.0:../../x11/gdm
+DEPENDS+=	gnome-icon-theme>=1.2.0:../../graphics/gnome-icon-theme
+DEPENDS+=	gnome-panel>=2.6.0:../../x11/gnome-panel
+DEPENDS+=	gnome-session>=2.6.0:../../x11/gnome-session
+DEPENDS+=	gnome2-control-center>=2.6.0:../../x11/gnome2-control-center
+DEPENDS+=	gnome2-terminal>=2.6.0:../../x11/gnome2-terminal
+DEPENDS+=	gnome-vfs2>=2.6.0:../../sysutils/gnome-vfs2
+DEPENDS+=	metacity>=2.8.0:../../wm/metacity
+DEPENDS+=	nautilus>=2.6.0:../../sysutils/nautilus
 DEPENDS+=	xscreensaver>=4.14nb1:../../x11/xscreensaver
-DEPENDS+=	yelp>=2.4.2:../../misc/yelp
+DEPENDS+=	yelp>=2.6.0:../../misc/yelp
 
 USE_X11=	yes
 EXTRACT_ONLY=	# empty
