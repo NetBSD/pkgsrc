@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/10/09 12:19:06 martti Exp $
+# $NetBSD: Makefile,v 1.10 2001/10/11 09:11:22 martti Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -20,12 +20,11 @@ CONFLICTS=	fvwm-2.*
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 FVWM_VER=	2.4.3
 
-## USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES
 
-PLIST_SUBST+=	FVWM_VER=${FVWM_VER}
+PLIST_SUBST+=		FVWM_VER=${FVWM_VER}
 
 EVAL_PREFIX+=		XPMDIR=xpm
 CONFIGURE_ARGS+=	--enable-extras --without-gnome
@@ -59,9 +58,10 @@ post-install:
 
 .if defined(FVWM2_USE_GTK) && ${FVWM2_USE_GTK} == "YES"
 .include "../../x11/gtk/buildlink.mk"
-PLIST_SUBST+=	GTK=""
+PLIST_SUBST+=	    GTK=""
 .else
-PLIST_SUBST+=	GTK="@comment "
+PLIST_SUBST+=	    GTK="@comment "
+CONFIGURE_ARGS+=    --without-gtk-prefix
 .endif
 
 .if defined(FVWM2_USE_RPLAY) && ${FVWM2_USE_RPLAY} == "YES"
