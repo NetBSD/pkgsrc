@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.799 2001/08/22 17:34:19 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.800 2001/08/23 04:21:02 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -115,6 +115,11 @@ XMKMF_CMD?=		${X11PREFIX}/bin/pkgxmkmf
 X11PREFIX=		${X11BASE}
 XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
 .endif
+
+# Set the default BUILDLINK_X11_DIR to ${X11BASE} so that in the absence
+# of x11.buildlink.mk, it still points to a working X11R6 hierarchy.
+#
+BUILDLINK_X11_DIR?=	${X11BASE}
 
 .if defined(USE_MOTIF12)
 USE_MOTIF=		# defined
