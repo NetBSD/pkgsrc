@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/24 18:29:34 fredb Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/08/13 08:54:29 fredb Exp $
 bin/ntpd
 bin/ntpdate
 bin/ntpdc
@@ -145,6 +145,14 @@ share/doc/ntp4/pic/rabbit.gif
 share/doc/ntp4/pic/sheepb.jpg
 share/doc/ntp4/pic/tardisa.gif
 share/doc/ntp4/pic/tonea.gif
+share/examples/ntp4/README
+share/examples/ntp4/beauregard.conf
+share/examples/ntp4/baldwin.conf
+share/examples/ntp4/dewey.conf
+share/examples/ntp4/grundoon.conf
+share/examples/ntp4/malarky.conf
+share/examples/ntp4/pogo.conf
+@dirrm share/examples/ntp4
 @dirrm share/doc/ntp4/pic
 @dirrm share/doc/ntp4/hints
 @dirrm share/doc/ntp4
