@@ -1,0 +1,148 @@
+$NetBSD: patch-ac,v 1.1 2001/05/18 09:52:00 dillo Exp $
+
+--- xwin.c.orig	Mon May  7 10:43:45 2001
++++ xwin.c	Fri May 18 05:43:27 2001
+@@ -100,7 +100,7 @@
+   {"/Help/_About", NULL, pilrcui_about_create, 0, NULL}
+ };
+ 
+-static int CurrentForm = -1;
++static p_int CurrentForm = -1;
+ 
+ void
+ pilrcui_open(GtkWidget * w,
+@@ -275,7 +275,7 @@
+ {
+   GtkStateType state;
+   PLEXFORMOBJLIST *pplt;
+-  RCFORM *pform;
++  RCFormBA16Type *pform;
+   FRM *pfrm;
+   int ilt;
+   static GdkGC *pens[5] = { NULL, NULL, NULL, NULL, NULL };
+@@ -321,8 +321,8 @@
+ 
+   pfrm = (FRM *) PlexGetElementAt(&vprcpfile->plfrm, CurrentForm);
+ 
+-  pform = &pfrm->form;
+-  pplt = &pfrm->pllt;
++  pform = &pfrm->s16.form;
++  pplt = &pfrm->s16.pllt;
+ 
+   /*
+    * Select pen based on pform->window.frameType.width 
+@@ -374,19 +374,19 @@
+   {
+     RCFORMOBJLIST *plt;
+     RCFORMOBJECT *pobj;
+-    RCFIELD field;
+-    RCFORMLABEL label;
++    RCFieldBA16Type field;
++    RCFormLabelBA16Type label;
+     RCRECT rc;
+     char *pchText;
+     int savepen;
+ 
+     plt = (RCFORMOBJLIST *) PlexGetElementAt(pplt, ilt);
+-    pobj = &plt->u.object;
++    pobj = &plt->s16.u.object;
+     pchText = NULL;
+-    switch (plt->objectType)
++    switch (plt->s16.objectType)
+     {
+       case frmFieldObj:
+-        field = *pobj->field;
++        field = pobj->field->s16;
+         if (!field.attr.usable)
+           break;
+         if (field.attr.underlined)
+@@ -434,13 +434,13 @@
+         break;
+       case frmControlObj:
+         {
+-          RCCONTROL ctl;
++          RCControlBA16Type ctl;
+ 
+-          ctl = *pobj->control;
++          ctl = pobj->control->s16;
+           if (!ctl.attr.usable)
+             break;
+ 
+-          pchText = pobj->control->u.text;
++          pchText = pobj->control->s16.u.text;
+           switch (ctl.style)
+           {
+             case buttonCtl:
+@@ -563,12 +563,12 @@
+         break;
+       case frmListObj:
+         {
+-          RCLIST list;
++          RCListBA16Type list;
+           RCRECT rc;
+           char *s;
+           int x;
+ 
+-          list = *pobj->list;
++          list = pobj->list->s16;
+           if (!list.attr.usable)
+             break;
+           gdk_draw_rectangle(GTK_WIDGET(w)->window, pens[pen], FALSE,
+@@ -616,9 +616,9 @@
+         break;
+       case frmBitmapObj:
+         {
+-          RCFORMBITMAP bitmap;
++          RCFormBitMapBA16Type bitmap;
+ 
+-          bitmap = *pobj->bitmap;
++          bitmap = pobj->bitmap->s16;
+           if (!bitmap.attr.usable)
+             break;
+ 
+@@ -631,10 +631,10 @@
+       case frmRectangleObj:
+         break;
+       case frmLabelObj:
+-        label = *pobj->label;
++        label = pobj->label->s16;
+         if (!label.attr.usable)
+           break;
+-        pchText = pobj->label->text;
++        pchText = pobj->label->s16.text;
+         rc.topLeft = label.pos;
+         pilrcui_pilot_text(w, pchText, org, &rc, label.fontID,
+                            ptxLeft | ptxNoExtent);
+@@ -752,7 +752,7 @@
+ pilrcui_form_select(GtkWidget * w,
+                     gpointer ifrm)
+ {
+-  CurrentForm = (int)ifrm;
++  CurrentForm = (p_int)ifrm;
+ 
+   pilrcui_drawform(GTK_DRAWING_AREA(FormArea));
+ }
+@@ -808,11 +808,13 @@
+     GtkWidget *menuitem;
+ 
+     sprintf(buf, "Form %04x",
+-            ((FRM *) PlexGetElementAt(&vprcpfile->plfrm, ifrm))->form.formId);
++           (int)((FRM *) PlexGetElementAt(&vprcpfile->plfrm, ifrm))
++			->s16.form.formId);
+     menuitem = gtk_radio_menu_item_new_with_label(group, buf);
+     group = gtk_radio_menu_item_group(GTK_RADIO_MENU_ITEM(menuitem));
+     gtk_signal_connect(GTK_OBJECT(menuitem), "activate",
+-                       (GtkSignalFunc) pilrcui_form_select, (gpointer) ifrm);
++                       (GtkSignalFunc) pilrcui_form_select,
++		       (gpointer) (p_int)ifrm);
+     gtk_menu_append(GTK_MENU(menu), menuitem);
+     gtk_widget_show(menuitem);
+   }
+@@ -1104,6 +1106,7 @@
+    * gtk_rc_parse ("filerc"); 
+    */
+ 
++  CbInit();
+   create_main_window();
+ 
+   gtk_main();
