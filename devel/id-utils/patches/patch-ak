@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.1 2001/09/19 08:57:07 joda Exp $
+$NetBSD: patch-ak,v 1.2 2002/06/21 12:26:32 lukem Exp $
 
---- src/mkid.c~	Tue Jul  9 06:19:09 1996
-+++ src/mkid.c	Wed Sep 19 10:21:00 2001
+--- src/mkid.c.orig	Tue Jul  9 14:19:09 1996
++++ src/mkid.c
 @@ -33,7 +33,6 @@
  #include "hash.h"
  #include "scanners.h"
@@ -10,7 +10,29 @@ $NetBSD: patch-ak,v 1.1 2001/09/19 08:57:07 joda Exp $
  #if HAVE_LIMITS_H
  # include <limits.h>
  #endif
-@@ -363,7 +362,7 @@
+@@ -304,12 +303,18 @@
+     {
+       if (errno == ENOENT)
+ 	{
+-	  char const *dir_name = dirname (file_name);
+-	  if (!dir_name || !*dir_name)
+-	    dir_name = ".";
++	  char *dir_name = strrchr (file_name, '/');
++	  if (dir_name)
++	    {
++	      while (*--dir_name == '/')
++		;
++	      dir_name++;
++	    }
++	  dir_name = dir_name ? strndup (file_name, dir_name - file_name) : strdup(".");
+ 	  if (access (dir_name, 06) < 0)
+ 	    error (1, errno, _("can't create `%s' in `%s'"),
+ 		   basename (file_name), dir_name);
++	  free (dir_name);
+ 	}
+       else
+ 	error (1, errno, _("can't modify `%s'"), file_name);
+@@ -363,7 +368,7 @@
  	{
  	  if (fstat (fileno (source_FILE), &st) < 0)
  	    {
@@ -19,7 +41,7 @@ $NetBSD: patch-ak,v 1.1 2001/09/19 08:57:07 joda Exp $
  	      maybe_relative_file_name (file_name, flink, cw_dlink);
  	      error (0, errno, _("can't stat `%s'"), file_name);
  	    }
-@@ -372,7 +371,7 @@
+@@ -372,7 +377,7 @@
  	}
        if (verbose_flag)
  	{
