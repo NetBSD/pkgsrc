@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.v6,v 1.1 1999/07/07 08:54:55 itojun Exp $
+@comment $NetBSD: PLIST.v6,v 1.2 1999/07/19 16:38:23 itojun Exp $
 sbin/bgpd
 sbin/client
 sbin/ospfd
@@ -14,5 +14,7 @@ etc/zebra/ospfd.conf.sample
 etc/zebra/ospf6d.conf.sample
 @unexec install-info --delete %D/info/zebra.info %D/info/dir
 info/zebra.info
+info/zebra.info-1
+info/zebra.info-2
 @exec   install-info          %D/info/zebra.info %D/info/dir
 @dirrm etc/zebra
