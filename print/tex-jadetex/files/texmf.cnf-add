@@ -1,0 +1,25 @@
+
+% jadetex & pdfjadetex
+% added by jadetex pkg
+main_memory.jadetex = 1500000
+param_size.jadetex = 1500
+stack_size.jadetex = 1500
+hash_extra.jadetex = 50000
+string_vacancies.jadetex = 45000
+pool_free.jadetex = 47500
+nest_size.jadetex = 500
+save_size.jadetex = 5000
+pool_size.jadetex = 500000
+max_strings.jadetex = 55000
+
+main_memory.pdfjadetex = 2500000
+param_size.pdfjadetex = 1500
+stack_size.pdfjadetex = 1500
+hash_extra.pdfjadetex = 50000
+string_vacancies.pdfjadetex = 45000
+pool_free.pdfjadetex = 47500
+nest_size.pdfjadetex = 500
+save_size.pdfjadetex = 5000
+pool_size.pdfjadetex = 500000
+max_strings.pdfjadetex = 55000
+
