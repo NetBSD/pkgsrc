@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/09/10 11:07:48 reinoud Exp $
+# $NetBSD: Makefile,v 1.3 2004/09/10 11:13:05 uebayasi Exp $
 #
 
 DISTNAME=		plugger-5.1.3
@@ -7,7 +7,7 @@ CATEGORIES=		www
 MASTER_SITES=		http://fredrik.hubbe.net/plugger/
 
 MAINTAINER=		reinoud@NetBSD.org
-HOMEPAGE=		http://fredrik.hubbe.net/plugger/
+HOMEPAGE=		http://fredrik.hubbe.net/plugger.html
 COMMENT=		Generic mozilla family plugin using external programs
 
 WRKSRC=			${WRKDIR}/plugger-5.1.3
