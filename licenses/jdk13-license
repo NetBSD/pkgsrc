@@ -10,13 +10,13 @@ SOFTWARE TO YOUR PLACE OF PURCHASE FOR A REFUND OR, IF THE SOFTWARE IS ACCESSED
 ELECTRONICALLY, SELECT THE "DECLINE" BUTTON AND THE INSTALLATION PROCESS WILL 
 NOT CONTINUE. 
 
-1. License to Use. Sun Microsystems, Inc. ("Sun") grants you a non-exclusive and 
+1. License to Use. Sun Microsystems, Inc. ("Sun") grants you a non-exclusive and
 nontransferable license for the internal use only of the accompanying software, 
 documentation and any error corrections provided by Sun (collectively 
-"Software"), by the number of users and the class of computer hardware for which 
+"Software"), by the number of users and the class of computer hardware for which
 the corresponding fee has been paid. 
 
-2. Restrictions. Software is confidential and copyrighted. Title to Software and 
+2. Restrictions. Software is confidential and copyrighted. Title to Software and
 all associated intellectual property rights is retained by Sun and/or its 
 licensors. Except as specifically authorized in any Supplemental License Terms, 
 you may not make copies of Software, other than a single copy of Software for 
@@ -31,7 +31,7 @@ licensors is granted under this Agreement.
 3. Limited Warranty. Sun warrants to you that for a period of ninety (90) days 
 from the date of purchase, as evidenced by a copy of the receipt, the media on 
 which Software is furnished (if any) will be free of defects in materials and 
-workmanship under normal use. Except for the foregoing, Software is provided "AS 
+workmanship under normal use. Except for the foregoing, Software is provided "AS
 IS". Your exclusive remedy and Sun's entire liability under this limited 
 warranty will be at Sun's option to replace Software media or refund the fee 
 paid for Software. 
@@ -39,16 +39,16 @@ paid for Software.
 4. DISCLAIMER OF WARRANTY. UNLESS SPECIFIED IN THIS AGREEMENT, ALL EXPRESS OR 
 IMPLIED CONDITIONS, REPRESENTATIONS AND WARRANTIES, INCLUDING ANY IMPLIED 
 WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR 
-NON-INFRINGEMENT ARE DISCLAIMED, EXCEPT TO THE EXTENT THAT THESE DISCLAIMERS ARE 
+NON-INFRINGEMENT ARE DISCLAIMED, EXCEPT TO THE EXTENT THAT THESE DISCLAIMERS ARE
 HELD TO BE LEGALLY INVALID. 
 
 5. LIMITATION OF LIABILITY. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT 
-WILL SUN OR ITS LICENSORS BE LIABLE FOR ANY LOST REVENUE, PROFIT OR DATA, OR FOR 
-SPECIAL, INDIRECT, CONSEQUENTIAL, INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED 
+WILL SUN OR ITS LICENSORS BE LIABLE FOR ANY LOST REVENUE, PROFIT OR DATA, OR FOR
+SPECIAL, INDIRECT, CONSEQUENTIAL, INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED
 REGARDLESS OF THE THEORY OF LIABILITY, ARISING OUT OF OR RELATED TO THE USE OF 
-OR INABILITY TO USE SOFTWARE, EVEN IF SUN HAS BEEN ADVISED OF THE POSSIBILITY OF 
-SUCH DAMAGES. In no event will Sun's liability to you, whether in contract, tort 
-(including negligence), or otherwise, exceed the amount paid by you for Software 
+OR INABILITY TO USE SOFTWARE, EVEN IF SUN HAS BEEN ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGES. In no event will Sun's liability to you, whether in contract, tort
+(including negligence), or otherwise, exceed the amount paid by you for Software
 under this Agreement. The foregoing limitations will apply even if the above 
 stated warranty fails of its essential purpose. 
 
@@ -110,7 +110,7 @@ conditions of this Agreement, including, but not limited to, Section 2
 (Redistributables) and Section 4 (Java Technology Restrictions) of these 
 Supplemental Terms, Sun grants you a non-exclusive, nontransferable, limited 
 license to reproduce the Software for internal use only for the sole purpose of 
-development of your JAVATM applet and application ("Program"), provided that you 
+development of your JAVATM applet and application ("Program"), provided that you
 do not redistribute the Software in whole or in part, either separately or 
 included with any Program. 
 
@@ -121,7 +121,7 @@ ENVIRONMENT STANDARD EDITION VERSION 1.3 software, those files specifically
 identified as redistributable in the JAVATM 2 RUNTIME ENVIRONMENT STANDARD 
 EDITION VERSION 1.3 "README" file (the "Redistributables") provided that: (a) 
 you distribute the Redistributables complete and unmodified (unless otherwise 
-specified in the applicable README file), and only bundled as part of the JAVATM 
+specified in the applicable README file), and only bundled as part of the JAVATM
 applets and applications that you develop (the "Programs:); (b) you do not 
 distribute additional software intended to supersede any component(s) of the 
 Redistributables; (c) you do not remove or alter any proprietary legends or 
@@ -130,7 +130,7 @@ Redistributables pursuant to a license agreement that protects Sun's interests
 consistent with the terms contained in the Agreement, and (e) you agree to 
 defend and indemnify Sun and its licensors from and against any damages, costs, 
 liabilities, settlement amounts and/or expenses (including attorneys' fees) 
-incurred in connection with any claim, lawsuit or action by any third party that 
+incurred in connection with any claim, lawsuit or action by any third party that
 arises or results from the use or distribution of any and all Programs and/or 
 Software. 
 
@@ -166,7 +166,7 @@ use you make of the Java Marks inures to Sun's benefit.
 6. Source Code. Software may contain source code that is provided solely for 
 reference purposes pursuant to the terms of this Agreement. 
 
-7. Termination. Sun may terminate this Agreement immediately should any Software 
+7. Termination. Sun may terminate this Agreement immediately should any Software
 become, or in Sun's opinion be likely to become, the subject of a claim of 
-infringement of a patent, trade secret, copyright or other intellectual property 
+infringement of a patent, trade secret, copyright or other intellectual property
 right. 
