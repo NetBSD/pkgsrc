@@ -5,7 +5,7 @@ security vulnerabilities which have been published.  This list is kept
 up to date by the NetBSD security officer.  It is held at the
 well-known URL:
 
-ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/vulnerabilities
+ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/vulnerabilities
 
 (2) audit-packages, an easy way to audit the current machine, checking
 each vulnerability listed by the security officer.  If a vulnerable
