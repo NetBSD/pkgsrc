@@ -1,30 +1,19 @@
-$NetBSD: patch-ac,v 1.7 2000/09/01 20:16:59 veego Exp $
+$NetBSD: patch-ac,v 1.8 2001/02/08 16:23:07 tron Exp $
 
---- Makefile.global.in	Wed Jul 19 01:54:07 2000
-+++ Makefile.global.in	Fri Sep  1 20:59:13 2000
-@@ -39,8 +39,8 @@
- TCLINC	= @TCL_INC@
- EXTRA_SRC = @EXTRA_SRC@
+--- Makefile.global.in.orig	Thu Jan 11 09:55:23 2001
++++ Makefile.global.in	Thu Feb  8 13:58:22 2001
+@@ -169,10 +169,10 @@
+ PATHOVERVIEW    = $(PATHSPOOL)/overview
+ PATHOUTGOING    = $(PATHSPOOL)/outgoing
  
--OWNER		= -O @NEWSUSER@ -G @NEWSGRP@
--ROWNER		= -O @NEWSUSER@ -G @RNEWSGRP@
-+OWNER		= -o @NEWSUSER@ -g @NEWSGRP@
-+ROWNER		= -o @NEWSUSER@ -g @RNEWSGRP@
- NEWSGROUP	= @NEWSGRP@
- INEWSMODE	= @INEWSMODE@
- RNEWSMODE	= @RNEWSMODE@
-@@ -63,10 +63,10 @@
+-MAN1            = @mandir@/man1
+-MAN3            = @mandir@/man3
+-MAN5            = @mandir@/man5
+-MAN8            = @mandir@/man8
++MAN1            = $(LOCALBASE)/man/man1
++MAN3            = $(LOCALBASE)/man/man3
++MAN5            = $(LOCALBASE)/man/man5
++MAN8            = $(LOCALBASE)/man/man8
  
- # Pick on of SOURCE, NROFF-PACK or NROFF-PACK-SCO
- MANPAGESTYLE	= SOURCE
--MAN1    = @MANDIR@/man1
--MAN3    = @MANDIR@/man3
--MAN5    = @MANDIR@/man5
--MAN8    = @MANDIR@/man8
-+MAN1    = $(LOCALBASE)/man/man1
-+MAN3    = $(LOCALBASE)/man/man3
-+MAN5    = $(LOCALBASE)/man/man5
-+MAN8    = $(LOCALBASE)/man/man8
- 
- LEX	= @LEX@ 
- YACC	= @YACC@
+ ##  Installation settings.  The file installation modes are determined by
+ ##  configure; inews and rnews are special and have configure flags to
