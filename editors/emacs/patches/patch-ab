@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.16 2003/07/06 16:10:18 uebayasi Exp $
+$NetBSD: patch-ab,v 1.17 2004/02/25 19:11:43 drochner Exp $
 
---- configure.orig	Sat Jun 14 12:55:08 2003
-+++ configure
-@@ -9124,6 +9124,22 @@
+--- configure.orig	2003-03-18 15:19:12.000000000 +0100
++++ configure	2004-02-25 20:04:08.000000000 +0100
+@@ -822,6 +822,7 @@
+       sparc*-*-netbsd*)	machine=sparc ;;
+       vax-*-netbsd*)	machine=vax ;;
+       arm-*-netbsd*)	machine=arm ;;
++      x86_64-*-netbsd*)	machine=amd64 ;;
+     esac
+   ;;
+ 
+@@ -9124,6 +9125,22 @@
  fi
  
  
