@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9165 2005/02/17 15:34:54 wiz Exp $
+$NetBSD: CHANGES,v 1.9166 2005/02/17 19:33:58 peter Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -907,3 +907,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated squid to 2.5.8nb1 [taca 2005-02-17]
 	Updated ruby-eruby to 1.0.5nb3 [taca 2005-02-17]
 	Updated radmind to 1.5.0 [wiz 2005-02-17]
+	Updated criticalmass to 0.9.10 [peter 2005-02-17]
