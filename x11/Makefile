@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.376 2004/12/24 17:19:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.377 2004/12/25 20:04:42 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -182,7 +182,7 @@ SUBDIR+=	py-qt3-base
 SUBDIR+=	py-qt3-modules
 SUBDIR+=	py-qt3-qscintilla
 SUBDIR+=	py-qt3-sip
-SUBDIR+=	py-wxWindows
+SUBDIR+=	py-wxWidgets
 SUBDIR+=	pygtk
 SUBDIR+=	qt1
 SUBDIR+=	qt2
