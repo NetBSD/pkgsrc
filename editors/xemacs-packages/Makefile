@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/08/27 21:14:30 tron Exp $
+# $NetBSD: Makefile,v 1.7 2000/03/07 15:11:17 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/22 22:16:53 gj Exp
 
 DISTNAME=	xemacs-packages
@@ -39,5 +39,6 @@ do-install:
 	  ${_DISTDIR}/${DISTFILE}
 	@${ECHO} "done"
 .endfor
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/xemacs/xemacs-packages
 
 .include "../../mk/bsd.pkg.mk"
