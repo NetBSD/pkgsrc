@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/14 09:16:36 jlam Exp $
+include/X11/extensions/Xrender.h
+include/X11/extensions/extutil.h
+include/X11/extensions/region.h
+include/X11/extensions/render.h
+include/X11/extensions/renderproto.h
+lib/libXrender.a
+lib/libXrender.so
+lib/libXrender.so.1
+lib/libXrender.so.1.1
