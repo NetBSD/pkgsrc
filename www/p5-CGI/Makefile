@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/01/07 01:20:30 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/24 22:46:12 jlam Exp $
 #
 
 VERS=			2.98
@@ -8,7 +8,7 @@ SVR4_PKGNAME=		p5cgi
 CATEGORIES=		www perl5
 MASTER_SITES+=		${MASTER_SITE_PERL_CPAN:=CGI/}
 
-MAINTAINER=		jlam@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://stein.cshl.org/WWW/software/CGI/
 COMMENT=		Perl5 module for writing forms-based CGI programs
 

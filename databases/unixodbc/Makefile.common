@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.12 2004/02/14 17:21:36 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/04/24 22:46:09 jlam Exp $
 
 DISTNAME=	unixODBC-${ODBC_DIST_VERS}
 PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.unixodbc.org/
 
-MAINTAINER?=	jlam@NetBSD.org
+MAINTAINER?=	tech-pkg@NetBSD.org
 HOMEPAGE?=	http://www.unixodbc.org/
 
 # Version numbering scheme:
