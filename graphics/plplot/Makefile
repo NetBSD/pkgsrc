@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/01/24 15:46:44 grant Exp $
+# $NetBSD: Makefile,v 1.31 2004/01/25 03:08:47 grant Exp $
 
 DISTNAME=		plplot-5.2.1
 CATEGORIES=		graphics
@@ -8,11 +8,9 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://plplot.sourceforge.net/
 COMMENT=		Scientific plotting package
 
-BUILD_DEPENDS+=		m4>=1.4:../../devel/m4
-
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
-USE_GNU_TOOLS+=		make
+USE_GNU_TOOLS+=		m4 make
 USE_FORTRAN=		# defined
 USE_X11=		# defined
 USE_PERL5=		build
