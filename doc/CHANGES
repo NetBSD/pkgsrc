@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7158 2004/09/17 09:26:23 cube Exp $
+$NetBSD: CHANGES,v 1.7159 2004/09/17 14:03:22 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4256,3 +4256,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xorg-libs to 6.7.0nb2 [minskim 2004-09-16]
 	Updated win32-codecs to 040916.1 [salo 2004-09-16]
 	Updated sudo to 1.6.8p1 [cube 2004-09-17]
+	Updated mozilla to 1.7.3 [taya 2004-09-17]
+	Updated mozilla-gtk2 to 1.7.3 [taya 2004-09-17]
