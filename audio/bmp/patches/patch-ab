@@ -1,0 +1,65 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/04/11 18:11:06 jmmv Exp $
+
+--- Input/mpg123/fileinfo.c.orig	Wed Dec 24 13:55:45 2003
++++ Input/mpg123/fileinfo.c
+@@ -308,6 +308,11 @@ void mpg123_file_info_box(char *filename
+     bool_label[1] = _("Yes");
+ 
+     if (!window) {
++	GtkWidget *pixmapwid, *test_table;
++	GtkWidget *urk, *blark;
++	GdkPixbuf *pixbuf;
++	PangoAttrList *attrs;
++	PangoAttribute *attr;
+ 
+ 	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+ 	gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, FALSE);
+@@ -323,8 +328,6 @@ void mpg123_file_info_box(char *filename
+ 	filename_vbox = gtk_hbox_new(FALSE, 5);
+ 	gtk_box_pack_start(GTK_BOX(vbox), filename_vbox, FALSE, TRUE, 0);
+ 
+-	GtkWidget *pixmapwid;
+-	GdkPixbuf *pixbuf;
+ 	pixbuf = gdk_pixbuf_new_from_xpm_data((const char **)
+ 					      gnome_mime_audio_xpm);
+ 	pixmapwid = gtk_image_new_from_pixbuf(pixbuf);
+@@ -335,8 +338,6 @@ void mpg123_file_info_box(char *filename
+ 
+ 	label = gtk_label_new(NULL);
+ 
+-	PangoAttrList *attrs;
+-	PangoAttribute *attr;
+ 
+ 	attrs = pango_attr_list_new();
+ 
+@@ -382,7 +383,7 @@ void mpg123_file_info_box(char *filename
+ 	//// MPEG Layer Info
+ 
+ 	// FIXME: Obvious...
+-	GtkWidget *test_table = gtk_table_new(2, 10, FALSE);
++	test_table = gtk_table_new(2, 10, FALSE);
+ 	gtk_container_set_border_width(GTK_CONTAINER(test_table), 0);
+ 	gtk_container_add(GTK_CONTAINER(mpeg_box), test_table);
+ 
+@@ -457,8 +458,6 @@ void mpg123_file_info_box(char *filename
+ 	gtk_table_attach(GTK_TABLE(test_table), mpeg_filesize_val, 1, 2, 4,
+ 			 5, GTK_FILL, GTK_FILL, 10, 2);
+ 
+-	GtkWidget *urk, *blark;
+-
+ 	urk = gtk_label_new("");
+ 	blark = gtk_label_new("");
+ 	gtk_misc_set_alignment(GTK_MISC(urk), 1, 0.5);
+@@ -756,10 +755,12 @@ void mpg123_file_info_box(char *filename
+ 	return;
+     }
+ 
++    {
+     struct stat mstat;
+     stat(filename, &mstat);
+     gtk_widget_set_sensitive(id3_frame,
+ 			     ((mstat.st_mode & S_IWRITE) == S_IWRITE));
++    }
+     /* FIXME: Check for UID/GID too? */
+ 
+     fill_entries(NULL, NULL);
