@@ -10,7 +10,7 @@ under NetBSD, Linux, and Aix.  Basic functions are:
 
   * Printing of selected areas to files
       The file format used is Fig.
-      This file format can be send to printer throught the fig2dev
+      This file format can be sent to printer through the fig2dev
       and gs programs or edited and printed with the Xfig drawing tool.
 
   * multi-documents management
