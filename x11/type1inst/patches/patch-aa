@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/25 01:27:28 groo Exp $
+
+--- type1inst.orig	Wed May 24 20:29:28 2000
++++ type1inst	Wed May 24 20:36:55 2000
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!XXXPERLXXX
+ #
+ #  You may need to change the above path.
+ #
