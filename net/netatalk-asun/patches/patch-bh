@@ -1,66 +1,29 @@
-$NetBSD: patch-bh,v 1.2 2000/08/02 11:43:03 abs Exp $
+$NetBSD: patch-bh,v 1.3 2000/08/15 14:48:24 abs Exp $
 
---- Makefile.orig	Sun Feb  7 11:15:46 1999
-+++ Makefile	Wed Aug  2 10:15:45 2000
-@@ -1,22 +1,27 @@
- # Root of installation. Subdirectories will be ${DESTDIR}/etc,
- # ${DESTDIR}/bin, and ${DESTDIR}/lib.
--DESTDIR=/usr/local/atalk
-+DESTDIR=${PREFIX}
- 
- # for system-level binaries
--SBINDIR=$(DESTDIR)/etc
-+SBINDIR=$(DESTDIR)/sbin
-+LIBEXECDIR=$(DESTDIR)/libexec
- # for user-level binaries
- BINDIR=$(DESTDIR)/bin
- # for program libraries (*.a)
- LIBDIR=$(DESTDIR)/lib
- # for machine-independent resources (pagecount.ps, etc.)
--RESDIR=$(DESTDIR)/etc
-+RESDIR=$(DESTDIR)/share
- # for configuration files (AppleVolumes.system, etc.)
--ETCDIR=$(DESTDIR)/etc
-+ETCDIR=/etc/netatalk
-+# for startup script
-+RCDIR=$(DESTDIR)/etc/rc.d
- # for include files
- INCDIR=$(DESTDIR)/include
- # Root of man pages.  Subdirectories will be
- # ${MANDIR}/man1, ${MANDIR}/man4, and ${MANDIR}/man8.
- MANDIR=$(DESTDIR)/man
-+# for example config files
-+EXAMPLEDIR=$(DESTDIR)/share/examples/netatalk
- 
- #SBINDIR=/usr/sbin
- #BINDIR=/usr/bin
-@@ -32,7 +37,7 @@
- # Location of the DES library and include files. Comment this out if you
- # don't want Randnum Exchange and 2-Way Randnum Exchange as allowable UAMs 
- # for afpd. We expect libdes.a in $DESDIR/lib and des.h in $DESDIR/include.
--DESDIR=/usr/local
-+#DESDIR=/usr/local
- 
- # Location of the tcp wrapper library and include files. Comment this out
- # if you don't want tcp wrapper support. having tcp wrapper support is
-@@ -41,7 +46,7 @@
- 
- # Location of PAM support library and include files. Comment this out
- # if you don't want to enable PAM support
--PAMDIR=/usr
-+#PAMDIR=/usr
- 
-  
- # Location of the AFS and Kerberos libraries and include files.  Uncomment
-@@ -73,9 +78,10 @@
- 	esac; \
- 	echo "Making $@ for $$ARCH..."; \
- 	cd sys/$$ARCH && ${MAKE} ${MFLAGS} \
+--- sys/ultrix/Makefile.orig	Thu Feb  4 07:30:55 1999
++++ sys/ultrix/Makefile
+@@ -24,6 +24,7 @@
+ ${ALL}:	FRC
+ 	cd $@; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
 +	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
- 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}"\
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
  	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
--	    DESTDIR="${DESTDIR}" MANDIR="${MANDIR}" \
-+	    RCDIR="${RCDIR}" DESTDIR="${DESTDIR}" MANDIR="${MANDIR}" \
- 	    TCPWRAPDIR="${TCPWRAPDIR}" PAMDIR="${PAMDIR}" DB2DIR="${DB2DIR}" \
- 	    AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" DESDIR="${DESDIR}" $@
- 
+ 	    AFPLIBS="${AFPLIBS}" \
+@@ -36,6 +37,7 @@
+ 	for i in ${ALL}; \
+ 	    do (cd $$i; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
++		LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	        SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 		DESTDIR="${DESTDIR}" MANDIR="${MANDIR}" \
+@@ -46,6 +48,8 @@
+ 	sed -e s@:DESTDIR:@${DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
+ 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
+ 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
++		-e s@:LIBEXECDIR:@${LIBEXECDIR}@ \
++		-e s@:EXAMPLEDIR:@${EXAMPLEDIR}@ \
+ 		-e s@:INCDIR:@${INCDIR}@ \
+ 	    < ../../rc.atalk.bsd > ${ETCDIR}/rc.atalk
+ 	@echo

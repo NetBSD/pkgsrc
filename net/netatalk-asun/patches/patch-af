@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.2 2000/07/31 18:33:49 abs Exp $
+$NetBSD: patch-af,v 1.3 2000/08/15 14:48:23 abs Exp $
 
---- etc/atalkd/Makefile.orig	Wed Jul  9 20:51:55 1997
-+++ etc/atalkd/Makefile	Mon Jul 31 18:46:19 2000
-@@ -23,7 +23,7 @@
- 	    ${CPPFLAGS} -c config.c
+--- etc/afpd/nls/Makefile.orig	Sat Dec 12 11:01:06 1998
++++ etc/afpd/nls/Makefile
+@@ -14,7 +14,7 @@
  
- install : all
--	${INSTALL} -c atalkd ${SBINDIR}
-+	${INSTALL} -c atalkd ${LIBEXECDIR}
+ install: 
+ 	-mkdir ${RESDIR}/nls
+-	${INSTALL} -m 644 maccode.* ${RESDIR}/nls
++	${INSTALL} -c -m 644 maccode.* ${RESDIR}/nls
  
- clean :
- 	rm -f a.out core* *.o *.bak *[Ee]rrs tags
+ clean:
+ 	rm -f *.o
