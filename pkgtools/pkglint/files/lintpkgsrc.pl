@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.83 2003/09/30 16:09:50 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.84 2003/10/01 11:56:17 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -886,7 +886,12 @@ sub parse_makefile_vars
 		if (substr($incfile, 0, 1) ne '/')
 		    { $incfile = "$CURDIR/$incfile"; }
 
-		$incfile = realpath($incfile);
+		# perl 5.6.1 realpath() cannot handle files, only directories
+		# If the last component is a symlink this will give a false
+		# negative, but that is not a problem as the duplicate check
+		# is for performance
+                $incfile =~ m#^(.+)(/[^/]+)$#;
+		$incfile = realpath($1).$2;
 
 		if (!$incfiles{$incfile})
 		    {
