@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/07 04:09:22 epg Exp $
+bin/rapidsvn
+lib/libsvncpp.a
+lib/libsvncpp.la
+lib/libsvncpp.so
+lib/libsvncpp.so.0
+lib/libsvncpp.so.0.0
+man/man1/rapidsvn.1
