@@ -1,8 +1,11 @@
-# $NetBSD: Makefile.common,v 1.8 2000/04/30 17:03:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2000/05/09 07:12:58 tron Exp $
 #
 # Common include file for communicator and navigator packages
 
 .include "../../mk/bsd.prefs.mk"
+
+# Use export version by default.
+NS_ENCRYPTION?=	export
 
 # Note - the version will be overridden for certain architectures which
 #	 do not have the latest version available (eg: SunOS sparc)

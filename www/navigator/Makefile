@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2000/01/05 15:43:34 abs Exp $
+# $NetBSD: Makefile,v 1.24 2000/05/09 07:12:58 tron Exp $
 #
 
 BINNAME=	navigator
 DIST_SDIR_NAME=	navigator_standalone
-NS_ENCRYPTION?=	export
-#
+
 .include "../navigator/Makefile.common"
