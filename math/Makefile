@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/02/25 01:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2000/08/03 17:50:51 rh Exp $
 # FreeBSD Id: Makefile,v 1.38 1998/04/13 00:51:58 jseger Exp
 #
 
@@ -23,5 +23,6 @@
     SUBDIR += xlispstat
     SUBDIR += xmgr
     SUBDIR += yacas
+    SUBDIR += yorick
 
 .include "../mk/bsd.pkg.subdir.mk"
