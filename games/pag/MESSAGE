@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/07/11 22:53:24 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2004/03/10 03:36:59 snj Exp $
 
-To play run:
+To play, run:
 
 	pag ${PREFIX}/share/pag/levels
 
