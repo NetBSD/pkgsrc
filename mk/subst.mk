@@ -1,10 +1,14 @@
-# $NetBSD: subst.mk,v 1.9 2003/12/29 02:55:22 kim Exp $
+# $NetBSD: subst.mk,v 1.10 2004/03/01 09:57:10 uebayasi Exp $
 #
-# This Makefile fragment implements a general text replacement facility
-# for different classes of files in ${WRKSRC}.  For each class of files,
-# a target subst-<class> is created to perform the text replacement.
+# This Makefile fragment implements a general text replacement facility.
+# Package makefiles define a ``class'', for each of which a paricular
+# substitution description can be defined.  For each class of files, a
+# target subst-<class> is created to perform the text replacement.
 #
 # The following variables are used:
+#
+# SUBST_CLASSES
+#	A list of class names. 	A new class name must be appended (+=).
 #
 # SUBST_STAGE.<class>
 #	"stage" at which we do the text replacement, e.g. pre-configure,
@@ -33,11 +37,11 @@ _SUBST_IS_TEXT_FILE?= \
 .for _class_ in ${SUBST_CLASSES}
 _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
 
-.if defined(SUBST_SED.${_class_}) && !empty(SUBST_SED.${_class_})
+.  if defined(SUBST_SED.${_class_}) && !empty(SUBST_SED.${_class_})
 SUBST_FILTER_CMD.${_class_}?=	${SED} ${SUBST_SED.${_class_}}
-.else
+.  else
 SUBST_FILTER_CMD.${_class_}?=	# empty
-.endif
+.  endif
 
 SUBST_TARGETS+=			subst-${_class_}
 _SUBST_TARGETS.${_class_}=	subst-${_class_}-message
@@ -55,10 +59,10 @@ subst-${_class_}: ${_SUBST_TARGETS.${_class_}}
 
 .PHONY: subst-${_class_}-message
  subst-${_class_}-message:
-.if defined(SUBST_MESSAGE.${_class_})
+.  if defined(SUBST_MESSAGE.${_class_})
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO_SUBST_MSG} "=> ${SUBST_MESSAGE.${_class_}}"
-.endif
+.  endif
 
 .PHONY: subst-${_class_}-cookie
  subst-${_class_}-cookie:
