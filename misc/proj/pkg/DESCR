@@ -1,0 +1,15 @@
+PROJ is a collection of three programs and a library for performing
+cartographic projections. The programs are designed as a standard UNIX
+filters to be used with other programs in the generation of maps and
+charts, and as map digitizing applications. `proj' performs forward
+and inverse transformation of cartographic data to or from Cartesian
+coordinates with a wide range of available projection mapping
+functions; `geod' performs geodesic computations for determining the
+latitude, longitude and back azimuth of a terminus point given an
+initial point latitude, longitude, azimuth and distance (direct) or
+the forward and back azimuths and the distance between the initial and
+terminus point latitudes and longitudes (inverse); `nad2nad' is a
+North American Datum conversion filter to convert between the Datum of
+1927 (NAD27) and that of 1983 (and which can also process State Plane
+Coordinate System (SPCS) and Universal Transverse Mercator (UTM) grid
+data as well as geographic data for both input and output).
