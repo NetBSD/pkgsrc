@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2001/03/27 02:29:18 hubertf Exp $
+
+--- wmnet.h.orig	Sun Mar  4 02:39:16 2001
++++ wmnet.h
+@@ -68,8 +68,9 @@
+ Pixmap arrow;
+ Atom delete_atom;
+ int screen, specified_state = -1;
++int no3d = 0; /* 3d shadow look by default */
+ GC graphics_context;
+-unsigned long tx_pixel[3], rx_pixel[3], labelfg_pixel, labelbg_pixel,  black_pixel, white_pixel, darkgrey_pixel, grey_pixel;
++unsigned long tx_pixel[3], rx_pixel[3], labelfg_pixel, labelbg_pixel,  bg_pixel, black_pixel, white_pixel, darkgrey_pixel, grey_pixel;
+ typedef int (*parser_func)(void);
+ 
+ /* I know statically declared buffers are against GNU coding standards, so sue me */
