@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8139 2004/11/29 11:29:12 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8140 2004/11/29 12:01:00 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5628,3 +5628,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added fontforge-20041115 [adam 2004-11-29]
 	Updated mftrace to 1.0.35nb1 [adam 2004-11-29]
 	Updated xcompmgr to 1.1.1 [xtraeme 2004-11-29]
+	Updated libassuan to 0.6.8 [shannonjr 2004-11-29]
