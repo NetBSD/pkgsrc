@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/04/24 07:09:12 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2000/04/24 07:45:32 itojun Exp $
 #
 
 DISTNAME=		gtk-gnutella-0.11
@@ -9,7 +9,7 @@ MASTER_SITES=		http://gtk-gnutella.sourceforge.net/download/ \
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://gtk-gnutella.sourceforge.net/
 
-DEPENDS=		gtk+-1.2.1:../../x11/gtk
+DEPENDS=		gtk+-1.2.*:../../x11/gtk
 
 USE_GMAKE=		yes
 USE_X11=		yes
