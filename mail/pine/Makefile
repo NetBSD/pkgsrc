@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/07/19 03:39:17 tv Exp $
+# $NetBSD: Makefile,v 1.15 1998/07/19 04:33:06 tv Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -27,6 +27,7 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/pine ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/pine/abookcpy ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${FILESDIR}/pgpencrypt ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${FILESDIR}/pgpdecode ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${FILESDIR}/pgpsign ${PREFIX}/bin/
