@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/10/26 14:10:01 agc Exp $
+# $NetBSD: Makefile,v 1.9 2002/07/02 11:37:33 agc Exp $
 # FreeBSD: ports/mail/mailagent/Makefile,v 1.28 1999/08/31 06:47:24 mharo Exp
 #
 
@@ -12,7 +12,7 @@ COMMENT=		Sophisticated automatic mail-processing tool
 USE_PERL5=		# defined
 
 NO_PACKAGE=		"Correct FQDN needs to be hardcoded"
-IS_INTERACTIVE=		# defined
+INTERACTIVE_STAGE=	configure
 
 HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	./Configure
