@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1022 2002/07/31 14:43:29 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1023 2002/07/31 14:48:03 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -85,16 +85,19 @@ _JDK_DEPMETHOD=		_UNUSED_DEPENDS
 _JDK_DEPMETHOD=		BUILD_DEPENDS
 .  endif
 .  if ${PKG_JVM} == "jdk"
-_JAVA_PKGNAME=		jdk
+_JAVA_PKGBASE=		jdk
+_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/jdk-1.1.8
 _JAVA_HOME=		${_JAVA_PREFIX}
 DEPENDS+=		jdk-[0-9]*:../../lang/jdk
 .  elif ${PKG_JVM} == "sun-jdk14"
-_JAVA_PKGNAME=		sun-jdk14
+_JAVA_PKGBASE=		sun-jdk14
+_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.4.0
 _JAVA_HOME=		${_JAVA_PREFIX}
 ${_JDK_DEPMETHOD}+=	sun-jdk14-[0-9]*:../../lang/sun-jdk14
 DEPENDS+=		sun-jre14-[0-9]*:../../lang/sun-jre14
 .  elif ${PKG_JVM} == "sun-jdk13"
-_JAVA_PKGNAME=		sun-jdk13
+_JAVA_PKGBASE=		sun-jdk13
+_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.3.1
 _JAVA_HOME=		${_JAVA_PREFIX}
 ${_JDK_DEPMETHOD}+=	sun-jdk13-[0-9]*:../../lang/sun-jdk13
 DEPENDS+=		sun-jre13-[0-9]*:../../lang/sun-jre13
@@ -102,31 +105,34 @@ DEPENDS+=		sun-jre13-[0-9]*:../../lang/sun-jre13
 .    if ${MACHINE_PLATFORM:MNetBSD-1.5Z[A-Z]-i386} != "" || \
 	${MACHINE_PLATFORM:MNetBSD-1.[6-9]*-i386} != "" || \
 	${MACHINE_PLATFORM:MLinux-*-i386} != ""
-_JAVA_PKGNAME=		sun-jdk14
+_JAVA_PKGBASE=		sun-jdk1[34]
+_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.4.0
 _JAVA_HOME=		${_JAVA_PREFIX}
-${_JDK_DEPMETHOD}+=	sun-jdk14-[0-9]*:../../lang/sun-jdk14
-DEPENDS+=		sun-jre14-[0-9]*:../../lang/sun-jre14
+${_JDK_DEPMETHOD}+=	sun-jdk1[34]-[0-9]*:../../lang/sun-jdk14
+DEPENDS+=		sun-jre1[34]-[0-9]*:../../lang/sun-jre14
 .    elif ${MACHINE_PLATFORM:MNetBSD-*-i386} != "" || \
 	${MACHINE_PLATFORM:MDarwin-*-*} != "" || \
 	${MACHINE_PLATFORM:MLinux-*-i386} != ""
-_JAVA_PKGNAME=		sun-jdk13
+_JAVA_PKGBASE=		sun-jdk1[34]
+_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.3.1
 _JAVA_HOME=		${_JAVA_PREFIX}
-${_JDK_DEPMETHOD}+=	sun-jdk13-[0-9]*:../../lang/sun-jdk13
-DEPENDS+=		sun-jre13-[0-9]*:../../lang/sun-jre13
+${_JDK_DEPMETHOD}+=	sun-jdk1[34]-[0-9]*:../../lang/sun-jdk13
+DEPENDS+=		sun-jre1[34]-[0-9]*:../../lang/sun-jre13
 .    endif
 .  elif ${PKG_JVM} == "blackdown-jdk13"
-_JAVA_PKGNAME=		blackdown-jdk13
+_JAVA_PKGBASE=		blackdown-jdk13
+_JAVA_PREFIX_DEFAULT=	${LOCALBASE}
 _JAVA_HOME=		${_JAVA_PREFIX}/java/blackdown-1.3.1
 ${_JDK_DEPMETHOD}+=	blackdown-jdk13-[0-9]*:../../lang/blackdown-jdk13
 DEPENDS+=		blackdown-jre13-[0-9]*:../../lang/blackdown-jre13
 .  elif ${PKG_JVM} == "kaffe"
-_JAVA_PKGNAME=		kaffe
-_JAVA_HOME=		${_JAVA_PREFIX}
+_JAVA_PKGBASE=		kaffe
+_JAVA_PREFIX_DEFAULT=	${LOCALBASE}
+_JAVA_HOME=		${_JAVA_PREFIX}/java/kaffe
 DEPENDS+=		kaffe-[0-9]*:../../lang/kaffe
 .  endif
 .  undef _UNUSED_DEPENDS
-_JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/${_JAVA_PKGNAME}
-EVAL_PREFIX+=		_JAVA_PREFIX=${_JAVA_PKGNAME}
+EVAL_PREFIX+=		_JAVA_PREFIX=${_JAVA_PKGBASE}
 MAKE_ENV+=		JAVA_HOME=${JAVA_HOME}
 CONFIGURE_ENV+=		JAVA_HOME=${JAVA_HOME}
 SCRIPTS_ENV+=		JAVA_HOME=${JAVA_HOME}
