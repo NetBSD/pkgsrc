@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.116 2004/10/03 00:18:27 tv Exp $
+# $NetBSD: Makefile,v 1.117 2004/10/03 16:06:18 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE6
 PKGNAME=	squid-2.5.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -33,7 +33,16 @@ PATCHFILES=	squid-2.5.STABLE6-ufs_no_valid_dir.patch \
 		squid-2.5.STABLE6-digest_crash.patch \
 		squid-2.5.STABLE6-acl_times.patch \
 		squid-2.5.STABLE6-http_header_range.patch \
-		squid-2.5.STABLE6-Content-Disposition.patch
+		squid-2.5.STABLE6-Content-Disposition.patch \
+		squid-2.5.STABLE6-freebsd_arp_nowarning.patch \
+		squid-2.5.STABLE6-huge_tcp_windows.patch \
+		squid-2.5.STABLE6-arbitrary_headers.patch \
+		squid-2.5.STABLE6-ncsa_auth_lineendings.patch \
+		squid-2.5.STABLE6-basic_auth_caseinsensitive-2.patch \
+		squid-2.5.STABLE6-program-prefix.patch \
+		squid-2.5.STABLE6-CONNECT.patch \
+		squid-2.5.STABLE6-balance_on_multiple_ip.patch \
+		squid-2.5.STABLE6-CARP-cache_peer_access.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
@@ -69,6 +78,10 @@ RCD_SCRIPTS=		squid
 
 CONF_FILES+=		${EXAMPLESDIR}/mime.conf ${PKG_SYSCONFDIR}/mime.conf
 CONF_FILES+=		${EXAMPLESDIR}/squid.conf ${PKG_SYSCONFDIR}/squid.conf
+
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--enable-arp-acl
+.endif
 
 # Configuration options which can be overwritten by the user.
 SQUID_CONFIGURE_ARGS?=	--enable-auth=basic,digest,ntlm \
