@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/28 21:24:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/05/31 08:28:35 uebayasi Exp $
 bin/addwords
 bin/canlisp
 bin/cannacheck
-bin/cannakill
 bin/cannastat
 bin/catdic
 bin/chmoddic
@@ -73,8 +72,9 @@ man/man1/mvdic.1
 man/man1/rmdic.1
 man/man1/splitword.1
 man/man1/wtoc.1
+sbin/cannakill
 sbin/cannaserver
 @exec ${MKDIR} ${CANNA_SPOOL}
-@exec ${CHOWN} ${CANNAOWNER}:${CANNAGROUP} ${CANNA_SPOOL}
+@exec ${CHOWN} ${CANNA_OWNER}:${CANNA_GROUP} ${CANNA_SPOOL}
 @exec ${CHMOD} ${CANNA_MODE} ${CANNA_SPOOL}
 @unexec ${RMDIR} ${CANNA_SPOOL}
