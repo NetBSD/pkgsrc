@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.4 1999/01/15 22:57:13 tron Exp $
+$NetBSD: patch-ab,v 1.5 1999/03/04 08:50:44 tron Exp $
 
---- Makefile.in.orig	Mon Jan  4 10:47:12 1999
-+++ Makefile.in	Fri Jan 15 23:37:42 1999
-@@ -50,7 +50,7 @@
+--- Makefile.in.orig	Wed Feb 24 23:09:14 1999
++++ Makefile.in	Tue Mar  2 23:50:46 1999
+@@ -48,7 +48,7 @@
  INSTALL = @INSTALL@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
  INSTALL_DATA = @INSTALL_DATA@
 -INSTALL_SCRIPT = @INSTALL_SCRIPT@
 +INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
@@ -12,43 +12,40 @@ $NetBSD: patch-ab,v 1.4 1999/01/15 22:57:13 tron Exp $
  
  NORMAL_INSTALL = :
 @@ -91,8 +91,6 @@
- # alpha `automake' supports this better
- #SUBDIRS = . gmodule gthread docs tests
+ 
+ SUBDIRS = . gmodule gthread docs tests
  
 -configincludedir = $(pkglibdir)/include
 -
- bin_SCRIPTS=glib-config
- BUILT_SOURCES=glib-config
- 
-@@ -139,16 +137,13 @@
- 	gutils.c
- 
- include_HEADERS = \
--	glib.h
--
--configinclude_DATA = \
-+	glib.h \
- 	glibconfig.h
+ bin_SCRIPTS = glib-config
  
  BUILT_SOURCES = stamp-gc-h #note: not glibconfig.h
+@@ -107,13 +105,10 @@
+ libglib_la_SOURCES =  	garray.c		gcache.c		gcompletion.c		gdataset.c		gdate.c         	gerror.c		ghash.c			ghook.c			giochannel.c    	giounix.c       	glist.c			gmain.c         	gmem.c			gmessages.c		gmutex.c		gnode.c			gprimes.c		grel.c			gscanner.c		gslist.c		gstrfuncs.c		gstring.c		gtimer.c		gtree.c			gutils.c
  
- libglib_la_LDFLAGS = \
--	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) \
--	-release $(LT_RELEASE)
-+	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+ 
+-include_HEADERS =  	glib.h
+-
+-
+-configinclude_DATA =  	glibconfig.h
++include_HEADERS =  	glib.h glibconfig.h
+ 
+ 
+-libglib_la_LDFLAGS =  	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) 	-release $(LT_RELEASE)
++libglib_la_LDFLAGS =  	-release $(LT_RELEASE)
+ 
  
  noinst_PROGRAMS = testglib testgdate testgdateparser
- testglib_LDADD = libglib.la
-@@ -194,7 +189,7 @@
- COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
- LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@
+@@ -161,7 +156,7 @@
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+ LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
 -DATA =  $(configinclude_DATA) $(m4data_DATA)
 +DATA =  $(m4data_DATA)
  
  HEADERS =  $(include_HEADERS)
  
-@@ -359,25 +354,6 @@
+@@ -335,25 +330,6 @@
  	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
  	done
  
@@ -74,16 +71,17 @@ $NetBSD: patch-ab,v 1.4 1999/01/15 22:57:13 tron Exp $
  install-m4dataDATA: $(m4data_DATA)
  	@$(NORMAL_INSTALL)
  	$(mkinstalldirs) $(DESTDIR)$(m4datadir)
-@@ -540,7 +516,7 @@
- 
+@@ -551,8 +527,7 @@
  install-exec-am: install-libLTLIBRARIES install-binSCRIPTS
+ install-exec: install-exec-recursive
  
--install-data-am: install-configincludeDATA install-m4dataDATA install-includeHEADERS
+-install-data-am: install-configincludeDATA install-m4dataDATA \
+-		install-includeHEADERS
 +install-data-am: install-m4dataDATA install-includeHEADERS
+ install-data: install-data-recursive
  
- uninstall-am: uninstall-libLTLIBRARIES uninstall-binSCRIPTS uninstall-configincludeDATA uninstall-m4dataDATA uninstall-includeHEADERS
- 
-@@ -618,7 +594,6 @@
+ install-am: all-am
+@@ -625,7 +600,6 @@
  maintainer-clean-libtool mostlyclean-noinstPROGRAMS \
  distclean-noinstPROGRAMS clean-noinstPROGRAMS \
  maintainer-clean-noinstPROGRAMS uninstall-binSCRIPTS install-binSCRIPTS \
