@@ -1,0 +1,7 @@
+    skkfep is a SKK-like Kana-to-Kanji FrontEnd Processor.  It works
+on terminals and realizes SKK-like conversion without emacs.
+
+Features:
+	- realize SKK-like Kana/Kanji user interface on terminals,
+	- shares private and common dictionaries with SKK,
+	- word registration is not currently supported.
