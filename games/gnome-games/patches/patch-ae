@@ -1,10 +1,17 @@
-$NetBSD: patch-ae,v 1.2 2002/05/12 00:28:23 rh Exp $
+$NetBSD: patch-ae,v 1.3 2002/12/01 02:00:14 salo Exp $
 
---- gnome-stones/objects/Makefile.am.orig	Tue Nov 10 14:55:56 1998
-+++ gnome-stones/objects/Makefile.am
-@@ -6,9 +6,11 @@
+--- gnome-stones/objects/Makefile.am.orig	Tue Nov 10 05:55:56 1998
++++ gnome-stones/objects/Makefile.am	Sun Dec  1 02:15:05 2002
+@@ -1,14 +1,17 @@
+ GSTONES_SRC_DIR = $(srcdir)/../
+ 
+ objectdir= $(libdir)/gnome-stones/objects
++localedir= $(prefix)/share/locale
+ 
+ INCLUDES = 						\
  	-I$(GSTONES_SRC_DIR)				\
- 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" 	\
+-	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" 	\
++	-DGNOMELOCALEDIR=\""$(localedir)"\" 	\
  	-I$(includedir)					\
 -	$(GNOME_INCLUDEDIR)
 +	$(GNOME_INCLUDEDIR) $(GDK_PIXBUF_CFLAGS)

@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2002/05/12 00:28:23 rh Exp $
+$NetBSD: patch-ad,v 1.6 2002/12/01 02:00:14 salo Exp $
 
 --- aclocal.m4.orig	Thu Jul 12 06:02:03 2001
 +++ aclocal.m4
@@ -10,12 +10,3 @@ $NetBSD: patch-ad,v 1.5 2002/05/12 00:28:23 rh Exp $
    rm -f conf.gdk_pixbuftest
  ])
  
-@@ -4697,7 +4698,7 @@
- 		  [CATOBJEXT=.gmo
- 		   DATADIRNAME=share],
- 		  [CATOBJEXT=.mo
--		   DATADIRNAME=lib])
-+		   DATADIRNAME=${PKGLOCALEDIR}])
- 		INSTOBJEXT=.mo
- 	      fi
- 	    fi
