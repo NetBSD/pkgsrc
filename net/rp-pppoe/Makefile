@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/10/09 08:30:40 tron Exp $
+# $NetBSD: Makefile,v 1.20 2003/01/16 09:27:59 grant Exp $
 
 DISTNAME=	rp-pppoe-3.5
 CATEGORIES=	net
@@ -16,15 +16,13 @@ CONFIGURE_ENV+=	PPPD=${PPPD}
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
-post-build:
-	${SED} -e 's#$${PREFIX}#${PREFIX}#g' <${FILESDIR}/pppoe.sh \
-	  >${WRKDIR}/pppoe.sh
+RCD_SCRIPTS=	pppoe
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/rp-pppoe
 	cd ${WRKSRC}/../configs && \
 	${INSTALL_DATA} pppoe.conf pppoe-server-options \
 	  ${PREFIX}/share/examples/rp-pppoe
-	${INSTALL_SCRIPT} ${WRKDIR}/pppoe.sh ${PREFIX}/etc/rc.d/pppoe
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pppoe.sh,v 1.1 2001/03/18 18:55:29 tron Exp $
+# $NetBSD: pppoe.sh,v 1.2 2003/01/16 09:28:01 grant Exp $
 #
 # PROVIDE: pppoe
 # REQUIRE: ipnat
@@ -11,10 +11,10 @@ case $1 in
 start)
 	. /etc/ppp/pppoe.conf 
 	ifconfig $ETH up
-	${PREFIX}/sbin/adsl-start
+	@PREFIX@/sbin/adsl-start
 	;;
 stop)
-	${PREFIX}/sbin/adsl-stop
+	@PREFIX@/sbin/adsl-stop
 	. /etc/ppp/pppoe.conf 
 	ifconfig $ETH down
 	;;
