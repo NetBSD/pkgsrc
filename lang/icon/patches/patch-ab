@@ -1,20 +1,21 @@
---- src/runtime/rmisc.r	1997/10/02 09:28:35	1.1
-+++ src/runtime/rmisc.r	1997/10/02 09:30:08
-@@ -123,14 +123,15 @@
-    return buf;
- #endif					/* OS2EMX */
- 
--#if FreeBSD
-+#if (defined(GenericBSD) && !defined(FreeBSD))
-+/* This is commented out in the FreeBSD ports collection */
- #define ecvt(w,x,y,z) 0
- 
-    sprintf(buf, "%f", number);
-    for(i=strlen(buf); i>1 && buf[i-1]=='0' && buf[i-2]!='.'; i--)
-       buf[i-1] = '\0';
-    return buf;
--#endif					/* FreeBSD */
-+#endif					/* GenericBSD && !FreeBSD */
- 
-    p1 = ecvt(number, ndigit, &decpt, &sign);
-    p2 = buf;
+--- Makefile.orig	Fri Feb 13 07:18:30 1998
++++ Makefile	Fri Jun 19 04:31:38 1998
+@@ -188 +188,18 @@
+ ##################################################################
++
++install:
++	@bin/patchstr bin/iconc ${PREFIX}/share/icon/
++	@bin/patchstr bin/icont ${PREFIX}/bin/iconx
++	install -c -s -g bin -o bin -m 755 bin/iconc ${PREFIX}/bin/iconc
++	install -c -s -g bin -o bin -m 755 bin/icont ${PREFIX}/bin/icont
++	install -c -s -g bin -o bin -m 755 bin/iconx ${PREFIX}/bin/iconx
++	install -c -s -g bin -o bin -m 755 bin/patchstr ${PREFIX}/bin/patchstr
++	@mkdir -p ${PREFIX}/share/icon
++	install -c -g bin -o bin -m 644 bin/dlrgint.o ${PREFIX}/share/icon/dlrgint.o
++	install -c -g bin -o bin -m 644 bin/rt.a ${PREFIX}/share/icon/rt.a
++	install -c -g bin -o bin -m 644 bin/rt.db ${PREFIX}/share/icon/rt.db
++	install -c -g bin -o bin -m 644 bin/rt.h ${PREFIX}/share/icon/rt.h
++#	@mkdir -p ${PREFIX}/man/man1
++#	install -c -g bin -o bin -m 444 docs/icon.1 ${PREFIX}/man/man1/icon.1
++#	@gzip -9fn ${PREFIX}/man/man1/icon.1
++# XXX (icon.1 missing from this distribution!)

@@ -1,0 +1,31 @@
+--- /dev/null	Wed Oct  1 17:23:30 1997
++++ config/unix/intel_netbsd/status	Wed Oct  1 17:36:09 1997
+@@ -0,0 +1,28 @@
++System configuration:
++
++	Intel 486-type processor or better running BSD 4.4.lite derivative
++
++Latest Icon version:
++
++	Version 9.3
++
++Installer:
++
++	Alistair G. Crooks
++	<agc@netbsd.org>
++
++Missing features:
++
++	None.
++
++Known bugs:
++
++	None.
++
++Comments:
++
++	None.
++
++Date:
++
++	Wed Oct  1 17:36:04 BST 1997

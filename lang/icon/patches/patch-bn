@@ -1,0 +1,10 @@
+--- /dev/null	Fri Jun 19 02:02:36 1998
++++ config/unix/alpha_netbsd/iconx.hdr	Fri Jun 19 02:48:20 1998
+@@ -0,0 +1,7 @@
++SHELL=/bin/sh
++# the seek stuff is defined in a header file that they don't
++# include.  This is the easiest.  -Dconst= causes const to
++# be ignored.  This is needed because otherwise we get complaints
++# due to stdio.h defining some functions with const when they
++# are not defined that way in Icon's header files
++RSWITCH=rswitch.s

@@ -1,0 +1,13 @@
+--- /dev/null	Wed Oct  1 17:23:30 1997
++++ config/unix/intel_netbsd/common.hdr	Wed Oct  1 17:32:25 1997
+@@ -0,0 +1,10 @@
++#  The -D$D option to CFLAGS makes it possible to specify a definition
++#  at the Make command level without revising the Makefile, as
++#  in
++#
++#	make D=Debug
++#
++D=NOTHING
++CFLAGS+= -D$D
++SHELL=/bin/sh
++RSWITCH=rswitch.c
