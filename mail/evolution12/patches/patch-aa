@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/04 21:39:51 rh Exp $
+
+--- configure.orig	Thu Jun 20 19:55:20 2002
++++ configure	Wed Jul 10 22:44:39 2002
+@@ -9237,8 +9237,8 @@
+ # This can only change between Evolution versions (and then can only
+ # go up.)
+ evolution_db_version_major=3
+-evolution_db_version_minor=1
+-evolution_db_version_patch=17
++evolution_db_version_minor=3
++evolution_db_version_patch=11
+ 
+ evolution_db_version=${evolution_db_version_major}.${evolution_db_version_minor}.${evolution_db_version_patch}
+ cat >> confdefs.h <<EOF
