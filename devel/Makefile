@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.391 2003/05/07 11:57:35 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.392 2003/05/07 13:53:37 salo Exp $
 #
 
 COMMENT=	Development utilities
@@ -11,6 +11,7 @@ SUBDIR+=	ProjectCenter
 SUBDIR+=	SDL
 SUBDIR+=	SDL_gfx
 SUBDIR+=	SDL_ttf
+SUBDIR+=	SDLmm
 SUBDIR+=	aap
 SUBDIR+=	acme
 SUBDIR+=	acunia-jam
