@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2002/11/18 08:15:19 martti Exp $
+# $NetBSD: Makefile,v 1.65 2002/11/19 23:03:53 jlam Exp $
 
 DISTNAME=		mod_ssl-2.8.12-1.3.27
 PKGNAME=		ap-ssl-2.8.12
+PKGREVISION=		1
 CATEGORIES=		www security
 MASTER_SITES=		http://www.modssl.org/source/ \
 			ftp://ftp.pca.dfn.de/pub/tools/net/mod_ssl/source/ \
@@ -27,6 +28,7 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 MAKE_ENV+=		SSL_RPATH_LDFLAGS="-R${SSLBASE}/lib"
 .endif
 
+PKG_SYSCONFVAR=		apache
 PKG_SYSCONFSUBDIR?=	httpd
 
 EGDIR=			${PREFIX}/share/examples/mod_ssl
@@ -37,8 +39,6 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/ssl.prm
 OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/ssl.key			\
 			${ROOT_USER} ${ROOT_GROUP} 0700
 
-CONF_FILES=		${EGDIR}/apache_start.conf			\
-			${PKG_SYSCONFDIR}/apache_start.conf
 SUPPORT_FILES=		# empty
 SUPPS=			ssl.crl/Makefile.crl ssl.crl/README.CRL		\
 			ssl.crt/Makefile.crt ssl.crt/README.CRT		\
@@ -75,7 +75,6 @@ post-install:
 	cd ${PREFIX}/lib/httpd; ${MV} -f libssl.so mod_ssl.so
 	cd ${WRKSRC}/pkg.sslsup; ${INSTALL_SCRIPT} mkcert.sh		\
 		${PREFIX}/sbin/mkcert
-	${INSTALL_DATA} ${FILESDIR}/apache_start.conf ${EGDIR}
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/htdocs/manual/mod/mod_ssl
 	cd ${WRKSRC}/pkg.ssldoc; ${INSTALL_DATA} *.html *.gif *.jpg	\
