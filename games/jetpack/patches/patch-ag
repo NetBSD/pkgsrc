@@ -1,0 +1,10 @@
+$NetBSD: patch-ag,v 1.1 1998/08/23 11:24:54 garbled Exp $
+*** defs.h~	Sun Feb 12 17:34:08 1995
+--- defs.h	Sun Feb 12 17:34:46 1995
+***************
+*** 319,321 ****
+--- 319,322 ----
+  */
+  
+  extern int	paused, leveldone, gameover, lastscore;
++ extern int usecdelay;
