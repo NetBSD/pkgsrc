@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1997/10/06 15:27:55 agc Exp $
+# $NetBSD: Makefile,v 1.3 1997/11/22 03:42:28 hubertf Exp $
 # New ports collection makefile for:	perl5
 # Version required:	5.004_01
 # Date created:		16 April 1995
@@ -7,8 +7,8 @@
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
-DISTNAME=	perl5.004_01
-PKGNAME=	perl-5.00401
+DISTNAME=	perl5.004_04
+PKGNAME=	perl-5.00404
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/ \
 		ftp://ftp.cdrom.com/pub/perl/CPAN/src/5.0/
@@ -60,6 +60,7 @@ MAN3=	AnyDBM_File.3 AutoLoader.3 AutoSplit.3 Benchmark.3 Bundle::CPAN.3 \
 
 MAN3PREFIX=	${PREFIX}/lib/perl5
 
+
 test:
 	@(cd ${WRKSRC}; make test)
 
@@ -69,7 +70,8 @@ post-install:
 	@strip ${PREFIX}/bin/perl
 .if (${OPSYS} != "NetBSD")
 # agc - no suidperl???
-	@strip ${PREFIX}/bin/perl ${PREFIX}/bin/suidperl
+	@strip ${PREFIX}/bin/suidperl
 .endif
+	@strip ${PREFIX}/bin/perl
 
 .include <bsd.port.mk>
