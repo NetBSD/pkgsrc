@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/03 22:23:56 jtb Exp $
 
 DISTNAME=		Isearch-1.47d
 PKGNAME=		isearch-1.47d
-CATEGORIES=		textproc
+CATEGORIES=		textproc databases
 MASTER_SITES=		http://www.etymon.com/pub/Isearch/
 
-MAINTAINER=		jtb@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.etymon.com/Isearch/
 COMMENT=		Advanced text indexing and searching system
 
@@ -16,9 +16,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/TUTORIAL ${PREFIX}/share/doc/isearch
 	${INSTALL_DATA} ${WRKSRC}/doc/DebugFirewall.doc ${PREFIX}/share/doc/isearch
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/isearch
-	@for f in ${WRKSRC}/html/*.html; do				   \
-		i="${INSTALL_DATA} $$f ${PREFIX}/share/doc/html/isearch/"; \
-		${ECHO} $$i; $$i;					   \
-	done
+	${INSTALL_DATA} ${WRKSRC}/html/*.html ${PREFIX}/share/doc/html/isearch/
 
 .include "../../mk/bsd.pkg.mk"
