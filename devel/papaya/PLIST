@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/16 04:46:31 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/23 21:25:22 seb Exp $
 bin/add-html-signature
 bin/compare-version
 bin/copy-if-changed
@@ -20,9 +20,7 @@ bin/recursive-make
 bin/search-exec
 bin/search-package
 bin/texi2html-wrapper
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/papaya.info
 info/papaya.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/papaya.info
 libexec/papaya-lib.pl
 libexec/papaya-lib.sh
 share/doc/papaya/papaya.html
