@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/02/13 18:50:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/13 21:11:11 mrauch Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 WRKSRC=			${WRKDIR}/oo_641_src/config_office
@@ -6,7 +6,9 @@ CATEGORIES=		misc
 MASTER_SITES=		http://sf1.mirror.openoffice.org/641b/
 DISTFILES=		oo_641_src.tar.bz2
 DISTFILES+=		gpc231.tar.Z
+DISTFILES+=		oo_moz_641.tar.gz
 SITES_gpc231.tar.Z= 	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/
+SITES_oo_moz_641.tar.gz=ftp://ftp.netbsd.org/pub/NetBSD/misc/mrauch/
 
 MAINTAINER=		mrauch@netbsd.org
 HOMEPAGE=		http://www.openoffice.org/
@@ -45,7 +47,7 @@ post-extract:
 	${CP} ${WRKDIR}/gpc231/gpc.c ${WRKSRC}/../external/gpc/
 	${CP} ${WRKDIR}/gpc231/gpc.h ${WRKSRC}/../external/gpc/
 # bring the NetBSD mozilla zip files into place
-	${CP} ${FILESDIR}/*.zip ${WRKSRC}/../moz/zipped/
+	${CP} ${WRKDIR}/*.zip ${WRKSRC}/../moz/zipped/
 # convert \r\n-lineends in sablot-patch into unix-style \n first
 	${PERL5} -p -i.save -e 's/\r\n/\n/' 				\
 	    ${WRKSRC}/../sablot/Sablot-0.52.patch
