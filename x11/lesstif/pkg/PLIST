@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 1998/09/29 08:44:17 tron Exp $
+@comment $NetBSD: PLIST,v 1.15 1998/10/31 01:02:18 frueauf Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
@@ -181,14 +181,25 @@ share/lesstif/doc/web_button.html
 man/man1/lesstif.1
 man/man1/mwm.1
 man/man1/xmbind.1
-man/man3/XmClipboard.3
+man/man3/ApplicationShell.3
+man/man3/Composite.3
+man/man3/Constraint.3
+man/man3/Core.3
 man/man3/LessTifInternals.3
+man/man3/Object.3
+man/man3/OverrideShell.3
+man/man3/Rect.3
+man/man3/Shell.3
+man/man3/TopLevelShell.3
+man/man3/TransientShell.3
+man/man3/UnNamedObj.3
+man/man3/WmShell.3
 man/man3/XmArrowButton.3
 man/man3/XmArrowButtonGadget.3
 man/man3/XmBulletinBoard.3
 man/man3/XmCascadeButton.3
-man/man3/XmCascadeButtonGCacheObj.3
 man/man3/XmCascadeButtonGadget.3
+man/man3/XmClipboard.3
 man/man3/XmComboBox.3
 man/man3/XmCommand.3
 man/man3/XmDesktop.3
@@ -207,10 +218,8 @@ man/man3/XmFileSelectionBox.3
 man/man3/XmFrame.3
 man/man3/XmGadget.3
 man/man3/XmGrabShell.3
-man/man3/XmIconGCacheObj.3
 man/man3/XmIconGadget.3
 man/man3/XmLabel.3
-man/man3/XmLabelGCacheObj.3
 man/man3/XmLabelGadget.3
 man/man3/XmList.3
 man/man3/XmMainWindow.3
@@ -222,7 +231,6 @@ man/man3/XmPanedWindow.3
 man/man3/XmPrimitive.3
 man/man3/XmProtocol.3
 man/man3/XmPushButton.3
-man/man3/XmPushButtonGCacheObj.3
 man/man3/XmPushButtonGadget.3
 man/man3/XmRowColumn.3
 man/man3/XmSash.3
@@ -232,17 +240,19 @@ man/man3/XmScrollBar.3
 man/man3/XmScrolledWindow.3
 man/man3/XmSelectionBox.3
 man/man3/XmSeparator.3
-man/man3/XmSeparatorGCacheObj.3
 man/man3/XmSeparatorGadget.3
 man/man3/XmSpinBox.3
 man/man3/XmTearOffButton.3
 man/man3/XmText.3
 man/man3/XmTextField.3
 man/man3/XmToggleButton.3
-man/man3/XmToggleButtonGCacheObj.3
 man/man3/XmWorld.3
 man/man3/XmToggleButtonGadget.3
 man/man3/XmVendorShellExt.3
+man/man3/XtConfigureObject.3
+man/man3/XtDestroyWidget.3
+man/man3/XtManageChild.3
+man/man3/XtUnmanageChild.3
 man/man5/mwmrc.5
 @dirrm lib/X11/mwm
 @dirrm lib/X11/lesstif
