@@ -1,4 +1,4 @@
-/*	$NetBSD: tar.c,v 1.6 2003/12/20 04:45:04 grant Exp $	*/
+/*	$NetBSD: tar.c,v 1.7 2003/12/20 04:46:27 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -44,7 +44,7 @@
 #if 0
 static char sccsid[] = "@(#)tar.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: tar.c,v 1.6 2003/12/20 04:45:04 grant Exp $");
+__RCSID("$NetBSD: tar.c,v 1.7 2003/12/20 04:46:27 grant Exp $");
 #endif
 #endif /* not lint */
 
@@ -103,7 +103,7 @@ static int ul_oct(u_long, char *, int, int);
 static int ull_oct(unsigned long long, char *, int, int);
 #endif
 static int tar_gnutar_exclude_one(const char *, size_t);
-static int check_sum(char *, size_t, char *, size_t);
+static int check_sum(char *, size_t, char *, size_t, int);
 
 /*
  * Routines common to all versions of tar
@@ -121,7 +121,7 @@ char *gnu_name_string;			/* ././@LongLink hackery name */
 char *gnu_link_string;			/* ././@LongLink hackery link */
 
 static int
-check_sum(char *hd, size_t hdlen, char *bl, size_t bllen)
+check_sum(char *hd, size_t hdlen, char *bl, size_t bllen, int quiet)
 {
 	u_long hdck, blck;
 
@@ -129,8 +129,9 @@ check_sum(char *hd, size_t hdlen, char *bl, size_t bllen)
 	blck = tar_chksm(bl, bllen);
 
 	if (hdck != blck) {
-		tty_warn(0, "Header checksum %lo does not match %lo",
-		    hdck, blck);
+		if (!quiet)
+			tty_warn(0, "Header checksum %lo does not match %lo",
+			    hdck, blck);
 		return(-1);
 	}
 	return(0);
@@ -398,7 +399,7 @@ tar_id(char *blk, int size)
 		return(-1);
 	if (strncmp(uhd->magic, TMAGIC, TMAGLEN - 1) == 0)
 		return(-1);
-	return check_sum(hd->chksum, sizeof(hd->chksum), blk, BLKMULT);
+	return check_sum(hd->chksum, sizeof(hd->chksum), blk, BLKMULT, 1);
 }
 
 /*
@@ -788,7 +789,7 @@ ustar_id(char *blk, int size)
 		tty_warn(0,
 		    "Trying to read GNU tar archive with extensions off");
 	}
-	return check_sum(hd->chksum, sizeof(hd->chksum), blk, BLKMULT);
+	return check_sum(hd->chksum, sizeof(hd->chksum), blk, BLKMULT, 0);
 }
 
 /*
