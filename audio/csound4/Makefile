@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/28 17:16:48 ben Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/28 18:24:24 ben Exp $
 #
 
 DISTNAME=		csound-4.23f12gbs.6
@@ -22,6 +22,8 @@ TEXINFO_REQD=		4.2
 CONFIGURE_ARGS+=	--enable-debug
 CFLAGS+=		-g
 INFO_FILES=		csoundgbs.info
+
+NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64	# Severe LP64 problems
 
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
