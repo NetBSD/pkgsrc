@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/23 04:40:59 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/07/28 02:47:35 minskim Exp $
 
 DISTNAME=       unarj-2.43
 CATEGORIES=	archivers
@@ -14,7 +14,11 @@ RESTRICTED=	"Do not charge a fee for use, copying, or distribution"
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=	yes
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/unarj

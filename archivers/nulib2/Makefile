@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/07/19 12:50:58 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/07/28 02:47:35 minskim Exp $
 #
 
 DISTNAME=	nulibdist-200
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.nulib.com/downloads/
 MAINTAINER=	tv@poxbox.com
 HOMEPAGE=	http://www.nulib.com/
 COMMENT=	Handles Apple II ShrinkIt (NuFX) file/disk archives
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}/nulib2-200
 USE_BUILDLINK3=	yes
