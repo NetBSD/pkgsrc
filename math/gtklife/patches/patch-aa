@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/22 17:20:23 drochner Exp $
+
+--- Makefile.orig	2004-05-13 03:29:10.000000000 +0200
++++ Makefile
+@@ -1,16 +1,16 @@
+ # C compiler to use
+-CC=gcc
++#CC=gcc
+ 
+ # Set PREFIX to the root of where you want to install gtklife
+-PREFIX=/usr/local
++#PREFIX=/usr/local
+ 
+ # Installation points for the gtklife binary, data, and documentation.
+-BINDIR=$(PREFIX)/games
++BINDIR=$(PREFIX)/bin
+ DATADIR=$(PREFIX)/share/gtklife
+-DOCDIR=$(PREFIX)/doc/gtklife
++DOCDIR=$(PREFIX)/share/doc/gtklife
+ 
+ # Optimization and debug flags
+-CFLAGS=-O3 -mpentiumpro -Wall # -g
++#CFLAGS=-O3 -mpentiumpro -Wall # -g
+ 
+ ########## No user-serviceable parts below ##########
+ 
