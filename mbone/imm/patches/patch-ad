@@ -1,13 +1,12 @@
-$NetBSD: patch-ad,v 1.4 1998/08/07 11:09:55 agc Exp $
-
---- Makefile.orig	Mon Feb 10 16:56:48 1997
-+++ Makefile	Sun Feb  8 12:17:31 1998
+$NetBSD: patch-ad,v 1.5 1998/09/13 15:15:00 garbled Exp $
+--- Makefile.orig	Mon Feb 10 08:56:48 1997
++++ Makefile	Sun Sep 13 07:56:03 1998
 @@ -1,9 +1,9 @@
  ##################################
  # Common Area
  SHELL = /bin/sh
 -PREFIX = /usr/local
-+PREFIX = /usr/pkg
++#PREFIX = /usr/pkg
  INCLUDE_DIR = -I$(PREFIX)/include
 -BINDIR= /usr/local/bin
 +BINDIR= $(PREFIX)/bin
@@ -20,7 +19,7 @@ $NetBSD: patch-ad,v 1.4 1998/08/07 11:09:55 agc Exp $
  	LIBS='-lm' \
 -	TKLIBS='-L$(PREFIX)/lib -L/usr/X11/lib -ltk4.2 -ltcl7.6 -lX11' \
 -	INCLUDES='-I. $(INCLUDE_DIR) -I/usr/X11/include' \
-+	TKLIBS='-L$(PREFIX)/lib -L${X11BASE}/lib -ltk80 -ltcl80 -lX11' \
++	TKLIBS='-Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -L$(LOCALBASE)/lib -L${X11BASE}/lib -ltk80 -ltcl80 -lX11' \
 +	INCLUDES='-I. $(INCLUDE_DIR) -I${X11BASE}/include -I${LOCALBASE}/include/tcl8.0 -I${LOCALBASE}/include/tk8.0' \
  	SYSDEFS='-g -DSIG_T=int -DMULTICAST -DERROR_TEST' \
 -	CC=gcc \
