@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/05 20:56:44 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/16 20:53:03 zuntum Exp $
 #
 
 DISTNAME=	getmail-2.0.18
 CATEGORIES=	mail
 MASTER_SITES=	http://www.qcc.sk.ca/~charlesc/software/getmail-2.0/
 
-MAINTAINER=	zuntum@eik.pl
+MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.qcc.sk.ca/~charlesc/software/getmail-2.0/
 COMMENT=	POP3 mail retriever with reliable Maildir and mbox delivery
 

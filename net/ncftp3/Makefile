@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:19:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/16 20:53:04 zuntum Exp $
 
 DISTNAME=	ncftp-3.0.2-src
 PKGNAME=	ncftp3-3.0.2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.ncftp.com/ncftp/
 
-MAINTAINER=	zuntum@eik.pl
+MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.ncftp.com/
 COMMENT=	FTP replacement with advanced user interface
 

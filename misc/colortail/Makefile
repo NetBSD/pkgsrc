@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:08:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/16 20:53:03 zuntum Exp $
 # FreeBSD Id: ports/misc/colortail/Makefile,v 1.10 2000/06/28 17:20:27 alex Exp
 
 DISTNAME=	colortail-0.3.0
 CATEGORIES=	misc
 MASTER_SITES=	http://www.student.hk-r.se/~pt98jan/
 
-MAINTAINER=	zuntum@eik.pl
+MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.student.hk-r.se/~pt98jan/colortail.html
 COMMENT=	colour-able replacement for tail(1)
 
