@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2004/08/11 13:51:14 markd Exp $
+# $NetBSD: Makefile,v 1.65 2004/08/21 12:16:45 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -64,6 +63,9 @@ PLIST_SUBST+=		KDED_WORKAROUND=""
 PLIST_SUBST+=		KDED_WORKAROUND=""
 .endif
 
+#.include "../../mk/krb5.buildlink3.mk"
+#CONFIGURE_ARGS+=	--with-gssapi=${KRB5BASE}
+
 # We will create the complete icon directory tree for use by other KDE3
 # packages at post-install time.
 #
@@ -111,6 +113,7 @@ GCC_REQD+=		2.95
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
