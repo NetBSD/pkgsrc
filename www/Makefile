@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1998/10/04 19:01:23 tv Exp $
+# $NetBSD: Makefile,v 1.19 1998/11/07 13:27:48 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -51,6 +51,7 @@
 #    SUBDIR += vrweb
 #    SUBDIR += w3
 #    SUBDIR += w3c-httpd
+     SUBDIR += webalizer
 #    SUBDIR += webcopy
     SUBDIR += weblint
 #    SUBDIR += webstone
