@@ -1,13 +1,31 @@
-$NetBSD: patch-am,v 1.3 2004/08/12 12:13:54 adam Exp $
+$NetBSD: patch-am,v 1.4 2004/10/11 16:56:28 abs Exp $
 
---- src/osdep/unix/env_unix.c.orig	2004-07-08 20:46:11.000000000 +0000
+--- src/osdep/unix/env_unix.c.orig	2004-08-22 19:54:29.000000000 +0100
 +++ src/osdep/unix/env_unix.c
-@@ -830,7 +830,7 @@ char *sysinbox ()
- {
-   char tmp[MAILTMPLEN];
-   if (!sysInbox) {		/* initialize if first time */
--    sprintf (tmp,"%s/%s",MAILSPOOL,myusername ());
-+    sprintf (tmp,"%s/%s",@SPOOLDIR@,@MAILBOX@);
-     sysInbox = cpystr (tmp);	/* system inbox is from mail spool */
-   }
-   return sysInbox;
+@@ -21,6 +21,9 @@
+ #include <grp.h>
+ #include <signal.h>
+ #include <sys/wait.h>
++#ifdef USE_WHOSON
++#include <whoson.h>
++#endif /* USE_WHOSON */
+ 
+ /* c-client environment parameters */
+ 
+@@ -567,7 +570,15 @@ long server_login (char *user,char *pwd,
+   else if (disablePlaintext) err = "disabled";
+   else if (!(authuser && *authuser)) pw = valpwd (user,pwd,argc,argv);
+   else if (valpwd (authuser,pwd,argc,argv)) pw = pwuser (user);
+-  if (pw && pw_login (pw,authuser,pw->pw_name,NIL,argc,argv)) return T;
++  if (pw && pw_login (pw,authuser,pw->pw_name,NIL,argc,argv)) {
++#ifdef USE_WHOSON
++    struct sockaddr_in sin;
++    int sinlen = sizeof (struct sockaddr_in);
++    if (getpeername(0,(struct sockaddr *) &sin,&sinlen) == 0)
++      wso_login(inet_ntoa(sin.sin_addr),user,NULL,0);
++#endif
++    return T;
++  }
+   syslog (level|LOG_AUTH,"Login %s user=%.64s auth=%.64s host=%.80s",err,
+ 	  user,(authuser && *authuser) ? authuser : user,tcp_clienthost ());
+   sleep (3);			/* slow down possible cracker */
