@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/03/11 13:22:23 markd Exp $
+
+--- configure.orig	Tue Feb  4 01:11:07 2003
++++ configure
+@@ -24320,7 +24320,7 @@ echo "${ECHO_T}$kde_cv_path" >&6
+ XSCREENSAVER_HACKS_DIR=
+ 
+ if test "$XSCREENSAVER" != "NO"; then
+-   hackdir=`echo $XSCREENSAVER | sed -e "s,/bin/xscreensaver,/lib/xscreensaver,"`
++   hackdir=`echo $XSCREENSAVER | sed -e "s,/bin/xscreensaver,/libexec/xscreensaver,"`
+    echo "$as_me:$LINENO: checking for $hackdir/flame" >&5
+ echo $ECHO_N "checking for $hackdir/flame... $ECHO_C" >&6
+    if test -x $hackdir/flame; then
