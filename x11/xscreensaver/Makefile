@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 1999/08/29 09:05:49 rh Exp $
+# $NetBSD: Makefile,v 1.31 1999/09/29 22:58:45 tron Exp $
 #
 
 DISTNAME=	xscreensaver-3.17
@@ -9,7 +9,7 @@ MAINTAINER=	frueauf@netbsd.org
 HOMEPAGE=	http://www.jwz.org/xscreensaver/
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
-DEPENDS+=	Mesa-3.0:../../graphics/Mesa
+DEPENDS+=	Mesa-*:../../graphics/Mesa
 DEPENDS+=	gtk+-1.2.4:../../x11/gtk
 
 GNU_CONFIGURE=	yes
