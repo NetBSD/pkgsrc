@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7838 2004/11/12 14:29:17 he Exp $
+$NetBSD: CHANGES,v 1.7839 2004/11/12 14:31:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5258,3 +5258,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Class-WhiteHole-0.03 [he 2004-11-12]
 	Added p5-Net-XWhois-0.90 [he 2004-11-12]
 	Added p5-Crypt-RandPasswd-0.02 [he 2004-11-12]
+	Updated suse_libjpeg to 7.3nb1 [wiz 2004-11-12]
