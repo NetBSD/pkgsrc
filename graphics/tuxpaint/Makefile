@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2004/10/07 14:52:57 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2004/11/03 11:17:53 grant Exp $
 #
 
 DISTNAME=	tuxpaint-0.9.14
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxpaint/} \
 		ftp://ftp.sonic.net/pub/users/nbs/unix/x/tuxpaint/source/
@@ -22,6 +23,12 @@ MAKE_ENV+=		CONFDIR="${PKG_SYSCONFDIR}" CP="${CP}" CHMOD="${CHMOD}"
 EGDIR=			${PREFIX}/share/examples/tuxpaint
 CONF_FILES=		${EGDIR}/tuxpaint.conf ${PKG_SYSCONFDIR}/tuxpaint.conf
 
+# this uses iconv and png functions directly, so link against them
+# explicitly.
+MAKE_ENV+=		LIBS="${LIBS}"
+LIBS+=			-liconv
+LIBS+=			-lpng
+
 post-install:
 	-${FIND} ${PREFIX}/share/doc/tuxpaint -name CVS -exec ${RM} -r {} \; 2>/dev/null
 	-${RMDIR} ${PREFIX}/share/doc/tuxpaint/cz
@@ -32,5 +39,6 @@ post-install:
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

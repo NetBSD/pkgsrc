@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2004/10/07 15:32:57 wiz Exp $
+$NetBSD: patch-aa,v 1.10 2004/11/03 11:17:53 grant Exp $
 
---- Makefile.orig	2004-10-04 00:32:26.000000000 +0200
+--- Makefile.orig	2004-10-04 08:32:26.000000000 +1000
 +++ Makefile
 @@ -11,7 +11,7 @@
  
@@ -64,7 +64,7 @@ $NetBSD: patch-aa,v 1.9 2004/10/07 15:32:57 wiz Exp $
  
  
  # Install example stamps
-@@ -698,7 +690,7 @@ install-man:
+@@ -698,10 +690,10 @@ install-man:
  tuxpaint:	obj/tuxpaint.o $(HQXX_O) $(ARCH_LIBS)
  	@echo
  	@echo "...Linking Tux Paint..."
@@ -72,4 +72,8 @@ $NetBSD: patch-aa,v 1.9 2004/10/07 15:32:57 wiz Exp $
 +	@$(CC) $(CFLAGS) $(LDFLAGS) $(SDL_CFLAGS) $(DEFS) \
  		-o tuxpaint obj/tuxpaint.o $(HQXX_O) \
  		$(ARCH_LIBS) $(SDL_LIBS) \
- 		-lm $(ARCH_LINKS)
+-		-lm $(ARCH_LINKS)
++		-lm $(ARCH_LINKS) $(LIBS)
+ 	@$(RSRC_CMD)
+ 	@$(MIMESET_CMD)
+ 
