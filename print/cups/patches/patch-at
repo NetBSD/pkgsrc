@@ -1,0 +1,22 @@
+$NetBSD: patch-at,v 1.4.6.1 2005/01/11 17:13:43 salo Exp $
+
+--- scheduler/Makefile.orig	2005-01-03 14:29:59.000000000 -0500
++++ scheduler/Makefile
+@@ -60,12 +60,16 @@ depend:
+ # Install the scheduler...
+ #
+ 
+-install:	all
++install:	installbin
++
++installbin:	all
+ 	$(INSTALL_DIR) $(SBINDIR)
+ 	$(INSTALL_BIN) cupsd $(SBINDIR)
+ 	$(INSTALL_DIR) $(SERVERBIN)/daemon
+ 	$(INSTALL_BIN) cups-lpd $(SERVERBIN)/daemon
+ 	$(INSTALL_BIN) cups-polld $(SERVERBIN)/daemon
++
++installdir:
+ 	$(INSTALL_DIR) -m 711 $(SERVERROOT)/certs
+ 	$(INSTALL_DIR) $(SERVERROOT)/interfaces
+ 	$(INSTALL_DIR) $(SERVERROOT)/ppd
