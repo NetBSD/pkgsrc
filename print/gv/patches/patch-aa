@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2000/12/08 16:23:16 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2003/03/31 02:43:11 jschauma Exp $
 
 --- config.Unix.orig	Fri Jun  6 18:00:00 1997
-+++ config.Unix
-@@ -32,10 +32,11 @@
++++ config.Unix	Sun Mar 30 21:25:38 2003
+@@ -32,16 +32,17 @@
  XCOMM --------------------------------------------------------------------
  XCOMM  Destination directories.
  XCOMM --------------------------------------------------------------------
@@ -18,6 +18,13 @@ $NetBSD: patch-aa,v 1.6 2000/12/08 16:23:16 jlam Exp $
  
  XCOMM --------------------------------------------------------------------
  XCOMM --- The name of the Xaw3d library.
+ XCOMM --------------------------------------------------------------------
+ XCOMM XAWLIB = -lXaw
+-      XAWLIB = -lXaw3d
++      XAWLIB = ${LIBXAW}
+ 
+ XCOMM --------------------------------------------------------------------
+ XCOMM  As far as the Xaw3d header files are concerned it is by
 @@ -110,7 +111,7 @@
  XCOMM --------------------------------------------------------------------
  XCOMM --- Use extra code for setenv() and getenv() ?
@@ -27,3 +34,11 @@ $NetBSD: patch-aa,v 1.6 2000/12/08 16:23:16 jlam Exp $
  #   define USE_SETENV_CODE
  #endif
  
+@@ -206,6 +207,7 @@
+ XCOMM  Destination directory for the gv class resource file.
+ XCOMM --------------------------------------------------------------------
+ XCOMM XAPPLOADDIR	= /home/etc/class-defaults
++      XAPPLOADDIR	= $(LIBDIR)/app-defaults
+ 
+ XCOMM ####################################################################
+ XCOMM ##### Don't touch any of the settings below ... 
