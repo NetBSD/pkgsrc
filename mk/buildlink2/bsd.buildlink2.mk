@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.115 2004/02/09 03:05:59 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.116 2004/02/15 13:34:33 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -468,17 +468,11 @@ BUILDLINK_FAKE_LA=							\
 #	may be invoked.
 #
 _BLNK_WRAPPEES+=	AS
-.if !empty(USE_LANGUAGES:Mc)
 _BLNK_WRAPPEES+=	CC
 _BLNK_WRAPPEES+=	CPP
-.endif
-.if !empty(USE_LANGUAGES:Mc++)
 _BLNK_WRAPPEES+=	CXX
-.endif
 _BLNK_WRAPPEES+=	LD
-.if !empty(USE_LANGUAGES:Mfortran) || defined(USE_FORTRAN)
 _BLNK_WRAPPEES+=	FC
-.endif
 _BLNK_WRAPPEES+=	LIBTOOL SHLIBTOOL
 .if defined(USE_LIBTOOL)
 _LIBTOOL=		${BUILDLINK_LIBTOOL}
