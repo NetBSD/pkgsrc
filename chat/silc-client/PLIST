@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.18 2004/01/14 17:09:26 salo Exp $
+@comment $NetBSD: PLIST,v 1.19 2004/02/05 20:14:05 skrll Exp $
 bin/silc
-lib/silc/libsilc-1.0.so
 lib/silc/libsilc-1.0.so.3
 lib/silc/libsilc-1.0.so.3.0
 lib/silc/libsilc.la
 lib/silc/libsilc.so
-lib/silc/libsilcclient-1.0.so
 lib/silc/libsilcclient-1.0.so.2
 lib/silc/libsilcclient-1.0.so.2.0
 lib/silc/libsilcclient.la

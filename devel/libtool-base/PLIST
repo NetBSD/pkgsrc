@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/01/25 15:53:38 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/02/05 20:14:06 skrll Exp $
 bin/libtool
 bin/libtoolize
 ${SHLIBTOOL}bin/shlibtool
@@ -6,8 +6,8 @@ include/ltdl.h
 lib/libltdl.a
 lib/libltdl.la
 lib/libltdl.so
-lib/libltdl.so.3
-lib/libltdl.so.3.0
+lib/libltdl.so.4
+lib/libltdl.so.4.0
 share/aclocal/libtool.m4
 share/aclocal/ltdl.m4
 share/libtool/config.guess
@@ -16,19 +16,18 @@ share/libtool/libltdl/COPYING.LIB
 share/libtool/libltdl/Makefile.am
 share/libtool/libltdl/Makefile.in
 share/libtool/libltdl/README
-share/libtool/libltdl/acconfig.h
 share/libtool/libltdl/acinclude.m4
 share/libtool/libltdl/aclocal.m4
-share/libtool/libltdl/config.h.in
+share/libtool/libltdl/config-h.in
+share/libtool/libltdl/config.guess
+share/libtool/libltdl/config.sub
 share/libtool/libltdl/configure
-share/libtool/libltdl/configure.in
+share/libtool/libltdl/configure.ac
+share/libtool/libltdl/install-sh
 share/libtool/libltdl/ltdl.c
 share/libtool/libltdl/ltdl.h
-share/libtool/libltdl/stamp-h.in
-share/libtool/ltcf-c.sh
-share/libtool/ltcf-cxx.sh
-share/libtool/ltcf-gcj.sh
-share/libtool/ltconfig
+share/libtool/libltdl/ltmain.sh
+share/libtool/libltdl/missing
 share/libtool/ltmain.sh
 @dirrm share/libtool/libltdl
 @dirrm share/libtool

@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/06 13:45:39 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/05 20:14:05 skrll Exp $
 include/dbh.h
 include/dbh_config.h
 include/dbh_functions.h
-lib/libdbh-1.0.so
 lib/libdbh-1.0.so.1
 lib/libdbh-1.0.so.1.0
 lib/libdbh.a

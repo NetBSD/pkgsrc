@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/07/04 12:49:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/05 20:14:06 skrll Exp $
 include/hamlib/rig.h
 include/hamlib/riglist.h
 include/hamlib/rig_dll.h
@@ -8,7 +8,6 @@ include/hamlib/rigclass.h
 include/hamlib/rotclass.h
 lib/libhamlib-1.1.4.so.1.0
 lib/libhamlib-1.1.4.so.1
-lib/libhamlib-1.1.4.so
 lib/libhamlib.la
 lib/libhamlib.so
 lib/libhamlib.a
@@ -60,7 +59,6 @@ lib/hamlib-rotorez.a
 lib/libhamlib++.la
 lib/libhamlib++.so
 lib/libhamlib++.a
-lib/libhamlib++-1.1.4.so
 lib/libhamlib++-1.1.4.so.1
 lib/libhamlib++-1.1.4.so.1.0
 bin/rigctl

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 15:40:00 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/05 20:14:06 skrll Exp $
 bin/aktion
 bin/artsbuilder
 bin/artscontrol
@@ -133,7 +133,6 @@ lib/libaktion.la
 lib/libaktion.so
 lib/libaktion.so.1
 lib/libaktion.so.1.0
-lib/libarts_mpeglib-0.3.0.so
 lib/libarts_mpeglib-0.3.0.so.0
 lib/libarts_mpeglib-0.3.0.so.0.3
 lib/libarts_mpeglib.a
@@ -201,7 +200,6 @@ lib/libkmixapplet.so.1.0
 lib/libliszt.a
 lib/libliszt.la
 lib/libliszt.so
-lib/libmpeg-0.3.0.so
 lib/libmpeg-0.3.0.so.0
 lib/libmpeg-0.3.0.so.0.3
 lib/libmpeg.a
