@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/07/13 17:35:04 wiz Exp $
+$NetBSD: distinfo,v 1.6 2003/10/26 12:28:50 mrauch Exp $
 
 SHA1 (grub-0.93.tar.gz) = 51cc79b0088f8e0e3260e33dc5b2ea5055bfc8f8
 Size (grub-0.93.tar.gz) = 891032 bytes
@@ -12,3 +12,5 @@ SHA1 (patch-ag) = ecbbcf164039cbc047b247036fa183bb8ae08a6f
 SHA1 (patch-ah) = cecaf3e1510a3fdba2d3412b59c434d5d247b11b
 SHA1 (patch-ai) = 61d81c9b4f1bbec6e9bd1f922f1a88cd7a02a8ba
 SHA1 (patch-aj) = bfbac23a7c250ed615dcfb4a988708c970b617d8
+SHA1 (patch-ak) = 24d59bdc00b35dee736196fcb937a4142c3392ca
+SHA1 (patch-al) = 1ec528662029be190c963e0425effb5bb54f1dcf
