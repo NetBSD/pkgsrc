@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.37 2004/03/11 01:42:11 hubertf Exp $
+# $NetBSD: post-build,v 1.38 2004/03/13 11:55:40 wiz Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -172,14 +172,12 @@ sub pkgResult {
 
 	@idents = `${FIND} ${USR_PKGSRC}/${pkg} -type f -print | xargs grep \\\$NetBSD`;
 	$datetime = "";
-	$who = "nobody";
 	$file = "";
 	$ver = "";
 	foreach $ident (@idents) {
 		$ident =~ /\$[N]etBSD: ([^ ]*),v ([^ ]*) ([^ ]*) ([^ ]*) ([^ ]*) Exp \$/;
 		if ("$3 $4" gt $datetime) {
 			$datetime = "$3 $4";
-			$who = $5;
 			$file = $1;
 			$ver = $1;
 		}
@@ -199,7 +197,7 @@ sub pkgResult {
 		if $nbrokenby > 0;
 
 	if ($pinfo->{nerrors} != 0 && $verbose) {
-		print swrite($report_form, $pkg, $nbrokenby > 0 ? $nbrokenby : "", $who, $maintainer);
+		print swrite($report_form, $pkg, $nbrokenby > 0 ? $nbrokenby : "", $maintainer);
 	}
 
 	return <<EOHTML;
