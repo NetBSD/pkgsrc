@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.3 1998/03/04 15:55:22 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/03/10 14:42:22 frueauf Exp $
 bin/buffer
-man/manl/buffer.1.gz
+man/man1/buffer.1.gz
