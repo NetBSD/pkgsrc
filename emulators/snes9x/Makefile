@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/07/12 19:27:05 cube Exp $
+# $NetBSD: Makefile,v 1.21 2004/12/05 13:56:11 wiz Exp $
 
 DISTNAME=		s9xs139
 PKGNAME=		snes9x-1.39
@@ -7,7 +7,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		http://www.snes9x.com/zips/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		jmcneill@invisible.yi.org
+MAINTAINER=		jmcneill@NetBSD.org
 HOMEPAGE=		http://www.snes9x.com/
 COMMENT=		Super Nintendo Entertainment System (SNES) emulator
 
