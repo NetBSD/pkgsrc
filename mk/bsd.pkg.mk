@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1096 2002/12/03 19:11:30 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1097 2002/12/03 19:17:33 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -321,7 +321,7 @@ MAKE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
 .endif
 
 .if defined(BUILD_USES_MSGFMT) && \
-    (!exists(/usr/bin/msgfmt) || ${OPSYS} == SunOS)
+    (!exists(/usr/bin/msgfmt) || ${_USE_GNU_GETTEXT} == "yes")
 BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 .endif
 
