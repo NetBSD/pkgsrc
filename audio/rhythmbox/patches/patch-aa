@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/24 17:44:36 jmmv Exp $
+
+--- configure.orig	2004-01-22 09:03:31.000000000 +0100
++++ configure
+@@ -20225,7 +20225,7 @@ if test "${enable_dashboard+set}" = set;
+ else
+   enable_dashboard=no
+ fi;
+-if test "x$enable_dashboard" == "xyes" ; then
++if test "x$enable_dashboard" = "xyes" ; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define WITH_DASHBOARD 1
