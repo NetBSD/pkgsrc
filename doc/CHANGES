@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3485 2003/09/22 21:59:45 recht Exp $
+$NetBSD: CHANGES,v 1.3486 2003/09/22 22:08:10 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3884,3 +3884,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fontconfig to 2.2.1nb1 [recht 2003-09-22]
 	Updated Xft2 to 2.1.2nb1 [recht 2003-09-22]
 	Updated Xrender to 0.8.3nb1 [recht 2003-09-22]
+	Updated libspectrum to 0.2.0nb1 [dillo 2003-09-22]
