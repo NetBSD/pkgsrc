@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/06/23 19:36:03 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/06/26 17:45:55 jlam Exp $
 #
 
 .include "../qt2-libs/Makefile.common"
@@ -10,9 +10,6 @@ USE_BUILDLINK_ONLY=		yes
 BUILDLINK_DEPENDS.qt2-libs=	qt2-libs-${QTVERSION}
 
 ALL_TARGET=		sub-tools
-
-CONFIGURE_ENV+=		QTDIR="${BUILDLINK_DIR}/qt2"
-MAKE_ENV+=		QTDIR="${BUILDLINK_DIR}/qt2"
 
 do-install:
 	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/tools/designer/util/libqutil.la ${QTPREFIX}/lib
