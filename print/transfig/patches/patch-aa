@@ -1,17 +1,42 @@
-$NetBSD: patch-aa,v 1.5 2000/06/22 08:11:35 itohy Exp $
+$NetBSD: patch-aa,v 1.6 2001/08/06 15:41:14 wiz Exp $
 
---- fig2dev/Imakefile.orig	Fri Jan 14 12:59:04 2000
-+++ fig2dev/Imakefile	Thu Jun 22 00:01:06 2000
-@@ -27,7 +27,7 @@
+--- fig2dev/Imakefile.orig	Thu Apr 19 19:19:38 2001
++++ fig2dev/Imakefile
+@@ -28,13 +28,13 @@
  XCOMM You should point XFIGLIBDIR to the same directory you did when you compiled
  XCOMM and installed xfig.  This will be made automatic in the future.
  
 -XFIGLIBDIR =	/usr/local/lib/X11/xfig
 +XFIGLIBDIR =	$(PROJECTROOT)/lib/X11/xfig
  
+ XCOMM ******
  XCOMM If your system has the strerror() function (doesn't have sys_errlist) then
  XCOMM comment out NEED_STRERROR with an XCOMM comment.
-@@ -54,11 +54,11 @@
+ 
+-NEED_STRERROR = -DNEED_STRERROR
++XCOMM NEED_STRERROR = -DNEED_STRERROR
+ 
+ XCOMM The following probably only applies to Windows 9x/NT:
+ XCOMM If your system can open files in text and binary modes and has the
+@@ -47,7 +47,7 @@
+ XCOMM inline functions. With the "INLINE" keyword, you should notice that
+ XCOMM the display will be a bit faster in complex figures
+ 
+-XCOMM USEINLINE = -DUSE_INLINE
++USEINLINE = -DUSE_INLINE
+ 
+ XCOMM ****************
+ XCOMM Change RGB if necessary, to point to your rgb.txt color database
+@@ -66,7 +66,7 @@
+ 
+ #ifdef USEPNG
+ PNGLIBDIR = $(USRLIBDIR)
+-PNGINC = -I/usr/include/X11
++PNGINC = -I$(BUILDLINK_DIR)/include
+ #endif
+ 
+ XCOMM ****************
+@@ -78,11 +78,11 @@
  XCOMM Change XPMINC if necessary to point to the include file for xpm (xpm.h)
  XCOMM
  
@@ -21,54 +46,60 @@ $NetBSD: patch-aa,v 1.5 2000/06/22 08:11:35 itohy Exp $
  #ifdef USEXPM
  XPMLIBDIR = $(USRLIBDIR)
 -XPMINC = -I/usr/include/X11
-+XPMINC = -I$(INCDIR)/X11
++XPMINC = -I$(BUILDLINK_DIR)/include/X11
  #endif
  
- XCOMM For Linux machines or any machines that have a separate library for
-@@ -87,8 +87,8 @@
+ XCOMM ****************
+@@ -104,8 +104,8 @@
  
  #ifdef USEJPEG
  #ifdef USEINSTALLEDJPEG
 -JPEGLIBDIR = /usr/local/lib
 -JPEGINCDIR = /usr/include/X11
-+JPEGLIBDIR = $(LOCALBASE)/lib
-+JPEGINCDIR = $(LOCALBASE)/include
++JPEGLIBDIR = $(BUILDLINK_DIR)/lib
++JPEGINCDIR = $(BUILDLINK_DIR)/include
  #else
  JPEGLIBDIR = ../jpeg
  JPEGINCDIR = $(JPEGLIBDIR)
-@@ -127,12 +127,12 @@
- 
- XCOMM Uncomment the next line if you want use Japanese (i18n) on xfig.
- 
--XCOMM #define I18N
-+#define I18N
+@@ -158,7 +158,7 @@
  
  #ifdef I18N
  I18N_DEFS = -DI18N 
 -FIG2DEV_LIBDIR = /usr/local/lib/fig2dev
--I18N_DEV_DEFS = $(I18N_DEFS) -DFIG2DEV_LIBDIR='\"/usr/local/lib/fig2dev\"'
 +FIG2DEV_LIBDIR = $(PROJECTROOT)/lib/fig2dev
-+I18N_DEV_DEFS = $(I18N_DEFS) -DFIG2DEV_LIBDIR='\"$(FIG2DEV_LIBDIR)\"'
+ I18N_DEV_DEFS = $(I18N_DEFS) -DFIG2DEV_LIBDIR=\\\"$(FIG2DEV_LIBDIR)\\\"
  
  install::
- 	[ -d $(FIG2DEV_LIBDIR) ] || mkdir $(FIG2DEV_LIBDIR)
-@@ -177,8 +177,8 @@
- DUSEJPEG = -DUSE_JPEG
+@@ -189,12 +189,12 @@
+ 
+ #ifdef USEPNG
+ DUSEPNG = -DUSE_PNG
+-PNGLIBS = -L$(PNGLIBDIR) -lpng -lz
++PNGLIBS = -Wl,-R$(PNGLIBDIR) -L$(PNGLIBDIR) -lpng -lz
+ #endif /* USEPNG */
+ 
+ #ifdef USEXPM
+ DUSEXPM = -DUSE_XPM
+-XPMLIBS = -L$(XPMLIBDIR) -lXpm -lX11
++XPMLIBS = -Wl,-R$(XPMLIBDIR) -L$(XPMLIBDIR) -lXpm -lX11
+ #endif
+ 
+ #if defined(NOSTRSTR) 
+@@ -207,7 +207,7 @@
+ JPEGINC = -I$(JPEGINCDIR)
  
  #ifdef USEINSTALLEDJPEG
--JPEGLIBDIR = /usr/local/lib
 -JPEGLIB = -L$(JPEGLIBDIR) -ljpeg
-+JPEGLIBDIR = $(LOCALBASE)/lib
 +JPEGLIB = -Wl,-R$(JPEGLIBDIR) -L$(JPEGLIBDIR) -ljpeg
  #else
- XCOMM this is relative to this directory (transfig/fig2dev)
- JPEGLIBDIR = ../../jpeg-6a
-@@ -189,7 +189,7 @@
+ JPEGCONF = configure
+ JPEGLIB = $(JPEGLIBDIR)/libjpeg.a
+@@ -218,7 +218,7 @@
  
- #endif /* USEJPEG */
+ IMAKE_DEFINES = $(DUSEPNG) $(DUSEJPEG) $(DUSEXPM)
  
--IMAKE_DEFINES = $(DUSEJPEG) $(DUSEXPM)
-+IMAKE_DEFINES = $(DUSEJPEG) $(DJPEGINC) $(DUSEXPM)
- 
- DEVDEFINES = $(DUSEJPEG) $(DUSEXPM) $(XPMINC) $(DDNFSS) $(DDA4) \
+-DEVDEFINES = $(DUSEPNG) $(DUSEJPEG) $(DUSEXPM) $(XPMINC) $(JPEGINC) $(DDNFSS) $(DDA4) \
++DEVDEFINES = $(DUSEPNG) $(DUSEJPEG) $(DUSEXPM) $(PNGINC) $(XPMINC) $(JPEGINC) $(DDNFSS) $(DDA4) \
  		$(DDLATEX2E_GRAPHICS) $(DDEPSFIG) $(DDIBMGEC) $(DDDVIPS) $(I18N_DEV_DEFS)
+ 
+ #define IHaveSubdirs

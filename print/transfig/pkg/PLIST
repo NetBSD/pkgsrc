@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2000/06/22 08:11:36 itohy Exp $
-bin/transfig
+@comment $NetBSD: PLIST,v 1.4 2001/08/06 15:41:15 wiz Exp $
 bin/fig2dev
 bin/fig2ps2tex
 bin/fig2ps2tex.sh
 bin/pic2tpic
+bin/transfig
 lib/X11/xfig/bitmaps/bricks.bmp
 lib/X11/xfig/bitmaps/circles.bmp
 lib/X11/xfig/bitmaps/crosshatch.bmp
@@ -53,6 +53,7 @@ lib/X11/xfig/bitmaps/vert_leftshingle.bmp
 lib/X11/xfig/bitmaps/vert_rightshingle.bmp
 lib/X11/xfig/bitmaps/vert_saw.bmp
 lib/X11/xfig/bitmaps/vertical.bmp
+lib/fig2dev/cs_CZ.ps
 lib/fig2dev/ja.ps
 lib/fig2dev/ja_JP.EUC.ps
 lib/fig2dev/ja_JP.eucJP.ps
@@ -63,12 +64,11 @@ lib/fig2dev/ko.ps
 lib/fig2dev/ko_KR.EUC.ps
 lib/fig2dev/ko_KR.eucKR.ps
 lib/fig2dev/ko_KR.ps
-lib/fig2dev/ko_KR.ujis.ps
 lib/fig2dev/korean.ps
 man/cat1/fig2dev.0
 man/cat1/fig2ps2tex.0
 man/cat1/pic2tpic.0
 man/cat1/transfig.0
-@dirrm lib/X11/xfig/bitmaps
 @dirrm lib/fig2dev
+@dirrm lib/X11/xfig/bitmaps
 @dirrm lib/X11/xfig
