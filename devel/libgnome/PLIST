@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/03 23:26:22 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/05 10:39:10 jmmv Exp $
 etc/gconf/gconf.xml.defaults/desktop/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/accessibility/%gconf.xml
@@ -142,8 +142,8 @@ share/sgml/docbook/gnome-customization-0.1/l10n.xml
 @dirrm share/sgml/docbook/gnome-customization-0.1
 @exec ${MKDIR} %D/share/gtk-doc/html/libgnome
 @dirrm share/gtk-doc/html/libgnome
-@unexec ${RMDIR} %D/lib/bonobo/servers 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/bonobo/monikers 2>/dev/null || ${TRUE}
+@comment in bonobo-activation: @dirrm lib/bonobo/servers
+@comment in bonobo-activation: @dirrm lib/bonobo/monikers
 @dirrm include/libgnome-2.0/libgnome
 @dirrm include/libgnome-2.0
 @unexec ${RMDIR} %D/etc/sound/events 2>/dev/null || ${TRUE}
