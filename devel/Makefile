@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.278 2002/03/25 05:56:54 cjs Exp $
+# $NetBSD: Makefile,v 1.279 2002/04/08 17:08:15 kent Exp $
 #
 
 COMMENT=	Development utilities
@@ -28,6 +28,7 @@ SUBDIR+=	bonobo-conf
 SUBDIR+=	boost
 SUBDIR+=	c-cpp-reference
 SUBDIR+=	cbrowser
+SUBDIR+=	ccache
 SUBDIR+=	cdecl
 SUBDIR+=	cdk
 SUBDIR+=	cervisia
