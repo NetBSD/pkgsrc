@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/09/21 17:38:53 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/09/22 15:52:18 adam Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -118,7 +118,7 @@ MESSAGE_SUBST+=		X11ROOT=${X11ROOT}
 ONLY_FOR_PLATFORM=	FreeBSD-*-* Linux-*-* NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
 MASTER_SITE_XORG+=					\
-	http://freedesktop.org/~xorg/X11R${XORG_VER}/src/multiple/	\
+	http://freedesktop.org/~xorg/X11R${XORG_VER}/src/	\
 	ftp://ftp.x.org/pub/				\
 	ftp://ftp.gwdg.de/pub/x11/x.org/pub/		\
 	ftp://ftp.cica.es/pub/X/pub/			\
