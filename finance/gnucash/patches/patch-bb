@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.1 2002/08/23 11:52:53 mjl Exp $
+$NetBSD: patch-bb,v 1.2 2003/01/15 22:24:14 wiz Exp $
 
---- configure.orig	Mon Aug 19 01:12:59 2002
-+++ configure	Mon Aug 19 01:14:05 2002
-@@ -10216,8 +10216,8 @@
+--- configure.orig	Thu Aug 22 05:07:06 2002
++++ configure
+@@ -10216,8 +10216,8 @@ echo "$ac_t""$gt_cv_func_gnugettext1_lib
                  INTLOBJS="\$(GETTOBJS)"
          BUILD_INCLUDED_LIBINTL=yes
          USE_INCLUDED_LIBINTL=yes
@@ -13,3 +13,23 @@ $NetBSD: patch-bb,v 1.1 2002/08/23 11:52:53 mjl Exp $
          LIBS=`echo " $LIBS " | sed -e 's/ -lintl / /' -e 's/^ //' -e 's/ $//'`
        fi
  
+@@ -11286,8 +11286,8 @@ LIBS="$oLIBS"
+ 
+ 
+ ### --------------------------------------------------------------------------
+-GTKHTML_LIBS=`$GNOME_CONFIG --libs gtkhtml`
+-GTKHTML_CFLAGS=`$GNOME_CONFIG --cflags gtkhtml`
++GTKHTML_LIBS=`pkg-config --libs gtkhtml-1.1`
++GTKHTML_CFLAGS=`pkg-config --cflags gtkhtml-1.1`
+ 
+ echo $ac_n "checking for main in -lgal""... $ac_c" 1>&6
+ echo "configure:11294: checking for main in -lgal" >&5
+@@ -11336,7 +11336,7 @@ if eval "test \"`echo '$''{'ac_cv_lib_$a
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lgtkhtml $GTKHTML_LIBS $LIBS"
++LIBS="$GTKHTML_LIBS $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 11342 "configure"
+ #include "confdefs.h"
