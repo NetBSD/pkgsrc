@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2002/08/19 15:00:48 mycroft Exp $
+# $NetBSD: Makefile,v 1.19 2002/08/19 15:02:50 mycroft Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/source/
