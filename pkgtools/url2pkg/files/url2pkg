@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: url2pkg,v 1.27 2004/11/05 17:38:51 tv Exp $
+# $NetBSD: url2pkg,v 1.28 2005/03/21 22:33:05 wiz Exp $
 #
 # url2pkg
 # (c) 1999-2002 Hubert Feyrer <hubert@feyrer.de>
@@ -138,7 +138,6 @@ libtool=\${WRKSRC}/libtool
 echo checking libtool: $ltconfig
 if [ -f $ltconfig -o -f $ltmain ]; then
 	USE_LIBTOOL=yes
-	LIBTOOL_OVERRIDE=${libtool}
 fi
 
 PKGCONFIGS=`cd $wsrcdir && find * -name \*.pc.in -a ! -name \*-uninstalled.pc.in -type f`
@@ -159,9 +158,6 @@ echo "Fixing up Makefile."
 
 	if [ "${USE_LIBTOOL}" != "" ]; then
 		echo "USE_LIBTOOL=		$USE_LIBTOOL"
-	fi
-	if [ "${LIBTOOL_OVERRIDE}" != "" ]; then
-		echo "LIBTOOL_OVERRIDE=	$LIBTOOL_OVERRIDE"
 	fi
 
 	for i in $PKGCONFIGS ; do
