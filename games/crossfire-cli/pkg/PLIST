@@ -1,0 +1,39 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/13 08:19:20 garbled Exp $
+bin/gcfclient
+bin/cfclient
+bin/cfsndserv
+man/man1/cfclient.1
+man/man1/gcfclient.1
+share/cfclient/sounds/su-fanf.au
+share/cfclient/sounds/Teeswing.au
+share/cfclient/sounds/chord.au
+share/cfclient/sounds/Missed.au
+share/cfclient/sounds/Creaky-1.au
+share/cfclient/sounds/blip.au
+share/cfclient/sounds/click1.au
+share/cfclient/sounds/click2.au
+share/cfclient/sounds/FloorTom.au
+share/cfclient/sounds/ouch1.au
+share/cfclient/sounds/thru.au
+share/cfclient/sounds/drip.au
+share/cfclient/sounds/squish.au
+share/cfclient/sounds/gong.au
+share/cfclient/sounds/Whoosh.au
+share/cfclient/sounds/Explosion.au
+share/cfclient/sounds/TowerClock.au
+share/cfclient/sounds/boink2.au
+share/cfclient/sounds/MetalCrash.au
+share/cfclient/sounds/Puke.au
+share/cfclient/sounds/swish.au
+share/cfclient/sounds/magic.au
+share/cfclient/sounds/lightning1.au
+share/cfclient/sounds/first_try.au
+share/cfclient/sounds/Tear.au
+share/cfclient/sounds/Missle1.au
+share/cfclient/sounds/sci_fi_gun.au
+share/cfclient/sounds/Gun-5.au
+share/cfclient/sounds/Evil_Laugh.au
+share/cfclient/sounds/bugle_charge.au
+share/cfclient/sounds/README
+@dirrm share/cfclient/sounds
+@dirrm share/cfclient

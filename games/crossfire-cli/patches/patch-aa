@@ -1,0 +1,20 @@
+--- configure.orig	Tue Nov 28 22:52:21 2000
++++ configure	Wed Dec  6 08:57:37 2000
+@@ -3283,7 +3283,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lpng  $LIBS"
++LIBS="-lpng -lz $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 3289 "configure"
+ #include "confdefs.h"
+@@ -3313,7 +3313,7 @@
+ #define $ac_tr_lib 1
+ EOF
+ 
+-  LIBS="-lpng $LIBS"
++  LIBS="-lpng -lz $LIBS"
+ 
+ else
+   echo "$ac_t""no" 1>&6
