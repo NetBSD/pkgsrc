@@ -1,0 +1,57 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/25 17:57:28 wennmach Exp $
+
+--- lib/roken/Makefile.in.orig	Tue Nov 30 20:22:59 1999
++++ lib/roken/Makefile.in	Thu May 25 16:25:38 2000
+@@ -3,6 +3,7 @@
+ #
+ 
+ SHELL = /bin/sh
++CP = /bin/cp
+ 
+ srcdir = @srcdir@
+ VPATH = @srcdir@
+@@ -24,6 +25,13 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ libdir = @libdir@
++
++includedir = @includedir@
++
++incdir = $(includedir)
++inc_DATA = roken.h roken-common.h
++idir = $(top_builddir)/include 
++
+ EXECSUFFIX = @EXECSUFFIX@
+ PICFLAGS = # @PICFLAGS@
+  
+@@ -162,8 +170,19 @@
+ 	$(CC) -c $(DEFS) -I. -I../../include -I$(srcdir) $(CFLAGS) $(CPPFLAGS) $(PICFLAGS) $<
+ 
+ install: all
++	$(MKINSTALLDIRS) $(DESTDIR)$(libdir)
++	$(INSTALL_DATA) -m 0555 $(LIB) $(DESTDIR)$(libdir)/$(LIB)
++	@install_symlink_command@
++	$(MKINSTALLDIRS) $(DESTDIR)$(includedir)
++	@for i in $(inc_DATA); do \
++	echo "  $(INSTALL_DATA) $$i $(DESTDIR)$(incdir)/$$i";\
++	$(INSTALL_DATA) $$i $(DESTDIR)$(incdir)/$$i; done
+ 
+ uninstall:
++	rm -f $(DESTDIR)$(libdir)/$(LIB)
++	@for i in $(inc_DATA); do \
++	echo "  rm -f $(DESTDIR)$(incdir)/$$i";\
++	rm -f $(DESTDIR)$(incdir)/$$i; done
+ 
+ TAGS: $(SOURCES) $(EXTRA_SOURCES)
+ 	etags $(SOURCES) $(EXTRA_SOURCES)
+@@ -213,8 +232,8 @@
+ install-roken-h: roken.h
+ 	@if [ -f ../../include/roken.h ] && cmp -s ../../include/roken.h roken.h ; \
+ 	then :; else \
+-	echo "  $(INSTALL) roken.h ../../include/roken.h"; \
+-	$(INSTALL) roken.h ../../include/roken.h; fi
++	echo "  $(CP) roken.h ../../include/roken.h"; \
++	$(CP) roken.h ../../include/roken.h; fi
+ 
+ $(OBJECTS): ../../include/config.h roken.h
+ 

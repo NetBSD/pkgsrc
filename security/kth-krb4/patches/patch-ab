@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/05/25 17:57:28 wennmach Exp $
+
+--- lib/krb/Makefile.in.orig	Thu Nov 25 06:26:26 1999
++++ lib/krb/Makefile.in	Thu May 25 18:32:21 2000
+@@ -7,6 +7,7 @@
+ VPATH = @srcdir@
+ 
+ CC = @CC@
++CP = /bin/cp
+ LINK = @LINK@
+ AR = ar
+ RANLIB = @RANLIB@
+@@ -359,8 +360,8 @@
+ all-local: $(inc_DATA)
+ 	@for i in $(inc_DATA); do \
+ 		if cmp -s  $$i $(idir)/$$i 2> /dev/null ; then :; else\
+-			echo " $(INSTALL_DATA) $$i $(idir)/$$i"; \
+-			$(INSTALL_DATA) $$i $(idir)/$$i; \
++			echo " $(CP) $$i $(idir)/$$i"; \
++			$(CP) $$i $(idir)/$$i; \
+ 		fi ; \
+ 	done
+ 

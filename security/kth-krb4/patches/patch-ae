@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/05/25 17:57:28 wennmach Exp $
+
+--- appl/push/Makefile.in.orig	Thu May 25 14:36:00 2000
++++ appl/push/Makefile.in	Thu May 25 14:37:58 2000
+@@ -15,6 +15,7 @@
+ LD_FLAGS = @LD_FLAGS@
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_SCRIPT = ${INSTALL_PROGRAM:C/-s//}
+ LIBS = @LIB_hesiod@ @LIBS@
+ LIB_DBM = @LIB_DBM@
+ MKINSTALLDIRS = @top_srcdir@/mkinstalldirs
+@@ -49,7 +50,7 @@
+ install: all
+ 	$(MKINSTALLDIRS) $(DESTDIR)$(bindir)
+ 	for x in $(bin_PROGRAMS); do \
+-	  $(INSTALL_PROGRAM) $$x $(DESTDIR)$(bindir)/`echo $$x | sed '$(transform)'`; \
++	  $(INSTALL_SCRIPT) $$x $(DESTDIR)$(bindir)/`echo $$x | sed '$(transform)'`; \
+ 	done
+ 	$(MKINSTALLDIRS) $(DESTDIR)$(libexecdir)
+ 	for x in $(libexec_PROGRAMS); do \
