@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/03 15:14:54 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/02/21 14:20:17 wiz Exp $
 #
 
 DISTNAME=	libtecla-1.5.0
@@ -14,5 +14,7 @@ USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
 BUILD_TARGET=	default
+
+BUILDLINK_TRANSFORM+=	rm:-D_POSIX_C_SOURCE=199506L
 
 .include "../../mk/bsd.pkg.mk"
