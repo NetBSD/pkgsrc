@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/06/21 08:22:08 itohy Exp $
+# $NetBSD: Makefile,v 1.14 2000/07/15 00:36:28 itojun Exp $
 
 DISTNAME=	w3m-0.1.10
 CATEGORIES=	www
@@ -26,16 +26,21 @@ EXTRACT_ELEMENTS=	--exclude ${DISTNAME}/gc/\*
 
 # Set this to NO for ISO-8859-1 support (exclusive to Japanese).
 W3M_USE_JAPANESE?=	YES
+# Set this to YES if you want to use Japanese symbol/messages.
+W3M_USE_JAPANESE_SYMBOL?=NO
 # Set this to YES to use lynx like key binding.
 W3M_USE_LYNX_KEY?=	NO
 
 .if defined(W3M_USE_JAPANESE) && ${W3M_USE_JAPANESE} == YES
 CONFIGURE_ENV+=	def_lg=1
 CONFIGURE_ENV+=	def_dcode=n
+.else
+CONFIGURE_ENV+=	def_lg=2
+.endif
+.if defined(W3M_USE_JAPANESE_SYMBOL) && ${W3M_USE_JAPANESE_SYMBOL} == YES
 CONFIGURE_ENV+=	kanji_symbols=y
 HELP_LANG=	_ja
 .else
-CONFIGURE_ENV+=	def_lg=2
 CONFIGURE_ENV+=	kanji_symbols=n
 HELP_LANG=	_en
 .endif
