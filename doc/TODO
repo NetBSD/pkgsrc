@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2924 2005/01/18 13:39:20 wiz Exp $
+$NetBSD: TODO,v 1.2925 2005/01/18 16:36:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -284,7 +284,6 @@ Suggested package updates
 	o allegro-4.1.17
 	o amavis-0.3.12
 	o amavisd-new-2.2.1
-	o amaya-8.7
 	o amule-2.0.0rc8 [pkg/28762]
 	o ap-Embperl-1.3.3
 	o ap-auth-mysql-4.3.8
