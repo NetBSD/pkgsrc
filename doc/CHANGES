@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.415 2002/10/30 09:29:35 martti Exp $
+$NetBSD: CHANGES,v 1.416 2002/10/30 09:54:40 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3453,3 +3453,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated squirrelmail to 1.2.9 [martti 2002-10-30]
 	Added glade2-1.1.2 [rh 2002-10-30]
 	Updated ipa to 1.2.9 [martti 2002-10-30]
+	Added libzvt-2.0.1 [rh 2002-10-30]
