@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2002/01/28 17:57:08 zuntum Exp $
+# $NetBSD: Makefile,v 1.8 2002/01/28 18:28:09 zuntum Exp $
 #
 
 DISTNAME=	qmail-1.03
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=   http://cr.yp.to/software/			\
 		ftp://ftp.ntnu.no/pub/unix/mail/qmail/		\
@@ -15,7 +15,12 @@ MASTER_SITES=   http://cr.yp.to/software/			\
 # Since AOL has been using those, the problem has skyrocketed from minor to
 # groundzero. qmail being RFC compliant need to be "fixed" to work with those
 PATCH_SITES=	http://www.ckdhr.com/ckd/
-PATCHFILES=	qmail-103.patch
+PATCHFILES+=	qmail-103.patch
+
+# Apply QMAILQUEUE patch
+PATCH_SITES=	http://qmail.obeer.com/
+PATCHFILES+=	qmailqueue-patch
+
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	zuntum@netbsd.org
