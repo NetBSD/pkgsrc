@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2000/05/11 11:25:18 agc Exp $
+# $NetBSD: Makefile,v 1.34 2000/05/12 09:19:14 agc Exp $
 # FreeBSD Id: Makefile,v 1.35 1997/08/19 07:10:01 fenner Exp
 #
 
@@ -17,7 +17,6 @@ SUBDIR += biology
 SUBDIR += cad
 SUBDIR += comms
 SUBDIR += converters
-SUBDIR += corba
 SUBDIR += cross
 SUBDIR += databases
 SUBDIR += devel
