@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/25 15:45:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/27 02:46:09 xtraeme Exp $
 #
 
 DISTNAME=	conglomerate-0.7.4
@@ -29,4 +29,7 @@ LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
+
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
