@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2001/02/08 16:23:07 tron Exp $
+@comment $NetBSD: PLIST,v 1.12 2001/07/10 16:02:13 tron Exp $
 bin/inews
 @exec mkdir -p %D/etc/nntp
 @unexec rm -rf %D/etc/nntp
@@ -54,6 +54,7 @@ inn/bin/filter/nnrpd_auth.py
 inn/bin/filter/startup.tcl
 inn/bin/filter/startup_innd.pl
 inn/bin/getlist
+inn/bin/gpgverify
 inn/bin/grephistory
 inn/bin/inews
 inn/bin/inncheck
@@ -115,11 +116,13 @@ inn/lib/innshellvars.tcl
 inn/lib/libinn.a
 inn/lib/libstorage.a
 man/man1/convdate.1
+man/man1/fastrm.1
 man/man1/getlist.1
 man/man1/grephistory.1
 man/man1/inews.1
 man/man1/innconfval.1
 man/man1/innfeed.1
+man/man1/innmail.1
 man/man1/nntpget.1
 man/man1/rnews.1
 man/man1/shlock.1
@@ -153,6 +156,7 @@ man/man5/nntpsend.ctl.5
 man/man5/overview.fmt.5
 man/man5/passwd.nntp.5
 man/man5/storage.conf.5
+man/man5/subscriptions.5
 man/man8/actsync.8
 man/man8/actsyncd.8
 man/man8/archive.8
@@ -165,7 +169,6 @@ man/man8/cvtbatch.8
 man/man8/expire.8
 man/man8/expireover.8
 man/man8/expirerm.8
-man/man8/fastrm.8
 man/man8/filechan.8
 man/man8/inncheck.8
 man/man8/innd.8
@@ -246,6 +249,7 @@ share/examples/inn/senduuname.pl
 share/examples/inn/startup.tcl
 share/examples/inn/startup_innd.pl
 share/examples/inn/storage.conf
+share/examples/inn/subscriptions
 share/examples/inn/version
 share/examples/inn/version.pl
 @dirrm share/examples/inn
