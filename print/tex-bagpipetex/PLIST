@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/23 18:13:46 fredb Exp $
+share/texmf/doc/bagpipetex/README
+share/texmf/doc/bagpipetex/bagdoc.dvi
+share/texmf/doc/bagpipetex/bagdoc.pdf
+share/texmf/doc/bagpipetex/bagdoc.ps
+share/texmf/doc/bagpipetex/bagdoc.tex
+share/texmf/doc/bagpipetex/examples/BlackDonald.tex
+share/texmf/doc/bagpipetex/examples/Bonnets.tex
+share/texmf/doc/bagpipetex/examples/Green.tex
+share/texmf/doc/bagpipetex/examples/GreenTwo.tex
+share/texmf/doc/bagpipetex/examples/Washer.tex
+share/texmf/doc/bagpipetex/quickref.dvi
+share/texmf/doc/bagpipetex/quickref.pdf
+share/texmf/doc/bagpipetex/quickref.ps
+share/texmf/doc/bagpipetex/quickref.tex
+share/texmf/fonts/source/bagpipetex/beamn09.mf
+share/texmf/fonts/source/bagpipetex/musicd09.mf
+share/texmf/fonts/source/bagpipetex/musikd09.mf
+share/texmf/fonts/source/bagpipetex/musikn09.mf
+share/texmf/fonts/source/bagpipetex/musix09.mf
+share/texmf/fonts/tfm/bagpipetex/beamn09.tfm
+share/texmf/fonts/tfm/bagpipetex/musikn09.tfm
+share/texmf/fonts/tfm/bagpipetex/musix09.tfm
+share/texmf/tex/latex/bagpipetex/bagpipe.ini
+share/texmf/tex/latex/bagpipetex/bagpipex.ini
+share/texmf/tex/latex/bagpipetex/bagpipe.tex
+@exec %D/bin/texconfig rehash
+@unexec %D/bin/texconfig rehash
+@unexec %D/bin/mktexlsr
+@dirrm share/texmf/fonts/tfm/bagpipetex
+@dirrm share/texmf/fonts/source/bagpipetex
+@dirrm share/texmf/doc/bagpipetex/examples
+@dirrm share/texmf/doc/bagpipetex
