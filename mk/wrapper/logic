@@ -1,4 +1,4 @@
-# $NetBSD: logic,v 1.5 2004/09/26 19:11:50 danw Exp $
+# $NetBSD: logic,v 1.6 2004/10/08 21:53:53 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -91,6 +91,20 @@ while ! queue_is_empty argbuf; do
 			$debug_log $wrapperlog "    (logic) pre:  -l$lib"
 			prepend_queue argbuf "-L$dir"
 			$debug_log $wrapperlog "    (logic) pre:  -L$dir"
+			;;
+		######################################################
+		# Remove extraneous comma in "-Wl,-R,/dir" and in
+		# "-Wl,-L,/dir".
+		######################################################
+		-Wl,-L,*)
+			arg="-Wl,-L${arg#-Wl,-L,}"
+			$debug_log $wrapperlog "    (logic) pre:  $arg"
+			prepend_queue argbuf "$arg"
+			;;
+		-Wl,-R,*)
+			arg="-Wl,-R${arg#-Wl,-R,}"
+			$debug_log $wrapperlog "    (logic) pre:  $arg"
+			prepend_queue argbuf "$arg"
 			;;
 		######################################################
 		# Merge "-Wl,-R -Wl,/dir" into a single "-Wl,-R/dir".
