@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2004/06/01 17:02:05 recht Exp $
+# $NetBSD: Makefile,v 1.41 2004/06/28 14:50:23 jmmv Exp $
 #
 
-DISTNAME=		gnome-panel-2.6.1
-PKGREVISION=		1
+DISTNAME=		gnome-panel-2.6.2
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -22,7 +21,7 @@ USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libpanel-applet/libpanelapplet-2.0.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 BUILDLINK_DEPENDS.GConf2+=	GConf2>=2.6.1
 
