@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/12/10 06:40:11 markd Exp $
 bin/kbiff
 lib/kbiff.la
 man/man1/kbiff.1
@@ -32,35 +32,35 @@ share/kde/icons/hicolor/32x32/apps/kbiff.png
 share/kde/icons/hicolor/48x48/apps/kbiff.png
 share/kde/icons/locolor/16x16/apps/kbiff.png
 share/kde/icons/locolor/32x32/apps/kbiff.png
-share/kde/locale/br/LC_MESSAGES/kbiff.mo
-share/kde/locale/cs/LC_MESSAGES/kbiff.mo
-share/kde/locale/da/LC_MESSAGES/kbiff.mo
-share/kde/locale/de/LC_MESSAGES/kbiff.mo
-share/kde/locale/el/LC_MESSAGES/kbiff.mo
-share/kde/locale/es/LC_MESSAGES/kbiff.mo
-share/kde/locale/et/LC_MESSAGES/kbiff.mo
-share/kde/locale/fi/LC_MESSAGES/kbiff.mo
-share/kde/locale/fr/LC_MESSAGES/kbiff.mo
-share/kde/locale/he/LC_MESSAGES/kbiff.mo
-share/kde/locale/hr/LC_MESSAGES/kbiff.mo
-share/kde/locale/hu/LC_MESSAGES/kbiff.mo
-share/kde/locale/is/LC_MESSAGES/kbiff.mo
-share/kde/locale/it/LC_MESSAGES/kbiff.mo
-share/kde/locale/ja/LC_MESSAGES/kbiff.mo
-share/kde/locale/nl/LC_MESSAGES/kbiff.mo
-share/kde/locale/no/LC_MESSAGES/kbiff.mo
-share/kde/locale/no_NY/LC_MESSAGES/kbiff.mo
-share/kde/locale/pl/LC_MESSAGES/kbiff.mo
-share/kde/locale/pt/LC_MESSAGES/kbiff.mo
-share/kde/locale/pt_BR/LC_MESSAGES/kbiff.mo
-share/kde/locale/ro/LC_MESSAGES/kbiff.mo
-share/kde/locale/ru/LC_MESSAGES/kbiff.mo
-share/kde/locale/sk/LC_MESSAGES/kbiff.mo
-share/kde/locale/sl/LC_MESSAGES/kbiff.mo
-share/kde/locale/sv/LC_MESSAGES/kbiff.mo
-share/kde/locale/tr/LC_MESSAGES/kbiff.mo
-share/kde/locale/uk/LC_MESSAGES/kbiff.mo
-share/kde/locale/zh_TW.Big5/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/br/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/no_NY/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kbiff.mo
+${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/kbiff.mo
 @dirrm share/kde/apps/kbiff/pics
 @dirrm share/kde/apps/kbiff
 @dirrm share/doc/kde/HTML/fr/kbiff

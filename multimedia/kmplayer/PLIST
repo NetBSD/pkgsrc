@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/10/12 11:21:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/12/10 06:40:11 markd Exp $
 bin/kmplayer
 bin/kxineplayer
 lib/kde3/kmplayer.la
@@ -38,39 +38,6 @@ share/kde/config/kmplayerrc
 share/kde/icons/crystalsvg/32x32/apps/kmplayer.png
 share/kde/icons/locolor/16x16/apps/kmplayer.png
 share/kde/icons/locolor/32x32/apps/kmplayer.png
-share/kde/locale/ar/LC_MESSAGES/kmplayer.mo
-share/kde/locale/br/LC_MESSAGES/kmplayer.mo
-share/kde/locale/bs/LC_MESSAGES/kmplayer.mo
-share/kde/locale/ca/LC_MESSAGES/kmplayer.mo
-share/kde/locale/cs/LC_MESSAGES/kmplayer.mo
-share/kde/locale/da/LC_MESSAGES/kmplayer.mo
-share/kde/locale/de/LC_MESSAGES/kmplayer.mo
-share/kde/locale/el/LC_MESSAGES/kmplayer.mo
-share/kde/locale/en_GB/LC_MESSAGES/kmplayer.mo
-share/kde/locale/es/LC_MESSAGES/kmplayer.mo
-share/kde/locale/et/LC_MESSAGES/kmplayer.mo
-share/kde/locale/fi/LC_MESSAGES/kmplayer.mo
-share/kde/locale/fr/LC_MESSAGES/kmplayer.mo
-share/kde/locale/hu/LC_MESSAGES/kmplayer.mo
-share/kde/locale/is/LC_MESSAGES/kmplayer.mo
-share/kde/locale/it/LC_MESSAGES/kmplayer.mo
-share/kde/locale/ja/LC_MESSAGES/kmplayer.mo
-share/kde/locale/lt/LC_MESSAGES/kmplayer.mo
-share/kde/locale/nb/LC_MESSAGES/kmplayer.mo
-share/kde/locale/nl/LC_MESSAGES/kmplayer.mo
-share/kde/locale/pa/LC_MESSAGES/kmplayer.mo
-share/kde/locale/pl/LC_MESSAGES/kmplayer.mo
-share/kde/locale/pt/LC_MESSAGES/kmplayer.mo
-share/kde/locale/pt_BR/LC_MESSAGES/kmplayer.mo
-share/kde/locale/ro/LC_MESSAGES/kmplayer.mo
-share/kde/locale/ru/LC_MESSAGES/kmplayer.mo
-share/kde/locale/sk/LC_MESSAGES/kmplayer.mo
-share/kde/locale/sr/LC_MESSAGES/kmplayer.mo
-share/kde/locale/sv/LC_MESSAGES/kmplayer.mo
-share/kde/locale/ta/LC_MESSAGES/kmplayer.mo
-share/kde/locale/tr/LC_MESSAGES/kmplayer.mo
-share/kde/locale/xx/LC_MESSAGES/kmplayer.mo
-share/kde/locale/zh_CN/LC_MESSAGES/kmplayer.mo
 share/kde/mimelnk/application/x-kmplayer.desktop
 share/kde/mimelnk/application/x-mplayer2.desktop
 @comment in kdelibs share/kde/mimelnk/audio/x-ms-wma.desktop
@@ -80,22 +47,63 @@ share/kde/services/kmplayer_part.desktop
 @comment in kdelibs share/kde/services/mms.protocol
 share/kde/services/pnm.protocol
 @comment in kdelibs share/kde/services/rtsp.protocol
-@comment dirrm share/kde/services
-@comment dirrm share/kde/mimelnk/video
-@comment dirrm share/kde/mimelnk/audio
-@comment dirrm share/kde/mimelnk/application
-@comment dirrm share/kde/icons/locolor/32x32/apps
-@comment dirrm share/kde/icons/locolor/16x16/apps
-@comment dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment dirrm share/kde/config
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/br/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/xx/LC_MESSAGES/kmplayer.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kmplayer.mo
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/mimelnk/video
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/kmplayer
-@comment dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/apps
 @dirrm share/doc/kde/HTML/sv/kmplayer
+@comment in kde: @dirrm share/doc/kde/HTML/sv
 @dirrm share/doc/kde/HTML/pt/kmplayer
+@comment in kde: @dirrm share/doc/kde/HTML/pt
 @dirrm share/doc/kde/HTML/it/kmplayer
+@comment in kde: @dirrm share/doc/kde/HTML/it
 @dirrm share/doc/kde/HTML/fr/kmplayer
+@comment in kde: @dirrm share/doc/kde/HTML/fr
 @dirrm share/doc/kde/HTML/et/kmplayer
+@comment in kde: @dirrm share/doc/kde/HTML/et
 @dirrm share/doc/kde/HTML/es/kmplayer
+@comment in kde: @dirrm share/doc/kde/HTML/es
 @dirrm share/doc/kde/HTML/en/kmplayer
+@comment in kde: @dirrm share/doc/kde/HTML/en
 @dirrm share/doc/kde/HTML/da/kmplayer
-@comment dirrm share/applications/kde
+@comment in kde: @dirrm share/doc/kde/HTML/da
+@comment in kde: @dirrm share/applications/kde
+@comment in kde: @dirrm lib/kde3

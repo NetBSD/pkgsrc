@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/28 13:37:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/10 06:40:11 markd Exp $
 bin/showimg
 man/man1/showimg.1
 share/doc/kde/HTML/da/showimg/but-back.png
@@ -292,28 +292,28 @@ share/kde/apps/showimg/tips
 share/kde/icons/hicolor/32x32/apps/showimg.png
 share/kde/icons/hicolor/48x48/apps/showimg.png
 share/kde/icons/hicolor/64x64/apps/showimg.png
-share/kde/locale/cs/LC_MESSAGES/showimg.mo
-share/kde/locale/da/LC_MESSAGES/showimg.mo
-share/kde/locale/de/LC_MESSAGES/showimg.mo
-share/kde/locale/en_GB/LC_MESSAGES/showimg.mo
-share/kde/locale/es/LC_MESSAGES/showimg.mo
-share/kde/locale/et/LC_MESSAGES/showimg.mo
-share/kde/locale/fr/LC_MESSAGES/showimg.mo
-share/kde/locale/it/LC_MESSAGES/showimg.mo
-share/kde/locale/ja/LC_MESSAGES/showimg.mo
-share/kde/locale/nl/LC_MESSAGES/showimg.mo
-share/kde/locale/pl/LC_MESSAGES/showimg.mo
-share/kde/locale/pt/LC_MESSAGES/showimg.mo
-share/kde/locale/pt_BR/LC_MESSAGES/showimg.mo
-share/kde/locale/ru/LC_MESSAGES/showimg.mo
-share/kde/locale/sk/LC_MESSAGES/showimg.mo
-share/kde/locale/sr/LC_MESSAGES/showimg.mo
-share/kde/locale/sv/LC_MESSAGES/showimg.mo
-share/kde/locale/ta/LC_MESSAGES/showimg.mo
-share/kde/locale/tr/LC_MESSAGES/showimg.mo
-share/kde/locale/zh_CN/LC_MESSAGES/showimg.mo
 share/kde/mimelnk/image/x-psd.desktop
 share/kde/mimelnk/image/x-sia.desktop
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/showimg.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/showimg.mo
 @dirrm share/kde/apps/showimg/pics
 @dirrm share/kde/apps/showimg/icons/hicolor/64x64/mimetypes
 @dirrm share/kde/apps/showimg/icons/hicolor/64x64

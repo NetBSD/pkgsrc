@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/27 23:24:23 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/10 06:40:11 markd Exp $
 bin/kbarcode
 lib/kde3/kfile_kbarcode.la
 share/kde/applnk/Applications/KBarcode/kbarcode-batch.desktop
@@ -20,16 +20,16 @@ share/kde/icons/hicolor/32x32/actions/barcode.png
 share/kde/icons/hicolor/32x32/actions/kbarcoderect.png
 share/kde/icons/hicolor/32x32/apps/kbarcode.png
 share/kde/icons/hicolor/64x64/apps/kbarcode.png
-share/kde/locale/de/LC_MESSAGES/kbarcode.mo
-share/kde/locale/el/LC_MESSAGES/kbarcode.mo
-share/kde/locale/es/LC_MESSAGES/kbarcode.mo
-share/kde/locale/fi/LC_MESSAGES/kbarcode.mo
-share/kde/locale/fr/LC_MESSAGES/kbarcode.mo
-share/kde/locale/hu/LC_MESSAGES/kbarcode.mo
-share/kde/locale/it/LC_MESSAGES/kbarcode.mo
-share/kde/locale/nl/LC_MESSAGES/kbarcode.mo
-share/kde/locale/pl/LC_MESSAGES/kbarcode.mo
-share/kde/locale/sv/LC_MESSAGES/kbarcode.mo
 share/kde/services/kfile_kbarcode.desktop
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kbarcode.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/kbarcode.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/kbarcode.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kbarcode.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kbarcode.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kbarcode.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kbarcode.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kbarcode.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kbarcode.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kbarcode.mo
 @dirrm share/kde/apps/kbarcode
 @dirrm share/kde/applnk/Applications/KBarcode

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/06/15 13:58:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/12/10 06:40:11 markd Exp $
 bin/kmymoney
 bin/kmymoney2
 man/man1/kmymoney2.1
@@ -89,23 +89,20 @@ share/kde/icons/hicolor/32x32/mimetypes/kmy.png
 share/kde/icons/hicolor/48x48/mimetypes/kmy.png
 share/kde/icons/locolor/16x16/apps/kmymoney2.png
 share/kde/icons/locolor/32x32/apps/kmymoney2.png
-share/kde/locale/de/LC_MESSAGES/kmymoney2.mo
-share/kde/locale/en_GB/LC_MESSAGES/kmymoney2.mo
-share/kde/locale/fr/LC_MESSAGES/kmymoney2.mo
-share/kde/locale/ru/LC_MESSAGES/kmymoney2.mo
 share/kde/mimelnk/application/x-kmymoney2.desktop
-@comment dirrm share/kde/mimelnk/application
-@comment dirrm share/kde/locale/ru/LC_MESSAGES
-@comment dirrm share/kde/locale/fr/LC_MESSAGES
-@comment dirrm share/kde/locale/en_GB/LC_MESSAGES
-@comment dirrm share/kde/locale/de/LC_MESSAGES
-@comment dirrm share/kde/icons/locolor/32x32/apps
-@comment dirrm share/kde/icons/locolor/16x16/apps
-@comment dirrm share/kde/icons/hicolor/48x48/mimetypes
-@comment dirrm share/kde/icons/hicolor/32x32/mimetypes
-@comment dirrm share/kde/icons/hicolor/32x32/apps
-@comment dirrm share/kde/icons/hicolor/16x16/mimetypes
-@comment dirrm share/kde/icons/hicolor/16x16/apps
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kmymoney2.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kmymoney2.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kmymoney2.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/kmymoney2.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kmymoney2.mo
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/kmymoney2/pics
 @dirrm share/kde/apps/kmymoney2/icons/hicolor/48x48/apps
 @dirrm share/kde/apps/kmymoney2/icons/hicolor/48x48
@@ -117,7 +114,7 @@ share/kde/mimelnk/application/x-kmymoney2.desktop
 @dirrm share/kde/apps/kmymoney2/icons
 @dirrm share/kde/apps/kmymoney2/html
 @dirrm share/kde/apps/kmymoney2
-@comment dirrm share/kde/apps
-@comment dirrm share/kde/applnk/Applications
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/applnk/Applications
 @dirrm share/doc/kde/HTML/en/kmymoney2
-@comment dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML/en
