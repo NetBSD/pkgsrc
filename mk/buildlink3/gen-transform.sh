@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.20 2004/02/01 00:41:25 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.21 2004/02/12 08:28:58 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -112,12 +112,12 @@ EOF
 		gen $action __r:-R\\.
 		;;
 	no-rpath)
-		gen $action _r:-Wl,--rpath-link,
-		gen $action _r:-Wl,--rpath,
-		gen $action _r:-Wl,-rpath-link,
-		gen $action _r:-Wl,-rpath,
-		gen $action _r:-Wl,-R
-		gen $action _r:-R
+		gen $action __r:-Wl,--rpath-link,
+		gen $action __r:-Wl,--rpath,
+		gen $action __r:-Wl,-rpath-link,
+		gen $action __r:-Wl,-rpath,
+		gen $action __r:-Wl,-R
+		gen $action __r:-R
 		;;
 	reorder)
 		case "$action" in
@@ -250,7 +250,7 @@ EOF
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|$2[^ 	\`"':;]*||g
+s|$2[^$_sep]*||g
 EOF
 			;;
 		esac
@@ -268,17 +268,17 @@ EOF
 		;;
 	r)
 		case "$2" in
-		"")	r=__r; pat="/"  ;;
-		*)	r=_r;  pat="$2" ;;
+		*/)	r=__r ;;
+		*)	r=_r ;;
 		esac
-		gen $action $r:-I$pat
-		gen $action $r:-L$pat
-		gen $action $r:-Wl,--rpath-link,$pat
-		gen $action $r:-Wl,--rpath,$pat
-		gen $action $r:-Wl,-rpath-link,$pat
-		gen $action $r:-Wl,-rpath,$pat
-		gen $action $r:-Wl,-R$pat
-		gen $action $r:-R$pat
+		gen $action $r:-I$2
+		gen $action $r:-L$2
+		gen $action $r:-Wl,--rpath-link,$2
+		gen $action $r:-Wl,--rpath,$2
+		gen $action $r:-Wl,-rpath-link,$2
+		gen $action $r:-Wl,-rpath,$2
+		gen $action $r:-Wl,-R$2
+		gen $action $r:-R$2
 		;;
 	S)
 		case "$action" in
