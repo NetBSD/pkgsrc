@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2005/01/11 21:02:20 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/02/02 16:41:22 jschauma Exp $
 #
 
-DISTNAME=		tor-0.0.9.2
+DISTNAME=		tor-0.0.9.3
 CATEGORIES=		net security
-MASTER_SITES=		http://freehaven.net/tor/dist/
+MASTER_SITES=		http://tor.eff.org/dist/
 
 MAINTAINER=		jschauma@NetBSD.org
-HOMEPAGE=		http://freehaven.net/tor/dist/
+HOMEPAGE=		http://tor.eff.org
 COMMENT=		Anonymizing overlay network for TCP
 
 USE_BUILDLINK3=		yes
@@ -20,6 +20,12 @@ CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
 				${PKG_SYSCONFDIR}/tor/tor-tsocks.conf
 CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
 				${PKG_SYSCONFDIR}/tor/torrc
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKGSRC_COMPILER:Mmipspro)
+CFLAGS+=		-c99
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/or/tor ${PREFIX}/bin/tor
