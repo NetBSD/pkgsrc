@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/04 17:36:48 jlam Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/02 01:47:06 darcy Exp $
 
 DISTNAME=	PyGreSQL-2.4
 PKGNAME=	py-postgresql-2.4
@@ -10,7 +10,7 @@ MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://www.druid.net/pygresql/
 
 DEPENDS+=	python-1.5.2:../../lang/python
-DEPENDS+=	postgresql-6.5.2:../../databases/postgresql
+DEPENDS+=	postgresql-6.5.3:../../databases/postgresql
 
 ALL_TARGET=	default
 
