@@ -1,11 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: pgsql.sh,v 1.1 2000/12/11 20:18:57 jlam Exp $
+# $NetBSD: pgsql.sh,v 1.2 2001/02/12 20:11:56 jlam Exp $
 #
 # PostgreSQL database rc.d control script
 #
 # PROVIDE: pgsql
 # REQUIRE: DAEMON
+# KEYWORD: shutdown
 
 name="postgres"
 ctl_command="@PREFIX@/bin/pg_ctl"
