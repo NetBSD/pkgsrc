@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2000/10/11 15:07:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/01/26 22:04:34 soren Exp $
 
-DISTNAME=		pchar-1.2
+DISTNAME=		pchar-1.3
 CATEGORIES=		net
 MASTER_SITES=		http://www.employees.org/~bmah/Software/pchar/
 
@@ -17,10 +17,11 @@ BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--with-ipv6
 .endif
 
-.if ${OPSYS} == "NetBSD"
-DEPENDS+=		ucd-snmp-*:../../net/ucd-snmp
-CONFIGURE_ARGS+=	--with-snmp=${PREFIX}
-.endif
+# XXX Not fully integrated
+#.if ${OPSYS} == "NetBSD"
+#DEPENDS+=		ucd-snmp-*:../../net/ucd-snmp
+#CONFIGURE_ARGS+=	--with-snmp=${PREFIX}
+#.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pchar ${PREFIX}/sbin
