@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/10/28 23:30:54 elric Exp $
+# $NetBSD: Makefile,v 1.25 2002/10/29 07:56:21 elric Exp $
 #
 
 DISTNAME=	balsa-1.4.0
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-more-warnings --without-esmtp \
 			--enable-pcre 
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 
-CONFIGURE_ARGS+=        --with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=        --with-ssl=${BUILDLINK_PREFIX.openssl}
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/libtool/buildlink2.mk"
