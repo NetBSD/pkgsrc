@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 1999/11/08 21:50:40 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/05/30 19:26:24 drochner Exp $
 bin/gnomecc
 bin/mouse-properties-capplet
 bin/screensaver-properties-capplet
 bin/background-properties-capplet
 bin/theme-selector-capplet
 bin/sound-properties
-bin/bell-properties-capplet
 bin/ui-properties
 bin/url-properties
 bin/gnome-edit-properties-capplet
@@ -16,7 +15,6 @@ bin/mime-type-capplet
 etc/CORBA/servers/gnomecc.gnorba
 include/capplet-widget.h
 lib/libcapplet.so.0.0
-lib/libcapplet.la
 lib/libcapplet.a
 lib/cappletConf.sh
 share/pixmaps/control-center.png
@@ -27,9 +25,14 @@ share/gnome/apps/Settings/Desktop/screensaver-properties.desktop
 share/gnome/apps/Settings/Desktop/background-properties.desktop
 share/gnome/apps/Settings/Desktop/theme-selector.desktop
 share/gnome/apps/Settings/Desktop/wm-properties.desktop
+share/gnome/apps/Settings/Documents/.directory
+share/gnome/apps/Settings/Documents/url-properties.desktop
+share/gnome/apps/Settings/Documents/gnome-edit-properties.desktop
+share/gnome/apps/Settings/Documents/mime-type.desktop
 share/gnome/apps/Settings/Multimedia/.directory
 share/gnome/apps/Settings/Multimedia/sound-properties.desktop
-share/gnome/apps/Settings/Multimedia/bell-properties.desktop
+share/gnome/apps/Settings/Session/.directory
+share/gnome/apps/Settings/Session/session-properties.desktop
 share/gnome/apps/Settings/UIOptions/.directory
 share/gnome/apps/Settings/UIOptions/application.desktop
 share/gnome/apps/Settings/UIOptions/dialogs.desktop
@@ -37,10 +40,26 @@ share/gnome/apps/Settings/UIOptions/mdi.desktop
 share/gnome/apps/Settings/Peripherals/.directory
 share/gnome/apps/Settings/Peripherals/mouse-properties.desktop
 share/gnome/apps/Settings/Peripherals/keyboard-properties.desktop
-share/gnome/apps/Settings/url-properties.desktop
-share/gnome/apps/Settings/gnome-edit-properties.desktop
-share/gnome/apps/Settings/session-properties.desktop
-share/gnome/apps/Settings/mime-type.desktop
+share/gnome/help/control-center/C/index.html
+share/gnome/help/control-center/C/topic.dat
+share/gnome/help/control-center/C/figs/bg-capplet.png
+share/gnome/help/control-center/C/figs/gccappdef.png
+share/gnome/help/control-center/C/figs/gccdialog.png
+share/gnome/help/control-center/C/figs/gccedit.png
+share/gnome/help/control-center/C/figs/gcchints.png
+share/gnome/help/control-center/C/figs/gccmdi.png
+share/gnome/help/control-center/C/figs/gccmime.png
+share/gnome/help/control-center/C/figs/gccsession-props.png
+share/gnome/help/control-center/C/figs/gccsound1.png
+share/gnome/help/control-center/C/figs/gccsound2.png
+share/gnome/help/control-center/C/figs/gccstartup.png
+share/gnome/help/control-center/C/figs/gccurl.png
+share/gnome/help/control-center/C/figs/glob_pref_anim.png
+share/gnome/help/control-center/C/figs/keyboard-capplet.png
+share/gnome/help/control-center/C/figs/mouse-capplet.png
+share/gnome/help/control-center/C/figs/screensave-capplet.png
+share/gnome/help/control-center/C/figs/theme-select.png
+share/gnome/help/control-center/C/figs/wm-main.png
 share/gnome/wm-properties/Enlightenment.desktop
 share/gnome/wm-properties/IceWM.desktop
 share/gnome/wm-properties/WindowMaker.desktop
@@ -51,9 +70,14 @@ share/control-center/Desktop/screensaver-properties.desktop
 share/control-center/Desktop/background-properties.desktop
 share/control-center/Desktop/theme-selector.desktop
 share/control-center/Desktop/wm-properties.desktop
+share/control-center/Documents/.directory
+share/control-center/Documents/gnome-edit-properties.desktop
+share/control-center/Documents/mime-type.desktop
+share/control-center/Documents/url-properties.desktop
 share/control-center/Multimedia/.directory
 share/control-center/Multimedia/sound-properties.desktop
-share/control-center/Multimedia/bell-properties.desktop
+share/control-center/Session/.directory
+share/control-center/Session/session-properties.desktop
 share/control-center/UIOptions/.directory
 share/control-center/UIOptions/application.desktop
 share/control-center/UIOptions/dialogs.desktop
@@ -191,17 +215,23 @@ share/control-center/.data/Superquadrics.desktop
 share/control-center/.data/vines.png
 share/control-center/.data/xroger.png
 share/control-center/.data/Xmatrix.desktop
-share/control-center/url-properties.desktop
-share/control-center/gnome-edit-properties.desktop
-share/control-center/session-properties.desktop
-share/control-center/mime-type.desktop
+share/pixmaps/ccsplash.png
 @dirrm share/gnome/apps/Settings/Desktop
+@dirrm share/gnome/apps/Settings/Documents
 @dirrm share/gnome/apps/Settings/Multimedia
+@dirrm share/gnome/apps/Settings/Session
 @dirrm share/gnome/apps/Settings/UIOptions
 @dirrm share/gnome/apps/Settings/Peripherals
+@dirrm share/gnome/apps/Settings
+@dirrm share/gnome/help/control-center/C/figs
+@dirrm share/gnome/help/control-center/C/stylesheet-images
+@dirrm share/gnome/help/control-center/C
+@dirrm share/gnome/help/control-center
 @dirrm share/gnome/wm-properties
 @dirrm share/control-center/Desktop
+@dirrm share/control-center/Documents
 @dirrm share/control-center/Multimedia
+@dirrm share/control-center/Session
 @dirrm share/control-center/UIOptions
 @dirrm share/control-center/Peripherals
 @dirrm share/control-center/.data
