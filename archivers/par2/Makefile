@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/21 20:57:54 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/21 21:48:32 tv Exp $
 #
 
 DISTNAME=		par2cmdline-0.3
@@ -16,11 +16,5 @@ USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Interix"
-GCC_REQD+=		3.3.4 # base g++ iostream has no "long long" support
-.endif
 
 .include "../../mk/bsd.pkg.mk"
