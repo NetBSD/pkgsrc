@@ -1,7 +1,13 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/08/04 16:24:21 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2002/08/05 21:42:33 jschauma Exp $
 
 SHA1 (bbappconf-0.0.1-peak3.tar.gz) = 03698e9ec97872aa36df86c2ecd97922ef22907c
 Size (bbappconf-0.0.1-peak3.tar.gz) = 80193 bytes
 SHA1 (patch-aa) = f730864931ec633ffa54e51a42b2d6dfbb127929
 SHA1 (patch-ab) = 2d45a53624945456a4ca3289ed241b21aee356c4
 SHA1 (patch-ac) = efdb5217518e3814910a85ecf37c66b45bda46d8
+SHA1 (patch-ba) = b4e1b15b170ea4ba3e787313cc9dbc68456fb1aa
+SHA1 (patch-bb) = fd20465664ae43a30487b547b0688e3253fb5f04
+SHA1 (patch-bc) = d47fb2abd28c7a5c0aa516e70da3c4f87554f592
+SHA1 (patch-bd) = adc0e81679f6e7fbe830b80e0efe3470c572c4bc
+SHA1 (patch-be) = 732f449cf865e2e9e1a97a098ccdbb2e6c3538e1
+SHA1 (patch-bf) = a47c1f6b242fecd06ee6102f4b0a7acf07ae252e
