@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/04/01 18:15:16 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/09/21 16:43:52 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PANGO_BUILDLINK3_MK:=	${PANGO_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npango}
 BUILDLINK_PACKAGES+=	pango
 
 .if !empty(PANGO_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.pango+=	pango>=1.4.0
+BUILDLINK_DEPENDS.pango+=	pango>=1.6.0
 BUILDLINK_PKGSRCDIR.pango?=	../../devel/pango
 .endif	# PANGO_BUILDLINK3_MK
 
