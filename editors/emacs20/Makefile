@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/03/25 22:13:34 kristerw Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/12 10:53:07 xtraeme Exp $
 
 DISTNAME=	emacs-20.7
 PKGREVISION=	3
@@ -22,7 +22,7 @@ COMMENT=	GNU editing macros (editor)
 
 CONFLICTS=	mule-[0-9]*
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
@@ -58,9 +58,9 @@ CONFIGURE_ARGS+=	--with-x=yes
 .if defined(EMACS_USE_X_TOOLKIT)
 CONFIGURE_ARGS+=	--with-x-toolkit=${EMACS_USE_X_TOOLKIT}
 .if ${EMACS_USE_X_TOOLKIT} == "lucid" || ${EMACS_USE_X_TOOLKIT} == "athena"
-.include "../../mk/xaw.buildlink2.mk"
+.include "../../mk/xaw.buildlink3.mk"
 .elif ${EMACS_USE_X_TOOLKIT} == "motif"
-.include "../../mk/motif.buildlink2.mk"
+.include "../../mk/motif.buildlink3.mk"
 .endif
 .endif
 .else

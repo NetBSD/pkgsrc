@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/04/03 17:30:56 yamt Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/12 11:09:01 xtraeme Exp $
 # FreeBSD Id: Makefile,v 1.11 1999/04/17 10:51:03 itojun Exp
 
 DISTNAME=	nvi-1.79
@@ -17,7 +17,7 @@ COMMENT=	Clone of vi/ex, with multilingual patch
 CONFLICTS=	vigor-[0-9]* nvi-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/build
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet -E -p1 -f
 CONFIGURE_ENV=	OPTFLAG='-D_PATH_SYSEXRC=\"${PREFIX}/etc/vi.exrc\"'
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=--enable-multibyte --program-prefix=n
 PATCH_FUZZ_FACTOR=	-F1
 
 .if !defined(USE_CANNA) || ${USE_CANNA} == YES
-.include "../../inputmethod/canna-lib/buildlink2.mk"
+.include "../../inputmethod/canna-lib/buildlink3.mk"
 CONFIGURE_ARGS+=--enable-canna=${BUILDLINK_PREFIX.canna-lib}
 CANNA_OPT.euc-jp=canna cannactrl cannakey=
 CANNA_OPT.sjis=${CANNA_OPT.euc-jp}
