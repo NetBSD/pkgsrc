@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/11 17:07:23 cjep Exp $
+$NetBSD: distinfo,v 1.2 2004/08/22 23:24:56 jschauma Exp $
 
 SHA1 (nettest.92.11.09.tar.Z) = 745408751115784f8f5dc63b16428eb1404d6c5e
 Size (nettest.92.11.09.tar.Z) = 35068 bytes
-SHA1 (patch-aa) = 78534b43a22bd22937e8dc8d0b16bf524e9d4188
+SHA1 (patch-aa) = 450c812e29686a209aecce8b29321146290d538b
 SHA1 (patch-ab) = e96227451fce253cd77491cfa2214fa49651af15
-SHA1 (patch-ac) = 5c47103210c06d2bf6fa2c749d554a7426b06535
-SHA1 (patch-ad) = e598ff0b66c5c7daf4692e5680bbacc66aaeb466
+SHA1 (patch-ac) = c9ed5834a4838e8522c1abdf473099c672a4eb15
+SHA1 (patch-ad) = d5a2d88f5d2f638850978508808dbd2309f90afe

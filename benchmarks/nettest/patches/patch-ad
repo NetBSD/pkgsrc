@@ -1,18 +1,20 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/04/11 17:07:23 cjep Exp $
-
---- nettestd.c.orig	1992-11-05 21:52:58.000000000 +0000
-+++ nettestd.c
-@@ -107,7 +107,8 @@ union {
+--- nettestd.c.orig	1992-11-05 16:52:58.000000000 -0500
++++ nettestd.c	2004-08-22 19:25:48.000000000 -0400
+@@ -107,7 +107,12 @@
  } name;
  int namesize;
  
 -int read(), recv();
 +int read();
++#if defined(sgi) && _NO_XOPEN4 && _NO_XOPEN5
++int recv();
++#else
 +ssize_t recv();
++#endif
  int (*rfunc)() = read;
  
  main(argc, argv)
-@@ -271,7 +272,11 @@ char **argv;
+@@ -271,7 +276,11 @@
  # endif
  #endif
  	if (daemon) {
@@ -24,7 +26,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2003/04/11 17:07:23 cjep Exp $
  			perror("setpgrp");
  		if ((c = open(_PATH_TTY, O_RDWR)) >= 0) {
  			(void)ioctl(c, TIOCNOTTY, (char *)0);
-@@ -416,7 +421,7 @@ char **argv;
+@@ -416,7 +425,7 @@
  			    )
  			error("setsockopt (IP_OPTIONS)");
  #endif
@@ -33,7 +35,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2003/04/11 17:07:23 cjep Exp $
  			error("bind");
  			exit(1);
  		}
-@@ -447,10 +452,10 @@ register int s;
+@@ -447,10 +456,10 @@
  #endif
  	listen(s, 5);
  
@@ -46,7 +48,17 @@ $NetBSD: patch-ad,v 1.1.1.1 2003/04/11 17:07:23 cjep Exp $
  		if (s2 < 0) {
  			extern int errno;
  			if (errno == EINTR)
-@@ -723,7 +728,7 @@ int s;
+@@ -707,7 +716,9 @@
+ 		inmsg.msg_iovlen = 1;
+ 		inmsg.msg_name = (caddr_t)&name.d_inet;
+ 		inmsg.msg_control = (caddr_t)control;
++#ifndef sgi
+ 		inmsg.msg_flags = 0;
++#endif
+ 		errmsg = "recvmsg";
+ 	} else
+ #endif /* CMSG_DATA */
+@@ -723,7 +734,7 @@
  #endif
  		{
  			namesize = sizeof(name.d_inet);
