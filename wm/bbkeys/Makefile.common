@@ -1,0 +1,13 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2001/03/10 20:00:26 hubertf Exp $
+#
+
+DISTNAME=	bbkeys-0.3.5
+CATEGORIES=	x11 wm
+MASTER_SITES=	http://movingparts.thelinuxcommunity.org/bbkeys/
+
+MAINTAINER=	alaric@alaric-snell.com
+HOMEPAGE=	http://movingparts.thelinuxcommunity.org/bbkeys.shtml
+
+USE_X11BASE=    YES
+
+.include "../../mk/bsd.pkg.mk"
