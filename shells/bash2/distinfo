@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.5 2002/09/26 22:06:30 jlam Exp $
+$NetBSD: distinfo,v 1.6 2002/11/25 04:18:47 schmonz Exp $
 
-SHA1 (bash-2.05.tar.gz) = 4418655ddc7bf6172f885bd3a54e7bfec77fec91
-Size (bash-2.05.tar.gz) = 1792319 bytes
-SHA1 (patch-ab) = 619adf5e1bbdf425b629f2675c37d3053d877d72
-SHA1 (patch-ac) = 41248ac10e116980aee59a790c73a71b91829e9e
-SHA1 (patch-ad) = 5e3207818583a7c93a65ccebf6c77cfe5fd9be5a
-SHA1 (patch-ae) = f55a728f9f8ce8896a7097100de80db1d1cf752f
+SHA1 (bash-2.05b.tar.gz) = b3e158877f94e66ec1c8ef604e994851ee388b09
+Size (bash-2.05b.tar.gz) = 1956216 bytes
+SHA1 (patch-ab) = 1a2fc87648b7e73a4987454bb249149ae15bed93
+SHA1 (patch-ae) = c0e5564d5e57a04d8458e67fb391df0d890e6f38
