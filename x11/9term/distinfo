@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.4 2001/05/05 01:56:20 hubertf Exp $
+$NetBSD: distinfo,v 1.5 2001/12/15 20:37:53 agc Exp $
 
 SHA1 (9term.1.6.3.tar.gz) = deb6248c9e441934ad8af522871034e24cb2bf5b
 Size (9term.1.6.3.tar.gz) = 135169 bytes
-SHA1 (patch-aa) = 0985fecfa694b99e67bcf91986944be89c44b6ae
+SHA1 (patch-aa) = 8e06b589d762d0fd349b66a0e20a51f1ac728fd5
 SHA1 (patch-ab) = c79dc4ef6bbc75112f8fe1e9ef3dafeb380a2d09
 SHA1 (patch-ac) = 500feea9198682d720314081d13a31e0e841940d
 SHA1 (patch-ad) = c9993356b66653c231be106e6f96d6e55a688f89
-SHA1 (patch-ae) = 654b27d31d61e0887e22a3a3fbc2bf5140d95dd3
+SHA1 (patch-ae) = 434af20bb9096e7a3580f00b415a94355d69fc88
 SHA1 (patch-af) = d8de61ee74a08a58842fda21c4db3a471083faf3
 SHA1 (patch-ag) = 2dcdadff6afa4307a54d4517599d7834d085eaf3
 SHA1 (patch-ah) = fc5340b1d11a9e70266180302e312d15acd05347
