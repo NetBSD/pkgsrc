@@ -1,14 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/01/28 22:04:21 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/06 04:24:13 uebayasi Exp $
 
-DISTNAME=	ndtpd-3.1.1
-PKGREVISION=	1
+DISTNAME=	ndtpd-3.1.4
 CATEGORIES=	textproc japanese
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/net/ndtp/ndtpd/
 
-PATCHFILES=	${DISTNAME}+.diff
-PATCH_SITES=	${MASTER_SITES}
-
-MAINTAINER=	uebayasi@soum.co.jp
+MAINTAINER=	uebayasi@netbsd.org
 HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/ndtpd/
 COMMENT=	Server for accessing CD-ROM books with NDTP
 
@@ -19,8 +15,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--localstatedir=${NDTPD_RUNDIR}
 CONFIGURE_ARGS+=--with-logdir=${NDTPD_LOGDIR}
 CONFIGURE_ARGS+=--with-eb
-CONFIGURE_ARGS+=--with-eb-includes=${PREFIX}/include
-CONFIGURE_ARGS+=--with-eb-libraries=${PREFIX}/lib
 CONFIGURE_ARGS+=--with-zlib
 MAKE_FLAGS+=	INSTALL_INFO=${INSTALL_INFO}
 # For INSTALL/DEINSTALL scripts.
