@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.4 1998/10/14 21:34:43 frueauf Exp $
+
+--- kaffe/kaffevm/Makefile.in-orig	Tue Oct  6 14:06:07 1998
++++ kaffe/kaffevm/Makefile.in	Wed Oct 14 22:54:03 1998
+@@ -23,7 +23,7 @@
+ DLLTOOL=	@DLLTOOL@
+ DEPTOOL=	@DEPTOOL@
+ PIC=		@PICVM@
+-LDFLAGS=	@LIBSHARE@ @LDFLAGS@
++LDFLAGS=	@LIBSHARE@
+ LIBS=		@LIBS@
+ LDTAIL=		@LDTAIL@ @NET_LIBRARIES@ @STD_LIBRARIES@ @VM_LIBRARIES@
+ KVER=		@KVER@
