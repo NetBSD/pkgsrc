@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6786 2004/08/04 08:54:57 recht Exp $
+$NetBSD: CHANGES,v 1.6787 2004/08/04 10:53:02 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3716,3 +3716,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bogofilter to 0.92.4 [snj 2004-08-04]
 	Updated clamsmtp to 0.5 [xtraeme 2004-08-04]
 	Updated apache-ant to 1.6.2 [recht 2004-08-04]
+	Updated analog to 5.32nb1 [tron 2004-08-04]
