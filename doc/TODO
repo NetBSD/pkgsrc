@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2244 2004/10/21 05:28:17 xtraeme Exp $
+$NetBSD: TODO,v 1.2245 2004/10/21 06:30:39 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -175,7 +175,6 @@ Suggested package updates
 	o TeXmacs-1.0.4.3
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
-	o abiword-2.0.10 [pkg/26695]
 	o afterstep-2.00.00
 	o ald-0.1.6 [pkg/26431]
 	o allegro-4.1.16
