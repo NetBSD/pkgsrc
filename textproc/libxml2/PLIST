@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2004/08/24 11:39:01 drochner Exp $
+@comment $NetBSD: PLIST,v 1.33 2004/09/02 11:13:27 jmmv Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -51,7 +51,7 @@ lib/libxml2.a
 lib/libxml2.la
 lib/libxml2.so
 lib/libxml2.so.8
-lib/libxml2.so.8.12
+lib/libxml2.so.8.13
 lib/pkgconfig/libxml-2.0.pc
 lib/xml2Conf.sh
 man/man1/xml2-config.1
