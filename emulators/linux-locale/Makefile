@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/02/05 18:16:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/03/16 12:32:27 wiz Exp $
 #
 
 DISTNAME=	libwcsmbs-0.0.4-4jrpm
@@ -57,7 +57,7 @@ do-install:
 
 post-install:
 	@${ECHO_MSG} "===>   [Automatic Linux shared object preload handling]"
-	@grep -v 'libwcsmbs\.so' ${EMULPRELOAD} \
+	@${GREP} -v 'libwcsmbs\.so' ${EMULPRELOAD} \
 		> ${WRKDIR}/preload 2> /dev/null || ${TRUE}
 	@${MV} ${WRKDIR}/preload ${EMULPRELOAD}
 	@${ECHO} "libwcsmbs.so.0" >> ${EMULPRELOAD}
