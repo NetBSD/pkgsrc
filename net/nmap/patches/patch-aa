@@ -1,8 +1,20 @@
-$NetBSD: patch-aa,v 1.6 2001/08/24 11:05:36 abs Exp $
+$NetBSD: patch-aa,v 1.7 2001/08/24 11:23:16 abs Exp $
 
 --- Makefile.in.orig	Tue May  9 07:25:42 2000
 +++ Makefile.in
-@@ -36,7 +36,7 @@
+@@ -12,8 +12,9 @@
+ 
+ CC = @CC@
+ CCOPT = 
+-LIBPCAPDIR = @libpcapdir@
+-INCLS = -I. -I$(LIBPCAPDIR)
++#LIBPCAPDIR = @libpcapdir@
++INCLS = -I.
++#INCLS += -I$(LIBPCAPDIR)
+ DEFS = @DEFS@ -DNMAP_VERSION=\"$(NMAP_VERSION)\" -DNMAP_NAME=\"$(NMAP_NAME)\" -DNMAP_URL=\"$(NMAP_URL)\" -DNMAPDATADIR=\"$(nmapdatadir)\"
+ CFLAGS = @CFLAGS@ $(CCOPT) $(DEFS) $(INCLS)
+ # CFLAGS = -g -Wall $(DEFS) $(INCLS)
+@@ -36,15 +37,15 @@
  
  DEPS = nmap.h error.h targets.h osscan.h tcpip.h utils.h global_structures.h charpool.h services.h rpc.h portlist.h
  
@@ -11,7 +23,17 @@ $NetBSD: patch-aa,v 1.6 2001/08/24 11:05:36 abs Exp $
  
  $(TARGET): $(DEPS) @PCAP_DEPENDS@ $(OBJS)
  	@echo Compiling nmap
-@@ -140,7 +140,7 @@
+ 	rm -f $@
+ 	$(CC) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
+ 
+-$(LIBPCAPDIR)/libpcap.a: $(LIBPCAPDIR)/Makefile
+-	@echo Compiling libpcap; cd $(LIBPCAPDIR); $(MAKE)
++#$(LIBPCAPDIR)/libpcap.a: $(LIBPCAPDIR)/Makefile
++#	@echo Compiling libpcap; cd $(LIBPCAPDIR); $(MAKE)
+ 
+ #$(LIBPCAPDIR)/Makefile:
+ #	@echo Configuring libpcap; cd $(LIBPCAPDIR); ./configure
+@@ -140,7 +141,7 @@
  	$(MAKEDEPEND) $(INCLS) -s "# DO NOT DELETE" -- $(DEFS) -- $(SRCS)
  
  install: $(TARGET)
