@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2003/09/17 19:40:51 grant Exp $
+# $NetBSD: Makefile,v 1.27 2003/09/24 03:28:12 schmonz Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 #
 
 DISTNAME=	djbdns-1.05
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://cr.yp.to/djbdns/					\
 		ftp://cr.yp.to/djbdns/					\
@@ -45,7 +45,7 @@ post-extract:
 	@${CP} ${DISTDIR}/tinydns-log.pl.txt ${WRKSRC}/tinydns-log.pl
 	@${CP} ${DISTDIR}/dnscache-log.pl.txt ${WRKSRC}/dnscache-log.pl
 
-post-patch:
+do-configure:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
 	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
