@@ -1,22 +1,27 @@
-# $NetBSD: Makefile,v 1.14 1999/04/01 13:38:44 agc Exp $
+# $NetBSD: Makefile,v 1.15 2000/08/31 19:14:03 jwise Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/04/20 13:19:30 wosch Exp
 #
 
-DISTNAME=	dotfile-2.0
-CATEGORIES=	misc tk80
+DISTNAME=	dotfile-2.4.1
+CATEGORIES=	misc tk
 MASTER_SITES=	ftp://ftp.imada.ou.dk/pub/dotfile/
 
 MAINTAINER=	oly@world.std.com
 HOMEPAGE=	http://www.imada.ou.dk/~blackie/dotfile/
 
-DEPENDS+=	tk-8.0.5:../../x11/tk80
+DEPENDS+=	tk-8.3.2:../../x11/tk
 
-# this pkg opens some X connectin
-IS_INTERACTIVE= yes
+BUILD_DEFS+=	DOTFILE_LANG
+
+# `english' or `japanese'
+DOTFILE_LANG?=	english
 
 GNU_CONFIGURE=	yes
+NO_BUILD=
 
-do-build:
-	@${DO_NADA}
+post-install:
+	${MKDIR} ${PREFIX}/share/doc/${PKGNAME}
+	cd ${WRKSRC}/Doc && ${GTAR} cf - . | ( cd ${PREFIX}/share/doc/${PKGNAME} && ${GTAR} xf - )
+	${CHOWN} -R root:${ROOT_GROUP} ${PREFIX}/share/doc/${PKGNAME}
 
 .include "../../mk/bsd.pkg.mk"
