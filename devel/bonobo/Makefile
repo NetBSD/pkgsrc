@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/10/04 19:14:58 rh Exp $
+# $NetBSD: Makefile,v 1.19 2001/10/08 06:51:23 rh Exp $
 #
 
 DISTNAME=		bonobo-1.0.9
@@ -12,6 +12,7 @@ COMMENT=		Architecture for creating reusable software components
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 BUILDLINK_DEPENDS.ORBit=ORBit>0.5.8
+BUILDLINK_DEPENDS.libxml=libxml>1.8.15
 
 USE_BUILDLINK_ONLY=	YES
 USE_LIBTOOL=		YES
@@ -27,6 +28,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../graphics/gdk-pixbuf-gnome/buildlink.mk"
 .include "../../print/gnome-print/buildlink.mk"
+.include "../../textproc/libxml/buildlink.mk"
 .include "../../devel/popt/buildlink.mk"
 .include "../../devel/oaf/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
