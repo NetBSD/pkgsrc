@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.10 1998/06/18 16:06:38 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/20 23:26:05 tv Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp 
 #
 
 DISTNAME=	zip-2.2
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.cdrom.com/pub/infozip/src/
+MASTER_SITES=	ftp://ftp.cdrom.com/pub/infozip/src/ \
+		ftp://ftp.icce.rug.nl/infozip/src/
 DISTFILES=	zip22.tar.gz
 
 MAINTAINER=	packages@netbsd.org
@@ -12,6 +13,19 @@ MAINTAINER=	packages@netbsd.org
 MAKEFILE=	unix/Makefile
 MAKE_FLAGS=	LOCAL_ZIP="${CFLAGS}"
 ALL_TARGET=	generic
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(ZIP_ENCRYPTION)
+DISTFILES+=	zcrypt27.zip
+EXTRACT_ONLY=	zip22.tar.gz
+FETCH_DEPENDS=	unzip:../../archivers/unzip
+RESTRICTED=	crypto
+MIRROR_DISTFILE=no
+
+post-extract:
+	@cd ${WRKSRC} && unzip -qo ${DISTDIR}/zcrypt27.zip
+.endif
 
 do-install:
 	cd ${WRKSRC} && \
