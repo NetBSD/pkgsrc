@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/03/13 17:38:05 fredb Exp $
+# $NetBSD: Makefile,v 1.25 2002/04/06 21:07:37 dmcmahill Exp $
 
 DISTNAME=		xfce-3.8.14
 PKGREVISION=		1
@@ -13,11 +13,6 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		imlib>=1.9.11nb1:../../graphics/imlib
 
-GCC_VERSION!=		gcc --version
-.if (${GCC_VERSION:C/-.*$$//} == egcs) && (${MACHINE_ARCH} == alpha)
-.include "../../lang/gcc/Makefile.gcc"
-.endif
-
 USE_X11=		# defined
 USE_XPM=		# defined
 USE_X11BASE=		# defined
@@ -28,6 +23,11 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
+
+GCC_VERSION!=		gcc --version
+.if (${GCC_VERSION:C/-.*$$//} == egcs) && (${MACHINE_ARCH} == alpha)
+.include "../../lang/gcc/Makefile.gcc"
+.endif
 
 EVAL_PREFIX+=		IMLIBDIR=imlib
 CONFIGURE_ARGS+=	--without-included-gettext
