@@ -1,0 +1,30 @@
+$NetBSD: patch-ac,v 1.1 2003/10/18 20:32:32 kleink Exp $
+
+--- example/jwhois.conf.orig	2003-10-17 21:38:46.000000000 +0200
++++ example/jwhois.conf	2003-10-17 21:38:57.000000000 +0200
+@@ -55,7 +55,24 @@
+ 	"^[0-9]+\\.[0-9]+\\.[0-9]+/[0-9]+-[0-9]+$" = "whois.nic.br";
+  
+ 	#
+-	# Redirect IPv6 numbers to the correct host
++	# Sub-TLA Assignments
++	# see http://www.iana.org/assignments/ipv6-tla-assignments
++	#
++	"^2001:0?[01][A-F0-9][A-F0-9]:.+" = "whois.iana.org";
++	"^2001:0?[23][A-F0-9][A-F0-9]:.+" = "whois.apnic.net";
++	"^2001:0?[45][A-F0-9][A-F0-9]:.+" = "whois.arin.net";
++	"^2001:0?[67][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:0?[89][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:0?[AB][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:0?[CD][A-F0-9][A-F0-9]:.+" = "whois.apnic.net";
++	"^2001:0?[EF][A-F0-9][A-F0-9]:.+" = "whois.apnic.net";
++	"^2001:1[23][A-F0-9][A-F0-9]:.+" = "whois.lacnic.net";
++	"^2001:1[45][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:1[67][A-F0-9][A-F0-9]:.+" = "whois.ripe.net";
++	"^2001:1[89][A-F0-9][A-F0-9]:.+" = "whois.arin.net";
++
++	#
++	# Historical IPv6 catch-all
+ 	#
+ 	".*:.*" = "whois.6bone.net";
+ 
