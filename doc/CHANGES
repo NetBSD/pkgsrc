@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8128 2004/11/29 02:11:46 tv Exp $
+$NetBSD: CHANGES,v 1.8129 2004/11/29 02:20:01 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5615,3 +5615,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated abook to 0.5.3 [minskim 2004-11-29]
 	Updated hashcash to 1.13 [tv 2004-11-29]
 	Updated cygwin_lib to 1.5.12.1 [tv 2004-11-29]
+	Updated p5-Mail-SRS to 0.31 [tv 2004-11-29]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2568 2004/11/29 02:11:47 tv Exp $
+$NetBSD: TODO,v 1.2569 2004/11/29 02:20:01 tv Exp $
 
 Suggested new packages
 ======================
@@ -891,7 +891,6 @@ Suggested package updates
 	o p5-Mail-ListDetector-0.31
 	o p5-Mail-Mbox-MessageParser-1.21.1
 	o p5-Mail-SPF-Query-1.997
-	o p5-Mail-SRS-0.31
 	o p5-Mail-Sendmail-0.79
 	o p5-MailTools-1.64
 	o p5-Math-Bezier-0.02
