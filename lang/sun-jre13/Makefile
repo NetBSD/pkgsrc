@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2001/07/15 15:14:08 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/07/16 13:50:17 abs Exp $
 #
 
 # MASTER_SITES is very special, and must end in "=":
 DISTNAME=	j2re-1_3_1-linux-i386
 PKGNAME=	sun-jre-1.3.1
 CATEGORIES=     lang
-MASTER_SITES=	http://java.sun.com/Download4?config-file=j2sdk-1_3_1.config&platform=linux-i386&protocol=HTTP+download&download-name=
+MASTER_SITES=	http://java.sun.com/Download4?config-file=j2re-1_3_1.config&platform=linux-i386&protocol=HTTP+download&download-name=
 EXTRACT_SUFX=	.bin
 
 MAINTAINER=	tv@netbsd.org
