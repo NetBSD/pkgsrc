@@ -1,13 +1,39 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2000/07/12 20:09:35 jlam Exp $
 
---- Makefile.orig	Mon Jun 21 14:59:04 1999
-+++ Makefile	Sun Nov 28 21:06:28 1999
-@@ -28,7 +28,7 @@
- # Directories to make...
- #
+--- Makefile.orig	Fri Jul  7 14:19:23 2000
++++ Makefile	Wed Jul 12 00:49:00 2000
+@@ -60,8 +60,6 @@
+ 		echo Installing in $$dir... ;\
+ 		(cd $$dir; $(MAKE) $(MFLAGS) install) || exit 1;\
+ 	done
+-	echo Installing in conf...
+-	(cd conf; $(MAKE) $(MFLAGS) install)
+ 	echo Installing in data...
+ 	(cd data; $(MAKE) $(MFLAGS) install)
+ 	echo Installing in fonts...
+@@ -72,25 +70,6 @@
+ 	(cd ppd; $(MAKE) $(MFLAGS) install)
+ 	echo Installing in templates...
+ 	(cd templates; $(MAKE) $(MFLAGS) install)
+-	echo Installing startup script...
+-	if test -d $(prefix)/sbin/init.d; then \
+-		$(INSTALL_SCRIPT) cups.sh $(prefix)/sbin/init.d/cups; \
+-		$(CHMOD) ugo+rx $(prefix)/sbin/init.d/cups; \
+-		ln -s ../init.d/cups $(prefix)/sbin/rc0.d/K000cups; \
+-		ln -s ../init.d/cups $(prefix)/sbin/rc2.d/S999cups; \
+-	fi
+-	if test -d $(prefix)/etc/rc.d/init.d; then \
+-		$(INSTALL_SCRIPT) cups.sh $(prefix)/etc/rc.d/init.d/cups; \
+-		$(CHMOD) ugo+rx $(prefix)/etc/rc.d/cups; \
+-		ln -s ../init.d/cups $(prefix)/etc/rc.d/rc0.d/K00cups; \
+-		ln -s ../init.d/cups $(prefix)/etc/rc.d/rc2.d/S99cups; \
+-	fi
+-	if test -d $(prefix)/etc/init.d; then \
+-		$(INSTALL_SCRIPT) cups.sh $(prefix)/etc/init.d/cups; \
+-		$(CHMOD) ugo+rx $(prefix)/etc/init.d/cups; \
+-		ln -s ../init.d/cups $(prefix)/etc/rc0.d/K00cups; \
+-		ln -s ../init.d/cups $(prefix)/etc/rc2.d/S99cups; \
+-	fi
  
--DIRS	=	cups backend berkeley cgi-bin filter man pstoraster \
-+DIRS	=	cups backend berkeley cgi-bin filter locale man pstoraster \
- 		scheduler systemv
- 
  #
+ # Make software distributions using EPM (http://www.easysw.com/epm)...
