@@ -1,0 +1,72 @@
+$NetBSD: patch-aq,v 1.4.4.1 2004/08/13 13:05:05 agc Exp $
+
+Index: kioslave/http/kcookiejar/kcookiejar.cpp
+===================================================================
+RCS file: /home/kde/kdelibs/kioslave/http/kcookiejar/kcookiejar.cpp,v
+retrieving revision 1.116
+retrieving revision 1.117
+diff -u -p -r1.116 -r1.117
+--- kioslave/http/kcookiejar/kcookiejar.cpp	19 Jul 2004 10:16:22 -0000	1.116
++++ kioslave/http/kcookiejar/kcookiejar.cpp	20 Jul 2004 15:29:24 -0000	1.117
+@@ -244,6 +244,14 @@ KCookieJar::KCookieJar()
+     m_globalAdvice = KCookieDunno;
+     m_configChanged = false;
+     m_cookiesChanged = false;
++
++    QString twoLevelTLD="name,ai,au,bd,bh,ck,eg,et,fk,il,in,kh,kr,mk,mt,na,np,nz,pg,pk,qa,sa,sb,sg,sv,ua,ug,uk,uy,vn,za,zw";
++    QStringList countries = QStringList::split(',', twoLevelTLD);
++    for(QStringList::ConstIterator it = countries.begin();
++        it != countries.end(); ++it)
++    {
++       m_twoLevelTLD.replace(*it, (int *) 1);
++    }
+ }
+ 
+ //
+@@ -528,14 +536,14 @@ static const char * parseNameValue(const
+ 
+ }
+ 
+-static void stripDomain(const QString &_fqdn, QString &_domain)
++void KCookieJar::stripDomain(const QString &_fqdn, QString &_domain)
+ {
+    QStringList domains;
+-   KCookieJar::extractDomains(_fqdn, domains);
++   extractDomains(_fqdn, domains);
+    _domain = domains[0];
+ }
+ 
+-static QString stripDomain( KHttpCookiePtr cookiePtr)
++QString KCookieJar::stripDomain( KHttpCookiePtr cookiePtr)
+ {
+     QString domain; // We file the cookie under this domain.
+     if (cookiePtr->domain().isEmpty())
+@@ -620,6 +628,13 @@ void KCookieJar::extractDomains(const QS
+     {
+        if (partList.count() == 1)
+          break; // We only have a TLD left.
++       
++       if ((partList.count() == 2) && (m_twoLevelTLD[partList[1].lower()]))
++       {
++          // This domain uses two-level TLDs in the form xxxx.yy
++          break;
++       }
++       
+        if ((partList.count() == 2) && (partList[1].length() == 2))
+        {
+           // If this is a TLD, we should stop. (e.g. co.uk)
+@@ -634,14 +649,6 @@ void KCookieJar::extractDomains(const QS
+               break;
+        }
+ 
+-       // The .name domain uses <name>.<surname>.name
+-       // Although the TLD is striclty speaking .name, for our purpose
+-       // it should be <surname>.name since people should not be able
+-       // to set cookies for everyone with the same surname.
+-       // Matches <surname>.name
+-       if ((partList.count() == 2)&& (partList[1].lower() == L1("name")))
+-          break;
+-
+        QString domain = partList.join(L1("."));
+        _domains.append('.' + domain);
+        _domains.append(domain);

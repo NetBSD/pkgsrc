@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2004/06/10 11:39:50 markd Exp $
+$NetBSD: distinfo,v 1.38.2.1 2004/08/13 13:05:04 agc Exp $
 
 SHA1 (kdelibs-3.2.3.tar.bz2) = 33df00cb44694db306c29504f6ee5f3bd4a71c7d
 Size (kdelibs-3.2.3.tar.bz2) = 12737024 bytes
@@ -7,7 +7,17 @@ SHA1 (patch-ad) = fc3a7b173dc93bad196fff3ddd9aef65c92dda64
 SHA1 (patch-ae) = 238f16203cd101a5944ff01aa965956392c5b16d
 SHA1 (patch-af) = 7fbb3abcbf56020e3827ddf9d056beab9d1f3cd7
 SHA1 (patch-ag) = e471fdf5428e0f515ef3fe5427622854886ef952
-SHA1 (patch-an) = 41d2721bd55d060cde630771dad0377dbe770d73
+SHA1 (patch-an) = 443560cbbca3d29d2e436ac94b4920da081c99f9
+SHA1 (patch-ap) = 807a36fc910679431115f0d03208977d8cae7bc6
+SHA1 (patch-aq) = 26627136717b912e3c1ec884db4e9712398904cd
+SHA1 (patch-ar) = af4fe2fe875f91095aa024c23e17b4144ade283c
+SHA1 (patch-as) = e208b595c0f39094a8db16e6aa6b00c0d90420d2
+SHA1 (patch-at) = 9b114f66dd8b9134e884334d3d2217dd1f6e217e
+SHA1 (patch-au) = 20bebf25372adcb61065927adb093ddd10ec1b00
+SHA1 (patch-av) = 26c026a500f49847eedd56b143317d6661bf2f54
+SHA1 (patch-aw) = 4514ec04885709cfc402e387346c0c5f72408385
+SHA1 (patch-ax) = 36f21f6b3bb42f43deecd837095318d3f4e3b125
+SHA1 (patch-ay) = 27cf47be52f2f643f808d7092a6fe33458b67fc5
 SHA1 (patch-bc) = 434a48d290aa9716b8c6e372419460ebd33cf8ea
 SHA1 (patch-bd) = f233a73d0a8148e1ae7f4e777c3f5d50b56d768f
 SHA1 (patch-bu) = 65aca46f30be04c0d8177498eac149437b21ba56
