@@ -1,0 +1,6 @@
+FFTPACK is a collection of FORTRAN 77 subroutines for the computation
+of the Fast Fourier Transform of both real and complex periodic
+sequences.
+
+This version of FFTPACK was converted to double precision by
+Hugh C. Pumphrey.
