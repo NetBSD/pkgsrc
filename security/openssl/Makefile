@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2001/04/09 13:32:01 tron Exp $
+# $NetBSD: Makefile,v 1.38 2001/04/17 23:32:34 itojun Exp $
 
 DISTNAME=		openssl-0.9.6
 CATEGORIES=		security
@@ -15,7 +15,7 @@ CONFLICTS=		SSLeay-* ssleay-* base64-*
 
 CRYPTO=			YES
 
-# supplies IDEA/RC5
+# openssl supplies IDEA/RC5.  IDEA/RC5 need license for commercial use.
 LICENCE=		fee-based-commercial-use
 
 # matches what's in `Configure' (except sparc64)
