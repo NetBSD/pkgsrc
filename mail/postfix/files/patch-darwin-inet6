@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2004/08/10 16:49:47 schmonz Exp $
+$NetBSD: patch-darwin-inet6,v 1.1 2004/08/11 06:51:31 jlam Exp $
 
 --- src/util/match_ops.c.orig	Tue Aug 10 02:29:26 2004
 +++ src/util/match_ops.c
