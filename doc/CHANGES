@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3963 2003/12/04 10:51:17 veego Exp $
+$NetBSD: CHANGES,v 1.3964 2003/12/04 10:58:04 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4835,3 +4835,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated lapack to 20010201nb1 [adam 2003-12-04]
 	Updated irssi to 0.8.8 [veego 2003-12-04]
 	Updated irssi-icb to 0.14nb2 [veego 2003-12-04]
+	Updated rsync to 2.5.7 [tron 2003-12-04]
