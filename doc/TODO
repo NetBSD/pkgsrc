@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2396 2004/11/19 18:05:42 wiz Exp $
+$NetBSD: TODO,v 1.2397 2004/11/19 18:28:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -473,7 +473,6 @@ Suggested package updates
 	o firewalk-gtk-5.0
 	o fkiss-0.33a
 	o fluxbox-0.9.10
-	o flyspell-1.7f
 	o fmsx-28
 	o fondu-040927
 	o foomatic-3.0.1 [jlam]
@@ -567,7 +566,6 @@ Suggested package updates
 	o hpijs-1.7.1
 	o httperf-0.8
 	o httptunnel-3.3
-	o hugo-31
 	o hugu-3.1.01
 	o hydrogen-0.9.0
 	o hylafax-4.2.0
