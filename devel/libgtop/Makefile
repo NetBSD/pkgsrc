@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2002/11/04 00:48:32 rh Exp $
+# $NetBSD: Makefile,v 1.65 2002/11/30 23:21:37 salo Exp $
 
 DISTNAME=		libgtop-1.0.13
 CATEGORIES=		devel gnome
@@ -29,6 +29,7 @@ IGNORE+=		"(More information can be found in libgtop.info.)"
 
 USE_PERL5=		build
 USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
@@ -44,7 +45,6 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-glib-prefix=${BUILDLINK_PREFIX.glib} \
 			--with-catgets --with-libgtop-guile=no
 CONFIGURE_ENV+=		AWK="${AWK}" LN_S="${LN} -s" PERL="${PERL5}"
-CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../x11/gnome-libs/buildlink2.mk"

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:20 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/11/30 23:21:35 salo Exp $
 
 SHA1 (glade-0.6.2.tar.gz) = 7f6f3f25078c38ff55ca354b6dc523b356e2b4b5
 Size (glade-0.6.2.tar.gz) = 2191537 bytes
-SHA1 (patch-aa) = 8f897b025e4b22f4c836ee0d15015f3e61ebf0b9
+SHA1 (patch-aa) = 08e09a8a0edb50087e3b680b500d0bb4b5de93f2
