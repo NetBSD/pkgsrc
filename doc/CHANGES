@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8982 2005/01/30 23:49:58 salo Exp $
+$NetBSD: CHANGES,v 1.8983 2005/01/31 00:14:55 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -684,3 +684,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated win32-jdk to 0.1nb1 [jmmv 2005-01-30]
 	Removed java-wrapper [jmmv 2005-01-30]
 	Updated powermanga to 0.79 [salo 2005-01-30]
+	Updated gnuserv to 3.12.7nb1 [minskim 2005-01-31]
+	Updated xemacs to 21.4.15nb3 [minskim 2005-01-31]
+	Updated xemacs-current to 21.5.18nb3 [minskim 2005-01-31]
