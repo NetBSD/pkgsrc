@@ -1,0 +1,20 @@
+Expatobjc is a small library that allows you to use James Clark's
+Expat XML parser library more easily with Objective C.  It provides an
+object-oriented interface to the library which is similar to SAX2.
+
+To use it, make a subclass of the XMLParser object that will override
+any or all of the following methods based on what parts of the XML
+parser document you want to read and analyze:
+
+startElement - for element start tags 
+endElement - for element end tags
+characters - for PCDATA stuff
+processingInstruction - for XML processing instructions
+comment - for XML comments
+startCdata - for the start of a CDATA section
+endCdata - for the end of a CDATA section
+externalEntity - for an external entity declaration
+unparsedEntityDecl - for an unparsed entity declaration
+startPrefixMapping - for the start of a namespace prefix declaration
+endPrefixMapping - for the end of a namespace prefix declaration
+defaultHandler - for any text that is not parsed above
