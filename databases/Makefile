@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2001/10/01 01:29:20 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2001/10/11 11:43:57 martti Exp $
 #
 
 COMMENT=	Databases
@@ -9,6 +9,7 @@ SUBDIR+=	edb
 SUBDIR+=	freetds
 SUBDIR+=	gdbm
 SUBDIR+=	geneweb
+SUBDIR+=	gnats
 SUBDIR+=	gq
 SUBDIR+=	gtksql
 SUBDIR+=	gtranscript
