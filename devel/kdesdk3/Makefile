@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/10/15 11:54:10 tv Exp $
+# $NetBSD: Makefile,v 1.29 2004/11/02 12:02:36 markd Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 PKGREVISION=	1
@@ -12,6 +12,7 @@ CONFLICTS+=	umbrello-[0-9]*
 
 USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
+USE_GNU_TOOLS+=		lex
 USE_PERL5=		run
 
 REPLACE_PERL=	cervisia/change_colors.pl \
