@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.35 2004/01/14 08:59:31 grant Exp $
+dnl $NetBSD: configure.ac,v 1.36 2004/02/14 04:47:13 simonb Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -37,11 +37,16 @@ AC_CHECK_HEADERS([arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
 	machine/endian.h memory.h ndir.h netdb.h netinet/in6_machtypes.h \
 	paths.h poll.h pwd.h stdint.h stdlib.h stringlist.h strings.h \
 	string.h sys/bitypes.h sys/byteorder.h sys/cdefs.h sys/dir.h \
-	sys/endian.h sys/file.h sys/mkdev.h sys/mount.h sys/ndir.h \
+	sys/endian.h sys/file.h sys/mkdev.h sys/ndir.h \
 	sys/param.h sys/poll.h sys/queue.h sys/time.h sys/ttycom.h \
 	sys/stat.h sys/statfs.h sys/statvfs.h sys/vfs.h sys/types.h \
 	sys/vfs.h termcap.h termios.h time.h tzfile.h unistd.h util.h \
 	utmp.h])
+AC_CHECK_HEADERS([sys/mount.h], , , [AC_INCLUDES_DEFAULT
+#ifdef HAVE_SYS_PARAM_H
+#include <sys/param.h>
+#endif
+])
 
 AC_CHECK_HEADERS([md5.h rmd160.h sha1.h])
 
