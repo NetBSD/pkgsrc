@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/03/26 18:48:52 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/28 01:00:11 jlam Exp $
 
 DISTNAME=		heimdal-0.6
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.pdc.kth.se/pub/heimdal/src/		\
 			ftp://ftp.pdc.kth.se/pub/heimdal/src/old/	\
@@ -57,20 +57,38 @@ CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 #
 BUILD_DEFS+=	KERBEROS_PREFIX_CMDS
 .if !empty(KERBEROS_PREFIX_CMDS:M[yY][eE][sS])
-HEIMDAL_TRANSFORM=	s/^ftp/k&/;					\
-			s/^login/k&/;s/^klogin.access/login.access/;	\
-			s/^rcp/k&/;s/^rsh/k&/;				\
-			s/^su/k&/;s/^telnet/k&/
-PLIST_SUBST+=		KRB5_PREFIX=k
+KRB5_PREFIX=		k
+HEIMDAL_TRANSFORM=	s/^ftp/${KRB5_PREFIX}&/;			\
+			s/^login/${KRB5_PREFIX}&/;			\
+			s/^${KRB5_PREFIX}login.access/login.access/;	\
+			s/^rcp/${KRB5_PREFIX}&/;			\
+			s/^rsh/${KRB5_PREFIX}&/;			\
+			s/^su/${KRB5_PREFIX}&/;				\
+			s/^telnet/${KRB5_PREFIX}&/
 .else
+KRB5_PREFIX=		# empty
 HEIMDAL_TRANSFORM=	s/^ftp/k&/
-PLIST_SUBST+=		KRB5_PREFIX=
 .endif
+PLIST_SUBST+=		KRB5_PREFIX=${KRB5_PREFIX}
 CONFIGURE_ARGS+=	--program-transform-name="${HEIMDAL_TRANSFORM}"
 
 USE_PKGINSTALL=		yes
 OWN_DIRS_PERMS=		${HEIMDAL_STATEDIR} ${ROOT_USER} ${ROOT_GROUP} 0700
 RCD_SCRIPTS=		kdc
+
+# Fix some places in the Heimdal sources that don't point to the correct
+# Kerberized binaries when exec'ing programs.
+#
+SUBST_CLASSES+=		heimdal
+SUBST_STAGE.heimdal=	pre-configure
+SUBST_FILES.heimdal=	appl/rcp/rcp.c appl/rcp/rcp_locl.h		\
+			appl/rsh/rsh_locl.h				\
+			appl/telnet/telnetd/telnetd.h
+SUBST_SED.heimdal=							\
+	-e "/RSH_PROGRAM/s,rsh,${KRB5_PREFIX}rsh,g"			\
+	-e "/PATH_RSH/s,\"/usr/bin/rsh\",BINDIR \"${KRB5_PREFIX}rsh\",g" \
+	-e "/PATH_RSH/s,/rsh,/${KRB5_PREFIX}rsh,g"			\
+	-e "/PATH_LOGIN/s,/login,/${KRB5_PREFIX}login,g"
 
 pre-configure:
 	cd ${WRKSRC}; for file in lib/hdb/hdb.h; do			\
