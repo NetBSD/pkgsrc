@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3323 2003/09/11 12:43:59 jmmv Exp $
+$NetBSD: CHANGES,v 1.3324 2003/09/11 15:00:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3635,3 +3635,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgnomedb to 0.99.0 [jmmv 2003-09-11]
 	Updated mergeant to 0.12.1nb2 [jmmv 2003-09-11]
 	Updated glade2 to 2.0.0nb4 [jmmv 2003-09-11]
+	Updated ruby-postgresql to 0.7.1 [taca 2003-09-11]
