@@ -1,14 +1,7 @@
-$NetBSD: patch-ae,v 1.2 1998/12/19 12:31:47 tron Exp $
+$NetBSD: patch-ae,v 1.3 1999/04/07 10:45:43 agc Exp $
 
 --- src/services/name/Makefile.in.orig	Wed Dec 16 03:41:47 1998
 +++ src/services/name/Makefile.in	Sat Dec 19 12:55:42 1998
-@@ -1,3 +1,6 @@
-+# NetBSD
-+#
-+# There might as well be something here.
- # Makefile.in generated automatically by automake 1.3 from Makefile.am
- 
- # Copyright (C) 1994, 1995, 1996, 1997, 1998 Free Software Foundation, Inc.
 @@ -768,7 +771,7 @@
  
  
