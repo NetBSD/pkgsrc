@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7599 2004/10/29 08:28:42 tron Exp $
+$NetBSD: CHANGES,v 1.7600 2004/10/29 09:05:18 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4962,3 +4962,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cgoban-java to 2.6.6 [rh 2004-09-29]
 	Updated abiword to 2.0.11nb1 [xtraeme 2004-09-29]
 	Updated gphoto2 to 2.1.4nb2 [tron 2004-10-29]
+	Updated mkvtoolnix to 0.9.7 [salo 2004-10-29]
+	Updated mmg to 0.9.7 [salo 2004-10-29]
