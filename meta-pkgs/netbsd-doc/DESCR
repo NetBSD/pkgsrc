@@ -3,7 +3,6 @@ Documentation project to convert SGML/DocBook to HTML.
 
 A separate web browser is strongly recommended.
 
-Set the SGML_CATALOG_FILES env variable to a colon-separated list
-of catalog files:
-
-setenv SGML_CATALOG_FILES `find /usr/pkg/share/sgml -name catalog | tr '\012' :`
+Set the SGML_CATALOG_FILES environment variable to a colon-separated list
+of catalog files. You can produce such a list with
+	find /usr/pkg/share/sgml -name catalog | tr '\012' :
