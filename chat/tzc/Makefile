@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 21:26:25 grant Exp $
+# $NetBSD: Makefile,v 1.3 2003/09/16 19:51:21 seb Exp $
 #
 
 DISTNAME=	tzc-2.6.15
@@ -14,5 +14,5 @@ LDFLAGS+=       -lroken -lcrypto -lcom_err
 
 USE_BUILDLINK2=	YES
 
-.include "../zephyr-current/buildlink2.mk"
+.include "../zephyr/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
