@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/17 21:34:18 grant Exp $
+# $NetBSD: Makefile,v 1.18 2003/10/08 20:58:05 reed Exp $
 
 DISTNAME=	TeXmacs-1.0.1-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -10,7 +10,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.texmacs.org
 COMMENT=	GNU TeXmacs (free scientific text editor)
 
-DEPENDS+=	teTeX>=1.0:../../print/teTeX
+DEPENDS+=	teTeX{,2}>=1.0:../../print/teTeX
 
 ALL_TARGET=	TEXMACS
 
