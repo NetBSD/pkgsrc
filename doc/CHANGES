@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6872 2004/08/14 09:47:06 jdolecek Exp $
+$NetBSD: CHANGES,v 1.6873 2004/08/14 10:11:04 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3828,3 +3828,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmame to 0.85 [kristerw 2004-08-14]
 	Updated xmess to 0.85 [kristerw 2004-08-14]
 	Added suse-9.1 [jdolecek 2004-08-14]
+	Updated p0f to 2.0.4 [adrianp 2004-08-14]

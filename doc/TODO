@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2024 2004/08/13 11:32:01 adam Exp $
+$NetBSD: TODO,v 1.2025 2004/08/14 10:11:03 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -342,7 +342,6 @@ Suggested package updates
 	o openssl-0.9.7d [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
 	o opera-7.54
 	o oss-3.99.1e
-	o p0f-2.0.4
 	o p5-CGI-3.05
 	o p5-CGI-Application-3.1
 	o p5-Exception-Class-1.17
