@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2404 2003/06/03 09:22:55 jmmv Exp $
+$NetBSD: CHANGES,v 1.2405 2003/06/03 11:53:14 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2284,3 +2284,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated Canna-server-bin to 3.6pl3 [uebayasi 2003-06-03]
 	Removed lmule [jmmv 2003-06-03]
 	Added xmule-1.4.0 [jmmv 2003-06-03]
+	Updated hatari to 0.30 [salo 2003-06-03]
