@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/16 17:53:53 tv Exp $
+
+--- bin/.java_wrapper.orig	Mon Jul 31 19:14:25 2000
++++ bin/.java_wrapper	Mon Oct 16 12:11:18 2000
+@@ -29,17 +29,6 @@
+         ;;
+ esac
+ 
+-# Resolve symlinks. See 4152645.
+-while [ -L "$PRG" ]; do
+-    ls=`ls -ld "$PRG"`
+-    link=`expr "$ls" : '.*-> \(.*\)$'`
+-    if expr "$link" : '/' > /dev/null; then
+-	PRG="$link"
+-    else
+-	PRG="`dirname $PRG`/$link"
+-    fi
+-done
+-
+ APPHOME=`dirname "$PRG"`/..
+ JREHOME=$APPHOME/jre
+ 
+@@ -65,7 +54,7 @@
+ # Select vm type (if classic vm, also select thread type).
+ unset vmtype
+ unset ttype
+-DEFAULT_THREADS_FLAG=native
++DEFAULT_THREADS_FLAG=green
+ if [ "x$1" = "x-hotspot" ]; then
+     vmtype=hotspot
+     ttype=native_threads
