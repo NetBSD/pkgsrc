@@ -1,7 +1,12 @@
-$NetBSD: patch-ae,v 1.1 1999/09/23 01:33:30 fredb Exp $
+$NetBSD: patch-ae,v 1.2 1999/10/05 19:25:55 fredb Exp $
 
---- configure.orig	Wed Apr 21 21:47:53 1999
-+++ configure	Tue Sep 21 15:55:01 1999
+Note to Porters
+===============
+
+This file is generated from patch-ad. See the notes in that file.
+
+--- configure.orig	Wed Sep 22 11:18:09 1999
++++ configure	Tue Oct  5 11:40:03 1999
 @@ -1675,8 +1675,55 @@
  
  
@@ -429,7 +434,7 @@ $NetBSD: patch-ae,v 1.1 1999/09/23 01:33:30 fredb Exp $
 -echo "configure:2425: checking how to call getpeername?" >&5
 +echo "configure:2472: checking how to call getpeername?" >&5
  for sock_t in 'struct sockaddr' 'void'; do
- for getpeername_length_t in 'size_t' 'int' 'unsigned int' 'socklen_t'; do
+ for getpeername_length_t in 'size_t' 'int' 'unsigned int' 'long unsigned int' 'socklen_t'; do
  cat > conftest.$ac_ext <<EOF
 -#line 2429 "configure"
 +#line 2476 "configure"
