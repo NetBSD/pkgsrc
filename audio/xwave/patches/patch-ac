@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 10:36:23 agc Exp $
+$NetBSD: patch-ac,v 1.3 2001/11/18 15:03:39 itohy Exp $
 
---- orig/xwave/src/au.c	Mon Nov 25 13:32:18 1996
-+++ src/au.c	Sat Sep 13 04:18:56 1997
+--- src/au.c.orig	Thu Aug 13 08:27:09 1998
++++ src/au.c	Sun Nov 18 22:22:37 2001
 @@ -32,7 +32,7 @@
  
  #ifdef linux
@@ -11,3 +11,27 @@ $NetBSD: patch-ac,v 1.2 1998/08/07 10:36:23 agc Exp $
  #include <machine/endian.h>
  #elif defined (sgi)
  #include <sys/endian.h>
+@@ -212,16 +212,19 @@
+ {
+    switch (af.comp) {
+     case AF_PCM:
+-      return(lseek(af.fd,pos,mode));
++      break;
+     case AF_MULAW:
+-      return(lseek(af.fd,pos/2,mode));
++      pos /= 2;
++      break;
++    default:
++      return(AF_ERROR);
+    }
+-   return(AF_ERROR);
++   return(lseek(af.fd, mode == SEEK_SET ? pos + af.headoffs : pos, mode));
+ }
+ 
+ int au_close(Audio_File af)
+ {
+-   if (au_seek(af,0,SEEK_SET)==AF_ERROR) return(AF_ERROR);
++   if (lseek(af.fd,0,SEEK_SET)==-1) return(AF_ERROR);
+    if (au_new (&af)==AF_ERROR) return(AF_ERROR);
+    return(close(af.fd));
+ }
