@@ -1,4 +1,4 @@
-# $NetBSD: logic,v 1.1 2002/12/26 17:08:57 jlam Exp $
+# $NetBSD: logic,v 1.2 2003/01/10 09:41:53 jlam Exp $
 
 quotedarg=no
 addtocache=no
@@ -28,7 +28,7 @@ case $arg in
 	arg="$qarg"
 	addtocache=yes
 	;;
-       -[ILRl]*|-Wl,*|/usr/lib/lib*|@LOCALBASE@/*/lib*|@X11BASE@/*/lib*)
+-[ILRl]*|-Wl,*|/usr/lib/lib*|@LOCALBASE@/*/lib*|@X11BASE@/*/lib*)
 	arg=`$echo "X$qarg" | $Xsed @_BLNK_TRANSFORM_SED@`
 	addtocache=yes
 	;;
