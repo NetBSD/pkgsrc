@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5499 2004/04/10 03:10:22 snj Exp $
+$NetBSD: CHANGES,v 1.5500 2004/04/10 05:34:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1869,3 +1869,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libxklavier to 1.01 [jmmv 2004-04-09]
 	Updated smlnj to 110.45 [snj 2004-04-09]
 	Updated snort to 2.1.2 [snj 2004-04-10]
+	Updated qmail to 1.03nb5 [schmonz 2004-04-10]
