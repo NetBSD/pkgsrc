@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/12/13 18:24:33 cjep Exp $
+
+--- Makefile.orig	Sat Oct 13 20:42:17 2001
++++ Makefile
+@@ -1,8 +1,12 @@
+ 
+-CFLAGS=-g -W -Wall -Wno-unused -O3
++PREFIX=/usr/local
++
++#CFLAGS=-g -W -Wall -Wno-unused -O3
++CFLAGS=-W -Wall -Wno-unused
+ 
+ par: checkpar.o makepar.o rwpar.o rs.o md5.o fileops.o main.o readoldpar.o
+-	$(CC) -o $@ $^
++#	$(CC) -o $@ $^
++	$(CC) -o $@ $>
+ 
+ clean:
+ 	rm -f core par par.exe *.o
+@@ -10,7 +14,7 @@ clean:
+ all: par
+ 
+ install: par
+-	install par ${HOME}/bin/
++	install -c -m 755 par ${PREFIX}/bin/
+ 
+ main.o: main.c checkpar.h types.h par.h rwpar.h
+ checkpar.o: checkpar.c checkpar.h util.h fileops.h types.h par.h

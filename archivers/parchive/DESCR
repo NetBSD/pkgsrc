@@ -1,0 +1,9 @@
+The idea behind parchive is to provide a tool to apply the data-recovery
+capability concepts of RAID-like systems to the posting and recovery of 
+multi-part archives on Usenet. Current filespec and clients support the
+'Reed-Soloman Code' implementation that allows for recovery of any 'X' 
+volumes for 'X' parity volumes present. 
+
+The key to this mission is a clean file format specification which provides 
+all the necessary capabilities for programs to easily verify and regenerate 
+single missing parts out of a set of archives. 
