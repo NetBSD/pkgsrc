@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 1999/05/10 22:37:13 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/05/29 10:31:06 tron Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/03/15 02:01:27 steve Exp
 
-DISTNAME=       analog3.2
-PKGNAME=        analog-3.2
+DISTNAME=       analog3.3
+PKGNAME=        analog-3.3
 CATEGORIES=	www
 MASTER_SITES=   http://www.statslab.cam.ac.uk/~sret1/analog/ \
 		http://www.web42.com/analog/ \
