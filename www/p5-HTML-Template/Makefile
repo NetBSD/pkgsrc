@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2001/11/26 06:50:36 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/22 12:08:54 uebayasi Exp $
 
-DISTNAME=		HTML-Template-2.2
+DISTNAME=		HTML-Template-2.5
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5htm
 CATEGORIES=		www perl5
