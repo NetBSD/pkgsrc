@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.pkg.dist,v 1.23 2003/07/21 17:50:06 jmmv Exp $
+# $NetBSD: IRIX.pkg.dist,v 1.24 2003/07/22 23:21:18 jmmv Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -411,6 +411,10 @@
 	games
         ..
 	locale
+            af
+                LC_MESSAGES
+                ..
+            ..
             am
                 LC_MESSAGES
                 ..
@@ -720,6 +724,14 @@
                 ..
             ..
             ta
+                LC_MESSAGES
+                ..
+            ..
+            tg
+                LC_MESSAGES
+                ..
+            ..
+            th
                 LC_MESSAGES
                 ..
             ..
