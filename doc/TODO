@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.172 2003/01/11 00:45:39 wiz Exp $
+$NetBSD: TODO,v 1.173 2003/01/11 04:43:56 rh Exp $
 
 Suggested new packages
 ======================
@@ -248,10 +248,6 @@ Suggested pkgsrc enhancements
 =============================
 
 	o Add a sort check to pkglint for PLISTs.
-
-	o Add a PKGLOCALEDIR check to pkglint. Specifically, if
-	  PKGLOCALEDIR is in PLIST and USE_BUILDLINK2 and USE_PKGLOCALEDIR
-	  are not set to "yes" in the Makefile magic, then flag an error.
 
 	o Make pkgsrc work on more operating systems.
 
