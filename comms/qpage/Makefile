@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/06/11 06:34:22 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/01/24 00:48:37 wiz Exp $
 #
 
 DISTNAME=	qpage-3.3
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.qpage.org/
 COMMENT=	Simple and efficient paging (SNPP) client and server
-
-ONLY_FOR_PLATFORM=	SunOS-*-*        # untested on NetBSD
 
 GNU_CONFIGURE=	yes
 
