@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/06/20 16:50:11 drochner Exp $
+
+--- ../amaya/Makefile.libwww.orig	Sat Jun 17 22:14:35 2000
++++ ../amaya/Makefile.libwww	Sat Jun 17 22:14:59 2000
+@@ -42,7 +42,7 @@
+ 		-I$(THOTDIR)../libwww/modules/md5
+ 
+ # this dependency calls the ../Makefile rule that compiles libwww
+-AMAYA_LIBWWW_SRC= ../libz.a amaya_comp_libwww
++AMAYA_LIBWWW_SRC= amaya_comp_libwww
+ 
+ amaya_comp_libwww : force
+ 		@(cd .. ; $(MAKE) libwww)
