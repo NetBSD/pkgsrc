@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2004/10/30 04:35:26 minskim Exp $
+# $NetBSD: Makefile,v 1.42 2004/12/28 21:45:59 jmmv Exp $
 #
 
-DISTNAME=		nautilus-2.8.1
-PKGREVISION=		1
+DISTNAME=		nautilus-2.8.2
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus/2.8/}
 EXTRACT_SUFX=		.tar.bz2
@@ -25,6 +24,8 @@ PKGCONFIG_OVERRIDE+=	libnautilus-extension/libnautilus-extension.pc.in
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 GCONF2_SCHEMAS=		apps_nautilus_preferences.schemas
+
+BUILDLINK_DEPENDS.eel2+=	eel2>=2.8.2
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
