@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1101 2002/12/05 05:41:39 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1102 2002/12/07 02:37:56 schmonz Exp $
 #
 # This file is in the public domain.
 #
@@ -174,7 +174,7 @@ PREFIX=			${LOCALBASE}
 .if defined(USE_IMAKE)
 .  if exists(${LOCALBASE}/lib/X11/config/buildlinkX11.def) || \
       exists(${X11BASE}/lib/X11/config/buildlinkX11.def)
-IGNORE+= "${PKGNAME} uses imake, but the buildlink-x11 package was found." \
+PKG_FAIL_REASON+= "${PKGNAME} uses imake, but the buildlink-x11 package was found." \
 	 "    Please deinstall it (pkg_delete buildlink-x11)."
 .  endif
 .endif	# USE_IMAKE
@@ -1053,27 +1053,27 @@ ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
 
 .if !defined(NO_IGNORE)
 .  if (defined(NO_BIN_ON_CDROM) && defined(FOR_CDROM))
-IGNORE+= "${PKGNAME} may not be placed in binary form on a CDROM:" \
+PKG_FAIL_REASON+= "${PKGNAME} may not be placed in binary form on a CDROM:" \
          "    "${NO_BIN_ON_CDROM:Q}
 .  endif
 .  if (defined(NO_SRC_ON_CDROM) && defined(FOR_CDROM))
-IGNORE+= "${PKGNAME} may not be placed in source form on a CDROM:" \
+PKG_FAIL_REASON+= "${PKGNAME} may not be placed in source form on a CDROM:" \
          "    "${NO_SRC_ON_CDROM:Q}
 .  endif
 .  if (defined(RESTRICTED) && defined(NO_RESTRICTED))
-IGNORE+= "${PKGNAME} is restricted:" \
+PKG_FAIL_REASON+= "${PKGNAME} is restricted:" \
 	 "    "${RESTRICTED:Q}
 .  endif
 .  if !(${MKCRYPTO} == "YES" || ${MKCRYPTO} == yes)
 .    if defined(CRYPTO)
-IGNORE+= "${PKGNAME} may not be built, because it utilizes strong cryptography"
+PKG_FAIL_REASON+= "${PKGNAME} may not be built, because it utilizes strong cryptography"
 .    endif
 .  endif
 .  if defined(USE_X11) && !exists(${X11BASE})
-IGNORE+= "${PKGNAME} uses X11, but ${X11BASE} not found"
+PKG_FAIL_REASON+= "${PKGNAME} uses X11, but ${X11BASE} not found"
 .  endif
 .  if defined(BROKEN)
-IGNORE+= "${PKGNAME} is marked as broken:" ${BROKEN:Q}
+PKG_FAIL_REASON+= "${PKGNAME} is marked as broken:" ${BROKEN:Q}
 .  endif
 
 .  if defined(LICENSE)
@@ -1085,7 +1085,7 @@ _ACCEPTABLE=	yes
 .      endfor	# _lic
 .    endif	# ACCEPTABLE_LICENSES
 .    ifndef _ACCEPTABLE
-IGNORE+= "${PKGNAME} has an unacceptable license: ${LICENSE}." \
+PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license: ${LICENSE}." \
 	 "    To build this package, add this line to your /etc/mk.conf:" \
 	 "    ACCEPTABLE_LICENSES+=${LICENSE}"
 .    endif	# _ACCEPTABLE
@@ -1107,25 +1107,25 @@ __PLATFORM_OK?=	yes
 .    endif	# MACHINE_PLATFORM
 .  endfor	# __tmp__
 .  if !defined(__PLATFORM_OK)
-IGNORE+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
+PKG_FAIL_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
 .  endif	# !__PLATFORM_OK
 
 #
 # Now print some error messages that we know we should ignore the pkg
 #
-.  if defined(IGNORE)
+.  if defined(PKG_FAIL_REASON) || defined(PKG_SKIP_REASON)
 fetch checksum extract patch configure all build install package \
 update install-depends:
 .    if defined(IGNORE_SILENT)
 	@${DO_NADA}
 .    else
-	@for str in ${IGNORE} ; \
+	@for str in ${PKG_FAIL_REASON} ${PKG_SKIP_REASON} ; \
 	do \
 		${ECHO} "${_PKGSRC_IN}> $$str" ; \
 	done
 .    endif
-.    if defined(IGNORE_FAIL)
-	${FALSE}
+.    if defined(PKG_FAIL_REASON)
+	@${FALSE}
 .    endif
 .  endif # IGNORE
 .endif # !NO_IGNORE
@@ -1477,7 +1477,7 @@ show-root-dirs:
 
 .if !target(show-distfiles)
 show-distfiles:
-.  if defined(IGNORE)
+.  if defined(PKG_FAIL_REASON)
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .  else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -1490,7 +1490,7 @@ show-distfiles:
 
 .if !target(show-downlevel)
 show-downlevel:
-.  if defined(IGNORE)
+.  if defined(PKG_FAIL_REASON)
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .  else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -1517,7 +1517,7 @@ show-installed-depends:
 
 .if !target(show-pkgsrc-dir)
 show-pkgsrc-dir:
-.  if defined(IGNORE)
+.  if defined(PKG_FAIL_REASON)
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .  else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
