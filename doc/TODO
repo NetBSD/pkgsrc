@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2261 2004/10/26 18:03:57 reed Exp $
+$NetBSD: TODO,v 1.2262 2004/10/27 14:27:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -245,6 +245,7 @@ Suggested package updates
 	o amavisd-new-2.1.2 [pkg/26843]
 	o anjuta-1.2.2
 	o ap-jk-5.0.25
+	o ap2-perl-1.99.17
 	o apcupsd-3.10.13
 	o apr-1.0.0
 	o aqsis-0.9.1
@@ -254,6 +255,7 @@ Suggested package updates
 	o auctex-11.53
 	o avidemux-2.0.30
 	o balsa-1.4.4
+	o bins-1.1.27
 	o bioperl-1.4
 	o bitchx-1.1
 	o blender-2.34
@@ -289,10 +291,12 @@ Suggested package updates
 	o delegate-8.9.2
 	o dict-client-1.9.11
 	o dict-server-1.9.11
+	o dillo-0.8.3
 	o dmalloc-5.3.0
 	o docbook-4.3
 	o docbook-simple-1.0CR2
 	o docsis-0.9.1
+	o dopewars-1.5.10
 	o doxygen-1.3.9.1
 	o drscheme-208
 	o dvipng-1.2 [http://sourceforge.net/projects/dvipng/]
@@ -320,6 +324,7 @@ Suggested package updates
 	o freeciv-1.14.2
 	o freetds-0.62.3
 	o fsviewer-0.2.5
+	o galeon-1.3.18
 	o gdm-2.6.0.5
 	o generator-0.35
 	o gettext-0.14.1
@@ -334,6 +339,7 @@ Suggested package updates
 	o gpsdrive-2.09
 	o grace-5.1.17
 	o gstreamer-0.8.7
+	o gtkballs-3.1.4
 	o gtkglext-1.0.6
 	o gtkmm-2.4.5
 	o gtksee-0.5.6 [pkg/26372]
@@ -359,6 +365,7 @@ Suggested package updates
 	o jakarta-tomcat-3.3.1a
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
+	o koffice-1.3.4
 	o kth-kerberos-1.2.2
 	o larswm-7.5.3
 	o latex2rtf-1.9.15
@@ -389,6 +396,7 @@ Suggested package updates
 	o midnight-commander-4.6.0 [pkgsrc-wip]
 	o mimedefang-2.45
 	o minicom-2.1
+	o mkvtoolnix-0.9.7
 	o mldonkey-2.5.22
 	o mowitz-0.3.0
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
@@ -419,12 +427,13 @@ Suggested package updates
 	o onyx-5.1.1
 	o openal-20040215
 	o openoffice-1.1.3
-	o openssl-0.9.7d [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
+	o openssl-0.9.7e [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
 	o oss-3.99.1h
 	o p5-CGI-3.05
 	o p5-CGI-Application-3.1
 	o p5-Exception-Class-1.17
 	o p5-gtk2-1.060
+	o p5-libapreq2-2.04.03
 	o pdmenu-1.2.81
 	o perl-5.8.5
 	o pgplot-5.2 [grant]
@@ -477,7 +486,7 @@ Suggested package updates
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
 	o stellarium-0.6.1
-	o svk-0.23
+	o svk-0.24
 	o sweep-0.8.3
 	o sylpheed-0.9.99
 	o tcl-expect-5.39.0
@@ -506,7 +515,7 @@ Suggested package updates
 	o wavesurfer-1.5.3
 	o wdm-1.27
 	o wesnoth-0.8.5
-	o windowmaker-0.90.0
+	o windowmaker-0.91.0 [pkg/27474]
 	o wine-20041019
 	o wmakerconf-2.9.2
 	o wmweather-2.4.3
@@ -529,6 +538,7 @@ Suggested package updates
 	o xmcd-3.3.0
 	o xmess-0.87
 	o xmlstarlet-0.9.5
+	o xmltv-0.5.36
 	o xmms-alarm-0.3.5
 	o xmms-crossfade-0.3.7
 	o xmms-iris-0.12
