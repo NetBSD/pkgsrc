@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/04/17 10:59:56 shell Exp $
+$NetBSD: distinfo,v 1.5 2003/05/19 12:16:51 mjl Exp $
 
-SHA1 (XML-DOM-1.39.tar.gz) = d6c4f014d82382cd4597f3498170f6e29aa8ac58
-Size (XML-DOM-1.39.tar.gz) = 114980 bytes
+SHA1 (XML-DOM-1.42.tar.gz) = 093b3e02c5475c0d9b5cc7431a075101faa4283e
+Size (XML-DOM-1.42.tar.gz) = 116617 bytes
