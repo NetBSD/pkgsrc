@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6547 2004/07/14 00:25:11 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6548 2004/07/14 01:14:23 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3382,3 +3382,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated eclipse to 3.0 [jschauma 2004-07-13]
 	Updated mathomatic to 11.3 [minskim 2004-07-13]
 	Updated jabberd2 to 2.0s3 [xtraeme 2004-07-14]
+	Added nrg2iso-0.2 [xtraeme 2004-07-14]
