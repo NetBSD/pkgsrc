@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/08/20 15:17:09 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 1998/09/27 23:21:56 hubertf Exp $
 #
 
 DISTNAME=       imap-4.2
@@ -16,9 +16,12 @@ INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
 INST_LIB=	${LIBTOOL} ${INSTALL_DATA}
 CONFLICTS=	imap-uw-4.1
 
+MESSAGE_FILE=	${WRKDIR}/.MESSAGE
+
 do-configure:
 	@${SED} -e 's|@PREFIX@|${PREFIX}|' ${WRKSRC}/src/imapd/imapd.8c >${WRKSRC}/imapd.8
 	@${SED} -e 's|@PREFIX@|${PREFIX}|' ${WRKSRC}/src/ipopd/ipopd.8c >${WRKSRC}/ipopd.8
+	@${SED} -e 's|@PREFIX@|${PREFIX}|' ${PKGDIR}/MESSAGE >${MESSAGE_FILE}
 
 do-build:
 	cd ${WRKSRC} && ${MAKE} neb PREFIX=${PREFIX} CC="${LIBTOOL} ${CC}"
