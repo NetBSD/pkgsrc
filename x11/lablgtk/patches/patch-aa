@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/10/16 16:40:26 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2003/01/19 10:59:02 salo Exp $
 
 --- src/Makefile.orig	Fri Aug  9 02:27:19 2002
 +++ src/Makefile
@@ -16,27 +16,27 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/10/16 16:40:26 dillo Exp $
 -	cp lablgtktop varcc $(INSTALLDIR)
 -	if test -f lablgtktop_t; then cp lablgtktop_t $(INSTALLDIR); fi
 -	cp -p *.h $(INSTALLDIR)
-+	if test -d $(INSTALLDIR); then : ; else ${INSTALL_DATA_DIR} ${INSTALLDIR}; fi
++	if test -d $(INSTALLDIR); then : ; else ${BSD_INSTALL_DATA_DIR} ${INSTALLDIR}; fi
 +	for F in $(ALLOBJS:.cmo=.cmi) $(THOBJS:.cmo=.cmi) *.mli \
 +		$(ALLOBJS:.cmo=.ml) $(ALLTHOBJS:.cmo=.ml) \
 +		$(MLLIBS) $(THOBJS) $(INITOBJS) $(THINITOBJS) $(CLIBS) *.h; \
 +	do \
-+	    ${INSTALL_DATA} $$F ${INSTALLDIR}; \
++	    ${BSD_INSTALL_DATA} $$F ${INSTALLDIR}; \
 +	done
-+	${INSTALL_PROGRAM} lablgtktop $(INSTALLDIR)
-+	${INSTALL_SCRIPT} varcc $(INSTALLDIR)
-+	if test -f lablgtktop_t; then ${INSTALL_PROGRAM} lablgtktop_t $(INSTALLDIR); fi
++	${BSD_INSTALL_PROGRAM} lablgtktop $(INSTALLDIR)
++	${BSD_INSTALL_SCRIPT} varcc $(INSTALLDIR)
++	if test -f lablgtktop_t; then ${BSD_INSTALL_PROGRAM} lablgtktop_t $(INSTALLDIR); fi
  	if test -f lablgtk.cmxa; then $(MAKE) installopt; fi
  	if test -f dlllablgtk.so; then \
 -	   cp $(CLIBS:lib%.a=dll%.so) $(DLLDIR) || \
 -	   echo "Couldn't install dlls in default location"; \
 +	   for F in $(CLIBS:lib%.a=dll%.so); \
 +	   do \
-+		${INSTALL_DATA} $$F $(DLLDIR); \
++		${BSD_INSTALL_DATA} $$F $(DLLDIR); \
 +	   done; \
  	fi
 -	cp lablgtk $(BINDIR)
-+	${INSTALL_SCRIPT} lablgtk $(BINDIR)
++	${BSD_INSTALL_SCRIPT} lablgtk $(BINDIR)
  	if test -f lablgladecc; then cp lablgladecc $(BINDIR); fi
  
  installopt:
@@ -47,13 +47,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/10/16 16:40:26 dillo Exp $
 +	for F in $(MLLIBS:.cma=.cmxa) $(MLLIBS:.cma=.a) \
 +		$(ALLOBJS:.cmo=.cmx) $(INITOBJS:.cmo=.o); \
 +	do \
-+	    ${INSTALL_DATA} $$F $(INSTALLDIR); \
++	    ${BSD_INSTALL_DATA} $$F $(INSTALLDIR); \
 +	done
  	if test -f gtkThread.cmx; then \
 -	   cp $(THOBJS:.cmo=.cmx) $(THOBJS:.cmo=.o) $(INSTALLDIR); fi
 +	    for F in $(THOBJS:.cmo=.cmx) $(THOBJS:.cmo=.o); \
 +	    do \
-+		${INSTALL_DATA} $$F $(INSTALLDIR); \
++		${BSD_INSTALL_DATA} $$F $(INSTALLDIR); \
 +	    done; \
 +	fi
  
