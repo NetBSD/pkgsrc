@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/09 19:37:48 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/09 20:35:03 jlam Exp $
 
 .include "Makefile.common"
 
@@ -41,7 +41,6 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
 PKG_GROUPS=		${CYRUS_GROUP}
 PKG_USERS=		${CYRUS_USER}:${CYRUS_GROUP}::::${SH}
-RCD_SCRIPTS=		saslauthd
 OWN_DIRS=		${PLUGINDIR}
 
 MESSAGE_SUBST+=		_PLUGINDIR=${_PLUGINDIR}
