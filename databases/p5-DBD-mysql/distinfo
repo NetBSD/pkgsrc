@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/04/14 14:11:19 veego Exp $
+$NetBSD: distinfo,v 1.5 2002/07/07 12:34:49 wiz Exp $
 
-SHA1 (Msql-Mysql-modules-1.2219.tar.gz) = 23d9b4b44e5c02930b7b1f60dd70a99ad25e966f
-Size (Msql-Mysql-modules-1.2219.tar.gz) = 195634 bytes
-SHA1 (patch-aa) = 2aabc77faf189de8fac6590955d9837eff8ad16b
+SHA1 (DBD-mysql-2.1017.tar.gz) = 7417e03bcbb77f0613d8616a617cbc8596854c8c
+Size (DBD-mysql-2.1017.tar.gz) = 93638 bytes
