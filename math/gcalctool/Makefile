@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2004/01/03 18:49:45 reed Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/14 02:27:17 xtraeme Exp $
 #
 
-DISTNAME=		gcalctool-4.2.83
-PKGREVISION=		6
+DISTNAME=		gcalctool-4.3.35
 CATEGORIES=		math gnome
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=calctool/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcalctool/4.3/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		sab@posix.org.uk
 HOMEPAGE=		http://calctool.sourceforge.net/
