@@ -1,0 +1,20 @@
+$NetBSD: patch-ag,v 1.1 1999/08/29 12:26:23 kim Exp $
+
+--- mf/Makefile.var.orig	Mon Mar 23 20:11:06 1998
++++ mf/Makefile.var	Sun Aug 29 08:00:16 1999
+@@ -172,6 +172,7 @@
+ 	config/mf.mipsos4 \
+ 	config/mf.mipsos5 \
+ 	config/mf.ncr \
++	config/mf.netbsd \
+ 	config/mf.nextstep2 \
+ 	config/mf.nextstep3 \
+ 	config/mf.osf1 \
+@@ -214,6 +215,7 @@
+ 	config/os-mipsos4.h \
+ 	config/os-mipsos5.h \
+ 	config/os-ncr.h \
++	config/os-netbsd.h \
+ 	config/os-nextstep2.h \
+ 	config/os-nextstep3.h \
+ 	config/os-osf1.h \

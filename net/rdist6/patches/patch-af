@@ -1,0 +1,26 @@
+$NetBSD: patch-af,v 1.1 1999/08/29 12:26:23 kim Exp $
+
+--- src/message.c.orig	Fri Jul 19 13:01:56 1996
++++ src/message.c	Sun Aug 29 07:50:08 1999
+@@ -467,10 +467,21 @@
+ 		(void) sprintf(tempfile, "%s/%s", cp, _RDIST_TMP);
+ 
+ 		msgfac->mf_filename = tempfile;
++#if	defined(NETBSD)
++		{
++			int	fd;
++
++			if ((fd = mkstemp(msgfac->mf_filename)) < 0 ||
++			    (msgfac->mf_fptr = fdopen(fd, "w")) == NULL)
++				fatalerr("Cannot open notify file for writing: %s: %s.",
++				      msgfac->mf_filename, SYSERR);
++		}
++#else
+ 		(void) mktemp(msgfac->mf_filename);
+ 		if ((msgfac->mf_fptr = fopen(msgfac->mf_filename, "w"))==NULL)
+ 			fatalerr("Cannot open notify file for writing: %s: %s.",
+ 			      msgfac->mf_filename, SYSERR);
++#endif
+ 		debugmsg(DM_MISC, "Created notify temp file '%s'",
+ 			 msgfac->mf_filename);
+ 	}

@@ -1,0 +1,34 @@
+$NetBSD: patch-ah,v 1.1 1999/08/29 12:26:23 kim Exp $
+
+--- Makefile.local.orig	Mon Feb  5 13:50:27 1996
++++ Makefile.local	Sun Aug 29 07:50:08 1999
+@@ -8,7 +8,9 @@
+ # BIN_DIR variable, you would uncomment the following line
+ # or add your own line.
+ #
+-#BIN_DIR	= /usr/bin
++BIN_DIR=	${PREFIX}/bin
++
++CLIENT=		${RDIST6_NAME}
+ 
+ #
+ # Add any local definitions you want pass to the compiler to DEFS_LOCAL
+@@ -28,6 +30,7 @@
+ #
+ #OPT		= -O
+ #OPT		=
++OPT= -O
+ 
+ #
+ # You may want to use your own C Compiler (such as GCC) by enabling
+@@ -45,8 +48,8 @@
+ #
+ # Site specific Man Page configuration.
+ #
+-#MAN_1_DIR	= /usr/local/man/man1
+-#MAN_8_DIR	= /usr/local/man/man8
++MAN_1_DIR	= ${PREFIX}/man/man1
++MAN_8_DIR	= ${PREFIX}/man/man8
+ #MAN_OWNER	= bin
+ #MAN_GROUP	= bin
+ #MAN_MODE	= 644
