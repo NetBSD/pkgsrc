@@ -1,0 +1,21 @@
+gsmc is a GTK application that allow to do all the calculation
+usually done on a Smith Chart.  It permits to make calculation
+for network composed by resistor, capacitor, inductance, and
+transmission line (also as stub).  Network topology is
+limited to series, parallel and as trasmissive
+for trasmission line. No series connection are allowed in parallel
+branch, neither parallel connection in series branch.
+Trasmission line can be placed as quadrupole or as a parallel or
+series stub, either opened or shorted at the other end.
+
+Calculation procedure starts with setting the initial impedance to be
+matched, next network elements are added and tuned to obtain the
+desidered impedance value.
+
+The network so obtained can be saved in spice format for other analysis;
+current work can be saved for succesive retrieve.
+
+The initial (start) impedance is thought as "the load" so when
+adding a trasmission line placed as a quadrupole rotation is
+clockwise, going "toward generator"; generator is placed after the
+last network element, as can be seen from spice output.
