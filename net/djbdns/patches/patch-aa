@@ -1,5 +1,7 @@
---- hier.c.orig	Sat Sep 23 17:37:08 2000
-+++ hier.c	Sat Sep 23 17:37:52 2000
+$NetBSD: patch-aa,v 1.1 2000/12/29 16:42:55 hubertf Exp $
+
+--- hier.c.orig	Thu Dec 28 16:35:18 2000
++++ hier.c	Thu Dec 28 16:35:49 2000
 @@ -2,7 +2,7 @@
  
  void hier()
