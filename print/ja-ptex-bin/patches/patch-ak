@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2003/03/15 20:00:27 kei Exp $
+
+--- texk/configure.orig	Fri Mar 14 19:35:52 2003
++++ texk/configure	Fri Mar 14 19:37:12 2003
+@@ -1894,7 +1894,7 @@
+ done
+ 
+ 
+-subdirs="kpathsea web2c $ESUBDIRS"
++subdirs="kpathsea web2c web2c/ptex-${PTEX_VERS} mendexk${MENDEXK_VERS} $ESUBDIRS"
+ 
+ 
+ trap '' 1 2 15
