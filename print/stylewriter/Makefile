@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/04/16 17:36:46 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/04/20 16:33:56 jlam Exp $
 #
 
 DISTNAME=	stylewriter
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.pobox.com/~monroe/styl/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.pobox.com/~monroe/styl/
 
-DEPENDS+=	ghostscript-5.50nb1:../../print/ghostscript5
+DEPENDS+=	ghostscript*-5.50nb2:../../print/ghostscript5
 DEPENDS+=	enscript-1.6.1:../../print/enscript
 
 NO_CONFIGURE=	yes
@@ -19,7 +19,7 @@ FILTER_DIR=	libexec/stylewriter
 FILTERS=	direct_stylpbm direct_stylps \
 		stylascii stylascii.a4 \
 		stylps stylps-color stylps-color.a4 stylps.a4
-FILTER_SED=	-e "s,/usr/local/gnu/bin/gs,${LOCALBASE}/bin/gstty,g" \
+FILTER_SED=	-e "s,/usr/local/gnu/bin/gs,${LOCALBASE}/bin/gs,g" \
 		-e "s,/usr/local,${PREFIX},g"
 PRINTCAP_SED=	-e "s,/var/spool/stylps,/var/spool/lpd/stylps,g" \
 		-e "s,/usr/local/sbin,${PREFIX}/libexec/stylewriter,g"
