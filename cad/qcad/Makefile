@@ -1,40 +1,35 @@
-# $NetBSD: Makefile,v 1.10 2003/03/15 00:25:42 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.11 2003/04/29 21:51:53 jtb Exp $
 
-DISTNAME=		qcad-1.4.7-src
-PKGNAME=		qcad-1.4.7
-PKGREVISION=		1
+DISTNAME=		qcad-1.5.4-src
+PKGNAME=		qcad-1.5.4
 CATEGORIES=		cad
-MASTER_SITES=		http://www.qcad.org/archives/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=qcad/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.qcad.org/
 COMMENT=		2D CAD System
 
+WRKSRC=			${WRKDIR}/${PKGNAME}
+
 USE_BUILDLINK2=		# defined
 USE_X11=		# defined
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
+MAKE_ENV+=		QTDIR=${BUILDLINK_PREFIX.qt3}
 
 do-configure:
-	@for f in rappwin.cpp rconfig.cpp relement.cpp rfile.cpp	\
-	rfonts.cpp; do							\
-		${SED} -e 's:@PREFIX@:'${PREFIX}':g' ${WRKSRC}/$$f	\
-		> ${WRKSRC}/$$f.tmp && ${MV} ${WRKSRC}/$$f.tmp		\
-		${WRKSRC}/$$f;						\
+	for f in rappwin.cpp relement.cpp rfonts.cpp rprgdef.h; do	\
+		${SED} -e 's:@PREFIX@:'${PREFIX}':g'			\
+			-e 's:@X11BASE@:${X11BASE}:g'			\
+		 ${WRKSRC}/$$f	> ${WRKSRC}/$$f.tmp			\
+		&& ${MV} ${WRKSRC}/$$f.tmp ${WRKSRC}/$$f;		\
 	done
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/qcad ${PREFIX}/bin
-	for f in `${FIND} ${WRKSRC} -type f -print`; do			\
-	${CHOWN} ${SHAREOWN}:${SHAREGRP} $$f;				\
-	${CHMOD} ${SHAREMODE} $$f;					\
-	done
-	for f in `${FIND} ${WRKSRC} -type d -print`; do 		\
-	${CHOWN} ${SHAREOWN}:${SHAREGRP} $$f; 				\
-	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/qcad
-	(cd ${WRKSRC}; ${GTAR} cf - AUTHORS COPYING README		\
-	TODO cur doc examples fonts hatches libraries messages xpm) |	\
-	(cd ${PREFIX}/share/qcad; ${GTAR} vxf - )
+	cd ${WRKSRC} && ${PAX} -rw AUTHORS COPYING README TODO cur doc	\
+		examples fonts hatches libraries messages po xpm	\
+		${PREFIX}/share/qcad
 
-.include "../../x11/qt2-libs/buildlink2.mk"
+.include "../../x11/qt3-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
