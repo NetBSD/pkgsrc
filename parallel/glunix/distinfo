@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:38:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 15:22:46 agc Exp $
 
-MD5 (glunix-release-1-0a.tar.gz) = 4f04ccab3caad96273a141b087adb06a
-MD5 (makedepend.tar.gz) = 9f940bba114710d83810f3cd97fd4983
+SHA1 (glunix-release-1-0a.tar.gz) = 8c69f5252e00fc4143a088c9b555b5e0c5b350f8
+Size (glunix-release-1-0a.tar.gz) = 1777769 bytes
+SHA1 (makedepend.tar.gz) = 9bbe5fb63d44860114fe4cbc57dbd37cb22aa725
+Size (makedepend.tar.gz) = 29283 bytes
 SHA1 (patch-aa) = a4f4e284ba4a473bc37640e6d5d71441613e97ac
 SHA1 (patch-ab) = 62f9b405aec0a54a39e54da0743357dba5f52ee4
 SHA1 (patch-ac) = eaa45b9caf6ecec7cd0184c680dc68633120a2a8
