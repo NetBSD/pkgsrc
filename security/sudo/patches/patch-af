@@ -1,19 +1,22 @@
-$NetBSD: patch-af,v 1.10 2002/01/17 16:32:05 taca Exp $
+$NetBSD: patch-af,v 1.11 2003/04/01 16:07:22 wiz Exp $
 
---- configure.in.orig	Thu Jan 17 08:37:34 2002
+--- configure.in.orig	Mon Mar 24 17:05:59 2003
 +++ configure.in
-@@ -111,7 +111,6 @@
+@@ -110,7 +110,6 @@ dnl
  test "$mandir" = '${prefix}/man' && mandir='$(prefix)/man'
  test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
  test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
--test "$sysconfdir" = '${prefix}/etc' && sysconfdir='/etc'
+-test "$sysconfdir" = '${prefix}/etc' -a X"$with_stow" != X"yes" && sysconfdir='/etc'
  
  dnl
  dnl Deprecated --with options (these all warn or generate an error)
-@@ -231,6 +230,19 @@
+@@ -233,6 +232,19 @@ AC_ARG_WITH(csops, [  --with-csops      
  		;;
- esac])
- 
+     no)		;;
+     *)		AC_MSG_WARN([Ignoring unknown argument to --with-csops: $with_csops])
++		;;
++esac])
++
 +AC_ARG_WITH(nbsdops, [  --with-nbsdops          add NetBSD standard options],
 +[case $with_nbsdops in
 +    yes)	echo 'Adding NetBSD standard options'
@@ -24,40 +27,6 @@ $NetBSD: patch-af,v 1.10 2002/01/17 16:32:05 taca Exp $
 +		;;
 +    no)		;;
 +    *)		echo "Ignoring unknown argument to --with-nbsdops: $with_nbsdops"
-+		;;
-+esac])
-+
- AC_ARG_WITH(passwd, [  --without-passwd        don't use passwd/shadow file for authentication],
- [case $with_passwd in
-     yes)	;;
-@@ -1621,7 +1633,9 @@
- dnl
- if test "$with_kerb5" = "yes"; then
-     AC_DEFINE(HAVE_KERB5, 1, [Define if you use Kerberos V.])
--    if test -f "/usr/local/include/krb5.h"; then
-+     if test -f "/usr/include/krb5/krb5.h"; then
-+ 	CPPFLAGS="$CPPFLAGS -I/usr/include/krb5";
-+     elif test -f "/usr/local/include/krb5.h"; then
- 	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
-     elif test -f "/usr/local/kerberos/include/krb5.h"; then
- 	CPPFLAGS="$CPPFLAGS -I/usr/local/kerberos/include"
-@@ -1633,7 +1647,9 @@
- 	echo 'Unable to locate kerberos 5 include files, you will have to edit the Makefile and add -I/path/to/krb/includes to CPPFLAGS'
-     fi
- 
--    if test -f "/usr/local/lib/libkrb5.a"; then
-+    if test -f "/usr/lib/libkrb5.a"; then
-+	SUDO_LDFLAGS="${SUDO_LDFLAGS}";
-+    elif test -f "/usr/local/lib/libkrb5.a"; then
- 	SUDO_LDFLAGS="${SUDO_LDFLAGS} -L/usr/local/lib"
-     elif test -f "/usr/local/kerberos/lib/libkrb5.a"; then
- 	SUDO_LDFLAGS="${SUDO_LDFLAGS} -L/usr/local/kerberos/lib"
-@@ -1645,7 +1661,7 @@
- 	echo 'Unable to locate kerberos 5 libraries, you will have to edit the Makefile and add -L/path/to/krb/libs to SUDO_LDFLAGS'
-     fi
- 
--    SUDO_LIBS="${SUDO_LIBS} -lkrb5 -lk5crypto -lcom_err"
-+    SUDO_LIBS="${SUDO_LIBS} -lkrb5 -lasn1 -lcrypto -lroken -lcom_err"
-     AUTH_OBJS="${AUTH_OBJS} kerb5.o"
- fi
+ 		;;
+ esac])
  
