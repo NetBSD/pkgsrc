@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/25 11:49:31 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/09/16 18:51:32 xtraeme Exp $
 info/slib.info
 share/doc/slib/FAQ
 share/doc/slib/README
@@ -26,17 +26,20 @@ share/slib/colornam.scm
 share/slib/colorspc.scm
 share/slib/comlist.scm
 share/slib/comparse.scm
+share/slib/crc.scm
 share/slib/cring.scm
 share/slib/cvs.scm
 share/slib/daylight.scm
 share/slib/db2html.scm
 share/slib/dbcom.scm
 share/slib/dbrowse.scm
+share/slib/dbsyn.scm
 share/slib/dbutil.scm
 share/slib/debug.scm
 share/slib/defmacex.scm
 share/slib/determ.scm
 share/slib/differ.scm
+share/slib/dirs.scm
 share/slib/dwindtst.scm
 share/slib/dynamic.scm
 share/slib/dynwind.scm
@@ -55,6 +58,7 @@ share/slib/glob.scm
 share/slib/guile.init
 share/slib/hash.scm
 share/slib/hashtab.scm
+share/slib/html4each.scm
 share/slib/htmlform.scm
 share/slib/http-cgi.scm
 share/slib/lineio.scm
@@ -62,7 +66,6 @@ share/slib/logical.scm
 share/slib/macrotst.scm
 share/slib/macscheme.init
 share/slib/macwork.scm
-share/slib/makcrc.scm
 share/slib/matfile.scm
 share/slib/mbe.scm
 share/slib/minimize.scm
@@ -74,11 +77,12 @@ share/slib/mularg.scm
 share/slib/mwdenote.scm
 share/slib/mwexpand.scm
 share/slib/mwsynrul.scm
-share/slib/nclients.scm
+share/slib/ncbi-dna.scm
 share/slib/null.scm
 share/slib/obj2str.scm
 share/slib/object.scm
 share/slib/paramlst.scm
+share/slib/phil-spc.scm
 share/slib/plottest.scm
 share/slib/pnm.scm
 share/slib/pp.scm
@@ -139,6 +143,7 @@ share/slib/synrul.scm
 share/slib/t3.init
 share/slib/timezone.scm
 share/slib/trace.scm
+share/slib/transact.scm
 share/slib/tree.scm
 share/slib/trnscrpt.scm
 share/slib/tsort.scm
