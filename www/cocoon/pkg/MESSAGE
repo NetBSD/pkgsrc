@@ -1,0 +1,21 @@
+================================================================
+  Cocoon is now installed.  To see cocoon in action, make sure
+  that 
+
+  	@PREFIX@/lib/java/cocoon.jar,
+  	@PREFIX@/lib/java/fop.jar,
+  	@PREFIX@/lib/java/xalan.jar,
+  	@PREFIX@/lib/java/xerces.jar, and
+	@PREFIX@/jakarta/tomcat/lib/servlet.jar
+
+  are in your CLASSPATH and add
+  
+  	@PREFIX@/share/examples/java/cocoon
+
+  as a servlet context under Jakarta Tomcat.  For more
+  information, or for instructions on using cocoon with
+  other servlet environments, see
+
+	@PREFIX@/share/doc/java/cocoon/install.html
+
+================================================================

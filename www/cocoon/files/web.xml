@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- 
+     This is the web-app configurations that allow Cocoon to work under
+     Apache Tomcat. Please, follow the installation section of the
+     documentation for more information about installing Cocoon on Tomcat 
+-->
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2.2.dtd">
+
+<web-app>
+ <servlet>
+  <servlet-name>org.apache.cocoon.Cocoon</servlet-name>
+  <servlet-class>org.apache.cocoon.Cocoon</servlet-class>
+  <init-param>
+   <param-name>properties</param-name>
+   <param-value>WEB-INF/cocoon.properties</param-value>
+  </init-param>
+ </servlet>
+ 
+ <servlet-mapping>
+  <servlet-name>org.apache.cocoon.Cocoon</servlet-name>
+  <url-pattern>*.xml</url-pattern>
+ </servlet-mapping>
+</web-app>
