@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.3 2000/11/02 10:31:39 jdolecek Exp $
+$NetBSD: patch-aj,v 1.4 2000/11/02 10:41:45 jdolecek Exp $
 
---- access_log.c.orig	Thu Nov  2 10:00:04 2000
-+++ access_log.c	Thu Nov  2 11:06:28 2000
+--- src/access_log.c.orig	Thu Nov  2 10:00:04 2000
++++ src/access_log.c	Thu Nov  2 11:06:28 2000
 @@ -122,6 +122,8 @@ log_quote(const char *header)
  {
      int c;
