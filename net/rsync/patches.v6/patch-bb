@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1 1999/07/08 17:29:25 itojun Exp $
+
+--- configure-	Thu Jul  8 00:40:55 1999
++++ configure	Thu Jul  8 00:41:49 1999
+@@ -1128,8 +1128,6 @@
+   egrep "yes" >/dev/null 2>&1; then
+   rm -rf conftest*
+   ipv6type=$i;
+-				ipv6lib=inet6;
+-				ipv6libdir=/usr/local/v6/lib;
+ 				CFLAGS="-DINET6 $CFLAGS"
+ fi
+ rm -f conftest*
