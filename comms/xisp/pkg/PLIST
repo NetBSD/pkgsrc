@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/03 15:08:53 frueauf Exp $
+bin/xisp
+bin/xispid
+bin/xisprccv
+libexec/xispdial
+libexec/xispterm
+man/man1/xisp.1
+share/doc/xisp/README
+share/doc/xisp/SECURITY
+share/examples/xisp/ip-up
+share/examples/xisp/ip-down
+share/examples/xisp/peers/xisp_modem
+share/examples/xisp/peers/xisp_dialer
+@dirrm share/examples/xisp/peers
+@dirrm share/examples/xisp
+@dirrm share/doc/xisp

@@ -1,0 +1,38 @@
+$NetBSD: patch-ad,v 1.1.1.1 1998/12/03 15:08:53 frueauf Exp $
+
+--- pcode.c.orig	Mon Oct 26 05:35:01 1998
++++ pcode.c	Tue Dec  1 02:54:29 1998
+@@ -18,6 +18,13 @@
+    For author contact information, look in the README file.
+ */
+ 
++#include <sys/param.h>
++
++#if (defined(BSD) && BSD >= 199306)
++#include <unistd.h>
++#include <stdlib.h>
++#endif
++
+ /* Password encryption/decryption data structures and routines */
+ 
+ static unsigned char pkey[8] = {0x87,0xB6,0xAC,0xAF,0xC6,0xC8,0x94,0x8C},
+@@ -62,7 +69,9 @@
+ void pencode(unsigned char *ep, unsigned char *pp)
+ {
+ 	int i;
++#if !(defined(BSD) && BSD >= 199306)
+ 	void setkey(), encrypt();
++#endif
+ 
+ 	cupack(ukey, pkey);				/* unpack the key */
+ 	setkey(ukey);					/* insert it in crypt's machine */
+@@ -78,7 +87,9 @@
+ void pdecode(unsigned char *pp, unsigned char *ep)
+ {
+ 	int i;
++#if !(defined(BSD) && BSD >= 199306)
+ 	void setkey(), encrypt();
++#endif
+ 
+ 	cupack(ukey, pkey);				/* unpack the key */
+ 	setkey(ukey);					/* insert it in crypt's machine */
