@@ -1,0 +1,14 @@
+--- src/nighthawk.cc.BAK	Sun Feb  7 01:01:57 1999
++++ src/nighthawk.cc	Sun Feb  7 01:02:10 1999
+@@ -85,7 +85,11 @@
+   FILE *fp;
+ 
+   if((fp = fopen(filename,mode)) != NULL)
++#ifdef __NetBSD__
++    flock(fp->_file,LOCK_EX);
++#else
+     flock(fp->_fileno,LOCK_EX);
++#endif
+   return fp;
+ }
+ 

@@ -1,0 +1,27 @@
+--- Makefile.BAK	Sun Feb  7 00:55:47 1999
++++ Makefile	Sun Feb  7 00:56:00 1999
+@@ -1,17 +1,17 @@
+ all:
+-	(cd src ; make)
++	(cd src ; ${MAKE})
+ 
+ with_sound:
+-	(cd src ; make)
+-	(cd src_sound ; make)
++	(cd src ; ${MAKE})
++	(cd src_sound ; ${MAKE})
+ 
+ clean:
+ 	rm -f core
+ 	(cd bin ; rm -f core)
+-	(cd src ; make clean)
+-	(cd src_sound ; make clean)
++	(cd src ; ${MAKE} clean)
++	(cd src_sound ; ${MAKE} clean)
+ 
+ install:
+ 	rm -f core
+-	(cd src ; make install) 
+-	(cd src_sound ; make install) 
++	(cd src ; ${MAKE} install) 
++	(cd src_sound ; ${MAKE} install) 
