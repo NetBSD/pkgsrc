@@ -1,0 +1,24 @@
+--- cdk.h.orig	Tue Apr  7 09:24:54 1998
++++ cdk.h	Tue Dec  1 16:08:34 1998
+@@ -34,11 +34,20 @@
+  * SUCH DAMAGE.
+  */
+ 
++/*#ifdef __NetBSD__
++#define _maxx maxx
++#define _maxy maxy
++#define _begx begx
++#define _begy begy
++#define _curx curx
++#define _cury cury
++#endif*/
++
+ #ifdef	CDK_PERL_EXT
+ #undef	instr
+ #endif
+ 
+-#include <curses.h>
++#include <ncurses.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>

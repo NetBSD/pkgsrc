@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1.1.1 1998/12/01 23:27:36 garbled Exp $
+--- mentry.c.orig	Tue Dec  1 14:12:57 1998
++++ mentry.c	Tue Dec  1 14:13:09 1998
+@@ -442,7 +442,7 @@
+                  }
+                  break;
+    
+-            case DELETE : case KEY_BACKSPACE : case '' : case KEY_DC :
++            case DELETE : case KEY_BACKSPACE : case '' : /*case KEY_DC :*/
+                  if (mentry->dispType == vVIEWONLY)
+                  {
+                     Beep();
