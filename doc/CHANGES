@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6226 2004/06/18 22:40:04 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6227 2004/06/19 14:43:24 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2962,3 +2962,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mozilla to 1.6nb3 [xtraeme 2004-06-18]
 	Updated firefox-gtk2 to 0.8nb4 [xtraeme 2004-06-18]
 	Updated firefox to 0.8nb4 [xtraeme 2004-06-18]
+	Updated t1lib to 5.0.2nb2 [markd 2004-06-19]
