@@ -1,0 +1,42 @@
+$NetBSD: patch-ad,v 1.1 2001/03/10 10:31:34 drochner Exp $
+
+--- wavplay.c~	Sat Jul 15 16:47:44 2000
++++ wavplay.c	Fri Mar  9 21:11:28 2001
+@@ -22,7 +22,8 @@
+ #include <sys/soundcard.h>
+ #include <sys/ioctl.h>
+ #endif
+-#ifdef sun 
++#if defined(sun) || defined(__NetBSD__)
++#include <sys/ioctl.h>
+ #include <sys/audioio.h>
+ #endif
+ #ifdef hpux
+@@ -100,7 +101,7 @@
+ 
+ #endif
+ 
+-#ifdef sun
++#if defined(sun) || defined(__NetBSD__)
+ 
+ /* open the sound-device of solaris and set cd-quality */
+ 
+@@ -127,7 +128,9 @@
+ 	info.play.precision = 16;
+ 	info.play.encoding = AUDIO_ENCODING_LINEAR;
+ 	info.play.buffer_size = abuf_size;
++#ifndef __NetBSD__
+ 	info.output_muted = 0;
++#endif
+ 
+ 	if (ioctl(audio, AUDIO_SETINFO, &info) == -1) {
+ 		g_warning("Unable to set audio parameters\n");
+@@ -251,7 +254,7 @@
+ #if defined(linux) || defined(__FreeBSD__)
+ 	audio = open_linux_audio(audio_dev);
+ #endif
+-#ifdef sun
++#if defined(sun) || defined(__NetBSD__)
+ 	audio = open_solaris_audio(audio_dev);
+ #endif
+ #ifdef hpux
