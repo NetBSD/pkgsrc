@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/27 00:53:11 heinz Exp $
+# $NetBSD: Makefile,v 1.19 2004/03/07 00:28:24 snj Exp $
 #
 
 DISTNAME=		mirrormagic-2.0.2
@@ -11,7 +11,9 @@ COMMENT=		Nice little puzzle game with color graphics and sound
 
 CONFLICTS=		mirrormagic-sdl-[1-9]*
 
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
+USE_X11=		YES
 PLIST_SRC=		${WRKDIR}/PLIST PLIST
 
 # if you change SCORE_PATH, don't forget to change patch-aa, too
