@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 1999/08/24 12:22:36 agc Exp $
+
+Use NetBSD libtool.
+
+--- configure	1999/08/24 11:55:55	1.1
++++ configure	1999/08/24 11:56:47
+@@ -1524,6 +1524,7 @@
+   ac_tool_prefix=
+ fi
+ 
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+@@ -1760,6 +1761,7 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
++fi
+ 
+ # Extract the first word of "gcc", so it can be a program name with args.
+ set dummy gcc; ac_word=$2
