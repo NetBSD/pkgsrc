@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/01/02 16:03:11 seb Exp $
+# $NetBSD: Makefile,v 1.26 2004/01/02 16:05:13 seb Exp $
 #
 
 DISTNAME=	unrarsrc-3.2.3
@@ -27,7 +27,6 @@ do-install:
 		${PREFIX}/share/doc/unrar
 
 .include "../../mk/bsd.prefs.mk"
-GCC_REQD=	3.3.1
 
 # Don't set _LARGEFILE_SOURCE for platforms w/o ftello() and fseeko().
 #
