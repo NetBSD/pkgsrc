@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/05 14:32:21 itojun Exp $
+bin/curl
+include/curl/curl.h
+include/curl/easy.h
+include/curl/mprintf.h
+include/curl/stdcheaders.h
+include/curl/types.h
+lib/libcurl.a
+lib/libcurl.la
+lib/libcurl.so
+lib/libcurl.so.1
+lib/libcurl.so.1.0
+man/man1/curl.1
+man/man3/curl_easy_cleanup.3
+man/man3/curl_easy_getinfo.3
+man/man3/curl_easy_init.3
+man/man3/curl_easy_perform.3
+man/man3/curl_easy_setopt.3
+man/man3/curl_formfree.3
+man/man3/curl_formparse.3
+man/man3/curl_getdate.3
+man/man3/curl_getenv.3
+man/man3/curl_slist_append.3
+man/man3/curl_slist_free_all.3
+man/man3/curl_version.3
+@dirrm include/curl
