@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/05/12 09:57:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/06/26 20:24:03 recht Exp $
 
 DISTNAME=	cairo-0.1.23
 CATEGORIES=	graphics
@@ -16,7 +16,6 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	cairo.pc.in
 
 BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.5
-BUILDLINK_DEPENDS.libpixman+=	libpixman>=0.1.1
 BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 
