@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/11/06 16:50:47 wennmach Exp $
+$NetBSD: patch-ab,v 1.2 1999/11/08 17:25:00 wennmach Exp $
 --- Makefile.orig	Fri Aug 20 23:14:07 1999
-+++ Makefile	Sat Nov  6 16:35:49 1999
-@@ -14,30 +14,37 @@
++++ Makefile	Mon Nov  8 18:06:31 1999
+@@ -14,30 +14,38 @@
  #   along with this program; if not, write to the Free Software
  #   Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111, USA.
  
@@ -34,12 +34,13 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/11/06 16:50:47 wennmach Exp $
  
 -install: cgitest
 -	install -m 755 cgitest /usr/lib/cgi-bin
-+install: all
++install:
++	-mkdir -p ${PREFIX}/libexec/cgi-bin
 +	install -c -m 755 cgitest ${PREFIX}/libexec/cgi-bin
 +	install -c -m 755 jumpto ${PREFIX}/libexec/cgi-bin
 +	install -c -m 444 libcgi.a ${PREFIX}/lib
 +	install -c -m 444 cgi.h ${PREFIX}/include
-+	install -d ${PREFIX}/share/doc/cgilib
++	-mkdir -p ${PREFIX}/share/doc/cgilib
 +	for i in *.html; do \
 +          install -c -m 444 $$i ${PREFIX}/share/doc/cgilib ; \
 +        done
