@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/08/15 14:38:38 drochner Exp $
+
+--- main.cc.orig	2004-08-14 15:24:21.000000000 +0200
++++ main.cc
+@@ -42,7 +42,7 @@
+ #define MS_STRUCTURED_EXCEPTION_HANDLING
+ #include <windows.h> 
+ 
+-#elif defined(__unix)
++#elif defined(__unix) || defined(__NetBSD__)
+ #define UNIX_STYLE_SIGNAL_HANDLING
+ #include <unistd.h>
+ #include <csignal>
