@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/17 14:38:22 recht Exp $
+$NetBSD: distinfo,v 1.2 2004/04/08 18:52:33 drochner Exp $
 
-SHA1 (libcdio-0.65.tar.gz) = 1e1979e8cff107325722aafda7c510ef66b195f2
-Size (libcdio-0.65.tar.gz) = 1170863 bytes
+SHA1 (libcdio-0.68.tar.gz) = c3935f6fd66d6f6fe1451862d5281fd292eabb89
+Size (libcdio-0.68.tar.gz) = 1253630 bytes
