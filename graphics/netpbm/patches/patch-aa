@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.12 2001/01/14 13:17:55 tron Exp $
+$NetBSD: patch-aa,v 1.13 2001/06/16 19:50:57 jlam Exp $
 
---- Makefile.config~	Thu Jun 22 19:48:03 2000
-+++ Makefile.config	Sun Jan 14 14:09:14 2001
+--- Makefile.config.orig	Thu Jun 22 13:48:03 2000
++++ Makefile.config	Fri Jun 15 17:42:45 2001
 @@ -29,8 +29,8 @@
  #
  # For cygwin, only static libraries work, so set STATICLIB = Y  .
@@ -75,8 +75,8 @@ $NetBSD: patch-aa,v 1.12 2001/01/14 13:17:55 tron Exp $
  #NetBSD:
 -#TIFFHDR_DIR = $(LOCALBASE)/include
 -#TIFFLIB_DIR = $(LOCALBASE)/lib
-+TIFFHDR_DIR = $(LOCALBASE)/include
-+TIFFLIB_DIR = $(LOCALBASE)/lib
++TIFFHDR_DIR = ${BUILDLINK_DIR}/include
++TIFFLIB_DIR = ${BUILDLINK_DIR}/lib
  # OSF, Tru64:
  #TIFFHDR_DIR = /usr/local1/DEC/include
  #TIFFLIB_DIR = /usr/local1/DEC/lib
@@ -91,8 +91,8 @@ $NetBSD: patch-aa,v 1.12 2001/01/14 13:17:55 tron Exp $
  # Netbsd:
 -#JPEGLIB_DIR = ${LOCALBASE}/lib
 -#JPEGHDR_DIR = ${LOCALBASE}/include
-+JPEGLIB_DIR = ${LOCALBASE}/lib
-+JPEGHDR_DIR = ${LOCALBASE}/include
++JPEGLIB_DIR = ${BUILDLINK_DIR}/lib
++JPEGHDR_DIR = ${BUILDLINK_DIR}/include
  # OSF, Tru64:
  #JPEGLIB_DIR = /usr/local1/DEC/lib
  #JPEGHDR_DIR = /usr/local1/DEC/include
@@ -107,8 +107,8 @@ $NetBSD: patch-aa,v 1.12 2001/01/14 13:17:55 tron Exp $
  # NetBSD:
 -#PNGLIB_DIR = $(LOCALBASE)/lib
 -#PNGHDR_DIR = $(LOCALBASE)/include
-+PNGLIB_DIR = $(LOCALBASE)/lib
-+PNGHDR_DIR = $(LOCALBASE)/include
++PNGLIB_DIR = ${BUILDLINK_LIBDIR}/lib
++PNGHDR_DIR = ${BUILDLINK_LIBDIR}/include
  # OSF/Tru64:
  #PNGLIB_DIR = /usr/local1/DEC/lib
  #PNGHDR_DIR = /usr/local1/DEC/include
