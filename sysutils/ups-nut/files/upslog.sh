@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: upslog.sh,v 1.2 2001/11/21 21:38:55 jlam Exp $
+# $NetBSD: upslog.sh,v 1.3 2002/01/08 18:33:17 jlam Exp $
 #
 # PROVIDE: upslog
 # REQUIRE: upsd
@@ -23,7 +23,6 @@ name="upslog"
 rcvar="${name}"
 command="@PREFIX@/bin/${name}"
 pidfile="/var/run/${name}.pid"
-required_files="@CONFDIR@/nut/${name}.conf"
 
 if [ -e /etc/rc.subr ]
 then
@@ -31,5 +30,5 @@ then
 	run_rc_command "$1"
 else
 	@ECHO@ -n " ${name}"
-	${command} ${upsmon_flags} ${command_args}
+	${command} ${upslog_flags} ${command_args}
 fi
