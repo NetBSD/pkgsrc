@@ -2,7 +2,7 @@ Turbo Vision for UNIX
 
 Turbo Vision (or TV, for short) is a library that provides an
 application framework for C++ programmers.  With TV, you can write
-beautiful object-oriented character-mode user interfaces in very a
+beautiful object-oriented character-mode user interfaces in a very
 short time.
 
 TV is available in C++ and Pascal and is a product of Borland
