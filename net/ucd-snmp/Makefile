@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/04/09 09:53:54 itojun Exp $
+# $NetBSD: Makefile,v 1.41 2002/04/11 09:44:04 tron Exp $
 
 DISTNAME=	ucd-snmp-4.2.4
 CATEGORIES=	net
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/} \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.net-snmp.org/
 COMMENT=	Extensible SNMP implementation
+
+CONFLICTS+=	net-snmp-[0-9]*
 
 BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 
