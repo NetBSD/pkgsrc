@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2004/03/08 23:47:44 minskim Exp $
+$NetBSD: distinfo,v 1.4 2005/02/06 04:32:00 minskim Exp $
 
-SHA1 (otcl-1.8.tar.gz) = 7ff767c1d4ef981f7cfa207a2f277e726105d001
-Size (otcl-1.8.tar.gz) = 300954 bytes
+SHA1 (otcl-1.9.tar.gz) = 1ab1e40e7064720e04d7df56afc6d4a64aac2311
+Size (otcl-1.9.tar.gz) = 309728 bytes
 SHA1 (patch-aa) = 87f242437f8c22c9e6260d9343fa3ef3eabf2c8f
