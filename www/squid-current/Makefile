@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/01/08 15:29:46 bad Exp $
+# $NetBSD: Makefile,v 1.7 1999/01/29 19:26:37 bad Exp $
 #
 
 DISTNAME=	squid-2.1.PATCH2
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--enable-icmp
 CONFIGURE_ARGS+=	--enable-cache-digests
 
 MAKEFILE=	makefile
-MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" PKG_PREFIX="${PREFIX}"
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/squid.sh >${WRKDIR}/squid.sh
@@ -63,12 +63,9 @@ pre-install:
 	${ECHO} "@dirrm share/squid";				\
 	) > ${WRKDIR}/PLIST.share
 
-# This is GNU ${datadir}/squid/squid.conf
-DEFCONF=	${PREFIX}/share/squid/squid.conf.default
-
 post-install:
 	cd ${WRKSRC}/src; make install-pinger
 	${INSTALL_SCRIPT} ${WRKDIR}/squid.sh ${PREFIX}/etc/rc.d/squid.sh
-	@${SH} ${PKGDIR}/INSTALL ${PKGNAME} ${DEFCONF} POST-INSTALL
+	@${SETENV} ${MAKE_ENV} ${SH} ${PKGDIR}/INSTALL ${PKGNAME} POST-INSTALL
 
 .include <../../mk/bsd.pkg.mk>
