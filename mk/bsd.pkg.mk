@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1386 2004/02/11 10:34:05 xtraeme Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1387 2004/02/12 08:55:34 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -2447,10 +2447,10 @@ _CONFIGURE_POSTREQ+=	do-config-status-override
 do-config-status-override:      
 .  for file in ${CONFIG_STATUS_OVERRIDE}  
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${file} ]; then						\
-		${RM} -f ${file};					\
-		( ${ECHO} '#!${SH}'; ${ECHO} 'exit 0' ) > ${file};	\
-		${CHMOD} +x ${file};					\
+	if [ -f ${WRKSRC}/${file} ]; then				\
+		${RM} -f ${WRKSRC}/${file};				\
+		( ${ECHO} '#!${SH}'; ${ECHO} 'exit 0' ) > ${WRKSRC}/${file}; \
+		${CHMOD} +x ${WRKSRC}/${file};				\
 	fi
 .  endfor                       
 .endif 
