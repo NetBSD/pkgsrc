@@ -1,19 +1,21 @@
-$NetBSD: patch-ab,v 1.12 2000/01/21 15:45:34 fredb Exp $
+$NetBSD: patch-ab,v 1.13 2000/10/29 22:56:31 frueauf Exp $
 
---- Makefile.in.orig	Tue Jan  4 00:58:45 2000
-+++ Makefile.in	Fri Jan 21 07:10:15 2000
-@@ -152,10 +152,10 @@
+--- Makefile.in.orig	Tue Oct 17 23:50:22 2000
++++ Makefile.in	Sun Oct 29 23:44:01 2000
+@@ -153,12 +153,12 @@
+ 	$(SHELL) ${srcdir}/mkinstalldirs $(DESTDIR)$(bindir) $(DESTDIR)$(mandir)
  	@echo "Installing fetchmail binary..."
- 	$(INSTALL_PROGRAM) ./fetchmail $(bindir)/fetchmail
+ 	$(INSTALL_PROGRAM) ./fetchmail $(DESTDIR)$(bindir)/fetchmail
 -	@echo "Installing fetchmail configurator..."
--	$(INSTALL_PROGRAM) ${srcdir}/fetchmailconf $(bindir)/fetchmailconf
+-	$(INSTALL_PROGRAM) ${srcdir}/fetchmailconf $(DESTDIR)$(bindir)/fetchmailconf
 +#	@echo "Installing fetchmail configurator..."
-+#	$(BSD_INSTALL_SCRIPT) ${srcdir}/fetchmailconf $(bindir)/fetchmailconf
++#	$(BSD_INSTALL_SCRIPT) ${srcdir}/fetchmailconf $(DESTDIR)$(bindir)/fetchmailconf
  	@echo "Installing manual page..."
- 	$(INSTALL_DATA) $(srcdir)/fetchmail.man $(mandir)/fetchmail.$(manext)
--	rm -f $(mandir)/fetchmailconf.$(manext)
--	ln -s $(mandir)/fetchmail.$(manext) $(mandir)/fetchmailconf.$(manext)
-+#	rm -f $(mandir)/fetchmailconf.$(manext)
-+#	ln -s $(mandir)/fetchmail.$(manext) $(mandir)/fetchmailconf.$(manext)
+ 	$(INSTALL_DATA) $(srcdir)/fetchmail.man $(DESTDIR)$(mandir)/fetchmail.$(manext)
+-	rm -f $(DESTDIR)$(mandir)/fetchmailconf.$(manext)
+-	cd $(DESTDIR)$(mandir) && ln -s fetchmail.$(manext) fetchmailconf.$(manext)
++#	rm -f $(DESTDIR)$(mandir)/fetchmailconf.$(manext)
++#	cd $(DESTDIR)$(mandir) && ln -s fetchmail.$(manext) fetchmailconf.$(manext)
  	@echo "Installing language catalogs..."
  	@POMAKE@ install
+ 
