@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.22 2000/02/07 11:38:54 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.23 2000/02/09 17:41:22 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -12,9 +12,6 @@
 #
 #	The 'invalid distfiles' code picks up a couple of false positives in
 #	fastcap (which does strange things anyway).
-
-printf("%d\n", deweycmp(@ARGV));
-exit;
 
 $^W = 1;
 use strict;
