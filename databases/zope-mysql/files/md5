@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1998/12/23 06:49:44 tsarna Exp $
+$NetBSD: md5,v 1.3 1999/01/09 23:16:55 tsarna Exp $
 
-MD5 (ZMySQLDA-1.1.0-nonbin.tar.gz) = 5f1bae0ae74064d30bf181726e723eeb
+MD5 (ZMySQLDA-1.1.2-nonbin.tar.gz) = ae58bdc28ab2ea4d81e2112fb3557c2f
