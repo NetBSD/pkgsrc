@@ -1,0 +1,33 @@
+$NetBSD: patch-ae,v 1.1 2004/12/19 03:34:17 jlam Exp $
+
+--- mDNS/mDNSClientAPI.h.orig	2004-04-13 03:05:11.000000000 -0400
++++ mDNS/mDNSClientAPI.h
+@@ -408,6 +408,7 @@ Merge in license terms from Quinn's copy
+ #define __mDNSClientAPI_h
+ 
+ #include <stdarg.h>		// stdarg.h is required for for va_list support for the mDNS_vsnprintf declaration
++#include <sys/types.h>
+ #include "mDNSDebug.h"
+ 
+ #ifdef	__cplusplus
+@@ -478,13 +479,13 @@ typedef enum				// From RFC 1035
+ 
+ // mDNS defines its own names for these common types to simplify portability across
+ // multiple platforms that may each have their own (different) names for these types.
+-typedef          int   mDNSBool;
+-typedef   signed char  mDNSs8;
+-typedef unsigned char  mDNSu8;
+-typedef   signed short mDNSs16;
+-typedef unsigned short mDNSu16;
+-typedef   signed long  mDNSs32;
+-typedef unsigned long  mDNSu32;
++typedef       int mDNSBool;
++typedef    int8_t mDNSs8;
++typedef  u_int8_t mDNSu8;
++typedef   int16_t mDNSs16;
++typedef u_int16_t mDNSu16;
++typedef   int32_t mDNSs32;
++typedef u_int32_t mDNSu32;
+ 
+ // To enforce useful type checking, we make mDNSInterfaceID be a pointer to a dummy struct
+ // This way, mDNSInterfaceIDs can be assigned, and compared with each other, but not with other types
