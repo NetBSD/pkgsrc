@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5288 2004/03/21 10:31:52 seb Exp $
+$NetBSD: CHANGES,v 1.5289 2004/03/21 12:31:29 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1504,3 +1504,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tcl-pdflib to 4.0.3nb2 [minskim 2004-03-20]
 	Updated libnbcompat to 20040321 [grant 2004-03-21]
 	Updated yale-tftpd to 3.0nb3 [seb 2004-03-21]
+	Updated ndtpd to 3.1.5 [uebayasi 2004-03-21]
