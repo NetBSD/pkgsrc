@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:30 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/03 13:16:56 agc Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/01/03 10:14:21 obrien Exp
 #
 
@@ -13,6 +13,8 @@ MAINTAINER=     packages@netbsd.org
 
 GNU_CONFIGURE=	yes
 MAN1=		rsync.1
+
+.include "../../mk/bsd.prefs.mk"
 
 post-install:
 	@strip ${PREFIX}/bin/rsync
