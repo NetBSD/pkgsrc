@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2000/04/24 14:57:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.42 2000/06/02 19:45:00 fredb Exp $
 #
 
-DISTNAME=	xscreensaver-3.23
+DISTNAME=	xscreensaver-3.24
 CATEGORIES=	x11
 MASTER_SITES=	http://www.jwz.org/xscreensaver/
 
@@ -13,25 +13,15 @@ DEPENDS+=	Mesa-*:../../graphics/Mesa
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--without-shadow --with-zippy=/usr/games/fortune \
-		--enable-subdir=${PREFIX}/libexec/xscreensaver
-CONFIGURE_ENV+=	INSTALL=/usr/bin/install
+CONFIGURE_ARGS+=--without-shadow
+CONFIGURE_ARGS+=--enable-subdir=${PREFIX}/libexec/xscreensaver
+CONFIGURE_ARGS+=--with-zippy=/usr/games/fortune
+CONFIGURE_ENV+=	INSTALL=${INSTALL}
 
 USE_X11BASE=	yes
 USE_MOTIF=	yes
 USE_PERL5=	yes
 USE_XAW=	yes
-
-.include "../../mk/bsd.prefs.mk"
-
-XAW_TYPE?=	3d
-
-.if (${OPSYS} == "NetBSD")
-.if defined(KERBEROS)
-CFLAGS+=	-I/usr/include/kerberosIV
-CONFIGURE_ARGS+=--with-kerberos=yes
-.endif
-.endif
 
 post-patch:
 	cd ${WRKSRC}/driver ; \
@@ -40,5 +30,23 @@ post-patch:
 	${SED} \
 		-e 's|@PREFIX@|${PREFIX}|g' \
 		<xscreensaver.kss.BAK >xscreensaver.kss
+
+.include "../../mk/bsd.prefs.mk"
+
+XAW_TYPE?=	3d
+
+.if (${OPSYS} == "NetBSD")
+.if defined(KERBEROS)
+CFLAGS+=	-I/usr/include/kerberosIV
+.else
+CONFIGURE_ARGS+=--without-kerberos
+.endif
+.endif
+
+.if defined(USE_GNOME)
+DEPENDS+=	control-center>=1.2.0:../../x11/controlcenter
+.else
+CONFIGURE_ARGS+=--without-gnome
+.endif
 
 .include "../../mk/bsd.pkg.mk"
