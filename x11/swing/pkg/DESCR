@@ -1,0 +1,3 @@
+JFC (Swing) is a rich set of UI elements implemented in 100% pure Java which
+is the prefered method of UI development under Java 2.  This release contains
+a version of the JFC compatible with Java 1.1.
