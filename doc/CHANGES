@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5054 2004/03/02 09:04:51 adam Exp $
+$NetBSD: CHANGES,v 1.5055 2004/03/02 10:34:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1111,3 +1111,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gqview to 1.4.1 [snj 2004-03-01]
 	Updated esound to 0.2.33 [xtraeme 2004-03-02]
 	Updated libwmf to 0.2.8.2 [adam 2004-03-02]
+	Updated jasper to 1.107.0 [adam 2004-03-02]
+	Updated ImageMagick to 5.5.7.17 [adam 2004-03-02]
