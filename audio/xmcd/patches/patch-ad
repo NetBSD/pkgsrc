@@ -1,11 +1,20 @@
-$NetBSD: patch-ad,v 1.4 1999/06/28 07:49:06 tron Exp $
+$NetBSD: patch-ad,v 1.5 2000/02/13 19:17:24 fredb Exp $
 
---- install.sh.orig	Sat Apr 24 03:40:51 1999
-+++ install.sh	Sat Jun 26 01:34:32 1999
-@@ -401,7 +401,7 @@
+--- install.sh.orig	Sat Feb  5 01:26:20 2000
++++ install.sh	Sun Feb 13 08:29:05 2000
+@@ -60,7 +60,7 @@
+ XBINGROUP=bin
+ ERRFILE=/tmp/xmcd.err
+ TMPFILE=/tmp/xmcdinst.$$
+-STARTUP_SCRIPT=.xmcd_start
++STARTUP_SCRIPT=xmcd_start
+ 
+ #
+ # Utility functions
+@@ -416,7 +416,7 @@
  #
  OS_SYS=`(uname -s) 2>/dev/null`
- OS_VER=`(uname -r) 2>/dev/null`
+ OS_REL=`(uname -r) 2>/dev/null`
 -OS_MACH=`(uname -m) 2>/dev/null`
 +OS_MACH=$MACHINE_ARCH
  
