@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ups.sh,v 1.9 2002/08/25 21:51:05 jlam Exp $
+# $NetBSD: ups.sh,v 1.10 2002/09/20 02:02:01 grant Exp $
 #
 # KEYWORD: nostart
 

@@ -1,6 +1,6 @@
-#! /bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: slpd.sh,v 1.6 2002/09/20 01:43:22 grant Exp $
+# $NetBSD: slpd.sh,v 1.7 2002/09/20 02:01:58 grant Exp $
 #
 # Service Location Protocol daemon
 #

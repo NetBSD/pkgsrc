@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: apache.sh,v 1.5 2002/08/25 21:51:55 jlam Exp $
+# $NetBSD: apache.sh,v 1.6 2002/09/20 02:02:01 grant Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON

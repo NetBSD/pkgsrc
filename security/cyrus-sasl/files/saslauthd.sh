@@ -1,6 +1,6 @@
-#! /bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: saslauthd.sh,v 1.2 2002/08/25 18:39:51 jlam Exp $
+# $NetBSD: saslauthd.sh,v 1.3 2002/09/20 02:02:00 grant Exp $
 #
 # The saslauthd daemon allows cleartext UNIX password authentication via
 # several authentication mechanisms with Cyrus SASL.
