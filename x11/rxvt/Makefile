@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/07/15 09:49:54 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2001/08/06 03:37:45 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
@@ -13,7 +13,7 @@ MAINTAINER=		gcw@rxvt.org
 HOMEPAGE=		http://www.rxvt.org/
 COMMENT=		Low memory usage xterm replacement that supports color
 
-USE_BUILDLINK_ONKY=	YES
+USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 
