@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/05/08 23:47:03 salo Exp $
+$NetBSD: patch-ab,v 1.2 2004/11/10 16:38:27 adam Exp $
 
---- manual/Makefile.in.orig	2003-04-16 09:04:31.000000000 +0200
-+++ manual/Makefile.in	2003-05-07 23:38:16.000000000 +0200
-@@ -38,7 +38,7 @@
- build_triplet = @build@
- host_triplet = @host@
- target_triplet = @target@
+--- manual/Makefile.in.orig	2004-08-23 07:22:06.000000000 +0000
++++ manual/Makefile.in
+@@ -69,7 +69,7 @@ target_triplet = @target@
+ EXEEXT = @EXEEXT@
+ OBJEXT = @OBJEXT@
+ PATH_SEPARATOR = @PATH_SEPARATOR@
 -pkgdatadir = @datadir@/@PACKAGE@/manual
 +pkgdatadir = @datadir@/doc/html/@PACKAGE@/manual
- ACLOCAL = @ACLOCAL@
- AMDEP_FALSE = @AMDEP_FALSE@
- AMDEP_TRUE = @AMDEP_TRUE@
+ AMTAR = @AMTAR@
+ ARTSCCONFIG = @ARTSCCONFIG@
+ AS = @AS@
