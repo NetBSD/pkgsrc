@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.38 2005/02/11 21:59:18 reed Exp $
+# $NetBSD: Makefile,v 1.39 2005/02/18 15:54:48 wiz Exp $
 #
 
-DISTNAME=	Xaw3d-1.5
-PKGREVISION=	1
+DISTNAME=	Xaw3d-1.5E
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_XCONTRIB:=widgets/Xaw3d/R6.3/}
+MASTER_SITES=	ftp://ftp.visi.com/users/hawkeyd/X/
 
 MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.visi.com/~hawkeyd/xaw3d.html
 COMMENT=	3-D widgets based on the Athena Widget set
 
 CONFLICTS=	Xaw-Xpm-[0-9]*

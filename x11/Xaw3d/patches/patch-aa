@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.8 2003/06/12 15:46:03 jschauma Exp $
+$NetBSD: patch-aa,v 1.9 2005/02/18 15:54:48 wiz Exp $
 
---- Imakefile.orig	Tue Oct 15 07:41:19 1996
-+++ Imakefile	Wed Jun 11 10:43:33 2003
-@@ -7,8 +7,16 @@
+--- Imakefile.orig	2003-03-08 15:55:18.000000000 +0100
++++ Imakefile
+@@ -9,7 +9,7 @@ XCOMM For color pixmaps, define MULTIPLA
+ XCOMM For grayed stipple shadows, define GRAY_BLKWHT_STIPPLES:
+ #define GRAY_BLKWHT_STIPPLES
+ XCOMM For scrollbars with arrows, define ARROW_SCROLLBARS:
+-#undef ARROW_SCROLLBARS
++#define ARROW_SCROLLBARS
+ 
+ #define DoNormalLib NormalLibXaw
+ #define DoSharedLib SharedLibXaw
+@@ -18,11 +18,19 @@ XCOMM For scrollbars with arrows, define
  #define HasSharedData YES
  #define LibName Xaw3d
  #define SoRev SOXAWREV
@@ -17,17 +26,9 @@ $NetBSD: patch-aa,v 1.8 2003/06/12 15:46:03 jschauma Exp $
 +#endif
 +#endif
  
- #ifdef LinuxArchitecture
- JUMP_ROOT_Xaw3d = $(AWIDGETSRC)3d
-@@ -39,9 +47,9 @@
- 
-        LINTLIBS = $(LINTXLIB) $(LINTXTOOL)
- 
--#  EXTRA_DEFINES = -DARROW_SCROLLBAR -DUSEGRAY
-+EXTRA_DEFINES = -DARROW_SCROLLBAR -DUSEGRAY
- 
--#  EXTRA_INCLUDES = -I.
+ XCOMM When building outside an X11 source tree:
+-XCOMM EXTRA_INCLUDES = -I.
 +EXTRA_INCLUDES = -I.
  
- HEADERS = \
- 	AllWidgets.h \
+ #ifdef SharedXawReqs
+ REQUIREDLIBS = SharedXawReqs
