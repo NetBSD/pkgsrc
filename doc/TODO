@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.130 2003/01/03 20:38:26 lha Exp $
+$NetBSD: TODO,v 1.131 2003/01/03 21:41:26 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -167,7 +167,6 @@ Suggested package updates
 	o lcms-1.0.9
 	o lftp-2.6.3 [pkg/19419]
 	o libbonoboui-2.0.3.3
-	o libgnomecanvas-2.0.5
 	o libgnome-2.0.6
 	o libgnomeui-2.0.6
 	o libole2-2.2.8
@@ -196,7 +195,6 @@ Suggested package updates
 	o ncurses-5.3
 	o netpbm-10.8
 	o netscape-7.01
-	o novawm-0.8
 	o ns-flash-6.0.69
 	o openoffice-1.0.1 [skrll]
 	o openoffice-643 [post-1.0.1]
