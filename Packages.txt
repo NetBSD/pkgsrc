@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.98 2000/07/20 12:56:13 rh Exp $
+# $NetBSD: Packages.txt,v 1.99 2000/07/20 12:58:11 rh Exp $
 ###########################################################################
 
 			==========================
@@ -1580,8 +1580,8 @@ that can be set to note these restrictions:
       ${RESTRICTED} if re-distribution of the source code or other
       distfile(s) via the internet is not allowed.
 
-Please note that the use of NO_PACKAGE, IGNORE, or other generic make
-variables to denote restrictions is deprecated, because they
+Please note that the use of NO_PACKAGE, IGNORE, NO_CDROM, or other generic
+make variables to denote restrictions is deprecated, because they
 unconditionally prevent users from generating binary packages!
 
 
