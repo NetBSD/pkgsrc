@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2002/11/24 16:37:56 martti Exp $
+# $NetBSD: Makefile,v 1.71 2002/11/26 07:20:06 martti Exp $
 
 DISTNAME=	postfix-1.1.12
 CATEGORIES=	mail
@@ -24,38 +24,39 @@ USE_BUILDLINK2=	yes
 # BUILD_DEFS+=	POSTFIX_USE_INET6
 # .endif
 
-.if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES" \
-	|| defined(USE_SASL) && ${USE_SASL} == "YES" \
-	|| defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES" \
-	|| defined(POSTFIX_USE_TLS) && ${POSTFIX_USE_TLS} == "YES"
+.if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES"		\
+	|| defined(POSTFIX_USE_LDAP) && ${POSTFIX_USE_LDAP} == "YES"	\
+	|| defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES"	\
+	|| defined(POSTFIX_USE_TLS) && ${POSTFIX_USE_TLS} == "YES"	\
+	|| defined(USE_SASL) && ${USE_SASL} == "YES"
 MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
 .endif
 
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES"
 .include "../../devel/pcre/buildlink2.mk"
 CCARGS+=	-DHAS_PCRE
-AUXLIBS+=	-L${BUILDLINK_PREFIX.pcre}/lib -Wl,-R${BUILDLINK_PREFIX.pcre}/lib -lpcre
+AUXLIBS+=	-L${BUILDLINK_PREFIX.pcre}/lib		\
+		-Wl,-R${BUILDLINK_PREFIX.pcre}/lib	\
+		-lpcre
 BUILD_DEFS+=	POSTFIX_USE_PCRE
+.endif
+
+.if defined(POSTFIX_USE_LDAP) && ${POSTFIX_USE_LDAP} == "YES"
+.include "../../databases/openldap/buildlink2.mk"
+CCARGS+=	-DHAS_LDAP
+AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib	\
+		-Wl,-R${BUILDLINK_PREFIX.openldap}/lib	\
+		-lldap -llber
+BUILD_DEFS+=	POSTFIX_USE_LDAP
 .endif
 
 .if defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES"
 .include "../../databases/mysql-client/buildlink2.mk"
 CCARGS+=	-DHAS_MYSQL -I${BUILDLINK_PREFIX.mysql-client}/include/mysql
-AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql \
-		-Wl,-R${BUILDLINK_PREFIX.mysql-client}/lib/mysql
-AUXLIBS+=	-lmysqlclient -lz -lm
+AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
+		-Wl,-R${BUILDLINK_PREFIX.mysql-client}/lib/mysql	\
+		-lmysqlclient -lz -lm
 BUILD_DEFS+=	POSTFIX_USE_MYSQL
-.endif
-
-.if defined(USE_SASL) && ${USE_SASL} == "YES"
-.include "../../security/cyrus-sasl/buildlink2.mk"
-CCARGS+=	-DUSE_SASL_AUTH
-AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib \
-		-Wl,-R${BUILDLINK_PREFIX.cyrus-sasl}/lib -lsasl
-PLIST_SRC+=	${WRKDIR}/PLIST.sasl
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
-MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
-BUILD_DEFS+=	USE_SASL
 .endif
 
 .if defined(POSTFIX_USE_TLS) && ${POSTFIX_USE_TLS} == "YES"
@@ -63,12 +64,28 @@ BUILD_DEFS+=	USE_SASL
 PATCH_SITES+=	http://people.arhea.net/dawszy/NetBSD/postfix_tls/
 PATCHFILES+=	pfixtls-1.1.11.diff.gz
 PATCH_DIST_STRIP=	-p1
+
 CCARGS+=	-DHAS_SSL
-AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib \
-		-Wl,-R${BUILDLINK_PREFIX.openssl}/lib -lssl -lcrypto
+AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib	\
+		-Wl,-R${BUILDLINK_PREFIX.openssl}/lib	\
+		-lssl -lcrypto
+BUILD_DEFS+=	POSTFIX_USE_TLS
+
 PLIST_SRC+=	${PKGDIR}/PLIST.tls
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
-BUILD_DEFS+=	POSTFIX_USE_TLS
+.endif
+
+.if defined(USE_SASL) && ${USE_SASL} == "YES"
+.include "../../security/cyrus-sasl/buildlink2.mk"
+CCARGS+=	-DUSE_SASL_AUTH
+AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib		\
+		-Wl,-R${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
+		-lsasl
+BUILD_DEFS+=	USE_SASL
+
+PLIST_SRC+=	${WRKDIR}/PLIST.sasl
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 .endif
 
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE
