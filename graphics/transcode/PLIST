@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/12/27 01:02:49 grant Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/03/28 20:09:07 mycroft Exp $
 bin/avifix
 bin/aviindex
 bin/avimerge
@@ -48,6 +48,8 @@ lib/transcode/export_mjpeg.la
 lib/transcode/export_mjpeg.so
 lib/transcode/export_mp2enc.la
 lib/transcode/export_mp2enc.so
+lib/transcode/export_mp1e.la
+lib/transcode/export_mp1e.so
 lib/transcode/export_mpeg.a
 lib/transcode/export_mpeg.la
 lib/transcode/export_mpeg2enc.a
@@ -91,6 +93,8 @@ lib/transcode/filter_clone.la
 lib/transcode/filter_clone.so
 lib/transcode/filter_compare.la
 lib/transcode/filter_compare.so
+lib/transcode/filter_control.la
+lib/transcode/filter_control.so
 lib/transcode/filter_cpaudio.la
 lib/transcode/filter_cpaudio.so
 lib/transcode/filter_cshift.la
@@ -99,6 +103,8 @@ lib/transcode/filter_cut.la
 lib/transcode/filter_cut.so
 lib/transcode/filter_decimate.la
 lib/transcode/filter_decimate.so
+lib/transcode/filter_denoise3d.la
+lib/transcode/filter_denoise3d.so
 lib/transcode/filter_detectclipping.la
 lib/transcode/filter_detectclipping.so
 lib/transcode/filter_detectsilence.la
@@ -144,6 +150,8 @@ lib/transcode/filter_normalize.la
 lib/transcode/filter_normalize.so
 lib/transcode/filter_null.la
 lib/transcode/filter_null.so
+lib/transcode/filter_pp.la
+lib/transcode/filter_pp.so
 lib/transcode/${FILTERPV}
 lib/transcode/filter_pv.la
 lib/transcode/filter_resample.la
@@ -160,6 +168,8 @@ lib/transcode/filter_smartyuv.la
 lib/transcode/filter_smartyuv.so
 lib/transcode/filter_smooth.la
 lib/transcode/filter_smooth.so
+lib/transcode/filter_subtitler.la
+lib/transcode/filter_subtitler.so
 lib/transcode/filter_tc_audio.la
 lib/transcode/filter_tc_audio.so
 lib/transcode/filter_tc_video.la
@@ -194,6 +204,8 @@ lib/transcode/import_dvd.la
 lib/transcode/import_dvd.so
 lib/transcode/import_ffmpeg.la
 lib/transcode/import_ffmpeg.so
+lib/transcode/import_fraps.la
+lib/transcode/import_fraps.so
 lib/transcode/import_im.la
 lib/transcode/import_im.so
 lib/transcode/import_imlist.la
@@ -222,6 +234,8 @@ lib/transcode/import_raw.la
 lib/transcode/import_raw.so
 lib/transcode/import_rawlist.la
 lib/transcode/import_rawlist.so
+lib/transcode/import_sh.la
+lib/transcode/import_sh.so
 lib/transcode/import_vdrac3.la
 lib/transcode/import_vdrac3.so
 lib/transcode/import_vnc.la
@@ -236,7 +250,7 @@ lib/transcode/import_yuv.la
 lib/transcode/import_yuv.so
 lib/transcode/import_yuv4mpeg.la
 lib/transcode/import_yuv4mpeg.so
-lib/transcode/libxvidcore.so.2
+lib/transcode/libxvidcore.so.4
 lib/transcode/parse_csv.awk
 lib/transcode/xvid2.cfg
 lib/transcode/xvid3.cfg
@@ -339,6 +353,7 @@ share/doc/transcode/html/tc.png
 share/doc/transcode/import-API.txt
 share/doc/transcode/import-xml.txt
 share/doc/transcode/import_nvrec.txt
+share/doc/transcode/import_v4l2.txt
 share/doc/transcode/pvm.cfg
 share/doc/transcode/template.cfg.txt
 @dirrm share/doc/transcode/html
