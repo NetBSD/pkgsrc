@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9090 2005/02/09 14:01:09 salo Exp $
+$NetBSD: CHANGES,v 1.9091 2005/02/09 14:58:44 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -814,3 +814,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gstreamer to 0.8.9 [jmmv 2005-02-09]
 	Updated nmap to 3.81 [salo 2005-02-09]
 	Updated nmapfe to 0.9.5nb20 [salo 2005-02-09]
+	Updated apr to 0.9.6.2.0.53 [tron 2005-02-09]
+	Updated apache2 to 2.0.53 [tron 2005-02-09]
