@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.350 2004/08/07 10:15:47 wiz Exp $
+# $NetBSD: Packages.txt,v 1.351 2004/08/12 10:07:28 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -2061,7 +2061,7 @@ CHECK_BUILTIN.foo?=	no
 
 The first section sets IS_BUILTIN.<pkg> depending on if <pkg> really exists
 in the base system.  This should not be a base system software with similar
-functionality to <pkg>; it should only be "yes" if the actual package
+functionality to <pkg>; it should only be "yes" if the actual package is
 included as part of the base system.  This variable is only used internally
 within the builtin.mk file.
 
@@ -2075,7 +2075,10 @@ whether the built-in software is adequate to satisfy the dependencies
 listed in BUILDLINK_DEPENDS.<pkg>.  This is typically done by comparing
 BUILTIN_PKG.<pkg> against each of the dependencies in
 BUILDLINK_DEPENDS.<pkg>.  USE_BUILTIN.<pkg> _must_ be set to the correct
-value by the end of the builtin.mk file.
+value by the end of the builtin.mk file.  Note that USE_BUILTIN.<pkg> may
+be "yes" even if IS_BUILTIN.<pkg> is "no" because we may make the
+determination that the built-in version of the software is similar enough
+to be used as a replacement.
 
 The last section is guarded by CHECK_BUILTIN.<pkg>, and includes code that
 uses the value of USE_BUILTIN.<pkg> set in the previous section.  This
