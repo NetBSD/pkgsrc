@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2001/06/26 00:49:55 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2001/11/19 17:27:24 jlam Exp $
 
---- configure.orig	Fri Mar 24 21:14:00 2000
+--- configure.orig	Fri Mar 24 15:14:00 2000
 +++ configure
 @@ -28,6 +28,8 @@
  ac_help="$ac_help
@@ -11,7 +11,24 @@ $NetBSD: patch-ag,v 1.1 2001/06/26 00:49:55 wiz Exp $
    --without-passwd        don't use passwd/shadow file for authentication"
  ac_help="$ac_help
    --with-skey             enable S/Key support "
-@@ -819,6 +821,23 @@
+@@ -292,7 +294,7 @@
+   --libexecdir=DIR        program executables in DIR [EPREFIX/libexec]
+   --datadir=DIR           read-only architecture-independent data in DIR
+                           [PREFIX/share]
+-  --sysconfdir=DIR        read-only single-machine data in DIR [/etc]
++  --sysconfdir=DIR        read-only single-machine data in DIR [PREFIX/etc]
+   --sharedstatedir=DIR    modifiable architecture-independent data in DIR
+                           [PREFIX/com]
+   --localstatedir=DIR     modifiable single-machine data in DIR [PREFIX/var]
+@@ -679,7 +681,6 @@
+ test "$mandir" = '${prefix}/man' && mandir='$(prefix)/man'
+ test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
+ test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
+-test "$sysconfdir" = '${prefix}/etc' && sysconfdir='/etc'
+ 
+ 
+ # Check whether --with-otp-only or --without-otp-only was given.
+@@ -819,6 +820,23 @@
  fi
  
  
@@ -35,7 +52,7 @@ $NetBSD: patch-ag,v 1.1 2001/06/26 00:49:55 wiz Exp $
  # Check whether --with-passwd or --without-passwd was given.
  if test "${with_passwd+set}" = set; then
    withval="$with_passwd"
-@@ -7712,7 +7731,9 @@
+@@ -7712,7 +7730,9 @@
  #define HAVE_KERB5 1
  EOF
  
@@ -46,7 +63,7 @@ $NetBSD: patch-ag,v 1.1 2001/06/26 00:49:55 wiz Exp $
  	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
      elif test -f "/usr/local/kerberos/include/krb5.h"; then
  	CPPFLAGS="$CPPFLAGS -I/usr/local/kerberos/include"
-@@ -7722,7 +7743,9 @@
+@@ -7722,7 +7742,9 @@
  	echo 'Unable to locate kerberos 5 include files, you will have to edit the Makefile and add -I/path/to/krb/includes to CPPFLAGS'
      fi
  
@@ -57,7 +74,7 @@ $NetBSD: patch-ag,v 1.1 2001/06/26 00:49:55 wiz Exp $
  	SUDO_LDFLAGS="${SUDO_LDFLAGS} -L/usr/local/lib"
      elif test -f "/usr/local/kerberos/lib/libkrb5.a"; then
  	SUDO_LDFLAGS="${SUDO_LDFLAGS} -L/usr/local/kerberos/lib"
-@@ -7732,7 +7755,7 @@
+@@ -7732,7 +7754,7 @@
  	echo 'Unable to locate kerberos 5 libraries, you will have to edit the Makefile and add -L/path/to/krb/libs to SUDO_LDFLAGS'
      fi
  

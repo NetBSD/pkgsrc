@@ -1,8 +1,16 @@
-$NetBSD: patch-af,v 1.8 2000/08/10 02:25:31 thorpej Exp $
+$NetBSD: patch-af,v 1.9 2001/11/19 17:27:24 jlam Exp $
 
---- configure.in.orig	Fri Mar 24 12:14:04 2000
-+++ configure.in	Wed Aug  9 17:13:17 2000
-@@ -167,6 +167,19 @@
+--- configure.in.orig	Fri Mar 24 15:14:04 2000
++++ configure.in
+@@ -59,7 +59,6 @@
+ test "$mandir" = '${prefix}/man' && mandir='$(prefix)/man'
+ test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
+ test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
+-test "$sysconfdir" = '${prefix}/etc' && sysconfdir='/etc'
+ 
+ dnl
+ dnl Deprecated --with options (these all warn or generate an error)
+@@ -167,6 +166,19 @@
  		;;
  esac])
  
@@ -22,7 +30,7 @@ $NetBSD: patch-af,v 1.8 2000/08/10 02:25:31 thorpej Exp $
  AC_ARG_WITH(passwd, [  --without-passwd        don't use passwd/shadow file for authentication],
  [case $with_passwd in
      yes)	;;
-@@ -1466,7 +1479,9 @@
+@@ -1466,7 +1478,9 @@
  dnl
  if test "$with_kerb5" = "yes"; then
      AC_DEFINE(HAVE_KERB5)
@@ -33,7 +41,7 @@ $NetBSD: patch-af,v 1.8 2000/08/10 02:25:31 thorpej Exp $
  	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
      elif test -f "/usr/local/kerberos/include/krb5.h"; then
  	CPPFLAGS="$CPPFLAGS -I/usr/local/kerberos/include"
-@@ -1476,7 +1491,9 @@
+@@ -1476,7 +1490,9 @@
  	echo 'Unable to locate kerberos 5 include files, you will have to edit the Makefile and add -I/path/to/krb/includes to CPPFLAGS'
      fi
  
@@ -44,7 +52,7 @@ $NetBSD: patch-af,v 1.8 2000/08/10 02:25:31 thorpej Exp $
  	SUDO_LDFLAGS="${SUDO_LDFLAGS} -L/usr/local/lib"
      elif test -f "/usr/local/kerberos/lib/libkrb5.a"; then
  	SUDO_LDFLAGS="${SUDO_LDFLAGS} -L/usr/local/kerberos/lib"
-@@ -1486,7 +1503,7 @@
+@@ -1486,7 +1502,7 @@
  	echo 'Unable to locate kerberos 5 libraries, you will have to edit the Makefile and add -L/path/to/krb/libs to SUDO_LDFLAGS'
      fi
  
