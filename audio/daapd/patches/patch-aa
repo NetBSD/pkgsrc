@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/05 19:07:51 nathanw Exp $
+
+--- makefile.orig	2004-04-17 07:14:45.000000000 -0400
++++ makefile	2004-06-04 15:34:59.000000000 -0400
+@@ -1,7 +1,7 @@
+ # configure daapd here
+ 
+ HOWL_ENABLE = 1
+-MPEG4_ENABLE = 1
++MPEG4_ENABLE = 0
+ 
+ 
+ # no need to touch anything below this line
+@@ -13,16 +13,14 @@
+ DEPS = daaplib_ libhttpd_
+ OBJS = daapd.o db.o dboutput.o songcache.o parsemp3.o
+ LIBS = -ldaaplib -lhttpd-persistent -lid3tag -lz 
+-LIBPATH = -L. -L/usr/local/lib -L./daaplib/src -L./libhttpd/src
+-INCPATH = -I. -I/usr/local/include -I./daaplib/include -I./libhttpd/src
+-DEPLOY = /usr/local
+-CFLAGS = -Wall -Wno-multichar
++LIBPATH = -L. ${LDFLAGS} -L./daaplib/src -L./libhttpd/src
++INCPATH = -I. -I./daaplib/include -I./libhttpd/src
++DEPLOY = ${PREFIX}
++CFLAGS += -Wall -Wno-multichar
+ 
+ # HOWL
+ ifeq ($(HOWL_ENABLE),1)
+-	HOWLDIRS := $(sort $(wildcard /usr/local/include/howl-*) )
+-	HOWLRECENT := $(word $(words $(HOWLDIRS)),$(HOWLDIRS) )
+-	INCPATH := $(INCPATH) -I$(HOWLRECENT)
++	INCPATH := $(INCPATH) -I${PREFIX}/include/howl
+ 	LIBS := $(LIBS) -lpthread -lhowl
+ 	CFLAGS := $(CFLAGS) -DHOWL_ENABLE
+ 	ifneq ($(shell $(CC) -E -dM - < /dev/null | grep __APPLE__),)
+@@ -70,8 +68,6 @@
+ 	rm $(OBJS) $(TARGET)
+ 
+ install: $(DEPS) $(TARGET)
+-	cd libhttpd && $(MAKE) install
+-	cd daaplib/src && $(MAKE) install
+ 	cp $(TARGET) $(DEPLOY)/bin
+ 	chmod a+rx $(DEPLOY)/bin/$(TARGET)
+ 	cp $(TARGET).8 $(DEPLOY)/man/man8
