@@ -1,0 +1,26 @@
+$NetBSD: patch-an,v 1.1 2004/01/24 16:36:03 mrauch Exp $
+
+--- stage2/terminfo.c.orig	2002-11-29 20:07:38.000000000 +0100
++++ stage2/terminfo.c
+@@ -245,15 +245,15 @@ ti_exit_standout_mode (void)
+ 
+ /* set the current terminal emulation to use */
+ void 
+-ti_set_term (struct terminfo new)
++ti_set_term (const struct terminfo *new)
+ {
+-  term = new;
++  grub_memmove (&term, new, sizeof (struct terminfo));
+ }
+ 
+-/* return the current terminal emulation */
+-struct terminfo
+-ti_get_term(void)
++/* get the current terminal emulation */
++void
++ti_get_term(struct terminfo *copy)
+ {
+-  return term;
++  grub_memmove (copy, &term, sizeof (struct terminfo));
+ }
+ 

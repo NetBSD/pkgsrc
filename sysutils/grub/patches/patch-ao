@@ -1,0 +1,15 @@
+$NetBSD: patch-ao,v 1.1 2004/01/24 16:36:03 mrauch Exp $
+
+--- stage2/terminfo.h.orig	2002-11-29 20:07:14.000000000 +0100
++++ stage2/terminfo.h
+@@ -40,8 +40,8 @@ char *ti_escape_string (const char *in);
+ char *ti_unescape_memory (const char *in, const char *end);
+ char *ti_unescape_string (const char *in);
+ 
+-void ti_set_term (struct terminfo term);
+-struct terminfo ti_get_term (void);
++void ti_set_term (const struct terminfo *new);
++void ti_get_term (struct terminfo *copy);
+ 
+ void ti_cursor_address (int x, int y);
+ void ti_clear_screen (void);
