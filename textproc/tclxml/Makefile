@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/08/21 18:08:22 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/21 21:57:22 jwise Exp $
 #
 
 DISTNAME=	TclXML-1.2
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.zveno.com/zm.cgi/in-tclxml/
 
 NO_CONFIGURE=
 NO_BUILD=
+
+DEPENDS+=       tcl-8.0.5:../../lang/tcl80
 
 do-install:
 	${MKDIR} ${PREFIX}/lib/TclXML
