@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/14 06:59:42 fredb Exp $
+--- Makefile.orig	Fri Oct 17 13:11:10 1997
++++ Makefile	Fri Aug 13 15:52:29 1999
+@@ -1,7 +1,6 @@
+-
+ # Define your c compiler.  I recommend gcc if you've got it.
+-#CC = cc
+-CC = gcc
++CC = cc
++#CC = gcc
+ 
+ # Define your optimization flags.  Most compilers understand -O and -O2,
+ # Debugging (don't use)
+@@ -43,21 +42,21 @@
+ #                     have that option.
+ #
+ #DEFS = -DUSE_GETOPT_H -DCOLOR_SUPPORT -DEMACS_EDITING
+-DEFS =
++DEFS = -DUSE_UNISTD_H -DCOLOR_SUPPORT -DEMACS_EDITING -DUSE_NCURSES_H
+ 
+ # This should point to the location of your curses or ncurses include file
+ # if it's in a non-standard place.
+ #INCL = -I/usr/local/include
+ #INCL = -I/5usr/include
+-INCL =
++INCL = -I${PREFIX}/include
+ 
+ # This should define the location and name of whatever curses library you're
+ # linking with.
+ #LIB = -L/usr/local/lib
+ #CURSES = -lncurses
+ #LIB = -L/5usr/lib
+-LIB =
+-CURSES = -lcurses
++LIB = -L${PREFIX}/lib -Wl,-R${PREFIX}/lib
++CURSES = -lncurses
+ 
+ # Nothing under this line should need to be changed.
+ 
+@@ -71,3 +70,7 @@
+ frotz: $(OBJECTS)
+ 	$(CC) -o frotz $(OBJECTS) $(LIB) $(CURSES)
+ 
++all: frotz
++
++install:
++	${INSTALL} -c frotz ${PREFIX}/bin
