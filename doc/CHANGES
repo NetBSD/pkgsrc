@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.922 2002/12/26 15:20:54 shell Exp $
+$NetBSD: CHANGES,v 1.923 2002/12/26 20:56:45 tsarna Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4273,3 +4273,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated py-Checker to 0.8.12 [shell 2002-12-26]
 	Updated py-Optik to 1.4 [shell 2002-12-26]
 	Updated nano to 1.0.9 [shell 2002-12-16]
+	Added gpsdrive-1.31 [tsarna 2002-12-26]
