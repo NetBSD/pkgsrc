@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2001/03/12 09:11:01 zuntum Exp $
+# $NetBSD: Makefile,v 1.71 2001/03/20 12:54:52 hubertf Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -41,7 +41,6 @@ SUBDIR+=	p5-MailTools
 SUBDIR+=	pine
 SUBDIR+=	popa3d
 SUBDIR+=	postfix
-SUBDIR+=	postfix-current
 SUBDIR+=	procmail
 SUBDIR+=	qcheck
 SUBDIR+=	qpopper
