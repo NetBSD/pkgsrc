@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: smartd.sh,v 1.2 2004/10/20 07:22:09 xtraeme Exp $
+# $NetBSD: smartd.sh,v 1.3 2004/10/20 07:25:39 xtraeme Exp $
 #
 # PROVIDE: smartd
 # REQUIRE: DAEMON
