@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.3 2003/12/18 15:07:00 recht Exp $
+
+--- fontconfig/fcfreetype.h.orig	2003-12-18 15:36:07.000000000 +0100
++++ fontconfig/fcfreetype.h
+@@ -24,7 +24,8 @@
+ 
+ #ifndef _FCFREETYPE_H_
+ #define _FCFREETYPE_H_
+-#include <freetype/freetype.h>
++#include <ft2build.h>
++#include FT_FREETYPE_H
+ 
+ FT_UInt
+ FcFreeTypeCharIndex (FT_Face face, FcChar32 ucs4);
