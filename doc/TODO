@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.31 2002/12/05 19:13:46 drochner Exp $
+$NetBSD: TODO,v 1.32 2002/12/06 11:21:19 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -137,6 +137,7 @@ Suggested package updates
 	o icewm-1.2.2
 	o icu-2.2 [heinz]
 	o imlib2-1.0.6 [pkg/19144]
+	o intltool-0.23 [pkg/18891]
 	o ivtools-1.0.7
 	o jakarta-ant-1.5 [pkg/18322]
 	o jed-0.99.16 [pkg/18937]
