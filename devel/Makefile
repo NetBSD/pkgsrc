@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.562 2004/11/08 19:08:13 adrianp Exp $
+# $NetBSD: Makefile,v 1.563 2004/11/10 00:53:13 epg Exp $
 #
 
 COMMENT=	Development utilities
@@ -260,6 +260,7 @@ SUBDIR+=	lwp
 SUBDIR+=	m4
 SUBDIR+=	maketool
 SUBDIR+=	mantis
+SUBDIR+=	mkcmd
 SUBDIR+=	mk-files
 SUBDIR+=	monotone
 SUBDIR+=	mph
@@ -336,6 +337,7 @@ SUBDIR+=	p5-File-MimeInfo
 SUBDIR+=	p5-File-PathConvert
 SUBDIR+=	p5-File-Spec
 SUBDIR+=	p5-File-Temp
+SUBDIR+=	p5-File-Type
 SUBDIR+=	p5-FileHandle-Unget
 SUBDIR+=	p5-FileKGlob
 SUBDIR+=	p5-FreezeThaw
@@ -381,6 +383,7 @@ SUBDIR+=	p5-Parse-RecDescent
 SUBDIR+=	p5-Parse-Yapp
 SUBDIR+=	p5-PatchReader
 SUBDIR+=	p5-Perl-Tidy
+SUBDIR+=	p5-PerlIO-eol
 SUBDIR+=	p5-PerlIO-via-dynamic
 SUBDIR+=	p5-PerlIO-via-symlink
 SUBDIR+=	p5-Proc-Daemon
