@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.Linux.i386,v 1.10 2004/06/26 10:42:42 grant Exp $
+# $NetBSD: Makefile.Linux.i386,v 1.11 2004/06/26 10:43:49 grant Exp $
 #
 
 DIST_DIR_NAME=		linux22
@@ -10,16 +10,16 @@ FIND_ARG=		. -depth
 INST_ENV+=		LD_LIBRARY_PATH="${X11BASE}/lib:${PREFIX}/lib:${LD_LIBRARY_PATH}"
 
 post-extract:
-	${MKDIR} ${WRKSRC}/dest
-	${SED} -e "s|@PREFIX@|${PREFIX}|g" -e "s|@X11BASE@|${X11BASE}|g" \
+	@${MKDIR} ${WRKSRC}/dest
+	@${SED} -e "s|@PREFIX@|${PREFIX}|g" -e "s|@X11BASE@|${X11BASE}|g" \
 		-e "s|@WRKSRC@|${WRKSRC}|g" -e "s|@X11PREFIX@|${X11PREFIX}|g" \
 			${FILESDIR}/linux_notes
 	@${SH} -c "read"
-	${LN} -s ${PREFIX}/lib/libgdk.so ${WRKSRC}/libgdk-1.2.so.0
-	${LN} -s ${PREFIX}/lib/libglib.so ${WRKSRC}/libglib-1.2.so.0
-	${LN} -s ${PREFIX}/lib/libgmodule.so ${WRKSRC}/libgmodule-1.2.so.0
-	${LN} -s ${PREFIX}/lib/libgtk.so ${WRKSRC}/libgtk-1.2.so.0
-	${LN} -s ${PREFIX}/lib/libgdk.so ${WRKSRC}/dest/libgdk-1.2.so.0
-	${LN} -s ${PREFIX}/lib/libglib.so ${WRKSRC}/dest/libglib-1.2.so.0
-	${LN} -s ${PREFIX}/lib/libgmodule.so ${WRKSRC}/dest/libgmodule-1.2.so.0
-	${LN} -s ${PREFIX}/lib/libgtk.so ${WRKSRC}/dest/libgtk-1.2.so.0
+	@${LN} -s ${PREFIX}/lib/libgdk.so ${WRKSRC}/libgdk-1.2.so.0
+	@${LN} -s ${PREFIX}/lib/libglib.so ${WRKSRC}/libglib-1.2.so.0
+	@${LN} -s ${PREFIX}/lib/libgmodule.so ${WRKSRC}/libgmodule-1.2.so.0
+	@${LN} -s ${PREFIX}/lib/libgtk.so ${WRKSRC}/libgtk-1.2.so.0
+	@${LN} -s ${PREFIX}/lib/libgdk.so ${WRKSRC}/dest/libgdk-1.2.so.0
+	@${LN} -s ${PREFIX}/lib/libglib.so ${WRKSRC}/dest/libglib-1.2.so.0
+	@${LN} -s ${PREFIX}/lib/libgmodule.so ${WRKSRC}/dest/libgmodule-1.2.so.0
+	@${LN} -s ${PREFIX}/lib/libgtk.so ${WRKSRC}/dest/libgtk-1.2.so.0
