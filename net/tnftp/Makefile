@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/19 10:52:18 agc Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/19 12:02:04 grant Exp $
 #
 
 DISTNAME=		tnftp-20030825
@@ -30,8 +30,7 @@ CONFIGURE_ARGS+=	--enable-ipv6
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=		CPPFLAGS=""
-.endif
+OPSYSVARS+=		MAKE_ENV
+MAKE_ENV.SunOS+=	CPPFLAGS=""
 
 .include "../../mk/bsd.pkg.mk"
