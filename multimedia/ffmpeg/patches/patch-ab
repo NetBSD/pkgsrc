@@ -1,0 +1,45 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/05/10 13:41:10 wiz Exp $
+
+--- ffserver.c.orig	2001-08-14 17:38:17.000000000 -0500
++++ ffserver.c
+@@ -20,6 +20,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <string.h>
++#include <sys/types.h>
+ #include <netinet/in.h>
+ #include <unistd.h>
+ #include <fcntl.h>
+@@ -28,8 +29,9 @@
+ #include <errno.h>
+ #include <sys/time.h>
+ #include <time.h>
++#ifndef __FreeBSD__
+ #include <getopt.h>
+-#include <sys/types.h>
++#endif
+ #include <sys/socket.h>
+ #include <arpa/inet.h>
+ #include <netdb.h>
+@@ -1491,7 +1493,7 @@ void help(void)
+            "\n"
+            "-L            : print the LICENCE\n"
+            "-h            : this help\n"
+-           "-f configfile : use configfile instead of /etc/ffserver.conf\n"
++           "-f configfile : use configfile instead of " FFSERVER_CONF "\n"
+            );
+ }
+ 
+@@ -1523,10 +1525,10 @@ int main(int argc, char **argv)
+ 
+     register_all();
+ 
+-    config_filename = "/etc/ffserver.conf";
++    config_filename = FFSERVER_CONF;
+ 
+     for(;;) {
+-        c = getopt_long_only(argc, argv, "Lh?f:", NULL, NULL);
++        c = getopt(argc, argv, "Lh?f:");
+         if (c == -1)
+             break;
+         switch(c) {
