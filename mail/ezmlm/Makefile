@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/01/16 07:19:07 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2002/01/21 18:53:52 zuntum Exp $
 #
 
 DISTNAME=		ezmlm-0.53
@@ -23,5 +23,6 @@ post-patch:
 	${ECHO} ${CC} ${STRIPFLAG} > ${WRKSRC}/conf-ld
 	${ECHO} ${PREFIX}/bin > ${WRKSRC}/conf-bin
 	${ECHO} ${PREFIX}/man > ${WRKSRC}/conf-man
+	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
 
 .include "../../mk/bsd.pkg.mk"
