@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/01 16:25:09 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/05 09:20:55 skrll Exp $
 
---- conf/NetBSD.mk.orig	Thu Aug 31 14:06:52 2000
+--- conf/NetBSD.mk.orig	Thu Aug 31 13:06:52 2000
 +++ conf/NetBSD.mk
-@@ -1,33 +1,35 @@
+@@ -1,6 +1,6 @@
  INSTALL=install
  MAKEDEPEND=sh ../conf/mkdep.sh
 -INCS_X11= -I/usr/X11R6/include
@@ -10,63 +10,60 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/11/01 16:25:09 hubertf Exp $
  
  # set ELFENV in config.mk
  # a.out env. -> 0
- # ELF env.   -> 1
--ifndef ELFENV
-+#HF#
-+#HF# Force -Wl,-rpath even on a.out
-+#HF#ifndef ELFENV
+@@ -9,29 +9,16 @@
  ELFENV=1
--endif
-+#HF#endif
+ endif
  
- ifeq (${ELFENV},1)
+-ifeq (${ELFENV},1)
 -LIBS_X11= -L/usr/X11R6/lib -Wl,-rpath,/usr/X11R6/lib -lX11
-+LIBS_X11= -L${X11BASE}/lib -Wl,-rpath,${X11BASE}/lib -lX11
- else
+-else
 -LIBS_X11= -L/usr/X11R6/lib -lX11
-+LIBS_X11= -L${X11BASE}/lib -lX11
- endif
- 
+-endif
+-
 -INCS_CONS= -I/usr/pkg/include
-+INCS_CONS= -I${PREFIX}/include
- ifeq (${ELFENV},1)
+-ifeq (${ELFENV},1)
 -    LIBS_CONS= -L/usr/pkg/lib -Wl,-rpath /usr/pkg/lib
-+    LIBS_CONS= -L${PREFIX}/lib -Wl,-rpath ${PREFIX}/lib
- else
+-else
 -    LIBS_CONS= -L/usr/pkg/lib
-+    LIBS_CONS= -L${PREFIX}/lib
- endif
+-endif
++LIBS_X11= -L${X11BASE}/lib -Wl,-rpath,${X11BASE}/lib -lX11
  
++INCS_CONS= -I${PREFIX}/include
++LIBS_CONS= -L${PREFIX}/lib -Wl,-rpath ${PREFIX}/lib
  ifndef LIBS_IM
 -INCS_IM = -I/usr/pkg/include
-+INCS_IM = -I${PREFIX}/include
-     ifeq (${ELFENV},1)
+-    ifeq (${ELFENV},1)
 -    LIBS_IM = -L/usr/pkg/lib -Wl,-rpath,/usr/pkg/lib -lcanna
-+    LIBS_IM = -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib -lcanna
-     else
+-    else
 -    LIBS_IM = -L/usr/pkg/lib -lcanna
-+    LIBS_IM = -L${PREFIX}/lib -lcanna
-     endif
+-    endif
++INCS_IM = -I${PREFIX}/include
++    LIBS_IM = -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib -lcanna
  endif
  
-@@ -63,16 +65,16 @@
+-SHLIB_CFLAGS=-fpic -DPIC
++SHLIB_CFLAGS=-fPIC -DPIC
+ ifeq (${ELFENV},1)
+     SHLIB_LDFLAGS = -shared
+     SHLIB_LD=${CC}
+@@ -62,17 +49,13 @@
+ 
  ifdef MGL_INSTALLED
  	INCS_MGL = -I${MGL_HEADER_DIR}
- 	ifeq (${ELFENV},1)
+-	ifeq (${ELFENV},1)
 -	LIBS_MGL = -L${MGL_LIB_DIR} -L/usr/X11R6/lib -Wl,-rpath,/usr/pkg/lib -L/usr/pkg/lib  -lmgl2
-+	LIBS_MGL = -L${MGL_LIB_DIR} -L${X11BASE}/lib -Wl,-rpath,${X11BASE}/lib -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib -lmgl2
- 	else
+-	else
 -	LIBS_MGL = -L${MGL_LIB_DIR} -L/usr/X11R6/lib -L/usr/pkg/lib  -lmgl2	
-+	LIBS_MGL = -L${MGL_LIB_DIR} -L${X11BASE}/lib -L${PREFIX}/lib  -lmgl2	
- 	endif
+-	endif
++	LIBS_MGL = -L${MGL_LIB_DIR} -L/usr/X11R6/lib -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib  -lmgl2
  else
  	INCS_MGL = -I${SRCDIR}
  	ifeq (${ELFENV},1)
 -	LIBS_MGL = -L${SRCDIR} -rdynamic -L/usr/X11R6/lib -Wl,-rpath,/usr/pkg/lib -L/usr/pkg/lib -lmgl2 
-+	LIBS_MGL = -L${SRCDIR} -rdynamic -L${X11BASE}/lib -Wl,-rpath,${X11BASE}/lib -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib -lmgl2 
++	LIBS_MGL = -L${SRCDIR} -rdynamic -L/usr/X11R6/lib -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib -lmgl2 
  	else
 -	LIBS_MGL = -L${SRCDIR} -L/usr/X11R6/lib -L/usr/pkg/lib -lmgl2 
-+	LIBS_MGL = -L${SRCDIR} -L${X11BASE}/lib -L${PREFIX}/lib -lmgl2 
++	LIBS_MGL = -L${SRCDIR} -L/usr/X11R6/lib -L${PREFIX}/lib -lmgl2 
  	endif
  endif
  
