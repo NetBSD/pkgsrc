@@ -1,0 +1,27 @@
+$NetBSD: patch-aj,v 1.4 2003/09/16 20:15:39 jmmv Exp $
+
+--- config/sparc/trampolines.c.orig	1999-11-04 20:48:40.000000000 +0000
++++ config/sparc/trampolines.c	2003-08-11 13:08:18.711843000 +0100
+@@ -33,14 +33,14 @@
+ 
+ asm(
+ 	START_ASM_FUNC() C_FUNC_NAME(sparc_do_fixup_trampoline) "\n"
+-C_FUNC_NAME(sparc_do_fixup_trampoline) ":			\n
+-	save	%sp,-64,%sp					\n
+-	ld	[%i7+8],%o0					\n
+-	ld	[%i7+12],%o1					\n
+-	call	" C_FUNC_NAME(soft_fixup_trampoline) "		\n
+-	mov	%g1,%i7						\n
+-	jmp	%o0						\n
+-	restore"
++C_FUNC_NAME(sparc_do_fixup_trampoline) ":			\n"
++"	save	%sp,-64,%sp					\n"
++"	ld	[%i7+8],%o0					\n"
++"	ld	[%i7+12],%o1					\n"
++"	call	" C_FUNC_NAME(soft_fixup_trampoline) "		\n"
++"	mov	%g1,%i7						\n"
++"	jmp	%o0						\n"
++"	restore"
+ 	END_ASM_FUNC()
+ );
+ 
