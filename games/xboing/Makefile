@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/01/02 03:20:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/07/11 08:43:53 agc Exp $
 #
 
 DISTNAME=		xboing2.4
@@ -16,8 +16,8 @@ NO_INSTALL_MANPAGES=	yes
 USE_IMAKE=		yes
 
 post-install:
-	${CHOWN} bin:games ${X11BASE}/bin/xboing
-	${CHMOD} 2755 ${X11BASE}/bin/xboing
-	${INSTALL_MAN} ${WRKSRC}/xboing.man ${X11BASE}/man/man6/xboing.6
+	${CHOWN} bin:games ${X11PREFIX}/bin/xboing
+	${CHMOD} 2755 ${X11PREFIX}/bin/xboing
+	${INSTALL_MAN} ${WRKSRC}/xboing.man ${X11PREFIX}/man/man6/xboing.6
 
 .include "../../mk/bsd.pkg.mk"
