@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.23 1999/08/25 19:57:45 rh Exp $
+# $NetBSD: Makefile,v 1.24 2000/02/03 11:48:36 rh Exp $
 # $FreeBSD Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
-DISTNAME=	ddd-3.1.6
+DISTNAME=	ddd-3.2
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.ips.cs.tu-bs.de/pub/local/softech/ddd/  \
-		ftp://richb-pc.acc.qc.edu/pub/ddd/  \
-		ftp://ftp.gre.ac.uk/pub/tools/debuggers/ddd/  \
-		ftp://uiarchive.cso.uiuc.edu/pub/packages/ddd/
+MASTER_SITES=	${MASTER_SITE_GNU:=ddd/}
 
 MAINTAINER=     frueauf@netbsd.org
-HOMEPAGE=	http://www.cs.tu-bs.de/softech/ddd/
+HOMEPAGE=	http://www.gnu.org/software/ddd/
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
@@ -40,10 +37,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/PROBLEMS ${PREFIX}/share/doc/ddd
 	${INSTALL_DATA} ${WRKSRC}/doc/README ${PREFIX}/share/doc/ddd
 	${INSTALL_DATA} ${WRKSRC}/doc/ddd-paper.ps ${PREFIX}/share/doc/ddd
-	${INSTALL_DATA} ${WRKSRC}/doc/ddd.man.ps ${PREFIX}/share/doc/ddd
+	${INSTALL_DATA} ${WRKSRC}/doc/ddd.ps ${PREFIX}/share/doc/ddd
+	${INSTALL_DATA} ${WRKSRC}/doc/ddd.pdf ${PREFIX}/share/doc/ddd
 	${INSTALL_DATA} ${WRKSRC}/doc/sample.dddinit ${PREFIX}/share/doc/ddd
 	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd-paper.ps
-	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd.man.ps
+	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd.ps
 
 check:
 	(cd ${WRKSRC} ; ${GMAKE} check)
