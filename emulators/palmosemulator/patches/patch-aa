@@ -1,0 +1,107 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/12/31 06:59:54 dsainty Exp $
+
+--- SrcShared/omnithread/omnithread.h.orig	Sat Mar 30 01:11:07 2002
++++ SrcShared/omnithread/omnithread.h	Sat Nov 23 23:43:30 2002
+@@ -64,102 +64,8 @@
+ //
+ 
+ 
+-#if defined(__arm__) && defined(__atmos__)
+ #include <omnithread/posix.h>
+ 
+-#elif defined(__alpha__) && defined(__osf1__)
+-#include <omnithread/posix.h>
+-
+-#elif defined(__powerpc__) && defined(__aix__)
+-#include <omnithread/posix.h>
+-
+-#elif defined(__hpux__)
+-#include <omnithread/posix.h>
+-
+-#elif defined(__WIN32__)
+-#include <omnithread/nt.h>
+-
+-#ifdef _MSC_VER
+-
+-// Using MSVC++ to compile. If compiling library as a DLL,
+-// define _OMNITHREAD_DLL. If compiling as a statuc library, define
+-// _WINSTATIC
+-// If compiling an application that is to be statically linked to omnithread,
+-// define _WINSTATIC (if the application is  to be dynamically linked, 
+-// there is no need to define any of these macros).
+-
+-#if defined (_OMNITHREAD_DLL) && defined(_WINSTATIC)
+-#error "Both _OMNITHREAD_DLL and _WINSTATIC are defined."
+-#elif defined(_OMNITHREAD_DLL)
+-#define _OMNITHREAD_NTDLL_ __declspec(dllexport)
+-#elif !defined(_WINSTATIC)
+-#define _OMNITHREAD_NTDLL_ __declspec(dllimport)
+-#elif defined(_WINSTATIC)
+-#define _OMNITHREAD_NTDLL_
+-#endif
+- // _OMNITHREAD_DLL && _WINSTATIC
+-
+-#else
+-
+-// Not using MSVC++ to compile
+-#define _OMNITHREAD_NTDLL_
+-
+-#endif
+- // _MSC_VER
+-
+-#elif defined(__sun__)
+-#include <omnithread/solaris.h>
+- 
+-#elif defined(__sunos__)
+-#if __OSVERSION__ != 5
+-// XXX Workaround for SUN C++ compiler (seen on 4.2) Template.DB code
+-//     regeneration bug. See omniORB2/CORBA_sysdep.h for details.
+-#if !defined(__SUNPRO_CC) || __OSVERSION__ != '5'
+-#error "Only SunOS 5.x or later is supported."
+-#endif
+-#endif
+-#ifdef UsePthread
+-#include <omnithread/posix.h>
+-#else
+-#include <omnithread/solaris.h>
+-#endif
+-
+-#elif defined(__linux__)
+-#include <omnithread/posix.h>
+-
+-#elif defined(__nextstep__)
+-#include <omnithread/mach.h>
+-
+-#elif defined(__VMS)
+-#include <omnithread/posix.h>
+-
+-#elif defined(__SINIX__)
+-#include <omnithread/posix.h>
+-
+-#elif defined(__osr5__)
+-#include <omnithread/posix.h>
+-
+-#elif defined(__irix__)
+-#include <omnithread/posix.h>
+-
+-#elif defined(macintosh)
+-#include <null_thread.h>
+-
+-#elif defined(__QNXNTO__)
+-#include <omnithread/posix.h>
+-
+-#elif defined(__svr4__)
+-#include <omnithread/posix.h>
+-
+-#elif defined(__FreeBSD__)
+-#include <omnithread/posix.h>
+-
+-#elif defined(__bsdi__)
+-#include <omnithread/posix.h>
+-
+-#else
+-#error "No implementation header file"
+-#endif
+ 
+ #if !defined(__WIN32__)
+ #define _OMNITHREAD_NTDLL_
