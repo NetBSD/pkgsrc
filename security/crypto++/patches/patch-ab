@@ -1,7 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/07/26 15:18:44 minskim Exp $
---- config.h.orig	2004-04-14 01:13:37.000000000 +0100
-+++ config.h	2004-04-14 01:13:41.000000000 +0100
-@@ -194,7 +194,7 @@
+$NetBSD: patch-ab,v 1.2 2005/03/19 16:48:21 wiz Exp $
+
+--- config.h.orig	2004-07-21 19:09:46.000000000 +0200
++++ config.h
+@@ -201,7 +201,7 @@ NAMESPACE_END
  #define CRYPTOPP_WIN32_AVAILABLE
  #endif
  

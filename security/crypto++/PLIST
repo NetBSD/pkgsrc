@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/26 15:18:44 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/19 16:48:21 wiz Exp $
 bin/cryptest
 include/cryptopp/3way.h
 include/cryptopp/adler32.h
@@ -8,11 +8,13 @@ include/cryptopp/algparam.h
 include/cryptopp/arc4.h
 include/cryptopp/argnames.h
 include/cryptopp/asn.h
+include/cryptopp/base32.h
 include/cryptopp/base64.h
 include/cryptopp/basecode.h
 include/cryptopp/bench.h
 include/cryptopp/blowfish.h
 include/cryptopp/blumshub.h
+include/cryptopp/camellia.h
 include/cryptopp/cast.h
 include/cryptopp/cbcmac.h
 include/cryptopp/channels.h
@@ -23,7 +25,7 @@ include/cryptopp/default.h
 include/cryptopp/des.h
 include/cryptopp/dh.h
 include/cryptopp/dh2.h
-include/cryptopp/diamond.h
+include/cryptopp/dll.h
 include/cryptopp/dmac.h
 include/cryptopp/dsa.h
 include/cryptopp/ec2n.h
@@ -84,6 +86,7 @@ include/cryptopp/randpool.h
 include/cryptopp/rc2.h
 include/cryptopp/rc5.h
 include/cryptopp/rc6.h
+include/cryptopp/resource.h
 include/cryptopp/rijndael.h
 include/cryptopp/ripemd.h
 include/cryptopp/rng.h
@@ -95,21 +98,25 @@ include/cryptopp/secblock.h
 include/cryptopp/seckey.h
 include/cryptopp/serpent.h
 include/cryptopp/sha.h
+include/cryptopp/shacal2.h
 include/cryptopp/shark.h
 include/cryptopp/simple.h
 include/cryptopp/skipjack.h
 include/cryptopp/smartptr.h
 include/cryptopp/socketft.h
 include/cryptopp/square.h
+include/cryptopp/stdcpp.h
 include/cryptopp/strciphr.h
 include/cryptopp/tea.h
 include/cryptopp/tiger.h
 include/cryptopp/trdlocal.h
 include/cryptopp/trunhash.h
+include/cryptopp/ttmac.h
 include/cryptopp/twofish.h
 include/cryptopp/validate.h
 include/cryptopp/wait.h
 include/cryptopp/wake.h
+include/cryptopp/whrlpool.h
 include/cryptopp/winpipes.h
 include/cryptopp/words.h
 include/cryptopp/xormac.h
