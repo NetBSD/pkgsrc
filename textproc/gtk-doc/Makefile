@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.13 2004/10/03 00:18:19 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/03/22 16:23:03 jmmv Exp $
 #
 
-DISTNAME=	gtk-doc-1.2
-PKGREVISION=	2
+DISTNAME=	gtk-doc-1.3
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/1.2/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/1.3/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://www.gtk.org/rdp/
 COMMENT=	Tools for authors of the GTK+ reference documentation
 
 DEPENDS+=	docbook-xml>=4.2nb6:../../textproc/docbook-xml
-DEPENDS+=	docbook-xsl>=1.64.1nb3:../../textproc/docbook-xsl
+DEPENDS+=	docbook-xsl>=1.68.1:../../textproc/docbook-xsl
 DEPENDS+=	dsssl-docbook-modular-[0-9]*:../../textproc/dsssl-docbook-modular
 
 GNU_CONFIGURE=		YES
