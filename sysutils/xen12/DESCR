@@ -1,0 +1,6 @@
+Xen is is a virtual machine monitor for x86 that supports execution of
+multiple guest operating systems with unprecedented levels of performance
+and resource isolation.  Xen is Open Source software. 
+
+See http://www.cl.cam.ac.uk/Research/SRG/netos/xen/ for more details on Xen. 
+See http://www.netbsd.org/Ports/xen/ for more details on NetBSD/xen.
