@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/03 19:18:16 xtraeme Exp $
+
+SHA1 (libntlm-0.3.2.tar.gz) = 6b658496ab96eb1878ec0dd72db2e4941b319d37
+Size (libntlm-0.3.2.tar.gz) = 207997 bytes
