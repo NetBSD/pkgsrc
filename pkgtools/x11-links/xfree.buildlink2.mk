@@ -1,4 +1,4 @@
-# $NetBSD: xfree.buildlink2.mk,v 1.11 2003/01/14 09:31:20 jlam Exp $
+# $NetBSD: xfree.buildlink2.mk,v 1.12 2003/08/26 01:43:48 jschauma Exp $
 
 .if !defined(XFREE_BUILDLINK2_MK)
 XFREE_BUILDLINK2_MK=	# defined
@@ -606,8 +606,6 @@ BUILDLINK_FILES.XFree+=	lib/libxkbui.a
 
 BUILDLINK_TARGETS+=	XFree-buildlink
 
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../x11/Xrender/buildlink2.mk"
