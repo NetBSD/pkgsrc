@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2001/12/11 15:43:15 jlam Exp $
+$NetBSD: distinfo,v 1.4 2004/04/24 01:18:26 wiz Exp $
 
 SHA1 (xbmbrowser5.1.tar.gz) = b7e6ed6509fbf985dc4348cb45c67047cd5e87dc
 Size (xbmbrowser5.1.tar.gz) = 74397 bytes
-SHA1 (patch-aa) = 98edc27685bc7c49e351dc444249c5b19093146b
+SHA1 (patch-aa) = 1c1087555ca33e3319810b8f66cf510b047f8233
