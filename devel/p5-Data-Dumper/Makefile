@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.16 2001/06/07 04:25:31 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/07/09 16:59:54 tv Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:11 jfitz Exp
 
-.include "../../lang/perl5/Makefile.common"
-
-PKGNAME=	p5-Data-Dumper-2.102
-CATEGORIES+=	devel
-MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=Data/}
+DISTNAME=	p5-Data-Dumper-2.102nb1
+CATEGORIES=	devel
+DISTFILES=	# empty
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.perldoc.com/perl5.6/lib/Data/Dumper.html
 COMMENT=	perl5 module for stringified perl data structures
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Data/Dumper/.packlist
+# This version of Data::Dumper is already in lang/perl5; this pkg is
+# here to provide a dependency point.  An explicit Perl version
+# number is used here to correspond with the Data::Dumper version above.
 
-EXTRACT_ELEMENTS=	${DISTNAME}/ext/Data/Dumper
-WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
+DEPENDS+=	perl-base-5.6.1*:../../lang/perl5-base
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
+EXTRACT_ONLY=	# empty
+NO_CHECKSUM=	# defined
+
+do-build do-install: # (do nothing)
 
 .include "../../mk/bsd.pkg.mk"
