@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8604 2005/01/04 23:49:46 lukem Exp $
+$NetBSD: CHANGES,v 1.8605 2005/01/04 23:50:34 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -95,3 +95,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated MesaDemos to 6.2.1 [adam 2005-01-04]
 	Updated Mesa to 6.2.1 [adam 2005-01-04]
 	Updated tnftp to 20050103 [lukem 2005-01-04]
+	Added vino-2.8.1 [jmmv 2005-01-04]
+	Updated gnome to 2.8.2nb1 [jmmv 2005-01-04]
