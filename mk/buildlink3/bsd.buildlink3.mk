@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.95 2004/02/19 07:41:44 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.96 2004/02/19 12:50:47 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -759,16 +759,6 @@ _BLNK_PASSTHRU_RPATHDIRS+=	${BUILDLINK_PASSTHRU_RPATHDIRS}
 #
 _BLNK_PASSTHRU_RPATHDIRS:=	${_BLNK_PASSTHRU_RPATHDIRS:N/usr/lib}
 
-# Resolve the path to ${WRKDIR} completely in case it's a symlink.
-.if !defined(_BLNK_WRKDIR)
-_BLNK_WRKDIR!=	if [ -d ${WRKDIR} ]; then				\
-			cd ${WRKDIR}; ${PWD_CMD};			\
-		else							\
-			${ECHO} ${WRKDIR};				\
-		fi
-MAKEFLAGS+=	_BLNK_WRKDIR=${_BLNK_WRKDIR:Q}
-.endif
-
 _BLNK_MANGLE_DIRS=	# empty
 _BLNK_MANGLE_DIRS+=	${BUILDLINK_DIR}
 _BLNK_MANGLE_DIRS+=	${BUILDLINK_X11_DIR}
@@ -816,11 +806,31 @@ _BLNK_UNPROTECT_DIRS+=	${WRKDIR}
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_X11_DIR}
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_DIR}
 
-# Transform all references to the physical path to ${WRKDIR} into ${WRKDIR}.
+# Resolve some important directories to their phyiscal paths as symlinks
+# tend to confuse buildlink3.
 #
-.if ${_BLNK_WRKDIR} != ${WRKDIR}
-_BLNK_TRANSFORM+=	mangle:${_BLNK_WRKDIR}:${WRKDIR}
-.endif
+_BLNK_PHYSICAL_PATH_VARS?=	WRKDIR LOCALBASE
+.for _var_ in ${_BLNK_PHYSICAL_PATH_VARS}
+.  if !defined(_BLNK_PHYSICAL_PATH.${_var_})
+_BLNK_PHYSICAL_PATH.${_var_}!=						\
+	if [ -d ${${_var_}} ]; then					\
+		cd ${${_var_}}; ${PWD_CMD};				\
+	else								\
+		${ECHO} ${${_var_}};					\
+	fi
+MAKEFLAGS+=	_BLNK_PHYSICAL_PATH.${_var_}=${_BLNK_PHYSICAL_PATH.${_var_}:Q}
+.  endif
+.endfor
+
+# Transform all references to the physical paths to some important
+# directories into their given names.
+#
+.for _var_ in ${_BLNK_PHYSICAL_PATH_VARS}
+.  if (${_BLNK_PHYSICAL_PATH.${_var_}} != ${${_var_}}) && \
+      empty(${_var_}:M${_BLNK_PHYSICAL_PATH.${_var_}}/*)
+_BLNK_TRANSFORM+=	mangle:${_BLNK_PHYSICAL_PATH.${_var_}}:${${_var_}}
+.  endif
+.endfor
 #
 # Protect work directories and the dependency directories from all the
 # transformations we're about to do.
