@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.149 2004/02/06 04:37:02 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.150 2004/02/06 19:04:25 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -29,7 +29,7 @@ _MAKE:=	${_dir_}/${MAKE}
 .    endif
 .  endfor
 .  if !empty(_MAKE:M/*)
-MAKEFLAGS+=	_MAKE="${_MAKE}"
+MAKEFLAGS+=	_MAKE=${_MAKE:Q}
 .  endif
 .endif
 MAKE:=	${_MAKE}
@@ -370,7 +370,7 @@ MAKEFLAGS+=		DIGEST=${DIGEST}
 DIGEST_VERSION=		20010301
 .elif !defined(DIGEST_VERSION)
 DIGEST_VERSION!= 	${DIGEST} -V 2>/dev/null
-MAKEFLAGS+=		DIGEST_VERSION="${DIGEST_VERSION}"
+MAKEFLAGS+=		DIGEST_VERSION=${DIGEST_VERSION}
 .endif
 
 # This is the package database directory for the default view.
@@ -421,7 +421,7 @@ PKG_BEST_EXISTS?=	${PKG_ADMIN} -b -d ${_PKG_DBDIR} -S lsbest
 
 .ifndef PKGTOOLS_VERSION
 PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302
-MAKEFLAGS+=		PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
+MAKEFLAGS+=		PKGTOOLS_VERSION=${PKGTOOLS_VERSION}
 .endif
 
 USE_BUILDLINK2?=	no	# default to not using buildlink2
@@ -436,7 +436,7 @@ ZOULARIS_VERSION=	20000522
 .  else
 .    include "${ZOULARISBASE}/share/mk/zoularis.mk"
 .  endif
-MAKEFLAGS+=		ZOULARIS_VERSION="${ZOULARIS_VERSION}"
+MAKEFLAGS+=		ZOULARIS_VERSION=${ZOULARIS_VERSION}
 .endif
 
 _PKGSRCDIR?=		${.CURDIR:C|/[^/]*/[^/]*$||}
@@ -469,10 +469,10 @@ _HOSTNAME!=		${UNAME} -n
 MAKEFLAGS+=		_HOSTNAME=${_HOSTNAME}
 .  endif
 WRKDIR_BASENAME?=	work.${_HOSTNAME:C|\..*||}
-MAKEFLAGS+=		OBJHOSTNAME="${OBJHOSTNAME}"
+MAKEFLAGS+=		OBJHOSTNAME=${OBJHOSTNAME}
 .elif defined(OBJMACHINE)
 WRKDIR_BASENAME?=	work.${MACHINE_ARCH}
-MAKEFLAGS+=		OBJMACHINE="${OBJMACHINE}"
+MAKEFLAGS+=		OBJMACHINE=${OBJMACHINE}
 .else
 WRKDIR_BASENAME?=	work
 .endif

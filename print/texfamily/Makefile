@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 14:58:00 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/06 19:04:25 jlam Exp $
 
 DISTNAME=	TeXfamily-1.2.1
 PKGREVISION=	4
@@ -41,7 +41,7 @@ USE_GNU_TOOLS+=	make
 USE_X11=	yes
 PLIST_SUBST+=	MV="${MV}"
 CFLAGS+=	-Dunix
-MAKEFLAGS+=	PREFIX=${PREFIX}
+MAKEFLAGS+=	PREFIX=${PREFIX:Q}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--prefix=${PREFIX} \
 		--enable-local-texmf=texmf.local \

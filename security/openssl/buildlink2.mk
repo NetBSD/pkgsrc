@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.18 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.19 2004/02/06 19:04:25 jlam Exp $
 
 .if !defined(OPENSSL_BUILDLINK2_MK)
 OPENSSL_BUILDLINK2_MK=	# defined
@@ -110,7 +110,7 @@ _NEED_OPENSSL!=		\
 	else								\
 		${ECHO} "YES";						\
 	fi
-MAKEFLAGS+=	_NEED_OPENSSL="${_NEED_OPENSSL}"
+MAKEFLAGS+=	_NEED_OPENSSL=${_NEED_OPENSSL}
 .  endif   # !defined(_NEED_OPENSSL)
 .endif
 
@@ -121,7 +121,7 @@ _NEED_NEWER_OPENSSL!=	\
 	else								\
 		${ECHO} "YES";						\
 	fi
-MAKEFLAGS+=	_NEED_NEWER_OPENSSL="${_NEED_NEWER_OPENSSL}"
+MAKEFLAGS+=	_NEED_NEWER_OPENSSL=${_NEED_NEWER_OPENSSL}
 .endif
 
 .if (${_NEED_OPENSSL} == "YES") && (${_NEED_NEWER_OPENSSL} == "YES")

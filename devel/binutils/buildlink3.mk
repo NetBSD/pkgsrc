@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2004/02/06 19:04:24 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BINUTILS_BUILDLINK3_MK:=	${BINUTILS_BUILDLINK3_MK}+
@@ -54,7 +54,7 @@ BUILDLINK_USE_BUILTIN.binutils=	NO
 .    endfor
 .  endif
 MAKEFLAGS+=	\
-	BUILDLINK_USE_BUILTIN.binutils="${BUILDLINK_USE_BUILTIN.binutils}"
+	BUILDLINK_USE_BUILTIN.binutils=${BUILDLINK_USE_BUILTIN.binutils}
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.binutils:M[nN][oO])

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2004/02/06 19:04:24 jlam Exp $
 #
 # Optionally define USE_GNU_READLINE to force use of GNU readline.
 #
@@ -57,7 +57,7 @@ BUILDLINK_USE_BUILTIN.readline=	NO
 .    endfor
 .  endif
 MAKEFLAGS+=	\
-	BUILDLINK_USE_BUILTIN.readline="${BUILDLINK_USE_BUILTIN.readline}"
+	BUILDLINK_USE_BUILTIN.readline=${BUILDLINK_USE_BUILTIN.readline}
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.readline:M[nN][oO])
@@ -75,7 +75,7 @@ _BLNK_LIBEDIT_FOUND!=	\
 	else								\
 		${ECHO} "YES";						\
 	fi
-MAKEFLAGS+=	_BLNK_LIBEDIT_FOUND="${_BLNK_LIBEDIT_FOUND}"
+MAKEFLAGS+=	_BLNK_LIBEDIT_FOUND=${_BLNK_LIBEDIT_FOUND}
 .    endif
 .    if ${_BLNK_LIBEDIT_FOUND} == "YES"
 BUILDLINK_TRANSFORM+=		l:history:edit
