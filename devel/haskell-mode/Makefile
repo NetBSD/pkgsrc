@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/30 02:29:27 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/28 03:27:59 jtb Exp $
 
 DISTNAME=		haskell-mode-20001129
 CATEGORIES=		devel editors
@@ -7,21 +7,36 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://www.haskell.org/haskell-mode/
 
-DEPENDS+=		emacs-[0-9]*:../../editors/emacs
+NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_XEMACS)
+DEPENDS+=	 	xemacs-[0-9]*:../../editors/xemacs
+EMACS=			xemacs
+LISPDIR=		lib/xemacs/xemacs-packages/lisp/prog-modes
+.else
+DEPENDS+=	 	emacs-[0-9]*:../../editors/emacs
+EMACS=			emacs
+LISPDIR=		share/emacs/site-lisp/haskell-mode
+.endif
+
+PLIST_SUBST+=		LISPDIR="${LISPDIR}"
 
 SRCS= 	haskell-doc.el haskell-mode.el haskell-font-lock.el		\
 	haskell-simple-indent.el haskell-hugs.el haskell-decl-scan.el	\
 	haskell-indent.el
 
 do-build:
-	@for f in ${SRCS} ; do \
-	emacs -batch -f batch-byte-compile ${WRKSRC}/$$f 2>/dev/null ; \
-	${ECHO} "byte-compiled file" $$f ; done
+	for f in ${SRCS}; do \
+	${EMACS} --no-init-file --no-site-file -batch -f batch-byte-compile ${WRKSRC}/$$f; \
+	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp/haskell-mode
-	@for f in ${SRCS} ${SRCS:.el=.elc} ; do \
-	${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/emacs/site-lisp/haskell-mode ; \
+	${INSTALL_DATA_DIR} ${PREFIX}/${LISPDIR}
+	@for f in ${SRCS} ${SRCS:.el=.elc} ; do				\
+		i="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/${LISPDIR}";	\
+		${ECHO} $$i; $$i;					\
 	done
 
 .include "../../mk/bsd.pkg.mk"
