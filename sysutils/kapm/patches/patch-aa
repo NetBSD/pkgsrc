@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2001/11/26 23:09:30 hubertf Exp $
+$NetBSD: patch-aa,v 1.3 2002/07/18 12:48:51 agc Exp $
 
 --- kapm/apm.cpp.orig	Wed Oct 20 06:19:57 1999
 +++ kapm/apm.cpp
-@@ -10,6 +10,13 @@
+@@ -10,6 +10,14 @@
  	 6) Its packaged as an object
  */
  
@@ -11,12 +11,13 @@ $NetBSD: patch-aa,v 1.2 2001/11/26 23:09:30 hubertf Exp $
 +#  include <fcntl.h>
 +#  include <sys/ioctl.h>
 +#  include <machine/apmvar.h>
++#  include <string.h>
 +#  include <unistd.h>
 +#endif /* __NetBSD__ */
  #include <stdio.h>
  #include <stdlib.h>
  #include "apm.h"
-@@ -29,6 +36,7 @@
+@@ -29,6 +37,7 @@
  
  int apm::check() {
  #ifndef DEBUG
@@ -24,7 +25,7 @@ $NetBSD: patch-aa,v 1.2 2001/11/26 23:09:30 hubertf Exp $
  	FILE *str;
  
  	if (!(str = fopen( APM_PROC, "r" )))
-@@ -43,6 +51,15 @@
+@@ -43,6 +52,15 @@
  
  	if (!(i.apm_flags & APM_32_BIT_SUPPORT))
  		return 3;
@@ -40,7 +41,7 @@ $NetBSD: patch-aa,v 1.2 2001/11/26 23:09:30 hubertf Exp $
  #else
  	// Do initial kernel support emulation setup
  	
-@@ -62,6 +79,7 @@
+@@ -62,6 +80,7 @@
  void apm::read()
  {
  #ifndef DEBUG
@@ -48,7 +49,7 @@ $NetBSD: patch-aa,v 1.2 2001/11/26 23:09:30 hubertf Exp $
  	FILE *str;
  	char buffer[64];
  
-@@ -71,21 +89,60 @@
+@@ -71,21 +90,61 @@
  
  	sscanf( buffer, "%s %d.%d %x %x %x %x %d%% %d %s\n",
  	   (char *)i.driver_version,
@@ -90,8 +91,9 @@ $NetBSD: patch-aa,v 1.2 2001/11/26 23:09:30 hubertf Exp $
 +	assert(rc != -1);
 +	close(fd);
 +
-+	i.driver_version = "NetBSD\0\0\0"; /* can't they document what's
-+					       expected here ?!? */
++	(void) memset(i.driver_version, 0, sizeof(i.driver_version));
++	(void) strcpy(i.driver_version, "NetBSD");
++
 +	i.apm_version_major = 1;
 +	i.apm_version_minor = 1;   /* May be 0 with APM_V10_ONLY
 +				      - how to find out ? */
