@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/07/25 08:28:03 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 14:38:43 wiz Exp $
 #
 
 DISTNAME=	netcdf-3.4
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.unidata.ucar.edu/packages/netcdf/index.html
+COMMENT=	Library for array-oriented data access
 
 USE_FORTRAN=	# defined
 USE_LIBTOOL=	# defined

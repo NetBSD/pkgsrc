@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/03/20 15:42:32 agc Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/16 14:38:57 wiz Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/10/13 05:11:40 jmacd Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://ftp.xcf.berkeley.edu/pub/prcs/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.XCF.Berkeley.EDU/~jmacd/prcs.html
+COMMENT=		The Project Revision Control System
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-mips* NetBSD-*-pc532 NetBSD-*-powerpc \

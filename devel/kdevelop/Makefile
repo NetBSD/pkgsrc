@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/01/04 02:56:14 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2001/02/16 14:38:33 wiz Exp $
 
 DISTNAME=	kdevelop-1.3
 CATEGORIES=	devel kde
@@ -7,6 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=       http://www.kdevelop.org/
+COMMENT=	Integrated Development Enviroment for Unix/X11/KDE
 
 BUILD_DEPENDS+= msgfmt:../../devel/gettext
 DEPENDS+=       autoconf-*:../../devel/autoconf

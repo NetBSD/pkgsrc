@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/10/21 22:03:22 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 14:38:35 wiz Exp $
 #
 
 DISTNAME=	libgetopt-${VERS}
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 DISTFILES=	getopt_long.c-${VERS} getopt_long.3-${VERS}
 
 MAINTAINER=	hubertf@netbsd.org,mcr@netbsd.org
+COMMENT=	Library for handling --long options
 
 .if exists(/usr/include/getopt.h)
 IGNORE=         "${PKGNAME} is part of your NetBSD distribution"

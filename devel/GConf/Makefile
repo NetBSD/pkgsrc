@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/01/29 11:34:23 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/16 14:38:16 wiz Exp $
 #
 
 DISTNAME=	GConf-0.11
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=unstable/sources/GConf/}
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://advogato.org/proj/GConf/
+COMMENT=	configuration database system used by GNOME
 
 DEPENDS+=	gnome-core>=1.2.0:../../x11/gnome-core
 DEPENDS+=	oaf-*:../../devel/oaf

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2000/11/25 10:47:15 tron Exp $
+# $NetBSD: Makefile,v 1.29 2001/02/16 14:40:55 wiz Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.12
@@ -13,6 +13,7 @@ DISTFILES=	${EXTRACT_ONLY} ${EXTRA_FILES}
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
+COMMENT=	XEmacs text editor version 21
 
 DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm
 DEPENDS+=	png>=1.0.6:../../graphics/png

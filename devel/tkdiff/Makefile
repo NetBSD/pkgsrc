@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/30 19:27:50 jwise Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 14:39:05 wiz Exp $
 #
 
 DISTNAME=	tkdiff-3.05.tcl.txt
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	# Nothing
 
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.ede.com/free/tkdiff/
+COMMENT=	Graphical 2-way diff/merge tool
 
 DEPENDS+=	tk-8.3.2:../../x11/tk
 
