@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/10/24 21:24:18 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2002/12/10 15:08:20 drochner Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-idle-0
@@ -39,8 +39,8 @@ do-install:
 	(cd ${PREFIX}; ${FIND} -d ${PYSITELIB}/idle -type d -print | \
 		${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
-.include "../../lang/python/srcdist.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/srcdist.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/py-Tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
