@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2002/08/28 08:45:41 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2002/10/28 22:21:14 elric Exp $
 
 DISTNAME=       imap-2001a
 PKGNAME=        imap-uw-2001.1
+PKGREVISION=	1
 CATEGORIES=     mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -29,6 +30,10 @@ ALL_TARGET=	lrh
 ALL_TARGET=	osx
 .else
 ALL_TARGET=	neb
+.if (${USE_KERBEROS} != "no")
+PKG_USE_KERBEROS=	#defined
+ALL_TARGET+=	EXTRAAUTHENTICATORS="gss"
+.endif
 .endif
 
 BUILD_DEFS+=	IMAP_UW_CCLIENT_MBOX_FMT IMAP_UW_NO_CLEARTEXT
