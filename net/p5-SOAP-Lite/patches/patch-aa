@@ -1,0 +1,146 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/06 00:26:43 grant Exp $
+
+--- Makefile.PL.orig	Tue Apr 16 14:38:22 2002
++++ Makefile.PL
+@@ -5,137 +5,15 @@ use ExtUtils::MakeMaker;
+ require 5.004;
+ use strict;
+ 
+-my $prerequisites = <<EOL;
+-
+-Module                        Prerequisites     Bundle                  Default
+------------------------------ ----------------- ----------------------- -------
+-Client HTTP support (SOAP::Transport::HTTP::Client)                      [yes]
+-                              LWP::UserAgent
+------------------------------ ----------------- ----------------------- -------
+-Client HTTPS support (SOAP::Transport::HTTPS::Client, require OpenSSL)   [no]
+-                              Crypt::SSLeay
+------------------------------ ----------------- ----------------------- -------
+-Client SMTP/sendmail support (SOAP::Transport::MAILTO::Client)           [yes]
+-                              MIME::Lite
+------------------------------ ----------------- ----------------------- -------
+-Client FTP support (SOAP::Transport::FTP::Client)                        [yes]
+-                              Net::FTP          [libnet]
+-                              IO::File          [IO]
+------------------------------ ----------------- ----------------------- -------
+-Standalone HTTP server (SOAP::Transport::HTTP::Daemon)                   [yes]
+-                              HTTP::Daemon
+------------------------------ ----------------- ----------------------- -------
+-Apache/mod_perl server (SOAP::Transport::HTTP::Apache, require Apache)   [no]
+-                              Apache            [mod_perl]
+------------------------------ ----------------- ----------------------- -------
+-FastCGI server (SOAP::Transport::HTTP::FCGI, require FastCGI)            [no]
+-                              FCGI
+------------------------------ ----------------- ----------------------- -------
+-POP3 server (SOAP::Transport::POP3::Server)                              [yes]
+-                              Net::POP3         [libnet]
+-                              MIME::Parser 5.22 [MIME Tools]
+------------------------------ ----------------- ----------------------- -------
+-IO server (SOAP::Transport::IO::Server)                                  [yes]
+-                              IO::File          [IO]
+------------------------------ ----------------- ----------------------- -------
+-MQ transport support (SOAP::Transport::MQ)                               [no]
+-                              MQSeries
+------------------------------ ----------------- ----------------------- -------
+-JABBER transport support (SOAP::Transport::JABBER)                       [no]
+-                              Net::Jabber 1.0021
+------------------------------ ----------------- ----------------------- -------
+-MIME messages [required for POP3, optional for HTTP] (SOAP::MIMEParser)  [no]
+-                              MIME::Parser 5.22 [MIME Tools]
+------------------------------ ----------------- ----------------------- -------
+-SSL support for TCP transport (SOAP::Transport::TCP)                     [no]
+-                              IO::Socket::SSL
+------------------------------ ----------------- ----------------------- -------
+-Compression support for HTTP transport (SOAP::Transport::HTTP)           [no]
+-                              Compress::Zlib    
+------------------------------ ----------------- ----------------------- -------
+-Core package (SOAP::Lite)                                                 yes 
+-                              XML::Parser 2.23
+-                              MIME::Base64
+-                              URI
+------------------------------ ----------------- ----------------------- -------
+-EOL
+-
+-use Getopt::Long;
+-
+-my $helptext = <<EOI;
+-Usage: perl Makefile.PL <options>
+- 
+-Possible options are:
+- 
+-  --noprompt            Disable interactive dialog
+-  --alltests            Perform extra testing
+-  --help, -?            Display this help text
+-
+-  [Do not] install prerequisites for appropriate module:
+-
+-EOI
+-
+-# Create config parameters using module names and expand help text
+-# We will create a hash (%config) that has each module => (1|0) for install
+-my(%options, %config);
+-foreach (split "\n", $prerequisites) {
+-  next unless /\((SOAP::[\w:]+).+\[(yes|no)\]/;
+-  my $module = do { (my $t = $1) =~ s/::/-/g; $t };
+-  my $shortcut = do { (my $t = $module) =~ s/SOAP-(?:Transport-)?//; $t };
+-  $config{$1} = $2 eq 'yes';
+-  $options{"install-$module|$shortcut!"} = \$config{$1};
+-  $helptext .= sprintf "  --[no]install-%-28s --[no]%s\n", $module, $shortcut;
+-}
+-
+-GetOptions(
+-  'prompt!'   => \(my $prompt = 1), 
+-  'alltests!' => \(my $alltests = 0), 
+-  'help|?'    => \(my $help = 0),
+-  %options,
++my %prerequisites = (
++	"XML::Parser" => "2.23",
++	"MIME::Base64" => 0,
++	"URI" => 0,
+ );
+ 
+-$help and print($helptext), exit;
+-
+-# Now update prerequisites according to command line options
+-$prerequisites =~ s/\((SOAP::[\w:]+)([^\)]*)\)(.+)\[(yes|no)\]
+-                   /sprintf"(%s%s)%s[%s]",$1,$2,$3,$config{$1}?'yes':'no'/egx;
+-
+-print <<EOI, map {"$_\n"} grep {/\[(?:yes|no)\]/} split "\n", $prerequisites;
+-
+-We are about to install SOAP::Lite and for your convenience will provide 
+-you with list of modules and prerequisites, so you'll be able to choose 
+-only modules you need for your configuration.
+-
+-XMLRPC::Lite, UDDI::Lite, and XML::Parser::Lite are included by default.
+-Installed transports can be used for both SOAP::Lite and XMLRPC::Lite.
+-
+-EOI
+-
+-my %prerequisites;
+-my $auto = $prompt ? ExtUtils::MakeMaker::prompt("\nDo you want to proceed with this configuration?" => 'yes') =~ /^\s*y/i : 1;
+-
+-foreach (split /(^[-\s]+$)/m, $prerequisites) {
+-  print unless $auto;
+-  if (/SOAP::/m &&
+-      (/\s+(yes)\s*$/m ||
+-        /\[(yes|no)\]/ && 
+-          ($auto || ExtUtils::MakeMaker::prompt("\nDo you plan to use this module?", $1) =~ /^\s*(y)/i))) {
+-    %prerequisites = (%prerequisites, map {/\s+/? split : ($_ => 0)} /^\s{20,}([\w:]+(?:\s+[\d.]+)?)/mg) if $1 =~ /^y/;
+-  } 
+-}
+-
+-my $noncoretests = $prompt ? ExtUtils::MakeMaker::prompt('
+-During "make test" phase we may run tests with several SOAP servers 
+-that may take long and may fail due to server/connectivity problems. 
+-
+-Do you want to perform these tests in addition to core tests?', $alltests ? 'yes' : 'no') =~ /^\s*(y)/i : $alltests;
+-
+-my $tests = join ' ', glob ($noncoretests ? 't/*.t' : 't/0*.t');
+-
+ WriteMakefile(
+     'NAME'	   => 'SOAP::Lite',
+     'VERSION_FROM' => 'lib/SOAP/Lite.pm', 
+     'PREREQ_PM'    => \%prerequisites,
+     'EXE_FILES'    => ['bin/SOAPsh.pl', 'bin/XMLRPCsh.pl', 'bin/stubmaker.pl'],
+-    test           => {TESTS => $tests},
+ );
