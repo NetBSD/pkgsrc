@@ -1,0 +1,50 @@
+$NetBSD: patch-ak,v 1.1 2001/01/29 01:15:35 jtb Exp $
+
+--- cf/pkg_tcl.in.orig	Fri Jan 12 04:00:01 2001
++++ cf/pkg_tcl.in
+@@ -53,35 +53,33 @@
+ 	perl pltclgen
+ 
+ tclIndex:
+-	@$(MAKEINDEX)
++	$(MAKEINDEX)
+ 
+ install_pltcl:
+-	@-if test $(SHARED) = 1; then \
++	-if test $(SHARED) = 1; then \
+ 	     $(LDC) $(LDC_FLAGS) pltcl$O $(LIB_INSTALL) \
+ 		-o pltcl$E $(LDC_LIBS) $(INSTALL_RPATH); \
+ 	  fi; \
+-	  strip pltcl$E; $(CP) pltcl$E $(BIN_DIR)
++	  $(BSD_INSTALL_PROGRAM) pltcl$E $(BIN_DIR)
+ 
+ install_tcl_index:
+-	@-if test ! -d $(TCL_DIR); then mkdir -p $(TCL_DIR); fi; \
+-	  $(CP) tclIndex $(TCL_DIR)
++	-$(BSD_INSTALL_DATA_DIR) $(TCL_DIR); \
++	  $(BSD_INSTALL_DATA) tclIndex $(TCL_DIR)
+ 
+ install_tcl_includes:
+-	@-cd $(top_srcdir)/bindings/tcl; \
+-	  $(CP) pltcl.h $(INCLUDE_DIR)
++	-$(BSD_INSTALL_DATA) $(top_srcdir)/bindings/tcl/pltcl.h $(INCLUDE_DIR)
+ 
+ install_tcl_demos:
+-	@-if test ! -d $(DEMOS_DIR)/tcl; then mkdir -p $(DEMOS_DIR)/tcl; fi; \
+-	  cd $(top_srcdir)/examples/tcl; $(CP) $(TCL_DEMOS) $(DEMOS_DIR)/tcl
++	-$(BSD_INSTALL_DATA_DIR) $(DEMOS_DIR)/tcl; \
++	  cd $(top_srcdir)/examples/tcl; $(BSD_INSTALL_DATA) $(TCL_DEMOS) $(DEMOS_DIR)/tcl
+ 
+ install_tcl: install_pltcl install_tcl_index install_tcl_includes install_tcl_demos
+ 
+ install_mat_includes:
+-	@-cd $(top_srcdir)/bindings/tcl; \
+-	  $(CP) tclMatrix.h $(INCLUDE_DIR)
++	-$(BSD_INSTALL_DATA) $(top_srcdir)/bindings/tcl/tclMatrix.h $(INCLUDE_DIR)
+ 
+ install_matlib:
+-	@-$(CP) $(MATLIB_BASE)* $(LIB_DIR); \
++	-$(BSD_INSTALL_DATA) $(MATLIB_BASE)* $(LIB_DIR); \
+ 	  if test -r $(MATLIB_BASE)$A; then \
+ 	      $(RANLIB) $(LIB_DIR)/$(MATLIB_BASE)$A; \
+ 	  fi
