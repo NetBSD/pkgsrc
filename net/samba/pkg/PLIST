@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.15 2000/05/02 15:24:10 jlam Exp $
+@comment $NetBSD: PLIST,v 1.16 2000/06/19 21:47:18 jlam Exp $
 bin/addtosmbpass
 bin/convert_smbpasswd
 bin/make_printerdef
 bin/make_smbcodepage
 bin/make_unicodemap
+bin/mksmbpasswd.sh
 bin/nmblookup
 bin/rpcclient
 bin/smbclient
