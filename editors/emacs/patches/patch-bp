@@ -1,0 +1,15 @@
+$NetBSD: patch-bp,v 1.1 2002/07/19 03:08:09 mycroft Exp $
+
+--- lwlib/lwlib.c.orig	Mon Apr  6 10:24:33 1998
++++ lwlib/lwlib.c	Fri Jul 19 02:38:04 2002
+@@ -29,10 +29,8 @@
+ #include "lwlib-utils.h"
+ #include <X11/StringDefs.h>
+ 
+-#ifdef __osf__
+ #include <string.h>
+ #include <stdlib.h>
+-#endif
+ extern long *xmalloc();
+ 
+ #if defined (USE_LUCID)
