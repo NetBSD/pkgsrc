@@ -1,7 +1,4 @@
-$NetBSD: patch-al,v 1.4 1999/11/24 17:34:10 hubertf Exp $
-
-Place(s) where this was (most probably...) in before:
-     NetBSD: patch-al,v 1.3 1999/11/15 21:30:28 drochner Exp 
+$NetBSD: patch-al,v 1.5 1999/11/24 17:38:50 hubertf Exp $
 
 diff -x *.orig -urN ./include/Motif-2.0/Xm/Makefile.in /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/include/Motif-2.0/Xm/Makefile.in
 --- ./include/Motif-2.0/Xm/Makefile.in	Fri Nov  5 21:14:46 1999

@@ -1,7 +1,4 @@
-$NetBSD: patch-at,v 1.2 1999/11/24 17:34:10 hubertf Exp $
-
-Place(s) where this was (most probably...) in before:
-     NetBSD: patch-at,v 1.1 1999/11/03 04:18:48 jlam Exp 
+$NetBSD: patch-at,v 1.3 1999/11/24 17:38:51 hubertf Exp $
 
 diff -x *.orig -urN ./test/configure /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/test/configure
 --- ./test/configure	Fri Nov  5 21:16:52 1999
