@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+
+--- Makefile.in.orig	Fri Jan 19 05:25:21 2001
++++ Makefile.in	Fri Jan 19 05:35:03 2001
+@@ -18,9 +18,13 @@
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ 
+-host_subdirs = $(configured_subdirs) doc tools
++#host_subdirs = $(configured_subdirs) doc tools
++host_subdirs = binutils tools
+ target_subdirs = crt libc libm
+ 
++all: all-host
++install: install-host
++
+ # This target will only work if you are willing to do all your building as
+ # a user who can write to your install directory, i.e., if you build as root
+ # or if you're on an unprotected file system like Windows.
+@@ -31,7 +35,7 @@
+ all-host:
+ 	for dir in `echo $(host_subdirs) | sed -e 's/gcc//' -e 's/make//'`; do \
+ 	  if [ -f ./$${dir}/Makefile ]; then \
+-	    if (cd $${dir} && $(MAKE) all info); then true; else exit 1; fi; \
++	    if (cd $${dir} && $(MAKE) all); then true; else exit 1; fi; \
+ 	  fi; \
+ 	done
+ 
+@@ -50,7 +54,7 @@
+ install-host:
+ 	for dir in `echo $(host_subdirs) | sed -e 's/gcc//' -e 's/make//'`; do \
+ 	  if [ -f ./$${dir}/Makefile ]; then \
+-	    if (cd $${dir} && $(MAKE) install install-info); then true; else exit 1; fi; \
++	    if (cd $${dir} && $(MAKE) install); then true; else exit 1; fi; \
+ 	  fi; \
+ 	done
+ 

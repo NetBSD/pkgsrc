@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+
+SHA1 (pilrc-2_7b.zip) = cc40803940f1749e387fdc4acb221168252e461e
+Size (pilrc-2_7b.zip) = 192381 bytes
+SHA1 (patch-aa) = e8ed545addaa333ea755efef6388a452f06f4c12
+SHA1 (patch-ab) = 8a494bd68f1b7d758b1618c7a5776f4363af660e

@@ -1,0 +1,5 @@
+PRC-Tools is a complete compiler tool chain for building Palm OS
+applications in C or C++.
+
+This is a modified version of GNU gcc to function as part of
+the tool chain.

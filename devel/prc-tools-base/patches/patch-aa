@@ -1,0 +1,54 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+
+--- Makefile.in.orig	Mon Feb  7 20:37:04 2000
++++ Makefile.in	Thu Mar 22 15:31:42 2001
+@@ -18,7 +18,8 @@
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ 
+-host_subdirs = $(configured_subdirs) doc tools
++host_local_subdirs = doc
++host_subdirs = $(configured_subdirs) $(host_local_subdirs)
+ target_subdirs = crt libc libm
+ 
+ # This target will only work if you are willing to do all your building as
+@@ -28,6 +29,15 @@
+ all-install: all-host install-host all-gcc install-gcc \
+              install-palmdev all-target install-target
+ 
++all: all-host-local all-target
++
++all-host-local:
++	for dir in `echo $(host_local_subdirs) | sed -e 's/gcc//' -e 's/make//'`; do \
++	  if [ -f ./$${dir}/Makefile ]; then \
++	    if (cd $${dir} && $(MAKE) all info); then true; else exit 1; fi; \
++	  fi; \
++	done
++
+ all-host:
+ 	for dir in `echo $(host_subdirs) | sed -e 's/gcc//' -e 's/make//'`; do \
+ 	  if [ -f ./$${dir}/Makefile ]; then \
+@@ -47,6 +57,15 @@
+ 	  fi; \
+ 	done
+ 
++install: install-host-local install-target #install-palmdev 
++
++install-host-local:
++	for dir in `echo $(host_local_subdirs) | sed -e 's/gcc//' -e 's/make//'`; do \
++	  if [ -f ./$${dir}/Makefile ]; then \
++	    if (cd $${dir} && $(MAKE) install install-info); then true; else exit 1; fi; \
++	  fi; \
++	done
++
+ install-host:
+ 	for dir in `echo $(host_subdirs) | sed -e 's/gcc//' -e 's/make//'`; do \
+ 	  if [ -f ./$${dir}/Makefile ]; then \
+@@ -75,7 +94,5 @@
+ 
+ install-palmdev:
+ 	$(INSTALL) -d $(palmdev_prefix)/doc
+-	$(INSTALL) -d $(palmdev_prefix)/include
+-	$(INSTALL) -d $(palmdev_prefix)/lib/$(full_target)
+ 	$(INSTALL_DATA) $(srcdir)/COPYING $(palmdev_prefix)/doc/COPYING
+ 	$(INSTALL_DATA) $(srcdir)/README $(palmdev_prefix)/doc/README

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+
+SHA1 (prc-tools-2.0.tar.gz) = 0d0ffc4a2f2e9ece8f4a6f66ded2a57c4a551ded
+Size (prc-tools-2.0.tar.gz) = 265333 bytes
+SHA1 (patch-aa) = 8b24570355f555da4fe0f5feaa6ed069dbf8808e
+SHA1 (patch-ab) = a587f32bbbdebc8d4e2e60f3826fce946fedf153

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+
+SHA1 (sdk35.tar.gz) = 27b8e16e0c27eee5583d60e750dc2facc32b49d7
+Size (sdk35.tar.gz) = 284047 bytes
+SHA1 (sdk35-update1.tar.gz) = 64cd653f9efab55942513c8dead236daf32e5e97
+Size (sdk35-update1.tar.gz) = 8399 bytes
+SHA1 (palmos-1-2-3.1-sdks-1.tar.gz) = ca5ff870586306ace21025ad0619ff20ce029b84
+Size (palmos-1-2-3.1-sdks-1.tar.gz) = 523519 bytes
