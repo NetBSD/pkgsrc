@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/02/08 08:48:37 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/02/18 21:34:36 frueauf Exp $
 bin/gnuchess
 bin/gnuchessr
 bin/gnuchessn
@@ -23,3 +23,5 @@ man/man6/game.6
 man/man6/gnuan.6
 man/man6/gnuchess.6
 man/man6/postprint.6
+@dirrm share/gnuchess
+@dirrm share/doc/gnuchess
