@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/02/14 17:18:36 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/20 00:31:07 dmcmahill Exp $
 #
 
 DISTNAME=	gnucap-0.34
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.gnucap.org/ \
 		http://www.kettering.edu/~adavis/gnucap/
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://www.geda.seul.org/tools/acs/index.html
+HOMEPAGE=	http://www.gnucap.org
 COMMENT=	General purpose circuit simulator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
