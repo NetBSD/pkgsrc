@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7139 2004/09/11 14:56:32 jmmv Exp $
+$NetBSD: CHANGES,v 1.7140 2004/09/11 19:01:36 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4236,3 +4236,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated teixsl-fo to 3.3 [minskim 2004-09-11]
 	Updated pixieplus to 0.5.4nb5 [markd 2004-09-11]
 	Removed cmdline [jmmv 2004-09-11]
+	Updated libnbcompat to 20040911 [jlam 2004-09-11]
