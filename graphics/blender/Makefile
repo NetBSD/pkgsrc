@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2004/10/03 00:14:49 tv Exp $
+# $NetBSD: Makefile,v 1.37 2004/10/15 11:43:51 tv Exp $
 #
 
 DISTNAME=		blender-2.32
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.cs.umn.edu/pub/blender.org/source/ \
 			http://download.blender.org/source/
@@ -59,7 +59,6 @@ CONFIGURE_ARGS+=	--disable-exppython
 .endif
 
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/libtool/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
