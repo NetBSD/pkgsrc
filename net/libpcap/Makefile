@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/05/24 20:39:47 tv Exp $
+# $NetBSD: Makefile,v 1.3 1999/07/02 08:46:52 agc Exp $
 #
 
 DISTNAME=		libpcap-0.4
@@ -10,7 +10,7 @@ MAINTAINER=		packages@netbsd.org
 
 GNU_CONFIGURE=		yes
 
-NOT_FOR_PLATFORM=	NetBSD-*-*	# in base system
+ONLY_FOR_PLATFORM=	SunOS-*-*	# in NetBSD base system
 
 INSTALL_TARGET+=	install-incl install-man
 
