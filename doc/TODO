@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.403 2003/03/22 03:41:05 wiz Exp $
+$NetBSD: TODO,v 1.404 2003/03/22 04:10:22 salo Exp $
 
 Suggested new packages
 ======================
@@ -191,7 +191,6 @@ Suggested package updates
 	o netpbm-10.14
 	o netscape-7.02
 	o newscache-0.99.22p1
-	o nmap-3.20 [pkg/20839]
 	o ns-flash-6.0.79
 	o nut-7.19
 	o ogle-0.9.1
