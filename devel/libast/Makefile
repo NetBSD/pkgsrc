@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/26 04:52:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/02/14 20:37:18 salo Exp $
 
 DISTNAME=		libast-0.5
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=   	http://www.eterm.org/download/
 
@@ -20,6 +21,10 @@ TEST_TARGET=		test
 CONFIGURE_ARGS+=	--enable-mmx
 .endif
 BUILD_DEFS+=		USE_MMX
+
+.if ${OPSYS} == "SunOS"
+LDFLAGS+=-lresolv
+.endif
 
 .include "../../devel/pcre/buildlink2.mk"
 .include "../../graphics/imlib2/buildlink2.mk"
