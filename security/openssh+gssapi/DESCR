@@ -1,8 +1,0 @@
-OpenSSH is based on the last free version of Tatu Ylonen's SSH with
-all patent-encumbered algorithms removed (to external libraries), all
-known security bugs fixed, new features reintroduced and many other
-clean-ups. More information about SSH itself can be found in the file
-README.Ylonen. OpenSSH has been created by Aaron Campbell, Bob Beck,
-Markus Friedl, Niels Provos, Theo de Raadt, and Dug Song.
-
-This package adds enhanced support for GSSAPI, provided by sxw.org.uk.
