@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2003/02/26 01:00:09 uebayasi Exp $
+# $NetBSD: Makefile,v 1.21 2003/03/22 10:31:06 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
 #
 
 DISTNAME=	docbook-4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	\
 		http://www.oasis-open.org/docbook/sgml/4.2/ \
@@ -32,7 +32,7 @@ INSTDIR=	${PREFIX}/share/sgml/docbook
 ISOCAT=		${PREFIX}/share/sgml/iso8879/catalog
 
 SGML_CATALOGS=
-.for ver in 2.4.1 3.0 3.1 4.0 4.1 4.2	
+.for ver in 2.4.1 3.0 3.1 4.0 4.1 4.2
 SGML_CATALOGS+=	${INSTDIR}/${ver}/catalog
 .endfor
 .undef ver
@@ -79,14 +79,14 @@ do-install:
 	# 4.1:
 	#
 	@(cd ${INSTDIR}/4.1; unzip ${DISTDIR}/docbk41.zip)
-	@${EGREP} '^PUBLIC.*(DocBook|Table)' ${INSTDIR}/4.1/docbook.cat >${INSTDIR}/4.1/catalog
+	@${INSTALL_DATA} ${FILESDIR}/catalog41 ${INSTDIR}/4.1/catalog
 	@${ECHO} "CATALOG \"${ISOCAT}\"" >> ${INSTDIR}/4.1/catalog
 	@${CHMOD} ${SHAREMODE} ${INSTDIR}/4.1/*
 	#
 	# 4.2:
 	#
 	@(cd ${INSTDIR}/4.2; unzip ${DISTDIR}/docbook-4.2.zip)
-	@${EGREP} '^PUBLIC.*(DocBook|Table)' ${INSTDIR}/4.2/docbook.cat >${INSTDIR}/4.2/catalog
+	@${INSTALL_DATA} ${FILESDIR}/catalog42 ${INSTDIR}/4.2/catalog
 	@${ECHO} "CATALOG \"${ISOCAT}\"" >> ${INSTDIR}/4.2/catalog
 	@${CHMOD} ${SHAREMODE} ${INSTDIR}/4.2/*
 	#
