@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2888 2003/07/25 11:53:33 jmmv Exp $
+$NetBSD: CHANGES,v 1.2889 2003/07/25 12:03:51 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2939,3 +2939,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgphoto2 to 2.1.1nb2 [adam 2003-07-25]
 	Updated libexif-gtk to 0.3.3nb3 [adam 2003-07-25]
 	Updated buildtool to 0.12nb1 [jmmv 2003-07-25]
+	Updated p5-Date-Manip to 5.42a [jmmv 2003-07-25]
