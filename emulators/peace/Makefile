@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/09/21 16:03:41 kent Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/25 09:19:28 dmcmahill Exp $
 #
 PEACE_VERSION=	20030919
 DISTNAME=	peace-0.0.${PEACE_VERSION}
@@ -20,7 +20,7 @@ DEPENDS+=	icu>=2.4nb1:../../textproc/icu
 
 BUILD_DEPENDS=	cross-i386-netbsdpe>=1.3:../../cross/i386-netbsdpe
 BUILD_DEPENDS+=	w32api>=2.4:../../devel/w32api
-BUILD_DEPENDS+= x11-links-*:../../x11-links
+BUILD_DEPENDS+= x11-links-*:../../pkgtools/x11-links
 CPPFLAGS+=	-I${WRKDIR}/cross/i386-netbsdpe/include \
 		-I${WRKDIR}/cross/i386-netbsdpe/include/c++
 LDFLAGS=	-L${WRKSRC}/lib
