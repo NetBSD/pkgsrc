@@ -1,0 +1,22 @@
+#!/bin/sh
+# $NetBSD: configure,v 1.1.1.1 1998/03/17 21:32:54 tv Exp $
+# Configure package and create its Makefile and PLIST
+
+echo Configuring compat12 package
+
+for file in lib*.so*; do
+	echo >>Makefile "FILES+=$file"
+	echo >>.PLIST "${PREFIX}/lib/$file"
+done
+
+cat >>Makefile <<EOF
+
+install:
+	@echo Installing...
+	\${BSD_INSTALL_DATA} \${FILES} \${PREFIX}/lib
+EOF
+
+cat >>.PLIST <<EOF
+@exec /sbin/ldconfig || /usr/bin/true
+@unexec /sbin/ldconfig || /usr/bin/true
+EOF
