@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/05/25 02:03:14 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/06/19 13:54:08 hubertf Exp $
 include/dns/a6.h
 include/dns/acl.h
 include/dns/aclconf.h
@@ -102,6 +102,7 @@ include/isc/lib.h
 include/isc/list.h
 include/isc/log.h
 include/isc/magic.h
+include/isc/md5.h
 include/isc/mem.h
 include/isc/msgcat.h
 include/isc/mutex.h
@@ -122,6 +123,7 @@ include/isc/result.h
 include/isc/resultclass.h
 include/isc/rwlock.h
 include/isc/serial.h
+include/isc/sha1.h
 include/isc/sockaddr.h
 include/isc/socket.h
 include/isc/stdio.h
@@ -185,47 +187,25 @@ share/doc/bind9/arm/Bv9ARM.8.html
 share/doc/bind9/arm/Bv9ARM.css
 share/doc/bind9/arm/Bv9ARM.html
 share/doc/bind9/arm/isc.color.gif
-share/doc/bind9/draft/draft-duerst-dns-i18n-03.txt
-share/doc/bind9/draft/draft-dunlap-dns-duxfr-00.txt
+share/doc/bind9/draft/draft-costanzo-dns-gl-02.txt
 share/doc/bind9/draft/draft-ietf-dhc-dhcp-dns-12.txt
 share/doc/bind9/draft/draft-ietf-dnsext-apl-rr-00.txt
 share/doc/bind9/draft/draft-ietf-dnsext-axfr-clarify-00.txt
 share/doc/bind9/draft/draft-ietf-dnsext-edns0dot5-00.txt
 share/doc/bind9/draft/draft-ietf-dnsext-iana-dns-00.txt
-share/doc/bind9/draft/draft-ietf-dnsext-ixfr-00.txt
-share/doc/bind9/draft/draft-ietf-dnsext-sig-zero-01.txt
+share/doc/bind9/draft/draft-ietf-dnsext-ixfr-01.txt
+share/doc/bind9/draft/draft-ietf-dnsext-sig-zero-02.txt
 share/doc/bind9/draft/draft-ietf-dnsext-signing-auth-01.txt
 share/doc/bind9/draft/draft-ietf-dnsext-simple-secure-update-01.txt
-share/doc/bind9/draft/draft-ietf-dnsext-tkey-02.txt
-share/doc/bind9/draft/draft-ietf-dnsext-tsig-00.txt
+share/doc/bind9/draft/draft-ietf-dnsext-tkey-03.txt
 share/doc/bind9/draft/draft-ietf-dnsext-zone-status-01.txt
-share/doc/bind9/draft/draft-ietf-dnsind-dddd-02.txt
-share/doc/bind9/draft/draft-ietf-dnsind-dhcp-rr-00.txt
-share/doc/bind9/draft/draft-ietf-dnsind-edns1-04.txt
-share/doc/bind9/draft/draft-ietf-dnsind-indirect-key-01.txt
-share/doc/bind9/draft/draft-ietf-dnsind-keyreferral-01.txt
-share/doc/bind9/draft/draft-ietf-dnsind-kitchen-sink-02.txt
-share/doc/bind9/draft/draft-ietf-dnsind-local-compression-06.txt
-share/doc/bind9/draft/draft-ietf-dnsind-local-names-08.txt
-share/doc/bind9/draft/draft-ietf-dnsind-rfc2052bis-02.txt
-share/doc/bind9/draft/draft-ietf-dnsind-rollover-01.txt
-share/doc/bind9/draft/draft-ietf-dnsind-sec-rr-01.txt
-share/doc/bind9/draft/draft-ietf-dnsind-sigalgopt-00.txt
-share/doc/bind9/draft/draft-ietf-dnsind-test-tlds-13.txt
-share/doc/bind9/draft/draft-ietf-dnsind-verify-01.txt
-share/doc/bind9/draft/draft-ietf-dnssec-ar-00.txt
-share/doc/bind9/draft/draft-ietf-dnssec-as-map-06.txt
-share/doc/bind9/draft/draft-ietf-dnssec-key-handling-00.txt
-share/doc/bind9/draft/draft-ietf-dnssec-secfail-00.txt
-share/doc/bind9/draft/draft-ietf-dnssec-update2-00.txt
 share/doc/bind9/draft/draft-ietf-enum-rqmts-00.txt
 share/doc/bind9/draft/draft-ietf-idn-requirment-00.txt
-share/doc/bind9/draft/draft-ietf-ipngwg-2292bis-00.txt
 share/doc/bind9/draft/draft-ietf-ipngwg-default-addr-select-00.txt
-share/doc/bind9/draft/draft-ietf-ipngwg-dns-lookups-05.txt
-share/doc/bind9/draft/draft-schroeppel-dnsind-ecc-00.txt
+share/doc/bind9/draft/draft-ietf-ipngwg-dns-lookups-08.txt
 share/doc/bind9/draft/draft-skwan-gss-tsig-05.txt
 share/doc/bind9/draft/draft-skwan-utf8-dns-03.txt
+share/doc/bind9/draft/draft-whr-dnsext-secure-online-update-00.txt
 share/doc/bind9/misc/dnssec
 share/doc/bind9/misc/ipv6
 share/doc/bind9/misc/options
@@ -242,6 +222,8 @@ share/doc/bind9/rfc/rfc1535.txt
 share/doc/bind9/rfc/rfc1536.txt
 share/doc/bind9/rfc/rfc1537.txt
 share/doc/bind9/rfc/rfc1591.txt
+share/doc/bind9/rfc/rfc1611.txt
+share/doc/bind9/rfc/rfc1612.txt
 share/doc/bind9/rfc/rfc1706.txt
 share/doc/bind9/rfc/rfc1712.txt
 share/doc/bind9/rfc/rfc1750.txt
@@ -252,6 +234,7 @@ share/doc/bind9/rfc/rfc1996.txt
 share/doc/bind9/rfc/rfc2052.txt
 share/doc/bind9/rfc/rfc2104.txt
 share/doc/bind9/rfc/rfc2119.txt
+share/doc/bind9/rfc/rfc2133.txt
 share/doc/bind9/rfc/rfc2136.txt
 share/doc/bind9/rfc/rfc2137.txt
 share/doc/bind9/rfc/rfc2163.txt
@@ -275,6 +258,7 @@ share/doc/bind9/rfc/rfc2671.txt
 share/doc/bind9/rfc/rfc2672.txt
 share/doc/bind9/rfc/rfc2673.txt
 share/doc/bind9/rfc/rfc2782.txt
+share/doc/bind9/rfc/rfc2845.txt
 share/doc/bind9/rfc/rfc952.txt
 @dirrm share/doc/bind9/rfc
 @dirrm share/doc/bind9/misc
