@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/04/21 08:07:50 rh Exp $
+
+--- libmpdemux/stream.c.orig	Fri Sep 28 00:36:53 2001
++++ libmpdemux/stream.c	Mon Oct  1 22:56:02 2001
+@@ -19,7 +19,11 @@
+ #ifdef __FreeBSD__
+ #include "vcd_read_fbsd.h" 
+ #else
++#ifdef __NetBSD__
++#include "vcd_read_nbsd.h" 
++#else
+ #include "vcd_read.h"
++#endif
+ #endif
+ 
+ #endif
