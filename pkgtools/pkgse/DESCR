@@ -1,0 +1,2 @@
+pkgse is a simple perl script that fetch informations about a NetBSD package
+from pkgsrc.netbsd.se website.
