@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/07/28 10:33:57 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2000/11/02 03:25:32 wiz Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -31,7 +31,7 @@ post-install:
 		${LN} -s vim ${PREFIX}/bin/$$f;				\
 	done
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .if ${NEED_NCURSES} == "YES"
 CONFIGURE_ARGS+=	--with-tlib=ncurses
@@ -39,3 +39,5 @@ CONFIGURE_ARGS+=	--with-tlib=ncurses
 CPPFLAGS=
 CONFIGURE_ARGS+=	--with-tlib=curses
 .endif
+
+.include "../../mk/bsd.pkg.mk"

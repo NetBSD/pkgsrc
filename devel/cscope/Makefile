@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/09/28 12:41:36 agc Exp $
+# $NetBSD: Makefile,v 1.12 2000/11/02 03:25:32 wiz Exp $
 
 DISTNAME=	cscope-15.0bl2
 PKGNAME=	cscope-15.0.2
@@ -11,21 +11,18 @@ HOMEPAGE=	http://cscope.sourceforge.net/
 GNU_CONFIGURE=	YES
 USE_CURSES=	YES
 
-post-extract: cscope-post-extract
-
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .if ${NEED_NCURSES} == "YES"
 CONFIGURE_ARGS+=--with-ncurses=${LOCALBASE}
 
-cscope-post-extract:
+post-extract:
 .for FILE in command.c display.c edit.c exec.c find.c help.c input.c main.c
 	@cd ${WRKSRC}/src;						\
 	${MV} ${FILE} ${FILE}.orig;					\
 	${SED} "s/^#include <curses.h>/#include <ncurses.h>/" 		\
 		< ${FILE}.orig > ${FILE}
 .endfor
-.else
-cscope-post-extract:
-	${TRUE}
 .endif
+
+.include "../../mk/bsd.pkg.mk"

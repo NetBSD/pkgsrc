@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/07/28 10:33:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/11/02 03:25:33 wiz Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -29,17 +29,19 @@ post-install:
 		${LN} -s vim ${PREFIX}/bin/$$f;				\
 	done
 
-.include "../../mk/bsd.pkg.mk"
-
-.if (${XAW_TYPE} == "standard")
-MAKE_ENV+=		XAW_LIB=Xaw
-.else
-MAKE_ENV+=		XAW_LIB=Xaw3d
-.endif
+.include "../../mk/bsd.prefs.mk"
 
 .if ${NEED_NCURSES} == "YES"
 CONFIGURE_ARGS+=	--with-tlib=ncurses
 .else
 CPPFLAGS=
 CONFIGURE_ARGS+=	--with-tlib=curses
+.endif
+
+.include "../../mk/bsd.pkg.mk"
+
+.if (${XAW_TYPE} == "standard")
+MAKE_ENV+=		XAW_LIB=Xaw
+.else
+MAKE_ENV+=		XAW_LIB=Xaw3d
 .endif
