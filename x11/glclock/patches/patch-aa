@@ -1,10 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2000/05/30 01:43:51 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.4 2000/05/30 07:13:04 tron Exp $
 
-don't use -O2 (c++ bug on sparc with egcs-1.1.1)
-
---- makefile.orig	Thu Feb  4 01:13:25 1999
-+++ makefile	Mon May 29 15:47:09 2000
-@@ -6,10 +6,10 @@
+--- makefile.orig	Thu Feb  4 07:13:25 1999
++++ makefile	Tue May 30 09:10:18 2000
+@@ -5,17 +5,16 @@
+ 
               CC = g++
               LN = g++
 -            OPT = -O2
@@ -19,3 +18,9 @@ don't use -O2 (c++ bug on sparc with egcs-1.1.1)
 +           LIBS = -lglut -lGLU -lGL -lXext -lXmu -lXt -lSM -lICE -lXi -lX11 -lm
  
  #                 for Mesa
+ #          LIBS = -lglut -lMesatk -lMesaGLU -lMesaGL -lXi -lXext -lXmu -lX11 -lm
+ 
+-         CFLAGS = -c
+          LFLAGS =
+ 
+ COMPILE = $(CC) $(CFLAGS) $(OPT) $(INCLUDE_PATH)

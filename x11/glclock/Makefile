@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/09/29 22:58:46 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/05/30 07:13:03 tron Exp $
 
 DISTNAME=		glclock-4.6
 CATEGORIES=		x11 graphics
@@ -12,6 +12,12 @@ DEPENDS=		Mesa-*:../../graphics/Mesa
 USE_X11BASE=		yes
 MAKEFILE=		makefile
 ALL_TARGET=		glclock
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == NetBSD && ${MACHINE_ARCH} == sparc
+CFLAGS=
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/glclock ${PREFIX}/bin
