@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.2 2003/10/19 07:46:50 grant Exp $
+# $NetBSD: apache.mk,v 1.3 2003/11/21 07:04:43 grant Exp $
 #
 # This Makefile fragment handles Apache dependencies and make variables,
 # and is meant to be included by packages that require Apache either at
@@ -117,9 +117,12 @@ BUILDLINK_DEPENDS.apache6?=	apache6*
 _APACHE_PKGSRCDIR=	../../www/apache
 .elif ${_PKG_APACHE} == "apache2"
 _APACHE_PKGSRCDIR=	../../www/apache2
+_APACHE_BL_SRCDIR=	${_APACHE_PKGSRCDIR}
 .elif ${_PKG_APACHE} == "apache6"
 _APACHE_PKGSRCDIR=	../../www/apache6
 .endif
+
+_APACHE_BL_SRCDIR?=	../../www/apache
 
 _APACHE_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_PKG_APACHE}:${_APACHE_PKGSRCDIR}
 
@@ -128,7 +131,7 @@ _APACHE_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_PKG_APACHE}:${_APACHE_PKGSRCDIR}
 # what the apache buildlink2.mk file does.
 .if defined(_APACHE_PKGSRCDIR)
 .  if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
-.    include "${_APACHE_PKGSRCDIR}/buildlink2.mk"
+.    include "${_APACHE_BL_SRCDIR}/buildlink2.mk"
 .  else
 DEPENDS+=		${_APACHE_DEPENDENCY}
 .  endif
@@ -138,7 +141,7 @@ DEPENDS+=		${_APACHE_DEPENDENCY}
 # dependency on apr, and the apache sources?
 .if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
 .  if defined(_APACHE_PKGSRCDIR)
-.    include "${_APACHE_PKGSRCDIR}/buildlink2.mk"
+.    include "${_APACHE_BL_SRCDIR}/buildlink2.mk"
 .  endif
 .else
 BUILD_DEPENDS+=		${_APACHE_DEPENDENCY}
