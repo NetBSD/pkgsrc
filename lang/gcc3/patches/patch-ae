@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2003/07/06 12:15:08 drochner Exp $
+$NetBSD: patch-ae,v 1.3 2004/04/10 15:47:08 seb Exp $
 
 --- gcc/config/t-netbsd.orig	2003-06-11 19:38:33.000000000 +0200
 +++ gcc/config/t-netbsd	2003-06-11 19:38:59.000000000 +0200

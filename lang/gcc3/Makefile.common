@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2004/03/25 23:34:01 jlam Exp $
+# $NetBSD: Makefile.common,v 1.1 2004/04/10 15:47:08 seb Exp $
 
 GCC_VERSION=	3.3.3
 DISTNAME=	gcc-${GCC_VERSION}
@@ -16,6 +16,9 @@ USE_PKGINSTALL=		yes
 USE_GNU_TOOLS+=		make
 MAKEFLAGS+=		GMAKE_LOCALE=no
 HAS_CONFIGURE=		yes
+
+PATCHDIR=		${.CURDIR}/../../lang/gcc3-c/patches
+DISTINFO_FILE=		${.CURDIR}/../../lang/gcc3-c/distinfo
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,6 +40,11 @@ MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 .if defined(INFO_FILES)
 INFO_DIR=	${GCC_SUBPREFIX}/info
 .endif
+
+# These come from $WRKSRC/Makefile.in
+ALL_GCC=	all-gcc
+ALL_GCC_C=	$$(ALL_GCC) all-target-newlib all-target-libgloss  
+ALL_GCC_CXX=	$$(ALL_GCC_C) all-target-libstdc++-v3
 
 # Support threads and building of crt*.o on post-1.6 -current.
 # Use buildlink to avoid a GNU pth package.
