@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 1999/02/13 09:05:02 rh Exp $
-# $FreeBSD Id: Makefile,v 1.16 1997/12/24 17:45:28 ache Exp
+# $NetBSD: Makefile,v 1.8 1999/02/14 15:27:50 rh Exp $
+# FreeBSD Id: Makefile,v 1.16 1997/12/24 17:45:28 ache Exp
 #
 # REMINDER: to use ftpaccess(5) you need to specify -a in command line,
 # it is changed from previous versions
 
 DISTNAME=       wu-ftpd-2.4.2-beta-18
-PKGNAME=        wu-ftpd-2.4.2b18
+PKGNAME=        wu-ftpd-2.4.2b18.2
 CATEGORIES=	net
 # AUSCERT recommendation
 MASTER_SITES=   ftp://ftp.academ.com/pub/wu-ftpd/private/ \
