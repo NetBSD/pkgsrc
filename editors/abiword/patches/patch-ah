@@ -1,13 +1,86 @@
-$NetBSD: patch-ah,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
+$NetBSD: patch-ah,v 1.2 2000/02/29 18:31:30 jlam Exp $
 
---- src/hello/main/unix/Makefile.orig	Sun May 23 15:13:57 1999
-+++ src/hello/main/unix/Makefile	Sat Sep 11 11:00:30 1999
-@@ -24,7 +24,7 @@
+--- src/pkg/common/unix/scripts/makewrapper.sh.orig	Thu Jun 24 16:54:37 1999
++++ src/pkg/common/unix/scripts/makewrapper.sh	Tue Feb 29 12:19:00 2000
+@@ -3,15 +3,16 @@
+ # This script is invoked to create wrapper scripts for AbiSuite
+ # binaries.  One should pass it the _base_ name of the program
+ # to wrap (one would pass "AbiWord" to wrap "AbiWord_s" and 
+-# "AbiWord_d"), and the install base of the tree, to which "bin"
+-# will be appended for binary and script locations.
++# "AbiWord_d"), and the install base of the tree and the location of the
++# machine-dependent binaries and scripts.
  
- CPPSRCS=		UnixMain.cpp
+ # Examples:
+-#     makewrapper.sh AbiWord /usr/local/AbiSuite
+-#     makewrapper.sh AbiCalc /usr/local/AbiSuite
++#     makewrapper.sh AbiWord /usr/local/AbiSuite /usr/local/libexec/AbiSuite
++#     makewrapper.sh AbiCalc /usr/local/AbiSuite /usr/local/libexec/AbiSuite
  
--INCLUDES=		`gtk-config --cflags`
-+INCLUDES=		$(GTK_CFLAGS)
+ PROGRAM_NAME=$1
+ INSTALL_BASE=$2
++LIBEXECDIR=$3
  
- PROGRAM=		AbiHello
+ # Did they supply any arguments?
+ if [ -z "$PROGRAM_NAME" ]
+@@ -28,11 +29,15 @@
+     echo ""
+     exit 1
+ fi
++if [ -z "$LIBEXECDIR" ]
++then
++    LIBEXECDIR=${INSTALL_BASE}/bin
++fi
+ 
+ # Make directory path up to program we're creating
+-mkdir -p $INSTALL_BASE/bin
++mkdir -p $LIBEXECDIR
+ 
+-cat >$INSTALL_BASE/bin/$PROGRAM_NAME<<EOF
++cat >$LIBEXECDIR/$PROGRAM_NAME<<EOF
+ #!/bin/sh
+ #
+ # AbiSuite program wrapper script, dynamically generated
+@@ -42,6 +47,9 @@
+ ABISUITE_HOME=$INSTALL_BASE
+ export ABISUITE_HOME
+ 
++# Change this if you move the AbiSuite binaries.
++ABISUITE_LIBEXEC=$LIBEXECDIR
++
+ # Change this if you move your fonts.
+ ABISUITE_FONT_HOME=\$ABISUITE_HOME/fonts
+ 
+@@ -52,18 +60,18 @@
+ fi
+ 
+ # Figure out which binary to run
+-if [ -f \$ABISUITE_HOME/bin/${PROGRAM_NAME}_d ]
++if [ -f \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_d ]
+ then
+-    \$ABISUITE_HOME/bin/${PROGRAM_NAME}_d "\$@"
+-elif [ -f \$ABISUITE_HOME/bin/${PROGRAM_NAME}_s ]
++    \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_d "\$@"
++elif [ -f \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_s ]
+ then
+-    \$ABISUITE_HOME/bin/${PROGRAM_NAME}_s "\$@"
++    \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_s "\$@"
+ else
+     echo ""
+     echo "Error: can't find ${PROGRAM_NAME} executables:"
+-    echo "    \$ABISUITE_HOME/bin/${PROGRAM_NAME}_d"
++    echo "    \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_d"
+     echo "    -or-"
+-    echo "    \$ABISUITE_HOME/bin/${PROGRAM_NAME}_s"
++    echo "    \$ABISUITE_LIBEXEC/${PROGRAM_NAME}_s"
+     echo ""
+     exit
+ fi
+@@ -75,6 +83,6 @@
+ fi
+ EOF
+ 
+-chmod 755 ${INSTALL_BASE}/bin/$PROGRAM_NAME
++chmod 755 ${LIBEXECDIR}/$PROGRAM_NAME
+ 
  
