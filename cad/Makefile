@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2000/03/14 19:54:01 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.26 2000/10/15 12:18:39 rh Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/11/17 10:53:52 tg Exp
 #
 
     SUBDIR += acs
     SUBDIR += cascade
     SUBDIR += dinotrace
+    SUBDIR += eagle
     SUBDIR += fastcap
     SUBDIR += fasthenry
     SUBDIR += geda
