@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/01/28 02:27:29 snj Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/20 06:46:07 snj Exp $
 
---- Makefile.in.orig	2003-11-19 22:04:53.000000000 -0800
-+++ Makefile.in	2005-01-27 18:02:16.000000000 -0800
+--- Makefile.in.orig	Wed Nov 19 22:04:53 2003
++++ Makefile.in	Sat Feb 19 22:30:44 2005
 @@ -9,7 +9,7 @@ CFLAGS		 = @CFLAGS@ -I$(srcdir) -I.
  INSTALL		 = @INSTALL@
  CC		 = @CC@
@@ -15,11 +15,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/01/28 02:27:29 snj Exp $
  	${INSTALL} -d ${bindir}
  	${INSTALL} -d ${mandir}/man8
  	${INSTALL} -d ${CONFDIR}
-+	${INSTALL} -d ${prefix}/share/examples/scponly
- 	${INSTALL} -o 0 -g 0 scponly ${bindir}/scponly
- 	${INSTALL} -o 0 -g 0 -m 0644 scponly.8 ${mandir}/man8/scponly.8
+-	${INSTALL} -o 0 -g 0 scponly ${bindir}/scponly
+-	${INSTALL} -o 0 -g 0 -m 0644 scponly.8 ${mandir}/man8/scponly.8
 -	${INSTALL} -o 0 -g 0 -m 0644 debuglevel ${DEBUGFILE}
-+	${INSTALL} -o 0 -g 0 -m 0644 debuglevel ${prefix}/share/examples/scponly
++	${INSTALL} -d ${prefix}/share/examples/scponly
++	${BSD_INSTALL_PROGRAM} scponly ${bindir}/scponly
++	${BSD_INSTALL_DATA} scponly.8 ${mandir}/man8/scponly.8
++	${BSD_INSTALL_DATA} debuglevel ${prefix}/share/examples/scponly
  	if test "x${CHROOTED_NAME}" != "x"; then			\
  		${INSTALL} -d ${sbindir};				\
  		rm -f ${sbindir}/${CHROOTED_NAME};			\
