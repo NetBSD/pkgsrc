@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2000/10/26 19:21:54 mjl Exp $
+# $NetBSD: Makefile,v 1.15 2000/11/28 13:03:06 mjl Exp $
 #
 
-DISTNAME=	mod_fastcgi_2.2.8
-PKGNAME=	ap-fastcgi-2.2.8
+DISTNAME=	mod_fastcgi_2.2.10
+PKGNAME=	ap-fastcgi-2.2.10
 CATEGORIES=	www
 MASTER_SITES=	http://www.fastcgi.com/dist/
 
