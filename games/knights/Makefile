@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/11/13 21:32:50 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/02 18:53:23 jlam Exp $
 
 DISTNAME=	knights-0.4.6
 CATEGORIES=	games kde
@@ -9,7 +9,11 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://knights.sourceforge.net/
 COMMENT=	chess interface for KDE
 
-.include "../../x11/kde2/Makefile.kde2"
+USE_BUILDLINK_ONLY=	YES
+USE_GMAKE=              YES
+GNU_CONFIGURE=          YES
+USE_LIBTOOL=            YES
+LTCONFIG_OVERRIDE=      ${WRKSRC}/admin/ltconfig
 
 AUTOMAKE_OVERRIDE=	YES
 MEINPROC=		${BUILDLINK_PREFIX.kdelibs2}/bin/meinproc
