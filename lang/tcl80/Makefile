@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/09/10 14:28:35 agc Exp $
+# $NetBSD: Makefile,v 1.18 1999/01/26 06:56:54 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/08/20 10:33:35 jkh Exp
 #
 
@@ -16,6 +16,18 @@ GNU_CONFIGURE=		yes
 # let libtool deal with shared libraries
 USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--disable-shared
+
+# If the build system supports shared objects, enable them in tcl.
+# libtermcap was chosen as it doesn't change version numbers frequently.
+.if exists(/usr/lib/libtermcap.so.0.0)
+post-configure:
+	@${ECHO} "Enabling shared object support in ${PKGNAME}"
+	cd ${WRKSRC};							\
+		${MV} tclConfig.sh tclConfig.sh.orig;			\
+		${SED} -e 's/TCL_SHARED_BUILD=.*/TCL_SHARED_BUILD=1/'	\
+			-e 's/TCL_LIB_FILE=.*/TCL_LIB_FILE=libtcl80.so.1.0/' \
+			tclConfig.sh.orig > tclConfig.sh
+.endif
 
 test:
 	cd ${WRKSRC} && ${SETENV} LIBTOOL=${LIBTOOL} PREFIX=${PREFIX} ${MAKE} test
