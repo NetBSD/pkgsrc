@@ -1,17 +1,17 @@
-$NetBSD: patch-ae,v 1.3 2000/12/14 17:04:45 jlam Exp $
+$NetBSD: patch-ae,v 1.4 2000/12/21 14:59:38 jlam Exp $
 
---- scheduler/Makefile.orig	Thu Sep 14 11:36:25 2000
-+++ scheduler/Makefile
-@@ -68,10 +68,10 @@
- 	$(CHMOD) ugo+rx $(LOGDIR)
- 	-$(MKDIR) $(REQUESTS)
- 	$(CHMOD) u+rwx,go-rwx $(REQUESTS)
--	$(CHOWN) lp $(REQUESTS)
-+	$(CHOWN) $(CUPS_USER) $(REQUESTS)
- 	-$(MKDIR) $(REQUESTS)/tmp
- 	$(CHMOD) u+rwx,go-rwx,+t $(REQUESTS)/tmp
--	$(CHOWN) lp $(REQUESTS)/tmp
-+	$(CHOWN) $(CUPS_USER) $(REQUESTS)/tmp
+--- config.h.in.orig	Mon Oct 16 19:02:08 2000
++++ config.h.in
+@@ -89,6 +89,12 @@
+ #undef HAVE_CRYPT_H
  
+ /*
++ * Do we have <sys/ioctl.h>?
++ */
++
++#undef HAVE_SYS_IOCTL_H
++
++/*
+  * Do we have the strXXX() functions?
+  */
  
- #
