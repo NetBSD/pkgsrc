@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.11 1998/08/07 13:25:02 agc Exp $
+$NetBSD: md5,v 1.12 1999/03/04 09:12:40 kim Exp $
 
-MD5 (nmh-0.27.tar.gz) = 62395d23c686b230ed0f2f17fbc2e01a
+MD5 (nmh-1.0.tar.gz) = 712f93d485ab77a7b28e5abaa7341034

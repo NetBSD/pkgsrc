@@ -1,0 +1,21 @@
+$NetBSD: patch-ca,v 1.1 1999/03/04 09:12:42 kim Exp $
+
+--- etc/Makefile.in.orig	Fri Oct  2 23:38:38 1998
++++ etc/Makefile.in	Thu Mar  4 01:41:05 1999
+@@ -21,6 +21,7 @@
+ INSTALL         = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA    = @INSTALL_DATA@
++INSTALL_SCRIPT	= ${BSD_INSTALL_SCRIPT}
+ 
+ # Path to search for programs to handle MIME
+ # content.  Used to create mhn.defaults
+@@ -88,7 +89,7 @@
+ install-scripts:
+ 	$(top_srcdir)/mkinstalldirs $(libdir)
+ 	for script in $(SCRIPTS); do \
+-	  $(INSTALL_PROGRAM) $(srcdir)/$$script $(libdir)/$$script; \
++	  $(INSTALL_SCRIPT) $(srcdir)/$$script $(libdir)/$$script; \
+ 	done
+ 
+ uninstall: uninstall-files uninstall-scripts
