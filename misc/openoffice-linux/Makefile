@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.22 2004/05/30 08:30:08 mrauch Exp $
+# $NetBSD: Makefile,v 1.23 2004/05/30 08:38:35 mrauch Exp $
 
 DISTNAME=		OOo_1.1.1_LinuxIntel_install
 PKGNAME=		openoffice-linux-1.1.1
 CATEGORIES=		misc
-MASTER_SITES=		http://mirrors.isc.org/pub/openoffice/stable/1.1.1/ \
-			http://www.fs.tum.de/~mrauch/OpenOffice/download/
+MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/1.1.1/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		openoffice-linux-111-services.rdb.bz2
+SITES_openoffice-linux-111-services.rdb.bz2=http://www.fs.tum.de/~mrauch/OpenOffice/download/\
+			ftp://ftp.NetBSD.org/pub/NetBSD/misc/mrauch/
 
 MAINTAINER=		mrauch@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
