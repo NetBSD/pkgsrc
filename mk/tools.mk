@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.46 2004/11/02 22:24:35 wiz Exp $
+# $NetBSD: tools.mk,v 1.47 2004/12/18 19:24:26 jlam Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -389,6 +389,27 @@ ${TOOLS_DIR}/bin/make:
 		${MKDIR} ${.TARGET:H};					\
 		${LN} -sf $$src ${.TARGET};				\
 	fi
+.endif
+
+# Always create a ${TOOLS_DIR}/bin/rpcgen to wrap the real rpcgen.
+# The wrapper will correctly set the CPP environment variable to a
+# stat((2)able path to a C preprocessor, then rely on the PATH to
+# find and invoke the real rpcgen.
+#
+override-tools: ${TOOLS_DIR}/bin/rpcgen
+.if !target(${TOOLS_DIR}/bin/rpcgen)
+${TOOLS_DIR}/bin/rpcgen:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	( ${ECHO} '#!${TOOLS_SHELL}';					\
+	  ${ECHO} 'wrapperlog="$${TOOLS_WRAPPER_LOG-${_TOOLS_WRAP_LOG}}"'; \
+	  ${ECHO} 'CPP="${WRAPPER_BINDIR}/cpp"; export CPP';		\
+	  PATH=`${ECHO} "${PATH}" | ${SED} -e "s,.*${.TARGET:H}:,,"`;	\
+	  ${ECHO} "PATH=\"$$PATH\"; export PATH";			\
+	  ${ECHO} '${ECHO} "<.> rpcgen $$*" >> $$wrapperlog';		\
+	  ${ECHO} 'rpcgen "$$@"';					\
+	) > ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 .endif
 
 .if defined(USE_TBL) && !empty(USE_TBL:M[yY][eE][sS])
