@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/07/26 20:56:23 tron Exp $
+# $NetBSD: Makefile,v 1.8 1999/07/29 20:27:19 tron Exp $
 
 DISTNAME=		inn-2.2
 CATEGORIES=		news
@@ -41,9 +41,10 @@ post-build:
 .endfor
 
 pre-install:
-	${MKDIR} ${INN_DATA_DIR} ${PREFIX}/etc/nntp
+	${MKDIR} ${INN_DATA_DIR} ${PREFIX}/etc/nntp ${PREFIX}/libexec/inn
 
 post-install:
+	${LN} -s ../libexec/inn/inews ${PREFIX}/bin/inews
 	${MKDIR} ${PREFIX}/share/examples/inn
 	for FILE in `ls -1 ${WRKSRC}/samples/* | \
 		     ${EGREP} -v '\.(in|orig)$'`; do \
