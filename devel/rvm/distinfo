@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2003/08/25 10:31:08 drochner Exp $
+$NetBSD: distinfo,v 1.8 2005/01/25 13:20:35 blymn Exp $
 
-SHA1 (rvm-1.8.tar.gz) = fac795412e7a5c6f14e88fb8fd1938608b0a8e3b
-Size (rvm-1.8.tar.gz) = 426861 bytes
+SHA1 (rvm-1.10.tar.gz) = f3d817762ba660c25aed2986f6f081e373237c7a
+Size (rvm-1.10.tar.gz) = 524743 bytes
