@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2000/02/25 01:04:13 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2000/03/26 14:46:57 jlam Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -22,6 +22,7 @@
     SUBDIR += gnome-chess
     SUBDIR += gnome-games
     SUBDIR += gnuchess
+    SUBDIR += gnuchess4
     SUBDIR += gnugo
     SUBDIR += golddig
     SUBDIR += icbm3d
