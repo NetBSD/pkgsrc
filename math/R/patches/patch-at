@@ -1,0 +1,8 @@
+$NetBSD: patch-at,v 1.1.2.2 2004/04/27 07:42:29 agc Exp $
+
+--- src/modules/X11/dataentry.c.orig
++++ src/modules/X11/dataentry.c
+32c32
+< #define NeedFunctionPrototypes 0
+---
+> /* #define NeedFunctionPrototypes 0 */
