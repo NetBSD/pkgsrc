@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/08/25 21:52:04 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/10/20 02:19:42 shell Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -24,6 +24,7 @@ man/man3/curl_escape.3
 man/man3/curl_formadd.3
 man/man3/curl_formfree.3
 man/man3/curl_formparse.3
+man/man3/curl_free.3
 man/man3/curl_getdate.3
 man/man3/curl_getenv.3
 man/man3/curl_global_cleanup.3
@@ -42,9 +43,11 @@ man/man3/curl_strequal.3
 man/man3/curl_strnequal.3
 man/man3/curl_unescape.3
 man/man3/curl_version.3
+man/man3/curl_version_info.3
 man/man3/libcurl-errors.3
 man/man3/libcurl-multi.3
 man/man3/libcurl.3
+share/curl/curl-ca-bundle.crt
 share/doc/curl/FAQ
 share/doc/curl/MANUAL
 share/doc/curl/TheArtOfHttpScripting
@@ -67,7 +70,9 @@ share/examples/curl/post-callback.c
 share/examples/curl/postit2.c
 share/examples/curl/sepheaders.c
 share/examples/curl/simple.c
+share/examples/curl/simplepost.c
 share/examples/curl/simplessl.c
 @dirrm share/examples/curl
 @dirrm share/doc/curl
+@dirrm share/curl
 @dirrm include/curl
