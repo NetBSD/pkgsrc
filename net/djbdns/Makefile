@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/12/03 15:15:05 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2005/03/07 09:41:45 uebayasi Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 #
 
@@ -30,7 +30,7 @@ BUILD_TARGET=		it
 INSTALL_TARGET=		setup check
 
 EGDIR=			${PREFIX}/share/examples/djbdns
-CFLAGS+=		-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
+CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 USE_PKGINSTALL=		yes
 MAKE_DIRS+=		${PKG_SYSCONFDIR}
 SUPPORT_FILES+=		${EGDIR}/dnsroots.global ${PKG_SYSCONFDIR}/dnsroots.global

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/02/21 20:26:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.20 2005/03/07 09:41:45 uebayasi Exp $
 #
 
 DISTNAME=	upclient-4.2.1.23
@@ -17,7 +17,7 @@ BUILD_TARGET=	bsd
 
 EGDIR=		${PREFIX}/share/examples/upclient
 CONF_FILES=	${EGDIR}/upclient.conf ${PKG_SYSCONFDIR}/upclient.conf
-CFLAGS+=	-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
+CFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 RCD_SCRIPTS=	upclient
 
