@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.233 2004/02/22 01:19:40 minskim Exp $
+# $NetBSD: Makefile,v 1.234 2004/02/22 20:13:14 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -155,6 +155,7 @@ SUBDIR+=	p5-XML-DOM
 SUBDIR+=	p5-XML-Grove
 SUBDIR+=	p5-XML-LibXML
 SUBDIR+=	p5-XML-LibXML-Common
+SUBDIR+=	p5-XML-LibXSLT
 SUBDIR+=	p5-XML-NamespaceSupport
 SUBDIR+=	p5-XML-Node
 SUBDIR+=	p5-XML-Parser

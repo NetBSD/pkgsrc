@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4954 2004/02/22 17:36:52 jdolecek Exp $
+$NetBSD: CHANGES,v 1.4955 2004/02/22 20:13:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -973,3 +973,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Deleted rdesktop10 [grant 2004-02-22]
 	Updated p5-Compress-Zlib to 1.33 [heinz 2004-02-22]
 	Updated hpijs to 1.5 [jdolecek 2004-02-22]
+	Added p5-XML-LibXSLT-1.53 [minskim 2004-02-22]
