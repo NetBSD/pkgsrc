@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.4 2004/03/11 20:58:01 tv Exp $
+# $NetBSD: defs.Interix.mk,v 1.5 2004/03/11 21:18:32 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -98,12 +98,12 @@ ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
 # imake installs manpages in weird places
 IMAKE_MAN_SOURCE_PATH=	man/man
-IMAKE_MAN_SUFFIX=	1
+IMAKE_MAN_SUFFIX=	n
 IMAKE_LIBMAN_SUFFIX=	3
 IMAKE_KERNMAN_SUFFIX=	4
 IMAKE_FILEMAN_SUFFIX=	5
 IMAKE_MISCMAN_SUFFIX=	7
-IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}1
+IMAKE_MAN_DIR=		${IMAKE_MAN_SOURCE_PATH}n
 IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
 IMAKE_KERNMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}4
 IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}5
