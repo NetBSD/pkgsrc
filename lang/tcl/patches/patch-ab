@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2000/08/29 20:23:59 jwise Exp $
+$NetBSD: patch-ab,v 1.6 2000/09/01 16:20:47 jwise Exp $
 --- configure.orig	Tue Aug  8 15:17:11 2000
 +++ configure	Tue Aug 29 14:15:41 2000
 @@ -5789,7 +5789,7 @@
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.5 2000/08/29 20:23:59 jwise Exp $
  	MAKE_LIB="ar cr \${TCL_LIB_FILE} \${OBJS}"
      else
 -	MAKE_LIB="\${SHLIB_LD} -o \${TCL_LIB_FILE} \${OBJS} ${SHLIB_LD_LIBS}"
-+	MAKE_LIB="\${SHLIB_LD} -o \${TCL_LIB_FILE:.so=.la} \${OBJS:.o=.lo} ${SHLIB_LD_LIBS} -version-info 1:0"
++	MAKE_LIB="\${SHLIB_LD} -o \${TCL_LIB_FILE:C/\.so.*/.la/} \${OBJS:.o=.lo} ${SHLIB_LD_LIBS} -version-info 1:0"
  	RANLIB=":"
      fi
  else
