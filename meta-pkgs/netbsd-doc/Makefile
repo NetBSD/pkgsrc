@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/07/13 11:25:58 darcy Exp $
+# $NetBSD: Makefile,v 1.12 2005/02/21 20:26:12 hubertf Exp $
 #
 
 DISTNAME=	netbsd-doc-1.2
@@ -6,7 +6,7 @@ CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Meta-package including all packages to convert SGML->HTML
 
 DEPENDS+=	opensp>=1.4:../../textproc/opensp
