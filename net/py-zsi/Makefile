@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/24 10:30:33 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/10 14:37:13 recht Exp $
 #
 
 DISTNAME=	ZSI-1.4.1
@@ -14,6 +14,8 @@ USE_BUILDLINK2=	yes
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 post-extract:
 	${MV} ${WRKSRC}/scripts/wsdl2py \
