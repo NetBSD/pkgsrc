@@ -1,0 +1,26 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/09/05 09:18:21 jlam Exp $
+
+--- utils/Makefile.orig	Mon Sep  6 15:46:15 1999
++++ utils/Makefile
+@@ -5,9 +5,9 @@
+ # Files to be built with variable substitution after miniperl is
+ # available.  Dependencies handled manually below (for now).
+ 
+-pl = c2ph.PL h2ph.PL h2xs.PL perlbug.PL perldoc.PL pl2pm.PL splain.PL perlcc.PL dprofpp.PL
+-plextract  = c2ph h2ph h2xs perlbug perldoc pl2pm splain perlcc dprofpp
+-plextractexe  = c2ph.exe h2ph.exe h2xs.exe perlbug.exe perldoc.exe pl2pm.exe splain.exe perlcc.exe dprofpp.exe
++pl = c2ph.PL h2ph.PL h2xs.PL perlbug.PL perldoc.PL pl2pm.PL splain.PL perlcc.PL
++plextract  = c2ph h2ph h2xs perlbug perldoc pl2pm splain perlcc
++plextractexe  = c2ph.exe h2ph.exe h2xs.exe perlbug.exe perldoc.exe pl2pm.exe splain.exe perlcc.exe
+ 
+ all: $(plextract) 
+ 
+@@ -32,8 +32,6 @@
+ splain:		splain.PL ../config.sh ../lib/diagnostics.pm
+ 
+ perlcc:		perlcc.PL ../config.sh
+-
+-dprofpp:	dprofpp.PL ../config.sh
+ 
+ clean:
+ 
