@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.85 2003/10/06 08:50:40 grant Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.86 2003/10/11 08:03:40 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -1049,13 +1049,15 @@ sub parse_eval_make_false
     $test =~ s/\r/""/g;
 
     debug("conditional: $test\n");
-    # XXX Could do something with target and empty
+    # XXX Could do something with target
     while ( $test =~ /(target|empty|make|defined|exists)\s*\(([^()]+)\)/ )
 	{
 	if ($1 eq 'exists')
 	    { $_ = (-e $2) ?1 :0; }
 	elsif( $1 eq 'defined')
 	    { $_ = (defined($${vars}{$2}) ?1 :0); }
+	elsif( $1 eq 'empty')
+	    { $_ = ((not defined($${vars}{$2}) or (length($${vars}{$2}) == 0)) ?1 :0); }
 	else
 	    { $_ = 0; }
 	$test =~ s/$1\s*\([^()]+\)/$_/;
