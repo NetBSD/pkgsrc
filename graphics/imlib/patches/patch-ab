@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 1998/09/04 13:13:17 agc Exp $
+
+Try as I might, passing things through the environment, this always
+ends up like this...
+
+--- Makefile.in	1998/09/01 17:14:00	1.1
++++ Makefile.in	1998/09/01 17:14:54
+@@ -48,7 +48,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = :
