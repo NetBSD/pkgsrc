@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/08/29 15:29:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.18 2003/09/27 10:10:34 grant Exp $
 
 DISTNAME=		Sablot-1.0
 PKGNAME=		${DISTNAME:S/Sablot/sablotron/}
@@ -26,10 +26,14 @@ LIBS+=			${_BLNK_ICONV_LDFLAGS}
 # both libstdc++ and libm are required for gcc 2.95.x, as libstdc++
 # does not include the math functions. gcc3 only needs libstdc++.
 # SunPro needs libCrun and libm.
+#
+# XXX any extra libs needed on IRIX?
 .if defined(USE_SUNPRO)
 LIBS+=			-lCrun -lm
-.elif !defined(USE_MIPSPRO)
+.elif !empty(CC_VERSION:Mgcc-2*)
 LIBS+=			-lstdc++ -lm
+.elif !empty(CC_VERSION:Mgcc-3*)
+LIBS+=			-lstdc++
 .endif
 
 .include "../../converters/libiconv/buildlink2.mk"
