@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<!-- $NetBSD: README.pkg,v 1.20 2001/03/19 17:44:30 wiz Exp $ -->
+<!-- $NetBSD: README.pkg,v 1.21 2001/11/03 03:26:08 damon Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection: %%PORT%%</title>
@@ -18,7 +18,7 @@
 </I>
 </p>
 
-<p>Please read the file "<a href="pkg/DESCR">pkg/DESCR</a>" for a
+<p>Please read the file "<a href="DESCR">DESCR</a>" for a
 longer description, or browse the package's
 <A HREF="http://cvsweb.netbsd.org/bsdweb.cgi/pkgsrc/%%PORT%%/">history</A>.
 </p>
