@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/06/14 11:22:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2003/08/28 20:05:23 xtraeme Exp $
 #
 
 DISTNAME=	pekwm-0.1.3
@@ -6,7 +6,7 @@ CATEGORIES=	wm
 MASTER_SITES=	http://pekwm.pekdon.net/files/source/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://pekwm.org/
 COMMENT=	Window manager based on aewm++
 
