@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.6 2004/06/30 09:53:42 abs Exp $
+# $Id: pkg_chk.sh,v 1.7 2004/08/28 23:10:34 grant Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -438,7 +438,8 @@ if [ -n "$opt_c" -o -n "$opt_l" ];then
 
     # Determine list of tags
     #
-    TAGS="$(hostname | sed -e 's,\..*,,'),$(hostname),$(uname -srm | ${AWK} '{print $1"-"$2"-"$3","$1"-"$2","$1"-"$3","$1","$2","$3}')"
+    extract_make_vars OPSYS OS_VERSION MACHINE_ARCH
+    TAGS="$(hostname | sed -e 's,\..*,,'),$(hostname),$OPSYS-$OS_VERSION-$MACHINE_ARCH,$OPSYS-$OS_VERSION,$OPSYS-$MACHINE_ARCH,$OPSYS,$OS_VERSION,$MACHINE_ARCH"
     if [ -f /usr/X11R6/lib/libX11.so -o -f /usr/X11R6/lib/libX11.a ];then
 	TAGS="$TAGS,x11"
     fi
