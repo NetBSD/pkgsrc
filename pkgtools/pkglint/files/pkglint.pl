@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.39 2001/02/16 13:06:19 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.40 2001/02/22 14:47:33 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -1147,6 +1147,9 @@ EOF
 	}
 	if ($tmp2 =~ /^(a|an) /i) {
 		&perror("WARN: COMMENT should not begin with '$1 '.");
+	}
+	if (length($tmp2) > 70) {
+		&perror("WARN: COMMENT should not be longer than 70 characters.");
 	}
 
 	&checkearlier($tmp, @varnames);
