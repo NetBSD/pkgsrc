@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/02/25 07:32:45 minskim Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 23:11:58 agc Exp $
 
 SHA1 (gnocatan-0.8.1.16.tar.gz) = 955bacd62f3789ff6e304819069424788ee6bcd0
+RMD160 (gnocatan-0.8.1.16.tar.gz) = 79acef0b9a916bb4f98de1ec8c845bffa7c00166
 Size (gnocatan-0.8.1.16.tar.gz) = 2116705 bytes
