@@ -1,0 +1,56 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/08/30 19:56:45 adrianp Exp $
+#
+# Makefile fragment shared with libmilter
+#
+
+DISTNAME=	sendmail.${DIST_VERS}
+CATEGORIES=	mail
+MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
+		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
+		ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/
+
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.sendmail.org/
+
+LICENSE=	no-profit
+
+DISTINFO_FILE?=	${.CURDIR}/../../mail/sendmail812/distinfo
+FILESDIR?=	${.CURDIR}/../../mail/sendmail812/files
+PATCHDIR?=	${.CURDIR}/../../mail/sendmail812/patches
+
+DIST_VERS=	8.12.11
+
+MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
+		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}" \
+		BUILDLINK_DIR="${BUILDLINK_DIR}"
+SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
+
+BUILD_DEFS+=    USE_INET6 USE_TCPWRAPPERS USE_OPENLDAP USE_DB2 \
+		USE_SASL USE_SASL2 USE_STARTTLS USE_DB4
+DESCR_SRC=	${WRKDIR}/.DESCR_SRC
+
+WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
+USE_BUILDLINK3=	YES
+USE_GNU_TOOLS+=	m4
+MAKE_ENV+=	M4="${M4}"
+
+.include "../../mk/bsd.prefs.mk"
+
+make-sendmail-siteconfig:
+	${CP} ${FILESDIR}/site.config.m4 ${SITECONFIG}
+	${CHMOD} +w ${SITECONFIG}
+	${CP} ${PKGDIR}/DESCR ${DESCR_SRC}
+	${ECHO} '---' >>${DESCR_SRC}
+	${ECHO} -n 'compiled features:' >>${DESCR_SRC}
+.if defined(USE_INET6) && ${USE_INET6} == YES
+	${CAT} ${FILESDIR}/site.config.m4-v6 >>${SITECONFIG}
+.if ${OPSYS} != "SunOS" && ${OPSYS} != "BSDOS"
+	${CAT} ${FILESDIR}/site.config.m4-v6-not-solaris >>${SITECONFIG}
+.endif
+	${ECHO} -n ' INET6' >>${DESCR_SRC}
+.endif
+.if ${OPSYS} == "SunOS"
+	${CAT} ${FILESDIR}/site.config.m4-solaris >>${SITECONFIG}
+.endif
+	${CAT} ${FILESDIR}/site.config.m4-milter >>${SITECONFIG}
+	${ECHO} -n ' MILTER' >>${DESCR_SRC}
