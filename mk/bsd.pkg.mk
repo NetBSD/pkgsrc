@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1460 2004/05/17 04:44:44 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1461 2004/05/19 01:27:03 jschauma Exp $
 #
 # This file is in the public domain.
 #
@@ -378,6 +378,10 @@ CONFIGURE_ENV+=		LIBS="${LIBS}"
 CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 CONFIGURE_ENV+=		install_sh=${INSTALL:Q}
+.endif
+
+.if defined(_OPSYS_GPATCH_REQD) && !empty(_OPSYS_GPATCH_REQD:M[yY][eE][sS])
+BUILD_DEPENDS+=		patch>=2.5.4:../../devel/patch
 .endif
 
 .if defined(_OPSYS_LIBTOOL_REQD)
