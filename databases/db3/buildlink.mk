@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/27 13:33:21 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/08/11 11:20:38 rh Exp $
 #
 # This Makefile fragment is included by packages that use db3.
 #
@@ -22,8 +22,8 @@ DEPENDS+=		${BUILDLINK_DEPENDS.db3}:../../databases/db3
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.db3=db3
 BUILDLINK_PREFIX.db3_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.db3=	include/db3/db3_cxx.h
-BUILDLINK_FILES.db3+=	include/db3/db3.h
+BUILDLINK_FILES.db3=	include/db3/db_cxx.h
+BUILDLINK_FILES.db3+=	include/db3/db.h
 BUILDLINK_FILES.db3+=	lib/libdb3.*
 BUILDLINK_FILES.db3+=	lib/libdb3_cxx.*
 
