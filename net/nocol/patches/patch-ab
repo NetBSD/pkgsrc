@@ -1,0 +1,23 @@
+--- Makefile.mid.orig	Thu Dec 18 04:19:01 1997
++++ Makefile.mid	Thu Jul 23 15:41:03 1998
+@@ -64,7 +64,7 @@
+ 	-[ -d $(DATADIR) ] || mkdir $(DATADIR)
+ 	-[ -d $(ETCDIR) ] || mkdir $(ETCDIR)
+ 	-[ -d $(PIDDIR) ] || mkdir $(PIDDIR)
+-	-[ -d $(ETCDIR)/samples ] || mkdir $(ETCDIR)/samples
++	-[ -d $(EXAMPLESDIR) ] || mkdir -p $(EXAMPLESDIR)
+ 	-[ -d $(BINDIR) ] || mkdir $(BINDIR)
+ 	-[ -d $(MSGSDIR) ] || mkdir $(MSGSDIR)
+ 	@[ -d $(ROOTDIR) ] && [ -d $(DATADIR) ] && [ -d $(ETCDIR) ] \
+@@ -80,9 +80,9 @@
+ 	  ( echo "" ; echo "MAKING IN $$i" ; echo "----------" ; cd $$i ; \
+ 		make $(MFLAGS) install ; ) ;\
+ 	done
+-	@echo "Installing sample config files under $(ETCDIR)/samples/..."
++	@echo "Installing sample config files under $(EXAMPLESDIR)/..."
+ 	@-for i in */*-confg; do \
+-		$(INSTALL) -m 444 -c  $$i $(ETCDIR)/samples/ ;\
++		$(INSTALL) -m 444 -c  $$i $(EXAMPLESDIR)/ ;\
+ 	done
+ 	@echo "" ; echo "           NOW su AND DO A make root "
+ 

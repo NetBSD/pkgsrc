@@ -1,0 +1,16 @@
+--- Makefile.head	1998/07/23 14:17:28	1.1
++++ Makefile.head	1998/07/23 14:21:04
+@@ -37,11 +37,13 @@
+ #	DATADIR		where datafiles for monitoring programs are created
+ #	MSGSDIR		for message files that the nocol display shows in
+ #			in the 'messages' sub-window
++#	EXAMPLESDIR	directory in which to store example files
+ BINDIR= 	$(ROOTDIR)/bin
+ ETCDIR=		$(ROOTDIR)/etc
+ PIDDIR=		$(ROOTDIR)/run
+ DATADIR=	$(ROOTDIR)/data
+ MSGSDIR=	$(ROOTDIR)/msgs
++EXAMPLESDIR=	${ROOTDIR}/share/examples/nocol
+ 
+ ##
+ # NOCOL specific definitions:
