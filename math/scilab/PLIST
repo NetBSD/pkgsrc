@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2001/12/22 00:03:25 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/02/08 10:36:50 seb Exp $
 bin/BEpsf
 bin/Blatdoc
 bin/Blatdocs
@@ -159,9 +159,7 @@ ${SCIBASE}/demos/fec/fec.ex1
 ${SCIBASE}/demos/fec/fec.ex2
 ${SCIBASE}/demos/fec/fec.ex3
 ${SCIBASE}/demos/fec/fec.ex4
-@unexec install-info --delete --info-dir=%D/info %D/${SCIBASE}/demos/fec/fec.info
 ${SCIBASE}/demos/fec/fec.info
-@exec install-info --info-dir=%D/info %D/${SCIBASE}/demos/fec/fec.info
 ${SCIBASE}/demos/fec/macros.sci
 ${SCIBASE}/demos/flat/car.sci
 ${SCIBASE}/demos/flat/fcts.sci
