@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 1999/04/29 10:01:51 tron Exp $
+
+--- esd-config.in.orig	Mon Feb  8 17:13:34 1999
++++ esd-config.in	Thu Apr 29 11:58:13 1999
+@@ -54,9 +54,9 @@
+       ;;
+     --libs)
+       my_audiofile_libs=
+-      libdirs=-L@libdir@
++      libdirs="-L@libdir@ -Wl,-R@libdir@"
+       for i in $audiofile_libs ; do
+-        if test $i != -L@libdir@ ; then
++        if test $i != -L@libdir@ -a $i != -Wl,-R@libdir@; then
+           if test -z "$my_audiofile_libs" ; then
+             my_audiofile_libs="$i"
+           else
