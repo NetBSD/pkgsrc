@@ -1,0 +1,20 @@
+$NetBSD: patch-ad,v 1.1 1998/12/20 21:12:58 bad Exp $
+
+--- beav.1.in.orig	Sun Aug 20 20:05:22 1995
++++ beav.1.in	Thu Dec 17 20:09:37 1998
+@@ -9,7 +9,7 @@
+ that are necessary to start using
+ .IR beav
+ effectively.
+-For more information, review the file /usr/doc/beav/beav.txt.
++For more information, review the file @PREFIX@/share/doc/beav/beav.txt.
+ .PP
+ The \fIfile-visit\fR command,\fB Ctl-X Ctl-V\fR, can be used to read a
+ file in for editing.   The file can also be read in from the
+@@ -59,5 +59,5 @@
+ If there is any data that has not been saved you will be warned.
+ .PP
+ .SH FILES
+-/usr/doc/beav/beav.txt
++@PREFIX@/share/doc/beav/beav.txt
+ 
