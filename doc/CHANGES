@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1965 2003/04/17 19:07:23 drochner Exp $
+$NetBSD: CHANGES,v 1.1966 2003/04/17 22:16:46 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1643,3 +1643,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated geoslab703-ttf to 20010522nb1 [salo 2003-04-17]
 	Updated eclipse to 2.1 [jschauma 2003-04-17]
 	Updated zope25 to 2.6.1 [drochner 2003-04-17]
+	Updated MesaLib to 5.0nb2 [jmmv 2003-04-17]
