@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/02/21 18:54:18 rh Exp $
+bin/gtksamba
+share/doc/gtksamba/COPYING
+share/doc/gtksamba/README
+share/doc/gtksamba/TODO
+share/doc/gtksamba/ChangeLog
+@dirrm share/doc/gtksamba
