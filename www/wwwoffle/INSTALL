@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2002/03/10 22:14:29 fredb Exp $
+
+PATH=${PKG_PREFIX+${PKG_PREFIX}/sbin:}${PATH}
+
+# Make an educated guess:
+if [ -e ${PKG_PREFIX-/usr/pkg}/etc/wwwoffle ]
+then
+	CONFDIR=${PKG_PREFIX-/usr/pkg}/etc/wwwoffle
+else
+	CONFDIR=/etc/wwwoffle
+fi
+
+if [ X"${2}" = XPOST-INSTALL ]
+then
+	for p in `find /var/wwwoffle/html -name wwwoffle.pac`
+	do
+		cd `dirname ${p}`
+		mv ${p} ${p}.dist
+		sed /PROXY/s/localhost/`hostname`/ ${p}.dist > ${p}
+	done
+	cd ${CONFDIR} && wwwoffle-upgrade-config.pl wwwoffle.conf || true
+	wwwoffle-convert-cache /var/wwwoffle
+fi

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2001/08/18 20:31:13 fredb Exp $
+# $NetBSD: Makefile,v 1.33 2002/03/10 22:14:30 fredb Exp $
 
-DISTNAME=	wwwoffle-2.6d
+DISTNAME=	wwwoffle-2.7
 CATEGORIES=	www
-MASTER_SITES=	http://www.gedanken.demon.co.uk/download-wwwoffle/ \
-		ftp://ftp.demon.co.uk/pub/unix/httpd/ \
+MASTER_SITES=	ftp://ftp.demon.co.uk/pub/unix/httpd/ \
+		http://www.gedanken.freeserve.co.uk/download-wwwoffle/ \
 		${MASTER_SITE_SUNSITE:=apps/www/servers/}
 EXTRACT_SUFX=	.tgz
 
@@ -12,26 +12,15 @@ HOMEPAGE=	http://www.gedanken.demon.co.uk/wwwoffle/
 COMMENT=	WWW proxy with support for offline browsing
 
 USE_GMAKE=	yes
-NO_CONFIGURE=	yes
+GNU_CONFIGURE=	yes
 
-PLIST_SUBST+=	GTAR="${GTAR}" MKDIR="${MKDIR}" PREFIX="${PREFIX}"
+CONFIGURE_ARGS+= --with-confdir=${PKG_SYSCONFDIR}/wwwoffle
+CONFIGURE_ARGS+= --with-spooldir=/var/wwwoffle
 
-BUILD_DEFS+=	USE_INET6
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${USE_INET6} == "YES"
-MAKE_ENV+=	USE_IPV6=1
-.else
-MAKE_ENV+=	USE_IPV6=0
-.endif
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	LIBRARY="-lnsl -lsocket"
-.endif
+PLIST_SUBST+=	GTAR="${GTAR}" PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
 
 post-build:
-	cd ${WRKSRC}/html/search/htdig/scripts; \
+	cd ${WRKSRC}/cache/search/htdig/scripts; \
 	for f in wwwoffle-ht*; do \
 		${MV} $$f $$f.old; \
 		${SED} -e '/htsearch/s#^#${PREFIX}/libexec/cgi-bin/#' \
@@ -43,39 +32,44 @@ post-build:
 	@${SED} -e 's#@PREFIX@#${PREFIX}#g' <${FILESDIR}/wwwoffled \
 	  >${WRKDIR}/wwwoffled
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/etc/wwwoffle
-	if [ -d /var/wwwoffle ]; then \
-	  ${RM} -rf /var/wwwoffle/html.old; \
-	  ${INSTALL_DATA_DIR} /var/wwwoffle/prevtime1; \
-	fi
-
 post-install:
 	if [ ! -f ${PREFIX}/etc/wwwoffle/wwwoffle.conf.install ]; then \
 		${CP} -p ${PREFIX}/etc/wwwoffle/wwwoffle.conf \
 		  ${PREFIX}/etc/wwwoffle/wwwoffle.conf.install; \
 	fi
-	${INSTALL_PROGRAM} ${WRKSRC}/convert-cache \
+	${INSTALL_PROGRAM} ${WRKSRC}/src/convert-cache \
 	  ${PREFIX}/sbin/wwwoffle-convert-cache
-	${INSTALL_SCRIPT} ${WRKSRC}/upgrade-config.pl \
+	${INSTALL_PROGRAM} ${WRKSRC}/src/uncompress-cache \
+	  ${PREFIX}/sbin/wwwoffle-uncompress-cache
+	${INSTALL_SCRIPT} ${WRKSRC}/conf/upgrade-config.pl \
 	  ${PREFIX}/sbin/wwwoffle-upgrade-config.pl
-	${INSTALL_SCRIPT} ${WRKSRC}/upgrade-config-2.x-2.5.pl \
+	${INSTALL_SCRIPT} ${WRKSRC}/conf/upgrade-config-2.x-2.5.pl \
 	  ${PREFIX}/sbin/wwwoffle-upgrade-config-2.x-2.5.pl
 	${INSTALL_SCRIPT} ${WRKDIR}/wwwoffle.sh ${PREFIX}/etc/rc.d/wwwoffle
 	${INSTALL_SCRIPT} ${WRKDIR}/wwwoffled ${PREFIX}/etc/rc.d
-	# directories other than html are automatically created at run time
-	${GTAR} czCf / ${PREFIX}/libdata/wwwoffle-spool.tar.gz var/wwwoffle/html
+# Directories other than html and search are automatically created at run time
+	${GTAR} czCf / ${PREFIX}/libdata/wwwoffle-spool.tar.gz \
+		var/wwwoffle/html var/wwwoffle/search
+# We don't do the following automatically, as that would inconvenience
+# package build machines, not to mention putting the wrong information
+# in the "wwwoffle.pac" files.
 	@${ECHO}
 	@${ECHO} ==+===+===+===+===+===+===+===+===+===+===+===+===+===+===+=
 	@${ECHO}
 	@${ECHO} Attention pkgsrc source users:
 	@${ECHO}
-	@${ECHO} If your are upgrading from an older version of wwwoffle,
-	@${ECHO} your cache will not be converted automatically. Please do
-	@${ECHO} so by executing the command
-	@${ECHO} \"${PREFIX}/libexec/wwwoffle-convert-cache /var/wwwoffle\".
+	@${ECHO} "Running \`sh INSTALL _ POST-INSTALL' from this directory"
+	@${ECHO} 'will fix up the installed "wwwoffle.pac" files and convert'
+	@${ECHO} 'your old cache to the new format, exactly as in the binary'
+	@${ECHO} 'package install.'
 	@${ECHO}
 	@${ECHO} ==+===+===+===+===+===+===+===+===+===+===+===+===+===+===+=
 	@${ECHO}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${USE_INET6} == "YES"
+CONFIGURE_ARGS+= --with-ipv6
+.endif
 
 .include "../../mk/bsd.pkg.mk"
