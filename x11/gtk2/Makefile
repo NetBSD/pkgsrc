@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2002/10/07 22:53:33 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/08 00:02:18 jlam Exp $
 #
 
 DISTNAME=		gtk+-2.0.6
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.0/ \
@@ -16,14 +16,17 @@ COMMENT=		Gimp toolkit. Libraries for building X11 user interfaces
 
 BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK2=		yes
-USE_LIBTOOL=		yes
 USE_X11=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_GMAKE=		yes
 
 GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
+
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+BUILD_DIRS=		${WRKSRC} ${WRKSRC}/demos/gtk-demo
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/modules
@@ -37,4 +40,5 @@ post-install:
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
