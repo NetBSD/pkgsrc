@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9273 2005/02/23 11:45:42 wiz Exp $
+$NetBSD: CHANGES,v 1.9274 2005/02/23 12:14:46 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1047,3 +1047,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated fxtv to 1.03nb8 [wiz 2005-02-23]
 	Updated dinotrace to 9.2a [dmcmahill 2005-02-23]
 	Updated pkglint to 4.07 [wiz 2005-02-23]
+	Updated py-postgresql to 3.6.2 [darcy 2005-02-23]
