@@ -3,7 +3,8 @@
 # Date created:		8 March 1995
 # Whom:			Satoshi Asami
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:54:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/24 00:58:01 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.13 1997/04/30 03:18:06 asami Exp
 #
 
 DISTNAME=	colorls
@@ -15,6 +16,8 @@ DISTFILES=	ls.tar.gz
 MAINTAINER=	asami@FreeBSD.ORG
 
 WRKSRC=		${WRKDIR}/ls
+
+MAN1=		colorls.1
 
 pre-patch:
 	${CP} ${WRKSRC}/ls.1 ${WRKSRC}/colorls.1
