@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/04/16 15:51:24 salo Exp $
+# $NetBSD: Makefile,v 1.6 2003/04/20 20:40:03 grant Exp $
 #
 
 .include "../../net/snort/Makefile.common"
@@ -15,10 +15,10 @@ CONFIGURE_ARGS+=--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 
 USE_BUILDLINK2=	YES
 
-PKGDIR=         ${.CURDIR}/../../net/snort
+PKGDIR=		${.CURDIR}/../../net/snort
 FILESDIR=	${PKGDIR}/files
-PATCHDIR=       ${PKGDIR}/patches
-DISTINFO_FILE=  ${PKGDIR}/distinfo
+PATCHDIR=	${PKGDIR}/patches
+DISTINFO_FILE=	${PKGDIR}/distinfo
 
 .include "../../mk/bsd.prefs.mk"
 
