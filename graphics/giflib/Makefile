@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/06/09 05:34:25 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2000/07/14 09:52:45 jlam Exp $
 #
 
 DISTNAME=		giflib-4.1.0
@@ -9,6 +9,8 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml
 
 CONFLICTS=		libungif-*
+
+BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -26,6 +28,9 @@ MAKE_ENV+=		CC="${CC} -I${LOCALBASE}/include"
 
 post-patch:
 	${RM} ${WRKSRC}/doc/gif2x11.html
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
