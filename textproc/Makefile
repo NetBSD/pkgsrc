@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.199 2003/06/23 08:48:18 jlam Exp $
+# $NetBSD: Makefile,v 1.200 2003/06/26 03:51:20 salo Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -61,6 +61,7 @@ SUBDIR+=	flyspell
 SUBDIR+=	fop
 SUBDIR+=	freepwing
 SUBDIR+=	glimpse
+SUBDIR+=	gocr
 SUBDIR+=	grep
 SUBDIR+=	groff
 SUBDIR+=	gsed
@@ -191,6 +192,7 @@ SUBDIR+=	scrollkeeper
 SUBDIR+=	source-highlight
 SUBDIR+=	sp
 SUBDIR+=	stardic
+SUBDIR+=	subtitleripper
 SUBDIR+=	tcl-dom
 SUBDIR+=	tcl-expat
 SUBDIR+=	tcl-xml
