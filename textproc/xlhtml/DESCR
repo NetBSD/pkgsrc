@@ -1,0 +1,5 @@
+xlhtml is used to convert Microsoft Excel Spreadsheet files into either html or
+tab delimitted ASCII. The program can be interfaced with helper scripts for
+viewing email attachments. Most use of this program is through the helper
+scripts  and one would probably rarely resort to using the commandline 
+interface.
