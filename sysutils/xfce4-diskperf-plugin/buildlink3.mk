@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/07/07 11:26:05 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/10/08 06:21:38 martti Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 XFCE4_DISKPERF_PLUGIN_BUILDLINK3_MK:=	${XFCE4_DISKPERF_PLUGIN_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-diskperf-plugin}
 BUILDLINK_PACKAGES+=	xfce4-diskperf-plugin
 
 .if !empty(XFCE4_DISKPERF_PLUGIN_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xfce4-diskperf-plugin+=	xfce4-diskperf-plugin>=1.4.1
+BUILDLINK_DEPENDS.xfce4-diskperf-plugin+=	xfce4-diskperf-plugin>=1.5
 BUILDLINK_PKGSRCDIR.xfce4-diskperf-plugin?=	../../sysutils/xfce4-diskperf-plugin
 .endif	# XFCE4_DISKPERF_PLUGIN_BUILDLINK3_MK
 
