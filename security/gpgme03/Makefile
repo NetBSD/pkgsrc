@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/14 17:51:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/14 17:57:36 wiz Exp $
 #
 
 DISTNAME=	gpgme-0.3.15
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/
 
 MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://www.gnupg.org/gpgme.html
-COMMENT=	GnuPG Made Easy
+COMMENT=	GnuPG Made Easy (0.3 branch)
 
 DEPENDS+=	gnupg>=1.2.0:../../security/gnupg
 
