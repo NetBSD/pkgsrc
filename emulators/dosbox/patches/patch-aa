@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2004/10/06 00:09:23 wiz Exp $
+
+--- src/dos/cdrom_image.cpp.orig	2004-08-23 11:35:15.000000000 +0200
++++ src/dos/cdrom_image.cpp
+@@ -111,7 +111,7 @@ int CDROM_Interface_Image::AudioFile::ge
+ 	while (true) {
+ 		int success = Sound_Seek(sample, (unsigned int)(shift + time));
+ 		if (!success) {
+-			if (time == 1) return lround((double)shift * 176.4f);
++			if (time == 1) return rint((double)shift * 176.4f);
+ 			shift += time >> 1;
+ 			time = 1;
+ 		} else {
