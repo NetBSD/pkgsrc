@@ -1,0 +1,22 @@
+--- pine/signals.c.orig	Mon Jul  8 14:27:47 2002
++++ pine/signals.c	Mon Jul  8 14:28:13 2002
+@@ -108,7 +108,9 @@
+     if(CUSHION_SIG){
+ 	signal(SIGILL,  auger_in_signal); 
+ 	signal(SIGTRAP, auger_in_signal);
++#ifdef SIGEMT
+ 	signal(SIGEMT,  auger_in_signal);
++#endif
+ 	signal(SIGBUS,  auger_in_signal);
+ 	signal(SIGSEGV, auger_in_signal);
+ 	signal(SIGSYS,  auger_in_signal);
+@@ -196,7 +198,9 @@
+     }
+ 
+     signal(SIGTRAP, blockem ? SIG_IGN : SIG_DFL);
++#ifdef SIGEMT
+     signal(SIGEMT,  blockem ? SIG_IGN : SIG_DFL);
++#endif
+     signal(SIGBUS,  blockem ? SIG_IGN : SIG_DFL);
+     signal(SIGSEGV, blockem ? SIG_IGN : SIG_DFL);
+     signal(SIGSYS,  blockem ? SIG_IGN : SIG_DFL);
