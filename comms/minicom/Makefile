@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/09/27 23:17:50 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2002/10/04 23:47:28 jlam Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/01/03 10:58:40 obrien Exp
 #
 
@@ -16,11 +16,20 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS+=	gkermit-[0-9]*:../../comms/gkermit
 DEPENDS+=	lrzsz-[0-9]*:../../comms/lrzsz
 
-USE_LIBINTL=	yes
-USE_GMAKE=	yes
-NO_CONFIGURE=	yes
+USE_BUILDLINK2=		# defined
+USE_GMAKE=		# defined
+NO_CONFIGURE=		# defined	
 
-WRKSRC=		${WRKDIR}/${PKGNAME}/src
+WRKSRC=			${WRKDIR}/${PKGNAME}/src
+PKG_SYSCONFSUBDIR=	minicom
+EGDIR=			${PREFIX}/share/examples/minicom
+
+PKG_GROUPS=		dialer
+PKG_USERS=		uucp:dialer
+SPECIAL_PERMS=		${PREFIX}/bin/minicom uucp dialer 4755
+OWN_DIRS_PERMS=		${PKG_SYSCONFDIR} uucp dialer 0755
+CONF_FILES_PERMS=	${EGDIR}/minicom.users ${PKG_SYSCONFDIR}/minicom.users \
+			uucp dialer 0644
 
 # for BATCH !
 .include "../../mk/bsd.prefs.mk"
@@ -31,7 +40,6 @@ pre-install:
 	${SH} ${SCRIPTDIR}/create-dev-link
 .endif
 
-post-install:
-	@${CHOWN} -R uucp:dialer ${PREFIX}/etc/minicom
-
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
