@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/09/07 01:47:28 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2004/09/15 15:29:49 jlam Exp $
 
 DISTNAME=	krb5-1.3.4
 PKGNAME=	mit-${DISTNAME}
@@ -63,6 +63,14 @@ CONFIGURE_ARGS+=	--enable-kdc-replay-cache
 CONFIGURE_ARGS+=	--without-krb4
 CONFIGURE_ARGS+=	--without-tcl
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
+
+# XXX Force using the BSD utmp interface on NetBSD until the configure
+# XXX scripts can be taught how to properly detect our utmpx
+# XXX implementation.
+#
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ENV+=		ac_cv_func_setutent=no
+.endif
 
 .if defined(KERBEROS_PREFIX_CMDS) && !empty(KERBEROS_PREFIX_CMDS:M[yY][eE][sS])
 PKG_DEFAULT_OPTIONS+=	prefix-cmds
