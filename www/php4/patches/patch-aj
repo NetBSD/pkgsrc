@@ -1,3 +1,4 @@
+$NetBSD: patch-aj,v 1.5 2003/09/01 10:17:39 cjep Exp $
 --- ext/gettext/gettext.c.orig	2003-08-30 21:56:34.000000000 +0200
 +++ ext/gettext/gettext.c	2003-08-30 21:57:13.000000000 +0200
 @@ -58,6 +58,11 @@
