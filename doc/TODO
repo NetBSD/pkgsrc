@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2643 2004/12/03 15:31:37 wiz Exp $
+$NetBSD: TODO,v 1.2644 2004/12/03 17:43:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1065,8 +1065,7 @@ Suggested package updates
 	o slib-3a1
 	o sma-1.4
 	o smartmontools-5.33
-	o smlnj-110.50 [pkgsrc-wip]
-	o smlnj-110.51
+	o smlnj-110.51 [pkgsrc-wip]
 	o smokeping-1.31
 	o snd-7.8
 	o snes9x-1.42
