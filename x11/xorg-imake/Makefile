@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/03/02 02:07:31 hira Exp $
+# $NetBSD: Makefile,v 1.15 2005/03/22 09:46:10 adam Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
@@ -68,7 +68,7 @@ do-build:
 		-e "s|@LOCALBASE@|${LOCALBASE}|g "	\
 		-e "s|@MAKE@|${MAKE_PROGRAM}|"	${FILESDIR}/host.def > \
 		${WRKSRC}/config/cf/host.def
-	cd ${WRKSRC} && ${MAKE} Makefile.boot &&	\
+	cd ${WRKSRC} && ${MAKE_PROGRAM} Makefile.boot &&	\
 	${MAKE_PROGRAM} -f xmakefile VerifyOS version.def Makefiles includes
 
 pre-install:
