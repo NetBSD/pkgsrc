@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2004/05/04 23:46:36 snj Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/06 13:40:21 taca Exp $
 # FreeBSD Id: ports/japanese/namazu2/Makefile,v 1.16 2000/10/26 20:56:25 knu Exp
 
-DISTNAME=	namazu-2.0.12
-PKGREVISION=	3
+DISTNAME=	namazu-2.0.13-1
+PKGNAME=	namazu-2.0.13
 CATEGORIES=	japanese textproc www
 MASTER_SITES=	ftp://ftp.namazu.org/namazu/stable/ \
 		http://www.namazu.org/stable/
-
-PATCH_SITES=	${MASTER_SITES}
-PATCHFILES=	namazu-2.0.12-de.diff
-PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.namazu.org/index.html.en
@@ -22,6 +18,7 @@ DEPENDS+=	p5-nkf>=1.7:../../converters/p5-nkf
 DEPENDS+=	p5-Text-ChaSen>=1.0:../../textproc/p5-Text-ChaSen
 .endif
 
+WRKSRC=			${WRKDIR}/namazu-2.0.13
 CONFIGURE_ARGS+=	--localstatedir=${LOCALBASE}/libdata \
 			--libexecdir=${LOCALBASE}/libexec/cgi-bin
 .if defined(WITH_CHASEN) && ${WITH_CHASEN} == NO
