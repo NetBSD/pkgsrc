@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/07/28 15:54:28 martin Exp $
+
+--- Sound.c.orig	Mon Jan  4 06:43:54 1999
++++ Sound.c	Mon Jan  4 06:44:13 1999
+@@ -50,7 +50,9 @@
+ 
+ #include <sys/audioio.h>
+ #include <sys/conf.h>
++#ifndef __NetBSD__
+ #include <stropts.h>
++#endif
+ #include <signal.h>
+ 
+ static unsigned char dsp_ulaw[256] = {

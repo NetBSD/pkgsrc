@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/28 15:54:29 martin Exp $
+
+--- Makefile.orig	Thu Sep  9 00:32:06 1999
++++ Makefile	Sat Jun  3 03:19:48 2000
+@@ -41,8 +41,8 @@
+ # change the -L/usr/X11R6/lib to the directory where X11
+ # libraries libX11.* and libXext.* are located on your system.
+ CC      = gcc
+-DEFINES = -DFMSX -DUNIX -DLSB_FIRST -DDEBUG -DMITSHM -DNARROW -DSOUND -DBPP16
+-CFLAGS  = -O3 -fomit-frame-pointer -I/usr/X11/include -L/usr/X11/lib ${DEFINES}
++DEFINES = -DFMSX -DUNIX -DNARROW ${DEFS}
++CFLAGS  = -O3 -fomit-frame-pointer -I${X11BASE}/include ${DEFINES}
+ OBJECTS = fMSX.o MSX.o Z80.o V9938.o Patch.o Debug.o Unix.o LibUnix.o Sound.o
+ 
+ # Make the standard distribution: fMSX and contributed programs
+@@ -57,7 +57,7 @@
+ # fMSX Unix/X requires X11 libraries. See note above if you are
+ # experiencing any problems.
+ fmsx:	${OBJECTS}
+-	${CC} ${CFLAGS} -o fmsx ${OBJECTS} -lXext -lX11
++	${CC} ${CFLAGS} -o fmsx ${OBJECTS} -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lXext -lX11
+ 
+ # Clean up.
+ clean:
