@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2003/07/27 19:59:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2003/08/31 00:25:19 xtraeme Exp $
 #
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
-PKGREVISION=	7
 SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
 		ftp://ftp.mplayerhq.hu/MPlayer/Skin/		\
 		${MASTER_SITE_LOCAL:=mplayer}

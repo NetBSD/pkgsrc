@@ -1,21 +1,24 @@
-$NetBSD: patch-ad,v 1.5 2003/04/09 17:19:14 drochner Exp $
+$NetBSD: patch-ad,v 1.6 2003/08/31 00:25:21 xtraeme Exp $
 
---- mp_msg.c.orig	2002-12-27 17:17:57.000000000 +0100
-+++ mp_msg.c	2003-04-09 19:12:49.000000000 +0200
-@@ -33,13 +33,17 @@
- #ifdef USE_I18N
+--- mp_msg.c.orig	2003-08-31 01:59:09.000000000 +0200
++++ mp_msg.c	2003-08-31 02:01:03.000000000 +0200
+@@ -34,6 +34,7 @@
+ #ifdef MP_DEBUG
      fprintf(stdout, "Using GNU internationalization\n");
      fprintf(stdout, "Original domain: %s\n", textdomain(NULL));
 +#if 0
      fprintf(stdout, "Original dirname: %s\n", bindtextdomain(textdomain(NULL),NULL));
-+#endif
+ #endif
      setlocale(LC_ALL, ""); /* set from the environment variables */
-     bindtextdomain("mplayer", PREFIX"/share/locale");
+@@ -41,9 +42,12 @@
      textdomain("mplayer");
+ #ifdef MP_DEBUG
      fprintf(stdout, "Current domain: %s\n", textdomain(NULL));
 +#if 0
-     fprintf(stdout, "Current dirname: %s\n", bindtextdomain(textdomain(NULL),NULL));
+     fprintf(stdout, "Current dirname: %s\n\n", bindtextdomain(textdomain(NULL),NULL));
  #endif
+ #endif
++#endif
 +#endif
      mp_msg_set_level(MSGL_STATUS);
  }
