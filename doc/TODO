@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1638 2004/04/19 09:49:04 wiz Exp $
+$NetBSD: TODO,v 1.1639 2004/04/19 13:10:00 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -290,7 +290,7 @@ Suggested package updates
 	o openal-20040215
 	o openh323-1.12.2
 	o openoffice-1.1.1
-	o openssl-0.9.7d [jschauma]
+	o openssl-0.9.7d [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
 	o p5-Devel-StackTrace-1.05
