@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/10/07 22:58:23 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2002/10/08 13:12:58 wiz Exp $
 #
 
 DISTNAME=		rep-gtk-0.15
@@ -10,14 +10,9 @@ MAINTAINER=		danw@netbsd.org
 HOMEPAGE=		http://rep-gtk.sourceforge.net/
 COMMENT=		librep bindings for gtk (used by sawmill)
 
-DEPENDS+=		gtk+-1.2.*:../../x11/gtk
-DEPENDS+=		librep>=0.15.1nb1:../../lang/librep
-DEPENDS+=		libglade>=0.17nb1:../../devel/libglade
-DEPENDS+=		gnome-libs>=1.4.1.2nb1:../gnome-libs
-DEPENDS+=		gdk-pixbuf-gnome>=0.11.0nb1:../../graphics/gdk-pixbuf-gnome
-
 USE_X11=		# defined
 USE_GMAKE=		# defined
+USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
@@ -33,4 +28,9 @@ post-install:
 		-name "lib.*" >> ${PLIST_SRC}
 	${CAT} ${PKGDIR}/PLIST >> ${PLIST_SRC}
 
+.include "../../devel/libglade/buildlink2.mk"
+.include "../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
+.include "../../lang/librep/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
