@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2004/03/20 19:28:52 minskim Exp $
+
+--- ../tk/generic/tkXshell.c.orig	2000-02-06 18:54:00.000000000 -0600
++++ ../tk/generic/tkXshell.c
+@@ -84,8 +84,8 @@ Tcl_ThreadDataKey dataKey;
+ extern int		isatty _ANSI_ARGS_((int fd));
+ extern char *		strrchr _ANSI_ARGS_((CONST char *string, int c));
+ #endif
+-extern void		TkpDisplayWarning _ANSI_ARGS_((char *msg,
+-			    char *title));
++extern void		TkpDisplayWarning _ANSI_ARGS_((CONST char *msg,
++			    CONST char *title));
+ 
+ #ifndef TKX_SHELL
+ /*
