@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.138 1998/08/06 14:49:41 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.139 1998/08/07 07:44:26 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -999,13 +999,12 @@ _PORT_USE: .USE
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
 .if defined(CONFLICTS)
 	@(/bin/sh -f -c 'for i in ${CONFLICTS}; do \
-		if /usr/sbin/pkg_info -e "$$i" >${WRKDIR}/.CONFLICT.$$$$; then \
-			${ECHO_MSG} "===>  ${PKGNAME} conflicts with installed package: $$i - "`${CAT} ${WRKDIR}/.CONFLICT.$$$$`" found."; \
+		if /usr/sbin/pkg_info -qe "$$i" ; then \
+			${ECHO_MSG} "===>  ${PKGNAME} conflicts with installed package: $$i."; \
 			${ECHO_MSG} "      They install the same files into the same place."; \
-			${ECHO_MSG} "      Please remove "`${CAT} ${WRKDIR}/.CONFLICT.$$$$`" first with pkg_delete(1)."; \
+			${ECHO_MSG} "      Please remove "$$i" first with pkg_delete(1)."; \
 			exit 1; \
 		fi; \
-		${RM} ${WRKDIR}/.CONFLICT.$$$$ ; \
 	done')
 .endif
 	@if [ -d ${PKG_DBDIR}/${PKGNAME} ]; then \
