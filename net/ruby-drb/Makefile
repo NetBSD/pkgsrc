@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2001/07/04 16:02:36 taca Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/20 06:43:23 taca Exp $
 # FreeBSD: ports/net/ruby-drb/Makefile,v 1.8 2001/01/18 16:57:25 knu Exp
 
-DISTNAME=	drb-1.3.2
+DISTNAME=	drb-1.3.4.2
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 CATEGORIES=	net
-MASTER_SITES=	http://www2a.biglobe.ne.jp/~seki/ruby/ \
-		${MASTER_SITE_RUBY:S/$/contrib\//g}
+MASTER_SITES=	http://www2a.biglobe.ne.jp/~seki/ruby/
 
 MAINTAINER=	taca@netbsd.org
 HOMEPAGE=	http://www2a.biglobe.ne.jp/~seki/ruby/
@@ -15,41 +14,32 @@ DEPENDS+=	${RUBY_PKGNAMEPREFIX}acl>=1.0.1:../../security/ruby-acl
 DEPENDS+=	${RUBY_PKGNAMEPREFIX}mutexm>=1.0.1:../../devel/ruby-mutexm
 
 DIST_SUBDIR=	ruby
-USE_RUBY_RD=	yes
+RUBY_REQD=	1.6.5
+USE_RUBY_RD=	# defined
 
-DOCS_EN=	drb-ref.rd
-DOCS_JA=	tuplespace-ref.rd.ja drb-ref.rd.ja
+DOCS=		drb-ref.rd drb-ref.rd.ja tuplespace-ref.rd.ja
 
 pre-configure:
 	${RM} -f ${WRKSRC}/doc/acl*
 	${RM} -f ${WRKSRC}/lib/acl.rb
 	${RM} -f ${WRKSRC}/lib/mutexm.rb
 	${RM} -f ${WRKSRC}/runit/acl-test.rb
+	${RM} -f ${WRKSRC}/runit/mutexm_unit.rb
 
 do-build:
-.for f in ${DOCS_EN}
-	@cd ${WRKSRC}/doc; ${RUBY_RD} ${f} > ${f:S/.rd/.html/}
-.endfor
-.for f in ${DOCS_JA}
+.for f in ${DOCS}
 	@cd ${WRKSRC}/doc; ${RUBY_RD} ${f} > ${f:S/.rd/.html/}
 .endfor
 
 do-install:
 	cd ${WRKSRC}; ${RUBY} install.rb
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/drb/ja
-.for f in ${DOCS_EN}
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/drb
+.for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${WRKSRC}/doc/${f:S/.rd/.html/} \
 		${RUBY_DOCDIR}/drb
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/doc/drb-ref.rd ${RUBY_DOCDIR}/drb
-.for f in ${DOCS_JA}
-	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${WRKSRC}/doc/${f:S/.rd/.html/} \
-		${RUBY_DOCDIR}/drb/ja
-.endfor
-	${INSTALL_DATA} ${WRKSRC}/doc/drb-ref.rd.ja ${RUBY_DOCDIR}/drb/ja
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/drb/runit
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/drb
 	${INSTALL_DATA} ${WRKSRC}/sample/* ${RUBY_EXAMPLESDIR}/drb
-	${INSTALL_DATA} ${WRKSRC}/runit/* ${RUBY_EXAMPLESDIR}/drb/runit
 
 .include "../../textproc/ruby-rdtool/Makefile.common"
 .include "../../lang/ruby-base/Makefile.common"
