@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/06/11 02:05:14 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2001/06/19 08:39:33 jlam Exp $
 
 DISTNAME=		cups-${VERS}-source
 PKGNAME=		cups-${VERS}
@@ -19,6 +19,7 @@ COMMENT=		Common UNIX Printing System
 
 CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
 
+USE_BUILDLINK_ONLY=	# defined
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		# defined
@@ -27,7 +28,7 @@ CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/cups
 CONFIGURE_ARGS+=	--enable-libtool-unsupported="${LIBTOOL}"
 
-USE_SSL=		# defined
+#USE_SSL=		# defined
 CONFIGURE_ARGS+=	--enable-ssl
 
 .include "../../mk/bsd.prefs.mk"
@@ -35,6 +36,7 @@ CONFIGURE_ARGS+=	--enable-ssl
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/tiff/buildlink.mk"
+.include "../../security/openssl/buildlink.mk"
 
 .if defined(USE_PAM)
 .include "../../security/PAM/buildlink.mk"
@@ -74,38 +76,35 @@ INSTALL_FILE=		${WRKDIR}/INSTALL
 DOCDIR=			${PREFIX}/share/doc/cups
 EGDIR=			${PREFIX}/share/examples/cups
 
+FILES_SUBST=		CUPS_USER=${CUPS_USER}
+FILES_SUBST+=		CUPS_GROUP=${CUPS_GROUP}
+FILES_SUBST+=		PREFIX=${PREFIX}
+FILES_SUBST+=		ADDUSER=${ADDUSER:Q}
+FILES_SUBST+=		ADDGROUP=${ADDGROUP:Q}
+FILES_SUBST+=		CAT=${CAT:Q}
+FILES_SUBST+=		CHGRP=${CHGRP:Q}
+FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CHOWN=${CHOWN:Q}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		GREP=${GREP:Q}
+FILES_SUBST+=		MKDIR=${MKDIR:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST+=		RMDIR=${RMDIR:Q}
+FILES_SUBST+=		TOUCH=${TOUCH:Q}
+FILES_SUBST+=		TRUE=${TRUE:Q}
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
 post-extract:
 	cd ${WRKSRC}/conf; ${MV} -f cupsd.conf cupsd.conf.in
 
 post-build:
-	${SED}	-e "s|@CUPS_USER@|${CUPS_USER}|g"			\
-		-e "s|@CUPS_GROUP@|${CUPS_GROUP}|g"			\
-		${WRKSRC}/conf/cupsd.conf.in > ${WRKSRC}/conf/cupsd.conf
-	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
-		${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam
+	cd ${WRKSRC}; \
+	${SED} ${FILES_SUBST_SED} conf/cupsd.conf.in > conf/cupsd.conf
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam
 
 pre-install:
-	${SED}	-e "s|@CUPS_USER@|${CUPS_USER}|g"			\
-		-e "s|@CUPS_GROUP@|${CUPS_GROUP}|g"			\
-		-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@RM@|${RM}|g"					\
-		-e "s|@RMDIR@|${RMDIR}|g"				\
-		-e "s|@TRUE@|${TRUE}|g"					\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s|@CUPS_USER@|${CUPS_USER}|g"			\
-		-e "s|@CUPS_GROUP@|${CUPS_GROUP}|g"			\
-		-e "s|@ADDUSER@|${ADDUSER}|g"				\
-		-e "s|@ADDGROUP@|${ADDGROUP}|g"				\
-		-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@CHGRP@|${CHGRP}|g"				\
-		-e "s|@CHMOD@|${CHMOD}|g"				\
-		-e "s|@CHOWN@|${CHOWN}|g"				\
-		-e "s|@CP@|${CP}|g"					\
-		-e "s|@GREP@|${GREP}|g"					\
-		-e "s|@MKDIR@|${MKDIR}|g"				\
-		-e "s|@RM@|${RM}|g"					\
-		-e "s|@TOUCH@|${TOUCH}|g"				\
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
