@@ -1,0 +1,19 @@
+# $NetBSD: Makefile.cflags,v 1.1 2003/01/20 07:10:41 fredb Exp $
+
+# This must all come after the last "buildink2.mk" inclusion, as
+# "buildlink2.mk" munges ${CFLAGS}, and if ${CFLAGS} is non-empty,
+# the configure script refuses to add any optimizations at all.
+
+.if ${MPLAYER_ENABLE_RUNTIME_CPU_DETECTION} == YES
+.if ${MACHINE_ARCH} == i386
+# Schedule for the typical machine fast enough to run mplayer. This
+# is nearly optimal for K6-2 as well. Anything slowler will still run
+# (but would probably benefit greatly from turning off the run-time
+# cpu detection).
+CFLAGS+=	-O3 -ffast-math -fomit-frame-pointer -mcpu=pentiumpro
+.else
+CFLAGS+=	-O3 -ffast-math -fomit-frame-pointer
+.endif
+.else
+CFLAGS=		# Let "configure" do its thing.
+.endif
