@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6926 2004/08/17 12:53:40 wiz Exp $
+$NetBSD: CHANGES,v 1.6927 2004/08/17 15:32:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3886,3 +3886,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated TeXmacs to 1.0.4.0.2 [recht 2004-08-17]
 	Added stratagus-2.1 [wiz 2004-08-17]
 	Added bos-1.1 [wiz 2004-08-17]
+	Added py-Xlib-0.12 [minskim 2004-08-17]
