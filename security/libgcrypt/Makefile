@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/03/29 07:42:16 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/29 15:03:47 wiz Exp $
 #
 
 DISTNAME=	libgcrypt-1.1.92
@@ -15,6 +15,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
+
+CONFIGURE_ARGS+=	--without-pth-test
 
 TEST_TARGET=	check
 
