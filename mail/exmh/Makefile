@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/04/26 18:56:13 garbled Exp $
+# $NetBSD: Makefile,v 1.18 2000/01/09 01:29:54 wiz Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
@@ -8,20 +8,12 @@ MASTER_SITES=	http://sunscript.sun.com/dist/
 EXTRACT_SUFX=	.tar.Z
 
 PATCH_SITES=	http://sunscript.sun.com/exmh/patches/2.0.1/
-
-.include "../../mk/bsd.prefs.mk"
-
 # User contributed and "new features".  Some not useable as-is.
-PATCHFILES+=	seditpost.patch inc.patch next.patch
+PATCHFILES=	seditpost.patch inc.patch next.patch
 # XXX pgpExec.patch has got confused paths	(supplied as patch-as)
 # XXX newsgroups.patch is relative to a different directory (patch-at)
 # XXX MDN.patch doesn't apply			(patch-au)
 # XXX post.from.patch doesn't apply		(patch-av)
-.if defined(PATCH_DEBUG)
-PATCH_DIST_ARGS= -d ${WRKSRC}/lib -E ${PATCH_DIST_STRIP}
-.else
-PATCH_DIST_ARGS= -d ${WRKSRC}/lib --forward --quiet -E ${PATCH_DIST_STRIP}
-.endif
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.beedub.com/exmh/
@@ -30,6 +22,14 @@ DEPENDS+=	tcl-8.0.5:../../lang/tcl80
 DEPENDS+=	tk-8.0.5:../../x11/tk80
 DEPENDS+=	nmh-1.0:../../mail/nmh
 DEPENDS+=	mm-2.7:../../mail/metamail
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(PATCH_DEBUG)
+PATCH_DIST_ARGS= -d ${WRKSRC}/lib -E ${PATCH_DIST_STRIP}
+.else
+PATCH_DIST_ARGS= -d ${WRKSRC}/lib --forward --quiet -E ${PATCH_DIST_STRIP}
+.endif
 
 DIST_SUBDIR=	${PKGNAME}
 USE_X11=	yes
