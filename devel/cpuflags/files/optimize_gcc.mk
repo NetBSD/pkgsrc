@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.9 2003/07/08 16:52:41 abs Exp $
+# $Id: optimize_gcc.mk,v 1.10 2003/07/09 14:35:28 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and probably quite broken by design.
@@ -28,21 +28,13 @@ PKGBASE=${.CURDIR:C:.*/::}
 COPT_FLAGS+=-ffast-math -fomit-frame-pointer
 
 PKG_EXCLUDE_RENAME_REGISTERS+=
-PKG_EXCLUDE_OMIT_FRAME_POINTER+=lua4
-
-.if defined(MACHINE_ARCH) && ${MACHINE_ARCH} == "i386"
-PKG_EXCLUDE_OMIT_FRAME_POINTER+=galeon mozilla phoenix
-. if !defined(USE_GCC3)
+PKG_EXCLUDE_OMIT_FRAME_POINTER+=galeon lua4 mozilla phoenix
+.if !defined(USE_GCC3)
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=qt3-libs kdeedu3
-. endif
 .endif
 
 .if !empty(PKG_EXCLUDE_OMIT_FRAME_POINTER:M${PKGBASE})
-. if defined(MACHINE_ARCH) && ${MACHINE_ARCH} == "i386"
-COPT_FLAGS:=    ${COPT_FLAGS:S/-fomit-frame-pointer/-momit-leaf-frame-pointer/}
-. else
 COPT_FLAGS:=    ${COPT_FLAGS:S/-fomit-frame-pointer//}
-. endif
 .endif
 
 # -O3 implies -finline-functions and -frename-registers
