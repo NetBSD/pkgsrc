@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8308 2004/12/05 19:18:51 he Exp $
+$NetBSD: CHANGES,v 1.8309 2004/12/05 19:23:22 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5811,3 +5811,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Email-Valid to 0.15 [he 2004-12-05]
 	Updated p5-Exception-Class to 1.19 [he 2004-12-05]
 	Updated p5-File-Spec to 0.90 [he 2004-12-05]
+	Updated p5-File-Temp to 0.14 [he 2004-12-05]
