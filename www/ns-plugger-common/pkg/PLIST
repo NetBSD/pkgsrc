@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/22 11:02:12 rh Exp $
-lib/netscape/plugins/plugger.so
+@comment $NetBSD: PLIST,v 1.2 2001/03/06 10:17:44 jlam Exp $
+${NS_PLUGINS_DIR}/plugger.so
 man/man7/plugger.7
 share/doc/plugger/README
 share/doc/plugger/COPYING
-@unexec rmdir -p %D/lib/netscape/plugins 2>/dev/null || true
 @dirrm share/doc/plugger
+@unexec rmdir -p %D/${NS_PLUGINS_DIR} 2>/dev/null || true
