@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/10/05 07:07:14 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/05 10:46:52 grant Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -8,7 +8,7 @@ PERL5_RC_VERS=	# empty
 
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
-PKGREVISION=	# empty
+PKGREVISION=	1
 SNAPSHOT_SITES=	# empty
 .else
 .  if !empty(PERL5_SNAPSHOT)
@@ -65,7 +65,8 @@ CONFIGURE_ARGS+=	-Dsiteman3dir="${PERL5_SITEPERL}/man/man3"
 
 # The site directories are all relative to the perl view.
 CONFIGURE_ARGS+=	-Dsiteprefix="${VIEWBASE}"
-CONFIGURE_ARGS+=	-Dinstallsiteman1dir="${VIEWBASE}/man/man1"
+CONFIGURE_ARGS+=	-Dman1dir="${PREFIX}/man/man1"
+CONFIGURE_ARGS+=	-Dsiteman1dir="${VIEWBASE}/man/man1"
 
 .include "../../mk/bsd.prefs.mk"
 
