@@ -1,3 +1,4 @@
+$NetBSD: patch-ap,v 1.2 2001/03/05 16:43:59 wiz Exp $
 --- /dev/null	Fri Feb 16 09:53:47 2001
 +++ lib.mk	Fri Feb 16 09:53:24 2001
 @@ -0,0 +1,50 @@
