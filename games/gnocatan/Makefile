@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/12/15 18:51:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/12/15 19:17:03 jmmv Exp $
 #
 
 DISTNAME=	gnocatan-0.8.0.0
@@ -19,5 +19,5 @@ USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 
 .include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../textproc/scrollkeeper/buildlink2.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../mk/bsd.pkg.mk"
