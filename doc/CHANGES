@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4060 2003/12/13 00:46:15 wiz Exp $
+$NetBSD: CHANGES,v 1.4061 2003/12/13 04:02:32 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3353,3 +3353,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated distcc to 2.11.2 [jmmv 2003-12-12]
 	Updated win32-codecs to 031029 [recht 2003-12-12]
 	Updated atk to 1.4.1 [wiz 2003-12-13]
+	Updated thunderbird-bin to 0.4 [grant 2003-12-13]
