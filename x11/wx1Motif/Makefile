@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:43:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/19 08:54:35 wiz Exp $
 #
 
 DISTNAME=		wx1Motif-1.68e
@@ -7,7 +7,7 @@ CATEGORIES=		x11
 MASTER_SITES=		ftp://oracle.fastpicsystems.com/pub/wxwin/1.68E/unix/
 DISTFILES=		wx168_1.tgz wx168_2.tgz
 
-MAINTAINER=		collver1@attbi.com
+MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.wxwindows.org
 COMMENT=		Motif-based implementation of wxWindows 1
 

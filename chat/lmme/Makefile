@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/05/02 11:54:05 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/19 08:54:27 wiz Exp $
 #
 
 DISTNAME=	lmme-0.6.4
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmme/}
 
-MAINTAINER=	collver1@attbi.com
+MAINTAINER=	collver1@comcast.net
 HOMEPAGE=	http://lmme.sourceforge.net/
 COMMENT=	curses-based client for MSN Messenger chat system
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2002/12/24 18:55:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/19 08:54:32 wiz Exp $
 
 DISTNAME=	mjpegtools-1.6.0
 PKGNAME=	mplex-1.6.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mjpeg/}
 
-MAINTAINER=	collver1@attbi.com
+MAINTAINER=	collver1@comcast.net
 HOMEPAGE=	http://mjpeg.sourceforge.net
 COMMENT=	Multiplexes MPEG component streams into system layers
 
