@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.8 2001/12/01 12:32:08 hubertf Exp $
+# $NetBSD: printindex,v 1.9 2002/08/07 10:56:12 agc Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -69,11 +69,11 @@ do
 		echo "but the directory does not exist.  Please fix this!" > /dev/stderr
 	else
 		cd $pkgdir
-		pkgname=`make show-var VARNAME=PKGNAME`
+		pkgname=`${BMAKE} show-var VARNAME=PKGNAME`
 		if [ $? != 0 ]; then
 			echo "ERROR: printindex could not extract PKGNAME for $pkgdir" > /dev/stderr
-			echo "make show-var VARNAME=PKGNAME failed" > $brokenfile
-			make show-var VARNAME=PKGNAME >> $brokenfile 2>&1
+			echo "${BMAKE} show-var VARNAME=PKGNAME failed" > $brokenfile
+			${BMAKE} show-var VARNAME=PKGNAME >> $brokenfile 2>&1
 			#exit 1
 		fi
 		echo "$pkgdir          $pkgname "
@@ -86,7 +86,7 @@ done
 # not be enabled for builds in pkgtools/xpkgwedge, but we may want to have
 # it listed in the index file.
 
-cd $cwd/pkgtools/pkglint && BULK_PREREQ=`make show-var VARNAME=BULK_PREREQ`
+cd $cwd/pkgtools/pkglint && BULK_PREREQ=`${BMAKE} show-var VARNAME=BULK_PREREQ`
 cd $cwd
 
 for pkgdir in $BULK_PREREQ
@@ -97,11 +97,11 @@ do
 			;;
 		*)
 			cd $cwd/$pkgdir
-			pkgname=`make show-var VARNAME=PKGNAME`
+			pkgname=`${BMAKE} show-var VARNAME=PKGNAME`
 			if [ $? != 0 ]; then
 				echo "ERROR: printindex could not extract PKNAME for $pkgdir" > /dev/stderr
-				echo "make show-var VARNAME=PKGNAME failed" > $brokenfile
-				make show-var VARNAME=PKGNAME >> $brokenfile 2>&1
+				echo "${BMAKE} show-var VARNAME=PKGNAME failed" > $brokenfile
+				${BMAKE} show-var VARNAME=PKGNAME >> $brokenfile 2>&1
 				#exit 1
 			fi
 			echo "$pkgdir          $pkgname "

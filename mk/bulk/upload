@@ -4,6 +4,14 @@
 # Must be called in /usr/pkgsrc
 #
 
+opsys=`uname -s`
+case "$opsys" in
+NetBSD)	BMAKE=make ;;
+*)	BMAKE=bmake ;;
+esac
+
+export BMAKE
+
 # Pull in RSYNC_DST, RSYNC_OPTS:
 if [ -f "$BULK_BUILD_CONF" ]; then
     . $BULK_BUILD_CONF
@@ -44,12 +52,12 @@ upload_specific=$TMP/upload_specific
 upload_others=$TMP/upload_others
 
 # May be different than $USR_PKGSRC:
-pkgsrcdir=`cd pkgtools/pkglint ; make show-var VARNAME=_PKGSRCDIR`
-packages=`cd pkgtools/pkglint ; make show-var VARNAME=PACKAGES`
+pkgsrcdir=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=_PKGSRCDIR`
+packages=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=PACKAGES`
 
 # Pull in some pkgs needed
-( cd pkgtools/pkglint ; make bulk-install )
-( cd net/rsync ;        make bulk-install )
+( cd pkgtools/pkglint ; ${BMAKE} bulk-install )
+( cd net/rsync ;        ${BMAKE} bulk-install )
 
 echo "Checking for restricted, out of date, and vulnerable packages:"
 # -p  =  report old versions of packages
