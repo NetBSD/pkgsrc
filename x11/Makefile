@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 1998/05/11 01:57:28 mycroft Exp $
+# $NetBSD: Makefile,v 1.34 1998/05/15 21:49:08 tron Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -51,6 +51,7 @@
 #    SUBDIR += olvwm
 #    SUBDIR += p5-Tcl-Tk
     SUBDIR += p5-Tk
+    SUBDIR += py-Tk
 #    SUBDIR += piewm
 #    SUBDIR += pythonqt
     SUBDIR += qt
