@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2000/10/16 20:38:21 tv Exp $
+$NetBSD: patch-aa,v 1.2 2001/05/16 10:05:36 agc Exp $
 
---- configure.orig	Mon Oct 16 15:55:59 2000
-+++ configure	Mon Oct 16 15:57:17 2000
-@@ -2549,6 +2549,7 @@
- extern "C" void exit (int);
- #endif
+--- configure.orig	Fri May 11 07:28:30 2001
++++ configure	Wed May 16 09:51:31 2001
+@@ -3732,6 +3732,7 @@
+ #line 3732 "configure"
+ #include "confdefs.h"
  $ac_includes_default
 +#include <wchar.h>
  int
