@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2001/02/07 05:16:39 fredb Exp $
+# $NetBSD: Makefile,v 1.65 2001/02/12 14:53:57 tron Exp $
 
 DISTNAME=	mutt-1.2.5i
 CATEGORIES=	mail
@@ -14,20 +14,19 @@ BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 
-USE_LIBINTL=	YES
-MAKE_ENV+=	CPPFLAGS=-I${LOCALBASE}/include LIBS=-lintl
-CONFIGURE_ENV+=	LIBS=-lintl
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-CONFIGURE_ARGS+= --with-exec-shell=/bin/ksh \
-		 --with-docdir=${PREFIX}/share/doc/mutt \
-		 --enable-pop --enable-imap \
-		 --without-included-gettext
-USE_CURSES=	yes
+USE_LIBINTL=		YES
+MAKE_ENV+=		CPPFLAGS=-I${LOCALBASE}/include LIBS=-lintl
+CONFIGURE_ENV+=		LIBS=-lintl
+GNU_CONFIGURE=		YES
+USE_GMAKE=		YES
+CONFIGURE_ARGS+=	--with-exec-shell=/bin/ksh \
+			--with-docdir=${PREFIX}/share/doc/mutt \
+			--enable-pop --enable-imap \
+			--without-included-gettext
+USE_CURSES=		YES
 REPLACE_NCURSES=	configure configure.in
 
-ALL_TARGET=	keymap_defs.h all
-LDFLAGS+=	-s
+LDFLAGS+=	${STRIPFLAG}
 WRKSRC=		${WRKDIR}/${DISTNAME:S/i//}
 
 .include "../../mk/bsd.prefs.mk"
