@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 1999/09/07 13:22:50 ad Exp $
+# 	$NetBSD: Makefile,v 1.2 1999/09/18 20:28:25 ad Exp $
 
 DISTNAME=	exim-3.03
-CATEGORIES=	mail
+CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/ \
 		ftp://ftp.cus.cam.ac.uk/pub/software/programs/exim/ \
 		ftp://ftp.esat.net/pub/networking/mail/mta/exim/
@@ -32,10 +32,15 @@ pre-install:
 	strip ${WRKSRC}/build*/exim_lock
 
 post-install:
-	(cd ${PREFIX}/sbin; ${RM} -f mailq; ${LN} -s exim mailq)
 	${MKDIR} ${PREFIX}/etc/rc.d
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
 	    < ${FILESDIR}/exim.sh \
 	    > ${PREFIX}/etc/rc.d/exim.sh
+	${SED} -e 's:@PREFIX@:${PREFIX}:' \
+	    < ${FILESDIR}/exim_newaliases \
+	    > ${PREFIX}/sbin/exim_newaliases
+	${SED} -e 's:@PREFIX@:${PREFIX}:' \
+	    < ${FILESDIR}/mailer.conf.exim \
+	    > ${PREFIX}/etc/mailer.conf.exim
 
 .include "../../mk/bsd.pkg.mk"
