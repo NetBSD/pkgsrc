@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/08/19 12:51:06 sketch Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/26 01:03:09 wiz Exp $
 
 PKGNAME=		realplayer-8.0.1
 PKGREVISION=		2
@@ -69,7 +69,7 @@ MESSAGE_SUBST+=		REALPLAYER_HOME=${REALPLAYER_HOME}
 
 _FETCH_MESSAGE= \
 	    ${ECHO} "==============================================================="; \
-	    ${ECHO} "  RealPlayer 8 (Self-Extracting) must be fetched"; \
+	    ${ECHO} "  RealPlayer 8 for Linux 2.x (i386) must be fetched"; \
 	    ${ECHO} "  into ${DISTDIR} from"; \
 	    ${ECHO} "  ${DOWNLOAD}";
 .if defined(EXTRA_DIST)
