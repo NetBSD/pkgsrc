@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/04/16 19:18:54 tron Exp $
+# $NetBSD: Makefile,v 1.15 1999/05/01 12:22:46 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -21,5 +21,9 @@ INFO_FILES=	glib.info
 
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 LIBTOOL_FLAGS=	 --install-la
+# XXX egcs is still broken on arm32.
+.if (${MACHINE_ARCH} == arm32)
+CFLAGS=		-O0
+.endif
 
 .include "../../mk/bsd.pkg.mk"
