@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3523 2003/09/25 16:07:00 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3524 2003/09/25 16:11:36 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3933,3 +3933,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added trickle-1.06 [xtraeme 2003-09-25]
 	Updated conglomerate to 0.7.4 [xtraeme 2003-09-25]
 	Added devhelp-0.7 [xtraeme 2003-09-25]
+	Updated mono to 0.26 [recht 2003-09-25]
