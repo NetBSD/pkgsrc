@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2000/10/13 15:13:55 itojun Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/02/03 09:45:17 itojun Exp $
 @unexec install-info --delete %D/info/zebra.info %D/info/dir
 info/zebra.info
-info/zebra.info-1
-info/zebra.info-2
-info/zebra.info-3
 @exec   install-info          %D/info/zebra.info %D/info/dir
 man/man1/vtysh.1
 man/man8/bgpd.8
@@ -14,7 +11,6 @@ sbin/bgpd
 sbin/ospfd
 sbin/ripd
 sbin/zebra
-share/examples/zebra/README.mbgp
 share/examples/zebra/bgpd.conf.sample
 share/examples/zebra/bgpd.conf.sample2
 share/examples/zebra/ospfd.conf.sample
