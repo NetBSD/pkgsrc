@@ -1,4 +1,4 @@
-$NetBSD: patch-ax,v 1.2 2005/02/24 22:39:03 minskim Exp $
+$NetBSD: patch-ax,v 1.3 2005/02/24 23:04:31 minskim Exp $
 
 --- sndserv/Makefile.orig	Mon Dec 22 21:17:10 1997
 +++ sndserv/Makefile	Thu Feb  3 01:34:04 2000
@@ -10,7 +10,7 @@ $NetBSD: patch-ax,v 1.2 2005/02/24 22:39:03 minskim Exp $
 +CFLAGS+= -DNORMALUNIX
  LDFLAGS=
 -LIBS=-lm
-+LIBS=-lm -lossaudio
++LIBS=-lm ${LIBOSSAUDIO}
  
  O=linux
  
