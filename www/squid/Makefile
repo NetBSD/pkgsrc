@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2001/07/30 07:32:13 tron Exp $
+# $NetBSD: Makefile,v 1.51 2001/09/18 16:24:57 tron Exp $
 
 DISTNAME=	squid-2.4.STABLE1-src
 PKGNAME=	squid-2.4.1nb2
@@ -42,6 +42,8 @@ SQUID_CONFIGURE_ARGS?=	--enable-cachemgr-hostname=localhost \
 			--enable-snmp \
 			--enable-underscores
 
+OPTIONAL_FILES=	libexec/pinger libexec/unlinkd
+
 post-configure:
 	@cd ${WRKSRC}/include && \
 	${MV} autoconf.h autoconf.h.prepatch && \
@@ -52,24 +54,27 @@ post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/squid.sh >${WRKDIR}/squid.sh
 
 pre-install:
-	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/errors
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/icons
+
+post-install:
+	cd ${WRKSRC}/src; ${TEST} ! -x pinger || ${MAKE} install-pinger
+	${INSTALL_SCRIPT} ${WRKDIR}/squid.sh ${PREFIX}/etc/rc.d/squid
+	@${SETENV} ${MAKE_ENV} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@(							\
+	for FILE in ${OPTIONAL_FILES}; do			\
+	  ${TEST} ! -e ${PREFIX}/$$FILE || ${ECHO} $$FILE;	\
+	done;							\
 	cd ${WRKSRC}/errors/English;				\
-	ls ERR_* | ${SED} -e 's@^@share/squid/errors/@';		\
+	ls ERR_* | ${SED} -e 's@^@share/squid/errors/@';	\
 	${ECHO} "@dirrm share/squid/errors";			\
 	cd ${WRKSRC}/icons;					\
 	ls anthony-*.gif | ${SED} -e 's@^@share/squid/icons/@';	\
 	${ECHO} "@dirrm share/squid/icons";			\
 	${ECHO} "share/squid/mib.txt";				\
-	${ECHO} "@dirrm share/squid";				\
+	${ECHO} "@dirrm share/squid"				\
 	) >>${PLIST_SRC}
-
-post-install:
-	cd ${WRKSRC}/src; ${MAKE} install-pinger
-	${INSTALL_SCRIPT} ${WRKDIR}/squid.sh ${PREFIX}/etc/rc.d/squid
-	@${SETENV} ${MAKE_ENV} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
