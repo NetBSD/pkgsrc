@@ -1,10 +1,10 @@
 PKG_INFO(1)             NetBSD General Commands Manual             PKG_INFO(1)
 
 NNAAMMEE
-     ppkkgg__iinnffoo -- a utility for displaying information on software packages
+     ppkkgg__iinnffoo - a utility for displaying information on software packages
 
 SSYYNNOOPPSSIISS
-     ppkkgg__iinnffoo [--..BBbbccDDddFFffhhIIiikkLLmmNNnnppqqRRrrSSssVVvv] [--ee _p_a_c_k_a_g_e] [--KK _p_k_g___d_b_d_i_r]
+     ppkkgg__iinnffoo [--BBbbccDDddFFffhhIIiikkLLmmNNnnppqqRRrrSSssVVvv] [--ee _p_a_c_k_a_g_e] [--KK _p_k_g___d_b_d_i_r]
               [--ll _p_r_e_f_i_x] _p_k_g_-_n_a_m_e _._._.
      ppkkgg__iinnffoo [--aa _f_l_a_g_s]
      ppkkgg__iinnffoo [--QQ _v_a_r_i_a_b_l_e] _p_k_g_-_n_a_m_e _._._.
@@ -21,9 +21,6 @@ DDEESSCCRRIIPPTTIIOONN
      is also given), or a URL to an ftp-available package.
 
      The following command-line options are supported:
-
-     --.      Recognise uninstalled binary packages in the current working
-             directory.
 
      --aa      Show information for all currently installed packages.
 
@@ -181,4 +178,4 @@ AAUUTTHHOORRSS
              NetBSD wildcard dependency processing, pkgdb, depends displaying,
              pkg size display etc.
 
-BSD                            November 10, 2004                           BSD
+BSD                            February 10, 2005                           BSD
