@@ -1,19 +1,14 @@
-$NetBSD: patch-ab,v 1.2 2002/02/12 14:49:46 martin Exp $
+$NetBSD: patch-ab,v 1.3 2002/06/14 20:04:07 abs Exp $
 
---- Makefile.orig	Sat Jul 15 20:29:10 2000
-+++ Makefile	Tue Feb 12 15:13:35 2002
-@@ -2,11 +2,11 @@
- BASE = ${shell basename ${PWD}}
+--- mserv/config.h.in.orig	Tue Jan 25 19:59:08 2000
++++ mserv/config.h.in
+@@ -11,6 +11,9 @@
+ #define RETSIGTYPE void
  
- default:
--	(cd mserv; ./configure)
-+	(cd mserv; ./configure --prefix=${PREFIX} --datadir=${PREFIX}/share)
- 	(cd mserv; make DEFS=${DEFS})
--	(cd mservcli; ./configure)
-+	(cd mservcli; ./configure --prefix=${PREFIX} --datadir=${PREFIX}/share)
- 	(cd mservcli; make DEFS=${DEFS})
--	(cd mservutils; ./configure)
-+	(cd mservutils; ./configure --prefix=${PREFIX} --datadir=${PREFIX}/share)
- 	(cd mservutils; make DEFS=${DEFS})
+ /* Define if we have soundcard.h */
++#undef HAVE_SOUNDCARD_H
++
++/* Define if we have sys/soundcard.h */
+ #undef HAVE_SYS_SOUNDCARD_H
  
- install:
+ /* Define if we have strsep() */

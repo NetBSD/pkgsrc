@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2002/06/14 20:04:08 abs Exp $
+
+--- mserv/defconf.c.orig	Thu Jul 13 21:20:42 2000
++++ mserv/defconf.c
+@@ -15,7 +15,7 @@
+ 
+ # Define player invokation methods
+ # mservplay is our special wrapper, the first parameter is a 'nice' level
+-mpg123=/usr/local/bin/mpg123 -b 1024
++mpg123=" PATH_MPG123 " -b 1024
+ freeamp=/usr/local/bin/freeamp -ui mpg123
+ mservplay=/usr/local/bin/mservplay 0 mpg123 -b 1024
+ 

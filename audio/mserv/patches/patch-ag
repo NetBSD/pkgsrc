@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2002/06/14 20:04:08 abs Exp $
+
+--- mserv/mservplay.c.orig	Tue Jan 25 19:59:16 2000
++++ mserv/mservplay.c
+@@ -14,10 +14,6 @@
+ #include "defines.h"
+ #include "misc.h"
+ 
+-#ifndef PATH_MPG123
+-#define PATH_MPG123 "/usr/local/bin/mpg123"
+-#endif
+-
+ int main(int argc, char *argv[])
+ {
+   const pid_t pid = getpid();

@@ -1,13 +1,19 @@
-$NetBSD: patch-aa,v 1.1 2002/02/12 14:22:15 martin Exp $
+$NetBSD: patch-aa,v 1.2 2002/06/14 20:04:07 abs Exp $
 
---- mserv/defines.h.orig	Thu Jul 13 23:35:18 2000
-+++ mserv/defines.h	Tue Feb 12 14:49:02 2002
-@@ -57,7 +57,7 @@
- #define MISCINFOLEN 128
+--- Makefile.orig	Sat Jul 15 18:29:10 2000
++++ Makefile
+@@ -2,11 +2,11 @@
+ BASE = ${shell basename ${PWD}}
  
- /* maximum number of tracks in each album */
--#define TRACKSPERALBUM 200
-+#define TRACKSPERALBUM 1200
+ default:
+-	(cd mserv; ./configure)
++	(cd mserv; ./configure --prefix=${PREFIX} --datadir=${PREFIX}/share)
+ 	(cd mserv; make DEFS=${DEFS})
+-	(cd mservcli; ./configure)
++	(cd mservcli; ./configure --prefix=${PREFIX} --datadir=${PREFIX}/share)
+ 	(cd mservcli; make DEFS=${DEFS})
+-	(cd mservutils; ./configure)
++	(cd mservutils; ./configure --prefix=${PREFIX} --datadir=${PREFIX}/share)
+ 	(cd mservutils; make DEFS=${DEFS})
  
- /* maximum language line length */
- #define LANGLINELEN 1024
+ install:
