@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2003/07/17 21:41:25 grant Exp $
+# $NetBSD: Makefile,v 1.44 2003/12/26 19:56:23 wiz Exp $
 #
 
 DISTNAME=	kdegraphics-1.1.2
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	Graphics programs for the KDE integrated X11 desktop
 
-DEPENDS+=	kdebase-1.1.2nb3:../../x11/kdebase
+DEPENDS+=	kdebase-1.1.2nb4:../../x11/kdebase
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes

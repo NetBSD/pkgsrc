@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/07/17 21:38:51 grant Exp $
+# $NetBSD: Makefile,v 1.20 2003/12/26 19:57:05 wiz Exp $
 
 DISTNAME=	kdetoys-1.1.2
 PKGREVISION=	2
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	Toys for the KDE integrated X11 desktop
 
-DEPENDS+=	kdebase-1.1.2nb3:../../x11/kdebase
+DEPENDS+=	kdebase-1.1.2nb4:../../x11/kdebase
 
 CONFLICTS=	kworldwatch-[0-9]*
 
