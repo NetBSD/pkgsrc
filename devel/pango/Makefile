@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2002/12/24 03:41:10 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2003/01/04 19:59:35 jmmv Exp $
 #
 
 DISTNAME=		pango-1.2.0
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.2/ \
@@ -30,7 +31,10 @@ EGDIR=			${PREFIX}/share/examples/pango
 CONF_FILES=		${EGDIR}/pango.modules ${PKG_SYSCONFDIR}/pango.modules
 CONF_FILES+=		${EGDIR}/pangox.aliases ${PKG_SYSCONFDIR}/pangox.aliases
 
+CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-qt=no
 
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"

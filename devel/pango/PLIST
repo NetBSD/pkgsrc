@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2002/12/24 03:41:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/01/04 19:59:35 jmmv Exp $
 bin/pango-querymodules
 include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-break.h
@@ -43,12 +43,6 @@ lib/libpangoxft-1.0.la
 lib/libpangoxft-1.0.so
 lib/libpangoxft-1.0.so.200
 lib/libpangoxft-1.0.so.200.0
-lib/pango/${PKGVERSION}/modules/pango-hangul-xft.a
-lib/pango/${PKGVERSION}/modules/pango-hangul-xft.la
-lib/pango/${PKGVERSION}/modules/pango-hangul-xft.so
-lib/pango/${PKGVERSION}/modules/pango-indic-xft.a
-lib/pango/${PKGVERSION}/modules/pango-indic-xft.la
-lib/pango/${PKGVERSION}/modules/pango-indic-xft.so
 lib/pango/1.2.0/modules/pango-arabic-ft2.a
 lib/pango/1.2.0/modules/pango-arabic-ft2.la
 lib/pango/1.2.0/modules/pango-arabic-ft2.so
@@ -82,6 +76,9 @@ lib/pango/1.2.0/modules/pango-gurmukhi-x.so
 lib/pango/1.2.0/modules/pango-hangul-x.a
 lib/pango/1.2.0/modules/pango-hangul-x.la
 lib/pango/1.2.0/modules/pango-hangul-x.so
+lib/pango/1.2.0/modules/pango-hangul-xft.a
+lib/pango/1.2.0/modules/pango-hangul-xft.la
+lib/pango/1.2.0/modules/pango-hangul-xft.so
 lib/pango/1.2.0/modules/pango-hebrew-ft2.a
 lib/pango/1.2.0/modules/pango-hebrew-ft2.la
 lib/pango/1.2.0/modules/pango-hebrew-ft2.so
@@ -91,6 +88,9 @@ lib/pango/1.2.0/modules/pango-hebrew-x.so
 lib/pango/1.2.0/modules/pango-hebrew-xft.a
 lib/pango/1.2.0/modules/pango-hebrew-xft.la
 lib/pango/1.2.0/modules/pango-hebrew-xft.so
+lib/pango/1.2.0/modules/pango-indic-xft.a
+lib/pango/1.2.0/modules/pango-indic-xft.la
+lib/pango/1.2.0/modules/pango-indic-xft.so
 lib/pango/1.2.0/modules/pango-myanmar-x.a
 lib/pango/1.2.0/modules/pango-myanmar-x.la
 lib/pango/1.2.0/modules/pango-myanmar-x.so
@@ -107,39 +107,37 @@ lib/pkgconfig/pango.pc
 lib/pkgconfig/pangoft2.pc
 lib/pkgconfig/pangox.pc
 lib/pkgconfig/pangoxft.pc
+share/doc/html/pango/PangoMarkupFormat.html
+share/doc/html/pango/home.png
+share/doc/html/pango/index.html
+share/doc/html/pango/index.sgml
+share/doc/html/pango/layout.gif
+share/doc/html/pango/left.png
+share/doc/html/pango/lowlevel.html
+share/doc/html/pango/pango-Coverage-Maps.html
+share/doc/html/pango/pango-Engines.html
+share/doc/html/pango/pango-Fonts.html
+share/doc/html/pango/pango-FreeType-Fonts-and-Rendering.html
+share/doc/html/pango/pango-Glyph-Storage.html
+share/doc/html/pango/pango-Indic-Engine-Support.html
+share/doc/html/pango/pango-Layout-Objects.html
+share/doc/html/pango/pango-Modules.html
+share/doc/html/pango/pango-OpenType-Font-Handling.html
+share/doc/html/pango/pango-Tab-Stops.html
+share/doc/html/pango/pango-Text-Attributes.html
+share/doc/html/pango/pango-Text-Processing.html
+share/doc/html/pango/pango-Win32-Fonts-and-Rendering.html
+share/doc/html/pango/pango-X-Fonts-and-Rendering.html
+share/doc/html/pango/pango-Xft-Fonts-and-Rendering.html
+share/doc/html/pango/pango.devhelp
+share/doc/html/pango/pango.html
+share/doc/html/pango/rendering.html
+share/doc/html/pango/right.png
+share/doc/html/pango/up.png
 share/examples/pango/pango.modules
 share/examples/pango/pangox.aliases
-share/gtk-doc/html/pango/PangoMarkupFormat.html
-share/gtk-doc/html/pango/home.png
-share/gtk-doc/html/pango/index.html
-share/gtk-doc/html/pango/index.sgml
-share/gtk-doc/html/pango/layout.gif
-share/gtk-doc/html/pango/left.png
-share/gtk-doc/html/pango/lowlevel.html
-share/gtk-doc/html/pango/pango-Coverage-Maps.html
-share/gtk-doc/html/pango/pango-Engines.html
-share/gtk-doc/html/pango/pango-Fonts.html
-share/gtk-doc/html/pango/pango-FreeType-Fonts-and-Rendering.html
-share/gtk-doc/html/pango/pango-Glyph-Storage.html
-share/gtk-doc/html/pango/pango-Indic-Engine-Support.html
-share/gtk-doc/html/pango/pango-Layout-Objects.html
-share/gtk-doc/html/pango/pango-Modules.html
-share/gtk-doc/html/pango/pango-OpenType-Font-Handling.html
-share/gtk-doc/html/pango/pango-Tab-Stops.html
-share/gtk-doc/html/pango/pango-Text-Attributes.html
-share/gtk-doc/html/pango/pango-Text-Processing.html
-share/gtk-doc/html/pango/pango-Win32-Fonts-and-Rendering.html
-share/gtk-doc/html/pango/pango-X-Fonts-and-Rendering.html
-share/gtk-doc/html/pango/pango-Xft-Fonts-and-Rendering.html
-share/gtk-doc/html/pango/pango.devhelp
-share/gtk-doc/html/pango/pango.html
-share/gtk-doc/html/pango/rendering.html
-share/gtk-doc/html/pango/right.png
-share/gtk-doc/html/pango/up.png
-@dirrm share/gtk-doc/html/pango
-@unexec ${RMDIR} %D/share/gtk-doc/html 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gtk-doc 2>/dev/null || ${TRUE}
 @dirrm share/examples/pango
+@dirrm share/doc/html/pango
 @dirrm lib/pango/1.2.0/modules
 @dirrm lib/pango/1.2.0
 @dirrm lib/pango
