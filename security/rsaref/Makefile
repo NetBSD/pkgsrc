@@ -3,7 +3,7 @@
 # Date created:         17 Feb 1998
 # Whom:                 tv@netbsd.org
 #
-# $NetBSD: Makefile,v 1.4 1998/03/23 22:20:47 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/12 22:03:05 tv Exp $
 #
 
 DISTNAME=		rsaref20
@@ -19,6 +19,10 @@ MAINTAINER=		packages@NetBSD.ORG
 RESTRICTED=		"Cryptographic source usable only within the USA"
 MIRROR_DISTFILE=	no
 IS_INTERACTIVE=		yes
+
+# XXX time-dependent directory; can't give a sensible response
+fetch-list:
+	@${DO_NADA}
 
 do-fetch:
 	@if [ "X${USA_RESIDENT}" != XYES ]; then	\
