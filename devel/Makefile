@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.524 2004/08/15 00:46:58 schmonz Exp $
+# $NetBSD: Makefile,v 1.525 2004/08/15 14:47:37 drochner Exp $
 #
 
 COMMENT=	Development utilities
@@ -67,6 +67,7 @@ SUBDIR+=	chmlib
 SUBDIR+=	cmake
 SUBDIR+=	cmdline
 SUBDIR+=	coconut
+SUBDIR+=	codeville
 SUBDIR+=	cook
 SUBDIR+=	cpuflags
 SUBDIR+=	cscope
@@ -250,6 +251,7 @@ SUBDIR+=	lwp
 SUBDIR+=	m4
 SUBDIR+=	maketool
 SUBDIR+=	mk-files
+SUBDIR+=	monotone
 SUBDIR+=	mph
 SUBDIR+=	mrproject
 SUBDIR+=	nana
