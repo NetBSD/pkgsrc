@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/09/29 03:41:15 rh Exp $
+$NetBSD: distinfo,v 1.2 2003/12/05 11:25:58 adam Exp $
 
-SHA1 (mirror.cgi?file=Pantomime-1.0.5.tar.gz) = b8f7d9c312df20676d9fad8bd359eb3b874055b5
-Size (mirror.cgi?file=Pantomime-1.0.5.tar.gz) = 363609 bytes
+SHA1 (Pantomime-1.1.1.tar.gz) = 5ae994af0cfd9ddbc11ff10ab9c21881250277be
+Size (Pantomime-1.1.1.tar.gz) = 401164 bytes
