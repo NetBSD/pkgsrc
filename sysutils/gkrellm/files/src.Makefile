@@ -13,7 +13,7 @@ CFLAGS?=	-O2
 FLAGS = -I.. $(PKG_INCLUDE) $(GTOP_INCLUDE)
 FLAGS+= $(PTHREAD_INC)
 
-ifeq ($(debug),yes)
+ifeq ($(DEBUG),yes)
     FLAGS += -g
 endif
 
@@ -74,7 +74,7 @@ install: gkrellm
 	$(INSTALL_DIR) $(INSTALLDIR)
 	$(INSTALL_DIR) $(INCLUDEDIR)/gkrellm2
 	$(INSTALL_DIR) $(MANDIR)
-	$(INSTALL_BIN) gkrellm $(INSTALLDIR)/$(PACKAGE)
+	$(INSTALL_BIN) $(STRIP) gkrellm $(INSTALLDIR)/$(PACKAGE)
 	$(INSTALL_DATA) $(GKRELLM_INCLUDES) $(INCLUDEDIR)/gkrellm2
 	$(INSTALL_DATA) ../gkrellm.1 $(MANDIR)/$(PACKAGE).1
 
