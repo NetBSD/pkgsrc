@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.10 2003/05/06 17:42:04 jmmv Exp $
+# $NetBSD: genreadme.awk,v 1.11 2003/09/11 03:00:21 dmcmahill Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -225,7 +225,7 @@ END {
 	}
 	close(builddependsfile);
 	
-	vfile = DISTDIR "/vulnerabilities";
+	vfile = DISTDIR "/pkg-vulnerabilities";
 	
 # extract date for vulnerabilities file
 	cmd = "ls -l " vfile;
