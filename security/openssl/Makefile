@@ -1,9 +1,14 @@
-# $NetBSD: Makefile,v 1.89 2004/03/26 02:22:38 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2004/03/26 05:41:10 jlam Exp $
 
 DISTNAME=		openssl-0.9.6m
 SVR4_PKGNAME=		ossl
 CATEGORIES=		security
-MASTER_SITES=		ftp://ftp.openssl.org/source/
+MASTER_SITES=		http://mirrors.isc.org/pub/openssl/source/ \
+			http://www.mirrors.wiretapped.net/security/cryptography/libraries/tls/openssl/ \
+			http://sunsite.rediris.es/pub/mirror/OpenSSL/ \
+			http://ftp.wayne.edu/pub/openssl/source/ \
+			http://www.binarycode.org/openssl/source/ \
+			ftp://ftp.openssl.org/source/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.openssl.org/
