@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2534 2003/06/19 03:12:38 atatat Exp $
+$NetBSD: CHANGES,v 1.2535 2003/06/19 07:26:09 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2492,3 +2492,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated subversion-python to 0.24.1 [epg 2003-06-18]
 	Updated xpdf to 2.02pl1 [simonb 2003-06-18]
 	Updated lsof to 4.68 [atatat 2003-06-19]
+	Updated acroread5 to 5.07 [tron 2003-06-19]
