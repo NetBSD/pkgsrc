@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.314 2003/02/24 20:48:18 jmmv Exp $
+$NetBSD: TODO,v 1.315 2003/02/24 20:56:28 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -113,7 +113,6 @@ Suggested package updates
 	o fox-1.0.31
 	o frozen-bubble-1.0.0
 	o fsviewer-0.2.5
-	o g-wrap-1.3.4 [pkg/20270]
 	o gauche-0.6.7 [kei]
 	o gcc3-3.2.2 [pkg/20308|jlam]
 	o gcvs-1.0
