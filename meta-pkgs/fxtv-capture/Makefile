@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/26 11:44:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/26 12:54:36 jmmv Exp $
 #
 
 DISTNAME=	fxtv-capture-1.0
@@ -13,7 +13,7 @@ DEPENDS+=	sox>=12.17.1:../../audio/sox
 DEPENDS+=	mpegaudio>=3.9:../../audio/mpegaudio
 DEPENDS+=	fxtv>=1.03nb1:../../multimedia/fxtv
 DEPENDS+=	mpeg_encode-*:../../graphics/mpeg_encode
-DEPENDS+=	mplex>=1.1:../../graphics/mplex
+DEPENDS+=	mplex>=1.1:../../multimedia/mplex
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
