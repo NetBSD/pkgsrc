@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
+$NetBSD: patch-ad,v 1.2 2000/04/16 03:59:32 mycroft Exp $
 
 --- main.c.orig	Tue Jan 25 19:11:56 2000
-+++ main.c	Sat Apr 15 22:49:36 2000
++++ main.c	Sat Apr 15 23:51:57 2000
 @@ -115,8 +115,6 @@
  
      menus_active = FALSE;
@@ -11,16 +11,42 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
      ncurses_init();
      set_ncurses_color_schemes();
      create_windows();
-@@ -131,7 +129,7 @@
-     display_ch_window(active_channel);
-     display_track_path(active_channel,sim_play,ch1_current,ch2_current);
-     display_track_status();
+@@ -125,19 +123,9 @@
+     change_channel(&ch1,mp3Path1);
+     change_channel(&ch2,mp3Path2);
+ 
+-
+     /*display windows*/
+-    display_bar(num_menus, menu_name);
+-    display_ch_window(active_channel);
+-    display_track_path(active_channel,sim_play,ch1_current,ch2_current);
+-    display_track_status();
 -    adjust_display(get_code());
-+    adjust_display(getch());
-     display_listdata();
-     display_player_status(sim_play,playmode);
-     display_volume(ch1_volume_pos,ch2_volume_pos,active_bar);
-@@ -259,9 +257,9 @@
+-    display_listdata();
+-    display_player_status(sim_play,playmode);
+-    display_volume(ch1_volume_pos,ch2_volume_pos,active_bar);
+-    display_speed(ch1_speed_pos,ch2_speed_pos,active_bar);
+-    display_fader(fader_pos);
+-    
++    refresh_windows();
++    display_bar(num_menus,menu_name);
+ 
+     while(TRUE)
+     {
+@@ -149,9 +137,9 @@
+        if((ch1.end==1)||(ch2.end==1)) display_track_status();
+        if(rcount==5)
+        {
+-           refresh_windows();
+-           display_bar(num_menus, menu_name);
+-           rcount=0;
++            refresh_windows();
++	    display_bar(num_menus,menu_name);
++            rcount=0;
+        }
+ 
+        if(playmode==1) /*loop play*/
+@@ -259,9 +247,9 @@
          {
              {
                  display_info(inactive_info);
@@ -32,7 +58,7 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
                      vpos=0;
                      hpos=(hpos>0) ? --hpos: num_menus-1;
                      display_bar(num_menus, menu_name);
-@@ -270,7 +268,7 @@
+@@ -270,7 +258,7 @@
                      display_menu(menu_item,num_items);
                      break;
  
@@ -41,7 +67,7 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
                      vpos=0;
                      hpos=(hpos<num_menus-1) ? ++hpos: 0;
                      display_bar(num_menus, menu_name);
-@@ -279,28 +277,27 @@
+@@ -279,28 +267,27 @@
                      display_menu(menu_item,num_items);
                      break;
  
@@ -76,7 +102,7 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
                      vpos=0;
                      menus_active=FALSE;
                      display_ch_window(active_channel);
-@@ -318,42 +315,41 @@
+@@ -318,42 +305,41 @@
      	else
          {
              display_info(inactive_info);
@@ -127,7 +153,7 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
                  }
                 display_listdata();
                 display_track_path(active_channel,sim_play,ch1_last,ch2_last);
-@@ -472,7 +468,7 @@
+@@ -472,7 +458,7 @@
                  //printf("------- %i ----------\n",playmode);
                  break;
  
@@ -136,7 +162,7 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
                  if (active_bar==VOLBAR)
                  {
                      ch1_volume_pos--;
-@@ -507,7 +503,7 @@
+@@ -507,7 +493,7 @@
        
                  break;
  
@@ -145,7 +171,7 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
  
                  if (active_bar==VOLBAR)
                  {
-@@ -542,7 +538,7 @@
+@@ -542,7 +528,7 @@
                  }
              break;
  
@@ -154,7 +180,7 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
                  if (active_bar==VOLBAR)
                  {
                      ch2_volume_pos--;
-@@ -574,7 +570,7 @@
+@@ -574,7 +560,7 @@
                  }
                  break;
  
@@ -163,7 +189,7 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
                  if (active_bar==VOLBAR)
                  {
                      ch2_volume_pos++;
-@@ -605,7 +601,7 @@
+@@ -605,7 +591,7 @@
                  }
                  break;
  
@@ -172,7 +198,7 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
                  fader_pos-- ;
                  if(fader_pos<=-(fader_bars/2))fader_pos=-(fader_bars/2);
                  if(fader_pos == 0)
-@@ -620,7 +616,7 @@
+@@ -620,7 +606,7 @@
                  display_fader(fader_pos);
                  break;
  
@@ -181,7 +207,7 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
                  fader_pos++;
                  if(fader_pos>=(fader_bars/2))fader_pos=(fader_bars/2) ;
                  if(fader_pos == 0)
-@@ -660,10 +656,10 @@
+@@ -660,10 +646,10 @@
                  display_fader(fader_pos);
                  break;
  
@@ -196,7 +222,20 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
                  adjust_display(extcode);
                  display_ch_window(active_channel);
                  display_listdata();
-@@ -792,7 +788,7 @@
+@@ -671,9 +657,10 @@
+ 
+             case'r':  /*redraws screen*/
+             case'R':
++		clearok(stdscr,TRUE);
+                 refresh_windows();
+-                display_bar(num_menus, menu_name);
+-                break ;
++		display_bar(num_menus,menu_name);
++                break;
+ 
+             default:
+                 for(j=0; j<num_menus; j++)
+@@ -792,7 +779,7 @@
           a circular linked list*/
      switch(key)
      {
@@ -205,7 +244,7 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
              if((counter >= height-1)&&(current->fLink!=NULL))
                 {
                     top=top->fLink; current=current->fLink;
-@@ -800,7 +796,7 @@
+@@ -800,7 +787,7 @@
              else  if(current->fLink!=NULL) current=current->fLink;
              break;
  
@@ -214,7 +253,7 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
              if((top->bLink!=NULL)&&(top==current))
              {
                  top=top->bLink; current=current->bLink;
-@@ -809,14 +805,14 @@
+@@ -809,14 +796,14 @@
                  if(current->bLink!=NULL) current=current->bLink ;
              break;
  
@@ -231,7 +270,76 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
              while((index < height-1)&(top->bLink!=NULL))
                 {
                     top=top->bLink; current=current->bLink; index++;
-@@ -967,24 +963,13 @@
+@@ -884,11 +871,9 @@
+         height1,width1;
+     node *top, *current, *temp;
+ 
+-    
+     if (active_channel==CHANNEL_1)
+     {
+         top=ch1_Head; current=ch1_current;
+-        
+     }
+     else if(active_channel==CHANNEL_2)
+     {
+@@ -904,14 +889,11 @@
+     while(temp!=bHead){tracktotal++;temp=temp->fLink;}
+     
+     /* display  current track number and total tracks */
+-    /*wmove(chWin,height1-1,width1-15);*/
+     mvwprintw(chWin,height1-1,width1-15,"[%5i][%5i]",tracknum,tracktotal);
+ 
+-    touchwin(chWin);
+     wrefresh(chWin);
+ 
+     getmaxyx(subWin,height,width);
+-    wbkgd(subWin,COLOR_PAIR(9)|A_BOLD);
+     
+     while (top!=NULL)
+     {
+@@ -921,29 +903,34 @@
+          the characters after the last forward slash(/) */
+         songname=strstr(strrchr(fpath,'/'),"/")+1;
+         if(current==top)
++	{
+             if(active_channel==CHANNEL_1)
+             {
+-               wbkgdset(subWin,COLOR_PAIR(7)|A_BOLD);
+                wattrset(subWin,COLOR_PAIR(7)|A_BOLD);
++               wbkgdset(subWin,COLOR_PAIR(7)|A_BOLD);
+             }
+             else if(active_channel==CHANNEL_2)
+             {
+-               wbkgdset(subWin,COLOR_PAIR(8)|A_BOLD);
+                wattrset(subWin,COLOR_PAIR(8)|A_BOLD);
++               wbkgdset(subWin,COLOR_PAIR(8)|A_BOLD);
+             }
++	}
++	else
++	{
++            wattrset(subWin,COLOR_PAIR(9));
++            wbkgdset(subWin,COLOR_PAIR(9));
++	}
+ 
+         tempname=strdup(songname);
+         /*shorten song so that it fits in channel/display window*/
+         mvwaddstr(subWin,index,0,tempname); wclrtoeol(subWin);
+         mvwprintw(subWin,index,width-6,"*%5i",playcount);
+-
+-        touchwin(subWin);
+-        wrefresh(subWin);
+         
+-        wbkgdset(subWin,COLOR_PAIR(9)|A_BOLD);
+-        index++; if(index==height)return;
++        index++; if(index==height)break;
+         top=top->fLink;
+     }
++
++    wrefresh(subWin);
+ } /*display_listdata */
+ 
+ void menu_action(char *item_name)
+@@ -967,21 +954,10 @@
  void exit_prog(void)
  {
      reset_audio();
@@ -253,8 +361,4 @@ $NetBSD: patch-ad,v 1.1 2000/04/16 02:57:22 mycroft Exp $
 -}  /* get_code */
  void refresh_windows(void)
  {
--    erase();refresh();
-+    clearok(stdscr,TRUE);erase();refresh();
-     display_ch_window(active_channel);
-     display_listdata();
-     display_player_status(sim_play,playmode);
+     erase();refresh();
