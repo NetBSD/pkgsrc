@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/07/01 14:01:56 taca Exp $
+$NetBSD: patch-aa,v 1.2 2004/03/04 17:29:51 taca Exp $
 
---- Makefile.in.orig	Wed Jun 20 15:52:31 2001
+--- Makefile.in.orig	2001-10-10 11:39:12.000000000 +0900
 +++ Makefile.in
-@@ -37,7 +37,7 @@
+@@ -28,7 +28,7 @@ LD = @LD@
+ RANLIB = @RANLIB@
+ RUBY = $(RUBY_INSTALL_NAME)
+ 
+-CFLAGS = @CFLAGS@ -I. -I$(hdrdir)
++CFLAGS = -I. -I$(hdrdir) @CFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ XLDFLAGS = @XLDFLAGS@
+@@ -37,7 +37,7 @@ LDSHARED = @LDSHARED@
  EXT_DLDFLAGS = @EXT_DLDFLAGS@
  INSTALL_PROGRAM = $(RUBY) -r ftools -e 'File.install ARGV[0], ARGV[1], 0755, true'
  INSTALL_DLLIB = $(RUBY) -r ftools -e 'File.install ARGV[0], ARGV[1], 0555, true'
