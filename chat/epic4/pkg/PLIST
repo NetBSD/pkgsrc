@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2001/03/26 15:39:30 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/04/03 06:06:50 zuntum Exp $
 bin/epic
-bin/epic-EPIC4-0.10.1
+bin/epic-EPIC4-1.0
 libexec/wserv
 man/man1/epic.1
 share/epic/script/2.8script
