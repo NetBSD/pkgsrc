@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.737 2001/05/17 14:51:41 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.738 2001/05/17 14:52:33 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -603,8 +603,8 @@ AWK?=		/usr/bin/awk
 BASENAME?=	/bin/basename
 CAT?=		/bin/cat
 CHMOD?=		/bin/chmod
-CHOWN?=		/usr/sbin/chown
-CHGRP?=		/usr/bin/chgrp
+CHOWN?=		/bin/chown
+CHGRP?=		/bin/chgrp
 CP?=		/bin/cp
 CUT?=		/bin/cut
 DC?=		/usr/bin/dc
