@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.5 2000/11/25 14:21:24 rh Exp $
+
+--- plugins/gb/excel-gb-range.c.orig	Sat Nov 18 12:08:03 2000
++++ plugins/gb/excel-gb-range.c
+@@ -15,7 +15,6 @@
+ #include "rendered-value.h"
+ #include "parse-util.h"
+ #include "commands.h"
+-#include "command-context-corba.h"
+ #include "selection.h"
+ 
+ #include <gbrun/libgbrun.h>

@@ -1,22 +1,12 @@
-$NetBSD: patch-aa,v 1.9 2000/10/17 17:24:20 rh Exp $
+$NetBSD: patch-aa,v 1.10 2000/11/25 14:21:24 rh Exp $
 
---- configure.orig	Tue Oct 10 17:27:58 2000
-+++ configure
-@@ -3229,7 +3229,7 @@
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-   ac_save_LIBS="$LIBS"
--LIBS="-lxml `$GNOME_CONFIG --libs xml` $LIBS"
-+LIBS="`xml-config --libs` $LIBS"
- cat > conftest.$ac_ext <<EOF
- #line 3235 "configure"
- #include "confdefs.h"
-@@ -3259,7 +3259,7 @@
-   echo "$ac_t""yes" 1>&6
-   
- 		
--		GNOME_XML_LIB=`$GNOME_CONFIG --libs xml`
-+		GNOME_XML_LIB=-lxml
- 	
- else
-   echo "$ac_t""no" 1>&6
+--- plugins/gb/excel-gb-interior.c.orig	Sat Nov 18 12:07:53 2000
++++ plugins/gb/excel-gb-interior.c
+@@ -14,7 +14,6 @@
+ #include "cell.h"
+ #include "rendered-value.h"
+ #include "parse-util.h"
+-#include "command-context-corba.h"
+ #include "selection.h"
+ #include "commands.h"
+ 
