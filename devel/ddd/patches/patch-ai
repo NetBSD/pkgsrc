@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2004/06/04 11:19:32 shannonjr Exp $
+
+--- ddd/Command.C.orig	2003-10-07 05:58:23.000000000 -0600
++++ ddd/Command.C
+@@ -191,6 +191,8 @@ void translate_command(string& command)
+ 
+     case GDB:
+ 	break;
++    default:
++        break;
+     }
+ 
+     // When recording, realize certain commands as auto commands.
