@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.13 1999/10/30 16:36:44 hubertf Exp $
+# $NetBSD: pkglint.pl,v 1.14 1999/11/23 20:34:27 hubertf Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -172,11 +172,27 @@ foreach $i (<$portdir/patches/patch-*>) {
 	push(@checker, $i);
 	$checker{$i} = 'checkpatch';
 }
+{
+	# Make sure there's a files/patch-sum if there are patches
+	$patches=0;
+	patch:
+    	    foreach $i (<$portdir/patches/patch-*>) {
+		if ( -T "$i" ) { 
+			$patches=1;
+			last patch;
+		}
+	}
+	if ($patches && ! -f "$portdir/files/patch-sum" ) {
+		&perror("WARN: no $portdir/files/patch-sum file. Please run 'make makepatchsum'.");
+	}
+}
 if (-e <$portdir/files/md5>) {
 	$i = <files/md5>;
 	next if (defined $checker{$i});
 	push(@checker, $i);
 	$checker{$i} = 'checkmd5';
+} else {
+	&perror("WARN: no $portdir/files/md5 file. Please run 'make makesum'.");
 }
 foreach $i (@checker) {
 	print "OK: checking $i.\n";
@@ -953,6 +969,12 @@ LIB_DEPENDS BUILD_DEPENDS RUN_DEPENDS FETCH_DEPENDS DEPENDS DEPENDS_TARGET
 EOF
         $warn_lib_depends_backslashes=0
             if $osname eq "NetBSD";
+        if ($tmp =~ /(RUN_DEPENDS).*=/) {
+		&perror("WARN: $1 is deprecated, please use DEPENDS.");
+	}
+        if ($tmp =~ /(LIB_DEPENDS).*=/) {
+		&perror("WARN: $1 is deprecated, please use DEPENDS.");
+	}
 	if ($tmp =~ /(LIB_|BUILD_|RUN_|FETCH_)?DEPENDS/) {
 		&checkearlier($tmp, @varnames);
 
