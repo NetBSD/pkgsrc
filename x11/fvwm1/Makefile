@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/11/08 20:48:22 tron Exp $
+# $NetBSD: Makefile,v 1.22 2000/08/18 22:46:52 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -14,7 +14,8 @@ DEPENDS=	xpmroot-2.*:../../x11/xpmroot
 
 CONFLICTS=	fvwm-1.*
 
-MIRROR_DISTFILE= no
+NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
+
 USE_IMAKE=	yes
 # drop -a because we have no `depends' target
 XMKMF=		${SH} -c "xmkmf && ${MAKE} Makefiles"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/12/28 03:59:01 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2000/08/18 22:46:29 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp 
 #
 
@@ -24,7 +24,8 @@ DISTFILES+=	zcrypt28.zip
 EXTRACT_ONLY=	zip23.tar.gz
 BUILD_DEPENDS=	unzip:../../archivers/unzip
 RESTRICTED=	crypto
-MIRROR_DISTFILE=no
+NO_SRC_ON_FTP=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 
 post-extract:
 	@cd ${WRKSRC} && unzip -qo ${DISTDIR}/zcrypt28.zip

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/07/18 23:07:47 itohy Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/18 22:46:35 hubertf Exp $
 
 DISTNAME=	pstoedit_3_20
 PKGNAME=	pstoedit-3.20
@@ -14,7 +14,9 @@ DEPENDS+=	plotutils-2.3nb1:../../graphics/plotutils
 # Any ghostscript pkg will probably do, if not a font pkg.
 DEPENDS+=	ghostscript-[^f]*:../../print/ghostscript
 
-NO_CDROM?=	"The author writes: If you include this program on a CDROM, please send me a copy of the CD, or if it goes with a book, of the book."
+RESTRICTED?=	"The author writes: If you include this program on a CDROM, please send me a copy of the CD, or if it goes with a book, of the book."
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/pstoedit_3.20/src
 

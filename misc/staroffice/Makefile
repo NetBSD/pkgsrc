@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/07/14 19:01:31 thorpej Exp $
+# $NetBSD: Makefile,v 1.10 2000/08/18 22:46:44 hubertf Exp $
 #
 
 DISTNAME=		so51a_lnx_${LANGNO}
@@ -15,8 +15,11 @@ CONFLICTS=		staroffice-*
 DEPENDS+=		unzip-*:../../archivers/unzip
 DEPENDS+=		suse_linux>=6.1:../../emulators/suse_linux
 
-NO_CDROM=		"Redistribution not permitted"
-MIRROR_DISTFILE=	NO
+RESTRICTED=		"Redistribution not permitted"
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 ONLY_FOR_PLATFORM=	NetBSD-1.4?-i386 NetBSD-1.4Z[A-Z]-i386 \
 			NetBSD-1.5_ALPHA-i386 NetBSD-1.5?-i386
