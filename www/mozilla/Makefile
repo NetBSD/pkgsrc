@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2001/10/26 14:35:12 agc Exp $
+# $NetBSD: Makefile,v 1.75 2001/10/26 15:27:56 taya Exp $
 
 MOZ_VER=	0.9.5
-NB_VER=
+NB_VER=		nb1
 DISTNAME=	mozilla-source-${MOZ_VER}
 PKGNAME=	mozilla-${MOZ_VER}${NB_VER}
 WRKSRC=		${WRKDIR}/mozilla
