@@ -1,0 +1,77 @@
+diff -crP -x *.ps elk-3.0.orig/src/dump-vanilla.c elk-3.0/src/dump-vanilla.c
+*** elk-3.0.orig/src/dump-vanilla.c.orig	Thu Jun 29 13:55:51 1995
+--- elk-3.0/src/dump-vanilla.c	Thu Sep  7 15:00:35 1995
+***************
+*** 12,17 ****
+--- 12,21 ----
+  
+  extern void *sbrk();
+  
++ #if defined(__FreeBSD__)
++ extern etext;
++ #endif
++ 
+  #if defined(hp9000s300) || defined(__hp9000s300) || defined(__hp9000s300__)
+  static int getpagesize () {
+      return EXEC_PAGESIZE;
+***************
+*** 113,125 ****
+      close (afd);
+  #if defined(__bsdi__)
+      data_start = N_DATADDR(hdr);
+  #else
+      data_start = hdr.a_text;
+  #if defined(sun) || defined(__sun__)
+      data_start += pagemask+1;
+  #endif
+      data_start = (data_start + SEG_SIZ-1) & ~(SEG_SIZ-1);
+- #endif
+      data_end = (unsigned)sbrk (0);
+  #if !defined(__bsdi__)
+      data_end = (data_end + pagemask) & ~pagemask;
+--- 117,131 ----
+      close (afd);
+  #if defined(__bsdi__)
+      data_start = N_DATADDR(hdr);
++ #elif defined (__FreeBSD__)
++     data_start = (int) &etext;
+  #else
+      data_start = hdr.a_text;
++ #endif
+  #if defined(sun) || defined(__sun__)
+      data_start += pagemask+1;
+  #endif
+      data_start = (data_start + SEG_SIZ-1) & ~(SEG_SIZ-1);
+      data_end = (unsigned)sbrk (0);
+  #if !defined(__bsdi__)
+      data_end = (data_end + pagemask) & ~pagemask;
+diff -crP -x *.ps elk-3.0.orig/src/print.c elk-3.0/src/print.c
+*** elk-3.0.orig/src/print.c.orig	Mon Aug  7 09:28:42 1995
+--- elk-3.0/src/print.c	Thu Sep  7 14:58:28 1995
+***************
+*** 6,11 ****
+--- 6,12 ----
+  #include <errno.h>
+  #include <ctype.h>
+  #include <varargs.h>
++ #include <sys/param.h>
+  
+  #ifdef FLUSH_TIOCFLUSH
+  #  include <sys/ioctl.h>
+***************
+*** 555,561 ****
+      register c;
+      char buf[256];
+      extern sys_nerr;
+! #ifndef __bsdi__
+      extern char *sys_errlist[];
+  #endif
+      GC_Node;
+--- 556,562 ----
+      register c;
+      char buf[256];
+      extern sys_nerr;
+! #if !(defined(BSD) && (BSD >= 199306))
+      extern char *sys_errlist[];
+  #endif
+      GC_Node;

@@ -1,0 +1,76 @@
+diff -crP -x *.ps elk-3.0.orig/Makefile elk-3.0/Makefile
+*** elk-3.0.orig/Makefile	Tue Feb  8 13:11:23 1994
+--- elk-3.0/Makefile	Wed Mar  8 19:11:18 1995
+***************
+*** 16,24 ****
+  	 lib/unix\
+  	 lib/xlib\
+  	 lib/xt\
+! 	 lib/xaw\
+! 	 lib/xm\
+! 	 lib/xm/xt
+  
+  # ----------------------------------------------------------------------
+  
+--- 16,24 ----
+  	 lib/unix\
+  	 lib/xlib\
+  	 lib/xt\
+! 	 lib/xaw
+! #	 lib/xm\
+! #	 lib/xm/xt
+  
+  # ----------------------------------------------------------------------
+  
+diff -crP -x *.ps elk-3.0.orig/doc/man/elk.1.orig elk-3.0/doc/man/elk.1
+*** elk-3.0/doc/man/elk.1.orig	Thu Apr  6 14:40:07 1995
+--- elk-3.0/doc/man/elk.1	Thu Apr  6 14:41:02 1995
+***************
+*** 2,10 ****
+  .TH ELK 1 "15 January 1991"
+  .UC 4
+  .SH NAME
+! elk, scheme \- extensible Scheme interpreter
+  .SH SYNOPSIS
+! .B scheme
+  [
+  .B \-l \f2file\fP
+  ] [
+--- 2,10 ----
+  .TH ELK 1 "15 January 1991"
+  .UC 4
+  .SH NAME
+! elk \- extensible Scheme interpreter
+  .SH SYNOPSIS
+! .B elk
+  [
+  .B \-l \f2file\fP
+  ] [
+***************
+*** 20,27 ****
+  ] [[
+  .B \-\^\-
+  ] \f2args\fP]
+- .LP
+- .BR elk .\|.\|.
+  .SH DESCRIPTION
+  .I Elk
+  (Extension Language Kit) is a Scheme interpreter intended
+--- 20,25 ----
+***************
+*** 32,38 ****
+  is linked with the application it serves, but a stand-alone version
+  of the Scheme interpreter is installed as well (usually under
+  the name
+! .BR scheme ).
+  This interpreter, together with the standard Scheme toplevel,
+  .I Elk
+  can be used as an ordinary, stand-alone implementation of the
+--- 30,36 ----
+  is linked with the application it serves, but a stand-alone version
+  of the Scheme interpreter is installed as well (usually under
+  the name
+! .BR elk ).
+  This interpreter, together with the standard Scheme toplevel,
+  .I Elk
+  can be used as an ordinary, stand-alone implementation of the

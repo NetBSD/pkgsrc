@@ -1,0 +1,15 @@
+*** elk-3.0.orig/src/load-dl.c	Sun Dec 17 15:45:40 1995
+--- elk-3.0/src/load-dl.c	Sun Dec 17 15:46:22 1995
+***************
+*** 4,9 ****
+--- 4,13 ----
+  extern char *strrchr();
+  extern char *getenv();
+  
++ #ifndef RTLD_NOW
++ #define RTLD_NOW 1
++ #endif
++ 
+  Dlopen_File (fn) char *fn; {
+      void *handle;
+      SYM *sp;
