@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1140 2003/02/15 00:26:58 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1141 2003/02/16 04:27:26 salo Exp $
 #
 # This file is in the public domain.
 #
@@ -713,6 +713,22 @@ MASTER_SITE_GNU+=	\
 	ftp://ftp.gnu.org/pub/gnu/ \
 	ftp://ftp.gwdg.de/pub/gnu/ \
 	ftp://ftp.progsoc.uts.edu.au/pub/gnu/
+	ftp://gatekeeper.dec.com/pub/GNU/ \
+	ftp://ftp.uu.net/archive/systems/gnu/ \
+	ftp://ftp.de.uu.net/pub/gnu/ \
+	ftp://ftp.funet.fi/pub/gnu/prep/ \
+	ftp://ftp.leo.org/pub/comp/os/unix/gnu/ \
+	ftp://ftp.digex.net/pub/gnu/ \
+	ftp://ftp.wustl.edu/mirrors/gnu/ \
+	ftp://ftp.kddlabs.co.jp/pub/gnu/ \
+	ftp://ftp.dti.ad.jp/pub/GNU/ \
+	ftp://ftp.mirror.ac.uk/sites/ftp.gnu.org/gnu/ \
+	ftp://sunsite.org.uk/Mirrors/ftp.gnu.org/pub/gnu/ \
+	ftp://ftp.informatik.hu-berlin.de/pub/gnu/ \
+	ftp://ftp.rediris.es/mirror/gnu/ \
+	ftp://ftp.lip6.fr/pub/gnu/ \
+	ftp://ftp.tuwien.ac.at/linux/gnu/gnusrc/ \
+	ftp://ftp.chg.ru/pub/gnu/
 
 MASTER_SITE_GNUSTEP+=	\
 	ftp://ftp.gnustep.org/pub/gnustep/ \
@@ -761,11 +777,37 @@ MASTER_SITE_SUNSITE+=	\
 	ftp://sunsite.unc.edu/pub/Linux/ \
 	ftp://ftp.infomagic.com/pub/mirrors/linux/sunsite/ \
 	ftp://ftp.informatik.rwth-aachen.de/pub/comp/Linux/sunsite.unc.edu/
+	ftp://ftp.chg.ru/pub/Linux/sunsite/ \
+	ftp://ftp.is.co.za/linux/sunsite/ \
+	ftp://ftp.kddlabs.co.jp/Linux/metalab.unc.edu/ \
+	ftp://ftp.kobe-u.ac.jp/pub/Linux/metalab.unc.edu/ \
+	ftp://ftp.cse.cuhk.edu.hk/pub4/Linux/ \
+	ftp://ftp.icm.edu.pl/pub/Linux/sunsite/ \
+	ftp://ftp.nvg.ntnu.no/pub/mirrors/metalab.unc.edu/ \
+	ftp://ftp.uvsq.fr/pub5/linux/sunsite/ \
+	ftp://ftp.lip6.fr/pub/linux/sunsite/ \
+	ftp://ftp.informatik.rwth-aachen.de/pub/comp/Linux/sunsite.unc.edu/ \
+	ftp://ftp.uni-stuttgart.de/pub/mirror/sunsite.unc.edu/pub/Linux/ \
+	ftp://ftp.uni-magdeburg.de/pub/mirror/linux/ftp.metalab.unc.edu/ \
+	ftp://ftp.uni-jena.de/pub/linux/MIRROR.sunsite/ \
+	ftp://ftp.fu-berlin.de/unix/linux/mirrors/sunsite.unc.edu/ \
+	ftp://ftp.cs.tu-berlin.de/pub/linux/Mirrors/sunsite.unc.edu/ \
+	ftp://sunsite.cnlab-switch.ch/mirror/linux/sunsite/ \
+	ftp://ftp.tuwien.ac.at/pub/linux/ibiblio/ \
+	ftp://ftp.unicamp.br/pub/systems/Linux/ 
 
 MASTER_SITE_GNOME+=	\
 	ftp://ftp.gnome.org/pub/GNOME/ \
 	ftp://ftp.sunet.se/pub/X11/GNOME/ \
 	ftp://ftp.tuwien.ac.at/hci/GNOME/
+	ftp://ftp.cse.buffalo.edu/pub/Gnome/ \
+	ftp://ftp.tuwien.ac.at/linux/gnome.org/ \
+	ftp://ftp.dti.ad.jp/pub/X/gnome/ \
+	ftp://ftp.kddlabs.co.jp/pub/GNOME/ \
+	ftp://ftp.chg.ru/pub/X11/gnome/ \
+	ftp://ftp.dataplus.se/pub/linux/gnome/ \
+	ftp://ftp.dit.upm.es/linux/gnome/ \
+	ftp://ftp.mirror.ac.uk/sites/ftp.gnome.org/pub/GNOME/ 
 
 MASTER_SITE_SOURCEFORGE+=	\
 	http://belnet.dl.sourceforge.net/sourceforge/ \
@@ -786,10 +828,20 @@ MASTER_SITE_SUSE+=	\
 	ftp://sunsite.cnlab-switch.ch/mirror/SuSE/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
 	ftp://ftp.mirror.ac.uk/sites/ftp.suse.com/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
 	ftp://mirror.mcs.anl.gov/pub/ftp.suse.com/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ 
-			
+
 MASTER_SITE_MOZILLA+=	\
 	ftp://ftp.mozilla.org/pub/mozilla/releases/ \
 	ftp://ftp.fu-berlin.de/pub/unix/network/www/mozilla/releases/
+	ftp://sunsite.utk.edu/pub/netscape-source/ \
+	ftp://ftp.informatik.uni-bonn.de/pub/www/mozilla/ \
+	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.mozilla.org/pub/ \
+	ftp://sunsite.auc.dk/pub/mozilla/ \
+	ftp://ftp.funet.fi/pub/mirrors/ftp.mozilla.org/pub/ \
+	ftp://ftp.sunsite.kth.se/archive/www/ftp.mozilla.org/ \
+	ftp://ftp2.sinica.edu.tw/pub3/www/mozilla/ \
+	ftp://ftp.is.co.za/networking/info-service/www/clients/netscape/mozilla/ \
+	ftp://ftp.rediris.es/mirror/mozilla/ \
+	ftp://ftp.chg.ru/pub/WWW/mozilla/ 
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
