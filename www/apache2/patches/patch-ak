@@ -1,0 +1,135 @@
+$NetBSD: patch-ak,v 1.1 2002/04/13 21:35:54 jlam Exp $
+
+--- docs/conf/httpd-std.conf.in.orig	Thu Apr  4 04:15:43 2002
++++ docs/conf/httpd-std.conf.in
+@@ -24,9 +24,9 @@
+ # Configuration and logfile names: If the filenames you specify for many
+ # of the server's control files begin with "/" (or "drive:/" for Win32), the
+ # server will use that explicit path.  If the filenames do *not* begin
+-# with "/", the value of ServerRoot is prepended -- so "@rel_logfiledir@/foo.log"
++# with "/", the value of ServerRoot is prepended -- so "logs/foo.log"
+ # with ServerRoot set to "@@ServerRoot@@" will be interpreted by the
+-# server as "@@ServerRoot@@/@rel_logfiledir@/foo.log".
++# server as "@@ServerRoot@@/logs/foo.log".
+ #
+ 
+ ### Section 1: Global Environment
+@@ -54,7 +54,7 @@
+ #
+ <IfModule !mpm_winnt.c>
+ <IfModule !mpm_netware.c>
+-#LockFile @rel_logfiledir@/accept.lock
++#LockFile @rel_runtimedir@/accept.lock
+ </IfModule>
+ </IfModule>
+ 
+@@ -68,7 +68,7 @@
+ #
+ <IfModule !mpm_netware.c>
+ <IfModule !perchild.c>
+-#ScoreBoardFile @rel_logfiledir@/apache_runtime_status
++#ScoreBoardFile @rel_runtimedir@/apache_runtime_status
+ </IfModule>
+ </IfModule>
+ 
+@@ -78,7 +78,7 @@
+ # identification number when it starts.
+ #
+ <IfModule !mpm_netware.c>
+-PidFile @rel_logfiledir@/httpd.pid
++PidFile @rel_runtimedir@/httpd.pid
+ </IfModule>
+ 
+ #
+@@ -290,7 +290,7 @@
+ # documents. By default, all requests are taken from this directory, but
+ # symbolic links and aliases may be used to point to other locations.
+ #
+-DocumentRoot "@@ServerRoot@@/@rel_htdocsdir@"
++DocumentRoot "@exp_htdocsdir@"
+ 
+ #
+ # Each directory to which Apache has access can be configured with respect
+@@ -315,7 +315,7 @@
+ #
+ # This should be changed to whatever you set DocumentRoot to.
+ #
+-<Directory "@@ServerRoot@@/@rel_htdocsdir@">
++<Directory "@exp_htdocsdir@">
+ 
+ #
+ # Possible values for the Options directive are "None", "All",
+@@ -499,9 +499,9 @@
+ # We include the /icons/ alias for FancyIndexed directory listings.  If you
+ # do not use FancyIndexing, you may comment this out.
+ #
+-Alias /icons/ "@@ServerRoot@@/@rel_iconsdir@/"
++Alias /icons/ "@exp_iconsdir@/"
+ 
+-<Directory "@@ServerRoot@@/@rel_iconsdir@">
++<Directory "@exp_iconsdir@">
+     Options Indexes MultiViews
+     AllowOverride None
+     Order allow,deny
+@@ -513,9 +513,9 @@
+ # the manual, even if you choose to move your DocumentRoot.  You may comment
+ # this out if you do not care for the documentation.
+ #
+-Alias /manual "@@ServerRoot@@/@rel_manualdir@"
++Alias /manual "@exp_manualdir@"
+ 
+-<Directory "@@ServerRoot@@/@rel_manualdir@">
++<Directory "@exp_manualdir@">
+     Options Indexes FollowSymLinks MultiViews
+     AllowOverride None
+     Order allow,deny
+@@ -530,7 +530,7 @@
+ # The same rules about trailing "/" apply to ScriptAlias directives as to
+ # Alias.
+ #
+-ScriptAlias /cgi-bin/ "@@ServerRoot@@/@rel_cgidir@/"
++ScriptAlias /cgi-bin/ "@exp_cgidir@/"
+ 
+ <IfModule mod_cgid.c>
+ #
+@@ -541,10 +541,10 @@
+ </IfModule>
+ 
+ #
+-# "@@ServerRoot@@/@rel_cgidir@" should be changed to whatever your ScriptAliased
++# "@exp_cgidir@" should be changed to whatever your ScriptAliased
+ # CGI directory exists, if you have that configured.
+ #
+-<Directory "@@ServerRoot@@/@rel_cgidir@">
++<Directory "@exp_cgidir@">
+     AllowOverride None
+     Options None
+     Order allow,deny
+@@ -854,15 +854,15 @@
+ #   Alias /error/include/ "/your/include/path/"
+ #
+ # which allows you to create your own set of files by starting with the
+-# @@ServerRoot@@/@rel_errordir@/include/ files and
++# @exp_errordir@/include/ files and
+ # copying them to /your/include/path/, even on a per-VirtualHost basis.
+ #
+ 
+ <IfModule mod_negotiation.c>
+ <IfModule mod_include.c>
+-    Alias /error/ "@@ServerRoot@@/@rel_errordir@/"
++    Alias /error/ "@exp_errordir@/"
+ 
+-    <Directory "@@ServerRoot@@/@rel_errordir@">
++    <Directory "@exp_errordir@">
+         AllowOverride None
+         Options IncludesNoExec
+         AddOutputFilter Includes html
+@@ -960,7 +960,7 @@
+ # To enable the cache as well, edit and uncomment the following lines:
+ # (no cacheing without CacheRoot)
+ #
+-#CacheRoot "@@ServerRoot@@/@rel_proxycachedir@"
++#CacheRoot "@exp_proxycachedir@"
+ #CacheSize 5
+ #CacheGcInterval 4
+ #CacheMaxExpire 24
