@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2004/12/24 10:03:27 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.22 2005/02/04 11:21:11 jmmv Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -171,7 +171,6 @@ share/doc/glib/ix05.html
 share/doc/glib/left.png
 share/doc/glib/mainloop-states.gif
 share/doc/glib/right.png
-share/doc/glib/style.css
 share/doc/glib/tools.html
 share/doc/glib/up.png
 share/doc/gobject/GTypeModule.html
@@ -204,7 +203,6 @@ share/doc/gobject/pr01.html
 share/doc/gobject/right.png
 share/doc/gobject/rn01.html
 share/doc/gobject/rn02.html
-share/doc/gobject/style.css
 share/doc/gobject/up.png
 share/glib-2.0/gettext/mkinstalldirs
 share/glib-2.0/gettext/po/Makefile.in.in
@@ -266,6 +264,7 @@ ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/sr@ije/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/glib20.mo
+${PKGLOCALEDIR}/locale/tl/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/glib20.mo
