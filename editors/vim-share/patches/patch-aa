@@ -1,0 +1,9 @@
+$NetBSD: patch-aa,v 1.8 2004/06/21 08:23:48 martti Exp $
+
+--- src/auto/configure.orig	2004-06-12 00:47:47.000000000 +0000
++++ src/auto/configure	2004-06-12 00:49:00.000000000 +0000
+@@ -4546,3 +4546,3 @@
+ if test -z "$SKIP_MOTIF"; then
+-  gui_XXX="/usr/XXX/Motif* /usr/Motif*/XXX /usr/XXX /usr/shlib /usr/X11*/XXX /usr/XXX/X11* /usr/dt/XXX /local/Motif*/XXX /local/XXX/Motif* /usr/local/Motif*/XXX /usr/local/XXX/Motif* /usr/local/XXX /usr/local/X11*/XXX /usr/local/LessTif/Motif*/XXX $MOTIFHOME/XXX"
++  gui_XXX="${BUILDLINK_DIR}/include"
+     GUI_INC_LOC="`echo $GUI_INC_LOC|sed 's%-I%%g'`"

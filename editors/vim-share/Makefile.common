@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.36 2004/04/25 01:46:11 snj Exp $
+# $NetBSD: Makefile.common,v 1.37 2004/06/21 08:23:48 martti Exp $
 
-VIM_VERSION=		6.2
+VIM_VERSION=		6.3
 VIM_PATCHLEVEL=		0
 DISTNAME=		vim-${VIM_VERSION}
 CATEGORIES=		editors
@@ -22,7 +22,7 @@ HOMEPAGE=		http://www.vim.org/
 
 CONFLICTS+=		vim-kde-[0-9]*
 
-WRKSRC=			${WRKDIR}/vim62/src
+WRKSRC=			${WRKDIR}/vim63/src
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
@@ -30,9 +30,9 @@ GNU_CONFIGURE=		yes
 # files (and PLIST might not include all files) so use at your own risk!
 CONFIGURE_ARGS+=	${VIM_EXTRA_OPTS}
 
-PATCH_ARGS=		-d ${WRKDIR}/vim62 --forward --quiet \
+PATCH_ARGS=		-d ${WRKDIR}/vim63 --forward --quiet \
 				-E ${PATCH_STRIP}
-PATCH_DIST_ARGS=	-d ${WRKDIR}/vim62 --forward --quiet \
+PATCH_DIST_ARGS=	-d ${WRKDIR}/vim63 --forward --quiet \
 				-E ${PATCH_DIST_STRIP}
 PATCHDIR?=		${.CURDIR}/../vim-share/patches
 DISTINFO_FILE?=		${.CURDIR}/../vim-share/distinfo
