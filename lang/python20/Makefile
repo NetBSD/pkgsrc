@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2004/01/25 16:06:47 recht Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/27 18:55:30 abs Exp $
 #
 
 DISTNAME=	Python-2.0.1
 PKGNAME=	python20-2.0.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.0.1/
 EXTRACT_SUFX=	.tgz
@@ -19,6 +19,7 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 WRKSRC=		${WRKDIR}/Python-2.0.1
 DIST_SUBDIR=	python
 
+USE_GCC_SHLIB=	yes
 USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--without-threads
