@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:14:45 tv Exp $
+# $NetBSD: Makefile,v 1.9 2005/03/27 15:43:36 wiz Exp $
 #
 
 DISTNAME=	Maelstrom-3.0.5
 PKGNAME=	maelstrom-sdl-3.0.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.devolution.com/~slouken/Maelstrom/src/
 

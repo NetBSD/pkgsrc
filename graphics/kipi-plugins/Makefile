@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/09 10:42:21 seb Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/27 15:43:37 wiz Exp $
 
 DISTNAME=	kipi-plugins-0.1-beta1
 PKGNAME=	kipi-plugins-0.1beta1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.kde.org/pub/kde/unstable/apps/KDE3.x/graphics/
 EXTRACT_SUFX=	.tar.bz2
