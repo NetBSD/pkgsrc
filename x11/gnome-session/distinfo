@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.7 2004/01/16 02:35:50 xtraeme Exp $
+$NetBSD: distinfo,v 1.8 2004/03/07 17:42:23 jmmv Exp $
 
 SHA1 (gnome-session-2.4.2.tar.bz2) = c9001f78a4c02ef5b34114c8a0407157d22a73ae
 Size (gnome-session-2.4.2.tar.bz2) = 911570 bytes
+SHA1 (gnome-splash-2.4.2.png) = 6a74dd7847713d4667479920731b23a73402dfd6
+Size (gnome-splash-2.4.2.png) = 68834 bytes
