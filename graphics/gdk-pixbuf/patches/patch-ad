@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2000/11/26 19:55:40 mycroft Exp $
+$NetBSD: patch-ad,v 1.2 2001/03/18 04:33:54 mjl Exp $
 
---- gdk-pixbuf/Makefile.am.orig	Sat Aug 26 04:54:42 2000
-+++ gdk-pixbuf/Makefile.am	Sun Nov 26 19:24:09 2000
-@@ -24,63 +24,63 @@
+--- gdk-pixbuf/Makefile.am.orig	Thu Mar  1 00:05:34 2001
++++ gdk-pixbuf/Makefile.am	Sun Mar 18 04:57:50 2001
+@@ -24,70 +24,70 @@
  # The PNG plugin.
  #
  libpixbufloader_png_la_SOURCES = io-png.c
@@ -73,5 +73,13 @@ $NetBSD: patch-ad,v 1.1 2000/11/26 19:55:40 mycroft Exp $
 -libpixbufloader_bmp_la_LDFLAGS = -version-info 1:0:0 -module
 +libpixbufloader_bmp_la_LDFLAGS = -module -avoid-version
  libpixbufloader_bmp_la_LIBADD =
+ 
+ #
+ # The XBM loader
+ #
+ libpixbufloader_xbm_la_SOURCES = io-xbm.c
+-libpixbufloader_xbm_la_LDFLAGS = -version-info 1:0:0 -module
++libpixbufloader_xbm_la_LDFLAGS = -module -avoid-version
+ libpixbufloader_xbm_la_LIBADD =
  
  if HAVE_PNG

@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2001/03/04 18:27:35 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/03/18 04:33:55 mjl Exp $
 include/gdk-pixbuf/gnome-canvas-pixbuf.h
 lib/gnomecanvaspixbufConf.sh
-lib/libgnomecanvaspixbuf.a
-lib/libgnomecanvaspixbuf.la
-lib/libgnomecanvaspixbuf.so
-lib/libgnomecanvaspixbuf.so.1
 lib/libgnomecanvaspixbuf.so.1.0
+lib/libgnomecanvaspixbuf.so.1
+lib/libgnomecanvaspixbuf.so
+lib/libgnomecanvaspixbuf.la
+lib/libgnomecanvaspixbuf.a
+share/gnome/html/gdk-pixbuf.html
+share/gnome/html/gdk-pixbuf.hierarchy
+share/gnome/html/gdk-pixbuf.types
 share/gnome/html/gdk-pixbuf-decl.txt
 share/gnome/html/gdk-pixbuf-sections.txt
-share/gnome/html/gdk-pixbuf.hierarchy
-share/gnome/html/gdk-pixbuf.html
-share/gnome/html/gdk-pixbuf.types
 share/gnome/html/gdk-pixbuf/a2605.html
 share/gnome/html/gdk-pixbuf/a3640.html
 share/gnome/html/gdk-pixbuf/a3652.html
@@ -25,8 +25,8 @@ share/gnome/html/gdk-pixbuf/gdk-pixbuf-file-loading.html
 share/gnome/html/gdk-pixbuf/gdk-pixbuf-from-drawables.html
 share/gnome/html/gdk-pixbuf/gdk-pixbuf-gdk-pixbuf-xlib-from-drawables.html
 share/gnome/html/gdk-pixbuf/gdk-pixbuf-gdk-pixbuf-xlib-init.html
-share/gnome/html/gdk-pixbuf/gdk-pixbuf-gdk-pixbuf-xlib-rendering.html
 share/gnome/html/gdk-pixbuf/gdk-pixbuf-gdk-pixbuf-xlib-rgb.html
+share/gnome/html/gdk-pixbuf/gdk-pixbuf-gdk-pixbuf-xlib-rendering.html
 share/gnome/html/gdk-pixbuf/gdk-pixbuf-gdk-pixbuf.html
 share/gnome/html/gdk-pixbuf/gdk-pixbuf-refcounting.html
 share/gnome/html/gdk-pixbuf/gdk-pixbuf-rendering.html
