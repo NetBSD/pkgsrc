@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/02/09 15:22:45 tron Exp $
+# $NetBSD: Makefile,v 1.20 2000/02/09 20:20:58 tron Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 DEPENDS+=		gettext-0.10.*:../../devel/gettext
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		libwww-5.2.8:../../www/libwww
-DEPENDS+=		png-*:../../graphics/png
+DEPENDS+=		png>=1.0.3:../../graphics/png
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 #XXX "black screen" fixed for 16-bit displays on mac68k, not verified on alpha.
@@ -55,7 +55,7 @@ GLOBAL_EXCLUDE_ARG=	-c
 EXCLUDE_ARG=		--exclude
 .endif
 EXTRACT_ELEMENTS=	${GLOBAL_EXCLUDE_ARG}
-.for DONT_EXTRACT_SUBDIR in jpeg-* libpng-* zlib-*
+.for DONT_EXTRACT_SUBDIR in jpeg-* libpng>=1.0.3 zlib-*
 EXTRACT_ELEMENTS+=	${EXCLUDE_ARG} Arena-*/Auxiliary/${DONT_EXTRACT_SUBDIR}
 .endfor
 

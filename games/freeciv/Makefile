@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/01/10 19:11:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2000/02/09 20:20:53 tron Exp $
 #
 
 DISTNAME=	freeciv-1.9.0
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.freeciv.org/
 
 DEPENDS+=	xpm-*:../../graphics/xpm
 DEPENDS+=	imlib-*:../../graphics/imlib
-DEPENDS+=	png-*:../../graphics/png
+DEPENDS+=	png>=1.0.3:../../graphics/png
 DEPENDS+=	jpeg-*:../../graphics/jpeg
 DEPENDS+=	gettext-0.10.*:../../devel/gettext
 
