@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2003/03/23 19:16:48 seb Exp $
+# $NetBSD: Makefile,v 1.62 2003/03/30 20:04:00 jschauma Exp $
 #
 
 DISTNAME=	cvs-1.11.5
@@ -18,7 +18,8 @@ GNU_CONFIGURE=	yes
 BUILD_DEFS+=		USE_INET6
 USE_BUILDLINK2=		yes
 
-.if defined(USE_INET6) && ${USE_INET6} == "YES" && empty(MACHINE_PLATFORM:MSunOS-5.8-*)
+.if defined(USE_INET6) && ${USE_INET6} == "YES" && 	\
+	empty(MACHINE_PLATFORM:MSunOS-5.8-*) && empty(MACHINE_PLATFORM:MLinux-*)
 CONFIGURE_ARGS+=	--enable-ipv6
 PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
 PATCHFILES=		cvs-1.11.4-v6-20030102.diff.gz
