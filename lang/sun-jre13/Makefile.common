@@ -1,0 +1,72 @@
+# $NetBSD: Makefile.common,v 1.1 2002/07/27 21:54:31 jschauma Exp $
+
+# MASTER_SITES is very special, and must end in "=":
+CATEGORIES=     lang
+EXTRACT_SUFX=	.bin
+
+MAINTAINER=	jschauma@netbsd.org
+HOMEPAGE=	http://java.sun.com/
+
+FETCH_BEFORE_ARGS=-o ${DISTNAME}${EXTRACT_SUFX}
+EXTRACT_CMD=	${ECHO} yes | ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} >/dev/null
+
+LICENSE=	jdk13-license
+RESTRICTED=	"Redistribution of repackaged binaries not permitted"
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
+NO_BIN_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+
+.include "../../mk/bsd.prefs.mk"
+
+# We need to overwrite JDK_HOME, since JRE and JDK need to be
+# installed in the same directory
+JDK_HOME:=	${LOCALBASE}/java/sun-1.3.1
+MESSAGE_SUBST+= JDK_HOME=${JDK_HOME}
+
+# Needs to be after bsd.prefs.mk
+.if ${OPSYS} == "NetBSD"
+DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
+.endif
+
+.if ${OPSYS} == "Darwin"
+DISTFILES=  # empty
+NO_PATCH=   # defined
+NO_CONFIGURE=   # defined
+NO_BUILD=   # defined
+PLIST_SRC=  ${PKGDIR}/PLIST.Darwin
+.endif
+
+# since we change PREFIX:
+NO_MTREE=	yes
+
+ONLY_FOR_PLATFORM= NetBSD-*-i386 Linux-*-i[3-6]86 Darwin-*-*
+LDD=		${TRUE}
+NO_BUILD=	# defined
+
+post-fetch:
+.   if ${OPSYS} != "Darwin"
+	@${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+.	endif
+
+do-install:
+.   if ${OPSYS} == "Darwin"
+    @${ECHO_MSG} "Darwin ships with a JRE and a JDK based on Sun's 1.3.1 release."
+.   else
+	${INSTALL_PROGRAM_DIR} ${PREFIX}
+	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}
+.	endif
+
+.include "../../emulators/suse_linux/Makefile.application"
+
+# These need to be after bsd.pkg.mk 
+
+.if ${OPSYS} == "Linux"
+# No patches on linux
+PATCHDIR=	${WRKDIR}/.patches
+pre-patch:
+	${MKDIR} ${PATCHDIR}
+.endif
+
+PREFIX:=	${JDK_HOME}
