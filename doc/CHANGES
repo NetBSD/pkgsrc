@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5792 2004/05/02 17:50:05 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5793 2004/05/02 18:40:24 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2317,3 +2317,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gpass to 0.4.1 [jmmv 2004-05-02]
 	Updated cue to 20040329 [xtraeme 2004-05-02]
 	Updated daemontools to 0.76 [xtraeme 2004-05-02]
+	Updated bluefish to 0.13 [xtraeme 2004-05-02]
