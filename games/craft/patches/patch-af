@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1998/10/14 08:19:51 frueauf Exp $
+
 --- paramreader.hc.orig	Thu Sep 24 12:00:23 1998
 +++ paramreader.hc	Thu Sep 24 12:00:59 1998
 @@ -101,8 +101,11 @@
