@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/06/20 16:50:11 drochner Exp $
+
+--- ../thotlib/Makefile.in.orig	Sat Jun 17 21:18:05 2000
++++ ../thotlib/Makefile.in	Sat Jun 17 21:19:04 2000
+@@ -302,7 +302,7 @@
+ 	@(mkdir ../bin)
+ 
+ ../bin/print : $(THOTK_OBJ) $(DISPLAY_OBJ) $(PRINT_OBJ) ../tablelib/libThotTable.a \
+-        ../libpng.a ../libz.a ../libjpeg.a ../amaya/libCSS.a
++        ../amaya/libCSS.a
+ 	$(CC) $(LDFLAGS) -o $@ $(THOTK_OBJ) $(DISPLAY_OBJ) $(PRINT_OBJ) ../amaya/libCSS.a -lThotTable $(LIBS)
+ 	@$(ECHO) "====>" print is done
+ 
