@@ -1,0 +1,26 @@
+$NetBSD: patch-aj,v 1.1.1.1 2000/01/21 19:16:00 bouyer Exp $
+
+--- installs/apcupsd.conf.orig	Tue Jul 20 19:32:16 1999
++++ installs/apcupsd.conf	Tue Jul 20 19:32:54 1999
+@@ -3,7 +3,7 @@
+ # "apcupsd" POSIX config file
+ #
+ # CONTROL <string>
+-CONTROL /sbin/powersc
++CONTROL @@PREFIX@@/sbin/powersc
+ #
+ # UPSCABLE [ simple | smart | 940-00(20B,23A,24B,24C,24G,95A,95C) | ether ]
+ UPSCABLE 940-0024B
+@@ -22,10 +22,10 @@
+ UPSMODE disable
+ #
+ #DEVICE <string> /dev/<serial port>
+-DEVICE /dev/ttyS0
++DEVICE /dev/tty00
+ #
+ #LOCKFILE <path to lockfile>
+-LOCKFILE /var/lock
++LOCKFILE /var/run
+ #
+ #ACCESS <string> [ true | false ] Enable Access Support
+ ACCESS true

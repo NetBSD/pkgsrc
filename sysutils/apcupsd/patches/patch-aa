@@ -1,0 +1,52 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/21 19:15:59 bouyer Exp $
+
+--- Makefile.orig	Wed Apr  7 18:06:41 1999
++++ Makefile	Tue Jul 20 18:36:50 1999
+@@ -85,7 +85,7 @@
+ 
+ SHELL     = /bin/sh
+ ECHO      = echo
+-MAKE      = make
++MAKE      ?= make
+ CHOWN     = chown
+ CHMOD     = chmod
+ CP        = cp
+@@ -120,6 +120,7 @@
+ #*                                                                          *
+ #****************************************************************************
+ 
++all: netbsd
+ default :
+ 	@$(ECHO)
+ 	@$(ECHO) "Usage: make <system-type>"
+@@ -201,7 +202,7 @@
+ 	@$(ECHO) >> .ver
+ 	@$(ECHO) \#ifndef __$(OS)__ >> .ver
+ 	@$(ECHO) \#define __$(OS)__ >> .ver
+-	@$(ECHO) \#endif /*\ __$(OS)__ *\/ >> .ver
++	@$(ECHO) \#endif /*\ __$(OS)__\ \*\/ >> .ver
+ 	@$(ECHO) >> .ver
+ 	@if [ -d /usr/include/ncurses ]; then \
+ 		if [ -f /usr/include/ncurses/curses.h ]; then \
+@@ -227,7 +228,7 @@
+ 			$(ECHO) \#undef __CURSES__ >> .ver; \
+ 	fi
+ 	@$(ECHO) >> .ver
+-	@$(ECHO) \#endif /*\_APC_VERSION_H *\/ >> .ver
++	@$(ECHO) \#endif /*\_APC_VERSION_H\ \*\/ >> .ver
+ 	@$(MV) -f .ver $@
+ 
+ ifdef MUSIC
+@@ -301,6 +302,12 @@
+ 	@$(MAKE) depend $(APCUPSD) \
+ 		OS="freebsd" \
+ 		CC="cc"
++
++netbsd :
++	@$(MAKE) depend $(APCUPSD) \
++		OS="netbsd" \
++		CC="cc"
++
+ 
+ # Generic: Generic BSD-ish system running gcc
+ 

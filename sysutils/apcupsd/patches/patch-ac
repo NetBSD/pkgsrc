@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/01/21 19:15:59 bouyer Exp $
+
+--- apchttp.c	Wed Apr  7 18:06:41 1999
++++ apchttp.c	Sun Jul 18 19:50:58 1999
+@@ -70,7 +70,6 @@
+ 
+ #include <ctype.h>
+ #include <errno.h>
+-#include <netinet/in.h>
+ #include <signal.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+@@ -80,6 +79,7 @@
+ #include <sys/types.h>
+ #include <time.h>
+ #include <unistd.h>
++#include <netinet/in.h>
+ 
+ /* apc includes */
+ #include <apc_version.h>

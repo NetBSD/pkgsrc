@@ -1,0 +1,5 @@
+It allows your computer/server to run during power problems
+for a specified length of time or the life of the batteries
+in your BackUPS, BackUPS Pro, SmartUPS v/s, or SmartUPS, and
+then properly executes a controlled shutdown during an
+extended power failure.
