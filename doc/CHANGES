@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5006 2004/02/26 16:27:02 cube Exp $
+$NetBSD: CHANGES,v 1.5007 2004/02/26 16:48:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1057,3 +1057,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dasher to 3.2.4 [jmmv 2004-02-26]
 	Updated libsndfile to 1.0.7 [adam 2004-02-26]
 	Updated anjuta to 1.2.1 [cube 2004-02-26]
+	Updated octave-current to 2.1.55 [adam 2004-02-26]
