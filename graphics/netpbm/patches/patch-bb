@@ -1,0 +1,11 @@
+--- ./pbm/libpbm1.c.orig	Mon Jan 10 12:37:22 1994
++++ ./pbm/libpbm1.c	Sun Aug 13 00:03:56 1995
+@@ -132,7 +132,7 @@
+         if ( isupper( c1 ) )
+             c1 = tolower( c1 );
+         if ( isupper( c2 ) )
+-            c1 = tolower( c2 );
++            c2 = tolower( c2 );
+         if ( c1 != c2 )
+             return 0;
+         }
