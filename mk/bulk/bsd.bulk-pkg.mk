@@ -1,4 +1,4 @@
-#	$Id: bsd.bulk-pkg.mk,v 1.7 2000/08/11 20:38:04 hubertf Exp $
+#	$Id: bsd.bulk-pkg.mk,v 1.8 2000/08/24 00:52:23 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -140,9 +140,9 @@ bulk-package:
 		if [ -f ${BUILDLOG} ]; then \
 			${ECHO_MSG} "BULK> Continuing previous build..." ; \
 		else \
-			${ECHO_MSG} "BULK> Removing old binary package(s)..." ; \
-			${ECHO_MSG} ${RM} -f ${PKGFILE:C/-[^-]*$//}-* ; \
-			${DO}       ${RM} -f ${PKGFILE:C/-[^-]*$//}-* ; \
+			${ECHO_MSG} "BULK> Removing old binary package..." ; \
+			${ECHO_MSG} ${RM} -f ${PKGFILE} ; \
+			${DO}       ${RM} -f ${PKGFILE} ; \
 			${ECHO_MSG} "BULK> Full rebuild  in progress..." ; \
 			${ECHO_MSG} ${MAKE} -k clean CLEANDEPENDS=YES ; \
 			${DO}       ${MAKE} -k clean CLEANDEPENDS=YES ; \
