@@ -1,0 +1,71 @@
+--- configure.orig	Mon Mar  8 18:52:49 1999
++++ configure	Mon Mar 22 16:15:25 1999
+@@ -1239,7 +1239,6 @@
+ # ./install, which can be erroneously created by make from ./install.sh.
+ echo $ac_n "checking for a BSD compatible install""... $ac_c" 1>&6
+ echo "configure:1242: checking for a BSD compatible install" >&5
+-if test -z "$INSTALL"; then
+ if eval "test \"`echo '$''{'ac_cv_path_install'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+@@ -1258,7 +1257,7 @@
+ 	    # OSF/1 installbsd also uses dspmsg, but is usable.
+ 	    :
+ 	  else
+-	    ac_cv_path_install="$ac_dir/$ac_prog -c"
++	    ac_cv_path_install="$ac_dir/$ac_prog"
+ 	    break 2
+ 	  fi
+ 	fi
+@@ -1278,7 +1277,6 @@
+     # removed, or if the path is relative.
+     INSTALL="$ac_install_sh"
+   fi
+-fi
+ echo "$ac_t""$INSTALL" 1>&6
+ 
+ # Use test -z because SunOS4 sh mishandles braces in ${var-val}.
+--- Makefile.orig	Mon Mar 22 15:38:46 1999
++++ Makefile	Mon Mar 22 15:39:32 1999
+@@ -27,28 +27,28 @@
+ 	@./configure
+ 
+ install : libs/libnessus.so bin/nessus bin/nessusd plugins
+-	$(INSTALL) -o root -m $(CLIENTMODE) libs/libnessus* ${prefix}/lib/
+-	$(INSTALL) -o root -m $(SERVERMODE) bin/nessusd ${prefix}/bin/nessusd
+-	$(INSTALL) -o root -m $(CLIENTMODE) bin/nessus ${prefix}/bin/nessus
+-	$(INSTALL) -o root -m $(CLIENTMODE) bin/nsr2html ${prefix}/bin/nsr2html
++	$(INSTALL) -c -o root -m $(CLIENTMODE) libs/libnessus* ${prefix}/lib/
++	$(INSTALL) -c -o root -m $(SERVERMODE) bin/nessusd ${prefix}/bin/nessusd
++	$(INSTALL) -c -o root -m $(CLIENTMODE) bin/nessus ${prefix}/bin/nessus
++	$(INSTALL) -c -o root -m $(CLIENTMODE) bin/nsr2html ${prefix}/bin/nsr2html
+ 	$(INSTALL) -d -o root -m $(PLUGINSDIRMODE) ${prefix}/share/nessus/plugins
+ 	$(INSTALL) -d -o root -m $(REPORTSDIRMODE) ${prefix}/share/nessus/reports
+-	$(INSTALL)  -o root -m $(PLUGINSMODE) bin/plugins/*.nes \
++	$(INSTALL)  -c -o root -m $(PLUGINSMODE) bin/plugins/*.nes \
+ 	${prefix}/share/nessus/plugins/
+-	$(INSTALL) -o root -m $(PLUGINSMODE) doc/Manual ${prefix}/share/nessus/Manual
+-	$(INSTALL) -o root -m $(PLUGINSMODE) doc/nessus.1 ${prefix}/man/man1/nessus.1
++	$(INSTALL) -c -o root -m $(PLUGINSMODE) doc/Manual ${prefix}/share/nessus/Manual
++	$(INSTALL) -c -o root -m $(PLUGINSMODE) doc/nessus.1 ${prefix}/man/man1/nessus.1
+ 	@echo "Nessus is now properly installed on your system"
+ 	@echo "just run ldconfig if your system needs it"
+         
+ install-nosuid : 
+-	$(INSTALL) -s -o root -m $(CLIENTMODE) libs/libnessus* ${prefix}/lib/
+-	$(INSTALL) -s -o root -m $(CLIENTMODE) bin/nessusd ${prefix}/bin/nessusd
+-	$(INSTALL) -s -o root -m $(CLIENTMODE) bin/nessus ${prefix}/bin/nessus
++	$(INSTALL) -c -s -o root -m $(CLIENTMODE) libs/libnessus* ${prefix}/lib/
++	$(INSTALL) -c -s -o root -m $(CLIENTMODE) bin/nessusd ${prefix}/bin/nessusd
++	$(INSTALL) -c -s -o root -m $(CLIENTMODE) bin/nessus ${prefix}/bin/nessus
+ 	$(INSTALL) -d -o root -m $(PLUGINSDIRMODE) bin/plugins ${prefix}/share/nessus/plugins
+-	$(INSTALL) -s -o root -m $(PLUGINSMODE) bin/plugins/*.nes \
++	$(INSTALL) -c -s -o root -m $(PLUGINSMODE) bin/plugins/*.nes \
+ 	${prefix}/share/nessus/plugins/
+-	$(INSTALL) -o root -m $(PLUGINSMODE) doc/Manual ${prefix}/share/nessus/Manual
+-	$(INSTALL) -o root -m $(PLUGINSMODE) doc/nessus.1 ${prefix}/man/man1/nessus.1
++	$(INSTALL) -c -o root -m $(PLUGINSMODE) doc/Manual ${prefix}/share/nessus/Manual
++	$(INSTALL) -c -o root -m $(PLUGINSMODE) doc/nessus.1 ${prefix}/man/man1/nessus.1
+ 	@echo "Nessus is now properly installed on your system"
+ 	@echo "run ldconfig if needed !"
+         
