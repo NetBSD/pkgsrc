@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/01/07 07:20:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 1998/01/23 10:00:38 agc Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -54,7 +54,7 @@
 #    SUBDIR += ripetools
 #    SUBDIR += rmsg
 #    SUBDIR += rshell
-#    SUBDIR += rsync
+    SUBDIR += rsync
 #    SUBDIR += rumba
 #    SUBDIR += rwhois
     SUBDIR += samba
