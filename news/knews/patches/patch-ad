@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.5 1999/11/25 12:14:14 fredb Exp $
+
+--- src/Imakefile.orig	Sat Nov 21 09:31:37 1998
++++ src/Imakefile	Thu Nov 25 05:48:56 1999
+@@ -5,6 +5,8 @@
+ #undef MAIL_COMMAND
+ #undef EDIT_COMMAND
+ 
++LDPRELIBS	=
++
+ XMU_LIB		=
+ XPM_LIB		=
+ REGEXP_LIB	=
+@@ -16,7 +18,7 @@
+ #endif
+ 
+ #if HAVE_XMU
+-XMU_LIB		= -lXmu
++XMU_LIB		= $(LDPRELIB) -lXmu
+ #endif
+ 
+ #if HAVE_XPM
