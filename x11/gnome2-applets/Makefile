@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/10/15 16:23:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2004/12/14 10:26:16 hira Exp $
 #
 
 DISTNAME=		gnome-applets-2.8.1.1
@@ -51,14 +51,16 @@ BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
-.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || \
-    ${OPSYS} == "OpenBSD"
+.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || \
+    (${OPSYS} == "NetBSD" && exists(/usr/include/machine/apmvar.h))
 GCONF2_SCHEMAS+=	battstat.schemas
 PLIST_SUBST+=		BATTSTAT=
 CONF_FILES+=		${EGDIR}/sound/events/battstat_applet.soundlist \
 			${PKG_SYSCONFDIR}/sound/events/battstat_applet.soundlist
+CONFIGURE_ARGS+=	--enable-battstat
 .else
 PLIST_SUBST+=		BATTSTAT="@comment "
+CONFIGURE_ARGS+=	--disable-battstat
 .endif
 
 PRINT_PLIST_AWK+=	/battstat/ { print "$${BATTSTAT}"$$0; next; }
