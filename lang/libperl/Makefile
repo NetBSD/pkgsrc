@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2001/11/26 06:50:02 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2001/12/03 07:55:43 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
-PKGNAME=	libperl-${PERL5_VERS}
+PKGNAME=	libperl-${PERL5_DIST_VERS}
 SVR4_PKGNAME=	lperl
-PERL5_PKG_VERS=	# empty
 CATEGORIES+=	lang devel
 
 MAINTAINER=	jlam@netbsd.org

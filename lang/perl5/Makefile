@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2001/10/21 06:56:30 veego Exp $
+# $NetBSD: Makefile,v 1.50 2001/12/03 07:55:44 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
-PKGNAME=		perl-${PERL5_VERS}
-PERL5_PKG_VERS=		nb6
+PKGREVISION=		6
 CATEGORIES+=		lang devel
 
 MAINTAINER=		jlam@netbsd.org
