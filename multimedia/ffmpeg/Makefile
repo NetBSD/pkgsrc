@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/26 11:14:33 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/06/19 23:15:12 xtraeme Exp $
 
 DISTNAME=	ffmpeg-0.4.8
 CATEGORIES=	multimedia net
@@ -16,8 +16,20 @@ MAKE_ENV+=	EXTRA_LIBS="${LIBGETOPT}" \
 		FFSERVER_CONF=${PKG_SYSCONFDIR}/ffserver.conf \
 		LOCALBASE="${LOCALBASE}"
 
-CONFIGURE_ARGS=	--cc=${CC} --disable-grab --disable-mmx --prefix=${PREFIX}
-CONFIGURE_ARGS+=	--disable-vhook
+CONFIGURE_ARGS=		--cc=${CC} --disable-grab --prefix=${PREFIX}
+CONFIGURE_ARGS+=	--disable-vhook --disable-debug
+
+BUILD_DEFS+=		USE_MMX
+
+.include "../../mk/compiler.mk"
+
+.if !empty(MACHINE_ARCH:Mi386) && !empty(USE_MMX:M[Yy][Ee][Ss])
+.  if !empty(CC_VERSION:Mgcc*)
+CFLAGS+=	-fomit-frame-pointer
+.  endif
+.else
+CONFIGURE_ARGS+=	--disable-mmx
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ffmpeg \
