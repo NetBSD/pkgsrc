@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2003/07/17 21:25:35 grant Exp $
+# $NetBSD: Makefile,v 1.26 2003/08/19 22:53:44 hubertf Exp $
 #
 
-DISTNAME=	centericq-4.9.4
-PKGREVISION=	1
+DISTNAME=	centericq-4.9.5
 CATEGORIES=	chat
 MASTER_SITES=	http://konst.org.ua/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +14,7 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GCC_SHLIB=		yes
 USE_GMAKE=		yes
+USE_NCURSES=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl --with-openssl=${SSLBASE}

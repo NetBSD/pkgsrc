@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/06/29 02:04:20 jlam Exp $
+$NetBSD: distinfo,v 1.4 2003/08/19 22:53:44 hubertf Exp $
 
-SHA1 (centericq-4.9.4.tar.bz2) = 91566da9904eb5b85074ed6b08f047ccc97bccda
-Size (centericq-4.9.4.tar.bz2) = 896855 bytes
+SHA1 (centericq-4.9.5.tar.bz2) = a23a08095bd21d1163ee6714e37db6ade26a31b1
+Size (centericq-4.9.5.tar.bz2) = 930838 bytes
