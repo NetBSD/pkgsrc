@@ -1,0 +1,6 @@
+naga10 font is a set of bitmap font for Japanese.  It contains 10x10
+dots JIS X 0208 font and 5x10 dots 1-byte charset font.
+
+This package also includes 6x12 dots Latin-1 (medium/bold) and JIS X
+0201 1-byte charset fonts with normal width which are missing in
+official X distribution.
