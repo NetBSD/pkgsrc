@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2001/08/17 17:09:13 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2002/01/02 12:23:49 lukem Exp $
 
---- src/plugins/oss/ao_oss.c.orig	Mon Aug 13 16:20:05 2001
-+++ src/plugins/oss/ao_oss.c	Wed Aug 15 00:15:59 2001
-@@ -81,8 +81,8 @@
+--- src/plugins/oss/ao_oss.c.orig	Tue Oct 16 10:13:47 2001
++++ src/plugins/oss/ao_oss.c
+@@ -82,8 +82,8 @@
  	char *err = NULL;
  	char *dev = NULL;
  
@@ -10,6 +10,6 @@ $NetBSD: patch-aa,v 1.5 2001/08/17 17:09:13 wiz Exp $
 -	*dev_path = strdup("/dev/sound/dsp");
 +	/* default: first try the NetBSD path */
 +	*dev_path = strdup("/dev/sound");
+ #ifdef BROKEN_OSS
  	fd = open(*dev_path, O_WRONLY | O_NONBLOCK);
- 
- 	/* then try the original dsp path */
+ #else
