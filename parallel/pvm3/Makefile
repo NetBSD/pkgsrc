@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 1998/10/14 08:31:17 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1998/10/16 10:14:56 agc Exp $
 
-DISTNAME=		pvm3.4.beta6
-PKGNAME=		pvm-3.4.6
+DISTNAME=		pvm3.4.beta7
+PKGNAME=		pvm-3.4.7
 CATEGORIES=		parallel
 MASTER_SITES=		http://www.netlib.org/pvm3/
 EXTRACT_SUFX=		.tgz
@@ -16,11 +16,10 @@ MAKE_ENV+=		PVM_ROOT=${WRKSRC}
 ALL_TARGET=		all install
 
 post-patch:
-	@${MV} ${WRKSRC}/lib/pvm ${WRKDIR}/foo
-	@${SED} -e 's@XXPKGXX@${LOCALBASE}@g' < ${WRKDIR}/foo > ${WRKSRC}/lib/pvm
-	@${MV} ${WRKSRC}/lib/pvmd foo
-	@${SED} -e 's@XXPKGXX@${LOCALBASE}@g' < ${WRKDIR}/foo > ${WRKSRC}/lib/pvmd
-	@${RM} ${WRKDIR}/foo
+	@${MV} ${WRKSRC}/lib/pvm ${WRKSRC}/lib/pvm.in
+	@${SED} -e 's@XXPKGXX@${LOCALBASE}@g' < ${WRKSRC}/lib/pvm.in > ${WRKSRC}/lib/pvm
+	@${MV} ${WRKSRC}/lib/pvmd ${WRKSRC}/lib/pvmd.in
+	@${SED} -e 's@XXPKGXX@${LOCALBASE}@g' < ${WRKSRC}/lib/pvmd.in > ${WRKSRC}/lib/pvmd
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/NETBSD/* ${PREFIX}/bin
