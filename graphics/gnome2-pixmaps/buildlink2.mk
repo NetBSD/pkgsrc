@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/02/13 21:48:25 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/12/14 22:10:53 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use gnome2-pixmaps.
 #
@@ -9,7 +9,7 @@
 GNOME2_PIXMAPS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome2-pixmaps
-BUILDLINK_DEPENDS.gnome2-pixmaps?=		gnome2-pixmaps>=2.2.0.1
+BUILDLINK_DEPENDS.gnome2-pixmaps?=		gnome2-pixmaps>=2.4.1.1
 BUILDLINK_PKGSRCDIR.gnome2-pixmaps?=		../../graphics/gnome2-pixmaps
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnome2-pixmaps=gnome2-pixmaps
