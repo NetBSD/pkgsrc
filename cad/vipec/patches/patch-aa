@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/06/03 16:26:26 tron Exp $
+
+--- Makefile.orig	Tue May 25 08:52:00 1999
++++ Makefile	Thu Jun  3 18:08:37 1999
+@@ -11,10 +11,10 @@
+ CXX	=	g++
+ CFLAGS	=	-Wall -W -O2 -fno-strength-reduce
+ CXXFLAGS=	-Wall -W -O2 -fno-strength-reduce
+-INCPATH	=	-I$(QTDIR)/include
++INCPATH	=	-I$(X11BASE)/include/qt -I$(X11BASE)/include
+ LINK	=	g++
+ LFLAGS	=	
+-LIBS	=	-L$(QTDIR)/lib -lqt -lX11 -lXext
++LIBS	=	-L$(X11BASE)/lib -Wl,-R$(X11BASE)/lib -lqt  -lX11 -lXext
+ MOC	=	moc
+ 
+ TAR	=	tar -cf
