@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/05/08 11:26:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/09/14 18:59:46 wiz Exp $
 bin/latex2html
 bin/pstoimg
 bin/texexpand
@@ -240,6 +240,7 @@ share/latex2html/styles/getimagesize.perl
 share/latex2html/styles/graphics-support.perl
 share/latex2html/styles/graphics.perl
 share/latex2html/styles/graphicx.perl
+share/latex2html/styles/graphixx.perl      
 share/latex2html/styles/harvard.perl
 share/latex2html/styles/havard.perl
 share/latex2html/styles/heqn.perl
@@ -304,13 +305,17 @@ share/latex2html/texinputs/verbatimfiles.sty
 share/latex2html/versions/cp1252.pl
 share/latex2html/versions/decmulti.pl
 share/latex2html/versions/frame.pl
+share/latex2html/versions/hebrew.pl
 share/latex2html/versions/html2_1.pl
 share/latex2html/versions/html2_2.pl
 share/latex2html/versions/html3_0.pl
 share/latex2html/versions/html3_1.pl
 share/latex2html/versions/html3_2.pl
 share/latex2html/versions/html4_0.pl
+share/latex2html/versions/html4_01.pl
+share/latex2html/versions/html4_1.pl
 share/latex2html/versions/i18n.pl
+share/latex2html/versions/koi8.pl
 share/latex2html/versions/lang.pl
 share/latex2html/versions/latin1.pl
 share/latex2html/versions/latin2.pl
