@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/11 20:50:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/14 14:22:50 jschauma Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -70,7 +70,7 @@ pre-install:
 	@${ECHO} "@unexec \$${RM} %D/lib/netscape/netscape7/components/xpti.dat 2>/dev/null || \$${TRUE}" \
 		>> ${PLIST_SRC}
 	@cd ${INSTDIR} && 						\
-			${FIND} . ${FIND_ARG} \( -type d ! -name "." \) \
+			${FIND} ${FIND_ARG} \( -type d ! -name "." \)	\
 			-print |					\
 		${SED} -e 's,^\.,@dirrm lib/netscape/netscape7,' >>	\
 			${PLIST_SRC}
