@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/05/31 21:33:50 jwise Exp $
+# $NetBSD: Makefile,v 1.6 2000/05/31 21:37:20 jwise Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of Xerces-J,
 # because although Xerces runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -11,6 +11,8 @@ MASTER_SITES=	http://xml.apache.org/dist/xerces-j/
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://xml.apache.org/xerces-j/
+
+CONFLICTS=	xerces-j-current-*
 
 NO_PATCH=
 NO_CONFIGURE=
