@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/13 21:51:08 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/13 21:54:22 jlam Exp $
 
 DISTNAME=	openpam-20040210
 CATEGORIES=	security
@@ -17,6 +17,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-pam-su
 CONFIGURE_ARGS+=	--with-pam-unix
 CONFIGURE_ARGS+=	--with-modules-dir=${PREFIX}/lib/security
+
+.include "../../mk/dlopen.buildlink3.mk"
 
 # Create a fake perl binary to avoid recreating the man pages.
 post-tools:
