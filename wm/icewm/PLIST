@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/25 21:51:34 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/04/27 12:44:38 cjep Exp $
 bin/genpref
 bin/icehelp
 bin/icesh
@@ -282,25 +282,25 @@ share/doc/icewm/COPYING
 share/doc/icewm/FAQ
 share/doc/icewm/README
 share/doc/icewm/TODO
-share/locale/ca/LC_MESSAGES/icewm.mo
-share/locale/cs/LC_MESSAGES/icewm.mo
-share/locale/de/LC_MESSAGES/icewm.mo
-share/locale/en/LC_MESSAGES/icewm.mo
-share/locale/es/LC_MESSAGES/icewm.mo
-share/locale/fi/LC_MESSAGES/icewm.mo
-share/locale/fr/LC_MESSAGES/icewm.mo
-share/locale/hr/LC_MESSAGES/icewm.mo
-share/locale/hu/LC_MESSAGES/icewm.mo
-share/locale/it/LC_MESSAGES/icewm.mo
-share/locale/ja/LC_MESSAGES/icewm.mo
-share/locale/lt/LC_MESSAGES/icewm.mo
-share/locale/pl/LC_MESSAGES/icewm.mo
-share/locale/pt_BR/LC_MESSAGES/icewm.mo
-share/locale/ro/LC_MESSAGES/icewm.mo
-share/locale/ru/LC_MESSAGES/icewm.mo
-share/locale/sv/LC_MESSAGES/icewm.mo
-share/locale/zh_CN.gb2312/LC_MESSAGES/icewm.mo
-share/locale/zh_TW.Big5/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/ca/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/cs/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/de/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/en/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/es/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/fi/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/fr/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/hr/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/hu/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/it/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/ja/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/lt/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/pl/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/pt_BR/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/ro/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/ru/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/sv/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/zh_CN.gb2312/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/zh_TW.Big5/LC_MESSAGES/icewm.mo
 @dirrm etc/X11/icewm
 @dirrm lib/X11/icewm/icons
 @dirrm lib/X11/icewm/ledclock
