@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/06/18 19:18:17 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/02/05 06:00:18 wiz Exp $
 #
 
 DISTNAME=		srp-1.4.4
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--with-krb4
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/telnet/telnet/telnet \
 		${PREFIX}/bin/srptelnet
-	$(INSTALL_DATA) ${WRKSRC}/telnet/telnet/telnet.1 \
+	${INSTALL_DATA} ${WRKSRC}/telnet/telnet/telnet.1 \
 		${PREFIX}/man/man1/srptelnet.1
 	${INSTALL_PROGRAM} ${WRKSRC}/ftp/ftp/ftp ${PREFIX}/bin/srpftp
 	${INSTALL_DATA} ${WRKSRC}/ftp/ftp/ftp.M ${PREFIX}/man/man1/srpftp.1
