@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/07/27 22:39:51 jschauma Exp $
+$NetBSD: patch-aa,v 1.2 2002/09/08 09:59:52 schmonz Exp $
 
---- bin/realpath.orig	Tue Jul 23 21:34:58 2002
-+++ bin/realpath	Tue Jul 23 21:35:43 2002
-@@ -28,6 +28,9 @@
+--- bin/realpath.orig	Sat Mar 16 07:18:50 2002
++++ bin/realpath
+@@ -28,6 +28,9 @@ case "`uname -m`" in
      sparc*)
          proc=sparc
          ;;
-+	macppc | prep | bebox | sandpoint | amigappc | ofppc)
-+		proc=ppc
-+		;;
++    bebox | prep | sandpoint | walnut | *ppc)
++        proc=ppc
++        ;;
      *)
          proc="`uname -m`"
          ;;
