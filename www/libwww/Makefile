@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/11/29 19:46:13 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2002/06/17 10:33:53 wiz Exp $
 
 DISTNAME=		w3c-libwww-5.3.2
 PKGNAME=		libwww-5.3.2
@@ -17,7 +17,6 @@ BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 USE_BUILDLINK_ONLY=	YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
-#USE_SSL=		YES
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--with-zlib --with-regex --without-x
