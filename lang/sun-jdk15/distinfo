@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/09/30 23:47:19 rh Exp $
+$NetBSD: distinfo,v 1.1.1.1.2.1 2005/01/17 21:47:05 snj Exp $
 
-SHA1 (jdk-1_5_0-linux-i586.bin) = 0585b49d5c0938e0622650d3733f4b87e02f47d4
-Size (jdk-1_5_0-linux-i586.bin) = 46087154 bytes
+SHA1 (jdk-1_5_0_01-linux-i586.bin) = 6839529bbfd182b06bc78dcedeb7649142a3e6d7
+Size (jdk-1_5_0_01-linux-i586.bin) = 46120566 bytes
