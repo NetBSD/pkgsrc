@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2003/09/12 17:31:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.167 2003/09/23 19:03:56 reinoud Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -142,6 +142,7 @@ SUBDIR+=	tds
 SUBDIR+=	team
 SUBDIR+=	ttyrec
 SUBDIR+=	utftools
+SUBDIR+=	udfclient
 SUBDIR+=	vera
 SUBDIR+=	vfu
 SUBDIR+=	visual-regexp
