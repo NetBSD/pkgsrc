@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3159 2005/03/01 00:20:42 wiz Exp $
+$NetBSD: TODO,v 1.3160 2005/03/01 12:11:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -258,6 +258,7 @@ Suggested package updates
 	o Chinput-3.0.1
 	o GMT-4.0
 	o GUIlib-1.1.1
+	o Gorm-0.9.2
 	o GridSim-3.1
 	o GutenMark-20040320
 	o MayaVi-1.4
@@ -433,7 +434,7 @@ Suggested package updates
 	o egtk-0.3.6
 	o electricfence-2.4.13
 	o elf-0.5.4
-	o elinks-0.10.2
+	o elinks-0.10.3
 	o elk-3.99.6
 	o elm-2.5.7
 	o elm-me-2.5plalpha4
@@ -484,7 +485,6 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdeskcal-0.57.1
 	o gdm1-2.2.5.5
-	o gerbv-1.0.1
 	o getmail-4.3.3
 	o gettext-0.14.1
 	o gftp-2.0.18
@@ -649,7 +649,7 @@ Suggested package updates
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
 	o mailman-2.1.5
-	o mailscanner-4.39.3
+	o mailscanner-4.39.5
 	o mairix-0.15.2
 	o makeself-2.1.3
 	o maketool-0.8.4
@@ -1142,6 +1142,7 @@ Suggested package updates
 	o webmin-1.180
 	o weechat-0.1.0
 	o weewm-0.01
+	o wesnoth-0.8.11
 	o winbind-3.0.11
 	o windowlab-1.26
 	o wl-2.12.2 [pkg/29043]
