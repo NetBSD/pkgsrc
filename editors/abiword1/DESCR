@@ -6,3 +6,6 @@ and the image insertion.  It is also able to import documents from Microsoft
 Word 97 and rtf (Rich Text Format) and to save documents using Internet HTML
 format.  Several other features are planned for future releases, these
 include tables, lists and a Microsoft Word exporter.
+
+This version is using GTK+1; for the current version please look
+at the ``abiword'' package.

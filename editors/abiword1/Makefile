@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/26 18:20:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/26 18:25:30 wiz Exp $
 #
 # According to AbiSource's explanation of their trademark rights,
 # compilations/distributions of AbiWord not provided by AbiSource must
@@ -14,12 +14,14 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=abiword/}
 
 MAINTAINER=	dawszy@arhea.net
 HOMEPAGE=	http://www.abisource.com/
-COMMENT=	Open Source cross-platform word processor
+COMMENT=	Open Source cross-platform word processor (version 1, older)
 
 DEPENDS+=	ispell-base-[0-9]*:../../textproc/ispell-base
 
 DIST_SUBDIR=	abisuite
 ABIWORD_VERS=	1.0.5
+
+CONFLICTS=	abiword-[0-9]* abiword2-[0-9]*
 
 USE_BUILDLINK2=	# defined
 USE_X11=	# defined
