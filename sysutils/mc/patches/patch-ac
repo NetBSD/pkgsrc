@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.4 1998/10/04 18:22:32 tv Exp $
+
 --- Make.common.in.orig	Mon May 25 06:16:04 1998
 +++ Make.common.in	Sun Oct  4 09:09:45 1998
 @@ -17,6 +17,7 @@
