@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1920 2004/07/13 08:03:27 adam Exp $
+$NetBSD: TODO,v 1.1921 2004/07/13 08:20:34 adam Exp $
 
 Suggested new packages
 ======================
@@ -421,7 +421,6 @@ Suggested package updates
 	o xmmsctrl-0.8
 	o xorp-0.5
 	o xpad-1.13.1
-	o xplanet-1.1.0
 	o xps-4.2
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre20
