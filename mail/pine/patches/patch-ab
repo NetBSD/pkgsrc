@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.8 2002/11/26 21:41:09 cjep Exp $
 --- pine/makefile.lnx.orig	Tue Oct 23 23:24:48 2001
 +++ pine/makefile.lnx	Mon Jul  8 16:02:59 2002
 @@ -47,9 +47,11 @@
