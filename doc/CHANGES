@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1602 2003/03/09 10:59:01 jmmv Exp $
+$NetBSD: CHANGES,v 1.1603 2003/03/09 12:26:28 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1008,3 +1008,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wmcpuload to 1.0.1 [jmmv 2003-03-09]
 	Added wmmemmon-1.0.0 [jmmv 2003-03-09]
 	Updated windowmaker-desktop to 1.1 [jmmv 2003-03-09]
+	Updated drac to 1.12 [jmmv 2003-03-09]
