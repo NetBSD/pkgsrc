@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.25 2003/09/23 02:03:36 jschauma Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.26 2003/10/10 10:15:09 grant Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -481,11 +481,11 @@ long long strtoll(const char *, char **, int);
 # define NO_LONG_LONG	1
 #endif	/* ! HAVE_QUAD_SUPPORT */
 
-#if !LLONG_MAX
+#if ! defined(LLONG_MAX)
 # define LLONG_MAX	0x7fffffffffffffffLL	/* max long long */
 #endif
 
-#if !ULLONG_MAX
+#if ! defined(ULLONG_MAX)
 # define ULLONG_MAX	0xffffffffffffffffULL	/* max unsigned long long */
 #endif
 
