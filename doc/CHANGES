@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3761 2003/10/29 23:02:34 jlam Exp $
+$NetBSD: CHANGES,v 1.3762 2003/10/30 07:19:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4280,3 +4280,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sun-jdk14 to 2.2 [jschauma 2003-10-29]
 	Updated MozillaFirebird-bin-realplayer to 1.0nb1 [xtraeme 2003-10-29]
 	Updated pkg_install to 20031003 [jlam 2003-10-29]
+	Updated naim to 0.11.6.3 [wiz 2003-10-30]
