@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/01/04 19:59:35 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/02/15 10:38:17 wiz Exp $
 bin/pango-querymodules
 include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-break.h
@@ -27,22 +27,22 @@ lib/libpango-1.0.a
 lib/libpango-1.0.la
 lib/libpango-1.0.so
 lib/libpango-1.0.so.200
-lib/libpango-1.0.so.200.0
+lib/libpango-1.0.so.200.1
 lib/libpangoft2-1.0.a
 lib/libpangoft2-1.0.la
 lib/libpangoft2-1.0.so
 lib/libpangoft2-1.0.so.200
-lib/libpangoft2-1.0.so.200.0
+lib/libpangoft2-1.0.so.200.1
 lib/libpangox-1.0.a
 lib/libpangox-1.0.la
 lib/libpangox-1.0.so
 lib/libpangox-1.0.so.200
-lib/libpangox-1.0.so.200.0
+lib/libpangox-1.0.so.200.1
 lib/libpangoxft-1.0.a
 lib/libpangoxft-1.0.la
 lib/libpangoxft-1.0.so
 lib/libpangoxft-1.0.so.200
-lib/libpangoxft-1.0.so.200.0
+lib/libpangoxft-1.0.so.200.1
 lib/pango/1.2.0/modules/pango-arabic-ft2.a
 lib/pango/1.2.0/modules/pango-arabic-ft2.la
 lib/pango/1.2.0/modules/pango-arabic-ft2.so
