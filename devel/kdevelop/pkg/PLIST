@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2000/05/05 13:51:44 wulf Exp $
+@comment $NetBSD: PLIST,v 1.9 2000/08/01 21:44:03 tron Exp $
 include/kdlgloader.h
 lib/libkdlgloader.a
 lib/libkdlgloader.so.1.0
@@ -460,8 +460,10 @@ share/kde/apps/kdevelop/pix/breakpoint_bl.xpm
 share/kde/apps/kdevelop/pix/breakpoint_gr.xpm
 share/kde/apps/kdevelop/pix/ddd.xpm
 share/kde/locale/de/LC_MESSAGES/kdevelop.mo
+share/kde/locale/et/LC_MESSAGES/kdevelop.mo
 share/kde/locale/fr/LC_MESSAGES/kdevelop.mo
 share/kde/locale/sv/LC_MESSAGES/kdevelop.mo
+share/kde/locale/ja/LC_MESSAGES/kdevelop.mo
 share/kde/locale/cs/LC_MESSAGES/kdevelop.mo
 share/kde/locale/es/LC_MESSAGES/kdevelop.mo
 share/kde/locale/ru/LC_MESSAGES/kdevelop.mo
@@ -469,12 +471,16 @@ share/kde/locale/hu/LC_MESSAGES/kdevelop.mo
 share/kde/locale/da/LC_MESSAGES/kdevelop.mo
 share/kde/locale/it/LC_MESSAGES/kdevelop.mo
 share/kde/locale/pt/LC_MESSAGES/kdevelop.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kdevelop.mo
 share/kde/locale/pl/LC_MESSAGES/kdevelop.mo
 share/kde/locale/fi/LC_MESSAGES/kdevelop.mo
 share/kde/locale/sk/LC_MESSAGES/kdevelop.mo
 share/kde/locale/tr/LC_MESSAGES/kdevelop.mo
+share/kde/locale/zh_CN.GB2312/LC_MESSAGES/kdevelop.mo
+share/kde/icons/development_package.xpm
 share/kde/icons/kdevelop.xpm
 share/kde/icons/kdevelop-project.xpm
+share/kde/icons/mini/development_package.xpm
 share/kde/icons/mini/kdevelop.xpm
 share/kde/mimelnk/application/x-kdevelop-project.kdelnk
 share/kde/applnk/Development/kdevelop.kdelnk
