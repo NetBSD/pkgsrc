@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/11/25 19:11:58 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/06 18:09:30 minskim Exp $
 
 DISTNAME=	acme-2.4.2
 PKGNAME=	gnome-${DISTNAME}
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Small GNOME tool to make use of the multimedia buttons
 
 DEPENDS=	gnome2-control-center>=2.0:../../x11/gnome2-control-center
-
-BUILDLINK_DEPENDS.libwnck+=	libwnck>=2.6.2.1
 
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
