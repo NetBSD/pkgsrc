@@ -1,0 +1,9 @@
+Hatari is an Atari ST emulator for systems supported by the SDL library.
+
+Hatari is based on two main sources:
+- The WinSTon sourcecode written by Paul Bates
+  (http://www.sourceforge.net/projects/winston/)
+- The UAE's CPU core (http://www.freiburg.linux.de/~uae/)
+
+You need a copy of an Atari ST TOS ROM to use this program. Then run
+the program as follows:	hatari --tos tos.image
