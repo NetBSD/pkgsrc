@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 1999/10/09 16:51:11 jlam Exp $
+
+--- source/Makefile.in.orig	Thu Sep  2 21:56:08 1999
++++ source/Makefile.in	Sat Oct  9 03:24:15 1999
+@@ -68,8 +68,8 @@
+ bin_PROGRAMS = gdcd
+ gdcd_SOURCES = gdcd.c thread.c cddb.c coverart.c
+ 
+-CFLAGS = @CFLAGS@ `gtk-config --cflags` -DIMAGE_PATH=\"@IMAGE_PATH@\"
+-LDFLAGS = @LDFLAGS@ `gtk-config --libs` -lcdaudio -lgdk_imlib -lpthread
++CFLAGS = @CFLAGS@ `gtk-config --cflags` `imlib-config --cflags` -DIMAGE_PATH=\"@IMAGE_PATH@\"
++LDFLAGS = @LDFLAGS@ `gtk-config --libs` `imlib-config --libs` -lcdaudio -lgdk_imlib -lpthread
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
