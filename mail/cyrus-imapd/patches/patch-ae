@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2000/12/10 19:33:03 jlam Exp $
+
+--- man/Makefile.in.orig	Mon Sep 27 13:24:48 1999
++++ man/Makefile.in
+@@ -52,7 +52,7 @@
+ MAN3 = $(srcdir)/imclient.3
+ MAN5 = $(srcdir)/imapd.conf.5 $(srcdir)/krb.equiv.5
+ MAN8 = $(srcdir)/arbitron.8 $(srcdir)/collectnews.8 $(srcdir)/deliver.8 \
+-	$(srcdir)/fud.8 $(srcdir)/imapd.8 $(srcdir)/pop3d.8 $(srcdir)/quota.8 \
++	$(srcdir)/fud.8 $(srcdir)/cyrus-imapd.8 $(srcdir)/pop3d.8 $(srcdir)/quota.8 \
+ 	$(srcdir)/reconstruct.8 $(srcdir)/rmnews.8 $(srcdir)/syncnews.8 \
+ 	$(srcdir)/mbpath.8 $(srcdir)/timsieved.8
+ 
