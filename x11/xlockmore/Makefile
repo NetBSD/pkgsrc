@@ -1,18 +1,17 @@
 # New ports collection makefile for:	xlockmore
-# Version required:     4.05
-# Date created:		9 November 1994
-# Whom:			smace
+# Version required:     4.08
+# Date created:		2 March 1998
+# Whom:			hubertf
 #
-# $NetBSD: Makefile,v 1.8 1998/02/06 03:15:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 1998/03/02 16:02:12 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
-DISTNAME=       xlockmore-4.07
+DISTNAME=       xlockmore-4.08
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_XCONTRIB}
-MASTER_SITE_SUBDIR=	applications
+MASTER_SITES=	ftp://ftp.tux.org/pub/tux/bagleyd/xlockmore/
 
-MAINTAINER=	tg@FreeBSD.ORG
+MAINTAINER=	hubertf@netbsd.org
 
 LIB_DEPENDS=	Xpm.4.:${PORTSDIR}/graphics/xpm \
 		MesaGL.2.:${PORTSDIR}/graphics/Mesa
