@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2000/03/28 21:48:42 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.5 2000/04/01 18:54:00 dmcmahill Exp $
 
 --- configure.orig	Wed Oct 27 19:59:43 1999
-+++ configure	Mon Mar 27 19:29:18 2000
++++ configure	Sat Apr  1 13:33:09 2000
 @@ -10,5 +10,5 @@
  # Defaults:
  ac_help=
@@ -16,3 +16,31 @@ $NetBSD: patch-aa,v 1.4 2000/03/28 21:48:42 dmcmahill Exp $
 +exec_prefix=NONE
  host=NONE
  no_create=
+@@ -1027,5 +1027,5 @@
+   X_LDFLAGS=""
+   x_libraries="/usr/lib";  else
+-  X_LDFLAGS="-L$x_libraries"
++  X_LDFLAGS="-L$x_libraries -Wl,-R$x_libraries"
+ fi
+ all_includes="$all_includes $X_INCLUDES"  
+@@ -2178,5 +2178,5 @@
+ 
+ CXXFLAGS="$CXXFLAGS -I$qt_incdir"
+-LDFLAGS="-L$qt_libdir $X_LDFLAGS"
++LDFLAGS="-L$qt_libdir -Wl,-R$qt_libdir $X_LDFLAGS"
+ LIBS="$LIBS -lqt -lXext -lX11 $LIBSOCKET"
+ 
+@@ -2266,5 +2266,5 @@
+ CXXFLAGS="$CXXFLAGS -I$qt_includes"
+ LDFLAGS="$X_LDFLAGS"
+-LIBS="-lqt -lXext -lX11 $LIBSOCKET"
++LIBS="-lqt -lXext -lX11 -lz -lpng -lSM $LIBSOCKET"
+ LD_LIBRARY_PATH=
+ export LD_LIBRARY_PATH
+@@ -2335,5 +2335,5 @@
+  QT_LDFLAGS=""
+ else
+- QT_LDFLAGS="-L$qt_libraries"
++ QT_LDFLAGS="-L$qt_libraries -Wl,-R$qt_libraries"
+  all_libraries="$QT_LDFLAGS $all_libraries"
+ fi
