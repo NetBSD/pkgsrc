@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/03/01 13:11:47 jmmv Exp $
+
+--- mono/metadata/mono-config.c.orig	2003-02-06 10:53:03.000000000 +0100
++++ mono/metadata/mono-config.c
+@@ -255,9 +255,9 @@ mono_config_parse (const char *filename)
+ 	}
+ #if defined (PLATFORM_WIN32)
+ 	/* maybe it's better to use a registry key or the install root from the binary */
+-	mono_config_parse_file (MONO_CFG_DIR "\\mono\\config");
++	mono_config_parse_file (MONO_CFG_DIR "\\config");
+ #else
+-	mono_config_parse_file (MONO_CFG_DIR "/mono/config");
++	mono_config_parse_file (MONO_CFG_DIR "/config");
+ 	home = g_get_home_dir ();
+ 	user_cfg = g_strconcat (home, G_DIR_SEPARATOR_S, ".mono/config", NULL);
+ 	mono_config_parse_file (user_cfg);

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/03/01 13:11:47 jmmv Exp $
+
+--- mono/metadata/icall.c.orig	2003-02-21 23:42:15.000000000 +0100
++++ mono/metadata/icall.c
+@@ -3074,7 +3074,7 @@ ves_icall_System_Configuration_DefaultCo
+ 	if (mcpath != NULL)
+ 		return mcpath;
+ 
+-	path = g_build_path (G_DIR_SEPARATOR_S, mono_cfg_dir, "mono", "machine.config", NULL);
++	path = g_build_path (G_DIR_SEPARATOR_S, mono_cfg_dir, "machine.config", NULL);
+ 
+ #if defined (PLATFORM_WIN32)
+ 	/* Avoid mixing '/' and '\\' */
