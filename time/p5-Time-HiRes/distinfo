@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2003/09/13 08:42:20 jlam Exp $
+$NetBSD: distinfo,v 1.7 2003/12/03 10:52:27 chris Exp $
 
-SHA1 (Time-HiRes-1.50.tar.gz) = 8b6c8be15cd4fd4bb7171e4243d306f9b0ab3ae8
-Size (Time-HiRes-1.50.tar.gz) = 28148 bytes
+SHA1 (Time-HiRes-1.52.tar.gz) = 8a3df5c7c22a43b4e8105045036d3c4093aa48a4
+Size (Time-HiRes-1.52.tar.gz) = 28740 bytes
