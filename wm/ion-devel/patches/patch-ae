@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/01/09 23:03:20 cube Exp $
+
+--- pwm/Makefile.orig	2003-12-11 18:16:16.000000000 +0100
++++ pwm/Makefile
+@@ -57,5 +57,5 @@ _install:
+ 	$(INSTALLDIR) $(BINDIR)
+ 	$(INSTALL) -m $(BIN_MODE) pwm $(BINDIR)
+ 	# $(STRIP) $(BINDIR)/pwm
+-	$(INSTALLDIR) $(PWM_ETCDIR)
+-	$(INSTALL) -m $(DATA_MODE) pwm.lua $(PWM_ETCDIR)
++	$(INSTALLDIR) $(EXDIR)
++	$(INSTALL) -m $(DATA_MODE) pwm.lua $(EXDIR)

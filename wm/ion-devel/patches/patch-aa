@@ -1,0 +1,90 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/09 23:03:20 cube Exp $
+
+--- system.mk.orig	2003-12-11 18:16:16.000000000 +0100
++++ system.mk
+@@ -7,7 +7,7 @@
+ ## Installation paths
+ ##
+ 
+-PREFIX=/usr/local
++PREFIX=/usr/pkg
+ 
+ # Unless you are creating a package conforming to some OS's standards, you
+ # probably do not want to modify the following directories:
+@@ -16,12 +16,14 @@ PREFIX=/usr/local
+ BINDIR=$(PREFIX)/bin
+ # Configuration .lua files
+ ETCDIR=$(PREFIX)/etc/ion
++# Installation of configuration files
++EXDIR=$(PREFIX)/share/examples/ion
+ # Some .lua files and ion-* shell scripts
+ SHAREDIR=$(PREFIX)/share/ion
+ # Manual pages
+ MANDIR=$(PREFIX)/man
+ # Some documents
+-DOCDIR=$(PREFIX)/doc/ion
++DOCDIR=$(PREFIX)/share/doc/ion
+ # Nothing at the moment
+ INCDIR=$(PREFIX)/include/ion
+ # Nothing at the moment
+@@ -40,7 +42,7 @@ EXTRABINDIR=$(LIBDIR)/ion
+ # libtool because even more-recent-than-libtool-1.4.3 releases of those
+ # OSes only have an _ancient_ 1.3.x libtool that _will_ _not_ _work even
+ # though a lot of libltdl-using apps require 1.4.3. 
+-LIBTOOL=libtool
++LIBTOOL=/usr/pkg/bin/libtool
+ 
+ # Settings for compiling and linking to ltdl
+ LTDL_INCLUDES=
+@@ -68,8 +70,8 @@ LTDL_LIBS=-lltdl
+ 
+ # If you have installed Lua 5.0 from the official tarball without changing
+ # paths, this so do it.
+-LUA_DIR=/usr/local
+-LUA_LIBS = -L$(LUA_DIR)/lib -R$(LUA_DIR)/lib -llua -llualib
++LUA_DIR=/usr/pkg
++LUA_LIBS = -L$(LUA_DIR)/lib -R$(LUA_DIR)/lib -llua -llualib -R$(LUA_DIR)/lib
+ LUA_INCLUDES = -I$(LUA_DIR)/include
+ LUA=$(LUA_DIR)/bin/lua
+ LUAC=$(LUA_DIR)/bin/luac
+@@ -91,7 +93,7 @@ X11_PREFIX=/usr/X11R6
+ # SunOS/Solaris
+ #X11_PREFIX=/usr/openwin
+ 
+-X11_LIBS=-L$(X11_PREFIX)/lib -lX11 -lXext
++X11_LIBS=-L$(X11_PREFIX)/lib -lX11 -lXext -R$(X11_PREFIX)/lib
+ X11_INCLUDES=-I$(X11_PREFIX)/include
+ 
+ # Change commenting to disable Xinerama support
+@@ -123,7 +125,7 @@ DEFINES += -DCF_XFREE86_TEXTPROP_BUG_WOR
+ ## C compiler
+ ##
+ 
+-CC=gcc
++#CC=gcc
+ 
+ # The POSIX_SOURCE, XOPEN_SOURCE and WARN options should not be necessary,
+ # they're mainly for development use. So, if they cause trouble (not
+@@ -153,8 +155,8 @@ WARN=	-W -Wimplicit -Wreturn-type -Wswit
+ # following should optimize function calls to Lua a little.
+ #C99_SOURCE=-std=c99 -DCF_HAS_VA_COPY
+ 
+-CFLAGS=-g -Os $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
+-LDFLAGS=-g -Os $(LIBS) $(EXTRA_LIBS)
++CFLAGS+=-g $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
++LDFLAGS+=-g $(LIBS) $(EXTRA_LIBS)
+ 
+ 
+ ##
+@@ -180,9 +182,9 @@ RANLIB=ranlib
+ ##
+ 
+ # Should work almost everywhere
+-INSTALL=install
++#INSTALL=install
+ # On a system with pure BSD install, -c might be preferred
+-#INSTALL=install -c
++INSTALL=install -c
+ 
+ INSTALLDIR=mkdir -p
+ 
