@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2001/05/03 22:16:50 jtb Exp $
+# $NetBSD: Makefile,v 1.10 2001/06/25 17:48:34 jtb Exp $
 
-DISTNAME=		stalin
-PKGNAME=		stalin-0.8
+DISTNAME=		stalin-0.9
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.nj.nec.com/pub/qobi/
-EXTRACT_SUFX=		.tar.Z
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.neci.nj.nec.com/homepages/qobi/software.html
@@ -13,38 +12,22 @@ COMMENT=		Aggressively optimizing Scheme compiler
 DEPENDS+=		boehm-gc-*:../../devel/boehm-gc
 
 USE_MESA=		yes
-WRKSRC=			${WRKDIR}/${PKGNAME}
-
-GC_PREFIX_DEFAULT=	${LOCALBASE}
-EVAL_PREFIX+=		GC_PREFIX=boehm-gc
 
 post-patch:
-	@${RM} -f ${WRKSRC}/benchmarks/*.orig
-	@for i in stalin.sc stalin-32.c stalin-alpha.c stalinc stalin.1	 \
-	benchmarks/benchmark benchmarks/compile-and-run-stalin-benchmark \
-	benchmarks/compile-stalin-benchmark				 \
-	benchmarks/make-define-application-example			 \
-	benchmarks/make-hello benchmarks/make-xhello; do		 \
-	${SED} -e 's:@PREFIX@:'${PREFIX}':g'				 \
-		-e 's:@GC_PREFIX@:'${GC_PREFIX}':g'			 \
-		-e 's:@X11BASE@:'${X11BASE}':g' ${WRKSRC}/$$i >		 \
-	${WRKSRC}/$$i.tmp && ${MV} ${WRKSRC}/$$i.tmp ${WRKSRC}/$$i;	 \
-	done
+	${SED} -e 's:@PREFIX@:${PREFIX}:g'			\
+		-e 's:@LOCALBASE@:${LOCALBASE}:g'		\
+		-e 's:@X11BASE@:${X11BASE}:g'			\
+	${FILESDIR}/stalin.sh > ${WRKSRC}/stalin.sh
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/stalin ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/stalinc ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/stalin
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/stalin
+	${INSTALL_PROGRAM} ${WRKSRC}/stalin ${PREFIX}/lib/stalin
+	${INSTALL_SCRIPT} ${WRKSRC}/stalin.sh ${PREFIX}/bin/stalin
+	${INSTALL_DATA} ${WRKSRC}/include/*.sc ${PREFIX}/lib/stalin
 	${INSTALL_DATA} ${WRKSRC}/libstalin.a ${PREFIX}/lib/stalin
-	${INSTALL_DATA} ${WRKSRC}/gl-c.o ${PREFIX}/lib/stalin
-	${INSTALL_DATA} ${WRKSRC}/xlib-c.o ${PREFIX}/lib/stalin
-	${INSTALL_DATA} ${WRKSRC}/include/*.sc ${PREFIX}/lib/stalin/
 	${INSTALL_MAN} ${WRKSRC}/stalin.1 ${PREFIX}/man/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/stalin
-	cd ${WRKSRC} && ${INSTALL_DATA} ANNOUNCEMENT COPYING README 	\
-		stalin.el ${PREFIX}/share/stalin/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/stalin/benchmarks
-	${INSTALL_DATA} ${WRKSRC}/benchmarks/*  			\
-		${PREFIX}/share/stalin/benchmarks/ 			\
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/stalin
+	cd ${WRKSRC} && ${INSTALL_DATA} ANNOUNCEMENT COPYING README	\
+		stalin.el ${PREFIX}/share/doc/stalin/
 
 .include "../../mk/bsd.pkg.mk"
