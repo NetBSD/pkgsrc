@@ -1,4 +1,4 @@
-# 	$NetBSD: Makefile,v 1.2 1999/09/18 20:28:25 ad Exp $
+# 	$NetBSD: Makefile,v 1.3 1999/09/18 21:08:46 ad Exp $
 
 DISTNAME=	exim-3.03
 CATEGORIES=	mail net
@@ -42,5 +42,7 @@ post-install:
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
 	    < ${FILESDIR}/mailer.conf.exim \
 	    > ${PREFIX}/etc/mailer.conf.exim
+	${MKDIR} ${PREFIX}/man/man8
+	cp ${FILESDIR}/exim.8 ${PREFIX}/man/man8/exim.8
 
 .include "../../mk/bsd.pkg.mk"

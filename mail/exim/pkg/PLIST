@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/09/18 20:28:27 ad Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/09/18 21:08:46 ad Exp $
 etc/exim/configure
 etc/rc.d/exim.sh
 etc/mailer.conf.exim
@@ -15,4 +15,5 @@ sbin/eximstats
 sbin/exinext
 sbin/exiqsumm
 sbin/exiwhat
+man/man8/exim.8
 @unexec rmdir %D/etc/exim /var/log/exim 2>/dev/null || true
