@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2001/05/31 11:30:06 minoura Exp $
+# $NetBSD: Makefile,v 1.100 2001/06/09 10:42:09 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -8,9 +8,9 @@ SUBDIR+=	STk
 SUBDIR+=	a60
 SUBDIR+=	awka
 SUBDIR+=	baci
+SUBDIR+=	blackdown-jdk13
 SUBDIR+=	brandybasic
 SUBDIR+=	bwbasic
-SUBDIR+=	blackdown-jdk13
 SUBDIR+=	caml-light
 SUBDIR+=	camlp4
 SUBDIR+=	cim
@@ -19,6 +19,7 @@ SUBDIR+=	clisp
 SUBDIR+=	cu-prolog
 SUBDIR+=	drscheme
 SUBDIR+=	egcs
+SUBDIR+=	eieio
 SUBDIR+=	elisp-manual
 SUBDIR+=	elk
 SUBDIR+=	f2c
