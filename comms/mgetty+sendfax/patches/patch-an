@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1.2.2 2003/12/30 16:17:13 agc Exp $
+
+--- fax/faxq.in.orig	2002-11-23 12:57:59.000000000 -0600
++++ fax/faxq.in
+@@ -21,7 +21,7 @@ AWK=@AWK@
+ 
+ #
+ # helper program for privileged queue access
+-FAXQ_HELPER=/usr/local/lib/mgetty+sendfax/faxq-helper
++FAXQ_HELPER=@LIBDIR@/faxq-helper
+ 
+ if cd $FAX_SPOOL_OUT 
+ then :

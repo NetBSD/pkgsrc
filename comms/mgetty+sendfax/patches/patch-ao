@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1.2.2 2003/12/30 16:17:13 agc Exp $
+
+--- fax/faxrm.in.orig	2002-11-16 16:16:51.000000000 -0600
++++ fax/faxrm.in
+@@ -16,7 +16,7 @@ FAX_SPOOL_OUT=@FAX_SPOOL_OUT@
+ echo="@ECHO@"
+ #
+ # helper program for privileged queue access
+-FAXQ_HELPER=/usr/local/lib/mgetty+sendfax/faxq-helper
++FAXQ_HELPER=@LIBDIR@/faxq-helper
+ #
+ 
+ if [ ! -d $FAX_SPOOL_OUT ]
