@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2004/03/02 16:05:01 adam Exp $
+# $NetBSD: Makefile,v 1.17 2004/05/03 16:33:45 jmmv Exp $
 #
 
 DISTNAME=	ffcall-1.9
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=libs/} \
 		ftp://ftp.santafe.edu/pub/gnu/ \
@@ -21,7 +22,10 @@ ONLY_FOR_PLATFORM=	*-*-alpha *-*-arm *-*-convex *-*-hppa *-*-i386 \
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
 CONFIGURE_ARGS+=	--enable-shared
+
+MAKE_FLAGS+=		htmldir=${PREFIX}/share/doc/ffcall
 
 post-patch:
 	${CP} ${FILESDIR}/tramp-rs6000-netbsd.s ${WRKSRC}/callback/trampoline_r
