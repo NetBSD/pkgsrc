@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6745 2004/07/31 21:42:44 wiz Exp $
+$NetBSD: CHANGES,v 1.6746 2004/07/31 22:32:16 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3667,3 +3667,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added suse91_openmotif-9.1 [jdolecek 2004-07-31]
 	Updated nsd to 2.1.2 [itojun 2004-07-31]
 	Updated scmxx to 0.7.2 [wiz 2004-07-31]
+	Updated kphotools to 0.2.1nb1 [markd 2004-07-31]
