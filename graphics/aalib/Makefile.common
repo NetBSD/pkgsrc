@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2004/01/20 12:18:15 agc Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/01/24 01:33:49 kristerw Exp $
 
 DISTNAME=	aalib-${DIST_VERS}
 CATEGORIES+=	graphics
@@ -21,7 +21,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--with-curses-driver=no
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_PKGSRC_GCC=		# defined
+GCC_REQD=		2.95.3
 .endif
 
 .if !target(post-patch)
