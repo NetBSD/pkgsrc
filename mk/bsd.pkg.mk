@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.761 2001/06/16 04:11:30 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.762 2001/06/18 21:23:35 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -310,11 +310,17 @@ M4?=			/usr/bin/m4
 
 .if defined(USE_MOTIF) || defined(USE_X11BASE) || defined(USE_X11)
 .if defined(USE_MOTIF)
-LDFLAGS+=		-Wl,-R${MOTIFBASE}/lib -L${MOTIFBASE}/lib
+LDFLAGS+=		-Wl,-R${MOTIFBASE}/lib
+.if !defined(USE_BUILDLINK_ONLY) || (${MOTIFBASE} != ${LOCALBASE})
+LDFLAGS+=		-L${MOTIFBASE}/lib
+.endif
 .endif
 LDFLAGS+=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
 .endif
-LDFLAGS+=		-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
+LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
+.if !defined(USE_BUILDLINK_ONLY)
+LDFLAGS+=		-L${LOCALBASE}/lib
+.endif
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
 CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS}" M4="${M4}" YACC="${YACC}"
 
@@ -649,7 +655,11 @@ PKG_DBDIR?=		${DESTDIR}/var/db/pkg
 
 # shared/dynamic motif libs
 .if defined(USE_MOTIF)
+.if defined(USE_BUILDLINK_ONLY) && (${MOTIFBASE} == ${LOCALBASE})
+MOTIFLIB?=	-L${X11BASE}/lib -Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm -lXp
+.else
 MOTIFLIB?=	-L${MOTIFBASE}/lib -L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm -lXp
+.endif
 .endif
 
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
