@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.3 2002/03/10 18:34:14 seb Exp $
+# $NetBSD: texinfo.mk,v 1.4 2002/03/10 18:35:20 seb Exp $
 #
 # This Makefile fragment is included by packages that provide info files.
 #
@@ -51,7 +51,7 @@ MAKE_ENV+=      MAKEINFO="${MAKEINFO}" INSTALL_INFO="${INSTALL_INFO}"
 # and bare makeinfo and install-info words  in target rules commands and in
 # Makefiles variable assignments for the files matching ${TEXINFO_PATTERNS}.
 #
-# Note: there are embeded tabs in some variables below.
+# Note: there are embedded tabs in some variables below.
 #
 TEXINFO_OVERRIDE?=	NO
 
@@ -81,4 +81,4 @@ texinfo-override:
 	done )
 .endif # TEXINFO_OVERRIDE
 
-.endif	# TEXINFO_MK
+.endif # TEXINFO_MK
