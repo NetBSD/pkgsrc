@@ -1,7 +1,6 @@
 
 		scotty - network management extensions to tcl
 
-
 scotty is a tcl extension which allows to set up TCP and UDP
 connections, to send various ICMP packets, to query the domain name
 system (DNS), to check clock screw using the NTP protocol and to query

@@ -9,11 +9,6 @@ Many CD players (such as xmcd--another FreeBSD port, and DiscPlay
 for Windows) can connect to this server through the Internet and
 download CD data from the server machine's CDDB.
 
-Current on-line information on cddbd can be found on the World
-Wide Web page with the following URL:
-
-	http://www.moonsoft.com/software.html
-
 --
 Port to FreeBSD 2.2 by
 Brent J. Nordquist <bjn@visi.com>
