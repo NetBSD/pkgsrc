@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.2 2003/01/02 09:12:26 skrll Exp $
+$NetBSD: patch-ah,v 1.3 2003/03/11 13:25:00 markd Exp $
 
---- kuickshow/src/Makefile.in.orig	Tue Dec 31 13:27:55 2002
+--- kuickshow/src/Makefile.in.orig	Fri Jan 17 08:46:53 2003
 +++ kuickshow/src/Makefile.in
-@@ -237,17 +237,16 @@ x_includes = @x_includes@
+@@ -260,26 +260,29 @@ x_includes = @x_includes@
  x_libraries = @x_libraries@
  
  bin_PROGRAMS = kuickshow
@@ -23,9 +23,8 @@ $NetBSD: patch-ah,v 1.2 2003/01/02 09:12:26 skrll Exp $
 +libkuickshow_main_la_SOURCES = kuickshow.cpp \
  	aboutwidget.cpp     generalwidget.cpp  kuickconfigdlg.cpp  main.cpp \
  	defaultswidget.cpp  imagewindow.cpp    kuickdata.cpp  \
- 	imdata.cpp          basewidget.cpp \
-@@ -255,9 +254,13 @@ kuickshow_la_SOURCES = kuickshow.cpp \
- 	logotabdialog.cpp  kuickio.cpp    kuick.cpp imlibwidget.cpp
+ 	imdata.cpp filefinder.cpp kurlwidget.cpp filewidget.cpp \
+ 	kuickio.cpp kuick.cpp imlibwidget.cpp slideshowwidget.cpp printing.cpp
  
  
 +kuickshow_la_LDFLAGS = $(all_libraries) -module -avoid-version
@@ -40,16 +39,16 @@ $NetBSD: patch-ah,v 1.2 2003/01/02 09:12:26 skrll Exp $
  kuickshow_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  # if you "make distclean", this files get removed. If you want to remove
-@@ -273,30 +276,35 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -295,30 +298,35 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
 -kuickshow_la_DEPENDENCIES =
 -am_kuickshow_la_OBJECTS = kuickshow.lo aboutwidget.lo generalwidget.lo \
 -	kuickconfigdlg.lo main.lo defaultswidget.lo imagewindow.lo \
--	kuickdata.lo imdata.lo basewidget.lo filefinder.lo \
--	kurlwidget.lo logo.lo filewidget.lo logotabdialog.lo kuickio.lo \
--	kuick.lo imlibwidget.lo
+-	kuickdata.lo imdata.lo filefinder.lo kurlwidget.lo \
+-	filewidget.lo kuickio.lo kuick.lo imlibwidget.lo \
+-	slideshowwidget.lo printing.lo
 +kuickshow_la_DEPENDENCIES = libkuickshow_main.la
 +am_kuickshow_la_OBJECTS = kuickshow_main.lo
  #>- kuickshow_la_OBJECTS = $(am_kuickshow_la_OBJECTS)
@@ -58,25 +57,24 @@ $NetBSD: patch-ah,v 1.2 2003/01/02 09:12:26 skrll Exp $
 +libkuickshow_main_la_DEPENDENCIES =
 +am_libkuickshow_main_la_OBJECTS = kuickshow.lo aboutwidget.lo \
 +	generalwidget.lo kuickconfigdlg.lo main.lo defaultswidget.lo \
-+	imagewindow.lo kuickdata.lo imdata.lo basewidget.lo \
-+	filefinder.lo kurlwidget.lo logo.lo filewidget.lo \
-+	logotabdialog.lo kuickio.lo kuick.lo imlibwidget.lo
++	imagewindow.lo kuickdata.lo imdata.lo filefinder.lo \
++	kurlwidget.lo filewidget.lo kuickio.lo kuick.lo imlibwidget.lo \
++	slideshowwidget.lo printing.lo
 +#>- libkuickshow_main_la_OBJECTS = $(am_libkuickshow_main_la_OBJECTS)
  #>+ 8
 -kuickshow_la_final_OBJECTS = kuickshow_la.all_cpp.lo 
 -kuickshow_la_nofinal_OBJECTS = kuickshow.lo aboutwidget.lo generalwidget.lo \
 -	kuickconfigdlg.lo main.lo defaultswidget.lo imagewindow.lo \
--	kuickdata.lo imdata.lo basewidget.lo filefinder.lo \
--	kurlwidget.lo logo.lo filewidget.lo logotabdialog.lo kuickio.lo \
--	kuick.lo imlibwidget.lo
--@KDE_USE_FINAL_FALSE@kuickshow_la_OBJECTS = $(kuickshow_la_nofinal_OBJECTS)
--@KDE_USE_FINAL_TRUE@kuickshow_la_OBJECTS = $(kuickshow_la_final_OBJECTS)
+-	kuickdata.lo imdata.lo filefinder.lo kurlwidget.lo \
+-	filewidget.lo kuickio.lo kuick.lo imlibwidget.lo \
 +libkuickshow_main_la_final_OBJECTS = libkuickshow_main_la.all_cpp.lo 
 +libkuickshow_main_la_nofinal_OBJECTS = kuickshow.lo aboutwidget.lo \
 +	generalwidget.lo kuickconfigdlg.lo main.lo defaultswidget.lo \
-+	imagewindow.lo kuickdata.lo imdata.lo basewidget.lo \
-+	filefinder.lo kurlwidget.lo logo.lo filewidget.lo \
-+	logotabdialog.lo kuickio.lo kuick.lo imlibwidget.lo
++	imagewindow.lo kuickdata.lo imdata.lo filefinder.lo \
++	kurlwidget.lo filewidget.lo kuickio.lo kuick.lo imlibwidget.lo \
+ 	slideshowwidget.lo printing.lo
+-@KDE_USE_FINAL_FALSE@kuickshow_la_OBJECTS = $(kuickshow_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@kuickshow_la_OBJECTS = $(kuickshow_la_final_OBJECTS)
 +@KDE_USE_FINAL_FALSE@libkuickshow_main_la_OBJECTS = $(libkuickshow_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkuickshow_main_la_OBJECTS = $(libkuickshow_main_la_final_OBJECTS)
  bin_PROGRAMS = kuickshow$(EXEEXT)
@@ -93,69 +91,58 @@ $NetBSD: patch-ah,v 1.2 2003/01/02 09:12:26 skrll Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -306,41 +314,47 @@ LIBS = @LIBS@
+@@ -328,7 +336,7 @@ LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
- #>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/aboutwidget.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/basewidget.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/defaultswidget.Plo $(DEPDIR)/dummy.Po \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/defaultswidget.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/filefinder.Plo $(DEPDIR)/filewidget.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/generalwidget.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/imagewindow.Plo $(DEPDIR)/imdata.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/imlibwidget.Plo $(DEPDIR)/kuick.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/kuickconfigdlg.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/kuickdata.Plo $(DEPDIR)/kuickio.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/kuickshow.Plo $(DEPDIR)/kurlwidget.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/logo.Plo $(DEPDIR)/logotabdialog.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/main.Plo
--#>+ 25
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/kuickshow_la.all_cpp.P  $(DEPDIR)/aboutwidget.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kuickshow.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kuickshow_main.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kuickshow_main.Po \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kurlwidget.Plo $(DEPDIR)/logo.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/logotabdialog.Plo $(DEPDIR)/main.Plo
-+#>+ 29
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/libkuickshow_main_la.all_cpp.P  $(DEPDIR)/aboutwidget.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/basewidget.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/defaultswidget.Plo $(DEPDIR)/dummy.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/defaultswidget.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/filefinder.Plo $(DEPDIR)/filewidget.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/generalwidget.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/imagewindow.Plo $(DEPDIR)/imdata.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/imlibwidget.Plo $(DEPDIR)/kuick.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kuickconfigdlg.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kuickdata.Plo $(DEPDIR)/kuickio.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kuickshow.Plo $(DEPDIR)/kurlwidget.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/logo.Plo $(DEPDIR)/logotabdialog.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/main.Plo
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kuickshow.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kuickshow_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kuickshow_main.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kurlwidget.Plo $(DEPDIR)/logo.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/logotabdialog.Plo $(DEPDIR)/main.Plo
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   $(DEPDIR)/aboutwidget.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/basewidget.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/defaultswidget.Plo $(DEPDIR)/dummy.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/defaultswidget.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/filefinder.Plo $(DEPDIR)/filewidget.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/generalwidget.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/imagewindow.Plo $(DEPDIR)/imdata.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/imlibwidget.Plo $(DEPDIR)/kuick.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kuickconfigdlg.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kuickdata.Plo $(DEPDIR)/kuickio.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kuickshow.Plo $(DEPDIR)/kurlwidget.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/logo.Plo $(DEPDIR)/logotabdialog.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/main.Plo
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kuickshow.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kuickshow_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kuickshow_main.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kurlwidget.Plo $(DEPDIR)/logo.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/logotabdialog.Plo $(DEPDIR)/main.Plo
- 
- #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
- #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -361,11 +375,12 @@ CXXLD = $(CXX)
+ am__depfiles_maybe = depfiles
+ #>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/aboutwidget.Plo \
+-#>- @AMDEP_TRUE@	./$(DEPDIR)/defaultswidget.Plo ./$(DEPDIR)/dummy.Po \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/defaultswidget.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/filefinder.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/filewidget.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/generalwidget.Plo \
+@@ -337,12 +345,14 @@ am__depfiles_maybe = depfiles
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/kuickconfigdlg.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/kuickdata.Plo ./$(DEPDIR)/kuickio.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/kuickshow.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kuickshow_main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kuickshow_main.Po \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/kurlwidget.Plo ./$(DEPDIR)/main.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/printing.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/slideshowwidget.Plo
+-#>+ 27
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/kuickshow_la.all_cpp.P  ./$(DEPDIR)/aboutwidget.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/defaultswidget.Plo ./$(DEPDIR)/dummy.Po \
++#>+ 31
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/libkuickshow_main_la.all_cpp.P  ./$(DEPDIR)/aboutwidget.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/defaultswidget.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/filefinder.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/filewidget.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/generalwidget.Plo \
+@@ -351,11 +361,13 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kuickconfigdlg.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kuickdata.Plo ./$(DEPDIR)/kuickio.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kuickshow.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kuickshow_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kuickshow_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kurlwidget.Plo ./$(DEPDIR)/main.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/printing.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/slideshowwidget.Plo
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   ./$(DEPDIR)/aboutwidget.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/defaultswidget.Plo ./$(DEPDIR)/dummy.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/defaultswidget.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/filefinder.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/filewidget.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/generalwidget.Plo \
+@@ -364,6 +376,8 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kuickconfigdlg.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kuickdata.Plo ./$(DEPDIR)/kuickio.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kuickshow.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kuickshow_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kuickshow_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kurlwidget.Plo ./$(DEPDIR)/main.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/printing.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/slideshowwidget.Plo
+@@ -387,11 +401,12 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
@@ -170,50 +157,50 @@ $NetBSD: patch-ah,v 1.2 2003/01/02 09:12:26 skrll Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -414,6 +429,8 @@ clean-libLTLIBRARIES:
- 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+@@ -438,6 +453,8 @@ clean-libLTLIBRARIES:
+ 	done
  kuickshow.la: $(kuickshow_la_OBJECTS) $(kuickshow_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kuickshow_la_LDFLAGS) $(kuickshow_la_OBJECTS) $(kuickshow_la_LIBADD) $(LIBS)
 +libkuickshow_main.la: $(libkuickshow_main_la_OBJECTS) $(libkuickshow_main_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libkuickshow_main_la_LDFLAGS) $(libkuickshow_main_la_OBJECTS) $(libkuickshow_main_la_LIBADD) $(LIBS)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -451,7 +468,6 @@ distclean-compile:
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/aboutwidget.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/basewidget.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/defaultswidget.Plo@am__quote@
--@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/filefinder.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/filewidget.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/generalwidget.Plo@am__quote@
-@@ -463,6 +479,8 @@ distclean-compile:
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kuickdata.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kuickio.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kuickshow.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kuickshow_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kuickshow_main.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kurlwidget.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/logo.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/logotabdialog.Plo@am__quote@
-@@ -542,7 +560,7 @@ distclean-tags:
+@@ -479,7 +496,6 @@ distclean-compile:
  
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/aboutwidget.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/defaultswidget.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/filefinder.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/filewidget.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/generalwidget.Plo@am__quote@
+@@ -491,6 +507,8 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kuickdata.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kuickio.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kuickshow.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kuickshow_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kuickshow_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kurlwidget.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/printing.Plo@am__quote@
+@@ -583,7 +601,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=kuickshow.h mainwidget.h lo32-app-kuickshow.png kuickglobals.h aboutwidget.h filewidget.h filefinder.h logo.h kurlwidget.h hi16-app-kuickshow.png imagewindow.h lo16-app-kuickshow.png defaultswidget.h imdata.h logotabdialog.h basewidget.h kuick.h imlibwidget.h mainwidget.cpp hi32-app-kuickshow.png kuickconfigdlg.h kuickio.h kuickdata.h version.h kuickshow.desktop generalwidget.h 
-+KDE_DIST=kuickshow.h kuickshow.desktop kuickio.h mainwidget.h lo32-app-kuickshow.png imdata.h mainwidget.cpp imlibwidget.h kuickconfigdlg.h version.h lo16-app-kuickshow.png logo.h logotabdialog.h generalwidget.h hi32-app-kuickshow.png kurlwidget.h kuickdata.h kuickglobals.h defaultswidget.h basewidget.h filefinder.h hi16-app-kuickshow.png filewidget.h imagewindow.h kuick.h aboutwidget.h 
+-KDE_DIST=aboutwidget.h imagewindow.h imlibwidget.h kuickconfigdlg.h mainwidget.h mainwidget.cpp kuickdata.h printing.h generalwidget.h cr32-app-kuickshow.png filefinder.h defaultswidget.h imdata.h cr16-app-kuickshow.png slideshowwidget.h kuickshow.desktop kuickshow.h lo32-app-kuickshow.png kuickglobals.h filewidget.h kurlwidget.h lo16-app-kuickshow.png kuick.h kuickio.h version.h 
++KDE_DIST=slideshowwidget.h printing.h Makefile.am.rej kuickshow.h kuickshow.desktop kuickio.h cr32-app-kuickshow.png mainwidget.h cr16-app-kuickshow.png lo32-app-kuickshow.png imdata.h mainwidget.cpp imlibwidget.h kuickconfigdlg.h version.h lo16-app-kuickshow.png generalwidget.h kurlwidget.h kuickdata.h kuickglobals.h defaultswidget.h filefinder.h filewidget.h imagewindow.h kuick.h aboutwidget.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -591,7 +609,6 @@ install-strip:
+@@ -638,7 +656,6 @@ install-strip:
  mostlyclean-generic:
  
  clean-generic:
 -	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
  
  distclean-generic:
- 	-rm -f Makefile $(CONFIG_CLEAN_FILES) stamp-h stamp-h[0-9]*
-@@ -669,72 +686,69 @@ messages:
+ 	-rm -f Makefile $(CONFIG_CLEAN_FILES)
+@@ -716,72 +733,69 @@ messages:
  	$(XGETTEXT) *.cpp *.h -o $(podir)/kuickshow.pot
  
   # this is where the kdelnk file will go 
@@ -225,78 +212,78 @@ $NetBSD: patch-ah,v 1.2 2003/01/02 09:12:26 skrll Exp $
  .NOEXPORT:
  
  #>+ 3
--logotabdialog.moc: $(srcdir)/logotabdialog.h
--	$(MOC) $(srcdir)/logotabdialog.h -o logotabdialog.moc
+-filewidget.moc: $(srcdir)/filewidget.h
+-	$(MOC) $(srcdir)/filewidget.h -o filewidget.moc
 +mainwidget.moc: $(srcdir)/mainwidget.h
 +	$(MOC) $(srcdir)/mainwidget.h -o mainwidget.moc
  
  #>+ 3
--filewidget.moc: $(srcdir)/filewidget.h
--	$(MOC) $(srcdir)/filewidget.h -o filewidget.moc
-+filefinder.moc: $(srcdir)/filefinder.h
-+	$(MOC) $(srcdir)/filefinder.h -o filefinder.moc
- 
- #>+ 3
 -aboutwidget.moc: $(srcdir)/aboutwidget.h
 -	$(MOC) $(srcdir)/aboutwidget.h -o aboutwidget.moc
++filefinder.moc: $(srcdir)/filefinder.h
++	$(MOC) $(srcdir)/filefinder.h -o filefinder.moc
++
++#>+ 3
 +kuickconfigdlg.moc: $(srcdir)/kuickconfigdlg.h
 +	$(MOC) $(srcdir)/kuickconfigdlg.h -o kuickconfigdlg.moc
  
  #>+ 3
--filefinder.moc: $(srcdir)/filefinder.h
--	$(MOC) $(srcdir)/filefinder.h -o filefinder.moc
-+basewidget.moc: $(srcdir)/basewidget.h
-+	$(MOC) $(srcdir)/basewidget.h -o basewidget.moc
+ printing.moc: $(srcdir)/printing.h
+ 	$(MOC) $(srcdir)/printing.h -o printing.moc
  
  #>+ 3
--imagewindow.moc: $(srcdir)/imagewindow.h
--	$(MOC) $(srcdir)/imagewindow.h -o imagewindow.moc
+-filefinder.moc: $(srcdir)/filefinder.h
+-	$(MOC) $(srcdir)/filefinder.h -o filefinder.moc
 +imlibwidget.moc: $(srcdir)/imlibwidget.h
 +	$(MOC) $(srcdir)/imlibwidget.h -o imlibwidget.moc
  
  #>+ 3
- generalwidget.moc: $(srcdir)/generalwidget.h
- 	$(MOC) $(srcdir)/generalwidget.h -o generalwidget.moc
+-imagewindow.moc: $(srcdir)/imagewindow.h
+-	$(MOC) $(srcdir)/imagewindow.h -o imagewindow.moc
++generalwidget.moc: $(srcdir)/generalwidget.h
++	$(MOC) $(srcdir)/generalwidget.h -o generalwidget.moc
  
  #>+ 3
--mainwidget.moc: $(srcdir)/mainwidget.h
--	$(MOC) $(srcdir)/mainwidget.h -o mainwidget.moc
+-slideshowwidget.moc: $(srcdir)/slideshowwidget.h
+-	$(MOC) $(srcdir)/slideshowwidget.h -o slideshowwidget.moc
 +defaultswidget.moc: $(srcdir)/defaultswidget.h
 +	$(MOC) $(srcdir)/defaultswidget.h -o defaultswidget.moc
  
  #>+ 3
--kurlwidget.moc: $(srcdir)/kurlwidget.h
--	$(MOC) $(srcdir)/kurlwidget.h -o kurlwidget.moc
+-generalwidget.moc: $(srcdir)/generalwidget.h
+-	$(MOC) $(srcdir)/generalwidget.h -o generalwidget.moc
 +aboutwidget.moc: $(srcdir)/aboutwidget.h
 +	$(MOC) $(srcdir)/aboutwidget.h -o aboutwidget.moc
  
  #>+ 3
--defaultswidget.moc: $(srcdir)/defaultswidget.h
--	$(MOC) $(srcdir)/defaultswidget.h -o defaultswidget.moc
-+logotabdialog.moc: $(srcdir)/logotabdialog.h
-+	$(MOC) $(srcdir)/logotabdialog.h -o logotabdialog.moc
- 
- #>+ 3
--kuickio.moc: $(srcdir)/kuickio.h
--	$(MOC) $(srcdir)/kuickio.h -o kuickio.moc
+-mainwidget.moc: $(srcdir)/mainwidget.h
+-	$(MOC) $(srcdir)/mainwidget.h -o mainwidget.moc
 +kuickshow.moc: $(srcdir)/kuickshow.h
 +	$(MOC) $(srcdir)/kuickshow.h -o kuickshow.moc
  
  #>+ 3
--imlibwidget.moc: $(srcdir)/imlibwidget.h
--	$(MOC) $(srcdir)/imlibwidget.h -o imlibwidget.moc
-+kurlwidget.moc: $(srcdir)/kurlwidget.h
-+	$(MOC) $(srcdir)/kurlwidget.h -o kurlwidget.moc
+ kurlwidget.moc: $(srcdir)/kurlwidget.h
+ 	$(MOC) $(srcdir)/kurlwidget.h -o kurlwidget.moc
  
  #>+ 3
--kuickconfigdlg.moc: $(srcdir)/kuickconfigdlg.h
--	$(MOC) $(srcdir)/kuickconfigdlg.h -o kuickconfigdlg.moc
+-defaultswidget.moc: $(srcdir)/defaultswidget.h
+-	$(MOC) $(srcdir)/defaultswidget.h -o defaultswidget.moc
+-
+-#>+ 3
+-kuickio.moc: $(srcdir)/kuickio.h
+-	$(MOC) $(srcdir)/kuickio.h -o kuickio.moc
 +filewidget.moc: $(srcdir)/filewidget.h
 +	$(MOC) $(srcdir)/filewidget.h -o filewidget.moc
  
  #>+ 3
--basewidget.moc: $(srcdir)/basewidget.h
--	$(MOC) $(srcdir)/basewidget.h -o basewidget.moc
+-kuickconfigdlg.moc: $(srcdir)/kuickconfigdlg.h
+-	$(MOC) $(srcdir)/kuickconfigdlg.h -o kuickconfigdlg.moc
++slideshowwidget.moc: $(srcdir)/slideshowwidget.h
++	$(MOC) $(srcdir)/slideshowwidget.h -o slideshowwidget.moc
+ 
+ #>+ 3
+-imlibwidget.moc: $(srcdir)/imlibwidget.h
+-	$(MOC) $(srcdir)/imlibwidget.h -o imlibwidget.moc
 +imagewindow.moc: $(srcdir)/imagewindow.h
 +	$(MOC) $(srcdir)/imagewindow.h -o imagewindow.moc
  
@@ -308,24 +295,24 @@ $NetBSD: patch-ah,v 1.2 2003/01/02 09:12:26 skrll Exp $
  
  #>+ 3
  clean-metasources:
--	-rm -f  logotabdialog.moc filewidget.moc aboutwidget.moc filefinder.moc imagewindow.moc generalwidget.moc mainwidget.moc kurlwidget.moc defaultswidget.moc kuickio.moc imlibwidget.moc kuickconfigdlg.moc basewidget.moc kuickshow.moc
-+	-rm -f  mainwidget.moc filefinder.moc kuickconfigdlg.moc basewidget.moc imlibwidget.moc generalwidget.moc defaultswidget.moc aboutwidget.moc logotabdialog.moc kuickshow.moc kurlwidget.moc filewidget.moc imagewindow.moc kuickio.moc
+-	-rm -f  filewidget.moc aboutwidget.moc printing.moc filefinder.moc imagewindow.moc slideshowwidget.moc generalwidget.moc mainwidget.moc kurlwidget.moc defaultswidget.moc kuickio.moc kuickconfigdlg.moc imlibwidget.moc kuickshow.moc
++	-rm -f  mainwidget.moc filefinder.moc kuickconfigdlg.moc printing.moc imlibwidget.moc generalwidget.moc defaultswidget.moc aboutwidget.moc kuickshow.moc kurlwidget.moc filewidget.moc slideshowwidget.moc imagewindow.moc kuickio.moc
  
  #>+ 2
  docs-am:
-@@ -764,33 +778,33 @@ force-reedit:
+@@ -811,33 +825,33 @@ force-reedit:
  
  
  #>+ 11
--kuickshow_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kuickshow.cpp $(srcdir)/aboutwidget.cpp $(srcdir)/generalwidget.cpp $(srcdir)/kuickconfigdlg.cpp $(srcdir)/main.cpp $(srcdir)/defaultswidget.cpp $(srcdir)/imagewindow.cpp $(srcdir)/kuickdata.cpp $(srcdir)/imdata.cpp $(srcdir)/basewidget.cpp $(srcdir)/filefinder.cpp $(srcdir)/kurlwidget.cpp $(srcdir)/logo.cpp $(srcdir)/filewidget.cpp $(srcdir)/logotabdialog.cpp $(srcdir)/kuickio.cpp $(srcdir)/kuick.cpp $(srcdir)/imlibwidget.cpp  logotabdialog.moc aboutwidget.moc filewidget.moc filefinder.moc imagewindow.moc generalwidget.moc kurlwidget.moc defaultswidget.moc kuickio.moc kuickconfigdlg.moc imlibwidget.moc basewidget.moc kuickshow.moc
+-kuickshow_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kuickshow.cpp $(srcdir)/aboutwidget.cpp $(srcdir)/generalwidget.cpp $(srcdir)/kuickconfigdlg.cpp $(srcdir)/main.cpp $(srcdir)/defaultswidget.cpp $(srcdir)/imagewindow.cpp $(srcdir)/kuickdata.cpp $(srcdir)/imdata.cpp $(srcdir)/filefinder.cpp $(srcdir)/kurlwidget.cpp $(srcdir)/filewidget.cpp $(srcdir)/kuickio.cpp $(srcdir)/kuick.cpp $(srcdir)/imlibwidget.cpp $(srcdir)/slideshowwidget.cpp $(srcdir)/printing.cpp  aboutwidget.moc filewidget.moc filefinder.moc printing.moc slideshowwidget.moc imagewindow.moc generalwidget.moc kurlwidget.moc defaultswidget.moc kuickio.moc imlibwidget.moc kuickconfigdlg.moc kuickshow.moc
 -	@echo 'creating kuickshow_la.all_cpp.cpp ...'; \
 -	rm -f kuickshow_la.all_cpp.files kuickshow_la.all_cpp.final; \
 -	echo "#define KDE_USE_FINAL 1" >> kuickshow_la.all_cpp.final; \
-+libkuickshow_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kuickshow.cpp $(srcdir)/aboutwidget.cpp $(srcdir)/generalwidget.cpp $(srcdir)/kuickconfigdlg.cpp $(srcdir)/main.cpp $(srcdir)/defaultswidget.cpp $(srcdir)/imagewindow.cpp $(srcdir)/kuickdata.cpp $(srcdir)/imdata.cpp $(srcdir)/basewidget.cpp $(srcdir)/filefinder.cpp $(srcdir)/kurlwidget.cpp $(srcdir)/logo.cpp $(srcdir)/filewidget.cpp $(srcdir)/logotabdialog.cpp $(srcdir)/kuickio.cpp $(srcdir)/kuick.cpp $(srcdir)/imlibwidget.cpp  kuickconfigdlg.moc filefinder.moc basewidget.moc imlibwidget.moc generalwidget.moc defaultswidget.moc aboutwidget.moc logotabdialog.moc kuickshow.moc filewidget.moc kurlwidget.moc kuickio.moc imagewindow.moc
++libkuickshow_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kuickshow.cpp $(srcdir)/aboutwidget.cpp $(srcdir)/generalwidget.cpp $(srcdir)/kuickconfigdlg.cpp $(srcdir)/main.cpp $(srcdir)/defaultswidget.cpp $(srcdir)/imagewindow.cpp $(srcdir)/kuickdata.cpp $(srcdir)/imdata.cpp $(srcdir)/filefinder.cpp $(srcdir)/kurlwidget.cpp $(srcdir)/filewidget.cpp $(srcdir)/kuickio.cpp $(srcdir)/kuick.cpp $(srcdir)/imlibwidget.cpp $(srcdir)/slideshowwidget.cpp $(srcdir)/printing.cpp  kuickconfigdlg.moc filefinder.moc printing.moc imlibwidget.moc generalwidget.moc defaultswidget.moc aboutwidget.moc kuickshow.moc filewidget.moc kurlwidget.moc slideshowwidget.moc kuickio.moc imagewindow.moc
 +	@echo 'creating libkuickshow_main_la.all_cpp.cpp ...'; \
 +	rm -f libkuickshow_main_la.all_cpp.files libkuickshow_main_la.all_cpp.final; \
 +	echo "#define KDE_USE_FINAL 1" >> libkuickshow_main_la.all_cpp.final; \
- 	for file in kuickshow.cpp aboutwidget.cpp generalwidget.cpp kuickconfigdlg.cpp main.cpp defaultswidget.cpp imagewindow.cpp kuickdata.cpp imdata.cpp basewidget.cpp filefinder.cpp kurlwidget.cpp logo.cpp filewidget.cpp logotabdialog.cpp kuickio.cpp kuick.cpp imlibwidget.cpp ; do \
+ 	for file in kuickshow.cpp aboutwidget.cpp generalwidget.cpp kuickconfigdlg.cpp main.cpp defaultswidget.cpp imagewindow.cpp kuickdata.cpp imdata.cpp filefinder.cpp kurlwidget.cpp filewidget.cpp kuickio.cpp kuick.cpp imlibwidget.cpp slideshowwidget.cpp printing.cpp ; do \
 -	  echo "#include \"$$file\"" >> kuickshow_la.all_cpp.files; \
 -	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kuickshow_la.all_cpp.final; \
 +	  echo "#include \"$$file\"" >> libkuickshow_main_la.all_cpp.files; \
@@ -360,28 +347,29 @@ $NetBSD: patch-ah,v 1.2 2003/01/02 09:12:26 skrll Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -800,31 +814,31 @@ kde-rpo-clean:
+@@ -847,31 +861,31 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 29
--basewidget.lo: basewidget.moc 
 -filefinder.lo: filefinder.moc 
--logotabdialog.o: logotabdialog.moc 
--filefinder.o: filefinder.moc 
+ filefinder.o: filefinder.moc 
+-printing.lo: printing.moc 
 -kuickconfigdlg.o: kuickconfigdlg.moc 
 -mainwidget.o: mainwidget.moc 
 -kuickio.o: kuickio.moc 
- basewidget.o: basewidget.moc 
+-slideshowwidget.o: slideshowwidget.moc 
 -kuickconfigdlg.lo: kuickconfigdlg.moc 
 -generalwidget.lo: generalwidget.moc 
-+filefinder.o: filefinder.moc 
+-printing.o: printing.moc 
+-kuickio.lo: kuickio.moc 
 +filefinder.lo: filefinder.moc 
 +mainwidget.lo: mainwidget.moc 
  defaultswidget.lo: defaultswidget.moc 
--kuickio.lo: kuickio.moc 
--imagewindow.lo: imagewindow.moc 
 +generalwidget.lo: generalwidget.moc 
++slideshowwidget.o: slideshowwidget.moc 
  kurlwidget.lo: kurlwidget.moc 
+-imagewindow.lo: imagewindow.moc 
+-slideshowwidget.lo: slideshowwidget.moc 
 -mainwidget.lo: mainwidget.moc 
 -kuickshow.lo: kuickshow.moc 
 -kurlwidget.o: kurlwidget.moc 
@@ -389,6 +377,7 @@ $NetBSD: patch-ah,v 1.2 2003/01/02 09:12:26 skrll Exp $
  aboutwidget.lo: aboutwidget.moc 
 -imlibwidget.lo: imlibwidget.moc 
 +filewidget.lo: filewidget.moc 
++printing.lo: printing.moc 
 +kurlwidget.o: kurlwidget.moc 
 +filewidget.o: filewidget.moc 
  imagewindow.o: imagewindow.moc 
@@ -396,19 +385,17 @@ $NetBSD: patch-ah,v 1.2 2003/01/02 09:12:26 skrll Exp $
 +kuickconfigdlg.lo: kuickconfigdlg.moc 
  aboutwidget.o: aboutwidget.moc 
 -defaultswidget.o: defaultswidget.moc 
--logotabdialog.lo: logotabdialog.moc 
 -kuickshow.o: kuickshow.moc 
++slideshowwidget.lo: slideshowwidget.moc 
 +imagewindow.lo: imagewindow.moc 
-+basewidget.lo: basewidget.moc 
++printing.o: printing.moc 
 +kuickio.o: kuickio.moc 
 +kuickshow.lo: kuickshow.moc 
 +imlibwidget.lo: imlibwidget.moc 
 +mainwidget.o: mainwidget.moc 
  imlibwidget.o: imlibwidget.moc 
-+logotabdialog.o: logotabdialog.moc 
  generalwidget.o: generalwidget.moc 
 -filewidget.lo: filewidget.moc 
 -filewidget.o: filewidget.moc 
 +kuickconfigdlg.o: kuickconfigdlg.moc 
-+logotabdialog.lo: logotabdialog.moc 
 +defaultswidget.o: defaultswidget.moc 

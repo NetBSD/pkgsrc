@@ -1,50 +1,42 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/06/05 08:58:02 skrll Exp $
+$NetBSD: patch-ac,v 1.2 2003/03/11 13:24:59 markd Exp $
 
---- kview/Makefile.am.orig	Tue May 15 20:54:32 2001
+--- kview/Makefile.am.orig	Sun Oct 27 11:15:54 2002
 +++ kview/Makefile.am
-@@ -7,25 +7,29 @@
- 
+@@ -5,7 +5,7 @@ INCLUDES = -I$(top_srcdir)/kview $(all_i
  METASOURCES = AUTO
  
--lib_LTLIBRARIES = libkviewpart.la kview.la
-+lib_LTLIBRARIES = libkviewpart.la libkview_main.la kview.la
+ bin_PROGRAMS = kview
+-lib_LTLIBRARIES = kview.la libkviewsupport.la
++lib_LTLIBRARIES = libkview_main.la kview.la libkviewsupport.la
  
- libkviewpart_la_SOURCES = canvas.cpp kview_view.cc kview_asyncio.cc
- libkviewpart_la_LDFLAGS = $(all_libraries) -avoid-version -module -no-undefined
- libkviewpart_la_LIBADD = $(LIB_KFILE) $(LIB_KPARTS) -lkdeprint
+ noinst_HEADERS = kview.h kpreferencesdialog.h kpreferencesmodule.h kpluginselector.h kviewconfmodules.h
  
--kview_SOURCES = dummy.C
+@@ -13,13 +13,17 @@ libkviewsupport_la_SOURCES = kpreference
+ libkviewsupport_la_LDFLAGS = $(all_libraries) -no-undefined -version-info 0:0
+ libkviewsupport_la_LIBADD  = $(LIB_KDEUI)
+ 
+-kview_SOURCES = dummy.cpp
 +kview_SOURCES = kview_main.cpp
  kview_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 -kview_LDADD = kview.la
 +kview_LDADD = libkview_main.la
  
--kview_la_SOURCES = main.cpp viewer.cpp kview.cpp colour.cpp \
-+libkview_main_la_SOURCES = main.cpp viewer.cpp kview.cpp colour.cpp \
- 	filter.cpp filtlist.cpp \
- 	kcproc.cpp kviewconfdialog_base.ui kviewconfdialog.cpp \
-         imagelistdialog_base.ui imagelistdialog.cpp \
-         knumdialog_base.ui knumdialog.cpp \
-         kfilteraction.cpp infowin_base.ui infowin.cpp
- 
--kview_la_LDFLAGS = $(all_libraries) -module -avoid-version
--kview_la_LIBADD = libkviewpart.la
-+libkview_main_la_LDFLAGS = $(all_libraries)
-+libkview_main_la_LIBADD = libkviewpart.la
+-kview_la_SOURCES = kviewconfmodules.cpp kview.cpp main.cpp
++libkview_main_la_SOURCES = kviewconfmodules.cpp kview.cpp main.cpp
++libkview_main_la_LDFLAGS = $(KDE_RPATH) $(all_libraries)
++libkview_main_la_LIBADD = $(LIB_KPARTS) libkviewsupport.la
 +
 +kview_la_SOURCES = kview_main.cpp
-+kview_la_LDFLAGS = $(all_libraries) -avoid-version -module
+ kview_la_LDFLAGS = $(KDE_RPATH) $(all_libraries) -module -avoid-version
+-kview_la_LIBADD = $(LIB_KPARTS) libkviewsupport.la
 +kview_la_LIBADD = libkview_main.la
  
- test_SOURCES = libkview.la test.cpp
- test_LDFLAGS  = $(all_libraries) -module -avoid-version
-@@ -52,9 +56,6 @@
- 
- srcdoc:
- 	kdoc -a -p -H -d $(HOME)/web/src/kview kview *.h -lqt -lkdecore -lkdeui -lkfile
+ lnkdir = $(kde_appsdir)/Graphics
+ lnk_DATA = kview.desktop
+@@ -32,6 +36,3 @@ rc_DATA = kviewui.rc
+ messages: rc.cpp
+ 	$(EXTRACTRC) kviewviewer/*.rc kviewviewer/*.ui >> rc.cpp
+ 	$(XGETTEXT) kviewviewer/*.cpp kviewcanvas/*.cpp *.cpp *.h -o $(podir)/kview.pot
 -
--dummy.C:
--	echo > dummy.C
- 
- ###KMAKE-start (don't edit or delete this block)
- 
+-dummy.cpp:
+-	echo > dummy.cpp
