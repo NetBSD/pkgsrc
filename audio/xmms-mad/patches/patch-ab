@@ -1,24 +1,24 @@
-$NetBSD: patch-ab,v 1.2 2002/10/27 07:31:12 rh Exp $
+$NetBSD: patch-ab,v 1.3 2003/12/17 03:27:17 simonb Exp $
 
---- src/xmms-mad.c.orig	Fri May 10 01:02:33 2002
+--- src/xmms-mad.c.orig	Thu Oct  2 22:15:58 2003
 +++ src/xmms-mad.c
-@@ -83,6 +83,9 @@ xmmsmad_stop ()
-       printf ("waiting for thread\n");
+@@ -142,6 +142,9 @@ xmmsmad_stop ()
+       g_message ("waiting for thread");
  #endif /* DEBUG */
-       pthread_join (decode_thread, 0);
+       pthread_join (*decode_thread, 0);
 +#ifdef _PTH_PTHREAD_H_
 +      sched_yield ();
 +#endif
  #ifdef DEBUG
-       printf ("thread done\n");
+       g_message ("thread done");
  #endif /* DEBUG */
-@@ -99,6 +102,9 @@ xmmsmad_play_file (char *url)
-       info.playing = 1;
-       input_get_info (&info);
-       pthread_create (&decode_thread, 0, decode, (void *) &info);
+@@ -186,6 +189,9 @@ xmmsmad_play_file (char *url)
+       g_free (decode_thread);
+       decode_thread = 0;
+     }
 +#ifdef _PTH_PTHREAD_H_
 +      sched_yield ();
 +#endif
-     }
  }
  
+ static void
