@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/03/12 22:37:12 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2004/11/27 15:04:02 dmcmahill Exp $
 #
 
-DISTNAME=	covered-0.2.2
+DISTNAME=	covered-0.3
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=covered/}
 
@@ -13,7 +13,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
-BUILD_DEPENDS+=	gperf>=2.7.2:../../devel/gperf
 DEPENDS+=	verilog{,-current}-[0-9]*:../../cad/verilog
 
 CONFLICTS+=	covered-current-[0-9]*
@@ -32,4 +31,5 @@ pre-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/bin
 	${INSTALL_MAN_DIR} ${PREFIX}/man/man1
 
+.include "../../devel/gperf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
