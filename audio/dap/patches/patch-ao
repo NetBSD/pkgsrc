@@ -1,11 +1,11 @@
-$NetBSD: patch-ao,v 1.1.1.1 1999/12/04 12:56:30 scw Exp $
+$NetBSD: patch-ao,v 1.2 2000/02/29 16:57:47 scw Exp $
 
 --- spkit/spkit/Makefile.netbsd.orig	Fri Dec  3 22:05:21 1999
 +++ spkit/spkit/Makefile.netbsd	Fri Dec  3 22:06:18 1999
 @@ -9,7 +9,7 @@
  X11DIR  = /usr/X11R6
  INCDIR  = -I. -I.. -I../.. -I$(SOUND) -I$(FORMS) -I$(MAINDIR) -I$(TOOLTIP) -I$(X11DIR)/include -I$(X11DIR)/include/X11
- CCFLAGS = $(INCDIR) $(DEBUG) $(OPTIM) -DLINUX -DBIGENDIAN -DUSINGGCC -Wall
+ CCFLAGS = $(INCDIR) $(DEBUG) $(OPTIM) -DLINUX -DNETBSD -DBIGENDIAN -DUSINGGCC -Wall -Wno-unused
 -DEBUG   = -g3
 +DEBUG   = #-g3
  OPTIM   = -O2
