@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.859 2002/12/21 19:53:48 wiz Exp $
+$NetBSD: CHANGES,v 1.860 2002/12/21 21:38:32 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4040,3 +4040,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated mplayer to 0.90rc11 [wiz 2002-12-21]
 	Updated gmplayer to 0.90rc11 [wiz 2002-12-21]
 	Updated mencoder to 0.90rc11 [wiz 2002-12-21]
+	Updated xmame to 0.62.1nb4 [kristerw 2002-12-21]
+	Updated xmess to 0.62.1nb1 [kristerw 2002-12-21]
