@@ -1,20 +1,28 @@
-# $NetBSD: buildlink2.mk,v 1.5 2002/12/24 06:10:22 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/02/14 20:19:47 jmmv Exp $
+#
+# This Makefile fragment is included by packages that use libgnomeprint.
+#
+# This file was created automatically using createbuildlink 2.4.
+#
 
 .if !defined(LIBGNOMEPRINT_BUILDLINK2_MK)
 LIBGNOMEPRINT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libgnomeprint
-BUILDLINK_DEPENDS.libgnomeprint?=	libgnomeprint>=1.116.0nb3
+BUILDLINK_DEPENDS.libgnomeprint?=	libgnomeprint>=2.2.1.1
 BUILDLINK_PKGSRCDIR.libgnomeprint?=	../../print/libgnomeprint
 
-EVAL_PREFIX+=			BUILDLINK_PREFIX.libgnomeprint=libgnomeprint
+EVAL_PREFIX+=	BUILDLINK_PREFIX.libgnomeprint=libgnomeprint
 BUILDLINK_PREFIX.libgnomeprint_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.libgnomeprint+=	include/libgnomeprint-2.0/libgnomeprint/*
-BUILDLINK_FILES.libgnomeprint+=	include/libgnomeprint-2.0/libgnomeprint/private/*
-BUILDLINK_FILES.libgnomeprint+=	lib/gnome-print-2.0/drivers/*
-BUILDLINK_FILES.libgnomeprint+=	lib/gnome-print-2.0/transports/*
-BUILDLINK_FILES.libgnomeprint+=	lib/libgnomeprint-2.*
+BUILDLINK_FILES.libgnomeprint+=	include/libgnomeprint-2.2/libgnomeprint/*
+BUILDLINK_FILES.libgnomeprint+=	include/libgnomeprint-2.2/libgnomeprint/private/*
+BUILDLINK_FILES.libgnomeprint+=	lib/libgnomeprint-2-2.*
+BUILDLINK_FILES.libgnomeprint+=	lib/libgnomeprint/2.2.1.1/modules/transports/libgnomeprint-custom.*
+BUILDLINK_FILES.libgnomeprint+=	lib/libgnomeprint/2.2.1.1/modules/transports/libgnomeprint-file.*
+BUILDLINK_FILES.libgnomeprint+=	lib/libgnomeprint/2.2.1.1/modules/transports/libgnomeprint-lpr.*
+BUILDLINK_FILES.libgnomeprint+=	lib/pkgconfig/libgnomeprint-2.2.pc
 
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libbonobo/buildlink2.mk"
 .include "../../devel/pango/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
