@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7847 2004/11/13 18:35:03 tron Exp $
+$NetBSD: CHANGES,v 1.7848 2004/11/14 06:16:51 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5266,3 +5266,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Archive-Tar to 1.21 [seb 2004-11-13]
 	Updated p5-Archive-Zip to 1.14 [seb 2004-11-13]
 	Updated kphone to 4.0.5 [tron 2004-11-13]
+	Updated readline to 5.0 [jlam 2004-11-14]
