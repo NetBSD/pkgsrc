@@ -1,7 +1,9 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/09/20 22:33:31 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/09/20 22:44:20 jlam Exp $
 
 .if !defined(PYTHON21_BUILDLINK2_MK)
 PYTHON21_BUILDLINK2_MK=	# defined
+
+.include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_PACKAGES+=		python21
 BUILDLINK_DEPENDS.python21?=	python21>=2.1
@@ -13,7 +15,8 @@ BUILDLINK_DEPMETHOD.python21?=	${BUILDLINK_DEPMETHOD.python}
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.python21=python21
 BUILDLINK_PREFIX.python21_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.python21=	include/python2.1/*
+BUILDLINK_FILES.python21!= \
+	${GREP} "^include/" ${.CURDIR}/${BUILDLINK_PKGSRCDIR.python21}/PLIST
 BUILDLINK_FILES.python21+=	lib/python2.1/config/libpython2.1.*
 
 BUILDLINK_TARGETS+=	python21-buildlink
