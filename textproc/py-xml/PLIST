@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/23 15:25:53 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/13 19:20:59 drochner Exp $
 bin/xmlproc_parse${PYVERSSUFFIX}
 bin/xmlproc_val${PYVERSSUFFIX}
 ${PYSITELIB}/_xmlplus/FtCore.py
@@ -132,7 +132,7 @@ ${PYSITELIB}/_xmlplus/dom/ext/reader/Sgmlop.pyo
 ${PYSITELIB}/_xmlplus/dom/ext/reader/__init__.py
 ${PYSITELIB}/_xmlplus/dom/ext/reader/__init__.pyc
 ${PYSITELIB}/_xmlplus/dom/ext/reader/__init__.pyo
-${PYSITELIB}/_xmlplus/dom/fr_FR/LC_MESSAGES/4Suite.mo
+${PYSITELIB}/_xmlplus/dom/fr/LC_MESSAGES/4Suite.mo
 ${PYSITELIB}/_xmlplus/dom/html/GenerateHtml.py
 ${PYSITELIB}/_xmlplus/dom/html/GenerateHtml.pyc
 ${PYSITELIB}/_xmlplus/dom/html/GenerateHtml.pyo
@@ -594,8 +594,8 @@ ${PYSITELIB}/_xmlplus/xpath/yappsrt.pyo
 @dirrm ${PYSITELIB}/_xmlplus/parsers
 @dirrm ${PYSITELIB}/_xmlplus/marshal
 @dirrm ${PYSITELIB}/_xmlplus/dom/html
-@dirrm ${PYSITELIB}/_xmlplus/dom/fr_FR/LC_MESSAGES
-@dirrm ${PYSITELIB}/_xmlplus/dom/fr_FR
+@dirrm ${PYSITELIB}/_xmlplus/dom/fr/LC_MESSAGES
+@dirrm ${PYSITELIB}/_xmlplus/dom/fr
 @dirrm ${PYSITELIB}/_xmlplus/dom/ext/reader
 @dirrm ${PYSITELIB}/_xmlplus/dom/ext
 @dirrm ${PYSITELIB}/_xmlplus/dom/en_US/LC_MESSAGES
