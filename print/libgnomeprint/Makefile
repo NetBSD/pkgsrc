@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/02/11 02:34:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/13 14:04:48 jmmv Exp $
 #
 
 DISTNAME=	libgnomeprint-2.4.2
@@ -54,4 +54,5 @@ CONFIGURE_ENV+=		libltdl_cv_shlibext=so
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
