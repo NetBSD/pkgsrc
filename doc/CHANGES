@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7343 2004/10/04 21:32:28 minskim Exp $
+$NetBSD: CHANGES,v 1.7344 2004/10/04 22:36:50 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4545,4 +4545,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ircservices to 5.0.41 [wiz 2004-10-04]
 	Added ion3-20040906 [cube 2004-10-04]
 	Updated mathomatic to 11.4 [minskim 2004-10-04]
+	Updated gdb6 to 6.2.1 [shannonjr 2004-10-04]
 
