@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/25 15:53:56 tv Exp $
+bin/naim
+share/examples/naim/dot.naimrc
+@dirrm share/examples/naim
