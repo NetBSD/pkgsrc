@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2003/07/23 12:15:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/30 13:02:19 grant Exp $
 #
 
 DISTNAME=	win32codecs
 PKGNAME=	win32-codecs-030714
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://mplayerhq.hu/MPlayer/releases/codecs/
+MASTER_SITES=	http://www.mplayerhq.hu/MPlayer/releases/codecs/ \
+		http://www2.mplayerhq.hu/MPlayer/releases/codecs/ \
+		ftp://ftp.mplayerhq.hu/MPlayer/releases/codecs/ \
+		ftp://ftp2.mplayerhq.hu/MPlayer/releases/codecs/
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} qt6dlls.tar.bz2
 
