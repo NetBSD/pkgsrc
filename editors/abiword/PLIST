@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2001/12/17 14:24:50 martti Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/02/25 10:00:07 martti Exp $
 bin/AbiWord
 bin/abiword
 libexec/AbiSuite/AbiWord
@@ -376,10 +376,11 @@ share/AbiSuite/AbiWord/readme.txt
 share/AbiSuite/AbiWord/strings/bg-BG.strings
 share/AbiSuite/AbiWord/strings/ca-ES.strings
 share/AbiSuite/AbiWord/strings/cs-CZ.strings
-share/AbiSuite/AbiWord/strings/cy-CY.strings
+share/AbiSuite/AbiWord/strings/cy-GB.strings
 share/AbiSuite/AbiWord/strings/da-DK.strings
+share/AbiSuite/AbiWord/strings/de-CH.strings
 share/AbiSuite/AbiWord/strings/de-DE.strings
-share/AbiSuite/AbiWord/strings/du-NL.strings
+share/AbiSuite/AbiWord/strings/el-GR.strings
 share/AbiSuite/AbiWord/strings/en-AU.strings
 share/AbiSuite/AbiWord/strings/en-GB.strings
 share/AbiSuite/AbiWord/strings/en-IE.strings
@@ -393,18 +394,21 @@ share/AbiSuite/AbiWord/strings/id-ID.strings
 share/AbiSuite/AbiWord/strings/it-IT.strings
 share/AbiSuite/AbiWord/strings/lt-LT.strings
 share/AbiSuite/AbiWord/strings/nb-NO.strings
+share/AbiSuite/AbiWord/strings/nl-NL.strings
 share/AbiSuite/AbiWord/strings/nn-NO.strings
 share/AbiSuite/AbiWord/strings/pl-PL.strings
 share/AbiSuite/AbiWord/strings/pt-BR.strings
 share/AbiSuite/AbiWord/strings/pt-PT.strings
 share/AbiSuite/AbiWord/strings/ru-RU.strings
-share/AbiSuite/AbiWord/strings/sk.strings
+share/AbiSuite/AbiWord/strings/sk-SK.strings
 share/AbiSuite/AbiWord/strings/sl-SI.strings
 share/AbiSuite/AbiWord/strings/sv-SE.strings
+share/AbiSuite/AbiWord/strings/tr-TR.strings
 share/AbiSuite/AbiWord/strings/uk-UA.strings
 share/AbiSuite/AbiWord/strings/zh-CN.strings
 share/AbiSuite/AbiWord/strings/zh-TW.strings
 share/AbiSuite/AbiWord/system.profile
+share/AbiSuite/AbiWord/system.profile-CP1254
 share/AbiSuite/AbiWord/system.profile-KOI8-R
 share/AbiSuite/AbiWord/system.profile-KOI8-U
 share/AbiSuite/AbiWord/system.profile-KOI8-UB
@@ -432,6 +436,8 @@ share/AbiSuite/AbiWord/system.profile-fr-BE
 share/AbiSuite/AbiWord/system.profile-fr-CA
 share/AbiSuite/AbiWord/system.profile-fr-CH
 share/AbiSuite/AbiWord/system.profile-fr-FR
+share/AbiSuite/AbiWord/system.profile-gl-ES
+share/AbiSuite/AbiWord/system.profile-hu-HU
 share/AbiSuite/AbiWord/system.profile-it-IT
 share/AbiSuite/AbiWord/system.profile-lt-LT
 share/AbiSuite/AbiWord/system.profile-nb-NO
@@ -442,9 +448,16 @@ share/AbiSuite/AbiWord/system.profile-pt-BR
 share/AbiSuite/AbiWord/system.profile-pt-PT
 share/AbiSuite/AbiWord/system.profile-ru
 share/AbiSuite/AbiWord/system.profile-ru-RU
+share/AbiSuite/AbiWord/system.profile-sk-SK
+share/AbiSuite/AbiWord/system.profile-sk-SK.CP1250
 share/AbiSuite/AbiWord/system.profile-sl
 share/AbiSuite/AbiWord/system.profile-sv
 share/AbiSuite/AbiWord/system.profile-sv-SE
+share/AbiSuite/AbiWord/system.profile-tr
+share/AbiSuite/AbiWord/system.profile-tr-TR
+share/AbiSuite/AbiWord/system.profile-tr-TR.CP1254
+share/AbiSuite/AbiWord/system.profile-zh-CN
+share/AbiSuite/AbiWord/system.profile-zh-TW
 share/AbiSuite/COPYING
 share/AbiSuite/clipart/book.png
 share/AbiSuite/clipart/chip.png
