@@ -1,4 +1,4 @@
-/*	$NetBSD: unvis.c,v 1.8 2004/12/03 00:09:02 grant Exp $	*/
+/*	$NetBSD: unvis.c,v 1.9 2004/12/03 13:12:55 grant Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -35,7 +35,7 @@
 #if 0
 static char sccsid[] = "@(#)unvis.c	8.1 (Berkeley) 6/4/93";
 #else
-__RCSID("$NetBSD: unvis.c,v 1.8 2004/12/03 00:09:02 grant Exp $");
+__RCSID("$NetBSD: unvis.c,v 1.9 2004/12/03 13:12:55 grant Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -65,12 +65,6 @@ __weak_alias(unvis,_unvis)
 __warn_references(unvis,
     "warning: reference to compatibility unvis(); include <vis.h> for correct reference")
 #endif
-#endif
-
-/* work around namespace clash with NetBSD 1.4 (and earlier) */
-#ifdef __unvis13
-#undef __unvis13
-#define __unvis13 __nbcompat_unvis13
 #endif
 
 /*
