@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/01/22 22:00:22 jlam Exp $
+
+--- authlib/configure.in.orig	Thu Dec 27 17:26:43 2001
++++ authlib/configure.in
+@@ -411,8 +411,6 @@
+ 	STATIC_LIST="authldap_info $STATIC_LIST"
+ 	LIBAUTH="$LIBAUTH libauth-authldap.a"
+ 	echo authldaprc.dist >>authconfiglist
+-else
+-	authldaprc=""
+ fi
+ AC_SUBST(LDAPLIBS)
+ 
