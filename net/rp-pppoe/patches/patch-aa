@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2001/12/07 18:35:51 martin Exp $
+$NetBSD: patch-aa,v 1.8 2002/10/09 08:30:42 tron Exp $
 
---- Makefile.in.orig	Fri Sep 14 21:18:53 2001
-+++ Makefile.in	Fri Dec  7 19:26:39 2001
-@@ -20,7 +20,7 @@
+--- Makefile.in.orig	Mon Jul  8 16:38:24 2002
++++ Makefile.in	Mon Oct  7 21:56:42 2002
+@@ -22,7 +22,7 @@
  prefix=@prefix@
  exec_prefix=@exec_prefix@
  mandir=@mandir@
@@ -11,28 +11,28 @@ $NetBSD: patch-aa,v 1.7 2001/12/07 18:35:51 martin Exp $
  install=@INSTALL@
  install_dir=@INSTALL@ -d
  sbindir=@sbindir@
-@@ -64,8 +64,8 @@
+@@ -69,8 +69,8 @@
  pppoe-sniff: pppoe-sniff.o if.o common.o debug.o
  	@CC@ -o pppoe-sniff pppoe-sniff.o if.o common.o debug.o
  
--pppoe-server: pppoe-server.o if.o debug.o common.o md5.o @PPPOE_SERVER_DEPS@
--	@CC@ -o pppoe-server pppoe-server.o if.o debug.o common.o md5.o $(PPPOE_SERVER_LIBS)
-+pppoe-server: pppoe-server.o if.o debug.o common.o @PPPOE_SERVER_DEPS@
-+	@CC@ -o pppoe-server pppoe-server.o if.o debug.o common.o $(PPPOE_SERVER_LIBS)
+-pppoe-server: pppoe-server.o if.o debug.o common.o md5.o libevent/libevent.a @PPPOE_SERVER_DEPS@
+-	@CC@ -o pppoe-server @RDYNAMIC@ pppoe-server.o if.o debug.o common.o md5.o $(PPPOE_SERVER_LIBS) -Llibevent -levent
++pppoe-server: pppoe-server.o if.o debug.o common.o libevent/libevent.a @PPPOE_SERVER_DEPS@
++	@CC@ -o pppoe-server @RDYNAMIC@ pppoe-server.o if.o debug.o common.o $(PPPOE_SERVER_LIBS) -Llibevent -levent
  
  pppoe: pppoe.o if.o debug.o common.o ppp.o discovery.o
  	@CC@ -o pppoe pppoe.o if.o debug.o common.o ppp.o discovery.o
-@@ -82,9 +82,6 @@
+@@ -87,9 +87,6 @@
  ppp.o: ppp.c pppoe.h
  	@CC@ $(CFLAGS) '-DVERSION="$(VERSION)"' -c -o ppp.o ppp.c
  
 -md5.o: md5.c md5.h
 -	@CC@ $(CFLAGS) '-DVERSION="$(VERSION)"' -c -o md5.o md5.c
 -
- pppoe-server.o: pppoe-server.c pppoe.h
+ pppoe-server.o: pppoe-server.c pppoe.h @PPPOE_SERVER_DEPS@
  	@CC@ $(CFLAGS) '-DVERSION="$(VERSION)"' -c -o pppoe-server.o pppoe-server.c
  
-@@ -139,7 +136,7 @@
+@@ -147,7 +144,7 @@
  	$(install) -m 755 ../scripts/adsl-setup $(RPM_INSTALL_ROOT)$(sbindir)
  	-mkdir -p $(RPM_INSTALL_ROOT)$(docdir)
  	$(install) -m 644 ../doc/CHANGES $(RPM_INSTALL_ROOT)$(docdir)
@@ -41,7 +41,7 @@ $NetBSD: patch-aa,v 1.7 2001/12/07 18:35:51 martin Exp $
  	$(install) -m 644 ../doc/HOW-TO-CONNECT $(RPM_INSTALL_ROOT)$(docdir)
  	$(install) -m 644 ../doc/LICENSE $(RPM_INSTALL_ROOT)$(docdir)
  	$(install) -m 644 ../README $(RPM_INSTALL_ROOT)$(docdir)
-@@ -158,39 +155,39 @@
+@@ -166,47 +163,47 @@
  	$(install) -m 644 ../man/adsl-setup.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
  	-mkdir -p $(RPM_INSTALL_ROOT)$(mandir)/man5
  	$(install) -m 644 ../man/pppoe.conf.5 $(RPM_INSTALL_ROOT)$(mandir)/man5
@@ -110,6 +110,20 @@ $NetBSD: patch-aa,v 1.7 2001/12/07 18:35:51 martin Exp $
 +#		echo "Looks like a SuSE Linux system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl" ; \
 +#		mkdir -p $(RPM_INSTALL_ROOT)/etc/rc.d/init.d ;\
 +#		$(install) -m 755 ../scripts/adsl-init-suse $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl ; \
++#	fi
+ 
+ 	# L2TP
+-	@if [ -f l2tp/handlers/sync-pppd.so ] ; then \
+-		mkdir -p $(RPM_INSTALL_ROOT)/usr/lib/l2tp/plugins ; \
+-		$(install) -m 755 l2tp/handlers/sync-pppd.so $(RPM_INSTALL_ROOT)/usr/lib/l2tp/plugins ; \
+-		mkdir -p $(RPM_INSTALL_ROOT)/etc/l2tp ; \
+-		$(install) -m 600 l2tp/l2tp.conf $(RPM_INSTALL_ROOT)/etc/l2tp/l2tp.conf.example ; \
+-	fi
++#	@if [ -f l2tp/handlers/sync-pppd.so ] ; then \
++#		mkdir -p $(RPM_INSTALL_ROOT)/usr/lib/l2tp/plugins ; \
++#		$(install) -m 755 l2tp/handlers/sync-pppd.so $(RPM_INSTALL_ROOT)/usr/lib/l2tp/plugins ; \
++#		mkdir -p $(RPM_INSTALL_ROOT)/etc/l2tp ; \
++#		$(install) -m 600 l2tp/l2tp.conf $(RPM_INSTALL_ROOT)/etc/l2tp/l2tp.conf.example ; \
 +#	fi
  	@echo ""
  	@echo "Type 'adsl-setup' to configure the software."

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2002/10/07 20:05:53 tron Exp $
+# $NetBSD: Makefile,v 1.19 2002/10/09 08:30:40 tron Exp $
 
-DISTNAME=	rp-pppoe-3.3
+DISTNAME=	rp-pppoe-3.5
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE} \
 		http://roaringpenguin.luky.org/pppoe/
