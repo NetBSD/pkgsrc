@@ -1,3 +1,0 @@
-This is a pre-req package which ensures the existance of the privoxy user
-which is required for privoxy to build (and therefore must exist pre-build for
-the privoxy package itself).
