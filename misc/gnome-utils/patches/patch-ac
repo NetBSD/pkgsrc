@@ -1,13 +1,18 @@
-$NetBSD: patch-ac,v 1.1 2000/06/01 16:10:55 rh Exp $
+$NetBSD: patch-ac,v 1.2 2000/11/09 21:09:43 mycroft Exp $
 
---- configure.orig	Fri May 19 21:49:06 2000
-+++ configure	Thu Jun  1 17:44:51 2000
-@@ -8453,7 +8453,7 @@
-     esac
-   done
+--- configure.in.orig	Fri May 19 19:33:18 2000
++++ configure.in	Thu Nov  9 21:04:41 2000
+@@ -110,12 +110,7 @@
+ dnl ******************** 
+ dnl gfloppy
+ dnl ********************
+-AC_CHECK_HEADER(linux/fd.h, build_gfloppy=true,
+-                AC_MSG_WARN([*** gfloppy will not be built.]))
+-if $build_gfloppy; then
+-  AC_CONFIG_SUBDIRS(gfloppy)
+-fi
+-AM_CONDITIONAL(BUILD_GFLOPPY, test "$build_gfloppy" = true)
++AM_CONDITIONAL(BUILD_GFLOPPY, 0)
  
--  for ac_config_dir in gfloppy; do
-+  for ac_config_dir in ; do
- 
-     # Do not complain, so a configure script can configure whichever
-     # parts of a large source tree are present.
+ dnl ********************
+ dnl logview
