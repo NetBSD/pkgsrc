@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2003/12/08 16:33:20 adam Exp $
+
+--- configure.orig	2003-12-08 17:17:47.000000000 +0000
++++ configure
+@@ -351,7 +351,7 @@ libdir='${exec_prefix}/lib'
+ includedir='${prefix}/include'
+ oldincludedir='/usr/include'
+ infodir='/usr/share/info'
+-mandir='/usr/share/man'
++mandir='${prefix}/man'
+ 
+ ac_prev=
+ for ac_option
