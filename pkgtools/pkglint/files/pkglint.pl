@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.135 2005/02/24 22:50:44 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.136 2005/03/28 02:16:55 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1039,7 +1039,7 @@ sub checkfile_patches_patch($) {
 
 	foreach my $line (@$lines[1..scalar(@$lines)-1]) {
 		if ($opt_committer && $line->text =~ /$regex_known_rcs_tag/) {
-			log_warning($line->file, $line->lineno, "Possible RCS tag \"\$$1\$\". Use binary mode (-ko) on commit/import.");
+			log_warning($line->file, $line->lineno, "Possible RCS tag \"\$$1\$\". Use binary mode (-ko) on cvs add/import.");
 		}
 	}
 
