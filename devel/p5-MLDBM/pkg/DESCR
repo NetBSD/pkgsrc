@@ -1,0 +1,9 @@
+This module can serve as a transparent interface to any TIEHASH package
+that is required to store arbitrary perl data, including nested
+references.  Thus, this module can be used for storing references and
+other arbitrary data within DBM databases.
+
+It works by serializing the references in the hash into a single string.
+In the underlying TIEHASH package (usually a DBM database), it is this
+string that gets stored.  When the value is fetched again, the string is
+deserialized to reconstruct the data structure into memory.
