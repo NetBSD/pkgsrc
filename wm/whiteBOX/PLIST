@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/20 21:39:37 jschauma Exp $
+bin/whiteBOX
+bin/whiteBOX-config
+share/whiteBOX/pixmaps/arrowdn.xpm
+share/whiteBOX/pixmaps/arrowup.xpm
+share/whiteBOX/pixmaps/del2.xpm
+share/whiteBOX/pixmaps/doc1.xpm
+share/whiteBOX/pixmaps/doccopy.xpm
+share/whiteBOX/pixmaps/down.xpm
+share/whiteBOX/pixmaps/down2.xpm
+share/whiteBOX/pixmaps/exclaim1.xpm
+share/whiteBOX/pixmaps/new1.xpm
+share/whiteBOX/pixmaps/open1.xpm
+share/whiteBOX/pixmaps/save4.xpm
+share/whiteBOX/pixmaps/up.xpm
+share/whiteBOX/pixmaps/up2.xpm
+share/whiteBOX/pixmaps/wb2.xpm
+share/whiteBOX/plugins/libwbbgset.a
+share/whiteBOX/plugins/libwbbgset.la
+share/whiteBOX/plugins/libwbbgset.so
+share/whiteBOX/plugins/libwbmenu.a
+share/whiteBOX/plugins/libwbmenu.la
+share/whiteBOX/plugins/libwbmenu.so
+share/whiteBOX/plugins/libwbstyle.a
+share/whiteBOX/plugins/libwbstyle.la
+share/whiteBOX/plugins/libwbstyle.so
+@dirrm share/whiteBOX/plugins
+@dirrm share/whiteBOX/pixmaps
+@dirrm share/whiteBOX
