@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2003/08/31 22:31:38 mycroft Exp $
+$NetBSD: patch-ab,v 1.4 2003/12/16 07:26:49 recht Exp $
 
---- lavtools/Makefile.in.orig	2003-08-23 14:21:53.000000000 +0000
-+++ lavtools/Makefile.in	2003-08-31 20:42:34.000000000 +0000
+--- lavtools/Makefile.in.orig	2003-08-23 07:21:53.000000000 -0700
++++ lavtools/Makefile.in	2003-12-15 18:00:39.000000000 -0800
 @@ -220,7 +220,7 @@
  
  yuv2lav_SOURCES = yuv2lav.c $(lav_headers)
@@ -11,3 +11,13 @@ $NetBSD: patch-ab,v 1.3 2003/08/31 22:31:38 mycroft Exp $
  
  
  transist_flt_SOURCES = transist.flt.c ${lav_headers}
+@@ -235,7 +235,8 @@
+ lavplay_SOURCES = lavplay.c ${lav_headers}
+ lavplay_LDADD = $(top_builddir)/utils/libmjpegutils.a \
+ 	liblavplay.la liblavjpeg.la liblavfile.la \
+-	@LIBGETOPT_LIB@ ${PTHREAD_LIBS} ${SDL_LIBS} ${X_LIBS} -lX11
++	@LIBGETOPT_LIB@ ${PTHREAD_LIBS} ${SDL_LIBS} ${X_LIBS} -lX11 \
++	${LIBOSSAUDIO}
+ 
+ 
+ lavrec_SOURCES = lavrec.c $(lav_headers)
