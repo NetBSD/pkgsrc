@@ -1,14 +1,11 @@
---- dialects/n+obsd/Makefile.orig	Tue Feb 17 01:51:59 1998
-+++ dialects/n+obsd/Makefile	Thu Apr  2 11:20:07 1998
-@@ -12,7 +12,11 @@
- L=/usr/include/local
- P=
- 
-+.if ${UVM} != ""
-+DEBUG=	-O -DUVM
-+.else
- DEBUG=	-O
-+.endif
- 
- CDEF=
- CDEFS=  ${CDEF} ${CFGF}
+--- Configure.orig	Fri May 22 20:58:12 1998
++++ Configure	Thu Jun 11 17:15:28 1998
+@@ -1527,7 +1527,7 @@
+     then
+       if test -r /etc/mk.conf
+       then
+-        grep -q "^UVM[ 	]*=" /etc/mk.conf
++        grep -q "^UVM[ 	]*[\?|\+]*=" /etc/mk.conf
+         if test $? -eq 0
+ 	then
+ 	  NETBSD_UVM="Y"
