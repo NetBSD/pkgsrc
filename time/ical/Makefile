@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/03/19 08:34:01 bouyer Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/01 00:52:39 minskim Exp $
 
 DISTNAME=	ical-2.2.1
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	http://members.nbci.com/majahj/ical/
 
@@ -8,14 +9,16 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://members.nbci.com/majahj/ical/
 COMMENT=	Calendar application
 
-USE_BUILDLINK2=	yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	yes
 USE_LANGUAGES=	c c++
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
-		--with-tclconfig=${PREFIX}/lib \
-		--with-tclsh=${PREFIX}/bin/tclsh \
-		--with-tkconfig=${PREFIX}/lib
+		--with-tclconfig=${BUILDLINK_PREFIX.tcl}/lib \
+		--with-tclsh=${BUILDLINK_PREFIX.tcl}/bin/tclsh \
+		--with-tkconfig=${BUILDLINK_PREFIX.tk}/lib
 
 post-configure:
 	${TOUCH} ${WRKDIR}/${DISTNAME}/Makefile \
@@ -23,5 +26,6 @@ post-configure:
 	         ${WRKDIR}/${DISTNAME}/startup.tcl \
 	         ${WRKDIR}/${DISTNAME}/time/Makefile
 
-.include "../../x11/tk83/buildlink2.mk"
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

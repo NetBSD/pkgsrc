@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2004/04/01 00:52:39 minskim Exp $
+
+--- cal_tcl.h.orig	1994-10-22 12:36:34.000000000 -0500
++++ cal_tcl.h
+@@ -24,7 +24,7 @@ class Calendar_Tcl : public Object {
+     int error();		/* Used to detect initialization error */
+     char const* error_msg();	/* Error description */
+ 
+-    virtual int method(int, char*[]);
++    virtual int method(int, const char*[]);
+ 
+     CalFile*  main;		/* Main calendar */
+     FileList* includes;		/* Included calendars */
