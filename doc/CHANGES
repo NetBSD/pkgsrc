@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7926 2004/11/20 05:08:22 rh Exp $
+$NetBSD: CHANGES,v 1.7927 2004/11/20 12:47:40 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5355,3 +5355,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-IO-LockedFile-0.23 [minskim 2004-11-20]
 	Added p5-Log-LogLite-0.82 [minskim 2004-11-20]
 	Updated cgoban-java to 2.6.7 [rh 2004-11-20]
+	Added RealPlayerGold-10.0.1 [rh 2004-11-20]
