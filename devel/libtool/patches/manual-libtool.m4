@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.7 2004/10/08 17:37:50 tv Exp $
+$NetBSD: manual-libtool.m4,v 1.8 2004/10/11 16:51:56 tv Exp $
 
 --- libtool.m4.orig	2004-09-19 08:15:08.000000000 -0400
 +++ libtool.m4
@@ -266,13 +266,13 @@ $NetBSD: manual-libtool.m4,v 1.7 2004/10/08 17:37:50 tv Exp $
 +      # memory consuming.  To do this, we pick a random 256KB-aligned
 +      # start address between 0x50000000 and 0x6ffc0000 at link time.
 +      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$export_symbols ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      ;;
 +
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -5592,6 +5635,20 @@ $echo "local: *; };" >> $output_objdir/$
+@@ -5592,6 +5635,21 @@ $echo "local: *; };" >> $output_objdir/$
        fi
        ;;
  
@@ -284,6 +284,7 @@ $NetBSD: manual-libtool.m4,v 1.7 2004/10/08 17:37:50 tv Exp $
 +      # memory consuming.  To do this, we pick a random 256KB-aligned
 +      # start address between 0x50000000 and 0x6ffc0000 at link time.
 +      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
 +      _LT_AC_TAGVAR(hardcode_direct, $1)=yes
 +      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-h,$libdir'
