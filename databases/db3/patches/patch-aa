@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2001/07/19 19:16:45 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2001/10/23 07:26:42 lukem Exp $
 
---- ../dist/Makefile.in.orig	Thu Nov 30 15:07:33 2000
-+++ ../dist/Makefile.in
+--- ../dist/Makefile.in.orig	Fri Dec  1 10:07:33 2000
++++ ../dist/Makefile.in	Tue Oct 23 17:16:15 2001
 @@ -17,7 +17,7 @@
  INSTALLER=	@INSTALLER@
  
@@ -197,7 +197,22 @@ $NetBSD: patch-aa,v 1.5 2001/07/19 19:16:45 jlam Exp $
  	$(CCLINK) -o $@ $(LDFLAGS) \
  	    db_verify@o@ util_sig@o@ $(LIBDB_ARGS) $(LIBS)
  	$(POSTLINK) $@
-@@ -452,8 +444,6 @@
+@@ -409,12 +401,9 @@
+ 
+ install_include:
+ 	@echo "Installing DB include files: $(includedir) ..."
+-	@test -d $(includedir) || \
+-	    ($(mkdir) -p $(includedir) && $(chmod) $(dmode) $(includedir))
+-	@cd $(includedir) && $(rm) -f db.h db_185.h db_cxx.h
+-	@$(cp) -p db.h \
++	${BSD_INSTALL_DATA_DIR} $(includedir)
++	${BSD_INSTALL_DATA} db.h \
+ 	    $(srcdir)/include/db_cxx.h @ADDITIONAL_INCS@ $(includedir)
+-	@cd $(includedir) && $(chmod) $(fmode) db.h db_cxx.h @ADDITIONAL_INCS@
+ 
+ uninstall_include:
+ 	-cd $(includedir) && $(rm) -f db.h db_185.h db_cxx.h
+@@ -452,8 +441,6 @@
  	@cd $(libdir) && $(rm) -f \
  	    $(libso_target) $(libso) $(libso_default) $(libso_major)
  	@$(INSTALLER) $(libso_target) $(libdir)
@@ -206,7 +221,7 @@ $NetBSD: patch-aa,v 1.5 2001/07/19 19:16:45 jlam Exp $
  	@$(LIBTOOL) --mode=finish $(libdir)
  
  install_dynamic_cxx:
-@@ -463,8 +453,6 @@
+@@ -463,8 +450,6 @@
  	@cd $(libdir) && $(rm) -f \
  	    $(libxso_target) $(libxso) $(libxso_default) $(libxso_major)
  	@$(INSTALLER) $(libxso_target) $(libdir)
@@ -215,7 +230,7 @@ $NetBSD: patch-aa,v 1.5 2001/07/19 19:16:45 jlam Exp $
  
  install_tcl:
  	@echo "Installing DB Tcl library: $(libdir) ..."
-@@ -473,8 +461,6 @@
+@@ -473,8 +458,6 @@
  	@cd $(libdir) && $(rm) -f \
  	    $(libtso_target) $(libtso) $(libtso_default) $(libtso_major)
  	@$(INSTALLER) $(libtso_target) $(libdir)
@@ -224,7 +239,7 @@ $NetBSD: patch-aa,v 1.5 2001/07/19 19:16:45 jlam Exp $
  
  install_java:
  	@echo "Installing DB Java library: $(libdir) ..."
-@@ -483,9 +469,6 @@
+@@ -483,27 +466,21 @@
  	@cd $(libdir) && $(rm) -f \
  	    $(libjso_target) $(libjso) $(libjso_default) $(libjso_major)
  	@$(INSTALLER) $(libjso_target) $(libdir)
@@ -234,3 +249,26 @@ $NetBSD: patch-aa,v 1.5 2001/07/19 19:16:45 jlam Exp $
  	@$(cp) $(JAVA_CLASSTOP)/$(libj_jarfile) $(libdir)
  
  install_utilities:
+ 	@echo "Installing DB utilities: $(bindir) ..."
+-	@test -d $(bindir) || \
+-	    ($(mkdir) -p $(bindir) && $(chmod) $(dmode) $(bindir))
+-	@cd $(bindir) && $(rm) -f $(PROGS)
+-	@$(INSTALLER) -fp $(PROGS) $(bindir)
+-	@cd $(bindir) && (test ! -f $(strip) || $(strip) $(PROGS))
+-	@cd $(bindir) && $(chmod) $(emode) $(PROGS)
++	${BSD_INSTALL_SCRIPT_DIR} $(includedir) $(bindir)
++	for i in $(PROGS); do \
++		${BSD_INSTALL_SCRIPT} $$i $(bindir); \
++	done
+ 
+ uninstall_utilities:
+ 	-cd $(bindir) && $(rm) -f $(PROGS)
+ 
+ install_docs:
+ 	@echo "Installing documentation: $(docdir) ..."
+-	@test -d $(docdir) || \
+-	    ($(mkdir) -p $(docdir) && $(chmod) $(dmode) $(docdir))
++	${BSD_INSTALL_DATA_DIR} $(docdir)
+ 	@cd $(docdir) && $(rm) -rf *
+ 	@cd $(srcdir)/docs && $(cp) -pr * $(docdir)/
+ 
