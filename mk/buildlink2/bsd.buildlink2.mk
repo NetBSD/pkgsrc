@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.1.2.13 2002/06/30 18:16:43 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.14 2002/07/21 03:07:10 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -351,9 +351,14 @@ _ALIASES.CPP=		cpp
 _ALIASES.FC=		f77 g77
 _ALIASES.LD=		ld
 
+# On Darwin, protect against using /bin/sh if it's zsh.
 .if ${OPSYS} == "Darwin"
+.  if exists(/bin/bash)
+BUILDLINK_SHELL?=	/bin/bash
+.  else
 BUILD_DEPENDS+=		bash-[0-9]*:../../shells/bash2
 BUILDLINK_SHELL?=	${LOCALBASE}/bin/bash
+.  fi
 .else
 BUILDLINK_SHELL?=	${SH}
 .endif
