@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/08/23 03:52:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2004/08/23 04:10:26 schmonz Exp $
 #
 
 DISTNAME=		qmail-run-20040823
@@ -12,7 +12,7 @@ COMMENT=		Configures qmail to receive and deliver mail
 DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
 
-CONFLICTS+=		qmail-qfilter=1.5nb1
+CONFLICTS+=		qmail-qfilter-1.5nb1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
