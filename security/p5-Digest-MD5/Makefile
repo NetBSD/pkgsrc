@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/05/16 21:28:23 mjl Exp $
+# $NetBSD: Makefile,v 1.13 2002/09/21 07:44:28 jlam Exp $
 #
 
 DISTNAME=	Digest-MD5-2.20
@@ -12,11 +12,11 @@ COMMENT=	Perl5 extension interface for MD5 algorithm
 
 CONFLICTS+=	p5-MD5-[0-9]*
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Digest/MD5/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
