@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.9 2004/09/14 22:09:40 dmcmahill Exp $
+$NetBSD: patch-ae,v 1.9.4.1 2005/01/29 01:20:06 salo Exp $
 
 --- libF77/makefile.orig	Tue Sep 14 18:38:32 2004
 +++ libF77/makefile
@@ -72,7 +72,7 @@ $NetBSD: patch-ae,v 1.9 2004/09/14 22:09:40 dmcmahill Exp $
 -	mv libF77.a $(LIBDIR)/libF77.a
 -	ranlib $(LIBDIR)/libF77.a || true
 +install:	libF77.la
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libF77.la ${LIBDIR}
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libF77.la ${LIBDIR}
  
  clean:
  	rm -f libF77.a *.o
