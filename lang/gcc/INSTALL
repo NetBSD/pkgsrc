@@ -30,7 +30,7 @@ q
 END
 if [ $? -eq 0 ]
 then
-    \.\.\.fixed\.
+    echo \.\.\.fixed\.
     exit 0
 fi
 echo \.\.\.nothing to fix\.
