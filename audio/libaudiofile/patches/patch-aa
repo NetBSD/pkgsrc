@@ -1,19 +1,20 @@
---- ltmain.sh.orig	Thu Dec 31 13:06:58 1998
-+++ ltmain.sh	Thu Dec 31 13:07:53 1998
-@@ -923,6 +923,16 @@
-         versuffix="$current.$revision"
-         ;;
+$NetBSD: patch-aa,v 1.2 1999/03/06 21:31:42 tron Exp $
+
+--- configure.orig	Mon Feb 22 22:14:36 1999
++++ configure	Sat Mar  6 22:23:44 1999
+@@ -1541,6 +1541,7 @@
+ fi
  
-+      freebsd)
-+        version_vars="$version_vars major versuffix"
-+        major="$current"
-+	if [ $PORTOBJFORMAT = elf ]; then
-+        versuffix="$current"
-+	else
-+        versuffix="$current.$revision"
-+	fi
-+        ;;
-+
-       *)
-         $echo "$modename: unknown library version type \`$version_type'" 1>&2
-         echo "Fatal configuration error.  See the $PACKAGE docs for more information." 1>&2
+ # Always use our own libtool.
++if false; then
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+ # Check for any special flags to pass to ltconfig.
+@@ -1772,6 +1773,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
