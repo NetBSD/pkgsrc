@@ -1,0 +1,5 @@
+latex2rtf - Converts LaTeX file to RTF text-format
+
+The latex2rtf command converts a LaTeX file into RTF text format. The
+text and much of the formatting information is translated to RTF
+making the new file look very similar to the original.
