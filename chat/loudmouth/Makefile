@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/11/02 19:42:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2005/02/23 16:07:34 wiz Exp $
 
 DISTNAME=	loudmouth-0.17.2
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/loudmouth/0.17/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +20,8 @@ PKGCONFIG_OVERRIDE+=    loudmouth-1.0.pc.in
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--disable-mono
+
+BUILDLINK_DEPENDS.gnutls+=	gnutls>=1.2.0
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
