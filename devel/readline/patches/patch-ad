@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 1998/08/07 10:40:28 agc Exp $
+$NetBSD: patch-ad,v 1.3 1999/07/13 00:56:13 jlam Exp $
 
---- terminal.c.orig	Tue Apr 21 08:53:08 1998
-+++ terminal.c	Tue Apr 21 08:54:31 1998
-@@ -468,7 +468,7 @@
+--- terminal.c.orig	Thu May 14 10:54:16 1998
++++ terminal.c	Tue Jul  6 05:23:35 1999
+@@ -478,7 +478,7 @@
  #if !defined (__GO32__)
    if (term_backspace)
      for (i = 0; i < count; i++)
@@ -11,7 +11,16 @@ $NetBSD: patch-ad,v 1.2 1998/08/07 10:40:28 agc Exp $
    else
  #endif /* !__GO32__ */
      for (i = 0; i < count; i++)
-@@ -503,7 +503,7 @@
+@@ -492,7 +492,7 @@
+ {
+ #if defined (NEW_TTY_DRIVER)
+   if (term_cr)
+-    tputs (term_cr, 1, _rl_output_character_function);
++    tputs (term_cr, 1, (void *)_rl_output_character_function);
+ #endif /* NEW_TTY_DRIVER */
+   putc ('\n', _rl_out_stream);
+   return 0;
+@@ -513,7 +513,7 @@
  	case VISIBLE_BELL:
  	  if (visible_bell)
  	    {
@@ -20,7 +29,7 @@ $NetBSD: patch-ad,v 1.2 1998/08/07 10:40:28 agc Exp $
  	      break;
  	    }
  	  /* FALLTHROUGH */
-@@ -531,7 +531,7 @@
+@@ -541,7 +541,7 @@
  _rl_enable_meta_key ()
  {
    if (term_has_meta && term_mm)
@@ -29,7 +38,7 @@ $NetBSD: patch-ad,v 1.2 1998/08/07 10:40:28 agc Exp $
  }
  
  void
-@@ -539,7 +539,7 @@
+@@ -549,7 +549,7 @@
       int on;
  {
    if (on && term_ks)
