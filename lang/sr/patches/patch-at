@@ -1,6 +1,6 @@
-$NetBSD: patch-at,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
+$NetBSD: patch-at,v 1.2 2005/03/01 12:55:01 is Exp $
 
---- csw/Makefile.orig	1999-07-30 07:01:50.000000000 +0200
+--- csw/Makefile.orig	1999-07-30 05:01:50.000000000 +0000
 +++ csw/Makefile
 @@ -1,6 +1,6 @@
  ##	Makefile for the SR context switch routines.
@@ -10,16 +10,7 @@ $NetBSD: patch-at,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
  SHELL = /bin/sh
  
  SRC =	alpha.s ap3000.s bobcat.s encore.s i386.s m68k.s m88k.s mips.s \
-@@ -16,6 +16,8 @@ OKAY:	cstest
- 	cmp cstest.out cstest.stdout
- 	echo "`date`: cstest passed" >OKAY
- 
-+_context_u.o: ; ar xv /usr/lib/libpthread.a _context_u.o
-+pthread_md.o: ; ar xv /usr/lib/libpthread.a pthread_md.o
- 
- # cstest is the test program
- 
-@@ -27,19 +29,15 @@ cstest:	cstest.o asm.o
+@@ -27,19 +27,15 @@ cstest:	cstest.o asm.o
  # csloop is a timing program, built only on request
  
  csloop:	csloop.o asm.o
@@ -37,9 +28,9 @@ $NetBSD: patch-at,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
 -	    sed -e '/^ *$$/d' -e '/^#/'d -e 's/ :/:/' >asm.s
 -	as -o asm.o asm.s
 -
-+asm.o:	netbsd.c pthread_md.o _context_u.o
++asm.o:	netbsd.c
 +	$(CC) $(CFLAGS) -c netbsd.c
-+	$(LD) -r -o asm.o netbsd.o pthread_md.o _context_u.o
++	$(LD) -r -o asm.o netbsd.o /usr/lib/libpthread.a
  
  
  # miscellaneous utility targets
