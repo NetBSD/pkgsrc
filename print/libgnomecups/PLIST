@@ -1,14 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/21 17:06:40 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/07 16:25:59 tv Exp $
 include/libgnomecups-1/libgnomecups/gnome-cups-init.h
 include/libgnomecups-1/libgnomecups/gnome-cups-printer.h
 include/libgnomecups-1/libgnomecups/gnome-cups-queue.h
 include/libgnomecups-1/libgnomecups/gnome-cups-request.h
 include/libgnomecups-1/libgnomecups/gnome-cups-util.h
-lib/libgnomecups-1.0.a
 lib/libgnomecups-1.0.la
-lib/libgnomecups-1.0.so
-lib/libgnomecups-1.0.so.1
-lib/libgnomecups-1.0.so.1.0
 lib/pkgconfig/libgnomecups-1.0.pc
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libgnomecups.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libgnomecups.mo
