@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/01 01:43:29 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/25 01:15:04 snj Exp $
 
 DISTNAME=		ncview-1.92d
 CATEGORIES=		graphics
@@ -8,7 +8,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://meteora.ucsd.edu/~pierce/ncview_home_page.html
 COMMENT=		Visual browser for netCDF format files
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
 
@@ -21,8 +21,8 @@ CONFIGURE_ARGS+=	--with-udunits_libdir=${BUILDLINK_PREFIX.udunits}/lib
 GCC_REQD+=		2.95.3
 .endif
 
-.include "../../devel/netcdf/buildlink2.mk"
-.include "../../math/udunits/buildlink2.mk"
-.include "../../mk/xaw.buildlink2.mk"
+.include "../../devel/netcdf/buildlink3.mk"
+.include "../../math/udunits/buildlink3.mk"
+.include "../../mk/xaw.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
