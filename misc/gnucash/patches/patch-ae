@@ -1,0 +1,19 @@
+$NetBSD: patch-ae,v 1.1 2000/02/28 02:34:44 dmcmahill Exp $
+
+--- ./src/motif/Makefile.in.orig	Sun Jan  3 01:51:20 1999
++++ ./src/motif/Makefile.in	Sun Feb 27 21:19:56 2000
+@@ -33,5 +33,6 @@
+            -I@srcdir@/../../@XMHTML_INC@ \
+            -I@srcdir@/../../lib/Xbae-4.6.2-linas \
+-           -I$(prefix)/include
++           -I$(prefix)/include \
++	    @GUILE_INC@
+ 
+ CFLAGS   = @CFLAGS@ @X_CFLAGS@ -DCELL_WIDGETS=1 ${INCLPATH}
+@@ -41,5 +42,5 @@
+ LIBS     = -L$(prefix)/lib \
+            @X_PRE_LIBS@ @MOTIF_LIBS@ @X_EXTRA_LIBS@ @X_LIBS@ \
+-           $(GUILELIBS) @LIBS@  -lnana
++           $(GUILELIBS) @LIBS@
+ 
+ # Have to use wildcard here otherwise filters below won't get the expanded
