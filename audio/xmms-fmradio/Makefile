@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/01/14 15:28:38 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/21 02:00:12 jlam Exp $
 #
 
 DISTNAME=		xmms-FMRadio-1.4
@@ -13,11 +13,12 @@ COMMENT=		Use a Radio Tuner card in XMMS
 
 ONLY_FOR_PLATFORM=      NetBSD-1.5Z[A-Z]-*-* NetBSD-1.[6-9]*-*
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 BINOWN?=		root
 BINGRP?=		wheel
 
-.include "../../audio/xmms/buildlink.mk"
-.include "../../mk/ossaudio.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../audio/xmms/buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
