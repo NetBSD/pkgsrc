@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: gdm,v 1.1 2001/07/23 00:59:20 wiz Exp $
+# $NetBSD: gdm.sh,v 1.1 2004/01/20 13:41:06 xtraeme Exp $
 #
 
 # PROVIDE: gdm
@@ -12,8 +12,8 @@
 name="gdm"
 rcvar=$name
 command="@PREFIX@/bin/${name}"
-pidfile="/var/run/${name}.pid"
-required_files="@PREFIX@/etc/gdm/gdm.conf"
+pidfile="@LOCALSTATEDIR@/run/${name}.pid"
+required_files="@PKG_SYSCONFDIR@/gdm/gdm.conf"
 extra_commands="reload"
 
 load_rc_config $name

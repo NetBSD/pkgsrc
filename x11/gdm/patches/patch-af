@@ -1,32 +1,58 @@
-$NetBSD: patch-af,v 1.7 2002/10/26 19:51:08 bouyer Exp $
+$NetBSD: patch-af,v 1.8 2004/01/20 13:41:06 xtraeme Exp $
 
---- daemon/slave.c.orig	Mon Mar  5 01:29:54 2001
-+++ daemon/slave.c	Tue Oct 22 20:28:04 2002
-@@ -457,11 +457,14 @@
-     gdm_setenv ("DISPLAY", d->name);
-     gdm_setenv ("LOGNAME", login);
-     gdm_setenv ("USER", login);
-+#ifndef HAVE_SETLOGIN
-     gdm_setenv ("USERNAME", login);
-+#endif
-     gdm_setenv ("HOME", pwent->pw_dir);
-     gdm_setenv ("GDMSESSION", session);
-     gdm_setenv ("SHELL", pwent->pw_shell);
-     gdm_unsetenv ("MAIL");	/* Unset $MAIL for broken shells */
-+    gdm_unsetenv ("GROUP");
+--- configure.in.orig	2003-12-31 12:09:09.000000000 -0600
++++ configure.in
+@@ -145,6 +145,8 @@ fi
+ AC_SUBST(CFLAGS)
+ AC_SUBST(CPPFLAGS)
+ AC_SUBST(LDFLAGS)
++AC_SUBST(GDMOWN)
++AC_SUBST(GDMGRP)
  
-     /* Special PATH for root */
-     if (pwent->pw_uid == 0)
-@@ -517,7 +520,11 @@
- 	if (setgid (pwent->pw_gid) < 0) 
- 	    gdm_slave_exit (DISPLAY_REMANAGE,
- 			    _("gdm_slave_session_start: Could not setgid %d. Aborting."), pwent->pw_gid);
--	
-+#ifdef HAVE_SETLOGIN
-+	if (setlogin (login) < 0) 
-+		gdm_slave_exit (DISPLAY_REMANAGE,
-+			    _("gdm_slave_session_start: Could not set login name %s. Aborting."), login);
-+#endif
- 	if (initgroups (login, pwent->pw_gid) < 0)
- 	    gdm_slave_exit (DISPLAY_REMANAGE,
- 			    _("gdm_slave_session_start: initgroups() failed for %s. Aborting."), login);
+ dnl ## Language Support
+ GETTEXT_PACKAGE=gdm-2.4
+@@ -537,29 +539,10 @@ else
+    AC_MSG_RESULT(no)
+ fi
+ 
+-if test -x /usr/X11R6/bin/X; then
+-   X_PATH="/usr/bin/X11:/usr/X11R6/bin:/opt/X11R6/bin"
+-   X_SERVER_PATH="/usr/X11R6/bin"
+-   X_SERVER="/usr/X11R6/bin/X"
+-   X_CONF_PATH="/usr/bin/X11:/usr/X11R6/bin:/usr/local/bin:/opt/X11R6/bin"
+-elif test -x /usr/openwin/bin/Xsun; then
+-   X_PATH="/usr/openwin/bin"
+-   X_SERVER_PATH="/usr/openwin/bin"
+-   X_SERVER="/usr/openwin/bin/Xsun"
+-   X_CONF_PATH="/usr/openwin/bin"
+-elif test -x /opt/X11R6/bin/X; then
+-   X_PATH="/opt/X11R6/bin:/usr/X11R6/bin:/usr/bin/X11"
+-   X_SERVER_PATH="/opt/X11R6/bin"
+-   X_SERVER="/opt/X11R6/bin/X"
+-   X_CONF_PATH="/opt/X11R6/bin:/usr/local/bin:/usr/X11R6/bin:/usr/bin/X11"
+-else
+-   # what to do, what to do, this is wrong, but this just sets the
+-   # defaults, perhaps this user is cross compiling or some such
+-   X_PATH="/usr/bin/X11:/usr/X11R6/bin:/opt/X11R6/bin"
+-   X_SERVER_PATH="/usr/X11R6/bin"
+-   X_SERVER="/usr/X11R6/bin/X"
+-   X_CONF_PATH="/usr/bin/X11:/usr/X11R6/bin:/usr/local/bin:/opt/X11R6/bin"
+-fi
++X_PATH="${X11BASE}/bin"
++X_SERVER_PATH="${X11BASE}/bin"
++X_SERVER="${X11BASE}/bin/X"
++X_CONF_PATH="${X11BASE}/bin"
+ AC_SUBST(X_PATH)
+ AC_SUBST(X_SERVER)
+ AC_SUBST(X_SERVER_PATH)
+@@ -612,7 +595,10 @@ po/Makefile.in
+ vicious-extensions/Makefile
+ docs/Makefile
+ docs/C/Makefile
++config/CDE.desktop
++config/default.desktop
+ config/gdm.conf
++config/gnome.desktop
+ config/Xsession
+ config/Default
+ config/PreSession

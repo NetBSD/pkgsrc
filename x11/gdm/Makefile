@@ -1,53 +1,65 @@
-# $NetBSD: Makefile,v 1.41 2004/01/03 18:49:56 reed Exp $
+# $NetBSD: Makefile,v 1.42 2004/01/20 13:41:06 xtraeme Exp $
+#
 
-DISTNAME=	gdm-2.2.0
-PKGREVISION=	5
+DISTNAME=	gdm-2.4.4.7
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.2/} \
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.4/} \
 		${MASTER_SITE_LOCAL}
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.README Daemon.png
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	mjl@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-
 USE_BUILDLINK2=		YES
-
 USE_PKGINSTALL=		YES
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
-
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
-USE_X11BASE=		YES
+USE_X11=		YES
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-LOCALSTATEDIR=	/var/gnome
+LOCALSTATEDIR=		/var
 
-EVAL_PREFIX+=	KDEBASEDIR=kdebase
-CONFIGURE_ARGS+= --localstatedir=${LOCALSTATEDIR}
-CONFIGURE_ENV+=	LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} \
-		GDMOWN=${GDMOWN} GDMGRP=${GDMGRP}
+CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-MAKE_ENV+=	GDMOWN=${GDMOWN} GDMGRP=${GDMGRP}
-MAKE_ENV+=	CHMOD=${CHMOD} CHOWN=${CHOWN}
-PLIST_SUBST+=	GDMOWN=${GDMOWN} GDMGRP=${GDMGRP} \
-		INSTALL="${INSTALL}" LOCALSTATEDIR="${LOCALSTATEDIR}"
+CONFIGURE_ENV+=		X11BASE=${X11BASE} GDMOWN=${GDMOWN} GDMGRP=${GDMGRP}
+MAKE_ENV+=		ROOT_USER=${ROOT_USER} ROOT_GROUP=${ROOT_GROUP}
+MAKE_ENV+=		CHMOD=${CHMOD} CHOWN=${CHOWN}
+PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+PLIST_SUBST+=		LOCALSTATEDIR="${LOCALSTATEDIR}"
+FILES_SUBST+=		LOCALSTATEDIR="${LOCALSTATEDIR}"
 
-GDMCFGDIR=	${PREFIX}/etc/gdm
-GDMCFGFILES=	Default:Init.default/Default \
-		PostSession:PostSession.default/Default \
-		PreSession:PreSession.default/Default \
-		Gnome:Sessions.default/Gnome \
-		KDE:Sessions.default/KDE \
-		Xsession:Sessions.default/Xsession \
-		gdm.conf:gdm.conf.default \
-		locale.alias:locale.alias.default \
-		gnomerc:../gnomerc.default
+OWN_DIRS=		${PKG_SYSCONFDIR}/dm/Sessions
+OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/Init
+OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/PostSession
+OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/PreSession
+OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/modules
 
-FILES_SUBST+=	GDMCFGDIR=${GDMCFGDIR:Q}
-FILES_SUBST+=	GDMCFGFILES=${GDMCFGFILES:C/.*://g:Q}
+EGDIR=			${PREFIX}/share/examples
+CONF_FILES=		${EGDIR}/dm/Sessions/default.desktop \
+			${PKG_SYSCONFDIR}/dm/Sessions/default.desktop
+.for f in gdm.conf locale.alias \
+	modules/AccessDwellMouseEvents modules/AccessKeyMouseEvents \
+	modules/factory-AccessDwellMouseEvents \
+	modules/factory-AccessKeyMouseEvents
+CONF_FILES+=		${EGDIR}/gdm/$f \
+			${PKG_SYSCONFDIR}/gdm/$f
+.endfor
+SUPPORT_FILES_MODE=	0755
+.for f in Init/Default PostSession/Default PreSession/Default \
+	XKeepsCrashing Xsession
+SUPPORT_FILES+=		${EGDIR}/gdm/$f \
+			${PKG_SYSCONFDIR}/gdm/$f
+.endfor
+RCD_SCRIPTS=		gdm
+
+SUBST_CLASSES+=		desktop
+SUBST_MESSAGE.desktop=	"Enabling sessions."
+SUBST_STAGE.desktop=	post-patch
+SUBST_FILES.desktop=	config/default.desktop.in config/gnome.desktop.in
+SUBST_SED.desktop=	-e 's/^_//g'
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -60,65 +72,36 @@ GDMOWN=		daemon
 GDMGRP=		daemon
 .endif
 
-.if defined(USE_PAM)
-DEPENDS+=	PAM-[0-9]*:../../security/PAM
-.else
+BUILD_DEFS+=	USE_PAM
 
-post-patch:
-	cd ${WRKSRC} &&					\
-	${CP} configure configure.old &&		\
-	${SED} -e 's:security/pam_appl.h:nopam:g'	\
-		< configure.old > configure
+.if defined(USE_PAM)
+DEPENDS+=		PAM-[0-9]*:../../security/PAM
+PLIST_SUBST+=		PAM_MISC=""
+.else
+PLIST_SUBST+=		PAM_MISC="@comment "
+SUBST_CLASSES+=		pam
+SUBST_MESSAGE.pam=	"Disabling PAM."
+SUBST_STAGE.pam=	post-patch
+SUBST_FILES.pam=	configure
+SUBST_SED.pam=		-e 's:security/pam_appl.h:nopam:g'
 .endif
 
-post-build:
-	cd ${WRKSRC}/config;						\
-	for f in Default PostSession PreSession; do			\
-		${SED} -e 's#/usr/bin/X11#${X11BASE}/bin#g' $$f >$$f.new; \
-		${MV} $$f.new $$f;					\
-		${CHMOD} +x $$f;					\
-	done
-	cd ${WRKSRC}/config;						\
-	${RM} -f KDE Xsession;						\
-	${ECHO} '#! ${SH}' >KDE;					\
-	${ECHO} "export KDEDIR=${KDEBASEDIR}" >>KDE;			\
-	${ECHO} 'exec $${KDEDIR}/bin/startkde $$@' >>KDE;		\
-	${ECHO} '#! ${SH}' >Xsession;					\
-	${ECHO} 'exec ${X11BASE}/lib/X11/xdm/Xsession $$@' >>Xsession;	\
-	${CHMOD} +x KDE Xsession
-	${SED} "s|@PREFIX@|${PREFIX}|g" ${FILESDIR}/gdm > ${WRKDIR}/gdm
-
 post-install:
-	${CHMOD} +x ${WRKSRC}/config/gnomerc
-.for FILE in ${GDMCFGFILES}
-	@cd ${WRKSRC}/config; \
-	SOURCE=${FILE:C/:.*//}; \
-	TARGET=${GDMCFGDIR}/${FILE:C/.*://:S/.default//}; \
-	if [ ! -f $$TARGET ]; then \
-	  ${ECHO} "installing $$SOURCE as $$TARGET"; \
-	  if [ -x $$SOURCE ]; then \
-	    ${INSTALL_SCRIPT} $$SOURCE $$TARGET; \
-	  else \
-	    ${INSTALL_DATA} $$SOURCE $$TARGET; \
-	  fi; \
-	fi; \
-	TARGET=${GDMCFGDIR}/${FILE:C/.*://}; \
-	${INSTALL_DATA_DIR} `dirname $$TARGET`; \
-	${ECHO} "installing $$SOURCE as $$TARGET"; \
-	if [ -x $$SOURCE ]; then \
-	  ${INSTALL_SCRIPT} $$SOURCE $$TARGET; \
-	else \
-	  ${INSTALL_DATA} $$SOURCE $$TARGET; \
-	fi
-.endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gdm
 	${INSTALL_DATA} ${DISTDIR}/Daemon.README ${PREFIX}/share/doc/gdm
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/share/pixmaps
-	${LN} -fs Gnome ${GDMCFGDIR}/Sessions/Default
-	${INSTALL_SCRIPT} ${WRKDIR}/gdm ${PREFIX}/etc/rc.d/
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libglade/buildlink2.mk"
-.include "../../x11/gnome-libs/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/libglade2/buildlink2.mk"
+.include "../../devel/libgnome/buildlink2.mk"
+.include "../../devel/libgnomeui/buildlink2.mk"
+.include "../../graphics/libart2/buildlink2.mk"
+.include "../../graphics/libgnomecanvas/buildlink2.mk"
+.include "../../graphics/librsvg2/buildlink2.mk"
+.include "../../textproc/intltool/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../x11/gtk2/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
