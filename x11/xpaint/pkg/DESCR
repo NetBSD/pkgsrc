@@ -1,0 +1,17 @@
+So, what does XPaint do for you?  Why many wonderful things of
+course.  XPaint is a reasonably versatile bitmap/pixmap editing
+tool.  XPaint came out of a problem editing some very large bitmaps,
+and wanting more functionality then was provided by bitmap. After
+XPaint 1.0 sat around for a LONG time, I finally ended up with a
+strong need to edit color pixmaps.  Presto, this is what has appeared
+from that problem.
+
+The short features list:
+	Usual paint operations:
+		Brushes, Spray paint, Pencil
+		Lines, Arcs, Pattern Fill, Text,
+		Boxes, Circles, Polygons.
+	Works on multiple images simultaneously.
+	Cut/Copy/Paste between all active images.
+	Fatbits/Zoom on the image windows.
+
