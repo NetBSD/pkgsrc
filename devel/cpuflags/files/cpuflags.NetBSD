@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.35 2003/05/29 11:45:50 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.36 2003/06/03 10:17:48 salo Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -60,12 +60,12 @@ case $hw_machine_arch in
 
     i386) case $hw_model in
 	*Intel\ Pentium\ II\ *)	FLAGS='-march=pentium2'		;;
-	*Intel\ Pentium\ III\ *) FLAGS='-march=pentium3'		;;
+	*Intel\ Pentium\ III\ *) FLAGS='-march=pentium3'	;;
 	*Intel\ Pentium\ 4\ *)	FLAGS='-march=pentium4'		;;
 	*AMD\ K6-III*)		FLAGS='-march=k6-3'		;;
 	*AMD\ K6-2*)		FLAGS='-march=k6-2'		;;
 	*AMD\ K6*)		FLAGS='-march=k6'		;;
-	*AMD\ K7*)		FLAGS='-march=athlon'		;;
+	*AMD\ K7*|*AMD\ Athlon*) FLAGS='-march=athlon'		;;
 	*386-class*)		FLAGS='-march=i386'		;;
 	*486-class*)		FLAGS='-march=i486'		;;
 	*586-class*)		FLAGS='-march=pentium'		;;

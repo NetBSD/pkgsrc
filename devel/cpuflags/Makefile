@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.44 2003/05/29 11:45:50 abs Exp $
+# $NetBSD: Makefile,v 1.45 2003/06/03 10:17:48 salo Exp $
 #
 
-DISTNAME=		cpuflags-0.42
-WRKSRC=			${WRKDIR}
-CATEGORIES=		sysutils
-MASTER_SITES=		# empty
-DISTFILES=		# empty
+DISTNAME=	cpuflags-0.43
+CATEGORIES=	sysutils
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 
-MAINTAINER=		abs@netbsd.org
-COMMENT=		Determine compiler flags to best target current cpu
+MAINTAINER=	abs@netbsd.org
+COMMENT=	Determine compiler flags to best target current cpu
 
 ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-* SunOS-*-*
 
