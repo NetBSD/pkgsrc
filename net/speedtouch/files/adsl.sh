@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: adsl.sh,v 1.1.1.1 2001/07/29 01:18:33 abs Exp $
+# $NetBSD: adsl.sh,v 1.2 2002/07/18 00:10:07 abs Exp $
 #
 # PROVIDE: adsl
-# REQUIRE: DAEMON
+# REQUIRE: ipnat
 #
 # On systems with rc.d you will need to copy this to /etc/rc.d and set
 # 'adsl=YES' in /etc/rc.conf
@@ -11,6 +11,8 @@
 adsl_start()
 {
 	echo "Starting speedtouch adsl."
+	# Ensure we have at least tun0 - NetBSD 1.6 and later
+	ifconfig tun0 2>/dev/null || ifconfig tun0 create
 	@PREFIX@/sbin/modem_run -f @PREFIX@/libdata/alcaudsl.sys -m
 	@PREFIX@/sbin/ppp -ddial adsl
 }

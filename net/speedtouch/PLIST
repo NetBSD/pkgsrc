@@ -1,10 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:08 zuntum Exp $
-etc/rc.d/adsl
+@comment $NetBSD: PLIST,v 1.2 2002/07/18 00:10:07 abs Exp $
 libdata/alcaudsl.sys
+man/man1/modem_run.1
+man/man1/pppoa2.1
+man/man1/pppoa3.1
 sbin/modem_run
 sbin/pppoa2
-share/doc/speedtouch/INSTALL-BSD
-share/doc/speedtouch/README
+share/doc/speedtouch/FAQ
+share/doc/speedtouch/FAQ-fr
+share/doc/speedtouch/INSTALL
+share/doc/speedtouch/INSTALL-de
+share/doc/speedtouch/INSTALL-fr
+share/doc/speedtouch/INSTALL-it
+share/examples/speedtouch/adsl.sh
 share/examples/speedtouch/ppp.conf
-@dirrm share/examples/speedtouch
 @dirrm share/doc/speedtouch
+@dirrm share/examples/speedtouch
