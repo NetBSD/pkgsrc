@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/10/15 12:06:34 rh Exp $
+# $NetBSD: Makefile,v 1.6 2000/10/22 05:56:10 rh Exp $
 
 DISTNAME=	battleball.21.src
 PKGNAME=	battleball-2.1
@@ -9,6 +9,7 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.cs.utexas.edu/users/pahardin/bb.html
 
 USE_X11=	YES
+CHECK_MESA=	YES
 WRKSRC=		${WRKDIR}/battleball-2.1-src
 
 CPPFLAGS+=	-I${X11BASE}/include
