@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/21 18:45:04 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/07/28 01:54:37 schmonz Exp $
+${QMAILDIR}/etc/mailer.conf.qmail
+${QMAILDIR}/etc/rc.d/qmail
 ${QMAILDIR}/doc/FAQ
 ${QMAILDIR}/doc/UPGRADE
 ${QMAILDIR}/doc/SENDMAIL
@@ -187,6 +189,8 @@ ${QMAILDIR}/man/man8/qmail-command.8
 @dirrm ${QMAILDIR}/man/man7
 @dirrm ${QMAILDIR}/man/man8
 @dirrm ${QMAILDIR}/man
+@dirrm ${QMAILDIR}/etc/rc.d
+@dirrm ${QMAILDIR}/etc
 @dirrm ${QMAILDIR}/doc
 @dirrm ${QMAILDIR}/boot
 @dirrm ${QMAILDIR}/bin
