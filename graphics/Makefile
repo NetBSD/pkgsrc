@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.354 2005/01/09 10:45:20 seb Exp $
+# $NetBSD: Makefile,v 1.355 2005/01/09 11:22:44 seb Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -51,6 +51,7 @@ SUBDIR+=	dcraw
 SUBDIR+=	denemo
 SUBDIR+=	dia
 SUBDIR+=	digikam
+SUBDIR+=	digikamimageplugins
 SUBDIR+=	digikamplugins
 SUBDIR+=	dvdbackup
 SUBDIR+=	dvdview
