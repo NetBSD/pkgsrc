@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2436 2003/06/05 21:42:43 wiz Exp $
+$NetBSD: CHANGES,v 1.2437 2003/06/06 05:51:27 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2349,3 +2349,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated grace to 5.1.10nb1 [wiz 2003-06-05]
 	Updated fftw2 to 2.1.5 [wiz 2003-06-05]
 	Updated fftw to 3.0nb1 [wiz 2003-06-05]
+	Updated gpc to 2.1nb2 [jtb 2003-06-06]
