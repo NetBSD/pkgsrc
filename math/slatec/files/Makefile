@@ -3,6 +3,7 @@ LIB	= slatec
 LIBDIR	= ${PREFIX}/lib
 
 FORTRAN = %%FORTRAN%%
+FFLAGS	= -O3
 
 all:	lib$(LIB)
 
@@ -186,7 +187,7 @@ zunik.o zunk1.o zunk2.o zuoik.o zwrsk.o
 
 lib$(LIB):	$(OBJ)
 	@$(LIBTOOL) --mode=link $(FORTRAN) -O -o lib$(LIB).la $(OBJ:.o=.lo) \
-	-rpath $(LIBDIR)
+	--version-info 0:0 -rpath $(LIBDIR)
 
 .f.o:
 	@$(LIBTOOL) --mode=compile $(FORTRAN) $(FFLAGS) -c $*.f
