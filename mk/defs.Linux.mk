@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.46 2003/02/27 06:05:21 grant Exp $
+# $NetBSD: defs.Linux.mk,v 1.47 2003/02/28 03:41:39 jschauma Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -45,6 +45,7 @@ GZCAT?=		/bin/zcat
 GZIP?=		-9
 GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
+HOSTNAME_CMD?=	/bin/hostname
 ID?=		/usr/bin/id
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
