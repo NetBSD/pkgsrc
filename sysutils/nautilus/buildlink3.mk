@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/04/01 18:38:03 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/05/15 16:50:03 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NAUTILUS_BUILDLINK3_MK:=	${NAUTILUS_BUILDLINK3_MK}+
@@ -13,6 +13,11 @@ BUILDLINK_PACKAGES+=	nautilus
 .if !empty(NAUTILUS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.nautilus+=	nautilus>=2.6.0
 BUILDLINK_PKGSRCDIR.nautilus?=	../../sysutils/nautilus
+
+PRINT_PLIST_AWK+=	/^@dirrm lib\/nautilus$$/ \
+				{ print "@comment in nautilus: " $$0; next; }
+PRINT_PLIST_AWK+=	/^@dirrm lib\/nautilus\/extensions-1.0$$/ \
+				{ print "@comment in nautilus: " $$0; next; }
 .endif	# NAUTILUS_BUILDLINK3_MK
 
 .include "../../audio/esound/buildlink3.mk"
