@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:30:57 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:00:49 agc Exp $
 
-MD5 (elisp-manual-20-2.5.tar.gz) = d11034684296881718ee4eedaa6de56a
+SHA1 (elisp-manual-20-2.5.tar.gz) = e0a6e89828cc59a7701823c28012816edd0b8d60
+Size (elisp-manual-20-2.5.tar.gz) = 2186099 bytes

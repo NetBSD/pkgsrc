@@ -1,16 +1,26 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:32:05 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:00:57 agc Exp $
 
-MD5 (sml-nj/110.9.1-bin.sparc-unix.tar.Z) = 313c8c3cd2c58c160253686c78e84dcd
-MD5 (sml-nj/110.9.1-bin.x86-unix.tar.Z) = a8d2a792ef392a0ddd8ece325fd4b892
-MD5 (sml-nj/110.9.1-cm.tar.Z) = ee3987dbee99b5f0b59cb09c1a956a0d
-MD5 (sml-nj/110.9.1-cml.tar.Z) = 8c33edee5e75fd18600ef9f0b5b253ae
-MD5 (sml-nj/110.9.1-config.tar.Z) = 7a386efc49ca847745f818dcbe5a36bf
-MD5 (sml-nj/110.9.1-eXene.tar.Z) = 33f16b9d64f2c02f36172e434f29f136
-MD5 (sml-nj/110.9.1-ml-burg.tar.Z) = c25007873fbe1dd6ae68a2f0a54e7089
-MD5 (sml-nj/110.9.1-ml-lex.tar.Z) = acd4a503f087fb0a4a044d3ff6da5d24
-MD5 (sml-nj/110.9.1-ml-yacc.tar.Z) = 478430b7bcaa41f1d3f1cc66055078d7
-MD5 (sml-nj/110.9.1-runtime.tar.Z) = b73c165b4cf445601926f53566a1a589
-MD5 (sml-nj/110.9.1-smlnj-c.tar.Z) = c15c3295fd1a9afd9eb5aa67ae34543f
-MD5 (sml-nj/110.9.1-smlnj-lib.tar.Z) = 53f49d01d3f6c3b4eb175ce07a7c8759
+SHA1 (sml-nj/110.9.1-bin.x86-unix.tar.Z) = 9ef76e50e2e37ed21a20e921fbc65b3fa1eae045
+Size (sml-nj/110.9.1-bin.x86-unix.tar.Z) = 2913567 bytes
+SHA1 (sml-nj/110.9.1-cm.tar.Z) = ccc203b905417d3776f2479c630d598b59855e1d
+Size (sml-nj/110.9.1-cm.tar.Z) = 171095 bytes
+SHA1 (sml-nj/110.9.1-cml.tar.Z) = c79428bc173b90dc37949e5464833882a1736571
+Size (sml-nj/110.9.1-cml.tar.Z) = 182653 bytes
+SHA1 (sml-nj/110.9.1-config.tar.Z) = 7173e38051b23404ac01607ec3713fb7ebf3f265
+Size (sml-nj/110.9.1-config.tar.Z) = 9698 bytes
+SHA1 (sml-nj/110.9.1-eXene.tar.Z) = 41c6e36332fec3e8911b8ac29df41f5affc2adab
+Size (sml-nj/110.9.1-eXene.tar.Z) = 1147843 bytes
+SHA1 (sml-nj/110.9.1-ml-burg.tar.Z) = 017594597ef812337d1c69fb3dd1c2a464be32fc
+Size (sml-nj/110.9.1-ml-burg.tar.Z) = 97985 bytes
+SHA1 (sml-nj/110.9.1-ml-lex.tar.Z) = 8b1ebf1347dbf900add29997d089b817dca591ff
+Size (sml-nj/110.9.1-ml-lex.tar.Z) = 44173 bytes
+SHA1 (sml-nj/110.9.1-ml-yacc.tar.Z) = e33e77ef8807efb3a0894bf75978416aba2b47aa
+Size (sml-nj/110.9.1-ml-yacc.tar.Z) = 154409 bytes
+SHA1 (sml-nj/110.9.1-runtime.tar.Z) = 9b2882904442aa79f74fd7c8a231ad73f0bafda2
+Size (sml-nj/110.9.1-runtime.tar.Z) = 585269 bytes
+SHA1 (sml-nj/110.9.1-smlnj-c.tar.Z) = 114c3a6a9f20f7aec78e8cb4d347800df2890a6f
+Size (sml-nj/110.9.1-smlnj-c.tar.Z) = 104261 bytes
+SHA1 (sml-nj/110.9.1-smlnj-lib.tar.Z) = 6d2f004b04cb6d3cd969879160f3e4a74385cb5e
+Size (sml-nj/110.9.1-smlnj-lib.tar.Z) = 369077 bytes
 SHA1 (patch-ab) = c10fee1cd4b06a656d3d839bfe6435dd2573120d
 SHA1 (patch-ac) = 1edf9fa2e20aae35c672f52363d44ba03282bfd2

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:30:55 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:00:49 agc Exp $
 
-MD5 (egcs-1.1.2.tar.gz) = 7d8ef10534ae0e09810d083cb722b6d8
+SHA1 (egcs-1.1.2.tar.gz) = 8f569ef35f58e564d28f82f63718820de4f13e34
+Size (egcs-1.1.2.tar.gz) = 11635427 bytes
