@@ -1,11 +1,13 @@
-$NetBSD: patch-ab,v 1.3 2002/02/06 14:40:38 tv Exp $
+$NetBSD: patch-ab,v 1.4 2002/10/25 17:32:32 wiz Exp $
 
---- src/Makefile.in.orig	Sat Jan 26 01:00:55 2002
-+++ src/Makefile.in	Sat Jan 26 03:16:45 2002
-@@ -334,6 +334,3 @@
+--- src/Makefile.in.orig	Tue Oct 22 00:26:33 2002
++++ src/Makefile.in
+@@ -427,8 +427,6 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 	uninstall-info-am
  
- conio.c: conio_keys.h
  
--conio_keys.h: 
+-conio_keys.h: conio.c
 -	./genkeys.sh > conio_keys.h
--
+ 
+ course.c: course_blurb.h
+ 
