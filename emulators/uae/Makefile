@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/04/19 00:19:21 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2004/06/01 18:25:57 tron Exp $
 
 DISTNAME=	uae-0.8.22
 PKGNAME=	${DISTNAME}
@@ -24,6 +24,10 @@ CONFIGURE_ARGS+=	--enable-dga --enable-vidmode --disable-ui
 post-configure:
 	${TOUCH} ${WRKSRC}/src/tools/cpuopti.o
 	${CP} ${CAT} ${WRKSRC}/src/tools/cpuopti
+.endif
+
+.if ${OPSYS} == NetBSD && exists(/usr/include/sys/statvfs.h)
+CONFIGURE_ENV+=	cv_func_getmntinfo=yes fu_cv_sys_mounted_getmntinfo=yes
 .endif
 
 do-install:
