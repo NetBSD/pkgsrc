@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2004/03/30 17:04:06 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2004/03/30 17:10:16 jlam Exp $
 
 _X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
 
@@ -24,6 +24,7 @@ IS_BUILTIN.Xft2!=							\
 #
 _XFT2_VERSIONS=	2.1.2  2.1.1  2.1.0
 _XFT2_2.1.0=	4.2.99.* 4.3 4.3.[0-9] 4.3.[0-9].* 4.3.[1-8][0-9]* 4.3.9[0-8]*
+_XFT2_2.1.0+=	4.3.99.* 4.[4-9]* 4.[1-9][0-9]*
 .      if !defined(XF86_VERSION)
 _X11_CONFIG_VERSION_DEF=	${X11BASE}/lib/X11/config/version.def
 XF86_VERSION=	3.3
