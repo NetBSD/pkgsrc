@@ -12,7 +12,7 @@
 # To use this script to filter messages arriving via SMTP, set the
 # QMAILQUEUE environment variable in tcp.smtp like so:
 #
-# :allow,QMAILQUEUE="${PREFIX}/bin/qmail-qfilter-queue"
+# :allow,QMAILQUEUE="@PREFIX@/bin/qmail-qfilter-queue"
 #
 # Then rebuild the cdb.
 
