@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/09/24 01:30:20 fredb Exp $
+# $NetBSD: Makefile,v 1.9 1999/09/25 20:43:25 fredb Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
 # 
 
@@ -15,6 +15,8 @@ DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 GNU_CONFIGURE=	yes
 USE_X11BASE=	yes
+
+CONFLICTS=	xpdf-crypto-0.90
 
 MAN1=		xpdf.1 pdftops.1 pdftotext.1 pdfinfo.1 pdftopbm.1 pdfimages.1
 
