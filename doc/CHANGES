@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4649 2004/01/31 13:57:19 chris Exp $
+$NetBSD: CHANGES,v 1.4650 2004/01/31 14:51:01 toshii Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -534,3 +534,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dejagnu to 1.4.4 [kristerw 2004-01-31]
 	Updated vice to 1.14 [kristerw 2004-01-31]
 	Updated sylpheed to 0.9.9 [chris 2004-01-31]
+	Updated p5-Mail-IMAPClient to 2.2.9 [toshii 2004-01-31]
