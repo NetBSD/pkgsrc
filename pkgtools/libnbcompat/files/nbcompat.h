@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.31 2004/01/14 08:58:41 grant Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.32 2004/03/11 13:28:45 grant Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -233,6 +233,9 @@ struct {								\
 
 #if HAVE_SYS_MKDEV_H
 # include <sys/mkdev.h>
+# if !defined(makedev) && defined(mkdev)
+#  define makedev mkdev
+# endif
 #endif
 
 #if HAVE_SYS_MOUNT_H
@@ -598,6 +601,10 @@ void *setmode(const char *);
 
 #ifndef HAVE_GETMODE
 mode_t getmode(const void *, mode_t);
+#endif
+
+#ifndef HAVE_UTIMES
+int utimes(const char *, const struct timeval *);
 #endif
 
 #endif /* _NBCOMPAT_H */
