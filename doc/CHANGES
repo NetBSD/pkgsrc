@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7598 2004/10/29 08:16:17 tron Exp $
+$NetBSD: CHANGES,v 1.7599 2004/10/29 08:28:42 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4961,3 +4961,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ap2-fastcgi-2.4.2 [cube 2004-10-28]
 	Updated cgoban-java to 2.6.6 [rh 2004-09-29]
 	Updated abiword to 2.0.11nb1 [xtraeme 2004-09-29]
+	Updated gphoto2 to 2.1.4nb2 [tron 2004-10-29]
