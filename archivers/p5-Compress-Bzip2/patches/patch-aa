@@ -1,0 +1,66 @@
+$NetBSD: patch-aa,v 1.1 2004/11/13 21:11:19 seb Exp $
+
+--- t/test.t.orig	2000-11-02 20:26:16.000000000 +0000
++++ t/test.t
+@@ -1,44 +1,28 @@
+-#! /usr/bin/env perl
+-##
+-## vi:ts=4
+-##
+-##---------------------------------------------------------------------------##
+-##
+-
++use Test::More tests => 4;
+ use Compress::Bzip2;
+ 
+ my $SourceString;
+ my $TargetString;
+ my $TargetOutString;
+-my $OutputFile;
+-my $InputFile = "";
+-
+-if ($ARGV[0]) { $InputFile=$ARGV[0]; }
+-else { $InputFile='t/test.t'; }
++my $InputFile;
+ 
+-$OutputFile=">".$InputFile.".dek";
++if (-d 't') {
++	$InputFile='t/test.t';
++} else {
++	$InputFile='test.t';
++}
+ 
+-if (-e $InputFile) {
+-    open(INPUT, $InputFile);
+-    while(<INPUT>) {
++open(INPUT, $InputFile);
++while(<INPUT>) {
+ 	$SourceString.=$_;
+-    }
+-    print "\n\nDie Datei wurde eingelesen.\n";
+-    print "Die OrginalDatei hat die Groesse: ".length($SourceString)."\n\n";
+-
+-    $TargetString=Compress::Bzip2::compress($SourceString);
+-
+-    print "Bzip-Com: ".length($TargetString)."\n";
+-
+-    $TargetOutString=Compress::Bzip2::decompress($TargetString);
++}
++ok(length($SourceString), 'test file');
+ 
+-    print "Bzip-Dec: ".length($TargetOutString)."\n";
++$TargetString=Compress::Bzip2::compress($SourceString);
++ok($TargetString, 'compression');
++#    print "Bzip-Com: ".length($TargetString)."\n";
+ 
+-    open(OUTPUT, $OutputFile);
+-    print OUTPUT $TargetOutString;
++$TargetOutString=Compress::Bzip2::decompress($TargetString);
++ok($TargetOutString, 'decompression');
+ 
+-}
+-else {
+-    print "Datei ".$InputFile." konnte nicht geoeffnet werden.";
+-}
+-#Ende
++ok(length($TargetOutString) eq length($SourceString), 'compression/decompression');
