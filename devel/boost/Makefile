@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/05/10 18:43:14 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/05/12 06:15:06 jlam Exp $
 
 DISTNAME=		boost_all
 PKGNAME=		boost-1.14.1
@@ -9,41 +9,55 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.boost.org/
 
+USE_LIBTOOL=		# defined
+
 DIST_SUBDIR=		${PKGNAME}
 EXTRACT_CMD=		${LOCALBASE}/bin/unzip -aaLu ${DOWNLOADED_DISTFILE}
 NO_WRKSUBDIR=		# defined
 
-NO_CONFIGURE=		# defined
-NO_BUILD=		# defined
+BOOST_VERS=		0:0
+MAKE_ENV+=		BOOST_VERS="${BOOST_VERS}"
 
-BOOSTDIR=		${PREFIX}/include/boost
-HTMLDOCDIR=		${PREFIX}/share/doc/html/boost
+INCSDIR=		${PREFIX}/include
+LIBDIR=			${PREFIX}/lib
+HTMLDOCDIR=		${PREFIX}/share/doc/html
 
 post-extract:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/unzip -aCLo \
-		${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
-		*.gif */*.jpg */*/*.gif */*/*.jpg
+		${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX} "*.gif" "*.jpg" "*.zip"
+	cd ${WRKSRC}; ${LOCALBASE}/bin/unzip -aaCLu \
+		libs/pri_queue/boost-heap-1.0.zip "boost/*"
+
+do-configure:
+	cd ${FILESDIR}; ${CP} Makefile limits memory ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${BOOSTDIR}
-	${INSTALL_DATA_DIR} ${BOOSTDIR}/detail
-	cd ${WRKSRC}/boost; for file in *.h *.hpp */*.hpp; do \
-		${INSTALL_DATA} $${file} ${BOOSTDIR}/$${file}; \
+	${INSTALL_DATA_DIR} ${INCSDIR}/boost
+	${INSTALL_DATA_DIR} ${INCSDIR}/boost/detail
+	cd ${WRKSRC}; \
+	for file in `${GREP} "^include/" ${PLIST_SRC} \
+	    | ${SED} "s,^include/,,g"`; do \
+		${ECHO} ${INSTALL_DATA} $${file} ${INCSDIR}/$${file}; \
+		${INSTALL_DATA} $${file} ${INCSDIR}/$${file}; \
 	done
-
-	${INSTALL_DATA_DIR} ${HTMLDOCDIR}
-	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/libs
-.for DIR in array compose dir_it integer min_rand pri_queue rational \
-	    smart_ptr timer utility
-	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/libs/${DIR}
-.endfor
-	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/people
-
-	cd ${WRKSRC}; ${INSTALL_DATA} *.htm ${HTMLDOCDIR}
-	cd ${WRKSRC}/libs; \
-	for file in */*.cpp */*.gif */*.htm */*.html */*.jpg; do \
-		${INSTALL_DATA} $${file} ${HTMLDOCDIR}/libs/$${file}; \
+	cd ${WRKSRC}; ${LIBTOOL} ${INSTALL_DATA} libboost.la ${LIBDIR}
+	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/boost
+	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/boost/libs
+	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/boost/libs/array
+	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/boost/libs/compose
+	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/boost/libs/integer
+	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/boost/libs/min_rand
+	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/boost/libs/pri_queue
+	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/boost/libs/rational
+	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/boost/libs/smart_ptr
+	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/boost/libs/timer
+	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/boost/libs/utility
+	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/boost/more
+	cd ${WRKSRC}; \
+	for file in `${GREP} "^share/doc/html/boost/" ${PLIST_SRC} \
+	    | ${SED} "s,^share/doc/html/boost/,,g"`; do \
+		${ECHO} ${INSTALL_DATA} $${file} ${HTMLDOCDIR}/boost/$${file}; \
+		${INSTALL_DATA} $${file} ${HTMLDOCDIR}/boost/$${file}; \
 	done
-	cd ${WRKSRC}/people; ${INSTALL_DATA} * ${HTMLDOCDIR}/people
 
 .include "../../mk/bsd.pkg.mk"

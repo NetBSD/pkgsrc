@@ -1,13 +1,15 @@
-compose - functional composition adapters for the STL
-dir_it - a set of file system directory level iterators
-integer - headers for dealing with integral types
-min_rand - a random number generator class
-rational - a rational number class
-smart_ptr - four smart pointer classes
-timer - event timer, progress timer, and progress display classes
-utility - various utility classes and functions:
-    * call_traits - defines types for passing parameters
-    * compressed_pair - Empty member optimization
-    * operators - Templates for arithmetic classes and iterators
-    * type_traits - Template describe the fundamental properties of a type
-    * utility - Class noncopyable plus next() and prior() template functions
+A repository of free C++ libraries designed to work well with and
+to extend the ISO Standard C++ Library, including:
+
+	call_traits	defines types for passing parameters
+	compose		functional composition adapters for the STL
+	compressed_pair	Empty member optimization
+	integer		headers for dealing with integral types
+	min_rand	a random number generator class
+	operators	Templates for arithmetic classes and iterators
+	pri_queue	set of different priority queue implementations
+	rational	a rational number class
+	smart_ptr	four smart pointer classes
+	timer		event timer, progress timer, progress display classes
+	type_traits	Template describe the fundamental properties of a type
+	utility		noncopyable plus next() and prior() template functions
