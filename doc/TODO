@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1100 2003/12/03 01:54:21 xtraeme Exp $
+$NetBSD: TODO,v 1.1101 2003/12/03 02:20:44 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -273,7 +273,6 @@ Suggested package updates
 	o leafnode-1.9.46
 	o lesstif-0.93.94
 	o lftp-2.6.9
-	o libIDL-0.8.2 [pkg/23603]
 	o libao-0.8.4
 	o libgcrypt-1.1.44 [pkg/23322]
 	o libgtop-2.0.6
