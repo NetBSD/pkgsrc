@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:37:03 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/25 20:31:59 wiz Exp $
 #
 
 DISTNAME=	geoslab703-ttf-20010522
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.will-harris.com/fonts/
 DISTFILES=	geo703l.ttf geo703li.ttf
@@ -18,7 +18,7 @@ USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TrueType
+FONTS_TTF_DIRS=	${PREFIX}/lib/X11/fonts/TTF
 
 do-install:
 	${INSTALL_DATA_DIR} ${FONTS_TTF_DIRS}
