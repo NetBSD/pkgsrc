@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2003/09/21 11:15:21 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/01/23 11:27:30 jmmv Exp $
 #
 
 DISTNAME=	mini_sendmail-1.3.2
@@ -9,9 +9,15 @@ MAINTAINER=	is@NetBSD.org
 HOMEPAGE=	http://www.acme.com/software/mini_sendmail/
 COMMENT=	Accept email on behalf of the real sendmail without spooling
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	yes
+
 FILESDIR=	${.CURDIR}/../mini_sendmail/files
 
 EGDIR=		${PREFIX}/share/examples/mini_sendmail
+
+INSTALLATION_DIRS=	man/man8 sbin
 
 .include "../../mk/bsd.prefs.mk"
 
