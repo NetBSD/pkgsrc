@@ -1,0 +1,34 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/15 20:00:27 kei Exp $
+bin/iniptex
+bin/mendex
+bin/pdvips
+bin/pdvitype
+bin/pjbibtex
+bin/platex
+bin/ppltotf
+bin/ptex
+bin/ptftopl
+bin/virptex
+share/texmf.local/dvips/base/color.pro
+share/texmf.local/dvips/base/crop.pro
+share/texmf.local/dvips/base/finclude.pro
+share/texmf.local/dvips/base/hps.pro
+share/texmf.local/dvips/base/psfonts.map
+share/texmf.local/dvips/base/special.pro
+share/texmf.local/dvips/base/tex.pro
+share/texmf.local/dvips/base/texc.pro
+share/texmf.local/dvips/base/texps.pro
+share/texmf.local/web2c/platex-euc.fmt
+share/texmf.local/web2c/platex-jis.fmt
+share/texmf.local/web2c/platex-sjis.fmt
+share/texmf.local/web2c/platex.fmt
+share/texmf.local/web2c/ptex-euc.fmt
+share/texmf.local/web2c/ptex-jis.fmt
+share/texmf.local/web2c/ptex-sjis.fmt
+share/texmf.local/web2c/ptex.fmt
+share/texmf.local/web2c/ptex.pool
+share/texmf.local/web2c/texmf.cnf
+share/texmf/dvips/pstricks/PSTricks.patch
+@dirrm share/texmf.local/web2c
+@dirrm share/texmf.local/dvips/base
+@dirrm share/texmf.local/dvips
