@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/12/24 14:10:54 abs Exp $
+@comment $NetBSD: PLIST-Linux,v 1.1 2001/12/24 14:10:54 abs Exp $
 bin/addr
 bin/dig
 bin/dnsquery
@@ -26,7 +26,6 @@ include/bind/isc/tree.h
 include/bind/netdb.h
 include/bind/res_update.h
 include/bind/resolv.h
-include/bind/sys/bitypes.h
 lib/libbind.a
 lib/libbind_r.a
 libexec/dnskeygen
@@ -81,6 +80,7 @@ man/cat8/nslookup.0
 man/cat8/nsupdate.0
 @dirrm include/bind/arpa
 @dirrm include/bind/isc
+@dirrm include/bind/net
 @dirrm include/bind/sys
 @dirrm include/bind
 @dirrm share/doc/bind8/CVS
