@@ -1,16 +1,16 @@
-$NetBSD: patch-ac,v 1.1 1999/04/17 01:55:55 mjl Exp $
+$NetBSD: patch-ac,v 1.2 1999/12/18 04:53:18 mjl Exp $
 
---- ../ffcall/avcall/Makefile.in.orig	Sat Apr 17 02:28:04 1999
-+++ ../ffcall/avcall/Makefile.in	Sat Apr 17 02:38:43 1999
-@@ -130,10 +130,7 @@
- tests : tests.o $(OBJECTS)
- 	$(CC) $(CFLAGS) tests.o $(OBJECTS) -o tests
+--- ../ffcall/avcall/Makefile.in.orig	Sat Dec 18 03:39:13 1999
++++ ../ffcall/avcall/Makefile.in	Sat Dec 18 03:39:31 1999
+@@ -189,10 +189,7 @@
+ tests : tests.o libavcall.la
+ 	$(LIBTOOL_LINK) $(CC) $(CFLAGS) @GCC_X_NONE@ tests.o libavcall.la -o tests
  
 -check : all tests
 -	./tests > tests.out
 -	uniq -u < tests.out > tests.output.$(HOST)
 -	test '!' -s tests.output.$(HOST)
-+check : # This test crashes with egcs
++check : # all tests
  
  mostlyclean : clean
  
