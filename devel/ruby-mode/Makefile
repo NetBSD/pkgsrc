@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/12/30 16:46:04 taca Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/13 04:14:21 uebayasi Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -16,35 +16,26 @@ WRKSRC=		${RUBY_WRKSRC}/misc
 .include "../../mk/bsd.prefs.mk"
 RUBY_VER=	1.6		# always use 1.6 base
 
-.if defined(USE_XEMACS)
-DEPENDS+=	xemacs-[0-9]*:../../editors/xemacs
-EMACS=		xemacs
-SITE_LISP=	lib/xemacs/xemacs-packages/lisp/prog-modes
-.else
-DEPENDS+=	emacs-[0-9]*:../../editors/emacs
-EMACS=		emacs
-SITE_LISP=	share/emacs/site-lisp
-.endif
-
 EXTRACT_ELEMENTS= ${RUBY_DISTNAME}/misc
 NO_CONFIGURE=	# defined
 
-SRCS=		ruby-mode.el rubydb3x.el inf-ruby.el
+SRCS=	${RUBY_WRKSRC}/misc/ruby-mode.el \
+	${RUBY_WRKSRC}/misc/rubydb3x.el \
+	${RUBY_WRKSRC}/misc/inf-ruby.el
 
 PLIST_SUBST+=	SITE_LISP=${SITE_LISP}
 
 do-build:
-.for f in ${SRCS}
-	cd ${WRKSRC}; ${EMACS} --no-init-file --no-site-file -batch \
-		-l ruby-mode.el -f batch-byte-compile ${f}
-.endfor
+	for f in ${SRCS}; do \
+		cd ${WRKSRC}; \
+		${EMACS_BIN} --no-init-file --no-site-file -batch \
+			-l ruby-mode.el -f batch-byte-compile $$f; \
+	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${SITE_LISP}
-.for f in ${SRCS}
-	${INSTALL_DATA} ${RUBY_WRKSRC}/misc/${f} ${PREFIX}/${SITE_LISP}
-	${INSTALL_DATA} ${RUBY_WRKSRC}/misc/${f}c ${PREFIX}/${SITE_LISP}
-.endfor
+	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/ruby-mode
+	${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} ${EMACS_LISPPREFIX}/ruby-mode
 
 .include "../../lang/ruby-base/Makefile.common"
+.include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"
