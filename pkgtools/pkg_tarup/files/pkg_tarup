@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $Id: pkg_tarup,v 1.13 2004/07/14 16:08:48 erh Exp $
+# $Id: pkg_tarup,v 1.14 2004/07/19 17:38:36 erh Exp $
 #
 # Tar up installed package
 #
@@ -133,14 +133,28 @@ create_package()
 
 add_to_list()
 {
+	local added
+
+	added=0
+
+	oIFS="$IFS"
+	IFS="
+"
 	# Get expanded name, and escape quotes
-	rPKG=`pkg_info -e "$1" | ${SED} -e's/\"/\\\"/g'`
-	if [ -z "$rPKG" -o -f "${PKG_DBDIR}/${rPKG}" ] ; then
-		${ECHO} "Error: package $1 not found"
-		usage "$0"
-	fi
-	if ! ${ECHO} "${PKGS}" | ${GREP} -q "\"${rPKG}\"" ; then
-		PKGS="${PKGS} \"${rPKG}\""
+	for rPKG in `pkg_info -e "$1" | ${SED} -e's/\"/\\\"/g'` ; do
+		if [ -z "$rPKG" -o -f "${PKG_DBDIR}/${rPKG}" ] ; then
+			${ECHO} "Error: package $1 not found"
+			usage "$0"
+		fi
+
+		added=1
+		if ! ${ECHO} "${PKGS}" | ${GREP} -q "\"${rPKG}\"" ; then
+			PKGS="${PKGS} \"${rPKG}\""
+		fi
+	done
+	IFS="$oIFS"
+	if [ $added -eq 0 ] ; then
+		${ECHO} "Warning: no package matching $1 found"
 	fi
 }
 
@@ -188,6 +202,7 @@ while [ $# -gt 0 ] ; do
 	shift
 done
 if [ -z "${PKGS}" ] ; then
+	${ECHO} "ERROR: No packages to tarup identified!"
 	usage "$0"
 fi
 FOR="
