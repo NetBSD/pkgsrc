@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2004/10/03 00:18:07 tv Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/05 09:02:11 jmmv Exp $
 
-DISTNAME=	beecrypt-3.0.0
-PKGREVISION=	1
+DISTNAME=	beecrypt-4.1.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=beecrypt/}
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.virtualunlimited.com/products/beecrypt/
 COMMENT=	Multipurpose cryptographic library
 
