@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.345 2003/03/05 14:31:40 wiz Exp $
+$NetBSD: TODO,v 1.346 2003/03/05 18:45:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -177,7 +177,7 @@ Suggested package updates
 	o mixer.app-1.8.0
 	o mkfontscale-20020618
 	o mpgtx-1.3 [pkg/19082]
-	o mrproject-0.9
+	o mrproject-0.9.1
 	o mrtg-2.9.27
 	o mtools-3.9.9
 	o mysql-3.23.54
