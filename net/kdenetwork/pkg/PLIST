@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1997/12/29 03:52:16 hubertf Exp $
 share/apps/kmail/pics/attach.xpm
 share/apps/kmail/pics/filedel2.xpm
 share/apps/kmail/pics/filereply.xpm
@@ -63,24 +64,15 @@ share/doc/HTML/en/krn/articles.html
 share/doc/HTML/en/krn/groups.html
 share/doc/HTML/en/krn/offline.html
 share/doc/HTML/en/krn/overview.html
-share/applnk/Utilities/KMail.kdelnk
-share/applnk/Utilities/Krn.kdelnk
-share/icons/krn.xpm
+share/applnk/Internet/KMail.kdelnk
+share/applnk/Internet/Krn.kdelnk
+share/applnk/Network/knu.kdelnk
 share/locale/de/LC_MESSAGES/kmail.mo
 share/locale/pt/LC_MESSAGES/kmail.mo
 share/locale/fr/LC_MESSAGES/kmail.mo
 share/locale/fi/LC_MESSAGES/kmail.mo
 bin/kmail
 bin/krn
-@dirrm share/locale/pt/LC_MESSAGES
-@dirrm share/locale/pt
-@dirrm share/locale/fr/LC_MESSAGES
-@dirrm share/locale/fr
-@dirrm share/locale/fi/LC_MESSAGES
-@dirrm share/locale/fi
-@dirrm share/locale/de/LC_MESSAGES
-@dirrm share/locale/de
-@dirrm share/locale
 @dirrm share/icons
 @dirrm share/doc/HTML/en/krn
 @dirrm share/doc/HTML/en/kmail

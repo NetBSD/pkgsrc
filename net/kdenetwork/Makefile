@@ -1,17 +1,18 @@
 # New ports collection makefile for:   kdenetwork
-# Version required:    Beta1
+# Version required:    Beta2
 # Date created:        28 October 1997
 # Whom:                Stefan Eßer <se@freebsd.org>
 #
-# $Id: Makefile,v 1.1.1.1 1997/12/29 03:47:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/12/29 03:52:09 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
-DISTNAME=	kdenetwork-Beta1-2
-PKGNAME=	kdenetwork-1.2b
+DISTNAME=	kdenetwork-Beta2-1
+PKGNAME=	kdenetwork-2.1b
 CATEGORIES=	net kde
-MASTER_SITES=	ftp://ftp.net.lut.ac.uk/kde/stable/Beta1/distribution/tgz/source/ \
- 		ftp://ftp.uni-erlangen.de/pub/Linux/MIRROR.KDE/stable/Beta1/distribution/tgz/source/ \
- 		ftp://ftp.caldera.com/pub/mirrors/kde/stable/Beta1/distribution/tgz/source/
+MASTER_SITES=	ftp://ftp.net.lut.ac.uk/kde/stable/Beta2/distribution/tgz/source/ \
+ 		ftp://ftp.uni-erlangen.de/pub/Linux/MIRROR.KDE/stable/Beta2/distribution/tgz/source/ \
+ 		ftp://ftp.caldera.com/pub/mirrors/kde/stable/Beta2/distribution/tgz/source/
 EXTRACT_SUFX=	.src.tgz
 
 MAINTAINER=	se@freebsd.org
@@ -34,7 +35,9 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--x-inc=$(X11BASE)/include -I$(PREFIX)/include -I$(PREFIX)/include/giflib" \
 		"--x-lib=$(X11BASE)/lib -L$(PREFIX)/lib" \
 		"--prefix=$(PREFIX)" \
-		"--datadir=$(PREFIX)/share/kde"
+		"--datadir=$(PREFIX)/share/kde" \
+		"--with-qt-dir=$(PREFIX)" \
+		"--with-qt-includes=$(PREFIX)/include/qt"
 
 WRKSRC=		${WRKDIR}/kdenetwork
 
