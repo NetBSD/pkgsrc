@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8710 2005/01/12 10:59:31 adam Exp $
+$NetBSD: CHANGES,v 1.8711 2005/01/12 11:21:17 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -255,3 +255,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated udfclient to 0.3.2 [reinoud 2005-01-11]
 	Added dmidecode-2.5 [hubertf 2005-01-12]
 	Updated doxygen to 1.4.1 [adam 2005-01-12]
+	Updated gtk2 to 2.6.1nb1 [jmmv 2005-01-12]
