@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.16 2003/09/06 01:37:17 jlam Exp $
+# $NetBSD: Makefile.in,v 1.17 2003/09/13 03:50:12 jlam Exp $
 #
 
 srcdir=		@srcdir@
@@ -20,9 +20,9 @@ RANLIB=		@RANLIB@
 LIB=		libnbcompat.a
 
 INCS=		nbcompat.h nbcompat/err.h nbcompat/fts.h nbcompat/getopt.h \
-		nbcompat/glob.h nbcompat/md5.h nbcompat/nbtypes.h \
-		nbcompat/poll.h nbcompat/rmd160.h nbcompat/sha1.h \
-		nbcompat/statfs.h nbcompat/vis.h
+		nbcompat/glob.h nbcompat/md5.h nbcompat/nbconfig.h \
+		nbcompat/nbtypes.h nbcompat/poll.h nbcompat/rmd160.h \
+		nbcompat/sha1.h nbcompat/statfs.h nbcompat/vis.h
 
 OBJS=		@LIBOBJS@
 
@@ -31,7 +31,7 @@ COMPILE=	$(CC) $(CPPFLAGS) $(CFLAGS)
 
 .PHONY: all install clean distclean
 
-all: nbcompat/nbtypes.h nbcompat/nbconfig.hi $(LIB)
+all: nbcompat/nbtypes.h nbcompat/nbconfig.h $(LIB)
 
 .c.o: nbcompat/nbtypes.h
 	$(COMPILE) $(DEFS) -c $<
@@ -40,7 +40,7 @@ $(LIB): $(OBJS)
 	$(AR) cr $@ $(OBJS)
 	$(RANLIB) $@
 
-nbcompat/nbconfig.hi: nbcompat/nbconfig.h
+nbcompat/nbconfig.h: nbcompat/config.h
 	$(AWK) '							\
 		BEGIN { process = 1 }					\
 		/NBCOMPAT template section follows\./ { process = 0 }	\
@@ -57,7 +57,7 @@ nbcompat/nbconfig.hi: nbcompat/nbconfig.h
 			}						\
 		}							\
 		{ print }						\
-	' nbcompat/nbconfig.h > $@
+	' nbcompat/config.h > $@
 
 nbcompat/nbtypes.h: bits
 	./bits $@
@@ -75,10 +75,9 @@ install:
 		echo "$(INSTALL) -m 444 $$file $(prefix)/include/$$file"; \
 		$(INSTALL) -m 444 $$file $(prefix)/include/$$file; \
 	done
-	$(INSTALL) -m 444 nbcompat/nbconfig.hi $(prefix)/include/nbcompat/nbconfig.h
 
 clean:
-	rm -f *.a *.o bits nbcompat/nbtypes.h nbcompat/nbcompat.hi
+	rm -f *.a *.o bits nbcompat/nbtypes.h nbcompat/nbcompat.h
 
 distclean: clean
 	rm -f Makefile config.log config.status configure.lineno
