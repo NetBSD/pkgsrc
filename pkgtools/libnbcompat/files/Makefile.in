@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.30 2005/02/15 23:35:42 grant Exp $
+# $NetBSD: Makefile.in,v 1.31 2005/02/20 05:55:51 grant Exp $
 #
 
 srcdir=		@srcdir@
@@ -78,7 +78,7 @@ nbcompat/nbtypes.h: bits
 	./bits $@
 
 bits: bits.c
-	$(COMPILE) $(DEFS) -c $<
+	$(COMPILE) $(DEFS) -c bits.c
 	$(LINK) bits.o
 
 install:
