@@ -1,8 +1,8 @@
-$NetBSD: patch-bn,v 1.4 2003/07/18 10:50:08 adam Exp $
+$NetBSD: patch-bn,v 1.5 2003/12/12 10:11:39 adam Exp $
 
---- scripts/autoconf/Makefile.in.orig	2003-07-18 01:04:28.000000000 +0200
-+++ scripts/autoconf/Makefile.in	2003-07-18 12:09:47.000000000 +0200
-@@ -151,9 +151,9 @@
+--- scripts/autoconf/Makefile.in.orig	2003-11-27 19:29:53.000000000 +0000
++++ scripts/autoconf/Makefile.in
+@@ -224,9 +224,9 @@ MAINTAINERCLEANFILES = Makefile.in
  
  EXTRA_DIST = ac_find_motif.m4
  
@@ -12,5 +12,5 @@ $NetBSD: patch-bn,v 1.4 2003/07/18 10:50:08 adam Exp $
 -@Aclocal_TRUE@aclocal_DATA = ac_find_motif.m4
 +aclocal_DATA = ac_find_motif.m4
  subdir = scripts/autoconf
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = $(top_builddir)/include/LTconfig.h

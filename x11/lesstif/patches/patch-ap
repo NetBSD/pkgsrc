@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.11 2003/07/18 10:50:08 adam Exp $
+$NetBSD: patch-ap,v 1.12 2003/12/12 10:11:39 adam Exp $
 
---- doc/lessdox/widgets/Makefile.in.orig	2003-07-18 01:04:25.000000000 +0200
-+++ doc/lessdox/widgets/Makefile.in	2003-07-18 12:18:27.000000000 +0200
-@@ -186,7 +186,7 @@
+--- doc/lessdox/widgets/Makefile.in.orig	2003-11-27 19:29:49.000000000 +0000
++++ doc/lessdox/widgets/Makefile.in
+@@ -259,7 +259,7 @@ manthree_DATA = \
  
  manfive_DATA = 
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ap,v 1.11 2003/07/18 10:50:08 adam Exp $
  
  html_DATA = ${manone_DATA:.1=.html} ${manthree_DATA:.3=.html} \
                  ${manfive_DATA:.5=.html}
-@@ -436,7 +436,7 @@
+@@ -519,7 +519,7 @@ $(html_DATA): $(MAN2HTML)
  # in both the http://www.lesstif.org and the locally installed case.
  #
  install-data-hook:
