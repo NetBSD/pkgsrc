@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.8 2001/11/21 13:02:53 agc Exp $
+# $NetBSD: defs.Darwin.mk,v 1.9 2001/11/21 13:09:09 agc Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -61,4 +61,5 @@ ROOT_GROUP?=	wheel
 
 _DO_LIBINTL_CHECKS=	yes	# perform checks for valid libintl
 _IMAKE_MAKE=	${MAKE}		# program which gets invoked by imake
+_PATCH_BACKUP_ARG= -z		# switch to patch(1) for backup file
 _USE_RPATH=	no		# don't add rpath to LDFLAGS
