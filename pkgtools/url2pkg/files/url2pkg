@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: url2pkg,v 1.18 2001/12/29 13:07:14 hubertf Exp $
+# $NetBSD: url2pkg,v 1.19 2002/03/04 00:53:16 hubertf Exp $
 #
 # url2pkg
-# (c) 1999 Hubert Feyrer
+# (c) 1999-2002 Hubert Feyrer <hubert@feyrer.de>
 #
 
 if [ "$MAKE" = "" ]; then
@@ -83,6 +83,7 @@ if [ ! -f w*/.extract_done ]; then
 	) >Makefile
 	
 	echo '@comment $'NetBSD'$' > PLIST
+	touch distinfo
 	
 	${editor} +5 Makefile
 	
