@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/03/24 23:41:20 tron Exp $
+# $NetBSD: Makefile,v 1.2 2000/03/27 08:54:58 tron Exp $
 
 DISTNAME=		gcc-2.95.2
 CATEGORIES=		lang
@@ -19,14 +19,15 @@ BROKEN=			package needs more work, see "Makefile".
 # working on other platforms please add them.
 ONLY_FOR_PLATFORM=	NetBSD-1.4[E-Z]-i386 NetBSD-1.[5-9]*-i386
 
-GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
-CONFIGURE_SCRIPT=	../${DISTNAME}/configure
-
+GNU_CONFIGURE=		yes
+CONFIGURE_SCRIPT=	${SRCDIR}/configure
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
-WRKSRC=			${WRKDIR}/obj-${MACHINE_GNU_PLATFORM}
 
-CONFDIR=		${WRKDIR}/${DISTNAME}/gcc/config
+SRCDIR=			${WRKDIR}/${DISTNAME}
+WRKSRC=			${WRKDIR}/objdir
+
+CONFDIR=		${SRCDIR}/gcc/config
 # Files taken from "src/gnu/dist/gcc/config".
 CONFFILES=		i386_netbsd-elf.h i386_netbsd.h
 

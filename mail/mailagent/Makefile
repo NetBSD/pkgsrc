@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/12/26 17:35:41 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2000/03/27 08:54:59 tron Exp $
 # FreeBSD: ports/mail/mailagent/Makefile,v 1.28 1999/08/31 06:47:24 mharo Exp
 #
 
@@ -17,7 +17,7 @@ USE_PERL5=	yes
 NO_PACKAGE=	"Correct FQDN needs to be hardcoded"
 IS_INTERACTIVE=		yes
 HAS_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	Configure
+CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS=		-dres \
 			-Dperlpath='${PERL5}' \
 			-Dutmp='/var/run/utmp' \

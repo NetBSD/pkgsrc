@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/01/03 21:47:55 simonb Exp $
+# $NetBSD: Makefile,v 1.11 2000/03/27 08:54:58 tron Exp $
 # FreeBSD: Makefile,v 1.42 1997/12/24 01:21:07 alex Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.myxa.com/old/elm.html
 
 HAS_CONFIGURE=		Yes
-CONFIGURE_SCRIPT=	Configure
+CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ENV=		PREFIX="${PREFIX}"
 CONFIGURE_ARGS=		-S
 

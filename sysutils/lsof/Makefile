@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/03/16 14:02:26 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2000/03/27 08:54:59 tron Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
@@ -17,7 +17,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www-rcd.cc.purdue.edu/~abe/
 
 HAS_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	Configure
+CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS=		-n ${LOWER_OPSYS}
 
 SRCBALL_NAME=		${DISTNAME:S/_W$//}

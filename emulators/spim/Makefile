@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/12/29 01:41:01 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2000/03/27 08:54:55 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/10/10 06:53:35 obrien Exp
 #
 
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.cs.wisc.edu/~larus/spim.html
 NO_WRKSUBDIR=		yes
 
 HAS_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	Configure
+CONFIGURE_SCRIPT=	./Configure
 USE_IMAKE=		yes
 XMKMF=			xmkmf # don't specify -a option
 

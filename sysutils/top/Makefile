@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/02/19 02:40:33 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2000/03/27 08:55:00 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/04/30 23:49:14 asami Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	agc@netbsd.org
 HOMEPAGE=	http://www.groupsys.com/topinfo/
 
 HAS_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	Configure
+CONFIGURE_SCRIPT=	./Configure
 
 .include "../../mk/bsd.prefs.mk"
 

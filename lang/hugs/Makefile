@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/01/24 12:27:20 augustss Exp $
+# $NetBSD: Makefile,v 1.10 2000/03/27 08:54:57 tron Exp $
 
 DISTNAME=	Hugs98-May1999
 PKGNAME=	Hugs98-199905
@@ -19,7 +19,7 @@ MAKE_ENV=	INSTALL="${INSTALL}" INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}"
 
 do-configure:
-	cd ${WRKSRC}; (cd unix; ./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
+	cd ${WRKSRC}; (cd unix; ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/../docs/hugs.1 ${PREFIX}/man/man1/hugs.1

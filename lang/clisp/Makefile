@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/12/18 04:53:17 mjl Exp $
+# $NetBSD: Makefile,v 1.12 2000/03/27 08:54:57 tron Exp $
 
 DISTNAME=		clisp-1999-07-22
 PKGNAME=		clisp-19990722
@@ -19,7 +19,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src
 
 do-configure:
 	cd ${WRKSRC}; \
-	(cd ..;./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}); \
+	(cd ..;${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}); \
 	./makemake --prefix=${LOCALBASE} --with-readline --with-gettext \
 	  --with-dynamic-ffi >Makefile
 

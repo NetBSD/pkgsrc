@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/12/29 16:15:47 pooka Exp $
+# $NetBSD: Makefile,v 1.10 2000/03/27 08:54:55 tron Exp $
 #
 
 DISTNAME=		nethack-3.3.0
@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}/nethack-3.3.0
 USE_X11=		yes
 USE_GMAKE=		yes
 HAS_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	sys/unix/setup.sh
+CONFIGURE_SCRIPT=	./sys/unix/setup.sh
 ALL_TARGET=		nethack tiles.xpm
 INSTALL_TARGET=		binfiles
 MAKE_ENV+=		GTYPE=-qt QTDIR=${X11BASE}
