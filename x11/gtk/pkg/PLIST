@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2000/02/05 15:47:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2000/03/12 22:30:07 tron Exp $
 bin/gtk-config
 etc/gtk/gtkrc.cs
 etc/gtk/gtkrc.hr
@@ -162,9 +162,9 @@ include/gtk/gtklayout.h
 include/gtk/gtkplug.h
 include/gtk/gtksocket.h
 include/gtk/gtkthemes.h
-lib/libgdk.so.12.6
+lib/libgdk.so.12.7
 lib/libgdk.a
-lib/libgtk.so.12.6
+lib/libgtk.so.12.7
 lib/libgtk.a
 man/man1/gtk-config.1
 @unexec install-info --delete %D/info/gdk.info %D/info/dir
@@ -180,6 +180,8 @@ info/gtk.info-6
 @exec install-info %D/info/gdk.info %D/info/dir
 @exec install-info %D/info/gtk.info %D/info/dir
 share/aclocal/gtk.m4
+share/locale/gl/LC_MESSAGES/gtk+.mo
+share/locale/lt/LC_MESSAGES/gtk+.mo
 share/locale/nl/LC_MESSAGES/gtk+.mo
 share/locale/da/LC_MESSAGES/gtk+.mo
 share/locale/pt_BR/LC_MESSAGES/gtk+.mo
