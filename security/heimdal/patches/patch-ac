@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/01/10 14:56:45 jlam Exp $
+
+--- configure.in.orig	Mon May 12 11:26:39 2003
++++ configure.in
+@@ -16,9 +16,6 @@ AM_MAINTAINER_MODE
+ 
+ AC_PREFIX_DEFAULT(/usr/heimdal)
+ 
+-test "$sysconfdir" = '${prefix}/etc' && sysconfdir='/etc'
+-test "$localstatedir" = '${prefix}/var' && localstatedir='/var/heimdal'
+-
+ AC_CANONICAL_HOST
+ CANONICAL_HOST=$host
+ AC_SUBST(CANONICAL_HOST)

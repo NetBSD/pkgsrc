@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4416 2004/01/10 14:27:57 recht Exp $
+$NetBSD: CHANGES,v 1.4417 2004/01/10 14:57:02 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -153,3 +153,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pyslsk to 1.2.4nb3 [recht 2004-01-10]
 	Updated xmule to 1.7.1nb3 [recht 2004-01-10]
 	Updated py-wxWindows to 2.4.2.4nb3 [recht 2004-01-10]
+	Added heimdal-0.6 [jlam 2004-01-10]
