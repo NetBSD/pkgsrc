@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/03/25 17:18:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2002/04/06 16:18:52 dmcmahill Exp $
 #
 
 DISTNAME=	centericq-4.6.5
@@ -15,6 +15,12 @@ USE_NCURSES=	yes
 GCC_VERSION!=           gcc --version
 .if (${GCC_VERSION:C/-.*$$//} == egcs)
 .include "../../lang/gcc/Makefile.gcc"
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+.if ${MACHINE_ARCH} == alpha
+# avoid toolchain bugs
+CFLAGS:=	${CFLAGS:C/-O[0-9]*//g}
 .endif
 
 .include "../../devel/gettext-lib/buildlink.mk"
