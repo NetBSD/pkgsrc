@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2001/03/10 10:48:09 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2001/04/26 17:38:29 rh Exp $
 bin/glib-config
 include/glib/glib-1.2/glib.h
 include/glib/glib-1.2/gmodule.h
@@ -10,17 +10,17 @@ lib/libglib.a
 lib/libglib.la
 lib/libglib.so
 lib/libglib.so.13
-lib/libglib.so.13.9
+lib/libglib.so.13.10
 lib/libgmodule.a
 lib/libgmodule.la
 lib/libgmodule.so
 lib/libgmodule.so.13
-lib/libgmodule.so.13.9
+lib/libgmodule.so.13.10
 lib/libgthread.a
 lib/libgthread.la
 lib/libgthread.so
 lib/libgthread.so.13
-lib/libgthread.so.13.9
+lib/libgthread.so.13.10
 lib/pkgconfig/glib.pc
 lib/pkgconfig/gmodule.pc
 lib/pkgconfig/gthread.pc
