@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/01/03 22:49:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2005/01/10 13:18:06 jmmv Exp $
 #
 
 DISTNAME=	epiphany-extensions-1.4.4
@@ -14,6 +14,9 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
+
+# Avoid -Werror, which breaks the build sometimes.
+CONFIGURE_ARGS+=	--enable-compile-warnings=no
 
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/webbrwsr
 
