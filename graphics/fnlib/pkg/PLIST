@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 1999/10/28 00:27:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/06/21 01:02:13 jlam Exp $
 etc/fnrc
 include/Fnlib.h
 include/Fnlib_types.h
 lib/libFnlib.a
+lib/libFnlib.la
 lib/libFnlib.so.5.0
 share/doc/fnlib/fontinfo.README
 share/fnlib_fonts/e/17/032.png
