@@ -1,42 +1,61 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/03 09:35:57 rh Exp $
-lib/perl5/site_perl/Net/LDAP/Constant.pm
-lib/perl5/site_perl/Net/LDAP/Message.pod
-lib/perl5/site_perl/Net/LDAP/Filter.pod
-lib/perl5/site_perl/Net/LDAP/Constant.pod
-lib/perl5/site_perl/Net/LDAP/Schema.pm
-lib/perl5/site_perl/Net/LDAP/Entry.pm
-lib/perl5/site_perl/Net/LDAP/Schema/oid7.pm
-lib/perl5/site_perl/Net/LDAP/Reference.pod
-lib/perl5/site_perl/Net/LDAP/Search.pm
-lib/perl5/site_perl/Net/LDAP/Entry.pod
-lib/perl5/site_perl/Net/LDAP/BER.pm
-lib/perl5/site_perl/Net/LDAP/Search.pod
-lib/perl5/site_perl/Net/LDAP/Extension.pm
+@comment $NetBSD: PLIST,v 1.2 2000/06/09 14:32:49 kleink Exp $
+lib/perl5/site_perl/Authen/SASL.pm
+lib/perl5/site_perl/Authen/SASL.pod
+lib/perl5/site_perl/Authen/SASL/CRAM_MD5.pm
+lib/perl5/site_perl/Bundle/Net/LDAP.pm
+lib/perl5/site_perl/LWP/Protocol/ldap.pm
+lib/perl5/site_perl/Net/LDAP.pm
+lib/perl5/site_perl/Net/LDAP.pod
+lib/perl5/site_perl/Net/LDAP/ASN.pm
 lib/perl5/site_perl/Net/LDAP/Bind.pm
-lib/perl5/site_perl/Net/LDAP/Util.pm
-lib/perl5/site_perl/Net/LDAP/BER.pod
+lib/perl5/site_perl/Net/LDAP/Constant.pm
+lib/perl5/site_perl/Net/LDAP/Constant.pod
+lib/perl5/site_perl/Net/LDAP/Control.pm
+lib/perl5/site_perl/Net/LDAP/Control/Paged.pm
+lib/perl5/site_perl/Net/LDAP/Control/Sort.pm
+lib/perl5/site_perl/Net/LDAP/Control/SortResult.pm
+lib/perl5/site_perl/Net/LDAP/Control/VLV.pm
+lib/perl5/site_perl/Net/LDAP/Control/VLVResponse.pm
+lib/perl5/site_perl/Net/LDAP/Entry.pm
+lib/perl5/site_perl/Net/LDAP/Entry.pod
+lib/perl5/site_perl/Net/LDAP/Examples.pod
+lib/perl5/site_perl/Net/LDAP/Extension.pm
+lib/perl5/site_perl/Net/LDAP/FAQ.pod
+lib/perl5/site_perl/Net/LDAP/Filter.pm
+lib/perl5/site_perl/Net/LDAP/Filter.pod
 lib/perl5/site_perl/Net/LDAP/LDIF.pm
 lib/perl5/site_perl/Net/LDAP/LDIF.pod
 lib/perl5/site_perl/Net/LDAP/Message.pm
-lib/perl5/site_perl/Net/LDAP/Filter.pm
-lib/perl5/site_perl/Net/LDAP.pm
-lib/perl5/site_perl/Net/LDAP.pod
-lib/perl5/site_perl/Authen/SASL/CRAM_MD5.pm
-lib/perl5/site_perl/Authen/SASL.pm
-lib/perl5/site_perl/LWP/Protocol/ldap.pm
-lib/perl5/man/man3/Net::LDAP::Message.3
-lib/perl5/man/man3/Net::LDAP::Filter.3
-lib/perl5/man/man3/Net::LDAP::Search.3
-lib/perl5/man/man3/Net::LDAP::Reference.3
-lib/perl5/man/man3/Net::LDAP::LDIF.3
-lib/perl5/man/man3/Net::LDAP::Util.3
-lib/perl5/man/man3/Net::LDAP.3
-lib/perl5/man/man3/Net::LDAP::BER.3
-lib/perl5/man/man3/Net::LDAP::Entry.3
-lib/perl5/man/man3/Net::LDAP::Constant.3
+lib/perl5/site_perl/Net/LDAP/Message.pod
+lib/perl5/site_perl/Net/LDAP/RFC.pod
+lib/perl5/site_perl/Net/LDAP/Reference.pod
+lib/perl5/site_perl/Net/LDAP/Schema.pm
+lib/perl5/site_perl/Net/LDAP/Schema.pod
+lib/perl5/site_perl/Net/LDAP/Search.pm
+lib/perl5/site_perl/Net/LDAP/Search.pod
+lib/perl5/site_perl/Net/LDAP/Util.pm
 lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/perl-ldap/.packlist
+lib/perl5/man/man3/Authen::SASL.3
+lib/perl5/man/man3/Bundle::Net::LDAP.3
+lib/perl5/man/man3/Net::LDAP.3
+lib/perl5/man/man3/Net::LDAP::Constant.3
+lib/perl5/man/man3/Net::LDAP::Control.3
+lib/perl5/man/man3/Net::LDAP::Control::Sort.3
+lib/perl5/man/man3/Net::LDAP::Control::SortResult.3
+lib/perl5/man/man3/Net::LDAP::Entry.3
+lib/perl5/man/man3/Net::LDAP::Examples.3
+lib/perl5/man/man3/Net::LDAP::FAQ.3
+lib/perl5/man/man3/Net::LDAP::Filter.3
+lib/perl5/man/man3/Net::LDAP::LDIF.3
+lib/perl5/man/man3/Net::LDAP::Message.3
+lib/perl5/man/man3/Net::LDAP::RFC.3
+lib/perl5/man/man3/Net::LDAP::Reference.3
+lib/perl5/man/man3/Net::LDAP::Schema.3
+lib/perl5/man/man3/Net::LDAP::Search.3
+lib/perl5/man/man3/Net::LDAP::Util.3
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/perl-ldap
-@dirrm lib/perl5/site_perl/Net/LDAP/Schema
-@dirrm lib/perl5/site_perl/Net/LDAP
 @dirrm lib/perl5/site_perl/Authen/SASL
 @dirrm lib/perl5/site_perl/Authen
+@dirrm lib/perl5/site_perl/Bundle/Net
+@dirrm lib/perl5/site_perl/Net/LDAP/Control
+@dirrm lib/perl5/site_perl/Net/LDAP
