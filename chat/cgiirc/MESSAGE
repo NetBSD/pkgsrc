@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/10/15 18:36:55 adrianp Exp $
+
+You will need to make CGI:IRC accessible through your HTTP server.
+If you are running Apache then you can add the following line to httpd.conf:
+       
+	Include ${PKG_SYSCONFDIR}/cgiirc.conf
+
+to make CGI:IRC accessible through:
+				
+	http://www.domain.com/cgiirc/
+
+===========================================================================
