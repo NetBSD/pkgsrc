@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.4 1998/02/08 23:33:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/02/16 17:41:26 agc Exp $
 # FreeBSD Id: Makefile,v 1.52 1997/12/14 00:58:08 asami Exp
 #
 
-# the reversed ordering of a2ps43 and a2ps is intentional -- this
-# is to make sure the "Latest" link points to the latest version
-#    SUBDIR += a2ps43
-#    SUBDIR += a2ps
+    SUBDIR += a2ps
 #    SUBDIR += acroread
 #    SUBDIR += afm
 #    SUBDIR += apsfilter
