@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.282 2003/02/20 13:52:41 salo Exp $
+$NetBSD: TODO,v 1.283 2003/02/20 17:37:10 salo Exp $
 
 Suggested new packages
 ======================
@@ -84,7 +84,6 @@ Suggested package updates
 	o balsa-1.4.2
 	o binutils-2.13.2.1
 	o blender-2.26
-	o bluefish-0.9 [pkg/20430]
 	o bonnie++-1.03c
 	o bzflag-1.7g0
 	o canna-3.6p3 [pkg/20208]
