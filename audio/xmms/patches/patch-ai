@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.6 2002/10/25 08:59:05 skrll Exp $
+$NetBSD: patch-ai,v 1.7 2003/04/17 23:14:13 nathanw Exp $
 
---- xmms/main.c.orig	Wed Feb 27 15:30:28 2002
-+++ xmms/main.c	Thu Mar 21 12:58:10 2002
-@@ -3377,7 +3394,7 @@
+--- xmms/main.c.orig	2002-02-27 09:30:28.000000000 -0500
++++ xmms/main.c	2003-04-16 15:41:12.000000000 -0400
+@@ -3377,7 +3377,7 @@
  {
  	gchar *filename;
  	struct cmdlineopt options;
@@ -11,7 +11,17 @@ $NetBSD: patch-ai,v 1.6 2002/10/25 08:59:05 skrll Exp $
  	struct sched_param sparam;
  #endif
  
-@@ -3408,7 +3425,7 @@
+@@ -3387,7 +3387,9 @@
+ #endif
+ 
+ 	signal(SIGPIPE, SIG_IGN); /* for controlsocket.c */
++#if 0 /* XXXNJW This makes debugging nearly impossible. */
+ 	signal(SIGSEGV, segfault_handler);
++#endif
+ 	g_thread_init(NULL);
+ 	if (!g_thread_supported())
+ 	{
+@@ -3408,7 +3410,7 @@
  
  	if (geteuid() == 0)
  	{
@@ -20,3 +30,13 @@ $NetBSD: patch-ai,v 1.6 2002/10/25 08:59:05 skrll Exp $
  		if (cfg.use_realtime)
  		{
  			sparam.sched_priority = sched_get_priority_max(SCHED_RR);
+@@ -3500,8 +3502,8 @@
+ 
+ 	/* enable_x11r5_session_management(argc, argv); */
+ 	sm_init(argc, argv);
+-	GDK_THREADS_LEAVE();
+ 	gtk_main();
++	GDK_THREADS_LEAVE();
+ 
+ 	return 0;
+ }
