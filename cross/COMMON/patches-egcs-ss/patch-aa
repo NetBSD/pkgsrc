@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1 1998/08/12 02:42:31 tv Exp $
+
+--- Makefile.in.orig	Sat Jun 27 18:08:28 1998
++++ Makefile.in	Mon Aug  3 18:24:12 1998
+@@ -349,6 +349,7 @@
+ 	"NM_FOR_TARGET=$(NM_FOR_TARGET)" \
+ 	"RANLIB_FOR_TARGET=$(RANLIB_FOR_TARGET)" \
+ 	"SHELL=$(SHELL)" \
++	"SYSTEM_HEADER_DIR=$(SYSTEM_HEADER_DIR)" \
+ 	"EXPECT=$(EXPECT)" \
+ 	"RUNTEST=$(RUNTEST)" \
+ 	"RUNTESTFLAGS=$(RUNTESTFLAGS)" \
+@@ -356,6 +357,7 @@
+ 	"WINDRES_FOR_TARGET=$(WINDRES_FOR_TARGET)" \
+ 	"YACC=$(YACC)" \
+ 	"exec_prefix=$(exec_prefix)" \
++	"enable_version_specific_runtime_libs=$(enable_version_specific_runtime_libs)" \
+ 	"prefix=$(prefix)" \
+ 	"tooldir=$(tooldir)" \
+ 	"gxx_include_dir=$(gxx_include_dir)" \
