@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genindex.awk,v 1.2 2003/07/24 22:27:17 dmcmahill Exp $
+# $NetBSD: genindex.awk,v 1.3 2003/07/25 12:58:20 dmcmahill Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -124,7 +124,13 @@ BEGIN {
 }
 
 /^categories /{
-	categories[$2] = substr($0, index($0, $3));
+	# note:  we pick out the categories slightly differently than the comment
+	# and homepage because the category name will be included in the directory
+	# name and hence the index() call points to the wrong location
+	categories[$2] = $3;
+	for(i = 4; i <= NF; i = i + 1) {
+		categories[$2] = categories[$2] " " $i;
+	}
 	next;
 }
 
@@ -139,7 +145,11 @@ BEGIN {
 }
 
 /^homepage /{
-	homepage[$2] = substr($0, index($0, $3));
+	if( NF>=3 ) {
+		homepage[$2] = substr($0, index($0, $3));
+	} else {
+		homepage[$2] = "";
+	}
 	next;
 }
 
