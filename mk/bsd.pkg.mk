@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.896 2002/01/06 23:01:31 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.897 2002/01/06 23:41:53 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -1254,20 +1254,12 @@ ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} $$unsorted_sites
 .if !defined(_FETCH_ALLFILES)
 .  if !empty(_DISTFILES)
 .    for fetchfile in ${_DISTFILES}
-.      if defined(MASTER_SITES_${fetchfile:T})
-SITES_${fetchfile:T}?= ${MASTER_SITES_${fetchfile:T}}
-.      else
 SITES_${fetchfile:T}?= ${MASTER_SITES}
-.      endif
 .    endfor
 .  endif
 .  if !empty(_PATCHFILES)
 .    for fetchfile in ${_PATCHFILES}
-.      if defined(PATCH_SITES_${fetchfile:T})
-SITES_${fetchfile:T}?= ${PATCH_SITES_${fetchfile:T}}
-.      else
 SITES_${fetchfile:T}?= ${PATCH_SITES}
-.      endif
 .    endfor
 .  endif
 .  if !empty(_ALLFILES)
