@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2000/05/26 22:52:41 jwise Exp $
+# $NetBSD: Makefile,v 1.40 2000/05/30 16:15:23 jwise Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/10/13 11:11:32 itojun Exp
 #
 
@@ -47,6 +47,7 @@
     SUBDIR += textutils
     SUBDIR += unroff
     SUBDIR += wdiff
+    SUBDIR += xalan-j
     SUBDIR += xerces-j
 
 .include "../mk/bsd.pkg.subdir.mk"
