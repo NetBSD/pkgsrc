@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/11/06 18:15:34 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/11/25 14:11:11 rh Exp $
 include/gal/e-paned/e-hpaned.h
 include/gal/e-paned/e-paned.h
 include/gal/e-paned/e-vpaned.h
@@ -75,12 +75,12 @@ include/gal/widgets/widget-pixmap-combo.h
 lib/galConf.sh
 lib/libgal.a
 lib/libgal.la
-lib/libgal.so.1.1
-share/etable/0.2.1/glade/e-table-config.glade
-share/etable/0.2.1/glade/e-table-group.glade
-share/etable/0.2.1/glade/e-table-field-chooser.glade
-@dirrm share/etable/0.2.1/glade
-@dirrm share/etable/0.2.1
+lib/libgal.so.1.2
+share/etable/0.2.2/glade/e-table-config.glade
+share/etable/0.2.2/glade/e-table-group.glade
+share/etable/0.2.2/glade/e-table-field-chooser.glade
+@dirrm share/etable/0.2.2/glade
+@dirrm share/etable/0.2.2
 @dirrm share/etable
 @dirrm include/gal/widgets
 @dirrm include/gal/util
