@@ -1,0 +1,20 @@
+# $NetBSD: config.layout,v 1.1 2001/04/29 21:21:14 jlam Exp $
+
+<Layout pkgsrc>
+prefix: @PREFIX@
+exec_prefix: @PREFIX@
+bindir: ${exec_prefix}/bin
+sbindir: ${exec_prefix}/sbin
+libexecdir: ${exec_prefix}/lib/httpd
+mandir: ${prefix}/man
+sysconfdir: @APACHE_SYSCONFDIR@
+datadir: ${prefix}/share/httpd
+iconsdir: ${prefix}/share/httpd/icons
+htdocsdir: ${prefix}/share/httpd/htdocs
+cgidir: ${exec_prefix}/libexec/cgi-bin
+includedir: ${prefix}/include/httpd
+localstatedir: /var/run
+runtimedir: /var/run
+logfiledir: /var/log/httpd
+proxycachedir: /var/spool/httpd/proxy
+</Layout>
