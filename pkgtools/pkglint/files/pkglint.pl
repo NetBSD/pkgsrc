@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.50 2001/05/12 15:19:15 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.51 2001/06/09 12:30:53 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -752,10 +752,11 @@ sub checkmakefile {
 		&perror("FATAL: LIBTOOL_OVERRIDE is deprecated, ".
 			"try to use LTCONFIG_OVERRIDE instead.");
 	}
-	print "OK: checking MD5_FILE.\n" if ($verbose);
-	if ($whole =~ /\nMD5_FILE/) {
-		&perror("FATAL: MD5_FILE is deprecated, ".
-			"use DIGEST_FILE instead.");
+	print "OK: checking MD5_FILE, DIGEST_FILE and PATCH_SUM_FILE.\n" if ($verbose);
+	if ($whole =~ /\n(MD5_FILE)/ or $whole =~ /\n(DIGEST_FILE)/ or
+		$whole =~ /\n(PATCH_SUM_FILE)/) {
+		&perror("FATAL: $1 is deprecated, ".
+			"use DISTINFO_FILE instead.");
 	}
 	print "OK: checking MIRROR_DISTFILE.\n" if ($verbose);
 	if ($whole =~ /\nMIRROR_DISTFILE/) {
