@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5059 2004/03/02 16:44:47 adam Exp $
+$NetBSD: CHANGES,v 1.5060 2004/03/02 17:26:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1117,3 +1117,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bittorrent to 3.3nb4 [wiz 2004-03-02]
 	Updated ffcall to 1.9 [adam 2004-03-02]
 	Updated lincity to 1.12.0 [adam 2004-03-02]
+	Updated bozohttpd to 20040218nb2 [wiz 2004-03-02]
