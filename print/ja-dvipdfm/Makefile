@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/16 01:48:19 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/09 13:32:11 wiz Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
 PKGNAME=        ja-${DISTNAME}
@@ -13,14 +13,12 @@ MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://gaspra.kettering.edu/dvipdfm
 COMMENT=	DVI to PDF translator with Japanese patch
 
-DEPENDS+=       teTeX-bin>=1.0.6:../../print/teTeX-bin
-
-CONFLICT+=	dvipdfm-*
+CONFLICTS=	dvipdfm-*
 
 WRKSRC=		${WRKDIR}/dvipdfm
+USE_BUILDLINK2=	# defined
 GNU_CONFIGURE=	# defined
 CONFIGURE_ARGS+=--datadir=${PREFIX}/share
-CPPFLAGS=	-I${LOCALBASE}/include
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,6 +32,7 @@ post-patch:
 post-install:
 	${PREFIX}/bin/mktexlsr
 
-.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
