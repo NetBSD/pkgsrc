@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/08/07 09:55:18 ross Exp $
+# $NetBSD: Makefile,v 1.17 1998/08/25 14:12:45 tv Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -8,7 +8,6 @@
 #    SUBDIR += bwbasic
 #    SUBDIR += cim
 #    SUBDIR += cmucl
-#    SUBDIR += egcs-current
 #    SUBDIR += eiffel
     SUBDIR += elk
 #    SUBDIR += eperl
