@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/10/03 00:18:14 tv Exp $
+# $NetBSD: Makefile,v 1.22 2004/12/06 16:00:57 adam Exp $
 
 DISTNAME=	coreutils-5.2.1
 PKGREVISION=	1
@@ -17,6 +17,7 @@ CONFLICTS=	fileutils-* linuxls-* sh-utils-* textutils-*
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_PERL5=		build
+USE_PKGLOCALEDIR=	YES
 
 INFO_FILES=	coreutils.info
 
