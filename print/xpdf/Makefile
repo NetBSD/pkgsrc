@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/11/07 16:34:41 gavan Exp $
+# $NetBSD: Makefile,v 1.27 2004/02/02 13:02:49 jlam Exp $
 
 DISTNAME=	xpdf-2.03
 CATEGORIES=	print
@@ -16,7 +16,7 @@ CONFLICTS=	xpdf-crypto-[0-9]*
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES
-USE_GCC_SHLIB=		YES
+USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

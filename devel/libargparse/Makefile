@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/11/03 18:27:54 gavan Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/02 13:02:49 jlam Exp $
 #
 
 DISTNAME=		libargparse-0.1.0000
@@ -15,6 +15,6 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 USE_BUILDLINK2=		yes
-USE_GCC_SHLIB=		yes
+USE_LANGUAGES=		c c++
 
 .include "../../mk/bsd.pkg.mk"
