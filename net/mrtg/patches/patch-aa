@@ -1,35 +1,22 @@
---- Makefile.orig	Sat Oct 25 20:00:59 1997
-+++ Makefile	Sat Dec  6 09:33:47 1997
-@@ -5,17 +5,17 @@
- SHELL=/bin/sh
+--- Makefile.orig	Mon Jul 13 13:02:23 1998
++++ Makefile	Mon Jul 13 13:04:02 1998
+@@ -6,16 +6,16 @@
  # GD_INCLUDE 
  # The path to the include files for the gd graphics library.
--#GD_INCLUDE=/usr/local/include/gd
+ #GD_INCLUDE=/usr/local/include/gd
 -GD_INCLUDE=gd1.2
-+GD_INCLUDE=/usr/local/include/gd
-+#GD_INCLUDE=gd1.2
++GD_INCLUDE=${PREFIX}/include/gd
  
  # GD_LIB
  # The path to the gd graphics library: libgd.a
--#GD_LIB=/usr/local/lib
+ #GD_LIB=/usr/local/lib
 -GD_LIB=gd1.2
-+GD_LIB=/usr/local/lib
-+#GD_LIB=gd1.2
++GD_LIB=${PREFIX}/lib
  
  # Where is perl 5 on this machine
--# PERL=/usr/local/bin/perl
+ # PERL=/usr/local/bin/perl
 -PERL=/usr/local/gnu/bin/perl5
-+PERL=/usr/local/bin/perl
-+#PERL=/usr/local/gnu/bin/perl5
++PERL=${PREFIX}/bin/perl
  
  
  # CC
-@@ -26,7 +26,7 @@
- # CFLAGS
- # Enter '-g' to include debugging info, or '-O2' to optimize
- # for gcc
--CFLAGS=-g -O -Wall
-+CFLAGS+=-Wall
- 
- # for sparcworks
- #CFLAGS=-g
