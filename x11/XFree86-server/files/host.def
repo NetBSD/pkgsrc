@@ -1,4 +1,4 @@
-/* $NetBSD: host.def,v 1.3 2004/03/28 22:06:16 xtraeme Exp $ */
+/* $NetBSD: host.def,v 1.4 2005/02/09 20:11:22 xtraeme Exp $ */
 
 #define ProjectRoot @PREFIX@
 #define BuildHtmlManPages NO
@@ -39,3 +39,8 @@
 #define FontconfigDir @BLNK@
 
 #define BuildHtmlManPages NO
+
+#define DriverManSuffix @KERNMAN_SUFFIX@
+#define MiscManSuffix @MISCMAN_SUFFIX@
+#define MiscManDir @PREFIX@/@MISCMAN_DIR@
+#define DriverManDir @PREFIX@/@KERNMAN_DIR@
