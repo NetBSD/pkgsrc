@@ -1,20 +1,22 @@
-$NetBSD: patch-ae,v 1.3 2002/08/25 18:39:06 jlam Exp $
+$NetBSD: patch-ae,v 1.4 2003/01/15 21:03:26 wiz Exp $
 
---- configure.in.orig	Thu Apr 18 18:48:40 2002
-+++ configure.in
-@@ -128,6 +128,7 @@
- dnl Check for location of rgb.txt file (works without, but better with)
- AC_MSG_CHECKING([for location of rgb.txt database])
+--- configure.orig	Wed Dec 18 23:18:48 2002
++++ configure
+@@ -9214,6 +9214,7 @@ fi
+ echo "$as_me:9214: checking for location of rgb.txt database" >&5
+ echo $ECHO_N "checking for location of rgb.txt database... $ECHO_C" >&6
  
 +if test -z "$path_rgb_txt"; then
- dnl default to this..
  path_rgb_txt=/usr/lib/X11/rgb.txt
  
-@@ -140,6 +141,7 @@
-       break
+ if test -r ${x_libraries}/X11/rgb.txt; then
+@@ -9226,7 +9227,8 @@ else
      fi
    done
-+fi
  fi
- AC_MSG_RESULT([$path_rgb_txt])
- AC_DEFINE_UNQUOTED(PATH_RGB_TXT,"$path_rgb_txt")
+-echo "$as_me:9229: result: $path_rgb_txt" >&5
++fi
++echo "$as_me:$LINENO: result: $path_rgb_txt" >&5
+ echo "${ECHO_T}$path_rgb_txt" >&6
+ cat >>confdefs.h <<EOF
+ #define PATH_RGB_TXT "$path_rgb_txt"
