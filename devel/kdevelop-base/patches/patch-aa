@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2001/12/04 20:50:22 skrll Exp $
+
+--- kdevelop/tools/processes.pl.in.orig	Wed Nov  7 00:25:10 2001
++++ kdevelop/tools/processes.pl.in
+@@ -11,9 +11,9 @@
+ my %changings;
+ 
+ my $homedirectory = $ENV{KDEHOME};
+-$homedirectory = "$ENV{HOME}/.kde2"    if (!$homedirectory);
++$homedirectory = "$ENV{HOME}/.kde"    if (!$homedirectory);
+ 
+-my $local_datadir     = shift || ($homedirectory  . "/share/apps/kdevelop");
++my $local_datadir     = shift || ($homedirectory  . "/share/kde/apps/kdevelop");
+ my $kde_miniicondir   = $kde_icondir    . "/locolor/16x16/apps/";
+ 
+ printflush (STDOUT,"Starting with installation\n");
