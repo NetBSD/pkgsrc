@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2003/08/29 11:22:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.36 2003/09/13 07:23:36 jdolecek Exp $
 
 DISTNAME=	libxml2-${LIBXML_VERSION}
 CATEGORIES=	textproc
@@ -16,12 +16,17 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libxml-2.0.pc.in
 
 LIBXML_VERSION=		2.5.10
+PKGREVISION=		1
 PLIST_SUBST+=		LIBXML_VERSION=${LIBXML_VERSION}
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--without-python
+
+# Don't use threads - it's not apparent whether it's necessary or not,
+# and this library needs to be usable by non-threaded applications too
+CONFIGURE_ARGS+=	--without-threads
 
 MAKE_ENV+=		PAX=${PAX:Q}
 
@@ -34,5 +39,4 @@ CFLAGS+=	-DXML_XML_DEFAULT_CATALOG=\"\\\"${XML_DEFAULT_CATALOG}\\\"\"
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
