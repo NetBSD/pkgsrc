@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3197 2003/09/02 07:14:40 jlam Exp $
+$NetBSD: CHANGES,v 1.3198 2003/09/02 07:35:44 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3460,3 +3460,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nethack-qt to 3.4.2 [pooka 2003-09-02]
 	Updated ruby-rd-mode to 0.6.13 [taca 2003-09-02]
 	Updated x11-links to 0.13 [jlam 2003-09-02]
+	Added xpad 1.11 [xtraeme 2003-09-02]
+	Added windowlab 1.12 [xtraeme 2003-09-02]
+	Added loudmouth 0.13.2 [xtraeme 2003-09-02]
+	Added gossip 0.5 [xtraeme 2003-09-02]
