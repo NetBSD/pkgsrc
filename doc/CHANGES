@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1066 2003/01/09 20:15:39 wiz Exp $
+01/09 20:15:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -165,3 +165,18 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated icewm to 1.2.0nb2 [jmmv 2003-01-09]
 	Updated icewm-gnome to 1.2.0nb1 [jmmv 2003-01-09]
 	Added psgml-mode-1.2.5 [wiz 2003-01-09]
+	Updated jhead to 1.9 [mycroft 2003-01-09]
+	Updated xsane to 0.90 [mycroft 2003-01-09]
+	Updated p5-MIME-Base64 to 2.16 [mycroft 2003-01-09]
+	Updated p5-Digest-MD5 to 2.22 [mycroft 2003-01-09]
+	Updated xpilot to 4.5.4 [mycroft 2003-01-09]
+	Updated gaim to 0.59.8 [mycroft 2003-01-09]
+	Updated mtr to 0.52 [mycroft 2003-01-09]
+	Updated mtr-gtk to 0.52 [mycroft 2003-01-09]
+	Updated ntop2 to 2.1.54 [mycroft 2003-01-09]
+	Updated kermit to 8.0.206 [mycroft 2003-01-09]
+	Updated xmame to 0.62.1-rc4 [mycroft 2003-01-09]
+	Updated glimpse to 4.17.2 [mycroft 2003-01-09]
+	Updated tcl-expect to 5.38.0 [mycroft 2003-01-09]
+	Updated abiword to 1.0.3 [mycroft 2003-01-09]
+	Updated sawfish to 1.2 [mycroft 2003-01-09]
