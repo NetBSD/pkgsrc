@@ -1,13 +1,12 @@
-$NetBSD: patch-aa,v 1.7 2004/04/20 13:29:12 markd Exp $
+$NetBSD: patch-aa,v 1.8 2004/08/21 14:07:33 markd Exp $
 
---- kpilot/conduits/malconduit/mal-conduit.cc.orig	2003-10-26 23:57:55.000000000 +1300
+--- kpilot/conduits/malconduit/mal-conduit.cc.orig	2004-06-25 20:57:51.000000000 +1200
 +++ kpilot/conduits/malconduit/mal-conduit.cc
-@@ -41,7 +41,7 @@
+@@ -41,6 +41,7 @@
  #include "mal-factory.h"
  #include "mal-conduit.moc"
  #include <libmal.h>
--
 +#include <stdarg.h>
+ #include "malconduitSettings.h"
  
- // Something to allow us to check what revision
- // the modules are that make up a binary distribution.
+ 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/20 13:29:12 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/08/21 14:07:33 markd Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDEPIM_BUILDLINK3_MK:=	${KDEPIM_BUILDLINK3_MK}+
@@ -17,6 +17,7 @@ BUILDLINK_PKGSRCDIR.kdepim?=	../../misc/kdepim3
 
 .include "../../comms/libmal/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"
+.include "../../security/gpgme/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 
