@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2000/07/30 08:08:14 jlam Exp $
+
+--- mixer/mixer.c.orig	Thu May  4 08:24:00 2000
++++ mixer/mixer.c	Sun Jul 30 02:29:41 2000
+@@ -47,6 +47,9 @@
+ #elif HAVE_SYS_SOUNDCARD_H
+ #include <sys/soundcard.h>
+ #define OSS_API
++#elif HAVE_SOUNDCARD_H
++#include <soundcard.h>
++#define OSS_API
+ #elif HAVE_SYS_AUDIOIO_H
+ #include <sys/audioio.h>
+ #define SUN_API
