@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2654 2003/07/02 09:04:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.2655 2003/07/02 10:08:21 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2647,3 +2647,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mozilla to 1.4 [taya 2003-07-02]
 	Updated gtexinfo to 4.6nb1 [grant 2003-07-02]
 	Added bitlbee-0.80 [jmmv 2003-07-02]
+	Updated scrot to 0.8 [jmmv 2003-07-02]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.673 2003/07/02 00:12:06 jtb Exp $
+$NetBSD: TODO,v 1.674 2003/07/02 10:08:22 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -230,7 +230,6 @@ Suggested package updates
 	o sawfish-1.3
 	o scmxx-0.6.3.8
 	o scribus-0.8
-	o scrot-0.8 [pkg/21974]
 	o sendfile-20010424
 	o sipcalc-1.1.2 [pkg/21846]
 	o sketch-0.6.15
