@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2001/10/06 21:41:30 veego Exp $
+# $NetBSD: Makefile.common,v 1.24 2001/12/03 08:06:25 jlam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution.
@@ -33,13 +33,9 @@ PATCHDIR=		${.CURDIR}/../../databases/postgresql/patches
 #
 # PG_DIST_VERS		version number on the postgresql distfile
 # PG_BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
-# PG_PKG_VERS		pkgsrc revisions of postgresql (nbX, etc.)
-# PG_VERS		pkgsrc version number of package
 #
 PG_DIST_VERS=		7.1.3
 PG_BASE_VERS=		${PG_DIST_VERS}
-PG_PKG_VERS?=		# empty
-PG_VERS=		${PG_BASE_VERS}${PG_PKG_VERS}
 
 USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
