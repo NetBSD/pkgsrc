@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/11/09 20:10:14 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/11/10 14:38:45 taya Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -106,6 +106,7 @@ ${SUNOSLIB}lib/${MOZILLA}/libfreebl_hybrid_3.${SO_SUFFIX}
 lib/${MOZILLA}/LICENSE
 lib/${MOZILLA}/README.txt
 lib/${MOZILLA}/bloaturls.txt
+lib/${MOZILLA}/browserconfig.properties
 lib/${MOZILLA}/chrome/browser.jar
 lib/${MOZILLA}/chrome/chromelist.txt
 lib/${MOZILLA}/chrome/classic.jar
@@ -268,6 +269,7 @@ lib/${MOZILLA}/components/xuldoc.xpt
 lib/${MOZILLA}/components/xultmpl.xpt
 lib/${MOZILLA}/defaults/autoconfig/platform.js
 lib/${MOZILLA}/defaults/autoconfig/prefcalls.js
+lib/${MOZILLA}/defaults/pref/firefox-l10n.js
 lib/${MOZILLA}/defaults/pref/firefox.js
 lib/${MOZILLA}/defaults/pref/inspector.js
 lib/${MOZILLA}/defaults/profile/bookmarks.html
@@ -458,6 +460,8 @@ lib/${MOZILLA}/res/viewer.properties
 lib/${MOZILLA}/res/viewsource.css
 lib/${MOZILLA}/searchplugins/amazondotcom.png
 lib/${MOZILLA}/searchplugins/amazondotcom.src
+lib/${MOZILLA}/searchplugins/creativecommons.png
+lib/${MOZILLA}/searchplugins/creativecommons.src
 lib/${MOZILLA}/searchplugins/dictionary.png
 lib/${MOZILLA}/searchplugins/dictionary.src
 lib/${MOZILLA}/searchplugins/eBay.gif
@@ -522,7 +526,9 @@ include/${MOZILLA}/browser/nsIBrowserInstance.h
 include/${MOZILLA}/browser/nsIXULBrowserWindow.h
 include/${MOZILLA}/browsercomps/nsBrowserCompsCID.h
 include/${MOZILLA}/caps/nsIPrincipal.h
+include/${MOZILLA}/caps/nsIPrincipalObsolete.h
 include/${MOZILLA}/caps/nsIScriptSecurityManager.h
+include/${MOZILLA}/caps/nsIScriptSecurityManagerObsolete.h
 include/${MOZILLA}/caps/nsISecurityCheckedComponent.h
 include/${MOZILLA}/caps/nsISignatureVerifier.h
 include/${MOZILLA}/caps/nsJSPrincipals.h
@@ -726,6 +732,7 @@ include/${MOZILLA}/dom/nsDOMCID.h
 include/${MOZILLA}/dom/nsDOMError.h
 include/${MOZILLA}/dom/nsDOMString.h
 include/${MOZILLA}/dom/nsIBaseDOMException.h
+include/${MOZILLA}/dom/nsIBrowserDOMWindow.h
 include/${MOZILLA}/dom/nsIDOM3Document.h
 include/${MOZILLA}/dom/nsIDOM3DocumentEvent.h
 include/${MOZILLA}/dom/nsIDOM3EventTarget.h
@@ -924,6 +931,7 @@ include/${MOZILLA}/dom/nsIDOMWindow.h
 include/${MOZILLA}/dom/nsIDOMWindow2.h
 include/${MOZILLA}/dom/nsIDOMWindowCollection.h
 include/${MOZILLA}/dom/nsIDOMWindowInternal.h
+include/${MOZILLA}/dom/nsIDOMWindowUtils.h
 include/${MOZILLA}/dom/nsIDOMXMLDocument.h
 include/${MOZILLA}/dom/nsIDOMXPathEvaluator.h
 include/${MOZILLA}/dom/nsIDOMXPathException.h
@@ -1067,6 +1075,7 @@ include/${MOZILLA}/htmlparser/nsIParserNode.h
 include/${MOZILLA}/htmlparser/nsIParserService.h
 include/${MOZILLA}/htmlparser/nsITokenizer.h
 include/${MOZILLA}/htmlparser/nsParserCIID.h
+include/${MOZILLA}/htmlparser/nsParserDataListener.h
 include/${MOZILLA}/htmlparser/nsParserError.h
 include/${MOZILLA}/htmlparser/nsScannerString.h
 include/${MOZILLA}/htmlparser/nsToken.h
@@ -1426,6 +1435,7 @@ include/${MOZILLA}/necko/nsIURI.h
 include/${MOZILLA}/necko/nsIURIChecker.h
 include/${MOZILLA}/necko/nsIURL.h
 include/${MOZILLA}/necko/nsIURLParser.h
+include/${MOZILLA}/necko/nsIUnicharStreamListener.h
 include/${MOZILLA}/necko/nsIUnicharStreamLoader.h
 include/${MOZILLA}/necko/nsIUploadChannel.h
 include/${MOZILLA}/necko/nsNetCID.h
