@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1 1999/02/02 23:00:40 tron Exp $
+
+--- README.orig	Wed Sep  9 16:45:16 1992
++++ README	Tue Feb  2 23:52:02 1999
+@@ -166,4 +166,4 @@
+     1000 Berlin 10
+     Germany
+ 
+-    <nickel@cs.tu-berlin.de>
++Juergen Nickelsen <jn@berlin.snafu.de>
