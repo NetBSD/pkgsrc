@@ -1,14 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/14 17:51:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/17 01:52:31 chris Exp $
 bin/gpgme-config
 include/gpgme.h
 info/gpgme.info
-info/gpgme.info-1
-info/gpgme.info-2
-info/gpgme.info-3
-info/gpgme.info-4
 lib/libgpgme.a
 lib/libgpgme.la
 lib/libgpgme.so
 lib/libgpgme.so.9
-lib/libgpgme.so.9.6
+lib/libgpgme.so.9.7
 share/aclocal/gpgme.m4
