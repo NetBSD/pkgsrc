@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/31 19:20:33 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/07/31 19:50:48 rh Exp $
 bin/gnumeric
 etc/CORBA/servers/gnumeric.gnorba
 lib/gnumeric/plugins/libsample.so.0.0
@@ -414,8 +414,6 @@ share/gnumeric/glade/print.glade
 @dirrm share/gnome/help/gnumeric/C
 @dirrm share/gnome/help/gnumeric
 @dirrm share/gnumeric/glade
-@dirrm share/gnumeric/guile
-@dirrm share/gnumeric/perl
 @dirrm share/gnumeric/python
 @dirrm share/gnumeric
 @unexec rmdir %D/share/mc/templates 2>/dev/null || true
