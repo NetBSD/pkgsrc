@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/01/22 16:47:22 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.20 2002/06/17 04:21:08 dmcmahill Exp $
 
 DISTNAME=	f2c-20001205
 PKGREVISION=	5
@@ -29,6 +29,7 @@ F2CMAJOR=	0
 F2CMINOR=	0
 MAKE_ENV+=	F2CMAJOR=${F2CMAJOR} F2CMINOR=${F2CMINOR}
 PLIST_SUBST+=	F2CMAJOR=${F2CMAJOR} F2CMINOR=${F2CMINOR}
+PLIST_SRC=	${WRKDIR}/PLIST
 
 USE_BUILDLINK_ONLY=	# defined
 
@@ -53,6 +54,14 @@ post-patch:
 
 # for OBJECT_FMT
 .include "../../mk/bsd.prefs.mk"
+MAKE_ENV+=	MACHINE_ARCH=${MACHINE_ARCH}
+
+pre-install:
+.if (${MACHINE_ARCH} == "mipsel")
+	${SED} '/lib.*_pic/d' ${PKGDIR}/PLIST > ${PLIST_SRC}
+.else
+	${CP} ${PKGSRCDIR}/PLIST ${PLIST_SRC}
+.endif
 
 .if (${OBJECT_FMT} == "ELF")
 post-install:
