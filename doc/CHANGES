@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.376 2002/10/27 09:16:45 rh Exp $
+$NetBSD: CHANGES,v 1.377 2002/10/27 09:32:24 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3405,3 +3405,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pan to 0.11.4nb1 [rh 2002-10-27]
 	Updated linc to 0.7.0 [rh 2002-10-27]
 	Updated ORBit2 to 2.5.0 [rh 2002-10-27]
+	Updated bonobo-activation to 2.1.0 [rh 2002-10-27]
