@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2003/10/26 08:59:32 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2003/12/03 23:13:34 xtraeme Exp $
 #
 
 COMMENT=	Communication programs
@@ -17,6 +17,7 @@ SUBDIR+=	epic4
 SUBDIR+=	epic4-doc
 SUBDIR+=	everybuddy
 SUBDIR+=	everybuddy-gnome
+SUBDIR+=	fisg
 SUBDIR+=	fugu
 SUBDIR+=	gabber
 SUBDIR+=	gaim
