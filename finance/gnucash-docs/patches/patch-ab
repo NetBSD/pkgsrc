@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2004/11/06 21:46:00 jdolecek Exp $
+$NetBSD: patch-ab,v 1.2 2005/02/09 20:22:08 wiz Exp $
 
---- xsl/titlepage2.xsl.orig	Sat Oct 16 20:19:35 2004
-+++ xsl/titlepage2.xsl	Sat Oct 16 20:20:35 2004
+--- xsl/titlepage2.xsl.orig	2002-12-10 01:13:59.000000000 +0100
++++ xsl/titlepage2.xsl
 @@ -4,6 +4,8 @@
  <!-- This is a customization layer, to change some of the things in
     auto-generated titlepage.xsl -->
