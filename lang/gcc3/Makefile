@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2003/05/25 09:26:40 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/05/25 16:29:20 grant Exp $
 #
 
-DISTNAME=		gcc-3.2.2
+DISTNAME=		gcc-3.3
 PKGNAME=		${DISTNAME:C|gcc|gcc3|}
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
@@ -25,10 +25,11 @@ CONFIGURE_ARGS=		--host=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
 
-FILES_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV} GCC_PREFIX=${GCC_PREFIX}
-MESSAGE_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV}
+# as this is named gcc3, use DISTNAME instead.
+FILES_SUBST+=		PKGNAME_NOREV=${DISTNAME} GCC_PREFIX=${GCC_PREFIX}
+MESSAGE_SUBST+=		PKGNAME_NOREV=${DISTNAME}
 
-TEXINFO_REQD=		4.1
+TEXINFO_REQD=		4.2
 
 INFO_FILES=		cpp.info g77.info gcc.info gcj.info
 
@@ -47,7 +48,8 @@ ALL_TARGET=		bootstrap
 .  endif
 .endif
 
-GCC_PREFIX=		${PREFIX}/${PKGNAME_NOREV}
+# as this is named gcc3, use DISTNAME instead.
+GCC_PREFIX=		${PREFIX}/${DISTNAME}
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 pre-configure:
