@@ -3,7 +3,7 @@
 # Date created:				26 August 1997
 # Whom:					Michael Elbel (me)
 #
-# $NetBSD: Makefile,v 1.11 1998/02/14 16:54:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 1998/02/14 22:19:05 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -54,13 +54,43 @@ MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 MAN1=		ctags.1 etags.1 gnuattach.1 gnuclient.1 gnudoit.1 \
 		gnuserv.1 xemacs.1
 
+# Include local make config file here.  It is essential to have this
+# precede any override targets (those that override defaults in
+# <bsd.port.mk> that test variables that may be set here.  Note that
+# this inclusion is otherwise redundant, since <bsd.port.mk> includes
+# <bsd.own.mk>, which includes it.
+
+.if (${OPSYS} == "FreeBSD")
+.include "/etc/make.conf"
+.else
+.include "/etc/mk.conf"
+.endif
+
+.if defined(MANZ)
+DCOMPRESSUFFIX=	.gz
+.else
+DCOMPRESSUFFIX=
+.endif
+
 pre-configure:
 	@echo "To compile in the MULE features, set the environment variable USE_MULE"
+
+pre-install:
+	@sed "s,@.GZ@,${DCOMPRESSUFFIX}," ${PKGDIR}/PLIST \
+		> ${PKGDIR}/PLIST.tmp
+
+PLIST_SRC=	${PKGDIR}/PLIST.tmp
 
 post-install:
 .for file in b2m ctags etags gnuclient xemacs-20.3
 	strip ${PREFIX}/bin/${file}
 .endfor
 	${MV} ${PREFIX}/bin/send-pr ${PREFIX}/bin/xemacs-send-pr
+.if defined(MANZ)
+	${.CURDIR}/work/xemacs-20.3/lib-src/gzip-el.sh ${PREFIX}/lib/xemacs-20.3/lisp
+.endif
+
+pre-clean:
+	@${RM} -f ${PKGDIR}/PLIST.tmp
 
 .include <bsd.port.mk>
