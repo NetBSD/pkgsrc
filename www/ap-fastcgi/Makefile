@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/07/24 19:45:29 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2002/08/01 02:37:42 jschauma Exp $
 #
 
 DISTNAME=	mod_fastcgi_2.2.10
@@ -6,7 +6,7 @@ PKGNAME=	ap-fastcgi-2.2.10
 CATEGORIES=	www
 MASTER_SITES=	http://www.fastcgi.com/dist/
 
-MAINTAINER=	tv@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.fastcgi.com/
 COMMENT=	New, improved CGI-like interface module for Apache
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/07/02 11:30:02 agc Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/01 02:37:45 jschauma Exp $
 #
 
 DISTNAME=	ircu2.10.04
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.undernet.org/pub/irc/servers/current/ \
 		ftp://ftp.asu.net/pub/irc/servers/undernet/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tv@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://coder-com.undernet.org/
 COMMENT=	Internet Relay Chat server customized for Undernet
 

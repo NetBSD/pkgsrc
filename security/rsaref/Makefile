@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/11/19 20:13:23 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2002/08/01 02:37:42 jschauma Exp $
 #
 
 DISTNAME=		rsaref
@@ -8,7 +8,7 @@ CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.spinnaker.com/pub/crypt/rsaref/
 EXTRACT_SUFX=		.tar.Z
 
-MAINTAINER=		tv@netbsd.org
+MAINTAINER=		packages@netbsd.org
 COMMENT=		Encryption/authentication library, RSA/MDX/DES
 
 CRYPTO=			yes
