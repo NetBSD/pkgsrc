@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 13:37:55 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/02/21 13:46:44 wiz Exp $
 
-SHA1 (suck-4.2.2.tar.gz) = 80658fdb804752712d4508f37f6b1734a1738169
-Size (suck-4.2.2.tar.gz) = 160566 bytes
+SHA1 (suck-4.3.1.tar.gz) = 8dc89b922d616d0f32114023ff34be1fe2b96984
+Size (suck-4.3.1.tar.gz) = 172007 bytes
 SHA1 (patch-aa) = 970ffa385a2b2b3f95944ba9a4321452bb247319
