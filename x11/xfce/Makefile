@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/02/14 17:21:56 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2004/04/15 22:13:31 snj Exp $
 
 DISTNAME=		xfce-3.8.18
 PKGREVISION=		3
@@ -11,7 +11,7 @@ COMMENT=		Lightweight desktop environment with CDE look and feel
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_X11BASE=		# defined
 USE_PKGLOCALEDIR=	# defined
 USE_LIBTOOL=		# defined
@@ -33,11 +33,10 @@ CONFIGURE_ARGS+=	--disable-audiofile
 # work around bug in configure script
 #CONFIGURE_ENV+=		gt_cv_func_gettext_libintl="yes"
 
-CPPFLAGS+=		-I${X11BASE}/include	# dependent includes for xpm.h
-
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../graphics/imlib/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/imlib/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
