@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:54:05 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/11 04:35:20 xtraeme Exp $
 
 DISTNAME=	aspell-gaeilge-2.0
 PKGREVISION=	3
@@ -9,7 +9,7 @@ MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://borel.slu.edu/~kps/ispell/
 COMMENT=	Irish language support for aspell
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 ASPELLDATA=	${PREFIX}/share/aspell/
 
@@ -18,5 +18,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/gaeilge_phonet.dat ${ASPELLDATA}
 	${INSTALL_DATA} ${WRKSRC}/gaeilge ${PREFIX}/lib/aspell
 
-.include "../../textproc/aspell/buildlink2.mk"
+.include "../../textproc/aspell/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
