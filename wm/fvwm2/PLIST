@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:14 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/17 07:30:07 martti Exp $
 bin/FvwmCommand
 bin/fvwm-config
 bin/fvwm-menu-desktop
@@ -425,6 +425,7 @@ share/fvwm2/FvwmScript-BaseConfig
 share/fvwm2/FvwmScript-BellSetup
 share/fvwm2/FvwmScript-Buttons
 share/fvwm2/FvwmScript-Colorset
+share/fvwm2/FvwmScript-ComExample
 share/fvwm2/FvwmScript-Date
 share/fvwm2/FvwmScript-FileBrowser
 share/fvwm2/FvwmScript-Find
@@ -435,6 +436,7 @@ share/fvwm2/FvwmScript-ScreenDump
 share/fvwm2/FvwmScript-ScreenSetup
 share/fvwm2/FvwmScript-Setup95
 share/fvwm2/FvwmScript-WidgetDemo
+share/fvwm2/fvwm-script-ComExample.pl
 share/fvwm2/fvwm-script-setup95.pl
 share/fvwm2/system.fvwm2rc-sample-95
 @dirrm share/fvwm2
