@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.27 1998/04/17 21:47:26 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.28 1998/04/17 22:01:01 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -173,7 +173,8 @@ unpack it into /usr/pkgsrc.
 As an alternative, you can get pkgsrc via the Software Update Protocol,
 SUP. To do so, make sure your supfile has a line saying "release=pkgsrc" in
 it, see the examples in /usr/share/examples/supfiles, and that the
-directory /usr/pkgsrc does exist. Then, simply start "sup".
+directory /usr/pkgsrc does exist. Then, simply start "sup -v
+/path/to/your/supfile".
 
 
  2.2 Fetching distfiles
