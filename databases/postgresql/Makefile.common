@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2003/05/22 07:17:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.35 2003/05/29 08:55:48 abs Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -63,6 +63,9 @@ CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ARGS+=	--without-tk
+
+# Postgresql explicitly forbids any use of -ffast-math
+CFLAGS:=		${CFLAGS:S/-ffast-math//}
 
 post-extract:
 	if [ -d ${WRKSRC}/src ]; then					\
