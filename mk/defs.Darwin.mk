@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.26 2002/07/15 16:24:01 schmonz Exp $
+# $NetBSD: defs.Darwin.mk,v 1.27 2002/08/28 11:06:18 seb Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -67,6 +67,9 @@ ROOT_CMD?=		sudo sh -c
 ROOT_GROUP?=		wheel
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
+ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
+ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
+ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 USERADD?=		${FALSE}			# XXX - Fix me!
 ZOULARISBASE?=		${LOCALBASE}
 
