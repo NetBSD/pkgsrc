@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/11/22 13:42:08 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/28 18:20:28 wiz Exp $
 #
 
 DISTNAME=	mkttfdir-1.1
+PKGNAME=	${DISTNAME}nb1
 CATEGORIES=	fonts
 MASTER_SITES=	http://residence.educities.edu.tw/rxghome/
 
