@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/27 16:28:19 manu Exp $
+share/doc/sapserver/AUTHORS
+share/doc/sapserver/COPYING
+share/doc/sapserver/ChangeLog
+share/doc/sapserver/INSTALL
+share/doc/sapserver/NEWS
+share/doc/sapserver/README
+share/doc/sapserver/sap.cfg
+@dirrm share/doc/sapserver
+man/man1/sapserver.1
+bin/sapserver
