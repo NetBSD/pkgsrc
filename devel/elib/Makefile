@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/02/18 15:14:09 seb Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/14 02:49:54 uebayasi Exp $
 #
 
 DISTNAME=	elib-1.0
@@ -10,18 +10,11 @@ COMMENT=	Library of utility functions for Emacs
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_XEMACS)
-DEPENDS+=	 	xemacs-[0-9]*:../../editors/xemacs
-EMACS=			xemacs
-LISPDIR=		lib/xemacs/xemacs-packages/lisp/elib
-.else
-DEPENDS+=	 	emacs-[0-9]*:../../editors/emacs
-EMACS=			emacs
-LISPDIR=		share/emacs/site-lisp/elib
-.endif
+.include "../../mk/emacs.mk"
 
-BUILD_ENV+=	EMACS=${EMACS}
-PLIST_SUBST+=	LISPDIR=${LISPDIR}
+BUILD_ENV+=	EMACS=${EMACS_FLAVOR}
+
+MAKEFLAGS+=	EMACS=${EMACS_FLAVOR}
 
 NO_CONFIGURE=	# set
 USE_GMAKE=	# set
@@ -33,9 +26,9 @@ SRCS=	stack-f.el stack-m.el queue-f.el queue-m.el elib-node.el	\
 	dll-debug.el
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${LISPDIR}
+	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/elib
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
-			${PREFIX}/${LISPDIR}
+			${EMACS_LISPPREFIX}/elib
 	cd ${WRKSRC} && ${INSTALL_DATA} ${INFO_FILES} ${PREFIX}/info
 
 .include "../../mk/texinfo.mk"
