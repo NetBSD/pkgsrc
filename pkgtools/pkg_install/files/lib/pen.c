@@ -1,4 +1,4 @@
-/*	$NetBSD: pen.c,v 1.2 2002/12/28 21:44:00 jschauma Exp $	*/
+/*	$NetBSD: pen.c,v 1.3 2003/01/06 04:34:17 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: pen.c,v 1.25 1997/10/08 07:48:12 charnier Exp";
 #else
-__RCSID("$NetBSD: pen.c,v 1.2 2002/12/28 21:44:00 jschauma Exp $");
+__RCSID("$NetBSD: pen.c,v 1.3 2003/01/06 04:34:17 jschauma Exp $");
 #endif
 #endif
 #endif
@@ -181,7 +181,7 @@ make_playpen(char *pen, size_t pensize, size_t sz)
 		strcpy(Previous, Current);
 	else if (!getcwd(Previous, FILENAME_MAX)) {
 		cleanup(0);
-		err(1, "fatal error during execution: getcwd");
+		err(EXIT_FAILURE, "fatal error during execution: getcwd");
 	}
 	if (chdir(pen) == FAIL) {
 		cleanup(0);
@@ -228,7 +228,7 @@ leave_playpen(char *save)
  * in libc on 2.7 and 2.8, but not in 2.9)
  */
 #if !defined(HAVE_STATFS) || (defined(HAVE_STATFS) && defined(HAVE_STATVFS) && !defined(__linux__))
-/*	$NetBSD: pen.c,v 1.2 2002/12/28 21:44:00 jschauma Exp $	*/
+/*	$NetBSD: pen.c,v 1.3 2003/01/06 04:34:17 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1998 The NetBSD Foundation, Inc.
