@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1998/10/04 18:27:47 tron Exp $
+# $NetBSD: Makefile,v 1.19 1998/10/04 23:27:39 tron Exp $
 
 DISTNAME=	gtk+-1.1.2
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/v1.1/ \
 		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gtk/v1.1/ \
 		ftp://ftp.flirble.org/pub/X/gimp/pub/gtk/v1.1/
 
-MAINTAINER=	bsieker@techfak.uni-bielefeld.de
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gtk.org/
 
 DEPENDS+=	glib-1.1.3:../../devel/glib
