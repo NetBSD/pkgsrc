@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 2000/04/26 12:16:00 hubertf Exp $
+
+--- module/xf86_reg.h.orig	Wed Apr 26 14:09:20 2000
++++ module/xf86_reg.h	Wed Apr 26 14:11:27 2000
+@@ -18,6 +18,7 @@
+ #define MTRR_N16K		16
+ #define MTRR_N4K		64
+ 
++#if (__NetBSD_Version__ < 104240000)
+ /*
+  * XXX - These belong to cpufunc.h
+  */
+@@ -41,6 +42,7 @@
+ {
+ 	__asm __volatile(".byte 0x0f, 0x30" : : "A" (newval), "c" (msr));
+ }
++#endif /* __NetBSD_Version__ */
+ 
+ #ifndef M_MEMDESC
+ #define M_MEMDESC M_TEMP		/* XXX */
