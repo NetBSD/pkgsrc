@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2004/01/11 17:28:30 kim Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/14 01:46:29 xtraeme Exp $
 
-DISTNAME=	mailman-2.1.3
+DISTNAME=	mailman-2.1.4
 CATEGORIES=	mail www
 MASTER_SITES=	http://www.list.org/ \
 		${MASTER_SITE_GNU:=mailman/}
@@ -58,7 +58,7 @@ MAKE_DIRS_PERMS+=	${MAILMAN_DATADIR}/spam ${MAILMAN_USER} ${MAILMAN_GROUP} 775
 CONF_FILES+=		${EGDIR}/mailman.conf ${PKG_SYSCONFDIR}/mailman.conf
 CONF_FILES+=		${EXECDIR}/Mailman/mm_cfg.py.dist ${EXECDIR}/Mailman/mm_cfg.py
 
-PYTHON_VERSIONS_ACCEPTED= 22 21
+PYTHON_VERSIONS_ACCEPTED= 23 23pth 22 22pth 21 21pth
 PYTHON_PATCH_SCRIPTS+=	Mailman/Archiver/pipermail.py
 PYTHON_PATCH_SCRIPTS+=	Mailman/Post.py
 PYTHON_PATCH_SCRIPTS+=	admin/bin/Release.py
