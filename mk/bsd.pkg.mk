@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.98 1998/06/09 13:36:48 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.99 1998/06/10 08:02:10 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -166,7 +166,7 @@ MD5?=			md5
 .endif
 MD5_FILE?=		${FILESDIR}/md5
 
-MAKE_FLAGS?=	-f
+MAKE_FLAGS?=
 MAKEFILE?=		Makefile
 MAKE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} MOTIFLIB="${MOTIFLIB}" CFLAGS="${CFLAGS}"
 
@@ -907,14 +907,14 @@ do-configure:
 
 .if !target(do-build)
 do-build:
-	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} ${MAKEFILE} ${ALL_TARGET})
+	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET})
 .endif
 
 # Install
 
 .if !target(do-install)
 do-install:
-	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} ${MAKEFILE} ${INSTALL_TARGET})
+	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
 	@for f in ${INFO_FILES}; do		\
 		${ECHO} "${LOCALBASE}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f";	\
 		${LOCALBASE}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/$$f;		\
