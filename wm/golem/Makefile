@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:18:23 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/02/17 03:04:02 uebayasi Exp $
 #
 
 DISTNAME=	golem-0.0.5
@@ -33,7 +33,7 @@ PLIST_SUBST=		NOT_SOUND=
 PLIST_SUBST=		NOT_SOUND="@comment "
 .endif
 
-CFLAGS+=	-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
+CFLAGS+=	-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 EGDIR=		${PREFIX}/share/examples/golem
 CONF_FILES=	${EGDIR}/golemrc.default ${PKG_SYSCONFDIR}/golemrc

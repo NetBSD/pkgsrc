@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/25 08:21:53 snj Exp $
+# $NetBSD: Makefile,v 1.4 2005/02/17 03:01:30 uebayasi Exp $
 #
 
 DISTNAME=       latd-1.18
@@ -13,7 +13,7 @@ USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 
-CPPFLAGS+=	-DPREFIX=\"\\\"${PREFIX}\\\"\"
+CPPFLAGS+=	-DPREFIX="\"${PREFIX}\""
 
 EGDIR=		${PREFIX}/share/examples/latd
 CONF_FILES=	${EGDIR}/latd.conf ${PKG_SYSCONFDIR}/latd.conf
