@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.7 2003/07/17 19:36:43 grant Exp $
+# $NetBSD: Makefile.in,v 1.8 2003/07/31 22:40:27 jschauma Exp $
 #
 
 srcdir	= @srcdir@
@@ -47,6 +47,7 @@ install:
 	${RANLIB} ${prefix}/lib/${LIB}
 	${INSTALL} -m 755 -d ${prefix}/include/libnbcompat
 	${INSTALL} -m 444 extern.h ${prefix}/include/libnbcompat
+	${INSTALL} -m 444 err.h ${prefix}/include/libnbcompat
 	${INSTALL} -m 444 ftpglob.h ${prefix}/include/libnbcompat
 	${INSTALL} -m 444 fts.h ${prefix}/include/libnbcompat
 	${INSTALL} -m 444 getopt.h ${prefix}/include/libnbcompat
