@@ -1,7 +1,7 @@
-$NetBSD: patch-av,v 1.4 2000/10/18 03:31:17 hubertf Exp $
+$NetBSD: patch-av,v 1.5 2001/03/04 01:08:02 assar Exp $
 
---- configure.in.orig	Tue Aug  1 18:13:25 2000
-+++ configure.in
+--- configure.in.orig	Sun Mar  4 00:31:29 2001
++++ configure.in	Sun Mar  4 00:47:31 2001
 @@ -110,16 +110,19 @@
  dnl libkrb in the system libraries, so --with-krb4=value needs to
  dnl override the system -lkrb.
@@ -14,9 +14,8 @@ $NetBSD: patch-av,v 1.4 2000/10/18 03:31:17 hubertf Exp $
 -  [KRB4=$withval],
 +  [if test X"$withval" != X"no"; then KRB4=$withval; fi],
  )dnl
--echo "default place for krb4 is $KRB4"
 +if test X"$KRB4" != X""; then
-+    echo "default place for krb4 is $KRB4"
+ echo "default place for krb4 is $KRB4"
 +fi
  AC_SUBST(KRB4)])dnl
  WITH_KRB4
@@ -25,14 +24,29 @@ $NetBSD: patch-av,v 1.4 2000/10/18 03:31:17 hubertf Exp $
  krb_h=
  AC_MSG_CHECKING([for krb.h])
  if test "$cross_compiling" != yes && test -r $KRB4/include/krb.h; then
-@@ -181,20 +184,27 @@
+@@ -159,7 +162,7 @@
+            [LDFLAGS=$hold_ldflags
+             # Using open here instead of printf so we don't
+             # get confused by the cached value for printf from above.
+-            AC_CHECK_LIB(krb,open,[krb_lib=yes krb_libdir=])])
++            AC_CHECK_LIB(krb,open,[krb_lib=yes krb_libdir=])],[-ldes -lcom_err -lroken -lcrypt])
+        LDFLAGS=$hold_ldflags
+   else
+        AC_CHECK_LIB(krb,printf,[krb_lib=yes krb_libdir=])
+@@ -167,7 +170,7 @@
+   if test -n "$krb_lib"; then
+     AC_DEFINE(HAVE_KERBEROS)
+     test -n "${krb_libdir}" && LIBS="${LIBS} -L${krb_libdir}"
+-    LIBS="${LIBS} -lkrb"
++    LIBS="${LIBS} -lkrb -ldes -lcom_err -lroken -lcrypt"
+     # Put -L${krb_libdir} in LDFLAGS temporarily so that it appears before
+     # -ldes in the command line.  Don't do it permanently so that we honor
+     # the user's setting for LDFLAGS
+@@ -181,22 +184,26 @@
    fi
  fi
  AC_CHECK_FUNCS(krb_get_err_text)
 +fi	# KRB4 empty
-+
-+includeopt=
-+AC_SUBST(includeopt)
  
  dnl
  dnl Use --with-gssapi=DIR to enable GSSAPI support.
@@ -45,18 +59,34 @@ $NetBSD: patch-av,v 1.4 2000/10/18 03:31:17 hubertf Exp $
 -  [GSSAPI=$withval],
 +  [if test X"$withval" != X"no"; then GSSAPI=$withval; fi],
  )dnl
--echo "default place for GSSAPI is $GSSAPI"
 +if test X"$GSSAPI" != X""; then
-+    echo "default place for GSSAPI is $GSSAPI"
+ echo "default place for GSSAPI is $GSSAPI"
 +fi
  AC_SUBST(GSSAPI)])dnl
  WITH_GSSAPI
  
 +if test X"$GSSAPI" != X""; then
  hold_cppflags=$CPPFLAGS
- CPPFLAGS="$CPPFLAGS -I$GSSAPI/include "
+-CPPFLAGS="$CPPFLAGS -I$GSSAPI/include "
++CPPFLAGS="$CPPFLAGS -I$GSSAPI/include -I$GSSAPI/include/krb5 "
  AC_CHECK_HEADERS(krb5.h gssapi.h gssapi/gssapi.h gssapi/gssapi_generic.h)
-@@ -223,6 +233,7 @@
+ CPPFLAGS=$hold_cppflags
+ 
+@@ -204,10 +211,10 @@
+    (test "$ac_cv_header_gssapi_h" = "yes" ||
+     test "$ac_cv_header_gssapi_gssapi_h" = "yes"); then
+   AC_DEFINE(HAVE_GSSAPI)
+-  includeopt="${includeopt} -I$GSSAPI/include"
++  includeopt="${includeopt} -I$GSSAPI/include -I$GSSAPI/include/krb5"
+   # FIXME: This is ugly, but these things don't seem to be standardized.
+-  if test "$ac_cv_header_gssapi_h" = "yes"; then
+-    LIBS="$LIBS -L$GSSAPI/lib -lgssapi -lkrb5 -lasn1 -ldes -lroken"
++  if test "$ac_cv_header_gssapi_gssapi_generic_h" = "no"; then
++    LIBS="$LIBS -L$GSSAPI/lib -lgssapi -lkrb5 -lasn1 -lcom_err -ldes -lroken"
+   else
+     LIBS="$LIBS -L$GSSAPI/lib -lgssapi_krb5 -lkrb5 -lcrypto -lcom_err"
+   fi
+@@ -223,6 +230,7 @@
    # there, an_to_ln.o refers to things defined only in -lgen.
    AC_CHECK_LIB(gen, compile)
  fi

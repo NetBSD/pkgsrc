@@ -1,7 +1,7 @@
-$NetBSD: patch-aw,v 1.5 2000/10/21 19:29:06 wiz Exp $
+$NetBSD: patch-aw,v 1.6 2001/03/04 01:08:02 assar Exp $
 
---- configure.orig	Tue Aug  1 18:13:25 2000
-+++ configure
+--- configure.orig	Sun Mar  4 00:31:24 2001
++++ configure	Sun Mar  4 00:47:23 2001
 @@ -2820,19 +2820,22 @@
    
  fi
@@ -14,11 +14,10 @@ $NetBSD: patch-aw,v 1.5 2000/10/21 19:29:06 wiz Exp $
    withval="$with_krb4"
 -  KRB4=$withval
 +  if test X"$withval" != X"no"; then KRB4=$withval; fi
-+fi
-+if test X"$KRB4" != X""; then
-+    echo "default place for krb4 is $KRB4"
  fi
--echo "default place for krb4 is $KRB4"
++if test X"$KRB4" != X""; then
+ echo "default place for krb4 is $KRB4"
++fi
  
  
 +if test X"$KRB4" != X""; then
@@ -29,16 +28,32 @@ $NetBSD: patch-aw,v 1.5 2000/10/21 19:29:06 wiz Exp $
  if test "$cross_compiling" != yes && test -r $KRB4/include/krb.h; then
     hold_cflags=$CFLAGS
     CFLAGS="$CFLAGS -I$KRB4/include"
-@@ -3177,17 +3180,24 @@
+@@ -2945,7 +2948,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lkrb  $LIBS"
++LIBS="-lkrb -ldes -lcom_err -lroken -lcrypt  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 2951 "configure"
+ #include "confdefs.h"
+@@ -3070,7 +3073,7 @@
+ EOF
+ 
+     test -n "${krb_libdir}" && LIBS="${LIBS} -L${krb_libdir}"
+-    LIBS="${LIBS} -lkrb"
++    LIBS="${LIBS} -lkrb -ldes -lcom_err -lroken -lcrypt"
+     # Put -L${krb_libdir} in LDFLAGS temporarily so that it appears before
+     # -ldes in the command line.  Don't do it permanently so that we honor
+     # the user's setting for LDFLAGS
+@@ -3177,19 +3180,24 @@
  fi
  done
  
 +fi	# KRB4 empty
 +
-+includeopt=
  
 -GSSAPI=/usr/cygnus/kerbnet
-+
 +GSSAPI=
  
  # Check whether --with-gssapi or --without-gssapi was given.
@@ -46,18 +61,34 @@ $NetBSD: patch-aw,v 1.5 2000/10/21 19:29:06 wiz Exp $
    withval="$with_gssapi"
 -  GSSAPI=$withval
 +  if test X"$withval" != X"no"; then GSSAPI=$withval; fi
-+fi
-+if test X"$GSSAPI" != X""; then
-+    echo "default place for GSSAPI is $GSSAPI"
  fi
--echo "default place for GSSAPI is $GSSAPI"
++if test X"$GSSAPI" != X""; then
+ echo "default place for GSSAPI is $GSSAPI"
++fi
  
  
 +if test X"$GSSAPI" != X""; then
  hold_cppflags=$CPPFLAGS
- CPPFLAGS="$CPPFLAGS -I$GSSAPI/include "
+-CPPFLAGS="$CPPFLAGS -I$GSSAPI/include "
++CPPFLAGS="$CPPFLAGS -I$GSSAPI/include -I$GSSAPI/include/krb5"
  for ac_hdr in krb5.h gssapi.h gssapi/gssapi.h gssapi/gssapi_generic.h
-@@ -3332,6 +3342,7 @@
+ do
+ ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
+@@ -3239,10 +3247,10 @@
+ #define HAVE_GSSAPI 1
+ EOF
+ 
+-  includeopt="${includeopt} -I$GSSAPI/include"
++  includeopt="${includeopt} -I$GSSAPI/include -I$GSSAPI/include/krb5"
+   # FIXME: This is ugly, but these things don't seem to be standardized.
+-  if test "$ac_cv_header_gssapi_h" = "yes"; then
+-    LIBS="$LIBS -L$GSSAPI/lib -lgssapi -lkrb5 -lasn1 -ldes -lroken"
++  if test "$ac_cv_header_gssapi_gssapi_generic_h" = "no"; then
++    LIBS="$LIBS -L$GSSAPI/lib -lgssapi -lkrb5 -lasn1 -lcom_err -ldes -lroken"
+   else
+     LIBS="$LIBS -L$GSSAPI/lib -lgssapi_krb5 -lkrb5 -lcrypto -lcom_err"
+   fi
+@@ -3332,6 +3340,7 @@
  fi
  
  fi
