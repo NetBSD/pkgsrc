@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/11 07:28:12 jtb Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/11 08:15:09 jtb Exp $
 
 DISTNAME=		cilk-5.3.1
 PKGREVISION=		2
@@ -17,7 +17,7 @@ USE_BUILDLINK2=	 	# defined
 USE_GMAKE=		# defined
 USE_PERL5=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE= 	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE= 	${WRKSRC}/libtool
 PTHREAD_OPTS+=		require
 
 USE_NEW_TEXINFO=	YES
