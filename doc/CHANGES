@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9461 2005/03/07 15:32:07 adam Exp $
+$NetBSD: CHANGES,v 1.9462 2005/03/07 16:03:56 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1334,3 +1334,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libffi to 2.0betanb2 [wiz 2005-03-07]
 	Updated sqlite3 to 3.1.3nb1 [adam 2005-03-07]
 	Updated libopendaap to 0.3.0 [adam 2005-03-07]
+	added xentools20-2.0.3 [bouyer 2005-03-07]
