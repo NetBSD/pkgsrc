@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2003/11/12 03:35:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.83 2003/11/19 02:52:46 jschauma Exp $
 
 DISTNAME=		openssl-0.9.6l
 SVR4_PKGNAME=		ossl
@@ -11,8 +11,7 @@ COMMENT=		Secure Socket Layer and cryptographic library
 
 USE_PERL5=		build
 
-CONFLICTS=		SSLeay-[0-9]* ssleay-[0-9]* base64-[0-9]*	\
-			glimpse-[0-9]
+CONFLICTS=		SSLeay-[0-9]* ssleay-[0-9]* glimpse-[0-9]
 
 CRYPTO=			YES
 
