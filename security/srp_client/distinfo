@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/08/19 09:17:15 agc Exp $
+$NetBSD: distinfo,v 1.5 2002/10/02 22:19:47 wiz Exp $
 
 SHA1 (srp-1.4.4.tar.gz) = 56b8b3c29bee2b995b74acb5303dab326265f9b3
 Size (srp-1.4.4.tar.gz) = 1183636 bytes
@@ -6,7 +6,6 @@ SHA1 (patch-aa) = fefb8a7540c3c7e91b6c407a463a39bef948e0c8
 SHA1 (patch-ab) = cba14830f3dcae42c814d9ccb19cbdb5464eabb0
 SHA1 (patch-ac) = 1d5d56753ad45361351833b951bf7d1f82575955
 SHA1 (patch-ad) = d9869838822ab8d43c10dd1d8242f9ee49f857d7
-SHA1 (patch-ae) = 623c55e3283129a8312a8cdaf69165f29e04e3c6
 SHA1 (patch-af) = 4a5d21b667f39cfba61478614f4497710463aa06
 SHA1 (patch-ag) = 81eff66b05d11a943e9b66b9e31904d612eca449
 SHA1 (patch-ah) = 914544e6a2ae6c07be03ac8c5c46f9d996e8f3a5
