@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/01 21:51:12 jschauma Exp $
+
+--- Makefile.orig	Tue Jan  4 21:17:13 2005
++++ Makefile	Tue Jan  4 21:17:25 2005
+@@ -74,7 +74,7 @@
+ # (7) Execute "local" rules. (OPTIONAL).                              #
+ #######################################################################
+ 
+-nss_build_all: build_coreconf build_nspr build_dbm all
++nss_build_all: build_coreconf build_dbm all
+ 
+ build_coreconf:
+ 	cd $(CORE_DEPTH)/coreconf ;  $(MAKE)
