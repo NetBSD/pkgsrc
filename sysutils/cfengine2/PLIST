@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/23 22:50:59 ben Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/23 22:57:28 ben Exp $
 man/man8/cfagent.8
 man/man8/cfengine.8
 man/man8/cfenvd.8
@@ -31,6 +31,7 @@ share/examples/cfengine/cf.sun4.example
 share/examples/cfengine/cf.users.example
 share/examples/cfengine/cfagent.conf-advanced.example
 share/examples/cfengine/cfagent.conf.example
+share/examples/cfengine/cfexecd.cron
 share/examples/cfengine/cfrc.example
 share/examples/cfengine/cfrun.hosts.example
 share/examples/cfengine/cfservd.conf.example
