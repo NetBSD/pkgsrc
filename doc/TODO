@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2585 2004/11/29 15:17:44 wiz Exp $
+$NetBSD: TODO,v 1.2586 2004/11/29 17:27:56 taca Exp $
 
 Suggested new packages
 ======================
@@ -269,7 +269,6 @@ Suggested package updates
 
 	o 0verkill-0.16
 	o 3ddesktop-0.2.7
-	o AiCA-0.81
 	o BasiliskII-1.0.20041109
 	o BitTornado-0.3.8
 	o Chinput-3.0.1
