@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2000/08/15 03:54:18 hubertf Exp $
-bin/xlock
-lib/X11/app-defaults/XLock
-lib/X11/xlockmore/complete.au
-lib/X11/xlockmore/identify-please.au
-lib/X11/xlockmore/not-programmed.au
-lib/X11/xlockmore/thank-you.au
-man/man1/xlock.1
-@dirrm lib/X11/xlockmore

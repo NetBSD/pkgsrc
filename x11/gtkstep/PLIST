@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:10:58 zuntum Exp $
+lib/gtk/themes/engines/libstep.la
+lib/gtk/themes/engines/libstep.a
+lib/gtk/themes/engines/libstep.so
+share/themes/Step/ICON.png
+share/themes/Step/README.html
+share/themes/Step/gtk/gtkrc
+@dirrm share/themes/Step/gtk
+@dirrm share/themes/Step
+@unexec rmdir %D/lib/gtk/themes/engines %D/lib/gtk/themes %D/lib/gtk 2>/dev/null || true

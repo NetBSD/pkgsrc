@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:35 zuntum Exp $
+${RUBY_ARCHLIBDIR}/tcltklib.so
+${RUBY_LIBDIR}/tcltk.rb
+${RUBY_DOCDIR}/tcltklib/ja/MANUAL.euc
+${RUBY_DOCDIR}/tcltklib/ja/README.euc
+@dirrm ${RUBY_DOCDIR}/tcltklib/ja
+@dirrm ${RUBY_DOCDIR}/tcltklib
+${RUBY_EXAMPLESDIR}/tcltklib/batsu.gif
+${RUBY_EXAMPLESDIR}/tcltklib/maru.gif
+${RUBY_EXAMPLESDIR}/tcltklib/sample0.rb
+${RUBY_EXAMPLESDIR}/tcltklib/sample1.rb
+${RUBY_EXAMPLESDIR}/tcltklib/sample2.rb
+${RUBY_EXAMPLESDIR}/tcltklib/demo/lines0.tcl
+${RUBY_EXAMPLESDIR}/tcltklib/demo/lines1.rb
+${RUBY_EXAMPLESDIR}/tcltklib/demo/lines2.rb
+@dirrm ${RUBY_EXAMPLESDIR}/tcltklib/demo
+@dirrm ${RUBY_EXAMPLESDIR}/tcltklib
