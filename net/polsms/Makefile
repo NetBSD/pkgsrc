@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2001/07/09 09:11:27 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/16 16:12:58 zuntum Exp $
 #
 
-DISTNAME=	sms-1.8.9
+DISTNAME=	sms-1.8.9d
 PKGNAME=	pol${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://www.ceti.pl/~miki/komputery/download/sms/
@@ -14,8 +14,6 @@ USE_BUILDLINK_ONLY=	YES
 USE_GMAKE=		YES
 
 WRKSRC=		${WRKDIR}/sms
-
-MAKE_ENV+=	CC="${CXX}" C="${CC}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sms ${PREFIX}/bin
