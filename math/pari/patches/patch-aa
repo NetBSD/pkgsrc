@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2001/11/30 01:18:13 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2002/03/31 16:24:29 dmcmahill Exp $
 
---- Configure.orig	Fri Apr 27 13:51:44 2001
+--- Configure.orig	Fri Apr 27 09:51:44 2001
 +++ Configure
 @@ -169,35 +169,9 @@
  pth="\
@@ -174,7 +174,23 @@ $NetBSD: patch-aa,v 1.5 2001/11/30 01:18:13 wiz Exp $
    osf1-alpha)
        LD=$ld; LIBS="$LIBS -lots -lc"; runpathprefix='-rpath '
        LDFLAGS='-std0 -call_shared /usr/lib/cmplrs/cc/crt0.o'
-@@ -1141,11 +1068,9 @@
+@@ -970,6 +897,7 @@
+ #    aix-*)  DLSUFFIX=a  ;; dynamic linking does not work!
+     sunos-*) sodest=$VersionMajor$VersionMinor.$patch
+              soname=$sodest;;
++    netbsd-*) DLLD=;;
+     *-alpha|solaris-*|linux-*|freebsd-*)
+       case $libpari_base in
+         pari) sodest=$version.$patch;; # released versions
+@@ -1006,6 +934,7 @@
+       aix-*)      DLLDFLAGS="-r" ;;
+       hpux-*)     DLLDFLAGS="-b -E" ;;
+       freebsd-*)  DLLDFLAGS="-Bshareable -x" ;;
++      netbsd-*)   DLLD=;;
+       linux-*)    DLLDFLAGS="-shared -soname \$(LIBPARI_SONAME)" ;;
+       irix-*)     DLLDFLAGS="-shared -elf -no_unresolved -all" ;;
+       *-alpha)    DLLDFLAGS="-shared"; EXTRADLLDFLAGS='${LIBS}'
+@@ -1141,11 +1070,9 @@
  dflt=$share_prefix; . ./myread; share_prefix=$ans
  
  if test -z "$share_prefix"; then
@@ -187,7 +203,7 @@ $NetBSD: patch-aa,v 1.5 2001/11/30 01:18:13 wiz Exp $
  fi
  
  echo $n ..."\"gp\" executable ? $c"
-@@ -1158,7 +1083,7 @@
+@@ -1158,7 +1085,7 @@
  dflt=$prefix/include/pari; . ./myread; includedir=$ans
  
  echo $n ..."manual pages ? $c"
@@ -196,7 +212,7 @@ $NetBSD: patch-aa,v 1.5 2001/11/30 01:18:13 wiz Exp $
  
  echo $n ..."documentation, examples, and emacs macros ? $c"
  dflt=$dfltall; . ./myread; miscdir=$ans
-@@ -1222,6 +1147,7 @@
+@@ -1222,6 +1149,7 @@
  case "$osname" in
    *cygwin*) LDDYN="-L$libdir -lpari_dll" ; runpath="$libdir" ;
  	    DYNLIBS=-lpari_dll ; DYNFLAGS=-Dlibpari_USE_DLL ;;
