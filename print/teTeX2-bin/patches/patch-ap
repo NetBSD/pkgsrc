@@ -1,7 +1,7 @@
-$NetBSD: patch-ap,v 1.1.1.1 2003/02/23 04:59:26 kei Exp $
+$NetBSD: patch-ap,v 1.2 2003/09/11 22:38:06 jmmv Exp $
 
---- texk/tetex/texconfig.orig	Sun Feb 16 04:04:56 2003
-+++ texk/tetex/texconfig	Fri Feb 21 10:25:36 2003
+--- texk/tetex/texconfig.orig	2003-03-01 10:13:18.000000000 +0100
++++ texk/tetex/texconfig
 @@ -7,8 +7,6 @@
  # Thomas Esser, te@dbs.uni-hannover.de
  # Copyright: Thomas Esser, 1994, 1995, 1996, 1997, 1999, 2002. Public domain.
@@ -11,7 +11,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2003/02/23 04:59:26 kei Exp $
  version=teTeX
  #version='TeX Live'
  
-@@ -192,29 +190,11 @@
+@@ -192,29 +190,11 @@ abort()
    cleanup
    exit 1
  }
@@ -42,7 +42,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2003/02/23 04:59:26 kei Exp $
  }
  
  check_environ()
-@@ -293,22 +273,6 @@
+@@ -293,22 +273,6 @@ fonts_rw()
    echo "Done." >&2
  }
  
@@ -65,7 +65,16 @@ $NetBSD: patch-ap,v 1.1.1.1 2003/02/23 04:59:26 kei Exp $
  fix_pager_more()
  {
    case "$PAGER" in
-@@ -1737,7 +1701,6 @@
+@@ -1454,7 +1418,7 @@ echo_file_location()
+ do_print_setup()
+ {
+   echo '==================== binaries found by searching $PATH ==================='
+-  echo_locate_binary tex etex dvipdfm pdftex omega mf mpost tcdialog dvips xdvi kpsewhich mktexpk mktextfm
++  echo_locate_binary tex etex dvipdfm pdftex omega mf mpost dialog dvips xdvi kpsewhich mktexpk mktextfm
+   echo
+   echo '=========================== Kpathsea variables ==========================='
+   echo_show_variable TEXMF TEXMFMAIN VARTEXMF
+@@ -1737,7 +1701,6 @@ esac
  needsCleanup=false
  find_echo
  find_fmt
@@ -73,7 +82,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2003/02/23 04:59:26 kei Exp $
  check_environ
  require_binary kpsewhich pwd
  
-@@ -1813,8 +1776,6 @@
+@@ -1813,8 +1776,6 @@ test -z "$TC_DFT_UPDMAP_CFG" && TC_DFT_U
  
  # The fallback directory for private scripts and config files.
  : ${TEXMF=`kpsewhich -expand-var '$TEXMF'`}
@@ -82,7 +91,16 @@ $NetBSD: patch-ap,v 1.1.1.1 2003/02/23 04:59:26 kei Exp $
  
  formats=$TC_VARTEXMF/web2c
  xdvi_app_dir=$TC_VARTEXMF/xdvi
-@@ -1975,7 +1936,6 @@
+@@ -1955,7 +1916,7 @@ cd "$tmpdir" || exit_return 1
+ EDIT=${VISUAL-${EDITOR-$std_editor}}
+ PAGER=${PAGER-$std_pager}
+ 
+-check_for_binary tcdialog >/dev/null || test -n "$DIALOG_PROG"
++check_for_binary dialog >/dev/null || test -n "$DIALOG_PROG"
+ dialogok=$?
+ 
+ # we have called some shellfunctions, so for HP-UX's shell, we need
+@@ -1975,7 +1936,6 @@ fi
  # fmtutil --missing
  # texlinks --multiplatform
  
