@@ -1,17 +1,20 @@
-$NetBSD: patch-aa,v 1.11 2000/06/20 23:20:12 jlam Exp $
+$NetBSD: patch-aa,v 1.12 2000/10/17 23:57:45 jlam Exp $
 
---- configure.orig	Sat May 20 20:55:16 2000
-+++ configure	Fri May 26 23:39:02 2000
-@@ -5304,7 +5304,7 @@
+--- configure.orig	Wed Sep 27 17:34:13 2000
++++ configure
+@@ -5301,6 +5301,11 @@
+    rm -f po/POTFILES
+    sed -e "/^#/d" -e "/^\$/d" -e "s,.*,	$posrcprefix& \\\\," -e "\$s/\(.*\) \\\\/\1/" \
+ 	< $srcdir/po/POTFILES.in > po/POTFILES
++
++# NetBSD: set DATADIRNAME to "share"
++DATADIRNAME="share"
++INTLDEPS=
++INTLLIBS="-lintl"
    
  # AM_GNOME_GETTEXT above substs $DATADIRNAME
  # this is the directory where the *.{mo,gmo} files are installed
--gnomelocaledir='${prefix}/${DATADIRNAME}/locale'
-+gnomelocaledir='${prefix}/share/locale'
- 
- 
- echo $ac_n "checking for floor in -lm""... $ac_c" 1>&6
-@@ -10213,7 +10213,7 @@
+@@ -10265,7 +10270,7 @@
  GTKXMHTML_LIBS="-lgtkxmhtml $LIBGTKXMHTML_LIBS"
  ZVT_LIBS="-lzvt $UTIL_LIBS $GTK_LIBS"
  

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2000/09/03 13:46:46 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2000/10/17 23:57:43 jlam Exp $
 
-DISTNAME=		gnome-libs-1.2.3
+DISTNAME=		gnome-libs-1.2.5
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-libs/}
 
@@ -20,7 +20,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
-			--with-glib-prefix=${LOCALBASE}
+			--with-glib-prefix=${LOCALBASE} \
+			--with-kde-datadir=${X11PREFIX}/share/kde
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}" \
 			LOCALBASE=${LOCALBASE} \
 			X11BASE=${X11BASE}
@@ -35,37 +36,48 @@ PLIST_SUBST+=		LOCALBASE=${LOCALBASE} \
 
 .include "../../mk/bsd.prefs.mk"
 
+# XXX This is a kludge to get libgnome to work on a.out systems.
+#
+.if (${OBJECT_FMT} == a.out)
+LIBGNOME_LTCOMPILE_FLAGS=	-static
+LIBGNOME_LTLINK_FLAGS=		-all-static
+.else
+LIBGNOME_LTCOMPILE_FLAGS=
+LIBGNOME_LTLINK_FLAGS=
+.endif
+MAKE_ENV+=		LIBGNOME_LTCOMPILE_FLAGS="${LIBGNOME_LTCOMPILE_FLAGS}"
+MAKE_ENV+=		LIBGNOME_LTLINK_FLAGS="${LIBGNOME_LTLINK_FLAGS}"
+
 .if ${OPSYS} == "SunOS"
 DEPENDS+=		db-*:../../databases/db
 CPPFLAGS+=		-I${LOCALBASE}/include/db2
 
 pre-configure:
 	${MV} ${WRKSRC}/configure ${WRKSRC}/configure-pre-db-sub && \
-		${SED} -e 's|-ldb|-ldb2|g' ${WRKSRC}/configure-pre-db-sub > ${WRKSRC}/configure && \
+		${SED} -e 's|-ldb|-ldb2|g' \
+			< ${WRKSRC}/configure-pre-db-sub \
+			> ${WRKSRC}/configure && \
 		${CHMOD} 0755 ${WRKSRC}/configure
 .endif
 
 post-patch:
 	${MV} ${WRKSRC}/gnome-config.in ${WRKSRC}/gnome-config.in-pre-lpath && \
-	${SED} -e "s|XXXLOCALBASEXXX|${LOCALBASE}|" \
-		${WRKSRC}/gnome-config.in-pre-lpath >${WRKSRC}/gnome-config.in
+		${SED} -e "s|@LOCALBASE@|${LOCALBASE}|g" \
+			< ${WRKSRC}/gnome-config.in-pre-lpath \
+			> ${WRKSRC}/gnome-config.in
 
 pre-build:
-	cd ${WRKSRC}/support; ${GMAKE} gnomesupport.h
+	cd ${WRKSRC}/support && \
+		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} gnomesupport.h
 
 post-install:
-	${RMDIR} ${PREFIX}/share/gnome/html/zvt
 	${MKDIR} ${PREFIX}/etc/CORBA/servers
 	${TOUCH} ${PREFIX}/etc/CORBA/servers/.directory
-	${MKDIR} ${LOCALSTATEDIR}
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	cd ${PREFIX}; ${FIND} lib -name 'libgnome.so.*.*' >>${PLIST_SRC}
+	${MKDIR} ${LOCALSTATEDIR}
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
 	${LN} -fs ${PREFIX}/share/aclocal/libart.m4 \
 		${LOCALBASE}/share/aclocal/libart.m4
 
 .include "../../mk/bsd.pkg.mk"
-
-.if (${OBJECT_FMT} == a.out)
-MAKE_ENV+=	A_OUT_STATIC=-static
-.endif
