@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2003/02/23 17:33:31 salo Exp $
+$NetBSD: distinfo,v 1.3 2003/05/06 21:03:25 jmmv Exp $
 
-SHA1 (wdm-1.22.1.tar.gz) = 4e97779487c6bac8017b26862ace9b90495baa82
-Size (wdm-1.22.1.tar.gz) = 511546 bytes
-SHA1 (patch-aa) = 3d4956a38be407b7e8b09d7270864cf51e59b22e
+SHA1 (wdm-1.23.tar.gz) = e257a995c7a3532a02b5a7cd5ccc5a7fc6ae1f18
+Size (wdm-1.23.tar.gz) = 528614 bytes
+SHA1 (patch-aa) = b8dced2da7286b83596346b574bdb996152c2deb
+SHA1 (patch-ab) = 60db38bd6e2dbbe9be8117b369553c9c464d651f
