@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST-md.shared,v 1.1 1998/06/04 19:38:36 tv Exp $
+@comment $NetBSD: PLIST-md.shared,v 1.2 1998/07/21 21:34:09 cjs Exp $
 lib/apache/mod_include.so
+@dirrm lib/apache
