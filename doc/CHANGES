@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4438 2004/01/12 21:21:09 adam Exp $
+$NetBSD: CHANGES,v 1.4439 2004/01/12 21:57:58 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -196,3 +196,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added pnetC-0.6.0 [xtraeme 2004-01-12]
 	Updated cssc to 0.16a.0 [seb 2004-01-12]
 	Updated zlib to 1.2.1 [adam 2004-01-12]
+	Updated ksi to 3.4.1nb1 [kristerw 2004-01-12]
