@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/06/30 09:16:47 zuntum Exp $
+# $NetBSD: Makefile,v 1.13 2001/07/14 18:20:51 jlam Exp $
 
 DISTNAME=		WindowMaker-0.65.0
 PKGNAME=		windowmaker-0.65.0
@@ -16,12 +16,11 @@ BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK_ONLY=	YES
 USE_LIBTOOL=		YES
-USE_LIBINTL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-usermenu \
-			--with-nlsdir=${PREFIX}/share/locale
+			--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ENV+=		LINGUAS=yes
 
 INSTALL_TARGET=		install-strip
@@ -79,6 +78,7 @@ post-install:
 		FAQ FAQ.I18N \
 		${PREFIX}/share/doc/WindowMaker
 
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/libproplist/buildlink.mk"
 .include "../../graphics/libungif/buildlink.mk"
 .include "../../graphics/jpeg/buildlink.mk"
