@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/20 11:56:19 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/06/18 16:06:38 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/08/10 22:31:36 fenner Exp 
 #
 
@@ -14,6 +14,5 @@ ALL_TARGET=     bsdansi
 MAKEFILE=       makefile
 MAKE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_DATA="${INSTALL_DATA}"
-MAN1=		fiz.1 zoo.1
 
 .include "../../mk/bsd.pkg.mk"
