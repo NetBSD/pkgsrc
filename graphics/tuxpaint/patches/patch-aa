@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2003/01/01 19:24:20 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2003/03/07 11:40:58 wiz Exp $
 
---- Makefile.orig	Sun Oct 27 06:17:27 2002
+--- Makefile.orig	Wed Feb 19 08:27:22 2003
 +++ Makefile
 @@ -11,7 +11,7 @@
  
@@ -28,8 +28,8 @@ $NetBSD: patch-aa,v 1.3 2003/01/01 19:24:20 jmmv Exp $
 -endif
  
  
- # Icons and launchers:
-@@ -68,7 +61,7 @@ SDL_CFLAGS=$(shell sdl-config --cflags)
+ # Commands useful to other arch's (e.g., BeOS)
+@@ -74,7 +67,7 @@ SDL_CFLAGS=$(shell sdl-config --cflags)
  
  # The entire set of CFLAGS:
  
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.3 2003/01/01 19:24:20 jmmv Exp $
  	-D$(NOSOUNDFLAG) -DDOC_PREFIX=\"$(DOC_PREFIX)\" \
  	-DLOCALEDIR=\"$(LOCALE_PREFIX)\" -DCONFDIR=\"$(CONFDIR)\"
  
-@@ -100,8 +93,7 @@ nosound:
+@@ -132,8 +125,7 @@ beos:
  # to do this as superuser ("root"))
  
  install:	install-bin install-data install-man install-doc \
@@ -47,17 +47,17 @@ $NetBSD: patch-aa,v 1.3 2003/01/01 19:24:20 jmmv Exp $
 +		install-gettext install-importscript \
  		install-default-config
  	@echo
- 	@echo "All done! Now (preferably NOT as 'root' superuser),"
-@@ -167,9 +159,9 @@ uninstall:
+ 	@echo "--------------------------------------------------------------"
+@@ -244,9 +236,9 @@ uninstall:
  install-default-config:
  	@echo
  	@echo "...Installing default config file..."
--	install -d $(CONFDIR)
--	cp src/tuxpaint.conf $(CONFDIR)
--	chmod 644 $(CONFDIR)/tuxpaint.conf
-+	install -d $(PREFIX)/share/examples/tuxpaint
-+	cp src/tuxpaint.conf $(PREFIX)/share/examples/tuxpaint
-+	chmod 644 $(PREFIX)/share/examples/tuxpaint/tuxpaint.conf
+-	@install -d $(CONFDIR)
+-	@cp src/tuxpaint.conf $(CONFDIR)
+-	@chmod 644 $(CONFDIR)/tuxpaint.conf
++	@install -d $(PREFIX)/share/examples/tuxpaint
++	@cp src/tuxpaint.conf $(PREFIX)/share/examples/tuxpaint
++	@chmod 644 $(PREFIX)/share/examples/tuxpaint/tuxpaint.conf
  
  
  # Install a launcher icon in the Gnome menu, under "Graphics"
