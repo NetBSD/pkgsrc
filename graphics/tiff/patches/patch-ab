@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.6 1999/10/08 21:14:34 jlam Exp $
+$NetBSD: patch-ab,v 1.7 2000/01/06 01:25:25 wiz Exp $
 
---- ./libtiff/Makefile.in.orig	Wed Sep  8 05:39:00 1999
-+++ ./libtiff/Makefile.in	Thu Oct  7 22:08:32 1999
+--- ./libtiff/Makefile.in.orig	Sun Nov 28 21:15:36 1999
++++ ./libtiff/Makefile.in	Mon Jan  3 17:34:04 2000
 @@ -35,7 +35,8 @@
  #
  SHELL	= @SCRIPT_SH@
