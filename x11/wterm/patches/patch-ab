@@ -1,0 +1,60 @@
+$NetBSD: patch-ab,v 1.3 2002/03/05 15:23:46 tron Exp $
+
+--- src/utmp.c.orig	Sun Mar  5 12:21:34 2000
++++ src/utmp.c	Tue Mar  5 16:21:49 2002
+@@ -66,12 +66,18 @@
+ # endif
+ #endif
+ 
++#if defined(__NetBSD__) && defined(HAVE_UTMPX_H)
++#undef HAVE_UTMPX_H
++#define HAVE_UTMPX_H_KLUDGE
++#define wterm_update_wtmp	updwtmpx
++#endif
++
+ /* ------------------------------------------------------------------------- */
+ #ifndef HAVE_UTMPX_H		/* supposedly we have updwtmpx ? */
+ #ifdef WTMP_SUPPORT
+ /* PROTO */
+ void
+-wterm_update_wtmp(char *fname, struct utmp *putmp)
++wterm_update_wtmp(char *fname, UTMP *putmp)
+ {
+     int             fd, retry = 10;	/* 10 attempts at locking */
+     struct flock    lck;	/* fcntl locking scheme */
+@@ -90,7 +96,7 @@
+ 	    close(fd);
+ 	    return;		/* failed for unknown reason: give up */
+ 	}
+-    write(fd, putmp, sizeof(struct utmp));
++    write(fd, putmp, sizeof(UTMP));
+ 
+ /* unlocking the file */
+     lck.l_type = F_UNLCK;
+@@ -100,6 +106,12 @@
+ }
+ #endif				/* WTMP_SUPPORT */
+ #endif				/* !HAVE_UTMPX_H */
++
++#ifdef HAVE_UTMPX_H_KLUDGE
++#undef HAVE_UTMPX_H_KLUDGE
++#define HAVE_UTMPX_H
++#endif
++
+ /* ------------------------------------------------------------------------- */
+ #ifdef UTMP_SUPPORT
+ /*
+@@ -218,8 +230,13 @@
+ #endif				/* HAVE_UTMP_HOST */
+ 
+ /* ut_name is normally the same as ut_user, but .... */
++#ifdef HAVE_UTMPX_H
++    STRNCPY(utmp.ut_user, (pwent && pwent->pw_name) ? pwent->pw_name : "?",
++	    sizeof(utmp.ut_user));
++#else
+     STRNCPY(utmp.ut_name, (pwent && pwent->pw_name) ? pwent->pw_name : "?",
+ 	    sizeof(utmp.ut_name));
++#endif
+ 
+     utmp.ut_pid = getpid();
+ 
