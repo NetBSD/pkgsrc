@@ -1,0 +1,32 @@
+# $NetBSD: transform-ccc-cc,v 1.1 2004/11/20 04:37:08 grant Exp $
+#
+
+case $arg in
+######################################################################
+# Directories for the runtime library search path are passed via
+# "-Wl,-rpath,<dir>", not "-Wl,-R<dir>".
+######################################################################
+-Wl,-R*)
+	arg="-Wl,-rpath,${arg#-Wl,-R}"
+	msg_log $wrapperlog "   (transform-ccc-cc) to: $arg"
+	addtocache=yes
+	;;
+-W[LlSc],*)
+	addtocache=yes
+	;;
+-W*)
+	arg=
+	msg_log $wrapperlog "   (transform-ccc-cc) to: $arg"
+	addtocache=yes
+	;;
+-mieee)
+	arg="-ieee"
+	msg_log $wrapperlog "	(transform-ccc-cc) to: $arg"
+	addtocache=yes
+	;;
+-g)
+	arg="-g3"
+	msg_log $wrapperlog "   (transform-ccc-cc) to: $arg"
+	addtocache=yes
+	;;
+esac
