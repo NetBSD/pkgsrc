@@ -3,7 +3,8 @@
 # Date created:				June 26th 1997
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.ORG>
 #
-#   $Id: Makefile,v 1.1.1.1 1997/10/11 21:54:41 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/01/24 21:23:36 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.1.1.1 1997/06/27 01:51:12 jfitz Exp
 #
 
 DISTNAME=	Locale-Codes-0.003
