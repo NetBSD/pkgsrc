@@ -5,7 +5,7 @@ NOTE: THIS PACKAGE IS UNUSABLE WITHOUT SETTING UP THE FOLLOWING FILES:
 $PREFIX/etc/nntp/domainname (typically /usr/pkg/etc/nntp/domainname):
     The domain name that should go after @ on NNTP posts by default
 
-$PREFIX/etc/nntp/server (typically /usr/pkg/etc/nntp/nntp):
+$PREFIX/etc/nntp/server (typically /usr/pkg/etc/nntp/server):
     The hostname or IP address of your NNTP server (this can be omitted
     if you set NNTPSERVER in your environment)
 
