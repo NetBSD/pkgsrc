@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/22 23:19:16 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/25 01:09:49 jtb Exp $
 
 DISTNAME=	HDF4.1r4
 PKGNAME=	hdf-4.1r4
@@ -10,18 +10,13 @@ MAINTAINER=	jtb@netbsd.org
 HOMEPAGE=	http://hdf.ncsa.uiuc.edu/hdf4.html
 COMMENT=	NCSA Hierarchical Data Format
 
-DEPENDS+=	f2c-[0-9]*:../../lang/f2c
 DEPENDS+=	jpeg-[0-9]*:../../graphics/jpeg
 
 USE_FORTRAN=	#defined
 
-F2CBASE_DEFAULT=${LOCALBASE}
-EVAL_PREFIX+=	JPEGBASE=jpeg F2CBASE=f2c
+EVAL_PREFIX+=	JPEGBASE=jpeg
 
-.if (${MACHINE_ARCH} == "alpha")
-MAKE_ENV+="CPPFLAGS=-DDEC_ALPHA"
-.endif
-
+# This is ugly, but saves 31 patches
 post-patch:
 	for i in fortran/config/jackets-fbsd.c			\
 	fortran/fort_ps/mfhdfp.h fortran/jackets.src		\
@@ -49,14 +44,6 @@ post-patch:
 	${WRKSRC}/mfhdf/ncdump/hdfncdump.1
 	${MV} -f ${WRKSRC}/mfhdf/ncgen/ncgen.1			\
 	${WRKSRC}/mfhdf/ncgen/hdfncgen.1
-
-pre-build:
-	(cd ${WRKSRC}/hdf/src; for i in *.f; do			\
-		${F2CBASE}/bin/f2c $$i;				\
-	done)
-	(cd ${WRKSRC}/mfhdf/fortran; for i in *.f; do		\
-		${F2CBASE}/bin/f2c $$i;				\
-	done)
 
 pre-configure:
 	${CC} ${FILESDIR}/bytesex.c -o ${WRKSRC}/bytesex
