@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2003/07/21 17:38:25 martti Exp $
+# $NetBSD: Makefile,v 1.14 2003/10/25 13:32:59 fredb Exp $
 #
 
 DISTNAME=	aterm-0.4.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aterm/}
 
@@ -11,6 +11,7 @@ HOMEPAGE=	http://aterm.sourceforge.net/
 COMMENT=	Aterm (Afterstep XVT) - a VT102 emulator for the X window system
 
 USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 BUILD_DEFS+=	ATERM_USE_KANJI ATERM_USE_XTERM_SCROLL
@@ -48,6 +49,16 @@ CONFIGURE_ARGS+=--enable-big5
 
 .if defined(ATERM_USE_GREEK) && ${ATERM_USE_GREEK} != NO
 CONFIGURE_ARGS+=--enable-greek
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS:M*BSD} || ${OPSYS} == "Darwin"
+# Make rxvt setuid root so that tty ownership setting and utmp logging
+# function correctly.
+#
+CONFIGURE_ARGS+=--enable-ttygid
+SPECIAL_PERMS=	${PREFIX}/bin/aterm ${SETUID_ROOT_PERMS}
 .endif
 
 .include "../../graphics/jpeg/buildlink2.mk"
