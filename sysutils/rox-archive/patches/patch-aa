@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/06/15 13:23:08 cjep Exp $
+
+--- AppRun.orig	Sun Jul  9 18:22:31 2000
++++ AppRun
+@@ -30,6 +30,8 @@
+   	"Drop an archive onto me and I'll extract it.";
+ }
+ 
++$savebox = "@APPDIR@/ROX-Lib/bin/savebox";
++
+ $path = $ARGV[0];
+ 
+ # Convert relative paths to absolute (we may chdir() later).
+@@ -65,7 +67,7 @@
+ 
+ 	chdir $dir;
+ 	system "tar cf - \"$leaf\" | gzip -c - | " .
+-		"savebox -t application/x-compressed-tar \"$leaf.tgz\"";
++		"$savebox -t application/x-compressed-tar \"$leaf.tgz\"";
+ }
+ 
+ sub unarchive {
+@@ -154,7 +156,7 @@
+ 		}
+ 		else {
+ 			die unless $extract_stdout;
+-			system "$extract_stdout | savebox -t text/plain \"$found\"";
++			system "$extract_stdout | $savebox -t text/plain \"$found\"";
+ 		}
+ 	} else {
+ 		die unless $extract;
+@@ -181,7 +183,7 @@
+ 	my $leaf = shift;
+ 	my $dir;
+ 
+-	chop ($dir = `savebox -d \"$leaf\"`);
++	chop ($dir = `$savebox -d \"$leaf\"`);
+ 
+ 	return $dir if $dir;
+ 

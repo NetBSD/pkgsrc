@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/15 13:23:08 cjep Exp $
+share/rox/Archive/AppIcon.xpm
+share/rox/Archive/AppRun
+share/rox/Archive/Help/COPYING
+share/rox/Archive/Help/README
+@dirrm share/rox/Archive/Help
+@dirrm share/rox/Archive
