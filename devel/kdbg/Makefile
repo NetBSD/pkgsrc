@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/09/27 21:26:18 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/10/27 20:46:46 tron Exp $
 
 DISTNAME=	kdbg-1.0beta2
 CATEGORIES=	devel kde
@@ -11,7 +11,7 @@ HOMEPAGE=       http://members.telecom.at/~johsixt/kdbg.html
 BUILD_DEPENDS+= ${LOCALBASE}/bin/msgfmt:../../devel/gettext
 DEPENDS+=       autoconf-2.13:../../devel/autoconf
 DEPENDS+=       automake-1.4:../../devel/automake
-DEPENDS+=	kdebase-1.1.*:../../x11/kdebase
+DEPENDS+=	kdevelop-1.*:../../devel/kdevelop
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
