@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/06/22 11:19:41 agc Exp $
+# $NetBSD: Makefile,v 1.14 1998/06/22 13:58:26 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.3.2
@@ -11,9 +11,12 @@ MAINTAINER=	packages@netbsd.org
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 DEPENDS+=	tcl-8.0p2:../../lang/tcl80
 DEPENDS+=	addnerd-1.5:../../sysutils/addnerd
+DEPENDS+=	bison-1.25:../../devel/bison
 
 NO_PACKAGE=	"Requires pgsql uid"
+
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
+PLIST_SRC=	${WRKDIR}/PLIST.tmp
 
 PGUSER?=	pgsql
 PGGROUP?=	ingres
@@ -21,7 +24,7 @@ PGGROUP?=	ingres
 USE_GMAKE=	yes
 MAKEFILE=	GNUmakefile
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS= --prefix=${PREFIX}/pgsql \
+CONFIGURE_ARGS= --prefix=${PREFIX}/${PGUSER} \
 		--enable-locale \
 		--with-tcl \
 		--with-includes=${PREFIX}/include \
@@ -29,6 +32,25 @@ CONFIGURE_ARGS= --prefix=${PREFIX}/pgsql \
 		--with-template=`uname -s | ${TR} '[A-Z]' '[a-z]'`
 
 .include "../../mk/bsd.prefs.mk"
+
+pre-extract:
+	@(case "X${PGUSER}" in						\
+	Xbin|Xetc|Xinclude|Xinfo|Xlib|Xlibdata|Xlibexec|Xman|Xsbin|Xshare)\
+		gooduser=no;						\
+		;;							\
+	*)								\
+		gooduser=yes;						\
+		;;							\
+	esac;								\
+	if [ $$gooduser = "no" ]; then					\
+		${ECHO} "You have choosen PGUSER=${PGUSER} which will";	\
+		${ECHO} "cause trouble, because postgres would get";	\
+		${ECHO} "installed to ${PREFIX}/${PGUSER}. So please";	\
+		${ECHO} "set PGUSER to something more reasonable";	\
+		${ECHO} "like pgsql.";					\
+		${ECHO} "";						\
+		${FALSE};						\
+	fi)
 
 post-build:
 	@ ${ECHO} "------------------------------------------------------------"
@@ -38,43 +60,44 @@ post-build:
 
 pre-install:
 .if defined(PACKAGE_BUILDING)
-	${RM} -rf ${PREFIX}/pgsql
+	${RM} -rf ${PREFIX}/${PGUSER}
 .endif
-	@${MKDIR} ${PREFIX}/pgsql
-	@${SETENV} ${MAKE_ENV} addnerd -g ${PGGROUP} ${PGUSER}
+	@${MKDIR} ${PREFIX}/${PGUSER}
+	@${SETENV} ${MAKE_ENV} addnerd -h ${PREFIX} -g ${PGGROUP} ${PGUSER}
+	@${SED} -e 's|@PGUSER@|${PGUSER}|g' ${PKGDIR}/PLIST > ${PLIST_SRC}
 
 post-install:
-	@ if [ ! -f ${PREFIX}/pgsql/.profile ]; then \
-		${ECHO} "PATH=\$${PATH}:${PREFIX}/pgsql/bin" \
-			> ${PREFIX}/pgsql/.profile; \
-		${ECHO} "MANPATH=\$${MANPATH}:${PREFIX}/pgsql/bin" \
-			>> ${PREFIX}/pgsql/.profile; \
-		${ECHO} "PGLIB=${PREFIX}/pgsql/lib" \
-			>> ${PREFIX}/pgsql/.profile; \
+	@ if [ ! -f ${PREFIX}/${PGUSER}/.profile ]; then \
+		${ECHO} "PATH=\$${PATH}:${PREFIX}/${PGUSER}/bin" \
+			> ${PREFIX}/${PGUSER}/.profile; \
+		${ECHO} "MANPATH=\$${MANPATH}:${PREFIX}/${PGUSER}/man" \
+			>> ${PREFIX}/${PGUSER}/.profile; \
+		${ECHO} "PGLIB=${PREFIX}/${PGUSER}/lib" \
+			>> ${PREFIX}/${PGUSER}/.profile; \
 		${ECHO} "# note: PGDATA overwrites the -D startup option" \
-			>> ${PREFIX}/pgsql/.profile; \
-		${ECHO} "PGDATA=${PREFIX}/pgsql/data" \
-			>> ${PREFIX}/pgsql/.profile; \
+			>> ${PREFIX}/${PGUSER}/.profile; \
+		${ECHO} "PGDATA=${PREFIX}/${PGUSER}/data" \
+			>> ${PREFIX}/${PGUSER}/.profile; \
 		${ECHO} "DISPLAY=:0" \
-			>> ${PREFIX}/pgsql/.profile; \
+			>> ${PREFIX}/${PGUSER}/.profile; \
 		${ECHO} "export PATH MANPATH PGLIB PGDATA DISPLAY" \
-			>> ${PREFIX}/pgsql/.profile; \
+			>> ${PREFIX}/${PGUSER}/.profile; \
 		${ECHO} "# if you want to make regression tests use this TZ" \
-			>> ${PREFIX}/pgsql/.profile; \
+			>> ${PREFIX}/${PGUSER}/.profile; \
 		${ECHO} "#TZ=PST8PDT" \
-			>> ${PREFIX}/pgsql/.profile; \
+			>> ${PREFIX}/${PGUSER}/.profile; \
 		${ECHO} "#export TZ" \
-			>> ${PREFIX}/pgsql/.profile; \
+			>> ${PREFIX}/${PGUSER}/.profile; \
 	fi
-	@/usr/sbin/chown -R ${PGUSER}:${PGGROUP} ${PREFIX}/pgsql
+	@/usr/sbin/chown -R ${PGUSER}:${PGGROUP} ${PREFIX}/${PGUSER}
 	@${ECHO} 'Initializing PostgreSQL Databases - this may take a few minutes...'
-	@${LDCONFIG} -m ${PREFIX}/pgsql/lib || ${TRUE}
-	@${ECHO} '${SETENV} PATH=${PREFIX}/pgsql/bin:$$PATH ${PREFIX}/pgsql/bin/initdb --pglib=${PREFIX}/pgsql/lib --pgdata=${PREFIX}/pgsql/data' | su -l ${PGUSER}
+	@${LDCONFIG} -m ${PREFIX}/${PGUSER}/lib || ${TRUE}
+	@${ECHO} '${SETENV} PATH=${PREFIX}/${PGUSER}/bin:$$PATH ${PREFIX}/${PGUSER}/bin/initdb --pglib=${PREFIX}/${PGUSER}/lib --pgdata=${PREFIX}/${PGUSER}/data' | su -l ${PGUSER}
 	@${SED} -e "s=!!PREFIX!!=${PREFIX}=g" < ${FILESDIR}/pgsql.sh.tmpl \
 		> ${PREFIX}/etc/rc.d/pgsql.sh
 	@/bin/chmod 554 ${PREFIX}/etc/rc.d/pgsql.sh
 	@/usr/sbin/chown root.${PGGROUP} ${PREFIX}/etc/rc.d/pgsql.sh
-	@${INSTALL_DATA} ${FILESDIR}/post-install-notes ${PREFIX}/pgsql
+	@${INSTALL_DATA} ${FILESDIR}/post-install-notes ${PREFIX}/${PGUSER}
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/pgsql
 	${CP} -R ${WRKDIR}/${DISTNAME}/doc/* ${PREFIX}/share/doc/pgsql
