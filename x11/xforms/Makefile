@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2002/12/28 19:49:07 jschauma Exp $
+# $NetBSD: Makefile,v 1.44 2003/01/10 15:10:17 jschauma Exp $
 #
 
 DISTNAME=	xforms-1.0-release
@@ -18,6 +18,7 @@ USE_X11=	YES
 
 MAKE_ENV=	DEPEND_DEFINES="${CPPFLAGS}"
 SCRIPTS_ENV=	DEPEND_DEFINES="${CPPFLAGS}"
+LDFLAGS+=	-Wl,${_OPSYS_RPATH_NAME}${PREFIX}/lib
 
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
