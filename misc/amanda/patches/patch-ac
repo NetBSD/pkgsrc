@@ -8,10 +8,10 @@
 -#define LIBEXEC_DIR "/usr/local/libexec/amanda"
 -#define BIN_DIR	"/usr/local/sbin"
 -#define MAN_DIR	"/usr/share/local/man/man8"
-+#define CONFIG_DIR "/usr/pkg/etc/amanda"
-+#define LIBEXEC_DIR "/usr/pkg/libexec/amanda"
-+#define BIN_DIR	"/usr/pkg/sbin"
-+#define MAN_DIR	"/usr/pkg/man/man8"
++#define CONFIG_DIR "/usr/local/etc/amanda"
++#define LIBEXEC_DIR "/usr/local/libexec/amanda"
++#define BIN_DIR	"/usr/local/sbin"
++#define MAN_DIR	"/usr/local/man/man8"
  
  
  /*
