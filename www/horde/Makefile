@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/11/25 18:59:49 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/12/02 06:56:46 jlam Exp $
 
 DISTNAME=	horde-1.2.7
 CATEGORIES=	www
@@ -74,7 +74,6 @@ pre-install:
 		${FILESDIR}/horde_setup.sh > ${WRKDIR}/horde_setup.sh
 	${SED}	-e "s|@HORDEDIR@|${HORDEDIR}|g"				\
 		${FILESDIR}/horde_secure.sh > ${WRKDIR}/horde_secure.sh
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/horde_setup.sh ${PREFIX}/sbin/horde_setup
@@ -89,9 +88,6 @@ do-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} *.php3 ${HORDEDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${HORDEDIR}
 	${CHMOD} -R a-w ${HORDEDIR}
-
-post-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/11/19 16:23:11 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/12/02 06:56:42 jlam Exp $
 
 DISTNAME=	squirrelspell.0.3.5-1.0.6
 PKGNAME=	sq-squirrelspell-0.3.5
@@ -23,14 +23,8 @@ CONF_FILES=	${SMDIR}/plugins/squirrelspell/sqspell_config.dist	\
 		${SMDIR}/plugins/squirrelspell/sqspell_config.php
 OWN_DIRS=	${SMDIR}/plugins/squirrelspell
 
-pre-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
-
 do-install:
 	${CP} -R ${WRKSRC} ${SMDIR}/plugins
-
-post-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

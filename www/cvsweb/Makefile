@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.7 2001/11/28 14:00:47 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/12/02 06:56:46 jlam Exp $
 #
 
 DISTNAME=		cvsweb-1.112
@@ -32,9 +32,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cvsweb
 	${INSTALL_DATA} ${WRKSRC}/cvsweb.conf \
 		${PREFIX}/share/examples/cvsweb/cvsweb.conf.default
-
-post-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.install.mk"

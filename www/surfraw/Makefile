@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/11/25 18:59:50 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/12/02 06:56:47 jlam Exp $
 #
 
 DISTNAME=	surfraw-1.0.5
@@ -30,13 +30,9 @@ SUPPORT_FILES=	${EGDIR}/surfraw_elvi.list ${PKG_SYSCONFDIR}/surfraw_elvi.list
 
 PLIST_SUBST+=	PKGBASE=${PKGBASE}
 
-pre-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
-
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
