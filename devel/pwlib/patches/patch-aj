@@ -1,0 +1,32 @@
+$NetBSD: patch-aj,v 1.1 2002/02/08 06:29:44 jlam Exp $
+
+--- src/ptlib/unix/Makefile.orig	Fri Feb  8 00:37:01 2002
++++ src/ptlib/unix/Makefile
+@@ -340,23 +340,23 @@
+ ifdef REQUIRES_SEPARATE_SWITCH 
+ $(OBJDIR)/switch.o: ./switch.cxx
+ 	@if [ ! -d $(OBJDIR) ] ; then mkdir -p $(OBJDIR) ; fi
+-	$(CPLUS) $(CFLAGS) $(STDCCFLAGS) -c $< -o $@
++	$(LIBTOOL) --tag=CXX $(CPLUS) $(CFLAGS) $(STDCCFLAGS) -c $< -o $@
+ endif
+ 
+ CLEAN_FILES	:= $(CLEAN_FILES) $(LIBDIR)/$(PTLIB_FILE) $(GETDATE_SOURCE)
+ 
+ $(OBJDIR)/regex.o:	../../../src/ptlib/common/regex.cxx
+-	$(CPLUS) -DREGEX_MALLOC -D__STDC__ -DSTDC_HEADERS $(CFLAGS) $(STDCCFLAGS) -c -w $< -o $@
++	$(LIBTOOL) --tag=CXX $(CPLUS) -DREGEX_MALLOC -D__STDC__ -DSTDC_HEADERS $(CFLAGS) $(STDCCFLAGS) -c -w $< -o $@
+ 
+ $(OBJDIR)/getdate.tab.o: $(GETDATE_SOURCE)
+-	$(CC) $(CFLAGS) $(STDCCFLAGS) -c $< -o $@
++	$(LIBTOOL) --tag=CC $(CC) $(CFLAGS) $(STDCCFLAGS) -c $< -o $@
+ 
+ $(DEPDIR)/getdate.tab.dep: $(GETDATE_SOURCE)
+ 	$(CC) $(STDCCFLAGS) -M $< >> $@
+ 
+ ifeq ($(OSTYPE),beos)
+ $(OBJDIR)/resample.o: $(BEAUDIO_SRC_DIR)/resample.c
+-	$(CC) $(CFLAGS) $(STDCCFLAGS) -c $< -o $@
++	$(LIBTOOL) --tag=CC $(CC) $(CFLAGS) $(STDCCFLAGS) -c $< -o $@
+ endif
+ 
+ $(GETDATE_SOURCE): $(COMMON_SRC_DIR)/getdate.y
