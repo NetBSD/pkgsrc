@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3561 2003/09/28 09:03:52 jdolecek Exp $
+$NetBSD: CHANGES,v 1.3562 2003/09/28 10:43:34 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3988,3 +3988,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added stride-20030804 [jschauma 2003-09-27]
 	Updated mysql-client to 3.23.51nb1 [jdolecek 2003-09-28]
 	Updated mysql-server to 3.23.51nb1 [jdolecek 2003-09-28]
+	Updated vice to 1.13 [kristerw 2003-09-28]
