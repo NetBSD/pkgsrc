@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.2 1999/12/06 18:59:40 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/14 05:08:04 hubertf Exp $
 # FreeBSD ID: ports/benchmarks/postmark/Makefile,v 1.2 1999/09/19 05:13:20 obrien Exp
 #
 
-DISTNAME=       postmark-1_11.c
-PKGNAME=	postmark-1.11
+DISTNAME=       postmark-1_13.c
+PKGNAME=	postmark-1.13
 CATEGORIES=	benchmarks
 MASTER_SITES=   http://www.netapp.com/ftp/		\
 		http://www.taronga.com/~nick/files/
