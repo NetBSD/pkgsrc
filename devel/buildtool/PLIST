@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/08/31 19:29:06 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/09/05 18:50:33 jmmv Exp $
 bin/buildtool
 bin/buildtool-0
 libexec/buildtool-0/bt-012-to-013
@@ -27,6 +27,7 @@ share/buildtool-0/bt_logic/library.subr
 share/buildtool-0/bt_logic/null.subr
 share/buildtool-0/bt_logic/output.subr
 share/buildtool-0/bt_logic/program.subr
+share/buildtool-0/bt_logic/qt_program.subr
 share/buildtool-0/bt_logic/shlib.subr
 share/buildtool-0/bt_logic/texinfo.subr
 share/buildtool-0/bt_swcgen/out_conf.m4
@@ -44,8 +45,6 @@ share/buildtool-0/mk/qt.moc.mk
 share/buildtool-0/mk/sys.mk
 share/buildtool-0/templates/README.bt
 share/buildtool-0/templates/bt_config.conf.in
-share/buildtool-0/templates/mk_bin
-share/buildtool-0/templates/mk_top
 share/buildtool-0/templates/pkgflags
 share/doc/${PKGNAME}/CHANGES
 share/doc/${PKGNAME}/COPYING
