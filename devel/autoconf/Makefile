@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/11/28 05:20:45 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2001/11/30 21:22:25 jmc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
@@ -20,4 +20,5 @@ M4=			${PREFIX}/bin/gm4
 
 INFO_FILES=		autoconf.info standards.info
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
