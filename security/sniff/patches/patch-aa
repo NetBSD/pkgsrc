@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/13 13:13:41 zuntum Exp $
+
+--- Makefile.in.orig	Thu Dec 10 16:05:13 1998
++++ Makefile.in
+@@ -1,12 +1,9 @@
+-
+-CC=gcc
++# CC, CFLAGS and PREFIX are passed via environment, so wipe them from here
+ RM=rm
+ CP=cp
+-PREFIX=/usr/local
+ INSTALL_DIR=${PREFIX}/sbin
+ INSTALL_MAN=${PREFIX}/man/man1
+ 
+-CFLAGS   = -g
+ OBJS  =  sniff.o clear.o ifOpen.o lookupDNShost.o printData.o printHeader.o readPacket.o readTCP.o sniffData.o
+ 
+ 
+@@ -16,8 +13,8 @@
+ 	$(CC) $(CFLAGS) -o sniff $(OBJS)
+ 
+ install:
+-	$(CP) sniff $(INSTALL_DIR)
+-	$(CP) sniff.1 $(INSTALL_MAN)
++	$(BSD_INSTALL_PROGRAM) sniff $(INSTALL_DIR)
++	$(BSD_INSTALL_MAN) sniff.1 $(INSTALL_MAN)
+ 
+ clean: 
+ 	$(RM)  $(OBJS) sniff
