@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.144 1998/08/14 22:10:53 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.145 1998/08/19 15:21:20 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -149,8 +149,8 @@ BUILD_DEPENDS+=		${PREFIX}/include/Xm/Xm.h:../../x11/lesstif
 .if defined(USE_LIBTOOL)
 LIBTOOL=		${LOCALBASE}/bin/libtool
 BUILD_DEPENDS+=		${LIBTOOL}:../../devel/libtool
-CONFIGURE_ENV+=		LIBTOOL=${LIBTOOL}
-MAKE_ENV+=		LIBTOOL=${LIBTOOL}
+CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
+MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 .endif
 
 .if exists(${PKGSRCDIR}/../Makefile.inc)
@@ -1016,7 +1016,7 @@ _PORT_USE: .USE
 	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} build-depends misc-depends
 .endif
 .if make(real-install)
-.if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
+.if !defined(FORCE_PKG_REGISTER)
 .if defined(CONFLICTS)
 	@(/bin/sh -f -c 'for i in ${CONFLICTS}; do \
 		if /usr/sbin/pkg_info -e "$$i" >${WRKDIR}/.CONFLICT.$$$$; then \
@@ -1165,9 +1165,7 @@ _PORT_USE: .USE
 	@${ECHO_MSG} "===>   Please note the following:"
 	@${CAT} ${PKGDIR}/MESSAGE
 .endif
-.if !defined(NO_PKG_REGISTER)
 	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} fake-pkg
-.endif # NO_PKG_REGISTER
 .endif
 .if !make(real-fetch) \
 	&& (!make(real-patch) || !defined(PATCH_CHECK_ONLY)) \
