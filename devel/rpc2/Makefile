@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/07/27 18:08:08 phil Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/22 19:08:17 dmcmahill Exp $
 #
 
 DISTNAME=	rpc2-1.5
@@ -10,6 +10,7 @@ MAINTAINER=	phil@cs.wwu.edu
 HOMEPAGE=	http://www.coda.cs.cmu.edu/
 
 DEPENDS+=	lwp>=1.1:../../devel/lwp
+DEPENDS+=	readline>=4.0:../../devel/readline
 
 #LICENSE=	GPL
 
