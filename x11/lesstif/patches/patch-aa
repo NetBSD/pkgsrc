@@ -1,5 +1,14 @@
---- configure.orig	Wed Nov 19 16:32:40 1997
-+++ configure	Thu Nov 27 15:23:19 1997
+--- configure.orig	Wed Nov 19 23:32:40 1997
++++ configure	Wed Jan 28 15:07:07 1998
+@@ -977,7 +977,7 @@
+ 
+ 
+ include_subdirs="Motif$include_version_suffix"
+-lib_subdirs="Xm$version_suffix Mrm$version_suffix config"
++lib_subdirs="Xm$version_suffix Uil$version_suffix Mrm$version_suffix config"
+ lib_cleandirs="Xm$version_suffix Uil$version_suffix Mrm$version_suffix config"
+ client_subdirs="Motif-1.2"
+ client_cleandirs="Motif-1.2"
 @@ -2672,7 +2672,7 @@
  
  
