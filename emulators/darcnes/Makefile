@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/07/08 18:11:59 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2002/02/08 14:42:53 wiz Exp $
 
 DISTNAME=	dn9b0401
 PKGNAME=	darcnes-20010401
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.dridus.com/~nyef/darcnes/download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	wiz@netbsd.org
-HOMEPAGE=	http://www.netway.com/~nyef/
+HOMEPAGE=	http://www.dridus.com/~nyef/darcnes/
 COMMENT=	multi-system emulator (NES, SMS, GG, PCE, and others)
 
 LICENSE=	no-commercial-use
