@@ -1,4 +1,2 @@
-$NetBSD: md5,v 1.2 1998/08/07 13:27:36 agc Exp $
+$NetBSD: md5,v 1.3 1999/08/03 13:30:00 hubertf Exp $
 
-MD5 (teTeX/teTeX-src-0.4pl7.tar.gz) = cd897c63e091f60e3f90e2315655d8d5
-MD5 (teTeX/teTeX-lib-0.4pl8.tar.gz) = 3f959b363546191901e825e14032b060
