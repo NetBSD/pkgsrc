@@ -1,0 +1,22 @@
+$NetBSD: patch-dz,v 1.1.1.1 2002/05/31 13:19:19 skrll Exp $
+
+--- kwin/clients/quartz/Makefile.in.orig	Mon May 13 23:57:57 2002
++++ kwin/clients/quartz/Makefile.in
+@@ -294,7 +294,7 @@
+ kde_module_LTLIBRARIES = kwin_quartz.la
+ 
+ kwin_quartz_la_SOURCES = quartz.cpp
+-kwin_quartz_la_LIBADD = ../../kwin.la
++kwin_quartz_la_LIBADD = ../../libkwin.la
+ kwin_quartz_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
+ 
+ #>- METASOURCES = AUTO
+@@ -310,7 +310,7 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+-kwin_quartz_la_DEPENDENCIES = ../../kwin.la
++kwin_quartz_la_DEPENDENCIES = ../../libkwin.la
+ am_kwin_quartz_la_OBJECTS = quartz.lo
+ #>- kwin_quartz_la_OBJECTS = $(am_kwin_quartz_la_OBJECTS)
+ #>+ 5
