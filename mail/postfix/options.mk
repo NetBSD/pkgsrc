@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2004/08/07 16:56:53 jlam Exp $
+# $NetBSD: options.mk,v 1.4 2004/08/07 17:02:57 jlam Exp $
 
 # Global and legacy options
 #
@@ -64,7 +64,7 @@ IPV6TLS_PATCH=		tls+ipv6-1.25-pf-2.1.4.patch.gz
 PATCHFILES+=		${IPV6TLS_PATCH}
 SITES_${IPV6TLS_PATCH}=	ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.25/
 PATCH_DIST_STRIP.${IPV6TLS_PATCH}=	-p1
-PLIST_SRC+=	${PKGDIR}/PLIST.inet6
+PLIST_SRC+=		${PKGDIR}/PLIST.inet6
 .endif
 
 .if !empty(PKG_OPTIONS:Mtls)
