@@ -3,7 +3,7 @@
 # Date created:		11 October 1997
 # Whom:			hubertf
 #
-# $NetBSD: Makefile,v 1.8 1998/02/22 10:06:44 tron Exp $
+# $NetBSD: Makefile,v 1.9 1998/02/23 22:20:55 tron Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 #
 
@@ -27,6 +27,7 @@ MAKE_ENV+=	INSTALL_STRIP=${STRIPFLAG} \
 
 post-install:
 	rm -f ${PREFIX}/share/emacs/20.2/etc/DOC-20.2.[2-9]*
+	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
 .if (${OPSYS} != "NetBSD")
 	if [ ! -f ${PREFIX}/info/dir ]; then \
 	  ${SED} -ne '1,/Menu:/p' /usr/share/info/dir > ${PREFIX}/info/dir; \
