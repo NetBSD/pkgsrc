@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2004/04/01 12:26:12 tron Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/01 19:05:43 jmmv Exp $
 #
 
-DISTNAME=		gstreamer-0.6.4
-PKGREVISION=		2
+DISTNAME=		gstreamer-0.8.0
 CATEGORIES=		multimedia gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gstreamer/0.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gstreamer/0.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -15,6 +14,7 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_X11=		yes
@@ -22,14 +22,15 @@ USE_GNU_TOOLS+=		make
 USE_PERL5=		build
 
 CONFIGURE_ARGS+=	--disable-plugin-builddir
+CONFIGURE_ARGS+=	--localstatedir=/var
+CONFIGURE_ENV+=		ac_cv_path_PYTHON="${PYTHONBIN}"
 
-LIBTOOL_OVERRIDE+=	libtool libs/ext/cothreads/libtool
-
-PKGCONFIG_OVERRIDE+=	libs/ext/cothreads/cothreads.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-control.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer.pc.in
 
 PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth
+
+OWN_DIRS_PERMS=		/var/cache/gstreamer-0.8 ${ROOT_USER} ${ROOT_GROUP} 1777
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
