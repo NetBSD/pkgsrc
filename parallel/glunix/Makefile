@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/02/19 01:30:43 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2000/05/27 09:53:36 wiz Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
@@ -11,7 +11,6 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://now.cs.berkeley.edu/Glunix/glunix.html
 
 DEPENDS+=	ssh-1.2.27:../../security/ssh
-DEPENDS+=	addnerd-1.6:../../sysutils/addnerd
 
 USE_GMAKE=	yes
 USE_PERL5=	yes
@@ -33,16 +32,22 @@ MAKE_ENV+= PORTSDIR=${PKGDIR} WRKDIR=${WRKDIR} FLAGS=${FLAGS}
 
 SCRIPTS_ENV+= ARCH=${MACHINE} RM=${RM} NOW_ROOT=${NOW_ROOT}
 
+.if exists(/usr/sbin/user)
+USER_CMD=       /usr/sbin/user
+GROUP_CMD=      /usr/sbin/group
+.else
+DEPENDS+=       user>=20000313:../../sysutils/user
+USER_CMD=       ${LOCALBASE}/sbin/user
+GROUP_CMD=      ${LOCALBASE}/sbin/group
+.endif
+
 # the glunix group needs to exist before building.
 pre-configure:
 	${CP} ${FILESDIR}/Makefile-2 ${WRKSRC}/Makefile
-	@addgroup=`${AWK} -F: 'BEGIN { found = gid = 0; }		\
-		$$1 == "glunix" { found = 1; exit 0; }			\
-		$$1 != "glunix" && $$1 != "nogroup" { if ($$3 > gid) { gid = $$3; } } \
-		END { if (found) { printf("--exists--"); } else { printf("glunix:*:%d:\n", gid + 1); }}' /etc/group`;\
-	if [ "$$addgroup" != "--exists--" ]; then			\
-		${ECHO} "Adding group $$addgroup";			\
-		${ECHO} "$$addgroup" >> /etc/group;			\
+	@if `${GROUP_CMD} info -e glunix`; then				\
+		${ECHO} Group \'glunix\' already exists.;		\
+	else								\
+		${GROUP_CMD} add glunix;				\
 	fi
 
 pre-install:
@@ -52,6 +57,14 @@ pre-install:
 	( ${GREP} -v ${NOW_ROOT}/bin/glush /etc/shells.bak;		\
 		${ECHO} ${NOW_ROOT}/bin/glush				\
 	) >/etc/shells
-	-${LOCALBASE}/sbin/addnerd -g glunix -s ${NOW_ROOT}/bin/glush glunix
+	@if `${USER_CMD} info -e glunix`; then				\
+		${ECHO} User \'glunix\' already exists.;		\
+	else								\
+		${USER_CMD} add -g glunix -d /nonexistent		\
+			-s ${NOW_ROOT}/bin/glush glunix;		\
+	fi;
+
+post-install:
+	@${TOUCH} ${NOW_ROOT}/lib/${MACHINE_ARCH}-${OPSYS}-tcp/.keepme
 
 .include "../../mk/bsd.pkg.mk"
