@@ -1,14 +1,9 @@
-$NetBSD: patch-aa,v 1.24 2004/11/28 22:39:07 atatat Exp $
+$NetBSD: patch-aa,v 1.25 2005/01/17 14:54:01 atatat Exp $
 
 If LSOF_MORE_SECURE is non-zero, compile lsof with security, and
 only let unprivileged (non-root) users view their own open files.
 Set LSOF_LESS_SECURE_SOCKETS to non-zero in order to allow non-root
 users to see open sockets, even when LSOF_MORE_SECURE is set.
-
-Also, incorporate a patch from the author that widens the NETBSDV
-definition to account for new current versioning system, properly
-handles the sys/bufq.h mess, adds a bit more to procfs support, and
-adds ptyfs support.
 
 --- dialects/n+obsd/machine.h.orig	2004-10-17 17:55:27.000000000 -0400
 +++ dialects/n+obsd/machine.h
@@ -34,30 +29,3 @@ adds ptyfs support.
  
  
  /*
-@@ -407,9 +411,9 @@
- 
- #define	HASSETLOCALE	1
- 
--# if	defined(NETBSDV) && NETBSDV>=1060
-+# if	defined(NETBSDV) && NETBSDV>=1006000
- #define	HASWIDECHAR	1
--# endif	/* defined(NETBSDV) && NETBSDV>=1060*/
-+# endif	/* defined(NETBSDV) && NETBSDV>=1006000 */
- 
- /* #define	WIDECHARINCL	<wchar.h>	*/
- 
-@@ -529,11 +533,11 @@
- /* #define	USE_LIB_READMNT			1	   rmnt.c */
- /* #define	USE_LIB_REGEX			1	   regex.c */
- 
--# if	(defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1020)
-+# if	(defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1002000)
- #define	USE_LIB_RNMH				1	/* rnmh.c */
--# else	/* (defined(OPENBSDV) && OPENBSDV<2010) && (defined(NETBSDV) && NETBSDV<1020) */
-+# else	/* (defined(OPENBSDV) && OPENBSDV<2010) && (defined(NETBSDV) && NETBSDV<1002000) */
- #define	USE_LIB_RNAM				1	/* rnam.c */
--# endif	/* (defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1020) */
-+# endif	/* (defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1002000) */
- 
- /* #define	USE_LIB_RNCH			1	   rnch.c */
- /* #define	USE_LIB_SNPF			1	   snpf.c */
