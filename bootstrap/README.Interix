@@ -1,4 +1,4 @@
-$NetBSD: README.Interix,v 1.10 2004/04/30 20:44:44 tv Exp $
+$NetBSD: README.Interix,v 1.11 2004/05/02 03:38:21 tv Exp $
 
 Please read the general README file as well.
 
@@ -74,13 +74,10 @@ KNOWN ISSUES
   these, you may create such a user; make sure it is in the local group
   Administrators.
 
-And the following two issues mean that binary packages (pkg_add) should be
+And the following issue means that binary packages (pkg_add) should be
 installed by Administrator for the time being:
 
 * "pkg_add" creates directories of mode 0755, not 0775, in $PKG_DBDIR.
   This will be fixed.
-
-* set-gid files in Interix seem to require using Administrator to install
-  the setgid file.  (I'm working to confirm this.)
 
 =====
