@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/08/25 21:49:26 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2002/11/25 22:17:16 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
@@ -17,9 +17,15 @@ COMMENT=	List, test and extract compressed files in a ZIP archive
 
 USE_BUILDLINK2=	# defined
 
+.include "../../mk/bsd.prefs.mk"
+
 MAKEFILE=	unix/Makefile
 ALL_TARGET=	generic_zlib unzipsfx
+.if ${OPSYS:M*BSD} == ""
+MAKE_FLAGS=	CF="${CFLAGS} -I. -DUNIX -Dunix -DUSE_UNSHRINK" LF2="-lz ${_STRIPFLAG_CC} ${LDFLAGS}"
+.else
 MAKE_FLAGS=	CF="${CFLAGS} -I. -DBSD -DUNIX -Dunix -DUSE_UNSHRINK" LF2="-lz ${_STRIPFLAG_CC} ${LDFLAGS}"
+.endif
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} unzip funzip unzipsfx ${PREFIX}/bin
