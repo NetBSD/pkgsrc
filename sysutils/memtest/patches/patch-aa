@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/04/27 11:28:32 agc Exp $
+$NetBSD: patch-aa,v 1.2 2001/07/09 16:31:36 wiz Exp $
 
---- Makefile.orig	Sun Apr  8 22:21:04 2001
-+++ Makefile	Mon Apr  9 18:41:18 2001
+--- Makefile.orig	Sat Jul  7 23:52:34 2001
++++ Makefile	Sat Jul  7 23:54:30 2001
 @@ -6,7 +6,7 @@
  #
  # Path for the floppy disk device
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 11:28:32 agc Exp $
  
  CC=gcc
  #
-@@ -63,11 +63,7 @@
+@@ -69,11 +69,8 @@
  		$(REL_DAT_ADR) -Map mapfile.relo $(OBJS)
  
  relo.out: relo
@@ -21,12 +21,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 11:28:32 agc Exp $
 -	    $(OBJCOPY) relo relo.out; \
 -	fi
 +	$(OBJCOPY) relo relo.out
- 
- head.o: head.s
- 	as -o $@ $<
-@@ -76,11 +72,7 @@
- 	ld -m elf_i386 -o $@ -e do_test -Ttext $(TXT_ADR) -Tdata $(DAT_ADR) \
++
+ relo.obj: relo.out
+ 	ld -r -o $@ -T relo.lds -b binary $^
+        
+@@ -85,11 +82,7 @@
  		-Map mapfile $(OBJS)
+ 
  head.out: head
 -	if hash encaps 2> /dev/null; then \
 -	    $(OBJDUMP) -o $(TXT_ADR) head >head.out; \
@@ -35,5 +36,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/27 11:28:32 agc Exp $
 -	fi
 +	$(OBJCOPY) head head.out
  
- head.s: head.S test.h
- 	$(CC) -E -traditional $< -o $@
+ head.obj: head.out
+ 	ld -r -o $@ -T head.lds -b binary $^
