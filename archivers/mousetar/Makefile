@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/08/18 18:40:36 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2005/01/21 02:33:47 tv Exp $
 #
 
 DISTNAME=	mousetar-20021217
@@ -11,6 +11,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	der Mouse's version of tar program
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+NOT_FOR_PLATFORM+=	Interix-*-* # no sys/mtio.h tape support
 
 WRKSRC=		${WRKDIR}
 USE_BUILDLINK3=	yes
