@@ -1,23 +1,22 @@
-# $NetBSD: Makefile,v 1.9 2004/03/16 02:01:10 taca Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/27 14:30:14 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
-PKGNAME=	${RUBY_PKGNAMEPREFIX}gdbm-${RUBY_VERSION}
-PKGREVISION=	2
+PKGNAME=	${RUBY_PKGPREFIX}-gdbm-${RUBY_VERSION}
 CATEGORIES=	databases ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.ruby-lang.org/en/
+HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby extension to GDBM library
 
-DEPENDS+=	gdbm>=1.8.3:../../databases/gdbm
+USE_BUILDLINK3=		yes
+USE_RUBY_EXTCONF=	yes
+DISTINFO_FILE=		${RUBY_DISTINFO_FILE}
+WRKSRC=			${RUBY_WRKSRC}/ext/gdbm
+EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/gdbm
 
-WRKSRC=		${RUBY_WRKSRC}/ext/gdbm
-DIST_SUBDIR=	ruby
-DISTINFO_FILE=	${RUBY_DISTINFO}
-EXTRACT_ELEMENTS= ${RUBY_DISTNAME}/ext/gdbm
-USE_RUBY_EXTCONF= yes
-
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
+.include "../../lang/ruby/Makefile.common"
+.include "../../databases/gdbm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
