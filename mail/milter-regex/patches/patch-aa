@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/06/11 23:11:48 jdarrow Exp $
+
+--- milter-regex.c.orig	Fri Mar 19 13:21:40 2004
++++ milter-regex.c	Mon Jun  7 16:35:18 2004
+@@ -596,7 +596,7 @@
+ 			return (1);
+ 		}
+ 		if (
+-#if ! ( __linux__ || __sun__ )
++#if ! ( __linux__ || __sun__ || __NetBSD__ )
+ 		    seteuid(pw->pw_uid) ||
+ #endif
+ 		    setuid(pw->pw_uid)) {
