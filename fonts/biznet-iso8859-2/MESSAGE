@@ -1,0 +1,37 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/03/11 23:36:54 salo Exp $
+
+You can tell one existing X session on the installed host to use the
+new "biznet-iso8859-2" fonts with:
+
+	$ xset +fp ${PREFIX}/lib/X11/fonts/biznet/100dpi/
+	$ xset +fp ${PREFIX}/lib/X11/fonts/biznet/75dpi/
+	$ xset +fp ${PREFIX}/lib/X11/fonts/biznet/misc/
+	$ xset fp rehash
+
+To make the effect permanent for future X sessions, you will have to
+edit certain files in your X installation.
+
+For example if you are only using the "startx" command to start a local
+X session then you would add the above command to your ~/.xinitrc
+script or configure your XF86Config by adding biznet-iso8859-2 directories
+to your FontPath.
+
+If you're running a local X server from xdm then you would need to set
+the complete set of font directories in the xdm/Xservers file with the
+'-fp' option common to all X servers.
+
+If you are using the X font server (xfs) then you would add the
+biznet-iso8859-2 install directory to the xfs/config file in the comma
+separated list of directories given for the "catalogue" setting.
+For example:
+
+	catalogue = ${PREFIX}/lib/X11/fonts/misc/,
+		  ${PREFIX}/lib/X11/fonts/Speedo/,
+		  ${PREFIX}/lib/X11/fonts/Type1/,
+		  ${PREFIX}/lib/X11/fonts/100dpi/,
+		  ${PREFIX}/lib/X11/fonts/75dpi/,
+		  ${PREFIX}/lib/X11/fonts/biznet/100dpi/,
+		  ${PREFIX}/lib/X11/fonts/biznet/75dpi/,
+		  ${PREFIX}/lib/X11/fonts/biznet/misc/
+===========================================================================
