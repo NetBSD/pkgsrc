@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/09/18 23:21:33 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/05/28 03:28:06 jlam Exp $
 bin/bdftops
 bin/dvipdf
 bin/eps2eps
@@ -355,8 +355,6 @@ share/ghostscript/${GS_VERS}/lib/stc600p.upp
 share/ghostscript/${GS_VERS}/lib/stc600pl.upp
 share/ghostscript/${GS_VERS}/lib/stc640p.upp
 share/ghostscript/${GS_VERS}/lib/stc740ih.upp
-share/ghostscript/${GS_VERS}/lib/stc740p.upp
-share/ghostscript/${GS_VERS}/lib/stc740pl.upp
 share/ghostscript/${GS_VERS}/lib/stc800ih.upp
 share/ghostscript/${GS_VERS}/lib/stc800p.upp
 share/ghostscript/${GS_VERS}/lib/stc800pl.upp
@@ -389,5 +387,3 @@ share/ghostscript/${GS_VERS}/lib/zeroline.ps
 @dirrm share/examples/ghostscript/cjk
 @dirrm share/examples/ghostscript
 @dirrm share/doc/html/ghostscript
-@dirrm man/de/man1
-@dirrm man/de

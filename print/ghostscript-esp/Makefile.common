@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2003/01/28 22:04:01 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/05/28 03:28:05 jlam Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 BASEGS_VERS=	7.05
-GS_VERS=	${BASEGS_VERS}.5
+GS_VERS=	${BASEGS_VERS}.6
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.easysw.com/pub/ghostscript/ \
@@ -60,11 +60,8 @@ REPLACE_PERL=		lib/fixmswrd.pl
 
 CUPS_CONFDIR?=		${PKG_SYSCONFBASE}/cups
 CUPS_EGDIR=		${PREFIX}/share/examples/cups
-GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/Resource
-GSDATADIR=		${PREFIX}/share/ghostscript/${BASEGS_VERS}
 DOCDIR=			${PREFIX}/share/doc/ghostscript
 HTMLDIR=		${PREFIX}/share/doc/html/ghostscript
-LIBDIR=			${GSDATADIR}/lib
 
 PLIST_SUBST+=		GS_VERS=${BASEGS_VERS}
 
@@ -75,11 +72,9 @@ post-extract:
 	${MKDIR} ${WRKSRC}/obj
 	${RM} -f ${WRKSRC}/jpeg
 	${LN} -s ${JPEG_WRKSRC} ${WRKSRC}/jpeg
-	cd ${WRKSRC}/lib; for file in gs_res.ps; do			\
-		${SED}  -e "s|/Resource/|${GS_RESOURCEDIR}/|g"		\
-			$${file} > $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
+
+pre-configure:
+	cd ${WRKSRC} && ${AUTOCONF}
 
 # Reinstall the gs binary so that it's properly stripped.
 post-install:
@@ -94,6 +89,7 @@ post-install:
 .include "../../print/cups/buildlink2.mk"
 .include "../../print/gimp-print-lib/buildlink2.mk"
 
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
