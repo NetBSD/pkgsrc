@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/03/20 19:28:52 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2004/05/12 17:56:45 minskim Exp $
 #
 
 DISTNAME=	tclX8.2.0
@@ -28,12 +28,6 @@ CONFIGURE_ENV+=		PKGSRC_TCL_SRC_DIR="${PKGSRC_TCL_SRC_DIR}"
 MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
 			SHAREMODE=${SHAREMODE} SHAREOWN=${SHAREOWN} \
 			SHAREGRP=${SHAREGRP}
-
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing Tcl library names."
-SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	${WRKSRC}/../tcl/unix/Makefile.in
-SUBST_SED.paths=	-e 's,ltcl83,ltcl,g'
 
 .include "../../lang/tcl/buildlink2.mk"
 
