@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9155 2005/02/15 22:47:50 seb Exp $
+$NetBSD: CHANGES,v 1.9156 2005/02/16 02:28:25 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -892,3 +892,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gift to 0.11.8.1 [peter 2005-02-15]
 	Updated gift-fasttrack to 0.8.9 [peter 2005-02-15]
 	Updated sympa to 4.1.2nb2 [seb 2005-02-15]
+	Updated mysql4-client to 4.1.10 [xtraeme 2005-02-16]
+	Updated mysql4-server to 4.1.10 [xtraeme 2005-02-16]
