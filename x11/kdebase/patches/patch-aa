@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.12 1999/10/22 18:31:52 jlam Exp $
+$NetBSD: patch-aa,v 1.13 1999/11/12 04:50:00 hubertf Exp $
 
---- configure.orig	Tue Sep  7 11:21:06 1999
-+++ configure	Fri Oct 22 14:25:03 1999
+--- ./configure	Tue Sep  7 17:21:06 1999
++++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/configure	Fri Nov 12 05:10:30 1999
 @@ -517,9 +517,9 @@
  # Prefer explicitly selected file to automatically selected ones.
  if test -z "$CONFIG_SITE"; then

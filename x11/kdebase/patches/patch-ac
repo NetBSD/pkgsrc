@@ -1,31 +1,13 @@
-$NetBSD: patch-ac,v 1.5 1999/02/15 21:34:49 tron Exp $
+$NetBSD: patch-ac,v 1.6 1999/11/12 04:50:00 hubertf Exp $
 
---- kdm/resource.c.orig	Thu Jan 28 15:10:02 1999
-+++ kdm/resource.c	Sat Feb 13 19:44:33 1999
-@@ -92,7 +92,7 @@
- #define DEF_SESSION XDMDIR"/Xsession" /* QUOTE(XBINDIR) "xterm -ls" */
- #endif
- #ifndef DEF_USER_PATH
--#  ifdef __FreeBSD__
-+#  if defined(__FreeBSD__) || defined(__NetBSD__)
- #    define DEF_USER_PATH "/bin:/usr/bin:" QUOTE(XBINDIR) ":/usr/local/bin"
- #  elif __linux__
- #    define DEF_USER_PATH "/bin:/usr/bin:" QUOTE(XBINDIR) ":/usr/local/bin"
-@@ -101,7 +101,7 @@
- #  endif
- #endif
- #ifndef DEF_SYSTEM_PATH
--#  ifdef __FreeBSD__
-+#  if defined(__FreeBSD__) || defined(__NetBSD__)
- #    define DEF_SYSTEM_PATH "/sbin:/usr/sbin:/bin:/usr/bin:" QUOTE(XBINDIR) ":/usr/local/bin"
- #  elif __linux__
- #    define DEF_SYSTEM_PATH "/sbin:/usr/sbin:/bin:/usr/bin:" QUOTE(XBINDIR) ":/usr/local/bin"
-@@ -153,7 +153,7 @@
- #define DEF_GREETER_LIB ""
- #endif
- #ifndef DEF_PID_FILE
--#  ifdef __FreeBSD__
-+#  if defined(__FreeBSD__) || defined(__NetBSD__)
- #    define DEF_PID_FILE _PATH_VARRUN"kdm.pid"
- #  else
- /* this may be readonly
+--- ./kcontrol/info/info.cpp	Fri Jul 23 23:56:57 1999
++++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kcontrol/info/info.cpp	Fri Nov 12 05:10:33 1999
+@@ -116,6 +116,8 @@
+ #include "info_fbsd.cpp"
+ #elif hpux
+ #include "info_hpux.cpp"
++#elif __NetBSD__
++#include "info_netbsd.cpp"
+ #elif __svr4__
+ #include "info_svr4.cpp"
+ #else
