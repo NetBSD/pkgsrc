@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2001/08/06 15:41:13 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2002/03/13 17:37:40 fredb Exp $
 #
 
 DISTNAME=		transfig.3.2.3d
 PKGNAME=		transfig-3.2.3.4
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}/${DISTNAME}
 CATEGORIES=		graphics print
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=applications/drawing_tools/transfig/} \

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/10/03 20:56:52 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2002/03/13 17:37:37 fredb Exp $
 #
 # This Makefile fragment is included by packages that use pdflib.
 #
@@ -17,7 +17,7 @@ PDFLIB_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.pdflib?=	pdflib>=4.0.1
+BUILDLINK_DEPENDS.pdflib?=	pdflib>=4.0.1nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.pdflib}:../../print/pdflib
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.pdflib=pdflib

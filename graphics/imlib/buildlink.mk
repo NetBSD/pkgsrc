@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2001/10/03 20:56:50 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.9 2002/03/13 17:37:10 fredb Exp $
 #
 # This Makefile fragment is included by packages that use imlib.
 #
@@ -17,7 +17,7 @@ IMLIB_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.imlib?=	imlib>=1.9.8
+BUILDLINK_DEPENDS.imlib?=	imlib>=1.9.11nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.imlib}:../../graphics/imlib
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.imlib=imlib

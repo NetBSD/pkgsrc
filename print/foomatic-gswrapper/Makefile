@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/12/24 22:32:00 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/03/13 17:37:34 fredb Exp $
 
 DISTNAME=	foomatic-gswrapper
 PKGNAME=	${DISTNAME}-1.2
+PKGREVISION=	1
 CATEGORIES=	print
 EXTRACT_SUFX=	# empty
 

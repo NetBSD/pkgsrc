@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/03/13 16:14:56 taya Exp $
+# $NetBSD: Makefile,v 1.27 2002/03/13 17:37:51 fredb Exp $
 
 DISTNAME=	galeon-1.2.0
 CATEGORIES=	www
@@ -12,7 +12,7 @@ CONFLICTS=	galeon-current-[0-9]*
 
 BUILD_DEPENDS+=	xml-i18n-tools>=0.8.1:../../textproc/xml-i18n-tools
 DEPENDS+=	scrollkeeper>=0.2:../../textproc/scrollkeeper
-DEPENDS+=	mozilla>=0.9.8:../mozilla
+DEPENDS+=	mozilla>=0.9.9:../../www/mozilla
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes

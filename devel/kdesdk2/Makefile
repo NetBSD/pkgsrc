@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2001/12/04 16:14:17 skrll Exp $
+# $NetBSD: Makefile,v 1.8 2002/03/13 17:36:50 fredb Exp $
 
 DISTNAME=	kdesdk-2.2.2
+PKGREVISION=	1
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
 
 .include "../../x11/kde2/Makefile.kde2"
 
-BUILD_DEPENDS+= qt2-designer-kde>=2.3.1nb1:../../x11/qt2-designer-kde
+BUILD_DEPENDS+= qt2-designer-kde>=2.3.1nb2:../../x11/qt2-designer-kde
 
 USE_BUILDLINK_ONLY=	YES
 LTCONFIG_OVERRIDE+=	${WRKSRC}/kapptemplate/admin/ltconfig

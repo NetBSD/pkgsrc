@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.19 2001/12/30 23:32:24 zuntum Exp $
+# $NetBSD: buildlink.mk,v 1.20 2002/03/13 17:37:58 fredb Exp $
 #
 # This Makefile fragment is included by packages that use kdelibs2.
 #
@@ -17,7 +17,7 @@ KDELIBS2_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.kdelibs2?=	kdelibs-2.[1-9]*
+BUILDLINK_DEPENDS.kdelibs2?=	kdelibs>=2.2.2nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.kdelibs2}:../../x11/kdelibs2
 
 .include "../../mk/bsd.prefs.mk"
@@ -36,7 +36,7 @@ BUILDLINK_KDEDIR=		${BUILDLINK_DIR}
 KDEDIR=				${BUILDLINK_PREFIX.kdelibs2}
 
 BUILDLINK_DEPENDS.audiofile=	libaudiofile>=0.1.9
-BUILDLINK_DEPENDS.qt2-libs=	qt2-libs>=2.3.0
+BUILDLINK_DEPENDS.qt2-libs=	qt2-libs>=2.3.1nb2
 USE_OPENSSL_VERSION=		${OPENSSL_VERSION_096}
 
 .include "../../audio/libaudiofile/buildlink.mk"

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2001/12/05 15:00:45 agc Exp $
+# $NetBSD: Makefile,v 1.10 2002/03/13 17:36:59 fredb Exp $
 #
 
 DISTNAME=	crossfire-1.0.0
 PKGNAME=	crossfire-server-1.0.0
+PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.scruz.net/users/mwedel/public/
 DISTFILES=	${CF_SRC} ${CF_MAPS}
@@ -11,7 +12,7 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://crossfire.real-time.com/
 COMMENT=	X11 multi/single player game similar to gauntlet and nethack
 
-DEPENDS+=	png>=1.0.11:../../graphics/png
+DEPENDS+=	png>=1.2.1:../../graphics/png
 DEPENDS+=	dmalloc-[0-9]*:../../devel/dmalloc
 
 EXTRACT_ONLY=	${CF_SRC}

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2002/01/18 10:50:42 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2002/03/13 17:37:59 fredb Exp $
 #
 
 DISTNAME=	wxPython-2.2.2
 PKGNAME=	${PYPKGPREFIX}-wxWindows-2.2.2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2001/12/19 20:08:51 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2002/03/13 17:36:44 fredb Exp $
 #
 
 DISTNAME=	psiconv-0.8.2
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://huizen.dds.nl/~frodol/psiconv/
 

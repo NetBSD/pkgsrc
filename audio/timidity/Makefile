@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2002/01/24 00:49:46 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2002/03/13 17:36:37 fredb Exp $
 #
 
 DISTNAME=	TiMidity++-2.11.3
 PKGNAME=	${DISTNAME:S/TiMidity++/timidity/}
+PKGREVISION=	1
 CATEGORIES=     audio
 MASTER_SITES=	http://www.goice.co.jp/member/mo/timidity/dist/
 EXTRACT_SUFX=	.tar.bz2

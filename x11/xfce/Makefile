@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2002/03/05 10:06:15 martti Exp $
+# $NetBSD: Makefile,v 1.24 2002/03/13 17:38:05 fredb Exp $
 
 DISTNAME=		xfce-3.8.14
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://www.xfce.org/archive/
 
@@ -10,7 +11,7 @@ COMMENT=		Lightweight desktop environment with CDE look and feel
 
 BUILD_USES_MSGFMT=	yes
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
-DEPENDS+=		imlib-1.9.*:../../graphics/imlib
+DEPENDS+=		imlib>=1.9.11nb1:../../graphics/imlib
 
 GCC_VERSION!=		gcc --version
 .if (${GCC_VERSION:C/-.*$$//} == egcs) && (${MACHINE_ARCH} == alpha)

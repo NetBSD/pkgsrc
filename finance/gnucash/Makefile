@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2002/03/12 19:02:28 mjl Exp $
+# $NetBSD: Makefile,v 1.23 2002/03/13 17:36:58 fredb Exp $
 
 DISTNAME=		gnucash-1.6.6
+PKGREVISION=		1
 CATEGORIES=		finance
 MASTER_SITES=		http://www.linas.org/pub/gnucash/gnucash/sources/stable/ \
 			ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
@@ -12,13 +13,13 @@ COMMENT=		Personal double-entry accounting program
 
 DEPENDS+=		eperl-2.2.14:../../textproc/eperl
 DEPENDS+=		g-wrap>=1.1.10:../../devel/g-wrap
-DEPENDS+=		guppi>=0.35.5nb1:../../math/guppi
+DEPENDS+=		guppi>=0.40.0nb1:../../math/guppi
 DEPENDS+=		libperl>=${LIBPERL5_REQD}:../../lang/libperl
 DEPENDS+=		popt>=1.5:../../devel/popt
 DEPENDS+=		swig-1.1p5:../../devel/swig
 DEPENDS+=		glib>=0.99.7:../../devel/glib
-DEPENDS+=		gdk-pixbuf>=0.2.5:../../graphics/gdk-pixbuf
-DEPENDS+=		gnome-print>=0.21:../../print/gnome-print
+DEPENDS+=		gdk-pixbuf>=0.11.0nb1:../../graphics/gdk-pixbuf
+DEPENDS+=		gnome-print>=0.29nb1:../../print/gnome-print
 BUILD_DEPENDS+=		bison>=1.28:../../devel/bison
 
 

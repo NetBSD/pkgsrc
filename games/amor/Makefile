@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2001/02/16 15:10:42 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2002/03/13 17:36:58 fredb Exp $
 #
 
 DISTNAME=	amor-0.6
+PKGREVISION=	1
 CATEGORIES=	games kde
 MASTER_SITES=	http://www.powerup.com.au/~mjones/amor/
 EXTRACT_SUFX=	.tgz
@@ -10,7 +11,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.powerup.com.au/~mjones/amor/index.html
 COMMENT=	Small blob that sits on top of your active window
 
-DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
+DEPENDS+=	kdebase-1.1.2nb1:../../x11/kdebase
 
 USE_X11BASE=		yes	# To get this near KDE
 GNU_CONFIGURE=		yes

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/03/09 13:58:03 martti Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/13 17:37:33 fredb Exp $
 #
 
 DISTNAME=	apsfilter-7.2.2
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://www.apsfilter.org/download/
 
@@ -14,7 +15,7 @@ DEPENDS+=	ghostscript>=6.01:../../print/ghostscript
 #DEPENDS+=	html2ps-[0-9]*:../../print/html2ps
 DEPENDS+=	transfig-[0-9]*:../../print/transfig
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
+DEPENDS+=	netpbm>=9.7nb1:../../graphics/netpbm
 DEPENDS+=	a2ps-[0-9]*:../../print/a2ps
 DEPENDS+=	psutils-[0-9]*:../../print/psutils
 

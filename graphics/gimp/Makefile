@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2002/02/15 20:55:58 drochner Exp $
+# $NetBSD: Makefile,v 1.81 2002/03/13 17:37:07 fredb Exp $
 
 DISTNAME=		gimp-1.2.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics
 DISTFILES=		# nothing
 
@@ -11,7 +11,7 @@ COMMENT=		Image manipulation program similar to Photoshop[tm]
 
 NO_BUILD=	yes
 
-DEPENDS+=	gimp-base-1.2.3:../../graphics/gimp-base
+DEPENDS+=	gimp-base-1.2.3nb1:../../graphics/gimp-base
 DEPENDS+=	gimp-data>=1.2:../../graphics/gimp-data
 DEPENDS+=	gimp-print>=4.2.0:../../print/gimp-print
 DEPENDS+=	gimp-print-escputil>=4.2.0:../../print/gimp-print-escputil

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2001/09/27 23:18:25 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2002/03/13 17:37:25 fredb Exp $
 #
 
 DISTNAME=		gnome-pim-1.4.0
+PKGREVISION=		1
 CATEGORIES=		misc x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-pim/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Personal Information Manager for GNOME
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-DEPENDS+=		gnome-core>1.4.0:../../x11/gnome-core
+DEPENDS+=		gnome-core>=1.4.0.4nb1:../../x11/gnome-core
 
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2001/10/24 22:11:11 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2002/03/13 17:37:54 fredb Exp $
 
 DISTNAME=		control-center-1.4.0.1
+PKGREVISION=		1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/control-center/}
 
@@ -11,7 +12,7 @@ COMMENT=		GNOME control-center development library
 DEPENDS+=			scrollkeeper-[0-9]*:../../textproc/scrollkeeper
 BUILD_USES_MSGFMT=	YES
 
-BUILDLINK_DEPENDS.gnome-libs=	gnome-libs>=1.2.13
+BUILDLINK_DEPENDS.gnome-libs=	gnome-libs>=1.4.1.2nb1
 
 USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		YES

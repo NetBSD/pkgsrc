@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 15:10:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/13 17:36:59 fredb Exp $
 #
 
 DISTNAME=	bacKgammon-1.9.1b
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=backgammon/}
 
@@ -9,7 +10,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://bacKgammon.sourceforge.net/
 COMMENT=	KDE frontend for first internet backgammon server (FIBS)
 
-DEPENDS+=	kde-1.*:../../x11/kde
+DEPENDS+=	kde-1.1.2nb1:../../x11/kde
 
 GNU_CONFIGURE=	yes
 EVAL_PREFIX+=   QT1DIR=qt1 KDEBASEDIR=kdebase

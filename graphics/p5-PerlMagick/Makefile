@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2001/12/15 20:25:36 agc Exp $
+# $NetBSD: Makefile,v 1.14 2002/03/13 17:37:14 fredb Exp $
 
 DISTNAME=		ImageMagick-5.3.9
 PKGNAME=		p5-PerlMagick-5.3.9
+PKGREVISION=		1
 SVR4_PKGNAME=		p5pma
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_LOCAL}
