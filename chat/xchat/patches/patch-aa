@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/15 00:36:28 wiz Exp $
+
+--- po/Makefile.in.in.orig	Sun Oct 31 12:17:50 1999
++++ po/Makefile.in.in	Mon Sep  4 19:30:55 2000
+@@ -19,7 +19,7 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ datadir = $(prefix)/@DATADIRNAME@
+-localedir = $(datadir)/locale
++localedir = $(prefix)/share/locale
+ gnulocaledir = $(prefix)/share/locale
+ gettextsrcdir = $(prefix)/share/gettext/po
+ subdir = po

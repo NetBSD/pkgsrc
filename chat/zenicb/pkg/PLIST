@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/15 00:36:36 wiz Exp $
+${ELISPDIR}/zenicb-8ball.el
+${ELISPDIR}/zenicb-add.el
+${ELISPDIR}/zenicb-away.el
+${ELISPDIR}/zenicb-example.el
+${ELISPDIR}/zenicb-fortran.el
+${ELISPDIR}/zenicb-history.el
+${ELISPDIR}/zenicb-meditate.el
+${ELISPDIR}/zenicb-nologout.el
+${ELISPDIR}/zenicb-signal.el
+${ELISPDIR}/zenicb-stamp.el
+${ELISPDIR}/zenicb-trigger.el
+${ELISPDIR}/zenicb-whereis.el
+${ELISPDIR}/zenicb-yow.el
+${ELISPDIR}/zenicb.el

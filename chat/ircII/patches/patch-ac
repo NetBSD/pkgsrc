@@ -1,0 +1,29 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/15 00:36:33 wiz Exp $
+
+--- Makefile.in.orig	Sun Apr 16 02:04:02 2000
++++ Makefile.in	Thu May 11 13:56:05 2000
+@@ -158,8 +158,8 @@
+ CP = cp
+ MV = mv
+ SED = sed
+-INSTALL = $(topdir)/bsdinstall -c -m 755
+-INSTALL_DATA = $(topdir)/bsdinstall -c -m 644
++INSTALL = $(BSD_INSTALL_PROGRAM)
++INSTALL_DATA = $(BSD_INSTALL_DATA)
+ 
+ VERSION = @VERSION@
+ 
+@@ -178,11 +178,9 @@
+ 
+ installirc: irc installdirs
+ 	$(INSTALL) irc $(INSTALL_IRC)-$(VERSION)
+-	$(INSTALL) ircbug $(bindir)/ircbug
+-	@if test -f $(INSTALL_IRC).old; then $(RM) $(INSTALL_IRC).old; fi
+-	@if test -f $(INSTALL_IRC); then $(MV) $(INSTALL_IRC) $(INSTALL_IRC).old; fi
++	$(BSD_INSTALL_SCRIPT) ircbug $(bindir)/ircbug
+ 	$(RM) $(INSTALL_IRC)
+-	$(LN) $(INSTALL_IRC_NAME)-$(VERSION) $(INSTALL_IRC)
++	cd ${bindir}; $(LN) irc-$(VERSION) irc
+ 
+ installscript: installdirs
+ 	(								\

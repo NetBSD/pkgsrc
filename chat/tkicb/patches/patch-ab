@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/15 00:36:36 wiz Exp $
+--- tcl/tabhist.tcl.orig	Thu Aug 31 12:12:32 2000
++++ tcl/tabhist.tcl	Thu Aug 31 12:13:10 2000
+@@ -72,7 +72,7 @@
+     regsub -all . $searchNick {\\&} matchStr
+ 
+     foreach nick $TabHist_list {
+-	if {[regexp -nocase "^$matchStr$" $nick]} {
++	if {[string compare -nocase  $matchStr $nick]} {
+ 	    DEBUG:Output tabhist 6 "TabHist:Search: returning $index"
+ 	    return $index
+ 	}

@@ -1,0 +1,27 @@
+$NetBSD: patch-am,v 1.1.1.1 2000/12/15 00:36:39 wiz Exp $
+
+diff -x *.orig -urN ./murgil/serverserve.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/murgil/serverserve.c
+--- ./murgil/serverserve.c	Fri Feb 24 22:19:44 1995
++++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/murgil/serverserve.c	Fri Nov 26 22:56:30 1999
+@@ -20,6 +20,9 @@
+ int timeisup;
+ 
+ sighandler gotalarm();
++#ifndef __FDS_BITS
++# define __FDS_BITS(set) ((set)->fds_bits)
++#endif
+ 
+ serverserve()
+ {
+@@ -81,9 +84,9 @@
+ 
+ 	/* examine set of file descriptors */
+ 	for (b = 0, y = 0; b <= (howmany(highestfd, 32) - 1); b++, y += 32) {
+-	    if (!fdr.fds_bits[b])
++	    if (!__FDS_BITS(&fdr)[b])
+ 		continue;
+-	    bits = fdr.fds_bits[b];
++	    bits = __FDS_BITS(&fdr)[b];
+ 	    for (x = y; bits; x++, bits >>= 01)
+ 		if (bits & 01)
+ 			if (x == port_fd) {

@@ -1,0 +1,34 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/12/15 00:36:33 wiz Exp $
+
+--- doc/ircII.1.orig	Thu Jul 13 06:57:30 2000
++++ doc/ircII.1	Mon Sep 18 16:41:29 2000
+@@ -14,6 +14,8 @@
+ .RB [ \-F ]
+ .RB [ \-s ]
+ .RB [ \-S ]
++.RB [ \-t ]
++.RB [ \-T ]
+ .RB [ \-d ] 
+ .IR [ nickname
+ .IR [ "server list" ]]
+@@ -76,6 +78,20 @@
+ Start up the ircio process to connect to the
+ .I IRC
+ server.
++.TP
++.B \-t
++Don't use the termcap
++.I ti
++and
++.I te
++sequences when starting and exiting.
++.TP
++.B \-T
++Do use the termcap
++.I ti
++and
++.I te
++sequences when starting and exiting if they exist (default).
+ .TP
+ .B \-d
+ Start in "dumb" mode.

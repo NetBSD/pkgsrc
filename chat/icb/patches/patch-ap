@@ -1,0 +1,60 @@
+$NetBSD: patch-ap,v 1.1.1.1 2000/12/15 00:36:39 wiz Exp $
+
+diff -x *.orig -urN ./tcl/tclCmdAH.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/tcl/tclCmdAH.c
+--- ./tcl/tclCmdAH.c	Fri Feb 24 22:19:53 1995
++++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/tcl/tclCmdAH.c	Fri Nov 26 22:56:28 1999
+@@ -38,9 +38,22 @@
+ #include <sys/wait.h>
+ #include "tclInt.h"
+ 
++#ifdef __NetBSD__
++#define unix
++#endif
++
++#if (defined(__unix__) || defined(unix)) && !defined(USG)
++#include <sys/param.h>
++#include <unistd.h>
++#endif
++
+ extern int errno;
++#if !(defined(BSD) && BSD >= 199306)
+ extern long lseek();
++#endif
++#ifndef BSD4_4
+ extern char *mktemp();
++#endif
+ 
+ /*
+  *----------------------------------------------------------------------
+@@ -430,7 +443,7 @@
+     int pid = -1;			/* -1 means child process doesn't
+ 					 * exist (yet).  Non-zero gives its
+ 					 * id (0 only in child). */
+-    union wait status;
++    int status;
+     char *cmdName, *execName;
+ 
+     /*
+@@ -501,8 +514,13 @@
+     } else {
+ 	char tmp[sizeof(TMP_FILE_NAME) + 1];
+ 	strcpy(tmp, TMP_FILE_NAME);
++#ifdef BSD4_4
++	mkstemp(tmp);
++	stdIn[0] = mkstemp(tmp);
++#else
+ 	mktemp(tmp);
+ 	stdIn[0] = open(tmp, O_RDWR|O_CREAT, 0);
++#endif
+ 	if (stdIn[0] < 0) {
+ 	    sprintf(interp->result,
+ 		    "couldn't create input file for \"%.50s\" command: %.50s",
+@@ -642,7 +660,7 @@
+ 	    sprintf(interp->result, "command terminated abnormally");
+ 	    result = TCL_ERROR;
+ 	}
+-	result = status.w_retcode;
++	result = WEXITSTATUS(status);
+     }
+     if (stdIn[0] != -1) {
+ 	close(stdIn[0]);

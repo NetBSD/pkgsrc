@@ -1,0 +1,7 @@
+kicq is an KDE/Qt based clone which very closely resembles Mirabilis
+ICQ. This client allows you to send and recieve messages, search for
+users and add them to your contact list, as well as configure it from
+within the GUI. In addition to the other features it also implements
+the user search function, and makes use of a preferences dialog, so
+user info can be edited within the program itself. kicq is in the beta
+stage and therefore does not have all of the features of ICQ.

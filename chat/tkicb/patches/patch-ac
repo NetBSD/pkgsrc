@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/15 00:36:36 wiz Exp $
+
+--- tcl/util.tcl.orig	Mon Jun  1 14:53:11 1998
++++ tcl/util.tcl	Thu Oct 19 23:43:11 2000
+@@ -73,5 +73,5 @@
+ 	    incr index -1
+ 
+-	    if {$index == 0} {
++	    if {$index == $start} {
+ 		set index [expr $start + $maxLength]
+ 		break

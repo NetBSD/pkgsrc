@@ -1,0 +1,7 @@
+libirc is a C-library for the IRC protocol.  It simplifies the task of
+writing a bot or client.  A very simple example comes with the
+package, demonstrating how it is used.
+
+Perfect for those who wish to write bots, irc clients (especially if
+you want to integrate IRC with some other Internet software).  The
+programming language is C. 
