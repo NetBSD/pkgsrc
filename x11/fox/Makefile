@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/05/22 09:32:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/27 07:57:38 sakamoto Exp $
 # FreeBSD Id: ports/x11-toolkits/fox/Makefile,v 1.14 2001/02/23 19:00:05 knu Exp
 
-DISTNAME=	fox-0.99.167
+DISTNAME=	fox-0.99.172
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.cfdrc.com/pub/FOX/ \
 		ftp://SunSITE.Informatik.RWTH-Aachen.DE/pub/Linux/fox/
@@ -16,7 +16,7 @@ DEPENDS+=	png>=1.0.11:../../graphics/png
 .if !defined(USE_XUNICODE) || ${USE_XUNICODE} == "YES"
 
 MASTER_SITES+=	http://www.ab.wakwak.com/~tino/jatk/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} xunicode-0.3.2${EXTRACT_SUFX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} xunicode-0.3.2.2${EXTRACT_SUFX}
 
 PATCH_SITES=	http://www.ab.wakwak.com/~tino/jatk/fox/
 PATCHFILES=	${DISTNAME:C/-/-unicode-/}.diff
