@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5476 2004/04/07 13:30:28 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5477 2004/04/07 13:57:52 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1834,3 +1834,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gmplayer to 1.0rc3nb4 [salo 2004-04-07]
 	Updated mencoder to 1.0rc3nb4 [salo 2004-04-07]
 	Added netbeans-ide-3.5.1 [xtraeme 2004-04-07]
+	Updated nntpclnt to 1.6.1nb4 [cube 2004-04-07]
