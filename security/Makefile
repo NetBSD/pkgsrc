@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2003/12/05 23:25:26 xtraeme Exp $
+# $NetBSD: Makefile,v 1.149 2003/12/08 17:46:45 jschauma Exp $
 #
 
 COMMENT=	Security tools
@@ -114,6 +114,7 @@ SUBDIR+=	pgpdump
 SUBDIR+=	php4-mcrypt
 SUBDIR+=	php4-mhash
 SUBDIR+=	php4-openssl
+SUBDIR+=	pinepgp
 SUBDIR+=	pks
 SUBDIR+=	portsentry
 SUBDIR+=	priv
