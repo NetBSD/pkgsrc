@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5323 2004/03/28 21:32:58 jmmv Exp $
+$NetBSD: CHANGES,v 1.5324 2004/03/28 21:45:02 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1551,3 +1551,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added imposter-0.1 [xtraeme 2004-03-28]
 	Updated bozohttpd to 20040218nb4 [martin 2004-03-28]
 	Updated libxml2 to 2.6.8 [jmmv 2004-03-28]
+	Updated dict-client to 1.8.0nb3 [jmmv 2004-03-28]
+	Updated dict-server to 1.8.0nb2 [jmmv 2004-03-28]
