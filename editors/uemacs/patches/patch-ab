@@ -1,5 +1,7 @@
---- freebsd/estruct.h.orig	Wed Mar 25 14:21:05 1998
-+++ freebsd/estruct.h	Wed Mar 25 14:25:34 1998
+$NetBSD: patch-ab,v 1.2 2000/03/23 22:08:52 tron Exp $
+
+--- netbsd/estruct.h.orig	Wed Mar 25 14:21:05 1998
++++ netbsd/estruct.h	Wed Mar 25 14:25:34 1998
 @@ -0,0 +1,1254 @@
 +/*	ESTRUCT:	Structure and preprocesser defined for
 +			MicroEMACS 4.00
@@ -50,7 +52,7 @@
 +#define AVIION	0			/* Data General AViiON		*/
 +#define BSD	0			/* UNIX BSD 4.2 and ULTRIX	*/
 +#define FINDER	0			/* Macintosh OS 		*/
-+#define	FREEBSD	1			/* FREEBSD 386 version 2 or +	*/
++#define FREEBSD 1			/* Works fine for FreeBSD, too	*/
 +#define HPUX8	0			/* HPUX HP 9000 ver 8 or less	*/
 +#define HPUX9	0			/* HPUX HP 9000 ver 9           */
 +#define MPE	0			/* HP MPE/XL			*/
