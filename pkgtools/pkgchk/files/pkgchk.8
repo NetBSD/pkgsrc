@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgchk.8,v 1.10 2001/12/24 14:15:56 abs Exp $
+.\"	$NetBSD: pkgchk.8,v 1.11 2001/12/24 14:22:06 wiz Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -31,7 +31,8 @@ will skip dependent packages to reduce unnecessary rebuilding.
 .It Fl B
 Check the "Build version" (see option -b of pkg_info(1)) of packages.
 .It Fl C Ar conf
-USe the pkgchk.conf file 'conf'.
+Use the pkgchk.conf file
+.Sq Ar conf .
 .It Fl D Ar tags
 Add the comma separated list of tags to those checked when parsing
 pkgchk.conf. Also includes
