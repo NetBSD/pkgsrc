@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2003/06/02 01:17:59 jschauma Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/18 19:40:27 wiz Exp $
 # FreeBSD Id: Makefile,v 1.17 1998/04/26 18:47:12 peter Exp
 #
 
 DISTNAME=       gated-3-5-11
 PKGNAME=        gated-3.5.11
 CATEGORIES=	net
-MASTER_SITES=   ftp://ftp.gated.merit.edu/net-research/gated/
+MASTER_SITES=	http://ftp.rge.com/pub/networking/gated/ \
+		http://www.zcu.cz/ftp/pub/security/merit/gated/ \
+		http://www.funet.fi/pub/unix/tcpip/gated/
 
 MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.gated.org/
