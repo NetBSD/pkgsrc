@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2500 2003/06/13 20:57:15 tron Exp $
+$NetBSD: CHANGES,v 1.2501 2003/06/14 00:06:14 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2451,3 +2451,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgnomedb to 0.12.2 [jmmv 2003-06-13]
 	Updated linuxsms to 0.65 [jmmv 2003-06-13]
 	Updated BasiliskII to 1.0 [tron 2003-06-13]
+	Updated gsed to 4.0.7 [grant 2003-06-14]
