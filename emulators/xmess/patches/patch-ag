@@ -1,0 +1,11 @@
+--- src/unix/netbsd_i386.c.orig	Fri Jun  5 07:00:43 1998
++++ src/unix/netbsd_i386.c	Sat Jul  4 07:42:09 1998
+@@ -5,7 +5,7 @@
+ * Audio code is based on the solaris driver, by jantonio@dit.upm.es
+ */
+ 
+-#ifdef netbsd_i386
++#ifdef NETBSD
+ 
+ #include "xmame.h"
+ #include "sound.h"

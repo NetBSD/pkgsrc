@@ -1,0 +1,19 @@
+--- src/unix/Makefile.orig	Fri Jun  5 07:32:04 1998
++++ src/unix/Makefile	Thu Jul  9 08:15:16 1998
+@@ -25,6 +25,7 @@
+ 
+ $(TRG): $(ALLOBJS)
+ 	ar -rcv $@ $(UOBJS)
++	ranlib $@
+ 
+ $(OBJDIR)/%.o: %.c xmame.h
+ 	$(CC) $(DEFS) -I../../src/ $(MS) $(JS) $(CFLAGS) -o $@ -c $<
+@@ -42,7 +43,7 @@
+ $(OBJDIR)/irix.o: irix.c xmame.h sound.h
+ $(OBJDIR)/hpux.o: hpux.c xmame.h sound.h
+ $(OBJDIR)/aix.o: aix.c xmame.h sound.h
+-$(OBJDIR)/netbsd_i386.o: netbsd_i386.c xmame.h sound.h
++$(OBJDIR)/netbsd.o: netbsd.c xmame.h sound.h
+ $(OBJDIR)/sndserver.o: sndserver.c xmame.h
+ $(OBJDIR)/svgalib.o: svgalib.c linux.c xmame.h sound.h
+ $(OBJDIR)/ultrix.c: ultrix.c xmame.h sound.h
