@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.340 1999/09/18 04:24:22 jwise Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.341 1999/09/20 23:00:04 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -586,8 +586,7 @@ MASTER_SITE_TEX_CTAN+=  \
 
 MASTER_SITE_SUNSITE+=	\
 	ftp://sunsite.unc.edu/pub/Linux/ \
-	ftp://ftp.infomagic.com/pub/mirrors/linux/sunsite/ \
-	ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/
+	ftp://ftp.infomagic.com/pub/mirrors/linux/sunsite/
 
 MASTER_SITE_GNOME+=	\
 	ftp://ftp.gnome.org/pub/GNOME/ \
