@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4337 2004/01/03 23:34:19 jlam Exp $
+$NetBSD: CHANGES,v 1.4338 2004/01/04 02:03:33 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -37,3 +37,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tiff to 3.6.1 [reed 2004-01-3]
 	Added oidentd-2.0.7 [tron 2004-01-03]
 	Updated xpkgwedge to 1.9 [jlam 2004-01-03]
+	Updated pkg_install to 20040104 [hubertf 2004-01-04]
