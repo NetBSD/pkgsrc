@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.6 2003/07/31 19:02:09 wiz Exp $
+$NetBSD: distinfo,v 1.7 2003/12/03 03:50:15 xtraeme Exp $
 
-SHA1 (bluefish-0.11.tar.bz2) = af85434222745f0a356c9b19dc9ec30d55c52a07
-Size (bluefish-0.11.tar.bz2) = 751511 bytes
-SHA1 (patch-aa) = 32f83e2b905f70a43c0e32f8de848e6efc09aeb0
+SHA1 (bluefish-0.12.tar.bz2) = dd8f7206916a9c284e9397e568a99e9d8ec9f53b
+Size (bluefish-0.12.tar.bz2) = 868677 bytes
