@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.303 2003/02/21 14:25:55 wiz Exp $
+$NetBSD: TODO,v 1.304 2003/02/21 16:48:09 mycroft Exp $
 
 Suggested new packages
 ======================
@@ -202,6 +202,7 @@ Suggested package updates
 	o neXtaw-0.13.0
 	o ns-flash-6.0.69
 	o openh323-1.11.2
+	o openldap-2.1.12
 	o openoffice-1.0.2 [skrll]
 	o openoffice-643 [post-1.0.1]
 	o openssl-0.9.7a
