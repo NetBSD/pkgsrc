@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/14 18:23:16 jmmv Exp $
+bin/sndfile-resample
+include/samplerate.h
+lib/libsamplerate.a
+lib/libsamplerate.la
+lib/libsamplerate.so
+lib/libsamplerate.so.0
+lib/libsamplerate.so.0.11
+lib/pkgconfig/samplerate.pc
+@unexec ${RMDIR} %D/lib/pkgconfig 2>/dev/null || ${TRUE}
