@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7602 2004/10/29 13:49:54 abs Exp $
+$NetBSD: CHANGES,v 1.7603 2004/10/29 15:01:15 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4966,4 +4966,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mmg to 0.9.7 [salo 2004-10-29]
 	Updated setiathome to 3.08 [abs 2004-10-29]
 	Updated apache to 1.3.33 [abs 2004-10-29]
-
+	Updated evolution to 2.0.2nb3 [jmmv 2004-10-29]
