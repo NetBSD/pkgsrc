@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/05/04 02:07:06 snj Exp $
+# $NetBSD: Makefile,v 1.10 2004/05/27 21:21:41 lukem Exp $
 
 DISTNAME=	cdrtools-2.01a21
 PKGNAME=	cdrecord-xcdroast-0.98a15.2.01a21
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	lukem@NetBSD.org
+MAINTAINER=	packages@NetBSD.org
 HOMEPAGE=	http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html
 COMMENT=	cdrecord bits for xcdroast
 
