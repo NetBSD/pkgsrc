@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1 2000/02/01 02:30:34 wiz Exp $
+
+--- WinQuake/gl_vidlinuxglx.c	Tue Dec 21 18:39:36 1999
++++ ../work/WinQuake/gl_vidlinuxglx.c	Thu Jan 13 22:29:03 2000
+@@ -20,7 +20,9 @@
+ #include <termios.h>
+ #include <sys/ioctl.h>
+ #include <sys/stat.h>
++#ifdef __linux__
+ #include <sys/vt.h>
++#endif
+ #include <stdarg.h>
+ #include <stdio.h>
+ #include <signal.h>
