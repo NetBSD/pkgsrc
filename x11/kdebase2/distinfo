@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2001/10/15 22:45:59 skrll Exp $
+$NetBSD: distinfo,v 1.10 2001/10/18 08:17:49 skrll Exp $
 
 SHA1 (kdebase-2.2.1.tar.bz2) = 5c3a300829fee66bfe26faea39112050fc4cd1e9
 Size (kdebase-2.2.1.tar.bz2) = 12696643 bytes
@@ -47,8 +47,8 @@ SHA1 (patch-bl) = dc3a589816c7c5681c09c9ef962178ff9e37409d
 SHA1 (patch-bm) = 5675e1672697461011657b492f2ca18babcec3f6
 SHA1 (patch-bn) = 93c8f8a3bb6aaf1a5c852eac73441ea868aacf98
 SHA1 (patch-bo) = 3ed1b9b2bd2870c80aad7a0b39aee9ac3bdc9238
-SHA1 (patch-bp) = dbab7f40f19758f9967c2082ad105e678af010c1
-SHA1 (patch-bq) = 6c83d70a7ac5ad65c7bcfb909bae4a005e060dbe
+SHA1 (patch-bp) = d49ecab8f1802a7e74d90ac89d2da6da477ef104
+SHA1 (patch-bq) = aa7b7c37b0188ff43b198d615cf7d41d9fa5099b
 SHA1 (patch-br) = ccb960d5b9f43f70e17bde094ffa1b49f0d89d2b
 SHA1 (patch-bs) = ce2eeeb511591fec68f96cf246c324debfd2690d
 SHA1 (patch-bt) = 19dad64a5f030d502116934618e62913318eb272
@@ -63,7 +63,7 @@ SHA1 (patch-cb) = b55ec33208f56ac784c5fce3b386f17f158f752c
 SHA1 (patch-cc) = eca19e5c3f0efbcb919a5c2d570079ea17c1ea58
 SHA1 (patch-cd) = 0b0c2f7f9f5608500be781d5bd56a0b4a608e5a9
 SHA1 (patch-ce) = 59abadb4bcd1b194dfab07ebf667afb0b85bcfc8
-SHA1 (patch-cf) = 759a4c5179806c07e797fcf8427eb929f6e42db0
+SHA1 (patch-cf) = 88fe3064f75881f55227c90fbfb185672907f5bb
 SHA1 (patch-cg) = 909c29002c494c2d04dbb01fa6ab8c981e7ea349
 SHA1 (patch-ch) = b8fb2688192c61778d79f8fbd1c4fb5fc3fe409d
 SHA1 (patch-ci) = 12e515c4517a59c3c5f529162ea66c44cbcdd69c
