@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2003/12/08 14:41:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/18 13:51:15 cube Exp $
 #
 
-DISTNAME=		SDL_sound-1.0.0
-PKGREVISION=		4
+DISTNAME=		SDL_sound-1.0.1
 CATEGORIES=		audio
 MASTER_SITES=		http://icculus.org/SDL_sound/downloads/
 
-MAINTAINER=		cube@cubidou.net
+MAINTAINER=		cube@NetBSD.org
 HOMEPAGE=		http://icculus.org/SDL_sound/
 COMMENT=		SDL library to handle the decoding of different file formats
 
