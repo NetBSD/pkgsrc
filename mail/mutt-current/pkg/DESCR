@@ -1,0 +1,14 @@
+The Mutt E-Mail Client by Michael Elkins <me@cs.hmc.edu>
+
+``All mail clients suck.  This one just sucks less.'' -me, circa 1995
+
+Mutt is a small but very powerful text-based MIME mail client.Mutt
+is highly configurable, and is well suited to the mail power user with
+advanced features like key bindings, keyboard macros, mail threading,
+regular expression searches and a powerful pattern matching language
+for selecting groups of messages.
+
+This package contains a development version of mutt. It has some new
+features, but is not guaranteed to be stable. The stable release version
+of mutt can be found in mail/mutt. If you are upgrading from the stable
+version, be sure to read at least README.UPGRADE from the distribution.
