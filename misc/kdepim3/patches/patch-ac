@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1 2002/10/03 12:08:46 markd Exp $
+
+--- kpilot/conduits/null/Makefile.am.orig	Tue Jun 25 00:07:11 2002
++++ kpilot/conduits/null/Makefile.am	Thu Oct  3 15:24:26 2002
+@@ -10,5 +10,5 @@
+ 
+ libnullconduit_la_SOURCES = setup_base.ui null-conduit.cc null-factory.cc
+ libnullconduit_la_LDFLAGS = $(KDE_RPATH) -L../../lib
+-libnullconduit_la_LIBADD = -lkpilot
++libnullconduit_la_LIBADD = ../../lib/libkpilot.la
+ 
