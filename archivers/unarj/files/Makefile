@@ -9,7 +9,9 @@ environ.o:  environ.c unarj.h
 
 decode.o:   decode.c  unarj.h
 
-OBJS = unarj.o decode.o environ.o
+sanitize.o: sanitize.c unarj.h
+
+OBJS = unarj.o decode.o environ.o sanitize.o
 
 unarj: $(OBJS)
 	$(CC) $(LDFLAGS) $(OBJS) -o unarj
