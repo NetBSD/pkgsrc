@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/02/15 08:13:20 salo Exp $
+$NetBSD: patch-aa,v 1.2 2004/03/10 00:53:37 snj Exp $
 
---- Makefile.in.orig	Thu Apr 25 16:02:56 2002
-+++ Makefile.in	Sat Feb 15 08:41:09 2003
-@@ -68,14 +68,14 @@
+--- Makefile.in.orig	2002-04-25 07:02:56.000000000 -0700
++++ Makefile.in	2004-03-09 16:45:56.000000000 -0800
+@@ -68,14 +68,14 @@ err.o      : err.c oshw.h err.h
  #
  
  comptime.h:
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/02/15 08:13:20 salo Exp $
  
  #
  # Resources
-@@ -89,17 +89,15 @@
+@@ -89,17 +89,18 @@ tworldres.o: tworld.ico
  #
  
  install: tworld
@@ -43,6 +43,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/02/15 08:13:20 salo Exp $
 +	${BSD_INSTALL_DATA} resources/rc resources/*.bmp \
 +			resources/*.wav $(sharedir)/res/
 +	${BSD_INSTALL_MAN} docs/tworld.6 $(mandir)/man6/
++	${BSD_INSTALL_DATA_DIR} $(prefix)/share/doc/tworld
++	${BSD_INSTALL_DATA} README $(prefix)/share/doc/tworld/
++	${BSD_INSTALL_DATA} docs/tworld.html $(prefix)/share/doc/tworld/
  
  clean:
  	rm -f $(OBJS) tworld mklynxcc comptime.h config.*

@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/15 08:13:20 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/10 00:53:37 snj Exp $
 bin/tworld
 man/man6/tworld.6
+share/doc/tworld/README
+share/doc/tworld/tworld.html
 share/tworld/data/intro.dat
 share/tworld/res/atiles.bmp
 share/tworld/res/block.wav
@@ -38,10 +40,8 @@ share/tworld/sets/cc-lynx.dac
 share/tworld/sets/cc-ms.dac
 share/tworld/sets/intro-lynx.dac
 share/tworld/sets/intro-ms.dac
-share/doc/tworld/README
-share/doc/tworld/tworld.html
-@dirrm share/doc/tworld
 @dirrm share/tworld/sets
 @dirrm share/tworld/res
 @dirrm share/tworld/data
 @dirrm share/tworld
+@dirrm share/doc/tworld
