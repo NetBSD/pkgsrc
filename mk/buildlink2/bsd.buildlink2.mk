@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.41 2002/10/13 07:13:42 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.42 2002/10/18 15:41:08 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -933,6 +933,12 @@ ${_BLNK_LIBTOOL_FIX_LA}: ${.CURDIR}/../../mk/buildlink2/libtool-fix-la
 		${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
+.if ${OBJECT_FMT} == "a.out"
+_RESET_LD_SO_CACHE?=	${LDCONFIG}
+.else
+_RESET_LD_SO_CACHE?=	${TRUE}
+.endif
+
 ${_BLNK_FAKE_LA}: ${.CURDIR}/../../mk/buildlink2/fake-la
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
@@ -944,6 +950,7 @@ ${_BLNK_FAKE_LA}: ${.CURDIR}/../../mk/buildlink2/fake-la
 		-e "s|@DIRNAME@|${DIRNAME:Q}|g"				\
 		-e "s|@ECHO@|${ECHO:Q}|g"				\
 		-e "s|@EGREP@|${EGREP:Q}|g"				\
+		-e "s|@RESET_LD_SO_CACHE@|${_RESET_LD_SO_CACHE:Q}|g"	\
 		-e "s|@LIBTOOL@|${BUILDLINK_LIBTOOL:Q}|g"		\
 		-e "s|@MKDIR@|${MKDIR:Q}|g"				\
 		-e "s|@MV@|${MV:Q}|g"					\

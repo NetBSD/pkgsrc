@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: fake-la,v 1.1 2002/09/18 00:46:59 jlam Exp $
+# $NetBSD: fake-la,v 1.2 2002/10/18 15:41:08 jlam Exp $
 
 BASENAME="@BASENAME@"
 CC="@CC@"
@@ -34,7 +34,15 @@ if [ ! -f $tmpdir/inst/$libbase.la ]; then
 	esac
 	${MKDIR} $tmpdir/inst
 	cd $tmpdir
-	${LIBTOOL} ${CC} -o $libbase.la -rpath $tmpdir/inst -version-info $version
+	${ECHO} "static int i;" > nonempty.c	# create a nonempty input file
+	${LIBTOOL} --mode=compile ${CC} -c nonempty.c
+	${LIBTOOL} ${CC} -o $libbase.la nonempty.lo -rpath $tmpdir/inst -version-info $version
 	${LIBTOOL} --mode=install ${CP} $libbase.la $tmpdir/inst >/dev/null
+
+	# Reset the ld.so cache as "libtool --mode=install" may have executed
+	# ldconfig to add "$tmpdir/inst" to the cache.
+	#
+	@RESET_LD_SO_CACHE@ >/dev/null 2>&1
+
 fi
 ${SED} -e "s,$tmpdir/inst,$realdir,g" $tmpdir/inst/$libbase.la
