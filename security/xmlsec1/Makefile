@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:18:14 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/14 20:29:05 minskim Exp $
 #
 
 DISTNAME=		xmlsec1-1.2.6
@@ -22,8 +22,8 @@ GNU_CONFIGURE=		yes
 #CONFIGURE_ARGS+=	--without-openssl
 CONFIGURE_ARGS+=	--without-gnutls
 
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 #.include "../../security/gnutls/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
