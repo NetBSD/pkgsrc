@@ -1,0 +1,21 @@
+$NetBSD: patch-ah,v 1.1.1.1 2001/05/15 21:09:57 jtb Exp $
+
+--- library/Mmakefile.orig	Mon Apr  2 15:51:50 2001
++++ library/Mmakefile
+@@ -66,7 +66,6 @@
+ 		MERCURY_ALL_C_INCL_DIRS="\
+ 			-I$(TRACE_DIR) \
+ 			-I$(RUNTIME_DIR) \
+-			-I$(BOEHM_GC_DIR) \
+ 			-I$(BOEHM_GC_DIR)/include \
+ 		"
+ MCD	=	$(M_ENV) $(MC) --generate-dependencies $(INTERMODULE_OPTS)
+@@ -88,7 +87,7 @@
+ MGNUCFLAGS =	$(DLL_CFLAGS)
+ MS_CLFLAGS  =	-I$(RUNTIME_DIR) 
+ MS_CL_NOASM=:noAssembly
+-LDFLAGS	=	-L$(BOEHM_GC_DIR) -L$(RUNTIME_DIR)
++LDFLAGS	=	-L$(BOEHM_GC_DIR)/lib -L$(RUNTIME_DIR)
+ ALL_LDFLAGS =	$(LDFLAGS) $(EXTRA_LDFLAGS)
+ LDLIBS	=	-l$(RT_LIB_NAME) \
+ 		` case "$(GRADE)" in 					\

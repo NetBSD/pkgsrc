@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/05/15 21:09:55 jtb Exp $
+
+--- Mmake.common.in.orig	Mon May 14 17:49:18 2001
++++ Mmake.common.in
+@@ -125,7 +125,7 @@
+ LIBRARY_DIR = $(MERCURY_DIR)/library
+ TRACE_DIR = $(MERCURY_DIR)/trace
+ BROWSER_DIR = $(MERCURY_DIR)/browser
+-BOEHM_GC_DIR = $(MERCURY_DIR)/boehm_gc
++BOEHM_GC_DIR = @BOEHM_GC_DIR@
+ COMPILER_DIR = $(MERCURY_DIR)/compiler
+ UTIL_DIR = $(MERCURY_DIR)/util
+ 

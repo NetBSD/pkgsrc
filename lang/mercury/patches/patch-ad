@@ -1,0 +1,37 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/05/15 21:09:56 jtb Exp $
+
+--- configure.orig	Mon Apr  2 20:19:15 2001
++++ configure
+@@ -1356,15 +1356,7 @@
+ fi
+ 
+ echo "$ac_t""$ac_cv_prog_gcc_g" 1>&6
+-    if test $ac_cv_prog_gcc_g = yes; then
+-      CFLAGS="-g -O"
+-    else
+-      CFLAGS="-O"
+-    fi
+   fi
+-else
+-  GCC=
+-  test "${CFLAGS+set}" = set || CFLAGS="-g"
+ fi
+ 
+ 
+@@ -1374,7 +1366,7 @@
+ # the `-lc' and `-lg' libraries have different contents; specifically,
+ # only the latter contains memalign().  We need to make sure that the
+ # test for memalign() doesn't use `-g', since `ml' doesn't use `-g'.
+-CFLAGS="-O"
++# CFLAGS="-O"
+ 
+ # we also need to add the appropriate `-I' options so that the test programs
+ # can #include various Mercury runtime headers.
+@@ -6118,6 +6117,7 @@
+ s%@FINAL_GRADE_OPTIONS@%%g
+ /@CANONICAL_GRADE@/r $CANONICAL_GRADE
+ s%@CANONICAL_GRADE@%%g
++s%@BOEHM_GC_DIR@%$BOEHM_GC_DIR%g
+ s%@SOCKET_LIBRARY@%$SOCKET_LIBRARY%g
+ s%@NSL_LIBRARY@%$NSL_LIBRARY%g
+ s%@DL_LIBRARY@%$DL_LIBRARY%g

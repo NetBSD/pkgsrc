@@ -1,0 +1,21 @@
+$NetBSD: patch-aj,v 1.1.1.1 2001/05/15 21:09:57 jtb Exp $
+
+--- trace/Mmakefile.orig	Mon Apr  2 15:52:51 2001
++++ trace/Mmakefile
+@@ -19,7 +19,6 @@
+ 			-I$(BROWSER_DIR) \
+ 			-I$(LIBRARY_DIR) \
+ 			-I$(RUNTIME_DIR) \
+-			-I$(BOEHM_GC_DIR) \
+ 			-I$(BOEHM_GC_DIR)/include \
+ 		  "
+ CFLAGS		= -g $(DLL_CFLAGS)
+@@ -82,7 +81,7 @@
+ OBJ_CHECKS	= $(OBJS:%=%.obj_check)
+ 
+ LDFLAGS		= -L$(BROWSER_DIR) -L$(LIBRARY_DIR) \
+-			-L$(RUNTIME_DIR) -L$(BOEHM_GC_DIR)
++			-L$(RUNTIME_DIR) -L$(BOEHM_GC_DIR)/lib
+ LDLIBS		= -l$(BROWSER_LIB_NAME) -l$(STD_LIB_NAME) -l$(RT_LIB_NAME) \
+ 		` case "$(GRADE)" in 					\
+ 		    *.par*.gc*.prof*)	echo "-lpar_gc_prof" ;;		\
