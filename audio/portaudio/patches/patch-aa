@@ -1,0 +1,99 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/20 17:52:48 ben Exp $
+
+--- pa_unix_oss/pa_unix.c.orig	Sat Nov 22 17:06:46 2003
++++ pa_unix_oss/pa_unix.c	Sat Nov 22 17:13:50 2003
+@@ -375,7 +375,11 @@
+  * and the watchdog will detect it.
+  */
+ 
+-#define SCHEDULER_POLICY         SCHED_RR
++#ifndef _POSIX_THREAD_IS_GNU_PTH
++# define SCHEDULER_POLICY         SCHED_RR
++#else
++# define SCHEDULER_POLICY 0
++#endif
+ #define WATCHDOG_MAX_SECONDS    (3)
+ #define WATCHDOG_INTERVAL_USEC  (1000000)
+ 
+@@ -411,13 +415,16 @@
+ 
+ static PaError PaHost_WatchDogProc( PaHostSoundControl   *pahsc )
+ {
++#ifndef _POSIX_THREAD_IS_GNU_PTH
+     struct sched_param    schp = { 0 };
++#endif
+     int                   maxPri;
+ 
+ #ifdef GNUSTEP
+     GSRegisterCurrentThread(); /* SB20010904 */
+ #endif
+ 
++#ifndef _POSIX_THREAD_IS_GNU_PTH
+ /* Run at a priority level above audio thread so we can still run if it hangs. */
+ /* Rise more than 1 because of rumored off-by-one scheduler bugs. */
+     schp.sched_priority = pahsc->pahsc_AudioPriority + 4;
+@@ -429,7 +436,7 @@
+         ERR_RPT(("PaHost_WatchDogProc: cannot set watch dog priority!\n"));
+         goto killAudio;
+     }
+-
++#endif
+     /* Compare watchdog time with audio and canary thread times. */
+     /* Sleep for a while or until thread cancelled. */
+     while( pahsc->pahsc_WatchDogRun )
+@@ -465,7 +472,8 @@
+     return 0;
+ 
+ lowerAudio:
+-    {
++#ifndef _POSIX_THREAD_IS_GNU_PTH
++     {
+         struct sched_param    schat = { 0 };
+         if( sched_setscheduler(pahsc->pahsc_AudioThreadPID, SCHED_OTHER, &schat) != 0)
+         {
+@@ -478,7 +486,9 @@
+             goto cleanup;
+         }
+     }
+-
++#else
++   goto cleanup;
++#endif
+ killAudio:
+     ERR_RPT(("PaHost_WatchDogProc: killing hung audio thread!\n"));
+     pthread_kill( pahsc->pahsc_AudioThread, SIGKILL );
+@@ -574,18 +584,19 @@
+ {
+     PaHostSoundControl  *pahsc;
+     PaError              result = paNoError;
++#ifndef _POSIX_THREAD_IS_GNU_PTH   
+     struct sched_param   schp = { 0 };
+-
++#endif
+     pahsc = (PaHostSoundControl *) past->past_DeviceData;
+     if( pahsc == NULL ) return paInternalError;
+ 
+     pahsc->pahsc_AudioThreadPID = getpid();
+     DBUG(("PaHost_BoostPriority: audio PID = %d\n", pahsc->pahsc_AudioThreadPID ));
+-
++#ifndef _POSIX_THREAD_IS_GNU_PTH
+     /* Choose a priority in the middle of the range. */
+     pahsc->pahsc_AudioPriority = (sched_get_priority_max(SCHEDULER_POLICY) -
+                                   sched_get_priority_min(SCHEDULER_POLICY)) / 2;
+-    schp.sched_priority = pahsc->pahsc_AudioPriority;
++   schp.sched_priority = pahsc->pahsc_AudioPriority;
+ 
+     if (sched_setscheduler(0, SCHEDULER_POLICY, &schp) != 0)
+     {
+@@ -597,7 +608,10 @@
+         /* We are running at high priority so we should have a watchdog in case audio goes wild. */
+         result = PaHost_StartWatchDog( pahsc );
+     }
+-
++#else
++   DBUG(("PortAudio: audio callback priority set to level %d - call ignored with GNU Pth\n", schp.sched_priority));
++   result = PaHost_StartWatchDog( pahsc );
++#endif
+     return result;
+ }
+ 

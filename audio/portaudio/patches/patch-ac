@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/04/20 17:52:48 ben Exp $
+
+--- Makefile.in.orig	Tue Feb 11 23:24:56 2003
++++ Makefile.in
+@@ -7,12 +7,12 @@
+ PREFIX = @prefix@
+ CC = @CC@
+ CFLAGS = @CFLAGS@ -Ipa_common
+-LIBS = @LIBS@
++LIBS = ${LIBOSSAUDIO} -L@prefix@/lib -Wl,${RPATH_FLAG} @prefix@/lib @LIBS@
+ AR = @AR@
+ RANLIB = @RANLIB@
+ INSTALL = @INSTALL@
+ SHARED_FLAGS = @SHARED_FLAGS@
+-DLL_LIBS = @DLL_LIBS@
++DLL_LIBS = @DLL_LIBS@ ${LIBOSSAUDIO}
+ 
+ OTHER_OBJS = @OTHER_OBJS@
+ 
