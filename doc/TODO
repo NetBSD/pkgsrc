@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1364 2004/02/10 02:00:57 jlam Exp $
+$NetBSD: TODO,v 1.1365 2004/02/10 20:01:16 minskim Exp $
 
 Suggested new packages
 ======================
@@ -275,7 +275,6 @@ Suggested package updates
 	o postgresql-7.4.1 [pkgsrc-wip]
 	o psi-0.9.1
 	o py-dns-1.2.0
-	o py-jpCodecs-1.4.10 [pkg/23715]
 	o py-psycopg-1.1.10
 	o pygtk-0.6.11
 	o pysol-4.82
