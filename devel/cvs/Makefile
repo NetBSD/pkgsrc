@@ -3,7 +3,7 @@
 # Date created:		15 November 1997
 # Whom:			lamj@stat.cmu.edu
 #
-# $NetBSD: Makefile,v 1.5 1998/01/24 03:59:20 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/02/14 16:47:46 hubertf Exp $
 #
 
 DISTNAME=       cvs-1.9
@@ -20,6 +20,8 @@ GNU_CONFIGURE=	yes
 .if exists(/usr/lib/libkrb.a)
 CONFIGURE_ARGS+=	--with-krb4=/usr --enable-encryption
 .endif
+
+MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 MAN1=		cvs.1
 MAN5=		cvs.5

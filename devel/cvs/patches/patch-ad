@@ -1,14 +1,5 @@
 --- contrib/Makefile.in.orig	Fri Feb 13 17:39:12 1998
 +++ contrib/Makefile.in	Fri Feb 13 17:41:51 1998
-@@ -43,7 +43,7 @@
- # Use cp if you don't have install.
- INSTALL = @INSTALL@
- INSTALL_DATA = @INSTALL_DATA@
--INSTALL_PROGRAM = @INSTALL_PROGRAM@
-+INSTALL_SCRIPT = ${INSTALL} -m 0555
- 
- DISTFILES = \
- 	ChangeLog README .cvsignore intro.doc \
 @@ -89,10 +89,10 @@
  		$(INSTALL_DATA) $(srcdir)/$$f $(libdir)/cvs/contrib/$$f; \
  	done
