@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1014 2002/07/24 17:44:16 mrauch Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1015 2002/07/24 19:42:21 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -203,13 +203,48 @@ BUILD_DEFS+=		KERBEROS
 .endif
 
 PERL5_REQD?=		5.0
-.if defined(USE_PERL5)
-.  if ${OPSYS} == "Darwin"
-PERL5_REQD=		5.8.0
-DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl58
-.  else
-DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
+PERL5_PKGSRCDIR?=	../../lang/perl5
+
+# _PERL58_PATTERNS contains perl versions >=5.8.0 but before 6.0.
+_PERL58_PATTERNS=	5.8.* 5.9* 5.[1-9][0-9]*
+
+# Darwin support was added to perl beginning with release 5.8.0.  Tweak the
+# value of PERL5_REQD (possible user-supplied) so that it is always at least
+# 5.8.0.
+#
+.if (${OPSYS} == "Darwin") || \
+    (defined(_USE_PERL58) && (${_USE_PERL58} == "YES"))
+_PERL58_REQD?=		5.8.0
+.  for _pattern_ in ${_PERL58_PATTERNS}
+.    if !empty(PERL5_REQD:M${_pattern_})
+_PERL58_REQD:=		${PERL5_REQD}
+.    endif
+.  endfor
+PERL5_REQD:=		${_PERL58_REQD}
+.endif
+
+# For perl>=5.8.0, we need to build perl from ../../lang/perl58.
+.for _pattern_ in ${_PERL58_PATTERNS}
+.  if !empty(PERL5_REQD:M${_pattern_})
+PERL5_PKGSRCDIR=	../../lang/perl58
 .  endif
+.endfor
+
+# Convert USE_PERL5 to be two-valued: either "build" or "run" to denote
+# whether we want a build-time or run-time dependency on perl.
+#
+.if defined(USE_PERL5)
+.  if (${USE_PERL5} == "build")
+_PERL5_DEPMETHOD=	BUILD_DEPENDS
+.  else
+USE_PERL5:=		run
+_PERL5_DEPMETHOD=	DEPENDS
+.  endif
+_PERL5_DEPENDS=		perl>=${PERL5_REQD}
+${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
+.endif
+
+.if defined(USE_PERL5) && (${USE_PERL5} == "run")
 .  if exists(${PERL5})
 .    if exists(${LOCALBASE}/share/mk/bsd.perl.mk)
 .      include "${LOCALBASE}/share/mk/bsd.perl.mk"
@@ -225,7 +260,7 @@ MAKEFLAGS+=		PERL5_SITEARCH=${PERL5_SITEARCH}
 MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB}
 .    endif # !exists(bsd.perl.mk) && !defined(PERL5_*)
 .  endif # exists($PERL5)
-.endif # USE_PERL5
+.endif # USE_PERL5 == run
 
 .if defined(USE_FORTRAN)
 .  if !exists(/usr/bin/f77)
@@ -3911,7 +3946,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	@if ${CC} --version >/dev/null 2>&1; then \
 	  ${ECHO} "CC=	${CC}-`${CC} --version`" >> ${BUILD_INFO_FILE}; \
 	fi
-.  ifdef USE_PERL5
+.  if defined(USE_PERL5) && (${USE_PERL5} == "run")
 	@${ECHO} "PERL=	`${PERL5} --version 2>/dev/null | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
 .  endif
 .  ifdef USE_GMAKE
