@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.910 2002/12/25 03:51:08 wiz Exp $
+$NetBSD: CHANGES,v 1.911 2002/12/25 09:28:51 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4257,3 +4257,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gmplayer to 0.90rc12 [wiz 2002-12-25]
 	Updated mencoder to 0.90rc12 [wiz 2002-12-25]
 	Updated aspell to 0.33.7.1nb1 [wiz 2002-12-25]
+	Updated mozilla to 1.2.1nb2 [grant 2002-12-25]
+	Updated phoenix to 0.5nb2 [grant 2002-12-25]
