@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/06/01 11:23:19 rh Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/14 15:07:27 wiz Exp $
 #
 
 DISTNAME=		libiodbc-2.50.3
@@ -10,7 +10,8 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.iodbc.org/
 
 GNU_CONFIGURE=		yes
-USE_PKGLIBTOOL=		yes
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 CONFIGURE_ARGS+=	--with-iodbc-inidir=/etc
 
