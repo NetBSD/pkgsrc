@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/28 16:07:51 martin Exp $
+
+--- Makefile.in.orig	Fri Dec 22 19:40:24 2000
++++ Makefile.in	Thu Dec 28 16:36:28 2000
+@@ -5,10 +5,10 @@
+ BASEPATH    = $(INSTALLROOT)@prefix@
+ CONFPATH    = $(INSTALLROOT)@sysconfdir@
+ CGIPATH     = $(INSTALLROOT)@CGIPATH@
+-INSTALLDIRS = $(CONFPATH) $(CGIPATH) $(MODELPATH) $(BASEPATH)/@bindir@  $(BASEPATH)/@sbindir@ $(BASEPATH)/misc
++INSTALLDIRS = $(CGIPATH)
+ STATEPATH   = $(INSTALLROOT)@STATEPATH@
+ 
+-SUBDIRS	= common models server clients man
++SUBDIRS	= common
+ CFLAGS	= -I../include @CFLAGS@
+ 
+ # these are here so they can be overridden during a make install
+@@ -58,7 +58,7 @@
+ 		$(INSTALLCMD) -d -o $(RUNUID) -g $(RUNGID) $(STATEPATH) || exit 1; \
+ 	fi
+ 
+-cgi:
++cgi:	build
+ 	@cd clients; $(MAKE) cgi; cd ..;
+ 
+ install-cgi: install-dirs 

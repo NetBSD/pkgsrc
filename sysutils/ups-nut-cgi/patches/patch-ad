@@ -1,0 +1,162 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/12/28 16:07:51 martin Exp $
+
+--- configure.in.orig	Sat Dec  2 17:18:03 2000
++++ configure.in	Thu Dec 14 16:26:56 2000
+@@ -11,6 +11,7 @@
+ STATEPATH="/var/state/ups"
+ MODELPATH="$prefix/bin"
+ CGIPATH="$prefix/cgi-bin"
++GRAPHLIB_PATH="/usr/local"
+ RUN_AS_USER="nobody"
+ RUN_AS_GROUP="nogroup"
+ ### 
+@@ -61,9 +62,45 @@
+ 	], [], [])
+ fi
+ 
++AC_MSG_CHECKING(graphics library file path)
++AC_ARG_WITH(graphics,
++[ --with-graphics=PATH         Path for graphics library files],
++[       case "$withval" in
++        yes|no)
++                AC_MSG_RESULT(using default: $GRAPHLIB_PATH)
++                ;;
++        *)
++                AC_MSG_RESULT($withval)
++                AC_DEFINE_UNQUOTED(GRAPHLIB_PATH, "$withval")
++                GRAPHLIB_PATH=$withval
++                ;;
++        esac],
++        AC_MSG_RESULT(using default: $GRAPHLIB_PATH)
++)
++GRAPHICS_LIBS="-L$GRAPHLIB_PATH/lib"
++GRAPHICS_INCLUDES="-I$GRAPHLIB_PATH/include"
++CFLAGS_save=$CFLAGS
++CPPFLAGS_save=$CPPFLAGS
++CFLAGS="$CFLAGS_save $GRAPHICS_LIBS"
++CPPFLAGS="$CPPFLAGS_save $GRAPHICS_INCLUDES"
++
++dnl Include in case GD was compiled with True Type support
++AC_CHECK_LIB(intl, gettext,
++[ LIBINTL="-lintl"],[ LIBINTL=""] )
++GRAPHICS_LIBS="$GRAPHICS_LIBS $LIBINTL"
++CFLAGS="$CFLAGS_save $GRAPHICS_LIBS"
++
+ dnl Include in case GD was compiled with True Type support
+ AC_CHECK_LIB(ttf, TT_New_Glyph,
+ [ LIBTTF="-lttf"],[ LIBTTF=""] )
++GRAPHICS_LIBS="$GRAPHICS_LIBS $LIBTTF"
++CFLAGS="$CFLAGS_save $GRAPHICS_LIBS"
++
++dnl Include in case GD was compiled with jpeg support
++AC_CHECK_LIB(jpeg, jpeg_abort,
++[ LIBJPEG="-ljpeg"],[ LIBJPEG=""] )
++GRAPHICS_LIBS="$GRAPHICS_LIBS $LIBJPEG"
++CFLAGS="$CFLAGS_save $GRAPHICS_LIBS"
+ 
+ dnl Include in case GD was compiled with Xpm support
+ AC_CHECK_LIB(X11, XBell,
+@@ -81,67 +118,33 @@
+ 
+ dnl Include in case GD was compiled with Xpm support
+ AC_CHECK_LIB(Xpm, XpmReadFileToXpmImage,
+-	[ LIBXPM="-lXpm"],
+-	[ 
+-		echo "Retrying with $LIBX"
+-		unset ac_cv_lib_Xpm_XpmReadFileToXpmImage
+-		AC_CHECK_LIB(Xpm, XpmReadFileToXpmImage,
+-			[ LIBXPM="-lXpm $LIBX" ],
+-			[ LIBXPM="" ],
+-			[ -lXpm $LIBX ],
+-		)
+-	],
+-	[ -lXpm ],
++	[ LIBXPM="-lXpm $LIBX"],
++	[ LIBXPM="" ],
++	[ -lXpm $LIBX ],
+ )
++GRAPHICS_LIBS="$GRAPHICS_LIBS $LIBXPM"
++CFLAGS="$CFLAGS_save $GRAPHICS_LIBS"
++
+ 
+ AC_CHECK_LIB(gd, gdImagePng,
+ [
+-	GFXLIBS="-lgd -lpng -lz"
++	LIBGD="$GRAPHICS_LIBS -lgd -lpng -lz"
+ ],
+ [
+-	echo "Trying again - using -L/usr/local/lib -I/usr/local/include..."
+-	unset ac_cv_lib_gd_gdImagePng
+-	CPPFLAGS="$CPPFLAGS -L/usr/local/lib -I/usr/local/include"
+-	AC_CHECK_LIB(gd, gdImagePng,
+-	[
+-		GFXLIBS="-lgd -lpng -lz -L/usr/local/lib -I/usr/local/include"
+-	],
+-	[
+-	],
+-	[-lm -lpng -lz])
++	AC_MSG_RESULT(
++** You will not be able to build the CGI programs without gd.
++**
++** To get it, visit http://www.boutell.com/gd/
++	)
+ ],
+-[-lm -lpng -lz],
++[$GRAPHICS_LIBS -lm -lpng -lz],
+ )
+-
+-if test "$GFXLIBS" = "" ; then
+-        echo "Trying again - using $LIBTTF"
+-        unset ac_cv_lib_gd_gdImagePng
+-        AC_CHECK_LIB(gd, gdImagePng,
+-        [
+-                GFXLIBS="-lgd -lpng -lz $LIBTTF"
+-        ],
+-        [
+-        ],
+-        [-lm -lpng -lz $LIBTTF])
+-fi
+-
+-if test "$GFXLIBS" = "" ; then
+-        echo "Trying again - using $LIBTTF $LIBXPM"
+-        unset ac_cv_lib_gd_gdImagePng
+-        AC_CHECK_LIB(gd, gdImagePng,
+-        [
+-                GFXLIBS="-lgd -lpng -lz $LIBTTF $LIBXPM"
+-        ],
+-        [
+-        ],
+-        [-lm -lpng -lz $LIBTTF $LIBXPM])
+-fi
+-
+-test "$GFXLIBS" = ""  && echo "** You will not be able to build the CGI programs without gd."
+-test "$GFXLIBS" = ""  && echo "** "
+-test "$GFXLIBS" = ""  && echo "** To get it, visit http://www.boutell.com/gd/"
++GRAPHICS_LIBS="$LIBGD"
++CFLAGS="$CFLAGS_save $GRAPHICS_LIBS"
+ 
+ AC_CHECK_HEADERS(gd.h gd/gd.h sys/modem.h stdarg.h varargs.h sys/shm.h)
++CFLAGS=$CFLAGS_save
++CPPFLAGS=$CPPFLAGS_save
+ 
+ dnl  Would really like to *test* for the necessity of -R (and how to use
+ dnl  it) but I have no clue how :-/  
+@@ -151,7 +154,7 @@
+    for lib in `echo $LD_LIBRARY_PATH | $AWK -F: '{ for (i = NF; i > 0; --i) print $i }' | sort | uniq`; do
+       if test -f ${lib}/libpng.so; then
+          AC_CHECK_LIB(png, png_info_init,
+-	 [ GFXLIBS="-R${lib} $GFXLIBS"
++	 [ GRAPHICS_LIBS="-R${lib} $GRAPHICS_LIBS"
+ 	 ],
+ 	 [],
+ 	 [-lm -R${lib}],)
+@@ -310,7 +313,8 @@
+ 
+ AC_SUBST(LIBOBJ)
+ AC_SUBST(NETLIBS)
+-AC_SUBST(GFXLIBS)
++AC_SUBST(GRAPHICS_LIBS)
++AC_SUBST(GRAPHICS_INCLUDES)
+ AC_SUBST(SERLIBS)
+ AC_SUBST(STATEPATH)
+ AC_SUBST(MODELPATH)
