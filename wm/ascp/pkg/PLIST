@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/18 13:50:42 wiz Exp $
+bin/ascp
+share/afterstep/ascp/ascprc
+share/afterstep/ascp/config
+share/afterstep/ascp/config~
+share/afterstep/ascp/help/animate.hlp
+share/afterstep/ascp/help/audio.hlp
+share/afterstep/ascp/help/audio.hlp~
+share/afterstep/ascp/help/autoexec.hlp
+share/afterstep/ascp/help/database.hlp
+share/afterstep/ascp/help/pager.hlp
+share/afterstep/ascp/help/paths.hlp
+share/afterstep/ascp/help/wharfentries.hlp
+share/afterstep/ascp/help/wharfstyle.hlp
+share/afterstep/ascp/icons/AfterStep3.xpm
+share/afterstep/ascp/icons/MaelstromInFrame.xpm
+share/afterstep/ascp/icons/ascp.xpm
+share/afterstep/ascp/icons/desktop.xpm
+share/afterstep/ascp/icons/init.xpm
+share/afterstep/ascp/icons/interface.xpm
+share/afterstep/ascp/icons/path.xpm
+share/afterstep/ascp/icons/sound.xpm
+share/afterstep/ascp/icons/whandling.xpm
+share/afterstep/ascp/icons/wharf.xpm
+share/afterstep/ascp/icons/wharf2.xpm
+share/afterstep/ascp/icons/woptions.xpm
+@dirrm share/afterstep/ascp/help
+@dirrm share/afterstep/ascp/icons
+@dirrm share/afterstep/ascp
