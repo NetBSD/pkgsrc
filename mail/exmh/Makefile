@@ -1,17 +1,13 @@
-# $NetBSD: Makefile,v 1.9 1998/06/03 13:10:25 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/06/17 08:46:04 agc Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
-DISTNAME=	exmh-2.0.1
+DISTNAME=	exmh-2.0.2
 CATEGORIES=	mail tk80
 MASTER_SITES=	ftp://ftp.sunlabs.com/pub/tcl/exmh/
 EXTRACT_SUFX=	.tar.Z
 
 PATCH_SITES=	http://sunscript.sun.com/exmh/patches/2.0.1/
-PATCHFILES=	utils.patch folderNew.patch extrasInit.patch exec.patch \
-		app-defaults.patch pgpMisc.patch seditMime.patch mime.patch \
-		bindings.patch html_bindings.patch find.patch mh.patch \
-		pgp.patch
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,7 +39,7 @@ TCLSH=		tclsh8.0
 
 # Additionally, exmh will use the following ports if present:
 # lang/expect
-# misc/glimpse
+# textproc/glimpse
 # security/pgp
 # mail/faces
 # audio/rplay
