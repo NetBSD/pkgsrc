@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/04/16 16:54:54 mycroft Exp $
+# $NetBSD: Makefile,v 1.6 2000/06/27 03:18:03 hubertf Exp $
 #
 
 DISTNAME=	libggi-2.0b2.1
@@ -15,10 +15,18 @@ DEPENDS+=	libgii-0.6:../libgii
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--disable-debug \
 		--with-x \
-		--with-extra-includes=${LOCALBASE}/include
+		--with-extra-includes=${LOCALBASE}/include \
+		--with-extra-libs=${X11BASE}/lib 
 
 pre-configure:
 	cd ${WRKSRC}; autoconf
+
+post-configure:
+	cd ${WRKSRC}; \
+	[ -f configure.BAK ] || cp configure configure.BAK; \
+	${SED} \
+		-e '/lib/s@-L\([a-zA-Z$/_]*\)@-Wl,-R\1 -L\1@g' \
+		<configure.BAK >configure
 
 post-install:
 	cd ${PREFIX}/man/man3 ; for i in *.3ggi ; do \
