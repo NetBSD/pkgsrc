@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.208 2003/01/21 11:20:31 wiz Exp $
+$NetBSD: TODO,v 1.209 2003/01/22 08:32:02 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -237,6 +237,7 @@ Suggested package updates
 	o suck-4.3.1
 	o sun-jdk14-1.4.1_01 [pkg/19853]
 	o sun-jre14-1.4.1_01 [pkg/19853]
+	o sweep-0.8.0 [jmmv]
 	o swig-1.3.17
 	o tcl/tk-8.4.1 [bjoern]
 	o tcpreplay-1.3.2
