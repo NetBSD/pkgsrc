@@ -1,0 +1,4 @@
+This is a collection of modules that represent, create, and extract
+information from HTML syntax trees.  These modules used to be part of
+the libwww-perl distribution, but are now unbundled in order to
+facilitate a separate development track.
