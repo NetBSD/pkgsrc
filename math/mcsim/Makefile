@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:22:28 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 22:14:19 jtb Exp $
 
 DISTNAME=	mcsim-4.2.0
 CATEGORIES=	math
@@ -8,27 +8,26 @@ MAINTAINER=	jtb@netbsd.org
 COMMENT=	Monte Carlo Simulation software
 
 WRKSRC=		${WRKDIR}/mcsim
-
 INFO_FILES=	mcsim
 
-do-build:
-	@(cd ${WRKSRC}/mod && ${MAKE})
-	@(cd ${WRKSRC}/sim && ${MAKE})
-	@(cd ${WRKSRC}/sim && ${SH} Test_mcsim)
-	@(cd ${WRKSRC}/doc && makeinfo mcsim.texinfo)
+post-build:
+	cd ${WRKSRC}/doc && makeinfo mcsim.texinfo
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mod/mod ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/sim/mcsim ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mcsim
-	@(cd ${WRKSRC}/doc;						\
-	for i in *.txt MCSim* mcsim.html mcsim.dvi;			\
-	do								\
-	${INSTALL_DATA} $$i ${PREFIX}/share/doc/mcsim;			\
-	done;								\
-	for i in mcsim mcsim-1 mcsim-2 mcsim-3;				\
-	do								\
-	${INSTALL_DATA} $$i ${PREFIX}/info;				\
-	done)
+	@for f in ${WRKSRC}/doc/*.txt ${WRKSRC}/doc/MCSim*	\
+	${WRKSRC}/doc/mcsim.dvi; do				\
+	i="${INSTALL_DATA} $$f ${PREFIX}/share/doc/mcsim/";	\
+	${ECHO} $$i; $$i;					\
+	done
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/mcsim
+	${INSTALL_DATA} ${WRKSRC}/doc/mcsim.html		\
+	${PREFIX}/share/doc/html/mcsim
+	@for f in mcsim mcsim-1 mcsim-2 mcsim-3; do		\
+	i="${INSTALL_DATA} ${WRKSRC}/doc/$$f ${PREFIX}/info/";	\
+	${ECHO} $$i; $$i;					\
+	done
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,29 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/11/26 23:02:39 jtb Exp $
+$NetBSD: patch-ac,v 1.2 2001/02/25 22:14:20 jtb Exp $
 
---- sim/Makefile.orig	Wed Nov 22 22:41:05 2000
+--- sim/Makefile.orig	Fri Nov 14 15:45:53 1997
 +++ sim/Makefile
-@@ -62,8 +62,8 @@
+@@ -46,14 +46,16 @@
+ #       LFLAGS :  any flags specific to the linker.
+ #
+ 
++all:	mcsim
++
+ #---------- System Calls ----------
+ #
+ #>>>>  Define any system dependent calls here
+ 
+-ECHO = echo
+-COPY = cp
+-DEL = rm
+-MKDIR = mkdir
++ECHO ?= echo
++COPY ?= cp
++DEL ?= rm
++MKDIR ?= mkdir
+ MOD = mod
+ 
+ 
+@@ -62,8 +64,8 @@
  #
  #>>>>  Define the COMPILER name and LINKER name here only.
  
@@ -13,12 +34,12 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/11/26 23:02:39 jtb Exp $
  
  #>>>>  Define PATHS
  #	The include path should be a directory containing header
-@@ -101,13 +101,13 @@
+@@ -101,27 +103,27 @@
  #>>>> To compile with OPTIMIZATION uncomment the following lines
  #
  DEBUG_SYMBOLS = -DNDEBUG
 -C_OPTIM_FLAG = -O
-+C_OPTIM_FLAG = -O2
++C_OPTIM_FLAG =
  L_OPTIM_FLAG =
  
  #
@@ -29,3 +50,20 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/11/26 23:02:39 jtb Exp $
  
  #--------------------
  #****  You shouldn't need to change the next 2 lines.  They are dependent
+ #****  only on the above setup.
+ 
+-CFLAGS = $(C_OPTIM_FLAG) $(C_DEBUG_FLAG) $(DEBUG_SYMBOLS) \
++CFLAGS += $(C_OPTIM_FLAG) $(C_DEBUG_FLAG) $(DEBUG_SYMBOLS) \
+ 	-I $(INCPATH) $(WARNINGS)
+-CLFLAGS = $(L_OPTIM_FLAG) $(L_DEBUG_FLAG)
++CLFLAGS += $(L_OPTIM_FLAG) $(L_DEBUG_FLAG)
+ 
+ 
+ #
+ #>>>> Extra link flags.  Include libraries here
+ #
+-LFLAGS = -lm
++LFLAGS += -lm
+ 
+ 
+ 
