@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2005/01/11 03:16:22 dmcmahill Exp $
+
+--- graphman/config.c.orig	2004-08-30 21:02:42.000000000 +0000
++++ graphman/config.c
+@@ -272,7 +272,7 @@ static int ConfigReadLine(char *szLine)
+ 
+ *******************************************************************************/
+ 
+-static cSeparator = ',';
++static char cSeparator = ',';
+ 
+ 
+ static BOOL IsSeparator(const char c)
