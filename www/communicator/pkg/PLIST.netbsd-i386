@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.netbsd-i386,v 1.2 2000/01/05 15:43:37 abs Exp $
-lib/netscape/communicator-${NS_VERS}/libjsd.so
-lib/netscape/communicator-${NS_VERS}/plugins/libnullplugin.so
-lib/netscape/communicator-${NS_VERS}/netscape-dynMotif
-lib/netscape/communicator-${NS_VERS}/libnullplugin-dynMotif.so

@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:28 zuntum Exp $
+include/cgi.h
+lib/libcgi.a
+libexec/cgi-bin/cgitest
+libexec/cgi-bin/jumpto
+share/doc/html/cgilib/cgi.5.html
+share/doc/html/cgilib/cgiDebug.3.html
+share/doc/html/cgilib/cgiFree.3.html
+share/doc/html/cgilib/cgiFreeList.3.html
+share/doc/html/cgilib/cgiGetCookie.3.html
+share/doc/html/cgilib/cgiGetCookies.3.html
+share/doc/html/cgilib/cgiGetValue.3.html
+share/doc/html/cgilib/cgiGetVariables.3.html
+share/doc/html/cgilib/cgiHeader.3.html
+share/doc/html/cgilib/cgiInit.3.html
+share/doc/html/cgilib/cgiRedirect.3.html
+share/doc/html/cgilib/cgiSetHeader.3.html
+share/doc/html/cgilib/cgiSetType.3.html
+share/examples/cgilib/cgitest.c
+share/examples/cgilib/jumpto.c
+@dirrm share/doc/html/cgilib
+@dirrm share/examples/cgilib

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/27 19:10:46 kim Exp $
-bin/webnew
-man/man1/webnew.1

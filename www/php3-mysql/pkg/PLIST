@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/06 23:53:41 tv Exp $
-lib/php3/mysql.so

@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:15:42 zuntum Exp $
+lib/httpd/mod_dtcl.so
+share/doc/html/mod_dtcl/asf_logo.gif
+share/doc/html/mod_dtcl/documentation.html
+share/doc/html/mod_dtcl/dtcl.gif
+share/doc/html/mod_dtcl/logoLarge.gif
+share/examples/mod_dtcl/examples.ttml
+share/examples/mod_dtcl/clocks.ttml
+share/examples/mod_dtcl/dtclparser.tcl
+share/examples/mod_dtcl/tabletransform.tcl
+share/examples/mod_dtcl/tcl_include.tcl
+share/examples/mod_dtcl/tests/README
+share/examples/mod_dtcl/tests/dtcl-test.ttml
+share/examples/mod_dtcl/tests/dtcl.test
+@dirrm share/doc/html/mod_dtcl
+@dirrm share/examples/mod_dtcl/tests
+@dirrm share/examples/mod_dtcl

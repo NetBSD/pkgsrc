@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/16 04:40:48 jlam Exp $
-bin/cadaver
-man/man1/cadaver.1

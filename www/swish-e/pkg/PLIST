@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1999/12/14 16:30:02 bouyer Exp $
-share/examples/swish-e/user.config
-share/examples/swish-e/test.html
-share/examples/swish-e/swishspider
-share/examples/swish-e/README-SWISH-E
-bin/swish-e
-@dirrm share/examples/swish-e

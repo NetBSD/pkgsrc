@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.suexec,v 1.1 2000/09/06 06:17:57 jlam Exp $
-sbin/suexec
-man/man8/suexec.8

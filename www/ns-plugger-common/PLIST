@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:17:29 zuntum Exp $
+${NS_PLUGINS_DIR}/plugger.so
+man/man7/plugger.7
+share/doc/plugger/README
+share/doc/plugger/COPYING
+@dirrm share/doc/plugger
+@unexec rmdir -p %D/${NS_PLUGINS_DIR} 2>/dev/null || true
