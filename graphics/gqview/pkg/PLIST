@@ -1,2 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/06/07 08:06:32 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/05/25 10:16:46 wiz Exp $
 bin/gqview
+share/locale/de/LC_MESSAGES/gqview.mo
+share/locale/es/LC_MESSAGES/gqview.mo
+share/locale/fr/LC_MESSAGES/gqview.mo
+share/locale/ja/LC_MESSAGES/gqview.mo
+share/locale/pt_BR/LC_MESSAGES/gqview.mo
+share/locale/ru/LC_MESSAGES/gqview.mo
+share/locale/sk/LC_MESSAGES/gqview.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/gqview.mo
+share/locale/tr/LC_MESSAGES/gqview.mo
