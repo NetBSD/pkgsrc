@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7282 2004/09/28 12:41:13 jdolecek Exp $
+$NetBSD: CHANGES,v 1.7283 2004/09/28 12:53:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4478,3 +4478,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated chkrootkit to 0.44 [adrianp 2004-09-28]
 	Updated ircu to 2.10.11.07 [adrianp 2004-09-28]
 	Updated php4 to 4.3.9 [jdolecek 2004-04-28]
+	Updated lesstif to 0.93.96 [adam 2004-09-28]
