@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2001/02/02 01:24:57 jtb Exp $
+# $NetBSD: Makefile,v 1.45 2001/02/07 04:32:35 jtb Exp $
 #
 
     SUBDIR += R
@@ -37,6 +37,7 @@
     SUBDIR += scilab
     SUBDIR += slatec
     SUBDIR += superlu
+    SUBDIR += udunits
     SUBDIR += vista
     SUBDIR += xldlas
     SUBDIR += xlispstat
