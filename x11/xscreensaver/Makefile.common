@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2000/10/17 05:24:53 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2000/10/17 05:44:47 jlam Exp $
 #
 
 DISTNAME=		xscreensaver-3.25
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--without-motif
 CONFIGURE_ARGS+=	--without-shadow
 CONFIGURE_ARGS+=	--with-zippy=/usr/games/fortune
 CONFIGURE_ENV+=		INSTALL=/usr/bin/install
+CONFIGURE_ENV+=		ac_cv_x_app_defaults="${X11PREFIX}/lib/X11/app-defaults"
 
 FILESDIR=		${.CURDIR}/../../x11/xscreensaver/files
 PATCHDIR=		${.CURDIR}/../../x11/xscreensaver/patches
