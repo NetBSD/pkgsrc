@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/05 17:55:44 wiz Exp $
+bin/visitors
+share/doc/visitors/doc.html
+share/visitors/graph.png
+share/visitors/powered-by-visitors.png
+@dirrm share/visitors
+@dirrm share/doc/visitors
