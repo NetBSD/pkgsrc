@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/11/15 11:38:42 shannonjr Exp $
+# $NetBSD: Makefile,v 1.21 2005/01/21 20:52:24 tv Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -14,6 +14,8 @@ COMMENT=	This is the gcc 3.4 compiler
 
 BUILD_USES_MSGFMT=	YES
 GCC_VERSION=		3.4.3
+
+NOT_FOR_PLATFORM=	Interix-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -56,8 +58,8 @@ BUILD_DEFS=	BUILD_ADA BUILD_CXX BUILD_F77 \
 		BUILD_JAVA BUILD_OBJC
 BUILD_ADA?=	NO
 BUILD_CXX?=	YES
-BUILD_F77?=	YES
-BUILD_JAVA?=	NO
+BUILD_F77?=	NO
+BUILD_JAVA?=	YES
 BUILD_OBJC?=	YES
 
 LANGS='c'
