@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/05/01 21:58:42 jlam Exp $
+$NetBSD: patch-ad,v 1.2 2001/05/28 03:24:30 jlam Exp $
 
 --- tools/Imakefile.in.orig	Tue Oct 27 03:02:45 1998
 +++ tools/Imakefile.in	Mon May  1 04:41:40 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/05/01 21:58:42 jlam Exp $
    VFLIB_LIBDIR = ../src
  
 -      VFLIB = $(VFLIB_LIBDIR)/libVFlib2.la
-+      VFLIB = $(LDFLAGS) -lVFlib2 -lttf -lintl -lm
++      VFLIB = $(LDFLAGS) -lVFlib2 $(EXT_LIBRARY)
  
            PROGRAMS = disol    kban    ktest    vfperf    vftest    fmtest  
                SRCS = disol.c  kban.c  ktest.c  vfperf.c  vftest.c  fmtest.c
