@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/04/01 04:19:26 jmc Exp $
+# $NetBSD: Makefile,v 1.3 2002/04/03 03:44:32 itojun Exp $
 
-DISTNAME=	nsd-1.0-alpha
-PKGNAME=	nsd-0.9
+DISTNAME=	nsd-1.0-alpha2
+PKGNAME=	nsd-0.9.2
 CATEGORIES=	net
 #MASTER_SITES=	http://www.nlnetlabs.nl/downloads/nsd/
 
@@ -13,6 +13,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
+
+WRKSRC=		${WRKDIR}/nsd
 
 _FETCH_MESSAGE= \
 	${ECHO} '======================================================='; \
