@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/12 19:05:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/12 19:39:19 wiz Exp $
 #
 
 DISTNAME=	automake-1.7.9
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.gnu.org/software/automake/automake.html
 COMMENT=	GNU Standards-compliant Makefile generator (latest 1.7 version)
 
 DEPENDS=	autoconf>=2.54:../../devel/autoconf
+
+CONFLICTS=	automake-1.7*
 
 PLIST_SUBST+=		PKG_DIR_VERSION=1.7
 USE_BUILDLINK2=		YES
