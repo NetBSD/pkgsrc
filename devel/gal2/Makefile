@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/02/09 18:47:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/02/11 03:04:28 xtraeme Exp $
 #
 
 DISTNAME=	gal-1.99.10
@@ -14,7 +14,7 @@ COMMENT=	Library functions that came from Gnumeric and Evolution
 
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 BUILD_USES_MSGFMT=	yes
 USE_LIBTOOL=		yes
@@ -24,7 +24,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../print/libgnomeprintui/buildlink2.mk"
-.include "../../textproc/intltool/buildlink2.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
