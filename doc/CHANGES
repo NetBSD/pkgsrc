@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1759 2003/03/24 12:15:04 jtb Exp $
+$NetBSD: CHANGES,v 1.1760 2003/03/24 15:04:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1280,3 +1280,10 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sweep to 0.8nb1 [wiz 2003-03-24]
 	Updated SDL-mixer to 1.2.4nb1 [wiz 2003-03-24]
 	Updated icon to 9.4.1 [jtb 2003-03-24]
+	Updated ruby-base to 1.6.8 [taca 2003-03-24]
+	Updated ruby-digest to 1.6.8 [taca 2003-03-24]
+	Updated ruby-gdbm to 1.6.8 [taca 2003-03-24]
+	Updated ruby-readline to 1.6.8 [taca 2003-03-24]
+	Updated ruby-tcltklib to 1.6.8 [taca 2003-03-24]
+	Updated ruby-tk to 1.6.8 [taca 2003-03-24]
+	Updated ruby to 1.6.8 [taca 2003-03-24]
