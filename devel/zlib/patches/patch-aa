@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2004/05/08 01:06:26 tv Exp $
+$NetBSD: patch-aa,v 1.7 2004/05/26 03:20:38 jschauma Exp $
 
---- Makefile.in.orig	2003-11-09 02:29:23.000000000 +0000
-+++ Makefile.in
+--- Makefile.in.orig	2003-11-08 21:29:23.000000000 -0500
++++ Makefile.in	2004-05-25 23:07:04.000000000 -0400
 @@ -16,9 +16,7 @@
  # To install in $HOME instead of /usr/local, use:
  #    make install prefix=$HOME
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.6 2004/05/08 01:06:26 tv Exp $
  #CFLAGS=-O -DMAX_WBITS=14 -DMAX_MEM_LEVEL=7
  #CFLAGS=-g -DDEBUG
  #CFLAGS=-O3 -Wall -Wwrite-strings -Wpointer-arith -Wconversion \
-@@ -54,7 +52,6 @@ OBJA =
+@@ -54,7 +52,6 @@
  
  TEST_OBJS = example.o minigzip.o
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.6 2004/05/08 01:06:26 tv Exp $
  
  check: test
  test: all
-@@ -77,11 +74,11 @@ match.o: match.S
+@@ -77,11 +74,11 @@
  	mv _match.o match.o
  	rm -f _match.s
  
@@ -30,14 +30,14 @@ $NetBSD: patch-aa,v 1.6 2004/05/08 01:06:26 tv Exp $
 -	ln -s $@ $(SHAREDLIB)
 -	ln -s $@ $(SHAREDLIBM)
 +all: $(OBJS)
-+	${LIBTOOL} --mode=link ${CC} -o libz.la ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:2
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} -o libz.la ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:2
 +
 +.c.o:
 +	${LIBTOOL} --mode=compile ${CC} ${CPPFLAGS} ${CFLAGS} -c $<
  
  example$(EXE): example.o $(LIBS)
  	$(CC) $(CFLAGS) -o $@ example.o $(LDFLAGS)
-@@ -90,6 +87,11 @@ minigzip$(EXE): minigzip.o $(LIBS)
+@@ -90,6 +87,11 @@
  	$(CC) $(CFLAGS) -o $@ minigzip.o $(LDFLAGS)
  
  install: $(LIBS)
