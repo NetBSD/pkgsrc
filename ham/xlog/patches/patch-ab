@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/07/03 00:45:23 wulf Exp $
+
+--- src/hamlib-utils.c.orig	2003-07-03 05:39:11.000000000 +0930
++++ src/hamlib-utils.c	2003-07-03 05:39:23.000000000 +0930
+@@ -221,7 +221,7 @@
+ 		g_string_sprintf (digits, "%Ld", freq);
+ 	      else
+ 		g_string_sprintf (digits, "%Ld",
+-				  (long long) rintl (freq /
++				  (long long) rint (freq /
+ 						     pow (10,
+ 							  preferences.
+ 							  round)));
