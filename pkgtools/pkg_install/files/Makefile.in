@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.3 2003/09/08 01:36:45 jlam Exp $
+# $NetBSD: Makefile.in,v 1.4 2003/09/23 05:30:33 grant Exp $
 
 SUBDIRS=	lib add admin create delete info view
 
@@ -10,6 +10,6 @@ all install clean:
 	done
 
 distclean: clean
-	rm -f config.log config.status config.lineno
+	rm -f config.log config.status configure.lineno
 	rm -f Makefile */Makefile
 	rm -f lib/config.h
