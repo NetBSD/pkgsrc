@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/05/14 14:01:34 yyamano Exp $
+# $NetBSD: Makefile,v 1.13 2002/07/13 10:08:49 kent Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
@@ -56,8 +56,9 @@ ALL_TARGET=		bootstrap
 .endif
 GCC_PREFIX=		${LOCALBASE}
 PLIST_SRC=		${PKGDIR}/PLIST.SunOS
+PLIST_SUBST+=		GCC_VERSION=${GCC_VERSION}
 MESSAGE=		${PKGDIR}/MESSAGE.SunOS
-#CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
+CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
 .endif
 
 post-extract:
@@ -72,16 +73,17 @@ post-extract:
 	  ${CP} $${FILE} $${ARCH}/$${DEST}; \
 	done; \
 	cd ${WRKSRC}/../${DISTNAME}; \
-	for i in gcc/config/alpha/netbsd-elf.h gcc/config/arm/t-netbsd gcc/config/mips/x-netbsd libf2c/libF77/dtime_.c libf2c/libF77/etime_.c; do \
+	for i in gcc/config/alpha/netbsd-elf.h gcc/config/arm/t-netbsd \
+		gcc/config/mips/x-netbsd libf2c/libF77/dtime_.c libf2c/libF77/etime_.c; do \
 	  ${RM} $${i};\
 	done
 
 post-patch:
 	${ECHO} "bogus" >${WRKSRC}/../${DISTNAME}/gcc/cstamp-h.in
-	cd ${WRKDIR} && /usr/bin/tar zxf ${_DISTDIR}/${SSP_PATCH}
+	cd ${WRKDIR} && ${GTAR} xzf ${_DISTDIR}/${SSP_PATCH}
 	${CP} ${WRKDIR}/protector.c ${WRKDIR}/protector.h ${WRKDIR}/${DISTNAME}/gcc/
-	${PATCH} -d ${WRKDIR}/${DISTNAME} --forward --quiet -E < ${WRKDIR}/protector.dif
-	${PATCH} -d ${WRKDIR}/${DISTNAME} --forward --quiet -E < ${WRKDIR}/protectonly.dif
+	${PATCH} -p0 -d ${WRKDIR}/${DISTNAME} --forward --quiet -E < ${WRKDIR}/protector.dif
+	${PATCH} -p0 -d ${WRKDIR}/${DISTNAME} --forward --quiet -E < ${WRKDIR}/protectonly.dif
 
 .if (${OPSYS} != SunOS)
 post-build:
