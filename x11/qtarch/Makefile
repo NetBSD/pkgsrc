@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2000/07/20 14:33:25 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2000/10/19 08:04:57 skrll Exp $
 #
 
-DISTNAME=	qtarch-2.0-1
-PKGNAME=	qtarch-2.0
+DISTNAME=	qtarch-2.1-1
+PKGNAME=	qtarch-2.1
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	x11 devel
 MASTER_SITES=	ftp://qtarch.sourceforge.net/pub/qtarch/
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://qtarch.sourceforge.net/pub/qtarch/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://qtarch.sourceforge.net/
 
-DEPENDS+=	qt2-*:../../x11/qt
+DEPENDS+=	qt2-libs-*:../../x11/qt2-libs
 DEPENDS+=	png-*:../../graphics/png
 
 USE_X11=	yes
