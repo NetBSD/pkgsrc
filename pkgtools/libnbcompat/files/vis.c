@@ -1,4 +1,4 @@
-/*	$NetBSD: vis.c,v 1.4 2004/03/12 15:21:13 grant Exp $	*/
+/*	$NetBSD: vis.c,v 1.5 2004/03/21 00:31:54 bouyer Exp $	*/
 
 /*-
  * Copyright (c) 1999 The NetBSD Foundation, Inc.
@@ -45,7 +45,7 @@
 #endif
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: vis.c,v 1.4 2004/03/12 15:21:13 grant Exp $");
+__RCSID("$NetBSD: vis.c,v 1.5 2004/03/21 00:31:54 bouyer Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 #include "namespace.h"
@@ -89,6 +89,8 @@ __weak_alias(vis,_vis)
 #else
 #define BELL '\007'
 #endif
+
+static const char empty[] = "";
 
 #define isoctal(c)	(((u_char)(c)) >= '0' && ((u_char)(c)) <= '7')
 #define iswhite(c)	(c == ' ' || c == '\t' || c == '\n')
@@ -322,7 +324,7 @@ vis(dst, c, flag, nextc)
 
 	_DIAGASSERT(dst != NULL);
 
-	MAKEEXTRALIST(flag, extra, "");
+	MAKEEXTRALIST(flag, extra, empty);
 	if (flag & VIS_HTTPSTYLE)
 	    HVIS(dst, c, flag, nextc, extra);
 	else
@@ -352,7 +354,7 @@ strvis(dst, src, flag)
 	char *extra;
 	int ret;
 
-	MAKEEXTRALIST(flag, extra, "");
+	MAKEEXTRALIST(flag, extra, empty);
 	ret = strsvis(dst, src, flag, extra);
 	free(extra);
 	return(ret);
@@ -369,7 +371,7 @@ strvisx(dst, src, len, flag)
 	char *extra;
 	int ret;
 
-	MAKEEXTRALIST(flag, extra, "");
+	MAKEEXTRALIST(flag, extra, empty);
 	ret = strsvisx(dst, src, len, flag, extra);
 	free(extra);
 	return(ret);
