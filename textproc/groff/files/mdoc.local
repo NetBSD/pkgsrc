@@ -36,8 +36,7 @@
 .\"
 .\"     %beginstrip%
 .
-.\" NetBSD
-.ds volume-operating-system NetBSD
+.ds volume-operating-system @@VOLUME_OPERATING_SYSTEM@@
 .
 .\" NetBSD .Lb values
 .\".ds str-Lb-libarm32     ARM32 Architecture Library (libarm32, \-larm32)
@@ -138,7 +137,7 @@
 .als str-St--isoC99 str-St--isoC-99
 .
 .\" Default .Os value
-.ds operating-system NetBSD\~1.6
+.ds operating-system @@OPERATING_SYSTEM@@
 .\" Other known versions, not yet in groff distribution
 .ds operating-system-NetBSD-1.4.2  1.4.2
 .ds operating-system-NetBSD-1.4.3  1.4.3
