@@ -1,0 +1,2 @@
+tspc is a tunnel server protocol client used to establish an IPv6
+tunnel to Freenet6, an free IPv6 over IPv4 provider.
