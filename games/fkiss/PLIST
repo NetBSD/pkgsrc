@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/14 09:40:30 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/04 00:28:02 ben Exp $
 bin/fkiss
 man/man6/fkiss.6
+share/doc/fkiss/fkiss.doc
 share/doc/fkiss/fkissex.doc
 share/doc/fkiss/fkissex1.doc
 share/doc/fkiss/fkissex2.doc

@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/07/14 09:40:30 rh Exp $
+$NetBSD: patch-ac,v 1.2 2003/12/04 00:28:02 ben Exp $
 
---- fkiss.c.orig	Mon Oct 16 22:10:18 2000
+--- fkiss.c.orig	2001-11-11 22:56:51.000000000 -0800
 +++ fkiss.c
-@@ -71,11 +71,11 @@
+@@ -85,11 +85,11 @@ static ARTBL artype[] = {
   * Document file browse command
   * Uncomment only one line in following #define DOC_COMMAND lines.
   */
@@ -15,12 +15,4 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/07/14 09:40:30 rh Exp $
 +#define DOC_COMMAND	"xterm -e less"
  /* #define DOC_COMMAND	"kterm -e less" */
  /* #define DOC_COMMAND	"(cd %A; kterm -km sjis -e jless %F) &" */
- 
-@@ -1846,6 +1846,7 @@
-   OPTTBL("-nosuffix",	OPT_FUNC,	opt_del_doc_suffix,	1),
-   OPTTBL("-autoadjust",	OPT_GET_INT,	&auto_adjust,		0),
-   OPTTBL("-alpha",	OPT_GET_INT,	&alpha_level,		0),
-+  OPTTBL("-midiplayer",	OPT_GET_STR,	&midi_player,		0),
-   OPTTBL(NULL,		0,		NULL,			0)
- };
  
