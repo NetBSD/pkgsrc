@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2549 2003/06/23 07:40:39 mrg Exp $
+$NetBSD: CHANGES,v 1.2550 2003/06/23 07:46:20 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2514,3 +2514,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added subtitleripper-0.3-1 [mrg 2003-06-23]
 	Added p5-Gdk-Pixbuf-0.7008 [mrg 2003-06-23]
 	Added dvdrip-0.50.13 [mrg 2003-06-23]
+	Updated perl5 to 5.6.1nb9 [jlam 2003-06-23]
+	Updated perl58 to 5.8.0nb2 [jlam 2003-06-23]
