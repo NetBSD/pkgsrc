@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+
+--- Kflash/kflash.cc.orig	Sat Aug 26 05:46:33 2000
++++ Kflash/kflash.cc	Sat Aug 26 05:47:50 2000
+@@ -443,7 +443,11 @@
+ 	FlashSettings(flashHandle, PLAYER_LOOP);
+ 
+ 	if (enableSound) {
++#ifdef __NetBSD__
++		FlashSoundInit(flashHandle, "/dev/sound");
++#else
+ 		FlashSoundInit(flashHandle, "/dev/dsp");
++#endif
+ 	}
+ }
+ 

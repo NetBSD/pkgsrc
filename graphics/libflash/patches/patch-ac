@@ -1,0 +1,29 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+
+--- Lib/sound.cc.orig	Fri Aug 25 17:03:22 2000
++++ Lib/sound.cc	Fri Aug 25 17:05:29 2000
+@@ -27,6 +27,10 @@
+ #include <sys/ioctl.h>
+ #ifndef NOSOUND
++#ifdef __NetBSD__
++#include <soundcard.h>
++#else
+ #include <linux/soundcard.h>
+ #endif
++#endif
+ 
+ #ifdef RCSID
+@@ -163,5 +167,5 @@
+ 
+ 	// Reset device
+-	status = ioctl(dsp, SNDCTL_DSP_RESET);
++	status = ioctl(dsp, SNDCTL_DSP_RESET, NULL);
+ 	if (status < 0) perror("ioctl SNDCTL_DSP_RESET");
+ 
+@@ -325,5 +329,5 @@
+ 		// At last ! Play It !
+ 		write(dsp,buffer,nbBytes);
+-		status = ioctl(dsp, SNDCTL_DSP_POST);
++		status = ioctl(dsp, SNDCTL_DSP_POST, NULL);
+ 	}
+ 

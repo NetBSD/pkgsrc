@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+
+--- Plugin/plugin.c.orig	Sat Aug 26 06:41:31 2000
++++ Plugin/plugin.c
+@@ -162,7 +162,11 @@
+ 
+ 		FlashSetCursorOnOffMethod(This->fh, cursorOnOff, (void*)instance);
+ 
++#ifdef __NetBSD__
++		FlashSoundInit(This->fh, "/dev/sound");
++#else
+ 		FlashSoundInit(This->fh, "/dev/dsp");
++#endif
+ 
+ 		return NPERR_NO_ERROR;
+ 	}

@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+include/flash/adpcm.h
+include/flash/cxform.h
+include/flash/graphic.h
+include/flash/script.h
+include/flash/sqrt.h
+include/flash/bitmap.h
+include/flash/displaylist.h
+include/flash/matrix.h
+include/flash/shape.h
+include/flash/swf.h
+include/flash/button.h
+include/flash/flash.h
+include/flash/program.h
+include/flash/sound.h
+include/flash/text.h
+include/flash/character.h
+include/flash/font.h
+include/flash/rect.h
+include/flash/sprite.h
+include/flash/movie.h
+lib/libflash.a
+lib/libflash.la
+lib/libflash.so.0.4
+@dirrm include/flash
