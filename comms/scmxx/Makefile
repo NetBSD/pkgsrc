@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2002/03/27 22:44:28 kleink Exp $
+# $NetBSD: Makefile,v 1.9 2002/03/27 22:57:40 kleink Exp $
 #
 
 DISTNAME=		scmxx-0.5.16
+PKGREVISION=		1
 CATEGORIES=		comms
 MASTER_SITES=		http://www.hendrik-sattler.de/scmxx/download/ \
 			http://ma2geo.mathematik.uni-karlsruhe.de/~hendrik/scmxx/download/
