@@ -1,0 +1,129 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/09 20:44:04 jlam Exp $
+include/boost/array.hpp
+include/boost/call_traits.hpp
+include/boost/cast.hpp
+include/boost/compose.hpp
+include/boost/compressed_pair.hpp
+include/boost/config.hpp
+include/boost/cstdint.hpp
+include/boost/detail/call_traits.hpp
+include/boost/detail/compressed_pair.hpp
+include/boost/detail/ob_call_traits.hpp
+include/boost/detail/ob_compressed_pair.hpp
+include/boost/detail/ob_type_traits.hpp
+include/boost/detail/type_traits.hpp
+include/boost/integer.hpp
+include/boost/integer_traits.hpp
+include/boost/min_rand.hpp
+include/boost/operators.hpp
+include/boost/progress.hpp
+include/boost/rational.hpp
+include/boost/smart_ptr.hpp
+include/boost/stdint.h
+include/boost/timer.hpp
+include/boost/type_traits.hpp
+include/boost/utility.hpp
+share/doc/html/boost/index.htm
+share/doc/html/boost/libraries.htm
+share/doc/html/boost/libs/array/c++boost.gif
+share/doc/html/boost/libs/compose/compose1.cpp
+share/doc/html/boost/libs/compose/compose2.cpp
+share/doc/html/boost/libs/compose/compose3.cpp
+share/doc/html/boost/libs/compose/compose4.cpp
+share/doc/html/boost/libs/compose/index.htm
+share/doc/html/boost/libs/dir_it/dir_it_tst.cpp
+share/doc/html/boost/libs/dir_it/directory.cpp
+share/doc/html/boost/libs/dir_it/index.htm
+share/doc/html/boost/libs/integer/cstdint.htm
+share/doc/html/boost/libs/integer/index.htm
+share/doc/html/boost/libs/integer/integer.htm
+share/doc/html/boost/libs/integer/integer_test.cpp
+share/doc/html/boost/libs/integer/integer_traits_test.cpp
+share/doc/html/boost/libs/min_rand/generate_n_test.cpp
+share/doc/html/boost/libs/min_rand/index.htm
+share/doc/html/boost/libs/min_rand/min_rand_test.cpp
+share/doc/html/boost/libs/pri_queue/sidebar.jpg
+share/doc/html/boost/libs/rational/rational_example.cpp
+share/doc/html/boost/libs/smart_ptr/gccspeed.gif
+share/doc/html/boost/libs/smart_ptr/index.htm
+share/doc/html/boost/libs/smart_ptr/msvcspeed.gif
+share/doc/html/boost/libs/smart_ptr/scoped_array.htm
+share/doc/html/boost/libs/smart_ptr/scoped_ptr.htm
+share/doc/html/boost/libs/smart_ptr/shared_array.htm
+share/doc/html/boost/libs/smart_ptr/shared_ptr.htm
+share/doc/html/boost/libs/smart_ptr/smart_ptr.htm
+share/doc/html/boost/libs/smart_ptr/smart_ptr_test.cpp
+share/doc/html/boost/libs/smart_ptr/smarttests.htm
+share/doc/html/boost/libs/timer/index.htm
+share/doc/html/boost/libs/timer/prg_display.cpp
+share/doc/html/boost/libs/timer/prg_timer.cpp
+share/doc/html/boost/libs/timer/timer.cpp
+share/doc/html/boost/libs/timer/timer.htm
+share/doc/html/boost/libs/timer/timer_test.cpp
+share/doc/html/boost/libs/utility/algo_opt_examples.cpp
+share/doc/html/boost/libs/utility/call_traits.htm
+share/doc/html/boost/libs/utility/cast.htm
+share/doc/html/boost/libs/utility/cast_test.cpp
+share/doc/html/boost/libs/utility/compressed_pair.htm
+share/doc/html/boost/libs/utility/index.htm
+share/doc/html/boost/libs/utility/iterators_test.cpp
+share/doc/html/boost/libs/utility/noncopyable_test.cpp
+share/doc/html/boost/libs/utility/operators.htm
+share/doc/html/boost/libs/utility/operators_test.cpp
+share/doc/html/boost/libs/utility/type_traits.htm
+share/doc/html/boost/libs/utility/type_traits_test.cpp
+share/doc/html/boost/libs/utility/utility.htm
+share/doc/html/boost/people.htm
+share/doc/html/boost/people/beman_dawes.html
+share/doc/html/boost/people/beman_dawes.jpg
+share/doc/html/boost/people/beman_dawes_small.jpg
+share/doc/html/boost/people/dave_abrahams.htm
+share/doc/html/boost/people/dave_abrahams.jpg
+share/doc/html/boost/people/dave_abrahams_small.jpg
+share/doc/html/boost/people/dietmar_kuehl.htm
+share/doc/html/boost/people/dietmar_kuehl.jpg
+share/doc/html/boost/people/dietmar_kuehl_small.jpg
+share/doc/html/boost/people/ed_brey.htm
+share/doc/html/boost/people/ed_brey.jpg
+share/doc/html/boost/people/ed_brey_small.jpg
+share/doc/html/boost/people/gavin_collings.htm
+share/doc/html/boost/people/gavin_collings.jpg
+share/doc/html/boost/people/gavin_collings_small.jpg
+share/doc/html/boost/people/greg_colvin.htm
+share/doc/html/boost/people/greg_colvin.jpg
+share/doc/html/boost/people/greg_colvin_small.jpg
+share/doc/html/boost/people/jens_maurer.htm
+share/doc/html/boost/people/jens_maurer.jpg
+share/doc/html/boost/people/jens_maurer_small.jpg
+share/doc/html/boost/people/jeremy_siek.htm
+share/doc/html/boost/people/jeremy_siek.jpg
+share/doc/html/boost/people/jeremy_siek_small.jpg
+share/doc/html/boost/people/john_maddock.htm
+share/doc/html/boost/people/john_maddock.jpg
+share/doc/html/boost/people/john_maddock_small.jpg
+share/doc/html/boost/people/kevlin_henney.htm
+share/doc/html/boost/people/kevlin_henney.jpg
+share/doc/html/boost/people/kevlin_henney_small.jpg
+share/doc/html/boost/people/nicolai_josuttis.jpg
+share/doc/html/boost/people/nicolai_josuttis_small.jpg
+share/doc/html/boost/people/paul_moore.htm
+share/doc/html/boost/people/sean_corfield.jpg
+share/doc/html/boost/people/sean_corfield_small.jpg
+share/doc/html/boost/people/valentin_bonnard.htm
+share/doc/html/boost/people/valentin_bonnard.jpg
+share/doc/html/boost/people/valentin_bonnard_small.jpg
+@dirrm share/doc/html/boost/people
+@dirrm share/doc/html/boost/libs/utility
+@dirrm share/doc/html/boost/libs/timer
+@dirrm share/doc/html/boost/libs/smart_ptr
+@dirrm share/doc/html/boost/libs/rational
+@dirrm share/doc/html/boost/libs/pri_queue
+@dirrm share/doc/html/boost/libs/min_rand
+@dirrm share/doc/html/boost/libs/integer
+@dirrm share/doc/html/boost/libs/dir_it
+@dirrm share/doc/html/boost/libs/compose
+@dirrm share/doc/html/boost/libs/array
+@dirrm share/doc/html/boost/libs
+@dirrm share/doc/html/boost
+@dirrm include/boost/detail
+@dirrm include/boost
