@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/10/21 06:26:05 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2002/12/19 14:51:41 jlam Exp $
 
 PKGNAME=	oss-${OSS_VERSION}
 CATEGORIES=	audio sysutils
@@ -18,8 +18,8 @@ OSVERSION_SPECIFIC=	yes
 DISTNAME=		oss397c-netbsd-v1.5
 OSS_VERSION=		3.9.7c
 .elif !empty(MACHINE_PLATFORM:MNetBSD-1.6*-i386)
-DISTNAME=		oss397e-netbsd-v1.6
-OSS_VERSION=		3.9.7e
+DISTNAME=		oss397f-netbsd-v1.6
+OSS_VERSION=		3.9.7f
 .endif
 
 RESTRICTED=		"No re-distribution."
