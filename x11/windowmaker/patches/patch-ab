@@ -1,21 +1,21 @@
-$NetBSD: patch-ab,v 1.8 1999/04/16 20:08:16 jlam Exp $
+$NetBSD: patch-ab,v 1.9 1999/06/21 04:46:53 jlam Exp $
 
---- configure.orig	Thu Apr  1 11:49:36 1999
-+++ configure	Wed Apr 14 02:43:30 1999
-@@ -1302,7 +1302,8 @@
-   echo "$ac_t""no" 1>&6
+--- configure.orig	Thu Jun  3 07:42:09 1999
++++ configure	Thu Jun 10 23:19:53 1999
+@@ -1478,7 +1478,8 @@
  fi
+ rm -f confcache
  
--# Always use our own libtool.
-+# Use NetBSD's pkglibtool
+-
++# Use NetBSD's pkglibtool.
 +if false; then
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
- # Check for any special flags to pass to ltconfig.
-@@ -1347,6 +1348,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+ # Actually configure libtool.  ac_aux_dir is where install-sh is found.
+ CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
+ LD="$LD" LDFLAGS="$LDFLAGS" LIBS="$LIBS" \
+@@ -1507,6 +1508,7 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
 +fi
  
  

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 1999/05/20 20:09:53 tron Exp $
+# $NetBSD: Makefile,v 1.30 1999/06/21 04:46:52 jlam Exp $
 
-DISTNAME=		WindowMaker-0.53.0
-PKGNAME=		windowmaker-0.53.0
+DISTNAME=		WindowMaker-0.60.0
+PKGNAME=		windowmaker-0.60.0
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/beta/srcs/ \
 			ftp://shadowmere.student.utwente.nl/pub/WindowMaker/ \
@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=	--enable-${OPTION}
 # are installed.
 #
 .if defined(LINGUAS)
-DEPENDS+=		gettext-0.10.35:../../devel/gettext
+BUILD_DEPENDS+=		gettext-0.10.35:../../devel/gettext
 CONFIGURE_ARGS+=	--enable-modelock
 CONFIGURE_ENV+=		LINGUAS="${LINGUAS}"
 
