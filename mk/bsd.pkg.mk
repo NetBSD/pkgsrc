@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.994 2002/06/22 02:48:35 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.995 2002/06/23 02:23:23 kei Exp $
 #
 # This file is in the public domain.
 #
@@ -836,6 +836,10 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://telia.dl.sourceforge.net/sourceforge/ \
 	ftp://ftp3.sourceforge.net/pub/sourceforge/ \
 	ftp://ftp.tuwien.ac.at/opsys/linux/sourceforge/
+
+MASTER_SITE_MOZILLA+=	\
+	ftp://ftp.mozilla.org/pub/mozilla/releases/ \
+	ftp://ftp.fu-berlin.de/pub/unix/network/www/mozilla/releases/
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
