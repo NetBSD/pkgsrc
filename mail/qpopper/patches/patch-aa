@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.7 2001/07/31 13:42:42 taca Exp $
+
+--- configure.orig	Tue Jul 31 22:28:30 2001
++++ configure
+@@ -1315,13 +1315,6 @@
+ 
+ 
+ 
+-if test -r /usr/local/include/gdbm.h -a "$GCC" = yes
+-then
+-    CFLAGS="$CFLAGS -idirafter /usr/local/include"
+-    CPPFLAGS="$CPPFLAGS -idirafter /usr/local/include"
+-fi
+-
+-
+ if test "$GCC" = yes
+ then
+         echo $ac_n "checking for gcc version 2.7.2.3""... $ac_c" 1>&6
