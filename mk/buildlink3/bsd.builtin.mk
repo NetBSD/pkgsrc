@@ -1,4 +1,4 @@
-# $NetBSD: bsd.builtin.mk,v 1.2 2004/09/21 15:01:40 jlam Exp $
+# $NetBSD: bsd.builtin.mk,v 1.3 2004/11/10 17:39:03 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -123,18 +123,20 @@ PREFER.${_pkg_}=	pkgsrc
 .endfor
 
 .for _pkg_ in ${BUILDLINK_PACKAGES}
-.  if ${PREFER.${_pkg_}} == "pkgsrc"
-USE_BUILTIN.${_pkg_}?=	no
-.  endif
 #
 # builtin.mk files default to using the built-in software if it's
 # available (${PREFER.<pkg>} == "native") unless USE_BUILTIN.<pkg> has
 # been previously set.
 #
-.  if defined(BUILDLINK_PKGSRCDIR.${_pkg_})
-.    if exists(${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk)
-.      include "${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk"
-.    endif
+.  if ${PREFER.${_pkg_}} == "pkgsrc"
+USE_BUILTIN.${_pkg_}?=	no
+.  endif
+#
+# Set the default path to the package builtin.mk file.
+#
+BUILDLINK_BUILTIN_MK.${_pkg_}?=	${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk
+.  if exists(${BUILDLINK_BUILTIN_MK.${_pkg_}})
+.    include "${BUILDLINK_BUILTIN_MK.${_pkg_}}"
 .  endif
 .endfor
 
