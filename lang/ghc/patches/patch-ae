@@ -1,12 +1,15 @@
-$NetBSD: patch-ae,v 1.3 2003/04/29 11:27:44 augustss Exp $
+$NetBSD: patch-ae,v 1.4 2004/05/29 14:28:43 kristerw Exp $
 
---- ./ghc/compiler/Makefile.orig	Fri Jun 14 10:23:57 2002
-+++ ./ghc/compiler/Makefile	Fri Mar 28 23:48:01 2003
-@@ -4,6 +4,7 @@
- TOP = ..
- 
- # Use GHC for compiling C bits (NB. must be before boilerplate include)
-+# NB. this requires BootingFromHc to be set on the make command line!
- #
- ifneq "$(BootingFromHc)" "YES"
- UseGhcForCc = YES
+--- libraries/readline/package.conf.in.orig	Fri May 28 17:22:30 2004
++++ libraries/readline/package.conf.in	Fri May 28 17:24:06 2004
+@@ -29,5 +29,9 @@
+ 	package_deps	= [ "base" ],
+ 	extra_ghc_opts	= [],
+ 	extra_cc_opts	= [],
+-	extra_ld_opts	= []
++	extra_ld_opts	=
++	 [
++	   "-Wl", "-R@PREFIX@/lib"
++	 , "-L", "@PREFIX@/lib"
++	 ]
+ }

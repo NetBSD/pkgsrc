@@ -1,26 +1,11 @@
-$NetBSD: distinfo,v 1.6 2004/01/10 19:31:25 kristerw Exp $
+$NetBSD: distinfo,v 1.7 2004/05/29 14:28:43 kristerw Exp $
 
-SHA1 (ghc-5.04.3-src.tar.bz2) = 9b0f17e871557a76140fbf738138e1cf5d356e9d
-Size (ghc-5.04.3-src.tar.bz2) = 4741512 bytes
-SHA1 (ghc-5.04.3-i386-unknown-netbsd-hc.tar.bz2) = 4dc1ae1ab4a9edbe83df0a54c93af24a5789a87f
-Size (ghc-5.04.3-i386-unknown-netbsd-hc.tar.bz2) = 5928026 bytes
-SHA1 (patch-aa) = fa7e8e1791b19368f39530261104724165e663f8
-SHA1 (patch-ab) = 5bfb4a4ce1cc46d789abad767f344909b149a640
-SHA1 (patch-ac) = 106a7b195fdf563bcf43c2a5ef994917da94e17a
-SHA1 (patch-ad) = 8b8d10ca9e0ae3a82c2881624f4f6aae3402b13e
-SHA1 (patch-ae) = 4340eb154b8972625b36471f6cb373c390012817
-SHA1 (patch-af) = 22370016af5a9b6ce2262e19057547adf29e25c8
-SHA1 (patch-ag) = 0f0567ae53d577cc50796176f01f4f52c991999c
-SHA1 (patch-ah) = 9ec4a7f91bcfb6ad259c33a8c849ddd04902a210
-SHA1 (patch-ai) = 501da9d7810b448d91723e6b5703df2af697304d
-SHA1 (patch-aj) = d59b908f045de73ea3703d1e1388bc8945f5a657
-SHA1 (patch-ak) = 3fee440657cc51dce232648c0b69b07866458c7b
-SHA1 (patch-al) = 125dbe601f426b645c057cda97869aec31be7bd3
-SHA1 (patch-am) = 71c6c2f254e7fe44359253a1182f13a03dec05bd
-SHA1 (patch-an) = 167d1dde62857a6c1186d609d89e4841ff17c2d8
-SHA1 (patch-ao) = 8c2eb4ac6701d33a04e9e1f6e8097815080fecd1
-SHA1 (patch-ap) = bd502c0d6957b6df6cd3d14b6b169d6a8edb46c6
-SHA1 (patch-aq) = e4d71497a95923a069c3f8032359182c5705f3eb
-SHA1 (patch-ar) = 62a6db03a20a80be7c6b113cae5079de75c9665c
-SHA1 (patch-as) = 865a04de68667215ada3e0f27bdc18b8218178d7
-SHA1 (patch-at) = 92c2b6c48c6de57ec65b1908fa0b52cc091ab7d8
+SHA1 (ghc-6.2.1-src.tar.bz2) = 84343ff06ee5645ee3f8b428635525e5ebdfcc65
+Size (ghc-6.2.1-src.tar.bz2) = 5367409 bytes
+SHA1 (ghc-6.2.1-i386-unknown-netbsd-hc.tar.gz) = 422a0e6865517f7d5e5adbd6c13537391358020b
+Size (ghc-6.2.1-i386-unknown-netbsd-hc.tar.gz) = 7780890 bytes
+SHA1 (patch-aa) = d93f473b429d5002c83745c1b50d12144351e68b
+SHA1 (patch-ab) = 24aa32529796b13bd7e2c3060a946bd6a79f88b4
+SHA1 (patch-ac) = 2dc0cba195b9f7ad58fefb179bf33b838dfb6cfa
+SHA1 (patch-ad) = bad30d0dacb2010db877f9ad33cf3d60b98adced
+SHA1 (patch-ae) = 3ee6b6b8731c03a5157ce5bf1144af3035985abd

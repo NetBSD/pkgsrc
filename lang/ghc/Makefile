@@ -1,55 +1,48 @@
-# $NetBSD: Makefile,v 1.16 2004/03/22 03:39:00 kristerw Exp $
+# $NetBSD: Makefile,v 1.17 2004/05/29 14:28:43 kristerw Exp $
 
-DISTNAME=	ghc-5.04.3
+DISTNAME=	ghc-6.2.1
 CATEGORIES=	lang
-MASTER_SITES=	http://www.haskell.org/ghc/dist/5.04.3/
-DISTFILES=	ghc-5.04.3-src.tar.bz2 ghc-5.04.3-i386-unknown-netbsd-hc.tar.bz2
+MASTER_SITES=	http://www.haskell.org/ghc/dist/6.2.1/
+DISTFILES=	ghc-6.2.1-src.tar.bz2 \
+		ghc-6.2.1-i386-unknown-netbsd-hc.tar.gz
 
 MAINTAINER=	kristerw@NetBSD.org
 HOMEPAGE=	http://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell
 
-GNU_CONFIGURE=	# defined
-USE_X11=	# defined
+SITES_ghc-6.2.1-i386-unknown-netbsd-hc.tar.gz=${MASTER_SITE_LOCAL}
+
+GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./distrib/hc-build
-CONFIGURE_ENV+=		LIBS="-L${PREFIX}/lib"
-AUTOCONF_REQD=2.13
+CONFIGURE_ARGS+=	--enable-hc-boot-unregisterised
+INSTALL_MAKE_FLAGS+=	stage=1
 
-USE_BUILDLINK2=	#defined
+USE_BUILDLINK3=		yes
 
-USE_GNU_READLINE=yes
-USE_PERL5=	yes
-USE_GNU_TOOLS+=	make
+USE_GNU_READLINE=	yes	# uses the UNDO_ constants
+USE_PERL5=		yes
+USE_GNU_TOOLS+=		make
 
-# Note: this package contains a Haskell compiler that is itself
-# written in Haskell. There are basically two ways we can solve the
-# bootstrap problem:
-# 1. bootstrap from pre-generated C files.
-# 2. first download a binary pre-built compiler and use it to compile.
-# We currently use way 1.
-# The problem with 2. is that it may make the package more sensitive
-# to the exact NetBSD versions involved (the version of the build
-# system compared to the version used to build the pre-built binary).
-# On the other hand, bootstrapping GHC from C is very fragile and it
-# may be harder to update the package with method 1.
-# For comparison, FreeBSD currently uses method 2.
-
-# Note: a number of non-i386 platforms, including solaris/sparc,
-# osf/alpha etc are supported natively by ghc. pkg support for those
-# platforms and their NetBSD varients is left as a mid-level exercise
-# for the reader
-ONLY_FOR_PLATFORM= NetBSD-1.5*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
+# Everything is done in the configure target.
+NO_BUILD=		yes
 
 pre-configure:
-	cd ${WRKSRC}; file=configure.in;				\
-	${SED} -e "s|@PREFIX@|${PREFIX}|g" $${file} > $${file}.fixed;	\
-	${MV} -f $${file}.fixed $${file};				\
-	${AUTOCONF}
+	${MV} ${WRKSRC}/mk/bootstrap.mk ${WRKSRC}/mk/bootstrap.mk.tmp
+	${SED} -e 's,@PREFIX@,${PREFIX},g' \
+		< ${WRKSRC}/mk/bootstrap.mk.tmp \
+		> ${WRKSRC}/mk/bootstrap.mk
+	${MV} ${WRKSRC}/libraries/readline/package.conf.in \
+		${WRKSRC}/libraries/readline/package.conf.in.tmp
+	${SED} -e 's,@PREFIX@,${PREFIX},g' \
+		< ${WRKSRC}/libraries/readline/package.conf.in.tmp \
+		> ${WRKSRC}/libraries/readline/package.conf.in
+	${MV} ${WRKSRC}/ghc/rts/package.conf.in \
+		${WRKSRC}/ghc/rts/package.conf.in.tmp
+	${SED} -e 's,@PREFIX@,${PREFIX},g' \
+		< ${WRKSRC}/ghc/rts/package.conf.in.tmp \
+		> ${WRKSRC}/ghc/rts/package.conf.in
 
-do-build:
-
-.include "../../devel/readline/buildlink2.mk"
-.include "../../devel/gmp/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../mk/autoconf.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,24 +1,13 @@
-$NetBSD: patch-ac,v 1.2 2003/04/29 11:27:42 augustss Exp $
+$NetBSD: patch-ac,v 1.3 2004/05/29 14:28:43 kristerw Exp $
 
---- ./mk/package.mk.orig	Tue Jul 23 12:19:50 2002
-+++ ./mk/package.mk	Fri Mar 28 23:48:02 2003
-@@ -17,8 +17,10 @@
- 		| sed 's/^#.*$$//g' >$@
- 
- boot all :: $(PACKAGE).conf.inplace $(PACKAGE).conf.installed
-+ifneq "$(BootingFromHc)" "YES"
- 	$(GHC_PKG_INPLACE) --update-package <$(PACKAGE).conf.inplace
- 	$(GHC_PKG_INPLACE)  -f $(GHC_DRIVER_DIR)/package.conf --update-package <$(PACKAGE).conf.installed
-+endif
- 
- CLEAN_FILES += $(PACKAGE).conf.installed $(PACKAGE).conf.inplace
- 
-@@ -31,7 +33,7 @@
- 
- SRC_HSC2HS_OPTS += -I.
- 
--ifeq "$(NON_HS_PACKAGE)" ""
-+ifeq "$(NON_HS_PKG)" ""
- SRC_HC_OPTS 	+= -package-name $(PACKAGE)
- SRC_HC_OPTS 	+= $(GhcLibHcOpts)
- SRC_HC_OPTS     += $(patsubst %, -package %, $(PACKAGE_DEPS))
+--- ghc/rts/package.conf.in.orig	Mon Mar  1 16:26:29 2004
++++ ghc/rts/package.conf.in	Fri May 28 17:20:27 2004
+@@ -131,6 +131,8 @@
+          , "-u", "GHCziWeak_runFinalizzerBatch_closure"
+          , "-u", "__stginit_Prelude"
+ #endif
++	 , "-Wl", "-R@PREFIX@/lib"
++	 , "-L", "@PREFIX@/lib"
+          ]
+ #ifdef HAVE_FRAMEWORK_HASKELLSUPPORT
+         , extra_frameworks  = [ "HaskellSupport" ]
