@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:58:28 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:01:09 agc Exp $
 
-MD5 (xemacs/xemacs-21.1.14.tar.bz2) = a1aa60c98319c60720f23dc1a9d1deaa
-MD5 (xemacs/xemacs-21.1.14-elc.tar.gz) = e103c8143a92aca750d502da88a2ace5
-MD5 (xemacs/xemacs-21.1.14-info.tar.gz) = 76b23d75e67de550ee51fc92e83a6b02
+SHA1 (xemacs/xemacs-21.1.14.tar.bz2) = 9be60177dfaa2be8b847ce15b26d7009afa9b7b9
+Size (xemacs/xemacs-21.1.14.tar.bz2) = 5482480 bytes
+SHA1 (xemacs/xemacs-21.1.14-elc.tar.gz) = c8f9289b9f0531875889dd663c94f3ee9a02d8c9
+Size (xemacs/xemacs-21.1.14-elc.tar.gz) = 784709 bytes
+SHA1 (xemacs/xemacs-21.1.14-info.tar.gz) = 73942f88cbdc477a1e8bfbb0a562235381c3f368
+Size (xemacs/xemacs-21.1.14-info.tar.gz) = 1506819 bytes
 SHA1 (patch-aa) = 25a050e10a6e4853e27d2b4a268b445fd5277192
 SHA1 (patch-ab) = 7d8f6b362337a7279900c28bc078091980f5e369
 SHA1 (patch-ac) = 5d03243c475f0980d6e202baf8490084f566c876

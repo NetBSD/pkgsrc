@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:58:08 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:01:03 agc Exp $
 
-MD5 (mule-2.3.tar.gz) = e97cfbf19ee43442b416004eb92aac41
+SHA1 (mule-2.3.tar.gz) = 52737767955caf2fde34b994f367a89c5d8a045f
+Size (mule-2.3.tar.gz) = 10240256 bytes
 SHA1 (patch-aa) = 1ef62f91bb274681045fb4ce8a1c220544a0fbf6
 SHA1 (patch-ab) = f7df46aab05a2a7c7c3d9dbc26f29091e0320734
 SHA1 (patch-ac) = e8e2c9ec75b2068504bcb972e21e71d9c30aa199

@@ -1,11 +1,17 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:57:56 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:00:59 agc Exp $
 
-MD5 (abisuite/abi-0.7.10.tar.gz) = 3caa34f2698d5b29240b59d4e80dbcbb
-MD5 (abisuite/abidistfiles-0.7.10.tar.gz) = 1d95aa15cb355d238c853f1f254f0f4f
-MD5 (abisuite/expat-0.7.10.tar.gz) = fa7137a2b8a9688b97e5a0359ee308ad
-MD5 (abisuite/libiconv-0.7.10.tar.gz) = e824e8862d1cff43c180249cf67a7ca0
-MD5 (abisuite/unixfonts-0.7.10.tar.gz) = 4bb4899dd0aec17ddee8787d3a5a7e36
-MD5 (abisuite/wv-0.7.10.tar.gz) = c3c984b79b3cc1554022552c1e4a3c4e
+SHA1 (abisuite/abi-0.7.10.tar.gz) = 4b878760fc72077062b5bc218eac50217b247805
+Size (abisuite/abi-0.7.10.tar.gz) = 4636793 bytes
+SHA1 (abisuite/abidistfiles-0.7.10.tar.gz) = af8f8c900357c0c2a40c2cc691c825b37c4e3617
+Size (abisuite/abidistfiles-0.7.10.tar.gz) = 560355 bytes
+SHA1 (abisuite/expat-0.7.10.tar.gz) = 54ca32a6aed9607ea637412716b952bed980034c
+Size (abisuite/expat-0.7.10.tar.gz) = 66421 bytes
+SHA1 (abisuite/libiconv-0.7.10.tar.gz) = e769adceacfea42ffbb7626e41da44ad34a763f4
+Size (abisuite/libiconv-0.7.10.tar.gz) = 1484987 bytes
+SHA1 (abisuite/unixfonts-0.7.10.tar.gz) = 606ee92fbfe56cd0c80b80e5fa5c011b1af4cd2e
+Size (abisuite/unixfonts-0.7.10.tar.gz) = 1861943 bytes
+SHA1 (abisuite/wv-0.7.10.tar.gz) = 469d7317d844ba1010c4d4a155ce476a8cd19c76
+Size (abisuite/wv-0.7.10.tar.gz) = 1175280 bytes
 SHA1 (patch-aa) = a40db24e3d228b4ce3e7f702566fc6d9801bdb3b
 SHA1 (patch-ab) = 9dbc317697b767bee137cb81d7cc8225a4a96e79
 SHA1 (patch-ac) = 67635e365940271c7c7163d9d3ecb705054130ab
