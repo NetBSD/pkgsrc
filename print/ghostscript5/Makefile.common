@@ -1,0 +1,78 @@
+# $NetBSD: Makefile.common,v 1.1 2000/03/24 18:15:30 jlam Exp $
+
+DISTNAME=	ghostscript-5.50
+CATEGORIES=	print
+MASTER_SITES=	ftp://ftp.cs.wisc.edu/ghost/aladdin/gs550/ \
+		ftp://ftp.cs.wisc.edu/ghost/aladdin/fonts/ \
+		http://www.erdw.ethz.ch/~bonk/ftp/gs-driver-distrib/ \
+		ftp://ftp.sbs.de/pub/graphics/ghostscript/pcl3/
+DISTFILES=	${GS_SOURCES} ${HP850_DRV} ${HPDJ_DRV}
+
+PATCH_SITES=	http://www.cs.wisc.edu/~ghost/aladdin/relnotes/gs550/
+PATCHFILES=	990524.txt 990220c.txt 990220b.txt 990220a.txt 990220.txt \
+		990120a.txt 990120.txt 990117.txt 990115a.txt 981222.txt \
+		981221.txt 981220.txt
+
+MAINTAINER=	explorer@netbsd.org
+HOMEPAGE=	http://www.cs.wisc.edu/~ghost/index.html
+
+BUILD_DEPENDS+=	${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b:../../graphics/jpeg:extract
+BUILD_DEPENDS+=	${LOCALBASE}/bin/unzip:../../archivers/unzip
+DEPENDS+=	png>=1.0.6:../../graphics/png
+
+FILESDIR=	${.CURDIR}/../../print/ghostscript5/files
+PATCHDIR=	${.CURDIR}/../../print/ghostscript5/patches
+SCRIPTDIR=	${.CURDIR}/../../print/ghostscript5/scripts
+
+.include "../../mk/bsd.prefs.mk"
+
+DIST_SUBDIR=	${DISTNAME:C/-.*$//}
+EXTRACT_ONLY=	${GS_SOURCES} ${HPDJ_DRV}
+ALL_TARGET=	std
+MAKEFILE=	unix-gcc.mak
+MAKE_ENV+=	MAKEOBJDIR=. prefix=${PREFIX}
+.if ${OPSYS} == "SunOS"
+LDFLAGS+=	-L${LOCALBASE}/bsd/lib
+.elif ${OPSYS} == NetBSD && ${MACHINE_ARCH} == arm32
+CFLAGS=
+.endif
+.if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
+MAKE_FLAGS+=	-DA4
+.endif
+WRKSRC=		${WRKDIR}/gs5.50
+
+GS_SOURCES=	ghostscript-5.50.tar.gz
+GS_SOURCES+=	ghostscript-5.50gnu.tar.gz
+
+# Additional driver HP 850, see http://www.erdw.ethz.ch/~bonk/hp850/hp850.html
+HP850_DRV=	hp8xxs13.zip
+
+# Additional driver for several HP deskjets
+HPDJ_VER=	2.6
+HPDJ_DRV=	hpdj-${HPDJ_VER}.tar.gz
+
+SCRIPT_SUFFIX=	.batch
+
+common-post-extract:	.USE
+	cd ${WRKSRC}; ${PAX} -rf ${WRKDIR}/hpdj-${HPDJ_VER}/hpdj.tar
+	${RM} -f ${WRKSRC}/jpeg
+	${LN} -s ${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ${WRKSRC}/jpeg
+	cd ${WRKSRC}; ${LOCALBASE}/bin/unzip -uLa ${_DISTDIR}/${HP850_DRV}
+
+pre-patch:
+	${RM} -f ${WRKSRC}/lib ${WRKSRC}/src
+	${LN} -s . ${WRKSRC}/lib
+	${LN} -s . ${WRKSRC}/src
+	${PATCH} ${PATCH_ARGS} < ${WRKSRC}/zmedia2.c-5.50.diff
+	${CAT} ${WRKSRC}/contrib.mak-5.50.add >>${WRKSRC}/contrib.mak
+
+post-patch:
+	${RM} -f ${WRKSRC}/lib ${WRKSRC}/src
+
+do-configure:
+	${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/configure${SCRIPT_SUFFIX}
+
+pre-clean:
+	@cd ../../graphics/jpeg && ${MAKE} clean
+
+.include "../../mk/bsd.pkg.mk"
