@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2004/02/05 08:27:59 markd Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2004/02/15 11:10:50 markd Exp $
 #
 # This Makefile fragment is included by packages that use kdesdk.
 #
@@ -36,6 +36,7 @@ BUILDLINK_FILES.kdesdk+=	lib/kde3/kbabel_punctuationtool.*
 BUILDLINK_FILES.kdesdk+=	lib/kde3/kbabel_setfuzzytool.*
 BUILDLINK_FILES.kdesdk+=	lib/kde3/kbabel_whitespacetool.*
 BUILDLINK_FILES.kdesdk+=	lib/kde3/kbabel_xmltool.*
+BUILDLINK_FILES.kdesdk+=	lib/kde3/kbabeldict_dbsearchengine.*
 BUILDLINK_FILES.kdesdk+=	lib/kde3/kbabeldict_poauxiliary.*
 BUILDLINK_FILES.kdesdk+=	lib/kde3/kbabeldict_pocompendium.*
 BUILDLINK_FILES.kdesdk+=	lib/kde3/kbabeldict_tmxcompendium.*
@@ -56,7 +57,7 @@ BUILDLINK_FILES.kdesdk+=	lib/libkbabeldictplugin.*
 BUILDLINK_FILES.kdesdk+=	lib/libkompareinterface.*
 BUILDLINK_FILES.kdesdk+=	lib/libkspy.*
 
-.include "../../databases/db/buildlink2.mk"
+.include "../../databases/db4/buildlink2.mk"
 .include "../../devel/libtool/buildlink2.mk"
 .include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
