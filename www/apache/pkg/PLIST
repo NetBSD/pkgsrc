@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2000/01/31 23:37:29 tron Exp $
+@comment $NetBSD: PLIST,v 1.14 2000/04/24 13:13:23 tron Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
@@ -86,9 +86,12 @@ share/httpd/htdocs/index.html.en
 share/httpd/htdocs/index.html.es
 share/httpd/htdocs/index.html.fr
 share/httpd/htdocs/index.html.it
+share/httpd/htdocs/index.html.ja.jis
 share/httpd/htdocs/index.html.lu
 share/httpd/htdocs/index.html.nl
+share/httpd/htdocs/index.html.po.iso-pl
 share/httpd/htdocs/index.html.pt
+share/httpd/htdocs/index.html.pt-br
 share/httpd/htdocs/index.html.se
 share/httpd/htdocs/manual/LICENSE
 share/httpd/htdocs/manual/bind.html

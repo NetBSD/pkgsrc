@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2000/04/05 21:05:30 cjs Exp $
+# $NetBSD: Makefile,v 1.46 2000/04/24 13:13:22 tron Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -7,8 +7,8 @@
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
-DISTNAME=		apache_1.3.11
-PKGNAME=		apache-1.3.11
+DISTNAME=		apache_1.3.12
+PKGNAME=		apache-1.3.12
 CATEGORIES=		www
 MASTER_SITES=		http://www.apache.org/dist/ \
 			ftp://ftp.modssl.org/source/ \
@@ -17,12 +17,12 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			${SSL_DISTNAME}${EXTRACT_SUFX} \
 			sitedrivenby.gif
 
-MAINTAINER=		tv@netbsd.org
+MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.apache.org/
 
 CONFLICTS=		apache-*modssl-* apache6-*
 
-SSL_DISTNAME=		mod_ssl-2.5.0-1.3.11
+SSL_DISTNAME=		mod_ssl-2.6.3-1.3.12
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif}
 HAS_CONFIGURE=		YES
