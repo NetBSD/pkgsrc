@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
+
+--- source/vmmon/netbsd/drv.c	Tue Apr  3 00:41:32 2001
++++ source/vmmon/netbsd/drv.c	Sat Jun 23 22:12:21 2001
+@@ -280,6 +280,11 @@
+ 	fp->f_type = DTYPE_VNODE;
+ 	fp->f_ops = &vnops;
+ 	fp->f_data = (caddr_t)vp;
++#if __NetBSD_Version__ >= 105230000
++#ifdef FILE_SET_MATURE
++	FILE_SET_MATURE(fp);
++#endif
++#endif
+ 	FILE_UNUSE(fp, p);
+ 
+ 	p->p_dupfd = fd;

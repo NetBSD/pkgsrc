@@ -1,0 +1,38 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
+
+--- source/vmmon/netbsd/host.c	Tue Apr  3 14:23:08 2001
++++ source/vmmon/netbsd/host.c	Thu Jun 28 21:52:09 2001
+@@ -315,9 +315,16 @@
+ 
+ 		/*
+ 		 * now locate it and write the results back to the pmap
++		 *
++		 * Under extreme memory pressure, the page may be gone again.
++		 * Just fail the lock in that case.
++		 * (It was ASSERT_BUG(6339, mpn).)
++		 * -- edward
+ 		 */
+ 		mpn = FindMPN(vpn);
+-		ASSERT(mpn);
++		if (mpn == 0) {
++			return 0;
++		}
+      	 
+ 		/*
+ 		 * XXX SMP.
+@@ -628,6 +635,7 @@
+ 	if (vm->crossvaddr != NULL)
+ 		Warning("KernelAddr already allocated\n");
+ 
++	PHOLD(curproc);
+ 	uvm_vslock(curproc, addr, PAGE_SIZE,
+ 	    VM_PROT_READ|VM_PROT_WRITE|VM_PROT_EXECUTE);
+ 
+@@ -636,6 +644,7 @@
+ 	pmap_extract(vm_map_pmap(&curproc->p_vmspace->vm_map), uaddr, &paddr);
+ 	pmap_kenter_pa(kvaddr, paddr,
+ 	    VM_PROT_READ | VM_PROT_WRITE | VM_PROT_EXECUTE);
++	PRELE(curproc);
+ 	vm->crossvaddr = (void *)kvaddr;
+ 	vm->crossuaddr = addr;
+ #ifdef DEBUG
