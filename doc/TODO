@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1726 2004/05/10 00:18:43 recht Exp $
+$NetBSD: TODO,v 1.1727 2004/05/10 09:18:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -215,7 +215,6 @@ Suggested package updates
 	o gcvs-1.0-1
 	o gdb-6.1 [pkgsrc-wip]
 	o generator-0.35
-	o gentoo-0.11.51
 	o getmail-3.2.3
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
