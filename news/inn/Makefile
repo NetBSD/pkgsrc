@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/07/29 20:27:19 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/07/29 21:15:46 tron Exp $
 
 DISTNAME=		inn-2.2
 CATEGORIES=		news
@@ -17,8 +17,10 @@ INN_DATA_DIR?=		/var/news
 
 USE_PERL5=		yes
 USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-perl --with-tmp-path=/tmp \
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}/inn \
+			--mandir=${PREFIX}/man \
+			--with-perl --with-tmp-path=/tmp \
 			--with-sendmail=/usr/sbin/sendmail \
 			--with-db-dir=${INN_DATA_DIR}/db \
 			--with-etc-dir=${INN_DATA_DIR}/etc \
@@ -41,10 +43,10 @@ post-build:
 .endfor
 
 pre-install:
-	${MKDIR} ${INN_DATA_DIR} ${PREFIX}/etc/nntp ${PREFIX}/libexec/inn
+	${MKDIR} ${INN_DATA_DIR} ${PREFIX}/etc/nntp ${PREFIX}/inn
 
 post-install:
-	${LN} -s ../libexec/inn/inews ${PREFIX}/bin/inews
+	${LN} -s ../inn/bin/inews ${PREFIX}/bin/inews
 	${MKDIR} ${PREFIX}/share/examples/inn
 	for FILE in `ls -1 ${WRKSRC}/samples/* | \
 		     ${EGREP} -v '\.(in|orig)$'`; do \
