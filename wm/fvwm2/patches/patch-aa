@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2002/03/11 07:20:55 martti Exp $
+$NetBSD: patch-aa,v 1.5 2002/06/13 08:41:47 martti Exp $
 
---- utils/Makefile.in.orig	Sun Mar 10 10:47:13 2002
-+++ utils/Makefile.in	Mon Mar 11 07:44:16 2002
-@@ -113,13 +113,13 @@
+--- utils/Makefile.in.orig	Wed Jun 12 00:38:08 2002
++++ utils/Makefile.in	Wed Jun 12 19:16:37 2002
+@@ -114,13 +114,13 @@
  xpm_CFLAGS = @xpm_CFLAGS@
  xpm_LIBS = @xpm_LIBS@
  
