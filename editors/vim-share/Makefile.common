@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.13 2001/10/22 06:46:02 martti Exp $
-VIM_VERSION=		6.0.18
+# $NetBSD: Makefile.common,v 1.14 2001/10/24 10:55:21 martti Exp $
+# Obtained from:	FreeBSD vim port (obrien)
+
+VIM_VERSION=		6.0.23
 DISTNAME=		vim-${VIM_VERSION:C/\.[0-9]*$//}
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
@@ -13,7 +15,8 @@ EXTRACT_SUFX=		.tar.bz2
 # - patch 12 was ignored
 #
 PATCH_SITES=		${MASTER_SITES:S/unix/patches/}
-.for p in		01 02 03 04 05 06 07 08 09 10 11 13 14 15 16 17 18
+.for p in		01 02 03 04 05 06 07 08 09 10 11 13 14 15 16 17 18 \
+			19 20 21 22 23
 PATCHFILES+=		${VIM_VERSION:C/\.[0-9]*$//}.0${p}
 .endfor
 
