@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/07/07 21:14:12 seb Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/08/05 14:08:08 jtb Exp $
 bin/gst
 bin/gst-config
 bin/gst-package
@@ -51,6 +51,10 @@ lib/smalltalk/gdbm-${PKGVERSION}.so
 lib/smalltalk/gdbm.a
 lib/smalltalk/gdbm.la
 lib/smalltalk/gdbm.so
+lib/smalltalk/i18n-${PKGVERSION}.so
+lib/smalltalk/i18n.so
+lib/smalltalk/i18n.la
+lib/smalltalk/i18n.a
 lib/smalltalk/md5-${PKGVERSION}.so
 lib/smalltalk/md5.a
 lib/smalltalk/md5.la
