@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/06/26 10:29:46 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/03/16 19:44:30 jschauma Exp $
 bin/irb
 bin/ruby
 bin/ruby${_RUBY_SUFFIX}
@@ -6,8 +6,8 @@ lib/lib${RUBY_NAME}.so
 lib/lib${RUBY_NAME}.so.${RUBY_SHLIBMAJOR}
 lib/lib${RUBY_NAME}.so.${RUBY_SHLIBVER}
 ${RUBY_ARCHLIBDIR}/config.h
-${RUBY_ARCHLIBDIR}/curses.so
-${RUBY_ARCHLIBDIR}/dbm.so
+${RUBY_COMMENT}${RUBY_ARCHLIBDIR}/curses.so
+${RUBY_COMMENT}${RUBY_ARCHLIBDIR}/dbm.so
 ${RUBY_ARCHLIBDIR}/defines.h
 ${RUBY_ARCHLIBDIR}/dln.h
 ${RUBY_ARCHLIBDIR}/env.h
@@ -143,7 +143,7 @@ ${RUBY_LIBDIR}/weakref.rb
 @dirrm ${RUBY_ARCHLIBDIR}
 @dirrm ${RUBY_LIBDIR}
 @unexec ${RMDIR} %D/lib/ruby 2>/dev/null || ${TRUE}
-man/man1/ruby16.1
+man/man1/ruby${_RUBY_SUFFIX}.1
 man/man1/ruby.1
 ${RUBY_DOCDIR}/ChangeLog
 ${RUBY_DOCDIR}/NEWS
