@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/03/23 21:27:40 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.2 2000/03/28 00:09:20 dmcmahill Exp $
 
 --- src/Makefile.in.orig	Fri Feb 26 12:02:22 1999
-+++ src/Makefile.in	Wed Mar 22 13:52:22 2000
++++ src/Makefile.in	Sun Mar 26 09:45:44 2000
 @@ -15,5 +15,5 @@
  ####### Compiler, tools and options
  
@@ -9,12 +9,10 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/03/23 21:27:40 dmcmahill Exp $
 +CXX	=	$(SYSCONF_CXX_LIB)
  CXXFLAGS=	$(SYSCONF_CXXFLAGS_QT) $(SYSCONF_CXXFLAGS_X11) $(SYSCONF_CXXFLAGS) $(SYSCONF_CXXFLAGS_LIB)
  LFLAGS	=	$(SYSCONF_LFLAGS_X11) $(SYSCONF_LFLAGS)
-@@ -23,6 +23,6 @@
- ####### Target
+@@ -24,5 +24,5 @@
  
--TARGET	= qt
+ TARGET	= qt
 -DESTDIR = ../lib/
-+TARGET	= qt1
 +DESTDIR =
  VER_MAJ = 1
  VER_MIN = 44
@@ -41,10 +39,3 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/03/23 21:27:40 dmcmahill Exp $
 +	@cd `dirname $@` && $(CXX) -c $(CXXFLAGS) `basename $<`
  
  ####### Build rules
-@@ -530,5 +518,5 @@
- 	$(SYSCONF_LINK_LIB)
- 
--moc: $(SRCMOC)
-+moc1: $(SRCMOC)
- 
- tmake:

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2000/03/23 21:31:41 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.6 2000/03/28 00:09:24 dmcmahill Exp $
 
 --- Makefile.orig	Mon Apr 19 05:21:04 1999
 +++ Makefile	Wed Mar 22 16:07:59 2000
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.5 2000/03/23 21:31:41 dmcmahill Exp $
 -X11_INCLUDE_DIR = /usr/X11R6/include
 -QT_INCLUDE_DIR  = /usr/lib/qt/include
 +X11_INCLUDE_DIR = ${X11BASE}/include
-+QT_INCLUDE_DIR  = $(QTDIR)/include/qt1
++QT_INCLUDE_DIR  = $(QTDIR)/include
  
 -QT_LIB_DIR      = /usr/lib/qt/lib
 -X11_LIB_DIR     = /usr/X11R6/lib
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.5 2000/03/23 21:31:41 dmcmahill Exp $
  LINK    = g++
 -MOC     = moc
 -INSTALL = install
-+MOC     = moc1
++MOC     = ${QTDIR}/bin/moc
 +INSTALL = install -c
  
  ####### compile and link options
@@ -37,15 +37,15 @@ $NetBSD: patch-aa,v 1.5 2000/03/23 21:31:41 dmcmahill Exp $
  INCLUDE_DIRS = -I$(QT_INCLUDE_DIR) -I$(X11_INCLUDE_DIR)
  
 -LIB_DIRS     = -L$(QT_LIB_DIR) -L$(X11_LIB_DIR)
-+LIB_DIRS     = -L$(QT_LIB_DIR) -L$(X11_LIB_DIR) -Wl,-R$(X11_LIB_DIR)
++LIB_DIRS     = -L$(QT_LIB_DIR) -Wl,-R${QT_LIB_DIR} -L$(X11_LIB_DIR) -Wl,-R$(X11_LIB_DIR)
  
 -LIBS         = -lX11 -lqt -lm
-+LIBS         = -lX11 -lqt1 -lm
++LIBS         = -lX11 -lqt -lm
  # If you want to use the QImageIO lib (to support jpg and png maps) use this
  # line and comment the one above (don't forget to edit config.h as well!)
 @@ -41,4 +41,5 @@
  # If the linker complains about unresolved references try this:
  #LIBS         = -lX11 -lqt -lm -lqimgio -lpng -lz
-+LIBS	= -lqt1 -lm -lXext -lX11
++LIBS	= -lqt -lm -lXext -lX11
  
  ####### Target
