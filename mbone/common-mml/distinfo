@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/09/27 01:50:03 dmcmahill Exp $
+$NetBSD: distinfo,v 1.4 2002/09/27 03:01:30 dmcmahill Exp $
 
 SHA1 (common-1.2.0.tar.gz) = 411804ba0c2842a0157f01cec0e448dcbb206c29
 Size (common-1.2.0.tar.gz) = 139854 bytes
@@ -8,4 +8,4 @@ SHA1 (patch-ac) = 58bbd43c7478083d657a4ba4b9b135d2970b5c02
 SHA1 (patch-ad) = 66cbf9cbdb8d5e1434ff310137e91e93785eea06
 SHA1 (patch-ae) = 718a7eacf35e54eef95c2c19d71af6d233f70220
 SHA1 (patch-af) = 7ca308acd4f9c9b297176b91ff21f314cd677cf8
-SHA1 (patch-ag) = 8b77e2c080d0e9a33eda5334d8c103b6b27dc886
+SHA1 (patch-ag) = fa3635d64010fa65c64e19f89c94dd87ea04057b
