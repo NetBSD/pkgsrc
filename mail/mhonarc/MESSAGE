@@ -5,3 +5,5 @@ the following changes
 
 * Data filters registered via MIMEFILTERS use a new API which
   is not backward compatible with the previous API.
+
+* The default value of DEFRCNAME is now ".mhonarc.mrc"
