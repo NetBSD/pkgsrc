@@ -1,7 +1,7 @@
 =============================================================
 
 For detailed instructions on how to run Tomcat, either as a
-standalone server or in conjunction with Apache (using th
+standalone server or in conjunction with Apache (using the
 www/ap-jserv package), see:
 
 	@TOMCAT_HOME@/doc/uguide/tomcat_ug.html
