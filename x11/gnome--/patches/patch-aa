@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/05/19 10:08:59 drochner Exp $
+
+--- docgen/pce2.orig	Sat Apr 21 21:07:35 2001
++++ docgen/pce2	Sat Apr 21 21:08:32 2001
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!XXXPERLBASEXXX/bin/perl
+ 
+ #  PCE2 - Perl C++ Extractor version 2
+ #  Copyright 2000-1999, Karl Nelson  <kenelson@users.sourceforge.net>
