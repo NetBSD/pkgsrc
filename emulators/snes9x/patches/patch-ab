@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/09 16:43:40 wiz Exp $
+
+--- i386/asmstruc.h.orig	Mon Jan 24 16:13:54 2000
++++ i386/asmstruc.h
+@@ -36,7 +36,7 @@
+  * Nintendo Co., Limited and its subsidiary companies.
+  */
+ 
+-#if defined(__DJGCC) || defined(MICROSOFT_C) || defined(_WINDOWS)
++#if defined(__DJGCC) || defined(MICROSOFT_C) || defined(_WINDOWS) || defined(_ASM_UNDERBARS)
+ #define S9xTraceMessage _S9xTraceMessage
+ #define S9xGetPPU _S9xGetPPU
+ #define S9xSetPPU _S9xSetPPU
