@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.17 2001/11/08 02:52:25 jmc Exp $
+# $NetBSD: build,v 1.18 2001/11/26 00:55:45 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -177,7 +177,7 @@ do
         if ! grep -q "^${pkgdir}\$" $BUILDLOG ; then
 		built=`wc -l $BUILDLOG | awk '{print $1}'`
 		percent=`echo $built $tot | awk '{printf("%4.1f%%",$1*100/$2);}'`
-		(cd $pkgdir && nice -n 20 make USE_BULK_CACHE=yes bulk-package | sed "s;^;`date '+%m/%d/%y %H:%M:%S'`  $built/${tot}=$percent $pkgdir @ `uname -p`> ;g")              
+		(cd $pkgdir && nice -n 20 make USE_BULK_CACHE=yes bulk-package </dev/null | sed "s;^;`date '+%m/%d/%y %H:%M:%S'`  $built/${tot}=$percent $pkgdir @ `uname -p`> ;g")              
 		echo "$pkgdir" >> $BUILDLOG
 	fi
 done
