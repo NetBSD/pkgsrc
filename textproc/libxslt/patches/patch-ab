@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/11/23 08:34:25 martti Exp $
+$NetBSD: patch-ab,v 1.2 2001/12/07 04:50:43 jlam Exp $
 
---- doc/Makefile.in.orig	Sun Nov 11 02:52:38 2001
-+++ doc/Makefile.in	Fri Nov 23 11:22:33 2001
+--- doc/Makefile.in.orig	Sat Nov 10 08:52:38 2001
++++ doc/Makefile.in
 @@ -104,7 +104,7 @@
  XSLT_LIBDIR = @XSLT_LIBDIR@
  XSLT_LIBS = @XSLT_LIBS@
@@ -11,3 +11,20 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/11/23 08:34:25 martti Exp $
  
  # The top-level SGML file.
  DOC_MAIN_SGML_FILE = libxslt.sgml
+@@ -114,7 +114,7 @@
+ 
+ HTML_DIR = @HTML_DIR@
+ 
+-TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)/html
++TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)
+ PAGES = API.html bugs.html contribs.html docs.html downloads.html \
+        help.html index.html intro.html news.html xsltproc2.html
+ 
+@@ -305,7 +305,6 @@
+ 	-@INSTALL@ -m 0644 $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR)
+ 	$(mkinstalldirs) $(DESTDIR)$(TARGET_DIR)/tutorial
+ 	-@INSTALL@ -m 0644 $(srcdir)/tutorial/* $(DESTDIR)$(TARGET_DIR)/tutorial
+-	-(cd $(DESTDIR); gtkdoc-fixxref --module=libxslt --html-dir=$(HTML_DIR))
+ 
+ dist-hook:
+ 	(cd $(srcdir) ; tar cvf - *.1 *.html site.xsl *.gif html/*.html html/*.sgml tutorial/libxslt*) | (cd $(distdir); tar xf -)
