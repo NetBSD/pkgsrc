@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/07/24 14:43:12 mrg Exp $
+$NetBSD: distinfo,v 1.5 2004/07/25 09:12:39 tron Exp $
 
-SHA1 (linux-508.tar.gz) = 6af248d4626a820f5643d368fc1ee58bf352ca51
-Size (linux-508.tar.gz) = 9285902 bytes
+SHA1 (linux-509.tar.gz) = 5791ef1dcdea14cfdff86e820a04a42478a48457
+Size (linux-509.tar.gz) = 9284358 bytes
 SHA1 (solaris-509.tar.gz) = bb2717824ecc3a31b7b119c972e2b346691164e2
 Size (solaris-509.tar.gz) = 9940740 bytes
 SHA1 (patch-aa) = 0dc51d7718d444477cc358aae5bcd9df04d63620
