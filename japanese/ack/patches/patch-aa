@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1999/05/10 04:38:43 sakamoto Exp $
+$NetBSD: patch-aa,v 1.3 1999/10/04 19:14:15 hubertf Exp $
 
 --- Makefile.orig	Tue Jul 26 09:29:53 1994
 +++ Makefile	Fri Jan  1 21:08:42 1999
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.2 1999/05/10 04:38:43 sakamoto Exp $
 -BINARY	= /usr/local/bin
 -MANUAL	= /usr/local/man/man1
 +BINARY	= ${PREFIX}/bin
-+MANUAL	= ${PREFIX}/man/man1
++MANUAL	= ${PREFIX}/man/ja_JP.EUC/man1
  
  ####
  #### -- UNIX
