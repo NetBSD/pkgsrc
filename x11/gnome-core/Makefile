@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/01/30 23:18:56 agc Exp $
+# $NetBSD: Makefile,v 1.8 1999/02/19 01:29:08 tv Exp $
 #
 
 DISTNAME=	gnome-core-0.99.3.1
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.gnome.org/
 DEPENDS+=	gnome-libs-0.99.3:../../x11/gnome-libs
 DEPENDS+=	libgtop-0.99.2:../../devel/libgtop
 
-CONFLICTS=	gnome-core-*
-
 NOT_FOR_ARCHS=	alpha	# problems with gtk
 
 GNU_CONFIGURE=	yes
@@ -24,8 +22,7 @@ USE_LIBTOOL=	yes
 LOCALSTATEDIR=	/var/gnome
 
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
-			--with-glib-prefix=${LOCALBASE} \
-			--with-catgets
+			--with-glib-prefix=${LOCALBASE}
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
 
 .include "../../mk/bsd.pkg.mk"
