@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2002/03/19 17:54:36 drochner Exp $
+$NetBSD: distinfo,v 1.3 2002/03/25 22:16:40 skrll Exp $
 
-SHA1 (qt-x11-free-3.0.2.tar.gz) = 8694d8c9992d22e82bedf6891879a6b2f7d94e0e
-Size (qt-x11-free-3.0.2.tar.gz) = 15083583 bytes
+SHA1 (qt-x11-free-3.0.3.tar.gz) = b6fe7213104bda6075a7d944ab83802262470b15
+Size (qt-x11-free-3.0.3.tar.gz) = 15088462 bytes
 SHA1 (patch-aa) = aae2cb07147fdc00b008dbb89ebddb58a9ad5010
-SHA1 (patch-ab) = 90e22f330cecaa3eec36bba1dac1bd202cf99287
+SHA1 (patch-ab) = 17a8073304419c5a5e824cb462367463b24f7fbc
 SHA1 (patch-ac) = da32dd8596f36238fec30fb7b8a444d36e13ed92
