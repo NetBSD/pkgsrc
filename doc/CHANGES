@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7488 2004/10/20 14:40:13 taca Exp $
+$NetBSD: CHANGES,v 1.7489 2004/10/20 14:42:39 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4779,3 +4779,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pure-ftpd to 1.0.20 [cube 2004-10-20]
 	Updated poppassd to 4.0.5nb3 [taca 2004-10-20]
 	Updated ja-squirrelmail-1.4.3anb2 [taca 2004-10-20]
+	Updated xorg-clients to 6.8.1nb3 [reed 2004-10-20]
