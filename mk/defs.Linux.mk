@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.2 2001/06/12 13:16:09 jlam Exp $
+# $NetBSD: defs.Linux.mk,v 1.3 2001/06/13 18:19:52 jlam Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -38,7 +38,11 @@ RMDIR?=		/bin/rmdir
 SED?=		/bin/sed
 SETENV?=	/usr/bin/env
 SH?=		/bin/sh
+.if exists(/bin/sort)
+SORT?=		/bin/sort
+.else
 SORT?=		/usr/bin/sort
+.fi
 SU?=		/bin/su
 TAIL?=		/usr/bin/tail
 TEST?=		/usr/bin/test
