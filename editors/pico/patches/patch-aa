@@ -1,5 +1,5 @@
 --- pico/makefile.neb.orig	Mon Jun 29 18:23:50 1998
-+++ pico/makefile.neb	Tue Jul 21 15:28:55 1998
++++ pico/makefile.neb	Sat Jul 18 23:21:15 1998
 @@ -30,18 +30,13 @@
  RM=          rm -f
  LN=          ln -s
@@ -41,7 +41,7 @@
 -		$(RANLIB) libpico.a
 +libpico.la:	$(OFILES)
 +		$(CC) -o libpico.la $(OFILES:.o=.lo) -rpath $(PREFIX)/lib \
-+			-version-info 0:1
++			-version-info 0:0
  
  clean:
  		rm -f *.a *.o *~ pico_os.c os.h pico pilot
