@@ -1,10 +1,18 @@
-# $NetBSD: marshall,v 1.8 2004/02/09 04:35:12 jlam Exp $
+# $NetBSD: marshall,v 1.9 2004/02/13 16:49:53 jlam Exp $
 #
 # Handle cases where multiple consecutive arguments must be processed
 # together, either by merging the arguments or "skipping" the extra
 # arguments.
 #
 case $arg in
+#
+# If we see "-I dir" (or -L/-R), we convert it to "-Idir" so that it may be
+# transformed correctly.
+#
+-[ILR])
+	arg="$arg$1"
+	shift
+	;;
 #
 # Merge "-Wl,R -Wl,/path/to/dir" into a single argument
 # "-Wl,R/path/to/dir" and merge "-Wl,--rpath -Wl,/path/to/dir" into
