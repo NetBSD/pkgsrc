@@ -1,0 +1,20 @@
+Tux Racer lets you take on the role of Tux the Linux Penguin as he races down
+steep, snow-covered mountains. Enter cups and compete to win the title! Tux
+Racer includes a variety of options for gameplay, including the ability to
+race courses in fog, at night, and under high winds.
+
+Your journey starts as you compete on local courses. Win and you will unlock
+other courses and cups that will lead you to more exciting and challenging
+races. Only the quickest, smartest, and luckiest will win!
+
+- Fun, easy to learn
+- Exciting 3D courses
+- Sophisticated physics result in thrilling rides down the mountains
+- Collect herring while avoiding obstacles for high scores
+- Race over a variety of surfaces, including fluffy snow and slick ice
+- Race in various weather conditions and lighting conditions
+- Create your own courses using any paint program such as The GIMP (no 3D
+  modeller required)
+- Suitable for all ages
+
+This package needs working hardware OpenGL support.
