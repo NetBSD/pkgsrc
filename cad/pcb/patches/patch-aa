@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/11/07 14:30:34 frueauf Exp $
+
+--- src/Imakefile.orig	Wed May 13 12:29:46 1998
++++ src/Imakefile	Fri Nov  6 15:13:28 1998
+@@ -79,6 +79,10 @@
+ 	@echo "creating application default resource from raw file"
+ 	@sed -f sed.script  < Pcb.ad.raw > $@
+ 
++pcb.man: ../doc/pcb.man.raw
++	@(cd ../doc && ${MAKE} ${MFLAGS} ${PARALLELMFLAGS} pcb.man)
++	@ln -s ../doc/pcb.man pcb.man
++
+ parse_y.h parse_y.c: parse_y.y global.h
+ 	$(YACC) -d parse_y.y
+ 	$(MV) y.tab.c parse_y.c
