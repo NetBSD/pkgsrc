@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2001/05/22 13:54:34 kent Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/30 16:16:11 kent Exp $
 
 DISTNAME=		gcc-2.95.2
-PKGNAME=		gcc-ssp-2.95.2
+GCC_VERSION=		2.95.2
+PKGNAME=		gcc-ssp-2.95.2nb2
+PKGBASENAME=		gcc-ssp
 CATEGORIES=		lang security
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
 
@@ -10,16 +12,19 @@ HOMEPAGE=		http://www.trl.ibm.com/projects/security/ssp/
 COMMENT=		GNU Compiler Collection with Stack-smashing protection
 
 MASTER_SITES+=		http://www.trl.ibm.com/projects/security/ssp/gcc2_95_2/
-SSP_PATCH=		protector2-95-2.tar.gz
+SSP_PATCH=		protector-2.95.2-2.tar.gz
 DISTFILES+=		${DISTNAME}.tar.gz ${SSP_PATCH}
 PATCHDIR=		../gcc/patches
 GCC_FILESDIR=		../gcc/files
 
 BUILD_DEPENDS+=		bison-*:../../devel/bison
 
-# The platforms listed below are the only tested platforms so far.
-# If you get gcc working on other platforms, then please add them.
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+# Please let me know what platforms this package works or doesn't work on.
+#ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc
+#
+# Build error for NetBSD/alpha
+NOT_FOR_PLATFORM=	NetBSD-*-alpha
+
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,10 +41,11 @@ CONFIGURE_ARGS=		--host=${MACHINE_GCC_PLATFORM} \
 			--enable-shared
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
 
-GCC_VERSION=		${PKGNAME:C/.*-//}
-MESSAGE_SUBST+=		MAKE=${MAKE}
+MESSAGE_SUBST+=		MAKE=${MAKE} \
+			PKGBASENAME=${PKGBASENAME}
 PLIST_SUBST+=		GCC_VERSION=${GCC_VERSION} \
-			MACHINE_GCC_PLATFORM=${MACHINE_GCC_PLATFORM}
+			MACHINE_GCC_PLATFORM=${MACHINE_GCC_PLATFORM} \
+			PKGBASENAME=${PKGBASENAME}
 SRCDIR=			${WRKDIR}/${DISTNAME}
 WRKSRC=			${WRKDIR}/objdir
 
@@ -47,7 +53,7 @@ WRKSRC=			${WRKDIR}/objdir
 
 .if (${OPSYS} != SunOS)
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
-GCC_PREFIX=		${LOCALBASE}/${PKGNAME}
+GCC_PREFIX=		${LOCALBASE}/${PKGBASENAME}
 .if ${MACHINE_PLATFORM:MNetBSD-*-sparc}
 PLIST_SRC=		${PKGDIR}/PLIST.NetBSD-sparc
 PLIST_SRC+=		${PKGDIR}/PLIST
@@ -70,23 +76,32 @@ post-patch:
 	${ECHO} "bogus" >${WRKSRC}/../${DISTNAME}/gcc/cstamp-h.in
 	cd ${WRKDIR} && /usr/bin/tar zxf ${_DISTDIR}/${SSP_PATCH}
 	${CP} ${WRKDIR}/protector.c ${WRKDIR}/protector.h ${WRKDIR}/${DISTNAME}/gcc/
-	${PATCH} -d ${WRKDIR}/${DISTNAME}/gcc --forward --quiet -E < ${WRKDIR}/protector.dif
+	${PATCH} -d ${WRKDIR}/${DISTNAME} --forward --quiet -E < ${WRKDIR}/protector.dif
 
 .if (${OPSYS} != SunOS)
 post-build:
 	for FILE in ${FILESDIR}/gcc.mk; do \
 	  ${SED} -e 's#@@MAKE@@#${MAKE}#g' \
-		 -e 's#@@PKGNAME@@#${PKGNAME}#g' \
+		 -e 's#@@PKGBASENAME@@#${PKGBASENAME}#g' \
 		 -e 's#@@PREFIX@@#${PREFIX}#g' \
 	   <$$FILE >${WRKDIR}/`basename $$FILE`; \
 	done
+	${WRKSRC}/gcc/xgcc -B${WRKSRC}/gcc/ -O2 -fstack-protector -o ${WRKDIR}/buffer ${FILESDIR}/buffer.c
+	ulimit -c 0 && ${WRKDIR}/buffer abcdefghijklmnopqrstuvwxyz  2> ${WRKDIR}/output || true
+	@if [ x"`cat ${WRKDIR}/output`" = "x: stack smashing attack in function main" ]; then \
+	    echo "---- Stack protection succeeded."; \
+	    exit 0; \
+	else \
+	    echo "*** Stack protection failed."; \
+	    exit 1; \
+	fi
 .endif
 
 .if (${OPSYS} != SunOS)
 post-install:
-	${LN} -s gcc ${PREFIX}/${PKGNAME}/bin/cc
+	${LN} -s gcc ${PREFIX}/${PKGBASENAME}/bin/cc
 	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/include/curses.h
-	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGNAME}.mk
+	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGBASENAME}.mk
 .endif
 
 .include "../../mk/bsd.pkg.mk"
