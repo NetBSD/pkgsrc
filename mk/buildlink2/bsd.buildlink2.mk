@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.32 2002/09/27 00:22:06 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.33 2002/09/27 09:22:59 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -47,10 +47,14 @@ _BLNK_OPSYS=		${OPSYS}
 CONFIGURE_ENV+=		BUILDLINK_UPDATE_CACHE=no
 
 .if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
-.  if !defined(_FOR_X11_LINKS_ONLY)
+USE_X11_LINKS?=		YES
+.  if !empty(USE_X11_LINKS:M[nN][oO])
+.    include "../../mk/x11.buildlink2.mk"
+BUILDLINK_X11_DIR=	${BUILDLINK_X11PKG_DIR}
+.  else
 BUILD_DEPENDS+=		x11-links>=0.8:../../pkgtools/x11-links
-.  endif
 BUILDLINK_X11_DIR=	${LOCALBASE}/share/x11-links
+.  endif
 CONFIGURE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 MAKE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 _BLNK_CPPFLAGS+=	-I${X11BASE}/include
@@ -216,8 +220,13 @@ _BLNK_TRANSFORM+=	I:${LOCALBASE}:${BUILDLINK_DIR}
 _BLNK_TRANSFORM+=	L:${LOCALBASE}:${BUILDLINK_DIR}
 _BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
 .if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
+.  if !empty(USE_X11_LINKS:M[nN][oO])
+_BLNK_TRANSFORM+=	I:${X11BASE}:${BUILDLINK_X11PKG_DIR}
+_BLNK_TRANSFORM+=	L:${X11BASE}:${BUILDLINK_X11PKG_DIR}
+.  else
 _BLNK_TRANSFORM+=	II:${X11BASE}:${BUILDLINK_X11PKG_DIR},${BUILDLINK_X11_DIR}
 _BLNK_TRANSFORM+=	LL:${X11BASE}:${BUILDLINK_X11PKG_DIR},${BUILDLINK_X11_DIR}
+.  endif
 .endif
 .for _localbase_ in /usr/pkg /usr/local
 .  if ${LOCALBASE} != ${_localbase_}
