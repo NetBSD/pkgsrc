@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/08/31 22:09:43 wrstuden Exp $
 etc/rc.atalk
 include/atalk/adouble.h
 include/atalk/rtmp.h
@@ -13,7 +13,6 @@ include/atalk/afp.h
 include/atalk/aep.h
 include/atalk/zip.h
 lib/libatalk.a
-lib/libatalk_p.a
 lib/libatalk_pic.a
 lib/libatalk.so.1.0
 bin/aecho
@@ -59,6 +58,10 @@ sbin/afpd
 sbin/atalkd
 sbin/papd
 sbin/etc2ps
+share/examples/netatalk/AppleVolumes.default
+share/examples/netatalk/AppleVolumes.system
+share/examples/netatalk/atalkd.conf
+share/examples/netatalk/papd.conf
 share/psffilters/ofpap
 share/psffilters/ifpap
 share/psffilters/tfpap

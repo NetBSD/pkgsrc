@@ -1,13 +1,9 @@
-$NetBSD: patch-am,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+$NetBSD: patch-am,v 1.2 1999/08/31 22:09:43 wrstuden Exp $
 
---- etc/afpd/Makefile	1998/10/26 14:01:39	1.1
-+++ etc/afpd/Makefile	1998/10/26 14:01:59
-@@ -32,7 +32,7 @@
- 	    AFSDEFS="-DAFS"; \
- 	fi; \
- 	${MAKE} ${MFLAGS} CC="${CC}" ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" \
--	    OPTOPTS="${OPTOPTS}" DESTDIR="${DESTDIR}" \
-+	    OPTOPTS="${OPTOPTS}" ATALK_DESTDIR="${ATALK_DESTDIR}" \
- 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
- 	    KRBLIBS="$${KRBLIBS}" KRBLIBDIRS="$${KRBLIBDIRS}" \
+--- libatalk/asp/Makefile.inc	Wed Dec 31 16:00:00 1969
++++ libatalk/asp/Makefile.inc	Mon Aug 30 06:47:42 1999
+@@ -0,0 +1,4 @@
++.PATH: ${.CURDIR}/asp
++
++SRCS+= asp_close.c asp_cmdreply.c asp_getreq.c
++SRCS+= asp_getsess.c asp_init.c asp_write.c asp_shutdown.c
