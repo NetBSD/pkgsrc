@@ -1,10 +1,9 @@
-$NetBSD: patch-ae,v 1.4 2001/04/23 19:25:47 dmcmahill Exp $
+$NetBSD: patch-ae,v 1.5 2004/11/28 15:12:11 dmcmahill Exp $
 
-to make it correctly deinstall...
-
---- ../doc/hp2xxinf.tex.orig	Thu Feb  1 10:05:33 2001
-+++ ../doc/hp2xxinf.tex	Mon Apr 23 11:33:03 2001
-@@ -39,6 +39,5 @@
+--- ../doc/hp2xxinf.tex.orig	Sat Jun 21 15:41:16 2003
++++ ../doc/hp2xxinf.tex
+@@ -39,8 +39,7 @@
+ @ifinfo
  @format
  START-INFO-DIR-ENTRY
 -* HP2XX:(hp2xx).  Conversion of HP-GL graphics into raster and
@@ -12,3 +11,4 @@ to make it correctly deinstall...
 +* HP2XX:(hp2xx).  HPGL Converter and Previewer
  END-INFO-DIR-ENTRY
  @end format
+ @end ifinfo
