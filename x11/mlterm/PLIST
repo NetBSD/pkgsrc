@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/21 11:33:28 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/21 12:15:37 agc Exp $
 bin/mlterm
 etc/mlterm/aafont
 etc/mlterm/color
@@ -11,10 +11,12 @@ lib/libkik.a
 lib/libkik.la
 lib/libkik.so
 lib/libkik.so.3
+lib/libkik.so.3.0
 lib/libmkf.a
 lib/libmkf.la
 lib/libmkf.so
 lib/libmkf.so.9
+lib/libmkf.so.9.0
 lib/mlterm/libsample.a
 lib/mlterm/libsample.la
 lib/mlterm/libsample.so
