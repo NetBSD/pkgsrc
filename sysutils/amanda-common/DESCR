@@ -1,38 +1,4 @@
-This is Amanda, the Advanced Maryland Automatic Network Disk
-Archiver.  Amanda is a backup system designed to archive many
-computers on a network to a single large-capacity tape drive.
-
-Here are some features of Amanda:
-
-  * written in C, freely distributable.
-  * built on top of standard backup software: Unix dump/restore, GNU Tar
-    and others.
-  * will back up multiple machines in parallel to a holding disk, blasting
-    finished dumps one by one to tape as fast as we can write files to
-    tape.  For example, a ~2 Gb 8mm tape on a ~240K/s interface to a host
-    with a large holding disk can be filled by Amanda in under 4 hours.
-  * does simple tape management: will not overwrite the wrong tape.
-  * supports tape changers via a generic interface.  Easily customizable to
-    any type of tape carousel, robot, or stacker that can be controlled via
-    the unix command line.
-  * supports Kerberos 4 security, including encrypted dumps.  The Kerberos
-    support is available as a separate add-on package, see the file
-    KERBEROS.HOW-TO-GET on the ftp site, and the file docs/KERBEROS in this
-    package, for more details.
-  * for a restore, tells you what tapes you need, and finds the proper
-    backup image on the tape for you.
-  * recovers gracefully from errors, including down or hung machines.
-  * reports results, including all errors in detail, in email.
-  * will dynamically adjust backup schedule to keep within constraints: no
-    more juggling by hand when adding disks and computers to network.
-  * includes a pre-run checker program, that conducts sanity checks on both
-    the tape server host and all the client hosts (in parallel), and will
-    send an e-mail report of any problems that could cause the backups to
-    fail.
-  * can compress dumps before sending or after sending over the net, with
-    either compress or gzip.
-  * can optionally synchronize with external backups, for those large
-    timesharing computers where you want to do full dumps when the system
-    is down in single-user mode (since BSD dump is not reliable on active
-    filesystems): Amanda will still do your daily dumps.
-  * lots of other options; Amanda is very configurable.
+This is a release of Amanda, the Advanced Maryland Automatic
+Network Disk Archiver.  Amanda is a backup system designed to
+archive many computers on a network to a single large-capacity
+tape drive. 
