@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.9 2002/01/15 23:52:11 rh Exp $
+# $NetBSD: buildlink.mk,v 1.10 2002/01/16 14:21:20 tron Exp $
 #
 # This Makefile fragment is included by packages that use ORBit.
 #
@@ -36,6 +36,11 @@ BUILDLINK_FILES.ORBit+=	lib/libORBitCosNaming.*
 BUILDLINK_FILES.ORBit+=	lib/libORBitutil.*
 BUILDLINK_FILES.ORBit+=	lib/libname-server.*
 BUILDLINK_FILES.ORBit+=	lib/liborbit-c-backend.*
+
+# The ORBit headers should be found at the same location as for libxml.I
+BUILDLINK_TRANSFORM.ORBit=    -e "s|/include/orbit-1.0/|/include/|g"
+BUILDLINK_CONFIG_WRAPPER_SED+=  \
+	-e "s|-I${BUILDLINK_PREFIX.ORBit}/include/orbit-1.0/|-I${BUILDLINK_DIR}/include/|g"
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/glib/buildlink.mk"
