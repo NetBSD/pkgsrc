@@ -1,0 +1,3 @@
+Hesiod is a name service library that can provide general name service for a
+variety of applications. It is based on the Domain Name system (DNS).
+The Hesiod library and hesinfo tool allow easy queries to Hesiod name service.
