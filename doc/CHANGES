@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3074 2003/08/20 11:30:58 markd Exp $
+$NetBSD: CHANGES,v 1.3075 2003/08/20 12:24:18 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3304,3 +3304,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated lesstif to 0.93.46nb1 [markd 2003-08-20]
 	Added kmessage-0.1 [markd 2003-08-20]
 	Added kimagemapeditor-1.0 [markd 2003-08-20]
+	Updated unzip to 5.50nb1 [tron 2003-08-20]
