@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2003/01/14 09:08:02 grant Exp $
+# $NetBSD: Makefile,v 1.35 2003/03/27 07:14:25 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
-DISTNAME=		rxvt-2.7.3
+DISTNAME=		rxvt-2.7.10
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.rxvt.org/pub/rxvt/ \
-			ftp://ftp.rxvt.org/pub/rxvt/devel/ \
-			ftp://ftp.rxvt.org/pub/rxvt/old/ \
 			ftp://mason.primenet.com.au/pub/rxvt/
 EXTRACT_SUFX=		.tar.bz2
 
@@ -19,23 +17,26 @@ USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--enable-utmp \
+			--enable-wtmp \
+			--enable-lastlog \
 			--enable-xpm-background \
 			--enable-transparency \
 			--enable-menubar \
+			--enable-rxvt-scroll \
+			--enable-next-scroll \
 			--enable-xterm-scroll \
 			--enable-xim \
+			--enable-greek \
 			--enable-ttygid \
 			--enable-xgetdefault \
 			--enable-frills \
+			--enable-linespace \
+			--enable-24bit \
 			--enable-keepscrolling \
 			--enable-mousewheel \
-			--enable-languages
-
-# Note: greek support could not be enabled, as the resource file handling
-# to disable it at runtime is documented but not implemented in the current
-# version. See files/Rxvt and check if it works for newer versions. When
-# enabling it, please fix MESSAGE as well.
-#			--enable-greek
+			--enable-slipwheeling \
+			--enable-languages \
+			--with-encoding=noenc
 
 CONFIGURE_ARGS+=	--with-xpm-includes=${BUILDLINK_PREFIX.xpm}/include/X11
 CONFIGURE_ARGS+=	--with-xpm-library=${BUILDLINK_PREFIX.xpm}/lib
@@ -52,12 +53,17 @@ pre-install:
 
 .include "../../mk/bsd.prefs.mk"
 
+post-install:
+.if ${OPSYS} == "NetBSD"
+	# Make rxvt setuid root so that utmp logging functions correctly.
+	#
+	${CHOWN} 0 ${PREFIX}/bin/rxvt
+	${CHMOD} 4711 ${PREFIX}/bin/rxvt
+.endif
+
 .if ${OPSYS} == "SunOS"
 CFLAGS+= -DSunOS
 .else
-CONFIGURE_ARGS+=	--enable-wtmp \
-			--enable-lastlog \
-			--with-encoding=noenc
 .endif
 
 .include "../../graphics/xpm/buildlink2.mk"
