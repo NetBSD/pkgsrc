@@ -1,5 +1,5 @@
 --- fileio.h.orig	Sat Jan  6 14:46:36 1996
-+++ fileio.h	Tue Feb 17 19:49:06 1998
++++ fileio.h	Wed Mar 18 21:35:20 1998
 @@ -21,15 +21,6 @@
  #define FOPWPBIN	"w+b","ctx=stm"
  #else
@@ -16,24 +16,18 @@
  #define FOPRBIN		"r"
  #define FOPRTXT		"r"
  #define FOPWBIN		"w"
---- pgp.h.orig	Mon Jan 15 15:19:29 1996
-+++ pgp.h	Tue Feb 17 19:24:28 1998
-@@ -12,6 +12,13 @@
- #ifndef PGP_H
- #define PGP_H
+--- md5.c.orig	Sat Jan  6 15:21:09 1996
++++ md5.c	Wed Mar 18 21:36:42 1998
+@@ -15,6 +15,7 @@
+  * will fill a supplied 16-byte array with the digest.
+  */
+ #include <string.h>		/* for memcpy() */
++#include "usuals.h"
+ #include "md5.h"
  
-+#ifdef __NetBSD__
-+#include <machine/ansi.h>
-+#if BYTE_ORDER == BIG_ENDIAN
-+#define HIGHFIRST
-+#endif
-+#endif
-+
- #include "usuals.h"
- #include "more.h"
- #include "armor.h"
+ #ifndef HIGHFIRST
 --- rsaglue2.c.orig	Tue Jan  2 09:17:27 1996
-+++ rsaglue2.c	Tue Feb 17 19:24:28 1998
++++ rsaglue2.c	Wed Mar 18 21:35:20 1998
 @@ -52,9 +52,8 @@
  Uses the RSAREF(tm) Toolkit, which is copyright RSA Data Security, Inc.\n\
  Distributed by the Massachusetts Institute of Technology.\n");
@@ -46,3 +40,19 @@
  /*
   * The functions we call in rsa.h are:
   *
+--- usuals.h.orig	Fri Sep 15 08:18:52 1995
++++ usuals.h	Wed Mar 18 21:35:39 1998
+@@ -3,6 +3,13 @@
+ #ifndef USUALS /* Assures no redefinitions of usual types...*/
+ #define USUALS
+ 
++#ifdef __NetBSD__
++#include <machine/endian.h>
++#if BYTE_ORDER == BIG_ENDIAN
++#define HIGHFIRST
++#endif
++#endif
++
+ typedef unsigned char boolean;	/* values are TRUE or FALSE */
+ typedef unsigned char byte;	/* values are 0-255 */
+ typedef byte *byteptr;	/* pointer to byte */
