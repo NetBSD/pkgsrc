@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/05/27 01:31:04 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/05/27 21:57:26 jlam Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		# empty
+PKGREVISION=		1
 CATEGORIES+=		lang devel
 
 MAINTAINER=		jlam@netbsd.org
@@ -28,6 +28,16 @@ CONFIGURE_ARGS+=	-Ui_malloc
 CONFIGURE_ARGS+=	-Uusemymalloc
 CONFIGURE_ARGS+=	-Uinstallusrbinperl
 TEST_TARGET=		test
+
+# Install Perl man3 pages into a private directory under the the normal
+# Perl installation.  Also install site-specific Perl man3 pages into a
+# private directory within site_perl.  This avoids manpage conflicts
+# between 3rd-party modules, the standard Perl library, and other
+# packages.
+#
+CONFIGURE_ARGS+=	-Dman3ext="3"
+CONFIGURE_ARGS+=	-Dman3dir="${PERL5_PRIVLIB}/man/man3"
+CONFIGURE_ARGS+=	-Dinstallsiteman3dir="${PERL5_SITEPERL}/man/man3"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -115,15 +125,15 @@ CONFIGURE_ARGS+=	-Duseshrplib
 .endif
 
 PERL5=			${PREFIX}/bin/perl${PERL5_DIST_VERS}
+PERL5_PRIVLIB?=		${PREFIX}/lib/perl5/${PERL5_DIST_VERS}
 PERL5_ARCHLIB?=		${PREFIX}/lib/perl5/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
+PERL5_SITEPERL?=	${PREFIX}/lib/perl5/site_perl
 PERL5_SITEARCH?=	${PREFIX}/lib/perl5/site_perl/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
 PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
+PLIST_SUBST+=		PERL5_SITEPERL=${PERL5_SITEPERL:S/^${PREFIX}\///}
 
 # It's tough to guess which hints file will be used, so add our modifications
 # to all of them:
-#
-# - Don't install any manpages in man3; make user use perldoc (to prevent
-#   confusion/conflicts with similarly named man2/man3 pages).
 #
 # - Explicitly set the local compiler search paths to contain only the
 #   pkgsrc-controlled directories.
@@ -133,8 +143,6 @@ pre-configure:
 	for hints in $${hintdir}/*.sh; do				\
 		${CHMOD} +w $${hints};					\
 		( ${ECHO} '';						\
-		  ${ECHO} 'man1dir="$${prefix}/man/man1"';		\
-		  ${ECHO} 'man3dir=none';				\
 		  ${ECHO} 'locincpth="${LOCINCPATH}"';			\
 		  ${ECHO} 'loclibpth="${LOCLIBPATH}"';			\
 		  ${ECHO} 'ldflags="${LOCLIBRPATHFLAGS} $$ldflags"';	\
