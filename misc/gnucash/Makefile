@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/05/13 06:21:01 rh Exp $
+# $NetBSD: Makefile,v 1.11 2000/05/30 09:12:24 rh Exp $
 #
 
 DISTNAME=       gnucash-1.3.7
@@ -15,7 +15,7 @@ DEPENDS+=	libperl-5.00404:../../lang/libperl
 DEPENDS+=	guile-1.3.*:../../lang/guile
 DEPENDS+=	guile-slib-2c7:../../devel/guile-slib
 DEPENDS+=	swig-1.1p5:../../devel/swig
-DEPENDS+=	libxml-1.8.5:../../textproc/libxml
+DEPENDS+=	libxml>=1.8.5:../../textproc/libxml
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
