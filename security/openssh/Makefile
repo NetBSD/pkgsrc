@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2002/08/01 08:35:45 tron Exp $
+# $NetBSD: Makefile,v 1.87 2002/08/23 07:27:54 grant Exp $
 
 DISTNAME=		openssh-3.4p1
 PKGNAME=		openssh-3.4.0.1
@@ -35,11 +35,6 @@ PLIST_SRC=		# empty
 MESSAGE_SRC=		${.CURDIR}/MESSAGE
 
 SSH_PID_DIR=		/var/run	# default directory for PID files
-SSH_PID_DIR.SunOS=	/etc		# Solaris doesn't have a /var/run
-
-.if defined(SSH_PID_DIR.${OPSYS})
-SSH_PID_DIR=		${SSH_PID_DIR.${OPSYS}}
-.endif
 
 PKG_SYSCONFSUBDIR=	ssh
 MANDIR=			man
