@@ -1,0 +1,49 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/08 02:03:58 xtraeme Exp $
+bin/gift-setup
+bin/giftd
+include/libgift/array.h
+include/libgift/conf.h
+include/libgift/dataset.h
+include/libgift/event.h
+include/libgift/fdbuf.h
+include/libgift/file.h
+include/libgift/giftconfig.h
+include/libgift/interface.h
+include/libgift/libgift.h
+include/libgift/list.h
+include/libgift/list_lock.h
+include/libgift/log.h
+include/libgift/memory.h
+include/libgift/mime.h
+include/libgift/network.h
+include/libgift/parse.h
+include/libgift/platform.h
+include/libgift/proto/if_event_api.h
+include/libgift/proto/protocol.h
+include/libgift/proto/protocol_ver.h
+include/libgift/proto/share.h
+include/libgift/proto/share_hash.h
+include/libgift/proto/transfer_api.h
+include/libgift/stopwatch.h
+include/libgift/strobj.h
+include/libgift/tcpc.h
+include/libgift/tree.h
+lib/libgift.a
+lib/libgift.la
+lib/libgift.so
+lib/libgift.so.0
+lib/libgift.so.0.0
+lib/libgiftproto.a
+lib/libgiftproto.la
+lib/libgiftproto.so
+lib/libgiftproto.so.0
+lib/libgiftproto.so.0.0
+lib/pkgconfig/libgift.pc
+man/man1/giftd.1
+share/giFT/giftd.conf.template
+share/giFT/mime.types
+share/giFT/ui/ui.conf.template
+@dirrm share/giFT/ui
+@dirrm share/giFT
+@dirrm include/libgift/proto
+@dirrm include/libgift
