@@ -1,70 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2001/08/29 14:02:29 taya Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/09/21 16:37:43 taya Exp $
 bin/galeon
 bin/galeon-bin
-bin/galeon-config-clean
-etc/gconf/gconf.xml.defaults/apps/galeon/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Advanced/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Advanced/Crash/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Advanced/Filtering/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Advanced/Network/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Advanced/Persistent/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Browsing/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Browsing/Bookmarks/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Browsing/General/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Browsing/History/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Browsing/History/Session/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Handlers/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Handlers/Downloading/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Handlers/Mime/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Handlers/Programs/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Print/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Rendering/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Rendering/FontsColors/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/Rendering/Language/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/State/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/State/bookmarks_editor/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/State/compact_bookmark_editor/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/State/history/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/State/history_dock/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/State/prefs_dialog/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/UI/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/UI/Mouse/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/UI/Tabs/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/UI/Toolbar/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/galeon/UI/Windows/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Advanced/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Advanced/Crash/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Advanced/Filtering/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Advanced/Network/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Advanced/Persistent/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Browsing/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Browsing/Bookmarks/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Browsing/General/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Browsing/History/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Browsing/History/Session/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Handlers/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Handlers/Downloading/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Handlers/Mime/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Handlers/Programs/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Print/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Rendering/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Rendering/FontsColors/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Rendering/Language/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/State/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/State/bookmarks_editor/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/State/compact_bookmark_editor/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/State/history/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/State/history_dock/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/State/prefs_dialog/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/UI/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/UI/Mouse/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/UI/Tabs/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/UI/Toolbar/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/galeon/UI/Windows/%gconf.xml
-etc/gconf/schemas/galeon.schemas
+bin/galeon-config-tool
 etc/sound/events/galeon.soundlist
 man/man1/galeon.1
+share/galeon/BackHistory.png
+share/galeon/ForwardHistory.png
 share/galeon/about_logo.png
 share/galeon/babelfish.png
 share/galeon/bookmarks.glade
@@ -79,6 +20,8 @@ share/galeon/dir.xpm
 share/galeon/dir_open.xpm
 share/galeon/download.png
 share/galeon/drag-url-icon.png
+share/galeon/filters.glade
+share/galeon/filters.xml
 share/galeon/fonts.png
 share/galeon/freshmeat.png
 share/galeon/galeon-composite.png
@@ -90,6 +33,7 @@ share/galeon/google.png
 share/galeon/harddrive.png
 share/galeon/history.png
 share/galeon/i-bookmark.xpm
+share/galeon/insecure.xpm
 share/galeon/link.xpm
 share/galeon/logo.png
 share/galeon/mime.png
@@ -108,6 +52,7 @@ share/galeon/preferences.glade
 share/galeon/programs.png
 share/galeon/prompts.glade
 share/galeon/rpm.png
+share/galeon/secure.xpm
 share/galeon/small-close.xpm
 share/galeon/small-detach.xpm
 share/galeon/small-menu.xpm
@@ -170,6 +115,10 @@ share/galeon/spinners/pipeon/014.png
 share/galeon/spinners/pipeon/rest.png
 share/galeon/stop.png
 share/galeon/tabs.png
+share/galeon/tb_drag_arrow_down.xpm
+share/galeon/tb_drag_arrow_left.xpm
+share/galeon/tb_drag_arrow_right.xpm
+share/galeon/tb_drag_arrow_up.xpm
 share/galeon/themes/Glass/Back.png
 share/galeon/themes/Glass/Forward.png
 share/galeon/themes/Glass/Home.png
@@ -177,36 +126,46 @@ share/galeon/themes/Glass/New.png
 share/galeon/themes/Glass/Refresh.png
 share/galeon/themes/Glass/Stop.png
 share/galeon/themes/Glass/Up.png
-share/galeon/themes/GlassHuge/Back.png
-share/galeon/themes/GlassHuge/Forward.png
-share/galeon/themes/GlassHuge/Home.png
-share/galeon/themes/GlassHuge/New.png
-share/galeon/themes/GlassHuge/Refresh.png
-share/galeon/themes/GlassHuge/Stop.png
-share/galeon/themes/GlassHuge/Up.png
-share/galeon/themes/GlassLarge/Back.png
-share/galeon/themes/GlassLarge/Forward.png
-share/galeon/themes/GlassLarge/Home.png
-share/galeon/themes/GlassLarge/New.png
-share/galeon/themes/GlassLarge/Refresh.png
-share/galeon/themes/GlassLarge/Stop.png
-share/galeon/themes/GlassLarge/Up.png
 share/galeon/themes/Konqueror/Back.png
 share/galeon/themes/Konqueror/Forward.png
 share/galeon/themes/Konqueror/Home.png
 share/galeon/themes/Konqueror/Refresh.png
 share/galeon/themes/Konqueror/Stop.png
+share/galeon/themes/Micro/Back.png
+share/galeon/themes/Micro/Forward.png
+share/galeon/themes/Micro/Home.png
+share/galeon/themes/Micro/New.png
+share/galeon/themes/Micro/Refresh.png
+share/galeon/themes/Micro/Stop.png
+share/galeon/themes/Micro/Up.png
 share/galeon/themes/MozillaModern/Back.png
 share/galeon/themes/MozillaModern/Forward.png
+share/galeon/themes/MozillaModern/Go.png
 share/galeon/themes/MozillaModern/Home.png
 share/galeon/themes/MozillaModern/Print.png
 share/galeon/themes/MozillaModern/Refresh.png
 share/galeon/themes/MozillaModern/Stop.png
+share/galeon/themes/MozillaModern/Up.png
+share/galeon/themes/MozillaModernSmall/Back.png
+share/galeon/themes/MozillaModernSmall/Forward.png
+share/galeon/themes/MozillaModernSmall/Go.png
+share/galeon/themes/MozillaModernSmall/Home.png
+share/galeon/themes/MozillaModernSmall/Print.png
+share/galeon/themes/MozillaModernSmall/Refresh.png
+share/galeon/themes/MozillaModernSmall/Stop.png
+share/galeon/themes/MozillaModernSmall/Up.png
 share/galeon/themes/Netscape/Back.png
 share/galeon/themes/Netscape/Forward.png
 share/galeon/themes/Netscape/Home.png
 share/galeon/themes/Netscape/Refresh.png
 share/galeon/themes/Netscape/Stop.png
+share/galeon/themes/Orion/Back.png
+share/galeon/themes/Orion/Forward.png
+share/galeon/themes/Orion/Home.png
+share/galeon/themes/Orion/New.png
+share/galeon/themes/Orion/Refresh.png
+share/galeon/themes/Orion/Stop.png
+share/galeon/themes/Orion/Up.png
 share/galeon/themes/Plastik/Back.png
 share/galeon/themes/Plastik/Forward.png
 share/galeon/themes/Plastik/Home.png
@@ -221,9 +180,17 @@ share/galeon/themes/PlastikLarge/New.png
 share/galeon/themes/PlastikLarge/Refresh.png
 share/galeon/themes/PlastikLarge/Stop.png
 share/galeon/themes/PlastikLarge/Up.png
+share/galeon/themes/Remembrance/Back.png
+share/galeon/themes/Remembrance/Forward.png
+share/galeon/themes/Remembrance/Home.png
+share/galeon/themes/Remembrance/New.png
+share/galeon/themes/Remembrance/Refresh.png
+share/galeon/themes/Remembrance/Stop.png
+share/galeon/themes/Remembrance/Up.png
 share/galeon/themes/Ska/Back.png
 share/galeon/themes/Ska/Forward.png
 share/galeon/themes/Ska/Home.png
+share/galeon/themes/Ska/New.png
 share/galeon/themes/Ska/Refresh.png
 share/galeon/themes/Ska/Stop.png
 share/galeon/themes/Ska/Up.png
@@ -254,6 +221,7 @@ share/gnome/help/galeon/C/bugs.html
 share/gnome/help/galeon/C/command-line-options.html
 share/gnome/help/galeon/C/compiling-from-source.html
 share/gnome/help/galeon/C/context-menus.html
+share/gnome/help/galeon/C/find.html
 share/gnome/help/galeon/C/full-screen-mode.html
 share/gnome/help/galeon/C/getting-started.html
 share/gnome/help/galeon/C/history.html
@@ -301,8 +269,8 @@ share/locale/sv/LC_MESSAGES/galeon.mo
 share/locale/tr/LC_MESSAGES/galeon.mo
 share/locale/uk/LC_MESSAGES/galeon.mo
 share/locale/wa/LC_MESSAGES/galeon.mo
-share/locale/zh_CN.GB2312/LC_MESSAGES/galeon.mo
-share/locale/zh_TW.Big5/LC_MESSAGES/galeon.mo
+share/locale/zh_CN/LC_MESSAGES/galeon.mo
+share/locale/zh_TW/LC_MESSAGES/galeon.mo
 share/oaf/GNOME_Galeon_Automation.oaf
 share/pixmaps/galeon.png
 share/sounds/galeon/clicked.wav
@@ -312,15 +280,18 @@ share/sounds/galeon/clicked.wav
 @dirrm share/gnome/help/galeon/C/stylesheet-images
 @dirrm share/gnome/help/galeon/C/fig
 @dirrm share/gnome/help/galeon/C
+@dirrm share/gnome/help/galeon
 @dirrm share/galeon/themes/gnome-large
 @dirrm share/galeon/themes/Ska
+@dirrm share/galeon/themes/Remembrance
 @dirrm share/galeon/themes/PlastikLarge
 @dirrm share/galeon/themes/Plastik
+@dirrm share/galeon/themes/Orion
 @dirrm share/galeon/themes/Netscape
+@dirrm share/galeon/themes/MozillaModernSmall
 @dirrm share/galeon/themes/MozillaModern
+@dirrm share/galeon/themes/Micro
 @dirrm share/galeon/themes/Konqueror
-@dirrm share/galeon/themes/GlassLarge
-@dirrm share/galeon/themes/GlassHuge
 @dirrm share/galeon/themes/Glass
 @dirrm share/galeon/themes
 @dirrm share/galeon/spinners/pipeon
@@ -328,63 +299,6 @@ share/sounds/galeon/clicked.wav
 @dirrm share/galeon/spinners/crashcut
 @dirrm share/galeon/spinners
 @dirrm share/galeon
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/UI/Windows
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/UI/Toolbar
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/UI/Tabs
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/UI/Mouse
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/UI
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/State/prefs_dialog
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/State/history_dock
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/State/history
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/State/compact_bookmark_editor
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/State/bookmarks_editor
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/State
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Rendering/Language
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Rendering/FontsColors
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Rendering
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Print
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Handlers/Programs
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Handlers/Mime
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Handlers/Downloading
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Handlers
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Browsing/History/Session
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Browsing/History
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Browsing/General
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Browsing/Bookmarks
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Browsing
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Advanced/Persistent
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Advanced/Network
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Advanced/Filtering
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Advanced/Crash
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon/Advanced
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/galeon
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/UI/Windows
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/UI/Toolbar
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/UI/Tabs
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/UI/Mouse
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/UI
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/State/prefs_dialog
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/State/history_dock
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/State/history
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/State/compact_bookmark_editor
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/State/bookmarks_editor
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/State
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Rendering/Language
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Rendering/FontsColors
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Rendering
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Print
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Handlers/Programs
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Handlers/Mime
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Handlers/Downloading
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Handlers
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Browsing/History/Session
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Browsing/History
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Browsing/General
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Browsing/Bookmarks
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Browsing
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Advanced/Persistent
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Advanced/Network
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Advanced/Filtering
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Advanced/Crash
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon/Advanced
-@dirrm etc/gconf/gconf.xml.defaults/apps/galeon
+@unexec %D/bin/gconftool --shutdown
+@unexec /bin/rm -rf %D/etc/gconf/gconf.xml.defaults/apps/galeon
+@unexec /bin/rm -rf %D/etc/gconf/gconf.xml.defaults/schemas/apps/galeon
