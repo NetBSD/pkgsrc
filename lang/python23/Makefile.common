@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2004/07/22 09:16:03 recht Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/08/28 16:41:33 danw Exp $
 #
 
 DISTNAME=	Python-2.3.4
@@ -66,6 +66,11 @@ EXTRA_SO_SUBST=
 
 PLIST_SUBST+=	EXTRA_SO=${EXTRA_SO_SUBST}
 PLIST_SUBST+=	OSSAUDIODEV=${OSSAUDIODEV_SUBST}
+
+# Make sure python modules can link correctly
+.if ${OPSYS} == "Darwin"
+INSTALL_UNSTRIPPED=	yes
+.endif
 
 # ensure that the bsddb185 module is built on all platforms
 USE_DB185=	yes
