@@ -1,0 +1,43 @@
+# $NetBSD: imp.conf.dist,v 1.1.1.1 2005/01/16 21:36:28 adrianp Exp $
+#
+# IMP configuration file fragment for Apache
+
+<IfModule mod_alias.c>
+    Alias /imp/ "/usr/pkg/share/horde/imp/"
+</IfModule>
+
+<Directory "/usr/pkg/share/horde">
+    DirectoryIndex index.php
+    <IfModule mod_php4.c>
+        php_flag file_uploads On
+        php_flag upload_max_filesize 5M  
+    </IfModule>
+</Directory>
+
+# For security, don't serve pages from the IMP configuration and library
+# directories.
+#
+<Directory "@IMPDIR@/config">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@IMPDIR@/lib">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@IMPDIR@/locale">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@IMPDIR@/po">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@IMPDIR@/scripts">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@IMPDIR@/templates">
+    Order deny,allow
+    Deny from all
+</Directory>
