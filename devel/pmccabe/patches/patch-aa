@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/24 11:19:00 agc Exp $
+
+--- Makefile	2005/02/24 10:53:19	1.1
++++ Makefile	2005/02/24 10:55:17
+@@ -10,7 +10,7 @@
+ ###############{
+ 
+ # On HP-UX you will have to change this
+-INSTALL = install -o root -g root
++#INSTALL = install -o root -g root
+ 
+ DESTDIR = 
+ 
+@@ -30,7 +30,7 @@
+ all:		$(PROGS) test
+ 
+ test:		$(PROGS)
+-		./testsuite
++		ksh ./testsuite
+ 
+ pmccabe:	$(PMOBJS)
+ 	$(CC) $(CFLAGS) -o pmccabe $(PMOBJS)
+@@ -39,12 +39,10 @@
+ 	rm -f *.[oa] pmccabe decomment *.out */*.out
+ 
+ install: $(PROGS) $(MANPGS) $(DOCS)
+-	$(INSTALL) -d $(DESTDIR)/usr/share/doc/pmccabe \
+-			$(DESTDIR)/usr/share/man/man1 \
+-			$(DESTDIR)/usr/bin
+-	$(INSTALL) -m 644 $(MANPGS) $(DESTDIR)/usr/share/man/man1
+-	#$(INSTALL) -m 644 $(DOCS)  $(DESTDIR)/usr/share/doc/pmccabe
+-	$(INSTALL) -m 755 $(PROGS) $(DESTDIR)/usr/bin
++	$(INSTALL) -d $(DESTDIR)/${PREFIX}/man/man1
++	$(INSTALL) -d $(DESTDIR)/${PREFIX}/bin
++	$(INSTALL) -m 644 $(MANPGS) $(DESTDIR)/${PREFIX}/man/man1
++	$(INSTALL) -m 755 $(PROGS) $(DESTDIR)/${PREFIX}/bin
+ 
+ ###############}
+ 
