@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2003/09/27 14:13:08 grant Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/19 08:20:38 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -39,16 +39,18 @@ do-install:
 	@${RM} -f ${MOZILLA_LIB}/plugins/libnullplugin.so
 
 post-install:
-# this build for Solaris wants exactly 'libgtk-1.2.so.0', etc.
-.if ${OPSYS} == "SunOS"
+# this build wants exactly 'libgtk-1.2.so.0', etc.
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
 	@cd ${MOZILLA_LIB} && \
-	${LN} -s ${LOCALBASE}/lib/libglib.*so* .;			\
-	${LN} -s ${LOCALBASE}/lib/libgmodule.*so* .;			\
-	${LN} -s ${X11BASE}/lib/libgdk.*so* .;				\
-	${LN} -s ${X11BASE}/lib/libgtk.*so* .;				\
+	${LN} -s ${PREFIX}/lib/libglib.*so* .;				\
+	${LN} -s ${PREFIX}/lib/libgmodule.*so* .;			\
+	${LN} -s ${X11PREFIX}/lib/libgdk.*so* .;			\
+	${LN} -s ${X11PREFIX}/lib/libgtk.*so* .;			\
 	${LN} -s libgtk.so libgtk-1.2.so.0;				\
 	${LN} -s libgdk.so libgdk-1.2.so.0;				\
-	${LN} -s libglib.so libglib-1.2.so.0
+	${LN} -s libglib.so libglib-1.2.so.0;				\
+	${LN} -s libgmodule.so libgmodule-1.2.so.0
+	
 .endif
 	@${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
 	@${ECHO} bin/MozillaFirebird-${PLATFORM} >> ${PLIST_SRC}

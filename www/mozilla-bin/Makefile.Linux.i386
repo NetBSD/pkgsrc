@@ -1,7 +1,9 @@
-# $NetBSD: Makefile.Linux.i386,v 1.2 2003/07/02 14:56:59 grant Exp $
+# $NetBSD: Makefile.Linux.i386,v 1.3 2003/10/19 08:27:27 grant Exp $
 #
 
 DISTNAME=	mozilla-i686-pc-linux-gnu-1.4
+
+DEPENDS+=	gtk+>=1.2:../../x11/gtk
 
 PLATFORM=	linux
 MOZILLA_LIB=	${PREFIX}/lib/mozilla-${PLATFORM}
