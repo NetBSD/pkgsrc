@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2003/02/16 06:43:40 taca Exp $
+# $NetBSD: Makefile,v 1.77 2003/02/19 23:44:42 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE1
 PKGNAME=	squid-2.5.1
@@ -71,9 +71,8 @@ PATCHFILES=	squid-2.5.STABLE1-disable-ident-lookups.patch \
 		squid-2.5.STABLE1-HEAD_bad_headers.patch \
 		squid-2.5.STABLE1-time_acl_list.patch \
 		squid-2.5.STABLE1-CONNECT_pipeline.patch \
-		squid-2.5.STABLE1-winbind.patch
-#	currently it is broken, so patch with patches/patch-cd
-#		squid-2.5.STABLE1-mib.patch
+		squid-2.5.STABLE1-winbind.patch \
+		squid-2.5.STABLE1-mib.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@netbsd.org
