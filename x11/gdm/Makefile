@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/11/21 10:41:43 grant Exp $
+# $NetBSD: Makefile,v 1.33 2002/11/28 11:01:32 tron Exp $
 
 DISTNAME=	gdm-2.2.0
 PKGREVISION=	2
@@ -13,7 +13,7 @@ COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_BUILLDINK2=	YES
+USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
 
