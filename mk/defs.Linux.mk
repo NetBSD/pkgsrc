@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.31 2002/10/04 23:32:17 jlam Exp $
+# $NetBSD: defs.Linux.mk,v 1.32 2002/10/23 12:21:30 wiz Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -79,7 +79,6 @@ ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 USERADD?=		/usr/sbin/useradd
 ZOULARISBASE?=		/usr/pkg
 
-_DO_LIBINTL_CHECKS=	no	# perform checks for valid libintl
 _DO_SHLIB_CHECKS=	no	# on installation, fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	yes	# GNU make is standard

@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.30 2002/10/09 00:00:26 schmonz Exp $
+# $NetBSD: defs.Darwin.mk,v 1.31 2002/10/23 12:21:30 wiz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -75,7 +75,6 @@ ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 USERADD?=		${FALSE}			# XXX - Fix me!
 ZOULARISBASE?=		${LOCALBASE}
 
-_DO_LIBINTL_CHECKS=	yes	# perform checks for valid libintl
 _DO_SHLIB_CHECKS=	yes	# on installation, fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	yes	# GNU make is standard

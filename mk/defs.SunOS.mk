@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.31 2002/10/17 14:39:18 grant Exp $
+# $NetBSD: defs.SunOS.mk,v 1.32 2002/10/23 12:21:30 wiz Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -88,7 +88,6 @@ ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 USERADD?=		/usr/sbin/useradd
 
-_DO_LIBINTL_CHECKS=	yes		# perform checks for valid libintl
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
 _IMAKE_MAKE=	/usr/ccs/bin/make	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	no		# GNU make is not standard

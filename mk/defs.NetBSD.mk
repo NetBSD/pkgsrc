@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.30 2002/10/16 23:42:00 itojun Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.31 2002/10/23 12:21:30 wiz Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -89,7 +89,6 @@ ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 
-_DO_LIBINTL_CHECKS=	yes	# perform checks for valid libintl
 _DO_SHLIB_CHECKS=	yes	# fixup PLIST for shared libs/run ldconfig
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	no	# GNU make is not standard
