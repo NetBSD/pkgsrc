@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/03/06 23:03:33 kristerw Exp $
+# $NetBSD: Makefile,v 1.20 2002/04/22 02:49:27 jlam Exp $
 #
 
 DISTNAME=		xmame-0.56.2
@@ -39,39 +39,10 @@ MAME_DISP_METHOD?=	x11
 MAME_CPU.${MARCH}?=	${MARCH}
 .endfor
 .if !defined(MAME_CPU.${MACHINE_ARCH})
-# Determine the endianness of the CPU by checking header files.
-.  if !defined(MACHINE_ENDIAN)
-_ENDIAN_H_FILES=	/usr/include/sys/endian.h
-_ENDIAN_H_FILES+=	/usr/include/machine/endian.h
-_ENDIAN_H_FILES+=	/usr/include/endian.h
-_ENDIAN_H_FILES+=	/usr/include/sys/byteorder.h
-_ENDIAN_H_FILES+=	/dev/null
-.    for FILE in ${_ENDIAN_H_FILES}
-.      if exists(${FILE})
-_ENDIAN_H?=		${FILE:S/\/usr\/include\///}
-.      endif
-.    endfor
-MACHINE_ENDIAN!=							\
-	if (								\
-		${ECHO} "\#include <${_ENDIAN_H}>";			\
-		${ECHO} "\#ifndef BYTE_ORDER";				\
-		${ECHO} "\#ifdef _BIG_ENDIAN";				\
-		${ECHO} "\#define BYTE_ORDER 4321";			\
-		${ECHO} "\#else";					\
-		${ECHO} "\#define BYTE_ORDER 1234";			\
-		${ECHO} "\#endif";					\
-		${ECHO} "\#endif";					\
-		${ECHO} "BYTE_ORDER";					\
-	   ) | ${CC} -E - | ${GREP} "4321" >/dev/null 2>&1;		\
-	then								\
-		${ECHO} big;						\
-	else								\
-		${ECHO} little;						\
-	fi
-MAKEFLAGS+=	MACHINE_ENDIAN="${MACHINE_ENDIAN}"
-.  endif
+.  include "../../mk/endian.mk"
 _MAME_CPU.big-endian=		risc
 _MAME_CPU.little-endian=	risc_lsb
+_MAME_CPU.unknown-endian=	risc		# assume unknown == big
 MAME_CPU.${MACHINE_ARCH}?=	${_MAME_CPU.${MACHINE_ENDIAN}-endian}
 .endif
 
