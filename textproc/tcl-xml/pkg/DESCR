@@ -1,0 +1,3 @@
+TclXML is an all-Tcl XML parser. The goal of this parser is to be
+"plug-compatible" with TclExpat. This parser can be made more forgiving
+of broken XML than expat, by using the -errorcommand option.
