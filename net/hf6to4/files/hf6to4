@@ -100,7 +100,8 @@ fi
 localadr4=`ifconfig $out_if inet \
            | grep inet \
 	   | sed 's/^.*inet *//' \
-	   | sed 's/ .*$//'`
+	   | sed 's/ .*$//' \
+	   | head -1`
 
 l4c=`echo $localadr4 | sed 's,\., ,g'`
 prefix=`printf "2002:%02x%02x:%02x%02x" $l4c`
