@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/02/23 17:03:42 bouyer Exp $
+lib/libamclient.a
+lib/libamclient-2.4.1p1.so.0.0
+libexec/amandad
+libexec/calcsize
+libexec/killpgrp
+libexec/patch-system
+libexec/rundump
+libexec/runtar
+libexec/selfcheck
+libexec/sendbackup
+libexec/sendsize
+man/man8/amrecover.8
+sbin/amrecover

@@ -1,0 +1,144 @@
+--- client-src/Makefile.in.old	Tue Feb 23 11:09:57 1999
++++ client-src/Makefile.in	Tue Feb 23 11:11:28 1999
+@@ -83,7 +83,7 @@
+ BUILD_CLIENT_SCRIPTS_LIBEXEC = @BUILD_CLIENT_SCRIPTS_LIBEXEC@
+ BUILD_CLIENT_SCRIPTS_SBIN = @BUILD_CLIENT_SCRIPTS_SBIN@
+ BUILD_COMMON_LIB = @BUILD_COMMON_LIB@
+-BUILD_COMMON_LTLIB = @BUILD_COMMON_LTLIB@
++BUILD_COMMON_LTLIB =
+ BUILD_RECOVER_PROGS_SBIN = @BUILD_RECOVER_PROGS_SBIN@
+ BUILD_RESTORE_PROGS_LIBEXEC = @BUILD_RESTORE_PROGS_LIBEXEC@
+ BUILD_RESTORE_PROGS_SBIN = @BUILD_RESTORE_PROGS_SBIN@
+@@ -162,12 +162,11 @@
+ 
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(AMANDA_CFLAGS)
+ 
+-LDADD =	libamclient.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION)
++LDADD =	libamclient.$(LIB_EXTENSION) 
+ 
+ SUFFIXES =		.sh .pl
+ 
+-libexec_PROGRAMS =	versionsuffix		@BUILD_CLIENT_PROGS_LIBEXEC@
++libexec_PROGRAMS =	@BUILD_CLIENT_PROGS_LIBEXEC@
+ 
+ # these are used for testing only:
+ TEST_PROGS = getfsent
+@@ -224,7 +223,7 @@
+ DEFS = @DEFS@ -I. -I$(srcdir) -I../config
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -lamanda
+ libamclient_a_OBJECTS =  amandates.o getfsent.o unctime.o
+ LTLIBRARIES =  $(lib_LTLIBRARIES)
+ 
+@@ -234,60 +233,50 @@
+ amandad_SOURCES = amandad.c
+ amandad_OBJECTS =  amandad.o
+ amandad_LDADD = $(LDADD)
+-amandad_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++amandad_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) 
+ amandad_LDFLAGS = 
+ calcsize_SOURCES = calcsize.c
+ calcsize_OBJECTS =  calcsize.o
+ calcsize_LDADD = $(LDADD)
+-calcsize_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++calcsize_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) 
+ calcsize_LDFLAGS = 
+ killpgrp_SOURCES = killpgrp.c
+ killpgrp_OBJECTS =  killpgrp.o
+ killpgrp_LDADD = $(LDADD)
+-killpgrp_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++killpgrp_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) 
+ killpgrp_LDFLAGS = 
+ rundump_SOURCES = rundump.c
+ rundump_OBJECTS =  rundump.o
+ rundump_LDADD = $(LDADD)
+-rundump_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++rundump_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) 
+ rundump_LDFLAGS = 
+ runtar_SOURCES = runtar.c
+ runtar_OBJECTS =  runtar.o
+ runtar_LDADD = $(LDADD)
+-runtar_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++runtar_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) 
+ runtar_LDFLAGS = 
+ selfcheck_SOURCES = selfcheck.c
+ selfcheck_OBJECTS =  selfcheck.o
+ selfcheck_LDADD = $(LDADD)
+-selfcheck_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++selfcheck_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) 
+ selfcheck_LDFLAGS = 
+ sendbackup_OBJECTS =  sendbackup.o sendbackup-dump.o sendbackup-gnutar.o
+ sendbackup_LDADD = $(LDADD)
+-sendbackup_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++sendbackup_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) 
+ sendbackup_LDFLAGS = 
+ sendsize_SOURCES = sendsize.c
+ sendsize_OBJECTS =  sendsize.o
+ sendsize_LDADD = $(LDADD)
+-sendsize_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++sendsize_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) 
+ sendsize_LDFLAGS = 
+ getfsent_OBJECTS =  getfsent.test.o
+ getfsent_LDADD = $(LDADD)
+-getfsent_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++getfsent_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) 
+ getfsent_LDFLAGS = 
+ versionsuffix_SOURCES = versionsuffix.c
+ versionsuffix_OBJECTS =  versionsuffix.o
+ versionsuffix_LDADD = $(LDADD)
+-versionsuffix_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++versionsuffix_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) 
+ versionsuffix_LDFLAGS = 
+ SCRIPTS =  $(libexec_SCRIPTS) $(sbin_SCRIPTS)
+ 
+--- recover-src/Makefile.in.old	Tue Feb 23 11:34:04 1999
++++ recover-src/Makefile.in	Tue Feb 23 11:36:07 1999
+@@ -83,7 +83,7 @@
+ BUILD_CLIENT_SCRIPTS_LIBEXEC = @BUILD_CLIENT_SCRIPTS_LIBEXEC@
+ BUILD_CLIENT_SCRIPTS_SBIN = @BUILD_CLIENT_SCRIPTS_SBIN@
+ BUILD_COMMON_LIB = @BUILD_COMMON_LIB@
+-BUILD_COMMON_LTLIB = @BUILD_COMMON_LTLIB@
++BUILD_COMMON_LTLIB =
+ BUILD_RECOVER_PROGS_SBIN = @BUILD_RECOVER_PROGS_SBIN@
+ BUILD_RESTORE_PROGS_LIBEXEC = @BUILD_RESTORE_PROGS_LIBEXEC@
+ BUILD_RESTORE_PROGS_SBIN = @BUILD_RESTORE_PROGS_SBIN@
+@@ -164,9 +164,7 @@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(AMANDA_CFLAGS)
+ 
+ LDADD = @LEXLIB@ \
+-	../client-src/libamclient.$(LIB_EXTENSION) \
+-	../tape-src/libamtape.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION)
++	../client-src/libamclient.$(LIB_EXTENSION) 
+ 
+ EXTRA_PROGRAMS = 	amrecover
+ 
+@@ -189,13 +187,11 @@
+ DEFS = @DEFS@ -I. -I$(srcdir) -I../config
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -lamanda -lamtape
+ amrecover_OBJECTS =  amrecover.o display_commands.o extract_list.o \
+ help.o set_commands.o uparse.o uscan.o
+ amrecover_LDADD = $(LDADD)
+-amrecover_DEPENDENCIES =  ../client-src/libamclient.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++amrecover_DEPENDENCIES =  ../client-src/libamclient.$(LIB_EXTENSION) 
+ amrecover_LDFLAGS = 
+ LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
+ LEXLIB = @LEXLIB@
