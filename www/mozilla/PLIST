@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/06/21 14:14:00 taya Exp $
+@comment $NetBSD: PLIST,v 1.13.2.1 2004/11/30 23:29:14 salo Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2792,6 +2792,245 @@ include/${MOZILLA}/xultmpl/nsIXULTemplateBuilder.h
 include/${MOZILLA}/zlib/zconf.h
 include/${MOZILLA}/zlib/zlib.h
 @comment end INCLUDE
+@comment begin INCLUDE-PUBLIC
+include/${MOZILLA}/ldap/ldap-standard.h
+include/${MOZILLA}/ldap/disptmpl.h
+include/${MOZILLA}/ldap/lber.h
+include/${MOZILLA}/ldap/ldap.h
+include/${MOZILLA}/ldap/ldap-extension.h
+include/${MOZILLA}/ldap/ldap-platform.h
+include/${MOZILLA}/ldap/ldap-to-be-deprecated.h
+include/${MOZILLA}/ldap/ldap-deprecated.h
+include/${MOZILLA}/ldap/ldap_ssl.h
+include/${MOZILLA}/ldap/ldappr.h
+include/${MOZILLA}/ldap/iutil.h
+include/${MOZILLA}/ldap/srchpref.h
+include/${MOZILLA}/ldap-private/ldap-int.h
+include/${MOZILLA}/ldap-private/lber-int.h
+include/${MOZILLA}/ldap-private/portable.h
+include/${MOZILLA}/ldap-private/ldaprot.h
+include/${MOZILLA}/ldap-private/ldaplog.h
+include/${MOZILLA}/ldap-nspr/obsolete/pralarm.h
+include/${MOZILLA}/ldap-nspr/obsolete/probslet.h
+include/${MOZILLA}/ldap-nspr/obsolete/protypes.h
+include/${MOZILLA}/ldap-nspr/obsolete/prsem.h
+include/${MOZILLA}/ldap-nspr/private/pprio.h
+include/${MOZILLA}/ldap-nspr/private/pprthred.h
+include/${MOZILLA}/ldap-nspr/private/prpriv.h
+include/${MOZILLA}/ldap-nspr/md/sunos4.h
+include/${MOZILLA}/ldap-nspr/md/_aix64.cfg
+include/${MOZILLA}/ldap-nspr/md/_beos.cfg
+include/${MOZILLA}/ldap-nspr/md/_bsdi.cfg
+include/${MOZILLA}/ldap-nspr/md/_darwin.cfg
+include/${MOZILLA}/ldap-nspr/md/_dgux.cfg
+include/${MOZILLA}/ldap-nspr/md/_freebsd.cfg
+include/${MOZILLA}/ldap-nspr/md/_hpux32.cfg
+include/${MOZILLA}/ldap-nspr/md/_hpux64.cfg
+include/${MOZILLA}/ldap-nspr/md/_irix32.cfg
+include/${MOZILLA}/ldap-nspr/md/_irix64.cfg
+include/${MOZILLA}/ldap-nspr/md/_linux.cfg
+include/${MOZILLA}/ldap-nspr/md/_ncr.cfg
+include/${MOZILLA}/ldap-nspr/md/_nec.cfg
+include/${MOZILLA}/ldap-nspr/md/_netbsd.cfg
+include/${MOZILLA}/ldap-nspr/md/_nextstep.cfg
+include/${MOZILLA}/ldap-nspr/md/_nto.cfg
+include/${MOZILLA}/ldap-nspr/md/_openbsd.cfg
+include/${MOZILLA}/ldap-nspr/md/_openvms.cfg
+include/${MOZILLA}/ldap-nspr/md/_os2.cfg
+include/${MOZILLA}/ldap-nspr/md/_osf1.cfg
+include/${MOZILLA}/ldap-nspr/md/_qnx.cfg
+include/${MOZILLA}/ldap-nspr/md/_reliantunix.cfg
+include/${MOZILLA}/ldap-nspr/md/_rhapsody.cfg
+include/${MOZILLA}/ldap-nspr/md/_scoos.cfg
+include/${MOZILLA}/ldap-nspr/md/_solaris32.cfg
+include/${MOZILLA}/ldap-nspr/md/_solaris64.cfg
+include/${MOZILLA}/ldap-nspr/md/_sony.cfg
+include/${MOZILLA}/ldap-nspr/md/_sunos4.cfg
+include/${MOZILLA}/ldap-nspr/md/_unixware.cfg
+include/${MOZILLA}/ldap-nspr/md/_unixware7.cfg
+include/${MOZILLA}/ldap-nspr/md/_win16.cfg
+include/${MOZILLA}/ldap-nspr/md/_win95.cfg
+include/${MOZILLA}/ldap-nspr/md/_winnt.cfg
+include/${MOZILLA}/ldap-nspr/md/_aix.h
+include/${MOZILLA}/ldap-nspr/md/_beos.h
+include/${MOZILLA}/ldap-nspr/md/_bsdi.h
+include/${MOZILLA}/ldap-nspr/md/_darwin.h
+include/${MOZILLA}/ldap-nspr/md/_dgux.h
+include/${MOZILLA}/ldap-nspr/md/_freebsd.h
+include/${MOZILLA}/ldap-nspr/md/_hpux.h
+include/${MOZILLA}/ldap-nspr/md/_irix.h
+include/${MOZILLA}/ldap-nspr/md/_linux.h
+include/${MOZILLA}/ldap-nspr/md/_macos.h
+include/${MOZILLA}/ldap-nspr/md/_ncr.h
+include/${MOZILLA}/ldap-nspr/md/_nec.h
+include/${MOZILLA}/ldap-nspr/md/_netbsd.h
+include/${MOZILLA}/ldap-nspr/md/_nextstep.h
+include/${MOZILLA}/ldap-nspr/md/_nspr_pthread.h
+include/${MOZILLA}/ldap-nspr/md/_nto.h
+include/${MOZILLA}/ldap-nspr/md/_openbsd.h
+include/${MOZILLA}/ldap-nspr/md/_openvms.h
+include/${MOZILLA}/ldap-nspr/md/_os2.h
+include/${MOZILLA}/ldap-nspr/md/_os2_errors.h
+include/${MOZILLA}/ldap-nspr/md/_osf1.h
+include/${MOZILLA}/ldap-nspr/md/_pcos.h
+include/${MOZILLA}/ldap-nspr/md/_pth.h
+include/${MOZILLA}/ldap-nspr/md/_qnx.h
+include/${MOZILLA}/ldap-nspr/md/_reliantunix.h
+include/${MOZILLA}/ldap-nspr/md/_rhapsody.h
+include/${MOZILLA}/ldap-nspr/md/_scoos.h
+include/${MOZILLA}/ldap-nspr/md/_solaris.h
+include/${MOZILLA}/ldap-nspr/md/_sony.h
+include/${MOZILLA}/ldap-nspr/md/_sunos4.h
+include/${MOZILLA}/ldap-nspr/md/_unix_errors.h
+include/${MOZILLA}/ldap-nspr/md/_unixos.h
+include/${MOZILLA}/ldap-nspr/md/_unixware.h
+include/${MOZILLA}/ldap-nspr/md/_win16.h
+include/${MOZILLA}/ldap-nspr/md/_win32_errors.h
+include/${MOZILLA}/ldap-nspr/md/_win95.h
+include/${MOZILLA}/ldap-nspr/md/_winnt.h
+include/${MOZILLA}/ldap-nspr/md/prosdep.h
+include/${MOZILLA}/ldap-nspr/md/_aix32.cfg
+include/${MOZILLA}/ldap-nspr/prtrace.h
+include/${MOZILLA}/ldap-nspr/prtpool.h
+include/${MOZILLA}/ldap-nspr/prtime.h
+include/${MOZILLA}/ldap-nspr/prthread.h
+include/${MOZILLA}/ldap-nspr/prsystem.h
+include/${MOZILLA}/ldap-nspr/prshma.h
+include/${MOZILLA}/ldap-nspr/prshm.h
+include/${MOZILLA}/ldap-nspr/prrwlock.h
+include/${MOZILLA}/ldap-nspr/prrng.h
+include/${MOZILLA}/ldap-nspr/prproces.h
+include/${MOZILLA}/ldap-nspr/prprf.h
+include/${MOZILLA}/ldap-nspr/prpdce.h
+include/${MOZILLA}/ldap-nspr/prolock.h
+include/${MOZILLA}/ldap-nspr/prnetdb.h
+include/${MOZILLA}/ldap-nspr/prmwait.h
+include/${MOZILLA}/ldap-nspr/prmon.h
+include/${MOZILLA}/ldap-nspr/prmem.h
+include/${MOZILLA}/ldap-nspr/prlong.h
+include/${MOZILLA}/ldap-nspr/prlog.h
+include/${MOZILLA}/ldap-nspr/prlock.h
+include/${MOZILLA}/ldap-nspr/prlink.h
+include/${MOZILLA}/ldap-nspr/pripcsem.h
+include/${MOZILLA}/ldap-nspr/prio.h
+include/${MOZILLA}/ldap-nspr/prinrval.h
+include/${MOZILLA}/ldap-nspr/prinit.h
+include/${MOZILLA}/ldap-nspr/prinet.h
+include/${MOZILLA}/ldap-nspr/prerror.h
+include/${MOZILLA}/ldap-nspr/prerr.h
+include/${MOZILLA}/ldap-nspr/prenv.h
+include/${MOZILLA}/ldap-nspr/prdtoa.h
+include/${MOZILLA}/ldap-nspr/prcvar.h
+include/${MOZILLA}/ldap-nspr/prcpucfg.h
+include/${MOZILLA}/ldap-nspr/prcountr.h
+include/${MOZILLA}/ldap-nspr/prcmon.h
+include/${MOZILLA}/ldap-nspr/prclist.h
+include/${MOZILLA}/ldap-nspr/prbit.h
+include/${MOZILLA}/ldap-nspr/pratom.h
+include/${MOZILLA}/ldap-nspr/plstr.h
+include/${MOZILLA}/ldap-nspr/plresolv.h
+include/${MOZILLA}/ldap-nspr/plhash.h
+include/${MOZILLA}/ldap-nspr/plgetopt.h
+include/${MOZILLA}/ldap-nspr/prwin16.h
+include/${MOZILLA}/ldap-nspr/plbase64.h
+include/${MOZILLA}/ldap-nspr/plarenas.h
+include/${MOZILLA}/ldap-nspr/plarena.h
+include/${MOZILLA}/ldap-nspr/nspr.h
+include/${MOZILLA}/ldap-nspr/plerror.h
+include/${MOZILLA}/ldap-nspr/prvrsion.h
+include/${MOZILLA}/ldap-nspr/prtypes.h
+include/${MOZILLA}/nss/base64.h
+include/${MOZILLA}/nss/ciferfam.h
+include/${MOZILLA}/nss/nssb64.h
+include/${MOZILLA}/nss/nssb64t.h
+include/${MOZILLA}/nss/nsslocks.h
+include/${MOZILLA}/nss/nssilock.h
+include/${MOZILLA}/nss/nssilckt.h
+include/${MOZILLA}/nss/nssrwlk.h
+include/${MOZILLA}/nss/nssrwlkt.h
+include/${MOZILLA}/nss/portreg.h
+include/${MOZILLA}/nss/secasn1.h
+include/${MOZILLA}/nss/secasn1t.h
+include/${MOZILLA}/nss/seccomon.h
+include/${MOZILLA}/nss/secder.h
+include/${MOZILLA}/nss/secdert.h
+include/${MOZILLA}/nss/secdig.h
+include/${MOZILLA}/nss/secdigt.h
+include/${MOZILLA}/nss/secitem.h
+include/${MOZILLA}/nss/secoid.h
+include/${MOZILLA}/nss/secoidt.h
+include/${MOZILLA}/nss/secport.h
+include/${MOZILLA}/nss/secerr.h
+include/${MOZILLA}/nss/watcomfx.h
+include/${MOZILLA}/nss/blapit.h
+include/${MOZILLA}/nss/shsign.h
+include/${MOZILLA}/nss/ecl-exp.h
+include/${MOZILLA}/nss/pkcs11.h
+include/${MOZILLA}/nss/pkcs11f.h
+include/${MOZILLA}/nss/pkcs11p.h
+include/${MOZILLA}/nss/pkcs11t.h
+include/${MOZILLA}/nss/pkcs11n.h
+include/${MOZILLA}/nss/pkcs11u.h
+include/${MOZILLA}/nss/nssbaset.h
+include/${MOZILLA}/nss/nssbase.h
+include/${MOZILLA}/nss/cert.h
+include/${MOZILLA}/nss/certt.h
+include/${MOZILLA}/nss/certdb.h
+include/${MOZILLA}/nss/ocsp.h
+include/${MOZILLA}/nss/ocspt.h
+include/${MOZILLA}/nss/secmod.h
+include/${MOZILLA}/nss/secmodt.h
+include/${MOZILLA}/nss/secpkcs5.h
+include/${MOZILLA}/nss/pk11func.h
+include/${MOZILLA}/nss/pk11sdr.h
+include/${MOZILLA}/nss/pk11pqg.h
+include/${MOZILLA}/nss/cryptohi.h
+include/${MOZILLA}/nss/cryptoht.h
+include/${MOZILLA}/nss/hasht.h
+include/${MOZILLA}/nss/key.h
+include/${MOZILLA}/nss/keyhi.h
+include/${MOZILLA}/nss/keyt.h
+include/${MOZILLA}/nss/keythi.h
+include/${MOZILLA}/nss/sechash.h
+include/${MOZILLA}/nss/nss.h
+include/${MOZILLA}/nss/ssl.h
+include/${MOZILLA}/nss/sslt.h
+include/${MOZILLA}/nss/sslerr.h
+include/${MOZILLA}/nss/sslproto.h
+include/${MOZILLA}/nss/preenc.h
+include/${MOZILLA}/nss/pkcs12t.h
+include/${MOZILLA}/nss/pkcs12.h
+include/${MOZILLA}/nss/p12plcy.h
+include/${MOZILLA}/nss/p12.h
+include/${MOZILLA}/nss/p12t.h
+include/${MOZILLA}/nss/secmime.h
+include/${MOZILLA}/nss/secpkcs7.h
+include/${MOZILLA}/nss/pkcs7t.h
+include/${MOZILLA}/nss/cms.h
+include/${MOZILLA}/nss/cmst.h
+include/${MOZILLA}/nss/smime.h
+include/${MOZILLA}/nss/cmsreclist.h
+include/${MOZILLA}/nss/crmf.h
+include/${MOZILLA}/nss/crmft.h
+include/${MOZILLA}/nss/cmmf.h
+include/${MOZILLA}/nss/cmmft.h
+include/${MOZILLA}/nss/jar.h
+include/${MOZILLA}/nss/jar-ds.h
+include/${MOZILLA}/nss/jarfile.h
+include/${MOZILLA}/nss/nssckbi.h
+include/${MOZILLA}/nss/nssck.api
+include/${MOZILLA}/nss/nssckepv.h
+include/${MOZILLA}/nss/nssckft.h
+include/${MOZILLA}/nss/nssckfw.h
+include/${MOZILLA}/nss/nssckfwc.h
+include/${MOZILLA}/nss/nssckfwt.h
+include/${MOZILLA}/nss/nssckg.h
+include/${MOZILLA}/nss/nssckmdt.h
+include/${MOZILLA}/nss/nssckt.h
+include/${MOZILLA}/nss/swfort.h
+include/${MOZILLA}/nss/swfortt.h
+include/${MOZILLA}/seccmd/secutil.h
+@comment end INCLUDE-PUBLIC
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regchrome
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/chrome.rdf
@@ -2902,6 +3141,7 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm include/${MOZILLA}/spellchecker
 @dirrm include/${MOZILLA}/sidebar
 @dirrm include/${MOZILLA}/shistory
+@dirrm include/${MOZILLA}/seccmd
 @dirrm include/${MOZILLA}/rdfutil
 @dirrm include/${MOZILLA}/rdf
 @dirrm include/${MOZILLA}/progressDlg
@@ -2917,6 +3157,7 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm include/${MOZILLA}/pipboot
 @dirrm include/${MOZILLA}/p3p
 @dirrm include/${MOZILLA}/oji
+@dirrm include/${MOZILLA}/nss
 @dirrm include/${MOZILLA}/nspr/private
 @dirrm include/${MOZILLA}/nspr/obsolete
 @dirrm include/${MOZILLA}/nspr/md
@@ -2945,6 +3186,12 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm include/${MOZILLA}/liveconnect
 @dirrm include/${MOZILLA}/libreg
 @dirrm include/${MOZILLA}/libart_lgpl
+@dirrm include/${MOZILLA}/ldap-nspr/md
+@dirrm include/${MOZILLA}/ldap-nspr/private
+@dirrm include/${MOZILLA}/ldap-nspr/obsolete
+@dirrm include/${MOZILLA}/ldap-nspr
+@dirrm include/${MOZILLA}/ldap-private
+@dirrm include/${MOZILLA}/ldap
 @dirrm include/${MOZILLA}/layout
 @dirrm include/${MOZILLA}/jsurl
 @dirrm include/${MOZILLA}/jsdebug
