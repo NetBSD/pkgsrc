@@ -1,0 +1,13 @@
+$NetBSD: patch-au,v 1.1 2000/06/27 01:32:14 hubertf Exp $
+
+--- contrib/rrdlastds/Makefile.in.orig	Tue Jun 27 01:58:01 2000
++++ contrib/rrdlastds/Makefile.in	Tue Jun 27 01:58:08 2000
+@@ -85,7 +85,7 @@
+ 
+ EXTRA_DIST = rrdlastds.pl.in
+ 
+-contribdir = $(prefix)/contrib/rrdlastds
++contribdir = $(prefix)/share/rrdtool/contrib/rrdlastds
+ contrib_DATA = README
+ contrib_SCRIPTS = rrdlastds.pl
+ mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs
