@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST.SunOS,v 1.1 2003/11/14 23:59:06 heinz Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.2 2004/06/06 23:06:18 heinz Exp $
 bin/opera
-lib/opera/${PKGVERSION}-${OPERA_VER_DATE}.1/m2.so
-lib/opera/${PKGVERSION}-${OPERA_VER_DATE}.1/missingsyms.so
-lib/opera/${PKGVERSION}-${OPERA_VER_DATE}.1/opera
-lib/opera/${PKGVERSION}-${OPERA_VER_DATE}.1/works
+lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/missingsyms.so
+lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/opera
+lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/spellcheck.so
+lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/works
 lib/opera/plugins/libnpp.so
 lib/opera/plugins/operamotifwrapper
 lib/opera/plugins/operaplugincleaner
@@ -15,6 +15,7 @@ share/opera/config/opera6rc
 share/opera/config/opera6rc.fixed
 share/opera/help/advertising.html
 share/opera/help/background.png
+share/opera/help/chat.html
 share/opera/help/dialogs.html
 share/opera/help/filetypes.html
 share/opera/help/fonts.html
@@ -35,6 +36,7 @@ share/opera/help/mouse.html
 share/opera/help/multimedia.html
 share/opera/help/network.html
 share/opera/help/page.html
+share/opera/help/panels.html
 share/opera/help/paths.html
 share/opera/help/personal.html
 share/opera/help/preferences.html
@@ -66,7 +68,9 @@ share/opera/images/startup1.png
 share/opera/images/startup2.png
 share/opera/ini/dialog.ini
 share/opera/ini/fastforward.ini
-share/opera/ini/minimal_toolbar.ini
+share/opera/ini/filehandler.ini
+share/opera/ini/pluginpath.ini
+share/opera/ini/spellcheck.ini
 share/opera/ini/standard_keyboard.ini
 share/opera/ini/standard_menu.ini
 share/opera/ini/standard_mouse.ini
@@ -77,6 +81,7 @@ share/opera/java/opera.policy
 share/opera/jsconsole.html
 share/opera/lngcode.txt
 share/opera/locale/en/default.adr
+share/opera/locale/en/lngcode.txt
 share/opera/locale/en/search.ini
 share/opera/locale/english.lng
 share/opera/opera6.adr
@@ -122,6 +127,6 @@ share/opera/styles/wml.css
 @dirrm share/opera/config
 @dirrm share/opera
 @dirrm share/doc/opera
-@dirrm lib/opera/${PKGVERSION}-${OPERA_VER_DATE}.1
+@dirrm lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1
 @comment @dirrm lib/opera/plugins
 @comment @dirrm lib/opera
