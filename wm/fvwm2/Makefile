@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/04/12 09:09:08 martti Exp $
+# $NetBSD: Makefile,v 1.16 2002/04/14 13:59:42 veego Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--enable-extras --without-gnome
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/lib/X11/fvwm2
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/lib/X11
 CONFIGURE_ARGS+=	--with-xpm-includes=${XPMDIR}/include
-CONFIGURE_ARGS+=	--with-iconpath=${PREFIX}/lib/X11/fvwm2/pixmaps:${X11BASE}/include/X11/bitmaps:${X11BASE}/include/X11/pixmaps
+CONFIGURE_ARGS+=	--with-imagepath=${PREFIX}/lib/X11/fvwm2/pixmaps:${X11BASE}/include/X11/bitmaps:${X11BASE}/include/X11/pixmaps
 
 post-extract:
 	${MKDIR} ${WRKDIR}/icons
@@ -55,6 +55,8 @@ post-install:
 			${PREFIX}/lib/X11/fvwm2/system.fvwm2rc.example \
 			${PREFIX}/lib/X11/fvwm2/system.fvwm2rc ; \
 	fi
+
+.include "../../mk/bsd.prefs.mk"
 
 .if defined(FVWM2_USE_GTK) && ${FVWM2_USE_GTK} == "YES"
 .include "../../x11/gtk/buildlink.mk"
