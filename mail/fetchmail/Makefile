@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2001/02/24 02:25:22 hubertf Exp $
+# $NetBSD: Makefile,v 1.86 2001/03/03 12:27:50 frueauf Exp $
 #
 
-DISTNAME=       fetchmail-5.6.0
+DISTNAME=       fetchmail-5.7.0
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.ccil.org/pub/esr/fetchmail/ \
 		http://www.tuxedo.org/~esr/fetchmail/ \
@@ -62,7 +62,7 @@ post-build:
 post-install:
 	${INSTALL_DATA_DIR} ${FDOC}
 	cd ${WRKSRC} && ${INSTALL_DATA} \
-	   sample.rcfile FAQ NOTES FEATURES README COPYING \
+	   FAQ NOTES FEATURES README COPYING \
 	   fetchmail-FAQ.html fetchmail-features.html \
 	   design-notes.html ${FDOC}
 
