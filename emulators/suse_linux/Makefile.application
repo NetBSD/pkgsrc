@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.application,v 1.14 2005/01/15 12:41:33 jdolecek Exp $
+# $NetBSD: Makefile.application,v 1.15 2005/04/03 21:23:15 jdolecek Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -13,11 +13,9 @@ _LINUX_SYSCTL_OSRELEASE?=      	emul.linux.kern.osrelease
 LINUX_KERNEL_OSRELEASE!=	(/sbin/sysctl -n ${_LINUX_SYSCTL_OSRELEASE} 2>/dev/null; ${ECHO} 2.0.38) | ${HEAD} -1
 
 .  if !empty(SUSE_PREFER:M9.1)
-SUSE_DIR_PREFIX=		suse91
-SUSE_VERSION=			9.1
+.    include "../../emulators/suse91_linux/vars.mk"
 .  else
-SUSE_DIR_PREFIX=		suse
-SUSE_VERSION=			7.3
+.    include "../../emulators/suse_linux/vars.mk"
 .  endif
 
 .  if defined(RPMFILES)
