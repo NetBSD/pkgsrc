@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.919 2003/10/03 14:02:40 wiz Exp $
+$NetBSD: TODO,v 1.920 2003/10/03 14:44:20 seb Exp $
 
 Suggested new packages
 ======================
@@ -261,7 +261,6 @@ Suggested package updates
 	o sml-nj-110.43
 	o snd-6.12
 	o snes9x-1.41
-	o source-highlight-1.8
 	o spamassassin-2.60 [heinz]
 	o speex-1.0.2
 	o squeak-3.2 [fredb|pkg/17950]
