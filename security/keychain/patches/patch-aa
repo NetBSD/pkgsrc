@@ -1,104 +1,41 @@
-$NetBSD: patch-aa,v 1.2 2001/09/19 13:48:01 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2001/11/09 09:56:28 martti Exp $
 
---- keychain.orig	Mon Sep 10 04:42:47 2001
-+++ keychain	Wed Sep 19 13:17:34 2001
+--- keychain.orig	Mon Oct 22 17:19:57 2001
++++ keychain	Fri Nov  9 10:42:37 2001
 @@ -6,7 +6,7 @@
  
- version=1.2
+ version=1.7
  
--trap "" INT
+-trap "" INT || { echo "$0: warning: trapping signal 2 instead of INT" 1>&2; trap "" 2; }
 +trap "" 2
- PATH="/sbin:/usr/sbin:${PATH}"; export PATH;
+ PATH="/sbin:/usr/sbin:${PATH}:/usr/ucb"; export PATH;
  KEYCHAIN_KEYS=""
- for x in ${*}
-@@ -19,10 +19,11 @@
- 	fi
- done
  
--BLUE="\033[34;01m"
--GREEN="\033[32;01m"
--OFF="\033[0m"
--CYAN="\033[36;01m"
-+# Some terminals don't support colors
-+BLUE=
-+GREEN=
-+OFF=
-+CYAN=
- echo
- echo -e "${GREEN}KeyChain ${version}; ${BLUE}http://www.gentoo.org/projects/keychain${OFF}\n Copyright 2001 Gentoo Technologies, Inc.; Distributed under the GPL" 
+@@ -24,7 +24,7 @@
+ lockf="${HOME}/.keychain-lock-${hostname}"
  
-@@ -46,20 +47,20 @@
+ # perform lock if we have lockfile available
+-[ -z "$lockfile" ] || $lockfile -1 "$lockf"
++[ -x "$lockfile" ] && $lockfile -1 "$lockf"
  
-  Keychain is an OpenSSH key manager, typically run from ~/.bash_profile.  When
-  run, it will make sure ssh-agent is running; if not, it will start ssh-agent.
-- It will redirect ssh-agent's output to ~/.ssh-agent, so that cron jobs that
-- need to use ssh-agent keys can simply source this file and make the necessary
-- passwordless ssh connections.  In addition, when keychain runs, it will check
-- with ssh-agent and make sure that the ssh RSA/DSA keys that you specified on
-- the keychain command line have actually been added to ssh-agent.  If not, you
-- are prompted for the appropriate passphrases so that they can be added by
-- keychain.
-+ It will redirect ssh-agent's output to ~/.ssh-agent-\`hostname\`, so that cron
-+ jobs that need to use ssh-agent keys can simply source this file and make the
-+ necessary passwordless ssh connections. In addition, when keychain runs, it
-+ will check with ssh-agent and make sure that the ssh RSA/DSA keys that you
-+ specified on the keychain command line have actually been added to ssh-agent.
-+ If not, you are prompted for the appropriate passphrases so that they can be
-+ added by keychain.
- 
-  Typically, one uses keychain by adding the following to the top of their
-  ~/.bash_profile (or ~/.zshrc, in case of zsh):
- 
- EOHELP
- echo -e "  ${CYAN}keychain ~/.ssh/id_rsa ~/.ssh/id_dsa"
--echo -e "  source ~/.ssh-agent > /dev/null${OFF}"
-+echo -e "  . ~/.ssh-agent-\`hostname\` > /dev/null${OFF}"
- echo -e "  # the > /dev/null eliminates the redundant agent PID output"
- echo
- cat <<EOHELP
-@@ -86,8 +87,9 @@
- echo
- cat <<EOHELP
-  This option tells keychain do everything it normally does (ensure ssh-agent is
-- running, set up the ~/.ssh-agent file) except that it will not prompt you to
-- add any of the keys you specified if they haven't yet been added to ssh-agent.
-+ running, set up the ~/.ssh-agent-\`hostname\` file) except that it will not
-+ prompt you to add any of the keys you specified if they haven't yet been
-+ added to ssh-agent.
- 
- EOHELP
- echo -e " ${GREEN}--stop${OFF}"
-@@ -102,14 +104,14 @@
+ for x in ${@}
+ do
+@@ -53,6 +53,9 @@
+ 	CYAN="\033[01m"
  fi
  
- 
--if [ ! -f ~/.ssh-agent ]
-+if [ ! -f ~/.ssh-agent-`hostname` ]
++# Don't use colors in NetBSD
++unset BLUE GREEN OFF CYAN
++
+ quiet_mode="no"
+ if [ -n "`echo $* | grep '\-\-quiet'`" ] || [ -n "`echo $* | grep '\-q'`" ] ;
  then
--	echo -e " ${GREEN}*${OFF} Initializing ~/.ssh-agent file..."
--	touch ~/.ssh-agent || ( echo "$0: Cannot create ~/.ssh-agent, exiting." 1>&2 && exit 1 )
--	chmod 0600 ~/.ssh-agent
-+	echo -e " ${GREEN}*${OFF} Initializing ~/.ssh-agent-`hostname` file..."
-+	touch ~/.ssh-agent-`hostname` || ( echo "$0: Cannot create ~/.ssh-agent-`hostname`, exiting." 1>&2 && exit 1 )
-+	chmod 0600 ~/.ssh-agent-`hostname`
- 	SSH_AGENT_PID="NULL"
- else
--	source ~/.ssh-agent > /dev/null
-+	. ~/.ssh-agent-`hostname` > /dev/null
+@@ -246,7 +249,7 @@
  fi
  
- match="no"
-@@ -127,10 +129,10 @@
+ #now that keys are potentially cleared, it's safe to be aborted by ^C
+-trap - INT || trap - 2
++trap - 2
  
- if [ "$match" = "no" ]
+ if [ -n "`echo $* | grep '\-\-noask'`" ]
  then
--	chmod 0600 ~/.ssh-agent
-+	chmod 0600 ~/.ssh-agent-`hostname`
- 	echo -e " ${GREEN}*${OFF} starting new ssh-agent"
--	nohup ssh-agent > ~/.ssh-agent
--	source ~/.ssh-agent > /dev/null
-+	nohup ssh-agent > ~/.ssh-agent-`hostname`
-+	. ~/.ssh-agent-`hostname` > /dev/null
- fi
- 
- if [ -n "`echo $* | grep '\-\-clear'`" ]
