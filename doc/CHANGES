@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3055 2003/08/16 18:52:37 kristerw Exp $
+$NetBSD: CHANGES,v 1.3056 2003/08/16 21:13:26 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3285,3 +3285,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added freesci-0.3.4a [dillo 2003-08-16]
 	Updated xmame to 0.72.1 [kristerw 2003-08-16]
 	Updated xmess to 0.72.1 [kristerw 2003-08-16]
+	Updated horde to 2.2.4rc1 [bouyer 2003-08-16]
+	Updated imp to 3.2.2rc1 [bouyer 2003-08-16]
