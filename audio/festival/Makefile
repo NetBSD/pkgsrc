@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/05/19 03:56:24 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/07/14 12:37:46 jlam Exp $
 
 DISTNAME=	festival-1.4.0
 WRKSRC=		${WRKDIR}
@@ -58,7 +58,7 @@ post-patch:
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
 	${CHMOD} -R u+w,a+r,og-w ${FESTIVAL}/lib
-	${FIND} ${FESTIVAL}/lib -type d -print0| ${XARGS} -0 ${CHMOD} 755
+	${FIND} ${FESTIVAL}/lib -type d -print | ${XARGS} ${CHMOD} 755
 	cd ${FESTIVAL} && ${PAX} -r -w lib examples ${FHOME}
 	${RM} -f ${FHOME}/lib/etc/NetBSD/audsp
 	${INSTALL_PROGRAM} ${FESTIVAL}/lib/etc/NetBSD/audsp ${PREFIX}/libexec
