@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2001/06/09 06:36:42 jlam Exp $
+# $NetBSD: Makefile,v 1.74 2001/07/09 02:45:09 hubertf Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -123,14 +123,14 @@ pre-patch:
 	cd ${WRKSRC} && ${TAIL} +160					\
 		${MODSSL_SRC}/pkg.ssldoc/ssldoc.patch			\
 		| ${PATCH} ${PATCH_ARGS}
-	${FIND} ${WRKSRC} -name '*.orig' -print0 | ${XARGS} -0 ${RM} -f
+	${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 pre-configure:
 	${SED} ${FILES_SUBST_SED}					\
 		${FILESDIR}/config.layout > ${WRKDIR}/config.layout
 
 pre-install:
-	${FIND} ${WRKSRC}/htdocs -name '*.orig' -print0 | ${XARGS} -0 ${RM} -f
+	${FIND} ${WRKSRC}/htdocs -name '*.orig' -print | ${XARGS} ${RM} -f
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
