@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1617 2003/03/11 03:16:38 salo Exp $
+$NetBSD: CHANGES,v 1.1618 2003/03/11 08:35:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1027,3 +1027,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated kermit to 8.0.208 [hubertf 2003-03-11]
 	Updated cvsync to 0.14.4 [gehenna 2003-03-11]
 	Updated etherape to 0.9.0 [salo 2003-03-11]
+	Updated popa3d to 0.6.2 [wiz 2003-03-11]
