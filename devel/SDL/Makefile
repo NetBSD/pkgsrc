@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/06/24 20:25:25 tron Exp $
+# $NetBSD: Makefile,v 1.34 2002/06/25 06:54:43 tron Exp $
 #
 
 DISTNAME=	SDL-1.2.3
@@ -19,8 +19,6 @@ USE_GMAKE=		YES
 
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
-USE_PTHREAD=		native pth
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -58,9 +56,9 @@ post-configure:
 	cd ${WRKSRC}/src/audio && ${CP} *.[ch] netbsd/
 
 .include "../../audio/esound/buildlink.mk"
+.include "../../devel/pth/buildlink.mk"
 .include "../../graphics/Mesa/buildlink.mk"
 .include "../../graphics/aalib-x11/buildlink.mk"
 .include "../../mk/ossaudio.buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
