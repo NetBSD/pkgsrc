@@ -1,0 +1,58 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/16 15:43:29 rh Exp $
+
+--- configure.orig	Tue Jan 16 13:33:07 2001
++++ configure
+@@ -1830,7 +1830,7 @@
+ LIBS="$ac_save_LIBS"
+ 
+ fi
+-if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
++if false; then
+   echo "$ac_t""yes" 1>&6
+     ac_tr_lib=HAVE_LIB`echo pq | sed -e 's/[^a-zA-Z0-9_]/_/g' \
+     -e 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/'`
+@@ -2038,7 +2038,7 @@
+ LIBS="$ac_save_LIBS"
+ 
+ fi
+-if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
++if false; then
+   echo "$ac_t""yes" 1>&6
+     ac_tr_lib=HAVE_LIB`echo ldap | sed -e 's/[^a-zA-Z0-9_]/_/g' \
+     -e 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/'`
+@@ -2052,7 +2052,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
+-if test "$ac_cv_lib_ldap_main" = "yes"; then
++if false; then
+   LDAPLIBS="-lldap -llber"\
+   LDAPINCLUDE="-I/usr/include/ldap"
+   
+@@ -2068,7 +2068,7 @@
+ echo $ac_n "checking for mysql_init in -lmysqlclient""... $ac_c" 1>&6
+ echo "configure:2070: checking for mysql_init in -lmysqlclient" >&5
+ ac_lib_var=`echo mysqlclient'_'mysql_init | sed 'y%./+-%__p_%'`
+-if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
++if false; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+@@ -3779,7 +3779,7 @@
+   ;;
+ esac
+ fi
+-PATH_TO_SNMPGET="$ac_cv_path_PATH_TO_SNMPGET"
++PATH_TO_SNMPGET=""
+ if test -n "$PATH_TO_SNMPGET"; then
+   echo "$ac_t""$PATH_TO_SNMPGET" 1>&6
+ else
+@@ -3871,7 +3871,7 @@
+   ;;
+ esac
+ fi
+-PATH_TO_FPING="$ac_cv_path_PATH_TO_FPING"
++PATH_TO_FPING=""
+ if test -n "$PATH_TO_FPING"; then
+   echo "$ac_t""$PATH_TO_FPING" 1>&6
+ else
