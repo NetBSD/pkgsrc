@@ -3,7 +3,7 @@
 # Date created:		16 March 1995  
 # Whom:			rmallory@csusb.edu
 #
-# $NetBSD: Makefile,v 1.2 1998/01/19 01:03:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/23 16:58:49 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -14,9 +14,14 @@ MASTER_SITES=	ftp://ftp.sdsu.edu/pub/rplay/
 MAINTAINER=	rmallory@csusb.edu
 
 LIB_DEPENDS=    gsm\\.1\\.0:${PORTSDIR}/audio/gsm
+BUILD_DEPENDS=  ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+RUN_DEPENDS=    ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 
 HAS_CONFIGURE=	yes
-CONFIGURE_ENV+=	RPLAY_TARGET=generic	# XXX
+CONFIGURE_ARGS= "--prefix=$(PREFIX)"
+CONFIGURE_ENV+=        RPLAY_TARGET=generic # XXX
+CONFIGURE_ENV+=        CFLAGS=-I$(PREFIX)/include # XXX
+CONFIGURE_ENV+=        LDFLAGS=-L$(PREFIX)/lib # XXX
 #USE_GMAKE=	yes
 MAN1=           rplay.1 xrplay.1 rplayd.1 rptp.1
 MAN5=		rplay.conf.5 rplay.hosts.5 rplay.servers.5
