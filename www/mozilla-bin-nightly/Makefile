@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2004/01/04 05:01:03 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/31 16:47:26 grant Exp $
 
-MOZILLA=		mozilla
+MOZILLA=	mozilla
+
+COMMENT=	Full featured gecko-based browser (nightly binary pkg)
 
 ONLY_FOR_PLATFORM+=	Linux-*-i[3-6]86 NetBSD-*-i386
 ONLY_FOR_PLATFORM+=	SunOS-5.[789]*-sparc SunOS-5.[89]*-i386
