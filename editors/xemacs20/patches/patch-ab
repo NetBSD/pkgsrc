@@ -5,7 +5,7 @@
  # Where the gnats category tree lives.
  [ -z "$DATADIR" ] &&
 -DATADIR=/usr/share
-+DATADIR=`/usr/bin/dirname $0`/../lib/xemacs-20.3/etc
++DATADIR=`/usr/bin/dirname $0`/../lib/xemacs-20.4/etc
  
  # If we've been moved around, try using GCC_EXEC_PREFIX.
  [ ! -d $DATADIR/gnats -a -d "$GCC_EXEC_PREFIX" ] && 
