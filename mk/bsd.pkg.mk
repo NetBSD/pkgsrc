@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1330 2003/12/28 21:20:02 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1331 2003/12/30 05:07:41 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -2523,7 +2523,7 @@ real-su-install: ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	found="`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
 	if [ "$$found" != "" ]; then					\
-		${ECHO_MSG} "${_PKGSRC_IN}>  $$found is already installed - perhaps an older version?"; \
+		${ECHO_MSG} "${_PKGSRC_IN}> $$found is already installed - perhaps an older version?"; \
 		${ECHO_MSG} "*** If so, you may use either of:"; \
 		${ECHO_MSG} "***  - \"pkg_delete $$found\" and \"${MAKE} reinstall\" to upgrade properly"; \
 		${ECHO_MSG} "***  - \"${MAKE} update\" to rebuild the package and all of its dependencies"; \
@@ -3892,7 +3892,7 @@ _BIN_INSTALL_FLAGS+=	${PKG_ARGS_ADD}
 real-su-bin-install:
 	@found="`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
 	if [ "$$found" != "" ]; then					\
-		${ECHO_MSG} "${_PKGSRC_IN}>  $$found is already installed - perhaps an older version?"; \
+		${ECHO_MSG} "${_PKGSRC_IN}> $$found is already installed - perhaps an older version?"; \
 		${ECHO_MSG} "*** If so, you may wish to \`\`pkg_delete $$found'' and install"; \
 		${ECHO_MSG} "*** this package again by \`\`${MAKE} bin-install'' to upgrade it properly."; \
 		${SHCOMMENT} ${ECHO_MSG} "*** or use \`\`${MAKE} bin-update'' to upgrade it and all of its dependencies."; \
