@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/06/20 16:43:01 wiz Exp $
+
+--- Makefile.orig	Fri Jun 15 21:03:47 2001
++++ Makefile	Fri Jun 15 21:10:50 2001
+@@ -9,18 +9,18 @@
+ # distributed in the NASM archive.
+ 
+ srcdir		= .
+-prefix		= /usr/local
++prefix		= ${PREFIX}
+ exec_prefix	= ${prefix}
+ bindir		= ${exec_prefix}/bin
+ mandir		= ${prefix}/man
+ 
+ CC		= gcc
+-CFLAGS		= -g -O2 -Wall -ansi -pedantic -I$(srcdir) -I.
++CFLAGS		= -O2 -Wall -ansi -pedantic -I$(srcdir) -I.
+ LDFLAGS		= 
+ 
+-INSTALL		= /usr/bin/ginstall -c
+-INSTALL_PROGRAM	= ${INSTALL}
+-INSTALL_DATA	= ${INSTALL} -m 644
++#INSTALL		= /usr/bin/ginstall -c
++#INSTALL_PROGRAM	= ${INSTALL}
++#INSTALL_DATA	= ${INSTALL} -m 644
+ 
+ NROFF		= nroff
+ 
+@@ -106,10 +106,10 @@
+ 	perl $(srcdir)/macros.pl $(srcdir)/standard.mac
+ 
+ install: nasm ndisasm
+-	$(INSTALL_PROGRAM) nasm $(INSTALLROOT)$(bindir)/nasm
+-	$(INSTALL_PROGRAM) ndisasm $(INSTALLROOT)$(bindir)/ndisasm
+-	$(INSTALL_DATA) $(srcdir)/nasm.1 $(INSTALLROOT)$(mandir)/man1/nasm.1
+-	$(INSTALL_DATA) $(srcdir)/ndisasm.1 $(INSTALLROOT)$(mandir)/man1/ndisasm.1
++	$(INSTALL_PROGRAM) nasm $(bindir)/nasm
++	$(INSTALL_PROGRAM) ndisasm $(bindir)/ndisasm
++	$(INSTALL_DATA) $(srcdir)/nasm.1 $(mandir)/man1/nasm.1
++	$(INSTALL_DATA) $(srcdir)/ndisasm.1 $(mandir)/man1/ndisasm.1
+ 
+ clean:
+ 	rm -f *.o *.s *.i nasm ndisasm
+@@ -140,4 +140,3 @@
+ everything: all doc rdf
+ 
+ install_everything: everything install install_doc install_rdf
+-

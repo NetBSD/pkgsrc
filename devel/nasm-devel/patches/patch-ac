@@ -1,0 +1,51 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/06/20 16:43:01 wiz Exp $
+
+--- doc/Makefile.orig	Mon Mar  5 21:15:13 2001
++++ doc/Makefile	Sat Jun 16 01:13:13 2001
+@@ -5,18 +5,18 @@
+ #
+ 
+ srcdir		= .
+-prefix		= /usr/local
++prefix		= ${PREFIX}
+ exec_prefix	= ${prefix}
+ bindir		= ${exec_prefix}/bin
+ mandir		= ${prefix}/man
+-docdir		= $(prefix)/doc/nasm
++docdir		= $(prefix)/share/doc/nasm
+ infodir		= ${prefix}/info
+ 
+-INSTALL		= /usr/bin/ginstall -c
+-INSTALL_PROGRAM	= ${INSTALL}
+-INSTALL_DATA	= ${INSTALL} -m 644
++#INSTALL		= /usr/bin/ginstall -c
++#INSTALL_PROGRAM	= ${INSTALL}
++#INSTALL_DATA	= ${INSTALL} -m 644
+ 
+-PERL		= perl
++#PERL		= perl
+ MAKEINFO	= makeinfo
+ 
+ SRCS		= nasmdoc.src
+@@ -31,7 +31,7 @@
+ # Consider html, txt and src output a side effect
+ .src.texi:
+ 	mkdir -p html
+-	$(PERL) ./rdsrc.pl < $<
++	$(PERL5) ./rdsrc.pl < $<
+ 	mv -f *.html html
+ 
+ nasm.info: nasmdoc.texi
+@@ -53,7 +53,8 @@
+ 	-rm -rf html info *.hlp *.txt *.ps *.inf
+ 
+ install: all
+-	$(INSTALL_DATA) info/* $(INSTALLROOT)$(infodir)
+-	mkdir -p $(INSTALLROOT)$(docdir)/html
+-	$(INSTALL_DATA) html/* $(INSTALLROOT)$(docdir)/html
+-	$(INSTALL_DATA) nasmdoc.ps nasmdoc.txt $(INSTALLROOT)$(docdir)
++	$(INSTALL_DATA) info/* $(infodir)
++	mkdir -p $(docdir)
++	mkdir -p $(prefix)/share/doc/html/nasm
++	$(INSTALL_DATA) html/* $(prefix)/share/doc/html/nasm
++	$(INSTALL_DATA) nasmdoc.ps nasmdoc.txt $(docdir)
