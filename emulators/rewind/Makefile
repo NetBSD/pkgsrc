@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:35:43 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/11/30 22:58:41 jschauma Exp $
 
 DISTNAME=		rewind-20020420
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		.tar.bz2
