@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.122 2000/10/22 21:25:14 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.123 2000/11/01 12:05:15 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -1787,7 +1787,7 @@ inclusion of bsd.pkg.mk, since the variable is set there.
  10.1 Submitting your packages
  =============================
 
-You have to seperate between binary and "normale" (source) packages here:
+You have to separate between binary and "normale" (source) packages here:
 
  * precompiled binary packages:
    Our policy is that we accept binaries only from NetBSD developers to
@@ -1798,7 +1798,7 @@ You have to seperate between binary and "normale" (source) packages here:
 
  * packages:
    First, check that your package is complete, compiles and runs well; see
-   section 8 and the rest of this document. Then, generate a gzipped
+   section 8 and the rest of this document. Next, generate a gzipped
    tar-file of all the files needed for the package, preferably with all
    files in a single directory. Place this tar-file to a place where the
    package maintainers can fetch it using FTP or HTTP (WWW). Finally,
@@ -1808,6 +1808,9 @@ You have to seperate between binary and "normale" (source) packages here:
 
    You will be notified if your send-pr has been addressed so you can remove
    the tar-file. 
+
+   If you want to submit several packages, please send a separate PR for
+   each one, it's easier for us to track things that way.
 
 
  10.2 Committing: Importing the package into CVS
