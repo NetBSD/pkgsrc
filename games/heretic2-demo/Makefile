@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/10/21 22:38:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/10/27 02:24:52 hubertf Exp $
 #
 
 DISTNAME=	heretic2-demo-x86
@@ -38,7 +38,8 @@ do-build:
 
 # The executable must be in the same directory as the data.
 do-install:
-	${MKDIR} ${LIBDIR}
+	${INSTALL_PROGRAM_DIR} ${LIBDIR}
+	${INSTALL_DATA_DIR} ${SHAREDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${BINNAME}
 	${INSTALL_PROGRAM} ${WRKSRC}/${DISTBINNAME} ${LIBDIR}/${BINNAME}
 	${INSTALL_DATA} ${WRKSRC}/README ${SHAREDIR}/${BINNAME}-QuickStart.txt
