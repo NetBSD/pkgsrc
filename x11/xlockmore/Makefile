@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.52 2002/12/05 00:45:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.53 2003/03/09 19:28:18 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
 DISTNAME=       xlockmore-5.06
 CATEGORIES=	x11
+PKGREVISION=	1
 MASTER_SITES=	ftp://ftp.tux.org/pub/tux/bagleyd/xlockmore/ \
 		${MASTER_SITE_XCONTRIB:=applications/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,7 +22,7 @@ CONFIGURE_ARGS+=--without-gltt --without-ttf --without-opengl --without-mesa \
 		--without-xpm # --without-cxx XXX doesn't work
 CONFIGURE_ENV+= CXX="${CC}"	# no dependency on libstdc++
 .else
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 CONFIGURE_ARGS+= --with-mesagl
 .endif

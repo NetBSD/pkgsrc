@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.86 2002/10/20 14:30:03 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2003/03/09 19:28:17 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 kde
 MASTER_SITES=	${MASTER_SITE_LOCAL}/kde1
 EXTRACT_SUFX=	.tar.bz2
@@ -94,7 +94,8 @@ post-install:
 # kdebase doesn't manipulate GIFs, but KDE packages depending on kdebase
 # often do, so put the dependency here.
 .include "../../graphics/libungif/buildlink2.mk"
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../x11/kdelibs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
