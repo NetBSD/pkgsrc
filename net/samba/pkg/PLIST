@@ -1,26 +1,36 @@
-@comment $NetBSD: PLIST,v 1.2 1997/12/24 10:35:29 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/01/12 17:19:31 agc Exp $
 bin/smbclient
+bin/testparm
+bin/testprns
 bin/smbrun
 bin/smbstatus
 bin/smbpasswd
+bin/make_smbcodepage
 bin/nmblookup
+bin/make_printerdef
 bin/smbtar
 bin/addtosmbpass
-bin/testparm
-bin/testprns
 sbin/smbd
 sbin/nmbd
-man/man1/smbstatus.1.gz
-man/man1/smbclient.1.gz
-man/man1/smbrun.1.gz
-man/man1/smbtar.1.gz
-man/man1/testparm.1.gz
-man/man1/testprns.1.gz
-man/man5/smb.conf.5.gz
-man/man7/samba.7.gz
-man/man8/smbd.8.gz
-man/man8/nmbd.8.gz
-man/man8/smbpasswd.8.gz
+lib/codepages/codepage.437
+lib/codepages/codepage.850
+lib/codepages/codepage.852
+lib/codepages/codepage.932
+man/man1/make_smbcodepage.1
+man/man1/smbclient.1
+man/man1/smbrun.1
+man/man1/smbstatus.1
+man/man1/smbtar.1
+man/man1/testparm.1
+man/man1/testprns.1
+man/man5/smb.conf.5
+man/man7/samba.7
+man/man8/nmbd.8
+man/man8/smbd.8
+man/man8/smbmnt.8
+man/man8/smbmount.8
+man/man8/smbpasswd.8
+man/man8/smbumount.8
 share/doc/samba/faq/Samba-Server-FAQ-1.html
 share/doc/samba/faq/Samba-Server-FAQ-2.html
 share/doc/samba/faq/Samba-Server-FAQ.html
@@ -45,6 +55,7 @@ share/doc/samba/faq/sambafaq.txt
 share/doc/samba/Application_Serving.txt
 share/doc/samba/BROWSING.txt
 share/doc/samba/BUGS.txt
+share/doc/samba/CVS_ACCESS.txt
 share/doc/samba/DIAGNOSIS.txt
 share/doc/samba/DNIX.txt
 share/doc/samba/DOMAIN.txt
@@ -54,8 +65,10 @@ share/doc/samba/Faxing.txt
 share/doc/samba/GOTCHAS.txt
 share/doc/samba/HINTS.txt
 share/doc/samba/MIRRORS.txt
+share/doc/samba/NTDOMAIN.txt
 share/doc/samba/NetBIOS.txt
 share/doc/samba/OS2-Client-HOWTO.txt
+share/doc/samba/PRINTER_DRIVER.txt
 share/doc/samba/Passwords.txt
 share/doc/samba/Printing.txt
 share/doc/samba/SCO.txt
@@ -63,9 +76,10 @@ share/doc/samba/Speed.txt
 share/doc/samba/Support.txt
 share/doc/samba/Tracing.txt
 share/doc/samba/UNIX-SMB.txt
-share/doc/samba/Win95.txt
 share/doc/samba/UNIX_INSTALL.txt
+share/doc/samba/Win95.txt
 share/doc/samba/WinNT.txt
+share/doc/samba/cifsntdomain.txt
 share/doc/samba/security_level.txt
 share/doc/samba/README.DCEDFS
 share/doc/samba/README.jis
@@ -74,3 +88,6 @@ etc/rc.d/samba.sh.sample
 etc/smb.conf.sample
 @dirrm share/doc/samba/faq
 @dirrm share/doc/samba
+@dirrm lib/codepages
+@exec mkdir %D/private ; if [ ! -f %D/private/smbpasswd ] ; then chown -R root.wheel %D/private ;  cat /etc/passwd | %D/bin/mksmbpasswd.sh > %D/private/smbpasswd ; chmod 500 %D/private ; chmod 600 %D/private/smbpasswd ; fi
+@unexec echo "Warning: If you will *NOT* use this package anymore, please remove \${PREFIX}/private/smbpasswd manually."
