@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5145 2004/03/07 23:59:01 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5146 2004/03/08 00:49:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1233,3 +1233,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xscorch to 0.1.16 [snj 2004-03-07]
 	Updated wmusic to 1.4.7nb3 [snj 2004-03-07]
 	Updated wistumbler2 to 2.00pre7 [xtraeme 2004-03-07]
+	Updated echoping to 5.2.0 [minskim 2004-03-08]
