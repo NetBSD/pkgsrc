@@ -1,13 +1,14 @@
 #!/bin/sh
 #
-# $NetBSD: nmbd.sh,v 1.2 2001/05/13 00:44:50 wiz Exp $
+# $NetBSD: nmbd.sh,v 1.3 2001/08/17 16:08:20 jlam Exp $
 #
 # PROVIDE: nmbd
 # REQUIRE: DAEMON
 
 name="nmbd"
 command="@PREFIX@/sbin/${name}"
-nmbd_flags="-D"
+command_args="-D"		# _must_ start as daemon from rc.d;
+				# add more flags through ${nmbd_flags}
 
 if [ ! -d /etc/rc.d ]
 then
