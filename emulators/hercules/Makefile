@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/23 16:20:55 agc Exp $
 
 DISTNAME=		hercules-2.11
+PKGNAME=		${DISTNAME}nb1
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.conmicro.cx/hercules/
 
@@ -8,7 +9,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.conmicro.cx/hercules/
 COMMENT=		s370 emulator
 
-DEPENDS=		unproven-pthreads-*:../../devel/unproven-pthreads
+DEPENDS=		unproven-pthreads>0.17nb1:../../devel/unproven-pthreads
 DEPENDS+=		hercules-images-*:../../emulators/hercules-images
 
 USE_GMAKE=		yes
