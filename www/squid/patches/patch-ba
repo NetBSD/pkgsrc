@@ -1,17 +1,16 @@
-$NetBSD: patch-ba,v 1.1 2001/12/12 17:06:21 taca Exp $
+$NetBSD: patch-ba,v 1.2 2002/02/24 12:25:41 veego Exp $
 
---- src/dnsserver.c.orig	Fri Jan 12 09:51:47 2001
-+++ src/dnsserver.c
-@@ -135,6 +135,8 @@
+--- src/dnsserver.c.orig	Fri Jan 12 01:51:47 2001
++++ src/dnsserver.c	Sun Feb 24 12:44:12 2002
+@@ -135,6 +135,7 @@
  #if HAVE_RESOLV_H
  #include <resolv.h>
  #endif
 +#include <util.h>
-+#define HAVE_SETPROCTITLE 1
  
  #include "util.h"
  #include "snprintf.h"
-@@ -258,8 +260,10 @@
+@@ -258,8 +259,10 @@
  {
      char request[512];
      char *t = NULL;
@@ -23,7 +22,7 @@ $NetBSD: patch-ba,v 1.1 2001/12/12 17:06:21 taca Exp $
      extern char *optarg;
  
      safe_inet_addr("255.255.255.255", &no_addr);
-@@ -333,6 +337,10 @@
+@@ -333,6 +336,10 @@
  	}
      }
  
@@ -34,7 +33,7 @@ $NetBSD: patch-ba,v 1.1 2001/12/12 17:06:21 taca Exp $
      for (;;) {
  	memset(request, '\0', REQ_SZ);
  	if (fgets(request, REQ_SZ, stdin) == NULL)
-@@ -345,6 +353,10 @@
+@@ -345,6 +352,10 @@
  	    *t = '\0';		/* strip CR */
  	lookup(request);
  	fflush(stdout);
