@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/04/06 07:15:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.47 2004/04/15 01:49:41 xtraeme Exp $
 
 DISTNAME=		glib-2.4.0
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -38,6 +38,23 @@ CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=gnu
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
+
+.include "../../mk/bsd.prefs.mk"
+
+# FreeBSD fix for libgthread:
+# Be sure libgthread is linked to the threaded library (libc_r), otherwise
+# -pthread is added and this won't work with libraries, only executable
+# binaries.
+
+.if ${OPSYS} == "FreeBSD"
+
+SUBST_CLASSES=		thr
+SUBST_STAGE.thr=	post-patch
+SUBST_FILES.thr=	gthread/Makefile.in
+SUBST_SED.thr=		-e "s|@G_THREAD_LIBS_FOR_GTHREAD@|-Wc,-lc_r|g"
+SUBST_MESSAGE.thr=	"Fixing libgthread."
+
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
