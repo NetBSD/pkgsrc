@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/12/04 19:48:26 xtraeme Exp $
+# $NetBSD: Makefile,v 1.20 2003/12/30 17:28:38 cjep Exp $
 #
 
 DISTNAME=	gateway-${KANNEL_VER}
@@ -8,7 +8,7 @@ CATEGORIES=	www net
 MASTER_SITES=	http://www.kannel.org/download/${KANNEL_VER}/
 
 MAINTAINER=	rh@NetBSD.org
-HOMEPAGE=	http://www.kannel.org
+HOMEPAGE=	http://www.kannel.org/
 COMMENT=	Open source WAP and SMS gateway
 
 KANNEL_VER=	1.2.1
