@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2003/02/24 15:29:25 kei Exp $
+
+TEXMF=@PREFIX@/share/texmf
+
+case ${STAGE} in
+PRE-INSTALL)
+	${MV} $TEXMF/dvipdfm/config $TEXMF/dvipdfm/config.orig
+	;;
+
+POST-INSTALL)
+	cd $TEXMF/dvipdfm/CMap
+	# @PREFIX@/share/Adobe/Resource/CMap/*
+	for file in ../../../Adobe/Resource/CMap/*; do
+		${LN} -s $file `${BASENAME} $file`
+	done
+	@PREFIX@/bin/mktexlsr
+	;;
+
+*)
+	${ECHO} "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+
+esac

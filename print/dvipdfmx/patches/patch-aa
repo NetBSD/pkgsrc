@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/24 15:29:25 kei Exp $
+
+--- data/config/dvipdfmx.cfg.orig	Sun Feb 23 18:44:33 2003
++++ data/config/dvipdfmx.cfg	Sun Feb 23 18:44:52 2003
+@@ -76,10 +76,11 @@
+ 
+ % Font map files
+ %
+-f cmr.map
+-f psbase14.map
++% f cmr.map
++% f psbase14.map
+ % Most distributions now use these names
+-f lw35urw.map
++% f lw35urw.map
+ % Some use these names
+ % f lw35urwa.map
+ f cid-x.map
++f dvipdfm.map
