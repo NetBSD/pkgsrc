@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/16 15:10:55 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/06/26 19:11:04 jlam Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
@@ -12,7 +12,8 @@ CATEGORIES+=		x11
 DEPENDS+=		nethack-lib-${NETHACK_VERSION}:../nethack-lib
 
 USE_X11=		YES
-USE_XPM=		YES
+USE_BUILDLINK_ONLY=	YES
+
 ALL_TARGET=		x11tiles nethack
 INSTALL_TARGET=		binfiles
 MAKE_ENV+=		GTYPE=-x11
@@ -23,4 +24,5 @@ ALLFILES=		${DISTFILES}	# don't checksum shared patches
 post-install:
 	@${INSTALL_DATA} ${WRKSRC}/dat/x11tiles ${PREFIX}/share/nethackdir
 
+.include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
