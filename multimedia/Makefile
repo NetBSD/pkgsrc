@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/04/14 12:12:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.38 2004/04/16 13:39:54 jmmv Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -21,6 +21,7 @@ SUBDIR+=	gst-plugins
 SUBDIR+=	gst-plugins-dvdnav
 SUBDIR+=	gst-plugins-dvdread
 SUBDIR+=	gst-plugins-mpeg2dec
+SUBDIR+=	gst-plugins-ogg
 SUBDIR+=	gst-plugins-theora
 SUBDIR+=	gstreamer
 SUBDIR+=	gxine
