@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3472 2003/09/21 20:33:41 wiz Exp $
+$NetBSD: CHANGES,v 1.3473 2003/09/21 21:34:47 kim Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3869,3 +3869,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated w32api to 2.4 [kent 2003-09-21]
 	Updated peace to 0.0.20030919 [kent 2003-09-21]
 	Updated pkglint to 3.61 [wiz 2003-09-21]
+	Updated mp to 3.7.1 [kim 2003-09-21]
