@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3171 2003/08/31 10:23:11 cjep Exp $
+$NetBSD: CHANGES,v 1.3172 2003/08/31 11:14:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3424,3 +3424,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Deleted bgrep, renamed to bsdgrep-devel [cjep 2003-08-31]
 	Updated libnet to 1.0.1bnb2 [seb 2003-08-31]
 	Updated bsdgrep to 20030831 [cjep 2003-08-31]
+	Updated asc to 1.13.8.0 [wiz 2003-08-31]
