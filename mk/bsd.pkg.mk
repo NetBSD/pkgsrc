@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1505 2004/10/03 00:13:01 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1506 2004/10/03 04:24:20 hira Exp $
 #
 # This file is in the public domain.
 #
@@ -1693,8 +1693,7 @@ do-fetch:
 .PHONY: show-depends-dirs
 .if !target(show-depends-dirs)
 show-depends-dirs:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	dlist="";							\
+	@dlist="";							\
 	thisdir=`${PWD_CMD}`;						\
 	for reldir in "" ${DEPENDS:C/^[^:]*://:C/:.*$//} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*$//} ;\
 	do								\
@@ -1758,13 +1757,13 @@ _RECURSE_DEPENDS_DIRS=							\
 .PHONY: show-all-depends-dirs
 .if make(show-all-depends-dirs)
 show-all-depends-dirs:
-	${_PKG_SILENT}${_PKG_DEBUG}${AWK} '${_RECURSE_DEPENDS_DIRS}'
+	@${AWK} '${_RECURSE_DEPENDS_DIRS}'
 .endif
 
 .PHONY: show-all-depends-dirs-excl
 .if make(show-all-depends-dirs-excl)
 show-all-depends-dirs-excl:
-	${_PKG_SILENT}${_PKG_DEBUG}${AWK} -v NonSelf=1 '${_RECURSE_DEPENDS_DIRS}'
+	@${AWK} -v NonSelf=1 '${_RECURSE_DEPENDS_DIRS}'
 .endif
 
 .PHONY: show-root-dirs
@@ -2955,10 +2954,9 @@ check-shlibs:
 .PHONY: show-shlib-type
 show-shlib-type:
 .  if empty(USE_LANGUAGES)
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "none"
+	@${ECHO} "none"
 .  elif ${_OPSYS_SHLIB_TYPE} == "ELF/a.out"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cd ${WRKDIR} &&							\
+	@cd ${WRKDIR} &&						\
 	sotype=none;							\
 	if [ "X${MKPIC}" != "Xno" -a "X${NOPIC}" = "X" ]; then		\
 		${ECHO} "int main() { return(0); }" > a.$$$$.c;		\
@@ -2976,7 +2974,7 @@ show-shlib-type:
 	${ECHO} "$$sotype";						\
 	${RM} -f a.$$$$.c a.$$$$.out
 .  else
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${_OPSYS_SHLIB_TYPE}
+	@${ECHO} ${_OPSYS_SHLIB_TYPE}
 .  endif   # USE_LANGUAGES
 .endif
 
