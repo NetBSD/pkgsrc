@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2004/01/26 13:04:47 jmmv Exp $
+$NetBSD: patch-ae,v 1.2 2005/02/22 00:44:20 wiz Exp $
 
---- src/xitk/event.c.orig	Thu Mar 20 01:36:08 2003
+--- src/xitk/event.c.orig	2004-07-02 23:41:02.000000000 +0200
 +++ src/xitk/event.c
-@@ -985,7 +985,9 @@ void gui_init (int nfiles, char *filenam
+@@ -1230,7 +1230,9 @@ void gui_init (int nfiles, char *filenam
    if (!XInitThreads ()) {
      printf (_("\nXInitThreads failed - looks like you don't have a "
  	    "thread-safe xlib.\n"));

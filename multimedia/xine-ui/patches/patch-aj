@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1 2004/05/12 16:42:49 drochner Exp $
+$NetBSD: patch-aj,v 1.2 2005/02/22 00:44:20 wiz Exp $
 
---- src/xitk/actions.c.orig	2004-05-12 17:57:24.000000000 +0200
-+++ src/xitk/actions.c	2004-05-12 18:00:06.000000000 +0200
-@@ -1039,6 +1039,11 @@
+--- src/xitk/actions.c.orig	2004-07-02 23:40:53.000000000 +0200
++++ src/xitk/actions.c
+@@ -1069,6 +1069,11 @@ static void *_gui_set_current_position(v
    
    pthread_detach(pthread_self());
  
@@ -14,7 +14,7 @@ $NetBSD: patch-aj,v 1.1 2004/05/12 16:42:49 drochner Exp $
    if(gGui->logo_mode && (mediamark_get_current_mrl())) {
      if(!xine_open(gGui->stream, (mediamark_get_current_mrl()))) {
        gui_handle_xine_error(gGui->stream, (char *)(mediamark_get_current_mrl()));
-@@ -1170,8 +1175,6 @@
+@@ -1200,8 +1205,6 @@ void gui_set_current_position (int pos) 
  
    if(gGui->new_pos == -1) {
      
