@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.267 2004/12/03 14:08:13 ben Exp $
+# $NetBSD: Makefile,v 1.268 2004/12/04 20:29:28 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -25,8 +25,8 @@ SUBDIR+=	cddbd
 SUBDIR+=	cdparanoia
 SUBDIR+=	cmp3
 SUBDIR+=	cs4235
-SUBDIR+=	csound4
 SUBDIR+=	csound-manual
+SUBDIR+=	csound4
 SUBDIR+=	daapd
 SUBDIR+=	dap
 SUBDIR+=	darkice
@@ -119,6 +119,7 @@ SUBDIR+=	libid3tag
 SUBDIR+=	libmad
 SUBDIR+=	libmikmod
 SUBDIR+=	libmodplug
+SUBDIR+=	libmusepack
 SUBDIR+=	libopendaap
 SUBDIR+=	libsamplerate
 SUBDIR+=	libshout
