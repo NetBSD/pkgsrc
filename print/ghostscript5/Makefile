@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/05/08 16:09:46 agc Exp $
+# $NetBSD: Makefile,v 1.14 1998/06/03 14:08:50 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/13 11:22:43 asami Exp
 #
 
@@ -37,6 +37,16 @@ GS_FONTS_OTHER=	ghostscript-fonts-other-4.40.tar.gz
 # Additional driver HP 850, see http://bonk.ethz.ch/hp850/hp850.html
 HP850_DRV=	hp850.zip
 
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
+PAPERSIZE_DEF=	-DA4
+.endif
+
+.if defined(BATCH)
+SCRIPT_SUFFIX=	.batch
+.endif
+
 post-extract:
 	${TOUCH} ${WRKSRC}/adler32.c
 	${TOUCH} ${WRKSRC}/deflate.c
@@ -49,27 +59,12 @@ post-extract:
 	cd ${WRKSRC} && unzip -La ${DISTDIR}/${HP850_DRV}
 
 do-configure:
-.if defined(BATCH)
 	@${SETENV} PORTSDIR=${.CURDIR}/../.. WRKSRC=${WRKSRC} \
-		${SH} ${SCRIPTDIR}/configure.batch
-.else
-	@${SETENV} PORTSDIR=${.CURDIR}/../.. WRKSRC=${WRKSRC} \
-		${SH} ${SCRIPTDIR}/configure
-.endif
+		${SH} ${SCRIPTDIR}/configure${SCRIPT_SUFFIX}
 
 do-build:
-	@(paper=""; \
-	case X"${PAPERSIZE}" in \
-	X[aA]4) \
-		paper="-DA4"; \
-		${ECHO_MSG} "Using $$paper to set default paper size to A4."; \
-		;; \
-	*) \
-		${ECHO_MSG} "Using default Letter paper size (Set PAPERSIZE=A4 for A4 paper size)."; \
-		;; \
-	esac; \
 	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} $$paper ${MAKE_FLAGS} ${MAKEFILE} ${ALL_TARGET})
+		${MAKE_PROGRAM} ${PAPERSIZE_DEF} ${MAKE_FLAGS} ${MAKEFILE} ${ALL_TARGET}
 
 pre-install:
 	@${MKDIR} ${PREFIX}/share/ghostscript ${PREFIX}/bin ${PREFIX}/man/man1
