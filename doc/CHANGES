@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2736 2003/07/12 00:34:03 zuntum Exp $
+$NetBSD: CHANGES,v 1.2737 2003/07/12 00:52:20 zuntum Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2753,3 +2753,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libxslt to 1.0.31 [wiz 2003-07-11]
 	Updated spicalc to 1.1.2 [zuntum 2003-07-12]
 	Updated polsms to 1.9.2d [zuntum 2003-07-12]
+	Updated poink to 1.6 [zuntum 2003-07-12]
