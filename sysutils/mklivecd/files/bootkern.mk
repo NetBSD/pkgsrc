@@ -1,5 +1,4 @@
-#	$NetBSD: bootkern.mk,v 1.1.1.1 2004/02/26 03:58:56 xtraeme Exp $
-#	$Id: bootkern.mk,v 1.1.1.1 2004/02/26 03:58:56 xtraeme Exp $
+#	$NetBSD: bootkern.mk,v 1.2 2004/02/26 04:06:39 xtraeme Exp $
 
 # This Makefile builds a boot image on a 2.88M-sized image.
 #
