@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.913 2002/12/25 13:39:58 jmmv Exp $
+$NetBSD: CHANGES,v 1.914 2002/12/25 14:26:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4260,4 +4260,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated mozilla to 1.2.1nb2 [grant 2002-12-25]
 	Updated phoenix to 0.5nb2 [grant 2002-12-25]
 	Updated efax-gtk to 1.0.1bnb2 [jmmv 2002-12-25]
-	Updated ifcico-cm to 3.0a4.1nb1 [jmmv 2002-12-15]
+	Updated ifcico-cm to 3.0a4.1nb1 [jmmv 2002-12-25]
+	Updated tiff to 3.5.7nb1 [wiz 2002-12-25]
