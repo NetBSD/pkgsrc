@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8697 2005/01/11 12:05:43 adam Exp $
+$NetBSD: CHANGES,v 1.8698 2005/01/11 12:36:43 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -240,3 +240,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated nessus-core to 2.2.2a [adam 2005-01-11]
 	Updated nessus-plugins to 2.2.2a [adam 2005-01-11]
 	Updated nessus to 2.2.2a [adam 2005-01-11]
+	Updated gnome-vfs2 to 2.8.3nb1 [jmmv 2005-01-11]
+	Updated gnome-session to 2.8.1nb2 [jmmv 2005-01-11]
