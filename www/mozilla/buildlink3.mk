@@ -1,9 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/19 13:24:23 jmmv Exp $
-#
-# This Makefile fragment is included by packages that use mozilla.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:41 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MOZILLA_BUILDLINK3_MK:=	${MOZILLA_BUILDLINK3_MK}+
@@ -12,10 +7,12 @@ MOZILLA_BUILDLINK3_MK:=	${MOZILLA_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	mozilla
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nmozilla}
+BUILDLINK_PACKAGES+=	mozilla
+
 .if !empty(MOZILLA_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			mozilla
-BUILDLINK_DEPENDS.mozilla+=		mozilla>=1.6
-BUILDLINK_PKGSRCDIR.mozilla?=		../../www/mozilla
+BUILDLINK_DEPENDS.mozilla+=	mozilla>=1.6
+BUILDLINK_PKGSRCDIR.mozilla?=	../../www/mozilla
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
@@ -24,6 +21,6 @@ BUILDLINK_PKGSRCDIR.mozilla?=		../../www/mozilla
 .include "../../net/ORBit/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
  
-.endif # MOZILLA_BUILDLINK3_MK
+.endif	# MOZILLA_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

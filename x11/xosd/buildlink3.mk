@@ -1,9 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/19 15:00:38 wiz Exp $
-#
-# This Makefile fragment is included by packages that use xosd.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:43 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XOSD_BUILDLINK3_MK:=	${XOSD_BUILDLINK3_MK}+
@@ -12,11 +7,12 @@ XOSD_BUILDLINK3_MK:=	${XOSD_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	xosd
 .endif
 
-.if !empty(XOSD_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			xosd
-BUILDLINK_DEPENDS.xosd+=		xosd>=2.2.5
-BUILDLINK_PKGSRCDIR.xosd?=		../../x11/xosd
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxosd}
+BUILDLINK_PACKAGES+=	xosd
 
-.endif # XOSD_BUILDLINK3_MK
+.if !empty(XOSD_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.xosd+=	xosd>=2.2.5
+BUILDLINK_PKGSRCDIR.xosd?=	../../x11/xosd
+.endif	# XOSD_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

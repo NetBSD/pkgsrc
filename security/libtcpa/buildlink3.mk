@@ -1,9 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/02/22 04:01:57 schmonz Exp $
-#
-# This Makefile fragment is included by packages that use libtcpa.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/05 19:25:39 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBTCPA_BUILDLINK3_MK:=	${LIBTCPA_BUILDLINK3_MK}+
@@ -12,14 +7,16 @@ LIBTCPA_BUILDLINK3_MK:=	${LIBTCPA_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	libtcpa
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibtcpa}
+BUILDLINK_PACKAGES+=	libtcpa
+
 .if !empty(LIBTCPA_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			libtcpa
-BUILDLINK_DEPENDS.libtcpa+=		libtcpa>=1.1b
-BUILDLINK_PKGSRCDIR.libtcpa?=		../../security/libtcpa
-BUILDLINK_DEPMETHOD.libtcpa?=		build
+BUILDLINK_DEPENDS.libtcpa+=	libtcpa>=1.1b
+BUILDLINK_PKGSRCDIR.libtcpa?=	../../security/libtcpa
+BUILDLINK_DEPMETHOD.libtcpa?=	build
 
 .include "../../security/openssl/buildlink3.mk"
 
-.endif # LIBTCPA_BUILDLINK3_MK
+.endif	# LIBTCPA_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

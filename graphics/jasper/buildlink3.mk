@@ -1,9 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/11 09:10:15 xtraeme Exp $
-#
-# This Makefile fragment is included by packages that use jasper.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:35 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 JASPER_BUILDLINK3_MK:=	${JASPER_BUILDLINK3_MK}+
@@ -12,13 +7,15 @@ JASPER_BUILDLINK3_MK:=	${JASPER_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	jasper
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Njasper}
+BUILDLINK_PACKAGES+=	jasper
+
 .if !empty(JASPER_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			jasper
-BUILDLINK_DEPENDS.jasper+=		jasper>=1.600.0
-BUILDLINK_PKGSRCDIR.jasper?=		../../graphics/jasper
+BUILDLINK_DEPENDS.jasper+=	jasper>=1.600.0
+BUILDLINK_PKGSRCDIR.jasper?=	../../graphics/jasper
 
 .include "../../graphics/jpeg/buildlink3.mk"
 
-.endif # JASPER_BUILDLINK3_MK
+.endif	# JASPER_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

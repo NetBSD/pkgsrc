@@ -1,19 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/15 09:45:30 recht Exp $
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:42 jlam Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FIXESEXT_BUILDLINK3_MK:=	${FIXESEXT_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	fixesext
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfixesext}
+BUILDLINK_PACKAGES+=	fixesext
+
 .if !empty(FIXESEXT_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			fixesext
-BUILDLINK_DEPENDS.fixesext+=		fixesext>=2.0
-BUILDLINK_PKGSRCDIR.fixesext?=		../../x11/fixesext
-
-
-.endif # FIXESEXT_BUILDLINK3_MK
+BUILDLINK_DEPENDS.fixesext+=	fixesext>=2.0
+BUILDLINK_PKGSRCDIR.fixesext?=	../../x11/fixesext
+.endif	# FIXESEXT_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

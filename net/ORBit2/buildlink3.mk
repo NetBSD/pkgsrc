@@ -1,9 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/02/11 00:21:09 xtraeme Exp $
-#
-# This Makefile fragment is included by packages that use ORBit2.
-#
-# This file was created automatically using createbuildlink-3.0.
-#
+# $NetBSD: buildlink3.mk,v 1.4 2004/03/05 19:25:38 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ORBIT2_BUILDLINK3_MK:=	${ORBIT2_BUILDLINK3_MK}+
@@ -12,15 +7,17 @@ ORBIT2_BUILDLINK3_MK:=	${ORBIT2_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	ORBit2
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NORBit2}
+BUILDLINK_PACKAGES+=	ORBit2
+
 .if !empty(ORBIT2_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			ORBit2
-BUILDLINK_DEPENDS.ORBit2+=		ORBit2>=2.8.2
-BUILDLINK_PKGSRCDIR.ORBit2?=		../../net/ORBit2
+BUILDLINK_DEPENDS.ORBit2+=	ORBit2>=2.8.2
+BUILDLINK_PKGSRCDIR.ORBit2?=	../../net/ORBit2
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 
-.endif # ORBIT2_BUILDLINK3_MK
+.endif	# ORBIT2_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

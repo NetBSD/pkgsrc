@@ -1,9 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/19 01:06:43 wiz Exp $
-#
-# This Makefile fragment is included by packages that use tremor.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:08 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TREMOR_BUILDLINK3_MK:=	${TREMOR_BUILDLINK3_MK}+
@@ -12,11 +7,12 @@ TREMOR_BUILDLINK3_MK:=	${TREMOR_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	tremor
 .endif
 
-.if !empty(TREMOR_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			tremor
-BUILDLINK_DEPENDS.tremor+=		tremor>=1.0.2
-BUILDLINK_PKGSRCDIR.tremor?=		../../audio/tremor
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntremor}
+BUILDLINK_PACKAGES+=	tremor
 
-.endif # TREMOR_BUILDLINK3_MK
+.if !empty(TREMOR_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.tremor+=	tremor>=1.0.2
+BUILDLINK_PKGSRCDIR.tremor?=	../../audio/tremor
+.endif	# TREMOR_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

@@ -1,9 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/26 15:26:29 adam Exp $
-#
-# This Makefile fragment is included by packages that use lapack.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:37 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LAPACK_BUILDLINK3_MK:=	${LAPACK_BUILDLINK3_MK}+
@@ -12,11 +7,12 @@ LAPACK_BUILDLINK3_MK:=	${LAPACK_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	lapack
 .endif
 
-.if !empty(LAPACK_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			lapack
-BUILDLINK_DEPENDS.lapack+=		lapack>=20010201nb1
-BUILDLINK_PKGSRCDIR.lapack?=		../../math/lapack
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlapack}
+BUILDLINK_PACKAGES+=	lapack
 
-.endif # LAPACK_BUILDLINK3_MK
+.if !empty(LAPACK_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.lapack+=	lapack>=20010201nb1
+BUILDLINK_PKGSRCDIR.lapack?=	../../math/lapack
+.endif	# LAPACK_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

@@ -1,9 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/27 07:56:33 xtraeme Exp $
-#
-# This Makefile fragment is included by packages that use devIL.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:10 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DEVIL_BUILDLINK3_MK:=	${DEVIL_BUILDLINK3_MK}+
@@ -12,10 +7,12 @@ DEVIL_BUILDLINK3_MK:=	${DEVIL_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	devIL
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NdevIL}
+BUILDLINK_PACKAGES+=	devIL
+
 .if !empty(DEVIL_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			devIL
-BUILDLINK_DEPENDS.devIL+=		devIL>=1.6.6nb1
-BUILDLINK_PKGSRCDIR.devIL?=		../../devel/devIL
+BUILDLINK_DEPENDS.devIL+=	devIL>=1.6.6nb1
+BUILDLINK_PKGSRCDIR.devIL?=	../../devel/devIL
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
@@ -25,6 +22,6 @@ BUILDLINK_PKGSRCDIR.devIL?=		../../devel/devIL
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 
-.endif # DEVIL_BUILDLINK3_MK
+.endif	# DEVIL_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

@@ -1,19 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/02/11 13:05:38 wiz Exp $
-#
-# This Makefile fragment is included by packages that use gnome-vfs2.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/05 19:25:40 jlam Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_VFS2_BUILDLINK3_MK:=	${GNOME_VFS2_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	gnome-vfs2
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-vfs2}
+BUILDLINK_PACKAGES+=	gnome-vfs2
+
 .if !empty(GNOME_VFS2_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			gnome-vfs2
 BUILDLINK_DEPENDS.gnome-vfs2+=		gnome-vfs2>=2.4.2nb2
 BUILDLINK_PKGSRCDIR.gnome-vfs2?=	../../sysutils/gnome-vfs2
 
@@ -26,10 +23,10 @@ BUILDLINK_PKGSRCDIR.gnome-vfs2?=	../../sysutils/gnome-vfs2
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/fam/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 
-.endif # GNOME_VFS2_BUILDLINK3_MK
+.endif	# GNOME_VFS2_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

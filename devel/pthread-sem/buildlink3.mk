@@ -1,7 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/24 03:26:46 jlam Exp $
-#
-# This Makefile fragment is included by packages that use pthread-sem.
-#
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/05 19:25:12 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PTHREAD_SEM_BUILDLINK3_MK:=	${PTHREAD_SEM_BUILDLINK3_MK}+
@@ -10,11 +7,12 @@ PTHREAD_SEM_BUILDLINK3_MK:=	${PTHREAD_SEM_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	pthread-sem
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npthread-sem}
+BUILDLINK_PACKAGES+=	pthread-sem
+
 .if !empty(PTHREAD_SEM_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			pthread-sem
 BUILDLINK_DEPENDS.pthread-sem+=		pthread-sem>=1.0
 BUILDLINK_PKGSRCDIR.pthread-sem?=	../../devel/pthread-sem
-
-.endif # PTHREAD_SEM_BUILDLINK3_MK
+.endif	# PTHREAD_SEM_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
