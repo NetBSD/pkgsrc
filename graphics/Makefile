@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2004/01/22 12:52:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.272 2004/01/26 11:43:07 jmmv Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -22,7 +22,6 @@ SUBDIR+=	SDLKit
 SUBDIR+=	SDL_image
 SUBDIR+=	aalib
 SUBDIR+=	aalib-x11
-SUBDIR+=	alevt
 SUBDIR+=	apla
 SUBDIR+=	aqsis
 SUBDIR+=	artist
@@ -71,7 +70,6 @@ SUBDIR+=	freetype-lib
 SUBDIR+=	freetype-utils
 SUBDIR+=	freetype2
 SUBDIR+=	fujiplay
-SUBDIR+=	fxtv
 SUBDIR+=	g2
 SUBDIR+=	g3d
 SUBDIR+=	gd
@@ -257,7 +255,6 @@ SUBDIR+=	win32-codecs
 SUBDIR+=	wmphoto
 SUBDIR+=	xanim
 SUBDIR+=	xart
-SUBDIR+=	xawtv
 SUBDIR+=	xbmbrowser
 SUBDIR+=	xdvipresent
 SUBDIR+=	xfce4-artwork
