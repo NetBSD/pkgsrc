@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5967 2004/05/16 00:34:08 kristerw Exp $
+$NetBSD: CHANGES,v 1.5968 2004/05/16 00:56:18 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2570,3 +2570,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added sign-1.0.4 [xtraeme 2004-05-16]
 	Updated xmame to 0.82.1 [kristerw 2004-05-16]
 	Updated xmess to 0.82.1 [kristerw 2004-05-16]
+	Added flac123-0.0.7 [xtraeme 2004-05-16]
