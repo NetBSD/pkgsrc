@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 1999/08/18 08:29:58 agc Exp $
+# $NetBSD: Makefile,v 1.53 1999/08/18 08:41:53 agc Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -169,5 +169,6 @@ post-install:
 # targets precede inclusion of this.
 
 BUILD_DEFS+=		DONT_USE_IDEA SSH_CONF_DIR SSH_SUID USE_RSAREF2
+BUILD_DEFS+=		LIBWRAP_FWD
 
 .include "../../mk/bsd.pkg.mk"
