@@ -1,0 +1,84 @@
+$NetBSD: patch-aq,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+
+--- tcldot/Makefile.in.orig	Fri Mar  1 22:35:36 2002
++++ tcldot/Makefile.in
+@@ -187,23 +187,10 @@
+ 
+ AUTOMAKE_OPTIONS = 1.4
+ 
+-INCLUDES = @TCL_CFLAGS@ \
+-	-I$(top_srcdir)/dotneato/dotgen \
+-	-I$(top_srcdir)/dotneato/neatogen \
+-	-I$(top_srcdir)/dotneato/twopigen \
+-	-I$(top_srcdir)/dotneato/common \
+-	-I$(top_srcdir)/graph \
+-	-I$(top_srcdir)/cdt \
+-	-I$(top_srcdir)/pathplan \
+-	-I$(top_srcdir)/tclhandle \
+-	-I@TCLSH_EXEC_PREFIX@/include
+-
+-
+-LIBS = ${FT_LIBS} \
+-	${PNG_LIBS} \
+-	${JPEG_LIBS} \
+-	${XPM_LIBS} \
+-	${Z_LIBS} -lc
++INCLUDES = @TCL_CFLAGS@ 	-I$(top_srcdir)/dotneato/dotgen 	-I$(top_srcdir)/dotneato/neatogen 	-I$(top_srcdir)/dotneato/twopigen 	-I$(top_srcdir)/dotneato/common 	-I$(top_srcdir)/graph 	-I$(top_srcdir)/cdt 	-I$(top_srcdir)/pathplan 	-I$(top_srcdir)/tclhandle
++
++
++LIBS = ${FT_LIBS} 	${PNG_LIBS} 	${JPEG_LIBS} 	${XPM_LIBS} 	${Z_LIBS} -lc
+ 
+ 
+ CFLAGS = @CFLAGS@ -DDATE="\"`date`\"" 
+@@ -216,23 +203,12 @@
+ 
+ libtcldot_la_SOURCES = tcldot.c tkgen.c tcldot.h
+ 
+-libtcldot_la_LIBADD = ../tclhandle/libtclhandle.la \
+-	../dotneato/common/libdotneato.la \
+-        ../dotneato/dotgen/libdot.la \
+-        ../dotneato/neatogen/libneato.la \
+-        ../dotneato/twopigen/libtwopi.la \
+-        ../pathplan/libpathplan.la \
+-        ../graph/libgraph.la \
+-        ../cdt/libcdt.la \
+-        ../gd/libgd.la \
+-	../gdtclft/gdtclft.lo \
+-	../tclstubs/libtclstubs.la
++libtcldot_la_LIBADD = ../tclhandle/libtclhandle.la 	../dotneato/common/libdotneato.la         ../dotneato/dotgen/libdot.la         ../dotneato/neatogen/libneato.la         ../dotneato/twopigen/libtwopi.la         ../pathplan/libpathplan.la         ../graph/libgraph.la         ../cdt/libcdt.la         ../gd/libgd.la 	../gdtclft/gdtclft.lo 	${TCL_STUB_LIB_SPEC}
+ 
+ 
+ CLEANFILES = pkgIndex.tcl
+ 
+-EXTRA_DIST = $(man_MANS) README README.Tkspline \
+-	nmakefile Makefile.old
++EXTRA_DIST = $(man_MANS) README README.Tkspline 	nmakefile Makefile.old
+ 
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../gvconfig.h
+@@ -252,7 +228,7 @@
+ ../dotneato/common/libdotneato.la ../dotneato/dotgen/libdot.la \
+ ../dotneato/neatogen/libneato.la ../dotneato/twopigen/libtwopi.la \
+ ../pathplan/libpathplan.la ../graph/libgraph.la ../cdt/libcdt.la \
+-../gd/libgd.la ../gdtclft/gdtclft.lo ../tclstubs/libtclstubs.la
++../gd/libgd.la ../gdtclft/gdtclft.lo
+ libtcldot_la_OBJECTS =  tcldot.lo tkgen.lo
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+@@ -269,7 +245,7 @@
+ 
+ DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = gtar
++TAR = tar
+ GZIP_ENV = --best
+ SOURCES = $(libtcldot_la_SOURCES)
+ OBJECTS = $(libtcldot_la_OBJECTS)
+@@ -510,7 +486,6 @@
+ 	      || exit 1; \
+ 	  fi; \
+ 	done
+-
+ info-am:
+ info: info-recursive
+ dvi-am:

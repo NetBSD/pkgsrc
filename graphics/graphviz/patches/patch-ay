@@ -1,0 +1,27 @@
+$NetBSD: patch-ay,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+
+--- tclpathplan/demo/pathplan_data/Makefile.in.orig	Fri Mar  1 22:35:41 2002
++++ tclpathplan/demo/pathplan_data/Makefile.in
+@@ -187,11 +187,10 @@
+ 
+ AUTOMAKE_OPTIONS = 1.4
+ 
+-EXAMPLES = boxes.dat dpd.dat funny.dat maze.dat nested.dat northo.dat \
+-	obs.dat other.dat paths.dat rotor.dat u.dat unknown.dat
++EXAMPLES = boxes.dat dpd.dat funny.dat maze.dat nested.dat northo.dat 	obs.dat other.dat paths.dat rotor.dat u.dat unknown.dat
+ 
+ 
+-pathplanexampledir = $(libdir)/@PACKAGE@/demo/pathplan_data
++pathplanexampledir = $(prefix)/share/examples/@PACKAGE@/pathplan_data
+ 
+ pathplanexample_DATA = $(EXAMPLES)
+ EXTRA_DIST = $(EXAMPLES)
+@@ -205,7 +204,7 @@
+ 
+ DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = gtar
++TAR = tar
+ GZIP_ENV = --best
+ all: all-redirect
+ .SUFFIXES:
