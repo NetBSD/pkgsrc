@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/14 20:10:02 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/04/27 02:03:01 rh Exp $
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-application-registry.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-async-ops.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-cancellation.h
@@ -210,15 +210,18 @@ ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gnome-vfs-2.0.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-vfs-2.0.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gnome-vfs-2.0.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnome-vfs-2.0.mo
@@ -233,6 +236,7 @@ ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gnome-vfs-2.0.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-vfs-2.0.mo
@@ -251,6 +255,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-vfs-2.0.mo
+${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-vfs-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-vfs-2.0.mo
 @comment in GConf2: @dirrm share/gconf/schemas
