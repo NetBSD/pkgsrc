@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.5 2000/12/19 18:53:52 dmcmahill Exp $
+
+--- tgt-pal/Makefile.in.orig	Thu Dec 14 18:37:47 2000
++++ tgt-pal/Makefile.in	Sun Dec 17 07:52:23 2000
+@@ -63,5 +63,5 @@
+ 
+ pal.tgt: $O $(TGTDEPLIBS)
+-	$(CC) @shared@ -o $@ $O $(TGTLDFLAGS) -lipal
++	$(CC) @shared@ -o $@ $O $(TGTLDFLAGS) $(LDFLAGS) -lipal
+ 
+ clean:
