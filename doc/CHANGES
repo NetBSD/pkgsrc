@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2379 2003/05/31 16:16:06 uebayasi Exp $
+$NetBSD: CHANGES,v 1.2380 2003/06/01 06:54:08 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2253,3 +2253,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fbdesk to 1.1.4 [jmmv 2003-05-31]
 	Updated simh to 2.10.4nb1 [thorpej 2003-05-31]
 	Added static-ast-ksh-20030422 [uebayasi 2003-05-31]
+	Updated xpmroot to 2.4.16 [martti 2003-06-01]
+	Updated fvwm2 to 2.4.16 [martti 2003-06-01]
