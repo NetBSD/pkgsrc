@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.20 2003/05/06 17:42:03 jmmv Exp $
+# $NetBSD: mksandbox,v 1.20.4.1 2003/08/01 19:00:37 jlam Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -43,7 +43,9 @@ pkgsrc=/usr/pkgsrc
 src=/usr/src
 
 kernel=""
-sandboxDirs="/bin /sbin /lib /libexec /usr/X11R6 /usr/bin /usr/games /usr/include /usr/lib /usr/libdata /usr/libexec /usr/lkm /usr/share /usr/sbin /var/mail"
+sandboxMountDirs="/bin /sbin /lib /libexec /usr/X11R6 /usr/bin /usr/games /usr/include /usr/lib /usr/libdata /usr/libexec /usr/lkm /usr/share /usr/sbin /var/mail"
+sandboxEmptyDirs="/var/run /var/log /var/spool/mqueue"
+sandboxEmptyFiles="/var/run/utmp /var/run/utmpx /var/log/wtmp /var/log/wtmpx"
 
 opsys=`uname -s`
 case "$opsys" in
@@ -99,7 +101,7 @@ SunOS)
 	mountprog=/sbin/mount
 	paxprog=/bin/pax
 	sedprog=/usr/xpg4/bin/sed
-	sandboxDirs="/bin /sbin /kernel /lib /proc /usr/X11R6 /usr/bin /usr/ccs /usr/games /usr/include /usr/lib /usr/openwin /usr/share /usr/sbin /usr/ucb /usr/xpg4 /var/mail"
+	sandboxMountDirs="/bin /sbin /kernel /lib /proc /usr/X11R6 /usr/bin /usr/ccs /usr/games /usr/include /usr/lib /usr/openwin /usr/share /usr/sbin /usr/ucb /usr/xpg4 /var/mail"
 	;;
 *)
 	echo "Unknown Operating System ($opsys) - good luck"
@@ -197,7 +199,7 @@ rm -f $sandbox/etc/localtime
 $cpprog /usr/share/zoneinfo/GMT $sandbox/etc/localtime
 
 echo "Make empty dirs upon which to mount the null mounts"
-for d in $sandboxDirs; do	
+for d in $sandboxMountDirs; do	
 	test -d $d || continue;
 	$mkdirprog $sandbox$d;
 	$mountprog $mountflags -r $d $sandbox$d;
@@ -213,13 +215,17 @@ $mkdirprog $sandbox/var/games
 $chownprog games:games $sandbox/var/games
 $chmodprog 2775 $sandbox/var/games
 
-echo "Making /var/run and /var/run/utmp(x) in $sandbox"
-$mkdirprog $sandbox/var/run
-cp /dev/null $sandbox/var/run/utmp
-cp /dev/null $sandbox/var/run/utmpx
+for d in $sandboxEmptyDirs; do
+	test -d $d || continue
+	echo "Making $d in $sandbox"
+	$mkdirprog $sandbox$d
+done
 
-echo "Making /var/spool/mqueue in $sandbox"
-$mkdirprog $sandbox/var/spool/mqueue
+for f in $sandboxEmptyFiles; do
+	test -f $f || continue
+	echo "Making $f in $sandbox"
+	$cpprog /dev/null $sandbox$f
+done
 
 echo "Mount $src from $sandbox"
 $mkdirprog $sandbox/usr/src

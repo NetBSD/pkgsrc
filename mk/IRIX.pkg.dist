@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.pkg.dist,v 1.22.4.1 2003/07/24 09:25:55 jlam Exp $
+# $NetBSD: IRIX.pkg.dist,v 1.22.4.2 2003/08/01 19:00:20 jlam Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755

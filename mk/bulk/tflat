@@ -1,4 +1,4 @@
-# $NetBSD: tflat,v 1.9 2003/07/11 23:54:33 grant Exp $
+# $NetBSD: tflat,v 1.9.2.1 2003/08/01 19:00:38 jlam Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -42,11 +42,11 @@ BEGIN {
 		exit(1);
 	}
 
-	if ( ARGV[1] == "-u" ) {
+	if ( ARGV[1] == "up" ) {
 		up=1;
 	}
 	else{
-		if ( ARGV[1] == "-d" ) { up=0; }
+		if ( ARGV[1] == "down" ) { up=0; }
 		else{
 			printf("tflat: unknown option  \"%s\"\n",ARGV[1]);
 			usage();
@@ -177,10 +177,10 @@ function usage(){
 	printf("         packages which depend upon a given package or alternatively\n");
 	printf("         all packages which are depend upon by a given package.\n");
 	printf("\n");
-	printf("Usage:\ttflat -u|-d depfile\n");
+	printf("Usage:\ttflat up|down depfile\n");
 	printf("\n");
-	printf("Options:\t-d\tgo down the depends tree (ie \"foo depends on:\")\n");
-	printf("        \t-u\tgo up the depends tree (ie \"foo is depended on by:\")\n");
+	printf("Options:\tdown\tgo down the depends tree (ie \"foo depends on:\")\n");
+	printf("        \tup\tgo up the depends tree (ie \"foo is depended on by:\")\n");
 	printf("\n");
 	printf("Input file format is in the form\n");
 	printf("foo	bar\n");
@@ -194,8 +194,8 @@ function usage(){
 	printf("The typical use is:\n");
 	printf("cd /usr/pkgsrc\n");
 	printf("./mk/bulk/printdepends > .depends\n");
-	printf("./mk/bulk/tflat -u .depends > .supports\n");
-	printf("./mk/bulk/tflat -d .depends > .requires\n");
+	printf("./mk/bulk/tflat up .depends > .supports\n");
+	printf("./mk/bulk/tflat down .depends > .requires\n");
 	printf("\n");
 
 }

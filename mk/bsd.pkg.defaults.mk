@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.160.2.3 2003/07/24 22:00:07 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.160.2.4 2003/08/01 19:00:26 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -608,6 +608,16 @@ ATERM_USE_GREEK?= NO
 # Possible: category/pkg
 # Default: not defined
 
+CANNA_GROUP?=	daemon
+# Used in the canna-server-bin package to specify the server group.
+# Possible: any group name
+# Default: daemon
+
+CANNA_USER?=	daemon
+# Used in the canna-server-bin package to specify the server user.
+# Possible: any user name
+# Default: daemon
+
 #CDRECORD_CONF= ${PKG_SYSCONFDIR}/cdrecord.conf
 # The location of the cdrtools/cdrecord configuration file. The
 # sysutils/cdrecord pkg issues a warning if the cdrtools default of
@@ -908,12 +918,6 @@ IRCD_HYBRID_USE_SYSLOG?=        NO
 # Possible: YES, NO
 # Default: NO
 
-IRCD_HYBRID_DPATH?=	/etc/ircd-hybrid/
-# Used by ircd-hybrid. Specify the directory pathname where the daemon expects
-# various configuration files.
-# Possible: any path, with a trailing `/'
-# Default: /etc/ircd-hybrid/
-
 IRCD_HYBRID_LPATH?=	/var/log/ircd-hybrid.log
 # Used by ircd-hybrid. Specify the pathname of the daemon logfile.
 # Note: only used if IRCD_HYBRID_USE_LOGFILE is "YES".
@@ -1180,6 +1184,12 @@ MOZILLA_USE_XFT?=	NO
 # Used by mozilla packages to enable Xft support where available.
 # Possible: YES, NO
 # Default: NO
+
+MPLAYER_DISABLE_DRIVERS?=
+# Whitespace separated list of output drivers that are not wanted in
+# mplayer/gmplayer's binary.
+# Possible: arts esd faad nas sdl
+# Default: empty
 
 MPLAYER_ENABLE_RUNTIME_CPU_DETECTION?= YES
 # Used by mplayer to enable runtime CPU detection -- this makes
@@ -1551,11 +1561,6 @@ RPM_DB_PREFIX?=	/var/pkg
 # which themes to install
 # Possible: empty, any number of theme-name-[0-9]*.*.tar.gz
 # Default: Set to include about 180 themes available on themes.freshmeat.net
-
-#SDL_USE_NAS=
-# Used in SDL package to enable use of the network audio system
-# Possible: defined, not defined
-# Default: not defined
 
 SDIST_PAWD?= pwd
 # If you are using amd you'll want to use pawd instead of pwd to derive

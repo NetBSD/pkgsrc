@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.14 2003/07/30 22:07:22 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.15 2003/08/01 19:00:28 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -28,6 +28,36 @@ MAKE_ENV+=	MAKECONF=/dev/null
 ##### Pass information about desired toolchain to package build.
 .if defined(USETOOLS)
 MAKE_ENV+=	USETOOLS="${USETOOLS}"
+.endif
+
+# This has to come first to avoid showing all BUILD_DEFS added by this
+# Makefile, which are usually not customizable.
+.PHONY: pre-fetch build-defs-message
+pre-fetch: build-defs-message
+.if !target(build-defs-message)
+build-defs-message: ${WRKDIR}
+.if defined(BUILD_DEFS) && !empty(BUILD_DEFS)
+.if !exists(${WRKDIR}/.bdm_done)
+	@${ECHO} "=========================================================================="
+	@${ECHO} "The following variables will affect the build process of this package,"
+	@${ECHO} "${PKGNAME}.  Their current value is shown below:"
+	@${ECHO} ""
+.  for var in ${BUILD_DEFS:O:u}
+.    if !defined(${var})
+	@${ECHO} "        * ${var} (not defined)"
+.    elif defined(${var}) && empty(${var})
+	@${ECHO} "        * ${var} (defined)"
+.    else
+	@${ECHO} "        * ${var} = ${${var}}"
+.    endif
+.  endfor
+	@${ECHO} ""
+	@${ECHO} "You may want to abort the process now with CTRL+C and change their value"
+	@${ECHO} "before continuing.  Be sure to run \`${MAKE} clean' after the changes."
+	@${ECHO} "=========================================================================="
+	@${TOUCH} ${WRKDIR}/.bdm_done
+.endif
+.endif
 .endif
 
 ##### Some NetBSD platforms permitted the user to set the binary format while
@@ -551,7 +581,9 @@ PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
 .endif
 
 .if defined(USE_NEW_TEXINFO)
-.  if defined(INFO_FILES)
+INFO_FILES?=
+USE_MAKEINFO?=	no		# default to not using makeinfo
+.  if !empty(INFO_FILES) || empty(USE_MAKEINFO:M[nN][oO])
 .    include "../../mk/texinfo.mk"
 .  endif
 .endif
@@ -4202,10 +4234,10 @@ print-summary-data:
 	fi;
 	@${ECHO} "maintainer ${PKGPATH} ${MAINTAINER}"
 	@${ECHO} "categories ${PKGPATH} ${CATEGORIES}"
-	@if [ -f ${DESCR_SRC} ]; then					\
-		${ECHO}  "descr ${PKGPATH} ${DESCR_SRC}";		\
-	else								\
-		${ECHO}  "descr ${PKGPATH} /dev/null";			\
+	@if [ -f ${DESCR_SRC} ]; then						\
+		${ECHO}  "descr ${PKGPATH} ${DESCR_SRC:S;${_PKGSRCDIR}/;;g}";	\
+	else									\
+		${ECHO}  "descr ${PKGPATH} /dev/null";				\
 	fi
 	@${ECHO} "prefix ${PKGPATH} ${PREFIX}"
 .endif
@@ -4621,6 +4653,7 @@ depend:
 
 .PHONY: tags
 # Same goes for tags
+.PHONY: tags
 .if !target(tags)
 tags:
 .endif

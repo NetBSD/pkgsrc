@@ -1,4 +1,4 @@
-$NetBSD: PKGVIEWS,v 1.1.2.6 2003/07/30 11:27:45 jlam Exp $
+$NetBSD: PKGVIEWS,v 1.1.2.7 2003/08/01 19:00:24 jlam Exp $
 
 Package views integration plan:
 ==============================
@@ -50,3 +50,18 @@ Possible problems:
     the true location of libraries and headers.  We need to think of
     a way to hide ${LOCALBASE} but not ${DEPOTBASE}/* from the package
     configure/build processes.
+
+Currently, we do the following transformations:
+
+	${LOCALBASE} --> ${BUILDLINK_DIR}
+	${X11BASE}   --> ${BUILDLINK_X11_DIR}
+
+We could change the rule to be filter out ${LOCALBASE}/* unless they
+match:
+
+	${LOCALBASE}/${DEPOT_SUBDIR}/${_pkg_}
+	${X11BASE}/${DEPOT_SUBDIR}/${_pkg_}
+
+for _pkg_ in ${BUILDLINK_PACKAGES}.  We only want to do this change
+for "pkgviews" packages, since "overwrite" packages will still work
+because "overwrite" packages ignore the existence of pkgviews.

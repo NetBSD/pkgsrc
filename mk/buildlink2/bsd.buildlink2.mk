@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.90.4.4 2003/07/30 22:10:49 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.90.4.5 2003/08/01 19:00:34 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -1082,7 +1082,6 @@ ${BUILDLINK_DIR}/${_prog_}: ${_GNU_MISSING}
 .if defined(USE_NEW_TEXINFO)
 # install-info and makeinfo handling.
 #
-.if defined(INFO_FILES)
 # Create an install-info script that is a "no operation" command
 # as registration of info files is handled by the INSTALL script.
 CONFIGURE_ENV+=	INSTALL_INFO="${BUILDLINK_DIR}/bin/install-info"
@@ -1129,5 +1128,4 @@ ${BUILDLINK_DIR}/bin/makeinfo: ${_GNU_MISSING}
 	${ECHO} 'exit 1' >>  ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 .  endif # USE_MAKEINFO
-.endif # INFO_FILES
 .endif # USE_NEW_TEXINFO
