@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2001/10/19 10:56:54 abs Exp $
+# $NetBSD: Makefile,v 1.52 2001/10/26 15:17:38 kleink Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -23,8 +23,8 @@ DEPENDS+=	imap-uw>=2001.0:../../mail/imap-uw
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(PINE_USE_LDAP) && ${PINE_USE_LDAP} == YES
-DEPENDS+=      openldap-[0-9]*:../../databases/openldap
-LDAPCFLAGS=    LDAPCFLAGS="-DENABLE_LDAP -I${PREFIX}/include"
+.include "../../databases/openldap/buildlink.mk"
+LDAPCFLAGS=    LDAPCFLAGS="-DENABLE_LDAP"
 LDAPLIBS=      LDAPLIBS="-lldap -llber"
 .endif
 
