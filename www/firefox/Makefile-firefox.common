@@ -1,10 +1,11 @@
-# $NetBSD: Makefile-firefox.common,v 1.2 2004/09/07 06:03:55 xtraeme Exp $
+# $NetBSD: Makefile-firefox.common,v 1.3 2004/09/20 08:03:42 taya Exp $
 
 MOZILLA_BIN=	firefox-bin
-MOZ_VER=	0.9.3
+MOZ_VER=	0.10
 EXTRACT_SUFX=	.tar.bz2
 
-DISTNAME=	firefox-${MOZ_VER}-source
+DISTNAME=	firefox-1.0PR-source
+
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/ \
 		ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/ \
 		http://public.planetmirror.com.au/pub/firefox/releases/${MOZ_VER}/ \
@@ -20,6 +21,7 @@ MAKE_ENV+=	MOZ_PHOENIX=1
 
 CONFIGURE_ARGS+=	--disable-mailnews
 CONFIGURE_ARGS+=	--disable-composer
+CONFIGURE_ARGS+=	--enable-single-profile
 CONFIGURE_ARGS+=	--enable-extensions=default,-irc
 
 USE_LANGUAGES+=		c++
