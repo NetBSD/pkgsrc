@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: sed2nbcompat,v 1.1 2004/08/21 08:39:54 jlam Exp $
+#	$NetBSD: sed2nbcompat,v 1.2 2004/08/27 03:45:08 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -37,7 +37,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-if [ $# -lt 1 ]; then echo "pax2nbcompat dest"; exit 1; fi
+if [ $# -lt 1 ]; then echo "sed2nbcompat dest"; exit 1; fi
 
 : ${PKGSRCDIR:=/usr/pkgsrc}
 : ${BSDSRCDIR:=/usr/src}
@@ -52,12 +52,3 @@ dest=$1
 
 $src2nbcompat ${BSDSRCDIR}/usr.bin/sed $dest
 cd $dest
-echo "Removing $dest/sed.cat1."
-rm -f sed.cat1
-if diff -I "\$NetBSD.*\$" -u nbsed.1 sed.1 >/dev/null 2>&1; then
-	echo "Removing $dest/sed.1."
-	rm -f sed.1
-else
-	echo "Replacing $dest/nbsed.1 with $dest/sed.1."
-	mv -f sed.1 nbsed.1
-fi
