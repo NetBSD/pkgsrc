@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/04/23 03:33:27 schmonz Exp $
+
+--- src/Sample.cc.orig	Wed Dec 12 16:36:27 2001
++++ src/Sample.cc
+@@ -10,8 +10,8 @@
+ #include <math.h>
+ #include <string.h>
+ #include <errno.h>
+-#include <values.h>
+-#include <endian.h>
++#include <limits.h>
++#include <machine/endian.h>
+ 
+ #include <X11/Xlib.h>
+ #include <Xm/Xm.h>
