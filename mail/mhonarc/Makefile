@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2001/02/28 10:33:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/07/16 13:44:30 taca Exp $
 #
 
-DISTNAME=	MHonArc2.4.7
-PKGNAME=	mhonarc-2.4.7
+DISTNAME=	MHonArc2.4.9
+PKGNAME=	mhonarc-2.4.9
 CATEGORIES=	mail
 MASTER_SITES=	http://www.oac.uci.edu/indiv/ehood/tar/ \
 		ftp://hhobel.phl.univie.ac.at/MHonArc/
