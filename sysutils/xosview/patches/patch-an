@@ -1,0 +1,28 @@
+$NetBSD: patch-an,v 1.1 2003/09/30 23:03:59 christos Exp $
+
+--- fieldmeterdecay.cc.orig	1999-02-16 09:08:35.000000000 -0500
++++ fieldmeterdecay.cc	2003-09-30 18:46:03.000000000 -0400
+@@ -26,6 +26,7 @@
+ //   4.  Make the checkResources () function in the meter set the 
+ //	 dodecay_ variable according to the, e.g., xosview*cpuDecay resource.
+ 
++#include <iostream>
+ #include <fstream.h>
+ #include <math.h>		//  For fabs()
+ #include "general.h"
+@@ -137,13 +138,13 @@
+       //    Let's correct for that here.
+     if ( manditory || (twidth != lastvals_[i]) || (x != lastx_[i]) ){
+       if (!checkX(x, twidth))
+-        cerr <<__FILE__ << ":" << __LINE__ <<endl;
++        std::cerr <<__FILE__ << ":" << __LINE__ <<std::endl;
+       parent_->drawFilledRectangle( x, y_, twidth, halfheight );
+     }
+ 
+     if ( manditory || (decay_[i] != lastDecayval_[i]) ){
+       if (!checkX(decayx, decaytwidth))
+-        cerr <<__FILE__ << ":" << __LINE__ <<endl;
++        std::cerr <<__FILE__ << ":" << __LINE__ <<std::endl;
+       parent_->drawFilledRectangle( decayx, y_+halfheight+1,
+             decaytwidth, height_ - halfheight-1);
+     }

@@ -1,0 +1,62 @@
+$NetBSD: patch-ao,v 1.1 2003/09/30 23:03:59 christos Exp $
+
+--- xosview.cc.orig	1999-02-16 09:08:34.000000000 -0500
++++ xosview.cc	2003-09-30 18:41:24.000000000 -0400
+@@ -6,7 +6,7 @@
+ //
+ // $Id: patch-ao,v 1.1 2003/09/30 23:03:59 christos Exp $
+ //
+-#include <iostream.h>
++#include <iostream>
+ #include <unistd.h>
+ #include <string.h>
+ #include <stdlib.h>
+@@ -312,7 +312,7 @@
+   {
+     switch (argv[0][1]) {
+       case 'v':
+-      		cerr << versionString << endl;
++      		std::cerr << versionString << std::endl;
+ 		exit(0);
+       case 'n': //  Check for -name option that was already parsed
+ 		//  and acted upon by main().
+@@ -335,12 +335,12 @@
+ #endif
+       case '-':  /*  Check for --version argument.  */
+               if (!strncasecmp(*argv, "--version", 10)) {
+-	        cerr << versionString << endl;
++	        std::cerr << versionString << std::endl;
+ 		exit(0);
+ 	      }
+ 	      /*  Fall through to default/error case.  */
+       default:
+-      		cerr << "Ignoring unknown option '" << argv[0] << "'.\n";
++      		std::cerr << "Ignoring unknown option '" << argv[0] << "'.\n";
+ 	  	break;
+     }
+     argc--;
+@@ -355,19 +355,19 @@
+ }
+ 
+ void XOSView::visibilityEvent( XVisibilityEvent &event ){
+-  //cerr <<"XOSView::visibilityEvent() : ";
++  //std::cerr <<"XOSView::visibilityEvent() : ";
+   if (event.state == VisibilityFullyObscured){
+-    //cerr <<"hidden";
++    //std::cerr <<"hidden";
+     _isvisible = false;
+   }
+   else {
+-    //cerr <<"not hidden";
++    //std::cerr <<"not hidden";
+     _isvisible = true;
+   }
+-  //cerr <<endl;
++  //std::cerr <<std::endl;
+ }
+ 
+ void XOSView::unmapEvent( XUnmapEvent & ){
+-  //cerr <<"XOSView::unmapEvent()" <<endl;
++  //std::cerr <<"XOSView::unmapEvent()" <<std::endl;
+   _isvisible = false;
+ }
