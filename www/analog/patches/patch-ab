@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.4 1999/11/23 13:20:10 agc Exp $
+
+--- tree.c	1999/11/23 13:06:38	1.1
++++ tree.c	1999/11/23 13:08:49
+@@ -781,8 +781,16 @@
+     }
+     else if (strstr(whole, "Linux") != NULL || strstr(whole, "linux") != NULL)
+       *name = "Unix:Linux";
++    else if (strstr(whole, "NetBSD") != NULL)
++      *name = "Unix:NetBSD";
++    else if (strstr(whole, "OpenBSD") != NULL)
++      *name = "Unix:OpenBSD";
++    else if (strstr(whole, "FreeBSD") != NULL)
++      *name = "Unix:FreeBSD";
++    else if (strstr(whole, "BSDi") != NULL)
++      *name = "Unix:BSDi";
+     else if (strstr(whole, "BSD") != NULL)
+-      *name = "Unix:BSD";
++      *name = "Unix:otherBSD";
+     else if (strstr(whole, "SunOS") != NULL || strstr(whole, "sunos") != NULL)
+       *name = "Unix:SunOS";
+     else if (strstr(whole, "HP-UX") != NULL || strstr(whole, "HPUX") != NULL ||
