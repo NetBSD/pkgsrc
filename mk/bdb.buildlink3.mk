@@ -1,7 +1,7 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.8 2004/04/26 09:39:38 jlam Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.9 2004/05/26 20:26:29 wiz Exp $
 #
 # This Makefile fragment is meant to be included by packages that
-# require a Berkeley DB implementation.  db.buildlink3.mk will:
+# require a Berkeley DB implementation.  bdb.buildlink3.mk will:
 #
 #       * set BDBBASE to the base directory of the Berkeley DB files;
 #       * set BDB_TYPE to the Berkeley DB implementation used.
