@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.597 2005/01/12 12:53:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.598 2005/01/18 17:54:34 peter Exp $
 #
 
 COMMENT=	Development utilities
@@ -553,6 +553,7 @@ SUBDIR+=	swig-python
 SUBDIR+=	syncdir
 SUBDIR+=	tavrasm
 SUBDIR+=	tcl-tclcl
+SUBDIR+=	tcllib
 SUBDIR+=	tet3
 SUBDIR+=	tkcvs
 SUBDIR+=	tkdiff
