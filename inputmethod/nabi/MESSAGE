@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/09/27 03:23:33 junyoung Exp $
+
+	You should set the following environment variable to make
+	Nabi work properly:
+
+	export XMODIFIERS="@im=nabi" (for sh)
+
+	or
+
+	setenv XMODIFIERS "@im=nabi" (for csh)
+
+===========================================================================
