@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/08/03 19:33:21 salo Exp $
+$NetBSD: distinfo,v 1.4 2004/11/09 14:46:33 salo Exp $
 
-SHA1 (ogmtools-1.4.1.tar.bz2) = ff18df01099db0f57e3a808952f2914215933f4d
-Size (ogmtools-1.4.1.tar.bz2) = 216446 bytes
+SHA1 (ogmtools-1.5.tar.bz2) = a23ba7e6ac490ffb60e8fb739e790b7a020a444c
+Size (ogmtools-1.5.tar.bz2) = 214934 bytes
