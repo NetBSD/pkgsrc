@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7353 2004/10/05 16:52:06 abs Exp $
+$NetBSD: CHANGES,v 1.7354 2004/10/05 16:54:59 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4554,4 +4554,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ntfsprogs-1.9.4 [agc 2004-10-05]
 	Updated sylpheed-claws to 0.9.12b [adam 2004-10-05]
 	Updated rconfig to 0.39 [abs 2004-10-05]
+	Updated galeon to 1.3.17 [abs 2004-10-05]
 

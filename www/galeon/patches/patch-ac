@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2004/07/20 17:37:23 abs Exp $
+$NetBSD: patch-ac,v 1.6 2004/10/05 16:54:29 abs Exp $
 
---- galeon.desktop.in.orig	2003-09-17 22:16:18.000000000 +0100
+--- galeon.desktop.in.orig	2004-07-21 21:46:59.000000000 +0100
 +++ galeon.desktop.in
 @@ -7,7 +7,7 @@ _Comment=Browse the web
  Exec=galeon
