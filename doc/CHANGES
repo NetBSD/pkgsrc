@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2445 2003/06/06 18:27:50 drochner Exp $
+$NetBSD: CHANGES,v 1.2446 2003/06/06 21:14:20 epg Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2349,6 +2349,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated grace to 5.1.10nb1 [wiz 2003-06-05]
 	Updated fftw2 to 2.1.5 [wiz 2003-06-05]
 	Updated fftw to 3.0nb1 [wiz 2003-06-05]
+	Updated gnome2-control-center to 2.2.1nb2 [epg 2003-06-05]
+	Updated gnome-panel to 2.2.1nb2 [epg 2003-06-5]
 	Updated gpc to 2.1nb2 [jtb 2003-06-06]
 	Updated sylpheed to 0.9.2 [chris 2003-06-06]
 	Updated pim6sd to 20030606a [itojun 2003-06-06]
