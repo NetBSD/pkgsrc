@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/09/14 06:26:52 salo Exp $
+# $NetBSD: Makefile,v 1.10 2004/09/17 08:07:12 salo Exp $
 #
 
-DISTNAME=	windows-all-20040828
-PKGNAME=	win32-codecs-040828.1
+DISTNAME=	windows-all-20040916
+PKGNAME=	win32-codecs-040916.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.mplayerhq.hu/MPlayer/releases/codecs/ \
 		http://www2.mplayerhq.hu/MPlayer/releases/codecs/ \
