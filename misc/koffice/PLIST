@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/01/28 08:43:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/02/09 10:13:07 markd Exp $
 bin/karbon
 bin/kchart
 bin/kformula
@@ -3071,7 +3071,6 @@ share/kde/icons/crystalsvg/22x22/actions/sum.png
 share/kde/icons/crystalsvg/22x22/actions/under.png
 share/kde/icons/crystalsvg/22x22/apps/kivio.png
 share/kde/icons/crystalsvg/22x22/apps/kugar.png
-share/kde/icons/crystalsvg/22x22/mimetypes/kugardata.png
 share/kde/icons/crystalsvg/32x32/actions/abs.png
 share/kde/icons/crystalsvg/32x32/actions/brackets.png
 share/kde/icons/crystalsvg/32x32/actions/frac.png
@@ -3111,19 +3110,6 @@ share/kde/icons/locolor/16x16/apps/kudesigner.png
 share/kde/icons/locolor/22x22/apps/kspreadcalc.png
 share/kde/icons/locolor/32x32/apps/kspreadcalc.png
 share/kde/icons/locolor/32x32/apps/kudesigner.png
-share/kde/mimelnk/application/mathml+xml.desktop
-share/kde/mimelnk/application/vnd.palm.desktop
-share/kde/mimelnk/application/vnd.sun.xml.calc.desktop
-share/kde/mimelnk/application/vnd.sun.xml.draw.desktop
-share/kde/mimelnk/application/vnd.sun.xml.impress.desktop
-share/kde/mimelnk/application/vnd.sun.xml.writer.desktop
-share/kde/mimelnk/application/x-kudesigner.desktop
-share/kde/mimelnk/application/x-magicpoint.desktop
-share/kde/mimelnk/application/x-vnd.kde.kexi.desktop
-share/kde/mimelnk/application/x-vnd.kde.kplato.desktop
-share/kde/mimelnk/application/x-vnd.kde.kugar.mixed.desktop
-share/kde/mimelnk/image/x-vnd.adobe.photoshop.desktop
-share/kde/mimelnk/image/x-vnd.trolltech.qpicture.desktop
 share/kde/services/clipartthumbnail.desktop
 share/kde/services/generic_filter.desktop
 share/kde/services/karbon_ai_import.desktop
