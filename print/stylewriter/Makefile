@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/04 15:56:04 jlam Exp $
+# $NetBSD: Makefile,v 1.2 1999/09/08 03:08:02 jlam Exp $
 #
 
 DISTNAME=	stylewriter
@@ -46,13 +46,14 @@ post-install:
 	done
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/stylewriter
-	for PRINTCAP in printcap printcap.a4; do \
+	(cd ${WRKSRC}; \
+	 for PRINTCAP in printcap printcap.a4; do \
 		${SED} ${PRINTCAP_SED} \
 			< $${PRINTCAP} > ${WRKDIR}/$${PRINTCAP}; \
 		${INSTALL_DATA} ${WRKDIR}/$${PRINTCAP} \
 			${PREFIX}/share/examples/stylewriter; \
 		${RM} ${WRKDIR}/$${PRINTCAP}; \
-	done
+	 done)
 	${INSTALL_DATA} ${WRKSRC}/styl.ppd ${PREFIX}/share/examples/stylewriter
 	${INSTALL_DATA_DIR} /var/spool/lpd/stylps
 
