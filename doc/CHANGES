@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7851 2004/11/14 14:19:23 seb Exp $
+$NetBSD: CHANGES,v 1.7852 2004/11/14 16:49:37 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5270,3 +5270,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rhythmbox to 0.8.8 [jmmv 2004-11-14]
 	Updated gnats to 4.0.1 [soren 2004-11-14]
 	Updated p5-DBIx-SearchBuilder to 1.01nb1 [seb 2004-11-14]
+	Updated gmime to 2.1.9 [jmmv 2004-11-14]
