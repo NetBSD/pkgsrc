@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:02:35 skrll Exp $
+$NetBSD: distinfo,v 1.3 2001/04/24 09:00:26 abs Exp $
 
-SHA1 (checkbot-1.63.tar.gz) = c43a1b29031cfe0036d7ab0f6cb760335adf4355
-Size (checkbot-1.63.tar.gz) = 25734 bytes
+SHA1 (checkbot-1.64.tar.gz) = 14c26e52df4114563b65fac18b38e1463fb786a6
+Size (checkbot-1.64.tar.gz) = 26752 bytes
+SHA1 (patch-aa) = eca86444f88c551e851b40a962178b361dcce58d
