@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/12/18 02:14:39 wrstuden Exp $
+# $NetBSD: Makefile,v 1.17 2000/02/19 00:48:57 tsutsui Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -29,7 +29,7 @@ ENABLE_TARGETS+=	alpha-netbsd arm-netbsd \
 			i386-cygwin32 i386-elf i386-go32 i386-linux \
 			i386-netbsd i386-netware \
 			m68k-elf m68k-netbsd m68k-sunos4 \
-			mips-dec-netbsd \
+			mipseb-netbsd mipsel-netbsd \
 			powerpc-eabi powerpcle-eabi \
 			sparc-netbsd sparc-solaris2 sparc-sunos4
 

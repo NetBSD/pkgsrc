@@ -1,0 +1,32 @@
+$NetBSD: patch-mips,v 1.1 2000/02/19 00:48:58 tsutsui Exp $
+
+--- config.sub.orig	Thu Oct  7 01:50:14 1999
++++ config.sub	Thu Oct  7 01:50:32 1999
+@@ -177,7 +177,7 @@
+ 		| alpha | alphaev5 | alphaev56 | alphapca56 | alphaev6 \
+ 		| we32k | ns16k | clipper | i370 | sh | powerpc | powerpcle \
+ 		| 1750a | dsp16xx | pdp11 \
+-		| mips64 | mipsel | mips64el | mips64orion | mips64orionel \
++		| mips64 | mipsel | mipseb | mips64el | mips64orion | mips64orionel \
+ 		| mipstx39 | mipstx39el \
+ 		| sparc | sparclet | sparclite | sparc64 | v850)
+ 		basic_machine=$basic_machine-unknown
+@@ -230,7 +230,7 @@
+ 	      | alphaev6-* | we32k-* | cydra-* | ns16k-* | pn-* | np1-* \
+ 	      | xps100-* | clipper-* | orion-* \
+ 	      | sparclite-* | pdp11-* | sh-* | powerpc-* | powerpcle-* \
+-	      | sparc64-* | mips64-* | mipsel-* \
++	      | sparc64-* | mips64-* | mipsel-* | mipseb-* \
+ 	      | mips64el-* | mips64orion-* | mips64orionel-* \
+ 	      | mipstx39-* | mipstx39el-* \
+ 	      | f301-*)
+--- ld/configure.tgt.orig	Thu Oct  7 01:51:22 1999
++++ ld/configure.tgt	Thu Oct  7 01:55:30 1999
+@@ -148,6 +148,7 @@
+ mips*-*-ecoff*)		targ_emul=mipsidt ;;
+ mips*-dec-bsd*)		targ_emul=mipsbsd ;;
+-mips*-dec-netbsd*)	targ_emul=elf32lmip ;;
++mips*el-*-netbsd* | mips-dec-netbsd*)	targ_emul=elf32lmip ;;
++mips*eb-*-netbsd*)	targ_emul=elf32ebmip ;;
+ mips*-*-bsd*)		targ_emul=mipsbig ;;
+ mips*vr4300el-*-elf*)	targ_emul=elf32l4300 ;;
