@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 1999/04/14 04:50:24 proff Exp $
+# $NetBSD: Makefile,v 1.1.1.1 1999/04/15 14:34:28 proff Exp $
 
-DISTNAME=	festvox-mbrola-1.3.1
+DISTNAME=	festvox-en1-1.3.1
 WRKSRC=		${WRKDIR}/festival
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.3.1/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 1999/04/06 17:55:31 tron Exp $
+# $NetBSD: Makefile,v 1.30 1999/04/15 14:32:57 proff Exp $
 #
 
     SUBDIR += amp
@@ -24,7 +24,7 @@
     SUBDIR += festvox-kal8
     SUBDIR += festvox-ked16
     SUBDIR += festvox-ked8
-    SUBDIR += festvox-mbrola
+    SUBDIR += festvox-en1
     SUBDIR += festvox-mwm
     SUBDIR += festvox-ogirab
     SUBDIR += festvox-rab16
