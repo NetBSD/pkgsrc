@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/21 08:33:48 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/05 03:39:33 rh Exp $
 #
 
 DISTNAME=		anjuta-0.1.9
@@ -23,7 +23,7 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=        --localstatedir=${LOCALSTATEDIR}
 
-LOCALSTATEDIR=          ${X11PREFIX}/var/gnome
+LOCALSTATEDIR=          ${X11PREFIX}/var
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../sysutils/gnome-vfs/buildlink2.mk"
