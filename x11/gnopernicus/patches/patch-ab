@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2004/02/17 22:40:30 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2004/09/21 17:12:18 jmmv Exp $
 
---- gnopi/Makefile.in.orig	2003-10-07 16:31:27.000000000 +0200
+--- gnopi/Makefile.in.orig	2004-08-30 18:39:59.000000000 +0200
 +++ gnopi/Makefile.in
-@@ -238,7 +238,7 @@ LDADD = ../srutil/libsrutil.la  \
- 	$(GNOPI_LIBS)
+@@ -190,7 +190,7 @@ gnopernicus_SOURCES = gnopi.c   		gnopiu
+ LDADD = ../srutil/libsrutil.la  	../srconf/libsrconf/libsrconf.la 	$(GNOPI_LIBS)
  
  
 -translationdir = $(sysconfdir)/gnopernicus-1.0/translation_tables
 +translationdir = $(datadir)/examples/gnopernicus/translation_tables
- translation_DATA = de.a2b	\
- 	           es.a2b	\
- 	           sv.a2b	\
+ translation_DATA = de.a2b		           es.a2b		           sv.a2b		           en_US.a2b	    
+ 
+ 
