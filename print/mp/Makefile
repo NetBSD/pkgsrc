@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/28 19:52:26 kim Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/10 00:57:17 wiz Exp $
 #
 
 DISTNAME=	mp
@@ -30,6 +30,6 @@ ALL_TARGET=	mp PREFIX=${PREFIX} X11BASE=${X11BASE} CC='${CC}' \
 INSTALL_TARGET=	install-mp PREFIX=${PREFIX}
 
 pre-patch:
-	cp ${WRKSRC}/Makefile.dist ${WRKSRC}/Makefile
+	${CP} ${WRKSRC}/Makefile.dist ${WRKSRC}/Makefile
 
 .include "../../mk/bsd.pkg.mk"

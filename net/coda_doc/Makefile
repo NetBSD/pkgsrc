@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/10/27 19:12:22 agc Exp $
+# $NetBSD: Makefile,v 1.5 2000/01/10 00:57:15 wiz Exp $
 #
 
 DISTNAME=	coda-doc-4.6.5-3
@@ -19,7 +19,7 @@ do-build:
 	@${ECHO} "available.  It should appear in a release or two."
 
 do-install:
-	cd ${WRKSRC}; pax -r -w man ${PREFIX}
-	cd ${WRKSRC}; pax -r -w doc ${PREFIX}/share
+	cd ${WRKSRC}; ${PAX} -r -w man ${PREFIX}
+	cd ${WRKSRC}; ${PAX} -r -w doc ${PREFIX}/share
 
 .include "../../mk/bsd.pkg.mk"
