@@ -1,7 +1,7 @@
-$NetBSD: patch-bg,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+$NetBSD: patch-bg,v 1.2 2000/06/16 23:40:18 wiz Exp $
 
---- progs/glupart/glupart_script.pl.orig	Wed Nov  5 15:30:11 1997
-+++ progs/glupart/glupart_script.pl	Thu Apr  2 21:55:30 1998
+--- progs/glupart/glupart_script.pl.orig	Wed Nov  5 17:30:11 1997
++++ progs/glupart/glupart_script.pl	Tue Jun 13 13:13:12 2000
 @@ -75,3 +75,3 @@
  my $gl_tmpFile = "$gl_dataDir/.__glupart$$-tmp";
 -my $gl_emailAdmin = "glunix-admin\@now.CS.Berkeley.EDU";
@@ -27,10 +27,8 @@ $NetBSD: patch-bg,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
  	    print "Created file $f\n";
 +	    system("/usr/sbin/chown glunix:glunix $f");
  	}
-@@ -1995,3 +1997,5 @@
+@@ -1995,3 +1997,3 @@
  if ($command eq "install") {
 -    if ($> != 0) {
-+    if ($> != 0 && $< == 0) {
-+	($<,$>) = ($>,$<);
-+    } else {
++    if ($< != 0) {
  	print STDERR "You must be root to do \"glupart install\"\n";

@@ -1,7 +1,7 @@
-$NetBSD: patch-bo,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+$NetBSD: patch-bo,v 1.2 2000/06/16 23:40:18 wiz Exp $
 
---- progs/glupart/glupart.c.orig	Thu Sep 18 14:01:35 1997
-+++ progs/glupart/glupart.c	Thu Apr  9 11:37:35 1998
+--- progs/glupart/glupart.c.orig	Thu Sep 18 17:01:35 1997
++++ progs/glupart/glupart.c	Tue Jun 13 14:44:12 2000
 @@ -1,18 +1,40 @@
  #include <stdio.h>
  #include <sys/types.h>
@@ -24,7 +24,7 @@ $NetBSD: patch-bo,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
 +#endif
  
 -#define progPath     "/usr/now/bin/glupart_script"
-+#define progPath     "%%%NOW_ROOT%%%/now/bin/glupart_script"
++#define progPath     "%%%NOW_ROOT%%%/bin/glupart_script"
  
  int
  main(int argc, char **argv) {
