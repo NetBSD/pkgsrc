@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/04/29 04:54:09 cjep Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/25 14:12:12 taca Exp $
 # FreeBSD Id: ports/japanese/namazu2/Makefile,v 1.16 2000/10/26 20:56:25 knu Exp
 
 DISTNAME=	namazu-2.0.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	japanese textproc www
 MASTER_SITES=	ftp://ftp.namazu.org/namazu/stable/ \
 		http://www.namazu.org/stable/
