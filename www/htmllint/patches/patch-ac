@@ -1,16 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/03/14 05:13:04 kei Exp $
+$NetBSD: patch-ac,v 1.2 2002/11/22 16:10:11 jschauma Exp $
 
---- htmllint.orig	Fri Mar 17 10:31:12 2000
-+++ htmllint	Mon Jan 29 11:33:12 2001
-@@ -1,9 +1,10 @@
+--- htmllint.orig	Fri Nov 22 10:33:45 2002
++++ htmllint	Fri Nov 22 10:34:19 2002
+@@ -1,9 +1,9 @@
 -#!/usr/local/bin/perl
 +#!@PREFIX@/bin/perl
  
  # Another HTML-lint ###########################################
  
  use File::Basename;
- push @INC => [&fileparse($0)]->[1];
+-push @INC => [&fileparse($0)]->[1];
 +push @INC => '@PREFIX@/share/httpd/htdocs/htmllint'; # XXX
  
- # $add_options = '-noscore -pedantic etc...';
+ my $add_options; # = '-noscore -pedantic etc...';
  

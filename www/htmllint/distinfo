@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 13:28:09 kei Exp $
+$NetBSD: distinfo,v 1.3 2002/11/22 16:10:10 jschauma Exp $
 
-SHA1 (htmllint.zip) = fc17dd1d330e67560a1f908618726c2a4d680668
-Size (htmllint.zip) = 645863 bytes
+SHA1 (htmllint.zip) = 07a3e71d4c1f2e46b26f4f39aea1d06d1f834cd4
+Size (htmllint.zip) = 667900 bytes
 SHA1 (patch-aa) = bdaeb7be2fbf2a1295f4840d52a2e0f5f1cc31bc
 SHA1 (patch-ab) = 5c471f6833812cb7473f763e2ce25c1c48436b0c
-SHA1 (patch-ac) = b68972da18b7c4d4720f365a51f1d70b8f9635ec
+SHA1 (patch-ac) = e3ac802ed17d7939e47e6f074113ddad2eb93e68
 SHA1 (patch-ad) = 3759e9a01e8697e4db4012c91acb6429b8ef0e1e
 SHA1 (patch-ae) = a90c30ef3890a2989ccf8ca6cd36ddb805da35eb
 SHA1 (patch-af) = 9133d16bff24a3837ecf21ddf28fa10025335a84
