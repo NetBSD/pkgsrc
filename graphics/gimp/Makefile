@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2004/04/05 22:07:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.91 2004/04/05 22:09:54 jmmv Exp $
 #
 
-DISTNAME=	gimp-${GIMP_VER}
+DISTNAME=	gimp-2.0.0
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v2.0/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/gimp/v2.0/ \
@@ -15,8 +15,6 @@ COMMENT=	Image manipulation program similar to Photoshop[tm]
 BUILD_USES_MSGFMT=	yes
 
 CONFLICTS+=		gimp<=1.2.3
-
-GIMP_VER=		2.0.0
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
