@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/24 22:27:27 cube Exp $
+share/gkrellm2/COPYRIGHT
+share/gkrellm2/README
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gkrellm.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gkrellm.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gkrellm.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gkrellm.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gkrellm.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gkrellm.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gkrellm.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gkrellm.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gkrellm.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gkrellm.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gkrellm.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gkrellm.mo
+@dirrm share/gkrellm2
