@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/11 08:27:40 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 1999/10/14 06:49:50 sakamoto Exp $
 #
 
 DISTNAME=	king-1.00-tb40-1
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.ibm.co.jp/software/internet/king/
 
 RESTRICTED=	"You should buy from IBM Corp"
 NO_PACKAGE=	${RESTRICTED}
+MIRROR_DISTFILE=no
 
 KINGDISTDIR?=	/cdrom/linux
 DISTDIR=	${KINGDISTDIR}
