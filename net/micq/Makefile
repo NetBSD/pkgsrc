@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/06 01:10:25 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/16 12:00:57 tron Exp $
 #
 
-DISTNAME=	micq-0.4.3
+DISTNAME=	micq-0.4.6
 CATEGORIES=	net
-MASTER_SITES=	ftp://micq.chatzone.org/pub/micq/V0.4.3/ \
-		http://micq.maesoft.net/
+MASTER_SITES=	ftp://micq.chatzone.org/pub/${DISTNAME:S/-/\/V/}/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
