@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2003/07/13 13:53:44 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/13 18:01:50 wiz Exp $
 #
 
 PKGNAME=		sawfish-${SF_VERS}
-PKGREVISION=		3
+PKGREVISION=		4
 
 COMMENT=		GNOME-aware window manager that is fully configurable in Lisp
 
-DEPENDS+=		sawfish-replibs-${SF_VERS}nb1:../../wm/sawfish-replibs
+DEPENDS+=		sawfish-replibs-${SF_VERS}nb2:../../wm/sawfish-replibs
 
 USE_X11BASE=		# defined
 
