@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1536 2004/03/28 21:10:36 snj Exp $
+$NetBSD: TODO,v 1.1537 2004/03/28 21:13:31 snj Exp $
 
 Suggested new packages
 ======================
@@ -165,7 +165,6 @@ Suggested package updates
 	o crafty-19.5
 	o crossfire-1.5.0
 	o cscope-15.5
-	o curl-7.11.1 [pkg/24916]
 	o cvs-1.12.3
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
@@ -337,7 +336,6 @@ Suggested package updates
 	o snes9x-1.42
 	o snort-2.1.1
 	o snownews-1.5.1
-	o sodipodi-0.34 [pkg/24868]
 	o sqlite-2.8.12 [pkg/24660]
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
