@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/19 08:54:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/10/07 03:45:13 rtr Exp $
 
 DISTNAME=		xmill-0-7
 PKGNAME=		xmill-0.7
@@ -15,6 +15,7 @@ BUILD_DEPENDS=		unzip-[0-9]*:../../archivers/unzip
 
 EXTRACT_CMD=		${LOCALBASE}/bin/unzip -aq ${DOWNLOADED_DISTFILE}
 
+USE_GMAKE=		#defined
 MAKEFILE=		makefile
 
 RESTRICTED=		"Redistribution not permitted"
