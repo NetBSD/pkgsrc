@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/07/24 21:49:07 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.22 2000/08/04 18:49:27 martin Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.9
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/xemacs-21.1/ \
 		ftp://ftp.th-darmstadt.de/pub/editors/xemacs/xemacs-21.1/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}-elc${EXTRACT_SUFX} ${DISTNAME}-info${EXTRACT_SUFX}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	martin@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
 
 USE_XAW=	yes
@@ -69,7 +69,7 @@ pre-configure:
 
 post-install:
 	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/${DISTNAME}
-	@${MKDIR} ${PREFIX}/lib/xemacs
+	@${LN} -s ${DISTNAME} ${PREFIX}/lib/xemacs
 	@if [ "X${MANZ}" != X"" ]; then \
 		${WRKSRC}/lib-src/gzip-el.sh ${PREFIX}/lib/${DISTNAME}; \
 		GZSUFFIX=.gz; \
