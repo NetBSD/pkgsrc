@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6920 2004/08/17 09:15:21 wiz Exp $
+$NetBSD: CHANGES,v 1.6921 2004/08/17 10:01:01 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3877,3 +3877,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated metacity to 2.8.3 [ben 2004-08-17]
 	Updated edict to 2004.002 [cube 2004-08-17]
 	Updated scmxx to 0.7.3 [wiz 2004-08-17]
+	Updated png to 1.2.6 [drochner 2004-08-17]
+	Added codeville-0.1.7.1 [drochner 2004-08-17]
+	Added monotone-0.14 [drochner 2004-08-17]
