@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2002/07/17 13:12:54 markd Exp $
+# $NetBSD: Makefile,v 1.37 2002/09/09 00:59:00 markd Exp $
 
-DISTNAME=		R-1.4.1
-PKGREVISION=		2
+DISTNAME=		R-1.5.1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		markd@netbsd.org
 HOMEPAGE=		http://www.R-project.org/
 COMMENT=		Statistical language for data analysis and graphics
 
@@ -14,7 +13,7 @@ COMMENT=		Statistical language for data analysis and graphics
 NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 USE_X11=		# defined
 USE_PERL5=		# defined
 USE_GMAKE=		# defined
@@ -24,15 +23,15 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-tcltk
-CONFIGURE_ARGS+=	--with-tcl-config=${BUILDLINK_DIR}/lib/tclConfig.sh
-CONFIGURE_ARGS+=	--with-tk-config=${BUILDLINK_DIR}/lib/tkConfig.sh
+CONFIGURE_ARGS+=	--with-tcl-config=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
+CONFIGURE_ARGS+=	--with-tk-config=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
 CONFIGURE_ARGS+=	--without-gnome		# not yet stable
 CONFIGURE_ENV+=		XMKMF="${XMKMF}"
 
 # Use BLAS (math/blas)
 #
 CONFIGURE_ARGS+=	--without-atlas
-CONFIGURE_ARGS+=	--with-blas=${BUILDLINK_DIR}/lib/libblas.a
+CONFIGURE_ARGS+=	--with-blas=${BUILDLINK_PREFIX.blas}/lib/libblas.a
 CONFIGURE_ARGS+=	--without-blas_risc
 CONFIGURE_ARGS+=	--without-dxml
 CONFIGURE_ARGS+=	--without-libmoto
@@ -45,7 +44,6 @@ CONFIGURE_ENV+=		ac_cv_lib_blas_dgemm_=yes
 # by the package builder.
 #
 USE_FORTRAN=		# defined
-CONFIGURE_ENV+=		FC="${FC}"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -70,8 +68,19 @@ PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 R_LIBDIR=		${PREFIX}/lib/R
 INSTALL_DIRS=		${R_LIBDIR}
 
-REPLACE_BUILDLINK=	src/scripts/R.fe etc/Makeconf
-REPLACE_BUILDLINK_SED=	-e "s|${BUILDLINK_DIR}/|${LOCALBASE}/|g"
+# R does ugly things in the configure to get the default list of arguments
+# for linking Fortran, which exposes the buildlink2 tricks so clean up
+# afterwards
+#
+post-configure:
+	( cd ${WRKSRC};							\
+	  for file in src/scripts/R.sh src/scripts/f77 etc/Makeconf; do	\
+	    ${SED} -e "s|${BUILDLINK_X11_DIR}/|${X11BASE}/|g"		\
+		   -e "s|${BUILDLINK_X11PKG_DIR}/|${X11BASE}/|g"	\
+		   -e "s|${BUILDLINK_DIR}/|${LOCALBASE}/|g" $${file} > $${file}.fix; \
+	    ${MV} $${file}.fix $${file};				\
+	  done;								\
+	)
 
 # Generate the PLIST dynamically as it changes in each version only in a
 # specific subtree.  This will make maintaining this package a little easier
@@ -98,11 +107,10 @@ post-install:
 	${ECHO} "@exec R CMD ${PERL5} %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null" >> ${PLIST_SRC}
 	${ECHO} "@exec ${CAT} %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null" >> ${PLIST_SRC}
 
-.include "../../devel/readline/buildlink.mk"
-.include "../../devel/zlib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../math/blas/buildlink.mk"
-.include "../../x11/tk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../math/blas/buildlink2.mk"
+.include "../../x11/tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

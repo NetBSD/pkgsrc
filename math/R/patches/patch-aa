@@ -1,35 +1,36 @@
-$NetBSD: patch-aa,v 1.8 2002/06/16 02:56:51 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.9 2002/09/09 00:59:02 markd Exp $
 
---- configure.in.orig	Thu Dec 13 10:16:03 2001
-+++ configure.in
-@@ -426,9 +426,9 @@
- if ${use_libmoto}; then
-   AC_CHECK_LIB(moto, sin)
- fi
--AC_CHECK_LIB(ncurses, main,,
--  AC_CHECK_LIB(termcap, main,,
--    AC_CHECK_LIB(termlib, main)
-+AC_CHECK_LIB(termcap, main,,
-+  AC_CHECK_LIB(termlib, main,,
-+    AC_CHECK_LIB(ncurses, main)
- ))
+--- configure.ac.orig	Wed May  1 06:04:05 2002
++++ configure.ac	Sun Sep  8 23:47:11 2002
+@@ -414,9 +414,9 @@
+ ## AC_CHECK_LIBM computes LIBM but does not add to LIBS, hence we do
+ ## the following as well.
+ AC_CHECK_LIB(m, sin)
+-AC_CHECK_LIB(ncurses, main, [],
+-             AC_CHECK_LIB(termcap, main, [],
+-                          AC_CHECK_LIB(termlib, main)))
++AC_CHECK_LIB(termcap, main, [],
++             AC_CHECK_LIB(termlib, main, [],
++                          AC_CHECK_LIB(ncurses, main)))
  AC_CHECK_LIB(dl, dlopen)
  
-@@ -553,11 +553,7 @@
-       R_PROG_CC_FLAG(-std1,
-         R_XTRA_CFLAGS="${R_XTRA_CFLAGS} -std1")
+ ## Readline.
+@@ -555,13 +555,6 @@
+       R_PROG_CC_FLAG([-ieee_with_inexact],
+                      [R_XTRA_CFLAGS="${R_XTRA_CFLAGS} -ieee_with_inexact"])
      fi
 -    if test "${G77}" = yes; then
--      R_XTRA_FFLAGS="${R_XTRA_FFLAGS} -mieee"
+-      R_PROG_F77_FLAG([-mieee],
+-                      [R_XTRA_FFLAGS="${R_XTRA_FFLAGS} -mieee"])
 -    else
--      R_XTRA_FFLAGS="${R_XTRA_FFLAGS} -fpe3"
+-      R_PROG_F77_FLAG([-fpe3],
+-                      [R_XTRA_FFLAGS="${R_XTRA_FFLAGS} -fpe3"])
 -    fi
-+    R_XTRA_FFLAGS="${R_XTRA_FFLAGS}"
-     ## </Albrecht.Gebhardt@uni-klu.ac.at>
-     ## </FIXME>
-     ;;
-@@ -776,6 +772,7 @@
-     main_ldflags="-export-dynamic"
+     if test "${GXX}" = yes; then
+       R_PROG_CXX_FLAG([-mieee],
+                       [R_XTRA_CXXFLAGS="${R_XTRA_CXXFLAGS} -mieee"])
+@@ -816,6 +809,7 @@
+     fpicflags=
      ;;
    netbsd*)
 +    fpicflags="-fPIC"
