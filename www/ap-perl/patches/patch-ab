@@ -1,0 +1,74 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/12/04 00:10:57 tv Exp $
+
+--- src/modules/perl/mod_perl.c.orig	Wed Sep 30 23:13:14 1998
++++ src/modules/perl/mod_perl.c	Thu Dec  3 17:30:09 1998
+@@ -58,6 +58,57 @@
+ 
+ #define CORE_PRIVATE 
+ #include "mod_perl.h"
++#include <ap_include_extern.h>
++
++/* --- ripped from mod_include.c --- */
++/* 
++ * sub key may be anything a Perl*Handler can be:
++ * subroutine name, package name (defaults to package::handler),
++ * Class->method call or anoymous sub {}
++ *
++ * Child <!--#perl sub="sub {print $$}" --> accessed
++ * <!--#perl sub="sub {print ++$Access::Cnt }" --> times. <br>
++ *
++ * <!--#perl arg="one" sub="mymod::includer" -->
++ *
++ * -Doug MacEachern
++ */
++
++static int handle_perl(FILE *in, request_rec *r, const char *error)
++{
++    char tag[MAX_STRING_LEN];
++    char parsed_string[MAX_STRING_LEN];
++    char *tag_val;
++    SV *sub = Nullsv;
++    AV *av = newAV();
++
++    if (!(ap_allow_options(r) & OPT_INCLUDES)) {
++        ap_log_rerror(APLOG_MARK, APLOG_NOERRNO|APLOG_ERR, r,
++                    "httpd: #perl SSI disallowed by IncludesNoExec in %s",
++                    r->filename);
++        return DECLINED;
++    }
++    while (1) {
++        if (!(tag_val = ap_include_get_tag(r->pool, in, tag, sizeof(tag), 1))) {
++            break;
++        }
++        if (strnEQ(tag, "sub", 3)) {
++            sub = newSVpv(tag_val, 0);
++        }
++        else if (strnEQ(tag, "arg", 3)) {
++            ap_include_parse_string(r, tag_val, parsed_string, sizeof(parsed_string), 0);
++            av_push(av, newSVpv(parsed_string, 0));
++        }
++        else if (strnEQ(tag, "done", 4)) {
++            break;
++        }
++    }
++    perl_stdout2client(r);
++    perl_setup_env(r);
++    perl_call_handler(sub, r, av);
++    return OK;
++}
++/* --- end from mod_include.c --- */
+ 
+ #ifdef WIN32
+ void *mod_perl_mutex = &mod_perl_mutex;
+@@ -486,6 +537,11 @@
+ #endif
+     ap_add_version_component(MOD_PERL_STRING_VERSION);
+ #endif
++
++    if (ap_include_register_extern("perl", handle_perl)) {
++	fprintf(stderr, "mod_perl: Cannot register XSSI handler\n");
++	exit(1);
++    }
+ 
+ #ifndef WIN32
+     argv[0] = server_argv0;
