@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8721 2005/01/12 16:10:01 adam Exp $
+$NetBSD: CHANGES,v 1.8722 2005/01/12 20:04:43 reed Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -269,3 +269,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lmarbles to 1.0.7 [adam 2005-01-12]
 	Updated lpairs to 1.0.1 [adam 2005-01-12]
 	Updated ltris to 1.0.7 [adam 2005-01-12]
+	Added xvidcap-gtk2-1.1.3 [reed 2005-01-12]
