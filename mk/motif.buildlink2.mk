@@ -1,4 +1,4 @@
-# $NetBSD: motif.buildlink2.mk,v 1.5 2002/12/23 22:33:14 jschauma Exp $
+# $NetBSD: motif.buildlink2.mk,v 1.6 2002/12/23 22:50:29 jschauma Exp $
 #
 # USE_MOTIF12
 #	use a Motif-1.2-compatible installation, otherwise, assume
@@ -150,12 +150,7 @@ MOTIFBASE=		${_MOTIFBASE}
 USE_X11?=		# defined
 MAKE_ENV+=		MOTIFLIB="${MOTIFLIB}"
 MAKE_ENV+=		MOTIFBASE="${_MOTIFBASE}"
-.if ${OPSYS} == "IRIX"
-LDFLAGS+=		-Wl,-rpath -Wl,${_MOTIFBASE}/lib
-MOTIFLIB?=		-Wl,-rpath,${_MOTIFBASE}/lib -Wl,-rpath,${X11BASE}/lib -L${_MOTIFBASE}/lib -lXm -lXp
-.else
-LDFLAGS+=		-Wl,-R${_MOTIFBASE}/lib
-MOTIFLIB?=		-Wl,-R${_MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -L${_MOTIFBASE}/lib -lXm -lXp
-.endif
+LDFLAGS+=		-Wl,${_OPSYS_RPATH_NAME}${_MOTIFBASE}/lib
+MOTIFLIB?=		-Wl,${_OPSYS_RPATH_NAME}${_MOTIFBASE}/lib -L${_MOTIFBASE}/lib -lXm -lXp
 
 .endif	# MOTIF_BUILDLINK2_MK
