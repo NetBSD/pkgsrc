@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/10/03 00:18:12 tv Exp $
+# $NetBSD: Makefile,v 1.16 2004/11/19 15:32:49 jlam Exp $
 #
 
 DISTNAME=	pam_ldap-150
@@ -11,13 +11,16 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.padl.com/pam_ldap.html
 COMMENT=	Pluggable authentication module for LDAP directories
 
-GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
+USE_BUILDLINK3=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ldap-lib=openldap
 CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap}
 CONFIGURE_ARGS+=	--with-ldap-conf-file=${BUILDLINK_PREFIX.pam}/etc/pam/ldap.conf
 CONFIGURE_ARGS+=	--sysconfdir=${BUILDLINK_PREFIX.pam}/etc/pam
-INSTALL_TARGET=	install install-data
+INSTALL_TARGET=		install install-data
+
+.include "../../databases/openldap/buildlink3.mk"
+.include "../../security/PAM/buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pam-ldap
@@ -25,6 +28,4 @@ post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${doc} ${PREFIX}/share/doc/pam-ldap
 .endfor
 
-.include "../../databases/openldap/buildlink3.mk"
-.include "../../security/PAM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
