@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2004/09/12 05:00:53 jlam Exp $
+# $NetBSD: options.mk,v 1.4 2004/11/06 11:07:17 jmmv Exp $
 
 # Global and legacy options
 .if defined(USE_CUPS) && !empty(USE_CUPS:M[yY][eE][sS])
@@ -53,8 +53,10 @@ CONFIGURE_ARGS+=	--without-krb5
 .if !empty(PKG_OPTIONS:Mcups)
 .  include "../../print/cups/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-cups
+PLIST_SUBST+=		CUPS=
 .else
 CONFIGURE_ARGS+=	--disable-cups
+PLIST_SUBST+=		CUPS="@comment "
 .endif
 
 ###
