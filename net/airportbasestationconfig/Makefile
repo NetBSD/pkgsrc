@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/06/09 08:25:39 tron Exp $
+# $NetBSD: Makefile,v 1.24 2004/06/09 08:27:49 tron Exp $
 
 DISTNAME=	configurator_152-128
 PKGNAME=	${BINNAME}-1.5.2
@@ -33,7 +33,7 @@ do-build:
 .if defined(CLASSPATH)
 	${ECHO} "CLASSPATH=${CLASSPATH}:\$${CLASSPATH}; export CLASSPATH" >>${WRKSRC}/${BINNAME}
 .endif
-	${ECHO} "${ULIMIT_CMD_datasize}" >>${WRKSRC}/${BINNAME}
+	${ECHO} '${ULIMIT_CMD_datasize}' >>${WRKSRC}/${BINNAME}
 	${ECHO} "exec java -jar ${LIBDIR}/${JARNAME}" >>${WRKSRC}/${BINNAME}
 
 do-install:
