@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 1998/09/17 00:48:02 garbled Exp $
+--- crypto/bn/asm/alpha.s.orig	Wed Sep 16 15:41:18 1998
++++ crypto/bn/asm/alpha.s	Wed Sep 16 15:41:28 1998
+@@ -195,7 +195,7 @@
+ 	addq	$8,$3,$3	# c+=carry
+ 
+ 	cmpult	$3,$8,$8	# did we overflow?
+-	 stq	$3,($16)	# r[0]=c
++	 stq	$3,0($16)	# r[0]=c
+ 
+ 	addq	$7,$8,$8	# add into overflow
+ 	 subq	$19,1,$19	# loop--
