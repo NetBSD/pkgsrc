@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/03 12:16:42 recht Exp $
+include/cairo-features.h
+include/cairo.h
+lib/libcairo.a
+lib/libcairo.la
+lib/libcairo.so
+lib/libcairo.so.1
+lib/libcairo.so.1.0
+lib/pkgconfig/cairo.pc
