@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2004/02/15 22:29:39 itojun Exp $
+$NetBSD: patch-aa,v 1.4 2004/02/18 21:29:10 kristerw Exp $
 
 --- Makefile.orig	2004-01-03 23:22:47.000000000 +0900
 +++ Makefile	2004-02-16 07:24:39.000000000 +0900
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.3 2004/02/15 22:29:39 itojun Exp $
  #
 -INSTALL		= /usr/ucb/install
 +#INSTALL	= /usr/ucb/install
-+INSTALL		= ${INSTALL_PROGRAM}
++INSTALL		= ${BSD_INSTALL}
  
  #
  # Compiler and linker flags.
