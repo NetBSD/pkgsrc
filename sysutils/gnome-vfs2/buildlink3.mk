@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/11 00:56:01 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/11 13:05:38 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gnome-vfs2.
 #
@@ -20,6 +20,7 @@ BUILDLINK_PKGSRCDIR.gnome-vfs2?=	../../sysutils/gnome-vfs2
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/cdparanoia/buildlink3.mk"
 .include "../../databases/gnome-mime-data/buildlink3.mk"
+.include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
