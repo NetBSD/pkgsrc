@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/07/31 14:28:00 drochner Exp $
+
+--- include/id3/strings.h.orig	Mon Jul 30 16:51:38 2001
++++ include/id3/strings.h	Mon Jul 30 16:52:01 2001
+@@ -34,7 +34,7 @@
+ {
+   typedef std::basic_string<char>           String;
+   typedef std::basic_string<unsigned char> BString;
+-  typedef std::basic_string<wchar_t>       WString;
++  typedef std::basic_string<unsigned char>       WString;
+ };
+ 
+ #endif /* _ID3LIB_STRINGS_H_ */
