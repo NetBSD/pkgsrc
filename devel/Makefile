@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.444 2003/12/27 23:05:06 salo Exp $
+# $NetBSD: Makefile,v 1.445 2003/12/29 13:22:03 grant Exp $
 #
 
 COMMENT=	Development utilities
@@ -296,6 +296,7 @@ SUBDIR+=	p5-LDAP
 SUBDIR+=	p5-Log-Agent
 SUBDIR+=	p5-Log-Dispatch
 SUBDIR+=	p5-Log-Dispatch-Config
+SUBDIR+=	p5-Log-Dispatch-FileRotate
 SUBDIR+=	p5-Make
 SUBDIR+=	p5-Memoize
 SUBDIR+=	p5-Memoize-ExpireLRU
