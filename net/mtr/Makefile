@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/10/25 16:13:06 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/10/26 22:05:31 jlam Exp $
 #
 
 DISTNAME=	mtr-0.42
@@ -10,19 +10,10 @@ MAINTAINER=	sommerfeld@netbsd.org
 HOMEPAGE=	http://www.bitwizard.nl/mtr/
 COMMENT=	Traceroute and ping in a single graphical network diagnostic tool
 
-BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
-BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
-
-GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
-USE_BUILDLINK_ONLY=	yes
-
-pre-configure:
-	cd ${WRKSRC};							\
-	${LOCALBASE}/bin/aclocal;					\
-	${LOCALBASE}/bin/automake -a --foreign -i;			\
-	${LOCALBASE}/bin/autoreconf --force;				\
-	${LOCALBASE}/bin/autoheader
+AUTOMAKE_OVERRIDE=	YES
+GNU_CONFIGURE=		YES
+USE_GMAKE=		YES
+USE_BUILDLINK_ONLY=	YES
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mtr
