@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/03/12 22:31:54 tron Exp $
+# $NetBSD: Makefile,v 1.7 2000/03/27 22:39:28 tron Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.0.1
@@ -32,10 +32,15 @@ CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" \
 .if (${OPSYS} == NetBSD)
 CPPFLAGS+=	-I${WRKDIR}
 
+.if (${MACHINE_ARCH} == i386)
 post-patch:
+.if (${OBJECT_FMT} == a.out)
+	${CP} ${FILESDIR}/decode_i586_.s ${WRKSRC}/Input/mpg123/decode_i586.s
+.endif
 	cd ${WRKSRC}/Input/mpg123 && \
 	${MV} decode_i586.s decode_i586.s.orig && \
 	${SED} -e 's@^/@#/@g' <decode_i586.s.orig >decode_i586.s
+.endif
 
 pre-configure:
 	${MKDIR} ${WRKDIR}/sys
