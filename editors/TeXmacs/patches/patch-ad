@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/04/06 19:02:49 reinoud Exp $
+
+--- src/Classes/Abstract/basic.hpp.orig	2004-04-05 23:16:59.000000000 +0200
++++ src/Classes/Abstract/basic.hpp
+@@ -81,7 +81,7 @@ inline SI max (SI i, SI j) { if (i>j) re
+ inline double min (double i, double j) { if (i<j) return i; else return j; }
+ inline double max (double i, double j) { if (i>j) return i; else return j; }
+ inline int hash (int i) { return i; }
+-inline int hash (pointer ptr) { return (int) ptr; }
++inline int hash (pointer ptr) { return (int) ((char *) ptr - (char *) 0); }
+ inline int copy (int x) { return x; }
+ 
+ enum display_control { INDENT, UNINDENT, HRULE, LF };

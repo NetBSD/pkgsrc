@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2004/04/06 19:02:49 reinoud Exp $
+
+--- src/Window/X/x_display.cpp.orig	2004-04-03 21:20:49.000000000 +0200
++++ src/Window/X/x_display.cpp
+@@ -44,7 +44,7 @@ bool operator != (x_character xc1, x_cha
+     (xc1->sf!=xc2->sf) || (xc1->fg!=xc2->fg) || (xc1->bg!=xc2->bg); }
+ 
+ int hash (x_character xc) {
+-  return xc->c ^ ((int) xc->fng.rep) ^ xc->fg ^ xc->bg ^ xc->sf; }
++  return xc->c ^ ((int) ((char *) xc->fng.rep - (char *) 0)) ^ xc->fg ^ xc->bg ^ xc->sf; }
+ 
+ void
+ x_display_rep::prepare_color (int sf, color fg, color bg) {
