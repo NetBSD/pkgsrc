@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2004/11/29 17:24:49 taca Exp $
+$NetBSD: patch-ac,v 1.2 2004/11/30 05:58:04 taca Exp $
 
 --- aica/Makefile.in.orig	2002-11-04 23:21:09.000000000 +0900
 +++ aica/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1 2004/11/29 17:24:49 taca Exp $
  CC=	@CC@
  PREFIX=	@prefix@
 -CFLAGS=	-O2 -I../ -I../include -I../aicrypto/include -DAICONFIG=\"$(PREFIX)/lib/aica.cnf\" -DPREFIX=\"$(PREFIX)\"
-+CFLAGS=	-O2 -I../ -I../include -I../aicrypto/include -DAICONFIG=\"$(PREFIX)/etc/AiCA/aica.cnf\" -DPREFIX=\"$(PREFIX)\"
++CFLAGS=	-O2 -I../ -I../include -I../aicrypto/include -DAICONFIG=\"${PKG_SYSCONFDIR}/aica.cnf\" -DPREFIX=\"$(PREFIX)\"
  
  
  OBJ=	aica.o aica_file.o aica_print.o aica_setext.o aica_pol.o \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/11/29 17:24:49 taca Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/30 05:58:04 taca Exp $
 #
 
 DISTNAME=	AiCA-0.81
@@ -15,18 +15,21 @@ INSTALL_EXTRA_TMPL+=    ${.CURDIR}/INSTALL
 GNU_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/AiCA
 
-CONFDIR=	${PREFIX}/etc/AiCA
-DOCDIR=		${PREFIX}/share/doc/AiCA
-EXAMPLESDIR=	${PREFIX}/share/examples/AiCA
+PKG_SYSCONFSUBDIR?=	AiCA
+CONF_FILES+=		${EXAMPLESDIR}/aica.cnf ${PKG_SYSCONFDIR}/aica.cnf
+OWN_DIRS+=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/store
 
-CONF_FILES+=	${EXAMPLESDIR}/aica.cnf ${CONFDIR}/aica.cnf
-OWN_DIRS+=	${CONFDIR}/store ${MAKE_DIRS}
+DOCDIR=			${PREFIX}/share/doc/AiCA
+EXAMPLESDIR=		${PREFIX}/share/examples/AiCA
+COMMANDS=		aica/aica bin/aistore bin/asn1view bin/certconv \
+			bin/certreq bin/certvfy bin/certview
+LIBRARIES=		libaica.a libaicrypto.a libaissl.a
+DOCS=			COPYRIGHT README README.j
+EXAMPLES=		lib/aica.cnf sample.csv
 
-COMMANDS=	aica/aica bin/aistore bin/asn1view bin/certconv \
-		bin/certreq bin/certvfy bin/certview
-LIBRARIES=	libaica.a libaicrypto.a libaissl.a
-DOCS=		COPYRIGHT README README.j
-EXAMPLES=	lib/aica.cnf sample.csv
+pre-configure:
+	cd ${WRKSRC}; \
+		${CP} README README.in; ${CP} README.j README.j.in
 
 do-install:
 .for f in ${LIBRARIES}
