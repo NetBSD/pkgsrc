@@ -1,13 +1,30 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/02/26 22:58:21 kim Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/25 05:01:21 kim Exp $
 
---- Makefile.orig	Mon Sep 23 19:45:25 1996
-+++ Makefile	Fri Feb 26 17:53:50 1999
-@@ -9,7 +9,7 @@
- MV	= mv -f
- INSTALL	= install
+--- Makefile.orig	1999-09-14 23:15:12.000000000 -0400
++++ Makefile	2004-11-24 23:50:46.000000000 -0500
+@@ -5,11 +5,7 @@
+ #
+ SHELL	= /bin/sh
  
+-RM	= rm -f
+-MV	= mv -f
+-INSTALL	= install
+-
 -DEST	= /usr/local
 +DEST	= $(PREFIX)
  BINDIR	= $(DEST)/bin
  MANDIR	= $(DEST)/man/man$(MANEXT)
  MANEXT	= 1
+@@ -74,12 +70,9 @@
+ inst-all: install install.man
+ 
+ install:
+-	-$(MV) $(BINDIR)/netname $(BINDIR)/netname.old
+-	-$(RM) $(BINDIR)/netname.old
+ 	$(INSTALL) -c -s -m 0555 netname $(BINDIR)
+ 
+ install.man:
+-	-$(RM) $(MANDIR)/netname.$(MANEXT)
+ 	$(INSTALL) -c -m 0444 netname.man $(MANDIR)/netname.$(MANEXT)
+ 
+ clean:
