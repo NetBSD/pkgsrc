@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/12/09 06:54:29 xtraeme Exp $
-bin/linc-cleanup-sockets
+@comment $NetBSD: PLIST,v 1.7 2003/12/09 07:01:29 xtraeme Exp $
 bin/linc-config
 include/linc-1.0/linc/linc-config.h
 include/linc-1.0/linc/linc-connection.h
