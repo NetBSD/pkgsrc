@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.8 1999/02/17 05:34:33 erh Exp $
+$NetBSD: md5,v 1.9 1999/02/18 23:09:46 frueauf Exp $
 
 MD5 (lsof/lsof_4.40_W.tar.gz) = 01cc0f15f47481fa7e247486a730f5ff
+MD5 (lsof/arg.c.patch) = 83fc82fe3c9917418934b964854b4590
