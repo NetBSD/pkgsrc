@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.30 2005/01/12 15:32:01 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.31 2005/01/12 16:41:14 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	defined
@@ -25,9 +25,6 @@ _MIPSPRO_CC=		${_MIPSPRO_DIR}/bin/cc
 _ALIASES.CC=		cc
 CCPATH=			${MIPSPROBASE}/bin/cc
 PKG_CC:=		${_MIPSPRO_CC}
-.  if !empty(CC:M*gcc)
-CC:=			${PKG_CC:T}	# ${CC} should be named "cc".
-.  endif
 .endif
 .if exists(${MIPSPROBASE}/bin/CC)
 _MIPSPRO_VARS+=		CXX
@@ -35,9 +32,6 @@ _MIPSPRO_CXX=		${_MIPSPRO_DIR}/bin/CC
 _ALIASES.CXX=		CC c++
 CXXPATH=		${MIPSPROBASE}/bin/CC
 PKG_CXX:=		${_MIPSPRO_CXX}
-.  if !empty(CXX:M*g++)
-CXX:=			${PKG_CXX:T}	 # ${CXX} should be named "CC"
-.  endif
 .endif
 _COMPILER_STRIP_VARS+=	${_MIPSPRO_VARS}
 

@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.26 2005/01/12 15:32:01 jlam Exp $
+# $NetBSD: sunpro.mk,v 1.27 2005/01/12 16:41:14 jlam Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	defined
@@ -25,9 +25,6 @@ _SUNPRO_CC=	${_SUNPRO_DIR}/bin/cc
 _ALIASES.CC=	cc
 CCPATH=		${SUNWSPROBASE}/bin/cc
 PKG_CC:=	${_SUNPRO_CC}
-.  if !empty(CC:M*gcc)
-CC:=		${PKG_CC:T}	# ${CC} should be named "cc".
-.  endif
 .endif
 .if exists(${SUNWSPROBASE}/bin/CC)
 _SUNPRO_VARS+=	CXX
@@ -35,9 +32,6 @@ _SUNPRO_CXX=	${_SUNPRO_DIR}/bin/CC
 _ALIASES.CXX=	CC c++
 CXXPATH=	${SUNWSPROBASE}/bin/CC
 PKG_CXX:=	${_SUNPRO_CXX}
-.  if !empty(CXX:M*g++)
-CXX:=		${PKG_CXX:T}	# ${CXX} should be named "CC".
-.  endif
 .endif
 _COMPILER_STRIP_VARS+=	${_SUNPRO_VARS}
 
