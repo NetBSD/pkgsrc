@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/18 12:49:31 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2002/11/23 22:34:22 cjep Exp $
 
-DISTNAME=	exec-0.104
-PKGNAME=	aap-0.104
+DISTNAME=	exec-0.107
+PKGNAME=	aap-0.107
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=a-a-p/}
 EXTRACT_SUFX=	.zip
