@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/01/29 18:36:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/10 01:25:23 seb Exp $
 #
 
 DISTNAME=	grub-0.94
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_BUILDLINK3=		YES
 
-INFO_FILES=		grub.info
+INFO_FILES=		grub.info multiboot.info
 
 BUILDLINK_TRANSFORM+=	S:-fno-builtin:-ffreestanding:
 
