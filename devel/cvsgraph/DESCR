@@ -1,0 +1,3 @@
+CvsGraph is a utility to make a graphical representation of all
+revisions and branches of a file in a CVS/RCS repository. It has
+been inspired by the 'graph' option in WinCVS.
