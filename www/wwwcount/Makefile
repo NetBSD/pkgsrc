@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 1999/05/14 22:05:23 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/06/25 02:03:03 wiz Exp $
 # FreeBSD: Makefile,v 1.12 1998/09/28 18:02:05 smace Exp
 
 DISTNAME=       wwwcount2.5
 PKGNAME=        wwwcount-2.5
 CATEGORIES=     www
-MASTER_SITES=   http://www.fccc.edu/users/muquit/src/wwwcount2.5/
+MASTER_SITES=   http://www.muquit.com/muquit/software/Count/src/wwwcount2.5/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.fccc.edu/users/muquit/Count.html
+HOMEPAGE=	http://www.muquit.com/muquit/software/Count/Count.html
 
 GNU_CONFIGURE=  yes
 
