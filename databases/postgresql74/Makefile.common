@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2004/10/25 17:12:10 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/12/19 05:10:49 grant Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -86,6 +86,11 @@ CONFIGURE_ARGS+=	--without-tk
 
 # Postgresql explicitly forbids any use of -ffast-math
 CFLAGS:=		${CFLAGS:S/-ffast-math//}
+
+# newer Darwin has poll() but not poll.h, so explicitly ignore poll().
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ENV+=		ac_cv_func_poll=no
+.endif
 
 post-extract:
 	if [ -d ${WRKSRC}/src ]; then					\
