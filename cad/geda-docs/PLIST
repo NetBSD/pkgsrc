@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/03/09 06:18:25 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/07/15 09:23:32 dmcmahill Exp $
 share/doc/geda-doc/attributes/attributes.css
 share/doc/geda-doc/attributes/attributes.dvi
 share/doc/geda-doc/attributes/attributes.html
@@ -96,6 +96,61 @@ share/doc/geda-doc/gschem/gschem.txt
 share/doc/geda-doc/hooks/hooks_and_scheme.txt
 share/doc/geda-doc/keymapping/keymapping.html
 share/doc/geda-doc/netattrib/netattrib.txt
+share/doc/geda-doc/spice-sdb/spice-sdb-howto.html
+share/doc/geda-doc/switcap/contents.png
+share/doc/geda-doc/switcap/images.aux
+share/doc/geda-doc/switcap/images.log
+share/doc/geda-doc/switcap/images.pl
+share/doc/geda-doc/switcap/images.tex
+share/doc/geda-doc/switcap/img1.png
+share/doc/geda-doc/switcap/img2.png
+share/doc/geda-doc/switcap/img3.png
+share/doc/geda-doc/switcap/img4.png
+share/doc/geda-doc/switcap/img5.png
+share/doc/geda-doc/switcap/img6.png
+share/doc/geda-doc/switcap/img7.png
+share/doc/geda-doc/switcap/index.html
+share/doc/geda-doc/switcap/internals.pl
+share/doc/geda-doc/switcap/labels.pl
+share/doc/geda-doc/switcap/next.png
+share/doc/geda-doc/switcap/next_g.png
+share/doc/geda-doc/switcap/node1.html
+share/doc/geda-doc/switcap/node10.html
+share/doc/geda-doc/switcap/node11.html
+share/doc/geda-doc/switcap/node12.html
+share/doc/geda-doc/switcap/node13.html
+share/doc/geda-doc/switcap/node14.html
+share/doc/geda-doc/switcap/node15.html
+share/doc/geda-doc/switcap/node16.html
+share/doc/geda-doc/switcap/node17.html
+share/doc/geda-doc/switcap/node18.html
+share/doc/geda-doc/switcap/node19.html
+share/doc/geda-doc/switcap/node2.html
+share/doc/geda-doc/switcap/node20.html
+share/doc/geda-doc/switcap/node21.html
+share/doc/geda-doc/switcap/node22.html
+share/doc/geda-doc/switcap/node23.html
+share/doc/geda-doc/switcap/node24.html
+share/doc/geda-doc/switcap/node25.html
+share/doc/geda-doc/switcap/node26.html
+share/doc/geda-doc/switcap/node27.html
+share/doc/geda-doc/switcap/node28.html
+share/doc/geda-doc/switcap/node3.html
+share/doc/geda-doc/switcap/node4.html
+share/doc/geda-doc/switcap/node5.html
+share/doc/geda-doc/switcap/node6.html
+share/doc/geda-doc/switcap/node7.html
+share/doc/geda-doc/switcap/node8.html
+share/doc/geda-doc/switcap/node9.html
+share/doc/geda-doc/switcap/prev.png
+share/doc/geda-doc/switcap/prev_g.png
+share/doc/geda-doc/switcap/switcap.css
+share/doc/geda-doc/switcap/switcap.dvi
+share/doc/geda-doc/switcap/switcap.html
+share/doc/geda-doc/switcap/switcap.pdf
+share/doc/geda-doc/switcap/switcap.ps
+share/doc/geda-doc/switcap/up.png
+share/doc/geda-doc/switcap/up_g.png
 share/doc/geda-doc/symbols/contents.png
 share/doc/geda-doc/symbols/images.aux
 share/doc/geda-doc/symbols/images.log
@@ -139,6 +194,8 @@ share/doc/geda-doc/symbols/symbols.ps
 share/doc/geda-doc/symbols/up.png
 share/doc/geda-doc/symbols/up_g.png
 @dirrm share/doc/geda-doc/symbols
+@dirrm share/doc/geda-doc/switcap
+@dirrm share/doc/geda-doc/spice-sdb
 @dirrm share/doc/geda-doc/netattrib
 @dirrm share/doc/geda-doc/keymapping
 @dirrm share/doc/geda-doc/hooks
