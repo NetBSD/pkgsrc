@@ -3,7 +3,7 @@
 # Date created:		18 March 1998
 # Whom:			tsarna@endicor.com
 #
-# $NetBSD: Makefile,v 1.1 1998/04/10 22:30:41 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/04/12 21:54:37 tron Exp $
 
 DISTNAME=	NumPy-11
 PKGNAME=	py-Numeric-1.1

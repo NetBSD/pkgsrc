@@ -1,4 +1,0 @@
-#!/bin/sh
-# $NetBSD: configure,v 1.1 1998/04/10 22:30:42 tron Exp $
-
-(cd $WRKSRC; $PREFIX/bin/python ../Tools/compile.py)
