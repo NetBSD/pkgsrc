@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/01/17 04:43:06 uebayasi Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/24 12:36:26 wiz Exp $
 
 DISTNAME=		guile-1.4.1
 PKGNAME=		guile14-1.4.1
@@ -24,14 +24,8 @@ USE_GNU_READLINE=	YES
 
 INFO_FILES=		guile.info
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-USE_NCURSES=	# termlib not in libtermcap on Solaris, use the ncurses one
-.  include "../../devel/ncurses/buildlink2.mk"
-.endif
-
 .include "../../devel/libtool/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
