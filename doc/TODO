@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1683 2004/04/29 15:17:02 minskim Exp $
+$NetBSD: TODO,v 1.1684 2004/04/29 16:08:01 taca Exp $
 
 Suggested new packages
 ======================
@@ -322,6 +322,7 @@ Suggested package updates
 	o rt-3.0.10 [pkgsrc-wip]
 	o ruby-1.8.1 [taca]
 	o sablecc-2.18.1
+	o samba-3.0.3
 	o sane-backends-1.0.13
 	o sane-frontends-1.0.12
 	o sawfish-1.3
