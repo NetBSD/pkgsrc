@@ -1,0 +1,82 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/30 21:23:43 jtb Exp $
+bin/ksi
+bin/ksi-compile
+bin/ksi-config
+include/ksi/gc.h
+include/ksi/gc_cpp.h
+include/ksi/gc_typed.h
+include/ksi/ksi.h
+include/ksi/ksi_conf.h
+include/ksi/ksi_ext.h
+include/ksi/ksi_jump.h
+include/ksi/ksi_path.h
+include/ksi/ksi_prim.h
+include/ksi/ksi_regexp.h
+include/ksi/ksi_type.h
+include/ksi/ksi_ver.h
+include/ksi/ksi_vtab.h
+include/ksi/ksi_z.h
+info/ksi-lang.info
+info/ksi-lang.info-1
+info/ksi-lang.info-2
+info/ksi-lang.info-3
+info/ksi-lang.info-4
+info/ksi-lang.info-5
+info/ksi-lang.info-6
+info/ksi-lang.info-7
+info/ksi-lib.info
+info/ksi-lib.info-1
+info/ksi-lib.info-2
+info/ksi-lib.info-3
+info/ksi.info
+lib/ksi/libgc.a
+lib/ksi/libgc.la
+lib/ksi/libgc.so
+lib/ksi/libgc.so.1
+lib/ksi/libgc.so.1.1
+lib/ksi/libksi.a
+lib/ksi/libksi.la
+lib/ksi/libksi.so
+lib/ksi/libksi.so.8
+lib/ksi/libksi.so.8.0
+lib/ksi/libregexp.a
+lib/ksi/libregexp.la
+lib/ksi/libregexp.so
+lib/ksi/libregexp.so.2
+lib/ksi/libregexp.so.2.0
+lib/ksi/libzip.a
+lib/ksi/libzip.la
+lib/ksi/libzip.so
+lib/ksi/libzip.so.1
+lib/ksi/libzip.so.1.0
+share/ksi/3.4/Boot.ko
+share/ksi/3.4/Init.ko
+share/ksi/3.4/comparse.ko
+share/ksi/3.4/compiler.ko
+share/ksi/3.4/cpage.ko
+share/ksi/3.4/getopt.ko
+share/ksi/3.4/html.ko
+share/ksi/3.4/klos.ko
+share/ksi/3.4/ksi-init.ko
+share/ksi/3.4/list.ko
+share/ksi/3.4/match.ko
+share/ksi/3.4/modules.ko
+share/ksi/3.4/pp.ko
+share/ksi/3.4/psyntax.ko
+share/ksi/3.4/record.ko
+share/ksi/3.4/regexp.so
+share/ksi/3.4/regexp1.ko
+share/ksi/3.4/srfi.ko
+share/ksi/3.4/struct.ko
+share/ksi/3.4/symprop.ko
+share/ksi/3.4/syncase.ko
+share/ksi/3.4/zip.so
+share/ksi/app/ksi/Main.ko
+share/ksi/site/SiteInit.scm
+@dirrm share/ksi/site
+@dirrm share/ksi/app/ksi
+@dirrm share/ksi/app
+@dirrm share/ksi/3.4
+@dirrm share/ksi
+@dirrm lib/ksi
+@dirrm include/ksi
