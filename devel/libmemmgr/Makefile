@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/12/13 16:20:09 ben Exp $
+# $NetBSD: Makefile,v 1.9 2003/12/13 20:14:26 ben Exp $
 #
 
 DISTNAME=		MemMgr-1.04
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}/memmgr-1.04
 CATEGORIES=		devel
 MASTER_SITES=		http://www.snake.net/software/MemMgr/
 
-MAINTAINER=		collver1@comcast.net
+MAINTAINER=		ben@netbsd.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Simple memory manager library
 

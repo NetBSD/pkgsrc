@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 16:30:45 martti Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/13 20:14:26 ben Exp $
 #
 
 DISTNAME=	shorten-3.5.1
 CATEGORIES=	audio archivers
 MASTER_SITES=	http://www.etree.org/shnutils/shorten/source/
 
-MAINTAINER=	collver1@comcast.net
+MAINTAINER=	ben@netbsd.org
 HOMEPAGE=	http://www.etree.org/shnutils/shorten/
 COMMENT=	Lossless audio compressor
 
