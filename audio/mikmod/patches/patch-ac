@@ -1,0 +1,11 @@
+--- display.c.orig	Sun Apr 20 17:13:42 1997
++++ display.c	Sun Apr 20 17:13:59 1997
+@@ -26,7 +26,7 @@
+ #include "mikmod.h"
+ 
+ #ifdef NCURSES
+-#include <ncurses/ncurses.h>
++#include <ncurses.h>
+ #else
+ #include <curses.h>
+ #endif
