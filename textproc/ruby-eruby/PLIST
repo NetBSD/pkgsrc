@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:38 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/05 06:16:36 taca Exp $
 bin/eruby
 include/eruby.h
 lib/liberuby.so.0.9
@@ -9,10 +9,9 @@ ${RUBY_SITEARCHLIBDIR}/eruby.so
 man/man1/eruby.1
 ${RUBY_DOCDIR}/eruby/ChangeLog
 ${RUBY_DOCDIR}/eruby/README.en
+${RUBY_DOCDIR}/eruby/README.ja
 ${RUBY_DOCDIR}/eruby/eruby.rd
 ${RUBY_DOCDIR}/eruby/eruby.html
-${RUBY_DOCDIR}/eruby/ja/README.ja
-@dirrm ${RUBY_DOCDIR}/eruby/ja
 @dirrm ${RUBY_DOCDIR}/eruby
 ${RUBY_EXAMPLESDIR}/eruby/e2r.rb
 ${RUBY_EXAMPLESDIR}/eruby/foo.rhtml
