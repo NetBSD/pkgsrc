@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.5 2004/08/05 13:46:03 markd Exp $
+
+--- kmail/kmfolderindex.cpp.orig	2004-08-05 23:30:20.812803361 +1200
++++ kmail/kmfolderindex.cpp
+@@ -29,6 +29,7 @@
+ #include <errno.h>
+ #include <assert.h>
+ #include <utime.h>
++#include <fcntl.h>
+ 
+ #ifdef HAVE_BYTESWAP_H
+ #include <byteswap.h>
