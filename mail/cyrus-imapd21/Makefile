@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/03/31 10:23:04 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2004/03/31 10:38:16 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.1.15
 PKGREVISION=		3
@@ -44,8 +44,6 @@ CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER}
 CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP}
 CONFIGURE_ARGS+=	--with-cyrus-prefix=${PREFIX}/cyrus
 CONFIGURE_ARGS+=	--with-statedir=/var/run
-CONFIGURE_ARGS+=	--with-bdb-libdir=${BUILDLINK_PREFIX.db3}/lib
-CONFIGURE_ARGS+=	--with-bdb-incdir=${BUILDLINK_PREFIX.db3}/include/db3
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
@@ -69,6 +67,16 @@ CONFIGURE_ARGS+=	--with-seen-db=skiplist
 CONFIGURE_ARGS+=	--with-subs-db=flat
 CONFIGURE_ARGS+=	--with-tls-db=db3_nosync
 .endif
+
+# Ensure that we use the db3 library, even if the db4 one gets pulled in
+# as an indirect dependency.
+#
+.include "../../databases/db3/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-bdb-libdir=${BUILDLINK_PREFIX.db3}/lib
+CONFIGURE_ARGS+=	--with-bdb-incdir=${BUILDLINK_PREFIX.db3}/include/db3
+.for _var_ in db_4_1 db4_1 db41 db_4_0 db4_0 db_4 db40 db4
+CONFIGURE_ENV+=		ac_cv_lib_${_var_}_db_create=no
+.endfor
 
 .if defined(KERBEROS)
 .  if (${KERBEROS} == 4) && exists(/usr/include/kerberosIV/krb.h)
@@ -114,7 +122,6 @@ PERL5_PACKLIST= \
 	${PERL5_SITEARCH}/auto/Cyrus/IMAP/.packlist			\
 	${PERL5_SITEARCH}/auto/Cyrus/SIEVE/managesieve/.packlist
 
-.include "../../databases/db3/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../security/cyrus-sasl2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
