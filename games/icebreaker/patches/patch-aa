@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2002/03/13 23:25:47 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2002/08/30 22:56:00 wiz Exp $
 
---- Makefile.orig	Mon Jul 30 03:32:36 2001
+--- Makefile.orig	Fri Jun  7 05:39:18 2002
 +++ Makefile
-@@ -1,9 +1,9 @@
+@@ -1,6 +1,6 @@
 -CC=gcc
 +CC?=gcc
  
@@ -10,54 +10,4 @@ $NetBSD: patch-aa,v 1.2 2002/03/13 23:25:47 wiz Exp $
 +SDLCONFIG?=sdl-config
  
  ifndef prefix
--  prefix=/usr/local
-+  prefix=${PREFIX}
-   #prefix=/usr
- endif
- 
-@@ -12,11 +12,11 @@
- endif
- 
- ifndef mandir
--  mandir=$(prefix)/share/man
-+  mandir=$(prefix)/man
- endif
- 
- ifndef highscoredir
--  highscoredir=/var/local/lib/games
-+  highscoredir=/var/games
-   #highscoredir=/var/lib/games
- endif
- 
-@@ -30,7 +30,7 @@
-     level.c intro.c text.c status.c transition.c hiscore.c dialog.c \
-     options.c fullscreen.c
- 
--SDL_MIXER=-lSDL_mixer
-+SDL_MIXER=-lSDL_mixer -lsmpeg
- SDL_LIB=$(SDL_LDFLAGS) $(SDL_MIXER) 
- SDL_CFLAGS := $(shell $(SDLCONFIG) --cflags)
- SDL_LDFLAGS := $(shell $(SDLCONFIG) --libs)
-@@ -103,14 +103,14 @@
- 	   sed 's/\$$VERDATE/$(VERDATE)/' > $@
- 
- install: all
--	mkdir -p $(prefix)/bin
--	mkdir -p $(prefix)/share/icebreaker
--	mkdir -p $(highscoredir)
--	mkdir -p $(mandir)/man6
--
--	install -m 644 *.wav *.bmp $(prefix)/share/icebreaker
--	install -g games -s -m 2755 icebreaker $(prefix)/bin
--	install -m 644 icebreaker.6 $(mandir)/man6
-+	${BSD_INSTALL_DATA_DIR} $(prefix)/bin
-+	${BSD_INSTALL_DATA_DIR} $(prefix)/share/icebreaker
-+	${BSD_INSTALL_DATA_DIR} $(highscoredir)
-+	${BSD_INSTALL_DATA_DIR} $(mandir)/man6
-+
-+	${BSD_INSTALL_DATA} -m 644 *.wav *.bmp $(prefix)/share/icebreaker
-+	${BSD_INSTALL_DATA} -g games -s -m 2755 icebreaker $(prefix)/bin
-+	${BSD_INSTALL_MAN} -m 644 icebreaker.6 $(mandir)/man6
- 	touch $(highscoredir)/icebreaker.scores
- 	chown games:games $(highscoredir)/icebreaker.scores
- 	chmod 664 $(highscoredir)/icebreaker.scores
+   prefix=/usr/local
