@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/12 18:13:53 rh Exp $
+bin/balsa
+etc/CORBA/servers/balsa.gnorba
+etc/sound/events/balsa.soundlist
+etc/sound/events/email.soundlist
+lib/libbalsasrv.a
+share/locale/de/LC_MESSAGES/balsa.mo
+share/locale/es/LC_MESSAGES/balsa.mo
+share/locale/fi/LC_MESSAGES/balsa.mo
+share/locale/fr/LC_MESSAGES/balsa.mo
+share/locale/ga/LC_MESSAGES/balsa.mo
+share/locale/it/LC_MESSAGES/balsa.mo
+share/locale/ko/LC_MESSAGES/balsa.mo
+share/locale/nl/LC_MESSAGES/balsa.mo
+share/locale/no/LC_MESSAGES/balsa.mo
+share/locale/ru/LC_MESSAGES/balsa.mo
+share/pixmaps/balsa/attachment.png
+share/pixmaps/balsa/balsa_icon.png
+share/pixmaps/balsa/balsa_logo.png
+share/sounds/balsa/newmail.wav
+share/sounds/balsa/startup.wav
+@dirrm share/sounds/balsa
+@dirrm share/pixmaps/balsa
