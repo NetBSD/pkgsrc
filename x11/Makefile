@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.325 2004/01/09 23:10:43 cube Exp $
+# $NetBSD: Makefile,v 1.326 2004/01/10 22:43:07 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -75,7 +75,6 @@ SUBDIR+=	hanterm
 SUBDIR+=	hot-babe
 SUBDIR+=	imwheel
 SUBDIR+=	ion-dock
-SUBDIR+=	kde
 SUBDIR+=	kde2
 SUBDIR+=	kde3-i18n-af
 SUBDIR+=	kde3-i18n-ar
@@ -128,16 +127,13 @@ SUBDIR+=	kde3-i18n-xh
 SUBDIR+=	kde3-i18n-zh_CN
 SUBDIR+=	kde3-i18n-zh_TW
 SUBDIR+=	kde3-i18n-zu
-SUBDIR+=	kdebase
 SUBDIR+=	kdebase2
 SUBDIR+=	kdebase3
 SUBDIR+=	kdelibdocs2
 SUBDIR+=	kdelibdocs3
-SUBDIR+=	kdelibs
 SUBDIR+=	kdelibs2
 SUBDIR+=	kdelibs3
 SUBDIR+=	keylaunch
-SUBDIR+=	khostchooser
 SUBDIR+=	kmessage
 SUBDIR+=	kterm
 SUBDIR+=	lablgtk
