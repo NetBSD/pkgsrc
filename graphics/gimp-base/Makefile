@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2003/06/05 15:24:32 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2003/06/18 10:26:55 drochner Exp $
 #
 
-DISTNAME=		gimp-1.2.4
-PKGNAME=		gimp-base-1.2.4
+DISTNAME=		gimp-1.2.5
+PKGNAME=		gimp-base-1.2.5
 CATEGORIES=		graphics
-MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.4/ \
-			ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.4/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.2/v1.2.4/
+MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.5/ \
+			ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.5/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.2/v1.2.5/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		hubertf@netbsd.org
