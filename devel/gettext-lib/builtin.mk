@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.16 2004/11/28 19:19:52 jlam Exp $
+# $NetBSD: builtin.mk,v 1.17 2004/12/11 00:32:16 jlam Exp $
 
 .for _lib_ in intl
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -222,6 +222,7 @@ SUBST_SED.fix-msgfmt+=		-e 's|@MSGFMT@|${BUILDLINK_PREFIX.gettext}/bin/msgfmt|g'
 BUILDLINK_TARGETS+=	buildlink-msgfmt
 
 buildlink-msgfmt:
+	@${MKDIR} -p ${BUILDLINK_DIR}/bin
 	@${CP} ../../devel/gettext/files/msgfmt.pl ${BUILDLINK_DIR}/bin/msgfmt
 	@${CHMOD} +x ${BUILDLINK_DIR}/bin/msgfmt
 .endif

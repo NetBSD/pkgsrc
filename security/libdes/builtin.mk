@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2004/12/05 05:35:28 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2004/12/11 00:32:16 jlam Exp $
 
 .if !defined(IS_BUILTIN.libdes)
 IS_BUILTIN.libdes=		no
@@ -20,6 +20,7 @@ buildlink-libdes-libdes-h:
 	dest="${BUILDLINK_DIR}/include/libdes.h";			\
 	src="/usr/include/des.h";					\
 	if ${TEST} ! -f "$$dest" -a -f "$$src"; then			\
+		${MKDIR} -p `${DIRNAME} $$dest`;			\
 		${LN} -fs $$src $$dest;					\
 	fi
 .    endif

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2004/11/28 05:44:34 jlam Exp $
+# $NetBSD: builtin.mk,v 1.7 2004/12/11 00:32:16 jlam Exp $
 
 .for _lib_ in ncurses
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -123,6 +123,7 @@ buildlink-ncurses-extra-includes:
 	for f in $${extra_includes}; do					\
 		if [ ! -f ${BUILDLINK_PREFIX.ncurses}/$$f ]; then	\
 			${ECHO_BUILDLINK_MSG} "Touching extra ncurses header ($$f) in ${BUILDLINK_DIR}."; \
+			${MKDIR} -p `${DIRNAME} ${BUILDLINK_DIR}/$$f`;	\
 			${TOUCH} ${TOUCH_FLAGS} ${BUILDLINK_DIR}/$$f;	\
 		fi;							\
 	done
@@ -135,6 +136,7 @@ buildlink-ncurses-curses-h:
 	if [ ! -f ${BUILDLINK_DIR}/include/curses.h -a			\
 	     -f ${BUILDLINK_PREFIX.ncurses}/include/ncurses.h ]; then	\
 		${ECHO_BUILDLINK_MSG} "Linking curses.h -> ncurses.h.";	\
+		${MKDIR} -p ${BUILDLINK_DIR}/include;			\
 		${LN} -s ${BUILDLINK_PREFIX.ncurses}/include/ncurses.h	\
 			${BUILDLINK_DIR}/include/curses.h;		\
 	fi
