@@ -1,0 +1,103 @@
+$NetBSD: patch-ac,v 1.1 1999/08/27 10:11:02 agc Exp $
+
+Update for PNG graphics.
+
+--- doc/using.html	1999/08/27 09:45:48	1.1
++++ doc/using.html	1999/08/27 09:47:09
+@@ -18,7 +18,7 @@
+    <td><h1>fly: Documentation: Using fly</h1>
+   </td>
+    <td><a href="http://www.unimelb.edu.au/fly/"><img
+-       src="fly-logo.gif" border="0" hspace="5" vspace="5"
++       src="fly-logo.png" border="0" hspace="5" vspace="5"
+        alt=" [fly] " width="157" height="52"></a>
+   </td>
+  </tr>
+@@ -57,7 +57,7 @@
+ <P>  The command file uses a number of directives. It must start with one
+      of the following lines:
+ </P>
+-<DL><DT><KBD>existing /path/to/file.gif</KBD></DT>
++<DL><DT><KBD>existing /path/to/file.png</KBD></DT>
+          <DD>if modifying an existing image, OR</DD>
+     <DT><KBD>new<BR>size x,y</KBD></DT>
+          <DD>for creating a new image of width <B>x</B> pixels, height
+@@ -68,9 +68,9 @@
+ <P>  To create more than one image from a command file, use the directive
+      <B><KBD>end</KBD></B>, followed by either
+ </P>
+-<DL><DT><KBD>existing /path/to/file.gif<BR>name &lt;filename.gif&gt;</KBD></DT>
++<DL><DT><KBD>existing /path/to/file.png<BR>name &lt;filename.png&gt;</KBD></DT>
+          <DD>if modifying an existing image, OR</DD>
+-    <DT><KBD>new<BR>size x,y<BR>name &lt;filename.gif&gt;</KBD></DT>
++    <DT><KBD>new<BR>size x,y<BR>name &lt;filename.png&gt;</KBD></DT>
+          <DD>for creating a new image.</DD>
+ </DL>
+ <P>  <B>Note:</B>
+@@ -203,20 +203,20 @@
+              coordinates supplied.
+            </P>
+        </DD>
+-    <DT><STRONG><KBD>copy x,y,x1,y1,x2,y2,[source-filename.gif|`command`]</KBD>
++    <DT><STRONG><KBD>copy x,y,x1,y1,x2,y2,[source-filename.png|`command`]</KBD>
+        </STRONG>
+    </DT>
+-        <DD><P> Copies region <B>x1,y1 - x2,y2</B> of <B>source-filename.gif</B>
++        <DD><P> Copies region <B>x1,y1 - x2,y2</B> of <B>source-filename.png</B>
+                 or the GIF output of <B>command</B> to the coordinates <B>x,y</B>
+                 of the image being created/modified. <BR>
+                 If <B>x1,y1,x2,y2</B> are all <B>-1</B>, copy the entire image.
+            </P>
+        </DD>
+     <DT><STRONG><KBD>
+-        copyresized x1,y1,x2,y2,dx1,dy1,dx2,dy2,[source-filename.gif|`command`]
++        copyresized x1,y1,x2,y2,dx1,dy1,dx2,dy2,[source-filename.png|`command`]
+        </KBD></STRONG>
+    </DT>
+-        <DD><P>Copies region <B>x1,y1 - x2,y2</B> of <B>source-filename.gif</B>
++        <DD><P>Copies region <B>x1,y1 - x2,y2</B> of <B>source-filename.png</B>
+                or the GIF output of <B>command</B> to the area <B>dx1,dy1 -
+                dx2,dy2</B> of the image being created/modified, resizing the
+                image to fit.<BR> If <B>x1,y1,x2,y2</B> are all <B>-1</B>, copy
+@@ -238,9 +238,9 @@
+         <DD><P> Changes all pixels of colour <B>R1,G1,B1</B> to <B>R2,G2,B2.</B>
+            </P>
+        </DD>
+-    <DT><STRONG><KBD>setbrush filename.gif</KBD></STRONG>
++    <DT><STRONG><KBD>setbrush filename.png</KBD></STRONG>
+    </DT>
+-        <DD><P> Sets the current &quot;brush&quot; to <B>filename.gif.</B>
++        <DD><P> Sets the current &quot;brush&quot; to <B>filename.png.</B>
+              Subsequent directives of <KBD>line</KBD>, <KBD>dline</KBD>,
+              <KBD>rect</KBD>, <KBD>poly</KBD> and <KBD>arc</KBD> will use the
+              selected &quot;brush&quot; to draw their lines, until a call of
+@@ -255,9 +255,9 @@
+              width brush.
+            </P>
+        </DD>
+-    <DT><STRONG><KBD>settile filename.gif</KBD></STRONG>
++    <DT><STRONG><KBD>settile filename.png</KBD></STRONG>
+    </DT>
+-        <DD><P> Sets the current &quot;tile&quot; to <B>filename.gif.</B>
++        <DD><P> Sets the current &quot;tile&quot; to <B>filename.png.</B>
+              Subsequent directives of <KBD>fill</KBD>, and
+              <KBD>fpoly</KBD> will use the selected &quot;tile&quot;
+              as a fill pattern, until a call of <KBD>killtile.</KBD>
+@@ -339,13 +339,13 @@
+  <!-- ===================================================================== -->
+  <hr size="2" noshade>
+ 
+- <p align="center"><a href="index.html"><img src="nav-home.gif" border="0"
++ <p align="center"><a href="index.html"><img src="nav-home.png" border="0"
+     alt="[Home]" width="52" height="24"></a> <a
+-    href="documentation.html"><img src="nav-docs.gif" border="0"
++    href="documentation.html"><img src="nav-docs.png" border="0"
+     alt="[Documentation]" width="120" height="24"></a> <a
+-    href="copyright.html"><img src="nav-copyright.gif" border="0"
++    href="copyright.html"><img src="nav-copyright.png" border="0"
+     alt="[Copyright]" width="86" height="24"></a> <a href="feedback.html"><img
+-    src="nav-feedback.gif" border="0" alt="[Feedback]" width="80"
++    src="nav-feedback.png" border="0" alt="[Feedback]" width="80"
+     height="24"></a>
+ </p>
+ 

@@ -1,0 +1,51 @@
+$NetBSD: patch-aj,v 1.1 1999/08/27 10:11:03 agc Exp $
+
+Update for PNG support
+
+--- doc/installation.html	1999/08/27 09:51:38	1.1
++++ doc/installation.html	1999/08/27 09:55:47
+@@ -1,7 +1,7 @@
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ <html>
+  <head>
+-  <title>GIFs on the fly
++  <title>PNGs on the fly
+  </title>
+   <link rev="made" href="mailto:gleeson@unimelb.edu.au">
+   <meta name="description"
+@@ -18,7 +18,7 @@
+    <td><h1>fly: Installation</h1>
+   </td>
+    <td><a href="http://www.unimelb.edu.au/fly/"><img
+-       src="fly-logo.gif" border="0" hspace="5" vspace="5"
++       src="fly-logo.png" border="0" hspace="5" vspace="5"
+        alt=" [fly] " width="157" height="52"></a>
+   </td>
+  </tr>
+@@ -259,13 +259,13 @@
+  <!-- ===================================================================== -->
+  <hr size="2" noshade>
+ 
+- <p align="center"><a href="index.html"><img src="nav-home.gif" border="0"
++ <p align="center"><a href="index.html"><img src="nav-home.png" border="0"
+     alt="[Home]" width="52" height="24"></a> <a
+-    href="documentation.html"><img src="nav-docs.gif" border="0"
++    href="documentation.html"><img src="nav-docs.png" border="0"
+     alt="[Documentation]" width="120" height="24"></a> <a
+-    href="copyright.html"><img src="nav-copyright.gif" border="0"
++    href="copyright.html"><img src="nav-copyright.png" border="0"
+     alt="[Copyright]" width="86" height="24"></a> <a href="feedback.html"><img
+-    src="nav-feedback.gif" border="0" alt="[Feedback]" width="80"
++    src="nav-feedback.png" border="0" alt="[Feedback]" width="80"
+     height="24"></a>
+ </p>
+ 
+@@ -290,7 +290,7 @@
+   </td>
+    <td align="RIGHT">
+     <p> <a href="http://www.unimelb.edu.au/html-check/validation-form.html">
+-        <img src="http://www.unimelb.edu.au/images/valid_html.4.0.gif"
++        <img src="http://www.unimelb.edu.au/images/valid_html.4.0.png"
+              alt="HTML 4.0 Checked!" border="0"></a>
+    </p>
+   </td>

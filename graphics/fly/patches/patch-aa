@@ -1,28 +1,32 @@
-$NetBSD: patch-aa,v 1.4 1999/05/02 23:17:53 tron Exp $
+$NetBSD: patch-aa,v 1.5 1999/08/27 10:11:02 agc Exp $
 
---- Makefile.orig	Wed May 20 05:45:57 1998
-+++ Makefile	Wed Jul  1 18:40:42 1998
-@@ -4,13 +4,14 @@
+Makefile changes for gd 1.6.3 (PNG support)
+
+--- Makefile.orig	Thu Jan 14 22:42:34 1999
++++ Makefile	Fri Aug 27 10:15:35 1999
+@@ -4,13 +4,15 @@
  # If you already have gd installed, use the line below and comment out the
  # following line
  #       GD = /path/to/gd/directory
 -        GD = gd1.3
 -        CC = gcc
-+#       GD = gd1.3
-+#        CC = gcc
- #    CFLAGS = -O -I$(GD)
--   CFLAGS = -O -pedantic -wall -I$(GD)
+-    CFLAGS = -O -I$(GD)
+-   #CFLAGS = -O -pedantic -Wall -I$(GD)
 -      LIBS = -L$(GD) -lgd -lm
-+#   CFLAGS = -O -pedantic -wall -I$(GD)
-+    CFLAGS = -O -I$(PREFIX)/include/gd
-+      LIBS = -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib -lgd -lm
++#        GD = gd1.3
++#        CC = gcc
++#    CFLAGS = -O -I$(GD)
++#   #CFLAGS = -O -pedantic -Wall -I$(GD)
++#      LIBS = -L$(GD) -lgd -lm
++CFLAGS= -O -I${PREFIX}/include
++LIBS=	${LDFLAGS} -lgd -lpng -lz -lm
  
 -all: gd fly
 +all: fly
  
  gd: $(GD)
- 	cd $(GD); make
-@@ -26,4 +27,3 @@
+ 	cd $(GD); make CC=$(CC)
+@@ -27,4 +29,3 @@
  
  clean:
  	rm -f fly.o fly temp.gif core; cd $(GD); make clean;
