@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/05/02 23:32:45 jtb Exp $
+
+SHA1 (oo2c_32-2.0.8.tar.bz2) = b72c6b61fd219c662d19fb8bf42288520775c99b
+Size (oo2c_32-2.0.8.tar.bz2) = 1428294 bytes
+SHA1 (patch-aa) = 3dc42f59a65144725c279e9f9f61a4d9b56f23de
+SHA1 (patch-ab) = 6f9b3eeac123aeba8ad14d53f240df5640f116a1
+SHA1 (patch-ac) = 17481a0eeda6be4ba65143ca011d233cb268d482
