@@ -15,7 +15,7 @@
 #ifdef __cplusplus
 template <class T> typename T::reference at_replacement(T &c, const typename T::size_type &i) {
 # ifdef HAVE_STD_VECTOR_AT
-	return c::at(i);
+	return c.at(i);
 # else
 	return c[i];
 # endif
