@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/07 11:54:30 frueauf Exp $
+bin/spellcast
+man/man6/spellcast.6
+share/doc/spellcast/spelllist.ps
+@dirrm share/doc/spellcast
