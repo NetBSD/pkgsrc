@@ -1,34 +1,15 @@
-$NetBSD: patch-ab,v 1.3 1998/08/07 10:35:50 agc Exp $
+$NetBSD: patch-ab,v 1.4 1999/05/22 20:11:33 tv Exp $
 
-*** src/lharc.c.bak	Fri Mar  8 09:09:06 1996
---- src/lharc.c	Wed Aug 28 21:13:02 1996
-***************
-*** 318,324 ****
-  		cmd_filec = 0;
-  		if ((xfilev = (char **) malloc(sizeof(char *) * xfilec)) == NULL)
-  			fatal_error("Virtual memory exhausted\n");
-! 		while (gets(inpbuf)) {
-  			if (cmd_filec >= xfilec) {
-  				xfilec += 256;
-  				cmd_filev = (char **) realloc(xfilev,
---- 318,326 ----
-  		cmd_filec = 0;
-  		if ((xfilev = (char **) malloc(sizeof(char *) * xfilec)) == NULL)
-  			fatal_error("Virtual memory exhausted\n");
-! 		while (fgets(inpbuf, sizeof(inpbuf), stdin)) {
-! 			if ((p = strchr(inpbuf, '\n')))
-! 				*p = '\0';
-  			if (cmd_filec >= xfilec) {
-  				xfilec += 256;
-  				cmd_filev = (char **) realloc(xfilev,
---- man/Makefile	1997/11/14 16:39:56	1.1
-+++ man/Makefile	1997/11/14 16:42:32
-@@ -8,7 +8,7 @@
- 	nroff -man lha.n > lha.man
- 
- install:
--	$(INSTALL) $(INSTALLMAN) lha.n $(MANDIR)/man$(MANSECT)/lha.$(MANSECT)
-+	${INSTALL} -c -m 0444 -o ${BINOWN} -g ${BINGRP} lha.n ${MANDIR}/man${MANSECT}/lha.${MANSECT}
- 
- clean:
- 	rm -f *~
+--- src/lharc.c.orig	Fri Mar  8 01:09:06 1996
++++ src/lharc.c	Sat May 22 15:55:50 1999
+@@ -318,7 +318,9 @@
+ 		cmd_filec = 0;
+ 		if ((xfilev = (char **) malloc(sizeof(char *) * xfilec)) == NULL)
+ 			fatal_error("Virtual memory exhausted\n");
+-		while (gets(inpbuf)) {
++		while (fgets(inpbuf, sizeof(inpbuf), stdin)) {
++			if ((p = strchr(inpbuf, '\n')))
++				*p = '\0';
+ 			if (cmd_filec >= xfilec) {
+ 				xfilec += 256;
+ 				cmd_filev = (char **) realloc(xfilev,
