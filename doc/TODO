@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2875 2005/01/11 04:35:19 kim Exp $
+$NetBSD: TODO,v 1.2876 2005/01/11 09:04:21 martti Exp $
 
 Suggested new packages
 ======================
@@ -398,7 +398,6 @@ Suggested package updates
 	o dbench-3.02
 	o dc_gui2-0.80
 	o dctc-0.85.9
-	o ddd-3.3.10
 	o denemo-0.7.2a
 	o devIL-1.6.7
 	o devhelp-0.9.3
