@@ -1,0 +1,15 @@
+$NetBSD: patch-cp,v 1.1.1.1 2002/05/31 13:19:18 skrll Exp $
+
+--- konqueror/keditbookmarks/main.cpp.orig	Wed May  8 19:22:33 2002
++++ konqueror/keditbookmarks/main.cpp
+@@ -32,7 +32,9 @@
+   { 0, 0, 0}
+ };
+ 
+-int main(int argc, char ** argv)
++extern "C" int kdemain(int, char **);
++
++int kdemain(int argc, char ** argv)
+ {
+   KLocale::setMainCatalogue("konqueror");
+   KAboutData aboutData( "keditbookmarks", I18N_NOOP("KEditBookmarks"), "1.0",

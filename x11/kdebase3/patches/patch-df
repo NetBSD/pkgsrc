@@ -1,0 +1,67 @@
+$NetBSD: patch-df,v 1.1.1.1 2002/05/31 13:19:18 skrll Exp $
+
+--- ksysguard/ksysguardd/FreeBSD/netdev.c.orig	Tue Sep 18 15:03:53 2001
++++ ksysguard/ksysguardd/FreeBSD/netdev.c
+@@ -20,4 +20,11 @@
+ */
+ 
++#if defined(__NetBSD__)
++#include <sys/types.h>
++#include <sys/socket.h>
++#include <ifaddrs.h>
++#include <net/if.h>
++#include <string.h>
++#else
+ #include <fcntl.h>
+ #include <sys/socket.h>
+@@ -30,4 +37,5 @@
+ #include <sys/types.h>
+ #include <unistd.h>
++#endif
+ 
+ 
+@@ -84,4 +92,16 @@
+ {
+ 	int counter = 0;
++
++#if defined(__NetBSD__)
++	struct ifaddrs *ifap, *ifa;
++
++	if (getifaddrs(&ifap) != 0)
++		return 0;
++
++	for (ifa = ifap; ifa; ifa=ifa->ifa_next) {
++		if (ifa->ifa_flags & IFF_UP)
++			counter++;
++	}
++#else
+ 	int name[6];
+ 	int num_iface, i;
+@@ -105,4 +125,5 @@
+ 			counter++;
+ 	}
++#endif
+ 
+ 	return counter;
+@@ -175,4 +196,15 @@
+ void updateNetDev(void)
+ {
++#if defined(__NetBSD__)
++	struct ifaddrs *ifap, *ifa;
++
++	if (getifaddrs(&ifap) != 0)
++		return;
++
++	for (ifa = ifap; ifa; ifa=ifa->ifa_next) {
++		if (ifa->ifa_flags & IFF_UP)
++			;
++	}
++#else
+ 	int name[6];
+ 	int num_iface, i;
+@@ -209,4 +241,5 @@
+ 		}
+ 	}
++#endif
+ }
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-eg,v 1.1.1.1 2002/05/31 13:19:19 skrll Exp $
+
+--- kwin/clients/web/Makefile.am.orig	Tue Feb 19 16:56:16 2002
++++ kwin/clients/web/Makefile.am
+@@ -21,7 +21,7 @@
+   WebButtonMaximize.h \
+   WebButtonSticky.h
+ 
+-kwin_web_la_LIBADD      = ../../kwin.la
++kwin_web_la_LIBADD      = ../../libkwin.la
+ kwin_web_la_LDFLAGS     = $(all_libraries) $(KDE_PLUGIN) -module
+ METASOURCES               = AUTO
+ 

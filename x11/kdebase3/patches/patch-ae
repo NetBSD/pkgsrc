@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/05/31 13:18:40 skrll Exp $
+
+--- kate/app/katemain.cpp.orig	Sun Feb 24 23:16:06 2002
++++ kate/app/katemain.cpp
+@@ -36,7 +36,9 @@
+     { 0,0,0 }
+ };
+ 
+-int main( int argc, char **argv )
++extern "C" int kdemain( int argc, char **argv );
++
++int kdemain( int argc, char **argv )
+ {
+   KAboutData *data = new KAboutData  ("kate", I18N_NOOP("Kate"), "2.0",
+                                                            I18N_NOOP( "Kate - KDE Advanced Text Editor" ), KAboutData::License_GPL,

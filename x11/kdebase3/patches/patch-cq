@@ -1,0 +1,15 @@
+$NetBSD: patch-cq,v 1.1.1.1 2002/05/31 13:19:18 skrll Exp $
+
+--- konqueror/konq_main.cc.orig	Fri Jan 11 15:29:36 2002
++++ konqueror/konq_main.cc
+@@ -44,7 +44,9 @@
+   { 0, 0, 0}
+ };
+ 
+-int main( int argc, char **argv )
++extern "C" int kdemain( int, char **);
++
++int kdemain( int argc, char **argv )
+ {
+   KCmdLineArgs::init( argc, argv, KonqFactory::aboutData() );
+ 
