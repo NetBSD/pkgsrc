@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.14 2002/12/30 02:09:26 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.15 2003/03/31 07:57:24 tron Exp $
 
---- bidwatcher.cpp.orig	Mon Dec 23 02:49:08 2002
-+++ bidwatcher.cpp
-@@ -4093,7 +4093,7 @@ void TimeSync()
+--- bidwatcher.cpp.orig	2002-12-23 08:49:08.000000000 +0100
++++ bidwatcher.cpp	2003-03-31 09:53:56.000000000 +0200
+@@ -4093,7 +4093,7 @@
        
        if (strlen(HtmlBuff) < 1000) {
  #ifdef DEBUG_NETWORK
@@ -11,3 +11,16 @@ $NetBSD: patch-aa,v 1.14 2002/12/30 02:09:26 dmcmahill Exp $
  #endif
  	continue;
        }
+@@ -4139,7 +4139,11 @@
+   int local_timeDiff;
+   
+ #if defined(HAVE_GMTIME)
+-  gmt_time = time_now - mktime(gmtime(&time_now));
++  struct tm gmt_tm;
++
++  gmt_tm = *gmtime(&time_now);
++  gmt_tm.tm_isdst = -1;
++  gmt_time = time_now - mktime(&gmt_tm);
+ #elif defined(HAVE_TM_ZONE)
+   struct tm * timeStruct = localtime(&time_now);
+   gmt_time = timeStruct->tm_gmtoff;
