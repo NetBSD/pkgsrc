@@ -1,0 +1,13 @@
+--- src/tick/Makefile.orig	Thu Jul 16 10:49:56 1998
++++ src/tick/Makefile	Thu Jul 16 10:50:07 1998
+@@ -26,8 +26,8 @@
+ 
+ 
+ install:
+-	$(INSTALL_PROG) ftntick$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnhatch$(EXE) $(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftntick$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) ftnhatch$(EXE) $(LIBDIR)
+ 
+ 
+ clean veryclean:
