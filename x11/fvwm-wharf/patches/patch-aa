@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 1998/08/23 07:34:17 garbled Exp $
+--- Imakefile.orig	Sun Mar  9 07:03:27 1997
++++ Imakefile	Sat Aug 22 02:33:41 1998
+@@ -13,11 +13,3 @@
+ 
+-ALLSUBDIRS = lib \
+-  	  afterstep \
+-          modules/Audio \
+-	  modules/Auto \
+-          modules/Wharf \
+-	  modules/Banner \
+-	  modules/Pager \
+-	  modules/asclock \
+-		modules/Animate
++ALLSUBDIRS = lib modules/Wharf
+ 

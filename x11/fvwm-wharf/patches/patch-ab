@@ -1,0 +1,8 @@
+$NetBSD: patch-ab,v 1.1 1998/08/23 07:34:17 garbled Exp $
+--- modules/Wharf/Imakefile.orig	Sat Aug 22 03:31:52 1998
++++ modules/Wharf/Imakefile	Sat Aug 22 03:32:33 1998
+@@ -17,3 +17,3 @@
+ 
+-#ifdef AlphaArchitecture
++#if defined(AlphaArchitecture) && !defined(NetBSDArchitecture)
+ LOCAL_LIBRARIES = $(XPMLIB) $(XLIB) -ldnet_stub -L../../lib -lafterstep     
