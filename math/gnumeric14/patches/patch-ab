@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/12/22 12:08:26 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2005/01/20 21:35:07 drochner Exp $
 
---- configure.orig	2004-12-10 16:06:34.000000000 +0100
+--- configure.orig	2005-01-15 18:01:09.000000000 +0100
 +++ configure
-@@ -27101,7 +27101,7 @@ echo $ECHO_N "checking Look for $PY_PREF
+@@ -27200,7 +27200,7 @@ echo $ECHO_N "checking Look for $PY_PREF
  	echo "$as_me:$LINENO: result: $marker_ok" >&5
  echo "${ECHO_T}$marker_ok" >&6
  	PY_LIBS="python$PY_VERSION"
--	PY_LIB_LOC="-L$PY_EXEC_PREFIX/lib/python$PY_VERSION/config"
-+	PY_LIB_LOC="-L$PY_EXEC_PREFIX/lib"
+-    	PY_LIB_LOC=`$PYTHON -c 'from distutils.sysconfig import get_config_var; print get_config_var("LIBPL")'`
++    	PY_LIB_LOC="$PY_EXEC_PREFIX/lib"
+     	PY_LIB_LOC="-L$PY_LIB_LOC"
  	PY_CFLAGS="-I$PY_PREFIX/include/python$PY_VERSION"
  	echo 'echo_python_libs:
- 	@echo $(MODLIBS) $(LIBS)' >confmake.tmp

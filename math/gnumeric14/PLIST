@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/22 12:08:26 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/20 21:35:07 drochner Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -44,6 +44,9 @@ lib/gnumeric/${PKGVERSION}/plugins/gdaif/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/gnome-db/gnomedb.la
 lib/gnumeric/${PKGVERSION}/plugins/gnome-db/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/gnome-db/ui.xml
+lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary/glossary-po-header
+lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary/gnome_glossary.py
+lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/html/html.la
 lib/gnumeric/${PKGVERSION}/plugins/html/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/lotus/lotus.la
@@ -79,6 +82,11 @@ lib/gnumeric/${PKGVERSION}/plugins/plot_xy/gog-bubble-prefs.glade
 lib/gnumeric/${PKGVERSION}/plugins/plot_xy/plot-types.xml
 lib/gnumeric/${PKGVERSION}/plugins/plot_xy/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/plot_xy/xy.la
+lib/gnumeric/${PKGVERSION}/plugins/py-func/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/py-func/py_func.py
+lib/gnumeric/${PKGVERSION}/plugins/python-loader/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/python-loader/python_loader.la
+lib/gnumeric/${PKGVERSION}/plugins/python-loader/ui-console-menu.xml
 lib/gnumeric/${PKGVERSION}/plugins/qpro/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/qpro/qpro.la
 lib/gnumeric/${PKGVERSION}/plugins/sample_datasource/plugin.xml
@@ -94,6 +102,8 @@ lib/gnumeric/${PKGVERSION}/plugins/xbase/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/xbase.la
 lib/gnumeric/${PKGVERSION}/plugins/xml_sax/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xml_sax/xml_sax.la
+man/man1/gnumeric.1
+man/man1/ssconvert.1
 share/applications/gnumeric.desktop
 share/gconf/schemas/gnumeric-dialogs.schemas
 share/gconf/schemas/gnumeric-general.schemas
@@ -690,6 +700,7 @@ share/pixmaps/gnumeric/chart_cone_2_1.png
 share/pixmaps/gnumeric/chart_cone_2_2.png
 share/pixmaps/gnumeric/chart_cone_2_3.png
 share/pixmaps/gnumeric/chart_cone_3_1.png
+share/pixmaps/gnumeric/chart_contour_1_1.png
 share/pixmaps/gnumeric/chart_cylinder_1_1.png
 share/pixmaps/gnumeric/chart_cylinder_1_2.png
 share/pixmaps/gnumeric/chart_cylinder_1_3.png
@@ -777,6 +788,8 @@ share/pixmaps/win32-gnumeric.ico
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/sc
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/sample_datasource
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/qpro
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/python-loader
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/py-func
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/plot_xy
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/plot_surface
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/plot_radar
@@ -789,6 +802,7 @@ share/pixmaps/win32-gnumeric.ico
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/mps
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/lotus
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/html
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/gnome-db
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/gdaif
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-string
