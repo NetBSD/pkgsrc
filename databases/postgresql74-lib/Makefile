@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/25 23:14:40 seb Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/27 11:54:20 recht Exp $
 
 PKGNAME=		postgresql-lib-${BASE_VERS}
 PKGREVISION=		1
@@ -17,7 +17,9 @@ BUILD_DIRS+=		${WRKSRC}/src/pl
 
 # As told by Josh Berkus
 # currently broken for SunOS, will be fixed in 7.4.3
-.if (${OPSYS} != "SunOS")
+.include "../../mk/pthread.buildlink3.mk"
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native" \
+	&& ${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=	--enable-thread-safety
 .endif
 
@@ -45,5 +47,4 @@ post-install:
 		-f ${WRKSRC}/doc/man.tar.gz
 
 .include "../../security/openssl/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
