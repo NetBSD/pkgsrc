@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 1998/09/30 19:46:36 tron Exp $
+$NetBSD: patch-aa,v 1.5 1999/04/22 18:37:26 mycroft Exp $
 
---- Make-config.orig	Sun Aug 30 05:27:56 1998
-+++ Make-config	Wed Sep 30 20:23:27 1998
-@@ -773,9 +773,9 @@
+--- Make-config.orig	Sat Aug 29 20:27:56 1998
++++ Make-config	Wed Apr 21 23:58:58 1999
+@@ -773,13 +773,13 @@
  
  netbsd:
  	$(MAKE) $(MFLAGS) targets \
@@ -13,5 +13,12 @@ $NetBSD: patch-aa,v 1.4 1998/09/30 19:46:36 tron Exp $
 +	"GLU_LIB = libMesaGLU.a" \
 +	"GLUT_LIB = libglut.a" \
  	"CC = gcc" \
- 	"CFLAGS = -O2 -fPIC -DSHM -I/usr/X11R6/include -DHZ=100"  \
+-	"CFLAGS = -O2 -fPIC -DSHM -I/usr/X11R6/include -DHZ=100"  \
++	"CFLAGS = -O2 -fPIC -DSHM -I${X11BASE}/include -DHZ=100"  \
  	"MAKELIB = ../mklib.netbsd" \
+-	"XLIBS = -L/usr/X11R6/lib -lXext -lXmu -lXi -lX11"
++	"XLIBS = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lXext -lXmu -lXi -lSM -lICE -lXt -lX11"
+ 
+ next:	
+ 	$(MAKE)	-f Makefile.NeXT targets \
+
