@@ -1,0 +1,150 @@
+$NetBSD: patch-ab,v 1.21 2004/02/19 19:16:57 kristerw Exp $
+
+--- src/unix/config.c.orig	2003-12-26 16:29:16.000000000 -0700
++++ src/unix/config.c	2004-01-21 22:08:24.000000000 -0700
+@@ -56,6 +56,13 @@
+ static int specify_ram(struct rc_option *option, const char *arg, int priority);
+ #endif
+ 
++/* OpenVMS doesn't support paths with a leading '.' character. */
++#if defined(__DECC) && defined(VMS)
++#  define PATH_LEADER
++#else
++#  define PATH_LEADER "."
++#endif
++
+ /* struct definitions */
+ static struct rc_option opts[] = {
+    /* name, shortname, type, dest, deflt, min, max, func, help */
+@@ -275,39 +282,39 @@
+ 		return OSD_NOT_OK;
+ 
+ 	/* check that the required dirs exist, and create them if necessary */
+-	snprintf(buffer, BUF_SIZE, "%s/.%s", home_dir, NAME);
++	snprintf(buffer, BUF_SIZE, "%s/"PATH_LEADER"%s", home_dir, NAME);
+ 	if (check_and_create_dir(buffer))
+ 		return OSD_NOT_OK;
+ 
+-	snprintf(buffer, BUF_SIZE, "%s/.%s/%s", home_dir, NAME, "cfg");
++	snprintf(buffer, BUF_SIZE, "%s/"PATH_LEADER"%s/%s", home_dir, NAME, "cfg");
+ 	if (check_and_create_dir(buffer))
+ 		return OSD_NOT_OK;
+ 
+-	snprintf(buffer, BUF_SIZE, "%s/.%s/%s", home_dir, NAME, "mem");
++	snprintf(buffer, BUF_SIZE, "%s/"PATH_LEADER"%s/%s", home_dir, NAME, "mem");
+ 	if (check_and_create_dir(buffer))
+ 		return OSD_NOT_OK;
+ 
+-	snprintf(buffer, BUF_SIZE, "%s/.%s/%s", home_dir, NAME, "sta");
++	snprintf(buffer, BUF_SIZE, "%s/"PATH_LEADER"%s/%s", home_dir, NAME, "sta");
+ 	if (check_and_create_dir(buffer))
+ 		return OSD_NOT_OK;
+ 
+-	snprintf(buffer, BUF_SIZE, "%s/.%s/%s", home_dir, NAME, "nvram");
++	snprintf(buffer, BUF_SIZE, "%s/"PATH_LEADER"%s/%s", home_dir, NAME, "nvram");
+ 	if (check_and_create_dir(buffer))
+ 		return OSD_NOT_OK;
+ 
+-	snprintf(buffer, BUF_SIZE, "%s/.%s/%s", home_dir, NAME, "diff");
++	snprintf(buffer, BUF_SIZE, "%s/"PATH_LEADER"%s/%s", home_dir, NAME, "diff");
+ 	if (check_and_create_dir(buffer))
+ 		return OSD_NOT_OK;
+ 
+-	snprintf(buffer, BUF_SIZE, "%s/.%s/%s", home_dir, NAME, "rc");
++	snprintf(buffer, BUF_SIZE, "%s/"PATH_LEADER"%s/%s", home_dir, NAME, "rc");
+ 	if (check_and_create_dir(buffer))
+ 		return OSD_NOT_OK;
+ 
+-	snprintf(buffer, BUF_SIZE, "%s/.%s/%s", home_dir, NAME, "hi");
++	snprintf(buffer, BUF_SIZE, "%s/"PATH_LEADER"%s/%s", home_dir, NAME, "hi");
+ 	if (check_and_create_dir(buffer))
+ 		return OSD_NOT_OK;
+ 
+-	snprintf(buffer, BUF_SIZE, "%s/.%s/%s", home_dir, NAME, "inp");
++	snprintf(buffer, BUF_SIZE, "%s/"PATH_LEADER"%s/%s", home_dir, NAME, "inp");
+ 	if (check_and_create_dir(buffer))
+ 		return OSD_NOT_OK;
+ 
+@@ -322,13 +329,13 @@
+ 		snprintf(buffer, BUF_SIZE, "%s/%src", XMAMEROOT, NAME);
+ 		if(rc_load(rc, buffer, 1, 1))
+ 			return OSD_NOT_OK;
+-		snprintf(buffer, BUF_SIZE, "%s/.%s/%src", home_dir, NAME, NAME);
++		snprintf(buffer, BUF_SIZE, "%s/"PATH_LEADER"%s/%src", home_dir, NAME, NAME);
+ 		if(rc_load(rc, buffer, 1, 1))
+ 			return OSD_NOT_OK;
+ 		snprintf(buffer, BUF_SIZE, "%s/%s-%src", XMAMEROOT, NAME, DISPLAY_METHOD);
+ 		if(rc_load(rc, buffer, 1, 1))
+ 			return OSD_NOT_OK;
+-		snprintf(buffer, BUF_SIZE, "%s/.%s/%s-%src", home_dir, NAME, NAME,
++		snprintf(buffer, BUF_SIZE, "%s/"PATH_LEADER"%s/%s-%src", home_dir, NAME, NAME,
+ 				DISPLAY_METHOD);
+ 		if(rc_load(rc, buffer, 1, 1))
+ 			return OSD_NOT_OK;
+@@ -536,7 +543,7 @@
+ 				drivers[game_index]->name);
+ 		if(rc_load(rc, buffer, 1, 1))
+ 			return OSD_NOT_OK;
+-		snprintf(buffer, BUF_SIZE, "%s/.%s/rc/%src", home_dir, NAME,
++		snprintf(buffer, BUF_SIZE, "%s/"PATH_LEADER"%s/rc/%src", home_dir, NAME,
+ 				drivers[game_index]->name);
+ 		if(rc_load(rc, buffer, 1, 1))
+ 			return OSD_NOT_OK;
+@@ -737,21 +744,49 @@
+ #endif
+ 
+ 
+-/*============================================================ */
+-/*	logerror */
+-/*============================================================ */
++/*============================================================*/
++/*	vlogerror */
++/*============================================================*/
+ 
+ extern FILE *errorlog;
+ 
+-void logerror(const char *text, ...)
++static void vlogerror(const char *text, va_list arg)
+ {
+-	va_list arg;
+-
+ 	if (errorlog)
+ 	{
+-		va_start(arg, text);
+ 		vfprintf(errorlog, text, arg);
+-		va_end(arg);
+ 		fflush(errorlog);
+ 	}
+ }
++
++
++/*============================================================*/
++/*	logerror */
++/*============================================================*/
++
++void logerror(const char *text,...)
++{
++	va_list arg;
++
++	/* standard vfprintf stuff here */
++	va_start(arg, text);
++	vlogerror(text, arg);
++	va_end(arg);
++}
++
++
++/*============================================================*/
++/*	osd_die */
++/*============================================================*/
++
++void osd_die(const char *text,...)
++{
++	va_list arg;
++
++	/* standard vfprintf stuff here */
++	va_start(arg, text);
++	vlogerror(text, arg);
++	va_end(arg);
++
++	exit(-1);
++}
