@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/12/24 18:55:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/02/04 10:52:15 drochner Exp $
 #
 
 DISTNAME=	vcdimager-0.7.12
@@ -12,6 +12,8 @@ COMMENT=	mastering suite for Video CDs
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
+USE_LIBTOOL=	yes
+LIBTOOL_OVERRIDE= ${WRKSRC}/libtool
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 
