@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2001/12/15 08:31:08 martti Exp $
+$NetBSD: patch-ab,v 1.8 2003/01/23 07:37:13 martti Exp $
 
---- pico/osdep/unix.orig	Tue Oct 30 18:43:21 2001
-+++ pico/osdep/unix	Fri Dec 14 19:07:53 2001
-@@ -2586,7 +2586,7 @@
+--- pico/osdep/unix.orig	Wed Dec 18 21:41:02 2002
++++ pico/osdep/unix	Thu Jan 23 09:01:38 2003
+@@ -2624,7 +2624,7 @@
  errstr(err)
  int err;
  {
