@@ -1,12 +1,16 @@
-# $NetBSD: Makefile,v 1.86 2002/12/21 21:35:17 kristerw Exp $
+# $NetBSD: Makefile,v 1.87 2003/01/09 19:46:13 mycroft Exp $
 #
 
 DISTNAME=		xmame-0.62.1-rc3
 PKGNAME=		xmame-0.62.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
+
+PATCH_SITES=		http://x.mame.net/download/
+PATCHFILES=		0.62.1-rc3-0.62.1-rc4.diff.bz2
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		kristerw@netbsd.org
 HOMEPAGE=		http://x.mame.net/

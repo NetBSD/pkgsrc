@@ -1,14 +1,13 @@
-$NetBSD: patch-ae,v 1.17 2002/12/14 14:59:39 kristerw Exp $
---- doc/xmamerc.dist.orig	Mon Dec  9 03:15:24 2002
-+++ doc/xmamerc.dist	Sat Dec 14 14:00:15 2002
-@@ -69,13 +69,13 @@
+$NetBSD: patch-ae,v 1.18 2003/01/09 19:46:14 mycroft Exp $
+
+--- doc/xmamerc.dist.orig	Thu Jan  9 18:50:13 2003
++++ doc/xmamerc.dist	Thu Jan  9 18:52:28 2003
+@@ -69,12 +69,12 @@
  mouse                   1
  
  ### Fileio Related ###
 -rompath                 /usr/games/lib/xmame/roms
--hiscore_directory       /usr/games/lib/xmame/hiscore
 +rompath                 @ROMPATH@
-+hiscore_directory       @SPOOLDIR@/hiscore
  snapshot_directory      .
 -cheat_file              /usr/games/lib/xmame/cheat.dat
 -hiscore_file            /usr/games/lib/xmame/hiscore.dat
