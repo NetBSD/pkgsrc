@@ -1,12 +1,12 @@
-$NetBSD: patch-ae,v 1.3 2001/03/27 02:29:18 hubertf Exp $
+$NetBSD: patch-ae,v 1.4 2002/07/18 12:57:58 seb Exp $
 
 --- wmnet.man.orig	Fri May  5 02:43:35 2000
-+++ wmnet.man
++++ wmnet.man	Mon Jul  8 17:09:42 2002
 @@ -1,6 +1,6 @@
  .\"             -*-Nroff-*-
  .\"
 -.TH wmnet 1x "4 May 2000"
-+.TH wmnet 1x "4 Mar 2001"
++.TH wmnet 1x "8 Jul 2002"
  .SH NAME
  wmnet \- an IP accounting monitoring tool
  .SH SYNOPSIS
@@ -40,7 +40,7 @@ $NetBSD: patch-ae,v 1.3 2001/03/27 02:29:18 hubertf Exp $
  .B -e,--execute=\fICOMMAND
  executes \fICOMMAND \fPon a single click from button 1 (left mouse button).
  .TP
-@@ -147,9 +156,9 @@
+@@ -147,9 +156,13 @@
  Otherwise, the kernel will not collect the stats we need.
  .TP
  .B kmem
@@ -50,6 +50,10 @@ $NetBSD: patch-ae,v 1.3 2001/03/27 02:29:18 hubertf Exp $
 +this driver is available on FreeBSD, OpenBSD and NetBSD systems and must be
 +passed a device through the \fI--device\fP option.  By default, it uses ppp0
 +but will accept any valid device name.
++.TP
++.B kstat
++this driver is available on Solaris and uses general-purpose kernel statistics
++facility provided by kstat device.
  .SH FILES
  .TP
  .I /proc/net/ip_acct /proc/net/dev /proc/net/ipchains

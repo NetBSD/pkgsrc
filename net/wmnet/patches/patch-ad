@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2001/03/27 02:29:18 hubertf Exp $
+$NetBSD: patch-ad,v 1.3 2002/07/18 12:57:58 seb Exp $
 
 --- wmnet.c.orig	Fri May  5 03:01:14 2000
-+++ wmnet.c
-@@ -55,7 +55,7 @@
++++ wmnet.c	Mon Jul  8 16:52:30 2002
+@@ -55,9 +55,13 @@
  #include<X11/Xlib.h>
  #include<X11/Xutil.h>
  #include<X11/Xatom.h>
@@ -10,8 +10,14 @@ $NetBSD: patch-ad,v 1.2 2001/03/27 02:29:18 hubertf Exp $
 +#if defined (__FreeBSD__) || defined (__OpenBSD__) || defined (__NetBSD__)
  # include<sys/socket.h>
  # include"getopt.h"
++#elif defined (sun)
++# include<sys/socket.h>
++# include<sys/sockio.h>
++# include "getopt.h"
  #else
-@@ -97,17 +97,19 @@
+ # include<getopt.h>
+ #endif
+@@ -97,17 +101,19 @@
  	int c;
  	XColor thecolor;
  	struct sigaction signal_action;
@@ -34,7 +40,7 @@ $NetBSD: patch-ad,v 1.2 2001/03/27 02:29:18 hubertf Exp $
  		{"logscale", no_argument, NULL, 'l'},
  		{"help", no_argument, NULL, 'h'},
  		{"execute", required_argument, NULL, 'e'}, 
-@@ -131,9 +133,9 @@
+@@ -131,9 +137,9 @@
  
  	/* Get options */
  #ifdef linux
@@ -46,7 +52,7 @@ $NetBSD: patch-ad,v 1.2 2001/03/27 02:29:18 hubertf Exp $
  #endif
  		switch(c) {
  			case 'v':
-@@ -176,6 +178,15 @@
+@@ -176,6 +182,15 @@
  					exit(23);
  				}
  				break;
@@ -62,7 +68,7 @@ $NetBSD: patch-ad,v 1.2 2001/03/27 02:29:18 hubertf Exp $
  			case 'F':
  				if (labelfgcolorString == NULL) {
  					labelfgcolorString = (char *)alloca(strlen(optarg)+1);
-@@ -228,6 +239,9 @@
+@@ -228,6 +243,9 @@
  			case 'n':
  				specified_state = NormalState;
  				break;
@@ -72,7 +78,7 @@ $NetBSD: patch-ad,v 1.2 2001/03/27 02:29:18 hubertf Exp $
  			case 'u':
  				{
  					int fds;
-@@ -283,6 +297,7 @@
+@@ -283,6 +301,7 @@
                                         "  -L, --label=LABEL        display LABEL on bottom of window\n"
                                         "  -F, --labelfg=COLOR      foreground color for the label\n"
                                         "  -B, --labelbg=COLOR      background color for the label\n"
@@ -80,7 +86,7 @@ $NetBSD: patch-ad,v 1.2 2001/03/27 02:29:18 hubertf Exp $
                                         "  -e, --execute=COMMAND    run COMMAND on click\n"
  #ifdef linux
  				       "  -T, --txrule=RULE        accounting rule number (ipfwadm) or\n"
-@@ -320,6 +335,7 @@
+@@ -320,6 +339,7 @@
  	if (rxcolorString == NULL) rxcolorString = "red";
  	if (labelfgcolorString == NULL) labelfgcolorString = "white";
  	if (labelbgcolorString == NULL) labelbgcolorString = "black";
@@ -88,7 +94,7 @@ $NetBSD: patch-ad,v 1.2 2001/03/27 02:29:18 hubertf Exp $
  
  	/* Change dir to /, security precaution, and common courtesy */
  	if (chdir("/") == -1) {
-@@ -384,6 +400,14 @@
+@@ -384,6 +404,14 @@
  		XAllocColor(dpy, DefaultColormap(dpy, screen), &thecolor);
  		labelbg_pixel = thecolor.pixel;
  	}
@@ -103,7 +109,7 @@ $NetBSD: patch-ad,v 1.2 2001/03/27 02:29:18 hubertf Exp $
  
  	/* usleep() in between polls to /proc/net/ip_acct */
  	if (delayTime <= 0) delayTime = 25000;
-@@ -442,7 +466,7 @@
+@@ -442,7 +470,7 @@
  	}
  	gcv.graphics_exposures = False;
  	gcv.foreground = tx_pixel[HIGH_INTENSITY]; 
@@ -112,7 +118,7 @@ $NetBSD: patch-ad,v 1.2 2001/03/27 02:29:18 hubertf Exp $
  	gcv.font = XLoadFont(dpy, "5x8");
  	graphics_context = XCreateGC(dpy, root_window, (GCFont|GCGraphicsExposures|GCForeground|GCBackground), &gcv);
  	black_pixel = BlackPixel(dpy, screen);
-@@ -494,12 +518,12 @@
+@@ -494,12 +522,12 @@
  /* Handles Expose events, repaints the window */
  void redraw(XExposeEvent *ee) {
          static XRectangle cliprect = { 4, 51, 56, 9 };
@@ -127,34 +133,28 @@ $NetBSD: patch-ad,v 1.2 2001/03/27 02:29:18 hubertf Exp $
  	XFillRectangle(dpy, *visible_window, graphics_context, TOPBOX_X, TOPBOX_Y, TOPBOX_WIDTH, TOPBOX_HEIGHT);
  	XDrawLine(dpy, *visible_window, graphics_context, GRAPHBOX_X_LEFT, GRAPHBOX_Y_TOP, GRAPHBOX_X_LEFT, GRAPHBOX_Y_BOTTOM);
  	XDrawPoint(dpy, *visible_window, graphics_context, GRAPHBOX_X_RIGHT, GRAPHBOX_Y_TOP);
-@@ -513,15 +537,19 @@
+@@ -513,15 +541,19 @@
  	}
  
  
--	XSetForeground(dpy, graphics_context, white_pixel);
--	XDrawLine(dpy, *visible_window, graphics_context, GRAPHBOX_X_RIGHT, GRAPHBOX_Y_BOTTOM, GRAPHBOX_X_RIGHT, (GRAPHBOX_Y_TOP + 1)); 
--	XDrawLine(dpy, *visible_window, graphics_context, GRAPHBOX_X_LEFT, GRAPHBOX_Y_BOTTOM, GRAPHBOX_X_RIGHT, GRAPHBOX_Y_BOTTOM);
 +	if (! no3d) {
-+		XSetForeground(dpy, graphics_context, white_pixel);
-+		XDrawLine(dpy, *visible_window, graphics_context, GRAPHBOX_X_RIGHT, GRAPHBOX_Y_BOTTOM, GRAPHBOX_X_RIGHT, (GRAPHBOX_Y_TOP + 1)); 
-+		XDrawLine(dpy, *visible_window, graphics_context, GRAPHBOX_X_LEFT, GRAPHBOX_Y_BOTTOM, GRAPHBOX_X_RIGHT, GRAPHBOX_Y_BOTTOM);
+ 	XSetForeground(dpy, graphics_context, white_pixel);
+ 	XDrawLine(dpy, *visible_window, graphics_context, GRAPHBOX_X_RIGHT, GRAPHBOX_Y_BOTTOM, GRAPHBOX_X_RIGHT, (GRAPHBOX_Y_TOP + 1)); 
+ 	XDrawLine(dpy, *visible_window, graphics_context, GRAPHBOX_X_LEFT, GRAPHBOX_Y_BOTTOM, GRAPHBOX_X_RIGHT, GRAPHBOX_Y_BOTTOM);
 +	}
  
  
--	XSetForeground(dpy, graphics_context, grey_pixel);
--	XSetBackground(dpy, graphics_context, black_pixel);
--	XCopyPlane(dpy, arrow, *visible_window, graphics_context, 7, 0, 7, 9, 53, 5, 1);
--	XCopyPlane(dpy, arrow, *visible_window, graphics_context, 0, 0, 7, 9, 46, 5, 1);
 +	if (! no3d) { /* OK, this is cheating, but I don't want to add yet another switch; I have NFC what these arrows are for - HF */
-+		XSetForeground(dpy, graphics_context, grey_pixel);
+ 	XSetForeground(dpy, graphics_context, grey_pixel);
+-	XSetBackground(dpy, graphics_context, black_pixel);
 +		XSetBackground(dpy, graphics_context, bg_pixel);
-+		XCopyPlane(dpy, arrow, *visible_window, graphics_context, 7, 0, 7, 9, 53, 5, 1);
-+		XCopyPlane(dpy, arrow, *visible_window, graphics_context, 0, 0, 7, 9, 46, 5, 1);
+ 	XCopyPlane(dpy, arrow, *visible_window, graphics_context, 7, 0, 7, 9, 53, 5, 1);
+ 	XCopyPlane(dpy, arrow, *visible_window, graphics_context, 0, 0, 7, 9, 46, 5, 1);
 +	}
  }
  	
  	
-@@ -572,7 +600,7 @@
+@@ -572,7 +604,7 @@
  		if (blank < (GRAPH_WIDTH + 1) ) {
  			XCopyArea(dpy, *visible_window, *visible_window, graphics_context, GRAPH_X + 1,
  			   GRAPH_Y, GRAPH_WIDTH - 1, GRAPH_HEIGHT, GRAPH_X, GRAPH_Y);
@@ -163,7 +163,7 @@ $NetBSD: patch-ad,v 1.2 2001/03/27 02:29:18 hubertf Exp $
  			XDrawLine(dpy, *visible_window, graphics_context, GRAPH_X_RIGHT, y, GRAPH_X_RIGHT, yy);
  			if (( (yy == GRAPH_Y_UPPER && diffbytes_out > 0 && rate_rx > rate_tx) || (rate_rx >= rate_tx && yy != GRAPH_Y_UPPER)) ) {
  				drawColoredLine(GRAPH_Y_UPPER, yy, tx_pixel);				
-@@ -593,7 +621,7 @@
+@@ -593,7 +625,7 @@
  	if (!stat_gather()) {  /* Anything change? */
  		current_rx = rx;
  		current_tx = tx;
@@ -172,7 +172,7 @@ $NetBSD: patch-ad,v 1.2 2001/03/27 02:29:18 hubertf Exp $
  		if(current_tx == True) {
  			XSetForeground(dpy, graphics_context, tx_pixel[HIGH_INTENSITY]);
  			XCopyPlane(dpy, arrow, *visible_window, graphics_context, 7, 0, 7, 9, 53, 5, 1);
-@@ -646,7 +674,7 @@
+@@ -646,7 +678,7 @@
  
  
  	if (!clear) {
