@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/03/06 22:07:50 agc Exp $
+$NetBSD: patch-aa,v 1.2 2000/01/19 16:32:13 agc Exp $
 
---- Makefile.orig	Thu Mar  4 14:54:17 1999
-+++ Makefile	Thu Mar  4 15:59:51 1999
+--- Makefile.orig	Tue Mar 19 04:44:33 1996
++++ Makefile	Wed Jan 19 16:25:36 2000
 @@ -27,16 +27,20 @@
  # LIBDIR and SHAREDIR.  All others must already exist.
  
@@ -38,13 +38,13 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/03/06 22:07:50 agc Exp $
 -XINSTALL=cp
 -#XINSTALL=/usr/ucb/install $(INSTALLFLAGS) -c -m 755 # -s
 +#XINSTALL=cp
-+XINSTALL=/usr/bin/install $(INSTALLFLAGS) -c -m 755 # -s
++XINSTALL=${BSD_INSTALL_PROGRAM}
  
  # to install text files
 -TINSTALL=cp
 -#TINSTALL=/usr/ucb/install $(INSTALLFLAGS) -c -m 644
 +#TINSTALL=cp
-+TINSTALL=/usr/bin/install $(INSTALLFLAGS) -c -m 644
++TINSTALL=${BSD_INSTALL_DATA}
  
  # These should all just be right if the above ones are.
  # You will confuse JOVE if you move anything from LIBDIR or SHAREDIR.
@@ -66,3 +66,11 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/03/06 22:07:50 agc Exp $
  
  # for SCO Xenix, set
  #	MEMFLAGS = -Mle
+@@ -179,6 +183,7 @@
+ # CC = /opt/SUNWspro/bin/cc
+ # For DG AViiON, expect compile errors unless you use the GNU C compiler:
+ # CC=gcc
++CC= gcc
+ 
+ # Load invocation of cc.
+ # LDCC = purify $(CC)
