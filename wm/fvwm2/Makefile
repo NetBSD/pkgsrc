@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2002/09/21 08:27:13 martti Exp $
+# $NetBSD: Makefile,v 1.24 2002/10/09 08:34:15 martti Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
 DISTNAME=	fvwm-${FVWM_VER}
 PKGNAME=	fvwm2-${FVWM_VER}
+PKGREVISION=	1
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/ \
 		http://www.fvwm.org/generated/icon_download/ \
@@ -33,6 +34,9 @@ CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/lib/X11/fvwm2
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/lib/X11
 CONFIGURE_ARGS+=	--with-xpm-includes=${XPMDIR}/include
 CONFIGURE_ARGS+=	--with-imagepath=${PREFIX}/lib/X11/fvwm2/pixmaps:${X11BASE}/include/X11/bitmaps:${X11BASE}/include/X11/pixmaps
+
+# We don't want to have CPP from the buildlink directory
+CONFIGURE_ENV+=		ac_cv_path_FVWM_CPP="${CPP}"
 
 post-extract:
 	${MKDIR} ${WRKDIR}/icons
