@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/22 02:10:45 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/14 06:47:30 minskim Exp $
 #
 
 DISTNAME=	dasm212
@@ -17,6 +17,7 @@ WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	YES
 
 MAKEFILE=	${FILESDIR}/Makefile
+MAKE_ENV+=	BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} BINMODE=${BINMODE:Q}
 
 INSTALLATION_DIRS=	bin
 
