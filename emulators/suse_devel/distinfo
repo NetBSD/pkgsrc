@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/04/04 09:46:58 tron Exp $
+$NetBSD: distinfo,v 1.5 2002/10/09 07:14:25 grant Exp $
 
 SHA1 (suse73/bin86.rpm) = e2bd8a0fd6047d8117ad504f23b351543f60550c
 Size (suse73/bin86.rpm) = 56414 bytes
@@ -10,8 +10,8 @@ SHA1 (suse73/g77.rpm) = c5fbff79841885def0df62e6b9bd4f26dd487204
 Size (suse73/g77.rpm) = 1414553 bytes
 SHA1 (suse73/gcc.rpm) = 81dc3338215b73734e7f25ce415ded84854f717b
 Size (suse73/gcc.rpm) = 1096718 bytes
-SHA1 (suse73/glibc-devel-2.2.4-64.i386.rpm) = c2c1fc55644afa62375d0ff62ccdb0e2c29ae52c
-Size (suse73/glibc-devel-2.2.4-64.i386.rpm) = 10943195 bytes
+SHA1 (suse73/glibc-devel-2.2.4-77.i386.rpm) = a157a5937924676fc51345364e77af8f2e0a9ece
+Size (suse73/glibc-devel-2.2.4-77.i386.rpm) = 10943727 bytes
 SHA1 (suse73/gpp.rpm) = 3aedcc1f142ed2a7c8aba9eb2d3a52d2e055a139
 Size (suse73/gpp.rpm) = 1075234 bytes
 SHA1 (suse73/make.rpm) = d6ce792a7293996363bc55869f20029176ecb18a
