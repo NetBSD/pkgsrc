@@ -1,9 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2004/03/07 01:06:45 fvdl Exp $
-
---- AC-TOOLS/config.sub.orig	2001-10-04 03:14:27.000000000 +0200
-+++ AC-TOOLS/config.sub	2004-03-07 01:33:51.000000000 +0100
-@@ -181,9 +181,10 @@
- 	      | sparclite-* | pdp11-* | sh-* | powerpc-* | powerpcle-* \
+--- AC-TOOLS/config.sub.orig	2004-07-18 02:22:16.000000000 +0100
++++ AC-TOOLS/config.sub	2004-07-18 02:23:09.000000000 +0100
+@@ -182,7 +182,8 @@
  	      | sparc64-* | mips64-* | mipsel-* \
  	      | mips64el-* | mips64orion-* | mips64orionel-*  \
  	      | mipstx39-* | mipstx39el-* \
@@ -13,4 +10,3 @@ $NetBSD: patch-ac,v 1.1 2004/03/07 01:06:45 fvdl Exp $
  		;;
  	# Recognize the various machine names and aliases which stand
  	# for a CPU type and a company and sometimes even an OS.
- 	3b1 | 7300 | 7300-att | att-7300 | pc7300 | safari | unixpc)

@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2004/03/07 01:34:04 snj Exp $
-
---- Makefile.in.orig	2003-07-03 20:13:45.000000000 -0700
-+++ Makefile.in	2004-03-06 17:27:16.000000000 -0800
-@@ -15,20 +15,19 @@
+--- Makefile.in.orig	2004-07-18 02:15:42.000000000 +0100
++++ Makefile.in	2004-07-18 02:19:16.000000000 +0100
+@@ -18,20 +18,19 @@
  
  DEFS=-DHAVE_CONFIG_H -Wall @HOSTDEF@
  
@@ -24,17 +22,19 @@ $NetBSD: patch-aa,v 1.4 2004/03/07 01:34:04 snj Exp $
 -CFLAGS=-O3 $(INCLUDES) $(DEFS)
 -CFLAGSX=-O3 $(XINCLUDES) $(DEFS)
 +CFLAGS+= $(INCLUDES) $(DEFS)
-+CFLAGSX= $(CFLAGS) $(XINCLUDES)
++CFLAGSX+= $(XINCLUDES) $(DEFS)
  LDFLAGS=-s
  
  LINT=lint
-@@ -38,8 +37,8 @@ RM=rm -f
- INSTALL=install
+@@ -42,9 +41,9 @@
  
  INST_DIR=/usr/local/bin
+ INST_MANDIR=/usr/local/man/man1
 -INST_XDIR=/usr/X11R6/bin
+-INST_MANXDIR=/usr/X11R6/man/man1
 -INST_XRDIR=/usr/X11R6/lib/X11/app-defaults
 +INST_XDIR=${X11BASE}/bin
++INST_MANXDIR=${X11BASE}/man/man1
 +INST_XRDIR=${X11BASE}/lib/X11/app-defaults
   
  .c.o:
