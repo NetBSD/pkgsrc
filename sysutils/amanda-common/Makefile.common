@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2001/10/19 09:44:10 veego Exp $
+# $NetBSD: Makefile.common,v 1.7 2002/07/21 19:07:32 schmonz Exp $
 #
 # common make file fragment shared by all amanda-* pkgs.
 #
@@ -7,6 +7,8 @@
 AMANDA_GROUP?=		operator
 .elif ${OPSYS} == "SunOS"
 AMANDA_GROUP?=		sysadmin
+.elif ${OPSYS} == "Darwin"
+AMANDA_GROUP?=		operator
 .endif
 
 AMANDA_USER?=		backup
@@ -16,6 +18,8 @@ BUILD_DEFS+=		AMANDA_USER AMANDA_GROUP AMANDA_SMB AMANDA_VAR
 
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
+CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config/config.guess
+CONFIG_SUB_OVERRIDE=	${WRKSRC}/config/config.sub
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-user=${AMANDA_USER}
