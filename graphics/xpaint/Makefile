@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/03/04 14:59:23 tron Exp $
+# $NetBSD: Makefile,v 1.16 1999/05/09 18:47:22 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/29 12:17:50 tg Exp
 #
 
@@ -22,5 +22,12 @@ pre-configure:
 		-e 's|\$${X11BASE}|'${X11BASE}'|g' \
 		< ${WRKSRC}/Local.config > ${WRKSRC}/Local.config.new && \
 	${MV} -f ${WRKSRC}/Local.config.new ${WRKSRC}/Local.config
+
+.if (${MACHINE_ARCH} == arm32)
+pre-build:
+	cd ${WRKSRC} && \
+	${SETENV} ${MAKE_ENV} CDEBUGFLAGS=-O0 \
+	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} iprocess.o
+.endif
 
 .include "../../mk/bsd.pkg.mk"
