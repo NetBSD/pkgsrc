@@ -1,15 +1,6 @@
---- ../../original/src/sip.c	Tue Oct 29 16:37:28 1996
-+++ src/sip.c	Tue Nov 18 17:41:31 1997
-@@ -213,7 +213,7 @@
- #ifndef WIN32
- 	{
- 	  char buf[200];
--	  int ans[500];
-+	  u_int32_t ans[500];
- 	  int ctr;
- 	  char *tstr, *resstr;
- 	  struct dnshdr *dnsa;
-@@ -222,7 +222,7 @@
+--- /tmp/newsdr/src/sip_common.c	Tue Apr 29 23:48:25 1997
++++ src/sip_common.c	Wed Jun 17 16:53:24 1998
+@@ -211,7 +211,7 @@
  	  len=res_mkquery(QUERY, hostname, C_IN, T_MX, NULL, NULL, 
  			  NULL, buf, 200);
  	  if (len==-1) perror("res_mkquery");
@@ -18,7 +9,7 @@
  	  if (len==-1) perror("res_send");
  	  ans[0]=htonl(ans[0]);
  	  ans[1]=htonl(ans[1]);
-@@ -294,7 +294,8 @@
+@@ -283,7 +283,8 @@
  		    } else {
  		      /*it's compressed*/
  		        if(*tstr==0) tstr+=2;
