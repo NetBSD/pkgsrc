@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.347 1999/09/28 10:07:38 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.348 1999/09/29 10:07:24 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -124,7 +124,7 @@ BUILD_DEPENDS+=		${PREFIX}/include/Xm/Xm.h:${PKGSRCDIR}/x11/lesstif
 .endif
 
 .if defined(USE_LIBTOOL)
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 LIBTOOL=		${LOCALBASE}/bin/pkglibtool-${OBJECT_FMT}-1.2p2
 BUILD_DEPENDS+=		${LIBTOOL}:${PKGSRCDIR}/pkgtools/pkglibtool
 .else
