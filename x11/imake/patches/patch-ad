@@ -1,59 +1,18 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/01/24 08:43:28 xtraeme Exp $
+$NetBSD: patch-ad,v 1.2 2004/03/28 22:06:16 xtraeme Exp $
 
---- config/cf/NetBSD.cf.in.orig	2003-07-21 09:42:40.000000000 +0000
-+++ config/cf/NetBSD.cf.in	2003-07-21 09:47:58.000000000 +0000
-@@ -89,22 +89,28 @@
- 
- #define HasVarRun		YES
- #define HasVarDb		YES
-+#define HasShadowPasswd         NO
- 
- #define InstallXloadSetGID	NO
- 
--/* Defines for using the GNU pth thread library -- experimental */
-+#ifndef NetBSDThreads
-+# define NetBSDThreads          YES
-+#endif
- 
--#ifdef NetBSDPth
--#define PthreadHLocation	-I/usr/local/include /* where is pthread.h? */
--#define LibPthreadLocation	-L/usr/local/lib /* where is libpthread? */
--#define HasThreadSafeAPI	NO
--#define	HasPosixThreads		YES
--#define SystemMTDefines		-D_REENTRANT PthreadHLocation
--#define ThreadsLibraries	LibPthreadLocation -Wl,-rpath,/usr/local/lib -lpthread
--#define SharedX11Reqs		ThreadsLibraries
-+#if NetBSDThreads && \
-+    ((OSMajorVersion > 1) || \
-+     (OSMajorVersion == 1 && OSMinorVersion > 6) || \
-+     (OSMajorVersion == 1 && OSMinorVersion == 6 && OSTeenyVersion >= 13))
-+
-+# define HasPosixThreads        YES
-+# define ThreadedX              YES
-+# define HasThreadSafeAPI       YES
-+# define ThreadsLibraries       -lpthread
-+# define LibraryMTDefines       -DUSE_NBSD_THREADLIB
-+# define SystemMTDefines        -D_REENTRANT
-+# define MTSafeAPIDefines       -DXUSE_MTSAFE_API -DXNO_MTSAFE_PWDAPI
- #else 
--#define HasPosixThreads		NO
--#define ThreadedX		NO
-+# define ThreadedX NO
- #endif
- 
- /*
-@@ -122,8 +128,7 @@
- 
+--- config/cf/NetBSD.cf.in.orig	2004-03-03 07:53:38.000000000 +0000
++++ config/cf/NetBSD.cf.in	2004-03-03 07:54:59.000000000 +0000
+@@ -143,7 +143,7 @@
  #define MkdirHierCmd		mkdir -p
  
--#undef CcCmd
+ #undef CcCmd
 -#define CcCmd 			gcc
 +#define CcCmd 			@@PKGSRC_CC@@
  #ifndef DefaultCCOptions
  #if defined(UseInstalled)
  #define DefaultCCOptions 	/**/
-@@ -143,7 +148,7 @@
- #define UseGccMakeDepend	YES
+@@ -159,7 +159,7 @@
+ #endif
  #endif
  
 -#define CppCmd			cpp
@@ -61,20 +20,22 @@ $NetBSD: patch-ad,v 1.1.1.1 2004/01/24 08:43:28 xtraeme Exp $
  #define StandardCppOptions	-traditional
  #define StandardCppDefines	/**/
  #define PreProcessCmd   	CcCmd -E
-@@ -191,10 +196,10 @@
- # ifndef DefaultGcc2i386Opt
- #  if OSMajorVersion > 1 || (OSMajorVersion == 1 && OSMinorVersion > 2)
-     /* The GCC strength-reduce bug is fixed for NetBSD 1.3 and later */
--#   define DefaultGcc2i386Opt -O2
-+#   define DefaultGcc2i386OpT
- #  endif
- # endif
+@@ -208,13 +208,7 @@
+ #define HasWeakSymbols		UseElfFormat 
+ 
+ #ifdef i386Architecture
+-# ifndef DefaultGcc2i386Opt
+-#  if OSMajorVersion > 1 || (OSMajorVersion == 1 && OSMinorVersion > 2)
+-    /* The GCC strength-reduce bug is fixed for NetBSD 1.3 and later */
+-#   define DefaultGcc2i386Opt -O2 GccAliasingArgs
+-#  endif
+-# endif
 -# define OptimizedCDebugFlags 	DefaultGcc2i386Opt
-+# define OptimizedCDebugFlags   @@PKGSRC_CFLAGS@@
++# define OptimizedCDebugFlags 	@@PKGSRC_CFLAGS@@
  # if OSMajorVersion < 1
  #  define ServerOSDefines	XFree86ServerOSDefines -DXNO_SYSCONF
  # else
-@@ -204,7 +209,7 @@
+@@ -224,7 +218,7 @@
  #  define ServerExtraSysLibs	-li386
  # endif
  #else

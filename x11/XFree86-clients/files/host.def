@@ -1,8 +1,4 @@
-/*
- * $NetBSD: host.def,v 1.2 2004/02/02 14:16:07 xtraeme Exp $
- *
- * XFree86 packages for pkgsrc system
- */ 
+/* $NetBSD: host.def,v 1.3 2004/03/28 22:06:15 xtraeme Exp $ */
 
 #define ProjectRoot @PREFIX@
 #define BuildHtmlManPages NO
@@ -49,9 +45,10 @@
 #define InstallXinitConfig YES
 #define InstallAppDefFiles YES
 
+#define StandardIncludes -I@BLNK@/include
 #define ExtraLoadFlags @LDFLAGS@
 #define LibInstallBuild  YES
-#define StandardIncludes -I@BLNK@/include -I@PREFIX@/include
+
 #define DontUseLibPathVar YES
 #define PreloadSetup
 #define UseInstalledPrograms YES

@@ -1,21 +1,23 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/01/24 08:47:28 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2004/03/28 22:06:15 xtraeme Exp $
 
---- config/cf/X11.tmpl.orig	2003-02-25 21:57:52.000000000 +0000
-+++ config/cf/X11.tmpl	2003-07-21 15:11:05.000000000 +0000
-@@ -1498,6 +1498,7 @@
+--- config/cf/Library.tmpl.orig	Mon Aug 27 10:40:55 2001
++++ config/cf/Library.tmpl	Wed Oct 16 21:53:13 2002
+@@ -300,6 +300,10 @@
+  */
  
- #ifndef PsWrap
- #define PsWrap $(PSWRAPSRC)/pswrap
-+#define PsWrapDependency /* empty */
+ #ifndef MakeStringsDependency
++#if defined(UseInstalled) || defined(UseInstalledPrograms)
++#define MakeStringsDependency						@@\
++MAKESTRS = @MAKESTRS@
++#else
+ # define MakeStringsDependency						@@\
+ MAKESTRS = $(CONFIGSRC)/util/makestrs					@@\
+ NoCmpScript(HostProgramTargetName($(MAKESTRS)) $(MAKESTRS).Osuf)	@@\
+@@ -308,6 +312,7 @@
+ 	cd $(CONFIGSRC)/util && $(MAKE) HostProgramTargetName(makestrs)	@@\
+ 									@@\
+ includes:: HostProgramTargetName($(MAKESTRS))
++#endif
  #endif
  
- #ifndef ResourceConfigurationManagement 
-@@ -3029,7 +3030,7 @@
- #endif /* else BuildFreetype2Library */
- 
- #if BuildFreetype2Library || HasFreetype2
--FREETYPE2INCLUDES = -I$(FREETYPE2INCDIR)
-+FREETYPE2INCLUDES = -I$(FREETYPE2DIR)/include -I$(FREETYPE2INCDIR)
- FREETYPE2DEFINES = -DFREETYPE2
- #endif
- 
+ #ifndef ToolkitMakeStrings
