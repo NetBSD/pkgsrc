@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/09/22 08:09:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/11/08 10:28:15 adam Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -31,7 +31,6 @@ etc/sane.d/matsushita.conf
 etc/sane.d/microtek.conf
 etc/sane.d/microtek2.conf
 etc/sane.d/mustek.conf
-etc/sane.d/mustek_pp.conf
 etc/sane.d/mustek_usb.conf
 etc/sane.d/nec.conf
 etc/sane.d/net.conf
@@ -87,10 +86,10 @@ lib/sane/libsane-matsushita.la
 lib/sane/libsane-microtek.la
 lib/sane/libsane-microtek2.la
 lib/sane/libsane-mustek.la
-lib/sane/libsane-mustek_pp.la
 lib/sane/libsane-mustek_usb.la
 lib/sane/libsane-nec.la
 lib/sane/libsane-net.la
+lib/sane/libsane-niash.la
 lib/sane/libsane-pie.la
 ${NOT_SUNOS}lib/sane/libsane-pint.la
 lib/sane/libsane-plustek.la
@@ -115,7 +114,6 @@ lib/sane/libsane-umax_pp.la
 man/man1/gamma4scanimage.1
 man/man1/sane-config.1
 man/man1/sane-find-scanner.1
-man/man1/saned.1
 man/man1/scanimage.1
 man/man5/sane-abaton.5
 man/man5/sane-agfafocus.5
@@ -153,6 +151,7 @@ man/man5/sane-mustek_pp.5
 man/man5/sane-mustek_usb.5
 man/man5/sane-nec.5
 man/man5/sane-net.5
+man/man5/sane-niash.5
 man/man5/sane-pie.5
 man/man5/sane-pint.5
 man/man5/sane-plustek.5
@@ -180,6 +179,7 @@ man/man5/sane-umax_pp.5
 man/man5/sane-usb.5
 man/man5/sane-v4l.5
 man/man7/sane.7
+man/man8/saned.8
 sbin/saned
 share/doc/sane-${SANE_VERSION}/AUTHORS
 share/doc/sane-${SANE_VERSION}/COPYING
@@ -207,25 +207,23 @@ share/doc/sane-${SANE_VERSION}/backend-writing.txt
 share/doc/sane-${SANE_VERSION}/canon/canon.changes
 share/doc/sane-${SANE_VERSION}/canon/canon.install2700F.txt
 share/doc/sane-${SANE_VERSION}/gt68xx/gt68xx.CHANGES
+share/doc/sane-${SANE_VERSION}/gt68xx/gt68xx.TODO
 share/doc/sane-${SANE_VERSION}/leo/leo.txt
 share/doc/sane-${SANE_VERSION}/matsushita/matsushita.txt
 share/doc/sane-${SANE_VERSION}/mustek/mustek.CHANGES
 share/doc/sane-${SANE_VERSION}/mustek_usb/mustek_usb.CHANGES
 share/doc/sane-${SANE_VERSION}/mustek_usb/mustek_usb.TODO
-share/doc/sane-${SANE_VERSION}/plustek/BUILD
+share/doc/sane-${SANE_VERSION}/niash/niash.TODO
 share/doc/sane-${SANE_VERSION}/plustek/FAQ
 share/doc/sane-${SANE_VERSION}/plustek/MakeModule.sh
 share/doc/sane-${SANE_VERSION}/plustek/Makefile.kernel24
 share/doc/sane-${SANE_VERSION}/plustek/Makefile.kernel26
-share/doc/sane-${SANE_VERSION}/plustek/Makefile.module
 share/doc/sane-${SANE_VERSION}/plustek/Plustek-PARPORT-TODO.txt
 share/doc/sane-${SANE_VERSION}/plustek/Plustek-PARPORT.changes
 share/doc/sane-${SANE_VERSION}/plustek/Plustek-PARPORT.txt
 share/doc/sane-${SANE_VERSION}/plustek/Plustek-USB-TODO.txt
 share/doc/sane-${SANE_VERSION}/plustek/Plustek-USB.changes
 share/doc/sane-${SANE_VERSION}/plustek/Plustek-USB.txt
-share/doc/sane-${SANE_VERSION}/plustek/VERSION0
-share/doc/sane-${SANE_VERSION}/plustek/VERSION1
 share/doc/sane-${SANE_VERSION}/sane-backends-external.html
 share/doc/sane-${SANE_VERSION}/sane-backends.html
 share/doc/sane-${SANE_VERSION}/sane-mfgs-external.html
@@ -268,6 +266,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/sane-backends.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/sane-backends.mo
@@ -283,6 +282,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sane-backends.mo
 @dirrm share/doc/sane-${SANE_VERSION}/teco
 @dirrm share/doc/sane-${SANE_VERSION}/sceptre
 @dirrm share/doc/sane-${SANE_VERSION}/plustek
+@dirrm share/doc/sane-${SANE_VERSION}/niash
 @dirrm share/doc/sane-${SANE_VERSION}/mustek_usb
 @dirrm share/doc/sane-${SANE_VERSION}/mustek
 @dirrm share/doc/sane-${SANE_VERSION}/matsushita
