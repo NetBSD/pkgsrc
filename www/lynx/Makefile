@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2004/03/03 14:01:00 adam Exp $
+# $NetBSD: Makefile,v 1.68 2004/03/03 21:14:41 ben Exp $
 #
 
 DISTNAME=	lynx2.8.5
@@ -108,9 +108,11 @@ CONFIGURE_ARGS+= 	--with-socks5
 CONFIGURE_ARGS+=       --enable-ipv6
 .endif
 
-# problem encountered with zh_TW.po, maybe it will be fixed in the future
-post-extract:
-	${RM} ${WRKSRC}/po/zh_TW.po
+SUBST_CLASSES+=		gettext
+SUBST_MESSAGE.gettext=	"Fixing Chinese PO file."
+SUBST_STAGE.gettext=	post-patch
+SUBST_FILES.gettext=	po/zh_TW.po
+SUBST_SED.gettext=	'/^msgstr/s/\(\\[^"[:alpha:]]\)/\\\1/g'
 
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/lynx
