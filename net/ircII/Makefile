@@ -3,7 +3,7 @@
 # Date created:		18 Oct 1994
 # Whom:			torstenb
 #
-# $NetBSD: Makefile,v 1.7 1998/02/15 10:31:46 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/02/20 07:23:29 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
@@ -28,9 +28,13 @@ MAN1=			ircII.1 ircbug.1
 
 OPSYS!=			uname -s
 .if (${OPSYS} == "FreeBSD")
+.if exists(/etc/make.conf)
 .include "/etc/make.conf"
+.endif
 .else
+.if exists(/etc/mk.conf)
 .include "/etc/mk.conf"
+.endif
 .endif
 
 .if defined(MANZ)
