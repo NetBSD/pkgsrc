@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6970 2004/08/22 03:22:47 markd Exp $
+$NetBSD: CHANGES,v 1.6971 2004/08/22 15:12:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4017,3 +4017,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed netqmail [schmonz 2004-08-22]
 	Updated kmplayer to 0.8.3rc4 [markd 2004-08-22]
 	Updated ivtools to 1.2.1 [markd 2004-08-22]
+	Updated squid to 2.5.6 [taca 2004-08-22]
