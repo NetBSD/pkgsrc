@@ -1,0 +1,3 @@
+qtools is a collection of commands, typically for use with qmail via .qmail.
+Among others, there are commands for header and body filtering as well 
+as delivery to Maildirs.
