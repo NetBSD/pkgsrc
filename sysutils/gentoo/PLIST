@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/05/07 13:49:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/01/11 11:22:05 adam Exp $
 bin/gentoo
 share/examples/gentoo/gentoogtkrc
 share/examples/gentoo/gentoorc
@@ -128,6 +128,7 @@ share/gentoo/icons/xpm2.xpm
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gentoo.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gentoo.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gentoo.mo
+${PKGLOCALEDIR}/locale/ja_JP.UTF-8/LC_MESSAGES/gentoo.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gentoo.mo
 ${PKGLOCALEDIR}/locale/ru_RU.CP1251/LC_MESSAGES/gentoo.mo
 ${PKGLOCALEDIR}/locale/ru_RU.KOI8-R/LC_MESSAGES/gentoo.mo
