@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/05/25 15:17:26 grant Exp $
+# $NetBSD: Makefile,v 1.35 2004/06/03 23:31:53 jschauma Exp $
 #
 
 PKGNAME=	${DISTNAME:C/-/-base-/}
@@ -47,9 +47,11 @@ CONFIGURE_ENV+=		SED=${SED:Q}
 CONFIGURE_ENV+=		lt_cv_path_SED=${SED:Q}
 
 # The configure script doesn't seem to be working out the need for -p
-# so tell it
+# or -B, so tell it
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=		lt_cv_path_NM="nm -p"
+.elif ${OPSYS} == "IRIX"
+CONFIGURE_ENV+=		lt_cv_path_NM="nm -B"
 .endif
 
 .if ${OPSYS} == "Darwin"
