@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2002/04/23 11:13:53 zuntum Exp $
+
+--- bozohttpd.c.orig	Sat Sep 22 12:10:00 2001
++++ bozohttpd.c
+@@ -359,6 +359,7 @@
+ 		case 'c':
+ #ifndef NO_CGIBIN_SUPPORT
+ 			cgibin = optarg;
++			debug((DEBUG_OBESE, "cgibin (cgi-bin directory) is %s", cgibin));
+ 			break;
+ #else
+ 			error(1, "CGI is not enabled");
