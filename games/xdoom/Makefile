@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/04/01 14:07:54 agc Exp $
+# $NetBSD: Makefile,v 1.9 1999/04/05 16:35:27 mycroft Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	unzip:../../archivers/unzip
 LICENSE=	shareware
 
 EXTRACT_ONLY=	doomsrc.zip
-EXTRACT_CMD=	unzip -qo ${EXTRACT_ONLY}
+EXTRACT_CMD=	unzip -qo ${DISTDIR}/${EXTRACT_ONLY}
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 
