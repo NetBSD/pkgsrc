@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/10/19 03:51:10 ben Exp $
+# $NetBSD: Makefile,v 1.23 2004/10/20 20:02:13 tron Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -9,7 +9,7 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 
 SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
 		ftp://ftp.mplayerhq.hu/MPlayer/Skin/		\
@@ -22,6 +22,7 @@ SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
 COMMENT=	Software only MPEG-1/2/4 video decoder with a GTK+ interface
 
 SKINS +=	AlienMind-1.2${EXTRACT_SUFX}			\
+		Blue-1.4${EXTRACT_SUFX}				\
 		BlueHeart-1.5${EXTRACT_SUFX}			\
 		CornerMP-1.2${EXTRACT_SUFX}			\
 		CornerMP-aqua-1.4${EXTRACT_SUFX}		\
@@ -66,6 +67,8 @@ do-install:
 .endfor
 	@${CHMOD} -R a+r ${PREFIX}/share/mplayer/Skin
 	@${CHMOD} a+rx ${PREFIX}/share/mplayer/Skin/*
+	@${RM} -f ${PREFIX}/share/mplayer/Skin/default
+	${LN} -s Blue ${PREFIX}/share/mplayer/Skin/default
 
 .include "../../multimedia/mplayer-share/Makefile.depends"
 
