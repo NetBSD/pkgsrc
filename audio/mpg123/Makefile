@@ -3,10 +3,10 @@
 # Date created:		97-10-25
 # Whom:			augustss@cs.chalmers.se
 #
-# $NetBSD: Makefile,v 1.3 1998/01/19 00:58:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/02/26 20:01:53 augustss Exp $
 #
 
-DISTNAME=       mpg123-0.59k
+DISTNAME=       mpg123-0.59n
 CATEGORIES=	audio
 MASTER_SITES=   http://ftp.tu-clausthal.de/pub/unix/audio/mpg123/
 
