@@ -1,0 +1,47 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/08 20:53:04 tron Exp $
+share/doc/phpmyadmin/CREDITS
+share/doc/phpmyadmin/DEVELOPERS
+share/doc/phpmyadmin/Documentation.html
+share/doc/phpmyadmin/INSTALL
+share/doc/phpmyadmin/LICENSE
+share/doc/phpmyadmin/README
+share/doc/phpmyadmin/TODO
+share/phpmyadmin/config.inc.php3
+share/phpmyadmin/db_create.php3
+share/phpmyadmin/db_details.php3
+share/phpmyadmin/db_printview.php3
+share/phpmyadmin/db_readdump.php3
+share/phpmyadmin/defines.inc.php3
+share/phpmyadmin/footer.inc.php3
+share/phpmyadmin/grab_globals.inc.php3
+share/phpmyadmin/header.inc.php3
+share/phpmyadmin/images/bkg.gif
+share/phpmyadmin/images/browse.gif
+share/phpmyadmin/images/minus.gif
+share/phpmyadmin/images/plus.gif
+share/phpmyadmin/images/spacer.gif
+share/phpmyadmin/index.php3
+share/phpmyadmin/ldi_check.php3
+share/phpmyadmin/ldi_table.php3
+share/phpmyadmin/left.php3
+share/phpmyadmin/lib.inc.php3
+share/phpmyadmin/main.php3
+share/phpmyadmin/select_lang.inc.php3
+share/phpmyadmin/sql.php3
+share/phpmyadmin/tbl_addfield.php3
+share/phpmyadmin/tbl_alter.php3
+share/phpmyadmin/tbl_change.php3
+share/phpmyadmin/tbl_copy.php3
+share/phpmyadmin/tbl_create.php3
+share/phpmyadmin/tbl_dump.php3
+share/phpmyadmin/tbl_printview.php3
+share/phpmyadmin/tbl_properties.inc.php3
+share/phpmyadmin/tbl_properties.php3
+share/phpmyadmin/tbl_qbe.php3
+share/phpmyadmin/tbl_rename.php3
+share/phpmyadmin/tbl_replace.php3
+share/phpmyadmin/tbl_select.php3
+share/phpmyadmin/user_details.php3
+@dirrm share/phpmyadmin/images
+@dirrm share/phpmyadmin
+@dirrm share/doc/phpmyadmin
