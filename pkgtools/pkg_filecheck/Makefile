@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/11/15 17:54:50 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2004/11/17 08:13:09 jlam Exp $
 #
 
 DISTNAME=		pkg_filecheck-0.1
@@ -24,15 +24,16 @@ FILES_SUBST+=	PKG_DBDIR=${PKG_DBDIR}
 CONF_FILES=	${PREFIX}/share/examples/pkg_filecheck/pkg_filecheck.conf \
 		${PKG_SYSCONFDIR}/pkg_filecheck.conf
 
+.include "../../mk/bdb.buildlink3.mk"
+
 do-build:
 .for f in builddb.pl builddb.1 pkg_filecheck.conf pkg_filecheck.conf.5 \
 	pkg_filecheck.c pkg_filecheck.1
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/${f} > ${WRKSRC}/${f}
 .endfor
 	cd ${WRKSRC} \
-	    && ${CC} ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} \
+	    && ${CC} ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} ${BDB_LIBS} \
 		-o pkg_filecheck pkg_filecheck.c \
-		${BUILDLINK_LDFLAGS.db} ${BUILDLINK_LIBS.db}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/builddb.pl ${PREFIX}/bin/builddb
@@ -44,5 +45,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/pkg_filecheck.conf \
 		${PREFIX}/share/examples/pkg_filecheck/pkg_filecheck.conf
 
-.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
