@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/09/22 21:24:45 tron Exp $
+# $NetBSD: Makefile,v 1.39 2004/09/22 21:27:24 tron Exp $
 #
 
 PKGCONFIG_OVERRIDE=	gnome-vfs-2.0.pc.in
@@ -36,7 +36,6 @@ GCONF2_SCHEMAS+=	system_smb.schemas
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../net/bind9/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
