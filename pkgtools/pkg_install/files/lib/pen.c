@@ -1,4 +1,4 @@
-/*	$NetBSD: pen.c,v 1.3 2003/01/06 04:34:17 jschauma Exp $	*/
+/*	$NetBSD: pen.c,v 1.4 2003/03/16 19:44:10 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: pen.c,v 1.25 1997/10/08 07:48:12 charnier Exp";
 #else
-__RCSID("$NetBSD: pen.c,v 1.3 2003/01/06 04:34:17 jschauma Exp $");
+__RCSID("$NetBSD: pen.c,v 1.4 2003/03/16 19:44:10 jschauma Exp $");
 #endif
 #endif
 #endif
@@ -187,7 +187,7 @@ make_playpen(char *pen, size_t pensize, size_t sz)
 		cleanup(0);
 		errx(2, "can't chdir to '%s'", pen);
 	}
-	strcpy(Current, pen); CurrentSet = 1;
+	CurrentSet = 0; strcpy(Current, pen); CurrentSet = 1;
 	
 	return Previous;
 }
@@ -228,7 +228,7 @@ leave_playpen(char *save)
  * in libc on 2.7 and 2.8, but not in 2.9)
  */
 #if !defined(HAVE_STATFS) || (defined(HAVE_STATFS) && defined(HAVE_STATVFS) && !defined(__linux__))
-/*	$NetBSD: pen.c,v 1.3 2003/01/06 04:34:17 jschauma Exp $	*/
+/*	$NetBSD: pen.c,v 1.4 2003/03/16 19:44:10 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1998 The NetBSD Foundation, Inc.
