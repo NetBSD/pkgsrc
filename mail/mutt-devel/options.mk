@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/08/05 03:04:33 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2004/08/05 03:30:16 jlam Exp $
 
 # Global and legacy options
 .if defined(MUTT_USE_SLANG) || defined(MUTT_USE_NCURSES) || \
@@ -18,9 +18,9 @@ PKG_OPTIONS.mutt+=	sasl
 .    endif
 .  endif
 .endif
-PKG_OPTIONS.mutt?=	ssl
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
+PKG_OPTIONS.mutt?=	ssl
 PKG_SUPPORTED_OPTIONS=	slang ncurses ssl sasl
 .include "../../mk/bsd.options.mk"
 
