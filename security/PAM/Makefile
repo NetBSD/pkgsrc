@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/01/24 15:00:22 grant Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/10 18:07:16 jlam Exp $
 #
 
 DISTNAME=	Linux-PAM-0.77
@@ -100,5 +100,5 @@ post-install:
 .endif
 	${INSTALL_DATA_DIR} ${DOCDIR}
 
-.include "../../databases/db/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/03/07 12:29:41 martti Exp $
+# $NetBSD: Makefile,v 1.28 2004/03/10 18:07:16 jlam Exp $
 
 DISTNAME=	postfix-2.0.18-20040209
 PKGNAME=	postfix-20040209
@@ -213,9 +213,9 @@ do-install:
 
 .if ${OPSYS} == "Linux"
 .include "../../databases/db/buildlink3.mk"
-CCARGS+=	-I${BUILDLINK_PREFIX.db}/include/db2
-AUXLIBS+=	-L${BUILDLINK_PREFIX.db}/lib                    \
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db}/lib     \
+CCARGS+=	-I${BUILDLINK_PREFIX.db2}/include/db2
+AUXLIBS+=	-L${BUILDLINK_PREFIX.db2}/lib                    \
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db2}/lib     \
 		-ldb2
 .endif
 
