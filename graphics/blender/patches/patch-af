@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2005/02/26 20:34:43 reinoud Exp $
+
+--- source/gameengine/BlenderRoutines/SConscript.orig	2004-05-16 15:07:17.000000000 +0200
++++ source/gameengine/BlenderRoutines/SConscript
+@@ -46,6 +46,7 @@ kx_blenderhook_env.Append (CPPPATH=['.',
+ 
+ kx_blenderhook_env.Append (CPPPATH = user_options_dict['PYTHON_INCLUDE'])
+ kx_blenderhook_env.Append (CPPPATH = user_options_dict['SOLID_INCLUDE'])
++kx_blenderhook_env.Append (CPPPATH = user_options_dict['OPENGL_INCLUDE'])
+ 
+ if sys.platform=='win32':
+     kx_blenderhook_env.Append (CXXFLAGS = ['/GR'])

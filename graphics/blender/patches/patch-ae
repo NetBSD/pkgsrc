@@ -1,0 +1,107 @@
+$NetBSD: patch-ae,v 1.1 2005/02/26 20:34:43 reinoud Exp $
+
+--- SConstruct.orig	2004-12-21 18:00:25.000000000 +0100
++++ SConstruct
+@@ -50,7 +50,92 @@ sdl_env = Environment ()
+ freetype_env = Environment ()
+ env = Environment ()
+ 
+-if sys.platform == 'linux2' or sys.platform == 'linux-i386':
++# pkgsrc patch
++# 
++sys.platform = 'pkgsrc'
++if sys.platform == 'pkgsrc':
++	print "Building for pkgsrc systems"
++	use_international = 'false'
++	use_gameengine = 'true'
++	use_openal = 'false'
++	use_fmod = 'false'
++	use_quicktime = 'false'
++	use_sumo = 'false'	# TODO
++	use_ode = 'false'
++	use_buildinfo = 'true'
++	build_blender_dynamic = 'true'
++	build_blender_static = 'false'
++	build_blender_player = 'false'
++	build_blender_plugin = 'false'
++	release_flags = ['-O2']
++	debug_flags = ['-O2', '-g']
++	extra_flags = ['-pipe', '-fPIC', '-funsigned-char']
++	cxxflags = []
++	defines = []
++	warn_flags = ['-Wall','-W']
++	window_system = 'X11'
++	platform_libs = ['m', 'stdc++', 'pthread', 'util']
++	platform_libpath = []
++	platform_linkflags = []
++	extra_includes = []
++	z_lib = ['z']
++	z_libpath = []
++	z_include = []
++	# png library information
++	png_lib = ['png']
++	png_libpath = os.environ[ 'ADD_C_LIB_DIRS' ].split(",")
++	png_include = os.environ[ 'ADD_C_INCLUDE_DIRS' ].split(",")
++	# jpeg library information
++	jpeg_lib = ['jpeg']
++	jpeg_libpath = os.environ[ 'ADD_C_LIB_DIRS' ].split(",")
++	jpeg_include = os.environ[ 'ADD_C_INCLUDE_DIRS' ].split(",")
++	# OpenGL library information
++	opengl_lib = ['GL', 'GLU']
++	opengl_libpath = os.environ[ 'ADD_C_LIB_DIRS' ].split(",")
++	opengl_include = os.environ[ 'ADD_C_INCLUDE_DIRS' ].split(",")
++	opengl_static = ['libGL.a', 'libGLU.a']
++	# SDL library information
++	sdl_env.ParseConfig ('sdl-config --cflags --libs')
++	sdl_cflags = sdl_env.Dictionary()['CCFLAGS']
++	sdl_include = sdl_env.Dictionary()['CPPPATH']
++	sdl_libpath = sdl_env.Dictionary()['LIBPATH']
++	sdl_lib = sdl_env.Dictionary()['LIBS']
++	# SOLID library information
++	solid_lib = []					 # TODO
++	solid_libpath = []		# TODO
++	solid_include = ['#extern/solid']
++	qhull_lib = []	   # TODO
++	qhull_libpath = []  # TODO
++	qhull_include = ['#extern/qhull/include']
++	# ODE library information
++	ode_lib = ['ode']
++	ode_libpath = ['#../lib/linux-glibc2.2.5-i386/ode/lib']
++	ode_include = ['#../lib/linux-glibc2.2.5-i386/ode/include']
++	# Python library information
++	python_lib = ['python%d.%d' % sys.version_info[0:2]]
++	python_libpath = [sysconfig.get_python_lib (0, 1) + '/config']
++	python_include = [sysconfig.get_python_inc ()]
++	python_linkflags = Split (sysconfig.get_config_var('LINKFORSHARED'))
++	# International support information
++	ftgl_lib = ['ftgl']
++	ftgl_libpath = ['#../lib/linux-glibc2.2.5-i386/ftgl/lib']
++	ftgl_include = ['#../lib/linux-glibc2.2.5-i386/ftgl/include']
++	freetype_env.ParseConfig('pkg-config --cflags --libs freetype2')
++	freetype_lib = freetype_env.Dictionary()['LIBS']
++	freetype_libpath = freetype_env.Dictionary()['LIBPATH']
++	freetype_include = freetype_env.Dictionary()['CPPPATH']
++	gettext_lib = []
++	gettext_libpath = []
++	gettext_include = []
++	# OpenAL library information
++	openal_lib = ['openal']
++	openal_libpath = []
++	openal_include = []
++	
++elif sys.platform=='freebsd4' or sys.platform=='freebsd5':
++	print "Building for FreeBSD"
++
++elif sys.platform == 'linux2' or sys.platform == 'linux-i386':
+ 	use_international = 'false'
+ 	use_gameengine = 'true'
+ 	use_openal = 'false'
+@@ -591,7 +676,7 @@ elif sys.platform=='openbsd3':
+ 	use_openal = 'false'
+ 	use_fmod = 'false'
+ 	use_quicktime = 'false'
+-	use_sumo = 'false'
++	use_sumo = 'true'
+ 	use_ode = 'false'
+ 	use_buildinfo = 'true'
+ 	build_blender_dynamic = 'true'

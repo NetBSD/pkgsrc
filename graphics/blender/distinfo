@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.12 2005/02/24 08:45:03 agc Exp $
+$NetBSD: distinfo,v 1.13 2005/02/26 20:34:43 reinoud Exp $
 
-SHA1 (blender-2.32.tar.bz2) = 79a508e234d5e40287e9ebef352e3b0ee2ad443e
-RMD160 (blender-2.32.tar.bz2) = 94dedf9ad8af5921587854054e4fae48b3c57778
-Size (blender-2.32.tar.bz2) = 5661028 bytes
-SHA1 (patch-aa) = 733f4ec4e5236e4196288ead26c2680a78e2d77b
+SHA1 (blender-2.36.tar.gz) = 7f771bfc5fd77d0c7d17f10d235217714936a614
+Size (blender-2.36.tar.gz) = 6912828 bytes
 SHA1 (patch-ab) = 46b1d28ee4702501cdc6a7b48cbd0eb2642550c8
+SHA1 (patch-ac) = dcfa14519404915a69bd626c8a5a6029d2535ca2
+SHA1 (patch-ad) = 51fd489f3e8065d7212bd86149821a9a2b70faeb
+SHA1 (patch-ae) = 7635599afe0629a5c2e127c3d3ab26043934e5d7
+SHA1 (patch-af) = af095208cedd346621f59e9c85fa8693f3258dd3
+SHA1 (patch-ag) = ef3a596fc6a909eff1fb4d500140405573484543
