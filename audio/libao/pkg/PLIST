@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/15 20:35:58 wiz Exp $
+lib/ao/libesd.la
+lib/ao/libesd.so
+lib/ao/libesd.so.0
+lib/ao/libesd.so.0.0
+lib/ao/liboss.la
+lib/ao/liboss.so
+lib/ao/liboss.so.0
+lib/ao/liboss.so.0.0
+lib/libao.la
+lib/libao.so
+lib/libao.so.1
+lib/libao.so.1.0
+include/ao/ao.h
+include/ao/os_types.h
+share/doc/${PKGNAME}/API
+share/doc/${PKGNAME}/USAGE
+share/doc/${PKGNAME}/DRIVERS
+share/doc/${PKGNAME}/WANTED
+share/aclocal/ao.m4
+@dirrm include/ao
+@dirrm lib/ao
+@dirrm share/doc/${PKGNAME}
