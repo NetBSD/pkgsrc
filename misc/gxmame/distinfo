@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/23 09:02:39 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/11/07 21:13:23 kristerw Exp $
 
 SHA1 (gxmame-0.34b.tar.gz) = b727edd4b1ee0405c1e0bcfc1aa62eaa444c3846
 Size (gxmame-0.34b.tar.gz) = 996919 bytes
+SHA1 (patch-aa) = 0bf55d52837c8236045de84111475a0bf7ac4db0
+SHA1 (patch-ab) = 62b1b9fb02909cdc413a565bc81cb1d95e296e81
