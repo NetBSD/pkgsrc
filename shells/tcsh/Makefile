@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/11/26 23:57:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1997/11/27 11:56:07 explorer Exp $
 # New ports collection makefile for:	tcsh
 # Version required:     6.07.02
 # Date created:		22 August 1994
@@ -10,7 +10,7 @@
 DISTNAME=       tcsh-6.07
 PKGNAME=        tcsh-6.07.02
 CATEGORIES=	shells
-MASTER_SITES=   ftp://ftp.deshaw.com/pub/tcsh/
+MASTER_SITES=   ftp://ftp.astron.com/pub/tcsh/
 
 MAINTAINER=     ache@FreeBSD.ORG
 
