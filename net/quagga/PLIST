@@ -1,5 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/13 07:26:57 itojun Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/11/18 16:34:49 wiz Exp $
+include/ospfd/ospf_api.h
+include/ospfd/ospf_asbr.h
+include/ospfd/ospf_dump.h
+include/ospfd/ospf_ism.h
+include/ospfd/ospf_lsa.h
+include/ospfd/ospf_lsdb.h
+include/ospfd/ospf_nsm.h
+include/ospfd/ospf_opaque.h
+include/ospfd/ospfd.h
 info/quagga.info
+info/quagga.info-1
+info/quagga.info-2
+info/quagga.info-3
+info/quagga.info-4
+lib/libospf.a
+lib/libzebra.a
 man/man1/vtysh.1
 man/man8/bgpd.8
 man/man8/ospfd.8
@@ -13,8 +28,5 @@ share/examples/quagga/bgpd.conf.sample
 share/examples/quagga/bgpd.conf.sample2
 share/examples/quagga/ripd.conf.sample
 share/examples/quagga/zebra.conf.sample
-info/quagga.info-1
-info/quagga.info-2
-info/quagga.info-3
-info/quagga.info-4
 @dirrm share/examples/quagga
+@dirrm include/ospfd
