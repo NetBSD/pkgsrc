@@ -1,47 +1,59 @@
-$NetBSD: patch-ak,v 1.1 1999/09/29 00:41:26 christos Exp $
---- tcl/strerror.c.orig	Fri Feb 24 16:19:50 1995
-+++ tcl/strerror.c	Tue Sep 28 18:36:37 1999
-@@ -20,6 +20,7 @@
+$NetBSD: patch-ak,v 1.2 1999/11/26 22:12:38 hubertf Exp $
+
+diff -x *.orig -urN ./icb/unix.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/unix.c
+--- ./icb/unix.c	Fri Feb 24 22:20:31 1995
++++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/unix.c	Fri Nov 26 22:56:29 1999
+@@ -4,6 +4,8 @@
+ /* This file contains routines that are unix dependent. */
+ /* Eventually, most unixisms should be moved here. */
+ 
++#include <sys/types.h>
++#include <sys/param.h>
  #include <stdio.h>
- #include <string.h>
+ #include "icb.h"
+ #include "externs.h"
+@@ -13,6 +15,14 @@
+ #undef stty
+ #undef gtty
  
-+#if !defined(BSD4_4) && !defined(__linux__)
- /*
-  * List of known errors:
-  */
-@@ -138,3 +139,4 @@
-     (void) sprintf(defaultMsg, "unknown error (%d)", error);
-     return defaultMsg;
++#if defined(__linux__)
++#include <termios.h>
++#include <sys/ioctl.h>
++#define TTYSTRUCT termios
++#define stty(fd,buf) tcgetattr((fd), (buf))
++#define gtty(fd,buf) tcsetattr((fd), TCSANOW, (buf))
++#define SYSV
++#else 
+ #ifndef SYSV
+ 
+ #ifdef linux
+@@ -30,6 +40,7 @@
+ #define stty(fd,buf) ioctl((fd),TCSETA,(buf))
+ #define gtty(fd,buf) ioctl((fd),TCGETA,(buf))
+ #endif /* SYSV */
++#endif /* __linux__ */
+ 
+ char *getlogin();
+ 
+@@ -49,8 +60,10 @@
+ 	if (((loginid = getlogin()) == NULL) || *loginid == '\0')
+ 		if ((pw = getpwuid(getuid())) == NULL)
+ 			loginid = NULL;
+-		else
+-			loginid = pw->pw_name;
++		else {
++			loginid = malloc(strlen(pw->pw_name) + 1);
++			strcpy(loginid, pw->pw_name);
++		}
+ 	return(loginid);
  }
-+#endif
---- tcl/tclGlob.c.orig	Tue Sep 28 18:37:08 1999
-+++ tcl/tclGlob.c	Tue Sep 28 18:39:13 1999
-@@ -28,6 +28,12 @@
- #include <sys/stat.h>
- #include <tcl.h>
  
-+#ifdef __linux__
-+#define DIRNAMLEN(d) strlen((d)->d_name)
-+#else
-+#define DIRNAMLEN(d) ((d)->d_namlen)
-+#endif
-+
- /*
-  * The structure below is used to keep track of a globbing result
-  * being built up (i.e. a partial list of file names).  The list
-@@ -298,12 +304,12 @@
- 	    if (Tcl_StringMatch(entryPtr->d_name, pattern)) {
- 		if (*p == 0) {
- 		    AppendResult(dir, entryPtr->d_name,
--			    (int) entryPtr->d_namlen, resPtr);
-+			    (int) DIRNAMLEN(entryPtr), resPtr);
- 		} else {
--		    if ((l1+entryPtr->d_namlen+2) <= STATIC_SIZE) {
-+		    if ((l1+DIRNAMLEN(entryPtr)+2) <= STATIC_SIZE) {
- 			newDir = static1;
- 		    } else {
--			newDir = malloc((unsigned) (l1+entryPtr->d_namlen+2));
-+			newDir = malloc((unsigned) (l1+DIRNAMLEN(entryPtr)+2));
- 		    }
- 		    sprintf(newDir, "%s%s/", dir, entryPtr->d_name);
- 		    result = DoGlob(interp, newDir, p+1, resPtr);
+@@ -181,7 +194,7 @@
+ 
+ getwinsize()
+ {
+-#ifndef NOWINSIZE
++#ifdef TIOCGWINSZ
+ 	struct winsize win;
+ 
+ 	/* get tty settings */

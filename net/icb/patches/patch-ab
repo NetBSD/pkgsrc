@@ -1,20 +1,14 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:10:41 agc Exp $
+$NetBSD: patch-ab,v 1.3 1999/11/26 22:12:37 hubertf Exp $
 
---- icb/strings.c	Wed Feb 10 12:10:41 1993
-+++ icb/strings.c	Wed Mar 18 13:48:15 1998
-@@ -337,6 +337,7 @@
- /* cat multiple strings into one */
- /* call with strscat(dest, src, src, ...) */
- 
-+#if 0
- char *
- strscat(va_alist)
- va_dcl
-@@ -361,6 +362,7 @@
- 	*dest = '\0';
- 	return(dest);
- }
-+#endif
- 
- char *basename(path)
- char *path;
+diff -x *.orig -urN ./icb/c_shell.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/c_shell.c
+--- ./icb/c_shell.c	Fri Feb 24 22:20:19 1995
++++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/c_shell.c	Fri Nov 26 22:56:29 1999
+@@ -14,7 +14,7 @@
+ 	static char *usage = "usage: c_shell [command]";
+ 	int w, pid;
+ 	int shellout = 0;
+-	union wait status;
++	int status;
+ 	char *shell, *getenv();
+ 	
+ 	/* disallow use if restricted mode set */
