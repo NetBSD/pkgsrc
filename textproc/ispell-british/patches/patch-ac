@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/03/14 12:12:21 agc Exp $
+
+Use the buildhash program from the base installation
+
+--- languages/british/Makefile	1995/01/08 23:24:18	1.4
++++ languages/british/Makefile	2001/03/14 10:56:42
+@@ -63,7 +63,7 @@
+ 
+ CONFIG		=	../../config.sh
+ PATHADDER	=	../..
+-BUILDHASH	=	../../buildhash
++BUILDHASH	=	${PREFIX}/bin/buildhash
+ 
+ # The following variables should be set by the superior Makefile,
+ # based on the LANGUAGES variable in config.X.
