@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5817 2004/05/04 21:14:49 jmmv Exp $
+$NetBSD: CHANGES,v 1.5818 2004/05/04 21:27:13 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2349,3 +2349,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgnome to 2.6.1.1 [jmmv 2004-05-04]
 	Updated libgnomeui to 2.6.1.1 [jmmv 2004-05-04]
 	Updated rhythmbox to 0.8.3 [jmmv 2004-05-04]
+	Updated libgtkhtml to 2.6.1 [jmmv 2004-05-04]
