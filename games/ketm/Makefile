@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2002/08/27 18:55:28 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/15 23:23:05 kristerw Exp $
 #
 
-DISTNAME=	ketm-0.0.4
+DISTNAME=	ketm-0.0.6
 CATEGORIES=	games
 MASTER_SITES=	http://home.t-online.de/home/haslbeck/ketm/
 EXTRACT_SUFX=	.tar.bz2
@@ -34,7 +34,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/ketm
 	${INSTALL_DATA_DIR} ${PREFIX}/share/ketm/data
 	cd ${WRKSRC}/data && 						\
-		${INSTALL_DATA} *.bmp ${PREFIX}/share/ketm/data
+		${INSTALL_DATA} *.bmp *.dat ${PREFIX}/share/ketm/data
 
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
