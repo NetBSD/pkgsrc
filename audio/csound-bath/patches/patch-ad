@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
+
+--- midirecv.c.orig	Sun Mar 25 05:42:24 2001
++++ midirecv.c	Thu Apr  5 13:39:35 2001
+@@ -3,6 +3,8 @@
+ #include "midiops.h"
+ #include "oload.h"
+ 
++#include <sys/ioctl_compat.h>
++
+ #ifdef SGI
+ /************************************/
+ /* obsolete SGI code                */

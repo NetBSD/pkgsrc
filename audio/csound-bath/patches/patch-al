@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2001/04/27 17:17:18 wiz Exp $
+
+--- english-strings.orig	Thu Apr  5 14:27:57 2001
++++ english-strings	Thu Apr  5 14:28:31 2001
+@@ -174,7 +174,7 @@
+ 174,"...done!\n"
+ 175,"/dev/audio: cannot do AUDIO_GETINFO"
+ 176,"/dev/audio: could not write all bytes requested\n"
+-177,"/dev/dsp: could not write all bytes requested\n"
++177,"/dev/audio: could not write all bytes requested\n"
+ 178,"100th system exclusive $%x, length %d\n"
+ 179,"6-channel"
+ 180,"AIFF does not support %s encoding"

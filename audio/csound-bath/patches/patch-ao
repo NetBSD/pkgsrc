@@ -1,0 +1,22 @@
+$NetBSD: patch-ao,v 1.1.1.1 2001/04/27 17:17:18 wiz Exp $
+
+--- rtlinux.c.orig	Thu Apr  5 14:30:43 2001
++++ rtlinux.c	Thu Apr  5 14:30:57 2001
+@@ -10,7 +10,7 @@
+ 
+ #include <unistd.h>
+ #include <fcntl.h>
+-#define DSP_NAME    "/dev/dsp"
++#define DSP_NAME    "/dev/audio"
+ static int dspfd;
+ void setsndparms(int, int, int, MYFLT, unsigned);
+ void setvolume(unsigned);
+@@ -111,7 +111,7 @@
+         long sampframes = nbytes >> oshift;
+         /*  J. Mohr  1995 Oct 17 */
+         if (write(dspfd, outbuf, nbytes) < nbytes)
+-            printf(Str(X_177,"/dev/dsp: couldn't write all bytes requested\n"));
++            printf(Str(X_177,"/dev/audio: couldn't write all bytes requested\n"));
+         nrecs++;
+ }
+ 

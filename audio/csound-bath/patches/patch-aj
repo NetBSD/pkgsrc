@@ -1,0 +1,26 @@
+$NetBSD: patch-aj,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
+
+--- DECplay.c.orig	Thu Apr  5 13:20:06 2001
++++ DECplay.c	Thu Apr  5 13:25:46 2001
+@@ -245,10 +245,11 @@
+     if ((void *)LoFiOpen("/dev/lofi") == NULL)
+ 	{ err_printf(Str(X_211,"Cannot open LoFi\n"));
+ 	  return(0);	}
+-    if ((loddir = getenv("LODDIR")) == NULL)
++    if ((loddir = strdup(getenv("LODDIR"))) == NULL)
+ 	{
+ /*	err_printf("no LODDIR env variable\n");	return(0);	*/
+-	loddir = "/usr/local/lib/lod";	/* give it a go if no env */
++	loddir = malloc(strlen(PREFIX) + 9);
++	sprintf(loddir, "%s/lib/lod", PREFIX);	/* give it a go if no env */
+ 	}
+     /* assume only decaudio supported.  Choose poss sampling rate */
+     if (srate > 26000)        { bootFile = "play44ext.lod"; 
+@@ -259,6 +260,7 @@
+ 			       usPerFrame = 90.703; }
+ 
+     sprintf(bootPath,"%s/%s",loddir,bootFile);
++    free(loddir);
+     err_printf(Str(X_618,"bootfile: %s\n"),bootPath);	/* */
+ 
+     LoFiSetCSR(FED, 0);		/* disable DSP */

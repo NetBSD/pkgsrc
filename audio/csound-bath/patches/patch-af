@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
+
+--- LINUXaudio.c.orig	Sat Dec 16 21:44:39 2000
++++ LINUXaudio.c	Sat Dec 16 21:46:10 2000
+@@ -21,7 +21,11 @@
+ 
+ #include <unistd.h>
+ #include <sys/ioctl.h>
++#ifdef BSD
++#include <soundcard.h>
++#else
+ #include <sys/soundcard.h>
++#endif
+ #include "cs.h"
+ #include "soundio.h"
+ 
