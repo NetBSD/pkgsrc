@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3313 2003/09/10 16:24:07 taca Exp $
+$NetBSD: CHANGES,v 1.3314 2003/09/10 16:49:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3612,3 +3612,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ruby-rd-mode to 0.6.14 [taca 2003-09-10]
 	Updated ruby-DBI to 0.0.21 [taca 2003-09-10]
 	Updated ruby-DBD-postgresql to 0.0.21 [taca 2003-09-10]
+	Added ruby-DBD-mysql-0.0.21 [taca 2003-09-10]
