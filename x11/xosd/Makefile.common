@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2003/07/17 22:57:01 grant Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/07/24 17:17:36 jmmv Exp $
 #
 
 DISTNAME=	xosd-2.2.2
@@ -16,7 +16,8 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 USE_X11=		yes
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/libtool-disable-static
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool-disable-static
 
 CONFIGURE_ARGS+=	--disable-xinerama
 
