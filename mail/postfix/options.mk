@@ -1,10 +1,23 @@
-# $NetBSD: options.mk,v 1.11 2004/11/17 19:34:31 xtraeme Exp $
+# $NetBSD: options.mk,v 1.12 2004/11/30 20:54:38 jlam Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
-PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql mysql4 pcre pgsql sasl tls
+PKG_SUPPORTED_OPTIONS=	bdb inet6 ldap mysql mysql4 pcre pgsql sasl tls
 .include "../../mk/bsd.options.mk"
+
+###
+### Support "hash" (Berkeley DB) map type.
+###
+.if empty(PKG_OPTIONS:Mbdb)
+PKG_OPTIONS+=	bdb		# "hash" map type is mandatory
+.endif
+.if !empty(PKG_OPTIONS:Mbdb)
+USE_DB185=	no
+.  include "../../mk/bdb.buildlink3.mk"
+CCARGS+=	-DHAS_DB
+AUXLIBS+=	${BUILDLINK_LDFLAGS.${BDB_TYPE}} ${BDB_LIBS}
+.endif
 
 ###
 ### IPv6 and STARTTLS support (http://www.ipnet6.org/postfix/)
@@ -69,13 +82,6 @@ CCARGS+=	-DHAS_LDAP
 AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openldap}/lib	\
 		-lldap -llber
-.  if ${OPSYS} != "Linux"
-.    include "../../databases/db4/buildlink3.mk"
-CCARGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
-AUXLIBS+=	-L${BUILDLINK_PREFIX.db4}/lib				\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.db4}/lib	\
-		-ldb4
-.  endif
 .endif
 
 ###
@@ -141,12 +147,4 @@ PLIST_SRC+=	${PKGDIR}/PLIST.sasl
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 MESSAGE_SUBST+=	SASLLIBDIR=${SASLLIBDIR}
-.endif
-
-.if ${OPSYS} == "Linux"
-.  include "../../databases/db/buildlink3.mk"
-CCARGS+=	-I${BUILDLINK_PREFIX.db2}/include/db2
-AUXLIBS+=	-L${BUILDLINK_PREFIX.db2}/lib				\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.db2}/lib	\
-		-ldb2
 .endif
