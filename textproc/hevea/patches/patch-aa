@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2003/11/10 23:15:21 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.5 2004/05/03 23:45:56 danw Exp $
 
---- Makefile.orig	Fri Feb 15 15:47:09 2002
+--- Makefile.orig	Fri Feb 15 10:47:09 2002
 +++ Makefile
 @@ -1,12 +1,12 @@
  ################## Configuration parameters
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.4 2003/11/10 23:15:21 dmcmahill Exp $
 +BINDIR=${PREFIX}/bin
  # A replacement for /lib/cpp
 -CPP=gcc -E -P -x c
-+#CPP=gcc -E -P -x c
++CPP=${M4}
  ############### End of configuration parameters
  SUF=
  #DIR=/usr/bin/
