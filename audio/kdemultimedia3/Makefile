@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2003/08/24 12:17:35 markd Exp $
+# $NetBSD: Makefile,v 1.27 2003/09/17 23:04:32 markd Exp $
 
-DISTNAME=	kdemultimedia-3.1.3
-PKGREVISION=	1
+DISTNAME=	kdemultimedia-3.1.4
 CATEGORIES=	audio
 COMMENT=	Audio tools for the KDE integrated X11 desktop
 
