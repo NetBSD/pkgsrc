@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/12/24 17:21:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2005/02/04 22:58:09 adrianp Exp $
 
 DISTNAME=	src
 PKGNAME=	unison-2.9.20
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/beta-test/latest/
 
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	File-synchronization tool
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+BUILDLINK_DEPENDS.ocaml+=	ocaml>=3.08.2
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
