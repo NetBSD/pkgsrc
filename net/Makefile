@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 1998/11/22 22:34:19 tv Exp $
+# $NetBSD: Makefile,v 1.40 1998/11/23 15:09:00 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -22,6 +22,7 @@
 #    SUBDIR += dgd-net
     SUBDIR += dip
 #    SUBDIR += echoping
+    SUBDIR += ethereal
 #    SUBDIR += fping
 #    SUBDIR += freewais-sf
 #    SUBDIR += fspclient
