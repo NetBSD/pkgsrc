@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.22 2000/01/05 12:54:32 abs Exp $
+# $NetBSD: pkglint.pl,v 1.23 2000/01/05 21:13:01 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -537,7 +537,7 @@ sub checkpatch {
 		$rcsidseen++ if /\$$rcsidstr[:\$]/;
 		$whole .= $_;
 	}
-	if ($committer && $whole =~ /.\$([A-Za-z0-9]+)[:\$]/) { # XXX
+	if ($committer && $whole =~ /.\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|NetBSD)[:\$]/) { # XXX
 	        # RCS ID in very first line is ok, to identify version
 	        # of patch (-> only warn if there's something before the
 	        # actual $RCS_ID$, not on BOF - '.' won't match there)
