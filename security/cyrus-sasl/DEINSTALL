@@ -1,44 +1,22 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/11/01 01:16:36 zuntum Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/11/21 22:22:10 jlam Exp $
 
-PKGNAME=$1
-STAGE=$2
-
-USER="@CYRUS_USER@"
-GROUP="@CYRUS_GROUP@"
-
-CAT="@CAT@"
-RM="@RM@"
-
-SASLDB=/etc/sasldb.db
-PWCHECKDIR=/var/pwcheck
+SASLDB=@CONFDIR@/sasldb.db
+PWCHECKDIR=@PWCHECKDIR@
 
 case ${STAGE} in
-DEINSTALL)
-	;;
-
 POST-DEINSTALL)
 	${RM} -rf ${PWCHECKDIR}
-	${CAT} << EOF
+	if [ -e ${SASLDB} ]
+	then
+		${CAT} << EOF
 ===========================================================================
-If you won't be using ${PKGNAME} any longer, you may want
-to remove:
-
-  * the \`${USER}' user
-
-  * the \`${GROUP}' group
-
-  * the following files:
+You may want to remove the SASL password data file:
 
 	${SASLDB}
 ===========================================================================
 EOF
-	;;
-
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
+	fi
 	;;
 esac
-exit 0
