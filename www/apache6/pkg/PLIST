@@ -1,10 +1,7 @@
-@comment $NetBSD: PLIST,v 1.10 2001/03/01 04:03:09 itojun Exp $
+@comment $NetBSD: PLIST,v 1.11 2001/04/14 19:42:54 kim Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
-etc/httpd/httpd.conf.default
-etc/httpd/magic.default
-etc/httpd/mime.types.default
 etc/rc.d/apache
 include/httpd/ap.h
 include/httpd/ap_alloc.h
@@ -69,6 +66,9 @@ sbin/apxs
 sbin/httpd
 sbin/logresolve
 sbin/rotatelogs
+share/examples/httpd/httpd.conf.default
+share/examples/httpd/magic.default
+share/examples/httpd/mime.types.default
 share/httpd/htdocs/README.rus
 share/httpd/htdocs/apache_pb.gif
 share/httpd/htdocs/index.html.ca
@@ -408,6 +408,7 @@ share/httpd/icons/world2.gif
 @dirrm share/httpd/htdocs/manual/images
 @dirrm share/httpd/htdocs/manual/howto
 @dirrm share/httpd/htdocs/manual
+@dirrm share/examples/httpd
 @dirrm include/httpd/xml
 @dirrm include/httpd
 @unexec rmdir %D/libexec/cgi-bin 2>/dev/null || true
