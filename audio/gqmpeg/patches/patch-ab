@@ -1,25 +1,7 @@
-$NetBSD: patch-ab,v 1.13 2000/12/08 21:18:36 wiz Exp $
+$NetBSD: patch-ab,v 1.14 2000/12/08 21:24:52 wiz Exp $
 
 --- src/mixer.c.orig	Sun Dec  3 06:44:59 2000
 +++ src/mixer.c
-@@ -265,6 +265,17 @@
- mixer_devinfo_t *infos;
- mixer_ctrl_t *values;
- 
-+char *
-+catstr(char *p, char *q)
-+{
-+  char *r = malloc(strlen(p) + strlen(q) + 2);
-+  strcpy(r, p);
-+  strcat(r, ".");
-+  strcat(r, q);
-+  return r;
-+}
-+
-+
- void mixer_init(gint init_device_id)
- {
-   int fd, i, ndev;
 @@ -309,7 +320,10 @@
  	/* if problem, revert back to this:
        device->device_name = infos[i].label.name;
