@@ -1,16 +1,18 @@
-$NetBSD: distinfo,v 1.2 2002/06/18 16:20:22 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/09/08 10:12:15 jmmv Exp $
 
 SHA1 (dnetc-darwin-ppc.tar.gz) = 4af6fac50c0ca5256cf5f6622f9aba39348cfcfc
 Size (dnetc-darwin-ppc.tar.gz) = 193437 bytes
 SHA1 (dnetc-netbsd-68k.tar.gz) = 750c309191973da12352e459fe114ca6b5f01ddb
 Size (dnetc-netbsd-68k.tar.gz) = 254691 bytes
-SHA1 (dnetc-netbsd-alpha.tar.gz) = 80be2e403de62a8eb09127c79d2b199ebc80c348
-Size (dnetc-netbsd-alpha.tar.gz) = 284306 bytes
-SHA1 (dnetc-netbsd-arm32.tar.gz) = 7c03414ff51d73255aaa949f213a78b8dd6b3963
-Size (dnetc-netbsd-arm32.tar.gz) = 165891 bytes
-SHA1 (dnetc-netbsd-i386-elf.tar.gz) = 643ef2a86391d14e252fa62d1e73bfafadcaf9f2
-Size (dnetc-netbsd-i386-elf.tar.gz) = 318293 bytes
-SHA1 (dnetc-netbsd-sparc-elf.tar.gz) = 724e6bccffc10c89a44bc030353b5736b3bed34a
-Size (dnetc-netbsd-sparc-elf.tar.gz) = 317844 bytes
-SHA1 (dnetc-solaris-sparc.tar.gz) = 51dde14b43e74709d3de9e1c35aa299308db3967
-Size (dnetc-solaris-sparc.tar.gz) = 175663 bytes
+SHA1 (dnetc-netbsd-alpha-elf.tar.gz) = ebddc524ccbbd9d72031a036ceb320a60c4a9059
+Size (dnetc-netbsd-alpha-elf.tar.gz) = 446179 bytes
+SHA1 (dnetc-netbsd-arm32.tar.gz) = da5f79ea1bc84a1e3a7a5a36c9e77e38ae6f477e
+Size (dnetc-netbsd-arm32.tar.gz) = 190196 bytes
+SHA1 (dnetc-netbsd-arm32.tar.gz) = da5f79ea1bc84a1e3a7a5a36c9e77e38ae6f477e
+Size (dnetc-netbsd-arm32.tar.gz) = 190196 bytes
+SHA1 (dnetc-netbsd-i386-elf.tar.gz) = 689b2d51134725fb3865ca5c2c47e1d73b62dc32
+Size (dnetc-netbsd-i386-elf.tar.gz) = 319938 bytes
+SHA1 (dnetc-netbsd-sparc-elf.tar.gz) = b67f38b83dfef47d86a8e9d3f14da3a8cf55f3e5
+Size (dnetc-netbsd-sparc-elf.tar.gz) = 351309 bytes
+SHA1 (dnetc-solaris-sparc.tar.gz) = 38a1ab8ce7e79bbe2f252ef0883c50ac77690bb2
+Size (dnetc-solaris-sparc.tar.gz) = 229217 bytes
