@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3291 2005/03/24 14:37:41 wiz Exp $
+$NetBSD: TODO,v 1.3292 2005/03/24 15:40:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -436,11 +436,7 @@ Suggested package updates
 	o fhist-1.14
 	o fidogate-4.4.10
 	o findutils-4.2.20
-	o firefox-1.0.2
 	o firefox-bin-1.0.2
-	o firefox-gtk1-1.0.2
-	o firefox-gtk2-bin-1.0.2
-	o fluxbox-0.9.12 [pkg/29780]
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
@@ -639,7 +635,6 @@ Suggested package updates
 	o mowitz-0.3.0
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-5.1.3
-	o mozilla-1.7.6
 	o mpage-2.5.4
 	o mpc-0.11.2
 	o mpfr-2.1.1
