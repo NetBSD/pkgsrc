@@ -1,17 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:27:35 agc Exp $
-#
+# $NetBSD: Makefile,v 1.7 2004/05/26 13:52:54 adam Exp $
 
-DISTNAME=	lwm
-PKGNAME=	lwm-1.00
+DISTNAME=	lwm-1.2.0
 CATEGORIES=	x11 wm
-MASTER_SITES=	http://users.ch.genedata.com/~enh/lwm/
+MASTER_SITES=	http://www.jfc.org.uk/files/lwm/
 
 MAINTAINER=	jwise@NetBSD.org
-HOMEPAGE=	http://users.ch.genedata.com/~enh/lwm/
+HOMEPAGE=	http://www.jfc.org.uk/software/lwm.html
 COMMENT=	Lightweight Window Manager
-
-WRKSRC=		${WRKDIR}/lwm-1.00
-DIST_SUBDIR=	${PKGNAME}
 
 USE_IMAKE=	YES
 
