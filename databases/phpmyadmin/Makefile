@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/07/10 13:56:43 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/07/10 18:40:37 tron Exp $
 
 DISTNAME=	phpMyAdmin-2.2.0rc1
 PKGNAME=	phpmyadmin-2.1.99.1nb1
@@ -10,6 +10,7 @@ HOMEPAGE=	http://phpwizard.net/projects/phpMyAdmin/
 COMMENT=	Set of PHP-scripts to adminstrate MySQL over the WWW
 
 DEPENDS+=	php-mysql>=4.0.5:../../www/php4-mysql
+DEPENDS+=	php-pcre>=4.0.5:../../www/php4-pcre
 
 NO_BUILD=	YES
 
