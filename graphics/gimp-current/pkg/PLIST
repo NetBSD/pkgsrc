@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2000/11/28 19:32:07 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.13 2000/11/30 03:39:18 mycroft Exp $
 bin/escputil
 bin/gimp
 bin/gimp-config
@@ -1309,7 +1309,7 @@ share/locale/uk/LC_MESSAGES/gimp.mo
 @unexec rm -f %D/share/gimp/1.1/help/C/toolbox/help/filters
 @exec ln -s ../dialogs %D/share/gimp/1.1/help/C/toolbox/dialogs
 @unexec rm -f %D/share/gimp/1.1/help/C/toolbox/dialogs
-@exec ln -s  %D/share/gimp/1.1/help/C/toolbox/file
+@exec ln -s ../file %D/share/gimp/1.1/help/C/toolbox/file
 @unexec rm -f %D/share/gimp/1.1/help/C/toolbox/file
 @exec ln -s ../filters %D/share/gimp/1.1/help/C/toolbox/filters
 @unexec rm -f %D/share/gimp/1.1/help/C/toolbox/filters
