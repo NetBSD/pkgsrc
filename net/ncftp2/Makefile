@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/03/12 11:26:26 agc Exp $
+# $NetBSD: Makefile,v 1.12 1999/05/22 22:32:03 tron Exp $
 # FreeBSD Id: Makefile,v 1.39 1998/01/31 17:49:48 jseger Exp
 #
 
@@ -29,6 +29,9 @@ CONFIGURE_ARGS+= 	--enable-socks5
 DEPENDS+=		socks5-1.0.2:../../net/socks5
 .endif
 .endif
+CPPFLAGS+=		-I${PREFIX}/include
+LDFLAGS+=		-L${PREFIX}/lib
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ncftp ${PREFIX}/bin/ncftp2
