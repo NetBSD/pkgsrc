@@ -1,0 +1,10 @@
+You can access all the channels on your soundcard's mixer with wmmixer. Most
+common channels are identified with an appropriate icon.
+Controls include a stereo (mono where appropriate) volume control and a 
+recording source toggle button.
+
+Press the "<" and ">" arrow buttons to select a channel.
+The icon identifies the current channel (a volume symbol with a question mark
+represents an unrecognised channel).
+Click and/or drag the volume display to set channel volume.
+There is a also a button to set recording sources.
