@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/30 18:47:51 he Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/31 09:52:02 he Exp $
 #
 
 DISTNAME=	Cache-Cache-1.02
@@ -11,7 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://perl-cache.sourceforge.net/
 COMMENT=	The Cache interface
 
-DEPENDS+=	p5-IPC-ShareLite>=0.09:../../devel/p5-IPC-ShareLite
 DEPENDS+=	p5-Error>=0.15:../../devel/p5-Error
 DEPENDS+=	p5-Digest-SHA1>=2.02:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-Storable>=1.014:../../devel/p5-Storable
