@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2004/10/03 00:18:06 tv Exp $
+# $NetBSD: Makefile,v 1.25 2004/10/15 14:50:07 tv Exp $
 #
 
 DISTNAME=	lilypond-1.4.13
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.cs.uu.nl/pub/GNU/LilyPond/stable/
 
