@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/10/15 17:11:46 agc Exp $
+# $NetBSD: Makefile,v 1.4 1997/10/16 12:43:24 agc Exp $
 # New ports collection makefile for:	netpbm
 # Version required:	1mar1994
 # Date created:		?
@@ -19,17 +19,17 @@ LIB_DEPENDS=	tiff\\.3\\.:${PORTSDIR}/graphics/tiff
 
 USE_IMAKE=	yes
 
-.if defined(MANZ)
-MAKE_ENV +=	"COMPRESSMANCMD=${GZIP_CMD}"
-.else
-MAKE_ENV +=	COMPRESSMANCMD=:
-.endif
+OPSYS!=		uname -s
+
+.if (${OPSYS} == "NetBSD")
+
+MAKE_ENV +=	COMPRESSMANCMD="${GZIP_CMD}"
+MANCOMPRESSED=	yes
 
 pre-configure:
-	find ${WRKDIR} -type f -print|xargs grep -l '/usr/local' > ${WRKDIR}/prefix-list
-	for f in `cat ${WRKDIR}/prefix-list`; do \
-		${SED} -e 's:/usr/local:'${PREFIX}':g' < $$f > $$f.pdone && mv $$f.pdone $$f; \
+	for f in `find ${WRKDIR} -type f -print|xargs grep -l '/usr/local'`; do \
+		${SED} -e 's:/usr/local:'${LOCALBASE}':g' < $$f > $$f.pdone && mv $$f.pdone $$f; \
 	done
-	rm ${WRKDIR}/prefix-list
+.endif
 
 .include <bsd.port.mk>
