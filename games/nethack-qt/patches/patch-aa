@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1998/08/31 08:43:13 matthias Exp $
+$NetBSD: patch-aa,v 1.3 1998/12/31 07:28:46 garbled Exp $
 --- win/Qt/nhqt.patch.orig	Tue Apr 14 08:40:16 1998
 +++ win/Qt/nhqt.patch	Sat Aug  8 06:42:11 1998
 @@ -88,3 +73,3 @@
@@ -101,7 +101,7 @@ $NetBSD: patch-aa,v 1.2 1998/08/31 08:43:13 matthias Exp $
 @@ -548,3 +505,3 @@
  + # For USER_SOUNDS support, include -laudio -lm
 -+ WINQTLIB = -lqt -lX11 -laudio -lm
-++ WINQTLIB = -lqt -lX11
+++ WINQTLIB = -lqt -lX11 -lXext
  + #
 @@ -994,3 +951,2 @@
    # IF YOU PUT STUFF HERE IT WILL GO AWAY
