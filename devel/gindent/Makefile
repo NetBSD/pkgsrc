@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/09/01 13:50:07 tron Exp $
+# $NetBSD: Makefile,v 1.27 2002/11/30 14:29:23 grant Exp $
 #
 
 DISTNAME=	indent-2.2.8a
@@ -11,13 +11,12 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/indent/indent.html
 COMMENT=	GNU version of pretty-printer for C source code
 
-USE_BUILDLINK2=		yes
-GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		# defined
+GNU_CONFIGURE=		# defined
+USE_PKGLOCALEDIR=	# defined
 CONFIGURE_ARGS=		--program-prefix=g
 
 INFO_FILES=	indent.info
-
-MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
