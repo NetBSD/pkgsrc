@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/05/15 10:54:45 wulf Exp $
+$NetBSD: patch-aa,v 1.2 2000/05/21 13:40:31 wulf Exp $
 
 --- Makefile.netbsd.orig	Thu Apr 27 22:18:57 2000
-+++ Makefile.netbsd	Mon May 15 20:05:31 2000
++++ Makefile.netbsd	Sun May 21 22:50:24 2000
 @@ -1,9 +1,9 @@
  ###############################################################################
  #                                                                             #
@@ -50,10 +50,28 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/05/15 10:54:45 wulf Exp $
  	  echo "***********************************************************"; \
  	else \
  	  $(MKDIR) $(confdir); \
-@@ -158,9 +164,20 @@
+@@ -158,24 +164,45 @@
  	  $(INSTALL_CONF) ../sf/* $(confdir)/sf; \
  	fi
  
+-	@if [ -e ${cgidir} ]; then \
+-	  echo "installing cgi-scripts"; \
+-	  $(INSTALL) -m 755 ../cgi/cgi/* $(cgidir); \
+-	  $(INSTALL_DATA) ../cgi/dpboxcgi/*.html $(cgidir); \
+-	fi
+-
+-	@if [ -e ${httpdir} ]; then \
+-	  echo "installing html pages"; \
+-	  $(MKDIR) $(httpdir)/dpbox/pic; \
+-	  $(INSTALL_DATA) ../cgi/dpbox/*.html $(httpdir)/dpbox; \
+-	  $(INSTALL_DATA) ../cgi/dpbox/pic/* $(httpdir)/dpbox/pic; \
+-	fi
+-
+-	@echo 
+-	@echo dpbox installation complete
+-	@echo 
+-	@echo Now edit the configuration files in $(confdir) and 
+-	@echo $(confdir)/dpbox.ini!!!
 +	$(MKDIR) $(exampledir); \
 +	$(INSTALL_CONF) ../dpbox.ini $(exampledir)/dpbox.ini; \
 +	$(MKDIR) $(exampledir)/system; \
@@ -61,26 +79,21 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/05/15 10:54:45 wulf Exp $
 +	$(MKDIR) $(exampledir)/sf ; \
 +	$(INSTALL_CONF) ../sf/* $(exampledir)/sf; \
 +
- 	@if [ -e ${cgidir} ]; then \
- 	  echo "installing cgi-scripts"; \
--	  $(INSTALL) -m 755 ../cgi/cgi/* $(cgidir); \
-+          for i in `ls -1 ../cgi/cgi`; \
-+          do \
-+	    $(SED) "s,/installdir,$(bindir)," < ../cgi/cgi/$$i > $(cgidir)/$$i; \
-+	    $(CHMOD) 555 $(cgidir)/$$i; \
-+	  done; \
- 	  $(INSTALL_DATA) ../cgi/dpboxcgi/*.html $(cgidir); \
- 	fi
- 
-@@ -171,11 +188,23 @@
- 	  $(INSTALL_DATA) ../cgi/dpbox/pic/* $(httpdir)/dpbox/pic; \
- 	fi
- 
--	@echo 
--	@echo dpbox installation complete
--	@echo 
--	@echo Now edit the configuration files in $(confdir) and 
--	@echo $(confdir)/dpbox.ini!!!
++	$(MKDIR) $(cgidir)
++	echo "installing cgi-scripts";
++	@for i in `ls -1 ../cgi/cgi`; \
++	do \
++	  $(SED) "s,/installdir,$(bindir)," < ../cgi/cgi/$$i > $(cgidir)/$$i; \
++	  $(CHMOD) 555 $(cgidir)/$$i; \
++	done; \
++	$(INSTALL_DATA) ../cgi/dpboxcgi/*.html $(cgidir);
++
++	$(MKDIR) $(httpdir)
++	echo "installing html pages";
++	$(MKDIR) $(httpdir)/dpbox/pic;
++	$(INSTALL_DATA) ../cgi/dpbox/*.html $(httpdir)/dpbox;
++	$(INSTALL_DATA) ../cgi/dpbox/pic/* $(httpdir)/dpbox/pic;
++
 +	@echo
 +	@echo "***********************************************************"
 +	@echo "*                                                         *"
@@ -101,7 +114,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/05/15 10:54:45 wulf Exp $
  
  clean:
  	$(RM)  *.o *~ .*~ *.orig *.bak *.s *.core  
-@@ -193,4 +222,3 @@
+@@ -193,4 +220,3 @@
  ifeq (.depend,$(wildcard .depend))
  include .depend
  endif
