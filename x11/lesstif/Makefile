@@ -3,7 +3,7 @@
 # Date created:		December 10, 1996
 # Whom:			1wardd@airmail.net
 #
-# $NetBSD: Makefile,v 1.5 1998/01/16 17:07:12 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/01/25 00:05:20 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
@@ -25,27 +25,26 @@ IS_INTERACTIVE=	yes
 pre-fetch:
 	@if [ -d ${X11BASE}/include/Xm ]; then \
 		if [ -d ${X11BASE}/lib/X11/lesstif ]; then \
-			echo "Upgrading a previous Lesstif installation"; \
+			${ECHO} "Upgrading a previous Lesstif installation"; \
 			return 0; \
 		fi; \
-		echo "***********************************************************"; \
-		echo "*                      W a r n i n g                      *"; \
-		echo "* This port will overwrite your Motif installation.       *"; \
-		echo "***********************************************************"; \
-		echo -n "Is this ok? (y/n) ==> "; \
+		${ECHO} "***********************************************************"; \
+		${ECHO} "*                      W a r n i n g                      *"; \
+		${ECHO} "* This port will overwrite your Motif installation.       *"; \
+		${ECHO} "***********************************************************"; \
+		${ECHO} -n "Is this ok? (y/n) ==> "; \
 		(read ans; \
 		  case x"$$ans" in \
 		    xy*|xY*) \
 			return 0; \
 			;; \
 		    *) \
-			echo "Okay, I won't install it then...."; \
-			echo "(Don't worry about the following \"*** Error code 1\"s)"; \
+			${ECHO} "Okay, I won't install it then...."; \
+			${ECHO} "(Don't worry about the following \"*** Error code 1\"s)"; \
 			return 1; \
 			;; \
 		  esac) \
 	fi
-
 
 post-install:
 	${MKDIR} ${PREFIX}/lib/X11/mwm ${PREFIX}/lib/X11/app-defaults
@@ -55,6 +54,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/clients/Motif-1.2/mwm/Mwm \
 		${PREFIX}/lib/X11/app-defaults/Mwm
 	/usr/bin/strip ${PREFIX}/lib/libXm.so.0.1 ${PREFIX}/lib/libMrm.so.0.1
-	${LDCONFIG} -m ${PREFIX}/lib
+	${LDCONFIG} -m ${PREFIX}/lib || /usr/bin/true
 
 .include <bsd.port.mk>
