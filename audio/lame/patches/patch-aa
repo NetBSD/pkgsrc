@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/08 03:12:09 hubertf Exp $
+
+--- Makefile.orig	Sun Aug  8 04:49:36 1999
++++ Makefile	Sun Aug  8 04:49:53 1999
+@@ -13,7 +13,7 @@
+ # defaults:
+ PGM = lame
+ CC = gcc
+-CC_OPTS = -O 	
++CC_OPTS = -O3 
+ GTK = 
+ GTKLIBS = 
+ SNDLIB = 
