@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2004/04/21 15:54:45 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2005/01/01 17:16:35 minskim Exp $
 #
 
 DISTNAME=		texi2html-1.64
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.mathematik.uni-kl.de/~obachman/Texi2html/Distrib/
 
