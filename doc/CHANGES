@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4035 2003/12/10 02:59:57 lukem Exp $
+$NetBSD: CHANGES,v 1.4036 2003/12/10 04:03:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5046,3 +5046,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkgchk to 1.45 [abs 2003-12-09]
 	Updated tripwire to 1.2nb3 [ben 2003-12-09]
 	Updated tnftpd to 20031210 [lukem 2003-12-10]
+	Updated squid to 2.5.4nb4 [taca 2003-12-10]
