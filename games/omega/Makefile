@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.2 1999/12/28 02:28:23 proff Exp $
+# $NetBSD: Makefile,v 1.3 2000/01/02 03:28:54 wiz Exp $
 # FreeBSD Id: ports/games/omega/Makefile,v 1.3 1999/08/25 06:04:09 obrien Exp
 
 DISTNAME=	omega-0.90-pa4
 PKGNAME=	omega-0.90.4
+WRKSRC=		${WRKDIR}/omega
 CATEGORIES=	games
 #MASTER_SITES=	http://dolphin.openprojects.net/Omega/Downloads/Prealphas/
 MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/proff/
-
-DEPENDS+=	ncurses-4.2:../../devel/ncurses
 
 MAINTAINER=	packages@netbsd.org
 #HOMEPAGE=	http://dolphin.openprojects.net/Omega/
 HOMEPAGE=	http://www.win.tue.nl/games/roguelike/omega
 
+DEPENDS+=	ncurses-4.2:../../devel/ncurses
+
 ALL_TARGET=
-WRKSRC=		${WRKDIR}/omega
 
 #ncurses
 CFLAGS+=	-I${PREFIX}/include
