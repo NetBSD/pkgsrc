@@ -1,0 +1,21 @@
+ This package is heavily based on two other packages:
+
+   - p3nfsd-5.4 by Rudolf Koenig (rfkoenig@immd4.informatik.uni-erlangen.de)
+     an nfs daemon for Psion series 3 and 5
+   - plp_1_7 by Philip Proudman
+	(former email, current address unknown proudman@btinternet.com)
+
+ The programs:
+
+ ncpd is the daemon which handles the serial link to your Psion.
+ It listens at port 7501 for local connections and provides
+ basic PLP/NCP services for the other two programs. It auto-
+ connects to the psion, even after unplugging/switching off
+ therefore it can run always in background (if you have a
+ spare serial-device)
+
+ plpftp is a FTP-like program for manipulating files on the Psion.
+
+ plpnfsd is a daemon, which provides NFS-like access to your Psion.
+ It automatically makes the psion's filesystems available below
+ an NFS-mounted directory (default /mnt/psion).

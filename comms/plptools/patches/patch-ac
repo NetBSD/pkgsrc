@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/07/14 05:41:47 sakamoto Exp $
+
+--- ./configure.orig	Tue Jul  6 07:13:07 1999
++++ ./configure	Wed Jul 14 11:51:59 1999
+@@ -1954,5 +1954,5 @@
+ 
+ # Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++LIBTOOL="$LIBTOOL"
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
