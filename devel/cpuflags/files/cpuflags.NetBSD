@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.45 2004/02/20 00:37:46 dan Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.46 2004/04/01 19:37:59 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -23,6 +23,7 @@ else
     CC=gcc
 fi
 
+# When adding $hw_model tests use maximum context (such as trailing space)
 case $hw_machine_arch in
 
     alpha)
@@ -33,6 +34,7 @@ case $hw_machine_arch in
 	    *[\(\ ]21164A[-\ \)]*)	FLAGS="-mcpu=21164a"	;;
 	    *[\(\ ]21264[-\ \)]*)	FLAGS="-mcpu=21264"	;;
 	    *[\(\ ]21264[AB][-\ \)]*)	FLAGS="-mcpu=21264a"	;;
+	    *\ PCA56-2)			FLAGS="-mcpu=21164pc"	;;
 	esac
 	;;
 
@@ -60,6 +62,7 @@ case $hw_machine_arch in
 	esac ;;
 
     i386) case $hw_model in
+	*Intel\ Pentium/MMX\ *)		FLAGS='-march=pentium-mmx'      ;;
 	*Intel\ Pentium\ II\ *)		FLAGS='-march=pentium2'		;;
 	*Intel\ Pentium\ III\ *)	FLAGS='-march=pentium3'		;;
 	*Intel\ Mobile\ Pentium\ III\ *) FLAGS='-march=pentium3'	;;
@@ -72,7 +75,8 @@ case $hw_machine_arch in
 	*AMD\ Duron*)			FLAGS='-march=athlon'		;;
 	*AMD\ Athlon\ 4*)		FLAGS='-march=athlon-4'		;;
 	*AMD\ Athlon\ MP*)		FLAGS='-march=athlon-mp'	;;
-	*AMD\ Athlon\ XP*)		FLAGS='-march=athlon-xp'	;;
+	*AMD\ K7\ \(Athlon\)\ XP\ *)	FLAGS='-march=athlon-xp'	;;
+	*AMD\ Athlon\ XP\ *)		FLAGS='-march=athlon-xp'	;;
 	*AMD\ K7*|*AMD\ Athlon*)	FLAGS='-march=athlon'		;;
 	*386-class*)			FLAGS='-march=i386'		;;
 	*486-class*)			FLAGS='-march=i486'		;;
@@ -95,20 +99,20 @@ case $hw_machine_arch in
     mipseb|mipsel)
 	# cpu0 at mainbus0: QED R4600 Orion CPU (0x2020) Rev. 2.0 with ...
 	case "`egrep '^cpu0 ' /var/run/dmesg.boot`" in
-	    *\ MIPS\ R2000\ *)	FLAGS="-mcpu=r2000"	   ;;
-	    *\ MIPS\ R3000\ *)	FLAGS="-mcpu=r3000"	   ;;
-	    *\ MIPS\ R3000A\ *) FLAGS="-mcpu=r3000"	   ;;
-	    *\ Toshiba\ TX3912\ *)    FLAGS="-mcpu=r3900"  ;;
-	    *\ Toshiba\ TX392[27]\ *) FLAGS="-mcpu=r3900"  ;;
-	    *\ MIPS\ R4000\ *)	FLAGS="-mcpu=r4000 -mips2" ;; # really mips3
-	    *\ MIPS\ R4400\ *)	FLAGS="-mcpu=r4400 -mips2" ;; # really mips3
-	    *\ NEC\ VR4100\ *)	FLAGS="-mcpu=r4100 -mips2" ;; # really mips3
-	    *\ NEC\ VR4300\ *)	FLAGS="-mcpu=r4300 -mips2" ;; # really mips3
-	    *\ QED\ R4600\ *)	FLAGS="-mcpu=r4600 -mips2" ;; # really mips3
-	    *\ MIPS\ R5000\ *)	FLAGS="-mcpu=r5000 -mips2" ;; # really mips4
-	    *\ QED\ RM5200\ *)	FLAGS="-mcpu=r5000 -mips2" ;; # really mips4
-	    *\ MIPS\ R6000\ *)	FLAGS="-mcpu=r6000 -mips2" ;;
-	    *\ MIPS\ R8000\ *)	FLAGS="-mcpu=r8000 -mips2" ;; # really mips4
+	    *\ MIPS\ R2000\ *)	FLAGS="-march=r2000"	   ;;
+	    *\ MIPS\ R3000\ *)	FLAGS="-march=r3000"	   ;;
+	    *\ MIPS\ R3000A\ *) FLAGS="-march=r3000"	   ;;
+	    *\ Toshiba\ TX3912\ *)    FLAGS="-march=r3900"  ;;
+	    *\ Toshiba\ TX392[27]\ *) FLAGS="-march=r3900"  ;;
+	    *\ MIPS\ R4000\ *)	FLAGS="-mtune=r4000 -mips2" ;; # really mips3
+	    *\ MIPS\ R4400\ *)	FLAGS="-mtune=r4400 -mips2" ;; # really mips3
+	    *\ NEC\ VR4100\ *)	FLAGS="-mtune=r4100 -mips2" ;; # really mips3
+	    *\ NEC\ VR4300\ *)	FLAGS="-mtune=r4300 -mips2" ;; # really mips3
+	    *\ QED\ R4600\ *)	FLAGS="-mtune=r4600 -mips2" ;; # really mips3
+	    *\ MIPS\ R5000\ *)	FLAGS="-mtune=r5000 -mips2" ;; # really mips4
+	    *\ QED\ RM5200\ *)	FLAGS="-mtune=r5000 -mips2" ;; # really mips4
+	    *\ MIPS\ R6000\ *)	FLAGS="-mtune=r6000 -mips2" ;;
+	    *\ MIPS\ R8000\ *)	FLAGS="-mtune=r8000 -mips2" ;; # really mips4
 	esac
 	;;
 
@@ -141,6 +145,10 @@ case $hw_machine_arch in
 	*[\ \(]SUNW,UltraSPARC*) FLAGS='-mcpu=v9'		;; # Ultra
     esac ;;
 
+    x86_64) # No x86_64 specific gcc optimisations yet
+	NONE=1
+	;;
+
     vax) # No VAX specific gcc optimisations available
 	NONE=1
 	;;
@@ -156,31 +164,59 @@ if [ -z "$FLAGS" -a -z "$NONE" ] ; then
     egrep '^cpu' /var/run/dmesg.boot					>&2
 fi
 
-# Fixup flags for old gcc
+# Fixup options for older gccs.
+# Entries can be recursive - eg:
+#   -march=k6-3 -> -march=k6 -> -march=pentium -> -march=i486
+#
+# The format of table is
+#   gcc_version_in_which_option_was_introduced  new_option  old_option
+
 if [ -n "$FLAGS" ]; then
     gcc_ver=`${CC} -v 2>&1 | awk '/gcc version/ {sub("egcs-","");print $3}'`
     FLAGS=`awk -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
-	{if (gcc_ver < $1){map[$2] = ""$3}}
-	END{if (flags in map) {print map[flags]}else {print flags}}
+	{ if (gcc_ver < $1){map[$2] = ""$3} }
+	END { while (flags in map) {flags = map[flags]} print flags }
 	' <<EOD
-2.90	-mcpu=21164a	
 2.90	-march=i386		-mno-486
 2.90	-march=i486		-m486
 2.90	-march=pentium		-m486
 2.90	-march=pentiumpro	-m486
-2.90	-mcpu=supersparc	-msupersparc
-2.90	-mcpu=sparclite		-msparclite
-2.90	-mcpu=cypress		-mcypress
-2.90	-mcpu=v9		-mv8
+2.90	-mcpu=21164a	
 2.90	-mcpu=arm610		-m6
-2.90	-mcpu=strongarm110	-m6
 2.90	-mcpu=arm710		-m6
+2.90	-mcpu=cypress		-mcypress
+2.90	-mcpu=sparclite		-msparclite
+2.90	-mcpu=strongarm110	-m6
+2.90	-mcpu=supersparc	-msupersparc
+2.90	-mcpu=v9		-mv8
 2.95	-march=k6		-march=pentium
 3.0	-march=athlon		-march=pentiumpro
 3.0	-march=athlon-4		-march=pentiumpro
 3.0	-march=athlon-mp	-march=pentiumpro
 3.0	-march=athlon-xp	-march=pentiumpro
+3.1	-march=r2000		-cpu=r2000
+3.1	-march=r3000		-cpu=r3000
+3.1	-march=r3900		-cpu=r3900
+3.1	-march=r4000		-cpu=r4000
+3.1	-march=r4100		-cpu=r4100
+3.1	-march=r4300		-cpu=r4300
+3.1	-march=r4400		-cpu=r4400
+3.1	-march=r4600		-cpu=r4600
+3.1	-march=r5000		-cpu=r5000
+3.1	-march=r6000		-cpu=r6000
+3.1	-march=r8000		-cpu=r8000
 3.1	-mcpu=21264a		-mcpu=21264
+3.1	-mtune=r2000		-cpu=r2000
+3.1	-mtune=r3000		-cpu=r3000
+3.1	-mtune=r3900		-cpu=r3900
+3.1	-mtune=r4000		-cpu=r4000
+3.1	-mtune=r4100		-cpu=r4100
+3.1	-mtune=r4300		-cpu=r4300
+3.1	-mtune=r4400		-cpu=r4400
+3.1	-mtune=r4600		-cpu=r4600
+3.1	-mtune=r5000		-cpu=r5000
+3.1	-mtune=r6000		-cpu=r6000
+3.1	-mtune=r8000		-cpu=r8000
 3.2	-march=k6-2		-march=k6
 3.2	-march=k6-3		-march=k6
 3.2	-march=pentium2		-march=pentiumpro
