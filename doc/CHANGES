@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1158 2003/01/18 10:51:05 jmmv Exp $
+$NetBSD: CHANGES,v 1.1159 2003/01/19 00:41:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -323,3 +323,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated disc-cover to 1.4.0nb1 [jmmv 2003-01-18]
 	Updated docbook-xml to 4.2nb3 [jmmv 2003-01-18]
 	Updated gtk2-engines to 2.2.0 [jmmv 2003-01-18]
+	Updated wdg-validate to 1.1.2 [wiz 2003-01-19]
