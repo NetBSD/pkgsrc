@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 1997/11/26 15:36:59 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/03/19 14:25:34 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
 #    SUBDIR += Mosaic         # requires Motif
 #    SUBDIR += analog
-#    SUBDIR += apache
+    SUBDIR += apache
 #    SUBDIR += apache-current
 #    SUBDIR += apache-php
 #    SUBDIR += apache-ssl
