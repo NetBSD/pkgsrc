@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2001/04/09 00:35:38 jtb Exp $
+# $NetBSD: Makefile,v 1.18 2001/04/16 22:39:18 zuntum Exp $
 #
 
-DISTNAME=       zsh-3.0.7
+DISTNAME=       zsh-3.0.8
 CATEGORIES=	shells
 MASTER_SITES=   ftp://uiarchive.uiuc.edu/pub/packages/shells/zsh/ \
 		ftp://ftp.rge.com/pub/shells/zsh/ \
