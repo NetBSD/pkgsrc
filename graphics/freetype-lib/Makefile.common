@@ -1,0 +1,24 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2000/05/01 06:02:24 jlam Exp $
+
+DISTNAME=		freetype-${FT_VERS}
+FT_VERS=		1.2
+CATEGORIES=		graphics textproc
+MASTER_SITES=		ftp://ftp.freetype.org/pub/freetype/
+
+MAINTAINER=		jlam@netbsd.org
+HOMEPAGE=		http://www.freetype.org/
+
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-locale-dir=${PREFIX}/share/locale
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+
+CFLAGS+=		-I${LOCALBASE}/include
+CPPFLAGS+=		-I${LOCALBASE}/include
+
+FILESDIR=		${.CURDIR}/../../graphics/freetype-lib/files
+PATCHDIR=		${.CURDIR}/../../graphics/freetype-lib/patches
+
+.include "../../mk/bsd.pkg.mk"
