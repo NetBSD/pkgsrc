@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2002/12/24 06:09:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/14 20:55:03 jmmv Exp $
 #
 
-DISTNAME=		eel-2.0.8
+DISTNAME=		eel-2.2.1
 PKGNAME=		${DISTNAME:S/-/2-/}
-PKGREVISION=		1
 CATEGORIES=		devel gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/eel/2.0/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/eel/2.2/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
@@ -13,6 +12,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Eazel Extentions Library for GNOME2
 
 BUILD_USES_MSGFMT=	YES
+DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
