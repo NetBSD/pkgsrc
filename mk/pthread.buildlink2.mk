@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink2.mk,v 1.7 2003/01/25 08:39:54 jlam Exp $
+# $NetBSD: pthread.buildlink2.mk,v 1.7.2.1 2003/04/28 01:04:54 grant Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -159,7 +159,7 @@ LIBTOOL_ARCHIVE_UNTRANSFORM_SED+= \
 pthread-buildlink: _BUILDLINK_USE
 
 pthread-buildlink-la:
-	${_PKG_SILIENT}${_PKG_DEBUG}					\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	lafile="${BUILDLINK_DIR}/lib/libpthread.la";			\
 	libpattern="${BUILDLINK_PREFIX.pthread}/lib/libpthread.*";	\
 	${BUILDLINK_FAKE_LA}
