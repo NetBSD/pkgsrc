@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/23 17:20:45 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/06/05 22:34:22 wiz Exp $
 bin/onsgmls
 bin/osgmlnorm
 bin/ospam
@@ -195,8 +195,6 @@ share/OpenSP/xml.dcl
 share/OpenSP/xml.soc
 share/locale/de/LC_MESSAGES/sp.mo
 share/locale/sv/LC_MESSAGES/sp.mo
-@dirrm share/locale/sv/LC_MESSAGES
-@dirrm share/locale/de/LC_MESSAGES
 @dirrm share/OpenSP
 @dirrm include/OpenSP
 @dirrm share/doc/OpenSP
