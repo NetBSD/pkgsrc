@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.4 2004/11/08 22:24:22 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.5 2004/11/08 22:26:31 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -74,9 +74,9 @@ gen()
 	#	-L options.
         ###############################################################
 	depot)
-			gen $_action "opt-depot:$1:$2"
-			gen $_action "opt-depot:-I$1:-I$2"
-			gen $_action "opt-depot:-L$1:-L$2"
+		gen $_action "opt-depot:$1:$2"
+		gen $_action "opt-depot:-I$1:-I$2"
+		gen $_action "opt-depot:-L$1:-L$2"
 		;;
         ###############################################################
         # I:src:dst
@@ -121,21 +121,21 @@ gen()
 	#	Change "-lfoo" into "-lbar [-lbaz...]"
 	###############################################################
 	l)
-			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			tolibs=
-			fromlib="-l$1"; shift
-			while $test $# -gt 0; do
-				case $1 in
-				"")	;;
-				*)	case $tolibs in
-					"")	tolibs="-l$1" ;;
-					*)	tolibs="$tolibs -l$1" ;;
-					esac
-					;;
+		$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+		tolibs=
+		fromlib="-l$1"; shift
+		while $test $# -gt 0; do
+			case $1 in
+			"")	;;
+			*)	case $tolibs in
+				"")	tolibs="-l$1" ;;
+				*)	tolibs="$tolibs -l$1" ;;
 				esac
-				shift
-			done
-			gen $_action "opt:$fromlib:$tolibs"
+				;;
+			esac
+			shift
+		done
+		gen $_action "opt:$fromlib:$tolibs"
 		;;
 	##############################################################
 	# libpath:src:dst
@@ -162,36 +162,36 @@ EOF
 	#	libraries.
 	##############################################################
 	mangle)
-			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			#gen $_action "opt:$1:$2"
-			gen $_action "opt:-I$1:-I$2"
-			gen $_action "opt:-L$1:-L$2"
-			gen $_action "rpath-exact:$1:$2"
-			gen $_action "sub-mangle:$1:$2"
+		$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+		#gen $_action "opt:$1:$2"
+		gen $_action "opt:-I$1:-I$2"
+		gen $_action "opt:-L$1:-L$2"
+		gen $_action "rpath-exact:$1:$2"
+		gen $_action "sub-mangle:$1:$2"
 		;;
 	##############################################################
 	# no-abspath
 	#	Remove all "dash" options that contain an absolute path.
 	##############################################################
 	no-abspath)
-			$debug_log $wrapperlog "   (gen-transform) $_cmd"
-			gen $_action "rm-optarg:-I/"
-			gen $_action "rm-optarg:-L/"
-			for _R in $rpath_options; do
-				gen $_action "rm-optarg:$_R/"
-			done
+		$debug_log $wrapperlog "   (gen-transform) $_cmd"
+		gen $_action "rm-optarg:-I/"
+		gen $_action "rm-optarg:-L/"
+		for _R in $rpath_options; do
+			gen $_action "rm-optarg:$_R/"
+		done
 		;;
 	##############################################################
 	# no-rpath
 	#	Removes rpath options.
 	##############################################################
 	no-rpath)
-			$debug_log $wrapperlog "   (gen-transform) $_cmd"
-			gen $_action rm-optarg:-Wl,--rpath,
-			gen $_action rm-optarg:-Wl,-rpath-link,
-			gen $_action rm-optarg:-Wl,-rpath,
-			gen $_action rm-optarg:-Wl,-R
-			gen $_action rm-optarg:-R
+		$debug_log $wrapperlog "   (gen-transform) $_cmd"
+		gen $_action rm-optarg:-Wl,--rpath,
+		gen $_action rm-optarg:-Wl,-rpath-link,
+		gen $_action rm-optarg:-Wl,-rpath,
+		gen $_action rm-optarg:-Wl,-R
+		gen $_action rm-optarg:-R
 		;;
 	##############################################################
 	# opt:src:dst
@@ -235,8 +235,8 @@ EOF
 	#	Change "src/*" into "dst/*".
 	##############################################################
 	opt-sub)
-			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			gen $_action "opt-sub-trailer:$1::$2:"
+		$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+		gen $_action "opt-sub-trailer:$1::$2:"
 		;;
 	##############################################################
 	# opt-sub-trailer:src:src_trailer:dst:dst_trailer
@@ -279,16 +279,16 @@ EOF
 	#	Synonym for "opt:src:dst".
 	##############################################################
 	rename)
-			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			gen $_action "opt:$1:$2"
+		$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+		gen $_action "opt:$1:$2"
 		;;
 	##############################################################
 	# rm:opt
 	#	Remove "opt", where "opt" matches the entire option.
 	##############################################################
 	rm)
-			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			gen $_action "opt:$1:"
+		$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+		gen $_action "opt:$1:"
 		;;
 	##############################################################
 	# rm-optarg:opt
@@ -314,15 +314,15 @@ EOF
 	#	Remove all "dash" options that contain "dir" or "dir/*".
 	##############################################################
 	rmdir)
-			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			gen $_action "opt:-I$1:"
-			gen $_action "rm-optarg:-I$1/"
-			gen $_action "opt:-L$1:"
-			gen $_action "rm-optarg:-L$1/"
-			for _R in $rpath_options; do
-				gen $_action "opt:$_R$1:"
-				gen $_action "rm-optarg:$_R$1/"
-			done
+		$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+		gen $_action "opt:-I$1:"
+		gen $_action "rm-optarg:-I$1/"
+		gen $_action "opt:-L$1:"
+		gen $_action "rm-optarg:-L$1/"
+		for _R in $rpath_options; do
+			gen $_action "opt:$_R$1:"
+			gen $_action "rm-optarg:$_R$1/"
+		done
 		;;
 	##############################################################
 	# rpath:src:dst
@@ -330,19 +330,19 @@ EOF
 	#	options.
 	##############################################################
 	rpath)
-			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			gen $_action "rpath-exact:$1:$2"
-			gen $_action "sub-rpath:$1:$2"
+		$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+		gen $_action "rpath-exact:$1:$2"
+		gen $_action "sub-rpath:$1:$2"
 		;;
 	##############################################################
 	# rpath-exact:src:dst
         #       Change "src" into "dst" in rpath options.
 	##############################################################
 	rpath-exact)
-			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			for _R in $rpath_options; do
-				gen $_action "opt:$_R$1:$_R$2"
-			done
+		$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+		for _R in $rpath_options; do
+			gen $_action "opt:$_R$1:$_R$2"
+		done
 		;;
 	##############################################################
 	# strip-slashdot:dir
@@ -350,13 +350,13 @@ EOF
 	#	rpath options.
 	##############################################################
 	strip-slashdot)
-			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			gen $_action "opt-sub-trailer:$1:/\.:$1:"
-			gen $_action "opt-sub-trailer:-I$1:/\.:-I$1:"
-			gen $_action "opt-sub-trailer:-L$1:/\.:-L$1:"
-			for _R in $rpath_options; do
-				gen $_action "opt-sub-trailer:$_R$1:/\.:$_R$1:"
-			done
+		$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+		gen $_action "opt-sub-trailer:$1:/\.:$1:"
+		gen $_action "opt-sub-trailer:-I$1:/\.:-I$1:"
+		gen $_action "opt-sub-trailer:-L$1:/\.:-L$1:"
+		for _R in $rpath_options; do
+			gen $_action "opt-sub-trailer:$_R$1:/\.:$_R$1:"
+		done
 		;;
 	##############################################################
 	# sub-mangle:src:dst
@@ -364,22 +364,22 @@ EOF
 	#	options, and also in full paths to libraries.
 	##############################################################
 	sub-mangle)
-			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			#gen $_action "opt-sub:$1:$2"
-			gen $_action "libpath:$1:$2"
-			gen $_action "opt-sub:-I$1:-I$2"
-			gen $_action "opt-sub:-L$1:-L$2"
-			gen $_action "sub-rpath:$1:$2"
+		$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+		#gen $_action "opt-sub:$1:$2"
+		gen $_action "libpath:$1:$2"
+		gen $_action "opt-sub:-I$1:-I$2"
+		gen $_action "opt-sub:-L$1:-L$2"
+		gen $_action "sub-rpath:$1:$2"
 		;;
 	##############################################################
 	# sub-rpath:src:dst
 	#	Change "src/*" into "dst/*" in rpath options.
 	##############################################################
 	sub-rpath)
-			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
-			for _R in $rpath_options; do
-				gen $_action "opt-sub:$_R$1:$_R$2"
-			done
+		$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
+		for _R in $rpath_options; do
+			gen $_action "opt-sub:$_R$1:$_R$2"
+		done
 		;;
 	##############################################################
 	# Everything else is ignored.
