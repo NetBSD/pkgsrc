@@ -1,15 +1,18 @@
-$NetBSD: patch-ac,v 1.7 2003/06/06 08:58:42 jtb Exp $
+$NetBSD: patch-ac,v 1.8 2003/06/23 20:48:23 jtb Exp $
 
 --- /dev/null
-+++ config/netbsd/powerpc.s
-@@ -0,0 +1,48 @@
++++ /home/jtb/powerpc.s
+@@ -0,0 +1,46 @@
 +#
 +#	coswitch for the PowerPC
 +#
 +
 +	.file   "rswitch.s"
 +
-+	.set	RSIZE, 80		# room for regs 13-31, rounded up mod16
++	.set	RSIZE, 80		# room for regs 14-31, rounded up mod16
++
++	.data
++errmsg:		.string "new_context() returned in coswitch\n"
 +
 +	.text
 +	.align  2
@@ -17,37 +20,32 @@ $NetBSD: patch-ac,v 1.7 2003/06/06 08:58:42 jtb Exp $
 +	.type	coswitch,@function
 +
 +coswitch:
-+	stwu	%r1, -RSIZE(%r1)	# allocate stack frame
++	stwu	1, -RSIZE(1)		# allocate stack frame
 +
 +					# Save Old Context:
-+	stw	%r1, 0(%r3)		# SP
-+	stw	%r2, 4(%r3)		# TOC
-+	mflr	%r0
-+	stw	%r0, 8(%r3)		# LR (return address)
-+	mfcr	%r0
-+	stw	%r0, 12(%r3)		# CR
-+	stmw	%r13, -RSIZE(%r1)	# GPRs 13-31 (save on stack)
++	stw	1, 0(3)			# SP
++	mflr	0
++	stw	0, 4(3)			# LR (return address)
++	stmw	14, -RSIZE(1)		# GPRs 14-31 (save on stack)
 +
-+	cmpi	0, %r5, 0
++	cmpi	0, 5, 0
 +	beq	first			# if first time
 +
 +					# Restore new context:
-+	lwz	%r1, 0(%r4)		# SP
-+	lwz	%r2, 4(%r4)		# TOC
-+	lwz	%r0, 8(%r4)		# LR
-+	mtlr	%r0
-+	lwz	%r0, 12(%r4)		# CR
-+	mtcr	%r0
-+	lmw	%r13, -RSIZE(%r1)	# GPRs 13-31 (from stack)
++	lwz	1, 0(4)			# SP
++	lwz	0, 4(4)			# LR
++	mtlr	0
++	lmw	14, -RSIZE(1)		# GPRs 14-31 (from stack)
 +
-+	addic	%r1, %r1, RSIZE		# deallocate stack frame
++	addic	1, 1, RSIZE		# deallocate stack frame
 +	blr				# return into new context
 +
 +first:					# First-time call:
-+	lwz	%r1, 0(%r4)		# SP as figured by Icon
-+	addic	%r1, %r1, -64		# save area for callee
-+	addi	%r3, 0, 0		# arg1
-+	addi	%r4, 0, 0		# arg2
++	lwz	1, 0(4)			# SP as figured by Icon
++	addic	1, 1, -64		# save area for callee
++	addi	3, 0, 0			# arg1
++	addi	4, 0, 0			# arg2
 +	bl	new_context		# new_context(0,0)
-+	addi	%r3, 0, 0
++	lis	3, errmsg@ha
++	la	3, errmsg@l(3)
 +	bl	syserr
