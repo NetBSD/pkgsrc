@@ -1,48 +1,63 @@
-# $NetBSD: Makefile,v 1.5 2001/06/25 09:49:49 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/10 20:15:48 nra Exp $
+# FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
-DISTNAME=	fvwm-${FVWM_VERSION}
-PKGNAME=	fvwm2-${FVWM_VERSION}
-CATEGORIES=	wm
+DISTNAME=	fvwm-${FVWM_VER}
+PKGNAME=	fvwm2-${FVWM_VER}
+CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/ \
-		http://www.fvwm.org/generated/icon_download/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} fvwm_icons.tgz
+		http://www.fvwm.org/generated/icon_download/ \
+		ftp://ftp.hpc.uh.edu/pub/fvwm/version-2/
+DISTFILES+=	fvwm-${FVWM_VER}.tar.gz fvwm_icons.tgz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.fvwm.org/
-COMMENT=	Popular virtual window manager for X
+COMMENT=	Newer version of X11 Virtual window manager
 
 DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
-DEPENDS+=	readline-*:../../devel/readline
-DEPENDS+=	rplay-3.*:../../audio/rplay
-DEPENDS+=	gtk+>=1.2.0:../../x11/gtk
-
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 CONFLICTS=	fvwm-2.*
+EXTRACT_ONLY=	${DISTNAME}.tar.gz
+FVWM_VER=	2.4.0
 
-FVWM_VERSION=	2.3.33
+USE_X11BASE=		YES
+GNU_CONFIGURE=		YES
+USE_GNU_READLINE=	YES
 
-USE_X11BASE=	yes
-GNU_CONFIGURE=	yes
-PLIST_SUBST+=	VERSION=${FVWM_VERSION}
+PLIST_SUBST+=	FVWM_VER=${FVWM_VER}
 
 EVAL_PREFIX+=		XPMDIR=xpm
-CONFIGURE_ARGS+=	--enable-extras
+CONFIGURE_ARGS+=	--enable-extras --without-gnome
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/lib/X11/fvwm2
+CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/lib/X11
 CONFIGURE_ARGS+=	--with-xpm-includes=${XPMDIR}/include
-CONFIGURE_ARGS+=	--with-readline-includes=${LOCALBASE}/include
-CONFIGURE_ARGS+=	--with-rplay-includes=${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-iconpath=${PREFIX}/lib/X11/fvwm2/pixmaps:${X11BASE}/include/X11/bitmaps:${X11BASE}/include/X11/pixmaps
-CONFIGURE_ARGS+=	--without-gnome
 
 post-extract:
-	cd ${WRKDIR} && ${MKDIR} icons && cd icons && \
-		${GTAR} xfz ${_DISTDIR}/fvwm_icons.tgz
+	${MKDIR} ${WRKDIR}/icons
+	${GTAR} -xzf ${DISTDIR}/fvwm_icons.tgz -C ${WRKDIR}/icons
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fvwm2/pixmaps
+	@${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fvwm2/pixmaps
 	${INSTALL_DATA} \
 		${WRKDIR}/icons/*.xpm \
 		${PREFIX}/lib/X11/fvwm2/pixmaps
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fvwm2
+	${INSTALL_DATA} \
+		${WRKSRC}/sample.fvwmrc/decor_examples \
+		${WRKSRC}/sample.fvwmrc/system.fvwm2rc-sample-* \
+		${PREFIX}/lib/X11/fvwm2
+	${INSTALL_DATA} \
+		${WRKSRC}/sample.fvwmrc/system.fvwm2rc \
+		${PREFIX}/lib/X11/fvwm2/system.fvwm2rc.example
+	if [ ! -f ${PREFIX}/lib/X11/fvwm2/system.fvwm2rc ]; then \
+		${INSTALL_DATA} \
+			${PREFIX}/lib/X11/fvwm2/system.fvwm2rc.example \
+			${PREFIX}/lib/X11/fvwm2/system.fvwm2rc ; \
+	fi
 
+.include "../../audio/rplay/buildlink.mk"
+.include "../../devel/readline/buildlink.mk"
+.include "../../graphics/imlib/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
