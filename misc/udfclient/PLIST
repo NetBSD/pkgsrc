@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2004/08/21 13:06:24 reinoud Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/01/11 21:09:24 reinoud Exp $
 bin/cd_disect
 bin/cd_sessions
+bin/cdrw_format
 bin/newfs_udf
 bin/udfclient
 bin/udfdump
