@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2667 2003/07/03 00:52:07 wulf Exp $
+$NetBSD: CHANGES,v 1.2668 2003/07/03 06:05:10 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2660,3 +2660,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated octave to 2.0.17 [jtb 2003-07-02]
 	Updated dhid to 5.0 [hubertf 2003-07-03]
 	Added xlog-0.8 [wulf 2003-07-03]
+	Updated roundup to 0.5.8 [lukem 2003-07-03]
