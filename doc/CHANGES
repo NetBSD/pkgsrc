@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5137 2004/03/07 17:43:16 jmmv Exp $
+$NetBSD: CHANGES,v 1.5138 2004/03/07 18:46:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1223,3 +1223,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Deleted ruby-racc-runtime [taca 2004-03-07]
 	Added ccsh-0.0.4 [minskim 2004-03-07]
         Updated gnome-session to 2.4.2nb4 [jmmv 2004-03-07]
+	Added py-GeoIP-1.2.0 [minskim 2004-03-07]
