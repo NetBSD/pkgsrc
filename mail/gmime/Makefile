@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/08 13:39:29 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/04 23:10:50 recht Exp $
 #
 
-DISTNAME=	gmime-2.1.3
+DISTNAME=	gmime-2.1.6
 CATEGORIES=	mail
 MASTER_SITES=	http://spruce.sourceforge.net/gmime/sources/v2.1/
 
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 PKGCONFIG_OVERRIDE+=	gmime-2.0.pc.in
 
 .include "../../mk/bsd.prefs.mk"

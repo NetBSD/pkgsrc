@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/08 13:39:32 recht Exp $
+$NetBSD: patch-aa,v 1.2 2004/07/04 23:10:50 recht Exp $
 
---- docs/reference/Makefile.in.orig	2004-04-08 15:32:41.000000000 +0200
-+++ docs/reference/Makefile.in
-@@ -83,7 +83,7 @@ HAVE_GTK_DOC = @HAVE_GTK_DOC@
- HAVE_GTK_DOC_FALSE = @HAVE_GTK_DOC_FALSE@
- HAVE_GTK_DOC_TRUE = @HAVE_GTK_DOC_TRUE@
+--- docs/reference/Makefile.in.orig	2004-06-07 00:35:30.000000000 +0200
++++ docs/reference/Makefile.in	2004-07-05 00:57:12.000000000 +0200
+@@ -87,7 +87,7 @@
+ GTK_DOC_USE_LIBTOOL_FALSE = @GTK_DOC_USE_LIBTOOL_FALSE@
+ GTK_DOC_USE_LIBTOOL_TRUE = @GTK_DOC_USE_LIBTOOL_TRUE@
  
 -HTML_DIR = $(datadir)/gtk-doc/html
 +HTML_DIR = @HTML_DIR@
