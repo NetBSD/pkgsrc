@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 1998/11/12 23:40:20 frueauf Exp $
+
 *** icb/serverlist.c.orig	Fri Feb 24 16:20:29 1995
 --- icb/serverlist.c	Thu Sep  3 10:37:50 1998
 ***************
