@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.4 2002/11/13 00:59:35 dmcmahill Exp $
+# $NetBSD: mkreadme,v 1.5 2002/11/13 10:14:04 dmcmahill Exp $
 #
 # Script for README.html generation
 #
@@ -438,10 +438,15 @@ fgrep -f $ipv6 README-all.html | sort -t/ +1 > $ipv6_entries
 sed \
     -e "/%%TRS%%/r${ipv6_entries}" \
     -e '/%%TRS%%/d' \
-    templates/README.ipv6 > README-IPv6.html
+    templates/README.ipv6 > ${TMPDIR}/README-IPv6.html
 if [ $? != 0 ]; then
     echo "Error:  README-IPv6.html generation failed (on sed script)"
     clean_and_exit
+fi
+if [ ! -f README-IPv6.html ] || ! cmp -s ${TMPDIR}/README-IPv6.html README-IPv6.html ; then
+	mv -f ${TMPDIR}/README-IPv6.html README-IPv6.html
+else
+	echo "README-IPv6.html is unchanged (no changes were needed)"
 fi
 
 echo " "
