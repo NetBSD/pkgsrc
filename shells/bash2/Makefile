@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2004/10/03 00:18:14 tv Exp $
+# $NetBSD: Makefile,v 1.58 2004/10/22 23:54:22 minskim Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -30,12 +30,22 @@ PKG_SHELL=		${PREFIX}/bin/bash
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(BASH_STATIC) && !empty(BASH_STATIC:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	static
+# Global and legacy options
+.if defined(BASH_STATIC)
+.  if !defined(PKG_OPTIONS.bash)
+.    if defined(BASH_STATIC) && !empty(BASH_STATIC:M[yY][eE][sS])
+PKG_OPTIONS.bash+=	static
+.    endif
+# Always enable multibyte support, because before converted to use
+# bsd.options.mk, this package did not allow to turn off the multibyte
+# support.
+PKG_OPTIONS.bash+=	multibyte
+.  endif
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bash
-PKG_SUPPORTED_OPTIONS=	static
+PKG_OPTIONS.bash?=	multibyte
+PKG_SUPPORTED_OPTIONS=	multibyte static
 .include "../../mk/bsd.options.mk"
 
 ##
@@ -43,6 +53,13 @@ PKG_SUPPORTED_OPTIONS=	static
 ##
 .if !empty(PKG_OPTIONS:Mstatic)
 CONFIGURE_ARGS+=	--enable-static-link
+.endif
+
+##
+## Multibyte support
+##
+.if empty(PKG_OPTIONS:Mmultibyte)
+CONFIGURE_ENV+=	ac_cv_type_wctype_t=no
 .endif
 
 post-install:
