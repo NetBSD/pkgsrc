@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/05/22 00:49:54 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/06/15 20:56:03 hubertf Exp $
 bin/vfu
 bin/ftparc
 bin/rx_auto
@@ -12,4 +12,4 @@ share/doc/vfu/COPYING
 share/doc/vfu/INSTALL
 share/doc/vfu/README
 share/doc/vfu/VFU.txt
-@dirrm share/doc/vfu/
+@dirrm share/doc/vfu
