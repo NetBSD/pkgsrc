@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1690 2004/05/01 10:37:57 jmmv Exp $
+$NetBSD: TODO,v 1.1691 2004/05/02 17:50:05 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -168,7 +168,6 @@ Suggested package updates
 	o curl-7.11.2
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
-	o daemontools-0.76 [pkg/25153]
 	o dctc-0.85.9
 	o ddd-3.3.8
 	o delegate-8.9.1
