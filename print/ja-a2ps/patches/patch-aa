@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2002/09/30 02:40:52 kei Exp $
+
+--- a2ps.pl-1.44.orig	Fri Mar 15 22:22:10 2002
++++ a2ps.pl-1.44	Fri Mar 15 22:24:14 2002
+@@ -496,8 +496,6 @@
+ /inch {72 mul} bind def
+ ---
+     print "%% SelectTray\n";
+-    print "statusdict /${paper_tray}tray known { ";
+-    print "statusdict begin ${paper_tray}tray end } if\n";
+ 
+     printf("/landscape %s def\n", !$portrait ? "true" : "false");
+     printf("/twinpage %s def\n", $twinpage ? "true" : "false");
