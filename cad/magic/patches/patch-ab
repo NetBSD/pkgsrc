@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/04/06 21:37:29 dmcmahill Exp $
+
+--- scripts/config.orig	Mon Feb  4 12:53:10 2002
++++ scripts/config	Wed Mar 13 13:03:53 2002
+@@ -200,5 +200,5 @@
+ 	echo "       script completes."
+     set gr_cflags=("$gr_cflags" -I/usr/X11R6/include)
+- 	set gr_libs=(-L/usr/X11R6/lib "$gr_libs")
++ 	set gr_libs=(-L${X11BASE}/lib -R${X11BASE}/lib "$gr_libs")
+     endif
+     breaksw
