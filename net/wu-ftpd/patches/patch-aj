@@ -1,8 +1,15 @@
-$NetBSD: patch-aj,v 1.4 2002/03/13 08:05:08 jmc Exp $
+$NetBSD: patch-aj,v 1.5 2002/04/04 13:42:56 cjep Exp $
 
---- config.sub.orig	Wed Mar 13 08:00:24 2002
-+++ config.sub	Wed Mar 13 08:02:18 2002
-@@ -177,7 +177,7 @@
+--- config.sub.orig	Sun Jul 18 13:47:04 1999
++++ config.sub	Thu Apr  4 14:35:27 2002
+@@ -171,13 +171,13 @@
+ 		;;
+ 	# Recognize the basic CPU types with company name.
+ 	vax-* | tahoe-* | i[3456]86-* | i860-* | m68k-* | m68000-* | m88k-* \
+-	      | sparc-* | ns32k-* | fx80-* | arm-* | c[123]* \
++	      | sparc-* | ns32k-* | fx80-* | arm-* | arm32-* | c[123]* \
+ 	      | mips-* | pyramid-* | tron-* | a29k-* | romp-* | rs6000-* | power-* \
+ 	      | none-* | 580-* | cray2-* | h8300-* | i960-* | xmp-* | ymp-* \
  	      | hppa-* | hppa1.0-* | hppa1.1-* | alpha-* | we32k-* | cydra-* | ns16k-* \
  	      | pn-* | np1-* | xps100-* | clipper-* | orion-* | sparclite-* \
  	      | pdp11-* | sh-* | powerpc-* | powerpcle-* | sparc64-* | mips64-* | mipsel-* \
