@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:26 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/21 23:29:25 jmmv Exp $
 bin/gimp
 bin/gimp-1.2
 bin/gimp-config
@@ -6,12 +6,6 @@ bin/gimp-remote
 bin/gimp-remote-1.2
 bin/gimptool
 bin/gimptool-1.2
-etc/gimp/1.2/gimprc
-etc/gimp/1.2/gimprc_user
-etc/gimp/1.2/gtkrc
-etc/gimp/1.2/gtkrc_user
-etc/gimp/1.2/ps-menurc
-etc/gimp/1.2/unitrc
 include/gck/gck.h
 include/libgimp/gimp.h
 include/libgimp/gimp_pdb.h
@@ -283,6 +277,12 @@ man/man1/gimptool.1
 man/man5/gimprc-1.2.5
 man/man5/gimprc.5
 share/aclocal/gimp.m4
+share/examples/gimp/1.2/gimprc
+share/examples/gimp/1.2/gimprc_user
+share/examples/gimp/1.2/gtkrc
+share/examples/gimp/1.2/gtkrc_user
+share/examples/gimp/1.2/ps-menurc
+share/examples/gimp/1.2/unitrc
 share/gimp/1.2/brushes/10x10square.gbr
 share/gimp/1.2/brushes/10x10squareBlur.gbr
 share/gimp/1.2/brushes/11circle.gbr
@@ -1512,6 +1512,8 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gimp.mo
 @dirrm share/gimp/1.2/brushes
 @dirrm share/gimp/1.2
 @dirrm share/gimp
+@dirrm share/examples/gimp/1.2
+@dirrm share/examples/gimp
 @unexec ${RMDIR} %D/share/aclocal 2>/dev/null || ${TRUE}
 @dirrm lib/gimp/1.2/plug-ins
 @dirrm lib/gimp/1.2/modules
@@ -1519,7 +1521,5 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gimp.mo
 @dirrm lib/gimp
 @dirrm include/libgimp
 @dirrm include/gck
-@dirrm etc/gimp/1.2
-@dirrm etc/gimp
 @exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/gimp.m4 ${LOCALBASE}/share/aclocal/gimp.m4
 @unexec test %D = ${LOCALBASE} || ${RM} ${LOCALBASE}/share/aclocal/gimp.m4

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2002/12/01 13:49:40 salo Exp $
+# $NetBSD: Makefile,v 1.8 2002/12/21 23:29:25 jmmv Exp $
 
 DISTNAME=		gimp-1.2.3
 PKGNAME=		gimp-base-1.2.3
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.3/ \
 			ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.3/ \
@@ -28,6 +28,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
 
@@ -46,6 +47,16 @@ MAKE_ENV+=		X11BASE=${X11BASE}
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
 BUILD_DEFS+=		GIMP_WITH_HELPBROWSER
+
+# Configuration files
+PKG_SYSCONFSUBDIR=	gimp/1.2
+EGDIR=			${PREFIX}/share/examples/gimp/1.2
+CONF_FILES+=		${EGDIR}/gimprc ${PKG_SYSCONFDIR}/gimprc
+CONF_FILES+=		${EGDIR}/gimprc_user ${PKG_SYSCONFDIR}/gimprc_user
+CONF_FILES+=		${EGDIR}/gtkrc ${PKG_SYSCONFDIR}/gtkrc
+CONF_FILES+=		${EGDIR}/gtkrc_user ${PKG_SYSCONFDIR}/gtkrc_user
+CONF_FILES+=		${EGDIR}/ps-menurc ${PKG_SYSCONFDIR}/ps-menurc
+CONF_FILES+=		${EGDIR}/unitrc ${PKG_SYSCONFDIR}/unitrc
 
 pre-build:
 	${BUILDLINK_CC} -o ${WRKSRC}/docs/pdb_self_doc			\
@@ -69,4 +80,5 @@ PLIST_SUBST+=	HELPBROWSER="@comment "
 .include "../../x11/gtk/buildlink2.mk"
 .endif
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
