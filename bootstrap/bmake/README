@@ -1,0 +1,110 @@
+			       bmake v3
+
+This directory contains a port of the BSD make tool (from NetBSD)
+I have run it on SunOS,Solaris,HP-UX 9 and IRIX.
+
+Version 3 is has been re-worked from scratch to better facilitate
+importing newer make(1) versions from NetBSD.  The original code base
+was NetBSD-1.0, so version 3 was built by doing a fresh import of the
+NetBSD-1.0 usr.bin/make, adding the autoconf and other portability
+patches to sync it with bmake v2, and then NetBSD's make 
+of Feb 20, 2000 was imported and conflicts dealt with.
+NetBSD's make was again imported on June 6 and December 15, 2000.
+
+Note: when cvs importing newer versions 
+it is important to (in usr.bin/make):
+
+mv config.h make-conf.h
+mv Makefile Makefile.in
+
+before running cvs import.
+
+Building is simply a matter of:
+
+configure
+make -f makefile.boot
+make -f makefile.boot install
+make -f makefile.boot install-man
+make -f makefile.boot install-mk
+
+The install-mk target is only useful if you unpacked [bsd-]mk.tar.gz
+under the bmake directory.
+
+if you have GNU make or a make which supports VPATH, you can build it
+in a separate directory:
+
+here=`pwd`
+mkdir /tmp/bmake
+cd /tmp/bmake
+$here/configure
+gmake -f makefile.boot
+gmake -f makefile.boot install
+gmake -f makefile.boot install-man
+gmake -f makefile.boot install-mk
+
+To make much use of bmake you will need the bsd.*.mk macros or my
+portable *.mk macros.  See 
+ftp://ftp.quick.com.au/pub/sjg/bsd-mk.tar.gz
+ftp://ftp.quick.com.au/pub/sjg/mk.tar.gz
+
+If you have an earlier version of bmake installed you can use that
+with the generated Makefile.
+
+Apart from new features such as .PARSEDIR picked up from the recent
+NetBSD make, this version has improvments (which are also in NetBSD's
+make or soon will be) to facilitate using MAKEOBJDIRPREFIX to support
+true read-only src trees.  See also ChangeLog.
+
+MAKEOBJDIRPREFIX:
+
+When MAKEOBJDIRPREFIX is set in the environment make(1) will attempt
+to chdir(${MAKEOBJDIRPREFIX}${.CUDRIR}) and use that as its objdir.
+Because the directory tree under ${MAKEOBJDIRPREFIX} is a mirror of
+the src tree, make ends up chdir'ing to objdirs that would not exist
+otherwise.  That is, when using normal ./obj dirs (or symlinks) only
+Makefiles which include obj.mk get a separate objdir.  When using
+MAKEOBJDIRPREFIX any directory which has subdirs that use obj.mk will
+have an objdir, thus Makefiles which were written expecting to process
+in ${.CURDIR} may break.  In particular, Makefiles which do:
+
+build:
+	${.MAKE} something
+	${.MAKE} else
+
+will break as the sub-make will not find a Makefile in
+${MAKEOBJDIRPREFIX}${.CUDRIR}.  Whereas
+
+build:
+	cd ${.CURDIR} && ${.MAKE} something
+	cd ${.CURDIR} && ${.MAKE} else
+	
+will work fine.  To avoid the need to re-work these Makefiles  we
+check for running ${.MAKE} or ${.MAKE:T} without a preceeding cd and
+effectively insert one.  This feature only operates if
+MAKEOBJDIRPREFIX (or MAKEOBJDIR) is set and can be dissabled by
+defining NOCHECKMAKECHDIR.
+
+Another problem arrises from make(1) overriding the physical location
+returned by getcwd() with the logical one from $PWD.  We dissable this
+feature if MAKEOBJDIRPREFIX is set to avoid the situation where
+make(1) behaves differently depending on how it got to a directory.
+This avoids lossage like the following example.
+
+If /usr/local/src is a symlink to /d3/src:
+
+cd /usr/local/src/project
+MAKEOBJDIRPREFIX=/tmp/obj make obj
+===> sub1
+/d3/src/project/sub1 -> /tmp/obj/d3/src/project/sub1
+...
+
+cd /usr/local/src/project/sub1
+MAKEOBJDIRPREFIX=/tmp/obj make obj
+/usr/local/src/project/sub1 -> /tmp/obj/usr/local/src/project/sub1
+
+the expected objdir changes depending on circumstances - which 
+means that 9 times out of 10 you'll end up trying to polute
+curdir because the objdir you expected does not exist.
+
+
+--sjg
