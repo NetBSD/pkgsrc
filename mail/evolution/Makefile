@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/02/18 14:55:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2003/03/13 02:37:58 dmcmahill Exp $
 
 DISTNAME=		evolution-1.2.1
 PKGREVISION=		1
@@ -39,6 +39,7 @@ REPLACE_PERL+=		libical/scripts/mkrestrictiontable.pl
 REPLACE_PERL+=		tools/csv2vcard
 REPLACE_PERL+=		tools/evolution-addressbook-clean.in
 REPLACE_PERL+=		tools/killev
+CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--with-openldap --without-static-ldap
 CONFIGURE_ARGS+=	--enable-nntp=yes
 CONFIGURE_ARGS+=	--enable-openssl=yes
@@ -60,23 +61,6 @@ pre-configure:
 	done
 
 .include "../../mk/bsd.prefs.mk"
-
-DISPLAY?=	# empty if unset
-checkforx:
-.if ${DISPLAY}=="" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && ${ECHO} YES || ${ECHO} NO!} == "NO"
-.if exists(${X11BASE}/bin/Xvfb)
-	-${SETENV} XAUTHORITY= ${X11BASE}/bin/Xvfb :2 &
-DISPLAY=	':2'
-.else
-	@${ECHO} "Error: Environment variable DISPLAY must be set"
-	@${ECHO} "       and point to a connectible X server."
-	@${FALSE}
-.endif	# Xvfb
-.endif	# DISPLAY
-
-MAKE_ENV+=	DISPLAY=${DISPLAY}
-
-pre-build: checkforx
 
 .include "../../textproc/libunicode/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
