@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2004/11/28 19:19:52 jlam Exp $
+# $NetBSD: Makefile,v 1.73 2004/11/28 23:25:17 wiz Exp $
 
 DISTNAME=		gnucash-1.8.9
 PKGREVISION=		3
@@ -27,6 +27,9 @@ CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ENV+=		PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig:${X11BASE}/lib/pkgconfig"
+
+# code is using char/unsigned char inconsistently
+BUILDLINK_TRANSFORM+=  rm:-Werror
 
 CFLAGS+=		-Wl,-R${PREFIX}/${GUILE14_SUBDIR}/lib
 #CFLAGS+=		-L${PREFIX}/${GUILE14_SUBDIR}/lib -Wl,-R${PREFIX}/${GUILE14_SUBDIR}/lib
