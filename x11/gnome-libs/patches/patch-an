@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.3 2000/10/17 23:57:46 jlam Exp $
+$NetBSD: patch-an,v 1.4 2004/11/10 14:49:36 sketch Exp $
 
 --- libgnome/gnome-score.c.orig	Sat Jun 17 12:53:33 2000
 +++ libgnome/gnome-score.c
@@ -7,7 +7,7 @@ $NetBSD: patch-an,v 1.3 2000/10/17 23:57:46 jlam Exp $
  #endif
  
 -#define SCORE_PATH GNOMELOCALSTATEDIR "/games"
-+#define SCORE_PATH "/var/games"
++#define SCORE_PATH "@VARBASE@/games"
  
  struct command
  {

@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2002/03/24 19:53:43 rh Exp $
+$NetBSD: patch-ab,v 1.6 2004/11/10 14:49:36 sketch Exp $
 
 --- gnome-data/Makefile.in.orig	Sun Mar 24 13:17:54 2002
 +++ gnome-data/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.5 2002/03/24 19:53:43 rh Exp $
  
  
 -scoredir = $(localstatedir)/games
-+scoredir = /var/games
++scoredir = @VARBASE@/games
  sysconf_DATA = paper.config mime-magic
  
  soundlistdir = $(sysconfdir)/sound/events
