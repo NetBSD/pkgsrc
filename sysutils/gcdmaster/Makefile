@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/03/13 17:37:42 fredb Exp $
+# $NetBSD: Makefile,v 1.4 2002/05/12 10:16:50 abs Exp $
 #
 
 DISTNAME=		cdrdao-1.1.5.src
@@ -6,7 +6,7 @@ PKGNAME=		gcdmaster-1.1.5
 PKGREVISION=		1
 WRKSRC=			${WRKDIR}/cdrdao-1.1.5
 CATEGORIES=		sysutils
-MASTER_SITES=		http://prdownloads.sourceforge.net/cdrdao/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdrdao/}
 
 MAINTAINER=		David Maxwell <david@maxwell.net>
 HOMEPAGE=		http://cdrdao.sourceforge.net/gcdmaster/index.html

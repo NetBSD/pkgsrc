@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/31 10:56:29 simonb Exp $
+# $NetBSD: Makefile,v 1.2 2002/05/12 10:16:48 abs Exp $
 #
 
 DISTNAME=	razor-agents-1.19
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5ra
 CATEGORIES=	mail
-MASTER_SITES=	http://prdownloads.sourceforge.net/razor/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=razor/}
 #MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	packages@netbsd.org

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/02/01 08:10:39 minoura Exp $
+# $NetBSD: Makefile,v 1.5 2002/05/12 10:16:47 abs Exp $
 #
 
 DISTNAME=	Gauche-0.5
 CATEGORIES=	lang
-MASTER_SITES=	http://prdownloads.sourceforge.net/gauche/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gauche/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minoura@netbsd.org
