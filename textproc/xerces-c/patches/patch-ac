@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/01/13 16:38:27 skrll Exp $
+
+--- dom/Makefile.in.orig	Sat Sep 30 18:37:26 2000
++++ dom/Makefile.in
+@@ -225,5 +225,5 @@
+ 	$(RM2) $(addprefix $(XML_INC_DIR)/$(MODULE)/,$(DOM_CPP_PUBHEADERS))
+ 
+ install::
+-	-mkdir -p $(PREFIX)/$(MODULE)
+-	$(CP) $(DOM_CPP_PUBHEADERS) $(DOM_C_FILES) $(PREFIX)/$(MODULE)
++	-mkdir -p $(PREFIX)/include/$(MODULE)
++	$(CP) $(DOM_CPP_PUBHEADERS) $(DOM_C_FILES) $(PREFIX)/include/$(MODULE)

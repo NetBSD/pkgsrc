@@ -1,0 +1,35 @@
+$NetBSD: patch-aj,v 1.1.1.1 2001/01/13 16:38:23 skrll Exp $
+
+--- util/Compilers/GCCDefs.hpp.orig	Sat Sep 30 18:37:28 2000
++++ util/Compilers/GCCDefs.hpp
+@@ -130,7 +130,7 @@
+ #define XERCES_DEBUG
+ #endif
+ 
+-
++#ifndef __NetBSD__
+ // ---------------------------------------------------------------------------
+ //  Provide some common string ops that are different/notavail on GCC
+ // ---------------------------------------------------------------------------
+@@ -147,11 +147,19 @@
+         return char(toLower + 0x20);
+     return toLower;
+ }
+-
+ int stricmp(const char* const str1, const char* const  str2);
+ int strnicmp(const char* const str1, const char* const  str2, const unsigned int count);
++#else /* __NetBSD__ */
++#ifndef XML_NETBSD_STRICMP_DEFINED
++#define XML_NETBSD_STRICMP_DEFINED
++#include <strings.h>
++inline int stricmp(const char* const str1, const char* const  str2);
++inline int strnicmp(const char* const str1, const char* const  str2, const unsigned int count);
+ 
+-
++inline int stricmp(const char* const str1, const char* const  str2) { return strcasecmp(str1,str2);}
++inline int strnicmp(const char* const str1, const char* const  str2, const unsigned int count) { return strncasecmp(str1,str2,count);}
++#endif /* XML_NETBSD_STRICMP_DEFINED */
++#endif /* __NetBSD__ */
+ 
+ // ---------------------------------------------------------------------------
+ //  The name of the DLL that is built by the GCC version of the system.
