@@ -1,15 +1,0 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/04/12 21:26:21 zuntum Exp $
-
---- lib/avifile/AVIReadHandler2.cpp.orig	Wed Jan 10 19:01:12 2001
-+++ lib/avifile/AVIReadHandler2.cpp
-@@ -27,6 +27,10 @@
- typedef long long __int64;
- //#define STREAMING_DEBUG
- 
-+#if defined(__NetBSD__)
-+#define lseek64 lseek
-+#endif
-+
- // HACK!!!!
- 
- extern pthread_mutex_t g_diskcs;
