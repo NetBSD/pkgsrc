@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/11/25 09:40:08 zuntum Exp $
+
+SHA1 (keylaunch-1.3.0.tar.gz) = 05ca476470db8a7658a679e2d6b615baa94f6c2d
+Size (keylaunch-1.3.0.tar.gz) = 9559 bytes
+SHA1 (patch-aa) = 9de576545b654063c6f960eabd115fbcc217acbf
