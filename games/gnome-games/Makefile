@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/11/09 19:46:10 mycroft Exp $
+# $NetBSD: Makefile,v 1.13 2000/11/09 20:06:05 mycroft Exp $
 
 DISTNAME=		gnome-games-1.2.0
 CATEGORIES=		games gnome
@@ -21,7 +21,10 @@ USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS=		--localstatedir=/var
+CONFIGURE_ENV+=		LOCALEBASE=${LOCALEBASE}
+CONFIGURE_ARGS+=	--localstatedir=/var
+
+PLIST_SUBST+=		LOCALEBASE=${LOCALEBASE}
 
 INSTALL_FILE=		${WRKDIR}/INSTALL
 
@@ -29,7 +32,6 @@ AUTOGEN_ENV=		NOCONFIGURE=1
 AUTOGEN_ENV+=		srcdir=${WRKSRC}
 
 pre-configure:
-	#cd ${WRKSRC} && ${MV} -f aclocal.m4 acinclude.m4
 	cd ${WRKSRC} && ${SETENV} ${AUTOGEN_ENV} ${SH} macros/autogen.sh
 
 post-build:
@@ -37,6 +39,16 @@ post-build:
 	  ${PKGDIR}/INSTALL >${INSTALL_FILE}
 
 .include "../../mk/bsd.prefs.mk"
+
+# The directory in which locale files are found is:
+#
+#	${PREFIX}/${LOCALEBASE}/locale/<lang>/LC_MESSAGES
+#
+.if ${OPSYS} == "SunOS"
+LOCALEBASE=		lib
+.else
+LOCALEBASE=		share
+.endif
 
 .if ${NEED_NCURSES} == "YES"
 CONFIGURE_ARGS+=--with-ncurses=${LOCALBASE}
