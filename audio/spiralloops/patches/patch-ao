@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2003/12/19 16:37:54 ben Exp $
+
+--- GUI/Widgets/Fl_LED_Button.cxx.orig	2001-04-19 13:48:11.000000000 -0700
++++ GUI/Widgets/Fl_LED_Button.cxx
+@@ -3,7 +3,7 @@
+ #include "Fl_LED_Button.H"
+ #include <FL/fl_draw.H>
+ 
+-Fl_LED_Button::Fl_LED_Button(int x, int y, int w, int h, const char* l=0):Fl_Light_Button(x,y,w,h,l) {
++Fl_LED_Button::Fl_LED_Button(int x, int y, int w, int h, const char* l):Fl_Light_Button(x,y,w,h,l) {
+   box(FL_NO_BOX);
+ 	down_box(FL_ROUND_DOWN_BOX);
+ 	selection_color(FL_RED);
