@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2004/01/13 02:43:18 grant Exp $
+$NetBSD: distinfo,v 1.9 2004/05/02 02:13:26 heinz Exp $
 
-SHA1 (MIME-Base64-2.23.tar.gz) = 32b47deaac7125c2bb4ecc2a847da005121681c2
-Size (MIME-Base64-2.23.tar.gz) = 16099 bytes
+SHA1 (MIME-Base64-3.01.tar.gz) = 0382d79e250638509aa35a8e4c7495502213c8b1
+Size (MIME-Base64-3.01.tar.gz) = 14514 bytes
 SHA1 (patch-aa) = 7cb2e7cf5a2b0d9e16729a9c975ac5e4adb22c95

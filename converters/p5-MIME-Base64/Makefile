@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2004/01/13 02:43:18 grant Exp $
+# $NetBSD: Makefile,v 1.26 2004/05/02 02:13:26 heinz Exp $
 #
 
-VERS=			2.23
+VERS=			3.01
 DISTNAME=		MIME-Base64-${VERS}
 PKGNAME=		p5-MIME-Base64-${VERS}
 SVR4_PKGNAME=		p5mba
