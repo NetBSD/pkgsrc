@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2005/02/23 13:57:35 grant Exp $
+# $NetBSD: Makefile,v 1.37 2005/02/24 06:36:18 veego Exp $
 
 PKGNAME=	${DISTNAME:S/MesaLib/glut/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	GLUT Graphics library similar to SGI's OpenGL
 
 CONFLICTS+=	Mesa-glx-[0-9]*
