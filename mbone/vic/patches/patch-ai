@@ -1,12 +1,12 @@
-$NetBSD: patch-ai,v 1.2 2000/02/02 04:03:00 wiz Exp $
+$NetBSD: patch-ai,v 1.3 2000/09/08 00:48:16 jwise Exp $
 
 --- configure.in.tk.orig	Thu May 16 04:06:05 1996
 +++ configure.in.tk	Wed Jan 26 16:03:04 2000
 @@ -3,5 +3,7 @@
  
  AC_ARG_WITH(tcl,	--with-tcl=path	specify a pathname for tcl, d=$withval, d="")
-+tcldir=tcl8.0
-+tcllib=tcl80
++tcldir=tcl8.3
++tcllib=tcl83
  if test "$d" != "" ; then 
  	if test ! -d $d ; then 
  		echo "'$d' is not a directory"
@@ -130,8 +130,8 @@ $NetBSD: patch-ai,v 1.2 2000/02/02 04:03:00 wiz Exp $
  AC_SUBST(V_LIBRARY_TCL)
  
  AC_ARG_WITH(tk,	--with-tk=path	specify a pathname for tk, d=$withval, d="")
-+tkdir=tk8.0
-+tklib=tk80
++tkdir=tk8.3
++tklib=tk83
  if test "$d" != "" ; then 
  	if test ! -d $d ; then 
  		echo "'$d' is not a directory"
