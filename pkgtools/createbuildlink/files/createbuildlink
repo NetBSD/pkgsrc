@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.8 2002/09/27 21:19:59 rh Exp $
+#	$NetBSD: createbuildlink,v 1.9 2002/10/16 08:50:49 rh Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,11 +39,29 @@
 # Create an initial buildlink2.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.8 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.9 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 makefile=Makefile
 sedrules=$tmpdir/sedrules.buildlink.$$
 PLIST=PLIST
+
+args=`getopt j $*`
+if [ $? != 0 ]; then
+	echo "Usage: $0 [-j] > buildlink2.mk"
+	exit 2
+fi
+set -- $args
+while [ $# -gt 0 ]; do
+	case "$1" in
+	-j)
+		join=YES
+		;;
+	--)
+		shift; break
+		;;
+	esac
+	shift
+done
 
 ##
 ## some simple integrity checking
@@ -120,9 +138,16 @@ EOF
 ##
 ## buildlinked includes
 ##
-for i in `grep "^include/" $PLIST` `grep "/Headers/.*\.h" $PLIST` ; do
-	echo "BUILDLINK_FILES.$PKGNOVER+=	$i"
-done
+if [ $join = "YES" ]; then
+	for i in `egrep "^include/|/Headers/.*\.h" $PLIST \
+	| sed -e 's|[^/]*\.h$|*.h|' | sort | uniq`; do
+		echo "BUILDLINK_FILES.$PKGNOVER+=	$i"
+	done
+else
+	for i in `egrep "^include/|/Headers/.*\.h" $PLIST` ; do
+		echo "BUILDLINK_FILES.$PKGNOVER+=	$i"
+	done
+fi
 
 ##
 ## buildlinked libraries
