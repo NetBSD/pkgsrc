@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.213 2002/10/09 08:38:46 martti Exp $
+$NetBSD: CHANGES,v 1.214 2002/10/09 13:47:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3163,3 +3163,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added latex-mk-0.9 [dmcmahill 2002-10-09]
 	Updated rp-pppoe to 3.5 [tron 2002-10-09]
 	Updated fvwm2 to 2.4.11nb1 [martti 2002-10-09]
+	Updated www6to4 to 1.5 [wiz 2002-10-09]
