@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8419 2004/12/24 03:21:04 wiz Exp $
+$NetBSD: CHANGES,v 1.8420 2004/12/24 10:13:04 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6498,3 +6498,12 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated aspell-russian to 0.99f7.1 [wiz 2004-12-24]
 	Updated aspell-svenska to 0.51.0 [wiz 2004-12-24]
 	Updated aspell-ukrainian to 0.51.0 [wiz 2004-12-24]
+	Updated glib2 to 2.6.0 [jmmv 2004-12-24]
+	Updated pango to 1.8.0 [jmmv 2004-12-24]
+	Updated gtk2 to 2.6.0 [jmmv 2004-12-24]
+	Added theme-dirs-1.0 [jmmv 2004-12-24]
+	Updated gtk2-engines to 2.6.0 [jmmv 2004-12-24]
+	Removed gtk2-engines-industrial [jmmv 2004-12-24]
+	Updated metacity to 2.8.8 [jmmv 2004-12-24]
+	Updated gnome-themes to 2.8.2 [jmmv 2004-12-24]
+	Updated gtk2-extras to 2.6.0 [jmmv 2004-12-24]
