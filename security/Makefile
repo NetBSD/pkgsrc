@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2000/10/21 18:43:04 rh Exp $
+# $NetBSD: Makefile,v 1.47 2000/10/21 18:48:38 rh Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
@@ -29,6 +29,7 @@
     SUBDIR += p5-MD5
     SUBDIR += p5-SHA
     SUBDIR += PAM
+    SUBDIR += pam-ldap
     SUBDIR += pgp2
     SUBDIR += pgp5
     SUBDIR += pks
