@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/02/14 17:21:32 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/20 11:53:35 jmmv Exp $
 
 DISTNAME=		gnome-media-2.4.1.1
 PKGREVISION=		4
@@ -13,7 +13,7 @@ COMMENT=		Set of audio/multimedia applications for GNOME2
 BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_X11=		yes
@@ -40,19 +40,19 @@ GCONF2_SCHEMAS+=	gnome-cd.schemas
 GCONF2_SCHEMAS+=	gnome-volume-control.schemas
 GCONF2_SCHEMAS+=	gnome-sound-recorder.schemas
 
-.include "../../audio/esound/buildlink2.mk"
-.include "../../multimedia/gst-plugins/buildlink2.mk"
-.include "../../multimedia/gstreamer/buildlink2.mk"
+.include "../../audio/esound/buildlink3.mk"
+.include "../../multimedia/gst-plugins/buildlink3.mk"
+.include "../../multimedia/gstreamer/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/GConf2-ui/buildlink2.mk"
-.include "../../devel/gail/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/libbonobo/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../net/ORBit2/buildlink2.mk"
-.include "../../textproc/intltool/buildlink2.mk"
+.include "../../devel/GConf2-ui/buildlink3.mk"
+.include "../../devel/gail/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../x11/gnome-desktop/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../x11/gnome-desktop/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
