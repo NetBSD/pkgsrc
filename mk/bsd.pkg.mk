@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.588 2000/10/17 23:56:19 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.589 2000/10/19 02:30:05 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2995,7 +2995,7 @@ print-PLIST:
 	 | sort								\
 	 | ${AWK} '							\
 		{ 							\
-		  if (/.info$$/) {					\
+		  if (/\.info$$/) {					\
 		    print "\@unexec install-info --delete --info-dir=%D/info %D/" $$1; \
 		    print $$1;						\
 		    print "\@exec install-info --info-dir=%D/info %D/" $$1; \
