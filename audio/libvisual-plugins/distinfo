@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/05 20:57:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/20 15:56:20 wiz Exp $
 
-SHA1 (libvisual-plugins-0.1.7.tar.gz) = 7c50a2092b5ea0ad6451c5246bf35ee148dcc1c9
-Size (libvisual-plugins-0.1.7.tar.gz) = 438648 bytes
+SHA1 (libvisual-plugins-0.2.0.tar.gz) = bc001f66b1c81b747bc06e3e09aaf71882c47370
+Size (libvisual-plugins-0.2.0.tar.gz) = 1021051 bytes
+SHA1 (patch-aa) = b793cc9b38579c4f3b0656457ea0ded43e1a65ff
