@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/31 05:02:18 grant Exp $
+include/libnbcompat/extern.h
+include/libnbcompat/ftpglob.h
+include/libnbcompat/fts.h
+include/libnbcompat/md5.h
+include/libnbcompat/mtree.h
+include/libnbcompat/namespace.h
+include/libnbcompat/nbcompat.h
+include/libnbcompat/nbtypes.h
+include/libnbcompat/pack_dev.h
+include/libnbcompat/pwcache.h
+include/libnbcompat/rmd160.h
+include/libnbcompat/sha1.h
+include/libnbcompat/sha2.h
+include/libnbcompat/stat_flags.h
+include/libnbcompat/util.h
+include/libnbcompat/vis.h
+@dirrm include/libnbcompat
+lib/libnbcompat.a
