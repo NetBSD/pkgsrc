@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2003/03/27 16:15:13 salo Exp $
+# $NetBSD: Makefile,v 1.38 2003/03/28 03:34:04 salo Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
 DISTNAME=		rxvt-2.7.10
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.rxvt.org/pub/rxvt/ \
 			ftp://mason.primenet.com.au/pub/rxvt/
@@ -45,10 +45,11 @@ CONFIGURE_ARGS+=	--with-xpm-library=${BUILDLINK_PREFIX.xpm}/lib
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-# Make rxvt setgid utmp so that utmp logging functions correctly.
+.if ${OPSYS:M*BSD} || ${OPSYS} == "Darwin"
+# Make rxvt setuid root so that tty ownership setting and utmp logging
+# function correctly.
 #
-SPECIAL_PERMS=	${PREFIX}/bin/rxvt ${ROOT_USER} utmp 2511
+SPECIAL_PERMS=	${PREFIX}/bin/rxvt ${SETUID_ROOT_PERMS}
 .endif
 
 .if ${OPSYS} == "SunOS"
