@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1035 2003/01/06 09:16:03 martti Exp $
+$NetBSD: CHANGES,v 1.1036 2003/01/06 10:39:30 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -133,3 +133,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated anjuta to 1.0.1 [rh 2003-01-06]
 	Added gcc-3.2.1 [uebayasi 2003-01-06]
 	Updated postfix to 2.0.0.2 [martti 2003-01-06]
+	Updated guile to 1.6.1 [uebayasi 2003-01-06]
