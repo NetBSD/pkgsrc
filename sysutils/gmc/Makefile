@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 1999/04/16 22:54:02 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/05/11 20:44:44 tron Exp $
 
 DISTNAME=	mc-4.5.30
 PKGNAME=	gmc-4.5.30
-CATEGORIES=	systuils gnome
+CATEGORIES=	sysutils gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 		ftp://ftp.jimpick.com/pub/mirrors/gnome/gnome-1.0/sources/ \
 		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/gnome-1.0/sources/
