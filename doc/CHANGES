@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9230 2005/02/20 10:19:52 jmmv Exp $
+$NetBSD: CHANGES,v 1.9231 2005/02/20 11:05:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -398,7 +398,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sun-jre15 to 5.0.1nb1 [jmmv 2005-01-17]
 	Updated bugzilla to 2.18 [adrianp 2005-01-17]
 	Updated tex-musixtex to 112 [hubertf 2005-01-18]
-	Updates tex-bagpipetex to 3.01nb2 [hubertf 2005-01-18]
+	Updated tex-bagpipetex to 3.01nb2 [hubertf 2005-01-18]
 	Updated adzap to 20050106 [simonb 2005-01-18]
 	Updated kdeutils3 to 3.3.2nb1 [minskim 2005-01-18]
 	Updated cue to 20050110 [itojun 2005-01-18]
@@ -944,8 +944,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sqwebmail to 5.0.0 [jlam 2005-02-18]
 	Updated gnutls to 1.2.0 [wiz 2005-02-19]
 	Updated wesnoth to 0.8.10 [lukem 2005-02-19]
-	Updates news to 0.2 [jschauma 2005-02-19]
-	Updates ruby-byaccr to 0.1nb1 [taca 2005-02-19]
+	Updated news to 0.2 [jschauma 2005-02-19]
+	Updated ruby-byaccr to 0.1nb1 [taca 2005-02-19]
 	Updated grub to 0.96 [wiz 2005-02-19]
 	Updated p5-Module-Signature to 0.44 [wiz 2005-02-19]
 	Updated p5-Class-MethodMaker to 2.05 [wiz 2005-02-19]
