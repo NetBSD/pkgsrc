@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/09/30 20:15:48 rh Exp $
+# $NetBSD: Makefile,v 1.22 2002/02/03 22:29:11 skrll Exp $
 #
 
 DISTNAME=		libxml-1.8.16
@@ -14,7 +14,7 @@ USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../devel/zlib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
