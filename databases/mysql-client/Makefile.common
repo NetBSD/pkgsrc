@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2004/10/28 01:34:27 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.28 2004/10/30 08:13:51 xtraeme Exp $
 
 DISTNAME=		mysql-4.0.21
 CATEGORIES=		databases
@@ -85,3 +85,4 @@ SUBST_MESSAGE.scripts=	"Fixing scripts."
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
