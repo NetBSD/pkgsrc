@@ -1,26 +1,29 @@
 # New ports collection makefile for:	lesstif
-# Version required:	0.82
+# Version required:	0.83
 # Date created:		December 10, 1996
 # Whom:			1wardd@airmail.net
 #
-# $NetBSD: Makefile,v 1.9 1998/02/11 10:22:26 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/03/23 12:35:51 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
-DISTNAME=	lesstif-0.82
+DISTNAME=	lesstif-0.83
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.lesstif.org/pub/hungry/lesstif/  \
 		ftp://ftp.hungry.com/pub/hungry/lesstif/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=  yes
 USE_X11=	yes
 # change this and remove the strip statement in post-install for debugging
-CONFIGURE_ENV=	CCFLAGS="-O -pipe"
+CONFIGURE_ENV=	CCFLAGS="-O -pipe" INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 # this is worst case, when you're about to overwrite real Motif with Lesstif
 IS_INTERACTIVE=	yes
+
+MAN1=		mwm.1
+MAN5=		mwmrc.5
 
 pre-fetch:
 	@if [ -d ${X11BASE}/include/Xm ]; then \
@@ -47,12 +50,6 @@ pre-fetch:
 	fi
 
 post-install:
-	${MKDIR} ${PREFIX}/lib/X11/mwm ${PREFIX}/lib/X11/app-defaults
-	${INSTALL_DATA} ${WRKSRC}/clients/Motif-1.2/mwm/system.mwmrc \
-		${PREFIX}/lib/X11/mwm
-	${INSTALL_DATA} ${WRKSRC}/clients/Motif-1.2/mwm/alt.map ${PREFIX}/lib/X11/mwm
-	${INSTALL_DATA} ${WRKSRC}/clients/Motif-1.2/mwm/Mwm \
-		${PREFIX}/lib/X11/app-defaults/Mwm
 	${LDCONFIG} || ${TRUE}
 
 .include <bsd.port.mk>
