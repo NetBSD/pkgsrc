@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/04/22 14:22:44 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/05/15 13:55:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -26,7 +26,7 @@ pre-patch:
 	@${PATCH} ${PATCH_ARGS} -p1 < ${WRKDIR}/Patch.magpic2.PhotoCD.XV310a
 
 pre-configure:
-	for f in `find ${WRKDIR} -name Imakefile -follow -print`; do \
+	for f in `find ${WRKDIR}/. -name Imakefile -follow -print`; do \
 		${SED} -e 's:/usr/local:'${LOCALBASE}':g' < $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
 	done
 
