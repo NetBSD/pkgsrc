@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1 1998/09/01 21:44:59 tron Exp $
+
+--- XEphem.ad.orig	Fri Mar 13 17:45:06 1998
++++ XEphem.ad	Sat Aug 29 12:04:56 1998
+@@ -166,7 +166,7 @@
+ ! system-wide directory for xephem support files
+ ! N.B. under this are auxil/, fifos/, and catalogs/
+ ! N.B. if present, ppm.xe and the gsc base directory must be under catalogs/
+-XEphem.BaseDir: .
++XEphem.BaseDir: @PREFIX@/share/xephem
+ 
+ ! mount point for CDROM device
+ ! only used if have access to ASP GSC CDROM
+@@ -198,11 +198,11 @@
+ ! *************************************************************************
+ ! default PPM and GSC Field stars and Network setup choices
+ XEphem*FieldStars*GSCCD.set: False
+-XEphem*FieldStars*GSCCache.set: True
++XEphem*FieldStars*GSCCache.set: False
+ XEphem*FieldStars*XEphemdbdNet.set: False
+ XEphem*FieldStars*XEphemdbdURL.value: /iro.physics.uiowa.edu/cgi-bin/xephemdbd/xephemdbd.pl
+ XEphem*FieldStars*ESONet.set: False
+-XEphem*FieldStars*PPM.set: True
++XEphem*FieldStars*PPM.set: False
+ XEphem*FieldStars*NoDups.set: True
+ XEphem*FieldStars*SAOHD.set: True
+ XEphem*FieldStars*Proxy.set: False
