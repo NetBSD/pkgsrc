@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.32 2000/07/14 16:09:26 hubertf Exp $
+# $NetBSD: pkglint.pl,v 1.33 2000/07/20 13:53:41 rh Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -698,6 +698,16 @@ sub checkmakefile {
 	if ($whole =~ /\nUSE_PKGLIBTOOL/) {
 		&perror("WARN: use of USE_PKGLIBTOOL discouraged, ".
 			"use USE_LIBTOOL instead.");
+	}
+	print "OK: checking NO_CDROM.\n" if ($verbose);
+	if ($whole =~ /\nNO_CDROM/) {
+		&perror("WARN: use of NO_CDROM discouraged, ".
+			"use NO_BIN_ON_CDROM and/or NO_SRC_ON_CDROM instead.");
+	}
+	print "OK: checking NO_PACKAGE.\n" if ($verbose);
+	if ($whole =~ /\nNO_PACKAGE/) {
+		&perror("WARN: use of NO_PACKAGE to enforce license restrictions ".
+		        "is deprecated.");
 	}
 
 	#
