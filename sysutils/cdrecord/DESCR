@@ -5,6 +5,3 @@ ATAPI/mmc compliant drives should also work.  Supported features
 include: IDE/ATAPI, parallel-port, and SCSI drives; audio CDs, data
 CDs, and mixed CDs; full multi-session support, CD-RWs (rewritable),
 TAO, DAO and human-readable error messages.
-
-If you want to use this package on Solaris, be sure to disable
-volume management.
