@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/29 06:36:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/30 08:31:23 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-clients-${XORG_VER}
@@ -13,7 +13,6 @@ COMMENT=		X.org client programs and related files
 
 USE_X11=		yes
 USE_BUILDLINK3=		yes
-CHECK_X11_TYPE=		# defined
 DISTINFO_FILE=		${.CURDIR}/../../x11/xorg-libs/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/xorg-libs/patches
 

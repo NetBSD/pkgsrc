@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/07/30 07:22:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/30 08:31:23 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
@@ -16,7 +16,8 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 USE_BUILDLINK3=		yes
 USE_DIRS+=		xorg-1.0
 INSTALL_TARGET=		install install.man
-NO_XORG_TARGETS=	# defined
+NO_XORG_TARGETS=	yes
+CHECK_X11_TYPE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/07/29 09:06:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2004/07/30 08:31:23 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-clients-${XF_VER}
@@ -13,7 +13,6 @@ COMMENT=		XFree86 client programs and related files
 
 USE_X11=		yes
 USE_BUILDLINK3=		yes
-CHECK_X11_TYPE=		# defined
 DISTINFO_FILE=		${.CURDIR}/../../x11/XFree86-libs/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/XFree86-libs/patches
 
