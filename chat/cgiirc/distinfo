@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/10/15 18:36:55 adrianp Exp $
+$NetBSD: distinfo,v 1.2 2005/01/19 21:27:39 adrianp Exp $
 
-SHA1 (cgiirc-0.5.4.tar.gz) = 3e86bccf84df7349c4b1dd39c91bb4504d1b139a
-Size (cgiirc-0.5.4.tar.gz) = 127545 bytes
+SHA1 (cgiirc-0.5.5.tar.gz) = 68a25781a8296891893ec376a9714680d9aa5ef1
+Size (cgiirc-0.5.5.tar.gz) = 125374 bytes
