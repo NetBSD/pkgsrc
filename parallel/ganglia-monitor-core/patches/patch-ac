@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
+$NetBSD: patch-ac,v 1.2 2005/02/10 02:33:53 jschauma Exp $
 
---- lib/ganglia/gmond_config.h.orig	2005-02-04 17:27:08.000000000 -0500
-+++ lib/ganglia/gmond_config.h	2005-02-04 17:27:47.000000000 -0500
-@@ -5,7 +5,7 @@
- #include <ganglia/llist.h>
+--- gmond/g25_config.h.orig	2005-02-07 22:27:32.000000000 -0500
++++ gmond/g25_config.h	2005-02-07 22:27:46.000000000 -0500
+@@ -4,7 +4,7 @@
+ #include <string.h>
  
  /* autoconf me later */
 -#define DEFAULT_GMOND_CONFIG_FILE "/etc/gmond.conf"
