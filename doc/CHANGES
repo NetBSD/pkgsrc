@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1052 2003/01/08 23:22:06 jmmv Exp $
+$NetBSD: CHANGES,v 1.1053 2003/01/09 00:01:03 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -149,3 +149,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated GutenMark-words to 20030107 [wiz 2003-01-08]
 	Updated windowmaker to 0.80.2nb1 [jmmv 2003-01-08]
 	Added screentest-1.0 [jmmv 2003-01-08]
+	Updated silc-client to 0.9.11 [salo 2003-01-09]
+	Updated silc-server to 0.9.11 [salo 2003-01-09]
