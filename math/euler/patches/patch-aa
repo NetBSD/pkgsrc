@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.4 2003/04/29 22:22:45 jtb Exp $
+$NetBSD: patch-aa,v 1.5 2003/05/11 00:06:14 jtb Exp $
 
 --- main.c.orig
 +++ main.c
-@@ -429,7 +429,9 @@
+@@ -429,7 +429,8 @@
  	gettimer(TIMEOFDAY,&t);
  	return (t.tv_sec+t.tv_nsec/1000000000.0);
  #else
 -	return ((double)(times(NULL)))/CLK_TCK;
 +	struct tms t;
-+	times(&t);
-+	return (double)(t.tms_utime+t.tms_stime)/CLK_TCK;
++	return ((double)(times(&t)))/CLK_TCK;
  #endif
  }
+ 
