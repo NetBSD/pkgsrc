@@ -1,6 +1,18 @@
---- mkisofs.c.old	Thu Jul  2 13:24:42 1998
-+++ mkisofs.c	Thu Jul  2 14:06:03 1998
-@@ -459,19 +459,6 @@
+--- mkisofs.c.orig	Mon Jun  1 23:36:16 1998
++++ mkisofs.c	Sat Jul  4 04:08:26 1998
+@@ -53,11 +53,6 @@
+ 
+ #include "exclude.h"
+ 
+-#ifdef __NetBSD__
+-#include <sys/time.h>
+-#include <sys/resource.h>
+-#endif
+-
+ struct directory * root = NULL;
+ 
+ static char version_string[] = "mkisofs v1.11.3";
+@@ -459,19 +454,6 @@
  	usage();
  	exit(1);
        }
