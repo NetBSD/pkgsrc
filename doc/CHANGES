@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6735 2004/07/30 14:00:39 cube Exp $
+$NetBSD: CHANGES,v 1.6736 2004/07/30 18:30:29 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3654,3 +3654,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ltm-0.30 [wiz 2004-07-30]
 	Added p5-Locale-Maketext-Fuzzy-0.02 [cube 2004-07-30]
 	Added p5-Locale-Maketext-Lexicon-0.38 [cube 2004-07-30]
+	Updated py-docutils to 0.3.5 [recht 2004-07-30]
