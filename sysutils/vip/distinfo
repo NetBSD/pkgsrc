@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/14 11:41:52 agc Exp $
+$NetBSD: distinfo,v 1.2 2005/02/09 08:40:33 seb Exp $
 
 SHA1 (vip-19971113/vip) = 0b2794b5ac2792af5fcf1d97f9aae04798eac049
 Size (vip-19971113/vip) = 4752 bytes
 SHA1 (vip-19971113/vip.man) = d52ce874d594ca2c82538200706bffdf1313fdc1
 Size (vip-19971113/vip.man) = 2411 bytes
+SHA1 (patch-aa) = 599bf79770205f2fd9d42b3615c6ac84b17f949c
