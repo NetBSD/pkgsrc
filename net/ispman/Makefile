@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2000/11/11 17:49:27 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/22 10:44:51 rh Exp $
 #
 
 DISTNAME=	ispman-0.5
+PKGNAME=	${DISTNAME}nb1
 WRKSRC=		${WRKDIR}/ispman
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ispman/}
@@ -9,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ispman/}
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.ispman.org/
 
-DEPENDS+=	openldap>=1.2.11:../../databases/openldap
+DEPENDS+=	pam-ldap>=77:../../security/pam-ldap
 DEPENDS+=	apache>=1.3.14.1:../../www/apache
 DEPENDS+=	p5-${DISTNAME}:../../net/p5-ispman
 
@@ -33,6 +34,9 @@ do-build:
 .for dir in ispman-utils ispman-web
 	cd ${WRKSRC}/${dir} &&						\
 	${RM} -rf `${FIND} . -name CVS -type d -print` &&		\
+	for i in `${FIND} . -name '*.orig' -type f -print` ; do		\
+		${RM} -f $$i ;						\
+	done ;								\
 	for i in `${FIND} . -type f -print` ; do			\
 		${CP} $$i $$i.old && 					\
 		${SED} <$$i.old >$$i -e 's:/usr/bin/perl:${PERL5}:g' &&	\
