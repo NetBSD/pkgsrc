@@ -1,0 +1,96 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/11 02:56:25 rh Exp $
+bin/gnome-pilot-make-password
+bin/gpilot-applet
+bin/gpilot-install-file
+bin/gpilotd
+bin/gpilotd-control-applet
+bin/gpilotd-session-wrapper
+etc/CORBA/servers/gpilot-applet.gnorba
+etc/CORBA/servers/gpilotd.gnorba
+include/gpilotd/gnome-pilot-client.h
+include/gpilotd/gnome-pilot-conduit-backup.h
+include/gpilotd/gnome-pilot-conduit-file.h
+include/gpilotd/gnome-pilot-conduit-standard-abs.h
+include/gpilotd/gnome-pilot-conduit-standard.h
+include/gpilotd/gnome-pilot-conduit-sync-abs.h
+include/gpilotd/gnome-pilot-conduit.h
+include/gpilotd/gnome-pilot-dbinfo.h
+include/gpilotd/gnome-pilot-structures.h
+include/gpilotd/gnome-pilot.h
+include/libgpilotdCM/gnome-pilot-conduit-config.h
+include/libgpilotdCM/gnome-pilot-conduit-management.h
+lib/gnome-pilot/conduits/libbackup_conduit.a
+lib/gnome-pilot/conduits/libbackup_conduit.la
+lib/gnome-pilot/conduits/libbackup_conduit.so
+lib/gnome-pilot/conduits/libfile_conduit.a
+lib/gnome-pilot/conduits/libfile_conduit.la
+lib/gnome-pilot/conduits/libfile_conduit.so
+lib/gnome-pilot/conduits/libtest_conduit.a
+lib/gnome-pilot/conduits/libtest_conduit.la
+lib/gnome-pilot/conduits/libtest_conduit.so
+lib/gpilotConf.sh
+lib/libgpilotd.a
+lib/libgpilotd.la
+lib/libgpilotd.so
+lib/libgpilotd.so.1
+lib/libgpilotd.so.1.0
+lib/libgpilotdcm.a
+lib/libgpilotdcm.la
+lib/libgpilotdcm.so
+lib/libgpilotdcm.so.1
+lib/libgpilotdcm.so.1.0
+lib/libgpilotdconduit.a
+lib/libgpilotdconduit.la
+lib/libgpilotdconduit.so
+lib/libgpilotdconduit.so.1
+lib/libgpilotdconduit.so.1.1
+man/man1/gpilot-install-file.1
+share/applets/Utility/gpilot-applet.desktop
+share/control-center/Peripherals/gpilotd-control-applet.desktop
+share/gnome-pilot/conduits/backup.conduit
+share/gnome-pilot/conduits/file.conduit
+share/gnome-pilot/conduits/test.conduit
+share/gnome-pilot/glade/gnome-palm.png
+share/gnome-pilot/glade/gnome-pilot-watermark.png
+share/gnome-pilot/glade/gpilotd-capplet.glade
+share/gnome-pilot/glade/pilot-applet.glade
+share/gnome/apps/Settings/Peripherals/gpilotd-control-applet.desktop
+share/idl/gnome-pilot.idl
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-pilot.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-pilot.mo
+share/mime-info/palm.keys
+share/mime-info/palm.mime
+share/pixmaps/gnome-palm-conduit.png
+share/pixmaps/gnome-palm.png
+share/pixmaps/sync_broken.png
+share/pixmaps/sync_icon.png
+share/pixmaps/sync_paused.png
+share/pixmaps/syncing_icon.png
+@dirrm share/gnome-pilot/glade
+@dirrm share/gnome-pilot/conduits
+@dirrm share/gnome-pilot
+@dirrm lib/gnome-pilot/conduits
+@dirrm lib/gnome-pilot
+@dirrm include/libgpilotdCM
+@dirrm include/gpilotd
