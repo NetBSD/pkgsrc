@@ -2,7 +2,7 @@
 #
 # start of header
 #
-# $NetBSD: header,v 1.8 2002/06/20 20:15:50 jlam Exp $
+# $NetBSD: header,v 1.9 2002/06/22 02:48:36 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -70,7 +70,7 @@ case "${PKG_CREATE_USERGROUP}" in
 	_PKG_CREATE_USERGROUP=NO
 	;;
 *)
-	_PKG_CREATE_USERGROUP=YES
+	_PKG_CREATE_USERGROUP=@PKG_CREATE_USERGROUP@
 	;;
 esac
 
@@ -82,7 +82,7 @@ case "${PKG_CONFIG}" in
 	_PKG_CONFIG=NO
 	;;
 *)
-	_PKG_CONFIG=YES
+	_PKG_CONFIG=@PKG_CONFIG@
 	;;
 esac
 
