@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/08/17 05:35:38 cube Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/03 15:44:06 wiz Exp $
 #
 
 DISTNAME=	edict
-PKGNAME=	edict-2004.002
+PKGNAME=	edict-2004.003
 CATEGORIES=	japanese misc
 MASTER_SITES=	ftp://ftp.cc.monash.edu.au/pub/nihongo/ \
 		http://japanology.arts.kuleuven.ac.be/mirrors/monash/ \
