@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.1 2004/03/28 22:11:32 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/03/29 00:30:16 xtraeme Exp $
 #
 # Makefile fragment used by XFree86-fonts* packages.
 
 NO_BUILDLINK=	# defined
 USE_LANGUAGES=	# empty
+CHECK_X11_TYPE=	# defined
 
 DEPENDS+=	XFree86-fontsEncodings>=4.4.0:../../fonts/XFree86-fontsEncodings
 FILESDIR=	${.CURDIR}/../../fonts/XFree86-fontsEncodings/files
