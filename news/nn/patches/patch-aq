@@ -1,15 +1,15 @@
-$NetBSD: patch-aq,v 1.1 1999/07/26 21:19:30 tron Exp $
+$NetBSD: patch-aq,v 1.2 1999/09/20 21:43:34 kim Exp $
 
---- inst.sh.orig	Mon Sep 13 19:42:25 1993
-+++ inst.sh	Mon Jul 26 23:11:39 1999
+--- inst.sh.orig	Sat Apr 29 01:34:49 1995
++++ inst.sh	Mon Sep 20 17:07:28 1999
 @@ -1,8 +1,8 @@
  
  # (Large) prefix inserted above by Make
  
 -# BSD systems keep chown in /etc
 -PATH="$PATH:/etc"
-+# BSD systems keep chown in /usr/sbin
-+PATH="$PATH:/usr/sbin"
++# BSD systems keep chown in different places
++PATH="$PATH:/usr/bin:/usr/sbin:/etc"
  
  case "$1" in
  mkdir)
