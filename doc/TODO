@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.507 2003/04/28 12:49:58 markd Exp $
+$NetBSD: TODO,v 1.508 2003/04/28 14:09:06 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -136,7 +136,6 @@ Suggested package updates
 	o graphopt-0.4
 	o gsed-4.0.7
 	o gtetrinet-0.7.1
-	o gtkglext-0.7.1 [pkg/21309]
 	o guile-1.6.4
 	o hatari-0.30
 	o icepref-2.2
