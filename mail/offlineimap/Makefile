@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/08/26 10:20:41 seb Exp $
+# $NetBSD: Makefile,v 1.7 2005/01/23 20:41:48 recht Exp $
 #
 
 DISTNAME=	offlineimap_${_OFFLINEIMAP_VER}
@@ -16,7 +16,7 @@ USE_BUILDLINK3=	yes
 # This is only to placate pkglint
 _OFFLINEIMAP_VER=	4.0.6
 
-PYTHON_VERSIONS_ACCEPTED=	22pth 23pth
+PYTHON_VERSIONS_ACCEPTED=	22 23
 PYDISTUTILSPKG=			yes
 PYTHON_PATCH_SCRIPTS=		bin/offlineimap
 PLIST_SUBST+=			PYSITELIB=${PYSITELIB}

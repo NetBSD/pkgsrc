@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/01/14 18:18:39 darcy Exp $
+# $NetBSD: Makefile,v 1.13 2005/01/23 20:41:49 recht Exp $
 
 DISTNAME=	docutils-0.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Python tool to generate documents
 
 USE_BUILDLINK3= YES
 
-PYTHON_VERSIONS_ACCEPTED=	24pth 24 23 23pth 22 22pth 21 21pth
+PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
 PYDISTUTILSPKG=	# defined
 
 .include "../../lang/python/extension.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/01/16 19:52:29 markd Exp $
+# $NetBSD: Makefile,v 1.13 2005/01/23 20:41:45 recht Exp $
 #
 
 DISTNAME=	bsddb3-4.3.0
@@ -21,7 +21,7 @@ BUILDLINK_DEPENDS.db4+=		db4>=4.2.52
 
 .include "../../mk/pthread.buildlink3.mk"
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native"
-PYTHON_VERSIONS_ACCEPTED=	24pth 23pth 22pth
+PYTHON_VERSIONS_ACCEPTED=	24 23 22
 .endif
 
 do-test:
