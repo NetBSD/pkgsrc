@@ -1,11 +1,11 @@
 #!/bin/sh
 #
-# $NetBSD: pksd.sh,v 1.3 2001/11/21 15:14:02 jlam Exp $
+# $NetBSD: pksd.sh,v 1.4 2001/11/21 21:38:54 jlam Exp $
 #
 # PROVIDE: pksd
 # REQUIRE: DAEMON
 
-if [ -d /etc/rc.d -a -f /etc/rc.subr ]
+if [ -e /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
@@ -67,12 +67,12 @@ start_precmd=pksd_dbinit
 start_cmd=pksd_start
 stop_cmd=pksd_stop
 
-if [ ! -d /etc/rc.d ]
+if [ -e /etc/rc.subr ]
 then
+	load_rc_config $name
+	run_rc_command "$1"
+else
 	@ECHO@ -n " ${name}"
 	pksd_dbinit
 	pksd_start
-else
-	load_rc_config $name
-	run_rc_command "$1"
 fi

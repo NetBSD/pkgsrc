@@ -1,11 +1,11 @@
 #!/bin/sh
 #
-# $NetBSD: samba.sh,v 1.6 2001/11/21 16:44:18 jlam Exp $
+# $NetBSD: samba.sh,v 1.7 2001/11/21 21:38:53 jlam Exp $
 #
 # PROVIDE: samba
 # KEYWORD: nostart
 
-if [ -d /etc/rc.d -a -f /etc/rc.subr ]
+if [ -e /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
@@ -15,7 +15,7 @@ fi
 forward_commands()
 {
 	for file in $COMMAND_LIST; do
-		/etc/rc.d/$file $_arg
+		@RCD_SCRIPTS_DIR@/$file $_arg
 	done
 }
 
@@ -26,7 +26,7 @@ reverse_commands()
 		REVCOMMAND_LIST="$file $REVCOMMAND_LIST"
 	done
 	for file in $REVCOMMAND_LIST; do
-		/etc/rc.d/$file $_arg
+		@RCD_SCRIPTS_DIR@/$file $_arg
 	done
 }
 
@@ -39,11 +39,11 @@ reload_cmd="forward_commands"
 status_cmd="forward_commands"
 extra_commands="reload status"
 
-if [ ! -d /etc/rc.d ]
+if [ -e /etc/rc.subr ]
 then
+	run_rc_command "$1"
+else
 	@ECHO@ -n ' ${name}'
 	_arg="$1"
 	${start_cmd}
-else
-	run_rc_command "$1"
 fi
