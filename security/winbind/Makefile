@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/12 07:31:52 martti Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/13 20:45:50 jlam Exp $
 
 PKGNAME=		winbind-${SAMBA_DIST_VERS}
 PKGREVISION=		1
@@ -15,7 +15,7 @@ COMMENT=		Unified logon information between UNIX and Windows NT
 
 CONFLICTS+=		samba>=3.0
 
-DEPENDS+=		{samba>=2.0,ja-samba>=2.0}:../../net/samba
+DEPENDS+=		{samba>=2.0,ja-samba>=2.0}:../../net/samba2
 
 CONFIGURE_ARGS+=	--with-ssl
 CONFIGURE_ARGS+=	--with-sslinc=${BUILDLINK_PREFIX.openssl}
