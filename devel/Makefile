@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2001/08/02 18:28:22 drochner Exp $
+# $NetBSD: Makefile,v 1.235 2001/08/10 12:26:11 mjl Exp $
 #
 
 COMMENT=	Development utilities
@@ -139,6 +139,7 @@ SUBDIR+=	p5-AtExit
 SUBDIR+=	p5-BSD-Resource
 SUBDIR+=	p5-Bit-Vector
 SUBDIR+=	p5-Compress-Zlib
+SUBDIR+=	p5-Config-IniFiles
 SUBDIR+=	p5-Curses
 SUBDIR+=	p5-Data-Dumper
 SUBDIR+=	p5-Data-ShowTable
