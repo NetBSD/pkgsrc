@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.13 2002/12/24 04:07:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2003/01/04 17:29:04 jmmv Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
-etc/gtk-2.0/gdk-pixbuf.loaders
-etc/gtk-2.0/gtk.immodules
 include/gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h
 include/gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlibrgb.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
@@ -287,6 +285,8 @@ lib/pkgconfig/gtk+-2.0.pc
 lib/pkgconfig/gtk+-x11-2.0.pc
 man/man1/gdk-pixbuf-csource.1
 share/aclocal/gtk-2.0.m4
+share/examples/gtk2/gdk-pixbuf.loaders
+share/examples/gtk2/gtk.immodules
 share/gtk-2.0/demo/alphatest.png
 share/gtk-2.0/demo/apple-red.png
 share/gtk-2.0/demo/appwindow.c
@@ -772,6 +772,7 @@ share/themes/Emacs/gtk-2.0-key/gtkrc
 @dirrm share/gtk-2.0
 @unexec ${RMDIR} %D/share/gnome/apps/Internet 2>/dev/null || ${TRUE}
 @exec ${MKDIR} %D/lib/gtk-2.0/modules 2>/dev/null || ${TRUE}
+@dirrm share/examples/gtk2
 @dirrm lib/gtk-2.0/modules
 @dirrm lib/gtk-2.0/include
 @dirrm lib/gtk-2.0/2.2.0/loaders
@@ -783,4 +784,3 @@ share/themes/Emacs/gtk-2.0-key/gtkrc
 @dirrm include/gtk-2.0/gdk-pixbuf
 @dirrm include/gtk-2.0/gdk
 @dirrm include/gtk-2.0
-@dirrm etc/gtk-2.0
