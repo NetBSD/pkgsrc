@@ -1,12 +1,31 @@
---- configure.in.orig	Fri Jul 10 01:52:28 1998
-+++ configure.in	Fri Jul 10 02:01:46 1998
-@@ -161,6 +161,9 @@
- syslog.h \
- net/errno.h \
- unistd.h \
-+stdlib.h \
-+string.h \
-+time.h \
- netinet/in.h \
- maillock.h \
- ndbm.h \
+*** configure.in.orig	Fri Jul 10 01:44:06 1998
+--- configure.in	Wed Jul 22 16:37:33 1998
+***************
+*** 13,19 ****
+  fi
+  if test "$GCC" = yes 
+  then
+! 	CFLAGS="$CFLAGS -fstrength-reduce -fpcc-struct-return "
+  fi
+  AC_SUBST(CC)
+  AC_SUBST(CFLAGS)
+--- 13,19 ----
+  fi
+  if test "$GCC" = yes 
+  then
+! 	CFLAGS="$CFLAGS -fstrength-reduce "
+  fi
+  AC_SUBST(CC)
+  AC_SUBST(CFLAGS)
+***************
+*** 195,200 ****
+--- 195,203 ----
+  syslog.h \
+  net/errno.h \
+  unistd.h \
++ stdlib.h \
++ string.h \
++ time.h \
+  netinet/in.h \
+  maillock.h \
+  ndbm.h \
