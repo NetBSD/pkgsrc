@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2001/09/27 07:55:17 rh Exp $
+# $NetBSD: Makefile,v 1.22 2001/10/19 09:24:02 martti Exp $
 #
 
-DISTNAME=		dat-4163
+DISTNAME=		dat-4166
 PKGNAME=		uvscan-${DISTNAME}
 CATEGORIES=		security
 MASTER_SITES=		http://download.nai.com/products/datfiles/4.x/nai/ \
