@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.273 2002/02/05 19:55:12 drochner Exp $
+# $NetBSD: Makefile,v 1.274 2002/02/06 21:13:39 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -163,6 +163,7 @@ SUBDIR+=	radius
 SUBDIR+=	radiusd-cistron
 SUBDIR+=	rdesktop
 SUBDIR+=	rdist6
+SUBDIR+=	ripe-whois
 SUBDIR+=	ripe-whois-tools
 SUBDIR+=	rp-pppoe
 SUBDIR+=	rsync
