@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6377 2004/06/28 15:16:02 jmmv Exp $
+$NetBSD: CHANGES,v 1.6378 2004/06/28 15:28:01 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3140,3 +3140,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-session to 2.6.2 [jmmv 2004-06-28]
 	Updated gnome-speech to 0.3.3 [jmmv 2004-06-28]
 	Updated gnome-themes to 2.6.2 [jmmv 2004-06-28]
+	Updated gnome2-utils to 2.6.2 [jmmv 2004-06-28]
