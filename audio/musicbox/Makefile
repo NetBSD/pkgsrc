@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/07/10 10:40:37 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/03/23 21:34:20 dmcmahill Exp $
 
 DISTNAME=	musicbox-1.01p2
 CATEGORIES=	audio
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	rxg@ms25.url.com.tw
 
 DEPENDS+=	mpg123-0.59r:../../audio/mpg123
-DEPENDS+=	qt-1.44:../../x11/qt
+DEPENDS+=	qt1-1.44:../../x11/qt1
 
 USE_X11=	yes
 
