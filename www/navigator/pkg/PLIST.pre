@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.pre,v 1.5 1999/06/27 00:23:21 abs Exp $
+@comment $NetBSD: PLIST.pre,v 1.6 2000/04/30 14:42:22 sakamoto Exp $
 bin/navigator-${NS_VERS}
 bin/navigator
 lib/netscape/navigator-${NS_VERS}/LICENSE
@@ -64,7 +64,7 @@ lib/netscape/navigator-${NS_VERS}/java/classes/jae40.jar
 lib/netscape/navigator-${NS_VERS}/java/classes/java40.jar
 lib/netscape/navigator-${NS_VERS}/java/classes/jio40.jar
 lib/netscape/navigator-${NS_VERS}/java/classes/jsd10.jar
-lib/netscape/navigator-${NS_VERS}/java/classes/ldap30.jar
+lib/netscape/navigator-${NS_VERS}/java/classes/ldap${LDAP_VERS}.jar
 lib/netscape/navigator-${NS_VERS}/java/classes/resource.jar
 lib/netscape/navigator-${NS_VERS}/java/classes/scd10.jar
 lib/netscape/navigator-${NS_VERS}/nethelp/Back_dep.gif
