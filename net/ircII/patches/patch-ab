@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 1999/08/24 14:30:08 mrg Exp $
+$NetBSD: patch-ab,v 1.5 1999/08/28 08:30:08 mrg Exp $
 
 Index: configure
 ===================================================================
@@ -8,23 +8,6 @@ retrieving revision 2.77
 diff -p -u -r2.76 -r2.77
 --- configure	1999/08/23 12:06:10	2.76
 +++ configure	1999/08/24 14:16:16	2.77
-@@ -1,6 +1,6 @@
- #! /bin/sh
- 
--# From configure.in Revision: 1.114 # Guess values for system-dependent variables and create Makefiles.
-+# From configure.in Revision: 1.115 # Guess values for system-dependent variables and create Makefiles.
- # Generated automatically using autoconf version 2.13 
- # Copyright (C) 1992, 93, 94, 95, 96 Free Software Foundation, Inc.
- #
-@@ -547,7 +547,7 @@ echo
- CATEGORIES='build change-request doc pending runtime'
- 
- 
--echo '$Id: patch-ab,v 1.4 1999/08/24 14:30:08 mrg Exp $' > /dev/null
-+echo '$Id: patch-ab,v 1.4 1999/08/24 14:30:08 mrg Exp $' > /dev/null
- 
- 
- # Extract the first word of "gcc", so it can be a program name with args.
 @@ -4072,7 +4072,7 @@ EOF
        ;;
    esac 
