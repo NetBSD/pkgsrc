@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/07/06 18:46:07 nathanw Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/07/15 11:54:32 agc Exp $
 bin/addresses
 bin/ccexample
 bin/debugsh
@@ -67,8 +67,6 @@ lib/libpicc.a
 lib/libpisock.a
 lib/libpisock.la
 lib/libpisock.so.3.1
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 lib/pix/b1.gif
 lib/pix/b2.gif
 lib/pix/b3.gif

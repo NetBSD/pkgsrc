@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/02/02 09:00:19 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/07/15 11:48:29 agc Exp $
 bin/kaffe
 bin/kaffeh
 bin/appletviewer
@@ -32,8 +32,6 @@ lib/libzip.so.0.92
 lib/libzip.so
 lib/libkaffevm.so.0.92
 lib/libkaffevm.so
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 man/man1/kaffe.1.gz
 share/kaffe/lib/security/java.security
 share/kaffe/lib/appletviewer.properties

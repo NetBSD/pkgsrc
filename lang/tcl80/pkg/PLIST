@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 1998/02/02 09:00:21 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.7 1998/07/15 11:50:09 agc Exp $
 bin/tclsh8.0
 lib/libtcl80.a
 lib/libtcl80.so.1.0
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 include/tcl8.0/tcl.h
 include/tcl8.0/unix/tclUnixPort.h
 include/tcl8.0/generic/tcl.h

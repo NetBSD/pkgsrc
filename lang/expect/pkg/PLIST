@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/02/02 09:00:16 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/07/15 11:46:32 agc Exp $
 bin/autoexpect
 bin/autopasswd
 bin/cryptdir
@@ -29,8 +29,6 @@ lib/expect5.25/pkgIndex.tcl
 lib/expect5.25/libexpect525.a
 lib/libexpect525.a
 lib/libexpect525.so.1.2
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 man/man1/autoexpect.1.gz
 man/man1/cryptdir.1.gz
 man/man1/decryptdir.1.gz

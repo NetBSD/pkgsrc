@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/06/22 12:44:31 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/07/15 11:48:29 agc Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/08 09:37:16 obrien Exp
 #
 
@@ -22,6 +22,5 @@ GNU_CONFIGURE=	yes
 post-install:
 	${MKDIR} ${PREFIX}/share/kaffe
 	${INSTALL_DATA} ${WRKSRC}/ENVIRONMENT ${WRKSRC}/license.terms ${PREFIX}/share/kaffe
-	${LDCONFIG} || ${TRUE}
 
 .include "../../mk/bsd.pkg.mk"
