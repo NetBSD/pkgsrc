@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/06/25 15:34:47 skrll Exp $
+# $NetBSD: Makefile,v 1.24 2001/07/15 16:34:57 jlam Exp $
 
 DISTNAME=		bison-1.28
 CATEGORIES=		devel
@@ -8,11 +8,8 @@ MAINTAINER=		thorpej@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/bison/bison.html
 COMMENT=		GNU yacc(1) replacement
 
-BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 BUILD_USES_MSGFMT=	yes
-BUILD_USES_GETTEXT_M4=	yes
 
-#USE_LIBINTL=		# defined
 USE_BUILDLINK_ONLY=	# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--without-included-gettext
