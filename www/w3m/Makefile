@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/03/27 08:55:00 tron Exp $
+# $NetBSD: Makefile,v 1.8 2000/04/20 03:47:35 enami Exp $
 
 DISTNAME=	w3m-0.1.6
 CATEGORIES=	www
@@ -33,24 +33,25 @@ W3M_USE_LYNX_KEY?=	NO
 .if defined(W3M_USE_JAPANESE) && ${W3M_USE_JAPANESE} == YES
 CONFIGURE_ENV+=	def_lg=1
 CONFIGURE_ENV+=	def_dcode=n
-CONFIGURE_ENV+=	def_kanji_symbols=y
+CONFIGURE_ENV+=	kanji_symbols=y
 HELP_LANG=	_ja
 .else
 CONFIGURE_ENV+=	def_lg=2
-CONFIGURE_ENV+=	def_kanji_symbols=n
+CONFIGURE_ENV+=	kanji_symbols=n
 HELP_LANG=	_en
 .endif
 .if defined(W3M_USE_LYNX_KEY) && ${W3M_USE_LYNX_KEY} == YES
-CONFIGURE_ENV+=	def_lynx_key=y
+CONFIGURE_ENV+=	lynx_key=y
 HELP_LYNX=	-lynx
 .else
-CONFIGURE_ENV+=	def_lynx_key=n
+CONFIGURE_ENV+=	lynx_key=n
 .endif
 CONFIGURE_ENV+=	def_bindir=${LOCALBASE}/bin
 CONFIGURE_ENV+=	def_libdir=${LOCALBASE}/${HELPERDIR}
 CONFIGURE_ENV+=	def_helpdir=${LOCALBASE}/${HELPDIR}
-CONFIGURE_ENV+=	def_use_color=y def_use_mouse=y
-CONFIGURE_ENV+=	def_use_menu=y def_use_matrix=y
+CONFIGURE_ENV+=	use_color=n use_mouse=n
+CONFIGURE_ENV+=	use_menu=n use_matrix=n
+CONFIGURE_ENV+=	use_cookie=n use_ssl=n
 CONFIGURE_ENV+=	editor=vi dmail=Mail dbrowser=
 CONFIGURE_ENV+=	cc="${CC}" termlib="-ltermcap"
 CONFIGURE_ENV+=	dldflags="-Wl,-rpath,${LOCALBASE}/lib -L${LOCALBASE}/lib"
