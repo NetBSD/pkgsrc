@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.11 2002/01/17 01:20:39 wiz Exp $
+
+--- doc/C/timidity.1.orig	Wed Jan  9 09:11:59 2002
++++ doc/C/timidity.1
+@@ -359,10 +359,10 @@
+ .TP
+ .B \-k " msec"
+ Specify audio queue time limit to reduce voices.
+-If the remaining audio buffer is less than \fImsec\fB milliseconds,
++If the remaining audio buffer is less than \fImsec\fP milliseconds,
+ TiMidity tries to kill some voices.
+ This feature makes it possible to play complicated MIDI files on slow CPUs.
+-Setting \fImsec\fB to zero tells TiMidity to never remove any voices.
++Setting \fImsec\fP to zero tells TiMidity to never remove any voices.
+ 
+ .TP
+ .B \-L " directory"
