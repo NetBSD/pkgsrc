@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/08/30 08:17:29 rh Exp $
+# $NetBSD: Makefile,v 1.5 1999/11/24 10:23:48 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/08/07 23:56:12 asami Exp
 #
 
@@ -12,9 +12,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.elgro.demon.co.uk/resources.html
 
 DEPENDS+=	hylafax-4.1b2:../../comms/hylafax
-RUN_DEPENDS+=	${PREFIX}/bin/wish8.0:../../x11/tk80
-RUN_DEPENDS+=	${PREFIX}/bin/gs:../../print/ghostscript5
-RUN_DEPENDS+=	${X11BASE}/bin/gv:../../print/gv
+DEPENDS+=	tk-8.0.5:../../x11/tk80
+DEPENDS+=	ghostscript-5.50:../../print/ghostscript5
+DEPENDS+=	gv-3.5.8:../../print/gv
 
 WRKSRC=		${WRKDIR}/tkhylafax
 
