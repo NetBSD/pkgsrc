@@ -1,17 +1,8 @@
-# $NetBSD: catalogs.mk,v 1.1 2003/01/29 20:21:07 jmmv Exp $
+# $NetBSD: catalogs.mk,v 1.2 2003/07/22 18:25:09 jmmv Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # catalog files or DTDs.  It takes care of registering them into the right
 # database.
-#
-# The following variables are automatically defined for free use in packages:
-#    XMLCATMGR            - Path to the xmlcatmgr program.
-#    SGML_DEFAULT_CATALOG - Path to the system-wide (tunable) SGML catalog.
-#    XML_DEFAULT_CATALOG  - Path to the system-wide (tunable) XML catalog.
-#
-# Packages that recognize a system-wide catalog file should be configured
-# to use SGML_DEFAULT_CATALOG or XML_DEFAULT_CATALOG, depending on the
-# type of tool they are.
 #
 # The following variables can be defined by a package to automatically
 # register catalog files:
@@ -27,18 +18,6 @@
 
 .if !defined(XMLCATMGR_CATALOGS_MK)
 XMLCATMGR_CATALOGS_MK=	# defined
-
-# Location of the xmlcatmgr binary program.
-XMLCATMGR=	${BUILDLINK_PREFIX.xmlcatmgr}/bin/xmlcatmgr
-
-# System-wide configurable catalogs.
-.if defined(PKG_SYSCONFDIR.xmlcatmgr) && !empty(PKG_SYSCONFDIR.xmlcatmgr)
-SGML_DEFAULT_CATALOG=	${PKG_SYSCONFDIR.xmlcatmgr}/sgml/catalog
-XML_DEFAULT_CATALOG=	${PKG_SYSCONFDIR.xmlcatmgr}/xml/catalog
-.else
-SGML_DEFAULT_CATALOG=	${PKG_SYSCONFBASE}/sgml/catalog
-XML_DEFAULT_CATALOG=	${PKG_SYSCONFBASE}/xml/catalog
-.endif
 
 # Catalogs to be registered.
 SGML_CATALOGS?=
