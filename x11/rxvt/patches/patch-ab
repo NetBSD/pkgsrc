@@ -1,14 +1,14 @@
-$NetBSD: patch-ab,v 1.4 1999/08/25 00:59:53 hubertf Exp $
-
---- doc/Makefile.in.orig	Tue Aug 17 18:16:14 1999
-+++ doc/Makefile.in	Wed Aug 18 23:26:34 1999
-@@ -40,6 +40,9 @@
+--- doc/Makefile.in.orig	Sun Mar 12 06:26:26 2000
++++ doc/Makefile.in	Mon May  8 05:11:35 2000
+@@ -38,7 +38,10 @@
+ 
  #-------------------------------------------------------------------------
  
- all:
-+	# Nothing
+-all:	rxvt.1
++all:
++	# nada
 +
-+oldall:
- 	@if test x$(TBL) = x; then : ; else echo "Making rxvt.1"; $(TBL) $(srcdir)/rxvt.tbl > rxvt.1 ; fi
++oldall:	rxvt.1
  
- SEDREPLACE = -e 's%@RXVT_VERSION@%$(VERSION)%g;'\
+ rxvt.1: rxvt.tbl Makefile
+ 	@if test x$(TBL) = x; then : ; else echo "$(TBL) $(srcdir)/rxvt.tbl | grep -v '^.lf' > rxvt.1"; $(TBL) $(srcdir)/rxvt.tbl | grep -v '^.lf' > rxvt.1 ; fi
