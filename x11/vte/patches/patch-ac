@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/12/13 17:54:15 xtraeme Exp $
+
+--- src/xticker.c.orig	2003-10-03 12:21:49.000000000 +0200
++++ src/xticker.c	2003-10-03 12:22:17.000000000 +0200
+@@ -49,6 +49,8 @@
+ 	long length = DEFAULT_WIDTH, delay = DEFAULT_DELAY, fd, i, j;
+ 	int c;
+ 	struct stat st;
++	extern char *optarg;
++	extern int optind;
+ 	char *buffer, *outbuf;
+ 
+ 	while ((c = getopt(argc, argv, "d:w:")) != -1) {
