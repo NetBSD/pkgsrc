@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2003/03/07 21:36:22 bouyer Exp $
+# $NetBSD: Makefile,v 1.95 2003/03/11 11:24:27 mjl Exp $
 #
 
 COMMENT=	Databases
@@ -39,6 +39,7 @@ SUBDIR+=	oraedit
 SUBDIR+=	p5-AddressBook
 SUBDIR+=	p5-Apache-DBI
 SUBDIR+=	p5-DBD-CSV
+SUBDIR+=	p5-DBD-SQLite
 SUBDIR+=	p5-DBD-Sybase
 SUBDIR+=	p5-DBD-mysql
 SUBDIR+=	p5-DBD-postgresql
