@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2004/06/26 20:51:19 recht Exp $
+# $NetBSD: Makefile.common,v 1.18 2004/07/13 13:40:35 markd Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 BASEGS_VERS=	7.07
@@ -89,6 +89,12 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/pstoraster/pxlcolor.ppd ${CUPS_MODEL_DIR}
 	${INSTALL_DATA} ${WRKSRC}/pstoraster/pxlmono.ppd ${CUPS_MODEL_DIR}
 	${INSTALL_DATA} ${WRKSRC}/pstoraster/pstoraster.convs ${CUPS_EGDIR}
+
+SUBST_CLASSES+=         ps2epsi-sh
+SUBST_MESSAGE.ps2epsi-sh=   "Fixing ps2epsi shell."
+SUBST_FILES.ps2epsi-sh=     lib/ps2epsi
+SUBST_SED.ps2epsi-sh=       -e 's|/bin/sh|${SH}|'
+SUBST_STAGE.ps2epsi-sh=     post-patch
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
