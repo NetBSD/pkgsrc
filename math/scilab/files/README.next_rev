@@ -1,0 +1,47 @@
+$NetBSD: README.next_rev,v 1.1 1999/03/05 11:22:34 frueauf Exp $
+
+NOTE (mcmahill@alum.mit.edu, March 3, 1999):
+
+There is a bug in NetBSD/alpha-1.3I which causes some problems with scilab.
+
+The relevent alpha bugs are:
+    
+port-alpha/6805, with  port-alpha/6634, and port-alpha/4424 looking related.
+Once those are fixed I'll update scilab to make it fully alpha functional.
+
+The effect is that any scilab operation which causes a divide by zero generates
+a floating point exception which is not trapped.  This causes a core dump.
+
+Once the alpha bugs listed above are fixed, the following changes should be made
+to the scilab package source:
+
+Once fpsetmask(0) on the alpha is fixed to no longer cause a core dump, the
+following patch files should be updated:
+patch-ai
+patch-an
+patch-ao
+patch-ap
+patch-aq
+
+The lines 
+
++#if (defined(netbsd) && !defined(__alpha__))  || defined(freebsd)
++  fpsetmask(0);
++#endif
+
+should be changed to
+
++#if defined(netbsd) || defined(freebsd)
++  fpsetmask(0);
++#endif
+
+
+
+In addition, once the alpha bug is fixed, patch-bt should be removed and the
+pkgsrc Makefile should have the following lines removed:
+
+post-patch:
+      @if [ ${MACHINE_ARCH} != "alpha" ]; then \
+      ${MV} ${WRKSRC}/scilab.star.orig ${WRKSRC}/scilab.star
+
+

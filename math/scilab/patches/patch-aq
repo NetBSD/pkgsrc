@@ -1,11 +1,24 @@
-$NetBSD: patch-aq,v 1.1 1998/08/25 12:53:09 agc Exp $
+$NetBSD: patch-aq,v 1.2 1999/03/05 11:22:35 frueauf Exp $
 
---- ./pvm3/src/lpvmcat.c.orig	Sat Jul 18 22:31:45 1998
-+++ ./pvm3/src/lpvmcat.c	Sat Jul 18 22:31:44 1998
-@@ -98,4 +98,6 @@
+--- ./xmetanet/metanet.c.orig	Mon Jul 20 08:08:03 1998
++++ ./xmetanet/metanet.c	Sat Aug  8 13:50:47 1998
+@@ -8,5 +8,10 @@
+ #include <X11/Xaw/Form.h>
+ #include <X11/Xaw/Label.h>
+-
++#ifdef netbsd
++#include <ieeefp.h>
++#endif
++#ifdef freebsd
++#include <floatingpoint.h>
++#endif
+ #include "defs.h"
+ #include "color.h"
+@@ -221,4 +226,7 @@
  
- #include <stdio.h>
-+#include <sys/types.h>
-+
- #ifdef NEEDMENDIAN
- #include <machine/endian.h>
+   iniG = NULL;
++#if (defined(netbsd) && !defined(__alpha__))  || defined(freebsd) 
++  fpsetmask(0);
++#endif
+ 
+   /* Is xmetanet called by Scilab? */

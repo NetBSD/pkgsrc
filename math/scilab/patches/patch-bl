@@ -1,30 +1,9 @@
-$NetBSD: patch-bl,v 1.1 1998/08/25 12:53:11 agc Exp $
+$NetBSD: patch-bl,v 1.2 1999/03/05 11:22:36 frueauf Exp $
 
---- Makefile.in.orig	Fri Jul 17 10:25:34 1998
-+++ Makefile.in	Thu Aug 13 23:15:29 1998
-@@ -60,5 +60,7 @@
- 	$(RM) bin/scilex
- 
--SUBDIRS = scripts maple macros imp intersci @MANVIEWER@ @XMETANET@ \
-+# don't install @MANVIEWER@  (xless) because NetBSD already has it
-+#SUBDIRS = scripts maple macros imp intersci @MANVIEWER@ @XMETANET@ \
-+SUBDIRS = scripts maple macros imp intersci @XMETANET@ \
- 	tests demos @COMM@ examples
- 
-@@ -162,2 +164,16 @@
- 	cd .. ; tar cvf $(SCIDIR)/$(SCIBASE)-bin.tar $(BINDISTFILES)
- 	$(RM) .binary
-+
-+
-+
-+install:
-+	touch .binary
-+	strip $(SCIDIR)/bin/scilex
-+	cd .. ; tar cvf - $(BINDISTFILES) | (cd ${PREFIX}/share; tar xf -)
-+	cd ${PREFIX}/share/scilab-2.4; make
-+	rm -f ${PREFIX}/bin/scilab
-+	ln -fs ${PREFIX}/share/scilab-2.4/bin/scilab ${PREFIX}/bin/scilab
-+	ln -fs ${PREFIX}/bin/xless ${PREFIX}/share/scilab-2.4/bin/xless
-+	${BSD_INSTALL_DATA} ${PREFIX}/share/scilab-2.4/X11_defaults/Xscilab ${X11BASE}/lib/X11/app-defaults
-+	${BSD_INSTALL_DATA} ${PREFIX}/share/scilab-2.4/X11_defaults/Metanet-color ${X11BASE}/lib/X11/app-defaults
-+
+--- routines/system/scicurdir.c.orig    Mon Dec 21 21:58:38 1998
++++ routines/system/scicurdir.c Mon Dec 21 21:59:00 1998
+@@ -1,3 +1,4 @@
+ /* Copyright INRIA */
++#include <string.h>
+ #include "../machine.h"
+ #ifdef WIN32 
