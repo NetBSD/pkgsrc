@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/09/01 20:11:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.35 2004/09/01 20:33:01 schmonz Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 #
 
@@ -19,6 +19,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 
+# We change conf-home from the default "/usr/local" and don't
+# provide compatibility symlinks. We also patch to honor PKG_SYSCONFDIR
+# and to set reasonable permissions on standard pkgsrc directories.
 RESTRICTED=		"modified source and binaries may not be distributed"
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
