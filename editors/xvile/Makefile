@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2000/09/06 08:16:15 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2000/09/06 15:02:09 jlam Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -21,7 +21,6 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-perl
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--with-libdir-path=${FILTERDIR}
-CONFIGURE_ARGS+=	--with-screen=Xaw --with-xpm
 
 # Until the source catches up to the current Perl API, we need PERL_POLLUTE
 # to look like an older perl.
@@ -34,6 +33,17 @@ INSTALL_TARGET=		install install-perl
 DATADIR=		${PREFIX}/share/xvile
 FILTERDIR=		${PREFIX}/libexec/xvile
 EGDIR=			${PREFIX}/share/examples/xvile
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${XAW_TYPE} == "3d"
+CONFIGURE_ARGS+=	--with-screen=Xaw3d
+CONFIGURE_ARGS+=	--with-Xaw3d
+.else
+XAW_TYPE=		standard
+CONFIGURE_ARGS+=	--with-screen=Xaw
+.endif
+CONFIGURE_ARGS+=	--with-xpm
 
 post-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/perl/vileget ${PREFIX}/bin/xvileget
