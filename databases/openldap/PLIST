@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/14 22:21:03 kleink Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/01/30 07:34:00 jlam Exp $
 bin/ldapadd
 bin/ldapdelete
 bin/ldapmodify
@@ -6,6 +6,7 @@ bin/ldapmodrdn
 bin/ldappasswd
 bin/ldapsearch
 bin/ud
+etc/rc.d/slapd
 include/disptmpl.h
 include/lber.h
 include/lber_types.h
