@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/12/15 21:22:41 wiz Exp $
+$NetBSD: distinfo,v 1.6 2005/01/20 20:35:24 bad Exp $
 
-SHA1 (jdb-1.12.tar.gz) = 63dd7a5f700628734a8316612d86c9a9b5f0e787
-Size (jdb-1.12.tar.gz) = 141134 bytes
-SHA1 (patch-aa) = 667a012b425e9b4f394c82a3c831dba456eabb11
+SHA1 (jdb-1.13.tar.gz) = 112a113fb11fdc69c8352707a3480a5c90c247db
+Size (jdb-1.13.tar.gz) = 143843 bytes
