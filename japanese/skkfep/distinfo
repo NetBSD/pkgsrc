@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:17 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 10:13:37 wiz Exp $
 
-MD5 (skkfep0.86c.tar.gz) = 0e06d473b70bd0233e25195e062bb663
+SHA1 (skkfep0.86c.tar.gz) = fe1473c2a9d28901a96fdc5cf51079de47c86c32
+Size (skkfep0.86c.tar.gz) = 46748 bytes
 SHA1 (patch-aa) = 67464f423931e62c17c7118e9acb0c33c56d81b1
 SHA1 (patch-ab) = f913b929b6857bf29b2936edde6c87d9d17c4309
 SHA1 (patch-ac) = a55de012abb00d22a9a209c265b72a508c333d47
