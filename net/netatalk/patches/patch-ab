@@ -1,19 +1,13 @@
-$NetBSD: patch-ab,v 1.7 2003/02/23 19:18:52 fredb Exp $
+$NetBSD: patch-ab,v 1.8 2004/11/02 11:26:28 markd Exp $
 
---- distrib/initscripts/Makefile.in.orig	Sun Feb 16 12:50:01 2003
-+++ distrib/initscripts/Makefile.in	Sun Feb 23 13:18:29 2003
-@@ -125,12 +125,12 @@
- @USE_SUSE_TRUE@sysvdir = /etc/init.d
- @USE_COBALT_TRUE@sysvdir = /etc/rc.d/init.d
- @USE_TRU64_TRUE@sysvdir = /sbin/init.d
+--- distrib/initscripts/Makefile.in.orig	2004-08-27 23:24:05.000000000 +1200
++++ distrib/initscripts/Makefile.in
+@@ -246,7 +246,7 @@ EXTRA_DIST = $(TEMPLATES) rc.atalk.cobal
+ #
+ # checking for NetBSD init scripts
+ #
 -@USE_NETBSD_TRUE@sysvdir = /etc/rc.d
-+@USE_NETBSD_TRUE@sysvdir = ${prefix}/etc/rc.d#	pkgsrc *only*!
- @USE_REDHAT_TRUE@sysv_SCRIPTS = atalk
- @USE_SUSE_TRUE@sysv_SCRIPTS = atalk
- @USE_COBALT_TRUE@sysv_SCRIPTS = atalk
- @USE_TRU64_TRUE@sysv_SCRIPTS = atalk
--@USE_NETBSD_TRUE@sysv_SCRIPTS = afp atalk pap timelord
-+@USE_NETBSD_TRUE@sysv_SCRIPTS = afpd atalkd papd timelord
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = ../../config.h
- CONFIG_CLEAN_FILES = 
++@USE_NETBSD_TRUE@sysvdir = ${prefix}/etc/rc.d# pkgsrc *only*!
+ 
+ 
+ #
