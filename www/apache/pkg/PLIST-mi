@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-mi,v 1.4 1998/08/07 23:46:09 cjs Exp $
+@comment $NetBSD: PLIST-mi,v 1.5 1998/09/05 23:14:45 hubertf Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
@@ -15,6 +15,7 @@ http/conf/mime.types.default
 http/conf/srm.conf
 http/conf/srm.conf.default
 http/htdocs/apache_pb.gif
+http/htdocs/sitedrivenby.gif
 http/htdocs/index.html
 http/htdocs/manual/LICENSE
 http/htdocs/manual/bind.html
