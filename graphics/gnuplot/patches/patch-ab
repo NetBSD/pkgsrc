@@ -1,9 +1,0 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 10:40:47 agc Exp $
-
---- util.c.orig	Fri Jan 30 08:11:09 1998
-+++ util.c	Fri Jan 30 08:11:28 1998
-@@ -52,3 +52,3 @@
- extern int sys_nerr;
--extern char *sys_errlist[];
-+/*extern char *sys_errlist[];*/
- #endif
