@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/02/10 10:47:44 fredb Exp $
+# $NetBSD: Makefile,v 1.23 2000/02/10 12:05:25 fredb Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -25,10 +25,13 @@ MAKEFILE=		makefile
 USE_GMAKE=		yes
 USE_X11=		yes
 
-CONFIGURE_ARGS+=	--without-debug --with-arenarc-dir=${LOCALBASE}/etc
+# Comment out the following to build in the debugging symbols.
+CONFIGURE_ARGS+=	--without-debug
+
+CONFIGURE_ARGS+=	--with-arenarc-dir=${LOCALBASE}/etc
+CONFIGURE_ARGS+=	--with-libwww-config-h-dir=${WRKDIR}
 CONFIGURE_ARGS+=	--with-libwww-include=${LOCALBASE}/include/w3c-libwww
 CONFIGURE_ARGS+=	--with-libwww-libdir=${LOCALBASE}/lib
-CONFIGURE_ARGS+=	--with-libwww-config-h-dir=${WRKDIR}
 CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include -I${WRKDIR}"
 
 # Arena requires libwww's "config.h" header - it is installed as "wwwconf.h",
