@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.223 2004/03/15 17:36:42 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.224 2004/03/15 18:09:42 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -119,8 +119,8 @@ PKGSRC_RUN_TEST?=	no
 # Possible: yes, no
 # Default: no
 
-PREFER_PKGSRC?=		Xft2 Xrandr Xrender expat fontconfig freetype2	\
-			randrext render xcursor
+PREFER_PKGSRC?=		MesaLib Xft2 Xrandr Xrender expat fontconfig	\
+			freetype2 glu randrext render xcursor
 PREFER_NATIVE?=		yes
 #
 # When building packages, whether to prefer the pkgsrc or native
