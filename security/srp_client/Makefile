@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/08/12 18:39:58 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2002/10/02 22:19:47 wiz Exp $
 
 DISTNAME=		srp-1.4.4
 PKGNAME=		srp-client-1.4.4
@@ -9,8 +9,6 @@ MASTER_SITES=		ftp://ftp.win.ne.jp/pub/network/security/srp/ \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www-cs-students.stanford.edu/~tjw/srp/
 COMMENT=		client programs using Secure Remote Password protocol
-
-BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 LICENSE=		srp_client-license
 
@@ -36,7 +34,7 @@ SED_PATTERN+=	-e "s,-ldes,-ldes -lcom_err,"
 
 post-patch:
 	for FILE in ftp/ftp/Makefile.in ftp/ftpd/Makefile.in		\
-		telnet/configure telnet/configure.in;			\
+		telnet/configure.in telnet/configure;			\
 	do								\
 		cd ${WRKSRC} &&						\
 		${SED}  ${SED_PATTERN} $$FILE > $$FILE.patched &&	\
