@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/07/31 00:01:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2004/08/07 14:13:06 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-2.0s3
@@ -35,8 +35,7 @@ REPLACE_PERL=		tools/*.pl
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=	JABBERD_USER JABBERD_GROUP JABBERD_METHOD  \
-		JABBERD_LOGDIR JABBERD_PIDDIR
+BUILD_DEFS+=	JABBERD_USER JABBERD_GROUP JABBERD_LOGDIR JABBERD_PIDDIR
 
 PKG_SYSCONFSUBDIR=	jabberd
 RCD_SCRIPTS=		jabberd c2s sm resolver router s2s
