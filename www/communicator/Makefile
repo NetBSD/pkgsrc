@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/06/21 08:44:29 jlam Exp $
+# $NetBSD: Makefile,v 1.14 1999/06/25 00:09:22 abs Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -12,26 +12,26 @@ NS_ENCRYPTION?=	export
 .if !exists(/emul/osf1/sbin/loader)
 IGNORE=You must have Digital UNIX libraries installed - see compat_osf1(8)
 .endif
-UNAME=		alpha-dec-osf4.0
+DISTUNAME=	alpha-dec-osf4.0
 DIST_DIR_NAME=	supported/dec_unix40
 WRKNAME=	alpha-dec-osf4.0
 .elif (${MACHINE_ARCH} == "i386")
 .if !exists(/emul/linux/lib/ld-linux.so.2)
 IGNORE=You must have Linux libraries installed - see compat_linux(8)
 .endif
-UNAME=		x86-unknown-linuxglibc2.0
+DISTUNAME=	x86-unknown-linuxglibc2.0
 DIST_DIR_NAME=	supported/linux20_glibc2
 WRKNAME=	x86-unknown-linux2.0
 .elif (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/sunos/usr/lib/ld.so)
 IGNORE=You must have SunOS libraries installed - see compat_sunos(8)
 .endif
-UNAME=		sparc-sun-sunos4.1.3_U1
+DISTUNAME=	sparc-sun-sunos4.1.3_U1
 DIST_DIR_NAME=	unsupported/sunos413
-WRKNAME=	${UNAME}
+WRKNAME=	${DISTUNAME}
 .endif
 #
-DISTNAME=	${BINNAME}-v${NS_VERS_SHORT}-${NS_ENCRYPTION}.${UNAME}
+DISTNAME=	${BINNAME}-v${NS_VERS_SHORT}-${NS_ENCRYPTION}.${DISTUNAME}
 PKGNAME=	${BINNAME}-${NS_VERS}
 CATEGORIES=	www
 SUB=		english/${NS_VERS}/unix/${DIST_DIR_NAME}/complete_install
