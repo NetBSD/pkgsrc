@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 1999/09/15 18:56:58 jlam Exp $
+# $NetBSD: Makefile,v 1.77 1999/09/17 15:36:14 fredb Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -61,6 +61,7 @@
 #    SUBDIR += linuxgdb
     SUBDIR += m4
 #    SUBDIR += makedepend
+    SUBDIR += maketool
     SUBDIR += mit-pthreads
 #    SUBDIR += mkmf
 #    SUBDIR += mprof
