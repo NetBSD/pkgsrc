@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.47 2002/03/26 08:24:59 martti Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.48 2002/04/03 23:10:41 hubertf Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1180,6 +1180,11 @@ TIN_USE_INN_SPOOL?= NO
 
 #TEAPOP_WITHOUT_APOP=
 # Compile teapop without apop support
+# Possible: defined, not defined
+# Default: not defined
+
+#TEAPOP_WITH_MYSQL=	yes
+# Compile teapop with MySQL support.
 # Possible: defined, not defined
 # Default: not defined
 
