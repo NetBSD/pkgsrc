@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1921 2004/07/13 08:20:34 adam Exp $
+$NetBSD: TODO,v 1.1922 2004/07/13 14:06:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -184,7 +184,7 @@ Suggested package updates
 	o checkbot-1.74
 	o clamav-0.74
 	o clanlib-0.7.8
-	o classpath-0.09
+	o classpath-0.10
 	o clisp-2.33.2
 	o cocoon-2.1.5
 	o conserver-8.1.8
@@ -225,7 +225,7 @@ Suggested package updates
 	o firewalk-gtk-5.0
 	o foomatic-2.9.1 [jlam]
 	o fop-0.20.5
-	o fox-1.2.6
+	o fox-1.2.7
 	o freetds-0.62.3
 	o fsviewer-0.2.5
 	o gauche-0.8
