@@ -1,8 +1,8 @@
-$NetBSD: patch-br,v 1.3 2003/03/11 13:33:55 markd Exp $
+$NetBSD: patch-br,v 1.4 2003/05/22 03:05:41 markd Exp $
 
---- noatun/modules/kjofol-skin/Makefile.in.orig	Fri Jan 17 08:49:42 2003
+--- noatun/modules/kjofol-skin/Makefile.in.orig	Thu May  8 00:05:29 2003
 +++ noatun/modules/kjofol-skin/Makefile.in
-@@ -348,7 +348,7 @@ noatun_kjofol_la_SOURCES=kjloader.cpp kj
+@@ -399,7 +399,7 @@ noatun_kjofol_la_SOURCES=kjloader.cpp kj
  
  
  noatun_kjofol_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
@@ -11,7 +11,7 @@ $NetBSD: patch-br,v 1.3 2003/03/11 13:33:55 markd Exp $
                          $(LIB_KIO) -lm \
                          $(top_builddir)/arts/modules/libartsmodules.la
  
-@@ -369,7 +369,7 @@ CONFIG_CLEAN_FILES =
+@@ -420,7 +420,7 @@ CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
  noatun_kjofol_la_DEPENDENCIES = \
@@ -20,16 +20,16 @@ $NetBSD: patch-br,v 1.3 2003/03/11 13:33:55 markd Exp $
  	$(top_builddir)/arts/modules/libartsmodules.la
  am_noatun_kjofol_la_OBJECTS = kjloader.lo kjwidget.lo kjbutton.lo \
  	kjseeker.lo kjsliders.lo kjfont.lo kjtextdisplay.lo kjvis.lo \
-@@ -664,7 +664,7 @@ distclean-tags:
- 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+@@ -748,7 +748,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=helpers.cpp kjfont.cpp kjprefs.cpp kjofolui.plugin kjskinselectorwidget.ui kjsliders.cpp parser.cpp noatunui.cpp kjequalizer.cpp kjbackground.cpp kjguisettingswidget.ui kjvis.cpp kjtextdisplay.cpp 
-+KDE_DIST=kjtextdisplay.cpp parser.cpp kjsliders.cpp kjbackground.cpp kjvis.cpp kjequalizer.cpp kjskinselectorwidget.ui kjofolui.plugin kjprefs.cpp noatunui.cpp helpers.cpp kjfont.cpp kjguisettingswidget.ui 
+-KDE_DIST=helpers.cpp kjofolui.plugin kjskinselectorwidget.ui kjguisettingswidget.ui 
++KDE_DIST=kjskinselectorwidget.ui kjofolui.plugin helpers.cpp kjguisettingswidget.ui 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -849,24 +849,24 @@ kjguisettingswidget.moc: kjguisettingswi
+@@ -948,24 +948,24 @@ kjguisettingswidget.moc: kjguisettingswi
  	$(MOC) kjguisettingswidget.h -o kjguisettingswidget.moc
  
  #>+ 3
@@ -63,7 +63,7 @@ $NetBSD: patch-br,v 1.3 2003/03/11 13:33:55 markd Exp $
  
  #>+ 5
  clean-ui:
-@@ -889,7 +889,7 @@ force-reedit:
+@@ -988,7 +988,7 @@ force-reedit:
  
  
  #>+ 11
@@ -72,7 +72,7 @@ $NetBSD: patch-br,v 1.3 2003/03/11 13:33:55 markd Exp $
  	@echo 'creating noatun_kjofol_la.all_cpp.cpp ...'; \
  	rm -f noatun_kjofol_la.all_cpp.files noatun_kjofol_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> noatun_kjofol_la.all_cpp.final; \
-@@ -925,24 +925,24 @@ kde-rpo-clean:
+@@ -1024,24 +1024,24 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 22
