@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7447 2004/10/15 13:29:40 adam Exp $
+$NetBSD: CHANGES,v 1.7448 2004/10/15 16:24:32 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4733,3 +4733,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated png to 1.2.7 [adam 2004-10-15]
 	Updated metacity to 2.8.6 [jmmv 2004-10-15]
 	Updated nedit to 5.5 [adam 2004-10-15]
+	Updated gnome2-applets to 2.8.1.1 [jmmv 2004-10-15]
