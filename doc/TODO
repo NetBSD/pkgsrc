@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.905 2003/09/26 13:20:55 wiz Exp $
+$NetBSD: TODO,v 1.906 2003/09/26 14:07:08 recht Exp $
 
 Suggested new packages
 ======================
@@ -184,6 +184,7 @@ Suggested package updates
 	o latd-1.18 [pkg/22735]
 	o lavaps-2.3
 	o lcms-1.0.9
+	o libaudiofile-0.2.4
 	o libgcrypt-1.1.42
 	o libgphoto2-2.1.2
 	o libxml-2.5.11
