@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.141 2002/10/02 20:36:23 jlam Exp $
+$NetBSD: CHANGES,v 1.142 2002/10/02 21:39:07 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3071,3 +3071,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated apache to 2.0.42 [itojun 2002-10-02]
 	Updated socks5 to 1.0.2nb1 [grant 2002-10-02]
 	Added oss-3.97d [jlam 2002-10-02]
+	Added ee-1.4.5a [cjep 2002-10-02]
