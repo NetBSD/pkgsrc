@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.938 2002/03/04 11:47:25 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.939 2002/03/04 11:56:54 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2332,6 +2332,14 @@ install: uptodate-pkgtools build ${INSTALL_COOKIE}
 package: uptodate-pkgtools install ${PACKAGE_COOKIE}
 .endif
 
+.if !target(replace)
+replace: uptodate-pkgtools build real-replace
+.endif
+
+.if !target(undo-replace)
+undo-replace: uptodate-pkgtools real-undo-replace
+.endif
+
 ${EXTRACT_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET}
 ${PATCH_COOKIE}:
@@ -2379,6 +2387,8 @@ real-configure: configure-message pre-configure do-configure post-configure conf
 real-build: build-message pre-build do-build post-build build-cookie
 real-install: do-su-install
 real-package: do-su-package
+real-replace: do-su-replace
+real-undo-replace: do-su-undo-replace
 
 _SU_TARGET=								\
 	if [ `${ID} -u` = 0 ]; then					\
@@ -2425,6 +2435,20 @@ do-su-package:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	realtarget="real-su-package";					\
 	action="package";						\
+	${_SU_TARGET} 
+
+do-su-replace:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Replacing ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	realtarget="real-su-replace";					\
+	action="replace";						\
+	${_SU_TARGET} 
+
+do-su-undo-replace:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Undoing Replacement of ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	realtarget="real-su-undo-replace";				\
+	action="undo-replace";						\
 	${_SU_TARGET} 
 
 # Empty pre-* and post-* targets
@@ -2635,6 +2659,49 @@ tarup:
 	  ${RM} -f ${PKGNAME}${PKG_SUFX}; \
 	  ${LN} -s ../All/${PKGNAME}${PKG_SUFX}; \
 	done
+
+# shared code for replace and undo-replace
+_REPLACE=								\
+	if [ -f ${PKG_DBDIR}/$$oldpkgname/+REQUIRED_BY ]; then		\
+		${MV} ${PKG_DBDIR}/$$oldpkgname/+REQUIRED_BY ${WRKDIR}/.req; \
+	fi;								\
+	${MAKE} deinstall;						\
+	$$replace_action;						\
+	if [ -f ${WRKDIR}/.req ]; then					\
+		${MV} ${WRKDIR}/.req ${PKG_DBDIR}/$$newpkgname/+REQUIRED_BY; \
+		for pkg in `${CAT} ${PKG_DBDIR}/$$newpkgname/+REQUIRED_BY`; do \
+			${SETENV} NEWPKGNAME=$$newpkgname		\
+				${AWK} '/^@pkgdep '$$oldpkgname'/ { print "@pkgdep " ENVIRON["NEWPKGNAME"]; next } { print }' \
+				< ${PKG_DBDIR}/$$pkg/+CONTENTS > ${PKG_DBDIR}/$$pkg/+CONTENTS.$$$$ && \
+			${MV} ${PKG_DBDIR}/$$pkg/+CONTENTS.$$$$ ${PKG_DBDIR}/$$pkg/+CONTENTS; \
+		done;							\
+	fi
+
+# replace a package in place - not for the faint-hearted
+real-su-replace:
+	${_PKG_SILENT}${_PKG_DEBUG}                                     \
+	${ECHO_MSG} "*** WARNING - experimental target - data loss may be experienced ***"; \
+	pkg_tarup ${PKGBASE} || (${ECHO} "Can't pkg_tarup ${PKGBASE}"; exit 1); \
+	oldpkgname=`${PKG_INFO} -e ${PKGBASE}`;				\
+	newpkgname=${PKGNAME};						\
+	${ECHO} "$$oldpkgname" > ${WRKDIR}/.replace;			\
+	replace_action="${MAKE} install";				\
+	${_REPLACE}
+
+# undo the replacement of a package - not for the faint-hearted either
+real-su-undo-replace:
+	${_PKG_SILENT}${_PKG_DEBUG}                                     \
+	if [ ! -f ${WRKDIR}/.replace ]; then				\
+		${ECHO_MSG} "No replacement to undo";			\
+		exit 1;							\
+	fi;								\
+	${ECHO_MSG} "*** WARNING - experimental target - data loss may be experienced ***"; \
+	pkg_tarup ${PKGBASE} || (${ECHO} "Can't pkg_tarup ${PKGBASE}"; exit 1); \
+	oldpkgname=${PKGNAME};						\
+	newpkgname=`${CAT} ${WRKDIR}/.replace`;				\
+	replace_action="${SETENV} ${PKG_ADD} ${PKGREPOSITORY}/$$newpkgname${PKG_SUFX}"; \
+	${_REPLACE};							\
+	${RM} ${WRKDIR}/.replace
 
 # This is for the use of sites which store distfiles which others may
 # fetch - only fetch the distfile if it is allowed to be
