@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/02/17 08:20:04 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/04/27 15:02:08 hubertf Exp $
 bin/wget
 etc/wgetrc
 @unexec %D/bin/install-info --delete %D/info/wget.info %D/info/dir
@@ -7,4 +7,3 @@ info/wget.info-1
 info/wget.info-2
 info/wget.info-3
 @exec %D/bin/install-info %D/info/wget.info %D/info/dir
-man/man1/wget.1.gz
