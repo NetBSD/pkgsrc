@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/01 18:40:56 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/06/01 16:59:49 recht Exp $
+include/evolution-data-server-1.0/groupwise/e-gw-connection.h
+include/evolution-data-server-1.0/groupwise/e-gw-container.h
+include/evolution-data-server-1.0/groupwise/e-gw-filter.h
+include/evolution-data-server-1.0/groupwise/e-gw-item.h
+include/evolution-data-server-1.0/groupwise/e-gw-message.h
 include/evolution-data-server-1.0/libebook/Evolution-DataServer-Addressbook.h
 include/evolution-data-server-1.0/libebook/e-address-western.h
 include/evolution-data-server-1.0/libebook/e-book-async.h
@@ -108,71 +113,77 @@ lib/bonobo/servers/GNOME_Evolution_DataServer_1.0.server
 lib/libebook.a
 lib/libebook.la
 lib/libebook.so
-lib/libebook.so.5
-lib/libebook.so.5.0
+lib/libebook.so.6
+lib/libebook.so.6.0
 lib/libecal.a
 lib/libecal.la
 lib/libecal.so
-lib/libecal.so.4
-lib/libecal.so.4.0
+lib/libecal.so.6
+lib/libecal.so.6.0
 lib/libedata-book.a
 lib/libedata-book.la
 lib/libedata-book.so
 lib/libedata-book.so.0
-lib/libedata-book.so.0.4
+lib/libedata-book.so.0.6
 lib/libedata-cal.a
 lib/libedata-cal.la
 lib/libedata-cal.so
-lib/libedata-cal.so.4
-lib/libedata-cal.so.4.0
+lib/libedata-cal.so.6
+lib/libedata-cal.so.6.0
 lib/libedataserver.a
 lib/libedataserver.la
 lib/libedataserver.so
 lib/libedataserver.so.3
-lib/libedataserver.so.3.1
+lib/libedataserver.so.3.3
+lib/libegroupwise.a
+lib/libegroupwise.la
+lib/libegroupwise.so
+lib/libegroupwise.so.1
+lib/libegroupwise.so.1.0
 lib/pkgconfig/evolution-data-server-1.0.pc
 lib/pkgconfig/libebook-1.0.pc
 lib/pkgconfig/libecal-1.0.pc
 lib/pkgconfig/libedata-book-1.0.pc
 lib/pkgconfig/libedata-cal-1.0.pc
 lib/pkgconfig/libedataserver-1.0.pc
+lib/pkgconfig/libegroupwise-1.0.pc
 libexec/evolution-data-server-1.0
-share/doc/html/libebook/EBook.html
-share/doc/html/libebook/EBookListener.html
-share/doc/html/libebook/EBookView.html
-share/doc/html/libebook/EBookViewListener.html
-share/doc/html/libebook/EContact.html
-share/doc/html/libebook/EVCard.html
-share/doc/html/libebook/ch01.html
-share/doc/html/libebook/home.png
-share/doc/html/libebook/index.html
-share/doc/html/libebook/index.sgml
-share/doc/html/libebook/left.png
-share/doc/html/libebook/libebook-EAddressWestern.html
-share/doc/html/libebook/libebook-ENameWestern.html
-share/doc/html/libebook/libebook-e-book-async.html
-share/doc/html/libebook/libebook-e-book-query.html
-share/doc/html/libebook/libebook-e-book-types.html
-share/doc/html/libebook/libebook.devhelp
-share/doc/html/libebook/right.png
-share/doc/html/libebook/up.png
-share/doc/html/libecal/ECal.html
-share/doc/html/libecal/ECalComponent.html
-share/doc/html/libecal/ECalListener.html
-share/doc/html/libecal/ECalView.html
-share/doc/html/libecal/ECalViewListener.html
-share/doc/html/libecal/ch01.html
-share/doc/html/libecal/home.png
-share/doc/html/libecal/index.html
-share/doc/html/libecal/index.sgml
-share/doc/html/libecal/left.png
-share/doc/html/libecal/libecal-e-cal-recur.html
-share/doc/html/libecal/libecal-e-cal-time-util.html
-share/doc/html/libecal/libecal-e-cal-types.html
-share/doc/html/libecal/libecal-e-cal-util.html
-share/doc/html/libecal/libecal.devhelp
-share/doc/html/libecal/right.png
-share/doc/html/libecal/up.png
+share/doc/libebook/EBook.html
+share/doc/libebook/EBookListener.html
+share/doc/libebook/EBookView.html
+share/doc/libebook/EBookViewListener.html
+share/doc/libebook/EContact.html
+share/doc/libebook/EVCard.html
+share/doc/libebook/ch01.html
+share/doc/libebook/home.png
+share/doc/libebook/index.html
+share/doc/libebook/index.sgml
+share/doc/libebook/left.png
+share/doc/libebook/libebook-EAddressWestern.html
+share/doc/libebook/libebook-ENameWestern.html
+share/doc/libebook/libebook-e-book-async.html
+share/doc/libebook/libebook-e-book-query.html
+share/doc/libebook/libebook-e-book-types.html
+share/doc/libebook/libebook.devhelp
+share/doc/libebook/right.png
+share/doc/libebook/up.png
+share/doc/libecal/ECal.html
+share/doc/libecal/ECalComponent.html
+share/doc/libecal/ECalListener.html
+share/doc/libecal/ECalView.html
+share/doc/libecal/ECalViewListener.html
+share/doc/libecal/ch01.html
+share/doc/libecal/home.png
+share/doc/libecal/index.html
+share/doc/libecal/index.sgml
+share/doc/libecal/left.png
+share/doc/libecal/libecal-e-cal-recur.html
+share/doc/libecal/libecal-e-cal-time-util.html
+share/doc/libecal/libecal-e-cal-types.html
+share/doc/libecal/libecal-e-cal-util.html
+share/doc/libecal/libecal.devhelp
+share/doc/libecal/right.png
+share/doc/libecal/up.png
 share/evolution-data-server-1.0/evolutionperson.schema
 share/evolution-data-server-1.0/zoneinfo/Africa/Abidjan.ics
 share/evolution-data-server-1.0/zoneinfo/Africa/Accra.ics
@@ -566,6 +577,7 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/evolution-data-server-1.5.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/evolution-data-server-1.5.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/evolution-data-server-1.5.mo
 ${PKGLOCALEDIR}/locale/en_AU/LC_MESSAGES/evolution-data-server-1.5.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/evolution-data-server-1.5.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/evolution-data-server-1.5.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/evolution-data-server-1.5.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/evolution-data-server-1.5.mo
@@ -619,8 +631,8 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/evolution-data-server-1.5.mo
 @dirrm share/evolution-data-server-1.0/zoneinfo/Africa
 @dirrm share/evolution-data-server-1.0/zoneinfo
 @dirrm share/evolution-data-server-1.0
-@dirrm share/doc/html/libecal
-@dirrm share/doc/html/libebook
+@dirrm share/doc/libecal
+@dirrm share/doc/libebook
 @comment in libbonobo: @dirrm lib/bonobo/servers
 @dirrm include/evolution-data-server-1.0/libical
 @dirrm include/evolution-data-server-1.0/libedataserver
@@ -628,4 +640,5 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/evolution-data-server-1.5.mo
 @dirrm include/evolution-data-server-1.0/libedata-book
 @dirrm include/evolution-data-server-1.0/libecal
 @dirrm include/evolution-data-server-1.0/libebook
+@dirrm include/evolution-data-server-1.0/groupwise
 @dirrm include/evolution-data-server-1.0

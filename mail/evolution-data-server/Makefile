@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/04/02 18:12:37 recht Exp $
+# $nEtBSD: Makefile,v 1.2 2004/04/02 18:12:37 recht Exp $
 #
 
-DISTNAME=	evolution-data-server-0.0.90
+DISTNAME=	evolution-data-server-0.0.93
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/0.0/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +13,6 @@ COMMENT=	Evolution data server
 BUILD_USES_MSGFMT=	yes
 BUILD_DEPENDS+=		bison>=1.875:../../devel/bison
 
-BDB_ACCEPTED=		db4
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make yacc
@@ -21,9 +20,7 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 YACC=			${LOCALBASE}/bin/bison # XXX
 
-LIBS+=			-ldb4
-
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--with-openldap
 
 PKGCONFIG_OVERRIDE+=	addressbook/libebook/libebook-1.0.pc.in
@@ -31,6 +28,7 @@ PKGCONFIG_OVERRIDE+=	addressbook/libedata-book/libedata-book-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	calendar/libecal/libecal-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	calendar/libedata-cal/libedata-cal-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	libedataserver/libedataserver-1.0.pc.in
+PKGCONFIG_OVERRIDE+=	servers/groupwise/libegroupwise-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	evolution-data-server-1.0.pc.in
 
 .include "../../databases/openldap/buildlink3.mk"
@@ -45,5 +43,4 @@ PKGCONFIG_OVERRIDE+=	evolution-data-server-1.0.pc.in
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
