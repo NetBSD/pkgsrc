@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3228 2005/03/17 12:54:18 wiz Exp $
+$NetBSD: TODO,v 1.3229 2005/03/17 13:56:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -962,7 +962,6 @@ Suggested package updates
 	o rdesktop-1.4.0
 	o rdp-1.6
 	o realplayer-10.0.2
-	o realplayer-codecs-20050115
 	o rep-gtk-0.18
 	o resize_image-0.7
 	o rhino-0.13.0
