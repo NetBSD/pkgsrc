@@ -1,0 +1,3 @@
+Pkgcvsupdate is a tool to ease updating package source files from CVS.
+It can update a single package and its dependencies or a whole category of
+packages and their dependencies.
