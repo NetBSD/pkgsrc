@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/06/29 04:54:54 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2002/02/21 21:24:53 zuntum Exp $
 
 DISTNAME=	avifile-0.53.5
 CATEGORIES=	graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	http://ernie.eit.uni-kl.de/avifile/			\
 		http://divx.euro.ru/					\
 		http://www.toon.eu.org/divx/
 
-MAINTAINER=	zuntum@netbsd.org,jmcneill@invisible.yi.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://divx.euro.ru/
 COMMENT=	MPEG-4 (DivX) video player library
 

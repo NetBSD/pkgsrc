@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/11/29 01:12:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.24 2002/02/21 21:24:54 zuntum Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://zuntum.utech.lublin.pl/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://divx.euro.ru/
 COMMENT=	MPEG-4 (DivX) video player library
 
