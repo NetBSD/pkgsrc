@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/01/24 12:41:18 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/06/23 10:19:32 adam Exp $
 #
 
 .if !defined(GDCHART_BUILDLINK2_MK)
 GDCHART_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gdchart
-BUILDLINK_DEPENDS.gdchart?=		gdchart>=0.10.1nb3
+BUILDLINK_DEPENDS.gdchart?=		gdchart>=0.11.4
 BUILDLINK_PKGSRCDIR.gdchart?=		../../graphics/gdchart
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gdchart=gdchart
