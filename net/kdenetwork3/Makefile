@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2003/01/20 10:03:58 skrll Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/11 13:13:26 markd Exp $
 
-DISTNAME=	kdenetwork-3.0.5a
+DISTNAME=	kdenetwork-3.1
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
 
@@ -12,6 +12,12 @@ PTHREAD_OPTS+=		require
 FOO_MAIN_FILES= \
 	ksirc/ksirc_main.cpp \
 	kxmlrpc/kxmlrpcd_main.cpp
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=		ac_cv_sys_file_offset_bits=no
+.endif
 
 .include "../../x11/kde3/Makefile.foo_main"
 
