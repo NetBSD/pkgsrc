@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/02 15:15:16 rh Exp $
+
+--- configure.orig	Mon Sep 27 22:32:28 1999
++++ configure	Sun Jan  2 14:41:09 2000
+@@ -5323,10 +5323,12 @@
+     top_srcdir="$ac_dots$ac_given_srcdir" ;;
+   esac
+ 
++if false; then
+   case "$ac_given_INSTALL" in
+   [/$]*) INSTALL="$ac_given_INSTALL" ;;
+   *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+   esac
++fi
+ 
+   echo creating "$ac_file"
+   rm -f "$ac_file"
+@@ -5596,10 +5598,13 @@
+       *) # Relative path.
+         ac_sub_cache_file="$ac_dots$cache_file" ;;
+       esac
++
++if false; then
+   case "$ac_given_INSTALL" in
+         [/$]*) INSTALL="$ac_given_INSTALL" ;;
+         *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+         esac
++fi
+ 
+       echo "running ${CONFIG_SHELL-/bin/sh} $ac_sub_configure $ac_sub_configure_args --cache-file=$ac_sub_cache_file --srcdir=$ac_sub_srcdir"
+       # The eval makes quoting arguments work.
