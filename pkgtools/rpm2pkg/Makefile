@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/08/25 19:43:33 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/09/19 02:46:07 jlam Exp $
 
 DISTNAME=	rpm2pkg-1.2
 CATEGORIES=	pkgtools
@@ -15,14 +15,14 @@ USE_BUILDLINK2=	YES
 NO_CHECKSUM=	YES
 WRKSRC=		${WRKDIR}
 
-RPMLIB=		${BUILDLINK_DIR}/lib/librpm.a
+RPMLIB=		${BUILDLINK_PREFIX.rpm}/lib/librpm.a
 
-CFLAGS+=	-I${BUILDLINK_DIR}/include/rpm
+CFLAGS+=	-I${BUILDLINK_PREFIX.rpm}/include/rpm
 LIBS=		${RPMLIB} -lintl -lz
 
 do-build:
-	${BUILDLINK_CC} ${FILESDIR}/rpm2pkg.c \
-		${CFLAGS} ${LDFLAGS} ${LIBS} -o ${WRKSRC}/rpm2pkg
+	${BUILDLINK_CC} ${CFLAGS} ${LDFLAGS} -o ${WRKSRC}/rpm2pkg \
+		${FILESDIR}/rpm2pkg.c ${LIBS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rpm2pkg ${PREFIX}/sbin
