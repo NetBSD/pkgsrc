@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/12 20:06:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/12/02 13:24:15 wiz Exp $
 bin/asc
-bin/asc_bin2text
 bin/asc_demount
 bin/asc_makegfx
 bin/asc_mapedit
 bin/asc_mount
-bin/asc_raw2pcx
-bin/asc_viewid
 bin/asc_weaponguide
+man/man6/asc.6
+man/man6/asc_demount.6
+man/man6/asc_makegfx.6
+man/man6/asc_mapedit.6
+man/man6/asc_mount.6
+man/man6/asc_weaponguide.6
 share/games/asc/asc.gfx
 share/games/asc/asc_dlg.zip
 share/games/asc/buildings.con
