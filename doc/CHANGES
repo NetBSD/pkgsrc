@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2212 2003/05/10 17:19:03 kim Exp $
+$NetBSD: CHANGES,v 1.2213 2003/05/10 18:55:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1934,3 +1934,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added ssh2-nox11-3.2.2 [seb 2003-05-10]
 	Updated Mesa to 5.0.1 [drochner 2003-05-10]
 	Updated irrd to 2.1.5 [kim 2003-05-10]
+	Updated gpc to 2.1nb1 [wiz 2003-05-10]
