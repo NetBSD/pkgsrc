@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.130 2005/02/15 21:07:01 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.131 2005/02/16 00:21:17 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -862,7 +862,7 @@ sub checkfile_PLIST($) {
 		if ($line->text =~ qr"^[\w\d]") {
 			if (defined($last_file_seen)) {
 				if ($last_file_seen gt $line->text) {
-					log_error($line->file, $line->lineno, $line->text." must be sorted before ${last_file_seen}.");
+					log_warning($line->file, $line->lineno, $line->text." should be sorted before ${last_file_seen}.");
 				}
 			}
 			$last_file_seen = $line->text;
