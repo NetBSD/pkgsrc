@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/06 22:30:57 salo Exp $
+
+--- src/conf.c.orig	2000-03-06 21:43:13.000000000 +0100
++++ src/conf.c	2003-02-26 17:36:08.000000000 +0100
+@@ -207,11 +207,11 @@
+       return;
+     }
+   }
+-  cfg->file_len = load_file ("/etc/juke.conf", (void **)&cfg->file);
++  cfg->file_len = load_file ("@PKG_SYSCONFDIR@/juke.conf", (void **)&cfg->file);
+   if (cfg->file_len != ERROR) {
+     evaluate (cfg);
+     if (! cfg->formats) {
+-      fprintf (stderr, "error: No formats in /etc/juke.conf\n");
++      fprintf (stderr, "error: No formats in @PKG_SYSCONFDIR@/juke.conf\n");
+       exit (ERROR);
+     }
+     build_arg_lists (cfg);

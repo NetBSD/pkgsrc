@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/06 22:30:57 salo Exp $
+
+SHA1 (juke-0.7.tar.gz) = 04f5e2265743e2ea01a43ea71531845f97c095c3
+Size (juke-0.7.tar.gz) = 64103 bytes
+SHA1 (patch-aa) = e835b1fe8f00d8c5581a87d55407b9979bb73710
+SHA1 (patch-ab) = e4a089f7307e6a029b7e0c6b5b862326e160f6d5
+SHA1 (patch-ac) = f1c7233cd88ebdbc8df1a5ec5955b6506fd73634

@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/06 22:30:57 salo Exp $
+bin/juke
+man/man1/juke.1
+share/doc/juke/MANUAL
+share/examples/juke/juke.conf.default
+@dirrm share/examples/juke
+@dirrm share/doc/juke

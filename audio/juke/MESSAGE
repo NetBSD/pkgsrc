@@ -1,0 +1,21 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/03/06 22:30:57 salo Exp $
+
+You may wish to install at least some players from pkgsrc to use with juke
+(if you don't have them installed already).  You can try the following
+packages:
+
+  audio/amp           another mp3 player
+  audio/flac          free lossless audio codec
+  audio/mad           High-quality MPEG audio decoder
+  audio/mikmod        MOD player for UNI IT XM S3M MOD MTM STM DSM MED FAR
+                      ULT 669 files
+  audio/mpg123        Command-line player for mpeg layer 1, 2 and 3 audio
+  audio/sidplay       tools for playing sidtunes
+  audio/sox           SOund eXchange - universal sound sample translator
+  audio/vorbis-tools  Ogg Vorbis encoder and player
+  audio/xmp           Player for many different Amiga and PC module formats
+
+Preferences can be set in ~/.juke.conf for each user, and for all users in
+${PKG_SYSCONFDIR}/juke.conf system-wide.
+===========================================================================
