@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/11/29 02:25:26 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/27 12:27:47 drochner Exp $
 #
 
 DISTNAME=		libextractor-0.3.11
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://ovmj.org/libextractor/download/
 
