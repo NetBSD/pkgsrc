@@ -1,8 +1,13 @@
-$NetBSD: distinfo,v 1.5 2003/12/03 21:18:09 ben Exp $
+$NetBSD: distinfo,v 1.6 2003/12/05 05:40:32 ben Exp $
 
 SHA1 (tripwire-1.2.tar.gz) = 6fc91e25b3e1af3881fd5b6acf240ab6c1133e38
 Size (tripwire-1.2.tar.gz) = 299831 bytes
 SHA1 (patch-aa) = 37e41b99fbd437cc62b1446545f963d03e91e819
 SHA1 (patch-ab) = 186edaa504e6e1a7edadb2168982b9b8a2482bac
 SHA1 (patch-ac) = 35b3fe52f497e6cbbf7edfeaee398f0d24aff219
-SHA1 (patch-ad) = 92fe68b5cb929dfc16b767e28d72852428246a32
+SHA1 (patch-ad) = 4b8ad8d0cd7c17a8f3a655c5a574856670533ea5
+SHA1 (patch-ae) = 18fe18ded565476a80b9280054cdf7f90403588e
+SHA1 (patch-af) = 968df5d2ea577a8fde9c5aafa43d9fb1e4efde54
+SHA1 (patch-ag) = 3bfc6965782d727b6b5cf20da4dd44e45327925f
+SHA1 (patch-ah) = 97eccc44190e165dbf174f04c3acab5f1b442bc7
+SHA1 (patch-ai) = 51075e32a7523a8d1691aa41336fe46b671fa865
