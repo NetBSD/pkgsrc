@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/11 13:22:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/05/22 02:57:12 markd Exp $
 bin/flashkard
 bin/kalzium
 bin/keduca
@@ -908,6 +908,7 @@ share/kde/apps/kstars/venus.R3.vsop
 share/kde/apps/kstars/venus.R4.vsop
 share/kde/apps/kstars/venus.R5.vsop
 share/kde/apps/kstars/venus.png
+share/kde/apps/ktouch/danish-2.ktouch
 share/kde/apps/ktouch/danish.ktouch
 share/kde/apps/ktouch/de-ch.keyboard
 share/kde/apps/ktouch/de.keyboard
@@ -920,9 +921,12 @@ share/kde/apps/ktouch/english.ktouch
 share/kde/apps/ktouch/es.keyboard
 share/kde/apps/ktouch/fi.keyboard
 share/kde/apps/ktouch/fr.keyboard
+share/kde/apps/ktouch/fr_ch.keyboard
 share/kde/apps/ktouch/french-2.ktouch
 share/kde/apps/ktouch/french.ktouch
+share/kde/apps/ktouch/german-2.ktouch
 share/kde/apps/ktouch/german.ktouch
+share/kde/apps/ktouch/he.keyboard
 share/kde/apps/ktouch/it.keyboard
 share/kde/apps/ktouch/ktouchui.rc
 share/kde/apps/ktouch/la.keyboard
@@ -930,8 +934,10 @@ share/kde/apps/ktouch/no.keyboard
 share/kde/apps/ktouch/norwegian.ktouch
 share/kde/apps/ktouch/number.keyboard
 share/kde/apps/ktouch/number.ktouch
+share/kde/apps/ktouch/portuguese.ktouch
 share/kde/apps/ktouch/pt.keyboard
 share/kde/apps/ktouch/se.keyboard
+share/kde/apps/ktouch/spanish.ktouch
 share/kde/apps/ktouch/splash.png
 share/kde/apps/ktouch/up.wav
 share/kde/apps/kverbos/kverbosui.rc
