@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2003/07/17 21:26:46 grant Exp $
+# $NetBSD: Makefile,v 1.47 2003/09/15 16:27:53 jmmv Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -18,7 +18,7 @@ LICENSE=	kermit-license
 .include "../../mk/bsd.prefs.mk"
 
 USE_BUILDLINK2=	YES
-BUILD_DEFS+=	KERMIT_SUID_UUCP KFLAGS LIBS
+BUILD_DEFS+=	KERMIT_SUID_UUCP KFLAGS LIBS MANINSTALL
 MAKE_ENV+=	KFLAGS="${KFLAGS}" LIBS="${LIBS}"
 MAKE_ENV+=	SSLINC="${SSLINC}" SSLLIB="${SSLLIB}"
 MAKEFILE=	makefile
