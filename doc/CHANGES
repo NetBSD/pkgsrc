@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.817 2002/12/18 04:01:20 wiz Exp $
+$NetBSD: CHANGES,v 1.818 2002/12/18 04:35:59 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3987,3 +3987,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated easytag to 0.25.0.2 [wiz 2002-12-17]
 	Updated fam to 2.6.9 [jmmv 2002-12-17]
 	Added gtk-systrace-20021201 [wiz 2002-12-18]
+	Updated bbappconf to 0.0.2 [jschauma 2002-12-17]
