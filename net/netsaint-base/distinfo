@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:24 wiz Exp $
 
-SHA1 (netsaint-0.0.6.tar.gz) = 5446c4f66d5b0c721e645f3a1dd7e82e3442ed31
-Size (netsaint-0.0.6.tar.gz) = 1098483 bytes
-SHA1 (patch-aa) = 6195777c4fd906a05770db89f07b1db28470e574
-SHA1 (patch-ab) = 3a77a4b0e9356ab447ceb5524bc18ac3460cc3b3
-SHA1 (patch-ac) = 33d7fbebdfddbf82a3dffc39da8f492023c50051
-SHA1 (patch-ad) = 97a1ab99178b175ab40ae033476c9391d779a6d5
-SHA1 (patch-ae) = 75a3d56be088ca8f4d484481eb8554d67e393bbb
-SHA1 (patch-af) = 1b76193f2aead2ff61aa3a4cf4d1709130d10039
-SHA1 (patch-ag) = b038d842d6f7d8bfe4e84c4e41396aeef7c41a64
-SHA1 (patch-ah) = 23eeafb08ff0a881003b5a76929598c173fbfaea
-SHA1 (patch-ai) = e686c3c666c2cec368752db6722b9eb7820317ea
+SHA1 (netsaint-0.0.7.tar.gz) = 5ce4832c9cccaba0baa49fe3e222c6753a811143
+Size (netsaint-0.0.7.tar.gz) = 1278019 bytes
+SHA1 (patch-aa) = b3f9d59f06d7cc3b9824142c6f69d42b6eae8452
+SHA1 (patch-ab) = 9708d1139dde1908563b9d44a8f339aad39e18b9
+SHA1 (patch-ac) = 3489bb8fb1148ca8fa0cc25c4decdfe8ebe5ada9
+SHA1 (patch-ad) = 53d82c97be2b1b232d860cbc3210c4228b50944b
+SHA1 (patch-ae) = fee9769c9dec4cd74a528823c52de456c230b77c
+SHA1 (patch-af) = 9df309dde76fa4d79fa0880824af425f6982ed84
+SHA1 (patch-ag) = f6c8105adbdcb0ba22da1d2aa7395d7dbf8d7329
+SHA1 (patch-ah) = 3e215778e529a04803f5027612578636fc91aa2d
+SHA1 (patch-ai) = 7412e8430abf640e74d16d1ff18436b8b272871c

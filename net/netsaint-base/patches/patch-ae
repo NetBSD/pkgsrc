@@ -1,63 +1,67 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/01/16 15:39:43 rh Exp $
+$NetBSD: patch-ae,v 1.2 2002/03/25 12:54:19 rh Exp $
 
---- html/Makefile.in.orig	Sun Oct 29 23:43:53 2000
-+++ html/Makefile.in
-@@ -36,38 +36,34 @@
- 	rm -f docs/developer/*~
+--- netsaint.cfg.in.orig	Mon Dec  3 07:27:51 2001
++++ netsaint.cfg.in
+@@ -16,7 +16,7 @@
+ # for historical purposes.  This should be the first option specified 
+ # in the config file!!!
  
- install:
--	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)
--	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/media
--	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/stylesheets
--	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/docs/images
--	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/docs/developer
--	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/docs/developer/images
--	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/images
--	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/images/logos
--	$(INSTALL) -m 664 $(INSTALL_OPTS) robots.txt $(DESTDIR)$(HTMLDIR)
--	$(INSTALL) -m 664 $(INSTALL_OPTS) docs/robots.txt $(DESTDIR)$(HTMLDIR)/docs
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/media
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/stylesheets
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/docs/images
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/docs/developer
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/docs/developer/images
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/images
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(HTMLDIR)/images/logos
-+	${BSD_INSTALL_DATA} robots.txt $(DESTDIR)$(HTMLDIR)
-+	${BSD_INSTALL_DATA} docs/robots.txt $(DESTDIR)$(HTMLDIR)/docs
- 	for file in *.html; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR); done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR); done
- 	for file in media/*.wav; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/media; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/media; done
- 	for file in stylesheets/*.css; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/stylesheets; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/stylesheets; done
- 	for file in docs/*.html; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/docs; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/docs; done
- 	for file in docs/developer/*.html; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/docs/developer; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/docs/developer; done
- 	for file in docs/developer/images/*; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/docs/developer/images; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/docs/developer/images; done
- 	for file in docs/images/*; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/docs/images; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/docs/images; done
- 	for file in images/*.gif; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/images; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/images; done
- 	for file in images/*.png; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/images; done
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/images; done
- 	for file in images/logos/*; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/images/logos; done
--
--
--
--
-+	do ${BSD_INSTALL_DATA} $$file $(DESTDIR)$(HTMLDIR)/images/logos; done
+-log_file=@localstatedir@/netsaint.log
++log_file=@localstatedir@/log/netsaint/netsaint.log
+ 
+ 
+ 
+@@ -72,7 +72,7 @@
+ # The contentsof the status file are deleted every time NetSaint
+ #  restarts.
+ 
+-status_file=@localstatedir@/status.log
++status_file=@localstatedir@/log/netsaint/status.log
+ 
+ 
+ 
+@@ -138,7 +138,7 @@
+ # directory level instead of on the file, as the file is deleted every
+ # time its contents are processed.
+ 
+-command_file=@localstatedir@/rw/netsaint.cmd
++command_file=@localstatedir@/run/netsaint/rw/netsaint.cmd
+ 
+ 
+ 
+@@ -146,7 +146,7 @@
+ # This is the file that NetSaint will use for storing host and service
+ # comments.
+ 
+-comment_file=@localstatedir@/comment.log
++comment_file=@localstatedir@/log/netsaint/comment.log
+ 
+ 
+ 
+@@ -164,7 +164,7 @@
+ # is created, used, and deleted throughout the time that NetSaint is
+ # running. 
+ 
+-temp_file=@localstatedir@/netsaint.tmp
++temp_file=@localstatedir@/run/netsaint/netsaint.tmp
+ 
+ 
+ 
+@@ -185,7 +185,7 @@
+ # This is the directory where archived (rotated) log files should be 
+ # placed (assuming you've chosen to do log rotation).
+ 
+-log_archive_path=@localstatedir@/archives
++log_archive_path=@localstatedir@/log/netsaint/archives
+ 
+ 
+ 
+@@ -378,7 +378,7 @@
+ # This file is used only if the preserve_state_information
+ # variable is set to 1.
+ 
+-state_retention_file=@localstatedir@/status.sav
++state_retention_file=@localstatedir@/log/netsaint/status.sav
+ 
+ 
  

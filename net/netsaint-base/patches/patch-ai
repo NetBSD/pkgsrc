@@ -1,23 +1,21 @@
-$NetBSD: patch-ai,v 1.1.1.1 2001/01/16 15:39:43 rh Exp $
+$NetBSD: patch-ai,v 1.2 2002/03/25 12:54:20 rh Exp $
 
---- common/locations.h.in.orig	Tue Jan 16 14:06:12 2001
-+++ common/locations.h.in
-@@ -19,12 +19,12 @@
-  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-  ************************************************************************/
+--- commands.cfg.in.orig	Thu Jan 17 16:12:59 2002
++++ commands.cfg.in
+@@ -55,7 +55,15 @@
+ command[check_http]=$USER1$/check_http -H $HOSTADDRESS$
+ command[check_telnet]=$USER1$/check_tcp -H $HOSTADDRESS$ -p 23
+ command[check_ping]=$USER1$/check_ping -H $HOSTADDRESS$ -w $ARG1$ -c $ARG2$ -p 5
+-
++command[check_disk]=$USER1$/check_disk 85 95 $ARG1$
++command[check_users]=$USER1$/check_users $ARG1$ $ARG2$
++command[check_procs]=$USER1$/check_procs $ARG1$ $ARG2$ $ARG3$
++command[check_http2]=$USER1$/check_http $ARG1$ $ARG2$ $ARG3$
++command[check_dns]=$USER1$/check_dns www.yahoo.com $HOSTADDRESS$
++command[check_hpjd]=$USER1$/check_hpjd $HOSTADDRESS$ public
++command[check_mrtg]=$USER1$/check_mrtg $ARG1$ 10 AVG $ARG2$ $ARG3$ $ARG4$ $ARG5$ $ARG6$
++command[traffic_average]=$USER1$/check_mrtgtraf $ARG1$ 10 AVG $ARG2$ $ARG3$ $ARG4$ $ARG5$
++command[check_load]=$USER1$/check_load $ARG1$ $ARG2$ $ARG3$ $ARG4$ $ARG5$ $ARG6$
  
--#define DEFAULT_TEMP_FILE			"@localstatedir@/netsaint.tmp"
--#define DEFAULT_STATUS_FILE			"@localstatedir@/status.log"
--#define DEFAULT_LOG_FILE			"@localstatedir@/netsaint.log"
--#define DEFAULT_LOG_ARCHIVE_PATH		"@localstatedir@/archives/"
--#define DEFAULT_COMMENT_FILE			"@localstatedir@/comment.log"
--#define DEFAULT_COMMAND_FILE			"@localstatedir@/rw/netsaint.cmd"
-+#define DEFAULT_TEMP_FILE			"@localstatedir@/run/netsaint/netsaint.tmp"
-+#define DEFAULT_STATUS_FILE			"@localstatedir@/log/netsaint/status.log"
-+#define DEFAULT_LOG_FILE			"@localstatedir@/log/netsaint/netsaint.log"
-+#define DEFAULT_LOG_ARCHIVE_PATH		"@localstatedir@/log/netsaint/archives/"
-+#define DEFAULT_COMMENT_FILE			"@localstatedir@/log/netsaint/comment.log"
-+#define DEFAULT_COMMAND_FILE			"@localstatedir@/run/netsaint/rw/netsaint.cmd"
- #define DEFAULT_PHYSICAL_HTML_PATH		"@datadir@"
- #define DEFAULT_URL_HTML_PATH			"@htmurl@"
- #define DEFAULT_PHYSICAL_CGIBIN_PATH		"@sbindir@"
+ # These are examples of commands for checking "local" services - i.e. things
+ # on this machine that cannot be checked from remote machines.  If you want
