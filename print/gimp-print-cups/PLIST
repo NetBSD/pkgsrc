@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/11/27 16:12:35 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/03/02 14:56:07 drochner Exp $
 bin/cups-calibrate
 libexec/cups/backend/canon
 libexec/cups/backend/epson
@@ -27,6 +27,7 @@ share/cups/model/C/bjc-7100.ppd.gz
 share/cups/model/C/bjc-80.ppd.gz
 share/cups/model/C/bjc-8200.ppd.gz
 share/cups/model/C/bjc-85.ppd.gz
+share/cups/model/C/bjc-s200.ppd.gz
 share/cups/model/C/bjc-s400.ppd.gz
 share/cups/model/C/bjc-s450.ppd.gz
 share/cups/model/C/bjc-s4500.ppd.gz
@@ -98,16 +99,32 @@ share/cups/model/C/escp2-c41sx.ppd.gz
 share/cups/model/C/escp2-c41ux.ppd.gz
 share/cups/model/C/escp2-c42sx.ppd.gz
 share/cups/model/C/escp2-c42ux.ppd.gz
+share/cups/model/C/escp2-c43sx.ppd.gz
+share/cups/model/C/escp2-c43ux.ppd.gz
+share/cups/model/C/escp2-c44sx.ppd.gz
+share/cups/model/C/escp2-c44ux.ppd.gz
+share/cups/model/C/escp2-c50.ppd.gz
 share/cups/model/C/escp2-c60.ppd.gz
 share/cups/model/C/escp2-c61.ppd.gz
 share/cups/model/C/escp2-c62.ppd.gz
+share/cups/model/C/escp2-c63.ppd.gz
+share/cups/model/C/escp2-c64.ppd.gz
 share/cups/model/C/escp2-c70.ppd.gz
 share/cups/model/C/escp2-c80.ppd.gz
 share/cups/model/C/escp2-c82.ppd.gz
+share/cups/model/C/escp2-c83.ppd.gz
+share/cups/model/C/escp2-c84.ppd.gz
 share/cups/model/C/escp2-cl700.ppd.gz
 share/cups/model/C/escp2-cl750.ppd.gz
+share/cups/model/C/escp2-cl760.ppd.gz
+share/cups/model/C/escp2-cx3100.ppd.gz
 share/cups/model/C/escp2-cx3200.ppd.gz
+share/cups/model/C/escp2-cx5100.ppd.gz
 share/cups/model/C/escp2-cx5200.ppd.gz
+share/cups/model/C/escp2-cx6300.ppd.gz
+share/cups/model/C/escp2-cx6400.ppd.gz
+share/cups/model/C/escp2-cx8300.ppd.gz
+share/cups/model/C/escp2-cx8400.ppd.gz
 share/cups/model/C/escp2-em900c.ppd.gz
 share/cups/model/C/escp2-em930c.ppd.gz
 share/cups/model/C/escp2-ex.ppd.gz
@@ -121,6 +138,7 @@ share/cups/model/C/escp2-mj5100c.ppd.gz
 share/cups/model/C/escp2-mj6000c.ppd.gz
 share/cups/model/C/escp2-mj8000c.ppd.gz
 share/cups/model/C/escp2-mj930c.ppd.gz
+share/cups/model/C/escp2-ph900.ppd.gz
 share/cups/model/C/escp2-photo.ppd.gz
 share/cups/model/C/escp2-pm10000.ppd.gz
 share/cups/model/C/escp2-pm2000c.ppd.gz
@@ -128,11 +146,13 @@ share/cups/model/C/escp2-pm2200c.ppd.gz
 share/cups/model/C/escp2-pm3000c.ppd.gz
 share/cups/model/C/escp2-pm3300c.ppd.gz
 share/cups/model/C/escp2-pm3500c.ppd.gz
+share/cups/model/C/escp2-pm3700c.ppd.gz
 share/cups/model/C/escp2-pm4000px.ppd.gz
 share/cups/model/C/escp2-pm5000c.ppd.gz
 share/cups/model/C/escp2-pm7000c.ppd.gz
 share/cups/model/C/escp2-pm700c.ppd.gz
 share/cups/model/C/escp2-pm730c.ppd.gz
+share/cups/model/C/escp2-pm740c.ppd.gz
 share/cups/model/C/escp2-pm750c.ppd.gz
 share/cups/model/C/escp2-pm760c.ppd.gz
 share/cups/model/C/escp2-pm770c.ppd.gz
@@ -140,13 +160,17 @@ share/cups/model/C/escp2-pm780c.ppd.gz
 share/cups/model/C/escp2-pm790pt.ppd.gz
 share/cups/model/C/escp2-pm800c.ppd.gz
 share/cups/model/C/escp2-pm850pt.ppd.gz
+share/cups/model/C/escp2-pm870c.ppd.gz
 share/cups/model/C/escp2-pm880c.ppd.gz
 share/cups/model/C/escp2-pm9000c.ppd.gz
+share/cups/model/C/escp2-pm930c.ppd.gz
 share/cups/model/C/escp2-pm950c.ppd.gz
+share/cups/model/C/escp2-pm970c.ppd.gz
 share/cups/model/C/escp2-pro-xl.ppd.gz
 share/cups/model/C/escp2-pro.ppd.gz
 share/cups/model/C/escp2-px7000.ppd.gz
 share/cups/model/C/escp2-px9000.ppd.gz
+share/cups/model/C/escp2-pxv500.ppd.gz
 share/cups/model/C/escp2-scan2000.ppd.gz
 share/cups/model/C/escp2-scan2500.ppd.gz
 share/cups/model/C/escp2.ppd.gz
@@ -163,6 +187,7 @@ share/cups/model/C/pcl-1600.ppd.gz
 share/cups/model/C/pcl-2.ppd.gz
 share/cups/model/C/pcl-2000.ppd.gz
 share/cups/model/C/pcl-2500.ppd.gz
+share/cups/model/C/pcl-2p.ppd.gz
 share/cups/model/C/pcl-3.ppd.gz
 share/cups/model/C/pcl-340.ppd.gz
 share/cups/model/C/pcl-4.ppd.gz
@@ -195,6 +220,9 @@ share/cups/model/C/pcl-895.ppd.gz
 share/cups/model/C/pcl-900.ppd.gz
 share/cups/model/C/pcl-P1000.ppd.gz
 share/cups/model/C/pcl-P1100.ppd.gz
+share/cups/model/C/pcl-apple-4100.ppd.gz
+share/cups/model/C/pcl-apple-4500.ppd.gz
+share/cups/model/C/pcl-apple-6500.ppd.gz
 share/cups/model/C/pcl-desnj-230.ppd.gz
 share/cups/model/C/pcl-desnj-250.ppd.gz
 share/cups/model/C/pcl-desnj-2500.ppd.gz
