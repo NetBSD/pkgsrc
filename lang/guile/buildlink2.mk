@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/01/07 02:18:18 uebayasi Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/01/16 02:48:12 uebayasi Exp $
 
 .if !defined(GUILE_BUILDLINK2_MK)
 GUILE_BUILDLINK2_MK=	# defined
@@ -8,7 +8,7 @@ BUILDLINK_DEPENDS.guile?=	guile>=1.6
 BUILDLINK_PKGSRCDIR.guile?=	../../lang/guile
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.guile=guile
-BUILDLINK_PREFIX.guile_DEFAULT=	${X11PREFIX}
+BUILDLINK_PREFIX.guile_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.guile+=	include/guile/*
 BUILDLINK_FILES.guile+=	include/guile/srfi/*
 BUILDLINK_FILES.guile+=	include/guile-readline/*
