@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8383 2004/12/21 03:03:30 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8384 2004/12/21 03:43:26 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6444,3 +6444,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated qmail-qfilter to 2.0 [schmonz 2004-12-21]
 	Updated overnet to 1.0.1nb1 [minskim 2004-12-21]
 	Added firefox-gtk2-bin-acroread-1.0 [xtraeme 2004-12-21]
+	Updated ezmlm-idx to 0.43 [schmonz 2004-12-21]
