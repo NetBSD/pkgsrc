@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/12/08 21:18:35 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2000/12/18 04:21:08 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 #
 
@@ -28,5 +28,10 @@ DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 post-build:
 	${SED} -e 's#@PREFIX@#${PREFIX}#g' < ${PKGDIR}/DEINSTALL	\
 		> ${WRKDIR}/DEINSTALL
+
+# in case gnome isn't installed, we need to create the directories
+pre-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/gnome/apps/Multimedia
+	${INSTALL_DATA_DIR} ${PREFIX}/share/pixmaps
 
 .include "../../mk/bsd.pkg.mk"
