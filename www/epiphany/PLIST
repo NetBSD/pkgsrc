@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/10/07 16:14:18 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/11/14 21:54:13 jmmv Exp $
 bin/epiphany
 include/epiphany-1.4/epiphany/ephy-bookmarks.h
 include/epiphany-1.4/epiphany/ephy-command-manager.h
@@ -26,21 +26,22 @@ include/epiphany-1.4/epiphany/ephy-tab.h
 include/epiphany-1.4/epiphany/ephy-window.h
 lib/bonobo/servers/GNOME_Epiphany_Automation.server
 lib/pkgconfig/epiphany-1.4.pc
+man/man1/epiphany.1
 share/application-registry/epiphany.applications
 share/applications/bme.desktop
 share/applications/epiphany.desktop
 share/doc/epiphany/EphyCommandManager.html
 share/doc/epiphany/EphyEmbed.html
+share/doc/epiphany/EphyEmbedPersist.html
+share/doc/epiphany/EphyEmbedSingle.html
 share/doc/epiphany/EphyNodeDb.html
+share/doc/epiphany/EphyPermissionManager.html
 share/doc/epiphany/EphyTab.html
 share/doc/epiphany/EphyWindow.html
 share/doc/epiphany/ch01.html
 share/doc/epiphany/ch02.html
 share/doc/epiphany/epiphany-EphyEmbedFactory.html
-share/doc/epiphany/epiphany-EphyEmbedPersist.html
-share/doc/epiphany/epiphany-EphyEmbedSingle.html
 share/doc/epiphany/epiphany-EphyGlade.html
-share/doc/epiphany/epiphany-EphyPermissionManager.html
 share/doc/epiphany/epiphany-ephy-cookie-manager.html
 share/doc/epiphany/epiphany-ephy-password-manager.html
 share/doc/epiphany/epiphany-ephy-session.html
@@ -51,7 +52,6 @@ share/doc/epiphany/index.html
 share/doc/epiphany/index.sgml
 share/doc/epiphany/left.png
 share/doc/epiphany/right.png
-share/doc/epiphany/style.css
 share/doc/epiphany/up.png
 share/epiphany/art/epiphany-bookmarks.png
 share/epiphany/art/epiphany-close-tab.png
@@ -94,6 +94,12 @@ share/gnome/help/epiphany/eu/epiphany.xml
 share/gnome/help/epiphany/eu/figures/ephy-history-window-screenshot.png
 share/gnome/help/epiphany/eu/figures/ephy-screenshot.png
 share/gnome/help/epiphany/eu/legal.xml
+share/gnome/help/epiphany/fi/epiphany.xml
+share/gnome/help/epiphany/fi/figures/ephy-addressbar-smartbookmark-screenshot.png
+share/gnome/help/epiphany/fi/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
+share/gnome/help/epiphany/fi/figures/ephy-history-window-screenshot.png
+share/gnome/help/epiphany/fi/figures/ephy-screenshot.png
+share/gnome/help/epiphany/fi/legal.xml
 share/gnome/help/epiphany/ja/epiphany.xml
 share/gnome/help/epiphany/ja/figures/ephy-addressbar-smartbookmark-screenshot.png
 share/gnome/help/epiphany/ja/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
@@ -168,6 +174,7 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/epiphany.mo
 share/omf/epiphany/epiphany-C.omf
 share/omf/epiphany/epiphany-es.omf
 share/omf/epiphany/epiphany-eu.omf
+share/omf/epiphany/epiphany-fi.omf
 share/omf/epiphany/epiphany-ja.omf
 share/pixmaps/epiphany-bookmarks.png
 @comment in xdg-dirs: @dirrm share/pixmaps
@@ -175,6 +182,8 @@ share/pixmaps/epiphany-bookmarks.png
 @comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/epiphany/ja/figures
 @dirrm share/gnome/help/epiphany/ja
+@dirrm share/gnome/help/epiphany/fi/figures
+@dirrm share/gnome/help/epiphany/fi
 @dirrm share/gnome/help/epiphany/eu/figures
 @dirrm share/gnome/help/epiphany/eu
 @dirrm share/gnome/help/epiphany/es/figures
