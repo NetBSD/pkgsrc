@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:26:06 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/09 10:33:29 seb Exp $
 
 DISTNAME=	navi2ch-1.6.1
 CATEGORIES=	chat
@@ -21,7 +21,6 @@ CONFIGURE_ARGS+=--with-packagedir=${EMACS_LISPPREFIX}
 .endif
 USE_GMAKE=	# defined
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	navi2ch.info
 
 .include "../../mk/bsd.pkg.mk"

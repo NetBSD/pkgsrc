@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/22 13:40:45 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/08/09 10:29:55 seb Exp $
 
 DISTNAME=	festdoc-1.4.0.1
 PKGNAME=	festival-doc-1.4.0.1
@@ -16,7 +16,6 @@ NO_BUILD=	yes
 FDOC=		${PREFIX}/share/doc/festival
 HDOC=		${PREFIX}/share/doc/html/festival
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	festival.info
 
 post-extract:
