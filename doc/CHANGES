@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4305 2003/12/31 14:44:49 salo Exp $
+$NetBSD: CHANGES,v 1.4306 2003/12/31 15:00:11 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5500,3 +5500,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated snort to 2.1.0 [salo 2003-12-31]
 	Updated snort-mysql to 2.1.0 [salo 2003-12-31]
 	Updated snort-pgsql to 2.1.0 [salo 2003-12-31]
+	Updated ucl to 1.02 [cjep 2003-12-31]
