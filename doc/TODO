@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1200 2003/12/14 18:46:37 jmmv Exp $
+$NetBSD: TODO,v 1.1201 2003/12/14 19:21:49 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -165,6 +165,7 @@ Suggested package updates
 	o foobillard-2.9
 	o foomatic-2.9.1 [jlam]
 	o fsviewer-0.2.5
+	o gail-1.4.1 [jmmv]
 	o gauche-0.7 [kei]
 	o gcc-3.3.2 [gcc3 package]
 	o gcpio-2.5 [pkg/20799]
@@ -221,6 +222,7 @@ Suggested package updates
 	o libgnomeprint-2.4.0 [jmmv]
 	o libgnomeprintui-2.4.0 [jmmv]
 	o libgnomeui-2.4.0.1 [jmmv]
+	o libgtkhtml-2.4.1 [jmmv]
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
 	o libtiff-3.6.0
