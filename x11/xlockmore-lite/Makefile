@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/06 15:44:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/08 16:56:38 wiz Exp $
 
 .include "../xlockmore/Makefile.common"
 
@@ -11,6 +11,5 @@ CONFIGURE_ARGS+=	--without-ttf
 CONFIGURE_ARGS+=	--without-opengl
 CONFIGURE_ARGS+=	--without-mesa
 CONFIGURE_ARGS+=	--without-esound
-CONFIGURE_ENV+=		CXX="${CC}"	# no dependency on libstdc++
 
 .include "../../mk/bsd.pkg.mk"
