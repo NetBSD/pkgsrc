@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/10/28 19:52:27 kim Exp $
+
+--- common/option.h.orig	Fri Sep  3 16:47:22 1999
++++ common/option.h	Thu Oct 21 17:10:44 1999
+@@ -39,7 +39,7 @@
+ #define  MAXLINE       256  /* Maximum string length. */
+ #define  MAXMARGIN     500  /* Maximum margin size (in points). */
+ #define  MAXNAMES      512  /* Maximum number of files from command line. */
+-#define  MAXRESOURCES  40   /* Maximum number of mp X resources. */
++#define  MAXRESOURCES  42   /* Maximum number of mp X resources. */
+ #define  NAMEFIELDS    3    /* Default no. of "words" from passwd gecos. */
+ #define  NAMELENGTH    40   /* Maximum allowable real user name. */
+ #define  PAGELENGTH    72   /* Number of lines per page. */
