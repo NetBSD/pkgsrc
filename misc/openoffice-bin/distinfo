@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2005/01/03 10:51:14 martti Exp $
+$NetBSD: distinfo,v 1.1.1.1 2005/02/24 13:50:20 mrauch Exp $
 
 SHA1 (OOo_1.1.4_LinuxIntel_install.tar.gz) = 769eada389dee1829a327ab791ec80d48da10422
 Size (OOo_1.1.4_LinuxIntel_install.tar.gz) = 80144225 bytes
