@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/01/20 12:18:17 agc Exp $
+# $NetBSD: Makefile,v 1.38 2004/04/24 11:15:32 wiz Exp $
 #
 
 DISTNAME=		xfig.3.2.4.full
@@ -14,7 +14,7 @@ COMMENT=		CAD-like 2D drawing tool, good for colorful scale drawings & ISOs
 DEPENDS+=		transfig>=3.2.4:../../print/transfig
 
 WRKSRC=			${WRKDIR}/xfig.3.2.4
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_IMAKE=		YES
 XAW_TYPE?=		3d
 
@@ -36,9 +36,9 @@ XFIGDOCDIR=		${PREFIX}/share/doc/xfig
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Doc/FORMAT* ${XFIGDOCDIR}
 
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../mk/xaw.buildlink2.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../mk/xaw.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
