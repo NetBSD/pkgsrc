@@ -1,8 +1,8 @@
-$NetBSD: patch-ax,v 1.3 2002/08/05 01:26:41 dmcmahill Exp $
+$NetBSD: patch-ax,v 1.4 2004/03/12 01:14:00 dmcmahill Exp $
 
---- lib/pvmgetarch.orig	Wed Feb 16 16:48:50 2000
+--- lib/pvmgetarch.orig	Thu Sep 27 21:24:04 2001
 +++ lib/pvmgetarch
-@@ -136,7 +136,10 @@
+@@ -141,17 +141,27 @@ if [ "$ARCH" = UNKNOWN ]; then
  		# sun3)   ARCH=NETBSDSUN3 ;;  --> NETBSDM68K
  		case "`/usr/bin/uname -p`" in
  		alpha)   ARCH=NETBSDALPHA ;;
@@ -11,5 +11,22 @@ $NetBSD: patch-ax,v 1.3 2002/08/05 01:26:41 dmcmahill Exp $
 +		armeb)   ARCH=NETBSDARMEB ;;
 +		hppa)    ARCH=NETBSDHPPA ;;
  		i386)    ARCH=NETBSDI386 ;;
++		m68000)  ARCH=NETBSDM68000 ;;
  		m68k)    ARCH=NETBSDM68K ;;
  		mipseb)  ARCH=NETBSDMIPSEB ;;
+ 		mipsel)  ARCH=NETBSDMIPSEL ;;
+ 		ns32k)   ARCH=NETBSDNS32K ;;
++		pdp10)   ARCH=NETBSDPDP10 ;;
+ 		powerpc) ARCH=NETBSDPOWERPC ;;
+ 		sh3)     ARCH=NETBSDSH3 ;;
++		sh3eb)   ARCH=NETBSDSH3EB ;;
++		sh3el)   ARCH=NETBSDSH3EL ;;
++		sh5eb)   ARCH=NETBSDSH5EB ;;
++		sh5el)   ARCH=NETBSDSH5EL ;;
+ 		sparc)   ARCH=NETBSDSPARC ;;
+ 		sparc64) ARCH=NETBSDSPARC64 ;;
+ 		vax)     ARCH=NETBSDVAX ;;
++		x86_64)  ARCH=NETBSDX86_64 ;;
+ 		esac
+ 	elif [ -f /usr/bin/machine ]; then
+ 		case "`/usr/bin/machine`" in
