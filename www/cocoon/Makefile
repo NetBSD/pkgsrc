@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/01/14 15:35:46 jwise Exp $
+# $NetBSD: Makefile,v 1.15 2002/04/03 21:16:29 jwise Exp $
 
 DISTNAME=	Cocoon-1.8.2
 PKGNAME=	cocoon-1.8.2
@@ -54,13 +54,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/turbine-pool.jar ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/lib/sax-bugfix.jar ${PREFIX}/lib/java
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/cocoon
-	cd ${WRKSRC}/docs && ${PAX} -rwpe . ${PREFIX}/share/doc/java/cocoon
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/java/cocoon
+	cd ${WRKSRC}/docs && ${PAX} -rwpp . ${PREFIX}/share/doc/java/cocoon
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/cocoon/WEB-INF
 	${INSTALL_DATA} ${FILESDIR}/web.xml ${PREFIX}/share/examples/java/cocoon/WEB-INF
 	${INSTALL_DATA} ${WRKSRC}/conf/cocoon.properties ${PREFIX}/share/examples/java/cocoon/WEB-INF
-	cd ${WRKSRC}/samples && ${PAX} -rwpe . ${PREFIX}/share/examples/java/cocoon
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/java/cocoon
+	cd ${WRKSRC}/samples && ${PAX} -rwpp . ${PREFIX}/share/examples/java/cocoon
 
 .include "../../mk/bsd.pkg.mk"
 
