@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:38:34 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/01/06 09:49:08 jlam Exp $
 
 .if !defined(LTDL_BUILDLINK2_MK)
 LTDL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		ltdl
-BUILDLINK_DEPENDS.ltdl?=	libtool-base>=${LIBTOOL_REQD}
+BUILDLINK_DEPENDS.ltdl?=	libtool-base>=1.4.20010614nb1
 BUILDLINK_PKGSRCDIR.ltdl?=	../../devel/libtool-base
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.ltdl=libtool-base
