@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:01:01 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/23 23:03:23 wiz Exp $
 libexec/popa3d
+man/man8/popa3d.8
 share/doc/popa3d/DESIGN
 share/doc/popa3d/INSTALL
 share/doc/popa3d/LICENSE

@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2001/09/11 16:47:13 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2001/12/23 23:03:23 wiz Exp $
 
---- params.h.orig	Sat Sep  8 15:46:55 2001
+--- params.h.orig	Tue Oct 16 06:10:34 2001
 +++ params.h
 @@ -142,8 +142,8 @@
   *
@@ -13,12 +13,14 @@ $NetBSD: patch-aa,v 1.5 2001/09/11 16:47:13 wiz Exp $
  #define AUTH_PAM			0
  #define AUTH_PAM_USERPASS		0
  
-@@ -178,7 +178,7 @@
+@@ -195,8 +195,8 @@
   *
-  * #undef this for qmail-style $HOME/Mailbox mailboxes.
+  * *BSD's use flock(2), others typically use fcntl(2).
   */
--#define MAIL_SPOOL_PATH			"/var/spool/mail"
-+#define MAIL_SPOOL_PATH			"/var/mail"
+-#define LOCK_FCNTL			1
+-#define LOCK_FLOCK			0
++#define LOCK_FCNTL			0
++#define LOCK_FLOCK			1
  
- #ifndef MAIL_SPOOL_PATH
  /*
+  * How do we talk to syslogd? These should be fine for most systems.
