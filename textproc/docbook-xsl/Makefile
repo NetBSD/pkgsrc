@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/03/02 22:40:41 heinz Exp $
+# $NetBSD: Makefile,v 1.20 2004/06/06 04:29:17 schmonz Exp $
 #
 
 DISTNAME=	docbook-xsl-1.65.0
@@ -41,9 +41,6 @@ post-extract:
 	${MV} ${WRKSRC}/${f} ${WRKSRC}/${f:S/\'/.apos/g}
 .endfor
 .undef f
-
-post-patch:
-	${FIND} ${WRKSRC} -name "*.subst.sav" -print | ${XARGS} ${RM}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
