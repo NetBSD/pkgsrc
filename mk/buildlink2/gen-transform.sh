@@ -7,9 +7,7 @@ untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
 # equivalents:
 #
 #       I:src:dst		translates "-Isrc" into "-Idst"
-#       II:src:dst1:dst2	translates "-Isrc" into "-Idst1 -Idst2"
 #       L:src:dst		translates "-Lsrc" into "-Ldst"
-#       LL:src:dst1:dst2	translates "-Lsrc" into "-Ldst1 -Ldst2"
 #       l:foo:bar		translates "-lfoo" into "-lbar"
 #	p:path			translates "/usr/pkg/lib/libfoo.{a,so}" into
 #					"-L/usr/pkg/lib -lfoo"
@@ -44,25 +42,6 @@ EOF
 			;;
 		esac
 		;;
-	II|LL)
-		case "$1" in II) opt=I ;; LL) opt=L ;; esac
-		case "$action" in
-		transform)
-			@CAT@ >> $sedfile << EOF
-s|-$opt$2[ 	]$|-$opt$3 -$opt$4 |g
-s|-$opt$2$|-$opt$3 -$opt$4|g
-s|-$opt$2\([^ 	]*\)|-$opt$3\1 -$opt$4\1|g
-EOF
-			;;
-		untransform)
-			@CAT@ >> $sedfile << EOF
-s|-$opt$3[ 	]$|-$opt$2 |g
-s|-$opt$4$|-$opt$2|g
-s|-$opt$4\([^ 	]*\)|-$opt$2\1|g
-EOF
-			;;
-		esac
-		;;
 	l)
 		case "$action" in
 		transform|untransform)
@@ -73,11 +52,20 @@ EOF
 			;;
 		esac
 		;;
+	static)
+		case "$action" in
+		transform|untransform)
+			@CAT@ >> $sedfile << EOF
+s|$2\(/[^ 	]*/lib[^ 	/]*\.a\)[ 	]|$3\1 |g
+s|$2\(/[^ 	]*/lib[^ 	/]*\.a\)$|$3\1|g
+EOF
+			;;
+		esac
+		;;
 	p)
 		case "$action" in
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
-s|\($2/[^ 	]*\)/lib\([^ 	/]*\)\.a|-L\1 -l\2|g
 s|\($2/[^ 	]*\)/lib\([^ 	/]*\)\.so|-L\1 -l\2|g
 EOF
 			;;
