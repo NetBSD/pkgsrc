@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2003/11/02 09:35:12 cube Exp $
+# $NetBSD: Makefile,v 1.87 2004/02/09 19:57:55 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -113,7 +113,7 @@ LINK_LIBGCC_LDFLAGS=	${LINK_ALL_LIBGCC_HACK}
 MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 # if we are using gcc3, we need to link against libgcc_s, too. This
 # ensures modules can resolve symbols they require from gcc.
-.    if defined(USE_GCC3)
+.    if !empty(CC_VERSION:Mgcc-3*)
 USE_GCC_SHLIB=		# defined
 LINK_LIBGCC_LDFLAGS+=	-lgcc_s
 .    endif
