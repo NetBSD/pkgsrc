@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2002/01/24 13:49:41 wiz Exp $
+
+--- interface/Makefile.in.orig	Thu Jan 24 13:46:21 2002
++++ interface/Makefile.in
+@@ -95,7 +95,7 @@
+ 
+ libpspell_la_LDFLAGS = ${extra_ldflags} -version-info 4:3:0
+ 
+-libpspell_la_LIBADD = $(LIBLTDL) -L../modules/.libs ../modules/libpspell-modules.la
++libpspell_la_LIBADD = $(LIBLTDL) -L../modules/.libs ../modules/libpspell-modules.la -lstdc++
+ 
+ libpspell_impl_la_LIBADD = -L./.libs libpspell.la 
+ 
