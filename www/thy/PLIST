@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/01 05:19:03 xtraeme Exp $
+etc/rc.d/thy
+man/man7/thy-auth.7
+man/man8/thy.8
+sbin/thy
+share/examples/thy/http301.html
+share/examples/thy/http302.html
+share/examples/thy/http400.html
+share/examples/thy/http401.html
+share/examples/thy/http403.html
+share/examples/thy/http404.html
+share/examples/thy/http405.html
+share/examples/thy/http411.html
+share/examples/thy/http412.html
+share/examples/thy/http413.html
+share/examples/thy/http416.html
+share/examples/thy/http417.html
+share/examples/thy/http500.html
+share/examples/thy/http501.html
+share/examples/thy/http503.html
+share/examples/thy/http505.html
+share/examples/thy/thyrc
+@dirrm share/examples/thy
