@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/02/14 17:21:35 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2004/02/18 14:40:35 salo Exp $
 #
 
 DISTNAME=		silc-server-0.9.16
@@ -14,7 +14,7 @@ MAINTAINER=		salo@NetBSD.org
 HOMEPAGE=		http://www.silcnet.org/
 COMMENT=                Server for the Secure Internet Live Conferencing (SILC) protocol
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -81,6 +81,6 @@ post-install:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/motd.txt \
 		> ${EGDIR}/motd.txt.default
 
-.include "../../devel/glib/buildlink2.mk"
+.include "../../devel/glib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
