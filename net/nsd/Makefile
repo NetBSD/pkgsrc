@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/28 02:17:18 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2002/04/01 04:19:26 jmc Exp $
 
 DISTNAME=	nsd-1.0-alpha
 PKGNAME=	nsd-0.9
@@ -8,6 +8,11 @@ CATEGORIES=	net
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.nlnetlabs.nl/nsd/index.en.html
 COMMENT=	authoritative-only DNS server
+RESTRICTED=	No redistribution of source or binaries (alpha release)
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 _FETCH_MESSAGE= \
 	${ECHO} '======================================================='; \
