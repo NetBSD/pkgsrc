@@ -1,6 +1,9 @@
-# $NetBSD: Makefile.Linux.i386,v 1.2 2004/06/29 14:47:10 grant Exp $
+# $NetBSD: Makefile.Linux.i386,v 1.3 2005/01/22 11:36:48 jdolecek Exp $
 
-DISTNAME=	${MOZILLA}-${MOZ_VER}-i686-pc-linux-gnu
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=	${MOZILLA}-${MOZ_VER}-i686-pc-linux-jds2
 
 MOZ_PLATFORM=	linux
+
+# the binary firefox 1.0 appears to be built using GTK2
+MOZ_GTK2=	YES
+
