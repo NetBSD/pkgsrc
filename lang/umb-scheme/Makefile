@@ -1,25 +1,41 @@
-# $NetBSD: Makefile,v 1.3 2001/02/25 04:17:57 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/12 21:06:43 jtb Exp $
 
-DISTNAME=	umb-scheme-2.12
-CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/scheme-repository/imp/umb/
+DISTNAME=		umb-scheme-3.2
+CATEGORIES=		lang
+MASTER_SITES=		ftp://ftp.cs.umb.edu/pub/scheme/
+EXTRACT_SUFX=		.tar.Z
 
-MAINTAINER=	packages@netbsd.org
-COMMENT=	UMB scheme interpreter
+MAINTAINER=		packages@netbsd.org
+COMMENT=		UMB Scheme interpreter
 
-WRKSRC=		${WRKDIR}/scheme-2.12
-ALL_TARGET=	default
+WRKSRC=			${WRKDIR}/scheme-3.2
+ALL_TARGET=		default
+
+pre-patch:
+	${MV} ${WRKSRC}/scheme.1 ${WRKSRC}/scheme.1.dist
+	${SED} -e 's:\$$::g' ${WRKSRC}/scheme.1.dist > ${WRKSRC}/scheme.1.tmp
 
 post-patch:
-	${SED} -e "s,@PREFIX@,${PREFIX}," <${FILESDIR}/path.h >${WRKSRC}/path.h
-	${MV} ${WRKSRC}/scheme.1 ${WRKSRC}/scheme.1.dist
-	${SED} -e "s,@PREFIX@,${PREFIX}," <${WRKSRC}/scheme.1.dist \
-	    >${WRKSRC}/scheme.1
+	${SED} -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/path.h >${WRKSRC}/path.h
+	${SED} -e "s,@PREFIX@,${PREFIX}," ${WRKSRC}/scheme.1.tmp \
+		>${WRKSRC}/scheme.1
+	${MV} ${WRKSRC}/prelude.scheme ${WRKSRC}/prelude.scheme.dist
+	${SED} -e "s,@PREFIX@,${PREFIX}," ${WRKSRC}/prelude.scheme.dist	\
+		>${WRKSRC}/prelude.scheme
+	${MV} ${WRKSRC}/SLIB-for-umb-scheme.init \
+		${WRKSRC}/SLIB-for-umb-scheme.init.dist
+	${SED} -e "s,@PREFIX@,${PREFIX}," \
+		${WRKSRC}/SLIB-for-umb-scheme.init.dist \
+		>${WRKSRC}/SLIB-for-umb-scheme.init
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/scheme ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/umb-scheme
-	${INSTALL_DATA} ${WRKSRC}/prelude.scheme ${PREFIX}/lib/umb-scheme
-	${INSTALL_MAN} ${WRKSRC}/scheme.1 ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/umb-scheme ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/umb-scheme
+	${INSTALL_DATA} ${WRKSRC}/prelude.scheme ${PREFIX}/share/umb-scheme
+	${INSTALL_DATA} ${WRKSRC}/SLIB-for-umb-scheme.init \
+		${PREFIX}/share/umb-scheme
+	${INSTALL_MAN} ${WRKSRC}/scheme.1 ${PREFIX}/man/man1/umb-scheme.1
+	${INSTALL_DATA_DIR} ${PREFIX}/share/umb-scheme/slib
+	${INSTALL_DATA} ${WRKSRC}/slib/*.scm ${PREFIX}/share/umb-scheme/slib
 
 .include "../../mk/bsd.pkg.mk"
