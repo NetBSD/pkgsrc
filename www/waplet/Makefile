@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/31 07:04:25 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/04 17:09:40 rh Exp $
 #
 
 DISTNAME=	waplet
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://waplet.sourceforge.net/
-
-DEPENDS+=	apache-*:../../www/apache
 
 NO_BUILD=	yes
 
