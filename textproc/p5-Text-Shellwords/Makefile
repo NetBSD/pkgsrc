@@ -1,0 +1,22 @@
+# $NetBSD: Makefile,v 1.1.1.1 2005/01/08 12:52:35 minskim Exp $
+#
+
+DISTNAME=		Text-Shellwords-1.02
+PKGNAME=		p5-${DISTNAME}
+CATEGORIES=		textproc
+MASTER_SITES=		http://www.cpan.org/authors/id/L/LD/LDS/
+
+MAINTAINER=		dprice@cs.nmsu.edu
+HOMEPAGE=		http://www.cpan.org/authors/id/L/LD/LDS/
+COMMENT=		Wrapper around shellwords.pl package
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
+PERL5_PACKLIST=         ${PERL5_SITEARCH}/auto/Text/Shellwords/.packlist
+
+pre-build:
+	cd ${WRKSRC}; perl Makefile.PL
+
+.include "../../lang/perl5/module.mk"
+.include "../../mk/bsd.pkg.mk"
