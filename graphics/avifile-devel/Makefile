@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/08/25 09:03:06 skrll Exp $
+# $NetBSD: Makefile,v 1.17 2001/08/25 09:08:48 skrll Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
@@ -12,7 +12,7 @@ HOMEPAGE=	http://divx.euro.ru/
 COMMENT=	MPEG-4 (DivX) video player library
 
 DEPENDS+=	win32-codecs>=010122:../../graphics/win32-codecs
-DEPENDS+=	automake-*:../../devel/automake
+BUILD_DEPENDS+=	automake-*:../../devel/automake
 
 WRKSRC=		${WRKDIR}/avifile-0.6
 
