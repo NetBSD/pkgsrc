@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/12/28 02:47:44 reed Exp $
+# $NetBSD: Makefile,v 1.50 2004/12/29 15:42:37 minskim Exp $
 
 DISTNAME=		cyrus-imapd-2.0.17
 PKGREVISION=		5
@@ -41,7 +41,7 @@ FILES_SUBST+=		CYRUS_GROUP=${CYRUS_GROUP}
 CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER}
 CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP}
 CONFIGURE_ARGS+=	--with-cyrus-prefix=${PREFIX}/cyrus
-CONFIGURE_ARGS+=	--with-statedir=/var/run
+CONFIGURE_ARGS+=	--with-statedir=${VARBASE}/run
 CONFIGURE_ARGS+=	--with-dbdir=${BUILDLINK_PREFIX.db3}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/28 02:47:46 reed Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/29 15:42:38 minskim Exp $
 
 DISTNAME=	    jftpgw-0.13.4
 PKGREVISION=	    1
@@ -13,7 +13,7 @@ USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
 
-CONFIGURE_ARGS+=	--with-logpath=/var/log
+CONFIGURE_ARGS+=	--with-logpath=${VARBASE}/log
 CONFIGURE_ARGS+=	--enable-crypt
 CONFIGURE_ARGS+=	--enable-sftp
 

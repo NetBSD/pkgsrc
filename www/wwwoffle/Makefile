@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2004/12/28 02:47:52 reed Exp $
+# $NetBSD: Makefile,v 1.53 2004/12/29 15:42:38 minskim Exp $
 
 DISTNAME=	wwwoffle-2.8c
 PKGREVISION=	1
@@ -17,7 +17,7 @@ USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+= --with-confdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+= --with-spooldir=/var/wwwoffle
+CONFIGURE_ARGS+= --with-spooldir=${VARBASE}/wwwoffle
 
 PKG_SYSCONFSUBDIR= 	wwwoffle
 PLIST_SUBST+=		GTAR="${GTAR}"
@@ -41,7 +41,7 @@ post-build:
 # target incorrectly calculates to be a pre-2.2 cache. This tricks it
 # into setting up the cache directory properly.
 pre-install:
-	${MKDIR} /var/wwwoffle/prevtime1
+	${MKDIR} ${VARBASE}/wwwoffle/prevtime1
 
 post-install:
 	if [ -f ${PKG_SYSCONFDIR}/wwwoffle.conf.install ]; then \
