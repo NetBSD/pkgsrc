@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2258 2003/05/18 03:44:36 grant Exp $
+$NetBSD: CHANGES,v 1.2259 2003/05/18 12:08:12 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1987,3 +1987,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Set-Scalar-1.17 [dmcmahill 2003-05-17]
 	Updated oo2c to 2.0.9 [jtb 2003-05-17]
 	Updated phoenix-bin to 0.6 [grant 2003-05-17]
+	Updated roundup to 0.5.7 [lukem 2003-05-18]
