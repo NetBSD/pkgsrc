@@ -1,7 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2005/02/21 16:45:40 hira Exp $
 
 --- config/cf/NetBSD.cf.in.orig	2004-08-15 09:03:36.000000000 +0900
-+++ config/cf/NetBSD.cf.in	2005-02-21 11:23:09.000000000 +0900
++++ config/cf/NetBSD.cf.in	2005-03-20 03:57:25.000000000 +0900
 @@ -123,7 +123,7 @@
  # define ThreadedX		YES
  # define HasThreadSafeAPI	YES
@@ -80,7 +79,7 @@ $NetBSD: patch-ac,v 1.4 2005/02/21 16:45:40 hira Exp $
  # else
  #  define ServerExtraSysLibs	/**/
  # endif
-@@ -280,10 +280,24 @@
+@@ -280,10 +280,25 @@
  #  ifndef XFree86ConsoleDefines
  #    define XFree86ConsoleDefines	-DWSCONS_SUPPORT
  #  endif
@@ -95,8 +94,9 @@ $NetBSD: patch-ac,v 1.4 2005/02/21 16:45:40 hira Exp $
  
 +
 +#if defined(AMD64Architecture) && \
-+     ((OSMajorVersion > 2) || \
-+     (OSMajorVersion == 2 && OSMinorVersion == 99 && OSTeenyVersion >= 16))
++     ((OSMajorVersion < 2) || \
++      (OSMajorVersion == 2 && OSMinorVersion < 99) || \
++      (OSMajorVersion == 2 && OSMinorVersion == 99 && OSTeenyVersion < 16))
 +#ifndef PassHintToMMAP
 +#define PassHintToMMAP
 +#endif
@@ -105,7 +105,7 @@ $NetBSD: patch-ac,v 1.4 2005/02/21 16:45:40 hira Exp $
  #define StandardDefines	-DCSRG_BASED
  /* Citrus mb locale were added in 1.5P */
  #if ((OSMajorVersion > 1) || \
-@@ -400,6 +414,10 @@
+@@ -400,6 +415,10 @@
  # endif /* MTRRBuiltin */
  #endif /* i386Architecture */
  
@@ -116,7 +116,7 @@ $NetBSD: patch-ac,v 1.4 2005/02/21 16:45:40 hira Exp $
  /*
   * agpgart support (NetBSD 1.5Y and up)
   */
-@@ -588,7 +606,7 @@
+@@ -588,7 +607,7 @@
  # define BuildXInputLib          YES
  #endif
  
