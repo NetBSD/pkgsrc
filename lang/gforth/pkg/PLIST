@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/08/13 14:06:57 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/04/11 06:54:46 itohy Exp $
 bin/${PKGNAME}
 bin/gforth
 bin/gforthmi-0.4.0
@@ -150,7 +150,7 @@ share/gforth/0.4.0/objects.fs
 share/gforth/0.4.0/objexamp.fs
 share/gforth/0.4.0/mini-oof.fs
 share/gforth/0.4.0/moof-exm.fs
-share/gforth/0.4.0/kernl32l.fi
+share/gforth/0.4.0/@KERNEL_FI@
 share/gforth/0.4.0/TAGS
 share/gforth/site-forth/siteinit.fs
 @dirrm lib/gforth
