@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2004/02/16 09:16:13 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/16 10:02:42 jlam Exp $
 
 DISTNAME=		render-0.8
 CATEGORIES=		x11
 MASTER_SITES=		http://pdx.freedesktop.org/software/fontconfig/releases/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://pdx.freedesktop.org/software/fontconfig/releases/
 COMMENT=		headers for X11 render extension
 
