@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2747 2003/07/12 09:32:50 zuntum Exp $
+$NetBSD: CHANGES,v 1.2748 2003/07/12 09:55:03 zuntum Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2766,3 +2766,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wap-utils to 1.3.2 [zuntum 2003-07-12]
 	Updated cvs to 1.11.6 [wiz 2003-07-12]
 	Added KoboDeluxe-0.4rc8 [zuntum 2003-07-12]
+	Updated p5-Digest-MD5 to 2.24 [zuntum 2003-07-12]
