@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2004/01/29 15:45:00 taca Exp $
+$NetBSD: patch-ac,v 1.5 2004/01/30 07:05:28 taca Exp $
 
---- password/poppassd.c.orig	2004-01-26 17:14:25.000000000 +0900
+--- password/poppassd.c.orig	2004-01-30 15:59:13.000000000 +0900
 +++ password/poppassd.c
 @@ -167,8 +167,13 @@
  /* LANMAN allows up to 14 char passwords (truncates if longer), but tacacs
@@ -223,7 +223,7 @@ $NetBSD: patch-ac,v 1.4 2004/01/29 15:45:00 taca Exp $
 +    sscanf ( line, "newpass %s", newpass );
 +     
 +    if (bad_user) {
-+	WriteToClient ( "500 Not a user account." );
++	WriteToClient ( "500 Invalid user or password" );
 +	return 1;
      }
  
