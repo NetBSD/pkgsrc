@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/08 16:28:38 sketch Exp $
+
+--- src/Makefile.am.orig	2003-12-08 15:42:48.000000000 +0000
++++ src/Makefile.am	2003-12-08 15:43:09.000000000 +0000
+@@ -1,6 +1,6 @@
+ ## Process this file with automake to produce Makefile.in.
+ 
+-sbin_PROGRAMS = apachetop
++bin_PROGRAMS = apachetop
+ 
+ apachetop_SOURCES = apachetop.cc log.cc hashes.cc ohtbl.cc map.cc \
+                     display.cc hits_circle.cc timed_circle.cc
