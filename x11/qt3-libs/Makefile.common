@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2003/05/06 17:43:12 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.18 2003/05/29 23:53:13 grant Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -15,7 +15,7 @@ PATCHDIR=		${.CURDIR}/../../x11/qt3-libs/patches
 HAS_CONFIGURE=		yes
 USE_X11BASE=		yes
 USE_GMAKE=		yes
-USE_CXX=		yes
+USE_GCC_SHLIB=		yes
 USE_LIBTOOL=		yes
 
 QTPREFIX=		${PREFIX}/qt3
