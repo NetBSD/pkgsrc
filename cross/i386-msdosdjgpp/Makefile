@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.2 1998/08/12 13:35:00 tv Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/23 20:43:41 frueauf Exp $
 #
 
 DISTVERSION=		2.01.1
@@ -7,9 +7,11 @@ EXTRACT_ONLY=		# none of the djgpp files
 MASTER_SITES=		ftp://ftp.simtel.net/pub/simtelnet/gnu/djgpp/v2/ \
 			ftp://ftp.simtel.net/pub/simtelnet/gnu/djgpp/v2tk/
 
-USE_CROSS_GNU=		yes
+MAINTAINER=		packages@netbsd.org
 
 BUILD_DEPENDS=		unzip:../../archivers/unzip
+
+USE_CROSS_GNU=		yes
 
 DJGPP_FILES=		djcrx201.zip wmemu2b.zip
 
