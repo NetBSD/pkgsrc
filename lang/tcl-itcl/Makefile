@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/12/23 17:21:02 bjoern Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/25 09:13:24 wiz Exp $
 
 DISTNAME=	itcl3.2
 PKGNAME=	tcl-itcl-3.2
@@ -9,9 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://tcltk.com/itcl/
 COMMENT=	[incr Tcl] object-oriented extension to Tcl/Tk
 
-DEPENDS+=	tcl>=8.3.4:../../lang/tcl
-DEPENDS+=	tk>=8.3.4:../../x11/tk
-
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 CONFIGURE_ARGS= --enable-shared
@@ -39,4 +37,6 @@ pre-clean:
 	@cd ../../lang/tcl && ${MAKE} clean
 	@cd ../../x11/tk && ${MAKE} clean
 
+.include "../../lang/tcl/buildlink2.mk"
+.include "../../x11/tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
