@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/03/29 12:40:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:25:21 grant Exp $
 #
 
 DISTNAME=	simian_12_98
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/Simian/src
 CATEGORIES=	cad
 MASTER_SITES=	http://weewave.mer.utexas.edu/MED_files/CODE_RQST/
 
-MAINTAINER=	dmcmahill@netbsd.org
+MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://weewave.mer.utexas.edu/MED_files/MED_research/Intrcncts/SIMIAN_stuff/simian_links.html
 COMMENT=	2-dimensional interconnect and transmission line simulator
 

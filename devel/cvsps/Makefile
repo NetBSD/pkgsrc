@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2002/09/26 22:03:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:30:08 grant Exp $
 #
 
 DISTNAME=	cvsps-1.3.3
 CATEGORIES=	devel
 MASTER_SITES=	${HOMEPAGE}
 
-MAINTAINER=	schmonz@netbsd.org
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://www.cobite.com/cvsps/
 COMMENT=	generates 'patchset' information from a CVS repository
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/13 13:50:49 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 21:26:29 grant Exp $
 #
 
 DISTNAME=	xchat-2.0.3
@@ -11,7 +11,7 @@ PATCH_SITES=		http://www.xchat.org/files/source/2.0/patches/
 PATCHFILES=		xc203-fix-cps.diff xc203-fixtint.diff
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.xchat.org/
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
 

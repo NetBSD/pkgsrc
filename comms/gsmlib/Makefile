@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/13 13:50:50 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 21:26:43 grant Exp $
 #
 
 DISTNAME=	gsmlib-1.9
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	comms devel
 MASTER_SITES=	http://www.pxh.de/fs/gsmlib/download/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.pxh.de/fs/gsmlib/
 COMMENT=	Library to access GSM mobile phones through GSM modems or IrDA devices
 

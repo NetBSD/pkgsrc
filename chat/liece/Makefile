@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2003/06/27 14:36:32 seb Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:26:03 grant Exp $
 
 DISTNAME=	liece-1.4.10
 CATEGORIES=	chat
 MASTER_SITES=	http://www.unixuser.org/~ueno/liece/dist/
 
-MAINTAINER=	uebayasi@netbsd.org
+MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.unixuser.org/~ueno/liece/
 COMMENT=	IRC client for Emacs/XEmacs
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/13 13:50:54 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:27:35 grant Exp $
 #
 
 DISTNAME=	iconv-0.4.4
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	converters
 MASTER_SITES=	http://member.nifty.ne.jp/nokada/archive/
 
-MAINTAINER=	taca@netbsd.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://member.nifty.ne.jp/nokada/ruby.html
 COMMENT=	Iconv wrapper class for Ruby
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:21:24 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:26:13 grant Exp $
 #
 
 DISTNAME=	pircbot-0.9.11
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://www.jibble.org/files/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.jibble.org/pircbot.php
 COMMENT=	Java IRC Bot Framework
 

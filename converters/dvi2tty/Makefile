@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/11/14 23:40:46 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:27:14 grant Exp $
 #
 
 DISTNAME=	dvi2tty
@@ -7,7 +7,7 @@ CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 #MASTER_SITES=	ftp://tug.ctan.org/pub/tex-archive/dviware/
 
-MAINTAINER=	fredb@netbsd.org
+MAINTAINER=	fredb@NetBSD.org
 COMMENT=	Program for previewing DVI files
 
 LICENSE=	no-commercial-use

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/02 11:54:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:30:54 grant Exp $
 #
 
 DISTNAME=	gnustep-objc-1.2.3
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel gnustep
 MASTER_SITES=	ftp://ftp.gnustep.org/pub/gnustep/libs/
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	Objective-C runtime
 

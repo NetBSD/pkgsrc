@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/13 13:50:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 21:25:16 grant Exp $
 #
 
 DISTNAME=		oregano-0.20
@@ -6,7 +6,7 @@ PKGREVISION=		7
 CATEGORIES=		cad gnome
 MASTER_SITES=		http://www.dtek.chalmers.se/~d4hult/oregano/download/
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.dtek.chalmers.se/~d4hult/oregano/
 COMMENT=		application for schematic capture/simulation of electrical circuits
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/07/13 13:50:43 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2003/07/17 21:25:35 grant Exp $
 #
 
 DISTNAME=	centericq-4.9.4
@@ -7,7 +7,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://konst.org.ua/download/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://konst.org.ua/eng/software/centericq/info.html
 COMMENT=	Instant Messenger interface for ICQ2000, Yahoo!, MSN and Jabber
 

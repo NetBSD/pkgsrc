@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/13 13:50:59 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/17 21:29:05 grant Exp $
 
 DISTNAME=	sqsh-1.7-src
 PKGNAME=	sqsh-1.7
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.voicenet.com/~gray/
 
-MAINTAINER=	tsarna@netbsd.org
+MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.voicenet.com/~gray/sqsh.html
 COMMENT=	Sybase SQL shell
 

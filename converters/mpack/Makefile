@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/02 01:21:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:27:20 grant Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/04/26 23:55:23 asami Exp
 #
 
@@ -9,7 +9,7 @@ CATEGORIES=	converters mail news
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/mpack/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	External MIME packer/unpacker
 
 USE_BUILDLINK2=	# defined
