@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/07/17 22:53:38 grant Exp $
+# $NetBSD: Makefile,v 1.20 2003/12/26 19:55:55 wiz Exp $
 #
 
 DISTNAME=	kapm-0.3.1
@@ -14,7 +14,7 @@ COMMENT=	Monitor a laptop's battery status and perform other APM tasks
 PKG_SKIP_REASON=	"APM is not available for ${MACHINE_PLATFORM}"
 .endif
 
-DEPENDS+=	kdebase-1.1.2nb3:../../x11/kdebase
+DEPENDS+=	kdebase-1.1.2nb4:../../x11/kdebase
 
 USE_X11BASE=	YES	# to get things near KDE
 GNU_CONFIGURE=	YES
