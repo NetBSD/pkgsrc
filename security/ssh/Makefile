@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 1999/10/19 08:49:49 agc Exp $
+# $NetBSD: Makefile,v 1.64 1999/11/12 16:34:29 abs Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -47,6 +47,11 @@ CFLAGS+=		-I${LOCALBASE}/include
 # Warning: untested !
 .if defined(USE_SECUREID) && ${USE_SECUREID} == YES
 CONFIGURE_ARGS+=	--with-secureid
+.endif
+  
+# If rsh is elsewhere to /usr/bin/rsh
+.if defined(SSH_RSHPATH)
+CONFIGURE_ARGS+=       --with-rsh=${SSH_RSHPATH}
 .endif
 
 # Don't use IDEA. IDEA can be freely used for non-commercial use. However,
