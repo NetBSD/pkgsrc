@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3210 2005/03/07 14:42:08 wiz Exp $
+$NetBSD: TODO,v 1.3211 2005/03/07 15:32:08 adam Exp $
 
 Suggested new packages
 ======================
@@ -607,7 +607,6 @@ Suggested package updates
 	o liblive-2004.12.29
 	o libmpeg3-1.5.4
 	o libnids-1.20
-	o libopendaap-0.3.0
 	o libperl-5.6.2
 	o libpqxx-2.4.3
 	o libsmi-0.4.3
