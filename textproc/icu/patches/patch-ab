@@ -1,0 +1,48 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/20 18:28:06 skrll Exp $
+
+--- common/putil.c.orig	Fri Aug 11 21:36:52 2000
++++ common/putil.c
+@@ -86,7 +86,7 @@
+ #   include <Script.h>
+ #elif defined(AIX)
+ #   include <sys/ldr.h>
+-#elif defined(U_SOLARIS) || defined(U_LINUX)
++#elif defined(U_SOLARIS) || defined(U_LINUX) /* || defined(U_NETBSD) */
+ #   include <dlfcn.h>
+ #   include <link.h>
+ #elif defined(HPUX)
+@@ -686,7 +686,7 @@
+ int32_t 
+ uprv_timezone()
+ {
+-#if defined(U_POSIX)
++#if defined(U_POSIX) && !defined(U_NETBSD)
+ #if defined(OS390)
+   return _timezone;
+ #else
+@@ -694,7 +694,7 @@
+ #endif
+ #endif
+ 
+-#if defined(OS400) || defined(XP_MAC) || defined(U_DARWIN)
++#if defined(OS400) || defined(XP_MAC) || defined(U_DARWIN) || defined(U_NETBSD)
+   time_t t, t1, t2;
+   struct tm tmrec;
+   UBool dst_checked;
+@@ -989,6 +989,7 @@
+ #   elif defined(XP_MAC)
+ #   elif defined(U_SOLARIS)
+ #   elif defined(U_LINUX)
++#   elif defined(U_NETBSD)
+ #       define LIB_PATH_VAR "LD_LIBRARY_PATH"
+ #       define LIB_FILENAME "libicuuc.so"
+ #   elif defined(AIX)
+@@ -1578,7 +1579,7 @@
+     {
+         uprv_memset(codesetName, 0, 100);
+     }
+-#if U_HAVE_NL_LANGINFO
++#if defined(U_HAVE_NL_LANGINFO) && !defined(U_NETBSD)
+ #ifdef U_LINUX
+     if (nl_langinfo(_NL_CTYPE_CODESET_NAME) != NULL)
+         uprv_strcpy(codesetName, nl_langinfo(_NL_CTYPE_CODESET_NAME));     
