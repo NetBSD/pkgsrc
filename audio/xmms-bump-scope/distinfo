@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/02/14 23:56:38 hubertf Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 20:39:54 agc Exp $
 
 SHA1 (bump_scope-0.0.3.tar.gz) = 034d611246ce7ed96770ffda250ebadd20de33fb
+RMD160 (bump_scope-0.0.3.tar.gz) = 4abf24b0552a874363e7fbc838087b900660db4c
 Size (bump_scope-0.0.3.tar.gz) = 160690 bytes
