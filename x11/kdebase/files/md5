@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.8 1999/09/15 18:26:04 tron Exp $
+$NetBSD: md5,v 1.9 1999/11/15 00:34:56 tron Exp $
 
 MD5 (kdebase-1.1.2.tar.bz2) = 330492b058e8087fca7f1ce350363254
+MD5 (Daemon.png) = b5240009171ebb04560e00b24adf52f9
