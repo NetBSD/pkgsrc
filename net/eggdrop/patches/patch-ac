@@ -1,0 +1,11 @@
+--- src/Makefile.orig	Mon Nov 23 22:09:34 1998
++++ src/Makefile	Mon Nov 23 22:09:51 1998
+@@ -75,7 +75,7 @@
+ 	${CC} ${CFLAGS} \
+ 	'-DCCFLAGS="${CC}"' \
+ 	'-DLDFLAGS="${LD}"' \
+-	'-DSTRIPFLAGS="${STRIP}"' main.c
++	'-DSTRIPFLAGS="${STRIP}"' '-D__PREFIX__="${PREFIX}"' main.c
+ 
+ mem.o: mem.c
+ 	${CC} ${CFLAGS} mem.c
