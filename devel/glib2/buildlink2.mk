@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2003/06/30 18:30:55 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2003/07/01 16:44:55 drochner Exp $
 
 .if !defined(GLIB2_BUILDLINK2_MK)
 GLIB2_BUILDLINK2_MK=	# defined
@@ -17,7 +17,6 @@ BUILDLINK_FILES.glib2+=	lib/libgmodule-2.0.*
 BUILDLINK_FILES.glib2+=	lib/libgobject-2.0.*
 BUILDLINK_FILES.glib2+=	lib/libgthread-2.0.*
 
-USE_GNU_ICONV=	yes
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
