@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2004/10/23 09:26:09 jdolecek Exp $
+# $NetBSD: Makefile,v 1.69 2004/10/23 09:59:10 jdolecek Exp $
 
 DISTNAME=		gnucash-1.8.9
 PKGREVISION=		2
@@ -13,7 +13,7 @@ COMMENT=		Personal double-entry accounting program
 DEPENDS+=		p5-Date-Manip>=5.42a:../../devel/p5-Date-Manip
 DEPENDS+= 		p5-finance-quote>=1.06:../../finance/p5-finance-quote
 
-BUILD_DEPENDS+=			bison>=1.28:../../devel/bison
+BUILD_DEPENDS+=		bison>=1.28:../../devel/bison
 
 USE_DIRS+=		gnome1-1.5
 USE_GNU_TOOLS+=		make
@@ -38,6 +38,9 @@ MAKE_ENV+=		GUILE14_SUBDIR=${GUILE14_SUBDIR:Q}
 
 INFO_FILES=		gnucash-design.info
 
+# 1.8.9 includes empty info file, so we must rebuild it
+USE_MAKEINFO=		yes
+
 SUBST_CLASSES+=		guile14
 SUBST_STAGE.guile14=	pre-configure
 SUBST_MESSAGE.guile14=	"Substitute interpreter calls to use guile14."
@@ -55,6 +58,10 @@ post-buildlink:
 		${TOUCH} ${BUILDLINK_DIR}/include/wctype.h;		\
 	fi
 .endif
+
+post-extract:
+	cd ${WRKSRC}/src/doc/design/ && \
+		${MAKEINFO} ${INFO_FILES:S/.info/.texinfo/}
 
 GNUCASH_GUILE_MAKEFILE_IN_FILES= \
 	src/app-file/Makefile.in src/app-utils/Makefile.in \
