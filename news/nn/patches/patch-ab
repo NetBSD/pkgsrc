@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 1999/07/26 21:19:23 tron Exp $
+$NetBSD: patch-ab,v 1.5 1999/08/22 22:55:46 kim Exp $
 
---- account.c.orig	Thu Sep 23 04:10:59 1993
-+++ account.c	Mon Jul 26 23:11:38 1999
-@@ -43,7 +43,7 @@
+--- account.c.orig	Fri Jul  3 17:02:18 1998
++++ account.c	Sun Aug 22 18:20:40 1999
+@@ -25,7 +25,7 @@
  extern int errno;
  
  struct account {
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.4 1999/07/26 21:19:23 tron Exp $
      int ac_found;	/* present in acct file */
      
      char ac_user[24];	/* user name */
-@@ -240,7 +240,7 @@
+@@ -204,7 +204,7 @@
      if (ac->ac_found)
  	fseek(acctf, ac->ac_offset, 0);
      else
