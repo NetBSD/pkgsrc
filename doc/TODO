@@ -185,7 +185,6 @@ Suggested package updates
 	o firewalk-gtk-5.0
 	o foobillard-2.9
 	o foomatic-2.9.1 [jlam]
-	o freeciv-1.14.1
 	o freetype-2.1.7 [breaks compatibility with other packages]
 	o fsviewer-0.2.5
 	o galeon-1.3.12
