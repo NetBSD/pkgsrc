@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/03/12 16:30:33 tron Exp $
+# $NetBSD: Makefile,v 1.16 1999/04/08 20:15:46 tron Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
@@ -29,6 +29,7 @@
 #    SUBDIR += swatch
 #    SUBDIR += tcp_wrapper
     SUBDIR += tripwire
+    SUBDIR += vpn
 #    SUBDIR += vscan
 #    SUBDIR += xinetd
 
