@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2004/11/08 10:07:02 xtraeme Exp $
+# $NetBSD: Makefile,v 1.63 2004/11/27 01:31:19 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.87
-PKGNAME=		xmess-0.87
+DISTNAME=		xmame-0.88
+PKGNAME=		xmess-0.88
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -72,7 +72,7 @@ MAKE_FLAGS+=		X11_XV=1
 # If supported, add appropriate definitions to build joystick drivers.
 .if exists(/usr/include/machine/joystick.h) ||				\
     exists(/usr/include/linux/joystick.h)
-MAKE_FLAGS+=		JOY_I386=1
+MAKE_FLAGS+=		JOY_STANDARD=1
 .endif
 .if ${OPSYS} == "NetBSD"
 .  if exists(/usr/lib/libusb.a) || exists(/usr/lib/libusbhid.a)
