@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9268 2005/02/22 19:57:06 jmmv Exp $
+$NetBSD: CHANGES,v 1.9269 2005/02/22 21:19:10 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1041,3 +1041,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated evolution to 2.0.4 [jmmv 2005-02-22]
 	Updated libgnome to 2.8.1 [jmmv 2005-02-22]
 	Updated libgnomeui to 2.8.1 [jmmv 2005-02-22]
+	bsd.pkg.mk: Add the ability to use multiple digests to ensure the
+		integrity of dist files and dist patches [agc 2005-02-22]
