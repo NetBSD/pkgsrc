@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.577 2000/09/19 19:29:11 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.578 2000/09/20 19:11:34 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1624,10 +1624,16 @@ root-install:
 		${ECHO_MSG} "and install this package again by \`\`${MAKE} deinstall reinstall''."; \
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	vul="`${MAKE} show-vulnerabilities`";				\
-	if [ "$$vul" != "" ]; then					\
-		${ECHO_MSG} '*** WARNING: Vulnerabilities in this package ***'; \
-		${ECHO_MSG} "$$vul";					\
+	if [ -f ${DISTDIR}/vulnerabilities ]; then			\
+		vul="`${MAKE} show-vulnerabilities`";			\
+		if [ "$$vul" != "" ]; then				\
+			${ECHO_MSG} '*** WARNING: Vulnerabilities in this package ***'; \
+			${ECHO_MSG} "$$vul";				\
+		fi							\
+	else								\
+		${ECHO} "No ${DISTDIR}/vulnerabilities file.";		\
+		${ECHO} "Consider installing the pkgsrc/security/audit-packages package"; \
+		${ECHO} "to provide automatic package security vulnerability detection."; \
 	fi
 .if !defined(NO_MTREE)
 	${_PKG_SILENT}${_PKG_DEBUG}if [ `${ID} -u` = 0 ]; then		\
