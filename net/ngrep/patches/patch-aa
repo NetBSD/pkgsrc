@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1 1999/07/02 10:26:03 agc Exp $
+
+Look in the correct place for the new net/bpf.h
+Hack alert - on Solaris, need -lxnet as well.
+
+--- configure	1999/07/02 09:35:44	1.1
++++ configure	1999/07/02 09:41:45
+@@ -1208,7 +1208,11 @@
+ echo $ac_n "checking for old version of bpf.h""... $ac_c" 1>&6
+ echo "configure:1210: checking for old version of bpf.h" >&5
+ if test -z "$pcapdir"; then
+-   dir="/usr/include";
++   if test -f $prefix/include/net/bpf.h; then
++      dir="$prefix/include";
++   else
++      dir="/usr/include";
++   fi
+ else 
+    dir="$pcapdir";
+ fi
+@@ -1275,7 +1279,12 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lpcap  $LIBS"
++case `uname -s` in
++SunOS)
++	LIBS="-lpcap -lxnet $LIBS" ;;
++*)
++	LIBS="-lpcap  $LIBS" ;;
++esac
+ cat > conftest.$ac_ext <<EOF
+ #line 1281 "configure"
+ #include "confdefs.h"
