@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/11 13:53:26 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/04 20:12:05 wiz Exp $
 #
 
 DISTNAME=		gnucash-1.4.8
@@ -11,7 +11,6 @@ MAINTAINER=		drankin@bohemians.lexington.ky.us
 HOMEPAGE=		http://www.gnucash.org/
 
 DEPENDS+=		gnome-libs>=1.0.40:../../x11/gnome-libs
-DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 DEPENDS+=		eperl-2.2.14:../../textproc/eperl
 DEPENDS+=		g-wrap>=0.9.5:../../devel/g-wrap
 DEPENDS+=		guile-slib-2c8:../../devel/guile-slib
@@ -22,7 +21,7 @@ DEPENDS+=		libxml>=1.8.7:../../textproc/libxml
 USE_GMAKE=		# defined
 USE_PERL5=		# defined
 USE_X11=		# defined
-
+USE_LIBINTL=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE+=	${WRKSRC}/ltconfig
 
