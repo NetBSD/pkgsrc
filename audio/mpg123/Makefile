@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/09/11 18:58:42 tron Exp $
+# $NetBSD: Makefile,v 1.23 2001/01/11 07:26:54 tron Exp $
 #
 
 DISTNAME=       mpg123-0.59r
@@ -9,7 +9,6 @@ MASTER_SITES=	http://www.mpg123.de/mpg123/ \
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/ \
 		http://www.unix-ag.org/Linux-Alpha/Packages/
 PATCHFILES=	mpg123-059r-v6-20000713b.diff.gz l3.diff.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mpg123.de/
@@ -43,6 +42,9 @@ MAKE_ENV+=	CPPFLAGS="-DINET6"
 .endif
 
 MAKE_FLAGS+=	PREFIX="${PREFIX}"
+
+pre-patch:
+	${LN} -s . ${WRKSRC}/mpg123
 
 post-patch:
 	${CP} ${FILESDIR}/decode_i586_.s ${WRKSRC}/
