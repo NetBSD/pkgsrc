@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2002/10/20 09:15:23 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2002/12/25 14:25:27 wiz Exp $
 
 DISTNAME=	tiff-v3.5.7
 PKGNAME=	tiff-3.5.7
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.remotesensing.org/pub/libtiff/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
