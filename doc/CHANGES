@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4365 2004/01/05 22:15:44 mrauch Exp $
+$NetBSD: CHANGES,v 1.4366 2004/01/06 00:16:38 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -69,3 +69,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated file-roller to 2.4.2 [xtraeme 2004-01-05]
 	Updated spamprobe to 0.9e [hubertf 2004-01-05]
 	Updated stlport to 4.6 [mrauch 2004-01-05]
+	Added ezm3-1.1 [xtraeme 2003-01-06]
+	Moved cvsup-16.1h to cvsup-bin-16.1h [xtraeme 2003-01-06]
+	Moved cvsup-gui-16.1h to cvsup-gui-bin-16.1h [xtraeme 2003-01-06]
