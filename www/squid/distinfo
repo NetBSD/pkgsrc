@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2003/03/25 17:44:22 taca Exp $
+$NetBSD: distinfo,v 1.28 2003/04/11 09:51:40 taca Exp $
 
 SHA1 (squid-2.5.2/squid-2.5.STABLE2.tar.bz2) = e319b3cfdf5d92df9ef39da048fc4235d9cc5154
 Size (squid-2.5.2/squid-2.5.STABLE2.tar.bz2) = 1020696 bytes
@@ -6,6 +6,14 @@ SHA1 (squid-2.5.2/squid-2.5.STABLE2-concurrent_external_acl.patch) = 8f6cacd9bfe
 Size (squid-2.5.2/squid-2.5.STABLE2-concurrent_external_acl.patch) = 730 bytes
 SHA1 (squid-2.5.2/squid-2.5.STABLE2-external_acl_crash.patch) = 79d2cd10f832513a547b3d77bf09c2c359a6831c
 Size (squid-2.5.2/squid-2.5.STABLE2-external_acl_crash.patch) = 1356 bytes
+SHA1 (squid-2.5.2/squid-2.5.STABLE2-shutdown.patch) = 5a8e3915c8bfa9374998e69c50bc62732222a387
+Size (squid-2.5.2/squid-2.5.STABLE2-shutdown.patch) = 890 bytes
+SHA1 (squid-2.5.2/squid-2.5.STABLE2-external_acl_overload.patch) = f74a09f17bd1722f0ef4c0b51e892e0ac70c6fbd
+Size (squid-2.5.2/squid-2.5.STABLE2-external_acl_overload.patch) = 977 bytes
+SHA1 (squid-2.5.2/squid-2.5.STABLE2-cache_effective_user_docs.patch) = 31f899fa0bbbe09ac196d8458331c472d59ccb69
+Size (squid-2.5.2/squid-2.5.STABLE2-cache_effective_user_docs.patch) = 1532 bytes
+SHA1 (squid-2.5.2/squid-2.5.STABLE2-cache_peer_docs.patch) = 130f145e06b5da2589cfa0bf2216ce447289e998
+Size (squid-2.5.2/squid-2.5.STABLE2-cache_peer_docs.patch) = 1324 bytes
 SHA1 (patch-aa) = 2e0d96f6ccb9d0c42db2da49e76846edad09624f
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
