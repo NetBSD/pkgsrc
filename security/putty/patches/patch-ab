@@ -1,0 +1,34 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/10/29 23:00:31 xtraeme Exp $
+
+--- pty.c.orig	2004-10-30 00:44:17.000000000 +0200
++++ pty.c	2004-10-30 00:46:49.000000000 +0200
+@@ -14,7 +14,11 @@
+ #define _XOPEN_SOURCE
+ #define _XOPEN_SOURCE_EXTENDED
+ #define _GNU_SOURCE
++#ifndef __NetBSD__ || !defined(__FreeBSD__) || !defined(__OpenBSD__)
+ #include <features.h>
++#else
++#include <sys/stat.h>
++#endif
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+@@ -574,9 +578,17 @@
+ 	ioctl(slavefd, TIOCSCTTY, 1);
+ 	pgrp = getpid();
+ 	tcsetpgrp(slavefd, pgrp);
++#ifdef __linux__
+ 	setpgrp();
++#else
++	setpgrp(pgrp, -1);
++#endif
+ 	close(open(pty_name, O_WRONLY, 0));
++#ifdef __linux__
+ 	setpgrp();
++#else
++	setpgrp(pgrp, -1);
++#endif
+ 	/* Close everything _else_, for tidiness. */
+ 	for (i = 3; i < 1024; i++)
+ 	    close(i);
