@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2004/06/05 00:09:50 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.20 2004/06/11 18:12:11 minskim Exp $
 #
 
 DISTNAME=		GConf-2.6.1
@@ -10,7 +10,8 @@ MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/gconf/
 COMMENT=		Configuration database system used by GNOME (v2)
 
-PKG_INSTALLATION_TYPES= overwrite pkgviews
+# not ready yet.  .schemas are installed in the depot.
+#PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 BUILD_USES_MSGFMT=	yes
 
