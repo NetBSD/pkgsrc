@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/01/08 23:53:53 salo Exp $
+# $NetBSD: Makefile,v 1.21 2003/01/26 14:35:07 salo Exp $
 
 DISTNAME=		silc-client-0.9.11
 CATEGORIES=		chat security
@@ -18,7 +18,7 @@ USE_GMAKE=		YES
 USE_GNU_ICONV=		YES
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/irssi/libtool \
+SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/irssi/libtool \
 			${WRKSRC}/lib/silcmath/mpi/libtool
 
 BUILDLINK_DEPENDS.iconv=	libiconv>=1.7
@@ -77,19 +77,6 @@ CONFIGURE_ARGS+=	--disable-asm
 #CONFIGURE_ARGS+=	--enable-debug
 
 PLIST_SRC+=		${PKGDIR}/PLIST
-
-# Ugly hack which prevents installation of static libraries.
-#
-post-build:
-	for f in \
-	${WRKSRC}/lib/libsilc.la \
-	${WRKSRC}/lib/libsilcclient.la \
-	${WRKSRC}/lib/.libs/libsilc.la \
-	${WRKSRC}/lib/.libs/libsilcclient.la ; \
-	do \
-		${CP} $$f $$f.orig ; \
-		${SED} "s|^old_library|#&|" $$f.orig > $$f ; \
-	done
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
