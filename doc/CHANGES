@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.974 2003/01/02 12:23:51 salo Exp $
+$NetBSD: CHANGES,v 1.975 2003/01/02 14:22:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -31,3 +31,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated geneweb to 4.09 [wulf 2003-01-02]
 	Updated mousetar to 20021217 [agc 2003-01-02]
 	Updated aspell-slovak to 1.1 [salo 2003-01-02]
+	Updated fnlib to 0.5nb2 [jmmv 2003-01-02]
