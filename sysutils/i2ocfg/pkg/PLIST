@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/21 14:23:13 ad Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/02 22:22:42 jlam Exp $
 libexec/cgi-bin/i2ocfg
 man/cat8/i2ocfg.0
 man/man8/i2ocfg.8
-@dirrm libexec/cgi-bin

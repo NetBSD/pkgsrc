@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2001/04/30 03:25:16 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/05/02 22:22:43 jlam Exp $
 bin/pear
 bin/php
 bin/php-config
@@ -192,7 +192,6 @@ share/examples/php/php.ini-dist
 share/examples/php/php.ini-optimized
 share/php/php4.gif
 @dirrm share/php
-@unexec rmdir -p %D/libexec/cgi-bin 2>/dev/null || true
 @dirrm share/examples/php
 @dirrm lib/php/extensions/no-debug-non-zts-20001214
 @dirrm lib/php/extensions
