@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 10:40:24 agc Exp $
+$NetBSD: patch-ab,v 1.3 1998/09/04 21:29:31 agc Exp $
 
 --- indent.texinfo	1997/10/08 15:35:14	1.1
 +++ indent.texinfo	1997/10/08 15:37:15
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 10:40:24 agc Exp $
  @ifinfo
 +@format
 +START-INFO-DIR-ENTRY
-+* Indent: (indent).             Indent C programs.
++* Indent: (gindent).             Indent C programs.
 +END-INFO-DIR-ENTRY
 +@end format
 +
