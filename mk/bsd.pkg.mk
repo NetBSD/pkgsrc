@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1348 2004/01/19 15:04:05 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1349 2004/01/19 23:47:41 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -274,7 +274,7 @@ PERL5_REQD?=		5.0
 PERL5_PKGSRCDIR?=	../../lang/perl5
 
 # _PERL58_PATTERNS contains perl versions >=5.8.0 but before 6.0.
-_PERL58_PATTERNS=	5.8.* 5.9* 5.[1-9][0-9]*
+_PERL58_PATTERNS=	5.8* 5.9* 5.[1-9][0-9]*
 
 .if defined(_OPSYS_PERL_REQD) && ${_OPSYS_PERL_REQD} != ""
 _PERL58_REQD?=		${_OPSYS_PERL_REQD}
