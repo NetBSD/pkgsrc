@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/07/21 18:56:40 martin Exp $
+# $NetBSD: Makefile,v 1.19 2001/08/01 15:59:44 wiz Exp $
 
 DISTNAME=		elm2.5.5
 PKGNAME=		elm-2.5.5
@@ -25,4 +25,5 @@ pre-configure:
 	${MV} ${WRKSRC}/nls/LANGS ${WRKSRC}/nls/LANGS.tmpl
 	${SED} -e 's:__PREFIX:'${PREFIX}':g' < ${WRKSRC}/nls/LANGS.tmpl > ${WRKSRC}/nls/LANGS
 
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
