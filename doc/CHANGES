@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7860 2004/11/15 03:34:36 rh Exp $
+$NetBSD: CHANGES,v 1.7861 2004/11/15 03:45:51 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5280,3 +5280,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated thunderbird to 0.9 [taya 2004-11-14]
 	Updated thunderbird-gtk2 to 0.9 [taya 2004-11-14]
 	Updated glitz to 0.2.3 [rh 2004-11-15]
+	Updated libpixman to 0.1.2 [rh 2004-11-15]
