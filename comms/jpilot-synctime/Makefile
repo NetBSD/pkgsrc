@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/08/29 22:41:07 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/10/23 13:14:48 jlam Exp $
 
 DISTNAME=		jpilot-0.99
 PKGNAME=		jpilot-synctime-0.99
@@ -26,7 +26,7 @@ post-extract:
 	${RM} -f ${WRKSRC}/../libtool
 	${LN} -sf ${LIBTOOL} ${WRKSRC}/../libtool
 
+.include "../../mk/x11.buildlink.mk"
 .include "../../comms/jpilot/buildlink.mk"
 .include "../../comms/pilot-link-libs/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

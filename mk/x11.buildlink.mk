@@ -1,4 +1,4 @@
-# $NetBSD: x11.buildlink.mk,v 1.9 2001/10/20 03:00:16 jlam Exp $
+# $NetBSD: x11.buildlink.mk,v 1.10 2001/10/23 13:15:00 jlam Exp $
 #
 # This Makefile fragment is included by packages that use X11.
 #
@@ -10,6 +10,9 @@
 #
 # NOTE: This file must be included _before_ bsd.pkg.mk.
 # NOTE: This file should _not_ be included in any package's buildlink.mk file.
+# NOTE: This file should be included _before_ any buildlink.mk files that
+#	use X11_BUILDLINK_MK as a test value.  Generally, this file should be
+#	included before the other buildlink.mk files.
 
 .if !defined(X11_BUILDLINK_MK)
 X11_BUILDLINK_MK=	# defined
