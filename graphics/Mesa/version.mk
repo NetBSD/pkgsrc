@@ -1,14 +1,13 @@
-# $NetBSD: version.mk,v 1.6 2004/01/20 02:48:33 jschauma Exp $
+# $NetBSD: version.mk,v 1.7 2004/01/23 19:37:18 jlam Exp $
 #
 # This file computes the version number of the Mesa distributed with
 # XFree86 and stores it in ${_MESA_VERSION}.
 #
-# Note: This file should only be used by the Mesa-related packages.
-
+# NOTE: This file should only be used by the Mesa-related buildlink*.mk
+#	files.
+#
 .if !defined(MESA_VERSION_MK)
 MESA_VERSION_MK=	# defined
-
-MESA_VERSION=		6.0
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,7 +28,7 @@ _MESA_GL_VERSION_${_glvers_}!= \
 #
 # According to the Mesa documentation, for stable releases:
 #
-#	Mesa-5.0 implements OpenGL 1.5,
+#	Mesa-6.0 implements OpenGL 1.5,
 #	Mesa-5.0 implements OpenGL 1.4,
 #	Mesa-4.0.4 implements OpenGL 1.3,
 #	Mesa-3.4.2 implements OpenGL 1.2.
