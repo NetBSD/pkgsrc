@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2001/05/22 13:11:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2001/07/10 17:37:03 tron Exp $
 bin/a2ps
 bin/card
 bin/composeglyphs
@@ -218,23 +218,23 @@ share/emacs/site-lisp/a2ps-print.el
 share/emacs/site-lisp/a2ps-print.elc
 share/emacs/site-lisp/a2ps.el
 share/emacs/site-lisp/a2ps.elc
-share/locale/ca/LC_MESSAGES/a2ps.mo
-share/locale/cs/LC_MESSAGES/a2ps.mo
-share/locale/da/LC_MESSAGES/a2ps.mo
-share/locale/de/LC_MESSAGES/a2ps.mo
-share/locale/es/LC_MESSAGES/a2ps.mo
-share/locale/et/LC_MESSAGES/a2ps.mo
-share/locale/fr/LC_MESSAGES/a2ps.mo
-share/locale/it/LC_MESSAGES/a2ps.mo
-share/locale/ko/LC_MESSAGES/a2ps.mo
-share/locale/nl/LC_MESSAGES/a2ps.mo
-share/locale/no/LC_MESSAGES/a2ps.mo
-share/locale/pl/LC_MESSAGES/a2ps.mo
-share/locale/pt/LC_MESSAGES/a2ps.mo
-share/locale/ru/LC_MESSAGES/a2ps.mo
-share/locale/sl/LC_MESSAGES/a2ps.mo
-share/locale/sv/LC_MESSAGES/a2ps.mo
-share/locale/tr/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/a2ps.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/a2ps.mo
 share/ogonkify/README
 share/ogonkify/adobe.enc
 share/ogonkify/afm/pcrb-o.afm
