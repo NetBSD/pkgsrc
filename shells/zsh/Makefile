@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/07/23 18:23:44 nra Exp $
+# $NetBSD: Makefile,v 1.24 2001/09/23 21:01:30 tron Exp $
 
 DISTNAME=       zsh-4.0.2
 CATEGORIES=	shells
@@ -32,8 +32,9 @@ post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/zsh
 	@cd ${WRKSRC}/Etc; ${INSTALL_DATA} BUGS FAQ FEATURES NEWS	\
 		${PREFIX}/share/doc/zsh
+	${TOUCH} /etc/shells
 	${CP} /etc/shells /etc/shells.bak
-	(${GREP} -v ${PREFIX}/bin/zsh /etc/shells.bak; ${ECHO} ${PREFIX}/bin/zsh) >/etc/shells
+	(${GREP} -v ${PREFIX}/bin/zsh /etc/shells.bak || ${TRUE}; ${ECHO} ${PREFIX}/bin/zsh) >/etc/shells
 	${RM} /etc/shells.bak
 
 .include "../../mk/bsd.pkg.mk"
