@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2003/04/29 23:28:45 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2003/12/14 04:02:53 xtraeme Exp $
 
---- configure.orig
-+++ configure
-@@ -4211,7 +4211,7 @@
+--- configure.orig	2003-12-13 18:28:39.000000000 -0800
++++ configure	2003-12-13 18:30:09.000000000 -0800
+@@ -4262,7 +4262,7 @@
  			if test "$xyz_piggyswitch" = "cow"; then
  				LIBS="-llua40 -llualib40 -lm $LIBS_X"
  			else
@@ -11,9 +11,9 @@ $NetBSD: patch-aa,v 1.1 2003/04/29 23:28:45 jtb Exp $
  			fi
  
  			if test ! -z "$luadir"; then
-@@ -4229,7 +4229,7 @@
+@@ -4280,7 +4280,7 @@
  			cat > conftest.$ac_ext <<EOF
- #line 4231 "configure"
+ #line 4282 "configure"
  #include "confdefs.h"
 -#include <lua.h>
 +#include <lua4.h>
