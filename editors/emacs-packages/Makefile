@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2003/09/02 14:22:15 minoura Exp $
+# $NetBSD: Makefile,v 1.12 2003/09/04 13:50:59 minoura Exp $
 
-DISTNAME=	emacs-packages-0.4
+DISTNAME=	emacs-packages-0.5
 CATEGORIES=	meta-pkgs editors
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -17,6 +17,7 @@ COMMENT=	Meta-package for the GNU Emacs lisp packages
 DEPENDS+=	apel-[0-9]*:../../devel/apel
 DEPENDS+=	artist-[0-9]*:../../graphics/artist
 DEPENDS+=	auctex-[0-9]*:../../print/auctex
+DEPENDS+=	bbdb-[0-9]*:../../misc/bbdb
 .if defined(_EMACS_VERSION_EMACS_MAJOR) && ${_EMACS_VERSION_EMACS_MAJOR} == "20"
 DEPENDS+=	calc-[0-9]*:../../math/calc
 .endif
