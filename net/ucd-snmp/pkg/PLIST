@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2001/01/04 15:10:52 agc Exp $
+@comment $NetBSD: PLIST,v 1.11 2001/01/26 02:02:35 hubertf Exp $
 bin/encode_keychange
 bin/snmpbulkget
 bin/snmpbulkwalk
@@ -17,7 +17,8 @@ bin/snmptrap
 bin/snmpusm
 bin/snmpwalk
 bin/tkmib
-etc/rc.d/snmpd.sh
+etc/rc.d/snmpd
+etc/rc.d/snmptrapd
 include/ucd-snmp/agent_read_config.h
 include/ucd-snmp/agent_registry.h
 include/ucd-snmp/agent_trap.h
