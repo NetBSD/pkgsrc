@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.2 2004/07/14 00:25:11 xtraeme Exp $
+$NetBSD: patch-ag,v 1.3 2005/01/20 15:08:54 xtraeme Exp $
 
---- etc/c2s.xml.in.orig	2004-07-13 18:56:31.000000000 +0200
-+++ etc/c2s.xml.in	2004-07-13 18:58:39.000000000 +0200
+--- etc/c2s.xml.in.orig	2005-01-20 15:39:58.000000000 +0100
++++ etc/c2s.xml.in	2005-01-20 15:41:39.000000000 +0100
 @@ -6,7 +6,7 @@
    <!-- The process ID file. comment this out if you don't need to know
         to know the process ID from outside the process (eg for control
@@ -29,7 +29,7 @@ $NetBSD: patch-ag,v 1.2 2004/07/14 00:25:11 xtraeme Exp $
      -->
    </log>
  
-@@ -88,7 +88,7 @@
+@@ -88,13 +88,13 @@
           connections. If this is commented out, clients will not be
           offered the STARTTLS stream extension -->
      <!--
@@ -37,8 +37,15 @@ $NetBSD: patch-ag,v 1.2 2004/07/14 00:25:11 xtraeme Exp $
 +    <pemfile>@SSLCERTS@/server.pem</pemfile>
      -->
  
+     <!-- File containing an optional SSL certificate chain file for client
+          SSL connections. -->
+     <!--
+-    <cachain>@sysconfdir@/cachain.pem</cachain>
++    <cachain>@SSLCERTS@/cachain.pem</cachain>
+     -->
+ 
      <!-- Require STARTTLS. If this is enabled, clients must do STARTTLS
-@@ -289,7 +289,7 @@
+@@ -295,7 +295,7 @@
      <!-- Berkeley DB module configuration -->
      <db>
        <!-- Directory to store database files under -->
@@ -47,7 +54,7 @@ $NetBSD: patch-ag,v 1.2 2004/07/14 00:25:11 xtraeme Exp $
        
        <!-- Synchronize the database to disk after each write. If you
             disable this, database accesses may be faster, but data may
-@@ -342,7 +342,7 @@
+@@ -348,7 +348,7 @@
      <!-- Pipe module configuration -->
      <pipe>
        <!-- Program to execute -->
