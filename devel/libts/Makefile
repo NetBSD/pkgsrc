@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 16:43:32 martti Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/11 19:24:33 ben Exp $
 #
 
 DISTNAME=		TS-1.08
 PKGNAME=		libts-1.08
 WRKSRC=			${WRKDIR}/tokenscan
 CATEGORIES=		devel
-MASTER_SITES=		http://www.primate.wisc.edu/software/TS/
+MASTER_SITES=		http://www.snake.net/software/TS/
 
 MAINTAINER=		collver1@comcast.net
-HOMEPAGE=		http://www.primate.wisc.edu/software/TS/
+HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Library of simple token-scanning routines
 
 post-patch:
