@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/07/15 11:05:32 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/16 13:23:09 wiz Exp $
 
 DISTNAME=	kochi-gothic-20020503
 PKGNAME=	kochi-ttf-20020503
@@ -31,12 +31,11 @@ post-extract:
 	    ${WRKSRC}/fonts
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/fonts/TrueType
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fonts/TrueType
 	${INSTALL_DATA} ${WRKSRC}/fonts/kochi-gothic.ttf \
-	    ${X11PREFIX}/lib/X11/fonts/TrueType/kochi-gothic.ttf
+	    ${PREFIX}/lib/X11/fonts/TrueType/kochi-gothic.ttf
 	${INSTALL_DATA} ${WRKSRC}/fonts/kochi-mincho.ttf \
-	    ${X11PREFIX}/lib/X11/fonts/TrueType/kochi-mincho.ttf
-	${INSTALL_DATA_DIR} ${X11PREFIX}/lib/X11/fonts/TrueType
+	    ${PREFIX}/lib/X11/fonts/TrueType/kochi-mincho.ttf
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
