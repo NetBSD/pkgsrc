@@ -1,0 +1,26 @@
+$NetBSD: patch-ah,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- lib/pvmgetarch.orig	Fri Aug  7 00:50:47 1998
++++ lib/pvmgetarch	Fri Aug  7 00:53:48 1998
+@@ -120,11 +120,13 @@
+ 	if [ -f /netbsd ]; then
+-		case "`/usr/bin/machine`" in
+-		i386)   ARCH=NETBSDI386 ;;
+-		amiga)  ARCH=NETBSDAMIGA ;;
+-		hp300)  ARCH=NETBSDHP300 ;;
+-		mac68k) ARCH=NETBSDMAC68K ;;
+-		pmax)   ARCH=NETBSDPMAX ;;
+-		sparc)  ARCH=NETBSDSPARC ;;
+-		sun3)   ARCH=NETBSDSUN3 ;;
+-		esac
++		ARCH=NETBSD
++#		case "`/usr/bin/machine`" in
++#		i386)   ARCH=NETBSDI386 ;;
++#		alpha)  ARCH=NETBSDALPHA ;;
++#		amiga)  ARCH=NETBSDAMIGA ;;
++#		hp300)  ARCH=NETBSDHP300 ;;
++#		mac68k) ARCH=NETBSDMAC68K ;;
++#		pmax)   ARCH=NETBSDPMAX ;;
++#		sparc)  ARCH=NETBSDSPARC ;;
++#		sun3)   ARCH=NETBSDSUN3 ;;
++#		esac
+ 	elif [ -f /usr/bin/machine ]; then

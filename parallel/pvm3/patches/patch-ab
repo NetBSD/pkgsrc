@@ -1,0 +1,7 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- src/hoster.c.orig	Fri Aug  7 00:37:49 1998
++++ src/hoster.c	Fri Aug  7 00:38:11 1998
+@@ -142,2 +142,3 @@
+ #ifdef NEEDMENDIAN
++#include <sys/types.h>
+ #include <machine/endian.h>

@@ -1,0 +1,20 @@
+$NetBSD: patch-ak,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- lib/pvm.orig	Thu Aug 28 13:12:35 1997
++++ lib/pvm	Fri Aug  7 03:31:05 1998
+@@ -14,2 +14,4 @@
+ #
++PVM_ROOT=XXPKGXX
++PVM_ARCH=NETBSD
+ 
+@@ -60,4 +62,4 @@
+ 
+-if [ ! -f $PVM_ROOT/lib/$PVM_ARCH/pvm$sfx ]; then
+-	echo "pvm: $PVM_ROOT/lib/$PVM_ARCH/pvm$sfx doesn't exist." >&2
++if [ ! -f $PVM_ROOT/libexec/pvm$sfx ]; then
++	echo "pvm: $PVM_ROOT/libexec/pvm$sfx doesn't exist." >&2
+ 	echo "Make sure PVM is built and PVM_ROOT is set correctly" >&2
+@@ -66,3 +68,3 @@
+ export PVM_ARCH
+-exec $PVM_ROOT/lib/$PVM_ARCH/pvm$sfx $@
++exec $PVM_ROOT/libexec/pvm$sfx $@
+ exit 1

@@ -1,0 +1,8 @@
+$NetBSD: patch-an,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- src/host.c.orig	Fri Aug  7 03:15:36 1998
++++ src/host.c	Fri Aug  7 03:16:05 1998
+@@ -877,3 +877,3 @@
+ 
+-#ifdef	SIOCGIFCONF
++#if defined(SIOCGIFCONF) && !defined(__NetBSD__)
+ 

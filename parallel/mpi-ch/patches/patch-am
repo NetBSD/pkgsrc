@@ -1,0 +1,8 @@
+$NetBSD: patch-am,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- mpe/profiling/nupshot/tkAppInit.c.orig	Thu Aug  6 05:46:29 1998
++++ mpe/profiling/nupshot/tkAppInit.c	Thu Aug  6 05:46:42 1998
+@@ -100,3 +100,3 @@
+ 
+-    tcl_RcFileName = "~/.wishrc";
++/*    tcl_RcFileName = "~/.wishrc";*/
+     return TCL_OK;

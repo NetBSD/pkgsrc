@@ -1,0 +1,6 @@
+You must set the environment variables:
+PVM_ROOT to /usr/pkg
+PVM_ARCH to NETBSD
+
+in your startup files (.cshrc, .profile) on all machines
+in the cluster.

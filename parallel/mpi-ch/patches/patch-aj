@@ -1,0 +1,54 @@
+$NetBSD: patch-aj,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- mpe/profiling/nupshot/configure.orig	Sat Jul  4 07:50:32 1998
++++ mpe/profiling/nupshot/configure	Thu Aug  6 05:42:48 1998
+@@ -1219,9 +1219,9 @@
+     /local/encap/tcl-7.1 ; do
+-    if test -r $dir/include/tcl.h ; then 
++    if test -r $dir/include/tcl8.0/tcl.h ; then 
+ 	# Check for correct version
+ 	
+-	tclversion=`grep 'TCL_MAJOR_VERSION' $dir/include/tcl.h | \
++	tclversion=`grep 'TCL_MAJOR_VERSION' $dir/include/tcl8.0/tcl.h | \
+ 		sed -e 's/^.*TCL_MAJOR_VERSION[^0-9]*\([0-9]*\).*$/\1/'`
+ 	
+-	if test "$tclversion" != "7" ; then
++	if test "$tclversion" != "8" ; then
+ 	    # Skip if it is the wrong version
+@@ -1243,5 +1243,5 @@
+   if test -z "$ac_echo_test" -a 1 = 1 ; then
+-echo "$ac_t""found $TCL_DIR/include/tcl.h and $TCL_DIR/lib/libtcl"
++echo "$ac_t""found $TCL_DIR/include/tcl8.0/tcl.h and $TCL_DIR/lib/libtcl"
+ else
+-echo "$ac_t""found $TCL_DIR/include/tcl.h and $TCL_DIR/lib/libtcl" 1>&1
++echo "$ac_t""found $TCL_DIR/include/tcl8.0/tcl.h and $TCL_DIR/lib/libtcl" 1>&1
+ fi
+@@ -1335,9 +1335,9 @@
+     /local/encap/tk-3.4 $TCL_DIR ; do
+-    if test -r $dir/include/tk.h ; then 
++    if test -r $dir/include/tk8.0/tk.h ; then 
+ 	# Check for correct version
+ 	
+-	tkversion=`grep 'TK_MAJOR_VERSION' $dir/include/tk.h | \
++	tkversion=`grep 'TK_MAJOR_VERSION' $dir/include/tk8.0/tk.h | \
+ 		sed -e 's/^.*TK_MAJOR_VERSION[^0-9]*\([0-9]*\).*$/\1/'`
+ 	
+-	if test "$tkversion" != "3" ; then
++	if test "$tkversion" != "8" ; then
+ 	    # Skip if it is the wrong version
+@@ -1359,3 +1359,3 @@
+   if test -z "$ac_echo_test" -a 1 = 1 ; then
+-echo "$ac_t""found $TK_DIR/include/tk.h and $TK_DIR/lib/libtk"
++echo "$ac_t""found $TK_DIR/include/tk8.0/tk.h and $TK_DIR/lib/libtk"
+ else
+@@ -1431,3 +1431,3 @@
+   CFLAGSsave="$CFLAGS"
+-  CFLAGS="$CFLAGS -I$TK_DIR/include -I$TCL_DIR/include $XINCLUDES"
++  CFLAGS="$CFLAGS -I$TK_DIR/include/tk8.0 -I$TCL_DIR/include/tcl8.0 $XINCLUDES"
+   
+@@ -1565,4 +1565,4 @@
+ 
+-if test "$TK_VERSION" != 3.6 ; then
+-    print_error "This version of nupshot requires tk 3.6  The version in"
++if test "$TK_VERSION" != 8.0 ; then
++    print_error "This version of nupshot requires tk 8.0  The version in"
+     print_error "$TK_DIR seems to be version $TK_VERSION."
