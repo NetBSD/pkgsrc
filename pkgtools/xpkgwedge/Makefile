@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/08/23 21:25:19 frueauf Exp $
+# $NetBSD: Makefile,v 1.11 1998/09/17 15:47:09 agc Exp $
 #
 
 DISTNAME=	xpkgwedge-0.4
@@ -11,6 +11,8 @@ NO_CHECKSUM=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 USE_IMAKE=	yes
+
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 pre-extract:
 	@if [ ! -f ${X11BASE}/include/X11/X.h ]; then \
@@ -25,10 +27,7 @@ pre-configure:
 
 pre-install:
 	@${SED} -e 's|@@PREFIX@@|${LOCALBASE}|g' < ${PKGDIR}/MESSAGE.pre \
-		> ${PKGDIR}/MESSAGE
-
-pre-clean:
-	@${RM} -f ${PKGDIR}/MESSAGE
+		> ${MESSAGE_FILE}
 
 .include "../../mk/bsd.pkg.mk"
 
