@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 12:13:49 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/03/22 19:55:37 nathanw Exp $
 
-SHA1 (howl-0.9.8.tar.gz) = dd343b8d87de28f5627aa26b24234da557a9f064
-RMD160 (howl-0.9.8.tar.gz) = c93361cf48da436f629bf720171ceee274b831af
-Size (howl-0.9.8.tar.gz) = 540208 bytes
+SHA1 (howl-0.9.10.tar.gz) = 40e9c0fbfa8239641be3afa47a31ae6c10af1127
+RMD160 (howl-0.9.10.tar.gz) = 41cbcf538216f86f0058733ebb202385d6190852
+Size (howl-0.9.10.tar.gz) = 541004 bytes
 SHA1 (patch-aa) = c7218a7c4a58498c465057dde43c5943bce2ea5b
