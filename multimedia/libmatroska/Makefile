@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/05 15:57:17 salo Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/16 09:49:14 grant Exp $
 #
 
 DISTNAME=	libmatroska-0.7.0
@@ -16,6 +16,8 @@ USE_LANGUAGES=	c++
 NO_CONFIGURE=	yes
 MAKEFLAGS+=	prefix="${PREFIX}"
 BUILD_DIRS=	${WRKDIR}/${DISTNAME}/make/linux
+
+ONLY_FOR_COMPILER=	gcc
 
 .include "../../devel/libebml/buildlink3.mk"
 
