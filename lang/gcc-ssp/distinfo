@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.7 2002/08/17 01:27:42 dmcmahill Exp $
+$NetBSD: distinfo,v 1.8 2002/10/05 21:11:03 dmcmahill Exp $
 
 SHA1 (gcc-2.95.3.tar.gz) = 535d27038d161c0e7c2662702e11a48aa97ef622
 Size (gcc-2.95.3.tar.gz) = 12911721 bytes
 SHA1 (protector-2.95.3-5.tar.gz) = 0e0909e8e10cd0a50e6c46ecfeb1e5f1c73c49b7
 Size (protector-2.95.3-5.tar.gz) = 17095 bytes
-SHA1 (gcc-2.95.3-diff-2002-08-11.gz) = 0d587df7cf552f1ae92131e6e0e5b37d543f2b05
-Size (gcc-2.95.3-diff-2002-08-11.gz) = 80435 bytes
+SHA1 (gcc-2.95.3-diff-2002-08-29.gz) = 9e54a31e78070cba3f6840275350bd0cbf20fe84
+Size (gcc-2.95.3-diff-2002-08-29.gz) = 564720 bytes
 SHA1 (patch-aa) = 1f6daca7e6abe4c29987f1360d2c77e4c344b6d1
+SHA1 (patch-ab) = 0a9df2c9abb9a3965c085769eb09a6912f894388
+SHA1 (patch-ac) = f42b5ab389c3a51991e61cdb7533875003308001
