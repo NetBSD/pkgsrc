@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/01/12 05:48:15 jlam Exp $
+# $NetBSD: Makefile,v 1.19.8.1 2002/09/25 13:21:59 agc Exp $
 
 DISTNAME=		crafty-18.13
 CATEGORIES=		games
@@ -31,6 +31,8 @@ ALL_TARGET=		netbsd-i386
 .endif
 .elif ${MACHINE_ARCH} == "sparc"
 ALL_TARGET=		netbsd-sparc
+# higher levels of optimization cause crafty to immediately segfault
+CFLAGS:=		${CFLAGS:C/-O[0-9]*/-O1/}
 .else
 ALL_TARGET=		netbsd
 .endif
