@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1424 2004/03/17 16:36:28 danw Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1425 2004/03/19 00:03:55 danw Exp $
 #
 # This file is in the public domain.
 #
@@ -168,6 +168,9 @@ PLIST_SUBST+=          IMAKE_MAN_SOURCE_PATH=${IMAKE_MAN_SOURCE_PATH}  \
                        IMAKE_FILEMAN_SUFFIX=${IMAKE_FILEMAN_SUFFIX}    \
 		       IMAKE_MISCMAN_SUFFIX=${IMAKE_MISCMAN_SUFFIX}    \
                        IMAKE_MANNEWSUFFIX=${IMAKE_MANNEWSUFFIX}
+. if empty(USE_BUILDLINK2:M[nN][oO]) || empty(USE_BUILDLINK3:M[nN][oO])
+MAKE_FLAGS+=		CC="${CC}" CXX="${CXX}"
+. endif
 .endif
 .if defined(USE_X11BASE)
 USE_X11?=		implied
