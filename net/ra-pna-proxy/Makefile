@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:22:20 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/11/03 10:46:31 grant Exp $
 
 DISTNAME=	raproxy3.0b1
 PKGNAME=	ra-pna-proxy-3.0b1
@@ -19,6 +19,9 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 WRKSRC=		${WRKDIR}/raproxy
 ALL_TARGET=	raproxy
 PROGNAME=	${PKGNAME:C/-[1-9].*//}
+
+LIBS.SunOS+=	-lnsl -lsocket
+MAKE_ENV+=	LIBS="${LIBS}"
 
 post-build:
 	cd ${WRKSRC}; \
