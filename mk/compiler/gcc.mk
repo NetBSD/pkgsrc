@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.7 2004/02/01 14:36:23 jlam Exp $
+# $NetBSD: gcc.mk,v 1.8 2004/02/02 10:03:46 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -76,43 +76,54 @@ _GCC2_REQD:=	${_GCC_REQD}
 _GCC3_REQD:=	${_GCC_REQD}
 .  endif
 .endfor
+
 .if defined(_GCC2_REQD)
+#
+# We require gcc-2.x in the lang/gcc directory.
+#
 _GCC_REQD:=		${_GCC2_REQD}
 _GCC_PKGBASE=		gcc
+LANGUAGES.gcc=		c c++ fortran objc
+_LANGUAGES.gcc=		# empty
+.  for _lang_ in ${USE_LANGUAGES}
+_LANGUAGES.gcc=		${LANGUAGES.gcc:M${_lang_}}
+.  endfor
 .  if !empty(PKGPATH:Mlang/gcc)
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
-.  else
+.  elif !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc
 _GCC_DEPENDENCY=	gcc>=${_GCC_REQD}:../../lang/gcc
 .  endif
 .elif defined(_GCC3_REQD)
+#
+# We require gcc-3.x in the lang/gcc3-* directories.
+#
 _GCC_REQD:=		${_GCC3_REQD}
 _GCC_PKGBASE=		gcc3-c
+LANGUAGES.gcc=		c c++ fortran java objc
+_LANGUAGES.gcc=		# empty
+.  for _lang_ in ${USE_LANGUAGES}
+_LANGUAGES.gcc=		${LANGUAGES.gcc:M${_lang_}}
+.  endfor
 .  if !empty(PKGPATH:Mlang/gcc3-c)
 _IGNORE_GCC3C=		yes
 MAKEFLAGS+=		_IGNORE_GCC3C=yes
-.  else
+.  elif !empty(_LANGUAGES.gcc:Mc)
 _GCC_PKGSRCDIR=		../../lang/gcc3-c
 _GCC_DEPENDENCY=	gcc3-c>=${_GCC_REQD}:../../lang/gcc3-c
 .  endif
-.  if !empty(PKGPATH:Mlang/gcc3-c) || \
-      !empty(PKGPATH:Mlang/gcc3-c++) || \
-      !empty(PKGPATH:Mlang/gcc3-f77) || \
-      !defined(USE_CXX)
+.  if !empty(PKGPATH:Mlang/gcc3-c++)
 _IGNORE_GCC3CXX=	yes
 MAKEFLAGS+=		_IGNORE_GCC3CXX=yes
-.  else
+.  elif !empty(_LANGUAGES.gcc:Mc++)
 _GCC_PKGSRCDIR+=	../../lang/gcc3-c++
 _GCC_DEPENDENCY+=	gcc3-c++>=${_GCC_REQD}:../../lang/gcc3-c++
 .  endif
-.  if !empty(PKGPATH:Mlang/gcc3-c) || \
-      !empty(PKGPATH:Mlang/gcc3-c++) || \
-      !empty(PKGPATH:Mlang/gcc3-f77) || \
-      !defined(USE_FORTRAN)
+.  if !empty(PKGPATH:Mlang/gcc3-f77)
 _IGNORE_GCC3F77=	yes
 MAKEFLAGS+=		_IGNORE_GCC3F77=yes
-.  else
+.  elif !empty(_LANGUAGES.gcc:Mfortran)
 _GCC_PKGSRCDIR+=	../../lang/gcc3-f77
 _GCC_DEPENDENCY+=	gcc3-f77>=${_GCC_REQD}:../../lang/gcc3-f77
 .  endif
@@ -218,17 +229,19 @@ BUILD_DEPENDS+=	${_GCC_DEPENDENCY}
 # GCC executables.
 #
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
-.  if exists(${_GCC_PREFIX}bin/gcc)
+.  if exists(${_GCC_PREFIX}bin/gcc) && !empty(_LANGUAGES.gcc)
 PATH:=		${_GCC_PREFIX}bin:${PATH}
+.  endif
+.  if exists(${_GCC_PREFIX}bin/gcc) && !empty(_LANGUAGES.gcc:Mc)
 CC=		${_GCC_PREFIX}bin/gcc
 .  endif
-.  if exists(${_GCC_PREFIX}bin/cpp)
+.  if exists(${_GCC_PREFIX}bin/cpp) && !empty(_LANGUAGES.gcc:Mc)
 CPP=		${_GCC_PREFIX}bin/cpp
 .  endif
-.  if exists(${_GCC_PREFIX}bin/g++)
+.  if exists(${_GCC_PREFIX}bin/g++) && !empty(_LANGUAGES.gcc:Mc++)
 CXX=		${_GCC_PREFIX}bin/g++
 .  endif
-.  if exists(${_GCC_PREFIX}bin/g77)
+.  if exists(${_GCC_PREFIX}bin/g77) && !empty(_LANGUAGES.gcc:Mfortran)
 F77=		${_GCC_PREFIX}bin/g77
 PKG_FC:=	${F77}
 .  endif

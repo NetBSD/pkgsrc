@@ -1,4 +1,4 @@
-# $NetBSD: bsd.compiler.mk,v 1.4 2004/02/01 11:14:04 jlam Exp $
+# $NetBSD: bsd.compiler.mk,v 1.5 2004/02/02 10:03:46 jlam Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -19,7 +19,8 @@
 #
 #	The default is "gcc".  You can use ccache and/or distcc with an
 #	appropriate PKGSRC_COMPILER setting, e.g. "ccache distcc gcc".
-#	The chain should always end in a real compiler.
+#	The chain should always end in a real compiler.  This should only
+#	be set in /etc/mk.conf.
 #
 # GCC_REQD
 #	A list of version numbers used to determine the minimum
@@ -39,6 +40,12 @@
 #	Indicates that a package uses GCC shared libraries, so we
 #	register a runtime dependency on the compiler package.
 #
+# USE_LANGUAGES
+#	Lists the languages used in the source code of the package,
+#	and is used to determine the correct compilers to install.
+#	Valid values are: c, c++, fortran, java, objc.  The default
+#	is "c".
+#
 # The following variables are defined, and available for testing in
 # package Makefiles:
 #
@@ -57,6 +64,8 @@
 
 .if !defined(BSD_COMPILER_MK)
 BSD_COMPILER_MK=	defined
+
+USE_LANGUAGES?=	c
 
 # Support some deprecated variables for a while.  They'll be removed
 # after the pkgsrc-2004Q1 branch is cut.
