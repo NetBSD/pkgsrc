@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 1999/10/05 03:08:37 kim Exp $
+# $NetBSD: Makefile,v 1.41 1999/10/17 05:00:17 fredb Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -55,6 +55,7 @@
 #    SUBDIR += xbatt
 #    SUBDIR += xcpustate
     SUBDIR += xdu
+    SUBDIR += xhfs
 #    SUBDIR += xloadface
     SUBDIR += xosview
 #    SUBDIR += xperfmon
