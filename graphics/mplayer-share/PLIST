@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/12/06 14:21:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/12/21 19:49:52 wiz Exp $
 man/man1/mplayer.1
 share/mplayer/DOCS/Chinese/bugreports.html
 share/mplayer/DOCS/Chinese/cd-dvd.html
@@ -12,6 +12,19 @@ share/mplayer/DOCS/Chinese/skin-zh.html
 share/mplayer/DOCS/Chinese/sound.html
 share/mplayer/DOCS/Chinese/users_against_developers.html
 share/mplayer/DOCS/Chinese/video.html
+share/mplayer/DOCS/French/bugreports.html
+share/mplayer/DOCS/French/cd-dvd.html
+share/mplayer/DOCS/French/codecs.html
+share/mplayer/DOCS/French/default.css
+share/mplayer/DOCS/French/documentation.html
+share/mplayer/DOCS/French/encoding.html
+share/mplayer/DOCS/French/exemple.conf
+share/mplayer/DOCS/French/faq.html
+share/mplayer/DOCS/French/formats.html
+share/mplayer/DOCS/French/mplayer.1
+share/mplayer/DOCS/French/skin-fr.html
+share/mplayer/DOCS/French/sound.html
+share/mplayer/DOCS/French/video.html
 share/mplayer/DOCS/German/bugreports.html
 share/mplayer/DOCS/German/cd-dvd.html
 share/mplayer/DOCS/German/codecs.html
@@ -97,10 +110,7 @@ share/mplayer/DOCS/tech/patches.txt
 share/mplayer/DOCS/tech/playtree
 share/mplayer/DOCS/tech/playtree-hun
 share/mplayer/DOCS/tech/porting-status.txt
-share/mplayer/DOCS/tech/realcodecs/TODO
-share/mplayer/DOCS/tech/realcodecs/audio-codecs.txt
-share/mplayer/DOCS/tech/realcodecs/streaming.txt
-share/mplayer/DOCS/tech/realcodecs/video-codecs.txt
+share/mplayer/DOCS/tech/qt-libwine-howto.txt
 share/mplayer/DOCS/tech/subcp.txt
 share/mplayer/DOCS/tech/swscaler_filters.txt
 share/mplayer/DOCS/tech/swscaler_methods.txt
@@ -227,12 +237,12 @@ share/mplayer/input.conf
 @dirrm share/mplayer/fonts/cp1250/arial-14
 @dirrm share/mplayer/fonts/cp1250
 @dirrm share/mplayer/fonts
-@dirrm share/mplayer/DOCS/tech/realcodecs
 @dirrm share/mplayer/DOCS/tech
 @dirrm share/mplayer/DOCS/Polish
 @dirrm share/mplayer/DOCS/Italian
 @dirrm share/mplayer/DOCS/Hungarian
 @dirrm share/mplayer/DOCS/German
+@dirrm share/mplayer/DOCS/French
 @dirrm share/mplayer/DOCS/Chinese
 @dirrm share/mplayer/DOCS
 @dirrm share/mplayer
