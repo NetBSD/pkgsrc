@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2002/08/12 16:21:13 agc Exp $
+$NetBSD: patch-aa,v 1.2.4.1 2002/10/09 18:54:28 agc Exp $
 
 NetBSD definition for makefile, and make solaris into SunOS so
 that we can use ${OPSYS}.
@@ -42,7 +42,7 @@ that we can use ${OPSYS}.
 +	$(MAKE) $(LDLP) \
 +	PROGS="siod ndbm.so tar.so parser_pratt.so ss.so regex.so" \
 +	LD=ld \
-+	CFLAGS="$(GCCW) $(CDEBUG) -DSUN5 -O2 $(SLD) -I${INCDIR}" \
++	CFLAGS="$(GCCW) $(CDEBUG) -DSUN5 -O2 $(SLD) -I${INCDIR} -fPIC -DPIC" \
 +	LD_EXE_FLAGS="-Wl,-R$(LIBDIR) -L${LIBDIR} -Wl,-R$(LIBSIODDIR) -L${LIBSIODDIR}" \
 +	LD_EXE_LIBS="-lm" \
 +	LD_LIB_FLAGS="-G" \
