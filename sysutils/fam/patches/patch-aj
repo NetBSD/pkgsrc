@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.5 2004/03/28 22:00:05 minskim Exp $
+$NetBSD: patch-aj,v 1.6 2004/04/18 17:11:08 jmmv Exp $
 
---- src/Listener.c++.orig	2003-01-19 18:37:29.000000000 -0600
+--- src/Listener.c++.orig	2003-01-20 01:37:29.000000000 +0100
 +++ src/Listener.c++
 @@ -22,6 +22,8 @@
  
@@ -19,7 +19,12 @@ $NetBSD: patch-aj,v 1.5 2004/03/28 22:00:05 minskim Exp $
  #include <sys/stat.h>
  #include <sys/un.h>
  #include <unistd.h>
-@@ -209,7 +212,7 @@ Listener::create_local_client(TCP_Client
+@@ -205,11 +208,11 @@ Listener::create_local_client(TCP_Client
+ #ifdef HAVE_UNSETENV
+     unsetenv("TMPDIR");
+ #else
+-    putenv("TMPDIR=");
++    putenv("TMPDIR=/tmp");
  #endif
  
      char *tmpfile = tempnam("/tmp", ".fam");
