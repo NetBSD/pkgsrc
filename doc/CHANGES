@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4727 2004/02/07 20:44:09 wiz Exp $
+$NetBSD: CHANGES,v 1.4728 2004/02/07 21:31:41 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -697,3 +697,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rrdtool to 1.0.40nb2 [seb 2004-02-07]
 	Added JMdict-2003.012 [wiz 2004-02-07]
 	Updated mldonkey to 2.5.8 [wiz 2004-02-07]
+	Added py-cjkcodecs-1.0.3 [minskim 2004-02-07]
