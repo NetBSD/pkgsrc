@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2000/04/03 17:23:12 tron Exp $
+$NetBSD: patch-aa,v 1.4 2000/04/26 13:00:17 tron Exp $
 
 --- Makefile.in.orig	Tue Feb 22 13:08:16 2000
-+++ Makefile.in	Mon Apr  3 19:18:33 2000
++++ Makefile.in	Wed Apr 26 14:59:30 2000
 @@ -7,9 +7,9 @@
  sbindir=@sbindir@
  libdir=@libdir@
@@ -14,3 +14,11 @@ $NetBSD: patch-aa,v 1.3 2000/04/03 17:23:12 tron Exp $
  @SET_MAKE@
  VERSION=stunnel-@VERSION@
  RANDOM_OPT=@RANDOM_OPT@
+@@ -50,7 +50,6 @@
+ 
+ installdirs: mkinstalldirs
+ 	./mkinstalldirs $(sbindir) $(libdir) $(man8dir) $(certdir) $(piddir)
+-	chmod a=rwx,+t $(piddir)
+ 
+ # non-standard external rules
+ 
