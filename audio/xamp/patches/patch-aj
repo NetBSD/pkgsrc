@@ -1,0 +1,33 @@
+diff -c ../amp.h:1.1.1.1 xamp/amp.h:1.2
+*** ../amp.h:1.1.1.1	Wed Jun 14 22:23:47 2000
+--- ../amp.h	Wed Jun 14 22:23:47 2000
+***************
+*** 13,22 ****
+  #define		MINOR		7
+  #define		PATCH		6
+  
+  #define MAX(a,b)	((a) > (b) ? (a) : (b))
+  #define MAX3(a,b,c)	((a) > (b) ? MAX(a, c) : MAX(b, c))
+  #define MIN(a,b)	((a) < (b) ? (a) : (b))
+! 
+  
+  /* Debugging flags */
+  
+--- 13,29 ----
+  #define		MINOR		7
+  #define		PATCH		6
+  
++ #ifdef OS_NetBSD
++ #include <sys/param.h>
++ #endif
++ 
++ #ifndef OS_NetBSD
+  #define MAX(a,b)	((a) > (b) ? (a) : (b))
++ #endif
+  #define MAX3(a,b,c)	((a) > (b) ? MAX(a, c) : MAX(b, c))
++ #ifndef OS_NetBSD
+  #define MIN(a,b)	((a) < (b) ? (a) : (b))
+! #endif
+  
+  /* Debugging flags */
+  
