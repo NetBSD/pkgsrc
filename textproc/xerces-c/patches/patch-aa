@@ -1,24 +1,24 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/01/13 16:38:22 skrll Exp $
+$NetBSD: patch-aa,v 1.2 2003/06/23 07:52:41 jlam Exp $
 
---- Makefile.incl.orig	Sat Sep 30 18:37:28 2000
+--- Makefile.incl.orig	Thu Mar  7 14:45:22 2002
 +++ Makefile.incl
-@@ -369,6 +369,19 @@
- SHLIBSUFFIX=.so
+@@ -437,6 +437,19 @@ ifeq (${PLATFORM}, MACOSX)
+ 	SHLIBSUFFIX=.dylib
  endif
  
-+#=============== NETBSD SPECIFIC OPTIONS ========================
++#=============== NETBSD SPECIFIC OPTIONS =========================
 +ifeq (${PLATFORM}, NETBSD)
-+  PLATFORM_COMPILE_OPTIONS = -fPIC -instances=static -D${PLATFORM}
-+  MAKE_SHARED = ${CXX} -D${PLATFORM} -shared
-+  MAKE_SHARED_C = ${CC} -D${PLATFORM} -shared
-+  ifeq (${TRANSCODER}, ICU)
-+      ALLLIBS = ${LIBS} -L${LOCALBASE} -licuuc -licudata -lm
-+  else
-+      ALLLIBS = ${LIBS} -L${LOCALBASE} -lm
-+  endif
-+  SHLIBSUFFIX=.so
++PLATFORM_COMPILE_OPTIONS = -fPIC -D${PLATFORM}
++MAKE_SHARED = ${CXX} -D${PLATFORM} -shared ${LDFLAGS}
++MAKE_SHARED_C = ${CC} -D${PLATFORM} -shared ${LDFLAGS}
++ifeq (${TRANSCODER}, ICU)
++    ALLLIBS = ${LIBS} -L${ICUROOT}/lib -licuuc -licudata -lm
++else
++    ALLLIBS = ${LIBS} -lm
++endif
++SHLIBSUFFIX=.so
 +endif
 +
+ 
  ###################### STANDARD TOOLS #############################
  ifeq (${PLATFORM}, OS400)
- CP = -cp -fph
