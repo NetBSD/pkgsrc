@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2003/04/10 20:07:20 grant Exp $
+# $NetBSD: Makefile,v 1.47 2003/04/27 12:45:59 cjep Exp $
 
 DISTNAME=		arena-0.3.62
 PKGREVISION=		2
@@ -14,6 +14,7 @@ BUILD_USES_MSGFMT=	YES
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
+USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 
 # Comment out the following to build in the debugging symbols.
