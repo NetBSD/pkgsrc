@@ -1,10 +1,7 @@
-# New ports collection makefile for:	nspmod-0.1
-# Version required:			0.1
-# Date created:				1 Jun 1997
-# Whom:					jmg
+# Makefile for:		nspmod
+# Version required:	0.1
 #
-# $NetBSD: Makefile,v 1.2 1997/10/31 22:08:37 augustss Exp $
-# FreeBSD Id: Makefile,v 1.2 1997/06/03 08:54:55 asami Exp 
+# $NetBSD: Makefile,v 1.3 1998/03/20 06:41:17 mycroft Exp $
 #
 
 DISTNAME=	nspmod-0.1
@@ -13,8 +10,7 @@ MASTER_SITES=	http://www.jeton.or.jp/users/toru/www/orgsoft/nspmod/	\
 		${MASTER_SITE_SUNSITE}
 MASTER_SITE_SUBDIR=	apps/sound/players
 
-# FreeBSD maintainer
-MAINTAINER=	jmg@FreeBSD.ORG
+MAINTAINER=	mycroft@NetBSD.ORG
 
 MAN1=		nspmod.1
 
