@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7746 2004/11/06 23:20:37 dillo Exp $
+$NetBSD: CHANGES,v 1.7747 2004/11/07 03:33:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5139,3 +5139,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated svk to 0.25 [epg 2004-11-06]
 	Updated p5-SVN-Mirror to 0.49 [epg 2004-11-06]
 	Added malint-0.2 [dillo 2004-11-06]
+	Updated suse_gtk2 to 9.1nb2 [wiz 2004-11-07]
