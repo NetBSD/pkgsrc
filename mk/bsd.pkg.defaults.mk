@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.52 2002/04/15 08:31:14 rh Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.53 2002/04/23 06:16:31 lukem Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1348,18 +1348,21 @@ XCHAT_USE_SSL?=	YES
 #	for information on determining the location of NetBSD mirror sites.
 #
 
-# Australia (AARNET).  Swap order of ftp.au.netbsd.org and
-# ftp2.au.netbsd.org if your link to University of Queensland is
-# cheaper/faster than your link to RMIT University (Melbourne).
+# Australia.
 #
-#MASTER_SITE_XCONTRIB=	ftp://mirror.aarnet.edu.au/X11/contrib/
-#MASTER_SITE_GNU=	ftp://mirror.aarnet.edu.au/gnu/
-#MASTER_SITE_PERL_CPAN=	ftp://mirror.aarnet.edu.au/perl/CPAN/modules/by-module/
-#MASTER_SITE_TEX_CTAN=	ftp://mirror.aarnet.edu.au/tex-archive/
-#MASTER_SITE_SUNSITE=	ftp://mirror.aarnet.edu.au/sunsite.unc.edu/
-#MASTER_SITE_BACKUP=	\
-#	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/ \
-#	ftp://ftp2.au.netbsd.org/pub/NetBSD/packages/distfiles/
+#MASTER_SITE_GNOME=	ftp://www.planetmirror.com/pub/GNOME/
+#MASTER_SITE_GNU=	ftp://www.planetmirror.com/pub/gnu/
+#MASTER_SITE_PERL_CPAN=	ftp://www.planetmirror.com/pub/perl/CPAN/modules/by-module/
+#MASTER_SITE_SUNSITE=	ftp://www.planetmirror.com/pub/sunsite/
+#MASTER_SITE_SUSE=	ftp://www.planetmirror.com/pub/suse/i386/${SUSE_VERSION}/suse/
+#MASTER_SITE_TEX_CTAN=	ftp://www.planetmirror.com/pub/tex-archive/
+#MASTER_SITE_SOURCEFORGE=ftp://www.planetmirror.com/pub/sourceforge/
+#MASTER_SITE_XCONTRIB=	ftp://www.planetmirror.com/pub/X11/contrib/
+#MASTER_SITE_BACKUP=	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/ \
+#			ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
+#MASTER_SITE_LOCAL=	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/ \
+#			ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
+#
 
 # Austria
 #
