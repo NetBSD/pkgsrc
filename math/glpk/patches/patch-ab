@@ -1,0 +1,44 @@
+$NetBSD: patch-ab,v 1.1 2005/03/30 15:23:53 adam Exp $
+
+--- examples/Makefile.in.orig	2005-01-12 09:00:00.000000000 +0000
++++ examples/Makefile.in
+@@ -65,7 +65,7 @@ VERSION = @VERSION@
+ 
+ INCLUDES = -I../include
+ 
+-LDADD = ../src/libglpk.a
++LDADD = ../src/libglpk.la
+ 
+ bin_PROGRAMS = glpsol tspsol
+ 
+@@ -83,16 +83,16 @@ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ glpsol_OBJECTS =  glpsol.o
+ glpsol_LDADD = $(LDADD)
+-glpsol_DEPENDENCIES =  ../src/libglpk.a
++glpsol_DEPENDENCIES =  ../src/libglpk.la
+ glpsol_LDFLAGS = 
+ tspsol_OBJECTS =  tspsol.o
+ tspsol_LDADD = $(LDADD)
+-tspsol_DEPENDENCIES =  ../src/libglpk.a
++tspsol_DEPENDENCIES =  ../src/libglpk.la
+ tspsol_LDFLAGS = 
+ CFLAGS = @CFLAGS@
+-COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
++COMPILE = ${LIBTOOL} --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+-LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
++LINK = ${LIBTOOL} --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
+ DIST_COMMON =  Makefile.am Makefile.in
+ 
+ 
+@@ -129,8 +129,7 @@ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+ 	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo "  $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
+-	     $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
++	     ${LIBTOOL} --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
+ 	  else :; fi; \
+ 	done
+ 
