@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/02/14 18:26:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2004/02/14 18:48:49 jlam Exp $
 
 DISTNAME=	libvorbis-1.0.1
 CATEGORIES=	devel audio
@@ -8,7 +8,7 @@ MAINTAINER=	lukem@NetBSD.org
 HOMEPAGE=	http://www.xiph.org/ogg/vorbis/
 COMMENT=	Library for the Ogg Vorbis audio encoding format
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
@@ -18,5 +18,5 @@ PKGCONFIG_OVERRIDE+=	vorbis.pc.in
 PKGCONFIG_OVERRIDE+=	vorbisenc.pc.in
 PKGCONFIG_OVERRIDE+=	vorbisfile.pc.in
 
-.include "../../audio/libogg/buildlink2.mk"
+.include "../../audio/libogg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
