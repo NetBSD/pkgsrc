@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2430 2004/11/23 17:15:50 wiz Exp $
+$NetBSD: TODO,v 1.2431 2004/11/23 17:22:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1137,7 +1137,6 @@ Suggested package updates
 	o xfe-0.72
 	o xine-1-rc6a
 	o xine-lib-1-rc7
-	o xinvest-2.6.9
 	o xkbset-0.5
 	o xm7-303
 	o xmame-0.88
