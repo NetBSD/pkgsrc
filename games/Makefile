@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1998/07/31 08:04:48 tron Exp $
+# $NetBSD: Makefile,v 1.22 1998/08/01 13:35:02 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -45,6 +45,7 @@
 #    SUBDIR += sokoban
 #    SUBDIR += spider
 #    SUBDIR += starlanes
+    SUBDIR += tanked
 #    SUBDIR += tksol
 #    SUBDIR += xasteroids
 #    SUBDIR += xbat
@@ -65,7 +66,7 @@
     SUBDIR += xevil
 #    SUBDIR += xeyesplus
 #    SUBDIR += xfrisk
-#    SUBDIR += xgalaga
+    SUBDIR += xgalaga
 #    SUBDIR += xgammon
 #    SUBDIR += xgolgo
 #    SUBDIR += xinvaders
