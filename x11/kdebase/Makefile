@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 1999/10/22 00:59:54 jlam Exp $
+# $NetBSD: Makefile,v 1.51 1999/10/26 16:51:30 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -39,7 +39,8 @@ KDE_DIRS=	share/kde/applnk/Development \
 		share/doc/kde/HTML/cs share/doc/kde/HTML/da \
 		share/doc/kde/HTML/de share/doc/kde/HTML/el \
 		share/doc/kde/HTML/fi share/doc/kde/HTML/fr \
-		share/doc/kde/HTML/it share/doc/kde/HTML/no
+		share/doc/kde/HTML/it share/doc/kde/HTML/no \
+		share/doc/kde/HTML/pl share/doc/kde/HTML/sv
 
 post-extract:
 	@${LN} -fs ${FILESDIR}/info_netbsd.cpp ${WRKSRC}/kcontrol/info
