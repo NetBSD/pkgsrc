@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.668 2001/02/20 16:42:10 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.669 2001/02/21 15:01:29 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -723,7 +723,7 @@ SIZE_PKG_FILE=		${WRKDIR}/.SizePkg
 SIZE_ALL_FILE=		${WRKDIR}/.SizeAll
 
 .ifndef PKG_ARGS_COMMON
-PKG_ARGS_COMMON=	-v -c -"${COMMENT:S/"/\"/g:S/`/\`/g} " -d ${DESCR} -f ${PLIST}
+PKG_ARGS_COMMON=	-v -c -${COMMENT:Q}" " -d ${DESCR} -f ${PLIST}
 PKG_ARGS_COMMON+=	-l -b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
 PKG_ARGS_COMMON+=	-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
 PKG_ARGS_COMMON+=	-P "`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true|sort -u`"
@@ -2590,7 +2590,7 @@ package-name:
 
 .if !target(make-readme-html-help)
 make-readme-html-help:
-	@${ECHO} '${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</a>: <TD>'"${COMMENT:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g:S/"/\"/g:S/`/\`/g}"
+	@${ECHO} '${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</a>: <TD>'${COMMENT:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g:Q}
 .endif # !target(make-readme-html-help)
 
 # Show (recursively) all the packages this package depends on.
@@ -2844,7 +2844,7 @@ binpkg-list:
 describe:
 	@${ECHO} -n "${PKGNAME}|${.CURDIR}|";				\
 	${ECHO} -n "${PREFIX}|";					\
-	${ECHO} -n "${COMMENT:S/"/\"/g:S/`/\`/g}";			\
+	${ECHO} -n ${COMMENT:Q};					\
 	if [ -f ${DESCR_SRC} ]; then					\
 		${ECHO} -n "|${DESCR_SRC}";				\
 	else								\
@@ -2949,7 +2949,7 @@ README.html: .PRECIOUS
 		-e '/%%VULNERABILITIES%%/d'				\
 		-e '/%%VULDATE%%/r $@.tmp6'				\
 		-e '/%%VULDATE%%/d'					\
-		-e "s/%%COMMENT%%/${COMMENT:S/"/\"/g:S/`/\`/g:S|/|\/|g}/" \
+		-e "s/%%COMMENT%%/${COMMENT:S|/|\/|g:Q}/"		\
 		-e '/%%BUILD_DEPENDS%%/r $@.tmp1'			\
 		-e '/%%BUILD_DEPENDS%%/d'				\
 		-e '/%%RUN_DEPENDS%%/r $@.tmp2'				\
@@ -3221,7 +3221,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
 		${PKG_CREATE} ${PKG_ARGS_INSTALL} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
 		${CP} ${DESCR} ${PKG_DBDIR}/${PKGNAME}/+DESC;		\
-		${ECHO} "${COMMENT:S/"/\"/g:S/`/\`/g}" > ${PKG_DBDIR}/${PKGNAME}/+COMMENT; \
+		${ECHO} ${COMMENT:Q} > ${PKG_DBDIR}/${PKGNAME}/+COMMENT; \
 		${CP} ${BUILD_VERSION_FILE} ${PKG_DBDIR}/${PKGNAME}/+BUILD_VERSION; \
 		${CP} ${BUILD_INFO_FILE} ${PKG_DBDIR}/${PKGNAME}/+BUILD_INFO; \
 		if ${TEST} -e ${SIZE_PKG_FILE}; then 			\
