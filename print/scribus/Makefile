@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/08/01 05:53:29 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/05 12:06:15 jlam Exp $
 
 DISTNAME=	scribus-0.7.5
 CATEGORIES=	print
@@ -8,22 +8,20 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://web2.altmuehlnet.de/fschmid/
 COMMENT=	Publishing layout with graphical interface
 
-PTHREAD_OPTS+=	require
+USE_BUILDLINK2=		# defined
+USE_X11=		# defined
+USE_GMAKE=		# defined
+PTHREAD_OPTS+=		require
 
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=        --with-qt-dir=${QTDIR} \
+			--with-extra-libs=${LOCALBASE}/lib \
+			--with-extra-includes=${LOCALBASE}/include
 
-EVAL_PREFIX+=		QT3DIR=qt3
-CONFIGURE_ARGS+=        --with-qt-dir=${BUILDLINK_QTDIR} \
-			--with-extra-libs=${BUILDLINK_DIR}/lib \
-			--with-extra-includes=${BUILDLINK_DIR}/include
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../x11/qt3-libs/buildlink2.mk"
+.include "../../x11/qt3-tools/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 
-CONFIGURE_ENV+=		all_libraries="-Wl,-R${QT3DIR}/qt3/lib -L${BUILDLINK_DIR}/lib -Wl,-R${LOCALBASE}/lib -L${BUILDLINK_X11_DIR}/lib -Wl,-R${X11BASE}/lib -ljpeg"
-
-.include "../../x11/qt3-libs/buildlink.mk"
-.include "../../x11/qt3-tools/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
