@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3029 2003/08/12 16:39:24 jschauma Exp $
+$NetBSD: CHANGES,v 1.3030 2003/08/12 20:36:56 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3251,3 +3251,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added xmms-alarm-0.3.3 [wiz 2003-08-12]
 	Updated sun-jre13 to 1.0.9 [jschauma 2003-08-12]
 	Updated sun-jdk13 to 1.0.9 [jschauma 2003-08-12]
+	Updated grace to 5.1.12 [seb 2003-08-12]
