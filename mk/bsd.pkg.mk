@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.882 2001/12/19 10:29:11 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.883 2001/12/19 20:02:41 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -382,7 +382,7 @@ DECOMPRESS_CMD?=	${CAT}
 BUILD_DEPENDS+=		unzip-*:../../archivers/unzip
 EXTRACT_CMD?=		unzip -Laq ${DOWNLOADED_DISTFILE}
 .elif ${EXTRACT_SUFX} == ".lzh" || ${EXTRACT_SUFX} == ".lha"
-BUILD_DEPENDS+=		lha-114f:../../archivers/lha
+BUILD_DEPENDS+=		lha-*:../../archivers/lha
 EXTRACT_CMD?=		lha xq ${DOWNLOADED_DISTFILE}
 .else
 DECOMPRESS_CMD?=	${GZCAT}
