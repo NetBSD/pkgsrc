@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6208 2004/06/14 03:16:42 uebayasi Exp $
+$NetBSD: CHANGES,v 1.6209 2004/06/14 08:58:52 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2940,3 +2940,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nbsed to 20040613 [grant 2004-06-13]
 	Updated milter-greylist to 1.4 [tron 2004-06-13]
 	Updated priv to 1.0beta2nb1 [uebayasi 2004-06-14]
+	Updated lftp to 3.0.6 [salo 2004-06-14]
