@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/25 04:17:36 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/09/14 03:34:44 jlam Exp $
 
 DISTNAME=	musicbox-1.01p2
 CATEGORIES=	audio
@@ -11,12 +11,11 @@ COMMENT=	X11 front-interface for mpg123
 DEPENDS+=	mpg123-0.59r:../../audio/mpg123
 DEPENDS+=	qt1-1.44:../../x11/qt1
 
-USE_X11=	yes
-
 WRKSRC=		${WRKDIR}/musicbox-1.01
 
+USE_X11=	yes
+CFLAGS+=	-D${OPSYS}
 EVAL_PREFIX+=	QT1DIR=qt1
-PATH=		${QT1DIR}/qt1/bin:$$PATH
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/musicbox ${PREFIX}/bin

@@ -1,15 +1,16 @@
-$NetBSD: patch-aa,v 1.4 2000/03/28 00:09:21 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.5 2001/09/14 03:34:45 jlam Exp $
 
 --- Makefile.orig	Wed Nov 12 14:01:58 1997
-+++ Makefile	Sun Mar 26 11:00:40 2000
-@@ -1,13 +1,17 @@
++++ Makefile	Thu Sep 13 23:26:26 2001
+@@ -1,14 +1,18 @@
  # change following for your environment
 -INC = /usr/X11R6/include/X11/qt
 -LIB = /usr/X11R6/lib
+-MOC = moc
 +#INC = /usr/X11R6/include/X11/qt
-+INC = -I${X11BASE}/include -I${X11BASE}/qt1/include
-+LIB = -L${X11BASE}/qt1/lib -Wl,-R${X11BASE}/qt1/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib
- MOC = moc
++INC = -I${X11BASE}/include -I${QT1DIR}/qt1/include
++LIB = -L${QT1DIR}/qt1/lib -Wl,-R${QT1DIR}/qt1/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib
++MOC = ${QT1DIR}/qt1/bin/moc
  
  # if you use freebsd
 -CFLAGS = -DFreeBSD
@@ -19,11 +20,13 @@ $NetBSD: patch-aa,v 1.4 2000/03/28 00:09:21 dmcmahill Exp $
  #CFLAGS = -DLinux
  
 +# if you use netbsd
-+CFLAGS = -DNetBSD
++#CFLAGS = -DNetBSD
 +
  GCC = gcc
  
-@@ -19,11 +23,11 @@
+ ALL = mplayer.o player.o ListView.o clock.o mclock.o mListView.o  \
+@@ -18,69 +22,69 @@
+ PKG = musicbox
  
  all:	${ALL}
 -	${GCC} ${ALL} -o ${PKG} -L${LIB} -I${INC} -lqt
@@ -39,7 +42,7 @@ $NetBSD: patch-aa,v 1.4 2000/03/28 00:09:21 dmcmahill Exp $
 +	${GCC} -c mplayer.cpp -o mplayer.o ${CFLAGS} ${INC}
  
  mplayer.cpp:
-@@ -31,13 +35,13 @@
+ 	${MOC} player.h -o mplayer.cpp
  
  ListView.o:
 -	${GCC} -c ListView.cpp -o ListView.o ${CFLAGS} -L${LIB} -I${INC} 
@@ -56,14 +59,14 @@ $NetBSD: patch-aa,v 1.4 2000/03/28 00:09:21 dmcmahill Exp $
 +	${GCC} -c clock.cpp -o clock.o ${INC}
  
  mclock.cpp:
-@@ -45,5 +49,5 @@
+ 	${MOC} clock.h -o mclock.cpp
  
  mclock.o: mclock.cpp
 -	${GCC} -c mclock.cpp -o mclock.o -L${LIB} -I${INC}
 +	${GCC} -c mclock.cpp -o mclock.o ${INC}
  
  mfilebrowse.cpp: 
-@@ -51,14 +55,14 @@
+ 	${MOC} filebrowse.h -o mfilebrowse.cpp
  
  filebrowse.o :
 -	${GCC} -c filebrowse.cpp -o filebrowse.o -L${LIB} -I${INC}
@@ -82,7 +85,7 @@ $NetBSD: patch-aa,v 1.4 2000/03/28 00:09:21 dmcmahill Exp $
 +	${GCC} -c mdiskbrowse.cpp -o $@ ${INC}
  
  mdiskbrowse.cpp:
-@@ -66,8 +70,8 @@
+ 	${MOC} diskbrowse.h -o $@ 
  
  qktstreelist.o:
 -	${GCC} -c qktstreelist.cpp -o $@ -L${LIB} -I${INC}
@@ -93,17 +96,18 @@ $NetBSD: patch-aa,v 1.4 2000/03/28 00:09:21 dmcmahill Exp $
 +	${GCC} -c mqktstreelist.cpp -o $@ ${INC}
  
  mqktstreelist.cpp:
-@@ -75,5 +79,5 @@
+ 	${MOC} qktstreelist.h -o $@
  
  MultiListBox.o:
 -	${GCC} -c MultiListBox.cpp -o $@ -L${LIB} -I${INC}
 +	${GCC} -c MultiListBox.cpp -o $@ ${INC}
  	
  mMultiListBox.cpp:
-@@ -81,5 +85,5 @@
+ 	${MOC} MultiListBox.h -o $@
  
  mMultiListBox.o: mMultiListBox.cpp
 -	${GCC} -c mMultiListBox.cpp -o $@ -L${LIB} -I${INC}
 +	${GCC} -c mMultiListBox.cpp -o $@ ${INC}
  
  clean:
+ 	rm -f player mplayer.cpp *.o mclock.cpp mListView.cpp mfilebrowse.cpp \
