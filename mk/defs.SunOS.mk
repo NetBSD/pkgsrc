@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.37 2002/12/03 19:11:31 agc Exp $
+# $NetBSD: defs.SunOS.mk,v 1.38 2002/12/03 19:17:34 agc Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -102,6 +102,7 @@ _OPSYS_LIBTOOL_REQD=	1.4.20010614nb9 # base version of libtool required
 _OPSYS_RPATH_NAME=	-R		# name of symbol in rpath directive to linker 
 _PATCH_BACKUP_ARG= 	-V simple -z	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
+_USE_GNU_GETTEXT=	yes		# Use GNU gettext
 _USE_RPATH=		yes		# add rpath to LDFLAGS
 
 .if !defined(DEBUG_FLAGS)
