@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2001/10/06 17:52:21 tron Exp $
+# $NetBSD: Makefile,v 1.40 2001/12/24 19:38:07 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -28,12 +28,10 @@ INFO_FILES=		glib.info
 CFLAGS=		-O0
 .endif
 
-.include "../../mk/bsd.prefs.mk"
-
 # GLib needs a working pthreads implementation, and pth is proven to work.
-.if (${OPSYS} != SunOS)
-.include "../../devel/pth/buildlink.mk"
-.endif
+USE_PTHREAD=	native pth
+
+.include "../../mk/bsd.prefs.mk"
 
 GLIB_VERSION=		${DISTNAME:S/glib-//}
 GLIB_MAJOR_VERSION=	${GLIB_VERSION:C/\..*//}
@@ -76,4 +74,5 @@ post-configure:
 	${RM} glib.h.fixme
 .endif
 
+.include "../../mk/pthread.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
