@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3122 2003/08/28 19:13:59 wiz Exp $
+$NetBSD: CHANGES,v 1.3123 2003/08/28 22:27:41 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3361,3 +3361,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkglint to 3.59 [abs 2003-08-27]
 	Updated peace to 0.0.20030828 [kent 2003-08-28]
 	Updated gstreamer to 0.6.1nb3 [wiz 2003-08-28]
+	Updated xmule to 1.6.0 [jmmv 2003-08-28]
