@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/16 19:40:39 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/07 01:34:55 minskim Exp $
 bin/nicotine
 bin/nicotine-import-winconfig
 ${PYSITELIB}/pynicotine/ConfigParser.py
@@ -55,6 +55,9 @@ ${PYSITELIB}/pynicotine/gtkgui/settings_glade.pyo
 ${PYSITELIB}/pynicotine/gtkgui/settingswindow.py
 ${PYSITELIB}/pynicotine/gtkgui/settingswindow.pyc
 ${PYSITELIB}/pynicotine/gtkgui/settingswindow.pyo
+${PYSITELIB}/pynicotine/gtkgui/ticker.py
+${PYSITELIB}/pynicotine/gtkgui/ticker.pyc
+${PYSITELIB}/pynicotine/gtkgui/ticker.pyo
 ${PYSITELIB}/pynicotine/gtkgui/transferlist.py
 ${PYSITELIB}/pynicotine/gtkgui/transferlist.pyc
 ${PYSITELIB}/pynicotine/gtkgui/transferlist.pyo
