@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1154 2003/12/09 08:11:59 cube Exp $
+$NetBSD: TODO,v 1.1155 2003/12/09 11:30:52 drochner Exp $
 
 Suggested new packages
 ======================
@@ -148,7 +148,6 @@ Suggested package updates
 	o dctc-0.85.6
 	o ddd-3.3.8
 	o diffstat-1.34
-	o disc-cover-1.5.3
 	o distcc-2.11.2
 	o dlcompat-20030629 [grant]
 	o dnetc-2.9004-482 [pkg/22390]
@@ -172,7 +171,6 @@ Suggested package updates
 	o foomatic-2.9.1 [jlam]
 	o fsviewer-0.2.5
 	o gauche-0.7 [kei]
-	o gcc-3.3.2
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
 	o gdb-6.0
@@ -373,7 +371,6 @@ Suggested package updates
 	o zebra-0.94
 	o zenicb 1.31 (needs merge with lots of local changes)
 	o zlib-1.2.1
-	o zope-2.6.2
 
 Infrastructure problems which need addressing
 =============================================
