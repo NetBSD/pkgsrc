@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/01/03 14:11:25 taca Exp $
+# $NetBSD: Makefile,v 1.4 2002/01/05 05:47:21 taca Exp $
 # FreeBSD: ports/textproc/ruby-rdtool/Makefile,v 1.15 2001/01/30 19:20:09 knu Exp
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
@@ -18,6 +18,7 @@ DEPENDS+=	${RUBY_PKGNAMEPREFIX}strscan>=0.6.1:../../devel/ruby-strscan
 
 DIST_SUBDIR=	ruby
 USE_RUBY=	yes
+USE_RUBY_AMSTD=	yes
 INSTALL_TARGET=	install install-rmi2html
 
 REPLACE_RUBY=	rmi2html.rb utils/rdswap.rb
@@ -51,5 +52,6 @@ post-install:
 	${INSTALL_DATA} ${RUBY_SITELIBDIR}/rd/dot.rd2rc ${RUBY_EXAMPLESDIR}/rd
 
 .include "Makefile.common"
+.include "../../devel/ruby-amstd/Makefile.common"
 .include "../../lang/ruby-base/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
