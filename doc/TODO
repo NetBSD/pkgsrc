@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1019 2003/11/13 00:40:04 epg Exp $
+$NetBSD: TODO,v 1.1020 2003/11/13 00:42:15 epg Exp $
 
 Suggested new packages
 ======================
@@ -308,6 +308,7 @@ Suggested package updates
 	o p5-BSD-Resource-1.23 [grant]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
+	o p5-HTML-Mason-1.24 [epg]
 	o p5-Net-DNS-0.41 [heinz]
 	o p5-razor-agents-2.36 [heinz]
 	o pdmenu-1.2.81
