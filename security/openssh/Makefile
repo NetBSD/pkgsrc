@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2004/04/27 12:30:23 markd Exp $
+# $NetBSD: Makefile,v 1.130 2004/04/27 19:08:36 jlam Exp $
 
 DISTNAME=		openssh-3.8p1
 PKGNAME=		openssh-3.8.1
@@ -149,10 +149,6 @@ MESSAGE_SUBST+=		OPENSSH_USER=${OPENSSH_USER}
 MESSAGE_SUBST+=		OPENSSH_GROUP=${OPENSSH_GROUP}
 
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
-
-.if defined(UPDATE_INTREE_OPENSSH)
-.  include "Makefile.intree"
-.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
