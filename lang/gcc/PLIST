@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2002/04/08 12:11:43 dmcmahill Exp $
-etc/gcc-2.95.3.mk
+@comment $NetBSD: PLIST,v 1.7 2002/09/27 12:28:15 jlam Exp $
+etc/${PKGNAME}.mk
 @unexec ${INSTALL_INFO} --delete %D/info/chill.info %D/info/dir
 info/chill.info
 @exec ${INSTALL_INFO} %D/info/chill.info %D/info/dir
