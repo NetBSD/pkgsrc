@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/25 10:48:21 cube Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/26 13:55:14 abs Exp $
 
 DISTNAME=	lua-5.0.1
 PKGREVISION=	1
@@ -20,7 +20,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.lua.org/
 COMMENT=	Powerful light-weight language for extending applications
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK2= yes
+MAKE_ENV+=	NOGCCERROR=yes
 
 BUILD_DIRS=	${WRKSRC}/objdir
 
@@ -36,7 +37,7 @@ post-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} README COPYRIGHT	\
 		HISTORY ${PREFIX}/share/doc/lua
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/lua
-	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.gif  \
+	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.gif	\
 		${PREFIX}/share/doc/html/lua
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/lua
 	cd ${WRKSRC}/test && ${INSTALL_DATA} README *.lua \
