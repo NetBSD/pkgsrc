@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/08/13 19:01:53 wiz Exp $
+
+--- align.nas.orig	Tue Apr 18 12:48:25 2000
++++ align.nas	Sun Aug 13 03:57:29 2000
+@@ -14,7 +14,8 @@
+ 	globaldef	l3_sb_sample
+ 
+ 	segment_data
+-	segment_bss	align=32	;delete `align=32' if linker puts err.
++;	segment_bss	align=32	;delete `align=32' if linker puts err.
++	segment_bss
+ 	align	32
+ l3_sb_sample	resd	2*3*18*32	;align32 for SSE
+ Amfbuf	resd	2*(1152+576+56)	;56=EXTRADELAY define in musenc.c
