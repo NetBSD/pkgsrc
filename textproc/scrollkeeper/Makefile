@@ -1,29 +1,53 @@
-# $NetBSD: Makefile,v 1.8 2002/10/19 10:54:58 rh Exp $
+# $NetBSD: Makefile,v 1.9 2003/02/18 14:39:02 jmmv Exp $
 #
 
-DISTNAME=		scrollkeeper-0.2
-PKGREVISION=		2
+DISTNAME=		scrollkeeper-0.3.12
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scrollkeeper/}	\
-			${MASTER_SITE_GNOME:=sources/scrollkeeper/0.2/}
+			${MASTER_SITE_GNOME:=sources/scrollkeeper/0.3/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://scrollkeeper.sourceforge.net/
 COMMENT=		Open Document Cataloging Project
 
 BUILD_USES_MSGFMT=	yes
-USE_GMAKE=		yes
-USE_X11BASE=		yes
-USE_BUILDLINK2=		yes
-
-USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+DEPENDS=		docbook-xml>=4.2:../../textproc/docbook-xml
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--localstatedir=${X11PREFIX}/var
-CONFIGURE_ARGS+=	--sharedstatedir=${X11PREFIX}/var
+USE_BUILDLINK2=		yes
+USE_GMAKE=		yes
+USE_LIBTOOL=		yes
+USE_PKGINSTALL=		yes
+USE_PKGLOCALEDIR=	yes
+
+LIBTOOL_OVERRIDE=	${WRKSRC}/libconfig
+
+CONFIGURE_ARGS= 	--localstatedir=${SCROLLKEEPER_DATADIR}
+CONFIGURE_ARGS+=	--sharedstatedir=${SCROLLKEEPER_DATADIR}
+CONFIGURE_ARGS+= 	--sysconfdir=${PKG_SYSCONFDIR}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${LOCALBASE} == ${X11PREFIX}
+CONFIGURE_ARGS+=	--with-omfdirs=${PREFIX}/share/omf
+.else
+CONFIGURE_ARGS+=	--with-omfdirs=${LOCALBASE}/share/omf:${X11PREFIX}/share/omf
+.endif
+
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+
+SCROLLKEEPER_DATADIR=	${PREFIX}/libdata/scrollkeeper
+SCROLLKEEPER_REBUILDDB=	${PREFIX}/bin/scrollkeeper-rebuilddb
+FILES_SUBST+=		SCROLLKEEPER_DATADIR="${SCROLLKEEPER_DATADIR}"
+FILES_SUBST+=		SCROLLKEEPER_REBUILDDB="${SCROLLKEEPER_REBUILDDB}"
+
+EGDIR=		${PREFIX}/share/examples/scrollkeeper
+CONF_FILES=	${EGDIR}/scrollkeeper.conf ${PKG_SYSCONFDIR}/scrollkeeper.conf
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../textproc/libxml/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../textproc/libxslt/buildlink2.mk"
+.include "../../textproc/intltool/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
