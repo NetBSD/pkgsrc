@@ -1,12 +1,17 @@
-$NetBSD: distinfo,v 1.4 2003/09/19 15:22:12 agc Exp $
+$NetBSD: distinfo,v 1.5 2004/02/26 16:25:52 cube Exp $
 
-SHA1 (anjuta-1.0.1.tar.gz) = edaedf937375d63ee914972d51858092a74ad3a7
-Size (anjuta-1.0.1.tar.gz) = 6142521 bytes
-SHA1 (patch-ab) = 7c0208b550f942c26fb435f3978eb7ea8f8f12b3
-SHA1 (patch-af) = 1f9c936ae9e2463b29648dda6b7478c3dbf56454
-SHA1 (patch-ag) = 134f96f27fbfe852638c19599902211f74c5734c
-SHA1 (patch-ah) = 582c7a11cfa40f78f4e879532d732933a301a57d
-SHA1 (patch-aj) = 379f60b5a086f4b1340b3917c42810b975d54fcc
-SHA1 (patch-ak) = bc92f64b4bcc845da0935917335c133086a93246
-SHA1 (patch-al) = 5cb1faacdba8be45412c6d84bfc02d30942adffd
-SHA1 (patch-am) = d1577c6ac0f1e84067a5b6f02f32cc3970aacbb5
+SHA1 (anjuta-1.2.1.tar.gz) = e935196572de86948f4b278783a2572cc195fcd8
+Size (anjuta-1.2.1.tar.gz) = 8013051 bytes
+SHA1 (patch-ab) = 02722945134044cb8436eb510c506263e0370ad3
+SHA1 (patch-ac) = 887e11b556f5f54aec2165de5e605cdfa03a3320
+SHA1 (patch-ad) = 872c499d816948de4fd5be93804c974f972423ea
+SHA1 (patch-ag) = b710b422ac934cb6243c714571efc002a323b329
+SHA1 (patch-aj) = 2ba7aaf84adefa291ca7ba59310289d973a8e4cf
+SHA1 (patch-ak) = 60785b3dfe83494c6c4f6c346ebf67aca8af2195
+SHA1 (patch-al) = 480966ad54419cd7d9a9dde3ddcc07df5d0c0ed6
+SHA1 (patch-am) = 790a5a0adc7cf72d0c4fdd71941e9477049d4612
+SHA1 (patch-an) = 03ed70e9273ce13253c13bbe3953fdebdd0eef96
+SHA1 (patch-ao) = 5b26239bbadb854673bb03c02ec380bb719189ce
+SHA1 (patch-ap) = 88cc6f1630485ce62e77cc65c62f0ac80c52ca10
+SHA1 (patch-aq) = f99d657c1ac8981340848c100d8b015204613cfe
+SHA1 (patch-ar) = 10afe882826503e8f8b7b61afdd99f9188ac122f
