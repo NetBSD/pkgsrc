@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8957 2005/01/28 00:43:54 hubertf Exp $
+$NetBSD: CHANGES,v 1.8958 2005/01/28 02:29:36 snj Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -637,3 +637,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Update win32-codecs to 050115 [ben 2005-01-27]
 	Update windowmaker-desktop to 1.2 [ben 2005-01-27]
 	Update xlockmore to 5.15 [hubertf 2005-01-28]
+	Added scponly-4.0 [snj 2005-01-28]
