@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2004/02/16 20:43:27 recht Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/01 00:41:48 recht Exp $
 
-DISTNAME=	roundup-0.6.5
+DISTNAME=	roundup-0.6.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundup/}
 
