@@ -1,0 +1,13 @@
+$NetBSD: patch-fm,v 1.1 2004/11/01 16:39:06 gavan Exp $
+
+--- khotkeys/shared/actions.cpp.orig	2004-07-17 18:52:06.000000000 +0100
++++ khotkeys/shared/actions.cpp
+@@ -35,6 +35,8 @@
+ 
+ #include <X11/X.h>
+ 
++#undef truncate
++
+ namespace KHotKeys
+ {
+ 

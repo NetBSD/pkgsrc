@@ -1,0 +1,13 @@
+$NetBSD: patch-fl,v 1.1 2004/11/01 16:39:06 gavan Exp $
+
+--- kdeprint/slave/kio_print.cpp.orig	2004-05-22 21:26:46.000000000 +0100
++++ kdeprint/slave/kio_print.cpp
+@@ -46,6 +46,8 @@
+ #include <stdlib.h>
+ #include <sys/stat.h>
+ 
++#undef stat
++
+ #define	PRINT_DEBUG	kdDebug(7019) << "kio_print: "
+ 
+ extern "C"

@@ -1,8 +1,17 @@
-$NetBSD: patch-ae,v 1.6 2004/06/10 11:51:52 markd Exp $
+$NetBSD: patch-ae,v 1.7 2004/11/01 16:39:06 gavan Exp $
 
---- kcontrol/krdb/krdb.cpp.orig	2004-04-04 19:42:18.000000000 +1200
+--- kcontrol/krdb/krdb.cpp.orig	2004-07-17 18:52:04.000000000 +0100
 +++ kcontrol/krdb/krdb.cpp
-@@ -384,7 +384,14 @@ static void createGtkrc( bool exportColo
+@@ -42,6 +42,8 @@
+ 
+ #include <X11/Xlib.h>
+ 
++#undef truncate
++
+ inline const char * gtkEnvVar(int version)
+ {
+     return 2==version ? "GTK2_RC_FILES" : "GTK_RC_FILES";
+@@ -384,7 +386,14 @@ static void createGtkrc( bool exportColo
          // not every button, checkbox, etc.
          t << "style \"MenuItem\"" << endl;
          t << "{" << endl;

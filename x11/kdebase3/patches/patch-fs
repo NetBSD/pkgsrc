@@ -1,0 +1,13 @@
+$NetBSD: patch-fs,v 1.1 2004/11/01 16:39:06 gavan Exp $
+
+--- kmenuedit/treeview.cpp.orig	2004-07-17 18:52:07.000000000 +0100
++++ kmenuedit/treeview.cpp
+@@ -21,6 +21,8 @@
+ 
+ #include <unistd.h>
+ 
++#undef truncate
++
+ #include <qcstring.h>
+ #include <qcursor.h>
+ #include <qdatastream.h>

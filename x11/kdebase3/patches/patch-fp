@@ -1,0 +1,13 @@
+$NetBSD: patch-fp,v 1.1 2004/11/01 16:39:06 gavan Exp $
+
+--- kioslave/pop3/pop3.cc.orig	2004-07-17 18:52:07.000000000 +0100
++++ kioslave/pop3/pop3.cc
+@@ -59,6 +59,8 @@
+ 
+ #include "pop3.h"
+ 
++#undef truncate
++
+ #define GREETING_BUF_LEN 1024
+ #define MAX_RESPONSE_LEN 512
+ #define MAX_COMMANDS 10

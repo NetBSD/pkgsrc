@@ -1,0 +1,13 @@
+$NetBSD: patch-fv,v 1.1 2004/11/01 16:39:06 gavan Exp $
+
+--- kpersonalizer/kcountrypage.cpp.orig	2004-07-17 18:52:08.000000000 +0100
++++ kpersonalizer/kcountrypage.cpp
+@@ -33,6 +33,8 @@
+ 
+ #include "kcountrypage.h"
+ 
++#undef truncate
++
+ KCountryPage::KCountryPage(QWidget *parent, const char *name ) : KCountryPageDlg(parent,name) {
+ 
+ 	px_introSidebar->setPixmap(UserIcon("step1.png"));
