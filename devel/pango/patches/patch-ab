@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2002/12/22 18:06:22 jmmv Exp $
+$NetBSD: patch-ab,v 1.7 2002/12/24 03:41:12 wiz Exp $
 
---- modules/Makefile.in.orig	Sun Dec 22 11:55:17 2002
+--- modules/Makefile.in.orig	Fri Dec 20 18:23:01 2002
 +++ modules/Makefile.in
 @@ -23,7 +23,7 @@ bindir = @bindir@
  sbindir = @sbindir@
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.6 2002/12/22 18:06:22 jmmv Exp $
  sharedstatedir = @sharedstatedir@
  localstatedir = @localstatedir@
  libdir = @libdir@
-@@ -337,12 +337,12 @@ maintainer-clean-generic clean mostlycle
+@@ -339,12 +339,12 @@ maintainer-clean-generic clean mostlycle
  
  install-data-local:
  	@if $(RUN_QUERY_IMMODULES_TEST) ; then 				\

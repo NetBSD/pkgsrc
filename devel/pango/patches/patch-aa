@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2002/12/22 18:06:21 jmmv Exp $
+$NetBSD: patch-aa,v 1.7 2002/12/24 03:41:11 wiz Exp $
 
---- examples/Makefile.in.orig	Sun Oct 13 18:50:53 2002
+--- examples/Makefile.in.orig	Fri Dec 20 18:23:05 2002
 +++ examples/Makefile.in
-@@ -116,7 +116,7 @@ XFT_LIBS = @XFT_LIBS@
- YACC = @YACC@
+@@ -118,7 +118,7 @@ XFT_CFLAGS = @XFT_CFLAGS@
+ XFT_LIBS = @XFT_LIBS@
  ms_librarian = @ms_librarian@
  
 -aliasdir = $(sysconfdir)/pango
 +aliasdir = $(datadir)/examples/@PACKAGE@
  
- INCLUDES = -DG_DISABLE_DEPRECATED -I$(top_srcdir) $(QT_INCLUDES) $(GLIB_CFLAGS) $(FREETYPE_CFLAGS)
- 
+ INCLUDES = \
+ 	-DG_DISABLE_DEPRECATED		\

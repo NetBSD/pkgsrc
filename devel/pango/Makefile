@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2002/12/22 18:06:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2002/12/24 03:41:10 wiz Exp $
 #
 
-DISTNAME=		pango-1.0.5
-PKGREVISION=		1
+DISTNAME=		pango-1.2.0
 CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.0/ \
-			${MASTER_SITE_GNOME:=sources/pango/1.0/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.2/ \
+			${MASTER_SITE_GNOME:=sources/pango/1.2/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.pango.org
@@ -16,6 +15,7 @@ USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
+TEST_TARGET=		check
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -32,23 +32,9 @@ CONF_FILES+=		${EGDIR}/pangox.aliases ${PKG_SYSCONFDIR}/pangox.aliases
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-.include "../../mk/bsd.prefs.mk"
-
-# directory appeared in XFree86 4.*
-# if it is there, we are using XFree86 4.* and will
-# install some additional files
-.if exists(${X11BASE}/lib/X11/locale/common)
-PLIST_SRC=		${PKGDIR}/PLIST.xf4 ${PKGDIR}/PLIST
-.else
-PLIST_SRC=		${PKGDIR}/PLIST
-.endif
-
-test: build
-	cd ${WRKSRC} &&  ${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | \
-		tee ${WRKDIR}/check.log
-
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../fonts/Xft2/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.install.mk"
