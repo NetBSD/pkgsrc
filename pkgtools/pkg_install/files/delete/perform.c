@@ -1,9 +1,9 @@
-/*	$NetBSD: perform.c,v 1.4 2003/09/01 16:27:13 jlam Exp $	*/
+/*	$NetBSD: perform.c,v 1.5 2003/09/02 08:28:27 jlam Exp $	*/
 
-#include <nbcompat.h>
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#include <nbcompat.h>
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.4 2003/09/01 16:27:13 jlam Exp $");
+__RCSID("$NetBSD: perform.c,v 1.5 2003/09/02 08:28:27 jlam Exp $");
 #endif
 #endif
 
@@ -715,7 +715,7 @@ pkg_do(char *pkg)
 	if (fexists(REQUIRE_FNAME)) {
 		if (Verbose)
 			printf("Executing 'require' script.\n");
-		vsystem("%s +x %s", CHMOD_CMD, REQUIRE_FNAME);	/* be sure */
+		(void) fexec(CHMOD_CMD, "+x", REQUIRE_FNAME, NULL);	/* be sure */
 		if (vsystem("./%s %s DEINSTALL", REQUIRE_FNAME, pkg)) {
 			warnx("package %s fails requirements %s", pkg,
 			    Force ? "" : "- not deleted");
@@ -744,7 +744,7 @@ pkg_do(char *pkg)
 		if (Fake)
 			printf("Would execute de-install script at this point (arg: DEINSTALL).\n");
 		else {
-			vsystem("%s +x %s", CHMOD_CMD, DEINSTALL_FNAME);	/* make sure */
+			(void ) fexec(CHMOD_CMD, "+x", DEINSTALL_FNAME, NULL);	/* make sure */
 			if (vsystem("./%s %s DEINSTALL", DEINSTALL_FNAME, pkg)) {
 				warnx("deinstall script returned error status");
 				if (!Force)
@@ -794,7 +794,7 @@ pkg_do(char *pkg)
 		if (Fake)
 			printf("Would execute post-de-install script at this point (arg: POST-DEINSTALL).\n");
 		else {
-			vsystem("%s +x %s", CHMOD_CMD, DEINSTALL_FNAME);	/* make sure */
+			(void ) fexec(CHMOD_CMD, "+x", DEINSTALL_FNAME, NULL);	/* make sure */
 			if (vsystem("./%s %s POST-DEINSTALL", DEINSTALL_FNAME, pkg)) {
 				warnx("post-deinstall script returned error status");
 				if (!Force)
@@ -819,7 +819,7 @@ pkg_do(char *pkg)
 				warnx("%s is not empty", LogDir);
 			return 0;
 		} else {
-			if (vsystem("%s -r %s", REMOVE_CMD, LogDir)) {
+			if (fexec(REMOVE_CMD, "-r", LogDir, NULL)) {
 				warnx("couldn't remove log entry in %s, deinstall failed", LogDir);
 				if (!Force)
 					return 1;

@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.1 2003/09/01 16:27:15 jlam Exp $ */
+/* $NetBSD: lib.h,v 1.2 2003/09/02 08:28:33 jlam Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -25,10 +25,10 @@
 #ifndef _INST_LIB_LIB_H_
 #define _INST_LIB_LIB_H_
 
-#include <nbcompat.h>
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#include <nbcompat.h>
 #if HAVE_SYS_PARAM_H
 #include <sys/param.h>
 #endif
