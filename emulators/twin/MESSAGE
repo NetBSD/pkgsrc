@@ -1,3 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2001/11/11 06:17:27 hubertf Exp $
+
 TWIN gotchas:
 	* Only tested on NetBSD i386 and requires USER_LDT kernel option
 
@@ -12,3 +15,5 @@ TWIN gotchas:
 	* The resource compiler doesn't understand "" to mean ", so replace
 	  "" with \042 in your resource files.  There is no winresrc.h,
 	  replace it with windows.h in your resource files.
+
+===========================================================================

@@ -1,3 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2001/11/11 06:17:31 hubertf Exp $
+
 It is possible to run "hanterm" using the Hangul fonts included
 with your NetBSD system, by adding one of the following lines to
 your "~/.Xdefaults" (or other ${XENVIRONMENT}) file...
@@ -10,3 +13,5 @@ Additional Hangul fonts are packaged in the fonts/ksc5601 package,
 and even more through the "hanterm" homepage...
 
     http://quagga.kaist.ac.kr/hanterm/
+
+===========================================================================

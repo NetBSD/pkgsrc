@@ -1,6 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2001/11/11 06:17:28 hubertf Exp $
+
 Ularn has more features than NetBSD's larn, but ularn's source is
 unmaintained, unportable, and less clean.  This package fixes compile
 errors and runtime crashes.  This package does not modernize the code
 or remove the security flaws.
 
 To play ularn, type Ularn.
+
+===========================================================================
