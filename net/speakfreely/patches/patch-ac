@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/10/11 05:48:25 jlam Exp $
+
+--- sfspeaker.1.in.orig	Sat Sep 18 15:23:01 1999
++++ sfspeaker.1.in	Mon Oct 11 01:38:35 1999
+@@ -140,7 +140,7 @@
+ .I busy_command
+ is supplied, a default of:
+ .ce 1
+--b"sleep 10; sfmike %s busy.au"
++-b"sleep 10; sfmike %s @SOUNDDIR@/busy.au"
+ is used.  The ten second delay is intended to allow users
+ with half duplex audio hardware to receive the busy signal
+ transmission after sending an initial greeting and switching
