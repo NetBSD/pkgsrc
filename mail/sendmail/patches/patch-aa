@@ -1,25 +1,17 @@
-$NetBSD: patch-aa,v 1.10 2000/06/14 16:40:55 veego Exp $
-
---- BuildTools/OS/NetBSD.orig	Tue Dec 29 18:39:50 1998
-+++ BuildTools/OS/NetBSD	Tue Jun 13 19:34:47 2000
-@@ -1,4 +1,18 @@
- #	@(#)NetBSD	8.6	(Berkeley)	3/12/1998
--define(`confMAPDEF', `-DNEWDB -DNIS -DMAP_REGEX')
--define(`confENVDEF', ` -DNETISO')
-+define(`confMAPDEF', `-DNEWDB -DNIS -DMAP_REGEX ${LDAP_CONF}')
-+define(`confENVDEF', ` -DNETISO ${DB_ENVDEF} ${LDAP_ENVDEF}')
- define(`confDEPEND_TYPE', `CC-M')
-+define(`confLIBS', `${DB_LIBS} ${LDAP_LIBS} ${LDFLAGS}')
-+define(`confEBINDIR', `${PREFIX}/libexec/sendmail')
-+define(`confMBINDIR', `${PREFIX}/libexec/sendmail')
-+define(`confSBINDIR', `${PREFIX}/sbin')
-+define(`confUBINDIR', `${PREFIX}/bin')
-+define(`confHFDIR', `${PREFIX}/share/misc')
-+define(`confBINOWN', `${BSD_BINOWN}')
-+define(`confBINGRP', `${BSD_BINGRP}')
+$NetBSD: patch-aa,v 1.11 2000/07/24 04:22:34 itojun Exp $
+--- devtools/OS/NetBSD-	Mon Jul 24 12:38:53 2000
++++ devtools/OS/NetBSD	Mon Jul 24 12:40:56 2000
+@@ -5,7 +5,8 @@
+ define(`confSTDIO_TYPE', `torek')
+-define(`confSBINGRP', `wheel')
+-define(`confUBINOWN', `root')
+-define(`confUBINGRP', `wheel')
+-define(`confMANOWN', `root')
+-define(`confMANGRP', `wheel')
++define(`confSBINOWN', `${BSD_BINOWN}')
++define(`confSBINGRP', `${BSD_BINGRP}')
++define(`confUBINOWN', `${BSD_BINOWN}')
++define(`confUBINGRP', `${BSD_BINGRP}')
 +define(`confMANOWN', `${BSD_MANOWN}')
 +define(`confMANGRP', `${BSD_MANGRP}')
-+define(`confMANROOT', `${PREFIX}/man/cat')
-+define(`confMAN1EXT', `0')
-+define(`confMAN5EXT', `0')
-+define(`confMAN8EXT', `0')
+ define(`confMAN1EXT', `0')
