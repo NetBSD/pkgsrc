@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.3 2004/11/15 14:48:18 tv Exp $
+# $NetBSD: Linux.mk,v 1.4 2004/11/16 16:21:40 tv Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -129,7 +129,6 @@ TYPE?=		type			# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs -r
 
-CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
