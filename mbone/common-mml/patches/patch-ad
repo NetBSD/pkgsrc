@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.2.2 2002/10/09 18:48:21 agc Exp $
+
+--- inet_ntop.c.orig	Thu Dec  2 11:07:31 1999
++++ inet_ntop.c
+@@ -16,7 +16,7 @@
+  * SOFTWARE.
+  */
+ 
+-#ifndef HAVE_INET_NTOP
++#ifdef NEED_INET_NTOP
+ #include "config_unix.h"
+ #include "config_win32.h"
+ #include "inet_ntop.h"

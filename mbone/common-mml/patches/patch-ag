@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.2.2.2 2002/10/09 18:48:22 agc Exp $
+
+--- inet_pton.h.orig	Tue May 16 13:02:55 2000
++++ inet_pton.h
+@@ -1,4 +1,4 @@
+-#ifndef HAVE_INET_PTON
++#ifdef  NEED_INET_PTON
+ #if defined(__cplusplus)
+ extern "C" {
+ #endif
+@@ -8,4 +8,4 @@ int inet_pton(int af, const char *src, v
+ #if defined(__cplusplus)
+ }
+ #endif
+-#endif /* HAVE_INET_PTON */
++#endif /* NEED_INET_PTON */
