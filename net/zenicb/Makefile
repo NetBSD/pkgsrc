@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/08/04 13:09:16 martin Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/04 18:50:36 martin Exp $
 #
 
 DISTNAME=		zenicb-19981202
@@ -15,14 +15,14 @@ MIRROR_DISTFILE=	no
 EMACS=			xemacs
 DEPENDS+=		xemacs-*:../../editors/xemacs
 MAKEFLAGS+=		USE_XEMACS=${USE_XEMACS}
+ELISPDIR=		lib/xemacs/lisp
 .else
 EMACS=			emacs
 DEPENDS+=		emacs-*:../../editors/emacs
+ELISPDIR=		share/emacs/site-lisp
 .endif
 
-ELISPDIR=		${PREFIX}/share/${EMACS}/site-lisp
-
-PLIST_SUBST+=		EMACS=${EMACS}
+PLIST_SUBST+=		ELISPDIR=${ELISPDIR}
 
 pre-configure:
 .if defined(USE_XEMACS)
@@ -31,14 +31,11 @@ pre-configure:
 	@${ECHO} "To install for Xemacs, set the environment variable USE_XEMACS."
 .endif
 
-pre-install:
-	${MKDIR} ${ELISPDIR}
-
 do-build:
 
 do-install:
 	@for file in ${WRKSRC}/src/*.el; do \
-		j="${INSTALL_DATA} $$file ${ELISPDIR}/"; \
+		j="${INSTALL_DATA} $$file ${PREFIX}/${ELISPDIR}/"; \
 		${ECHO} $$j; $$j; \
 	done
 
