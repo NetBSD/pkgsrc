@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2004/07/25 07:34:38 grant Exp $
+# $NetBSD: builtin.mk,v 1.6 2004/11/08 12:38:19 markd Exp $
 
 _X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
 
@@ -22,8 +22,9 @@ IS_BUILTIN.Xrandr!=							\
 # the software.  Match up Xrandr versions with XFree86 versions for an
 # approximate determination of the Xrandr version.
 #
-_XRANDR_VERSIONS=	1.0.2  1.0.1  1.0
-_XRANDR_1.0=	4.2 4.2.* 4.3 4.3.[0-9] 4.3.[0-9].* 4.3.[1-8][0-9]* 4.3.9[0-8]*
+_XRANDR_VERSIONS=	1.0.2  1.0.1  1.0 0.99
+_XRANDR_0.99= 4.2 4.2.*
+_XRANDR_1.0=	4.3 4.3.[0-9] 4.3.[0-9].* 4.3.[1-8][0-9]* 4.3.9[0-8]*
 _XRANDR_1.0+=	4.3.99.* 4.[4-9]* 4.[1-9][0-9]*
 .      if !defined(XF86_VERSION)
 XF86_VERSION=	3.3
