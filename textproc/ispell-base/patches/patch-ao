@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2002/07/22 10:31:31 agc Exp $
+
+--- subset.X.orig	Fri Jul 19 21:47:10 2002
++++ subset.X	Fri Jul 19 21:48:52 2002
+@@ -77,7 +77,7 @@
+ #
+ #
+ LIBDIR=!!LIBDIR!!
+-TDIR=${TMPDIR-/usr/tmp}
++TDIR=${TMPDIR-/tmp}
+ TMP=${TDIR}/sset$$.
+ SORTTMP="-T ${TDIR}"			# !!SORTTMP!!
+ USAGE="Usage:  subset [-b base] [-l langfile] dict-0 dict-1 ..."
