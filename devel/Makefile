@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.459 2004/02/05 09:11:26 markd Exp $
+# $NetBSD: Makefile,v 1.460 2004/02/17 03:12:16 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -312,6 +312,7 @@ SUBDIR+=	p5-Module-Dependency
 SUBDIR+=	p5-Net-CIDR
 SUBDIR+=	p5-Net-Netmask
 SUBDIR+=	p5-OLE-Storage_Lite
+SUBDIR+=	p5-Object-Realize-Later
 SUBDIR+=	p5-PV
 SUBDIR+=	p5-Params-Validate
 SUBDIR+=	p5-Parse-RecDescent
