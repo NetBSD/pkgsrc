@@ -1,14 +1,14 @@
 # New ports collection makefile for:	GNU make
-# Version required:     3.75
+# Version required:     3.76.1
 # Date created:		11 September 1994
 # Whom:			jkh
 #
-# $NetBSD: Makefile,v 1.7 1998/01/25 00:45:58 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1998/01/30 20:47:23 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/06/13 20:00:47 max Exp
 #
 
-DISTNAME=       make-3.75
-PKGNAME=        gmake-3.75
+DISTNAME=       make-3.76.1
+PKGNAME=        gmake-3.76.1
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GNU}
 
@@ -26,9 +26,7 @@ MAN1=		gmake.1
 post-install:
 	/bin/chmod g-s ${PREFIX}/bin/gmake
 	/usr/bin/chgrp ${BINGRP} ${PREFIX}/bin/gmake
-	@if [ ! -f ${PREFIX}/info/dir ]; then \
-	  ${SED} -ne '1,/Menu:/p' /usr/share/info/dir > ${PREFIX}/info/dir; \
-	 fi
-	@install-info ${PREFIX}/info/make.info ${PREFIX}/info/dir
+	cd ${WRKSRC} && \
+		${INSTALL_MAN} ${WRKSRC}/make.man ${PREFIX}/man/man1/${MAN1}
 
 .include <bsd.port.mk>
