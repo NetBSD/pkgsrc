@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.8 2004/04/02 02:01:34 jlam Exp $
+$NetBSD: patch-ac,v 1.9 2004/07/04 23:17:59 wiz Exp $
 
---- info/filesys.h.orig	Wed Jul 22 00:25:44 1998
+--- info/filesys.h.orig	2004-03-14 01:57:29.000000000 +0100
 +++ info/filesys.h
-@@ -76,7 +76,7 @@
+@@ -78,7 +78,7 @@ extern int is_dir_name (char *filename);
  
  /* The default value of INFOPATH. */
  #if !defined (DEFAULT_INFOPATH)
