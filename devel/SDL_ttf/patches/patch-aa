@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2004/04/27 15:13:56 adam Exp $
+
+--- SDL_ttf.c.orig	2004-04-27 09:56:19.000000000 +0000
++++ SDL_ttf.c
+@@ -39,6 +39,7 @@
+ #define FREEA(p) free(p)
+ #endif
+ 
++#include <ft2build.h>
+ #include <freetype/freetype.h>
+ #include <freetype/ftoutln.h>
+ #include <freetype/ttnameid.h>
