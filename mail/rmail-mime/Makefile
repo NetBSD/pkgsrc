@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/27 03:29:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/10 19:21:56 jschauma Exp $
 #
 
 DISTNAME=	rmail-mime-1.13.0
@@ -10,27 +10,18 @@ COMMENT=	MIME-capabilities for RMAIL in Emacs
 
 DEPENDS=	semi>=1.14.4:../../devel/semi
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/emacs.mk"
 
-.if defined(USE_XEMACS)
-DEPENDS+=	xemacs-[0-9]*:../../editors/xemacs
-EMACS=		xemacs
-SITE_LISP=	lib/xemacs/xemacs-packages/lisp/
-.else
-DEPENDS+=	emacs-[0-9]*:../../editors/emacs
-EMACS=		emacs
-SITE_LISP=	share/emacs/site-lisp
-.endif
-
+SITE_LISP=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}
 PLIST_SUBST+=	SITE_LISP=${SITE_LISP}
 
 do-build:
-	cd ${WRKSRC}; ${EMACS} --no-init-file --no-site-file -batch \
+	cd ${WRKSRC}; ${EMACS_BIN} --no-init-file --no-site-file -batch \
 		-l ruby-mode.el -f batch-byte-compile rmail-mime.el
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${SITE_LISP}
-	${INSTALL_DATA} ${WRKSRC}/rmail-mime.el ${PREFIX}/${SITE_LISP}
-	${INSTALL_DATA} ${WRKSRC}/rmail-mime.elc ${PREFIX}/${SITE_LISP}
+	${INSTALL_DATA} ${WRKSRC}/rmail-mime.el ${EMACS_LISPPREFIX}
+	${INSTALL_DATA} ${WRKSRC}/rmail-mime.elc ${EMACS_LISPPREFIX}
 
 .include "../../mk/bsd.pkg.mk"
