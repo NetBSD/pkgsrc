@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2002/05/31 15:51:42 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.11 2002/06/01 20:11:55 dmcmahill Exp $
 #
 
 DISTNAME=		geda-gnetlist-${PKGVERSION}
 PKGNAME=		gnetlist-${PKGVERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		cad
 MASTER_SITES=		ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 			ftp://ieee.ing.uniroma1.it/pub/geda/devel/${PKGVERSION}/ \
@@ -30,5 +30,11 @@ USE_LIBTOOL=		YES
 USE_GMAKE=		YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+post-patch:
+	${MV} -f ${WRKSRC}/scheme/gnet-PCBboard.scm ${WRKSRC}/scheme/gnet-PCBboard.scm.bak
+	${SED} 's;@pcb_confdir@;${PKG_SYSCONFDIR}/pcb;g' \
+		${WRKSRC}/scheme/gnet-PCBboard.scm.bak > ${WRKSRC}/scheme/gnet-PCBboard.scm
+	${RM} -f ${WRKSRC}/scheme/gnet-PCBboard.scm.bak
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2002/05/31 15:51:44 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.4 2002/06/01 20:11:55 dmcmahill Exp $
 
 needs GNU m4
 
@@ -9,7 +9,7 @@ needs GNU m4
  ;;  (let ((pipe (open-output-pipe (string-append "m4 " *m4-pcbdir* "/common.m4 - >> " output-filename))))
  ;; Fixed pipe command (AVH 1/27/02)
 -   (let ((pipe (open-output-pipe (string-append "m4 -d -I" *m4-pcbdir* " " *m4-pcbdir* "/common.m4 - >> " output-filename))))
-+   (let ((pipe (open-output-pipe (string-append "gm4 -d -I" *m4-pcbdir* " " *m4-pcbdir* "/common.m4 - >> " output-filename))))
++   (let ((pipe (open-output-pipe (string-append "gm4 -d -I" *m4-pcbdir* " -I@pcb_confdir@ -I$HOME/.pcb -I. " *m4-pcbdir* "/common.m4 - >> " output-filename))))
  
  
         ;; packages is a list with the different uref value

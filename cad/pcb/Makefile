@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2002/05/31 19:56:19 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.12 2002/06/01 20:11:55 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/10/31 18:05:31 jseger Exp
 #
 
 DISTNAME=	pcb-1.6.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	ftp://ftp.linuxppc.org/pub/linuxppc/users/harry/PCB/ \
 		ftp://ftp.uni-ulm.de/pub/pcb/mirror/
@@ -23,6 +23,15 @@ INFO_FILES=	pcb.info
 
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 
+PCB_CONFDIR=	${PKG_SYSCONFDIR}/pcb
+MESSAGE_SUBST+=	PCB_CONFDIR=${PCB_CONFDIR}
+# avoid picking up any user config files during the build
+MAKE_ENV+=	HOME=${WRKSRC}
+
+post-patch:
+	${MV} -f ${WRKSRC}/config.h  ${WRKSRC}/config.h.bak
+	${SED} 's;@pkg_sysconfdir@;${PCB_CONFDIR};g' ${WRKSRC}/config.h.bak > ${WRKSRC}/config.h
+
 pre-install:
 	${SED} 's;@pkg_sysconfdir@;${PKG_SYSCONFDIR};g' ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 
@@ -33,12 +42,17 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/pcb.info ${PREFIX}/info/
 	${INSTALL_MAN} ${WRKSRC}/doc/pcb.ps ${PREFIX}/share/doc/pcb/
 	${INSTALL_MAN} ${WRKSRC}/doc/refcard.ps ${PREFIX}/share/doc/pcb/
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/pcb
-	if [ ! -f "${PKG_SYSCONFDIR}/pcb/local.inc" ]; then \
-		${ECHO} "# list your local includes here" > ${PKG_SYSCONFDIR}/pcb/local.inc ; \
+	${INSTALL_DATA_DIR} ${PCB_CONFDIR}
+	if [ ! -f "${PCB_CONFDIR}/local.inc" ]; then \
+		${ECHO} "# list your local includes here" > ${PCB_CONFDIR}/local.inc ; \
 	fi
 	${MV} -f ${X11BASE}/lib/X11/pcb/m4/common.m4 ${X11BASE}/lib/X11/pcb/m4/common.m4.bak
-	${AWK} '/^divert\(0\)dnl/ {print "include(${PKG_SYSCONFDIR}/pcb/local.inc)"} \
+	${AWK} '/^divert\(0\)dnl/ { \
+			printf("include(${PCB_CONFDIR}/local.inc)\n"); \
+			printf("sinclude(site-config.inc)\n"); \
+			printf("sinclude(user-config.inc)\n"); \
+			printf("sinclude(proj-config.inc)\n"); \
+			} \
 		{gsub(/^include\(/,"include(${X11BASE}/lib/X11/pcb/m4/"); print } ' \
 		${X11BASE}/lib/X11/pcb/m4/common.m4.bak > ${X11BASE}/lib/X11/pcb/m4/common.m4
 	${RM} -f ${X11BASE}/lib/X11/pcb/m4/common.m4.bak
