@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/15 10:12:56 skrll Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/03/09 13:58:03 martti Exp $
 bin/aps2file
 bin/apsfilter-bug
 bin/apspreview
+etc/apsfilter/basedir
 man/man1/aps2file.1
 man/man1/apsfilter-bug.1
 man/man1/apsfilter.1
@@ -17,7 +18,11 @@ share/apsfilter/driver/README
 share/apsfilter/driver/alc2000
 share/apsfilter/driver/ap3250
 share/apsfilter/driver/bitcmyk
+share/apsfilter/driver/bjc4000
+share/apsfilter/driver/bjc50
+share/apsfilter/driver/bjc70
 share/apsfilter/driver/bjc600
+share/apsfilter/driver/bjc7000
 share/apsfilter/driver/bjc800
 share/apsfilter/driver/bmp
 share/apsfilter/driver/cdeskjet
@@ -64,6 +69,7 @@ share/apsfilter/driver/lexmark2070c
 share/apsfilter/driver/lexmarkZ11
 share/apsfilter/driver/lj250
 share/apsfilter/driver/ljet4
+share/apsfilter/driver/ljet4l
 share/apsfilter/driver/lx5000
 share/apsfilter/driver/lxm3200
 share/apsfilter/driver/md2k
@@ -190,6 +196,8 @@ share/apsfilter/driver/pips/sc480
 share/apsfilter/driver/pips/sc580
 share/apsfilter/driver/pips/sc60s
 share/apsfilter/driver/pips/sc680_777
+share/apsfilter/driver/pips/sc70s
+share/apsfilter/driver/pips/sc80s
 share/apsfilter/driver/pips/sc880
 share/apsfilter/driver/pips/sc980
 share/apsfilter/driver/pips/sp810_820
@@ -236,6 +244,8 @@ share/apsfilter/driver/stp/lexmark-z52
 share/apsfilter/driver/stp/pcl-1100
 share/apsfilter/driver/stp/pcl-1200
 share/apsfilter/driver/stp/pcl-1220
+share/apsfilter/driver/stp/pcl-2
+share/apsfilter/driver/stp/pcl-4
 share/apsfilter/driver/stp/pcl-600
 share/apsfilter/driver/stp/pcl-690
 share/apsfilter/driver/stp/pcl-750
@@ -243,11 +253,9 @@ share/apsfilter/driver/stp/pcl-810
 share/apsfilter/driver/stylewriter
 share/apsfilter/driver/tiff
 share/apsfilter/setup/README
-share/apsfilter/setup/devices-6.01
 share/apsfilter/setup/devices-6.50
 share/apsfilter/setup/devices-7.00
 share/apsfilter/setup/non-printer
-share/apsfilter/setup/printer-6.01
 share/apsfilter/setup/printer-6.50
 share/apsfilter/setup/printer-7.00
 share/apsfilter/setup/printer-cdj
@@ -260,7 +268,6 @@ share/apsfilter/setup/printer-misc
 share/apsfilter/setup/printer-omni
 share/apsfilter/setup/printer-pcl3
 share/apsfilter/setup/printer-ppa
-share/apsfilter/setup/printer-ps
 share/apsfilter/setup/printer-stp
 share/apsfilter/setup/test.ps
 share/apsfilter/template/README
@@ -271,7 +278,7 @@ share/doc/apsfilter/HOWTO-BUGREPORTS
 share/doc/apsfilter/LICENSE
 share/doc/apsfilter/README.BSD
 share/doc/apsfilter/README.TeX
-share/doc/apsfilter/apsfilter4.gif
+share/doc/apsfilter/apsfilter4.png
 share/doc/apsfilter/handbook.html
 share/doc/apsfilter/paper
 @unexec ${RMDIR} %D/etc/apsfilter 2>/dev/null || true

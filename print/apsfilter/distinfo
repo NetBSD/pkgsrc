@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2002/01/10 06:53:02 martti Exp $
+$NetBSD: distinfo,v 1.3 2002/03/09 13:58:03 martti Exp $
 
-SHA1 (apsfilter-7.1.1.tar.gz) = 112f2ae689b183ce64ae00b9497fec25175b52d5
-Size (apsfilter-7.1.1.tar.gz) = 415716 bytes
-SHA1 (patch-aa) = 1c1874349cfe4f62ee9e64daabd9b0401b92cd90
+SHA1 (apsfilter-7.2.2.tar.gz) = be43c7651cbec09cef09d6855c8e9b0fb59fb3c6
+Size (apsfilter-7.2.2.tar.gz) = 352011 bytes
+SHA1 (patch-aa) = 144c2cfeb15d00d036dc468a9be7579d39c4581d
