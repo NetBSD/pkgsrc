@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/05/18 21:22:26 hwr Exp $
+# $NetBSD: Makefile,v 1.2 1999/05/26 16:02:44 tv Exp $
 
 DISTNAME=       ldapsdk_12311998
 PKGNAME=        ldapsdk-12311998
@@ -8,10 +8,9 @@ MASTER_SITES=   ftp://ftp.mozilla.org/pub/directory/c-sdk/ldap/
 MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://www.mozilla.org/directory/
 
-BUILD_DEPENDS+=		gmake-3.77:../../devel/
-
 CONFLICTS+=	openldap*
 
+USE_GMAKE=
 WRKSRC=         ${WRKDIR}/mozilla
 
 #
