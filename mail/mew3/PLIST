@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/07 21:05:05 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/11/29 14:31:45 uebayasi Exp $
 bin/incm
 bin/mewcat
 bin/mewdecode
 bin/mewencode
-bin/mewls
+bin/mewl
 share/mew/Mew.img
 share/mew/Mew.png
 share/mew/Mew.xbm
@@ -48,7 +48,7 @@ man/man1/incm.1
 man/man1/mewcat.1
 man/man1/mewdecode.1
 man/man1/mewencode.1
-man/man1/mewls.1
+man/man1/mewl.1
 ${EMACS_LISPPREFIX}/mew/contrib/00readme
 ${EMACS_LISPPREFIX}/mew/contrib/00readme-namazu.jis
 ${EMACS_LISPPREFIX}/mew/contrib/mew-browse.el
@@ -106,9 +106,12 @@ ${EMACS_LISPPREFIX}/mew/mew-highlight.el
 ${EMACS_LISPPREFIX}/mew/mew-highlight.elc
 ${EMACS_LISPPREFIX}/mew/mew-imap.el
 ${EMACS_LISPPREFIX}/mew/mew-imap.elc
+${EMACS_LISPPREFIX}/mew/mew-imap2.el
+${EMACS_LISPPREFIX}/mew/mew-imap2.elc
 ${EMACS_LISPPREFIX}/mew/mew-key.el
 ${EMACS_LISPPREFIX}/mew/mew-key.elc
 ${EMACS_LISPPREFIX}/mew/mew-lang-jp.el
+${EMACS_LISPPREFIX}/mew/mew-lang-kr.el
 ${EMACS_LISPPREFIX}/mew/mew-lang-latin.el
 ${EMACS_LISPPREFIX}/mew/mew-local.el
 ${EMACS_LISPPREFIX}/mew/mew-local.elc
