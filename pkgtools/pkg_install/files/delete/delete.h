@@ -1,4 +1,4 @@
-/* $NetBSD: delete.h,v 1.3 2003/09/23 07:13:50 grant Exp $ */
+/* $NetBSD: delete.h,v 1.4 2004/11/02 00:10:15 erh Exp $ */
 
 /* from FreeBSD Id: delete.h,v 1.4 1997/02/22 16:09:35 peter Exp */
 
@@ -27,6 +27,7 @@
 
 extern char *Prefix;
 extern char *ProgramPath;
+extern Boolean NoDeleteFiles;
 extern Boolean NoDeInstall;
 extern Boolean CleanDirs;
 extern Boolean Force;
