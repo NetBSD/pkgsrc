@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/04 20:31:23 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/07 13:30:16 seb Exp $
 bin/scm
 bin/scmlit
 include/patchlvl.h
@@ -6,9 +6,6 @@ include/scm.h
 include/scmfig.h
 include/scmflags.h
 include/scmhob.h
-info/Xlibscm.info
-info/hobbit.info
-info/scm.info
 lib/libscm.a
 man/man1/scm.1
 share/scm/COPYING
