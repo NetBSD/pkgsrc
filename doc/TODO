@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2961 2005/01/25 13:37:39 blymn Exp $
+$NetBSD: TODO,v 1.2962 2005/01/25 16:20:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -359,6 +359,7 @@ Suggested package updates
 	o cilk-5.3.2
 	o cint-5.15
 	o cjk-lyx-1.3.3
+	o cksfv-1.3.1
 	o clanlib-0.7.8
 	o classpath-0.13
 	o classpath-gui-0.13
@@ -381,8 +382,10 @@ Suggested package updates
 	o crossfire-srv-1.5.0
 	o crypto++-5.2.1 [pkg/28740]
 	o cscope-15.5
+	o cssc-1.0.1
 	o cstream-2.5
 	o cvs-1.11.18
+	o cvsweb-3.0.5
 	o cwtext-0.94
 	o cxref-1.6
 	o cy-login-1.5.28
@@ -438,7 +441,7 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enscript-1.6.4
 	o epic4-2.2
-	o eric3-3.5.1
+	o eric3-3.6.0
 	o erlang-10b-2
 	o esh-0.8.5
 	o etach-1.4.0
@@ -510,6 +513,7 @@ Suggested package updates
 	o gnome-utils-1.4.1.3
 	o gnome-vfsmm26-2.8.0?
 	o gnucash-docs-1.8.5
+	o gnutls-1.0.24
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.39
 	o gogo-3.11p1
@@ -524,6 +528,7 @@ Suggested package updates
 	o gri-2.12.8
 	o gsasl-0.2.4
 	o gsed-4.1.2
+	o gsharutils-4.3.78
 	o gtetrinet-0.7.8
 	o gtexinfo-4.8
 	o gtk-systrace-2003.06.23
@@ -545,6 +550,7 @@ Suggested package updates
 	o html2wml-0.4.11
 	o httperf-0.8
 	o httptunnel-3.3
+	o hugs-200311
 	o hydrogen-0.9.0
 	o hylafax-4.2.1
 	o i2ocfg-1.1
@@ -597,6 +603,7 @@ Suggested package updates
 	o lavaps-2.7
 	o lcab-1.0b11
 	o lcc-4.2
+	o leafnode-1.10.8
 	o leafpad-0.7.9
 	o libcdio-0.71
 	o libcomprex-0.3.3
@@ -628,6 +635,7 @@ Suggested package updates
 	o libtheora-1.0alpha4
 	o licq-core-1.3.0
 	o liferea-0.9.0b
+	o links-2.1pre16
 	o linuxsms-0.77
 	o lmbench-2.0.4
 	o lmclock-1.2
@@ -650,16 +658,17 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.0.23
+	o mathomatic-11.6e
 	o memtest86-3.2
 	o mergeant-0.52
 	o mgetty+sendfax-1.1.31
-	o micq-0.4.12
+	o micq-0.4.12 [pkg/29063]
 	o mini_sendmail-1.3.5
 	o minicom-2.1
 	o minivmac-2.5.0
 	o mknmz-wwwoffle-0.7.2
 	o mldonkey-2.5.22
-	o mlterm-2.9.0
+	o mlterm-2.9.1 [pkg/29061]
 	o mlview-0.7.1
 	o mmix-20041014
 	o moscow_ml-2.01
@@ -678,10 +687,11 @@ Suggested package updates
 	o multitail-3.4.5
 	o muse-0.9.1
 	o nail-11.20
+	o naim-0.11.7.3
 	o nano-1.3.5 [devel version]
 	o nap-1.5.3
 	o navi2ch-1.7.5
-	o ncmpc-0.11.0 [pkg/26237]
+	o ncmpc-0.11.1 [pkg/29057]
 	o ncview-1.92e
 	o netatalk1-1.6.4
 	o netcdf-4.0.0a
@@ -761,6 +771,7 @@ Suggested package updates
 	o p5-I18N-LangTags-0.35
 	o p5-IO-Socket-SSL-0.96
 	o p5-IO-String-1.06
+	o p5-IO-Util-1.42
 	o p5-IO-Zlib-1.04
 	o p5-IPC-Run-0.78
 	o p5-Lchown-1.00
@@ -854,8 +865,8 @@ Suggested package updates
 	o p5-perl-ldap-0.3202
 	o p5-razor-agents-2.67
 	o p5-sybperl-2.17
-	o p5-xmltv-0.5.37
-	o p7zip-4.14
+	o p5-xmltv-0.5.38
+	o p7zip-4.14.01
 	o pari-2.2.7
 	o pcal-4.8
 	o pdmenu-1.2.85
@@ -867,7 +878,7 @@ Suggested package updates
 	o pgpdump-0.24
 	o phoon-20030120
 	o photopc-3.05
-	o phpmyadmin-2.6.1rc2
+	o phpmyadmin-2.6.1
 	o phylip-3.62
 	o piewm-1.03
 	o pilot-link-0.11.8
@@ -1112,6 +1123,7 @@ Suggested package updates
 	o wdm-1.27
 	o weechat-0.0.8
 	o windowlab-1.25
+	o wl-2.12.0 [pkg/29043]
 	o wmbiff-0.4.26
 	o wmweather-2.4.3
 	o wol-0.7.1
