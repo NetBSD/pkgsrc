@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/05/02 11:54:30 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/13 13:51:13 wiz Exp $
 #
 
 DISTNAME=	gtkdiff-1.8.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://home.catv.ne.jp/pp/ginoue/software/gtkdiff/
 

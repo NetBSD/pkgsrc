@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/05/02 13:39:55 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/13 13:52:30 wiz Exp $
 #
 
 DISTNAME=	geg-1.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://www.infolaunch.com/~daveb/
 

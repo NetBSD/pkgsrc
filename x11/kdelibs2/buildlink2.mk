@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.15 2003/05/12 04:02:49 jmc Exp $
+# $NetBSD: buildlink2.mk,v 1.16 2003/07/13 13:54:25 wiz Exp $
 
 .if !defined(KDELIBS2_BUILDLINK2_MK)
 KDELIBS2_BUILDLINK2_MK=	# defined
@@ -8,7 +8,7 @@ KDELIBS2_BUILDLINK2_MK=	# defined
 BUILDLINK_PACKAGES+=		kdelibs2
 BUILDLINK_PKGBASE.kdelibs2?=	kdelibs
 .if !defined(BUILDLINK_DEPENDS.kdelibs2)
-BUILDLINK_DEPENDS.kdelibs2+=	kdelibs>=2.2.2nb5
+BUILDLINK_DEPENDS.kdelibs2+=	kdelibs>=2.2.2nb6
 BUILDLINK_DEPENDS.kdelibs2+=	kdelibs<3.0	# qt2-designer-kde wants KDE_2_
 .endif
 BUILDLINK_PKGSRCDIR.kdelibs2?=	../../x11/kdelibs2
@@ -26,7 +26,6 @@ BUILDLINK_FILES_CMD.kdelibs2= \
 KDEDIR=				${BUILDLINK_PREFIX.kdelibs2}
 
 BUILDLINK_DEPENDS.audiofile=	libaudiofile>=0.2.3
-BUILDLINK_DEPENDS.qt2-libs=	qt2-libs>=2.2.2nb5
 USE_OPENSSL_VERSION=		${OPENSSL_VERSION_096}
 
 .include "../../audio/libaudiofile/buildlink2.mk"

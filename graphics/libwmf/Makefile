@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2003/05/05 16:32:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.37 2003/07/13 13:52:11 wiz Exp $
 #
 
 DISTNAME=		libwmf-0.2.8
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wvware/}
 

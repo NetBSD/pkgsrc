@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2003/06/10 20:46:49 jdc Exp $
+# $NetBSD: Makefile,v 1.40 2003/07/13 13:50:31 wiz Exp $
 
 DISTNAME=	xmcd-3.0.2
-PKGREVISION=    2
+PKGREVISION=    3
 WRKSRC=		${WRKDIR}/xmcd-3.0
 CATEGORIES=	audio
 MASTER_SITES=	http://www.ibiblio.org/tkan/download/xmcd/src/

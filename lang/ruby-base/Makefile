@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2003/06/23 21:40:22 jschauma Exp $
+# $NetBSD: Makefile,v 1.16 2003/07/13 13:52:23 wiz Exp $
 # FreeBSD Id: ports/lang/ruby/Makefile,v 1.39 2000/10/20 19:56:03 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}base-${RUBY_VERSION}
+PKGREVISION=	1
 WRKSRC=		${RUBY_WRKSRC}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_RUBY}

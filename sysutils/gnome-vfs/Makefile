@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2003/05/05 16:50:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2003/07/13 13:53:16 wiz Exp $
 
 DISTNAME=		gnome-vfs-1.0.5
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/1.0/}
 

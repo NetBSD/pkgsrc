@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:16:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/13 13:53:29 wiz Exp $
 #
 
 DISTNAME=	aspell-ru-0.50-2
 PKGNAME=	${DISTNAME:C/ru-(.*)-(.*)$/russian-\1.\2/}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/ru/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/05/02 11:56:57 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/07/13 13:53:53 wiz Exp $
 
 .if !defined(CONTROLCENTER_BUILDLINK2_MK)
 CONTROLCENTER_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			controlcenter
-BUILDLINK_DEPENDS.controlcenter?=	control-center>=1.4.0.4nb2
+BUILDLINK_DEPENDS.controlcenter?=	control-center>=1.4.0.4nb3
 BUILDLINK_PKGSRCDIR.controlcenter?=	../../x11/controlcenter
 DEPENDS+=	${BUILDLINK_DEPENDS.controlcenter}:../../x11/controlcenter
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/05/05 19:05:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/13 13:50:34 wiz Exp $
 #
 
 DISTNAME=		xmms-FMRadio-1.4
 PKGNAME=		xmms-fmradio-1.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		http://silicone.free.fr/xmms-FMRadio/
 EXTRACT_SUFX=		.tgz

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2003/05/05 19:05:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/13 13:51:25 wiz Exp $
 #
 
 DISTNAME=	pilrc-2.9p9
 PKGNAME=	pilrc-2.9.10
-PKGREVISION=	1
+PKGREVISION=	2
 #WRKSRC=	${WRKDIR}/pilrc-2.9p9
 DIFFS=		pilrc-2.9p10.diff
 EXTRACT_SUFFIX=	.tgz

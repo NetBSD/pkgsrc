@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/05/02 11:55:27 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/07/13 13:52:13 wiz Exp $
 #
 # This Makefile fragment is included by packages that use openquicktime.
 #
@@ -9,7 +9,7 @@
 OPENQUICKTIME_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			openquicktime
-BUILDLINK_DEPENDS.openquicktime?=		openquicktime>=1.0nb1
+BUILDLINK_DEPENDS.openquicktime?=		openquicktime>=1.0nb2
 BUILDLINK_PKGSRCDIR.openquicktime?=		../../graphics/openquicktime
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.openquicktime=openquicktime

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:20:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/13 13:51:12 wiz Exp $
 #
 
 DISTNAME=		gscope-0.4.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gscope/}
 

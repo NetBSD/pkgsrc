@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/05/02 11:54:29 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/07/13 13:51:12 wiz Exp $
 #
 
 .if !defined(GNUSTEP_BASE_BUILDLINK2_MK)
 GNUSTEP_BASE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnustep-base
-BUILDLINK_DEPENDS.gnustep-base?=	gnustep-base>=1.6.0nb1
+BUILDLINK_DEPENDS.gnustep-base?=	gnustep-base>=1.6.0nb2
 BUILDLINK_PKGSRCDIR.gnustep-base?=	../../devel/gnustep-base
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnustep-base=gnustep-base

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2003/04/02 12:05:25 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/13 13:52:09 wiz Exp $
 #
 
 DISTNAME=	libggi-2.0.3.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=			1
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.ggi-project.org/pub/ggi/ggi/v2.0/ \

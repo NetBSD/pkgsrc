@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/17 14:42:10 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/13 13:50:58 wiz Exp $
 #
 
 DISTNAME=		pxtools-0.0.19
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		http://jan.kneschke.de/projects/pxtools/download/
 

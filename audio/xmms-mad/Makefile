@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/07/10 11:36:44 adam Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/13 13:50:36 wiz Exp $
 #
 
 DISTNAME=		xmms-mad-0.0.9
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		audio
 MASTER_SITES=		http://www.superduper.net/downloads/xmms-mad/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:17:17 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/13 13:53:10 wiz Exp $
 #
 
 DISTNAME=	gtk-systrace-2002-12-01
 PKGNAME=	gtk-systrace-20021201
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/notification-0.1
 CATEGORIES=	security x11
 MASTER_SITES=	http://www.citi.umich.edu/u/provos/systrace/

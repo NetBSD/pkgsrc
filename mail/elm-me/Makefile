@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2003/06/02 01:18:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/13 13:52:25 wiz Exp $
 # FreeBSD: Makefile,v 1.42 1997/12/24 01:21:07 alex Exp
 #
 
 DISTNAME=		elm-2.4ME+93
 PKGNAME=		elm-me-2.4.93
+PKGREVISION=				1
 WRKSRC=			${WRKDIR}/elm2.4.ME+.93
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.ozone.fmi.fi/KEH/ \

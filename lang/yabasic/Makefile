@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/02 23:19:53 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/13 13:52:24 wiz Exp $
 
 DISTNAME=		yabasic-2.722
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://www.yabasic.de/download/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/07/12 11:54:39 zuntum Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/13 13:53:43 wiz Exp $
 #
 
 DISTNAME=	qvwm-1.1.12
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	ftp://www.qvwm.org/pub/qvwm/
 

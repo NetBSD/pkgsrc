@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/05/02 11:55:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/13 13:52:46 wiz Exp $
 
 DISTNAME=	IglooFTP-0.6.1
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/network/file-transfer/} \

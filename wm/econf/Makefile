@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2003/05/05 16:54:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/13 13:53:41 wiz Exp $
 #
 
 DISTNAME=		enlightenment-conf-0.15
 PKGNAME=		econf-0.15
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11 wm
 MASTER_SITES=		ftp://www.rasterman.com/pub/enlightenment/enlightenment/
 

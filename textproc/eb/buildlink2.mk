@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:40:00 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/07/13 13:53:31 wiz Exp $
 
 .if !defined(EB_BUILDLINK2_MK)
 EB_BUILDLINK2_MK=	# defined
@@ -6,7 +6,7 @@ EB_BUILDLINK2_MK=	# defined
 BUILDLINK_PACKAGES+=		eb
 
 # eb<=3.2.1 packages didn't fix eb.conf.
-BUILDLINK_DEPENDS.eb?=		eb>=3.2.2
+BUILDLINK_DEPENDS.eb?=		eb>=3.3.2nb1
 BUILDLINK_PKGSRCDIR.eb?=	../../textproc/eb
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.eb=eb
