@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2839 2003/07/20 14:22:50 abs Exp $
+$NetBSD: CHANGES,v 1.2840 2003/07/20 14:54:23 frueauf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2873,3 +2873,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xtu to 1.2 [martin 2003-07-20]
 	Updated bidwatcher to 1.3.10 [tron 2003-07-20]
 	Updated cpuflags to 0.55 [abs 2003-07-20]
+	Updated fetchmail to 6.2.3 [frueauf 2003-07-20]
+	Updated fetchmailconf to 6.2.3 [frueauf 2003-07-20]
