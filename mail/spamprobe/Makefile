@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:47:03 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/01 12:16:14 grant Exp $
 
 DISTNAME=	spamprobe-0.8b
-COMMENT=	Spam detector using Bayesian analysis of word counts
 PKGREVISION=	1
 CATEGORIES=	mail
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=spamprobe/}
+
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://spamprobe.sourceforge.net/
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=spamprobe/}
+COMMENT=	Spam detector using Bayesian analysis of word counts
 
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
