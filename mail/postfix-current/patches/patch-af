@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.10 2004/07/02 08:03:04 martti Exp $
+$NetBSD: patch-af,v 1.11 2004/07/31 05:53:44 jlam Exp $
 
 --- conf/main.cf.orig	2004-04-15 09:27:21.000000000 -0400
 +++ conf/main.cf	2004-05-23 22:51:16.000000000 -0400
@@ -7,19 +7,19 @@ $NetBSD: patch-af,v 1.10 2004/07/02 08:03:04 martti Exp $
  # postXXX commands.
  #
 -command_directory = /usr/sbin
-+command_directory = __PREFIX/sbin
++command_directory = @PREFIX@/sbin
  
  # The daemon_directory parameter specifies the location of all Postfix
  # daemon programs (i.e. programs listed in the master.cf file). This
  # directory must be owned by root.
  #
 -daemon_directory = /usr/libexec/postfix
-+daemon_directory = __PREFIX/libexec/postfix
++daemon_directory = @PREFIX@/libexec/postfix
 +
 +# Shared files and etc directory
-+etc_directory = __PKG_SYSCONFDIR
-+share_directory = __PREFIX/share/examples/postfix
-+man_directory = __PREFIX/man
++etc_directory = @PKG_SYSCONFDIR@
++share_directory = @PREFIX@/share/examples/postfix
++man_directory = @PREFIX@/man
  
  # QUEUE AND PROCESS OWNERSHIP
  #
@@ -46,15 +46,15 @@ $NetBSD: patch-af,v 1.10 2004/07/02 08:03:04 martti Exp $
  # manpage_directory: The location of the Postfix on-line manual pages.
  #
 -manpage_directory =
-+manpage_directory = __PREFIX/man
++manpage_directory = @PREFIX@/man
  
  # sample_directory: The location of the Postfix sample configuration files.
  # This parameter is obsolete as of Postfix 2.1.
  #
 -sample_directory =
-+sample_directory = __PREFIX/share/examples/postfix
++sample_directory = @PREFIX@/share/examples/postfix
  
  # readme_directory: The location of the Postfix README files.
  #
 -readme_directory =
-+readme_directory = __PREFIX/share/doc/postfix
++readme_directory = @PREFIX@/share/doc/postfix

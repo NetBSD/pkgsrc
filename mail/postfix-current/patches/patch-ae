@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2004/07/02 08:03:04 martti Exp $
+$NetBSD: patch-ae,v 1.5 2004/07/31 05:53:44 jlam Exp $
 
 --- src/global/mail_params.h.orig	2004-04-21 14:56:04.000000000 -0400
 +++ src/global/mail_params.h	2004-05-23 22:44:13.000000000 -0400
@@ -16,14 +16,14 @@ $NetBSD: patch-ae,v 1.4 2004/07/02 08:03:04 martti Exp $
  #define VAR_DAEMON_DIR		"daemon_directory"
  #ifndef DEF_DAEMON_DIR
 -#define DEF_DAEMON_DIR		"/usr/libexec/postfix"
-+#define DEF_DAEMON_DIR		"__PREFIX/libexec/postfix"
++#define DEF_DAEMON_DIR		"@PREFIX@/libexec/postfix"
  #endif
  extern char *var_daemon_dir;
  
  #define VAR_COMMAND_DIR		"command_directory"
  #ifndef DEF_COMMAND_DIR
 -#define DEF_COMMAND_DIR		"/usr/sbin"
-+#define DEF_COMMAND_DIR		"__PREFIX/sbin"
++#define DEF_COMMAND_DIR		"@PREFIX@/sbin"
  #endif
  extern char *var_command_dir;
  
