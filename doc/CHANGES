@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8647 2005/01/07 12:00:07 agc Exp $
+$NetBSD: CHANGES,v 1.8648 2005/01/07 12:37:26 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -166,3 +166,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added qnetwalk-1.1 [wiz 2005-01-07]
 	Removed ntop2 [adam 2005-01-07]
 	Updated pkg_install to 20050106 [agc 2005-01-07]
+	Updated gwenview to 1.1.7a [markd 2005-01-07]
