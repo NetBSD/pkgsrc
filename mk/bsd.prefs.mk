@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.22 2001/03/06 14:50:46 agc Exp $
+# $NetBSD: bsd.prefs.mk,v 1.23 2001/03/06 16:00:16 wiz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -146,8 +146,12 @@ NEED_NCURSES=   	YES
 ##### Some overrides of defaults below on a per-OS basis.
 .if (${OPSYS} == "NetBSD")
 LOCALBASE?=             ${DESTDIR}/usr/pkg
+PKG_TOOLS_BIN?=		/usr/sbin
 .elif (${OPSYS} == "SunOS")
 X11BASE?=               ${DESTDIR}/usr/openwin
+PKG_TOOLS_BIN?=		${LOCALBASE}/bsd/bin
+.elf (${OPSYS} == "Linux")
+PKG_TOOLS_BIN?=		${LOCALBASE}/bsd/bin
 .endif
 
 LOCALBASE?=		${DESTDIR}/usr/local
@@ -166,6 +170,11 @@ DIGEST_VERSION!= 	${DIGEST} -V
 DIGEST_VERSION=		${DIGEST_REQD}
 .endif
 MAKEFLAGS+=		DIGEST_VERSION="${DIGEST_VERSION}"
+.endif
+
+.ifndef PKGTOOLS_VERSION
+PKGTOOLS_VERSION!=${PKG_TOOLS_BIN}/pkg_info -V 2>/dev/null || echo 20010302
+MAKEFLAGS+=	PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
 .endif
 
 .endif	# BSD_PKG_MK
