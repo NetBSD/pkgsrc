@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 1999/03/22 22:43:42 agc Exp $
+# $NetBSD: Makefile,v 1.13 1999/04/04 22:35:38 tron Exp $
 #
 
-DISTNAME=	gnome-core-1.0.3
+DISTNAME=	gnome-core-1.0.4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 		ftp://ftp.jimpick.com/pub/mirrors/gnome/gnome-1.0/sources/ \
@@ -11,8 +11,9 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
 DEPENDS+=	esound-0.2.8:../../audio/esound
-DEPENDS+=	gnome-libs-1.0.3:../../x11/gnome-libs
-DEPENDS+=	libgtop-1.0.1:../../devel/libgtop
+DEPENDS+=	gnome-libs-1.0.5:../../x11/gnome-libs
+# "libgtop" packages is broken at the moment.
+#DEPENDS+=	libgtop-1.0.1:../../devel/libgtop
 
 NOT_FOR_ARCHS=	alpha	# problems with gtk
 
@@ -25,6 +26,7 @@ LOCALSTATEDIR=	/var/gnome
 
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
 			--with-glib-prefix=${LOCALBASE}
-CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
+CONFIGURE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
+			LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
 
 .include "../../mk/bsd.pkg.mk"
