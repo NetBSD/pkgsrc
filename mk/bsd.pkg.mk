@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.867 2001/11/29 20:06:03 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.868 2001/11/30 01:26:33 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1523,22 +1523,6 @@ do-patch: uptodate-digest
 .endif
 
 # Configure
-
-_CONFIGURE_PREREQ+=	replace-ncurses
-replace-ncurses:
-.if defined(REPLACE_NCURSES) && (!defined(NEED_NCURSES) || ${NEED_NCURSES} == "NO")
-.  for f in ${REPLACE_NCURSES}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; if [ -f ${f} ]; then	\
-		${SED}  -e "s/ncurses/curses/g" ${f} > ${f}.new;	\
-		if [ -x ${f} ]; then					\
-			${CHMOD} a+x ${f}.new;				\
-		fi;							\
-		${MV} ${f}.new ${f};					\
-	fi
-.  endfor
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}${TRUE}
-.endif
 
 _CONFIGURE_PREREQ+=	do-libtool
 do-libtool:
