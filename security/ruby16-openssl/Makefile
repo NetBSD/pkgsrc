@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/28 14:19:35 taca Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/06 13:08:36 taca Exp $
 
 DISTNAME=		ossl-0.1.4a
 PKGNAME=		${RUBY_PKGPREFIX}-openssl-0.1.4a
@@ -25,7 +25,7 @@ DOCS=			ChangeLog README
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/openssl
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/$f ${RUBY_DOCDIR}/openssl
+	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/openssl
 .endfor
 
 .include "../../lang/ruby/modules.mk"
