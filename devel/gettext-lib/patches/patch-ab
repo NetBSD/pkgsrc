@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2002/12/23 14:54:23 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2004/04/20 19:50:35 tv Exp $
 
 --- intl/Makefile.in.orig	Thu Jul 25 08:49:57 2002
-+++ intl/Makefile.in
-@@ -121,8 +121,7 @@ libintl.la libgnuintl.la: $(OBJECTS)
++++ intl/Makefile.in	Mon Mar 15 14:39:58 2004
+@@ -121,8 +121,7 @@
  	  $(CC) $(CPPFLAGS) $(CFLAGS) $(XCFLAGS) $(LDFLAGS) -o $@ \
  	  $(OBJECTS) @LTLIBICONV@ -lc \
  	  -version-info $(LTV_CURRENT):$(LTV_REVISION):$(LTV_AGE) \
@@ -12,3 +12,12 @@ $NetBSD: patch-ab,v 1.1 2002/12/23 14:54:23 jlam Exp $
  
  libintl.h: libgnuintl.h
  	cp $(srcdir)/libgnuintl.h libintl.h
+@@ -148,7 +147,7 @@
+ 	  $(mkinstalldirs) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir); \
+ 	  $(INSTALL_DATA) libintl.h $(DESTDIR)$(includedir)/libintl.h; \
+ 	  $(LIBTOOL) --mode=install \
+-	    $(INSTALL_DATA) libintl.$la $(DESTDIR)$(libdir)/libintl.$la; \
++	    $(INSTALL) libintl.$la $(DESTDIR)$(libdir)/libintl.$la; \
+ 	else \
+ 	  : ; \
+ 	fi
