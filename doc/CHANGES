@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8631 2005/01/06 12:59:36 tron Exp $
+$NetBSD: CHANGES,v 1.8632 2005/01/06 13:04:55 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -123,7 +123,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated openldap to 2.2.20 [adam 2005-01-06]
 	Updated gstreamer to 0.8.8 [jmmv 2005-01-06]
 	Updated gst-plugins to 0.8.7 [jmmv 2005-01-06]
-	Updated gst-plugins-arts to 0.8.7 [jmmv 2005-01-06]
+	Updated gst-plugins-artsd to 0.8.7 [jmmv 2005-01-06]
 	Updated gst-plugins-cdparanoia to 0.8.7 [jmmv 2005-01-06]
 	Updated gst-plugins-dvdnav to 0.8.7 [jmmv 2005-01-06]
 	Updated gst-plugins-dvdread to 0.8.7 [jmmv 2005-01-06]
