@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/22 04:14:43 martti Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/23 15:39:13 recht Exp $
 
 DISTNAME=	ParsedXML-1.3.1
 PKGREVISION=	1
@@ -15,5 +15,5 @@ ZOPE_COPYPRODUCT= zope-std-copyproduct-short
 USE_BUILDLINK2=	yes
 
 .include "../../www/zope25/product.mk"
-.include "../../textproc/pyxml/buildlink2.mk"
+.include "../../textproc/py-xml/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
