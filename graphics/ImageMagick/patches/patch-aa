@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 1998/11/01 22:34:12 tron Exp $
+$NetBSD: patch-aa,v 1.7 1999/01/02 20:57:28 tron Exp $
 
---- Magick.tmpl.orig	Thu Oct 22 18:32:57 1998
-+++ Magick.tmpl	Sun Nov  1 23:14:22 1998
+--- Magick.tmpl.orig	Thu Dec 17 18:37:36 1998
++++ Magick.tmpl	Sat Jan  2 21:29:13 1999
 @@ -37,17 +37,17 @@
  #ifdef RsArchitecture
  XCOMM EXTENSIONS_DEFINES= -DHasLZW -DHasShape
@@ -91,8 +91,8 @@ $NetBSD: patch-aa,v 1.6 1998/11/01 22:34:12 tron Exp $
  XCOMM the top level X11 include directory or X11/X.h will be overwritten.
  
  #ifndef PREFIX
--PREFIX=/usr/local
-+PREFIX=${X11BASE}
+-PREFIX= /usr/local
++PREFIX= ${X11BASE}
  #endif
  
  DelegatePath= -DDelegatePath=\"$(PREFIX)/share/ImageMagick/\"
