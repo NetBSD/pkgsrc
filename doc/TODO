@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.481 2003/04/20 15:15:28 cjep Exp $
+$NetBSD: TODO,v 1.482 2003/04/20 20:59:15 cjep Exp $
 
 Suggested new packages
 ======================
@@ -150,7 +150,6 @@ Suggested package updates
 	o icewm-1.2.7
 	o inform-6.21.3 [pkg/19298]
 	o inn 2.3.5
-	o ipa-1.3.3 [pkg/21224]
 	o jakarta-ant-1.5 [pkg/18322]
 	o jakarta-ant-1.5.2
 	o jakarta-tomcat-3.3.1a
