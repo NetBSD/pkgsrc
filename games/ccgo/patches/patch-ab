@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/03/16 03:56:27 rh Exp $
+
+--- igs/fork.cc.orig	2002-11-24 02:49:32.000000000 +1000
++++ igs/fork.cc
+@@ -15,6 +15,7 @@ extern "C" {
+ #include <sys/fcntl.h>
+ #include <sys/wait.h>
+ #include <unistd.h>
++#include <signal.h>
+ }
+ 
+ using namespace igs;
+@@ -143,7 +144,7 @@ bool Fork::open_conn(const std::string &
+ 		close(c2p[0]);
+ 		close(c2p[1]);
+ 		close(2); // close cerr
+-		char * shell = "/bin/bash";
++		char * shell = "/bin/sh";
+ 		std::string c = std::string ("exec ") + n;
+ 		execl(shell, shell, "-c", c.c_str(), 0);
+ 		std::cerr << "Fail to fork: " << n << std::endl;
