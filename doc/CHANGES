@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2847 2003/07/21 12:31:15 wiz Exp $
+$NetBSD: CHANGES,v 1.2848 2003/07/21 12:41:36 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2883,3 +2883,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cgoban-java to 2.5.2 [rh 2003-07-21]
 	Added libggigcp-0.8.2 [wiz 2003-07-21]
 	Added libggiwmh-0.1.0 [wiz 2003-07-21]
+	Updated bins to 1.1.22 [martti 2003-07-21]
+	Updated distcc to 2.9 [martti 2003-07-21]
