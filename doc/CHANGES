@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7950 2004/11/22 20:16:17 wiz Exp $
+$NetBSD: CHANGES,v 1.7951 2004/11/22 22:07:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5383,3 +5383,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mp3splt to 2.1 [wiz 2004-11-22]
 	Updated mbmon to 2.05 [wiz 2004-11-22]
 	Updated xmbmon to 2.05 [wiz 2004-11-22]
+	Removed apache6 [wiz 2004-11-22]
