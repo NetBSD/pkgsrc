@@ -1,0 +1,2 @@
+libnbcompat is a portable NetBSD compatibility library for use by
+the pkgsrc tools and other sources from NetBSD.
