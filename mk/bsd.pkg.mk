@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1320 2003/12/13 22:15:11 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1321 2003/12/16 12:36:54 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -4819,64 +4819,79 @@ MAKE_ENV+=	MANZ="${MANZ}"
 .endif
 
 # generate ${PLIST} from ${_PLIST_SRC} by:
-# - fixing list of man-pages according to MANCOMPRESSED/MANZ
-#   (we don't take any notice of MANCOMPRESSED as many packages have .gz
-#   pages in PLIST even when they install manpages without compressing them)
-# - substituting by ${PLIST_SUBST}
 # - adding files and appropriate rmdir statements for perl5 modules if
 #   PERL5_PACKLIST is defined
+# - substituting for PLIST_SUBST entries
+# - fixing list of man-pages according to MANZ, MANINSTALL.
 # - adding symlinks for shared libs (ELF) or ldconfig calls (a.out).
 
-.if ${_OPSYS_HAS_MANZ} == "yes"
-.  ifdef MANZ
-_MANZ_EXPRESSION= -e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]$$\)|\1.gz|' \
-		-e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*0$$\)|\1.gz|'
-.  else
-_MANZ_EXPRESSION= -e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]\)\.gz$$|\1|' \
-		-e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*0\)\.gz$$|\1|'
-.  endif # MANZ
-_MANZ_NAWK_CMD=
-.else
-_MANZ_EXPRESSION=
-.  ifdef MANZ
-_MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/ { \
-		$$0 = sprintf("%s.gz", $$0);				\
+# plist awk pattern-action statement to handle MANINSTALL
+_PLIST_AWK_MANINSTALL=							\
+{									\
+	if (!"${MANINSTALL:Mmaninstall}" &&				\
+		match($$0, "^([^/]*/)*man/([^/]*/)?man[1-9ln]") ) {	\
+			next;						\
 	}								\
-	/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0\.gz$$/ {	\
-		$$0 = sprintf("%s.gz", $$0);				\
+	if (!"${MANINSTALL:Mcatinstall}" &&				\
+		match($$0, "^([^/]*/)*man/([^/]*/)?cat[1-9ln]") ) {	\
+			next;						\
 	}								\
-	{ print $$0; }' |
-.  else
-_MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/ { \
-		$$0 = substr($$0, 1, length($$0) - 3);			\
-	}								\
-	/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0\.gz$$/ {	\
-		$$0 = substr($$0, 1, length($$0) - 3);			\
-	}								\
-	{ print $$0; }' |
-.  endif # MANZ
-.endif
+}
 
-_MANINSTALL_CMD= ${AWK} 'BEGIN{						\
-		start="^([^/]*/)*man/([^/]*/)?";			\
-		end="[1-9ln]"; }					\
-		{ if (!"${MANINSTALL:Mmaninstall}" && 			\
-				match($$0, start "man" end)) {next;}	\
-		if (!"${MANINSTALL:Mcatinstall}" && 			\
-				match($$0, start "cat" end)) {next;}	\
-		print $$0; }' |
+# plist awk pattern-action statement to strip '.gz' from man
+# entries
+_PLIST_AWK_STRIP_MANZ=						              \
+/^([^\/]*\/)*man\/([^\/]*\/)?(man[1-9ln]\/.*[1-9ln]|cat[1-9ln]\/.*0)\.gz$$/ { \
+	$$0 = substr($$0, 1, length($$0) - 3);				      \
+}
 
+# plist awk pattern-action statement to add '.gz' to man entries
+_PLIST_AWK_ADD_MANZ=							  \
+/^([^\/]*\/)*man\/([^\/]*\/)?(man[1-9ln]\/.*[1-9ln]|cat[1-9ln]\/.*0)$$/ { \
+	$$0 = $$0 ".gz";						  \
+}
+	
+# plist awk pattern-action statement to handle PLIST_SUBST substitutions
+# BEWARE: the awk script quote is closed and reopened around the
+# string argument of gsub() calls so historic quoting semantic of
+# PLIST_SUBST is preserved.
+# XXX `_str_quote_{start,end}_' is a gross hack to work around weird word
+# splitting.
+_PLIST_AWK_SUBST= { ${PLIST_SUBST:S|=|\\}/,_str_quote_start_|:S|$|_str_quote_end_);|:S|^|gsub(/\\\$\\{|:S|_str_quote_start_|"'|g:S|_str_quote_end_|'"|g} }
+
+# plist awk pattern-action statement to rewrite "imake installed" catman pages
+# as plain manpages.
+_PLIST_AWK_IMAKE_MAN=							\
+/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0$$/ {			\
+	n = match($$0, "/cat[1-9ln]");					\
+	sect = sprintf(".%s", substr($$0, n + 4, 1));			\
+	sub("/cat", "/man");						\
+	sub("\\.0$$", sect);						\
+}
+
+# _PLIST_AWK_SCRIPT hold the complete awk script for plist target.
+#
+_PLIST_AWK_SCRIPT=	'
+# Do the substitutions
+# See comments above about _PLIST_AWK_SUBST: it contains single quotes!
+# So _PLIST_AWK_SCRIPT is intended to be single quoted.
+_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_SUBST}
+# Strip the '.gz' suffixes on man entries
+_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_STRIP_MANZ}
+# Deal with MANINSTALL and man entries
+_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_MANINSTALL}
+# Deal with "imake installed" catman pages
 .if defined(USE_IMAKE) && ${_PREFORMATTED_MAN_DIR} == "man"
-_IMAKE_MAN_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0(\.gz)?$$/ { \
-	sect = $$0; n = match(sect, "/cat[1-9ln]");			\
-	sect = sprintf(".%s", substr(sect, n + 4, 1));			\
-	s = $$0; sub("/cat", "/man", s); sub("\\.0(\\.gz)?$$", sect, s);\
-	if (match($$0, "\\.gz$$") > 0) { ext = ".gz";} else { ext = "";} \
-	$$0 = sprintf("%s%s", s, ext);					\
-	} { print $$0; }' |
-.  else
-_IMAKE_MAN_CMD=
-.endif # USE_IMAKE
+_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_IMAKE_MAN}
+.endif
+# Add '.gz' suffixes on man entries if needed
+.if defined(MANZ)
+_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_ADD_MANZ}
+.endif
+# Print the entry
+_PLIST_AWK_SCRIPT+=	{ print $$0; }
+#
+_PLIST_AWK_SCRIPT+=	'
 
 .if !defined(PERL5_GENERATE_PLIST)
 .  if defined(PERL5_PACKLIST)
@@ -4945,12 +4960,7 @@ _GENERATE_PLIST=	${CAT} ${_PLIST_SRC}; ${GENERATE_PLIST}
 plist: ${PLIST}
 ${PLIST}: ${_PLIST_SRC}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	{ ${_GENERATE_PLIST} } | 					\
-		${_MANINSTALL_CMD}					\
-		${_MANZ_NAWK_CMD} 					\
-		${_IMAKE_MAN_CMD} 					\
-		${SED} 	${PLIST_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}	\
-			${_MANZ_EXPRESSION}				\
+	{ ${_GENERATE_PLIST} } | ${AWK} ${_PLIST_AWK_SCRIPT}		\
 		> ${PLIST}; 						\
 	  ${MAKE} ${MAKEFLAGS} do-shlib-handling			\
 		SHLIB_PLIST_MODE=1
