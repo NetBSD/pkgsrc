@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.658 2002/12/01 22:18:53 gson Exp $
+$NetBSD: CHANGES,v 1.659 2002/12/01 22:58:15 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3785,3 +3785,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ssldump to 0.9b3 [seb 2002-12-01]
 	Updated tcl-snack to 2.2 [gson 2002-12-01]
 	Updated wavesurfer to 1.4.6 [gson 2002-12-01]
+	Updated apcupsd to 3.8.5 [bouyer 2002-12-01]
