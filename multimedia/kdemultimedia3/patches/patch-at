@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1 2005/03/19 01:03:38 markd Exp $
+
+--- mpeglib_artsplug/decoderBaseObject_impl.h.orig	2005-03-18 09:31:02.544121000 +1300
++++ mpeglib_artsplug/decoderBaseObject_impl.h
+@@ -64,7 +64,7 @@ class DecoderBaseObject_impl :
+ 
+   bool m_streaming;
+ 
+-  queue<DataPacket<mcopbyte>*> *m_packetQueue;
++  std::queue<DataPacket<mcopbyte>*> *m_packetQueue;
+ 
+ public:
+ 
