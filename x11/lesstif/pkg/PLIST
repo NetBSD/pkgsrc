@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 1998/05/23 13:29:37 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 1998/06/06 20:40:06 tron Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
@@ -151,11 +151,9 @@ share/lesstif/TODO
 share/lesstif/doc/COPYING.LIB.html
 share/lesstif/doc/FAQ.html
 share/lesstif/doc/INSTALL.html
-share/lesstif/doc/agenda.html
 share/lesstif/doc/bug-reporting.html
 share/lesstif/doc/core.html
 share/lesstif/doc/current.html
-share/lesstif/doc/download.html
 share/lesstif/doc/get.html
 share/lesstif/doc/images/hungry.gif
 share/lesstif/doc/images/lesstif-realsmall.gif
