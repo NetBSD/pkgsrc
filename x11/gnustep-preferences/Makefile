@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2003/01/03 05:20:39 rh Exp $
+# $NetBSD: Makefile,v 1.3 2003/03/07 03:00:40 jmc Exp $
 #
 
 DISTNAME=	Preferences-1.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	gnustep-${DISTNAME:S/P/p/}
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prefsapp/}
@@ -17,6 +17,18 @@ USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 USE_X11=	YES
 MAKEFILE=	GNUmakefile
+
+#
+# Gnustep seems to use it's own idea of architecture names and at least for
+# i386 is using ix86. For other archs default for MACHINE_ARCH.
+# Tested specifically on x86 and powerpc
+.if (${MACHINE_ARCH} == "i386")
+PLIST_SUBST+= 	ARCH="ix86"
+PLIST_SUBST+=	ARCH_LOC="ix86/${LOWER_OPSYS}elf"
+.else
+PLIST_SUBST+=	ARCH="${MACHINE_ARCH}"
+PLIST_SUBST+=	ARCH_LOC="${MACHINE_ARCH}/${LOWER_OPSYS}"
+.endif
 
 .include "../../x11/gnustep-back/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
