@@ -1,27 +1,21 @@
-$NetBSD: patch-gdb_configure_in,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+$NetBSD: patch-gdb_configure_in,v 1.2 2004/10/04 22:35:17 shannonjr Exp $
 
---- gdb/configure.in.orig	2004-02-25 17:41:46.000000000 -0700
+--- gdb/configure.in.orig	2004-07-17 05:29:08.000000000 -0600
 +++ gdb/configure.in
-@@ -941,6 +941,22 @@ if test ${build} = ${host} -a ${host} = 
-          CONFIG_LDFLAGS="${CONFIG_LDFLAGS} -lpthdebug"
-       fi
-       ;;
-+   netbsd*)
-+      AC_MSG_CHECKING(for NetBSD thread debugging library)
-+      AC_CACHE_VAL(gdb_cv_have_netbsd_thread_debug,
-+                   [AC_TRY_COMPILE([#include <pthread_dbg.h>],
-+                                   [#ifndef TD_STATE_RUNNING
-+                                    #error
-+                                    #endif],
-+                                   gdb_cv_have_netbsd_thread_debug=yes,
-+                                   gdb_cv_have_netbsd_thread_debug=no)])
-+      AC_MSG_RESULT($gdb_cv_have_netbsd_thread_debug)
-+      if test $gdb_cv_have_netbsd_thread_debug = yes; then
-+         CONFIG_SRCS="${CONFIG_SRCS} nbsd-thread.c"
-+         CONFIG_OBS="${CONFIG_OBS} nbsd-thread.o"
-+         CONFIG_LDFLAGS="${CONFIG_LDFLAGS} -lpthread_dbg"
-+      fi
-+      ;;
-    esac
-    AC_SUBST(CONFIG_LDFLAGS)
+@@ -504,6 +504,16 @@ if test $gdb_cv_struct_thread_td_pcb = y
+             [Define to 1 if your system has td_pcb in struct thread.])
  fi
+ 
++# See if <sys/lwp.h> defines `struct lwp`.
++AC_CACHE_CHECK([for struct lwp], gdb_cv_struct_lwp,
++[AC_TRY_COMPILE([#include <sys/param.h>
++#include <sys/lwp.h>], [struct lwp l;],
++gdb_cv_struct_lwp=yes, gdb_cv_struct_lwp=no)])
++if test $gdb_cv_struct_lwp = yes; then
++  AC_DEFINE(HAVE_STRUCT_LWP, 1,
++            [Define to 1 if your system has struct lwp.])
++fi
++
+ # See if <machine/reg.h> degines `struct reg'.
+ AC_CACHE_CHECK([for struct reg in machine/reg.h], gdb_cv_struct_reg,
+ [AC_TRY_COMPILE([#include <sys/types.h>

@@ -1,10 +1,11 @@
-$NetBSD: patch-i386_nbsdelf_mh,v 1.1.1.1 2004/06/01 19:29:30 shannonjr Exp $
+$NetBSD: patch-i386_nbsdelf_mh,v 1.2 2004/10/04 22:35:17 shannonjr Exp $
 
---- gdb/config/i386/nbsdelf.mh.orig	2004-02-22 09:20:22.000000000 -0700
+--- gdb/config/i386/nbsdelf.mh.orig	2004-06-27 10:22:43.000000000 -0600
 +++ gdb/config/i386/nbsdelf.mh
-@@ -1,4 +1,4 @@
+@@ -1,5 +1,5 @@
  # Host: NetBSD/i386 ELF
--NATDEPFILES= fork-child.o infptrace.o inftarg.o i386bsd-nat.o
-+NATDEPFILES= fork-child.o nbsd-nat.o infptrace.o inftarg.o i386bsd-nat.o
+-NATDEPFILES= fork-child.o infptrace.o inftarg.o \
++NATDEPFILES= fork-child.o nbsd-nat.o infptrace.o inftarg.o \
+ 	i386bsd-nat.o i386nbsd-nat.o bsd-kvm.o
  NAT_FILE= nm-nbsd.h
  XM_FILE= xm-nbsd.h
