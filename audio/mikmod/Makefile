@@ -1,10 +1,7 @@
-# New ports collection makefile for:	mikmod
+# Makefile for:		mikmod
 # Version required:	2.14
-# Date created:		20 April 1997
-# Whom:			doconnor@ist.flinders.edu.au
 #
-# $NetBSD: Makefile,v 1.5 1998/03/11 18:09:38 mycroft Exp $
-# FreeBSD Id: Makefile,v 1.2 1997/09/05 17:40:54 max Exp 
+# $NetBSD: Makefile,v 1.6 1998/03/20 07:08:43 mycroft Exp $
 #
 
 DISTNAME=	mikmod-2.14-unix
@@ -12,8 +9,7 @@ PKGNAME=	mikmod-2.14
 CATEGORIES=	audio
 MASTER_SITES=	http://www.chiark.greenend.org.uk/~stevem/mikmod/
 
-# FreeBSD maintainer
-MAINTAINER=	doconnor@ist.flinders.edu.au
+MAINTAINER=	mycroft@NetBSD.ORG
 
 LIB_DEPENDS=	ncurses.3.4:${PORTSDIR}/devel/ncurses
 
