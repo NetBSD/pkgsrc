@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/01/24 05:17:14 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/01/27 13:51:24 agc Exp $
 bin/xtp
 bin/display
 bin/montage
@@ -21,7 +21,7 @@ include/magick/PreRvIcccm.h
 include/magick/plug-ins.h
 @dirrm include/magick
 lib/libMagick.a
-lib/libMagick.so.3.9.3
+lib/libMagick.so.4.0.0
 @exec /sbin/ldconfig -m %B || /usr/bin/true
 @unexec /sbin/ldconfig -m %B || /usr/bin/true
 man/cat1/display.0
@@ -33,6 +33,6 @@ man/cat1/identify.0
 man/cat1/mogrify.0
 man/cat1/combine.0
 man/cat1/ImageMagick.0
-man/cat1/quantize.0
-man/cat1/miff.0
+man/cat5/quantize.0
+man/cat4/miff.0
 man/cat1/xtp.0
