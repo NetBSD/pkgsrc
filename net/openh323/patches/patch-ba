@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.2 2004/10/09 16:01:23 mjl Exp $
+$NetBSD: patch-ba,v 1.3 2004/12/01 13:12:47 adam Exp $
 
---- configure.orig	2004-10-09 00:01:54.000000000 +0200
-+++ configure	2004-10-09 00:02:59.000000000 +0200
-@@ -1825,7 +1825,7 @@
+--- configure.orig	2004-11-26 08:47:07.000000000 +0000
++++ configure
+@@ -2929,7 +2929,7 @@ else
    { { echo "$as_me:$LINENO: error: cannot check for file existence when cross compiling" >&5
  echo "$as_me: error: cannot check for file existence when cross compiling" >&2;}
     { (exit 1); exit 1; }; }
