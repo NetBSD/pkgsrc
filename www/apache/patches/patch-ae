@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2000/09/12 14:17:32 jlam Exp $
+$NetBSD: patch-ae,v 1.3 2000/10/13 21:46:46 jlam Exp $
 
---- src/modules/standard/mod_include.c.orig	Wed Feb  2 15:44:03 2000
+--- src/modules/standard/mod_include.c.orig	Fri Sep 22 14:26:32 2000
 +++ src/modules/standard/mod_include.c
 @@ -92,7 +92,11 @@
  #include "http_log.h"
@@ -24,16 +24,17 @@ $NetBSD: patch-ae,v 1.2 2000/09/12 14:17:32 jlam Exp $
  {
      char *t = tag, *tag_val, c, term;
  
-@@ -470,7 +475,7 @@
+@@ -470,7 +475,8 @@
  /*
   * Do variable substitution on strings
   */
 -static void parse_string(request_rec *r, const char *in, char *out,
-+API_EXPORT(void) ap_include_parse_string(request_rec *r, const char *in, char *out,
++API_EXPORT(void)
++ap_include_parse_string(request_rec *r, const char *in, char *out,
  			size_t length, int leave_name)
  {
      char ch;
-@@ -663,7 +668,8 @@
+@@ -668,7 +674,8 @@
              parse_string(r, tag_val, parsed_string, sizeof(parsed_string), 0);
              if (tag[0] == 'f') {
                  /* be safe; only files in this directory or below allowed */
@@ -43,18 +44,17 @@ $NetBSD: patch-ae,v 1.2 2000/09/12 14:17:32 jlam Exp $
                      error_fmt = "unable to include file \"%s\" "
                          "in parsed file %s";
                  }
-@@ -1075,7 +1081,9 @@
+@@ -1080,7 +1087,8 @@
                          "in parsed file %s";
          }
          else {
 -            ap_getparents(tag_val);    /* get rid of any nasties */
-+            if (ap_allow_options(r) & OPT_INCNOEXEC)
-+               	ap_getparents(tag_val);    /* get rid of any nasties */
-+
++	    if (ap_allow_options(r) & OPT_INCNOEXEC)
++                ap_getparents(tag_val);    /* get rid of any nasties */
              rr = ap_sub_req_lookup_file(tag_val, r);
  
              if (rr->status == HTTP_OK && rr->finfo.st_mode != 0) {
-@@ -2154,6 +2162,16 @@
+@@ -2159,6 +2167,16 @@
      }
  }
  
@@ -71,7 +71,7 @@ $NetBSD: patch-ae,v 1.2 2000/09/12 14:17:32 jlam Exp $
  
  
  /* -------------------------- The main function --------------------------- */
-@@ -2278,6 +2296,13 @@
+@@ -2283,6 +2301,13 @@
              }
  #endif
              else {
