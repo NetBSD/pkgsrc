@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9527 2005/03/21 04:05:19 schmonz Exp $
+$NetBSD: CHANGES,v 1.9528 2005/03/21 18:09:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1428,3 +1428,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed wmessage [jmmv 2005-03-20]
 	Updated screws to 0.56 [jmmv 2005-03-20]
 	Updated djbdns to 1.05nb6 [schmonz 2005-03-21]
+	Updated cfs to 1.4.1nb5 [wiz 2005-03-21]
