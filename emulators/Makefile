@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2003/09/14 19:10:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.85 2003/09/16 10:03:00 adam Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -17,6 +17,8 @@ SUBDIR+=	dosbox
 SUBDIR+=	doscmd
 SUBDIR+=	fmsx
 SUBDIR+=	freebsd_lib
+SUBDIR+=	fuse
+SUBDIR+=	fuse-utils
 SUBDIR+=	generator
 SUBDIR+=	gnuboy
 SUBDIR+=	gpsim
@@ -24,6 +26,7 @@ SUBDIR+=	hatari
 SUBDIR+=	hercules
 SUBDIR+=	hercules-images
 SUBDIR+=	ia64sim
+SUBDIR+=	libspectrum
 SUBDIR+=	linux-locale
 SUBDIR+=	linuxppc_lib
 SUBDIR+=	lrmi
