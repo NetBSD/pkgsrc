@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.40 2002/12/15 13:03:02 salo Exp $
+# $NetBSD: defs.Linux.mk,v 1.41 2002/12/16 09:18:57 salo Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -55,10 +55,12 @@ SORT?=		/usr/bin/sort
 .endif
 SU?=		/bin/su
 TAIL?=		/usr/bin/tail
+TEE?=		/usr/bin/tee
 TEST?=		/usr/bin/test
 TOUCH?=		/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/bin/true
+TSORT?=		/usr/bin/tsort
 TYPE?=		type
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs -r
