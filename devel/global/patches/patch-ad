@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1 2000/04/21 06:46:12 sakamoto Exp $
+
+--- Makefile.inc.orig	Sat Sep 18 15:42:34 1999
++++ Makefile.inc	Fri Apr 21 14:35:11 2000
+@@ -3,10 +3,10 @@
+ GLOBAL_MAKEFILE_INC_BEEN_HERE=yes
+ BINDIR?=	/usr/bin
+-LDDESTDIR=	-L${.OBJDIR}/../libutil \
++LDFLAGS+=	-L${.OBJDIR}/../libutil \
+ 		-L${.OBJDIR}/../libdb
+ LDADD=		-lgloutil -lglodb
+ DPADD=		${.OBJDIR}/../libutil/libgloutil.a \
+ 		${.OBJDIR}/../libdb/libglodb.a
+-CFLAGS+=	-I${.CURDIR} \
++CPPFLAGS+=	-I${.CURDIR} \
+ 		-I${.CURDIR}/../libutil \
+ 		-I${.CURDIR}/../libdb \

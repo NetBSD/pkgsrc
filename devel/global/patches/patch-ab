@@ -1,11 +1,8 @@
-$NetBSD: patch-ab,v 1.1 1999/04/26 18:34:42 garbled Exp $
---- lib/mgets.c.orig	Mon Apr 26 10:57:56 1999
-+++ lib/mgets.c	Mon Apr 26 10:58:24 1999
-@@ -34,6 +34,7 @@
- #include <ctype.h>
+--- libutil/mgets.c.orig	Wed Aug 18 11:02:42 1999
++++ libutil/mgets.c	Fri Apr 21 15:14:23 2000
+@@ -39,4 +39,5 @@
  #include <stdio.h>
  #include <stdlib.h>
 +#include <string.h>
  
  #include "die.h"
- #include "mgets.h"
