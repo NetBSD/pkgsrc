@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/09/29 22:56:54 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/10/08 21:12:52 jlam Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
@@ -11,7 +11,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.dtek.chalmers.se/~d3august/xt/index.html
 
 DEPENDS+=	gtkglarea-1.2.1:../../x11/gtkglarea
-DEPENDS+=	tiff-3.4:../../graphics/tiff
+DEPENDS+=	tiff-*:../../graphics/tiff
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
