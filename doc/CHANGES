@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.416 2002/10/30 09:54:40 rh Exp $
+$NetBSD: CHANGES,v 1.417 2002/10/30 10:34:32 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3454,3 +3454,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added glade2-1.1.2 [rh 2002-10-30]
 	Updated ipa to 1.2.9 [martti 2002-10-30]
 	Added libzvt-2.0.1 [rh 2002-10-30]
+	Added gnome2-terminal-2.0.1 [rh 2002-10-30]
