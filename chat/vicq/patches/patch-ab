@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2002/05/07 14:11:59 jdolecek Exp $
+$NetBSD: patch-ab,v 1.2 2002/05/07 15:41:38 wiz Exp $
 
---- vicq.orig	Tue May  7 15:59:52 2002
-+++ vicq	Tue May  7 16:01:36 2002
-@@ -2011,7 +2011,7 @@
+--- vicq.orig	Mon Apr 15 18:55:17 2002
++++ vicq
+@@ -2010,7 +2010,7 @@
  		$config{log_path} = expand_file($config{log_path});
  		$config{log_path}.='/' unless $config{log_path}=~/\/$/;
  	}else{
@@ -11,16 +11,16 @@ $NetBSD: patch-ab,v 1.1 2002/05/07 14:11:59 jdolecek Exp $
  		  }
  	unless( -e $config{log_path} || $config{log_path} eq $ENV{HOME})
  	{
-@@ -2495,7 +2495,7 @@
+@@ -2494,7 +2494,7 @@
  	$uin =~ s/\033\[.m//g;
  
  	my $fname=($config{log_type}=~/a/)?'vicq.log':"$uin.log";
--	open LOG,">> $config{log_path}$fname" or warn "Can't open file  $config{log_path}$fname";
-+	open LOG,">> $config{log_path}/$fname" or warn "Can't open file  $config{log_path}/$fname";
+-	open LOG,">> $config{log_path}$fname" or warn "Can't open file $config{log_path}$fname";
++	open LOG,">> $config{log_path}/$fname" or warn "Can't open file $config{log_path}$fname";
  	print LOG "--[$format $now_string\n";
  	print LOG $message;
  	print LOG "\n" if $config{log_type}=~/n/;
-@@ -2836,7 +2836,7 @@
+@@ -2834,7 +2834,7 @@
  	my $pager = $ENV{'PAGER'} || 'less -R';
  	my $home = $ENV{HOME};
  	my $fname=($config{log_type}=~/a/)?'vicq.log':"$uin.log";
