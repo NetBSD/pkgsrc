@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/09/27 12:03:50 tron Exp $
+# $NetBSD: Makefile,v 1.18 2003/10/18 13:08:49 cjep Exp $
 
 DISTNAME=	xplot-0.90.7.1
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Plotting program, most often used in conjunction with tcptrace
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 
-DOCFILES=	ANNOUNCE README README.tcp_plots 
+DOCFILES=	ANNOUNCE README README.tcp_plots
 # demo.? removed from interim .7.1 version
 #		demo.0 demo.1 demo.2 demo.3 demo.4 demo.5 demo.6 demo.7
 
