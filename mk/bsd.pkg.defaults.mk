@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.97 2002/10/13 23:13:50 kim Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.98 2002/10/20 16:45:04 seb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -603,12 +603,6 @@ GIMP_WITH_HELPBROWSER?=	no
 # help browser. Adds quite some bloat in the form of dependencies.
 # Possible: yes, no
 # Default: no
-
-GMAKE_NSEC_TIMESTAMPS?=	NO
-# Used by GNU make to enable/disable support of micro- and nano-second
-# timestamp values provided by stat(2).
-# Possible: YES, NO
-# Default: NO
 
 #GQMPEG_NO_JAPANESE?=	yes
 # Can be enabled to handle keep gqmpeg from interpreting ID3 tags
