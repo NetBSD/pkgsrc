@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2004/06/28 15:27:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2004/09/21 17:14:24 jmmv Exp $
 #
 
-DISTNAME=		gnome-utils-2.6.2
+DISTNAME=		gnome-utils-2.8.0
 CATEGORIES=		misc gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -21,7 +21,7 @@ USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 GCONF2_SCHEMAS+=	gdict.schemas
 GCONF2_SCHEMAS+=	gnome-search-tool.schemas
