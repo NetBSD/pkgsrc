@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/14 12:55:17 mjl Exp $
+# $NetBSD: Makefile,v 1.8 2001/07/01 11:46:49 tron Exp $
 #
 
 DISTNAME=	popt-1.5.-1
@@ -19,4 +19,5 @@ USE_GMAKE=	yes
 WRKSRC=		${WRKDIR}/${PKGNAME}
 MAKE_ENV+=	LOCALEDIR=${LOCAL_BASE}/share/locale/
 
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
