@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.177.2.3 2004/11/23 18:25:35 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.177.2.4 2004/11/23 20:39:19 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -308,7 +308,7 @@ PKG_PHASES=	fetch checksum depends extract patch
 .elif make(extract)
 PKG_PHASES=	fetch checksum depends extract
 .elif make(depends) || \
-      make(show-depends-dirs)
+      make(show-depends-dirs) || make(print-summary-data)
 PKG_PHASES=	fetch checksum depends
 .elif make(checksum)
 PKG_PHASES=	fetch checksum
