@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2002/11/10 23:55:14 lukem Exp $
+$NetBSD: patch-ae,v 1.2 2004/10/01 13:17:50 adam Exp $
 
---- doc/html/Makefile.in.orig	Wed Sep 25 14:53:33 2002
+--- doc/html/Makefile.in.orig	2004-09-29 04:18:29.000000000 +0000
 +++ doc/html/Makefile.in
-@@ -135,7 +135,7 @@ AUTOMAKE_OPTIONS = foreign
- 
+@@ -222,7 +222,7 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ AUTOMAKE_OPTIONS = foreign
  SUBDIRS = ru images
- 
 -docdir = $(datadir)/doc/$(PACKAGE)-$(VERSION)/html
 +docdir = $(datadir)/doc/html/$(PACKAGE)
- 
  doc_DATA = \
+ 	changelog.html \
  	comparison.html \
