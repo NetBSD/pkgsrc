@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2003/09/16 15:58:39 taca Exp $
+# $NetBSD: Makefile,v 1.93 2003/09/17 05:33:46 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE4
 PKGNAME=	squid-2.5.4
@@ -18,7 +18,7 @@ HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 
 USE_PERL5=	build
-DIST_SUBDIR=	squid-2.5.3
+DIST_SUBDIR=	squid-2.5.4
 DOCDIR=		${PREFIX}/share/doc/squid
 EXAMPLESDIR=	${PREFIX}/share/examples/squid
 
