@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:55:00 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/17 16:03:49 agc Exp $
 
-MD5 (wmakerconf-2.7.tar.bz2) = 1a3de85f461174d058c88de91f38da53
+SHA1 (wmakerconf-2.7.tar.bz2) = 97b37f281387bbea1bd6c9b3be5fb6d3fdc67e02
+Size (wmakerconf-2.7.tar.bz2) = 463308 bytes
 SHA1 (patch-aa) = e197a31117197608c09ee6ff1276b24392641b86
 SHA1 (patch-ab) = 5b65a4eb480eeec18d5ee8357d1741480c5a193b
