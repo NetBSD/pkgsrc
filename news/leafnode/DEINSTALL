@@ -1,14 +1,22 @@
-#!/bin/sh
-#
-# $NetBSD: DEINSTALL,v 1.2 2003/05/06 17:42:21 jmmv Exp $
+# $NetBSD: DEINSTALL,v 1.3 2004/01/11 16:45:51 cjep Exp $
 
-case "$2" in
-        DEINSTALL) cat <<EOF
+LEAFNODE_CONFDIR=@LEAFNODE_CONFDIR@
+LEAFNODE_SPOOL=@LEAFNODE_SPOOL@ 
+LEAFNODE_LOCKDIR=@LEAFNODE_LOCKDIR@
+LEAFNODE_HOME=@LEAFNODE_HOME@
+
+case "${STAGE}" in
+        POST-DEINSTALL) cat <<EOF
 
 ==========================================================================
 
 Note that the leafnode spool, lock and configuration directories
-(@@LEAFNODE_SPOOL@@, @@LEAFNODE_LOCKDIR@@ and @@LEAFNODE_CONFDIR@@)
+
+	${LEAFNODE_SPOOL} 
+	${LEAFNODE_LOCKDIR}
+	${LEAFNODE_HOME} 
+    and ${LEAFNODE_CONFDIR}
+
 are NOT deleted during the package deinstallation. Please remove these
 directories and all their contents manually if they are no longer needed.
 Also, don't forgot to remove any cron jobs associated with leafnode.
@@ -18,5 +26,3 @@ Also, don't forgot to remove any cron jobs associated with leafnode.
 EOF
         ;;
 esac
-
-exit 0
