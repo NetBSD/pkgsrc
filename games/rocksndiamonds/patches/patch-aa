@@ -1,12 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2002/02/19 06:25:58 jmc Exp $
+$NetBSD: patch-aa,v 1.5 2002/10/19 20:06:45 heinz Exp $
 
---- Makefile.orig	Sun Dec 31 16:24:30 2000
-+++ Makefile	Tue Feb 19 06:21:17 2002
-@@ -12,15 +12,21 @@
+--- Makefile.orig	Tue Aug 13 01:52:36 2002
++++ Makefile
+@@ -13,18 +13,25 @@
+ 
+ # specify command name of GNU make on your system
+ # (this must be set to "gmake" for some systems)
+-MAKE = make
++# MAKE will be supplied by pkgsrc
++# MAKE = make
  
  # specify path to X11 on your system
- # if undefined, use system defaults (works with Linux/gcc/libc5)
--X11_PATH = /usr/X11
+-X11_PATH = /usr/X11R6
 +X11_PATH = ${X11BASE}
  
  # specify directory for read-only game data (like graphics, sounds, levels)
@@ -17,7 +22,7 @@ $NetBSD: patch-aa,v 1.4 2002/02/19 06:25:58 jmc Exp $
  # specify directory for writable game data (like highscore files)
  # default is '.', so you can play without installing game data somewhere
  # RW_GAME_DIR = /var/games
-+RW_GAME_DIR = /var/games/rocksndiamonds
++RW_GAME_DIR = @SCORE_PATH@
 +
 +ifdef HAVE_JOYSTICK
 +JOYSTICK=-DHAVE_JOYSTICK
@@ -25,11 +30,3 @@ $NetBSD: patch-aa,v 1.4 2002/02/19 06:25:58 jmc Exp $
  
  # uncomment this if your system has no joystick include file
  # JOYSTICK = -DNO_JOYSTICK
-@@ -42,7 +48,6 @@
- 
- .EXPORT_ALL_VARIABLES:
- 
--MAKE = make
- 
- SRC_DIR = src
- MAKE_CMD = $(MAKE) -C $(SRC_DIR)
