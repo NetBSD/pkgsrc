@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2001/04/01 20:39:59 zuntum Exp $
+# $NetBSD: Makefile,v 1.128 2001/04/15 02:43:08 jwise Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -42,6 +42,7 @@ SUBDIR+=	glibwww
 SUBDIR+=	grail
 SUBDIR+=	gtkhtml
 SUBDIR+=	haskell-cgi
+SUBDIR+=	hiawatha
 SUBDIR+=	horde
 SUBDIR+=	htdig
 SUBDIR+=	htmldoc
