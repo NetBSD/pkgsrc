@@ -1,0 +1,7 @@
+The design goal for waimea is to create the most efficient desktop
+working environment available. To achieve this, waimea is a fast and
+highly customizable virtual desktop window manager. It uses the blackbox
+image rendering engine (blackbox styles support) and can use the Xft
+library for font rendering (anti-aliased font support). It also features
+a very advanced configuration system with which is possible to make waimea
+behave as almost any other window manager.
