@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/04/22 23:15:02 snj Exp $
+# $NetBSD: Makefile,v 1.24 2004/04/28 00:05:24 snj Exp $
 # $FreeBSD Id: Makefile,v 1.11 1996/11/16 10:49:52 asami Exp
 #
 
@@ -18,7 +18,7 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 EXTRACT_ELEMENTS=	${DISTNAME}/clients ${DISTNAME}/images
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/clients
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_IMAKE=		# defined
 
 post-patch:
@@ -31,5 +31,5 @@ post-patch:
 		${RM} -f $${file}.tmp;			\
 	done
 
-.include "../../x11/xview-lib/buildlink2.mk"
+.include "../../x11/xview-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
