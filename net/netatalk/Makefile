@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/01/24 14:50:06 grant Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/14 17:21:46 jlam Exp $
 
 DISTNAME=	netatalk-1.6.2
 CATEGORIES=	net print
@@ -13,12 +13,10 @@ GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 USE_GNU_TOOLS+=	make
 USE_PERL5=	YES
+USE_LIBTOOL=		YES
 
 USE_PKGINSTALL=		YES
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
-
-USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 

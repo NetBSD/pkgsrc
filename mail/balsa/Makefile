@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/01/03 18:49:45 reed Exp $
+# $NetBSD: Makefile,v 1.39 2004/02/14 17:21:44 jlam Exp $
 #
 
 DISTNAME=		balsa-1.4.3
@@ -17,8 +17,6 @@ USE_LIBTOOL=		yes
 USE_X11BASE=		yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 CONFIGURE_DIRS=		${WRKSRC}
 CONFIGURE_DIRS+=	${WRKSRC}/libmutt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/24 15:46:44 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 17:21:43 jlam Exp $
 #
 
 DISTNAME=	smpeg-xmms-0.3.5
@@ -14,8 +14,6 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../devel/smpeg/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"

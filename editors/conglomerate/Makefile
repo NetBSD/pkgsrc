@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/09 18:47:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:39 jlam Exp $
 #
 
 DISTNAME=	conglomerate-0.7.11
@@ -21,8 +21,6 @@ USE_LIBTOOL=		yes
 USE_GNU_TOOLS+=		make
 USE_PERL5=		yes
 USE_PKGLOCALEDIR=	yes
-
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--enable-printing
 CONFIGURE_ARGS+=	--disable-gtk-doc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/12/14 19:41:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2004/02/14 17:21:46 jlam Exp $
 #
 
 DISTNAME=		linc-1.1.1
@@ -16,7 +16,6 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/linc.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no

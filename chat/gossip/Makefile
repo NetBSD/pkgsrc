@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/02/09 18:47:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/14 17:21:34 jlam Exp $
 #
 
 DISTNAME=	gossip-0.7
@@ -22,7 +22,6 @@ USE_PKGLOCALEDIR=       yes
 GNU_CONFIGURE=		yes
 
 GCONF2_SCHEMAS=		gossip.schemas
-LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"

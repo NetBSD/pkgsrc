@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/11 05:43:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/14 17:21:38 jlam Exp $
 #
 
 DISTNAME=	libgsf-1.8.2
@@ -15,7 +15,6 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libgsf-1.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libgsf-gnome-1.pc.in
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/02/09 18:47:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2004/02/14 17:21:40 jlam Exp $
 #
 
 DISTNAME=	gnocatan-0.8.0.0
@@ -14,7 +14,6 @@ GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 

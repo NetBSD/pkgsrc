@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/09/14 21:13:49 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/14 17:21:44 jlam Exp $
 
 DISTNAME=		gsl-1.4
 PKGREVISION=		2
@@ -11,7 +11,6 @@ COMMENT=		The GNU Scientific Library
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 INFO_FILES=		gsl-ref.info
 
 TEST_TARGET=		check
