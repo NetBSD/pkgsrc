@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 15:10:45 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/21 00:25:35 jlam Exp $
 
 DISTNAME=		enormous
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
@@ -38,7 +38,7 @@ CRAFTYRC=		${WRKSRC}/.craftyrc
 
 pre-extract:
 	@${ECHO} ""
-	@${ECHO} "  ** WARNING: This requires ~2.5GB of disk space to build."
+	@${ECHO} "  ** WARNING: This requires ~3GB of disk space to build."
 	@${ECHO} ""
 
 do-build:
@@ -51,7 +51,7 @@ do-build:
 	cd ${WRKSRC} && ${CAT} ?.pgn > ${PGN_FILE}
 
 	${RM} -f ${CRAFTYRC}
-	${ECHO} "book create ${PGN_FILE} 60 3" > ${CRAFTYRC}
+	${ECHO} "book create ${PGN_FILE} 60 10 50" > ${CRAFTYRC}
 	${ECHO} "quit" >> ${CRAFTYRC}
 	cd ${WRKSRC} && crafty bookpath=.
 
