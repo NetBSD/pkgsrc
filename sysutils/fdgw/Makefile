@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2002/01/29 18:24:29 wennmach Exp $
+# $NetBSD: Makefile,v 1.4 2002/03/20 18:11:14 wennmach Exp $
 #
 
-DISTNAME=	fdgw-20020127
+DISTNAME=	fdgw-20020130
 CATEGORIES=	sysutils net
 MASTER_SITES=	ftp://ftp.fml.org/pub/fdgw/source/
 
