@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:14:55 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/22 19:33:37 tron Exp $
 
 SHA1 (gdm-2.2.0.tar.gz) = 135b424cc1493f92b500c4fe7d85e9ada57313e1
+Size (gdm-2.2.0.tar.gz) = 810976 bytes
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
+Size (Daemon.README) = 2191 bytes
 SHA1 (Daemon.png) = e77a42c644beecd66c4b95c0ae68c08c728a4e6d
+Size (Daemon.png) = 15725 bytes
 SHA1 (patch-aa) = 98299b243415299452e8e30b7edb20a9d333fa1e
 SHA1 (patch-ab) = 971c75ee6d442a658996944900254aee52070c11
 SHA1 (patch-ac) = 32361628caef6cd0f1f50318a0b3f76249f6b76c
