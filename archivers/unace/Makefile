@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 13:15:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/16 10:21:15 jlam Exp $
 #
 
 DISTNAME=	unacepub
@@ -12,7 +12,9 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.winace.com/
 COMMENT=	Extract, list and test files in ACE archives
 
-USE_GMAKE=	yes
+USE_BUILDLINK_ONLY=	yes
+USE_GMAKE=		yes
+
 DIST_SUBDIR=	unace-1.2
 NO_WRKSUBDIR=	yes
 MAKEFILE=	unix/makefile
