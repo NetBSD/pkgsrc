@@ -1,0 +1,6 @@
+You can run the tty version of nethack by executing:
+"nethack"  or "nethack tty"
+The X11 version:  "nethack x11"
+The QT version:   "nethack qt"
+
+Happy Hacking!
