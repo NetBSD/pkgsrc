@@ -1,13 +1,22 @@
-$NetBSD: patch-am,v 1.1 2002/09/11 23:07:53 rh Exp $
+$NetBSD: patch-am,v 1.2 2003/02/14 20:10:07 jmmv Exp $
 
---- configure.orig	Tue Sep 10 16:52:04 2002
-+++ configure	Tue Sep 10 16:52:47 2002
-@@ -12159,7 +12159,7 @@
+--- configure.orig	Mon Jan 20 20:32:45 2003
++++ configure
+@@ -10809,7 +10809,7 @@ fi
  
  
  
--for ac_func in getdtablesize open64 lseek64 statvfs
-+for ac_func in getdtablesize open64 lseek64 statvfs readdir_r
+-for ac_func in getdtablesize open64 lseek64 statvfs seteuid setegid setresuid setresgid
++for ac_func in getdtablesize open64 lseek64 statvfs seteuid setegid setresuid setresgid readdir_r
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
  echo "$as_me:$LINENO: checking for $ac_func" >&5
+@@ -12060,7 +12060,7 @@ esac
+ 
+ 
+ 
+-for ac_header in sys/resource.h sys/vfs.h sys/mount.h sys/statvfs.h
++for ac_header in sys/param.h sys/resource.h sys/vfs.h sys/mount.h sys/statvfs.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ if eval "test \"\${$as_ac_Header+set}\" = set"; then
