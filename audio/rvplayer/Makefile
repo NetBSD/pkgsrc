@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/01/13 11:15:09 soren Exp $
+# $NetBSD: Makefile,v 1.6 2000/02/09 00:19:22 soren Exp $
 #
 
 DISTNAME=	rv50_linux20
@@ -10,11 +10,12 @@ MASTER_SITES=
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.real.com/products/player/
 
-NO_CDROM=		"Redistribution not permitted"
-RESTRICTED=		"Export-controlled"
-MIRROR_DISTFILE=	no
+NO_CDROM=	"Redistribution not permitted"
+RESTRICTED=	"Export-controlled"
+MIRROR_DISTFILE= no
+IS_INTERACTIVE=	yes
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM= NetBSD-*-i386
 DEPENDS=	suse_linux>=6.1:../../emulators/suse_linux
 
 REAL_HOME=	${PREFIX}/lib/rvplayer
