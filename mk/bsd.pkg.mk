@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1377 2004/02/07 02:56:14 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1378 2004/02/08 02:59:14 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -367,14 +367,14 @@ LIBTOOL_REQD=		${_OPSYS_LIBTOOL_REQD}
 .else
 LIBTOOL_REQD?=		1.4.20010614nb11
 .endif
-LIBTOOL?=		${LOCALBASE}/bin/libtool
-SHLIBTOOL?=		${LOCALBASE}/bin/shlibtool
+PKG_LIBTOOL?=		${LOCALBASE}/bin/libtool
+PKG_SHLIBTOOL?=		${LOCALBASE}/bin/shlibtool
+LIBTOOL?=		${PKG_LIBTOOL}
+SHLIBTOOL?=		${PKG_SHLIBTOOL}
 .if defined(USE_LIBTOOL)
-PKGLIBTOOL=		${LIBTOOL}
-PKGSHLIBTOOL=		${SHLIBTOOL}
 BUILD_DEPENDS+=		libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
-CONFIGURE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
-MAKE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
+CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
+MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 .endif
 
 .if defined(BUILD_USES_MSGFMT) && \
@@ -2308,7 +2308,7 @@ do-ltconfig-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${ltconfig} ]; then					\
 		${RM} -f ${ltconfig};					\
-		${ECHO} "${RM} -f libtool; ${LN} -s ${PKGLIBTOOL} libtool" \
+		${ECHO} "${RM} -f libtool; ${LN} -s ${LIBTOOL} libtool" \
 			> ${ltconfig};					\
 		${CHMOD} +x ${ltconfig};				\
 	fi
@@ -2385,7 +2385,7 @@ do-libtool-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${libtool} ]; then					\
 		(${ECHO} '#!${CONFIG_SHELL}';				\
-		 ${ECHO} 'exec ${PKGLIBTOOL} "$$@"';			\
+		 ${ECHO} 'exec ${LIBTOOL} "$$@"';			\
 		) > ${libtool}.override;				\
 		if [ -x ${libtool} ]; then				\
 			${CHMOD} +x ${libtool}.override;		\
