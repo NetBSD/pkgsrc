@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/05/26 21:19:18 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/05/28 17:39:11 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/10/10 06:53:35 obrien Exp
 #
 
@@ -11,6 +11,8 @@ MAINTAINER=		deberg@mit.edu
 
 NO_WRKSUBDIR=		yes
 
+HAS_CONFIGURE=		yes
+CONFIGURE_SCRIPT=	Configure
 USE_IMAKE=		yes
 XMKMF=			xmkmf # don't specify -a option
 
