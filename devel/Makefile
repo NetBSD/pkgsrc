@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 1999/01/14 20:38:49 frueauf Exp $
+# $NetBSD: Makefile,v 1.49 1999/01/23 18:28:53 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -49,7 +49,7 @@
 #    SUBDIR += linuxgdb
     SUBDIR += m4
 #    SUBDIR += makedepend
-    SUBDIR += mit-pthreads
+#HF#    SUBDIR += mit-pthreads
 #    SUBDIR += mkmf
 #    SUBDIR += mprof
     SUBDIR += ncurses
@@ -103,6 +103,7 @@
 #    SUBDIR += sawt
 #    SUBDIR += scogdb
     SUBDIR += sfio
+    SUBDIR += swig
 #    SUBDIR += tclcheck
     SUBDIR += tkcvs
 #    SUBDIR += tvision
