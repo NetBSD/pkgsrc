@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.268 1999/05/20 19:50:09 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.269 1999/05/21 19:29:02 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -658,25 +658,10 @@ uptodate-pkgtools:
 MAINTAINER?=		packages@netbsd.org
 
 ALLFILES?=	${DISTFILES} ${PATCHFILES}
-
-.if defined(IGNOREFILES)
-CKSUMFILES!=	\
-	for file in ${ALLFILES}; do \
-		ignore=0; \
-		for tmp in ${IGNOREFILES}; do \
-			if [ "$$file" = "$$tmp" ]; then \
-				ignore=1; \
-			fi; \
-		done; \
-		if [ "$$ignore" = 0 ]; then \
-			${ECHO} "$$file"; \
-		else \
-			${ECHO} ""; \
-		fi; \
-	done
-.else
-CKSUMFILES=		${ALLFILES}
-.endif
+CKSUMFILES?=	${ALLFILES}
+.for __tmp__ in ${IGNOREFILES}
+CKSUMFILES:=	${CKSUMFILES:N${__tmp__}}
+.endfor
 
 # List of all files, with ${DIST_SUBDIR} in front.  Used for fetch and checksum.
 .if defined(DIST_SUBDIR)
