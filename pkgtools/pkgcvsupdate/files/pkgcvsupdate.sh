@@ -1,5 +1,5 @@
 #! /bin/sh -
-# $NetBSD: pkgcvsupdate.sh,v 1.2 2001/11/30 12:16:08 seb Exp $
+# $NetBSD: pkgcvsupdate.sh,v 1.3 2002/01/07 12:39:25 seb Exp $
 
 AWK=@AWK@
 BASENAME=@BASENAME@
@@ -10,28 +10,64 @@ MAKE=@MAKE@
 SED=@SED@
 TEST=@TEST@
 
-args="$@"
+cvs_cmd_args="$@"
 cwd=`pwd`
 dirs_updated=":"
 
+# low-level cvs update
 cvs_update()
+{
+_cwd=`pwd`
+if $TEST "x$1" = x. ; then
+	echo "==> $_cwd"
+else
+	echo "==> $_cwd/$1"
+fi
+cvs ${CVS_OPTIONS} update $cvs_cmd_args $1 || return 1
+}
+
+# update a directory tree
+cvs_update_dir()
 {
 _cwd=`pwd`
 case $dirs_updated in
 	*:$_cwd:*) return 0;; # already updated
 esac
-echo "==> $_cwd"
-cvs ${CVS_OPTIONS} update $args || return 1
+cvs_update . || return 1
 dirs_updated="$dirs_updated$_cwd:"
 }
 
+# get the file included in ./Makefile
 get_make_included_files()
 {
 $GREP '^\.include' Makefile | \
 $AWK '$2 !~ /mk\//{ gsub(/["<>]/, "", $2); print $2 }' || exit 1
 }
 
-recursive_cvs_update()
+# get the "make sub-directory"
+get_subdirs()
+{
+# update local files first
+_oldcvs_cmd_args="$cvs_cmd_args"
+cvs_cmd_args="-l $cvs_cmd_args"
+cvs_update . || return 1
+cvs_cmd_args="$oldcvs_cmd_args"
+subdirs=`$MAKE -V SUBDIR`
+if $TEST $? -ne 0 || $TEST x"$subdirs" = x ; then
+	# perhaps we don't have the -V flags to make (pre NetBSD 1.3
+	# make ?)
+	# XXX FIXME: we could miss a new directory here
+	subdirs=""
+	for _f in * ; do
+		if $TEST -f $_f/Makefile ; then
+			subdirs="$subdirs $_f"
+		fi
+	done
+fi
+}
+
+# update a list of package directories and their dependencies
+recursive_cvs_update_pkgdir()
 {
 _dirs_toupdate="$*"
 while true ; do
@@ -47,12 +83,12 @@ while true ; do
 	# cd into it and update...
 	if $TEST -d $_dir ; then 
 		cd $_dir || exit 1
-		cvs_update
+		cvs_update_dir
 	else
 		# ...the directory does not exist, that would be a brand new
 		# package we try to check it out instead
 		cd `$DIRNAME $_dir` || exit 1
-		cvs ${CVS_OPTIONS} checkout $args `$BASENAME $_dir` || exit 1
+		cvs ${CVS_OPTIONS} checkout $cvs_cmd_args `$BASENAME $_dir` || exit 1
 		cd $_dir || exit 1
 	fi
 	_cwd=`pwd`
@@ -86,38 +122,40 @@ if $TEST -f ../../Packages.txt && $TEST -d ../../pkgtools/digest ; then
 	# we are in a package directory...
 
 	# update mk
-	cd ../../mk && cvs_update && cd $cwd || exit 1
+	cd ../../mk && cvs_update_dir && cd $cwd || exit 1
 
 	# update the current package directory and needed dependencies
-	recursive_cvs_update $cwd
+	recursive_cvs_update_pkgdir $cwd
 	
-elif $TEST -f Makefile && $TEST -f ../Packages.txt ; then
-	# we are in category directory: get the package list of this
-	# category
+elif $TEST -f Makefile && \
+	( $TEST -f ../Packages.txt || $TEST -f Packages.txt) ; then
+	# we are in category directory or in the top-level pkgsrc directory
 
 	# update mk
-	cd ../mk && cvs_update && cd $cwd || exit 1
+	$TEST -d ../mk && cd ../mk || cd mk || exit 1
+	cvs_update_dir && cd $cwd || exit 1
 
-	# get the packages in this category
-	_list=`$MAKE -V SUBDIR`
-	if $TEST $? -ne 0 || $TEST x"$_list" = x ; then
-		# perhaps we don't have the -V flags to make (pre NetBSD 1.3
-		# make ?)
-		_list=""
-		for _f in * ; do
-			if $TEST -f $_f/Makefile ; then
-				_list="$_list $_f"
-			fi
+	# get the packages in this category or all the categories
+	get_subdirs
+	if $TEST $? -ne 0 || $TEST x"$subdirs" = x ; then
+		echo "could not get the sub-directories in $cwd" 1>&2
+		exit 1
+	fi
+
+	if $TEST -f ../Packages.txt ; then
+		# update the category packages' directories and their
+		# dependencies
+		_dirs=""
+		for _p in $subdirs ; do
+			_dirs="$_dirs $cwd/$_p"
+		done
+		recursive_cvs_update_pkgdir $_dirs
+	else
+		for _p in $subdirs ; do
+			cvs_update $_p || exit 1
 		done
 	fi
-	_dirs=""
-	for _p in $_list ; do
-		_dirs="$_dirs $cwd/$_p"
-	done
-
-	# update the category packages' directories and their dependencies
-	recursive_cvs_update $_dirs
 else
-	echo "Not in a package or category directory" 1>&2
+	echo "Not in a package, category or toplevel directory" 1>&2
 	exit 1
 fi

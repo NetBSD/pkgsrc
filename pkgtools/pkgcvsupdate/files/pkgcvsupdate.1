@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgcvsupdate.1,v 1.2 2001/11/30 12:16:08 seb Exp $
+.\"	$NetBSD: pkgcvsupdate.1,v 1.3 2002/01/07 12:39:25 seb Exp $
 .\"
 .\" Copyright (c) 2001 Stoned Elipot. All rights reserved.
 .\"
@@ -41,11 +41,14 @@
 .Sh DESCRIPTION
 The
 .Nm
-utility should be run from a package's main directory or a package category
-directory. It first updates the pkgsrc infrastructure in
+utility should be run from a package's main directory, a package category
+directory or the top-level pkgsrc directory. It first updates the pkgsrc
+infrastructure in
 .Pa ${PKGSRCDIR}/mk ,
 then the package's files and recursively all the packages' files it
-depend on.
+depend. When run from the top-level pkgsrc directory it run a separate CVS
+update for each category directory, this is believed to be faster than
+a single CVS invocation.
 .Pp
 Any arguments of
 .Nm
