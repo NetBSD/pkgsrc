@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2000/01/26 22:11:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2000/06/21 03:37:23 jlam Exp $
 etc/rc.d/rplayd.sh
 bin/rplay
 bin/rptp
@@ -16,6 +16,7 @@ info/rplay.info
 @exec	install-info %D/info/librplay.info %D/info/dir
 @exec	install-info %D/info/rplay.info %D/info/dir
 lib/librplay.a
+lib/librplay.la
 lib/librplay.so.0.0
 man/man1/rplay.1
 man/man1/rptp.1

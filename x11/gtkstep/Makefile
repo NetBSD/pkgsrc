@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.7 2000/06/01 11:23:46 rh Exp $
+# $NetBSD: Makefile,v 1.8 2000/06/21 03:04:36 jlam Exp $
 
-DISTNAME=	gtkstep-1.10
-CATEGORIES=	x11
-MASTER_SITES=	http://ulli.linuxave.net/gtkstep/
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=		gtkstep-1.10
+CATEGORIES=		x11
+MASTER_SITES=		http://ulli.linuxave.net/gtkstep/
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	jlam@netbsd.org
-HOMEPAGE=	http://ulli.linuxave.net/gtkstep/index.html
+MAINTAINER=		jlam@netbsd.org
+HOMEPAGE=		http://ulli.linuxave.net/gtkstep/index.html
 
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
+DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 
-GNU_CONFIGURE=  yes
-USE_PKGLIBTOOL=	yes
-USE_X11BASE=	yes
+GNU_CONFIGURE=		# defined
+USE_X11BASE=		# defined
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 post-install:
 	${RM} -f ${PREFIX}/share/themes/Step/gtk/gtkrc.in
