@@ -1,18 +1,17 @@
-$NetBSD: patch-af,v 1.11 2002/05/14 06:57:25 martti Exp $
+$NetBSD: patch-af,v 1.12 2003/01/06 09:15:50 martti Exp $
 
---- conf/main.cf.orig	Mon Mar 25 21:09:24 2002
-+++ conf/main.cf	Wed Mar 27 07:33:47 2002
-@@ -31,14 +33,19 @@
+--- conf/main.cf.orig	Sat Dec 21 21:53:01 2002
++++ conf/main.cf	Sat Dec 28 09:07:31 2002
+@@ -31,13 +31,18 @@
  # The command_directory parameter specifies the location of all
- # postXXX commands.  The default value is $program_directory.
+ # postXXX commands.
  #
 -command_directory = /usr/sbin
 +command_directory = __PREFIX/sbin
  
  # The daemon_directory parameter specifies the location of all Postfix
- # daemon programs (i.e. programs listed in the master.cf file). The
- # default value is $program_directory. This directory must be owned
- # by root.
+ # daemon programs (i.e. programs listed in the master.cf file). This
+ # directory must be owned by root.
  #
 -daemon_directory = /usr/libexec/postfix
 +daemon_directory = __PREFIX/libexec/postfix
@@ -24,7 +23,7 @@ $NetBSD: patch-af,v 1.11 2002/05/14 06:57:25 martti Exp $
  
  # QUEUE AND PROCESS OWNERSHIP
  #
-@@ -56,7 +63,7 @@
+@@ -55,7 +60,7 @@
  # These rights are used in the absence of a recipient user context.
  # DO NOT SPECIFY A PRIVILEGED USER OR THE POSTFIX OWNER.
  #
@@ -33,19 +32,7 @@ $NetBSD: patch-af,v 1.11 2002/05/14 06:57:25 martti Exp $
  
  # INTERNET HOST AND DOMAIN NAMES
  # 
-@@ -497,9 +504,8 @@
- # the process marches on. If you use an X-based debugger, be sure to
- # set up your XAUTHORITY environment variable before starting Postfix.
- #
--debugger_command =
--	 PATH=/usr/bin:/usr/X11R6/bin
--	 xxgdb $daemon_directory/$process_name $process_id & sleep 5
-+debugger_command = PATH=/usr/bin:/usr/X11R6/bin; \
-+	xxgdb $daemon_directory/$process_name $process_id & sleep 5
- 
- # INSTALL-TIME CONFIGURATION INFORMATION
- #
-@@ -524,16 +530,16 @@
+@@ -606,16 +611,16 @@
  # commands.  This must be a group name with a numerical group ID that
  # is not shared with other accounts, not even with the Postfix account.
  #

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/06/26 10:29:48 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/06 09:15:49 martti Exp $
 bin/mailq
 bin/newaliases
 etc/mailer.conf.postfix
@@ -73,6 +73,10 @@ sbin/postmap
 sbin/postqueue
 sbin/postsuper
 sbin/sendmail
+share/doc/postfix/ADDRESS_CLASS_README
+share/doc/postfix/LOCAL_RECIPIENT_README
+share/doc/postfix/MAILDROP_README
+share/doc/postfix/RELEASE_NOTES
 share/doc/postfix/DB_README
 share/doc/postfix/DEBUG_README
 share/doc/postfix/ETRN_README
@@ -108,6 +112,7 @@ share/postfix/sample-flush.cf
 share/postfix/sample-ldap.cf
 share/postfix/sample-lmtp.cf
 share/postfix/sample-local.cf
+share/postfix/sample-mime.cf
 share/postfix/sample-misc.cf
 share/postfix/sample-pcre-access.cf
 share/postfix/sample-pcre-body.cf
