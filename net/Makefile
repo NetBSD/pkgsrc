@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 1999/10/28 09:47:37 agc Exp $
+# $NetBSD: Makefile,v 1.90 1999/10/28 20:07:26 kim Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -50,6 +50,7 @@
     SUBDIR += ircII
 #    SUBDIR += ircii-epic
     SUBDIR += ircu
+    SUBDIR += irrd
 #    SUBDIR += isc-dhcp
 #    SUBDIR += ivs
     SUBDIR += jwhois
