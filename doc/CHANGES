@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1519 2003/03/02 12:11:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.1520 2003/03/02 14:45:15 kei Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -881,3 +881,5 @@ Changes to the packages collection and infrastructure in 2003:
         Updated netcdf to 3.5.0 [jtb 2003-03-02]
         Updated ntl to 5.3.1 [jtb 2003-03-02]
 	Updated prayer to 1.0.5nb1 [jmmv 2003-03-02]
+	Updated roundup to 0.5.6 [lukem 2003-03-02]
+	Added Aiksaurus-0.15 [kei 2003-03-02]
