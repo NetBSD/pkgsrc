@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/15 12:37:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/03/10 12:41:47 drochner Exp $
 bin/sga
 share/examples/3d.sg
 share/examples/multicolumn.sg
 share/examples/polar.sg
 share/examples/simpletest.sg
+share/examples/ticks.sg
 share/examples/trigonometric.sg
 share/examples/vectors.sg
 share/examples/test.dat
