@@ -1,15 +1,14 @@
-$NetBSD: patch-aj,v 1.1 2003/07/10 07:44:02 jtb Exp $
+$NetBSD: patch-aj,v 1.2 2003/07/11 07:47:44 jtb Exp $
 
 --- asmrun/power-bsd.S.orig
 +++ asmrun/power-bsd.S
-@@ -13,6 +13,36 @@
+@@ -13,6 +13,35 @@
  
- /* $Id: patch-aj,v 1.1 2003/07/10 07:44:02 jtb Exp $ */
+ /* $Id: patch-aj,v 1.2 2003/07/11 07:47:44 jtb Exp $ */
  
 +#if defined(PROFILING)
 +#define PROFILE_CAML \
 +        stwu 1, -32(1) \
-+        stw 1, 0(3) \
 +        mflr 0 \
 +        stw 0, 4(1) \
 +        stw 2, 8(1) \
@@ -39,7 +38,7 @@ $NetBSD: patch-aj,v 1.1 2003/07/10 07:44:02 jtb Exp $
  #define Addrglobal(reg,glob) \
          addis   reg, 0, glob@ha; \
          addi    reg, reg, glob@l
-@@ -30,6 +60,7 @@
+@@ -30,6 +59,7 @@
          .globl  caml_call_gc
          .type   caml_call_gc, @function
  caml_call_gc:
@@ -47,7 +46,7 @@ $NetBSD: patch-aj,v 1.1 2003/07/10 07:44:02 jtb Exp $
      /* Set up stack frame */
          stwu    1, -0x1A0(1)
      /* 0x1A0 = 4*32 (int regs) + 8*32 (float regs) + 32 (space for C call) */
-@@ -182,6 +213,7 @@
+@@ -182,6 +212,7 @@
          .globl  caml_c_call
          .type   caml_c_call, @function
  caml_c_call:
@@ -55,7 +54,7 @@ $NetBSD: patch-aj,v 1.1 2003/07/10 07:44:02 jtb Exp $
      /* Save return address */
          mflr    25
      /* Get ready to call C function (address in 11) */
-@@ -210,6 +242,7 @@
+@@ -210,6 +241,7 @@
          .globl  raise_caml_exception
          .type   raise_caml_exception, @function
  raise_caml_exception:
@@ -63,7 +62,7 @@ $NetBSD: patch-aj,v 1.1 2003/07/10 07:44:02 jtb Exp $
      /* Reload Caml global registers */
          Loadglobal(1, caml_exception_pointer, 11)
          Loadglobal(31, young_ptr, 11)
-@@ -230,6 +263,7 @@
+@@ -230,6 +262,7 @@
          .globl  caml_start_program
          .type   caml_start_program, @function
  caml_start_program:
@@ -71,7 +70,7 @@ $NetBSD: patch-aj,v 1.1 2003/07/10 07:44:02 jtb Exp $
          Addrglobal(12, caml_program)
  
  /* Code shared between caml_start_program and callback */
-@@ -380,6 +414,7 @@
+@@ -380,6 +413,7 @@
          .globl  callback_exn
          .type   callback_exn, @function
  callback_exn:
@@ -79,7 +78,7 @@ $NetBSD: patch-aj,v 1.1 2003/07/10 07:44:02 jtb Exp $
      /* Initial shuffling of arguments */
          mr      0, 3            /* Closure */
          mr      3, 4            /* Argument */
-@@ -390,6 +425,7 @@
+@@ -390,6 +424,7 @@
          .globl  callback2_exn
          .type   callback2_exn, @function
  callback2_exn:
@@ -87,7 +86,7 @@ $NetBSD: patch-aj,v 1.1 2003/07/10 07:44:02 jtb Exp $
          mr      0, 3            /* Closure */
          mr      3, 4            /* First argument */
          mr      4, 5            /* Second argument */
-@@ -400,6 +436,7 @@
+@@ -400,6 +435,7 @@
          .globl  callback3_exn
          .type   callback3_exn, @function
  callback3_exn:
@@ -95,7 +94,7 @@ $NetBSD: patch-aj,v 1.1 2003/07/10 07:44:02 jtb Exp $
          mr      0, 3            /* Closure */
          mr      3, 4            /* First argument */
          mr      4, 5            /* Second argument */
-@@ -418,4 +455,3 @@
+@@ -418,4 +454,3 @@
          .long   .L105 + 4       /* return address into callback */
          .short  -1              /* negative size count => use callback link */
          .short  0               /* no roots here */
