@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: sysbuild.sh,v 1.7 2002/12/19 12:55:57 jmmv Exp $
+# $NetBSD: sysbuild.sh,v 1.8 2002/12/28 14:58:32 jmmv Exp $
 #
 # sysbuild - Automatic NetBSD system builds
 # Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -360,7 +360,7 @@ sysbuild_build_tools() {
     printf "Building tools (toolchain):"
     cd $SRCDIR
     rm -rf $BUILDDIR/tools/*
-    BSDSRCDIR=$SRCDIR BSDOBJDIR=$BUILDDIR/obj OBJMACHINE=yes MKOBJDIRS=yes ./build.sh -T $BUILDDIR/tools -t >> $_log 2>&1
+    BSDSRCDIR=$SRCDIR BSDOBJDIR=$BUILDDIR/obj OBJMACHINE=yes MKOBJDIRS=yes ./build.sh -T $BUILDDIR/tools -t -D $BUILDDIR/root >> $_log 2>&1
     if [ $? -ne 0 ]; then
         echo " failed."
     else
@@ -543,6 +543,10 @@ sysbuild_init() {
 
 sysbuild_config() {
     check_root
+
+    if [ ! -d "@SYSBUILD_HOMEDIR@" ]; then
+        mkdir -p @SYSBUILD_HOMEDIR@
+    fi
 
     _conf="$1"
     if [ -z "$_conf" ]; then
