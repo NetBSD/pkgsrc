@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.261 2002/08/26 05:17:39 jlam Exp $
+# $NetBSD: Packages.txt,v 1.262 2002/09/19 12:48:04 lukem Exp $
 ###########################################################################
 
 			==========================
@@ -2482,7 +2482,7 @@ The commit message of the initial import should include part of the
 DESCR file, so people reading the mailing lists know what the package
 is/does.
 
-Please note all package updates/additions in doc/pkg-CHANGES! It's very
+Please note all package updates/additions in pkgsrc/doc/CHANGES! It's very
 important to keep this file up to date and conforming to the existing
 format, because it will be used by scripts to automatically update pages on
 www.netbsd.org and other sites.
