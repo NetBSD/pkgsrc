@@ -1,12 +1,11 @@
-This is the CU version of sudo, release 1.4.
-
-Sudo is a program designed to allow a sysadmin to give limited root privileges
-to users and log root activity.  The basic philosophy is to give as few
-privileges as possible but still allow people to get their work done.
+Sudo is a program designed to allow a sysadmin to give limited root
+privileges to users and log root activity.  The basic philosophy is to
+give as few privileges as possible but still allow people to get their
+work done.
 
 MAILING LISTS:
 
-Please send bugs, problems, comments, etc to sudo-bugs@cs.colorado.edu
+Please send bugs, problems, comments, etc to sudo-bugs@cs.colorado.edu.
 There is a mailing list that receives announcements whenever a new
 version of sudo is released.  You can subscribe to it by sending a
 message to "majordomo@cs.colorado.edu" that includes the line
