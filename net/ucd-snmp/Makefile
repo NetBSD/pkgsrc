@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/04/05 00:59:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 1999/04/21 20:47:22 abs Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
@@ -24,18 +24,6 @@ CONFIGURE_ARGS+= --with-mibdirs="${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tnm2.1.
 MAKE_ENV+=	PKG_PREFIX="${PREFIX}"
 
 .include "../../mk/bsd.prefs.mk"
-
-# XXX This most horrible hack is necessary because of the stupid linker's
-# insistence on requiring that all externals referenced from a shared library
-# be defined, even if nothing elese from the library is ever used.  In this
-# case the libwrap.so library is at fault as it references 'deny_severity' and
-# 'allow_severity', but none of the configure tests will include this, nor
-# indeed will any product binary except for snmpd (which is the only one that
-# actualy uses tcp_wrappers).
-#
-# /usr/libexec/ld.so: Undefined symbol "_deny_severity" in conftest:/usr/lib/libwrap.so.0.0
-#
-CFLAGS+=	-static
 
 pre-configure:
 	(cd ${WRKSRC}; autoreconf --force)
