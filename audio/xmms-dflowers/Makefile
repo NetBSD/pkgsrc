@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/10/24 22:10:45 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2002/09/21 01:32:22 jlam Exp $
 #
 
 DISTNAME=	dflowers-1.2
@@ -10,10 +10,10 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://hem.passagen.se/joakime/linuxapp.html
 COMMENT=	XMMS plugin for dual flower scope
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-.include "../../audio/xmms/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../audio/xmms/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
