@@ -1,0 +1,60 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/03/15 08:53:09 rh Exp $
+
+--- src/regexx.cc.orig	2001-03-14 00:42:21.000000000 +1000
++++ src/regexx.cc
+@@ -28,5 +28,5 @@
+ 
+ #include "regexx.hh"
+-#include "../pcre/pcre.h"
++#include <pcre.h>
+ 
+ const unsigned int&
+@@ -44,5 +44,5 @@ regexx::Regexx::exec(int _flags)
+       throw CompileException(errptr);
+     }
+-    pcre_fullinfo(m_preg, NULL, PCRE_INFO_CAPTURECOUNT, (void*)&m_capturecount);
++    pcre_fullinfo((const pcre *)m_preg, NULL, PCRE_INFO_CAPTURECOUNT, (void*)&m_capturecount);
+     m_compiled = true;
+   }
+@@ -50,5 +50,5 @@ regexx::Regexx::exec(int _flags)
+   if(!m_study && (_flags&study)) {
+     const char *errptr;
+-    m_extra = pcre_study(m_preg, 0, &errptr);
++    m_extra = pcre_study((const pcre *)m_preg, 0, &errptr);
+     if(errptr != NULL)
+       throw CompileException(errptr);
+@@ -64,5 +64,5 @@ regexx::Regexx::exec(int _flags)
+   m_matches = 0;
+ 
+-  ssc = pcre_exec(m_preg,m_extra,m_str.c_str(),m_str.length(),0,eflags,ssv,33);
++  ssc = pcre_exec((const pcre *)m_preg, (const pcre_extra *)m_extra,m_str.c_str(),m_str.length(),0,eflags,ssv,33);
+   bool ret = (ssc > 0);
+ 
+@@ -71,5 +71,5 @@ regexx::Regexx::exec(int _flags)
+       while(ret) {
+ 	m_matches++;
+-	ret = (pcre_exec(m_preg,m_extra,m_str.c_str(),m_str.length(),ssv[1],eflags,ssv,33) > 0);
++	ret = (pcre_exec((const pcre *)m_preg, (const pcre_extra *)m_extra,m_str.c_str(),m_str.length(),ssv[1],eflags,ssv,33) > 0);
+       }
+     else if(_flags&noatom)
+@@ -77,5 +77,5 @@ regexx::Regexx::exec(int _flags)
+ 	m_matches++;
+ 	match.push_back(RegexxMatch(m_str,ssv[0],ssv[1]-ssv[0]));
+-	ret = (pcre_exec(m_preg,m_extra,m_str.c_str(),m_str.length(),ssv[1],eflags,ssv,33) > 0);
++	ret = (pcre_exec((const pcre *)m_preg, (const pcre_extra *)m_extra,m_str.c_str(),m_str.length(),ssv[1],eflags,ssv,33) > 0);
+       }
+     else
+@@ -90,5 +90,5 @@ regexx::Regexx::exec(int _flags)
+ 	    match.back().atom.push_back(RegexxMatchAtom(m_str,0,0));
+         }
+-	ret = (pcre_exec(m_preg,m_extra,m_str.c_str(),m_str.length(),ssv[1],eflags,ssv,33) > 0);
++	ret = (pcre_exec((const pcre *)m_preg, (const pcre_extra *)m_extra,m_str.c_str(),m_str.length(),ssv[1],eflags,ssv,33) > 0);
+       }
+   }
+@@ -115,5 +115,5 @@ regexx::Regexx::exec(int _flags)
+ 	    match.back().atom.push_back(RegexxMatchAtom(m_str,0,0));
+ 	}
+-	ret = (pcre_exec(m_preg,m_extra,m_str.c_str(),m_str.length(),ssv[1],eflags,ssv,33) > 0);
++	ret = (pcre_exec((const pcre *)m_preg, (const pcre_extra *)m_extra,m_str.c_str(),m_str.length(),ssv[1],eflags,ssv,33) > 0);
+       }
+     }
