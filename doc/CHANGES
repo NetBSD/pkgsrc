@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4958 2004/02/22 21:51:17 minskim Exp $
+$NetBSD: CHANGES,v 1.4959 2004/02/22 22:07:27 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -972,8 +972,11 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated fxtv to 1.03nb5 [jmmv 2004-02-22]
 	Deleted rdesktop10 [grant 2004-02-22]
 	Updated p5-Compress-Zlib to 1.33 [heinz 2004-02-22]
+	Updated p5-Crypt-CBC to 2.08 [heinz 2004-02-22]
+	Updated p5-Crypt-IDEA to 1.02 [heinz 2004-02-22]
 	Updated hpijs to 1.5 [jdolecek 2004-02-22]
 	Added p5-XML-LibXSLT-1.53 [minskim 2004-02-22]
 	Added gnome-devel-2.4.2 [jmmv 2004-02-22]
 	Updated coreutils to 5.2.0 [recht 2004-02-22]
 	Added libtlen-20040212 [minskim 2004-02-22]
+	Updated p5-Math-Pari to 2.010501 [heinz 2004-02-22]
