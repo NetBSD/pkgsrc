@@ -1,4 +1,7 @@
-$NetBSD: md5,v 1.6 1999/08/29 14:16:13 fredb Exp $
+$NetBSD: md5,v 1.7 1999/09/03 11:12:26 fredb Exp $
 
 MD5 (AfterStep/AfterStep-1.7.142.tar.bz2) = 7378c78b10025b1a313ab1c7dad079dd
 MD5 (AfterStep/1.7.142-01-sasha-png_jpg_warnings.patch.gz) = c49f966792fbb1ae1b13e553ec08c69e
+MD5 (AfterStep/1.7.142-02-tildouf-wharf_transient_and_Audio_fix.patch.gz) = 6c14c7c38594ab3ab931d63bded391cd
+MD5 (AfterStep/1.7.142-03-allanon-icons_and_wharf.patch.gz) = 7766e9273411c2471b744ff629354247
+MD5 (AfterStep/1.7.142-04-allanon-desk_and_shaped_icons_and_wharf_reswallow.patch.gz) = f8a0eb3e3cbdf560f0141be212c42f51
