@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4258 2003/12/26 09:40:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.4259 2003/12/26 12:41:55 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5380,3 +5380,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated roundup to 0.6.4 [recht 2003-12-25]
 	Updated py-wxWindows to 2.4.2.4 [recht 2003-12-25]
 	Updated libcaca to 0.5 [jmmv 2003-12-26]
+	Updated transcode to 0.6.11 [jmmv 2003-12-26]
