@@ -3,7 +3,8 @@
 # Date created:		21 May 1997
 # Whom:			Oliver Fromme <oliver.fromme@heim3.tu-clausthal.de>
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/28 23:19:09 augustss Exp $
+# $NetBSD: Makefile,v 1.2 1998/01/19 01:13:29 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.2 1997/05/25 08:58:43 andreas Exp
 #
 
 DISTNAME=	tosha-0.05
