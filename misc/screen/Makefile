@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2001/03/02 14:56:15 tron Exp $
-# FreeBSD Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp
+# $NetBSD: Makefile,v 1.27 2001/08/18 09:53:01 wiz Exp $
 #
 
-DISTNAME=	screen-3.9.8
+DISTNAME=	screen-3.9.9
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.uni-erlangen.de/pub/utilities/screen/ \
 		${MASTER_SITE_GNU:=screen/}
@@ -11,9 +10,10 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/screen/screen.html
 COMMENT=	Multi-screen window manager
 
-GNU_CONFIGURE=	yes
-INFO_FILES=	screen.info
-PLIST_SUBST=	DISTNAME=${DISTNAME}
+GNU_CONFIGURE=		yes
+INFO_FILES=		screen.info
+PLIST_SUBST=		DISTNAME=${DISTNAME}
+USE_BUILDLINK_ONLY=	yes
 
 .include "../../mk/bsd.prefs.mk"
 .if (${OPSYS} == SunOS)
