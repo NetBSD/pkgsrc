@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/01 13:54:10 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/01 14:09:38 rh Exp $
 #
 
 DISTNAME=	mailserv
@@ -15,16 +15,20 @@ USE_PERL5=	YES
 NO_BUILD=	YES
 
 do-configure:
+.for file in mailserv cgi-lib.pl
 	cd ${WRKSRC} &&							\
-	${CHMOD} 0755 mailserv &&					\
-	${CP} mailserv mailserv.old &&					\
-	${SED} < mailserv.old > mailserv				\
+	${CHMOD} 0755 ${file} &&					\
+	${CP} ${file} ${file}.old &&					\
+	${SED} < ${file}.old > ${file}					\
 		-e "s|@PREFIX@|${PREFIX}|g"				\
+		-e "s|/usr/local/bin/perl|${PREFIX}/bin/perl|g"		\
 		-e "s|/usr/bin/perl|${PREFIX}/bin/perl|g"
+.endfor
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/cgi-bin/mailserv
 	${INSTALL_SCRIPT} ${WRKSRC}/mailserv ${PREFIX}/libexec/cgi-bin/mailserv
+	${INSTALL_SCRIPT} ${WRKSRC}/cgi-lib.pl ${PREFIX}/libexec/cgi-bin/mailserv
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/mailserv
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mailserv
 .for cf in listproc listserv mail-list maiser majordomo-admin		\
@@ -34,6 +38,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${cf}.cf ${PREFIX}/share/examples/mailserv
 	cd ${PREFIX}/libexec/cgi-bin/mailserv &&			\
 	${LN} -s mailserv ${cf}
+.endfor
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mailserv
+.for doc in ChangeLog LICENSE README
+	${INSTALL_DATA} ${WRKSRC}/${doc} ${PREFIX}/share/doc/mailserv
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
