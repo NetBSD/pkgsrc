@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.22 2003/04/20 10:03:30 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.23 2003/04/20 10:10:40 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -553,3 +553,9 @@ net/snort-pgsql/Makefile			1.10
 
 	Bump PKGREVISION: honour PKG_SYSCONFDIR for real.
 	[salo, ticket #1258]
+
+net/snort-mysql/Makefile			1.2-1.4
+
+	- don't use _USE_RPATH
+	- Add FILESDIR definition so the rc.d script can be installed
+	[hubertf, ticket #1264]
