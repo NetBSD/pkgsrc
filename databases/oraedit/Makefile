@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2004/10/02 08:30:02 jdolecek Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/02 09:04:04 jdolecek Exp $
 
-DISTNAME=	oraedit-0.1.3
+DISTNAME=	oraedit-0.1.4
 CATEGORIES=	databases
 MASTER_SITES=	http://www.netbsd.cz/projects/
 EXTRACT_SUFX=	.tar.bz2

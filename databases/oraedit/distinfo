@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/10/02 08:30:02 jdolecek Exp $
+$NetBSD: distinfo,v 1.4 2004/10/02 09:04:04 jdolecek Exp $
 
-SHA1 (oraedit-0.1.3.tar.bz2) = b5a2c27668575c9774323eb39b4da5cee282f635
-Size (oraedit-0.1.3.tar.bz2) = 9436 bytes
+SHA1 (oraedit-0.1.4.tar.bz2) = f3d50ef3a8d9a1ac82e6aba59c23ed4307d7a7c0
+Size (oraedit-0.1.4.tar.bz2) = 9450 bytes
