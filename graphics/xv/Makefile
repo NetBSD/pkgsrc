@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2003/09/17 19:40:40 grant Exp $
+# $NetBSD: Makefile,v 1.51 2003/11/03 00:36:02 dillo Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	5
@@ -12,7 +12,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 PATCH_SITES=    ftp://ftp.cis.upenn.edu/pub/xv/
 PATCHFILES=     xv-3.10a.JPEG-patch xv-3.10a.TIFF-patch # (for tiff3.4)
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.trilon.com/xv/
 COMMENT=	X11 program that displays images of various formats
 
