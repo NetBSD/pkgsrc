@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/05 19:03:12 nathanw Exp $
+
+--- src/lib/howl/socket.c.orig	2004-02-18 13:05:46.000000000 -0500
++++ src/lib/howl/socket.c	2004-06-04 18:22:49.000000000 -0400
+@@ -363,7 +363,7 @@
+ #else
+ 	sw_ulong						real_ttl				= ttl;
+ #endif
+-
++	sw_uchar						mttl					= (sw_uchar) ttl;
+    /*
+       initialize the group membership
+    */
+@@ -422,7 +422,7 @@
+ 		return sw_system_error();
+ 	}
+ 
+-	if (setsockopt(self->m_fd, IPPROTO_IP, IP_MULTICAST_TTL, (char*) &real_ttl, sizeof(real_ttl)) == -1)
++	if (setsockopt(self->m_fd, IPPROTO_IP, IP_MULTICAST_TTL, (char*) &mttl, sizeof(mttl)) == -1)
+ 	{
+       sw_log(SW_LOG_ERROR, "sw_socket_join_multicast_group", "setsockopt(IP_MULTICAST_TTL) failed: %d\n", sw_socket_error_code());
+       return sw_system_error();

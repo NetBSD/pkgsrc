@@ -1,0 +1,56 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/05 19:03:12 nathanw Exp $
+bin/mDNSBrowse
+bin/mDNSPublish
+bin/mDNSResponder
+include/howl/corby/buffer.h
+include/howl/corby/channel.h
+include/howl/corby/corby.h
+include/howl/corby/message.h
+include/howl/corby/object.h
+include/howl/corby/orb.h
+include/howl/discovery/discovery.h
+include/howl/discovery/text_record.h
+include/howl/howl.h
+include/howl/howl_dll.h
+include/howl/rendezvous/rendezvous.h
+include/howl/rendezvous/text_record.h
+include/howl/salt/address.h
+include/howl/salt/assert.h
+include/howl/salt/interface.h
+include/howl/salt/log.h
+include/howl/salt/salt.h
+include/howl/salt/signal.h
+include/howl/salt/socket.h
+include/howl/salt/time.h
+include/howl/salt/verrno.h
+include/howl/salt/vstdlib.h
+include/howl/salt/vstring.h
+include/howl/salt/vtypes.h
+lib/lib${PKGNAME}.so.0
+lib/lib${PKGNAME}.so.0.2
+lib/libhowl.a
+lib/libhowl.la
+lib/libhowl.so
+lib/pkgconfig/howl.pc
+man/man8/mDNSResponder.8
+share/howl/help/address-summary.html
+share/howl/help/address.html
+share/howl/help/discovery-summary.html
+share/howl/help/discovery.html
+share/howl/help/index.html
+share/howl/help/overall.html
+share/howl/help/salt-summary.html
+share/howl/help/salt.html
+share/howl/help/txt_rec-summary.html
+share/howl/help/txt_rec.html
+share/howl/help/txt_rec_iter-summary.html
+share/howl/help/txt_rec_iter.html
+share/howl/help/txt_rec_str_iter-summary.html
+share/howl/help/txt_rec_str_iter.html
+@dirrm share/howl/help
+@dirrm share/howl
+@dirrm include/howl/salt
+@dirrm include/howl/rendezvous
+@dirrm include/howl/discovery
+@dirrm include/howl/corby
+@dirrm include/howl
