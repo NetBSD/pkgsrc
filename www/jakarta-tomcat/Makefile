@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/13 18:56:45 jwise Exp $
+# $NetBSD: Makefile,v 1.4 2000/01/13 20:26:31 jwise Exp $
 
 DISTNAME=	jakarta-tomcat.src
 PKGNAME=	jakarta-tomcat-3.0
@@ -14,6 +14,7 @@ USE_JAVA=	yes
 WRKSRC=		${WRKDIR}/jakarta-tomcat
 BUILD_DEFS+=	JAKARTA_HOME
 EXTRACT_CMD=    ${DO_NADA}
+NO_MTREE=
 
 .include "../../mk/bsd.prefs.mk"
 
