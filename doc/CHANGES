@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.662 2002/12/02 03:41:17 itojun Exp $
+$NetBSD: CHANGES,v 1.663 2002/12/02 08:53:23 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3789,3 +3789,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated exctags to 5.4 [seb 2002-12-01]
 	Updated xmame to 0.62.1 [kristerw 2002-12-02]
 	Updated Canna-server to 3.5.2nb3 [itojun 2002-12-02]
+	Updated xpmroot to 2.4.14 [martti 2002-12-02]
+	Updated fvwm2 to 2.4.14 [martti 2002-12-02]
