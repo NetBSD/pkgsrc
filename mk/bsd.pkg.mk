@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1154 2003/03/22 07:11:53 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1155 2003/03/22 18:18:28 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -3905,7 +3905,7 @@ SUBST_PLIST_REPLACEMENT=\
 		-e  's@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@'	\
 		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
 		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
-		-e  's@${LOWER_OS_VERSION}@\$${LOWER_OS_VERSION}@' 	\
+		-e  's@${LOWER_OS_VERSION:S/./\./g}@\$${LOWER_OS_VERSION}@' 	\
 		-e  's@${PKGNAME:S/./\./g}@\$${PKGNAME}@' 			\
 		-e  's@${PKGVERSION:S/./\./g}@\$${PKGVERSION}@'		\
 		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@' \
