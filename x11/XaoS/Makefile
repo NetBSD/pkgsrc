@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2002/03/25 16:19:29 atatat Exp $
+# $NetBSD: Makefile,v 1.2 2002/05/12 10:16:51 abs Exp $
 #
 
 DISTNAME=		XaoS-3.0
 CATEGORIES=		x11
-MASTER_SITES=		http://prdownloads.sourceforge.net/xaos/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xaos/}
 
 MAINTAINER=		atatat@netbsd.org
 HOMEPAGE=		http://xaos.theory.org/
