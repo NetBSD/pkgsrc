@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2004/05/25 21:49:26 wiz Exp $
+$NetBSD: patch-ae,v 1.3 2004/08/06 11:01:54 drochner Exp $
 
 --- libavcodec/Makefile.orig	2003-09-28 17:26:39.000000000 +0200
 +++ libavcodec/Makefile
@@ -18,7 +18,7 @@ $NetBSD: patch-ae,v 1.2 2004/05/25 21:49:26 wiz Exp $
  	rm -f $@
 -	$(AR) rc $@ $(OBJS) $(AMREXTRALIBS)
 -	$(RANLIB) $@
-+	$(LIBTOOL) --mode=link $(CC) -o $(LIB:.a=.la) $(OBJS:.o=.lo) -rpath $(prefix)/lib
++	$(LIBTOOL) --mode=link $(CC) -o $(LIB:.a=.la) $(OBJS:.o=.lo) -rpath $(prefix)/lib $(EXTRALIBS) $(AMREXTRALIBS)
 +
  
  $(SLIB): $(OBJS)
