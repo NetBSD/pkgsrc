@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/03/22 02:59:32 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/31 15:59:39 bouyer Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-3.2.2
@@ -33,7 +33,11 @@ INFO_FILES=		cpp.info g77.info gcc.info gcj.info
 .if (${OPSYS} == "NetBSD") || (${OPSYS} == "Linux")
 CONFIGURE_ARGS+=	--enable-shared
 .else
+.  if (${OPSYS} == "SunOS")
+CONFIGURE_ARGS+=	--enable-shared
+.  else
 CONFIGURE_ARGS+=	--disable-shared
+.  endif
 .  if ${CC:M*gcc*} == ""
 ALL_TARGET=		bootstrap
 .  endif
@@ -89,4 +93,3 @@ CONFIG_CPPFLAGS=	${CPPFLAGS:C/-O[0-9]*//g}
 CONFIGURE_ENV+=	CFLAGS="${CONFIG_CFLAGS}" CPPFLAGS="${CONFIG_CPPFLAGS}"
 .  endif
 .endif
-
