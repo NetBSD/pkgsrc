@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.14 2003/12/13 18:29:47 seb Exp $
+.\" $NetBSD: pkg_comp.8,v 1.15 2003/12/14 00:07:19 wiz Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, Julio M. Merino Vidal <jmmv@netbsd.org>
@@ -105,7 +105,7 @@ The configuration file name is specified by the argument of the
 .Fl c
 option.
 Alternatively you can specify any pathname as a configuration file
-with the argument of the 
+with the argument of the
 .Fl C
 option.
 .Pp
@@ -186,7 +186,7 @@ Otherwise, the file
 .Pa /libkver_osrelease
 inside the chroot will hold this variable's value.
 The pkgsrc system will pick up this file and fake the
-.Xr uname
+.Xr uname 1
 command's output.
 Defaults to
 .Ql no .
