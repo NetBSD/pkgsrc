@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1071 2003/11/26 22:48:50 jmmv Exp $
+$NetBSD: TODO,v 1.1072 2003/11/26 23:20:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -169,7 +169,7 @@ Suggested package updates
 	o courier-auth-0.43
 	o courier-imap-2.0 [pkg/22374]
 	o courier-imap-2.1
-	o crafty-19.1
+	o crafty-19.5
 	o crimsonfields-0.3.7
 	o crossfire-1.5.0
 	o csound-4.24.1
@@ -258,7 +258,7 @@ Suggested package updates
 	o icu-2.6.1 [recht]
 	o inn-2.4.0
 	o iozone-3.203
-	o irssi-0.8.8
+	o irssi-0.8.8 [pkg/23560]
 	o ispell-slovak-0.2.1 [salo]
 	o isync-0.9.1 [pkg/22189]
 	o ivtools-1.1.1
@@ -277,7 +277,7 @@ Suggested package updates
 	o libao-0.8.4
 	o libgcrypt-1.1.44 [pkg/23322]
 	o libgtop-2.0.6
-	o licq-1.2.7
+	o libart-2.3.16 [pkg/23559]
 	o libmpeg3-1.5.3
 	o libogg-1.1
 	o libole2-2.2.8
@@ -287,6 +287,7 @@ Suggested package updates
 	o libvorbis-1.0.1
 	o libxml2-2.6.2 [pkg/23488]
 	o libxslt-1.1.0 [pkg/23518]
+	o licq-1.2.7
 	o lilypond-2.0.0
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
