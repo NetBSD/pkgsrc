@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/11/25 10:16:33 adam Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/10 23:51:42 minskim Exp $
 
 DISTNAME=	gg2-2.2.3
 CATEGORIES=	chat
@@ -24,8 +24,8 @@ CONFIGURE_ARGS+=	--without-gtkspell --without-remote \
 .include "../../chat/ekg/buildlink3.mk"
 .include "../../chat/libtlen/buildlink3.mk"
 .include "../../chat/loudmouth/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/xosd/buildlink3.mk"
 
