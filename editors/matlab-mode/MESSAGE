@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/02/14 01:32:43 dmcmahill Exp $
+
+You will need to add something like the following to your .emacs.el (or
+default.el) file to autoload Matlab mode for Emacs.
+
+(setq auto-mode-alist (cons '("\\.m\\'" . matlab-mode) auto-mode-alist))
+(autoload 'matlab-mode "matlab" "Enter MATLAB mode." t)
+(autoload 'matlab-shell "matlab" "Interactive MATLAB mode." t)
+
+===========================================================================
