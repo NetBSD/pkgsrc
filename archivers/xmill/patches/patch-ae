@@ -1,3 +1,4 @@
+$NetBSD: patch-ae,v 1.2 2003/10/18 13:20:31 cjep Exp $
 --- src/UserCompress.hpp.orig	1999-11-24 16:32:52.000000000 +1100
 +++ src/UserCompress.hpp	2003-10-07 02:11:37.000000000 +1000
 @@ -61,7 +61,7 @@

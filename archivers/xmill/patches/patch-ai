@@ -1,3 +1,4 @@
+$NetBSD: patch-ai,v 1.2 2003/10/18 13:20:31 cjep Exp $
 --- src/RepeatCompress.cpp.orig	1999-11-24 16:32:42.000000000 +1100
 +++ src/RepeatCompress.cpp	2003-10-07 02:18:08.000000000 +1000
 @@ -174,7 +174,7 @@
