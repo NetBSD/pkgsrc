@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/08/20 00:39:55 fredb Exp $
+$NetBSD: patch-aa,v 1.2 2002/10/08 12:43:25 jlam Exp $
 
 --- Makefile.orig	Thu Feb  1 07:27:30 2001
 +++ Makefile
@@ -59,7 +59,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/08/20 00:39:55 fredb Exp $
  #solaris8
 -xinc	= -I/usr/openwin/include -I/usr/dt/include -DMOTIF12_HEADERS
 +#xinc	= -I/usr/openwin/include -I/usr/dt/include -DMOTIF12_HEADERS
-+xinc    = -I${BUILDLINK_DIR}/include -I${X11BASE}/include
++xinc    = -I${LOCALBASE}/include -I${X11BASE}/include
  
  
  ##
@@ -72,7 +72,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/08/20 00:39:55 fredb Exp $
  #xlibs	+= -lXm -lXmu -lXt -lXext -lX11 -lm
 -xlibs	+= -lXm12 -lXmu -lXt -lXext -lX11 -lm
 +#xlibs	+= -lXm12 -lXmu -lXt -lXext -lX11 -lm
-+xlibs	= -L${X11BASE}/lib -L${BUILDLINK_DIR}/lib 
++xlibs	= -L${X11BASE}/lib -L${LOCALBASE}/lib 
 +xlibs	+= -lXm -lXmu -lXt -lXext -lX11 -lm
 +xlibs   += -Wl,-rpath,${X11PREFIX}/lib
  
@@ -86,7 +86,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/08/20 00:39:55 fredb Exp $
 -pnglibs = /usr/local/lib/libpng.a /usr/local/lib/libz.a
 +#pnginc  = /usr/local/include
 +#pnglibs = /usr/local/lib/libpng.a /usr/local/lib/libz.a
-+pnginc  = ${BUILDLINK_DIR}/include
++pnginc  = ${LOCALBASE}/include
 +pnglibs = -lpng -lz -Wl,-rpath,${LOCALBASE}/lib
  
  # To disable PNG support comment this.
@@ -99,7 +99,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/08/20 00:39:55 fredb Exp $
 -jpeglibs = /usr/local/lib/libjpeg.a
 +#jpeginc  = /usr/local/include
 +#jpeglibs = /usr/local/lib/libjpeg.a
-+jpeginc  = ${BUILDLINK_DIR}/include
++jpeginc  = ${LOCALBASE}/include
 +jpeglibs = -ljpeg -Wl,-rpath,${LOCALBASE}/lib
  
  # To disable JPEG support (not recommended) comment this.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/04/21 23:19:54 markd Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/08 12:48:55 jlam Exp $
 
 DISTNAME=	ted-2.11.src
 PKGNAME=	ted-2.11
@@ -11,6 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.nllgg.nl/Ted/
 COMMENT=	X11 based WordPad-like word processor
 
+USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
 
 AFMDIR=		${PREFIX}/share/Ted/afm
@@ -59,9 +60,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/Ted/TedDocument-en_US.rtf ${INFODIR}
 	${INSTALL_DATA}	${WRKSRC}/Ted/Ted.ad ${PREFIX}/lib/X11/app-defaults/Ted
 
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/motif.buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../mk/motif.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
