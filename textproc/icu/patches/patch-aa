@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2003/06/23 07:49:40 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2004/04/04 16:58:16 recht Exp $
 
---- Makefile.in.orig	Thu Jun 19 18:42:30 2003
-+++ Makefile.in	Thu Jun 19 18:46:06 2003
-@@ -180,7 +180,7 @@
+--- Makefile.in.orig	2003-12-02 20:07:34.000000000 +0100
++++ Makefile.in	2004-02-06 03:04:44.000000000 +0100
+@@ -176,7 +176,7 @@
  
  $(top_builddir)/config/icu-config: $(top_builddir)/Makefile $(top_srcdir)/config/icu-config-top $(top_srcdir)/config/icu-config-bottom $(top_builddir)/config/Makefile.inc @platform_make_fragment@ $(top_srcdir)/config/make2sh.sed
  	-$(RMV) $@
