@@ -1,14 +1,29 @@
-# $NetBSD: Makefile,v 1.9 2001/02/25 04:18:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2002/04/12 15:17:22 mrauch Exp $
 #
 
 DISTNAME=		rc5-mlg-004
 PKGNAME=		rc5des-0.4
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://www.flame.org/netbsd-rc5/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.distributed.net/rc5/
 COMMENT=		Binaries for taking part in the rc5des challenge
+
+# This package requires emulators/compat12,compat13 and compat14
+# but only if we aren't running the relevant release natively.
+.include "../../mk/bsd.prefs.mk"
+RELEASE!= ${ECHO} ${OS_VERSION} | ${AWK} -F. '{print $$1*100+$$2}'
+.if ${RELEASE}>104
+DEPENDS+=		compat14-[0-9]*:../../emulators/compat14
+.if ${RELEASE}>103
+DEPENDS+=		compat13-[0-9]*:../../emulators/compat13
+.if ${RELEASE}>102
+DEPENDS+=		compat12-[0-9]*:../../emulators/compat12
+.endif
+.endif
+.endif
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386
 
