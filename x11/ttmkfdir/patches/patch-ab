@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/06/10 13:25:30 drochner Exp $
+
+--- ttmkfdir.c.orig	Sat Jun  8 21:37:58 2002
++++ ttmkfdir.c	Sat Jun  8 21:38:18 2002
+@@ -61,7 +61,7 @@
+ #include <ctype.h>
+ #include <errno.h>
+ 
+-#include <freetype.h>
++#include <freetype/freetype.h>
+ 
+ #include "panose.h"
+ #include "ttos2val.h"
