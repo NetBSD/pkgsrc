@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2830 2005/01/04 15:51:35 adam Exp $
+$NetBSD: TODO,v 1.2831 2005/01/04 23:49:47 lukem Exp $
 
 Suggested new packages
 ======================
@@ -1165,7 +1165,6 @@ Suggested package updates
 	o tkman-2.2
 	o tlf-0.9.21
 	o tmake-1.13
-	o tnftp-20050103
 	o tob-0.26
 	o top-3.6alpha9
 	o tor-0.0.9
