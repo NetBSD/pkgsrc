@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2004/04/29 13:15:03 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2004/06/30 11:41:53 recht Exp $
 #
 
 DISTNAME=	automake-1.8.4
@@ -13,7 +13,7 @@ COMMENT=	GNU Standards-compliant Makefile generator
 
 DEPENDS=	autoconf>=2.58:../../devel/autoconf
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+#PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PLIST_SUBST+=		PKG_DIR_VERSION=1.8
 USE_BUILDLINK3=		YES
