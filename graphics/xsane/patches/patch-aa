@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/04/06 05:57:31 rh Exp $
+$NetBSD: patch-aa,v 1.2 1999/05/03 16:29:23 rh Exp $
 
---- configure.orig	Mon Mar 22 16:39:21 1999
-+++ configure	Mon Apr  5 19:20:54 1999
+--- configure.orig	Wed Apr 14 00:42:49 1999
++++ configure	Sun May  2 14:11:59 1999
 @@ -9,7 +9,7 @@
  
  # Defaults:
@@ -10,24 +10,8 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/04/06 05:57:31 rh Exp $
 +ac_default_prefix=${PREFIX}
  # Any additions from configure.in:
  ac_help="$ac_help
-   --enable-shared         build shared libraries [default=yes]
-@@ -2698,6 +2698,7 @@
-   echo "$ac_t""no" 1>&6
- fi
- 
-+if false; then
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
-@@ -2743,6 +2744,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
-+fi
- 
- 
- 
-@@ -3931,10 +3933,12 @@
+   --with-x                use the X Window System"
+@@ -3674,10 +3674,12 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  

@@ -1,32 +1,13 @@
-$NetBSD: patch-ac,v 1.2 1999/04/17 01:27:28 hubertf Exp $
+$NetBSD: patch-ac,v 1.3 1999/05/03 16:29:23 rh Exp $
 
---- frontend/Makefile.in.orig	Thu Mar 25 16:42:21 1999
-+++ frontend/Makefile.in	Sat Apr 17 03:11:52 1999
-@@ -29,16 +29,16 @@
+--- sanei/Makefile.in.orig	Wed Apr 14 00:34:23 1999
++++ sanei/Makefile.in	Sun May  2 14:18:04 1999
+@@ -27,7 +27,7 @@
+ INSTALL_DATA = @INSTALL_DATA@
  
  CC = @CC@
- INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/include -I$(top_srcdir)/include \
--	@GTK_CFLAGS@ @INCLUDES@
-+	@GTK_CFLAGS@ @INCLUDES@ -I${LOCALBASE}/include
- DEFS = @DEFS@
+-INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/include -I$(top_srcdir)/include
++INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/include -I$(top_srcdir)/include -I${PREFIX}/include
  CPPFLAGS = @CPPFLAGS@
  CFLAGS = @CFLAGS@
  LDFLAGS = @LDFLAGS@
--LIBS = @LIBS@
-+LIBS = @LIBS@ -L${X11BASE}/lib -lsane
- GTK_LIBS = @GTK_LIBS@
- GIMP_LIBS = @GIMP_LIBS@
- 
--LIBTOOL = ../libtool
-+LIBTOOL = @LIBTOOL@
- MINST	= --mode=install
- MLINK	= --mode=link
- XSCAN	= @XSCAN@
-@@ -66,7 +66,6 @@
- 	  $(LIBTOOL) $(MINST) $(INSTALL_PROGRAM) $${program} \
- 	    $(bindir)/$${program}; \
- 	done
--	$(INSTALL_DATA) $(srcdir)/sane-style.rc $(datadir)/sane-style.rc
- 	$(INSTALL_DATA) $(srcdir)/xsane-logo.xpm $(datasanedir)/xsane-logo.xpm
- 
- xsane: $(XSANE_OBJS) $(LIBSANEI) $(LIBLIB)

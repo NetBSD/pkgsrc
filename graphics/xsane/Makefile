@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/04/06 05:57:31 rh Exp $
+# $NetBSD: Makefile,v 1.2 1999/05/03 16:29:22 rh Exp $
 #
 
-DISTNAME=	xsane-0.19
+DISTNAME=	xsane-0.22
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.wolfsburg.de/~rauch/sane/
 
@@ -11,14 +11,13 @@ HOMEPAGE=	http://www.wolfsburg.de/~rauch/sane/sane-xsane.html
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-1.0.3:../../graphics/png
 DEPENDS+=	tiff-3.4:../../graphics/tiff
-DEPENDS+=	gtk10-1.0.6:../../x11/gtk10
-DEPENDS+=	sane-1.00:../../graphics/sane
+DEPENDS+=	gtk+-1.2.2:../../x11/gtk
+DEPENDS+=	sane-1.0.1:../../graphics/sane
 
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 USE_X11BASE=	YES
 USE_LIBTOOL=	YES
-CONFIGURE_ENV+=	GTK_CONFIG="${X11BASE}/bin/gtk10-config"
 
 CPPFLAGS+=	-I${PREFIX}/include
 
