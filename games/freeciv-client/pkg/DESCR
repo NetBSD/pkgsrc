@@ -1,0 +1,9 @@
+This archive contains Freeciv, a free Civilization clone for Unix and X.
+This version only allows multiplayer games, and limited support for AI
+players.
+
+You should check out the home page, as it contains much more information
+than this file and the online help. This is also where we'll inform people
+about new releases/bugs/fixes/competitions, etc.
+
+This package contains the Freeciv client with Xaw interface.
