@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.38 2003/07/26 21:41:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.39 2003/07/27 19:59:40 jmmv Exp $
 #
 
-.include "../../graphics/mplayer-share/Makefile.common"
-
 PKGNAME=	mplayer-${MPLAYER_PKG_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 COMMENT=	Software only MPEG-1/2/4 video decoder
+
+.include "../../graphics/mplayer-share/Makefile.common"
 
 USE_BUILDLINK2=		# defined
 CONFIGURE_ARGS+=	--disable-mencoder
@@ -16,7 +16,6 @@ do-install:
 
 .include "../../graphics/mplayer-share/Makefile.depends"
 
-.include "../../audio/nas/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .include "../../graphics/mplayer-share/Makefile.cflags"
