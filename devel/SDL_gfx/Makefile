@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2004/10/03 00:13:24 tv Exp $
+# $NetBSD: Makefile,v 1.19 2005/01/05 12:24:55 adam Exp $
 
-DISTNAME=	SDL_gfx-2.0.12
-PKGREVISION=	1
+DISTNAME=	SDL_gfx-2.0.13
 CATEGORIES=	devel
 MASTER_SITES=	http://www.ferzkopp.net/~aschiffler/Software/SDL_gfx-2.0/
 
@@ -10,10 +9,10 @@ HOMEPAGE=	http://www.ferzkopp.net/~aschiffler/Software/SDL_gfx-2.0/
 COMMENT=	Basic drawing routines for SDL
 
 USE_BUILDLINK3=		YES
-USE_X11=		YES
-GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
+USE_X11=		YES
+GNU_CONFIGURE=		YES
 
 .if (${MACHINE_ARCH} != "i386")
 CONFIGURE_ARGS+=	--disable-mmx
