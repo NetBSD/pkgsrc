@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2387 2004/11/19 11:13:11 xtraeme Exp $
+$NetBSD: TODO,v 1.2388 2004/11/19 12:16:22 adam Exp $
 
 Suggested new packages
 ======================
@@ -403,7 +403,6 @@ Suggested package updates
 	o libnids-1.19
 	o libole2-2.2.8
 	o libopendaap-0.2.3
-	o libsndfile-1.0.11
 	o libtiff-3.7.0 [reed]
 	o licq-1.3.0
 	o lilypond-2.4
