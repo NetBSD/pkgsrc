@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 1999/08/23 09:09:06 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/03/08 21:30:07 tron Exp $
 bin/gnuattach
 bin/gnuclient
 bin/gnudoit
 bin/ootags
-bin/pstogif
 bin/xemacs
 bin/${PKGNAME}
 bin/xemacs-b2m
@@ -836,6 +835,8 @@ lib/${PKGNAME}/lisp/x-scrollbar.elc
 lib/${PKGNAME}/lisp/x-select.elc
 lib/${PKGNAME}/lisp/x-win-sun.elc
 lib/${PKGNAME}/lisp/x-win-xfree86.elc
+lib/${PKGNAME}/lisp/xpm-button.el@.GZ@
+lib/${PKGNAME}/lisp/xpm-button.elc
 lib/${PKGNAME}/lisp/finder-inf.el@.GZ@
 lib/${PKGNAME}/lisp/finder-inf.elc
 lib/${PKGNAME}/lisp/mule/arabic.el@.GZ@
@@ -909,6 +910,7 @@ lib/${PKGNAME}/info/internals.info-4
 lib/${PKGNAME}/info/internals.info-5
 lib/${PKGNAME}/info/internals.info-6
 lib/${PKGNAME}/info/internals.info-7
+lib/${PKGNAME}/info/internals.info-8
 lib/${PKGNAME}/info/lispref.info
 lib/${PKGNAME}/info/lispref.info-1
 lib/${PKGNAME}/info/lispref.info-10

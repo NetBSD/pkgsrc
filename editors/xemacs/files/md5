@@ -1,5 +1,5 @@
-$NetBSD: md5,v 1.6 1999/08/23 09:09:06 tron Exp $
+$NetBSD: md5,v 1.7 2000/03/08 21:30:06 tron Exp $
 
-MD5 (xemacs/xemacs-21.1.6.tar.gz) = f216ccf246d10771b65436fd45b50810
-MD5 (xemacs/xemacs-21.1.6-elc.tar.gz) = 5047ea121e8b972725bbeb2a197e4461
-MD5 (xemacs/xemacs-21.1.6-info.tar.gz) = 6d9bf4b1f51b278439fd3fbb7033c9b5
+MD5 (xemacs/xemacs-21.1.9-elc.tar.gz) = dfb43552c15ceff6f011b764585e256a
+MD5 (xemacs/xemacs-21.1.9-info.tar.gz) = 55c1fc50e5e39c9d9317e7366cef2519
+MD5 (xemacs/xemacs-21.1.9.tar.gz) = 9c39352ed2467a3a57339cb612054c85
