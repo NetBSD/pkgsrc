@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/02/14 18:26:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/14 20:51:46 kristerw Exp $
 #
 
 DISTNAME=		libXcursor-1.1.1
 PKGNAME=		${DISTNAME:S/libX/x/}
+PKGREVISION=		1
 CATEGORIES=		x11 devel
 MASTER_SITES=		http://freedesktop.org/~xlibs/dist/
 EXTRACT_SUFX=		.tar.bz2
@@ -18,6 +19,8 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=    xcursor.pc.in
+
+BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8
 
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../x11/Xfixes/buildlink2.mk"
