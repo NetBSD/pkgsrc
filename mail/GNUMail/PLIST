@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/11 00:03:10 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/20 14:50:46 wiz Exp $
 share/GNUstep/Local/Applications/GNUMail.app/GNUMail
+share/GNUstep/Local/Applications/GNUMail.app/Resources/AddressBook_32.tiff
+share/GNUstep/Local/Applications/GNUMail.app/Resources/AddressManager_32.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/Address_bcc.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/Address_cc.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/Address_to.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/AddressBook_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/AddressManager_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/sort_left.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/CVS/Entries
 share/GNUstep/Local/Applications/GNUMail.app/Resources/CVS/Repository
 share/GNUstep/Local/Applications/GNUMail.app/Resources/CVS/Root
@@ -89,6 +88,7 @@ share/GNUstep/Local/Applications/GNUMail.app/Resources/send_48.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/show_all_headers_32.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/show_all_headers_48.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/sort_down.tiff
+share/GNUstep/Local/Applications/GNUMail.app/Resources/sort_left.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/sort_right.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/sort_up.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/stop_32.tiff
@@ -141,7 +141,8 @@ share/GNUstep/Local/Library/GNUMail/Viewing.prefs/Resources/viewing.tiff
 share/GNUstep/Local/Library/GNUMail/Viewing.prefs/Viewing
 share/GNUstep/Local/Library/GNUMail/Viewing.prefs/stamp.make
 share/GNUstep/Local/Library/Libraries/libGNUMail.so
-share/GNUstep/Local/Library/Libraries/libGNUMail.so.1.0.0
+share/GNUstep/Local/Library/Libraries/libGNUMail.so.0.0.1
+@comment in gnustep-make: @dirrm share/GNUstep/Local/Library/Libraries
 @dirrm share/GNUstep/Local/Library/GNUMail/Viewing.prefs/Resources
 @dirrm share/GNUstep/Local/Library/GNUMail/Viewing.prefs
 @dirrm share/GNUstep/Local/Library/GNUMail/Sending.prefs/Resources
@@ -165,6 +166,7 @@ share/GNUstep/Local/Library/Libraries/libGNUMail.so.1.0.0
 @dirrm share/GNUstep/Local/Library/GNUMail/Account.prefs/Resources
 @dirrm share/GNUstep/Local/Library/GNUMail/Account.prefs
 @dirrm share/GNUstep/Local/Library/GNUMail
+@comment in gnustep-make: @dirrm share/GNUstep/Local/Library
 @dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources/Swedish.lproj
 @dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources/Spanish.lproj
 @dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources/German.lproj
@@ -174,3 +176,4 @@ share/GNUstep/Local/Library/Libraries/libGNUMail.so.1.0.0
 @dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources/CVS
 @dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources
 @dirrm share/GNUstep/Local/Applications/GNUMail.app
+@comment in gnustep-make: @dirrm share/GNUstep/Local/Applications
