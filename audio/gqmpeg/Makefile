@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2004/03/26 02:27:34 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2004/04/11 17:13:40 xtraeme Exp $
 
 DISTNAME=		gqmpeg-0.20.0
 PKGREVISION=		4
@@ -15,7 +15,7 @@ DEPENDS+=		mpg123{,-esound,-nas}>=0.59.18:../../audio/mpg123
 DEPENDS+=		vorbis-tools>=1.0.0.6:../../audio/vorbis-tools
 DEPENDS+=		xmp>=2.0.2:../../audio/xmp
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
@@ -39,7 +39,7 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gnome/apps/Multimedia
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pixmaps
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
