@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2003/07/21 16:34:32 martti Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/25 10:13:04 wiz Exp $
 #
 
-DISTNAME=	naim-0.11.5.9
-PKGREVISION=	1
+DISTNAME=	naim-0.11.6
 CATEGORIES=	chat
 MASTER_SITES=	http://shell.n.ml.org/n/naim/
 
