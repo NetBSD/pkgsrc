@@ -1,0 +1,5 @@
+The Xbae widgets are a small set of OSF/Motif\(rg compatible widgets.
+Their development originated in the Bellcore Application Environment,
+which explains their name.
+The Xbae widgets are compatible with LessTif too,
+they're now bundled with LessTif but can be obtained and used separately.
