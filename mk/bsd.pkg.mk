@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1103 2002/12/07 16:03:12 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1104 2002/12/10 13:08:34 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -566,8 +566,8 @@ MESSAGE_SRC=		${PKGDIR}/MESSAGE.common
 .    if exists(${PKGDIR}/MESSAGE.${OPSYS})
 MESSAGE_SRC+=		${PKGDIR}/MESSAGE.${OPSYS}
 .    endif
-.    if exists(${PKGDIR}/MESSAGE.${OPSYS}.${MACHINE_ARCH:C/i[3-6]86/i386/g})
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${OPSYS}.${MACHINE_ARCH:C/i[3-6]86/i386/g}
+.    if exists(${PKGDIR}/MESSAGE.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g})
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .    endif
 .  endif
 .endif
@@ -1109,7 +1109,7 @@ __PLATFORM_OK?=	yes
 .    endif	# MACHINE_PLATFORM
 .  endfor	# __tmp__
 .  if !defined(__PLATFORM_OK)
-PKG_FAIL_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
+PKG_SKIP_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
 .  endif	# !__PLATFORM_OK
 
 #
