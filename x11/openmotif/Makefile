@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/09/27 23:19:01 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/09/28 08:54:56 jlam Exp $
 # FreeBSD: /c/ncvs/ports/x11-toolkits/open-motif/Makefile,v 1.18 2000/10/09 01:40:02 asami Exp 
 # OpenBSD: Makefile,v 1.5 2000/10/23 16:08:12 espie Exp 
 
@@ -32,6 +32,7 @@ INSTALL_FILE=		${WRKDIR}/INSTALL
 
 FILES_SUBST=		X11BASE=${X11BASE}
 FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		CMP=${CMP:Q}
 FILES_SUBST+=		ECHO=${ECHO:Q}
 FILES_SUBST+=		GREP=${GREP:Q}
 FILES_SUBST+=		LN=${LN:Q}

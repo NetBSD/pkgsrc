@@ -1,11 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/09/08 20:03:45 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/09/28 08:54:56 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 CP="@CP@"
+CMP="@CMP@"
 ECHO="@ECHO@"
 GREP="@GREP@"
 MV="@MV@"
@@ -16,17 +17,24 @@ TRUE="@TRUE@"
 X11BASE=@X11BASE@
 MOTIF_RULES=${PKG_PREFIX}/lib/X11/config/Motif.rules
 MOTIF_TMPL=${PKG_PREFIX}/lib/X11/config/Motif.tmpl
-X11_HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
+X11_HOSTDEF=${X11BASE}/lib/X11/config/host.def
+HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
 
 case ${STAGE} in
 DEINSTALL)
 	;;
 
 POST-DEINSTALL)
-	${ECHO} -n "Updating ${X11_HOSTDEF}..."
-	${CP} -f ${X11_HOSTDEF} ${X11_HOSTDEF}.bak
-	( ${GREP} -v OpenMotif ${X11_HOSTDEF}.bak || ${TRUE} ) \
-		> ${X11_HOSTDEF}
+	${ECHO} -n "Updating ${HOSTDEF}..."
+	${CP} -f ${HOSTDEF} ${HOSTDEF}.bak
+	( ${GREP} -v OpenMotif ${HOSTDEF}.bak || ${TRUE} ) > ${HOSTDEF}
+	${RM} -f ${HOSTDEF}.bak
+	if [ ${PKG_PREFIX} != ${X11BASE} ] && \
+		[ -f ${X11_HOSTDEF} ] && \
+		${CMP} -s ${X11_HOSTDEF} ${HOSTDEF}
+	then
+		${RM} -f ${HOSTDEF}
+	fi
 	${ECHO} "done."
 
 	${RM} -f ${MOTIF_RULES} ${MOTIF_TMPL}
