@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2004/10/02 22:09:46 adrianp Exp $
+
+--- data/example-modules.conf.orig	2004-10-02 20:01:04.000000000 +0100
++++ data/example-modules.conf	2004-10-02 19:59:27.000000000 +0100
+@@ -366,7 +366,7 @@
+     #     "Session limit exceeded".  If this is commented out, nothing will
+     #     be sent.
+ 
+-    SessionLimitExceeded "The session limit for your host %s has been exceeded."
++    SessionLimitExceeded "The session limit for your host %s has been exceeded."
+ 
+     # SessionLimitDetailsLoc <message>  [OPTIONAL]
+     #     Same as above, but should be used to provide a website address
+@@ -379,7 +379,7 @@
+     #     you supply an address/URL where people can get help regarding
+     #     session limits.
+ 
+-    #SessionLimitDetailsLoc "Please visit http://your.website.url/ for more information about session limits."
++    #SessionLimitDetailsLoc "Please visit http://your.website.url/ for more information about session limits."
+ 
+     # SessionLimitAutokill <max-kill-interval> <num-kills> <expiry> <reason>  [OPTIONAL]
+     #     With this option, Services will add an automatic autokill when
