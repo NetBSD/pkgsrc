@@ -1,88 +1,29 @@
-$NetBSD: patch-aa,v 1.2 2001/06/19 09:20:11 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2002/01/29 17:10:10 jlam Exp $
 
---- Makefile.orig	Mon Nov 22 04:02:36 1999
+--- Makefile.orig	Sat Jan 20 17:29:47 2001
 +++ Makefile
-@@ -31,8 +31,8 @@
- #STATIC=-DPAM_STATIC
+@@ -58,20 +58,20 @@
+ install: _pam_aconf.h prep
+ 	$(MKDIR) $(FAKEROOT)$(INCLUDED)
+ 	$(INSTALL) -m 444 security/_pam_aconf.h $(FAKEROOT)$(INCLUDED)
+-	for x in $(THINGSTOMAKE) ; do make -C $$x install ; done
++	for x in $(THINGSTOMAKE) ; do $(MAKE) -C $$x install ; done
  
- # Comment out these lines to disable building dynamic/static libpam.*
--DYNAMIC_LIBPAM=yes
--#STATIC_LIBPAM=yes
-+DYNAMIC_LIBPAM?=yes
-+STATIC_LIBPAM?=yes
+ remove:
+ 	rm -f $(FAKEROOT)$(INCLUDED)/_pam_aconf.h
+-	for x in $(THINGSTOMAKE) ; do make -C $$x remove ; done
++	for x in $(THINGSTOMAKE) ; do $(MAKE) -C $$x remove ; done
  
- # All combinations of the above four variable definitions are legal,
- # however, not defining either dynamic or static modules and yet
-@@ -43,22 +43,22 @@
- # they control the building of some modules in this distribution
- # Note, these definitions are all "export"ed below...
- 
--HAVE_PWDBLIB=yes
-+HAVE_PWDBLIB=no
- HAVE_CRACKLIB=yes
- HAVE_AFSLIBS=no
--HAVE_KRBLIBS=no
-+HAVE_KRBLIBS=yes
- 
- # NB. The following is the generic defines for compilation.
- # They can be overridden in the default.defs file below
- #
--WARNINGS = -ansi -D_POSIX_SOURCE -Wall -Wwrite-strings \
-+WARNINGS = -ansi -Wall -Wwrite-strings \
-         -Wpointer-arith -Wcast-qual -Wcast-align \
-         -Wtraditional -Wstrict-prototypes -Wmissing-prototypes \
-         -Wnested-externs -Winline -Wshadow -pedantic
- PIC=-fPIC
- 
- # Mode to install shared libraries with
--SHLIBMODE=755
-+SHLIBMODE=444
- 
- #
- # Conditional defines..
-@@ -66,7 +66,7 @@
- 
- ifdef DYNAMIC
- # need the dynamic library functions
--LIBDL=-l$(DYNLOAD)
-+LIBDL=
- ifdef STATIC_LIBPAM
- # needed because pam_xxx() fn's are now in statically linked library
- RDYNAMIC = -rdynamic
-@@ -98,15 +98,15 @@
- 
- # the sub-directories to make things in
- 
--DIRS = modules libpam conf libpam_misc libpamc examples
-+DIRS = libpam modules conf libpam_misc libpamc examples
- 
- #
- # basic defines
- #
- 
--INCLUDEDIR=-I$(shell pwd)/include
--PAMLIB=-L$(shell pwd)/libpam
--PAMMISCLIB=-L$(shell pwd)/libpam_misc
-+INCLUDEDIR=-I$(shell pwd)/include -I${BUILDLINK_DIR}/include/cracklib
-+PAMLIB=-L$(shell pwd)/libpam -Wl,-R${PREFIX}/lib -L${BUILDLINK_DIR}/lib
-+PAMMISCLIB=-L$(shell pwd)/libpam_misc -Wl,-R${PREFIX}/lib -L${BUILDLINK_DIR}/lib
- ifeq ($(DEBUG_REL),yes)
-  PAMLIB += -lpamd
-  PAMMISCLIB += -lpamd_misc
-@@ -121,6 +121,7 @@
- # only that you are compiling the "Linux" (read FREE) implementation
- # of Pluggable Authentication Modules.
- EXTRAS += -DLINUX_PAM
-+EXTRAS += -DHAVE_UTMP_H
- 
- #
- # build composite defines
-@@ -209,7 +210,7 @@
- ## the rules
- ##
- 
--all: .freezemake headers
-+all: headers
- 
- 	@for i in $(DIRS) ; do \
- 		$(MAKE) -C $$i all ; \
+ release:
+-	@if [ ! -f Make.Rules ]; then echo make Make.Rules first ; exit 1; fi
++	@if [ ! -f Make.Rules ]; then echo $(MAKE) Make.Rules first ; exit 1; fi
+ 	@if [ ! -L ../$(DISTNAME)-$(MAJOR_REL).$(MINOR_REL) ]; then \
+ 	   echo generating ../$(DISTNAME)-$(MAJOR_REL).$(MINOR_REL) link ; \
+ 	   ln -sf $(DISTNAME) ../$(DISTNAME)-$(MAJOR_REL).$(MINOR_REL) ; \
+ 	   echo to ../$(DISTNAME) . ; fi
+ 	@diff ../$(DISTNAME)-$(MAJOR_REL).$(MINOR_REL)/Make.Rules Make.Rules
+-	make distclean
++	$(MAKE) distclean
+ 	cd .. ; tar zvfc $(DISTNAME)-$(MAJOR_REL).$(MINOR_REL).tar.gz \
+ 		--exclude CVS --exclude .cvsignore --exclude '.#*' \
+ 		$(DISTNAME)-$(MAJOR_REL).$(MINOR_REL)/*

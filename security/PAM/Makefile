@@ -1,77 +1,61 @@
-# $NetBSD: Makefile,v 1.7 2001/09/27 23:18:37 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/01/29 17:10:10 jlam Exp $
 #
 
 DISTNAME=	Linux-${PKGNAME}
-PKGNAME=	PAM-0.72
+PKGNAME=	PAM-0.75
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.kernel.org/pub/linux/libs/pam/pre/library/
+MASTER_SITES=	http://www.kernel.org/pub/linux/libs/pam/pre/library/ \
+		ftp://ftp.kernel.org/pub/linux/libs/pam/pre/library/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.kernel.org/pub/linux/libs/pam/
 COMMENT=	Pluggable Authentication Modules
 
-BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
+USE_BUILDLINK_ONLY=	yes
+USE_GMAKE=		yes
 
-USE_GMAKE=		YES
-USE_BUILDLINK_ONLY=	YES
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-includedir=${PREFIX}/include
+CONFIGURE_ARGS+=	--enable-sconfigdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--enable-static-libpam
 
-.include "../../security/libcrack/buildlink.mk"
+CFLAGS+=		-DHAVE_UTMP_H=1
+MAKE_FLAGS+=		OS_CFLAGS="${CFLAGS}"
 
-MAKE_ENV+=	LOWER_OPSYS="${LOWER_OPSYS}"
-MAKE_ENV+=	MACHINE_GNU_ARCH="${MACHINE_GNU_ARCH}"
-MAKE_ENV+=	MKDIR="${MKDIR}"
-MAKE_ENV+=	ARPRG="${AR}"
-MAKE_ENV+=	RANLIB="${RANLIB}"
-MAKE_ENV+=	BSD_INSTALL="${INSTALL}"
-MAKE_ENV+=	CONFIGED="${PREFIX}/etc"
-MAKE_ENV+=	CONFD="${PREFIX}/etc"
+PKG_SYSCONFSUBDIR?=	pam
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
+HTMLDIR=		${PREFIX}/share/doc/html/${PKGBASE}
 
-do-configure:
-	cd ${WRKSRC} && ${TOUCH} .quiet_install &&			\
-	for i in `${FIND} . -type f` ; do				\
-		if ${GREP} -q '\/etc\/' $$i ; then			\
-			${CP} $$i $$i.old &&				\
-			${SED} < $$i.old > $$i				\
-			    -e 's:/etc/security:${PREFIX}/etc/pam:g' 	\
-			    -e 's:/etc/pam:${PREFIX}/etc/pam:g' &&	\
-			${RM} $$i.old ;					\
-		fi ;							\
-		if ${GREP} -q 'bash' $$i ; then				\
-			${CP} $$i $$i.old &&				\
-			${SED} < $$i.old > $$i				\
-			    -e 's:bash:sh:g' &&				\
-			${RM} $$i.old ;					\
-		fi ;							\
-	done
+CFILES=			access.conf pam_env.conf group.conf time.conf
+CONF_FILES=		${EGDIR}/pam.conf ${PKG_SYSCONFBASE}/pam.conf
+.for FILE in ${CFILES}
+CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+.endfor
 
-# for OBJECT_FMT
-.include "../../mk/bsd.prefs.mk"
+post-extract:
+	cd ${WRKSRC}/doc;						\
+	if [ -f ${DISTNAME}-docs.tar.gz ]; then				\
+		${GZCAT} ${DISTNAME}-docs.tar.gz | ${GTAR} -xf -;	\
+	fi
 
 post-install:
-	for doc in ${WRKSRC}/doc/man/*.3 ; do				\
-		${INSTALL_MAN} $$doc ${PREFIX}/man/man3 ;		\
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/conf/pam.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/modules/pam_access/access.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/modules/pam_env/pam_env.conf-example	\
+		${EGDIR}/pam_env.conf
+	${INSTALL_DATA} ${WRKSRC}/modules/pam_group/group.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/modules/pam_time/time.conf ${EGDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	cd ${WRKSRC}/doc; for file in modules/*.sgml; do		\
+		${INSTALL_DATA} $${file} ${DOCDIR};			\
 	done
-	for doc in ${WRKSRC}/doc/man/*.8 ; do				\
-		${INSTALL_MAN} $$doc ${PREFIX}/man/man8 ;		\
+	${INSTALL_DATA_DIR} ${HTMLDIR}
+	cd ${WRKSRC}/doc; for file in html/*.html; do			\
+		${INSTALL_DATA} $${file} ${HTMLDIR};			\
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/PAM/modules
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/PAM/sgml
-	for doc in ${WRKSRC}/doc/modules/* ; do				\
-		${INSTALL_DATA} $$doc ${PREFIX}/share/doc/PAM/modules ; \
-	done
-	${INSTALL_DATA} ${WRKSRC}/doc/figs/pam_orient.txt 		\
-		${PREFIX}/share/doc/PAM
-.for doc in draft-morgan-pam.raw rfc86.0.txt
-	${INSTALL_DATA} ${WRKSRC}/doc/specs/${doc} ${PREFIX}/share/doc/PAM
-.endfor
-.for doc in appl modules source
-	${INSTALL_DATA} ${WRKSRC}/doc/pam_${doc}.sgml			\
-		${PREFIX}/share/doc/PAM/sgml
-.endfor
-.if (${OBJECT_FMT} == "ELF")
-	${LN} -fs ${PREFIX}/lib/libpam.so.0.72 ${PREFIX}/lib/libpam.so.0
-	${LN} -fs ${PREFIX}/lib/libpam_misc.so.0.72 ${PREFIX}/lib/libpam_misc.so.0
-	${LN} -fs ${PREFIX}/lib/libpamc.so.0.72 ${PREFIX}/lib/libpamc.so.0
-.endif
 
+.include "../../security/libcrack/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
