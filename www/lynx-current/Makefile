@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/01/11 20:59:05 tv Exp $
+# $NetBSD: Makefile,v 1.24 2001/02/03 19:07:42 fredb Exp $
 #
 
 DISTNAME=		lynx2.8.4dev.10
@@ -44,7 +44,6 @@ BUILD_DEFS+=		LYNX_SCREEN_LIB USE_SOCKS USE_INET6
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--with-nls-datadir=${PREFIX}/share
 CONFIGURE_ARGS+=	--without-included-gettext
-CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include"
 
 # Note: --enable-{default-colors,scrollbar} are simply ignored
 # for certain settings of --with-screen.
