@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2004/01/06 17:17:53 reed Exp $
+# $NetBSD: Makefile,v 1.77 2004/01/08 18:03:04 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -19,8 +19,11 @@ NOT_FOR_PLATFORM=	Darwin-*-*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		# defined
-HAS_CONFIGURE=		# defined
+BUILDING_PERL5=		yes
+PERL5_CONFIGURE=	no
+
+USE_BUILDLINK3=		yes
+HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
 CONFIGURE_ARGS+=	-Dprefix="${PREFIX}"
@@ -210,4 +213,5 @@ CC=/usr/bin/cc
 .undef USE_GCC3
 .endif
 
+.include "module.mk"
 .include "../../mk/bsd.pkg.mk"
