@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8070 2004/11/27 14:23:55 jdolecek Exp $
+$NetBSD: CHANGES,v 1.8071 2004/11/27 14:50:43 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5507,3 +5507,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Algorithm-Merge to 0.05 [he 2004-11-27]
 	Updated nxtvepg to 2.7.2 [magick 2004-11-27]
 	Updated pear-HTTP_Request to 1.2.3 [jdolecek 2004-11-27]
+	Updated p5-Apache-Filter to 1.022 [he 2004-11-27]
