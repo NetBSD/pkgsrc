@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:44 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/08 13:32:31 wiz Exp $
 lib/libcfitsio.a
 lib/libcfitsio.la
 lib/libcfitsio.so
@@ -14,9 +14,7 @@ include/fitsio.h
 include/fitsio2.h
 include/grparser.h
 include/group.h
-include/imcompress.h
 include/region.h
-include/pctype.h
 include/longnam.h
 include/ricecomp.h
 share/doc/cfitsio/fitsio.doc
