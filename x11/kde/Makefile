@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.11 1998/05/01 20:24:08 tron Exp $
+# $NetBSD: Makefile,v 1.12 1998/07/14 22:12:30 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/27 00:47:46 se Exp
 #
 
-DISTNAME=	kde-4.1b
+DISTNAME=	kde-1.0
 CATEGORIES=	x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	tron@netbsd.org
 
-DEPENDS+=	kdeutils-4.1b:../../misc/kdeutils
-DEPENDS+=	kdegames-4.1b:../../games/kdegames
-DEPENDS+=	kdenetwork-4.1b:../../net/kdenetwork
-DEPENDS+=	kdegraphics-4.1b:../../graphics/kdegraphics
+DEPENDS+=	kdeutils-1.0:../../misc/kdeutils
+DEPENDS+=	kdegames-1.0:../../games/kdegames
+DEPENDS+=	kdenetwork-1.0:../../net/kdenetwork
+DEPENDS+=	kdegraphics-1.0:../../graphics/kdegraphics
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
