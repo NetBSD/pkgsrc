@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.5 2004/02/03 12:30:11 recht Exp $
+$NetBSD: patch-ac,v 1.6 2004/04/04 16:53:59 recht Exp $
 
---- data/Makefile.in.orig	2004-02-02 23:02:39.000000000 +0100
-+++ data/Makefile.in	2004-02-03 11:53:36.000000000 +0100
-@@ -117,7 +117,7 @@
- libgc_dir = @libgc_dir@
+--- data/Makefile.in.orig	2004-03-19 03:26:35.000000000 +0100
++++ data/Makefile.in	2004-03-20 14:05:48.000000000 +0100
+@@ -118,7 +118,7 @@
  libmono_cflags = @libmono_cflags@
  libmono_ldflags = @libmono_ldflags@
+ libsuffix = @libsuffix@
 -monodir = $(sysconfdir)/mono
 +monodir = $(datadir)/examples/mono
  

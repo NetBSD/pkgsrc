@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2004/03/03 01:37:09 recht Exp $
+# $NetBSD: Makefile,v 1.22 2004/04/04 16:53:59 recht Exp $
 #
 
-DISTNAME=	mono-0.30.2
+DISTNAME=	mono-0.31
 CATEGORIES=	lang
 MASTER_SITES=	http://www.go-mono.org/archive/
 
@@ -9,9 +9,8 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.go-mono.org/
 COMMENT=	Open source implementation of the .NET Development Framework
 
-BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
-BUILD_DEPENDS+=	bash>=2.0:../../shells/bash2
+#BUILD_DEPENDS+=	bash>=2.0:../../shells/bash2
 
 CONFLICTS=	pnet-[0-9]*
 
@@ -23,7 +22,7 @@ NOT_FOR_PLATFORM+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[AB]-*
 NOT_FOR_PLATFORM+=	*-*-amd64 *-*-x86_64
 
 
-USE_GNU_TOOLS+=		make
+USE_GNU_TOOLS+=		make yacc
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
@@ -54,8 +53,10 @@ CONF_FILES+=	${EGDIR}/DefaultWsdlHelpGenerator.aspx \
 BUILD_DEFS+=	MONO_USE_NPTL
 .  if defined(MONO_USE_NPTL) && !empty(MONO_USE_NPTL:M[yY][eE][sS])
 # Enable support for NPTL
-CONFIGURE_ARGS+=	--with-nptl
+CONFIGURE_ARGS+=	--with-nptl=yes
 .  endif
+.else
+CONFIGURE_ARGS+=	--with-nptl=no
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
