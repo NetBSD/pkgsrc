@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8937 2005/01/26 15:56:45 minskim Exp $
+$NetBSD: CHANGES,v 1.8938 2005/01/26 16:26:23 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -613,3 +613,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-Class-Singleton-1.03 [cube 2005-01-26]
 	Updated squid to 2.5.7nb9 [taca 2005-01-26]
 	Updated awstats to 6.3nb2 [minskim 2005-01-26]
+	Added p5-DateTime-0.25 [cube 2005-01-26]
+	Added p5-DateTime-Event-Cron-0.07 [cube 2005-01-26]
+	Added p5-DateTime-Locale-0.09 [cube 2005-01-26]
+	Added p5-DateTime-Set-0.19 [cube 2005-01-26]
+	Added p5-DateTime-TimeZone-0.32 [cube 2005-01-26]
