@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/08/30 08:06:14 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2002/09/21 23:46:52 jlam Exp $
 #
 
 DISTNAME=	sketch-0.6.13
@@ -46,7 +46,7 @@ do-install:
 	${SED} -e "s|@PREFIX@|${PREFIX}|g" < ${FILESDIR}/sk2ps.in > ${PREFIX}/bin/sk2ps
 	${CHMOD} +x ${PREFIX}/bin/sk2ps
 
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../x11/py-Tk/buildlink.mk"
 .include "../../graphics/py-imaging/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

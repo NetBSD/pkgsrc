@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/02/05 19:54:27 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/21 23:46:54 jlam Exp $
 #
 
 DISTNAME=	ipcheck.py
@@ -21,5 +21,5 @@ PYTHON_PATCH_SCRIPTS=	ipcheck.py
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/ipcheck.py ${PREFIX}/bin
 
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

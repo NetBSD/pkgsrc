@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/01/18 14:16:53 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/21 23:46:54 jlam Exp $
 #
 
 DISTNAME=	mtail-1.0.0
@@ -19,5 +19,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/mtail.README
 	${INSTALL_DATA} ${WRKSRC}/mtailrc.sample ${PREFIX}/share/examples
 
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/03/13 17:37:17 fredb Exp $
+# $NetBSD: Makefile,v 1.12 2002/09/21 23:46:51 jlam Exp $
 #
 
 DISTNAME=	scigraphica-0.8.0
@@ -21,7 +21,7 @@ USE_GNU_READLINE=	yes
 
 .include "../../devel/readline/buildlink.mk"
 .include "../../graphics/imlib/buildlink.mk"
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../math/py-Numeric/buildlink.mk"
 .include "../../textproc/libxml/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"

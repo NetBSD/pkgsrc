@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/29 16:20:47 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/21 23:46:49 jlam Exp $
 
 DISTNAME=	pyunit-1.4.1
 PKGNAME=	${PYPKGPREFIX}-unitgui-1.4.1
@@ -11,6 +11,6 @@ COMMENT=	unit testing framework for python tk
 
 PYDISTUTILSPKG=	# defined
 
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../x11/py-Tk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

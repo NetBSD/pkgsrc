@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/22 16:54:48 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/21 23:47:01 jlam Exp $
 #
 
 DISTNAME=	Zope-2.5.1-src
@@ -48,5 +48,5 @@ do-install:
 	(cd ${ZOPEDIR}; ${PYTHONBIN} ${WRKSRC}/inst/compilezpy.py)
 	(cd ${WRKSRC}; ${PAX} -r -w ${ZOPEDATA} ${ZOPEDIR})
 
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

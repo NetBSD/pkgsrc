@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/01/28 09:30:08 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2002/09/21 23:46:47 jlam Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-gdbm-0
@@ -26,5 +26,5 @@ do-patch:
 	done)
 
 .include "../../lang/python/srcdist.mk"
-.include "../../lang/python/extension.buildlink.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

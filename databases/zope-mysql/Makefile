@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/01/22 18:50:17 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2002/09/21 23:46:48 jlam Exp $
 #
 
 DISTNAME=	ZMySQLDA-1.1.3-nonbin
@@ -37,6 +37,6 @@ do-install:
 	(cd ${PREFIX}; ${FIND} lib/zope/${DAPATH} -type f -print >>${PLIST_SRC})
 	${ECHO} "@dirrm lib/zope/${DAPATH}" >> ${PLIST_SRC}
 
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../databases/py-mysqldb/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

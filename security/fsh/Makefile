@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/02/18 15:14:39 seb Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/21 23:46:56 jlam Exp $
 #
 
 DISTNAME=	fsh-1.1
@@ -14,6 +14,6 @@ GNU_CONFIGURE=	YES
 
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 
-.include "../../lang/python/application.buildlink.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
