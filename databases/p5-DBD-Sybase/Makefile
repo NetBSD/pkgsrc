@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/15 18:47:59 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 14:17:31 wiz Exp $
 #
 
 DISTNAME=		DBD-Sybase-0.23
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=DBD/}
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.mbay.net/~mpeppler/
+COMMENT=		perl DBI/DBD driver for Sybase/MS-SQL databases
 
 DEPENDS+=		freetds>=0.50:../../databases/freetds
 DEPENDS+=		p5-DBI>=1.13:../../databases/p5-DBI
