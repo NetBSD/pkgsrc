@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.21 2003/07/13 13:51:09 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.22 2003/07/14 09:32:43 wiz Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_DEPENDS.gettext?=	gettext-lib>=0.11.5nb1
+BUILDLINK_DEPENDS.gettext?=	gettext-lib>=0.10.35nb1
 BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
 
 .if defined(USE_GNU_GETTEXT)
@@ -50,7 +50,7 @@ _NEED_GNU_GETTEXT=	YES
 BUILDLINK_PACKAGES+=			gettext
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gettext=gettext-lib
 BUILDLINK_PREFIX.gettext_DEFAULT=	${LOCALBASE}
-_GETTEXT_ICONV_DEPENDS=		gettext-lib>=0.11.5
+_GETTEXT_ICONV_DEPENDS=		gettext-lib>=0.11.5nb1
 _INSTALLED_GETTEXT_PKG!=	${PKG_INFO} -e gettext-lib || ${ECHO} "NO"
 .  if ${_INSTALLED_GETTEXT_PKG} == "NO"
 _GETTEXT_NEEDS_ICONV=	YES
