@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/04/07 17:01:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2000/06/01 11:23:13 rh Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:39 max Exp 
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.cs.tu-berlin.de/pub/local/kbs/tubmik/gsm/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://kbs.cs.tu-berlin.de/~jutta/toast.html
 
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 
 NO_CONFIGURE=	yes
 MAKE_ENV+=	INSTALL_ROOT="${PREFIX}" ROOT="${WRKSRC}"

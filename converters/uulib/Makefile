@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/09/28 13:43:36 tron Exp $
+# $NetBSD: Makefile,v 1.15 2000/06/01 11:23:18 rh Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/18 22:20:02 hoek Exp
 #
 
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www.informatik.uni-frankfurt.de/~fp/uudeview/
 CONFLICTS=	kdesupport-2.1b
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 
 ALL_TARGET=	libuu.la
 

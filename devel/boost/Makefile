@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/05/29 22:46:44 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/06/01 11:23:20 rh Exp $
 
 DISTNAME=		boost_all
 PKGNAME=		boost-1.14.3
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.boost.org/
 # Need working <limits> and <memory> not present in NetBSD yet.
 DEPENDS+=		sgi-stl>=3.2:../../devel/sgi-stl
 
-USE_LIBTOOL=		# defined
+USE_PKGLIBTOOL=		# defined
 
 DIST_SUBDIR=		${PKGNAME}
 EXTRACT_CMD=		${LOCALBASE}/bin/unzip -aaLu ${DOWNLOADED_DISTFILE}

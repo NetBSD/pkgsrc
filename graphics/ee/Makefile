@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/02/17 23:18:36 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2000/06/01 11:23:26 rh Exp $
 
 DISTNAME=		ee-0.3.11
 CATEGORIES=		x11 gnome
@@ -12,7 +12,7 @@ DEPENDS=		gnome-core-*:../../x11/gnome-core
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
 USE_GMAKE=		yes
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 
 LOCALSTATEDIR=		/var/gnome
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/28 09:51:43 agc Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/01 11:23:33 rh Exp $
 #
 
 DISTNAME=	japhar-0.08
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.japhar.org/
 ONLY_FOR_PLATFORM=	SunOS-*-*       # untested on NetBSD
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 LIBTOOL_FLAGS=	--install-la
 USE_GMAKE=	yes
 

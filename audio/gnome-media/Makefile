@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/01/15 09:46:57 tron Exp $
+# $NetBSD: Makefile,v 1.6 2000/06/01 11:23:13 rh Exp $
 
 DISTNAME=	gnome-media-1.0.51
 CATEGORIES=	audio gnome
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.gnome.org/
 DEPENDS+=	gnome-core-*:../../x11/gnome-core
 
 GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
+USE_PKGLIBTOOL=	YES
 USE_X11BASE=	YES
 
 CONFIGURE_ENV+=	XGETTEXT="${LOCALBASE}/bin/xgettext"

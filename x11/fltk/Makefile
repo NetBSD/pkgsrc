@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/01/27 19:14:24 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/06/01 11:23:44 rh Exp $
 #
 
 DISTNAME=	fltk-1.0.7-source
@@ -20,7 +20,7 @@ DEPENDS+=	Mesa-*:../../graphics/Mesa
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 # When the API changes and breaks binary-compatibility with the previous

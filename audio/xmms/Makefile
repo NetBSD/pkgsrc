@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/03/29 03:13:02 enami Exp $
+# $NetBSD: Makefile,v 1.9 2000/06/01 11:23:14 rh Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.0.1
@@ -19,7 +19,7 @@ DEPENDS+=	gtk+>=1.2.7:../../x11/gtk
 DEPENDS+=	libmikmod>=3.1.7:../libmikmod
 DEPENDS+=	libxml>=1.8.5:../../textproc/libxml
 
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --without-gnome

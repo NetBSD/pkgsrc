@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/03/04 15:45:22 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2000/06/01 11:23:24 rh Exp $
 #
 
 DISTNAME=	pth-1.3b1
@@ -13,7 +13,7 @@ IGNORE=         "superseded by pth package"
 
 CONFLICTS=	pth-*
 
-USE_LIBTOOL=	YES
+USE_PKGLIBTOOL=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--enable-pthread
 

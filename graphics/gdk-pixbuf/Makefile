@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/05/30 19:30:22 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2000/06/01 11:23:28 rh Exp $
 #
 
 DISTNAME=	gdk-pixbuf-0.8.0
@@ -12,7 +12,7 @@ DEPENDS+=	gnome-libs>=1.0.53:../../x11/gnome-libs
 
 GNU_CONFIGURE=	YES
 #our pkglibtool can't add a library to a library
-#USE_LIBTOOL=	YES
+#USE_PKGLIBTOOL=	YES
 USE_X11BASE=	YES
 USE_GMAKE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/04/13 10:13:20 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2000/06/01 11:23:47 rh Exp $
 #
 
 DISTNAME=	qt-1.44
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.troll.no/products/qt.html
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 
 MAKE_ENV=	QTDIR=${WRKSRC}
 ALL_TARGET=	src

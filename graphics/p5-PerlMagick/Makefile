@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/04/23 01:59:57 kim Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/01 11:23:31 rh Exp $
 
 DISTNAME=		ImageMagick-5.1.1
 PKGNAME=		p5-PerlMagick-5.1.1
@@ -24,7 +24,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/PerlMagick
 #EXTRACT_AFTER_ARGS+=	${WRKSRC}
 
 MIRROR_DISTFILE=	no
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 USE_PERL5=		yes
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/05/18 13:20:09 mjl Exp $
+# $NetBSD: Makefile,v 1.20 2000/06/01 11:23:23 rh Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:41 max Exp 
 #
 
@@ -12,6 +12,6 @@ MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://space.mit.edu/~davis/slang.html
 
 GNU_CONFIGURE=  yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 
 .include "../../mk/bsd.pkg.mk"

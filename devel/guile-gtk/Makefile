@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/20 11:58:45 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/01 11:23:21 rh Exp $
 #
 
 DISTNAME=	guile-gtk-0.17
@@ -15,7 +15,7 @@ DEPENDS+=	gnome-core-*:../../x11/gnome-core
 DEPENDS+=	guile-1.3.*:../../lang/guile
 
 GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
+USE_PKGLIBTOOL=	YES
 USE_X11=	YES
 
 .include "../../mk/bsd.pkg.mk"

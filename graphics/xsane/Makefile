@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/03/21 22:40:55 tron Exp $
+# $NetBSD: Makefile,v 1.16 2000/06/01 11:23:32 rh Exp $
 #
 
 DISTNAME=	xsane-0.51
@@ -24,7 +24,7 @@ DEPENDS+=	sane-1.0.1:../../graphics/sane
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 USE_X11BASE=	YES
-USE_LIBTOOL=	YES
+USE_PKGLIBTOOL=	YES
 
 CPPFLAGS+=	-I${PREFIX}/include -I${LOCALBASE}/include
 

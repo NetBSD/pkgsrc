@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/02/19 00:48:57 tsutsui Exp $
+# $NetBSD: Makefile,v 1.18 2000/06/01 11:23:18 rh Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -13,7 +13,7 @@ MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.gnu.org/
 
 USE_CROSSBASE=		yes
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-64-bit-bfd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/29 13:57:56 agc Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/01 11:23:33 rh Exp $
 #
 
 DISTNAME=	librep-0.7
@@ -12,7 +12,7 @@ ONLY_FOR_PLATFORM=	SunOS-*-*	# only for Solaris, at the moment
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 
 #INFO_FILES=	librep.info
 

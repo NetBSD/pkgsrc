@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/03/27 08:55:00 tron Exp $
+# $NetBSD: Makefile,v 1.11 2000/06/01 11:23:48 rh Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/03/17 07:55:17 tg Exp
 
 DISTNAME=	Tix4.1.0.006
@@ -11,7 +11,7 @@ MAINTAINER=	rh@vip.at
 DEPENDS+=	tk-8.0.5:../../x11/tk80
 
 USE_X11=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 WRKSRC=		${WRKDIR}/Tix4.1.0/unix/tk8.0
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-sam \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2000/04/04 12:17:45 tron Exp $
+# $NetBSD: Makefile,v 1.33 2000/06/01 11:23:26 rh Exp $
 #
 
 DISTNAME=       MesaLib-3.1
@@ -22,6 +22,6 @@ USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static
 # XXX our pkglibtool is too old
-#USE_LIBTOOL=	yes
+#USE_PKGLIBTOOL=	yes
 
 .include "../../mk/bsd.pkg.mk"
