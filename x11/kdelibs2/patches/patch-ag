@@ -1,13 +1,49 @@
-$NetBSD: patch-ag,v 1.1.1.1 2001/03/14 15:59:46 skrll Exp $
+$NetBSD: patch-ag,v 1.2 2001/10/15 22:46:22 skrll Exp $
 
---- kdecore/klibloader.cpp.orig	Sun Feb 18 15:26:54 2001
-+++ kdecore/klibloader.cpp
-@@ -16,6 +16,8 @@
-    the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-    Boston, MA 02111-1307, USA.
- */
-+#include <stdlib.h>
+--- dcop/Makefile.am.orig	Wed Apr 18 17:19:12 2001
++++ dcop/Makefile.am
+@@ -25,12 +25,12 @@
+ KDE_OPTIONS = qtonly
+ 
+ INCLUDES=  $(all_includes)
+-LDFLAGS = $(all_libraries)
++LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ bin_PROGRAMS = dcopserver
+ check_PROGRAMS = testdcop testdcopc
+ 
+-lib_LTLIBRARIES  = libDCOP.la dcopserver.la
++lib_LTLIBRARIES  = libDCOP.la libdcopserver_main.la dcopserver.la
+ libDCOP_la_LIBADD = KDE-ICE/libkICE.la $(LIB_QT)
+ libDCOP_la_LDFLAGS = -version-info 1:0 $(all_libraries) -no-undefined
+ 
+@@ -44,13 +44,17 @@
+ # dcopstub needs to go first for --enable-final to work
+ libDCOP_la_SOURCES = dcopstub.cpp dcopclient.cpp dcopobject.cpp dcopref.cpp
+ 
+-dcopserver_la_LDFLAGS = -module -avoid-version
+-dcopserver_la_SOURCES = dcopserver.cpp dcopsignals.cpp
+-dcopserver_la_LIBADD   = libDCOP.la
++#libdcopserver_main_la_LDFLAGS = -export-dynamic
++libdcopserver_main_la_SOURCES = dcopserver.cpp dcopsignals.cpp
++libdcopserver_main_la_LIBADD = libDCOP.la
 +
- #include <config.h>
- #include <qclipboard.h>
- #include <qwidgetlist.h>
++dcopserver_la_LDFLAGS = -Wl,-export-dynamic -module -avoid-version
++dcopserver_la_SOURCES = dcopserver_main.cpp
++dcopserver_la_LIBADD  = libdcopserver_main.la
+ 
+ dcopserver_LDFLAGS = $(KDE_RPATH)
+-dcopserver_SOURCES = dummy.cpp
+-dcopserver_LDADD   = dcopserver.la
++dcopserver_SOURCES = dcopserver_main.cpp
++dcopserver_LDADD   = libdcopserver_main.la
+ 
+ testdcop_SOURCES = testdcop.cpp
+ testdcop_LDADD = ../kdecore/libkdecore.la
+@@ -59,6 +63,3 @@
+ testdcopc_LDADD =  KDE-ICE/libkICE.la $(LIBSM)
+ 
+ EXTRA_DIST = HOWTO ICE
+-
+-dummy.cpp:
+-	echo > dummy.cpp

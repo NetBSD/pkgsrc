@@ -1,13 +1,25 @@
-$NetBSD: patch-am,v 1.1.1.1 2001/03/14 16:03:13 skrll Exp $
+$NetBSD: patch-am,v 1.2 2001/10/15 22:46:00 skrll Exp $
 
---- kwin/clients/kde/Makefile.am.orig	Wed Dec 13 18:25:17 2000
-+++ kwin/clients/kde/Makefile.am
-@@ -16,7 +16,7 @@
- TitleBar.cpp \
- TitleText.cpp \
- Static.cpp
--libkwindefault_la_LIBADD = ../../kwin.la
-+libkwindefault_la_LIBADD = ../../libkwin.la
- libkwindefault_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
- 
- METASOURCES = AUTO
+--- kcontrol/ebrowsing/Makefile.in.orig	Sat Sep  8 01:36:23 2001
++++ kcontrol/ebrowsing/Makefile.in
+@@ -284 +284 @@
+-libkcm_kurifilt_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
++libkcm_kurifilt_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined ${KDE_RPATH}
+@@ -326 +326 @@
+-KDE_DIST=ebrowsing.desktop filteropts.h main.h 
++KDE_DIST=main.h ebrowsing.desktop filteropts.h 
+@@ -488 +488 @@
+-	  test "$$subdir" = "." && dot_seen=yes; \
++	  test "$$subdir" != "." || dot_seen=yes; \
+@@ -546,11 +545,0 @@
+-#>- 	@for file in $(DISTFILES); do \
+-#>- 	  d=$(srcdir); \
+-#>- 	  if test -d $$d/$$file; then \
+-#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
+-#>- 	  else \
+-#>- 	    test -f $(distdir)/$$file \
+-#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
+-#>- 	  fi; \
+-#>- 	done
+-#>+ 10

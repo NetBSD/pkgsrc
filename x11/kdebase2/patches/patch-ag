@@ -1,55 +1,13 @@
-$NetBSD: patch-ag,v 1.1.1.1 2001/03/14 16:03:12 skrll Exp $
+$NetBSD: patch-ag,v 1.2 2001/10/15 22:46:00 skrll Exp $
 
---- konsole/src/TEPty.C.orig	Sun Feb 18 15:28:28 2001
-+++ konsole/src/TEPty.C
-@@ -179,9 +179,18 @@
- // param grant: 1 to grant, 0 to revoke
- // returns 1 on success 0 on fail
- {
-+  struct sigaction newsa, oldsa;
-+  newsa.sa_handler = SIG_DFL;
-+  newsa.sa_mask = sigset_t();
-+  newsa.sa_flags = 0;
-+  sigaction(SIGCHLD, &newsa, &oldsa);
-+
-   pid_t pid = fork();
-   if (pid < 0)
-   {
-+    // restore previous SIGCHLD handler
-+    sigaction(SIGCHLD, &oldsa, NULL);
-+
-     return 0;
-   }
-   if (pid == 0)
-@@ -194,14 +203,6 @@
-   }
+--- kate/main/kwritemain.cpp.orig	Sun Jul 29 05:56:17 2001
++++ kate/main/kwritemain.cpp
+@@ -468,7 +468,7 @@
+   { 0, 0, 0}
+ };
  
-   if (pid > 0) {
--    // ### FreeBSD seems to need the SIGCHLD sighandler resett to default for
--    // waitpid() to work. - Brad
--    struct sigaction newsa, oldsa;
--    newsa.sa_handler = SIG_DFL;
--    newsa.sa_mask = sigset_t();
--    newsa.sa_flags = 0;
--    sigaction(SIGCHLD, &newsa, &oldsa);
--
-     int w;
- retry:
-     int rc = waitpid (pid, &w, 0);
-@@ -238,7 +239,7 @@
- #ifdef HAVE_UTEMPTER
-   removeLineFromUtmp(ttynam, fd);
- #elif defined(USE_LOGIN)
--  char *tty_name=ttyname(0);
-+  char *tty_name=ttyname(fd);
-   if (tty_name)
-   {
-   	if (strncmp(tty_name, "/dev/", 5) == 0)
-@@ -296,6 +297,7 @@
-       strncpy(ptynam, name, 50);
-       strncpy(ttynam, name, 50);
-       ttynam[5]='t';
-+      ptynam[5]='p';
-       // one needs to look into who owns what to make sure chownpty is needed
-       // FIXME: further, the logic of openPty has to adjusted to pass a file
-       //        handle instead of a name.
+-int main(int argc, char **argv)
++int kwrite_main(int argc, char **argv)
+ {
+   KLocale::setMainCatalogue("kate");         //lukas: set this to have the kwritepart translated using kate message catalog
+ 

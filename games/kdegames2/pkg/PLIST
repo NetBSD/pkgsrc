@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/14 16:12:15 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/10/15 22:46:14 skrll Exp $
 bin/kabalone
 bin/kasteroids
 bin/katomic
 bin/kbackgammon
+bin/kbattleship
 bin/kblackbox
 bin/kfouleggs
 bin/kjezz
 bin/kjumpingcube
+bin/klines
 bin/kmahjongg
 bin/kmines
 bin/konquest
@@ -27,325 +29,101 @@ bin/kwin4
 bin/lskat
 bin/lskatproc
 include/kcarddialog.h
+include/kchat.h
+include/kchatbase.h
+include/kgamemisc.h
+include/khighscore.h
+include/kstdgameaction.h
+lib/kbackgammon.a
+lib/kbackgammon.la
+lib/kbackgammon.so
 lib/libkdegames.a
 lib/libkdegames.la
 lib/libkdegames.so
 lib/libkdegames.so.1
-lib/libkdegames.so.1.0
-share/doc/kde/HTML/en/kabalone/.anchors
-share/doc/kde/HTML/en/kabalone/advanced-options.html
-share/doc/kde/HTML/en/kabalone/commandline-options.html
+lib/libkdegames.so.1.1
 share/doc/kde/HTML/en/kabalone/common
-share/doc/kde/HTML/en/kabalone/compilation.html
-share/doc/kde/HTML/en/kabalone/computer-level.html
-share/doc/kde/HTML/en/kabalone/computer-plays.html
-share/doc/kde/HTML/en/kabalone/credits-and-licenses.html
+share/doc/kde/HTML/en/kabalone/index.cache.bz2
 share/doc/kde/HTML/en/kabalone/index.docbook
-share/doc/kde/HTML/en/kabalone/index.html
-share/doc/kde/HTML/en/kabalone/installation.html
-share/doc/kde/HTML/en/kabalone/introduction.html
-share/doc/kde/HTML/en/kabalone/menu-reference.html
-share/doc/kde/HTML/en/kabalone/network-play.html
-share/doc/kde/HTML/en/kabalone/rules-of-the-game.html
-share/doc/kde/HTML/en/kabalone/spying.html
-share/doc/kde/HTML/en/kabalone/the-edit-menu.html
-share/doc/kde/HTML/en/kabalone/the-game-menu.html
-share/doc/kde/HTML/en/kabalone/the-settings-menu.html
-share/doc/kde/HTML/en/kasteroids/.anchors
-share/doc/kde/HTML/en/kasteroids/authors.html
 share/doc/kde/HTML/en/kasteroids/common
-share/doc/kde/HTML/en/kasteroids/compilation.html
-share/doc/kde/HTML/en/kasteroids/controls.html
-share/doc/kde/HTML/en/kasteroids/credits.html
 share/doc/kde/HTML/en/kasteroids/fuel.png
+share/doc/kde/HTML/en/kasteroids/index.cache.bz2
 share/doc/kde/HTML/en/kasteroids/index.docbook
-share/doc/kde/HTML/en/kasteroids/index.html
-share/doc/kde/HTML/en/kasteroids/installation.html
-share/doc/kde/HTML/en/kasteroids/introduction.html
-share/doc/kde/HTML/en/kasteroids/menu-reference.html
-share/doc/kde/HTML/en/kasteroids/settings-menu.html
-share/doc/kde/HTML/en/kasteroids/ship.html
-share/doc/kde/HTML/en/kasteroids/tips.html
-share/doc/kde/HTML/en/kasteroids/upgrades.html
-share/doc/kde/HTML/en/katomic/.anchors
 share/doc/kde/HTML/en/katomic/common
-share/doc/kde/HTML/en/katomic/compilation.html
-share/doc/kde/HTML/en/katomic/configuration.html
-share/doc/kde/HTML/en/katomic/credits.html
-share/doc/kde/HTML/en/katomic/help.html
+share/doc/kde/HTML/en/katomic/index.cache.bz2
 share/doc/kde/HTML/en/katomic/index.docbook
-share/doc/kde/HTML/en/katomic/index.html
-share/doc/kde/HTML/en/katomic/installation.html
-share/doc/kde/HTML/en/katomic/introduction.html
-share/doc/kde/HTML/en/katomic/keybindings.html
-share/doc/kde/HTML/en/katomic/playing-katomic.html
-share/doc/kde/HTML/en/katomic/requirements.html
-share/doc/kde/HTML/en/katomic/settings-menu.html
-share/doc/kde/HTML/en/kbackgammon/.anchors
-share/doc/kde/HTML/en/kbackgammon/command.html
+share/doc/kde/HTML/en/kbackgammon/board.png
 share/doc/kde/HTML/en/kbackgammon/common
-share/doc/kde/HTML/en/kbackgammon/compilation.html
-share/doc/kde/HTML/en/kbackgammon/credits.html
-share/doc/kde/HTML/en/kbackgammon/engine-fibs.html
-share/doc/kde/HTML/en/kbackgammon/engine-gnubg.html
-share/doc/kde/HTML/en/kbackgammon/engines-menu.html
-share/doc/kde/HTML/en/kbackgammon/engines.html
-share/doc/kde/HTML/en/kbackgammon/help-menu.html
+share/doc/kde/HTML/en/kbackgammon/index.cache.bz2
 share/doc/kde/HTML/en/kbackgammon/index.docbook
-share/doc/kde/HTML/en/kbackgammon/index.html
-share/doc/kde/HTML/en/kbackgammon/installation.html
-share/doc/kde/HTML/en/kbackgammon/introduction.html
-share/doc/kde/HTML/en/kbackgammon/keys.html
-share/doc/kde/HTML/en/kbackgammon/play-menu.html
-share/doc/kde/HTML/en/kbackgammon/prefs.html
-share/doc/kde/HTML/en/kbackgammon/settings-menu.html
-share/doc/kde/HTML/en/kbackgammon/use-the-board.html
-share/doc/kde/HTML/en/kblackbox/.anchors
+share/doc/kde/HTML/en/kbattleship/common
+share/doc/kde/HTML/en/kbattleship/index.cache.bz2
+share/doc/kde/HTML/en/kbattleship/index.docbook
 share/doc/kde/HTML/en/kblackbox/common
-share/doc/kde/HTML/en/kblackbox/credits-and-license.html
-share/doc/kde/HTML/en/kblackbox/game-description.html
-share/doc/kde/HTML/en/kblackbox/game-rules.html
-share/doc/kde/HTML/en/kblackbox/gui-description.html
-share/doc/kde/HTML/en/kblackbox/help.html
+share/doc/kde/HTML/en/kblackbox/index.cache.bz2
 share/doc/kde/HTML/en/kblackbox/index.docbook
-share/doc/kde/HTML/en/kblackbox/index.html
-share/doc/kde/HTML/en/kblackbox/installation.html
-share/doc/kde/HTML/en/kblackbox/settings-menu.html
-share/doc/kde/HTML/en/kblackbox/toolbar.html
-share/doc/kde/HTML/en/kblackbox/user-interaction.html
-share/doc/kde/HTML/en/kblackbox/what-is-kblackbox.html
-share/doc/kde/HTML/en/kfouleggs/.anchors
-share/doc/kde/HTML/en/kfouleggs/aim-of-the-game.html
-share/doc/kde/HTML/en/kfouleggs/commands.html
+share/doc/kde/HTML/en/kblackbox/kblackboxtbar.png
 share/doc/kde/HTML/en/kfouleggs/common
-share/doc/kde/HTML/en/kfouleggs/credits.html
-share/doc/kde/HTML/en/kfouleggs/default-keybindings.html
-share/doc/kde/HTML/en/kfouleggs/gameplay.html
+share/doc/kde/HTML/en/kfouleggs/index.cache.bz2
 share/doc/kde/HTML/en/kfouleggs/index.docbook
-share/doc/kde/HTML/en/kfouleggs/index.html
-share/doc/kde/HTML/en/kfouleggs/installation.html
-share/doc/kde/HTML/en/kfouleggs/introduction.html
-share/doc/kde/HTML/en/kfouleggs/multiplayer-and-network-play.html
-share/doc/kde/HTML/en/kfouleggs/playing-the-game.html
-share/doc/kde/HTML/en/kfouleggs/preferences.html
-share/doc/kde/HTML/en/kjezz/.anchors
 share/doc/kde/HTML/en/kjezz/common
+share/doc/kde/HTML/en/kjezz/index.cache.bz2
 share/doc/kde/HTML/en/kjezz/index.docbook
-share/doc/kde/HTML/en/kjezz/index.html
-share/doc/kde/HTML/en/kjezz/introduction.html
-share/doc/kde/HTML/en/kjumpingcube/.anchors
 share/doc/kde/HTML/en/kjumpingcube/common
-share/doc/kde/HTML/en/kjumpingcube/compilation.html
-share/doc/kde/HTML/en/kjumpingcube/credits.html
+share/doc/kde/HTML/en/kjumpingcube/index.cache.bz2
 share/doc/kde/HTML/en/kjumpingcube/index.docbook
-share/doc/kde/HTML/en/kjumpingcube/index.html
-share/doc/kde/HTML/en/kjumpingcube/installation.html
-share/doc/kde/HTML/en/kjumpingcube/introduction.html
-share/doc/kde/HTML/en/kjumpingcube/menu-reference.html
-share/doc/kde/HTML/en/kjumpingcube/playing-kjumpingcube.html
-share/doc/kde/HTML/en/kjumpingcube/questions-answers-tips.html
-share/doc/kde/HTML/en/kjumpingcube/requirements.html
-share/doc/kde/HTML/en/kjumpingcube/toolbars.html
-share/doc/kde/HTML/en/kmahjongg/.anchors
-share/doc/kde/HTML/en/kmahjongg/common
-share/doc/kde/HTML/en/kmahjongg/epilogue.html
-share/doc/kde/HTML/en/kmahjongg/index.cvlog
-share/doc/kde/HTML/en/kmahjongg/index.docbook
-share/doc/kde/HTML/en/kmahjongg/index.html
-share/doc/kde/HTML/en/kmahjongg/introduction.html
-share/doc/kde/HTML/en/kmines/.anchors
-share/doc/kde/HTML/en/kmines/command.html
+share/doc/kde/HTML/en/klines/common
+share/doc/kde/HTML/en/klines/index.cache.bz2
+share/doc/kde/HTML/en/klines/index.docbook
 share/doc/kde/HTML/en/kmines/common
-share/doc/kde/HTML/en/kmines/compilation.html
-share/doc/kde/HTML/en/kmines/credits.html
-share/doc/kde/HTML/en/kmines/help-menu.html
-share/doc/kde/HTML/en/kmines/how-to-play.html
+share/doc/kde/HTML/en/kmines/index.cache.bz2
 share/doc/kde/HTML/en/kmines/index.docbook
-share/doc/kde/HTML/en/kmines/index.html
-share/doc/kde/HTML/en/kmines/installation.html
-share/doc/kde/HTML/en/kmines/introduction.html
-share/doc/kde/HTML/en/kmines/keys.html
 share/doc/kde/HTML/en/kmines/kmines1.png
 share/doc/kde/HTML/en/kmines/kmines2.png
-share/doc/kde/HTML/en/kmines/prefs.html
-share/doc/kde/HTML/en/kmines/settings-menu.html
-share/doc/kde/HTML/en/konquest/.anchors
-share/doc/kde/HTML/en/konquest/commands.html
 share/doc/kde/HTML/en/konquest/common
-share/doc/kde/HTML/en/konquest/compilation.html
-share/doc/kde/HTML/en/konquest/configuration.html
-share/doc/kde/HTML/en/konquest/credits.html
+share/doc/kde/HTML/en/konquest/index.cache.bz2
 share/doc/kde/HTML/en/konquest/index.docbook
-share/doc/kde/HTML/en/konquest/index.html
-share/doc/kde/HTML/en/konquest/installation.html
-share/doc/kde/HTML/en/konquest/introduction.html
-share/doc/kde/HTML/en/konquest/requirements.html
-share/doc/kde/HTML/en/konquest/using-kapp.html
-share/doc/kde/HTML/en/kpat/.anchors
-share/doc/kde/HTML/en/kpat/aces-up.html
-share/doc/kde/HTML/en/kpat/calculation.html
 share/doc/kde/HTML/en/kpat/clubs.png
 share/doc/kde/HTML/en/kpat/common
-share/doc/kde/HTML/en/kpat/credits.html
 share/doc/kde/HTML/en/kpat/diamonds.png
-share/doc/kde/HTML/en/kpat/forty-and-eight.html
-share/doc/kde/HTML/en/kpat/freecell.html
-share/doc/kde/HTML/en/kpat/grandfather.html
-share/doc/kde/HTML/en/kpat/grandfathers-clock.html
-share/doc/kde/HTML/en/kpat/gypsy.html
 share/doc/kde/HTML/en/kpat/hearts.png
+share/doc/kde/HTML/en/kpat/index.cache.bz2
 share/doc/kde/HTML/en/kpat/index.docbook
-share/doc/kde/HTML/en/kpat/index.html
-share/doc/kde/HTML/en/kpat/introduction.html
-share/doc/kde/HTML/en/kpat/kings.html
-share/doc/kde/HTML/en/kpat/klondike.html
-share/doc/kde/HTML/en/kpat/mod3.html
-share/doc/kde/HTML/en/kpat/napoleons-tomb.html
 share/doc/kde/HTML/en/kpat/playfield.png
-share/doc/kde/HTML/en/kpat/rules.html
-share/doc/kde/HTML/en/kpat/simple-simon.html
 share/doc/kde/HTML/en/kpat/spades.png
-share/doc/kde/HTML/en/kpat/yukon.html
-share/doc/kde/HTML/en/kpoker/.anchors
-share/doc/kde/HTML/en/kpoker/command.html
 share/doc/kde/HTML/en/kpoker/common
-share/doc/kde/HTML/en/kpoker/compilation.html
-share/doc/kde/HTML/en/kpoker/credits.html
-share/doc/kde/HTML/en/kpoker/hands.html
-share/doc/kde/HTML/en/kpoker/help-menu.html
+share/doc/kde/HTML/en/kpoker/index.cache.bz2
 share/doc/kde/HTML/en/kpoker/index.docbook
-share/doc/kde/HTML/en/kpoker/index.html
-share/doc/kde/HTML/en/kpoker/installation.html
-share/doc/kde/HTML/en/kpoker/introduction.html
-share/doc/kde/HTML/en/kpoker/keys.html
 share/doc/kde/HTML/en/kpoker/kpoker1.png
 share/doc/kde/HTML/en/kpoker/kpoker2.png
-share/doc/kde/HTML/en/kpoker/new-game.html
-share/doc/kde/HTML/en/kpoker/one-player-game.html
-share/doc/kde/HTML/en/kpoker/scoring.html
-share/doc/kde/HTML/en/kpoker/settings-menu.html
-share/doc/kde/HTML/en/kpoker/two-player-game.html
-share/doc/kde/HTML/en/kpoker/two-player-play.html
-share/doc/kde/HTML/en/kpoker/where-do-i-get-the-latest-version-of-kpoker.html
-share/doc/kde/HTML/en/kreversi/.anchors
 share/doc/kde/HTML/en/kreversi/common
-share/doc/kde/HTML/en/kreversi/credits-and-license.html
-share/doc/kde/HTML/en/kreversi/game-menu.html
-share/doc/kde/HTML/en/kreversi/help-menu.html
+share/doc/kde/HTML/en/kreversi/index.cache.bz2
 share/doc/kde/HTML/en/kreversi/index.docbook
-share/doc/kde/HTML/en/kreversi/index.html
-share/doc/kde/HTML/en/kreversi/installation.html
-share/doc/kde/HTML/en/kreversi/introduction.html
 share/doc/kde/HTML/en/kreversi/kreversi1.png
-share/doc/kde/HTML/en/kreversi/object-of-the-game.html
-share/doc/kde/HTML/en/kreversi/playing.html
-share/doc/kde/HTML/en/kreversi/rules.html
-share/doc/kde/HTML/en/kreversi/settings-menu.html
-share/doc/kde/HTML/en/kreversi/tips.html
-share/doc/kde/HTML/en/kreversi/user-interface.html
-share/doc/kde/HTML/en/ksame/.anchors
-share/doc/kde/HTML/en/ksame/commands.html
 share/doc/kde/HTML/en/ksame/common
-share/doc/kde/HTML/en/ksame/compilation.html
-share/doc/kde/HTML/en/ksame/credits.html
+share/doc/kde/HTML/en/ksame/index.cache.bz2
 share/doc/kde/HTML/en/ksame/index.docbook
-share/doc/kde/HTML/en/ksame/index.html
-share/doc/kde/HTML/en/ksame/installation.html
-share/doc/kde/HTML/en/ksame/introduction.html
-share/doc/kde/HTML/en/ksame/requirements.html
-share/doc/kde/HTML/en/ksame/using-ksame.html
-share/doc/kde/HTML/en/kshisen/.anchors
 share/doc/kde/HTML/en/kshisen/common
-share/doc/kde/HTML/en/kshisen/compilation.html
-share/doc/kde/HTML/en/kshisen/configuration.html
-share/doc/kde/HTML/en/kshisen/credits.html
-share/doc/kde/HTML/en/kshisen/game-menu.html
+share/doc/kde/HTML/en/kshisen/index.cache.bz2
 share/doc/kde/HTML/en/kshisen/index.docbook
-share/doc/kde/HTML/en/kshisen/index.html
-share/doc/kde/HTML/en/kshisen/installation.html
-share/doc/kde/HTML/en/kshisen/introduction.html
-share/doc/kde/HTML/en/kshisen/key-bindings.html
-share/doc/kde/HTML/en/kshisen/playing-kshisen.html
-share/doc/kde/HTML/en/kshisen/requirements.html
-share/doc/kde/HTML/en/ksirtet/.anchors
-share/doc/kde/HTML/en/ksirtet/authors.html
 share/doc/kde/HTML/en/ksirtet/common
-share/doc/kde/HTML/en/ksirtet/epilogue.html
-share/doc/kde/HTML/en/ksirtet/how-to-gain-points.html
-share/doc/kde/HTML/en/ksirtet/how-to-play.html
-share/doc/kde/HTML/en/ksirtet/index.cvlog
+share/doc/kde/HTML/en/ksirtet/index.cache.bz2
 share/doc/kde/HTML/en/ksirtet/index.docbook
-share/doc/kde/HTML/en/ksirtet/index.html
-share/doc/kde/HTML/en/ksirtet/introduction.html
-share/doc/kde/HTML/en/ksirtet/multiplayer.html
-share/doc/kde/HTML/en/ksirtet/options.html
-share/doc/kde/HTML/en/ksmiletris/.anchors
-share/doc/kde/HTML/en/ksmiletris/changes.html
-share/doc/kde/HTML/en/ksmiletris/common
-share/doc/kde/HTML/en/ksmiletris/credits.html
-share/doc/kde/HTML/en/ksmiletris/developement.html
-share/doc/kde/HTML/en/ksmiletris/epilogue.html
-share/doc/kde/HTML/en/ksmiletris/index.cvlog
-share/doc/kde/HTML/en/ksmiletris/index.docbook
-share/doc/kde/HTML/en/ksmiletris/index.html
-share/doc/kde/HTML/en/ksmiletris/introduction.html
-share/doc/kde/HTML/en/ksmiletris/ksmiletris.png
-share/doc/kde/HTML/en/ksmiletris/license.html
-share/doc/kde/HTML/en/ksmiletris/to-do.html
-share/doc/kde/HTML/en/ksnake/.anchors
-share/doc/kde/HTML/en/ksnake/authors.html
 share/doc/kde/HTML/en/ksnake/common
-share/doc/kde/HTML/en/ksnake/customization.html
-share/doc/kde/HTML/en/ksnake/epilogue.html
-share/doc/kde/HTML/en/ksnake/index.cvlog
+share/doc/kde/HTML/en/ksnake/index.cache.bz2
 share/doc/kde/HTML/en/ksnake/index.docbook
-share/doc/kde/HTML/en/ksnake/index.html
-share/doc/kde/HTML/en/ksnake/introduction.html
-share/doc/kde/HTML/en/ksnake/rules-of-the-game.html
-share/doc/kde/HTML/en/ksnake/scoring.html
-share/doc/kde/HTML/en/ksokoban/.anchors
 share/doc/kde/HTML/en/ksokoban/common
-share/doc/kde/HTML/en/ksokoban/credits.html
-share/doc/kde/HTML/en/ksokoban/how-to-play.html
+share/doc/kde/HTML/en/ksokoban/index.cache.bz2
 share/doc/kde/HTML/en/ksokoban/index.docbook
-share/doc/kde/HTML/en/ksokoban/index.html
-share/doc/kde/HTML/en/ksokoban/introduction.html
-share/doc/kde/HTML/en/ksokoban/loading-external-levels.html
-share/doc/kde/HTML/en/kspaceduel/.anchors
-share/doc/kde/HTML/en/kspaceduel/ai.html
-share/doc/kde/HTML/en/kspaceduel/command.html
 share/doc/kde/HTML/en/kspaceduel/common
-share/doc/kde/HTML/en/kspaceduel/compilation.html
-share/doc/kde/HTML/en/kspaceduel/credits.html
-share/doc/kde/HTML/en/kspaceduel/help-menu.html
+share/doc/kde/HTML/en/kspaceduel/index.cache.bz2
 share/doc/kde/HTML/en/kspaceduel/index.docbook
-share/doc/kde/HTML/en/kspaceduel/index.html
-share/doc/kde/HTML/en/kspaceduel/installation.html
-share/doc/kde/HTML/en/kspaceduel/introduction.html
-share/doc/kde/HTML/en/kspaceduel/keys.html
 share/doc/kde/HTML/en/kspaceduel/kspaceduel1.png
 share/doc/kde/HTML/en/kspaceduel/kspaceduel2.png
 share/doc/kde/HTML/en/kspaceduel/kspaceduel3.png
-share/doc/kde/HTML/en/kspaceduel/options.html
-share/doc/kde/HTML/en/kspaceduel/settings-menu.html
-share/doc/kde/HTML/en/kspaceduel/thegame.html
-share/doc/kde/HTML/en/ktron/.anchors
 share/doc/kde/HTML/en/ktron/common
-share/doc/kde/HTML/en/ktron/compilation.html
-share/doc/kde/HTML/en/ktron/computerplayer.html
-share/doc/kde/HTML/en/ktron/config-behaviour.html
-share/doc/kde/HTML/en/ktron/configuration.html
-share/doc/kde/HTML/en/ktron/credits.html
+share/doc/kde/HTML/en/ktron/index.cache.bz2
 share/doc/kde/HTML/en/ktron/index.docbook
-share/doc/kde/HTML/en/ktron/index.html
-share/doc/kde/HTML/en/ktron/installation.html
-share/doc/kde/HTML/en/ktron/introduction.html
-share/doc/kde/HTML/en/ktron/keybindings.html
-share/doc/kde/HTML/en/ktron/pause-game.html
-share/doc/kde/HTML/en/ktron/playing-ktron.html
-share/doc/kde/HTML/en/ktron/requirements.html
-share/doc/kde/HTML/en/ktron/using-keyboard.html
-share/doc/kde/HTML/en/ktuberling/.anchors
 share/doc/kde/HTML/en/ktuberling/button.new.png
 share/doc/kde/HTML/en/ktuberling/button.open.png
 share/doc/kde/HTML/en/ktuberling/button.print.png
@@ -353,83 +131,48 @@ share/doc/kde/HTML/en/ktuberling/button.redo.png
 share/doc/kde/HTML/en/ktuberling/button.save.png
 share/doc/kde/HTML/en/ktuberling/button.undo.png
 share/doc/kde/HTML/en/ktuberling/common
-share/doc/kde/HTML/en/ktuberling/compilation-and-installation.html
-share/doc/kde/HTML/en/ktuberling/credits_license.html
-share/doc/kde/HTML/en/ktuberling/for-programmers.html
-share/doc/kde/HTML/en/ktuberling/for-translators.html
 share/doc/kde/HTML/en/ktuberling/gameboard.png
+share/doc/kde/HTML/en/ktuberling/index.cache.bz2
 share/doc/kde/HTML/en/ktuberling/index.docbook
-share/doc/kde/HTML/en/ktuberling/index.html
-share/doc/kde/HTML/en/ktuberling/installation.html
-share/doc/kde/HTML/en/ktuberling/introduction.html
-share/doc/kde/HTML/en/ktuberling/license.html
 share/doc/kde/HTML/en/ktuberling/menu.edit.png
 share/doc/kde/HTML/en/ktuberling/menu.file.png
 share/doc/kde/HTML/en/ktuberling/menu.help.png
 share/doc/kde/HTML/en/ktuberling/menu.option.png
 share/doc/kde/HTML/en/ktuberling/menu.raw.png
-share/doc/kde/HTML/en/ktuberling/onscreen-fundamentals.html
-share/doc/kde/HTML/en/ktuberling/requirements.html
-share/doc/kde/HTML/en/ktuberling/technical-reference.html
-share/doc/kde/HTML/en/ktuberling/the-menu-items.html
-share/doc/kde/HTML/en/ktuberling/the-tool-bar.html
 share/doc/kde/HTML/en/ktuberling/toolbar.png
-share/doc/kde/HTML/en/kwin4/.anchors
 share/doc/kde/HTML/en/kwin4/common
-share/doc/kde/HTML/en/kwin4/compilation.html
-share/doc/kde/HTML/en/kwin4/credits.html
-share/doc/kde/HTML/en/kwin4/edit-menu.html
-share/doc/kde/HTML/en/kwin4/help.html
+share/doc/kde/HTML/en/kwin4/index.cache.bz2
 share/doc/kde/HTML/en/kwin4/index.docbook
-share/doc/kde/HTML/en/kwin4/index.html
-share/doc/kde/HTML/en/kwin4/installation.html
-share/doc/kde/HTML/en/kwin4/menus.html
-share/doc/kde/HTML/en/kwin4/option-menu.html
-share/doc/kde/HTML/en/kwin4/overview.html
-share/doc/kde/HTML/en/kwin4/remote-connections.html
-share/doc/kde/HTML/en/kwin4/requirements.html
-share/doc/kde/HTML/en/kwin4/rules.html
-share/doc/kde/HTML/en/kwin4/view-menu.html
-share/doc/kde/HTML/en/lskat/.anchors
 share/doc/kde/HTML/en/lskat/common
-share/doc/kde/HTML/en/lskat/compilation.html
-share/doc/kde/HTML/en/lskat/credits.html
-share/doc/kde/HTML/en/lskat/help.html
+share/doc/kde/HTML/en/lskat/index.cache.bz2
 share/doc/kde/HTML/en/lskat/index.docbook
-share/doc/kde/HTML/en/lskat/index.html
-share/doc/kde/HTML/en/lskat/installation.html
-share/doc/kde/HTML/en/lskat/menus.html
-share/doc/kde/HTML/en/lskat/option-menu.html
-share/doc/kde/HTML/en/lskat/overview.html
-share/doc/kde/HTML/en/lskat/remote-connections.html
-share/doc/kde/HTML/en/lskat/requirements.html
-share/doc/kde/HTML/en/lskat/rules.html
-share/doc/kde/HTML/en/lskat/view-menu.html
-share/kde/applnk/Games/kabalone.desktop
-share/kde/applnk/Games/kasteroids.desktop
-share/kde/applnk/Games/katomic.desktop
-share/kde/applnk/Games/kbackgammon.desktop
-share/kde/applnk/Games/kblackbox.desktop
-share/kde/applnk/Games/kfouleggs.desktop
-share/kde/applnk/Games/kjezz.desktop
-share/kde/applnk/Games/kjumpingcube.desktop
-share/kde/applnk/Games/kmahjongg.desktop
-share/kde/applnk/Games/kmines.desktop
-share/kde/applnk/Games/konquest.desktop
-share/kde/applnk/Games/kpat.desktop
-share/kde/applnk/Games/kpoker.desktop
-share/kde/applnk/Games/kreversi.desktop
-share/kde/applnk/Games/ksame.desktop
-share/kde/applnk/Games/kshisen.desktop
-share/kde/applnk/Games/ksirtet.desktop
-share/kde/applnk/Games/ksmiletris.desktop
-share/kde/applnk/Games/ksnake.desktop
-share/kde/applnk/Games/ksokoban.desktop
-share/kde/applnk/Games/kspaceduel.desktop
-share/kde/applnk/Games/ktron.desktop
-share/kde/applnk/Games/ktuberling.desktop
-share/kde/applnk/Games/kwin4.desktop
-share/kde/applnk/Games/lskat.desktop
+share/kde/applnk/Games/Arcade/kasteroids.desktop
+share/kde/applnk/Games/Arcade/kfouleggs.desktop
+share/kde/applnk/Games/Arcade/kjezz.desktop
+share/kde/applnk/Games/Arcade/ksirtet.desktop
+share/kde/applnk/Games/Arcade/ksmiletris.desktop
+share/kde/applnk/Games/Arcade/ksnake.desktop
+share/kde/applnk/Games/Arcade/kspaceduel.desktop
+share/kde/applnk/Games/Arcade/ktron.desktop
+share/kde/applnk/Games/Board/kabalone.desktop
+share/kde/applnk/Games/Board/kbackgammon.desktop
+share/kde/applnk/Games/Board/kbattleship.desktop
+share/kde/applnk/Games/Board/kblackbox.desktop
+share/kde/applnk/Games/Board/kmahjongg.desktop
+share/kde/applnk/Games/Board/kreversi.desktop
+share/kde/applnk/Games/Board/kshisen.desktop
+share/kde/applnk/Games/Board/kwin4.desktop
+share/kde/applnk/Games/Card/kpat.desktop
+share/kde/applnk/Games/Card/kpoker.desktop
+share/kde/applnk/Games/Card/lskat.desktop
+share/kde/applnk/Games/TacticStrategy/katomic.desktop
+share/kde/applnk/Games/TacticStrategy/kjumpingcube.desktop
+share/kde/applnk/Games/TacticStrategy/klines.desktop
+share/kde/applnk/Games/TacticStrategy/kmines.desktop
+share/kde/applnk/Games/TacticStrategy/konquest.desktop
+share/kde/applnk/Games/TacticStrategy/ksame.desktop
+share/kde/applnk/Games/TacticStrategy/ksokoban.desktop
+share/kde/applnk/Toys/ktuberling.desktop
 share/kde/apps/carddecks/cards-aisleriot/1.png
 share/kde/apps/carddecks/cards-aisleriot/10.png
 share/kde/apps/carddecks/cards-aisleriot/11.png
@@ -860,6 +603,72 @@ share/kde/apps/carddecks/cards-spaced/8.png
 share/kde/apps/carddecks/cards-spaced/9.png
 share/kde/apps/carddecks/cards-spaced/COPYRIGHT
 share/kde/apps/carddecks/cards-spaced/index.desktop
+share/kde/apps/carddecks/cards-warwick/0.png
+share/kde/apps/carddecks/cards-warwick/1.png
+share/kde/apps/carddecks/cards-warwick/10.png
+share/kde/apps/carddecks/cards-warwick/105.png
+share/kde/apps/carddecks/cards-warwick/106.png
+share/kde/apps/carddecks/cards-warwick/107.png
+share/kde/apps/carddecks/cards-warwick/108.png
+share/kde/apps/carddecks/cards-warwick/109.png
+share/kde/apps/carddecks/cards-warwick/11.png
+share/kde/apps/carddecks/cards-warwick/110.png
+share/kde/apps/carddecks/cards-warwick/111.png
+share/kde/apps/carddecks/cards-warwick/112.png
+share/kde/apps/carddecks/cards-warwick/113.png
+share/kde/apps/carddecks/cards-warwick/114.png
+share/kde/apps/carddecks/cards-warwick/115.png
+share/kde/apps/carddecks/cards-warwick/116.png
+share/kde/apps/carddecks/cards-warwick/12.png
+share/kde/apps/carddecks/cards-warwick/13.png
+share/kde/apps/carddecks/cards-warwick/14.png
+share/kde/apps/carddecks/cards-warwick/15.png
+share/kde/apps/carddecks/cards-warwick/16.png
+share/kde/apps/carddecks/cards-warwick/17.png
+share/kde/apps/carddecks/cards-warwick/18.png
+share/kde/apps/carddecks/cards-warwick/19.png
+share/kde/apps/carddecks/cards-warwick/2.png
+share/kde/apps/carddecks/cards-warwick/20.png
+share/kde/apps/carddecks/cards-warwick/21.png
+share/kde/apps/carddecks/cards-warwick/22.png
+share/kde/apps/carddecks/cards-warwick/23.png
+share/kde/apps/carddecks/cards-warwick/24.png
+share/kde/apps/carddecks/cards-warwick/25.png
+share/kde/apps/carddecks/cards-warwick/26.png
+share/kde/apps/carddecks/cards-warwick/27.png
+share/kde/apps/carddecks/cards-warwick/28.png
+share/kde/apps/carddecks/cards-warwick/29.png
+share/kde/apps/carddecks/cards-warwick/3.png
+share/kde/apps/carddecks/cards-warwick/30.png
+share/kde/apps/carddecks/cards-warwick/31.png
+share/kde/apps/carddecks/cards-warwick/32.png
+share/kde/apps/carddecks/cards-warwick/33.png
+share/kde/apps/carddecks/cards-warwick/34.png
+share/kde/apps/carddecks/cards-warwick/35.png
+share/kde/apps/carddecks/cards-warwick/36.png
+share/kde/apps/carddecks/cards-warwick/37.png
+share/kde/apps/carddecks/cards-warwick/38.png
+share/kde/apps/carddecks/cards-warwick/39.png
+share/kde/apps/carddecks/cards-warwick/4.png
+share/kde/apps/carddecks/cards-warwick/40.png
+share/kde/apps/carddecks/cards-warwick/41.png
+share/kde/apps/carddecks/cards-warwick/42.png
+share/kde/apps/carddecks/cards-warwick/43.png
+share/kde/apps/carddecks/cards-warwick/44.png
+share/kde/apps/carddecks/cards-warwick/45.png
+share/kde/apps/carddecks/cards-warwick/46.png
+share/kde/apps/carddecks/cards-warwick/47.png
+share/kde/apps/carddecks/cards-warwick/48.png
+share/kde/apps/carddecks/cards-warwick/49.png
+share/kde/apps/carddecks/cards-warwick/5.png
+share/kde/apps/carddecks/cards-warwick/50.png
+share/kde/apps/carddecks/cards-warwick/51.png
+share/kde/apps/carddecks/cards-warwick/52.png
+share/kde/apps/carddecks/cards-warwick/6.png
+share/kde/apps/carddecks/cards-warwick/7.png
+share/kde/apps/carddecks/cards-warwick/8.png
+share/kde/apps/carddecks/cards-warwick/9.png
+share/kde/apps/carddecks/cards-warwick/index.desktop
 share/kde/apps/carddecks/cards-xskat-french/1.png
 share/kde/apps/carddecks/cards-xskat-french/10.png
 share/kde/apps/carddecks/cards-xskat-french/11.png
@@ -948,6 +757,8 @@ share/kde/apps/carddecks/decks/deck22.desktop
 share/kde/apps/carddecks/decks/deck22.png
 share/kde/apps/carddecks/decks/deck23.desktop
 share/kde/apps/carddecks/decks/deck23.png
+share/kde/apps/carddecks/decks/deck24.desktop
+share/kde/apps/carddecks/decks/deck24.png
 share/kde/apps/carddecks/decks/deck3.desktop
 share/kde/apps/carddecks/decks/deck3.png
 share/kde/apps/carddecks/decks/deck4.desktop
@@ -1139,7 +950,44 @@ share/kde/apps/kasteroids/sprites/ship/ship0028.png
 share/kde/apps/kasteroids/sprites/ship/ship0029.png
 share/kde/apps/kasteroids/sprites/ship/ship0030.png
 share/kde/apps/kasteroids/sprites/ship/ship0031.png
+share/kde/apps/kasteroids/sprites/ship/ship0032.png
+share/kde/apps/kasteroids/sprites/ship/ship0033.png
+share/kde/apps/kasteroids/sprites/ship/ship0034.png
+share/kde/apps/kasteroids/sprites/ship/ship0035.png
+share/kde/apps/kasteroids/sprites/ship/ship0036.png
+share/kde/apps/kasteroids/sprites/ship/ship0037.png
+share/kde/apps/kasteroids/sprites/ship/ship0038.png
+share/kde/apps/kasteroids/sprites/ship/ship0039.png
+share/kde/apps/kasteroids/sprites/ship/ship0040.png
+share/kde/apps/kasteroids/sprites/ship/ship0041.png
+share/kde/apps/kasteroids/sprites/ship/ship0042.png
+share/kde/apps/kasteroids/sprites/ship/ship0043.png
+share/kde/apps/kasteroids/sprites/ship/ship0044.png
+share/kde/apps/kasteroids/sprites/ship/ship0045.png
+share/kde/apps/kasteroids/sprites/ship/ship0046.png
+share/kde/apps/kasteroids/sprites/ship/ship0047.png
+share/kde/apps/kasteroids/sprites/ship/ship0048.png
+share/kde/apps/kasteroids/sprites/ship/ship0049.png
+share/kde/apps/kasteroids/sprites/ship/ship0050.png
+share/kde/apps/kasteroids/sprites/ship/ship0051.png
+share/kde/apps/kasteroids/sprites/ship/ship0052.png
+share/kde/apps/kasteroids/sprites/ship/ship0053.png
+share/kde/apps/kasteroids/sprites/ship/ship0054.png
+share/kde/apps/kasteroids/sprites/ship/ship0055.png
+share/kde/apps/kasteroids/sprites/ship/ship0056.png
+share/kde/apps/kasteroids/sprites/ship/ship0057.png
+share/kde/apps/kasteroids/sprites/ship/ship0058.png
+share/kde/apps/kasteroids/sprites/ship/ship0059.png
+share/kde/apps/kasteroids/sprites/ship/ship0060.png
+share/kde/apps/kasteroids/sprites/ship/ship0061.png
+share/kde/apps/kasteroids/sprites/ship/ship0062.png
+share/kde/apps/kasteroids/sprites/ship/ship0063.png
 share/kde/apps/katomic/katomicui.rc
+share/kde/apps/katomic/levels/.cvsignore
+share/kde/apps/katomic/levels/CVS/Entries
+share/kde/apps/katomic/levels/CVS/Repository
+share/kde/apps/katomic/levels/CVS/Root
+share/kde/apps/katomic/levels/CVS/Tag
 share/kde/apps/katomic/levels/level_1
 share/kde/apps/katomic/levels/level_10
 share/kde/apps/katomic/levels/level_11
@@ -1204,20 +1052,67 @@ share/kde/apps/katomic/levels/level_64
 share/kde/apps/katomic/levels/level_65
 share/kde/apps/katomic/levels/level_66
 share/kde/apps/katomic/levels/level_67
+share/kde/apps/katomic/levels/level_68
+share/kde/apps/katomic/levels/level_69
 share/kde/apps/katomic/levels/level_7
+share/kde/apps/katomic/levels/level_70
+share/kde/apps/katomic/levels/level_71
+share/kde/apps/katomic/levels/level_72
+share/kde/apps/katomic/levels/level_73
+share/kde/apps/katomic/levels/level_74
+share/kde/apps/katomic/levels/level_75
+share/kde/apps/katomic/levels/level_76
+share/kde/apps/katomic/levels/level_77
+share/kde/apps/katomic/levels/level_78
+share/kde/apps/katomic/levels/level_79
 share/kde/apps/katomic/levels/level_8
 share/kde/apps/katomic/levels/level_9
 share/kde/apps/katomic/pics/abilder.png
 share/kde/apps/katomic/pics/molek.png
+share/kde/apps/kbackgammon/eventsrc
 share/kde/apps/kbackgammon/kbackgammonui.rc
+share/kde/apps/kbackgammon/pics/kbackgammon-chat.png
 share/kde/apps/kbackgammon/pics/kbackgammon-double.xpm
+share/kde/apps/kbackgammon/pics/kbackgammon-fonts.xpm
+share/kde/apps/kbackgammon/pics/kbackgammon-hint.xpm
+share/kde/apps/kbackgammon/pics/kbackgammon-redo.xpm
 share/kde/apps/kbackgammon/pics/kbackgammon-reload.xpm
 share/kde/apps/kbackgammon/pics/kbackgammon-roll.xpm
 share/kde/apps/kbackgammon/pics/kbackgammon-send.xpm
+share/kde/apps/kbackgammon/pics/kbackgammon-undo.xpm
 share/kde/apps/kbackgammon/sounds/kbackgammon-lost.wav
 share/kde/apps/kbackgammon/sounds/kbackgammon-move.wav
 share/kde/apps/kbackgammon/sounds/kbackgammon-roll.wav
 share/kde/apps/kbackgammon/sounds/kbackgammon-won.wav
+share/kde/apps/kbattleship/kbattleshipui.rc
+share/kde/apps/kbattleship/pictures/death.png
+share/kde/apps/kbattleship/pictures/hit.png
+share/kde/apps/kbattleship/pictures/sea.png
+share/kde/apps/kbattleship/pictures/ship1-1-r.png
+share/kde/apps/kbattleship/pictures/ship1-1.png
+share/kde/apps/kbattleship/pictures/ship2-1-r.png
+share/kde/apps/kbattleship/pictures/ship2-1.png
+share/kde/apps/kbattleship/pictures/ship2-2-r.png
+share/kde/apps/kbattleship/pictures/ship2-2.png
+share/kde/apps/kbattleship/pictures/ship3-1-r.png
+share/kde/apps/kbattleship/pictures/ship3-1.png
+share/kde/apps/kbattleship/pictures/ship3-2-r.png
+share/kde/apps/kbattleship/pictures/ship3-2.png
+share/kde/apps/kbattleship/pictures/ship3-3-r.png
+share/kde/apps/kbattleship/pictures/ship3-3.png
+share/kde/apps/kbattleship/pictures/ship4-1-r.png
+share/kde/apps/kbattleship/pictures/ship4-1.png
+share/kde/apps/kbattleship/pictures/ship4-2-r.png
+share/kde/apps/kbattleship/pictures/ship4-2.png
+share/kde/apps/kbattleship/pictures/ship4-3-r.png
+share/kde/apps/kbattleship/pictures/ship4-3.png
+share/kde/apps/kbattleship/pictures/ship4-4-r.png
+share/kde/apps/kbattleship/pictures/ship4-4.png
+share/kde/apps/kbattleship/pictures/water.png
+share/kde/apps/kbattleship/sounds/ship-player-shoot-water.mp3
+share/kde/apps/kbattleship/sounds/ship-player1-shoot.mp3
+share/kde/apps/kbattleship/sounds/ship-player2-shoot.mp3
+share/kde/apps/kbattleship/sounds/ship-sink.mp3
 share/kde/apps/kblackbox/kblackboxui.rc
 share/kde/apps/kblackbox/pics/blue.xpm
 share/kde/apps/kblackbox/pics/brown.xpm
@@ -1229,6 +1124,7 @@ share/kde/apps/kblackbox/pics/green.xpm
 share/kde/apps/kblackbox/pics/green2.xpm
 share/kde/apps/kblackbox/pics/red.xpm
 share/kde/apps/kblackbox/pics/white.xpm
+share/kde/apps/kdegames/pics/star.png
 share/kde/apps/kfouleggs/kfouleggsui.rc
 share/kde/apps/kjezz/kjezzui.rc
 share/kde/apps/kjezz/pics/ball0000.png
@@ -1263,6 +1159,10 @@ share/kde/apps/kjezz/sounds/seconds.au
 share/kde/apps/kjezz/sounds/timeout.au
 share/kde/apps/kjezz/sounds/wallend.au
 share/kde/apps/kjezz/sounds/wallstart.au
+share/kde/apps/kjumpingcube/kjumpingcubeui.rc
+share/kde/apps/klines/balls.jpg
+share/kde/apps/klines/field.jpg
+share/kde/apps/klines/fire.jpg
 share/kde/apps/kmahjongg/pics/cross.layout
 share/kde/apps/kmahjongg/pics/default.bgnd
 share/kde/apps/kmahjongg/pics/default.layout
@@ -1289,6 +1189,7 @@ share/kde/apps/kmahjongg/toolbar/newnum.xpm
 share/kde/apps/kmahjongg/toolbar/pause.xpm
 share/kde/apps/kmahjongg/toolbar/play.xpm
 share/kde/apps/kmines/kminesui.rc
+share/kde/apps/konquest/konquestui.rc
 share/kde/apps/konquest/pics/konquest-splash.gif
 share/kde/apps/konquest/pics/planet1.xpm
 share/kde/apps/konquest/pics/planet2.xpm
@@ -1333,6 +1234,7 @@ share/kde/apps/ksame/ksameui.rc
 share/kde/apps/ksame/stones.png
 share/kde/apps/kshisen/kshisen.xpm
 share/kde/apps/kshisen/kshisen_bgnd.xpm
+share/kde/apps/kshisen/kshisenui.rc
 share/kde/apps/kshisen/mask.xpm
 share/kde/apps/kshisen/paused.xpm
 share/kde/apps/ksirtet/ksirtetui.rc
@@ -1430,6 +1332,9 @@ share/kde/apps/ksnake/pics/samy.png
 share/kde/apps/ksnake/pics/snake1.png
 share/kde/apps/ksnake/pics/snake2.png
 share/kde/apps/ksnake/pics/up.png
+share/kde/apps/kspaceduel/icons/hicolor/16x16/actions/spnewgame.png
+share/kde/apps/kspaceduel/icons/hicolor/16x16/actions/spnewround.png
+share/kde/apps/kspaceduel/icons/hicolor/16x16/actions/sppausegame.png
 share/kde/apps/kspaceduel/icons/hicolor/22x22/actions/spnewgame.png
 share/kde/apps/kspaceduel/icons/hicolor/22x22/actions/spnewround.png
 share/kde/apps/kspaceduel/icons/hicolor/22x22/actions/sppausegame.png
@@ -1833,6 +1738,7 @@ share/kde/apps/kspaceduel/sprites/ship2/ship64.ppm
 share/kde/apps/kspaceduel/sprites/sun/sun.pbm
 share/kde/apps/kspaceduel/sprites/sun/sun.ppm
 share/kde/apps/ktron/ktronui.rc
+share/kde/apps/ktuberling/ktuberlingui.rc
 share/kde/apps/ktuberling/museum/cool.tuberling
 share/kde/apps/ktuberling/museum/dali.tuberling
 share/kde/apps/ktuberling/museum/einstein.tuberling
@@ -1871,6 +1777,7 @@ share/kde/apps/kwin4/grafix/hint.png
 share/kde/apps/kwin4/grafix/red.png
 share/kde/apps/kwin4/grafix/win4about.png
 share/kde/apps/kwin4/grafix/yellow.png
+share/kde/apps/kwin4/kwin4ui.rc
 share/kde/apps/lskat/grafix/400000.png
 share/kde/apps/lskat/grafix/400001.png
 share/kde/apps/lskat/grafix/400002.png
@@ -1911,10 +1818,40 @@ share/kde/apps/lskat/grafix/type1.png
 share/kde/apps/lskat/grafix/type2.png
 share/kde/apps/lskat/grafix/type3.png
 share/kde/apps/lskat/lskatui.rc
+share/kde/icons/hicolor/16x16/apps/kabalone.png
+share/kde/icons/hicolor/16x16/apps/kasteroids.png
+share/kde/icons/hicolor/16x16/apps/kbackgammon.png
+share/kde/icons/hicolor/16x16/apps/kbackgammon_engine.png
+share/kde/icons/hicolor/16x16/apps/kbattleship.png
+share/kde/icons/hicolor/16x16/apps/kblackbox.png
+share/kde/icons/hicolor/16x16/apps/kjezz.png
+share/kde/icons/hicolor/16x16/apps/kjumpingcube.png
+share/kde/icons/hicolor/16x16/apps/klines.png
+share/kde/icons/hicolor/16x16/apps/kmahjongg.png
+share/kde/icons/hicolor/16x16/apps/kmines.png
+share/kde/icons/hicolor/16x16/apps/konquest.png
+share/kde/icons/hicolor/16x16/apps/kpat.png
+share/kde/icons/hicolor/16x16/apps/kpoker.png
+share/kde/icons/hicolor/16x16/apps/kreversi.png
+share/kde/icons/hicolor/16x16/apps/ksame.png
+share/kde/icons/hicolor/16x16/apps/kshisen.png
+share/kde/icons/hicolor/16x16/apps/ksirtet.png
+share/kde/icons/hicolor/16x16/apps/ksmiletris.png
+share/kde/icons/hicolor/16x16/apps/ksnake.png
+share/kde/icons/hicolor/16x16/apps/ksokoban.png
+share/kde/icons/hicolor/16x16/apps/kspaceduel.png
+share/kde/icons/hicolor/16x16/apps/ktron.png
+share/kde/icons/hicolor/16x16/apps/kwin4.png
 share/kde/icons/hicolor/32x32/apps/kabalone.png
 share/kde/icons/hicolor/32x32/apps/kasteroids.png
+share/kde/icons/hicolor/32x32/apps/katomic.png
 share/kde/icons/hicolor/32x32/apps/kbackgammon.png
+share/kde/icons/hicolor/32x32/apps/kbackgammon_engine.png
+share/kde/icons/hicolor/32x32/apps/kbattleship.png
 share/kde/icons/hicolor/32x32/apps/kblackbox.png
+share/kde/icons/hicolor/32x32/apps/kjezz.png
+share/kde/icons/hicolor/32x32/apps/kjumpingcube.png
+share/kde/icons/hicolor/32x32/apps/klines.png
 share/kde/icons/hicolor/32x32/apps/kmahjongg.png
 share/kde/icons/hicolor/32x32/apps/kmines.png
 share/kde/icons/hicolor/32x32/apps/konquest.png
@@ -1927,11 +1864,15 @@ share/kde/icons/hicolor/32x32/apps/ksirtet.png
 share/kde/icons/hicolor/32x32/apps/ksmiletris.png
 share/kde/icons/hicolor/32x32/apps/ksnake.png
 share/kde/icons/hicolor/32x32/apps/ksokoban.png
+share/kde/icons/hicolor/32x32/apps/kspaceduel.png
+share/kde/icons/hicolor/32x32/apps/ktron.png
+share/kde/icons/hicolor/32x32/apps/ktuberling.png
 share/kde/icons/hicolor/32x32/apps/kwin4.png
 share/kde/icons/hicolor/32x32/apps/lskat.png
 share/kde/icons/hicolor/48x48/apps/kabalone.png
 share/kde/icons/hicolor/48x48/apps/kasteroids.png
 share/kde/icons/hicolor/48x48/apps/kbackgammon.png
+share/kde/icons/hicolor/48x48/apps/kbackgammon_engine.png
 share/kde/icons/hicolor/48x48/apps/kblackbox.png
 share/kde/icons/hicolor/48x48/apps/kmahjongg.png
 share/kde/icons/hicolor/48x48/apps/kmines.png
@@ -1947,56 +1888,17 @@ share/kde/icons/hicolor/48x48/apps/ksnake.png
 share/kde/icons/hicolor/48x48/apps/ksokoban.png
 share/kde/icons/hicolor/48x48/apps/kwin4.png
 share/kde/icons/hicolor/48x48/apps/lskat.png
-share/kde/icons/locolor/16x16/apps/kabalone.png
-share/kde/icons/locolor/16x16/apps/kasteroids.png
-share/kde/icons/locolor/16x16/apps/kbackgammon.png
-share/kde/icons/locolor/16x16/apps/kblackbox.png
-share/kde/icons/locolor/16x16/apps/kjezz.xpm
-share/kde/icons/locolor/16x16/apps/kjumpingcube.png
-share/kde/icons/locolor/16x16/apps/kmahjongg.png
-share/kde/icons/locolor/16x16/apps/kmines.png
-share/kde/icons/locolor/16x16/apps/konquest.png
-share/kde/icons/locolor/16x16/apps/kpat.png
-share/kde/icons/locolor/16x16/apps/kpoker.png
-share/kde/icons/locolor/16x16/apps/kreversi.png
-share/kde/icons/locolor/16x16/apps/ksame.png
-share/kde/icons/locolor/16x16/apps/kshisen.png
-share/kde/icons/locolor/16x16/apps/ksirtet.png
-share/kde/icons/locolor/16x16/apps/ksmiletris.png
-share/kde/icons/locolor/16x16/apps/ksnake.png
-share/kde/icons/locolor/16x16/apps/ksokoban.png
+share/kde/icons/locolor/16x16/apps/kjezz.png
 share/kde/icons/locolor/16x16/apps/kspaceduel.png
-share/kde/icons/locolor/16x16/apps/ktron.png
-share/kde/icons/locolor/16x16/apps/kwin4.png
 share/kde/icons/locolor/16x16/apps/lskat.png
-share/kde/icons/locolor/32x32/apps/kabalone.png
-share/kde/icons/locolor/32x32/apps/kasteroids.png
-share/kde/icons/locolor/32x32/apps/katomic.png
-share/kde/icons/locolor/32x32/apps/kbackgammon.png
-share/kde/icons/locolor/32x32/apps/kblackbox.png
-share/kde/icons/locolor/32x32/apps/kjezz.xpm
-share/kde/icons/locolor/32x32/apps/kjumpingcube.png
-share/kde/icons/locolor/32x32/apps/kmahjongg.png
-share/kde/icons/locolor/32x32/apps/kmines.png
-share/kde/icons/locolor/32x32/apps/konquest.png
-share/kde/icons/locolor/32x32/apps/kpat.png
-share/kde/icons/locolor/32x32/apps/kpoker.png
-share/kde/icons/locolor/32x32/apps/kreversi.png
-share/kde/icons/locolor/32x32/apps/ksame.png
-share/kde/icons/locolor/32x32/apps/kshisen.png
-share/kde/icons/locolor/32x32/apps/ksirtet.png
-share/kde/icons/locolor/32x32/apps/ksmiletris.png
-share/kde/icons/locolor/32x32/apps/ksnake.png
-share/kde/icons/locolor/32x32/apps/ksokoban.png
+share/kde/icons/locolor/32x32/apps/kjezz.png
 share/kde/icons/locolor/32x32/apps/kspaceduel.png
-share/kde/icons/locolor/32x32/apps/ktron.png
-share/kde/icons/locolor/32x32/apps/ktuberling.png
-share/kde/icons/locolor/32x32/apps/kwin4.png
 share/kde/icons/locolor/32x32/apps/lskat.png
-@comment kdebase:dirrm share/kde/icons/locolor/32x32/apps
-@comment kdebase:dirrm share/kde/icons/locolor/16x16/apps
-@comment kdebase:dirrm share/kde/icons/hicolor/48x48/apps
-@comment kdebase:dirrm share/kde/icons/hicolor/32x32/apps
+@comment kdexxx:dirrm share/kde/icons/locolor/32x32/apps
+@comment kdexxx:dirrm share/kde/icons/locolor/16x16/apps
+@comment kdexxx:dirrm share/kde/icons/hicolor/48x48/apps
+@comment kdexxx:dirrm share/kde/icons/hicolor/32x32/apps
+@comment kdexxx:dirrm share/kde/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/lskat/grafix
 @dirrm share/kde/apps/lskat
 @dirrm share/kde/apps/kwin4/grafix
@@ -2021,6 +1923,8 @@ share/kde/icons/locolor/32x32/apps/lskat.png
 @dirrm share/kde/apps/kspaceduel/icons/hicolor/32x32
 @dirrm share/kde/apps/kspaceduel/icons/hicolor/22x22/actions
 @dirrm share/kde/apps/kspaceduel/icons/hicolor/22x22
+@dirrm share/kde/apps/kspaceduel/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kspaceduel/icons/hicolor/16x16
 @dirrm share/kde/apps/kspaceduel/icons/hicolor
 @dirrm share/kde/apps/kspaceduel/icons
 @dirrm share/kde/apps/kspaceduel
@@ -2047,16 +1951,24 @@ share/kde/icons/locolor/32x32/apps/lskat.png
 @dirrm share/kde/apps/kmahjongg/toolbar
 @dirrm share/kde/apps/kmahjongg/pics
 @dirrm share/kde/apps/kmahjongg
+@dirrm share/kde/apps/klines
+@dirrm share/kde/apps/kjumpingcube
 @dirrm share/kde/apps/kjezz/sounds
 @dirrm share/kde/apps/kjezz/pics
 @dirrm share/kde/apps/kjezz
 @dirrm share/kde/apps/kfouleggs
+@dirrm share/kde/apps/kdegames/pics
+@dirrm share/kde/apps/kdegames
 @dirrm share/kde/apps/kblackbox/pics
 @dirrm share/kde/apps/kblackbox
+@dirrm share/kde/apps/kbattleship/sounds
+@dirrm share/kde/apps/kbattleship/pictures
+@dirrm share/kde/apps/kbattleship
 @dirrm share/kde/apps/kbackgammon/sounds
 @dirrm share/kde/apps/kbackgammon/pics
 @dirrm share/kde/apps/kbackgammon
 @dirrm share/kde/apps/katomic/pics
+@dirrm share/kde/apps/katomic/levels/CVS
 @dirrm share/kde/apps/katomic/levels
 @dirrm share/kde/apps/katomic
 @dirrm share/kde/apps/kasteroids/sprites/ship
@@ -2075,6 +1987,7 @@ share/kde/icons/locolor/32x32/apps/lskat.png
 @dirrm share/kde/apps/kabalone
 @dirrm share/kde/apps/carddecks/decks
 @dirrm share/kde/apps/carddecks/cards-xskat-french
+@dirrm share/kde/apps/carddecks/cards-warwick
 @dirrm share/kde/apps/carddecks/cards-spaced
 @dirrm share/kde/apps/carddecks/cards-penguins
 @dirrm share/kde/apps/carddecks/cards-konqi-modern
@@ -2084,8 +1997,12 @@ share/kde/icons/locolor/32x32/apps/lskat.png
 @dirrm share/kde/apps/carddecks/cards-default
 @dirrm share/kde/apps/carddecks/cards-aisleriot
 @dirrm share/kde/apps/carddecks
-@comment kdelibs:dirrm share/kde/apps
-@comment kdexxxx:dirrm share/kde/applnk/Games
+@comment kdexxx:dirrm share/kde/apps
+@comment kdexxx:dirrm share/kde/applnk/Toys
+@comment kdexxx:dirrm share/kde/applnk/Games/TacticStrategy
+@comment kdexxx:dirrm share/kde/applnk/Games/Card
+@comment kdexxx:dirrm share/kde/applnk/Games/Board
+@comment kdexxx:dirrm share/kde/applnk/Games/Arcade
 @dirrm share/doc/kde/HTML/en/lskat
 @dirrm share/doc/kde/HTML/en/kwin4
 @dirrm share/doc/kde/HTML/en/ktuberling
@@ -2093,7 +2010,6 @@ share/kde/icons/locolor/32x32/apps/lskat.png
 @dirrm share/doc/kde/HTML/en/kspaceduel
 @dirrm share/doc/kde/HTML/en/ksokoban
 @dirrm share/doc/kde/HTML/en/ksnake
-@dirrm share/doc/kde/HTML/en/ksmiletris
 @dirrm share/doc/kde/HTML/en/ksirtet
 @dirrm share/doc/kde/HTML/en/kshisen
 @dirrm share/doc/kde/HTML/en/ksame
@@ -2102,13 +2018,14 @@ share/kde/icons/locolor/32x32/apps/lskat.png
 @dirrm share/doc/kde/HTML/en/kpat
 @dirrm share/doc/kde/HTML/en/konquest
 @dirrm share/doc/kde/HTML/en/kmines
-@dirrm share/doc/kde/HTML/en/kmahjongg
+@dirrm share/doc/kde/HTML/en/klines
 @dirrm share/doc/kde/HTML/en/kjumpingcube
 @dirrm share/doc/kde/HTML/en/kjezz
 @dirrm share/doc/kde/HTML/en/kfouleggs
 @dirrm share/doc/kde/HTML/en/kblackbox
+@dirrm share/doc/kde/HTML/en/kbattleship
 @dirrm share/doc/kde/HTML/en/kbackgammon
 @dirrm share/doc/kde/HTML/en/katomic
 @dirrm share/doc/kde/HTML/en/kasteroids
 @dirrm share/doc/kde/HTML/en/kabalone
-@comment kdelibs:dirrm share/doc/kde/HTML/en
+@comment kdexxx:dirrm share/doc/kde/HTML/en

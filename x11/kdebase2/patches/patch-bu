@@ -1,0 +1,22 @@
+$NetBSD: patch-bu,v 1.1 2001/10/15 22:46:03 skrll Exp $
+
+--- kicker/extensions/childpanel/Makefile.in.orig	Sat Sep  8 01:36:34 2001
++++ kicker/extensions/childpanel/Makefile.in
+@@ -283 +283 @@
+-libchildpanelextension_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA) ../../kicker.la
++libchildpanelextension_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA) ../../libkicker.la
+@@ -303 +303 @@
+-libchildpanelextension_la_DEPENDENCIES =  ../../kicker.la
++libchildpanelextension_la_DEPENDENCIES =  ../../libkicker.la
+@@ -488,11 +487,0 @@
+-#>- 	@for file in $(DISTFILES); do \
+-#>- 	  d=$(srcdir); \
+-#>- 	  if test -d $$d/$$file; then \
+-#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
+-#>- 	  else \
+-#>- 	    test -f $(distdir)/$$file \
+-#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+-#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
+-#>- 	  fi; \
+-#>- 	done
+-#>+ 10
