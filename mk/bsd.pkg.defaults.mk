@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.38 2002/02/16 01:29:05 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.39 2002/03/03 23:29:48 hubertf Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1105,6 +1105,11 @@ SDIST_PAWD?= pwd
 # various packages which communicate over the serial port.
 # Possible:  /dev/your_favorite_serial_device0 /dev/your_favorite_serial_device1 ...
 # Default: defaults for various machine_archs are set in mk/bsd.prefs.mk
+
+#SILC_CLIENT_WITH_PERL?=  no
+# Used to decide whether perl scripting support will be compiled.
+# Possible: YES, NO
+# Default: YES
 
 #SPARC_TARGET_ARCH= sparcv7
 # Select SPARC target architecture under Solaris.
