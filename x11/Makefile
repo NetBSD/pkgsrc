@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2001/02/24 16:58:10 sakamoto Exp $
+# $NetBSD: Makefile,v 1.205 2001/02/25 14:49:02 wulf Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -37,6 +37,7 @@ SUBDIR+=	gtkstep
 SUBDIR+=	hanterm
 SUBDIR+=	kde
 SUBDIR+=	kdebase
+SUBDIR+=	kdelibdocs
 SUBDIR+=	kdelibs
 SUBDIR+=	khostchooser
 SUBDIR+=	kterm
