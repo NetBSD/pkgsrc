@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/28 23:33:52 manu Exp $
+# $NetBSD: Makefile,v 1.2 2003/11/23 05:24:05 grant Exp $
 
 DISTNAME=	darwin_lib-6.6.2
 CATEGORIES=	emulators
@@ -13,7 +13,7 @@ DISTFILES=	org.opendarwin.Libsystem-6.6.2-4.fat.rpm \
 
 MAINTAINER=	abacau@yahoo.com.au
 HOMEPAGE=	http://www.opendarwin.org/
-COMMENT=	Darwin compatiblity libraries (including X11)
+COMMENT=	Darwin compatibility libraries (including X11)
 
 BUILD_DEPENDS=	rpm2pkg>=1.3:../../pkgtools/rpm2pkg
 
