@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/05/24 18:09:46 tron Exp $
+# $NetBSD: Makefile,v 1.2 1999/05/24 19:09:32 tron Exp $
 
 DISTNAME=	pilotmgr-1.0.7
 CATEGORIES=	comms
@@ -20,8 +20,7 @@ CONFIGURE_ARGS=		</dev/null
 CONFIGURE_SCRIPT=	Setup
 WRKSRC=			${WRKDIR}/${DISTNAME:C/-.*$//}
 
-SITE_PERL_DIR=	${PREFIX}/lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}
-PM_PERL_DIR=	${SITE_PERL_DIR}/${DISTNAME:C/-.*$//}
+PM_PERL_DIR=	${PREFIX}/lib/${DISTNAME:C/-.*$//}
 PM_DOC_DIR=	${PREFIX}/share/doc/${DISTNAME:C/-.*$//}
 
 post-extract:
