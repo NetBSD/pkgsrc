@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2002/07/04 19:38:35 wiz Exp $
+# $NetBSD: Makefile,v 1.204 2002/08/04 10:17:31 zuntum Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -150,6 +150,7 @@ SUBDIR+=	skipstone
 SUBDIR+=	snarf
 SUBDIR+=	spfc
 SUBDIR+=	squid
+SUBDIR+=	squidGuard
 SUBDIR+=	surfraw
 SUBDIR+=	swill
 SUBDIR+=	swish-e
