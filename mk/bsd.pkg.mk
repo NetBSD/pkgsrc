@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.187 1998/10/26 18:29:10 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.188 1998/10/27 10:35:26 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -385,14 +385,11 @@ PKG_DELETE?=	/usr/sbin/pkg_delete
 PKG_INFO?=	/usr/sbin/pkg_info
 
 .ifndef PKG_ARGS
-PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST}
+PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -l
 PKG_ARGS+=		-b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
 PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true|sort -u`"
 .ifdef CONFLICTS
 PKG_ARGS+=		-C "${CONFLICTS}"
-.endif
-.ifdef PKG_RELATIVE_SYMLINKS
-PKG_ARGS+=		-l
 .endif
 .ifdef INSTALL_FILE
 PKG_ARGS+=		-i ${INSTALL_FILE}
