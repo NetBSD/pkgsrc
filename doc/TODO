@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2308 2004/11/04 14:18:56 adam Exp $
+$NetBSD: TODO,v 1.2309 2004/11/04 15:47:13 salo Exp $
 
 Suggested new packages
 ======================
@@ -406,7 +406,6 @@ Suggested package updates
 	o lbreakout-2.5.1
 	o lcab-1.011
 	o leafnode-1.10.6
-	o lftp-3.0.11
 	o libao{,-arts,-esound}-0.8.5
 	o libcdaudio-0.99.12
 	o libcddb-0.9.6
