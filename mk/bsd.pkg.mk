@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1170 2003/04/17 13:04:57 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1171 2003/04/17 15:33:26 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -555,8 +555,12 @@ uptodate-digest:
 		esac							\
 	fi
 
-# Latest version of pkgtools required for this file.
+# Latest version of pkgtools required for correct pkgsrc operation.
+.if defined(_OPSYS_PKGTOOLS_REQD)
+PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD}
+.else
 PKGTOOLS_REQD=		20021123
+.endif
 
 # Check that we are using up-to-date pkg_* tools with this file.
 .if defined(ZOULARIS_VERSION)
