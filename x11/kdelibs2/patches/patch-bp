@@ -1,0 +1,68 @@
+$NetBSD: patch-bp,v 1.1 2001/11/13 21:09:07 jlam Exp $
+
+--- arts/artsc/artsdsp.c.orig	Sun Jul 29 00:54:48 2001
++++ arts/artsc/artsdsp.c
+@@ -127,6 +127,9 @@
+ 
+ static void artsdsp_doinit()
+ {
++#if defined(__NetBSD__)
++	void *handle;
++#endif
+ 	const char *env;
+ 	artsdsp_init = 1;
+ 
+@@ -139,6 +142,18 @@
+ 	mmapemu = env && !strcmp(env,"1");
+ 
+ 	/* resolve original symbols */
++#if defined(__NetBSD__)
++	handle = dlopen(NULL, DL_LAZY);
++	orig_open = (orig_open_ptr)dlsym(handle,"open");
++	orig_close = (orig_close_ptr)dlsym(handle,"close");
++	orig_write = (orig_write_ptr)dlsym(handle,"write");
++	orig_ioctl = (orig_ioctl_ptr)dlsym(handle,"_oss_ioctl");
++	orig_mmap = (orig_mmap_ptr)dlsym(handle,"mmap");
++	orig_munmap = (orig_munmap_ptr)dlsym(handle,"munmap");
++	orig_fopen = (orig_fopen_ptr)dlsym(handle,"fopen");
++	orig_access = (orig_access_ptr)dlsym(handle,"access");
++	(void) dlclose(handle);
++#else
+ 	orig_open = (orig_open_ptr)dlsym(RTLD_NEXT,"open");
+ 	orig_close = (orig_close_ptr)dlsym(RTLD_NEXT,"close");
+ 	orig_write = (orig_write_ptr)dlsym(RTLD_NEXT,"write");
+@@ -147,6 +162,7 @@
+ 	orig_munmap = (orig_munmap_ptr)dlsym(RTLD_NEXT,"munmap");
+ 	orig_fopen = (orig_fopen_ptr)dlsym(RTLD_NEXT,"fopen");
+ 	orig_access = (orig_access_ptr)dlsym(RTLD_NEXT,"access");
++#endif
+ }
+ 
+ static void artsdspdebug(const char *fmt,...)
+@@ -230,13 +246,18 @@
+   return sndfd;
+ }
+ 
++#if defined(__NetBSD__)
++int _oss_ioctl (int fd, unsigned long request, void *argp)
++#else
+ int ioctl (int fd, ioctl_request_t request, ...)
++#endif
+ {
+   static int channels;
+   static int bits;
+   static int speed;
+   int space, size, latency, odelay;
+ 
++#if !defined(__NetBSD__)
+   /*
+    * FreeBSD needs ioctl with varargs. However I have no idea how to "forward"
+    * the variable args ioctl to the orig_ioctl routine. So I expect the ioctl
+@@ -248,6 +269,7 @@
+   va_start(args,request);
+   argp = va_arg(args, void *);
+   va_end(args);
++#endif
+ 
+   CHECK_INIT();
+ 
