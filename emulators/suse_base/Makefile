@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2000/12/16 22:37:31 tron Exp $
+# $NetBSD: Makefile,v 1.18 2000/12/17 13:05:42 tron Exp $
 
-DISTNAME=		suse_base-6.3
+DISTNAME=		suse_base-${SUSE_VERSION}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=a1/}
 DISTFILES=		${RPMFILES}
@@ -23,8 +23,8 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 # on your local NetBSD mirror, not on SuSE or its mirrors.  Don't use
 # SuSE's ncurses.rpm -- it'll make things like /bin/sh dump core.
 #
-RPMFILES=		aaa_dir.rpm shlibs.rpm ldso.rpm libz.rpm \
-			bash.rpm gppshare.rpm ncurses-p1.rpm
+RPMFILES=		aaa_dir.rpm shlibs.rpm libz.rpm \
+			bash.rpm gppshare.rpm ncurses.rpm
 RPMIGNOREPATH=		tmp usr/tmp var
 
 LINUX_LDD=		${PREFIX}/${EMULSUBDIR}/usr/bin/ldd
