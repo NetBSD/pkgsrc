@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2002/11/26 21:05:46 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2003/01/22 16:23:39 jmmv Exp $
 
-DISTNAME=		neon-0.23.5
+DISTNAME=		neon-0.23.6
 CATEGORIES=		www
 MASTER_SITES=		http://www.webdav.org/neon/
 
@@ -16,11 +16,11 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ssl=yes
-CONFIGURE_ARGS+=	--with-libxml1
+CONFIGURE_ARGS+=	--with-libxml2
 CONFIGURE_ARGS+=	--enable-shared
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
-.include "../../textproc/libxml/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
