@@ -1,2 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1998/11/24 21:11:58 tron Exp $
-MD5 (gEDA-19981117.tar.gz) = 86cb4cce074d91f27f3e433818040bcf
+$NetBSD: md5,v 1.2 1998/12/31 12:05:53 frueauf Exp $
+
+MD5 (gEDA-19981213.tar.gz) = efb55a4bd3f34dc612d786771098f08f
