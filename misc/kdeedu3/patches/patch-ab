@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.4 2004/06/16 10:35:08 markd Exp $
+
+--- kbruch/src/mainqtwidget.cpp.orig	2004-05-31 04:38:23.000000000 +1200
++++ kbruch/src/mainqtwidget.cpp
+@@ -92,7 +92,7 @@ void MainQtWidget::readOptions()
+ 	m_maxMainDenominator = m_config->readNumEntry("max_main_denominator", 10);
+ 
+    /* make sure that we can load config files with corrupted values */
+-   if (m_mulDiv == true and pow(2, m_nrRatios) > m_maxMainDenominator)
++   if (m_mulDiv == true && pow(2, m_nrRatios) > m_maxMainDenominator)
+    {
+       m_nrRatios = 2;
+       m_maxMainDenominator = 10;
