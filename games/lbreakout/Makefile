@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/22 16:58:12 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/22 18:33:32 rh Exp $
 #
 
 DISTNAME=	lbreakout-001018
@@ -13,5 +13,6 @@ DEPENDS+=	SDL>=1.1.5nb1:../../devel/SDL
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-sdl-prefix=${PREFIX}
+CONFIGURE_ARGS+=--disable-sound
 
 .include "../../mk/bsd.pkg.mk"
