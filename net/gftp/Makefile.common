@@ -1,0 +1,35 @@
+# $NetBSD: Makefile.common,v 1.1 2003/09/01 21:38:43 xtraeme Exp $
+
+DISTNAME=	gftp-${VERSION}
+CATEGORIES=	net
+MASTER_SITES=	http://gftp.seul.org/					\
+		ftp://gftp.seul.org/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	jmcneill@invisible.yi.org
+HOMEPAGE=	http://gftp.seul.org/
+
+BUILD_USES_MSGFMT=	yes
+
+USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
+
+PTHREAD_OPTS=		require
+
+CONFIGURE_ARGS+=	--with-readline
+
+VERSION=		2.0.15
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !exists(/usr/bin/ssh-agent)
+DEPENDS+=       openssh-[0-9]*:../../security/openssh
+.endif
+
+.include "../../converters/libiconv/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../textproc/intltool/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
