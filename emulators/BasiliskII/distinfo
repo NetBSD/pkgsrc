@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/07/17 01:56:38 xtraeme Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 18:49:17 agc Exp $
 
 SHA1 (BasiliskII_src_14032003.tar.bz2) = 935e00e1401fc5dfaad7ac7d54184265bab0aeb8
+RMD160 (BasiliskII_src_14032003.tar.bz2) = fa9718bdb4dcdd18ac3d9b87cdfb8c588a668124
 Size (BasiliskII_src_14032003.tar.bz2) = 649594 bytes
 SHA1 (patch-aa) = e41d9a3a932bb312e2ea35372c4e46a45f0fcae9
 SHA1 (patch-ab) = 17c94164ece847bd5695e8fb79ff5132c3c53859

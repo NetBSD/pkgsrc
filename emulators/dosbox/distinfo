@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2004/11/22 14:12:29 adam Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 18:49:18 agc Exp $
 
 SHA1 (dosbox-0.63.tar.gz) = d40e9996678dbe1626eb5a80f49862a93d1108d0
+RMD160 (dosbox-0.63.tar.gz) = c6c6e5206f3f3671652405aafbf244cd90742ef9
 Size (dosbox-0.63.tar.gz) = 648762 bytes
 SHA1 (patch-aa) = 3393501f0d438e53a55481dc0e237c2bb2a75d3e

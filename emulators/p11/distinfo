@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/05/16 16:09:22 agc Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 18:49:19 agc Exp $
 
 SHA1 (p11-2.10a.tar.gz) = 2d3b7860d9df1136c192d94220693dcc1a4e461b
+RMD160 (p11-2.10a.tar.gz) = df09fcf60d300c67e175d917f550d25f2a8efdfc
 Size (p11-2.10a.tar.gz) = 303572 bytes

@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/13 10:31:14 tron Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 18:49:20 agc Exp $
 
 SHA1 (suse91/i586/glib-1.2.10-586.i586.rpm) = 0b6a69b48a1c49dd635f0568b758e018fb007eea
+RMD160 (suse91/i586/glib-1.2.10-586.i586.rpm) = 0bbb0c06e0d11df3fa51307980277c40eda04975
 Size (suse91/i586/glib-1.2.10-586.i586.rpm) = 124852 bytes
 SHA1 (suse91/i586/gtk-1.2.10-877.i586.rpm) = 395f33db3ea0aec1d7f8ef23ac8d83efdf4243fb
+RMD160 (suse91/i586/gtk-1.2.10-877.i586.rpm) = a5b84ad4420b233217777bf96ca1a43782076c3e
 Size (suse91/i586/gtk-1.2.10-877.i586.rpm) = 860574 bytes

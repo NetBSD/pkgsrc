@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2002/11/25 11:01:13 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 18:49:20 agc Exp $
 
 SHA1 (suse73/i386/audiofile.rpm) = e82de25fbbcca76daf865194f412f76f040ef298
+RMD160 (suse73/i386/audiofile.rpm) = fb0a5488c2d3632e59d601173d1dbdc2dbe3af5e
 Size (suse73/i386/audiofile.rpm) = 223113 bytes
 SHA1 (suse73/ppc/audiofile.rpm) = 76d246dc66cae4358c4ad0af63e899bfc5063d38
 Size (suse73/ppc/audiofile.rpm) = 240399 bytes

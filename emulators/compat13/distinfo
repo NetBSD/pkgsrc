@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2003/08/02 18:55:22 kristerw Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 18:49:18 agc Exp $
 
 SHA1 (compat13-alphanb1.tar.gz) = 4e1fc306eb880dc3ba8a0906406da082fd6e6ca5
 Size (compat13-alphanb1.tar.gz) = 478199 bytes
@@ -7,6 +7,7 @@ Size (compat13-arm.tar.gz) = 247143 bytes
 SHA1 (compat13-arm32.tar.gz) = 0dcae05d5ec15968665a71ab0a058f3b2a3d2f87
 Size (compat13-arm32.tar.gz) = 247143 bytes
 SHA1 (compat13-i386.tar.gz) = 4a33dd2381e790e3e71fccf4bb9f65a7d0859b9a
+RMD160 (compat13-i386.tar.gz) = e50d869813cd19bb079d8457a5b9f8e521b9e94e
 Size (compat13-i386.tar.gz) = 236494 bytes
 SHA1 (compat13-m68k.tar.gz) = a438a2d5f11106e431a8bba3061727069c5ec360
 Size (compat13-m68k.tar.gz) = 231047 bytes

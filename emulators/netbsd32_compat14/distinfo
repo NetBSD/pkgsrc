@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/01/11 05:12:56 hamajima Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 18:49:19 agc Exp $
 
 SHA1 (compat14-i386-1.4.3.1.tar.gz) = 7c00ede3cf18bfc437e9262f0e583bde5f134004
+RMD160 (compat14-i386-1.4.3.1.tar.gz) = 7e1aba3308a3efec20384a1170f4b7b2d5e7ac72
 Size (compat14-i386-1.4.3.1.tar.gz) = 1646083 bytes
 SHA1 (compat14-sparc-1.4.3.1.tar.gz) = 9c0e46ced11f1f56fde79158edebb12898ea4ffa
 Size (compat14-sparc-1.4.3.1.tar.gz) = 1831758 bytes

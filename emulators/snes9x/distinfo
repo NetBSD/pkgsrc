@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2003/09/21 18:22:14 kristerw Exp $
+$NetBSD: distinfo,v 1.10 2005/02/23 18:49:20 agc Exp $
 
 SHA1 (s9xs139.zip) = 15acf6d8a31dc51b26a42abf747cec1b72c2aa29
+RMD160 (s9xs139.zip) = b7ede5bda5adb4ee92428264d689624212becc5d
 Size (s9xs139.zip) = 666463 bytes
 SHA1 (patch-aa) = 42b0cf5c4a1387ad1c572c1516771b2cd2e979f4
 SHA1 (patch-ab) = b99893934074d8693a9609d49e49953ade2b2062
