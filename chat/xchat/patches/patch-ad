@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2001/08/07 14:57:58 tron Exp $
+
+--- src/common/Makefile.in.orig	Wed Jul 25 06:22:38 2001
++++ src/common/Makefile.in	Tue Aug  7 16:55:04 2001
+@@ -127,7 +127,7 @@
+ DEFS = @DEFS@ -I. -I$(srcdir) -I../..
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -lintl
+ libxchatmain_a_LIBADD = 
+ @DO_ICONV_FALSE@@DO_PYTHON_TRUE@@USE_OPENSSL_FALSE@@DO_PERL_FALSE@libxchatmain_a_OBJECTS =  \
+ @DO_ICONV_FALSE@@DO_PYTHON_TRUE@@USE_OPENSSL_FALSE@@DO_PERL_FALSE@cfgfiles.o \
