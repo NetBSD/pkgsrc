@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/06/23 23:04:08 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/08/22 21:04:19 jlam Exp $
 
 .if !defined(ATK_BUILDLINK2_MK)
 ATK_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		atk
-BUILDLINK_DEPENDS.atk?=		atk>=1.0.0
+BUILDLINK_DEPENDS.atk?=		atk>=1.0.2
 BUILDLINK_PKGSRCDIR.atk?=	../../devel/atk
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.atk=atk

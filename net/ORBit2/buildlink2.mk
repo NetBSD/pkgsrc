@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/06/23 23:04:36 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/08/22 21:04:25 jlam Exp $
 
 .if !defined(ORBIT2_BUILDLINK2_MK)
 ORBIT2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		ORBit2
-BUILDLINK_DEPENDS.orbit2?=	ORBit2>=2.3.108nb1
+BUILDLINK_DEPENDS.orbit2?=	ORBit2>=2.4.0
 BUILDLINK_PKGSRCDIR.orbit2?=	../../net/ORBit2
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.orbit2=orbit2
