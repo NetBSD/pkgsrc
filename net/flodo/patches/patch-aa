@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/10/09 16:15:07 kristerw Exp $
+
+--- flodo.c.orig	Sat Oct  9 18:05:45 2004
++++ flodo.c	Sat Oct  9 18:05:59 2004
+@@ -59,6 +59,8 @@
+ #include <netinet/tcp.h>
+ #include <netinet/udp.h>
+ #if defined(__NetBSD__)
++#include <sys/types.h>
++#include <sys/socket.h>
+ #include <net/if.h>
+ #include <net/if_ether.h>
+ #endif
