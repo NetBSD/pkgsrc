@@ -1,14 +1,18 @@
-$NetBSD: patch-ab,v 1.1 2001/07/15 11:49:42 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2004/01/29 12:55:36 grant Exp $
 
---- makefile.nix.orig	Thu Jan 12 02:26:26 1995
+--- makefile.nix.orig	1995-01-12 18:26:26.000000000 +1100
 +++ makefile.nix
-@@ -23,8 +23,7 @@
+@@ -21,10 +21,9 @@
  
- CC = gcc
- CPP = $(CC) -E
+ MCH = nix
+ 
+-CC = gcc
+-CPP = $(CC) -E
 -CFLAGS = -Wall -O2 -c -I../$(MCH) -I../include
 -LDFLAGS = -O2
-+CFLAGS += -Wall -c -I../$(MCH) -I../include
++#CC = gcc
++#CPP = $(CC) -E
++CFLAGS += -c -I../$(MCH) -I../include
  
  MDEFINES = "CC=$(CC)" "CPP=$(CPP)" "CFLAGS=$(CFLAGS)" "DEFS=$(DEFS)"
  SUBDIRS = c $(MCH) include
