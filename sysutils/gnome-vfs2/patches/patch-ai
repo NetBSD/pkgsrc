@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.8 2004/04/24 21:00:07 danw Exp $
+$NetBSD: patch-ai,v 1.9 2004/11/28 13:00:17 recht Exp $
 
---- modules/vfolder/Makefile.in.orig	Mon Mar 22 13:47:18 2004
-+++ modules/vfolder/Makefile.in
-@@ -259,7 +259,7 @@ libvfolder_desktop_la_LIBADD = \
+--- modules/vfolder/Makefile.in.orig	Thu Oct 28 16:16:58 2004
++++ modules/vfolder/Makefile.in	Sat Nov 27 20:52:43 2004
+@@ -276,7 +276,7 @@
  
  
  ###  Default .vfolder-info files
