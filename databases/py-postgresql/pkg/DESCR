@@ -1,0 +1,12 @@
+PyGreSQL - v2.4: PostgreSQL module for Python
+ 
+  PyGreSQL, version 2.4
+  A Python interface for PostgreSQL database.
+  Written by D'Arcy J.M. Cain, darcy@druid.net<BR>
+  Based heavily on code written by Pascal Andre, andre@chimay.via.ecp.fr.
+  Copyright (c) 1995, Pascal ANDRE (andre@via.ecp.fr)
+  Copyright (c) 1997, 1998, 1999
+ 
+PyGreSQL is a python module that interfaces to a PostgreSQL database. It
+embeds the PostgreSQL query library to allow easy use of the powerful
+PostgreSQL features from a Python script.
