@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2422 2003/06/04 08:51:29 agc Exp $
+$NetBSD: CHANGES,v 1.2423 2003/06/04 15:33:55 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2309,3 +2309,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated samba to 2.2.8anb2 [jlam 2003-06-04]
 	Updated cups to 1.1.19nb1 [jlam 2003-06-04]
 	Updated 9menu to 1.6 [agc 2003-06-04]
+	Updated cvsync to 0.23.0 [gehenna 2003-06-04]
