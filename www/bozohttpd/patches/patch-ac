@@ -1,0 +1,51 @@
+$NetBSD: patch-ac,v 1.7 2002/08/05 16:37:50 mrg Exp $
+
+Index: bozohttpd.c
+===================================================================
+RCS file: /home/towers/mrg/cvsroot/eterna/bozohttpd/bozohttpd.c,v
+retrieving revision 1.45
+retrieving revision 1.46
+diff -p -c -r1.45 -r1.46
+*** bozohttpd.c	2002/08/04 15:21:25	1.45
+--- bozohttpd.c	2002/08/05 16:28:26	1.46
+***************
+*** 1,4 ****
+! /*	$eterna: bozohttpd.c,v 1.45 2002/08/04 15:21:25 mrg Exp $	*/
+  
+  /*
+   * Copyright (c) 1997, 1998, 1999, 2000, 2001 Matthew R. Green
+--- 1,4 ----
+! /*	$eterna: bozohttpd.c,v 1.46 2002/08/05 16:28:26 mrg Exp $	*/
+  
+  /*
+   * Copyright (c) 1997, 1998, 1999, 2000, 2001 Matthew R. Green
+*************** process_request(request)
+*** 900,906 ****
+  		else if (errno == ENOENT) {
+  #ifndef NO_DIRINDEX_SUPPORT
+  			if (isindex && Xflag) {
+! 				file[strlen(file) - strlen(index_html)] = '\0';
+  				debug((DEBUG_FAT, "trying dir index (%s)",
+  				    file));
+  				directory_index(request, file);
+--- 900,909 ----
+  		else if (errno == ENOENT) {
+  #ifndef NO_DIRINDEX_SUPPORT
+  			if (isindex && Xflag) {
+! 				if (strlen(file) <= strlen(index_html))
+! 					(const char *)file = ".";
+! 				else
+! 					file[strlen(file) - strlen(index_html)] = '\0';
+  				debug((DEBUG_FAT, "trying dir index (%s)",
+  				    file));
+  				directory_index(request, file);
+*************** directory_index(request, dirname)
+*** 972,977 ****
+--- 975,981 ----
+  	char buf[MAXPATHLEN];
+  	int l;
+  
++ 	debug((DEBUG_FAT, "directory_index: dirname ``%s''", dirname));
+  	if (stat(dirname, &sb) < 0 ||
+  	    (dp = opendir(dirname)) == NULL) {
+  		if (errno == EPERM)
