@@ -1,9 +1,8 @@
-$NetBSD: patch-ah,v 1.5 2001/07/10 16:02:12 tron Exp $
+$NetBSD: patch-ah,v 1.6 2004/06/02 11:43:55 tron Exp $
 
 --- site/Makefile.orig	Thu May  3 22:27:32 2001
 +++ site/Makefile	Sun Jun 24 13:01:33 2001
-@@ -84,22 +84,11 @@
- 	$D$(CTLBIN)/sendsys.pl $D$(CTLBIN)/senduuname.pl $D$(CTLBIN)/version.pl
+@@ -85,21 +85,10 @@
  
  REST_INSTALLED	= \
 -	$D$(PATH_NEWSFEEDS) $D$(PATH_INNDHOSTS) \

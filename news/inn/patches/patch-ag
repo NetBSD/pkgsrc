@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.6 2002/07/06 15:04:58 tron Exp $
+$NetBSD: patch-ag,v 1.7 2004/06/02 11:43:55 tron Exp $
 
---- backends/pgpverify.in.orig	Mon May  6 08:02:07 2002
-+++ backends/pgpverify.in	Sat Jul  6 16:58:05 2002
+--- control/pgpverify.in.orig	Mon May  6 08:02:07 2002
++++ control/pgpverify.in	Sat Jul  6 16:58:05 2002
 @@ -90,7 +90,7 @@
  # Path to pgp binary; for PGP 5.0, set the path to the pgpv binary.
  # If you have INN and the script is able to successfully include your
