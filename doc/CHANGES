@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6440 2004/07/04 15:26:22 jmmv Exp $
+$NetBSD: CHANGES,v 1.6441 2004/07/04 15:59:33 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3239,3 +3239,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kaffe to 1.1.4nb2 [jmmv 2004-07-04]
 	Added kaffe-esound-1.1.4 [jmmv 2004-07-04]
 	Added kaffe-x11-1.1.4 [jmmv 2004-07-04]
+	Added gst-plugins-cdparanoia-0.8.2 [jmmv 2004-07-04]
