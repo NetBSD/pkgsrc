@@ -1,13 +1,13 @@
 #!/bin/sh
 #
-# $NetBSD: url2pkg,v 1.24 2003/04/23 09:18:30 rh Exp $
+# $NetBSD: url2pkg,v 1.25 2003/07/25 09:25:00 cjep Exp $
 #
 # url2pkg
 # (c) 1999-2002 Hubert Feyrer <hubert@feyrer.de>
 #
 
 if [ "$MAKE" = "" ]; then
-	MAKE=make
+	MAKE=@MAKE@
 fi
 
 if [ "$PKGEDITOR" != "" ]; then
