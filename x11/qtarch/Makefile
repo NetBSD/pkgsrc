@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/10/19 08:04:57 skrll Exp $
+# $NetBSD: Makefile,v 1.8 2000/10/22 09:22:34 skrll Exp $
 #
 
 DISTNAME=	qtarch-2.1-1
@@ -16,7 +16,7 @@ DEPENDS+=	png-*:../../graphics/png
 USE_X11=	yes
 USE_GMAKE=	yes
 
-EVAL_PREFIX+=	QT2DIR=qt2
+EVAL_PREFIX+=	QT2DIR=qt2-libs
 MAKE_ENV=	QTDIR=${QT2DIR}/qt2
 PATH=		${QTDIR}/bin:$$PATH
 
