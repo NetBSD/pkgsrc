@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3295 2005/03/25 02:59:06 wiz Exp $
+$NetBSD: TODO,v 1.3296 2005/03/25 03:11:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1058,7 +1058,6 @@ Suggested package updates
 	o ucl-1.03
 	o unison-2.10.2
 	o unix2dos-1.3
-	o urban-1.5.3
 	o userppp-030706
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
