@@ -4,7 +4,8 @@
 # Date created:         15 May 1996
 # Whom:                 ache
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/27 02:19:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/27 03:22:19 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
 DISTNAME=       rarbsd
