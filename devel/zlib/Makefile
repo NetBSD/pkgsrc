@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2003/02/28 23:25:21 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/03/05 13:05:44 salo Exp $
 
 DISTNAME=	zlib-1.1.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		http://www.libpng.org/pub/png/src/ \
@@ -14,6 +15,7 @@ COMMENT=	General purpose data compression library
 BUILD_DEPENDS+=	libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
 
 USE_BUILDLINK2=		# defined
+HAS_CONFIGURE=		# defined
 #NOT_FOR_PLATFORM=	NetBSD-1.[4-9]*-* # in base NetBSD system
 
 # To avoid circular dependences we must not use "USE_LIBTOOL" but
@@ -23,7 +25,6 @@ LIBTOOL=	${LOCALBASE}/bin/libtool
 PKGLIBTOOL=	${BUILDLINK_LIBTOOL}
 CONFIGURE_ENV+=	LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=	LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
-MAKEFILE=	lt.mk
 
 post-extract:
 	${CP} ${FILESDIR}/lt.mk ${WRKSRC}
