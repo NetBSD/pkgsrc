@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/06/30 15:09:33 taca Exp $
+$NetBSD: distinfo,v 1.2 2002/01/20 03:54:56 taca Exp $
 
-SHA1 (ruby/rbogl-0.32a.tgz) = 0f96310cb59aedaa5e3112861eed0189bc240355
-Size (ruby/rbogl-0.32a.tgz) = 70123 bytes
+SHA1 (ruby/rbogl-0.32b.tgz) = 194e8bba8c7e607083b005137b08b7664f446c32
+Size (ruby/rbogl-0.32b.tgz) = 70340 bytes
 SHA1 (patch-aa) = a5209b3ef507731aca024239910e6ba97c4dea54
