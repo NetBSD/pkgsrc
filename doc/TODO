@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1937 2004/07/14 21:26:18 xtraeme Exp $
+$NetBSD: TODO,v 1.1938 2004/07/14 22:24:40 jlam Exp $
 
 Suggested new packages
 ======================
@@ -220,7 +220,7 @@ Suggested package updates
 	o firefox-bin-0.9.1 (+ gtk2, etc..) [grant]
 	o firewalk-5.0
 	o firewalk-gtk-5.0
-	o foomatic-2.9.1 [jlam]
+	o foomatic-3.0.1 [jlam]
 	o fop-0.20.5
 	o fox-1.2.7
 	o freetds-0.62.3
