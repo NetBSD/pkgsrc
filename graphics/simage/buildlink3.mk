@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/11/11 06:16:26 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/11/11 06:19:21 minskim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SIMAGE_BUILDLINK3_MK:=	${SIMAGE_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	simage
 
 .if !empty(SIMAGE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.simage+=	simage>=1.6.1
-BUILDLINK_PKGSRCDIR.simage?=	../../wip/simage
+BUILDLINK_PKGSRCDIR.simage?=	../../graphics/simage
 .endif	# SIMAGE_BUILDLINK3_MK
 
 .include "../../audio/libsndfile/buildlink3.mk"
