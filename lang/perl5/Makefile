@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/05/04 22:39:57 abs Exp $
+# $NetBSD: Makefile,v 1.22 1999/08/13 20:37:25 abs Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
@@ -19,11 +19,21 @@ CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} -Doptimize="${CFLAGS}" \
 			-Dusemymalloc=false
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+PLIST_SRC=      	${WRKDIR}/.PLIST_SRC
+.endif
+
 test:
 	@(cd ${WRKSRC}; ${MAKE} test)
 
 post-install:
 	@strip ${PREFIX}/bin/a2p
 	@strip ${PREFIX}/bin/perl
+.if ${OPSYS} == "SunOS"
+	${CAT} ${PKGDIR}/PLIST-mi ${PKGDIR}/PLIST-md.static  | \
+				${EGREP} -v 'DB_File|Socket' > ${PLIST_SRC}
+.endif
 
 .include "../../mk/bsd.pkg.mk"
