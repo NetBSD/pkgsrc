@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2001/09/27 23:17:59 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2001/10/06 22:04:22 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-20.7
@@ -13,6 +13,7 @@ CONFLICTS=	mule-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+GNU_ARCH.mipsbe= mips
 
 BUILD_DEFS+=	USE_INET6 EMACS_USE_POP EMACS_USE_X EMACS_USE_X_TOOLKIT
 
