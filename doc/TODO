@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2816 2005/01/03 10:53:05 martti Exp $
+$NetBSD: TODO,v 1.2817 2005/01/03 14:37:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -397,7 +397,6 @@ Suggested package updates
 	o cstream-2.5
 	o cue-20041115
 	o cuetools-1.2
-	o curl-7.12.3
 	o cvs-1.11.18
 	o cwtext-0.94
 	o cxref-1.6
@@ -406,6 +405,7 @@ Suggested package updates
 	o cyrus-sasl-1.5.28
 	o daapd-0.2.3
 	o dact-0.8.37
+	o db4-4.3.27
 	o dbench-3.02
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -559,7 +559,7 @@ Suggested package updates
 	o gpsdrive-2.09
 	o gpsim-devel-20041104
 	o gputils-0.12.4
-	o grace-5.1.17
+	o grace-5.1.18
 	o gramps-1.0.8
 	o grap-1.32
 	o grepmail-5.3030
@@ -586,6 +586,7 @@ Suggested package updates
 	o hercules-3.02
 	o hevea-1.07
 	o hitchhiker-0.7
+	o honeyd-1.0
 	o horde-3.0
 	o host-20040812 [cjep,talking to greg woods about this]
 	o hot-babe-0.2.2
@@ -640,7 +641,6 @@ Suggested package updates
 	o jove-4.16.0.65
 	o jpilot-0.99.7 [pkg/24635]
 	o kapooka-0.3
-	o kdebindings2-2.2.2
 	o kdrill-6.3.1
 	o kinput2-3.1
 	o kmess-1.3
@@ -662,7 +662,6 @@ Suggested package updates
 	o libast-0.6
 	o libcdio-0.71
 	o libcomprex-0.3.3
-	o libdv-0.104
 	o libetpan-0.34b
 	o libextractor-0.4.0
 	o libfwbuilder-2.0.4
@@ -753,7 +752,7 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.4.3
 	o muse-0.9.1
-	o nail-11.18
+	o nail-11.19
 	o nano-1.3.5
 	o nap-1.5.3
 	o nautilus-2.8.2
@@ -1030,7 +1029,6 @@ Suggested package updates
 	o qDecoder-7.1
 	o qt1-1.45
 	o qt2-designer-2.3.2
-	o qt2-designer-kde-2.3.2
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
@@ -1114,7 +1112,7 @@ Suggested package updates
 	o snownews-1.5.6.1
 	o socat-1.4.1.0
 	o sox-12.17.7
-	o spamassassin-3.0.2
+	o spamassassin-3.0.2 [pkg/28844]
 	o spim-7.0
 	o splint-3.1.1
 	o spruce-0.6.5
@@ -1175,6 +1173,7 @@ Suggested package updates
 	o tkman-2.2
 	o tlf-0.9.21
 	o tmake-1.13
+	o tnftp-20050103
 	o tob-0.26
 	o top-3.6alpha9
 	o tor-0.0.9
