@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2003/04/16 15:51:22 salo Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/26 11:13:16 salo Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	1
-
-COMMENT=	Libpcap-based packet sniffer/logger
+COMMENT=	The Open Source Network Intrusion Detection System
 
 USE_BUILDLINK2=	YES
 
