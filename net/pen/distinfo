@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/21 12:00:14 rh Exp $
+$NetBSD: distinfo,v 1.2 2001/09/13 15:09:38 rh Exp $
 
-SHA1 (pen-0.2.0.tar.gz) = d16daa8e32276d7e874d2811cd800c2659694455
-Size (pen-0.2.0.tar.gz) = 17469 bytes
-SHA1 (patch-aa) = 6ce188b309bbd51e4c7f4ece3c666340e6790ddf
-SHA1 (patch-ab) = e3c0dfeafc74cf653de4c90b8b6244e4a2bcae8f
+SHA1 (pen-0.4.0.tar.gz) = a64afa4ae47f55ff5378c13fe7e08c67a2a2d246
+Size (pen-0.4.0.tar.gz) = 45810 bytes
