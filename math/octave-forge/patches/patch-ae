@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.4 2005/03/14 04:08:42 dmcmahill Exp $
+
+--- Makeconf.base.orig	2004-11-16 05:31:57.000000000 -0500
++++ Makeconf.base
+@@ -6,7 +6,7 @@
+ 
+ OCTAVE_FORGE = 1
+ 
+-SHELL = /bin/sh
++SHELL = @SHELL@
+ 
+ canonical_host_type = @canonical_host_type@
+ prefix = @prefix@

@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.4 2005/03/14 04:08:42 dmcmahill Exp $
+
+--- Makeconf.in.orig	2004-11-16 20:02:36.000000000 -0500
++++ Makeconf.in
+@@ -6,7 +6,7 @@
+ 
+ OCTAVE_FORGE = 1
+ 
+-SHELL = /bin/sh
++SHELL = @SHELL@
+ 
+ canonical_host_type = @canonical_host_type@
+ prefix = @prefix@
