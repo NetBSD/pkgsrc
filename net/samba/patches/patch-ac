@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 1998/01/12 17:31:17 agc Exp $
+
+This patch (from Amanda 2.4.0b4) enables smbtar to produce archives of
+deeper trees.
+
+--- clitar.h.orig	Sat Jan 10 16:27:01 1998
++++ clitar.h	Sat Jan 10 16:27:01 1998
+@@ -1,6 +1,6 @@
+ 
+ #define TBLOCK 512
+-#define NAMSIZ 100
++#define NAMSIZ 1024
+ union hblock {
+   char dummy[TBLOCK];
+   struct header {
