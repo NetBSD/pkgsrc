@@ -1,14 +1,19 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 10:36:39 agc Exp $
+$NetBSD: patch-aa,v 1.4 1999/12/20 12:33:47 fredb Exp $
 
---- ckucmd.c.orig	Mon Nov 25 01:20:49 1996
-+++ ckucmd.c	Fri Jun 19 22:52:29 1998
-@@ -3648,6 +3648,9 @@
-   not convert \r to \n, so additional \n needed in newline function.  But
-   it is also very likely to result in unwanted blank lines.
- */
-+#ifdef SVORPOSIX
-+    if (c == CR) putchar(NL);
-+#endif /* SVORPOSIX */
+--- makefile.orig	Tue Dec  7 18:58:08 1999
++++ makefile	Fri Dec 17 07:16:10 1999
+@@ -732,10 +732,10 @@
+ #
+ WERMIT = makewhat
+ DESTDIR =
+-BINDIR = /usr/local/bin
+-MANDIR = /usr/man/manl
+-INFODIR = /usr/local/doc/kermit
+-MANEXT = l
++BINDIR = /usr/${PREFIX}/bin
++MANDIR = /usr/man/man1
++INFODIR = /usr/${PREFIX}/share/doc/kermit
++MANEXT = 1
+ ALL = $(WERMIT)
  
- #ifdef OS2
-     if (c == CR) putchar(NL);
+ all: $(ALL)
