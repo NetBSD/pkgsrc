@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/08/13 18:10:29 itojun Exp $
+# $NetBSD: Makefile,v 1.23 2000/09/03 10:31:27 wiz Exp $
 
 DISTNAME=	sendmail.8.11.0
 PKGNAME=	sendmail-8.11.0
@@ -57,30 +57,30 @@ post-patch:
 	${CP} ${FILESDIR}/site.config.m4 ${SITECONFIG}
 	${CHMOD} +w ${SITECONFIG}
 	${CP} ${PKGDIR}/DESCR ${DESCR_SRC}
-	echo '---' >> ${DESCR_SRC}
-	echo -n 'compiled features:' >> ${DESCR_SRC}
-	echo -n ' WIDE' >> ${DESCR_SRC}
+	${ECHO} '---' >> ${DESCR_SRC}
+	${ECHO} -n 'compiled features:' >> ${DESCR_SRC}
+	${ECHO} -n ' WIDE' >> ${DESCR_SRC}
 .if defined(USE_INET6) && ${USE_INET6} == YES
 	${CAT} ${FILESDIR}/site.config.m4-v6 >> ${SITECONFIG}
-	echo -n ' INET6' >> ${DESCR_SRC}
+	${ECHO} -n ' INET6' >> ${DESCR_SRC}
 .endif
 .if ${OPSYS} == "NetBSD"
 	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >> ${SITECONFIG}
-	echo -n ' TCPWRAPPERS' >> ${DESCR_SRC}
+	${ECHO} -n ' TCPWRAPPERS' >> ${DESCR_SRC}
 .endif
 .if defined(USE_LDAP) && ${USE_LDAP} == YES
 	${CAT} ${FILESDIR}/site.config.m4-ldap >> ${SITECONFIG}
-	echo -n ' LDAP' >> ${DESCR_SRC}
+	${ECHO} -n ' LDAP' >> ${DESCR_SRC}
 .endif
 .if ${USE_DB2} == YES
 	${CAT} ${FILESDIR}/site.config.m4-db2 >> ${SITECONFIG}
-	echo -n ' DB2' >> ${DESCR_SRC}
+	${ECHO} -n ' DB2' >> ${DESCR_SRC}
 .endif
 .if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
 	${CAT} ${FILESDIR}/site.config.m4-starttls >> ${SITECONFIG}
-	echo -n ' STARTTLS' >> ${DESCR_SRC}
+	${ECHO} -n ' STARTTLS' >> ${DESCR_SRC}
 .endif
-	echo >> ${DESCR_SRC}
+	${ECHO} >> ${DESCR_SRC}
 
 do-build:
 	@(cd ${WRKSRC}; ./Build)
