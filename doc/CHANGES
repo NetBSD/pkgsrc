@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.144 2002/10/03 02:10:37 seb Exp $
+$NetBSD: CHANGES,v 1.145 2002/10/03 04:03:35 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3074,3 +3074,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added ee-1.4.5a [cjep 2002-10-02]
 	Updated php4 to 4.1.2nb1 [wiz 2002-10-03]
 	Updated gtexinfo to 4.2 [seb 2002-10-03]
+	Updated sendmail to 8.12.6nb1 [itojun 2002-10-03]
