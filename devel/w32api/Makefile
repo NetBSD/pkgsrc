@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/08/25 04:49:13 kent Exp $
+# $NetBSD: Makefile,v 1.14 2003/08/25 06:06:10 kent Exp $
 # $PEACE: Makefile,v 1.21 2002/08/21 02:02:27 kent Exp $
 
 DISTNAME=	w32api-1.5-src
@@ -15,8 +15,6 @@ HOMEPAGE=	http://www.mingw.org/
 COMMENT=	Free headers and libraries for the Win32 API
 
 BUILD_DEPENDS+=	cross-i386-netbsdpe:../../cross/i386-netbsdpe
-# The same platform requirement as cross-i386-netbsdpe.
-ONLY_FOR_PLATFORM=	NetBSD-1.6[Q-Z]*-* NetBSD-[2-9]*-*
 
 PE_CC=		${CROSSBASE}/bin/i386-netbsdpe-cc -I${WRKSRC}/include
 PE_AR=		${CROSSBASE}/bin/i386-netbsdpe-ar
