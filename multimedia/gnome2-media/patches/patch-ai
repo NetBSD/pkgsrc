@@ -1,0 +1,17 @@
+$NetBSD: patch-ai,v 1.1.1.1 2004/02/22 16:32:45 jmmv Exp $
+
+--- configure.orig	2003-12-31 03:12:56.000000000 +0100
++++ configure	2003-12-31 03:13:45.000000000 +0100
+@@ -12832,9 +12832,11 @@
+ 
+ case "$host" in
+ *FreeBSD*)
+-	CDROM_HOST=freebsd
+ 	default_cd_device="/dev/acd0c"
+ 	;;
++*NetBSD*)
++	default_cd_device="/dev/rcd0d"
++	;;
+ *Linux*)
+ 	CDROM_HOST=linux
+ 	default_cd_device="/dev/cdrom"

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/02/22 16:32:45 jmmv Exp $
+
+--- cddb-slave2/Makefile.in.orig	2003-12-09 09:24:28.000000000 +0000
++++ cddb-slave2/Makefile.in	2003-12-09 09:24:55.000000000 +0000
+@@ -243,7 +243,7 @@
+ 	cddb-slave-client.h
+ 
+ 
+-schemadir = $(sysconfdir)/gconf/schemas
++schemadir = @GCONF_SCHEMA_FILE_DIR@
+ schema_DATA = CDDB-Slave2.schemas
+ 
+ server_in_files = GNOME_Media_CDDBSlave2.server.in.in
