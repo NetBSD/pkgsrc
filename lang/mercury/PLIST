@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/05/02 17:48:28 jtb Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/07/05 21:16:36 seb Exp $
 bin/c2init
 bin/canonical_grade
 bin/info_to_mdb
@@ -17,7 +17,6 @@ bin/mprof
 bin/mprof_merge_runs
 bin/mtags
 bin/vpath_find
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/mercury.info
 info/mercury.info
 info/mercury_faq.info
 info/mercury_library.info
@@ -50,7 +49,6 @@ info/mercury_user_guide.info-3
 info/mercury_user_guide.info-4
 info/mercury_user_guide.info-5
 info/mercury_user_guide.info-6
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/mercury.info
 lib/mercury/bin/${MACHINE_GNU_PLATFORM}/mercury_compile
 lib/mercury/bin/${MACHINE_GNU_PLATFORM}/mercury_profile
 lib/mercury/inc/array.mh

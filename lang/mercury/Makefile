@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/06/02 01:18:59 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/05 21:16:36 seb Exp $
 
 DISTNAME=		mercury-compiler-0.11.0
 PKGNAME=		mercury-0.11.0
@@ -15,7 +15,9 @@ GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_GNU_READLINE=	yes	# rl_prep_term_function
 
-INFO_FILES=		mercury.info
+USE_NEW_TEXINFO=	YES
+INFO_FILES=		mercury.info mercury_faq.info mercury_library.info
+INFO_FILES+=		mercury_ref.info mercury_trans_guide.info
 
 # Some of the scripts test CC and use special settings for gcc.
 CONFIGURE_ENV+=		CC=gcc
@@ -37,5 +39,4 @@ do-install:
 
 .include "../../devel/readline/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
