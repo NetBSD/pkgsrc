@@ -1,55 +1,61 @@
-@comment $NetBSD: PLIST,v 1.2 2000/05/15 22:37:01 dmcmahill Exp $
-lib/libcassowary.a
-lib/libcassowary.so.0.0
-lib/cassowary/bench
-lib/cassowary/tests/ClTests
-lib/libconstraints.a
+@comment $NetBSD: PLIST,v 1.3 2000/07/31 06:58:38 jlam Exp $
+bin/cassowary-config
 include/Cl.h
 include/ClC.h
 include/cassowary/Cassowary.h
 include/cassowary/ClAbstractVariable.h
-include/cassowary/ClDummyVariable.h
-include/cassowary/ClObjectiveVariable.h
-include/cassowary/ClSlackVariable.h
 include/cassowary/ClConstraint.h
 include/cassowary/ClConstraintHash.h
+include/cassowary/ClDummyVariable.h
 include/cassowary/ClEditConstraint.h
 include/cassowary/ClEditOrStayConstraint.h
 include/cassowary/ClErrors.h
+include/cassowary/ClFDBinaryOneWayConstraint.h
+include/cassowary/ClFDConnectorVariable.h
+include/cassowary/ClFDConstraint.h
+include/cassowary/ClFDSolver.h
+include/cassowary/ClFDVariable.h
+include/cassowary/ClFloatVariable.h
 include/cassowary/ClLinearConstraint.h
 include/cassowary/ClLinearEquation.h
 include/cassowary/ClLinearExpression.h
 include/cassowary/ClLinearExpression_fwd.h
 include/cassowary/ClLinearInequality.h
-include/cassowary/ClSolver.h
+include/cassowary/ClMap.h
+include/cassowary/ClObjectiveVariable.h
+include/cassowary/ClPoint.h
+include/cassowary/ClReader.h
+include/cassowary/ClSet.h
 include/cassowary/ClSimplexSolver.h
-include/cassowary/ClFDSolver.h
-include/cassowary/ClFDBinaryOneWayConstraint.h
-include/cassowary/ClFDConstraint.h
+include/cassowary/ClSlackVariable.h
+include/cassowary/ClSolver.h
 include/cassowary/ClStayConstraint.h
 include/cassowary/ClStrength.h
 include/cassowary/ClSymbolicWeight.h
 include/cassowary/ClTableau.h
-include/cassowary/ClFDVariable.h
-include/cassowary/ClFDConnectorVariable.h
-include/cassowary/ClFloatVariable.h
-include/cassowary/ClVariable.h
-include/cassowary/ClReader.h
 include/cassowary/ClTypedefs.h
-include/cassowary/ClMap.h
-include/cassowary/ClSet.h
-include/cassowary/ClPoint.h
-include/cassowary/auto_ptr.h
+include/cassowary/ClVariable.h
+include/cassowary/cl_auto_ptr.h
 include/cassowary/config-inline.h
 include/cassowary/debug.h
+include/cassowary/timer.h
 include/cassowary_scm.h
 include/cassowary_scm.hpp
 include/cl-snarf.h
-share/guile/site/cassowary/libconstraints.so.0.0
-share/guile/site/cassowary/libconstraints.a
-doc/cassowary-tr.pdf
-doc/cassowary-tr.ps.gz
+lib/cassowary/tests/ClTests
+lib/guile/site/cassowary/libconstraints.a
+lib/guile/site/cassowary/libconstraints.la
+lib/guile/site/cassowary/libconstraints.so.0.0
+lib/libcassowary.a
+lib/libcassowary.la
+lib/libcassowary.so.0.1
+lib/libconstraints.a
+share/doc/cassowary/cassowary-tr.pdf
+share/doc/cassowary/cassowary-tr.ps.gz
+@dirrm share/doc/cassowary
+@dirrm lib/guile/site/cassowary
 @dirrm lib/cassowary/tests
 @dirrm lib/cassowary
 @dirrm include/cassowary
-@dirrm share/guile/site/cassowary
+@unexec rmdir %D/lib/guile/site 2>/dev/null || true
+@unexec rmdir %D/lib/guile 2>/dev/null || true

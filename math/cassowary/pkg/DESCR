@@ -3,8 +3,6 @@ efficiently solves systems of linear equalities and inequalities.
 Constraints may be either requirements or preferences.  Client code
 specifies the constraints to be maintained, and the solver updates the
 constrained variables to have values that satisfy the constraints. 
-Version 0.50 of the solving toolkit adds support for a one-way finite
-domain subsolver.
 
 A technical report is included in the distribution that describes the
 algorithm, interface, and implementation of the Cassowary solver. 
