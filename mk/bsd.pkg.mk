@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.327 1999/08/29 22:13:01 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.328 1999/08/31 08:32:16 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -1597,7 +1597,7 @@ update:
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} deinstall DEINSTALLDEPENDS=ALL
 .if (${REINSTALL} == "NO")
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${MAKE} ${INSTALL_TARGET} KEEP_WRKDIR=YES
+		${MAKE} ${DEPENDS_TARGET} KEEP_WRKDIR=YES
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} reinstall
 .endif
