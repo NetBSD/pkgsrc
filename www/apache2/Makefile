@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2004/11/22 22:52:53 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2004/11/23 00:37:04 jlam Exp $
+
+.include "Makefile.common"
 
 PKGNAME=		apache-${APACHE_VERSION}
 PKGREVISION=		2
@@ -27,6 +29,9 @@ CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../devel/apr/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 
 # Set the "Multi-Processing Model" used by Apache to handle requests.
 # Valid values are:
@@ -42,11 +47,7 @@ DFLT_APACHE_MODULES+=	proxy proxy_connect proxy_ftp proxy_http
 DFLT_APACHE_MODULES+=	ssl
 
 # LDAP support
-.if !defined(_APR_OPTIONS)
-_APR_OPTIONS!=	cd ../../devel/apr && ${MAKE} show-var VARNAME=PKG_OPTIONS
-MAKEFLAGS+=	_APR_OPTIONS=${_APR_OPTIONS:Q}
-.endif
-.if !empty(_APR_OPTIONS:Mldap)
+.if !empty(PKG_OPTIONS.apr:Mldap)
 DFLT_APACHE_MODULES+=	ldap auth_ldap
 .endif
 
@@ -116,7 +117,6 @@ SUBST_MESSAGE.confs=	"Fixing configuration files."
 #
 _AP_DEPENDS.ssl=	../../security/openssl/buildlink3.mk
 _AP_DEPENDS.deflate=	../../devel/zlib/buildlink3.mk
-_AP_DEPENDS.ldap=	../../databases/openldap/buildlink3.mk
 
 _AP_CFG_ARGS.ssl=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 _AP_CFG_ARGS.deflate=	--with-z=${BUILDLINK_PREFIX.zlib}
@@ -174,11 +174,5 @@ post-install:
 		${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/sbin/$$file && \
 		${CHMOD} ${BINMODE} ${PREFIX}/sbin/$$file; \
 	done
-
-.include "Makefile.common"
-
-.include "../../devel/apr/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

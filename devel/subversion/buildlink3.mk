@@ -1,8 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/10/03 00:13:33 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2004/11/23 00:37:04 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SUBVERSION_BASE_BUILDLINK3_MK:=	${SUBVERSION_BASE_BUILDLINK3_MK}+
 
+.include "../../mk/bsd.prefs.mk"
 .include "../../devel/subversion/Makefile.version"
 
 .if !empty(BUILDLINK_DEPTH:M+)
@@ -19,11 +20,6 @@ BUILDLINK_PKGSRCDIR.subversion-base?=	../../devel/subversion-base
 
 BUILDLINK_FILES.subversion-base+=	bin/svn-config
 .endif	# SUBVERSION_BASE_BUILDLINK3_MK
-
-.include "../../mk/bsd.prefs.mk"
-.if !empty(APR_USE_DB4:M[yY][eE][sS])
-.  include "../../databases/db4/buildlink3.mk"
-.endif
 
 .include "../../devel/apr/buildlink3.mk"
 .include "../../www/neon/buildlink3.mk"
