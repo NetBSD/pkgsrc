@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/09/08 12:46:55 rh Exp $
+# $NetBSD: Makefile,v 1.10 1999/09/20 23:02:46 tron Exp $
 #
 
 DISTNAME=	gcombust-0.1.21
@@ -8,11 +8,11 @@ MASTER_SITES=	http://www.abo.fi/~jmunsin/gcombust/
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.abo.fi/~jmunsin/gcombust/
 
-DEPENDS+=	mkhybrid-1.12b5.2:../mkhybrid
-DEPENDS+=	cdrecord-1.6.1:../cdrecord
-DEPENDS+=	cdlabelgen-1.5.0:../../graphics/cdlabelgen
-DEPENDS+=	gv-3.5.8:../../print/gv
-DEPENDS+=	gtk+-1.2.4:../../x11/gtk
+DEPENDS+=	mkhybrid-*:../mkhybrid
+DEPENDS+=	cdrecord-*:../cdrecord
+DEPENDS+=	cdlabelgen-*:../../graphics/cdlabelgen
+DEPENDS+=	gv-*:../../print/gv
+DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
 GNU_CONFIGURE=	YES
 
