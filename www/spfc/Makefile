@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/04/03 21:16:30 jwise Exp $
+# $NetBSD: Makefile,v 1.8 2002/12/31 15:44:31 jlam Exp $
 
 DISTNAME=	spfc-0.2.0
 CATEGORIES=	www
@@ -13,7 +13,6 @@ DEPENDS+=	jsdk-2.0:../../www/jsdk20
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_JAVA=
 USE_GMAKE=
 NO_CONFIGURE=
 MAKE_ENV+=	CLASSPATH=${CLASSPATH}:${PREFIX}/lib/jsdk.jar
@@ -24,6 +23,7 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/share/doc/java/spfc
 	cd ${WRKSRC}/../docs && ${PAX} -rwpp . ${PREFIX}/share/doc/java/spfc
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # This must be after the include of bsd.pkg.mk

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/10/10 01:01:11 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2002/12/31 15:44:29 jlam Exp $
 #
 
 DISTNAME=	unix_jb35foundation
@@ -15,30 +15,22 @@ HOMEPAGE=	http://www.borland.com
 COMMENT=	Just-In-Time compiler for Linux Java Virtual Machine
 
 USE_JAVA=	run
-PKG_JVM=	sun-jdk13 # works with both 1.2.2 and 1.3 JVMs
+USE_JAVA2=	yes
 PLIST_SUBST+=	JAVADIR=${PKG_JAVA_HOME:C|${PREFIX}/||}
 
-WRKSRC=		${WRKDIR}/javacomp-1.2.15
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
+
+WRKSRC=			${WRKDIR}/javacomp-1.2.15
 EXTRACT_ELEMENTS=	LinuxJIT/javacomp-1.2.15.tar.gz
 
-LICENSE=	single-user-license
-RESTRICTED=	"Redistribution of binaries not permitted"
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_SRC_ON_FTP=	${RESTRICTED}
+LICENSE=		single-user-license
+RESTRICTED=		"Redistribution of binaries not permitted"
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if !defined(JDK_HOME)
-JDK_HOME:=	${LOCALBASE}/java
-.endif
-
-NO_BUILD=	yes
-# since we change PREFIX:
-NO_MTREE=	yes
-
-ONLY_FOR_PLATFORM= NetBSD-*-i386
+NO_BUILD=		yes
 
 post-extract:
 	@cd ${WRKDIR} && ${GTAR} -xzf ${EXTRACT_ELEMENTS}
@@ -50,7 +42,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/jbuilder-jit/README.javacomp
 	${INSTALL_DATA} ${WRKSRC}/LICENSE.TXT ${PREFIX}/share/doc/jbuilder-jit/LICENSE.javacomp
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# This needs to be after bsd.pkg.mk 
-PREFIX:=	${JDK_HOME}
