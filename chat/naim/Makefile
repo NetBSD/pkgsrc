@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/03/10 23:28:24 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/04/23 21:26:46 wiz Exp $
 #
 
-DISTNAME=	naim-0.11.5.6
+DISTNAME=	naim-0.11.5.7
 CATEGORIES=	chat
 MASTER_SITES=	http://www.acm.rpi.edu/~n/naim/
 
