@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2003/01/02 09:12:26 skrll Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/11 13:22:19 markd Exp $
 
-DISTNAME=	kdeaddons-3.0.5a
+DISTNAME=	kdeaddons-3.1
 CATEGORIES=	misc
 COMMENT=	Add ons for the KDE integrated X11 desktop
 
