@@ -1,0 +1,632 @@
+$NetBSD: patch-aa,v 1.3 2004/04/27 02:04:07 snj Exp $
+
+--- src/gtrans_help.c.orig	2004-04-26 17:59:46.000000000 -0700
++++ src/gtrans_help.c	2004-04-26 18:10:35.000000000 -0700
+@@ -20,317 +20,316 @@
+ 
+ 
+ static gchar help_text[] = 
+-"GNOME Transcript
+-----------------
+-
+-    0.- Licence
+-    1.- Introduccion
+-    2.- GTransTables
+-    3.- When to use GNOME Transcript
+-    4.- Overview
+-    5.- Connections
+-    6.- Creating and editing GTransTables
+-    7.- Working with the Tables
+-    8.- Contacting the author and contibuting
+-    
+-==============================================================================
+-
+-
+-0.- Licence.
+-____________
+-    
+-GNOME Transcript is released under the GPL Licence, you should have recived
+-a copy of the licence with this document, otherwise see www.gnu.org
+-
+-
+-1.- Introduccion.
+-_________________
+-
+-GNOME Transcript is a client for SQL databases, currently supporting
+-PosgreSQL only, but I have plans for MySQL an MSQL.
+-GNOME Transcript aims to provide an easy enviroment for the novice user
+-of SQL databases, providing gui replacements for some of the SQL commands,
+-and a powerfull, environment for the experienced user, with SQL engines.
+-In this stages, the early stages, you can see what the environment for the
+-novice users will be about, but the engines for the experiences user are
+-missing but are soon to come.
+-GNOME Transcript may be, and surely is unstable, and a lot of planned
+-features are missing.
+-Other thing you must be aware of is that GNOME Transcript does not allows you
+-to work with regular tables at this stages (this will change soon),
+-instead it provides you with an editor for creating special GTransTables.
+-Read the next to find out more about GTransTables.
+-
+-
+-
+-
+-2.- GTransTables
+-________________
+-
+-GTransTables are tables, with special config that allows you to edit
+-view and update you data in a special gui environment that you design
+-with the table editor, GNOME Transcript will also support regular
+-tables in a upcoming version.
+-
+-How is it posible for GNOME Transcript to store a configuration for
+-this special and beautiful user designed tables????
+-The first time GNOME Transcript connects to a database creates
+-a table named GTransTables, where the record for the supported tables
+-will be kept, and for each table you create it creates a table for
+-storing its configuration, this way you have the config right where
+-you kept the data. If you create a table that is named \"CompactDiscs\"
+-this table will be created as a regular table, but a table named
+-\"CompactDiscs_def\" will be created to store the configuration.
+-
+-*** IMPORTANT ***
+-Do not try to name your tables with spaces in between, like
+-\"Compact Discs\", or with characters like (.,:-+) and that stuff
+-like \"Compact-Discs.\"
+-This version does not supports that.
+-
+-
+-
+-
+-3.- When to use GNOME Transcript.
+-_________________________________
+-
+-This version is all about to see if the special gui's could be created and
+-used with regularity, fortunately this works fine, but this version
+-is also missing serious database support, for example when you create
+-a table, all field are type text (this will change soon), so dont use
+-GNOME Transcript for data that the field must be floats and that stuff.
+-
+-One good use that GNOME Transcript serves perfectly well in this version is
+-an addres book, a recipy book, and that kind of stuff.
+-
+-
+-
+-
+-4.- Overview.
+-_____________
+-
+-Ok lets see how to use this program.
+-
+-First of all whe have menus and a toolbar, let see the menus.
+-
+-*** File Menu.
+-	
+-	* New 	: Starts the GTransTable editor for you to create a new
+-		  table, later we will see more about this editor.
+-	
+-	* Open  : Opens a GTransTable for editing, here the config file
+-		  is a regular file, this is so you could also store
+-		  table in regular files and interchange them with
+-		  you closest friends.
+-		  This is miising a lot of support, dont use field
+-		  names longer than 255 characters or use ':' in the
+-		  field name.
+-		  
+-	* Save  : Saves a GTransTable from the editor to a regular
+-		  file.
+-		  This is miising a lot of support, dont use field
+-		  names longer than 255 characters or use ':' in the
+-		  field name.
+-		  
+-	* Close : Closes the table being edited.
+-	
+-	* Quit  : Just quits.
+-    
+-
+-*** Database Menu.
+-
+-	* Connect    : Starts a connection to a database only supports
+-		       single connection, but in version 0.0.2, we  will
+-		       have multiple connections to multiple databases.
+-		     
+-	* Disconnect : Finishes the current connection.
+-	
+-	* Open       : Opens a table for editing, this one opens
+-		       the config from the database.
+-		       
+-	* Save       : Saves the GTransTable being edited, also sets
+-		       the record for the supported table, and creates 
+-		       the actual table.
+-		    
+-	* Save As    : Same as above, but always asks for a name.
+-	
+-	* Select *   : Selects al registers from a table and displays them
+-		       guily, ready for you to do some actual work.
+-		       
+-	* Delete     : deletes a supported table from the database.
+-	
+-
+-*** Help.
+-	
+-	* About      : the usual about box.
+-	
+-
+-
+-
+-
+-5.- Connections.
+-________________
+-
+-When ever you want to connect to a data base, a special connection dialog
+-will be poped right infront of your eyes asking for the next info.
+-
+-    Database :  The name of the database you wish to connect to,
+-		This field can be null, if so the connection
+-		will be made, to a databease named as the user.
+-		
+-    Host     :  The host wuere posgres is running, if null
+-		it connects to the localhost.
+-		
+-    Port     :  The port to connect to, can be null and uses 
+-		some kind of default.
+-		
+-    Username :  The name of the Posgtres user, this one cant be null
+-	    	and the user must apear on pg_shadow, read the postgres
+-		manual for more info.
+-		
+-    Pasword  :  Pasword for the user, it can be null if the user is using
+-		a db he created.
+-		
+-    tty      :  for special debuging info, can be null.
+-    
+-
+-
+-
+-    
+-6.- Creating and editing GTransTables.
+-______________________________________
+-
+-To do this you must first start the editor ( see Overview to find out
+-how to do that).
+-Then in the main aplication the editor will apear. This editor consists
+-in a tree displayed in the left side, some buttons in the middle and
+-a preview in the right side.
+-
+-** The GTransItems.
+-
+-The GtransItems are the items (widgets) you use to define you table.
+-The currently available items are, Pages, Labeled Texts, Labeled Entrys,
+-FramedHBox and FramedVBox.
+-
+-*Pages are those things, like pages that you can very oftenly see in any
+-aplication, this page may only go in the root of the tree, i mean the
+-higher part of the struct ans not contained in any other item, this 
+-will be more clear after an example.
+-
+-*Labeled Texts are fileds for inserting large texts, that come with
+-a label acording to its name.
+-
+-*Labeled Entrys are fileds for inserting a line of text, that come with
+-a label acording to its name.
+-
+-* FramedHBox, this widget is a container, this means yo can insert other 
+-items in it, this framed box allows you to insert items and this items
+-are piled from left to right.
+-
+-* FramedVBox, this widget is a container, this means yo can insert other 
+-items in it, this framed box allows you to insert items and this items
+-are piled from top to bottom.
+-
+-
+-** The tree **
+-The tree is for viewing and accesing the widget structure. 
+-
+-For example, press the button that is labeled with the word \"Page\",
+-you will see that in the tree an item apears, and also in the preview
+-Pages are inserted always at the top of the tree, and not in subtrees.
+-Before the page is inserted it will ask you fir a name, this name must
+-not bee null and must not exist in the table.
+-
+-Then, select the page from the tree with a click of the left mouse
+-button. And then press the button labled with \"FVBox\", again
+-a name will be asked, after the name has been validated,
+-the FVbox will be inserted in the preview, to see it in
+-the tree you will have to expand the pafe from the tree
+-by clicking on the + sign on the item and then you will see
+-the FVBox in the tree.
+-
+-Then select the FVbox from the tree and press the button entry,
+-and after you have named it it will apear in the tree (you must expand 
+-the FVBox to see it) and in the preview.
+-
+-The rules are very simple, all pages go in the root tree, so you
+-don need to select a container for it, and for the other items
+-you do must select a container.
+-Names must not be null and must not exist in the table.
+-
+-To Remove an item, just select it from the tree and click the remove
+-button, this item and all its children will be removed.
+-
+-You can add as much as pages to the root tree and as much items to
+-the container as you wish.
+-You can open some expamles for editing from files that come in this
+-distibution, you will pobably find them in
+-$(prefix)/share/gtranscript/examples/
+-where prefix is the installation prefix you selected.
+-You will have to open this examples with the \"Open\" command that
+-apears in the File menu in GNOME Transcript.
+-
+-
+-
+-
+-
+-7.- Working with the Tables.
+-____________________________
+-
+-To work with the tables you created, one you have created a table you
+-must saveit into the database, this, with the \"Save\", \"Save As\" commands
+-that apear in the Database menu on the main window.
+-
+-Once the table is created, and saved, from the database menu, select
+-\"Select *\", and a dialog for you to select a table will be poped,
+-all the tables listed there a GTransSupported, if you dont see any
+-table either something happened when saving the table, or you forgot
+-to save the table to the database. If the first happened, mail me.
+-
+-Once you selected you table, a window will be poped, its a list
+-that one column for each field.
+-Click the button new, from the window that has just been poped,
+-and surprise, there is the table you defined, insert some data
+-and hit ok, the new member must be added to the list.
+-Add some more stuff.
+-
+-Then select a member from the list and click the button \"View\",
+-and you see the member as you defined it.
+-
+-Then select a member and click the button \"Update\", and a window
+-with the struct you defined will be poped, change the data and
+-click \"OK\", and the data is changed.
+-
+-Then select a row from the list, and click \"Delete\", the member will
+-be poped, if you click \"OK\" then it will be deleted, but you can cancel
+-it.
+-
+-You can select as many tables as you want at the same time, but they must
+-be from the same connection to the database, if while working
+-with the list somethibng happens to the connection is better to
+-close the window, reconnect and select the table again.
+-In version 0.0.2, you will be able to select as many tables as you want
+-from as many databases as you want at the same time.
+-
+-
+-
+-
+-
+-8.- Contacting the author.
+-__________________________
+-
+-Hello, that is me.
+-If you find a bug, you have any suggestions, you want to donate some
+-code, you want to help with this patetic documentation. please
+-contact me, you can doit by mailing me at <matias@linuxbox.com>
+-The GNOME Transcript Home Page is located in
+-gtranscript.linuxbox.com
+-
+-I hope you have liked this program, i have a lot of palenned features
+-that will makeit much more powerfull and nice.
+-
+-Matias Mutchinick.";
+-
++"GNOME Transcript\n"
++"----------------\n"
++"\n"
++"    0.- Licence\n"
++"    1.- Introduccion\n"
++"    2.- GTransTables\n"
++"    3.- When to use GNOME Transcript\n"
++"    4.- Overview\n"
++"    5.- Connections\n"
++"    6.- Creating and editing GTransTables\n"
++"    7.- Working with the Tables\n"
++"    8.- Contacting the author and contibuting\n"
++"\n" 
++"==============================================================================\n"
++"\n"
++"\n"
++"0.- Licence.\n"
++"____________\n"
++"\n"    
++"GNOME Transcript is released under the GPL Licence, you should have recived\n"
++"a copy of the licence with this document, otherwise see www.gnu.org\n"
++"\n"
++"\n"
++"1.- Introduccion.\n"
++"_________________\n"
++"\n"
++"GNOME Transcript is a client for SQL databases, currently supporting\n"
++"PosgreSQL only, but I have plans for MySQL an MSQL.\n"
++"GNOME Transcript aims to provide an easy enviroment for the novice user\n"
++"of SQL databases, providing gui replacements for some of the SQL commands,\n"
++"and a powerfull, environment for the experienced user, with SQL engines.\n"
++"In this stages, the early stages, you can see what the environment for the\n"
++"novice users will be about, but the engines for the experiences user are\n"
++"missing but are soon to come.\n"
++"GNOME Transcript may be, and surely is unstable, and a lot of planned\n"
++"features are missing.\n"
++"Other thing you must be aware of is that GNOME Transcript does not allows you\n"
++"to work with regular tables at this stages (this will change soon),\n"
++"instead it provides you with an editor for creating special GTransTables.\n"
++"Read the next to find out more about GTransTables.\n"
++"\n"
++"\n"
++"\n"
++"\n"
++"2.- GTransTables\n"
++"________________\n"
++"\n"
++"GTransTables are tables, with special config that allows you to edit\n"
++"view and update you data in a special gui environment that you design\n"
++"with the table editor, GNOME Transcript will also support regular\n"
++"tables in a upcoming version.\n"
++"\n"
++"How is it posible for GNOME Transcript to store a configuration for\n"
++"this special and beautiful user designed tables????\n"
++"The first time GNOME Transcript connects to a database creates\n"
++"a table named GTransTables, where the record for the supported tables\n"
++"will be kept, and for each table you create it creates a table for\n"
++"storing its configuration, this way you have the config right where\n"
++"you kept the data. If you create a table that is named \"CompactDiscs\"\n"
++"this table will be created as a regular table, but a table named\n"
++"\"CompactDiscs_def\" will be created to store the configuration.\n"
++"\n"
++"*** IMPORTANT ***\n"
++"Do not try to name your tables with spaces in between, like\n"
++"\"Compact Discs\", or with characters like (.,:-+) and that stuff\n"
++"like \"Compact-Discs.\"\n"
++"This version does not supports that.\n"
++"\n"
++"\n"
++"\n"
++"\n"
++"3.- When to use GNOME Transcript.\n"
++"_________________________________\n"
++"\n"
++"This version is all about to see if the special gui's could be created and\n"
++"used with regularity, fortunately this works fine, but this version\n"
++"is also missing serious database support, for example when you create\n"
++"a table, all field are type text (this will change soon), so dont use\n"
++"GNOME Transcript for data that the field must be floats and that stuff.\n"
++"\n"
++"One good use that GNOME Transcript serves perfectly well in this version is\n"
++"an addres book, a recipy book, and that kind of stuff.\n"
++"\n"
++"\n"
++"\n"
++"\n"
++"4.- Overview.\n"
++"_____________\n"
++"\n"
++"Ok lets see how to use this program.\n"
++"\n"
++"First of all whe have menus and a toolbar, let see the menus.\n"
++"\n"
++"*** File Menu.\n"
++	"\n"
++	"* New 	: Starts the GTransTable editor for you to create a new\n"
++		  "table, later we will see more about this editor.\n"
++	"\n"
++	"* Open  : Opens a GTransTable for editing, here the config file\n"
++		  "is a regular file, this is so you could also store\n"
++		  "table in regular files and interchange them with\n"
++		  "you closest friends.\n"
++		  "This is miising a lot of support, dont use field\n"
++		  "names longer than 255 characters or use ':' in the\n"
++		  "field name.\n"
++		  "\n"
++	"* Save  : Saves a GTransTable from the editor to a regular\n"
++		  "file.\n"
++		  "This is miising a lot of support, dont use field\n"
++		  "names longer than 255 characters or use ':' in the\n"
++		  "field name.\n"
++		  "\n"
++	"* Close : Closes the table being edited.\n"
++	"\n"
++	"* Quit  : Just quits.\n"
++    "\n"
++"\n"
++"*** Database Menu.\n"
++"\n"
++	"* Connect    : Starts a connection to a database only supports\n"
++		       "single connection, but in version 0.0.2, we  will\n"
++		       "have multiple connections to multiple databases.\n"
++		     "\n"
++	"* Disconnect : Finishes the current connection.\n"
++	"\n"
++	"* Open       : Opens a table for editing, this one opens\n"
++		       "the config from the database.\n"
++		       "\n"
++	"* Save       : Saves the GTransTable being edited, also sets\n"
++		       "the record for the supported table, and creates \n"
++		       "the actual table.\n"
++		    "\n"
++	"* Save As    : Same as above, but always asks for a name.\n"
++	"\n"
++	"* Select *   : Selects al registers from a table and displays them\n"
++		       "guily, ready for you to do some actual work.\n"
++		       "\n"
++	"* Delete     : deletes a supported table from the database.\n"
++	"\n"
++"\n"
++"*** Help.\n"
++	"\n"
++	"* About      : the usual about box.\n"
++	"\n"
++"\n"
++"\n"
++"\n"
++"\n"
++"5.- Connections.\n"
++"________________\n"
++"\n"
++"When ever you want to connect to a data base, a special connection dialog\n"
++"will be poped right infront of your eyes asking for the next info.\n"
++"\n"
++    "Database :  The name of the database you wish to connect to,\n"
++		"This field can be null, if so the connection\n"
++		"will be made, to a databease named as the user.\n"
++		"\n"
++    "Host     :  The host wuere posgres is running, if null\n"
++		"it connects to the localhost.\n"
++		"\n"
++    "Port     :  The port to connect to, can be null and uses \n"
++		"some kind of default.\n"
++		"\n"
++    "Username :  The name of the Posgtres user, this one cant be null\n"
++	    	"and the user must apear on pg_shadow, read the postgres\n"
++		"manual for more info.\n"
++		"\n"
++    "Pasword  :  Pasword for the user, it can be null if the user is using\n"
++		"a db he created.\n"
++		"\n"
++    "tty      :  for special debuging info, can be null.\n"
++    "\n"
++"\n"
++"\n"
++"\n"
++    "\n"
++"6.- Creating and editing GTransTables.\n"
++"______________________________________\n"
++"\n"
++"To do this you must first start the editor ( see Overview to find out\n"
++"how to do that).\n"
++"Then in the main aplication the editor will apear. This editor consists\n"
++"in a tree displayed in the left side, some buttons in the middle and\n"
++"a preview in the right side.\n"
++"\n"
++"** The GTransItems.\n"
++"\n"
++"The GtransItems are the items (widgets) you use to define you table.\n"
++"The currently available items are, Pages, Labeled Texts, Labeled Entrys,\n"
++"FramedHBox and FramedVBox.\n"
++"\n"
++"*Pages are those things, like pages that you can very oftenly see in any\n"
++"aplication, this page may only go in the root of the tree, i mean the\n"
++"higher part of the struct ans not contained in any other item, this \n"
++"will be more clear after an example.\n"
++"\n"
++"*Labeled Texts are fileds for inserting large texts, that come with\n"
++"a label acording to its name.\n"
++"\n"
++"*Labeled Entrys are fileds for inserting a line of text, that come with\n"
++"a label acording to its name.\n"
++"\n"
++"* FramedHBox, this widget is a container, this means yo can insert other \n"
++"items in it, this framed box allows you to insert items and this items\n"
++"are piled from left to right.\n"
++"\n"
++"* FramedVBox, this widget is a container, this means yo can insert other \n"
++"items in it, this framed box allows you to insert items and this items\n"
++"are piled from top to bottom.\n"
++"\n"
++"\n"
++"** The tree **\n"
++"The tree is for viewing and accesing the widget structure. \n"
++"\n"
++"For example, press the button that is labeled with the word \"Page\",\n"
++"you will see that in the tree an item apears, and also in the preview\n"
++"Pages are inserted always at the top of the tree, and not in subtrees.\n"
++"Before the page is inserted it will ask you fir a name, this name must\n"
++"not bee null and must not exist in the table.\n"
++"\n"
++"Then, select the page from the tree with a click of the left mouse\n"
++"button. And then press the button labled with \"FVBox\", again\n"
++"a name will be asked, after the name has been validated,\n"
++"the FVbox will be inserted in the preview, to see it in\n"
++"the tree you will have to expand the pafe from the tree\n"
++"by clicking on the + sign on the item and then you will see\n"
++"the FVBox in the tree.\n"
++"\n"
++"Then select the FVbox from the tree and press the button entry,\n"
++"and after you have named it it will apear in the tree (you must expand \n"
++"the FVBox to see it) and in the preview.\n"
++"\n"
++"The rules are very simple, all pages go in the root tree, so you\n"
++"don need to select a container for it, and for the other items\n"
++"you do must select a container.\n"
++"Names must not be null and must not exist in the table.\n"
++"\n"
++"To Remove an item, just select it from the tree and click the remove\n"
++"button, this item and all its children will be removed.\n"
++"\n"
++"You can add as much as pages to the root tree and as much items to\n"
++"the container as you wish.\n"
++"You can open some expamles for editing from files that come in this\n"
++"distibution, you will pobably find them in\n"
++"$(prefix)/share/gtranscript/examples/\n"
++"where prefix is the installation prefix you selected.\n"
++"You will have to open this examples with the \"Open\" command that\n"
++"apears in the File menu in GNOME Transcript.\n"
++"\n"
++"\n"
++"\n"
++"\n"
++"\n"
++"7.- Working with the Tables.\n"
++"____________________________\n"
++"\n"
++"To work with the tables you created, one you have created a table you\n"
++"must saveit into the database, this, with the \"Save\", \"Save As\" commands\n"
++"that apear in the Database menu on the main window.\n"
++"\n"
++"Once the table is created, and saved, from the database menu, select\n"
++"\"Select *\", and a dialog for you to select a table will be poped,\n"
++"all the tables listed there a GTransSupported, if you dont see any\n"
++"table either something happened when saving the table, or you forgot\n"
++"to save the table to the database. If the first happened, mail me.\n"
++"\n"
++"Once you selected you table, a window will be poped, its a list\n"
++"that one column for each field.\n"
++"Click the button new, from the window that has just been poped,\n"
++"and surprise, there is the table you defined, insert some data\n"
++"and hit ok, the new member must be added to the list.\n"
++"Add some more stuff.\n"
++"\n"
++"Then select a member from the list and click the button \"View\",\n"
++"and you see the member as you defined it.\n"
++"\n"
++"Then select a member and click the button \"Update\", and a window\n"
++"with the struct you defined will be poped, change the data and\n"
++"click \"OK\", and the data is changed.\n"
++"\n"
++"Then select a row from the list, and click \"Delete\", the member will\n"
++"be poped, if you click \"OK\" then it will be deleted, but you can cancel\n"
++"it.\n"
++"\n"
++"You can select as many tables as you want at the same time, but they must\n"
++"be from the same connection to the database, if while working\n"
++"with the list somethibng happens to the connection is better to\n"
++"close the window, reconnect and select the table again.\n"
++"In version 0.0.2, you will be able to select as many tables as you want\n"
++"from as many databases as you want at the same time.\n"
++"\n"
++"\n"
++"\n"
++"\n"
++"\n"
++"8.- Contacting the author.\n"
++"__________________________\n"
++"\n"
++"Hello, that is me.\n"
++"If you find a bug, you have any suggestions, you want to donate some\n"
++"code, you want to help with this patetic documentation. please\n"
++"contact me, you can doit by mailing me at <matias@linuxbox.com>\n"
++"The GNOME Transcript Home Page is located in\n"
++"gtranscript.linuxbox.com\n"
++"\n"
++"I hope you have liked this program, i have a lot of palenned features\n"
++"that will makeit much more powerfull and nice.\n"
++"\n"
++"Matias Mutchinick.";
+ 
+ 
+ /*
