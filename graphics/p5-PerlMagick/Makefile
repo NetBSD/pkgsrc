@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/10/18 15:20:22 veego Exp $
+# $NetBSD: Makefile,v 1.11 2001/11/26 06:08:26 jlam Exp $
 
 DISTNAME=		ImageMagick-5.3.9
 PKGNAME=		p5-PerlMagick-5.3.9
@@ -21,9 +21,9 @@ DISTINFO_FILE=		${MAGICKDIR}/distinfo
 FILESDIR=		${MAGICKDIR}/files
 PATCHDIR=		${MAGICKDIR}/patches
 
-.if !(make(do-configure) || make(do-patch))
-WRKSRC=			${WRKDIR}/${DISTNAME}/PerlMagick
-.endif
+#.if !(make(do-configure) || make(do-patch))
+#WRKSRC=			${WRKDIR}/${DISTNAME}/PerlMagick
+#.endif
 
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -43,6 +43,12 @@ CONFIGURE_ARGS+=	--with-perl=${PERL5} \
 			--without-ttf --without-xml
 
 post-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
+	cd ${WRKSRC}/PerlMagick && ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
+
+do-build:
+	@cd ${WRKSRC}/PerlMagick && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
+
+do-install:
+	@cd ${WRKSRC}/PerlMagick && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
 
 .include "../../mk/bsd.pkg.mk"
