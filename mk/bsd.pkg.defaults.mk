@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.113 2002/12/22 01:23:50 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.114 2002/12/22 17:16:23 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -619,7 +619,7 @@ GIMP_WITH_HELPBROWSER?=	no
 
 GNU_PROGRAM_PREFIX?=	g
 # This is the prefix to add for GNU programs, like gls or gnutouch.
-# Possible, g, gnu, empty, ...
+# Possible: g, gnu, empty, ...
 # Default: g
 
 #GQMPEG_NO_JAPANESE?=	yes
