@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3395 2003/09/16 10:04:29 adam Exp $
+$NetBSD: CHANGES,v 1.3396 2003/09/16 12:18:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3715,3 +3715,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added libspectrum-0.2.0 [adam 2003-09-16]
 	Added fuse-0.6.1 [adam 2003-09-16]
 	Added fuse-utils-0.6.1 [adam 2003-09-16]
+	Updated openal to 20030724 [adam 2003-09-16]
