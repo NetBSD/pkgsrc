@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.287 1999/07/01 14:33:36 mrg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.288 1999/07/02 00:11:22 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1877,30 +1877,43 @@ binpkg-list:
 	@cd ${PACKAGES};						\
 	case `/bin/pwd` in						\
 	*/pkgsrc/packages)						\
-		if [ -f ${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX} ]; then \
-			${ECHO} "<li> ${MACHINE_ARCH} (${OPSYS} <a href=\"${PKG_URL}/${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX}\"> ${OS_VERSION} </a>)"; \
-		fi							\
+		for pkg in ${PKGREPOSITORYSUBDIR}/${PKGNAME:C/-[^-]*$/-[0-9]*/}${PKG_SUFX} ; \
+		do 							\
+			if [ -f "$$pkg" ] ; then			\
+				${ECHO} "<TR><TD> ${MACHINE_ARCH}: <TD><a href=\"${PKG_URL}/$pkg\"> <TD>(${OPSYS} ${OS_VERSION}) </a>)"; \
+			fi ;						\
+		done ; 							\
 		;;							\
 	*)								\
 		cd ${PACKAGES}/../..;					\
-		for i in [1-9].*/*; do					\
-			if [ -f $$i/${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX} ]; then \
-				${ECHO} $$i;				\
-			fi ;						\
+		for i in [1-9].*/*; do (				\
+			cd $$i/${PKGREPOSITORYSUBDIR} ; 		\
+			for j in ${PKGNAME:C/-[^-]*$/-[0-9]*/}${PKG_SUFX} ;	\
+			do 						\
+				if [ -f "$$j" ] ; then			\
+					${ECHO} $$i/$$j; \
+				fi ;					\
+			done ) ; 					\
 		done | ${AWK} -F/ '					\
 			{						\
 				release = $$1;				\
 				arch = $$2; 				\
+				pkg = $$3;				\
+				gsub("\.tgz","", pkg);			\
 				if (arch != "m68k") {			\
 					if (arch in urls)		\
-						urls[arch] = "<a href=\"${PKG_URL}/" release "/" arch "/${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX}\">" release "</a>, " urls[arch]; \
+						urls[arch "/" pkg "/" release] = "<a href=\"${PKG_URL}/" release "/" arch "/${PKGREPOSITORYSUBDIR}/" pkg "${PKG_SUFX}\">" pkg "</a>, " urls[arch]; \
 					else				\
-						urls[arch] = "<a href=\"${PKG_URL}/" release "/" arch "/${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX}\">" release "</a> "; \
+						urls[arch "/" pkg "/" release] = "<a href=\"${PKG_URL}/" release "/" arch "/${PKGREPOSITORYSUBDIR}/" pkg "${PKG_SUFX}\">" pkg "</a> "; \
 				}					\
 			} 						\
 			END { 						\
-				for (arch in urls) {			\
-					print "<li> " arch " (NetBSD " urls[arch] ")"; \
+				for (av in urls) {			\
+					split(av, ava, "/");		\
+					arch=ava[1];			\
+					pkg=ava[2];			\
+					release=ava[3];			\
+					print "<TR><TD><LI> " arch ": <TD>" urls[av] " <TD>(${OPSYS} " release ")"; \
 				}					\
 			} '						\
 		;;							\
