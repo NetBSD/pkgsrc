@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/07/18 13:01:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/10/05 07:07:14 jlam Exp $
 man/man1/psed.1
 man/man1/pstruct.1
 share/mk/bsd.perl.mk

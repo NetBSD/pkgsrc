@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2003/02/21 16:10:27 grant Exp $
+$NetBSD: patch-ae,v 1.2 2003/10/05 07:07:14 jlam Exp $
 
---- makedepend.SH.orig	Wed Jul 10 00:06:42 2002
+--- makedepend.SH.orig	Fri Jun  6 23:34:20 2003
 +++ makedepend.SH
-@@ -79,6 +79,7 @@ if test -f Makefile; then
+@@ -84,6 +84,7 @@
      case "$osname" in
      os2) ;;
      netbsd) ;;
