@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8187 2004/11/30 16:46:14 adam Exp $
+$NetBSD: CHANGES,v 1.8188 2004/11/30 17:20:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5682,3 +5682,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xdesktopwaves to 1.1 [xtraeme 2004-11-30]
 	Updated gliv to 1.8.4 [adam 2004-11-30]
 	Updated pwlib to 1.8.3 [adam 2004-11-30]
+	Added ruby16-zlib-0.6.0 [taca 2004-11-30]
+	Updated ruby18 to 1.8.1nb1 [taca 2004-11-30]
