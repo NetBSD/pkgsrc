@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2360 2003/05/30 09:55:37 mjl Exp $
+$NetBSD: CHANGES,v 1.2361 2003/05/30 10:06:08 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2201,6 +2201,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cfengine2-doc to 2.0.7p3 [seb 2003-05-29]
 	Added crimsonfields-0.3.3 [wiz 2003-05-29]
 	Updated pstree to 2.19 [mjl 2003-05-30]
-	Update p5-DBI to 1.37 [mjl 2003-05-30]
-	Update p5-MIME-Base64 to 2.20 [mjl 2003-05-30]
+	Updated p5-DBI to 1.37 [mjl 2003-05-30]
+	Updated p5-MIME-Base64 to 2.20 [mjl 2003-05-30]
 	Updated sylpheed to 0.9.1 [chris 2003-05-30]
