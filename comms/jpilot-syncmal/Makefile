@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/02/14 17:21:35 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2004/04/12 01:49:02 snj Exp $
 
 DISTNAME=		jpilot-syncmal_0.71.2
 PKGNAME=		jpilot-syncmal-0.71.2
@@ -12,7 +12,7 @@ COMMENT=		MAL synchronization plugin for J-Pilot
 
 BUILDLINK_DEPMETHOD.jpilot=	full
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 USE_X11=		# defined
 USE_GNU_TOOLS+=		make
 
@@ -29,7 +29,7 @@ CFLAGS+=		-D__unix__=1
 PLUGINSDIR=		${PREFIX}/lib/jpilot/plugins
 PLIST_SUBST+=		PLUGINSDIR=${PLUGINSDIR:S/${PREFIX}\///}
 
-.include "../../comms/jpilot/buildlink2.mk"
-.include "../../comms/pilot-link-libs/buildlink2.mk"
+.include "../../comms/jpilot/buildlink3.mk"
+.include "../../comms/pilot-link-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
