@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1968 2004/07/24 08:34:09 wiz Exp $
+$NetBSD: TODO,v 1.1969 2004/07/24 08:34:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -247,7 +247,6 @@ Suggested package updates
 	o grace-5.1.16
 	o grhino-0.12.0
 	o gsasl-0.1.2
-	o gss-0.0.11
 	o gtar-1.14
 	o gtetrinet-0.7.4
 	o gtkglext-1.0.6

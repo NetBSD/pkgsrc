@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6664 2004/07/24 04:48:28 grant Exp $
+$NetBSD: CHANGES,v 1.6665 2004/07/24 08:34:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3535,3 +3535,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dnetc to 2.9007.486 [hubertf 2004-07-24]
 	Updated openldap to 2.2.13 [jlam 2004-07-24]
 	Updated rpm to 2.5.4nb2 [grant 2004-07-24]
+	Updated gss to 0.0.11 [wiz 2004-07-24]
