@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/09/02 17:01:27 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.28 2001/02/16 13:15:36 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
@@ -11,6 +11,7 @@ EXTRACT_SUFX=		.sfx
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.rarsoft.com/
+COMMENT=		File archiver (binary port)
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
