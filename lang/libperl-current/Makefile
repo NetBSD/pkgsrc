@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/21 21:01:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/29 19:33:18 jlam Exp $
 
 DISTNAME=		libperl-${PERL_VERSION}
 PERL_VERSION=		5.6.0
@@ -10,6 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://language.perl.com/index.html
 
 USE_PERL5=		# defined
+DEPENDS+=		perl>=${PERL_VERSION}:../../lang/perl5-current
 
 EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		# defined
