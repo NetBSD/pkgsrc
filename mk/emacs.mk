@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.4 2002/09/28 14:19:51 uebayasi Exp $
+# $NetBSD: emacs.mk,v 1.5 2002/10/19 06:48:03 minoura Exp $
 #
 # A Makefile fragment for Emacs Lisp packages.
 #
@@ -147,14 +147,18 @@ DEPENDS+=	${EMACS_DEPENDENCY}
 EMACS_FLAVOR=	${_EMACS_VERSION:C|[0-9]*$||}
 .if ${EMACS_FLAVOR} == "emacs"
 EMACS_BIN=	${PREFIX}/bin/emacs
-EMACS_VERSION=	${_EMACS_VERSION_EMACS_FULL:C|^.*-||}
+EMACS_PKG_VERSION=	${_EMACS_VERSION_EMACS_FULL:C|^.*-||}
 EMACS_LISPPREFIX=	${PREFIX}/share/emacs/site-lisp
+PKGNAME_PREFIX=
 .else
 EMACS_BIN=	${PREFIX}/bin/xemacs
-EMACS_VERSION=	${_EMACS_VERSION_XEMACS_FULL:C|^.*-||}
+EMACS_PKG_VERSION=	${_EMACS_VERSION_XEMACS_FULL:C|^.*-||}
 EMACS_LISPPREFIX=	${PREFIX}/lib/xemacs/site-packages/lisp
-PKGNAME=		xemacs-${DISTNAME}
+PKGNAME_PREFIX=		xemacs-
+PKGNAME=		${PKGNAME_PREFIX}${DISTNAME}
 .endif
+# strip out nb?
+EMACS_VERSION=${EMACS_PKG_VERSION:C|nb[0-9]*$||}
 PLIST_SUBST+=	EMACS_VERSION=${EMACS_VERSION}
 PLIST_SUBST+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX:C|^${PREFIX}/||}
 PLIST_SUBST+=	FOR_emacs21=${FOR.emacs21}
