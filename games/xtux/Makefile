@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/24 13:30:57 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/03/09 21:19:01 snj Exp $
 
 DISTNAME=	xtux-arena-src-nov-15
 PKGNAME=	xtux-0.2000.11.15
@@ -11,7 +11,7 @@ HOMEPAGE=	http://xtux.sourceforge.net/
 COMMENT=	2D multi-player shootout using images from the Open Software scene
 
 WRKSRC=		${WRKDIR}/xtux
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_X11=	YES
 
@@ -27,5 +27,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tux_serv ${PREFIX}/bin/tux_serv
 	${INSTALL_PROGRAM} ${WRKSRC}/xtux ${PREFIX}/bin/xtux
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
