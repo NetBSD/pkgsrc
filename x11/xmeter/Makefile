@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/10/30 10:53:40 agc Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/15 20:39:50 tron Exp $
 
 DISTNAME=	xmeter-1.15
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_XCONTRIB}
-MASTER_SITE_SUBDIR=	misdirected
+MASTER_SITES=	${MASTER_SITE_XCONTRIB:=misdirected/}
 
 MAINTAINER=	packages@netbsd.org
 

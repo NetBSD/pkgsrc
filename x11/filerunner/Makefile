@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.9 1999/04/01 13:38:45 agc Exp $
+# $NetBSD: Makefile,v 1.10 1999/04/15 20:39:48 tron Exp $
 # $FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:11 jseger Exp
 #
 
 DISTNAME=	FileRunner-2.4.2
 PKGNAME=	filerunner-2.4.2
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_SUNSITE}
-MASTER_SITE_SUBDIR=	X11/desktop
+MASTER_SITES=	${MASTER_SITE_SUNSITE:=X11/desktop/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cd.chalmers.se/~hch/filerunner.html

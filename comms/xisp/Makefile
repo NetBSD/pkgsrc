@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:45 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/15 20:39:40 tron Exp $
 #
 
 DISTNAME=		xisp-2.5p4
 CATEGORIES=		comms x11
-MASTER_SITES=		${MASTER_SITE_SUNSITE} \
+MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/network/serial/} \
 			http://users.hol.gr/~dbouras/release/
-MASTER_SITE_SUBDIR=	system/network/serial
 
 MAINTAINER=		lamj@stat.cmu.edu
 HOMEPAGE=		http://users.hol.gr/~dbouras/

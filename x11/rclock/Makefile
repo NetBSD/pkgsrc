@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.7 1999/01/30 23:18:57 agc Exp $
+# $NetBSD: Makefile,v 1.8 1999/04/15 20:39:49 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/03/03 16:27:10 obrien Exp
 #
 
 DISTNAME=		rxvt-2.20
 PKGNAME=		rclock-2.20
 CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_SUNSITE}  \
+MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/file/managers/mc/rxvt/}  \
 			ftp://ftp.nuclecu.unam.mx/linux/local/rxvt/  \
 			ftp://tsx-11.mit.edu/pub/linux/sources/usr.bin.X11/
-MASTER_SITE_SUBDIR=	utils/file/managers/mc/rxvt
-#MASTER_SITE_SUBDIR=	X11/xutils/terms
 
 MAINTAINER=		packages@netbsd.org
 

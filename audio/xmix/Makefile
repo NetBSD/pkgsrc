@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.7 1998/06/18 16:15:11 agc Exp $
+# $NetBSD: Makefile,v 1.8 1999/04/15 20:39:40 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/11/18 13:56:53 asami Exp 
 #
 
 DISTNAME=		xmix-2.1
 CATEGORIES=		audio
-MASTER_SITES=		${MASTER_SITE_SUNSITE}
-MASTER_SITE_SUBDIR=	apps/sound/mixers
+MASTER_SITES=		${MASTER_SITE_SUNSITE:=apps/sound/mixers/}
 
 PATCH_SITES=		${MASTER_SITES}
 PATCHFILES=		xmix-2.1.mixers.patch

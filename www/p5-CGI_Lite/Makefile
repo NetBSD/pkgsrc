@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 1999/04/01 14:07:56 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/15 20:39:47 tron Exp $
 #
 
 DISTNAME=       	CGI_Lite-1.62.pm
 PKGNAME=        	p5-CGI_Lite-1.62
 NO_WRKSUBDIR=		YES
 CATEGORIES=		www perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN}
-MASTER_SITE_SUBDIR=	CGI
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 EXTRACT_SUFX=		.gz
 
 MAINTAINER=		bad@netbsd.org
