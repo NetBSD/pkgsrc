@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.1.2.2 2004/11/28 20:11:32 tv Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.1.2.3 2004/12/20 20:46:00 tv Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -126,7 +126,11 @@ _SHLIBTOOL?=		${PKG_SHLIBTOOL}
 LIBTOOL?=		${PKG_LIBTOOL}
 SHLIBTOOL?=		${PKG_SHLIBTOOL}
 .if defined(USE_LIBTOOL)
-BUILD_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD:U1.5.10nb1}:../../devel/libtool-base
+.  if defined(USE_FORTRAN)
+LIBTOOL_REQD?=		1.5.10nb7
+.  endif
+LIBTOOL_REQD?=		1.5.10nb1
+BUILD_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../devel/libtool-base
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 LIBTOOL_OVERRIDE?=	libtool */libtool */*/libtool
@@ -192,16 +196,12 @@ ${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
 .if defined(USE_PERL5) && (${USE_PERL5} == "run")
 .  if !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
 .    if exists(${PERL5})
-.      if exists(${LOCALBASE}/share/mk/bsd.perl.mk)
-.        include "${LOCALBASE}/share/mk/bsd.perl.mk"
-.      else
 PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`; \
 			${ECHO} $${installsitelib}
 PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`; \
 			${ECHO} $${installsitearch}
 PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib 2>/dev/null`; \
 			${ECHO} $${installarchlib}
-.      endif # !exists(bsd.perl.mk)
 .      if ${PKG_INSTALLATION_TYPE} == "overwrite"
 _PERL5_PREFIX!=		eval `${PERL5} -V:prefix 2>/dev/null`; \
 			${ECHO} $${prefix}
