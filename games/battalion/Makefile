@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/01/02 03:20:07 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2000/10/15 12:06:34 rh Exp $
 #
 
 DISTNAME=		battalion
@@ -11,12 +11,11 @@ DISTFILES=		battalionSource1.4.tar.Z battalionSUN4.tar.gz
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.evl.uic.edu/aej/AndyBattalion.html
 
-DEPENDS=		Mesa-*:../../graphics/Mesa
-
 NOT_FOR_PLATFORM=	*-*-alpha	# relies on Mesa (gcc)
 
 EXTRACT_ONLY=		battalionSource1.4.tar.Z
 USE_X11BASE=		yes
+USE_MESA=		yes
 
 do-install:
 	${INSTALL} -c -s -o root -g games -m 2755 ${WRKSRC}/battalion ${PREFIX}/bin

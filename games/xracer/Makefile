@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/27 07:11:11 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/10/15 12:06:35 rh Exp $
 #
 
 DISTNAME=		xracer-0.96.9
@@ -8,11 +8,11 @@ MASTER_SITES=		http://xracer.annexia.org/files/
 MAINTAINER=		bsieker@freenet.de
 HOMEPAGE=		http://xracer.annexia.org/
 
-DEPENDS+=		Mesa-*:../../graphics/Mesa
 DEPENDS+=		jpeg-*:../../graphics/jpeg
 DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 
 USE_X11=		# defined
+USE_MESA=		# defined
 USE_GMAKE=		# defined
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XRacer/.packlist
