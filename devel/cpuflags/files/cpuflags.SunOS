@@ -1,16 +1,8 @@
 #!/bin/sh
-# $NetBSD: cpuflags.SunOS,v 1.5 2004/11/03 18:16:27 abs Exp $
+# $NetBSD: cpuflags.SunOS,v 1.6 2004/12/22 15:12:18 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
-if [ "$1" = -v ] ; then
-    shift
-    opt_v=1
-fi
-if [ -n "$1" ]; then
-    CC=$1
-else
-    CC=gcc
-fi
+AWK=nawk
 
 display_hw_details()
     {
@@ -28,6 +20,16 @@ esac
 
 ############
 # Everything from this point common between all cpuflags variants.
+
+if [ "$1" = -v ] ; then
+    shift
+    opt_v=1
+fi
+if [ -n "$1" ]; then
+    CC=$1
+else
+    CC=gcc
+fi
 
 if [ -n "$opt_v" ] ; then
     if [ -z "$NONE" ] ; then
@@ -52,7 +54,7 @@ fi
 
 if [ -n "$FLAGS" ]; then
     gcc_ver=`${CC} -dumpversion | sed 's/^egcs-//'`
-    FLAGS=`awk -F: -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
+    FLAGS=`$AWK -F: -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
 	{ if (gcc_ver < $1){map[$2] = ""$3} }
 	END { while (flags in map) {flags = map[flags]} print flags }
 	' <<EOD
