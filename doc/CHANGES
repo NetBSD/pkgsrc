@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.157 2002/10/04 02:36:32 itojun Exp $
+$NetBSD: CHANGES,v 1.158 2002/10/04 03:02:31 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3103,3 +3103,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated adzap to 20021003 [simonb 2002-10-04]
 	Added ast-ksh-20020922 [uebayasi 2002-10-04]
 	Updated apache to 2.0.43 [itojun 2002-10-04]
+	Updated gv to 3.5.8nb2 [itojun 2002-10-04]
