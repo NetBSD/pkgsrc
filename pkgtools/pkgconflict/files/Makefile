@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2002/04/08 16:26:15 wennmach Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/27 13:40:20 grant Exp $
 
 PGINCLUDE=@PREFIX@/include/pgsql
 
 .c.o:
-	cc -I${PGINCLUDE} -I${PGINCLUDE}/server -Wall -fpic -c $<
+	cc -I${PGINCLUDE} -I${PGINCLUDE}/server -fpic -c $<
 
 all: dewey_cmp.so
 
