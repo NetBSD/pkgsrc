@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1401 2004/02/14 13:58:34 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1402 2004/02/14 15:16:31 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2451,15 +2451,15 @@ _CONFIGURE_POSTREQ+=	do-config-status-override
 .PHONY: do-config-status-override
 do-config-status-override:
 .  for _pattern_ in ${CONFIG_STATUS_OVERRIDE}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
 	for file in ${_pattern_}; do					\
-		if [ -f "${WRKSRC}/$$file" ]; then			\
-			${RM} -f ${WRKSRC}/$$file;			\
+		if [ -f "$$file" ]; then				\
+			${RM} -f $$file;				\
 			(${ECHO} '#!${SH}';				\
 			 ${ECHO} '${ECHO} "$$0 $$@" >> ${WRKLOG}';	\
 			 ${ECHO} 'exit 0';				\
-			) > ${WRKSRC}/$$file;				\
-			${CHMOD} +x ${WRKSRC}/$$file;			\
+			) > $$file;					\
+			${CHMOD} +x $$file;				\
 		fi;							\
 	done
 .  endfor
