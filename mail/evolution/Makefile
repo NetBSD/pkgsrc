@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/12/01 15:37:58 salo Exp $
+# $NetBSD: Makefile,v 1.29 2002/12/02 09:16:50 dogcow Exp $
 
 DISTNAME=		evolution-1.0.8
 PKGREVISION=		4
@@ -57,7 +57,7 @@ pre-configure:
 
 DISPLAY?=	# empty if unset
 checkforx:
-.if ${DISPLAY}=="" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && ${ECHO} YES || ${ECHO{ NO!} == "NO"
+.if ${DISPLAY}=="" || ${DISPLAY_OK:!${X11BASE}/bin/xdpyinfo >/dev/null 2>&1 && ${ECHO} YES || ${ECHO} NO!} == "NO"
 .if exists(${X11BASE}/bin/Xvfb)
 	-${SETENV} XAUTHORITY= ${X11BASE}/bin/Xvfb :2 &
 DISPLAY=	':2'
