@@ -1,0 +1,42 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/31 01:43:26 jtb Exp $
+bin/advi
+man/man1/advi.1
+share/doc/advi/manual.dvi
+share/doc/advi/manual.pdf
+share/doc/advi/manual.ps
+share/doc/advi/mathmode.dvi
+share/doc/advi/splash.dvi
+share/doc/advi/splash.ps
+share/doc/html/advi/advi-j.jpg
+share/doc/html/advi/advi.jpg
+share/doc/html/advi/advilogo.anim.gif
+share/doc/html/advi/advilogo.gif
+share/doc/html/advi/bar.gif
+share/doc/html/advi/faq.html
+share/doc/html/advi/index-en.html
+share/doc/html/advi/index-fr.html
+share/doc/html/advi/index.html
+share/doc/html/advi/inria.gif
+share/doc/html/advi/manual.dvi
+share/doc/html/advi/manual.pdf
+share/doc/html/advi/manual.ps
+share/doc/html/advi/style.css
+share/texmf/tex/latex/advi/advi-annot.sty
+share/texmf/tex/latex/advi/advi-graphicx.sty
+share/texmf/tex/latex/advi/advi-slides.sty
+share/texmf/tex/latex/advi/advi.pro
+share/texmf/tex/latex/advi/advi.sty
+share/texmf/tex/latex/advi/advilogo.eps
+share/texmf/tex/latex/advi/argv.sty
+share/texmf/tex/latex/advi/bar.jpg.eps
+share/texmf/tex/latex/advi/bubble.sty
+share/texmf/tex/latex/advi/caml.eps
+share/texmf/tex/latex/advi/jpfonts.conf
+share/texmf/tex/latex/advi/splash.dvi
+share/texmf/tex/latex/advi/superpose.sty
+share/texmf/tex/latex/advi/xcolor.sty
+@unexec texhash
+@exec texhash
+@dirrm share/doc/html/advi
+@dirrm share/doc/advi
+@dirrm share/texmf/tex/latex/advi
