@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/11/08 16:44:34 shannonjr Exp $
+# $NetBSD: Makefile,v 1.19 2004/11/12 12:31:28 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -84,6 +84,11 @@ CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
+
+.if !empty(BUILD_F77:M[Yy][Ee][Ss])
+.include "../../devel/gmp/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
+.endif
 
 # GNU pth is useless here
 .if !empty(BUILD_ADA:M[Yy][Ee][Ss])
