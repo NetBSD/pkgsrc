@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/08 12:25:34 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/20 08:23:37 jlam Exp $
 bin/dcop_kate
 bin/testor
 lib/kde2/libbabelfishplugin.a
@@ -115,6 +115,7 @@ share/kde/icons/locolor/32x32/apps/ktimemon.png
 share/kde/mimelnk/application/x-webarchive.desktop
 share/kde/services/webarchivethumbnail.desktop
 @dirrm share/kde/apps/knewsticker/scripts
+@unexec ${RMDIR} %D/share/kde/apps/knewsticker 2>/dev/null || ${TRUE}
 @dirrm share/kde/apps/khtml/kpartplugins
 @dirrm share/kde/apps/kate/plugins/katetextfilter
 @dirrm share/kde/apps/kate/plugins/kateprojectmanager
