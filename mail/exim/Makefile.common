@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/06/04 02:05:16 reed Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/06/04 17:19:56 reed Exp $
 
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -58,7 +58,7 @@ EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db2}
 .  else # using native
 EXIM_DBMLIB=		# empty so use defaults
 EXIM_USE_DB_CONFIG=	# empty so use defaults
-EXIM_INCLUDE=		# empty so use defaults
+EXIM_INCLUDE=		-I/usr/${BUILDLINK_INCDIRS.db-native}
 .  endif
 .endif
 
