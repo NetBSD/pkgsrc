@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.7 2003/01/10 16:16:09 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2003/03/27 07:14:26 wiz Exp $
 
---- Makefile.in.orig	Tue Dec 21 21:07:54 1999
-+++ Makefile.in
-@@ -9,7 +9,7 @@ VPATH =		@srcdir@
+--- Makefile.in.org	2003-03-27 11:56:57.000000000 +1100
++++ Makefile.in	2003-03-27 11:57:38.000000000 +1100
+@@ -9,7 +9,7 @@
  first_rule: all
  dummy:
  
 -subdirs = src doc rclock src/graphics src/test
 +subdirs = src doc
+ allsubdirs = W11 $(subdirs)
  
  DIST =	INSTALL README.configure configure Makefile Makefile.in ChangeLog
- 
