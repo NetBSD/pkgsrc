@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1998/09/30 19:46:36 tron Exp $
+# $NetBSD: Makefile,v 1.21 1998/12/18 11:50:52 kleink Exp $
 #
 
 DISTNAME=       MesaLib-3.0
@@ -51,7 +51,7 @@ do-install:
 	${CP} -Rp ${WRKSRC}/demos ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/book ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/widgets-sgi ${PREFIX}/share/examples/Mesa
-	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/Mesa
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/Mesa
 	${LN} -f ${PREFIX}/lib/libMesaGL.so.3.0 ${PREFIX}/lib/libGL.so.3.0
 	${LN} -f ${PREFIX}/lib/libMesaGLU.so.3.0 ${PREFIX}/lib/libGLU.so.3.0
 	${LN} -f ${PREFIX}/lib/libMesaGL.a ${PREFIX}/lib/libGL.a
