@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.21 2002/04/11 11:14:31 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.22 2002/07/15 10:48:47 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -21,9 +21,11 @@ case $hw_machine_arch in
 
     alpha)
 	# cpu0 at mainbus0: ID 0 (primary), 21164A-0 (unknown ...
-	if egrep -q '^cpu0.*21164A' /var/run/dmesg.boot 2>/dev/null ; then
-	    FLAGS="-mcpu=21164a"
-	fi ;;
+	case "`egrep '^cpu0 ' /var/run/dmesg.boot`" in
+	    *21164A*)	FLAGS="-mcpu=21164a" ;;
+	    *21066*)	FLAGS="-mcpu=21064" ;;
+	esac
+	;;
 
     arm | arm32) case $hw_model in
 	ARM610*)		FLAGS="-mcpu=arm610"		;; # risc pc
@@ -56,26 +58,26 @@ case $hw_machine_arch in
 	*686-class*)	FLAGS='-march=pentiumpro'	;;
     esac ;;
 
-    m68k) case $hw_model in
-	*\(68020\))		FLAGS='-m68020'			;; # Untested
-	*\(68030\))		FLAGS='-m68030'			;; # Mac LC III
-	*\(68040\))		FLAGS='-m68040'			;; # Untested
-	*\(68060\))		FLAGS='-m68060'			;; # Untested
+    m68k) case $hw_model in				   # Examples
+	*\(68020)		FLAGS='-m68020'		;; # Untested
+	*\(68030)		FLAGS='-m68030'		;; # Mac LC III
+	*\(68040)		FLAGS='-m68040'		;; # Untested
+	*\(68060)		FLAGS='-m68060'		;; # Upgr amiga 3000
     esac ;;
 
-    powerpc) case $hw_model in
-	601\ *)		   	FLAGS='-mcpu=601'		;; # Untested
-	602\ *)		   	FLAGS='-mcpu=602'		;; # Untested
-	603\ *)		   	FLAGS='-mcpu=603'		;; # Untested
-	603ev\ *)		FLAGS='-mcpu=603e'		;; # PM 4400
-	604\ *)		   	FLAGS='-mcpu=604'		;; # Mac 8500
-	604ev\ *)		FLAGS='-mcpu=604e'		;; # upgr B&W G3
-	750\ *)		   	FLAGS='-mcpu=750'		;; # Untested
-	740\ *)		   	FLAGS='-mcpu=750'		;; # Untested
-	620\ *)		   	FLAGS='-mcpu=750'		;; # Untested
+    powerpc) case $hw_model in				   # Examples
+	601\ *)		   	FLAGS='-mcpu=601'	;; # Untested
+	602\ *)		   	FLAGS='-mcpu=602'	;; # Untested
+	603\ *)		   	FLAGS='-mcpu=603'	;; # Untested
+	603ev\ *)		FLAGS='-mcpu=603e'	;; # PM 4400
+	604\ *)		   	FLAGS='-mcpu=604'	;; # Mac 8500
+	604ev\ *)		FLAGS='-mcpu=604e'	;; # upgr B&W G3
+	750\ *)		   	FLAGS='-mcpu=750'	;; # Untested
+	740\ *)		   	FLAGS='-mcpu=750'	;; # Untested
+	620\ *)		   	FLAGS='-mcpu=750'	;; # Untested
     esac ;;
 
-    sparc | sparc64) case $hw_model in
+    sparc | sparc64) case $hw_model in				   # Examples
 	MB86900/1A*)		FLAGS='-mcpu=cypress'		;; # ss1+
 	CY7C601*)		FLAGS='-mcpu=cypress'		;; # ss2
 	W8601/8701*)		FLAGS='-mcpu=cypress'		;; # elc
@@ -99,6 +101,8 @@ if [ -z "$FLAGS" -a -z "$NONE" ] ; then
     echo "  hw.model        : '$hw_model'"				>&2
     echo "  hw.machine      : '$hw_machine'"				>&2
     echo "  hw.machine_arch : '$hw_machine_arch'"			>&2
+    echo "  cpu details     :"						>&2
+    egrep '^cpu' /var/run/dmesg.boot 					>&2
 fi
 
 # Fixup flags for old gcc
