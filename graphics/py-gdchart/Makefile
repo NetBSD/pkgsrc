@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/12/08 11:09:52 jmc Exp $
+# $NetBSD: Makefile,v 1.4 2002/01/17 12:34:17 drochner Exp $
 #
 
 DISTNAME=	gdchart-py-0.6
-PKGNAME=	py-gdchart-0.6
+PKGNAME=	${PYPKGPREFIX}-gdchart-0.6
 CATEGORIES=	graphics python
 MASTER_SITES=	http://athani.pair.com/msteed/software/gdchart/
 
@@ -13,28 +13,24 @@ COMMENT=	Python interface to GDChart
 BUILD_DEPENDS=	gdchart-0.10.1*:../../graphics/gdchart
 
 USE_GMAKE=	yes
-PYTHON_VERSIONS_ACCEPTED	=20
 MAKE_ENV=	GD_INCLUDE=${LOCALBASE}/include \
 		GDCHART_INCLUDE=${LOCALBASE}/include \
-		PYTHON_INCLUDE=${LOCALBASE}/include/python2.0 \
+		PYTHON_INCLUDE=${LOCALBASE}/${PYINC} \
 		LOCALBASE=${LOCALBASE}
-PLIST_SUBST=	PYTHON_SITELIBDIR=${PYTHON_SITELIBDIR:S/^${LOCALBASE}\///g} \
-		EXAMPLE_DIR=${EXAMPLE_DIR:S/^${LOCALBASE}\///g}
+PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 MODULE_FILES=	chart.py gdchart.so
 EXAMPLE_FILES=	test.html test.py CHANGES
-EXAMPLE_DIR=	${PREFIX}/share/examples/py-gdchart
+EXAMPLE_DIR=	${PREFIX}/share/examples/${PYPKGPREFIX}-gdchart
+PY_PATCHPLIST=	yes
 
 do-install:
 .for f in ${MODULE_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/lib/python2.0/site-packages
+	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/${PYSITELIB}
 .endfor
-.if !defined(NO_PKGDOCS)
-	#${MKDIR} ${EXAMPLE_DIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/py-gdchart
+	${INSTALL_DATA_DIR} ${EXAMPLE_DIR}
 .for f in ${EXAMPLE_FILES}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${EXAMPLE_DIR}
 .endfor
-.endif
 
 .include "../../lang/python/extension.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
