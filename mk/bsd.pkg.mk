@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1000 2002/07/02 13:31:40 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1001 2002/07/02 15:25:50 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -305,18 +305,6 @@ BUILD_DEPENDS+=		libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
 .  endif
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
-.endif
-
-.if defined(USE_SSL)
-.  if exists(/usr/include/openssl/ssl.h)
-SSLBASE=	/usr
-SSLCERTS=	/etc/openssl/certs
-.  else
-DEPENDS+=	openssl-0.9.[56]*:../../security/openssl
-SSLBASE=	${LOCALBASE}
-SSLCERTS=	${SSLBASE}/certs
-.  endif
-BUILD_DEFS+=	SSLBASE
 .endif
 
 .if defined(USE_XAW)
@@ -1065,7 +1053,7 @@ IGNORE+= "${PKGNAME} is restricted:" \
 	 "    "${RESTRICTED:Q}
 .  endif
 .  if !(${MKCRYPTO} == "YES" || ${MKCRYPTO} == yes)
-.    if (defined(CRYPTO) || defined(USE_SSL))
+.    if defined(CRYPTO)
 IGNORE+= "${PKGNAME} may not be built, because it utilizes strong cryptography"
 .    endif
 .  endif
