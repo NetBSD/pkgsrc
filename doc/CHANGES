@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7561 2004/10/25 15:39:02 minskim Exp $
+$NetBSD: CHANGES,v 1.7562 2004/10/25 16:43:20 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4859,3 +4859,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dcraw to 1.213 [seb 2004-10-25]
 	Updated gkrellm to 2.2.4 [xtraeme 2004-10-25]
 	Updated liferea to 0.6.0 [minskim 2004-10-25]
+	Updated drivel to 1.2.2nb1 [jmmv 2004-10-25]
