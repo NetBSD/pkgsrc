@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/06/28 01:34:23 hubertf Exp $
+$NetBSD: md5,v 1.2 1999/07/15 00:44:04 hubertf Exp $
 
-MD5 (ngrep-1.31.tar.gz) = a46b56aaf9c28f38e1761372c46a11a3
+MD5 (ngrep-1.33.tar.gz) = e2b7bfa038024b790d1bbd0d70a52805
