@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2003/09/10 16:23:27 jlam Exp $
+# $NetBSD: Makefile,v 1.80 2003/09/22 03:15:33 grant Exp $
 
 DISTNAME=		openssl-0.9.6g
 PKGREVISION=		2
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	rsaref
 PLIST_RSAREF=		${PKGDIR}/PLIST.rsaref
 .endif
 
-.if (${OPSYS} == "SunOS") && (${MACHINE_ARCH} == "sparc")
+.if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
 CONFIGURE_SCRIPT=	./Configure
 .  if !empty(CC:M*gcc*)
 CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-gcc
@@ -65,7 +65,6 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/certs ${PKG_SYSCONFDIR}/private
 
 .if ${OPSYS} == "NetBSD"
 PKG_SYSCONFDIR.${PKGBASE}?=	/etc/openssl
-
 .  if !exists(/usr/libexec/ld.elf_so) && !exists(/usr/libexec/ld.so)
 PKG_FAIL_REASON=	${PKGNAME} requires shared object support
 .  endif
