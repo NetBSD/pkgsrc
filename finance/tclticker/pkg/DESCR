@@ -1,0 +1,7 @@
+TCLTicker is a simple stock tickertape, using HTTP requests to fetch
+quotes.  It includes 'mailquote', which can email quotes.  TclTicker
+uses a plug-in architecture for quote services.  Currently, quote
+service modules are written for Yahoo (one for U.S.  markets, another
+for Euro markets) and Quote.com.  User configuration includes tuning
+the ticker scroll rate and data refresh dates, fonts, http proxy, smtp
+host, rounding, always on top, and ticker symbol lists.
