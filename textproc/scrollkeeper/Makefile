@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 22:54:51 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/08/24 12:28:57 markd Exp $
 #
 
 DISTNAME=		scrollkeeper-0.3.12
@@ -21,7 +21,7 @@ USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS= 	--localstatedir=${SCROLLKEEPER_DATADIR}
 CONFIGURE_ARGS+=	--sharedstatedir=${SCROLLKEEPER_DATADIR}
