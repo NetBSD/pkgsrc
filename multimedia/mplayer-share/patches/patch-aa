@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2004/07/17 19:06:36 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2004/07/20 22:04:44 salo Exp $
 
 --- configure.orig	2004-07-15 00:04:42.000000000 +0200
 +++ configure
@@ -50,17 +50,3 @@ $NetBSD: patch-aa,v 1.7 2004/07/17 19:06:36 wiz Exp $
      ;;
    --with-dxr2incdir=*)
      _inc_dxr2=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
-@@ -4865,11 +4894,11 @@ if test "$_matroska_external" != no ; th
- 
- int main(void) { return 0; }
- EOF
--  cc_check -lmatroska -lebml -lstdc++ && _matroska_external=yes
-+  cc_check -lmatroska -lebml -lm -lstdc++ && _matroska_external=yes
-   if test "$_matroska_external" = no ; then
-     _saved_inc_extra=$_inc_extra
-     _inc_extra="$_inc_extra -I/usr/local/include"
--    cc_check -lmatroska -lebml -lstdc++ && _matroska_external=yes
-+    cc_check -lmatroska -lebml -lm -lstdc++ && _matroska_external=yes
-     if test "$_matroska_external" = no ; then
-       _inc_extra=$_saved_inc_extra
-     fi
