@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 1998/09/22 06:11:39 garbled Exp $
+# $NetBSD: Makefile,v 1.20 1998/09/27 18:07:33 tron Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
 DISTNAME=	kdenetwork-1.0
 CATEGORIES=	net kde
-MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/ \
-		ftp://ftp.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/
 
 NOT_FOR_ARCHS=	alpha	# LP64/ELF problems
 
