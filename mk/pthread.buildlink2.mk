@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink2.mk,v 1.9 2003/05/02 15:11:46 wiz Exp $
+# $NetBSD: pthread.buildlink2.mk,v 1.10 2003/05/25 19:02:32 jlam Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -152,6 +152,8 @@ BUILDLINK_FILES.pthread+=	lib/libpthread.*
 BUILDLINK_TARGETS+=		pthread-buildlink
 BUILDLINK_TARGETS+=		pthread-buildlink-la
 
+BUILDLINK_CFLAGS.pthread=	-pthread
+
 LIBTOOL_ARCHIVE_UNTRANSFORM_SED+= \
 	-e "s|${BUILDLINK_PREFIX.pthread}/lib/libpthread.la|-lpthread|g" \
 	-e "s|${LOCALBASE}/lib/libpthread.la|-lpthread|g"
@@ -170,11 +172,17 @@ pthread-buildlink-la:
 BUILDLINK_DEPENDS.${_PKG_PTHREAD}=	${_PKG_PTHREAD_DEPENDS}
 .    endif
 BUILDLINK_PREFIX.pthread=		${BUILDLINK_PREFIX.${_PKG_PTHREAD}}
+BUILDLINK_CFLAGS.pthread=		${BUILDLINK_CFLAGS.${_PKG_PTHREAD}}
 .    include "${_PKG_PTHREAD_BUILDLINK2_MK}"
 .  else
 PKG_FAIL_REASON= "${PKGNAME} needs pthreads, but ${_PKG_PTHREAD_BUILDLINK2_MK} is missing."
 .  endif
 .endif
+
+# Define user-visible PTHREAD_CFLAGS as compiler options used to
+# compile/link pthreaded code.
+#
+PTHREAD_CFLAGS=	${BUILDLINK_CFLAGS.pthread}
 
 PTHREADBASE=	${BUILDLINK_PREFIX.pthread}
 CONFIGURE_ENV+=	PTHREADBASE=${PTHREADBASE}
