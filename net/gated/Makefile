@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 18:18:53 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/05 16:58:49 wiz Exp $
 # FreeBSD Id: Makefile,v 1.17 1998/04/26 18:47:12 peter Exp 
 #
 
@@ -22,6 +22,8 @@ ALL_TARGET=	gated
 post-extract:
 	@${SED} -e 's#@PREFIX@#${PREFIX}#' <${FILESDIR}/configuration \
 	    >${WRKSRC}/src/configs/netbsd
+	${SED} -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/gated \
+		> ${WRKDIR}/gated
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gated
@@ -29,5 +31,6 @@ post-install:
 	${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/gated ; ${GTAR} pvxf - )
 	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/doc/gated
 	${CHGRP} -R ${SHAREGRP} ${PREFIX}/share/doc/gated
+	${INSTALL_SCRIPT} ${WRKDIR}/gated ${PREFIX}/etc/rc.d
 
 .include "../../mk/bsd.pkg.mk"
