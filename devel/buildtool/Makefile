@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/02/05 18:19:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/04/12 10:14:26 jmmv Exp $
 #
 
-DISTNAME=	buildtool-0.10
+DISTNAME=	buildtool-0.11
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=buildtool/}
 
