@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4701 2004/02/06 17:49:15 jmmv Exp $
+$NetBSD: CHANGES,v 1.4702 2004/02/06 18:29:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -666,3 +666,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bug-buddy to 2.4.2 [jmmv 2004-02-06]
 	Updated file-roller to 2.4.4 [jmmv 2004-02-06]
 	Updated ggv2 to 2.4.2 [jmmv 2004-02-06]
+	Updated intltool to 0.30 [minskim 2004-02-06]
