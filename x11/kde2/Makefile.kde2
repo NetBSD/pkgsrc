@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde2,v 1.6 2002/09/20 02:39:04 jlam Exp $
+# $NetBSD: Makefile.kde2,v 1.7 2002/09/20 02:39:59 jlam Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE2-distributed packages (they all share common configure and build
@@ -14,7 +14,6 @@ EXTRACT_SUFX?=	.tar.bz2
 MAINTAINER?=	skrll@netbsd.org
 HOMEPAGE?=	http://www.kde.org/
 
-USE_X11BASE=		YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
