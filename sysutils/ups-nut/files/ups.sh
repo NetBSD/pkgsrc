@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: ups.sh,v 1.2 2001/11/21 16:05:40 jlam Exp $
+# $NetBSD: ups.sh,v 1.3 2001/11/21 16:29:13 jlam Exp $
 #
 # PROVIDE: ups
 # KEYWORD: nostart
@@ -12,37 +12,37 @@ fi
 
 # NOTE: run_rc_command sets $_arg
 #
-ups_commands()
+forward_commands()
 {
-	for file in $UPS_COMMANDS; do
+	for file in $COMMAND_LIST; do
 		/etc/rc.d/$file $_arg
 	done
 }
 
-ups_reversecommands()
+reverse_commands()
 {
-	UPS_REVCOMMANDS=
-	for file in $UPS_COMMANDS; do
-		UPS_REVCOMMANDS="$file $UPS_REVCOMMANDS"
+	REVCOMMAND_LIST=
+	for file in $COMMAND_LIST; do
+		REVCOMMAND_LIST="$file $REVCOMMAND_LIST"
 	done
-	for file in $UPS_REVCOMMANDS; do
+	for file in $REVCOMMAND_LIST; do
 		/etc/rc.d/$file $_arg
 	done
 }
 
-UPS_COMMANDS="upsdriver upsd upsmon upslog"
+COMMAND_LIST="upsdriver upsd upsmon upslog"
 
 name="ups"
-start_cmd="ups_commands"
-stop_cmd="ups_reversecommands"
-status_cmd="ups_commands"
+start_cmd="forward_commands"
+stop_cmd="reverse_commands"
+status_cmd="forward_commands"
 extra_commands="status"
 
 if [ ! -d /etc/rc.d ]
 then
         @ECHO@ -n " ${name}"
 	_arg="$1"
-	${start_cmd} "$1"
+	${start_cmd}
 else
         run_rc_command "$1"
 fi
