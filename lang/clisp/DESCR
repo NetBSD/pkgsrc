@@ -7,14 +7,23 @@ Common Lisp is
 
 Common Lisp CLISP
   * needs only 2 MB of memory
-  * implements 99% of the CLtL1 standard, as well as some extensions
+  * mostly implements the ANSI Common Lisp standard, as well as some
+    extensions
   * can call your preferred editor
   * is freely distributable
 
 Common Lisp CLISP provides
   * an interpreter
   * a compiler which makes execution of programs 5 times faster
+  * a debugger
   * all data types with unlimited size (the size need never be declared,
     the size of lists and arrays may be changed dynamically)
   * integers of arbitrary length, unlimited floating point number precision
-  * 594 library functions, 542 of them written in C
+  * An X11 interface is available through CLX, Garnet, CLUE/CLIO.
+  * CLOS, a foreign language interface, sockets, i18n, and more.
+
+CLISP runs Maxima, ACL2 and many other Common Lisp packages.
+
+It is Free Software and may be distributed under the terms of GNU GPL,
+while it is possible to distribute commercial applications compiled
+with CLISP.
