@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2002/08/26 11:25:41 itojun Exp $
+# $NetBSD: Makefile,v 1.44 2002/08/26 12:09:36 grant Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -40,9 +40,9 @@ post-build:
 		<${FILESDIR}/lwresd.sh >${WRKDIR}/lwresd
 
 # include/isc/ipv6.h is installed on non-ipv6 platforms
-IPV6H=		"@comment "
-.if ${OPSYS} == "SunOS" && ${OS_VERSION} == "5.7"
 IPV6H=		""
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
+IPV6H=		"@comment "
 .endif
 
 PLIST_SUBST+=	IPV6H=${IPV6H}
