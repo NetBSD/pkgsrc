@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.5 2001/01/26 17:33:27 tsutsui Exp $
+$NetBSD: patch-ac,v 1.6 2001/02/11 10:12:04 skrll Exp $
 
---- config.guess.orig	Sat May 27 02:30:02 2000
-+++ config.guess	Wed Jan 24 21:27:59 2001
+--- config.guess.orig	Fri May 26 18:30:02 2000
++++ config.guess
 @@ -76,33 +76,24 @@
  	# compatibility and a consistent mechanism for selecting the
  	# object file format.
@@ -16,7 +16,7 @@ $NetBSD: patch-ac,v 1.5 2001/01/26 17:33:27 tsutsui Exp $
 -	    hp3[0-9][05]) machine=m68k-hp ;;
 -	    ibmrt|romp-ibm) machine=romp-ibm ;;
 -	    *) machine=${UNAME_MACHINE}-unknown ;;
-+	PATH=$PATH:/sbin/usr/sbin
++	PATH=$PATH:/sbin:/usr/sbin
 +	UNAME_MACHINE_ARCH=`(uname -p || sysctl -n hw.machine_arch || echo unknown) 2>/dev/null`
 +	case "${UNAME_MACHINE_ARCH}:${UNAME_RELEASE}" in
 +	    arm26:*)			UNAME_MACHINE_ARCH=armv2;;
