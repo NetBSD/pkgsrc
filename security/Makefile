@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2004/11/18 19:37:29 jlam Exp $
+# $NetBSD: Makefile,v 1.213 2004/11/27 14:48:38 taca Exp $
 #
 
 COMMENT=	Security tools
@@ -188,6 +188,7 @@ SUBDIR+=	ruby-acl
 SUBDIR+=	ruby-digest
 SUBDIR+=	ruby-openssl
 SUBDIR+=	ruby-tcpwrap
+SUBDIR+=	ruby16-openssl
 SUBDIR+=	scanssh
 SUBDIR+=	seahorse
 SUBDIR+=	sfs
