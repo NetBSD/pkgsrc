@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/25 00:26:03 manu Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/04/16 12:27:07 manu Exp $
 @unexec rm -f %D/java/jre/bin/java
 @unexec rm -f %D/java/jre/bin/keytool
 @unexec rm -f %D/java/jre/bin/policytool
@@ -107,6 +107,7 @@ java/jre/lib/i18n.jar
 @unexec rm -f %D/java/bin/extcheck
 @unexec rm -f %D/java/bin/idlj
 @unexec rm -f %D/java/bin/jdb
+@unexec rm -f %D/java/bin/.java_wrapper
 java/bin/ppc/green_threads/java
 java/bin/ppc/green_threads/oldjava
 java/bin/ppc/green_threads/javac
@@ -151,7 +152,6 @@ java/bin/ppc/native_threads/javadoc
 java/bin/ppc/native_threads/extcheck
 java/bin/ppc/native_threads/idlj
 java/bin/ppc/native_threads/jdb
-java/bin/.java_wrapper
 java/bin/awt_robot
 java/bin/java-rmi.cgi
 java/bin/j2sdk-config
