@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/04/02 14:50:59 mrg Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/27 22:03:13 snj Exp $
 #
 
 DISTNAME=	licq-1.2.6
@@ -20,7 +20,7 @@ DEPENDS+=	licq-core-[0-9]*:../licq-core
 NOT_FOR_PLATFORM= NetBSD-*-*
 .endif
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 WRKSRC=		${WRKDIR:=/${DISTNAME}/plugins/qt-gui}
 
@@ -29,5 +29,5 @@ DISTINFO_FILE=	${.CURDIR}/../licq-gui-console/distinfo
 
 INCOMPAT_CURSES=	NetBSD-1.4*-* NetBSD-1.5*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-Q]-*
 
-.include "../../x11/qt3-libs/buildlink2.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
