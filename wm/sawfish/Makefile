@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/12 02:03:49 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/14 20:00:35 wiz Exp $
 #
 
 PKGNAME=		sawfish-${SF_VERS}
 
-DEPENDS+=		sawfish-replibs-${SF_VERS}:../../x11/sawfish-replibs
+DEPENDS+=		sawfish-replibs-${SF_VERS}:../../wm/sawfish-replibs
 
 USE_X11BASE=		# defined
 
