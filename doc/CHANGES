@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3852 2003/11/25 02:28:07 itojun Exp $
+$NetBSD: CHANGES,v 1.3853 2003/11/25 08:44:39 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4636,3 +4636,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rdesktop to 1.3.0nb1 [grant 2003-11-22]
 	Updated opera to 7.23 [heinz 2003-11-25]
 	Updated cue to 20031117 [itojun 2003-11-25]
+	Updated bidwatcher to 1.3.11rc1 [tron 2003-11-25]
