@@ -1,25 +1,25 @@
-@comment $NetBSD: PLIST,v 1.6 2003/09/16 12:03:41 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/09/19 17:19:24 adam Exp $
 bin/libwmf-config
 bin/libwmf-fontmap
 bin/wmf2eps
 bin/wmf2fig
 bin/wmf2svg
 bin/wmf2x
-include/libwmf/libwmf/api.h
-include/libwmf/libwmf/canvas.h
-include/libwmf/libwmf/color.h
-include/libwmf/libwmf/defs.h
-include/libwmf/libwmf/eps.h
-include/libwmf/libwmf/fig.h
-include/libwmf/libwmf/font.h
-include/libwmf/libwmf/foreign.h
-include/libwmf/libwmf/fund.h
-include/libwmf/libwmf/gd.h
-include/libwmf/libwmf/ipa.h
-include/libwmf/libwmf/macro.h
-include/libwmf/libwmf/svg.h
-include/libwmf/libwmf/types.h
-include/libwmf/libwmf/x.h
+include/libwmf/api.h
+include/libwmf/canvas.h
+include/libwmf/color.h
+include/libwmf/defs.h
+include/libwmf/eps.h
+include/libwmf/fig.h
+include/libwmf/font.h
+include/libwmf/foreign.h
+include/libwmf/fund.h
+include/libwmf/gd.h
+include/libwmf/ipa.h
+include/libwmf/macro.h
+include/libwmf/svg.h
+include/libwmf/types.h
+include/libwmf/x.h
 lib/libwmf-0.2.so
 lib/libwmf-0.2.so.8
 lib/libwmf-0.2.so.8.0
@@ -306,5 +306,5 @@ share/libwmf/fonts/s050000l.pfb
 @dirrm share/doc/html/libwmf/caolan/pics
 @dirrm share/doc/html/libwmf/caolan
 @dirrm share/doc/html/libwmf
-@dirrm include/libwmf/libwmf
+@dirrm include/libwmf/gd
 @dirrm include/libwmf
