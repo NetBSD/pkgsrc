@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3009 2003/08/08 12:45:14 wiz Exp $
+$NetBSD: CHANGES,v 1.3010 2003/08/08 13:32:52 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3219,3 +3219,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xterset to 0.5.2 [hubertf 2003-08-08]
 	Updated kopete to 0.7 [jmmv 2003-08-08]
 	Updated trn to 4.76 [wiz 2003-08-08]
+	Updated vile to 9.4 [agc 2003-08-08]
