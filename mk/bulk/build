@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.25 2002/08/22 08:21:30 jlam Exp $
+# $NetBSD: build,v 1.26 2002/12/01 05:53:43 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -157,6 +157,10 @@ done
 cd ${USR_PKGSRC}
 if [ "$1" != "restart" ]; then
 	cd ${USR_PKGSRC} && ${BMAKE} bulk-cache
+	if [ $? != 0 ]; then
+		echo "$0: Cache creation failed.  Aborting build."
+		exit 1
+	fi
 fi
 
 echo "Starting actual build using the order specified in $ORDERFILE..."
