@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.36 2005/01/12 17:23:46 tv Exp $
+# $NetBSD: java-vm.mk,v 1.37 2005/01/24 19:32:33 tv Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -315,12 +315,20 @@ PKG_JAVA_HOME?=		${BUILDLINK_JAVA_PREFIX.${_PKG_JVM}}
 .else
 PKG_JAVA_HOME?=		${_JAVA_HOME}
 .endif
-BUILD_DEFS+=		PKG_JVM PKG_JAVA_HOME
-PATH:=			${PKG_JAVA_HOME}/bin:${PATH}
-MAKEFLAGS+=		PKG_JVM=${PKG_JVM}
+.if !defined(CLASSPATH)
+CLASSPATH_cmd=		${ECHO} `for p in					\
+				${PKG_JAVA_HOME}/lib/${_JAVA_BASE_CLASSES}	\
+				${PKG_JAVA_HOME}/lib/tools.jar; do		\
+			${TEST} ! -f $$p || ${ECHO} $$p; done`			\
+			. | ${TR} ' ' :
+CLASSPATH?=		${CLASSPATH_cmd:sh}
+.endif
 
-MAKE_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
-CONFIGURE_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
-SCRIPTS_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
+CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH:Q} JAVA_HOME=${PKG_JAVA_HOME}
+MAKE_ENV+=		CLASSPATH=${CLASSPATH:Q} JAVA_HOME=${PKG_JAVA_HOME}
+SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH:Q} JAVA_HOME=${PKG_JAVA_HOME}
+BUILD_DEFS+=		PKG_JVM PKG_JAVA_HOME
+MAKEFLAGS+=		PKG_JVM=${PKG_JVM}
+PREPEND_PATH+=		${PKG_JAVA_HOME}/bin
 
 .endif	# JAVA_VM_MK
