@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/06/12 10:55:48 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/09 18:57:11 wiz Exp $
 
 DISTNAME=	teapop-0.3.5
 CATEGORIES=	mail
@@ -9,7 +9,7 @@ MAINTAINER=	dawszy@arhea.net
 HOMEPAGE=	http://www.toontown.org/teapop/
 COMMENT=	Yet another RFC1939 compliant POP3 server
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--enable-flock
@@ -21,9 +21,9 @@ CONF_FILES=	${EGDIR}/teapop.passwd ${PKG_SYSCONFDIR}/teapop.passwd
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(POP_WITH_DRAC)
-.include "../../mail/drac/buildlink.mk"
-CONFIGURE_ARGS+=	--with-drac=${BUILDLINK_DIR}/lib
-CONFIGURE_ARGS+=	--with-dracinc=${BUILDLINK_DIR}/include
+.include "../../mail/drac/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-drac=${BUILDLINK_PREFIX.drac}/lib
+CONFIGURE_ARGS+=	--with-dracinc=${BUILDLINK_PREFIX.drac}/include
 .endif
 
 .if defined(TEAPOP_WITHOUT_APOP)
@@ -35,9 +35,9 @@ CONFIGURE_ARGS+=--disable-vpop
 .endif
 
 .if defined(TEAPOP_WITH_MYSQL)
-.include "../../databases/mysql-client/buildlink.mk"
-CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_DIR}
-LDFLAGS+=	-L${BUILDLINK_DIR}/lib/mysql -Wl,-R${LOCALBASE}/lib/mysql
+.include "../../databases/mysql-client/buildlink2.mk"
+CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
+LDFLAGS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql -Wl,-R${BUILDLINK_PREFIX.mysql-client}/lib/mysql
 .endif
 
 post-build:
