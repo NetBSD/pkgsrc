@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/04/15 10:38:29 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/06/03 13:07:09 agc Exp $
 #
 
 DISTNAME=       mos14src
@@ -11,6 +11,8 @@ MAINTAINER=	lamj@stat.cmu.edu
 USE_PERL5=	yes
 WRKSRC=		${WRKDIR}/mosml/src
 ALL_TARGET=	world
+
+.include "../../mk/bsd.prefs.mk"
 
 post-install:
 .if !defined(NOPORTDOCS)
