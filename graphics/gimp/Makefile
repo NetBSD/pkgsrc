@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.58 2000/08/23 23:14:27 tron Exp $
+# $NetBSD: Makefile,v 1.59 2000/12/26 18:25:32 hubertf Exp $
 
-DISTNAME=		gimp-1.0.4
+DISTNAME=		gimp-1.2.0
 CATEGORIES=		graphics
-MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.0/v1.0.4/ \
-			ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.0/v1.0.4/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.0/v1.0.4/
+MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.0/ \
+			ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.0/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gimp/v1.2/v1.2.0/
 EXTRACT_SUFX=		.tar.bz2
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			${GIMP_DATA}${EXTRACT_SUFX}
 
-MAINTAINER=		bsieker@techfak.uni-bielefeld.de
+MAINTAINER=		hubertf@netbsd.org
 HOMEPAGE=		http://www.gimp.org/
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
@@ -18,22 +18,26 @@ DEPENDS+=		mpeg-1.2.1:../../graphics/mpeg-lib
 DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff
 
-GIMP_DATA=		gimp-data-extras-1.0.0
+GIMP_DATA=		gimp-data-extras-1.2.0
 
 .ifndef DISPLAY
 IS_INTERACTIVE=		YES
 .endif
-USE_X11BASE=		YES
-USE_XPM=		YES
-USE_GMAKE=		YES
-USE_LIBTOOL=		YES
-GNU_CONFIGURE=		YES
+USE_X11BASE=		yes
+USE_XPM=		yes
+USE_GMAKE=		yes
+USE_LIBINTL=		yes
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 EVAL_PREFIX+=		GTKDIR=gtk+
-CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}"
-CONFIGURE_ENV=		CPPFLAGS="${CPPFLAGS}"
-
-INFO_FILES=		pdb.info
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}" \
+			--disable-perl \
+			--disable-python
+CONFIGURE_ENV=		CPPFLAGS="${CPPFLAGS}" \
+			GNOME_CONFIG=no \
+			INTLDEPS="-I${LOCALBASE}/include"
 
 CPPFLAGS=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
@@ -58,9 +62,7 @@ pre-build:
 	${LINK.c} -o ${WRKSRC}/docs/pdb_self_doc ${FILESDIR}/pdb_self_doc.c
 
 post-install:
-	@(cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET})
-	@(cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
-	@(cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
+	(cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
 		 ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
 	${LN} -fs ${PREFIX}/share/aclocal/gimp.m4 \

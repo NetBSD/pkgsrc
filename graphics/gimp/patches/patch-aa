@@ -1,38 +1,13 @@
-$NetBSD: patch-aa,v 1.5 1999/04/05 23:28:29 tron Exp $
+$NetBSD: patch-aa,v 1.6 2000/12/26 18:25:33 hubertf Exp $
 
---- configure.orig	Thu Apr  1 04:56:41 1999
-+++ configure	Tue Apr  6 01:09:43 1999
-@@ -644,7 +644,7 @@
- # It thinks the first close brace ends the variable substitution.
- test -z "$INSTALL_PROGRAM" && INSTALL_PROGRAM='${INSTALL}'
- 
--test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
-+test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL}'
- 
- test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
- 
-@@ -1540,6 +1540,7 @@
- fi
+--- modules/Makefile.in.orig	Tue Dec 26 14:20:44 2000
++++ modules/Makefile.in
+@@ -180,7 +180,7 @@
+ CPPFLAGS =  	-DMODULE_COMPILATION
  
  
-+if false; then
- # Check for any special flags to pass to ltconfig.
- libtool_flags="--cache-file=$cache_file"
- test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
-@@ -1836,6 +1837,7 @@
+-INCLUDES =          -I$(top_srcdir)		        -I$(top_srcdir)/intl	        $(GTK_CFLAGS)		        -I$(includedir)
++INCLUDES =          -I$(top_srcdir)		        -I$(top_srcdir)/intl	        $(GTK_CFLAGS)		        -I$(includedir) $(INTLDEPS)
  
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-+fi
  
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
-@@ -3118,7 +3120,7 @@
- fi
- if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
-   echo "$ac_t""yes" 1>&6
--  TIFF='tiff'; LIBTIFF_LIB='-ltiff'
-+  TIFF='tiff'; LIBTIFF_LIB='-ltiff -lz -ljpeg'
- else
-   echo "$ac_t""no" 1>&6
- echo "configure: warning: *** TIFF plug-in will not be built (TIFF header files not found) ***" 1>&2
+ EXTRA_DIST =  	makefile.mingw			makefile.mingw.in		makefile.msc			module.def			gimpmodregister.c		gimpmodregister.h
