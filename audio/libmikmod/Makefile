@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/02/06 03:34:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/03/07 22:42:00 tron Exp $
 
 DISTNAME=	libmikmod-3.1.7
 CATEGORIES=	audio
@@ -11,9 +11,10 @@ HOMEPAGE=	http://www.multimania.com/miodrag/mikmod/
 
 DEPENDS+=	esound-0.2.*:../../audio/esound
 
-USE_LIBTOOL=
-USE_GMAKE=
-GNU_CONFIGURE=
+USE_LIBTOOL=	YES
+USE_GMAKE=	YES
+USE_GTEXINFO=	YES
+GNU_CONFIGURE=	YES
 
 pre-build:
 	${RM} -f ${WRKSRC}/docs/mikmod.info*
