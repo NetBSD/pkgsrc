@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2000/06/16 14:19:48 pooka Exp $
+# $NetBSD: Makefile,v 1.164 2000/06/22 16:50:42 rh Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -20,6 +20,7 @@
     SUBDIR += ctwm
     SUBDIR += dclock
     SUBDIR += dxpc
+    SUBDIR += ebuilder
     SUBDIR += econf
     SUBDIR += egtk
     SUBDIR += emiclock
@@ -35,6 +36,7 @@
     SUBDIR += gdm
     SUBDIR += glclock
     SUBDIR += gnome
+    SUBDIR += gnome-applets
     SUBDIR += gnome-core
     SUBDIR += gnome-libs
     SUBDIR += gnome-python
@@ -64,6 +66,8 @@
     SUBDIR += py-Tk
     SUBDIR += qt
     SUBDIR += qt1
+    SUBDIR += qt21
+    SUBDIR += qtarch
     SUBDIR += qwspritefield
     SUBDIR += qwt
     SUBDIR += rclock
@@ -138,6 +142,7 @@
     SUBDIR += xneko
     SUBDIR += xp
     SUBDIR += xpenguins
+    SUBDIR += xpmicons
     SUBDIR += xpmroot
     SUBDIR += xpns
     SUBDIR += xquote
