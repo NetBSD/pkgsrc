@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2002/09/15 06:51:35 kim Exp $
+# $NetBSD: Makefile,v 1.36 2002/11/04 22:39:17 hubertf Exp $
 
-DISTNAME=	screen-3.9.11
-PKGREVISION=	2
+DISTNAME=	screen-3.9.13
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.uni-erlangen.de/pub/utilities/screen/ \
 		${MASTER_SITE_GNU:=screen/}
