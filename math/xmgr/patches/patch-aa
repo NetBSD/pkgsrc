@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/02/10 12:54:27 frueauf Exp $
+
+--- configure.orig	Wed May 13 17:39:40 1998
++++ configure	Wed Jan  6 18:21:26 1999
+@@ -1143,6 +1143,8 @@
+ 
+ test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
+ 
++test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL} -m 555'
++
+ case "$INSTALL" in
+   /*) ;;
+    *) INSTALL=`pwd`/"$INSTALL" ;
+@@ -5395,6 +5397,7 @@
+ s%@CC@%$CC%g
+ s%@CPP@%$CPP%g
+ s%@INSTALL_PROGRAM@%$INSTALL_PROGRAM%g
++s%@INSTALL_SCRIPT@%$INSTALL_SCRIPT%g
+ s%@INSTALL_DATA@%$INSTALL_DATA%g
+ s%@RANLIB@%$RANLIB%g
+ s%@LN_S@%$LN_S%g

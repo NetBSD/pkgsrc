@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/02/10 12:54:27 frueauf Exp $
+
+--- examples/Makefile.orig	Fri Nov 28 01:00:16 1997
++++ examples/Makefile	Tue Feb  9 15:23:34 1999
+@@ -30,9 +30,9 @@
+ devclean : dummy
+ 
+ install : $(EXAMPLES) $(DOTEST)
+-	$(MKINSTALLDIRS) $(GR_HOME)/examples
+-	for i in $(EXAMPLES); do $(INSTALL_DATA) $$i $(GR_HOME)/examples; done
+-	$(INSTALL_PROGRAM) $(DOTEST) $(GR_HOME)/examples/$(DOTEST)
++	${MKINSTALLDIRS} ${PREFIX}/share/examples/${ACEGR}
++	for i in $(EXAMPLES); do $(INSTALL_DATA) $$i ${PREFIX}/share/examples/${ACEGR}; done
++	${INSTALL_SCRIPT} ${DOTEST} ${PREFIX}/share/examples/${ACEGR}/${DOTEST}
+ 
+ links : dummy
+ 
