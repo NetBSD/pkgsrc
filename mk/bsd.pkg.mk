@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1397 2004/02/14 00:40:55 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1398 2004/02/14 02:28:19 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -358,7 +358,7 @@ DEPENDS+=	f2c>=20001205nb3:../../lang/f2c
 FC=             ${PKG_FC}
 F77=            ${PKG_FC}
 CONFIGURE_ENV+=	F77="${F77}"
-CONFIGURE_ENV+=	FFLAGS="${FFLAGS}"
+CONFIGURE_ENV+=	FFLAGS="${FFLAGS:M*}"
 MAKE_ENV+=	F77="${F77}"
 MAKE_ENV+=	FC="${FC}"
 .endif
@@ -457,7 +457,7 @@ MAKE_ENV+=		WHOLE_ARCHIVE_FLAG="${WHOLE_ARCHIVE_FLAG}"
 MAKE_ENV+=		NO_WHOLE_ARCHIVE_FLAG="${NO_WHOLE_ARCHIVE_FLAG}"
 MAKE_ENV+=		LINK_ALL_LIBGCC_HACK="${LINK_ALL_LIBGCC_HACK}"
 
-CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS}" M4="${M4}" YACC="${YACC}"
+CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS:M*}" M4="${M4}" YACC="${YACC}"
 CONFIGURE_ENV+=		RPATH_FLAG="${RPATH_FLAG}"
 
 MAKE_FLAGS?=
@@ -2401,8 +2401,8 @@ do-configure:
 .  if defined(HAS_CONFIGURE)
 .    for DIR in ${CONFIGURE_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} \
-	    AWK="${AWK}" CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" \
-	    CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" FC="${FC}" F77="${FC}" FFLAGS="${FFLAGS}" \
+	    AWK="${AWK}" CC="${CC}" CFLAGS="${CFLAGS:M*}" CPPFLAGS="${CPPFLAGS:M*}" \
+	    CXX="${CXX}" CXXFLAGS="${CXXFLAGS:M*}" FC="${FC}" F77="${FC}" FFLAGS="${FFLAGS:M*}" \
 	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
 	    ac_given_INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
 	    INSTALL_DATA="${INSTALL_DATA}" \
