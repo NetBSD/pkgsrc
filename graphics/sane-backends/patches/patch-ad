@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2001/06/02 20:32:00 tron Exp $
+
+--- backend/snapscan.h.orig	Sat Aug 12 17:09:37 2000
++++ backend/snapscan.h	Sat Jun  2 20:50:01 2001
+@@ -90,6 +90,7 @@
+     {"FlatbedScanner_9",	PRISA620S},
+     {"FlatbedScanner13",	PRISA620S},
+     {"FlatbedScanner16",	PRISA620S},
++    {"FlatbedScanner17",	PRISA620S},
+     {"SNAPSCAN 1236",		SNAPSCAN1236S},
+     {"SNAPSCAN 310",		SNAPSCAN310},
+     {"SNAPSCAN 600",		SNAPSCAN600},
