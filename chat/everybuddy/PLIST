@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/19 14:10:04 tron Exp $
+bin/everybuddy
+libexec/everybuddy/everybuddy
+libexec/everybuddy/contact-update.pl
+libexec/everybuddy/update.pl
+man/man1/everybuddy.1
+share/gnome/apps/Internet/Everybuddy.desktop
+share/pixmaps/ebicon.png
+share/sounds/everybuddy/BuddyArrive.au
+share/sounds/everybuddy/BuddyLeave.au
+share/sounds/everybuddy/Send.au
+share/sounds/everybuddy/Receive.au
+@dirrm share/sounds/everybuddy
+@dirrm libexec/everybuddy

@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/12/19 14:10:04 tron Exp $
+
+--- src/Makefile.in.orig	Sat Jan 20 22:08:35 2001
++++ src/Makefile.in	Wed Dec 19 13:29:16 2001
+@@ -108,7 +108,7 @@
+ 
+ CFLAGS =  $(EB_CFLAGS) -I$(top_srcdir) -I../libproxy -I../libfaim  -I../libjabber/include/jabber -I../libjabber/include -I../libxode/include
+ #there are more than one config.h
+-LIBS =  $(EB_LIBS)
++LIBS =  $(EB_LIBS) -liconv
+ LDADD =  $(EB_LDADD)
+ CLEANFILES =  config.h
+ 

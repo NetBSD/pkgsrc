@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/12/19 14:10:04 tron Exp $
+
+SHA1 (everybuddy-0.2.0.tar.gz) = f31cc95c34ca56dfb13ac4d45bf13e0c1053da7c
+Size (everybuddy-0.2.0.tar.gz) = 647542 bytes
+SHA1 (patch-aa) = 2e37dd6808eeb2d5195251e5db5a3600e35245a2
+SHA1 (patch-ab) = d1699cf4045b850a868263dfc2297d7ecf4aff0c
+SHA1 (patch-ac) = 956fd63db7d4f3668ee8c0f240cf2af4827a10bf
