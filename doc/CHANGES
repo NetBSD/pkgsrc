@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1887 2003/04/10 12:47:16 wiz Exp $
+$NetBSD: CHANGES,v 1.1888 2003/04/10 13:17:53 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1528,3 +1528,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ogle_gui to 0.9.1 [wiz 2003-04-10]
 	Updated openssh to 3.6.1.1 [wiz 2003-04-10]
 	Updated suck to 4.3.2 [wiz 2003-04-10]
+	Updated kdelibs to 3.1.1nb1 [markd 2003-04-10]
+	Updated kdebase to 3.1.1nb1 [markd 2003-04-10]
+	Updated kdegraphics to 3.1.1nb2 [markd 2003-04-10]
+	Updated kde to 3.1.1nb1 [markd 2003-04-10]
