@@ -1,0 +1,27 @@
+*** XDbx.ad.orig	Wed Feb 18 08:16:13 1998
+--- XDbx.ad	Wed Feb 18 08:17:17 1998
+***************
+*** 2,12 ****
+  ! Xdbx 2.1 Application defaults file
+  !
+  
+! *background: 				snow1
+  *foreground: 				black
+! *fileWindow*background:			snow2
+! *messageWindow.background:		snow2
+! *commandWindow.background: 		snow2
+  *Scrollbar.foreground: 			black
+  
+  *allowShellResize:              	True
+--- 2,12 ----
+  ! Xdbx 2.1 Application defaults file
+  !
+  
+! *background: 				lightgrey
+  *foreground: 				black
+! *fileWindow*background:			lightgrey
+! *messageWindow.background:		lightgrey
+! *commandWindow.background: 		lightgrey
+  *Scrollbar.foreground: 			black
+  
+  *allowShellResize:              	True
