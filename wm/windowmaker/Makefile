@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:21:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/28 16:44:39 wiz Exp $
 
 DISTNAME=		WindowMaker-0.62.1
-PKGNAME=		windowmaker-0.62.1
+PKGNAME=		windowmaker-0.62.1nb1
 CATEGORIES=		x11 wm
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/beta/srcs/ \
 			ftp://ftp.ics.es.osaka-u.ac.jp/pub/mirrors/WindowMaker/beta/srcs/
@@ -66,6 +66,12 @@ post-extract:
 	do \
 		${MV} $${manfile} `${ECHO} $${manfile} | ${SED} "s/1x$$/1/"`; \
 	done;
+	cd ${WRKSRC} && \
+	for f in WINGs/wapplication.c WindowMaker/Defaults/WindowMaker.in \
+		WPrefs.app/Paths.c WindowMaker/menu* WindowMaker/plmenu*; do \
+		${SED} "s|/usr/local|${PREFIX}|g" $$f > $$f.new && \
+		${MV} $$f.new $$f; \
+	done
 
 pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf; \
