@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/09/05 00:11:02 kim Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:22:47 wiz Exp $
 #
 
 DISTNAME=	wml-2.0.3
@@ -7,6 +7,7 @@ MASTER_SITES=	http://www.engelschall.com/sw/wml/distrib/
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.engelschall.com/sw/wml/
+COMMENT=	Web Meta Language
 
 DEPENDS+=	ncurses-*:../../devel/ncurses
 DEPENDS+=	p5-Bit-Vector>=5.2:../../devel/p5-Bit-Vector

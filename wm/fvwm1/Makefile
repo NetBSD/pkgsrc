@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/15 02:20:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:21:36 wiz Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	cjs@netbsd.org
 HOMEPAGE=	http://www.fvwm.org/
+COMMENT=	Virtual window manager for X
 
 DEPENDS=	xpmroot-2.*:../../x11/xpmroot
 

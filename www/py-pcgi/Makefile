@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/10/22 20:30:05 tsarna Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 17:22:36 wiz Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://starship.python.net/crew/jbauer/persistcgi/
+COMMENT=	Persistent CGI system for Zope and other ZPublisher applications
 
 HAS_CONFIGURE=	yes
 EXTRACT_ELEMENTS=	${DISTNAME}/pcgi

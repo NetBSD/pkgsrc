@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/31 14:04:43 rh Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 17:22:05 wiz Exp $
 #
 
 DISTNAME=	gtkhtml-0.8
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=unstable/sources/gtkhtml/}
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
+COMMENT=	lightweight HTML rendering/printing/editing engine
 
 DEPENDS+=	gal>=0.4.1:../../devel/gal
 DEPENDS+=	glibwww-*:../../www/glibwww
