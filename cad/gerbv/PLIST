@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/15 01:57:58 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/15 22:04:18 dmcmahill Exp $
 bin/gerbv
 man/man1/gerbv.1
+share/gerbv/scheme/gerb-debug.scm
 share/gerbv/scheme/gerb-ps.scm
 @dirrm share/gerbv/scheme
 @dirrm share/gerbv
