@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.185 2003/01/14 21:16:23 jlam Exp $
+$NetBSD: TODO,v 1.186 2003/01/15 00:44:06 salo Exp $
 
 Suggested new packages
 ======================
@@ -74,7 +74,6 @@ Suggested package updates
 	o adobe-cmaps-1.5 [pkg/19646]
 	o aim-1.5.277
 	o amaya-7.0
-	o aspell-0.50.3 [salo]
 	o aumix-2.8
 	o balsa-1.4.2
 	o binutils-2.13.2.1
