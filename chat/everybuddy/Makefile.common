@@ -1,0 +1,26 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2001/12/19 14:10:04 tron Exp $
+
+DISTNAME=	everybuddy-0.2.0
+CATEGORIES=	chat
+MASTER_SITES=	http://www.everybuddy.com/files/
+
+MAINTAINER=	tron@netbsd.org
+HOMEPAGE=	http://www.everybuddy.com/
+COMMENT=	Universal Instant Messaging Client
+
+USE_GMAKE=	YES
+GNU_CONFIGURE=	YES
+
+DISTINFO_FILE=	${.CURDIR}/../everybuddy/distinfo
+FILESDIR=	${.CURDIR}/../everybuddy/files
+PATCHDIR=	${.CURDIR}/../everybuddy/patches
+PKGDIR=		${.CURDIR}/../everybuddy
+
+post-build:
+	${SED} -e 's#@MKDIR@#${MKDIR}#' \
+	  -e 's#@PREFIX@#${PREFIX}#' \
+	  -e 's#@RM@#${RM}#' \
+	  ${FILESDIR}/wrapper >${WRKDIR}/wrapper
+
+post-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/wrapper ${PREFIX}/bin/everybuddy
