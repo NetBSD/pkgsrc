@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/03/05 11:19:10 uebayasi Exp $
+# $NetBSD: Makefile,v 1.8 2005/03/05 11:26:48 wiz Exp $
 #
 
 DISTNAME=	ddskk-12.2.0
@@ -12,7 +12,7 @@ MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/skk/index.html
 COMMENT=	Japanese input methods for Emacs
 
-CONFLICTS=	ddskk-*
+CONFLICTS=	ddskk-[0-9]*
 
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox xemacs214 emacs20 xemacs215
 
@@ -22,7 +22,7 @@ EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox xemacs214 emacs20 xemacs215
 DEPENDS=	${PKGNAME_PREFIX}apel>=10.6:../../devel/apel
 .if ${EMACS_FLAVOR} == "emacs"
 EMACS_USE_LEIM=	# defined
-BUILD_DEPENDS+=	${PKGNAME_PREFIX}Mule-UCS-*:../../editors/mule-ucs
+BUILD_DEPENDS+=	${PKGNAME_PREFIX}Mule-UCS-[0-9]*:../../editors/mule-ucs
 .else
 BUILD_DEPENDS+= ${PKGNAME_PREFIX}xemacs-packages>=1.10:../../editors/xemacs-packages
 .endif
