@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1 2004/06/26 22:12:28 jmmv Exp $
+
+--- Output/OSS/Makefile.in.orig	2004-06-26 23:46:20.000000000 +0200
++++ Output/OSS/Makefile.in
+@@ -239,7 +239,7 @@ EXTRA_DIST = $(osssources)
+ lib_LTLIBRARIES = $(ossltlibs)
+ 
+ libOSS_la_LDFLAGS = @PLUGIN_LDFLAGS@
+-libOSS_la_LIBADD = @GTK_LIBS@ @PTHREAD_LIBS@
++libOSS_la_LIBADD = @GTK_LIBS@ @PTHREAD_LIBS@ $(LIBOSSAUDIO)
+ libOSS_la_SOURCES = $(ossbuildsources)
+ INCLUDES = @GTK_CFLAGS@ -I$(top_builddir)/intl -I$(top_srcdir)
+ subdir = Output/OSS

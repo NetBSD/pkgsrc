@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/04/12 23:15:01 salo Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/26 22:12:28 jmmv Exp $
 #
 
 .include "Makefile.common"
+
+PKGREVISION=		1
 
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-oss/--enable-oss/}
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-vorbis/--enable-vorbis/}
