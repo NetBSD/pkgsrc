@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.22 2004/03/01 19:12:25 wiz Exp $
+
+--- mpi/config.links.orig	Wed Dec  3 11:10:16 2003
++++ mpi/config.links
+@@ -200,6 +200,14 @@ case "${target}" in
+ 	cat  $srcdir/mpi/m68k/syntax.h	    >>./mpi/asm-syntax.h
+ 	path="m68k"
+ 	;;
++    m68k*-*-netbsdelf)
++	echo '#define ELF_SYNTAX'           >>./mpi/asm-syntax.h
++	cat  $srcdir/mpi/m68k/syntax.h	    >>./mpi/asm-syntax.h
++	path="m68k"
++	if ! test x$M68060 = xYES; then
++		path="m68k/mc68020 m68k"
++	fi
++	;;
+     m68k-atari-mint)
+ 	echo '#define MIT_SYNTAX'           >>./mpi/asm-syntax.h
+ 	cat  $srcdir/mpi/m68k/syntax.h	    >>./mpi/asm-syntax.h
