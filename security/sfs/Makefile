@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/25 15:51:50 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 14:05:08 abs Exp $
 #
 
 DISTNAME=		sfs-0.7.2
@@ -49,8 +49,8 @@ post-install:
 		> ${SFSEXAMPLEDIR}/sfsrwsd_config.sample
 
 .include "../../devel/gmp/buildlink2.mk"
-.include "../../lang/gcc/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
+.include "../../mk/gcc.buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
