@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2004/03/11 21:39:17 tv Exp $
+$NetBSD: patch-aa,v 1.11 2004/11/04 10:15:58 adam Exp $
 
---- makefile.unix.orig	Fri Jan 30 08:42:12 2004
-+++ makefile.unix	Thu Mar 11 16:34:10 2004
+--- makefile.unix.orig	2004-07-26 07:57:26.000000000 +0000
++++ makefile.unix
 @@ -6,8 +6,8 @@
  #
  
@@ -11,9 +11,9 @@ $NetBSD: patch-aa,v 1.10 2004/03/11 21:39:17 tv Exp $
 +#CXX=g++
 +#CXXFLAGS=-O2
  DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
+ STRIP=strip
  
- # Linux using LCC
-@@ -48,9 +48,11 @@
+@@ -82,9 +82,11 @@ STRIP=strip
  
  ##########################
  
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.10 2004/03/11 21:39:17 tv Exp $
  UNRAR_OBJ=filestr.o recvol.o rs.o scantree.o
  LIB_OBJ=dll.o
  
-@@ -67,7 +69,6 @@
+@@ -101,7 +103,6 @@ all:	unrar
  clean:
  	@rm -f *.o *.bak *~
  
