@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2004/09/10 19:02:56 kristerw Exp $
+
+--- src/snipe2d.cpp.orig	Fri Sep 10 20:18:30 2004
++++ src/snipe2d.cpp	Fri Sep 10 20:21:16 2004
+@@ -8,8 +8,7 @@
+ ///////////////////////////////////////////////
+ // License
+ ///////////////////////////////////////////////
+-// 
+-//     This software is provided 'as-is', without any express or implied
++// //     This software is provided 'as-is', without any express or implied
+ //     warranty.    In no event will the authors be held liable for any damages
+ //     arising from the use of this software.
+ // 
+@@ -37,6 +36,7 @@
+ 
+ #include "snipe2d.h"
+ //#include <getopt.h>
++#include <limits.h>
+ #include "binds.h"
+ 
+ PREFS gPrefs;
