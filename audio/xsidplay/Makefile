@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/06/04 15:39:08 drochner Exp $
+# $NetBSD: Makefile,v 1.3 1999/07/04 14:42:39 frueauf Exp $
 #
 
 DISTNAME=	xsidplay-1_3_5
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/
 
-DEPENDS+=	sidplay-1.36.34:../../audio/sidplay
+DEPENDS+=	sidplay-1.36.35:../../audio/sidplay
 DEPENDS+=	qt-1.44:../../x11/qt
 
 USE_X11BASE=	yes
