@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2005/02/23 16:07:34 wiz Exp $
+
+--- loudmouth/lm-ssl.c.orig	2004-10-19 09:52:48.000000000 +0200
++++ loudmouth/lm-ssl.c
+@@ -71,7 +71,6 @@ ssl_verify_certificate (LmSSL *ssl, cons
+ 	}
+ 	
+ 	if (status & GNUTLS_CERT_INVALID
+-	    || status & GNUTLS_CERT_NOT_TRUSTED
+ 	    || status & GNUTLS_CERT_REVOKED) {
+ 		if (ssl->func (ssl, LM_SSL_STATUS_UNTRUSTED_CERT,
+ 			       ssl->func_data) != LM_SSL_RESPONSE_CONTINUE) {
+@@ -126,7 +125,7 @@ ssl_verify_certificate (LmSSL *ssl, cons
+ 
+ 		gnutls_x509_crt_deinit (cert);
+ 
+-		if (gnutls_x509_fingerprint (GNUTLS_DIG_MD5, &cert_list[0],
++		if (gnutls_fingerprint (GNUTLS_DIG_MD5, &cert_list[0],
+ 					     ssl->fingerprint,
+ 					     &digest_size) >= 0) {
+ 			if (ssl->expected_fingerprint &&
