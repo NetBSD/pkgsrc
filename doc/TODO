@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3227 2005/03/17 07:50:48 markd Exp $
+$NetBSD: TODO,v 1.3228 2005/03/17 12:54:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -244,10 +244,6 @@ Suggested new packages
 	Suite of software components for developing object-oriented,
 	web-based applications.
 
-	Acrobat Reader 7
-	http://www.adobe.com/products/acrobat/readstep2.html
-	Version 7 of the acroread
-
 
 Suggested package updates
 =========================
@@ -256,6 +252,8 @@ Suggested package updates
 	o ArX-2.2.1
 	o BasiliskII-1.0.20041109
 	o Chinput-3.0.1
+	o DatLib-2.3
+	o DatUtil-2.15
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GridSim-3.1
@@ -271,7 +269,6 @@ Suggested package updates
 	o aalib-x11-1.4rc5
 	o aap-0.144
 	o acpi-iasl-20040715
-	o acroread7-7.0.0
 	o advancecomp-1.14
 	o aewm++-1.0.27
 	o afterstep-2.00.03
@@ -460,7 +457,7 @@ Suggested package updates
 	o fontconfig-2.3.1
 	o fop-0.20.5
 	o fort77-1.18
-	o fox-1.4.7
+	o fox-1.4.8
 	o fprot-workstation-bin-4.5.4
 	o freeciv-sounds-3.0
 	o freetds-0.62.4
@@ -597,7 +594,7 @@ Suggested package updates
 	o lavaps-2.7
 	o lcab-1.0b11
 	o lcc-4.2
-	o leafnode-1.10.8
+	o leafnode-1.11.0
 	o leafpad-0.7.9
 	o libarchive-1.02.009
 	o libcdio-0.72
@@ -635,7 +632,7 @@ Suggested package updates
 	o lopster-1.2.2
 	o lout-3.30
 	o lq-sp-1.3.4.11
-	o lsh-2.0
+	o lsh-2.0.1
 	o lv-451
 	o mDNSResponder-98
 	o maelstrom-x11-2.0.7
@@ -649,7 +646,7 @@ Suggested package updates
 	o manedit-0.5.12
 	o mantis-0.19.2
 	o mapserver-4.2.5
-	o maradns-1.0.24
+	o maradns-1.0.25
 	o mathomatic-12.1e
 	o mc-4.6.1-pre3
 	o memcached-1.2
@@ -720,6 +717,7 @@ Suggested package updates
 	o odbc-postgresql-7.4.7
 	o offlineimap-4.0.8
 	o ogre-0.12.3
+	o onyx-5.1.2
 	o oo2c-2.1.7
 	o open2300-1.8
 	o openacs-5.1.4
@@ -992,9 +990,9 @@ Suggested package updates
 	o ruby-fox-1.2.5 [needs to update of fox-1.4.6]
 	o rudiments-0.27
 	o sablecc-2.18.2
-	o sablevm-1.1.10
-	o sablevm-classpath-1.1.10
-	o sablevm-classpath-gui-1.1.10
+	o sablevm-1.11
+	o sablevm-classpath-1.11
+	o sablevm-classpath-gui-1.11
 	o samba-3.0.11
 	o same-1.8
 	o sarah-0.9.1b
