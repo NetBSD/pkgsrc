@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4094 2003/12/14 13:49:36 jdolecek Exp $
+$NetBSD: CHANGES,v 1.4095 2003/12/14 13:58:43 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5104,8 +5104,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated kdeartwork3 to 3.1.4nb2 [jmmv 2003-12-13]
 	Updated xfce4-utils to 4.0.1nb2 [jmmv 2003-12-13]
 	Updated gnome-core to 1.4.2nb9 [jmmv 2003-12-13]
-	Updated gnome-panel1 to 1.4.2nb4 [jmmv 2003-12-13]
-	Updated gnome-session to 1.4.2nb4 [jmmv 2003-12-13]
+	Updated gnome1-panel to 1.4.2nb4 [jmmv 2003-12-13]
+	Updated gnome1-session to 1.4.2nb4 [jmmv 2003-12-13]
 	Removed csound [ben 2003-12-13]
 	Added csound-dev-4.24.1 [ben 2003-12-13]
 	Updated libgtop2 to 2.0.7 [xtraeme 2003-12-13]
