@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/12/05 15:00:44 agc Exp $
+# $NetBSD: Makefile,v 1.20 2002/10/20 11:15:17 wiz Exp $
 #
 
 DISTNAME=		battalion
@@ -15,8 +15,8 @@ COMMENT=		Virtual reality 3D GL game for X11
 NOT_FOR_PLATFORM=	*-*-alpha	# relies on Mesa (gcc)
 
 EXTRACT_ONLY=		battalionSource1.4.tar.Z
+USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
-USE_MESA=		yes
 
 do-install:
 	${INSTALL} -c -s -o ${ROOT_USER} -g games -m 2755 ${WRKSRC}/battalion ${PREFIX}/bin
@@ -39,4 +39,5 @@ do-install:
 pre-clean:
 	@${RM} -rf ${WRKDIR}/battalionSUN4
 
+.include "../../graphics/Mesa/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
