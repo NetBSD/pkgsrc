@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.top,v 1.5 1998/05/14 11:22:55 agc Exp $ -->
+<!-- $NetBSD: README.top,v 1.6 1998/05/29 03:25:51 hubertf Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection</title>
@@ -22,9 +22,9 @@ The packages collection is divided into categories of packages.
 </p>
 
 <hr noshade>
-<pre>
+<table>
 %%SUBDIR%%
-</pre>
+</table>
 <hr noshade>
 
 For more information on how to build any of the packages from
