@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.4 1998/11/11 12:07:44 agc Exp $
+# $NetBSD: pkglint.pl,v 1.5 1998/11/17 17:19:23 agc Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -136,10 +136,10 @@ EOF
 #
 # check for files.
 #
-@checker = ('pkg/COMMENT', 'pkg/DESCR', 'Makefile', 'files/md5');
+@checker = ('pkg/COMMENT', 'pkg/DESCR', 'Makefile');
 %checker = ('pkg/COMMENT', 'checkdescr',
-	    'pkg/DESCR', 'checkdescr', 'Makefile', 'checkmakefile',
-	    'files/md5', 'TRUE');
+	    'pkg/DESCR', 'checkdescr',
+	    'Makefile', 'checkmakefile');
 if ($extrafile) {
 	foreach $i ((<$portdir/scripts/*>, <$portdir/pkg/*>)) {
 		next if (! -T $i);
@@ -161,6 +161,12 @@ foreach $i (<$portdir/patches/patch-??>) {
 	next if (defined $checker{$i});
 	push(@checker, $i);
 	$checker{$i} = 'checkpatch';
+}
+if (-e <$portdir/files/md5>) {
+	$i = <files/md5>;
+	next if (defined $checker{$i});
+	push(@checker, $i);
+	$checker{$i} = 'checkmd5';
 }
 foreach $i (@checker) {
 	print "OK: checking $i.\n";
@@ -442,6 +448,21 @@ sub checkpatch {
 	if (!$rcsidseen) {
 		&perror("FATAL: RCS tag \"\$$rcsidstr\$\" must be present ".
 			"in patch $file.")
+	}
+	close(IN);
+}
+
+sub checkmd5 {
+	local($file) = @_;
+	local($rcsidseen) = 0;
+
+	open(IN, "< $portdir/$file") || return 0;
+	while (<IN>) {
+		$rcsidseen++ if /\$$rcsidstr[:\$]/;
+	}
+	if (!$rcsidseen) {
+		&perror("FATAL: RCS tag \"\$$rcsidstr\$\" must be present ".
+			"in md5 $file.")
 	}
 	close(IN);
 }
