@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2004/09/21 16:44:50 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.20 2004/09/22 08:09:23 jlam Exp $
 bin/gconf-merge-tree
 bin/gconftool-2
 include/gconf/2/gconf/gconf-changeset.h
@@ -10,17 +10,9 @@ include/gconf/2/gconf/gconf-listeners.h
 include/gconf/2/gconf/gconf-schema.h
 include/gconf/2/gconf/gconf-value.h
 include/gconf/2/gconf/gconf.h
-lib/GConf/2/libgconfbackend-oldxml.a
 lib/GConf/2/libgconfbackend-oldxml.la
-lib/GConf/2/libgconfbackend-oldxml.so
-lib/GConf/2/libgconfbackend-xml.a
 lib/GConf/2/libgconfbackend-xml.la
-lib/GConf/2/libgconfbackend-xml.so
-lib/libgconf-2.a
 lib/libgconf-2.la
-lib/libgconf-2.so
-lib/libgconf-2.so.5
-lib/libgconf-2.so.5.0
 lib/pkgconfig/gconf-2.0.pc
 libexec/gconfd-2
 man/man1/gconftool-2.1

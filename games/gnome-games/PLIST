@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/05/30 16:19:57 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:31 jlam Exp $
 bin/ctali
 bin/freecell
 bin/gataxx
@@ -23,17 +23,9 @@ etc/sound/events/gnibbles.soundlist
 etc/sound/events/gnobots2.soundlist
 etc/sound/events/iagno.soundlist
 include/gdkcardimage/gdk-card-image.h
-lib/gnome-stones/objects/libgnome-stones.a
 lib/gnome-stones/objects/libgnome-stones.la
-lib/gnome-stones/objects/libgnome-stones.so
-lib/gnome-stones/objects/libgnomekoban.a
 lib/gnome-stones/objects/libgnomekoban.la
-lib/gnome-stones/objects/libgnomekoban.so
-lib/libgdkcardimage.a
 lib/libgdkcardimage.la
-lib/libgdkcardimage.so
-lib/libgdkcardimage.so.0
-lib/libgdkcardimage.so.0.0
 share/gnect/catseyes_40x40.gnect
 share/gnect/classic_40x40.gnect
 share/gnect/classic_50x50.gnect

@@ -1,5 +1,2 @@
-@comment $NetBSD: PLIST,v 1.7 2004/08/08 04:04:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:51 jlam Exp $
 lib/sasl2/liblogin.la
-lib/sasl2/liblogin.so
-lib/sasl2/liblogin.so.2
-lib/sasl2/liblogin.so.2.19

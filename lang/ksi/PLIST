@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/12 21:50:07 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:39 jlam Exp $
 bin/ksi
 bin/ksi-compile
 bin/ksi-config
@@ -13,21 +13,9 @@ include/ksi/ksi_type.h
 include/ksi/ksi_ver.h
 include/ksi/ksi_vtab.h
 include/ksi/ksi_z.h
-lib/ksi/libksi.a
 lib/ksi/libksi.la
-lib/ksi/libksi.so
-lib/ksi/libksi.so.8
-lib/ksi/libksi.so.8.0
-lib/ksi/libregexp.a
 lib/ksi/libregexp.la
-lib/ksi/libregexp.so
-lib/ksi/libregexp.so.2
-lib/ksi/libregexp.so.2.0
-lib/ksi/libzip.a
 lib/ksi/libzip.la
-lib/ksi/libzip.so
-lib/ksi/libzip.so.1
-lib/ksi/libzip.so.1.0
 share/ksi/3.4/Boot.ko
 share/ksi/3.4/Init.ko
 share/ksi/3.4/comparse.ko

@@ -1,21 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/14 13:21:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:19 jlam Exp $
 bin/vcd2lxt
 bin/gtkwave
-lib/gtkwave/reader_lxt.so.0.0
-lib/gtkwave/reader_lxt.so.0
-lib/gtkwave/reader_lxt.so
 lib/gtkwave/reader_lxt.la
-lib/gtkwave/reader_lxt.a
-lib/gtkwave/reader_out.so.0.0
-lib/gtkwave/reader_out.so.0
-lib/gtkwave/reader_out.so
 lib/gtkwave/reader_out.la
-lib/gtkwave/reader_out.a
-lib/gtkwave/reader_vcd.so.0.0
-lib/gtkwave/reader_vcd.so.0
-lib/gtkwave/reader_vcd.so
 lib/gtkwave/reader_vcd.la
-lib/gtkwave/reader_vcd.a
 share/gtkwave/pixmaps/stock_first.xpm
 share/gtkwave/pixmaps/stock_last.xpm
 share/gtkwave/pixmaps/stock_left.xpm

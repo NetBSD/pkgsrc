@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/05/15 17:07:08 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:31 jlam Exp $
 bin/charmap
 bin/gnome-character-map
 bin/gucharmap
@@ -14,11 +14,7 @@ include/gucharmap/gucharmap-table.h
 include/gucharmap/gucharmap-unicode-info.h
 include/gucharmap/gucharmap-window.h
 include/gucharmap/gucharmap.h
-lib/libgucharmap.a
 lib/libgucharmap.la
-lib/libgucharmap.so
-lib/libgucharmap.so.4
-lib/libgucharmap.so.4.3
 lib/pkgconfig/gucharmap.pc
 share/applications/gucharmap.desktop
 share/gnome/help/gucharmap/C/figures/gucharmap_start_window.png

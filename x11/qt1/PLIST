@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:23 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:10:07 jlam Exp $
 qt1/share/doc/qt/html/abstractwidgets.html
 qt1/share/doc/qt/html/aclock-aclock-cpp.html
 qt1/share/doc/qt/html/annotated.html
@@ -902,11 +902,7 @@ qt1/include/qwindow.h
 qt1/include/qwindowdefs.h
 qt1/include/qwmatrix.h
 qt1/include/qxt.h
-qt1/lib/libqt.a
 qt1/lib/libqt.la
-qt1/lib/libqt.so
-qt1/lib/libqt.so.1
-qt1/lib/libqt.so.1.44
 qt1/man/man1/moc.1
 qt1/man/man3/QAccel.3
 qt1/man/man3/QApplication.3

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 13:34:45 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:45 jlam Exp $
 include/flash/adpcm.h
 include/flash/bitmap.h
 include/flash/button.h
@@ -19,9 +19,5 @@ include/flash/sprite.h
 include/flash/sqrt.h
 include/flash/swf.h
 include/flash/text.h
-lib/libflash.a
 lib/libflash.la
-lib/libflash.so
-lib/libflash.so.0
-lib/libflash.so.0.4
 @dirrm include/flash

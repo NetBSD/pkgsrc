@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/25 19:22:35 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:29 jlam Exp $
 bin/oaf-client
 bin/oaf-config
 bin/oaf-empty-server
@@ -21,11 +21,7 @@ include/liboaf/oaf-registration.h
 include/liboaf/oaf-servreg.h
 include/liboaf/oaf-util.h
 include/liboaf/oaf.h
-lib/liboaf.a
 lib/liboaf.la
-lib/liboaf.so
-lib/liboaf.so.0
-lib/liboaf.so.0.0
 lib/oafConf.sh
 man/man1/oafd.1
 share/aclocal/oaf.m4

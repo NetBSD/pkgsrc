@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/02/18 11:57:17 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:37 jlam Exp $
 lib/gimp/1.2/plug-ins/clothify.py
 lib/gimp/1.2/plug-ins/foggify.py
 lib/gimp/1.2/plug-ins/gimpcons.py
@@ -13,9 +13,7 @@ ${PYSITELIB}/gimpenums.pyo
 ${PYSITELIB}/gimpfu.py
 ${PYSITELIB}/gimpfu.pyc
 ${PYSITELIB}/gimpfu.pyo
-${PYSITELIB}/gimpmodule.a
 ${PYSITELIB}/gimpmodule.la
-${PYSITELIB}/gimpmodule.so
 ${PYSITELIB}/gimpplugin.py
 ${PYSITELIB}/gimpplugin.pyc
 ${PYSITELIB}/gimpplugin.pyo
