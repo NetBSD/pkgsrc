@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6217 2004/06/15 17:17:37 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6218 2004/06/15 18:50:55 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2951,3 +2951,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kmymoney2 to 0.6 [markd 2004-06-15]
 	Updated smpeg to 0.4.4nb6 [grant 2004-06-15]
 	Updated mrtg to 2.10.13nb1 [xtraeme 2004-06-15]
+	Added openssh+gssapi-3.6.1.2.20030430nb3 [kristerw 2004-06-15]
