@@ -1,0 +1,38 @@
+--- Imakefile.orig	Sun Aug  1 22:45:08 1993
++++ Imakefile	Sun Jul 26 05:36:23 1998
+@@ -34,5 +34,5 @@
+         cbzone.motd \
+-		cbzone.script \
+-		cbzone.highscores \
+-		Cbzone.ad
++        cbzone.script \
++        cbzone.highscores \
++        Cbzone.ad
+ 
+@@ -55,3 +55,3 @@
+ # TANK_BINDIR = $(BINDIR)
+-TANK_BINDIR= /usr/local/games
++TANK_BINDIR= $(PREFIX)/bin
+ 
+@@ -59,3 +59,3 @@
+ # TANK_LIBDIR = $(LIBDIR)
+-TANK_LIBDIR = /usr/local/games/lib/cbzone
++TANK_LIBDIR = $(PREFIX)/share/cbzone
+ 
+@@ -63,3 +63,3 @@
+ # TANK_APPDIR = $(XAPPLOADDIR)
+-TANK_APPDIR = $(TANK_LIBDIR)
++TANK_APPDIR = $(XAPPLOADDIR)
+ 
+@@ -74,3 +74,3 @@
+ AllTarget(cbzone.exec)
+-           
++
+ MakeDirectories(install,$(TANK_BINDIR) $(TANK_LIBDIR) $(TANK_APPDIR) $(TANK_SOUNDDIR))
+@@ -99,4 +99,4 @@
+ cbzone.exec: $(OBJS) $(DEPLIBS)
+-    RemoveTargetProgram($@)
+-    $(CC) -o $@ $(OBJS) $(LDOPTIONS) $(LOCAL_LIBRARIES) $(LDLIBS) $(EXTRA_LOAD_FLAGS)
++	RemoveTargetProgram($@)
++	$(CC) -o $@ $(OBJS) $(LDOPTIONS) $(LOCAL_LIBRARIES) $(LDLIBS) $(EXTRA_LOAD_FLAGS)
+ 
