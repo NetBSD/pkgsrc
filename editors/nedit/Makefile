@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2002/04/23 02:08:52 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2002/08/04 13:33:30 mjl Exp $
 
-VERS=		5.2
-DISTNAME=	nedit-${VERS}-src
+VERS=		5.3
+DISTNAME=	nedit-${VERS}-source
 PKGNAME=	nedit-${VERS}
 CATEGORIES=	editors
-MASTER_SITES=	http://ftp.nedit.org/ftp/v${VERS:S/./_/g}/
+MASTER_SITES=	http://www.nedit.org/ftp/v${VERS:S/./_/g}/ \
+		http://www.au.nedit.org/ftp/v${VERS:S/./_/g}/ \
+		ftp://ftp.nl.nedit.org/pub/mirror/NEdit/v${VERS:S/./_/g}/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.nedit.org/
