@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 1999/07/09 18:38:58 jwise Exp $
+# $NetBSD: Makefile,v 1.99 1999/07/23 08:03:18 drochner Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -39,6 +39,7 @@
     SUBDIR += fvwm2
     SUBDIR += fvwm95
 #    SUBDIR += getbdf
+    SUBDIR += glclock
     SUBDIR += gnome-core
     SUBDIR += gnome-libs
     SUBDIR += gtk
@@ -66,6 +67,7 @@
     SUBDIR += p5-Tk
     SUBDIR += p5-gtk
 #    SUBDIR += piewm
+    SUBDIR += polclock
 #    SUBDIR += pythonqt
     SUBDIR += py-Tk
     SUBDIR += qt
