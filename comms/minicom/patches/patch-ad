@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.3 1998/08/07 10:36:42 agc Exp $
+$NetBSD: patch-ad,v 1.4 1999/11/15 14:22:48 rh Exp $
 
---- rwconf.c.orig	Fri Sep  5 11:01:53 1997
-+++ rwconf.c	Wed Feb 11 22:57:07 1998
-@@ -71,14 +71,14 @@
+--- rwconf.c.orig	Mon Nov 15 15:19:03 1999
++++ rwconf.c	Mon Nov 15 15:19:03 1999
+@@ -78,14 +78,14 @@
    { "/usr/bin/kermit -i -l %l -r", PUBLIC, "pprog8" },
  #else
    /* Most sites have this in /usr/local, except Linux. */
@@ -23,5 +23,5 @@ $NetBSD: patch-ad,v 1.3 1998/08/07 10:36:42 agc Exp $
 +  { BINDIR "/kermit -i -l %l -s", PUBLIC, "pprog7" },
 +  { BINDIR "/kermit -i -l %l -r", PUBLIC, "pprog8" },
  #endif
-   { "",			PUBLIC,   "pprog9" },
+   { "/usr/bin/ascii-xfr -dsv", PUBLIC,   "pprog9" },
    { "",			PUBLIC,   "pprog10" },
