@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/17 21:33:55 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/01/15 16:32:27 jlam Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -11,20 +11,15 @@ CONFLICTS+=		ap-php-4.0.3pl1
 
 MESSAGE_FILE=		${WRKDIR}/.MESSAGE
 
-BINDIR=			${PREFIX}/bin
-CGIDIR=			${PREFIX}/libexec/cgi-bin
-LIBDIR=			${PREFIX}/lib
-
 pre-install:
 	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
 		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
-do-install:
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/php ${BINDIR}
-	${INSTALL_DATA_DIR} ${CGIDIR}
-	${RM} -f ${CGIDIR}/php
-	${LN} -sf ../../bin/php ${CGIDIR}/php
-	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libphp4.la ${LIBDIR}
+post-install:
+	${TOUCH} ${PREFIX}/${PHP_EXTENSION_DIR}/.directory
+	${INSTALL_DATA_DIR} ${PREFIX}/libexec/cgi-bin
+	${RM} -f ${PREFIX}/libexec/cgi-bin/php
+	${LN} -sf ../../bin/php ${PREFIX}/libexec/cgi-bin/php
 	${INSTALL_DATA} ${WRKSRC}/php.ini-dist ${PREFIX}/etc
 	${INSTALL_DATA} ${WRKSRC}/php.ini-optimized ${PREFIX}/etc
 	${INSTALL_DATA_DIR} ${PREFIX}/share/php4

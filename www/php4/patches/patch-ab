@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2000/12/25 21:03:47 jlam Exp $
+$NetBSD: patch-ab,v 1.3 2001/01/15 16:32:28 jlam Exp $
 
---- configure.orig	Wed Dec 20 02:44:27 2000
+--- configure.orig	Thu Jan 11 13:39:29 2001
 +++ configure
-@@ -18746,7 +18746,7 @@
+@@ -18750,7 +18750,7 @@
        ln -s "$IMAP_DIR/lib/c-client.a" "$IMAP_DIR/lib/libc-client.a" >/dev/null 2>&1
      fi
  
@@ -11,15 +11,15 @@ $NetBSD: patch-ab,v 1.2 2000/12/25 21:03:47 jlam Exp $
        IMAP_LIB=$lib
        
  		str="$IMAP_DIR/lib/lib$lib.*"
-@@ -40172,6 +40172,7 @@
+@@ -40176,6 +40176,7 @@
  fi
  
  
 +if false; then
  echo $ac_n "checking for pam_start in -lpam""... $ac_c" 1>&6
- echo "configure:40177: checking for pam_start in -lpam" >&5
+ echo "configure:40181: checking for pam_start in -lpam" >&5
  ac_lib_var=`echo pam'_'pam_start | sed 'y%./+-%__p_%'`
-@@ -40216,6 +40217,8 @@
+@@ -40220,6 +40221,8 @@
  else
    echo "$ac_t""no" 1>&6
  fi
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.2 2000/12/25 21:03:47 jlam Exp $
   
  
  for ac_func in getcwd getwd
-@@ -47326,9 +47329,6 @@
+@@ -47325,9 +47328,6 @@
  
      $SHELL $srcdir/ltconfig --output=shlibtool --disable-static --srcdir=$srcdir --cache-file=./config.cache $srcdir/ltmain.sh
      SHARED_LIBTOOL='$(SHELL) $(top_builddir)/shlibtool'

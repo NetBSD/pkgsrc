@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST.module,v 1.1.1.1 2000/12/17 09:19:32 jlam Exp $
+@comment $NetBSD: PLIST.module,v 1.2 2001/01/15 16:32:29 jlam Exp $
 ${PHP_EXTENSION_DIR}/${MODNAME}.so
-@unexec rmdir -p %D/${PHP_EXTENSION_DIR} 2>/dev/null || true
