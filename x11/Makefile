@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2000/02/25 01:04:17 wiz Exp $
+# $NetBSD: Makefile,v 1.146 2000/03/12 01:44:22 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -13,6 +13,7 @@
     SUBDIR += asclock-gtk
     SUBDIR += asclock-xlib
     SUBDIR += ascp
+    SUBDIR += blt
     SUBDIR += catclock
     SUBDIR += controlcenter
     SUBDIR += ctwm
