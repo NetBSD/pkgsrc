@@ -1,0 +1,71 @@
+# $NetBSD: Makefile.options,v 1.1 2004/07/24 03:32:24 jlam Exp $
+#
+# OPENLDAP_ALL_OPTIONS lists all of the currently-supported optional modules
+# that *may* be built.
+#
+# OPENLDAP_OPTIONS is a list of the modules that *will* be built.
+#
+OPENLDAP_ALL_OPTIONS=	dynamic sasl slp
+
+.if defined(USE_SASL) || defined(USE_SASL2) || defined(KERBEROS)
+.  if !defined(OPENLDAP_OPTIONS)
+.    if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
+OPENLDAP_OPTIONS+=	sasl
+.    endif
+.    if defined(USE_SASL) && !empty(USE_SASL:M[yY][eE][sS])
+OPENLDAP_OPTIONS+=	sasl
+.    endif
+.    if defined(KERBEROS)
+OPENLDAP_OPTIONS+=	sasl
+.    endif
+.  endif
+.endif
+
+OPENLDAP_OPTIONS?=	# empty
+BUILD_DEFS+=		OPENLDAP_OPTIONS
+
+_OPENLDAP_OPTIONS=		# empty
+.for _opt_ in ${OPENLDAP_OPTIONS}
+.  if empty(_OPENLDAP_OPTIONS:M${_opt_})
+.    if !empty(OPENLDAP_ALL_OPTIONS:M${_opt_})
+_OPENLDAP_OPTIONS+=		${_opt_}
+.    else
+PKG_FAIL_REASON+=	"\"${_opt_}\" is not a supported Mutt build option."
+.    endif
+.  endif
+.endfor
+
+###
+### Whether to build with dynamically-loadable backend modules.  If not
+### specified, then link the backend modules statically into slapd.
+###
+.if !empty(_OPENLDAP_OPTIONS:Mdynamic)
+CONFIGURE_ARGS+=	--enable-modules
+PLIST_SUBST+=		DYNAMIC_MOD=
+.else
+PLIST_SUBST+=		DYNAMIC_MOD="@comment "
+.endif
+
+###
+### SASL authentication
+###
+.if !empty(_OPENLDAP_OPTIONS:Msasl)
+.  if !defined(USE_SASL2) && !defined(USE_SASL)
+.    include "../../security/cyrus-sasl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-sasl2=${BUILDLINK_PREFIX.cyrus-sasl}
+.  elif defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
+.    include "../../security/cyrus-sasl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-sasl2=${BUILDLINK_PREFIX.cyrus-sasl}
+.  elif defined(USE_SASL) && !empty(USE_SASL:M[yY][eE][sS])
+.    include "../../security/cyrus-sasl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-sasl2=${BUILDLINK_PREFIX.cyrus-sasl}
+.  endif
+.endif
+
+###
+### SLP (Service Locator Protocol)
+###
+.if !empty(_OPENLDAP_OPTIONS:Mslp)
+.  include "../../net/openslp/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-slp
+.endif

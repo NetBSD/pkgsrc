@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2004/03/07 12:12:38 markd Exp $
+$NetBSD: patch-ai,v 1.2 2004/07/24 03:32:24 jlam Exp $
 
---- configure.orig	2004-03-02 12:46:42.000000000 +1300
+--- configure.orig	Fri Apr 16 11:21:21 2004
 +++ configure
-@@ -10570,7 +10570,7 @@ LIBS="$ac_save_LIBS"
+@@ -10207,7 +10207,7 @@ LIBS="$ac_save_LIBS"
  fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
