@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/28 18:12:10 garbled Exp $
+bin/jless
+bin/jlesskey
+bin/jlessecho
+man/man1/jless.1
+man/man1/jlesskey.1
