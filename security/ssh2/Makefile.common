@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1 2003/05/10 10:02:34 seb Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/06/03 09:39:01 seb Exp $
 #
 
 DISTNAME=	ssh-3.2.2
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.ssh.com/pub/ssh/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	seb@netbsd.org
 HOMEPAGE=	http://www.ssh.com
 
 CONFLICTS+=	openssh-[0-9]* ssh6-[0-9]* ssh-[0-9]* sftp-[0-9]*
