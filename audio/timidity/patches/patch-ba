@@ -1,11 +1,45 @@
-$NetBSD: patch-ba,v 1.2 1998/08/07 10:36:15 agc Exp $
+$NetBSD: patch-ba,v 1.3 2000/04/27 14:44:23 mycroft Exp $
 
 --- config.h.orig	Sat Jun  1 08:54:49 1996
-+++ config.h	Sat Mar  7 13:17:30 1998
-@@ -325,6 +325,18 @@
-   #define rindex(s,c) strrchr(s,c)
++++ config.h	Thu Apr 27 10:35:09 2000
+@@ -186,7 +186,7 @@
+ #define AUDIO_BUFFER_SIZE (1<<AUDIO_BUFFER_BITS)
+ 
+ /* Byte order, defined in <machine/endian.h> for FreeBSD and DEC OSF/1 */
+-#ifdef DEC
++#if defined(DEC) || defined(__NetBSD__)
+ #include <machine/endian.h>
  #endif
  
+@@ -223,6 +223,14 @@
+ #endif
+ 
+ /* DEC MMS has 64 bit long words */
++#if defined(__NetBSD__)
++typedef u_int32_t uint32;
++typedef int32_t int32;
++typedef u_int16_t uint16;
++typedef int16_t int16;
++typedef u_int8_t uint8;
++typedef int8_t int8;
++#else
+ #ifdef DEC
+ typedef unsigned int uint32;
+ typedef int int32; 
+@@ -234,6 +242,7 @@
+ typedef short int16;
+ typedef unsigned char uint8;
+ typedef char int8;
++#endif
+ 
+ /* Instrument files are little-endian, MIDI files big-endian, so we
+    need to do some conversions. */
+@@ -323,6 +332,18 @@
+   extern char *optarg;
+   #define PI 3.14159265358979323846
+   #define rindex(s,c) strrchr(s,c)
++#endif
++
 +#ifdef __NetBSD__
 +#  include <errno.h>
 +#  include <math.h>
@@ -16,8 +50,6 @@ $NetBSD: patch-ba,v 1.2 1998/08/07 10:36:15 agc Exp $
 +#  include <errno.h>
 +#  include <math.h>
 +#  define PI M_PI
-+#endif
-+
+ #endif
+ 
  #ifdef __WIN32__
- #  include <math.h>
- #  define PI M_PI
