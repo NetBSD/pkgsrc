@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.2 2005/01/17 09:24:07 seb Exp $
+# $NetBSD: dirs.mk,v 1.3 2005/03/23 21:37:48 markd Exp $
 #
 
 .if !defined(DIRS_KDE3_MK)
@@ -7,6 +7,7 @@ DIRS_XDG_MK=	#defined
 KDE3_DIRS=	include/dom
 KDE3_DIRS+=	include/kabc
 KDE3_DIRS+=	include/kate
+KDE3_DIRS+=	include/kparts
 KDE3_DIRS+=	lib/kconf_update_bin
 KDE3_DIRS+=	lib/kde3
 KDE3_DIRS+=	lib/kde3/plugins
@@ -77,12 +78,17 @@ KDE3_DIRS+=	share/kde/apps/kstyle
 KDE3_DIRS+=	share/kde/apps/kstyle/themes
 KDE3_DIRS+=	share/kde/apps/ktuberling
 KDE3_DIRS+=	share/kde/apps/ktuberling/sounds
+KDE3_DIRS+=	share/kde/apps/kturtle
+KDE3_DIRS+=	share/kde/apps/kturtle/examples
+KDE3_DIRS+=	share/kde/apps/kturtle/data
 KDE3_DIRS+=	share/kde/apps/kwin
 KDE3_DIRS+=	share/kde/apps/profiles
+KDE3_DIRS+=	share/kde/apps/zeroconf
 KDE3_DIRS+=	share/kde/autostart
 KDE3_DIRS+=	share/kde/config
 KDE3_DIRS+=	share/kde/config/magic
 KDE3_DIRS+=	share/kde/config.kcfg
+KDE3_DIRS+=	share/kde/emoticons
 
 _ICONCOLORS=     crystalsvg hicolor locolor
 _ICONSIZES=      16x16 22x22 32x32 48x48 64x64 128x128
@@ -111,12 +117,13 @@ KDE3_DIRS+=	share/kde/mimelnk/fonts
 KDE3_DIRS+=	share/kde/mimelnk/image
 KDE3_DIRS+=	share/kde/mimelnk/inode
 KDE3_DIRS+=	share/kde/mimelnk/interface
-KDE3_DIRS+=	share/kde/mimelnk/kdedevice
+KDE3_DIRS+=	share/kde/mimelnk/media
 KDE3_DIRS+=	share/kde/mimelnk/message
 KDE3_DIRS+=	share/kde/mimelnk/model
 KDE3_DIRS+=	share/kde/mimelnk/multipart
 KDE3_DIRS+=	share/kde/mimelnk/print
 KDE3_DIRS+=	share/kde/mimelnk/text
+KDE3_DIRS+=	share/kde/mimelnk/uri
 KDE3_DIRS+=	share/kde/mimelnk/video
 KDE3_DIRS+=	share/kde/services
 KDE3_DIRS+=	share/kde/services/kaddressbook

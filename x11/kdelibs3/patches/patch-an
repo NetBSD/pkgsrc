@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.7 2005/03/06 12:48:09 markd Exp $
+$NetBSD: patch-an,v 1.8 2005/03/23 21:37:48 markd Exp $
 
---- kdecore/kstandarddirs.cpp.orig	2004-10-03 20:40:15.000000000 +1300
+--- kdecore/kstandarddirs.cpp.orig	2005-02-04 12:33:08.000000000 +1300
 +++ kdecore/kstandarddirs.cpp
-@@ -920,33 +920,33 @@ static int tokenize( QStringList& tokens
+@@ -1018,33 +1018,33 @@ static int tokenize( QStringList& tokens
  
  QString KStandardDirs::kde_default(const char *type) {
      if (!strcmp(type, "data"))
@@ -50,16 +50,19 @@ $NetBSD: patch-an,v 1.7 2005/03/06 12:48:09 markd Exp $
      if (!strcmp(type, "exe"))
  	return "bin/";
      if (!strcmp(type, "lib"))
-@@ -962,7 +962,7 @@ QString KStandardDirs::kde_default(const
+@@ -1060,9 +1060,9 @@ QString KStandardDirs::kde_default(const
      if (!strcmp(type, "xdgconf-menu"))
          return "menus/";
      if (!strcmp(type, "kcfg"))
 -	return "share/config.kcfg";
 +	return "share/kde/config.kcfg";
+     if (!strcmp(type, "emoticons"))
+-			return "share/emoticons";
++			return "share/kde/emoticons";
+ 
+ 
      qFatal("unknown resource type %s", type);
-     return QString::null;
- }
-@@ -1232,6 +1232,7 @@ void KStandardDirs::addKDEDefaults()
+@@ -1383,6 +1383,7 @@ void KStandardDirs::addKDEDefaults()
          }
  
          xdgdirList.append("/usr/local/share/");
@@ -67,21 +70,21 @@ $NetBSD: patch-an,v 1.7 2005/03/06 12:48:09 markd Exp $
          xdgdirList.append("/usr/share/");
      }
  
-@@ -1402,7 +1403,7 @@ bool KStandardDirs::addCustomized(KConfi
-         for (QStringList::ConstIterator it = list.begin(); it != list.end(); it++)
-         {
-             addPrefix(*it, priority);
--	    addXdgConfigPrefix(*it+"/etc/xdg", priority);
-+	    addXdgConfigPrefix(*it+"/xdg", priority);
- 	    addXdgDataPrefix(*it+"/share", priority);
- 	}
- 	// If there are no prefixes defined, check if there is a directory
-@@ -1411,7 +1412,7 @@ bool KStandardDirs::addCustomized(KConfi
- 	{
- 	    QString dir = profileDirsPrefix + profile;
- 	    addPrefix(dir, priority);
--	    addXdgConfigPrefix(dir+"/etc/xdg", priority);
-+	    addXdgConfigPrefix(dir+"/xdg", priority);
- 	    addXdgDataPrefix(dir+"/share", priority);
- 	}
+@@ -1557,7 +1558,7 @@ bool KStandardDirs::addCustomized(KConfi
+             for (QStringList::ConstIterator it = list.begin(); it != list.end(); it++)
+             {
+                 addPrefix(*it, priority);
+-                addXdgConfigPrefix(*it+"/etc/xdg", priority);
++                addXdgConfigPrefix(*it+"/xdg", priority);
+                 addXdgDataPrefix(*it+"/share", priority);
+             }
+             // If there are no prefixes defined, check if there is a directory
+@@ -1566,7 +1567,7 @@ bool KStandardDirs::addCustomized(KConfi
+             {
+                 QString dir = profileDirsPrefix + profile;
+                 addPrefix(dir, priority);
+-                addXdgConfigPrefix(dir+"/etc/xdg", priority);
++                addXdgConfigPrefix(dir+"/xdg", priority);
+                 addXdgDataPrefix(dir+"/share", priority);
+             }
  
