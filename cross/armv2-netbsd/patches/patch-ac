@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/07/13 21:39:13 bjh21 Exp $
+--- gcc/configure.in.orig	Mon Jul  3 22:35:18 2000
++++ gcc/configure.in	Mon Jul  3 23:36:36 2000
+@@ -504,6 +504,15 @@
+ 		tmake_file=arm/t-semiaof
+ 		fixincludes=Makefile.in # There is nothing to fix
+ 		;;
++	armv2-*-netbsd*)
++		tm_file=arm/netbsd26.h
++		xm_file=arm/xm-netbsd.h
++		tmake_file=t-netbsd
++		extra_parts="crtbegin.o crtend.o"
++		# On NetBSD, the headers are already okay, except for math.h.
++		fixincludes=fixinc.wrap
++		gas=yes
++		;;
+ 	arm*-*-netbsd*)
+ 		tm_file=arm/netbsd.h
+ 		xm_file=arm/xm-netbsd.h
+@@ -2338,6 +2347,7 @@
+ 		# On NetBSD, the headers are already okay, except for math.h.
+ 		fixincludes=fixinc.wrap
+ 		tmake_file=t-netbsd
++		xmake_file=none
+ 		;;
+ 	powerpc-*-eabiaix*)
+ 		tm_file=rs6000/eabiaix.h

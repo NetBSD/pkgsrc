@@ -1,0 +1,5 @@
+$NetBSD: md5,v 1.1.1.1 2000/07/13 21:39:13 bjh21 Exp $
+
+MD5 (binutils-2.10.tar.gz) = 4feaad7d856509d9f8844f21a0a9e4b7
+MD5 (egcs-1.1.1.tar.gz) = 0b3f0e856dcbb2241c183081fc7271af
+MD5 (egcs-1.1.1-NetBSD-19980104.diff.gz) = 8c4d952d999ead62f6604948c65c2454
