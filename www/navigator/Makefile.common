@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2001/07/23 19:01:49 tron Exp $
+# $NetBSD: Makefile.common,v 1.42 2001/09/14 01:00:24 abs Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -70,7 +70,7 @@ VENDOR_NAME=	Linux 2.2
 DEPENDS+=	ns-flash>4.0:../../graphics/ns-flash
 .endif
 #
-.elif (${MACHINE_ARCH} == "sparc")
+.elif (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "sparc64")
 .if !exists(/emul/sunos/usr/lib/ld.so)
 IGNORE=	"${PKGNAME} requires SunOS libraries - see compat_sunos(8)"
 .endif
@@ -117,7 +117,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-ONLY_FOR_PLATFORM= *-*-alpha *-*-i386 *-*-powerpc *-*-sparc
+ONLY_FOR_PLATFORM= *-*-alpha *-*-i386 *-*-powerpc *-*-sparc *-*-sparc64
 CATEGORIES=	www
 NS_NAME=	${BINNAME}-${NS_VERS}
 PKGNAME?=	${BINNAME}-${NS_VERS}
@@ -185,7 +185,7 @@ do-install:
 	${RM} -f ${PREFIX}/bin/${BINNAME}
 	${LN} -sf ${NS_NAME} ${PREFIX}/bin/${BINNAME}
 
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc"
+.if ${PLIST_ARCH} == "sunos-sparc"
 	# Bizarre magic to handle the NIS and DNS versions. Make DNS default.
 	@${SED} -e 's#MOZILLA_HOME/netscape#MOZILLA_HOME/netscape_nis#g' \
 	    <${WRKDIR}/${BINNAME}.sh >${WRKDIR}/${BINNAME}_nis.sh
