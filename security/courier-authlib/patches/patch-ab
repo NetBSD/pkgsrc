@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2005/02/18 22:12:43 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2005/03/18 20:20:48 jlam Exp $
 
---- configure.orig	2005-02-13 06:26:31.000000000 -0500
+--- configure.orig	2005-02-13 11:26:31.000000000 +0000
 +++ configure
+@@ -23766,7 +23766,7 @@ done
+ test -n "$PG_CONFIG" || PG_CONFIG="pg_config"
+ 
+ 
+-PGSQL_LIBS="-lpq"
++test -z "$PGSQL_LIBS" && PGSQL_LIBS="-lpq"
+ 
+ # Check whether --with-pgsql-libs or --without-pgsql-libs was given.
+ if test "${with_pgsql_libs+set}" = set; then
 @@ -25547,7 +25547,7 @@ rm -f authdaemonrc.h authldaprc.h authmy
  
  result=""
