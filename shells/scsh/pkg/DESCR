@@ -13,13 +13,3 @@ variety of existing Scheme code can be used.
 
 The underlying Scheme implementation is a virtual machine for compact
 byte code.
-
-The name of the installed program is "scsh", the manpage is scsh(1),
-other documentation is in (/usr/pkg/)lib/scsh/doc
-
-To load slib, install slib into (/usr/pkg/)lib/slib and run 
-(load "slib-init.scm") 
-in scsh. It requires no additional setup (paths or such).
-
-The emacs interface is in the original distribution in emacs/. For
-documentation see doc/user-guide.txt.

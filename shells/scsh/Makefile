@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2001/02/27 19:37:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/04/12 21:29:50 jtb Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/07/15 15:00:30 cracauer Exp 
 #
 
 DISTNAME=		scsh-0.5.2
+PKGNAME=		scsh-0.5.2nb1
 CATEGORIES=		shells lang
 MASTER_SITES=		ftp://ftp-swiss.ai.mit.edu/pub/su/scsh/
 
