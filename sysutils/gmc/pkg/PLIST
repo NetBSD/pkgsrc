@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/07/15 13:21:37 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/08/17 18:28:41 rh Exp $
 bin/gmc
 bin/mc
 bin/mcedit
@@ -68,12 +68,16 @@ man/man1/mcedit.1
 man/man8/mcserv.8
 share/idl/FileManager.idl
 share/idl/Makefile.in
+share/gnome/help/gmc/C/topic.dat
+share/locale/ca/LC_MESSAGES/mc.mo
 share/locale/cs/LC_MESSAGES/mc.mo
 share/locale/da/LC_MESSAGES/mc.mo
 share/locale/de/LC_MESSAGES/mc.mo
 share/locale/es/LC_MESSAGES/mc.mo
 share/locale/es_ES/LC_MESSAGES/mc.mo
+share/locale/fi/LC_MESSAGES/mc.mo
 share/locale/fr/LC_MESSAGES/mc.mo
+share/locale/hu/LC_MESSAGES/mc.mo
 share/locale/it/LC_MESSAGES/mc.mo
 share/locale/ja/LC_MESSAGES/mc.mo
 share/locale/ko/LC_MESSAGES/mc.mo
@@ -81,6 +85,8 @@ share/locale/no/LC_MESSAGES/mc.mo
 share/locale/pl/LC_MESSAGES/mc.mo
 share/locale/ro/LC_MESSAGES/mc.mo
 share/locale/ru/LC_MESSAGES/mc.mo
+share/locale/wa/LC_MESSAGES/mc.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/mc.mo
 share/mime-info/mc.keys
 share/pixmaps/mc/directory.xpm
 share/pixmaps/mc/gnome-application-encapsulated_postscript.png
@@ -98,6 +104,7 @@ share/pixmaps/mc/gnome-audio-x-pn-realaudio.png
 share/pixmaps/mc/gnome-audio-x-voc.png
 share/pixmaps/mc/gnome-audio-x-wav.png
 share/pixmaps/mc/i-zipdisk.png
+share/pixmaps/mc/i-zipdisk2.png
 share/pixmaps/mc/gnome-audio.png
 share/pixmaps/mc/gnome-compressed.png
 share/pixmaps/mc/gnome-core.png
@@ -151,6 +158,9 @@ share/pixmaps/mc/i-symlink.png
 share/pixmaps/mc/makefile.xpm
 share/pixmaps/mc/sound.xpm
 share/pixmaps/mc/trash.xpm
+@dirrm share/gnome/help/gmc/C/images
+@dirrm share/gnome/help/gmc/C
+@dirrm share/gnome/help/gmc
 @dirrm share/pixmaps/mc
 @dirrm lib/mc/term
 @dirrm lib/mc/syntax
