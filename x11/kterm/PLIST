@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/03 04:17:45 jschauma Exp $
 bin/kterm
 lib/X11/app-defaults/KTerm
-man/cat1/kterm.0
+${IMAKE_MAN_DIR}/kterm.${IMAKE_MANNEWSUFFIX}

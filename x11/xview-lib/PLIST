@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/04/10 04:49:58 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/03/03 04:17:26 jschauma Exp $
 include/bitmaps/1x1
 include/bitmaps/2x2
 include/bitmaps/black
@@ -529,7 +529,7 @@ lib/libxview.so.3.2
 lib/text_extras_menu
 lib/textswrc
 lib/ttyswrc
-man/cat1/xview.0
+${IMAKE_MAN_DIR}/xview.${IMAKE_MANNEWSUFFIX}
 @dirrm lib/help
 @dirrm include/xview_private
 @dirrm include/xview

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2001/02/17 17:07:16 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/03 04:17:33 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/07 19:47:09 max Exp
 #
 
 DISTNAME=	xmascot2.5p2
 PKGNAME=        xmascot-2.5p2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://cclub.tutcc.tut.ac.jp/pub/xmascot/
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:59 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/03 04:17:40 jschauma Exp $
 bin/xcolors
 lib/X11/app-defaults/Xcolors
-man/cat1/xcolors.0
+${IMAKE_MAN_DIR}/xcolors.${IMAKE_MANNEWSUFFIX}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2002/12/28 07:58:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.25 2003/03/03 04:17:46 jschauma Exp $
 
 DISTNAME=		XF86Setup-3.3.6
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		.tar.bz2
