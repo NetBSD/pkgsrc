@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.208 2002/10/08 14:52:52 taya Exp $
+$NetBSD: CHANGES,v 1.209 2002/10/08 15:44:49 abs Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3158,3 +3158,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated koffice to 1.2 [martti 2002-10-08]
 	Updated netcat to 1.10nb1 [abs 2002-10-08]
 	Updated galeon to 1.2.6 [taya 2002-10-08]
+	Updated pkgchk to 1.34 [abs 2002-10-08]
