@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2475 2003/06/10 07:04:22 seb Exp $
+$NetBSD: CHANGES,v 1.2476 2003/06/10 09:58:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2400,4 +2400,23 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tkpasman to 2.2a [jmmv 2003-06-09]
 	Added pkg_install-info-4.5 [seb 2003-06-09]
 	Updated glib2 to 2.2.2 [jmmv 2003-06-09]
+	Updated abcde to 2.1.4 [wiz 2003-06-10]
+	Updated apg to 2.1.0 [wiz 2003-06-10]
+	Updated asp2php to 0.76.17 [wiz 2003-06-10]
 	Updated pkg_install-info to 4.5nb1 [seb 2003-06-10]
+	Updated calamaris to 2.58 [wiz 2003-06-10]
+	Updated cronolog to 1.6.2 [wiz 2003-06-10]
+	Updated ctwm to 3.6 [wiz 2003-06-10]
+	Updated db4 to 4.1.25 [wiz 2003-06-10]
+	Updated py-bsddb3 to 4.1.1nb2 [wiz 2003-06-10]
+	Updated subversion-base to 0.23.0nb1 [wiz 2003-06-10]
+	Updated subversion-python to 0.23.0nb1 [wiz 2003-06-10]
+	Updated subversion to 0.23.0nb1 [wiz 2003-06-10]
+	Updated bogofilter to 0.11.1.3nb1 [wiz 2003-06-10]
+	Updated prayer to 1.0.5nb2 [wiz 2003-06-10]
+	Updated sendmail to 8.12.9nb4 [wiz 2003-06-10]
+	Updated spamprobe to 0.8bnb1 [wiz 2003-06-10]
+	Updated dc_gui to 0.66nb2 [wiz 2003-06-10]
+	Updated dctc to 0.84.1nb2 [wiz 2003-06-10]
+	Updated cfengine2 to 2.0.7p3nb1 [wiz 2003-06-10]
+	Updated ap2-subversion to 0.23.0nb1 [wiz 2003-06-10]
