@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.251 2002/06/20 20:15:46 jlam Exp $
+# $NetBSD: Packages.txt,v 1.252 2002/06/25 21:21:44 agc Exp $
 ###########################################################################
 
 			==========================
@@ -391,7 +391,7 @@ policy:
     WRKOBJDIR?=             /usr/tmp/pkgsrc   # build here instead of in pkgsrc
     BSDSRCDIR=              /usr/src
     BSDXSRCDIR=             /usr/xsrc         # for x11/xervers
-    OBJHOST?=               yes               # use work.`hostname`
+    OBJHOSTNAME?=           yes               # use work.`hostname`
     BATCH=                  yes               # required for bulk builds 
     FAILOVER_FETCH=         yes               # insist on the correct checksum
     PKG_DEVELOPER?=         yes
