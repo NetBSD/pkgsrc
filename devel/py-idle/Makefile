@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:33:27 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/08/04 08:18:58 drochner Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-idle-0
@@ -11,9 +11,6 @@ COMMENT=	IDLE - The Integrated DeveLopment Environment for Python
 USE_X11=	yes
 USE_BUILDLINK2=	yes
 
-EXTRACT_ELEMENTS=	${PYSUBDIR}/Tools/idle/*
-
-PYTHON_PATCH_SCRIPTS= ${WRKSRC}/Tools/idle/idle.py
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 PY_PATCHPLIST=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
@@ -24,6 +21,17 @@ do-patch:
 	for f in ${PATCHDIR}/patch-*;do \
 	${PATCH} --batch <$$f || true; \
 	done)
+
+#
+# With Python-2.3, the Idle code is part of the base library.
+# We just install a wrapper script. Also, threads are required now.
+#
+PYTHON_VERSIONS_ACCEPTED=	20 20pth 21 21pth 22 22pth 23pth
+.include "../../lang/python/extension.mk"
+.if ${PYPKGPREFIX} != "py23pth"
+
+EXTRACT_ELEMENTS=	${PYSUBDIR}/Tools/idle/*
+PYTHON_PATCH_SCRIPTS= ${WRKSRC}/Tools/idle/idle.py
 
 do-build:
 	${PYTHONBIN} ${LOCALBASE}/${PYLIB}/compileall.py ${WRKSRC}/Tools/idle
@@ -39,7 +47,19 @@ do-install:
 	(cd ${PREFIX}; ${FIND} -d ${PYSITELIB}/idle -type d -print | \
 		${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
-.include "../../lang/python/extension.mk"
+.else # py23pth
+
+EXTRACT_ELEMENTS=	${PYSUBDIR}/Tools/scripts/idle
+PYTHON_PATCH_SCRIPTS= ${WRKSRC}/Tools/scripts/idle
+NO_BUILD=	yes
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/Tools/scripts/idle \
+		${PREFIX}/bin/idle${PYVERSSUFFIX}
+	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
+
+.endif # py23pth
+
 .include "../../lang/python/srcdist.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/py-Tk/buildlink2.mk"
