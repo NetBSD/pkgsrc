@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1999/09/25 04:06:42 mrg Exp $
+
+--- libidu/walker.c.orig	Thu Jul 18 06:43:41 1996
++++ libidu/walker.c	Sat Sep 25 13:36:51 1999
+@@ -116,6 +116,8 @@
+ 	continue;
+ 
+       flink = get_link_from_dirent (dirent, dir_link);
++      if (flink == 0)
++	break;
+       if (!(flink->fl_flags & FL_PRUNE))
+ 	walk_flink (flink, sub_dirs_vec);
+     }
