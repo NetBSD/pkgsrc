@@ -1,8 +1,6 @@
-#! @WRAPPER_SHELL@
+# $NetBSD: arg-pp-mipspro-cc,v 1.1 2005/01/18 17:25:13 jlam Exp $
 #
-# $NetBSD: wrapper.sh,v 1.5 2005/01/18 17:25:13 jlam Exp $
-#
-# Copyright (c) 2004 The NetBSD Foundation, Inc.
+# Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -36,84 +34,15 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-arg_pp="@_WRAP_ARG_PP@"
-arg_pp_main="@_WRAP_ARG_PP_MAIN@"
-arg_source="@_WRAP_ARG_SOURCE@"
-buildcmd="@_WRAP_BUILDCMD@"
-cache="@_WRAP_CACHE@"
-cache_header="@_WRAP_CACHE_HEADER@"
-cache_body="@_WRAP_CACHE_BODY@"
-cache_footer="@_WRAP_CACHE_FOOTER@"
-cleanup="@_WRAP_CLEANUP@"
-cmd_sink="@_WRAP_CMD_SINK@"
-logic="@_WRAP_LOGIC@"
-reorderlibs="@_WRAP_REORDERLIBS@"
-shell_lib="@_WRAP_SHELL_LIB@"
-scan="@_WRAP_SCAN@"
-transform="@_WRAP_TRANSFORM@"
-transform_sed="@_WRAP_TRANSFORM_SED@"
-wrapperlog="${WRAPPER_LOG-@_WRAP_LOG@}"
-skip_transform="${WRAPPER_SKIP_TRANSFORM-@_WRAP_SKIP_TRANSFORM@}"
-debug="${WRAPPER_DEBUG-@WRAPPER_DEBUG@}"
-append_extra_args=yes
-
-cat="@CAT@"  
-echo="@ECHO@"
-expr="@EXPR@"
-sed="@SED@"
-test="@TEST@"
-Xsed="$sed -e 1s/^X//"
-
-. $shell_lib
-
-updatecache=${WRAPPER_UPDATE_CACHE-@WRAPPER_UPDATE_CACHE@}
-reorder=${WRAPPER_REORDER-no}
-
-case $debug in
-yes)	debug_log="msg_log" ;;
-*)	debug_log=":" ;;
-esac
-
-original_cmd="$0 $@"
-msg_log $wrapperlog "[*]" $original_cmd
-
-cmd="@WRAPPEE@"
-do_transform=yes
-init_queue argbuf
-init_queue cmdbuf
-
-. $scan
-
-case $append_extra_args in
-yes)
-	$debug_log $wrapperlog "    (wrapper.sh) append args: @_WRAP_EXTRA_ARGS@"
-	set -- "$@" @_WRAP_EXTRA_ARGS@
-	;;
-*)
+case $arg in
+######################################################################
+# MIPSpro uses -LANG:<feature> and -LIST:<feature> as knobs for the
+# compiler, but we don't want them to be confused with the usual
+# -Ldir options, so just pass them verbatim onward.
+######################################################################
+-LANG:*|-LIST:*)
+	do_transform=no
+	argok=yes
+	argmatch=yes
 	;;
 esac
-
-. $arg_source
-. $logic
-. $cmd_sink
-
-# Reorder the libraries so that the library dependencies are correct.
-case $reorder in
-yes)
-	if $test -n "$libs"; then
-		. $reorderlibs
-	fi
-	;;
-esac
-
-cmd="$cmd $libs"
-
-@_WRAP_ENV@
-
-msg_log $wrapperlog "<.>" $cmd
-eval $cmd
-wrapper_result=$?
-
-. $cleanup
-
-exit ${wrapper_result}
