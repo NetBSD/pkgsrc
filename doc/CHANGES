@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9429 2005/03/05 13:50:03 wiz Exp $
+$NetBSD: CHANGES,v 1.9430 2005/03/05 14:23:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1282,3 +1282,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated eb to 4.1.3 [uebayasi 2005-03-05]
 	Updated skk to 12.2.0nb1 [uebayasi 2005-03-05]
 	Updated pango to 1.8.1 [wiz 2005-03-05]
+	Updated curl to 7.13.1 [wiz 2005-03-05]
