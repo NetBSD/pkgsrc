@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/31 19:16:53 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/03 11:51:45 salo Exp $
 bin/hatari
-share/hatari/authors.txt
+share/doc/hatari/authors.txt
+share/doc/hatari/gpl.txt
+share/doc/hatari/readme.txt
 share/hatari/font8.bmp
-share/hatari/gpl.txt
-share/hatari/readme.txt
 @dirrm share/hatari
+@dirrm share/doc/hatari
