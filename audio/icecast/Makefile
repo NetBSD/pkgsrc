@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/02/14 17:21:32 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2004/02/19 11:51:48 wiz Exp $
 #
 
 DISTNAME=		icecast-2.0.0
@@ -10,7 +10,7 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.icecast.org/
 COMMENT=		Live streaming audio server
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
@@ -53,10 +53,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/conf/icecast.xml ${EGDIR} \
 	)
 
-.include "../../audio/libvorbis/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../textproc/libxslt/buildlink2.mk"
-.include "../../www/curl/buildlink2.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
