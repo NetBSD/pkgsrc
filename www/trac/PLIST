@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/03/29 18:34:09 epg Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/04/20 23:22:26 epg Exp $
 bin/trac-admin
 ${PYSITELIB}/trac/About.py
 ${PYSITELIB}/trac/About.pyc
@@ -21,9 +21,6 @@ ${PYSITELIB}/trac/Log.pyo
 ${PYSITELIB}/trac/Module.py
 ${PYSITELIB}/trac/Module.pyc
 ${PYSITELIB}/trac/Module.pyo
-${PYSITELIB}/trac/PermissionError.py
-${PYSITELIB}/trac/PermissionError.pyc
-${PYSITELIB}/trac/PermissionError.pyo
 ${PYSITELIB}/trac/Report.py
 ${PYSITELIB}/trac/Report.pyc
 ${PYSITELIB}/trac/Report.pyo
@@ -75,6 +72,8 @@ ${PYSITELIB}/trac/wikimacros/__init__.pyo
 ${PYSITELIB}/trac/wikimacros/rst.py
 ${PYSITELIB}/trac/wikimacros/rst.pyc
 ${PYSITELIB}/trac/wikimacros/rst.pyo
+share/examples/trac/trac-post-commit-hook
+share/examples/trac/trac-pre-commit-hook
 share/trac/cgi-bin/trac.cgi
 share/trac/htdocs/README
 share/trac/htdocs/changeset.png
@@ -133,12 +132,8 @@ share/trac/wiki-default/TracTickets
 share/trac/wiki-default/TracTimeline
 share/trac/wiki-default/TracWiki
 share/trac/wiki-default/WikiFormatting
-share/trac/wiki-default/WikiHtml
-share/trac/wiki-default/WikiMacros
 share/trac/wiki-default/WikiNewPage
 share/trac/wiki-default/WikiPageNames
-share/trac/wiki-default/WikiProcessors
-share/trac/wiki-default/WikiRestructuredText
 share/trac/wiki-default/WikiStart
 @dirrm share/trac/wiki-default
 @dirrm share/trac/templates
@@ -146,5 +141,6 @@ share/trac/wiki-default/WikiStart
 @dirrm share/trac/htdocs
 @dirrm share/trac/cgi-bin
 @dirrm share/trac
+@dirrm share/examples/trac
 @dirrm ${PYSITELIB}/trac/wikimacros
 @dirrm ${PYSITELIB}/trac
