@@ -1,37 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/09/07 22:13:06 tron Exp $
-
---- Makefile.orig	Mon Feb 22 15:42:45 1999
-+++ Makefile	Mon Feb 22 15:43:55 1999
-@@ -1,8 +1,8 @@
--INSTALLDIR = /usr/local/share/emacs/fonts
-+INSTALLDIR = ${PREFIX}/lib/X11/fonts/intlfonts
- 
--BDFTOPCF = bdftopcf
--MKFONTDIR = mkfontdir
--COMPRESS =
-+BDFTOPCF = ${PREFIX}/bin/bdftopcf
-+MKFONTDIR = ${PREFIX}/bin/mkfontdir
-+COMPRESS = gzip
- 
- SUBDIRS =	European Asian Chinese Japanese Ethiopic Misc
- SUBDIRS_X =	Chinese-X Japanese-X Korean-X
-@@ -73,9 +73,6 @@
- 	@if [ -d $@ -a ! -f making.all ] ; then \
- 	  echo "Building ${INSTALLDIR}/fonts.dir..." ; \
- 	  cd ${INSTALLDIR}; ${MKFONTDIR} ; \
--	  echo "-----------------------------------------------------------------------" ; \
--	  echo "Please read README for how to inform your X server about the new fonts." ; \
--	  echo "-----------------------------------------------------------------------" ; \
- 	else true ; fi
- 
- all:
-@@ -85,9 +82,6 @@
- 	@rm -f making.all
- 	echo "Building ${INSTALLDIR}/fonts.dir..."
- 	cd ${INSTALLDIR}; $(MKFONTDIR)
--	@echo "-----------------------------------------------------------------------"
--	@echo "Please read README for how to inform your X server about the new fonts."
--	@echo "-----------------------------------------------------------------------"
- 
- clean:
- 	rm -fr ${SUBDIRS} ${SUBDIRS_X} ${SUBDIRS_BIG}
+$NetBSD: patch-aa,v 1.2 2000/04/07 03:51:55 itojun Exp $
+--- Makefile.in.orig	Wed Dec  8 15:25:45 1999
++++ Makefile.in	Fri Apr  7 12:18:15 2000
+@@ -55,8 +55,16 @@
+ 	fi
+ 	@if [ "${COMPRESS}" != "no" ] ; then \
+ 	  echo "Compressing PCF fonts by ${COMPRESS}..." ; \
+-	  rm -f ${fontdir}/*.pcf.* ; \
+-	  ${COMPRESS} ${fontdir}/*.pcf ; \
++	  for dirs in ${SUBDIRS} ${SUBDIRS_X} ${SUBDIRS_BIG}; do \
++	    if [ -d ${srcdir}/$${dirs} ] ; then \
++	      for f in ${srcdir}/$${dirs}/*.bdf; do \
++		FONT=`basename $${f} .bdf`.pcf ; \
++		echo "Compressing ${fontdir}/$${FONT}..." ; \
++		rm -f ${fontdir}/$${FONT}.* ; \
++		$(COMPRESS) ${fontdir}/$${FONT} ; \
++	      done ; \
++	    else true; fi ; \
++	  done; \
+ 	fi
+ 	@echo "Making ${fontdir}/fonts.dir..."
+ 	$(MKFONTDIR) ${fontdir}
