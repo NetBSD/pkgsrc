@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
+
+--- configure.in.orig	Mon Feb  3 17:02:01 1997
++++ configure.in	Tue Dec 21 15:46:54 1999
+@@ -18,7 +18,7 @@
+ AC_PROG_GCC_TRADITIONAL
+ AC_FUNC_SETPGRP
+ AC_TYPE_SIGNAL
+-AC_CHECK_FUNCS(bzero tiocnotty getdtablesize)
++AC_CHECK_FUNCS(bzero setsid getdtablesize)
+ 
+ AC_CHECK_FUNC(dbm_open, , [DBMLIB="-ldbm"])
+ 

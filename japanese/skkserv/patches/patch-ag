@@ -1,0 +1,114 @@
+$NetBSD: patch-ag,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
+
+--- jisyo-tools/skkdic-expr.c.orig	Tue Dec 17 14:51:28 1996
++++ jisyo-tools/skkdic-expr.c	Tue Dec 21 20:37:29 1999
+@@ -78,41 +78,62 @@
+ 	}
+ }
+ 
++#if !defined(dbm_pagfno) || defined(DBM_SUFFIX)
++#define NEW_DB
++#endif
++
+ /* 作業用データベースファイルを削除
+    file_name には content が格納される */
+ static void db_remove_files()
+ {
+-    char pag_name[256];
+-    char dir_name[256];
++    char db_name[256];
+ 
+     db_remove_file(file_name);
+-    sprintf(pag_name, "%s.pag", file_name);
+-    db_remove_file(pag_name);
+-    sprintf(dir_name, "%s.dir", file_name);
+-    db_remove_file(dir_name);
++#ifdef NEW_DB
++    sprintf(db_name, "%s.db", file_name);
++    db_remove_file(db_name);
++#else
++    sprintf(db_name, "%s.pag", file_name);
++    db_remove_file(db_name);
++    sprintf(db_name, "%s.dir", file_name);
++    db_remove_file(db_name);
++#endif
+ 
+     if (okurigana_flag) {
+ 	db_remove_file(okuri_head_name);
+-	sprintf(pag_name, "%s.pag", okuri_head_name);
+-	db_remove_file(pag_name);
+-	sprintf(dir_name, "%s.dir", okuri_head_name);
+-	db_remove_file(dir_name);
++#ifdef NEW_DB
++	sprintf(db_name, "%s.db", okuri_head_name);
++	db_remove_file(db_name);
++#else
++	sprintf(db_name, "%s.pag", okuri_head_name);
++	db_remove_file(db_name);
++	sprintf(db_name, "%s.dir", okuri_head_name);
++	db_remove_file(db_name);
++#endif
+ 
+ 	db_remove_file(okuri_tail_name);
+-	sprintf(pag_name, "%s.pag", okuri_tail_name);
+-	db_remove_file(pag_name);
+-	sprintf(dir_name, "%s.dir", okuri_tail_name);
+-	db_remove_file(dir_name);
++#ifdef NEW_DB
++	sprintf(db_name, "%s.db", okuri_tail_name);
++	db_remove_file(db_name);
++#else
++	sprintf(db_name, "%s.pag", okuri_tail_name);
++	db_remove_file(db_name);
++	sprintf(db_name, "%s.dir", okuri_tail_name);
++	db_remove_file(db_name);
++#endif
+     }
+ }
+ 
+ /* データベースファイルを作成 */
+-static void db_make_files()
++static void db_make_files(tmpdir)
++	char *tmpdir;
+ {
+-    sprintf(file_name, "/tmp/skkjisyo.%d", getpid());
++    int pid = getpid();
++
++    sprintf(file_name, "%s/skkjisyo.%d", tmpdir, pid);
+     if (okurigana_flag) {
+-	sprintf(okuri_head_name, "/tmp/skkhead.%d", getpid());
+-	sprintf(okuri_tail_name, "/tmp/skktail.%d", getpid());
++	sprintf(okuri_head_name, "%s/skkhead.%d", tmpdir, pid);
++	sprintf(okuri_tail_name, "%s/skktail.%d", tmpdir, pid);
+     }
+     
+     db_remove_files();
+@@ -698,7 +719,7 @@
+     for (key = dbm_firstkey(db); key.dptr !=  NULL;  key = dbm_nextkey(db)) {
+ 	content = dbm_fetch(db, key);
+ 	for(i = 0; i < key.dsize; ++ i)
+-	    putc((key.dptr)[i], output);
++	    putc(((char *) key.dptr)[i], output);
+ 	putc(' ', output);
+ 	fseek(dbcontent, getpos(content.dptr), 0);
+ 	db_gets(kanji, BLEN, dbcontent);
+@@ -716,7 +737,7 @@
+ 	    if (entry.dptr != NULL) continue;
+ 
+ 	    for(i = 0; i < key.dsize; ++ i)
+-		putc((key.dptr)[i], output);
++		putc(((char *) key.dptr)[i], output);
+ 	    putc(' ', output);
+ 	    putc('/', output);
+ 	    okuri_type_out(&key, output);
+@@ -775,9 +796,8 @@
+ 	exit(1);
+     }
+ 
+-    sprintf(file_name, "%s/skkjisyo.%d", tmpdir, getpid());
+     set_signal_handler();
+-    db_make_files();
++    db_make_files(tmpdir);
+     
+     negate = 0;
+     for (; i < argc; ++ i) {
