@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2000/08/18 22:46:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2000/10/15 14:10:19 itojun Exp $
 
-DISTNAME=	snapshot-20000531
-PKGNAME=	postfix-20000531
+DISTNAME=	snapshot-20001005
+PKGNAME=	postfix-20001005
 CATEGORIES=	mail
 MASTER_SITES=	ftp://postfix.cloud9.net/experimental/
 
-PATCHFILES=	postfix-20000531snap-v6-20000814b.diff.gz
+PATCHFILES=	postfix-20001005snap-v6-20001011a.diff.gz
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCH_DIST_STRIP=	-p1
+PATCH_DIST_STRIP+=	-p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.postfix.org/
@@ -35,14 +35,14 @@ ALL_TARGET=	#empty
 
 pre-configure:
 	${CP} ${WRKSRC}/conf/main.cf ${WRKSRC}/conf/main.cf.dist
-	${CP} ${WRKSRC}/util/sys_defs.h ${WRKSRC}/util/sys_defs.h.dist
+	${CP} ${WRKSRC}/src/util/sys_defs.h ${WRKSRC}/src/util/sys_defs.h.dist
 	${CP} ${WRKSRC}/INSTALL.sh ${WRKSRC}/INSTALL.sh.dist
 	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
 	    < ${WRKSRC}/conf/main.cf.dist \
 	    > ${WRKSRC}/conf/main.cf
 	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
-	    < ${WRKSRC}/util/sys_defs.h.dist \
-	    > ${WRKSRC}/util/sys_defs.h
+	    < ${WRKSRC}/src/util/sys_defs.h.dist \
+	    > ${WRKSRC}/src/util/sys_defs.h
 	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
 	    < ${WRKSRC}/INSTALL.sh.dist \
 	    > ${WRKSRC}/INSTALL.sh
