@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2004/01/12 15:50:22 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2004/01/13 07:12:01 jlam Exp $
 
 .if !defined(PERL5_BUILDLINK2_MK)
 PERL5_BUILDLINK2_MK=  # defined
@@ -33,8 +33,8 @@ _PERL5_SITEVAR.INSTALLSITEMAN3DIR=	installsiteman3dir
 _PERL5_SITEVAR.SITELIBEXP=		sitelibexp
 _PERL5_SITEVAR.SITEARCHEXP=		sitearchexp
 
-.if !defined(_PERL5_SITEPREFIX)
-.  if exists(${PERL5})
+.if exists(${PERL5})
+.  if !defined(_PERL5_SITEPREFIX)
 _PERL5_PREFIX!=		\
 	eval `${PERL5} -V:prefix 2>/dev/null`; ${ECHO} $$prefix
 _PERL5_SITEPREFIX!=	\
@@ -60,11 +60,11 @@ PERL5_SUB_INSTALLSCRIPT!=	\
 	${SED} -e "s,^${_PERL5_PREFIX}/,,"
 MAKEFLAGS+=	PERL5_SUB_INSTALLSCRIPT="${PERL5_SUB_INSTALLSCRIPT}"
 .  endif
-.endif
 
 BUILDLINK_FILES.perl=							\
 	${PERL5_SUB_INSTALLARCHLIB}/CORE/*				\
 	${PERL5_SUB_INSTALLARCHLIB}/auto/DynaLoader/DynaLoader.a
+.endif
 
 BUILDLINK_TARGETS+=	perl-buildlink
 
