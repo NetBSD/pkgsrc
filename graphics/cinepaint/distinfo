@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/30 15:35:34 adam Exp $
+$NetBSD: distinfo,v 1.2 2005/01/17 13:38:37 adam Exp $
 
-SHA1 (cinepaint-0.18-3.tar.gz) = 4ca4c5d4b8427d1ca2831df140b67e34e013abe5
-Size (cinepaint-0.18-3.tar.gz) = 6975799 bytes
+SHA1 (cinepaint-0.19-0.tar.gz) = ce3f3cb9cc26bacd8a9b99b6059caad967e59297
+Size (cinepaint-0.19-0.tar.gz) = 7218293 bytes
+SHA1 (patch-aa) = 2259896756f3371589b4a83655e4c118d0247302
+SHA1 (patch-ab) = 1e03ffb0deab12b229f2604083bd3515a80747ac

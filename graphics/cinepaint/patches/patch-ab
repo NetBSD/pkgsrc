@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2005/01/17 13:38:37 adam Exp $
+
+--- plug-ins/tiff/tiff_plug_in.h.orig	2005-01-17 13:47:42.000000000 +0000
++++ plug-ins/tiff/tiff_plug_in.h
+@@ -143,9 +143,6 @@
+   #endif
+ #endif
+ 
+-#if (!__unix__ && !__APPLE__)
+-typedef struct tiff TIFF;
+-#endif
+ 
+ #ifndef COMPRESSION_JP2000
+ #define COMPRESSION_JP2000 34712
