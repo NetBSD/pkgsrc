@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.9 2003/09/26 12:04:46 salo Exp $
+
+Fixes remotely exploitable buffer overflow vulnerability. A malicious host can
+craft a harmful ASX header, and trick MPlayer into executing arbitrary code
+upon parsing that header.
+
+--- libmpdemux/asf_streaming.c.orig	2003-08-15 21:13:23.000000000 +0200
++++ libmpdemux/asf_streaming.c	2003-09-26 13:27:04.000000000 +0200
+@@ -502,11 +502,11 @@
+ 			return NULL;
+ 		}
+ 		http_set_uri( http_hdr, server_url->url );
+-		sprintf( str, "Host: %s:%d", server_url->hostname, server_url->port );
++		sprintf( str, "Host: %.220s:%d", server_url->hostname, server_url->port );
+ 		url_free( server_url );
+ 	} else {
+ 		http_set_uri( http_hdr, url->file );
+-		sprintf( str, "Host: %s:%d", url->hostname, url->port );
++		sprintf( str, "Host: %.220s:%d", url->hostname, url->port );
+ 	}
+ 	
+ 	http_set_field( http_hdr, str );
