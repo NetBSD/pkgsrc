@@ -1,0 +1,24 @@
+$NetBSD: patch-ae,v 1.1 2004/01/12 15:19:28 wennmach Exp $
+
+--- draw.c.orig	2003-05-14 16:45:35.000000000 +0900
++++ draw.c	2003-11-25 08:03:15.000000000 +0900
+@@ -4498,7 +4498,7 @@
+ 	struct ctrl *cp;
+ 	char *fontname = NULL;
+ 	int i;
+-	static char etab[3][20] = { "iso2022jp", "gb2312", "ksc5601"};
++	static char etab[3][20] = { "iso-2022-jp", "gb2312", "ksc5601"};
+ 	static char rtab[3][20] = { "jisx208", "gb2312", "ksc5601"};
+ 	static char prefix[3][20] = { "\033$B", "\033$A", "\033$(C"};
+ 	char buf16[1024], *p16;
+@@ -4529,8 +4529,8 @@
+ 		}
+ 		if (i == 3) return NULL; /* cannot find codeset */
+ 		sprintf(buf16, "%s%s\0", prefix[i], p);  	
+-		if (!icv[i]) icv[i] = iconv_open("UTF8", etab[i]);
+-		if (icv[i] < 0){
++		if (icv[i] == (iconv_t)0) icv[i] = iconv_open("UTF-8", etab[i]);
++		if (icv[i] == (iconv_t)-1){
+ 			fprintf(stderr, "your iconv doesn't support %s\n", etab[i]);
+ 			return NULL;
+ 		}
