@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.5 1998/11/12 23:36:24 frueauf Exp $
+
 --- lib/Makefile.orig	Thu Jun 26 14:07:56 1997
 +++ lib/Makefile	Mon Sep 14 20:23:58 1998
 @@ -13,7 +13,8 @@
