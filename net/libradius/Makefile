@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/11/10 09:10:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/13 08:10:52 manu Exp $
 #
 
 DISTNAME=	libradius-linux-20040827
 PKGNAME=	${DISTNAME:S/-linux//}
-PKGREVISION= 	1
+PKGREVISION= 	2
 CATEGORIES=	net
 MASTER_SITES=	http://portal-to-web.de/tacacs/
 
