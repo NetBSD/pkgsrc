@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/02/14 00:54:45 grant Exp $
+# $NetBSD: Makefile,v 1.30 2004/02/14 16:17:02 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -17,11 +17,11 @@ CONFLICTS=		gettext<=0.10.35
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		# defined
-USE_LIBTOOL=		# defined
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-included-gettext
 
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
