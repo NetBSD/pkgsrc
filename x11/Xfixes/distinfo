@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/16 08:40:51 recht Exp $
+$NetBSD: distinfo,v 1.2 2004/08/05 22:18:38 recht Exp $
 
-SHA1 (libXfixes-2.0.0.tar.bz2) = c8707b9059ffe4b85d1940168c25a7d0edbee48e
-Size (libXfixes-2.0.0.tar.bz2) = 186049 bytes
+SHA1 (libXfixes-2.0.1.tar.bz2) = a484b9721b6f61df5245c7e34ef1370c3d91357f
+Size (libXfixes-2.0.1.tar.bz2) = 186336 bytes
