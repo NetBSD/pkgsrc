@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.2 1999/09/14 02:19:15 jlam Exp $
+$NetBSD: patch-ad,v 1.3 1999/09/17 00:06:21 jlam Exp $
 
 --- src/config/platforms/netbsd.mk.orig	Fri Jul  9 15:13:57 1999
-+++ src/config/platforms/netbsd.mk	Sat Sep 11 11:17:45 1999
++++ src/config/platforms/netbsd.mk	Thu Sep 16 11:50:53 1999
 @@ -30,8 +30,37 @@
  ## compiler/loader options are used.  It will probably also be used
  ## in constructing the name object file destination directory.
@@ -41,7 +41,7 @@ $NetBSD: patch-ad,v 1.2 1999/09/14 02:19:15 jlam Exp $
  
  # Define tools
  CC		= gcc
-@@ -65,17 +94,20 @@
+@@ -65,24 +94,27 @@
  endif
  
  # Includes
@@ -64,6 +64,14 @@ $NetBSD: patch-ad,v 1.2 1999/09/14 02:19:15 jlam Exp $
  # Shared library flags
  MKSHLIB			= $(LD) $(DSO_LDOPTS) -soname $(@:$(OBJDIR)/%.so=%.so)
  
+ # Which links can this platform create.  Define one or
+ # both of these options.
+ UNIX_CAN_BUILD_DYNAMIC=1
+-UNIX_CAN_BUILD_STATIC=1
++UNIX_CAN_BUILD_STATIC=0		# 1.4.x can't seem to build statically
+ 
+ # Compiler options for static and dynamic linkage
+ DL_LIBS			= 
 @@ -90,5 +122,12 @@
  
  ABI_NATIVE	= unix
