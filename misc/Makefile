@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.49 1999/07/16 10:34:20 agc Exp $
+#	$NetBSD: Makefile,v 1.50 1999/09/15 03:24:18 jlam Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += astrolog
@@ -23,6 +23,7 @@
     SUBDIR += gnome-pim
     SUBDIR += gnome-utils
     SUBDIR += gnucash
+    SUBDIR += gperiodic
     SUBDIR += ical
     SUBDIR += jive
     SUBDIR += kdeutils
@@ -44,6 +45,7 @@
     SUBDIR += pty-redir
     SUBDIR += py-mxDateTime
     SUBDIR += py-readline
+    SUBDIR += quicklist
     SUBDIR += qterm
     SUBDIR += remind
     SUBDIR += rpm
