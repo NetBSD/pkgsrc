@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.8 2001/10/05 12:18:58 wiz Exp $
+$NetBSD: patch-ab,v 1.9 2001/10/07 13:08:32 rh Exp $
 
---- configure.in.orig	Fri Oct  5 10:52:05 2001
-+++ configure.in	Fri Oct  5 13:59:51 2001
-@@ -244,43 +244,18 @@
+--- configure.orig	Fri Oct  5 02:52:29 2001
++++ configure
+@@ -8685,43 +8685,18 @@
+ 	PO=""
+ fi
  
- dnl List of supported locales
- dnl -------------------------
 -supported_locales="cs de es et fr gl it ja ko nl no pt ru sv tr fi hr el pl ro da zh_TW.Big5 zh_CN sk bg hu"
 +supported_locales="cs de es et fr gl it ja ko nl no pt ru sv tr fi hr el pl ro da zh_CN sk bg hu"
  supported_wprefs_locales="pt hr fr ko ja cs zh_TW.Big5 es zh_CN fi it ru de bg hu sk"
@@ -54,8 +54,8 @@ $NetBSD: patch-ab,v 1.8 2001/10/05 12:18:58 wiz Exp $
 +	WINGSMOFILES="$WINGSMOFILES $lang.mo"
  done
  
- 
-@@ -706,8 +681,8 @@
+ case $host_os in
+@@ -11752,8 +11727,8 @@
      fi
  fi
  
@@ -64,5 +64,5 @@ $NetBSD: patch-ab,v 1.8 2001/10/05 12:18:58 wiz Exp $
 +LIBRARY_SEARCH_PATH="-L${BUILDLINK_DIR}/lib -L${BUILDLINK_X11_DIR}/lib"
 +HEADER_SEARCH_PATH="-I${BUILDLINK_DIR}/include -I${BUILDLINK_X11_DIR}/include"
  
- AC_SUBST(LIBRARY_SEARCH_PATH)
- AC_SUBST(HEADER_SEARCH_PATH)
+ for ac_header in stdlib.h
+ do
