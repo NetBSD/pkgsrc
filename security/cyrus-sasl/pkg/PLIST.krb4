@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.krb4,v 1.1 2000/10/25 08:00:24 rh Exp $
+lib/sasl/libkerberos4.a
+lib/sasl/libkerberos4.la
+lib/sasl/libkerberos4.so.1.15
