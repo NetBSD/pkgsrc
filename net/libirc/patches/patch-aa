@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/05 15:24:51 agc Exp $
+
+--- configure	2000/01/05 14:58:45	1.1
++++ configure	2000/01/05 14:59:52
+@@ -1372,6 +1372,7 @@
+ 
+ 
+ 
++if false; then
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -1529,6 +1530,7 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
++fi
+ 
+ 
+ 

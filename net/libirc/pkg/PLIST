@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/05 15:24:51 agc Exp $
+lib/libirc.a
+lib/libirc.so.0.0
+include/btypes.h
+include/cmd.h
+include/irc_core.h
+include/macros.h
+include/ctcp.h
