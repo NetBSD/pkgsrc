@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 1999/12/02 03:32:21 itojun Exp $
+--- uucplock.c	1998/08/23 04:50:17	1.1
++++ uucplock.c	1999/12/02 02:58:31	1.2
+@@ -55,7 +55,7 @@
+ 	char tbuf[sizeof(_PATH_LOCKDIRNAME) + MAXNAMLEN];
+ 	off_t lseek();
+ 
+-	(void)sprintf(tbuf, _PATH_LOCKDIRNAME, ttyname);
++	(void)snprintf(tbuf, sizeof(tbuf), _PATH_LOCKDIRNAME, ttyname);
+ 	fd = open(tbuf, O_RDWR|O_CREAT|O_EXCL, 0664);
+ 	if (fd < 0) {
+ 		/*
+@@ -104,6 +104,6 @@
+ {
+ 	char tbuf[sizeof(_PATH_LOCKDIRNAME) + MAXNAMLEN];
+ 
+-	(void)sprintf(tbuf, _PATH_LOCKDIRNAME, ttyname);
++	(void)snprintf(tbuf, sizeof(tbuf), _PATH_LOCKDIRNAME, ttyname);
+ 	return(unlink(tbuf));
+ }
