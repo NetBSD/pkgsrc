@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2003/03/29 12:42:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2003/04/08 09:15:18 wiz Exp $
 
 DISTNAME=	raproxy3.0b1
 PKGNAME=	ra-pna-proxy-3.0b1
 WRKSRC=		${WRKDIR}/raproxy
 CATEGORIES=	net
-MASTER_SITES=	http://docs.real.com/proxykit/
+MASTER_SITES=	http://ftp.teledanmark.no/pub/networking/firewall/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://service.real.com/firewall/fdev.html
