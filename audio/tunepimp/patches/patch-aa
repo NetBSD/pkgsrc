@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/08/21 11:17:55 markd Exp $
+
+--- lib/threads/posix/thread.h.orig	2004-03-25 21:20:15.000000000 +1200
++++ lib/threads/posix/thread.h
+@@ -28,6 +28,7 @@
+ #define __THREAD_H_
+ 
+ #include <pthread.h>
++#include <signal.h>
+ #include "semaphore.h"
+ 
+ #include "defs.h"
