@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.501 2003/04/26 07:05:43 jmmv Exp $
+$NetBSD: TODO,v 1.502 2003/04/26 08:35:58 seb Exp $
 
 Suggested new packages
 ======================
@@ -97,7 +97,6 @@ Suggested package updates
 	o canna-3.6p3 [pkg/20208]
 	o cervisia-2.0
 	o cfengine-1.6.5 [pkg/19459|seb]
-	o cfengine-2.0.6
 	o clisp-2.30
 	o conserver-7.2.6 [pkg/20966]
 	o courier-0.42.0
