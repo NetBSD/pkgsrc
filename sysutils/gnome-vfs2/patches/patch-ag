@@ -1,16 +1,7 @@
-$NetBSD: patch-ag,v 1.2 2003/02/14 20:10:05 jmmv Exp $
+$NetBSD: patch-ag,v 1.3 2003/02/15 16:29:32 jmmv Exp $
 
 --- modules/Makefile.in.orig	Mon Jan 20 20:46:17 2003
 +++ modules/Makefile.in
-@@ -208,7 +208,7 @@ EXTRA_DIST = \
- @BUILD_CDEMENU_MODULE_TRUE@CDEMENU_LTLIBS = @BUILD_CDEMENU_MODULE_TRUE@libcdemenu-desktop.la
- @BUILD_CDEMENU_MODULE_FALSE@CDEMENU_LTLIBS = 
- 
--module_flags = -export_dynamic -avoid-version -module
-+module_flags = -export_dynamic -avoid-version -module -L../libgnomevfs/.libs
- modulesdir = $(libdir)/gnome-vfs-2.0/modules
- 
- modules_LTLIBRARIES = \
 @@ -232,7 +232,7 @@ modules_LTLIBRARIES = \
  # Not currently supported
  #	libnfs.la
