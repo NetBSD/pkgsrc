@@ -1,0 +1,9 @@
+Ntesla is a program to help design a Tesla Coil.  It provides a series
+of design screens where you fill in proposed specifications for the
+various components of the design.  It performs all the necessary
+calculations for resonant frequency, capacitor size, primary taps,
+etc, and helps you come up with a balanced, optimal design.  Some help
+text is built-in, and there is also a reference to the tesla archives
+on funet.
+
+Author:         sfalco@worldnet.att.net (Steven A. Falco)
