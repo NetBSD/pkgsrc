@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.174 2004/10/19 23:16:47 ben Exp $
+# $NetBSD: bsd.prefs.mk,v 1.175 2004/10/20 05:42:55 martti Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -120,7 +120,7 @@ LOWER_OPSYS?=		linux
 MACHINE_ARCH:=          ${MACHINE_ARCH:C/i.86/i386/}
 MACHINE_ARCH:=		${MACHINE_ARCH:C/ppc/powerpc/}
 .  if !defined(LOWER_ARCH)
-LOWER_ARCH!=		${UNAME} -m | sed -e 's/i.86/i386/' -e 's/ppc/powerpc'
+LOWER_ARCH!=		${UNAME} -m | sed -e 's/i.86/i386/' -e 's/ppc/powerpc/'
 .  endif # !defined(LOWER_ARCH)
 .  if ${MACHINE_ARCH} == "unknown" || ${MACHINE_ARCH} == ""
 MACHINE_ARCH=		${LOWER_ARCH}
