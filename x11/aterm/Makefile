@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/14 02:30:00 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/14 08:29:24 hubertf Exp $
 #
 
 DISTNAME=	aterm-0.4.0
@@ -9,7 +9,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://aterm.sourceforge.net/
 
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS=	--enable-background-image \
+CONFIGURE_ARGS+=--enable-background-image \
 		--enable-transparency \
 		--enable-fading \
 		--enable-graphics \
