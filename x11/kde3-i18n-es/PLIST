@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/03/09 13:36:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/04/20 14:38:38 markd Exp $
 share/doc/kde/HTML/es/KRegExpEditor/common
 share/doc/kde/HTML/es/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/es/KRegExpEditor/index.docbook
@@ -355,6 +355,7 @@ share/doc/kde/HTML/es/kdeprint/theory.docbook
 share/doc/kde/HTML/es/kdesu/common
 share/doc/kde/HTML/es/kdesu/index.cache.bz2
 share/doc/kde/HTML/es/kdesu/index.docbook
+share/doc/kde/HTML/es/kdevelop/tip.database
 share/doc/kde/HTML/es/kdf/common
 share/doc/kde/HTML/es/kdf/index.cache.bz2
 share/doc/kde/HTML/es/kdf/index.docbook
@@ -991,24 +992,6 @@ share/kde/locale/es/LC_MESSAGES/crashesplugin.mo
 share/kde/locale/es/LC_MESSAGES/cupsdconf.mo
 share/kde/locale/es/LC_MESSAGES/cvsservice.mo
 share/kde/locale/es/LC_MESSAGES/dcopservice.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kde-i18n.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdeaccessibility.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdeaddons.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdeadmin.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdeartwork.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdebase.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdeedu.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdegames.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdegraphics.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdelibs.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdemultimedia.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdenetwork.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdepim.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdesdk.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdetoys.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdeutils.mo
-share/kde/locale/es/LC_MESSAGES/desktop_kdevelop.mo
-share/kde/locale/es/LC_MESSAGES/desktop_quanta.mo
 share/kde/locale/es/LC_MESSAGES/devicesapplet.mo
 share/kde/locale/es/LC_MESSAGES/dirfilterplugin.mo
 share/kde/locale/es/LC_MESSAGES/display.mo
@@ -1171,6 +1154,7 @@ share/kde/locale/es/LC_MESSAGES/kdesktop.mo
 share/kde/locale/es/LC_MESSAGES/kdessh.mo
 share/kde/locale/es/LC_MESSAGES/kdesu.mo
 share/kde/locale/es/LC_MESSAGES/kdesud.mo
+share/kde/locale/es/LC_MESSAGES/kdevelop.mo
 share/kde/locale/es/LC_MESSAGES/kdevtipofday.mo
 share/kde/locale/es/LC_MESSAGES/kdf.mo
 share/kde/locale/es/LC_MESSAGES/kdgantt.mo
@@ -1233,6 +1217,7 @@ share/kde/locale/es/LC_MESSAGES/kghostview.mo
 share/kde/locale/es/LC_MESSAGES/kgoldrunner.mo
 share/kde/locale/es/LC_MESSAGES/kgpg.mo
 share/kde/locale/es/LC_MESSAGES/kgpgcertmanager.mo
+share/kde/locale/es/LC_MESSAGES/kgreet_classic.mo
 share/kde/locale/es/LC_MESSAGES/khangman.mo
 share/kde/locale/es/LC_MESSAGES/khelpcenter.mo
 share/kde/locale/es/LC_MESSAGES/khexedit.mo
@@ -1288,6 +1273,10 @@ share/kde/locale/es/LC_MESSAGES/kmenuedit.mo
 share/kde/locale/es/LC_MESSAGES/kmessedwords.mo
 share/kde/locale/es/LC_MESSAGES/kmid.mo
 share/kde/locale/es/LC_MESSAGES/kmidi.mo
+share/kde/locale/es/LC_MESSAGES/kmilo_generic.mo
+share/kde/locale/es/LC_MESSAGES/kmilo_kvaio.mo
+share/kde/locale/es/LC_MESSAGES/kmilo_powerbook.mo
+share/kde/locale/es/LC_MESSAGES/kmilod.mo
 share/kde/locale/es/LC_MESSAGES/kmines.mo
 share/kde/locale/es/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/es/LC_MESSAGES/kmix.mo
@@ -1305,6 +1294,7 @@ share/kde/locale/es/LC_MESSAGES/knotify.mo
 share/kde/locale/es/LC_MESSAGES/kodo.mo
 share/kde/locale/es/LC_MESSAGES/kolf.mo
 share/kde/locale/es/LC_MESSAGES/kolourpicker.mo
+share/kde/locale/es/LC_MESSAGES/kommander.mo
 share/kde/locale/es/LC_MESSAGES/kompare.mo
 share/kde/locale/es/LC_MESSAGES/konq_smbmounterplugin.mo
 share/kde/locale/es/LC_MESSAGES/konqsidebar_mediaplayer.mo
@@ -1596,6 +1586,7 @@ share/kde/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kdvi
 @dirrm share/doc/kde/HTML/es/kdm
 @dirrm share/doc/kde/HTML/es/kdf
+@dirrm share/doc/kde/HTML/es/kdevelop
 @dirrm share/doc/kde/HTML/es/kdesu
 @dirrm share/doc/kde/HTML/es/kdeprint
 @dirrm share/doc/kde/HTML/es/kdebugdialog
@@ -1675,7 +1666,7 @@ share/kde/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kaddressbook
 @dirrm share/doc/kde/HTML/es/kaboodle
 @dirrm share/doc/kde/HTML/es/flashkard
-@dirrm share/doc/kde/HTML/es/common
+@comment dirrm share/doc/kde/HTML/es/common
 @dirrm share/doc/kde/HTML/es/atlantik
 @dirrm share/doc/kde/HTML/es/artsbuilder
 @dirrm share/doc/kde/HTML/es/ark
