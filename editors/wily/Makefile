@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/05/12 11:40:30 agc Exp $
+# $NetBSD: Makefile,v 1.9 2000/05/15 12:16:24 agc Exp $
 #
 
 DISTNAME=	wily-0.13.41
@@ -11,5 +11,7 @@ HOMEPAGE=	http://www.psrg.cs.usyd.edu.au/~gary/wily/
 
 GNU_CONFIGURE=	yes
 USE_X11=	yes
+
+DEPENDS+=	libXgFonts-1.0:../../fonts/Xg
 
 .include "../../mk/bsd.pkg.mk"
