@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/16 22:53:28 thorpej Exp $
+bin/httperf
+man/man1/httperf.1
