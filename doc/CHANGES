@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7039 2004/08/30 14:46:26 jmmv Exp $
+$NetBSD: CHANGES,v 1.7040 2004/08/30 16:02:34 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4108,3 +4108,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated clamsmtp to 0.7 [xtraeme 2004-08-30]
 	Updated safecat to 1.12 [schmonz 2004-08-30]
 	Updated ht to 0.8.0 [jmmv 2004-08-30]
+	Updated tkpasman to 2.2anb4 [jmmv 2004-08-30]
