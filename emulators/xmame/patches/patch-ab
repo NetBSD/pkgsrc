@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.23 2004/04/02 17:45:51 kristerw Exp $
+
+--- src/unix/video-drivers/x11_window.c.orig	2004-03-27 02:15:43.000000000 +0100
++++ src/unix/video-drivers/x11_window.c	2004-03-27 02:17:58.000000000 +0100
+@@ -912,8 +912,8 @@
+ 					/* else we have failed clean up before retrying without MITSHM */
+ 					shmdt ((char *) scaled_buffer_ptr);
+ 					scaled_buffer_ptr = NULL;
+-					XDestroyImage (image);
+-					image = NULL;
++					XFree(xvimage);
++					xvimage = NULL;
+ 				}
+ 			}
+ 			fprintf (stderr_file, "Failed\nReverting to normal XPutImage() mode\n");
