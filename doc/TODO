@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2856 2005/01/07 11:52:12 wiz Exp $
+$NetBSD: TODO,v 1.2857 2005/01/07 12:37:27 markd Exp $
 
 Suggested new packages
 ======================
@@ -561,7 +561,6 @@ Suggested package updates
 	o guile-oops-1.0.2
 	o guile-pg-0.24
 	o guile-www-1.1.1
-	o gwenview-1.1.7a [tech-pkg on 2005/01/06]
 	o hackbot-2.21
 	o hashcash-1.14
 	o haskell-mode-1.45
