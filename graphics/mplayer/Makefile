@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/01/14 17:43:43 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2002/01/21 15:24:49 zuntum Exp $
 
 DISTNAME=	MPlayer-0.60pre1
 PKGNAME=	mplayer-0.60.0.1
@@ -32,6 +32,10 @@ CONFIGURE_ARGS+=	--with-extraincdir="${BUILDLINK_DIR}/include"
 CONFIGURE_ARGS+=	--with-extralibdir="${LOCALBASE}/lib"
 CONFIGURE_ARGS+=	--with-win32libdir="${LOCALBASE}/lib/win32"
 CONFIGURE_ARGS+=	--disable-css
+
+# The configure script attempts to execute compiled programs in /tmp, but
+# /tmp may be mounted with noexec flag set...
+CONFIGURE_ENV+=		TMPDIR=${WRKDIR}
 
 post-configure:
 	${CP} ${FILESDIR}/vcd_read_nbsd.c ${WRKSRC}/libmpdemux/vcd_read_nbsd.h
