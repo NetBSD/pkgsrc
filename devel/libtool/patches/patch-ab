@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.26 2002/12/23 19:32:13 jschauma Exp $
+$NetBSD: patch-ab,v 1.27 2002/12/25 19:35:22 jschauma Exp $
 
 --- ltmain.sh.orig	Thu Jun 14 00:06:50 2001
-+++ ltmain.sh	Mon Dec 23 13:23:11 2002
++++ ltmain.sh	Wed Dec 25 14:29:20 2002
 @@ -211,6 +211,8 @@
    --mode) prevopt="--mode" prev=mode ;;
    --mode=*) mode="$optarg" ;;
@@ -11,6 +11,15 @@ $NetBSD: patch-ab,v 1.26 2002/12/23 19:32:13 jschauma Exp $
    --quiet | --silent)
      show=:
      ;;
+@@ -256,7 +258,7 @@
+   # Infer the operation mode.
+   if test -z "$mode"; then
+     case $nonopt in
+-    *cc | *++ | gcc* | *-gcc*)
++    *cc | *++ | gcc* | *-gcc* | *CC)
+       mode=link
+       for arg
+       do
 @@ -494,11 +496,21 @@
      # command doesn't match the default compiler.
      if test -n "$available_tags" && test -z "$tagname"; then
