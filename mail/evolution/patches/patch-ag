@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
+
+--- calendar/cal-client/Makefile.in.orig	Tue Mar 13 21:13:06 2001
++++ calendar/cal-client/Makefile.in
+@@ -212,7 +212,7 @@
+ client_test_INCLUDES =  	$(INCLUDES)				-DG_LOG_DOMAIN=\"client-test\"
+ 
+ 
+-client_test_LDADD =  	$(BONOBO_VFS_GNOME_LIBS)					$(EXTRA_GNOME_LIBS)						-lunicode							$(top_builddir)/calendar/cal-util/libcal-util.la		$(top_builddir)/libversit/libversit.la				$(top_builddir)/libical/src/libical/libical.la			libcal-client.la
++client_test_LDADD =  	$(BONOBO_VFS_GNOME_LIBS)					$(EXTRA_GNOME_LIBS)						-lunicode							$(top_builddir)/calendar/cal-util/libcal-util.la		$(top_builddir)/libversit/libversit.la	-L`pwd` -lical			libcal-client.la
+ 
+ 
+ BUILT_SOURCES = $(CORBA_GENERATED)
+@@ -360,6 +360,8 @@
+ maintainer-clean-noinstPROGRAMS:
+ 
+ client-test: $(client_test_OBJECTS) $(client_test_DEPENDENCIES)
++	cp $(top_builddir)/libical/src/libical/.libs/libical.a .
++	-cp $(top_builddir)/libical/src/libical/.libs/libical.so* .
+ 	@rm -f client-test
+ 	$(LINK) $(client_test_LDFLAGS) $(client_test_OBJECTS) $(client_test_LDADD) $(LIBS)
+ 

@@ -1,0 +1,11 @@
+  Evolution is the integrated mail, calendar and address book distributed
+suite from Ximian, Inc.  Evolution represents the next step forward in
+GNOME applications.  The tools which make up Evolution are tightly
+integrated with one another and act as a seamless personal
+information-management tool.
+
+  Note that Evolution is still beta.  This means it may delete all of your
+mail if you give it the chance!  The message composer currently does not
+work under NetBSD.  Also, please note that Evolution uses a huge number of
+resources.  Make sure you increase user and kernel limits for open files
+and processes if you run into trouble!
