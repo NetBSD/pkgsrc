@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.5 1999/02/24 07:47:14 sommerfe Exp $
+
+--- coda-src/venus/fso_cfscalls2.cc~	Wed Oct  7 20:11:22 1998
++++ coda-src/venus/fso_cfscalls2.cc	Wed Feb 24 01:52:18 1999
+@@ -538,6 +538,10 @@
+ static char cputype [] = "i386";
+ static char systype [] = "i386_nbsd1";
+ #endif /* i386 */
++#ifdef arm32
++static char cputype [] = "arm32";
++static char systype [] = "arm32_nbsd1";
++#endif /* arm32 */
+ #endif /* __NetBSD__ */
+ 
+ #ifdef __FreeBSD__
