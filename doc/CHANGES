@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6743 2004/07/31 17:15:50 itojun Exp $
+$NetBSD: CHANGES,v 1.6744 2004/07/31 20:52:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3660,9 +3660,9 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated glib2 to 2.4.5 [jmmv 2004-07-30]
 	Updated xpkgwedge to 1.12 [xtraeme 2004-07-31]
 	Updated opera7 to 7.53 [jdolecek 2004-07-31]
-	Added suse91-aspell-9.1 [jdolecek 2004-07-31]
-	Added suse91-freetype2-9.1 [jdolecek 2004-07-31]
-	Added suse91-libjpeg-9.1 [jdolecek 2004-07-31]
-	Added suse91-libpng-9.1 [jdolecek 2004-07-31]
-	Added suse91-openmotif-9.1 [jdolecek 2004-07-31]
+	Added suse91_aspell-9.1 [jdolecek 2004-07-31]
+	Added suse91_freetype2-9.1 [jdolecek 2004-07-31]
+	Added suse91_libjpeg-9.1 [jdolecek 2004-07-31]
+	Added suse91_libpng-9.1 [jdolecek 2004-07-31]
+	Added suse91_openmotif-9.1 [jdolecek 2004-07-31]
 	Updated nsd to 2.1.2 [itojun 2004-07-31]
