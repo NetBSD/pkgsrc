@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/13 08:26:04 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/09/12 19:03:15 kristerw Exp $
 ${FOR_xemacs214}${EMACS_LISPPREFIX}/flim/auto-autoloads.el
 ${FOR_xemacs214}${EMACS_LISPPREFIX}/flim/auto-autoloads.elc
 ${FOR_xemacs214}${EMACS_LISPPREFIX}/flim/custom-load.el
@@ -33,6 +33,8 @@ ${EMACS_LISPPREFIX}/flim/md5.el
 ${EMACS_LISPPREFIX}/flim/md5.elc
 ${EMACS_LISPPREFIX}/flim/mel-b-ccl.el
 ${EMACS_LISPPREFIX}/flim/mel-b-ccl.elc
+${EMACS_LISPPREFIX}/flim/mel-b-el.el
+${EMACS_LISPPREFIX}/flim/mel-b-el.elc
 ${EMACS_LISPPREFIX}/flim/mel-g.el
 ${EMACS_LISPPREFIX}/flim/mel-g.elc
 ${EMACS_LISPPREFIX}/flim/mel-q-ccl.el
@@ -79,8 +81,6 @@ ${EMACS_LISPPREFIX}/flim/sha1.el
 ${EMACS_LISPPREFIX}/flim/sha1.elc
 ${EMACS_LISPPREFIX}/flim/smtp.el
 ${EMACS_LISPPREFIX}/flim/smtp.elc
-${EMACS_LISPPREFIX}/flim/smtpmail.el
-${EMACS_LISPPREFIX}/flim/smtpmail.elc
 ${EMACS_LISPPREFIX}/flim/std11.el
 ${EMACS_LISPPREFIX}/flim/std11.elc
 @dirrm ${EMACS_LISPPREFIX}/flim
