@@ -1,0 +1,12 @@
+--- Makefile.in-orig	Wed May 27 00:28:42 1998
++++ Makefile.in	Tue Jul 21 12:27:41 1998
+@@ -103,9 +103,6 @@
+ # The developers are curious to know.  Don't be concerned if this fails.
+ .notify: build/minor-version-number
+ 	touch .notify
+-	-echo Another 0.`cat $(srcdir)/build/minor-version-number` \
+-		installation. \
+-		| mail scheme-48-notifications@martigny.ai.mit.edu
+ 
+ $(VM): c/main.o $(OBJS) $(UNIX_OBJS) $(LIBOBJS)
+ 	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ c/main.o $(OBJS) $(UNIX_OBJS) \

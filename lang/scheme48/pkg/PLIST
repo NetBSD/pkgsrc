@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1997/11/06 10:00:46 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/07/21 10:50:48 frueauf Exp $
 bin/scheme48
 include/scheme48.h
 man/man1/scheme48.1.gz
@@ -60,11 +60,11 @@ lib/scheme48/big/socket.scm
 lib/scheme48/big/sort.scm
 lib/scheme48/big/strong.scm
 lib/scheme48/opt/analyze.scm
-lib/scheme48/opt/expand.scm
 lib/scheme48/opt/flatten.scm
 lib/scheme48/opt/inline.scm
 lib/scheme48/opt/sort.scm
 lib/scheme48/opt/tst.scm
+lib/scheme48/opt/usage.scm
 lib/scheme48/misc/annotate.scm
 lib/scheme48/misc/doodl.scm
 lib/scheme48/misc/either.scm
@@ -83,7 +83,6 @@ lib/scheme48/misc/require.scm
 lib/scheme48/misc/separate.scm
 lib/scheme48/misc/shift-reset.scm
 lib/scheme48/misc/sicp.scm
-lib/scheme48/misc/slib-init.scm
 lib/scheme48/misc/static.scm
 lib/scheme48/misc/syscall.scm
 lib/scheme48/misc/test-doodl.scm
