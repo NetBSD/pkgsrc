@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3172 2003/08/31 11:14:23 wiz Exp $
+$NetBSD: CHANGES,v 1.3173 2003/08/31 11:29:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3425,3 +3425,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libnet to 1.0.1bnb2 [seb 2003-08-31]
 	Updated bsdgrep to 20030831 [cjep 2003-08-31]
 	Updated asc to 1.13.8.0 [wiz 2003-08-31]
+	Updated pcre to 4.4 [wiz 2003-08-31]
