@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/05/09 17:06:07 recht Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/02/24 20:17:37 drochner Exp $
 bin/pylupdate${PYVERSSUFFIX}
 bin/pyuic${PYVERSSUFFIX}
 ${PYSITELIB}/pyqtconfig.py
@@ -79,6 +79,7 @@ share/sip${PYVERSSUFFIX}/qt/qmemarray.sip
 share/sip${PYVERSSUFFIX}/qt/qmenubar.sip
 share/sip${PYVERSSUFFIX}/qt/qmenudata.sip
 share/sip${PYVERSSUFFIX}/qt/qmessagebox.sip
+share/sip${PYVERSSUFFIX}/qt/qmetaobject.sip
 share/sip${PYVERSSUFFIX}/qt/qmime.sip
 share/sip${PYVERSSUFFIX}/qt/qmotifplusstyle.sip
 share/sip${PYVERSSUFFIX}/qt/qmotifstyle.sip
@@ -161,6 +162,7 @@ share/sip${PYVERSSUFFIX}/qt/qtranslator.sip
 share/sip${PYVERSSUFFIX}/qt/qurl.sip
 share/sip${PYVERSSUFFIX}/qt/qurlinfo.sip
 share/sip${PYVERSSUFFIX}/qt/qurloperator.sip
+share/sip${PYVERSSUFFIX}/qt/quuid.sip
 share/sip${PYVERSSUFFIX}/qt/qvalidator.sip
 share/sip${PYVERSSUFFIX}/qt/qvaluelist.sip
 share/sip${PYVERSSUFFIX}/qt/qvariant.sip
