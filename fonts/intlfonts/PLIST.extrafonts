@@ -1,4 +1,17 @@
-@comment $NetBSD: PLIST.extrafonts,v 1.1 2001/10/31 22:54:33 zuntum Exp $
+@comment $NetBSD: PLIST.extrafonts,v 1.2 2002/07/24 02:32:17 hubertf Exp $
+lib/X11/fonts/intlfonts/bdf/cc40s.bdf
+lib/X11/fonts/intlfonts/bdf/cc48s.bdf
+lib/X11/fonts/intlfonts/bdf/cns1-40.bdf
+lib/X11/fonts/intlfonts/bdf/cns2-40.bdf
+lib/X11/fonts/intlfonts/bdf/cns3-40.bdf
+lib/X11/fonts/intlfonts/bdf/cns4-40.bdf
+lib/X11/fonts/intlfonts/bdf/cns5-40.bdf
+lib/X11/fonts/intlfonts/bdf/cns6-40.bdf
+lib/X11/fonts/intlfonts/bdf/cns7-40.bdf
+lib/X11/fonts/intlfonts/bdf/j83-32.bdf
+lib/X11/fonts/intlfonts/bdf/j83-48.bdf
+lib/X11/fonts/intlfonts/bdf/jksp40.bdf
+lib/X11/fonts/intlfonts/bdf/lt1-40-etl.bdf
 lib/X11/fonts/intlfonts/cc40s.pcf.gz
 lib/X11/fonts/intlfonts/cc48s.pcf.gz
 lib/X11/fonts/intlfonts/cns1-40.pcf.gz
