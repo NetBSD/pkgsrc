@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/06/12 02:50:46 grant Exp $
+
+--- sccsfile.cc.orig	2003-05-30 03:48:25.000000000 +1000
++++ sccsfile.cc
+@@ -447,7 +447,7 @@ sccs_file::read_delta() {
+ 
+ 			start = plinebuf->c_str() + 3;
+ 			do {
+-				char *end = strchr(start, ' ');
++				char *end = (char *) strchr(start, ' ');
+ 				if (end != NULL) {
+ 					*end++ = '\0';
+ 				}
