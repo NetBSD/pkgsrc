@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/05/14 17:13:21 rh Exp $
+$NetBSD: distinfo,v 1.2 2002/03/29 19:44:54 fredb Exp $
 
 SHA1 (medusa-0.5.1.tar.gz) = 8e3a1ae286c9502bceda3f3fa5f2b3559440d8d0
 Size (medusa-0.5.1.tar.gz) = 384482 bytes
@@ -12,3 +12,6 @@ SHA1 (patch-ag) = 9c4ffb05d2108dbacfbf34704c6a81fc06fc6d37
 SHA1 (patch-ah) = aabf5bbb2d0ea1872b76517b94ae65130147ff0c
 SHA1 (patch-ai) = 9c63685f52e62cebd027e7dfdbbb6526b0cd7b6b
 SHA1 (patch-aj) = 38cd6ebdcddf8fd956f6664df20236ec66797ae4
+SHA1 (patch-ak) = 643b9fdaac6cb189754e416a2fe7fe96593c812b
+SHA1 (patch-al) = 0ea2fd1a17c9ef00c4d32dc3fcd6c8044a388e49
+SHA1 (patch-am) = efa7e6cd18dec31a098834ae2a2f0bfd1ef07d77
