@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.344 1999/09/24 22:20:30 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.345 1999/09/27 17:08:43 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -241,7 +241,7 @@ EXTRACT_ELEMENTS?=
 .if defined(EXTRACT_USING_PAX)
 EXTRACT_CMD?=		(${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} ; dd if=/dev/zero bs=10k count=2) | ${PAX} -r ${EXTRACT_ELEMENTS}
 .else
-EXTRACT_CMD?=		${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | ${GTAR} xf - ${EXTRACT_ELEMENTS}
+EXTRACT_CMD?=		${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
 .endif
 
 # Figure out where the local mtree file is
