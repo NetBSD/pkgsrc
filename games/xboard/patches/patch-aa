@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/06/14 00:20:50 simonb Exp $
+
+--- Makefile.in.orig	Fri Feb 26 18:25:14 1999
++++ Makefile.in	Mon Jun 14 09:24:45 1999
+@@ -62,10 +62,10 @@
+ 
+ install: installdirs xboard zic2xpm cmail pxboard xboard.man cmail.man \
+ 		zic2xpm.man
+-	$(INSTALL_PROGRAM) -s xboard $(bindir)/xboard
+-	$(INSTALL_PROGRAM) -s zic2xpm $(bindir)/zic2xpm
+-	$(INSTALL_PROGRAM) cmail $(bindir)/cmail
+-	$(INSTALL_PROGRAM) $(srcdir)/pxboard $(bindir)/pxboard
++	$(INSTALL_PROGRAM) xboard $(bindir)/xboard
++	$(INSTALL_PROGRAM) zic2xpm $(bindir)/zic2xpm
++	$(BSD_INSTALL_SCRIPT) cmail $(bindir)/cmail
++	$(BSD_INSTALL_SCRIPT) $(srcdir)/pxboard $(bindir)/pxboard
+ 	$(INSTALL_DATA) $(srcdir)/xboard.man $(man6dir)/xboard$(man6ext)
+ 	$(INSTALL_DATA) $(srcdir)/cmail.man $(man6dir)/cmail$(man6ext)
+ 	$(INSTALL_DATA) $(srcdir)/zic2xpm.man $(man6dir)/zic2xpm$(man6ext)
