@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2004/04/27 17:16:28 tv Exp $
+$NetBSD: patch-ab,v 1.3.2.1 2004/07/13 14:12:03 agc Exp $
 
---- gnu/configure.in.orig	Sat Apr 17 07:28:06 2004
-+++ gnu/configure.in
-@@ -12,7 +12,7 @@ dnl Installation script (let it be, temp
+--- gnu/configure.in.orig	Sat Apr 17 13:28:06 2004
++++ gnu/configure.in	Sat Jul 10 19:24:37 2004
+@@ -12,7 +12,7 @@
  AC_PROG_INSTALL([e:/os2apps/autoconf/install-sh])
  
  dnl Configuration parameters
@@ -11,7 +11,24 @@ $NetBSD: patch-ab,v 1.3 2004/04/27 17:16:28 tv Exp $
  
  dnl Checks for the canonical system name
  AC_CANONICAL_HOST
-@@ -36,6 +36,7 @@ AC_FUNC_SETVBUF_REVERSED
+@@ -19,6 +19,16 @@
+ 
+ dnl Checks for programs.
+ AC_PROG_CC
++AC_DEFUN(AC_PROG_LD_GNU,
++[AC_CACHE_CHECK([if the linker ($LD) is GNU ld], ac_cv_prog_gnu_ld,
++[# I'd rather use --version here, but apparently some GNU ld's only accept -v.
++if $LD -v 2>&1 </dev/null | egrep '(GNU|with BFD)' 1>&5; then
++  ac_cv_prog_gnu_ld=yes
++else
++  ac_cv_prog_gnu_ld=no
++fi])
++])
++AC_PROG_LD_GNU
+ 
+ dnl Checks for header files.
+ AC_HEADER_STDC
+@@ -36,6 +46,7 @@
  AC_TYPE_SIGNAL
  AC_FUNC_VPRINTF
  AC_CHECK_FUNCS([getcwd min max mkdir mkdtemp rmdir fcloseall strcasecmp setpriority strdup strerror strstr strupr strlwr strtol strtoul])
@@ -19,7 +36,17 @@ $NetBSD: patch-ab,v 1.3 2004/04/27 17:16:28 tv Exp $
  
  dnl Platform-specific tuning
  PROG_EXT=
-@@ -115,7 +116,7 @@ dnl Initial setup
+@@ -68,7 +79,9 @@
+         CFLAGS="-DSUNOS -D_UNIX"
+         DLL_FLAGS="-shared -fPIC"
+         DLL_CFLAGS="-shared -fPIC"
++	if test X"$ac_cv_prog_gnu_ld" = X"yes"; then
+         LD_STRIP="gnu/stripgcc.lnk"
++	fi
+ 	;;
+ os2*)
+ 	PROG_EXT=".exe"
+@@ -115,7 +128,7 @@
  
  test -z "$CONFIG_SHELL" && CONFIG_SHELL=/bin/sh
  AC_SUBST(CONFIG_SHELL)
