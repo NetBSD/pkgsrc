@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2004/01/03 18:49:40 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/02/15 23:48:28 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gucharmap.
 #
@@ -24,6 +24,7 @@ BUILDLINK_FILES.gucharmap+=	lib/gtk-2.0/2.2.0/immodules/im-gucharmap.*
 BUILDLINK_FILES.gucharmap+=	lib/libgucharmap.*
 
 .include "../../devel/libgnomeui/buildlink2.mk"
+.include "../../devel/popt/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	gucharmap-buildlink
 
