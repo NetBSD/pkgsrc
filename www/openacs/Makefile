@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/03/13 17:37:52 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2002/04/09 09:06:22 agc Exp $
 #
 
 DISTNAME=		openacs-3.2.5
@@ -17,6 +17,8 @@ DEPENDS+=		postgresql-lib>=7.0:../../databases/postgresql-lib
 DEPENDS+=		ImageMagick>=5.3.9nb1:../../graphics/ImageMagick
 DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=		postgresql-client>=7.0:../../databases/postgresql-client
+
+IS_INTERACTIVE=	yes	# need to download distfile interactively, apparently
 
 NO_CONFIGURE=	# set
 NO_BUILD=	# set
