@@ -1,0 +1,44 @@
+$NetBSD: patch-ad,v 1.1 1999/11/05 13:52:52 abs Exp $
+--- src/misc.c.orig	Fri Nov  5 06:44:40 1999
++++ src/misc.c	Fri Nov  5 10:37:17 1999
+@@ -652,3 +652,40 @@
+ 
+ AddClassToHeap(CanonifyName(VDOMAIN)); 
+ }
++
++/*********************************************************************/
++
++AddNetworkClass(netmask)
++
++const char *netmask;
++
++{
++struct in_addr	ip,
++		nm;
++char		*sp,
++		nmbuf[maxvarsize],
++		ipbuf[maxvarsize];
++
++    /*
++     * Has to differentiate between cases such as:
++     *		192.168.101.1/24 -> 192.168.101  	and
++     *		192.168.101.1/26 -> 192.168.101.0 
++     * We still have the, um... 'interesting' Class C default Network Class
++     * set by GetNameInfo()
++     */
++
++    /* This is also a convenient method to ensure valid dotted quad */
++if (inet_aton(netmask,&nm) && inet_aton(VIPADDRESS,&ip))
++    {
++    ip.s_addr &= nm.s_addr;	/* Will not work with IPv6 */
++    strcpy(ipbuf,inet_ntoa(ip));
++
++    strcpy(nmbuf,inet_ntoa(nm));
++    while( (sp = strrchr(nmbuf,'.')) && strcmp(sp,".0") == 0 )
++	{
++	*sp = 0;
++	*strrchr(ipbuf,'.') = 0;
++	}
++    AddClassToHeap(CanonifyName(ipbuf)); 
++    }
++}

@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1 1999/11/05 13:52:52 abs Exp $
+--- src/install.c.orig	Fri Nov  5 06:44:50 1999
++++ src/install.c	Fri Nov  5 10:38:31 1999
+@@ -153,6 +153,7 @@
+                      FatalError("Redefinition of basic system variable");
+                      }
+                   strcpy(VNETMASK,value);
++		  AddNetworkClass(VNETMASK);
+                   break;
+ 
+ 
