@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/02/02 14:20:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/28 22:06:15 xtraeme Exp $
 
-DISTNAME=	X430src-1
+DISTNAME=	XFree86-4.4.0-src-1
 PKGNAME=	XFree86-man-${XF_VER}
-PKGREVISION=	1
 CATEGORIES=	misc x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
 EXTRACT_SUFX=	.tgz
@@ -11,22 +10,13 @@ MAINTAINER=	xfree86@blef.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 Manuals
 
-BUILD_DEPENDS=	imake>=4.3.0:../../x11/imake
+DEPENDS=	imake>=4.4.0:../../x11/imake
 
-USE_IMAKE=		yes
-USE_BUILDLINK2=		yes
-WRKSRC=			${WRKDIR}/xc/doc/man
-
+USE_LANGUAGES=		# empty
+NO_BUILDLINK=		# defined
 NO_XFREE86_TARGETS=	# defined
+WRKSRC=			${WRKDIR}/xc/doc/man
 INSTALL_TARGET=		install.man
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-PLIST_SUBST+=		MANPAGE_SUFFIX=${IMAKE_MANNEWSUFFIX}
-.else
-PLIST_SUBST+=		MANPAGE_SUFFIX=${IMAKE_LIBMAN_SUFFIX}
-.endif
 
 post-extract:
 	@${SED} \
