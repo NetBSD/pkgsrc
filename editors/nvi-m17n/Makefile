@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/08/02 05:11:56 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 1999/08/31 09:06:44 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.11 1999/04/17 10:51:03 itojun Exp
 
 DISTNAME=	nvi-1.79
@@ -49,7 +49,7 @@ AUTODETECT.euc-kr=kr
 AUTODETECT.iso-2022-kr=kr
 
 ENCODING+=	iso-2022-cn iso-2022-jp iso-2022-kr
-#ENCODING+=	euc-jp euc-cn euc-kr sjis big5 euc-tw hz
+ENCODING+=	euc-jp euc-cn euc-kr sjis big5 euc-tw hz
 
 post-build:
 .for encoding in ${ENCODING}
