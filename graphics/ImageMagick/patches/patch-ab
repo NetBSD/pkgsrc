@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.10 2001/01/30 13:18:52 wiz Exp $
+
+--- magick/magick.h.orig	Wed Jan 24 16:12:55 2001
++++ magick/magick.h	Tue Jan 30 13:53:37 2001
+@@ -11,8 +11,6 @@
+ /*
+   System include declarations.
+ */
+-#define _XOPEN_SOURCE  500
+-#define _POSIX_C_SOURCE  199506L
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
