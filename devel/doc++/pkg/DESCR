@@ -1,0 +1,4 @@
+DOC++ is a documentation system for C, C++ and Java generating both TeX
+output for high quality hardcopies and HTML output for sophisticated online
+browsing of your documentation. The documentation is extracted directly from
+the C/C++ header/source files or Java class files.
