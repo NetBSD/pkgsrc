@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2003/05/28 03:28:05 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/06/11 20:50:58 abs Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 BASEGS_VERS=	7.05
@@ -92,6 +92,7 @@ post-install:
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
 
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
-CFLAGS+=	-O0
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
+USE_GCC3=YES
+.  include "../../mk/gcc.buildlink2.mk"
 .endif
