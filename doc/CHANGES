@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8902 2005/01/24 19:21:48 martti Exp $
+$NetBSD: CHANGES,v 1.8903 2005/01/24 19:44:08 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -540,3 +540,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added gmfsk-0.6 [wulf 2005-01-24]
 	Updated hobbitmon to 4.0b6 [manu 2005-01-24]
 	Added squirrelmail-locales-1.4.4 [martti 2005-01-24]
+	Added nspr-4.3 [jschauma 2005-01-24]
