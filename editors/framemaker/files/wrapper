@@ -23,22 +23,6 @@ END
     fi
 fi
 
-# For some reason it crashes on 15 or 16 bit displays... not nice
-#
-if [ -z "$FM_BYPASS_DISPLAY_DEPTH_CHECK" ] ; then
-    DEPTH=`xdpyinfo | awk '/depth of root window/ {print $5}'`
-    if [ "$DEPTH" = 15 -o "$DEPTH" = 16 ]; then
-	cat << END
-ABORTING: FrameMaker does not currently work on 15 or 16 bit displays,
-	  please set your display to 8, 24, or 32 bit.
-
-	  Set the environment var 'FM_BYPASS_DISPLAY_DEPTH_CHECK' to bypass.
-
-END
-	FM_ABORT=1
-    fi
-fi
-
 # Avoid 'show one error, fix it, then run again only to see another'
 #
 if [ -n "$FM_ABORT" ];then
