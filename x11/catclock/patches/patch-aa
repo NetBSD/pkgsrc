@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/08 20:02:02 drochner Exp $
+--- imakefile.orig	Sun Dec 20 21:24:08 1992
++++ imakefile	Sat Sep  4 19:55:15 1999
+@@ -2,9 +2,9 @@
+ SRCS = xclock.c alarm.c
+ OBJS = xclock.o alarm.o
+ 
+-     MOTIF = /usr/lib/DXM
+-MOTIF_LIBS = $(MOTIF)/lib/Xm/libXm.a $(MOTIF)/lib/Xt/libXt.a
+-MOTIF_INCS = -I$(MOTIF)/lib -I$(MOTIF)/lib/Xt
++     MOTIF = ${X11BASE}
++MOTIF_LIBS = -lXm -lXt -lSM -lICE
++MOTIF_INCS = -I$(MOTIF)/include
+   INCLUDES = -I. $(MOTIF_INCS) -I$(TOP)
+    DEFINES = -DHAS_GNU_EMACS
+     CFLAGS = $(DEFINES) $(INCLUDES)
+@@ -13,7 +13,7 @@
+   SYS_LIBRARIES = -lX11 -lm
+ 
+ 
+-all:: xclock
+-
+-ComplexProgramTarget(xclock)
++all:: catclock
+ 
++ComplexProgramTarget(catclock)
++InstallAppDefaults(Catclock)
