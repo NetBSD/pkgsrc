@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1896 2004/07/04 16:38:47 minskim Exp $
+$NetBSD: TODO,v 1.1897 2004/07/04 22:42:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -329,7 +329,6 @@ Suggested package updates
 	o oss-3.99.1c
 	o p5-CGI-3.05
 	o p5-CGI-Application-3.1
-	o p5-Devel-StackTrace-1.05
 	o p5-Exception-Class-1.17
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
@@ -361,7 +360,6 @@ Suggested package updates
 	o sendfile-20010424
 	o sendmail-8.13.0 [pkgsrc-wip sendmail813]
 	o siag-3.6.0
-	o skill-4.1.1
 	o skkinput-2.06.4
 	o slib-3a1
 	o smalltalk-2.1.8
