@@ -1,22 +1,19 @@
-$NetBSD: patch-ag,v 1.1 2004/03/30 15:13:12 tv Exp $
+$NetBSD: patch-ag,v 1.2 2004/07/28 15:17:42 wiz Exp $
 
---- acinclude.m4.orig	Tue Apr 15 08:16:18 2003
-+++ acinclude.m4
-@@ -588,7 +588,7 @@ extern "C" {
+--- po/Makefile.in.in.orig	2002-06-29 15:43:03.000000000 +0200
++++ po/Makefile.in.in
+@@ -23,13 +23,13 @@ VPATH = @srcdir@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ datadir = @datadir@
+ localedir = $(datadir)/locale
+ gettextsrcdir = $(datadir)/gettext/po
  
- EOF
-         # Now generate the symbol file.
--        sed 's/^.* _\?\(.*\)$/extern char \1;/' < "$ac_nlist" >> conftest.c
-+        sed 's/^.* _\{0,1\}\(.*\)$/extern char \1;/' < "$ac_nlist" >> conftest.c
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+-mkinstalldirs = $(SHELL) `case "$(MKINSTALLDIRS)" in /*) echo "$(MKINSTALLDIRS)" ;; *) echo "$(top_builddir)/$(MKINSTALLDIRS)" ;; esac`
++mkinstalldirs = $(SHELL) `case "$(MKINSTALLDIRS)" in /*|../*) echo "$(MKINSTALLDIRS)" ;; *) echo "$(top_srcdir)/$(MKINSTALLDIRS)" ;; esac`
  
-         cat <<EOF >> conftest.c
- #if defined (__STDC__) && __STDC__
-@@ -610,7 +610,7 @@ dld_preloaded_symbols[] =
- changequote([,])dnl
- {
- EOF
--        sed 's/^_\?\(.*\) _\?\(.*\)$/  {"\1", (__ptr_t) \&\2},/' < "$ac_nlist" >> conftest.c
-+        sed 's/^_\{0,1\}/\(.*\) _\{0,1\}\(.*\)$/  {"\1", (__ptr_t) \&\2},/' < "$ac_nlist" >> conftest.c
-         cat <<\EOF >> conftest.c
-   {0, (__ptr_t) 0}
- };
+ CC = @CC@
+ GMSGFMT = @GMSGFMT@
