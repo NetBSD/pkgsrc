@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/02/10 09:27:15 garbled Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 12:23:30 agc Exp $
 
 SHA1 (clusterit-2.2.tar.gz) = cc50c018f9cc34f90e385eeb83884563afd9a3f9
+RMD160 (clusterit-2.2.tar.gz) = 3da9956eaba1d5bdd44cca863391169a210f9293
 Size (clusterit-2.2.tar.gz) = 127581 bytes
