@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2002/10/08 00:49:22 heinz Exp $
+$NetBSD: patch-ad,v 1.2 2002/10/20 20:09:05 heinz Exp $
 
 --- spamd/netbsd-rc-script.sh.orig	Thu Sep 26 12:50:26 2002
 +++ spamd/netbsd-rc-script.sh
