@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.145 2002/09/29 03:42:05 rh Exp $
+# $NetBSD: Makefile,v 1.146 2002/09/29 03:48:50 rh Exp $
 #
 
 COMMENT=	Electronic mail utilities
 
+SUBDIR+=	GNUMail
 SUBDIR+=	Pantomime
 SUBDIR+=	anomy-sanitizer
 SUBDIR+=	autorespond
