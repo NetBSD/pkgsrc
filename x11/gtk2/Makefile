@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2004/01/24 15:30:33 grant Exp $
+# $NetBSD: Makefile,v 1.41 2004/02/10 02:04:54 xtraeme Exp $
 #
 
 DISTNAME=		gtk+-2.2.4
@@ -15,7 +15,7 @@ HOMEPAGE=		http://www.gtk.org/
 COMMENT=		The GIMP Toolkit - libraries for building X11 user interfaces
 
 BUILD_USES_MSGFMT=	yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
@@ -44,14 +44,14 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/engines
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/modules
 
-.include "../../devel/atk/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/pango/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
+.include "../../devel/atk/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
