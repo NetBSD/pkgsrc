@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.10 2004/03/26 02:22:38 wiz Exp $
+$NetBSD: patch-ad,v 1.11 2004/03/26 06:54:30 jlam Exp $
 
---- apps/Makefile.ssl.orig	Thu Aug 14 08:30:31 2003
+--- apps/Makefile.ssl.orig	Thu Aug 14 02:30:31 2003
 +++ apps/Makefile.ssl
 @@ -100,11 +100,11 @@ install:
  	@for i in $(SCRIPTS); \
@@ -19,3 +19,12 @@ $NetBSD: patch-ad,v 1.10 2004/03/26 02:22:38 wiz Exp $
  
  tags:
  	ctags $(SRC)
+@@ -138,7 +138,7 @@ $(PROGRAM): progs.h $(E_OBJ) $(PROGRAM).
+ 	$(RM) $(PROGRAM)
+ 	LD_LIBRARY_PATH=..:$$LD_LIBRARY_PATH \
+ 	$(CC) -o $(PROGRAM) $(CFLAGS) $(PROGRAM).o $(E_OBJ) $(PEX_LIBS) $(LIBSSL) $(LIBCRYPTO) $(EX_LIBS)
+-	-(cd ..; OPENSSL="`pwd`/apps/openssl"; export OPENSSL; $(PERL) tools/c_rehash certs)
++	-(cd ..; LD_LIBRARY_PATH=..:$$LD_LIBRARY_PATH; export LD_LIBRARY_PATH; OPENSSL="`pwd`/apps/openssl"; export OPENSSL; $(PERL) tools/c_rehash certs)
+ 
+ progs.h: progs.pl
+ 	$(PERL) progs.pl $(E_EXE) >progs.h

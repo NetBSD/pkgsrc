@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2004/03/26 02:22:38 wiz Exp $
+# $NetBSD: builtin.mk,v 1.3 2004/03/26 06:54:30 jlam Exp $
 
 _OPENSSL_PKGSRC_PKGNAME=	openssl-0.9.6m
 _OPENSSL_OPENSSLV_H=		/usr/include/openssl/opensslv.h
@@ -74,15 +74,10 @@ _OPENSSL_HAS_FIX!=							\
 .    if !empty(_OPENSSL_VERSION:M0\.9\.6g) && (${_OPENSSL_HAS_FIX} == "yes")
 BUILTIN_PKG.openssl=	openssl-0.9.6l
 .    endif
-MAKEFLAGS+=	BUILTIN_PKG.openssl=${BUILTIN_PKG.openssl}
+BUILDLINK_VARS+=	BUILTIN_PKG.openssl
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.openssl=${IS_BUILTIN.openssl}
-.endif
-
-CHECK_BUILTIN.openssl?=	no
-.if !empty(CHECK_BUILTIN.openssl:M[yY][eE][sS])
-USE_BUILTIN.openssl=	yes
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.openssl
+.endif	# IS_BUILTIN.openssl
 
 .if !defined(USE_BUILTIN.openssl)
 USE_BUILTIN.openssl?=	${IS_BUILTIN.openssl}
@@ -102,6 +97,9 @@ USE_BUILTIN.openssl!=	\
 .  endif
 .endif	# USE_BUILTIN.openssl
 
+CHECK_BUILTIN.openssl?=	no
+.if !empty(CHECK_BUILTIN.openssl:M[nN][oO])
+
 .if !defined(_NEED_NEWER_OPENSSL)
 _NEED_NEWER_OPENSSL?=	no
 .  for _depend_ in ${BUILDLINK_DEPENDS.openssl}
@@ -114,7 +112,7 @@ _NEED_NEWER_OPENSSL!=	\
 	fi
 .    endif
 .  endfor
-MAKEFLAGS+=	_NEED_NEWER_OPENSSL=${_NEED_NEWER_OPENSSL}
+BUILDLINK_VARS+=	_NEED_NEWER_OPENSSL
 .endif
 
 .if !empty(USE_BUILTIN.openssl:M[nN][oO]) && \
@@ -133,3 +131,5 @@ SSLCERTS=	/etc/ssl/certs		# likely place where certs live
 SSLCERTS=	${PKG_SYSCONFBASEDIR}/openssl/certs
 .endif
 BUILD_DEFS+=	SSLCERTS
+
+.endif	# CHECK_BUILTIN.openssl
