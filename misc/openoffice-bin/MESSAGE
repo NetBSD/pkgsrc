@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/02/24 13:50:18 mrauch Exp $
+$NetBSD: MESSAGE,v 1.2 2005/02/26 01:22:16 dmcmahill Exp $
 
   OpenOffice has now been installed in ${PREFIX}/OpenOffice.org${VER}.
 
