@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/02/14 18:26:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2004/07/12 19:27:05 cube Exp $
 #
 
 DISTNAME=		imlib2-1.1.0
@@ -21,10 +21,12 @@ LIBS.SunOS=		-lm
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "i386" && ${USE_MMX} != "NO"
-CONFIGURE_ARGS+=	--enable-mmx
-.endif
+.if ${MACHINE_ARCH} == "i386"
 BUILD_DEFS+=		USE_MMX
+. if !empty(USE_MMX:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-mmx
+. endif
+.endif
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
