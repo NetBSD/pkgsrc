@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.21 2003/08/17 04:57:14 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.22 2003/08/18 15:35:08 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -672,7 +672,7 @@ uptodate-digest:
 .if defined(_OPSYS_PKGTOOLS_REQD)
 PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD}
 .else
-PKGTOOLS_REQD=		20030809
+PKGTOOLS_REQD=		20030810
 .endif
 
 # Check that we are using up-to-date pkg_* tools with this file.
