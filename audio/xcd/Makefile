@@ -3,7 +3,8 @@
 # Date created:         22 November 1994
 # Whom:                 jmz
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/28 23:19:18 augustss Exp $
+# $NetBSD: Makefile,v 1.2 1998/01/19 01:18:54 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.18 1997/10/08 13:10:20 jmz Exp
 #
 
 DISTNAME=	xcd-1.6
