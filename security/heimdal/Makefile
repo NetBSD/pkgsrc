@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:52 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/22 11:59:50 markd Exp $
 
 DISTNAME=		heimdal-0.6
 CATEGORIES=		security
@@ -32,9 +32,15 @@ CONFIGURE_ARGS+=	--without-krb4
 BUILDLINK_INCDIRS.readline=	include/readline
 .include "../../devel/readline/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
+LIBS.SunOS=		-ltermcap
 
+BUILD_DEFS+=		USE_DB4
+.if defined(USE_DB4) && !empty(USE_DB4:M[yY][eE][sS])
+.include "../../databases/db4/buildlink3.mk"
+.else
 USE_DB185=		yes
 .include "../../databases/db/buildlink3.mk"
+.endif
 
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 .include "../../security/openssl/buildlink3.mk"
