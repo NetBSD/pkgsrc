@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/07/04 04:14:30 mycroft Exp $
+# $NetBSD: Makefile,v 1.17 1998/07/04 04:18:26 mycroft Exp $
 #
 
 DISTNAME=	netpbm
@@ -13,6 +13,8 @@ DISTFILES=	netpbm-1mar1994.tar.gz \
 		pnmtopng-2.36.tar.gz
 
 MAINTAINER=	tron@netbsd.org
+
+CONFLICTS=	netpbm-94.3.1
 
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	jpeg-6a:../../graphics/jpeg
