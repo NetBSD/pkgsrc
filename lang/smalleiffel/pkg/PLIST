@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/12 18:19:27 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/06/21 21:23:16 jlam Exp $
 bin/smalleiffel
 lib/smalleiffel/COPYING
 lib/smalleiffel/READ_ME
@@ -18,13 +18,13 @@ lib/smalleiffel/contrib/edb/edb19.el
 lib/smalleiffel/contrib/edb/gc-inc
 lib/smalleiffel/contrib/edb/move-if-changed
 lib/smalleiffel/contrib/edb/sec
+lib/smalleiffel/contrib/htmldoc/READ_ME
+lib/smalleiffel/contrib/htmldoc/hooks.sh
+lib/smalleiffel/contrib/htmldoc/htmlshort
 lib/smalleiffel/contrib/lib/case_insensitive_string.e
 lib/smalleiffel/contrib/lib/header.txt
 lib/smalleiffel/contrib/lib/string_formatter.e
 lib/smalleiffel/lib_rand/READ_ME
-lib/smalleiffel/lib_rand/demo1.e
-lib/smalleiffel/lib_rand/demo2.e
-lib/smalleiffel/lib_rand/demo3.e
 lib/smalleiffel/lib_rand/gen_rand.e
 lib/smalleiffel/lib_rand/min_stand.e
 lib/smalleiffel/lib_rand/std_rand.e
@@ -32,10 +32,12 @@ lib/smalleiffel/lib_se/abstract_current.e
 lib/smalleiffel/lib_se/abstract_result.e
 lib/smalleiffel/lib_se/address_of.e
 lib/smalleiffel/lib_se/address_of_pool.e
+lib/smalleiffel/lib_se/aliased_string_list.e
 lib/smalleiffel/lib_se/argument_name.e
 lib/smalleiffel/lib_se/argument_name1.e
 lib/smalleiffel/lib_se/argument_name2.e
 lib/smalleiffel/lib_se/assertion.e
+lib/smalleiffel/lib_se/assertion_collector.e
 lib/smalleiffel/lib_se/assertion_list.e
 lib/smalleiffel/lib_se/assignment.e
 lib/smalleiffel/lib_se/attribute.e
@@ -93,9 +95,9 @@ lib/smalleiffel/lib_se/clean.e
 lib/smalleiffel/lib_se/client_list.e
 lib/smalleiffel/lib_se/code_attribute.e
 lib/smalleiffel/lib_se/code_printer.e
+lib/smalleiffel/lib_se/command_flags.e
 lib/smalleiffel/lib_se/comment.e
 lib/smalleiffel/lib_se/compile.e
-lib/smalleiffel/lib_se/compile_to.e
 lib/smalleiffel/lib_se/compile_to_c.e
 lib/smalleiffel/lib_se/compile_to_jvm.e
 lib/smalleiffel/lib_se/compound.e
@@ -184,6 +186,7 @@ lib/smalleiffel/lib_se/implicit_current.e
 lib/smalleiffel/lib_se/index_clause.e
 lib/smalleiffel/lib_se/index_list.e
 lib/smalleiffel/lib_se/infix_name.e
+lib/smalleiffel/lib_se/install.e
 lib/smalleiffel/lib_se/instruction.e
 lib/smalleiffel/lib_se/instruction_with_comment.e
 lib/smalleiffel/lib_se/integer_constant.e
@@ -258,6 +261,7 @@ lib/smalleiffel/lib_se/short.e
 lib/smalleiffel/lib_se/short_print.e
 lib/smalleiffel/lib_se/simple_feature_name.e
 lib/smalleiffel/lib_se/small_eiffel.e
+lib/smalleiffel/lib_se/string_aliaser.e
 lib/smalleiffel/lib_se/switch.e
 lib/smalleiffel/lib_se/switch_collection.e
 lib/smalleiffel/lib_se/system_tools.e
@@ -290,8 +294,6 @@ lib/smalleiffel/lib_se/type_pointer.e
 lib/smalleiffel/lib_se/type_real.e
 lib/smalleiffel/lib_se/type_ref_to_exp.e
 lib/smalleiffel/lib_se/type_string.e
-lib/smalleiffel/lib_se/unique_string.e
-lib/smalleiffel/lib_se/unique_string_list.e
 lib/smalleiffel/lib_se/when_item.e
 lib/smalleiffel/lib_se/when_item_1.e
 lib/smalleiffel/lib_se/when_item_2.e
@@ -306,37 +308,13 @@ lib/smalleiffel/lib_show/animal/quadrupede.e
 lib/smalleiffel/lib_show/animal/sample1.e
 lib/smalleiffel/lib_show/animal/sample2.e
 lib/smalleiffel/lib_show/animal/sample3.e
-lib/smalleiffel/lib_show/bench1/array_bench.e
-lib/smalleiffel/lib_show/bench1/bench.csh
-lib/smalleiffel/lib_show/bench1/bench.e
-lib/smalleiffel/lib_show/bench1/fixed_array_bench.e
-lib/smalleiffel/lib_show/bench1/link2_list_bench.e
-lib/smalleiffel/lib_show/bench1/link_list_bench.e
-lib/smalleiffel/lib_show/bench2/array_bench.e
-lib/smalleiffel/lib_show/bench2/bench.csh
-lib/smalleiffel/lib_show/bench2/bench.e
-lib/smalleiffel/lib_show/bench2/fixed_array_bench.e
-lib/smalleiffel/lib_show/bench2/link2_list_bench.e
-lib/smalleiffel/lib_show/bench2/link_list_bench.e
-lib/smalleiffel/lib_show/bench3/array2_bench.e
-lib/smalleiffel/lib_show/bench3/bench.csh
-lib/smalleiffel/lib_show/bench3/bench.e
-lib/smalleiffel/lib_show/bench3/fixed_array2_bench.e
-lib/smalleiffel/lib_show/bench4/array_bench.e
-lib/smalleiffel/lib_show/bench4/bench.csh
-lib/smalleiffel/lib_show/bench4/bench.e
-lib/smalleiffel/lib_show/bench4/fixed_array_bench.e
-lib/smalleiffel/lib_show/bench4/link2_list_bench.e
-lib/smalleiffel/lib_show/bench4/link_list_bench.e
-lib/smalleiffel/lib_show/bench5/array_bench.e
-lib/smalleiffel/lib_show/bench5/bench.csh
-lib/smalleiffel/lib_show/bench5/bench.e
-lib/smalleiffel/lib_show/bench5/fixed_array_bench.e
-lib/smalleiffel/lib_show/bench5/link2_list_bench.e
-lib/smalleiffel/lib_show/bench5/link_list_bench.e
 lib/smalleiffel/lib_show/cecil/JVM/Example1.java
 lib/smalleiffel/lib_show/cecil/JVM/Example2.java
+lib/smalleiffel/lib_show/cecil/JVM/Example3.java
+lib/smalleiffel/lib_show/cecil/JVM/Example4.java
 lib/smalleiffel/lib_show/cecil/JVM/root2.e
+lib/smalleiffel/lib_show/cecil/JVM/root3.e
+lib/smalleiffel/lib_show/cecil/JVM/root4.e
 lib/smalleiffel/lib_show/cecil/READ_ME
 lib/smalleiffel/lib_show/cecil/example1/.gdb_history
 lib/smalleiffel/lib_show/cecil/example1/c_prog.c
@@ -376,21 +354,19 @@ lib/smalleiffel/lib_show/cecil/example8/c_prog.c
 lib/smalleiffel/lib_show/cecil/example8/cecil.se
 lib/smalleiffel/lib_show/cecil/example8/example.e
 lib/smalleiffel/lib_show/cecil/example8/output
+lib/smalleiffel/lib_show/directory/.gdbinit
 lib/smalleiffel/lib_show/directory/example01.e
 lib/smalleiffel/lib_show/directory/example01.h
 lib/smalleiffel/lib_show/directory/example01.make
 lib/smalleiffel/lib_show/directory/example011.c
-lib/smalleiffel/lib_show/directory/example0110.c
-lib/smalleiffel/lib_show/directory/example0111.c
-lib/smalleiffel/lib_show/directory/example0112.c
 lib/smalleiffel/lib_show/directory/example012.c
 lib/smalleiffel/lib_show/directory/example013.c
-lib/smalleiffel/lib_show/directory/example014.c
-lib/smalleiffel/lib_show/directory/example015.c
-lib/smalleiffel/lib_show/directory/example016.c
-lib/smalleiffel/lib_show/directory/example017.c
-lib/smalleiffel/lib_show/directory/example018.c
-lib/smalleiffel/lib_show/directory/example019.c
+lib/smalleiffel/lib_show/directory/example02.e
+lib/smalleiffel/lib_show/directory/example03.e
+lib/smalleiffel/lib_show/directory/example03.h
+lib/smalleiffel/lib_show/directory/example03.make
+lib/smalleiffel/lib_show/directory/example031.c
+lib/smalleiffel/lib_show/directory/example032.c
 lib/smalleiffel/lib_show/external/C/READ_ME
 lib/smalleiffel/lib_show/external/C/address_of_demo.e
 lib/smalleiffel/lib_show/external/C/address_of_demo.out
@@ -404,15 +380,15 @@ lib/smalleiffel/lib_show/external/JVM/example2.e
 lib/smalleiffel/lib_show/external/JVM/example2.out
 lib/smalleiffel/lib_show/external/READ_ME
 lib/smalleiffel/lib_show/fibonacci.e
-lib/smalleiffel/lib_show/gcd/gcd
 lib/smalleiffel/lib_show/gcd/integer.e
 lib/smalleiffel/lib_show/gcd/test_gcd.e
-lib/smalleiffel/lib_show/hanoi/.gdb_history
-lib/smalleiffel/lib_show/hanoi/hanoi
 lib/smalleiffel/lib_show/hanoi/hanoi.e
 lib/smalleiffel/lib_show/hanoi/tower.e
 lib/smalleiffel/lib_show/hello_world.e
 lib/smalleiffel/lib_show/knight.e
+lib/smalleiffel/lib_show/lib_rand/demo1.e
+lib/smalleiffel/lib_show/lib_rand/demo2.e
+lib/smalleiffel/lib_show/lib_rand/demo3.e
 lib/smalleiffel/lib_show/parking/command.e
 lib/smalleiffel/lib_show/parking/date.e
 lib/smalleiffel/lib_show/parking/level.e
@@ -428,17 +404,21 @@ lib/smalleiffel/lib_std/arguments.e
 lib/smalleiffel/lib_std/array.e
 lib/smalleiffel/lib_std/array2.e
 lib/smalleiffel/lib_std/arrayed_collection.e
+lib/smalleiffel/lib_std/basic_directory.e
 lib/smalleiffel/lib_std/bit_n.e
 lib/smalleiffel/lib_std/bit_n_ref.e
+lib/smalleiffel/lib_std/bit_string.e
 lib/smalleiffel/lib_std/boolean.e
 lib/smalleiffel/lib_std/boolean_ref.e
 lib/smalleiffel/lib_std/character.e
 lib/smalleiffel/lib_std/character_ref.e
 lib/smalleiffel/lib_std/collection.e
 lib/smalleiffel/lib_std/collection2.e
+lib/smalleiffel/lib_std/collection_sorter.e
 lib/smalleiffel/lib_std/comparable.e
 lib/smalleiffel/lib_std/counter.e
 lib/smalleiffel/lib_std/dictionary.e
+lib/smalleiffel/lib_std/directory.e
 lib/smalleiffel/lib_std/dirent.e
 lib/smalleiffel/lib_std/double.e
 lib/smalleiffel/lib_std/double_ref.e
@@ -456,6 +436,7 @@ lib/smalleiffel/lib_std/link2.e
 lib/smalleiffel/lib_std/link2_list.e
 lib/smalleiffel/lib_std/link_list.e
 lib/smalleiffel/lib_std/linked_collection.e
+lib/smalleiffel/lib_std/linked_list.e
 lib/smalleiffel/lib_std/memo.e
 lib/smalleiffel/lib_std/memory.e
 lib/smalleiffel/lib_std/native_array.e
@@ -466,6 +447,7 @@ lib/smalleiffel/lib_std/pointer.e
 lib/smalleiffel/lib_std/pointer_ref.e
 lib/smalleiffel/lib_std/real.e
 lib/smalleiffel/lib_std/real_ref.e
+lib/smalleiffel/lib_std/reverse_collection_sorter.e
 lib/smalleiffel/lib_std/std_error.e
 lib/smalleiffel/lib_std/std_file_read.e
 lib/smalleiffel/lib_std/std_file_read_write.e
@@ -474,15 +456,19 @@ lib/smalleiffel/lib_std/std_input.e
 lib/smalleiffel/lib_std/std_input_output.e
 lib/smalleiffel/lib_std/std_output.e
 lib/smalleiffel/lib_std/string.e
+lib/smalleiffel/lib_std/two_way_linked_list.e
 lib/smalleiffel/man/Eiffel.FAQ
 lib/smalleiffel/man/NOT_YET_IMPLEMENTED.html
 lib/smalleiffel/man/NOT_YET_IMPLEMENTED.txt
 lib/smalleiffel/man/SmallEiffelFAQ.html
 lib/smalleiffel/man/SmallEiffelFAQ.txt
+lib/smalleiffel/man/c_code.html
+lib/smalleiffel/man/c_code.txt
 lib/smalleiffel/man/cecil.html
 lib/smalleiffel/man/cecil.txt
 lib/smalleiffel/man/clean.html
 lib/smalleiffel/man/clean.txt
+lib/smalleiffel/man/commands.txt
 lib/smalleiffel/man/compile.html
 lib/smalleiffel/man/compile.txt
 lib/smalleiffel/man/compile_to_c.html
@@ -493,10 +479,12 @@ lib/smalleiffel/man/external.html
 lib/smalleiffel/man/external.txt
 lib/smalleiffel/man/finder.html
 lib/smalleiffel/man/finder.txt
+lib/smalleiffel/man/index.html
 lib/smalleiffel/man/pretty.html
 lib/smalleiffel/man/pretty.txt
 lib/smalleiffel/man/print_jvm_class.html
 lib/smalleiffel/man/print_jvm_class.txt
+lib/smalleiffel/man/se-line.gif
 lib/smalleiffel/man/short.html
 lib/smalleiffel/man/short.txt
 lib/smalleiffel/man/support.html
@@ -506,10 +494,12 @@ lib/smalleiffel/man/system.txt
 lib/smalleiffel/short/READ_ME
 lib/smalleiffel/short/html1/Acn
 lib/smalleiffel/short/html1/Bcn
+lib/smalleiffel/short/html1/HOOKS.SH
 lib/smalleiffel/short/html1/Mcn
 lib/smalleiffel/short/html1/READ_ME
 lib/smalleiffel/short/html1/cl_quote
 lib/smalleiffel/short/html1/hook000
+lib/smalleiffel/short/html1/hook002
 lib/smalleiffel/short/html1/hook010
 lib/smalleiffel/short/html1/hook011
 lib/smalleiffel/short/html1/hook012
@@ -519,13 +509,14 @@ lib/smalleiffel/short/html1/hook019
 lib/smalleiffel/short/html1/hook100
 lib/smalleiffel/short/html1/hook200
 lib/smalleiffel/short/html1/hook201
-lib/smalleiffel/short/html1/hook203
+lib/smalleiffel/short/html1/hook202
 lib/smalleiffel/short/html1/hook204
 lib/smalleiffel/short/html1/hook205
 lib/smalleiffel/short/html1/hook208
 lib/smalleiffel/short/html1/hook310
 lib/smalleiffel/short/html1/hook313
 lib/smalleiffel/short/html1/hook401
+lib/smalleiffel/short/html1/hook402
 lib/smalleiffel/short/html1/hook413
 lib/smalleiffel/short/html1/hook416
 lib/smalleiffel/short/html1/hook427
@@ -542,11 +533,61 @@ lib/smalleiffel/short/html1/hook816
 lib/smalleiffel/short/html1/hook827
 lib/smalleiffel/short/html1/hook830
 lib/smalleiffel/short/html1/hook900
+lib/smalleiffel/short/html1/hook905
 lib/smalleiffel/short/html1/hook999
-lib/smalleiffel/short/html1/hooks.sh
-lib/smalleiffel/short/html1/htmlshort
-lib/smalleiffel/short/html1/index.html
 lib/smalleiffel/short/html1/op_quote
+lib/smalleiffel/short/html2/!
+lib/smalleiffel/short/html2/Acn
+lib/smalleiffel/short/html2/Bcn
+lib/smalleiffel/short/html2/Current
+lib/smalleiffel/short/html2/HOOKS.SH
+lib/smalleiffel/short/html2/Mcn
+lib/smalleiffel/short/html2/READ_ME
+lib/smalleiffel/short/html2/Result
+lib/smalleiffel/short/html2/Void
+lib/smalleiffel/short/html2/cl_quote
+lib/smalleiffel/short/html2/hook000
+lib/smalleiffel/short/html2/hook002
+lib/smalleiffel/short/html2/hook010
+lib/smalleiffel/short/html2/hook011
+lib/smalleiffel/short/html2/hook012
+lib/smalleiffel/short/html2/hook015
+lib/smalleiffel/short/html2/hook018
+lib/smalleiffel/short/html2/hook019
+lib/smalleiffel/short/html2/hook100
+lib/smalleiffel/short/html2/hook200
+lib/smalleiffel/short/html2/hook201
+lib/smalleiffel/short/html2/hook202
+lib/smalleiffel/short/html2/hook204
+lib/smalleiffel/short/html2/hook205
+lib/smalleiffel/short/html2/hook208
+lib/smalleiffel/short/html2/hook310
+lib/smalleiffel/short/html2/hook313
+lib/smalleiffel/short/html2/hook401
+lib/smalleiffel/short/html2/hook402
+lib/smalleiffel/short/html2/hook413
+lib/smalleiffel/short/html2/hook416
+lib/smalleiffel/short/html2/hook427
+lib/smalleiffel/short/html2/hook430
+lib/smalleiffel/short/html2/hook511
+lib/smalleiffel/short/html2/hook513
+lib/smalleiffel/short/html2/hook516
+lib/smalleiffel/short/html2/hook527
+lib/smalleiffel/short/html2/hook530
+lib/smalleiffel/short/html2/hook599
+lib/smalleiffel/short/html2/hook811
+lib/smalleiffel/short/html2/hook813
+lib/smalleiffel/short/html2/hook816
+lib/smalleiffel/short/html2/hook819
+lib/smalleiffel/short/html2/hook827
+lib/smalleiffel/short/html2/hook830
+lib/smalleiffel/short/html2/hook900
+lib/smalleiffel/short/html2/hook905
+lib/smalleiffel/short/html2/hook999
+lib/smalleiffel/short/html2/like
+lib/smalleiffel/short/html2/old
+lib/smalleiffel/short/html2/op_quote
+lib/smalleiffel/short/html2/op_strip
 lib/smalleiffel/short/plain/READ_ME
 lib/smalleiffel/short/tex1/READ_ME
 lib/smalleiffel/short/tex1/hook000
@@ -612,24 +653,26 @@ lib/smalleiffel/short/tex3/op_quote
 lib/smalleiffel/short/tex3/open_sb
 lib/smalleiffel/short/tex3/rem
 lib/smalleiffel/sys/READ_ME
-lib/smalleiffel/sys/compiler.UNIX
+lib/smalleiffel/sys/compiler.se
 lib/smalleiffel/sys/gc
 lib/smalleiffel/sys/gc_lib/BeOS_x86.c
 lib/smalleiffel/sys/gc_lib/MacintoshPPC.c
+lib/smalleiffel/sys/gc_lib/aix.c
 lib/smalleiffel/sys/gc_lib/alpha.c
 lib/smalleiffel/sys/gc_lib/freebsd.c
 lib/smalleiffel/sys/gc_lib/generic.c
 lib/smalleiffel/sys/gc_lib/hp-pa.c
 lib/smalleiffel/sys/gc_lib/linux.c
+lib/smalleiffel/sys/gc_lib/m68k-amigaos.c
 lib/smalleiffel/sys/gc_lib/m68k.c
 lib/smalleiffel/sys/gc_lib/sparc.c
 lib/smalleiffel/sys/gc_lib/windows.c
-lib/smalleiffel/sys/linker.UNIX
 lib/smalleiffel/sys/loadpath.UNIX
-lib/smalleiffel/sys/o_suffix.UNIX
 lib/smalleiffel/sys/runtime/SmallEiffelRuntime.class
 lib/smalleiffel/sys/runtime/SmallEiffelRuntime.java
 lib/smalleiffel/sys/runtime/base.h
+lib/smalleiffel/sys/runtime/basic_directory.c
+lib/smalleiffel/sys/runtime/basic_directory.h
 lib/smalleiffel/sys/runtime/boost.c
 lib/smalleiffel/sys/runtime/boost.h
 lib/smalleiffel/sys/runtime/exceptions.c
@@ -648,11 +691,13 @@ lib/smalleiffel/sys/system.se
 @dirrm lib/smalleiffel/short/tex2
 @dirrm lib/smalleiffel/short/tex1
 @dirrm lib/smalleiffel/short/plain
+@dirrm lib/smalleiffel/short/html2
 @dirrm lib/smalleiffel/short/html1
 @dirrm lib/smalleiffel/short
 @dirrm lib/smalleiffel/man
 @dirrm lib/smalleiffel/lib_std
 @dirrm lib/smalleiffel/lib_show/parking
+@dirrm lib/smalleiffel/lib_show/lib_rand
 @dirrm lib/smalleiffel/lib_show/hanoi
 @dirrm lib/smalleiffel/lib_show/gcd
 @dirrm lib/smalleiffel/lib_show/external/JVM
@@ -669,16 +714,12 @@ lib/smalleiffel/sys/system.se
 @dirrm lib/smalleiffel/lib_show/cecil/example1
 @dirrm lib/smalleiffel/lib_show/cecil/JVM
 @dirrm lib/smalleiffel/lib_show/cecil
-@dirrm lib/smalleiffel/lib_show/bench5
-@dirrm lib/smalleiffel/lib_show/bench4
-@dirrm lib/smalleiffel/lib_show/bench3
-@dirrm lib/smalleiffel/lib_show/bench2
-@dirrm lib/smalleiffel/lib_show/bench1
 @dirrm lib/smalleiffel/lib_show/animal
 @dirrm lib/smalleiffel/lib_show
-@dirrm lib/smalleiffel/lib_rand
 @dirrm lib/smalleiffel/lib_se
+@dirrm lib/smalleiffel/lib_rand
 @dirrm lib/smalleiffel/contrib/lib
+@dirrm lib/smalleiffel/contrib/htmldoc
 @dirrm lib/smalleiffel/contrib/edb
 @dirrm lib/smalleiffel/contrib
 @dirrm lib/smalleiffel/bin

@@ -1,5 +1,5 @@
 ./
-@SE@/lib_std/
-@SE@/lib_rand/
-@SE@/lib_show/
-@SE@/lib_se/
+${SMALLEIFFEL}/lib_std/
+${SMALLEIFFEL}/lib_rand/
+${SMALLEIFFEL}/lib_show/
+${SMALLEIFFEL}/lib_se/

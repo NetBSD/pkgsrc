@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: smalleiffel.sh,v 1.1.1.1 1999/04/12 18:19:27 jlam Exp $
+# $NetBSD: smalleiffel.sh,v 1.2 1999/06/21 21:23:16 jlam Exp $
 #
 # This script is invoked as:
 #
@@ -8,8 +8,9 @@
 #
 # where <cmd> is one of the programs in @@SE@@/bin.
 #
-SmallEiffel=@@SE@@/sys/system.se ; export SmallEiffel
-se_cmd=@@SE@@/bin/$1
+SMALLEIFFEL=@@SE@@; export SMALLEIFFEL
+SmallEiffel=${SMALLEIFFEL}/sys/system.se ; export SmallEiffel
+se_cmd=${SMALLEIFFEL}/bin/$1
 if [ -x ${se_cmd} ]
 then
 	shift
