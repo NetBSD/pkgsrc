@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.77 2005/03/24 16:47:34 tv Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.78 2005/03/28 15:04:07 tv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -44,6 +44,13 @@
 
 LS?=	ls
 WC?=	wc
+
+# A sort(1) capable of very long lines is needed for full builds in "tflat".
+# Some platforms (namely, Interix) may not provide one, so override here.
+.if ${OPSYS} == "Interix"
+_SORT=			${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sort
+.endif
+_SORT?=			${SORT}
 
 # This variable is set to 'yes' by the pkgsrc/mk/bulk/build script.  It enables
 # the use of several cache files (DEPENDSTREEFILE, DEPENDSFILE, SUPPORTSFILE,
@@ -184,15 +191,15 @@ bulk-cache:
 		}} END{ \
 		for(pkg in pkgs) {if( pkg in listed ) {} else{ print pkg " " pkg;}} \
 		}' \
-		${BULK_DBFILE} | ${SORT} -u > ${DEPENDSTREEFILE}
+		${BULK_DBFILE} | ${_SORT} -u > ${DEPENDSTREEFILE}
 	@${ECHO_MSG} "BULK> Extracting package name <=> package directory cross reference file"
 	${AWK} '/^index/ {print $$2 " " $$3 " "}' ${BULK_DBFILE} > ${INDEXFILE}
 .endif
 	@${ECHO_MSG} "BULK> Sorting build order."
 	${TSORT} ${DEPENDSTREEFILE} > ${ORDERFILE}
 	@${ECHO_MSG} "BULK> Generating up and down dependency files."
-	${SETENV} SORT=${SORT:Q} ${AWK} -f ${PKGSRCDIR}/mk/bulk/tflat up ${DEPENDSTREEFILE} > ${SUPPORTSFILE}
-	${SETENV} SORT=${SORT:Q} ${AWK} -f ${PKGSRCDIR}/mk/bulk/tflat down ${DEPENDSTREEFILE} > ${DEPENDSFILE}
+	${SETENV} SORT=${_SORT:Q} ${AWK} -f ${PKGSRCDIR}/mk/bulk/tflat up ${DEPENDSTREEFILE} > ${SUPPORTSFILE}
+	${SETENV} SORT=${_SORT:Q} ${AWK} -f ${PKGSRCDIR}/mk/bulk/tflat down ${DEPENDSTREEFILE} > ${DEPENDSFILE}
 
 # remove the bulk cache files
 clean-bulk-cache:
