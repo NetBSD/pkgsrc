@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1526 2003/03/03 11:35:49 mjl Exp $
+$NetBSD: CHANGES,v 1.1527 2003/03/03 11:36:44 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -894,3 +894,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-SQL-Statement to 1.005 [mjl 2003-03-03]
 	Updated p5-DBD-CSV to 0.2002 [mjl 2003-03-03]
 	Updated p5-XML-SAX to 0.12 [mjl 2003-03-03]
+	Updated graphviz to 1.9 [seb 2003-03-03]
