@@ -1,44 +1,35 @@
-$NetBSD: patch-ad,v 1.5 1998/11/30 17:45:18 tv Exp $
+$NetBSD: patch-ad,v 1.6 1999/08/10 09:18:02 agc Exp $
 
---- configure.orig	Sun Oct 18 16:37:39 1998
-+++ configure	Mon Nov 30 11:03:01 1998
-@@ -2163,7 +2163,7 @@
+--- configure.orig	Mon Aug  2 13:26:53 1999
++++ configure	Tue Aug 10 10:03:01 1999
+@@ -2706,7 +2706,7 @@
  
  _CUT_HERE_
  
--#if ((defined(hp300) && !defined(__hpux)) || defined(sun) || (defined(ultrix) && defined(mips)) || defined(_SEQUENT_) || defined(sgi) || defined(SVR4) || defined(sony_news) || (!defined(__osf__) && defined(__alpha)) || defined(_IBMR2) || defined(_AUX_SOURCE) || defined(AUX) || defined(m88k))
-+#if (((defined(hp300) && !defined(__hpux)) || defined(sun) || (defined(ultrix) && defined(mips)) || defined(_SEQUENT_) || defined(sgi) || defined(SVR4) || defined(sony_news) || (!defined(__osf__) && defined(__alpha)) || defined(_IBMR2) || defined(_AUX_SOURCE) || defined(AUX) || defined(m88k))) && !defined(__NetBSD__)
+-#if ((defined(hp300) && !defined(__hpux)) || defined(sun) || (defined(ultrix) && defined(mips)) || defined(_SEQUENT_) || defined(sgi) || defined(SVR4) || defined(sony_news) || !(defined(__osf__) && defined(__alpha)) || defined(_IBMR2) || defined(_AUX_SOURCE) || defined(AUX) || defined(m88k))
++#if (((defined(hp300) && !defined(__hpux)) || defined(sun) || (defined(ultrix) && defined(mips)) || defined(_SEQUENT_) || defined(sgi) || defined(SVR4) || defined(sony_news) || !(defined(__osf__) && defined(__alpha)) || defined(_IBMR2) || defined(_AUX_SOURCE) || defined(AUX) || defined(m88k))) && !defined(__NetBSD__)
  loadtype=long
  # if defined(apollo) || defined(_IBMR2) || defined(_AUX_SOURCE) || defined(AUX)
  loadscale=65536
-@@ -2702,17 +2702,6 @@
- fi
- rm -f /tmp/conftest*
+@@ -3248,6 +3248,10 @@
  
--test -n "$silent" || echo "checking for vsprintf"
--cat > conftest.${ac_ext} <<EOF
--#include "confdefs.h"
--
--int main() { return 0; }
--int t() { vsprintf(0,0,0);; return 0; }
--EOF
--if eval $ac_compile; then
--  rm -rf conftest*
--  
--{
- test -n "$verbose" && \
- echo "	defining USEVARARGS"
- echo "#define" USEVARARGS "1" >> confdefs.h
-@@ -2721,12 +2710,6 @@
- \${ac_uA}USEVARARGS\${ac_uB}USEVARARGS\${ac_uC}1\${ac_uD}
- \${ac_eA}USEVARARGS\${ac_eB}USEVARARGS\${ac_eC}1\${ac_eD}
- "
--}
--
--
--fi
--rm -f conftest*
--
- 
- test -n "$silent" || echo "checking for directory library header"
- ac_dir_header=
+ echo $ac_n "checking for vsprintf""... $ac_c" 1>&6
+ echo "configure:3251: checking for vsprintf" >&5
++vsprintf_endowed=0
++if true; then
++vsprintf_endowed=1
++else
+ cat > conftest.$ac_ext <<EOF
+ #line 3253 "configure"
+ #include "confdefs.h"
+@@ -3257,6 +3261,10 @@
+ ; return 0; }
+ EOF
+ if { (eval echo configure:3260: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
++ vsprintf_endowed=1
++fi
++fi
++if [ "$vsprintf_endowed" = "1" ]; then
+   rm -rf conftest*
+   echo "$ac_t""yes" 1>&6;cat >> confdefs.h <<\EOF
+ #define USEVARARGS 1
