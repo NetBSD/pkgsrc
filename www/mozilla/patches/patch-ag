@@ -1,0 +1,23 @@
+$NetBSD: patch-ag,v 1.6 2000/10/28 23:11:38 mycroft Exp $
+
+--- config/rules.mk.orig	Sat Oct 28 16:07:27 2000
++++ config/rules.mk	Sat Oct 28 16:07:02 2000
+@@ -354,6 +354,18 @@
+ endif
+ 
+ #
++# On NetBSD a.out systems, use -Bsymbolic.  This fixes what would otherwise be
++# fatal symbol name clashes between components.
++#
++ifeq ($(OS_ARCH),NetBSD)
++ifneq (,$(filter amiga arm32 atari hp300 mac68k mvme68k next68k sun3 sun3x x68k,$(OS_TEST)))
++ifdef IS_COMPONENT
++EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
++endif
++endif
++endif
++
++#
+ # HP-UXBeOS specific section: for COMPONENTS only, add -Bsymbolic flag
+ # which uses internal symbols first
+ #
