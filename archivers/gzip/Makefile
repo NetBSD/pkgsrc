@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/07/02 21:02:49 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/07/02 21:06:35 minskim Exp $
 #
 
 DISTNAME=	gzip-1.2.4a
@@ -13,6 +13,8 @@ COMMENT=	The "meta-package" for the GZIP compression utility
 
 DEPENDS+=	gzip-base-1.2.4anb1:../../archivers/gzip-base
 DEPENDS+=	gzip-info-1.2.4a:../../archivers/gzip-info
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
