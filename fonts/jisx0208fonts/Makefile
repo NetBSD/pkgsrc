@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/03/27 03:19:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 2001/04/19 16:09:29 kei Exp $
 #
 
 DISTNAME=	jisx0208fonts-20010112
@@ -14,7 +14,8 @@ COMMENT=	X11 fonts for JIS X0208 standard
 # not USE_GMAKE
 BUILD_DEPENDS+=	gmake-3.79.1:../../devel/gmake
 
-USE_NON_RECTANGULAR?= NO
+.include "../../mk/bsd.prefs.mk"
+USE_NON_SQUARE?= NO
 USE_SHINONOME?=	YES
 USE_KANAME?=	YES
 
@@ -24,7 +25,7 @@ EXTRACT_ONLY=	# empty
 MAKE_ENV+=	FONTDIR=${FONTDIR} GZIP_CMD="${GZIP_CMD}"
 FONTDIR=${PREFIX}/lib/X11/fonts/local
 
-.if ${USE_NON_RECTANGULAR} == YES
+.if ${USE_NON_SQUARE} == YES
 MASTER_SITES+=	http://hp.vector.co.jp/authors/VA004814/freesoft/ \
 		ftp://ftp.jp.netbsd.org/pub/NetBSD-jp/tut-jp/fonts/
 ELISA10X8=	elisau10.tgz clR5x8.bdf
@@ -66,7 +67,7 @@ NAGA10=		knj10-1.1.tar.gz 6x12.tar.gz
 EXTRACT_ONLY+=	knj10-1.1.tar.gz 6x12.tar.gz
 PLIST_SRC+=	${PKGDIR}/PLIST.naga10
 
-.if ${USE_NON_RECTANGULAR} == YES
+.if ${USE_NON_SQUARE} == YES
 MASTER_SITES+=	http://www.softclub.co.jp/~zoro/k12x10/
 K12X10=		k12x10bdf.tar.gz
 EXTRACT_ONLY+=	k12x10bdf.tar.gz
@@ -77,7 +78,9 @@ PLIST_SRC+=	${PKGDIR}/PLIST.end
 
 post-extract:
 	${MKDIR} ${WRKSRC}
+.if ${USE_NON_SQUARE} == YES
 	${CP} ${DISTDIR}/clR5x8.bdf ${WRKDIR}
+.endif
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 .if ${USE_SHINONOME} == YES
 	@(cd ${WRKDIR}/shinonome12-1.0.8 ; \
