@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1.1.1 2001/03/14 16:03:15 skrll Exp $
+
+--- kwin/clients/riscos/Makefile.am.orig	Wed Dec 13 18:25:18 2000
++++ kwin/clients/riscos/Makefile.am
+@@ -12,7 +12,7 @@
+ StickyButton.cpp \
+ HelpButton.cpp \
+ Static.cpp
+-libkwinriscos_la_LIBADD = ../../kwin.la
++libkwinriscos_la_LIBADD = ../../libkwin.la
+ libkwinriscos_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
+ 
+ METASOURCES = AUTO

@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/03/14 16:03:11 skrll Exp $
+
+--- kdm/Makefile.am.orig	Mon Feb 19 11:21:43 2001
++++ kdm/Makefile.am
+@@ -24,7 +24,8 @@
+ LDADD = $(LIB_X11) -lXau $(LIBXDMCP) $(PASSLIB) \
+     $(LIB_LIBS) $(KERBEROS_LIBS) $(LIBSOCKET) \
+     $(LIBCRYPT) $(LIBUCB) $(LIBDL) $(LIBUTIL) $(LIBRESOLV)
+-kdm_LDADD = $(LDADD) $(KDM_GREET_LIBS)
++kdm_LDADD = "-dlopen" greeter/libKdmGreet.la $(LDADD) $(KDM_GREET_LIBS)
++kdm_DEPENDENCIES = greeter/libKdmGreet.la
+ 
+ # Sources for kdm:
+ kdm_SOURCES = access.c \
