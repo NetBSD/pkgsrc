@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/07/11 16:09:36 agc Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/12 02:17:23 dmcmahill Exp $
 #
 
 DISTNAME=	binutils-2.11.2
@@ -17,6 +17,12 @@ USE_BUILDLINK_ONLY=	YES
 .if ${OPSYS} == "NetBSD"
 PATCHFILES=	binutils-NetBSD-diff-20020418.patch.bz2
 PATCH_SITES=	${MASTER_SITE_LOCAL}
+PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC ${PKGDIR}/PLIST
+
+post-install:
+	${FIND} ${PREFIX}/${MACHINE_GNU_PLATFORM}/lib/ldscripts -type f -print | \
+		${SORT} -r | ${SED} 's;${PREFIX}/;;g' > ${WRKDIR}/PLIST_DYNAMIC
+
 .elif ${OPSYS} == "SunOS"
 PLIST_SRC=	${PKGDIR}/PLIST.${OPSYS}
 .endif
