@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.836 2001/10/26 21:42:44 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.837 2001/10/29 15:10:14 skrll Exp $
 #
 # This file is in the public domain.
 #
@@ -3179,7 +3179,7 @@ print-PLIST:
 			| ${SORT} -r | ${SED} ${COMMON_DIRS}` ;		\
 	do								\
 		if [ `${LS} -la ${PREFIX}/$$i | ${WC} -l` = 3 ]; then	\
-			${ECHO} @exec ${MKDIR} ${PREFIX}/$$i ;		\
+			${ECHO} @exec ${MKDIR} %D/$$i ;		\
 		fi ;							\
 		${ECHO} @dirrm $$i ;					\
 	done								\
