@@ -286,7 +286,6 @@ Suggested package updates
 	o ploticus-2.20
 	o postgresql-7.4.1 [pkgsrc-wip]
 	o psi-0.9.1
-	o pureftpd-1.0.18
 	o py-psycopg-1.1.10
 	o py-sqlite-0.5.0 [pkg/24663]
 	o pygtk-0.6.11
