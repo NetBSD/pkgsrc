@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2921 2003/07/29 16:26:42 jmmv Exp $
+$NetBSD: CHANGES,v 1.2922 2003/07/29 17:27:17 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3055,3 +3055,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added device-driver-doc-de-20030729 [agc 2003-07-29]
 	Added re2c-0.9.1 [agc 2003-07-29]
 	Updated i2cbd to 2.0_BETA0nb1 [jmmv 2003-07-29]
+	Updated ircd-hybrid to 6.2nb1 [jmmv 2003-07-29]
