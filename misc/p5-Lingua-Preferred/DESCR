@@ -1,0 +1,3 @@
+Many web browsers let you specify which languages you understand.
+Then they negotiate with the web server to get documents in the
+best language possible.  This is something similar in Perl.
