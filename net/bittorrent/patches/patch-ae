@@ -1,0 +1,20 @@
+$NetBSD: patch-ae,v 1.1 2005/02/13 13:53:34 recht Exp $
+
+--- BitTorrent/zurllib.py.orig	Fri Jun 27 02:40:21 2003
++++ BitTorrent/zurllib.py
+@@ -35,7 +35,14 @@ class HTTPContentEncodingHandler(HTTPHan
+         if DEBUG: 
+              pprint.pprint(headers.dict)
+         url = fp.url
+-        return addinfourldecompress(fp, headers, url)
++	resp = addinfourldecompress(fp, headers, url)
++	# As of Python 2.4 http_open response also has 'code' and 'msg'
++	# members, and HTTPErrorProcessor breaks if they don't exist.
++	if 'code' in dir(fp):
++	  resp.code = fp.code
++	if 'msg' in dir(fp):
++	  resp.msg = fp.msg
++	return resp
+ 
+ 
+ class addinfourldecompress(addinfourl):
