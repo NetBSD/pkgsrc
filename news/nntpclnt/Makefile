@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2002/09/18 07:05:04 tron Exp $
+# $NetBSD: Makefile,v 1.15 2002/09/18 07:05:29 tron Exp $
 
 DISTNAME=	nntpclnt-1.6.1
-PKG_REVISION=	1
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.uu.net/networking/news/nntp/
 
