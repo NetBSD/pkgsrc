@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7698 2004/11/04 16:29:55 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7699 2004/11/04 19:49:23 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5073,3 +5073,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added leafpad-0.7.5 [jmmv 2004-11-04]
 	Updated lftp to 3.0.11 [salo 2004-11-04]
 	Updated mklivecd to 0.8 [xtraeme 2004-11-04]
+	Added php4-extensions 4.3 [jdolecek 2004-11-04]
+	Added php5-extensions 5.0 [jdolecek 2004-11-04]
