@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/12/14 22:10:53 xtraeme Exp $
+$NetBSD: distinfo,v 1.4 2004/04/01 18:35:51 jmmv Exp $
 
-SHA1 (gnome-desktop-2.4.1.1.tar.bz2) = d9294bd9633a3c4c522b2db35c67253bbbfb1cee
-Size (gnome-desktop-2.4.1.1.tar.bz2) = 1054097 bytes
+SHA1 (gnome-desktop-2.6.0.tar.bz2) = 1c067a2e76ca5db38bc80fce0920861ff375fe34
+Size (gnome-desktop-2.6.0.tar.bz2) = 1095481 bytes
