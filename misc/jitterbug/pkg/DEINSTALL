@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 1999/10/11 13:39:33 wennmach Exp $
+
+JB_USER=@JB_USER@
+JB_GROUP=@JB_GROUP@
+JB_PACKAGE=@JB_PACKAGE@
+PREFIX=@PREFIX@
+
+PKG=$1
+STAGE=$2
+
+if [ "$STAGE" != "DEINSTALL" ];
+then
+	exit 0
+fi
+
+echo "If you are removing jitterbug permanently, you may wish to"
+echo "  - remove user ${JB_USER}"
+echo "  - remove group ${JB_GROUP}"
+echo "  - rm -rf ${PREFIX}/${JB_USER}"
+echo "  - rm -rf ${PREFIX}/etc/jitterbug"
+echo "  - remove entries in ${PREFIX}/etc/httpd/httpd.conf"
+echo "  - remove mail alias for ${JB_PACKAGE}-bugs in /etc/aliases"
+echo "           and run newaliases"
+
+exit 0

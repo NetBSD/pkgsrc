@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/05 12:37:18 wennmach Exp $
+# $NetBSD: Makefile,v 1.2 1999/10/11 13:39:03 wennmach Exp $
 
 DISTNAME=	jitterbug-1.6.2
 WRKSRC=		${WRKDIR}/${PKGNAME}/source
@@ -13,16 +13,18 @@ DEPENDS+=	apache-1.3.*:../../www/apache
 
 PLIST_SRC=	${WRKDIR}/PLIST.tmp
 REQ_FILE=	${WRKDIR}/REQ
+DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
 CONFIGDIR=	${WRKDIR}/${PKGNAME}/config
 DOCSDIR=	${WRKDIR}/${PKGNAME}/docs
 CGIBINDIR=	libexec/cgi-bin
 
-JB_USER?=	jitter
+JB_PACKAGE?=	test
 
+JB_USER?=	jitter
 JB_USERID?=	509
 
 JB_GROUP?=	jitter
-
 JB_GROUPID?=	509
 
 JB_DATADIR=	${JB_USER}/${JB_PACKAGE}/bug_tracking
@@ -40,23 +42,28 @@ CONFIGURE_ARGS=	--prefix=${PREFIX}
 
 .include "../../mk/bsd.prefs.mk"
 
-fetch-depends:
-.if !defined(JB_PACKAGE)
+pre-extract:
+.if ${JB_PACKAGE} == "test"
 	@${ECHO}
-	@${ECHO} "You must define the following environment variable:"
+	@${ECHO} "You should define the JB_PACKAGE environment variable:"
 	@${ECHO} "JB_PACKAGE    -- the name of your bug category"
 	@${ECHO}
+	@${ECHO} "pkgsrc will build jitterbug with \$$JB_PACKAGE = \"test\""
+	@${ECHO} "so that you can easily evaluate this package."
+	@${ECHO} "If you decide to use jitterbug for a real application"
+	@${ECHO} "you can safly deinstall jitterbug and reinstall it with"
+	@${ECHO} "\$$JB_PACKAGE set to something more senseful."
+	@${ECHO}
 	@${ECHO} "You may override the following environment variables:"
-	@${ECHO} "JB_USER       -- jitterbug user (default 'jitter')"
-	@${ECHO} "JB_USERID     -- jitterbug user id (default 509)"
-	@${ECHO} "JB_GROUP      -- jitterbug group name (default 'jitter')"
-	@${ECHO} "JB_GROUPID    -- jitterbug group id (default 509)"
+	@${ECHO} "JB_USER       -- jitterbug user (default='${JB_USER}')"
+	@${ECHO} "JB_USERID     -- jitterbug user id (default=${JB_USERID})"
+	@${ECHO} "JB_GROUP      -- jitterbug group name (default='${JB_GROUP}')"
+	@${ECHO} "JB_GROUPID    -- jitterbug group id (default=${JB_GROUPID})"
 	@${ECHO} "JB_FQHOSTNAME -- fully qualified host name"
 	@${ECHO} "JB_LOCALMAIL  -- local mail alias for \$$JB_PACKAGE category."
 	@${ECHO} "jitterbug will send and receive e-mail for \$$JB_PACKAGE"
 	@${ECHO} "as \$$JB_LOCALMAIL@\$$JB_FQHOSTNAME"
 	@${ECHO}
-	@${FALSE}
 .endif
 .if (${JB_FQHOSTNAME} == ${JB_HOSTNAME})
 	@${ECHO} "Warning: Could not determine your fully qualified hostname."
@@ -64,8 +71,6 @@ fetch-depends:
 	@${ECHO}
 	@${FALSE}
 .endif
-
-pre-extract:
 	@(case "X${JB_USER}" in                                               \
 	Xbin|Xetc|Xinclude|Xinfo|Xlib|Xlibdata|Xlibexec|Xman|Xsbin|Xshare)    \
 		gooduser=no;                                                  \
@@ -95,7 +100,7 @@ pre-install:
 	@${ECHO} "Arrrgggghhh. JB_USER not defined. Send-pr!"
 	@${FALSE}
 .endif
-	@${SED}  \
+	@${SED}                                                               \
 		-e 's|@JB_USER@|${JB_USER}|g'                                 \
 		-e 's|@JB_USERID@|${JB_USERID}|g'                             \
 		-e 's|@JB_GROUP@|${JB_GROUP}|g'                               \
@@ -107,7 +112,7 @@ pre-install:
 		-e 's|@FILESDIR@|${FILESDIR}|g'                               \
 			<${PKGDIR}/REQ                                        \
 			>${REQ_FILE}
-	@${SED}  \
+	@${SED}                                                               \
 		-e 's|@JB_DATADIR@|${JB_DATADIR}|g'                           \
 		-e 's|@CGIBINDIR@|${CGIBINDIR}|g'                             \
 		-e 's|@JB_PACKAGE@|${JB_PACKAGE}|g'                           \
@@ -115,22 +120,29 @@ pre-install:
 		-e 's|@JB_GROUP@|${JB_GROUP}|g'                               \
 			<${PKGDIR}/PLIST                                      \
 			>${PLIST_SRC}
-	@${SED}  \
+	@${SED}                                                               \
 		-e 's|@JB_USER@|${JB_USER}|g'                                 \
 			<${FILESDIR}/jitterbug.auth                           \
 			>${WRKDIR}/jitterbug.auth
-	@${SED}  \
+	@${SED}                                                               \
 		-e 's|@JB_USER@|${JB_USER}|g'                                 \
 		-e 's|@JB_PACKAGE@|${JB_PACKAGE}|g'                           \
 		-e 's|@PREFIX@|${PREFIX}|g'                                   \
 			<${FILESDIR}/NEWPACKAGE                               \
 			>${WRKDIR}/NEWPACKAGE
-	@${SED}  \
+	@${SED}                                                               \
 		-e 's|@JB_USER@|${JB_USER}|g'                                 \
 		-e 's|@JB_PACKAGE@|${JB_PACKAGE}|g'                           \
 		-e 's|@PREFIX@|${PREFIX}|g'                                   \
-			<${FILESDIR}/POSTINSTALL                              \
-			>${WRKDIR}/POSTINSTALL
+			<${PKGDIR}/MESSAGE                                    \
+			>${MESSAGE_FILE}
+	@${SED}                                                               \
+		-e 's|@JB_USER@|${JB_USER}|g'                                 \
+		-e 's|@JB_GROUP@|${JB_GROUP}|g'                               \
+		-e 's|@JB_PACKAGE@|${JB_PACKAGE}|g'                           \
+		-e 's|@PREFIX@|${PREFIX}|g'                                   \
+			<${PKGDIR}/DEINSTALL                                  \
+			>${DEINSTALL_FILE}
 	${SH} ${REQ_FILE} ${PKGNAME} INSTALL
 
 do-install:
@@ -183,7 +195,7 @@ do-install:
 		${WRKDIR}/jitterbug.auth ${PREFIX}/${JB_USER}/etc
 	${MKDIR} ${PREFIX}/${JB_USER}/doc
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
-		${WRKDIR}/POSTINSTALL ${PREFIX}/${JB_USER}/doc
+		${MESSAGE_FILE} ${PREFIX}/${JB_USER}/doc/POSTINSTALL
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
 		${WRKDIR}/NEWPACKAGE ${PREFIX}/${JB_USER}/doc
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
@@ -192,9 +204,6 @@ do-install:
 		${DOCSDIR}/INSTALL ${PREFIX}/${JB_USER}/doc
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
 		${DOCSDIR}/JitterBug.txt ${PREFIX}/${JB_USER}/doc
-	${CHOWN} -R ${JB_USER} ${PREFIX}/${JB_USER}
-	${CHGRP} -R ${JB_GROUP} ${PREFIX}/${JB_USER}
-	-${MKDIR} ${PREFIX}/etc/jitterbug
 	@${SED}                                                               \
 		-e 's|@JB_EMAIL@|${JB_EMAIL}|g'                               \
 		-e 's|@JB_DATADIR@|${JB_DATADIR}|g'                           \
@@ -203,6 +212,9 @@ do-install:
 		-e 's|@PREFIX@|${PREFIX}|g'                                   \
 		<${FILESDIR}/jitterbug.config                                 \
 		>${PREFIX}/${JB_CONFIGDIR}/jitterbug.config
+	${CHOWN} -R ${JB_USER} ${PREFIX}/${JB_USER}
+	${CHGRP} -R ${JB_GROUP} ${PREFIX}/${JB_USER}
+	-${MKDIR} ${PREFIX}/etc/jitterbug
 	[ -f ${PREFIX}/etc/jitterbug/${JB_PACKAGE} ] ||                       \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
 		${PREFIX}/${JB_CONFIGDIR}/jitterbug.config                    \
@@ -211,18 +223,5 @@ do-install:
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
 		${PREFIX}/${JB_CONFIGDIR}/jitterbug.config                    \
 		${PREFIX}/etc/jitterbug/${JB_PACKAGE}.private
-
-post-install:
-.if !defined(BATCH)
-	@${ECHO} " "
-	@${ECHO} "Please observe the following POSTINSTALL notes:"
-	@${ECHO} "(POSTINSTALL is also installed in ${PREFIX}/${JB_USER}/doc)"
-	@${ECHO} " "
-	@${ECHO} "=============================================================================="
-	@${CAT} ${WRKDIR}/POSTINSTALL
-	@${ECHO} " "
-	@${ECHO} "=============================================================================="
-	@${ECHO} " "
-.endif
 
 .include "../../mk/bsd.pkg.mk"

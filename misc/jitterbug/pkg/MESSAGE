@@ -1,3 +1,5 @@
+
+===============================================================================
 Jitterbug now has successfully been installed on your system.
 
 Before using jitterbug you should perform the following steps:
@@ -13,3 +15,5 @@ o Customize (if necessary)
 
 o Customize the html documents in the project's bug tracking directory:
   @PREFIX@/@JB_USER@/@JB_PACKAGE@/bug_tracking
+===============================================================================
+
