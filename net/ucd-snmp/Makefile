@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2002/10/02 21:10:10 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2003/01/04 22:16:43 wiz Exp $
 
 DISTNAME=	ucd-snmp-4.2.4
 CATEGORIES=	net
@@ -16,6 +16,7 @@ CONFLICTS+=	net-snmp-[0-9]*
 BUILD_DEFS+=	USE_INET6
 
 USE_BUILDLINK2=	# defined
+USE_PERL5=	build
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -93,6 +94,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/snmpd ${PREFIX}/etc/rc.d
 	${INSTALL_SCRIPT} ${WRKDIR}/snmptrapd ${PREFIX}/etc/rc.d
 
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../security/tcp_wrappers/buildlink2.mk"
 
