@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/08/24 12:17:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/11/08 16:02:56 jdolecek Exp $
 bin/aktion
 bin/artsbuilder
 bin/artscontrol
@@ -1114,7 +1114,6 @@ share/kde/servicetypes/audiomidi.desktop
 @dirrm share/doc/kde/HTML/en/kmidi
 @dirrm share/doc/kde/HTML/en/kmid
 @dirrm share/doc/kde/HTML/en/kcontrol/kmixcfg
-@dirrm share/doc/kde/HTML/en/kcontrol
 @dirrm share/doc/kde/HTML/en/kaboodle
 @dirrm share/doc/kde/HTML/en/artsbuilder/images
 @dirrm share/doc/kde/HTML/en/artsbuilder
