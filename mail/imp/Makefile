@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/23 14:29:25 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/28 10:33:53 wiz Exp $
 
 DISTNAME=	imp-2.2.4
 CATEGORIES=	mail www
@@ -31,7 +31,6 @@ post-extract:
 	do								\
 		${MV} $${file} $${file}.dist;				\
 	done
-	
 
 post-patch:
 	cd ${WRKSRC}/config;						\
