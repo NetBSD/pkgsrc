@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/01/06 19:13:13 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/01/11 06:29:38 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
@@ -59,16 +59,6 @@ MAKEFLAGS+=	\
 	BUILDLINK_USE_BUILTIN.gettext="${BUILDLINK_USE_BUILTIN.gettext}"
 .endif
 
-.if !defined(_BLNK_LIBINTL_FOUND)
-_BLNK_LIBINTL_FOUND!=	\
-	if [ "`${ECHO} /usr/lib/libintl.*`" = "/usr/lib/libintl.*" ]; then \
-		${ECHO} NO;						\
-	else								\
-		${ECHO} YES;						\
-	fi
-MAKEFLAGS+=	_BLNK_LIBINTL_FOUND=${_BLNK_LIBINTL_FOUND}
-.endif
-
 .if !empty(BUILDLINK_USE_BUILTIN.gettext:M[nN][oO])
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	gettext
@@ -82,14 +72,14 @@ _GETTEXT_ICONV_DEPENDS=	gettext-lib>=0.11.5nb1
 .    if !defined(_GETTEXT_NEEDS_ICONV)
 _GETTEXT_NEEDS_ICONV!=	\
 	if ${PKG_INFO} -qe "${BUILDLINK_DEPENDS.gettext}"; then		\
-		pkg=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -s "" lsbest '${BUILDLINK_DEPENDS.gettext}'`; \
+		pkg=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -S lsbest '${BUILDLINK_DEPENDS.gettext}'`; \
 		if ${PKG_INFO} -qN "$$pkg" | ${GREP} -q "libiconv-[0-9]"; then \
-			${ECHO} YES;					\
+			${ECHO} "YES";					\
 		else							\
-			${ECHO} NO;					\
+			${ECHO} "NO";					\
 		fi;							\
 	else								\
-		${ECHO} YES;						\
+		${ECHO} "YES";						\
 	fi
 MAKEFLAGS+=	_GETTEXT_NEEDS_ICONV=${_GETTEXT_NEEDS_ICONV}
 .    endif
@@ -99,6 +89,15 @@ BUILDLINK_DEPENDS.gettext=	${_GETTEXT_ICONV_DEPENDS}
 _BLNK_LIBINTL+=			${BUILDLINK_LDADD.iconv}
 .    endif
 .  else
+.    if !defined(_BLNK_LIBINTL_FOUND)
+_BLNK_LIBINTL_FOUND!=	\
+	if [ "`${ECHO} /usr/lib/libintl.*`" = "/usr/lib/libintl.*" ]; then \
+		${ECHO} "NO";						\
+	else								\
+		${ECHO} "YES";						\
+	fi
+MAKEFLAGS+=	_BLNK_LIBINTL_FOUND="${_BLNK_LIBINTL_FOUND}"
+.    endif
 .    if ${_BLNK_LIBINTL_FOUND} == "YES"
 _BLNK_LIBINTL=		-lintl
 .    else
