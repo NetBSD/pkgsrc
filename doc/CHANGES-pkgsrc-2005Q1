@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.25 2005/04/01 05:04:03 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.26 2005/04/01 05:19:44 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -51,3 +51,5 @@ Pullup ticket 404 - requested by Juan Romero Pardines
 usability fix for mklivecd
 Pullup ticket 407 - requested by Lubomir Sedlacik
 security fix for gsharutils
+Pullup ticket 410 - requested by Adrian Portelli
+security fix for horde3
