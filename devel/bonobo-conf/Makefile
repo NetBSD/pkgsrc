@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2001/09/25 05:23:35 tron Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/16 01:37:48 rh Exp $
 
-DISTNAME=		bonobo-conf-0.11
+DISTNAME=		bonobo-conf-0.14
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/bonobo-conf/}
 
@@ -8,13 +8,9 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Bonobo configuration system
 
-DEPENDS+=		oaf>=0.6.2:../../devel/oaf
-DEPENDS+=		GConf>=0.11:../../devel/GConf
-DEPENDS+=		bonobo>=0.37:../../devel/bonobo
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
-USE_LIBINTL=		YES
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 USE_GMAKE=		YES
@@ -29,4 +25,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/${doc} ${PREFIX}/share/doc/bonobo-conf
 .endfor
 
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/bonobo/buildlink.mk"
+.include "../../devel/GConf/buildlink.mk"
+.include "../../devel/popt/buildlink.mk"
+.include "../../devel/oaf/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
