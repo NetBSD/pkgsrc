@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.81 2003/09/07 15:07:10 wiz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.82 2003/09/21 20:32:36 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -778,7 +778,7 @@ sub parse_makefile_pkgsrc
 sub parse_makefile_vars
     {
     my($file, $cwd) = @_;
-    my($pkgname, %vars, $plus, $value, @data,
+    my($CURDIR, $NEWCURDIR, $pkgname, %vars, $plus, $value, @data,
        %incfiles,
        @if_false); # 0:true 1:false 2:nested-false&nomore-elsif
 
@@ -801,6 +801,7 @@ sub parse_makefile_vars
 	{ $vars{'.CURDIR'} = $1; }
     else
 	{ $vars{'.CURDIR'} = getcwd; }
+    $CURDIR = $vars{'.CURDIR'};
     if ($opt{L})
 	{ print "$file\n"; }
 
@@ -859,6 +860,13 @@ sub parse_makefile_vars
 
         $if_false[$#if_false] && next;
 
+	# for getting the path for .includes right
+	if (m#__CURDIR__=#)
+	    {
+	    s/__CURDIR__=//;
+	    $CURDIR = $_;
+	    next;
+	    }
 	# Included files (just unshift onto @data)
 	#
 	if (m#^\.include\s+"([^"]+)"#)
@@ -878,7 +886,15 @@ sub parse_makefile_vars
 		# Handle relative path incfile
 		#
 		if (substr($incfile, 0, 1) ne '/')
-		    { $incfile = "$vars{'.CURDIR'}/$incfile"; }
+		    {
+		    $incfile = "$CURDIR/$incfile";
+		    $NEWCURDIR = $incfile;
+		    $NEWCURDIR =~ s#/[^/]*$##;
+		    }
+		else
+		    {
+		    $NEWCURDIR = $CURDIR;
+		    }
 		if (!$incfiles{$incfile})
 		    {
 		    $incfiles{$incfile} = 1;
@@ -886,7 +902,9 @@ sub parse_makefile_vars
 			{ verbose("Cannot open '$incfile' (from $file): $!\n");}
 		    else
 			{
+			unshift(@data, "__CURDIR__=$CURDIR");
 			unshift(@data, map {chomp; $_} <FILE>);
+			unshift(@data, "__CURDIR__=$NEWCURDIR");
 			close(FILE);
 			}
 		    }
