@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4502 2004/01/18 23:41:07 kim Exp $
+$NetBSD: CHANGES,v 1.4503 2004/01/19 00:00:45 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -334,3 +334,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-URI to 1.30 [heinz 2004-01-18]
 	Updated p5-Net-DNS to 0.45 [heinz 2004-01-18]
 	Updated anomy-sanitizer to 1.66 [kim 2004-01-18]
+	Updated py-Scientific to 2.4.5 [recht 2004-01-18]
+	Updated py-Scientific-doc to 2.4.5 [recht 2004-01-18]
