@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.8 2004/04/22 17:14:37 tv Exp $
+$NetBSD: distinfo,v 1.9 2004/10/21 03:39:04 xtraeme Exp $
 
-SHA1 (nano-1.0.9.tar.gz) = 750cb7a22b0ffa490714420a7ab18259e9310543
-Size (nano-1.0.9.tar.gz) = 451822 bytes
-SHA1 (patch-aa) = bf1d59fe2711f9d1e8aec55bd707dcf5594c1132
+SHA1 (nano-1.2.4.tar.gz) = 03a321011c2ceb00da20e15b15ed9ee9dee98c97
+Size (nano-1.2.4.tar.gz) = 914302 bytes
