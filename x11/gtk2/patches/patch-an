@@ -1,0 +1,11 @@
+$NetBSD: patch-an,v 1.3 2002/07/18 02:19:29 rh Exp $
+
+--- gdk-2.0.pc.in.orig	Wed Mar  6 07:03:49 2002
++++ gdk-2.0.pc.in
+@@ -8,5 +8,5 @@ Name: GDK
+ Description: GIMP Drawing Kit (${target} target)
+ Version: @VERSION@
+ Requires: gdk-pixbuf-2.0 @GDK_PACKAGES@
+-Libs: -L${libdir} -lgdk-${target}-@GTK_API_VERSION@ @GDK_EXTRA_LIBS@
++Libs: -L${libdir} -Wl,-R${libdir} -lgdk-${target}-@GTK_API_VERSION@ @GDK_EXTRA_LIBS@
+ Cflags: -I${includedir}/gtk-2.0 -I${libdir}/gtk-2.0/include @GDK_EXTRA_CFLAGS@

@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2002/07/18 02:19:30 rh Exp $
+
+--- glib.pc.in.orig	Thu Nov 30 11:15:33 2000
++++ glib.pc.in
+@@ -6,6 +6,6 @@ includedir=@includedir@
+ Name: GLib
+ Description: C Utility Library
+ Version: @VERSION@
+-Libs: -L${libdir} -lglib
++Libs: -L${libdir} -Wl,-R${libdir} -lglib
+ Cflags: -I${includedir}/glib-1.2 -I${libdir}/glib/include 
+ 
