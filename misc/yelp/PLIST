@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/12 17:29:38 xtraeme Exp $
-bin/gman
+@comment $NetBSD: PLIST,v 1.2 2003/12/14 23:01:51 xtraeme Exp $
 bin/gnome-help
 bin/yelp
 bin/yelp-pregenerate
 lib/bonobo/servers/GNOME_Yelp.server
 libexec/yelp-db2html
+libexec/yelp-info2html
+libexec/yelp-man2html
 share/applications/yelp.desktop
 share/images/yelp/bcg.png
 share/images/yelp/empty.png
@@ -17,6 +18,7 @@ ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/yelp.mo
@@ -37,11 +39,15 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/li/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/yelp.mo
@@ -182,14 +188,19 @@ share/sgml/docbook/yelp/docbook/html/verbatim.xsl
 share/sgml/docbook/yelp/docbook/html/xref.xsl
 share/sgml/docbook/yelp/docbook/images/blank.png
 share/sgml/docbook/yelp/docbook/images/caution.png
+share/sgml/docbook/yelp/docbook/images/home.png
 share/sgml/docbook/yelp/docbook/images/important.png
+share/sgml/docbook/yelp/docbook/images/next.png
 share/sgml/docbook/yelp/docbook/images/note.png
+share/sgml/docbook/yelp/docbook/images/prev.png
 share/sgml/docbook/yelp/docbook/images/tip.png
+share/sgml/docbook/yelp/docbook/images/up.png
 share/sgml/docbook/yelp/docbook/images/warning.png
 share/sgml/docbook/yelp/docbook/lib/lib.xsl
 share/sgml/docbook/yelp/l10n.xml
 share/sgml/docbook/yelp/yelp-custom.xsl
 share/sgml/docbook/yelp/yelp-customization.xsl
+share/sgml/docbook/yelp/yelp-functions.xsl
 share/yelp/catalog
 share/yelp/important_docs.xml
 share/yelp/ui/yelp.glade
