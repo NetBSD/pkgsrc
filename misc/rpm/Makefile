@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2002/12/01 16:25:58 salo Exp $
-#
+# $NetBSD: Makefile,v 1.38 2002/12/28 08:48:09 tron Exp $
 
 DISTNAME=	rpm-2.5.4
 CATEGORIES=	misc
-MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-2.5.x/ \
-		ftp://ftp.gwdg.de/pub/linux/redhat/code/rpm/
+MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-2.5.x/
 
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www.rpm.org/
