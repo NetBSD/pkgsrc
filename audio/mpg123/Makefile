@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2001/06/19 07:04:58 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2001/12/03 18:02:42 wiz Exp $
 #
 
-DISTNAME=       mpg123-0.59r
+DISTNAME=	mpg123-0.59r
+PKGNAME=	mpg123-0.59.18
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mpg123.de/mpg123/ \
 		http://www-ti.informatik.uni-tuebingen.de/~hippm/mpg123/
