@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 13:30:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/18 22:20:03 jlam Exp $
 
-DISTNAME=		rp8_linux20_libc6_i386_cs1
-PKGNAME=		realplayer-8
+DISTNAME=		rp8_linux20_libc6_i386_cs2
+PKGNAME=		realplayer-8.0.1
 WRKSRC=			${WRKDIR}/RealPlayer8
 CATEGORIES=		audio
 MASTER_SITES=		# empty
@@ -60,14 +60,14 @@ do-build:
 		${MV} -f mimeinstall.sh mimeinstall.sh.old;		\
 		${SED}	-e "s,@PREFIX@,${PREFIX},g"			\
 			-e "s,@REALPLAYER_HOME@,${REALPLAYER_HOME},g"	\
-			< mimeinstall.sh.old > mimeinstall.sh;		\
+			mimeinstall.sh.old > mimeinstall.sh;		\
 		${CHMOD} +x mimeinstall.sh
-	${SED}	-e "s,@REALPLAYER_HOME@,${REALPLAYER_HOME},g" \
-		< ${FILESDIR}/realplay.sh > ${WRKDIR}/realplay.sh
+	${SED}	-e "s,@REALPLAYER_HOME@,${REALPLAYER_HOME},g"		\
+		${FILESDIR}/realplay.sh > ${WRKDIR}/realplay.sh
 
 pre-install:
-	${FIND} ${WRKSRC} \
-		\( -name "*.orig" -o -name "*.old" \) -exec ${RM} {} \;
+	${FIND} ${WRKSRC} \( -name "*.orig" -o -name "*.old" \) -print0	\
+		| ${XARGS} -0 ${RM}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/realplay.sh ${PREFIX}/bin/realplay
