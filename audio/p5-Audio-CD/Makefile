@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/08/31 03:37:33 wiz Exp $
+# $NetBSD: Makefile,v 1.1 2002/08/31 03:37:33 wiz Exp $
 #
 
 DISTNAME=	Audio-CD-0.05
