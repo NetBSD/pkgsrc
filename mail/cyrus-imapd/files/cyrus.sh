@@ -1,9 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cyrus.sh,v 1.2 2002/09/20 02:01:57 grant Exp $
+# $NetBSD: cyrus.sh,v 1.3 2005/03/02 21:42:48 wiz Exp $
 #
 # PROVIDE: cyrus
 # REQUIRE: DAEMON
+# BEFORE: mail
 #
 # To start cyrus-imapd at startup, copy this script to /etc/rc.d and set
 # cyrus=YES in /etc/rc.conf.
@@ -17,7 +18,8 @@ rcd_dir=`@DIRNAME@ $0`
 name="cyrus"
 rcvar=$name
 command="@PREFIX@/cyrus/bin/master"
-command_args="& sleep 2"
+command_args="-d"
+pidfile="/var/run/cyrus-master.pid"
 required_files="@PKG_SYSCONFDIR@/cyrus.conf @IMAPDCONF@"
 extra_commands="mkimap reload"
 
@@ -49,18 +51,16 @@ cyrus_mkimap()
 {
 	# Generate the prerequisite directory structure for Cyrus IMAP.
 	if [ -f @IMAPDCONF@ ]; then
-		imap_dirs=`
-			@AWK@ '/^configdirectory:/	{ print $2 };	\
-			       /^partition-.*:/		{ print $2 };	\
-			       /^sievedir:/		{ print $2 }'	\
-			      @IMAPDCONF@				\
-		`
-		for dir in ${imap_dirs}; do
-			if [ ! -d ${dir} ]; then
-				@MKDIR@ ${dir}
-				@CHMOD@ 750 ${dir}
-				@CHOWN@ @CYRUS_USER@ ${dir}
-				@CHGRP@ @CYRUS_GROUP@ ${dir}
+		@AWK@ '/^configdirectory:/	{ print $2 };		\
+		       /^partition-.*:/		{ print $2 };		\
+		       /^sievedir:/		{ print $2 }'		\
+		      @IMAPDCONF@ |					\
+		while read dir; do
+			if [ ! -d "$dir" ]; then
+				@MKDIR@ "$dir"
+				@CHMOD@ 750 "$dir"
+				@CHOWN@ @CYRUS_USER@ "$dir"
+				@CHGRP@ @CYRUS_GROUP@ "$dir"
 			fi
 		done
 		@SU@ -m @CYRUS_USER@ -c "@PREFIX@/cyrus/bin/mkimap"
