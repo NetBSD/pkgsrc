@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1999/08/29 14:20:44 rh Exp $
+
+--- mini-utils/guname/Makefile.in.orig	Thu Jul 29 21:45:56 1999
++++ mini-utils/guname/Makefile.in	Sun Aug 29 15:45:43 1999
+@@ -398,7 +398,7 @@
+ mostlyclean distclean maintainer-clean
+ 
+ 
+-@GUNAME_CAPPLET_TRUE@install-data-local:
++install-data-local:
+ @GUNAME_CAPPLET_TRUE@	$(INSTALL_DATA) $(srcdir)/guname-capplet.desktop $(DESTDIR)$(datadir)/control-center/guname-capplet.desktop
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
