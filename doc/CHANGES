@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6298 2004/06/24 14:45:44 jlam Exp $
+$NetBSD: CHANGES,v 1.6299 2004/06/24 15:28:59 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3043,3 +3043,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated w3m to 0.5.1 [cjep 2004-06-24]
 	Updated R to 1.9.1 [markd 2004-06-24]
 	Updated mit-krb5 to 1.3.4 [jlam 2004-06-24]
+	Added freedroid-1.02 [dillo 2004-06-24]
