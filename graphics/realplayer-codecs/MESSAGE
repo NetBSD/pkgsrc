@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/04/01 08:02:48 mrg Exp $
+
+This package requires a special hack to run on PowerPC systems, and to
+enable one codec on all systems.
+
+For PowerPC, these shared libraries are linked agained glibc6, the need a
+"libc.so.6" file.  Fortunately, only a few simple functions (malloc, free,
+memset, memcpy) are needed and these work from the NetBSD libc.  As root,
+you need to run this command to complete this installation (this *is*
+ugly, but for now it is our best solution):
+
+	# cd /usr/lib
+	# ln -s libc.so libc.so.6
+
+For all systems, to use the "sipr" codec, a "libm.so.6" is required.  It
+is not yet known if the NetBSD libm will suit this functionality or not.
+
+
+===========================================================================
