@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2001/02/02 16:39:57 jlam Exp $
+$NetBSD: patch-ac,v 1.6 2001/02/03 20:53:10 jlam Exp $
 
 --- htdocs/index.html.en.orig	Fri Jan 19 14:39:47 2001
 +++ htdocs/index.html.en
@@ -19,8 +19,8 @@ $NetBSD: patch-ac,v 1.5 2001/02/02 16:39:57 jlam Exp $
 -<DIV ALIGN="CENTER"><IMG SRC="apache_pb.gif" ALT=""></DIV>
 +<p>Please feel free to use the images below on an Apache/NetBSD-powered web
 +server.  Thanks for using
-+<A HREF="http://www.apache.org/"Apache</A> on
-+<A HREF="http://www.netbsd.org/"NetBSD</A>!</p>
++<A HREF="http://www.apache.org/">Apache</A> on
++<A HREF="http://www.netbsd.org/">NetBSD</A>!</p>
 +
 +<DIV ALIGN="CENTER">
 + <A HREF="http://www.apache.org/">
