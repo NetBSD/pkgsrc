@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/02/24 11:03:22 bad Exp $
+
+--- src/gui/ObjectManipulator.cpp.orig	Mon Dec 20 09:04:05 2004
++++ src/gui/ObjectManipulator.cpp	Thu Feb 24 00:36:48 2005
+@@ -97,6 +97,7 @@
+ #include "fwbuilder/IntervalGroup.h"
+ 
+ #include <iostream>
++#include <algorithm>
+ 
+ using namespace std;
+ using namespace libfwbuilder;
