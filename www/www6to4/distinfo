@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:13:32 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/27 13:40:35 itojun Exp $
 
-SHA1 (www6to4-1.3p1.tar.gz) = 7e238cfb57f9d2d53c24dd9d555a5637ec64f1e1
-SHA1 (patch-aa) = 3e3ae2d201198419abbd626172a35ca2f0a7a4cf
+SHA1 (www6to4-1.4.tar.gz) = b20cfc8a100e1f38ff9ffabff93a9d159a30996b
+Size (www6to4-1.4.tar.gz) = 26571 bytes
+SHA1 (patch-aa) = 2a349e7f10a4a027317f1a4b04a7789165db5896
