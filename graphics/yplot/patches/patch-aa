@@ -1,32 +1,38 @@
-$NetBSD: patch-aa,v 1.3 2001/04/02 00:56:02 jtb Exp $
+$NetBSD: patch-aa,v 1.4 2001/06/20 12:58:56 jtb Exp $
 
---- Makefile.build.orig	Fri Sep  3 21:59:31 1999
-+++ Makefile.build
-@@ -8,8 +8,7 @@
- ROOT=
+--- configure.orig	Wed Jun 20 04:20:56 2001
++++ configure
+@@ -528,15 +528,6 @@
+ # install with prefix=/usr/local/plplot or prefix=/usr and also installation
+ # of plplot with debs or rpm's (where plplot is installed with prefix=/usr).
  
- # These flags needed to compile ps.c and ljiip.c driver routines
--CFLAGS = -O -DSTDC_HEADERS=1 -DPAD_ARRAY=1   -I. -I/usr/lib/yorick/1.4/h \
--	-I/usr/lib/plplot/include -DDOUBLE
-+CFLAGS = -O -DSTDC_HEADERS=1 -DPAD_ARRAY=1   -I. -DDOUBLE
+-incdirs="\
+-  /usr \
+-  /usr/local/plplot"
+-for dir in $incdirs; do
+-  if test -r "$dir/bin/plplot-config"; then
+-    PLPLOT_PREFIX="$dir"
+-    break
+-  fi
+-done
+ if test -z "$PLPLOT_PREFIX"; then
+   echo "$ac_t""ERROR: configuration cannot continue because plplot" 1>&6
+   echo "$ac_t""is not installed in one of the standard places." 1>&6
+@@ -548,17 +539,6 @@
+ # This list of directories should cover the common cases of yorick
+ # rpm package or Debian package install.
  
- ##############################################
- 
-@@ -46,7 +45,7 @@
- 	"Nameclash! must get rid of Makefile so this can work"; false ; fi
- 	yorick -batch make.i yplotl yplotl.i
- 	mv -f Makefile Makefile_yplotl
--	make -f Makefile_yplotl
-+	make -f Makefile_yplotl PKG_LIBS="`plplot-config --libs` -lyorm"
- 
- ##############################################
- 
-@@ -64,7 +63,7 @@
- 	"Nameclash! must get rid of Makefile so this can work"; false ; fi
- 	yorick -batch make.i yplot yplot.i
- 	mv -f Makefile Makefile_yplot
--	make -f Makefile_yplot
-+	make -f Makefile_yplot PKG_LIBS="`plplot-config --libs` -lyorm"
- 
- # generate doc/yplot.doc using local yplot and mkdoc
- doc/yplot.doc: yplot yplot_doc.csh
+-incdirs="\
+-  /usr/lib/yorick/1.4 \
+-  /usr/lib/yorick/1.4/i486-debian-linux/"
+-for dir in $incdirs; do
+-# lib seems to be a common sub-directory for these directories on either
+-# rpm or debian systems.
+-  if test -r "$dir/lib"; then
+-    YORICK_CONTRIB_PREFIX="$dir"
+-    break
+-  fi
+-done
+ if test -z "$YORICK_CONTRIB_PREFIX"; then
+   echo "$ac_t""ERROR: configuration cannot continue because yorick" 1>&6
+   echo "$ac_t""is not installed in one of the standard places." 1>&6

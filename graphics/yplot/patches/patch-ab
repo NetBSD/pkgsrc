@@ -1,73 +1,33 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/02/14 11:52:11 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2001/06/20 12:58:56 jtb Exp $
 
---- ps.c.orig	Wed Feb 14 09:22:25 2001
-+++ ps.c
-@@ -28,12 +28,12 @@
+--- Makefile.build.in.orig	Wed Jun 20 03:59:57 2001
++++ Makefile.build.in
+@@ -299,19 +299,16 @@
+ ##############################################
  
- 	PLplot PostScript device driver.
- */
--#include "plDevs.h"
-+#include "plplot/plDevs.h"
+ install: all yplot.i yplotl.i
+-	mkdir -p $(ROOT)$(YPLOT_PREFIX)/bin
+-	cp yplot yplotl $(ROOT)$(YPLOT_PREFIX)/bin
+-	mkdir -p $(ROOT)$(YPLOT_PREFIX)/share/doc/yplot/
+-	cp ANNOUNCE CHANGES COPYING DEVICES GOALS INSTALL README yplot.lsm\
+-	doc/*.tex doc/*.dvi doc/ytut.ps.gz doc/yplot.doc \
+-	doc/demo[1-6].ps \
+-	doc/plpoin.ps doc/plsym.ps.??\
++	$(BSD_INSTALL_PROGRAM) yplot yplotl $(ROOT)$(YPLOT_PREFIX)/bin
++	$(BSD_INSTALL_DATA_DIR) $(ROOT)$(YPLOT_PREFIX)/share/doc/yplot/
++	$(BSD_INSTALL_DATA) ANNOUNCE CHANGES COPYING DEVICES GOALS \
++	README doc/*.dvi doc/ytut.ps.gz doc/yplot.doc doc/demo[1-6].ps \
+ 	$(ROOT)$(YPLOT_PREFIX)/share/doc/yplot/
+-	mkdir -p $(ROOT)$(YPLOT_PREFIX)/lib/yplot1.1.0/examples
+-	cp doc/*.i doc/test.dat \
+-	$(ROOT)$(YPLOT_PREFIX)/lib/yplot1.1.0/examples
+-	mkdir -p $(ROOT)$(YORICK_CONTRIB_PREFIX)/contrib
+-	cp yplot.i yplotl.i $(ROOT)$(YORICK_CONTRIB_PREFIX)/contrib
++	$(BSD_INSTALL_DATA_DIR) $(ROOT)$(YPLOT_PREFIX)/share/examples/yplot
++	$(BSD_INSTALL_DATA) doc/*.i doc/test.dat \
++	$(ROOT)$(YPLOT_PREFIX)/share/examples/yplot
++	$(BSD_INSTALL_DATA_DIR) $(ROOT)$(YORICK_CONTRIB_PREFIX)/contrib
++	$(BSD_INSTALL_DATA) yplot.i yplotl.i $(ROOT)$(YORICK_CONTRIB_PREFIX)/contrib
  
- #ifdef PLD_ps
- 
--#include "plplotP.h"
--#include "drivers.h"
-+#include "plplot/plplotP.h"
-+#include "plplot/drivers.h"
- 
- #include <string.h>
- #include <time.h>
-@@ -133,8 +133,8 @@
- 
-     dev = (PSDev *) pls->dev;
- 
--    dev->xold = UNDEFINED;
--    dev->yold = UNDEFINED;
-+    dev->xold = PL_UNDEFINED;
-+    dev->yold = PL_UNDEFINED;
- 
-     plP_setpxl(pxlx, pxly);
- 
-@@ -400,8 +400,8 @@
- {
-     PSDev *dev = (PSDev *) pls->dev;
- 
--    dev->xold = UNDEFINED;
--    dev->yold = UNDEFINED;
-+    dev->xold = PL_UNDEFINED;
-+    dev->yold = PL_UNDEFINED;
- 
-     pls->page++;
-     fprintf(OF, "%%%%Page: %d %d\n", (int) pls->page, (int) pls->page);
-@@ -487,8 +487,8 @@
- 
- 	fprintf(OF, " S\n%d W", width);
- 
--	dev->xold = UNDEFINED;
--	dev->yold = UNDEFINED;
-+	dev->xold = PL_UNDEFINED;
-+	dev->yold = PL_UNDEFINED;
- 	break;
-     }
-     case PLSTATE_COLOR0:
-@@ -514,7 +514,7 @@
- 
- /* Reinitialize current point location. */
- 
--    if (dev->xold != UNDEFINED && dev->yold != UNDEFINED) {
-+    if (dev->xold != PL_UNDEFINED && dev->yold != PL_UNDEFINED) {
- 	fprintf(OF, " %d %d M \n", (int)dev->xold, (int)dev->yold);
-     }
- }
-@@ -591,8 +591,8 @@
- 	pls->bytecnt += strlen(outbuf);
- 	pls->linepos += 21;
-     }
--    dev->xold = UNDEFINED;
--    dev->yold = UNDEFINED;
-+    dev->xold = PL_UNDEFINED;
-+    dev->yold = PL_UNDEFINED;
-     fprintf(OF, " F ");
- }
+ ##############################################
  

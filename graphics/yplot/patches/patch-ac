@@ -1,31 +1,10 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/02/14 11:52:11 jtb Exp $
+$NetBSD: patch-ac,v 1.2 2001/06/20 12:58:56 jtb Exp $
 
---- ljiip.c.orig	Wed Feb 14 09:23:57 2001
-+++ ljiip.c
-@@ -28,12 +28,12 @@
- 		compression can speed up the printing up to 3x
- 
- */
--#include "plDevs.h"
-+#include "plplot/plDevs.h"
- 
- #ifdef PLD_ljii
- 
--#include "plplotP.h"
--#include "drivers.h"
-+#include "plplot/plplotP.h"
-+#include "plplot/drivers.h"
- #include <math.h>
- #include <string.h>
- 
-@@ -119,8 +119,8 @@
- 
-     dev = plAllocDev(pls);
- 
--    dev->xold = UNDEFINED;
--    dev->yold = UNDEFINED;
-+    dev->xold = PL_UNDEFINED;
-+    dev->yold = PL_UNDEFINED;
-     dev->xmin = 0;
-     dev->ymin = 0;
- 
+--- parse_documentation.py.orig	Wed Jun 20 13:44:10 2001
++++ parse_documentation.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/python
++#! /usr/bin/env python
+ #Parse Yorick documentation from any file that includes it.
+ #However, there is some yplot-specific stuff for the function
+ #call assumed as part of the first lines of the documentation
