@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2000/09/14 11:17:34 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/01/08 14:23:46 taca Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/03/31 11:52:07 flathill Exp $
 
-DISTNAME=	namazu-1.3.0.10
+DISTNAME=	namazu-1.3.0.11
 CATEGORIES=	japanese textproc
 MASTER_SITES=	http://openlab.ring.gr.jp/namazu/release/
 
