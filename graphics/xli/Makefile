@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/08/06 08:11:41 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/08/09 01:40:53 jlam Exp $
 
 DISTNAME=	xli-1.16nb1
 CATEGORIES=	graphics x11
@@ -13,8 +13,6 @@ COMMENT=	Version of xloadimage, an X11 Image Loading Utility
 USE_BUILDLINK_ONLY=	YES
 NO_WRKSUBDIR=		YES
 USE_IMAKE=		YES
-
-LDFLAGS+=	-L${X11BASE}/lib
 
 pre-patch:
 	@${PATCH} -d ${WRKSRC} -s -p1 < ${WRKSRC}/png.patch
