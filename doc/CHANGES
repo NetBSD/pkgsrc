@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2378 2003/05/31 16:11:59 thorpej Exp $
+$NetBSD: CHANGES,v 1.2379 2003/05/31 16:16:06 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2252,3 +2252,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gnus-5.10.2 [uebayasi 2003-05-31]
 	Updated fbdesk to 1.1.4 [jmmv 2003-05-31]
 	Updated simh to 2.10.4nb1 [thorpej 2003-05-31]
+	Added static-ast-ksh-20030422 [uebayasi 2003-05-31]
