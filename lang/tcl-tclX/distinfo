@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2004/05/16 18:52:11 minskim Exp $
+$NetBSD: distinfo,v 1.9 2005/02/24 09:03:12 agc Exp $
 
 SHA1 (tclx8.3.5-src.tar.gz) = 74092449684d11dd73a4cb91fa3e1442e9e21d47
+RMD160 (tclx8.3.5-src.tar.gz) = b501c1c48b54950ea7fb6d3d6d27ef3e7d58c5a5
 Size (tclx8.3.5-src.tar.gz) = 434281 bytes
 SHA1 (patch-aa) = 76d55ef477bb12ec0d02dbf77a572e64de0f8be6
 SHA1 (patch-ab) = cd8a0cda70af84d3f283e96eb4f0b2c0ca102ede
