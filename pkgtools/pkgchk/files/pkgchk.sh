@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.33 2002/06/20 09:17:40 abs Exp $
+# $Id: pkgchk.sh,v 1.34 2002/09/13 09:11:03 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -173,7 +173,9 @@ pkg_install()
 		exit 1
 	    fi
 	fi
+	export PKG_PATH=$saved_PKG_PATH
 	run_cmd "${PKG_ADD} $PACKAGES/All/$PKGNAME.tgz"
+	unset PKG_PATH
     elif [ -n "$opt_s" ]; then
 	run_cmd "cd $PKGSRCDIR/$PKGDIR && ${MAKE} update"
     fi
@@ -295,6 +297,10 @@ on hostname and type, see pkg_chk(8).
 '
     exit 1
 fi
+
+# Hide PKG_PATH to avoid breakage in 'make' calls
+saved_PKG_PATH=$PKG_PATH
+unset PKG_PATH
 
 test -n "$MAKE" || MAKE="@MAKE@"
 test -n "$MAKECONF" || MAKECONF="@MAKECONF@"
