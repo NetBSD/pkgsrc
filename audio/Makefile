@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2002/08/26 01:48:16 grant Exp $
+# $NetBSD: Makefile,v 1.152 2002/08/31 03:37:32 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -117,7 +117,7 @@ SUBDIR+=	nas
 SUBDIR+=	normalize
 SUBDIR+=	nspmod
 SUBDIR+=	oggasm
-SUBDIR+=	p5-Audio-CD-disc-cover
+SUBDIR+=	p5-Audio-CD
 SUBDIR+=	p5-Audio-Wav
 SUBDIR+=	p5-MP3-Info
 SUBDIR+=	p5-MP3-Tag
