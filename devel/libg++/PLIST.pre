@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.pre,v 1.2 2002/02/18 15:14:13 seb Exp $
+@comment $NetBSD: PLIST.pre,v 1.3 2003/06/23 11:23:25 seb Exp $
 bin/genclass
 include/g++/gen/AVLMap.hP
 include/g++/gen/AVLSet.hP
@@ -172,6 +172,4 @@ include/g++/sysent.h
 include/g++/typemacros.h
 @dirrm include/g++/gen
 @dirrm include/g++
-@unexec ${INSTALL_INFO} --delete %D/info/libg++.info %D/info/dir
 info/libg++.info
-@exec ${INSTALL_INFO} %D/info/libg++.info %D/info/dir

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/06/02 01:20:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.25 2003/06/23 11:23:25 seb Exp $
 #
 
 DISTNAME=	libg++-${GXXVERSION}
@@ -18,6 +18,8 @@ GXXVERSION=	2.8.1.1a
 MAKE_ENV+=	GXXVERSION="${GXXVERSION}" NOPROFILE=1 NOGCCERROR=1
 PLIST_SRC=	${WRKSRC}/.PLIST
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
 INFO_FILES=	libg++.info
 
 do-configure:
@@ -33,5 +35,4 @@ post-install:
 		/bin/ls 2>/dev/null -1d lib/libg++*.a lib/libg++.so*) \
 		>${PLIST_SRC}
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
