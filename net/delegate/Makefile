@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/01/27 07:39:28 rh Exp $
+# $NetBSD: Makefile,v 1.10 2000/02/23 13:13:54 itojun Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/11/09 09:24:20 max Exp
 #
 
@@ -20,6 +20,8 @@ MAINTAINER=	packages@NetBSD.ORG
 HOMEPAGE=	http://wall.etl.go.jp/delegate/
 
 DEPENDS+=	readline-4.0:../../devel/readline
+
+IGNORE+=	"includes bunch of security holes"
 
 DELEGATE_MANAGER?=	root@localhost
 
