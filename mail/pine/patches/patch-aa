@@ -1,10 +1,8 @@
-$NetBSD: patch-aa,v 1.12 2001/11/06 20:04:46 tv Exp $
+$NetBSD: patch-aa,v 1.13 2001/12/15 08:31:38 martti Exp $
 
---- pine/makefile.gs5.orig	Tue Jul  3 19:03:55 2001
-+++ pine/makefile.gs5	Mon Oct  8 10:04:40 2001
-@@ -47,9 +47,9 @@
- RM=          rm -f
- LN=          ln -s
+--- pine/makefile.gs5.orig	Tue Oct 23 22:24:47 2001
++++ pine/makefile.gs5	Fri Dec 14 19:24:02 2001
+@@ -49,7 +49,7 @@
  MAKE=        make
  OPTIMIZE=    # -O
  PROFILE=     # -pg
@@ -13,21 +11,19 @@ $NetBSD: patch-aa,v 1.12 2001/11/06 20:04:46 tv Exp $
  
  CCLIENTDIR=  ../c-client
  PICODIR=     ../pico
-@@ -71,10 +71,10 @@
+@@ -71,9 +71,9 @@
  # leaving out the UCB compatibility includes and libraries.
  # LDCC= $(PICODIR)/cc5.sol
  
 -STDLIBS=     -ltermlib
 -LOCLIBS=     $(PICODIR)/libpico.a $(CCLIENTDIR)/c-client.a
--LIBS=        $(EXTRALIBES) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
--             `cat $(CCLIENTDIR)/LDFLAGS`
+-LIBS=        $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
 +STDLIBS=     -lssl -lcrypto -ltermlib
 +LOCLIBS=     -lpico -lc-client
 +LIBS=        -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib/ $(EXTRALIBES) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
-+              `cat $(CCLIENTDIR)/LDFLAGS`
+              `cat $(CCLIENTDIR)/LDFLAGS`
  
  STDCFLAGS=   -DSV4 -DSYSTYPE=\"GSO\" -DMOUSE
- CFLAGS=      $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(LDAPCFLAGS) \
 @@ -95,7 +95,7 @@
  
  all:	pine rpload rpdump
