@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/10/30 21:11:56 minskim Exp $
+
+SHA1 (adtool-1.2.tar.gz) = fab5a640c8fe60a10c916e3f1c0d1d0a3ba2c974
+Size (adtool-1.2.tar.gz) = 202328 bytes
+SHA1 (patch-aa) = e2dc489cfd6cc67da2782d134d331521bb2ba581
