@@ -1,13 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2001/03/28 21:49:42 jtb Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/05/23 23:47:59 jtb Exp $
 bin/gsl-config
 bin/gsl-histogram
 bin/gsl-randist
 include/gsl/gsl_blas.h
-include/gsl/gsl_blas_raw.h
-include/gsl/gsl_blas_raw_L1.h
-include/gsl/gsl_blas_raw_L2.h
-include/gsl/gsl_blas_raw_L3.h
-include/gsl/gsl_blas_raw_cm.h
 include/gsl/gsl_blas_types.h
 include/gsl/gsl_block.h
 include/gsl/gsl_block_char.h
@@ -26,6 +21,7 @@ include/gsl/gsl_block_uint.h
 include/gsl/gsl_block_ulong.h
 include/gsl/gsl_block_ushort.h
 include/gsl/gsl_cblas.h
+include/gsl/gsl_chebyshev.h
 include/gsl/gsl_complex.h
 include/gsl/gsl_complex_math.h
 include/gsl/gsl_const.h
@@ -35,6 +31,7 @@ include/gsl/gsl_const_num.h
 include/gsl/gsl_dft_complex.h
 include/gsl/gsl_dft_complex_float.h
 include/gsl/gsl_dht.h
+include/gsl/gsl_diff.h
 include/gsl/gsl_eigen.h
 include/gsl/gsl_errno.h
 include/gsl/gsl_fft.h
@@ -80,6 +77,8 @@ include/gsl/gsl_multifit.h
 include/gsl/gsl_multifit_nlin.h
 include/gsl/gsl_multimin.h
 include/gsl/gsl_multiroots.h
+include/gsl/gsl_nan.h
+include/gsl/gsl_ntuple.h
 include/gsl/gsl_odeiv.h
 include/gsl/gsl_permutation.h
 include/gsl/gsl_permute.h
@@ -107,6 +106,7 @@ include/gsl/gsl_permute_vector_uint.h
 include/gsl/gsl_permute_vector_ulong.h
 include/gsl/gsl_permute_vector_ushort.h
 include/gsl/gsl_poly.h
+include/gsl/gsl_pow_int.h
 include/gsl/gsl_precision.h
 include/gsl/gsl_qrng.h
 include/gsl/gsl_randist.h
@@ -115,7 +115,6 @@ include/gsl/gsl_roots.h
 include/gsl/gsl_sf.h
 include/gsl/gsl_sf_airy.h
 include/gsl/gsl_sf_bessel.h
-include/gsl/gsl_sf_chebyshev.h
 include/gsl/gsl_sf_clausen.h
 include/gsl/gsl_sf_coulomb.h
 include/gsl/gsl_sf_coupling.h
@@ -135,7 +134,6 @@ include/gsl/gsl_sf_hyperg.h
 include/gsl/gsl_sf_laguerre.h
 include/gsl/gsl_sf_legendre.h
 include/gsl/gsl_sf_log.h
-include/gsl/gsl_sf_poly.h
 include/gsl/gsl_sf_pow_int.h
 include/gsl/gsl_sf_psi.h
 include/gsl/gsl_sf_result.h
@@ -182,6 +180,7 @@ include/gsl/gsl_statistics_uint.h
 include/gsl/gsl_statistics_ulong.h
 include/gsl/gsl_statistics_ushort.h
 include/gsl/gsl_sum.h
+include/gsl/gsl_sys.h
 include/gsl/gsl_test.h
 include/gsl/gsl_vector.h
 include/gsl/gsl_vector_char.h
@@ -199,6 +198,7 @@ include/gsl/gsl_vector_uchar.h
 include/gsl/gsl_vector_uint.h
 include/gsl/gsl_vector_ulong.h
 include/gsl/gsl_vector_ushort.h
+include/gsl/gsl_version.h
 @unexec install-info --delete --info-dir=%D/info %D/info/gsl-ref.info
 info/gsl-ref.info
 info/gsl-ref.info-1
@@ -210,7 +210,10 @@ info/gsl-ref.info-14
 info/gsl-ref.info-15
 info/gsl-ref.info-16
 info/gsl-ref.info-17
+info/gsl-ref.info-18
+info/gsl-ref.info-19
 info/gsl-ref.info-2
+info/gsl-ref.info-20
 info/gsl-ref.info-3
 info/gsl-ref.info-4
 info/gsl-ref.info-5
@@ -224,15 +227,12 @@ lib/libgsl.la
 lib/libgsl.so
 lib/libgsl.so.0
 lib/libgsl.so.0.0
-lib/libgslblas.a
-lib/libgslblas.la
-lib/libgslblas.so
-lib/libgslblas.so.0
-lib/libgslblas.so.0.0
-lib/libgslblascblas.a
-lib/libgslblascblas.la
-lib/libgslblascblas.so
-lib/libgslblascblas.so.0
-lib/libgslblascblas.so.0.0
+lib/libgslcblas.a
+lib/libgslcblas.la
+lib/libgslcblas.so
+lib/libgslcblas.so.0
+lib/libgslcblas.so.0.0
+man/man1/gsl-config.1
+man/man3/gsl.3
 share/aclocal/gsl.m4
 @dirrm include/gsl
