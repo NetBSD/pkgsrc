@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.10 2004/11/29 22:11:51 seb Exp $
+$NetBSD: patch-ac,v 1.11 2004/12/24 18:26:57 seb Exp $
 
---- configure.orig	2004-09-14 22:12:44.000000000 +0000
+--- configure.orig	2004-12-24 13:06:51.000000000 +0000
 +++ configure
 @@ -464,7 +464,7 @@ ac_includes_default="\
  # include <unistd.h>
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.10 2004/11/29 22:11:51 seb Exp $
    --with-extraincludedir=DIR use extra includes from DIR
    --with-extralibdir=DIR  use extra libraries from DIR
    --with-x                use the X Window System
-@@ -1676,7 +1674,10 @@ case "${target_os}" in
+@@ -1687,7 +1685,10 @@ case "${target_os}" in
  	PATHSEPARATOR=":"
  	;;
    * ) # This sucks!  Whatever happened to standards for file system layout?
@@ -32,7 +32,7 @@ $NetBSD: patch-ac,v 1.10 2004/11/29 22:11:51 seb Exp $
  	PATHSEPARATOR=":"
  	;;
  esac
-@@ -20354,165 +20355,9 @@ fi
+@@ -20356,165 +20357,9 @@ fi
  # start by assuming we have it
  HAVE_TCL=1
  
@@ -200,7 +200,7 @@ $NetBSD: patch-ac,v 1.10 2004/11/29 22:11:51 seb Exp $
      if test "${ac_cv_header_tcl_h+set}" = set; then
    echo "$as_me:$LINENO: checking for tcl.h" >&5
  echo $ECHO_N "checking for tcl.h... $ECHO_C" >&6
-@@ -20660,30 +20505,6 @@ echo "$as_me: WARNING: Unable to find he
+@@ -20662,34 +20507,6 @@ echo "$as_me: WARNING: Unable to find he
  fi
  
  
@@ -210,11 +210,15 @@ $NetBSD: patch-ac,v 1.10 2004/11/29 22:11:51 seb Exp $
 -if test "$HAVE_TCL" = "1"; then
 -    # Some systems don't have Tcl.  Don't build
 -    # the Tcl products if we don't have the library.
--    if test -f ${TCLSH_EXEC_PREFIX}/lib/tcl${TCL_VERSION_FOUND}/tclConfig.sh; then
--        TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib/tcl${TCL_VERSION_FOUND}/tclConfig.sh
+-    if test -f ${TCLSH_EXEC_PREFIX}/lib${LIBPOSTFIX}/tcl${TCL_VERSION_FOUND}/tclConfig.sh; then
+-        TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib${LIBPOSTFIX}/tcl${TCL_VERSION_FOUND}/tclConfig.sh
 -    else
--        if test -f ${TCLSH_EXEC_PREFIX}/lib/tclConfig.sh; then
--            TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib/tclConfig.sh
+-        if test -f ${TCLSH_EXEC_PREFIX}/lib${LIBPOSTFIX}/tclConfig.sh; then
+-            TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib${LIBPOSTFIX}/tclConfig.sh
+-        else
+-            if test -f ${TCLSH_EXEC_PREFIX}/lib/tclConfig.sh; then
+-                TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib/tclConfig.sh
+-            fi
 -        fi
 -    fi
 -    if test "x$TCLCONFIG" != "x"; then
@@ -231,15 +235,14 @@ $NetBSD: patch-ac,v 1.10 2004/11/29 22:11:51 seb Exp $
  
  if test "$HAVE_TCL" = "1"; then
      # TCL STUBS support is required
-@@ -20775,169 +20596,9 @@ echo "$as_me: WARNING: No Tcl. The Tk pa
- fi
+@@ -20782,168 +20599,9 @@ fi
  
  HAVE_TK=$HAVE_TCL
+ 
+-if test "$HAVE_TK" = "1"; then
 +. ${TKCONFIG}
 +TK_INCLUDES="-I${TK_PREFIX}/include"
  
--if test "$HAVE_TK" = "1"; then
--
 -# Check whether --with-wish or --without-wish was given.
 -if test "${with_wish+set}" = set; then
 -  withval="$with_wish"
@@ -399,11 +402,11 @@ $NetBSD: patch-ac,v 1.10 2004/11/29 22:11:51 seb Exp $
 -    fi
 -
 -    save_CPPFLAGS=$CPPFLAGS
--    CPPFLAGS="$CPPFLAGS $TCL_INCLUDES $TK_INCLUDES"
+-    CPPFLAGS="$CPPFLAGS $TCL_INCLUDES $TK_INCLUDES $X_CFLAGS"
      if test "${ac_cv_header_tk_h+set}" = set; then
    echo "$as_me:$LINENO: checking for tk.h" >&5
  echo $ECHO_N "checking for tk.h... $ECHO_C" >&6
-@@ -21085,31 +20746,6 @@ echo "$as_me: WARNING: Unable to find he
+@@ -21091,35 +20749,6 @@ echo "$as_me: WARNING: Unable to find he
  fi
  
  
@@ -412,13 +415,17 @@ $NetBSD: patch-ac,v 1.10 2004/11/29 22:11:51 seb Exp $
 -
 -if test "$HAVE_TK" = "1"; then
 -    # Some systems don't have Tcl.  Don't build
--    # Some systems have Tcl, but not TK.  Don't build
+-    # Some systems have Tcl, but not Tk.  Don't build
 -    # the Tk products if we don't have the library.
--    if test -f ${WISH_EXEC_PREFIX}/lib/tk${TK_VERSION_FOUND}/tkConfig.sh; then
--        TKCONFIG=${WISH_EXEC_PREFIX}/lib/tk${TK_VERSION_FOUND}/tkConfig.sh
+-    if test -f ${WISH_EXEC_PREFIX}/lib${LIBPOSTFIX}/tk${TK_VERSION_FOUND}/tkConfig.sh; then
+-        TKCONFIG=${WISH_EXEC_PREFIX}/lib${LIBPOSTFIX}/tk${TK_VERSION_FOUND}/tkConfig.sh
 -    else
--        if test -f ${WISH_EXEC_PREFIX}/lib/tkConfig.sh; then
--	    TKCONFIG=${WISH_EXEC_PREFIX}/lib/tkConfig.sh
+-        if test -f ${WISH_EXEC_PREFIX}/lib${LIBPOSTFIX}/tkConfig.sh; then
+-	    TKCONFIG=${WISH_EXEC_PREFIX}/lib${LIBPOSTFIX}/tkConfig.sh
+-	else
+-            if test -f ${WISH_EXEC_PREFIX}/lib/tkConfig.sh; then
+-	        TKCONFIG=${WISH_EXEC_PREFIX}/lib/tkConfig.sh
+-            fi
 -        fi
 -    fi
 -    if test "x$TKCONFIG" != "x"; then
@@ -435,7 +442,7 @@ $NetBSD: patch-ac,v 1.10 2004/11/29 22:11:51 seb Exp $
  
  #if test "$HAVE_TK" = "1"; then
  #    # TK STUBS support is required (but support is indicated by TCL_SUPPORTS_STUBS)
-@@ -27946,36 +27582,12 @@ rm -f conftest.err conftest.$ac_objext c
+@@ -27985,36 +27614,12 @@ rm -f conftest.err conftest.$ac_objext c
  
  # -----------------------------------
  # tclInt.h
@@ -474,7 +481,7 @@ $NetBSD: patch-ac,v 1.10 2004/11/29 22:11:51 seb Exp $
  
  
  # -----------------------------------
-@@ -29395,7 +29007,6 @@ s,@ENABLE_GVRENDER_TRUE@,$ENABLE_GVRENDE
+@@ -29434,7 +29039,6 @@ s,@ENABLE_GVRENDER_TRUE@,$ENABLE_GVRENDE
  s,@ENABLE_GVRENDER_FALSE@,$ENABLE_GVRENDER_FALSE,;t t
  s,@ENABLE_CODEGENS_TRUE@,$ENABLE_CODEGENS_TRUE,;t t
  s,@ENABLE_CODEGENS_FALSE@,$ENABLE_CODEGENS_FALSE,;t t
@@ -482,7 +489,7 @@ $NetBSD: patch-ac,v 1.10 2004/11/29 22:11:51 seb Exp $
  s,@TCL_INCLUDES@,$TCL_INCLUDES,;t t
  s,@HAVE_TCL@,$HAVE_TCL,;t t
  s,@WITH_TCL_TRUE@,$WITH_TCL_TRUE,;t t
-@@ -29410,7 +29021,6 @@ s,@TCL_DEFS@,$TCL_DEFS,;t t
+@@ -29449,7 +29053,6 @@ s,@TCL_DEFS@,$TCL_DEFS,;t t
  s,@TCL_SHLIB_SUFFIX@,$TCL_SHLIB_SUFFIX,;t t
  s,@TCL_SRC_DIR@,$TCL_SRC_DIR,;t t
  s,@TCL_STUB_LIB_SPEC@,$TCL_STUB_LIB_SPEC,;t t

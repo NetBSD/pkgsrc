@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/11/29 22:11:51 seb Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/12/24 18:26:56 seb Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -41,6 +41,7 @@ include/graphviz/circo.h
 include/graphviz/circpos.h
 include/graphviz/circular.h
 include/graphviz/closest.h
+include/graphviz/clusteredges.h
 include/graphviz/colortbl.h
 include/graphviz/comp.h
 include/graphviz/conjgrad.h
@@ -56,21 +57,10 @@ include/graphviz/dthdr.h
 include/graphviz/edgelist.h
 include/graphviz/edges.h
 include/graphviz/embed_graph.h
-include/graphviz/entities.h
 include/graphviz/exgram.h
 include/graphviz/exlib.h
 include/graphviz/expr.h
 include/graphviz/fdp.h
-include/graphviz/gd.h
-include/graphviz/gd_io.h
-include/graphviz/gdcache.h
-include/graphviz/gdfontg.h
-include/graphviz/gdfontl.h
-include/graphviz/gdfontmb.h
-include/graphviz/gdfonts.h
-include/graphviz/gdfontt.h
-include/graphviz/gdfx.h
-include/graphviz/gdhelpers.h
 include/graphviz/geometry.h
 include/graphviz/globals.h
 include/graphviz/grammar.h
@@ -84,7 +74,6 @@ include/graphviz/hedges.h
 include/graphviz/htmllex.h
 include/graphviz/htmltable.h
 include/graphviz/info.h
-include/graphviz/jisx0208.h
 include/graphviz/kkutils.h
 include/graphviz/libgraph.h
 include/graphviz/macros.h
@@ -120,7 +109,6 @@ include/graphviz/vis.h
 include/graphviz/vispath.h
 include/graphviz/vmstub.h
 include/graphviz/voronoi.h
-include/graphviz/wbmp.h
 include/graphviz/xlayout.h
 lib/graphviz/libagraph.la
 lib/graphviz/libcdt.la
@@ -132,7 +120,6 @@ lib/graphviz/libexpr.la
 lib/graphviz/libfdpgen.la
 lib/graphviz/libgdtclft.la
 lib/graphviz/libgraph.la
-lib/graphviz/libgvgd.la
 lib/graphviz/libgvrender.la
 lib/graphviz/libneatogen.la
 lib/graphviz/libpack.la
@@ -193,15 +180,14 @@ share/doc/graphviz/COPYING
 share/doc/graphviz/ChangeLog
 share/doc/graphviz/Dot.ref
 share/doc/graphviz/FAQ.txt
-share/doc/graphviz/MINTERMS.txt
 share/doc/graphviz/NEWS
 share/doc/graphviz/latex_suggestions.txt
 share/doc/graphviz/pdf/dotguide.pdf
 share/doc/graphviz/pdf/dottyguide.pdf
 share/doc/graphviz/pdf/leftyguide.pdf
 share/doc/graphviz/pdf/neatoguide.pdf
+share/doc/html/graphviz/CPL.html
 share/doc/html/graphviz/FAQ.html
-share/doc/html/graphviz/LICENSE.html
 share/doc/html/graphviz/Mcircle.gif
 share/doc/html/graphviz/Mdiamond.gif
 share/doc/html/graphviz/Msquare.gif
