@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/01/24 22:44:13 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2001/02/02 19:39:19 jlam Exp $
 
---- config/config_default.php.orig	Tue Jan 23 08:26:47 2001
+--- config/config_default.php.orig	Fri Feb  2 10:43:27 2001
 +++ config/config_default.php
 @@ -125,7 +125,7 @@
  //  anything if it's true, but some servers will respond weird if it's
@@ -27,5 +27,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/24 22:44:13 jlam Exp $
 -    $attachment_dir = $data_dir;
 +    $attachment_dir = "/var/spool/squirrelmail/attachments/";
  
- //  This is the default size of the folder list.  Default is 200,
+ //  This is the default size of the folder list.  Default is 150,
  //  but you can set it to whatever you wish.

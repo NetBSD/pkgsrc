@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/24 22:44:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/02/02 19:39:20 jlam Exp $
 share/squirrelmail/AUTHORS
 share/squirrelmail/COPYING
 share/squirrelmail/ChangeLog
@@ -72,6 +72,15 @@ share/squirrelmail/help/en/main_folder.hlp
 share/squirrelmail/help/en/options.hlp
 share/squirrelmail/help/en/read_mail.hlp
 share/squirrelmail/help/en/search.hlp
+share/squirrelmail/help/fr/FAQ.hlp
+share/squirrelmail/help/fr/addresses.hlp
+share/squirrelmail/help/fr/basic.hlp
+share/squirrelmail/help/fr/compose.hlp
+share/squirrelmail/help/fr/folders.hlp
+share/squirrelmail/help/fr/main_folder.hlp
+share/squirrelmail/help/fr/options.hlp
+share/squirrelmail/help/fr/read_mail.hlp
+share/squirrelmail/help/fr/search.hlp
 share/squirrelmail/help/index.php
 share/squirrelmail/help/ko/FAQ.hlp
 share/squirrelmail/help/ko/addresses.hlp
@@ -116,6 +125,8 @@ share/squirrelmail/locale/de/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/de/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/es/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/es/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/fi/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/fi/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/fr/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/fr/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/index.php
@@ -226,6 +237,8 @@ share/squirrelmail/themes/slashdot_theme.php
 @dirrm share/squirrelmail/locale/ger
 @dirrm share/squirrelmail/locale/fr/LC_MESSAGES
 @dirrm share/squirrelmail/locale/fr
+@dirrm share/squirrelmail/locale/fi/LC_MESSAGES
+@dirrm share/squirrelmail/locale/fi
 @dirrm share/squirrelmail/locale/es/LC_MESSAGES
 @dirrm share/squirrelmail/locale/es
 @dirrm share/squirrelmail/locale/de/LC_MESSAGES
@@ -241,6 +254,7 @@ share/squirrelmail/themes/slashdot_theme.php
 @dirrm share/squirrelmail/help/ru
 @dirrm share/squirrelmail/help/pl
 @dirrm share/squirrelmail/help/ko
+@dirrm share/squirrelmail/help/fr
 @dirrm share/squirrelmail/help/en
 @dirrm share/squirrelmail/help/cs
 @dirrm share/squirrelmail/help/ca
