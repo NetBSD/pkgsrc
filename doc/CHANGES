@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9060 2005/02/06 15:36:18 jmmv Exp $
+$NetBSD: CHANGES,v 1.9061 2005/02/06 21:59:35 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -778,3 +778,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libIDL to 0.8.5 [jmmv 2005-02-06]
 	Updated libbonobo to 2.8.1 [jmmv 2005-02-06]
 	Updated libbonoboui to 2.8.1 [jmmv 2005-02-06]
+	Updated nmap to 3.80 [salo 2005-02-06]
+	Updated nmapfe to 0.9.5nb19 [salo 2005-02-06]
