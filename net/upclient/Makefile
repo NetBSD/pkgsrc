@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2000/01/23 01:49:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/01/23 22:04:54 wiz Exp $
 #
 
 DISTNAME=	upclient-4.08
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.uptimes.net/pub/uptimes/ \
-		http://www.uptimes.net/download/
+MASTER_SITES=	http://www.atomicvoid.net/uptimes/ \
+		http://www.uptimes.net/download/ \
+		ftp://ftp.uptimes.net/pub/uptimes/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.uptimes.net/
