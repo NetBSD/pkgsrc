@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/09/19 09:04:10 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/08 23:15:58 jlam Exp $
 
 PKGNAME=	courier-auth-${BASE_VERS}
 PKGREVISION?=	1
@@ -8,7 +8,6 @@ COMMENT=	authentication modules for Courier mail packages
 CONFLICTS=	courier-imap<=1.4.0
 CONFLICTS+=	courier-imap-ldap-*
 
-USE_BUILDLINK_ONLY=	yes
 USE_PERL5=		yes
 REPLACE_PERL=		sysconftool
 
@@ -29,12 +28,6 @@ CONF_FILES_PERMS+=	${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}	\
 RCD_SCRIPTS=		authdaemond
 
 FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
-
-do-install:
-.for DIR in ${WRKSRC_SUBDIRS}
-	@cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${INSTALL_TARGET}
-.endfor
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}

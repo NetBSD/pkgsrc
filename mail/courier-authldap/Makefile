@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/01/27 23:47:08 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/08 23:15:59 jlam Exp $
 
 PKGNAME=		courier-authldap-${BASE_VERS}
 PKGREVISION?=		# empty
@@ -7,8 +7,6 @@ COMMENT=		Courier LDAP authentication module
 CONFLICTS=		courier-imap-ldap-[0-9]*
 
 DEPENDS+=		courier-auth>=${BASE_VERS}:../../mail/courier-auth
-
-USE_BUILDLINK_ONLY=	yes
 
 .include "../../mail/courier-auth/Makefile.authdaemond"
 
@@ -29,6 +27,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/authlib/authldap.schema ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/authlib/authldaprc ${EGDIR}/authldaprc.dist
 
-.include "../../databases/openldap/buildlink.mk"
+.include "../../databases/openldap/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
