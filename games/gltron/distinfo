@@ -1,4 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/11 00:14:12 salo Exp $
+$NetBSD: distinfo,v 1.2 2004/01/18 13:58:57 cube Exp $
 
-SHA1 (gltron-0.62-source.tar.gz) = 742e7df98197dcee1feffbc45c26c6da911714e2
-Size (gltron-0.62-source.tar.gz) = 3726643 bytes
+SHA1 (gltron-0.70-source.tar.gz) = 267bffa75c2c9f8bb1fa8a2d2254eef8b90be1d6
+Size (gltron-0.70-source.tar.gz) = 2182440 bytes
+SHA1 (patch-aa) = ab420d8775693c0e609879659f9d5cd2b9644398
+SHA1 (patch-ab) = 3890e5b3c5c1ba27056e6f6030eac7309816bacb
+SHA1 (patch-ac) = b7b42d8bce2c320650bfc45244e98b4ad2769c84
+SHA1 (patch-ad) = 1e390a56003edb09ac19d5d29b98447ee8f3b2b2
