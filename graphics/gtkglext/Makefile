@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:41:12 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/08/01 11:49:32 wiz Exp $
 #
 
 DISTNAME=		gtkglext-0.7.1
@@ -27,5 +27,6 @@ CONFIGURE_ARGS+=        --enable-gtk-doc=no
 
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
