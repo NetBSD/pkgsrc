@@ -1,4 +1,4 @@
-$NetBSD: README.IRIX,v 1.2 2004/09/12 17:43:37 jschauma Exp $
+$NetBSD: README.IRIX,v 1.3 2005/03/24 19:36:30 jschauma Exp $
 
 You will need a working C compiler, either gcc or SGI's MIPS and MIPSpro
 compiler (cc/c89).  Please set the CC environment variable according to your
@@ -28,6 +28,13 @@ The bootstrapping process should set all the right options for programs
 such as imake(1), but you may want to set some options depending on your
 local setup.  Please see pkgsrc/mk/bsd.pkg.defaults.mk and, of course,
 your compilers man pages for details.
+
+If you are using SGI's MIPSPro compiler, please set
+
+PKGSRC_COMPILER=mipspro
+
+in /etc/mk.conf -- otherwise, pkgsrc will assume you are using gcc and may end
+up passing invalid flags to the compiler.
 
 bootstrap-pkgsrc has been tested on Irix 6.5.23f on:
 	- an O2 with 1 180 MHZ IP32 Processor (R5000) (n32 ABI)
