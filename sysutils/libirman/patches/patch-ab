@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2002/06/14 20:38:41 abs Exp $
+
+--- test_func.c.orig	Thu Feb 18 11:15:03 1999
++++ test_func.c
+@@ -17,6 +17,8 @@
+   unsigned char *code;
+   char *text;
+ 
++  setlinebuf(stdout);
++
+   if (argc < 2) {
+     fprintf(stderr, "usage: test_func device\n");
+     fprintf(stderr, "       where device is the serial port at which the infra red receiver resides\n");
