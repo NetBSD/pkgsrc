@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/11/19 04:58:59 lukem Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/11/19 21:05:55 jlam Exp $
 bin/gale-config
 bin/gale-install
 bin/galed
@@ -9,8 +9,6 @@ bin/gksign
 bin/gsend
 bin/gsub
 bin/gwatch
-etc/gale/COPYING
-etc/gale/auth/trusted/ROOT
 include/gale/all.h
 include/gale/auth.h
 include/gale/client.h
@@ -51,9 +49,7 @@ lib/liboop.so
 lib/liboop.so.2
 lib/liboop.so.2.0
 sbin/gksign
+share/examples/gale/COPYING
+share/examples/gale/ROOT
+@dirrm share/examples/gale
 @dirrm include/gale
-@dirrm etc/gale/auth/cache
-@dirrm etc/gale/auth/local
-@dirrm etc/gale/auth/private
-@dirrm etc/gale/auth/trusted
-@dirrm etc/gale/auth
