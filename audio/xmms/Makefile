@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/03/11 16:22:04 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/03/12 20:36:26 tron Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.0.1
@@ -18,24 +18,29 @@ DEPENDS+=	Mesa-*:../../graphics/Mesa
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	libmikmod>=3.1.7:../libmikmod
 DEPENDS+=	libxml>=1.8.5:../../textproc/libxml
-DEPENDS+=	mit-pthreads-*:../../devel/mit-pthreads
+DEPENDS+=	pth>=1.3.2:../../devel/pth
 
 USE_LIBTOOL=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS= --without-gnome
-CC=		${LOCALBASE}/pthreads/bin/pgcc
-LDFLAGS+=	-L${LOCALBASE}/lib
+CONFIGURE_ARGS+= --without-gnome
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" \
+		XML_CONFIG="${LOCALBASE}/bin/xml-config"
 
-post-extract:
+.include <../../mk/bsd.prefs.mk>
+
+.if (${OPSYS} == NetBSD)
+CPPFLAGS+=	-I${WRKDIR}
+
+post-patch:
 	cd ${WRKSRC}/Input/mpg123 && \
-	${MV} decode_i586.s decode_i586.S && \
-	${MV} getbits.s getbits.S && \
-	${MV} Makefile.in Makefile.in.old && \
-	${SED} -e 's:\.s :\.S :g' <Makefile.in.old >Makefile.in
-	cd ${WRKSRC}/Visualization/blur_scope && \
-	${MV} blur_8.s blur_8.S && \
-	${MV} Makefile.in Makefile.in.old && \
-	${SED} -e 's:blur_8.s:blur_8.S:g' <Makefile.in.old >Makefile.in
+	${MV} decode_i586.s decode_i586.s.orig && \
+	${SED} -e 's@^/@#/@g' <decode_i586.s.orig >decode_i586.s
+
+pre-configure:
+	${MKDIR} ${WRKDIR}/sys
+	${LN} -fs /usr/include/soundcard.h ${WRKDIR}/sys/soundcard.h
+.endif
 
 .include "../../mk/bsd.pkg.mk"

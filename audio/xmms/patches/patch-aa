@@ -1,13 +1,153 @@
-$NetBSD: patch-aa,v 1.2 2000/03/07 23:03:13 tron Exp $
+$NetBSD: patch-aa,v 1.3 2000/03/12 20:36:27 tron Exp $
 
---- Input/Makefile.in.orig	Mon Jan 31 19:44:35 2000
-+++ Input/Makefile.in	Tue Mar  7 23:25:17 2000
-@@ -125,7 +125,7 @@
- sidplay_library = @sidplay_library@
- xmmsdir = @xmmsdir@
+--- Input/cdaudio/cdaudio.c.orig	Thu Jan 27 21:30:36 2000
++++ Input/cdaudio/cdaudio.c	Sun Mar 12 18:00:27 2000
+@@ -113,10 +113,21 @@
+ 	if (!cdda_cfg.directory)
+ 		cdda_cfg.directory = g_strdup("/cdrom");
+ # else
++#  ifdef __NetBSD__
++	if (!cdda_cfg.device)
++#   if RAW_PART == 3
++		cdda_cfg.device = g_strdup("/dev/rcd0d");
++#   else
++		cdda_cfg.device = g_strdup("/dev/rcd0c");
++#   endif
++	if (!cdda_cfg.directory)
++		cdda_cfg.directory = g_strdup("/cdrom");
++#  else
+ 	if (!cdda_cfg.device)
+ 		cdda_cfg.device = g_strdup("/vol/dev/aliases/cdrom0");
+ 	if (!cdda_cfg.directory)
+ 		cdda_cfg.directory = g_strdup("/cdrom/cdrom0");
++#  endif
+ # endif
+ #else
+ 	if (!cdda_cfg.device)
+@@ -280,7 +291,7 @@
+ {
+ 	if (cdda_fd < 0)
+ 		return;
+-#if defined(HAVE_SYS_CDIO_H) && defined(__FreeBSD__)
++#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__))
+ 	ioctl(cdda_fd, CDIOCSTOP, 0);
+ #else
+ 	ioctl(cdda_fd, CDROMSTOP, 0);
+@@ -291,8 +302,8 @@
  
--SUBDIRS = wav mpg123 mikmod cdaudio idcin
-+SUBDIRS = wav mpg123 cdaudio idcin
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = ../config.h
- CONFIG_CLEAN_FILES = 
+ static void cdda_pause(short p)
+ {
+-#if defined(HAVE_SYS_CDIO_H) && defined(__FreeBSD__)
+-	ioctl(cdda_fd, p ? CDIOCPAUSE : CDIOCRESUME);
++#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__))
++	ioctl(cdda_fd, p ? CDIOCPAUSE : CDIOCRESUME, 0);
+ #else
+ 	ioctl(cdda_fd, p ? CDROMPAUSE : CDROMRESUME);
+ #endif
+@@ -303,7 +314,7 @@
+ {
+ 	struct cdda_msf *end, start;
+ 
+-#if defined(HAVE_SYS_CDIO_H) && defined(__FreeBSD__)
++#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__))
+ 	struct ioc_play_msf msf;
+ #else
+ 	struct cdrom_msf msf;
+@@ -318,7 +329,7 @@
+ 	else
+ 		end = &cd_toc.track[track + 1];
+ 
+-#if defined(HAVE_SYS_CDIO_H) && defined(__FreeBSD__)
++#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__))
+ 	msf.start_m = start.minute;
+ 	msf.start_s = start.second;
+ 	msf.start_f = start.frame;
+@@ -342,7 +353,7 @@
+ static int get_time(void)
+ {
+ 	gint frame, start_frame, length;
+-#if defined(HAVE_SYS_CDIO_H) && defined(__FreeBSD__)
++#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__))
+ 	struct ioc_read_subchannel subchnl;
+ 	struct cd_sub_channel_info subinfo;
+ 
+@@ -436,7 +447,7 @@
+ 	if (!cdda_cfg.use_oss_mixer)
+ 	{
+ 
+-#if defined(HAVE_SYS_CDIO_H) && defined(__FreeBSD__)
++#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__))
+ 		struct ioc_vol vol;
+ 
+ 		if (cdda_fd != -1)
+@@ -464,7 +475,7 @@
+ 
+ static void set_volume(int l, int r)
+ {
+-#if defined(HAVE_SYS_CDIO_H) && defined(__FreeBSD__)
++#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__))
+ 	struct ioc_vol vol;
+ #else
+ 	struct cdrom_volctrl vol;
+@@ -497,7 +508,7 @@
+ 	{
+ 		if (cdda_fd != -1)
+ 		{
+-#if defined(HAVE_SYS_CDIO_H) && defined(__FreeBSD__)
++#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__))
+ 			vol.vol[0] = vol.vol[2] = (l * 255) / 100;
+ 			vol.vol[1] = vol.vol[3] = (r * 255) / 100;
+ 			ioctl(cdda_fd, CDIOCSETVOL, &vol);
+@@ -521,6 +532,10 @@
+ #if defined(HAVE_SYS_CDIO_H) && defined(__FreeBSD__)
+ 	struct ioc_toc_header tochdr;
+ 	struct ioc_read_toc_single_entry tocentry;
++#elif defined(__NetBSD__)
++	struct ioc_toc_header tochdr;
++	struct ioc_read_toc_entry tocentry;
++	struct cd_toc_entry entry;
+ #else	
+ 	struct cdrom_tochdr tochdr;
+ 	struct cdrom_tocentry tocentry;
+@@ -564,6 +579,41 @@
+ 	info->leadout.minute = tocentry.entry.addr.msf.minute;
+ 	info->leadout.second = tocentry.entry.addr.msf.second;
+ 	info->leadout.frame = tocentry.entry.addr.msf.frame;
++	
++	info->first_track = tochdr.starting_track;
++	info->last_track = tochdr.ending_track;
++	retv = TRUE;
++
++#elif defined(HAVE_SYS_CDIO_H) && defined(__NetBSD__)
++	if ( ioctl(fd, CDIOREADTOCHEADER, &tochdr) )
++	    goto done;
++
++	for (i = tochdr.starting_track; i <= tochdr.ending_track; i++)
++	{		
++		tocentry.address_format = CD_MSF_FORMAT;
++		tocentry.starting_track = i;
++		tocentry.data_len = sizeof(entry);
++		tocentry.data = &entry;
++		if (ioctl(fd, CDIOREADTOCENTRIES, &tocentry))
++			goto done;
++		info->track[i].minute =
++		    entry.addr.msf.minute;
++		info->track[i].second =
++		    entry.addr.msf.second;
++		info->track[i].frame =
++		    entry.addr.msf.frame;
++		info->track[i].flags.data_track =
++		    entry.control & 4 == 4;
++	}
++
++	/* Get the leadout track */
++	tocentry.starting_track = tochdr.ending_track + 1;
++	tocentry.address_format = CD_MSF_FORMAT;
++	if (ioctl(fd, CDIOREADTOCENTRIES, &tocentry))
++		goto done;
++	info->leadout.minute = entry.addr.msf.minute;
++	info->leadout.second = entry.addr.msf.second;
++	info->leadout.frame = entry.addr.msf.frame;
+ 	
+ 	info->first_track = tochdr.starting_track;
+ 	info->last_track = tochdr.ending_track;

@@ -1,37 +1,53 @@
-@comment $NetBSD: PLIST,v 1.2 2000/03/07 23:03:14 tron Exp $
-bin/xmms
+@comment $NetBSD: PLIST,v 1.3 2000/03/12 20:36:27 tron Exp $
 bin/wmxmms
+bin/xmms
 bin/xmms-config
 include/xmms/configfile.h
-include/xmms/xmmsctrl.h
-include/xmms/dirbrowser.h
-include/xmms/util.h
-include/xmms/fullscreen.h
 include/xmms/dga.h
+include/xmms/dirbrowser.h
+include/xmms/fullscreen.h
 include/xmms/plugin.h
-lib/xmms/Output/libOSS.so
-lib/xmms/Output/libdisk_writer.so
-lib/xmms/Input/libwav.so
-lib/xmms/Input/libmpg123.so
-lib/xmms/Input/libcdaudio.so
-lib/xmms/Input/libidcin.so
-lib/xmms/Effect/libvoice.so
-lib/xmms/Effect/libecho.so
-lib/xmms/Effect/libstereo.so
-lib/xmms/Effect/libsrndecho.so
-lib/xmms/General/libir.so
-lib/xmms/General/libsong_change.so
-lib/xmms/Visualization/libbscope.so
-lib/xmms/Visualization/libsanalyzer.so
-lib/libxmms.so.1.0
+include/xmms/util.h
+include/xmms/xmmsctrl.h
 lib/libxmms.a
+lib/libxmms.so.1.0
+lib/xmms/Effect/libecho.a
+lib/xmms/Effect/libecho.so.0.0
+lib/xmms/Effect/libsrndecho.a
+lib/xmms/Effect/libsrndecho.so.0.0
+lib/xmms/Effect/libstereo.a
+lib/xmms/Effect/libstereo.so.0.0
+lib/xmms/Effect/libvoice.a
+lib/xmms/Effect/libvoice.so.0.0
+lib/xmms/General/libir.a
+lib/xmms/General/libir.so.0.0
+lib/xmms/General/libsong_change.a
+lib/xmms/General/libsong_change.so.0.0
+lib/xmms/Input/libcdaudio.a
+lib/xmms/Input/libcdaudio.so.0.0
+lib/xmms/Input/libidcin.a
+lib/xmms/Input/libidcin.so.0.0
+lib/xmms/Input/libmikmod.a
+lib/xmms/Input/libmikmod.so.0.0
+lib/xmms/Input/libmpg123.a
+lib/xmms/Input/libmpg123.so.0.0
+lib/xmms/Input/libwav.a
+lib/xmms/Input/libwav.so.0.0
+lib/xmms/Output/libOSS.a
+lib/xmms/Output/libOSS.so.0.0
+lib/xmms/Output/libdisk_writer.a
+lib/xmms/Output/libdisk_writer.so.0.0
+lib/xmms/Visualization/libbscope.a
+lib/xmms/Visualization/libbscope.so.0.0
+lib/xmms/Visualization/libsanalyzer.a
+lib/xmms/Visualization/libsanalyzer.so.0.0
 share/aclocal/xmms.m4
 share/xmms/wmxmms.xpm
-@dirrm include/xmms
+@dirrm share/xmms
+@dirrm lib/xmms/Visualization
 @dirrm lib/xmms/Output
 @dirrm lib/xmms/Input
-@dirrm lib/xmms/Effect
 @dirrm lib/xmms/General
-@dirrm lib/xmms/Visualization
+@dirrm lib/xmms/Effect
 @dirrm lib/xmms
-@dirrm share/xmms
+@dirrm include/xmms
