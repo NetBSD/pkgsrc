@@ -1,4 +1,4 @@
-$NetBSD: patch-config-imake-imake.c,v 1.1.1.1 2000/10/29 16:17:13 mjl Exp $
+$NetBSD: patch-ag,v 1.1 2001/04/05 14:06:57 wiz Exp $
 
 --- config/imake/imake.c.orig	Sun Oct 29 15:34:13 2000
 +++ config/imake/imake.c	Sun Oct 29 15:38:27 2000

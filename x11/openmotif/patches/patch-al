@@ -1,4 +1,4 @@
-$NetBSD: patch-tests-Performance-Startup-editor.c,v 1.1.1.1 2000/10/29 16:17:13 mjl Exp $
+$NetBSD: patch-al,v 1.1 2001/04/05 14:06:58 wiz Exp $
 
 --- tests/Performance/Startup/editor.c.orig	Wed May  3 05:12:48 2000
 +++ tests/Performance/Startup/editor.c	Wed Aug  9 19:29:43 2000
