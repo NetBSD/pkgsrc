@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/16 08:39:24 recht Exp $
+
+SHA1 (fixesext-2.0.tar.bz2) = 64d47b511ebc2d749263f27c6a9891389d3f8921
+Size (fixesext-2.0.tar.bz2) = 44323 bytes
+SHA1 (patch-aa) = 7b5dd43fde24f16bd50570b2387801cf143912a7
