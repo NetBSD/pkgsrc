@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/01/24 03:14:44 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/02/11 19:17:28 tv Exp $
 etc/rc.d/rplayd.sh
 etc/rplay.hosts
 bin/rplay
@@ -8,18 +8,18 @@ bin/rptp
 sbin/rplayd
 include/rplay.h
 lib/librplay.a
-@unexec %D/bin/install-info --delete %D/info/librplay.info %D/info/dir
-@unexec %D/bin/install-info --delete %D/info/rplay.info %D/info/dir
-@unexec %D/bin/install-info --delete %D/info/RPLAY.info %D/info/dir
-@unexec %D/bin/install-info --delete %D/info/RPTP.info %D/info/dir
+@unexec install-info --delete %D/info/librplay.info %D/info/dir
+@unexec install-info --delete %D/info/rplay.info %D/info/dir
+@unexec install-info --delete %D/info/RPLAY.info %D/info/dir
+@unexec install-info --delete %D/info/RPTP.info %D/info/dir
 info/librplay.info
 info/rplay.info
 info/RPLAY.info
 info/RPTP.info
-@exec %D/bin/install-info %D/info/RPTP.info %D/info/dir
-@exec %D/bin/install-info %D/info/RPLAY.info %D/info/dir
-@exec %D/bin/install-info %D/info/rplay.info %D/info/dir
-@exec %D/bin/install-info %D/info/librplay.info %D/info/dir
+@exec install-info %D/info/RPTP.info %D/info/dir
+@exec install-info %D/info/RPLAY.info %D/info/dir
+@exec install-info %D/info/rplay.info %D/info/dir
+@exec install-info %D/info/librplay.info %D/info/dir
 man/man1/rplay.1.gz
 man/man1/rplayd.1.gz
 man/man1/xrplay.1.gz

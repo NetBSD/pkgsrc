@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 1998/07/17 19:08:28 tv Exp $
+@comment $NetBSD: PLIST,v 1.11 1999/02/11 19:17:33 tv Exp $
 bin/a2ps
 bin/card
 bin/compose
@@ -10,9 +10,9 @@ bin/psmandup
 bin/texi2dvi4a2ps
 etc/a2ps.cfg
 include/liba2ps.h
-@unexec %D/bin/install-info --delete %D/info/a2ps.info %D/info/dir
-@unexec %D/bin/install-info --delete %D/info/ogonkify.info %D/info/dir
-@unexec %D/bin/install-info --delete %D/info/regex.info %D/info/dir
+@unexec install-info --delete %D/info/a2ps.info %D/info/dir
+@unexec install-info --delete %D/info/ogonkify.info %D/info/dir
+@unexec install-info --delete %D/info/regex.info %D/info/dir
 info/a2ps.info
 info/a2ps.info-1
 info/a2ps.info-2
@@ -24,9 +24,9 @@ info/regex.info
 info/regex.info-1
 info/regex.info-2
 info/regex.info-3
-@exec %D/bin/install-info %D/info/a2ps.info %D/info/dir
-@exec %D/bin/install-info %D/info/ogonkify.info %D/info/dir
-@exec %D/bin/install-info %D/info/regex.info %D/info/dir
+@exec install-info %D/info/a2ps.info %D/info/dir
+@exec install-info %D/info/ogonkify.info %D/info/dir
+@exec install-info %D/info/regex.info %D/info/dir
 lib/liba2ps.a
 lib/liba2ps.so.1.0
 man/man1/a2ps.1

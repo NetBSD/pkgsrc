@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1998/09/22 10:17:38 agc Exp $
+@comment $NetBSD: PLIST,v 1.7 1999/02/11 19:17:33 tv Exp $
 bin/MakeTeXMF
 bin/pslatex
 bin/makeindex.bin
@@ -73,10 +73,10 @@ bin/amstex
 bin/kpsexpand
 bin/kpsepath
 bin/kpsewhich
-@unexec %D/bin/install-info --delete %D/info/latex %D/info/dir
-@unexec %D/bin/install-info --delete %D/info/kpathsea.info %D/info/dir
-@unexec %D/bin/install-info --delete %D/info/dvips.info %D/info/dir
-@unexec %D/bin/install-info --delete %D/info/fontname.info %D/info/dir
+@unexec install-info --delete %D/info/latex %D/info/dir
+@unexec install-info --delete %D/info/kpathsea.info %D/info/dir
+@unexec install-info --delete %D/info/dvips.info %D/info/dir
+@unexec install-info --delete %D/info/fontname.info %D/info/dir
 info/dvips.info-2
 info/dvips.info-3
 info/dvips.info
@@ -96,10 +96,10 @@ info/latex-2
 info/dvips.info-1
 info/fontname.info-4
 info/kpathsea.info-1
-@exec %D/bin/install-info %D/info/latex %D/info/dir
-@exec %D/bin/install-info %D/info/kpathsea.info %D/info/dir
-@exec %D/bin/install-info %D/info/dvips.info %D/info/dir
-@exec %D/bin/install-info %D/info/fontname.info %D/info/dir
+@exec install-info %D/info/latex %D/info/dir
+@exec install-info %D/info/kpathsea.info %D/info/dir
+@exec install-info %D/info/dvips.info %D/info/dir
+@exec install-info %D/info/fontname.info %D/info/dir
 man/man1/afm2tfm.1.gz
 man/man1/allcm.1.gz
 man/man1/alldc.1.gz
