@@ -1,0 +1,64 @@
+--- makefile-orig	Sat Dec 20 00:00:00 1997
++++ makefile	Sun Aug  2 00:16:15 1998
+@@ -10,18 +10,18 @@
+ ###############################################################################
+ 
+ # Configuration for g++ on Unix. Also works for gcc if you set CC = g++
+-#CC      = g++
+-#OBJ     = .o
+-#EXE     =
+-#DIFF    = diff -s
+-#RM      = rm
+-#CP      = cp
+-#SUPP_DIR = ./rdp_supp/
+-#CFLAGS = -I$(SUPP_DIR) -D_POSIX_SOURCE -Wmissing-prototypes -Wstrict-prototypes -fno-common -Wall -ansi -pedantic -g
+-#LINK    = $(CC) -o ./
+-#MATHS   = -lm
+-#HERE    = ./
+-#OBJ_ONLY = -c
++CC      = g++
++OBJ     = .o
++EXE     =
++DIFF    = diff -s
++RM      = rm
++CP      = cp
++SUPP_DIR = ./rdp_supp/
++CFLAGS = -I$(SUPP_DIR) -D_POSIX_SOURCE -Wmissing-prototypes -Wstrict-prototypes -fno-common -Wall -ansi -pedantic -g
++LINK    = $(CC) -o ./
++MATHS   = -lm
++HERE    = ./
++OBJ_ONLY = -c
+ # End of gcc on Unix configuration
+ 
+ # Configuration for gcc on DOS using djpgg.
+@@ -57,18 +57,18 @@
+ # End of Sun acc 2.0 on SunOS configuration
+ 
+ # Configuration for Borland C++ 5.0 under Windows-95
+-CC     = bcc32
+-OBJ    = .obj
+-EXE    = .exe
+-DIFF   = fc 
+-RM     = del
+-CP     = copy
+-SUPP_DIR = rdp_supp\\
+-CFLAGS = -I$(SUPP_DIR) -A -c -P -w
+-LINK   = $(CC) -e
+-MATHS  =
+-HERE   = 
+-OBJ_ONLY = -c
++#CC     = bcc32
++#OBJ    = .obj
++#EXE    = .exe
++#DIFF   = fc 
++#RM     = del
++#CP     = copy
++#SUPP_DIR = rdp_supp\\
++#CFLAGS = -I$(SUPP_DIR) -A -c -P -w
++#LINK   = $(CC) -e
++#MATHS  =
++#HERE   = 
++#OBJ_ONLY = -c
+ # End of Borland C++ 5.0 under Windows-95 configuration
+ 
+ # Configuration for Borland C 3.1 on MS-DOS
