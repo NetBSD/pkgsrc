@@ -1,3 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/24 07:08:20 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/24 08:42:29 agc Exp $
 bin/dirdiff
+lib/libfilecmp.a
+lib/libfilecmp.la
+lib/libfilecmp.so
+lib/libfilecmp.so.0
 lib/libfilecmp.so.0.0
