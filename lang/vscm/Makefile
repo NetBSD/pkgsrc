@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/02 11:01:53 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/17 13:59:50 wiz Exp $
 
 DISTNAME=	vscmV0r4
 PKGNAME=	vscm-0.4
@@ -9,6 +9,7 @@ PATCHFILES=	bugfix.txt
 PATCH_SITES=	${MASTER_SITES}
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.cs.princeton.edu/~blume/vscm/
 
 USE_GMAKE=	yes
 
