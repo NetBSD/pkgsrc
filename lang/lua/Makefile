@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/10/02 20:54:59 cube Exp $
+# $NetBSD: Makefile,v 1.18 2004/10/15 21:17:50 minskim Exp $
 
 DISTNAME=	lua-5.0.2
 PKGREVISION=	1
@@ -26,6 +26,7 @@ USE_BUILDLINK3=	yes
 ALL_TARGET=	all so
 INSTALL_TARGET=	install soinstall
 
+LIBS.Interix+=	-ldl
 LIBS.SunOS+=	-ldl
 MAKE_ENV+=	LIBS="${LIBS}"
 
