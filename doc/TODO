@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.243 2003/02/08 15:52:36 wiz Exp $
+$NetBSD: TODO,v 1.244 2003/02/09 09:58:01 seb Exp $
 
 Suggested new packages
 ======================
@@ -264,7 +264,7 @@ Suggested package updates
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
 	o sodipodi-0.30
-	o source-highlight-1.6.3
+	o source-highlight-1.6.3 [seb]
 	o speex-1.0rc2
 	o squeak-3.2 [fredb|pkg/17950]
 	o sqlite-2.7.5 [pkg/19719]
