@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/09/28 20:40:03 soren Exp $
+# $NetBSD: Makefile,v 1.13 1999/12/16 15:42:54 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.13
@@ -18,10 +18,11 @@ DEPENDS+=	gnuplot-3.7:../../graphics/gnuplot
 
 USE_X11=		yes
 GNU_CONFIGURE=		yes
+USE_FORTRAN=		yes
 USE_LIBTOOL=		yes
 USE_GMAKE=		yes
 CONFIGURE_ENV+=		CPPFLAGS=-I${WRKDIR}/include
-LDFLAGS+=		-L${PREFIX}/lib
+LDFLAGS+=		-Wl,-R${PREFIX}/lib -L${PREFIX}/lib
 
 INFO_FILES=	liboctave.info octave.info
 LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 liboctave.info-2 liboctave.info-3
@@ -40,15 +41,7 @@ post-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-GCC_VERSION!=	${CC} --version
-
-.if (${GCC_VERSION:C/-.*$$//} == egcs)
-CONFIGURE_ARGS+=	--with-g77
-FLIBS=			-Lg2c
-.else
-DEPENDS+=		f2c-19980913:../../lang/f2c
-CONFIGURE_ARGS+=	--with-f2c
-.endif
+GCC_VERSION!=	${CC} --version 
 
 post-patch:
 .if (${GCC_VERSION:C/-.*$$//} == egcs)
