@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:30:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/09 13:09:24 agc Exp $
 
-MD5 (bacisrc.tar.gz) = 2077757a7c130b7c49e0f1f0b49028fc
-MD5 (bacidoc.tar.gz) = 622617e8c63edda29fef3147e24dd01b
+SHA1 (bacisrc.tar.gz) = 3b655bcbd2823047f3f92e6f2d3d12bc7eaa772d
+Size (bacisrc.tar.gz) = 186723 bytes
+SHA1 (bacidoc.tar.gz) = 6550d2f87903b69ce470e9682d47420399fcf0af
+Size (bacidoc.tar.gz) = 162066 bytes
 SHA1 (patch-aa) = cf26c021a886498611250f0f2cda4433d295d39f
 SHA1 (patch-ab) = 39aa0ad952cd6f77134c1d8d84d5c6c65bf2029e
 SHA1 (patch-ac) = b759d67e950596ad4e2e644214dd083d1c09c126

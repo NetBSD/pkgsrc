@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/09 13:09:24 agc Exp $
 #
 
 DISTNAME=	bacisrc
 PKGNAME=	baci-20000725
 CATEGORIES=	lang
-MASTER_SITES=	http://www.mines.edu/fs_home/tcamp/baci/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 DISTFILES=	bacisrc.tar.gz \
 		bacidoc.tar.gz
 
