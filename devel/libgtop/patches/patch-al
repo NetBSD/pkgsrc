@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.7 2000/05/02 00:27:35 fredb Exp $
+$NetBSD: patch-al,v 1.8 2000/06/24 16:41:01 danw Exp $
 
 --- sysdeps/freebsd/prockernel.c.orig	Fri Jan 21 17:20:51 2000
 +++ sysdeps/freebsd/prockernel.c	Mon May  1 18:56:00 2000
@@ -68,7 +68,7 @@ $NetBSD: patch-al,v 1.7 2000/05/02 00:27:35 fredb Exp $
 +			buf->kstk_esp = (u_int64_t) pcb.pcb_usp;
 +			buf->kstk_eip = (u_int64_t) 0;
 +#else
-+#if defined(__NetBSD__) && defined(__arm32__)
++#if defined(__NetBSD__) && (defined(__arm32__) || defined(__powerpc__))
 +			buf->kstk_esp = (u_int64_t) pcb.pcb_sp;
 +			buf->kstk_eip = (u_int64_t) 0;
 +#else
