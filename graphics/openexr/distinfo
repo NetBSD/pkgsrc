@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 08:45:10 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/03/29 16:02:36 wiz Exp $
 
-SHA1 (OpenEXR-1.2.1.tar.gz) = b6146e340a24b2996b15bd42fd804f26a12af9ba
-RMD160 (OpenEXR-1.2.1.tar.gz) = 0a7de44782e72252db8b80cec5619559bc3d4ac0
-Size (OpenEXR-1.2.1.tar.gz) = 8986320 bytes
+SHA1 (OpenEXR-1.2.2.tar.gz) = 8ee37cd2a95b8561a4c850cc35781dec87b77bbf
+RMD160 (OpenEXR-1.2.2.tar.gz) = 54ceab6aa7a848f28a4cbd6cd63ab4023e3e372c
+Size (OpenEXR-1.2.2.tar.gz) = 9324108 bytes
