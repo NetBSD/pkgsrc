@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1258 2003/01/28 09:07:02 grant Exp $
+$NetBSD: CHANGES,v 1.1259 2003/01/28 10:37:36 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -454,3 +454,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added umbrello-1.1.1 [markd 2003-01-28]
 	Updated cgoban-java to 2.4.57 [jlam 2003-01-28]
 	Updated ap-layout to 3.2 [grant 2003-01-28]
+	Updated glib2 to 2.2.0nb2 [tron 2003-01-28]
