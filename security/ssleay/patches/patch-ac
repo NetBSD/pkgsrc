@@ -1,17 +1,30 @@
-$NetBSD: patch-ac,v 1.3 1998/09/30 20:08:22 cjs Exp $
---- Configure.orig	Sat Sep 19 08:45:16 1998
-+++ Configure	Sun Sep 20 08:45:45 1998
-@@ -129,9 +129,10 @@
+$NetBSD: patch-ac,v 1.4 1998/10/02 22:02:26 tv Exp $
+
+--- Configure.orig	Fri Oct  2 15:42:57 1998
++++ Configure	Fri Oct  2 15:53:52 1998
+@@ -38,6 +38,8 @@
+ # RMD160_ASM	use some extra ripemd160 assember,
+ # BN_ASM	use some extra bn assember,
+ 
++$use_rsaref_def=$ENV{'USE_RSAREF_DEF'};
++
+ $x86_gcc_des="DES_PTR DES_RISC1 DES_UNROLL";
+ 
+ # MD2_CHAR slags pentium pros
+@@ -129,9 +131,13 @@
  "linux-elf",	"gcc:-DL_ENDIAN -DTERMIO -DBN_ASM -O3 -fomit-frame-pointer -m486 -Wall -Wuninitialized::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_elf_asm",
  "debug-linux-elf","gcc:-DREF_CHECK -DBN_ASM -DCRYPTO_MDEBUG -DL_ENDIAN -DTERMIO -g -m486 -Wall:-lefence:BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_elf_asm",
  "linux-aout",	"gcc:-DL_ENDIAN -DTERMIO -DBN_ASM -O3 -fomit-frame-pointer -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_out_asm",
 -"NetBSD-sparc",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -mv8 -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
-+"NetBSD-sparc",	"gcc:-DTERMIOS -D_ANSI_SOURCE -O3 -fomit-frame-pointer -mv8 -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
 -"NetBSD-m86",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
-+"NetBSD-m86",	"gcc:-DTERMIOS -D_ANSI_SOURCE -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
 -"NetBSD-x86",	"gcc:-DTERMIOS -DBN_ASM -D_ANSI_SOURCE -O3 -fomit-frame-pointer -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:",
-+"NetBSD-x86",	"gcc:-DTERMIOS -DL_ENDIAN -DBN_ASM -D_ANSI_SOURCE -O3 -fomit-frame-pointer -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:",
-+"NetBSD-alpha", "gcc:-DTERMIOS -D_ANSI_SOURCE -DL_ENDIAN -O3:-Wl,-RXXXPREFIXXXX/lib:SIXTY_FOUR_BIT_LONGS DES_INT DES_PTR DES_RISC2:asm/alpha.o::",
++"NetBSD-gbe32", "gcc:$use_rsaref_def -DTERMIOS -D_ANSI_SOURCE -O3 -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
++"NetBSD-gle32", "gcc:$use_rsaref_def -DTERMIOS -D_ANSI_SOURCE -O3 -Wall -DL_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
++"NetBSD-alpha", "gcc:$use_rsaref_def -DTERMIOS -D_ANSI_SOURCE -O3 -Wall -DL_ENDIAN:-Wl,-R$ENV{'PREFIX'}/lib:SIXTY_FOUR_BIT_LONGS DES_INT DES_PTR DES_RISC2:asm/alpha.o::",
++"NetBSD-sparc", "gcc:$use_rsaref_def -DTERMIOS -D_ANSI_SOURCE -O3 -fomit-frame-pointer -mv8 -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
++"NetBSD-sparc64", "gcc:$use_rsaref_def -DTERMIOS -D_ANSI_SOURCE -O3 -fomit-frame-pointer -Wall -DB_ENDIAN:-Wl,-R$ENV{'PREFIX'}/lib:SIXTY_FOUR_BIT_LONGS DES_INT DES_PTR DES_RISC1:::",
++"NetBSD-m86", "gcc:$use_rsaref_def -DTERMIOS -D_ANSI_SOURCE -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
++"NetBSD-x86", "gcc:$use_rsaref_def -DTERMIOS -DL_ENDIAN -DBN_ASM -D_ANSI_SOURCE -O3 -fomit-frame-pointer -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:",
  "FreeBSD",   "gcc:-DTERMIOS -DBN_ASM -DL_ENDIAN -D_ANSI_SOURCE -fomit-frame-pointer -O3 -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_out_asm",
  #"bsdi-gcc",     "gcc:-O3 -ffast-math -DBN_ASM -DL_ENDIAN -DPERL5 -m486::RSA_LLONG $x86_gc_des $x86_gcc_opts:$x86_bsdi_asm",
  "nextstep",	"cc:-O3 -Wall -DBN_ASM::BN_LLONG $x86_gcc_des $x86_gcc_opts:::",

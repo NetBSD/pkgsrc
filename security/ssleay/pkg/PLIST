@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/10/02 03:22:57 cjs Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/10/02 22:02:26 tv Exp $
 bin/ssleay
 bin/asn1parse
 bin/base64
@@ -171,5 +171,5 @@ share/doc/SSLeay/threads.doc
 share/doc/SSLeay/txt_db.doc
 share/doc/SSLeay/verify
 share/doc/SSLeay/why.doc
-@exec if [ ! -f @@@PREFIX@@@/lib/ssleay.cnf ]; then echo "Installing ssleay.cnf in @@@PREFIX@@@/lib." ; cp -p @@@PREFIX@@@/lib/ssleay.cnf.eg @@@PREFIX@@@/lib/ssleay.cnf; fi
+@exec if [ ! -f %D/lib/ssleay.cnf ]; then echo "Installing ssleay.cnf in %D/lib." ; cp -p %D/lib/ssleay.cnf.eg %D/lib/ssleay.cnf; fi
 @dirrm share/doc/SSLeay
