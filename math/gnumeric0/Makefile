@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2002/07/15 14:24:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/07/19 04:32:34 mycroft Exp $
 #
 
 DISTNAME=		gnumeric-0.75
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnumeric/}
 
@@ -21,7 +21,6 @@ LDFLAGS+=      		-Wl,-R${LOCALBASE}/lib
 LDFLAGS+=      		-lunicode
 CONFIGURE_ARGS+=	--without-guile		# needs CVS-only guile-1.5
 CONFIGURE_ARGS+=	--without-python
-CONFIGURE_ARGS+=	--without-psiconv
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 pre-configure:
@@ -32,6 +31,7 @@ pre-configure:
 		${MV} $$i.fixed $$i ;					\
 	done
 
+.include "../../converters/psiconv/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/libglade/buildlink.mk"
 .include "../../devel/libole2/buildlink.mk"
