@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/06/08 17:51:25 bad Exp $
+# $NetBSD: Makefile,v 1.2 1999/06/08 17:54:25 bad Exp $
 
 DISTNAME=		majordomo-1.94.4
 CATEGORIES=		mail
@@ -7,6 +7,7 @@ MASTER_SITES=		ftp://ftp.sgi.com/other/majordomo/1.94.4/ \
 EXTRACT_SUFX=   	.tgz
 
 MAINTAINER=		packages@biology.nmsu.edu
+HOMEPAGE=		http://www.greatcircle.com/majordomo/
 
 DEPENDS+=		addnerd-1.6:../../sysutils/addnerd
 
