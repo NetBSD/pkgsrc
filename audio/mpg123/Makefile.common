@@ -1,0 +1,60 @@
+# $NetBSD: Makefile.common,v 1.1 2002/06/23 08:45:09 kent Exp $ -*- Makefile -*-
+DISTNAME=	mpg123-0.59r
+MPG123_VERSION=	0.59.18
+CATEGORIES=	audio
+MASTER_SITES=	http://www.mpg123.de/mpg123/ \
+		http://www-ti.informatik.uni-tuebingen.de/~hippm/mpg123/
+
+PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
+PATCHFILES=	mpg123-059r-v6-20000713b.diff.gz
+
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.mpg123.de/
+BUILD_DEFS+=	USE_INET6
+DIST_SUBDIR=	mpg123
+PATCHDIR=	../mpg123/patches
+FILESDIR=	../mpg123/files
+
+USE_BUILDLINK_ONLY=	# defined
+
+# for OBJECT_FMT
+.include "../../mk/bsd.prefs.mk"
+
+.if (${MACHINE_ARCH} == "i386")
+.if (${OBJECT_FMT} == "ELF")
+ALL_TARGET=	netbsd-i386-elf${TARGET_SUFFIX}
+.else
+ALL_TARGET=	netbsd-i386${TARGET_SUFFIX}
+.endif
+.elif (${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32")
+.if defined(MPG123_ARM_FIXED64) && ${MPG123_ARM_FIXED64} == "YES"
+ALL_TARGET=	netbsd-arm-64${TARGET_SUFFIX}
+.else
+ALL_TARGET=	netbsd-arm${TARGET_SUFFIX}
+.endif
+.elif (${MACHINE_ARCH} == "m68k")
+ALL_TARGET=	netbsd-m68k${TARGET_SUFFIX}
+.else
+ALL_TARGET=	${LOWER_OPSYS}${TARGET_SUFFIX}
+.endif
+
+.if ${OPSYS} == "SunOS"
+ALL_TARGET=	solaris-gcc${TARGET_SUFFIX}
+.endif
+
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
+CPPFLAGS+=	-DINET6
+.endif
+
+MAKE_FLAGS+=	PREFIX="${PREFIX}"
+
+pre-patch:
+	${LN} -s . ${WRKSRC}/mpg123
+
+post-patch:
+	${RM} -f ${WRKSRC}/mpg123
+	${CP} ${FILESDIR}/decode_i586_.s ${WRKSRC}/
+	cd ${WRKSRC} ; ${MV} decode_i586.s decode_i586.s.orig ;\
+	${SED} \
+		-e 's@^/@#/@g' \
+		<decode_i586.s.orig >decode_i586.s
