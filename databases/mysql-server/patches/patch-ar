@@ -1,12 +1,8 @@
-$NetBSD: patch-ar,v 1.2 1999/12/13 20:36:26 bad Exp $
+$NetBSD: patch-ar,v 1.3 1999/12/22 15:38:19 bad Exp $
 
 --- mit-pthreads/machdep/syscall-sparc-netbsd-1.3.S.orig	Mon Jun  7 12:34:23 1999
-+++ mit-pthreads/machdep/syscall-sparc-netbsd-1.3.S	Sun Aug 22 03:22:12 1999
-@@ -9,16 +9,17 @@
- 	.asciz "$Id: patch-ar,v 1.2 1999/12/13 20:36:26 bad Exp $";
- #endif
-  
-+#include <machine/asm.h>
++++ mit-pthreads/machdep/syscall-sparc-netbsd-1.3.S	Wed Dec 22 16:29:22 1999
+@@ -12,13 +12,13 @@
  #include <sys/syscall.h>
  
  #define	SYSCALL(x)					\
@@ -27,7 +23,7 @@ $NetBSD: patch-ar,v 1.2 1999/12/13 20:36:26 bad Exp $
  	sub %r0,%o0,%o0;				\
  	retl							
  
-@@ -43,9 +44,9 @@
+@@ -43,9 +43,9 @@
  /* ==========================================================================
   * machdep_sys_pipe()
   */
@@ -39,7 +35,7 @@ $NetBSD: patch-ar,v 1.2 1999/12/13 20:36:26 bad Exp $
      mov  %o0, %o2
      mov  SYS_pipe, %g1
      ta  0
-@@ -59,65 +60,65 @@
+@@ -59,65 +59,65 @@
  /* ==========================================================================
   * machdep_sys_fork()
   */
@@ -120,7 +116,7 @@ $NetBSD: patch-ar,v 1.2 1999/12/13 20:36:26 bad Exp $
  
  /* ==========================================================================
   * machdep_sys___syscall()
-@@ -129,14 +130,14 @@
+@@ -129,14 +129,14 @@
      bcs 1b;
      nop;
      retl
@@ -138,7 +134,7 @@ $NetBSD: patch-ar,v 1.2 1999/12/13 20:36:26 bad Exp $
  	save %sp,-112,%sp
  	mov %i1,%o4
  	mov %i2,%o5
-@@ -154,9 +155,9 @@
+@@ -154,9 +154,9 @@
  /* ==========================================================================
   * machdep_sys_ftruncate()
   */
