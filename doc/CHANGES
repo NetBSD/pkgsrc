@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4520 2004/01/20 15:48:44 adam Exp $
+$NetBSD: CHANGES,v 1.4521 2004/01/20 19:31:42 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -359,3 +359,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gd to 2.0.21 [adam 2004-01-20]
 	Updated TeXmacs to 1.0.3.1 [recht 2004-01-20]
 	Updated lame to 3.95.1 [adam 2004-01-20]
+	Updated MozillaFirebird to 0.7nb2 [snj 2004-01-20]
+	Updated mozilla-stable to 1.4.1nb2 [snj 2004-01-20]
