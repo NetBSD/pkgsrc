@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1312 2003/02/03 23:53:26 jlam Exp $
+$NetBSD: CHANGES,v 1.1313 2003/02/04 00:49:06 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -544,3 +544,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ap2-perl to 1.99.8 [drochner 2003-02-03]
 	Updated jdk to 1.1.8nb3 [jlam 2003-02-03]
 	Updated php4 to 4.2.3nb1 [jlam 2003-02-03]
+	Updated verilog-current to 20030202 [dmcmahill 2003-02-03]
