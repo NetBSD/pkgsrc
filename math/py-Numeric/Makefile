@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2002/10/30 10:35:32 markd Exp $
+# $NetBSD: Makefile,v 1.30 2003/04/03 18:52:39 drochner Exp $
 
-DISTNAME=	Numeric-21.0
+DISTNAME=	Numeric-23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=numpy/}
