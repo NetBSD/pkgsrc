@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.240 2003/02/03 13:21:42 grant Exp $
+$NetBSD: TODO,v 1.241 2003/02/04 20:01:57 chris Exp $
 
 Suggested new packages
 ======================
@@ -96,7 +96,8 @@ Suggested package updates
 	o crossfire-1.4.0
 	o ctwm-3.6
 	o curl-7.10.3 [pkg/20142]
-	o cyrus-sasl2-2.1.11
+	o cyrus-imapd21-2.1.12
+	o cyrus-sasl2-2.1.12
 	o dante-1.1.13
 	o db4-4.1.25
 	o dylan-compiler-2.3.9
