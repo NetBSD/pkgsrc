@@ -1,7 +1,23 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 11:10:03 agc Exp $
-
---- main.cc.orig	Tue Sep  9 11:17:10 1997
-+++ main.cc	Tue Sep  9 11:17:31 1997
+--- main.cc.orig	1996-05-03 23:27:22.000000000 +1000
++++ main.cc	2003-10-08 23:03:15.000000000 +1000
+@@ -132,13 +132,13 @@
+ 
+ void initcatchers()
+ {
+-	signal(SIGINT, DoQuit);
++	signal(SIGINT, (void (*)(int))DoQuit);
+ #ifdef SIGHUP
+-	signal(SIGHUP, DoQuit);
++	signal(SIGHUP, (void (*)(int))DoQuit);
+ #endif
+-	signal(SIGTERM, DoQuit);
++	signal(SIGTERM, (void (*)(int))DoQuit);
+ #ifdef SIGCHLD
+-	signal(SIGCHLD, ReapChild);
++	signal(SIGCHLD, (void (*)(int))ReapChild);
+ #endif
+ }
+ 
 @@ -162,7 +162,7 @@
  		else {
  			Tk_Window tk = t.tkmain();
