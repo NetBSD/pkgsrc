@@ -1,6 +1,9 @@
 #!/bin/sh
-# $NetBSD: arlad.sh,v 1.1.1.1 2000/06/08 15:56:28 wennmach Exp $
-if [ -f @PREFIX@/sbin/arlad ]; then
+# $NetBSD: arlad.sh,v 1.2 2001/08/09 13:48:59 wennmach Exp $
+#
+# start script for arlad (for NetBSD earlier than 1.5)
+
+if [ -f @PREFIX@/libexec/arlad ]; then
 	echo -n " arlad"
-	@PREFIX@/sbin/arlad -z /dev/xfs0
+	@PREFIX@/libexec/arlad -z /dev/xfs0
 fi
