@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.58 2001/08/24 09:00:44 abs Exp $
+# $NetBSD: bsd.prefs.mk,v 1.59 2001/09/18 21:30:06 agc Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -92,6 +92,15 @@ LOWER_ARCH?=		${MACHINE_GNU_ARCH}
 
 MACHINE_PLATFORM?=	${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
 MACHINE_GNU_PLATFORM?=	${LOWER_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+
+# include the defaults file
+.if exists(${.CURDIR}/../../mk/bsd.pkg.defaults.mk)
+.include "${.CURDIR}/../../mk/bsd.pkg.defaults.mk"
+.elif exists(${.CURDIR}/../mk/bsd.pkg.defaults.mk)
+.include "${.CURDIR}/../mk/bsd.pkg.defaults.mk"
+.elif exists(${.CURDIR}/mk/bsd.pkg.defaults.mk)
+.include "${.CURDIR}/mk/bsd.pkg.defaults.mk"
+.endif
 
 # Needed on NetBSD and SunOS (zoularis) to prevent an "install:" target
 # from being created in bsd.own.mk.
