@@ -1,0 +1,53 @@
+$NetBSD: patch-ba,v 1.1 2002/01/29 17:10:12 jlam Exp $
+
+--- configure.in.orig	Sun Mar 18 20:56:36 2001
++++ configure.in
+@@ -172,7 +172,7 @@
+ 	HAVE_LIBCRACK=no)
+ AC_SUBST(HAVE_LIBCRACK)
+ 
+-AC_CHECK_LIB(crypt, fcrypt, HAVE_LIBCRYPT=yes ; AC_DEFINE(HAVE_LIBCRYPT),
++AC_CHECK_LIB(crypt, crypt, HAVE_LIBCRYPT=yes ; AC_DEFINE(HAVE_LIBCRYPT),
+ 	HAVE_LIBCRYPT=no)
+ AC_SUBST(HAVE_LIBCRYPT)
+ AC_CHECK_LIB(util, logwtmp, HAVE_LIBUTIL=yes ; AC_DEFINE(HAVE_LIBUTIL),
+@@ -220,7 +220,7 @@
+ 
+ dnl Look for cracklib dictionary
+ AC_MSG_CHECKING(path to cracklib dictionary)
+-DICT_DIR_CANDIDATES="/usr/lib /usr/share/dict /usr/share/lib \
++DICT_DIR_CANDIDATES="${prefix}/libdata /usr/lib /usr/share/dict /usr/share/lib \
+   /usr/local/lib /usr/local/share/lib"
+ DICT_FILE_CANDIDATES="pw_dict cracklib_dict"
+ CRACKLIB_DICTPATH=""
+@@ -264,6 +264,21 @@
+ if test "$GCC" = yes; then
+ ###
+ ### Non-Linux needs attention on per-OS basis
++    case $OS in
++    netbsd*)
++	OS_CFLAGS=""
++	WARNINGS="$GCC_WARNINGS"
++	PIC="-fPIC"
++#can/should we use LD=gcc ???
++	LD=ld				
++	LD_D="\$(CC) -shared -Xlinker -x"
++	LD_L="$LD -x -shared"
++	RANLIB=ranlib
++	STRIP=strip
++	CC_STATIC="-Xlinker -export-dynamic"
++	;;
++
++    *)
+ 	OS_CFLAGS="-ansi -D_POSIX_SOURCE -pedantic"
+ 	WARNINGS="$GCC_WARNINGS"
+ 	PIC="-fPIC"
+@@ -274,6 +289,8 @@
+ 	RANLIB=ranlib
+ 	STRIP=strip
+ 	CC_STATIC="-Xlinker -export-dynamic"
++	;;
++    esac
+ else
+ ###
+ ### Non-gcc needs attention on per-OS basis

@@ -1,6 +1,6 @@
-$NetBSD: patch-ap,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+$NetBSD: patch-ap,v 1.2 2002/01/29 17:10:11 jlam Exp $
 
---- modules/pam_unix/support.c.orig	Sat Oct 21 14:21:48 2000
+--- modules/pam_unix/support.c.orig	Sun Feb 11 01:33:53 2001
 +++ modules/pam_unix/support.c
 @@ -12,7 +12,10 @@
  #include <string.h>
@@ -13,7 +13,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  #include <limits.h>
  #include <utmp.h>
  
-@@ -99,6 +102,9 @@
+@@ -111,6 +114,9 @@
     */
  char *PAM_getlogin(void)
  {
@@ -22,8 +22,8 @@ $NetBSD: patch-ap,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
 +#else
  	struct utmp *ut, line;
  	char *curr_tty, *retval;
- 	static char curr_user[UT_NAMESIZE + 4];
-@@ -120,6 +126,7 @@
+ 	static char curr_user[sizeof(ut->ut_user) + 4];
+@@ -132,6 +138,7 @@
  	D(("PAM_getlogin retval: %s", retval));
  
  	return retval;
@@ -31,7 +31,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  }
  
  /*
-@@ -302,6 +309,7 @@
+@@ -330,6 +337,7 @@
  	pwd = getpwnam(name);	/* Get password file entry... */
  
  	if (pwd != NULL) {
@@ -39,7 +39,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  		if (strcmp( pwd->pw_passwd, "*NP*" ) == 0)
  		{ /* NIS+ */                 
  			uid_t save_euid, save_uid;
-@@ -339,6 +347,7 @@
+@@ -367,6 +375,7 @@
  		if (spwdent)
  			salt = x_strdup(spwdent->sp_pwdp);
  		else
@@ -47,7 +47,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  			salt = x_strdup(pwd->pw_passwd);
  	}
  	/* Does this user have a password? */
-@@ -450,6 +459,7 @@
+@@ -481,6 +490,7 @@
  	pwd = getpwnam(name);	/* Get password file entry... */
  
  	if (pwd != NULL) {
@@ -55,7 +55,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  		if (strcmp( pwd->pw_passwd, "*NP*" ) == 0)
  		{ /* NIS+ */                 
  			uid_t save_euid, save_uid;
-@@ -467,7 +477,7 @@
+@@ -498,7 +508,7 @@
  						return PAM_CRED_INSUFFICIENT;
  				}
  			}
@@ -64,7 +64,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  			spwdent = getspnam( name );
  			if (save_uid == pwd->pw_uid)
  				setreuid( save_uid, save_euid );
-@@ -486,6 +496,7 @@
+@@ -517,6 +527,7 @@
  		if (spwdent)
  			salt = x_strdup(spwdent->sp_pwdp);
  		else

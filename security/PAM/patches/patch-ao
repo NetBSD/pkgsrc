@@ -1,9 +1,9 @@
-$NetBSD: patch-ao,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+$NetBSD: patch-ao,v 1.2 2002/01/29 17:10:11 jlam Exp $
 
---- modules/pam_unix/pam_unix_passwd.c.orig	Sat Oct 21 13:10:07 2000
+--- modules/pam_unix/pam_unix_passwd.c.orig	Sun Feb 11 01:33:53 2001
 +++ modules/pam_unix/pam_unix_passwd.c
-@@ -52,7 +52,10 @@
- #include <errno.h>
+@@ -47,7 +47,10 @@
+ #include <sys/types.h>
  #include <pwd.h>
  #include <syslog.h>
 +#include <sys/param.h>
@@ -13,7 +13,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  #include <time.h>		/* for time() */
  #include <fcntl.h>
  #include <ctype.h>
-@@ -83,7 +86,7 @@
+@@ -77,7 +80,7 @@
  #include "md5.h"
  #include "support.h"
  
@@ -22,9 +22,9 @@ $NetBSD: patch-ao,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  extern int getrpcport(const char *host, unsigned long prognum,
  		      unsigned long versnum, unsigned int proto);
  #endif				/* GNU libc 2.1 */
-@@ -334,6 +337,9 @@
+@@ -330,6 +333,9 @@
  
- static int _update_passwd(const char *forwho, char *towhat)
+ static int _update_passwd(const char *forwho, const char *towhat)
  {
 +#ifdef BSD
 +	return PAM_AUTHTOK_ERR;
@@ -32,7 +32,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  	struct passwd *tmpent = NULL;
  	FILE *pwfile, *opwfile;
  	int retval = 0;
-@@ -376,10 +382,14 @@
+@@ -372,10 +378,14 @@
  		unlink(PW_TMPFILE);
  
  	return retval;
@@ -47,15 +47,15 @@ $NetBSD: patch-ao,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  	struct spwd *spwdent = NULL, *stmpent = NULL;
  	FILE *pwfile, *opwfile;
  	int retval = 0;
-@@ -428,6 +438,7 @@
+@@ -424,6 +434,7 @@
  		unlink(SH_TMPFILE);
  
  	return retval;
 +#endif
  }
  
- static int _do_setpass(const char *forwho, char *fromwhat, char *towhat,
-@@ -535,15 +546,18 @@
+ static int _do_setpass(pam_handle_t* pamh, const char *forwho, char *fromwhat,
+@@ -531,15 +542,18 @@
  		return PAM_AUTHINFO_UNAVAIL;	/* We don't need to do the rest... */
  
  	if (strcmp(pwd->pw_passwd, "x") == 0) {
@@ -74,7 +74,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  		if (strcmp(pwd->pw_passwd,"*NP*") == 0) { /* NIS+ */                 
  			uid_t save_uid;
  
-@@ -556,8 +570,15 @@
+@@ -552,8 +566,15 @@
  				return PAM_AUTHINFO_UNAVAIL;
  		} else
  			spwdent = NULL;
@@ -90,7 +90,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  	if (spwdent != NULL) {
  		/* We have the user's information, now let's check if their account
  		   has expired (60 * 60 * 24 = number of seconds in a day) */
-@@ -583,6 +604,7 @@
+@@ -579,6 +600,7 @@
  				retval = PAM_ACCT_EXPIRED;
  		}
  	}

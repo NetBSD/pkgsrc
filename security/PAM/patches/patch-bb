@@ -1,0 +1,69 @@
+$NetBSD: patch-bb,v 1.1 2002/01/29 17:10:12 jlam Exp $
+
+--- configure.orig	Sun Mar 18 20:56:36 2001
++++ configure
+@@ -1460,9 +1460,9 @@
+ 
+ 
+ 
+-echo $ac_n "checking for fcrypt in -lcrypt""... $ac_c" 1>&6
+-echo "configure:1465: checking for fcrypt in -lcrypt" >&5
+-ac_lib_var=`echo crypt'_'fcrypt | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for crypt in -lcrypt""... $ac_c" 1>&6
++echo "configure:1465: checking for crypt in -lcrypt" >&5
++ac_lib_var=`echo crypt'_'crypt | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+@@ -1474,10 +1474,10 @@
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */
+-char fcrypt();
++char crypt();
+ 
+ int main() {
+-fcrypt()
++crypt()
+ ; return 0; }
+ EOF
+ if { (eval echo configure:1484: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+@@ -2257,7 +2257,7 @@
+ 
+ echo $ac_n "checking path to cracklib dictionary""... $ac_c" 1>&6
+ echo "configure:2260: checking path to cracklib dictionary" >&5
+-DICT_DIR_CANDIDATES="/usr/lib /usr/share/dict /usr/share/lib \
++DICT_DIR_CANDIDATES="${prefix}/libdata /usr/lib /usr/share/dict /usr/share/lib \
+   /usr/local/lib /usr/local/share/lib"
+ DICT_FILE_CANDIDATES="pw_dict cracklib_dict"
+ CRACKLIB_DICTPATH=""
+@@ -2288,6 +2288,20 @@
+ if test "$GCC" = yes; then
+ ###
+ ### Non-Linux needs attention on per-OS basis
++    case $OS in
++    netbsd*)
++	OS_CFLAGS=""
++	WARNINGS="$GCC_WARNINGS"
++	PIC="-fPIC"
++	LD=ld
++	LD_D="\$(CC) -shared -Xlinker -x"
++	LD_L="$LD -x -shared"
++	RANLIB=ranlib
++	STRIP=strip
++	CC_STATIC="-Xlinker -export-dynamic"
++	;;
++
++    *)
+ 	OS_CFLAGS="-ansi -D_POSIX_SOURCE -pedantic"
+ 	WARNINGS="$GCC_WARNINGS"
+ 	PIC="-fPIC"
+@@ -2298,6 +2312,8 @@
+ 	RANLIB=ranlib
+ 	STRIP=strip
+ 	CC_STATIC="-Xlinker -export-dynamic"
++	;;
++    esac
+ else
+ ###
+ ### Non-gcc needs attention on per-OS basis

@@ -1,0 +1,16 @@
+$NetBSD: patch-be,v 1.1 2002/01/29 17:10:12 jlam Exp $
+
+--- libpam/Makefile.orig	Mon Jan 28 19:00:46 2002
++++ libpam/Makefile
+@@ -125,8 +125,9 @@
+ 	$(INSTALL) -m $(SHLIBMODE) $(LIBPAM) $(FAKEROOT)$(libdir)/$(LIBPAMFULL)
+ 	$(LDCONFIG)
+   ifneq ($(DYNTYPE),"sl")
+-	( cd $(FAKEROOT)$(libdir) ; rm -f $(LIBPAM) ; \
+-	  ln -sf $(LIBPAMNAME) $(LIBPAM) )
++	( cd $(FAKEROOT)$(libdir) ; rm -f $(LIBPAM) $(LIBPAMNAME); \
++	  ln -sf $(LIBPAMFULL) $(LIBPAMNAME); \
++	  ln -sf $(LIBPAMFULL) $(LIBPAM) )
+   endif
+ endif
+ ifeq ($(STATIC_LIBPAM),yes)
