@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/27 22:07:04 epg Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/13 18:03:40 jlam Exp $
 
 PKGNAME=	apr-${APR_VERSION}.${APACHE_VERSION}
 PKGREVISION=	1
@@ -54,7 +54,7 @@ do-configure:
 
 post-install:
 	${RM} ${PREFIX}/libexec/apr/libtool
-	${INSTALL_SCRIPT} ${LIBTOOL} ${PREFIX}/libexec/apr/libtool
+	${INSTALL_SCRIPT} ${PKG_LIBTOOL} ${PREFIX}/libexec/apr/libtool
 
 .include "../../www/apache2/Makefile.common"
 
