@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.261 2004/10/05 12:40:33 agc Exp $
+# $NetBSD: Makefile,v 1.262 2004/10/10 17:29:09 kim Exp $
 
 COMMENT=	System utilities
 
@@ -144,6 +144,7 @@ SUBDIR+=	rox-session
 SUBDIR+=	rox-system
 SUBDIR+=	rox-wallpaper
 SUBDIR+=	rox-wrappers
+SUBDIR+=	rsnapshot
 SUBDIR+=	rtty
 SUBDIR+=	ruby-quota
 SUBDIR+=	safetynet
