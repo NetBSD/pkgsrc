@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.292 1999/07/03 16:38:59 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.293 1999/07/09 13:14:21 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -145,6 +145,7 @@ MD5?=			/usr/bin/md5
 MD5?=			md5
 .endif
 MD5_FILE?=		${FILESDIR}/md5
+PATCH_SUM_FILE?=	${FILESDIR}/patch-sum
 
 .if defined(USE_MOTIF) || defined(USE_X11BASE) || defined(USE_X11)
 LDFLAGS+=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
@@ -969,29 +970,43 @@ do-patch:
 		esac; \
 	  done)
 .endif
-	${_PKG_SILENT}${_PKG_DEBUG}if [ -d ${PATCHDIR} ]; then \
+	${_PKG_SILENT}${_PKG_DEBUG}if [ -d ${PATCHDIR} ]; then		\
 		if [ "`${ECHO} ${PATCHDIR}/patch-*`" = "${PATCHDIR}/patch-*" ]; then \
 			${ECHO_MSG} "===>   Ignoring empty patch directory"; \
-			if [ -d ${PATCHDIR}/CVS ]; then \
+			if [ -d ${PATCHDIR}/CVS ]; then			\
 				${ECHO_MSG} "===>   Perhaps you forgot the -P flag to cvs co or update?"; \
-			fi; \
-		else \
+			fi;						\
+		else							\
 			${ECHO_MSG} "===>  Applying ${OPSYS} patches for ${PKGNAME}" ; \
-			for i in ${PATCHDIR}/patch-*; do \
-				case $$i in \
-					*.orig|*.rej|*~) \
-						${ECHO_MSG} "===>   Ignoring patchfile $$i" ; \
-						;; \
-					*) \
-						if [ ${PATCH_DEBUG_TMP} = yes ]; then \
-							${ECHO_MSG} "===>   Applying ${OPSYS} patch $$i" ; \
-						fi; \
-						${PATCH} ${PATCH_ARGS} < $$i \
-						|| ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
-						;; \
-				esac; \
-			done; \
-		fi; \
+			for i in ${PATCHDIR}/patch-*; do		\
+				case $$i in				\
+				${PATCHDIR}/patch-local-*) ;;		\
+				*.orig|*.rej|*~)			\
+					${ECHO_MSG} "===>   Ignoring patchfile $$i" ; \
+					;;				\
+				*)					\
+					if [ -f ${PATCH_SUM_FILE} ]; then \
+						filename=`expr $$i : '.*/\(.*\)'`; \
+						calcsum=`${SED} -e '/\$$NetBSD.*/d' $$i | ${MD5}`; \
+						recorded=`${AWK} '$$1 == "MD5" && $$2 == "('$$filename')" { print $$4; }' ${PATCH_SUM_FILE} || ${TRUE}`; \
+						if [ "X$$recorded" = "X" ]; then \
+							${ECHO_MSG} ">> Ignoring \"unofficial\" patch file $$i"; \
+							continue;	\
+						fi;			\
+						if [ "X$$calcsum" != "X$$recorded" ]; then \
+							${ECHO_MSG} ">> Patch file $$i has been modified - ignoring it"; \
+							continue;	\
+						fi;			\
+					fi;				\
+					if [ ${PATCH_DEBUG_TMP} = yes ]; then \
+						${ECHO_MSG} "===>   Applying ${OPSYS} patch $$i" ; \
+					fi;				\
+					${PATCH} ${PATCH_ARGS} < $$i	\
+					|| ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
+					;;				\
+				esac;					\
+			done;						\
+		fi;							\
 	fi
 .endif
 
@@ -1633,6 +1648,28 @@ makesum: fetch
 		if [ "X$$sumfile" = X"" ]; then continue; fi;		\
 		${ECHO} "MD5 ($$ignore) = IGNORE" >> ${MD5_FILE};	\
 	done
+.endif
+
+.if !target(makepatchsum)
+makepatchsum:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${FILESDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PATCH_SUM_FILE}
+	@${ECHO} -n "$$" > ${PATCH_SUM_FILE};				\
+		${ECHO} -n "NetBSD" >> ${PATCH_SUM_FILE}; 		\
+		${ECHO} "$$" >> ${PATCH_SUM_FILE};			\
+		${ECHO} "" >> ${PATCH_SUM_FILE}
+	${_PKG_SILENT}(${_PKG_DEBUG}					\
+	if [ -d ${PATCHDIR} ]; then					\
+		cd ${PATCHDIR};						\
+		for sumfile in "" patch-*; do				\
+			if [ "X$$sumfile" = X"" ]; then continue; fi;	\
+			case $$sumfile in				\
+			patch-local-*) ;;				\
+			*)						\
+				${ECHO} "MD5 ($$sumfile) = `${SED} -e '/\$$NetBSD.*/d' $$sumfile | ${MD5}`" >> ${PATCH_SUM_FILE}; \
+			esac;						\
+		done;							\
+	fi)
 .endif
 
 .if !target(checksum)
