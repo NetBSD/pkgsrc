@@ -1,10 +1,8 @@
-$NetBSD: patch-ah,v 1.4 2004/04/22 09:18:36 tron Exp $
+$NetBSD: patch-ah,v 1.5 2004/04/22 09:27:49 tron Exp $
 
 --- asmrun/power-bsd.S.orig	Thu Apr 22 10:34:28 2004
 +++ asmrun/power-bsd.S	Thu Apr 22 10:34:38 2004
-@@ -13,6 +13,35 @@
- 
- /* $Id: patch-ah,v 1.4 2004/04/22 09:18:36 tron Exp $ */
+@@ -15,4 +15,33 @@
  
 +#if defined(PROFILING)
 +#define PROFILE_CAML \
