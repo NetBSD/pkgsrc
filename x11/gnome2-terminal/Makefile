@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2004/12/28 21:50:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2005/03/22 16:20:49 jmmv Exp $
 #
 
-DISTNAME=		gnome-terminal-2.8.2
+DISTNAME=		gnome-terminal-2.10.0
 PKGNAME=		${DISTNAME:S/-/2-/}
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.8/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.10/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -26,10 +26,15 @@ USE_LIBTOOL=		YES
 
 GCONF2_SCHEMAS= 	gnome-terminal.schemas
 
+BUILDLINK_DEPENDS.startup-notification+=	startup-notification>=0.8
+
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libzvt/buildlink3.mk"
