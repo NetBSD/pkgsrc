@@ -1,13 +1,36 @@
-$NetBSD: patch-ac,v 1.2 2001/03/05 12:40:26 skrll Exp $
+$NetBSD: patch-ac,v 1.3 2002/02/08 06:29:44 jlam Exp $
 
---- make/common.mak.orig	Wed Apr 26 01:40:48 2000
+--- make/common.mak.orig	Tue Apr 25 20:40:48 2000
 +++ make/common.mak
+@@ -148,11 +148,11 @@
+ #
+ $(OBJDIR)/%.o : %.cxx 
+ 	@if [ ! -d $(OBJDIR) ] ; then mkdir -p $(OBJDIR) ; fi
+-	$(CPLUS) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
++	$(LIBTOOL) --tag=CXX $(CPLUS) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
+ 
+ $(OBJDIR)/%.o : %.c 
+ 	@if [ ! -d $(OBJDIR) ] ; then mkdir -p $(OBJDIR) ; fi
+-	$(CC) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
++	$(LIBTOOL) --tag=CC $(CC) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
+ 
+ #
+ # create list of object files 
 @@ -213,7 +213,7 @@
  endif
  
  $(TARGET):	$(OBJS) $(TARGET_LIBS)
 -	$(CPLUS) $(CFLAGS) $(LDFLAGS) $(OBJS) -o $@ $(LDLIBS)
-+	${LIBTOOL} --mode=link --tag=CXX $(CPLUS) $(CFLAGS) $(LDFLAGS) $(OBJS) -o $@ $(LDLIBS)
++	$(LIBTOOL) --tag=CXX $(CPLUS) $(CFLAGS) $(LDFLAGS) $(OBJS) -o $@ $(LDLIBS)
  
  ifdef DEBUG
  
+@@ -238,7 +238,7 @@
+ ifndef INSTALL_OVERRIDE
+ 
+ install:	$(TARGET)
+-	$(INSTALL) $(TARGET) $(INSTALLBIN_DIR)
++	$(LIBTOOL) $(BSD_INSTALL_PROGRAM) $(TARGET) $(INSTALLBIN_DIR)
+ endif
+ 
+ # ifdef PROG
