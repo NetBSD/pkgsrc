@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/01/20 21:16:07 recht Exp $
+
+SHA1 (elvis-2.2_0.tar.gz) = 8c16574b6d36529735b8ced70972ddaf6275a477
+Size (elvis-2.2_0.tar.gz) = 1439293 bytes
+SHA1 (patch-aa) = b533a7437de65eac9faed27826edce2111f71f30

@@ -1,0 +1,19 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/20 21:16:07 recht Exp $
+#
+
+DISTNAME=	elvis-2.2_0
+CATEGORIES=	editors
+MASTER_SITES=	ftp://ftp.cs.pdx.edu/pub/elvis/
+
+MAINTAINER=	airhead@users.sourceforge.net
+HOMEPAGE=	http://elvis.vi-editor.org/
+
+PLIST_SRC=	${.CURDIR}/../elvis/PLIST.common
+PATCHDIR=	${.CURDIR}/../elvis/patches
+DISTINFO_FILE=	${.CURDIR}/../elvis/distinfo
+
+USE_BUILDLINK2=		YES
+
+HAS_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/elvis
