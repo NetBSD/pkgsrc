@@ -1,35 +1,162 @@
-$NetBSD: patch-ad,v 1.3 2000/06/20 21:50:20 jlam Exp $
+$NetBSD: patch-ad,v 1.4 2000/11/16 10:42:24 abs Exp $
 
---- dyn_load.c.orig	Wed Apr 26 09:01:16 2000
-+++ dyn_load.c	Sat May  6 04:48:00 2000
-@@ -50,7 +50,8 @@
- #if !defined(SUNOS4) && !defined(SUNOS5DL) && !defined(IRIX5) && \
-     !defined(MSWIN32) && !(defined(ALPHA) && defined(OSF1)) && \
-     !defined(HPUX) && !(defined(LINUX) && defined(__ELF__)) && \
--    !defined(RS6000) && !defined(SCO_ELF)
-+    !defined(RS6000) && !defined(SCO_ELF) && \
-+    !(defined(NETBSD) && defined(__ELF__))
-  --> We only know how to find data segments of dynamic libraries for the
-  --> above.  Additional SVR4 variants might not be too
-  --> hard to add.
-@@ -297,14 +298,19 @@
- # endif /* !USE_PROC ... */
- # endif /* SUNOS */
+--- gcconfig.h.orig	Tue Apr 25 17:41:01 2000
++++ gcconfig.h
+@@ -27,6 +27,11 @@
+ #    define LINUX
+ # endif
  
--#if defined(LINUX) && defined(__ELF__) || defined(SCO_ELF)
-+#if defined(LINUX) && defined(__ELF__) || defined(SCO_ELF) || \
-+    (defined(NETBSD) && defined(__ELF__))
++# if defined(__NetBSD__)
++#    define NETBSD
++#    define unix /* symbol unix is no longer defined in NetBSD */
++# endif
++
+ /* Determine the machine type: */
+ # if defined(sun) && defined(mc68000)
+ #    define M68K
+@@ -50,10 +55,13 @@
+ # endif
+ # if defined(__NetBSD__) && defined(m68k)
+ #    define M68K
+-#    define NETBSD
+ #    define mach_type_known
+ # endif
+-# if defined(__NetBSD__) && defined(arm32)
++# if defined(__NetBSD__) && defined(__powerpc__)
++#    define POWERPC
++#    define mach_type_known
++# endif
++# if defined(__NetBSD__) && defined(__arm32__)
+ #    define ARM32
+ #    define NETBSD
+ #    define mach_type_known
+@@ -81,6 +89,9 @@
+ #	 endif
+ #      endif
+ #    endif /* !LINUX */
++#    if defined(__NetBSD__) && defined(__MIPSEL__)
++#      undef ULTRIX
++#    endif
+ #    define mach_type_known
+ # endif
+ # if defined(sequent) && defined(i386)
+@@ -114,7 +125,7 @@
+ #   define mach_type_known
+ # endif
+ # if defined(sparc) && defined(unix) && !defined(sun) && !defined(linux) \
+-     && !defined(__OpenBSD__)
++     && !defined(__OpenBSD__) && !(__NetBSD__)
+ #   define SPARC
+ #   define DRSNX
+ #   define mach_type_known
+@@ -123,6 +134,10 @@
+ #   define RS6000
+ #   define mach_type_known
+ # endif
++# if defined(__NetBSD__) && defined(__sparc__)
++#   define SPARC
++#   define mach_type_known
++# endif
+ # if defined(_M_XENIX) && defined(_M_SYSV) && defined(_M_I386)
+ 	/* The above test may need refinement	*/
+ #   define I386
+@@ -172,7 +187,7 @@
+ # endif
+ # if defined(__alpha) || defined(__alpha__)
+ #   define ALPHA
+-#   if !defined(LINUX)
++#   if !defined(LINUX) && !defined(NETBSD)
+ #     define OSF1	/* a.k.a Digital Unix */
+ #   endif
+ #   define mach_type_known
+@@ -221,7 +236,6 @@
+ # endif
+ # if defined(__NetBSD__) && defined(i386)
+ #   define I386
+-#   define NETBSD
+ #   define mach_type_known
+ # endif
+ # if defined(bsdi) && defined(i386)
+@@ -573,6 +587,14 @@
+ #     define STACKBOTTOM ((ptr_t) 0xc0000000)
+ #     define DATAEND	/* not needed */
+ #   endif
++#   ifdef NETBSD
++#     define ALIGNMENT 4
++#     define OS_TYPE "NETBSD"
++#     define HEURISTIC2
++      extern char etext;
++#     define DATASTART GC_data_start
++#     define DYNAMIC_LOADING
++#   endif
+ # endif
  
- /* Dynamic loading code for Linux running ELF. Somewhat tested on
-  * Linux/x86, untested but hopefully should work on Linux/Alpha. 
-  * This code was derived from the Solaris/ELF support. Thanks to
-  * whatever kind soul wrote that.  - Patrick Bridges */
+ # ifdef VAX
+@@ -602,7 +624,6 @@
+ #   define MACH_TYPE "SPARC"
+ #   define ALIGNMENT 4	/* Required by hardware	*/
+ #   define ALIGN_DOUBLE
+-    extern int etext;
+ #   ifdef SUNOS5
+ #	define OS_TYPE "SUNOS5"
+ 	extern int _etext;
+@@ -674,8 +695,20 @@
+ #   ifdef OPENBSD
+ #     define OS_TYPE "OPENBSD"
+ #     define STACKBOTTOM ((ptr_t) 0xf8000000)
++      extern int etext;
+ #     define DATASTART ((ptr_t)(&etext))
+ #   endif
++#   ifdef NETBSD
++#     define OS_TYPE "NETBSD"
++#     define HEURISTIC2
++#     ifdef __ELF__
++#	define DATASTART GC_data_start
++#	define DYNAMIC_LOADING
++#     else
++	extern char etext;
++#	define DATASTART ((ptr_t)(&etext))
++#     endif
++#   endif
+ # endif
  
-+#if defined(NETBSD)
-+#include <sys/exec_elf.h>
-+#else
- #include <elf.h>
-+#endif
- #include <link.h>
+ # ifdef I386
+@@ -960,6 +993,21 @@
+ #	endif
+ #	define DYNAMIC_LOADING
+ #   endif
++#   if defined(NETBSD) && defined(__MIPSEL__)
++#     define ALIGNMENT 4
++#     define OS_TYPE "NETBSD"
++#     define HEURISTIC2
++#     define USE_GENERIC_PUSH_REGS 1
++#     ifdef __ELF__
++        extern int etext;
++#       define DATASTART GC_data_start
++#       define NEED_FIND_LIMIT
++#       define DYNAMIC_LOADING
++#     else
++#       define DATASTART ((ptr_t) 0x10000000)
++#       define STACKBOTTOM ((ptr_t) 0x7ffff000)
++#     endif /* _ELF_ */
++#  endif
+ # endif
  
- /* Newer versions of Linux/Alpha and Linux/x86 define this macro.  We
+ # ifdef RS6000
+@@ -1019,6 +1067,16 @@
+ 	/* fp registers in some cases when the target is a 21264.  The assembly	*/
+ 	/* code doesn't handle that yet, and version dependencies make that a	*/
+ 	/* bit tricky.  Do the easy thing for now.				*/
++#   ifdef NETBSD
++#	define OS_TYPE "NETBSD"
++#	define HEURISTIC2
++#	define DATASTART GC_data_start
++#	define ELFCLASS32 32
++#	define ELFCLASS64 64
++#	define ELF_CLASS ELFCLASS64
++#   	define CPP_WORDSZ 64
++#       define DYNAMIC_LOADING
++#   endif
+ #   ifdef OSF1
+ #	define OS_TYPE "OSF1"
+ #   	define DATASTART ((ptr_t) 0x140000000)
