@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3233 2003/09/04 09:59:29 chris Exp $
+$NetBSD: CHANGES,v 1.3234 2003/09/04 10:09:07 chris Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3521,3 +3521,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Removed coda-server-4.6.6.1 [drochner 2003-09-03]
 	Removed coda-client-4.6.6.1 [drochner 2003-09-03]
 	Updated sylpheed to 0.9.5 [chris 2003-09-04]
+	Updated pan to 0.14.2 [chris 2003-09-04]
