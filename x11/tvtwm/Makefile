@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 1999/06/19 14:44:32 mrg Exp $
+# $NetBSD: Makefile,v 1.3 1999/06/21 13:17:52 mrg Exp $
 
 DISTNAME=	tvtwm.pl11
 PKGNAME=	tvtwm-11
 CATEGORIES=	x11
-MASTER_SITES=	ftp://archie.au/X11/contrib/window_managers/
+MASTER_SITES=	${MASTER_SITE_XCONTRIB:=window_managers/}
 
 MAINTAINER=	packages@netbsd.org
 
