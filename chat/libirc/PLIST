@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:21 agc Exp $
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 19:20:21 zuntum Exp $
 lib/libirc.a
 lib/libirc.la
 lib/libirc.so
