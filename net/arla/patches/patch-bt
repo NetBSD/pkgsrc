@@ -1,4 +1,4 @@
-# $NetBSD: patch-bt,v 1.1 2002/09/23 14:37:19 wennmach Exp $
+$NetBSD: patch-bt,v 1.2 2002/12/23 18:28:20 cjep Exp $
 
 Fix a problem with VOP_PUTPAGES on NetBSD-1.6. From Love <lha@netbsd.org>.
 
