@@ -1,0 +1,85 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/21 22:20:56 wiz Exp $
+
+--- config/targets.orig	Fri Feb 22 21:42:15 2002
++++ config/targets
+@@ -41,7 +41,7 @@ request ml-lex
+ 
+ # build ML-Burg
+ #
+-#request ml-burg
++request ml-burg
+ 
+ # pre-compile and install the remaining components of the SML/NJ library
+ # (everything except smlnj-lib.cm, aka Util, itself)
+@@ -50,27 +50,27 @@ request smlnj-lib
+ 
+ # pre-compile and install CM "portable graph" utility library
+ #
+-#request pgraph-util
++request pgraph-util
+ 
+ # pre-compile and install Concurrent ML, which is a library for message-passing
+ # concurrency.
+ #
+-#request cml
++request cml
+ 
+ # pre-compile and install the CML Library, which provides some useful CML
+ # modules.
+ #
+-#request cml-lib
++request cml-lib
+ 
+ # pre-compile and install eXene, which is a library for X-Windows programming.
+ # EXene requires CML.
+ #
+-#request eXene
++request eXene
+ 
+ # pre-compile and install the C-Kit, which is a library for parsing and
+ # type-checking C programs
+ #
+-#request ckit
++request ckit
+ 
+ # pre-compile and install the ML-NLFFI Library, which is the core of
+ # a new foreign function interface (where "foreign" functions are
+@@ -79,7 +79,7 @@ request smlnj-lib
+ # the new FFI.
+ # This preview release currently works only under X86/Linux.
+ #
+-#request ml-nlffi-lib
++request ml-nlffi-lib
+ 
+ # build ML-NLFFI-Gen, a program generator tool used in conjunction with
+ # the new "NLFFI" foreign function interface.  The tool generates ML
+@@ -87,13 +87,13 @@ request smlnj-lib
+ # (Requires ckit!)
+ # This preview release currently works only under X86/Linux.
+ #
+-#request ml-nlffigen
++request ml-nlffigen
+ 
+ # pre-compile and install the MLRISC Tools library.
+ # This library is for parsing and pretty printing SML code.
+ # It's used by various MLRISC code generator generator.
+ #
+-#request mlrisc-tools
++request mlrisc-tools
+ 
+ # Build and install the 'nowhere' program translator.
+ # This tool translates programs with conditional patterns (where clauses) 
+@@ -101,11 +101,11 @@ request smlnj-lib
+ # (bad) documentation.
+ # (Requires the mlrisc-tools library!)
+ #
+-#request nowhere
++request nowhere
+ 
+ # unpack and install the documentation directory.
+ #
+-#request doc
++request doc
+ 
+ # Note: autoloading is always enabled.
+ #   In order to customize what is being pre-registered for autoloading
