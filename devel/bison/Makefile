@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2003/08/09 10:44:37 seb Exp $
+# $NetBSD: Makefile,v 1.48 2004/01/20 22:24:35 jlam Exp $
 
 DISTNAME=		bison-1.875
 PKGREVISION=		1
@@ -13,7 +13,9 @@ COMMENT=		GNU yacc(1) replacement
 DEPENDS+=		m4>=1.4:../../devel/m4
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 
 M4=			${LOCALBASE}/bin/gm4
