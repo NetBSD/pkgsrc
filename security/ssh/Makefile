@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2000/03/18 18:32:16 jlam Exp $
+# $NetBSD: Makefile,v 1.76 2000/03/20 02:25:48 itojun Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -12,7 +12,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.cs.hut.fi/ssh/
 
-CONFLICTS=		openssh-[0-9]*
+CONFLICTS=		openssh-[0-9]* ssh6-*
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 RESTRICTED=		"Crypto; export-controlled"
@@ -73,7 +73,6 @@ CONFIGURE_ARGS+=	--without-idea
 
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
-BROKEN=			SOCKS support currently unavailable
 CONFIGURE_ARGS+= 	--with-socks${USE_SOCKS}="-L${LOCALBASE}/lib -lsocks${USE_SOCKS}"
 CFLAGS+=	 	-I${LOCALBASE}/include
 .if ${USE_SOCKS} == 4
@@ -119,17 +118,6 @@ CONFIGURE_ARGS+=	--disable-suid-ssh
 # Make libwrap also compare against forwards (off by default)
 .if defined(LIBWRAP_FWD) && ${LIBWRAP_FWD} == YES
 CFLAGS+=		-DLIBWRAP_FWD
-.endif
-
-# The original IPv6 patches were fetched from
-# PATCH_SITES+=		ftp://ftp.kyoto.wide.ad.jp/IPv6/ssh/
-# PATCHFILES+=		ssh-1.2.27-IPv6-1.5-patch.gz
-# MD5 (ssh-1.2.27-IPv6-1.5-patch.gz) = b854131fe8aa025abeef32cecfe1b037
-
-.if defined(USE_INET6) && ${USE_INET6} == YES
-CONFIGURE_ARGS+=	--enable-ipv6
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 # be more effective on M68060 machines
@@ -195,6 +183,6 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/sshd.sh ${PREFIX}/etc/rc.d/sshd.sh
 
 BUILD_DEFS+=		USE_IDEA SSH_CONF_DIR SSH_SUID USE_RSAREF2
-BUILD_DEFS+=		LIBWRAP_FWD M68060 USE_SOCKS USE_INET6
+BUILD_DEFS+=		LIBWRAP_FWD M68060 USE_SOCKS
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,7 @@
-$NetBSD: patch-be,v 1.1 1999/12/25 05:28:37 kim Exp $
+$NetBSD: patch-be,v 1.2 2000/03/20 02:25:55 itojun Exp $
 
---- readconf.h.orig	Wed May 12 07:19:27 1999
-+++ readconf.h	Fri Dec 24 21:50:42 1999
+--- readconf.h-	Wed May 12 20:19:27 1999
++++ readconf.h	Mon Mar 20 09:47:24 2000
 @@ -85,6 +85,9 @@
    int rsa_authentication;	/* Try RSA authentication. */
    int kerberos_authentication;	/* Try Kerberos authentication. */
@@ -12,13 +12,3 @@ $NetBSD: patch-be,v 1.1 1999/12/25 05:28:37 kim Exp $
    int tis_authentication;	/* Try TIS authsrv authentication. */
    int password_authentication;	/* Try password authentication. */
    int fallback_to_rsh;		/* Use rsh if cannot connect with ssh. */
-@@ -98,6 +101,9 @@
-   int use_privileged_port;	/* Use privileged port */
- 
-   int port;			/* Port to connect. */
-+#ifdef ENABLE_ANOTHER_PORT_TRY
-+  int another_port;		/* Port to connect for -A option. */
-+#endif /* ENABLE_ANOTHER_PORT_TRY */
-   int connection_attempts;	/* Max attempts (seconds) before giving up */
-   int number_of_password_prompts; /* Max number of password prompts */
-   int password_prompt_login;	/* Show remote login at password prompt */

@@ -1,4 +1,4 @@
-$NetBSD: patch-bo,v 1.1 1999/12/25 05:28:37 kim Exp $
+$NetBSD: patch-bo,v 1.1 2000/03/20 02:25:44 itojun Exp $
 
 --- gai.h.orig	Wed Dec 31 19:00:00 1969
 +++ gai.h	Fri Dec 24 21:50:41 1999
