@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.9 2003/08/09 11:17:56 seb Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/10 18:51:13 wiz Exp $
 #
 
-DISTNAME=	NewsCache-0.99.17
-PKGREVISION=	1
+DISTNAME=	NewsCache-0.99.22p1
+PKGNAME=	${DISTNAME:S/p/.0./}
 CATEGORIES=	news
-MASTER_SITES=	http://www.infosys.tuwien.ac.at/NewsCache/download/
+MASTER_SITES=	http://www.hstraub.at/linux/downloads/src/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.infosys.tuwien.ac.at/NewsCache/
+HOMEPAGE=	http://members.aon.at/hstraub/linux/newscache/
 COMMENT=	Free cache server for USENET News
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 INFO_FILES=	NewsCache.info
 
