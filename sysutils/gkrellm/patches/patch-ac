@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2002/02/13 23:11:45 wiz Exp $
+
+--- src/apm.c.orig	Mon Oct 22 05:26:05 2001
++++ src/apm.c
+@@ -145,6 +145,7 @@
+    struct apm_power_info info;
+ 
+    if ((f = open(APMDEV, O_RDONLY)) == -1) return;
++   memset(&info, 0, sizeof(info));
+    r = ioctl(f, APM_IOC_GETPOWER, &info);
+    close(f);
+    if (r == -1) return;
