@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5671 2004/04/20 01:29:52 minskim Exp $
+$NetBSD: CHANGES,v 1.5672 2004/04/20 09:17:46 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2100,3 +2100,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added thunderbird-0.5 [taya 2004-04-19]
 	Updated gnome-icon-theme to 1.2.1 [minskim 2004-04-20]
 	Updated eel2 to 2.6.1 [minskim 2004-04-20]
+	Added honeyd-0.8b [xtraeme 2004-04-20]
+	Added honeyd-arpd-0.2 [xtraeme 2004-04-20]
