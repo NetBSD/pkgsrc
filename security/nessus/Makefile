@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 1999/03/04 09:30:45 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/03/22 16:40:27 bouyer Exp $
 #
 
-DISTNAME=	nessus-990201
+DISTNAME=	nessus-990318
 CATEGORIES=	net security x11
 MASTER_SITES=	http://www.nessus.org/
 EXTRACT_SUFX=	.tgz
