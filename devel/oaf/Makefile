@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/05/18 10:54:16 mjl Exp $
+# $NetBSD: Makefile,v 1.18 2002/07/31 17:48:07 wiz Exp $
 #
 
 DISTNAME=		oaf-0.6.10
@@ -16,6 +16,13 @@ USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
+BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
+.endif
 
 .include "../../devel/popt/buildlink.mk"
 .include "../../textproc/libxml/buildlink.mk"
