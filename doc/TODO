@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.133 2003/01/03 23:28:15 jmmv Exp $
+$NetBSD: TODO,v 1.134 2003/01/04 11:09:48 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -10,7 +10,7 @@ Suggested new packages
 	Listens to network traffic and picks out images from TCP streams.
 	http://www.ex-parrot.com/~chris/driftnet/
 
-	fileroller
+	fileroller [pkg/19592 ; jmmv]
 	Archive manager for Gnome
 	http://fileroller.sourceforge.net/
 
@@ -165,7 +165,6 @@ Suggested package updates
 	o lbreakout2-2.4
 	o lcms-1.0.9
 	o lftp-2.6.3 [pkg/19419]
-	o libbonoboui-2.0.3.3
 	o libgnomeui-2.0.6
 	o libole2-2.2.8
 	o libmcrypt-2.5.4
