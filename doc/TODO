@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2384 2004/11/19 09:56:33 adam Exp $
+$NetBSD: TODO,v 1.2385 2004/11/19 10:11:07 adam Exp $
 
 Suggested new packages
 ======================
@@ -363,7 +363,6 @@ Suggested package updates
 	o gtranslator-1.0.1
 	o guile-gtk-0.40.90 [in wip]
 	o guile-pg-0.16 [pkg/24039]
-	o hatari-0.50
 	o hmmer-2.3.2
 	o host-20040812 [cjep,talking to greg woods about this]
 	o hp2xx-3.4.4
