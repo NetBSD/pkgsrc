@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2000/10/24 10:37:32 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2000/10/27 04:14:47 tron Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -55,6 +55,7 @@
     SUBDIR += ns-plugger-communicator
     SUBDIR += ns-plugger-navigator
     SUBDIR += ns-remote
+    SUBDIR += opera
     SUBDIR += p5-Apache-ASP
     SUBDIR += p5-Apache-ePerl
     SUBDIR += p5-CGI
