@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.7 2004/10/21 08:29:45 adam Exp $
+$NetBSD: patch-ac,v 1.8 2005/03/19 15:26:18 ben Exp $
 
---- configure.orig	2004-10-19 20:01:57.000000000 +0000
+--- configure.orig	2004-11-23 12:35:43.000000000 -0800
 +++ configure
 @@ -855,6 +855,8 @@ Optional Features:
    --enable-debug          turn on debugging default=no
@@ -56,7 +56,33 @@ $NetBSD: patch-ac,v 1.7 2004/10/21 08:29:45 adam Exp $
  
  
  
-@@ -9204,7 +9235,7 @@ echo "${ECHO_T}yes" >&6
+@@ -9148,23 +9179,8 @@ esac
+ 
+ 
+ 
+-case "$uname" in
+-    *BSD* | Darwin*)
+-	# *BSD
+-	CAT1EXT=0
+-	CAT3EXT=0
+-	;;
+-    IRIX*)
+-	# SGI IRIX
+-	CAT1EXT=z
+-	CAT3EXT=z
+-	;;
+-    *)
+-	# All others
+-	CAT1EXT=1
+-	CAT3EXT=3
+-	;;
+-esac
++CAT1EXT=1
++CAT3EXT=3
+ 
+ 
+ 
+@@ -9230,7 +9246,7 @@ echo "${ECHO_T}yes" >&6
  	    ;;
      esac
  
@@ -65,7 +91,7 @@ $NetBSD: patch-ac,v 1.7 2004/10/21 08:29:45 adam Exp $
  
      # Show all standard warnings + unused variables, conversion errors,
      # and inlining problems when compiling...
-@@ -10094,6 +10125,7 @@ s,@GLLIBNAME@,$GLLIBNAME,;t t
+@@ -10120,6 +10136,7 @@ s,@GLLIBNAME@,$GLLIBNAME,;t t
  s,@IMGLIBNAME@,$IMGLIBNAME,;t t
  s,@LIBEXT@,$LIBEXT,;t t
  s,@LIBNAME@,$LIBNAME,;t t

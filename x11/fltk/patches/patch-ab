@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.9 2004/10/21 08:29:45 adam Exp $
+$NetBSD: patch-ab,v 1.10 2005/03/19 15:26:18 ben Exp $
 
---- configure.in.orig	2004-10-18 21:05:27.000000000 +0000
+--- configure.in.orig	2004-11-19 19:44:17.000000000 -0800
 +++ configure.in
 @@ -95,6 +95,7 @@ AC_SUBST(GLLIBNAME)
  AC_SUBST(IMGLIBNAME)
@@ -48,7 +48,31 @@ $NetBSD: patch-ab,v 1.9 2004/10/21 08:29:45 adam Exp $
  AC_SUBST(DSOCOMMAND)
  AC_SUBST(DSOLINK)
  AC_SUBST(DSONAME)
-@@ -726,7 +751,7 @@ if test -n "$GCC"; then
+@@ -658,23 +683,8 @@ AC_SUBST(POSTBUILD)
+ AC_SUBST(THREADS)
+ 
+ dnl Figure out the appropriate formatted man page extension...
+-case "$uname" in
+-    *BSD* | Darwin*)
+-	# *BSD
+-	CAT1EXT=0
+-	CAT3EXT=0
+-	;;
+-    IRIX*)
+-	# SGI IRIX
+-	CAT1EXT=z
+-	CAT3EXT=z
+-	;;
+-    *)
+-	# All others
+ 	CAT1EXT=1
+ 	CAT3EXT=3
+-	;;
+-esac
+ 
+ AC_SUBST(CAT1EXT)
+ AC_SUBST(CAT3EXT)
+@@ -743,7 +753,7 @@ if test -n "$GCC"; then
  	    ;;
      esac
  
