@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6506 2004/07/08 20:37:53 heinz Exp $
+$NetBSD: CHANGES,v 1.6507 2004/07/08 21:14:21 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3316,3 +3316,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-DBIWrapper-0.20 [erh 2004-07-08]
 	Added p5-HTMLObject-2.22 [erh 2004-07-08]
 	Update hylafax to 4.1.8nb3 [heinz 2004-07-08]
+	Updated cyrus-sasl2 to 2.1.18nb3 [recht 2004-07-08]
