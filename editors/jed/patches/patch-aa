@@ -1,7 +1,24 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/10/31 23:16:12 hwr Exp $
+$NetBSD: patch-aa,v 1.2 1999/06/03 08:47:22 agc Exp $
+
+Make the search path include the correct directories.
+On Solaris, find the -lcurses library instead of -ltermcap
+
 --- configure.orig	Wed Feb 11 17:57:02 1998
 +++ configure	Sat Oct 31 22:39:03 1998
-@@ -2434,6 +2434,7 @@
+@@ -2404,6 +2404,12 @@
+       break
+    fi
+ done
++opsys=`uname -s`
++if [ $opsys = SunOS ]; then
++      echo "$ac_t""yes" 1>&6
++      TERMCAP="-lcurses"
++      break
++fi
+ if test "$TERMCAP"; then
+   echo "$ac_t""no" 1>&6
+   cat >> confdefs.h <<\EOF
+@@ -2434,6 +2440,7 @@
  # version.
  
  JD_Search_Dirs="$JD_Search_Dirs \
