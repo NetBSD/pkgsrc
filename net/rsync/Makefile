@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2000/08/21 16:37:01 veego Exp $
+# $NetBSD: Makefile,v 1.32 2000/09/04 11:11:03 itojun Exp $
 #
 
 DISTNAME=	rsync-2.4.5
@@ -20,7 +20,7 @@ BUILD_DEFS+=	USE_INET6
 .if ${OPSYS} == "NetBSD"
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/ \
 		ftp://ftp.pasta.cs.uit.no/pub/IPv6/misc/
-PATCHFILES=	rsync-245-v6-20000820b.diff.gz
+PATCHFILES=	rsync-245-v6-20000901b.diff.gz
 PATCH_DIST_STRIP=	-p1
 .endif
 
