@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.5 2001/04/22 00:05:16 itojun Exp $
+$NetBSD: patch-ac,v 1.6 2001/08/31 09:43:09 itojun Exp $
 
---- samples/racoon.conf.sample.orig	Tue Dec 19 17:07:33 2000
-+++ samples/racoon.conf.sample	Sun Apr 22 09:02:35 2001
+--- samples/racoon.conf.sample.orig	Thu Aug 16 15:33:40 2001
++++ samples/racoon.conf.sample	Fri Aug 31 18:39:12 2001
 @@ -4,15 +4,15 @@
  # "include" directive with relative file path.
  # you can overwrite "path" directive afterwards, however, doing so may add
@@ -22,11 +22,11 @@ $NetBSD: patch-ac,v 1.5 2001/04/22 00:05:16 itojun Exp $
  # "log" specifies logging level.  It is followed by either "notify", "debug"
  # or "debug2".
 @@ -53,7 +53,7 @@
+ {
  	pfs_group 2;
  	lifetime time 12 hour ;
- 	lifetime byte 50 MB ;
--	encryption_algorithm 3des, cast128, blowfish, des, twofish, rijndael ;
-+	encryption_algorithm 3des, cast128, blowfish, des, rijndael ;
+-	encryption_algorithm 3des, cast128, blowfish 448, des, twofish, rijndael ;
++	encryption_algorithm 3des, cast128, blowfish 448, des, rijndael ;
  	authentication_algorithm hmac_sha1, hmac_md5 ;
  	compression_algorithm deflate ;
  }
