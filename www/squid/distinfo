@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2003/08/18 17:00:24 taca Exp $
+$NetBSD: distinfo,v 1.37 2003/09/11 15:48:24 taca Exp $
 
 SHA1 (squid-2.5.3/squid-2.5.STABLE3.tar.bz2) = 37ceb0a65e9ac644e52ba29cd8bd0c296dca64cb
 Size (squid-2.5.3/squid-2.5.STABLE3.tar.bz2) = 1028081 bytes
@@ -78,6 +78,20 @@ SHA1 (squid-2.5.3/squid-2.5.STABLE3-407_user_name.patch) = b35eda048d1cea42dcaf6
 Size (squid-2.5.3/squid-2.5.STABLE3-407_user_name.patch) = 723 bytes
 SHA1 (squid-2.5.3/squid-2.5.STABLE3-multicast-ICP-timeout.patch) = f3b93425b2979249c7dad536fb77b0f0445e01ca
 Size (squid-2.5.3/squid-2.5.STABLE3-multicast-ICP-timeout.patch) = 1863 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-forwarded_for.patch) = 23d7206338454db02d63806b5ed2a7459072bde5
+Size (squid-2.5.3/squid-2.5.STABLE3-forwarded_for.patch) = 949 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-ncsa_auth_passwdfile.patch) = 04e7a62717daf24467888d6b0663ffca110ede08
+Size (squid-2.5.3/squid-2.5.STABLE3-ncsa_auth_passwdfile.patch) = 641 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-POST-error.patch) = 79a383c870810d1dc5bd48a479cb9b2868c536a9
+Size (squid-2.5.3/squid-2.5.STABLE3-POST-error.patch) = 9828 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-auth_delay_pools.patch) = e991189cbc21a6945f079b2544560c096f166159
+Size (squid-2.5.3/squid-2.5.STABLE3-auth_delay_pools.patch) = 1275 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-http_reply_access_denied.patch) = bf7e5e3eea7328514f1c1a8101ea88f3d8c2cea2
+Size (squid-2.5.3/squid-2.5.STABLE3-http_reply_access_denied.patch) = 1181 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-delay_access_auth.patch) = ad29242a43f492871958e83c17367fa67fbf0597
+Size (squid-2.5.3/squid-2.5.STABLE3-delay_access_auth.patch) = 5527 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-external_acl_children.patch) = 15bb8c2f808ae679490dadba5506b30bf0d089dd
+Size (squid-2.5.3/squid-2.5.STABLE3-external_acl_children.patch) = 2333 bytes
 SHA1 (patch-aa) = 2e0d96f6ccb9d0c42db2da49e76846edad09624f
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
