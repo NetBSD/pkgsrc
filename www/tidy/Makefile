@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.16 2004/08/30 18:48:57 reed Exp $
+# $NetBSD: Makefile,v 1.17 2004/09/07 14:37:27 reed Exp $
 #
 
 DISTNAME=	tidy_src_040811
 PKGNAME=	tidy-20040811
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://tidy.sourceforge.net/src/ \
 		http://tidy.sourceforge.net/docs/ \
 		http://tidy.sourceforge.net/src/old/
 EXTRACT_SUFX=	.tgz
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} tidy_docs_030610${EXTRACT_SUFX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} tidy_docs_040810${EXTRACT_SUFX}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://tidy.sourceforge.net/
@@ -19,6 +20,9 @@ USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
 BUILD_DIRS=	${WRKSRC}/build/gmake
+
+OPSYSVARS+=	MAKEFLAGS
+MAKEFLAGS.Darwin+=	RANLIB=ranlib
 
 HTML_DOCFILES=	Overview.html doxygen.cfg grid.gif quickref.html tidy.css	\
 		faq.html license.html pending.html release-notes.html tidy.gif
