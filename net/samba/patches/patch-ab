@@ -1,16 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/07/29 04:19:00 jlam Exp $
+$NetBSD: patch-ab,v 1.16 2002/07/30 23:05:13 jlam Exp $
 
 --- configure.orig	Sun Jul 28 18:13:04 2002
 +++ configure
-@@ -1106,7 +1106,7 @@ test -z "$INSTALL_SCRIPT" && INSTALL_SCR
- 
- test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
- 
--for ac_prog in gawk mawk nawk awk
-+for ac_prog in mawk gawk nawk awk
- do
- # Extract the first word of "$ac_prog", so it can be a program name with args.
- set dummy $ac_prog; ac_word=$2
 @@ -11945,6 +11945,49 @@ else
  fi
  
