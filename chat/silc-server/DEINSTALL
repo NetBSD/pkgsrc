@@ -1,0 +1,107 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2001/11/30 23:33:34 hubertf Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+CAT="@CAT@"
+CMP="@CMP@"
+RM="@RM@"
+RMDIR="@RMDIR@"
+TRUE="@TRUE@"
+
+SERVERROOT="@SILCD_CONF_DIR@"
+DATADIR=${PKG_PREFIX}/share/silcd
+LOGDIR=/var/log/silcd
+SAMPLECONFDIR=${PKG_PREFIX}/share/doc/silcd
+CONFDIR=${SERVERROOT}
+RCSCRIPT="@CONF_DIR@/rc.d/silcd"
+CONFFILES="silcd.conf"
+NONCONFFILES="silcd.pub silcd.prv"
+
+case ${STAGE} in
+DEINSTALL)
+	# Stop silcd if running
+	${RCSCRIPT} stop
+
+	# Remove configuration files if they don't differ from the default
+	# config file.
+	#
+	for file in ${CONFFILES}
+	do
+		FILE=${CONFDIR}/${file}
+		SAMPLEFILE=${SAMPLECONFDIR}/${file}.default
+		if ${CMP} -s ${FILE} ${SAMPLEFILE}
+		then
+			${RM} -f ${FILE}
+		fi
+	done
+	${RM} -f ${RCSCRIPT}
+	;;
+
+POST-DEINSTALL)
+	modified_files=''
+	for file in ${CONFFILES} ${NONCONFFILES}
+	do
+		FILE=${CONFDIR}/${file}
+		if [ -f ${FILE} ]
+		then
+			modified_files="${modified_files} ${FILE}"
+		fi
+	done
+
+	${RMDIR} ${LOGDIR} 2>/dev/null || ${TRUE}
+	${RMDIR} ${SERVERROOT} 2>/dev/null || ${TRUE}
+
+	existing_dirs=''
+	for dir in ${CONFDIR} ${LOGDIR}
+	do
+		if [ -d ${dir} ]
+		then
+			existing_dirs="${existing_dirs} ${dir}"
+		fi
+	done
+
+	if [ -n "${modified_files}" -o -n "${existing_dirs}" ]
+	then
+        	${CAT} << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove:
+EOF
+		if [ -n "${modified_files}" ]
+		then
+			${CAT} << EOF
+
+  * the following files:
+
+EOF
+			for file in ${modified_files}
+			do
+				echo "	${file}"
+			done
+		fi
+		if [ -n "${existing_dirs}" ]
+		then
+			${CAT} << EOF
+
+  * the following directories:
+
+EOF
+			for dir in ${existing_dirs}
+			do
+				echo "	${dir}"
+			done
+		fi
+		${CAT} << EOF
+===========================================================================
+EOF
+	fi
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
