@@ -1,0 +1,4 @@
+This module contains several data tables useful in various kinds of
+HTML parsing operations.
+
+Note that all tag names used are lowercase.
