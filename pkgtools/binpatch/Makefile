@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/23 03:37:26 atatat Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/06 05:32:29 tv Exp $
 #
 
 DISTNAME=	binpatch-1.0
@@ -17,7 +17,7 @@ NO_CHECKSUM=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 do-extract:
-	@${CP} -Rp ${FILESDIR} ${WRKSRC}
+	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-build:
 	@(cd ${WRKSRC}; \
