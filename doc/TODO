@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.578 2003/05/23 18:06:36 salo Exp $
+$NetBSD: TODO,v 1.579 2003/05/24 07:46:05 salo Exp $
 
 Suggested new packages
 ======================
@@ -212,7 +212,6 @@ Suggested package updates
 	o openslp-1.0.11
 	o openssh-3.6.1p2
 	o openssl-0.9.7b
-	o opera-7.11
 	o oss-3.9.7j
 	o p0f-1.8.3
 	o php4-4.3.1
