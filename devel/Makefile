@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.362 2002/12/24 16:19:42 wiz Exp $
+# $NetBSD: Makefile,v 1.363 2002/12/26 04:53:47 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -145,6 +145,7 @@ SUBDIR+=	lcc
 SUBDIR+=	lclint
 SUBDIR+=	ldapsdk
 SUBDIR+=	libargparse
+SUBDIR+=	libast
 SUBDIR+=	libavl
 SUBDIR+=	libbegemot
 SUBDIR+=	libbonobo
