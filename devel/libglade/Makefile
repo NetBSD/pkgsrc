@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/01/01 13:36:43 rh Exp $
+# $NetBSD: Makefile,v 1.19 2000/01/08 04:03:59 wiz Exp $
 #
 
 DISTNAME=	libglade-0.11
@@ -9,7 +9,8 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.daa.com.au/~james/gnome/
 
 DEPENDS+=	gettext-0.10.35:../../devel/gettext
-DEPENDS+=	esound-0.2.15:../../audio/esound # do not remove this pre-req
+# do not remove esound pre-requisite
+DEPENDS+=	esound-0.2.15:../../audio/esound
 DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
 DEPENDS+=	libxml-1.*:../../textproc/libxml
 
