@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/11/11 00:28:45 tron Exp $
+# $NetBSD: Makefile,v 1.11 1998/11/11 11:28:02 agc Exp $
 
 DISTNAME=	magicfilter-1.2
 CATEGORIES=	print
@@ -22,14 +22,19 @@ PLIST_SRC=	${WRKDIR}/PLIST
 
 FILTER_DIR=	libexec/magicfilter
 
+.include "../../mk/bsd.prefs.mk"
+
+PAPERSIZE?=	A4
+
 post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@${MKDIR} ${PREFIX}/${FILTER_DIR}
 	@(cd ${WRKSRC}/filters;	\
+	  paper=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`; \
 	  for FILTER in *-filter; do \
 	    TARGET=${PREFIX}/${FILTER_DIR}/$$FILTER; \
 	    ${ECHO} "Installing $$FILTER as $$TARGET"; \
-	    ${SED} 's/-sOutputFile=-/-sOutputFile=- -sPAPERSIZE=${PSIZE}/' \
+	    ${SED} 's/-sOutputFile=-/-sOutputFile=- -sPAPERSIZE='$$paper'/' \
 		<$$FILTER >${PREFIX}/${FILTER_DIR}/$$FILTER; \
 	    chown ${BINOWN}:${BINGRP} $$TARGET; \
 	    chmod ${BINMODE} $$TARGET; \
@@ -38,5 +43,3 @@ post-install:
 	@${ECHO} "@dirrm ${FILTER_DIR}" >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
-
-PSIZE!=		echo ${PAPERSIZE} | tr '[A-Z]' '[a-z]'
