@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.994 2003/01/03 15:25:41 wiz Exp $
+$NetBSD: CHANGES,v 1.995 2003/01/03 16:35:04 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -55,3 +55,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnustep to 1.5.1nb1 [rh 2003-01-03]
 	Updated x11-links to 0.10 [tron 2003-01-03]
 	Updated easytag to 0.26 [wiz 2003-01-03]
+	Updated cdrecord to 2.0 [lukem 2003-01-03]
+	Removed cdrecord-devel [lukem 2003-01-03]
