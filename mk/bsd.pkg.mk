@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.408 2000/02/26 21:58:55 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.409 2000/02/28 01:38:37 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1328,9 +1328,6 @@ PLIST_SRC=
 ################################################################
 
 _PORT_USE: .USE
-.if make(real-fetch)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} fetch-depends
-.endif
 .if make(real-extract)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} build-depends misc-depends
 .endif
@@ -2167,7 +2164,6 @@ package-noinstall:
 
 .if !target(depends)
 depends: misc-depends
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} fetch-depends
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} build-depends
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} run-depends
 
@@ -2225,13 +2221,12 @@ _DEPENDS_USE:
 	@${DO_NADA}
 .endif
 
+build-depends:	_DEPENDS_USE
+run-depends:	_DEPENDS_USE
+
 # Tells whether to halt execution if the object formats differ
 FATAL_OBJECT_FMT_SKEW?= yes
 WARN_NO_OBJECT_FMT?= yes
-
-fetch-depends:	_DEPENDS_USE
-build-depends:	_DEPENDS_USE
-run-depends:	_DEPENDS_USE
 
 misc-depends: uptodate-pkgtools
 .if defined(DEPENDS)
@@ -2296,8 +2291,8 @@ clean-depends:
 .if defined(BUILD_DEPENDS) || defined(DEPENDS) || defined(RUN_DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	for dir in `${ECHO} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*//} \
-			    ${DEPENDS:C/^[^:]*://:C/:.*//} \
-			    ${RUN_DEPENDS:C/^[^:]*://:C/:.*//} | sort -u`; do \
+			          ${DEPENDS:C/^[^:]*://:C/:.*//} \
+			      ${RUN_DEPENDS:C/^[^:]*://:C/:.*//} | sort -u`; do \
 		if [ -d $$dir ] ; then					\
 			(cd $$dir && ${MAKE} CLEANDEPENDS=${CLEANDEPENDS} clean ); \
 		fi							\
