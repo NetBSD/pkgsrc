@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:13 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/03 03:32:33 jschauma Exp $
 bin/fvwm
 lib/X11/fvwm/FvwmPager
 lib/X11/fvwm/system.fvwmrc
@@ -64,10 +64,8 @@ lib/X11/fvwm/pixmaps/xterm-sgi.xpm
 lib/X11/fvwm/pixmaps/xterm-sol.xpm
 lib/X11/fvwm/pixmaps/xterm-sun.xpm
 lib/X11/fvwm/pixmaps/xterm.xpm
-man/cat1/GoodStuff.0
-man/cat1/fvwm.0
-man/man1/GoodStuff.1
-man/man1/fvwm.1
+${IMAKE_MAN_DIR}/GoodStuff.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/fvwm.${IMAKE_MANNEWSUFFIX}
 @dirrm lib/X11/fvwm/pixmaps
 @dirrm lib/X11/fvwm/bitmaps
 @dirrm lib/X11/fvwm

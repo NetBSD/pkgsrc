@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/15 19:14:09 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/03 03:32:33 jschauma Exp $
 #
 
 DISTNAME=	larswm-7.2.8
+PKGREVISION=	1
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://www-personal.umich.edu/~larsb/larswm/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DOCFILES}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/05 18:11:38 magick Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/03 03:23:26 jschauma Exp $
 
 DISTNAME=	xalarm-3.03
 PKGNAME=	xalarm-3.05
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=R5contrib-fixes/xalarm/}
 EXTRACT_SUFX=	.tar.Z

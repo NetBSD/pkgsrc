@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/04 16:44:55 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/03 02:59:30 jschauma Exp $
 bin/xfm
 bin/xfm.install
 bin/xfmtype
@@ -434,8 +434,8 @@ lib/X11/xfm/pixmaps/xmosaic.xpm
 lib/X11/xfm/pixmaps/xpaint.xpm
 lib/X11/xfm/pixmaps/xterm.xpm
 lib/X11/xfm/pixmaps/xv.xpm
-man/cat1/xfm.0
-man/cat1/xfmtype.0
+${IMAKE_MAN_DIR}/xfm.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/xfmtype.${IMAKE_MANNEWSUFFIX}
 @dirrm lib/X11/xfm/pixmaps
 @dirrm lib/X11/xfm/icons
 @dirrm lib/X11/xfm/dot.xfm

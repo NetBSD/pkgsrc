@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/11/09 00:39:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/03 03:23:24 jschauma Exp $
 #
 
 DISTNAME=	lmclock-1.1
+PKGREVISION=	1
 CATEGORIES=	time x11
 MASTER_SITES=	http://pantransit.reptiles.org/prog/
 
@@ -13,6 +14,5 @@ post-extract:
 	${TOUCH} ${WRKSRC}/lmclock.man
 
 USE_IMAKE=		YES
-NO_INSTALL_MANPAGES=	YES
 
 .include "../../mk/bsd.pkg.mk"
