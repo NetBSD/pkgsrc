@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: ups.sh,v 1.1 2001/11/21 15:50:55 jlam Exp $
+# $NetBSD: ups.sh,v 1.2 2001/11/21 16:05:40 jlam Exp $
 #
 # PROVIDE: ups
 # KEYWORD: nostart
@@ -37,11 +37,11 @@ start_cmd="ups_commands"
 stop_cmd="ups_reversecommands"
 status_cmd="ups_commands"
 extra_commands="status"
-run_rc_command "$1"
 
 if [ ! -d /etc/rc.d ]
 then
         @ECHO@ -n " ${name}"
+	_arg="$1"
 	${start_cmd} "$1"
 else
         run_rc_command "$1"
