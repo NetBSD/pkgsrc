@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.7 1998/09/05 23:14:45 hubertf Exp $
+$NetBSD: md5,v 1.8 1998/10/03 22:00:22 tv Exp $
 
-MD5 (apache_1.3.1.tar.gz) = fd28c26f94451216a23f34f5fe22e2b4
+MD5 (apache_1.3.2.tar.gz) = a86e38366bcd9797400818ae6eb1400f
 MD5 (sitedrivenby.gif) = ad0647dceb931d02bfd046e55915f7b1

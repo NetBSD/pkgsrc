@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/10/03 21:01:14 tv Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/10/03 22:00:23 tv Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
@@ -221,6 +221,7 @@ http/include/ap_config_auto.h
 http/include/ap_compat.h
 http/include/ap_ctype.h
 http/include/ap_md5.h
+http/include/ap_mmn.h
 http/include/buff.h
 http/include/compat.h
 http/include/conf.h
