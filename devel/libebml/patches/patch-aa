@@ -1,13 +1,34 @@
-$NetBSD: patch-aa,v 1.3 2004/05/16 09:48:13 grant Exp $
+$NetBSD: patch-aa,v 1.4 2004/05/31 19:09:46 salo Exp $
 
---- make/linux/Makefile.orig	2004-01-05 22:24:30.000000000 +1100
-+++ make/linux/Makefile
-@@ -21,7 +21,7 @@ DEP=$(CXX) -MM
+--- make/linux/Makefile.orig	2004-01-05 12:24:30.000000000 +0100
++++ make/linux/Makefile	2004-05-31 21:02:39.000000000 +0200
+@@ -15,13 +15,13 @@
+ includedir=$(prefix)/include/ebml
+ 
+ # Programs
+-CXX=g++
+-LD=g++
++#CXX=g++
++LD=$(CXX)
+ DEP=$(CXX) -MM
  DEPEND = makedepend
- AR = ar rcvu
- RANLIB = ranlib
+-AR = ar rcvu
+-RANLIB = ranlib
 -INSTALL = install
++AR += rcvu
++#RANLIB = ranlib
 +INSTALL = $(BSD_INSTALL)
  INSTALL_OPTS = -m 644
  INSTALL_OPTS_LIB = -m 644
  INSTALL_DIR_OPTS = -m 755
+@@ -32,8 +32,8 @@
+ ifeq (yes,$(DEBUG))
+ DEBUGFLAGS=-g -DDEBUG
+ endif
+-CXXFLAGS=$(DEBUGFLAGS) -Wall -Wno-unknown-pragmas -ansi -fno-gnu-keywords -Wshadow
+-LDFLAGS=-L.
++CXXFLAGS += $(DEBUGFLAGS) -Wall -Wno-unknown-pragmas -ansi -fno-gnu-keywords -Wshadow
++LDFLAGS += -L.
+ 
+ CWD=$(shell pwd)
+ 

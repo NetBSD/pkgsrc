@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/05/31 16:47:48 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/31 19:09:46 salo Exp $
 #
 
 DISTNAME=	libebml-0.7.0
@@ -16,7 +16,8 @@ USE_GNU_TOOLS+=	make
 USE_LANGUAGES=	c++
 
 NO_CONFIGURE=	yes
-MAKEFLAGS+=	prefix="${PREFIX}"
+MAKEFLAGS+=	prefix=${PREFIX:Q}
+MAKE_ENV+=	CXXFLAGS=${CXXFLAGS:Q} RANLIB=${RANLIB:Q}
 BUILD_DIRS=	${WRKDIR}/${DISTNAME}/make/linux
 
 ONLY_FOR_COMPILER=	gcc
