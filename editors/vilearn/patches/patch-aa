@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 1999/10/29 11:55:15 abs Exp $
+$NetBSD: patch-aa,v 1.2 2003/09/25 12:56:34 jmmv Exp $
 
---- Makefile.orig	Fri Oct 29 12:13:10 1999
-+++ Makefile	Fri Oct 29 12:13:27 1999
+--- Makefile.orig	Wed Sep 24 16:22:05 2003
++++ Makefile	Wed Sep 24 16:26:08 2003
 @@ -4,12 +4,12 @@
  
  # BINDIR is where the vilearn shell script will live. It should be in the
@@ -26,3 +26,21 @@ $NetBSD: patch-aa,v 1.1 1999/10/29 11:55:15 abs Exp $
  
  # Shouldn't have to edit below here.
  
+@@ -33,13 +33,12 @@
+ 	sed -e s@:SEC:@${SEC}@ < vilearn.man > vilearn.${SEC}
+ 
+ install : all
+-	-mkdir ${TUTORIALS}
++	${BSD_INSTALL_DATA_DIR} ${TUTORIALS}
+ 	for i in ${TUTS} ; do \
+-	    rm -f ${TUTORIALS}/$$i; \
+-	    install -c -m 444 $$i ${TUTORIALS}/$$i ; \
++	    ${BSD_INSTALL_DATA} $$i ${TUTORIALS}/$$i ; \
+ 	done
+-	install -m 755 vilearn ${BINDIR}/vilearn
+-	install -m 444 vilearn.${SEC} ${MANDIR}/man${SEC}/vilearn.${SEC}
++	${BSD_INSTALL_SCRIPT} vilearn ${BINDIR}/vilearn
++	${BSD_INSTALL_MAN} vilearn.${SEC} ${MANDIR}/man${SEC}/vilearn.${SEC}
+ 
+ clean :
+ 	rm -f vilearn vilearn.${SEC}
