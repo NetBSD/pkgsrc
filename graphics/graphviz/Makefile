@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2004/03/08 20:27:14 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2004/04/17 16:56:10 seb Exp $
 #
 
-DISTNAME=	graphviz-1.10
-PKGREVISION=	1
+DISTNAME=	graphviz-1.12
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 
@@ -13,45 +12,32 @@ COMMENT=	Graph Drawing Programs from AT&T Research and Lucent Bell Labs
 LICENSE=	graphviz-license
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_X11=		yes
 XAW_TYPE=		standard
 
 .include "../../mk/bsd.prefs.mk"
 
-# sysutils/coreutils installs a 'gpr' program, so conflict with it if
-# GNU_PROGRAM_PREFIX == 'g'
-.if ${GNU_PROGRAM_PREFIX} == "g"
-CONFLICTS+=		coreutils-[0-9]*
-.endif
-
-CONFIGURE_ENV+=		TCLCONFIG=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
-CONFIGURE_ENV+=		TKCONFIG=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
+CONFIGURE_ENV+=		TCLCONFIG=${TCLCONFIG_SH}
+CONFIGURE_ENV+=		TKCONFIG=${TKCONFIG_SH}
 CONFIGURE_ENV+=		X11PREFIX=${X11PREFIX} X11BASE=${X11BASE}
-CONFIGURE_ENV+=		BUILDLINK_PREFIX_TCL=${BUILDLINK_PREFIX.tcl}
-CONFIGURE_ENV+=		BUILDLINK_PREFIX_TK=${BUILDLINK_PREFIX.tk}
 
 CONFIGURE_ARGS+=	--with-zincludedir=${BUILDLINK_PREFIX.zlib}/include
 CONFIGURE_ARGS+=	--with-zlibdir=${BUILDLINK_PREFIX.zlib}/lib
-CONFIGURE_ARGS+=	--with-iconvincludedir=${BUILDLINK_PREFIX.iconv}/include
-CONFIGURE_ARGS+=	--with-iconvlibdir=${BUILDLINK_PREFIX.iconv}/lib
 CONFIGURE_ARGS+=	--with-jpegincludedir=${BUILDLINK_PREFIX.jpeg}/include
 CONFIGURE_ARGS+=	--with-jpeglibdir=${BUILDLINK_PREFIX.jpeg}/lib
 CONFIGURE_ARGS+=	--with-expatincludedir=${BUILDLINK_PREFIX.expat}/include
 CONFIGURE_ARGS+=	--with-expatlibdir=${BUILDLINK_PREFIX.expat}/lib
-# curl support... Not yet
-#CONFIGURE_ARGS+=	--with-curlincludedir=${BUILDLINK_PREFIX.curl}/include
-#CONFIGURE_ARGS+=	--with-curllibdir=${BUILDLINK_PREFIX.curl}/lib
+CONFIGURE_ARGS+=	--with-freetypeincludedir=${BUILDLINK_PREFIX.freetype2}/include
+CONFIGURE_ARGS+=	--with-freetypelibdir=${BUILDLINK_PREFIX.freetype2}/lib
 
 # Dynagraph is left out for now
 #UNLIMIT_RESOURCES=	datasize stacksize memorysize
 CONFIGURE_ARGS+=	--without-dynagraph
 
-post-configure:
-	${TOUCH} ${WRKSRC}/configure.in ${WRKSRC}/aclocal.m4 \
-		${WRKSRC}/stamp-h.in ${WRKSRC}/configure \
-		${WRKSRC}/config.status ${WRKSRC}/Makefile
+post-extract:
+	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/graphviz
@@ -73,13 +59,13 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/graphviz
 	${INSTALL_DATA} ${WRKSRC}/MINTERMS.txt ${PREFIX}/share/doc/graphviz
 
-.include "../../graphics/png/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../x11/tk83/buildlink2.mk"
-# .include "../../www/curl/buildlink2.mk"
-.include "../../textproc/expat/buildlink2.mk"
-.include "../../mk/xaw.buildlink2.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
+# .include "../../www/curl/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
