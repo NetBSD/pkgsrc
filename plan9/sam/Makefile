@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/04/01 14:07:56 agc Exp $
+# $NetBSD: Makefile,v 1.10 1999/07/02 08:37:28 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/12 02:19:40 obrien Exp
 #
 
@@ -13,8 +13,9 @@ MAINTAINER=		packages@netbsd.org
 NO_WRKSUBDIR=		yes
 EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
 
-OPSYS!=			uname -s
-.if (${OPSYS} == "NetBSD")
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
 MANCOMPRESSED=		yes
 .endif
 
