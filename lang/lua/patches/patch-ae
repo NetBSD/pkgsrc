@@ -1,21 +1,21 @@
-$NetBSD: patch-ae,v 1.1 2003/02/22 00:51:59 jtb Exp $
+$NetBSD: patch-ae,v 1.2 2003/04/29 23:33:57 jtb Exp $
 
---- /dev/null	Sat Feb 22 00:18:04 2003
-+++ build/luac/Makefile
+--- /dev/null
++++ objdir/luac/Makefile
 @@ -0,0 +1,16 @@
 +PROG= luac
 +
-+SRCS= dump.c luac.c opt.c print.c stubs.c
++SRCS= luac.c print.c lopcodes.c
 +
 +BINDIR= ${PREFIX}/bin
 +MANDIR= ${PREFIX}/man
 +
-+CPPFLAGS+= -D_POSIX_SOURCE -I${.CURDIR}/../../include -I${.CURDIR}/../../src
++CPPFLAGS+= -DLUA_OPNAMES -I${.CURDIR}/../../include -I${.CURDIR}/../../src
 +
-+LDFLAGS+= -R${PREFIX}/lib -L${.CURDIR}/../liblua
++LDFLAGS+= -Wl,--export-dynamic -R${PREFIX}/lib -L${.CURDIR}/../liblualib -L${.CURDIR}/../liblua
 +
-+LDADD+= -llua
++LDADD+= -llualib -llua
 +
-+.PATH:	${.CURDIR}/../../src/luac
++.PATH:	${.CURDIR}/../../src/luac ${.CURDIR}/../../src
 +
 +.include <bsd.prog.mk>
