@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1262 2003/09/05 19:00:57 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1263 2003/09/06 11:39:30 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1241,7 +1241,6 @@ CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib
 # Config file related settings - see Packages.txt
 #
 PKG_SYSCONFVAR?=	${PKGBASE}
-PKG_SYSCONFBASE?=	${PREFIX}/etc
 .if defined(PKG_SYSCONFDIR.${PKG_SYSCONFVAR})
 PKG_SYSCONFDIR=		${PKG_SYSCONFDIR.${PKG_SYSCONFVAR}}
 PKG_SYSCONFBASEDIR=	${PKG_SYSCONFDIR.${PKG_SYSCONFVAR}}
