@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/13 18:55:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/05 20:14:05 skrll Exp $
 bin/libvideogfx-config
 include/libvideogfx.hh
 include/libvideogfx/arch/cpu.hh
@@ -52,7 +52,6 @@ include/libvideogfx/x11/dispimg.hh
 include/libvideogfx/x11/draw_x11.hh
 include/libvideogfx/x11/imgwin.hh
 include/libvideogfx/x11/server.hh
-lib/libvideogfx-1.0.so
 lib/libvideogfx-1.0.so.3
 lib/libvideogfx-1.0.so.3.0
 lib/libvideogfx.a

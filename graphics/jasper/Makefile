@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/04 12:17:08 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/05 20:14:05 skrll Exp $
 #
 
 DISTNAME=		jasper-1.600.0
@@ -24,12 +24,6 @@ post-install:
 .endfor
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "SunOS"
-PLIST_SUBST+=		AVAILABLE="@comment "
-.else
-PLIST_SUBST+=		AVAILABLE=
-.endif
 
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
