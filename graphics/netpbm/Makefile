@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2004/02/01 01:43:29 jlam Exp $
+# $NetBSD: Makefile,v 1.91 2004/02/13 10:53:09 grant Exp $
 
 DISTNAME=	netpbm-10.11.8
 PKGREVISION=	1
@@ -13,7 +13,7 @@ COMMENT=	Toolkit for conversion of images between different formats
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
-USE_GNU_TOOLS+=	make
+USE_GNU_TOOLS+=	lex make
 USE_PERL5=	yes
 
 INSTALL_TARGET=	install-dev install-run
@@ -25,21 +25,13 @@ REPLACE_PERL=	editor/ppmfade editor/ppmshadow editor/pnmquant \
 		generator/ppmrainbow manweb
 STAGEDIR=	${WRKDIR}/staging
 
+LIBS.SunOS=	-lsocket -lnsl
+MAKE_ENV+=	NETWORKLD="${LIBS}"
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
-.endif
-
-.if ${OPSYS} == SunOS
-MAKE_ENV+=	NETWORKLD="-lsocket -lnsl"
-.else
-MAKE_ENV+=	NETWORKLD=""
-.endif
-
-.if (${OPSYS} == SunOS) || (${OPSYS} == IRIX) || \
-    (${OPSYS} == Linux && !exists(/usr/bin/flex))
-BUILD_DEPENDS+=	flex>=2.5.4:../../devel/flex
 .endif
 
 pre-configure:
