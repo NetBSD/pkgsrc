@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/01/08 23:15:12 jmmv Exp $
+
+SHA1 (screentest-1.0.tar.gz) = ea541d61b6c5003dbaf1e2847def66c31f808230
+Size (screentest-1.0.tar.gz) = 49428 bytes
+SHA1 (patch-aa) = 27923b68894069e077c7a213f2e8c8305c536e3b
+SHA1 (patch-ab) = 259e9bbd05374c8b5be9ec2b08ccf4e5504866b9
+SHA1 (patch-ac) = c167b30c62de4bae315a40c1c14a0de1d28bbbc0

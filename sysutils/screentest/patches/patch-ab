@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/01/08 23:15:13 jmmv Exp $
+
+--- interface.c.orig	Mon Aug 20 20:10:54 2001
++++ interface.c
+@@ -487,7 +487,8 @@ GtkWidget *create_popup(void)
+ 			   GTK_SIGNAL_FUNC(on_bgcolor_change),
+ 			   (gpointer) COLOR_WHITE);
+ 	gtk_signal_connect(GTK_OBJECT(red1), "activate",
+-			   GTK_SIGNAL_FUNC(on_bgcolor_change), NULL);
++			   GTK_SIGNAL_FUNC(on_bgcolor_change),
++			   (gpointer) COLOR_RED);
+ 	gtk_signal_connect(GTK_OBJECT(green1), "activate",
+ 			   GTK_SIGNAL_FUNC(on_bgcolor_change),
+ 			   (gpointer) COLOR_GREEN);
