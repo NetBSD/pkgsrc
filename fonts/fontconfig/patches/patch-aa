@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2004/04/27 15:09:10 adam Exp $
+$NetBSD: patch-aa,v 1.5 2004/06/07 23:37:41 dmcmahill Exp $
 
---- Makefile.in.orig	2004-04-14 15:12:47.000000000 +0000
+--- Makefile.in.orig	Sat May 29 19:43:19 2004
 +++ Makefile.in
-@@ -282,12 +282,12 @@ uninstall-info-am:
+@@ -290,12 +290,12 @@ uninstall-info-am:
  configDATA_INSTALL = $(INSTALL_DATA)
  install-configDATA: $(config_DATA)
  	@$(NORMAL_INSTALL)
@@ -13,15 +13,15 @@ $NetBSD: patch-aa,v 1.4 2004/04/27 15:09:10 adam Exp $
  	  f="`echo $$p | sed -e 's|^.*/||'`"; \
 -	  echo " $(configDATA_INSTALL) $$d$$p $(DESTDIR)$(configdir)/$$f"; \
 -	  $(configDATA_INSTALL) $$d$$p $(DESTDIR)$(configdir)/$$f; \
-+	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(datadir)/examples/fontconfig/$$f"; \
-+	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(datadir)/examples/fontconfig/$$f; \
++	  echo " $(configDATA_INSTALL) $$d$$p $(DESTDIR)$(datadir)/examples/fontconfig/$$f"; \
++	  $(configDATA_INSTALL) $$d$$p $(DESTDIR)$(datadir)/examples/fontconfig/$$f; \
  	done
  
  uninstall-configDATA:
-@@ -671,16 +671,15 @@ uninstall-info: uninstall-info-recursive
- 
+@@ -680,14 +680,14 @@ uninstall-info: uninstall-info-recursive
  
  install-data-local:
+ 	$(mkinstalldirs) $(DESTDIR)/$(configdir)
 -	if [ -f $(DESTDIR)$(configdir)/local.conf ]; then \
 -	  echo "not overwriting existing $(DESTDIR)$(configdir)/local.conf"; \
 +	if [ -f $(DESTDIR)$(datadir)/examples/fontconfig/local.conf ]; then \
@@ -37,7 +37,5 @@ $NetBSD: patch-aa,v 1.4 2004/04/27 15:09:10 adam Exp $
 +	  echo " $(INSTALL_DATA) local.conf $(DESTDIR)$(datadir)/examples/fontconfig/local.conf"; \
 +	  $(INSTALL_DATA) local.conf $(DESTDIR)$(datadir)/examples/fontconfig/local.conf; \
  	fi; fi; fi
--	if [ x$(DESTDIR) = x ]; then fc-cache/fc-cache -f -v; fi
+ 	if [ x$(DESTDIR) = x ]; then fc-cache/fc-cache -f -v; fi
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
