@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/07/15 11:24:51 agc Exp $
+# $NetBSD: Makefile,v 1.15 1998/07/20 15:51:29 tv Exp $
 
 DISTNAME=	tiff-v3.4beta037
 PKGNAME=	tiff-3.4
@@ -10,11 +10,12 @@ EXTRACT_SUFX=	-tar.gz
 
 MAINTAINER=	tron@netbsd.org
 
+BUIL_DDEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--noninteractive --site ${FILESDIR}
-CONFIGURE_ENV+=		PREFIX=${PREFIX}
+CONFIGURE_ENV+=		PREFIX=${PREFIX} GCOPTS=-O
 MAKE_ENV+=		INSTALL_MAN="${INSTALL_MAN}" LN="${LN}"
 
 .include "../../mk/bsd.pkg.mk"
