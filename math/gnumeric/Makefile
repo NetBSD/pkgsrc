@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/08/23 17:12:40 rh Exp $
+# $NetBSD: Makefile,v 1.5 1999/08/27 14:31:46 rh Exp $
 #
 
 DISTNAME=	gnumeric-0.32
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.gnome.org/gnumeric/
 
 DEPENDS+=	gnome-core-1.0.7:../../x11/gnome-core
 DEPENDS+=	gnome-print-0.4:../../print/gnome-print
-DEPENDS+=	libglade-0.2:../../devel/libglade
+DEPENDS+=	libglade-0.4:../../devel/libglade
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
