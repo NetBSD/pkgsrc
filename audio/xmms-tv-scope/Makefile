@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2003/05/02 11:53:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/05 19:05:08 jmmv Exp $
 #
 
 DISTNAME=	tv_scope-0.0.2
-PKGREVISION=	1
 PKGNAME=	xmms-tv-scope-0.0.2
+PKGREVISION=	1
 CATEGORIES=	xmms audio
 MASTER_SITES=	http://staff.xmms.org/zinx/xmms/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2003/05/02 11:56:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/05/05 19:05:17 jmmv Exp $
 #
 
 DISTNAME=	mldonkey-2.04rc1.sources
-PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/.sources//}
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/mldonkey
 CATEGORIES=	net
 MASTER_SITES=	http://savannah.nongnu.org/download/mldonkey/release-2.04rc1/
