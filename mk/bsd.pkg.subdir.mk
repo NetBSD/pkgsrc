@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.51 2003/01/15 20:55:39 jlam Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.52 2003/03/20 00:03:16 dmcmahill Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -113,13 +113,11 @@ readmes: readme _SUBDIRUSE
 
 .if !target(readme)
 readme:
-	@if [ -f README.html ]; then ${MV} -f README.html README.html.BAK ; fi
 	@${MAKE} ${MAKEFLAGS} README.html _README_TYPE_FLAG=--ftp _README_TYPE=$@
 .endif
 
 .if !target(cdrom-readme)
 cdrom-readme:
-	@if [ -f README.html ]; then ${MV} -f README.html README.html.BAK ; fi
 	@${MAKE} ${MAKEFLAGS} README.html _README_TYPE_FLAG=--cdrom README_TYPE=$@
 .endif
 
@@ -132,6 +130,7 @@ README=	../templates/README.category
 HTMLIFY=	${SED} -e 's/&/\&amp;/g' -e 's/>/\&gt;/g' -e 's/</\&lt;/g'
 
 .if !target(README.html)
+.PHONY: README.html
 README.html: .PRECIOUS
 	@> $@.tmp
 .for entry in ${SUBDIR}
@@ -158,13 +157,12 @@ README.html: .PRECIOUS
 			-e '/%%SUBDIR%%/r$@.tmp2' \
 			-e '/%%SUBDIR%%/d' \
 		> $@.tmp5
-	@if cmp -s $@.tmp5 $@.BAK ; then \
-		${MV} $@.BAK $@ ; \
+	@if [ ! -f $@ ]; then ${TOUCH} $@ ; fi
+	@if ${CMP} -s $@.tmp5 $@ ; then \
 		${RM} $@.tmp5 ; \
 	else \
 		${ECHO_MSG} "===>  Creating README.html for ${_THISDIR_}${.CURDIR:T}" ; \
 		${MV} $@.tmp5 $@ ; \
-		${RM} -f $@.BAK ; \
 	fi
 	@${RM} -f $@.tmp $@.tmp2 $@.tmp3 $@.tmp4
 .for subdir in ${SUBDIR}
