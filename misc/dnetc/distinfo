@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/07/24 00:36:51 hubertf Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 11:02:51 agc Exp $
 
 SHA1 (dnetc-darwin-ppc.tar.gz) = 4af6fac50c0ca5256cf5f6622f9aba39348cfcfc
 Size (dnetc-darwin-ppc.tar.gz) = 193437 bytes
@@ -13,4 +13,5 @@ Size (dnetc-netbsd-sparc-elf.tar.gz) = 351309 bytes
 SHA1 (dnetc-solaris-sparc.tar.gz) = 38a1ab8ce7e79bbe2f252ef0883c50ac77690bb2
 Size (dnetc-solaris-sparc.tar.gz) = 229217 bytes
 SHA1 (dnetc-netbsd-x86-elf.tar.gz) = 865904205f1edc90b18fc5c61e0ef0747172e2e9
+RMD160 (dnetc-netbsd-x86-elf.tar.gz) = 07a6327588d7eee28e3adcd76ac3e02a0bb086d0
 Size (dnetc-netbsd-x86-elf.tar.gz) = 345470 bytes

@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.4 2003/07/22 21:14:46 jmmv Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 11:02:59 agc Exp $
 
 SHA1 (xtide-2.4.tar.gz) = bbd97d1b11ea75bfb09df1c9ddd3e0bc5d3f3a35
+RMD160 (xtide-2.4.tar.gz) = fab0267c3bce260db36d190ab026da1caccdfcac
 Size (xtide-2.4.tar.gz) = 429295 bytes
 SHA1 (harmonics.txt.gz) = c603f47326ae4362fa4209db533bd53fb281f9ac
+RMD160 (harmonics.txt.gz) = 3f9d115f58a30e7b094e0d4f898865d54cfc50ac
 Size (harmonics.txt.gz) = 990208 bytes
 SHA1 (offsets.xml.gz) = 2cc596373b631e7a0146bac2b66a7754334ab5b7
+RMD160 (offsets.xml.gz) = d91a900450be1a1773c0fdecab3b8fee449bf9b0
 Size (offsets.xml.gz) = 150845 bytes
 SHA1 (patch-aa) = 48b0c37ba2f664f14508c2096184e75784958205
 SHA1 (patch-ab) = 889c68bce0bd78cfc1b5f7410364e8c39182cfec

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/07/10 23:45:59 salo Exp $
+$NetBSD: distinfo,v 1.8 2005/02/24 11:02:53 agc Exp $
 
 SHA1 (heyu-1.35/x10_heyu.tgz) = c392bab9e7b2c7f911a8861c598af18d50519f1c
+RMD160 (heyu-1.35/x10_heyu.tgz) = 61c2ff2a2d513dad6e5fca0b4c1df015dd242d83
 Size (heyu-1.35/x10_heyu.tgz) = 84277 bytes
 SHA1 (patch-aa) = 26c4304ee18f0bb2d585eb1ff0338576aee88668
 SHA1 (patch-ab) = 091615c3e1c9d927294512cd557fc6a87b1e5f99
