@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2529 2003/06/18 08:58:48 abs Exp $
+$NetBSD: CHANGES,v 1.2530 2003/06/18 10:39:10 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2483,4 +2483,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.23.2 [gehenna 2003-06-18]
 	Updated cvsync to 0.23.3 [gehenna 2003-06-18]
 	Updated htmllint to 20030518 [wiz 2003-06-18]
-	Updated pkgchk to 1.38 [abs 2003-06-18]  
+	Updated pkgchk to 1.38 [abs 2003-06-18]
+	Updated gimp to 1.2.5 [drochner 2003-06-18]
+	Added gimp-wideangle-Feb02 [drochner 2003-06-18]
