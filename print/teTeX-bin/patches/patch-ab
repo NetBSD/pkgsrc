@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1999/08/12 20:23:34 tron Exp $
+
 --- texk/make/common.mk.orig	Fri Jul 16 14:30:41 1999
 +++ texk/make/common.mk	Fri Jul 16 14:31:02 1999
 @@ -30,7 +30,7 @@
