@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/04/06 19:23:35 dillo Exp $
+# $NetBSD: Makefile,v 1.21 2004/04/25 02:53:46 snj Exp $
 #
 
 DISTNAME=	pilrc-2.9p9
@@ -26,7 +26,7 @@ COMMENT=	Generate resources for PalmOS applications from textual description
 #EXTRACT_CMD=	unzip -aq ${DOWNLOADED_DISTFILE}
 
 USE_GNU_TOOLS+=	make
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 DOCDIR=		${PREFIX}/share/doc/html/pilrc
@@ -36,7 +36,7 @@ DOCDIR=		${PREFIX}/share/doc/html/pilrc
 PILRC_USE_GTK?=	YES
 
 .if ${PILRC_USE_GTK} == YES
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk/buildlink3.mk"
 PLIST_SUBST+=	PILRCUI=''
 .else
 CONFIGURE_ARGS+=--disable-pilrcui
