@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/31 14:30:29 jwise Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/09/16 13:17:45 xtraeme Exp $
 bin/mha-dbedit
 bin/mha-dbrecover
 bin/mha-decode
@@ -276,6 +276,7 @@ share/doc/mhonarc/resources/keeponrmm.html
 share/doc/mhonarc/resources/labelbeg.html
 share/doc/mhonarc/resources/labelend.html
 share/doc/mhonarc/resources/labelstyles.html
+share/doc/mhonarc/resources/lang.html
 share/doc/mhonarc/resources/lastpglink.html
 share/doc/mhonarc/resources/listbegin.html
 share/doc/mhonarc/resources/listend.html
