@@ -1,15 +1,16 @@
-$NetBSD: patch-ae,v 1.1 2000/12/25 21:03:47 jlam Exp $
+$NetBSD: patch-ae,v 1.2 2001/05/14 14:12:29 jlam Exp $
 
---- ext/standard/config.m4.orig	Wed Jul 19 12:19:40 2000
+--- ext/standard/config.m4.orig	Sun Mar 11 05:08:27 2001
 +++ ext/standard/config.m4
-@@ -136,10 +136,6 @@
+@@ -187,9 +187,11 @@
  
  AC_CHECK_FUNC(dlopen, [AC_DEFINE(HAVE_LIBDL,1,[ ])])
  
--AC_CHECK_LIB(pam, pam_start, [
--  EXTRA_LIBS="$EXTRA_LIBS -lpam"
--  AC_DEFINE(HAVE_LIBPAM,1,[ ]) ], []) 
--
++if false; then
+ AC_CHECK_LIB(pam, pam_start, [
+   EXTRA_LIBS="$EXTRA_LIBS -lpam"
+   AC_DEFINE(HAVE_LIBPAM,1,[ ]) ], []) 
++fi # if false
+ 
  AC_CHECK_FUNCS(getcwd getwd)
  
- AC_CRYPT_CAP

@@ -1,50 +1,24 @@
-$NetBSD: patch-ab,v 1.6 2001/05/01 17:56:46 jlam Exp $
+$NetBSD: patch-ab,v 1.7 2001/05/14 14:12:29 jlam Exp $
 
---- configure.orig	Thu Jan 11 13:39:29 2001
+--- configure.orig	Mon Apr 30 09:47:59 2001
 +++ configure
-@@ -6336,6 +6336,7 @@
+@@ -6392,6 +6392,7 @@
    cat > conftest.$ac_ext <<EOF
- #line 6338 "configure"
+ #line 6394 "configure"
  #include "confdefs.h"
 +#include <sys/types.h>
  #include <sys/socket.h>
  #include <netinet/in.h>
  int main() {
-@@ -23088,12 +23089,7 @@
- 
-   LIBS=$old_LIBS
-   LDFLAGS="$old_LDFLAGS"
--  if test "$ac_cv_lib_mcrypt_init_mcrypt" = "yes"; then
--	cat >> confdefs.h <<\EOF
--#define HAVE_LIBMCRYPT22 1
--EOF
--
--  elif test "$ac_cv_lib_mcrypt_mcrypt_module_open" = "yes"; then
-+  if test "$ac_cv_lib_mcrypt_mcrypt_module_open" = "yes"; then
-     
-  case "ltdl" in
-  c|c_r|pthread*) ;;
-@@ -23110,6 +23106,11 @@
- #define HAVE_LIBMCRYPT24 1
- EOF
- 
-+  elif test "$ac_cv_lib_mcrypt_init_mcrypt" = "yes"; then
-+	cat >> confdefs.h <<\EOF
-+#define HAVE_LIBMCRYPT22 1
-+EOF
-+
-   else
-     { echo "configure: error: Sorry" 1>&2; exit 1; }
-   fi
-@@ -40176,6 +40177,7 @@
+@@ -43649,6 +43650,7 @@
  fi
  
  
 +if false; then
  echo $ac_n "checking for pam_start in -lpam""... $ac_c" 1>&6
- echo "configure:40181: checking for pam_start in -lpam" >&5
+ echo "configure:43654: checking for pam_start in -lpam" >&5
  ac_lib_var=`echo pam'_'pam_start | sed 'y%./+-%__p_%'`
-@@ -40220,6 +40222,8 @@
+@@ -43693,6 +43695,8 @@
  else
    echo "$ac_t""no" 1>&6
  fi
@@ -53,7 +27,7 @@ $NetBSD: patch-ab,v 1.6 2001/05/01 17:56:46 jlam Exp $
   
  
  for ac_func in getcwd getwd
-@@ -47325,9 +47329,6 @@
+@@ -51503,9 +51507,6 @@
  
      $SHELL $srcdir/ltconfig --output=shlibtool --disable-static --srcdir=$srcdir --cache-file=./config.cache $srcdir/ltmain.sh
      SHARED_LIBTOOL='$(SHELL) $(top_builddir)/shlibtool'

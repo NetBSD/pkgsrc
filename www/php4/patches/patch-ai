@@ -1,0 +1,25 @@
+$NetBSD: patch-ai,v 1.1 2001/05/14 14:12:30 jlam Exp $
+
+--- php.ini-dist.orig	Sun Apr 22 07:58:49 2001
++++ php.ini-dist
+@@ -318,8 +318,9 @@
+ ; if nonempty.
+ user_dir =
+ 
+-; Directory in which the loadable extensions (modules) reside.
+-extension_dir = ./
++; Directory in which the loadable extensions (modules) reside.  If not
++; defined, then use the extension directory specified at compile-time.
++;extension_dir = ./
+ 
+ ; Whether or not to enable the dl() function.  The dl() function does NOT work
+ ; properly in multithreaded servers, such as IIS or Zeus, and is automatically
+@@ -336,7 +337,7 @@
+ 
+ ; Temporary directory for HTTP uploaded files (will use system default if not
+ ; specified).
+-;upload_tmp_dir =
++upload_tmp_dir = /tmp
+ 
+ ; Maximum allowed size for uploaded files.
+ upload_max_filesize = 2M
