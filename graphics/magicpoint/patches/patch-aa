@@ -1,0 +1,22 @@
+*** draw.c.orig	Mon Aug 24 20:37:32 1998
+--- draw.c	Mon Aug 24 20:37:35 1998
+***************
+*** 829,834 ****
+--- 829,835 ----
+  	while (len) {
+  		code = kanjimode ? p[0] * 256 + p[1] : p[0];
+  
++ #if 0
+  		if (code == ' ') {
+  			char_len = char_size / 2;
+  			p++;
+***************
+*** 837,842 ****
+--- 838,844 ----
+  			state->linewidth += HORIZ_STEP(char_size, char_len);
+  			continue;
+  		}
++ #endif
+  
+  #ifdef USE_XDRAWSTRING
+  		char_len = draw_onechar_x(state, code, state->linewidth,
