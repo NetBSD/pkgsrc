@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7912 2004/11/19 16:34:11 minskim Exp $
+$NetBSD: CHANGES,v 1.7913 2004/11/19 16:44:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5341,3 +5341,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xcircuit to 3.3.0 [adam 2004-11-19]
 	Updated slrn to 0.9.8.1 [adam 2004-11-19]
 	Updated py-cjkcodecs to 1.1.1 [minskim 2004-11-19]
+	Removed ip6_int [wiz 2004-11-19]
