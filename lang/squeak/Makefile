@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/08/23 21:18:30 fredb Exp $
+# $NetBSD: Makefile,v 1.17 2001/08/26 10:32:22 skrll Exp $
 #
 
 DISTNAME=	Squeak-3.0
@@ -15,7 +15,7 @@ HOMEPAGE=	http://www.squeak.org/
 COMMENT=	Full Smalltalk 80 with portability to UN*X, Mac, and Windows
 
 BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
-BUILD_DEPENDS+=	automake-1.4:../../devel/automake
+BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
 BUILD_DEPENDS+=	unzip-*:../../archivers/unzip
 
 GNU_CONFIGURE=	yes

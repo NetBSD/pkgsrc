@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2001/08/16 22:19:08 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2001/08/26 10:32:21 skrll Exp $
 #
 
 DISTNAME=		gdk-pixbuf-0.10.1
@@ -9,7 +9,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
-BUILD_DEPENDS+=		automake-1.4:../../devel/automake
+BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 USE_GMAKE=		# defined
 USE_X11BASE=		# defined
