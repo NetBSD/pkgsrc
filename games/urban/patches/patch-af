@@ -1,8 +1,16 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/04/16 18:18:29 xtraeme Exp $
+$NetBSD: patch-af,v 1.2 2005/03/25 02:56:42 wiz Exp $
 
---- src/sound/sound.cc.orig	2004-04-16 19:42:23.000000000 +0200
-+++ src/sound/sound.cc	2004-04-16 19:42:33.000000000 +0200
-@@ -90,7 +90,7 @@
+--- src/sound/sound.cc.orig	1999-06-07 18:27:29.000000000 +0200
++++ src/sound/sound.cc
+@@ -36,6 +36,7 @@
+   #include <pthread.h>
+ #endif
+ #include <stdio.h>
++#include <unistd.h>
+ #include "sound.h"
+ #include "config.h"
+ #include "scache.h"
+@@ -90,7 +91,7 @@ Sound::Sound() {
  	md_mode = DMODE_SOFT_SNDFX | DMODE_SOFT_MUSIC | DMODE_16BITS;
  	md_mixfreq = 22050;
          
