@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5496 2004/04/09 14:29:09 minskim Exp $
+$NetBSD: CHANGES,v 1.5497 2004/04/09 21:43:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1866,3 +1866,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated wine to 20040408 [adam 2004-04-09]
 	Updated ed2k-gtk-gui to 0.6.2 [minskim 2004-04-09]
 	Updated xchm to 0.9.1 [minskim 2004-04-09]
+	Updated libxklavier to 1.01 [jmmv 2004-04-09]
