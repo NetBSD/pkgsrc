@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/07/02 19:25:16 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/09/01 11:08:46 recht Exp $
 bin/icehelp
 bin/icesh
 bin/icewm
@@ -24,6 +24,7 @@ share/doc/icewm/html/icewm-17.html
 share/doc/icewm/html/icewm-18.html
 share/doc/icewm/html/icewm-19.html
 share/doc/icewm/html/icewm-2.html
+share/doc/icewm/html/icewm-20.html
 share/doc/icewm/html/icewm-3.html
 share/doc/icewm/html/icewm-4.html
 share/doc/icewm/html/icewm-5.html
@@ -351,6 +352,7 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/icewm.mo
