@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1210 2003/07/11 15:40:18 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1211 2003/07/11 20:22:11 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -79,12 +79,18 @@ PLIST_SUBST+=          IMAKE_MAN_SOURCE_PATH=${IMAKE_MAN_SOURCE_PATH}  \
 USE_X11?=		implied
 .endif
 
-# IRIX *always* needs xpkgwedge
+# If xpkgwedge.def is found, then we need to require xpkgwedge as
+# a build dependency for X11 packages.
+#
+.if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) ||		\
+    exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
+_OPSYS_NEEDS_XPKGWEDGE?=	yes
+.else
+_OPSYS_NEEDS_XPKGWEDGE?=	no
+.endif
+
 .if defined(USE_X11BASE)
-.  if ( defined(_OPSYS_NEEDS_XPKGWEDGE) && 				\
-	!empty(_OPSYS_NEEDS_XPKGWEDGE:M[yY][eE][sS]) ) ||
-      exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) ||		\
-      exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
+.  if !empty(_OPSYS_NEEDS_XPKGWEDGE:M[yY][eE][sS])
 BUILD_DEPENDS+=		xpkgwedge>=1.5:../../pkgtools/xpkgwedge
 BUILDLINK_X11PKG_DIR=	${LOCALBASE}
 .  endif
