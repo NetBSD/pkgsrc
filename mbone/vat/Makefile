@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/03/08 20:27:15 minskim Exp $
+# $NetBSD: Makefile,v 1.47 2004/10/28 11:54:12 wiz Exp $
 #
 
 DISTNAME=		vatsrc-4.0b2
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www-nrg.ee.lbl.gov/vat/
 COMMENT=		The Visual Audio Tool - multicast audioconferencing
 
 DEPENDS+=		tk>=8.3.2:../../x11/tk83
-DEPENDS+=		gsm-1.0.10:../../audio/gsm
+DEPENDS+=		gsm>=1.0.10:../../audio/gsm
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_X11=		yes
