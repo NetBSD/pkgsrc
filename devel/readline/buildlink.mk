@@ -1,11 +1,11 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/05/24 08:53:56 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/05/24 08:58:25 jlam Exp $
 #
 # This Makefile fragment is included by packages that use readline().
 #
 # If readline() is not present in the base system through libedit, then a
 # dependency on devel/readline is added, the appropriate headers are linked
-# into ${BUILDLINK_INCDIR} (${WRKSRC}/include), and the appropriate libraries
-# are linked into ${BUILDLINK_LIBDIR} (${WRKSRC}/lib).
+# into ${BUILDLINK_INCDIR} (${WRKDIR}/include), and the appropriate libraries
+# are linked into ${BUILDLINK_LIBDIR} (${WRKDIR}/lib).
 #
 # To use this Makefile fragment, simply:
 #

@@ -1,15 +1,18 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/05/24 08:53:56 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/05/24 08:58:24 jlam Exp $
 #
 # This Makefile fragment is included by packages that use getopt_long().
 #
 # If getopt_long() is not present in the base system, then a dependency
 # on devel/libgetopt is added, and the appropriate headers are linked
-# into ${BUILDLINK_INCDIR} (${WRKSRC}/include).
+# into ${BUILDLINK_INCDIR} (${WRKDIR}/include).
 #
-# To use this Makefile, simply include this Makefile fragment in the
-# package Makefile, optionally define BUILDLINK_INCDIR, add
-# ${BUILDLINK_TARGETS} to the prerequisite targets for pre-configure,
-# and add ${BUILDLINK_INCDIR} to the compiler's header search path.
+# To use this Makefile fragment, simply:
+#
+# (1) Include this Makefile fragment in the package Makefile,
+# (2) Optionally define BUILDLINK_INCDIR,
+# (3) Add ${BUILDLINK_TARGETS} to the prerequisite targets for pre-configure,
+# (4) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
+#     search path.
 
 .if exists(/usr/include/getopt.h)
 GETOPT_H=		/usr/include/getopt.h
