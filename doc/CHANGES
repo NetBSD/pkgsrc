@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8624 2005/01/05 21:15:47 tv Exp $
+$NetBSD: CHANGES,v 1.8625 2005/01/06 00:10:09 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -117,3 +117,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libevent to 1.0a [wiz 2005-01-05]
 	Updated cooledit to 3.17.14 [adam 2005-01-05]
 	Updated pkgconflict to 0.4 [tv 2005-01-05]
+	Updated cpuflags to 0.80 [abs 2005-01-05]
+
