@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.316 2003/02/25 10:57:21 wiz Exp $
+$NetBSD: TODO,v 1.317 2003/02/25 11:21:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -178,7 +178,6 @@ Suggested package updates
 	o libslang-1.4.8
 	o libsndfile-1.0.4
 	o lilypond-1.6.6
-	o links-2.1pre8
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lynx-current-2.8.5dev9
