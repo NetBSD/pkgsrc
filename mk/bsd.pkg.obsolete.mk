@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.obsolete.mk,v 1.8 2002/02/05 04:12:07 jlam Exp $
+# $NetBSD: bsd.pkg.obsolete.mk,v 1.9 2002/08/26 06:42:11 grant Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -41,3 +41,8 @@ USE_SASL=				YES
 .if defined(SAMBA_WITH_CUPS)
 USE_CUPS=				YES
 .endif
+
+.if defined(SQUID_SYSCONFDIR)
+PKG_SYSCONFDIR.squid?=			${SQUID_SYSCONFDIR}
+.endif
+
