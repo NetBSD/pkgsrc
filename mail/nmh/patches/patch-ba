@@ -1,17 +1,11 @@
-# Make sure this patch (of 'configure') is run after the patch of
-# 'configure.in' to avoid triggering any 'configure: configure.in' make
-# rules for people with autoconf.
-#
---- configure-dist	Wed Jun  4 22:21:48 1997
-+++ configure	Sat Jun 21 10:16:23 1997
-@@ -3738,8 +3738,8 @@
+--- configure.orig	Thu Dec 18 01:31:57 1997
++++ configure	Fri Dec 19 12:47:03 1997
+@@ -3692,7 +3692,7 @@
  
- 
- eval "nmhbin=${bindir}"; eval "nmhbin2=${nmhbin}"
--eval "nmhetc=${etcdir}"; eval "nmhetc2=${nmhetc}"
--eval "nmhlib=${libdir}"; eval "nmhlib2=${nmhlib}"
-+eval "nmhetc=${sysconfdir}"; eval "nmhetc2=${nmhetc}"
-+eval "nmhlib=${libexecdir}"; eval "nmhlib2=${nmhlib}"
+ eval "nmhbin=${bindir}";         eval "nmhbin2=${nmhbin}"
+ eval "nmhsysconf=${sysconfdir}"; eval "nmhsysconf2=${nmhsysconf}"
+-eval "nmhlib=${libdir}";         eval "nmhlib2=${nmhlib}"
++eval "nmhlib=${libexecdir}";         eval "nmhlib2=${nmhlib}"
  eval "nmhman=${mandir}"
  
  echo "
