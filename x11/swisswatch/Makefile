@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 1997/10/09 11:51:36 agc Exp $
 # New ports collection makefile for:    swisswatch
 # Version required:     0.0.6
 # Date created:         16 December 1995
 # Whom:                 Yoshiro MIHIRA <sanpei@yy.cs.keio.ac.jp>
 #
+# $NetBSD: Makefile,v 1.3 1998/01/25 00:15:18 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/18 11:43:40 asami Exp
 #
 
