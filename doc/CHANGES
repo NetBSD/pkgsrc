@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2216 2003/05/11 02:25:02 salo Exp $
+$NetBSD: CHANGES,v 1.2217 2003/05/11 12:41:00 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1938,3 +1938,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated puzzle to 5.1 [jtb 2003-05-10]
 	Updated euler to 1.60.6nb2 [jtb 2003-05-10]
 	Updated SDL_mixer to 1.2.5 [salo 2003-05-11]
+	Updated unrar to 3.2.1nb1 [salo 2003-05-11]
