@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/12/14 19:51:04 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/12/18 11:02:47 adam Exp $
 include/libgnomeprint-2.2/libgnomeprint/gnome-font-face.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-font.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-glyphlist.h
@@ -53,16 +53,6 @@ share/doc/html/libgnomeprint/index.sgml
 share/doc/html/libgnomeprint/left.png
 share/doc/html/libgnomeprint/libgnomeprint-building.html
 share/doc/html/libgnomeprint/libgnomeprint-compiling.html
-share/doc/html/libgnomeprint/libgnomeprint-gnome-font-face.html
-share/doc/html/libgnomeprint/libgnomeprint-gnome-font.html
-share/doc/html/libgnomeprint/libgnomeprint-gnome-glyphlist.html
-share/doc/html/libgnomeprint/libgnomeprint-gnome-pgl.html
-share/doc/html/libgnomeprint/libgnomeprint-gnome-print-config.html
-share/doc/html/libgnomeprint/libgnomeprint-gnome-print-job.html
-share/doc/html/libgnomeprint/libgnomeprint-gnome-print-paper.html
-share/doc/html/libgnomeprint/libgnomeprint-gnome-print-unit.html
-share/doc/html/libgnomeprint/libgnomeprint-gnome-print.html
-share/doc/html/libgnomeprint/libgnomeprint-gnome-rfont.html
 share/doc/html/libgnomeprint/libgnomeprint-resources.html
 share/doc/html/libgnomeprint/libgnomeprint.html
 share/doc/html/libgnomeprint/libgnomeprintunsorted.html
@@ -106,6 +96,7 @@ ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/libgnomeprint-2.2.mo
