@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2002/06/17 20:02:25 tron Exp $
+# $NetBSD: Makefile,v 1.45 2003/01/11 02:57:11 rh Exp $
 #
 
 COMMENT=	Communication utilities
@@ -13,6 +13,7 @@ SUBDIR+=	esms
 SUBDIR+=	estic
 SUBDIR+=	fidogate
 SUBDIR+=	gkermit
+SUBDIR+=	gnome-pilot
 SUBDIR+=	gsmlib
 SUBDIR+=	hylafax
 SUBDIR+=	ifcico-cm
