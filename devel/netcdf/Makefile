@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:13:31 tv Exp $
+# $NetBSD: Makefile,v 1.20 2004/11/10 09:33:18 markd Exp $
 
 DISTNAME=	netcdf-3.5.0
 PKGREVISION=	2
@@ -13,7 +13,7 @@ COMMENT=	Library for array-oriented data access
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 USE_BUILDLINK3=		yes
 USE_FORTRAN=		# defined
-USE_GCC_SHLIB=		# defined
+USE_LANGUAGES=		c c++ fortran
 USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		# defined
 CPPFLAGS+=		-Df2cFortran -Dunix
