@@ -5,7 +5,7 @@ You've installed an automated and customized djbdns-run package.
 If you're having trouble getting the djbdns daemons to run, ask
 the package's maintainer:
 
-<URL:mailto:schmonz-nbdjbdns@schmonz.com>
+<URL:mailto:schmonz-pkgsrc-djbdns@schmonz.com>
 
 If you need to ask for help on the dns list, please mention that
 you're using the djbdns-run package from pkgsrc.
