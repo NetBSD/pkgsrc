@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2004/10/06 16:44:52 tv Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/09 03:53:48 tv Exp $
 
 # Note: Regen distinfo with SUN_JRE15_USE_JCE=YES
 
 DISTNAME=	jre-1_5_0-linux-i586
 PKGNAME=	sun-jre15-5.0
-PKGREVISION=	2
+PKGREVISION=	3
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 Runtime Environment 1.5.0
@@ -49,8 +49,8 @@ do-configure:
 	${SED} '/@SUN_JRE15_USE_JCE@/d' ${PKGDIR}/PLIST > ${PLIST_SRC}
 .endif
 
-post-build:
-	
+post-extract:
+	@${ULIMIT_CMD_datasize} && cd ${WRKSRC} && bin/java -Xshare:dump
 
 #
 # re-create sfiles.mk from properties and config files
