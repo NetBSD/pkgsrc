@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2004/06/22 05:36:12 abs Exp $
+# $NetBSD: Makefile,v 1.69 2004/06/27 17:28:58 jmmv Exp $
 
 DISTNAME=	galeon-1.2.14
 CATEGORIES=	www
@@ -9,8 +9,6 @@ HOMEPAGE=	http://galeon.sourceforge.net/
 COMMENT=	GNOME web browser based on gecko (mozilla rendering engine)
 
 CONFLICTS=	galeon-current-[0-9]*
-
-BUILD_DEPENDS+=	xml-i18n-tools>=0.8.1:../../textproc/xml-i18n-tools
 
 EVAL_PREFIX+=	MOZILLA_PREFIX=mozilla
 EVAL_PREFIX+=	ICONV_PREFIX=libiconv
@@ -39,6 +37,7 @@ CONFIGURE_ARGS+= --with-mozilla=1.7
 .include	"../../devel/libglade/buildlink3.mk"
 .include	"../../devel/oaf/buildlink3.mk"
 .include	"../../graphics/gdk-pixbuf-gnome/buildlink3.mk"
+.include	"../../textproc/intltool/buildlink3.mk"
 .include	"../../textproc/libxml/buildlink3.mk"
 .include	"../../textproc/scrollkeeper/omf.mk"
 .include	"../../sysutils/gnome-vfs/buildlink3.mk"

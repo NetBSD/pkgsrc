@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2004/04/26 22:07:06 snj Exp $
+# $NetBSD: Makefile,v 1.75 2004/06/27 17:28:58 jmmv Exp $
 
 DISTNAME=		gnome-utils-1.4.1.2
 PKGREVISION=		9
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Set of useful GNOME utilities and applications
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-BUILD_DEPENDS+=		xml-i18n-tools-[0-9]*:../../textproc/xml-i18n-tools
 
 BUILDLINK_DEPENDS.gnome-panel=	gnome-panel<2.0
 
@@ -35,6 +34,7 @@ CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 .include "../../devel/ncurses/buildlink3.mk"
 #.include "../../lang/guile14/buildlink3.mk"	# XXX: req. guile1[46] fix first
 .include "../../sysutils/libgtop/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../www/gtkhtml/buildlink3.mk"
 .include "../../x11/gnome-core/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
