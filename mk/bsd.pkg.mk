@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1198 2003/06/14 18:52:46 atatat Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1199 2003/06/14 21:13:13 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -305,6 +305,12 @@ MAKE_ENV+=		CPPFLAGS="${CPPFLAGS}" FFLAGS="${FFLAGS}"
 MAKE_ENV+=		X11PREFIX=${X11PREFIX}
 .if defined(CC)
 MAKE_ENV+=		CC="${CC}"
+.endif
+.if defined(CXX)
+MAKE_ENV+=		CXX="${CXX}"
+.endif
+.if defined(CPP)
+MAKE_ENV+=		CPP="${CPP}"
 .endif
 
 .if exists(${ZOULARISBASE}/bin/ftp)			# Zoularis
