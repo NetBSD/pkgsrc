@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2005/02/18 22:12:43 jlam Exp $
+
+--- configure.orig	2005-02-13 06:26:31.000000000 -0500
++++ configure
+@@ -25547,7 +25547,7 @@ rm -f authdaemonrc.h authldaprc.h authmy
+ 
+ result=""
+ 
+-if test -x "$COURIERCONFIG"
++if false
+ then
+ 	$COURIERCONFIG >conftest.out || exit 1
+ 	sed -n '/^mail/p' <conftest.out >conftest2.out || exit 1
+@@ -25559,7 +25559,7 @@ then
+ 	result=" (from courier-config)"
+ fi
+ 
+-if test -x "$bindir/courierauthconfig"
++if false
+ then
+ 	$bindir/courierauthconfig --configfiles >conftest.out || exit 1
+ 	sed -n '/^mail/p' <conftest.out >conftest2.out || exit 1

@@ -1,16 +1,19 @@
-# $NetBSD: DEINSTALL,v 1.1.1.1 2005/02/10 03:21:30 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2 2005/02/18 22:12:43 jlam Exp $
 
 case ${STAGE} in
 DEINSTALL)
 	#
-	# Note some additional files that are may be created by the
-	# sysadmin that can probably be removed.
+	# Note some additional files that may be created by the sysadmin
+	# that can probably be removed.
 	#
 	if ${TEST} -x ./+FILES; then
-		{ ${ECHO} "# FILE: ${PKG_SYSCONFDIR}/userdb . /dev/null";
-		  ${ECHO} "# FILE: ${PKG_SYSCONFDIR}/userdb.dat . /dev/null";
-		  ${ECHO} "# FILE: ${PKG_SYSCONFDIR}/userdbshadow.dat . /dev/null";
-		} >> ./+FILES
+		for file in						\
+			${PKG_SYSCONFDIR}/userdb			\
+			${PKG_SYSCONFDIR}/userdb.dat			\
+			${PKG_SYSCONFDIR}/userdbshadow.dat
+		do
+			${ECHO} "# FILE: $file . /dev/null" >> ./+FILES
+		done
 	fi
 	;;
 

@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/10 03:21:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/18 22:12:43 jlam Exp $
 bin/courierauthconfig
+bin/makedat
 include/courier_auth_config.h
 include/courierauth.h
 include/courierauthdebug.h
