@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.4 2004/12/10 23:12:47 jlam Exp $
+# $NetBSD: hacks.mk,v 1.5 2004/12/10 23:48:50 jlam Exp $
 
 .include "../../mk/compiler.mk"
 
@@ -49,4 +49,15 @@ NaN-vax-exception:
 		${MV} $$file $$file.NaN;				\
 		${SED} -e "s,NaN,*NaN*,g" $$file.NaN > $$file;		\
 	done
+.endif
+
+### [Fri Dec 10 18:46:19 EST 2004 : jlam]
+### On NetBSD/alpha, building perl with -mieee causes perl to not pass
+### the test for integer.pm (pkg/28498).  Until this is fixed in either
+### NetBSD, GCC or perl, strip out -mieee from the compiler command
+### line.
+###
+.if !empty(CC_VERSION:Mgcc*) && !empty(MACHINE_PLATFORM:MNetBSD-*-alpha)
+PKG_HACKS+=		alpha-mieee
+BUILDLINK_TRANSFORM+=	rm:-mieee
 .endif
