@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/05/15 21:09:44 jtb Exp $
+$NetBSD: distinfo,v 1.2 2002/03/06 20:55:12 jmc Exp $
 
 SHA1 (mercury-compiler-0.10.1.tar.gz) = 5e4e660cca1e9e6e28026814fd2e6d014ab9d856
 Size (mercury-compiler-0.10.1.tar.gz) = 10428428 bytes
@@ -13,3 +13,4 @@ SHA1 (patch-ah) = 87b4976ca126f0b4e26636f770716cd34cebdf1d
 SHA1 (patch-ai) = 7ca545d17a3981f7d6e872c4b3cacaba3f782fd7
 SHA1 (patch-aj) = 42ae96a2834b3a045b35506de988c48c5330e13d
 SHA1 (patch-ak) = cd2344776a799f0dd3bbaab4195cbf41c0cf894a
+SHA1 (patch-al) = eebee2b980f989639e4f117d90e931e7f7cb128e
