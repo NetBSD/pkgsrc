@@ -1,8 +1,8 @@
-$NetBSD: patch-az,v 1.3 2003/01/02 09:12:21 skrll Exp $
+$NetBSD: patch-az,v 1.4 2003/03/11 13:33:54 markd Exp $
 
---- noatun/Makefile.in.orig	Sat Dec 28 14:04:00 2002
+--- noatun/Makefile.in.orig	Fri Jan 17 08:49:41 2003
 +++ noatun/Makefile.in
-@@ -294,22 +294,25 @@ SUBDIRS = pics library modules  .
+@@ -330,22 +330,25 @@ SUBDIRS = pics library modules  .
  
  KDE_ICON = AUTO
  
@@ -35,7 +35,7 @@ $NetBSD: patch-az,v 1.3 2003/01/02 09:12:21 skrll Exp $
  applnk_DATA = noatun.desktop
  applnkdir = $(kde_appsdir)/Multimedia
  
-@@ -327,25 +330,31 @@ subdir = noatun
+@@ -363,25 +366,31 @@ subdir = noatun
  mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
  CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
@@ -78,31 +78,34 @@ $NetBSD: patch-az,v 1.3 2003/01/02 09:12:21 skrll Exp $
  am_noatun20update_OBJECTS = noatun20update.$(OBJEXT)
  #>- noatun20update_OBJECTS = $(am_noatun20update_OBJECTS)
  #>+ 1
-@@ -358,13 +367,16 @@ CPPFLAGS = @CPPFLAGS@
- LDFLAGS = @LDFLAGS@
+@@ -394,13 +403,19 @@ LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
--#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/joinhandler.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/main.Plo $(DEPDIR)/noatun20update.Po
+ am__depfiles_maybe = depfiles
+-#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/joinhandler.Plo \
+-#>- @AMDEP_TRUE@	./$(DEPDIR)/main.Plo ./$(DEPDIR)/noatun20update.Po
 -#>+ 5
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/joinhandler_skel.P  $(DEPDIR)/noatun_la.all_cpp.P  $(DEPDIR)/dummy.Po $(DEPDIR)/joinhandler.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/main.Plo $(DEPDIR)/noatun20update.Po
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/joinhandler_skel.P  $(DEPDIR)/dummy.Po $(DEPDIR)/joinhandler.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/main.Plo $(DEPDIR)/noatun20update.Po
-+#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/joinhandler.Plo $(DEPDIR)/main.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/noatun20update.Po \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/noatun_main.Plo $(DEPDIR)/noatun_main.Po
-+#>+ 7
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/joinhandler_skel.P  $(DEPDIR)/libnoatun_main_la.all_cpp.P  $(DEPDIR)/joinhandler.Plo $(DEPDIR)/main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/noatun20update.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/noatun_main.Plo $(DEPDIR)/noatun_main.Po
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/joinhandler_skel.P  $(DEPDIR)/joinhandler.Plo $(DEPDIR)/main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/noatun20update.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/noatun_main.Plo $(DEPDIR)/noatun_main.Po
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/joinhandler_skel.P  $(DEPDIR)/noatun_la.all_cpp.P  ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/joinhandler.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/main.Plo ./$(DEPDIR)/noatun20update.Po
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/joinhandler_skel.P  ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/joinhandler.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/main.Plo ./$(DEPDIR)/noatun20update.Po
++#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/joinhandler.Plo ./$(DEPDIR)/main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/noatun20update.Po \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/noatun_main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/noatun_main.Po
++#>+ 9
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/joinhandler_skel.P  $(DEPDIR)/libnoatun_main_la.all_cpp.P  ./$(DEPDIR)/joinhandler.Plo ./$(DEPDIR)/main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/noatun20update.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/noatun_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/noatun_main.Po
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/joinhandler_skel.P  ./$(DEPDIR)/joinhandler.Plo ./$(DEPDIR)/main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/noatun20update.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/noatun_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/noatun_main.Po
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -385,8 +397,8 @@ CXXLD = $(CXX)
+@@ -421,8 +436,8 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
@@ -113,7 +116,7 @@ $NetBSD: patch-az,v 1.3 2003/01/02 09:12:21 skrll Exp $
  DATA = $(applnk_DATA) $(presets_DATA) $(update_DATA)
  
  
-@@ -396,7 +408,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -432,7 +447,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  	uninstall-recursive check-recursive installcheck-recursive
  DIST_COMMON = COPYING Makefile.am Makefile.in TODO
  DIST_SUBDIRS = $(SUBDIRS)
@@ -122,57 +125,66 @@ $NetBSD: patch-az,v 1.3 2003/01/02 09:12:21 skrll Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -443,6 +455,27 @@ uninstall-kde_moduleLTLIBRARIES:
- 
- clean-kde_moduleLTLIBRARIES:
- 	-test -z "$(kde_module_LTLIBRARIES)" || rm -f $(kde_module_LTLIBRARIES)
+@@ -477,6 +492,36 @@ clean-kde_moduleLTLIBRARIES:
+ 	  echo "rm -f \"$${dir}/so_locations\""; \
+ 	  rm -f "$${dir}/so_locations"; \
+ 	done
++libLTLIBRARIES_INSTALL = $(INSTALL)
 +install-libLTLIBRARIES: $(lib_LTLIBRARIES)
 +	@$(NORMAL_INSTALL)
 +	$(mkinstalldirs) $(DESTDIR)$(libdir)
 +	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
 +	  if test -f $$p; then \
-+	    echo " $(LIBTOOL) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(libdir)/$$p"; \
-+	    $(LIBTOOL) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(libdir)/$$p; \
++	    f="`echo $$p | sed -e 's|^.*/||'`"; \
++	    echo " $(LIBTOOL) --mode=install $(libLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(libdir)/$$f"; \
++	    $(LIBTOOL) --mode=install $(libLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(libdir)/$$f; \
 +	  else :; fi; \
 +	done
 +
 +uninstall-libLTLIBRARIES:
 +	@$(NORMAL_UNINSTALL)
 +	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
++	    p="`echo $$p | sed -e 's|^.*/||'`"; \
 +	  echo " $(LIBTOOL) --mode=uninstall rm -f $(DESTDIR)$(libdir)/$$p"; \
 +	  $(LIBTOOL) --mode=uninstall rm -f $(DESTDIR)$(libdir)/$$p; \
 +	done
 +
 +clean-libLTLIBRARIES:
 +	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
++	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
++	  dir="`echo $$p | sed -e 's|/[^/]*$$||'`"; \
++	  test -z "$dir" && dir=.; \
++	  echo "rm -f \"$${dir}/so_locations\""; \
++	  rm -f "$${dir}/so_locations"; \
++	done
 +libnoatun_main.la: $(libnoatun_main_la_OBJECTS) $(libnoatun_main_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libnoatun_main_la_LDFLAGS) $(libnoatun_main_la_OBJECTS) $(libnoatun_main_la_LIBADD) $(LIBS)
  noatun.la: $(noatun_la_OBJECTS) $(noatun_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(kde_moduledir) $(noatun_la_LDFLAGS) $(noatun_la_OBJECTS) $(noatun_la_LIBADD) $(LIBS)
- install-binPROGRAMS: $(bin_PROGRAMS)
-@@ -506,10 +539,11 @@ mostlyclean-compile:
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
+@@ -550,10 +595,11 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
--@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/joinhandler.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/noatun20update.Po@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/noatun_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/noatun_main.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/joinhandler.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/noatun20update.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/noatun_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/noatun_main.Po@am__quote@
  
  distclean-depend:
- 	-rm -rf $(DEPDIR)
-@@ -679,7 +713,7 @@ distclean-tags:
- 
+ 	-rm -rf ./$(DEPDIR)
+@@ -738,7 +784,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=artsvideo.idl preset.jazz hi22-app-noatun.png preset.trance joinhandler.h hi16-app-noatun.png FILES hi48-app-noatun.png avideoframe.h CHANGES preset.metal configure.in.in noatun.upd noatun.desktop preset.dance hi32-app-noatun.png preset.zero avideoframe.cc 
-+KDE_DIST=preset.trance artsvideo.idl joinhandler.h CHANGES avideoframe.cc noatun.upd configure.in.in preset.jazz hi22-app-noatun.png hi48-app-noatun.png noatun.desktop FILES avideoframe.h preset.metal hi16-app-noatun.png preset.zero hi32-app-noatun.png preset.dance 
+-KDE_DIST=artsvideo.idl preset.jazz cr48-app-noatun.png preset.trance joinhandler.h preset.eclecticguitar FILES cr128-app-noatun.png avideoframe.h CHANGES preset.metal cr22-app-noatun.png configure.in.in noatun.upd noatun.desktop preset.dance cr32-app-noatun.png preset.zero avideoframe.cc cr16-app-noatun.png cr64-app-noatun.png 
++KDE_DIST=preset.trance preset.eclecticguitar artsvideo.idl joinhandler.h CHANGES avideoframe.cc noatun.upd configure.in.in preset.jazz cr22-app-noatun.png noatun.desktop FILES cr48-app-noatun.png avideoframe.h cr64-app-noatun.png preset.metal cr128-app-noatun.png preset.zero cr16-app-noatun.png cr32-app-noatun.png preset.dance 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -719,9 +753,11 @@ distdir: $(DISTFILES)
+@@ -783,9 +829,11 @@ distdir: $(DISTFILES)
  check-am: all-am
  check: check-recursive
  all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(DATA)
@@ -185,15 +197,15 @@ $NetBSD: patch-az,v 1.3 2003/01/02 09:12:21 skrll Exp $
  
  install: install-recursive
  install-exec: install-exec-recursive
-@@ -739,7 +775,6 @@ install-strip:
+@@ -804,7 +852,6 @@ install-strip:
  mostlyclean-generic:
  
  clean-generic:
 -	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
  
  distclean-generic:
- 	-rm -f Makefile $(CONFIG_CLEAN_FILES) stamp-h stamp-h[0-9]*
-@@ -752,10 +787,12 @@ maintainer-clean-generic:
+ 	-rm -f Makefile $(CONFIG_CLEAN_FILES)
+@@ -817,10 +864,12 @@ maintainer-clean-generic:
  clean: kde-rpo-clean  clean-recursive
  
  #>- clean-am: clean-binPROGRAMS clean-generic clean-kde_moduleLTLIBRARIES \
@@ -209,7 +221,7 @@ $NetBSD: patch-az,v 1.3 2003/01/02 09:12:21 skrll Exp $
  
  distclean: distclean-recursive
  
-@@ -776,9 +813,9 @@ info-am:
+@@ -841,9 +890,9 @@ info-am:
  install-data-am: install-kde-icons   install-applnkDATA \
  	install-presetsDATA install-updateDATA install-updatePROGRAMS
  
@@ -221,7 +233,7 @@ $NetBSD: patch-az,v 1.3 2003/01/02 09:12:21 skrll Exp $
  
  install-info: install-info-recursive
  
-@@ -797,43 +834,42 @@ mostlyclean-am: mostlyclean-compile most
+@@ -862,43 +911,42 @@ mostlyclean-am: mostlyclean-compile most
  
  #>- uninstall-am: uninstall-applnkDATA uninstall-binPROGRAMS \
  #>- 	uninstall-info-am uninstall-kde_moduleLTLIBRARIES \
@@ -284,9 +296,9 @@ $NetBSD: patch-az,v 1.3 2003/01/02 09:12:21 skrll Exp $
 -	echo > dummy.cpp
 -
  messages:
- 	$(EXTRACTRC) `find . -name "*.rc"` > rc.cpp
- 	$(XGETTEXT) rc.cpp `find . -name "*.cc" -o -name "*.cpp" -print` -o $(podir)/noatun.pot
-@@ -880,33 +916,33 @@ force-reedit:
+ 	$(EXTRACTRC) `find . -name "*.rc" -o -name "*.ui"` > rc.cpp
+ 	$(XGETTEXT) rc.cpp `find . -name "*.cc" -o -name "*.cpp" -o -name "*.h"` -o $(podir)/noatun.pot
+@@ -951,33 +999,33 @@ force-reedit:
  
  
  #>+ 11
