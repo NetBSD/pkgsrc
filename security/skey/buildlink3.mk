@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/27 01:31:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/04/28 01:50:31 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SKEY_BUILDLINK3_MK:=	${SKEY_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES+=	skey
 .if !empty(SKEY_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.skey+=	skey>=1.1.5
 BUILDLINK_PKGSRCDIR.skey?=	../../security/skey
+BUILDLINK_DEPMETHOD.skey?=	build
 .endif	# SKEY_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
