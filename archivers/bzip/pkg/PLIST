@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/06 09:57:19 agc Exp $
-bin/bzip
-bin/bunzip
-man/man1/bzip.1.gz
-man/man1/bunzip.1.gz
