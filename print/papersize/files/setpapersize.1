@@ -1,13 +1,14 @@
+.\" $NetBSD: setpapersize.1,v 1.2 2001/12/03 19:03:24 wiz Exp $
 .Dd November 9, 1998
 .Dt SETPAPERSIZE 1
-.Os NetBSD
+.Os
 .Sh NAME
 .Nm setpapersize
 .Nd Set the default paper size for various packages
 .Sh SYNOPSIS
 .Nm
 PAPERSIZE
-.Op Package...
+.Op Package ...
 .Sh DESCRIPTION
 The
 .Nm
@@ -21,7 +22,7 @@ argument can be one of A4, Letter, or Letterdj.
 The
 .Xr getpapersize 1
 utility can be used to show the default paper size for the packages.
-.Pp
+.Sh DIAGNOSTICS
 The
 .Nm
 utility exits 0 on success, and >0 if an error occurs.

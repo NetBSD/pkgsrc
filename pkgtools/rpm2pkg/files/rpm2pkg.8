@@ -1,4 +1,4 @@
-.\"	$NetBSD: rpm2pkg.8,v 1.4 2001/03/20 20:18:07 manu Exp $
+.\"	$NetBSD: rpm2pkg.8,v 1.5 2001/12/03 19:03:23 wiz Exp $
 .\"
 .\" Copyright (c) 2001 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -51,15 +51,17 @@
 .Sh DESCRIPTION
 .Nm
 helps in building BSD packages from RPM files by unpacking each specified
-.Ar rpm_file, 
-and by building a 
+.Ar rpm_file ,
+and by building a
 .Ar package_list
 according to what was extracted. The
 .Ar package_list
-has the format expected by the NetBSD package system.
-.Pp 
-.Nm 
-also provides a mechanism that helps in selecting what is actually 
+has the format expected by the
+.Nx
+package system.
+.Pp
+.Nm
+also provides a mechanism that helps in selecting what is actually
 extracted from the RPM files. It is therefore possible to reject files
 that are of no interest when building a BSD package. This is especially
 useful for files that are to be extracted in
@@ -70,10 +72,12 @@ or
 The following options are available:
 .Bl -tag -width indent
 .It Fl d Ar directory
-Change working directory to 
+Change working directory to
 .Ar directory .
 .It Fl f Ar package_list
-Produce a NetBSD package list 
+Produce a
+.Nx
+package list
 .Ar package_list
 from what was actually extracted from the RPM files archives.
 .It Fl i Ar ignored_dir
@@ -81,11 +85,11 @@ Do not extract files contained in the
 .Ar ignored_dir
 directory of the RPM file's archives.
 .It Fl p Ar prefix
-Use 
-.Ar prefix 
+Use
+.Ar prefix
 when extracting files.
 .It Fl s Ar strip_path_count
-Strip 
+Strip
 .Ar strip_path_count
 leading directories in file names.
 .El
@@ -97,26 +101,26 @@ leading directories in file names.
 .Fl i Ar tmp
 .Fl i Ar var
 .Fl i Ar usr/tmp
-.Ar /usr/pkgsrc/distfiles/more_linux_lib/foo.rpm 
+.Ar /usr/pkgsrc/distfiles/more_linux_lib/foo.rpm
 .Ar /usr/pkgsrc/distfiles/more_linux_lib/bar.rpm
 .Pp
-This will extract 
-.Pa foo.rpm 
+This will extract
+.Pa foo.rpm
 and
 .Pa bar.rpm
-into 
+into
 .Pa /usr/pkg/emul/linux .
-A packing list called 
+A packing list called
 .Pa PLIST_DYNAMIC
-will be created, with pathnames relative to 
+will be created, with pathnames relative to
 .Pa /usr/pkg ,
-because this is the directory into which we asked 
+because this is the directory into which we asked
 .Nm
 to change with the
 .Fl d
 option.
 .Pp
-.Nm 
+.Nm
 will not extract files contained in the
 .Pa tmp ,
 .Pa var ,
@@ -129,9 +133,9 @@ directories of the RPM file's archives.
 .Fl d Ar /usr/pkg
 .Ar /usr/pkgsrc/distfiles/pack/bar.rpm
 .Pp
-This will extract the 
+This will extract the
 .Ar bar.rpm
-file in 
+file in
 .Pa /usr/pkg
 while striping the leading directory of files path in
 .Ar bar.rpm .
@@ -140,18 +144,18 @@ This is useful for dealing with RPM archives that contains files like
 which you would like to go in
 .Pa /usr/pkg/bin .
 .Sh COMPATIBILITY
-.Nm 
+.Nm
 should work with any regular RPM file.
-.Sh AUTHOR(S)
-.An Matthias Scheler Aq tron@netbsd.org
-.br
-This man page was written by 
-.An Emmanuel Dreyfus Aq manu@netbsd.org
 .Sh SEE ALSO
+.Xr cpio 1 ,
 .Xr rpm 8 ,
-.Xr rpm2cpio 8 ,
-.Xr cpio 1
+.Xr rpm2cpio 8
 .br
-.Em Dq Documentation on the NetBSD Package System , 
+.Em Dq Documentation on the NetBSD Package System ,
 .An Hubert Feyrer Aq hubert.feyrer@informatik.fh-regensburg.de ,
 .An Alistair Crooks Aq agc@pkgsrc.org
+.Sh AUTHORS
+.An Matthias Scheler Aq tron@netbsd.org
+.br
+This man page was written by
+.An Emmanuel Dreyfus Aq manu@netbsd.org
