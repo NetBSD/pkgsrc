@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/10/08 23:48:21 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2003/02/17 22:46:01 grant Exp $
 
 DISTNAME=	auth_ldap-1.6.0
 PKGNAME=	ap-auth-ldap-1.6.0
@@ -12,17 +12,11 @@ COMMENT=	Module to allow apache authentication against an LDAP directory
 
 USE_BUILDLINK2=	# defined
 
-do-build:
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${APXS} -c		\
-		-DWITH_OPENLDAP						\
-		-I${BUILDLINK_PREFIX.openldap}/include			\
-		-L${BUILDLINK_PREFIX.openldap}/lib			\
-		-Wl,-R${BUILDLINK_PREFIX.openldap}/lib -lldap -llber	\
-		auth_ldap.c auth_ldap_cache.c auth_ldap_cache_mgr.c	\
-		auth_ldap_config.c
+APACHE_MODULE_NAME=	auth_ldap.so
+CPPFLAGS+=		-DWITH_OPENLDAP
+LDFLAGS+=		-lldap -llber
 
-do-install:
-	@cd ${WRKSRC} && ${APXS} -i auth_ldap.so
+post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_auth_ldap
 	${INSTALL_DATA} ${WRKSRC}/FAQ.html				\
 		${PREFIX}/share/doc/mod_auth_ldap
@@ -34,6 +28,6 @@ do-install:
 BUILDLINK_DEPMETHOD.apache=	full
 
 .include "../../databases/openldap/buildlink2.mk"
-.include "../../www/apache/buildlink2.mk"
+.include "../../www/apache/module.mk"
 
 .include "../../mk/bsd.pkg.mk"
