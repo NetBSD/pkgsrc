@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1055 2003/11/20 15:29:25 cube Exp $
+$NetBSD: TODO,v 1.1056 2003/11/21 11:43:44 gavan Exp $
 
 Suggested new packages
 ======================
@@ -463,6 +463,11 @@ Suggested pkgsrc enhancements
 
 	o Man page handling in PLIST for pkgs which install catman or
 	  man pages depending on OS (typically imake).
+
+	o Add an optional check to buildlink to verify that the contents
+	  of CFLAGS, LDFLAGS etc are present when the compiler/linker is
+	  called. To be used as a means to detect packages which ignore
+	  such environment variables.
 
 Suggested other platform enhancements
 =====================================
