@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2004/03/11 18:19:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2004/03/26 20:00:29 wiz Exp $
 #
 
 DISTNAME=	cmp3-2.0pre5
 PKGNAME=	cmp3-2.0.p5
-PKGREVISION=			1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.personal.psu.edu/users/n/k/nkk104/cmp3/
 
@@ -16,7 +15,8 @@ DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 WRKSRC=			${WRKDIR}/cmp3
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
-USE_NCURSES=		# MAX_FORM_COMMAND
+INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
+INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-H]*
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cmp3 ${PREFIX}/bin
