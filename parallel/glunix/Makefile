@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/10/26 14:10:01 agc Exp $
+# $NetBSD: Makefile,v 1.22 2001/10/26 14:37:56 agc Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
@@ -50,7 +50,18 @@ pre-fetch:
 	cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/pre-fetch
 
 post-patch:
-	cd ${.CURDIR} && ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/post-patch
+	cd ${WRKSRC};							\
+		for f in progs/glupart/glupart.c			\
+				progs/glunix/glunix.1			\
+				progs/glurun/glurun-wrapper.pl		\
+				progs/tools/run_glunix.c 		\
+				glunix/src/init/glunix.h; do 		\
+			${MV} -f $$f $$f.input &&			\
+			${SED} -e 's|%%%NOW_ROOT%%%|${NOW_ROOT}|' $$f.input > $$f; \
+		done;							\
+		${MV} -f glush/Makefile glush/Makefile.input &&		\
+		${SED} -e 's|%%%PLAT%%%|${MACHINE_ARCH}-NetBSD-tcp|'	\
+			progs/glush/Makefile.input > progs/glush/Makefile
 
 # the glunix group needs to exist before building.
 pre-configure:
