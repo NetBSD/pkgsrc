@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/12 21:26:21 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/13 13:08:09 zuntum Exp $
 
 DISTNAME=	avifile-0.53.5
 CATEGORIES=	graphics
@@ -15,7 +15,6 @@ DEPENDS+=	SDL>=1.1.2:../../devel/SDL
 #DEPENDS+=	qt2-libs>=2.1.0:../../x11/qt2-libs
 #DEPENDS+=	qt2-designer>=2.1.0:../../x11/qt2-designer
 DEPENDS+=	pth>=1.3.7:../../devel/pth
-BUILD_DEPENDS+=	unzip-*:../../archivers/unzip
 
 ONLY_FOR_PLATFORM= NetBSD-*-i386
 USE_XLIB=	yes
