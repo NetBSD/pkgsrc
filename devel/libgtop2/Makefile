@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/03/10 21:28:32 minskim Exp $
+# $NetBSD: Makefile,v 1.25 2004/03/12 22:30:35 minskim Exp $
 
 DISTNAME=		libgtop-2.0.8
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -53,8 +53,14 @@ CONFIGURE_ARGS+=	--with-glib-prefix=${BUILDLINK_PREFIX.glib2}
 CONFIGURE_ARGS+=	--with-catgets --with-libgtop-guile=no
 CONFIGURE_ENV+=		AWK="${AWK}" LN_S="${LN} -s" PERL="${PERL5}"
 
+.if ${OPSYS} == "Linux"
+PLIST_SUBST+=	LIBGTOP_SERVER="@comment "
+.else
+PLIST_SUBST+=	LIBGTOP_SERVER=""
+
 post-install:
 	@${CHMOD} g+s ${PREFIX}/bin/libgtop_server2
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/06 21:40:19 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/12 22:30:36 minskim Exp $
 bin/libgtop_daemon2
-bin/libgtop_server2
+${LIBGTOP_SERVER}bin/libgtop_server2
 include/gnome/gnomesupport.h
 include/libgtop-2.0/glibtop.h
 include/libgtop-2.0/glibtop/close.h
@@ -45,7 +45,7 @@ include/libgtop-2.0/glibtop/write.h
 include/libgtop-2.0/glibtop/xmalloc.h
 include/libgtop-2.0/glibtop_machine.h
 include/libgtop-2.0/glibtop_server.h
-include/libgtop-2.0/glibtop_suid.h
+${LIBGTOP_SERVER}include/libgtop-2.0/glibtop_suid.h
 lib/libgnomesupport-2.0.a
 lib/libgnomesupport-2.0.la
 lib/libgnomesupport-2.0.so
@@ -76,11 +76,11 @@ lib/libgtop_sysdeps-2.0.la
 lib/libgtop_sysdeps-2.0.so
 lib/libgtop_sysdeps-2.0.so.0
 lib/libgtop_sysdeps-2.0.so.0.8
-lib/libgtop_sysdeps_suid-2.0.a
-lib/libgtop_sysdeps_suid-2.0.la
-lib/libgtop_sysdeps_suid-2.0.so
-lib/libgtop_sysdeps_suid-2.0.so.0
-lib/libgtop_sysdeps_suid-2.0.so.0.8
+${LIBGTOP_SERVER}lib/libgtop_sysdeps_suid-2.0.a
+${LIBGTOP_SERVER}lib/libgtop_sysdeps_suid-2.0.la
+${LIBGTOP_SERVER}lib/libgtop_sysdeps_suid-2.0.so
+${LIBGTOP_SERVER}lib/libgtop_sysdeps_suid-2.0.so.0
+${LIBGTOP_SERVER}lib/libgtop_sysdeps_suid-2.0.so.0.8
 lib/pkgconfig/gnome-support-2.0.pc
 lib/pkgconfig/libgtop-2.0.pc
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/libgtop-2.0.mo
