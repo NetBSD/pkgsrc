@@ -1,0 +1,29 @@
+$NetBSD: patch-ah,v 1.1 1999/08/17 11:18:41 agc Exp $
+
+Avoid conflicts with the definition in <sys/param.h>
+
+--- src/heap-sc.c	1999/08/17 08:01:56	1.1
++++ src/heap-sc.c	1999/08/17 08:02:34
+@@ -37,11 +37,11 @@
+ 	(void)P_Collect ();
+ 	p = Hp;
+     }
+-    ALIGN(p);
++    ELK_ALIGN(p);
+     if (p + size > Heap_End) {
+ 	(void)P_Collect ();
+ 	p = Hp;
+-	ALIGN(p);
++	ELK_ALIGN(p);
+ 	if (p + size > Heap_End - HEAP_MARGIN)
+ 	    Uncatchable_Error ("Out of heap space");
+     }
+@@ -108,7 +108,7 @@
+ 	SETPOINTER(*p, POINTER(*tag));
+ 	return;
+     }
+-    ALIGN(To);
++    ELK_ALIGN(To);
+     switch (t) {
+     case T_Bignum:
+ 	size = sizeof (struct S_Bignum) - sizeof (gran_t)

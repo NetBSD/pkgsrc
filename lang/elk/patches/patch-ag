@@ -1,0 +1,18 @@
+$NetBSD: patch-ag,v 1.1 1999/08/17 11:18:41 agc Exp $
+
+Avoid conflicts with the definition in <sys/param.h>
+
+--- include/misc.h	1999/08/17 08:00:50	1.1
++++ include/misc.h	1999/08/17 08:01:01
+@@ -38,9 +38,9 @@
+ 
+ /* Align heap addresses */
+ #ifdef ALIGN_8BYTE
+-#  define ALIGN(ptr) ((ptr) = (char *)(((long)(ptr) + 7) & ~7))
++#  define ELK_ALIGN(ptr) ((ptr) = (char *)(((long)(ptr) + 7) & ~7))
+ #else
+-#  define ALIGN(ptr) ((ptr) = (char *)(((long)(ptr) + 3) & ~3))
++#  define ELK_ALIGN(ptr) ((ptr) = (char *)(((long)(ptr) + 3) & ~3))
+ #endif
+ 
+ /* Normalize stack addresses */
