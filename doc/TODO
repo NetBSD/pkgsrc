@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1674 2004/04/26 22:22:05 xtraeme Exp $
+$NetBSD: TODO,v 1.1675 2004/04/27 11:27:51 markd Exp $
 
 Suggested new packages
 ======================
@@ -137,7 +137,6 @@ Suggested package updates
 
 	o ImageViewer-0.6.3
 	o LPRng-3.8.26
-	o R-1.9.0
 	o TeXmacs-1.0.3.7
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
