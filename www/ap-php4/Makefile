@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2002/02/28 06:14:46 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2002/02/28 18:32:19 jlam Exp $
 
 PKGNAME=		ap-php-${PHP_BASE_VERS}
 PKGREVISION=		# empty
 COMMENT=		Apache module for PHP4
 
 DEPENDS+=		php>=${PHP_BASE_VERS}:../../www/php4
-DEPENDS+=		apache{,6}>=1.3:../../www/apache
+DEPENDS+=		${BUILDLINK_DEPENDS.apache}:../../www/apache
 
 USE_BUILDLINK_ONLY=	YES
 

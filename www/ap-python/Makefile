@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/02/05 21:05:58 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/02/28 18:32:19 jlam Exp $
 #
 
 DISTNAME=		mod_python-2.7.6
@@ -11,7 +11,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.modpython.org/
 COMMENT=		Python interpretter embedded into Apache
 
-DEPENDS+=		apache{,6}>=1.3:../../www/apache
+DEPENDS+=		${BUILDLINK_DEPENDS.apache}:../../www/apache
 
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 
