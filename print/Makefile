@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2001/10/04 12:00:45 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2001/10/04 14:53:46 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -16,7 +16,6 @@ SUBDIR+=	cupsomatic
 SUBDIR+=	cupsomatic-ppds
 SUBDIR+=	dvidvi
 SUBDIR+=	enscript
-SUBDIR+=	eurosym
 SUBDIR+=	foomatic-gswrapper
 SUBDIR+=	ggv
 SUBDIR+=	ghostscript
@@ -50,6 +49,7 @@ SUBDIR+=	teTeX
 SUBDIR+=	teTeX-bin
 SUBDIR+=	teTeX-share
 SUBDIR+=	teTeX-sharesrc
+SUBDIR+=	tex-eurosym
 SUBDIR+=	transfig
 SUBDIR+=	xpdf
 SUBDIR+=	xpp
