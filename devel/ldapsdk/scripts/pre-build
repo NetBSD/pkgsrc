@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.1.1.1 1999/05/18 21:22:27 hwr Exp $
+# $NetBSD: pre-build,v 1.2 2000/01/08 04:26:50 wiz Exp $
 
 cd ${WRKSRC}
 
@@ -13,4 +13,3 @@ unset MOZ_MEDIUM
 unset NO_SECURITY
 
 gmake -f directory/ldapsdk.mk build
-
