@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/05/29 01:06:00 itojun Exp $
+# $NetBSD: Makefile,v 1.26 2003/07/02 17:58:41 jmmv Exp $
 
 PKGNAME=		apache-${APACHE_VERSION}
 CATEGORIES=		www
@@ -113,6 +113,11 @@ AP_CONF_FILE_SED+=	-e "s|logs/|/var/log/httpd/|g"
 AP_CONF_FILE_SED+=	-e "s|/var/log/httpd/foo\.log|logs/foo.log/|g"
 AP_CONF_FILE_SED+=	-e "s|^\(User[	 ]\).*|\1${APACHE_USER}|g"
 AP_CONF_FILE_SED+=	-e "s|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g"
+
+pre-configure:
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' < ${WRKSRC}/config.layout	\
+		> ${WRKSRC}/config.layout.new
+	${MV} ${WRKSRC}/config.layout.new ${WRKSRC}/config.layout
 
 post-install:
 	${LN} -sf ${LOCALBASE}/libexec/apr/libtool ${PREFIX}/share/httpd/build
