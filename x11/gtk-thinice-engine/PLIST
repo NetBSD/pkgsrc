@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/12 17:20:02 xtraeme Exp $
+lib/gtk-2.0/2.2.0/engines/libthinice.a
+lib/gtk-2.0/2.2.0/engines/libthinice.la
+lib/gtk-2.0/2.2.0/engines/libthinice.so
+lib/pkgconfig/gtk-thinice-engine-2.pc
+share/themes/ThinIce/ICON.png
+share/themes/ThinIce/README.html
+share/themes/ThinIce/gtk-2.0/gtkrc
+@dirrm share/themes/ThinIce/gtk-2.0
+@dirrm share/themes/ThinIce
+@dirrm lib/gtk-2.0/2.2.0/engines
