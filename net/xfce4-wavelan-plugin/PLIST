@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.2.2 2004/07/14 12:49:18 agc Exp $
+lib/xfce4/panel-plugins/libwavelan.a
+lib/xfce4/panel-plugins/libwavelan.la
+lib/xfce4/panel-plugins/libwavelan.so
