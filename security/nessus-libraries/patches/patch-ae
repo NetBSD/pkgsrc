@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2001/05/12 15:46:52 tron Exp $
+
+--- libnessus/pcap.c.orig	Fri Apr 28 18:43:38 2000
++++ libnessus/pcap.c	Sat May 12 17:45:15 2001
+@@ -23,6 +23,10 @@
+ #include <sys/sockio.h>
+ #endif
+ 
++#ifndef MAXHOSTNAMELEN
++#include <sys/param.h>
++#endif
++
+ struct interface_info {
+     char name[64];
+     struct in_addr addr;
