@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.60 2001/12/11 03:47:20 wiz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.61 2001/12/20 03:31:52 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -797,7 +797,7 @@ sub parse_makefile_vars
 	    next;
 	    }
 
-	if (/^ *([\w\.]+)\s*([+?]?)=\s*(.*)/)
+	if (/^ *([-\w\.]+)\s*([+?]?)=\s*(.*)/)
 	    {
 	    $key = $1;
 	    $plus = $2;
@@ -876,7 +876,7 @@ sub parse_expand_vars
     {
     my($line, $vars) = @_;
 
-    while ( $line =~ /\$\{([\w.]+)\}/ )
+    while ( $line =~ /\$\{([-\w.]+)\}/ )
 	{
 	if (defined(${$vars}{$1}))
 	    { $line = $`.${$vars}{$1}.$'; }
