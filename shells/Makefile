@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/06/05 16:32:50 jtb Exp $
+# $NetBSD: Makefile,v 1.13 2001/07/27 19:53:53 agc Exp $
 #
 
 COMMENT=	Shells
@@ -8,6 +8,7 @@ SUBDIR+=	es
 SUBDIR+=	esh
 SUBDIR+=	rc
 SUBDIR+=	scsh
+SUBDIR+=	standalone-tcsh
 SUBDIR+=	tcsh
 SUBDIR+=	zsh
 SUBDIR+=	zsh3
