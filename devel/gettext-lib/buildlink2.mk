@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.13 2002/12/02 22:06:55 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.14 2002/12/10 19:46:29 drochner Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_DEPENDS.gettext?=	gettext-lib>=0.10.35nb1
+BUILDLINK_DEPENDS.gettext?=	gettext-lib>=0.11.5
 BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
 
 .if defined(USE_GNU_GETTEXT)
