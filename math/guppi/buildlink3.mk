@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:12:56 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/12/04 16:22:39 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GUPPI_BUILDLINK3_MK:=	${GUPPI_BUILDLINK3_MK}+
@@ -20,7 +20,7 @@ BUILDLINK_PKGSRCDIR.guppi?=	../../math/guppi
 .include "../../devel/gal/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../lang/guile14/buildlink3.mk"
+.include "../../lang/guile/buildlink3.mk"
 .include "../../print/gnome-print/buildlink3.mk"
 .include "../../x11/gnome-libs/buildlink3.mk"
 
