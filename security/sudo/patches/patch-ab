@@ -1,0 +1,10 @@
+--- ./Makefile.in.org	Sun Aug 25 10:29:31 1996
++++ ./Makefile.in	Wed Oct 16 00:43:03 1996
+@@ -214,6 +214,7 @@
+ 	else \
+ 	    $(INSTALL) -o $(install_uid) -g $(install_gid) -m 0440 $(srcdir)/sudoers $(sudoersdir)/sudoers; \
+ 	fi
++	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0440 $(srcdir)/sudoers $(sudoersdir)/sudoers.sample
+ 
+ install-man:
+ 	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0444 $(srcdir)/sudo.$(mantype) $(mandir8)/sudo.$(mansect8)
