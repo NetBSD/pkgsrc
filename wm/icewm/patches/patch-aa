@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.4 2004/06/26 23:58:02 xtraeme Exp $
+
+allow CONFIG_APPLET_APM to stay defined for NetBSD
+
+--- src/aapm.h.orig	Sat Apr 17 20:56:20 2004
++++ src/aapm.h	Sat Apr 17 20:55:27 2004
+@@ -1,5 +1,5 @@
+ 
+-#ifndef linux
++#if !defined(linux) && !defined(__NetBSD__)
+ #undef CONFIG_APPLET_APM
+ #elif CONFIG_APPLET_APM
+ 
