@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 1999/10/18 11:41:46 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.18 1999/11/14 17:24:34 frueauf Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -75,12 +75,14 @@ libexec/xscreensaver/pulsar
 libexec/xscreensaver/pyro
 libexec/xscreensaver/qix
 libexec/xscreensaver/rd-bomb
+libexec/xscreensaver/ripples
 libexec/xscreensaver/rocks
 libexec/xscreensaver/rorschach
 libexec/xscreensaver/rotor
 libexec/xscreensaver/rubik
 libexec/xscreensaver/shadebobs
 libexec/xscreensaver/sierpinski
+libexec/xscreensaver/sierpinski3d
 libexec/xscreensaver/slidescreen
 libexec/xscreensaver/slip
 libexec/xscreensaver/sonar
@@ -118,6 +120,7 @@ man/man1/bubbles.1
 man/man1/critical.1
 man/man1/decayscreen.1
 man/man1/deco.1
+man/man1/distort.1
 man/man1/drift.1
 man/man1/epicycle.1
 man/man1/flag.1
@@ -147,6 +150,7 @@ man/man1/munch.1
 man/man1/noseguy.1
 man/man1/pedal.1
 man/man1/penrose.1
+man/man1/phosphor.1
 man/man1/pyro.1
 man/man1/qix.1
 man/man1/rd-bomb.1
@@ -169,6 +173,7 @@ man/man1/vines.1
 man/man1/webcollage.1
 man/man1/xjack.1
 man/man1/xlyap.1
+man/man1/xmatrix.1
 man/man1/xroger.1
 man/man1/xscreensaver-command.1
 man/man1/xscreensaver-demo.1
