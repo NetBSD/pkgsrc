@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1.1.1 2001/01/31 07:30:52 jtb Exp $
+$NetBSD: patch-ah,v 1.2 2001/02/02 02:06:44 jtb Exp $
 
---- gc/gcconfig.h.orig	Sun May  9 13:16:49 1999
-+++ gc/gcconfig.h
+--- ../gc/gcconfig.h	Sun May  9 13:16:49 1999
++++ gcconfig.h
 @@ -13,9 +13,9 @@
   * modified is included with the above copyright notice.
   */
@@ -494,7 +494,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2001/01/31 07:30:52 jtb Exp $
      extern int __data_start;
  #   define DATASTART ((ptr_t)(&__data_start))
  #   if 0
-@@ -877,18 +1046,39 @@
+@@ -877,22 +1046,43 @@
  	/* this.)							*/
  #       define STACKBOTTOM ((ptr_t) 0x7b033000)  /* from /etc/conf/h/param.h */
  #   else
@@ -536,6 +536,11 @@ $NetBSD: patch-ah,v 1.1.1.1 2001/01/31 07:30:52 jtb Exp $
  #   ifdef OSF1
  #	define OS_TYPE "OSF1"
  #   	define DATASTART ((ptr_t) 0x140000000)
+-	extern _end;
++	extern int _end;
+ #   	define DATAEND ((ptr_t) &_end)
+ #   	define HEURISTIC2
+ 	/* Normally HEURISTIC2 is too conervative, since		*/
 @@ -909,9 +1099,9 @@
  #       define CPP_WORDSZ 64
  #       define STACKBOTTOM ((ptr_t) 0x120000000)
