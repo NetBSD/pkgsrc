@@ -1,21 +1,15 @@
-# New ports collection makefile for:	w3c-httpd
-# Version required:	3.0A
-# Date created:		29 October 1994
-# Whom:			pst
-#
+# $NetBSD: Makefile,v 1.2 1999/05/09 21:12:32 tron Exp $
 # FreeBSD Id: Makefile,v 1.19 1999/01/08 19:59:26 fenner Exp
-#
 
 DISTNAME=	w3c-httpd-3.0A
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.w3.org/pub/httpd/ \
 		ftp://ftp-eu.w3.org/pub/httpd/
 
-MAINTAINER=	giffunip@asme.org
+MAINTAINER=	package@netbsd.org
+HOMEPAGE=	http://www.w3.org/pub/WWW/Daemon/
 
 NO_WRKSUBDIR=	yes
-
-BROKEN_ELF=	yes
 
 WWW_ROOT=	${PREFIX}/www
 
@@ -39,7 +33,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/cgiparse ${WWW_ROOT}/cgi-bin
 	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/cgiutils ${WWW_ROOT}/cgi-bin
 
-.include <bsd.port.mk>
+.include <../../mk/bsd.pkg.mk>
 
 .if (${OPSYS} == "FreeBSD")
 OSNAME=	freebsd

@@ -1,3 +1,5 @@
+$NetBSD: patch-ca,v 1.2 1999/05/09 21:12:33 tron Exp $
+
 --- Daemon/Implementation/CGIParse.c.orig	Wed Jun  3 12:38:15 1998
 +++ Daemon/Implementation/CGIParse.c	Wed Jun  3 12:38:41 1998
 @@ -293,7 +293,8 @@

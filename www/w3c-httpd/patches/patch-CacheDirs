@@ -1,3 +1,5 @@
+$NetBSD: patch-CacheDirs,v 1.2 1999/05/09 21:12:33 tron Exp $
+
 *** /dev/null	Tue Feb  6 11:05:04 1996
 --- README-CACHEDIRS	Tue Feb  6 13:03:37 1996
 ***************
