@@ -1,0 +1,38 @@
+*** nsprpub/pr/include/md/_netbsd.cfg~	Sun Apr 19 02:18:48 1998
+--- nsprpub/pr/include/md/_netbsd.cfg	Sun Apr 19 02:38:57 1998
+***************
+*** 27,33 ****
+  #define NETBSD
+  #endif
+  
+! #ifdef __i386__
+  
+  #define IS_LITTLE_ENDIAN 1
+  #undef  IS_BIG_ENDIAN
+--- 27,33 ----
+  #define NETBSD
+  #endif
+  
+! #if defined(__i386__) || defined(__arm32__)
+  
+  #define IS_LITTLE_ENDIAN 1
+  #undef  IS_BIG_ENDIAN
+*** nsprpub/pr/include/md/_netbsd.h~	Sun Apr 19 02:18:48 1998
+--- nsprpub/pr/include/md/_netbsd.h	Sun Apr 19 02:52:51 1998
+***************
+*** 34,40 ****
+  #elif defined(__sparc__)
+  #define _PR_SI_ARCHITECTURE "sparc"
+  #elif defined(__arm32__)
+! #define _PR_SI_ACRHITECTURE "arm32"
+  #endif
+  
+  #define PR_DLL_SUFFIX		".so.1.0"
+--- 34,40 ----
+  #elif defined(__sparc__)
+  #define _PR_SI_ARCHITECTURE "sparc"
+  #elif defined(__arm32__)
+! #define _PR_SI_ARCHITECTURE "arm32"
+  #endif
+  
+  #define PR_DLL_SUFFIX		".so.1.0"
