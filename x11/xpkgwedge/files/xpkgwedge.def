@@ -1,4 +1,4 @@
-/*	$NetBSD: xpkgwedge.def,v 1.1 1998/06/26 16:39:25 tv Exp $	*/
+/*	$NetBSD: xpkgwedge.def,v 1.2 1998/07/01 15:56:36 tv Exp $	*/
 
 #ifdef AfterVendorCF
 
@@ -21,8 +21,11 @@
 
 PREFIX ?= ProjectRoot
 X11_ROOT = ProjectRoot
+
 #undef ProjectRoot
 #define ProjectRoot $(PREFIX)
+#undef ConfigDir
+#define ConfigDir $(X11_ROOT)/lib/X11/config
 
 /*
  * This emits dual -I and -L options to cc automatically, one for the actual
