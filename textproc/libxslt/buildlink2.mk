@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:40:13 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/10 16:06:49 wiz Exp $
 
 .if !defined(LIBXSLT_BUILDLINK2_MK)
 LIBXSLT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libxslt
-BUILDLINK_DEPENDS.libxslt?=	libxslt>=1.0.7
+BUILDLINK_DEPENDS.libxslt?=	libxslt>=1.0.19nb1
 BUILDLINK_PKGSRCDIR.libxslt?=	../../textproc/libxslt
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libxslt=libxslt

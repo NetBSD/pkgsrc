@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.39 2002/08/25 18:40:35 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2002/09/10 16:06:53 wiz Exp $
 
 DISTNAME=	kdelibs-2.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
 .include "../../x11/kde2/Makefile.kde2"
 
-BUILDLINK_DEPENDS.libxml2=	libxml2>=2.4.8
 BUILDLINK_DEPENDS.audiofile=	libaudiofile>=0.1.9
 BUILDLINK_DEPENDS.qt2-libs=	qt2-libs>=2.3.1nb2
 

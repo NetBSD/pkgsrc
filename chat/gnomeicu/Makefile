@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2002/03/13 17:36:41 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/10 16:06:34 wiz Exp $
 
 DISTNAME=	gnomeicu-0.96
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnomeicu/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,7 @@ COMMENT=	GNOME ICQ client
 
 DEPENDS+=	gdbm>=1.8.0:../../databases/gdbm
 DEPENDS+=	gnome-core>=1.4.0.4nb1:../../x11/gnome-core
-DEPENDS+=	libiconv>=1.5:../../converters/libiconv
+DEPENDS+=	libiconv>=1.8:../../converters/libiconv
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES

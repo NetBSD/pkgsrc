@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2002/08/23 11:47:39 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/10 16:06:40 wiz Exp $
 #
 
 DISTNAME=		pango-1.0.4
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.0/ \

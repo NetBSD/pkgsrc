@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2002/09/07 00:36:53 rh Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/10 16:06:37 wiz Exp $
 #
 
 DISTNAME=		GConf-1.2.1
 PKGNAME=		${DISTNAME:S/GConf/GConf2/}
+PKGREVISION=		1
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=2.0.1/sources/GConf/}
 EXTRACT_SUFX=		.tar.bz2

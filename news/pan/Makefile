@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2002/03/13 17:37:33 fredb Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/10 16:06:48 wiz Exp $
 #
 
 DISTNAME=	pan-0.11.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	news gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/pan/} \
 		http://pan.rebelbase.com/download/${DISTNAME:C/pan-//}/SOURCE/

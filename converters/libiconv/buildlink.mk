@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.13 2002/08/25 18:38:18 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.14 2002/09/10 16:06:36 wiz Exp $
 #
 # This Makefile fragment is included by packages that use libiconv.
 #
@@ -17,7 +17,7 @@ ICONV_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.iconv?=	libiconv>=1.7nb2
+BUILDLINK_DEPENDS.iconv?=	libiconv>=1.8
 
 .if defined(USE_GNU_ICONV)
 _NEED_ICONV=		YES
