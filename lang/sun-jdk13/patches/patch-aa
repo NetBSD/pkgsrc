@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/18 00:37:15 tv Exp $
+
+--- bin/.java_wrapper.orig	Mon Sep 18 21:05:19 2000
++++ bin/.java_wrapper	Fri Nov 17 18:15:26 2000
+@@ -28,17 +28,6 @@
+         ;;
+ esac
+ 
+-# Resolve symlinks. See 4152645.
+-while [ -L "$PRG" ]; do
+-    ls=`/bin/ls -ld "$PRG"`
+-    link=`/usr/bin/expr "$ls" : '.*-> \(.*\)$'`
+-    if /usr/bin/expr "$link" : '/' > /dev/null; then
+-	PRG="$link"
+-    else
+-	PRG="`/usr/bin/dirname $PRG`/$link"
+-    fi
+-done
+-
+ APPHOME=`dirname "$PRG"`/.. 
+ JREHOME=$APPHOME/jre
+ 

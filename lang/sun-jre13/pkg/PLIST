@@ -1,0 +1,182 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/18 00:36:55 tv Exp $
+jre/ControlPanel.html
+jre/Welcome.html
+jre/bin/.java_wrapper
+jre/bin/ControlPanel
+jre/bin/awt_robot
+jre/bin/i386/green_threads/appletviewer
+jre/bin/i386/green_threads/extcheck
+jre/bin/i386/green_threads/idlj
+jre/bin/i386/green_threads/jar
+jre/bin/i386/green_threads/jarsigner
+jre/bin/i386/green_threads/java
+jre/bin/i386/green_threads/javac
+jre/bin/i386/green_threads/javadoc
+jre/bin/i386/green_threads/javah
+jre/bin/i386/green_threads/javap
+jre/bin/i386/green_threads/jdb
+jre/bin/i386/green_threads/keytool
+jre/bin/i386/green_threads/native2ascii
+jre/bin/i386/green_threads/oldjava
+jre/bin/i386/green_threads/oldjavac
+jre/bin/i386/green_threads/oldjdb
+jre/bin/i386/green_threads/policytool
+jre/bin/i386/green_threads/rmic
+jre/bin/i386/green_threads/rmid
+jre/bin/i386/green_threads/rmiregistry
+jre/bin/i386/green_threads/serialver
+jre/bin/i386/green_threads/tnameserv
+jre/bin/i386/native_threads/java
+jre/bin/i386/native_threads/java_vm
+jre/bin/i386/native_threads/keytool
+jre/bin/i386/native_threads/policytool
+jre/bin/i386/native_threads/rmid
+jre/bin/i386/native_threads/rmiregistry
+jre/bin/i386/native_threads/tnameserv
+jre/bin/i386/realpath
+jre/bin/java
+jre/bin/keytool
+jre/bin/policytool
+jre/bin/realpath
+jre/bin/rmid
+jre/bin/rmiregistry
+jre/bin/tnameserv
+jre/lib/audio/soundbank.gm
+jre/lib/cmm/CIEXYZ.pf
+jre/lib/cmm/GRAY.pf
+jre/lib/cmm/LINEAR_RGB.pf
+jre/lib/cmm/PYCC.pf
+jre/lib/cmm/sRGB.pf
+jre/lib/content-types.properties
+jre/lib/flavormap.properties
+jre/lib/font.properties
+jre/lib/font.properties.ja
+jre/lib/font.properties.zh
+jre/lib/fonts/LucidaBrightDemiBold.ttf
+jre/lib/fonts/LucidaBrightDemiItalic.ttf
+jre/lib/fonts/LucidaBrightItalic.ttf
+jre/lib/fonts/LucidaBrightRegular.ttf
+jre/lib/fonts/LucidaSansDemiBold.ttf
+jre/lib/fonts/LucidaSansDemiOblique.ttf
+jre/lib/fonts/LucidaSansOblique.ttf
+jre/lib/fonts/LucidaSansRegular.ttf
+jre/lib/fonts/LucidaTypewriterBold.ttf
+jre/lib/fonts/LucidaTypewriterBoldOblique.ttf
+jre/lib/fonts/LucidaTypewriterOblique.ttf
+jre/lib/fonts/LucidaTypewriterRegular.ttf
+jre/lib/fonts/fonts.dir
+jre/lib/i18n.jar
+jre/lib/i386/classic/Xusage.txt
+jre/lib/i386/classic/libjvm.so
+jre/lib/i386/client/Xusage.txt
+jre/lib/i386/client/libjvm.so
+jre/lib/i386/green_threads/libhpi.so
+jre/lib/i386/hotspot
+jre/lib/i386/libJdbcOdbc.so
+jre/lib/i386/libagent.so
+jre/lib/i386/libawt.so
+jre/lib/i386/libcmm.so
+jre/lib/i386/libdcpr.so
+jre/lib/i386/libfontmanager.so
+jre/lib/i386/libhprof.so
+jre/lib/i386/libioser12.so
+jre/lib/i386/libjava.so
+jre/lib/i386/libjavaplugin.so
+jre/lib/i386/libjawt.so
+jre/lib/i386/libjcov.so
+jre/lib/i386/libjpeg.so
+jre/lib/i386/libjsound.so
+jre/lib/i386/libmlib_image.so
+jre/lib/i386/libnet.so
+jre/lib/i386/libverify.so
+jre/lib/i386/libzip.so
+jre/lib/i386/native_threads/libhpi.so
+jre/lib/i386/server/Xusage.txt
+jre/lib/i386/server/libjvm.so
+jre/lib/images/cursors/cursors.properties
+jre/lib/images/cursors/invalid32x32.gif
+jre/lib/images/cursors/motif_CopyDrop32x32.gif
+jre/lib/images/cursors/motif_CopyNoDrop32x32.gif
+jre/lib/images/cursors/motif_LinkDrop32x32.gif
+jre/lib/images/cursors/motif_LinkNoDrop32x32.gif
+jre/lib/images/cursors/motif_MoveDrop32x32.gif
+jre/lib/images/cursors/motif_MoveNoDrop32x32.gif
+jre/lib/javaplugin.jar
+jre/lib/javaplugin_l10n.jar
+jre/lib/jvm.cfg
+jre/lib/jvm.hprof.txt
+jre/lib/jvm.jcov.txt
+jre/lib/locale/de/LC_MESSAGES/sunw_java_plugin.mo
+jre/lib/locale/es/LC_MESSAGES/sunw_java_plugin.mo
+jre/lib/locale/fr/LC_MESSAGES/sunw_java_plugin.mo
+jre/lib/locale/it/LC_MESSAGES/sunw_java_plugin.mo
+jre/lib/locale/ja/LC_MESSAGES/sunw_java_plugin.mo
+jre/lib/locale/ko/LC_MESSAGES/sunw_java_plugin.mo
+jre/lib/locale/ko.UTF-8/LC_MESSAGES/sunw_java_plugin.mo
+jre/lib/locale/sv/LC_MESSAGES/sunw_java_plugin.mo
+jre/lib/locale/zh/LC_MESSAGES/sunw_java_plugin.mo
+jre/lib/locale/zh.GBK/LC_MESSAGES/sunw_java_plugin.mo
+jre/lib/locale/zh_TW/LC_MESSAGES/sunw_java_plugin.mo
+jre/lib/locale/zh_TW.BIG5/LC_MESSAGES/sunw_java_plugin.mo
+jre/lib/psfont.properties.ja
+jre/lib/rt.jar
+jre/lib/security/cacerts
+jre/lib/security/java.policy
+jre/lib/security/java.security
+jre/lib/sunrsasign.jar
+jre/lib/tzmappings
+jre/man/man1/java.1
+jre/man/man1/keytool.1
+jre/man/man1/rmid.1
+jre/man/man1/rmiregistry.1
+jre/man/man1/tnameserv.1
+jre/plugin/i386/javaplugin.so
+@dirrm jre/bin/i386/green_threads
+@dirrm jre/bin/i386/native_threads
+@dirrm jre/bin/i386
+@dirrm jre/bin
+@dirrm jre/lib/applet
+@dirrm jre/lib/audio
+@dirrm jre/lib/cmm
+@dirrm jre/lib/ext
+@dirrm jre/lib/fonts
+@dirrm jre/lib/i386/classic
+@dirrm jre/lib/i386/client
+@dirrm jre/lib/i386/green_threads
+@dirrm jre/lib/i386/native_threads
+@dirrm jre/lib/i386/server
+@dirrm jre/lib/i386
+@dirrm jre/lib/images/cursors
+@dirrm jre/lib/images
+@dirrm jre/lib/locale/de/LC_MESSAGES
+@dirrm jre/lib/locale/de
+@dirrm jre/lib/locale/es/LC_MESSAGES
+@dirrm jre/lib/locale/es
+@dirrm jre/lib/locale/fr/LC_MESSAGES
+@dirrm jre/lib/locale/fr
+@dirrm jre/lib/locale/it/LC_MESSAGES
+@dirrm jre/lib/locale/it
+@dirrm jre/lib/locale/ja/LC_MESSAGES
+@dirrm jre/lib/locale/ja
+@dirrm jre/lib/locale/ko/LC_MESSAGES
+@dirrm jre/lib/locale/ko
+@dirrm jre/lib/locale/ko.UTF-8/LC_MESSAGES
+@dirrm jre/lib/locale/ko.UTF-8
+@dirrm jre/lib/locale/sv/LC_MESSAGES
+@dirrm jre/lib/locale/sv
+@dirrm jre/lib/locale/zh/LC_MESSAGES
+@dirrm jre/lib/locale/zh
+@dirrm jre/lib/locale/zh.GBK/LC_MESSAGES
+@dirrm jre/lib/locale/zh.GBK
+@dirrm jre/lib/locale/zh_TW/LC_MESSAGES
+@dirrm jre/lib/locale/zh_TW
+@dirrm jre/lib/locale/zh_TW.BIG5/LC_MESSAGES
+@dirrm jre/lib/locale/zh_TW.BIG5
+@dirrm jre/lib/locale
+@dirrm jre/lib/security
+@dirrm jre/lib
+@dirrm jre/man/man1
+@dirrm jre/man
+@dirrm jre/plugin/i386
+@dirrm jre/plugin
+@dirrm jre
