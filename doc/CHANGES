@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4085 2003/12/14 01:24:47 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4086 2003/12/14 03:29:10 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3387,3 +3387,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wv to 1.0.0 [xtraeme 2003-12-13]
 	Added fribidi-0.10.4 [xtraeme 2003-12-14]
 	Added gucharmap-1.2.0 [xtraeme 2003-12-14]
+	Added abiword2-2.0.1-2 [xtraeme 2003-12-14]
