@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2004/06/23 15:48:41 snj Exp $
+$NetBSD: distinfo,v 1.7 2005/02/23 23:11:55 agc Exp $
 
 SHA1 (bomberclone-0.11.3.tar.bz2) = 9c0f7dc79efd13c05e4739a36251eab1a7307c68
+RMD160 (bomberclone-0.11.3.tar.bz2) = 16e9845ebd7d2ae3fe2455a613e4521b9e0665b4
 Size (bomberclone-0.11.3.tar.bz2) = 7910603 bytes
 SHA1 (patch-aa) = b80396a7ad0a9e2fc1a4b32a4da845f07cbf28a7
 SHA1 (patch-ab) = 5f4d7769d12042271226123abd763d85e1aff196
