@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/04/10 12:37:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 2002/04/12 14:12:18 jschauma Exp $
 #
 
 DISTNAME=		gmp-4.0.1
@@ -13,6 +13,7 @@ BUILD_DEPENDS+=		m4-1.4:../../devel/m4
 
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--enable-cxx
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 M4=			${PREFIX}/bin/gm4
