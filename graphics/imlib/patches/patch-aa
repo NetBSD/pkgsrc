@@ -1,7 +1,6 @@
-$NetBSD: patch-aa,v 1.2 1998/12/21 16:50:01 tron Exp $
-
---- configure.orig	Wed Dec 16 04:14:28 1998
-+++ configure	Mon Dec 21 16:58:20 1998
+$NetBSD: patch-aa,v 1.3 1999/01/01 02:41:16 garbled Exp $
+--- configure.orig	Tue Dec 15 20:14:28 1998
++++ configure	Thu Dec 31 19:35:27 1998
 @@ -1174,6 +1174,7 @@
  
  
@@ -18,7 +17,15 @@ $NetBSD: patch-aa,v 1.2 1998/12/21 16:50:01 tron Exp $
  
  
  echo $ac_n "checking whether to enable maintainer-specific portions of Makefiles""... $ac_c" 1>&6
-@@ -4234,24 +4236,6 @@
+@@ -1533,6 +1535,7 @@
+   else
+     GTK_CFLAGS=`$GTK_CONFIG $gtk_config_args --cflags`
+     GTK_LIBS=`$GTK_CONFIG $gtk_config_args --libs`
++    GTK_LIBS=`echo "$GTK_LIBS -lintl"`
+     gtk_config_major_version=`$GTK_CONFIG $gtk_config_args --version | \
+            sed 's/\([0-9]*\).\([0-9]*\).\([0-9]*\)/\1/'`
+     gtk_config_minor_version=`$GTK_CONFIG $gtk_config_args --version | \
+@@ -4234,24 +4237,6 @@
  else
    echo "configure: warning: *** Native PNG support will not be built (PNG header file not found) ***" 1>&2
  fi
