@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/07/16 23:20:43 garbled Exp $
+
+SHA1 (bonnie++-1.01.tgz) = a5ff92438a940c5a9b7b5cea75a644ee22ea8f7a
+Size (bonnie++-1.01.tgz) = 54102 bytes
+SHA1 (patch-aa) = f0219d3509934b4cec89befe63f55aaab3d81b57
+SHA1 (patch-ab) = 843b4b024124ae9efd1361d190b51bd77c8fc12b
