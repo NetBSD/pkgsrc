@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/08/06 09:43:31 agc Exp $
+
+Solaris (2.6 and above) already has usleep()
+
+--- slibu.c	1999/08/06 09:27:05	1.1
++++ slibu.c	1999/08/06 09:28:11
+@@ -1311,7 +1311,7 @@
+ }
+ #endif
+ 
+-#if defined(sun) || defined(sgi)
++#if (defined(sun) && !defined(__svr4__)) || defined(sgi)
+ long usleep(unsigned int winks)
+ {struct timespec x;
+  x.tv_sec = winks / 1000000;
