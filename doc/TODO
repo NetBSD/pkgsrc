@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1526 2004/03/23 15:32:56 cjep Exp $
+$NetBSD: TODO,v 1.1527 2004/03/23 17:01:37 taca Exp $
 
 Suggested new packages
 ======================
@@ -286,6 +286,7 @@ Suggested package updates
 	o openal-20040215
 	o openh323-1.11.2
 	o openoffice-1.1 [skrll]
+	o openldap-2.1.28
 	o openssl-0.9.7c [jschauma]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
