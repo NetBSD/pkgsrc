@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2001/06/28 23:12:16 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2001/08/17 19:49:08 kim Exp $
 
 DISTNAME=		openssh-2.9p2
 CATEGORIES=		security
@@ -21,7 +21,9 @@ CRYPTO=			yes
 
 # retain the following line, for IPv6-ready pkgsrc webpage 
 BUILD_DEFS+=		USE_INET6
+#BUILD_DEFS+=		KERBEROS
 BUILD_DEFS+=		SSH_CONF_DIR
+BUILD_DEFS+=		SSH_SUID
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
@@ -43,6 +45,23 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${SSH_CONF_DIR}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_DIR}
 
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--with-tcp-wrappers
+# XXX: we have 4 args (4: sslen) to skeychallenge instead of 3
+#CONFIGURE_ARGS+=	--with-skey=/usr
+.endif
+
+# XXX: <krb.h>
+#.if defined(KERBEROS)
+#USE_KERBEROS=		yes
+#CONFIGURE_ARGS+=	--with-kerberos4=/usr
+#.endif
+
+# Don't install "ssh" setuid
+.if !defined(SSH_SUID) || ${SSH_SUID} != YES
+CONFIGURE_ARGS+=	--disable-suid-ssh
+.endif
+
 # The ssh-askpass program is in ${X11BASE}/bin or ${X11PREFIX}/bin depending
 # on if it's part of the X11 distribution, or if it's installed from pkgsrc
 # (security/ssh-askpass).  The configure process will lie about the compiled
@@ -62,6 +81,9 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 .if (${OPSYS} == SunOS)
 INSTALL_FILE=		${WRKDIR}/INSTALL.SunOS
 .endif
+
+#post-patch:
+#	cd ${WRKSRC} ; autoreconf --force
 
 post-build:
 	for FILE in \
