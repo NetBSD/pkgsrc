@@ -1,9 +1,9 @@
-$NetBSD: patch-sum,v 1.4 2001/03/01 21:16:52 jtb Exp $
+$NetBSD: patch-sum,v 1.5 2001/03/08 10:21:34 wiz Exp $
 
-MD5 (patch-aa) = abfae9aac1fd143eaa8ac0044e3aa471
-MD5 (patch-ab) = 1aba13fb7197a84658356ea21f51ce83
-MD5 (patch-ac) = dd2f3f9190ba1494c43bf9bf5ec4bf67
-MD5 (patch-ad) = e2c61b3acfe866f94b5bd7b3914a0039
-MD5 (patch-af) = 4a89d7f3fe822d7cbfdc3182fce7f563
-MD5 (patch-ag) = bbad58a42e1b082946c70abc2b8136c3
-MD5 (patch-ah) = 13f5853a3728310504cdc965ce592216
+SHA1 (patch-aa) = 29445c744ca163f6926341eba869772644e3a8b2
+SHA1 (patch-ab) = a85fe183770464306409a5c5ca973b4d484e2dc9
+SHA1 (patch-ac) = 065065f4011eb14a4d3a3481be609323e5e316b1
+SHA1 (patch-ad) = 47188a1bdf4df2e2b20e6c2b51f72f28c056fcb0
+SHA1 (patch-af) = a126910bd70b2f1fbde2f4609cace499795d0e0c
+SHA1 (patch-ag) = 5090a139f0a7dfb04e0714db698d5f2e5680f8c1
+SHA1 (patch-ah) = 4db7d142e30ee5d813e8a827ee49e72faacebd25
