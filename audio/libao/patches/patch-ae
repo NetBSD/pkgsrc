@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2004/11/16 14:49:13 adam Exp $
+$NetBSD: patch-ae,v 1.6 2005/02/18 17:22:07 wiz Exp $
 
---- configure.orig	2004-03-19 15:49:41.000000000 +0000
+--- configure.orig	2005-01-11 23:08:26.000000000 +0100
 +++ configure
-@@ -8081,9 +8081,9 @@ else
+@@ -19121,9 +19121,9 @@ else
                  PROFILE="-pg -g -O20 -D__NO_MATH_INLINES -fsigned-char -mv8" ;;
          *-darwin*)
                  PLUGIN_LDFLAGS="-module -avoid-version"
@@ -15,7 +15,7 @@ $NetBSD: patch-ae,v 1.5 2004/11/16 14:49:13 adam Exp $
          *)
                  PLUGIN_LDFLAGS="-export-dynamic -avoid-version"
                  DEBUG="-g -Wall -D__NO_MATH_INLINES -fsigned-char"
-@@ -9490,6 +9490,11 @@ else
+@@ -20505,6 +20505,11 @@ else
     BUILD_ESD="yes"
  fi;
  
