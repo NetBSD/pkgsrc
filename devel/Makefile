@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.608 2005/02/09 05:47:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.609 2005/02/19 12:19:07 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -341,6 +341,7 @@ SUBDIR+=	p5-Data-UUID
 SUBDIR+=	p5-Date-Business
 SUBDIR+=	p5-Date-Calc
 SUBDIR+=	p5-Date-Manip
+SUBDIR+=	p5-Devel-Cycle
 SUBDIR+=	p5-Devel-Profile
 SUBDIR+=	p5-Devel-SmallProf
 SUBDIR+=	p5-Devel-StackTrace
