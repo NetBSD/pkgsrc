@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2002/04/19 10:50:48 drochner Exp $
+# $NetBSD: Makefile,v 1.116 2002/04/22 13:52:25 agc Exp $
 #
 
 COMMENT=	Programming languages
@@ -41,6 +41,7 @@ SUBDIR+=	icon
 SUBDIR+=	inform
 SUBDIR+=	intercal
 SUBDIR+=	japhar
+SUBDIR+=	jasmin
 SUBDIR+=	java-lang-spec
 SUBDIR+=	java-vm-spec
 SUBDIR+=	jbuilder-jit
