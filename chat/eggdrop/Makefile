@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/12/03 15:14:52 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/02/13 22:38:53 zuntum Exp $
 
 DISTNAME=	eggdrop1.6.17
 PKGNAME=	eggdrop-1.6.17
@@ -65,12 +65,14 @@ do-install-program:
 		 botchk weed ${PREFIX}/share/eggdrop/scripts/
 
 .include "../../lang/tcl/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if defined(NOPIC)
 BUILD_TARGET=	static
 PLIST_SUBST+=	NOPIC="@comment "
 .else
+BUILD_TARGET=	eggdrop
 PLIST_SUBST+=	NOPIC=
 do-install: do-install-modules
 do-install-modules:
