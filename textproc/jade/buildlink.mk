@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/01 22:59:30 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/20 01:54:51 jlam Exp $
 #
 # This Makefile fragment is included by packages that use jade.
 #
@@ -20,7 +20,7 @@ JADE_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.jade?=	jade>=1.2.1
 DEPENDS+=	${BUILDLINK_DEPENDS.jade}:../../textproc/jade
 
-BUILDLINK_PREFIX.jade=	${LOCALBASE}
+EVAL_PREFIX+=		BUILDLINK_PREFIX.jade=jade
 BUILDLINK_FILES.jade=	include/sp/*
 BUILDLINK_FILES.jade+=	lib/libgrove.*
 BUILDLINK_FILES.jade+=	lib/libsp.*

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/01 22:59:34 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:55 jlam Exp $
 #
 # This Makefile fragment is included by packages that use tk.
 #
@@ -20,7 +20,7 @@ TK_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.tk?=	tk>=8.3.2
 DEPENDS+=		${BUILDLINK_DEPENDS.tk}:../../x11/tk
 
-BUILDLINK_PREFIX.tk=	${LOCALBASE}
+EVAL_PREFIX+=		BUILDLINK_PREFIX.tk=tk
 BUILDLINK_FILES.tk=	include/tk.h
 BUILDLINK_FILES.tk+=	include/tkInt.h
 BUILDLINK_FILES.tk+=	include/tkDecls.h
@@ -44,9 +44,9 @@ tkConfig-buildlink:
 	if [ ! -f $${cookie} ]; then					\
 		file=lib/tkConfig.sh;					\
 		${ECHO_MSG} "Creating script ${BUILDLINK_DIR}/$${file}."; \
-		${SED}	-e "s|-L${LOCALBASE}/lib|-L${BUILDLINK_DIR}/lib|g" \
-			-e "s|${LOCALBASE}/lib/libtkstub|-L${BUILDLINK_DIR}/lib/libtkstub|g" \
-			${LOCALBASE}/$${file} > ${BUILDLINK_DIR}/$${file}; \
+		${SED}	-e "s|-L${BUILDLINK_PREFIX.tk}/lib|-L${BUILDLINK_DIR}/lib|g" \
+			-e "s|${BUILDLINK_PREFIX.tk}/lib/libtkstub|-L${BUILDLINK_DIR}/lib/libtkstub|g" \
+			${BUILDLINK_PREFIX.tk}/$${file} > ${BUILDLINK_DIR}/$${file}; \
 		${CHMOD} +x ${BUILDLINK_DIR}/$${file};			\
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
