@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/10/02 14:25:39 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 18:49:21 agc Exp $
 
 SHA1 (suse73/i386/fileutils.rpm) = 863b96e4ae55fbc684e05389d21518fe5b92afad
+RMD160 (suse73/i386/fileutils.rpm) = fa031f2cb6a001a081b3f9c4c5c87b7f02672006
 Size (suse73/i386/fileutils.rpm) = 539928 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2003/07/30 19:20:33 jtb Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 18:49:19 agc Exp $
 
 SHA1 (mmix-20030622.tar.gz) = 6e953ba5767879b96e08f9eb58a4a0a900a56f43
+RMD160 (mmix-20030622.tar.gz) = 288e1d6779264077ff3e7a431af461e9e33142c5
 Size (mmix-20030622.tar.gz) = 304746 bytes
 SHA1 (patch-aa) = 927eabd1b0d1180fb909ca943b511fa325601c7e

@@ -1,20 +1,28 @@
-$NetBSD: distinfo,v 1.9 2003/05/30 15:33:03 taca Exp $
+$NetBSD: distinfo,v 1.10 2005/02/23 18:49:20 agc Exp $
 
 SHA1 (suse73/i386/aaa_dir.rpm) = 1d72e879ca30db43c0bd016ca5b60dd0a1b241cd
+RMD160 (suse73/i386/aaa_dir.rpm) = d249c029d557eab0243c9bab8d902e6d64464bda
 Size (suse73/i386/aaa_dir.rpm) = 21765 bytes
 SHA1 (suse73/i386/glibc-2.2.4-78.i386.rpm) = cbfe30a1a7a6d37c6807b71caf57a3b9b6703298
+RMD160 (suse73/i386/glibc-2.2.4-78.i386.rpm) = 999a6493e524c4752954030b9c8c8bde9e055fde
 Size (suse73/i386/glibc-2.2.4-78.i386.rpm) = 7627919 bytes
 SHA1 (suse73/i386/gppshare.rpm) = aed48270f42908201f4dd8bb92d583522fcb999a
+RMD160 (suse73/i386/gppshare.rpm) = 763ee663c3ee4cc0d53e40b38e844504d8c77e80
 Size (suse73/i386/gppshare.rpm) = 475345 bytes
 SHA1 (suse73/i386/libz-1.1.3-597.i386.rpm) = af05da6bcd431e833a3df91544c8e2824a026be8
+RMD160 (suse73/i386/libz-1.1.3-597.i386.rpm) = 71b65d8cb9b6033b32bfa0cd317352cb5af5db3f
 Size (suse73/i386/libz-1.1.3-597.i386.rpm) = 93374 bytes
 SHA1 (suse73/i386/ncurses.rpm) = daa84f5c7cf4e7da3b1a6202e978d56f0c8e52d7
+RMD160 (suse73/i386/ncurses.rpm) = 91a37d3b064d4ac8edbe72ab97eb22b5e2c19c7d
 Size (suse73/i386/ncurses.rpm) = 864946 bytes
 SHA1 (suse73/i386/readline.rpm) = 02d64e505aee011e65f9f1b0d8552a4805363bcf
+RMD160 (suse73/i386/readline.rpm) = e85fbeaa92aa3747a595a808d59d58ea43000370
 Size (suse73/i386/readline.rpm) = 140013 bytes
 SHA1 (suse73/i386/bash.rpm) = 6d13e99692869ebc80a3e7c18941b82767850ced
+RMD160 (suse73/i386/bash.rpm) = 425cdf1b4838c1e01c10cb488d7f3f9efe88022b
 Size (suse73/i386/bash.rpm) = 619471 bytes
 SHA1 (suse73/i386/sh-utils.rpm) = bf2b4958455f89cc556023cff40713149312cfe7
+RMD160 (suse73/i386/sh-utils.rpm) = 2eb65bf6f2414ce71552763ffb48d8663a9fb8fd
 Size (suse73/i386/sh-utils.rpm) = 461152 bytes
 SHA1 (suse73/ppc/aaa_dir.rpm) = 0458fd639ffa9e3be7aadaeae0a4a45a0fa624bd
 Size (suse73/ppc/aaa_dir.rpm) = 22192 bytes
