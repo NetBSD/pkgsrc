@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/04/25 23:16:22 tv Exp $
+# $NetBSD: Makefile,v 1.26 2004/06/18 02:42:09 minskim Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -19,7 +19,6 @@ NOT_FOR_PLATFORM+= Interix-*-* # needs porting
 
 WRKSRC=		${WRKDIR}
 MAKEFILE=	makefile
-MAKE_FLAGS=	CFLAGS="${CFLAGS} -DDIRENT" LFLAGS2="-lcompat"
 ALL_TARGET=	zip
 
 USE_BUILDLINK3=	yes
@@ -33,6 +32,12 @@ BUILD_DEFS+=	ZIP_ENCRYPTION
 DISTFILES+=	zcrypt10.zip
 ALL_TARGET+=	zipcloak
 CRYPTO=		yes
+.endif
+
+.if ${OPSYS} == "Linux"
+MAKE_FLAGS=	CFLAGS="${CFLAGS} -DSYSV"
+.else
+MAKE_FLAGS=	CFLAGS="${CFLAGS} -DDIRENT" LFLAGS2="-lcompat"
 .endif
 
 do-install:
