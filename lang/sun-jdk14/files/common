@@ -1,4 +1,4 @@
-# $NetBSD: common,v 1.1 2003/01/29 11:13:29 jlam Exp $
+# $NetBSD: common,v 1.2 2003/12/12 15:17:56 adam Exp $
 
 .systemPrefs
 COPYRIGHT
@@ -19,7 +19,12 @@ bin/tnameserv
 jre
 man/ja
 man/ja_JP.eucJP/man1/java.1
+man/ja_JP.eucJP/man1/javaws.1
 man/ja_JP.eucJP/man1/keytool.1
+man/ja_JP.eucJP/man1/javaws.1
+man/ja_JP.eucJP/man1/kinit.1
+man/ja_JP.eucJP/man1/klist.1
+man/ja_JP.eucJP/man1/ktab.1
 man/ja_JP.eucJP/man1/orbd.1
 man/ja_JP.eucJP/man1/policytool.1
 man/ja_JP.eucJP/man1/rmid.1
@@ -27,7 +32,11 @@ man/ja_JP.eucJP/man1/rmiregistry.1
 man/ja_JP.eucJP/man1/servertool.1
 man/ja_JP.eucJP/man1/tnameserv.1
 man/man1/java.1
+man/man1/javaws.1
 man/man1/keytool.1
+man/man1/kinit.1
+man/man1/klist.1
+man/man1/ktab.1
 man/man1/orbd.1
 man/man1/policytool.1
 man/man1/rmid.1
