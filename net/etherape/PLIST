@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/11 22:06:45 damon Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/06 03:00:41 wiz Exp $
 bin/etherape
 etc/etherape/services
 lib/locale/es/LC_MESSAGES/etherape.mo
@@ -36,8 +36,8 @@ share/pixmaps/etherape.png
 @dirrm share/gnome/help/etherape/C/stylesheet-images
 @dirrm share/gnome/help/etherape/C
 @dirrm share/gnome/help/etherape
-@dirrm share/gnome/help
-@dirrm share/gnome/apps/Applications
+@unexec ${RMDIR} %D/share/gnome/help 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps/Applications 2>/dev/null || ${TRUE}
 @dirrm share/etherape/glade
 @dirrm share/etherape
 @dirrm lib/locale/nl/LC_MESSAGES
