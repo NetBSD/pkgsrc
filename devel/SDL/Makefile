@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2002/08/27 18:19:44 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2002/10/13 19:28:56 kristerw Exp $
 #
 
-DISTNAME=	SDL-1.2.3
-PKGREVISION=	2
+DISTNAME=	SDL-1.2.5
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -36,7 +35,6 @@ CONFIGURE_ARGS+=	--disable-nas
 .endif
 
 CONFIGURE_ARGS+=	--disable-arts
-CONFIGURE_ARGS+=	--disable-pthread-sem
 CONFIGURE_ARGS+=	--enable-video-aalib
 CONFIGURE_ENV+=		NASMFLAGS="${NASMFLAGS}"
 MAKE_ENV+=		NASMFLAGS="${NASMFLAGS}"
@@ -47,18 +45,16 @@ MAKE_ENV+=		NASMFLAGS="${NASMFLAGS}"
 #
 CONFIGURE_ENV+=		SYSTEM_LIBS="${LDFLAGS}"
 
-pre-patch:
-	cd ${WRKSRC} && ${MKDIR} src/audio/netbsd
-	cd ${WRKSRC} && ${MKDIR} src/joystick/bsd
-	${CP} ${FILESDIR}/[MS]* ${WRKSRC}/src/joystick/bsd
-
-post-configure:
-	cd ${WRKSRC}/src/audio && ${CP} *.[ch] netbsd/
+.include "../../mk/pthread.buildlink2.mk"
+.if ${_PKG_PTHREAD} == "pth"
+# Let SDL know that we do not have native pthreads.
+CONFIGURE_ARGS+=	--disable-pthreads
+CONFIGURE_ARGS+=	--enable-pth
+.endif
 
 .include "../../audio/esound/buildlink2.mk"
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../graphics/aalib-x11/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
