@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/15 00:19:40 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/01 18:56:51 jmmv Exp $
 bin/ggv
 lib/bonobo/servers/GNOME_GGV.server
 libexec/ggv-postscript-viewer
@@ -43,6 +43,7 @@ share/gnome/help/ggv/zh_TW/ggv.xml
 share/gnome/help/ggv/zh_TW/legal.xml
 share/idl/Ggv.idl
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/ggv.mo
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/ggv.mo
@@ -53,6 +54,7 @@ ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/ggv.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/ggv.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/ggv.mo
@@ -116,7 +118,10 @@ share/pixmaps/ggv/toggleodd.xpm
 share/pixmaps/ggv/zoom.xpm
 share/pixmaps/gnome-ghostview.png
 @dirrm share/pixmaps/ggv
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/ggv
+@comment in scrollkeeper: @dirrm share/omf
+@comment in ORBit2: @dirrm share/idl
 @dirrm share/gnome/help/ggv/zh_TW/figures
 @dirrm share/gnome/help/ggv/zh_TW
 @dirrm share/gnome/help/ggv/zh_CN/figures
@@ -138,3 +143,8 @@ share/pixmaps/gnome-ghostview.png
 @dirrm share/gnome/help/ggv/C/figures
 @dirrm share/gnome/help/ggv/C
 @dirrm share/gnome/help/ggv
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
+@comment in libbonobo: @dirrm lib/bonobo/servers
