@@ -1,0 +1,27 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/02/21 12:37:21 rh Exp $
+
+--- doc/examples/ftpusers.orig	Fri Apr  1 21:03:23 1994
++++ doc/examples/ftpusers	Sat Feb 13 00:18:05 1999
+@@ -1,14 +1,12 @@
+ root
+-bin
+-boot
++toor
+ daemon
+-digital
+-field
+-gateway
+-guest
+-nobody
+ operator
+-ris
+-sccs
+-sys
++bin
++games
++news
++man
+ uucp
++xten
++ingres
++nobody
