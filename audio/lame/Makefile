@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.31 2003/11/06 18:31:08 gavan Exp $
+# $NetBSD: Makefile,v 1.32 2004/01/20 15:46:12 adam Exp $
 #
 
-VERS=		3.93.1
 DISTNAME=	lame-${VERS}
-PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lame/} \
-		http://hive.me.gu.edu.au/not_lame/ \
-		http://telia.dl.sourceforge.net/lame/
+		http://hive.me.gu.edu.au/not_lame/
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.mp3dev.org/mp3/
 COMMENT=	Fast, high quality MP3 encoder
+
+VERS=		3.95.1
 
 LICENSE=	fee-based-commercial-use
 
