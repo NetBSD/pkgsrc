@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/14 00:55:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/08 05:59:50 hubertf Exp $
 #
 
 DISTNAME=	icb
@@ -12,7 +12,8 @@ COMMENT=	Next generation Internet Citicen's Band chat client
 
 WRKSRC=		${WRKDIR}/icb
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		yes
+USE_GNU_READLINE=	yes
 
 post-extract:
 		${RM} -f ${WRKSRC}/src/.depend
@@ -29,4 +30,6 @@ do-install:
 		${WRKSRC}/contrib/echofile \
 		${PREFIX}/libdata/i2cb
 
+.include "../../lang/tcl/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
