@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1.1.1 1997/12/18 00:20:05 hubertf Exp $
-# New ports collection Makefile for: knews
+# $NetBSD: Makefile,v 1.2 1997/12/20 11:08:11 kleink Exp $
+# New ports collection Makefile for: ctwm
 # Version required:	3.4pl2
 # Date created:         30th November 1997
 # Whom:                 tron
