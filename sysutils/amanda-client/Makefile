@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/07/20 15:26:19 tron Exp $
+# $NetBSD: Makefile,v 1.16 2000/08/17 02:26:26 wiz Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -14,7 +14,6 @@ DEPENDS+=		readline>=4.0:../../devel/readline
 DEPENDS+=		gtar-1.12:../../archivers/gtar
 DEPENDS+=		amanda-common-2.4.1p1:../../sysutils/amanda-common
 
-USE_PKGLIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"

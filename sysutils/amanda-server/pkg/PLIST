@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 1999/09/06 18:16:35 bad Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/08/17 02:26:33 wiz Exp $
 lib/libamserver.a
+lib/libamserver.la
 lib/libamserver-2.4.1p1.so.0.0
 libexec/amidxtaped
 libexec/amindexd
