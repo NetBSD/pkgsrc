@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/15 11:25:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/03/09 13:03:55 markd Exp $
 bin/kdevelop
 bin/kdevelop-htdig
 bin/kdevprj2kdevelop
@@ -16,6 +16,7 @@ include/kdevelop/catalog/tag.h
 include/kdevelop/codemodel.h
 include/kdevelop/codemodel_treeparser.h
 include/kdevelop/codemodel_utils.h
+include/kdevelop/configwidgetproxy.h
 include/kdevelop/cppparser/ast.h
 include/kdevelop/cppparser/driver.h
 include/kdevelop/cppparser/errors.h
@@ -163,6 +164,8 @@ lib/kde3/libkdevghcoptions.la
 lib/kde3/libkdevghcoptions.so
 lib/kde3/libkdevgrepview.la
 lib/kde3/libkdevgrepview.so
+lib/kde3/libkdevhaskellproject.la
+lib/kde3/libkdevhaskellproject.so
 lib/kde3/libkdevhaskellsupport.a
 lib/kde3/libkdevhaskellsupport.la
 lib/kde3/libkdevhistory.la
@@ -254,23 +257,37 @@ share/doc/kde/HTML/en/kde_app_devel/common
 share/doc/kde/HTML/en/kde_app_devel/index.cache.bz2
 share/doc/kde/HTML/en/kde_app_devel/index.docbook
 share/doc/kde/HTML/en/kde_app_devel/kscribblefiles.png
+share/doc/kde/HTML/en/kdevelop/SF-general.png
+share/doc/kde/HTML/en/kdevelop/SF-indent.png
+share/doc/kde/HTML/en/kdevelop/SF-other.png
 share/doc/kde/HTML/en/kdevelop/automake-file-popup.png
 share/doc/kde/HTML/en/kdevelop/automake-subproject-popup.png
 share/doc/kde/HTML/en/kdevelop/automake-target-popup.png
 share/doc/kde/HTML/en/kdevelop/automakemanager.png
 share/doc/kde/HTML/en/kdevelop/classview.png
 share/doc/kde/HTML/en/kdevelop/common
+share/doc/kde/HTML/en/kdevelop/configure-editor.png
+share/doc/kde/HTML/en/kdevelop/configure-file-selector.png
+share/doc/kde/HTML/en/kdevelop/configure-general.png
+share/doc/kde/HTML/en/kdevelop/configure-select.png
+share/doc/kde/HTML/en/kdevelop/configure-snippets.png
 share/doc/kde/HTML/en/kdevelop/create-new-project-cvs.png
 share/doc/kde/HTML/en/kdevelop/createnewproject.png
 share/doc/kde/HTML/en/kdevelop/doctreeview.png
+share/doc/kde/HTML/en/kdevelop/file-selector.png
 share/doc/kde/HTML/en/kdevelop/filetree.png
-share/doc/kde/HTML/en/kdevelop/gideon-ideal-mode.png
-share/doc/kde/HTML/en/kdevelop/gideon-mdi-mode.png
-share/doc/kde/HTML/en/kdevelop/gideon-tabbed-mode.png
-share/doc/kde/HTML/en/kdevelop/gideon-toplevel-mode.png
 share/doc/kde/HTML/en/kdevelop/importdirectory.png
 share/doc/kde/HTML/en/kdevelop/index.cache.bz2
 share/doc/kde/HTML/en/kdevelop/index.docbook
+share/doc/kde/HTML/en/kdevelop/kdevelop-ideal-mode-0.png
+share/doc/kde/HTML/en/kdevelop/kdevelop-ideal-mode.png
+share/doc/kde/HTML/en/kdevelop/kdevelop-mdi-mode.png
+share/doc/kde/HTML/en/kdevelop/kdevelop-tabbed-mode.png
+share/doc/kde/HTML/en/kdevelop/kdevelop-toplevel-mode.png
+share/doc/kde/HTML/en/kdevelop/loading-progress-bar.png
+share/doc/kde/HTML/en/kdevelop/open-project.png
+share/doc/kde/HTML/en/kdevelop/open-recent-project.png
+share/doc/kde/HTML/en/kdevelop/select-user-interface-0.png
 share/doc/kde/HTML/en/kdevelop/select-user-interface.png
 share/doc/kde/HTML/en/kdevelop/wrong-project-location.png
 share/kde/applnk/Development/kdevelop.desktop
@@ -546,6 +563,7 @@ share/kde/apps/kdevappwizard/template-kdedcop/mainclass.h
 share/kde/apps/kdevappwizard/template-kdedcop/script
 share/kde/apps/kdevappwizard/template-kdedcop/src-Makefile.am
 share/kde/apps/kdevappwizard/template-kdedcop/subdirs
+share/kde/apps/kdevappwizard/template-kdevlang/README.dox
 share/kde/apps/kdevappwizard/template-kdevlang/app.kdevelop
 share/kde/apps/kdevappwizard/template-kdevlang/kdevlang-configure.in.in
 share/kde/apps/kdevappwizard/template-kdevlang/kdevlang.desktop
@@ -564,6 +582,7 @@ share/kde/apps/kdevappwizard/template-kdevpart/kdevpart_widget.cpp
 share/kde/apps/kdevappwizard/template-kdevpart/kdevpart_widget.h
 share/kde/apps/kdevappwizard/template-kdevpart/script
 share/kde/apps/kdevappwizard/template-kdevpart/src-Makefile.am
+share/kde/apps/kdevappwizard/template-kdevpart2/README.dox
 share/kde/apps/kdevappwizard/template-kdevpart2/app.kdevelop
 share/kde/apps/kdevappwizard/template-kdevpart2/kdevpart-configure.in.in
 share/kde/apps/kdevappwizard/template-kdevpart2/kdevpart.desktop
@@ -975,6 +994,7 @@ share/kde/apps/kdevfortransupport/kdevfortransupport.rc
 share/kde/apps/kdevfullscreen/kdevpart_fullscreen.rc
 share/kde/apps/kdevgenericproject/kdevgenericproject.rc
 share/kde/apps/kdevgrepview/kdevgrepview.rc
+share/kde/apps/kdevhaskellproject/kdevhaskellproject.rc
 share/kde/apps/kdevhaskellsupport/kdevhaskellsupport.rc
 share/kde/apps/kdevhistory/kdevhistory.rc
 share/kde/apps/kdevjavadebugger/kdevjavadebugger.rc
@@ -1109,6 +1129,7 @@ share/kde/services/kdevgenericproject.desktop
 share/kde/services/kdevghcoptions.desktop
 share/kde/services/kdevgppoptions.desktop
 share/kde/services/kdevgrepview.desktop
+share/kde/services/kdevhaskellproject.desktop
 share/kde/services/kdevhaskellsupport.desktop
 share/kde/services/kdevhistory.desktop
 share/kde/services/kdevjavadebugger.desktop
@@ -1192,6 +1213,7 @@ share/kde/servicetypes/kdevelopversioncontrol.desktop
 @dirrm share/kde/apps/kdevjavadebugger
 @dirrm share/kde/apps/kdevhistory
 @dirrm share/kde/apps/kdevhaskellsupport
+@dirrm share/kde/apps/kdevhaskellproject
 @dirrm share/kde/apps/kdevgrepview
 @dirrm share/kde/apps/kdevgenericproject
 @dirrm share/kde/apps/kdevfullscreen
