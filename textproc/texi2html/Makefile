@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.18 2005/01/01 17:16:35 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2005/02/07 13:30:11 wiz Exp $
 #
 
-DISTNAME=		texi2html-1.64
-PKGREVISION=		2
+DISTNAME=		texi2html-1.76
 CATEGORIES=		textproc
-MASTER_SITES=		http://www.mathematik.uni-kl.de/~obachman/Texi2html/Distrib/
+MASTER_SITES=		${MASTER_SITE_LOCAL}
+# The following only seems to work with a graphical browser
+# https://texi2html.cvshome.org/files/documents/70/758/texi2html-1.76.tar.bz2
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.mathematik.uni-kl.de/~obachman/Texi2html/
+HOMEPAGE=		https://texi2html.cvshome.org/
 COMMENT=		Texinfo-to-HTML direct translator
 
 CONFLICTS=		teTeX-bin-1.0 teTeX-bin-1.0.[1234567]
@@ -16,6 +18,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
+INFO_FILES=		texi2html.info
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
