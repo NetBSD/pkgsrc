@@ -1,13 +1,22 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/11/25 19:02:27 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2001/04/22 21:35:50 jtb Exp $
 
---- src/Makefile.orig	Sun Nov  5 19:13:31 2000
+--- src/Makefile.orig	Tue Apr 10 13:37:01 2001
 +++ src/Makefile
-@@ -32,7 +32,7 @@
- # explicit linking of JPEG lib is needed as Imlib loads format libs
- # dynamically (IIRC)
- xzgv: $(OBJS)
--	$(CC) $(CFLAGS) -o xzgv $(OBJS) `imlib-config --libs-gdk` -ljpeg -lpng
-+	$(CC) $(CPPFLAGS) $(CFLAGS) -o xzgv $(OBJS) `imlib-config --libs-gdk` $(LDFLAGS) -ljpeg -lpng
+@@ -30,7 +30,7 @@
+ # compile when you do `make install'. :-)
+ # (It would also be weird to have it made by the `doc' Makefile, IMHO.)
  
- logoconv: logoconv.o
- 	$(CC) $(CFLAGS) -o logoconv logoconv.o
+-all: xzgv install-info
++all: xzgv
+ 
+ OBJS=	main.o \
+ 	filedetails.o gotodir.o updatetn.o confirm.o help.o \
+@@ -43,7 +43,7 @@
+ 	backend.o
+ 
+ xzgv: $(OBJS)
+-	$(CC) $(CFLAGS) -o xzgv $(OBJS) $(BACKEND_LIBS) -ljpeg -lpng -ltiff -lz
++	$(CC) $(CPPFLAGS) $(CFLAGS) -o xzgv $(OBJS) $(BACKEND_LIBS) $(LDFLAGS) -ljpeg -lpng -ltiff -lz
+ 
+ backend.o:
+ 	$(CC) $(CFLAGS) $(BACKEND_CFLAGS) -c -o backend.o backend.c

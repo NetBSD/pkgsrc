@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/04/14 21:43:46 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/22 21:35:50 jtb Exp $
 
-DISTNAME=	xzgv-0.6
+DISTNAME=	xzgv-0.7
 CATEGORIES=	graphics
 MASTER_SITES=	http://xzgv.browser.org/ \
 		ftp://ftp.ibiblio.org/pub/Linux/apps/graphics/viewers/X/
@@ -20,10 +20,6 @@ DEPENDS+=	imlib>=1.0:../../graphics/imlib
 INFO_FILES=	xzgv
 USE_X11BASE=	yes
 USE_GMAKE=	yes
-
-.if (${MACHINE_ARCH} == "i386")
-MAKE_ENV+="CPPFLAGS=-DINTERP_MMX"
-.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/xzgv ${PREFIX}/bin
