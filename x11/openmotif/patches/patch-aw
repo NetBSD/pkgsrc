@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.1 2004/03/16 23:59:42 danw Exp $
+$NetBSD: patch-aw,v 1.2 2004/08/31 03:10:16 danw Exp $
 
 --- config/cf/darwin.cf.orig	Sun Mar 14 11:07:29 2004
 +++ config/cf/darwin.cf
@@ -78,7 +78,7 @@ $NetBSD: patch-aw,v 1.1 2004/03/16 23:59:42 danw Exp $
 +#define MkdirHierCmd            mkdir -p
 +
 +/* our cpp isn't in /lib/cpp and early versions don't like -undef */
-+#define CppCmd                  /usr/bin/cpp
++#define CppCmd                  cpp
 +#if HasGcc3
 +# define RawCppCmd              CppCmd -undef
 +#else
@@ -87,10 +87,10 @@ $NetBSD: patch-aw,v 1.1 2004/03/16 23:59:42 danw Exp $
 +
 +/* we have a gcc compatible compiler, but its not called gcc */
 +#ifndef CcCmd
-+#define CcCmd                   /usr/bin/cc
++#define CcCmd                   cc
 +#endif
 +#ifndef CplusplusCmd
-+#define CplusplusCmd            /usr/bin/c++
++#define CplusplusCmd            c++
 +#endif
 +
 +/* default flags to pass to cc */
