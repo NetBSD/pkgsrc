@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2001/02/21 20:33:52 veego Exp $
+# $NetBSD: Makefile,v 1.121 2001/02/24 01:34:32 jtb Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -101,6 +101,7 @@ SUBDIR+=	sane-backends
 SUBDIR+=	sane-frontends
 SUBDIR+=	scigraphica
 SUBDIR+=	sketch
+SUBDIR+=	tcm
 SUBDIR+=	tgif
 SUBDIR+=	tiff
 SUBDIR+=	tkpiechart
