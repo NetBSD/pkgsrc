@@ -1,0 +1,70 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/11/04 21:20:50 garbled Exp $
+--- xworm.c.orig	Wed May  7 09:25:57 1997
++++ xworm.c	Wed Nov  4 13:52:07 1998
+@@ -3,13 +3,20 @@
+  
+ #include <X11/Xlib.h>
+ #include <X11/Xutil.h>
++#if defined(__FreeBSD__) || defined(__NetBSD__)
++#include <sys/time.h>
++#endif
+ #include <time.h>
+ #include <string.h>
+ #include <stdio.h>
+ 
+-#define gridfile "xworm.grid"
+-#define fontfile "xworm.font"
+-#define logofile "xworm.raw"
++#ifndef PREFIX
++#define PREFIX "."
++#endif
++
++#define gridfile PREFIX "/xworm.grid"
++#define fontfile PREFIX "/xworm.font"
++#define logofile PREFIX "/xworm.raw"
+ 
+ #define maxQ 5000    /* max queue */
+ #define NCOLORS 15   /* number of colours */
+@@ -551,16 +558,24 @@
+  colormap = DefaultColormap(display, screen);
+   if (!XAllocColorCells(display, colormap, True, NULL, 0, pixels, npixels)) {
+     fprintf(stderr, "failed to allocate all %d colours\n", NCOLORS);
+-    exit(1);
+-  }
+-  for (i = 0; i < NCOLORS; i++) { /* Initialize RGB values ... */
+-    color_tab[i].pixel = pixels[i];
+-    color_tab[i].red   = rgb_tab[i].r;
+-    color_tab[i].green = rgb_tab[i].g;
+-    color_tab[i].blue  = rgb_tab[i].b;
+-    color_tab[i].flags = DoRed | DoGreen | DoBlue;
++    for (i = 0; i < NCOLORS; i++) { /* Initialize RGB values ... */
++      color_tab[i].pixel = pixels[i];
++      color_tab[i].red   = rgb_tab[i].r;
++      color_tab[i].green = rgb_tab[i].g;
++      color_tab[i].blue  = rgb_tab[i].b;
++      color_tab[i].flags = DoRed | DoGreen | DoBlue;
++      XAllocColor(display, colormap, &color_tab[i]);
++    }
++  } else {
++    for (i = 0; i < NCOLORS; i++) { /* Initialize RGB values ... */
++      color_tab[i].pixel = pixels[i];
++      color_tab[i].red   = rgb_tab[i].r;
++      color_tab[i].green = rgb_tab[i].g;
++      color_tab[i].blue  = rgb_tab[i].b;
++      color_tab[i].flags = DoRed | DoGreen | DoBlue;
++    }
++    XStoreColors(display, colormap, color_tab, npixels);
+   }
+-  XStoreColors(display, colormap, color_tab, npixels);
+ }
+ 
+ Bool predproc (display,event,arg)
+@@ -773,7 +788,7 @@
+ void rgrid(void){
+  FILE *fpg;
+  if ((fpg=fopen(gridfile,"rb")) == NULL) {
+-  printf("Error opening file /users/paalde/bin/xworm.grid. unrecoverable \n");
++  printf("Error opening file %s/xworm.grid. unrecoverable \n", PREFIX);
+   exit (0);
+  }
+  for (i=1;i<maxGrid;i++) {
