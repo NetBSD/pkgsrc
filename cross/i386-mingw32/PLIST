@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/24 04:56:30 kent Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/04/05 18:55:26 kent Exp $
 bin/i386-mingw32-addr2line
 bin/i386-mingw32-ar
 bin/i386-mingw32-as
 bin/i386-mingw32-c++
 bin/i386-mingw32-c++filt
 bin/i386-mingw32-dlltool
+bin/i386-mingw32-dllwrap
 bin/i386-mingw32-g++
 bin/i386-mingw32-gcc
 bin/i386-mingw32-ld
@@ -22,6 +23,7 @@ i386-mingw32/bin/as
 i386-mingw32/bin/c++
 i386-mingw32/bin/c++filt
 i386-mingw32/bin/dlltool
+i386-mingw32/bin/dllwrap
 i386-mingw32/bin/g++
 i386-mingw32/bin/gcc
 i386-mingw32/bin/ld
@@ -486,6 +488,7 @@ lib/gcc-lib/i386-mingw32/${GCC_VERSION}/specs
 @dirrm i386-mingw32/include/sys
 @dirrm i386-mingw32/include
 @dirrm i386-mingw32/lib
+@dirrm i386-mingw32
 @dirrm info
 @dirrm lib/gcc-lib/i386-mingw32/${GCC_VERSION}/include
 @dirrm lib/gcc-lib/i386-mingw32/${GCC_VERSION}
