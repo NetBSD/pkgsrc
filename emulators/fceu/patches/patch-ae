@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1 2004/08/22 11:56:46 kristerw Exp $
+
+--- src/movie.c.orig	Sun Aug 22 13:44:10 2004
++++ src/movie.c	Sun Aug 22 13:44:49 2004
+@@ -154,6 +154,7 @@
+ 
+ void FCEUMOV_AddJoy(uint8 *js)
+ {
++ int tmpfix;
+  int x,y;
+ 
+  if(!current) return;	/* Not playback nor recording. */
+@@ -190,7 +191,7 @@
+    tmp >>= 5;
+    tmp &= 0x3;
+    ti=0;
+-   int tmpfix = tmp;
++   tmpfix = tmp;
+    while(tmp--) { nextts |= fgetc(slots[-1 - current]) << (ti * 8); ti++; }
+ 
+    // This fixes a bug in movies recorded before version 0.98.11
