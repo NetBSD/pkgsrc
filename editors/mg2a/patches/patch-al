@@ -1,0 +1,42 @@
+$NetBSD: patch-al,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+
+--- ./README.NetBSD.orig	Thu Mar 30 08:35:36 2000
++++ ./README.NetBSD	Thu Mar 30 08:35:36 2000
+@@ -0,0 +1,37 @@
++Modified by John P. Refling, Dec 1999.  This is version 1.00 of the
++mods.  Basically consists of the port to NetBSD and a change to the
++mg.rc startup file name and search paths. 
++
++Version 1.10 (Jan 2000) added journaling and the inital mirroring
++of files: 
++
++Journaling
++~~~~~~~~~~
++
++if a subdirectory named .journal exists in the directory of a
++previously existing edited file, the edited file is copied into the
++.journal subdirectory before the new version is written out.  The
++filename of the file in the journal subdirectory is appended with a
++-@# where # is the system time in seconds since January 1, 1970.
++
++This feature creates an automatic invisible backup chain of all files
++edited within a selected directory.
++
++state of selected files, before any editing.
++
++selective initial mirroring
++~~~~~~~~~~~~~~~~~~~~~~~~~~~
++
++if a subdirectory named .original exists in the directory of a
++previously existing edited file, and a copy of the editied file
++does not exist there, then the edited file is copied into the .original
++subdirectory before the new version is written out.
++This feature provides automatic invisible backups of the original
++state of selected files, before any editing.  Useful for keeping
++track of the original contents of distributed configuration files.
++Files in the .original subdirectory with non-zero size indicate that
++the corresponding file has been modified.
++
++If the environment variable MG_DOT_ORIG is set, then the edited
++file is copied to a .orig file, if the .orig file does not exist.
++Helpful for creating diffs.

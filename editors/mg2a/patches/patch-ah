@@ -1,0 +1,60 @@
+$NetBSD: patch-ah,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+
+--- ./main.c.orig	Sun Jul  3 10:49:25 1988
++++ ./main.c	Thu Mar 30 08:35:35 2000
+@@ -20,6 +20,35 @@
+ 
+ static VOID	edinit();
+ 
++// refling all the next few lines....
++#include <stdio.h>
++#include <sys/types.h>
++#include <sys/stat.h>
++#include <stdlib.h>
++
++char *getrc(char *progname, char *tmpr)
++{
++char *p, *e;
++int gotit = 0;
++char tmp[1000];
++struct stat statb;
++if (NULL == strrchr(progname, '/')) {
++   p = (char *)strcat(getenv("PATH"), ":");
++   while (NULL != (e = (char *)strchr(p, ':')))
++     {*e = 0;
++     if (!stat(strcat(strcpy(tmp, p), "/mg.rc"), &statb)) return(strcpy(tmpr, tmp));
++     p = ++e;}}
++else {
++   strcpy(tmp, progname);
++   *(char *)strrchr(tmp, '/') = 0;
++   strcat(tmp, "/mg.rc");
++   if (!stat(tmp, &statb)) return(strcpy(tmpr, tmp));}
++return(NULL);
++}
++
++// refling end.........
++
++
+ VOID
+ main(argc, argv)
+ int  argc;
+@@ -27,6 +56,8 @@
+ {
+ #ifndef NO_STARTUP
+ 	char	*startupfile();
++	char	*getrc();   // refling
++	char	tmppp[200];  // refling
+ #endif
+ 	char	*cp;
+ 	VOID	vtinit(), makename(), eerase();
+@@ -47,7 +78,9 @@
+ 	 */
+ 	update();
+ #ifndef NO_STARTUP				/* User startup file.	*/
+-	if ((cp = startupfile((char *)NULL)) != NULL)
++//	if ((cp = startupfile((char *)NULL)) != NULL)
++//		(VOID) load(cp);
++	if ((cp = getrc(argv[0], tmppp)) != NULL)  // refling
+ 		(VOID) load(cp);
+ #endif
+ 	while (--argc > 0) {

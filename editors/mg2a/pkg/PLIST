@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/04/01 00:21:25 dmcmahill Exp $
+bin/mg
+bin/mg.rc
+man/man1/mg.1
