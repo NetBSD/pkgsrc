@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/09/04 19:17:18 bad Exp $
+# $NetBSD: Makefile,v 1.15 1998/10/28 19:44:24 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/10/23 15:17:43 max Exp
 #
 
@@ -11,6 +11,8 @@ HOMEPAGE=	http://samba.anu.edu.au/samba/samba.html
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 
+.include "../../mk/bsd.prefs.mk"
+
 STARTUP_SCRIPT=	${PREFIX}/etc/rc.d/samba.sh.sample
 SAMPLE_CONFIG=	${PREFIX}/etc/smb.conf.sample
 SAMBA_LOGDIR=	/var/log
@@ -18,9 +20,8 @@ SAMBA_LOCKDIR=	/var/run/samba
 SAMBA_ETCDIR?=	/etc/samba
 SAMBA_PRIVATE?=	${SAMBA_ETCDIR}/private
 
-MAKE_ENV+=	ETCDIR=${SAMBA_ETCDIR} PRIVDIR=${SAMBA_PRIVATE} LOGDIR=${SAMBA_LOGDIR} LOCKDIR=${SAMBA_LOCKDIR}
-
-.include "../../mk/bsd.prefs.mk"
+MAKE_ENV+=	ETCDIR=${SAMBA_ETCDIR} PRIVDIR=${SAMBA_PRIVATE}
+MAKE_ENV+=	LOGDIR=${SAMBA_LOGDIR} LOCKDIR=${SAMBA_LOCKDIR}
 
 PLIST_SRC= ${WRKDIR}/.PLIST-src
 
@@ -28,22 +29,22 @@ post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/samba/faq
 	for i in ${WRKDIR}/${DISTNAME}/docs/*.txt ${WRKDIR}/${DISTNAME}/docs/README* ; do \
-		${INSTALL_DATA} $$i ${PREFIX}/share/doc/samba ; \
+		${INSTALL_DATA} $$i ${PREFIX}/share/doc/samba; \
 	done
 	for i in ${WRKDIR}/${DISTNAME}/docs/faq/* ; do \
-		${INSTALL_DATA} $$i ${PREFIX}/share/doc/samba/faq ; \
+		${INSTALL_DATA} $$i ${PREFIX}/share/doc/samba/faq; \
 	done
 .endif
-	${ECHO} "Installing ${STARTUP_SCRIPT} startup file." ;	\
-	${ECHO} '#!/bin/sh' > ${STARTUP_SCRIPT} ;		\
-	${ECHO} 'smbd=${PREFIX}/sbin/smbd' >> ${STARTUP_SCRIPT} ;\
-	${ECHO} 'nmbd=${PREFIX}/sbin/nmbd' >> ${STARTUP_SCRIPT} ;\
-	${ECHO} 'if [ -f $$smbd ]; then' >> ${STARTUP_SCRIPT}	;\
-	${ECHO} "	${ECHO} -n ' Samba'" >> ${STARTUP_SCRIPT} ;\
-	${ECHO} '	$$smbd -D' >> ${STARTUP_SCRIPT} ;	\
-	${ECHO} '	$$nmbd -D' >> ${STARTUP_SCRIPT} ;	\
-	${ECHO} "fi" >> ${STARTUP_SCRIPT} ;			\
-	chmod 755 ${STARTUP_SCRIPT} ;				\
+	${ECHO} "Installing ${STARTUP_SCRIPT} startup file.";		\
+	${ECHO} '#!/bin/sh' > ${STARTUP_SCRIPT};			\
+	${ECHO} 'smbd=${PREFIX}/sbin/smbd' >> ${STARTUP_SCRIPT};	\
+	${ECHO} 'nmbd=${PREFIX}/sbin/nmbd' >> ${STARTUP_SCRIPT};	\
+	${ECHO} 'if [ -f $$smbd ]; then' >> ${STARTUP_SCRIPT};		\
+	${ECHO} "	${ECHO} -n ' Samba'" >> ${STARTUP_SCRIPT};	\
+	${ECHO} '	$$smbd -D' >> ${STARTUP_SCRIPT};		\
+	${ECHO} '	$$nmbd -D' >> ${STARTUP_SCRIPT};		\
+	${ECHO} "fi" >> ${STARTUP_SCRIPT};				\
+	chmod 755 ${STARTUP_SCRIPT};					\
 	chown bin.bin ${STARTUP_SCRIPT};
 	@if [ ! -f ${SAMPLE_CONFIG} ]; then				\
 		${SED} -e 's:__LOGDIR__:${SAMBA_LOGDIR}:g'		\
@@ -63,6 +64,6 @@ post-install:
 	fi
 	chown root.wheel ${PREFIX}/bin/smbpasswd
 	chmod 4111 ${PREFIX}/bin/smbpasswd
-	sed -e 's:__SAMBA_PRIVATE__:${SAMBA_PRIVATE}:g' ${PKGDIR}/PLIST > ${PLIST_SRC}
+	${SED} -e 's:__SAMBA_PRIVATE__:${SAMBA_PRIVATE}:g' ${PKGDIR}/PLIST > ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
