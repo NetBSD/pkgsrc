@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.2 2000/08/29 16:26:20 rh Exp $
+$NetBSD: patch-ag,v 1.3 2000/10/22 07:35:45 rh Exp $
 
---- configure.orig	Sun Aug 13 11:52:08 2000
+--- configure.orig	Fri Oct 20 00:19:29 2000
 +++ configure
 @@ -3556,7 +3556,7 @@
    cat conftest.$ac_ext >&5
@@ -11,13 +11,11 @@ $NetBSD: patch-ag,v 1.2 2000/08/29 16:26:20 rh Exp $
  fi
  rm -f conftest*
  		INSTOBJEXT=.mo
-@@ -5151,8 +5151,7 @@
- 	-Wall -Wno-uninitialized \
+@@ -5153,7 +5153,6 @@
+ 	-Wall \
  	-Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes \
  	-Wnested-externs -Wpointer-arith \
--	-Wno-sign-compare -Wsign-promo \
--	-Werror"
-+	-Wno-sign-compare -Wsign-promo"
- fi
+-	-Werror \
+ 	$CFLAGS"
  
- trap '' 1 2 15
+ 	for option in -Wsign-promo -Wno-sign-compare; do
