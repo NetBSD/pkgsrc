@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2002/11/28 19:57:28 jmmv Exp $
+
+SYSBUILD_USER=@SYSBUILD_USER@
+SYSBUILD_HOMEDIR=@SYSBUILD_HOMEDIR@
+EGDIR=@EGDIR@
+
+case ${STAGE} in
+POST-INSTALL)
+	echo "Creating sysbuild's home directory..."
+	if [ ! -d ${SYSBUILD_HOMEDIR} ]; then
+		${MKDIR} -p ${SYSBUILD_HOMEDIR} > /dev/null 2>&1
+		${CP} /etc/skel/.[a-z]* ${SYSBUILD_HOMEDIR} > /dev/null 2>&1
+	fi
+	echo "Setting up sysbuild's crontab..."
+	crontab -u ${SYSBUILD_USER} -r > /dev/null 2>&1
+	crontab -u ${SYSBUILD_USER} ${EGDIR}/crontab > /dev/null 2>&1
+	;;
+
+DEINSTALL)
+	echo "Removing sysbuild's crontab..."
+	crontab -u ${SYSBUILD_USER} -r > /dev/null 2>&1
+	${CAT} << EOF
+===========================================================================
+If you will not be using sysbuild any longer, you may want to remove
+sysbuild's home directory and all work areas. Just to let you know, work
+areas can be removed using the 'destroy' target of the program.
+===========================================================================
+EOF
+	;;
+esac
