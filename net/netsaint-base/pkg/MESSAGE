@@ -1,0 +1,17 @@
+$NetBSD: MESSAGE,v 1.1.1.1 2001/01/16 15:39:43 rh Exp $
+
+==========================================================================
+  netsaint-base has now been installed.  Before using this package for
+  the first time, you need to run 'netsaint-setup.sh' and then set up the
+  configuration files in @@PREFIX@@/etc/netsaint (simply copy over the
+  sample configuration files you find there and edit them accordingly).
+
+  If you want to use the web frontend, you need to make sure that the
+  user your CGI scripts are running under has write access to the
+  directory 'netsaint.cmd' resides in (see 'command_file' in the
+  'netsaint.cfg' configuration file for more information).
+  
+  Please note that without plug-ins, this package will not do anything
+  useful.  It is therefore recommended to install the 'netsaint-plugins'
+  package as well.
+==========================================================================
