@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2003/05/22 09:37:28 wiz Exp $
+
+--- gcc/Makefile.in.orig	Fri Apr 18 08:36:04 2003
++++ gcc/Makefile.in
+@@ -1236,6 +1236,7 @@ c-semantics.o : c-semantics.c $(CONFIG_H
+ # Language-independent files.
+ 
+ DRIVER_DEFINES = \
++  -DLINK_LIBGCC_SPEC="\"%D $(RPATH_FLAG)$(GCC_PREFIX)/lib\"" \
+   -DSTANDARD_STARTFILE_PREFIX=\"$(unlibsubdir)/\" \
+   -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc-lib/\" \
+   -DDEFAULT_TARGET_VERSION=\"$(version)\" \
