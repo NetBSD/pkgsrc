@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2005/02/16 12:22:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2005/03/22 14:53:28 adam Exp $
 bin/function_grep.pl
 bin/notepad
 bin/progman
@@ -236,6 +236,7 @@ include/wine/windows/objidl.h
 include/wine/windows/objidl.idl
 include/wine/windows/ocidl.h
 include/wine/windows/ocidl.idl
+include/wine/windows/odbcinst.h
 include/wine/windows/ole2.h
 include/wine/windows/ole2ver.h
 include/wine/windows/oleauto.h
@@ -521,6 +522,7 @@ lib/wine/libpsapi.def
 lib/wine/libqcap.def
 lib/wine/libquartz.def
 lib/wine/librasapi32.def
+lib/wine/libriched20.def
 lib/wine/libriched32.def
 lib/wine/librpcrt4.def
 lib/wine/librsabase.def
@@ -629,6 +631,7 @@ lib/wine/rasapi16.dll.so
 lib/wine/rasapi32.dll.so
 lib/wine/regedit.exe.so
 lib/wine/regsvr32.exe.so
+lib/wine/riched20.dll.so
 lib/wine/riched32.dll.so
 lib/wine/rpcrt4.dll.so
 lib/wine/rpcss.exe.so

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2005/03/14 13:56:57 abs Exp $
+# $NetBSD: Makefile,v 1.81 2005/03/22 14:53:28 adam Exp $
 
-DISTNAME=	Wine-20050211
+DISTNAME=	Wine-20050310
 PKGNAME=	${DISTNAME:S/W/w/}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wine/} \
@@ -19,7 +19,7 @@ YACC=		${PREFIX}/bin/bison -y
 CONFLICTS=	rewind-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
-ONLY_FOR_PLATFORM+=	FreeBSD*-i386 Linux*-i386 SunOS*-i386
+ONLY_FOR_PLATFORM+=	FreeBSD*-i386 Linux*-i386 SunOS*-i386 Darwin*-i386
 
 WRKSRC=		 	${WRKDIR}/${DISTNAME:S/W/w/}
 USE_BUILDLINK3=		yes
