@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:14:43 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/03/24 11:14:13 wiz Exp $
 
 DISTNAME=	bzflag-1.10.6.20040515
 PKGNAME=	${DISTNAME:S/.20040515//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games x11
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=bzflag/}
 
@@ -32,7 +32,8 @@ CONFIGURE_ARGS+=	--with-ncurses
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/Mesa/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
