@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2003/12/20 16:07:42 grant Exp $
+# $NetBSD: Makefile.common,v 1.25 2004/01/12 11:44:47 grant Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -103,7 +103,11 @@ SCRIPTS_ENV+=	SUNOSLIB=${SUNOSLIB}
 
 PTHREAD_OPTS+=	native optional
 
+.if !empty(CC_VERSION:Mgcc*)
 COPTS?=			-O2
+.else
+COPTS?=			-O
+.endif
 CONFIGURE_ARGS+=	--enable-optimize=${COPTS:Q}
 
 XPTCFILES+=	xptcinvoke_asm_sparc64_netbsd.s xptcstubs_asm_sparc64_netbsd.s
