@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/15 10:37:24 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/15 10:44:30 grant Exp $
 
 DISTNAME=		sqlrelay-0.33.1
 CATEGORIES=		databases
@@ -9,7 +9,7 @@ HOMEPAGE=		http://sqlrelay.sourceforge.net/
 COMMENT=		Enables pooling and sharing of database connections
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GCC_SHLIB=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
@@ -23,14 +23,14 @@ SQLRELAY.${_db_}?=	YES
 .endfor
 
 .if defined(SQLRELAY.mysql) && ${SQLRELAY.mysql} == "YES"
-.  include "../../databases/mysql-client/buildlink2.mk"
+.  include "../../databases/mysql-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_DIR}
 .endif
 
 .if defined(SQLRELAY.postgresql) && ${SQLRELAY.postgresql} == "YES"
-.  include "../../databases/postgresql-lib/buildlink2.mk"
+.  include "../../databases/postgresql-lib/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-postgresql=${BUILDLINK_DIR}
 .endif
 
-.include "../../devel/rudiments/buildlink2.mk"
+.include "../../devel/rudiments/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
