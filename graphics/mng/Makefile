@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/12/02 15:20:10 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/12/23 16:19:04 cjep Exp $
 
 DISTNAME=	libmng-1.0.4
 PKGNAME=	${DISTNAME:S/lib//}
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=	--with-lcms=${BUILDLINK_PREFIX.lcms}
 CPPFLAGS+=		${BUILDLINK_CPPFLAGS.lcms}
 
-DOCDIR=			${PREFIX}/share/doc/mng	
+DOCDIR=			${PREFIX}/share/doc/mng
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
