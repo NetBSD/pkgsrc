@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.6 2001/02/27 08:48:15 tron Exp $
+
+--- configure.orig	Fri Jun 23 18:09:54 2000
++++ configure	Tue Feb 27 09:31:08 2001
+@@ -2851,12 +2851,12 @@
+ 
+     if test "x$prefix" = xNONE; then
+       cat >> confdefs.h <<EOF
+-#define LOCALEDIR "$ac_default_prefix/share/locale"
++#define LOCALEDIR "$ac_default_prefix/${PKGLOCALEDIR}/locale"
+ EOF
+ 
+     else
+       cat >> confdefs.h <<EOF
+-#define LOCALEDIR "$prefix/share/locale"
++#define LOCALEDIR "$prefix/${PKGLOCALEDIR}/locale"
+ EOF
+ 
+     fi
