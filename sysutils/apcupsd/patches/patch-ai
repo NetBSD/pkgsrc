@@ -1,0 +1,112 @@
+$NetBSD: patch-ai,v 1.1.1.1 2000/01/21 19:16:00 bouyer Exp $
+
+--- installs/powersc.orig	Tue Jul 20 18:58:51 1999
++++ installs/powersc	Tue Jul 20 19:14:13 1999
+@@ -4,25 +4,9 @@
+ POWERPID=/var/run/power.pid
+ APCPID=/var/run/apcupsd.pid
+ 
+-if [ -x /sbin/shutdown ]; then
+ 	SHUTDOWN=/sbin/shutdown
+-elif [ -x /sbin/shutdown.bsd ]; then
+-	SHUTDOWN=/sbin/shutdown.bsd
+-else
+-	echo Command shutdown or shutdown.bsd not found!
+-	exit 1
+-fi
+ 
+-if [ -x /usr/local/sbin/apcupsd ]; then
+-	APCUPSD=/usr/local/sbin/apcupsd
+-elif [ -x /usr/sbin/apcupsd ]; then
+-	APCUPSD=/usr/sbin/apcupsd
+-elif [ -x /sbin/apcupsd ]; then
+-	APCUPSD=/sbin/apcupsd
+-else
+-	echo Command apcupsd not found!
+-	exit 1
+-fi
++	APCUPSD=@@PREFIX@@/sbin/apcupsd
+ 
+ if test "$(whoami)" != "root"; then
+ 	printf "Sorry, you must be root to run this script." | wall
+@@ -32,42 +16,52 @@
+ case "$1" in
+ 	POWEROUT)
+ 		printf "Warning there are Power problems." | wall
++		/usr/bin/logger -p user.info -t apcupsd \
++			"Warning there are Power problems."
+ 		;;
+ 	ONBATTERY)
+ 		printf "Power Failure running on UPS." | wall
++		/usr/bin/logger -p user.info -t apcupsd \
++			"Power Failure running on UPS."
+ 		;;
+ 	FAILING)
+ 		printf "Battery Power Failed, Normal Shutdown.\n" | wall
++		/usr/bin/logger -p user.emerg -t apcupsd \
++			"UPS Battery Power Failed, Normal Shutdown."
+ 		;;
+ 	TIMEOUT)
+ 		printf "Online Battery timeout, Normal Shutdown.\n" | wall
++		/usr/bin/logger -p user.emerg -t apcupsd \
++			"UPS Online Battery timeout, Normal Shutdown."
+ 		;;
+ 	LOADLIMIT)
+ 		printf "Battery Load Limits Reached, Normal Shutdown.\n" | wall
++		/usr/bin/logger -p user.emerg -t apcupsd \
++			"UPS Battery Load Limits Reached, Normal Shutdown."
+ 		;;
+ 	RUNLIMIT)
+ 		printf "Battery RunTime Limits Reached, Normal Shutdown.\n" | wall
++		/usr/bin/logger -p user.emerg -t apcupsd \
++			"Battery RunTime Limits Reached, Normal Shutdown."
+ 		;;
+ 	DOSHUTDOWN)
+ 		printf "Beginning Shutdown Sequence!!!!!" | wall
+-		ps x | gawk '{ if (($5 == "init") && ($1 == "1")) print $6 }' \
+-			| cut -f2 -d[ | cut -f1 -d] \
+-			> /tmp/run.level.power
+ 		if [ -f $POWERPID ]
+ 		then
+ 			exit 0
+ 		else
+ 			echo $$ > $POWERPID
+-			$SHUTDOWN -h now
++			$SHUTDOWN -h now "UPS Powerfail"
+ 		fi
+ 		;;
+ 	MAINSBACK | WAITASEC)
+ 		printf "Power has returned..." | wall
++		/usr/bin/logger -p user.info -t apcupsd \
++			"Power has returned..."
+ 		if [ -f $POWERPID ]; then
+ 			printf "Attempting to cancel shutdown."
+ 			kill $(cat $POWERPID)
+ 			rm -f $POWERPID
+-			init $(cat /tmp/run.level.power)
+ 		fi
+ 		;;
+ 	ANNOYME)
+@@ -75,14 +69,20 @@
+ 		;;
+ 	EMERGENCY)
+ 		printf "Emergency Shutdown, Possible Battery Failure!!!!" | wall
+-		$SHUTDOWN -h now
++		/usr/bin/logger -p user.emerg -t apcupsd \
++			"Emergency Shutdown, Possible Battery Failure!!!!"
++		$SHUTDOWN -h now "Emergency Shutdown"
+ 		;;
+ 	CHANGEME)
+ 		printf "Emergency, Batteries Have Failed!!!!\nChange Them NOW!!!!" | wall
++		/usr/bin/logger -p user.emerg -t apcupsd \
++		    "Emergency, Batteries Have Failed!!!! Change Them NOW!!!!"
+ 		;;
+ 	REMOTE)
+ 		printf "Remote Calls, Normal Shutdown.\nBeginning Shutdown Sequence!!!!!" | wall
+-		$SHUTDOWN -h now
++		/usr/bin/logger -p user.emerg -t apcupsd \
++		    "Remote Calls, Normal Shutdown"
++		$SHUTDOWN -h now "Remote Calls, Normal Shutdown"
+ 		;;
+ 	KILL)	sleep 1
+ 		$APCUPSD killpower
