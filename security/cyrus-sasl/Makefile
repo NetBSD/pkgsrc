@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/01/31 19:52:02 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2002/01/31 20:42:09 jlam Exp $
 
 DISTNAME=		cyrus-sasl-1.5.27
 SVR4_PKGNAME=		csasl
@@ -33,7 +33,7 @@ FILES_SUBST+=		PWCHECKDIR=${PWCHECKDIR}
 
 BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
 
-PLIST_SRC=		${PKGDIR}/PLIST.common
+PLIST_SRC=		${.CURDIR}/PLIST.common
 
 CONFIGURE_ARGS+=	--with-pwcheck=${PWCHECKDIR}
 CONFIGURE_ARGS+=	--with-dblib=ndbm
@@ -55,12 +55,12 @@ CONFIGURE_ARGS+=	--disable-krb4		# --- no KERBEROS_V4
 
 .if defined(SASL_USE_GSSAPI) && ${SASL_USE_GSSAPI} == "YES"
 CONFIGURE_ARGS+=	--enable-gssapi=/usr	# GSSAPI
-PLIST_SRC+=		${PKGDIR}/PLIST.krb5
+PLIST_SRC+=		${.CURDIR}/PLIST.krb5
 .else
 CONFIGURE_ARGS+=	--disable-gssapi	# --- no GSSAPI
 .endif
 
-PLIST_SRC+=		${PKGDIR}/PLIST.plugins
+PLIST_SRC+=		${.CURDIR}/PLIST.plugins
 
 .if defined(USE_PAM)
 .include "../../security/PAM/buildlink.mk"
@@ -71,9 +71,11 @@ CONFIGURE_ARGS+=	--with-pam=${PREFIX}
 PKG_GROUPS=		${CYRUS_GROUP}
 PKG_USERS=		${CYRUS_USER}:${CYRUS_GROUP}::::${SH}
 RCD_SCRIPTS=		sasl_pwcheck
+OWN_DIRS=		${PREFIX}/lib/sasl
 OWN_DIRS_PERMS=		${PWCHECKDIR} ${CYRUS_USER} ${ROOT_GROUP} 0700
 
-DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
+DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 
 post-extract:
 	cd ${WRKSRC}; ${RM} -f include/md5.h
