@@ -1,0 +1,17 @@
+# $NetBSD: devs.x11,v 1.1.1.1 2000/05/07 02:04:34 jlam Exp $
+#
+# X11 drivers for Ghostscript
+
+DEVICE_DEVS+=	\
+	$(DD)x11.dev \
+	$(DD)x11alpha.dev \
+	$(DD)x11cmyk.dev \
+	$(DD)x11cmyk2.dev  \
+	$(DD)x11cmyk4.dev \
+	$(DD)x11cmyk8.dev \
+	$(DD)x11gray2.dev \
+	$(DD)x11gray4.dev \
+	$(DD)x11mono.dev \
+	$(DD)x11rg16x.dev \
+	$(DD)x11rg32x.dev
+

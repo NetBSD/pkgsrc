@@ -1,0 +1,51 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
+
+--- src/contrib.mak-5.94.add.orig	Sat Oct 16 16:20:06 1999
++++ src/contrib.mak-5.94.add	Mon May  1 20:26:23 2000
+@@ -74,6 +74,10 @@
+ #	-DHPDJ_MARGIN_FILE='"$(gsdatadir)/hpdj.mdf"'
+ #
+ ###############################################################################
++#
++# 20000430	Adapt makefile fragment to latest Ghostscript conventions.
++#
++###############################################################################
+ 
+ # Compilation options
+ hpdj_options=
+@@ -90,23 +94,23 @@
+ # Header file dependencies
+ $(hpdj_): $(GLSRC)pclcomp.h $(GLSRC)hpdj.h
+ 
+-$(GLOBJ)gdevhpdj.$(OBJ): $(GLSRC)gdevhpdj.c
+-	$(GLCC) $(C_) $(O_)$@ $(hpdj_opts) $(GLSRC)gdevhpdj.c
++$(GLOBJ)gdevhpdj.$(OBJ): $(GLSRC)gdevhpdj.c $(PDEVH)
++	$(GLCC) $(GLO_)gdevhpdj.$(OBJ) $(hpdj_opts) $(C_) $(GLSRC)gdevhpdj.c
+ 
+-$(GLOBJ)hpdjdata.$(OBJ): $(GLSRC)hpdjdata.c
+-	$(GLCC) $(C_) $(O_)$@ $(hpdj_opts) $(GLSRC)hpdjdata.c
++$(GLOBJ)hpdjdata.$(OBJ): $(GLSRC)hpdjdata.c $(PDEVH)
++	$(GLCC) $(GLO_)hpdjdata.$(OBJ) $(hpdj_opts) $(C_) $(GLSRC)hpdjdata.c
+ 
+-$(GLOBJ)hpdjparm.$(OBJ): $(GLSRC)hpdjparm.c
+-	$(GLCC) $(C_) $(O_)$@ $(hpdj_opts) $(GLSRC)hpdjparm.c
++$(GLOBJ)hpdjparm.$(OBJ): $(GLSRC)hpdjparm.c $(PDEVH)
++	$(GLCC) $(GLO_)hpdjparm.$(OBJ) $(hpdj_opts) $(C_) $(GLSRC)hpdjparm.c
+ 
+-$(GLOBJ)hpdjprn.$(OBJ): $(GLSRC)hpdjprn.c
+-	$(GLCC) $(C_) $(O_)$@ $(hpdj_opts) $(GLSRC)hpdjprn.c
++$(GLOBJ)hpdjprn.$(OBJ): $(GLSRC)hpdjprn.c $(PDEVH)
++	$(GLCC) $(GLO_)hpdjprn.$(OBJ) $(hpdj_opts) $(C_) $(GLSRC)hpdjprn.c
+ 
+-$(GLOBJ)pclcomp.$(OBJ): $(GLSRC)pclcomp.c
+-	$(GLCC) $(C_) $(O_)$@ $(hpdj_opts) $(GLSRC)pclcomp.c
++$(GLOBJ)pclcomp.$(OBJ): $(GLSRC)pclcomp.c $(PDEVH)
++	$(GLCC) $(GLO_)pclcomp.$(OBJ) $(hpdj_opts) $(C_) $(GLSRC)pclcomp.c
+ 
+-$(GLOBJ)pagecount.$(OBJ): $(GLSRC)pagecount.c
+-	$(GLCC) $(C_) $(O_)$@ $(hpdj_opts) $(GLSRC)pagecount.c
++$(GLOBJ)pagecount.$(OBJ): $(GLSRC)pagecount.c $(PDEVH)
++	$(GLCC) $(GLO_)pagecount.$(OBJ) $(hpdj_opts) $(C_) $(GLSRC)pagecount.c
+ 
+ 
+ $(DD)hpdj.dev: $(hpdj_) $(DD)page.dev

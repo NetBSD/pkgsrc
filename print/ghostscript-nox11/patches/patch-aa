@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/07 02:04:34 jlam Exp $
+
+--- lib/fixmswrd.pl.in.orig	Thu Mar  9 03:40:39 2000
++++ lib/fixmswrd.pl.in	Mon May  1 20:26:23 2000
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!@PERL@
+ # $Id: patch-aa,v 1.1.1.1 2000/05/07 02:04:34 jlam Exp $
+ 
+ # $Id: patch-aa,v 1.1.1.1 2000/05/07 02:04:34 jlam Exp $

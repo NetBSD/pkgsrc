@@ -1,0 +1,26 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
+
+--- src/gdev10v.mak.orig	Mon May  1 20:24:43 2000
++++ src/gdev10v.mak	Mon May  1 20:26:23 2000
+@@ -1,12 +1,15 @@
+ ### ----------------- The Canon BubbleJet BJ10v device ----------------- ###
+ 
+-bj10v_=gdev10v.$(OBJ) gdevprn.$(OBJ)
+-bj10v.dev: $(bj10v_)
+-	$(SHP)gssetdev bj10v $(bj10v_)
+-bj10vh.dev: $(bj10v_)
+-	$(SHP)gssetdev bj10vh $(bj10v_)
++bj10v_=$(GLOBJ)gdev10v.$(OBJ) $(GLOBJ)gdevprn.$(OBJ)
++
++$(DD)bj10v.dev: $(bj10v_) $(DD)page.dev
++	$(SETPDEV) $(DD)bj10v $(bj10v_)
++
++$(DD)bj10vh.dev: $(bj10v_) $(DD)page.dev
++	$(SETPDEV) $(DD)bj10vh $(bj10v_)
+ 
+ # Uncomment the following line if you are using MS-DOS on PC9801 series.
+ 
+-gdev10v.$(OBJ): gdevbj10.c $(PDEVH)
++$(GLOBJ)gdev10v.$(OBJ): $(GLSRC)gdevbj10.c $(PDEVH)
++	$(GLCC) $(GLO_)gdev10v.$(OBJ) $(C_) $(GLSRC)gdev10v.c
+ #	$(CCC) -DPC9801 gdev10v.c

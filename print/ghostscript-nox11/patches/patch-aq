@@ -1,0 +1,30 @@
+$NetBSD: patch-aq,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
+
+--- src/gp_unifs.c.orig	Thu Mar  9 03:40:41 2000
++++ src/gp_unifs.c	Mon May  1 20:26:24 2000
+@@ -36,8 +36,12 @@
+ #  define MAXPATHLEN 1024
+ #endif
+ 
++#ifdef HAVE_MKSTEMP
++#include <stdlib.h>
++#else
+ /* Library routines not declared in a standard header */
+ extern char *mktemp(P1(char *));
++#endif
+ 
+ /* ------ File naming and accessing ------ */
+ 
+@@ -69,8 +73,12 @@
+     if (*fname != 0 && fname[strlen(fname) - 1] == 'X')
+ 	strcat(fname, "-");
+     strcat(fname, "XXXXXX");
++#ifdef HAVE_MKSTEMP
++    return fdopen(mkstemp(fname), mode);
++#else
+     mktemp(fname);
+     return fopen(fname, mode);
++#endif
+ }
+ 
+ /* Open a file with the given name, as a stream of uninterpreted bytes. */

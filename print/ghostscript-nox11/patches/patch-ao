@@ -1,0 +1,31 @@
+$NetBSD: patch-ao,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
+
+--- src/gdevrpdl.mak.orig	Mon May  1 20:36:35 2000
++++ src/gdevrpdl.mak	Mon May  1 22:00:17 2000
+@@ -1,15 +1,17 @@
+ ### ---------- RICOH RPDL IV(600dpi) printer devices ---------- ###
+-rpdl_=gdevrpdl.$(OBJ)
++rpdl_=$(GLOBJ)gdevrpdl.$(OBJ)
++$(GLOBJ)gdevrpdl.$(OBJ): $(GLSRC)gdevrpdl.c $(PDEVH)
++	$(GLCC) $(GLO_)gdevrpdl.$(OBJ) $(C_) $(GLSRC)gdevrpdl.c
+ 
+-rpdlA3.dev: $(rpdl_) page.dev
+-	$(SETPDEV) rpdlA3 $(rpdl_)
++$(DD)rpdlA3.dev: $(rpdl_) $(DD)page.dev
++	$(SETPDEV) $(DD)rpdlA3 $(rpdl_)
+ 
+-rpdlA4.dev: $(rpdl_) page.dev
+-	$(SETPDEV) rpdlA4 $(rpdl_)
++$(DD)rpdlA4.dev: $(rpdl_) $(DD)page.dev
++	$(SETPDEV) $(DD)rpdlA4 $(rpdl_)
+ 
+-rpdlB4.dev: $(rpdl_) page.dev
+-	$(SETPDEV) rpdlB4 $(rpdl_)
++$(DD)rpdlB4.dev: $(rpdl_) $(DD)page.dev
++	$(SETPDEV) $(DD)rpdlB4 $(rpdl_)
+ 
+-rpdlB5.dev: $(rpdl_) page.dev
+-	$(SETPDEV) rpdlB5 $(rpdl_)
++$(DD)rpdlB5.dev: $(rpdl_) $(DD)page.dev
++	$(SETPDEV) $(DD)rpdlB5 $(rpdl_)
+ 
