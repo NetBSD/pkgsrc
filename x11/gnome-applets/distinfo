@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2001/08/12 20:32:01 rh Exp $
+$NetBSD: distinfo,v 1.4 2001/10/06 18:29:33 rh Exp $
 
-SHA1 (gnome-applets-1.4.0.3.tar.bz2) = b0bc6039f61f3598d1031b60bc909336ec385927
-Size (gnome-applets-1.4.0.3.tar.bz2) = 5145653 bytes
+SHA1 (gnome-applets-1.4.0.4.tar.bz2) = 56aecb06aedb1997f4d4e8fc14f273b6618a2024
+Size (gnome-applets-1.4.0.4.tar.bz2) = 5141861 bytes
 SHA1 (patch-aa) = 2cd8ad931ed9e457ca6b2cd5a78bae3d1b209132
 SHA1 (patch-ac) = 6ac5186e16ebc9064e3afd14dcc2ec9d9a035dc0
 SHA1 (patch-af) = 6c19460c11ab68ca3a0303fa3427984a6422b124
