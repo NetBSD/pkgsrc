@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2002/06/01 11:46:47 grant Exp $
+# $NetBSD: Makefile,v 1.131 2002/06/07 12:23:11 tron Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -17,6 +17,7 @@ SUBDIR+=	cucipop
 SUBDIR+=	cue
 SUBDIR+=	cyrus-imapd
 SUBDIR+=	deliver
+SUBDIR+=	demime
 SUBDIR+=	distribute
 SUBDIR+=	dot-forward
 SUBDIR+=	drac
