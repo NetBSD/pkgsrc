@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/17 21:33:00 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/16 20:11:51 tv Exp $
 #
 
 DISTNAME=	patch-2.5.4
@@ -30,7 +30,7 @@ do-patch:
 	${MV} ${WRKSRC}/pch.c ${WRKSRC}/pch.c.orig
 	${AWK} '/#include <pch.h>/{print $$0 "\n#include <sys/param.h>";next;}\
 		/^#if HAVE_SETMODE/					\
-		{gsub(/^#if HAVE_SETMODE/,"#if defined(HAVE_SETMODE) \\&\\& (!(defined(BSD) \\&\\& BSD >= 199306))");print $$0; next; }			\
+		{gsub(/^#if HAVE_SETMODE/,"#if defined(HAVE_SETMODE) \\&\\& !(defined(BSD) \\&\\& BSD >= 199306) \\&\\& !defined(__INTERIX)");print $$0; next; } \
 		{print $$0;}'						\
 		< ${WRKSRC}/pch.c.orig 					\
 		> ${WRKSRC}/pch.c
