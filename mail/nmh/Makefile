@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2002/01/26 17:19:44 kim Exp $
+# $NetBSD: Makefile,v 1.46 2002/03/11 08:57:50 skrll Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -50,11 +50,6 @@ CONFIGURE_ARGS+=	--without-krb4
 DOCDIR=			share/doc/nmh
 
 BUILD_DEFS+=		NMH_MTA NMH_EDITOR NMH_PAGER NMH_HASH_BACKUP
-
-# Since we patch the autoconf files as well as their outputs, avoid attempt
-# to regenerate header input files with 'autoheader' by Makefile.
-post-patch:
-	${TOUCH} ${WRKSRC}/stamp-h.in
 
 .if defined(NMH_HASH_BACKUP) && (${NMH_HASH_BACKUP} == yes)
 post-configure:
