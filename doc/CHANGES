@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.315 2002/10/20 03:19:12 shell Exp $
+$NetBSD: CHANGES,v 1.316 2002/10/20 05:37:39 shell Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3335,7 +3335,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Update simh to 2.10-beta2 [thorpej 2002-10-19]
 	Update simh to 2.10-beta2nb1 (xq beta4) [thorpej 2002-10-19]
 	Update curl to 7.10.1 [shell 2002-10-20]
-	Update pycurl to 7.10.1 [shell 2002-10-20]
+	Update py-curl to 7.10.1 [shell 2002-10-20]
 	Update micq to 0.4.9.4 [shell 2002-10-20]
 	Update p5-Test-Harness to 2.26 [shell 2002-10-20]
 	Update p5-Test-Simple to 0.47 [shell 2002-10-20]
