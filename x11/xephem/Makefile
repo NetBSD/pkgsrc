@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/02/01 01:43:30 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/25 02:49:21 xtraeme Exp $
 
 DISTNAME=	xephem-3.5.2
 PKGREVISION=	1
@@ -13,7 +13,7 @@ COMMENT=	Interactive astronomical ephemeris program
 LICENSE=	no-commercial-use
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_IMAKE=	yes
 PERL_SCRIPTS=	astorb2edb.pl mpcorb2edb.pl
 
@@ -39,7 +39,7 @@ post-install:
 	done
 	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/xephem
 
-.include "../../lang/perl5/buildlink2.mk"
-.include "../../mk/motif.buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../mk/motif.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
