@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2004/04/15 10:41:14 tron Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/04/15 20:27:18 tron Exp $
 
 .if !defined(LIBSPF_ALT_BUILDLINK2_MK)
 LIBSPF_ALT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libspf_alt
-BUILDLINK_DEPENDS.libspf_alt?=	libspf_alt>=0.4.0
+BUILDLINK_DEPENDS.libspf_alt?=	libspf_alt>=0.4.0nb1
 BUILDLINK_PKGSRCDIR.libspf_alt?=	../../mail/libspf-alt
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libspf_alt=libspf_alt
