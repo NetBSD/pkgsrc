@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/02/25 13:42:13 tron Exp $
+# $NetBSD: Makefile,v 1.25 2001/02/25 13:44:55 tron Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/12/16 19:42:17 vanilla Exp
 #
 
@@ -49,6 +49,7 @@ do-install:
 	for FILE in ${WRKSRC}/doc/*; do \
 	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/doc/mrtg; \
 	done
+	${INSTALL_DATA} ${WRKSRC}/doc/mrtg.1 ${PREFIX}/man/man1
 	for FILE in cfgmaker.1 indexmaker.1; do \
 	  ${INSTALL_DATA} ${WRKSRC}/doc/$$FILE ${PREFIX}/man/man1/mrtg$$FILE; \
 	done
