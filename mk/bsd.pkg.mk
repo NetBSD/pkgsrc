@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1291 2003/09/28 08:52:13 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1292 2003/10/02 14:41:42 gavan Exp $
 #
 # This file is in the public domain.
 #
@@ -60,6 +60,11 @@ build-defs-message: ${WRKDIR}
 	@${TOUCH} ${WRKDIR}/.bdm_done
 .    endif
 .  endif
+.endif
+
+# Fail-safe in the case of circular dependencies
+.if defined(_PKGSRC_DEPS) && defined(PKGNAME) && !empty(_PKGSRC_DEPS:M${PKGNAME})
+    PKG_FAIL_REASON+="Circular dependency detected"
 .endif
 
 ##### Some NetBSD platforms permitted the user to set the binary format while
