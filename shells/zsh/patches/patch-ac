@@ -1,0 +1,28 @@
+$NetBSD: patch-ac,v 1.5 2001/06/20 05:39:03 jtb Exp $
+
+--- config.sub.orig	Wed Jun 13 21:15:55 2001
++++ config.sub	Wed Jun 13 21:17:07 2001
+@@ -213,8 +213,9 @@
+ 		| alphaev6[78] \
+ 		| we32k | ns16k | clipper | i370 | sh | sh[34] \
+ 		| powerpc | powerpcle \
+-		| 1750a | dsp16xx | pdp11 | mips16 | mips64 | mipsel | mips64el \
+-		| mips64orion | mips64orionel | mipstx39 | mipstx39el \
++		| 1750a | dsp16xx | pdp11 | mips16 | mips64 | mipseb \
++		| mipsel | mips64el | mips64orion | mips64orionel \
++		| mipstx39 | mipstx39el \
+ 		| mips64vr4300 | mips64vr4300el | mips64vr4100 | mips64vr4100el \
+ 		| mips64vr5000 | miprs64vr5000el | mcore \
+ 		| sparc | sparclet | sparclite | sparc64 | sparcv9 | v850 | c4x \
+@@ -255,8 +256,9 @@
+ 	      | we32k-* | cydra-* | ns16k-* | pn-* | np1-* | xps100-* \
+ 	      | clipper-* | orion-* \
+ 	      | sparclite-* | pdp11-* | sh-* | powerpc-* | powerpcle-* \
+-	      | sparc64-* | sparcv9-* | sparc86x-* | mips16-* | mips64-* | mipsel-* \
+-	      | mips64el-* | mips64orion-* | mips64orionel-* \
++	      | sparc64-* | sparcv9-* | sparc86x-* | mips16-* | mips64-* \
++	      | mipseb-* | mipsel-* | mips64el-* \
++	      | mips64orion-* | mips64orionel-* \
+ 	      | mips64vr4100-* | mips64vr4100el-* | mips64vr4300-* | mips64vr4300el-* \
+ 	      | mipstx39-* | mipstx39el-* | mcore-* \
+ 	      | f301-* | armv*-* | s390-* | sv1-* | t3e-* \
