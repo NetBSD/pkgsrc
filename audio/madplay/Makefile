@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/10/21 20:39:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/10/22 16:37:23 sommerfeld Exp $
 #
 
 DISTNAME=	mad-0.11.4b
@@ -17,6 +17,8 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--enable-fpm=i386
 .elif (${MACHINE_ARCH} == "sparc")
 CONFIGURE_ARGS+=	--enable-fpm=sparc
+.elif (${MACHINE_ARCH} == "arm32")
+CONFIGURE_ARGS+=	--enable-fpm=arm
 .endif
 
 .include "../../mk/bsd.pkg.mk"
