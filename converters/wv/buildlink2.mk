@@ -1,17 +1,32 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/07/13 13:50:54 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/12/13 23:45:12 xtraeme Exp $
+#
+# This Makefile fragment is included by packages that use wv.
+#
+# This file was created automatically using createbuildlink 2.8.
+#
 
 .if !defined(WV_BUILDLINK2_MK)
 WV_BUILDLINK2_MK=	# defined
 
-BUILDLINK_PACKAGES+=		wv
-BUILDLINK_DEPENDS.wv?=		wv>=0.7.4nb3
-BUILDLINK_PKGSRCDIR.wv?=	../../converters/wv
+BUILDLINK_PACKAGES+=			wv
+BUILDLINK_DEPENDS.wv?=			wv>=1.0.0
+BUILDLINK_PKGSRCDIR.wv?=		../../converters/wv
 
-EVAL_PREFIX+=			BUILDLINK_PREFIX.wv=wv
+EVAL_PREFIX+=	BUILDLINK_PREFIX.wv=wv
 BUILDLINK_PREFIX.wv_DEFAULT=	${LOCALBASE}
-
-BUILDLINK_FILES.wv=	include/wv.h
+BUILDLINK_FILES.wv+=	include/wv/libole2/ms-ole-summary.h
+BUILDLINK_FILES.wv+=	include/wv/libole2/ms-ole.h
+BUILDLINK_FILES.wv+=	include/wv/wv.h
+BUILDLINK_FILES.wv+=	lib/libwv-1.0.*
 BUILDLINK_FILES.wv+=	lib/libwv.*
+
+.include "../../converters/libiconv/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/glib2/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/libwmf/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	wv-buildlink
 
