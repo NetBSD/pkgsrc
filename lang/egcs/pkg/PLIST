@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/07 10:36:29 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/08/16 10:33:39 agc Exp $
 bin/c++
 bin/g++
 bin/gcc
@@ -200,88 +200,88 @@ info/gcc.info-6
 info/gcc.info-7
 info/gcc.info-8
 info/gcc.info-9
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/math.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/curses.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/assert.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/syslimits.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/stdarg.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/stddef.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/varargs.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-alpha.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-h8300.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-i860.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-i960.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-mips.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-m88k.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-mn10200.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-mn10300.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-pa.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-pyr.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-sparc.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-clipper.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-spur.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-m32r.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-sh.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-v850.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-arc.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/iso646.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/va-ppc.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/typeinfo
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/exception
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/new
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/new.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/proto.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/stdbool.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/limits.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/float.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/README
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/fixed
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/objc
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/objc/hash.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/objc/objc-list.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/objc/sarray.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/objc/objc.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/objc/objc-api.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/objc/NXConstStr.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/objc/Object.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/objc/Protocol.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/objc/encoding.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/objc/typedstream.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/objc/thr.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include/g2c.h
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/cc1
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/cc1plus
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/f771
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/cc1obj
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/collect2
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/crt1.o
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/crti.o
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/crtn.o
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/gcrt1.o
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/gmon.o
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/crtbegin.o
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/crtend.o
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/specs
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/SYSCALLS.c.X
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/cpp
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/libobjc.a
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/libgcc.a
-lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/libg2c.a
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/math.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/curses.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/assert.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/syslimits.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/stdarg.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/stddef.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/varargs.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-alpha.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-h8300.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-i860.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-i960.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-mips.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-m88k.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-mn10200.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-mn10300.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-pa.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-pyr.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-sparc.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-clipper.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-spur.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-m32r.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-sh.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-v850.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-arc.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/iso646.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/va-ppc.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/typeinfo
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/exception
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/new
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/new.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/proto.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/stdbool.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/limits.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/float.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/README
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/fixed
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc/hash.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc/objc-list.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc/sarray.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc/objc.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc/objc-api.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc/NXConstStr.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc/Object.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc/Protocol.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc/encoding.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc/typedstream.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/objc/thr.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/g2c.h
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/cc1
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/cc1plus
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/f771
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/cc1obj
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/collect2
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/crt1.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/crti.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/crtn.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/gcrt1.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/gmon.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/crtbegin.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/crtend.o
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/specs
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/SYSCALLS.c.X
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/cpp
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/libobjc.a
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/libgcc.a
+lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/libg2c.a
 lib/libiberty.a
 lib/libstdc++.a
 man/man1/g++.1
 man/man1/g77.1
 man/man1/gcc.1
 man/man1/cccp.1
-sparc-sun-solaris/include/_G_config.h
-sparc-sun-solaris/include/assert.h
-sparc-sun-solaris/lib/libiberty.a
+${MACHINE_GNU_PLATFORM}/include/_G_config.h
+${MACHINE_GNU_PLATFORM}/include/assert.h
+${MACHINE_GNU_PLATFORM}/lib/libiberty.a
 @dirrm include/g++/std
 @dirrm include/g++
-@dirrm lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66
-@dirrm lib/gcc-lib/sparc-sun-solaris/egcs-2.91.66/include
-@dirrm lib/gcc-lib/sparc-sun-solaris
+@dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66
+@dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include
+@dirrm lib/gcc-lib/${MACHINE_GNU_PLATFORM}
 @dirrm lib/gcc-lib
-@dirrm sparc-sun-solaris/include
-@dirrm sparc-sun-solaris/lib
-@dirrm sparc-sun-solaris
+@dirrm ${MACHINE_GNU_PLATFORM}/include
+@dirrm ${MACHINE_GNU_PLATFORM}/lib
+@dirrm ${MACHINE_GNU_PLATFORM}
