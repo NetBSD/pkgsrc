@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2001/10/01 15:25:40 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2001/10/16 06:07:11 jlam Exp $
 #
 
 COMMENT=	Security tools
@@ -70,6 +70,7 @@ SUBDIR+=	pam-ldap
 SUBDIR+=	pgp2
 SUBDIR+=	pgp5
 SUBDIR+=	pgpdump
+SUBDIR+=	php4-mcrypt
 SUBDIR+=	pks
 SUBDIR+=	portsentry
 SUBDIR+=	priv
