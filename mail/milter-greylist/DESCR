@@ -4,5 +4,5 @@ temporary error, whereas real MTA do. The idea is to refuse any mail
 on first attempt, and accept it after some time has elapsed.
   
 milter-greylist is a stand-alone milter written in C that implement
-grey listing. It's still quite experimental, but it has been seen
-working on a real life MX.
+grey listing. It has been reported as efficient and easy to setup 
+by a large number of system administrators.
