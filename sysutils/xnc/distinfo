@@ -1,13 +1,15 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/09/17 05:40:06 zuntum Exp $
+$NetBSD: distinfo,v 1.2 2002/07/08 14:25:03 jschauma Exp $
 
-SHA1 (xnc-4.4.5.src.tar.gz) = da94c0bec207863b33f09e9fd773510045723c4a
-Size (xnc-4.4.5.src.tar.gz) = 1620903 bytes
+SHA1 (xnc-4.4.7.src.tar.gz) = f66a0cb754a555d11df8e831d3d38af9b0b27563
+Size (xnc-4.4.7.src.tar.gz) = 1647931 bytes
 SHA1 (patch-aa) = 1bdbb1a794048ba72c406dc2fc88dd943bae8bc9
-SHA1 (patch-ab) = 3310dd3412bb8e72d2c66012be59d08bc65bf60a
-SHA1 (patch-ac) = 8a0a07b17264cc7eac9705be596763ce64a2bab3
-SHA1 (patch-ad) = 416ed4180b48507a9767bbc62203b700a669dd28
-SHA1 (patch-ae) = 4e518462595ca661a9be6549266afb684d5dab43
-SHA1 (patch-af) = 863d90f7b7863d8a3e6a45778bf9ce4e7f56ef98
-SHA1 (patch-ag) = 167857bdff959d18695525febe2f53a016254e83
-SHA1 (patch-ah) = 12fc839079ea7adeb71080d8cf9718cdf24ed538
+SHA1 (patch-ab) = 4ab216cd0edf1e37391bf426fdfb451f9510a961
+SHA1 (patch-ac) = 58b1deb7f553ca1796f938c466a79986e793569c
+SHA1 (patch-ad) = 651217c540fb4331cf3f5481789ec567eb66402b
+SHA1 (patch-ae) = f6185cabeb30ea23c6d5facaa970ed01386953e6
+SHA1 (patch-af) = d218a7ba6056d567500a38a4e337b85bf4a4292c
+SHA1 (patch-ag) = 849744a065c0ddc695f67900840e677aa6be53fb
+SHA1 (patch-ah) = ce30a05caf42a4defc38c9b430cc11d72ea44537
 SHA1 (patch-ai) = 569438fe88fbdaa1817566d2f52e9413b7cb8028
+SHA1 (patch-aj) = d20b0b6b595b12981a4042f04c09f168c66bde66
+SHA1 (patch-ak) = 030751d9634c7d8dab3f4ea85edf5123597cca32
