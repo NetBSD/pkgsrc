@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.283 2002/04/22 17:31:26 seb Exp $
+# $NetBSD: Makefile,v 1.284 2002/04/27 08:58:46 rh Exp $
 #
 
 COMMENT=	Development utilities
@@ -25,6 +25,7 @@ SUBDIR+=	bison
 SUBDIR+=	bmake
 SUBDIR+=	boehm-gc
 SUBDIR+=	bonobo
+SUBDIR+=	bonobo-activation
 SUBDIR+=	bonobo-conf
 SUBDIR+=	boost
 SUBDIR+=	c-cpp-reference
