@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/11/27 13:57:20 taca Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/11/28 11:19:32 taca Exp $
 #
 # Ruby base distribution common definition
 
@@ -6,19 +6,19 @@
 # Ruby distribution sites.
 #
 MASTER_SITE_RUBY?= \
-	ftp://ftp.ruby-lang.org/pub/ruby/${RUBY_VER}/ \
-	ftp://www.ibiblio.org/pub/languages/ruby/${RUBY_VER}/ \
-	ftp://xyz.lcs.mit.edu/pub/ruby/${RUBY_VER}/ \
-	ftp://gd.tuwien.ac.at/languages/ruby/${RUBY_VER}/ \
-	ftp://ftp.fu-berlin.de/unix/languages/ruby/${RUBY_VER}/ \
-	ftp://ftp.easynet.be/ruby/ruby/${RUBY_VER}/ \
-	ftp://ftp.ntua.gr/pub/lang/ruby/${RUBY_VER}/ \
-	ftp://sunsite.dk/mirrors/ruby/${RUBY_VER}/ \
-	ftp://ruby.cdpa.nsysu.edu.tw/ruby/${RUBY_VER}/ \
-	ftp://ftp.chg.ru/pub/lang/ruby/${RUBY_VER}/ \
-	ftp://ftp.ring.gr.jp/pub/lang/ruby/${RUBY_VER}/ \
-	ftp://ftp.iij.ad.jp/pub/lang/ruby/${RUBY_VER}/ \
-	ftp://ftp.idaemons.org/pub/mirror/ftp.ruby-lang.org/ruby/${RUBY_VER}/
+	ftp://ftp.ruby-lang.org/pub/ruby/${RUBY_VER_DIR}/ \
+	ftp://www.ibiblio.org/pub/languages/ruby/${RUBY_VER_DIR}/ \
+	ftp://xyz.lcs.mit.edu/pub/ruby/${RUBY_VER_DIR}/ \
+	ftp://gd.tuwien.ac.at/languages/ruby/${RUBY_VER_DIR}/ \
+	ftp://ftp.fu-berlin.de/unix/languages/ruby/${RUBY_VER_DIR}/ \
+	ftp://ftp.easynet.be/ruby/ruby/${RUBY_VER_DIR}/ \
+	ftp://ftp.ntua.gr/pub/lang/ruby/${RUBY_VER_DIR}/ \
+	ftp://sunsite.dk/mirrors/ruby/${RUBY_VER_DIR}/ \
+	ftp://ruby.cdpa.nsysu.edu.tw/ruby/${RUBY_VER_DIR}/ \
+	ftp://ftp.chg.ru/pub/lang/ruby/${RUBY_VER_DIR}/ \
+	ftp://ftp.ring.gr.jp/pub/lang/ruby/${RUBY_VER_DIR}/ \
+	ftp://ftp.iij.ad.jp/pub/lang/ruby/${RUBY_VER_DIR}/ \
+	ftp://ftp.idaemons.org/pub/mirror/ftp.ruby-lang.org/ruby/${RUBY_VER_DIR}/
 
 # Ruby distribution
 RUBY_DISTINFO_FILE=	${.CURDIR}/../../lang/ruby${RUBY_VER}/distinfo
