@@ -1,0 +1,11 @@
+--- src/icmp.c.dist	Wed Mar 26 15:29:44 1997
++++ src/icmp.c	Sun Jul  6 01:02:25 1997
+@@ -297,7 +297,7 @@
+ 	dup2(fileno(debug_log), 2);
+ 	fclose(debug_log);
+ 	enter_suid();
+-	execlp(Config.Program.pinger, "(pinger)", NULL);
++	execlp(Config.Program.pinger, Config.Program.pinger, NULL);
+ 	debug(50, 0, "icmpOpen: %s: %s\n", Config.Program.pinger, xstrerror());
+ 	_exit(1);
+     }

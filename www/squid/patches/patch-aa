@@ -1,0 +1,57 @@
+--- src/Makefile.in.orig	Fri Oct 24 19:57:11 1997
++++ src/Makefile.in	Sat May 23 22:31:58 1998
+@@ -5,19 +5,19 @@
+ #
+ #  Uncomment and customize the following to suit your needs:
+ #
+-HOST_OPT	= # -DCACHEMGR_HOSTNAME="getfullhostname()"
+-AUTH_OPT	= # -DUSE_PROXY_AUTH=1
+-LOG_HDRS_OPT	= # -DLOG_FULL_HEADERS=1
+-ICMP_OPT	= # -DUSE_ICMP=1
+-DELAY_HACK      = # -DDELAY_HACK=1
+-USERAGENT_OPT	= # -DUSE_USERAGENT_LOG=1
+-KILL_PARENT_OPT	= # -DKILL_PARENT_OPT
+-USE_POLL_OPT    = # -DUSE_POLL
++#HOST_OPT	= # -DCACHEMGR_HOSTNAME="getfullhostname()"
++#AUTH_OPT	= # -DUSE_PROXY_AUTH=1
++#LOG_HDRS_OPT	= # -DLOG_FULL_HEADERS=1
++#ICMP_OPT	= # -DUSE_ICMP=1
++#DELAY_HACK      = # -DDELAY_HACK=1
++#USERAGENT_OPT	= # -DUSE_USERAGENT_LOG=1
++#KILL_PARENT_OPT	= # -DKILL_PARENT_OPT
++#USE_POLL_OPT    = # -DUSE_POLL
+ # do NOT define both USE_SPLAY_TREE and USE_BIN_TREE at the same time!
+-USE_SPLAY_TREE  = # -DUSE_SPLAY_TREE
+-USE_BIN_TREE    = # -DUSE_BIN_TREE
+-RELOAD_INTO_IMS	= # -DRELOAD_INTO_IMS
+-UNDERSCORES_OPT = # -DALLOW_HOSTNAME_UNDERSCORES
++#USE_SPLAY_TREE  = # -DUSE_SPLAY_TREE
++#USE_BIN_TREE    = # -DUSE_BIN_TREE
++#RELOAD_INTO_IMS	= # -DRELOAD_INTO_IMS
++#UNDERSCORES_OPT = # -DALLOW_HOSTNAME_UNDERSCORES
+ 
+ DEFINES         = $(HOST_OPT) $(AUTH_OPT) $(LOG_HDRS_OPT) \
+                   $(ICMP_OPT) $(DELAY_HACK) $(USERAGENT_OPT) \
+@@ -199,14 +199,14 @@
+ 		echo "mkdir $(sysconfdir)"; \
+ 		mkdir $(sysconfdir); \
+ 	fi
+-	-@if test ! -d $(localstatedir); then \
+-		echo "mkdir $(localstatedir)"; \
+-		mkdir $(localstatedir); \
+-	fi
+-	-@if test ! -d $(localstatedir)/logs; then \
+-		echo "mkdir $(localstatedir)/logs"; \
+-		mkdir $(localstatedir)/logs; \
+-	fi
++#	-@if test ! -d $(localstatedir); then \
++#		echo "mkdir $(localstatedir)"; \
++#		mkdir $(localstatedir); \
++#	fi
++#	-@if test ! -d $(localstatedir)/logs; then \
++#		echo "mkdir $(localstatedir)/logs"; \
++#		mkdir $(localstatedir)/logs; \
++#	fi
+ 
+ # Michael Lupp <mike@nemesis.saar.de> wants to know about additions
+ # to the install target.
