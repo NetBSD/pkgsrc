@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/09/22 08:09:36 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/03/22 15:58:20 jmmv Exp $
 include/libgnomecanvas-2.0/libgnomecanvas/gnome-canvas-bpath.h
 include/libgnomecanvas-2.0/libgnomecanvas/gnome-canvas-clipgroup.h
 include/libgnomecanvas-2.0/libgnomecanvas/gnome-canvas-line.h
@@ -44,6 +44,7 @@ share/doc/libgnomecanvas/right.png
 share/doc/libgnomecanvas/style.css
 share/doc/libgnomecanvas/up.png
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/libgnomecanvas-2.0.mo
+${PKGLOCALEDIR}/locale/ang/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/libgnomecanvas-2.0.mo
@@ -107,6 +108,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libgnomecanvas-2.0.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libgnomecanvas-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libgnomecanvas-2.0.mo
