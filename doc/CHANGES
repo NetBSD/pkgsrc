@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7957 2004/11/23 12:38:59 adam Exp $
+$NetBSD: CHANGES,v 1.7958 2004/11/23 14:58:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5390,3 +5390,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated hamlib to 1.2.3 [wulf 2004-11-23]
 	Updated acidrip to 0.14 [xtraeme 2004-11-23]
 	Updated libiconv to 1.9.2 [adam 2004-11-23]
+	Updated p7zip to 4.12 [wiz 2004-11-23]
