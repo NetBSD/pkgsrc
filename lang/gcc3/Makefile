@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2003/07/28 21:49:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.43 2003/08/08 09:31:03 grant Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gcc/gcc.html
-COMMENT=		GNU Compiler Collection
+COMMENT=		GNU Compiler Collection, version 3
 
 CONFLICTS+=		gcc-3* pgcc-[0-9]*
 
