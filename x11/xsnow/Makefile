@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 17:07:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/12/19 07:02:31 martti Exp $
 # FreeBSD Id: Makefile,v 1.7 1996/11/18 09:56:45 asami Exp 
 #
 
-DISTNAME=	xsnow-1.41
+DISTNAME=	xsnow-1.42
 CATEGORIES=	x11
 MASTER_SITES=	http://www.euronet.nl/~rja/Xsnow/
 
