@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/09/30 10:26:10 seb Exp $
+
+--- Makefile.in.orig	Wed Apr 11 07:14:18 2001
++++ Makefile.in
+@@ -6,7 +6,7 @@
+ # These are the names of the installed programs, in case you wish to change
+ # them.
+ #
+-CTAGS_PROG = ctags
++CTAGS_PROG = exctags
+ ETAGS_PROG = etags
+ 
+ # Set this to the path to your shell (must run Bourne shell commands).
+@@ -58,9 +58,8 @@
+ 
+ VPATH	= $(srcdir)
+ 
+-INSTALL		= cp
+-INSTALL_PROG	= $(INSTALL)
+-INSTALL_DATA	= $(INSTALL)
++INSTALL_PROGRAM		= $(BSD_INSTALL_PROGRAM)
++INSTALL_MAN		= $(BSD_INSTALL_MAN)
+ 
+ MANPAGE	= ctags.1
+ 
+@@ -121,8 +120,7 @@
+ install-ebin: $(DEST_ETAGS)
+ 
+ $(DEST_CTAGS): $(CTAGS_EXEC) $(bindir) FORCE
+-	$(INSTALL_PROG) $(CTAGS_EXEC) $@  &&  chmod 755 $@
+-	$(STRIP) $(DEST_CTAGS)
++	$(INSTALL_PROGRAM) $(CTAGS_EXEC) $@
+ 
+ $(DEST_ETAGS):
+ 	- if [ -x $(DEST_CTAGS) ]; then \
+@@ -137,7 +135,7 @@
+ install-eman: $(DEST_EMAN)
+ 
+ $(DEST_CMAN): $(man1dir) $(MANPAGE) FORCE
+-	- $(INSTALL_DATA) $(srcdir)/$(MANPAGE) $@  &&  chmod 644 $@
++	- $(INSTALL_MAN) $(srcdir)/$(MANPAGE) $@
+ 
+ $(DEST_EMAN):
+ 	- if [ -f $(DEST_CMAN) ]; then \
