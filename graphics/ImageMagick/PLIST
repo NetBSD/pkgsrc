@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2004/11/29 09:05:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.27.2.1 2005/02/21 17:26:20 snj Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -27,6 +27,7 @@ include/Magick++/STL.h
 include/Magick++/TypeMetric.h
 include/magick/ImageMagick.h
 include/magick/PreRvIcccm.h
+include/magick/animate.h
 include/magick/annotate.h
 include/magick/api.h
 include/magick/attribute.h
@@ -47,6 +48,7 @@ include/magick/convert.h
 include/magick/decorate.h
 include/magick/delegate.h
 include/magick/deprecate.h
+include/magick/display.h
 include/magick/draw.h
 include/magick/effect.h
 include/magick/enhance.h
@@ -72,6 +74,7 @@ include/magick/monitor.h
 include/magick/montage.h
 include/magick/option.h
 include/magick/paint.h
+include/magick/pixel.h
 include/magick/profile.h
 include/magick/quantize.h
 include/magick/random.h
@@ -91,7 +94,6 @@ include/magick/type.h
 include/magick/utility.h
 include/magick/version.h
 include/magick/widget.h
-include/magick/xwindow.h
 include/wand/drawing_wand.h
 include/wand/magick_wand.h
 include/wand/pixel_iterator.h
