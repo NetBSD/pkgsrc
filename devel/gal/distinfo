@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2001/05/22 16:07:24 rh Exp $
+$NetBSD: distinfo,v 1.4 2001/05/25 06:12:52 rh Exp $
 
-SHA1 (gal-0.8.tar.gz) = 801c9e4388a9a4b5646ef3b97277b1773b619ed4
-Size (gal-0.8.tar.gz) = 985078 bytes
+SHA1 (gal-0.7.tar.gz) = 9717bc11a04898f439310dcca36e6840dc5ed713
+Size (gal-0.7.tar.gz) = 904665 bytes
 SHA1 (patch-aa) = 00690e5db9fea153792b8b0bc5fda6f5a1b6a76e
