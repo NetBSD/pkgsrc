@@ -1,325 +1,12 @@
-#-*- mode: Fundamental; tab-width: 4; -*-
-# ex:ts=4
+#	$NetBSD: bsd.pkg.mk,v 1.95 1998/06/05 12:45:53 mrg Exp $
 #
-#	$NetBSD: bsd.pkg.mk,v 1.94 1998/06/05 12:14:44 agc Exp $
+# This file is in the public domain.
 #
-#	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
-#	This file is in the public domain.
+# This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #
-# FreeBSD Id: bsd.port.mk,v 1.264 1996/12/25 02:27:44 imp Exp
-# OpenBSD Id: bsd.port.mk,v 1.14 1997/09/21 10:58:41 niklas Exp 
-#
-# Please view me with 4 column tabs!
+# Please see the NetBSD packages(7) manual page for details on the
+# that variables used in this make file template.
 
-# There are two different types of "maintainers" in the whole ports
-# framework concept.  Maintainers of the bsd.port*.mk and bsd.pkg*.mk files
-# are listed below in the ${OSNAME}_MAINTAINER entries (this file
-# is used by multiple *BSD flavors).  You should consult them directly
-# if you have any questions/suggestions regarding this file since only
-# they are allowed to modify the master copies in the CVS repository!
-
-# For each port, the MAINTAINER variable is what you should consult for
-# contact information on the person(s) to contact if you have questions/
-# suggestions about that specific port.  By default (if no MAINTAINER
-# is listed), a port is maintained by the subscribers of the ports@freebsd.org
-# mailing list (NetBSD: packages@netbsd.org), and any correspondece
-# should be directed there.  
-#
-FreeBSD_MAINTAINER=	asami@FreeBSD.ORG
-OpenBSD_MAINTAINER=	joey@OpenBSD.ORG
-NetBSD_MAINTAINER=	agc@netbsd.org
-
-# Supported Variables and their behavior:
-#
-# Variables that typically apply to all ports:
-# 
-# ONLY_FOR_ARCHS - If a port only makes sense to certain architectures, this
-#				  is a list containing the names for them.  It is checked
-#				  against the predefined ${MACHINE_ARCH} value
-# ARCH			- The architecture, as returned by "uname -m".
-# OPSYS			- Portability clause.  This is the operating system the
-#				  makefile is being used on.  Automatically set to
-#				  "FreeBSD," "NetBSD," or "OpenBSD" as appropriate.
-# DISTDIR 		- Where to get gzip'd, tarballed copies of original sources
-#				  (default: ${PKGSRCDIR}/distfiles).
-# PREFIX		- Where to install things in general Defaults:
-#					FreeBSD/OpenBSD: /usr/local
-#					NetBSD:		 /usr/pkg
-# MASTER_SITES	- Primary location(s) for distribution files if not found
-#				  locally.
-# MASTER_SITE_SUBDIR - Directory that "%SUBDIR%" in MASTER_SITES is
-#				  replaced by.
-# PATCH_SITES	- Primary location(s) for distribution patch files
-#				  (see PATCHFILES below) if not found locally.
-# PATCH_SITE_SUBDIR - Directory that "%SUBDIR%" in PATCH_SITES is
-#				  replaced by.
-#
-# MASTER_SITE_BACKUP - Backup location(s) for distribution files and patch
-#				  files if not found locally and ${MASTER_SITES}/${PATCH_SITES}
-#				  (default:
-#				  ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
-#				  and ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/)
-# MASTER_SITE_OVERRIDE - If set, override the MASTER_SITES setting with this
-#				  value.
-# MASTER_SITE_FREEBSD - If set, only use ${MASTER_SITE_BACKUP} for
-#				  MASTER_SITES.
-# PACKAGES		- A top level directory where all packages go (rather than
-#				  going locally to each port). (default: ${PKGSRCDIR}/packages).
-# GMAKE			- Set to path of GNU make if not in $PATH (default: gmake).
-# XMKMF			- Set to path of `xmkmf' if not in $PATH (default: xmkmf -a ).
-# MAINTAINER	- The e-mail address of the contact person for this port
-#				  Defaults: ports@FreeBSD.ORG      (FreeBSD)
-#                           		    packages@NetBSD.ORG    (NetBSD)
-# CATEGORIES	- A list of descriptive categories into which this port falls.
-# WRKOBJDIR		- A top level directory where, if defined, the separate working
-#				  directories will get created, and symbolically linked to from
-#				  ${WRKDIR} (see below).  This is useful for building ports on
-#				  several architectures, then ${PKGSRCDIR} can be NFS-mounted
-#				  while ${WRKOBJDIR} is local to every arch.
-
-#
-# Variables that typically apply to an individual port.  Non-Boolean
-# variables without defaults are *mandatory*.
-#
-# WRKDIR 		- A temporary working directory that gets *clobbered* on clean
-#				  (default: ${.CURDIR}/work).
-# WRKSRC		- A subdirectory of ${WRKDIR} where the distribution actually
-#				  unpacks to.  (Default: ${WRKDIR}/${DISTNAME} unless
-#				  NO_WRKSUBDIR is set, in which case simply ${WRKDIR}).
-# DISTNAME		- Name of port or distribution.
-# DISTFILES		- Name(s) of archive file(s) containing distribution
-#				  (default: ${DISTNAME}${EXTRACT_SUFX}).
-# PATCHFILES	- Name(s) of additional files that contain distribution
-#				  patches (default: none).  make will look for them at
-#				  PATCH_SITES (see above).  They will automatically be
-#				  uncompressed before patching if the names end with
-#				  ".gz" or ".Z".
-# DIST_SUBDIR	- Suffix to ${DISTDIR}.  If set, all ${DISTFILES} 
-#				  and ${PATCHFILES} will be put in this subdirectory of
-#				  ${DISTDIR}.  Also they will be fetched in this subdirectory 
-#				  from FreeBSD mirror sites.
-# ALLFILES		- All of ${DISTFILES} and ${PATCHFILES}.
-# MIRROR_DISTFILE	- Whether the distfile is redistributable without restrictions.
-#			  Defaults to "yes", set this to "no" if restrictions exist.
-# IGNOREFILES	- If some of the ${ALLFILES} are not checksum-able, set
-#				  this variable to their names.
-# PKGNAME		- Name of the package file to create if the DISTNAME 
-#				  isn't really relevant for the port/package
-#				  (default: ${DISTNAME}).
-# EXTRACT_ONLY	- If defined, a subset of ${DISTFILES} you want to
-#			  	  actually extract.
-# PATCHDIR 		- A directory containing any additional patches you made
-#				  to port this software to FreeBSD (default:
-#				  ${.CURDIR}/patches)
-# SCRIPTDIR 	- A directory containing any auxiliary scripts
-#				  (default: ${.CURDIR}/scripts)
-# FILESDIR 		- A directory containing any miscellaneous additional files.
-#				  (default: ${.CURDIR}/files)
-# PKGDIR 		- A direction containing any package creation files.
-#				  (default: ${.CURDIR}/pkg)
-# PKG_DBDIR		- Where package installation is recorded (default: /var/db/pkg)
-# FORCE_PKG_REGISTER - If set, it will overwrite any existing package
-#				  registration information in ${PKG_DBDIR}/${PKGNAME}.
-# NO_MTREE		- If set, will not invoke mtree from bsd.pkg.mk from
-#				  the "install" target.
-# MTREE_FILE	- The name of the mtree file (default: /etc/mtree/BSD.x11.dist
-#				  if USE_IMAKE or USE_X11 is set, /etc/mtree/BSD.local.dist
-#				  otherwise.)
-# PLIST_SRC	    - Which file(s) to use to build ${PLIST}. Either
-#                 ${PKGDIR}/PLIST or ${PKGDIR}/PLIST-mi plus
-#                 ${PKGDIR}/PLIST-md.shared or ${PKGDIR}/PLIST-md.static,
-#                 if not set otherwise.
-#
-# NO_BUILD		- Use a dummy (do-nothing) build target.
-# NO_CONFIGURE	- Use a dummy (do-nothing) configure target.
-# NO_CDROM		- Port may not go on CDROM.  Set this string to reason.
-# NO_DESCRIBE	- Use a dummy (do-nothing) describe target.
-# NO_EXTRACT	- Use a dummy (do-nothing) extract target.
-# NO_INSTALL	- Use a dummy (do-nothing) install target.
-# NO_PACKAGE	- Use a dummy (do-nothing) package target.
-# NO_PKG_REGISTER - Don't register a port install as a package.
-# NO_WRKSUBDIR	- Assume port unpacks directly into ${WRKDIR}.
-# NO_WRKDIR		- There's no work directory at all; port does this someplace
-#				  else.
-# NO_DEPENDS	- Don't verify build of dependencies.
-# NOCLEANDEPENDS - Don't clean dependent packages
-# BROKEN		- Port is broken.  Set this string to the reason why.
-# RESTRICTED	- Port is restricted.  Set this string to the reason why.
-# PASSIVE_FETCH		- Uses passive ftp(1) to retrieve distribution files
-# USE_GMAKE		- Says that the port uses gmake.
-# USE_PERL5		- Says that the port uses perl5 for building and running.
-# USE_IMAKE		- Says that the port uses imake.
-# USE_X11		- Says that the port uses X11 (i.e., installs in ${X11BASE}).
-# USE_GTEXINFO		- Says that the package uses gtexinfo
-# USE_MOTIF		- Says that the package uses Motif
-#				(it will use lesstif if Motif is unavailable)
-# NO_INSTALL_MANPAGES - For imake ports that don't like the install.man
-#						target.
-# HAS_CONFIGURE	- Says that the port has its own configure script.
-# GNU_CONFIGURE	- Set if you are using GNU configure (optional).
-# CONFIGURE_SCRIPT - Name of configure script, defaults to 'configure'.
-# CONFIGURE_ARGS - Pass these args to configure if ${HAS_CONFIGURE} is set.
-# CONFIGURE_ENV - Pass these env (shell-like) to configure if
-#				  ${HAS_CONFIGURE} is set.
-# SCRIPTS_ENV	- Additional environment vars passed to scripts in
-#                 ${SCRIPTDIR} executed by bsd.pkg.mk.
-# MAKE_ENV		- Additional environment vars passed to sub-make in build
-#				  stage.
-# IS_INTERACTIVE - Set this if your port needs to interact with the user
-#				  during a build.  User can then decide to skip this port by
-#				  setting ${BATCH}, or compiling only the interactive ports
-#				  by setting ${INTERACTIVE}.
-# FETCH_DEPENDS - A list of "path:dir" pairs of other ports this
-#				  package depends in the "fetch" stage.  "path" is the
-#				  name of a file if it starts with a slash (/), an
-#				  executable otherwise.  make will test for the
-#				  existence (if it is a full pathname) or search for
-#				  it in your $PATH (if it is an executable) and go
-#				  into "dir" to do a "make all install" if it's not
-#				  found.
-# BUILD_DEPENDS - A list of "path:dir" pairs of other ports this
-#				  package depends to build (between the "extract" and
-#				  "build" stages, inclusive).  The test done to
-#				  determine the existence of the dependency is the
-#				  same as FETCH_DEPENDS.
-# RUN_DEPENDS	- A list of "path:dir" pairs of other ports this
-#				  package depends to run.  The test done to determine
-#				  the existence of the dependency is the same as
-#				  FETCH_DEPENDS.  This will be checked during the
-#				  "install" stage and the name of the dependency will
-#				  be put into the package as well.
-# LIB_DEPENDS	- A list of "lib:dir" pairs of other ports this package
-#				  depends on.  "lib" is the name of a shared library.
-#				  make will use "ldconfig -r" to search for the
-#				  library.  Note that lib can be any regular expression.
-#				  In older versions of this file, you need two backslashes
-#				  in front of dots (.) to supress its special meaning (e.g.,
-#				  use "foo\\.2\\.:${PKGSRCDIR}/utils/foo" to match "libfoo.2.*").
-#				  No special backslashes are needed to escape regular
-#				  expression metacharacters in NetBSD, and the old backslash
-#				  escapes are recognised for backwards compatibility.
-# DEPENDS - A list of prerequisite packages. The format of this
-#				  entry is "pkgname:dir". If the "pkgname" package is not
-#				  installed, then it will be built and installed from the
-#				  source package in "dir".
-# CONFLICTS		- A list of other ports this package conflicts with. Use this
-#				  for packages that install identical set of files. The format
-#				  of this entry is "pkgname".
-# EXTRACT_CMD	- Command for extracting archive (default: tar).
-# EXTRACT_SUFX	- Suffix for archive names (default: .tar.gz).
-# EXTRACT_BEFORE_ARGS -
-#				  Arguments to ${EXTRACT_CMD} before filename
-#				  (default: -xzf).
-# EXTRACT_AFTER_ARGS -
-#				  Arguments to ${EXTRACT_CMD} following filename
-#				  (default: none).
-#
-# FETCH_CMD		  - Full path to ftp/http fetch command if not in $PATH
-#				  (default: /usr/bin/ftp if available, else /usr/bin/ftp).
-# FETCH_BEFORE_ARGS -
-#				  Arguments to ${FETCH_CMD} before filename (default: none).
-# FETCH_AFTER_ARGS -
-#				  Arguments to ${FETCH_CMD} following filename (default: none).
-# NO_IGNORE     - Set this to YES (most probably in a "make fetch" in
-#                 ${PKGSRCDIR}) if you want to fetch all distfiles,
-#                 even for packages not built due to limitation by
-#                 absent X or Motif ...
-# __ARCH_OK     - Internal variable set if the package is ok to build
-#                 on this architecture. Set to YES to insist on
-#                 e.g. fetching all distfiles (for interactive use in
-#                 ${PKGSRCDIR}, mostly. 
-# ALL_TARGET	- The target to pass to make in the package when building.
-#		  (default: "all")
-# INSTALL_TARGET- The target to pass to make in the package when installing.
-#		  (default: "install")
-#
-# Motif support:
-#
-# REQUIRES_MOTIF - Set this in your port if it requires Motif.  It will  be
-#				  built only if HAVE_MOTIF is set.
-# HAVE_MOTIF	- If set, means system has Motif.  Typically set in
-#				  /etc/make.conf (FreeBSD) or
-#				  /etc/mk.conf (NetBSD, OpenBSD).
-# MOTIF_STATIC	- If set, link libXm statically; otherwise, link it
-#				  dynamically.  Typically set in
-#				  /etc/make.conf (FreeBSD) or
-#				  /etc/mk.conf (NetBSD, OpenBSD).
-# MOTIFLIB		- Set automatically to appropriate value depending on
-#				  ${MOTIF_STATIC}.  Substitute references to -lXm with 
-#				  patches to make your port conform to our standards.
-# MOTIF_ONLY	- If set, build Motif ports only.  (Not much use except for
-#				  building packages.)
-#
-# Variables to change if you want a special behavior:
-#
-# ECHO_MSG		- Used to print all the '===>' style prompts - override this
-#				  to turn them off (default: /bin/echo).
-# DEPENDS_TARGET - The target to execute when a port is calling a
-#				  dependency (default: "install").
-# PATCH_DEBUG	- If set, print out more information about the patches as
-#				  it attempts to apply them.
-#
-# Variables that serve as convenient "aliases" for your *-install targets.
-# Use these like: "${INSTALL_PROGRAM} ${WRKSRC}/prog ${PREFIX}/bin".
-#
-# INSTALL_PROGRAM		- A command to install binary executables.
-# INSTALL_SCRIPT		- A command to install executable scripts.
-# INSTALL_DATA			- A command to install sharable data.
-# INSTALL_MAN			- A command to install manpages (doesn't compress).
-# INSTALL_PROGRAM_DIR	- Create a directory for storing programs
-# INSTALL_SCRIPT_DIR	- Create a directory for storing scripts (alias for
-#						  (INSTALL_PROGRAM_DIR)
-# INSTALL_DATA_DIR		- Create a directory for storing arbitrary data
-# INSTALL_MAN_DIR		- Create a directory for storing man pages
-#
-# It is assumed that the port installs manpages uncompressed. If this is
-# not the case, set MANCOMPRESSED in the port.  Depending on the setting of
-# MANZ, the make rules will then compress the manpages for you with the
-# following information.
-#
-# MANCOMPRESSED - Indicates that the port installs manpages in a compressed
-#                 form (default: port installs manpages uncompressed).
-# MANLANG		- List of language-subdirs for $PREFIX/man, into which the
-#				  pkg will install it's man-pages, resulting in
-#				  $PREFIX/man/lang1/catX, etc; (default: undefined)
-# MAN<sect>		- A list of manpages, categorized by section.  For
-#				  example, if your port has "man/man1/foo.1" and
-#				  "man/mann/bar.n", set "MAN1=foo.1" and "MANN=bar.n".
-#				  The available sections chars are "123456789LN".
-# CAT<sect>     - The same as MAN<sect>, only for formatted manpages.
-# MANPREFIX		 -The directory prefix for ${MAN<sect>} (default: ${PREFIX}).
-# CATPREFIX     - The directory prefix for ${CAT<sect>} (default: ${PREFIX}).
-# INFO_FILES		- set to the base names of the info files you wish to be
-#			installed in the info dir file. Automatically sets USE_GTEXINFO.
-#
-# Default targets and their behaviors:
-#
-# fetch			- Retrieves ${DISTFILES} (and ${PATCHFILES} if defined)
-#				  into ${DISTDIR} as necessary.
-# fetch-list	- Show list of files that would be retrieved by fetch
-# extract		- Unpacks ${DISTFILES} into ${WRKDIR}.
-# patch			- Apply any provided patches to the source.
-# configure		- Runs either GNU configure, one or more local configure
-#				  scripts or nothing, depending on what's available.
-# build			- Actually compile the sources.
-# install		- Install the results of a build.
-# reinstall		- Install the results of a build, ignoring "already installed"
-#				  flag.
-# deinstall		- Remove the installation.
-# package		- Create a package from an _installed_ port.
-# describe		- Try to generate a one-line description for each port for
-#				  use in INDEX files and the like.
-# checkpatch	- Do a "patch -C" instead of a "patch".  Note that it may
-#				  give incorrect results if multiple patches deal with
-#				  the same file.
-# checksum		- Use files/md5 to ensure that your distfiles are valid.
-# makesum		- Generate files/md5 (only do this for your own ports!).
-# readme		- Create a README.html file describing the category or package
-# mirror-distfiles	- Mirror the distfile(s) if they are freely redistributable
-#			Setting MIRROR_DISTFILE to "no" in the package Makefile
-#			will override the default "yes", and the distfile will
-#			not be fetched.
-#
 # Default sequence for "all" is:  fetch checksum extract patch configure build
 #
 # Please read the comments in the targets section below, you
@@ -713,7 +400,7 @@ FETCH_BEFORE_ARGS += -p
 # Popular master sites
 MASTER_SITE_XCONTRIB+=	\
 	ftp://crl.dec.com/pub/X11/contrib/%SUBDIR%/ \
-    ftp://ftp.eu.net/X11/contrib/%SUBDIR%/ \
+	ftp://ftp.eu.net/X11/contrib/%SUBDIR%/ \
 	ftp://ftp.uni-paderborn.de/pub/X11/contrib/%SUBDIR%/ \
 	ftp://ftp.x.org/contrib/%SUBDIR%/
 
@@ -726,11 +413,11 @@ MASTER_SITE_PERL_CPAN+=	\
 	ftp://ftp.cdrom.com/pub/perl/CPAN/modules/by-module/%SUBDIR%/
 
 MASTER_SITE_TEX_CTAN+=  \
-        ftp://ftp.cdrom.com/pub/tex/ctan/%SUBDIR%/  \
-        ftp://wuarchive.wustl.edu/packages/TeX/%SUBDIR%/  \
-        ftp://ftp.funet.fi/pub/TeX/CTAN/%SUBDIR%/  \
-        ftp://ftp.tex.ac.uk/public/ctan/tex-archive/%SUBDIR%/  \
-        ftp://ftp.dante.de/tex-archive/%SUBDIR%/
+	ftp://ftp.cdrom.com/pub/tex/ctan/%SUBDIR%/  \
+	ftp://wuarchive.wustl.edu/packages/TeX/%SUBDIR%/  \
+	ftp://ftp.funet.fi/pub/TeX/CTAN/%SUBDIR%/  \
+	ftp://ftp.tex.ac.uk/public/ctan/tex-archive/%SUBDIR%/  \
+	ftp://ftp.dante.de/tex-archive/%SUBDIR%/
 
 MASTER_SITE_SUNSITE+=	\
 	ftp://sunsite.unc.edu/pub/Linux/%SUBDIR%/ \
@@ -851,11 +538,11 @@ HAS_CONFIGURE=		yes
 
 # Passed to most of script invocations
 SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
-          PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin \
-		  WRKDIR=${WRKDIR} WRKSRC=${WRKSRC} PATCHDIR=${PATCHDIR} \
-		  SCRIPTDIR=${SCRIPTDIR} FILESDIR=${FILESDIR} \
-		  PKGSRCDIR=${PKGSRCDIR} DEPENDS="${DEPENDS}" \
-		  PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
+	PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin \
+	WRKDIR=${WRKDIR} WRKSRC=${WRKSRC} PATCHDIR=${PATCHDIR} \
+	SCRIPTDIR=${SCRIPTDIR} FILESDIR=${FILESDIR} \
+	PKGSRCDIR=${PKGSRCDIR} DEPENDS="${DEPENDS}" \
+	PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
 
 .if defined(BATCH)
 SCRIPTS_ENV+=	BATCH=yes
@@ -1103,7 +790,7 @@ do-fetch:
 			${ECHO_MSG} ">> Couldn't fetch it - please try to retrieve this";\
 			${ECHO_MSG} ">> port manually into ${_DISTDIR} and try again."; \
 			exit 1; \
-	    fi \
+		fi \
 	 done)
 .if defined(PATCHFILES)
 	@(cd ${_DISTDIR}; \
@@ -1125,7 +812,7 @@ do-fetch:
 			${ECHO_MSG} ">> Couldn't fetch it - please try to retrieve this";\
 			${ECHO_MSG} ">> port manually into ${_DISTDIR} and try again."; \
 			exit 1; \
-	    fi \
+		fi \
 	 done)
 .endif
 .endif
@@ -2042,7 +1729,7 @@ fake-pkg: ${PLIST}
 .if defined(FORCE_PKG_REGISTER)
 	@${RM} -rf ${PKG_DBDIR}/${PKGNAME}
 .endif
-	@if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then \
+	if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then \
 		${ECHO_MSG} "===>  Registering installation for ${PKGNAME}"; \
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME}; \
 		${PKG_CMD} ${PKG_ARGS} -O ${PKGFILE} > ${PKG_DBDIR}/${PKGNAME}/+CONTENTS; \
@@ -2084,12 +1771,12 @@ depend:
 tags:
 .endif
 
-
 # generate ${PLIST} from ${PLIST_SRC} by:
-#  - fixing list of man-pages according to MANCOMPRESSED/MANZ
-#    (we don't regard MANCOMPRESSED as many ports seem to have .gz pages in
-#     PLIST even when they install manpages without compressing them)
-#  - substituting machine architecture (uname -m) for <$ARCH>
+# - fixing list of man-pages according to MANCOMPRESSED/MANZ
+#   (we don't regard MANCOMPRESSED as many ports seem to have .gz pages in
+#   PLIST even when they install manpages without compressing them)
+# - substituting machine architecture (uname -m) for <$ARCH>
+
 .if !defined(PLIST_SRC)
 .if exists(${PKGDIR}/PLIST)
 PLIST_SRC=	${PKGDIR}/PLIST
@@ -2099,7 +1786,7 @@ PLIST_SRC=	${PKGDIR}/PLIST
 PLIST_SRC=	${PKGDIR}/PLIST-mi
 .if ${MACHINE_ARCH} == "powerpc" ||  ${MACHINE_ARCH} == "mips" ||  ${MACHINE_ARCH} == "alpha"
 # XXX this is mostly for perl; alpha can be removed once perl knows
-#     how to do dynamic loading - hubertf
+#  how to do dynamic loading - hubertf
 PLIST_SRC+=	${PKGDIR}/PLIST-md.static
 .else
 PLIST_SRC+=	${PKGDIR}/PLIST-md.shared
