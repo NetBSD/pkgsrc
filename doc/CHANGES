@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9104 2005/02/10 12:24:25 martti Exp $
+$NetBSD: CHANGES,v 1.9105 2005/02/10 13:25:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -835,3 +835,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated docbook-xsl to 1.68.0 [jmmv 2005-02-10]
 	Updated lilypond to 2.4.3nb2 [jmmv 2005-02-10]
 	Updated xfce4-wavelan-plugin to 0.4.1nb1 [martti 2005-02-10]
+	Updated qt3-libs to 3.3.4 [adam 2005-02-10]
+	Updated qt3-tools to 3.3.4 [adam 2005-02-10]
+	Updated qt3-mysql to 3.3.4 [adam 2005-02-10]
+	Updated qt3-psql to 3.3.4 [adam 2005-02-10]
+	Updated qt3 to 3.3.4 [adam 2005-02-10]
