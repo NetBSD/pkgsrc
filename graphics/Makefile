@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 1999/09/25 20:42:29 fredb Exp $
+# $NetBSD: Makefile,v 1.60 1999/10/01 16:12:19 drochner Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -12,6 +12,8 @@
     SUBDIR += cqcam
 #    SUBDIR += dc3play
 #    SUBDIR += dore
+    SUBDIR += dx
+    SUBDIR += dxsamples
     SUBDIR += ee
     SUBDIR += fly
     SUBDIR += fnlib
