@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 1999/08/24 12:22:36 agc Exp $
-lib/libFnlib.so.4.0
-lib/libFnlib.la
+@comment $NetBSD: PLIST,v 1.4 1999/10/28 00:27:39 jlam Exp $
+etc/fnrc
+include/Fnlib.h
+include/Fnlib_types.h
 lib/libFnlib.a
+lib/libFnlib.so.5.0
+share/doc/fnlib/fontinfo.README
 share/fnlib_fonts/e/17/032.png
 share/fnlib_fonts/e/17/033.png
 share/fnlib_fonts/e/17/034.png
@@ -243,13 +246,11 @@ share/fnlib_fonts/shinymetal/45/x.tif
 share/fnlib_fonts/shinymetal/45/y.tif
 share/fnlib_fonts/shinymetal/45/z.tif
 share/fnlib_fonts/shinymetal/fontinfo
-include/Fnlib.h
-include/Fnlib_types.h
-etc/fnrc
-@dirrm share/fnlib_fonts/e/17
-@dirrm share/fnlib_fonts/e
-@dirrm share/fnlib_fonts/rock/90
-@dirrm share/fnlib_fonts/rock
 @dirrm share/fnlib_fonts/shinymetal/45
 @dirrm share/fnlib_fonts/shinymetal
+@dirrm share/fnlib_fonts/rock/90
+@dirrm share/fnlib_fonts/rock
+@dirrm share/fnlib_fonts/e/17/
+@dirrm share/fnlib_fonts/e
 @dirrm share/fnlib_fonts
+@dirrm share/doc/fnlib
