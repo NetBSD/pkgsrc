@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2003/06/10 16:51:48 jmc Exp $
+# $NetBSD: Makefile,v 1.21 2003/06/29 02:04:20 jlam Exp $
 #
 
-DISTNAME=	centericq-4.9.2
-PKGREVISION=	3
+DISTNAME=	centericq-4.9.4
 CATEGORIES=	chat
 MASTER_SITES=	http://konst.org.ua/download/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://konst.org.ua/eng/software/centericq/info.html
@@ -14,16 +14,24 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GCC_SHLIB=		yes
 USE_GMAKE=		yes
-GNU_CONFIGURE=		yes
-LIBS=			${LDFLAGS}
-USE_PERL5=		run
 
-REPLACE_PERL=		${WRKSRC}/misc/cicqconf
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-ssl --with-openssl=${SSLBASE}
+#
+# libiconv depends on configure scripts to include <iconv.h> before
+# trying to link against -liconv.  Unfortunately, centericq's script
+# doesn't do this, so fake it.
+#
+CONFIGURE_ENV+=		ac_cv_lib_iconv_iconv=yes
+LIBS=			${LDFLAGS}
+
+USE_PERL5=		run
+REPLACE_PERL=		${WRKSRC}/misc/cicqconv
 
 INCOMPAT_CURSES+=	NetBSD-1.[45]*-* NetBSD-1.6-* NetBSD-1.6.[1-9]-*
 INCOMPAT_CURSES+=	NetBSD-1.6_*-* NetBSD-1.6.[1-9]_*-* NetBSD-1.6[A-T]-*
 
-.include "../../devel/glib/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
