@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4488 2004/01/17 15:27:56 recht Exp $
+$NetBSD: CHANGES,v 1.4489 2004/01/17 16:01:53 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -312,3 +312,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated thttpd to 2.25b [xtraeme 2004-01-17]
 	Added libcdio-0.65 [recht 2004-01-17]
 	Added libcddb-0.9.4 [recht 2004-01-17]
+	Updated xmlcatmgr to 2.0alpha2 [jmmv 2004-01-17]
