@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:50 agc Exp $
-# $FreeBSD Id: Makefile,v 1.7 1997/08/16 10:14:56 wosch Exp
+# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:33 frueauf Exp $
+# FreeBSD Id: Makefile,v 1.7 1997/08/16 10:14:56 wosch Exp
 #
 
-DISTNAME=       socket-1.1
+DISTNAME=	socket-1.1
 CATEGORIES=	sysutils net
-MASTER_SITES=   http://www.freebsd.org/~wosch/src/
+MASTER_SITES=	http://www.freebsd.org/~wosch/src/
 
-MAINTAINER=     wosch@FreeBSD.org
+MAINTAINER=	packages@netbsd.org
 
 MAN1=		socket.1
 

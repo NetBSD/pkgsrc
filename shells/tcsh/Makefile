@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/04/15 10:38:48 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/20 11:56:33 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.17 1996/12/17 05:18:09 asami Exp
 #
 
@@ -7,7 +7,7 @@ PKGNAME=        tcsh-6.07.02
 CATEGORIES=	shells
 MASTER_SITES=   ftp://ftp.astron.com/pub/tcsh/
 
-MAINTAINER=     ache@FreeBSD.ORG
+MAINTAINER=     packages@netbsd.org
 
 GNU_CONFIGURE=  yes
 WRKSRC=         ${WRKDIR}/${PKGNAME}

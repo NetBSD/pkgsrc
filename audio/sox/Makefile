@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:11 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:19 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/02/04 10:32:34 max Exp 
 #
 
@@ -7,9 +7,9 @@ PKGNAME=	sox-12.12
 CATEGORIES=	audio
 MASTER_SITES=	http://www.spies.com/Sox/Archive/
 
-MAINTAINER=	torstenb@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
 
-NO_WRKSUBDIR=		yes
+NO_WRKSUBDIR=	yes
 MAKEFILE=	Makefile.unx
 MAN1=		sox.1
 

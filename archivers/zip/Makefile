@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:09 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/20 11:56:19 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp 
 #
 
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.cdrom.com/pub/infozip/src/
 DISTFILES=	zip22.tar.gz
 
-MAINTAINER=	ache@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
 
 MAKEFILE=	unix/Makefile
 MAKE_FLAGS=	LOCAL_ZIP="${CFLAGS}" -f

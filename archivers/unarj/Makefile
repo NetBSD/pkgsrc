@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:08 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:18 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.6 1996/11/12 02:17:38 obrien Exp 
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	ftp://garbo.uwasa.fi/unix/arcers/
 DISTFILES=      unarj241.tar.Z
 
-MAINTAINER=     ache@FreeBSD.ORG
+MAINTAINER=     packages@netbsd.org
 
 do-install:
 	cd ${WRKSRC}; ${INSTALL_PROGRAM} ${DISTNAME} ${PREFIX}/bin

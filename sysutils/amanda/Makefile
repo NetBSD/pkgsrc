@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:33 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/20 11:56:26 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -6,7 +6,7 @@ DISTNAME=	amanda-2.3.0
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.cs.umd.edu/pub/amanda/
 
-MAINTAINER=	gpalmer@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
 
 PATCH_STRIP=
 SCRIPTS_ENV+=	CFLAGS="${CFLAGS}"
