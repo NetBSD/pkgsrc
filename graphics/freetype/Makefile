@@ -1,20 +1,25 @@
-# $NetBSD: Makefile,v 1.9 2000/01/10 19:11:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2000/05/01 06:04:33 jlam Exp $
 
-DISTNAME=		freetype-1.2
+DISTNAME=		freetype-${FT_VERS}
+FT_VERS=		1.2
 CATEGORIES=		graphics textproc
-MASTER_SITES=		ftp://ftp.freetype.org/pub/freetype/
+MASTER_SITES=		#
+DISTFILES=		#
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.freetype.org/
 
-DEPENDS+=		gettext-0.10.*:../../devel/gettext
+DEPENDS+=		freetype-lib-${FT_VERS}:../../graphics/freetype-lib
+DEPENDS+=		freetype-utils-${FT_VERS}:../../graphics/freetype-utils
 
-USE_X11=		yes
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-locale-dir=${PREFIX}/share/locale
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+USE_X11=		# defined	# freetype-utils uses X11
 
-CPPFLAGS+=		-I${LOCALBASE}/include	# libintl.h
+EXTRACT_ONLY=		# empty
+NO_CHECKSUM=		# defined
+NO_PATCH=		# defined
+NO_CONFIGURE=		# defined
+NO_BUILD=		# defined
+
+do-install:		# empty
 
 .include "../../mk/bsd.pkg.mk"
