@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2004/04/14 04:28:38 minskim Exp $
+# $NetBSD: Makefile,v 1.128 2004/04/14 17:51:37 grant Exp $
 
 DISTNAME=	postfix-2.0.19
 CATEGORIES=	mail
@@ -79,13 +79,13 @@ CCARGS+=	-DHAS_LDAP
 AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openldap}/lib	\
 		-lldap -llber
-.if ${OPSYS} != "Linux"
-.include "../../databases/db4/buildlink3.mk"
+.  if ${OPSYS} != "Linux"
+.    include "../../databases/db4/buildlink3.mk"
 CCARGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
 AUXLIBS+=	-L${BUILDLINK_PREFIX.db4}/lib                    \
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db4}/lib     \
 		-ldb4
-.endif
+.  endif
 .endif
 
 .if defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES"
@@ -109,7 +109,7 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.postgresql-lib}/lib -lpq \
 .endif
 
 .if defined(USE_SASL2) && ${USE_SASL2} == "YES"
-USING_SASL=YES
+USING_SASL=	YES
 .  include "../../security/cyrus-sasl2/buildlink3.mk"
 CCARGS+=	-DUSE_SASL2_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
@@ -218,7 +218,7 @@ do-install:
 		${SH} postfix-install -non-interactive
 
 .if ${OPSYS} == "Linux"
-.include "../../databases/db/buildlink3.mk"
+.  include "../../databases/db/buildlink3.mk"
 CCARGS+=	-I${BUILDLINK_PREFIX.db2}/include/db2
 AUXLIBS+=	-L${BUILDLINK_PREFIX.db2}/lib                    \
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db2}/lib     \
