@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/22 22:41:23 kristerw Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/21 22:23:01 wiz Exp $
 #
 
 DISTNAME=	twelf-1-4
@@ -10,7 +10,7 @@ MAINTAINER=	richards+netbsd@CS.Princeton.EDU
 HOMEPAGE=	http://www.cs.cmu.edu/~twelf/
 COMMENT=	Meta-language for proving properties of languages and logics
 
-DEPENDS+=	sml-nj>=110.38:../../lang/sml-nj
+DEPENDS+=	smlnj>=110.38:../../lang/smlnj
 
 RESTRICTED=	License terms not specified; assume no redistribution rights
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -29,7 +29,7 @@ TWELF_DOCDIR=		${PREFIX}/share/doc/twelf
 TWELF_EXAMPLEDIR=	${PREFIX}/share/examples/twelf
 
 # 
-# Everything up until "post-extract" is taken from lang/sml-nj/Makefile.
+# Everything up until "post-extract" is taken from lang/smlnj/Makefile.
 # There ought to be a buildlink2.mk for SML/NJ instead, since every
 # SML/NJ-built package will require this kind of PLIST handling.
 #
