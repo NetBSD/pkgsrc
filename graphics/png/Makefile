@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2001/06/19 04:03:42 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2001/07/14 03:16:50 jlam Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
@@ -21,11 +21,10 @@ MAKE_ENV+=	REALCC="${CC}"
 
 USE_BUILDLINK_ONLY=	yes
 
-.include "../../devel/zlib/buildlink.mk"
-
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/libpng.3 ${PREFIX}/man/man3
 	${INSTALL_MAN} ${WRKSRC}/libpngpf.3 ${PREFIX}/man/man3
 	${INSTALL_MAN} ${WRKSRC}/png.5 ${PREFIX}/man/man5
 
+.include "../../devel/zlib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
