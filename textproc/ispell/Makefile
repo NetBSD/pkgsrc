@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.18 1999/03/08 10:53:57 agc Exp $
+# $NetBSD: Makefile,v 1.19 1999/05/18 02:18:18 jwise Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/13 23:29:52 jmz Exp
 #
 
 DISTNAME=	ispell-3.1.20
+WRKSRC=		${WRKDIR}/ispell-3.1
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.cs.ucla.edu/pub/ispell-3.1/
+# don't remove this.  it's appended to if other languages are specified
+DISTFILES=	ispell-3.1.20.tar.gz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/ispell/ispell.html
-
-WRKSRC=		${WRKDIR}/ispell-3.1
 
 MAKE_FLAGS=	TMPDIR=${WRKDIR}
 SCRIPTS_ENV=	"LANG=${ISPELL_LANG}"
