@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2003/01/13 14:36:52 jmmv Exp $
+$NetBSD: distinfo,v 1.3.2.1 2003/03/13 02:54:27 grant Exp $
 
 SHA1 (soup-0.7.10.tar.bz2) = c383fb880d5e32f6600c8c0757d97edede1e2114
 Size (soup-0.7.10.tar.bz2) = 303967 bytes
 SHA1 (patch-aa) = 6c984de61e93fae33673fb0330e8b3a5c710da95
 SHA1 (patch-ab) = 4a1ec8c278a3b1cc0343dc3edca2f7dec8d25583
+SHA1 (patch-ac) = da73ee261bd8e4247738d99210a2ed12c0315a13
