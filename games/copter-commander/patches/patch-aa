@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2002/03/11 05:23:55 jmc Exp $
+$NetBSD: patch-aa,v 1.3 2002/10/09 10:46:10 agc Exp $
 
 --- Makefile.orig	Fri Feb  8 22:12:31 2002
-+++ Makefile	Mon Mar 11 05:16:28 2002
++++ Makefile	Wed Jul 17 16:03:20 2002
 @@ -54,7 +54,7 @@
  
  
@@ -23,8 +23,8 @@ $NetBSD: patch-aa,v 1.2 2002/03/11 05:23:55 jmc Exp $
  # GtkGLArea (copter-commander only)
 -COCO_GTKGLAREA_LIB_DIRECTORY=/usr/lib
 -COCO_GTKGLAREA_INCLUDE_DIRECTORY=/usr/include
-+COCO_GTKGLAREA_LIB_DIRECTORY=${X11PREFIX}/lib
-+COCO_GTKGLAREA_INCLUDE_DIRECTORY=${X11PREFIX}/include
++COCO_GTKGLAREA_LIB_DIRECTORY=${GTKGLAREADIR}/lib
++COCO_GTKGLAREA_INCLUDE_DIRECTORY=${GTKGLAREADIR}/include
  
  # Gnome (handled by the gnome-config script)
  
@@ -32,14 +32,14 @@ $NetBSD: patch-aa,v 1.2 2002/03/11 05:23:55 jmc Exp $
  # should be as shown, if not, consider making a symlink)
 -COCO_GL_LIB_DIRECTORY=/usr/lib
 -COCO_GL_INCLUDE_DIRECTORY=/usr/include
-+COCO_GL_LIB_DIRECTORY=${X11PREFIX}/usr/lib
-+COCO_GL_INCLUDE_DIRECTORY=${X11PREFIX}/include
++COCO_GL_LIB_DIRECTORY=${OPENGLDIR}/usr/lib
++COCO_GL_INCLUDE_DIRECTORY=${OPENGLDIR}/include
  
  # LibTIFF image library
 -COCO_LIBTIFF_LIB_DIRECTORY=/usr/lib
 -COCO_LIBTIFF_INCLUDE_DIRECTORY=/usr/include
-+COCO_LIBTIFF_LIB_DIRECTORY=${LOCALBASE}/lib
-+COCO_LIBTIFF_INCLUDE_DIRECTORY=${LOCALBASE}/include
++COCO_LIBTIFF_LIB_DIRECTORY=${TIFFDIR}/lib
++COCO_LIBTIFF_INCLUDE_DIRECTORY=${TIFFDIR}/include
  
  # Sound Support
  # Select the sound technique that works for you, valid values are 
@@ -49,8 +49,8 @@ $NetBSD: patch-aa,v 1.2 2002/03/11 05:23:55 jmc Exp $
  # ESD sound library (only used if COCO_SOUND=esd)
 -COCO_ESD_LIB_DIRECTORY=/usr/lib
 -COCO_ESD_INCLUDE_DIRECTORY=/usr/include
-+COCO_ESD_LIB_DIRECTORY=${LOCALBASE}/lib
-+COCO_ESD_INCLUDE_DIRECTORY=${LOCALBASE}/include
++COCO_ESD_LIB_DIRECTORY=${ESDDIR}/lib
++COCO_ESD_INCLUDE_DIRECTORY=${ESDDIR}/include
  COCO_ESD_LIBS=-lesd
  
  
@@ -72,7 +72,22 @@ $NetBSD: patch-aa,v 1.2 2002/03/11 05:23:55 jmc Exp $
  else
  #assign null string:
  COCO_SOUND_LINK_LINE=
-@@ -350,11 +350,11 @@
+@@ -225,11 +225,9 @@
+ # the "built" file is touched when all rasters are compiled to .o files
+ rstr-%/built: rstr-%/rasters.h 
+ 	set -e;\
+-	CC=${CC};\
+-	CFLAGS="${CFLAGS}";\
+-	export CC CFLAGS;\
+-	cd rstr-$*;\
+-	../make-rasters.sh
++	env CC=${CC} \
++		CFLAGS="${CFLAGS} -I${COCO_X11_INCLUDE_DIRECTORY} -I${COCO_GTKGLAREA_INCLUDE_DIRECTORY} -I${COCO_GL_INCLUDE_DIRECTORY} -I${COCO_LIBTIFF_INCLUDE_DIRECTORY} -I${COCO_ESD_INCLUDE_DIRECTORY}" \
++	sh -c "cd rstr-$* && ../make-rasters.sh"
+ 
+ # tiff-compile only does its thing if the files are out of date.
+ # so in essence it already manages its dependancies.
+@@ -350,14 +348,14 @@
  	  `gnome-config --cflags gnomeui`
  
  client.o: client.c
@@ -85,8 +100,12 @@ $NetBSD: patch-aa,v 1.2 2002/03/11 05:23:55 jmc Exp $
 +          -I${COCO_LIBTIFF_INCLUDE_DIRECTORY} -I${COCO_GL_INCLUDE_DIRECTORY}
  
  # build other objects the standard way
- %.o: %.c 
-@@ -365,12 +365,12 @@
+-%.o: %.c 
++.c.o:
+ 	${CC} ${CFLAGS} -c $*.c -o $@ \
+ 	  -I${COCO_GL_INCLUDE_DIRECTORY}
+ 
+@@ -365,12 +363,12 @@
  ${ALL_OBJ_FILES}: ${HDR_FILES} Makefile ${COCO_RASTER_DIRECTORY}/built
  
  GNOME_LINK_LINE=\
@@ -103,7 +122,7 @@ $NetBSD: patch-aa,v 1.2 2002/03/11 05:23:55 jmc Exp $
  ${COCO_GII_LINK_ARGUMENTS}
  
  
-@@ -378,11 +378,11 @@
+@@ -378,11 +376,11 @@
  	${GNOME_LINK_LINE} ${COCO_SOUND_LINK_LINE}
  
  GLX_LINK_LINE=\
@@ -119,7 +138,7 @@ $NetBSD: patch-aa,v 1.2 2002/03/11 05:23:55 jmc Exp $
  ${COCO_GII_LINK_ARGUMENTS}
  
  glx-copter-commander: ${GAME_OBJ_FILES} ${GLX_OBJ_FILES} ${USED_SOUND_OBJ_FILES} ${COCO_RASTER_DIRECTORY}/built 
-@@ -414,7 +414,7 @@
+@@ -414,7 +412,7 @@
  # [ #499186 ] tiff-compile doesn't compile -dm 01-03-2002
  tiff-compile: tiff-compile.c raster.h c-header.strlit
  	${CC} ${CFLAGS_UNANSI} -I${COCO_LIBTIFF_INCLUDE_DIRECTORY} \
@@ -128,7 +147,7 @@ $NetBSD: patch-aa,v 1.2 2002/03/11 05:23:55 jmc Exp $
  
  sizeof: sizeof.c
  	${CC} ${CFLAGS} -o sizeof sizeof.c
-@@ -475,19 +475,18 @@
+@@ -475,19 +473,18 @@
  	gzip -c ${COCO_TAR_FILE} > ${COCO_TAR_FILE}.gz
  
  install:
