@@ -36,13 +36,12 @@
  dhdemo : dhdemo.$(O) $(RSAREFLIB)
  	cc -o $@ dhdemo.$(O) $(RSAREFLIB)
  
--$(RSAREFLIB) : desc.$(O) digit.$(O) md2c.$(O) md5c.$(O) nn.$(O) prime.$(O)\
-+$(RSAREFLIB) : desc.$(O) digit.$(O) md2c.$(O) nn.$(O) prime.$(O)\
+ $(RSAREFLIB) : desc.$(O) digit.$(O) md2c.$(O) md5c.$(O) nn.$(O) prime.$(O)\
    rsa.$(O) r_encode.$(O) r_dh.$(O) r_enhanc.$(O) r_keygen.$(O) r_random.$(O)\
    r_stdlib.$(O)
 -	$(LIB) r $@ $?
 -	ranlib $@
-+	${LIBTOOL} --mode=link cc -o $@ ${?:.o=.lo} -rpath ${PREFIX}/lib -version-info 2:0
++	${LIBTOOL} --mode=link cc -o $@ ${?:.o=.lo} -rpath ${PREFIX}/lib -version-info 3:0
  
  rdemo.$(O) : $(RDEMODIR)rdemo.c $(RSAREFDIR)global.h $(RSAREFDIR)rsaref.h
  	$(CC) $(CFLAGS) $(RDEMODIR)rdemo.c

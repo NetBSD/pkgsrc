@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 1999/05/23 21:12:01 tv Exp $
+# $NetBSD: Makefile,v 1.15 1999/05/26 15:33:16 tv Exp $
 #
 
 DISTNAME=		rsaref
-PKGNAME=		rsaref-2.0p1
+PKGNAME=		rsaref-2.0p2
 WRKSRC=			${WRKDIR}/install
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.spinnaker.com/pub/crypt/rsaref/
@@ -28,8 +28,6 @@ fetch-depends:
 	fi
 
 do-configure:
-	@${RM} -f ${WRKDIR}/source/md5.h && \
-		${ECHO} '#include_next <md5.h>' >${WRKDIR}/source/md5.h
 	@${RM} -f ${WRKDIR}/source/rsaref && ${LN} -sf . ${WRKDIR}/source/rsaref
 
 do-install:
