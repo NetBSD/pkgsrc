@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/18 01:51:43 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/20 05:03:34 jwise Exp $
 
 DISTNAME=	ApacheJSSI-1.1.2
 PKGNAME=	jssi-1.1.2
@@ -19,9 +19,12 @@ NO_CONFIGURE=
 NO_MTREE=
 MAKE_ENV+=	CLASSPATH=${CLASSPATH}:${JSDK_HOME}/lib/jsdk.jar
 WRKSRC=		${WRKDIR}/ApacheJSSI-1.1.2/src/java
-MESSAGE=	${WRKDIR}/MESSAGE
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 post-build:
+	(cd ${WRKSRC}/../../docs && \
+		CLASSPATH=${CLASSPATH}:${JSDK_HOME}/lib/jsdk.jar \
+		${SH} generate_javadoc)
 	${SED} -e 's,@JSDK_HOME@,${JSDK_HOME},g' \
 		< ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
 
