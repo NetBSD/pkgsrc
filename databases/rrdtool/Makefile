@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/06/23 10:33:52 adam Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/22 08:02:16 grant Exp $
 #
 
 DISTNAME=	rrdtool-1.0.40
@@ -18,7 +18,7 @@ USE_LIBTOOL=	# defined
 USE_BUILDLINK2=	# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 LTCONFIG_OVERRIDE+=	${WRKSRC}/contrib/php4/ltconfig
-USE_GMAKE=	# defined
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	# defined
 
 CONFIGURE_ARGS= --enable-shared
