@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/23 13:52:09 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/08/06 21:31:34 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/02/10 18:13:21 motoyuki Exp $
 
 DISTNAME=	mh-6.8.4-JP-3.03
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://ports.jp.freebsd.org/pub/FreeBSD-jp/ports-jp/LOCAL_PORTS/ \
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 COMMENT=	Rand MH mail handling system + Japanese patches
 
-DEPENDS=	ja-less-332:../../japanese/less
+DEPENDS=	ja-less>=332:../../japanese/less
 
 CONFLICTS=	nmh-* ja-mh-*_JP_*
 
