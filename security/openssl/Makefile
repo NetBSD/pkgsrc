@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/12/16 12:03:21 abs Exp $
+# $NetBSD: Makefile,v 1.12 2000/02/12 14:08:29 fredb Exp $
 #
 
 DISTNAME=		openssl-0.9.4
@@ -82,7 +82,12 @@ do-install:
 	cd ${WRKSRC}/apps && ${INSTALL_SCRIPT} CA.sh CA.pl ${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/apps/openssl.cnf ${PREFIX}/etc/openssl.cnf.example
 	cd ${WRKSRC} && \
-		${INSTALL_DATA} libcrypto.so.?.0 libssl.so.?.0 ${PREFIX}/lib/
+		${INSTALL_DATA} libcrypto.so.?.0 libssl.so.?.0 ${PREFIX}/lib/; \
+		${INSTALL_DATA} libcrypto.a libssl.a ${PREFIX}/lib/
+.if exists(/usr/bin/ranlib)
+	/usr/bin/ranlib ${PREFIX}/lib/libcrypto.a
+	/usr/bin/ranlib ${PREFIX}/lib/libssl.a
+.endif
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
 	# libRSAglue.a is only useful if you are using the RSAREF2 library.
 	cd ${WRKSRC} && ${INSTALL_DATA} libRSAglue.a ${PREFIX}/lib/

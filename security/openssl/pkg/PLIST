@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/11/25 18:51:47 erh Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/02/12 14:08:30 fredb Exp $
 bin/CA.pl
 bin/CA.sh
 bin/asn1parse
@@ -136,9 +136,12 @@ include/openssl/txt_db.h
 include/openssl/x509.h
 include/openssl/x509_vfy.h
 include/openssl/x509v3.h
+lib/libcrypto.a
 lib/libcrypto.so.1.0
+lib/libssl.a
 lib/libssl.so.1.0
 share/doc/openssl/README
+share/doc/openssl/c-indentation.el
 share/doc/openssl/crypto.pod
 share/doc/openssl/openssl.pod
 share/doc/openssl/openssl.txt
