@@ -4,7 +4,7 @@
 # Date created:		03 September 1994
 # Whom:			mr
 #
-# $NetBSD: Makefile,v 1.4 1997/12/04 22:53:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/24 20:36:06 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -19,29 +19,29 @@ MAN1= 		pine.1 pico.1 pilot.1
 
 post-patch:
 	[ -f ${WRKSRC}/pine/osdep/os-neb.h.orig ] || \
-	  cp ${WRKSRC}/pine/osdep/os-neb.h ${WRKSRC}/pine/osdep/os-neb.h.orig
-	sed \
-          -e 's|.*\(#define.*SYSTEM_PINERC_FIXED\) .*|\1 "'"${PREFIX}/lib/pine.conf.fixed"'"|g' \
-          -e 's|.*\(#define.*SYSTEM_PINERC\) .*|\1 "'"${PREFIX}/lib/pine.conf"'"|g' \
-          <${WRKSRC}/pine/osdep/os-neb.h.orig >${WRKSRC}/pine/osdep/os-neb.h
+	  ${CP} ${WRKSRC}/pine/osdep/os-neb.h ${WRKSRC}/pine/osdep/os-neb.h.orig
+	${SED} \
+	  -e 's|.*\(#define.*SYSTEM_PINERC_FIXED\) .*|\1 "'"${PREFIX}/lib/pine.conf.fixed"'"|g' \
+	  -e 's|.*\(#define.*SYSTEM_PINERC\) .*|\1 "'"${PREFIX}/lib/pine.conf"'"|g' \
+	  <${WRKSRC}/pine/osdep/os-neb.h.orig >${WRKSRC}/pine/osdep/os-neb.h
 
 do-build:
 	cd ${WRKSRC} && ./build neb
 
 do-install:
-	install -c -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} ${WRKSRC}/pico/libpico.a ${PREFIX}/lib/libpico.a
-	install -c -s -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} ${WRKSRC}/bin/pico ${PREFIX}/bin/pico
-	install -c -s -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} ${WRKSRC}/bin/pilot ${PREFIX}/bin/pilot
-	install -c -s -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} ${WRKSRC}/bin/pine ${PREFIX}/bin/pine
-	install -c -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} ${FILESDIR}/pgpencrypt ${PREFIX}/bin/pgpencrypt
-	install -c -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} ${FILESDIR}/pgpdecode ${PREFIX}/bin/pgpdecode
-	install -c -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} ${FILESDIR}/pgpsign ${PREFIX}/bin/pgpsign
-	install -c -o ${SHAREOWN} -g ${SHAREGRP} -m ${SHAREMODE} ${FILESDIR}/dot.pinerc.pgp.sample ${PREFIX}/etc/dot.pinerc.pgp.sample
-	install -c -o ${MANOWN} -g ${MANGRP} -m ${MANMODE} ${WRKSRC}/doc/pico.1 ${PREFIX}/man/man1/pico.1
-	install -c -o ${MANOWN} -g ${MANGRP} -m ${MANMODE} ${WRKSRC}/doc/pilot.1 ${PREFIX}/man/man1/pilot.1
-	install -c -o ${MANOWN} -g ${MANGRP} -m ${MANMODE} ${WRKSRC}/doc/pine.1 ${PREFIX}/man/man1/pine.1
-	( echo '# (This file is not part of the pine distribution! - HF)' ; \
-	  ${PREFIX}/bin/pine -conf ) | sed \
+	${INSTALL_PROGRAM} ${WRKSRC}/pico/libpico.a ${PREFIX}/lib/libpico.a
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/pico ${PREFIX}/bin/pico
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/pilot ${PREFIX}/bin/pilot
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/pine ${PREFIX}/bin/pine
+	${INSTALL_PROGRAM} ${FILESDIR}/pgpencrypt ${PREFIX}/bin/pgpencrypt
+	${INSTALL_PROGRAM} ${FILESDIR}/pgpdecode ${PREFIX}/bin/pgpdecode
+	${INSTALL_PROGRAM} ${FILESDIR}/pgpsign ${PREFIX}/bin/pgpsign
+	${INSTALL_DATA}    ${FILESDIR}/dot.pinerc.pgp.sample ${PREFIX}/etc/dot.pinerc.pgp.sample
+	${INSTALL_MAN}     ${WRKSRC}/doc/pico.1 ${PREFIX}/man/man1/pico.1
+	${INSTALL_MAN}     ${WRKSRC}/doc/pilot.1 ${PREFIX}/man/man1/pilot.1
+	${INSTALL_MAN}     ${WRKSRC}/doc/pine.1 ${PREFIX}/man/man1/pine.1
+	( ${ECHO} '# (This file is not part of the pine distribution! - HF)' ; \
+	  ${PREFIX}/bin/pine -conf ) | ${SED} \
 	    -e 's|^\(use-only-domain-name\)=.*$$|\1=No|g' \
 	    -e 's|^\(mail-directory\)=.*$$|\1=Mail|g' \
 	    -e 's|^\(feature-list\)=.*$$|\1=enable-mail-check-cue,enable-suspend,expanded-view-of-addressbooks,include-header-in-reply,include-text-in-reply,show-selected-in-boldface,signature-at-bottom|g' \
