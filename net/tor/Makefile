@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/11/11 20:52:46 jschauma Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/11 21:02:20 tv Exp $
 #
 
-DISTNAME=		tor-0.0.8.1
+DISTNAME=		tor-0.0.9.2
 CATEGORIES=		net security
 MASTER_SITES=		http://freehaven.net/tor/dist/
 
@@ -16,8 +16,6 @@ USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
-CONF_FILES=		${PREFIX}/share/examples/tor/dirservers 	\
-				${PKG_SYSCONFDIR}/tor/dirservers
 CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
 				${PKG_SYSCONFDIR}/tor/tor-tsocks.conf
 CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
@@ -28,8 +26,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/torify ${PREFIX}/bin/torify
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/tor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/tor
-	${INSTALL_DATA} ${WRKSRC}/src/config/dirservers 		\
-		${PREFIX}/share/examples/tor/dirservers
 	${INSTALL_DATA} ${WRKSRC}/src/config/torrc.sample		\
 		${PREFIX}/share/examples/tor/torrc.sample
 	${INSTALL_DATA} ${WRKSRC}/contrib/tor-tsocks.conf		\
