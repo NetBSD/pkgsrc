@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2005/01/24 16:22:51 tv Exp $
+
+--- dact.h.orig	2005-01-24 11:16:06.000000000 -0500
++++ dact.h
+@@ -80,6 +80,7 @@
+ #include "strsep.h"
+ #endif
+ 
++#include <sys/types.h>
+ #ifdef HAVE_STDINT_H
+ #include <stdint.h>
+ #endif
