@@ -1,18 +1,25 @@
-$NetBSD: README,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+$NetBSD: README,v 1.2 2004/04/12 00:38:55 heinz Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
 
 # ./bootstrap [ --prefix=${PREFIX} ] [ --pkgdbdir=${PKGDBDIR} ] \
-	[ --pkgsrcdir=${PKGSRCDIR} ]
+	[ --pkgsrcdir=${PKGSRCDIR} ] [ --sysconfdir=${PKG_SYSCONFBASE} ] \
+	[ --workdir=working directory] \
+	[ --ignore-case-check ] [ --ignore-user-check ] [ --help ]
 
 The defaults for the arguments are as follows:
 
 	--prefix	/usr/pkg
 	--pkgdbdir	/var/db/pkg
 	--pkgsrcdir	/usr/pkgsrc
+	--sysconfdir	/usr/pkg/etc
+	--workdir	work
 
 It is perfectly acceptable to place ${PKGDBDIR} under ${PREFIX}.
+
+The working directory will be created if it doesn't exist and has to be
+writable by the user executing ./bootstrap.
 
 Make sure that you have a working C compiler and make(1) binary in
 your path.
