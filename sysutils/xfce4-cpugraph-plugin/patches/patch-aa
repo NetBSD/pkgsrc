@@ -1,0 +1,96 @@
+$NetBSD: patch-aa,v 1.1 2004/06/28 00:47:40 kristerw Exp $
+
+--- panel-plugin/cpu.c.orig	Mon Jun 28 02:38:06 2004
++++ panel-plugin/cpu.c	Mon Jun 28 02:41:45 2004
+@@ -36,11 +36,12 @@
+ void ReadSettings (Control *control, xmlNode *node)
+ {
+ 	xmlChar *value;
++	CPUGraph *base;
+ 
+ 	if (node == NULL || node->children == NULL)
+ 		return;
+ 
+-	CPUGraph *base = (CPUGraph *)control->data;
++	base = (CPUGraph *)control->data;
+ 
+ 	for (node = node->children; node; node = node->next)
+ 	{
+@@ -640,6 +641,8 @@
+ 
+ void DrawGraph (CPUGraph *base)
+ {
++	int startx, starty;
++	float step;
+         GdkGC *fg1, *fg2, *bg, *fc;
+ 	GtkWidget *da = base->m_DrawArea;
+ 
+@@ -658,8 +661,8 @@
+ 		gdk_gc_set_rgb_fg_color (fc, &base->m_FrameColor);
+ 	}
+ 
+-	int startx = base->m_Frame ? 1 : 0;
+-	int starty = base->m_Frame ? 1 : 0;
++	startx = base->m_Frame ? 1 : 0;
++	starty = base->m_Frame ? 1 : 0;
+ 
+ 	gdk_draw_rectangle (da->window,
+ 			    bg,
+@@ -678,7 +681,7 @@
+         }
+ 																							
+ 
+-	float step = base->m_Height/100.0;
++	step = base->m_Height/100.0;
+ 
+ 	if (base->m_Mode == 0)
+         {
+@@ -718,12 +721,14 @@
+ 	else if (base->m_Mode == 1)
+ 	{
+                 GdkGC *gc;
++		int nrx, nry;
++		float tstep;
++		int x, y;
+ 		if (base->m_ColorMode > 0)
+ 			gc = gdk_gc_new (da->window);
+-                int nrx = base->m_Width/3.0;
+-                int nry = base->m_Height/2.0;
+-                float tstep = nry/100.0;
+-                int x, y;
++                nrx = base->m_Width/3.0;
++                nry = base->m_Height/2.0;
++                tstep = nry/100.0;
+                 for (x=nrx-1;x>=0;x--)
+                 {
+ 	                int usage = (int)(base->m_History[nrx - 1 - x]*tstep);
+@@ -761,12 +766,15 @@
+ 	else if (base->m_Mode == 2)
+ 	{
+ 		GdkGC *gc;
++		int y;
++		int usage;
++		int tmp;
++		int length;
+ 		if (base->m_ColorMode > 0)
+ 			gc = gdk_gc_new (da->window);
+-		int y;
+-		int usage = (int)(base->m_History[0]*step);
+-		int tmp=0;
+-		int length = base->m_Height - (base->m_Height - usage);
++		usage = (int)(base->m_History[0]*step);
++		tmp=0;
++		length = base->m_Height - (base->m_Height - usage);
+ 		for (y=base->m_Height-1;y>=base->m_Height - usage;y--)
+ 		{
+ 			if (base->m_ColorMode > 0)
+@@ -926,8 +934,8 @@
+ 
+ void SetHistorySize (CPUGraph *base, int size)
+ {
+-	base->m_History = (long *)realloc (base->m_History, size*sizeof (long));
+ 	int i;
++	base->m_History = (long *)realloc (base->m_History, size*sizeof (long));
+ 	for (i=size-1;i>=base->m_Values;i--)
+ 		base->m_History[i] = 0;
+ 	base->m_Values = size;
