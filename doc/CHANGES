@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4102 2003/12/14 17:47:38 wiz Exp $
+$NetBSD: CHANGES,v 1.4103 2003/12/14 17:58:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5135,3 +5135,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated lftp to 2.6.10 [cube 2003-12-14]
 	Updated guile to 1.6.4 [wiz 2003-12-14]
 	Updated gnocatan to 0.8.0.0 [wiz 2003-12-14]
+	Added gpgme03 [wiz 2003-12-14]
