@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5370 2004/03/30 12:44:52 recht Exp $
+$NetBSD: CHANGES,v 1.5371 2004/03/30 13:38:50 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1607,3 +1607,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-XML-LibXML to 1.57 [wiz 2004-03-29]
 	Updated ttmkfdir2 to 20021109nb1 [recht 2004-03-30]
 	Updated TeXmacs to 1.0.3.5 [recht 2004-03-30]
+	Added py-twisted-1.2.0 [recht 2004-03-30]
+	Added py-twisted-docs-1.2.0 [recht 2004-03-30]
