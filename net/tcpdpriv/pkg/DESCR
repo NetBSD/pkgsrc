@@ -1,0 +1,14 @@
+A set of tools to create web pages for tcpdump output files
+	<<Alpha test version for MAWI-WG internal use>>
+			March 8, 1999
+			WIDE Project MAWI WorkingGroup
+			Kenjiro Cho <kjc@csl.sony.co.jp>
+
+	wide-tcpdpriv:
+		a program for eliminating confidential information
+		from tcpdump trace files to address privacy and security 
+		concerns.
+		Written by Greg Minshall of Ipsilon Networks, Inc. 
+
+		we have modified the original tcpdpriv defaults to meet
+		the WIDE Project requirement.
