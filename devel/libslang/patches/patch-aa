@@ -1,5 +1,5 @@
---- src/Makefile.in.orig	Wed Jul 15 09:23:28 1998
-+++ src/Makefile.in	Wed Jul 15 09:45:35 1998
+--- src/Makefile.in.orig	Fri Apr 24 02:17:04 1998
++++ src/Makefile.in	Thu Jul 16 11:32:33 1998
 @@ -2,9 +2,9 @@
  #---------------------------------------------------------------------------
  # ANSI C compiler
@@ -7,9 +7,9 @@
 -CC              = @CC@
 -CFLAGS 		= @CFLAGS@
 -LDFLAGS		= @LDFLAGS@
-+CC		= ${LIBTOOL} cc
++CC		= $(LIBTOOL) cc
 +CFLAGS		= -O2
-+LDFLAGS		= libslang.la -ltermcap
++LDFLAGS		= $(EXECLIBS)
  #---------------------------------------------------------------------------
  # ELF specific (Linux)
  #---------------------------------------------------------------------------
@@ -27,7 +27,7 @@
  
  CONFIG_H		= config.h
 -ALL_CFLAGS		= $(CFLAGS) -Dunix $(THIS_LIB_DEFINES)
-+CFLAGS			+= -Dunix $(THIS_LIB_DEFINES)
++ALL_CFLAGS		= -Dunix $(THIS_LIB_DEFINES)
  ALL_ELF_CFLAGS		= $(ELF_CFLAGS) -Dunix $(THIS_LIB_DEFINES)
  COMPILE_CMD		= $(CC) -c $(ALL_CFLAGS)
  ELFCOMPILE_CMD		= $(ELF_CC) -c $(ALL_ELF_CFLAGS)
@@ -38,6 +38,15 @@
  OBJDIR_NORMAL_LIB = $(OBJDIR)/$(NORMAL_LIB)
  
  ELFLIB = lib$(THIS_LIB).so#
+@@ -72,7 +72,7 @@
+ 
+ ELFDIR_ELF_LIB = $(ELFDIR)/$(ELFLIB_MAJOR_MINOR)#
+ 
+-EXECLIBS = -L$(OBJDIR) -lslang -lm $(TCAPLIB)
++EXECLIBS = libslang.la $(TCAPLIB)
+ EXECDEPS = $(OBJDIR_NORMAL_LIB)
+ 
+ OFILES = @PROGRAM_OFILES@
 @@ -90,8 +90,8 @@
  
  $(OBJDIR_NORMAL_LIB): $(OBJDIR) $(CONFIG_H) $(OBJS)
