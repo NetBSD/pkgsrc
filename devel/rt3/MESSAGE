@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/08/03 15:33:50 cube Exp $
+
+You must configure RT by editing ${PKG_SYSCONFDIR}/RT_SiteConfig.pm.
+
+To initialize the RT database, run
+	${PREFIX}/sbin/rt-setup-database --action init
+as a user in the ${RT_GROUP} group or as superuser.
+
+See also the manual on ${HOMEPAGE}docs.html
+===========================================================================
