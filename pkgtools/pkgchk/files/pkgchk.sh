@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.5 2001/07/08 23:15:53 abs Exp $
+# $Id: pkgchk.sh,v 1.6 2001/07/09 14:57:17 abs Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
 # TODO: Order updates based on DEPENDENCIES.
@@ -238,7 +238,7 @@ if [ -n "$UPDATE_TODO" ];then
     while [ $# != 0 ]; do
 	PKGNAME=`echo $1 | sed 's/-[0-9].*//'`
 	if [ -f /var/db/pkg/$PKGNAME-[0-9]*/+REQUIRED_BY ];then
-	    LIST="$LIST$1|$2|`cat /var/db/pkg/$PKGNAME-[0-9]*/+REQUIRED_BY`\n"
+	    LIST="$LIST$1|$2|`cat /var/db/pkg/$PKGNAME-[0-9]*/+REQUIRED_BY | xargs echo`\n"
 	else
 	    LIST="$LIST$1|$2\n"
 	fi
