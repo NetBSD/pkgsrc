@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/10/04 12:00:45 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/09 15:49:39 nra Exp $
 #
 
 DISTNAME=	doc2html
-PKGNAME=	doc2html-2.1
+PKGNAME=	doc2html-3.0
 CATEGORIES=	converters
 MASTER_SITES=	http://www.htdig.org/files/contrib/parsers/
 
@@ -19,13 +19,16 @@ DEPENDS+=	catdoc-[0-9]*:../../textproc/catdoc
 USE_PERL5=	YES
 
 do-build:
+.for CVTR in doc2html pdf2html
 	${SED} -e "s%@@LOCALBASE@@%${LOCALBASE}%g" \
 		-e "s%/usr/bin/perl%${PERL5}%g" \
 		-e "s%/bin/sed%${SED}%g" \
-		-e "s%@@X11BASE@@%${X11BASE}%g" < ${WRKSRC}/doc2html.pl \
-		> ${WRKSRC}/doc2html
+		-e "s%@@X11BASE@@%${X11BASE}%g" < ${WRKSRC}/${CVTR}.pl \
+		> ${WRKSRC}/${CVTR}
+.endfor
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/doc2html ${PREFIX}/bin/doc2html
+	${INSTALL_SCRIPT} ${WRKSRC}/pdf2html ${PREFIX}/bin/pdf2html
 
 .include "../../mk/bsd.pkg.mk"
