@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2001/01/26 18:05:50 manu Exp $
+# $NetBSD: Makefile,v 1.186 2001/01/28 19:20:16 ad Exp $
 #
 
     SUBDIR += adns
@@ -56,6 +56,7 @@
     SUBDIR += libnids
     SUBDIR += libpcap
     SUBDIR += libsscript
+    SUBDIR += lopster
     SUBDIR += lukemftp
     SUBDIR += mirror
     SUBDIR += mouse-pppoe
