@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/05 10:29:38 agc Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/05 11:10:57 agc Exp $
 
 DISTNAME=		cfs-1.4.1
 CATEGORIES=		security
@@ -13,7 +13,9 @@ CRYPTO=			yes
 INSTALL_TARGET=		install_cfs
 
 do-build:
-	cd ${WRKSRC} && ./netbsd_make_with_bad_rpcgen cfs
+	@cd ${WRKSRC} && 						\
+	fix=`${AWK} '/^#define[ \t]*socklen_t/ { if ($$3 == "socklen_t") { print "CPPFLAGS=$${CPPFLAGS} -Dsocklen_t=u_int"; exit} }' < /usr/include/netdb.h`; \
+	${SETENV} ${MAKE_ENV} $$fix ./netbsd_make_with_bad_rpcgen cfs
 
 post-install:
 	${BSD_INSTALL_MAN} ${WRKSRC}/cattach.1 ${PREFIX}/man/man1/
