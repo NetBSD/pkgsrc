@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/02/07 11:35:42 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/02/21 05:18:06 cjs Exp $
 
 PKGNAME=		postgresql80-server-${BASE_VERS}
 PKGREVISION=		# empty
@@ -18,6 +18,7 @@ MESSAGE_SRC=		${.CURDIR}/MESSAGE
 CONFIGURE_ARGS+=	--with-openssl
 BUILD_DIRS=		${WRKSRC}/src/backend
 BUILD_DIRS+=		${WRKSRC}/src/backend/utils/mb/conversion_procs
+BUILD_DIRS+=		${WRKSRC}/src/timezone
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql80-server
 PKG_SUPPORTED_OPTIONS=	PAM
