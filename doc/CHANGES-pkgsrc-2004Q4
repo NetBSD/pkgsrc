@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.78 2005/02/19 21:38:26 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.79 2005/02/19 21:47:26 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -165,3 +165,5 @@ Pullup ticket 295 - requested by Lubomir Sedlacik
 security fixes for suse91_libtiff, suse91_x11, and suse91_gtk2
 Pullup ticket 296 - requested by Lubomir Sedlacik
 security fix for tcpdump
+Pullup ticket 297 - requested by Lubomir Sedlacik
+security fix for p5-Tk
