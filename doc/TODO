@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2915 2005/01/16 22:28:01 epg Exp $
+$NetBSD: TODO,v 1.2916 2005/01/16 22:36:39 epg Exp $
 
 Suggested new packages
 ======================
@@ -843,7 +843,6 @@ Suggested package updates
 	o p5-Pod-POM-0.15
 	o p5-PostScript-MailLabels-2.10
 	o p5-SQL-Statement-1.09
-	o p5-SVN-Mirror-0.52
 	o p5-SVN-Web-0.38
 	o p5-SWF-File-0.37
 	o p5-Safe-Hole-0.10
