@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:48 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/11 06:17:54 mrg Exp $
 bin/c_incl
 bin/cook
 bin/cook_bom
+bin/cook_rsh
 bin/cookfp
 bin/cooktime
 bin/find_libs
@@ -21,6 +22,7 @@ man/man1/c_incl.1
 man/man1/cook.1
 man/man1/cook_bom.1
 man/man1/cook_lic.1
+man/man1/cook_rsh.1
 man/man1/cookfp.1
 man/man1/cooktime.1
 man/man1/find_libs.1
@@ -39,6 +41,7 @@ share/cook/en/man1/c_incl.1
 share/cook/en/man1/cook.1
 share/cook/en/man1/cook_bom.1
 share/cook/en/man1/cook_lic.1
+share/cook/en/man1/cook_rsh.1
 share/cook/en/man1/cookfp.1
 share/cook/en/man1/cooktime.1
 share/cook/en/man1/find_libs.1
@@ -61,6 +64,7 @@ share/cook/functions
 share/cook/g77
 share/cook/gcc
 share/cook/home
+share/cook/host_lists.pl
 share/cook/lex
 share/cook/library
 share/cook/print
