@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.383 2005/03/22 16:08:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.384 2005/03/24 10:29:15 augustss Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
 
 SUBDIR+=	SpeedyCGI
 SUBDIR+=	adzap
+SUBDIR+=	album
+SUBDIR+=	album_themes
 SUBDIR+=	amaya
 SUBDIR+=	analog
 SUBDIR+=	ap-Embperl
