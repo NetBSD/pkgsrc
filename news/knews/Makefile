@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 1997/12/17 23:52:29 hubertf Exp $
 # New ports collection Makefile for: knews
 # Version required:	0.9.8
 # Date created:         30th November 1997
 # Whom:                 tron
+#
+# $NetBSD: Makefile,v 1.3 1998/01/24 21:59:43 hubertf Exp $
 #
 
 DISTNAME=	knews-0.9.8
@@ -15,8 +16,7 @@ MAINTAINER=	tron@lyssa.owl.de
 LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm
 
 USE_IMAKE=	yes
-USE_X11=	yes
-WRKSRC=		$(WRKDIR)/knews
+WRKSRC=		${WRKDIR}/knews
 
 # Set DOMAIN_NAME to a string appended to the From: header or
 # assign it a file from which the domain name is read.
