@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/02/17 17:51:47 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2001/02/26 20:19:47 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
@@ -23,6 +23,5 @@ CONFIGURE_ARGS= 	--with-extra-lib="${X11BASE}/lib" \
 			--with-extra-inc="${X11BASE}/include ${X11BASE}/include/X11"
 
 LDFLAGS+=		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
-PLIST_SUBST+=		LOCALEDIR=${LOCALEDIR}
 
 .include "../../mk/bsd.pkg.mk"
