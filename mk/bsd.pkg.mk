@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1309 2003/12/03 18:13:28 erh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1310 2003/12/03 18:25:05 erh Exp $
 #
 # This file is in the public domain.
 #
@@ -2568,7 +2568,7 @@ real-su-install: ${MESSAGE}
 	done
 .endif	# INSTALLATION_DIRS
 .if !defined(NO_MTREE)
-	${_PKG_SILENT}${_PKG_DEBUG}if [ `${ID} -u` = 0 ]; then		\
+	${_PKG_SILENT}${_PKG_DEBUG}if [ `${ID} -u` = `${ID} -u ${ROOT_USER}` ]; then		\
 		if [ ! -f ${MTREE_FILE} ]; then				\
 			${ECHO_MSG} "Error: mtree file \"${MTREE_FILE}\" is missing."; \
 			exit 1;						\
@@ -3177,7 +3177,7 @@ real-replace: do-su-replace
 real-undo-replace: do-su-undo-replace
 
 _SU_TARGET=								\
-	if [ `${ID} -u` = 0 ]; then					\
+	if [ `${ID} -u` = `${ID} -u ${ROOT_USER}` ]; then					\
 		${MAKE} ${MAKEFLAGS} $$realtarget;			\
 	elif [ "X${BATCH}" != X"" ]; then				\
 		${ECHO_MSG} "Warning: Batch mode, not superuser, can't run $$action for ${PKGNAME}."; \
