@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/01/21 18:53:52 zuntum Exp $
+# $NetBSD: Makefile,v 1.5 2002/04/25 15:21:53 yyamano Exp $
 #
 
 DISTNAME=		ezmlm-0.53
@@ -20,7 +20,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 post-patch:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC} ${STRIPFLAG} > ${WRKSRC}/conf-ld
+	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${PREFIX}/bin > ${WRKSRC}/conf-bin
 	${ECHO} ${PREFIX}/man > ${WRKSRC}/conf-man
 	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
