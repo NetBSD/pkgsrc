@@ -1,0 +1,26 @@
+$NetBSD: patch-sum,v 1.1.1.1 2001/03/14 16:03:09 skrll Exp $
+
+SHA1 (patch-aa) = 69618f1b6542f66b99922f6f0c00ea777597a6f8
+SHA1 (patch-ab) = 06386d9f87a4782265b00375f4847517be48c1fc
+SHA1 (patch-ac) = 5e5dff4db62386b0bc15514c1051de5671aef92a
+SHA1 (patch-ad) = fec43e52f595b687f1dcbf4fec05b5c74fb419ab
+SHA1 (patch-ae) = 8a9feb023505cddafe6b782abd5fa1bf23f11813
+SHA1 (patch-af) = b91246a123ade7fc354308839e1363a4ee513c7f
+SHA1 (patch-ag) = 1666f52f9d31f972c49879d8f314c7f93fd992d4
+SHA1 (patch-ah) = d30d837719e8bbdf4bc6f5ff377d6febcd85c502
+SHA1 (patch-ai) = 4a1df296ca58cb6ef4362d591daf049302216ec1
+SHA1 (patch-aj) = 3233b247a68a4184a6e85630a6718bd7f2978d67
+SHA1 (patch-ak) = 923b3cb036f5c6e8024dd432138b29ddf203a84c
+SHA1 (patch-al) = 8f8d0ebd8691d73b1ab9c3328e73a81b56c9e47b
+SHA1 (patch-am) = 005245d03c846d2900154172c5936ea1c7a71087
+SHA1 (patch-an) = d6ed06e93d721699395259d573e785a12aec5f6c
+SHA1 (patch-ao) = 3a0a4a1fcd6ccac801bb8c4b9a612644d441a392
+SHA1 (patch-ap) = 1f815fb506a50c5e3b2b0f285b5682375a4cfcb2
+SHA1 (patch-aq) = b3083732d920690019293d06c249f22cf5a3c8d5
+SHA1 (patch-ar) = e1aaa5c899593b9c151b56fa6cad460393c9caf0
+SHA1 (patch-as) = bb94b41a90f6db85f82f3b64adea24c4e1ae22ec
+SHA1 (patch-at) = 3a9345c6793365b3e52721b96014bcbff7371ab0
+SHA1 (patch-au) = 7e82964090089b37f2e4e1a4ca0f2201506b8303
+SHA1 (patch-av) = edd6bb62a65f7569907d26bf76a65beecc434670
+SHA1 (patch-aw) = 6510c6e55f619778c318a96cd5120bb07d9aa6d9
+SHA1 (patch-ax) = bd3a8494663da789fffd1a9d5340b0f44819f26c

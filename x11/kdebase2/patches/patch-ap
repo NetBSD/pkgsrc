@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1.1.1 2001/03/14 16:03:13 skrll Exp $
+
+--- kwin/clients/kwmtheme/Makefile.am.orig	Wed Dec 13 18:25:17 2000
++++ kwin/clients/kwmtheme/Makefile.am
+@@ -4,7 +4,7 @@
+ kde_module_LTLIBRARIES = libkwinkwmtheme.la
+ 
+ libkwinkwmtheme_la_SOURCES = kwmthemeclient.cpp
+-libkwinkwmtheme_la_LIBADD = ../../kwin.la
++libkwinkwmtheme_la_LIBADD = ../../libkwin.la
+ libkwinkwmtheme_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
+ 
+ METASOURCES = AUTO

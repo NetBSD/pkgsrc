@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/14 16:03:11 skrll Exp $
+
+--- configure.orig	Thu Feb 22 13:17:34 2001
++++ configure
+@@ -11108,7 +11108,7 @@
+ 
+     ac_save_ldflags="$LDFLAGS"
+     ac_save_cflags="$CFLAGS"
+-    LDFLAGS="$LDFLAGS $GL_LDFLAGS $X_LDFLAGS $all_libraries -lMesaGL -lMesaGLU -lX11 -lXext -lm $LIBSOCKET"
++    LDFLAGS="$LDFLAGS $GL_LDFLAGS $X_LDFLAGS $all_libraries -lGL -lGLU -lX11 -lXext -lm $LIBSOCKET"
+     CFLAGS="$CFLAGS $X_INCLUDES"
+     test -n "$GL_INCLUDE" && CFLAGS="-I$GL_INCLUDE $CFLAGS"
+     cat > conftest.$ac_ext <<EOF
+@@ -11173,13 +11173,13 @@
+ 
+     if test "$GL_LDFLAGS" = ""; then
+        if test "$ac_cv_have_gl" = "mesa"; then
+-          GLLIB='-lMesaGL -lMesaGLU $(LIB_X11)'
++          GLLIB='-lGL -lGLU $(LIB_X11)'
+        else
+           GLLIB='-lGL -lGLU $(LIB_X11)'
+        fi
+     else
+        if test "$ac_cv_have_gl" = "mesa"; then
+-          GLLIB="$GL_LDFLAGS -lMesaGL -lMesaGLU "'$(LIB_X11)'
++          GLLIB="$GL_LDFLAGS -lGL -lGLU "'$(LIB_X11)'
+        else
+           GLLIB="$GL_LDFLAGS -lGL -lGLU "'$(LIB_X11)'
+        fi
+@@ -11576,6 +11576,7 @@
+ case "$host" in 
+   *-*-linux*) ksysguardd_compile=yes; UNAME='Linux' ;;
+   *-*-freebsd*) ksysguardd_compile=yes; UNAME='FreeBSD' ;;
++  *-*-netbsd*) ksysguardd_compile=yes; UNAME='FreeBSD' ;;
+ #  *-*-solaris*) ksysguardd_compile=yes; UNAME='Solaris' ;;
+   *) ksysguard_compile=no; UNAME='' ;;
+ esac
