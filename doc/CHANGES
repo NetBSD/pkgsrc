@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6642 2004/07/23 02:05:45 minskim Exp $
+$NetBSD: CHANGES,v 1.6643 2004/07/23 03:39:25 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3512,3 +3512,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ucblogo to 5.3 [reed 2004-07-23]
 	Added alee-ttf-0.3 [minskim 2004-07-23]
 	Added cdl3-1.2.4 [minskim 2004-07-23]
+	Added binpatch-1.0 [atatat 2004-07-23]
