@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2003/12/18 11:28:42 adam Exp $
+$NetBSD: patch-ab,v 1.5 2003/12/19 13:46:00 adam Exp $
 
---- builds/unix/configure.orig	2003-11-09 08:37:12.000000000 +0000
+--- builds/unix/configure.orig	2003-07-26 08:08:14.000000000 +0200
 +++ builds/unix/configure
-@@ -21036,6 +21036,7 @@ s,@ac_ct_F77@,$ac_ct_F77,;t t
+@@ -9388,6 +9388,7 @@ s,@ac_ct_STRIP@,$ac_ct_STRIP,;t t
  s,@LIBTOOL@,$LIBTOOL,;t t
  s,@LIBOBJS@,$LIBOBJS,;t t
  s,@LTLIBOBJS@,$LTLIBOBJS,;t t
