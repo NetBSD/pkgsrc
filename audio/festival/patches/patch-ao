@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2004/09/13 09:05:25 agc Exp $
+
+--- speech_tools/include/EST_iostream.h	2004/01/05 10:37:27	1.1
++++ speech_tools/include/EST_iostream.h	2004/01/05 10:37:38
+@@ -51,7 +51,7 @@
+ #   include <strstrea.h>
+ #elif defined(SYSTEM_IS_UNIX)
+ #   include <iostream.h>
+-#   include <strstream.h>
++#   include <sstream>
+ #elif defined(SYSTEM_IS_WIN32)
+ #   include "win32/EST_iostream_win32.h"
+ #   include <strstrea.h>
