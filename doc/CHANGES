@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4156 2003/12/17 08:16:14 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4157 2003/12/17 10:56:59 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5207,3 +5207,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-File-DirSync-1.11 [grant 2003-12-17]
 	Updated xfce4-clipman-plugin to 0.4.0 [martti 2003-12-17]
 	Updated tsclient to 0.132 [xtraeme 2003-12-17]
+	Updated bbsload to 0.2.6 [wulf 2003-12-17]
