@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.8 2003/09/23 13:22:41 grant Exp $	*/
+/*	$NetBSD: file.c,v 1.9 2003/10/29 23:00:28 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: file.c,v 1.29 1997/10/08 07:47:54 charnier Exp";
 #else
-__RCSID("$NetBSD: file.c,v 1.8 2003/09/23 13:22:41 grant Exp $");
+__RCSID("$NetBSD: file.c,v 1.9 2003/10/29 23:00:28 jlam Exp $");
 #endif
 #endif
 
@@ -37,11 +37,18 @@ __RCSID("$NetBSD: file.c,v 1.8 2003/09/23 13:22:41 grant Exp $");
 
 #include "lib.h"
 
+#if HAVE_SYS_WAIT_H
+#include <sys/wait.h>
+#endif
+
 #if HAVE_ASSERT_H
 #include <assert.h>
 #endif
 #if HAVE_ERR_H
 #include <err.h>
+#endif
+#if HAVE_GLOB_H
+#include <glob.h>
 #endif
 #if HAVE_NETDB_H
 #include <netdb.h>
@@ -535,6 +542,40 @@ move_file(char *dir, char *fname, char *to)
 	}
 }
 
+void
+remove_files(const char *path, const char *pattern)
+{
+	char	fpath[FILENAME_MAX];
+	glob_t	globbed;
+	int	i;
+
+	(void) snprintf(fpath, sizeof(fpath), "%s/%s", path, pattern);
+	if ((i=glob(fpath, GLOB_NOSORT, NULL, &globbed)) != 0) {
+		switch(i) {
+		case GLOB_NOMATCH:
+			warn("no files matching ``%s'' found", fpath);
+			break;
+		case GLOB_ABORTED:
+			warn("globbing aborted");
+			break;
+		case GLOB_NOSPACE:
+			warn("out-of-memory during globbing");
+			break;
+		default:
+			warn("unknown error during globbing");
+			break;
+		}
+		return;
+	}
+
+	/* deleting globbed files */
+	for (i=0; i<globbed.gl_pathc; i++)
+		if (unlink(globbed.gl_pathv[i]) < 0)
+			warn("can't delete ``%s''", globbed.gl_pathv[i]);
+
+	return;
+}
+
 /*
  * Unpack a tar file
  */
@@ -659,12 +700,12 @@ format_cmd(char *buf, size_t size, char *fmt, char *dir, char *name)
 			}
 			switch (*fmt) {
 			case 'F':
-				strnncpy(bufp, size - (int) (bufp - buf), name, strlen(name));
+				strlcpy(bufp, name, size - (int) (bufp - buf));
 				bufp += strlen(bufp);
 				break;
 
 			case 'D':
-				strnncpy(bufp, size - (int) (bufp - buf), dir, strlen(dir));
+				strlcpy(bufp, dir, size - (int) (bufp - buf));
 				bufp += strlen(bufp);
 				break;
 
@@ -673,7 +714,8 @@ format_cmd(char *buf, size_t size, char *fmt, char *dir, char *name)
 				if ((cp = strrchr(scratch, '/')) == (char *) NULL) {
 					cp = scratch;
 				}
-				strnncpy(bufp, size - (int) (bufp - buf), scratch, (size_t) (cp - scratch));
+				*cp = '\0';
+				strlcpy(bufp, scratch, size - (int) (bufp - buf));
 				bufp += strlen(bufp);
 				break;
 
@@ -684,7 +726,7 @@ format_cmd(char *buf, size_t size, char *fmt, char *dir, char *name)
 				} else {
 					cp++;
 				}
-				strnncpy(bufp, size - (int) (bufp - buf), cp, strlen(cp));
+				strlcpy(bufp, cp, size - (int) (bufp - buf));
 				bufp += strlen(bufp);
 				break;
 
