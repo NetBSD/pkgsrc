@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.26 2003/09/02 07:00:05 jlam Exp $
+# $NetBSD: post-build,v 1.27 2004/01/20 12:37:08 grant Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -251,30 +251,44 @@ close(HTML);
 	system("mkdir -p leftovers-${arch}");
 
 	# Find files since last build:
-	system("find ${LOCALBASE} -newer ${USR_PKGSRC}/${startfile} -type f >>leftovers-${arch}.txt");
-	system("find ${X11BASE} -newer ${USR_PKGSRC}/${startfile} -type f >>leftovers-${arch}.txt");
+	$leftovers_txt = "leftovers-${arch}.txt";
+	$leftovers_html = "leftovers-${arch}.html";
+	system("find ${LOCALBASE} -newer ${USR_PKGSRC}/${startfile} -type f >>$leftovers_txt");
+	system("find ${X11BASE} -newer ${USR_PKGSRC}/${startfile} -type f >>$leftovers_txt");
 
 	# Strip perl-files:
-	system("pkg_info -qL perl > .p.${arch}");
-	system("fgrep -v -x -f .p.${arch} leftovers-${arch}.txt >leftovers-${arch}.txt.new");
-	rename("leftovers-${arch}.txt.new", "leftovers-${arch}.txt");
-	unlink(".p.${arch}");
+	{
+		local $/;
+		undef $/;
+		$perlfiles = `pkg_info -qL perl`;
+	}
+	($perlfiles_pattern = $perlfiles) =~ s/\n/|/g;
+	$perlfiles_pattern =~ s/|$//;
 
-	# Store leftovers, for easier identification:
-	system("tar plcf - `cat leftovers-${arch}.txt` | ( cd leftovers-${arch} ; tar plxf - )");
+	open (LEFT, $leftovers_txt) or die "can't read $leftovers_txt: $!";
+	@left = <LEFT>;
+	close (LEFT);
+	@leftovers = grep(!/^(${perlfiles_pattern})$/, @left);
+
+	open (LEFT, ">$leftovers_txt") or die "can't write $leftovers_txt: $!";
+	print LEFT @leftovers;
+	close (LEFT);
+
+	if (scalar(@leftovers)) {
+		# Store leftovers, for easier identification:
+		system("tar plcf - `cat $leftovers_txt` | ( cd leftovers-${arch} ; tar plxf - )");
+	}
 
 	# Add links to leftover list:
-	open (IN, "< leftovers-${arch}.txt")
-		or die "can't read leftovers-${arch}.txt";
-	open (OUT, "> leftovers-${arch}.html")
-		or die "can't write leftovers-${arch}.html";
+	open (OUT, "> $leftovers_html")
+		or die "can't write $leftovers_html";
 	print OUT <<EOOUT
 <HTML>
 <BODY>
 <PRE>
 EOOUT
 ;
-	while (<IN>) {
+	foreach (@leftovers) {
 	    	print OUT "<A HREF=\"${FTPHOST}/${FTPURL}/leftovers-${arch}$_\">$_</A>\n";
 	}
 	print OUT <<EOOUT2
@@ -283,7 +297,6 @@ EOOUT
 </HTML>
 EOOUT2
 ;
-    	close(IN);
     	close(OUT);
 }
 
