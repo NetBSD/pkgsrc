@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/12/20 11:30:59 grant Exp $
+# $NetBSD: Makefile,v 1.15 2005/02/19 12:45:49 wiz Exp $
 #
 
 DISTNAME=	Devel-Symdump-2.03
@@ -9,7 +9,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://cpan.uwinnipeg.ca/search?query=SymDump&mode=dist
+HOMEPAGE=	http://search.cpan.org/dist/Devel-Symdump/
 COMMENT=	Perl5 module for inspecting perl's symtable/class hiers
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
