@@ -1,12 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2003/07/17 21:44:25 grant Exp $
+# $NetBSD: Makefile,v 1.28 2003/08/09 12:43:01 seb Exp $
 
 DISTNAME=		gcc-2.95.3
-GCC_VERSION=		2.95.3
 PKGNAME=		gcc-ssp-2.95.3.13
-PKGVERSION=		${GCC_VERSION}
-PKGREVISION=
-PKGBASENAME=		gcc-ssp
-WRKSRC=			${WRKDIR}/objdir
+PKGREVISION=		1
 CATEGORIES=		lang security
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
 
@@ -20,8 +16,9 @@ PATCHFILES=		gcc-2.95.3-diff-2002-08-29.gz
 SSP_PATCH=		protector-2.95.3-13.tar.gz
 DISTFILES+=		${DISTNAME}.tar.gz ${SSP_PATCH}
 SITES_protector-2.95.3-13.tar.gz=	http://www.trl.ibm.com/projects/security/ssp/gcc2_95_3/
-PATCHDIR=		../gcc/patches
-GCC_FILESDIR=		${FILESDIR}/../../gcc/files
+
+PATCHDIR=		${.CURDIR}/../gcc/patches
+GCC_FILESDIR=		${.CURDIR}/../gcc/files
 
 #ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc
 #
@@ -31,70 +28,79 @@ GCC_FILESDIR=		${FILESDIR}/../../gcc/files
 #			NetBSD-*-prep NetBSD-*-bebox NetBSD-*-ofppc \
 #			NetBSD-*-amigappc NetBSD-*-sandpoint
 
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-
+USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_GMAKE=		YES
-HAS_CONFIGURE=		YES
-CONFIGURE_ARGS=		--host=${MACHINE_GNU_PLATFORM} \
-			--prefix=${GCC_PREFIX} \
-			--enable-shared
-CONFIGURE_SCRIPT=	${SRCDIR}/configure
-INFO_FILES=		# Not instal info files.
 
-MESSAGE_SUBST+=		MAKE=${MAKE} \
-			PKGBASENAME=${PKGBASENAME}
-PLIST_SUBST+=		PKGBASENAME=${PKGBASENAME}
-SRCDIR=			${WRKDIR}/${DISTNAME}
+HAS_CONFIGURE=		YES
+CONFIGURE_SCRIPT=	${WRKSRC}/configure
+CONFIGURE_ARGS=		--host=${MACHINE_GNU_PLATFORM}
+CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
+CONFIGURE_ARGS+=	--enable-shared
+
+CONFIGURE_DIRS=		${WRKDIR}/objdir
+BUILD_DIRS=		${CONFIGURE_DIRS}
+
+FILES_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV} GCC_PREFIX=${GCC_PREFIX}
+MESSAGE_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV}
+
+INFO_DIR=		${GCC_PREFIX:S|^${PREFIX}/||}/info
+INFO_FILES=		chill.info cpp.info g77.info gcc.info
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "SunOS"
-CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
-GCC_PREFIX=		${LOCALBASE}/${PKGBASENAME}
-.else
+.if ${OPSYS} == "SunOS"
 .  if ${CC:M*gcc*} == ""
 ALL_TARGET=		bootstrap
 .  endif
-GCC_PREFIX=		${LOCALBASE}
-PLIST_SRC=		${PKGDIR}/PLIST.SunOS
-PLIST_SUBST+=		GCC_VERSION=${GCC_VERSION}
-CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
+# we know it's a GNU toolchain on Linux and the BSDs.
+.elif ${OPSYS:M*BSD} != "" || ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-gnu-as
+CONFIGURE_ARGS+=	--with-gnu-ld
+.else
+# play it safe, force a bootstrap build if we don't know for sure it
+# is gcc.
+.  if ${CC:M*gcc*} == ""
+ALL_TARGET=		bootstrap
+.  endif
 .endif
+
+GCC_PREFIX=	${PREFIX}/${PKGNAME_NOREV}
+GCC_VERSION=	${DISTNAME:C/^.*-//}
+GCC_ARCHDIR=	${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}
+PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 post-extract:
 	${MKDIR} ${WRKSRC}
-	cd ${WRKSRC}/../${DISTNAME}/gcc/config; \
-	${CP} ${GCC_FILESDIR}/xm-netbsd.h .; \
-	${CP} ${GCC_FILESDIR}/xm-target64.h .; \
-	for FILE in ${GCC_FILESDIR}/*_* ; do \
-	  ARCH=`basename $${FILE} | ${CUT} -d_ -f1`; \
-	  DEST=`basename $${FILE} | ${SED} -e "s/$${ARCH}_//"`; \
-	  ${MKDIR} $${ARCH}; \
-	  ${CP} $${FILE} $${ARCH}/$${DEST}; \
+	${CP} ${GCC_FILESDIR}/xm-netbsd.h ${WRKSRC}/gcc/config
+	${CP} ${GCC_FILESDIR}/xm-target64.h ${WRKSRC}/gcc/config
+	for file in ${GCC_FILESDIR}/*_* ; do \
+		arch=`${BASENAME} $${file} | ${SED} -e "s/_.*//"`;	\
+		dest=`${BASENAME} $${file} | ${SED} -e "s/$${arch}_//"`; \
+		${MKDIR} ${WRKSRC}/gcc/config/$${arch};			\
+		${CP} $${file} ${WRKSRC}/gcc/config/$${arch}/$${dest};	\
 	done; \
-	cd ${WRKSRC}/../${DISTNAME}; \
-	for i in gcc/config/alpha/netbsd-elf.h gcc/config/arm/t-netbsd \
-		gcc/config/mips/x-netbsd libf2c/libF77/dtime_.c libf2c/libF77/etime_.c; do \
-	  ${RM} $${i};\
-	done
+	${RM} ${WRKSRC}/gcc/config/alpha/netbsd-elf.h
+	${RM} ${WRKSRC}/gcc/config/arm/t-netbsd
+	${RM} ${WRKSRC}/gcc/config/mips/x-netbsd
+	${RM} ${WRKSRC}/libf2c/libF77/dtime_.c
+	${RM} ${WRKSRC}/libf2c/libF77/etime_.c
 
 post-patch:
-	${ECHO} "bogus" >${WRKSRC}/../${DISTNAME}/gcc/cstamp-h.in
 	cd ${WRKDIR} && ${PAX} -O -zrf ${_DISTDIR}/${SSP_PATCH}
-	${CP} ${WRKDIR}/protector.c ${WRKDIR}/protector.h ${WRKDIR}/${DISTNAME}/gcc/
-	${PATCH} -p0 -d ${WRKDIR}/${DISTNAME} --forward --quiet -E < ${WRKDIR}/protector.dif
-	${PATCH} -p0 -d ${WRKDIR}/${DISTNAME} --forward --quiet -E < ${WRKDIR}/protectonly.dif
+	${CP} ${WRKDIR}/protector.c ${WRKDIR}/protector.h ${WRKSRC}/gcc/
+	${PATCH} -p0 -d ${WRKSRC} --forward --quiet -E < ${WRKDIR}/protector.dif
+	${PATCH} -p0 -d ${WRKSRC} --forward --quiet -E < ${WRKDIR}/protectonly.dif
 
-.if ${OPSYS} != "SunOS"
+pre-configure:
+	${MKDIR} ${BUILD_DIRS}
+	cd ${WRKSRC} && contrib/egcs_update --touch
+
 post-build:
-	for FILE in ${FILESDIR}/gcc.mk; do \
-	  ${SED} -e 's#@@MAKE@@#${MAKE}#g' \
-		 -e 's#@@PKGBASENAME@@#${PKGBASENAME}#g' \
-		 -e 's#@@PREFIX@@#${PREFIX}#g' \
-	   <$$FILE >${WRKDIR}/`basename $$FILE`; \
-	done
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc.mk > ${WRKDIR}/gcc.mk
+.if ${OPSYS} != "SunOS"
 	@${ECHO} "===> Check whether stack protection works or not"
-	${WRKSRC}/gcc/xgcc -B${WRKSRC}/gcc/ -O2 -o ${WRKDIR}/buffer ${FILESDIR}/buffer.c
+	${BUILD_DIRS}/gcc/xgcc -B${BUILD_DIRS}/gcc/ -O2 -o ${WRKDIR}/buffer ${FILESDIR}/buffer.c
 	ulimit -c 0 && ${WRKDIR}/buffer abcdefghijklmnopqrstuvwxyz  2> ${WRKDIR}/output || ${TRUE}
 	@if [ x"`${CAT} ${WRKDIR}/output`" = "x: stack smashing attack in function main" ]; then \
 	    ${ECHO} "===> Stack protection succeeded."; \
@@ -105,24 +111,31 @@ post-build:
 	fi
 .endif
 
-pre-install:
-#	${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${INSTALL_FILE} any PRE-INSTALL
-#	This is not needed because of no info.
-
-.if ${OPSYS} != "SunOS"
-post-install:
-	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include/curses.h ${PREFIX}/${PKGBASENAME}/bin/cc
-	${LN} -s gcc ${PREFIX}/${PKGBASENAME}/bin/cc
-	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGBASENAME}.mk
-	${RM} -fr ${GCC_PREFIX}/info
+.if ${OPSYS} == "SunOS" 
+# 
+# remove empty file and directories that show up when one does: 
+#       make install; make deinstall; make install
+# 
+post-install: 
+	-cd ${GCC_ARCHDIR}/include && ${RM} -f fixed && ${RMDIR} v7 v9
 .else
-# remove empy file and directories that show up when one
-# does make install; make deinstall; make install
 post-install:
-	-cd ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}/include && \
-	${RM} -f fixed && \
-	${RMDIR} v7 v9
+.  if exists(/usr/include/g++/FlexLexer.h)
+	${LN} -fs /usr/include/g++/FlexLexer.h				\
+		${GCC_PREFIX}/include/g++-3/FlexLexer.h
+.  endif
+	 ${RM} -f ${GCC_ARCHDIR}/include/curses.h ${GCC_PREFIX}/bin/cc
 .endif
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${PKGNAME_NOREV}
+	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/share/examples/${PKGNAME_NOREV}/mk.conf
+	${LN} -s gcc ${GCC_PREFIX}/bin/cc
+	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
+	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print		\
+		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
+		>> ${PLIST_SRC}
+	${FIND} ${GCC_PREFIX} -type d -print				\
+		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
+		>> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
 
