@@ -3,7 +3,7 @@
 # Date created:		December 10, 1996
 # Whom:			1wardd@airmail.net
 #
-# $NetBSD: Makefile,v 1.3 1997/12/19 09:24:03 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1997/12/22 07:52:03 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
@@ -19,7 +19,7 @@ MAINTAINER=	ports@FreeBSD.org
 GNU_CONFIGURE=  yes
 USE_X11=	yes
 # change this and remove the strip statement in post-install for debugging
-CONFIGURE_ENV=	CCFLAGS="-O -pipe"
+CONFIGURE_ENV+=	CCFLAGS="-O -pipe"
 
 .if defined(HAVE_MOTIF)
 IS_INTERACTIVE=	yes

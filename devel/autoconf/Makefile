@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1997/11/13 14:37:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1997/12/22 07:52:00 hubertf Exp $
 # New ports collection makefile for:	autoconf
 # Version required:     2.12
 # Date created:		7 October 1995
@@ -16,7 +16,7 @@ RUN_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 MAINTAINER=	torstenb@FreeBSD.ORG
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	M4=${PREFIX}/bin/gm4
+CONFIGURE_ENV+=	M4=${PREFIX}/bin/gm4
 
 OPSYS!= 	uname -s
 
