@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2003/12/03 23:25:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.111 2003/12/24 12:59:26 jmmv Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -91,10 +91,10 @@ SUBDIR+=	teTeX
 SUBDIR+=	teTeX-bin
 SUBDIR+=	teTeX-share
 SUBDIR+=	teTeX-sharesrc
-SUBDIR+=	teTeX2
-SUBDIR+=	teTeX2-bin
-SUBDIR+=	teTeX2-share
-SUBDIR+=	teTeX2-sharesrc
+SUBDIR+=	teTeX1
+SUBDIR+=	teTeX1-bin
+SUBDIR+=	teTeX1-share
+SUBDIR+=	teTeX1-sharesrc
 SUBDIR+=	tex-bagpipetex
 SUBDIR+=	tex-eurosym
 SUBDIR+=	tex-hugelatex
