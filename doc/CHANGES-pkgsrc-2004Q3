@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.37 2004/12/01 00:59:44 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.38 2004/12/01 01:50:06 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q3 branch:
@@ -77,3 +77,5 @@ Pullup ticket 160 - requested by Thomas Klausner
 remove apache6 package
 Pullup ticket 149 - requested by Lubomir Sedlacik
 win32-codecs update
+Pullup ticket 157 - requested by Havard Eidnes
+security update for thunderbird and thunderbird-gtk2
