@@ -1,0 +1,27 @@
+#! /bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 1999/08/03 13:54:56 hubertf Exp $
+#
+
+if [ "$PREFIX" = "" ]
+then
+        PREFIX=/usr/pkg
+fi
+
+TEXMF=$PREFIX/share/texmf
+
+
+cat <<EOT
+---------------------------------------------------------------------------
+Any fonts that were created on the fly when running TeX were created
+in the directory /var/spool/texfonts. You may want to remove this 
+directory manually if you don't need it any longer:
+
+	rm -fr /var/spool/texfonts
+
+For further information have a look at $TEXMF/doc/tetex/.
+---------------------------------------------------------------------------
+
+EOT
+
+exit 0

@@ -1,0 +1,25 @@
+#! /bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 1999/08/03 13:54:56 hubertf Exp $
+#
+
+if [ "$PREFIX" = "" ]
+then
+	PREFIX=/usr/pkg
+fi
+
+TEXMF=$PREFIX/share/texmf
+
+
+cat <<EOT
+---------------------------------------------------------------------------
+You may consider running $PREFIX/bin/texconfig to adjust for your
+local environment, e.g. configure font generation to use a temporary
+directory.
+
+For further information have a look at $TEXMF/doc/tetex/.
+---------------------------------------------------------------------------
+
+EOT
+
+exit 0
