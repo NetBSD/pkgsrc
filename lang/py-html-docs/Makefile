@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/09/21 01:01:02 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2000/01/02 04:22:31 tsarna Exp $
 #
 
 DISTNAME=	html-1.5.2
@@ -21,9 +21,9 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${WRKSRC}; pax -r -w -v -p e [a-z]* ${PREFIX}/${HTMLDIR})
-	(cd ${PREFIX}; find ${HTMLDIR} -type f -print >>${PLIST_SRC})
-	(cd ${PREFIX}; find -d ${HTMLDIR} -type d -print | \
+	(cd ${WRKSRC}; ${PAX} -r -w -v -p e [a-z]* ${PREFIX}/${HTMLDIR})
+	(cd ${PREFIX}; ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC})
+	(cd ${PREFIX}; ${FIND} -d ${HTMLDIR} -type d -print | \
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
 .include "../../mk/bsd.pkg.mk"
