@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.15 2001/05/05 14:01:09 dmcmahill Exp $
+# $NetBSD: pre-build,v 1.16 2001/05/09 03:05:24 hubertf Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -35,62 +35,7 @@ if [ "$BLDLOG" = "" ]; then
 	exit 1
 fi
 
-#
-# Install cvs package and do a cvs update here
-#
-if [ "$CVS_USER" != "" ]; then
-	if [ ! -f /usr/bin/cvs ]; then
-		echo Installing required cvs pkgs for CVS update
-		( cd ${USR_PKGSRC}/devel/cvs ; make bulk-install )
-	fi
-	if [ ! -f /usr/bin/ssh ]; then
-		echo Installing required ssh pkgs for CVS update
-		( cd ${USR_PKGSRC}/security/ssh ; make bulk-install )
-	fi
-	echo Performing CVS update - this will take some time
-	su - ${CVS_USER} -c 'stty sane ; setenv CVS_RSH ssh ; cd '${USR_PKGSRC}' ; cvs -q update -Pd'
-	echo CVS update done.
-fi
 
-#
-# Remove old/broken distfiles and binary packages
-#
-
-DISTDIR=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=DISTDIR )`;
-PACKAGES=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=PACKAGES )`;
-
-if [ $PRUNEDISTFILES = "YES" ]; then
-	echo "Removing old/broken distfiles"
-	( cd ${USR_PKGSRC}/pkgtools/pkglint ; make PRECLEAN=yes bulk-install )
-	lintpkgsrc -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -o -m -r
-	echo done.
-else
-	echo "Skipping distfile pruning."
-fi
-
-if [ $PRUNEPACKAGES = "YES" ]; then
-	echo "Removing old (out of date) binary packages"
-	( cd ${USR_PKGSRC}/pkgtools/pkglint ; make PRECLEAN=yes bulk-install )
-	lintpkgsrc -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -p -r
-	echo done.
-else
-	echo "Skipping packages pruning."
-fi
-
-if [ $PRUNELINKS = "YES" ]; then
-	echo "Checking for and removing orphaned packages links"
-	find $PACKAGES -type l -print |  \
-	while read f 
-	do
-		if [ ! -d $f -a ! -f $f ]; then
-			echo "Removing orphaned link:  \"$f\""
-			rm $f
-		fi
-	done
-	echo done.
-else
-	echo "Skipping pruning of packages links."
-fi
 
 #
 # Clean out everything and it's mother
@@ -149,9 +94,68 @@ rm -f .start.${arch}
 
 mount -o noasync -u /usr
 
-touch .start.${arch}
+
+
+#
+# Install cvs package and do a cvs update here
+#
+if [ "$CVS_USER" != "" ]; then
+	if [ ! -f /usr/bin/cvs ]; then
+		echo Installing required cvs pkgs for CVS update
+		( cd ${USR_PKGSRC}/devel/cvs ; make bulk-install )
+	fi
+	if [ ! -f /usr/bin/ssh ]; then
+		echo Installing required ssh pkgs for CVS update
+		( cd ${USR_PKGSRC}/security/ssh ; make bulk-install )
+	fi
+	echo Performing CVS update - this will take some time
+	su - ${CVS_USER} -c 'stty sane ; setenv CVS_RSH ssh ; cd '${USR_PKGSRC}' ; cvs -q update -Pd'
+	echo CVS update done.
+fi
+
+
+#
+# Remove old/broken distfiles and binary packages
+#
+DISTDIR=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=DISTDIR )`;
+PACKAGES=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=PACKAGES )`;
+
+if [ $PRUNEDISTFILES = "YES" ]; then
+	echo "Removing old/broken distfiles"
+	( cd ${USR_PKGSRC}/pkgtools/pkglint ; make PRECLEAN=yes bulk-install )
+	lintpkgsrc -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -o -m -r
+	echo done.
+else
+	echo "Skipping distfile pruning."
+fi
+
+if [ $PRUNEPACKAGES = "YES" ]; then
+	echo "Removing old (out of date) binary packages"
+	( cd ${USR_PKGSRC}/pkgtools/pkglint ; make PRECLEAN=yes bulk-install )
+	lintpkgsrc -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -p -r
+	echo done.
+else
+	echo "Skipping packages pruning."
+fi
+
+if [ $PRUNELINKS = "YES" ]; then
+	echo "Checking for and removing orphaned packages links"
+	find $PACKAGES -type l -print |  \
+	while read f 
+	do
+		if [ ! -d $f -a ! -f $f ]; then
+			echo "Removing orphaned link:  \"$f\""
+			rm $f
+		fi
+	done
+	echo done.
+else
+	echo "Skipping pruning of packages links."
+fi
+
 
 if [ -f mk/bulk/pre-build.local ]; then
 	. mk/bulk/pre-build.local
 fi
 
+touch .start.${arch}
