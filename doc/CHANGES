@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5103 2004/03/06 00:42:35 wiz Exp $
+$NetBSD: CHANGES,v 1.5104 2004/03/06 06:28:47 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1181,3 +1181,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xmms-modplug-2.05 [ben 2004-03-05]
 	Removed crafty-book-enormous [wiz 2004-03-05]
 	Removed crafty-book-large [wiz 2004-03-05]
+	Updated blt to 2.4z [minskim 2004-03-06]
