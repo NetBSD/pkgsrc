@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2496 2004/11/26 23:05:37 darcy Exp $
+$NetBSD: TODO,v 1.2497 2004/11/27 00:06:40 epg Exp $
 
 Suggested new packages
 ======================
@@ -507,7 +507,6 @@ Suggested package updates
 	o freetds-0.62.4
 	o ftpproxy-1.2.3
 	o fugu-1.2.3
-	o fvwm-devel-2.5.12
 	o fvwm2-themes-0.7.0
 	o g2-0.50
 	o gal-0.24
@@ -560,7 +559,6 @@ Suggested package updates
 	o gnotime-2.2.1
 	o gnugk-2.2.0
 	o gnumeric0-0.76
-	o gnuserv-3.12.7
 	o gnutls-1.0.23
 	o gobo-eiffel-3.3
 	o gocr-0.39
