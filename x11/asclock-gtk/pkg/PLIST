@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/07 17:25:05 jlam Exp $
-bin/asclock
-share/doc/asclock/README.THEMES
-@dirrm share/doc/asclock
+@comment $NetBSD: PLIST,v 1.2 1999/10/28 19:06:22 jlam Exp $
+bin/asclock-gtk
+share/doc/asclock-gtk/README.THEMES
+@dirrm share/doc/asclock-gtk
