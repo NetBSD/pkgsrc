@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:55:01 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:41 wiz Exp $
 
-MD5 (xspeakfree-0.8.1.tar.gz) = 6589d49433ab5993945f49329e3a27bd
+SHA1 (xspeakfree-0.8.1.tar.gz) = 2137358e168cf77da6f257d7d2e36f95fb4e899f
+Size (xspeakfree-0.8.1.tar.gz) = 47763 bytes
 SHA1 (patch-aa) = 86df76360a4d3f3e1dd5fa07db2d132880a717f2

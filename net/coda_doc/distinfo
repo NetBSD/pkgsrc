@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:01 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:12 wiz Exp $
 
-MD5 (coda-doc-4.6.5-3.tgz) = 8225f57d98a2672ec51f946702eaf07b
+SHA1 (coda-doc-4.6.5-3.tgz) = 7204e8a4a4ef8f21adce376005fcedc01a2eab0b
+Size (coda-doc-4.6.5-3.tgz) = 1539330 bytes

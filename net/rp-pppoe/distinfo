@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:53:12 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:31 wiz Exp $
 
 SHA1 (rp-pppoe-2.8.tar.gz) = a95059cc6e41b11f831f1dbf7f420d63d93ed708
+Size (rp-pppoe-2.8.tar.gz) = 101331 bytes
 SHA1 (patch-aa) = 3753fbe6e5a1d62a6adca109391134ead5c037c0
 SHA1 (patch-ab) = 4a16b96d6b2069fab9efb42c856b71af14f672f1
 SHA1 (patch-ac) = 2c76eded4e98fb3564a70dd136f4c66fe41a165f

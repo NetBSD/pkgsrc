@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:53:02 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:31 wiz Exp $
 
-MD5 (pptp-linux-1.0.2.tar.gz) = 257835dbb111673dcf80bdf927a1be87
+SHA1 (pptp-linux-1.0.2.tar.gz) = fe7c7ea298483de37052d57f2641977753817fcf
+Size (pptp-linux-1.0.2.tar.gz) = 193299 bytes
 SHA1 (patch-aa) = 66724c2083970fdcced1cf81bbb9e3a70daf8b5d
 SHA1 (patch-ab) = b6fa33037515042f13057f2593e3a073f694f932
 SHA1 (patch-ac) = 71685d2992349a2b6796fc08fd598b8bf5b60226

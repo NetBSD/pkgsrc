@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:52:17 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:24 wiz Exp $
 
-MD5 (netname-1.7.tar.gz) = a10a6e82162220046de55fc6f7fdcd84
+SHA1 (netname-1.7.tar.gz) = cc3bca5ceb11bdb05f39a9904a5b46f02e3a8dff
+Size (netname-1.7.tar.gz) = 2362 bytes
 SHA1 (patch-aa) = d23af2fa2893be234e23ee1a665244fee7a7bb05

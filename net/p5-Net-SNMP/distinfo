@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:52:36 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:27 wiz Exp $
 
-MD5 (Net-SNMP-3.60.tar.gz) = 9b416095aec3615b60c527eb2cb1c449
+SHA1 (Net-SNMP-3.60.tar.gz) = 84c71541d9d32ff4fb9d5b474e9216c7d11f89e0
+Size (Net-SNMP-3.60.tar.gz) = 40988 bytes

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:58 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:21 wiz Exp $
 
-MD5 (lukemftp-1.5.tar.gz) = 0cd0fc2e3fca21ca56647b2e1142a01a
+SHA1 (lukemftp-1.5.tar.gz) = a8aad3c4383fd38ab42aa3f87b1f79cd78ab06a1
+Size (lukemftp-1.5.tar.gz) = 264861 bytes

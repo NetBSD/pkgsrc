@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:52:22 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:24 wiz Exp $
 
-MD5 (netsaint-plugins-1.2.8-4.tar.gz) = a08534e928e9355a098ad73a37d1c685
+SHA1 (netsaint-plugins-1.2.8-4.tar.gz) = b6800aed3d58a98ff3d6772d17ccbec81c8fe8ba
+Size (netsaint-plugins-1.2.8-4.tar.gz) = 753261 bytes

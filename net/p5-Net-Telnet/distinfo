@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:52:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:27 wiz Exp $
 
-MD5 (Net-Telnet-3.02.tar.gz) = 7078ce36366e5bae7ad9c1ef13c1113a
+SHA1 (Net-Telnet-3.02.tar.gz) = a219bc2d4f522fe5180901b96b3ae9bd24841d9a
+Size (Net-Telnet-3.02.tar.gz) = 30946 bytes

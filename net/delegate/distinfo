@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:08 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:13 wiz Exp $
 
-MD5 (delegate6.1.22.tar.gz) = 94b5972a172de45a186abd7e81a72ae1
+SHA1 (delegate6.1.22.tar.gz) = cc9bdf0b0bedba4d6a2216dc41a43a80e5f1ac16
+Size (delegate6.1.22.tar.gz) = 942869 bytes
 SHA1 (patch-aa) = 2fa4166443f33da29ee6efba3d10873a2ac69b75
 SHA1 (patch-ab) = b5b5b67856a2a79d2c522be2c3973b0b0e44760e

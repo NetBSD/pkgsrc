@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:53:42 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:34 wiz Exp $
 
-MD5 (speak_freely-7.2.tar.gz) = 1fe80725e252270ea4170ebc20e2a059
+SHA1 (speak_freely-7.2.tar.gz) = d35106947b35966b02b59517bf608f37703bef2b
+Size (speak_freely-7.2.tar.gz) = 591240 bytes
 SHA1 (patch-aa) = 0a14f4ebf0244a5dc5ef8f84dae1881da02620fa
 SHA1 (patch-ab) = cb641f0fb6be0959e8528bee3514421f97de30ef
 SHA1 (patch-ac) = c4f98cc9633ae9ee433d29c603640f7912a85ec9

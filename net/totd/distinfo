@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:54:11 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:37 wiz Exp $
 
 SHA1 (totd-1.2.tar.gz) = 6c035948eade7ee01fdf9da83beecc6fe3849247
+Size (totd-1.2.tar.gz) = 90264 bytes
 SHA1 (patch-aa) = 9abe77128733c7a5a3447884c1b81f6e6ec96723

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:52:29 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:26 wiz Exp $
 
-MD5 (ntp-4.0.99k.tar.gz) = 6335d5b9b04a2d4670c4eed7300cdb82
+SHA1 (ntp-4.0.99k.tar.gz) = c79b1cefa321ff2827c5863f38ef16ba55b3d946
+Size (ntp-4.0.99k.tar.gz) = 1961418 bytes
 SHA1 (patch-aa) = 2ba2b21de71a6855e4290aa8a0ab96216e156937

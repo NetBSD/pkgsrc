@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:50:27 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:09 wiz Exp $
 
-MD5 (arla-0.34.5.tar.gz) = cfce4b29051061455dae222b0353a451
+SHA1 (arla-0.34.5.tar.gz) = 5fd06a4c10adb5a40e32f3dafa3470f79b64b7ea
+Size (arla-0.34.5.tar.gz) = 1151021 bytes
 SHA1 (patch-aa) = af23d98510b9a24ab8e8342c0533ce2a36574eab
 SHA1 (patch-ab) = 624765dbc356be276358f90c4799ca63276f83b5
 SHA1 (patch-ac) = 6b6ad4ce52811820c9dacf3d4890c54ec22e4c21

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:53:30 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:33 wiz Exp $
 
-MD5 (sitescooper-2.2.8.tar.gz) = c264366fab5d3a06fa4dc6d8586ffefb
+SHA1 (sitescooper-2.2.8.tar.gz) = fe2c915a22a2398f0d2e98089b68e8cc67ef77fa
+Size (sitescooper-2.2.8.tar.gz) = 174821 bytes

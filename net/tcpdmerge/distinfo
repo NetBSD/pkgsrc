@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:53:53 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:35 wiz Exp $
 
-MD5 (tcpdmerge.c) = 1f5482caa6a9735dea7a90d54d670dee
-MD5 (00README.TXT) = 101b3990cc27c8df9a4aafabe2e711d7
+SHA1 (tcpdmerge.c) = 6cf440a4f4802c28ab1cdbc71a6b1845efe062d6
+Size (tcpdmerge.c) = 9944 bytes
+SHA1 (00README.TXT) = ee508be0ffc9004c3ef42d98cc3ce394081634be
+Size (00README.TXT) = 3388 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:55:11 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:42 wiz Exp $
 
-MD5 (zephyr-2.0.4.tar.gz) = 866c287c45da2fa353484297ad570cf4
+SHA1 (zephyr-2.0.4.tar.gz) = df0e3f6da42d54fc218787c4e7eb9934f5bf5548
+Size (zephyr-2.0.4.tar.gz) = 435872 bytes
 SHA1 (patch-aa) = 074ea7b81c7c3265d80c19805a3e3a217d386ab4
 SHA1 (patch-ab) = 8f232d5b7ad82c6a656bc19e19ee1bcdcd6eb509
 SHA1 (patch-ac) = 2976c91ec491016fcdc82f0bcaed45d81f4d40dc

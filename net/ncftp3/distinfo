@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:52:10 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:23 wiz Exp $
 
-MD5 (ncftp-3.0.2-src.tar.gz) = 54d15c76fcc68f18094bb06dc1676e15
+SHA1 (ncftp-3.0.2-src.tar.gz) = 0778c278c6c88205e6f08d7d4dfebdff73f91278
+Size (ncftp-3.0.2-src.tar.gz) = 388131 bytes
 SHA1 (patch-aa) = 3c26a25258be2fdb2843ff3ccdc032e2320002ad

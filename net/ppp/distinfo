@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:52:59 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:30 wiz Exp $
 
-MD5 (ppp-2.3.11.tar.gz) = 21be3688b98eeaaf5740d4a73a1220eb
+SHA1 (ppp-2.3.11.tar.gz) = b73ba850f5f1878a79df0628d7c9d20e40c8d9af
+Size (ppp-2.3.11.tar.gz) = 796692 bytes
 SHA1 (patch-aa) = 7579cefdce20e2c2f7bb740ad385fdeb8ca31ca3
 SHA1 (patch-ab) = bf93e5474ec36cdf30b5c6d4d81bad42186aad32
 SHA1 (patch-ac) = 3efe900b05b1cbeaf1ce6cbb0f5f3d4c16a3405d
