@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/03/29 19:44:15 tv Exp $
+$NetBSD: patch-aa,v 1.2 2004/09/28 22:14:04 tv Exp $
 
---- sredird.c.orig	Mon Jan 14 05:40:44 2002
+--- sredird.c.orig	2002-01-14 05:40:44.000000000 -0500
 +++ sredird.c
 @@ -82,9 +82,9 @@
  #include <fcntl.h>
@@ -13,10 +13,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/29 19:44:15 tv Exp $
  #include <netinet/ip.h>
  #include <netinet/tcp.h>
  
-@@ -658,8 +658,10 @@ unsigned long int GetPortSpeed(int PortF
+@@ -656,10 +656,14 @@ unsigned long int GetPortSpeed(int PortF
+           return(57600UL);
+         case B115200:
            return(115200UL);
++#ifdef B230400
          case B230400:
            return(230400UL);
++#endif
 +#ifdef B460800
          case B460800:
            return(460800UL);
@@ -24,7 +28,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/29 19:44:15 tv Exp $
          default:
            return(0UL);
        }
-@@ -1038,9 +1040,11 @@ void SetPortSpeed(int PortFd, unsigned l
+@@ -1038,9 +1042,11 @@ void SetPortSpeed(int PortFd, unsigned l
          case 230400UL:
            Speed = B230400;
          break;
@@ -36,7 +40,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/29 19:44:15 tv Exp $
          default:
            LogMsg(LOG_WARNING,"Unknwon baud rate requested, setting to 9600.");
            Speed = B9600;
-@@ -1770,7 +1774,8 @@ int main(int argc, char * argv[])
+@@ -1770,7 +1776,8 @@ int main(int argc, char * argv[])
      int SockParm;
  
      /* Out buffer ticks count */
@@ -46,7 +50,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/29 19:44:15 tv Exp $
  
      /* Out buffer clock ticks limit */
      clock_t MaxBTicks;
-@@ -1907,10 +1912,10 @@ int main(int argc, char * argv[])
+@@ -1907,10 +1914,10 @@ int main(int argc, char * argv[])
       */
      SockParm = IPTOS_LOWDELAY;
      setsockopt(STDIN_FILENO,SOL_SOCKET,SO_KEEPALIVE,&SockParmEnable,sizeof(SockParmEnable));
