@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6571 2004/07/16 11:31:42 jdolecek Exp $
+$NetBSD: CHANGES,v 1.6572 2004/07/16 12:47:25 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3410,3 +3410,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added libosip2-2.0.9 [xtraeme 2004-07-16]
 	Updated gd to 2.0.27 [adam 2004-07-16]
 	Added ap-auth-mysql-4.3.1 [jdolecek 2004-07-16]
+	Updated p5-Archive-Zip to 1.12 [seb 2004-07-16]
