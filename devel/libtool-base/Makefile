@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/04/17 13:24:21 martti Exp $
+# $NetBSD: Makefile,v 1.10 2002/05/21 14:03:38 schmonz Exp $
 #
 
 .include "../libtool/Makefile.common"
@@ -18,6 +18,10 @@ test: build
 .if ${MACHINE_PLATFORM:MNetBSD-1.4-sparc} != "" || \
 	${MACHINE_PLATFORM:MNetBSD-1.4.[12]-sparc} != ""
 DEPENDS+=	c++rt0>=1.0:../../sysutils/c++rt0
+.endif
+
+.if ${MACHINE_PLATFORM:MDarwin-*-*} != ""
+.include "../../devel/dlcompat/buildlink.mk"
 .endif
 
 .if ${OPSYS} == "NetBSD"
