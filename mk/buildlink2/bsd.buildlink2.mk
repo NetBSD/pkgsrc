@@ -1,13 +1,14 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.39 2002/10/09 22:10:04 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.40 2002/10/09 23:17:54 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
 # -------------8<-------------8<-------------8<-------------8<-------------
 # BUILDLINK_PACKAGES+=		foo
-# BUILDLINK_DEPENDS.foo?=	foo>=1.0
-# BUILDLINK_PKGSRCDIR.foo?=	../../category/foo
+# BUILDLINK_PKGBASE.foo=	foo-lib
+# BUILDLINK_DEPENDS.foo?=	foo-lib>=1.0
+# BUILDLINK_PKGSRCDIR.foo?=	../../category/foo-lib
 #
-# EVAL_PREFIX+=			BUILDLINK_PREFIX.foo=foo
+# EVAL_PREFIX+=			BUILDLINK_PREFIX.foo=foo-lib
 # BUILDLINK_PREFIX.foo_DEFAULT=	${LOCALBASE}
 # BUILDLINK_FILES.foo=		include/foo.h
 # BUILDLINK_FILES.foo+=		include/bar.h
@@ -88,13 +89,14 @@ LDFLAGS+=	${FLAG}
 #
 PATH:=			${BUILDLINK_DIR}/bin:${PATH}
 
+.for _pkg_ in ${BUILDLINK_PACKAGES}
+#
 # Add the proper dependency on each package pulled in by buildlink2.mk
 # files.  BUILDLINK_DEPMETHOD.<pkg> contains a list of either "full" or
 # "build", and if any of that list if "full" then we use a full dependency
 # on <pkg>, otherwise we use a build dependency on <pkg>.  By default,
 # we use a full dependency.
 #
-.for _pkg_ in ${BUILDLINK_PACKAGES}
 .  if !defined(BUILDLINK_DEPMETHOD.${_pkg_})
 BUILDLINK_DEPMETHOD.${_pkg_}=	full
 .  endif
@@ -110,6 +112,14 @@ ${_BUILDLINK_DEPMETHOD.${_pkg_}}+= \
 	${_depends_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
 .    endfor
 .  endif
+#
+# BUILDLINK_PLIST_CMD.<pkg> is a sequence of shell commands that extracts
+# a list of all of the files installed by <pkg>.  This list is relative to
+# ${BUILDLINK_PREFIX.<pkg>}.
+#
+BUILDLINK_PLIST_CMD.${_pkg_}= \
+	${PKG_INFO} -f ${BUILDLINK_PKGBASE.${_pkg_}} |			\
+		${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p'
 .endfor
 
 # Create the buildlink include and lib directories so that the Darwin
