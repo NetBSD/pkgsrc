@@ -1,0 +1,32 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+
+--- ./dir.c.orig	Sun Jul  3 10:50:52 1988
++++ ./dir.c	Thu Mar 30 08:35:34 2000
+@@ -11,6 +11,7 @@
+ #ifndef	getwd			/* may be a #define */
+ char	*getwd();
+ #endif
++char	*getcwd();               /* refling added this */
+ char	*wdir;
+ static char cwd[NFILEN];
+ 
+@@ -19,7 +20,8 @@
+  */
+ dirinit()
+ {
+-	if (!(wdir = getwd(cwd)))
++/*	if (!(wdir = getwd(cwd)))  refling was here */
++	if (!(wdir = getcwd(cwd, NFILEN)))
+ 		panic("Can't get current directory!");
+ }
+ 
+@@ -40,7 +42,8 @@
+ 		ewprintf("Can't change dir to %s", bufc);
+ 		return(FALSE);
+ 	} else {
+-		if (!(wdir = getwd(cwd)))
++/*		if (!(wdir = getwd(cwd)))   refling was here */
++		if (!(wdir = getcwd(cwd, NFILEN)))
+ 			panic("Can't get current directory!");
+ 		ewprintf("Current directory is now %s", wdir);
+ 		return(TRUE);

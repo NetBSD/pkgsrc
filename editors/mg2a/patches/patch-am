@@ -1,0 +1,158 @@
+$NetBSD: patch-am,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+
+--- ./file.c.orig	Sun Jul  3 10:48:57 1988
++++ ./file.c	Thu Mar 30 08:37:30 2000
+@@ -447,14 +447,151 @@
+ writeout(bp, fn) register BUFFER *bp; char *fn; {
+ 	register int	s;
+ 
++// ------------------> refling, for mirroring the original once
++// ------------------> if .original subdir exists in the same dir as
++// ------------------> the file to save, and there is an EMPTY file
++// ------------------> name with the same name as we wish to save
++
++#include <stdio.h>
++#include <sys/types.h>
++#include <sys/stat.h>
++
++// main(int argc, char **argv) {
++   char *last_slash, *file_name_no_dir, dir_name[1000], cmd[1000], *end_of_dirname;
++// in[1000];
++   struct stat stat_struct;
++   const char nil[] = "nil";
++   int originaled, journaled, diffoed;
++
++   // fn is the incoming string to use, never altered.  This is for the
++   // command line transfer.  Not needed in final program.
++// if (1 == argc) strcpy(fn, "");
++// else strcpy(fn, argv[1]);
++
++   // extract the dirname part of the argument:
++
++   // handle case where string is null, just in case
++   if (0 == strlen(fn)) {
++	strcpy(dir_name, ".");
++	file_name_no_dir = (char *)nil;   // default: filename in cwd
++   }
++   
++   // this case is when there is no slash, so is filename
++   else if (NULL == (last_slash = (char *)strrchr(fn, '/'))) {
++      	strcpy(dir_name, ".");
++      	file_name_no_dir = fn;
++   }
++
++   // this case is /filename
++   else if (last_slash == fn) {
++	strcpy(dir_name, "/");
++	file_name_no_dir = last_slash + 1;
++   }
++
++   // this case is normal case
++   else {
++	*last_slash = 0;
++	strcpy(dir_name, fn);
++	*last_slash = '/';
++	file_name_no_dir = last_slash + 1;
++   }
++
++   // at this point, we have dirname in dir_name.  Store its end, so we
++   // can recover just the dirname later, after concatinating other stuff,
++   // and a pointer to the stuff following the dirname
++   end_of_dirname = dir_name + strlen(dir_name);
++
++   // get rid of unwanted filenames for this particular application
++   if (0 == strlen(file_name_no_dir)) file_name_no_dir = (char *)nil;
++   if (!strcmp(file_name_no_dir, ".")) file_name_no_dir = (char *)nil;
++   // printf("dir=%s file=%s\n", dir_name, file_name_no_dir);
++
++
++//   ///////////////////////////////////////////////////////////////////////////
++//   // start .original: concat the .original directory and filename to dir_name
++//   if (dir_name[strlen(dir_name) - 1] != '/') strcat(dir_name, "/");
++//   strcat(dir_name, ".original/");
++//
++   originaled = 0;
++//   // test if .original flag dir exists and the .original/filename does not exist
++//   if (0 == stat(dir_name, &stat_struct) && S_ISDIR(stat_struct.st_mode) &&
++//   0 != stat(dir_name, &stat_struct)) {   // .original/filename does not exist
++//      // test if the initially edited file exists
++//      if (0 == stat(fn, &stat_struct) && S_ISREG(stat_struct.st_mode)) {
++//         strcat(dir_name, file_name_no_dir);
++//	 sprintf(cmd, "/bin/cp %s %s", fn, dir_name);
++//  	 if (0 != system(cmd)) printf(".original/fn backup failed: '%s'\n", cmd);
++//	 else originaled = 1;
++//         }
++//      else if ( 0 != stat(fn, &stat_struct)) {
++//         sprintf(cmd, "/usr/bin/touch %s", fn);
++//	 if (0 != system(cmd)) printf(".original/fn touch failed: '%s'\n", cmd);
++//	 else originaled = 1;
++//	 printf(".original/fn touch: '%s'\n", cmd);
++//      }
++//   } 
++//
++//   // restore dir_name to be used in next phase
++//   *end_of_dirname = 0;
++
++   ///////////////////////////////////////////////////////////////////////////
++   // start MG_DOT_ORIG test
++   diffoed = 0;
++   if (dir_name[strlen(dir_name) - 1] != '/') strcat(dir_name, "/");
++   strcat(dir_name, file_name_no_dir);
++   strcat(dir_name, ".orig");
++   // if MG_DOT_ORIG set and there is no .orig for the edited file
++   if (NULL != getenv("MG_DOT_ORIG") && 0 != stat(dir_name, &stat_struct)) {
++      // if edited file already exists and is a file, copy it to .orig
++      if (0 == stat(fn, &stat_struct) && S_ISREG(stat_struct.st_mode)) {
++         sprintf(cmd, "/bin/cp %s %s", fn, dir_name);
++         if (0 != system(cmd)) printf(".orig backup failed: '%s'\n", cmd);
++         else diffoed = 1;
++      }
++      // if edited file does not exist yet, touch the .orig since it was empty
++      else if (0 != stat(fn, &stat_struct)) {
++         sprintf(cmd, "/usr/bin/touch %s", dir_name);
++	 if (0 != system(cmd)) printf(".orig touch failed: '%s'\n", cmd);
++	 else diffoed = 1;
++      }
++   }
++
++   // restore dir_name to be used in next phase
++   *end_of_dirname = 0;
++
++   ///////////////////////////////////////////////////////////////////////////
++   // start journal: concat the .journal directory and filename to dir_name
++   if (dir_name[strlen(dir_name) - 1] != '/') strcat(dir_name, "/");
++   strcat(dir_name, ".journal/");
++
++   journaled = 0;
++   // test if .journal flag directory exists 
++   if (0 == stat(dir_name, &stat_struct) && S_ISDIR(stat_struct.st_mode)) {
++      // test if the initially edited file exists
++      if (0 == stat(fn, &stat_struct) && S_ISREG(stat_struct.st_mode)) {
++	 sprintf(cmd, "/bin/cp %s %s%s-@%ld", fn, dir_name, file_name_no_dir, time(NULL));
++	 if (0 != system(cmd)) printf("journal failed: '%s'\n", cmd);
++	 else journaled = 1;
++      }
++      else if (0 != stat(fn, &stat_struct)) {
++	 sprintf(cmd, "/usr/bin/touch %s%s-@%ld", dir_name, file_name_no_dir, time(NULL));
++	 if (0 != system(cmd)) printf(".journal/fn touch failed: '%s'\n", cmd);
++	 else journaled = 1;
++      }
++   }
+ 	if ((s=ffwopen(fn)) != FIOSUC)		/* Open writes message. */
+ 		return (FALSE);
+ 	s = ffputbuf(bp);
+ 	if (s == FIOSUC) {			/* No write error.	*/
+ 		s = ffclose();
+-		if (s==FIOSUC)
+-			ewprintf("Wrote %s", fn);
++		if (s==FIOSUC && !diffoed && !journaled) ewprintf("Wrote %s", fn);
++		if (s==FIOSUC && !diffoed &&  journaled) ewprintf("Wrote(j) %s", fn);
++		if (s==FIOSUC &&  diffoed && !journaled) ewprintf("Wrote(o) %s", fn);
++		if (s==FIOSUC &&  diffoed &&  journaled) ewprintf("Wrote(o+j) %s", fn);
+ 	} else					/* Ignore close error	*/
++
++// ------------------> refling, for originaling and journaling, end
++
+ 		(VOID) ffclose();		/* if a write error.	*/
+ 	return s == FIOSUC;
+ }

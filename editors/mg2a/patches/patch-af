@@ -1,0 +1,102 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+
+--- ./Makefile.orig	Thu Mar 30 08:35:28 2000
++++ ./Makefile	Thu Mar 30 08:35:34 2000
+@@ -17,7 +17,7 @@
+ #	REGEX		-- create regular expression functions
+ #
+ #CDEFS	=  -DDO_METAKEY
+-CDEFS	=  -DDO_METAKEY -DPREFIXREGION
++CDEFS	=  -DDO_METAKEY -DPREFIXREGION -DSTARTUPFILE=\"mg.rc\" -DNO_BACKUP -DSYMBLINK
+ CFLAGS	= -g $(CDEFS)
+ 
+ # Objects which only depend on the "standard" includes
+@@ -42,8 +42,14 @@
+ OINCS =	ttydef.h sysdef.h chrdef.h
+ INCS =	def.h
+ 
++# refling - added these and the @ for peace and quiet.  All $(RM) and
++# $(LN) below are mine!  Also added the all target for NetBSD pkgs.
++
++RM = @rm -f
++LN = @ln
++
+ mg:	$(OBJ)
+-	cc $(CFLAGS) -o mg $(OBJ) $(LIBS)
++	gcc $(CFLAGS) -o mg $(OBJ) $(LIBS)
+ 
+ # strip mg once you're satisfied it'll run -- makes it much smaller
+ strip:
+@@ -75,44 +81,52 @@
+ $(OOBJS):	$(INCS) $(OINCS)
+ 
+ sysdef.h:	sys/$(SYS)/sysdef.h	# Update links, if needed.
+-	rm -f sysdef.h
+-	ln sys/$(SYS)/sysdef.h .
++	$(RM) sysdef.h
++	$(LN) sys/$(SYS)/sysdef.h .
+ 
+ ttydef.h:	sys/default/ttydef.h
+-	rm -f ttydef.h
+-	ln sys/default/ttydef.h .
++	$(RM) ttydef.h
++	$(LN) sys/default/ttydef.h .
+ 
+ chrdef.h:	sys/default/chrdef.h
+-	rm -f chrdef.h
+-	ln sys/default/chrdef.h .
++	$(RM) chrdef.h
++	$(LN) sys/default/chrdef.h .
+ 
+ fileio.c:	sys/$(SYS)/fileio.c
+-	rm -f fileio.c
+-	ln sys/$(SYS)/fileio.c .
++	$(RM) fileio.c
++	$(LN) sys/$(SYS)/fileio.c .
+ 
+ spawn.c:	sys/$(SYS)/spawn.c
+-	rm -f spawn.c
+-	ln sys/$(SYS)/spawn.c .
++	$(RM) spawn.c
++	$(LN) sys/$(SYS)/spawn.c .
+ 
+ tty.c:		sys/default/tty.c
+-	rm -f tty.c
+-	ln sys/default/tty.c .
++	$(RM) tty.c
++	$(LN) sys/default/tty.c .
+ 
+ ttyio.c:	sys/$(SYS)/ttyio.c
+-	rm -f ttyio.c
+-	ln sys/$(SYS)/ttyio.c .
++	$(RM) ttyio.c
++	$(LN) sys/$(SYS)/ttyio.c .
+ 
+ ttykbd.c:	sys/default/ttykbd.c
+-	rm -f ttykbd.c
+-	ln sys/default/ttykbd.c .
++	$(RM) ttykbd.c
++	$(LN) sys/default/ttykbd.c .
+ 
+ cinfo.c:	sys/default/cinfo.c
+-	rm -f cinfo.c
+-	ln sys/default/cinfo.c .
++	$(RM) cinfo.c
++	$(LN)  sys/default/cinfo.c .
+ 
+ port: $(SRCS) $(INCS)
+-	rm -f port
++	$(RM) port
+ 	tar cfb port 1 $?
+ 
+-clean:;	rm -f $(OBJ) $(OSRCS) $(OINCS)
++clean:;	$(RM) $(OBJ) $(OSRCS) $(OINCS) mg
++
++all:	$(OBJ)
++	cc $(CFLAGS) -o mg $(OBJ) $(LIBS)
++	strip mg
+ 
++install:
++	$(INSTALL_PROGRAM) mg $(PREFIX)/bin
++	$(INSTALL_DATA) mg.rc $(PREFIX)/bin
++	$(INSTALL_DATA) mg.1 $(PREFIX)/man/man1

@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+
+--- ./sys/default/tty.c.orig	Sun Jul  3 10:50:35 1988
++++ ./sys/default/tty.c	Thu Mar 30 08:35:34 2000
+@@ -144,7 +144,8 @@
+ #endif
+ 
+ 	if(CM == NULL || UP == NULL)
+-	    panic("This terminal is to stupid to run MicroGnuEmacs\n");
++/*	    panic("This terminal is to stupid to run MicroGnuEmacs\n"); refling */
++	    panic("This terminal setting is not supported by MicroGnuEmacs.\n");  // refling
+ 	ttresize();			/* set nrow & ncol	*/
+ 
+ 	/* watch out for empty capabilities (sure to be wrong)	*/

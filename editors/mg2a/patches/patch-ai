@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+
+--- ./REPACK.orig	Thu Mar 30 08:35:35 2000
++++ ./REPACK	Thu Mar 30 08:35:35 2000
+@@ -0,0 +1,7 @@
++# John Refling 
++rm -f ../mg2a_src
++cp sys/bsd/Makefile .
++make clean
++rm -f Makefile core mg.core
++tar -zcvf ../mg2a_src-netbsd-1.0.tgz .
++echo result is in ../mg2a_src-netbsd-1.0.tgz

@@ -1,0 +1,28 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+
+--- ./sys/bsd/fullpath.c.orig	Thu Mar 30 08:35:33 2000
++++ ./sys/bsd/fullpath.c	Thu Mar 30 08:35:33 2000
+@@ -0,0 +1,23 @@
++/* test program by John P. Refling *
++#include <stdlib.h>
++#include <sys/param.h>
++#define begin {
++#define end }
++int main(argc, argv)
++int argc;
++char **argv;
++{char resolved_path[MAXPATHLEN];
++char trial_path[MAXPATHLEN];
++char path[MAXPATHLEN];
++char *envpath;
++if (realpath(argv[0], resolved_path) != NULL ) begin
++   printf("%s\n", resolved_path);
++end
++else if ( (envpath = getenv("PATH")) != NULL ) begin
++   printf("%s\n", envpath);
++   while (strchr(envpath, ':') != NULL) begin
++      printf("%d\n", envpath-strchr(envpath,':'));
++      envpath = strchr(envpath,':');
++   end
++end
++else printf("bad\n");}
