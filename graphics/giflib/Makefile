@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/10/25 14:37:32 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2000/02/14 12:50:13 itojun Exp $
 #
 
 DISTNAME=	giflib-4.1.0
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	ftp://prtr-13.ucsc.edu/pub/libungif/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://prtr-13.ucsc.edu/~badger/software/giflib.shtml
+HOMEPAGE=	http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml
 
 CONFLICTS=	libungif-*
 
