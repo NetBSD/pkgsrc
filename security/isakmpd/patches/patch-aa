@@ -1,7 +1,20 @@
-$NetBSD: patch-aa,v 1.1 2000/03/27 16:04:13 itojun Exp $
---- Makefile-	Tue Mar 28 00:30:18 2000
-+++ Makefile	Tue Mar 28 00:31:27 2000
-@@ -59,7 +59,8 @@
+$NetBSD: patch-aa,v 1.2 2000/09/25 04:00:15 fredb Exp $
+
+--- Makefile.orig	Tue Sep 12 10:34:40 2000
++++ Makefile	Sun Sep 24 10:58:25 2000
+@@ -43,9 +43,9 @@
+ # openbsd means 2.5 or newer, openbsd-encap is for older kernels with PF_ENCAP
+ # linux is the name for Linux with FreeS/WAN integrated, freebsd/netbsd means
+ # FreeBSD/NetBSD with KAME IPsec.
+-OS=		openbsd
++#OS=		openbsd
+ #OS=		openbsd-encap
+-#OS=		netbsd
++OS=		netbsd
+ #OS=		freebsd
+ #OS=		linux
+ 
+@@ -56,7 +56,8 @@
  .PATH:		${.CURDIR}/sysdep/${OS}
  
  PROG=		isakmpd

@@ -1,32 +1,21 @@
-# $NetBSD: Makefile,v 1.9 2000/09/09 19:40:21 fredb Exp $
+# $NetBSD: Makefile,v 1.10 2000/09/25 04:00:15 fredb Exp $
 #
 
-DISTNAME=		isakmpd-000220
-PKGNAME=		isakmpd-20000220
+DISTNAME=		isakmpd-000915-snap
+PKGNAME=		isakmpd-20000915
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.appli.se/pub/isakmpd/
 
-PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=		isakmpd-20000220-20000427a.diff.gz
-PATCH_DIST_STRIP=	-p1
-
 MAINTAINER=		itojun@kame.net
 
-BROKEN=			"broken by PF_KEY API change"
-CRYPTO=			yes
+DEPENDS+=		gmp-*:../../devel/gmp
+
+USE_SSL=		yes
 
 # this is not compatible with cross build - there's no other way
 .if !exists(/usr/include/netinet6/ipsec.h)
 IGNORE+=		"${PKGNAME} requires ipsec-ready NetBSD"
 .endif
-
-# if PATENTEDOPENSSLSRC is defined, then we assume that
-# RSA already exists in the OpenSSL built as part of the
-# base distribution.
-.if !defined(PATENTEDOPENSSLSRC)
-DEPENDS+=		openssl-0.9.*:../../security/openssl
-.endif
-DEPENDS+=		gmp-*:../../devel/gmp
 
 ALL_TARGET=		depend all
 
