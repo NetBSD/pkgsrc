@@ -1,9 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2004/01/20 02:48:33 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/09 13:08:20 adam Exp $
 share/examples/${PKGNAME}/demos/README
-share/examples/${PKGNAME}/demos/Windows/CVS/Entries
-share/examples/${PKGNAME}/demos/Windows/CVS/Repository
-share/examples/${PKGNAME}/demos/Windows/CVS/Root
-share/examples/${PKGNAME}/demos/Windows/CVS/Template
 share/examples/${PKGNAME}/demos/Windows/all.dsp
 share/examples/${PKGNAME}/demos/Windows/bounce.dsp
 share/examples/${PKGNAME}/demos/Windows/clearspd.dsp
@@ -147,10 +143,6 @@ share/examples/${PKGNAME}/demos/winpos.c
 share/examples/${PKGNAME}/ggi/asc-view.c
 share/examples/${PKGNAME}/ggi/gears.c
 share/examples/${PKGNAME}/ggi/gears2.c
-share/examples/${PKGNAME}/images/CVS/Entries
-share/examples/${PKGNAME}/images/CVS/Repository
-share/examples/${PKGNAME}/images/CVS/Root
-share/examples/${PKGNAME}/images/CVS/Template
 share/examples/${PKGNAME}/images/bw.rgb
 share/examples/${PKGNAME}/images/girl.rgb
 share/examples/${PKGNAME}/images/reflect.rgb
@@ -403,6 +395,7 @@ share/examples/${PKGNAME}/xdemos/pbinfo.c
 share/examples/${PKGNAME}/xdemos/pbutil.c
 share/examples/${PKGNAME}/xdemos/pbutil.h
 share/examples/${PKGNAME}/xdemos/shape.c
+share/examples/${PKGNAME}/xdemos/testgl5.c
 share/examples/${PKGNAME}/xdemos/vgears.c
 share/examples/${PKGNAME}/xdemos/vindex.c
 share/examples/${PKGNAME}/xdemos/vtest.c
@@ -417,10 +410,8 @@ share/examples/${PKGNAME}/xdemos/xfont.c
 @dirrm share/examples/${PKGNAME}/util
 @dirrm share/examples/${PKGNAME}/samples
 @dirrm share/examples/${PKGNAME}/redbook
-@dirrm share/examples/${PKGNAME}/images/CVS
 @dirrm share/examples/${PKGNAME}/images
 @dirrm share/examples/${PKGNAME}/ggi
-@dirrm share/examples/${PKGNAME}/demos/Windows/CVS
 @dirrm share/examples/${PKGNAME}/demos/Windows
 @dirrm share/examples/${PKGNAME}/demos
 @dirrm share/examples/${PKGNAME}
