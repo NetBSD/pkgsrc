@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/11/29 16:17:43 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2001/12/21 20:48:30 hubertf Exp $
 
---- Makefile.in.orig	Sun Nov 11 17:56:53 2001
-+++ Makefile.in	Tue Nov 13 20:49:34 2001
-@@ -512,24 +512,13 @@
+--- Makefile.in.orig	Mon Dec 10 14:51:14 2001
++++ Makefile.in	Mon Dec 10 15:06:26 2001
+@@ -529,24 +529,13 @@
  
  install-dirs:
  	-mkdir -p $(etcdir)
@@ -28,9 +28,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/11/29 16:17:43 hubertf Exp $
  	$(INSTALL_DATA) $(srcdir)/COPYING $(docdir)/
  	$(INSTALL_DATA) $(srcdir)/CHANGES $(docdir)/
  	$(INSTALL_DATA) $(srcdir)/CREDITS $(docdir)/
-@@ -538,18 +527,13 @@
+@@ -554,24 +543,13 @@
+ 	$(INSTALL_DATA) $(srcdir)/INSTALL $(docdir)/
  	$(INSTALL_DATA) $(srcdir)/TODO $(docdir)/
  
+-examples-install:
+-	-mkdir -p $(docdir)/examples/
+-	$(INSTALL_DATA) $(srcdir)/doc/examples/README $(docdir)/examples/
+-	$(INSTALL_DATA) $(srcdir)/doc/examples/silc* $(docdir)/examples/
+-	$(INSTALL_DATA) $(srcdir)/doc/examples/cell* $(docdir)/examples/
+-
  etc-install:
 -	-@if test '!' -f $(etcdir)/silcd.conf ; then \
 -	  $(INSTALL_DATA) $(srcdir)/doc/example_silcd.conf \
@@ -43,9 +50,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/11/29 16:17:43 hubertf Exp $
  	fi
  
 -@SILC_DIST_CLIENT_TRUE@install-data-hook: install-dirs sim-install doc-install etc-install
--@SILC_DIST_CLIENT_FALSE@install-data-hook: install-dirs generate-server-key sim-install doc-install etc-install
 +@SILC_DIST_CLIENT_TRUE@install-data-hook: install-dirs doc-install etc-install
-+@SILC_DIST_CLIENT_FALSE@install-data-hook: install-dirs generate-server-key doc-install etc-install
+ @SILC_DIST_CLIENT_FALSE@install-data-hook: install-dirs generate-server-key sim-install doc-install examples-install etc-install
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
