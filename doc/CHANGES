@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3284 2003/09/08 18:11:31 jmmv Exp $
+$NetBSD: CHANGES,v 1.3285 2003/09/08 18:18:01 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3580,3 +3580,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated papersize to 1.0.7 [jmmv 2003-09-08]
 	Updated gnome2-terminal to 2.0.2nb1 [jmmv 2003-09-08]
 	Updated gnome-core to 1.4.2nb7 [jmmv 2003-09-08]
+	Updated gnome2 to 2.2.5 [jmmv 2003-09-08]
