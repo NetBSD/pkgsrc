@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/08/13 15:03:45 zuntum Exp $
+# $NetBSD: Makefile,v 1.5 2001/08/17 19:44:06 zuntum Exp $
 #
 
 DISTNAME=	qmHandle-0.5.1
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.io.com/~mick/soft/qmhandle.html
 COMMENT=	tool to view and manage the qmail message queue
 
 RESTRICTED=	"Contact author before reselling"
-
-DEPENDS+=	qmail>=1.03:../../mail/qmail
 
 WRKSRC=		${WRKDIR}
 
