@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/11/10 09:04:08 markd Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/11/20 12:44:22 rh Exp $
 
 SUSE_VERSION=		9.1
 
@@ -31,7 +31,7 @@ BUILD_DEFS+=		RPMIGNOREPATH
 LDD?=			${TRUE}
 
 RPM2PKGSTRIP?=		1
-RPM2PKGARGS=		-d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR}
+RPM2PKGARGS?=		-d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR}
 .if empty(RPM2PKGSTRIP:M0)
 RPM2PKGARGS+=		-s ${RPM2PKGSTRIP}
 .endif
