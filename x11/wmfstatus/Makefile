@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/04/30 13:19:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/21 13:34:47 wiz Exp $
 
 DISTNAME=	wmfstatus-0.4
 CATEGORIES=	x11
@@ -8,10 +8,8 @@ MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.finik.net/software.html
 COMMENT=	general purpose 8x5 LCD screen for WindowMaker
 
+USE_BUILDLINK2=	YES
 USE_X11=	YES
-USE_XPM=	YES
-
-CPPFLAGS=	-I${X11BASE}/include
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/wmfstatus
 
@@ -21,4 +19,5 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/README \
 		${WRKDIR}/${DISTNAME}/HINTS ${PREFIX}/share/doc/wmfstatus
 
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
