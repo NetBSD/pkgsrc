@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2002/03/28 10:11:50 jmc Exp $
+# $NetBSD: Makefile,v 1.40 2002/03/28 17:17:41 jmc Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
-PKGREVISION=		1
 
 #
 # Synced from patches against main source tree as of:
