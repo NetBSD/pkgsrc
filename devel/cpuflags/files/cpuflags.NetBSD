@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.38 2003/06/03 20:45:25 salo Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.39 2003/06/06 15:26:49 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -77,7 +77,12 @@ case $hw_machine_arch in
 	*\(68030*)		FLAGS='-m68030'		;; # Mac LC III
 	*\(68040*)		FLAGS='-m68040'		;; # Untested
 	*\(68060*)		FLAGS='-m68060'		;; # Upgr amiga 3000
-    esac ;;
+    esac
+    case "`egrep '^fpu0 ' /var/run/dmesg.boot`" in
+	*\(emulator\)*)		FLAGS="$FLAGS -msoft-float" ;; 
+	*\(no\ math\ support\)*) FLAGS="$FLAGS -msoft-float" ;; 
+    esac
+    ;;
 
     mipseb|mipsel)
 	# cpu0 at mainbus0: QED R4600 Orion CPU (0x2020) Rev. 2.0 with ...
