@@ -40,7 +40,7 @@ EOF
 			@CAT@ >> $sedfile << EOF
 s|-$1$3[ 	]$|-$1$2 |g
 s|-$1$3$|-$1$2|g
-s|-$1$3\([^ 	"':;].*\)|-$1$2\1|g
+s|-$1$3\([^ 	"':;]*\)|-$1$2\1|g
 EOF
 			;;
 		esac
@@ -57,10 +57,16 @@ EOF
 		;;
 	static)
 		case "$action" in
-		transform|untransform)
+		transform)
 			@CAT@ >> $sedfile << EOF
 s|$2\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)[ 	]|$3\1 |g
 s|$2\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)$|$3\1|g
+EOF
+			;;
+		untransform)
+			@CAT@ >> $sedfile << EOF
+s|$3\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)[ 	]|$2\1 |g
+s|$3\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)$|$2\1|g
 EOF
 			;;
 		esac
