@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.1.1.1 2000/12/20 18:28:05 skrll Exp $
+
+--- test/intltest/intltest.cpp.orig	Tue Aug 15 00:44:12 2000
++++ test/intltest/intltest.cpp
+@@ -386,7 +386,7 @@
+             mainDirBuffer[0]='\0';
+         }
+         mainDir=mainDirBuffer;
+-    #elif defined(_AIX) || defined(U_SOLARIS) || defined(U_LINUX) || defined(HPUX) || defined(POSIX) || defined(OS390)
++    #elif defined(_AIX) || defined(U_SOLARIS) || defined(U_LINUX) || defined(HPUX) || defined(POSIX) || defined(OS390) || defined(U_NETBSD)
+         char mainDirBuffer[200];
+         strcpy(mainDirBuffer, u_getDataDirectory());
+         strcat(mainDirBuffer, "/../");
+@@ -453,7 +453,7 @@
+ {
+        if (_testDirectory == NULL) 
+     {
+-#if defined(_AIX) || defined(U_SOLARIS) || defined(U_LINUX) || defined(HPUX) || defined(POSIX) || defined(OS390)
++#if defined(_AIX) || defined(U_SOLARIS) || defined(U_LINUX) || defined(HPUX) || defined(POSIX) || defined(OS390) || defined(U_NETBSD)
+       setTestDirectory("source|test|testdata|");
+ #else
+       setTestDirectory("icu|source|test|testdata|");
