@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: install-sh.in,v 1.2 2004/05/17 14:54:45 jschauma Exp $
+# $NetBSD: install-sh.in,v 1.3 2005/03/04 03:11:50 jschauma Exp $
 # This script now also installs multiple files, but might choke on installing
 # multiple files with spaces in the file names.
 #
@@ -50,6 +50,7 @@ chmodcmd="$chmodprog @DEFAULT_INSTALL_MODE@"
 chowncmd=""
 chgrpcmd=""
 stripcmd=""
+stripflags=""
 rmcmd="$rmprog -f"
 mvcmd="$mvprog"
 src=""
@@ -83,6 +84,12 @@ while [ x"$1" != x ]; do
 	    continue;;
 
 	-s) stripcmd="$stripprog"
+	    shift
+	    continue;;
+
+	-S) stripcmd="$stripprog"
+	    stripflags="-S $2 $stripflags"
+	    shift
 	    shift
 	    continue;;
 
@@ -219,7 +226,7 @@ then
 
 	if [ x"$chowncmd" != x ]; then $doit $chowncmd "$dst"; else true ; fi &&
 	if [ x"$chgrpcmd" != x ]; then $doit $chgrpcmd "$dst"; else true ; fi &&
-	if [ x"$stripcmd" != x ]; then $doit $stripcmd "$dst"; else true ; fi &&
+	if [ x"$stripcmd" != x ]; then $doit $stripcmd $stripflags "$dst"; else true ; fi &&
 	if [ x"$chmodcmd" != x ]; then $doit $chmodcmd "$dst"; else true ; fi
 else
 
@@ -269,7 +276,7 @@ else
 
 		if [ x"$chowncmd" != x ]; then $doit $chowncmd "$dsttmp"; else true;fi &&
 		if [ x"$chgrpcmd" != x ]; then $doit $chgrpcmd "$dsttmp"; else true;fi &&
-		if [ x"$stripcmd" != x ]; then $doit $stripcmd "$dsttmp"; else true;fi &&
+		if [ x"$stripcmd" != x ]; then $doit $stripcmd $stripflags "$dsttmp"; else true;fi &&
 		if [ x"$chmodcmd" != x ]; then $doit $chmodcmd "$dsttmp"; else true;fi &&
 
 # Now rename the file to the real destination.
