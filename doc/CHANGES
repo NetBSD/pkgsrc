@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3525 2003/09/25 16:29:49 salo Exp $
+$NetBSD: CHANGES,v 1.3526 2003/09/25 17:46:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3935,3 +3935,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added devhelp-0.7 [xtraeme 2003-09-25]
 	Updated mono to 0.26 [recht 2003-09-25]
 	Updated boost to 1.30.2 [salo 2003-09-25]
+	Updated ispell-russion to 0.99.5 [wiz 2003-09-25]
