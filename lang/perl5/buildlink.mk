@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/11/28 04:54:24 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/11/28 05:18:02 jlam Exp $
 #
 # This Makefile fragment is included by packages that use perl.
 #
@@ -10,14 +10,31 @@
 
 .include "../../mk/bsd.buildlink.mk"
 
+PERL5_REQD?=			5.0
 BUILDLINK_DEPENDS.perl?=	perl>=${PERL5_REQD}
-DEPENDS+=		${BUILDLINK_DEPENDS.perl}:../../lang/perl5
-
-PERL5?=			${BUILDLINK_PREFIX.perl}/bin/perl
-PERL5_REQD?=		5.0
 
 BUILDLINK_PREFIX.perl?=	${LOCALBASE}
+PERL5?=			${BUILDLINK_PREFIX.perl}/bin/perl
 
+DEPENDS+=		${BUILDLINK_DEPENDS.perl}:../../lang/perl5
+
+.if exists(${PERL5})
+.  if exists(${BUILDLINK_PREFIX.perl}/share/mk/bsd.perl.mk)
+.    include "${BUILDLINK_PREFIX.perl}/share/mk/bsd.perl.mk"
+.  elif !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
+PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`;	\
+			${ECHO} $${installsitelib}
+PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`;	\
+			${ECHO} $${installsitearch}
+PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib 2>/dev/null`;	\
+			${ECHO} $${installarchlib}
+MAKEFLAGS+=		PERL5_SITELIB=${PERL5_SITELIB}
+MAKEFLAGS+=		PERL5_SITEARCH=${PERL5_SITEARCH}
+MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB}
+.  endif # !exists(bsd.perl.mk) && !defined(PERL5_*)
+.endif # exists($PERL5)
+
+.if defined(USE_BUILDLINK_ONLY)
 BUILDLINK_TARGETS.perl=	perl-buildlink
 BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.perl}
 
@@ -38,24 +55,9 @@ _CONFIG_PM_SED=	\
 REPLACE_RPATH_SED+=	-e "/^LD_RUN_PATH/s|${BUILDLINK_DIR}|${LOCALBASE}|g"
 REPLACE_RPATH_SED+=	-e "/^LD_RUN_PATH/s|${BUILDLINK_X11_DIR}|${X11BASE}|g"
 
-.if exists(${PERL5})
-.  if exists(${BUILDLINK_PREFIX.perl}/share/mk/bsd.perl.mk)
-.    include "${BUILDLINK_PREFIX.perl}/share/mk/bsd.perl.mk"
-.  elif !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
-PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`;	\
-			${ECHO} $${installsitelib}
-PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`;	\
-			${ECHO} $${installsitearch}
-PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib 2>/dev/null`;	\
-			${ECHO} $${installarchlib}
-MAKEFLAGS+=		PERL5_SITELIB=${PERL5_SITELIB}
-MAKEFLAGS+=		PERL5_SITEARCH=${PERL5_SITEARCH}
-MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB}
-.  endif # !exists(bsd.perl.mk) && !defined(PERL5_*)
-.endif # exists($PERL5)
-	
 PERL5OPT+=		-I${PERL5_ARCHLIB:S/${BUILDLINK_PREFIX.perl}\//${BUILDLINK_DIR}\//}
 MAKE_ENV+=		PERL5OPT="${PERL5OPT}"
+.endif	# USE_BUILDLINK_ONLY
 
 pre-configure: ${BUILDLINK_TARGETS.perl}
 
