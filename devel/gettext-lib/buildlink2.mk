@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.11 2002/11/26 21:56:07 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.12 2002/11/27 17:41:07 drochner Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
@@ -50,6 +50,7 @@ _NEED_GNU_GETTEXT=	YES
 BUILDLINK_PACKAGES+=			gettext
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gettext=gettext-lib
 BUILDLINK_PREFIX.gettext_DEFAULT=	${LOCALBASE}
+.include "../../converters/libiconv/buildlink2.mk"
 .else
 BUILDLINK_PREFIX.gettext=	/usr
 .endif
