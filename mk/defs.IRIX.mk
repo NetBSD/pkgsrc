@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.33 2003/09/14 16:30:34 danw Exp $
+# $NetBSD: defs.IRIX.mk,v 1.34 2003/09/23 07:26:23 grant Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -68,6 +68,7 @@ SHLOCK=		${LOCALBASE}/bin/shlock
 SORT?=		/usr/bin/sort
 SU?=		/sbin/su
 TAIL?=		/usr/bin/tail
+TAR?=		${LOCALBASE}/bin/tar
 TEE?=		/usr/bin/tee
 TEST?=		/sbin/test
 TOUCH?=		/usr/bin/touch
