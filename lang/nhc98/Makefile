@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/12/26 01:04:54 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/01/03 13:52:48 wiz Exp $
 
 DISTNAME=		nhc98src-1.06
 PKGNAME=		nhc98-1.06
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${PREFIX} \
 # hbc (Chalmers Haskell).
 
 USE_GMAKE=		yes
+USE_JAVA=		yes
 
 ALL_TARGET=		default
 
