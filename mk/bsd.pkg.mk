@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.943 2002/03/07 15:45:13 yyamano Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.944 2002/03/10 17:15:29 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -1256,9 +1256,7 @@ _CHECK_DIST_PATH=							\
 # list or the patterns in MASTER_SORT or MASTER_SORT_REGEX as appropriate.
 # No actual sorting is done until ORDERED_SITES is expanded.
 #
-.if defined(DYNAMIC_MASTER_SITES)
-ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} `${SH} ${FILESDIR}/getsite.sh $${file}`
-.elif defined(MASTER_SORT) || defined(MASTER_SORT_REGEX)
+.if defined(MASTER_SORT) || defined(MASTER_SORT_REGEX)
 MASTER_SORT?=
 MASTER_SORT_REGEX?=
 MASTER_SORT_REGEX+= ${MASTER_SORT:S/./\\./g:C/.*/:\/\/[^\/]*&\//}
@@ -1278,6 +1276,11 @@ ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} $$unsorted_sites
 #
 # Associate each file to fetch with the correct site(s).
 #
+.if defined(DYNAMIC_MASTER_SITES)
+.  for fetchfile in ${_ALLFILES}
+SITES_${fetchfile:T}?= `${SH} ${FILESDIR}/getsite.sh ${fetchfile:T}`
+.  endfor
+.endif
 .if !empty(_DISTFILES)
 .  for fetchfile in ${_DISTFILES}
 SITES_${fetchfile:T}?= ${MASTER_SITES}
@@ -2877,6 +2880,29 @@ fetch-list-one-pkg:
 		${ECHO} '#';						\
 		${ECHO} ${_FETCH_MESSAGE:Q};				\
 	fi)
+.      elif defined(DYNAMIC_MASTER_SITES)
+	@(cd ${_DISTDIR};						\
+	if [ ! -f ${fetchfile:T} ]; then				\
+		${ECHO};						\
+		filesize=`${AWK} '					\
+			/^Size/ && $$2 == "(${fetchfile})" { print $$4 } \
+			' ${DISTINFO_FILE}` || true;			\
+		${ECHO} '# Fetch ${fetchfile} ('$${filesize-???}' bytes):'; \
+		${ECHO} '#';						\
+		${ECHO} '${SH} -s ${fetchfile:T} <<"EOF" |(';		\
+		${CAT} ${FILESDIR}/getsite.sh;				\
+		${ECHO} EOF;						\
+		${ECHO} read unsorted_sites;				\
+		${ECHO} 'unsorted_sites="$${unsorted_sites} ${_MASTER_SITE_BACKUP}"'; \
+		${ECHO} sites='"'${ORDERED_SITES:Q}'"';			\
+		${ECHO} "${MKDIR} ${_DISTDIR}";				\
+		${ECHO} 'cd ${_DISTDIR} && [ -f ${fetchfile} -o -f ${fetchfile:T} ] ||'; \
+		${ECHO}	'for site in $$sites; do';			\
+		${ECHO} '	${FETCH_CMD} ${FETCH_BEFORE_ARGS} "$${site}${fetchfile:T}" ${FETCH_AFTER_ARGS} && break ||'; \
+		${ECHO} '	${ECHO} ${fetchfile} not fetched';	\
+		${ECHO}	done;						\
+		${ECHO} ')';						\
+	fi)
 .      else
 	@(cd ${_DISTDIR};						\
 	if [ ! -f ${fetchfile:T} ]; then				\
@@ -2895,7 +2921,7 @@ fetch-list-one-pkg:
 		${ECHO} '	${ECHO} ${fetchfile} not fetched';	\
 		${ECHO}	done;						\
 	fi)
-.      endif # defined(_FETCH_MESSAGE)
+.      endif # defined(_FETCH_MESSAGE) || defined(DYNAMIC_MASTER_SITES)
 .    endfor
 .  endif # !empty(_ALLFILES)
 .endif # !target(fetch-list-one-pkg)
