@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/16 21:36:27 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/25 13:13:13 adrianp Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.horde.org/pub/imp/tarballs/
 
@@ -56,7 +57,6 @@ SUPPORT_FILES_PERMS+=	${IMPDIR}/config/prefs.php.dist \
 SUPPORT_FILES_PERMS+=	${IMPDIR}/config/trailer.txt.dist \
 			${IMPDIR}/config/trailer.txt \
 			${APACHE_USER} ${ROOT_GROUP} 0440
-SPECIAL_PERMS+=		${IMPDIR}/config ${APACHE_USER} ${ROOT_GROUP} 0750
 
 SUBST_CLASSES=		files
 SUBST_STAGE.files=	post-build
@@ -95,5 +95,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.php ${IMPDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${IMPDIR}
 	${CHMOD} -R a-w ${IMPDIR}
+	${CHOWN} ${APACHE_USER}:${ROOT_GROUP} ${IMPDIR}/config
+	${CHMOD} 0750 ${IMPDIR}/config
 
 .include "../../mk/bsd.pkg.mk"
