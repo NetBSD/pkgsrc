@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.25 2004/08/16 17:24:56 jlam Exp $
+# $NetBSD: Makefile.in,v 1.26 2004/08/21 06:36:13 jlam Exp $
 #
 
 srcdir=		@srcdir@
@@ -54,8 +54,6 @@ OBJS=		glob.o @LIBOBJS@
 LINK=		$(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
 COMPILE=	$(CC) $(CPPFLAGS) $(CFLAGS)
 
-.PHONY: all install clean distclean
-
 all: nbcompat/nbtypes.h nbcompat/nbconfig.h $(LIB)
 
 .c.o: nbcompat/nbtypes.h
@@ -65,24 +63,8 @@ $(LIB): $(OBJS)
 	$(AR) cr $@ $(OBJS)
 	$(RANLIB) $@
 
-nbcompat/nbconfig.h: nbcompat/config.h
-	$(AWK) '							\
-		BEGIN { process = 1 }					\
-		/NBCOMPAT template section follows\./ { process = 0 }	\
-		/^\#[ 	]*define[ 	]+PACKAGE_.*/ { next }		\
-		/^\#[ 	]*define[ 	]+/ {				\
-			if (process == 1) {				\
-				guard = $$0;				\
-				sub("^#[ 	]*define[ 	]+", "", guard); \
-				sub("[ 	]+.*", "", guard);		\
-				print "#ifndef " guard;			\
-				print $$0;				\
-				print "#endif";				\
-				next;					\
-			}						\
-		}							\
-		{ print }						\
-	' nbcompat/config.h > $@
+nbcompat/nbconfig.h: nbcompat/config.h nbcompat.awk
+	$(AWK) -f nbcompat.awk nbcompat/config.h > $@
 
 nbcompat/nbtypes.h: bits
 	./bits $@
