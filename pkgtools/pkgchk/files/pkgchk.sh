@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.14 2001/09/16 22:27:59 abs Exp $
+# $Id: pkgchk.sh,v 1.15 2001/09/27 21:13:47 abs Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
 # TODO: Handle updates with dependencies via binary packages
@@ -12,6 +12,15 @@ echo_n()
     echo $ac_n "$*"$ac_c
     }
 
+extract_make_vars()
+    {
+    MAKEDATA="x:\n";
+    for var in $* ; do
+	MAKEDATA=$MAKEDATA"\t@echo $var=\${$var}\n"
+    done
+    eval `printf "$MAKEDATA" | ${MAKE} -f - -f Makefile x`
+    }
+
 extract_variables()
     {
     # Establish PKGSRCDIR
@@ -19,7 +28,7 @@ extract_variables()
 
     if [ -z "$PKGSRCDIR" ];then
 	if [ -f /etc/mk.conf ] ;then
-	    eval `printf 'BSD_PKG_MK=1\nall:\n\t@echo PKGSRCDIR=${PKGSRCDIR}\n' | ${MAKE} -f - -f /etc/mk.conf`
+	    eval `printf 'BSD_PKG_MK=1\nx:\n\t@echo PKGSRCDIR=${PKGSRCDIR}\n' | ${MAKE} -f - -f /etc/mk.conf x` 
 	fi
 	if [ -z "$PKGSRCDIR" ];then
 	    PKGSRCDIR=/usr/pkgsrc
@@ -32,10 +41,9 @@ extract_variables()
 
     # Now we have PKGSRCDIR, use it to determine PACKAGES, and PKGCHK_CONF
     #
-    eval `printf 'CATEGORIES=x\nDISTNAME=x\nall:\n
-	@echo PACKAGES=${PACKAGES}
-	@echo PKGCHK_CONF=${PKGCHK_CONF}
-    ' | (cd $PKGSRCDIR ; ${MAKE} -f - -f $PKGSRCDIR/mk/bsd.prefs.mk)`
+
+    cd $PKGSRCDIR/pkgtools/pkgchk
+    extract_make_vars AWK GREP SED PACKAGES PKGCHK_CONF
 
     if [ -z "$PACKAGES" ];then
 	PACKAGES=$PKGSRCDIR/packages
@@ -46,63 +54,9 @@ extract_variables()
     fi
     }
 
-pkg_install()
-    {
-    PKGNAME=$1
-    PKGDIR=$2
-    INSTALL=$3
-
-    FAIL=
-    if [ -d /var/db/pkg/$PKGNAME ];then
-	echo "$PKGNAME installed in previous stage"
-    elif [ -n "$opt_b" -a -f $PACKAGES/All/$PKGNAME.tgz ] ; then
-	if [ $INSTALL = U ];then
-	    PKG=`echo $PKGNAME | sed 's/-[0-9].*//'`
-	    echo "pkg_delete $PKG"
-	    if [ -z "$opt_n" ];then
-		if pkg_delete $PKG ; then
-		    echo "Deleted $PKG"
-		else
-		    echo "Can only update packages with dependencies via -s"
-		    exit 1
-		fi
-	    fi
-	fi
-	echo "pkg_add $PKGNAME.tgz"
-	if [ -z "$opt_n" ];then
-	    if [ -n "$opt_k" ]; then
-		pkg_add $PACKAGES/All/$PKGNAME.tgz || FAIL=1
-	    else
-		pkg_add $PACKAGES/All/$PKGNAME.tgz
-	    fi
-	fi
-    elif [ -n "$opt_s" ]; then
-	echo "make update for $PKGNAME"
-	cd $PKGSRCDIR/$PKGDIR
-	if [ -z "$opt_n" ];then
-	    if [ -n "$opt_k" ]; then
-		${MAKE} update || FAIL=1
-	    else
-		${MAKE} update
-	    fi
-	fi
-    fi
-    if [ -n "$FAIL" -o ! -d /var/db/pkg/$PKGNAME ];then
-	FAIL_DONE=$FAIL_DONE" "$PKGNAME
-    elif [ $INSTALL = U ];then
-	UPDATE_DONE=$UPDATE_DONE" "$PKGNAME
-    else
-	INSTALL_DONE=$INSTALL_DONE" "$PKGNAME
-    fi
-    }
-
-
 get_build_version()
     {
-    FILESDIR=`${MAKE} show-var VARNAME=FILESDIR`
-    PKGDIR=`${MAKE} show-var VARNAME=PKGDIR`
-    DISTINFO_FILE=`${MAKE} show-var VARNAME=DISTINFO_FILE`
-    PATCHDIR=`${MAKE} show-var VARNAME=PATCHDIR`
+    extract_make_vars FILESDIR PKGDIR DISTINFO_FILE PATCHDIR
     files=""
     for f in `pwd`/Makefile ${FILESDIR}/* ${PKGDIR}/*; do
 	if [ -f $f ];then
@@ -128,7 +82,62 @@ get_build_version()
     ${GREP} '\$NetBSD' $files | ${SED} -e "s|^${real_pkgsrcdir}/||"
     }
 
-args=`getopt BD:U:abchiknsuv $*`
+pkg_install()
+    {
+    PKGNAME=$1
+    PKGDIR=$2
+    INSTALL=$3
+
+    if [ -d /var/db/pkg/$PKGNAME ];then
+	echo "$PKGNAME installed in previous stage"
+    elif [ -n "$opt_b" -a -f $PACKAGES/All/$PKGNAME.tgz ] ; then
+	if [ $INSTALL = U ];then
+	    PKG=`echo $PKGNAME | sed 's/-[0-9].*//'`
+	    run_cmd "pkg_delete $PKG" 1
+	    if [ -n "$FAIL" ]; then
+		echo "Can only update packages with dependencies via -s"
+		exit 1
+	    fi
+	fi
+	run_cmd "pkg_add $PACKAGES/All/$PKGNAME.tgz"
+    elif [ -n "$opt_s" ]; then
+	run_cmd "cd $PKGSRCDIR/$PKGDIR && ${MAKE} update"
+    fi
+
+    if [ -z "$opt_n" -a ! -d /var/db/pkg/$PKGNAME ];then
+	FAIL=1
+    fi
+
+    if [ -n "$FAIL" ]; then
+	FAIL_DONE=$FAIL_DONE" "$PKGNAME
+    elif [ $INSTALL = U ];then
+	UPDATE_DONE=$UPDATE_DONE" "$PKGNAME
+    else
+	INSTALL_DONE=$INSTALL_DONE" "$PKGNAME
+    fi
+    }
+
+run_cmd()
+    {
+    FAIL=
+    if [ -n "$2" ]; then
+	FAILOK=$2
+    else
+	FAILOK=$opt_k
+    fi
+    echo $1
+    if [ -z "$opt_n" ];then
+        sh -c "$1" || FAIL=1
+	if [ FAIL=1 ] ; then
+            echo "** '$1' failed"
+            if [ "$FAILOK" != 1 ]; then
+                exit 1
+            fi
+        fi
+    fi
+    }
+
+args=`getopt BD:U:abchiknrsuv $*`
 if [ $? != 0 ]; then
     opt_h=1
 fi
@@ -145,6 +154,7 @@ while [ $# != 0 ]; do
 	-i )	opt_i=1 ;;
 	-k )	opt_k=1 ;;
 	-n )	opt_n=1 ;;
+	-r )	opt_r=1 ;;
 	-s )	opt_s=1 ;;
 	-u )	opt_u=1 ; opt_i=1 ;;
 	-v )	opt_v=1 ;;
@@ -164,7 +174,7 @@ if [ -z "$opt_a" -a -z "$opt_c" -a -z "$opt_i" ];then
 fi
 
 if [ -n "$opt_h" -o $# != 1 ];then
-    echo 'Usage: pkgchk [opts]
+    echo 'Usage: pkg_chk [opts]
 	-B      Check the "Build version" of packages (implies -i)
 	-D tags Comma separated list of additional pkgchk.conf tags to set
 	-U tags Comma separated list of pkgchk.conf tags to unset
@@ -175,21 +185,22 @@ if [ -n "$opt_h" -o $# != 1 ];then
 	-i	Check versions of installed packages (not using pkgchk.conf)
 	-k	Continue with further packages if errors are encountered
 	-n	Display actions that would be taken, but do not perform them
+	-r	Recursively remove mismatched files (use with care)
 	-s      Limit installations to building from source
 	-u      Update all mismatched packages (implies -i)
 	-v      Verbose
 
-pkgchk verifies installed packages against pkgsrc.
-The most common usage is 'pkgchk -i' to check all installed packages.
+pkg_chk verifies installed packages against pkgsrc.
+The most common usage is 'pkg_chk -i' to check all installed packages.
 For more advanced usage, including defining a set of desired packages based
-on hostname and type, see pkgchk(8).
+on hostname and type, see pkg_chk(8).
 '
     exit 1
 fi
 
 test -n "$MAKE" || MAKE="@MAKE@"
 
-# grabbeb from GNU configure
+# grabbed from GNU configure
 if (echo "testing\c"; echo 1,2,3) | grep c >/dev/null; then
   # Stardent Vistra SVR4 grep lacks -e, says ghazi@caip.rutgers.edu.
   if (echo -n testing; echo 1,2,3) | sed s/-n/xn/ | grep xn >/dev/null; then
@@ -206,12 +217,6 @@ extract_variables
 
 cd $PKGSRCDIR
 real_pkgsrcdir=`pwd`
-
-cd pkgtools/pkgchk
-AWK=`${MAKE} show-var VARNAME=AWK`
-GREP=`${MAKE} show-var VARNAME=GREP`
-SED=`${MAKE} show-var VARNAME=SED`
-
 
 if [ -n "$opt_i" ];then
     PKGDIRLIST=`pkg_info -B \* | ${AWK} '/PKGPATH= /{print $2}'`
@@ -238,40 +243,40 @@ if [ -n "$opt_c" ];then
 	echo "unset TAGS=$opt_U"
     fi
 
-    # Extract list of valid pkgdirs
+    # Extract list of valid pkgdirs (skip any 'alreadyset' in $PKGDIRLIST)
     #
-    PKGDIRLIST="$PKGDIRLIST "`${AWK} -v setlist=$TAGS -v unsetlist=$opt_U '
+    PKGDIRLIST="$PKGDIRLIST "`${AWK} -v alreadyset="$PKGDIRLIST" -v setlist=$TAGS -v unsetlist=$opt_U '
     BEGIN {
+	split(alreadyset, tmp, " ");
+	for (tag in tmp) { alreadyset[tmp[tag]] = 1; }
+
 	split(setlist, tmp, ",");
-	for (tag in tmp)
-	    { taglist[tmp[tag]] = 1; }
-	taglist["*"] = 1;
+	for (tag in tmp) { taglist[tmp[tag]] = 1; }
+
 	split(unsetlist, tmp, ",");
-	for (tag in tmp)
-	    {
-	    print "UN "notaglist[tag] > "/dev/stderr"
-	    delete taglist[tmp[tag]]
-	    }
+	for (tag in tmp) { delete taglist[tmp[tag]] }
+
 	taglist["*"] = "*"
    	}
     {
     sub("#.*", "");
-    split($0, chklist, "[ 	]*");
+    if (alreadyset[$1])
+	{ next; }
     need = 0;
-    for (chk in chklist)			# For each word on the line
+    for (chk = 1 ; chk<NF ; ++chk)		# For each word on the line
 	{
-	if (sub("^-", "", chklist[chk]))	# If it begins with a '-'
+	if (sub("^-", "", $chk))	# If it begins with a '-'
 	    {
-	    if (chklist[chk] in taglist)	# If match, discard
+	    if ($chk in taglist)	# If match, discard
 		{ next; }
 	    }
 	else
 	    {
-	    if (chklist[chk] in taglist)	# If match, note needed
+	    if ($chk in taglist)	# If match, note needed
 		{ need = 1; }
 	    }
 	}
-    if (need)
+    if (NF == 1 || need)
 	{ print $1 }
     }
     ' < $PKGCHK_CONF
@@ -288,49 +293,54 @@ for pkgdir in $PKGDIRLIST ; do
     fi
     cd $PKGSRCDIR/$pkgdir
     # Use 'make x' rather than 'make all' to avoid potential licence errors
-    pkgname=`printf 'x:\n\t@echo ${PKGNAME}\n'|${MAKE} -f - -f Makefile x` || true
-    if [ -z "$pkgname" ]; then
+    extract_make_vars PKGNAME
+    if [ -z "$PKGNAME" ]; then
 	echo "Unable to extract PKGNAME for $pkgdir"
 	exit 1
     fi
-    if [ ! -d /var/db/pkg/$pkgname ];then
-	echo_n "$pkgname: "
-	pkg=`echo $pkgname | sed 's/-[0-9].*//'`
+    if [ ! -d /var/db/pkg/$PKGNAME ];then
+	echo_n "$PKGNAME: "
+	pkg=`echo $PKGNAME | sed 's/-[0-9].*//'`
 	pkginstalled=`pkg_info -e $pkg || true`
 	INSTALL=
 	if [ -n "$pkginstalled" ];then
 	    echo_n "version mismatch - $pkginstalled"
+	    mismatch="$mismatch $pkginstalled"
 	    if [ -n "$opt_u" ]; then
-		UPDATE_TODO="$UPDATE_TODO $pkgname $pkgdir"
+		UPDATE_TODO="$UPDATE_TODO $PKGNAME $pkgdir"
 	    fi
 	else
 	    echo_n "missing"
 	    if [ -n "$opt_a" ] ; then
-		INSTALL_TODO="$INSTALL_TODO $pkgname $pkgdir"
+		INSTALL_TODO="$INSTALL_TODO $PKGNAME $pkgdir"
 	    fi
 	fi
-	if [ -f $PACKAGES/All/$pkgname.tgz ] ;then
+	if [ -f $PACKAGES/All/$PKGNAME.tgz ] ;then
 	    echo_n " (binary package available)"
 	fi
 	echo
     else
 	if [ -n "$opt_B" ];then
 	    current_build_version=`get_build_version`
-	    installed_build_version=`cat /var/db/pkg/$pkgname/+BUILD_VERSION | sed "s:^${real_pkgsrcdir}/::"`
+	    installed_build_version=`cat /var/db/pkg/$PKGNAME/+BUILD_VERSION | sed "s:^${real_pkgsrcdir}/::"`
 	    if [ x"$current_build_version" != x"$installed_build_version" ];then
-		echo "$pkgname: build version information mismatch"
+		echo "$PKGNAME: build version information mismatch"
+		mismatch="$mismatch $pkginstalled"
 		# should we mark this pkg to be updated if -u is given ??
 	    elif [ -n "$opt_v" ];then
-		echo "$pkgname: OK"
+		echo "$PKGNAME: OK"
 	    fi
 	elif [ -n "$opt_v" ];then
-	    echo "$pkgname: OK"
+	    echo "$PKGNAME: OK"
 	fi
     fi
 done
 
+if [ -n "$opt_r" -a -n "$mismatch" ]; then
+    run_cmd "pkg_delete -r $mismatch"
+fi
 if [ -n "$UPDATE_TODO" ];then
-    echo "Updating..."
+    echo "[ Update... ]"
 
     # Generate list including packages which depend on updates
     #
@@ -377,7 +387,8 @@ if [ -n "$UPDATE_TODO" ];then
 fi
 
 if [ -n "$INSTALL_TODO" ];then
-    echo "Installing..."
+    echo ""
+    echo "[ Install... ]"
     set -- $INSTALL_TODO
     while [ $# != 0 ]; do
 	pkg_install $1 $2 I
