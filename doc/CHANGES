@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2988 2003/08/04 15:45:59 jtb Exp $
+$NetBSD: CHANGES,v 1.2989 2003/08/04 17:30:15 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3197,3 +3197,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cue to 20030714nb1 [itojun 2003-08-04]
 	Updated RScheme to 0.7.3.2 [jtb 2003-08-04]
 	Updated smalltalk to 2.1.4 [jtb 2003-08-04]
+	Updated hdf5 to 1.6.0 [jtb 2003-08-04]
