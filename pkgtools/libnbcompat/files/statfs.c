@@ -1,4 +1,4 @@
-/*	$NetBSD: statfs.c,v 1.4 2003/09/06 23:03:04 grant Exp $	*/
+/*	$NetBSD: statfs.c,v 1.5 2004/03/11 13:28:45 grant Exp $	*/
 
 /*-
  * Copyright (c) 1998 The NetBSD Foundation, Inc.
@@ -112,8 +112,12 @@ vfs2fs(struct statfs *sfs, const struct statvfs *vfs)
 	sfs->f_ffree = vfs->f_ffree;
 	(void) memcpy(&sfs->f_fsid.val[0], &vfs->f_fsid, sizeof(fsid_t));
 	sfs->f_owner = 0;		/* XXX: root always here */
+#if HAVE_STRUCT_STATVFS_F_BASETYPE
 	(void)strncpy(sfs->f_fstypename,
 	    vfs->f_basetype, sizeof(sfs->f_fstypename));
+#else
+	sfs->f_fstypename[0] = '\0';
+#endif
 	sfs->f_mntonname[0] = '\0';	/* XXX: */
 	sfs->f_mntfromname[0] = '\0';	/* XXX: */
 }

@@ -49,6 +49,9 @@
 /* Define to 1 if you have the `fseeko' function. */
 #undef HAVE_FSEEKO
 
+/* Define to 1 if the system has the type `fsid_t'. */
+#undef HAVE_FSID_T
+
 /* Define to 1 if you have the <fts.h> header file. */
 #undef HAVE_FTS_H
 
@@ -279,6 +282,9 @@
 /* Define to 1 if you have the `strtoll' function. */
 #undef HAVE_STRTOLL
 
+/* Define to 1 if `f_basetype' is member of `struct statvfs'. */
+#undef HAVE_STRUCT_STATVFS_F_BASETYPE
+
 /* Define to 1 if you have the `strunvis' function. */
 #undef HAVE_STRUNVIS
 
@@ -386,6 +392,9 @@
 
 /* Define to 1 if you have the <util.h> header file. */
 #undef HAVE_UTIL_H
+
+/* Define to 1 if you have the `utimes' function. */
+#undef HAVE_UTIMES
 
 /* Define to 1 if you have the <utmp.h> header file. */
 #undef HAVE_UTMP_H
