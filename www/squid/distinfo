@@ -1,7 +1,15 @@
-$NetBSD: distinfo,v 1.68.2.11 2005/03/01 12:46:14 salo Exp $
+$NetBSD: distinfo,v 1.68.2.12 2005/03/07 14:05:27 salo Exp $
 
 SHA1 (squid-2.5.9-2005022800/squid-2.5.STABLE9.tar.bz2) = 9605e274f548bfc8dcb60a299b680df2846ee74b
 Size (squid-2.5.9-2005022800/squid-2.5.STABLE9.tar.bz2) = 1057776 bytes
+SHA1 (squid-2.5.9-2005022800/squid-2.5.STABLE9-setcookie.patch) = 1f1a6692a32a00e81873741f4152bdb21e90b263
+Size (squid-2.5.9-2005022800/squid-2.5.STABLE9-setcookie.patch) = 5328 bytes
+SHA1 (squid-2.5.9-2005022800/squid-2.5.STABLE9-ftp_EPLF.patch) = cdb2236bf58fa896fd6b70d0ee0c9aa6ff9d9334
+Size (squid-2.5.9-2005022800/squid-2.5.STABLE9-ftp_EPLF.patch) = 4108 bytes
+SHA1 (squid-2.5.9-2005022800/squid-2.5.STABLE9-ftp_base_href.patch) = 1c72fd034aeee6900283b2f803ebd1eaa28c5397
+Size (squid-2.5.9-2005022800/squid-2.5.STABLE9-ftp_base_href.patch) = 709 bytes
+SHA1 (squid-2.5.9-2005022800/squid-2.5.STABLE9-acl_error.patch) = fec6e7f2b82bd3a8f9f26e6044f516c8127b9120
+Size (squid-2.5.9-2005022800/squid-2.5.STABLE9-acl_error.patch) = 8499 bytes
 SHA1 (patch-aa) = 3e6fb677125eec276fdfa62336c134f26e1e1edd
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
