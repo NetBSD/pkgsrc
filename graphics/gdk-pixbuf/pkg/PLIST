@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/05/30 19:30:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/05/31 16:17:56 rh Exp $
 bin/gdk-pixbuf-config
 include/gdk-pixbuf/gdk-pixbuf.h
 include/gdk-pixbuf/gdk-pixbuf-features.h
@@ -8,8 +8,6 @@ lib/libgdk_pixbuf.so.2.0
 lib/libgdk_pixbuf.a
 lib/libgdk_pixbuf.la
 lib/libgnomecanvaspixbuf.so.1.0
-lib/libgnomecanvaspixbuf.so.1
-lib/libgnomecanvaspixbuf.so
 lib/libgnomecanvaspixbuf.la
 lib/libgnomecanvaspixbuf.a
 lib/gdk_pixbufConf.sh
