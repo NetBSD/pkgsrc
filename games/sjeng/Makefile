@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/25 04:42:52 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/25 20:35:33 jlam Exp $
 
 DISTNAME=	Sjeng-Free-11.0
 PKGNAME=	sjeng-11.0
@@ -7,7 +7,7 @@ MASTER_SITES=	http://sjeng.sourceforge.net/ftp/ \
 		${MASTER_SITE_SOURCEFORGE:=sjeng/}
 
 MAINTAINER=	jlam@netbsd.org
-HOMEPAGE=	http://sjeng.sourceforge.net/
+HOMEPAGE=	http://www.sjeng.org/
 COMMENT=	engine for chess variations (bughouse, suicide, etc.)
 
 USE_BUILDLINK_ONLY=	YES
