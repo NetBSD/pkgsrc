@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.734 2001/05/14 12:58:51 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.735 2001/05/14 13:44:23 drochner Exp $
 #
 # This file is in the public domain.
 #
@@ -169,6 +169,17 @@ MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB}
 .endif # !exists(bsd.perl.mk) && !defined(PERL5_*)
 .endif # exists($PERL5)
 .endif # USE_PERL5
+
+.if defined(USE_PYTHON)
+PYTHON?=		${LOCALBASE}/bin/python
+DEPENDS+=		python>=1.6:../../lang/python
+.if exists(${PYTHON})
+BUILD_DEPENDS+=		python-mk-*:../../pkgtools/python-mk
+.if exists(${LOCALBASE}/share/mk/bsd.python.mk)
+.include "${LOCALBASE}/share/mk/bsd.python.mk"
+.endif
+.endif
+.endif
 
 .if defined(USE_FORTRAN)
 .if !exists(/usr/bin/f77)
