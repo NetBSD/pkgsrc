@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 1998/05/06 12:52:07 frueauf Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/01 22:18:34 tron Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
 DISTNAME=	teTeX-src-0.4
-PKGNAME=	teTeX-0.4pl8
+PKGNAME=	teTeX-0.4p8
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN}
 MASTER_SITE_SUBDIR=	systems/unix/teTeX/distrib/sources
@@ -12,6 +12,8 @@ DISTFILES=	${TETEX_SRC} ${TETEX_LIB}
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	br@schiele-ct.de
+
+DEPENDS+=	dialog-0.6z:../../misc/dialog
 
 DIST_SUBDIR=	teTeX
 NO_CONFIGURE=	yes
@@ -40,12 +42,13 @@ CFLAGS=	-O2
 
 pre-install:
 	@${RM} -f ${PREFIX}/share/texmf/ls-R
-	@chown -R bin:bin ${WRKLIB}/info ${WRKLIB}/man
 	@${RM} -f ${WRKLIB}/info/dir ${WRKLIB}/info/localdir \
-		 ${WRKLIB}/info/*.orig ${WRKLIB}/info/README
-	@chmod 444 ${WRKLIB}/info/* ${WRKLIB}/man/man1/* ${WRKLIB}/man/man5/*
+		 ${WRKLIB}/info/*.orig ${WRKLIB}/info/README \
+	         ${WRKLIB}/info/texinfo*
 	@find ${WRKLIB}/texmf/fonts -type d -perm 1755 -exec chmod 755 {} \;
-	@ (cd ${WRKLIB}; tar cf - info man/man1 man/man5) | (cd ${PREFIX}; tar --unlink -xpf -)
+	@${INSTALL_DATA} ${WRKLIB}/info/* ${PREFIX}/info
+	@${INSTALL_DATA} ${WRKLIB}/man/man1/* ${PREFIX}/man/man1
+	@${INSTALL_DATA} ${WRKLIB}/man/man5/* ${PREFIX}/man/man5
 	@ (cd ${WRKLIB}; tar cf - texmf) | (cd ${PREFIX}/share; tar --unlink -xpf -)
 	@${INSTALL_DATA} ${WRKLIB}/texmf.cnf ${PREFIX}/share/texmf/web2c
 
