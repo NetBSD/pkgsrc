@@ -1,22 +1,5 @@
 *** configure.orig	Tue Jun 17 09:51:22 1997
 --- configure	Fri Jun 20 00:03:50 1997
-*************** if test "x$CCOPTS" = x; then
-*** 1382,1388 ****
-              CCOPTS='-O'
-  	    if test x$use_cc_g_flag = xyes; then
-  		if test $cc_uses_g = yes; then
-! 		    CCOPTS='-g -O'
-  		fi
-  	    fi
-  	fi
---- 1382,1388 ----
-              CCOPTS='-O'
-  	    if test x$use_cc_g_flag = xyes; then
-  		if test $cc_uses_g = yes; then
-! 		    CCOPTS='-O2 -m486 -pipe'
-  		fi
-  	    fi
-  	fi
 *************** ac_configure=$ac_aux_dir/configure # Thi
 *** 1437,1442 ****
 --- 1437,1443 ----
