@@ -1,8 +1,9 @@
-$NetBSD: patch-ag,v 1.9 2004/09/14 22:20:16 dmcmahill Exp $
+$NetBSD: patch-ag,v 1.10 2004/09/23 13:03:41 adam Exp $
 
---- src/Makefile.in.orig	Fri Feb 20 21:16:54 2004
-+++ src/Makefile.in	Thu Sep  9 01:18:45 2004
-@@ -33,8 +33,8 @@
+--- src/Makefile.in.orig	2004-09-02 03:48:47.000000000 +0000
++++ src/Makefile.in
+@@ -32,10 +32,10 @@ CXXFLAGS_NO_PT_FLAGS = $(filter-out $(PT
+ ifeq ($(ENABLE_DYNAMIC_LINKING), true)
    ifdef CXXPICFLAG
      %.oct : pic/%.o octave$(EXEEXT)
 -	  $(DL_LD) $(DL_LDFLAGS) -o $@ $< $(OCT_LINK_DEPS)
@@ -13,7 +14,9 @@ $NetBSD: patch-ag,v 1.9 2004/09/14 22:20:16 dmcmahill Exp $
 +	  ${LIBTOOL} --mode=link $(DL_LD) $(DL_LDFLAGS) -o $@ $< $(OCT_LINK_DEPS)
    endif
  endif
-@@ -247,6 +247,7 @@
+ 
+@@ -267,8 +267,9 @@ libraries: $(LIBRARIES)
+ 
  liboctinterp.$(LIBEXT): $(OBJECTS) $(XERBLA)
  	rm -f $@
 -	$(TEMPLATE_AR) $(TEMPLATE_ARFLAGS) $@ $^
@@ -23,26 +26,34 @@ $NetBSD: patch-ag,v 1.9 2004/09/14 22:20:16 dmcmahill Exp $
 +		-version-info ${version:2.1.%=2:%}
  
  liboctinterp.$(SHLEXT_VER): liboctinterp.$(SHLEXT)
-@@ -256,5 +257,5 @@
+ 	rm -f $@
+@@ -276,7 +277,7 @@ liboctinterp.$(SHLEXT_VER): liboctinterp
+ 
  liboctinterp.$(SHLEXT): $(PICOBJ) $(PIC_XERBLA)
  	rm -f $@
 -	$(SH_LD) $(SH_LDFLAGS) $(SONAME_FLAGS) -o $@ $^ $(OCTINTERP_LINK_DEPS)
 +	${LIBTOOL} --mode=link $(SH_LD) $(SH_LDFLAGS) $(SONAME_FLAGS) -o $@ $^ $(OCTINTERP_LINK_DEPS)
  
  stamp-oct-links: $(OCT_FILES)
-@@ -268,4 +269,5 @@
+ 	if [ -n "$(OCT_FILES)" ]; then \
+@@ -288,6 +289,7 @@ stamp-prereq: defaults.h oct-conf.h oct-
+ 	touch stamp-prereq
  
  octave$(EXEEXT): stamp-prereq $(LIBRARIES) main.o $(DLD_STATIC_OBJ)
 +	${LIBTOOL} --mode=link \
  	$(LD_CXX) $(CPPFLAGS) $(ALL_CXXFLAGS) $(RDYNAMIC_FLAG) \
  	$(ALL_LDFLAGS) -o $@ \
-@@ -348,4 +350,5 @@
+ 	main.o $(DLD_STATIC_OBJ) \
+@@ -368,6 +370,7 @@ install-strip:
+ install-bin:
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
  	rm -f $(DESTDIR)$(bindir)/octave$(EXEEXT)
 +	${LIBTOOL} --mode=install \
  	$(INSTALL_PROGRAM) octave$(EXEEXT) $(DESTDIR)$(bindir)/octave-$(version)$(EXEEXT)
  	$(LN_S) octave-$(version)$(EXEEXT) $(DESTDIR)$(bindir)/octave$(EXEEXT)
-@@ -367,7 +370,6 @@
+ .PHONY: install-bin
+@@ -387,9 +390,8 @@ install-lib:
+ 	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(octlibdir)
  	if $(STATIC_LIBS); then \
  	  rm -f $(DESTDIR)$(octlibdir)/liboctinterp.$(LIBEXT); \
 -	  $(INSTALL_DATA) liboctinterp.$(LIBEXT) \
@@ -52,3 +63,4 @@ $NetBSD: patch-ag,v 1.9 2004/09/14 22:20:16 dmcmahill Exp $
 +	    ${PREFIX}/lib; \
  	fi
  	if $(SHARED_LIBS); then \
+ 	  rm -f $(DESTDIR)$(octlibdir)/liboctinterp.$(SHLEXT_VER); \

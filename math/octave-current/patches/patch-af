@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.5 2004/02/26 16:47:35 adam Exp $
+$NetBSD: patch-af,v 1.6 2004/09/23 13:03:41 adam Exp $
 
---- liboctave/Makefile.in.orig	2004-02-16 19:57:21.000000000 +0000
+--- liboctave/Makefile.in.orig	2004-09-02 01:28:50.000000000 +0000
 +++ liboctave/Makefile.in
-@@ -201,8 +201,9 @@ endif
+@@ -207,8 +207,9 @@ endif
  
  liboctave.$(LIBEXT): $(LIBOCTAVE_OBJECTS)
  	rm -f $@
@@ -14,7 +14,7 @@ $NetBSD: patch-af,v 1.5 2004/02/26 16:47:35 adam Exp $
  
  liboctave.$(SHLEXT_VER): liboctave.$(SHLEXT)
  	rm -f $@
-@@ -229,9 +230,8 @@ install-lib:
+@@ -235,9 +236,8 @@ install-lib:
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(octlibdir)
  	if $(STATIC_LIBS); then \
  	  rm -f $(DESTDIR)$(octlibdir)/liboctave.$(LIBEXT); \

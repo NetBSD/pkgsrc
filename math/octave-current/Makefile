@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/09/11 21:47:43 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.33 2004/09/23 13:03:41 adam Exp $
 #
 
 DISTNAME=	octave-${OCTAVE_VER}
@@ -18,7 +18,7 @@ BUILD_DEPENDS+=	bison>=1.875:../../devel/bison
 BUILD_DEPENDS+=	gperf>=2.7:../../devel/gperf
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
-OCTAVE_VER=	2.1.57
+OCTAVE_VER=	2.1.59
 CONFLICTS+=	octave-2.0.*
 
 .if (${MACHINE_ARCH} == "arm32")
@@ -53,7 +53,7 @@ UNWRAP_FILES+=	mkoctfile octave-bug src/oct-conf.h
 
 post-extract:
 	${FIND} ${WRKSRC}/doc -type f -name '*.info*' -exec ${RM} -f {} \;
-	${MKDIR} -p ${WRKSRC}/src/pic
+	${MKDIR} ${WRKSRC}/src/pic
 
 post-install:
 .for f in ${LIBOCTAVE_INFO}
