@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/14 20:59:02 jwise Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/01/16 01:43:27 jwise Exp $
 etc/httpd/jserv/jserv.conf
 etc/httpd/jserv/jserv.properties
 etc/httpd/jserv/zone.properties
@@ -11,6 +11,7 @@ share/httpd/htdocs/jserv-docs/api/org/apache/java/io/Logger.html
 share/httpd/htdocs/jserv-docs/api/org/apache/java/io/LogRecord.html
 share/httpd/htdocs/jserv-docs/api/org/apache/java/io/LogWriter.html
 share/httpd/htdocs/jserv-docs/api/org/apache/java/io/LogWriter.Agent.html
+share/httpd/htdocs/jserv-docs/api/org/apache/java/io/SimpleFileFilter.html
 share/httpd/htdocs/jserv-docs/api/org/apache/java/io/package-summary.html
 share/httpd/htdocs/jserv-docs/api/org/apache/java/lang/TimeoutException.html
 share/httpd/htdocs/jserv-docs/api/org/apache/java/lang/package-tree.html
