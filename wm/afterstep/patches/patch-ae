@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1.1.1 2000/12/12 02:03:46 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2001/03/11 19:58:59 fredb Exp $
 
---- autoconf/configure.in.orig	Tue Feb  8 11:11:35 2000
-+++ autoconf/configure.in	Sun Feb 13 23:55:34 2000
+--- autoconf/configure.in.orig	Thu Dec 21 08:21:07 2000
++++ autoconf/configure.in	Sun Mar 11 15:15:16 2001
 @@ -83,6 +83,7 @@
  AC_PATH_PROG(CP, cp, cp)
  AC_PATH_PROG(MKDIR, mkdir, mkdir)
@@ -10,7 +10,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2000/12/12 02:03:46 wiz Exp $
  
  dnl# let's check for endiannes of our box
  AC_C_BIGENDIAN
-@@ -222,19 +223,16 @@
+@@ -246,19 +247,16 @@
  dnl# AFTERSTEP_LIB="-lafterstep" 
  dnl# ASIMAGE_LIB="-lasimage"
  dnl# WIDGETS_LIB="-lWidgets"
@@ -37,7 +37,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2000/12/12 02:03:46 wiz Exp $
     LIBINSTALL="install.dyn"
  fi
  
-@@ -316,6 +314,7 @@
+@@ -342,6 +340,7 @@
  AC_SUBST(enable_audit)
  AC_SUBST(SCRIPT_DIR)
  AC_SUBST(PERL)
