@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1213 2003/12/16 08:07:15 recht Exp $
+$NetBSD: TODO,v 1.1214 2003/12/16 11:11:53 adam Exp $
 
 Suggested new packages
 ======================
@@ -310,7 +310,6 @@ Suggested package updates
 	o w3m-0.4.2
 	o wavesurfer-1.5.3 [requires tk-8.4.2]
 	o wdm-1.26
-	o wine-20031212
 	o wistumbler2-2.00pre4 [xtraeme]
 	o wmbiff-0.4.17
 	o wv2-0.2
