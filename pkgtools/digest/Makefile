@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2004/01/05 11:32:40 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2004/01/26 21:26:53 agc Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
 
-DISTNAME=	digest-${VERSION}
+DISTNAME?=	digest-${VERSION}
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
