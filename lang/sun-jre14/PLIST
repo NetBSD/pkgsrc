@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/07/27 22:17:45 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/09/03 19:50:52 jschauma Exp $
 COPYRIGHT
 CHANGES
 LICENSE
@@ -16,38 +16,38 @@ bin/rmiregistry
 bin/servertool
 bin/tnameserv
 javaws-1_0_1_02-linux-int.zip
-lib/${MACHINE_ARCH}/awt_robot
-lib/${MACHINE_ARCH}/client/Xusage.txt
-lib/${MACHINE_ARCH}/client/libjsig.so
-lib/${MACHINE_ARCH}/client/libjvm.so
-lib/${MACHINE_ARCH}/jvm.cfg
-lib/${MACHINE_ARCH}/libJdbcOdbc.so
-lib/${MACHINE_ARCH}/libawt.so
-lib/${MACHINE_ARCH}/libcmm.so
-lib/${MACHINE_ARCH}/libdcpr.so
-lib/${MACHINE_ARCH}/libdt_socket.so
-lib/${MACHINE_ARCH}/libfontmanager.so
-lib/${MACHINE_ARCH}/libhprof.so
-lib/${MACHINE_ARCH}/libioser12.so
-lib/${MACHINE_ARCH}/libjaas_unix.so
-lib/${MACHINE_ARCH}/libjava.so
-lib/${MACHINE_ARCH}/libjavaplugin_jni.so
-lib/${MACHINE_ARCH}/libjawt.so
-lib/${MACHINE_ARCH}/libjcov.so
-lib/${MACHINE_ARCH}/libjdwp.so
-lib/${MACHINE_ARCH}/libjpeg.so
-lib/${MACHINE_ARCH}/libjsig.so
-lib/${MACHINE_ARCH}/libjsound.so
-lib/${MACHINE_ARCH}/libmlib_image.so
-lib/${MACHINE_ARCH}/libnet.so
-lib/${MACHINE_ARCH}/libnio.so
-lib/${MACHINE_ARCH}/librmi.so
-lib/${MACHINE_ARCH}/libverify.so
-lib/${MACHINE_ARCH}/libzip.so
-lib/${MACHINE_ARCH}/native_threads/libhpi.so
-lib/${MACHINE_ARCH}/server/Xusage.txt
-lib/${MACHINE_ARCH}/server/libjsig.so
-lib/${MACHINE_ARCH}/server/libjvm.so
+lib/i386/awt_robot
+lib/i386/client/Xusage.txt
+lib/i386/client/libjsig.so
+lib/i386/client/libjvm.so
+lib/i386/jvm.cfg
+lib/i386/libJdbcOdbc.so
+lib/i386/libawt.so
+lib/i386/libcmm.so
+lib/i386/libdcpr.so
+lib/i386/libdt_socket.so
+lib/i386/libfontmanager.so
+lib/i386/libhprof.so
+lib/i386/libioser12.so
+lib/i386/libjaas_unix.so
+lib/i386/libjava.so
+lib/i386/libjavaplugin_jni.so
+lib/i386/libjawt.so
+lib/i386/libjcov.so
+lib/i386/libjdwp.so
+lib/i386/libjpeg.so
+lib/i386/libjsig.so
+lib/i386/libjsound.so
+lib/i386/libmlib_image.so
+lib/i386/libnet.so
+lib/i386/libnio.so
+lib/i386/librmi.so
+lib/i386/libverify.so
+lib/i386/libzip.so
+lib/i386/native_threads/libhpi.so
+lib/i386/server/Xusage.txt
+lib/i386/server/libjsig.so
+lib/i386/server/libjvm.so
 lib/audio/soundbank.gm
 lib/charsets.jar
 lib/cmm/CIEXYZ.pf
@@ -533,13 +533,13 @@ man/man1/rmid.1
 man/man1/rmiregistry.1
 man/man1/servertool.1
 man/man1/tnameserv.1
-plugin/${MACHINE_ARCH}/ns4/javaplugin140.so
-plugin/${MACHINE_ARCH}/ns600/libjavaplugin_oji140.so
-plugin/${MACHINE_ARCH}/ns610/libjavaplugin_oji140.so
-@dirrm plugin/${MACHINE_ARCH}/ns610
-@dirrm plugin/${MACHINE_ARCH}/ns600
-@dirrm plugin/${MACHINE_ARCH}/ns4
-@dirrm plugin/${MACHINE_ARCH}
+plugin/i386/ns4/javaplugin140.so
+plugin/i386/ns600/libjavaplugin_oji140.so
+plugin/i386/ns610/libjavaplugin_oji140.so
+@dirrm plugin/i386/ns610
+@dirrm plugin/i386/ns600
+@dirrm plugin/i386/ns4
+@dirrm plugin/i386
 @dirrm plugin
 @dirrm lib/zi/Pacific
 @dirrm lib/zi/Indian
@@ -583,10 +583,10 @@ plugin/${MACHINE_ARCH}/ns610/libjavaplugin_oji140.so
 @dirrm lib/locale
 @dirrm lib/images/cursors
 @dirrm lib/images
-@dirrm lib/${MACHINE_ARCH}/server
-@dirrm lib/${MACHINE_ARCH}/native_threads
-@dirrm lib/${MACHINE_ARCH}/client
-@dirrm lib/${MACHINE_ARCH}
+@dirrm lib/i386/server
+@dirrm lib/i386/native_threads
+@dirrm lib/i386/client
+@dirrm lib/i386
 @dirrm lib/fonts
 @dirrm lib/ext
 @dirrm lib/cmm
