@@ -3,18 +3,19 @@
 # Date created:		Tue Jun 10 21:58:54 CEST 1997
 # Whom:			Andreas Klemm <andreas@klemm.gtn.com>
 #
-# $NetBSD: Makefile,v 1.3 1997/11/24 11:14:46 augustss Exp $
+# $NetBSD: Makefile,v 1.4 1997/11/27 11:35:37 explorer Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/13 11:22:43 asami Exp
 #
 
-DISTNAME=	ghostscript-5.03
+DISTNAME=	ghostscript-5.10
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.cs.wisc.edu/ghost/aladdin/gs503/ \
+MASTER_SITES=	ftp://ftp.cs.wisc.edu/ghost/aladdin/gs510/ \
+		ftp://ftp.cs.wisc.edu/ghost/aladdin/fonts/ \
 		ftp://bonk.ethz.ch/gs-driver-distrib/
 DISTFILES=	${GS_SOURCES} ${GS_FONTS_STD} ${GS_FONTS_OTHER} \
 		${HP850_DRV}
 
-MAINTAINER=	andreas@FreeBSD.ORG
+MAINTAINER=	explorer@netbsd.org
 
 BUILD_DEPENDS=	/nonexistent:${PORTSDIR}/graphics/jpeg:extract \
 		/nonexistent:${PORTSDIR}/graphics/png:extract \
@@ -22,15 +23,21 @@ BUILD_DEPENDS=	/nonexistent:${PORTSDIR}/graphics/jpeg:extract \
 
 MAKE_ENV=	PORTSDIR=${PORTSDIR}
 EXTRACT_ONLY=	${GS_SOURCES}
-WRKSRC=		${WRKDIR}/gs5.03
+WRKSRC=		${WRKDIR}/gs5.10
 MAKEFILE=	unix-gcc.mak
 MAKE_FLAGS=	prefix=${PREFIX} zlibc_=-lz CFLAGS="${CFLAGS}" -f
 MAN1=		gs.1 pdf2dsc.1 pdf2ps.1 ps2ascii.1 ps2epsi.1 ps2pdf.1
 
-GS_SOURCES=	ghostscript-5.03.tar.gz
-GS_SOURCES+=	ghostscript-5.03gnu.tar.gz
-GS_FONTS_STD=	ghostscript-fonts-std-5.03.tar.gz
-GS_FONTS_OTHER=	ghostscript-fonts-other-5.03.tar.gz
+GS_SOURCES=	ghostscript-5.10.tar.gz
+GS_SOURCES+=	ghostscript-5.10gnu.tar.gz
+#  Note: the following two are special files.  In the 5.10 directory
+#  on the FTP site, there are symlinks:
+#        ghostscript-fonts-other-5.10.tar.gz ->
+#               ../fonts/ghostscript-fonts-other-4.40.tar.gz
+#  To avoid unnecessarily downloading distfiles, do not change these
+#  when upgrading the port unless the symlinks/files really change.
+GS_FONTS_STD=	ghostscript-fonts-std-4.0.tar.gz
+GS_FONTS_OTHER=	ghostscript-fonts-other-4.40.tar.gz
 
 # Additional driver HP 850, see http://bonk.ethz.ch/hp850/hp850.html
 HP850_DRV=	hp850.zip
@@ -42,8 +49,10 @@ CFLAGS+=	-DA4
 pre-fetch:
 .if !defined(A4)
 	@${ECHO_MSG} "Type \"make A4=yes\" if you want -DA4 for compilation."
+	@${ECHO_MSG} "(Doing so makes the default paper size be A4,"
+	@${ECHO_MSG} "rather than the default of letter)"
 .else
-	@${ECHO_MSG} "Using -DA4 for compilation."
+	@${ECHO_MSG} "Using -DA4 to set default paper size to A4."
 .endif
 
 post-extract:
