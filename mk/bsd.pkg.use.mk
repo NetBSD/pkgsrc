@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.4 2005/02/11 16:15:53 tv Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.5 2005/02/24 22:38:42 jlam Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -162,36 +162,17 @@ ${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
 
 .if defined(USE_PERL5) && (${USE_PERL5} == "run")
 CONFIGURE_ENV+=		PERL=${PERL5:Q}
-.  if !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
-.    if exists(${PERL5})
-PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`; \
-			${ECHO} $${installsitelib}
-PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`; \
-			${ECHO} $${installsitearch}
-PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib 2>/dev/null`; \
-			${ECHO} $${installarchlib}
-.      if ${PKG_INSTALLATION_TYPE} == "overwrite"
-_PERL5_PREFIX!=		eval `${PERL5} -V:prefix 2>/dev/null`; \
-			${ECHO} $${prefix}
-PERL5_SITELIB:=		${PERL5_SITELIB:S/^${_PERL5_PREFIX}/${LOCALBASE}/}
-PERL5_SITEARCH:=	${PERL5_SITEARCH:S/^${_PERL5_PREFIX}/${LOCALBASE}/}
-PERL5_ARCHLIB:=		${PERL5_ARCHLIB:S/^${_PERL5_PREFIX}/${LOCALBASE}/}
-MAKEFLAGS+=		PERL5_SITELIB=${PERL5_SITELIB:Q}
-MAKEFLAGS+=		PERL5_SITEARCH=${PERL5_SITEARCH:Q}
-MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB:Q}
-.      endif # PKG_INSTALLATION_TYPE == "overwrite"
-.    endif   # exists($PERL5)
-.  endif     # !defined(PERL5_*)
+.  include "../../lang/perl5/vars.mk"
 .endif       # USE_PERL5 == run
 
-.if defined(PERL5_SITELIB)
-PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SITELIB:S/^${LOCALBASE}\///}
+.if defined(PERL5_SUB_INSTALLSITELIB)
+PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SUB_INSTALLSITELIB}
 .endif
-.if defined(PERL5_SITEARCH)
-PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SITEARCH:S/^${LOCALBASE}\///}
+.if defined(PERL5_SUB_INSTALLSITEARCH)
+PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SUB_INSTALLSITEARCH}
 .endif
-.if defined(PERL5_ARCHLIB)
-PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
+.if defined(PERL5_SUB_INSTALLARCHLIB)
+PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_SUB_INSTALLARCHLIB}
 .endif
 
 ### USE_RMAN
