@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6052 2004/05/28 23:05:38 recht Exp $
+$NetBSD: CHANGES,v 1.6053 2004/05/29 00:18:39 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2675,3 +2675,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated jikes to 1.21 [xtraeme 2004-05-28]
 	Updated libesmtp to 1.0.3 [xtraeme 2004-05-28]
 	Updated cyrus-imapd22 to 2.2.5 [recht 2004-05-28]
+	Updated gerbv to 0.16 [dmcmahill 2004-05-28]
