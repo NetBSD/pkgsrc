@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4375 2004/01/06 18:55:57 jmmv Exp $
+$NetBSD: CHANGES,v 1.4376 2004/01/07 01:26:10 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -80,3 +80,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkg_install to 20040106 [hubertf 2004-01-06]
 	Updated screen to 4.0.2 [wiz 2004-01-06]
 	Updated guppi to 0.40.3nb8 [jmmv 2004-01-06]
+	Added amule-1.2.3 [xtraeme 2004-01-06]
