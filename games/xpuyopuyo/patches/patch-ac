@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.3 2000/08/23 23:59:27 dmcmahill Exp $
+
+--- pgtk/Makefile.am.orig	Tue Aug  1 13:04:51 2000
++++ pgtk/Makefile.am	Wed Aug 23 15:16:03 2000
+@@ -18,5 +18,5 @@
+ #
+ if GTK
+-INCLUDES		=  $(GTK_CFLAGS) -I../putil -I../pgame -I../pai -I../pnet -I../psound
++INCLUDES		=  $(LIBMIKMOD_CFLAGS) $(GTK_CFLAGS) -I../putil -I../pgame -I../pai -I../pnet -I../psound
+ endif
+ 
