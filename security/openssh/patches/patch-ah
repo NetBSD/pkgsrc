@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.7 2000/07/22 08:22:03 jlam Exp $
+$NetBSD: patch-ah,v 1.8 2000/08/11 05:19:44 jlam Exp $
 
 --- Makefile.in.orig	Tue Jul 11 07:34:34 2000
-+++ Makefile.in	Fri Jul 21 01:30:17 2000
++++ Makefile.in	Fri Aug 11 01:10:25 2000
 @@ -6,6 +6,7 @@
  mandir=@mandir@
  mansubdir=@mansubdir@
@@ -10,6 +10,15 @@ $NetBSD: patch-ah,v 1.7 2000/07/22 08:22:03 jlam Exp $
  piddir=@piddir@
  srcdir=@srcdir@
  top_srcdir=@top_srcdir@
+@@ -15,7 +16,7 @@
+ VPATH=@srcdir@
+ 
+ SSH_PROGRAM=@bindir@/ssh
+-ASKPASS_LOCATION=@libexecdir@/ssh
++#ASKPASS_LOCATION=@libexecdir@/ssh
+ ASKPASS_PROGRAM=$(ASKPASS_LOCATION)/ssh-askpass
+ 
+ CC=@CC@
 @@ -115,7 +116,7 @@
  distprep: catman-do
  	autoreconf
