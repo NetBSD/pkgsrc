@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1773 2004/05/25 07:10:35 xtraeme Exp $
+$NetBSD: TODO,v 1.1774 2004/05/25 12:05:39 salo Exp $
 
 Suggested new packages
 ======================
@@ -272,7 +272,6 @@ Suggested package updates
 	o latex2rtf-1.9.15
 	o lavaps-2.4
 	o leafnode-1.9.53
-	o lftp-3.0.3
 	o libcaca-0.9
 	o libesmtp-1.0.3
 	o libidn-0.4.4
