@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/04/03 06:58:39 tron Exp $
+# $NetBSD: Makefile,v 1.18 2001/04/03 12:12:58 wiz Exp $
 
 DISTNAME=	opera-5.0b7
 CATEGORIES=	www
@@ -16,6 +16,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 LICENSE=	opera-license
 
+# we need the DIST_SUBDIR=. because of the inclusion of suse's Makefile.common
 DIST_SUBDIR=	.
 EXTRACT_ONLY=	# empty
 NO_BUILD=	YES
