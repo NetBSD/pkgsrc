@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3652 2003/10/05 17:56:09 martti Exp $
+$NetBSD: CHANGES,v 1.3653 2003/10/05 20:20:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4112,3 +4112,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added mapserver-4.0 [jschauma 2003-10-05]
 	Update mysql-client to 3.23.58 [martti 2003-10-05]
 	Update mysql-server to 3.23.58 [martti 2003-10-05]
+	Updated libgsf to 1.8.2 [wiz 2003-10-05]
