@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2001/11/22 12:06:45 agc Exp $
+$NetBSD: distinfo,v 1.4 2001/12/21 10:48:15 agc Exp $
 
-SHA1 (asp2php-0.75.24.tar.gz) = 253d53940ada1c843d601845f36231d0b6a564ae
-Size (asp2php-0.75.24.tar.gz) = 41066 bytes
+SHA1 (asp2php-0.75.25.tar.gz) = 1f05d9598c81383e43d53f61f1d73ca485bd7ed6
+Size (asp2php-0.75.25.tar.gz) = 41450 bytes
 SHA1 (patch-aa) = bbba1dd0baf796abf0a8f3ba3e5b90756ad24006
