@@ -1,4 +1,4 @@
-# $NetBSD: krb5.buildlink3.mk,v 1.6 2004/03/18 09:12:13 jlam Exp $
+# $NetBSD: krb5.buildlink3.mk,v 1.7 2004/03/30 18:09:43 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Kerberos 5 implementation.  krb5.buildlink3.mk will:
@@ -26,7 +26,7 @@ KRB5_ACCEPTED?=	${_KRB5_PKGS}
 # This is an exhaustive list of all of the Kerberos 5 implementations
 # that may be used with krb5.buildlink3.mk, in order of precedence.
 #
-_KRB5_PKGS?=	heimdal #mit-krb5
+_KRB5_PKGS?=	heimdal mit-krb5
 
 _KRB5_DEFAULT=	${KRB5_DEFAULT}
 _KRB5_ACCEPTED=	${KRB5_ACCEPTED}
