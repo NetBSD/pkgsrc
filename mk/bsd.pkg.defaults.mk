@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.187 2003/10/11 02:44:17 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.188 2003/10/16 12:36:29 salo Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1680,7 +1680,7 @@ SDIST_PAWD?= pwd
 # Possible:  /dev/your_favorite_serial_device0 /dev/your_favorite_serial_device1 ...
 # Default: defaults for various machine_archs are set in mk/bsd.prefs.mk
 
-#SILC_CLIENT_WITH_PERL?=  no
+SILC_CLIENT_WITH_PERL?=	YES
 # Used to decide whether perl scripting support will be compiled.
 # Possible: YES, NO
 # Default: YES
