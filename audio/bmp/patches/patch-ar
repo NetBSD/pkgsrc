@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1 2004/06/26 22:12:28 jmmv Exp $
+
+--- Input/cdaudio/Makefile.in.orig	2004-06-26 23:51:20.000000000 +0200
++++ Input/cdaudio/Makefile.in
+@@ -241,7 +241,7 @@ lib_LTLIBRARIES = $(cdaudioltlibs)
+ 
+ INCLUDES = @GTK_CFLAGS@ -I$(top_builddir)/intl -I$(top_srcdir)
+ libcdaudio_la_LDFLAGS = @PLUGIN_LDFLAGS@
+-libcdaudio_la_LIBADD = @GTK_LIBS@
++libcdaudio_la_LIBADD = @GTK_LIBS@ $(LIBOSSAUDIO)
+ libcdaudio_la_SOURCES = $(cdaudiobuildsources)
+ subdir = Input/cdaudio
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
