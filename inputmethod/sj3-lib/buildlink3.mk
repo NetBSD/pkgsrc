@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/18 09:12:12 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/11/30 02:30:59 minskim Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SJ3_LIB_BUILDLINK3_MK:=	${SJ3_LIB_BUILDLINK3_MK}+
@@ -14,7 +14,5 @@ BUILDLINK_PACKAGES+=	sj3-lib
 BUILDLINK_DEPENDS.sj3-lib+=	sj3-lib>=2.0.1.20nb1
 BUILDLINK_PKGSRCDIR.sj3-lib?=	../../inputmethod/sj3-lib
 .endif	# SJ3_LIB_BUILDLINK3_MK
-
-.include "../../devel/nbitools/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
