@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2002/08/25 21:52:35 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2002/12/26 04:58:44 wiz Exp $
 
-DISTNAME=		Eterm-0.8.10
-PKGNAME=		eterm-0.8.10
-PKGREVISION=		1
+DISTNAME=		Eterm-0.9.2
+PKGNAME=		eterm-0.9.2
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.eterm.org/pub/Eterm/ \
 			ftp://alien.eterm.org/pub/Eterm/ \
@@ -21,10 +20,15 @@ PIXMAP_FILES=		Eterm-bg-scale-1.tar.gz Eterm-bg-scale-2.tar.gz \
 USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386" && ${USE_MMX} != "NO"
+CONFIGURE_ARGS+=        --enable-mmx
+.endif
+BUILD_DEFS+=		USE_MMX
 
 post-extract:
 	${LN} -sf ${WRKSRC} ${WRKDIR}/Eterm
@@ -41,5 +45,6 @@ post-install:
 	${CHMOD} 4711 ${PREFIX}/bin/Eterm
 .endif
 
-.include "../../graphics/imlib/buildlink2.mk"
+.include "../../devel/libast/buildlink2.mk"
+.include "../../graphics/imlib2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
