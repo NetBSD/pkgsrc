@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2269 2003/05/20 16:45:30 yyamano Exp $
+$NetBSD: CHANGES,v 1.2270 2003/05/21 10:12:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2000,3 +2000,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added mozilla-bin-nightly [grant 2003-05-20]
 	Updated unrar to 3.2.2 [wiz 2003-05-20]
 	Updated pgpdump to 0.18 [yyamano 2003-05-20]
+	Updated links to 2.1.0.10 [wiz 2003-05-21]
+	Updated links-gui to 2.1.0.10 [wiz 2003-05-21]
