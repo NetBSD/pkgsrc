@@ -1,5 +1,5 @@
 # build.conf
-# $NetBSD: build.conf-example,v 1.19 2004/04/09 18:43:14 jschauma Exp $
+# $NetBSD: build.conf-example,v 1.20 2004/04/19 18:39:09 hubertf Exp $
 #
 # config file in /bin/sh syntax for {,pre,post}-build
 #
@@ -33,7 +33,7 @@ USR_PKGSRC="/usr/pkgsrc"
 CVS_USER="yourlogin"
 
 # Flags to pass to 'cvs update', e.g. to get a certain branch
-#CVS_FLAGS="-rnetbsd-1-6"
+#CVS_FLAGS="-rnetbsd-2004Q1"
 #CVS_FLAGS="-A"
 
 # prune distfiles to remove those which are out of date
@@ -50,13 +50,8 @@ PRUNEDISTFILES=no
 # can be set to 'yes' or 'no'.
 UPDATE_VULNERABILITY_LIST=yes
 
-# Destination for packages with the OSVERSION_SPECIFIC flag set.  Needs
-# major.minor.patch version.
-RSYNC_DST_SPECIFIC=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/x.y.z/arch
-
-# destination for packages without the OSVERSION_SPECIFIC flag set.  Needs
-# major.minor version.
-RSYNC_DST_OTHER=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/x.y/arch
+# Destination for packages and rsync options 
+RSYNC_DST=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/i386
 RSYNC_OPTS='-e ssh'
 
 ###########################################################################

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.17 2004/04/12 13:01:52 hubertf Exp $
+# $NetBSD: upload,v 1.18 2004/04/19 18:39:09 hubertf Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -26,26 +26,20 @@ else
     . `dirname $0`/build.conf
 fi
 
-if [ -z "$RSYNC_DST_SPECIFIC" -o -z "$RSYNC_DST_OTHER" ]; then
-	echo "You must set the variables RSYNC_DST_SPECIFIC and RSYNC_DST_OTHER"
-	echo " "
-	echo "RSYNC_DST_SPECIFIC should be set to the destination for packages"
-	echo "which have the OSVERSION_SPECIFIC flag set.  I.e., the complete OS"
-	echo "version number is required.  For example:"
-	echo "  user@ftp.NetBSD.org:/pub/NetBSD/packages/1.5.1/alpha"
-	echo " "
-	echo "RSYNC_DST_OTHER should be set to the destination for packages"
-	echo "which do _not_ have the OSVERSION_SPECIFIC flag set.  I.e., only"
-	echo "the major.minor release string is used.  For example, on a 1.5.1"
-	echo "alpha system you would use:"
-	echo "  user@ftp.NetBSD.org:/pub/NetBSD/packages/1.5/alpha"
-	echo "If you are building from pkgsrc current, set the destination"
-	echo "to major.minor-latest. For example, on a 1.6.1 m68k system where"
-	echo "building pkgsrc current (assuming pkgsrc-1-6 is already built):"
-	echo "  user@ftp.NetBSD.org:/pub/NetBSD/packages/1.6-latest/m68k"
-	echo " "
+if [ "$RSYNC_DST_SPECIFIC" != "" -o "$RSYNC_DST_OTHER" != "" ]; then
+	echo Use of RSYNC_DST_SPECIFIC and RSYNC_DST_OTHER is deprecated.
+	echo Please just set RSYNC_DST in build.conf.
 	exit 1
 fi
+
+if [ -z "$RSYNC_DST" ]; then
+	echo "You must set the variable RSYNC_DST, see build.conf-example."
+	exit 1
+fi
+
+# Paths for both OS-version-specific and general pkgs:
+RSYNC_DST_SPECIFIC=${RSYNC_DST}
+RSYNC_DST_OTHER=${RSYNC_DST}
 
 #
 # Some temp files
