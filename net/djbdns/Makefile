@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2004/02/01 01:43:29 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/03/28 04:39:39 taca Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 #
 
 DISTNAME=	djbdns-1.05
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	http://cr.yp.to/djbdns/					\
 		ftp://cr.yp.to/djbdns/					\
