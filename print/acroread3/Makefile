@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/08/22 10:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/25 00:20:24 jlam Exp $
 
 PKGNAME=	acroread3-3.01
 CATEGORIES=	print
@@ -23,29 +23,35 @@ NO_BUILD=	YES
 DEPENDS=	suse_linux>=6.3:../../emulators/suse_linux
 DISTNAME=	acroread_linux_301
 PLATFORM=	intellinux
+LDD?=		/emul/linux/usr/bin/ldd
 .elif (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/osf1/sbin/loader)
 IGNORE=	"${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)"
 .endif
 DISTNAME=	acroread_osf_301
 PLATFORM=	alphaosf
+LDD?=		${TRUE}
 .elif (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/sunos/usr/lib/ld.so)
 IGNORE=		"${PKGNAME} requires SunOS libraries - see compat_sunos(8)"
 .endif
 DISTNAME=	acroread_sunos_301
 PLATFORM=	sparcsun
+LDD?=		${TRUE}
 .else
 DISTNAME=	${PKGNAME}
+LDD?=		${TRUE}
 .endif
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc # *-*-alpha
 .elif ${OPSYS} == "SunOS"
 DISTNAME=	acroread_solaris_301
 PLATFORM=	sparcsolaris
+LDD?=		${TRUE}
 post-patch:
 	${CHMOD} -R o+rwx ${WRKSRC}
 .else
 DISTNAME=	${PKGNAME}
+LDD?=		${TRUE}
 .endif
 
 WRKSRC=		${WRKDIR}
