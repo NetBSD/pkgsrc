@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.8 2003/12/13 00:45:24 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2003/12/14 19:48:37 jmmv Exp $
 
 .if !defined(LIBGNOMECANVAS_BUILDLINK2_MK)
 LIBGNOMECANVAS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libgnomecanvas
-BUILDLINK_DEPENDS.libgnomecanvas?=	libgnomecanvas>=2.2.1nb2
+BUILDLINK_DEPENDS.libgnomecanvas?=	libgnomecanvas>=2.4.0
 BUILDLINK_PKGSRCDIR.libgnomecanvas?=	../../graphics/libgnomecanvas
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libgnomecanvas=libgnomecanvas
@@ -12,7 +12,6 @@ BUILDLINK_PREFIX.libgnomecanvas_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libgnomecanvas=		include/libgnomecanvas-2.0/libgnomecanvas/*
 BUILDLINK_FILES.libgnomecanvas+=	lib/libglade/2.0/libcanvas.*
 BUILDLINK_FILES.libgnomecanvas+=	lib/libgnomecanvas-2.*
-BUILDLINK_FILES.libgnomecanvas+=	lib/pkgconfig/libgnomecanvas-2.0.pc
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libglade2/buildlink2.mk"
