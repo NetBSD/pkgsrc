@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1393 2004/02/12 21:29:28 xtraeme Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1394 2004/02/12 23:12:27 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -391,7 +391,7 @@ LIBTOOL_REQD?=		1.4.20010614nb11
 #
 # PKG_LIBTOOL is the path to the libtool script installed by libtool-base.
 # _LIBTOOL is the path the libtool used by the build, which could be the
-#	path to a libtool warpper script.
+#	path to a libtool wrapper script.
 # LIBTOOL is the publicly-readable variable that should be used by
 #	Makefiles to invoke the proper libtool.
 #
