@@ -3,7 +3,7 @@
 # Date created:				29 January 1998
 # Whom:					bsieker@techfak.uni-bielefeld.de
 #
-# $NetBSD: Makefile,v 1.3 1998/02/12 23:24:51 tron Exp $
+# $NetBSD: Makefile,v 1.4 1998/02/13 11:49:27 agc Exp $
 
 DISTNAME=	gtk+-0.99.3
 CATEGORIES=	x11
@@ -21,5 +21,13 @@ GNU_CONFIGURE=  yes
 USE_X11=	yes
 
 CFLAGS=		-pipe -O2
+
+PLIST_SRC=	${WRKDIR:T}/.PLIST-src
+
+pre-install:
+	@if [ ! -f ${PREFIX}/info/dir ]; then \
+	  ${SED} -ne '1,/Menu:/p' ${LOCALBASE}/info/dir > ${PREFIX}/info/dir; \
+	 fi
+	@${SED} -e 's|\$${LOCALBASE}|'${LOCALBASE}'|g' < pkg/PLIST > ${PLIST_SRC}
 
 .include <bsd.port.mk>
