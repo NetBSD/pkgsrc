@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2789 2003/07/15 09:27:44 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.2790 2003/07/15 09:37:41 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2818,3 +2818,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gschem to 20030525 [dmcmahill 2003-07-15]
 	Updated gsymcheck to 20030525 [dmcmahill 2003-07-15]
 	Updated libgeda to 20030525 [dmcmahill 2003-07-15]
+	Updated nulib2 to 2.0.0 [agc 2003-07-15]

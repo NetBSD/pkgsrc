@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2002/08/25 21:49:18 jlam Exp $
+$NetBSD: distinfo,v 1.5 2003/07/15 09:36:45 agc Exp $
 
-SHA1 (nulibdist.tar.gz) = c3b351663444c20cd5e2f82763e1522298033280
-Size (nulibdist.tar.gz) = 280311 bytes
-SHA1 (patch-aa) = c6f629810a94376cf5150b3bff233e37bcb2bc44
-SHA1 (patch-ab) = 35c2cea8fc6c19d4ba759cbdce07fa85149808cb
-SHA1 (patch-ac) = 7d2de2035c5b16492dc93c040e4bfe2bcaf95ca5
+SHA1 (nulib2-2.0.0/nulibdist.tar.gz) = 28161027b618c872b961d69fd0e2152b03c8e459
+Size (nulib2-2.0.0/nulibdist.tar.gz) = 352217 bytes
+SHA1 (patch-aa) = f1b27fddc92f84ca8ab1404fb3fe75861ba10eda
+SHA1 (patch-ab) = ad760bbe9eb4ced32089f9e7b0c249a8c4cc6c23
+SHA1 (patch-ac) = 07c64805720413366871c152b3f06657f102c2da
