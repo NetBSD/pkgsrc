@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/16 21:37:30 minskim Exp $
+
+--- Makefile.PL.orig	2004-03-28 06:51:10.000000000 +0200
++++ Makefile.PL
+@@ -6,6 +6,11 @@ use strict;
+ 
+ use constant FLAG_SKIPMECHDUMP => File::Spec->catfile( "t", "SKIP-MECH-DUMP" );
+ 
++sub prompt ($;$) {
++    my($mess,$def)=@_;
++    return $def;
++}
++
+ # Much logic stolen fromm libwww-perl's Makefile.PL
+ my $skiplive = grep /--nolive/i, @ARGV;
+ my $skiplocal = grep /--nolocal/i, @ARGV;
