@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.53 2003/06/06 19:07:42 jschauma Exp $
+# $NetBSD: defs.Linux.mk,v 1.53.2.1 2003/08/26 21:58:07 jlam Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -37,7 +37,12 @@ FGREP?=		/usr/bin/fgrep
 .endif
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
+.if exists(/usr/bin/make)
 GMAKE?=		/usr/bin/make
+_TOOLS_OPSYS_HAS_GNU.make+=	${MACHINE_PLATFORM}
+.else
+GMAKE?=		${LOCALBASE}/bin/gmake
+.endif
 .if exists(/bin/grep)
 GREP?=		/bin/grep
 .elif exists(/usr/bin/grep)
@@ -126,7 +131,7 @@ MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=		${FALSE}
 PKG_TOOLS_BIN?=		${ZOULARISBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
-ROOT_GROUP?=		wheel
+ROOT_GROUP?=		root
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
@@ -148,7 +153,6 @@ IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 
 _DO_SHLIB_CHECKS=	no	# on installation, fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
-_OPSYS_HAS_GMAKE=	yes	# GNU make is standard
 .if exists(/usr/include/netinet6) || exists(/usr/include/linux/in6.h)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else

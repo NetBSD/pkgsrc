@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.62.2.4 2003/08/23 09:45:55 jlam Exp $
+# $NetBSD: defs.SunOS.mk,v 1.62.2.5 2003/08/26 21:58:07 jlam Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -118,7 +118,6 @@ IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
 _IMAKE_MAKE=	/usr/ccs/bin/make	# program which gets invoked by imake
-_OPSYS_HAS_GMAKE=	no		# GNU make is not standard
 .if exists(/usr/include/netinet/ip6.h)
 _OPSYS_HAS_INET6=	yes		# IPv6 is standard
 .else

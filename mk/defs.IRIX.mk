@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.30 2003/07/11 15:40:19 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.30.4.1 2003/08/26 21:58:06 jlam Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -107,7 +107,6 @@ IMAKE_MANNEWSUFFIX=	z
 
 _DO_SHLIB_CHECKS=	yes		# fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}		# program which gets invoked by imake
-_OPSYS_HAS_GMAKE=	no		# GNU make is not standard
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes		# IPv6 is standard
 .else
