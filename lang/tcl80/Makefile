@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/01/06 20:32:47 drochner Exp $
+# $NetBSD: Makefile,v 1.25 2000/06/01 11:23:34 rh Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/08/20 10:33:35 jkh Exp
 #
 
@@ -14,7 +14,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/unix
 GNU_CONFIGURE=		yes
 
 # Use disable-shared, so that libtool works with the generated Makefile
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 CONFIGURE_ARGS+=	--disable-shared
 
 # manual pages go into tclman80

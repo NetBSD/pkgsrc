@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2000/03/28 00:12:31 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.46 2000/06/01 11:23:46 rh Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -18,7 +18,7 @@ DEPENDS+=	tiff-*:../../graphics/tiff
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 LIBTOOL_FLAGS=	--cplusplus --install-la
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \

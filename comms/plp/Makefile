@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/12/20 07:17:17 sakamoto Exp $
+# $NetBSD: Makefile,v 1.6 2000/06/01 11:23:17 rh Exp $
 
 DISTNAME=	plp_1_8
 PKGNAME=	plp-1.8
@@ -9,7 +9,7 @@ MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.proudman51.freeserve.co.uk/psion/
 
 USE_GMAKE=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_DATA} ${WRKSRC}/utils/libplputils.la ${PREFIX}/lib

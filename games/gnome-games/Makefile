@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/05/09 22:00:05 tron Exp $
+# $NetBSD: Makefile,v 1.6 2000/06/01 11:23:25 rh Exp $
 
 DISTNAME=	gnome-games-1.0.51
 CATEGORIES=	games gnome
@@ -14,7 +14,7 @@ DEPENDS+=	xbill-*:../../games/xbill
 
 GNU_CONFIGURE=	yes
 USE_X11BASE=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 
 INSTALL_FILE=	${WRKDIR}/INSTALL
 

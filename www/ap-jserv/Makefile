@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/05/22 16:01:38 jwise Exp $
+# $NetBSD: Makefile,v 1.9 2000/06/01 11:23:42 rh Exp $
 
 DISTNAME=	ApacheJServ-1.1.1
 PKGNAME=	ap-jserv-1.1.1
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
 
 USE_JAVA=	yes
 USE_GMAKE=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/src/scripts/build/unix/ltconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-apxs=${LOCALBASE}/sbin/apxs --with-jdk-home=${JAVA_HOME} \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/12/06 14:38:41 bouyer Exp $
+# $NetBSD: Makefile,v 1.6 2000/06/01 11:23:18 rh Exp $
 
 DISTNAME=	db-2.7.7
 CATEGORIES=	databases
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.sleepycat.com/update/2.7.7/ \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.sleepycat.com/
 
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../dist/configure
 

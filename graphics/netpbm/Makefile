@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2000/05/20 11:02:07 tron Exp $
+# $NetBSD: Makefile,v 1.40 2000/06/01 11:23:30 rh Exp $
 
 DISTNAME=	netpbm-9.2
 CATEGORIES=	graphics
@@ -12,7 +12,7 @@ DEPENDS+=	tiff>=3.5.4:../../graphics/tiff
 DEPENDS+=	png>=1.0.6:../../graphics/png
 
 USE_GMAKE=	yes
-USE_LIBTOOL=	yes
+USE_PKGLIBTOOL=	yes
 
 INSTALL_TARGET=	install.dev install
 MAKE_ENV+=	ECHO="${ECHO}"

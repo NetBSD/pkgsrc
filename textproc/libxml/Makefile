@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/05/30 09:07:29 rh Exp $
+# $NetBSD: Makefile,v 1.9 2000/06/01 11:23:42 rh Exp $
 #
 
 DISTNAME=	libxml-1.8.7
@@ -15,7 +15,7 @@ HOMEPAGE=	http://xmlsoft.org/
 DEPENDS+=	zlib-*:../../devel/zlib
 .endif
 
-USE_LIBTOOL=	YES
+USE_PKGLIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
 .include "../../mk/bsd.pkg.mk"

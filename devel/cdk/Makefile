@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/01/15 18:46:25 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/06/01 11:23:20 rh Exp $
 #
 
 DISTNAME=		latestCDK
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.vexus.ca/CDK.html
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-I${LOCALBASE}/include	# for ncurses.h
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"

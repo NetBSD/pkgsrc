@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2000/04/15 20:19:18 mycroft Exp $
+# $NetBSD: Makefile,v 1.49 2000/06/01 11:23:48 rh Exp $
 
 DISTNAME=		WindowMaker-0.62.1
 PKGNAME=		windowmaker-0.62.1
@@ -19,7 +19,7 @@ DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-usermenu \

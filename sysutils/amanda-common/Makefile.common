@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 1999/09/06 19:30:20 bad Exp $
+# $NetBSD: Makefile.common,v 1.2 2000/06/01 11:23:41 rh Exp $
 #
 # common make file fragment shared by all amanda-* pkgs.
 #
@@ -12,7 +12,7 @@ AMANDA_GROUP=		sysadmin
 AMANDA_USER?=		backup
 AMANDA_VAR?=		/var/amanda
 
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-user=${AMANDA_USER} \
 			--with-group=${AMANDA_GROUP} \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2000/05/30 19:23:46 drochner Exp $
+# $NetBSD: Makefile,v 1.44 2000/06/01 11:23:44 rh Exp $
 
 DISTNAME=		gnome-libs-1.2.1
 CATEGORIES=		x11 gnome
@@ -16,7 +16,7 @@ DEPENDS+=		xpm-3.4k:../../graphics/xpm
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
 USE_GMAKE=		yes
-USE_LIBTOOL=		yes
+USE_PKGLIBTOOL=		yes
 LDFLAGS+=       	"-L${LOCALBASE}/lib"
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
 			--with-glib-prefix=${LOCALBASE}

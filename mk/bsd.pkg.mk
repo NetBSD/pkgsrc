@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.449 2000/06/01 02:01:42 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.450 2000/06/01 11:23:11 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -146,6 +146,13 @@ DEPENDS+=		gtexinfo-3.12:${PKGSRCDIR}/devel/gtexinfo
 .endif
 
 .if defined(USE_LIBTOOL)
+LIBTOOL=		${LOCALBASE}/bin/libtool
+# XXX: actually, here we would need something like
+# BUILD_DEPENDS+=libtool>1.3.5:${PKGSRCDIR}/devel/libtool
+.if make(misc-depends)
+DEPENDS+=		libtool>1.3.5:${PKGSRCDIR}/devel/libtool
+.endif
+.elif defined(USE_PKGLIBTOOL)
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 LIBTOOL=		${LOCALBASE}/bin/pkglibtool-${OBJECT_FMT}-1.2p2
 BUILD_DEPENDS+=		${LIBTOOL}:${PKGSRCDIR}/pkgtools/pkglibtool
@@ -153,6 +160,9 @@ BUILD_DEPENDS+=		${LIBTOOL}:${PKGSRCDIR}/pkgtools/pkglibtool
 LIBTOOL=		${LOCALBASE}/bin/libtool
 BUILD_DEPENDS+=		${LIBTOOL}:${PKGSRCDIR}/devel/libtool
 .endif
+.endif
+
+.if defined(USE_LIBTOOL) || defined(USE_PKGLIBTOOL)
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 .endif
@@ -1286,7 +1296,7 @@ do-patch:
 
 .if !target(do-configure)
 do-configure:
-.if defined(USE_LIBTOOL) && defined(LTCONFIG_OVERRIDE) && !defined(LIBTOOL_OVERRIDE)
+.if (defined(USE_LIBTOOL) || defined(USE_PKGLIBTOOL)) && defined(LTCONFIG_OVERRIDE) && !defined(LIBTOOL_OVERRIDE)
 .for ltconfig in ${LTCONFIG_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${ltconfig} ]; then \
 		${ECHO} "${RM} -f libtool; ${LN} -s ${LIBTOOL} libtool" \
@@ -1311,7 +1321,7 @@ do-configure:
 .if defined(USE_IMAKE)
 	${_PKG_SILENT}(${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF})
 .endif
-.if defined(USE_LIBTOOL) && defined(LIBTOOL_OVERRIDE) && !defined(LTCONFIG_OVERRIDE)
+.if (defined(USE_LIBTOOL) || defined(USE_PKGLIBTOOL)) && defined(LIBTOOL_OVERRIDE) && !defined(LTCONFIG_OVERRIDE)
 .for libtool in ${LIBTOOL_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${libtool} ]; then \
 		${RM} -f ${libtool}; \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/03/30 14:59:26 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/01 11:23:37 rh Exp $
 #
 
 DISTNAME=	sscript-lib2.0
@@ -13,6 +13,6 @@ HOMEPAGE=	http://www.linuxave.net/~drow/SocketScript/
 DECOMPRESS_CMD=	${CAT}
 
 NO_CONFIGURE=	YES
-USE_LIBTOOL=	YES
+USE_PKGLIBTOOL=	YES
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/08 07:59:18 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/01 11:23:23 rh Exp $
 #
 
 DISTNAME=	libsmi-0.1.6
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.ibr.cs.tu-bs.de/projects/libsmi/
 
 MIBDIR=		${PREFIX}/share/libsmi/mibs
 
-USE_LIBTOOL=	YES
+USE_PKGLIBTOOL=	YES
 GNU_CONFIGURE=	YES
 CPPFLAGS+=	-Dstrtoll=strtoq -Dstrtoull=strtouq
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"

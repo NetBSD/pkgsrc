@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/10 04:31:17 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/01 11:23:21 rh Exp $
 
 DISTNAME=		GTL-0.3.3
 PKGNAME=		gtl-0.3.3
@@ -9,7 +9,7 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.fmi.uni-passau.de/Graphlet/GTL/
 
 GNU_CONFIGURE=		# defined
-USE_LIBTOOL=		# defined
+USE_PKGLIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GTL_VERS=		0:3
