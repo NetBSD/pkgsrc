@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2004/01/20 13:41:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.43 2004/01/22 09:16:59 jmmv Exp $
 #
 
 DISTNAME=	gdm-2.4.4.7
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.4/} \
 		${MASTER_SITE_LOCAL}
@@ -19,23 +20,20 @@ USE_X11=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-LOCALSTATEDIR=		/var
-
-CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR}
+CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 CONFIGURE_ENV+=		X11BASE=${X11BASE} GDMOWN=${GDMOWN} GDMGRP=${GDMGRP}
 MAKE_ENV+=		ROOT_USER=${ROOT_USER} ROOT_GROUP=${ROOT_GROUP}
 MAKE_ENV+=		CHMOD=${CHMOD} CHOWN=${CHOWN}
-PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
-PLIST_SUBST+=		LOCALSTATEDIR="${LOCALSTATEDIR}"
-FILES_SUBST+=		LOCALSTATEDIR="${LOCALSTATEDIR}"
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/dm/Sessions
 OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/Init
 OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/PostSession
 OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/PreSession
 OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/modules
+OWN_DIRS+=		/var/gdm
+OWN_DIRS+=		/var/log/gdm
 
 EGDIR=			${PREFIX}/share/examples
 CONF_FILES=		${EGDIR}/dm/Sessions/default.desktop \
@@ -75,7 +73,7 @@ GDMGRP=		daemon
 BUILD_DEFS+=	USE_PAM
 
 .if defined(USE_PAM)
-DEPENDS+=		PAM-[0-9]*:../../security/PAM
+.include "../../security/PAM/buildlink2.mk"
 PLIST_SUBST+=		PAM_MISC=""
 .else
 PLIST_SUBST+=		PAM_MISC="@comment "
