@@ -1,6 +1,7 @@
-$NetBSD: patch-bb,v 1.8 2003/12/30 16:46:04 cjep Exp $
---- configure.orig	2003-11-18 00:29:35.000000000 -0500
-+++ configure	2003-12-11 16:29:06.000000000 -0500
+$NetBSD: patch-bb,v 1.9 2004/10/05 23:20:53 mjl Exp $
+
+--- configure.orig	Sat Jul 17 22:35:57 2004
++++ configure	Sat Jul 17 22:38:06 2004
 @@ -4350,8 +4350,8 @@
                  INTLOBJS="\$(GETTOBJS)"
          BUILD_INCLUDED_LIBINTL=yes
@@ -12,10 +13,10 @@ $NetBSD: patch-bb,v 1.8 2003/12/30 16:46:04 cjep Exp $
          LIBS=`echo " $LIBS " | sed -e 's/ -lintl / /' -e 's/^ //' -e 's/ $//'`
        fi
  
-@@ -13643,8 +13643,8 @@
+@@ -13807,8 +13807,8 @@
      
      echo $ac_n "checking for gtkhtml < 1.1""... $ac_c" 1>&6
- echo "configure:13646: checking for gtkhtml < 1.1" >&5
+ echo "configure:13810: checking for gtkhtml < 1.1" >&5
 -    GTKHTML_LIBS=`$GNOME_CONFIG --libs gtkhtml`
 -    GTKHTML_CFLAGS=`$GNOME_CONFIG --cflags gtkhtml`
 +    GTKHTML_LIBS=`pkg-config --libs gtkhtml`
@@ -23,12 +24,12 @@ $NetBSD: patch-bb,v 1.8 2003/12/30 16:46:04 cjep Exp $
      
    GIVEN_CFLAGS=$GTKHTML_CFLAGS
    INCLUDE_DIRS=`echo | cpp -v 2>&1`
-@@ -13665,7 +13665,7 @@
+@@ -13829,7 +13829,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
 -LIBS="-lgtkhtml $GTKHTML_LIBS $LIBS"
 +LIBS="$GTKHTML_LIBS $LIBS"
  cat > conftest.$ac_ext <<EOF
- #line 13671 "configure"
+ #line 13835 "configure"
  #include "confdefs.h"
