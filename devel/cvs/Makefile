@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2001/12/09 20:10:16 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2002/01/11 12:47:23 skrll Exp $
 #
 
 DISTNAME=	cvs-1.11
@@ -20,11 +20,9 @@ BUILD_DEFS+=		USE_INET6
 USE_BUILDLINK_ONLY=	yes
 
 .if (${OPSYS} == "NetBSD")
-PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=		cvs-1.11-v6-20010413.diff.gz
+PATCH_SITES=		${MASTER_SITE_LOCAL}
+PATCHFILES=		cvs-1.11-v6-20020111.diff.gz
 PATCH_DIST_STRIP=	-p1
-
-BUILD_DEPENDS+=		autoconf-[0-9]*:../../devel/autoconf
 
 .if ${USE_INET6} == "YES"
 CONFIGURE_ARGS+=	--enable-ipv6
@@ -32,8 +30,6 @@ CONFIGURE_ARGS+=	--enable-ipv6
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
-pre-configure:
-	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf --force
 .endif
 
 .if defined(KERBEROS)
