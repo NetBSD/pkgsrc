@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/02/25 04:18:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2001/03/04 03:26:52 assar Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -95,7 +95,7 @@ DEPENDS+=		socks5-1.0.2:../../net/socks5
 # PATCHFILES+=		ssh-1.2.27-afs-kerberos.patch-1
 # MD5 (ssh-1.2.27-afs-kerberos.patch-1) = d440f74958d9c3805b76dbc13e97e87d
 
-.if defined(KERBEROS) && ${KERBEROS} == 4
+.if defined(KERBEROS)
 USE_KERBEROS=		yes
 CONFIGURE_ARGS+=	--with-krb4=/usr
 .endif
