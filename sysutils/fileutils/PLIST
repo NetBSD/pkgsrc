@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/03/11 19:17:44 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/04/08 19:07:48 tron Exp $
 bin/gchgrp
 bin/gchown
 bin/gchmod
@@ -66,5 +66,4 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/fileutils.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/fileutils.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/fileutils.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/fileutils.mo
-${PKGLOCALEDIR}/locale/zh/LC_MESSAGES/fileutils.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/fileutils.mo
