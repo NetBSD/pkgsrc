@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/12/30 16:23:59 taca Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/25 18:33:29 wiz Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -13,10 +13,7 @@ COMMENT=		Ruby extension to readline library
 DIST_SUBDIR=		ruby
 WRKSRC=			${RUBY_WRKSRC}/ext/readline
 USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
-USE_BUILDLINK_ONLY=	# defined
-
-.include "../../mk/bsd.prefs.mk"
-.include "../../devel/readline/buildlink.mk"
+USE_BUILDLINK2=		# defined
 
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/readline
 USE_RUBY_EXTCONF=	yes
@@ -28,5 +25,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${file} ${RUBY_DOCDIR}/readline
 .endfor
 
+.include "../../devel/readline/buildlink2.mk"
 .include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby-base/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
