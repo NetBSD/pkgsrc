@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.6 2002/10/08 13:24:22 jlam Exp $
+$NetBSD: patch-ab,v 1.7 2002/10/26 19:45:00 bouyer Exp $
 
---- Imakefile.orig	Tue May 29 14:32:11 2001
-+++ Imakefile
+--- Imakefile.orig	Tue May 29 20:32:11 2001
++++ Imakefile	Tue Oct 22 14:31:10 2002
 @@ -47,8 +47,8 @@
  
  #ifdef USEJPEG
@@ -37,8 +37,8 @@ $NetBSD: patch-ab,v 1.6 2002/10/08 13:24:22 jlam Exp $
  #ifdef USEXPM
 -XPMLIBDIR = $(USRLIBDIR)
 -XPMINC = -I/usr/include/X11
-+XPMLIBDIR = $(LOCALBASE)/lib
-+XPMINC = -I$(LOCALBASE)/include/X11
++XPMLIBDIR = $(X11BASE)/lib
++XPMINC = -I$(X11BASE)/include/X11
  #endif
  
  XCOMM Uncomment the following definiton if you want to use the small icons
@@ -87,7 +87,7 @@ $NetBSD: patch-ab,v 1.6 2002/10/08 13:24:22 jlam Exp $
  #else
  JPEGCONF = configure
  JPEGLIB = $(JPEGLIBDIR)/libjpeg.a
-@@ -255,14 +260,14 @@
+@@ -255,7 +260,7 @@
  
  #ifdef USEPNG
  DUSEPNG = -DUSE_PNG
@@ -96,11 +96,12 @@ $NetBSD: patch-ab,v 1.6 2002/10/08 13:24:22 jlam Exp $
  READPNGS = f_readpng.c
  READPNGO = f_readpng.o
  #endif /* USEPNG */
+@@ -262,7 +267,7 @@
  
  #ifdef USEXPM
  DUSEXPM = -DUSE_XPM
 -XPMLIBS = -L$(XPMLIBDIR) -lXpm
-+XPMLIBS = -Wl,-R$(LOCALBASE)/lib -L$(XPMLIBDIR) -lXpm
++XPMLIBS = -Wl,-R$(XPMLIBDIR) -L$(XPMLIBDIR) -lXpm
  READXPMS = f_readxpm.c
  READXPMO = f_readxpm.o
  #ifdef USEXPM_ICON
@@ -113,8 +114,17 @@ $NetBSD: patch-ab,v 1.6 2002/10/08 13:24:22 jlam Exp $
  DEPLIBS = XawClientDepLibs
  
  LOCAL_LIBRARIES = 	$(JPEGLIB)
-@@ -384,6 +389,8 @@
+@@ -378,12 +383,16 @@
+ 	@$(MAKE) install.html
+ 
+ XCOMM Install the HTML documentation here with "make install.html"
+-install.html::
+ #ifdef I18N
++install.html::
+ 	@$(MAKE) install.jhtml
  #endif
++
++install.html::
  	@(cd Doc ; \
  	echo Copying pdf and html files to $(DESTDIR)$(XFIGDOCDIR) ; \
 +	if [ -d $(DESTDIR)$(XFIGDOCDIR) ]; then set +x; \
