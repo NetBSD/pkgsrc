@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/05/30 21:08:27 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/10/23 17:06:57 jlam Exp $
 bin/gnomecal
 bin/gnomecard
 etc/CORBA/servers/gnomecal.gnorba
@@ -25,6 +25,38 @@ share/gnome/help/gnomecal/C/gcal.html
 share/gnome/help/gnomecal/C/ln20.html
 share/gnome/help/gnomecal/C/tech.html.html
 share/gnome/help/gnomecal/C/docbook.css
+${LOCALEBASE}/locale/ca/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/cs/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/cy/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/da/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/de/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/el/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/en_GB/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/es/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/et/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/fi/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/fr/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/ga/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/gd/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/gl/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/gv/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/hu/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/it/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/ja/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/ko/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/kw/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/lt/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/nl/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/no/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/pl/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/pt/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/pt_BR/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/ru/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/sv/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/uk/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/wa/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/zh_TW.Big5/LC_MESSAGES/gnome-pim.mo
+${LOCALEBASE}/locale/zh_CN.GB2312/LC_MESSAGES/gnome-pim.mo
 @dirrm share/gnome/help/gnomecal/C/images
 @dirrm share/gnome/help/gnomecal/C
 @dirrm share/gnome/help/gnomecal

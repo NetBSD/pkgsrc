@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2000/10/23 17:06:56 jlam Exp $
+
+--- configure.orig	Mon Jul 17 17:42:39 2000
++++ configure
+@@ -4740,6 +4740,10 @@
+ 
+ 
+ 
++# Set DATADIRNAME to "${LOCALEBASE}"
++DATADIRNAME="${LOCALEBASE}"
++INTLDEPS=
++INTLLIBS="-lintl"
+ 
+ trap '' 1 2 15
+ cat > confcache <<\EOF

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/07/31 07:48:37 tron Exp $
+# $NetBSD: Makefile,v 1.17 2000/10/23 17:06:56 jlam Exp $
 
 DISTNAME=		ee-0.3.12
 CATEGORIES=		x11 gnome
@@ -20,5 +20,20 @@ LOCALSTATEDIR=		/var/gnome
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
 			--with-glib-prefix=${LOCALBASE}
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
+CONFIGURE_ENV+=		LOCALEBASE=${LOCALEBASE}
+
+PLIST_SUBST+=		LOCALEBASE=${LOCALEBASE}
+
+.include "../../mk/bsd.prefs.mk"
+
+# The directory in which locale files are found is:
+#
+#	${PREFIX}/${LOCALEBASE}/locale/<lang>/LC_MESSAGES
+#
+.if ${OPSYS} == "SunOS"
+LOCALEBASE=		lib
+.else
+LOCALEBASE=		share
+.endif
 
 .include "../../mk/bsd.pkg.mk"
