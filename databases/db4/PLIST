@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/07 00:51:07 epg Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/03/12 21:35:58 jlam Exp $
 bin/berkeley_db4_svc
 bin/db4_archive
 bin/db4_checkpoint
@@ -11,6 +11,7 @@ bin/db4_stat
 bin/db4_upgrade
 bin/db4_verify
 include/db4/db.h
+include/db4/db_185.h
 include/db4/db_cxx.h
 lib/libdb4-4.2.a
 lib/libdb4-4.2.la
