@@ -1,0 +1,79 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/10/05 22:09:58 dillo Exp $
+
+--- tads3/makefile.orig	Sat Sep 28 23:29:18 2002
++++ tads3/makefile
+@@ -14,9 +14,9 @@
+ # Installation points for TADS3. Tailor these to your liking. If you install
+ # manually, DATADIR must match where you actually put the libraries and
+ # resources, or the TADS3 compiler will not be able to find them.
+-PREFIX  = /usr/local
++#PREFIX  = /usr/local
+ BINDIR  = $(PREFIX)/bin
+-DOCDIR  = $(PREFIX)/doc/tads3
++DOCDIR  = $(PREFIX)/share/doc/html/tads3
+ DATADIR = $(PREFIX)/share/tads3
+ LIBDIR  = $(DATADIR)/libraries
+ INCDIR  = $(DATADIR)/includes
+@@ -113,6 +113,25 @@ RESDIR  = $(DATADIR)/resources
+ #DISPLAY_LIB  = -ltermcap
+ 
+ ###########################################################################
++# NetBSD                                                                  #
++# Compiled and tested on NetBSD 1.6                                       #
++# Maintainer: 								  #
++#                                                                         #
++# Uncomment -fno-exceptions from CXX_OPTIMIZE if you have a reasonably    #
++# current (> 2.7) version of g++.                                         #
++###########################################################################
++#
++.if ${OPSYS} == "NetBSD"
++CXX          = g++
++CC           = gcc
++IDENT        = -DOS_SYSTEM_NAME=\"NetBSD\"
++OPTIMIZE     = -O2
++CXX_OPTIMIZE = -fno-exceptions
++OS_FLAGS     = -DOS_ANSI -DHAVE_STRCASECMP -Dmemicmp=strncasecmp
++DISPLAY_LIB  = ${LDFLAGS} -lncurses
++.endif
++
++###########################################################################
+ # OpenBSD                                                                 #
+ # Compiled and tested on OpenBSD 3.0                                      #
+ # Maintainer: Mark Wickham (macwickham@attbi.com)                         #
+@@ -208,21 +227,27 @@ T3PRE_OBJS = test_pre.o std.o std_dbg.o 
+ all: t3make t3run t23run t3pre
+ 
+ install: all install-common
+-	install -m755 t3make t3run t23run $(BINDIR)
++	${BSD_INSTALL_PROGRAM} t3make t3run t23run $(BINDIR)
+ 
+ install-strip: all install-common
+ 	install -s -m755 t3make t3run $(BINDIR)
+ 
+ install-common: all
+-	install -d $(BINDIR)
+-	install -d $(DOCDIR)
+-	install -d $(DATADIR)
+ 	rm -rf $(INCDIR) $(LIBDIR) $(RESDIR) $(DOCDIR)
+-	cp -rp t3include $(INCDIR)
+-	cp -rp t3library $(LIBDIR)
+-	cp -rp t3resource $(RESDIR)
+-	cp -rp doc $(DOCDIR)
+-	-chown -R root.root $(INCDIR) $(LIBDIR) $(RESDIR) $(DOCDIR)
++	${BSD_INSTALL_DATA_DIR} $(DOCDIR)
++	${BSD_INSTALL_DATA_DIR} $(DATADIR)
++	${BSD_INSTALL_DATA_DIR} $(INCDIR)
++	${BSD_INSTALL_DATA_DIR} $(LIBDIR)
++	${BSD_INSTALL_DATA_DIR} $(LIBDIR)/adv3
++	${BSD_INSTALL_DATA_DIR} $(LIBDIR)/adv3/en_us
++	${BSD_INSTALL_DATA_DIR} $(RESDIR)
++	${BSD_INSTALL_DATA_DIR} $(RESDIR)/charmap
++	${BSD_INSTALL_DATA} t3include/* $(INCDIR)
++	${BSD_INSTALL_DATA} t3library/*.* $(LIBDIR)
++	${BSD_INSTALL_DATA} t3library/adv3/*.* $(LIBDIR)/adv3
++	${BSD_INSTALL_DATA} t3library/adv3/en_us/*.* $(LIBDIR)/adv3/en_us
++	${BSD_INSTALL_DATA} t3resource/charmap/* $(RESDIR)/charmap
++	${BSD_INSTALL_DATA} doc/* $(DOCDIR)
+ 
+ clean:
+ 	rm -f *.o t3make t3run t23run t3pre test_utf8 test_chr test_pool test_err test_obj test_write test_exec test_gets test_tok test_prs test_sym test_prs_top test_comp_obj test_link test_regex test_sort iter.t3s test.t3v
