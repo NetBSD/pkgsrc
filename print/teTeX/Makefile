@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/08/18 07:48:31 tron Exp $
+# $NetBSD: Makefile,v 1.17 2000/03/08 23:12:00 tron Exp $
 #
 
 DISTNAME=	teTeX-1.0.6
@@ -9,7 +9,7 @@ DISTFILES=	# empty
 MAINTAINER=	hubertf@netbsd.org
 
 DEPENDS+=	teTeX-bin-1.0.6:../teTeX-bin
-DEPENDS+=	teTeX-sharesrc-1.0:../teTeX-sharesrc
+DEPENDS+=	teTeX-sharesrc-1.0.*:../teTeX-sharesrc
 
 USE_X11=        yes
 EXTRACT_ONLY=   # empty
