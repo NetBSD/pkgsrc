@@ -1,0 +1,10 @@
+]2;feyrer@yui:/usr/pkgsrc/audio/splay/work/splay-0.5 ]1;yui--- xlibs/Makefile.in.BAK	Mon Feb 23 17:31:58 1998
++++ xlibs/Makefile.in	Mon Feb 23 17:32:38 1998
+@@ -37,6 +37,7 @@
+ AUTOMAKE = @AUTOMAKE@
+ AUTOHEADER = @AUTOHEADER@
+ 
++NORMAL_INSTALL=:
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
