@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/11 23:00:52 jmmv Exp $
+
+SHA1 (coreutils-5.0.tar.bz2) = ce67aacedfc917a92b5be62dd32095393c2f220c
+Size (coreutils-5.0.tar.bz2) = 3952653 bytes
+SHA1 (patch-aa) = c3f6def9f66fc3b680529cbdf72b14d9b5d25499
+SHA1 (patch-ab) = efbd6a22ae20bec21d112f39ffeb7434a04c8a8d
