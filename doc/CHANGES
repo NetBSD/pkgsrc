@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9056 2005/02/06 08:09:08 taca Exp $
+$NetBSD: CHANGES,v 1.9057 2005/02/06 12:08:39 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -773,3 +773,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated getmail to 4.3.2 [schmonz 2005-02-06]
 	Updated tcl-otcl to 1.9 [minskim 2005-02-06]
 	Updated squid to 2.5.7nb12 [taca 2005-02-06]
+	Updated opera7 to 7.54u2 [jdolecek 2005-02-06]
