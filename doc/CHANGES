@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9617 2005/03/24 22:52:32 rh Exp $
+$NetBSD: CHANGES,v 1.9618 2005/03/25 02:12:19 chris Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1725,3 +1725,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added gaim-otr-2.0.1 [nathanw 2005-03-24]
 	Updated netbsd-tap to 20050324 [cube 2005-03-24]
 	Updated cgoban-java to 2.6.10 [rh 2005-03-24]
+	Updated sylpheed to 1.0.4 [chris 2005-03-25]
