@@ -1,26 +1,26 @@
-$NetBSD: patch-ag,v 1.2 2002/03/23 02:23:01 wiz Exp $
+$NetBSD: patch-ag,v 1.3 2003/01/19 21:31:11 hubertf Exp $
 
---- extract.c.orig	Tue Nov  6 13:23:36 2001
+--- extract.c.orig	Sun Nov 10 06:54:08 2002
 +++ extract.c
 @@ -6,7 +6,7 @@
- static char    inslst[INSMAX];                 /*   values set by readxfil     */
- static int     onsect, offsect;                /*      "       "       "       */
- static MYFLT   onbeat, offbeat;                /*      "       "       "       */
--static MYFLT   ontime, offtime;                /* set by readxfil, mod by w-stmnt */
-+static MYFLT   ontime, cs_offtime;                /* set by readxfil, mod by w-stmnt */
+ static char    inslst[INSMAX];         /*   values set by readxfil     */
+ static int     onsect, offsect;        /*      "       "       "       */
+ static MYFLT   onbeat, offbeat;        /*      "       "       "       */
+-static MYFLT   ontime, offtime;        /* set by readxfil, mod by w-stmnt */
++static MYFLT   ontime, cs_offtime;        /* set by readxfil, mod by w-stmnt */
  
- static SRTBLK *frstout, *prvout;        /* links for building new outlist */
+ static SRTBLK *frstout, *prvout;       /* links for building new outlist */
  
-@@ -56,7 +56,7 @@
-                 for(ip = &inslst[0]; ip < &inslst[INSMAX]; *ip++ = 1);
-         }
-         ontime = a0.newp3 = a0.p3val = onbeat;
--        offtime = f0.newp2 = f0.p2val = offbeat;
-+        cs_offtime = f0.newp2 = f0.p2val = offbeat;
+@@ -59,7 +59,7 @@
+       for(ip = &inslst[0]; ip < &inslst[INSMAX]; *ip++ = 1);
+     }
+     ontime = a0.newp3 = a0.p3val = onbeat;
+-    offtime = f0.newp2 = f0.p2val = offbeat;
++    cs_offtime = f0.newp2 = f0.p2val = offbeat;
  }
  
  void extract(void)      /* extract instr events within the time period */
-@@ -101,7 +101,7 @@
+@@ -104,7 +104,7 @@
          if (sectno == onsect && warped)
            ontime = a0.newp3 = realt(onbeat);
          if (sectno == offsect && warped)
@@ -29,7 +29,7 @@ $NetBSD: patch-ag,v 1.2 2002/03/23 02:23:01 wiz Exp $
          include(bp);
          break;
        case 't':
-@@ -110,7 +110,7 @@
+@@ -113,7 +113,7 @@
        case 'f':
        casef: if (sectno == onsect && bp->newp2 < ontime)
          bp->newp2 = ontime;
@@ -38,7 +38,7 @@ $NetBSD: patch-ag,v 1.2 2002/03/23 02:23:01 wiz Exp $
          break;
        if (sectno == onsect && !a0done) {
          if (onbeat > 0)
-@@ -137,10 +137,10 @@
+@@ -140,10 +140,10 @@
            }
          }
          if (sectno == offsect) {
