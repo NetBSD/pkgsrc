@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.52 2003/03/20 00:03:16 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.53 2003/07/14 23:23:21 bad Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -89,6 +89,7 @@ ${SUBDIR}::
 		makepatchsum mirror-distfiles deinstall show-downlevel \
 		show-pkgsrc-dir show-var show-vars bulk-install bulk-package \
 		fetch-list-one-pkg fetch-list-recursive \
+		update clean-update \
 		${PKG_MISC_TARGETS}
 .if !target(__target)
 ${__target}: _SUBDIRUSE
