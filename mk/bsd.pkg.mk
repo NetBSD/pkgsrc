@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.438 2000/05/30 15:01:44 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.439 2000/05/30 17:25:20 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -757,7 +757,7 @@ MASTER_SITE_SUNSITE+=	\
 MASTER_SITE_GNOME+=	\
 	ftp://ftp.gnome.org/pub/GNOME/ \
 	ftp://ftp.sunet.se/pub/X11/GNOME/ \
-	ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/ \
+	ftp://ftp.archive.de.uu.net/pub/X11/GNOME/ \
 	ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/
 
 # Empty declaration to avoid "variable MASTER_SITES recursive" error
