@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1786 2004/05/27 15:01:05 wiz Exp $
+$NetBSD: TODO,v 1.1787 2004/05/28 01:49:27 lukem Exp $
 
 Suggested new packages
 ======================
@@ -186,7 +186,6 @@ Suggested package updates
 	o crafty-19.5
 	o crossfire-1.5.0
 	o cscope-15.5
-	o cvsweb-3.0.1
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
 	o dact-0.8.37
