@@ -1,5 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2003/03/19 17:29:50 tron Exp $
+@comment $NetBSD: PLIST,v 1.13 2003/12/19 15:43:31 skrll Exp $
 qt3/bin/moc
+qt3/include/jri.h
+qt3/include/jri_md.h
+qt3/include/jritypes.h
+qt3/include/npapi.h
+qt3/include/npupp.h
 qt3/include/private/qapplication_p.h
 qt3/include/private/qcolor_p.h
 qt3/include/private/qcom_p.h
@@ -7,12 +12,14 @@ qt3/include/private/qcomlibrary_p.h
 qt3/include/private/qcomplextext_p.h
 qt3/include/private/qcomponentfactory_p.h
 qt3/include/private/qcriticalsection_p.h
+qt3/include/private/qdialogbuttons_p.h
 qt3/include/private/qdir_p.h
 qt3/include/private/qeffects_p.h
 qt3/include/private/qeventloop_p.h
 qt3/include/private/qfiledefs_p.h
 qt3/include/private/qfontcodecs_p.h
 qt3/include/private/qfontdata_p.h
+qt3/include/private/qfontengine_p.h
 qt3/include/private/qgfxdriverinterface_p.h
 qt3/include/private/qgpluginmanager_p.h
 qt3/include/private/qimageformatinterface_p.h
@@ -27,8 +34,10 @@ qt3/include/private/qmutex_p.h
 qt3/include/private/qmutexpool_p.h
 qt3/include/private/qpainter_p.h
 qt3/include/private/qpluginmanager_p.h
+qt3/include/private/qprinter_p.h
 qt3/include/private/qpsprinter_p.h
 qt3/include/private/qrichtext_p.h
+qt3/include/private/qscriptengine_p.h
 qt3/include/private/qsettings_p.h
 qt3/include/private/qsharedmemory_p.h
 qt3/include/private/qsqldriverinterface_p.h
@@ -36,19 +45,18 @@ qt3/include/private/qsqlextension_p.h
 qt3/include/private/qsqlmanager_p.h
 qt3/include/private/qstyleinterface_p.h
 qt3/include/private/qsvgdevice_p.h
+qt3/include/private/qt_x11_p.h
 qt3/include/private/qtextcodecinterface_p.h
+qt3/include/private/qtextengine_p.h
+qt3/include/private/qtextlayout_p.h
+qt3/include/private/qthreadinstance_p.h
 qt3/include/private/qtitlebar_p.h
 qt3/include/private/qucom_p.h
 qt3/include/private/qucomextra_p.h
+qt3/include/private/qunicodetables_p.h
 qt3/include/private/qwidget_p.h
 qt3/include/private/qwidgetinterface_p.h
 qt3/include/private/qwidgetresizehandler_p.h
-qt3/include/jri.h
-qt3/include/jri_md.h
-qt3/include/jritypes.h
-qt3/include/npapi.h
-qt3/include/npupp.h
-qt3/include/qnp.h
 qt3/include/q1xcompatibility.h
 qt3/include/qabstractlayout.h
 qt3/include/qaccel.h
@@ -216,6 +224,7 @@ qt3/include/qmutex.h
 qt3/include/qnamespace.h
 qt3/include/qnetwork.h
 qt3/include/qnetworkprotocol.h
+qt3/include/qnp.h
 qt3/include/qobjcoll.h
 qt3/include/qobjdefs.h
 qt3/include/qobject.h
@@ -298,6 +307,7 @@ qt3/include/qsocknot.h
 qt3/include/qsortedlist.h
 qt3/include/qsound.h
 qt3/include/qspinbox.h
+qt3/include/qsplashscreen.h
 qt3/include/qsplitter.h
 qt3/include/qsql.h
 qt3/include/qsqlcursor.h
@@ -313,6 +323,7 @@ qt3/include/qsqlpropertymap.h
 qt3/include/qsqlquery.h
 qt3/include/qsqlrecord.h
 qt3/include/qsqlresult.h
+qt3/include/qsqlselectcursor.h
 qt3/include/qstack.h
 qt3/include/qstatusbar.h
 qt3/include/qstring.h
@@ -325,7 +336,6 @@ qt3/include/qstyleplugin.h
 qt3/include/qstylesheet.h
 qt3/include/qsyntaxhighlighter.h
 qt3/include/qt.h
-qt3/include/qt_x11.h
 qt3/include/qtabbar.h
 qt3/include/qtabdialog.h
 qt3/include/qtabdlg.h
@@ -339,9 +349,11 @@ qt3/include/qtextedit.h
 qt3/include/qtextstream.h
 qt3/include/qtextview.h
 qt3/include/qthread.h
+qt3/include/qthreadstorage.h
 qt3/include/qtimer.h
 qt3/include/qtl.h
 qt3/include/qtoolbar.h
+qt3/include/qtoolbox.h
 qt3/include/qtoolbutton.h
 qt3/include/qtooltip.h
 qt3/include/qtranslator.h
@@ -375,7 +387,6 @@ qt3/include/qwindefs.h
 qt3/include/qwindow.h
 qt3/include/qwindowdefs.h
 qt3/include/qwindowsstyle.h
-qt3/include/qwindowsxpstyle.h
 qt3/include/qwinexport.h
 qt3/include/qwizard.h
 qt3/include/qwmatrix.h
@@ -385,7 +396,7 @@ qt3/lib/libqt-mt.a
 qt3/lib/libqt-mt.la
 qt3/lib/libqt-mt.so
 qt3/lib/libqt-mt.so.3
-qt3/lib/libqt-mt.so.3.1
+qt3/lib/libqt-mt.so.3.2
 qt3/plugins/imageformats/libqjpeg.a
 qt3/plugins/imageformats/libqjpeg.la
 qt3/plugins/imageformats/libqjpeg.so
