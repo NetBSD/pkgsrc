@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6595 2004/07/19 08:33:18 adam Exp $
+$NetBSD: CHANGES,v 1.6596 2004/07/19 10:12:51 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3439,3 +3439,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmess to 0.84.1 [kristerw 2004-07-18]
 	Added ExmanIDE-0.9.4 [minskim 2004-07-19]
 	Updated gimp to 2.0.3 [adam 2004-07-19]
+	Updated mbmon to 204 [recht 2004-07-19]
+	Updated xmbmon to 204 [recht 2004-07-19]
