@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/20 12:15:41 agc Exp $
+# $NetBSD: Makefile,v 1.21 2004/03/10 02:49:38 snj Exp $
 
 DISTNAME=	omega-0.90.4-src
 PKGNAME=	omega-0.90.4
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.alcyone.com/max/projects/omega/
 COMMENT=	Complex rogue-like game of exploration with a sense of humor
 
 WRKSRC=			${WRKDIR}/omega
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 ALL_TARGET=		# empty
 
 do-install:
@@ -28,12 +28,12 @@ do-install:
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/omega
-	cd ${WRKSRC}; for file in					\
+	cd ${WRKSRC}; for f in						\
 		buglist.txt docs/compile.all docs/readme.1st		\
 		docs/omega.txt docs/readme3 docs/readme4;		\
 	do								\
-		${INSTALL_DATA} $${file} ${PREFIX}/share/doc/omega;	\
+		${INSTALL_DATA} $${f} ${PREFIX}/share/doc/omega;	\
 	done
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
