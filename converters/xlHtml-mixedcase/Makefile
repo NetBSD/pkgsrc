@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2002/04/08 15:04:03 taca Exp $
+# $NetBSD: Makefile,v 1.9 2002/08/31 01:56:25 mjl Exp $
 #
 
 DISTNAME=		xlhtml-0.4.9.3
 CATEGORIES=		converters
-MASTER_SITES=		http://prdownloads.sf.net/chicago/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=chicago/}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		packages@netbsd.org
