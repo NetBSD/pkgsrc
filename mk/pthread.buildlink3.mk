@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink3.mk,v 1.16 2004/11/12 22:34:15 jlam Exp $
+# $NetBSD: pthread.buildlink3.mk,v 1.17 2004/11/17 21:05:24 jlam Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -94,6 +94,10 @@
 #	include the word "native" to denote that only native pthreads are
 #	acceptable.
 #
+# PTHREAD_AUTO_VARS is "yes" or "no" for whether the values of the variables
+#	PTHREAD_{CFLAGS,CPPFLAGS,LDFLAGS,LIBS} should be automatically added
+#	to their respective variables.  Defaults to "yes".
+#
 # _PKG_PTHREAD is the fall-back package pthread implementation use by
 #	pthread.buildlink3.mk.
 #
@@ -140,10 +144,13 @@ PKG_SKIP_REASON= "${PKGNAME} requires a working pthreads implementation."
 .  endif
 .endif
 
+PTHREAD_AUTO_VARS?=	yes
+
 .if ${PTHREAD_TYPE} == "native"
 BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Npthread}
 BUILDLINK_PACKAGES+=		pthread
 BUILDLINK_BUILTIN_MK.pthread=	../../mk/pthread.builtin.mk
+BUILDLINK_AUTO_VARS.pthread?=	${PTHREAD_AUTO_VARS}
 .elif ${PTHREAD_TYPE} == "${_PKG_PTHREAD}"
 .  if exists(${_PKG_PTHREAD_BUILDLINK3_MK})
 .    if !empty(_PKG_PTHREAD_DEPENDS)
@@ -157,6 +164,8 @@ BUILDLINK_CPPFLAGS.pthread=		${BUILDLINK_CPPFLAGS.${_PKG_PTHREAD}}
 BUILDLINK_LDFLAGS.pthread=		${BUILDLINK_LDFLAGS.${_PKG_PTHREAD}}
 BUILDLINK_LIBS.${_PKG_PTHREAD}?=	-lpthread
 BUILDLINK_LIBS.pthread=			${BUILDLINK_LIBS.${_PKG_PTHREAD}}
+BUILDLINK_AUTO_VARS.${_PKG_PTHREAD}?=	${PTHREAD_AUTO_VARS}
+BUILDLINK_AUTO_VARS.pthread=		${BUILDLINK_AUTO_VARS.${_PKG_PTHREAD}}
 .  else
 PKG_SKIP_REASON= "${PKGNAME} needs pthreads, but ${_PKG_PTHREAD_BUILDLINK3_MK} is missing."
 .  endif
