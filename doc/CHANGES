@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.241 2002/10/13 20:06:06 wiz Exp $
+$NetBSD: CHANGES,v 1.242 2002/10/13 20:21:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3197,3 +3197,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated squid to 2.5.1 [taca 2002-10-13]
 	Updated SDL to 1.2.5 [kristerw 2002-10-13]
 	Updated SDL-mixer to 1.2.4 [wiz 2002-10-13]
+	Updated tnef to 1.1.2 [wiz 2002-10-13]
