@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/08 08:11:42 martti Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/10 07:41:17 martti Exp $
 bin/startxfce4
 bin/xfce4-about
 bin/xfhelp4
@@ -17,6 +17,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfce-utils.mo
+${PKGLOCALEDIR}/locale/fa_IR/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/xfce-utils.mo
@@ -29,6 +30,7 @@ ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfce-utils.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xfce-utils.mo
@@ -42,11 +44,13 @@ share/xfce4/AUTHORS
 share/xfce4/AUTHORS.az
 share/xfce4/AUTHORS.ca
 share/xfce4/AUTHORS.de
+share/xfce4/AUTHORS.es
 share/xfce4/AUTHORS.fr
 share/xfce4/AUTHORS.html
 share/xfce4/AUTHORS.html.az
 share/xfce4/AUTHORS.html.ca
 share/xfce4/AUTHORS.html.de
+share/xfce4/AUTHORS.html.es
 share/xfce4/AUTHORS.html.fr
 share/xfce4/AUTHORS.vi
 share/xfce4/BSD
@@ -58,10 +62,12 @@ share/xfce4/GPL
 share/xfce4/GPL.html
 share/xfce4/INFO
 share/xfce4/INFO.ca
+share/xfce4/INFO.es
 share/xfce4/INFO.fr
 share/xfce4/INFO.html
 share/xfce4/INFO.html.ca
 share/xfce4/INFO.html.de
+share/xfce4/INFO.html.es
 share/xfce4/INFO.html.fr
 share/xfce4/INFO.vi
 share/xfce4/LGPL

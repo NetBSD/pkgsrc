@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/01/08 08:11:41 martti Exp $
+$NetBSD: distinfo,v 1.5 2004/03/10 07:41:16 martti Exp $
 
-SHA1 (xfprint-4.0.3.tar.gz) = 01402b9259902e46c0a54f4892431545b81d4796
-Size (xfprint-4.0.3.tar.gz) = 418565 bytes
+SHA1 (xfprint-4.0.4.tar.gz) = 18230a4267b15c09b658aa40d1831baa34fec20a
+Size (xfprint-4.0.4.tar.gz) = 433359 bytes
