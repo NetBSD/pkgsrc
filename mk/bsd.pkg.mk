@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.89 1998/06/01 21:30:10 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.90 1998/06/02 15:47:06 tv Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -999,7 +999,7 @@ DEPENDS_TARGET=	install
 ################################################################
 
 # Disable checksum
-.if defined(NO_CHECKSUM) && !target(checksum)
+.if (defined(NO_CHECKSUM) && !target(checksum)) || exists(${EXTRACT_COOKIE})
 checksum: fetch
 	@${DO_NADA}
 .endif
