@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2003/06/30 22:05:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.56 2003/07/23 09:41:23 dmcmahill Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -101,14 +101,48 @@ README.html: .PRECIOUS
 _PKGSRCDIR=${.CURDIR}
 .endif
 
-index:
-	@${RM} -f ${.CURDIR}/INDEX
-	@${MAKE} ${.CURDIR}/INDEX
+.PHONY: index
+index: ${.CURDIR}/INDEX
 
 ${.CURDIR}/INDEX:
-	@${ECHO} -n "Generating INDEX - please wait.."
-	@${MAKE} describe ECHO_MSG="${ECHO} > /dev/null" > ${.CURDIR}/INDEX
-	@${ECHO} " Done."
+	@${RM} -f ${.CURDIR}/DEPENDSDB
+	@${ECHO_MSG} "Extracting complete dependency database.  This may take a while..."
+	@DB=${.CURDIR}/DEPENDSDB ; \
+	PKGSRCDIR=${.CURDIR} ; \
+	npkg=1; \
+	${RM} -fr $$DB ; \
+	list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | sed 's,/Makefile.*=[[:space:]]*,/,'` ; \
+	for pkgdir in $$list ; do \
+		if [ ! -d $$pkgdir ]; then  \
+			echo " " ; \
+			echo "WARNING:  the package directory $pkgdir is listed in" > /dev/stderr ; \
+			echo $pkgdir | sed 's;/.*;/Makefile;g' > /dev/stderr ; \
+			echo "but the directory does not exist.  Please fix this!" > /dev/stderr ; \
+		else \
+			cd $$pkgdir ; \
+			l=`${MAKE} print-summary-data`  ; \
+			if [ $$? != 0 ]; then \
+				echo "WARNING (printdepends):  the package in $$pkgdir had problem with" \
+					> /dev/stderr ; \
+				echo "    ${MAKE} print-summary-data" > /dev/stderr ; \
+				echo "    database information for this package" > /dev/stderr ; \
+				echo "    will be dropped." > /dev/stderr ; \
+				${MAKE} print-summary-data  2>&1 > /dev/stderr ; \
+			else \
+				echo "$$l" >> $$DB ; \
+			fi ; \
+		fi ; \
+		echo -n "." ; \
+		if [ `${EXPR} $$npkg % 100 = 0` -eq 1 ]; then \
+			echo " " ; \
+			echo "$$npkg" ; \
+		fi ; \
+		npkg=`${EXPR} $$npkg + 1` ; \
+		cd $$PKGSRCDIR  ; \
+	done
+	@${RM} -f ${.CURDIR}/INDEX
+	@${AWK} -f ./mk/scripts/genindex.awk PKGSRCDIR=${.CURDIR} SORT=${SORT} ${.CURDIR}/DEPENDSDB
+	@${RM} -f ${.CURDIR}/DEPENDSDB
 
 print-index:	${.CURDIR}/INDEX
 	@${AWK} -F\| '{ printf("Port:\t%s\nPath:\t%s\nInfo:\t%s\nMaint:\t%s\nIndex:\t%s\nB-deps:\t%s\nR-deps:\t%s\nArch:\t%s\n\n", $$1, $$2, $$4, $$6, $$7, $$8, $$9, $$10); }' < ${.CURDIR}/INDEX
