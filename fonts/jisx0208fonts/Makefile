@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/09/05 02:52:27 itojun Exp $
+# $NetBSD: Makefile,v 1.6 2000/10/15 14:26:00 itojun Exp $
 #
 
 DISTNAME=	jisx0208fonts-20000904
@@ -37,9 +37,9 @@ MASTER_SITES+=	http://hp.vector.co.jp/authors/VA013391/fonts/
 NAGA10=		knj10-1.1.tar.gz 6x12.tar.gz
 EXTRACT_ONLY+=	knj10-1.1.tar.gz 6x12.tar.gz
 
-MASTER_SITES+=	http://www.softclub.co.jp/~zoro/k12x10/
-K12X10=		k12x10bdf.tar.gz
-EXTRACT_ONLY+=	k12x10bdf.tar.gz
+#MASTER_SITES+=	http://www.softclub.co.jp/~zoro/k12x10/
+#K12X10=		k12x10bdf.tar.gz
+#EXTRACT_ONLY+=	k12x10bdf.tar.gz
 
 FONTDIR=${PREFIX}/lib/X11/fonts/local
 
