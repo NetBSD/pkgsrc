@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/22 10:30:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/14 08:57:50 adam Exp $
 bin/gg2
 bin/gghist
 include/gg2_core.h
 lib/gg2/libGUI_plugin.la
+lib/gg2/libaaway_plugin.la
 lib/gg2/libdocklet_dockapp_plugin.la
 lib/gg2/libdocklet_system_tray_plugin.la
 lib/gg2/libgadu_gadu_plugin.la
 lib/gg2/libhistory_external_plugin.la
+lib/gg2/libignore_main_plugin.la
 lib/gg2/libjabber_plugin.la
 lib/gg2/libsms_plugin.la
 lib/gg2/libsound_esd_plugin.la

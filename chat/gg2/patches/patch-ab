@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/10/22 10:30:06 adam Exp $
+$NetBSD: patch-ab,v 1.2 2005/01/14 08:57:50 adam Exp $
 
---- src/main.c.orig	2004-03-29 07:03:22.000000000 +0000
+--- src/main.c.orig	2004-12-26 22:47:53.000000000 +0000
 +++ src/main.c
 @@ -43,6 +43,12 @@
  #include "ggadu_repo.h"
@@ -19,8 +19,8 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/10/22 10:30:06 adam Exp $
      {
  	gchar *fullfilename = g_build_filename(dirpath, namepl, NULL);
  
--	if ((!g_file_test(fullfilename, G_FILE_TEST_IS_DIR)) && (str_has_suffix(namepl, ".so")))
-+	if ((!g_file_test(fullfilename, G_FILE_TEST_IS_DIR)) && (str_has_suffix(namepl, DYLIB_SUFX)))
+-	if ((!g_file_test(fullfilename, G_FILE_TEST_IS_DIR)) && (g_str_has_suffix(namepl, ".so")))
++	if ((!g_file_test(fullfilename, G_FILE_TEST_IS_DIR)) && (g_str_has_suffix(namepl, DYLIB_SUFX)))
  	{
  	    print_debug("core : load_avilable_modules : %s\n", namepl);
  
