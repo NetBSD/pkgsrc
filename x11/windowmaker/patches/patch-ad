@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.3 1999/01/16 12:38:10 tron Exp $
+
+--- WPrefs.app/po/Makefile.in.orig	Fri Jan 15 07:08:16 1999
++++ WPrefs.app/po/Makefile.in	Fri Jan 15 09:13:25 1999
+@@ -235,7 +235,7 @@
+ 			$(mkinstalldirs) $(DESTDIR)$(nlsdir)/$$l/LC_MESSAGES; \
+ 			chmod 755 $(DESTDIR)$(nlsdir)/$$l; \
+ 			chmod 755 $(DESTDIR)$(nlsdir)/$$l/LC_MESSAGES; \
+-			$(INSTALL) -m 644 $$n $(DESTDIR)$(nlsdir)/$$l/LC_MESSAGES/WPrefs.mo; \
++			$(INSTALL_DATA) $$n $(DESTDIR)$(nlsdir)/$$l/LC_MESSAGES/WPrefs.mo; \
+ 		fi; \
+ 	done
+ 
