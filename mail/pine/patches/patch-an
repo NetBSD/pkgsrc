@@ -1,0 +1,30 @@
+Revision history
+
+==========================================
+Patches for Pine 4.02 from Pavel Kankovsky
+==========================================
+
+--- pine/mailview.c.noparanoia	Fri Jul 17 09:10:35 1998
++++ pine/mailview.c	Thu Jul 30 22:11:46 1998
+@@ -940,7 +940,7 @@
+     sstrcpy(&p, body_type_names(type));
+     if(full && subtype){
+ 	*p++ = '/';
+-	sstrcpy(&p, subtype);
++	sstrcpy(&p, strsquish(tmp_20k_buf + 500, subtype, 20));
+     }
+
+     switch(type) {
+@@ -1558,6 +1558,10 @@
+     }
+
+     gf_filter_init();
++    if(F_OFF(F_PASS_CONTROL_CHARS, ps_global)){
++        gf_link_filter(gf_escape_filter, NULL);
++        gf_link_filter(gf_control_filter, NULL);
++    }
+     gf_link_filter(gf_wrap, gf_wrap_filter_opt(width, width, 0, 0));
+     gf_link_filter(gf_line_test, gf_line_test_opt(quote_editorial, NULL));
+     return(gf_pipe(gc, pc));
+
+
