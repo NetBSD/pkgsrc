@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2439 2004/11/25 04:02:16 snj Exp $
+$NetBSD: TODO,v 1.2440 2004/11/25 09:34:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -317,7 +317,6 @@ Suggested package updates
 	o avl-2.0.1
 	o awstats-6.3
 	o balsa-1.4.4
-	o balsa2-2.2.6
 	o bbsload-0.2.8
 	o bchunk-1.2.0
 	o beecrypt-4.0.0
