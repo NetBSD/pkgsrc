@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.4 2002/06/27 03:22:25 lukem Exp $
+$NetBSD: patch-aa,v 1.5 2002/07/24 11:38:47 martti Exp $
 
---- cvsweb.cgi.orig	Wed May 22 18:10:18 2002
-+++ cvsweb.cgi
+--- cvsweb.cgi.orig	Tue Jul 23 15:58:32 2002
++++ cvsweb.cgi	Wed Jul 24 11:01:53 2002
 @@ -1,4 +1,4 @@
 -#!/usr/bin/perl -wT
 +#!/usr/bin/perl -w
  #
  # cvsweb - a CGI interface to CVS trees.
  #
-@@ -3606,6 +3606,7 @@
+@@ -3631,6 +3631,7 @@
  }
  
  sub html_footer() {
