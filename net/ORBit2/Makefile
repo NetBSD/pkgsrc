@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2002/12/24 06:10:16 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/22 09:25:44 jmmv Exp $
 #
 
-DISTNAME=		ORBit2-2.5.0
-PKGREVISION=		1
+DISTNAME=		ORBit2-2.6.0
 CATEGORIES=		net gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ORBit2/2.5/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ORBit2/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@netbsd.org
@@ -18,6 +17,8 @@ GNU_CONFIGURE=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/ORBit-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/ORBit-CosNaming-2.0.pc.in
+
+BUILDLINK_DEPENDS.linc=		linc>=1.0.0
 
 .include "../../net/linc/buildlink2.mk"
 .include "../../net/libIDL/buildlink2.mk"
