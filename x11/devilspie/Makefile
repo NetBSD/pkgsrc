@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/09/20 21:13:01 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/09/22 00:53:42 snj Exp $
 
 DISTNAME=		devilspie-0.5.1
 CATEGORIES=		x11
@@ -23,4 +23,6 @@ post-install:
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
