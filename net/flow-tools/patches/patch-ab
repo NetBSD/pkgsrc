@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2003/05/23 07:19:43 seb Exp $
+$NetBSD: patch-ab,v 1.3 2004/04/22 15:33:35 seb Exp $
 
---- configs/Makefile.in.orig	2003-05-22 14:47:44.000000000 +0000
+--- configs/Makefile.in.orig	2004-04-22 12:14:50.000000000 +0000
 +++ configs/Makefile.in
-@@ -114,17 +114,19 @@ sbindir = @sbindir@
+@@ -117,17 +117,17 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
@@ -12,27 +12,20 @@ $NetBSD: patch-ab,v 1.2 2003/05/23 07:19:43 seb Exp $
 +egftsym_DATA = ip-prot.sym ip-type.sym tcp-port.sym asn.sym tag.sym
  
 -ftcfgdir = $(localstatedir)/cfg
--ftcfg_DATA = map.cfg tag.cfg filter.cfg stat.cfg mask.cfg
+-ftcfg_DATA = map.cfg tag.cfg filter.cfg stat.cfg mask.cfg xlate.cfg
 +egftcfgdir = $(prefix)/share/examples/@PACKAGE@/cfg
-+egftcfg_DATA = map.cfg tag.cfg filter.cfg stat.cfg mask.cfg
++egftcfg_DATA = map.cfg tag.cfg filter.cfg stat.cfg mask.cfg xlate.cfg
  subdir = configs
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = $(top_builddir)/lib/ftconfig.h
  CONFIG_CLEAN_FILES =
-+depcomp =
-+am__depfiles_maybe =
  DIST_SOURCES =
 -DATA = $(ftcfg_DATA) $(ftsym_DATA)
 +DATA = $(egftcfg_DATA) $(egftsym_DATA)
  
  DIST_COMMON = Makefile.am Makefile.in
  all: all-am
-@@ -132,45 +134,45 @@ all: all-am
- .SUFFIXES:
- $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
- 	cd $(top_srcdir) && \
--	  $(AUTOMAKE) --gnu  configs/Makefile
-+	  $(AUTOMAKE) --foreign  --ignore-deps configs/Makefile
+@@ -139,41 +139,41 @@ $(srcdir)/Makefile.in:  Makefile.am  $(t
  Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
  	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@ $(am__depfiles_maybe)
  uninstall-info-am:
@@ -94,7 +87,7 @@ $NetBSD: patch-ab,v 1.2 2003/05/23 07:19:43 seb Exp $
  	done
  tags: TAGS
  TAGS:
-@@ -215,7 +217,7 @@ check: check-am
+@@ -218,7 +218,7 @@ check: check-am
  all-am: Makefile $(DATA)
  
  installdirs:
@@ -103,7 +96,7 @@ $NetBSD: patch-ab,v 1.2 2003/05/23 07:19:43 seb Exp $
  
  install: install-am
  install-exec: install-exec-am
-@@ -257,7 +259,7 @@ info: info-am
+@@ -260,7 +260,7 @@ info: info-am
  
  info-am:
  
@@ -112,7 +105,7 @@ $NetBSD: patch-ab,v 1.2 2003/05/23 07:19:43 seb Exp $
  
  install-exec-am:
  
-@@ -283,17 +285,18 @@ ps: ps-am
+@@ -286,17 +286,18 @@ ps: ps-am
  
  ps-am:
  
