@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/02/13 17:15:02 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/02/13 17:29:20 jlam Exp $
 #
 
 DISTNAME=	SDL-1.2.6
@@ -15,6 +15,7 @@ PATCHDIR=		${.CURDIR}/../../devel/SDL/patches
 USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
+CONFIG_STATUS_OVERRIDE=	config.status
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 PTHREAD_OPTS+=		require
