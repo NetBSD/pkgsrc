@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/08/21 11:52:21 markd Exp $
+# $NetBSD: Makefile,v 1.34 2004/09/19 04:17:22 markd Exp $
 
 DISTNAME=	arts-1.3.0
 CATEGORIES=	audio
@@ -15,6 +15,7 @@ USE_PERL5=		build
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
+_IN_ARTS_BUILD=		yes
 .include "../../meta-pkgs/kde3/kde3.mk"
 
 .include "../../audio/esound/buildlink3.mk"
