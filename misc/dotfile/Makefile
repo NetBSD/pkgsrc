@@ -3,17 +3,18 @@
 # Date created:      11/12/96
 # Whom:              oly@world.std.com
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:54:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/24 01:04:55 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.5 1997/04/20 13:19:30 wosch Exp
 #
 
 DISTNAME=	dotfile-2.0
-CATEGORIES=	misc tk41
+CATEGORIES=	misc tk80
 MASTER_SITES=	ftp://ftp.imada.ou.dk/pub/dotfile/
 
 MAINTAINER=	oly@world.std.com
 
-LIB_DEPENDS=	tk41\\.1:${PORTSDIR}/x11/tk41
-RUN_DEPENDS=	wish4.1:${PORTSDIR}/x11/tk41
+LIB_DEPENDS=	tk80\\.1:${PORTSDIR}/x11/tk80
+RUN_DEPENDS=	wish8.0:${PORTSDIR}/x11/tk80
 
 GNU_CONFIGURE=	yes
 MAN1=		dotfile.1
