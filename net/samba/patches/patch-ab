@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.9 2001/05/10 09:00:23 abs Exp $
+
+--- acconfig.h.orig	Wed Apr 18 00:00:52 2001
++++ acconfig.h
+@@ -79,7 +79,9 @@
+ #undef SIZEOF_INO_T
+ #undef SIZEOF_OFF_T
+ #undef STAT_STATVFS64
++#undef HAVE_READLINE
+ #undef HAVE_LIBREADLINE
++#undef HAVE_LIBEDIT
+ #undef HAVE_KERNEL_OPLOCKS
+ #undef HAVE_IRIX_SPECIFIC_CAPABILITIES
+ #undef HAVE_INT16_FROM_RPC_RPC_H
