@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1939 2004/07/16 16:50:47 xtraeme Exp $
+$NetBSD: TODO,v 1.1940 2004/07/17 11:37:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -164,8 +164,9 @@ Suggested package updates
 	o ImageViewer-0.6.3
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
-	o abiword-2.0.7
+	o abiword-2.0.8
 	o anjuta-1.2.2
+	o apache-ant-1.6.2
 	o ap-jk-5.0.25
 	o ap-python-2.7.10
 	o apcupsd-3.10.13
@@ -177,6 +178,7 @@ Suggested package updates
 	o bind-9.3
 	o bitchx-1.1
 	o blender-2.33
+	o bogofilter-0.92.2
 	o boson-0.10
 	o cdrtools-ossdvd-2.01.1.27
 	o centericq-4.10.0
@@ -194,6 +196,7 @@ Suggested package updates
 	o cvs2cl-2.55
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
+	o cyrus-sasl2-2.1.19
 	o dact-0.8.37
 	o dar-2.1.2
 	o dctc-0.85.9
@@ -225,8 +228,9 @@ Suggested package updates
 	o fox-1.2.7
 	o freetds-0.62.3
 	o fsviewer-0.2.5
+	o fuse-0.7.0
 	o gauche-0.8
-	o gcvs-1.0-1
+	o gcvs-1.0
 	o gdb-6.1 [pkgsrc-wip]
 	o generator-0.35
 	o getmail-3.2.4
@@ -234,6 +238,7 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.25
+	o gimp-print-4.2.7
 	o glpk-4.3
 	o gmp-4.1.3
 	o gnomeicu-0.99.5
@@ -245,7 +250,7 @@ Suggested package updates
 	o gqmpeg-0.91.1
 	o grace-5.1.16
 	o grhino-0.12.0
-	o gsasl-0.1.1
+	o gsasl-0.1.2
 	o gss-0.0.11
 	o gtar-1.14
 	o gtetrinet-0.7.4
@@ -263,12 +268,12 @@ Suggested package updates
 	o inform-6.30 [pkg/24631]
 	o intercal-0.24 [dillo]
 	o iozone-3.218
-	o ivtools-1.2
+	o ivtools-1.2.1
 	o jakarta-tomcat-3.3.1a
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
 	o kth-kerberos-1.2.2
-	o larswm-7.5.0
+	o larswm-7.5.3
 	o latex2rtf-1.9.15
 	o lavaps-2.5
 	o leafnode-1.10.1
@@ -293,16 +298,17 @@ Suggested package updates
 	o matchbox-0.8.2 [pkgsrc-wip]
 	o micq-0.4.11
 	o midnight-commander-4.6.0
-	o mimedefang-2.43
+	o mimedefang-2.44
 	o minicom-2.1
 	o mowitz-0.3.0
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-1.5.1
 	o moz-mplayer-2.65
 	o mozilla-stable-1.4.2
+	o mplayer-1.0pre5
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
-	o multitail-3.2.1
+	o multitail-3.2.2
 	o namazu-2.0.13
 	o nano-1.2.4
 	o nap-1.5.2
@@ -348,7 +354,7 @@ Suggested package updates
 	o rep-gtk-0.17
 	o rox-1.2.2
 	o rox-session-0.1.23
-	o rrdtool-1.0.48 [pkg/26326]
+	o rrdtool-1.0.48
 	o rt-3.0.10 [pkgsrc-wip]
 	o ruby-1.8.1 [taca]
 	o sablecc-2.18.1
@@ -391,7 +397,7 @@ Suggested package updates
 	o vttest-20030301
 	o wavesurfer-1.5.3
 	o wdm-1.27
-	o wine-20040615
+	o wine-20040716
 	o wistumbler-2.00pre9 [pkg/26245]
 	o wmaker-conf-2.9.1
 	o wmweather-2.4.3
