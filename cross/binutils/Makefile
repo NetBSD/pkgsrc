@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2001/01/24 12:13:26 tsutsui Exp $
+# $NetBSD: Makefile,v 1.22 2001/01/29 10:25:07 abs Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
 # gets built at cross-pkg build time (it's target specific).
 
 DISTNAME=		binutils-2.9.1
-PKGNAME=		cross-binutils-2.9.1.1
+PKGNAME=		cross-binutils-2.9.1.2
 CATEGORIES=		cross lang
 MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
 
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	--enable-targets=${ENABLE_TARGETS_LIST} \
 # --target above ensures that --host is not included as default
 MAKE_ARGS+=		CFLAGS="${CFLAGS}"
 ALL_TARGET=		all-binutils all-ld
+
+PLIST_SUBST=		LOCALBASE=${LOCALBASE}
 
 BINDIR=			${PREFIX}/libexec/binutils
 
@@ -67,6 +69,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/ansidecl.h ${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/bfd/bfd.h ${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/ld/ldscripts/* ${PREFIX}/lib/ldscripts
+	${INSTALL_SCRIPT} ${WRKSRC}/cross-env ${BINDIR}
+	${LN} -s ${BINDIR}/cross-env ${LOCALBASE}/bin/cross-env  
+
+post-build:
+	${SED} -e 's|@@PREFIX@@|${PREFIX}|' < ${FILESDIR}/cross-env > \
+		${WRKSRC}/cross-env
 
 .include "../../mk/bsd.pkg.mk"
 
