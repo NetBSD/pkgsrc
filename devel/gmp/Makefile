@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2003/10/28 22:33:57 kristerw Exp $
+# $NetBSD: Makefile,v 1.24 2003/12/02 21:57:26 salo Exp $
 #
 
 DISTNAME=		gmp-4.1.2
-CATEGORIES=		devel
+CATEGORIES=		devel math
 MASTER_SITES=		${MASTER_SITE_GNU:=gmp/}
 
 MAINTAINER=		hubertf@NetBSD.org
@@ -11,11 +11,13 @@ COMMENT=		Library for arbitrary precision arithmetic
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-USE_GCC_SHLIB=		# defined
-USE_GNU_TOOLS+=		m4
-CONFIGURE_ARGS+=	--enable-cxx --without-readline
+USE_GCC_SHLIB=		YES
 USE_LIBTOOL=		YES
+USE_GNU_TOOLS+=		m4
+
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+CONFIGURE_ARGS+=	--enable-cxx --without-readline
 
 INFO_FILES=		gmp.info
 
