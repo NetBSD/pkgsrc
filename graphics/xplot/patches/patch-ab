@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 1998/08/07 11:18:27 agc Exp $
+$NetBSD: patch-ab,v 1.4 1999/01/29 20:19:22 tron Exp $
 
 --- tcpdump2xplot.pl.orig	Sun Dec 14 00:45:49 1997
 +++ tcpdump2xplot.pl	Sun Dec 14 00:45:56 1997
