@@ -1,0 +1,125 @@
+Digital Audio Processor
+-----------------------
+
+For Silicon Graphics (IRIX 5.3), PC (Linux and NetBSD) and Sun (Solaris 2.5)
+
+Copyright (c) 1997 Richard Kent
+
+Preamble
+--------
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; either version 2 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program; if not, write to the Free Software Foundation, Inc., 675 Mass
+Ave, Cambridge, MA 02139, USA.
+
+Introduction
+------------
+
+Welcome to the Digital Audio Processor, otherwise known as DAP. This program
+was originally produced as my final year project for a degree in Computer
+Science at Heriot-Watt University, near Edinburgh in Scotland. Since then I
+have been changing and improving DAP, attempting to make it the best sample
+editor and processor available on the UNIX platform. It still has a long way to
+go though !! 
+
+The original reason for producing this program was the apallingly basic (but I
+suppose functional) "SoundEditor" bundled with IRIX 5.3 which is far too basic
+given the advanced nature of the Silicon Graphics audio facilities. 
+
+What is DAP ?
+-------------
+
+DAP is a comprehensive audio sample editing and processing suite. DAP currently
+supports AIFF and AIFF-C audio files, 8 or 16 bit resolution and 1, 2 or 4
+channels of audio data. Note however that compressed AIFF-C files are not
+currently supported, only non-compressed AIFF-C files.
+
+The package itself offers comprehensive editing, playback and recording
+facilities including full time stretch resampling, manual data editing and a
+reasonably complete DSP processing suite. Note however that time stretching
+does not currently work on Solaris (still trying to debug !!).
+
+How much does it cost ?
+-----------------------
+
+Well out of the goodness of my heart (cue violins) I've given you DAP for free
+- that's right for absolutely nothing - including the source code. Yes, this is
+uncrippled, unrestricted freeware. However to ensure continuing development on
+DAP please feel free to send me some hard earned cash as a donation :) Either
+that or just send me a postcard from wherever you happen to be at the time !!
+
+Using DAP with sox
+------------------
+
+For compatibility with sox, the popular audio conversion tool, the "Sox
+Compatible" preference must be switched on in DAP. Switching this option on
+simply tells DAP not to save copyright strings when saving AIFF files. This is
+necessary as the current version of sox is rather buggy and doesn't like
+copyright strings for AIFF files as the header contains a non-alphabetic
+character (braces).
+
+Requirements
+------------
+
+To run DAP you must have the latest release version of xforms (0.88) installed
+on your system. Basically the shared object library libforms.so.0.88 must be
+somewhere in your LD_LIBRARY_PATH. See http://bragg.phys.uwm.edu/xform for
+further details on xforms. 
+
+For Linux, NetBSD and Solaris you will also require the Open Sound System (OSS)
+audio drivers to be installed properly. These drivers are normally supplied
+with Linux but NetBSD and Solaris users will have to install them manually. The
+older VoxWare drivers(upon which the OSS drivers are based) may also work but
+are untested.
+
+Note that I haven't actually managed to get any actual sound in to or out of a
+Solaris machine yet - let me know if it works for you !!
+
+See http://personal.eunet.fi/pp/voxware for further details on OSS.
+
+Compilation and Installation
+----------------------------
+
+For details on compilation and installation check out the INSTALL file
+contained in this directory.
+
+And finally
+-----------
+
+Please send me comments and feedback, whether you think the program is good or
+a load of cobblers. Bug reports, suggestions, criticisms and general banter are
+just as welcomed as are any hard cash donations to entice me to continue
+development on DAP (address given later) :)
+
+So that's it, no instruction manual or help file (yet). A fair chunk of the
+program is self explanatory, the rest can all be worked out with
+experimentation. If there are any features you don't follow then just give me
+an email and I'll attempt to explain my thinking !!
+
+Oh, and not all the effects are functional yet - you'll get a lovely "Please
+Register" prompt if the effect you are trying to execute is not available.
+Ignore this prompt - it was just to look good for the demo to my project
+supervisor - there is no registration !! The only effects not working at the
+moment are gated reverberation and equalization. I will get around to finishing
+these one day. I will....
+
+Enjoy, and hope to hear from you all real soon....
+
+TicH
+
+-------------------------------------------------------------------------------
+                   Name  - Richard Kent (Tich)
+                   EMail - richardk@cee.hw.ac.uk
+                   WWW   - http://www.cee.hw.ac.uk/~richardk
+-------------------------------------------------------------------------------
+   Address - 9 Henderson Street, Bridge of Allan, Stirling, Scotland, FK9 4NA
+-------------------------------------------------------------------------------
