@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/03 06:49:59 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/06/20 07:46:13 jlam Exp $
 bin/flea
 bin/mutt
 bin/muttbug
 bin/pgpewrap
 bin/pgpring
-etc/Muttrc
-etc/mime.types
 man/man1/flea.1
 man/man1/mutt.1
 man/man1/mutt_dotlock.1
@@ -35,6 +33,7 @@ share/doc/mutt/html/manual-7.html
 share/doc/mutt/html/manual.html
 share/doc/mutt/manual.txt
 share/doc/mutt/samples/Mush.rc
+share/doc/mutt/samples/Muttrc
 share/doc/mutt/samples/Pine.rc
 share/doc/mutt/samples/Tin.rc
 share/doc/mutt/samples/gpg.rc
@@ -56,6 +55,7 @@ share/doc/mutt/samples/iconv/iconv.solaris-2.5.1.rc
 share/doc/mutt/samples/iconv/iconv.solaris-2.6-cjk.rc
 share/doc/mutt/samples/iconv/iconv.solaris-2.6.rc
 share/doc/mutt/samples/iconv/iconv.solaris-2.7.rc
+share/doc/mutt/samples/mime.types
 share/doc/mutt/samples/pgp2.rc
 share/doc/mutt/samples/pgp5.rc
 share/doc/mutt/samples/pgp6.rc
@@ -85,6 +85,7 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/mutt.mo
 ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/mutt.mo
+share/mutt/.directory
 @dirrm share/mutt
 @dirrm share/doc/mutt/samples/iconv
 @dirrm share/doc/mutt/samples
