@@ -1,4 +1,4 @@
-# $NetBSD: marshall,v 1.10 2004/03/19 00:04:42 danw Exp $
+# $NetBSD: marshall,v 1.11 2004/03/29 06:02:53 jlam Exp $
 #
 # Handle cases where multiple consecutive arguments must be processed
 # together, either by merging the arguments or "skipping" the extra
@@ -17,17 +17,36 @@ case $arg in
 # Merge "-Wl,R -Wl,/path/to/dir" into a single argument
 # "-Wl,R/path/to/dir" and merge "-Wl,--rpath -Wl,/path/to/dir" into
 # "-Wl,--rpath,/path/to/dir" so that we can look them up in the cache.
+# Also deal with "-Xlinker" being equivalent to "-Wl,".
 #
--Wl,-R)
-	nextarg=`$echo "X$1" | $Xsed -e "s|^-Wl,||g"`
-	arg="$arg$nextarg"
-	shift
-	;;
--Wl,-rpath|-Wl,-rpath-link|\
--Wl,--rpath|-Wl,--rpath-link)
-	nextarg=`$echo "X$1" | $Xsed -e "s|^-Wl,||g"`
-	arg="$arg,$nextarg"
-	shift
+-Xlinker|-Wl,-R|-Wl,-rpath|-Wl,-rpath-link|-Wl,--rpath|-Wl,--rpath-link)
+	R=
+	case $arg in
+	-Xlinker)
+		case $1 in
+		-Wl,-R)				R="$1";	     shift ;;
+		-Wl,-rpath|-Wl,-rpath-link)	R="$1,";     shift ;;
+		-Wl,--rpath|-Wl,--rpath-link)	R="$1,";     shift ;;
+		-Wl,*)				arg="$1";    shift ;;
+		-R)				R="-Wl,$1";  shift ;;
+		-rpath|-rpath-link)		R="-Wl,$1,"; shift ;;
+		--rpath|--rpath-link)		R="-Wl,$1,"; shift ;;
+		esac
+		;;
+	-Wl,-R)					R="$arg"  ;;
+	-Wl,-rpath|-Wl,-rpath-link)		R="$arg," ;;
+	-Wl,--rpath|-Wl,--rpath-link)		R="$arg," ;;
+	esac
+	if $test -n "$R"; then
+		nextarg=$1; shift
+		case $nextarg in
+		-Xlinker)  nextarg=$1; shift ;;
+		esac
+		case $nextarg in
+		-Wl,*)	nextarg=`$echo "X$nextarg" | $Xsed -e "s|^-Wl,||g"` ;;
+		esac
+		arg="$R$nextarg"
+	fi
 	;;
 #
 # If we're linking a shared library by "cc -shared -o /srcdir/shlib",
