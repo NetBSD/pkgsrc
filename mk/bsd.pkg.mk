@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1468.2.1 2004/07/06 22:11:59 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1468.2.2 2004/07/06 22:15:54 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2123,7 +2123,7 @@ SUBST_FILES.pkglocaledir=	${_REPLACE_LOCALEDIR}
 SUBST_SED.pkglocaledir=		\
 	-e 's|^\(localedir[ 	:]*=\).*|\1 ${_PKGLOCALEDIR}|'		\
 	-e 's|^\(gnulocaledir[ 	:]*=\).*|\1 ${_PKGLOCALEDIR}|'		\
-	-e 's|\(-DLOCALEDIR[ 	]*=\)[^ 	]*\(.*\)|\1"\\"${_PKGLOCALEDIR}\\""\2|'
+	-e 's|\(-DLOCALEDIR[ 	]*=\)[^ 	]*\(\.\*\)|\1"\\"${_PKGLOCALEDIR}\\""\2|'
 .endif
 
 .if defined(REPLACE_PERL)
