@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.1 1998/12/21 10:29:40 frueauf Exp $
+$NetBSD: patch-aa,v 1.2 1999/05/25 23:45:06 jlam Exp $
 
---- Makeconf.in.orig	Mon Nov 23 04:20:11 1998
-+++ Makeconf.in	Sun Dec 20 12:12:22 1998
-@@ -50,4 +50,4 @@
+--- Makeconf.in.orig	Tue Feb  2 19:16:51 1999
++++ Makeconf.in	Tue May 25 02:52:48 1999
+@@ -20,6 +20,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ INSTALL_DIR = ${INSTALL} -d
+ LATEX = @LATEX@
+ LDCMD = @LDCMD@
+@@ -53,4 +54,4 @@
  libdir = @libdir@
  mandir = @mandir@
  
