@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.1.1.1 2000/12/10 11:07:35 jtb Exp $
+
+--- benchmarks/make-hello.orig	Sun Dec 10 10:21:03 2000
++++ benchmarks/make-hello
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ ulimit -s unlimited
+ ulimit -c 0
+-../stalin -d0 -d1 -d5 -d6 -On -du -dI\
++%%PREFIX%%/bin/stalin -d0 -d1 -d5 -d6 -On -du -dI\
+  -copt -O2 -copt -fomit-frame-pointer -copt -Wall -copt -freg-struct-return\
+  hello

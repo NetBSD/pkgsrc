@@ -1,0 +1,10 @@
+$NetBSD: patch-ai,v 1.1.1.1 2000/12/10 11:07:35 jtb Exp $
+
+--- benchmarks/compile-stalin-benchmark.orig	Mon Apr 26 20:40:11 1999
++++ benchmarks/compile-stalin-benchmark
+@@ -12,4 +12,4 @@
+ o="$s $c"
+ echo compile $1
+ sed -f stalin.sed $1.sc >$1-stalin.sc
+-time ../stalin $o $2 $1-stalin
++time %%PREFIX%%/bin/stalin $o $2 $1-stalin
