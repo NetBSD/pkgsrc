@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.34 2003/09/23 07:26:23 grant Exp $
+# $NetBSD: defs.IRIX.mk,v 1.35 2003/10/11 05:09:39 grant Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -53,7 +53,17 @@ MTREE?=		${LOCALBASE}/sbin/mtree
 MTREE?=		${LOCALBASE}/bin/mtree
 MV?=		/sbin/mv
 NICE?=		/sbin/nice
+.if exists(${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}patch)
+PATCH?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}patch
+.else
+PATCHV!=	/usr/sbin/patch -v 2>&1 | ${CUT} -d" " -f3
+.  if ${PATCHV} == "2.1"
+_OPSYS_GPATCH_REQD=	YES
+PATCH=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}patch
+.  else
 PATCH?=		/usr/sbin/patch -b
+.  endif # PATCHV
+.endif
 PAX?=		${LOCALBASE}/bin/pax
 PERL5?=		${LOCALBASE}/bin/perl
 PKGLOCALEDIR?=	share
@@ -121,7 +131,12 @@ _OPSYS_NEEDS_XPKGWEDGE=	yes		# xpkgwedge is required for X11
 _OPSYS_PERL_REQD=			# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no		# -lpthread needed for pthreads
 _OPSYS_RPATH_NAME=	-rpath,		# name of symbol in rpath directive to linker 
+if defined(_OPSYS_GPATCH_REQD) && ${_OPSYS_GPATCH_REQD} == "YES"
+_PATCH_CAN_BACKUP=      yes		# patch(1) can make backups
+_PATCH_BACKUP_ARG=      -b -V simple -z # switch to patch(1) for backup suffix
+.else
 _PATCH_CAN_BACKUP=	no		# native patch(1) can make backups
+.endif
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
 _USE_GNU_GETTEXT=	no		# Don't use GNU gettext
 _USE_RPATH=		yes		# add rpath to LDFLAGS
