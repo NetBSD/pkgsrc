@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/02/19 19:00:18 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/02/19 19:09:38 wiz Exp $
 #
 
 DISTNAME=	Text-Iconv-1.4
@@ -14,8 +14,11 @@ COMMENT=	Perl interface to iconv() codeset conversion function
 
 USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Text/Iconv/.packlist
-MAKE_PARAMS=		LIBS=${BUILDLINK_LDADD.iconv}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
+# if this line is too high up and BUILDLINK_LDADD.iconv
+# is empty, LIBS will be set to the following argument in
+# MAKE_PARAMS
+MAKE_PARAMS+=		LIBS=${BUILDLINK_LDADD.iconv}
 .include "../../mk/bsd.pkg.mk"
