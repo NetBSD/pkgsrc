@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/04/04 22:44:06 recht Exp $
+
+--- redmond95/Makefile.in.orig	2004-04-04 22:26:21.000000000 +0200
++++ redmond95/Makefile.in
+@@ -96,7 +96,7 @@ libredmond95_la_SOURCES = \
+ 
+ 
+ libredmond95_la_LDFLAGS = -module -avoid-version
+-libredmond95_la_LIBADD = # $(GTK_LIBS)
++libredmond95_la_LIBADD = $(GTK_LIBS)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_CLEAN_FILES = 
+ LTLIBRARIES =  $(engine_LTLIBRARIES)
