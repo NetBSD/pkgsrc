@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/05/13 18:48:32 ben Exp $
+# $NetBSD: Makefile,v 1.12 2004/10/13 20:07:55 ben Exp $
 #
 
 DISTNAME=		#defined
-PKGNAME=		fprot-workstation-bin-4.4.2
+PKGNAME=		fprot-workstation-bin-4.4.7
 CATEGORIES=		security
 
 MAINTAINER=		ben@NetBSD.org
@@ -14,7 +14,7 @@ DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386 SunOS-*-sparc
 RESTRICTED=		"Redistribution not permitted"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -41,15 +41,20 @@ OWN_DIRS=               ${FPDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-MASTER_SITES=		ftp://ftp.f-prot.com/pub/bsd/
-DISTNAME=		fp-netbsd-ws-${PKGVERSION}
-.endif
-
-.if ${OPSYS} == "Linux"
-MASTER_SITES=		ftp://ftp.f-prot.com/pub/linux/
-DISTNAME=		fp-linux-ws-${PKGVERSION}
-.endif
+#.if ${OPSYS} == "NetBSD"
+#MASTER_SITES=		ftp://ftp.f-prot.com/pub/bsd/
+#DISTNAME=		fp-netbsd-ws-${PKGVERSION}
+#.endif
+#
+#.if ${OPSYS} == "Linux"
+#MASTER_SITES=		ftp://ftp.f-prot.com/pub/linux/
+#DISTNAME=		fp-linux-ws-${PKGVERSION}
+#.endif
+#
+#.if ${OPSYS} == "SunOS"
+MASTER_SITES=		ftp://ftp.f-prot.com/pub/solaris/
+DISTNAME=		fp-solaris-sparc-ws-${PKGVERSION}
+#.endif
 
 DIST_SUBDIR=		${DISTNAME}
 
