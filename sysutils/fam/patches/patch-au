@@ -1,29 +1,20 @@
-$NetBSD: patch-au,v 1.4 2004/02/09 18:14:45 jmmv Exp $
+$NetBSD: patch-au,v 1.5 2004/03/28 22:00:05 minskim Exp $
 
---- fam/Makefile.in.orig	2003-04-15 08:18:34.000000000 +0200
-+++ fam/Makefile.in
-@@ -25,7 +25,7 @@ bindir = @bindir@
- sbindir = @sbindir@
- libexecdir = @libexecdir@
- datadir = @datadir@
--sysconfdir = @sysconfdir@
-+sysconfdir = @datadir@/examples/@PACKAGE@
- sharedstatedir = @sharedstatedir@
- localstatedir = @localstatedir@
- libdir = @libdir@
-@@ -181,6 +181,7 @@ fam_SOURCES = \
+--- src/Makefile.in.orig	2003-01-19 18:38:44.000000000 -0600
++++ src/Makefile.in
+@@ -161,6 +161,7 @@ famd_SOURCES = \
    main.c++ \
    timeval.c++ \
    timeval.h \
 +  mntent_compat.c++ \
-   @IMON_FUNCS@.c++
+   @MONITOR_FUNCS@.c++
  
  
-@@ -207,6 +208,7 @@ am_fam_OBJECTS = Activity.$(OBJEXT) Clie
+@@ -185,6 +186,7 @@ am_famd_OBJECTS = Activity.$(OBJEXT) Cli
  	Scheduler.$(OBJEXT) ServerConnection.$(OBJEXT) \
  	ServerHost.$(OBJEXT) ServerHostRef.$(OBJEXT) \
  	TCP_Client.$(OBJEXT) main.$(OBJEXT) timeval.$(OBJEXT) \
-+        mntent_compat.$(OBJEXT) \
- 	@IMON_FUNCS@.$(OBJEXT)
- fam_OBJECTS = $(am_fam_OBJECTS)
- fam_DEPENDENCIES = $(top_srcdir)/support/libsupport.a
++	mntent_compat.$(OBJEXT) \
+ 	@MONITOR_FUNCS@.$(OBJEXT)
+ famd_OBJECTS = $(am_famd_OBJECTS)
+ famd_LDADD = $(LDADD)
