@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.pkg,v 1.8 1998/08/20 15:17:28 tsarna Exp $ -->
+<!-- $NetBSD: README.pkg,v 1.9 1999/08/22 01:30:16 hubertf Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection: %%PORT%%</title>
@@ -60,6 +60,8 @@ precompiled binary form for the following machine architectures:
 <a href="../README.html"> Go up one level</a>
 |
 <a href="../../README.html"> Go to top of packages tree</a>
+|
+<a href="../../README-all.html"> List all packages</a>
 ]
 </body>
 </html>
