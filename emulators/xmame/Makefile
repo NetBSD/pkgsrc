@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1998/12/28 13:46:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.28 1999/01/30 23:18:46 agc Exp $
 #
 
 DISTNAME=		xmame-0.34b8.1
@@ -17,7 +17,7 @@ CONFLICTS=		xmame-0.30.1 xmame-0.33b6.1 xmame-0.34b1.1 \
 
 NOT_FOR_ARCHS=		alpha	#gcc lossage
 
-USE_X11=		yes
+USE_X11BASE=		yes
 USE_GMAKE=		yes
 MAKE_ENV+=		OPSYS=${OPSYS} ARCH=${ARCH} DESTDIR=${DESTDIR} \
 			INSTALL_MAN="${INSTALL_MAN}" \

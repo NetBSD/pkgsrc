@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/01/16 03:34:56 tron Exp $
+# $NetBSD: Makefile,v 1.14 1999/01/30 23:18:56 agc Exp $
 #
 
 DISTNAME=	gnome-libs-0.99.3
@@ -18,7 +18,7 @@ NOT_FOR_ARCHS=	alpha	# problems with gtk
 CONFLICTS=	gnome-libs-*
 
 GNU_CONFIGURE=	yes
-USE_X11=	yes
+USE_X11BASE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 LDFLAGS+=       	"-L${LOCALBASE}/lib"

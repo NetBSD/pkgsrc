@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/01/08 00:24:18 tron Exp $
+# $NetBSD: Makefile,v 1.17 1999/01/30 23:18:52 agc Exp $
 #
 
 DISTNAME=	sdr-2.5.8
@@ -15,7 +15,7 @@ CONFLICTS=	sdr-2.4a7mmrz
 MIRROR_DISTFILE=	no
 WRKSRC=		${WRKDIR}/sdr
 USE_GMAKE=	yes
-USE_X11=	yes
+USE_X11BASE=	yes
 
 _INTTYPES!=	if [ -e /usr/include/sys/inttypes.h ]; then echo "Exists"; else echo "No go"; fi
 

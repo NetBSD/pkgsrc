@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/01/06 13:13:36 frueauf Exp $
+# $NetBSD: Makefile,v 1.19 1999/01/30 23:18:58 agc Exp $
 #
 
 DISTNAME=	xscreensaver-3.07
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=--without-shadow --with-zippy=/usr/games/fortune \
 		--enable-subdir=${PREFIX}/libexec/xscreensaver
 CONFIGURE_ENV+=	INSTALL=/usr/bin/install
 
-USE_X11=	yes
+USE_X11BASE=	yes
 USE_MOTIF=	yes
 
 .include "../../mk/bsd.pkg.mk"

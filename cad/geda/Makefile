@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/12/31 12:05:52 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:44 agc Exp $
 #
 
 DISTNAME=	gEDA-19981213
@@ -16,7 +16,7 @@ DEPENDS+=	guile-1.3:../../lang/guile
 CONFLICTS=	gEDA-19981117
 
 GNU_CONFIGURE=	yes
-USE_X11=	yes
+USE_X11BASE=	yes
 USE_LIBTOOL=	yes
 
 .include "../../mk/bsd.pkg.mk"

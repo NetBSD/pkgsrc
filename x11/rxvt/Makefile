@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/06/22 13:21:00 agc Exp $
+# $NetBSD: Makefile,v 1.7 1999/01/30 23:18:57 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
@@ -12,7 +12,7 @@ MASTER_SITE_SUBDIR=	utils/file/managers/mc/rxvt
 
 MAINTAINER=		packages@netbsd.org
 
-USE_X11=		yes
+USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.pkg.mk"

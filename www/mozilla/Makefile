@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/01/04 09:30:46 frueauf Exp $
+# $NetBSD: Makefile,v 1.20 1999/01/30 23:18:54 agc Exp $
 #
 
 DISTNAME=	mozilla-19981008
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/source/ \
 MAINTAINER=	fvdl@netbsd.org
 HOMEPAGE=	http://www.mozilla.org/
 
-USE_X11=	yes
+USE_X11BASE=	yes
 USE_GMAKE=	yes
 USE_PERL5=	yes
 USE_MOTIF=	yes

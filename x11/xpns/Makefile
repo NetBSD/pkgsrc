@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/10/15 19:51:09 agc Exp $
+# $NetBSD: Makefile,v 1.7 1999/01/30 23:18:58 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/29 09:38:20 obrien Exp
 #
 
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	pgiffuni@fps.biblos.unal.edu.co
 HOMEPAGE=	http://www.informatik.uni-stuttgart.de/ipvr/bv/pns/pns.html
 
-USE_X11=	yes
+USE_X11BASE=	yes
 NO_WRKSUBDIR=	yes
 MAKEFILE=	makefile
 ALL_TARGET=	pns

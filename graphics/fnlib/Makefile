@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/12/21 17:05:52 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/01/30 23:18:50 agc Exp $
 
 DISTNAME=		fnlib_DR-0.3
 PKGNAME=		fnlib-0.3
@@ -12,6 +12,6 @@ DEPENDS+=		imlib-1.8.2:../../graphics/imlib
 WRKSRC=			${WRKDIR}/fnlib
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
-USE_X11=		yes
+USE_X11BASE=		yes
 
 .include "../../mk/bsd.pkg.mk"

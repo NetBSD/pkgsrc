@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/01/16 17:26:03 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1999/01/30 23:18:51 agc Exp $
 #
 
 DISTNAME=       xfmail-1.3
@@ -16,7 +16,7 @@ ONLY_FOR_ARCHS=	arm32 i386 m68k sparc ns32k
 
 RESTRICTED=	"Selling this software requires permission of the authors."
 
-USE_X11=	YES
+USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
 
 post-install:

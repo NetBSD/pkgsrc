@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/27 14:06:08 garbled Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:47 agc Exp $
 #
 
 DISTNAME=	golddig2
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://uiarchive.cso.uiuc.edu/pub/systems/linux/sunsite/games/arcad
 
 MAINTAINER=	root@garbled.net
 
-USE_X11=	yes
+USE_X11BASE=	yes
 
 post-extract:
 	${RM} ${WRKSRC}/golddig ${WRKSRC}/makelev ${WRKSRC}/*.o

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/01/14 23:37:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:53 agc Exp $
 #
 
 DISTNAME=	pload-0.9.2
@@ -9,7 +9,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.engr.utk.edu/~mdsmith/pload/
 
 HAS_CONFIGURE=	YES
-USE_X11=	YES
+USE_X11BASE=	YES
 INSTALL_TARGET=	install install.man
 
 .include "../../mk/bsd.pkg.mk"
