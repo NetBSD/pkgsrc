@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2003/06/11 20:50:56 abs Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/03 11:04:42 skrll Exp $
 #
 
-DISTNAME=	wonka-src-0.9.5-release
-PKGNAME=	wonka-0.9.5
+DISTNAME=	wonka-src-0.9.6-release
+PKGNAME=	wonka-0.9.6
 WRKSRC=		${WRKDIR}/open-wonka
 CATEGORIES=	lang
 MASTER_SITES=	http://wonka.acunia.com/
@@ -65,8 +65,7 @@ JAM_COMMAND=	\
 			-sWONKA_CONFIG=pkgsrc				\
 			-sCPU=${LOWER_ARCH}				\
 			-sHOSTOS=${LOWER_OPSYS}				\
-			-sAWT_DEVICE=xsim				\
-			-sDEBUG=false
+			-sAWT_DEVICE=xsim
 
 do-build:
 	${JAM_COMMAND}
