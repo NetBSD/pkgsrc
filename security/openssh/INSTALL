@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.5 2002/06/27 08:32:57 itojun Exp $
+# $NetBSD: INSTALL,v 1.6 2002/06/27 08:46:20 itojun Exp $
 
 DIRS="/etc /etc/ssh @PREFIX@/etc @PREFIX@/etc/ssh"
 FILES="sshd.conf sshd_config"
@@ -12,7 +12,7 @@ for dir in $DIRS; do
 		for file in $FILES; do
 			path=$dir/$file
 			if [ -f $path ]; then
-				@CAT@ <<EOF
+				${CAT} <<EOF
 ===========================================================================
 
                            *===* NOTICE *===*
