@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.12 1998/05/14 11:52:01 agc Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.13 1998/05/14 14:27:47 agc Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -68,7 +68,7 @@ _SUBDIRUSE: .USE
 			${ECHO_MSG} "===> ${_THISDIR_}$${edir}"; \
 			cd ${.CURDIR}/$${edir}; \
 			${MAKE} ${.TARGET:realinstall=install} \
-				"_THISDIR_=${_THISDIR_}${edir}/" \
+				"_THISDIR_=${_THISDIR_}$${edir}/"; \
 		fi; \
 	done
 
