@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8459 2004/12/26 21:35:31 wiz Exp $
+$NetBSD: CHANGES,v 1.8460 2004/12/26 21:58:32 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6567,3 +6567,10 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xmlto-0.0.18 [wiz 2004-12-26]
 	Added exult-1.2 [wiz 2004-12-26]
 	Updated gnucash to 1.8.10 [wiz 2004-12-26]
+	Added p5-Kwiki-Archive-Rcs-0.13 [jlam 2004-12-26]
+	Added p5-Kwiki-BreadCrumbs-0.11 [jlam 2004-12-26]
+	Added p5-Kwiki-RecentChanges-0.12 [jlam 2004-12-26]
+	Added p5-Kwiki-Revisions-0.13 [jlam 2004-12-26]
+	Added p5-Kwiki-Search-0.12 [jlam 2004-12-26]
+	Added p5-Kwiki-UserName-0.13 [jlam 2004-12-26]
+	Added p5-Kwiki-UserPreferences-0.12 [jlam 2004-12-26]
