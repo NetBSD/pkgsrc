@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1.1.1 2001/01/15 12:42:09 skrll Exp $
+
+--- configure.orig	Fri Oct  6 19:16:43 2000
++++ configure
+@@ -1308,6 +1308,7 @@
+                             *)            osver=HPUX11;;
+                         esac;;
+         *-*-mvs*)       platform=OS390 ;;
++        *-*-netbsd*) platform=NETBSD ;;
+         *)              platform=UNKNOWN ;;
+ esac
+ 
