@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/16 06:18:18 lukem Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/16 07:06:03 agc Exp $
 
 DISTNAME=	abcde_2.0.orig
 PKGNAME=	abcde-2.0
@@ -16,14 +16,13 @@ DEPENDS+=	wget>=1.7:../../net/wget
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
 
+NO_BUILD=	# defined
+
 post-patch:
 	@cd ${WRKSRC} && for f in abcde abcde.1; do			\
 		${SED} "s,@ETCDIR@,${PREFIX}/etc," $$f > $$f.tmp &&	\
 		${MV} $$f.tmp $$f;					\
 	done
-
-do-build:
-	@ :	# nothing
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/abcde ${PREFIX}/bin
