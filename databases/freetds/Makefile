@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2003/06/11 13:24:09 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/13 13:50:55 wiz Exp $
 
 DISTNAME=	freetds-0.61
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/ALPHA/freetds/stable/
 EXTRACT_SUFX=	.tgz

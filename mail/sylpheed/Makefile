@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2003/07/04 19:17:37 chris Exp $
+# $NetBSD: Makefile,v 1.43 2003/07/13 13:52:28 wiz Exp $
 
 DISTNAME=	sylpheed-0.9.3
 #PKGREVISION=	2
+PKGREVISION=	1
 CATEGORIES=	mail news x11
 MASTER_SITES=	http://sylpheed.good-day.net/sylpheed/
 EXTRACT_SUFX=	.tar.bz2

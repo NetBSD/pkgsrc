@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2003/06/18 09:22:19 agc Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/13 13:52:22 wiz Exp $
 
 DISTNAME=		nhc98src-1.16
 PKGNAME=		nhc98-1.16
+PKGREVISION=				1
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.cs.york.ac.uk/pub/haskell/nhc98/

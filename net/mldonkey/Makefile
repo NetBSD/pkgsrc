@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2003/06/10 12:13:05 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/13 13:52:56 wiz Exp $
 #
 
 DISTNAME=	mldonkey-${VER}.sources
 VER=		2.5-3
 PKGNAME=	mldonkey-${VER:S/-/./}
+PKGREVISION=			1
 WRKSRC=		${WRKDIR}/mldonkey-${VER}
 CATEGORIES=	net
 MASTER_SITES=	http://savannah.nongnu.org/download/mldonkey/release-${VER}/official/

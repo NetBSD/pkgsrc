@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/05/12 14:56:20 jmc Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/07/13 13:52:59 wiz Exp $
 
 .if !defined(PYORBIT_BUILDLINK2_MK)
 PYORBIT_BUILDLINK2_MK=	# defined
@@ -7,7 +7,7 @@ PYTHON_VERSION_REQD=	22pth
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_PACKAGES+=			pyorbit
-BUILDLINK_DEPENDS.pyorbit?=		${PYPKGPREFIX}-ORBit>=1.99.4
+BUILDLINK_DEPENDS.pyorbit?=		${PYPKGPREFIX}-ORBit>=1.99.4nb1
 BUILDLINK_PKGSRCDIR.pyorbit?=		../../net/py-ORBit
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.pyorbit=${PYPKGPREFIX}-ORBit

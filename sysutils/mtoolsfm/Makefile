@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2003/07/02 17:42:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/13 13:53:20 wiz Exp $
 #
 
 DISTNAME=	MToolsFM-1.9-3
 PKGNAME=	mtoolsfm-1.9.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.core-coutainville.org/MToolsFM/archive/SOURCES/
 
