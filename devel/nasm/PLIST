@@ -1,15 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2004/02/16 13:12:23 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/02/25 11:42:17 adam Exp $
+bin/ldrdf
 bin/nasm
 bin/ndisasm
-bin/rdfdump
-bin/ldrdf
-bin/rdx
-bin/rdflib
 bin/rdf2bin
-bin/rdf2ihx
 bin/rdf2com
+bin/rdf2ihx
+bin/rdfdump
+bin/rdflib
+bin/rdx
 man/man1/nasm.1
 man/man1/ndisasm.1
+share/doc/html/nasm/nasmdo10.html
 share/doc/html/nasm/nasmdoc0.html
 share/doc/html/nasm/nasmdoc1.html
 share/doc/html/nasm/nasmdoc2.html
@@ -20,7 +21,6 @@ share/doc/html/nasm/nasmdoc6.html
 share/doc/html/nasm/nasmdoc7.html
 share/doc/html/nasm/nasmdoc8.html
 share/doc/html/nasm/nasmdoc9.html
-share/doc/html/nasm/nasmdo10.html
 share/doc/html/nasm/nasmdoca.html
 share/doc/html/nasm/nasmdocb.html
 share/doc/html/nasm/nasmdoci.html
