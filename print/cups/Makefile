@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/12/12 16:03:13 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2000/12/14 17:04:44 jlam Exp $
 #
 
 DISTNAME=		cups-1.1.4-source
@@ -26,6 +26,8 @@ USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-libtool-unsupported="${LIBTOOL}"
 CONFIGURE_ARGS+=	--enable-rootconfig
+CONFIGURE_ARGS+=	--with-cups-user="${CUPS_USER}"
+CONFIGURE_ARGS+=	--with-cups-group="${CUPS_GROUP}"
 
 CFLAGS+=		-I${LOCALBASE}/include
 
@@ -71,11 +73,6 @@ pre-patch:
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
-
-post-configure:
-	${SED}	-e "s,@CUPS_USER@,${CUPS_USER},g" \
-		-e "s,@CUPS_GROUP@,${CUPS_GROUP},g" \
-		< ${WRKSRC}/conf/cupsd.conf.in > ${WRKSRC}/conf/cupsd.conf
 
 post-build:
 	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
