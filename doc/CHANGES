@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1004 2003/01/04 11:09:17 jmmv Exp $
+$NetBSD: CHANGES,v 1.1005 2003/01/04 11:21:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -69,3 +69,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-PerlMagick to 5.5.3.2 [wiz 2003-01-04]
 	Updated libgnome to 2.0.6 [jmmv 2003-01-04]
 	Updated libbonoboui to 2.0.3.3 [jmmv 2003-01-04]
+	Updated groff to 1.18.1 [wiz 2003-01-04]
