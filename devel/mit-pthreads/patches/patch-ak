@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.8 1999/09/10 20:38:23 bad Exp $
+$NetBSD: patch-ak,v 1.9 2000/08/06 19:55:47 fredb Exp $
 
 --- config/configure.in.orig	Wed Nov 13 22:03:08 1996
 +++ config/configure.in	Fri Sep 10 20:54:50 1999
@@ -7,7 +7,7 @@ $NetBSD: patch-ak,v 1.8 1999/09/10 20:38:23 bad Exp $
  
  case $host in
 +changequote(,)dnl
-+    alpha-*-netbsd1.3[H-Z]|alpha-*-netbsd1.4*) 
++    alpha-*-netbsd1.3[H-Z]|alpha-*-netbsd1.[45]*) 
 +	name=alpha-netbsd-1.3
 +	sysincludes=netbsd-1.1
 +	except="fork lseek pipe fstat"
@@ -27,7 +27,7 @@ $NetBSD: patch-ak,v 1.8 1999/09/10 20:38:23 bad Exp $
  	fi
  	;;
 +changequote(,)dnl
-+    arm32-*-netbsd1.3[H-Z]|arm32-*-netbsd1.4*)
++    arm32-*-netbsd1.3[H-Z]|arm32-*-netbsd1.[45]*)
 +	name=arm32-netbsd-1.3
 +	sysincludes=netbsd-1.1
 +	except="fork pipe lseek ftruncate fstat"
@@ -47,7 +47,7 @@ $NetBSD: patch-ak,v 1.8 1999/09/10 20:38:23 bad Exp $
  	AC_DEFINE(BROKEN_SIGNALS)
  	;;
 +changequote(,)dnl
-+    sparc-*-netbsd1.3[H-Z]|sparc-*-netbsd1.4*)
++    sparc-*-netbsd1.3[H-Z]|sparc-*-netbsd1.[45]*)
 +	name=sparc-netbsd-1.3
 +	sysincludes=netbsd-1.1
 +	except="pipe fork lseek ftruncate fstat"
@@ -67,7 +67,7 @@ $NetBSD: patch-ak,v 1.8 1999/09/10 20:38:23 bad Exp $
          except="fork lseek sigsuspend"
  		;;
 +changequote(,)dnl
-+    i386-*-netbsd1.3[H-Z]|i386-*-netbsd1.4*)
++    i386-*-netbsd1.3[H-Z]|i386-*-netbsd1.[45]*)
 +	name=i386-netbsd-1.3
 +	sysincludes=netbsd-1.1
 +	except="fork lseek ftruncate pipe fstat"
@@ -88,7 +88,7 @@ $NetBSD: patch-ak,v 1.8 1999/09/10 20:38:23 bad Exp $
  	;;
 -    m68*-*-netbsd*)
 +changequote(,)dnl
-+    m68*-*-netbsd1.3[H-Z]|m68*-*-netbsd1.4*)
++    m68*-*-netbsd1.3[H-Z]|m68*-*-netbsd1.[45]*)
  	name=m68000-netbsd
 +	sysincludes=netbsd-1.1
 +	except="lseek ftruncate pipe fstat"
