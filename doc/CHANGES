@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8756 2005/01/14 16:03:16 jmmv Exp $
+$NetBSD: CHANGES,v 1.8757 2005/01/14 18:41:54 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -307,3 +307,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mathomatic to 11.6d [minskim 2005-01-14]
 	Updated p5-Net-SNMP to 5.0.1 [jschauma 2005-01-14]
 	Added CRWInfo-0.2 [jmmv 2005-01-14]
+	Updated py-docutils to 0.3.7 [darcy 2005-01-14]
