@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.973.2.2 2002/05/08 21:20:55 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.973.2.3 2002/05/11 01:32:58 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -924,6 +924,7 @@ PKGREPOSITORYSUBDIR?=	All
 PKGREPOSITORY?=		${PACKAGES}/${PKGREPOSITORYSUBDIR}
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
 
+CONFIGURE_DIRS?=	${WRKSRC}
 CONFIGURE_SCRIPT?=	./configure
 CONFIGURE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
 
@@ -1874,7 +1875,8 @@ automake-post-override:
 .if !target(do-configure)
 do-configure: ${_CONFIGURE_PREREQ}
 .  if defined(HAS_CONFIGURE)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} \
+.    for DIR in ${CONFIGURE_DIRS}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${DIR} && ${SETENV} \
 	    CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" \
 	    CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" FC="${FC}" F77="${FC}" FFLAGS="${FFLAGS}" \
 	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
@@ -1883,6 +1885,7 @@ do-configure: ${_CONFIGURE_PREREQ}
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 	    ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+.    endfor
 .  endif
 .  if defined(USE_IMAKE)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF}
