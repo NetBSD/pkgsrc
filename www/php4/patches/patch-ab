@@ -1,15 +1,40 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/17 09:19:32 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2000/12/25 21:03:47 jlam Exp $
 
---- ext/standard/config.m4.orig	Wed Nov  1 12:20:14 2000
-+++ ext/standard/config.m4	Wed Nov  1 12:20:36 2000
-@@ -120,10 +120,6 @@ main() {
+--- configure.orig	Wed Dec 20 02:44:27 2000
++++ configure
+@@ -18746,7 +18746,7 @@
+       ln -s "$IMAP_DIR/lib/c-client.a" "$IMAP_DIR/lib/libc-client.a" >/dev/null 2>&1
+     fi
  
- AC_CHECK_FUNC(dlopen, [AC_DEFINE(HAVE_LIBDL,1,[ ])])
+-    for lib in imap c-client4 c-client; do
++    for lib in imapuw imap c-client4 c-client; do
+       IMAP_LIB=$lib
+       
+ 		str="$IMAP_DIR/lib/lib$lib.*"
+@@ -40172,6 +40172,7 @@
+ fi
  
--AC_CHECK_LIB(pam, pam_start, [
--  EXTRA_LIBS="$EXTRA_LIBS -lpam"
--  AC_DEFINE(HAVE_LIBPAM,1,[ ]) ], []) 
--
- AC_CHECK_FUNCS(getcwd getwd)
  
- AC_CRYPT_CAP
++if false; then
+ echo $ac_n "checking for pam_start in -lpam""... $ac_c" 1>&6
+ echo "configure:40177: checking for pam_start in -lpam" >&5
+ ac_lib_var=`echo pam'_'pam_start | sed 'y%./+-%__p_%'`
+@@ -40216,6 +40217,8 @@
+ else
+   echo "$ac_t""no" 1>&6
+ fi
++
++fi # if false
+  
+ 
+ for ac_func in getcwd getwd
+@@ -47326,9 +47329,6 @@
+ 
+     $SHELL $srcdir/ltconfig --output=shlibtool --disable-static --srcdir=$srcdir --cache-file=./config.cache $srcdir/ltmain.sh
+     SHARED_LIBTOOL='$(SHELL) $(top_builddir)/shlibtool'
+-  else
+-    PHP_COMPILE='$(COMPILE) -c $< && touch $@'
+-    CXX_PHP_COMPILE='$(CXX_COMPILE) -c $< && touch $@'
+   fi
+ fi
+ 

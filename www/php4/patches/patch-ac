@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2000/12/17 17:18:49 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2000/12/25 21:03:47 jlam Exp $
 
 --- ext/imap/config.m4.orig	Mon Oct  2 18:16:53 2000
 +++ ext/imap/config.m4
