@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.262 2002/09/19 12:48:04 lukem Exp $
+# $NetBSD: Packages.txt,v 1.263 2002/10/21 01:21:46 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -1098,7 +1098,7 @@ LIBTOOL_OVERRIDE=${WRKSRC}/libtool instead.
 
 If your package makes use of the platform independent library for loading
 dynamic shared objects, that comes with libtool (libltdl), you should
-add USE_LTDL= yes to the Makefile.
+include the libtool buildlink2.mk (and set USE_BUILDLINK2 to YES).
 
 Some packages use libtool incorrectly so that the package may not work or
 build in some circumstances. Some common errors are
@@ -1665,11 +1665,7 @@ buildlink.mk instead.  The following variables may also be replaced with
 buildlink.mk files:
 
     USE_LIBINTL	-->	.include "../../devel/gettext-lib/buildlink.mk"
-    USE_LTDL	-->	.include "../../devel/libtool/buildlink.mk"
-    USE_MESA	-->	.include "../../graphics/Mesa/buildlink.mk"
-    USE_MOTIF	-->	.include "../../mk/motif.buildlink.mk"
     USE_X11	-->	.include "../../mk/x11.buildlink.mk"
-    USE_XAW	-->	.include "../../mk/xaw.buildlink.mk"
     USE_XPM	-->	.include "../../graphics/xpm/buildlink.mk"
 
 Packages that have an explicit dependency on ncurses should set USE_NCURSES
