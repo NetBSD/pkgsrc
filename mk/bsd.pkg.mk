@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.386 2000/01/10 19:17:27 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.387 2000/01/10 19:43:37 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2180,7 +2180,13 @@ misc-depends: uptodate-pkgtools
 	dir="`${ECHO} \"${dep}\" | ${SED} -e s/.\*://`";		\
 	found="`${PKG_INFO} -e \"$$package\" || ${TRUE}`";		\
 	if [ X"$$found" != X"" ]; then					\
-		${ECHO_MSG} "===>  ${PKGNAME} depends on installed package: $$package - `${ECHO} $$found | ${SED} -e 's|${PKG_DBDIR}/||g' | tr '\012' '\040'`found"; \
+		if [ `${ECHO} $$found | wc -w` -gt 1 ]; then		\
+			${ECHO} '***' "WARNING: Dependency on '$$package' expands to several installed packages " ; \
+			${ECHO} "    (" `${ECHO} $$found` ")." ; 	\
+			${ECHO} "    Please check if this is really intended!" ; \
+		else 							\
+			${ECHO_MSG} "===>  ${PKGNAME} depends on installed package: $$package - `${ECHO} $$found | ${SED} -e 's|${PKG_DBDIR}/||g' | tr '\012' '\040'`found"; \
+		fi ; 							\
 	else								\
 		${ECHO_MSG} "===>  ${PKGNAME} depends on package: $$package"; \
 		target=${DEPENDS_TARGET};				\
@@ -2574,7 +2580,12 @@ fake-pkg: ${PLIST} ${DESCR}
 		fi;							\
 		for dep in `${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true ECHO_MSG=${TRUE} | sort -u`; do \
 			realdep="`${PKG_INFO} -e \"$$dep\" || ${TRUE}`" ; \
-			${ECHO} "a sanity check should be put in here to prevent some user having the pkg installed/registered twice somehow - HF" >/dev/null ; \
+			if [ `${ECHO} $$realdep | wc -w` -gt 1 ]; then 				\
+				${ECHO} '***' "WARNING: '$$dep' expands to several installed packages " ; \
+				${ECHO} "    (" `${ECHO} $$realdep` ")." ; \
+				${ECHO} "    Please check if this is really intended!" ; \
+				continue ; 				\
+			fi ; 						\
 			if ${TEST} -z "$$realdep"; then			\
 				${ECHO} "$$dep not installed - NOT registered" ; \
 			elif [ -d ${PKG_DBDIR}/$$realdep ]; then	\
