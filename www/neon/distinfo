@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/11/25 20:01:43 wiz Exp $
+$NetBSD: distinfo,v 1.6 2003/01/22 16:23:40 jmmv Exp $
 
-SHA1 (neon-0.23.5.tar.gz) = c58c2174c5340618e6479efff1a5bcb2b16294c2
-Size (neon-0.23.5.tar.gz) = 505880 bytes
+SHA1 (neon-0.23.6.tar.gz) = c4e16727fb6889ace5151042ac1ddf595be76c20
+Size (neon-0.23.6.tar.gz) = 507680 bytes
