@@ -1,8 +1,8 @@
 #
-# $NetBSD: Makefile,v 1.3 2001/07/13 07:09:25 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/15 17:25:09 martti Exp $
 #
 
-DISTNAME=		cvsweb-1.93
+DISTNAME=		cvsweb-1.112
 CATEGORIES=		net
 MASTER_SITES=		http://stud.fh-heilbronn.de/~zeller/download/
 
