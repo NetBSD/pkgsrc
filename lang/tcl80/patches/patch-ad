@@ -1,0 +1,60 @@
+--- ../generic/panic.c.orig	Wed Oct 23 12:02:05 1996
++++ ../generic/panic.c	Thu Apr 23 10:38:15 1998
+@@ -34,7 +34,7 @@
+  * specific panic procedure.
+  */
+ 
+-void (*panicProc) _ANSI_ARGS_(TCL_VARARGS(char *,format)) = NULL;
++Tcl_PanicProc *panicProc = NULL;
+ 
+ /*
+  *----------------------------------------------------------------------
+@@ -54,7 +54,7 @@
+ 
+ void
+ Tcl_SetPanicProc(proc)
+-    void (*proc) _ANSI_ARGS_(TCL_VARARGS(char *,format));
++    Tcl_PanicProc *proc;
+ {
+     panicProc = proc;
+ }
+--- ../generic/tcl.h.orig	Thu Nov 20 15:40:44 1997
++++ ../generic/tcl.h	Thu Apr 23 10:38:33 1998
+@@ -329,6 +329,7 @@
+ typedef int (Tcl_ObjCmdProc) _ANSI_ARGS_((ClientData clientData,
+ 	Tcl_Interp *interp, int objc, struct Tcl_Obj * CONST objv[]));
+ typedef int (Tcl_PackageInitProc) _ANSI_ARGS_((Tcl_Interp *interp));
++typedef void (Tcl_PanicProc) _ANSI_ARGS_(TCL_VARARGS(char *, format));
+ typedef void (Tcl_TcpAcceptProc) _ANSI_ARGS_((ClientData callbackData,
+         Tcl_Channel chan, char *address, int port));
+ typedef void (Tcl_TimerProc) _ANSI_ARGS_((ClientData clientData));
+@@ -1402,8 +1403,7 @@
+ 			    int length));
+ EXTERN void		Tcl_SetObjResult _ANSI_ARGS_((Tcl_Interp *interp,
+ 			    Tcl_Obj *resultObjPtr));
+-EXTERN void		Tcl_SetPanicProc _ANSI_ARGS_((void (*proc)
+-			    _ANSI_ARGS_(TCL_VARARGS(char *, format))));
++EXTERN void		Tcl_SetPanicProc _ANSI_ARGS_((Tcl_PanicProc *proc));
+ EXTERN int		Tcl_SetRecursionLimit _ANSI_ARGS_((Tcl_Interp *interp,
+ 			    int depth));
+ EXTERN void		Tcl_SetResult _ANSI_ARGS_((Tcl_Interp *interp,
+--- ../mac/tclMacPanic.c.orig	Fri Nov 21 18:54:37 1997
++++ ../mac/tclMacPanic.c	Thu Apr 23 10:38:10 1998
+@@ -45,7 +45,7 @@
+  * specific panic procedure.
+  */
+ 
+-void (*panicProc) _ANSI_ARGS_(TCL_VARARGS(char *,format)) = NULL;
++Tcl_PanicProc *panicProc = NULL;
+ 
+ /*
+  *----------------------------------------------------------------------
+@@ -65,7 +65,7 @@
+ 
+ void
+ Tcl_SetPanicProc(proc)
+-    void (*proc) _ANSI_ARGS_(TCL_VARARGS(char *,format));
++    Tcl_PanicProc *proc;
+ {
+     panicProc = proc;
+ }
