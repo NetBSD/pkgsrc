@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2004/05/06 14:44:53 taca Exp $
+$NetBSD: distinfo,v 1.53 2004/06/04 15:33:05 taca Exp $
 
 SHA1 (squid-2.5.5/squid-2.5.STABLE5.tar.bz2) = fd632ebaad656566db11cf875868b19a9b4a71db
 Size (squid-2.5.5/squid-2.5.STABLE5.tar.bz2) = 1044932 bytes
@@ -40,6 +40,24 @@ SHA1 (squid-2.5.5/squid-2.5.STABLE5-vary_negatively.patch) = fbf28253dc325e3e0bf
 Size (squid-2.5.5/squid-2.5.STABLE5-vary_negatively.patch) = 2308 bytes
 SHA1 (squid-2.5.5/squid-2.5.STABLE5-range_offset_limit.patch) = 3c4399608b95ab341ba93609ac531818c7ba106f
 Size (squid-2.5.5/squid-2.5.STABLE5-range_offset_limit.patch) = 565 bytes
+SHA1 (squid-2.5.5/squid-2.5.STABLE5-large_cache_mem.patch) = 67d9cd31327c6e88f9c1921ba0b8a8500029ffa7
+Size (squid-2.5.5/squid-2.5.STABLE5-large_cache_mem.patch) = 1848 bytes
+SHA1 (squid-2.5.5/squid-2.5.STABLE5-least-load.patch) = 133b2dd6b64dec04c0fc421f1cc1d5a3ec2ebfa5
+Size (squid-2.5.5/squid-2.5.STABLE5-least-load.patch) = 2638 bytes
+SHA1 (squid-2.5.5/squid-2.5.STABLE5-cacheCurrentUnlinkRequests.patch) = 4d4c6de195e01da97a4acd9ef869d27665058a60
+Size (squid-2.5.5/squid-2.5.STABLE5-cacheCurrentUnlinkRequests.patch) = 1449 bytes
+SHA1 (squid-2.5.5/squid-2.5.STABLE5-debug_client_ip.patch) = ede058b5a2580d09b338b1f0ee118e44db09812b
+Size (squid-2.5.5/squid-2.5.STABLE5-debug_client_ip.patch) = 2104 bytes
+SHA1 (squid-2.5.5/squid-2.5.STABLE5-openbsd_m88k.patch) = fee467a13f364a6bcb8675eae746f05194dbd8a2
+Size (squid-2.5.5/squid-2.5.STABLE5-openbsd_m88k.patch) = 1360 bytes
+SHA1 (squid-2.5.5/squid-2.5.STABLE5-ftp_html_doctype.patch) = ec4430d1670b897b2c3b3d34ffcd7bc71a2fdf36
+Size (squid-2.5.5/squid-2.5.STABLE5-ftp_html_doctype.patch) = 1266 bytes
+SHA1 (squid-2.5.5/squid-2.5.STABLE5-dns_localhost.patch) = 73be7a23e0aec3304c1597a8c003c40371b99a68
+Size (squid-2.5.5/squid-2.5.STABLE5-dns_localhost.patch) = 1408 bytes
+SHA1 (squid-2.5.5/squid-2.5.STABLE5-msnt_auth_doc.patch) = 9177b064a207fa0582fe18b6a965746bf7b3fa33
+Size (squid-2.5.5/squid-2.5.STABLE5-msnt_auth_doc.patch) = 16644 bytes
+SHA1 (squid-2.5.5/squid-2.5.STABLE5-va_copy.patch) = 80a29fcfd318897f626b22022992a0917dc400f1
+Size (squid-2.5.5/squid-2.5.STABLE5-va_copy.patch) = 4524 bytes
 SHA1 (patch-aa) = 2e0d96f6ccb9d0c42db2da49e76846edad09624f
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
