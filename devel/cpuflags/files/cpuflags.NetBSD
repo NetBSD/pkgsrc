@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.11 2001/11/27 01:18:32 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.12 2001/11/27 02:31:48 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -13,6 +13,7 @@ case $hw_model in
     # i386
     *386-class*)	FLAGS='-march=i386'		;;
     *486-class*)	FLAGS='-march=i486'		;;
+    *AMD\ K6*)		FLAGS='-march=k6'		;;
     *586-class*)	FLAGS='-march=pentium'		;;
     *686-class*)	FLAGS='-march=pentiumpro'	;;
     #
@@ -33,10 +34,12 @@ case $hw_model in
 	case $hw_machine in
 	    cats|dnard|hpcarm|netwinder)
 		FLAGS="-mcpu=strongarm110" ;;
+	    acorn32)
+		FLAGS="-march=armv3m -mtune=strongarm" ;;
 	    *)
 		# The memorybus in strongarm risc pc machines cannot support
 		# certain strongarm instructions, but in 1.5 and earlier all
-		# strongarm machines are 'arm32', so uname or sysctl no use
+		# strongarm machines are 'arm32', so uname and sysctl no use
 		if egrep -q ofbus0|footbridge0 /var/run/dmesg.boot 2>/dev/null \
 									; then
 		    FLAGS="-mcpu=strongarm110"			   # dnard/cats
@@ -56,29 +59,27 @@ case $hw_model in
 	esac
 esac
 
+# Fixup flags for old gcc
 if [ -n "$FLAGS" ]; then
-    gcc_ver=`gcc -v 2>&1 | awk '/gcc version/ {print $3}'`
-    case $gcc_ver in
-	egcs* )
-	    gcc_ver=2.8 ;;
-    esac
-
-    # Old gcc, such as 2.7.x in NetBSD 1.3
-    if [ "$gcc_ver" \< 2.8 ]; then
-	FLAGS=`awk -v "flags=$FLAGS" '
-{map["-m"$1] = "-m"$2}
-END{print map[flags]}' <<EOD
-arch=i386		no-486
-arch=i486		486
-arch=pentium		486
-arch=pentiumpro		486
-cpu=supersparc		supersparc
-cpu=sparclite		sparclite
-cpu=cypress		cypress
-cpu=v9			v8
+    gcc_ver=`gcc -v 2>&1 | awk '/gcc version/ {sub("egcs-","");print $3}'`
+    FLAGS=`awk -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
+	{if (gcc_ver < $1){map["-m"$2] = "-m"$3}}
+	END{if (map[flags]) {print map[flags]}else {print flags}}
+	' <<EOD
+2.90	arch=i386		no-486
+2.90	arch=i486		486
+2.90	arch=pentium		486
+2.90	arch=pentiumpro		486
+2.90	cpu=supersparc		supersparc
+2.90	cpu=sparclite		sparclite
+2.90	cpu=cypress		cypress
+2.90	cpu=v9			v8
+2.90	cpu=arm610		6
+2.90	cpu=strongarm110	6
+2.90	cpu=arm710		6
+2.95	arch=k6			arch=pentium
 EOD
 `
-    fi
 fi
 
 echo $FLAGS
