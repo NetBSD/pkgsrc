@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
+$NetBSD: patch-aa,v 1.2 2000/01/20 14:12:50 pooka Exp $
 
 --- sconfig.h.orig	Thu Oct 21 22:06:12 1999
-+++ sconfig.h	Sat Jan  8 22:52:06 2000
-@@ -285,6 +285,36 @@
++++ sconfig.h	Wed Jan 12 15:09:48 2000
+@@ -285,6 +285,37 @@
  
  #endif
  
@@ -30,6 +30,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
 +
 +#if defined(__alpha__)
 +# define SIXTY_FOUR_BIT_INTEGERS
++# define USE_DIVIDE_MAKE_INFINITY
 +#endif
 +
 +# define FLAGS_ALREADY_SET
@@ -39,7 +40,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/01/10 22:09:15 pooka Exp $
    /************** x86/OpenBSD with gcc ****************/
                /* Thanks to Bengt Kleberg */
  
-@@ -505,7 +535,7 @@
+@@ -505,7 +536,7 @@
  
    /************** ALPHA/OSF1 with gcc ****************/
  
