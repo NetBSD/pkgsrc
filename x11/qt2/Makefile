@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 17:06:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/07/15 20:18:20 jlam Exp $
 #
 
-DISTNAME=	qt2-${QTVERSION}
+DISTNAME=	qt2-${QTVERSION}nb1
 CATEGORIES=	x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,7 +11,7 @@ COMMENT=	"meta-package" for the QT GUI C++ toolkit
 .include "Makefile.common"
 
 DEPENDS+=	qt2-libs-${QTVERSION}:../../x11/qt2-libs
-DEPENDS+=	qt2-designer-${QTVERSION}:../../x11/qt2-designer
+DEPENDS+=	{qt2-designer-${QTVERSION}nb1,qt2-designer-kde-${QTVERSION}nb1}:../../x11/qt2-designer
 DEPENDS+=	qt2-docs-${QTVERSION}:../../x11/qt2-docs
 DEPENDS+=	qt2-examples-${QTVERSION}:../../x11/qt2-examples
 
