@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/03/20 00:07:36 fredb Exp $
+# $NetBSD: Makefile,v 1.28 2001/03/30 13:49:23 zuntum Exp $
 # FreeBSD Id: Makefile,v 1.28 1997/12/08 15:51:20 tg Exp
 #
 
@@ -24,7 +24,7 @@ post-install:
 	${SED} -e 's|@@LOCALBASE@@|${LOCALBASE}|' \
 		-e 's|@@PREFIX@@|${PREFIX}|' \
 		-e 's|@@X11BASE@@|${X11BASE}|' \
-		< ${FILESDIR}/mkindex > ${WRKDIR}/mkindex
+		${FILESDIR}/mkindex > ${WRKDIR}/mkindex
 	${INSTALL_SCRIPT} ${WRKDIR}/mkindex ${PREFIX}/libexec
 
 .include "../../mk/bsd.pkg.mk"
