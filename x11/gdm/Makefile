@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/07/11 14:53:46 agc Exp $
+# $NetBSD: Makefile,v 1.12 2000/07/14 16:04:27 agc Exp $
 
 DISTNAME=	gdm-2.0beta4
 PKGNAME=	gdm-2.0b4
@@ -62,7 +62,7 @@ post-build:
 	cd ${WRKSRC}/config;						\
 	${RM} -f KDE Xsession;						\
 	${ECHO} '#! ${SH}' >KDE;					\
-	${ECHO} "export KDEDIR=`${MAKE} show-kdebase-prefix`" >>KDE; \
+	${ECHO} "export KDEDIR=`${SHOW_PREFIX1} kdebase ${SHOW_PREFIX2}`" >>KDE; \
 	${ECHO} 'exec $${KDEDIR}/bin/startkde $$@' >>KDE;		\
 	${ECHO} '#! ${SH}' >Xsession;					\
 	${ECHO} 'exec ${X11BASE}/lib/X11/xdm/Xsession $$@' >>Xsession;	\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/07/11 14:53:48 agc Exp $
+# $NetBSD: Makefile,v 1.9 2000/07/14 16:04:30 agc Exp $
 
 DISTNAME=	xfce-3.3.1
 CATEGORIES=	x11
@@ -18,8 +18,8 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	XFCE_LOCALE_DIR=${PREFIX}/share/locale
 CONFIGURE_ARGS+=--without-included-gettext \
 		--datadir=${PREFIX}/share \
-		--with-imlib=`${MAKE} show-imlib-prefix` \
-		--with-xpm=`${MAKE} show-xpm-prefix`
+		--with-imlib=`${SHOW_PREFIX1} imlib ${SHOW_PREFIX2}` \
+		--with-xpm=`${SHOW_PREFIX1} xpm ${SHOW_PREFIX2}`
 USE_GMAKE=	yes
 
 .include "../../mk/bsd.pkg.mk"
