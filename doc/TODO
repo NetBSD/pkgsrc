@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2810 2005/01/01 23:51:52 wiz Exp $
+$NetBSD: TODO,v 1.2811 2005/01/02 03:19:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -276,6 +276,7 @@ Suggested package updates
 	o abiword1-1.0.7
 	o acpi-iasl-20040715
 	o adzap-20041124
+	o aewm++-1.0.27
 	o afterstep-2.00.01
 	o aim-1.5.286
 	o ald-0.1.6 [pkg/26431]
@@ -315,6 +316,7 @@ Suggested package updates
 	o astyle-1.15.3
 	o atari800-1.3.4
 	o auctex-11.53
+	o autogen-5.6.5
 	o avidemux-2.0.34
 	o avl-2.0.1
 	o balsa-1.4.4
@@ -412,6 +414,7 @@ Suggested package updates
 	o docbook-4.3
 	o docbook-website-2.5.0
 	o docsis-0.9.1
+	o doxygen-1.4.0
 	o dpkg-1.10.25
 	o drscheme-208
 	o dsssl-docbook-modular-1.79
@@ -483,7 +486,9 @@ Suggested package updates
 	o gdeskcal-0.57.1
 	o gdm-2.6.0.6
 	o gdm1-2.2.5.5
+	o geda-20041228
 	o generator-0.35
+	o gentoo-0.11.54
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
@@ -518,6 +523,7 @@ Suggested package updates
 	o grap-1.32
 	o grepmail-5.3030
 	o gri-2.12.8
+	o gsasl-0.2.4
 	o gsed-4.1.2
 	o gst-plugins-0.8.6
 	o gtar-1.15
@@ -550,6 +556,7 @@ Suggested package updates
 	o idesk-0.5.6
 	o ijs-0.35
 	o inkscape-0.40
+	o inn-2.4.2
 	o intercal-0.24 [dillo]
 	o ion3-devel-20041104
 	o ipcheck-0.219
@@ -578,6 +585,7 @@ Suggested package updates
 	o john-1.6.37
 	o jove-4.16.0.65
 	o jpilot-0.99.7 [pkg/24635]
+	o kapooka-0.3
 	o kdebindings2-2.2.2
 	o kdrill-6.3.1
 	o kinput2-3.1
@@ -645,6 +653,7 @@ Suggested package updates
 	o mapserver-4.2.5
 	o maradns-1.0.23
 	o marbles-1.0.6
+	o mathomatic-11.6b
 	o mc-4.6.0 [pkgsrc-wip]
 	o memtest86-3.2
 	o mergeant-0.52
@@ -717,7 +726,7 @@ Suggested package updates
 	o openoffice-linux-1.1.4
 	o openvpn-1.6.0
 	o opera7-7.54u1
-	o oregano-0.21
+	o oregano-0.40.1
 	o oroborus-2.0.13.1
 	o oss-3.99.1i [also available for 2.0]
 	o p5-Apache-ASP-2.57
