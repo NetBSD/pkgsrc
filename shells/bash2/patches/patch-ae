@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2000/02/24 23:04:07 tron Exp $
+$NetBSD: patch-ae,v 1.5 2000/03/30 11:56:32 wiz Exp $
 
---- builtins/enable.def.orig	Fri Jul 18 15:55:00 1997
-+++ builtins/enable.def	Tue Aug  4 21:18:05 1998
-@@ -290,9 +290,16 @@
+--- builtins/enable.def.orig	Thu Aug  5 13:41:13 1999
++++ builtins/enable.def	Thu Mar 30 13:08:21 2000
+@@ -305,9 +305,16 @@
        name = list->word->word;
  
        size = strlen (name);
