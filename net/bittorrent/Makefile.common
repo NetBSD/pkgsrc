@@ -1,13 +1,12 @@
-# $NetBSD: Makefile.common,v 1.9 2005/01/23 20:41:48 recht Exp $
+# $NetBSD: Makefile.common,v 1.10 2005/03/28 14:43:10 recht Exp $
 #
 
-DISTNAME=	BitTorrent-3.4.2
+DISTNAME=	BitTorrent-4.0.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bittorrent/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	recht@NetBSD.org
-HOMEPAGE=	http://bitconjurer.org/BitTorrent/
+HOMEPAGE=	http://www.bittorrent.com/
 COMMENT=	File sharing tool
 
 DISTINFO_FILE=	${.CURDIR}/../../net/bittorrent/distinfo

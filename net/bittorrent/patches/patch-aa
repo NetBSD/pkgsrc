@@ -1,16 +1,15 @@
-$NetBSD: patch-aa,v 1.5 2005/02/13 13:53:34 recht Exp $
+$NetBSD: patch-aa,v 1.6 2005/03/28 14:43:10 recht Exp $
 
---- setup.py.orig	Mon Mar 17 20:34:41 2003
-+++ setup.py
-@@ -18,9 +18,9 @@ setup(
-     
-     packages = ["BitTorrent"],
+--- setup.py.orig	Mon Mar 28 16:23:38 2005
++++ setup.py	Mon Mar 28 16:26:30 2005
+@@ -19,8 +19,8 @@
  
--    scripts = ["btdownloadgui.py", "btdownloadheadless.py", "btdownloadlibrary.py", 
-+    scripts = ["btdownloadheadless.py", "btdownloadlibrary.py", 
-         "bttrack.py", "btmakemetafile.py", "btlaunchmany.py", "btcompletedir.py",
--        "btdownloadcurses.py", "btcompletedirgui.py", "btlaunchmanycurses.py", 
-+        "btdownloadcurses.py", "btlaunchmanycurses.py", 
-         "btmakemetafile.py", "btreannounce.py", "btrename.py", "btshowmetainfo.py",
-         "bttest.py"]
-     )
+ import glob
+ 
+-scripts = ["btdownloadgui.py", "btdownloadcurses.py", "btdownloadheadless.py",
+-           "btmaketorrentgui.py", "btmaketorrent.py",
++scripts = ["btdownloadcurses.py", "btdownloadheadless.py",
++           "btmaketorrent.py",
+            "btlaunchmany.py", "btlaunchmanycurses.py",
+            "bttrack.py", "btreannounce.py", "btrename.py", "btshowmetainfo.py"]
+ 
