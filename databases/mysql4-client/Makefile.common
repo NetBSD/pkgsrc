@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2004/11/01 08:30:24 grant Exp $
+# $NetBSD: Makefile.common,v 1.21 2004/11/08 18:19:41 xtraeme Exp $
 
 DISTNAME=		mysql-4.1.7
 CATEGORIES=		databases
@@ -53,6 +53,10 @@ CONFIGURE_ARGS+=	--with-vio
 CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET}
 CONFIGURE_ARGS+=	--with-extra-charsets=${MYSQL_EXTRA_CHARSET}
 
+.if !empty(MACHINE_ARCH:Mi386)
+CONFIGURE_ARGS+=	--enable-assembler
+.endif
+
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
 
@@ -63,6 +67,15 @@ CPPFLAGS+=		-Dunix
 .if ${OPSYS} == "SunOS"
 CFLAGS+=		-DHAVE_CURSES_H
 CXXFLAGS+=		-DHAVE_CURSES_H
+.endif
+
+.include "../../mk/pthread.buildlink3.mk"
+
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
+CFLAGS+=	-DSIGNALS_DONT_BREAK_READ
+CXXFLAGS+=	-DSIGNALS_DONT_BREAK_READ
+CONFIGURE_ENV+=	ac_cv_func_pthread_setschedparam=no
+CONFIGURE_ENV+=	ac_cv_func_pthread_attr_setschedparam=no
 .endif
 
 USE_LANGUAGES=		c c++
@@ -85,4 +98,3 @@ SUBST_MESSAGE.scripts=	"Fixing scripts."
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
