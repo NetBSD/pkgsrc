@@ -1,0 +1,54 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/06/18 12:27:36 rh Exp $
+
+--- src/sound_driver_oss.cpp.orig	Wed May  9 06:43:01 2001
++++ src/sound_driver_oss.cpp	Thu Jun 14 23:31:06 2001
+@@ -18,7 +18,11 @@
+ #include "sound_driver_oss.h"
+ #include "math.h"
+ 
++#if defined(__NetBSD__)
++#define AUDIO_DEVICE "/dev/audio"
++#else
+ #define AUDIO_DEVICE "/dev/dsp"
++#endif
+ 
+ int Sound_Driver_OSS::init() {
+ 
+@@ -155,16 +159,37 @@
+ 
+ 	int done;
+ 	audio_buf_info buffinf;
++#if defined(__NetBSD__) && SOUND_VERSION <= 0x030000
++	struct audio_info info;
++#endif
+ 
+ 	if (!active) return false;
+ 	
+ 	for (;;) {
+ 
++#if defined(__NetBSD__) && SOUND_VERSION <= 0x030000
++/*
++	This is to work around a bug in NetBSD-1.5.1 and earlier, in which
++	the SNDCTL_DSP_GETOSPACE(&buf_info) ioctl was not handled properly.
++	The correct information is always available via the native audio
++	driver, so use that instead.
++*/
++		if (ioctl(sound_fd, AUDIO_GETINFO, &info) == 0) {
++			buffinf.fragsize = info.blocksize;
++			buffinf.fragments = info.hiwat - info.play.seek /
++				info.blocksize;
++			buffinf.bytes = info.play.buffer_size;
++		} else {
++			buffinf.fragments--;
++			buffinf.fragsize = buffinf.bytes = buffersize;
++		}
++#else
+ 		if ((ioctl(sound_fd,SNDCTL_DSP_GETOSPACE,&buffinf)<0)) {
+ 
+ 			buffinf.fragments--;
+ 			buffinf.fragsize = buffinf.bytes = buffersize;
+ 		}
++#endif
+ 
+                 if(!buffinf.fragments) break;
+ 
