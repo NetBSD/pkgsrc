@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2001/11/01 13:17:18 tron Exp $
+# $NetBSD: Makefile,v 1.57 2001/11/23 23:51:23 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.55.1
+DISTNAME=		xmame-0.56.1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://roms.mame.dk/emu/ \
 			http://x.mame.net/download/
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		kristerw@netbsd.org
 HOMEPAGE=		http://x.mame.net/
 COMMENT=		X11 emulator for old arcade and console machines
-
-DEPENDS=		unzip>=5.40:../../archivers/unzip
 
 RESTRICTED=		"selling is not allowed"
 NO_SRC_ON_CDROM=	${RESTRICTED}
