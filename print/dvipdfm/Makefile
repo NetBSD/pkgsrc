@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:52:25 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/11/07 13:55:02 dmcmahill Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
 PKGREVISION=	1
@@ -16,6 +16,9 @@ CONFLICTS+=	ja-dvipdfm-[0-9]*
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
+# needed to get the stdarg.h version of kpathsea/c-varargs.h instead of the
+# varargs.h version which gcc3 does not like
+CPPFLAGS+=		-DHAVE_PROTOTYPES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,6 +33,10 @@ post-install:
 	mktexlsr
 
 .include "../../graphics/png/buildlink2.mk"
+.if defined(USE_TETEX2)
+.include "../../print/teTeX2-bin/kpathsea.buildlink2.mk"
+.else
 .include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
+.endif
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
