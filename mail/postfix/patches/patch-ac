@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.4 2002/03/06 15:07:54 martti Exp $
+
+--- src/virtual/Makefile.in.orig	Wed Mar  6 15:52:14 2002
++++ src/virtual/Makefile.in	Wed Mar  6 15:52:19 2002
+@@ -11,7 +11,7 @@
+ PROG	= virtual
+ TESTPROG= 
+ INC_DIR	= ../../include
+-LIBS	= ../../lib/libmaster.a ../../lib/libglobal.a ../../lib/libutil.a $(AUXLIBS)
++LIBS	= ../../lib/libmaster.a ../../lib/libglobal.a ../../lib/libutil.a
+ 
+ .c.o:;	$(CC) $(CFLAGS) -c $*.c
+ 
