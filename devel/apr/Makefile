@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/14 17:21:36 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/07 22:32:05 minskim Exp $
 
 PKGNAME=	apr-${APR_VERSION}.${APACHE_VERSION}
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=	Apache Portable Runtime
 # under that includes its own apr.  apr was split out in 2.0.45nb1.
 CONFLICTS=		apache2<=2.0.45
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/srclib
@@ -58,8 +58,8 @@ post-install:
 .include "../../www/apache2/Makefile.common"
 
 .if ${APR_USE_DB4} == "YES"
-.include "../../databases/db4/buildlink2.mk"
+.include "../../databases/db4/buildlink3.mk"
 .endif
 
-.include "../../textproc/expat/buildlink2.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
