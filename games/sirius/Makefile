@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/02/14 17:21:40 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/20 14:53:17 jmmv Exp $
 #
 
-DISTNAME=	sirius-0.7.0
-PKGREVISION=	7
+DISTNAME=	sirius-0.8.0
 CATEGORIES=	games gnome
 MASTER_SITES=	http://sirius.bitvis.nu/files/
 
@@ -11,19 +10,19 @@ HOMEPAGE=	http://sirius.bitvis.nu/
 COMMENT=	Othello game for GNOME2
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS=		gnome2-dirs>=1.1:../../misc/gnome2-dirs
+DEPENDS=		xdg-dirs>=1.0:../../misc/xdg-dirs
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 
-.include "../../devel/GConf2/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../graphics/libgnomecanvas/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
