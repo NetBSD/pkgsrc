@@ -1,0 +1,84 @@
+$NetBSD: patch-ad,v 1.1 1998/08/23 06:49:29 garbled Exp $
+--- top_setup.c.orig	Tue Jan 12 11:59:40 1993
++++ top_setup.c	Thu Jul 23 00:03:38 1998
+@@ -28,14 +28,4 @@
+ XtAppContext	appc;
+-char		*file;
+-char		*device;
+-Boolean		debug		= False;
+-Boolean		display_timer	= True;
+-float		volbase		= 187.0;
+-float		volpcent	= .267;
+-int		replayThreshold	= 4;
+-int		pauseSkipInterval	= 15;
+-int		scanSkipInterval	= 1;
+-float		scanPauseInterval	= .062;
+-float		pausePauseInterval	= .500;
+-char		*cdInfoDir = NULL;
++
++AppData app_data;
+ 
+@@ -57,32 +47,32 @@
+ static XtResource	resources[] = {
+-	{ "file", "File", XtRString, sizeof(String), (Cardinal) &file,
++	{ "file", "File", XtRString, sizeof(String), XtOffsetOf(AppData,file),
+ 		  XtRString, (caddr_t) NULL },
+-	{ "device", "Device", XtRString, sizeof(String), (Cardinal) &device,
++	{ "device", "Device", XtRString, sizeof(String), XtOffsetOf(AppData,device),
+ 		  XtRString, (caddr_t) NULL },
+-	{ "debug", "Debug", XtRBoolean, sizeof(Boolean), (Cardinal) &debug,
+-		  XtRBoolean, (caddr_t) &debug },
++	{ "debug", "Debug", XtRBoolean, sizeof(Boolean), XtOffsetOf(AppData,debug),
++		  XtRBoolean, "False" },
+ 	{ "displayTimer", "DisplayTimer", XtRBoolean, sizeof(Boolean),
+-		  (Cardinal) &display_timer, XtRBoolean,
+-		  (caddr_t) &display_timer },
++		  XtOffsetOf(AppData,display_timer), XtRBoolean,
++		  "True" },
+ 	{ "volBase", "VolBase", XtRFloat, sizeof(float),
+-		  (Cardinal) &volbase, XtRFloat, (caddr_t) &volbase },
++		  XtOffsetOf(AppData,volbase), XtRFloat, "187.0" },
+ 	{ "volPcent", "VolPcent", XtRFloat, sizeof(float),
+-		  (Cardinal) &volpcent, XtRFloat, (caddr_t) &volpcent },
++		  XtOffsetOf(AppData,volpcent), XtRFloat, ".267" },
+ 	{ "replayThreshold", "replayThreshold", XtRInt, sizeof(int),
+-		  (Cardinal) &replayThreshold, XtRInt, 
+-		  (caddr_t) &replayThreshold },
++		  XtOffsetOf(AppData,replayThreshold), XtRInt, 
++		  "4" },
+ 	{ "scanSkipInterval", "scanSkipInterval", XtRInt, sizeof(int),
+-		  (Cardinal) &scanSkipInterval, XtRInt, 
+-		  (caddr_t) &scanSkipInterval },
++		  XtOffsetOf(AppData,scanSkipInterval), XtRInt, 
++		  "1" },
+ 	{ "scanPauseInterval", "scanPauseInterval", XtRFloat, sizeof(float),
+-		  (Cardinal) &scanPauseInterval, XtRFloat, 
+-		  (caddr_t) &scanPauseInterval },
++		  XtOffsetOf(AppData,scanPauseInterval), XtRFloat, 
++		  ".062" },
+ 	{ "pauseSkipInterval", "pauseSkipInterval", XtRInt, sizeof(int),
+-		  (Cardinal) &pauseSkipInterval, XtRInt, 
+-		  (caddr_t) &pauseSkipInterval },
++		  XtOffsetOf(AppData,pauseSkipInterval), XtRInt, 
++		  "15" },
+ 	{ "pausePauseInterval", "pausePauseInterval", XtRFloat, sizeof(float),
+-		  (Cardinal) &pausePauseInterval, XtRFloat, 
+-		  (caddr_t) &pausePauseInterval },
++		  XtOffsetOf(AppData,pausePauseInterval), XtRFloat, 
++		  ".500" },
+ 	{ "cdInfoDir", "cdInfoDir", XtRString, sizeof(String), 
+-		  (Cardinal) &cdInfoDir, XtRString, (caddr_t) NULL },
++		  XtOffsetOf(AppData,cdInfoDir), XtRString, (caddr_t) NULL },
+ };
+@@ -125,3 +115,3 @@
+ 
+-	(void) XtGetApplicationResources(top_shell, (caddr_t) NULL,
++	(void) XtGetApplicationResources(top_shell, (caddr_t) &app_data,
+ 					 resources, XtNumber(resources),
+@@ -129,4 +119,4 @@
+ 
+-	if ((cdInfoDir == NULL) && ((s=getenv("XCDINFODIR")) != NULL))
+-	    cdInfoDir = strdup(s);
++	if ((app_data.cdInfoDir == NULL) && ((s=getenv("XCDINFODIR")) != NULL))
++	    app_data.cdInfoDir = strdup(s);
+ 

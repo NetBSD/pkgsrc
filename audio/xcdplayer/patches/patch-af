@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1 1998/08/23 06:49:29 garbled Exp $
+*** Imakefile	Tue Jan 12 10:59:29 1993
+--- /users/swallace/work/xcdplayer/Imakefile	Fri Sep 30 17:09:19 1994
+***************
+*** 15,20 ****
+--- 15,25 ----
+  
+  LOCAL_LIBRARIES = XawClientLibs
+  LINTLIBS = -lXaw -lXt -lX11
++            SRCS = main.c top_setup.c logo_setup.c button_setup.c cdrom_callb.c\
++                   cdrom_freebsd.c internals.c shuffle.c program.c leds.c debug.c 
++ 
++            OBJS = main.o top_setup.o logo_setup.o button_setup.o cdrom_callb.o\
++                   cdrom_freebsd.o internals.o shuffle.o program.o leds.o debug.o
+  #ifdef SunArchitecture
+             SRCS = main.c top_setup.c logo_setup.c button_setup.c cdrom_callb.c\
+                    cdrom_sun.c internals.c shuffle.c program.c leds.c debug.c 
