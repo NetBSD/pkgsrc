@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/01/23 11:43:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2004/02/04 22:23:47 abs Exp $
 #
 
 DISTNAME=	nmap-3.50
@@ -15,6 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=	YES
 USE_GCC_SHLIB=	YES
 GNU_CONFIGURE=	YES
+USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.libpcre}
