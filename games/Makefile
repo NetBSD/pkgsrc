@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2003/07/24 17:24:23 jschauma Exp $
+# $NetBSD: Makefile,v 1.178 2003/07/31 21:28:27 wiz Exp $
 #
 
 COMMENT=	Games
@@ -17,7 +17,6 @@ SUBDIR+=	baduki
 SUBDIR+=	battalion
 SUBDIR+=	battleball
 SUBDIR+=	bomberclone
-SUBDIR+=	bomberclone-data
 SUBDIR+=	bridge-hands
 SUBDIR+=	bzflag
 SUBDIR+=	cbzone
