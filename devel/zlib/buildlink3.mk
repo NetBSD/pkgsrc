@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2004/08/31 23:16:23 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ZLIB_BUILDLINK3_MK:=	${ZLIB_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	zlib
 
 .if !empty(ZLIB_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.zlib+=	zlib>=1.1.4nb1
+BUILDLINK_RECOMMENDED.zlib+=	zlib>=1.2.1nb2
 BUILDLINK_PKGSRCDIR.zlib?=	../../devel/zlib
 .endif	# ZLIB_BUILDLINK3_MK
 
