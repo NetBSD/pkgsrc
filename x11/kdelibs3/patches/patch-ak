@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1.1.1 2002/05/31 13:16:46 skrll Exp $
+$NetBSD: patch-ak,v 1.2 2002/08/25 19:23:51 jlam Exp $
 
 --- kconf_update/Makefile.in.orig	Tue May 21 15:42:05 2002
 +++ kconf_update/Makefile.in

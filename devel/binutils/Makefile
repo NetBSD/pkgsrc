@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/12 02:17:23 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/25 19:22:22 jlam Exp $
 #
 
 DISTNAME=	binutils-2.11.2

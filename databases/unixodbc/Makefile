@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/08/08 16:17:06 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/08/25 19:22:12 jlam Exp $
 
 PKGNAME=		unixodbc-${ODBC_BASE_VERS}
 PKGREVISION=		1

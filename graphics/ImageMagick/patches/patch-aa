@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.18 2002/08/22 08:06:12 tron Exp $
+$NetBSD: patch-aa,v 1.19 2002/08/25 19:22:45 jlam Exp $
 
 --- coders/fits.c.orig	Sun Aug 18 03:20:46 2002
 +++ coders/fits.c	Tue Aug 20 08:35:05 2002

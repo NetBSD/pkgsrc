@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2002/07/14 01:21:18 rh Exp $
+# $NetBSD: buildlink.mk,v 1.6 2002/08/25 19:23:29 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gnome-core.
 #

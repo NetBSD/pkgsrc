@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/07/18 02:19:39 rh Exp $
+# $NetBSD: Makefile,v 1.27 2002/08/25 19:22:24 jlam Exp $
 #
 
 DISTNAME=		bonobo-1.0.18

@@ -1,0 +1,29 @@
+# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:23:02 jlam Exp $
+
+.if !defined(F2C_BUILDLINK2_MK)
+F2C_BUILDLINK2_MK=	# defined
+
+BUILDLINK_PACKAGES+=		f2c
+BUILDLINK_DEPENDS.f2c?=		f2c>=20001205nb3
+BUILDLINK_PKGSRCDIR.f2c?=	../../lang/f2c
+
+EVAL_PREFIX+=		BUILDLINK_PREFIX.f2c=f2c
+BUILDLINK_PREFIX.f2c_DEFAULT=	${LOCALBASE}
+BUILDLINK_FILES.f2c=	include/f2c.h
+BUILDLINK_FILES.f2c+=	lib/libf2c.*
+BUILDLINK_FILES.f2c+=	lib/libf2c_p.a
+BUILDLINK_FILES.f2c+=	lib/libf2c_pic.a
+BUILDLINK_FILES.f2c+=	lib/libF77.*
+BUILDLINK_FILES.f2c+=	lib/libF77_p.a
+BUILDLINK_FILES.f2c+=	lib/libF77_pic.a
+BUILDLINK_FILES.f2c+=	lib/libI77.*
+BUILDLINK_FILES.f2c+=	lib/libI77_p.a
+BUILDLINK_FILES.f2c+=	lib/libI77_pic.a
+
+PKG_FC=			${BUILDLINK_PREFIX.f2c}/bin/f2c-f77
+
+BUILDLINK_TARGETS+=	f2c-buildlink
+
+f2c-buildlink: _BUILDLINK_USE
+
+.endif	# F2C_BUILDLINK2_MK

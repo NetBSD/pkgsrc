@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/06/24 12:09:43 skrll Exp $
+$NetBSD: distinfo,v 1.8 2002/08/25 19:22:38 jlam Exp $
 
 SHA1 (PTL-2.1.8.tar.gz) = b62ba82f12dd99e2ff8a20b15c2b02c809c07d16
 Size (PTL-2.1.8.tar.gz) = 678474 bytes

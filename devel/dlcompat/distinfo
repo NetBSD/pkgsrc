@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/07/22 00:54:36 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2002/08/25 19:22:26 jlam Exp $
 
 SHA1 (dlcompat-20020606.tar.gz) = 4ac0bb67d1693bb6af7d4ebf095f7ccc4feb59e2
 Size (dlcompat-20020606.tar.gz) = 8131 bytes

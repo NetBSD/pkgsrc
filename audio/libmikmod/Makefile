@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/07/13 01:03:35 mycroft Exp $
+# $NetBSD: Makefile,v 1.17 2002/08/25 19:21:51 jlam Exp $
 
 DISTNAME=		libmikmod-3.1.10
 CATEGORIES=		audio
