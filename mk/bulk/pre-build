@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.31 2003/11/20 00:02:59 hubertf Exp $
+# $NetBSD: pre-build,v 1.32 2003/11/28 22:46:48 hubertf Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -148,7 +148,7 @@ if [ "$CVS_USER" != "" ]; then
 		( cd ${USR_PKGSRC}/security/ssh ; ${BMAKE} bulk-install )
 	fi
 	echo Performing CVS update - this will take some time
-	su - ${CVS_USER} -c 'stty sane ; setenv CVS_RSH ssh ; cd '${USR_PKGSRC}' ; cvs -q update -Pd '"${CVS_FLAGS}"
+	su - ${CVS_USER} -c "stty sane ; setenv CVS_RSH ssh ; cd ${USR_PKGSRC} ; cvs -q update -Pd ${CVS_FLAGS} || exit 0"
         if [ $? != 0 ]
         then
                 echo CVS update not successful, aborting.
