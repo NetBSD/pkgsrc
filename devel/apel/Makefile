@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2003/08/18 13:12:47 minoura Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/01 14:51:00 minoura Exp $
 
-DISTNAME=	apel-10.4
+DISTNAME=	apel-10.6
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/apel/
 
