@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2000/03/24 18:18:00 jlam Exp $
+
+--- unix-end.mak.orig	Mon Sep 14 19:03:52 1998
++++ unix-end.mak	Wed Mar 22 19:59:59 2000
+@@ -34,7 +34,7 @@
+ 	@if test ! -d $(PSOBJDIR)/$(PGRELDIR); then mkdir $(PSOBJDIR)/$(PGRELDIR); fi
+ 
+ PGDEFS=GENOPT='' CFLAGS='$(CFLAGS_PROFILE) $(GCFLAGS) $(XCFLAGS)'\
+- LDFLAGS='$(XLDFLAGS) -pg' XLIBS='Xt SM ICE Xext X11' CC_LEAF='$(CC_)'\
++ LDFLAGS='$(XLDFLAGS) -pg' XLIBS='$(XLIBS)' CC_LEAF='$(CC_)'\
+  GLGENDIR=$(GLGENDIR)/$(PGRELDIR) GLOBJDIR=$(GLOBJDIR)/$(PGRELDIR)\
+  PSGENDIR=$(PSGENDIR)/$(PGRELDIR) PSOBJDIR=$(PSOBJDIR)/$(PGRELDIR)
+ 
