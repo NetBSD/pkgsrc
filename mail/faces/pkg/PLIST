@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/02/25 16:14:21 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/02/28 10:43:49 frueauf Exp $
 @cwd /usr/local
 share/faces/machine.tab
 share/faces/people.tab
@@ -13,7 +13,7 @@ lib/libcompface.so.1.0
 include/compface.h
 man/man3/compface.3.gz
 man/man3/uncompface.3.gz
-bin/icon2ikon 
+bin/icon2ikon
 bin/ikon2icon
 bin/rs2icon
 bin/fs2ikon
