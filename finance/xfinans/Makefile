@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/22 13:32:22 wiz Exp $
 #
 
 DISTNAME=		xfinans-5.9
@@ -10,7 +10,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.io.com/~acroyear/xfinans/
 COMMENT=		Xfinans is a useful financial tracking, and account balancing tool
 
-DEPENDS=		gnuplot-3.7:../../graphics/gnuplot
+DEPENDS=		gnuplot>=3.7:../../graphics/gnuplot
 
 USE_IMAKE=		yes
 
