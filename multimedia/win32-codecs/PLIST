@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2004/11/09 10:12:38 salo Exp $
+@comment $NetBSD: PLIST,v 1.7.2.1 2005/01/29 00:56:13 salo Exp $
 lib/win32/3ivX.qtx
+lib/win32/ACTLComponent.qtx
 lib/win32/AvidQTAVUICodec.qtx
 lib/win32/BeHereiVideo.qtx
 lib/win32/CLRVIDDC.DLL
@@ -11,6 +12,7 @@ lib/win32/On2_VP3.qtx
 lib/win32/QuickTime.qts
 lib/win32/QuickTimeEssentials.qtx
 lib/win32/QuickTimeInternetExtras.qtx
+lib/win32/Readme.txt
 lib/win32/VDODEC32.dll
 lib/win32/ZyGoVideo.qtx
 lib/win32/acelpdec.ax
@@ -49,6 +51,7 @@ lib/win32/jp2avi.dll
 lib/win32/l3codeca.acm
 lib/win32/l3codecx.ax
 lib/win32/lhacm.acm
+lib/win32/lsvxdec.dll
 lib/win32/m3jp2k32.dll
 lib/win32/m3jpeg32.dll
 lib/win32/m3jpegdec.ax
@@ -81,6 +84,7 @@ lib/win32/tm20dec.ax
 lib/win32/tokr3260.dll
 lib/win32/tsccvid.dll
 lib/win32/tssoft32.acm
+lib/win32/tvqdec.dll
 lib/win32/ubv263d+.ax
 lib/win32/ubvmp4d.dll
 lib/win32/ultimo.dll
