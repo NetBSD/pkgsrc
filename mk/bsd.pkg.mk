@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.947 2002/03/14 02:28:22 lukem Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.948 2002/03/15 07:16:23 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -3673,7 +3673,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	files="";							\
-	for f in ${FILESDIR}/* ${PKGDIR}/*; do				\
+	for f in ${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*; do	\
 		if [ -f "$$f" ]; then					\
 			files="$$files \"$$f\"";			\
 		fi;							\
