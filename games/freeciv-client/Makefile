@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/06/21 05:06:15 jlam Exp $
-
-.include "../../games/freeciv-share/Makefile.common"
+# $NetBSD: Makefile,v 1.10 2001/08/15 19:50:30 jlam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 COMMENT=		Freeciv client with Xaw interface
@@ -20,10 +18,13 @@ CONFIGURE_ARGS+=	--disable-server
 CONFIGURE_ARGS+=	--disable-make-data
 CONFIGURE_ARGS+=	--enable-client=xaw
 
+XAW_TYPE=3d
+
 .if defined(XAW_TYPE) && (${XAW_TYPE} == "3d")
-.include "../../x11/Xaw3d/buildlink.mk"
 CONFIGURE_ARGS+=	--with-xaw3d
 .endif
+
+.include "../freeciv-share/Makefile.common"
 
 do-install:
 	cd ${WRKSRC}/client; ${SETENV} ${MAKE_ENV} \
