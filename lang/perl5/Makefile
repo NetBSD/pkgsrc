@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/11/22 03:42:28 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1997/12/22 07:45:43 hubertf Exp $
 # New ports collection makefile for:	perl5
 # Version required:	5.004_01
 # Date created:		16 April 1995
@@ -17,7 +17,7 @@ MAINTAINER=	markm@FreeBSD.ORG
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	Configure
-CONFIGURE_ARGS=		-sde -Dprefix=${PREFIX}
+CONFIGURE_ARGS+=		-sde -Dprefix=${PREFIX}
 
 MAN1= 	a2p.1 c2ph.1 h2ph.1 h2xs.1 perl.1 perlapio.1 perlbook.1 perlbot.1 \
 	perlbug.1 perlcall.1 perldata.1 perldebug.1 perldelta.1 perldiag.1 \

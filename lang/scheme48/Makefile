@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1997/10/06 15:28:52 agc Exp $
+# $NetBSD: Makefile,v 1.3 1997/12/22 07:45:44 hubertf Exp $
 # New ports collection makefile for:    scheme48
 # Version required:     0.46
 # Date created:         25 Aug 1997
@@ -15,7 +15,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER= 	jmacd@FreeBSD.ORG
 
 GNU_CONFIGURE=  yes
-CONFIGURE_ARGS= --prefix=${PREFIX}
+CONFIGURE_ARGS+= --prefix=${PREFIX}
 ALL_TARGET = 	enough
 #NO_WRKSUBDIR=	yes
 STRIP=

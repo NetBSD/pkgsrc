@@ -3,7 +3,7 @@
 # Date created:				24 Apr 1996
 # Whom:					pst
 #
-# $NetBSD: Makefile,v 1.3 1997/12/17 14:55:36 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1997/12/22 07:45:50 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -22,7 +22,7 @@ RESTRICTED=	"no commercial use"
 # here are some extra configure args you may wish to use
 # see the readme file before screwing with them
 #
-#EXTRA_CONFIGURE_ARGS= \
+#EXTRA_CONFIGURE_ARGS+= \
 #		--with-default-server=socks.mydomain.com \
 #		--with-syslog-facility=LOG_AUTH \
 #		--with-passwd

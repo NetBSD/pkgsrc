@@ -3,7 +3,7 @@
 # Date created:		11 October 1997
 # Whom:			hubertf
 #
-# $Id: Makefile,v 1.2 1997/10/11 21:32:53 hubertf Exp $
+# $Id: Makefile,v 1.3 1997/12/22 07:45:40 hubertf Exp $
 #
 
 DISTNAME=	emacs-20.2
@@ -19,7 +19,7 @@ BUILD_DEPENDS=  ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 RUN_DEPENDS=    ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 GNU_CONFIGURE=	yes
 #USE_GMAKE=	yes
-CONFIGURE_ARGS=	${MACHINE_ARCH}--netbsd --with-pop --with-x --with-x-toolkit=lucid
+CONFIGURE_ARGS+=	${MACHINE_ARCH}--netbsd --with-pop --with-x --with-x-toolkit=lucid
 STRIP=
 MAN1=		emacs.1 etags.1 ctags.1
 
