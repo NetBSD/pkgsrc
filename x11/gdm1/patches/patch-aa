@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2004/07/03 10:22:38 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2004/07/03 10:37:24 jmmv Exp $
 
 --- configure.orig	2001-03-13 00:23:59.000000000 +0000
 +++ configure	2004-07-03 10:09:16.000000000 +0000
@@ -11,6 +11,24 @@ $NetBSD: patch-aa,v 1.2 2004/07/03 10:22:38 jmmv Exp $
  do
  echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
  echo "configure:4627: checking for $ac_func" >&5
+@@ -4976,7 +4976,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lXinerama $GTK_LIBS $LIBS"
++LIBS="-lXinerama -lXext $GTK_LIBS $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 4982 "configure"
+ #include "confdefs.h"
+@@ -5010,7 +5010,7 @@
+ #define $ac_tr_lib 1
+ EOF
+ 
+-  LIBS="-lXinerama $LIBS"
++  LIBS="-lXinerama -lXext $LIBS"
+ 
+ else
+   echo "$ac_t""no" 1>&6
 @@ -5289,6 +5289,10 @@
  s%@LIBGLADE_LIBS@%$LIBGLADE_LIBS%g
  s%@CONSOLE_HELPER_TRUE@%$CONSOLE_HELPER_TRUE%g
