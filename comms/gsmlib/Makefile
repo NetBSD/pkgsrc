@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/17 11:29:58 grant Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/01 06:40:51 jlam Exp $
 #
 
 DISTNAME=	gsmlib-1.9
@@ -18,7 +18,8 @@ USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
+PTHREAD_OPTS+=		require
 
 .include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/pth/buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

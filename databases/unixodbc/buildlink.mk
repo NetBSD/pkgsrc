@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1.1.1 2001/11/06 04:08:34 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/08/01 06:40:52 jlam Exp $
 #
 # This Makefile fragment is included by packages that use unixodbc.
 #
@@ -37,8 +37,10 @@ BUILDLINK_FILES.unixodbc+=		lib/libodbccr.*
 BUILDLINK_FILES.unixodbc+=		lib/libodbcextras.*
 BUILDLINK_FILES.unixodbc+=		lib/libodbcinst.*
 
+PTHREAD_OPTS+=		require
+
 .include "../../devel/libtool/buildlink.mk"
-.include "../../devel/pth/buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
 
 BUILDLINK_TARGETS.unixodbc=	unixodbc-buildlink
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.unixodbc}
