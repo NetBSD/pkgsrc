@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1999/02/11 19:17:30 tv Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/08/04 09:52:28 wiz Exp $
 bin/mkid
 bin/lid
 bin/fid
@@ -12,5 +12,7 @@ bin/defid
 info/id-utils.info
 @exec install-info %D/info/id-utils.info %D/info/dir
 share/id-lang.map
-share/locale/de/LC_MESSAGES/id-utils.mo
-share/locale/fr/LC_MESSAGES/id-utils.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/id-utils.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/id-utils.mo
+${CLISPDIR}/id-utils.elc
+${LISPDIR}/id-utils.el
