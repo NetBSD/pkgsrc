@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:13:05 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/20 15:08:23 mjl Exp $
 
-DISTNAME=		daapd-0.2.2b
-PKGREVISION=	1
+DISTNAME=		daapd-0.2.3d
+# PKGREVISION=	1
 CATEGORIES=		audio
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.tgz
@@ -12,8 +12,21 @@ COMMENT=		Server for DAA protocol (iTunes)
 
 USE_LANGUAGES=		c c++
 USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
 MAKEFILE=		makefile
+
+RCD_SCRIPTS=		daapd
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+
+# PKG_SYSCONFSUBDIR=	${PKGBASE}
+
+CONF_FILES=    ${EGDIR}/daapd.conf ${PKG_SYSCONFDIR}/daapd.conf
+
+post-install:
+	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/daapd-example.conf ${EGDIR}/daapd.conf
 
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../net/howl/buildlink3.mk"
