@@ -1,0 +1,9 @@
+Objective Caml is the latest implementation of the Caml dialect of ML. The main
+novelties compared with its ancestor, Caml Light, are: 
+
+     * Full support for objects and classes -- here combined for the first time
+	with ML-style type reconstruction. 
+     * A powerful module calculus in the style of Standard ML (but retaining
+	separate compilation). 
+     * A high-performance native code compiler (in addition to a Caml
+	Light-style bytecode compiler). 
