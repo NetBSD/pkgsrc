@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/29 23:47:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/11/27 17:57:08 mycroft Exp $
 libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish/client.la
-libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish/libclient.a
-libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish/libclient.so.0.0
+libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish/client.a
+libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish/client.so
 @dirrm libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish
