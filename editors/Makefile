@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2002/10/02 21:38:16 cjep Exp $
+# $NetBSD: Makefile,v 1.69 2002/10/03 07:03:03 cjep Exp $
 #
 
 COMMENT=	Editors
@@ -12,7 +12,7 @@ SUBDIR+=	ce
 SUBDIR+=	ce-doc
 SUBDIR+=	ce-x11
 SUBDIR+=	cooledit
-SUBDIR+=	ee
+SUBDIR+=	easyedit
 SUBDIR+=	emacs
 SUBDIR+=	emacs21
 SUBDIR+=	emacs21-nox11
