@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.58 2003/12/13 19:22:12 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.59 2003/12/14 23:56:58 seb Exp $
 #
 
 DISTNAME=		xscreensaver-4.14
@@ -26,6 +26,8 @@ CONFIGURE_ARGS+=	--without-shadow
 CONFIGURE_ENV+=		X_PRE_LIBS=-lXt
 CONFIGURE_ENV+=		ac_cv_x_app_defaults="${PREFIX}/lib/X11/app-defaults"
 CONFIGURE_ENV+=		PERL="${PERL5}" ac_cv_perl_version="${PERL_VERSION}"
+CONFIGURE_ENV+=		INTLTOOL_PERL="${ECHO} ${PERL_VERSION}"
+CONFIGURE_ARGS+=	ac_cv_path_INTLTOOL_PERL="${ECHO} ${PERL_VERSION}"
 MAKE_ENV+=		KDEDIR=${PREFIX}
 
 DISTINFO_FILE=		${.CURDIR}/../../x11/xscreensaver/distinfo
