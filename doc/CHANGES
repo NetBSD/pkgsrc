@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5508 2004/04/10 23:32:46 rh Exp $
+$NetBSD: CHANGES,v 1.5509 2004/04/10 23:41:40 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1880,3 +1880,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mad123 to 0.7.1nb3 [salo 2004-04-10]
 	Updated gcc3-c to 3.3.3nb1 [seb 2004-04-10]
 	Updated gnustep-make to 1.9.1 [rh 2004-04-11]
+	Updated gnustep-base to 1.9.1 [rh 2004-04-11]
