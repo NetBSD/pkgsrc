@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.519 2004/07/19 03:09:50 minskim Exp $
+# $NetBSD: Makefile,v 1.520 2004/07/24 08:46:46 recht Exp $
 #
 
 COMMENT=	Development utilities
@@ -382,6 +382,7 @@ SUBDIR+=	pango
 SUBDIR+=	papaya
 SUBDIR+=	pardiff
 SUBDIR+=	patch
+SUBDIR+=	patchutils
 SUBDIR+=	pccts
 SUBDIR+=	pcl-cvs
 SUBDIR+=	pcre
