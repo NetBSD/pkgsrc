@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/09/20 21:39:22 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2003/06/02 01:15:39 jschauma Exp $
 #
 
 DISTNAME=	qtarch-2.1-1
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	x11 devel
 MASTER_SITES=	ftp://qtarch.sourceforge.net/pub/qtarch/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://qtarch.sourceforge.net/
 COMMENT=	Graphical dialog editor for the Qt widget set
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2003/05/12 08:37:05 uebayasi Exp $
+# $NetBSD: Makefile,v 1.31 2003/06/02 01:21:21 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/01/03 10:58:40 obrien Exp
 #
 
@@ -9,7 +9,7 @@ CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/serialcomm/dialout/} \
 		http://www.pp.clinet.fi/~walker/
 
-MAINTAINER=     packages@netbsd.org
+MAINTAINER=     tech-pkg@netbsd.org
 HOMEPAGE=	http://alioth.debian.org/projects/minicom/
 COMMENT=	MS-DOS Telix serial communication program "workalike"
 

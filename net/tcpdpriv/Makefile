@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/03/29 12:42:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2003/06/02 01:17:42 jschauma Exp $
 
 DISTNAME=	tcpd-tools-0.8
 PKGNAME=	tcpdpriv-0.8
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/wide-tcpdpriv
 CATEGORIES=	net
 MASTER_SITES=	ftp://tracer.csl.sony.co.jp/pub/mawi/tools/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	anonymize tcpdump traces
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/03/25 13:59:36 mjl Exp $
+# $NetBSD: Makefile,v 1.3 2003/06/02 01:17:25 jschauma Exp $
 #
 
 DISTNAME=	ocr-b
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/ocr-b
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=fonts/${DISTNAME}/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 # HOMEPAGE=	
 COMMENT=	OCR-B font for LaTeX
 

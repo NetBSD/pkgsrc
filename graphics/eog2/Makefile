@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/05/05 16:32:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:19:30 jschauma Exp $
 #
 
 DISTNAME=		eog-2.2.0
@@ -7,7 +7,7 @@ CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/eog/2.2/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Eye of GNOME: an image viewing and cataloging program
 

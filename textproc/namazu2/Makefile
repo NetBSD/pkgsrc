@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/05/25 14:12:12 taca Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:16:37 jschauma Exp $
 # FreeBSD Id: ports/japanese/namazu2/Makefile,v 1.16 2000/10/26 20:56:25 knu Exp
 
 DISTNAME=	namazu-2.0.12
@@ -11,7 +11,7 @@ PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	namazu-2.0.12-de.diff
 PATCH_DIST_STRIP= -p1
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.namazu.org/index.html.en
 COMMENT=	Full-text search system intended for easy use
 

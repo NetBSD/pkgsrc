@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/04/23 16:38:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:18:01 jschauma Exp $
 #
 
 DISTNAME=	dnstop-20021224
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://dnstop.measurement-factory.com/src/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} dnstop.8
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://dnstop.measurement-factory.com/src/
 COMMENT=	Diagnose tcpdump trace for DNS queries/replies
 

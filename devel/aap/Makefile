@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:40:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:20:59 jschauma Exp $
 
 DISTNAME=	exec-0.107
 PKGNAME=	aap-0.107
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=a-a-p/}
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.a-a-p.org/
 COMMENT=	make(1) replacement
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/06 22:31:08 seb Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:17:09 jschauma Exp $
 #
 
 DISTNAME=		Crypt-Twofish-2.12
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		p5ctw
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 COMMENT=		perl5 module for the Twofish symmetric key algorithm
 
 USE_BUILDLINK2=		YES

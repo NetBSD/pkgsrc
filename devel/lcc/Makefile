@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2002/10/20 00:32:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:20:42 jschauma Exp $
 
 DISTNAME=	lcc-4.1
 CATEGORIES=	devel lang
 MASTER_SITES=	ftp://ftp.cs.princeton.edu/pub/lcc/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.cs.princeton.edu/software/lcc/
 COMMENT=	local ANSI C compiler for a variety of platforms
 

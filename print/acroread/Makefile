@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2003/05/06 17:42:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.37 2003/06/02 01:17:32 jschauma Exp $
 
 DISTNAME=	acroread	# Overridden below
 PKGNAME=	acroread-4.05
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/4.x/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.adobe.com/prodindex/acrobat/readstep.html
 COMMENT=	View, distribute and print PDF documents
 

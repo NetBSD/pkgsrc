@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/05/06 17:41:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/02 01:19:34 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/12/22 16:07:01 tg Exp
 #
 
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.gulu.net/xskat/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.gulu.net/xskat/
 COMMENT=	Play the card game Skat
 

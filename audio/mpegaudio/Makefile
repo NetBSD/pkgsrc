@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/12 00:54:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:21:35 jschauma Exp $
 
 DISTNAME=	mpegaudio
 PKGNAME=	mpegaudio-3.9
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.ise.fhg.de/pub/graphics/mpeg/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	MPEG/audio Layer 1 and Layer 2 encoder/decoder package
 
 post-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/05/22 16:48:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2003/06/02 01:20:15 jschauma Exp $
 # FreeBSD: ports/devel/sdcc/Makefile,v 1.5 2000/04/15 15:13:38 knu Exp
 
 DISTNAME=	sdcc-2.2.1-src
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	devel lang
 MASTER_SITES=	http://web.kd0yu.com/sdcc/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://sdcc.sourceforge.net/
 COMMENT=	Cross compile 8051 code
 

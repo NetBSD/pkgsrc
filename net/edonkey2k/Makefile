@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/29 12:41:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:18:00 jschauma Exp $
 #
 
 DISTNAME=	donkey
@@ -8,7 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://www.edonkey2000.com/files/
 EXTRACT_SUFX=	.gz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.edonkey2000.com/
 COMMENT=	Yet another P2P file sharing tool
 

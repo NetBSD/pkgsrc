@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:42:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:16:04 jschauma Exp $
 #
 
 DISTNAME=		eperl-2.2.14
@@ -8,7 +8,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/mod/Apache
 CATEGORIES=		perl5 textproc www
 MASTER_SITES=		http://www.engelschall.com/sw/eperl/distrib/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.engelschall.com/sw/eperl/
 COMMENT=		perl5/Apache module of an ePerl text parser
 

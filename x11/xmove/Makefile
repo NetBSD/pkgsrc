@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:43:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:15:33 jschauma Exp $
 #
 
 DISTNAME=	xmove.2.0beta2
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/xmove
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.cs.columbia.edu/pub/xmove/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	Move an X11 display between screens and displays
 
 USE_IMAKE=	yes

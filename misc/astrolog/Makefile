@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/03/29 12:41:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2003/06/02 01:18:18 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/08/10 22:31:15 fenner Exp
 #
 
@@ -11,7 +11,7 @@ MASTER_SITES=   http://www.astrolog.org/ftp/ephem/ \
 		ftp://ftp.kiarchive.ru/pub/unix/magick/astrology/astrolog/
 DISTFILES=      ${DISTNAME}.shr ${EPHEM}
 
-MAINTAINER=     packages@netbsd.org
+MAINTAINER=     tech-pkg@netbsd.org
 HOMEPAGE=	http://www.astrolog.org/
 COMMENT=	Astrology program for X11 and alpha-numeric terminals
 

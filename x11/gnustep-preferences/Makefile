@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/05/06 05:58:53 rh Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/02 01:15:44 jschauma Exp $
 #
 
 DISTNAME=	Preferences-1.2.0
@@ -8,7 +8,7 @@ CATEGORIES=	x11 gnustep
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prefsapp/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://prefsapp.sourceforge.net/
 COMMENT=	Application for setting preferences for the GNUstep system
 
