@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/30 19:12:03 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/12/27 04:05:08 grant Exp $
 
 DISTNAME=	libdvdread-0.9.4
 CATEGORIES=	misc
@@ -14,5 +14,7 @@ USE_LIBTOOL=	yes
 USE_BUILDLINK2=	yes
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+MESSAGE_SUBST+=	PKGBASE=${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"
