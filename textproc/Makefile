@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2000/01/13 05:10:25 jonb Exp $
+# $NetBSD: Makefile,v 1.34 2000/01/16 14:03:45 wulf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/10/13 11:11:32 itojun Exp
 #
 
@@ -18,6 +18,7 @@
     SUBDIR += iso8879
     SUBDIR += ispell
     SUBDIR += jade
+    SUBDIR += kdoc
     SUBDIR += libxml
 #    SUBDIR += linuxdoc
     SUBDIR += lout
