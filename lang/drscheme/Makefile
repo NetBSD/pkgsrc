@@ -1,17 +1,20 @@
-# $NetBSD: Makefile,v 1.23 2004/12/07 22:16:20 groo Exp $
+# $NetBSD: Makefile,v 1.24 2005/01/12 20:32:04 jschauma Exp $
 #
 
 DISTNAME=		plt-${DRSCHEME_VERSION}-src-unix
 PKGNAME=		drscheme-${DRSCHEME_VERSION}
-PKGREVISION=	1
 DIST_SUBDIR=		${PKGNAME_NOREV:C/-[0-9]*//}/${PKGNAME_NOREV:C/.*-([0-9]*)/\1/}
 CATEGORIES=		lang
-MASTER_SITES=		http://download.plt-scheme.org/bundles/${DRSCHEME_VERSION}/plt/ \
-			http://www.cs.utah.edu/plt/download/${DRSCHEME_VERSION}/plt/ \
+MASTER_SITES=		http://download.plt-scheme.org/bundles/${DRSCHEME_VERSION}/plt/ 	\
+			http://download.plt-scheme.org/doc/${DRSCHEME_VERSION}/bundles/ 	\
+			http://www.cs.utah.edu/plt/download/${DRSCHEME_VERSION}/plt/ 		\
 			ftp://ftp.pasteur.fr/pub/computing/Scheme/plt-scheme/${DRSCHEME_VERSION}/plt/ \
 			ftp://archive.informatik.uni-tuebingen.de/unix/language/plt/${DRSCHEME_VERSION}/plt/ \
 			ftp://morpheus.wish.com.mx/pub/plt/${DRSCHEME_VERSION}/plt/
+DISTFILES+=		${DOCFILES} ${DISTNAME}${EXTRACT_SUFX}
+DOCFILES=		mred-doc.plt framework-doc.plt tools-doc.plt tex2page-doc.plt
 EXTRACT_SUFX=		.tgz
+EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.drscheme.org/
@@ -26,7 +29,7 @@ USE_GNU_TOOLS+=		make
 USE_PERL5=		yes
 GNU_CONFIGURE=		yes
 
-DRSCHEME_VERSION=	207
+DRSCHEME_VERSION=	209
 
 # XXX: we pass this as the prefix to the configure script (see below) so
 #      the mzc compiler finds all the right includes and libs
@@ -61,6 +64,9 @@ post-install:
 	@cd ${PREFIX}/lib/plt && PATH="${OLD_PATH}" ${SH} install || ${TRUE}
 .for f in ${PROGRAMS}
 	@cd ${PREFIX}/bin && ${LN} -s ../lib/plt/bin/$f
+.endfor
+.for f in ${DOCFILES}
+	${PREFIX}/bin/setup-plt ${DISTDIR}/$f
 .endfor
 
 .include "../../graphics/MesaLib/buildlink3.mk"
