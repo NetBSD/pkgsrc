@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.12 2001/06/30 23:55:56 tron Exp $
+@comment $NetBSD: PLIST,v 1.13 2001/07/16 12:57:06 itojun Exp $
 bin/editcap
 bin/ethereal
+bin/mergecap
 bin/tethereal
+bin/text2pcap
 etc/manuf
 lib/ethereal/plugins/${PKGVERSION}/gryphon.la
 lib/ethereal/plugins/${PKGVERSION}/gryphon.a
@@ -11,7 +13,9 @@ lib/ethereal/plugins/${PKGVERSION}/mgcp.a
 lib/ethereal/plugins/${PKGVERSION}/mgcp.so
 man/man1/editcap.1
 man/man1/ethereal.1
+man/man1/mergecap.1
 man/man1/tethereal.1
+man/man1/text2pcap.1
 @dirrm lib/ethereal/plugins/${PKGVERSION}
 @dirrm lib/ethereal/plugins
 @dirrm lib/ethereal
