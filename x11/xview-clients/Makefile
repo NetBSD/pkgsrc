@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/09/28 20:40:06 soren Exp $
+# $NetBSD: Makefile,v 1.6 2000/06/16 14:16:49 pooka Exp $
 # $FreeBSD Id: Makefile,v 1.11 1996/11/16 10:49:52 asami Exp
 #
 
@@ -15,6 +15,12 @@ MIRROR_DISTFILE= no
 EXTRACT_ELEMENTS=	xview3.2p1-X11R6/clients xview3.2p1-X11R6/images
 WRKSRC=      	${WRKDIR}/xview3.2p1-X11R6/clients
 USE_IMAKE=	yes
+
+post-patch:
+	@${MV} ${WRKSRC}/olwm/openwin-menu-programs ${WRKSRC}/foo
+	@${SED} -e 's@XXX11BASEXXX@${PREFIX}@g' < ${WRKSRC}/foo > \
+		${WRKSRC}/olwm/openwin-menu-programs
+	@${RM} -f ${WRKSRC}/foo
 
 pre-install:
 	@(cd ${WRKSRC}; ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} install.man)
