@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/08/28 21:21:12 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2004/08/28 23:54:21 jlam Exp $
 #
 # Run many buildlink transform tests in a single regression test to avoid
 # having to keep creating the wrapper scripts over and over again.
@@ -54,6 +54,7 @@ post-${WRAPPER_PHASE}:
 regress: ${WRAPPER_PHASE} do-regress
 
 FAILED_TESTS=	${WRKDIR}/failed
+PASSED_TESTS=	${WRKDIR}/passed
 
 do-regress:
 	@if [ -f ${FAILED_TESTS} ]; then				\
@@ -61,9 +62,23 @@ do-regress:
 		${CAT} ${FAILED_TESTS} | while read test; do		\
 			${ECHO} "	$$test";			\
 		done;							\
-		exit `${CAT} ${FAILED_TESTS} | ${WC} -l`;		\
+		exit 1;							\
 	else								\
 		${DO_NADA};						\
+	fi
+
+report-failed:
+	@if [ -f "${FAILED_TESTS}" ]; then				\
+		${ECHO} `${CAT} ${FAILED_TESTS} | ${WC} -l`;		\
+	else								\
+		${ECHO} "0";						\
+	fi
+
+report-passed:
+	@if [ -f "${PASSED_TESTS}" ]; then				\
+		${ECHO} `${CAT} ${PASSED_TESTS} | ${WC} -l`;		\
+	else								\
+		${ECHO} "0";						\
 	fi
 
 TEST_RESULT=	runtest=`${SETENV} ${REGRESS_ENV} regress $$test`;	\
@@ -73,6 +88,7 @@ TEST_RESULT=	runtest=`${SETENV} ${REGRESS_ENV} regress $$test`;	\
 		case $$runtest in					\
 		$$expected)						\
 			${ECHO} "(${.TARGET}) result:   PASS";		\
+			${ECHO} "${.TARGET}" >> ${PASSED_TESTS};	\
 			;;						\
 		*)							\
 			${ECHO} "(${.TARGET}) result:   FAIL";		\
