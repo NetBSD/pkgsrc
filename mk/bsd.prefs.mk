@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.118.2.15 2003/08/29 02:06:12 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.118.2.16 2003/08/30 09:24:22 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -311,7 +311,7 @@ PKG_VIEW_CMD?=		${PKG_TOOLS_BIN}/pkg_view
 LINKFARM_CMD?=		${PKG_TOOLS_BIN}/linkfarm
 
 # The binary pkg_install tools all need to consistently to refer to the
-# correct package database directory.  _PKG_DBDIR is set in bsd.pkg.mk.
+# correct package database directory.
 #
 PKGTOOLS_ARGS?=		-K ${_PKG_DBDIR}
 
