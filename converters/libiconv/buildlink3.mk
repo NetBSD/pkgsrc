@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/02/06 19:04:24 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2004/02/11 11:30:49 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ICONV_BUILDLINK3_MK:=	${ICONV_BUILDLINK3_MK}+
@@ -18,6 +18,12 @@ BUILDLINK_IS_BUILTIN.iconv=	NO
 .  if exists(/usr/include/iconv.h)
 BUILDLINK_IS_BUILTIN.iconv=	YES
 .  endif
+_INCOMPAT_ICONV?=	# should be set from defs.${OPSYS}.mk
+.  for _pattern_ in ${_INCOMPAT_ICONV} ${INCOMPAT_ICONV}
+.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+BUILDLINK_IS_BUILTIN.iconv=	NO
+.    endif
+.  endfor
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
@@ -38,13 +44,6 @@ BUILDLINK_USE_BUILTIN.iconv=	YES
 BUILDLINK_USE_BUILTIN.iconv=	NO
 .  else
 BUILDLINK_USE_BUILTIN.iconv=	YES
-_INCOMPAT_ICONV?=	# should be set from defs.${OPSYS}.mk
-INCOMPAT_ICONV?=	# empty
-.    for _pattern_ in ${_INCOMPAT_ICONV} ${INCOMPAT_ICONV}
-.      if !empty(MACHINE_PLATFORM:M${_pattern_})
-BUILDLINK_USE_BUILTIN.iconv=	NO
-.      endif
-.    endfor
 .  endif
 MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.iconv=${BUILDLINK_USE_BUILTIN.iconv}
 .endif
