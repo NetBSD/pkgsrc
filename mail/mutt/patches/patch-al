@@ -1,0 +1,31 @@
+$NetBSD: patch-al,v 1.1 2000/11/02 07:15:10 itojun Exp $
+
+--- configure.orig	Sat Jul 29 03:50:27 2000
++++ configure	Thu Nov  2 16:05:11 2000
+@@ -6045,7 +6045,7 @@
+   cat conftest.$ac_ext >&5
+   rm -rf conftest*
+   CATOBJEXT=.mo
+-		   DATADIRNAME=lib
++		   DATADIRNAME=share
+ fi
+ rm -f conftest*
+ 		INSTOBJEXT=.mo
+@@ -6307,7 +6307,7 @@
+ 		 USE_INCLUDED_LIBINTL=yes
+ 		 CATOBJEXT=.cat
+ 		 INSTOBJEXT=.cat
+-		 DATADIRNAME=lib
++		 DATADIRNAME=share
+ 		 INTLDEPS='$(top_builddir)/intl/libintl.a'
+ 		 INTLLIBS=$INTLDEPS
+ 		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
+@@ -6602,7 +6602,7 @@
+   
+ CPPFLAGS="$CPPFLAGS -I\$(top_srcdir)/intl"
+ 
+-MUTTLOCALEDIR=$mutt_cv_prefix/$DATADIRNAME/locale
++MUTTLOCALEDIR=$mutt_cv_prefix/share/locale
+ 
+ cat >> confdefs.h <<EOF
+ #define MUTTLOCALEDIR "$MUTTLOCALEDIR"
