@@ -1,0 +1,7 @@
+For running quake, you'll need to grab data files in quakesw-1.0.6.tar.gz
+and place it into your current directory.
+
+Take a look at the following URL for "quake over IPv6" testing:
+http://www.viagenie.qc.ca/en/ipv6-quake.shtml
+
+The patch needs more work for full IPv4/IPv6 support - we welcome comments.
