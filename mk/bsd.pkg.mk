@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1123 2003/01/04 22:20:47 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1124 2003/01/05 00:40:46 lukem Exp $
 #
 # This file is in the public domain.
 #
@@ -3661,7 +3661,7 @@ README.html: .PRECIOUS
 		PKG_URL=${PKG_URL} \
 		PKGREPOSITORYSUBDIR=${PKGREPOSITORYSUBDIR} \
 		PKGSRCDIR=${.CURDIR:C|/[^/]*/[^/]*$||} \
-		TMPDIR=${_TMPREADMEDIR} \
+		TMPDIR=${TMPDIR:U/tmp} \
 		SINGLEPKG=${PKGPATH} \
 		$@.tmp1 
 	@${RM} $@.tmp1
