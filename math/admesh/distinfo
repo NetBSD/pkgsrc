@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:34:25 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 08:45:37 agc Exp $
 
-MD5 (admesh-0.95.tar.gz) = c21d198c547685f43efd2cf11536d7d4
+SHA1 (admesh-0.95.tar.gz) = b9d242366efa2af90bcd84951ed23d283fe72bd2
+Size (admesh-0.95.tar.gz) = 51340 bytes
