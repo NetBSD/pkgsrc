@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6000 2004/05/21 13:46:00 adam Exp $
+$NetBSD: CHANGES,v 1.6001 2004/05/21 21:04:18 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2611,3 +2611,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xplanet to 1.0.7 [adam 2004-05-21]
 	Updated rconfig to 0.30 [abs 2004-05-21]
 	Updated LPRng-core to 3.8.27 [adam 2004-05-21]
+	Updated jwhois to 3.2.2nb5 [kleink 2004-05-21]
