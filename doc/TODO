@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.454 2003/04/08 11:00:20 martti Exp $
+$NetBSD: TODO,v 1.455 2003/04/09 13:44:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -112,6 +112,7 @@ Suggested package updates
 	o eclipse-2.1
 	o elm-me-2.4pl101
 	o emacs-21.3
+	o evolution-1.2.4
 	o exim-4.12 [pkg/19850]
 	o exim-4.14
 	o exmh-2.6.2
@@ -120,7 +121,7 @@ Suggested package updates
 	o fox-1.0.34
 	o frozen-bubble-1.0.0
 	o fsviewer-0.2.5
-	o gaim-0.60
+	o gaim-0.61
 	o gauche-0.6.7 [kei]
 	o gawk-3.1.2
 	o gcpio-2.5 [pkg/20799]
@@ -140,6 +141,7 @@ Suggested package updates
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99
 	o gnucash-1.8.2
+	o gnumeric-1.0.13
 	o gpa-0.6.1
 	o gperiodic-2.0.3
 	o grace-5.1.12
@@ -206,6 +208,7 @@ Suggested package updates
 	o opera-7.1
 	o oss-3.9.7h
 	o p0f-1.8.3
+	o pen-0.10.1
 	o php4-4.3.1
 	o pine-4.53
 	o plib-1.6.0 [pkg/19015]
@@ -223,6 +226,7 @@ Suggested package updates
 	o sablotron-0.97
 	o sane-backends-1.0.11
 	o sane-frontends-1.0.10
+	o sawfish-1.3
 	o scmxx-0.6.3.7
 	o scribus-0.8
 	o scsh-0.6.3
@@ -250,7 +254,7 @@ Suggested package updates
 	o tcl/tk-8.4.2 [bjoern]
 	o ted-2.13 [pkg/20785]
 	o ted-2.14
-	o texmacs-1.0.1.9
+	o texmacs-1.0.1.10
 	o tightvnc-1.2.8
 	o tkman-2.2
 	o ttf2pt1-3.4.3
@@ -259,7 +263,7 @@ Suggested package updates
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o wdm-1.23
-	o wine-20030318
+	o wine-20030408
 	o wmbiff-0.4.15
 	o wwwoffle-2.7h
 	o xalan-c-1.4
