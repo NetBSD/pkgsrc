@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.277 2005/01/12 00:01:21 hubertf Exp $
+# $NetBSD: Makefile,v 1.278 2005/01/12 11:53:28 agc Exp $
 
 COMMENT=	System utilities
 
@@ -205,6 +205,7 @@ SUBDIR+=	webmin
 SUBDIR+=	whowatch
 SUBDIR+=	wipe
 SUBDIR+=	wmcpuload
+SUBDIR+=	wmSMPmon
 SUBDIR+=	wmmemmon
 SUBDIR+=	wtail
 SUBDIR+=	xapply
