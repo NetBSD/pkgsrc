@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5250 2004/03/12 23:43:17 snj Exp $
+$NetBSD: CHANGES,v 1.5251 2004/03/12 23:46:06 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1459,3 +1459,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated covered-current to 20040211 [dmcmahill 2004-03-12]
 	Updated p5-razor-agents to 2.40 [heinz 2004-03-12]
 	Removed avi-xmms [snj 2004-03-12]
+	Updated bittorrent to 3.4.1 [recht 2004-03-12]
+	Updated bittorrent-gui to 3.4.1 [recht 2004-03-12]
