@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1581 2003/03/06 21:14:42 atatat Exp $
+$NetBSD: CHANGES,v 1.1582 2003/03/06 22:00:40 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -979,3 +979,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Text-Iconv to 1.2 [wiz 2003-03-06]
 	Updated rsync to 2.5.6 [salo 2003-03-06]
 	Updated pkgdepgraph to 12.0 [atatat 2003-03-06]
+	Updated rconfig to 0.15 [abs 2003-03-06]
+
