@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1213 2003/07/12 15:34:37 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1214 2003/07/13 06:44:02 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -4206,8 +4206,11 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 .  for def in ${BUILD_DEFS}
 	@${ECHO} ${def}=${${def}:Q} | ${SED} -e 's|^PATH=[^ 	]*|PATH=...|' >> ${BUILD_INFO_FILE}
 .  endfor
-	@if ${CC} -dumpversion >/dev/null 2>&1; then \
-	  ${ECHO} "CC=${CC}-`${CC} -dumpversion`" >> ${BUILD_INFO_FILE}; \
+	@${ECHO} "CC=${CC}" >> ${BUILD_INFO_FILE}
+	@if ${CC} -v 2>&1 | ${GREP} -q '^gcc'; then \
+	  ${ECHO} "CC_VERSION=`${CC} -v 2>&1 | ${GREP} '^gcc'`" >> ${BUILD_INFO_FILE}; \
+	elif ${CC} -V 2>&1 | ${GREP} -q '^cc'; then \
+	  ${ECHO} "CC_VERSION=`${CC} -V 2>&1 | ${GREP} '^cc'`" >> ${BUILD_INFO_FILE}; \
 	fi
 .  if defined(USE_PERL5) && (${USE_PERL5} == "run")
 	@${ECHO} "PERL=`${PERL5} --version 2>/dev/null | ${GREP} 'This is perl'`" >> ${BUILD_INFO_FILE}
