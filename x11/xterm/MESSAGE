@@ -1,0 +1,7 @@
+==============================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2001/12/17 14:34:17 tron Exp $
+
+This package should be deinstalled before you update to a newer Solaris
+or OpenWindows version.
+
+==============================================================================

@@ -1,0 +1,44 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2001/12/17 14:34:17 tron Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+CONFLICTS="bin/resize bin/xterm lib/app-defaults/XTerm share/man/man1/resize.1 share/man/man1/xterm.1"
+
+case ${STAGE} in
+PRE-INSTALL)
+	cd @PREFIX@
+	for FILE in $CONFLICTS
+	do
+		if [ -f $FILE ]
+		then
+			@MV@ $FILE ${FILE}.openwin
+		fi
+	done
+	;;
+
+POST-INSTALL)
+	;;
+
+DEINSTALL)
+	;;
+	
+POST-DEINSTALL)
+	cd @PREFIX@
+	for FILE in $CONFLICTS
+	do
+		if [ -f ${FILE}.openwin ]
+		then
+			@MV@ ${FILE}.openwin $FILE
+		fi
+	done
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
