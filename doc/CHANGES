@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3612 2003/10/02 05:07:58 grant Exp $
+$NetBSD: CHANGES,v 1.3613 2003/10/02 05:41:42 jonb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4047,3 +4047,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated aspell to 0.50.3nb4 [itojun 2003-10-02]
 	Updated openssl to 0.9.6k [jschauma 2003-10-02]
 	Updated p5-GD to 2.07nb1 [explorer 2003-10-02]
+	Updated tspc to 1.0 [jonb 2003-10-02]
