@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8950 2005/01/27 16:09:35 reinoud Exp $
+$NetBSD: CHANGES,v 1.8951 2005/01/27 16:23:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -630,3 +630,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added wmdrawer-0.10.5 [ben 2005-01-27]
 	Updated libtasn1 to 0.2.13 [adam 2005-01-27]
 	Updated udfclient to 0.3.3 [reinoud 2005-01-27]
+	Updated hylafax to 4.2.1 [adam 2005-01-27]
