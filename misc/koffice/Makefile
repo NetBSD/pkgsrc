@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/09 12:00:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/12 20:33:05 jlam Exp $
 
 DISTNAME=	koffice-2.0.1
 PKGNAME=	koffice-1.0.1
@@ -16,6 +16,6 @@ DEPENDS+=	kdebase-2.1:../../x11/kdebase2
 
 .include "../../x11/kde2/Makefile.part2"
 
-CONFIGURE_ENV+=	LIBS="-Wl,-export-dynamic"
+LIBS=		-Wl,-export-dynamic
 
 .include "../../mk/bsd.pkg.mk"

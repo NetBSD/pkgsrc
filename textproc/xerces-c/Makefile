@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:37:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/12 20:33:08 jlam Exp $
 #
 
 DISTNAME=	xerces-c-src1_3_0
@@ -27,19 +27,18 @@ FLAGS+=		-O2 -I${ICUROOT}/include \
 
 CFLAGS+=	${FLAGS}
 CXXFLAGS+=	${FLAGS}
-
+LIBS=		-L${ICUROOT}/lib -Wl,-R${ICUROOT}/lib
+LIBS+=		-L${ICUROOT}/lib/icu/current -Wl,-R${ICUROOT}/lib/icu/current
+ 
 CONFIGURE_ENV+=	XERCESCROOT="${WRKDIR}/xerces-c-src1_3_0" \
 		ICUROOT=${ICUROOT} \
 		NETACCESSOR=Socket \
-		TRANSCODER=ICU \
-		LIBS="-L${ICUROOT}/lib -Wl,-R${ICUROOT}/lib -L${ICUROOT}/lib/icu/current -Wl,-R${ICUROOT}/lib/icu/current"
+		TRANSCODER=ICU
 
 MAKE_ENV+=	XERCESCROOT="${WRKDIR}/xerces-c-src1_3_0" \
 		ICUROOT="${LOCALBASE}" \
 		NETACCESSOR=Socket \
 		TRANSCODER=ICU \
-		CFLAGS="${CFLAGS}" \
-		CXXFLAGS="${CXXFLAGS}"
 
 post-extract:
 	${MKDIR} ${WRKSRC}/util/Platforms/NetBSD

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/06/11 06:34:41 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/12 20:33:04 jlam Exp $
 
 DISTNAME=		mutt-1.3.18i
 CATEGORIES=		mail
@@ -15,8 +15,8 @@ DEPENDS+=		libiconv>=1.5:../../converters/libiconv
 
 USE_LIBINTL=		YES
 CPPFLAGS+=		-I${LOCALBASE}/include
-MAKE_ENV+=		LIBS=-lintl
-CONFIGURE_ENV+=		LIBS=-lintl
+LIBS=			-lintl
+MAKE_ENV+=		LIBS="${LIBS}"
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 CONFIGURE_ARGS+=	--with-exec-shell=/bin/ksh \

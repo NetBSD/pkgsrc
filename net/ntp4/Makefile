@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/02/17 18:19:19 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/06/12 20:33:06 jlam Exp $
 #
 
 DISTNAME=	ntp-4.0.99k
@@ -14,7 +14,7 @@ DEPENDS+=	readline-4.*:../../devel/readline
 
 GNU_CONFIGURE=	YES
 
-CONFIGURE_ENV+=	"LIBS=-ltermcap"	# for ntpdc
+LIBS=		-ltermcap	# for ntpdc
 
 DOCDIR=		${PREFIX}/share/doc
 EXAMPLESDIR=	${PREFIX}/share/examples

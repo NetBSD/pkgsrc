@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2001/05/27 11:31:45 itojun Exp $
+# $NetBSD: Makefile,v 1.47 2001/06/12 20:33:06 jlam Exp $
 #
 
 ETHEREAL_VERSION=	0.8.18
@@ -24,7 +24,6 @@ GNU_CONFIGURE=		YES
 EVAL_PREFIX+=		GTKDIR=gtk+
 CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}" \
 			--with-ucdsnmp=${LOCALBASE}
-CONFIGURE_ENV+=		LIBS="${LIBS}"
 LIBS+=			-lcrypto
 
 PLIST_SUBST+=		ETHEREAL_VERSION=${ETHEREAL_VERSION}

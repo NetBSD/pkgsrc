@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2001/06/11 06:34:47 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2001/06/12 20:33:07 jlam Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -44,7 +44,7 @@ CONFIGURE_ARGS+=	--disable-ripngd
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
-CONFIGURE_ENV+=		LIBS="${LDFLAGS} ${LIBS}"
+LIBS+=			${LDFLAGS}
 
 pre-configure:
 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
