@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2001/08/24 23:48:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2001/10/30 17:47:20 drochner Exp $
 bin/AbiWord
 bin/abiword
 libexec/AbiSuite/AbiWord
@@ -369,7 +369,6 @@ share/AbiSuite/AbiWord/help/images/wedge_l.gif
 share/AbiSuite/AbiWord/help/images/zoom.png
 share/AbiSuite/AbiWord/help/index.html
 share/AbiSuite/AbiWord/readme.txt
-share/AbiSuite/AbiWord/sample/en-US/Latin1.abw
 share/AbiSuite/AbiWord/strings/ca-ES.strings
 share/AbiSuite/AbiWord/strings/cs-CZ.strings
 share/AbiSuite/AbiWord/strings/cy-CY.strings
@@ -395,6 +394,7 @@ share/AbiSuite/AbiWord/strings/pt-BR.strings
 share/AbiSuite/AbiWord/strings/pt-PT.strings
 share/AbiSuite/AbiWord/strings/ru-RU.strings
 share/AbiSuite/AbiWord/strings/sl-SI.strings
+share/AbiSuite/AbiWord/strings/sk.strings
 share/AbiSuite/AbiWord/strings/sv-SE.strings
 share/AbiSuite/AbiWord/strings/uk-UA.strings
 share/AbiSuite/AbiWord/strings/zh-CN.strings
@@ -562,7 +562,6 @@ share/AbiSuite/readme.txt
 @dirrm share/AbiSuite/fonts
 @dirrm share/AbiSuite/clipart
 @dirrm share/AbiSuite/AbiWord/strings
-@dirrm share/AbiSuite/AbiWord/sample/en-US
 @dirrm share/AbiSuite/AbiWord/sample
 @dirrm share/AbiSuite/AbiWord/help/images
 @dirrm share/AbiSuite/AbiWord/help/fr-FR/images

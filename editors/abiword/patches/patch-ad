@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.6 2001/05/24 04:28:20 jlam Exp $
+$NetBSD: patch-ad,v 1.7 2001/10/30 17:47:20 drochner Exp $
 
---- src/config/require/unix/Makefile.orig	Tue Oct 31 21:23:23 2000
-+++ src/config/require/unix/Makefile
-@@ -180,7 +180,7 @@
+--- src/config/require/unix/Makefile.orig	Fri Aug 10 15:54:54 2001
++++ src/config/require/unix/Makefile	Tue Oct 30 16:16:17 2001
+@@ -185,7 +185,7 @@
  		fi								
  
  else
@@ -10,4 +10,4 @@ $NetBSD: patch-ad,v 1.6 2001/05/24 04:28:20 jlam Exp $
 +	@if [ ! -r /usr/include/iconv.h -a ! -r /usr/local/include/iconv.h -a ! -r ${LOCALBASE}/include/iconv.h ]; then	\
  		if [ -d $(ABI_ROOT)/../libiconv ]; then                        	\
  			echo Found libiconv in peer directory;                  \
- 			if [ ! -r $(ABI_ROOT)/../libiconv/src/config.h ]; then  \
+ 			if [ ! -r $(ABI_ROOT)/../libiconv/lib/config.h ]; then  \

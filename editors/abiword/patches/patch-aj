@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.3 2001/08/10 04:50:09 jlam Exp $
+$NetBSD: patch-aj,v 1.4 2001/10/30 17:47:20 drochner Exp $
 
---- src/config/abi_defs.mk.orig	Wed Jul 18 09:01:58 2001
-+++ src/config/abi_defs.mk
-@@ -584,7 +584,7 @@
+--- src/config/abi_defs.mk.orig	Sat Sep 22 00:16:17 2001
++++ src/config/abi_defs.mk	Tue Oct 30 16:55:51 2001
+@@ -587,7 +587,7 @@
  ABI_OPTIONS  +=GnomeVFS:On
  endif
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aj,v 1.3 2001/08/10 04:50:09 jlam Exp $
  
  # the bonobo target is known not to work properly yet
  ifdef ABI_OPT_BONOBO
-@@ -614,7 +614,7 @@
+@@ -617,7 +617,7 @@
  ABI_OPT_GNOME=
  GTK_CFLAGS	:=	$(shell $(GTK_CONFIG) --cflags)
  GTK_LIBS	:=	$(shell $(GTK_CONFIG) --libs)
@@ -20,3 +20,12 @@ $NetBSD: patch-aj,v 1.3 2001/08/10 04:50:09 jlam Exp $
  CFLAGS 		+=	$(GTK_CFLAGS) $(GLIB_CFLAGS)
  EXTRA_LIBS	+=	$(GTK_LIBS)
  #
+@@ -705,7 +705,7 @@
+ # it's the easiest way to ensure that we always include iconv.h 
+ # with it set (to prevent linker mismatches with wv's version)
+ #  
+-CFLAGS += -DLIBICONV_PLUG
++#CFLAGS += -DLIBICONV_PLUG
+ 
+ ifeq ($(ABI_NATIVE),unix)
+ CFLAGS += -DSUPPORTS_UT_IDLE=1
