@@ -1,0 +1,11 @@
+Please make sure the file /etc/ppp/options exists.
+
+You need to install:
+
+        ${X11BASE}/share/examples/xisp/ip-down            to /etc/ppp
+        ${X11BASE}/share/examples/xisp/ip-up              to /etc/ppp
+        ${X11BASE}/share/examples/xisp/peers/xisp_modem   to /etc/ppp/peers
+        ${X11BASE}/share/examples/xisp/peers/xisp_dialer  to /etc/ppp/peers
+
+and make sure they are executable for user "root" and group "dialer"
+to be able to fully use this package.
