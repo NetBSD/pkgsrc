@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/01/15 18:46:32 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2000/04/16 09:12:44 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.39 1998/01/31 17:49:48 jseger Exp
 #
 
@@ -16,17 +16,13 @@ BUILD_DEFS+=		USE_SOCKS
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-DEPENDS+=		ncurses>=4.2:../../devel/ncurses
-.endif
-
 # Check for readline.h as standard
 .if exists(/usr/include/readline.h)
 CPPFLAGS+=		-DHAVE_LIBREADLINE=1
 CPPFLAGS+=		-DHAVE_FILENAME_COMPLETION_FUNCTION=1
 CPPFLAGS+=		-DHAVE_READLINE_H=1 -DHAVE_HISTORY_H=1
-CONFIGURE_ARGS+=	--disable-readline
-CONFIGURE_ENV+=		LIBS="-ledit -lncurses"
+CONFIGURE_ARGS+=	--disable-readline --disable-ncurses
+CONFIGURE_ENV+=		LIBS="-ledit -ltermcap"
 .else
 DEPENDS+=		readline-4.0:../../devel/readline
 .endif
@@ -44,11 +40,9 @@ DEPENDS+=		socks5-1.0.2:../../net/socks5
 
 .if ${OPSYS} == "SunOS"
 CPPFLAGS=		-I${LOCALBASE}/include
-.else
-CPPFLAGS+=		-I${LOCALBASE}/include
-.endif
 LDFLAGS+=		-L${LOCALBASE}/lib
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ncftp ${PREFIX}/bin/ncftp2
