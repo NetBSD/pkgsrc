@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.151 2004/08/27 08:38:22 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.152 2004/09/07 00:14:13 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -1008,7 +1008,7 @@ _BLNK_UNTRANSFORM_SED+=	-f ${_BLNK_UNTRANSFORM_SEDFILE}
 # stripped out of them.
 #
 UNBUILDLINK_PATTERNS?=		# empty
-_UNBUILDLINK_PATTERNS=		${UNBUILDLINK_PATTERNS}
+_UNBUILDLINK_PATTERNS=		${UNWRAP_PATTERNS}
 _UNBUILDLINK_PATTERNS+=		*-config
 _UNBUILDLINK_PATTERNS+=		*Conf.sh
 _UNBUILDLINK_PATTERNS+=		*.pc
@@ -1016,7 +1016,7 @@ _UNBUILDLINK_PATTERNS_FIND=	\
 	\( ${_UNBUILDLINK_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
 UNBUILDLINK_FILES?=		# empty
 _UNBUILDLINK_FILES=		\
-	${UNBUILDLINK_FILES}	\
+	${UNWRAP_FILES}		\
 	`${FIND} . ${_UNBUILDLINK_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${SORT} -u`
 #
 # When "unbuildlinkifying" a file, we must remove references to the
