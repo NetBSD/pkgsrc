@@ -5,6 +5,6 @@ the Nautilus 1.0 development cycle, the code was internal to Nautilus
 and its components.
 
   In order to clearly distinguish useful extensions that could be useful
-for other projects, we have decided to put then in their own library.
+for other projects, we have decided to put them in their own library.
 It is possible that we will move even more from Nautilus to Eel in the
 future.
