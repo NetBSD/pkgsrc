@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8888 2005/01/23 22:00:32 hira Exp $
+$NetBSD: CHANGES,v 1.8889 2005/01/23 23:09:04 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -523,3 +523,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Apache-Gallery to 0.9.1 [kim 2005-01-23]
 	Added linpsk-0.8.0.4 [wulf 2005-01-23]
 	Updated libgnome to 2.8.0nb2 [hira 2005-01-23]
+	Updated python21 to 2.1.3nb5 [recht 2005-01-23]
+	Updated python22 to 2.2.3nb3 [recht 2005-01-23]
+	Updated python23 to 2.3.4nb4 [recht 2005-01-23]
+	Updated python24 to 2.4nb2 [recht 2005-01-23]
+	Added python23-nth-2.3.4 [recht 2005-01-23]
