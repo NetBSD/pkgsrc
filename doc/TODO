@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2756 2004/12/25 20:21:19 wiz Exp $
+$NetBSD: TODO,v 1.2757 2004/12/25 20:21:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -283,7 +283,6 @@ Suggested package updates
 	o abiword-2.2.1
 	o abiword1-1.0.7
 	o acpi-iasl-20040715
-	o acrobat5-5.0.10
 	o adzap-20041124
 	o afterstep-2.00.01
 	o aiksaurus-1.2.1
