@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: setpapersize,v 1.7 2003/04/22 02:30:49 sommerfeld Exp $
+# $NetBSD: setpapersize,v 1.8 2003/08/15 12:51:39 reed Exp $
 #
 # Small shell script to set the default papersize for packages
 #
@@ -37,7 +37,7 @@ esac
 lowpaper=`@ECHO@ $papersize | @TR@ '[A-Z]' '[a-z]'`
 
 if [ $# -eq 0 ]; then
-	pkgs="a2ps ddd enscript ghostscript magicfilter psutils";
+	pkgs="a2ps ddd enscript ghostscript gv magicfilter psutils";
 else 
 	pkgs=$@
 fi
@@ -47,7 +47,7 @@ while [ $# -gt 0 ]; do
 	case $1 in
 	a2ps)
 		a2psfile=@LOCALBASE@/etc/a2ps-site.cfg
-		if [ -e "$a2psfile" ]; then
+		if [ -s "$a2psfile" ]; then
 			@MV@ $a2psfile $a2psfile.old
 			@SED@ -e 's|^Options: --medium=.*|Options: --medium='$papersize'|' $a2psfile.old > $a2psfile && @RM@ $a2psfile.old
 			@ECHO@ "Set $1 package default paper size to $papersize in $a2psfile"
@@ -55,7 +55,7 @@ while [ $# -gt 0 ]; do
 		;;
 	ddd)
 		dddfile=@X11BASE@/lib/X11/app-defaults/Ddd
-		if [ -e "$dddfile" ]; then
+		if [ -s "$dddfile" ]; then
 			@MV@ $dddfile $dddfile.old
 			@SED@ -e 's|@Ddd@\*paperSize:.*|@Ddd@*paperSize: '$dimensions'|' $dddfile.old > $dddfile && @RM@ $dddfile.old
 			@ECHO@ "Set $1 package default paper size to $papersize in $dddfile"
@@ -63,7 +63,7 @@ while [ $# -gt 0 ]; do
 		;;
 	enscript)
 		enscriptfile=@LOCALBASE@/etc/enscript.cfg
-		if [ -e "$enscriptfile" ]; then
+		if [ -s "$enscriptfile" ]; then
 			@MV@ $enscriptfile $enscriptfile.old
 			@SED@ -e 's|^DefaultMedia:.*|DefaultMedia: '$papersize'|' $enscriptfile.old > $enscriptfile && @RM@ $enscriptfile.old
 			@ECHO@ "Set $1 package default paper size to $papersize in $enscriptfile"
@@ -71,15 +71,23 @@ while [ $# -gt 0 ]; do
 		;;
 	ghostscript)
 		ghostscriptfile=`ls @LOCALBASE@/share/ghostscript/*/lib/gs_init.ps 2>/dev/null | tail -1`
-		if [ -e "$ghostscriptfile" ]; then
+		if [ -s "$ghostscriptfile" ]; then
 			@MV@ $ghostscriptfile $ghostscriptfile.old
 			@SED@ -e '/^% Optionally choose a default paper size other than U.S. letter.$/N' -e 's/^\(% Optionally.*\n\)[%[:space:]]*(.*\() \/PAPERSIZE where.*\)$/\1('$lowpaper'\2/' $ghostscriptfile.old > $ghostscriptfile && @RM@ $ghostscriptfile.old
 			@ECHO@ "Set $1 package default paper size to $papersize in $ghostscriptfile"
 		fi
 		;;
+	gv)
+		gvfile=@X11BASE@/lib/X11/app-defaults/GV
+		if [ -s "$gvfile" ]; then
+			@MV@ $gvfile $gvfile.old
+			@SED@ -e 's|^GV.fallbackPageMedia:.*|GV.fallbackPageMedia:	'$papersize'|' $gvfile.old > $gvfile && @RM@ $gvfile.old
+			@ECHO@ "Set $1 package default paper size to $papersize in $gvfile"
+		fi
+		;;
 	magicfilter)
 		magicdir=@LOCALBASE@/libexec/magicfilter
-		if [ -e "$magicdir" ]; then
+		if [ -s "$magicdir" ]; then
 			for f in $magicdir/*-filter; do
 				@MV@ $f $f.old
 				@SED@ -e 's|-sPAPERSIZE=[a-zA-Z0-9_]*|-sPAPERSIZE='$lowpaper'|' $f.old > $f && @RM@ $f.old
@@ -90,7 +98,7 @@ while [ $# -gt 0 ]; do
 		;;
 	psutils)
 		psutilsfile=@LOCALBASE@/etc/psutils.cfg
-		if [ -e "$psutilsfile" ]; then
+		if [ -s "$psutilsfile" ]; then
 			@MV@ $psutilsfile $psutilsfile.old
 			@SED@ -e 's|^PAPERSIZE.*|PAPERSIZE='$lowpaper'|' $psutilsfile.old > $psutilsfile && @RM@ $psutilsfile.old
 			@ECHO@ "Set $1 package default paper size to $papersize in $psutilsfile"
