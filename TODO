@@ -1,10 +1,15 @@
-$NetBSD: TODO,v 1.25 2001/05/10 14:04:55 zuntum Exp $
+$NetBSD: TODO,v 1.26 2001/05/10 15:33:51 zuntum Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
+	apsfilter
+	number one magic filter for printing under Unix environment
+	http://www.apsfilter.org/
+	zuntum has pkg for this one: http://zuntum.net/pkgsrc/apsfilter.tar.gz and will import soon
+
 	compat_solaris8
 	Solaris and Intel compat libraries
 	http://www.sun.com/software/solaris/binaries/download.html
