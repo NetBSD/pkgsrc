@@ -12,4 +12,3 @@ must.rb: must/must_have/must_be methods
 protect.rb: protect from exceptions
 timer.rb: timer class
 version.rb: VersionNumber class
-
