@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/08/10 06:36:10 manu Exp $
+--- configure.orig	Fri Aug 10 07:36:15 2001
++++ configure	Fri Aug 10 07:37:28 2001
+@@ -4892,9 +4892,9 @@
+ s%@CPPFLAGS@%$CPPFLAGS%g
+ s%@CXXFLAGS@%$CXXFLAGS%g
+ s%@FFLAGS@%$FFLAGS%g
+ s%@DEFS@%$DEFS%g
+-s%@LDFLAGS@%$LDFLAGS%g
++s%@LDFLAGS@%$LDFLAGS -export-dynamic%g
+ s%@LIBS@%$LIBS%g
+ s%@exec_prefix@%$exec_prefix%g
+ s%@prefix@%$prefix%g
+ s%@program_transform_name@%$program_transform_name%g
