@@ -1,34 +1,25 @@
-# $NetBSD: Makefile,v 1.11 2003/07/10 08:50:52 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/10 09:05:43 adam Exp $
 #
 
-DISTNAME=	mad-0.14.2b
-PKGREVISION=	1
-CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mad/} \
-		ftp://ftp.mars.org/pub/mpeg/
+DISTNAME=	mad-0.15.0b
+CATEGORIES=	audio meta-pkgs
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 
 MAINTAINER=	simonb@netbsd.org
 HOMEPAGE=	http://sourceforge.net/projects/mad/
-COMMENT=	High-quality MPEG audio decoder
+COMMENT=	Meta-package for MAD (MPEG Audio Decoder)
 
-BUILD_USES_MSGFMT=	YES
+DEPENDS+=	libmad>=0.15.0:../../audio/libmad
+DEPENDS+=	libid3tag>=0.15.0:../../audio/libid3tag
+DEPENDS+=	madplay>=0.15.0:../../audio/madplay
 
-CONFLICTS=	madplay-[0-9]* libid3tag-[0-9]* libmad-[0-9]*
+USE_BUILDLINK2=	YES
+EXTRACT_ONLY=	# empty
+NO_CHECKSUM=	YES
+NO_CONFIGURE=	YES
+NO_BUILD=	YES
 
-USE_BUILDLINK2=		YES
-USE_PKGLOCALEDIR=	YES
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
-.include "../../mk/bsd.prefs.mk"
-
-.include "../../audio/esound/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-
-.if defined(USE_OSS)
-.  include "../../mk/ossaudio.buildlink2.mk"
-.endif
+do-install:	# empty
 
 .include "../../mk/bsd.pkg.mk"
