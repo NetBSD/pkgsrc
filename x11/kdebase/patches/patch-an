@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 1999/01/11 01:11:22 abs Exp $
+
+--- kcontrol/info.orig/Makefile.in	Sun Jan 10 13:56:51 1999
++++ kcontrol/info/Makefile.in	Sun Jan 10 16:32:00 1999
+@@ -154,7 +154,7 @@
+ 
+ kcminfo_SOURCES = main.cpp memory.cpp processor.cpp
+ BUILT_SOURCES = memory.moc processor.moc
+-noinst_HEADERS = processor.h memory.h memory_linux.cpp memory_fbsd.cpp memory_hpux.cpp memory_sgi.cpp processor_linux.cpp processor_fbsd.cpp processor_hpux.cpp processor_sgi.cpp
++noinst_HEADERS = processor.h memory.h memory_linux.cpp memory_netbsd.cpp memory_fbsd.cpp memory_hpux.cpp memory_sgi.cpp processor_linux.cpp processor_netbsd.cpp processor_fbsd.cpp processor_hpux.cpp processor_sgi.cpp
+ 
+ EXTRA_DIST = mini-memory.xpm mini-processor.xpm
+ 
