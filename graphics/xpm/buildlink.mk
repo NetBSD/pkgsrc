@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/07/02 14:16:55 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/07/06 21:11:33 tron Exp $
 #
 # This Makefile fragment is included by packages that use xpm.
 #
@@ -39,7 +39,6 @@ BUILDLINK_PREFIX.xpm=	${X11PREFIX}
 BUILDLINK_PREFIX.xpm=	${X11BASE}
 .endif
 
-BUILDLINK_FILES.xpm=	include/X11/X11/xpm.h		# for OpenWindows
 BUILDLINK_FILES.xpm+=	include/X11/xpm.h
 BUILDLINK_FILES.xpm+=	lib/libXpm.*
 
