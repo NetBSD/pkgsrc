@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/04/12 23:15:01 salo Exp $
+# $NetBSD: Makefile,v 1.23 2004/05/15 14:39:54 grant Exp $
 #
 
 DISTNAME=		flac-1.1.0
@@ -23,6 +23,9 @@ CONFIGURE_ENV+=		ac_cv_path_XMMS_CONFIG="no"
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 .endif
+
+# This version of flac doesn't build with SunPro yet.
+NOT_FOR_COMPILER=	sunpro
 
 # This version of flac doesn't seem to build correctly with -O3 using
 # the MIPSpro compiler.
