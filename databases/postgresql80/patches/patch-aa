@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/06 12:32:05 jdolecek Exp $
+
+--- src/Makefile.shlib.orig	Tue Nov  9 17:02:42 2004
++++ src/Makefile.shlib
+@@ -132,7 +132,7 @@ endif
+ 
+ ifeq ($(PORTNAME), freebsd)
+   ifdef ELF_SYSTEM
+-    shlib		= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
++    shlib		= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
+     LINK.shared		= $(COMPILER) -shared -Wl,-x,-soname,$(soname)
+   else
+     shlib		= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
+@@ -149,7 +149,7 @@ ifeq ($(PORTNAME), netbsd)
+ endif
+ 
+ ifeq ($(PORTNAME), hpux)
+-  shlib			= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
++  shlib			= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
+   ifeq ($(GCC), yes)
+     SHLIB_LINK		+= `$(CC) $(LDFLAGS) -print-libgcc-file-name`
+   endif
+@@ -161,7 +161,7 @@ ifeq ($(PORTNAME), hpux)
+ endif
+ 
+ ifeq ($(PORTNAME), irix)
+-  shlib			= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
++  shlib			= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
+   LINK.shared		= $(COMPILER) -shared -Wl,-set_version,sgi$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
+ endif
+ 

@@ -1,0 +1,117 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2005/02/06 12:32:05 jdolecek Exp $
+#
+# This Makefile fragment is included by all PostgreSQL packages built from
+# the main sources of the PostgreSQL distribution except jdbc-postgresql.
+#
+# The PostgreSQL package naming scheme, aside from the obvious piecewise
+# packages, is as follows:
+#
+#	<lang>-postgresql	client-side interface to PostgreSQL
+#	postgresql-<lang>	server-side module for PostgreSQL backend
+
+DISTNAME?=		postgresql-${DIST_VERS}
+CATEGORIES+=		databases
+MASTER_SITES?=		\
+			ftp://ftp.de.postgresql.org/mirror/postgresql/source/v${DIST_VERS}/ \
+			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/source/v${DIST_VERS}/ \
+			ftp://ftp.sunsite.auc.dk/mirrors/postgresql/source/v${DIST_VERS}/ \
+			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/source/v${DIST_VERS}/ \
+			http://www.postgresql.org/ftpsite/source/v${DIST_VERS}/ \
+			ftp://ftp.postgresql.org/pub/source/v${DIST_VERS}/
+
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER?=		recht@NetBSD.org
+HOMEPAGE?=		http://www.postgresql.org/
+
+CONFLICTS+=		postgresql-[0-9]* postgresql73-* postgresql74-*
+
+DISTINFO_FILE?=		${.CURDIR}/../postgresql80/distinfo
+COMMON_FILESDIR?=	${.CURDIR}/../postgresql80/files
+PATCHDIR?=		${.CURDIR}/../postgresql80/patches
+
+# Version numbering scheme:
+#
+# DIST_VERS		version number on the postgresql distfile
+# BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
+#
+# Note: Do not forget jdbc-postgresql when updating version
+DIST_VERS?=		8.0.1
+BASE_VERS?=		${DIST_VERS}
+
+BUILDLINK_DEPENDS.postgresql80-lib?=	postgresql80-lib>=${BASE_VERS}
+#BUILDLINK_DEPENDS.tcl-postgresql80?=	tcl-postgresql80>=${BASE_VERS}
+
+USE_BUILDLINK3=		yes
+GNU_CONFIGURE=		yes
+BUILD_USES_MSGFMT=	yes
+USE_GNU_TOOLS+=		lex make yacc
+PKG_SYSCONFSUBDIR=	postgresql
+
+# in 7.4.2, this is done by autoconf stuff which has leading whitespace
+#USE_PKGLOCALEDIR=	yes
+#SUBST_CLASSES+=		pkglocaledir2
+#SUBST_FILES.pkglocaledir2=	configure config/programs.m4
+#SUBST_STAGE.pkglocaledir2=	pre-configure
+#SUBST_SED.pkglocaledir2=	-e 's|\( localedir[	 :]*=\).*|\1${_PKGLOCALEDIR}|'
+
+.include "../../mk/bsd.prefs.mk"
+
+# Add support for hierarchical queries with Oracle like CONNECT BY syntax.
+# see http://gppl.terminal.ru/README.html for details.
+.if defined(PGSQL_USE_HIER) && !empty(PGSQL_USE_HIER:M[yY][eE][sS])
+PATCH_SITES=		http://gppl.moonbone.ru/
+PATCHFILES=		hier-Pg7.4-0.5.3.tar.gz
+PATCH_DIST_STRIP=	-p1
+.endif
+BUILD_DEFS+=	PGSQL_USE_HIER
+
+PGSQL_TEMPLATE.SunOS=		solaris
+.if !defined(PGSQL_TEMPLATE.${OPSYS})
+PGSQL_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
+.endif
+
+PG_DIR=			${PREFIX}
+GNU_CONFIGURE_PREFIX=	${PG_DIR}
+INSTALLATION_DIRS+=	${PG_DIR}
+
+#CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/postgresql80
+CONFIGURE_ARGS+=	--with-template="${PGSQL_TEMPLATE.${OPSYS}}"
+CONFIGURE_ARGS+=	--without-readline
+CONFIGURE_ARGS+=	--with-zlib
+CONFIGURE_ARGS+=	--enable-nls
+
+CONFIGURE_ARGS+=	--without-java
+CONFIGURE_ARGS+=	--without-perl
+CONFIGURE_ARGS+=	--without-python
+CONFIGURE_ARGS+=	--without-tcl
+CONFIGURE_ARGS+=	--without-tk
+
+# Postgresql explicitly forbids any use of -ffast-math
+CFLAGS:=		${CFLAGS:S/-ffast-math//}
+
+post-extract:
+	if [ -d ${WRKSRC}/src ]; then					\
+		${RM} -f ${WRKSRC}/src/Makefile.custom;			\
+		${CP} -f ${COMMON_FILESDIR}/Makefile.custom		\
+			${WRKSRC}/src/Makefile.custom;			\
+	fi
+	if [ -d ${WRKSRC}/src/interfaces/libpq ]; then			\
+		${RM} -f ${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
+		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpq		\
+			${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
+	fi
+	if [ -d ${WRKSRC}/src/interfaces/libpgtcl ]; then		\
+		${RM} -f ${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
+		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpgtcl	\
+			${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
+	fi
+	if [ -d ${WRKSRC}/src/backend/port/dynloader ]; then		\
+		${RM} -f ${WRKSRC}/src/backend/port/dynloader/netbsd.[ch];\
+		${CP} -f ${COMMON_FILESDIR}/netbsd.[ch]	\
+			${WRKSRC}/src/backend/port/dynloader/;	\
+	fi
+
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
