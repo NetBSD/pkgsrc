@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/04/25 04:33:47 itojun Exp $
+# $NetBSD: Makefile,v 1.6 2002/04/25 04:36:34 itojun Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -20,6 +20,7 @@ COMMENT=		Viewer for remote X and Win32 VNC servers
 CRYPTO=			yes
 NO_INSTALL_MANPAGES=	yes
 USE_IMAKE=		yes
+USE_INET6=		yes
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc
 
