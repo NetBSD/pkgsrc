@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/02/14 22:21:00 jdolecek Exp $
+$NetBSD: distinfo,v 1.5 2002/02/21 19:56:28 jdolecek Exp $
 
-SHA1 (csacek-2.1.7.tar.bz2) = 905bc3b68a9da1cd19f2ceb1bcb47146825771f4
-Size (csacek-2.1.7.tar.bz2) = 301778 bytes
+SHA1 (csacek-2.1.8.tar.bz2) = 23cf842a40ab42260404396c7de326a9df520a26
+Size (csacek-2.1.8.tar.bz2) = 302094 bytes
