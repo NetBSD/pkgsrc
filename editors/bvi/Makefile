@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/05/12 10:16:46 abs Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/25 17:33:59 wiz Exp $
 #
 
 DISTNAME=	bvi-1.3.0.src
@@ -11,9 +11,9 @@ MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://bvi.sourceforge.net/
 COMMENT=	Vi-like editor for binary files
 
-USE_BUILDLINK_ONLY=	YES
-GNU_CONFIGURE=		YES
-MAKE_ENV+=		SHELL=${SH}
+USE_BUILDLINK2=	YES
+GNU_CONFIGURE=	YES
+MAKE_ENV+=	SHELL=${SH}
 
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
