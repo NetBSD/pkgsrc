@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3971 2003/12/04 16:14:10 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3972 2003/12/04 17:15:34 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4845,3 +4845,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-CGI-FormBuilder [grant 2003-12-04]
 	Added sarg-1.4.1 [xtraeme 2003-12-04]
 	Added grdc-20031019 [xtraeme 2003-12-04]
+	Updated libIDL to 0.8.2nb1 [xtraeme 2003-12-04]
+	Updated ORBit2 to 2.6.0nb5 [xtraeme 2003-12-04]
+	Updated ORBit to 0.5.15nb6 [xtraeme 2003-12-04]
