@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/03/27 03:19:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2001/06/04 17:12:42 jtb Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -12,6 +12,10 @@ HOMEPAGE=	http://www.info-zip.org/pub/infozip/
 COMMENT=	Create/update ZIP files compatible with pkzip version 1
 
 BUILD_DEPENDS=	unzip-*:../../archivers/unzip
+
+RESTRICTED=	"Do not modify.  Do not sell for profit."
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_CDROM=${RESTRICTED}
 
 EXTRACT_CMD=	unzip -qo ${DOWNLOADED_DISTFILE}
 
