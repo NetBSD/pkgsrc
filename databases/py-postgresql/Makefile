@@ -1,44 +1,55 @@
-# $NetBSD: Makefile,v 1.13 2001/02/16 14:17:39 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/05/14 14:53:28 jlam Exp $
 
-DISTNAME=	PyGreSQL-3.1
-PKGNAME=	py-postgresql-3.1
-CATEGORIES=	databases
-MASTER_SITES=	ftp://ftp.druid.net/pub/distrib/
-EXTRACT_SUFX=	.tgz
+.include "../../databases/postgresql/Makefile.common"
+.include "../../databases/postgresql/Makefile.ssl"
 
-MAINTAINER=	darcy@NetBSD.org
-HOMEPAGE=	http://www.druid.net/pygresql/
-COMMENT=	PostgreSQL interface for Python
+PKGNAME=		py-postgresql-3.2
+COMMENT=		Python interface to PostgreSQL
 
-DEPENDS+=	python-2.*:../../lang/python
-DEPENDS+=	postgresql-7.*:../../databases/postgresql
-DEPENDS+=	py-mxDateTime-*:../../time/py-mxDateTime
+MAINTAINER=		darcy@netbsd.org
 
-ALL_TARGET=	default
+DEPENDS+=		postgresql-lib>=${PG_BASE_VERS}:../../databases/postgresql-lib
+DEPENDS+=		python>=2.0:../../lang/python
+DEPENDS+=		py-mxDateTime-[0-9]*:../../time/py-mxDateTime
 
-PYTHON=		${LOCALBASE}/bin/python
-PYTHON_LIBDIR=	${LOCALBASE}/lib/python2.0
-PLIST_SUBST+=	PYTHON_LIBDIR=lib/python2.0
+PYTHON=			${LOCALBASE}/bin/python
 
-DOCDIR=		${PREFIX}/share/doc/py-postgresql
+.if exists(${PYTHON})
+.if !defined(PYTHON_VERSION)
+PYTHON_VERSION!=	${PYTHON} -c "import sys; print sys.version[:3]"
+MAKEFLAGS+=		PYTHON_VERSION="${PYTHON_VERSION}"
+.endif
+.endif
 
-do-configure:
-	${SED}	-e "s,@LOCALBASE@,${LOCALBASE},g" \
-		${FILESDIR}/Setup.in > ${WRKSRC}/Setup.in
-	${CP} ${PYTHON_LIBDIR}/config/Makefile.pre.in ${WRKSRC}
-	cd ${WRKSRC}; ${MAKE} -f Makefile.pre.in boot
+PYTHON_LIBDIR=		lib/python${PYTHON_VERSION}
+PLIST_SUBST+=		PYTHON_LIBDIR=${PYTHON_LIBDIR}
 
-post-build:
-	cd ${WRKSRC}; ${PYTHON} ${PYTHON_LIBDIR}/compileall.py .
-	cd ${WRKSRC}; ${PYTHON} -O ${PYTHON_LIBDIR}/compileall.py .
+MAKE_ENV+=		INSTALLED_LIBPQ=1
+
+CONFIGURE_ARGS+=	--with-python
+CONFIGURE_ARGS+=	--with-python-compile
+CONFIGURE_ENV+=		PYTHON="${PYTHON}"
+
+DIRS_TO_BUILD=		src/interfaces/python
+DOCDIR=			${PREFIX}/share/doc/py-postgresql
+
+do-build:
+.for DIR in ${DIRS_TO_BUILD}
+	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} ${ALL_TARGET}
+.endfor
+
+do-install:
+.for DIR in ${DIRS_TO_BUILD}
+	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_TARGET}
+.endfor
 
 post-install:
-	cd ${WRKSRC}; ${INSTALL_SCRIPT} pg*.py pg*.py[co] \
-		${PYTHON_LIBDIR}/site-packages
 	${INSTALL_DATA_DIR} ${DOCDIR}/tutorial
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	for file in ${WRKSRC}/tutorial/*.py; do \
-		${INSTALL_DATA} $${file} ${DOCDIR}/tutorial; \
+	for file in ${WRKSRC}/src/interfaces/python/tutorial/*.py; do	\
+		${INSTALL_DATA} $${file} ${DOCDIR}/tutorial;		\
 	done
 
 .include "../../mk/bsd.pkg.mk"
