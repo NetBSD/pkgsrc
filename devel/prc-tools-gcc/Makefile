@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/06/27 05:17:41 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/28 05:48:19 jlam Exp $
 #
 
 PKGNAME=	prc-tools-gcc-${PRC_TOOLS_VERS}
@@ -15,7 +15,16 @@ DEPENDS+=	prc-tools-binutils>=2.0:../../devel/prc-tools-binutils
 ALL_TARGET=	all-gcc
 INSTALL_TARGET=	install-gcc
 
+USE_BUILDLINK_ONLY=	YES
+
 post-install:
 	@${RMDIR} ${PREFIX}/m68k-palmos/include
 
 .include "../../mk/bsd.pkg.mk"
+
+# Clear these as the xgcc built during the build phase might not recognize
+# any arch-specific options specified.
+#
+CFLAGS=		# empty
+CXXFLAGS=	# empty
+CPPFLAGS=	# empty
