@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2000/06/01 11:23:22 rh Exp $
+# $NetBSD: Makefile,v 1.36 2000/06/21 00:37:20 jlam Exp $
 
 DISTNAME=		libgtop-1.0.9
 CATEGORIES=		devel gnome
@@ -14,10 +14,11 @@ DEPENDS+=		guile-[0-9]*:../../lang/guile
 
 ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k
 
-GNU_CONFIGURE=		yes
-USE_X11BASE=		yes
-USE_GMAKE=		yes
-USE_PKGLIBTOOL=		yes
+GNU_CONFIGURE=		# defined
+USE_X11BASE=		# defined
+USE_GMAKE=		# defined
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 CFLAGS+=		-g
 CPPFLAGS+=		-I${LOCALBASE}/include
