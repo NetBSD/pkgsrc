@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/16 15:29:37 rh Exp $
+
+--- configure.orig	Sun Mar 15 16:26:21 1998
++++ configure	Mon Aug 16 15:31:55 1999
+@@ -1760,6 +1760,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+@@ -1805,6 +1806,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ 
+ if test "$USE_MAINTAINER_MODE" = yes; then
+@@ -3707,10 +3709,12 @@
+     top_srcdir="$ac_dots$ac_given_srcdir" ;;
+   esac
+ 
++if false; then
+   case "$ac_given_INSTALL" in
+   [/$]*) INSTALL="$ac_given_INSTALL" ;;
+   *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+   esac
++fi
+ 
+   echo creating "$ac_file"
+   rm -f "$ac_file"
