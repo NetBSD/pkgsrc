@@ -3,7 +3,8 @@
 # Date created:         12 November 1994
 # Whom:                 jmz
 #
-# Id: Makefile,v 1.7 1996/11/18 09:56:45 asami Exp 
+# $NetBSD: Makefile,v 1.3 1998/01/25 00:50:44 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.7 1996/11/18 09:56:45 asami Exp 
 #
 
 DISTNAME=	xsnow-1.40
@@ -12,7 +13,7 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB}
 MASTER_SITE_SUBDIR=	games
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	jmz@FreeBSD.org
+MAINTAINER=	is@netbsd.org
 
 USE_IMAKE=	yes
 
