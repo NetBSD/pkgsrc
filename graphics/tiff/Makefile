@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2004/12/28 23:10:10 reed Exp $
+# $NetBSD: Makefile,v 1.62 2005/01/09 21:34:41 jlam Exp $
 
 DISTNAME=	tiff-3.7.1
 CATEGORIES=	graphics
@@ -11,20 +11,32 @@ COMMENT=	Library and tools for reading and writing TIFF data files
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-BUILD_DEFS+=	USE_GIF
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_LANGUAGES=	c c++
 USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
 
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-rpath
+CONFIGURE_ARGS+=	--enable-c++
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !defined(USE_GIF) || !empty(USE_GIF:M[Nn][Oo])
-# disable support for LZW algorithm
+.if defined(USE_GIF) && !empty(USE_GIF:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	lzw
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.tiff
+PKG_SUPPORTED_OPTIONS=	lzw
+.include "../../mk/bsd.options.mk"
+
+###
+### LZW compression support
+###
+.if !empty(PKG_OPTIONS:Mlzw)
+CONFIGURE_ARGS+=	--enable-lzw
+.else
 CONFIGURE_ARGS+=	--disable-lzw
 .endif
 
