@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/11/12 16:15:29 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/11/16 11:27:54 agc Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
@@ -13,19 +13,16 @@ DEPENDS+=		gnuplot-3.5:../../graphics/gnuplot
 ALL_TARGET=		build
 USE_PERL5=		yes
 WRKSRC=			${WRKDIR}/hbench-OS
-NETBSDVER!=		${ECHO} `uname -s|tr '[A-Z]' '[a-z]'``uname -r`-`uname -m`
-ARCH!=			${ECHO} `uname -m`
 
 PLIST_SRC=		${WRKDIR}/PLIST-src
 
 post-patch:
-	@if [ ${ARCH} = i386 ];then					\
-		extrafiles=${PKGDIR}/PLIST.i386;			\
-	else								\
-		extrafiles="";						\
+	@machfiles="";							\
+	if [ ${MACHINE} = i386 ]; then					\
+		machfiles="$$machfiles ${PKGDIR}/PLIST.i386";		\
 	fi ;								\
-	${CAT} ${PKGDIR}/PLIST.md $$extrafiles ${PKGDIR}/PLIST.common |	\
-		${SED} -e 's@XXXNETBSDVERXXX@${NETBSDVER}@' > ${PLIST_SRC}
+	${CAT} ${PKGDIR}/PLIST.md $$machfiles ${PKGDIR}/PLIST.common |	\
+		${SED} -e 's|@OPSYS@|'`${ECHO} ${OPSYS} | ${TR} '[A-Z]' '[a-z]'`'|g' > ${PLIST_SRC}
 
 post-configure:
 	@cd ${WRKSRC};							\
