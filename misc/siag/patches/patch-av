@@ -1,15 +1,17 @@
-$NetBSD: patch-av,v 1.1 2003/01/17 02:09:47 uebayasi Exp $
+$NetBSD: patch-av,v 1.2 2003/03/05 14:31:00 wiz Exp $
 
---- antiword/Makefile.in.orig	Thu Jan 16 19:24:38 2003
+--- antiword/Makefile.in.orig	Fri Feb 28 19:38:05 2003
 +++ antiword/Makefile.in
-@@ -85,8 +85,8 @@
+@@ -103,10 +103,10 @@ am__fastdepCC_TRUE = @am__fastdepCC_TRUE
+ am__include = @am__include@
  am__quote = @am__quote@
- install_sh = @install_sh@
  
 -bindir = $(libdir)/siag/antiword
--docdir = $(prefix)/doc/siag/antiword
 +bindir = @bindir@
+ build_alias = @build_alias@
+ datadir = @datadir@
+-docdir = $(prefix)/doc/siag/antiword
 +docdir = @docdir@
- mapdir = $(libdir)/siag/antiword
- 
- map_DATA = 8859-1.txt
+ exec_prefix = @exec_prefix@
+ host_alias = @host_alias@
+ includedir = @includedir@
