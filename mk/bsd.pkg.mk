@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1448 2004/04/23 02:03:18 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1449 2004/04/24 11:31:57 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -1050,7 +1050,6 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://belnet.dl.sourceforge.net/sourceforge/ \
 	http://cesnet.dl.sourceforge.net/sourceforge/ \
 	http://easynews.dl.sourceforge.net/sourceforge/ \
-	http://flow.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
 	http://keihanna.dl.sourceforge.net/sourceforge/ \
 	http://osdn.dl.sourceforge.net/sourceforge/ \
@@ -1060,6 +1059,7 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://unc.dl.sourceforge.net/sourceforge/ \
 	ftp://ftp3.sourceforge.net/pub/sourceforge/ \
 	ftp://ftp.tuwien.ac.at/linux/sourceforge/
+#	http://flow.dl.sourceforge.net/sourceforge/
 
 MASTER_SITE_SUSE+=	\
 	http://altruistic.lbl.gov/mirrors/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
