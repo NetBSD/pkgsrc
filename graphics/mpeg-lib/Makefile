@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:26 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/07/10 17:56:30 tv Exp $
 
 DISTNAME=	mpeg_lib-1.2.1
 PKGNAME=	mpeg-1.2.1
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.mni.mcgill.ca/pub/mpeg/ \
 
 MAINTAINER=	tron@netbsd.org
 
-HAS_CONFIGURE=	yes
+GNU_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/mpeg_lib
 
