@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/01/03 15:27:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/10 07:59:45 cjep Exp $
 #
 
 DISTNAME=	control-center-2.0.1.1
@@ -16,6 +16,7 @@ BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 USE_GMAKE=		yes
 USE_GNU_GETTEXT=	yes
 USE_X11=		yes

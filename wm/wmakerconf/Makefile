@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/08/25 21:51:39 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/10 07:55:21 cjep Exp $
 #
 
 DISTNAME=	wmakerconf-2.8.1
@@ -12,6 +12,7 @@ HOMEPAGE=	http://ulli.on.openave.net/wmakerconf/
 COMMENT=	Gtk+ based configuration tool for Window Maker
 
 USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 
