@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/11/30 05:58:04 taca Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/17 15:37:01 taca Exp $
 #
 
 DISTNAME=	AiCA-0.81
@@ -29,6 +29,7 @@ EXAMPLES=		lib/aica.cnf sample.csv
 
 pre-configure:
 	cd ${WRKSRC}; \
+		${ECHO} >> aicrypto/ecdsa/Makefile.in; \
 		${CP} README README.in; ${CP} README.j README.j.in
 
 do-install:
