@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/12/28 23:18:21 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2005/02/27 11:48:57 markd Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 KDEGRAPHICS_BUILDLINK3_MK:=	${KDEGRAPHICS_BUILDLINK3_MK}+
@@ -17,6 +17,7 @@ BUILDLINK_PKGSRCDIR.kdegraphics?=	../../graphics/kdegraphics3
 .endif	# KDEGRAPHICS_BUILDLINK3_MK
 
 .include "../../converters/fribidi/buildlink3.mk"
+.include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
 .include "../../graphics/imlib/buildlink3.mk"
