@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.572 2003/05/22 03:14:30 markd Exp $
+$NetBSD: TODO,v 1.573 2003/05/22 17:00:21 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -85,7 +85,6 @@ Suggested package updates
 	o beaver-0.3.0 [pkg/21259]
 	o binutils-2.13.2.1
 	o blender-2.27
-	o boehm-gc-6.2a5 [jmmv|pkg/21569]
 	o bogofilter-0.11.2
 	o boolean-6.4
 	o bzflag-1.7g0
