@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2000/11/09 14:51:22 wiz Exp $
+# $NetBSD: Makefile,v 1.166 2000/11/10 16:55:47 abs Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -135,6 +135,7 @@
     SUBDIR += upclient
     SUBDIR += userppp
     SUBDIR += vnc
+    SUBDIR += vncviewer
     SUBDIR += vtun
     SUBDIR += wakeup
     SUBDIR += wget
