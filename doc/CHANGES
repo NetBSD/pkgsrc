@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1638 2003/03/14 11:41:52 wiz Exp $
+$NetBSD: CHANGES,v 1.1639 2003/03/14 17:21:15 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1122,3 +1122,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated less to 381nb1 [jmmv 2003-03-14]
 	Updated citrix_ica to 6.30.1052 [wiz 2003-03-14]
 	Updated libdvdcss to 1.2.6 [wiz 2003-03-14]
+	Updated cvsync to 0.14.5 [gehenna 2003-03-14]
