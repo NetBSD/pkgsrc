@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 15:05:01 skrll Exp $
+$NetBSD: distinfo,v 1.3 2003/09/15 09:51:38 agc Exp $
 
-SHA1 (lout-3.21.tar.gz) = f6b6599d7a0913c169465e7b1760b64d5d82170e
-Size (lout-3.21.tar.gz) = 1793297 bytes
-SHA1 (patch-aa) = cbd26d1a2a87af5a60ba53de294a40cbb16ae786
+SHA1 (lout-3.26.tar.gz) = f32c15a538a0b46b85ccaa1a9716c4c3b87dcd75
+Size (lout-3.26.tar.gz) = 1881323 bytes
+SHA1 (patch-aa) = c1ec52323dcf6697848f7b15e73ad78302546d4d

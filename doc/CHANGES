@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3381 2003/09/15 05:08:07 grant Exp $
+$NetBSD: CHANGES,v 1.3382 2003/09/15 09:52:36 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3698,3 +3698,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gsl to 1.4nb2 [dmcmahill 2003-09-14]
 	Added ruby-gsl-0.1.9 [dmcmahill 2003-09-14]
 	Updated pax to 20030915 [grant 2003-09-15]
+	Updated lout to 3.26 [agc 2003-09-15]
