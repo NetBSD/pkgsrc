@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/04/27 12:45:11 cjep Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/04/27 14:57:56 cjep Exp $
 bin/genpref
 bin/icehelp
 bin/icesh
@@ -282,25 +282,25 @@ share/doc/icewm/COPYING
 share/doc/icewm/FAQ
 share/doc/icewm/README
 share/doc/icewm/TODO
-${PKGLOCALEDIR}/ca/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/cs/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/de/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/en/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/es/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/fi/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/fr/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/hr/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/hu/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/it/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/ja/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/lt/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/pl/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/pt_BR/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/ro/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/ru/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/sv/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/zh_CN.gb2312/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/zh_TW.Big5/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/en/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/zh_CN.gb2312/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/icewm.mo
 @dirrm etc/X11/icewm
 @dirrm lib/X11/icewm/icons
 @dirrm lib/X11/icewm/ledclock
