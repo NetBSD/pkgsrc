@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6289 2004/06/23 15:56:35 minskim Exp $
+$NetBSD: CHANGES,v 1.6290 2004/06/23 16:20:19 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3034,3 +3034,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated grepmail to 5.30 [snj 2004-06-23]
 	Updated bomberclone to 0.11.3 [snj 2004-06-23]
 	Updated python15 to 1.5.2nb2 [minskim 2004-06-23]
+	Updated flawfinder to 1.26 [snj 2004-06-23]
