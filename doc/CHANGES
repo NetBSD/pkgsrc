@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4233 2003/12/23 13:28:39 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4234 2003/12/23 16:46:39 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5315,3 +5315,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mailman to 2.1.3 [xtraeme 2003-12-23]
 	Updated xmlcatmgr to 2.0alpha1 [jmmv 2003-12-23]
 	Updated libgda to 1.0.0nb2 [xtraeme 2003-12-23]
+	Updated wwwoffle to 2.7fnb2 [fredb 2003-12-23]
