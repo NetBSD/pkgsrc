@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2000/12/12 01:31:02 wiz Exp $
+# $NetBSD: Makefile,v 1.171 2000/12/12 10:29:19 rh Exp $
 #
 
     SUBDIR += airportbasestationconfig
@@ -31,6 +31,7 @@
     SUBDIR += echoping
     SUBDIR += eggdrop
     SUBDIR += ethereal
+    SUBDIR += fair-identd
     SUBDIR += fping
     SUBDIR += freewais-sf
     SUBDIR += gaim
