@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2004/12/03 15:14:56 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/12/05 08:13:02 jmmv Exp $
 #
 
-DISTNAME=		gice-0.6.1
-PKGREVISION=		6
+DISTNAME=		gice-0.6.2
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gice/}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		jmmv@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://gice.sourceforge.net/
 COMMENT=		Powerful C text editor with advanced features
 
