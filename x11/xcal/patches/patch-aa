@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/04/27 06:46:47 kim Exp $
+
+--- Imakefile.orig	Thu Apr 27 02:23:48 2000
++++ Imakefile	Thu Apr 27 02:24:04 2000
+@@ -13,7 +13,7 @@
+ 
+        PROGRAMS = derived xcal
+    INSTPGMFLAGS = $(INSTBINFLAGS)
+-         BINDIR = /usr/local/bin
++#        BINDIR = /usr/local/bin
+ 
+ ComplexProgramTarget_1(xcal, XawClientLibs, -lm)
+ 
