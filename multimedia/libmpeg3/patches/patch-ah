@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2003/07/28 15:01:28 mrg Exp $
+$NetBSD: patch-ah,v 1.1 2004/06/26 18:00:21 grant Exp $
 
 --- video/output.c.orig	2001-05-20 13:05:26.000000000 +1000
 +++ video/output.c	2003-07-29 00:53:45.000000000 +1000
