@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/04/17 19:24:37 grant Exp $
+# $NetBSD: Makefile,v 1.38 2004/05/31 16:47:47 minskim Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp
 #
 
@@ -14,6 +14,8 @@ HOMEPAGE=	http://www.info-zip.org/pub/infozip/Zip.html
 COMMENT=	Create/update ZIP files compatible with pkzip
 
 BUILD_DEPENDS=	unzip-[0-9]*:../../archivers/unzip
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 EXTRACT_ONLY=	zip23.tar.gz
 MAKEFILE=	unix/Makefile
@@ -39,6 +41,8 @@ CFLAGS+=	-DHAVE_DIRENT_H
 .endif
 
 USE_BUILDLINK3=	yes
+
+INSTALLATION_DIRS=	bin man/man1
 
 post-extract:
 	@cd ${WRKSRC} && ${LOCALBASE}/bin/unzip -qo ${DISTDIR}/zcrypt29.zip

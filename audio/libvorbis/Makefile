@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/04/12 23:15:01 salo Exp $
+# $NetBSD: Makefile,v 1.34 2004/05/31 16:47:47 minskim Exp $
 
 DISTNAME=	libvorbis-1.0.1
 CATEGORIES=	devel audio
@@ -7,6 +7,8 @@ MASTER_SITES=	http://www.vorbis.com/files/1.0.1/unix/
 MAINTAINER=	lukem@NetBSD.org
 HOMEPAGE=	http://www.xiph.org/ogg/vorbis/
 COMMENT=	Library for the Ogg Vorbis audio encoding format
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES

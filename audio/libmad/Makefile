@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/20 03:00:47 snj Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/31 16:47:47 minskim Exp $
 #
 
 DISTNAME=	libmad-0.15.1b
@@ -12,12 +12,16 @@ COMMENT=	High-quality MPEG audio decoder
 
 CONFLICTS=	mad<0.15
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
+
+INSTALLATION_DIRS=	lib/pkgconfig
 
 post-build:
 	${SED}	-e 's,@PREFIX@,${PREFIX},g'			\
