@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.36 1998/12/24 11:10:32 frueauf Exp $
+# $NetBSD: mk.conf.example,v 1.37 1999/01/15 21:19:59 wrstuden Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection.
@@ -143,9 +143,9 @@
                                 # Default: not defined
 
 #MUTT_INTERNATIONAL=	yes	# Used to decide if international export
-				# restricted version of "mutt" is built.
-				# Possible: not defined, YES
-				# Default: not defined
+                                # restricted version of "mutt" is built.
+                                # Possible: not defined, YES
+                                # Default: not defined
 
 NMH_MTA=	smtp		# default MTA for use in nmh.
                                 # Possible: smtp or sendmail.
@@ -219,9 +219,9 @@ PAPERSIZE=	A4		# Default paper size for packages.
                                 # Default: not defined
 
 #WINDOWMAKER_THEMES=	...	# Used in wm-themes package to specify
-				# the themes which will be installed.
-				# Possible: see http://wm.themes.org/
-				# Default: FreeBSD-theme
+                                # the themes which will be installed.
+                                # Possible: see http://wm.themes.org/
+                                # Default: FreeBSD-theme
 
 #ZIP_ENCRYPTION=		# Add encryption code to zip, zip1, and unzip
                                 # Possible: defined, not defined
