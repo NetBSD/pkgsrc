@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/03/26 02:27:54 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2004/04/25 03:12:29 snj Exp $
 
 DISTNAME=		stunnel-4.05
 PKGREVISION=		1
@@ -11,7 +11,7 @@ MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.stunnel.org/
 COMMENT=		Universal SSL tunnel
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \
@@ -23,6 +23,6 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \
 
 PKG_SYSCONFSUBDIR=	stunnel
 
-.include "../../security/openssl/buildlink2.mk"
-.include "../../security/tcp_wrappers/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
