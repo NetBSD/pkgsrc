@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/02/09 13:09:56 frueauf Exp $
+bin/sidplay
+bin/sid2wav
+bin/sidcon
+include/sidplay/compconf.h
+include/sidplay/config.h
+include/sidplay/emucfg.h
+include/sidplay/fformat.h
+include/sidplay/myendian.h
+include/sidplay/mytypes.h
+include/sidplay/player.h
+include/sidplay/sidtune.h
+include/sidplay/version.h
+include/sidplay/fixpoint.h
+lib/libsidplay.a
+@dirrm include/sidplay

@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/02/09 13:09:56 frueauf Exp $
+
+--- configure.in.orig	Tue Sep 15 01:17:27 1998
++++ configure.in	Sun Jan 31 12:45:24 1999
+@@ -1,7 +1,7 @@
+ AC_INIT(libsidplay/sidtune.cpp)
+ AC_CONFIG_HEADER(libsidplay/include/config.h)
+ AC_CANONICAL_SYSTEM
+-AC_PREFIX_DEFAULT(/usr)
++AC_PREFIX_DEFAULT(${PREFIX})
+ 
+ AC_PROG_CXX
+ AC_LANG_CPLUSPLUS
+@@ -38,7 +38,7 @@
+ AC_CHECK_HEADERS(limits.h)
+ AC_CHECK_HEADERS(strstream.h strstrea.h fstream.h iostream.h iomanip.h)
+ AC_CHECK_HEADERS(sys/ioctl.h linux/soundcard.h machine/soundcard.h  \
+-  sys/audio.h sun/audioio.h sun/dbriio.h sys/audioio.h  \
++  soundcard.h sys/audio.h sun/audioio.h sun/dbriio.h sys/audioio.h  \
+   audio.h dmedia/audio.h)
+ 
+ AC_CHECK_LIB(m,main,[LIBM=-lm],) dnl For FreeBSD.
+@@ -91,6 +91,10 @@
+   *sunos*) AC_DEFINE(HAVE_SUNOS,1)
+     $CP console/audio/sparc/* console
+     AC_MSG_RESULT(sparc)
++       ;;
++  *netbsd*) AC_DEFINE(HAVE_NETBSD,1)
++    $CP console/audio/linux/* console
++    AC_MSG_RESULT(linux)
+        ;;
+ esac
+ 
