@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6990 2004/08/24 21:01:53 recht Exp $
+$NetBSD: CHANGES,v 1.6991 2004/08/25 01:20:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4040,3 +4040,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated getmail to 4.1.0 [schmonz 2004-08-24]
 	Updated scons to 0.96.1 [recht 2004-08-24]
 	Updated tla to 1.2.1nb1 [recht 2004-08-24]
+	Updated xmame to 0.85nb1 [wiz 2004-08-25]
