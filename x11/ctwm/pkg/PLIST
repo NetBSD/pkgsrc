@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/01/25 00:00:30 hubertf Exp $
 bin/ctwm
 lib/X11/twm/images/3D_Expand15.xpm
 lib/X11/twm/images/3D_Iconify15.xpm
