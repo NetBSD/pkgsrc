@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/11/23 16:54:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2000/01/13 11:15:12 soren Exp $
 #
 
 DISTNAME=	king-1.00-tb40-1
@@ -18,7 +18,7 @@ MIRROR_DISTFILE=no
 KINGDISTDIR?=	/cdrom/linux
 DISTDIR=	${KINGDISTDIR}
 
-DEPENDS=	suse_base-6.1p1:../../emulators/suse_base
+DEPENDS=	suse_base-6.1:../../emulators/suse_base
 
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
