@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/24 20:29:10 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/10/08 18:27:10 hubertf Exp $
 bin/pl
 bin/plpng
 bin/pltab
@@ -10,7 +10,6 @@ man/man1/pltab.1
 share/doc/ploticus/Faq
 share/doc/ploticus/Problems
 share/doc/ploticus/Util
-share/doc/ploticus/Welcome
 share/doc/ploticus/annotate
 share/doc/ploticus/areadef
 share/doc/ploticus/attributetypes
@@ -26,6 +25,7 @@ share/doc/ploticus/controlling
 share/doc/ploticus/curvefit
 share/doc/ploticus/dataformat
 share/doc/ploticus/dates
+share/doc/ploticus/datesettings
 share/doc/ploticus/defineunits
 share/doc/ploticus/drawcommands
 share/doc/ploticus/endproc
@@ -47,6 +47,7 @@ share/doc/ploticus/paper
 share/doc/ploticus/pie
 share/doc/ploticus/posters
 share/doc/ploticus/print
+share/doc/ploticus/processdata
 share/doc/ploticus/rangebar
 share/doc/ploticus/rangesweep
 share/doc/ploticus/scaleunits
