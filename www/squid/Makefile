@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.77 2003/02/19 23:44:42 taca Exp $
+# $NetBSD: Makefile,v 1.78 2003/03/02 16:22:43 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE1
 PKGNAME=	squid-2.5.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -10,7 +10,12 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE1-disable-ident-lookups.patch \
+PATCHFILES=	squid-2.5.STABLE1-external_acl_user.patch \
+		squid-2.5.STABLE1-auth_digest.patch \
+		squid-2.5.STABLE1-external_acl_auth_segfault.patch \
+		squid-2.5.STABLE1-distclean_icons.patch \
+		squid-2.5.STABLE1-error-http-ident.patch \
+		squid-2.5.STABLE1-disable-ident-lookups.patch \
 		squid-2.5.STABLE1-disable-http-violations.patch \
 		squid-2.5.STABLE1-proxy_auth.patch \
 		squid-2.5.STABLE1-max_user_ip.patch \
