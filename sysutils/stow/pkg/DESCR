@@ -1,0 +1,14 @@
+Stow is a tool for managing the installation of multiple software
+packages in the same run-time directory tree.  One historical
+difficulty of this task has been the need to administer, upgrade,
+install and remove files in independent packages without confusing
+them with other files sharing the same filesystem space.
+
+The approach used by Stow is to install each package into its own
+tree, then use symbolic links to make it appear as though the files
+are installed in the common tree.  Administration can be performed in
+the package's private tree in isolation from clutter from other
+packages.
+
+Stow was inspired by Carnegie-Mellon's Depot program, but is
+substantially smaller.
