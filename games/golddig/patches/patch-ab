@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 1998/09/13 22:13:09 garbled Exp $
+--- scores.c.orig	Sun Sep 13 14:57:47 1998
++++ scores.c	Sun Sep 13 14:58:45 1998
+@@ -31,7 +31,7 @@
+   int numscore,cur,numgame;
+ 
+   /* Generate name of high score file */
+-  sprintf(buf,"%s/scores",LIB);
++  sprintf(buf,"/var/games/golddig.scores");
+   /* Open high score file */
+   sfile = fopen(buf,"r");
+   /* Set default values for number of games and high scores */
+@@ -98,7 +98,7 @@
+   }
+ 
+   /* Save new high score list to score file */
+-  sprintf(buf,"%s/scores",LIB);
++  sprintf(buf,"/var/games/golddig.scores");
+   sfile = fopen(buf,"w");
+   if(sfile == NULL) {
+     perror(buf);
