@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.19 2003/10/19 20:15:05 kristerw Exp $
+# $NetBSD: HACKS,v 1.20 2003/10/27 13:25:50 salo Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -341,8 +341,6 @@ hack	gcc-sparc64-memorysize
 mdate	8 Jan 2003
 who	salo
 port	sparc64
-file	chat/silc-client/patch-ab : 1.8
-file	chat/silc-server/patch-ac : 1.7
 file	security/skey/patch-aa : 1.2
 file	security/skey/patch-ab : 1.1
 descr
