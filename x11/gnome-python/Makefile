@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2004/03/26 02:27:59 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2004/04/27 02:04:07 snj Exp $
 
 DISTNAME=		gnome-python-1.4.4
 PKGNAME=		${PYPKGPREFIX}-gnome-1.4.4
@@ -17,7 +17,7 @@ CONFLICTS+=		gnome-python-*
 
 GNU_CONFIGURE=		yes
 USE_X11=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -38,9 +38,8 @@ post-configure:
 .endfor
 .endif
 
-.include "../../devel/libglade/buildlink2.mk"
-.include "../../x11/gtkglarea/buildlink2.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../x11/gnome-core/buildlink2.mk"
-.include "../../x11/gtkglarea/buildlink2.mk"
+.include "../../x11/gnome-core/buildlink3.mk"
+.include "../../x11/gtkglarea/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
