@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/05/08 02:08:38 reed Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/08 16:14:55 reed Exp $
 
 DISTNAME=	findutils-4.1
 PKGREVISION=	3
@@ -11,7 +11,7 @@ COMMENT=	The GNU find, xargs and locate utilities
 
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
-NO_CONFIGURE_INFODIR=	YES
+CONFIGURE_HAS_INFODIR=	NO
 MAKE_ENV+=		INFO_DIR=${INFO_DIR}
 
 INFO_FILES=		find.info
