@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/05/12 05:31:28 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/16 16:37:02 minskim Exp $
 #
 
 DISTNAME=	dar-2.0.2
@@ -11,6 +11,8 @@ HOMEPAGE=	http://dar.linux.free.fr/
 COMMENT=	Disk archiver
 
 USE_BUILDLINK3=		yes
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--disable-nodump-flag
