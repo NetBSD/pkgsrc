@@ -1,43 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2004/02/11 10:55:49 recht Exp $
+$NetBSD: patch-aa,v 1.8 2004/04/14 16:30:43 tv Exp $
 
 --- configure.orig	2004-02-11 00:16:08.000000000 +0100
 +++ configure	2004-02-11 11:34:05.000000000 +0100
-@@ -8773,7 +8773,17 @@
- fi
- 
- 
--have_milter="no"
-+# Check whether --enable-milter or --disable-milter was given.
-+if test "${enable_milter+set}" = set; then
-+  enableval="$enable_milter"
-+
-+else
-+  have_milter="no"
-+  want_milter="no"
-+fi;
-+
-+if test "$want_milter" = "yes"
-+then
- if test "${ac_cv_header_libmilter_mfapi_h+set}" = set; then
-   echo "$as_me:$LINENO: checking for libmilter/mfapi.h" >&5
- echo $ECHO_N "checking for libmilter/mfapi.h... $ECHO_C" >&6
-@@ -8879,15 +8889,7 @@
-   have_milter="yes"
- fi
- 
--
--
--# Check whether --enable-milter or --disable-milter was given.
--if test "${enable_milter+set}" = set; then
--  enableval="$enable_milter"
--
--else
--  have_milter="no"
--fi;
-+fi
- 
- want_dsig="yes"
- # Check whether --enable-dsig or --disable-dsig was given.
 @@ -9502,11 +9504,17 @@
  
      ;;
