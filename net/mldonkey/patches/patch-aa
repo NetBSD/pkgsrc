@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2004/02/11 16:27:03 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2004/03/04 16:14:54 wiz Exp $
 
---- config/configure.orig	Wed Feb 11 00:26:18 2004
+--- config/configure.orig	Mon Feb 16 15:04:14 2004
 +++ config/configure
-@@ -9961,7 +9961,7 @@ s,@CAMLP4@,$CAMLP4,;t t
- s,@PERL@,$PERL,;t t
+@@ -10563,7 +10563,7 @@ s,@PERL@,$PERL,;t t
+ s,@EGREP@,$EGREP,;t t
  s,@GTK_CONFIG@,$GTK_CONFIG,;t t
  s,@PTHREAD_CC@,$PTHREAD_CC,;t t
 -s,@PTHREAD_LIBS@,$PTHREAD_LIBS,;t t
