@@ -1,20 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2000/02/06 02:34:27 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2003/12/16 00:11:48 dillo Exp $
 
---- ./src/auth.c.orig	Sun Jan 23 17:30:24 2000
-+++ ./src/auth.c	Sun Feb  6 03:06:53 2000
-@@ -13,12 +13,12 @@
-  *              right notice, and it must be included in any copy made
-  */
+--- src/Makefile.in.orig	Thu Jul 24 16:18:45 2003
++++ src/Makefile.in
+@@ -326,7 +326,6 @@ install_manpage: $(DESTDIR)$(INS_MANUAL_
+ 	@$(INSTALL) -m 444 $(DOCDIR)/tin.1 $(DESTDIR)$(INS_MANUAL_DIR)$(INS_MANUAL_EXT)/$(PROJECT).$(INS_MANUAL_EXT)
+ 	@( $(CD) $(DESTDIR)$(INS_MANUAL_DIR)$(INS_MANUAL_EXT) && $(RM) -f r$(PROJECT).$(INS_MANUAL_EXT) && $(LN) $(PROJECT).$(INS_MANUAL_EXT) r$(PROJECT).$(INS_MANUAL_EXT) )
+ 	@$(INSTALL) -m 444 $(DOCDIR)/tin.5 $(DESTDIR)$(INS_MANUAL_DIR)5/$(PROJECT).5
+-	@-if test ! -f $(DESTDIR)$(INS_MANUAL_DIR)5/mbox.5 ; then $(INSTALL) -m 444 $(DOCDIR)/mbox.5 $(DESTDIR)$(INS_MANUAL_DIR)5/mbox.5 ; else $(ECHO) "  ... skipping $(DESTDIR)$(INS_MANUAL_DIR)5/mbox.5 - file already exists" ; fi
+ 	@-if test ! -f $(DESTDIR)$(INS_MANUAL_DIR)5/mmdf.5 ; then $(INSTALL) -m 444 $(DOCDIR)/mmdf.5 $(DESTDIR)$(INS_MANUAL_DIR)5/mmdf.5 ; else $(ECHO) "  ... skipping $(DESTDIR)$(INS_MANUAL_DIR)5/mmdf.5 - file already exists" ; fi
  
--#ifndef NNTPLIB_H
--#	include "nntplib.h"
--#endif /* !NNTPLIB_H */
- #ifndef TIN_H
- #	include "tin.h"
- #endif /* !TIN_H */
-+#ifndef NNTPLIB_H
-+#	include "nntplib.h"
-+#endif /* !NNTPLIB_H */
- #ifndef TCURSES_H
- #	include "tcurses.h"
- #endif /* !TCURSES_H */
+ uninstall_manpage:
