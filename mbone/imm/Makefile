@@ -3,7 +3,7 @@
 # Date created:         1997/11/24
 # Whom:                 is
 #
-# $NetBSD: Makefile,v 1.4 1998/01/24 20:43:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/30 13:57:59 agc Exp $
 #
 # NetBSD "imm" package
 # The original was based on the imm-3.5a1 FreeBSD port maintained
@@ -18,7 +18,7 @@ DISTFILES=	imm36a1.tar.Z
 
 MAINTAINER=	is@netbsd.org
 
-LIB_DEPENDS=	tk80\\.1:${PORTSDIR}/x11/tk80
+LIB_DEPENDS=	tk80.1:${PORTSDIR}/x11/tk80
 
 ALL_TARGET=	netbsd
 

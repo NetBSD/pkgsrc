@@ -3,7 +3,7 @@
 # Date created:         30th November 1997
 # Whom:                 tron
 #
-# $NetBSD: Makefile,v 1.4 1998/01/29 16:51:27 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/30 13:57:34 agc Exp $
 #
 
 DISTNAME=	knews-0.9.8
@@ -13,7 +13,7 @@ MASTER_SITES=	ftp://ftp.nada.kth.se/home/su95-kjo/knews/ \
 
 MAINTAINER=	tron@netbsd.org
 
-LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm
+LIB_DEPENDS=	Xpm.4.:${PORTSDIR}/graphics/xpm
 
 USE_IMAKE=	yes
 WRKSRC=		${WRKDIR}/knews

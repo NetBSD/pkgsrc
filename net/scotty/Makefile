@@ -3,7 +3,7 @@
 # Date created:		18 Februar 1995
 # Whom:			Gennady Sorokopud <gena@netvision.net.il>
 #
-# $NetBSD: Makefile,v 1.4 1998/01/24 21:40:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/30 13:57:30 agc Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/27 23:01:53 cwt Exp
 #
 
@@ -13,7 +13,7 @@ MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/tkined/
 
 MAINTAINER=	phk@freebsd.org
 
-LIB_DEPENDS=	tk80\\.1\\.:${PORTSDIR}/x11/tk80
+LIB_DEPENDS=	tk80.1.:${PORTSDIR}/x11/tk80
 
 GNU_CONFIGURE=  yes
 CONFIGURE_ARGS+= --with-tcl-config=${PREFIX}/lib/tcl8.0 \

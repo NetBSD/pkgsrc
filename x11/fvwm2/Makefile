@@ -3,7 +3,7 @@
 # Date created:		20 Jan 1996
 # Whom:			peter
 #
-# $NetBSD: Makefile,v 1.4 1997/11/18 17:01:34 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/30 13:57:42 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -18,7 +18,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} fvwm-users-jp-kits.97Oct04.tar.gz
 
 MAINTAINER=	matusita@jp.freebsd.org
 
-LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm
+LIB_DEPENDS=	Xpm.4.:${PORTSDIR}/graphics/xpm
 
 USE_IMAKE=	yes
 CAT1= 		FvwmAudio.0 FvwmAuto.0 FvwmBacker.0 FvwmBanner.0 \

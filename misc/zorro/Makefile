@@ -3,7 +3,7 @@
 # Date created:         03 Aug 1996
 # Whom:                 shanee@rabbit.augusta.de
 #
-# $NetBSD: Makefile,v 1.3 1998/01/24 21:31:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/30 13:57:28 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/22 19:55:25 jseger Exp
 #
 
@@ -14,7 +14,7 @@ MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/sorted/apps/zorro-1.1p8/
 
 MAINTAINER=	shanee@augusta.de
 
-LIB_DEPENDS=	tk80\\.1\\.:${PORTSDIR}/x11/tk80
+LIB_DEPENDS=	tk80.1.:${PORTSDIR}/x11/tk80
 
 NO_BUILD=	yes
 

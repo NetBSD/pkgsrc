@@ -3,7 +3,7 @@
 # Date created:				October 21st 1996
 # Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
 #
-# $NetBSD: Makefile,v 1.3 1998/01/25 00:07:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/30 13:57:43 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/09/14 04:00:00 jfitz Exp
 #
 
@@ -16,7 +16,7 @@ MASTER_SITE_SUBDIR=	Tk
 MAINTAINER=	jfitz@FreeBSD.ORG
 
 BUILD_DEPENDS= 	${PREFIX}/lib/perl5/site_perl/HTML/Parse.pm:${PORTSDIR}/www/p5-libwww
-LIB_DEPENDS=	tk80\\.1\\.:${PORTSDIR}/x11/tk80
+LIB_DEPENDS=	tk80.1.:${PORTSDIR}/x11/tk80
 
 USE_PERL5=	YES
 

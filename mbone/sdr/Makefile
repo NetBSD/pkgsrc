@@ -3,7 +3,7 @@
 # Date created:				18 November 1997
 # By:	      Ignatios Souvatzis <is@netbsd.org>
 #
-# $NetBSD: Makefile,v 1.4 1998/01/24 20:45:03 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/30 13:57:55 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/10/15 20:35:20 fenner Exp 
 #
 # Based on:
@@ -20,7 +20,7 @@ MASTER_SITES=	ftp://cs.ucl.ac.uk/mice/sdr/
 
 MAINTAINER=	is@netbsd.org
 
-LIB_DEPENDS=	tk80\\.1:${PORTSDIR}/x11/tk80
+LIB_DEPENDS=	tk80.1:${PORTSDIR}/x11/tk80
 
 RESTRICTED=	"Contains DES encryption"
 MIRROR_DISTFILE=	no

@@ -3,7 +3,7 @@
 # Date created:		20 December 1997
 # Whom:			jmz (original), asami@FreeBSD.ORG, tron
 #
-# $NetBSD: Makefile,v 1.10 1998/01/29 16:57:33 tron Exp $
+# $NetBSD: Makefile,v 1.11 1998/01/30 13:57:06 agc Exp $
 #
 
 DISTNAME=	netpbm
@@ -19,9 +19,9 @@ DISTFILES=	netpbm-1mar1994.tar.gz \
 
 MAINTAINER=	tron@netbsd.org
 
-LIB_DEPENDS=	jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
-		png\\.0\\.96:${PORTSDIR}/graphics/png \
-		tiff\\.3\\.:${PORTSDIR}/graphics/tiff
+LIB_DEPENDS=	jpeg.7.:${PORTSDIR}/graphics/jpeg \
+		png.0.96:${PORTSDIR}/graphics/png \
+		tiff.3.:${PORTSDIR}/graphics/tiff
 
 WRKSRC=		${WRKDIR}/netpbm
 MAKE_ENV +=	PREFIX=${PREFIX}
