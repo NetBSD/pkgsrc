@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2004/02/11 00:53:57 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/02/12 19:07:00 jmmv Exp $
 #
 
 DISTNAME=		GConf-2.4.0.1
@@ -32,3 +32,5 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--enable-gconf-source=xml::${PKG_SYSCONFDIR}/gconf.xml.defaults
+
+.include "../../devel/pkgconfig/buildlink3.mk"
