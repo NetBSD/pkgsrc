@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2003/11/05 00:05:06 recht Exp $
+$NetBSD: patch-ac,v 1.2 2003/11/05 11:54:47 tron Exp $
 
 --- src/ls.c~	2003-03-20 00:01:51.000000000 +0100
 +++ src/ls.c	2003-11-05 00:34:17.000000000 +0100
@@ -26,7 +26,7 @@ $NetBSD: patch-ac,v 1.1 2003/11/05 00:05:06 recht Exp $
 -static void indent (int from, int to);
 -static void init_column_info (void);
 +static void indent (size_t from, size_t to);
-+static size_t calculate_columns (bool by_columns);
++static size_t calculate_columns (int by_columns);
  static void print_current_files (void);
  static void print_dir (const char *name, const char *realname);
  static void print_file_name_and_frills (const struct fileinfo *f);
@@ -68,7 +68,7 @@ $NetBSD: patch-ac,v 1.1 2003/11/05 00:05:06 recht Exp $
 -  int valid_len;
 -  int line_len;
 -  int *col_arr;
-+  bool valid_len;
++  int valid_len;
 +  size_t line_len;
 +  size_t *col_arr;
  };
@@ -223,8 +223,8 @@ $NetBSD: patch-ac,v 1.1 2003/11/05 00:05:06 recht Exp $
  
 -static int
 -get_funky_string (char **dest, const char **src, int equals_end)
-+static bool
-+get_funky_string (char **dest, const char **src, bool equals_end,
++static int
++get_funky_string (char **dest, const char **src, int equals_end,
 +		  size_t *output_count)
  {
    int num;			/* For numerical codes */
@@ -710,7 +710,7 @@ $NetBSD: patch-ac,v 1.1 2003/11/05 00:05:06 recht Exp $
 +   of files in the current display width.  */
 +
 +static size_t
-+calculate_columns (bool by_columns)
++calculate_columns (int by_columns)
 +{
 +  size_t filesno;              /* Index into files. */
 +  size_t cols;                 /* Number of files across. */
