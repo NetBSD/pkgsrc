@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9658 2005/03/27 20:59:04 wiz Exp $
+$NetBSD: CHANGES,v 1.9659 2005/03/27 21:19:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1789,3 +1789,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Term-ProgressBar to 2.09 [wiz 2005-03-27]
 	Updated p5-Class-MethodMaker to 2.06 [wiz 2005-03-27]
 	Updated p5-Text-Shellwords to 1.07 [wiz 2005-03-27]
+	Added shapelib-1.2.10 [wiz 2005-03-27]
