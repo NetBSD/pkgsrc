@@ -3841,7 +3841,7 @@ done
 
 
 
-for ac_header in assert.h ctype.h dirent.h errno.h err.h fnctl.h fnmatch.h \
+for ac_header in assert.h ctype.h dirent.h err.h errno.h fnctl.h fnmatch.h \
 	glob.h limits.h md5.h netdb.h pwd.h regex.h signal.h stdarg.h \
 	stdio.h stdlib.h string.h termcap.h termios.h time.h unistd.h vis.h
 do
@@ -4160,8 +4160,9 @@ done
 
 
 for ac_header in sys/cdefs.h sys/file.h sys/ioctl.h sys/mount.h sys/param.h \
-	sys/poll.h sys/queue.h sys/resource.h sys/signal.h sys/statvfs.h \
-	sys/stat.h sys/time.h sys/types.h sys/utsname.h sys/vfs.h sys/wait.h
+	sys/poll.h sys/queue.h sys/resource.h sys/signal.h sys/stat.h \
+	sys/statvfs.h sys/time.h sys/types.h sys/utsname.h sys/vfs.h \
+	sys/wait.h
 do
 as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
 if eval "test \"\${$as_ac_Header+set}\" = set"; then
