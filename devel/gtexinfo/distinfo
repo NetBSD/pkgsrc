@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.16 2004/04/02 02:01:34 jlam Exp $
+$NetBSD: distinfo,v 1.17 2004/07/04 23:17:59 wiz Exp $
 
-SHA1 (texinfo-4.6.tar.bz2) = 52103579a90d49229fb30968bbe4e55a502857d3
-Size (texinfo-4.6.tar.bz2) = 1348113 bytes
-SHA1 (patch-ab) = d48b65a04dd6b93143e49ce49d93338463f4301d
-SHA1 (patch-ac) = f4e45e38fe42f38db52b4fe33d918f104ba1de05
-SHA1 (patch-ad) = 1c998cdb8b0831e15eef7df6c4f8ef108455619e
-SHA1 (patch-ai) = 8a1e92497d3a6cd5dec50ec9e9cf35046d214c8c
-SHA1 (patch-aj) = ccd515134e442e2ed5354c8151ed3dc8a3efaecd
-SHA1 (patch-ak) = 54fceadde7649726f1595b2a9dda8225967c0a4a
+SHA1 (texinfo-4.7.tar.bz2) = c0e7d2d40b4fa12278fd1da4fd57159289799504
+Size (texinfo-4.7.tar.bz2) = 1418717 bytes
+SHA1 (patch-ab) = c07560dfd7a64aa2202c02f18f47861a993729a0
+SHA1 (patch-ac) = 01baf8634edcecab0b5edaeddf1e38811cab490d
+SHA1 (patch-ad) = c5c3374322eb8a2c8dfc7871971b73194ab1b14c
+SHA1 (patch-aj) = f827226cf8099e98f3359012d46cd53b8b724da4
+SHA1 (patch-ak) = 17a14166581dcdd7605cea1cab41f3231b0ffb0f
