@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/02/07 00:07:00 minskim Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/08 21:00:04 jmmv Exp $
 #
 
 DISTNAME=		gnome-vfs-2.4.2
@@ -64,6 +64,7 @@ GCONF2_SCHEMAS=	system_http_proxy.schemas
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
 .include "../../net/ORBit2/buildlink2.mk"
+.include "../../textproc/intltool/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

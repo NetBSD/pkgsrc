@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/02/06 22:37:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2004/02/08 21:00:04 jmmv Exp $
 #
 
 DISTNAME=		gnome-session-2.4.2
@@ -33,6 +33,7 @@ GCONF2_SCHEMAS= 	gnome-session.schemas
 .include "../../devel/GConf2-ui/buildlink2.mk"
 .include "../../devel/libgnome/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
+.include "../../textproc/intltool/buildlink2.mk"
 .include "../../textproc/scrollkeeper/buildlink2.mk"
 .include "../../x11/gnome2-control-center/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
