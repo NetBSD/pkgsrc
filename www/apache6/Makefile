@@ -1,27 +1,33 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/07/23 17:53:29 itojun Exp $
+# $NetBSD: Makefile,v 1.2 1999/07/23 18:19:29 itojun Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
 # EAPI when there has been no change to the Apache version number).
 #
-# This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
-# code hooks that allow mod_ssl to be compiled separately later, if desired).
+# This package does not compile in mod_ssl support hooks, as it conflicts
+# with IPv6 enable patch.
+# IPv6 enable patch conflicts with third-party modules anyway, due to
+# sanity fixes in apache module API (for example, avoid u_long for IPv4 addrs)
 #
 
 DISTNAME=		apache_1.3.6
-PKGNAME=		apache-1.3.6p0
+PKGNAME=		apache6-1.3.6p0
 CATEGORIES=		www
 MASTER_SITES=		http://www.apache.org/dist/ \
 			ftp://ftp.modssl.org/source/ \
 			http://www.netbsd.org/images/logos/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
-			${SSL_DISTNAME}${EXTRACT_SUFX} \
 			sitedrivenby.gif
+#			${SSL_DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=		cjs@netbsd.org
+PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
+PATCHFILES=		apache-136-v6-19990724.diff.gz
+PATCH_DIST_STRIP=	-p1
+
+MAINTAINER=		itojun@itojun.org
 HOMEPAGE=		http://www.apache.org/
 
-CONFLICTS=		apache-*modssl-*
+CONFLICTS=		apache-*modssl-* apache-*
 
 SSL_DISTNAME=		mod_ssl-2.2.8-1.3.6
 
@@ -33,13 +39,19 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} --libexecdir=${PREFIX}/lib/httpd \
 			--proxycachedir=/var/spool/httpd/proxy \
 			--includedir=${PREFIX}/include/httpd \
 			--sbindir=${PREFIX}/sbin \
-			--enable-rule=EAPI --enable-module=most \
-			--disable-module=ssl --enable-module=auth_db \
+			--enable-module=most \
+			--enable-module=auth_db \
 			--disable-module=auth_dbm \
 			--with-perl=${PREFIX}/bin/perl
+#			--enable-rule=EAPI --disable-module=ssl 
+CONFIGURE_SCRIPT=	configure.v6
 CONFIGURE_ENV+=		OPTIM="${OPTIM}"
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !defined(USE_INET6)
+BROKEN=			"IPv6 only build"
+.endif
 
 .if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
 CONFIGURE_ARGS+=	--enable-suexec --suexec-caller=www \
@@ -58,24 +70,25 @@ PLIST_SRC=		${WRKDIR}/PLIST
 # Under Apache 1.3, modules can be compiled to link dynamically to the server
 # using the "apxs" program.  See apxs(8).
 
-post-extract:
-	@${CP} ${FILESDIR}/ap_include_extern.h ${WRKSRC}/src/include/
-	@${CP} ${WRKDIR}/${SSL_DISTNAME}/pkg.eapi/*.c ${WRKSRC}/src/ap/
-	@${CP} ${WRKDIR}/${SSL_DISTNAME}/pkg.eapi/*.h ${WRKSRC}/src/include/
+#post-extract:
+#	@${CP} ${FILESDIR}/ap_include_extern.h ${WRKSRC}/src/include/
+#	@${CP} ${WRKDIR}/${SSL_DISTNAME}/pkg.eapi/*.c ${WRKSRC}/src/ap/
+#	@${CP} ${WRKDIR}/${SSL_DISTNAME}/pkg.eapi/*.h ${WRKSRC}/src/include/
 
-pre-patch:
-	@cd ${WRKSRC} && ${CAT} \
-		../${SSL_DISTNAME}/pkg.eapi/eapi.patch \
-		../${SSL_DISTNAME}/pkg.sslcfg/sslcfg.patch \
-		../${SSL_DISTNAME}/pkg.sslmod/sslmod.patch \
-		../${SSL_DISTNAME}/pkg.sslsup/sslsup.patch \
-		| ${PATCH} ${PATCH_ARGS}
-	@cd ${WRKSRC} && tail +129 \
-		../${SSL_DISTNAME}/pkg.ssldoc/ssldoc.patch \
-		| ${PATCH} ${PATCH_ARGS}
+#pre-patch:
+#	@cd ${WRKSRC} && ${CAT} \
+#		../${SSL_DISTNAME}/pkg.eapi/eapi.patch \
+#		../${SSL_DISTNAME}/pkg.sslcfg/sslcfg.patch \
+#		../${SSL_DISTNAME}/pkg.sslmod/sslmod.patch \
+#		../${SSL_DISTNAME}/pkg.sslsup/sslsup.patch \
+#		| ${PATCH} ${PATCH_ARGS}
+#	@cd ${WRKSRC} && tail +129 \
+#		../${SSL_DISTNAME}/pkg.ssldoc/ssldoc.patch \
+#		| ${PATCH} ${PATCH_ARGS}
 
 post-patch:
 	@find ${WRKSRC}/htdocs -name '*.orig' | xargs ${RM}
+	@${CHMOD} +x ${WRKSRC}/${CONFIGURE_SCRIPT}
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/apache.sh \

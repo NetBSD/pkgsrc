@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/07/23 17:53:30 itojun Exp $
+$NetBSD: patch-aa,v 1.2 1999/07/23 18:19:30 itojun Exp $
 
---- Makefile.tmpl.orig	Fri May  7 09:49:05 1999
-+++ Makefile.tmpl	Fri May  7 09:52:16 1999
+--- Makefile.tmpl.orig	Mon Mar 15 16:38:46 1999
++++ Makefile.tmpl	Fri Jul 23 10:07:16 1999
 @@ -114,7 +114,7 @@
  datadir         = @datadir@
  iconsdir        = $(datadir)/icons
@@ -11,42 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/07/23 17:53:30 itojun Exp $
  includedir      = @includedir@
  localstatedir   = @localstatedir@
  runtimedir      = @runtimedir@
-@@ -344,34 +344,6 @@
- 			file=`echo $${mod} | sed -e 's;^.*/\([^/]*\);\1;'`; \
- 			echo "$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}"; \
- 			$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}; \
--			name=`$(TOP)/$(AUX)/fmn.sh $(TOP)/$(SRC)/$${mod}`; \
--			if [ ".$$name" = .ssl_module ]; then \
--				echo "<IfDefine SSL>" >>$(SRC)/.apaci.install.conf; \
--			fi; \
--			echo dummy | awk '{ printf("LoadModule %-18s %s\n", modname, modpath); }' \
--			modname="$${name}" modpath="$(libexecdir_relative)$${file}" >>$(SRC)/.apaci.install.conf; \
--			if [ ".$$name" = .ssl_module ]; then \
--				echo "</IfDefine>" >>$(SRC)/.apaci.install.conf; \
--			fi; \
--		done; \
--		echo "" >>$(SRC)/.apaci.install.conf; \
--		echo "#  Reconstruction of the complete module list from all available modules" >>$(SRC)/.apaci.install.conf; \
--		echo "#  (static and shared ones) to achieve correct module execution order." >>$(SRC)/.apaci.install.conf; \
--		echo "#  [WHENEVER YOU CHANGE THE LOADMODULE SECTION ABOVE UPDATE THIS, TOO]" >>$(SRC)/.apaci.install.conf; \
--		echo "ClearModuleList" >>$(SRC)/.apaci.install.conf; \
--		for mod in `egrep "^[ 	]*(Add|Shared)Module" $(SRC)/Configuration.apaci |\
--		            sed	-e 's:[ 	]*SharedModule::' \
--		                -e 's:[ 	]*AddModule::' \
--		                -e 's:modules/[^/]*/::' \
--		                -e 's:[ 	]lib: mod_:' \
--		                -e 's:\.[soam]*$$:.c:'`; do \
--			if [ ".$$mod" = .mod_ssl.c ]; then \
--				echo "<IfDefine SSL>" >>$(SRC)/.apaci.install.conf; \
--			fi; \
--			echo "AddModule $$mod" >>$(SRC)/.apaci.install.conf; \
--			if [ ".$$mod" = .mod_ssl.c ]; then \
--				echo "</IfDefine>" >>$(SRC)/.apaci.install.conf; \
--			fi; \
- 		done; \
- 	fi
- 	@echo "<=== [programs]"
-@@ -453,12 +425,13 @@
+@@ -388,12 +388,13 @@
  		find $(root)$(htdocsdir)/ -type d -exec chmod a+rx {} \; ; \
  		find $(root)$(htdocsdir)/ -type f -exec chmod a+r {} \; ; \
  	fi
@@ -61,7 +26,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/07/23 17:53:30 itojun Exp $
  			> $(TOP)/$(SRC)/.apaci.install.tmp; \
  			echo "$(INSTALL_DATA) $(TOP)/conf/$${script}[*] $(root)$(cgidir)/$${script}"; \
  			$(INSTALL_DATA) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(cgidir)/$${script}; \
-@@ -475,7 +448,7 @@
+@@ -410,7 +411,7 @@
  #   and initial config files while preserving existing ones.
  install-config:
  	@echo "===> [config: Installing Apache configuration files]"
