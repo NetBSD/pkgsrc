@@ -1,0 +1,14 @@
+--- src/toss/rundf.sh.orig	Thu Jul 16 19:31:38 1998
++++ src/toss/rundf.sh	Thu Jul 16 19:32:02 1998
+@@ -9,9 +9,9 @@
+ # Usage: rundf dir ...
+ #
+ 
+-PATH=<BINDIR>:$PATH
++PATH=/usr/bin:/bin:$PATH
+ 
+-free=`df -P $* 2>/dev/null  | \
++free=`df -k $* 2>/dev/null  | \
+       awk '/^\/dev/ || /^[a-zA-Z0-9-]*:\// { print $4; }'`
+ 
+ if [ -z "$free" ]; then
