@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2002/04/04 11:10:21 seb Exp $
+# $NetBSD: Makefile,v 1.28 2002/08/10 23:22:02 rh Exp $
 #
 
 DISTNAME=		texinfo-4.0
-PKGNAME=		gtexinfo-4.0
+PKGNAME=		g${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=texinfo/}
 
