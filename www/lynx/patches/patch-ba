@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.1 2000/04/07 18:52:26 scottr Exp $
+
+--- configure.orig	Sat May 29 22:27:26 1999
++++ configure	Fri Apr  7 13:28:11 2000
+@@ -5479,7 +5479,7 @@
+   LIBS="$LIBS -L$cf_cv_use_libsocks"
+   ;;
+ esac
+-LIBS="$LIBS -lsocks"
++LIBS="$LIBS -lsocks4"
+ cat >> confdefs.h <<\EOF
+ #define SOCKS 1
+ EOF
