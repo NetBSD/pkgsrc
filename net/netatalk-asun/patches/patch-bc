@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1 2000/07/31 18:33:54 abs Exp $
+
+--- libatalk/nbp/nbp_rgstr.c.orig	Thu Aug 14 22:27:23 1997
++++ libatalk/nbp/nbp_rgstr.c	Mon Jul 31 18:53:50 2000
+@@ -7,7 +7,7 @@
+ #include <sys/types.h>
+ #include <sys/param.h>
+ #include <sys/socket.h>
+-#include <sys/signal.h>
++#include <signal.h>
+ #include <sys/time.h>
+ #include <errno.h>
+ #include <netatalk/at.h>
