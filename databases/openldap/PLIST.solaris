@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.solaris,v 1.1 2001/11/01 00:20:42 zuntum Exp $
+libexec/slurpd

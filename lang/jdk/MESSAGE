@@ -1,0 +1,13 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 00:23:51 zuntum Exp $
+
+You may want to read ${JDK_HOME}/README for details about running
+this jdk. In a nutshell you may want to set the following in your
+shell environment:
+
+        CLASSPATH to ${JDK_HOME}/lib/classes.zip:.
+        JAVA_HOME to ${JDK_HOME}
+
+and add ${JDK_HOME}/bin to your ${PATH}.
+
+======================================================================
