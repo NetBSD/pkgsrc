@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2004/06/21 20:13:32 adrianp Exp $
+# $NetBSD: Makefile,v 1.19 2004/06/26 16:22:04 adrianp Exp $
 #
 
 DISTNAME=	MHonArc-2.6.10
 PKGNAME=	mhonarc-2.6.10
 CATEGORIES=	mail
-MASTER_SITES=	http://www.oac.uci.edu/indiv/ehood/tar/
+MASTER_SITES=	http://www.mhonarc.org/release/MHonArc/tar/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jwise@NetBSD.org
