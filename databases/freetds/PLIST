@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/14 23:57:02 wiz Exp $
-freetds/etc/freetds.conf
+@comment $NetBSD: PLIST,v 1.3 2002/06/23 03:38:21 jlam Exp $
 freetds/include/bkpublic.h
 freetds/include/common.h
 freetds/include/cspublic.h
@@ -38,7 +37,8 @@ freetds/lib/libtdssrv.la
 freetds/lib/libtdssrv.so
 freetds/lib/libtdssrv.so.0
 freetds/lib/libtdssrv.so.0.0
+share/examples/freetds/freetds.conf
+@dirrm share/examples/freetds
 @dirrm freetds/lib
 @dirrm freetds/include
-@dirrm freetds/etc
 @dirrm freetds
