@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/05/31 14:02:55 skrll Exp $
+
+--- kbackgammon/main.cpp.orig	Wed Oct 10 18:13:31 2001
++++ kbackgammon/main.cpp
+@@ -38,7 +38,9 @@
+  * Main program doesn't do much - more or less standard stuff. Right 
+  * after creating a KBg object, control is passed to it.
+  */
+-int main(int argc, char *argv[])
++extern "C" int kdemain(int, char *[]);
++
++int kdemain(int argc, char *argv[])
+ {
+ 	KAboutData about(PROG_NAME, I18N_NOOP("KBackgammon"), PROG_VERSION, description, 
+ 			 KAboutData::License_GPL, "(C) 1999-2001 Jens Hoefkens", notice, 
