@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:21:17 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/03/11 18:03:50 xtraeme Exp $
 #
 
 DISTNAME=	gzip-1.2.4a
@@ -13,7 +13,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gzip/gzip.html
 COMMENT=	Compress or expand files
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 BUILD_TARGET=	all manlinks=so
