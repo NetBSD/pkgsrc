@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2004/02/09 20:20:43 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2004/02/12 01:59:38 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FREETYPE2_BUILDLINK3_MK:=	${FREETYPE2_BUILDLINK3_MK}+
@@ -20,30 +20,15 @@ _X11_TMPL=		${X11BASE}/lib/X11/config/X11.tmpl
 .if !defined(BUILDLINK_IS_BUILTIN.freetype2)
 BUILDLINK_IS_BUILTIN.freetype2=	NO
 .  if exists(${_FREETYPE2_FREETYPE_H}) && exists(${_X11_TMPL})
-BUILDLINK_IS_BUILTIN.freetype2!=					\
+_IS_BUILTIN.freetype2!=							\
 	if ${GREP} -q BuildFreetype2Library ${_X11_TMPL}; then		\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
-.  endif
-MAKEFLAGS+=	\
-	BUILDLINK_IS_BUILTIN.freetype2=${BUILDLINK_IS_BUILTIN.freetype2}
-.endif
-
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mfreetype2)
-BUILDLINK_USE_BUILTIN.freetype2=	NO
-.endif
-
-.if !empty(BUILDLINK_CHECK_BUILTIN.freetype2:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.freetype2=	YES
-.endif
-
-.if !defined(BUILDLINK_USE_BUILTIN.freetype2)
-.  if !empty(BUILDLINK_IS_BUILTIN.freetype2:M[nN][oO])
-BUILDLINK_USE_BUILTIN.freetype2=	NO
-.  else
+BUILDLINK_IS_BUILTIN.freetype2=	${_IS_BUILTIN.freetype2}
+.    if !empty(BUILDLINK_CHECK_BUILTIN.freetype2:M[nN][oO]) && \
+        !empty(_IS_BUILTIN.freetype2:M[yY][eE][sS])
 #
 # Create an appropriate package name for the built-in freetype2 distributed
 # with the system.  This package name can be used to check against
@@ -58,20 +43,35 @@ _FREETYPE2_PATCH!=	\
 	${AWK} 'BEGIN { patch=0; } /\#define[ 	]*FREETYPE_PATCH/ { patch=$$3; } END { print "."patch; }' ${_FREETYPE2_FREETYPE_H}
 _FREETYPE2_VERSION=	${_FREETYPE2_MAJOR}${_FREETYPE2_MINOR}${_FREETYPE2_PATCH}
 _FREETYPE2_PKG=		freetype2-${_FREETYPE2_VERSION}
-BUILDLINK_USE_BUILTIN.freetype2?=	YES
-.    for _depend_ in ${BUILDLINK_DEPENDS.freetype2}
-.      if !empty(BUILDLINK_USE_BUILTIN.freetype2:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.freetype2!=	\
+BUILDLINK_IS_BUILTIN.freetype2?=	YES
+.      for _depend_ in ${BUILDLINK_DEPENDS.freetype2}
+.        if !empty(BUILDLINK_IS_BUILTIN.freetype2:M[yY][eE][sS])
+BUILDLINK_IS_BUILTIN.freetype2!=	\
 	if ${PKG_ADMIN} pmatch '${_depend_}' ${_FREETYPE2_PKG}; then	\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
-.      endif
-.    endfor
+.        endif
+.      endfor
+.    endif
 .  endif
-MAKEFLAGS+=	\
-	BUILDLINK_USE_BUILTIN.freetype2=${BUILDLINK_USE_BUILTIN.freetype2}
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.freetype2=${BUILDLINK_IS_BUILTIN.freetype2}
+.endif
+
+.if !empty(BUILDLINK_IS_BUILTIN.freetype2:M[yY][eE][sS]I)
+BUILDLINK_USE_BUILTIN.freetype2=	YES
+.else
+BUILDLINK_USE_BUILTIN.freetype2=	NO
+.endif
+
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
+    !empty(PREFER_PKGSRC:Mfreetype2)
+BUILDLINK_USE_BUILTIN.freetype2=	NO
+.endif
+
+.if !empty(BUILDLINK_CHECK_BUILTIN.freetype2:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.freetype2=	YES
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.freetype2:M[nN][oO])
