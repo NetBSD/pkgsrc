@@ -1,18 +1,18 @@
-$NetBSD: patch-aa,v 1.3 2003/11/01 14:51:03 salo Exp $
+$NetBSD: patch-aa,v 1.4 2004/09/12 20:57:41 salo Exp $
 
---- Makefile.orig	2003-04-09 14:31:57.000000000 +0200
-+++ Makefile	2003-11-01 15:44:33.000000000 +0100
+--- Makefile.orig	2004-02-27 14:50:43.000000000 +0100
++++ Makefile	2004-09-12 22:50:13.000000000 +0200
 @@ -1,17 +1,18 @@
--installdir=/usr/lib/ispell
+-DESTDIR=/usr/lib/ispell
 +INSTALLDIR=${PREFIX}/lib/
 +BUILDHASH=${PREFIX}/bin/buildhash
  
  all: slovak.hash
  
  install: slovak.hash slovak.aff
--	mkdir -p $(installdir)
--	install -o root -g root -m 0644 slovak.hash $(installdir)
--	install -o root -g root -m 0644 slovak.aff $(installdir)
+-	mkdir -p $(DESTDIR)
+-	install -o root -g bin -m 0444 slovak.hash $(DESTDIR)
+-	install -o root -g bin -m 0444 slovak.aff $(DESTDIR)
 +	${BSD_INSTALL_DATA_DIR} $(INSTALLDIR)
 +	${BSD_INSTALL_DATA} slovak.hash $(INSTALLDIR)
 +	${BSD_INSTALL_DATA} slovak.aff $(INSTALLDIR)
