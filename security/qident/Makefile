@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/28 10:39:35 ad Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/15 12:14:26 ad Exp $
 
-DISTNAME=	qident-1.0
+DISTNAME=	qident-1.2
 CATEGORIES=	security net
 MASTER_SITES=	http://www.netbsd.org/~ad/qident/
 
