@@ -1,8 +1,9 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/02/29 17:44:58 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2004/06/23 16:47:12 taya Exp $
 
---- configure.in.orig	2004-02-27 14:24:52.000000000 +0900
-+++ configure.in	2004-02-27 14:33:42.000000000 +0900
-@@ -959,6 +959,9 @@
+diff -ru ../Orig/mozilla/configure.in ./configure.in
+--- ../Orig/mozilla/configure.in	2004-05-14 06:57:46.000000000 +0900
++++ ./configure.in	2004-06-15 23:55:39.000000000 +0900
+@@ -1017,6 +1017,9 @@
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -12,22 +13,22 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/02/29 17:44:58 xtraeme Exp $
      ;; 
  
  *-hpux*)
-@@ -1248,6 +1251,13 @@
+@@ -1308,6 +1311,13 @@
      if test "$LIBRUNPATH"; then
  	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
      fi
 +
 +    case "${target_cpu}" in
 +    alpha*)
-+	CFLAGS="$CFLAGS -mieee"
-+	CXXFLAGS="$CXXFLAGS -mieee"
++    	CFLAGS="$CFLAGS -mieee"
++    	CXXFLAGS="$CXXFLAGS -mieee"
 +    ;;
 +    esac
      ;;
  
  *-nto*) 
-@@ -1478,7 +1488,7 @@
-        MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_FLAGS) $(DSO_LDOPTS) -o $@'
+@@ -1531,7 +1541,7 @@
+        MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_FLAGS) -G -Wl,-z -Wl,muldefs -o $@'
         MKSHLIB_FORCE_ALL='-Qoption ld -z,allextract'
         MKSHLIB_UNFORCE_ALL=''
 -       DSO_LDOPTS='-G -Qoption ld -z,muldefs -h $@'
@@ -35,22 +36,3 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/02/29 17:44:58 xtraeme Exp $
         AR_LIST="$AR t"
         AR_EXTRACT="$AR x"
         AR_DELETE="$AR d"
-@@ -1649,7 +1659,7 @@
-                  [siginfo_t* info;],
-                  [ac_cv_siginfo_t=true],
-                  [ac_cv_siginfo_t=false])])
--if test "$ac_cv_siginfo_t" = true ; then
-+if test "$OS_TARGET" != "NetBSD" -a "$ac_cv_siginfo_t" = true ; then
-   AC_DEFINE(HAVE_SIGINFO_T)
-   AC_MSG_RESULT(yes)
- else
-@@ -2192,9 +2202,6 @@
- 				CXXFLAGS="$CXXFLAGS -mt" 
- 			fi
- 			;;
--	*-*-netbsd*)
--		USE_PTHREADS=
--		_PTHREAD_LDFLAGS=
- 	esac
- fi
- 

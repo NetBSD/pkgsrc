@@ -1,4 +1,4 @@
-$NetBSD: patch-bv,v 1.1 2004/06/02 15:09:01 taya Exp $
+$NetBSD: patch-bv,v 1.2 2004/06/23 16:47:12 taya Exp $
 
 --- xpcom/reflect/xptcall/src/md/unix/xptcstubs_unixish_amd64.cpp.orig	2004-05-30 21:38:22.000000000 +0900
 +++ xpcom/reflect/xptcall/src/md/unix/xptcstubs_unixish_amd64.cpp	2004-05-30 21:37:22.000000000 +0900

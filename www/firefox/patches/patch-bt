@@ -1,16 +1,17 @@
-$NetBSD: patch-bt,v 1.1 2004/06/02 15:09:01 taya Exp $
+$NetBSD: patch-bt,v 1.2 2004/06/23 16:47:12 taya Exp $
 
---- nsprpub/pr/src/io/prprf.c.orig	2003-02-27 08:53:42.000000000 +0900
-+++ nsprpub/pr/src/io/prprf.c	2004-05-30 14:47:15.000000000 +0900
-@@ -51,7 +51,10 @@
- ** Note: on some platforms va_list is defined as an array,
- ** and requires array notation.
+diff -ru ../Orig/mozilla/nsprpub/pr/src/io/prprf.c ./nsprpub/pr/src/io/prprf.c
+--- ../Orig/mozilla/nsprpub/pr/src/io/prprf.c	2004-03-09 12:18:19.000000000 +0900
++++ ./nsprpub/pr/src/io/prprf.c	2004-06-15 23:56:50.000000000 +0900
+@@ -53,6 +53,11 @@
  */
--#if (defined(LINUX) && defined(__powerpc__)) || \
-+#if defined(__amd64__)
+ #if (defined(LINUX) && defined(__x86_64__))
+ #define VARARGS_ASSIGN(foo, bar) __va_copy((foo), (bar))
++#elif (defined (__NetBSD__) && \
++	(defined(__amd64__) || \
++	(defined(__powerpc__) && __NetBSD_Version__ >= 105000000)))
 +#include <stdarg.h>
 +#define VARARGS_ASSIGN(foo, bar) va_copy((foo), (bar))
-+#elif (defined(LINUX) && defined(__powerpc__)) || \
+ #elif (defined(LINUX) && defined(__powerpc__)) || \
      (defined(LINUX) && defined(__s390__)) || \
      (defined(LINUX) && defined(__s390x__)) || \
-     defined(WIN16) || defined(QNX) || \
