@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1.c,v 1.3 2001/03/26 12:57:32 agc Exp $	*/
+/*	$NetBSD: sha1.c,v 1.4 2001/07/09 21:43:21 hubertf Exp $	*/
 /*	$OpenBSD: sha1.c,v 1.9 1997/07/23 21:12:32 kstailey Exp $	*/
 
 /*
@@ -14,6 +14,8 @@
  * A million repetitions of "a"
  *   34AA973C D4C4DAA4 F61EEB2B DBAD2731 6534016F
  */
+
+#include <sys/cdefs.h>		/* hfpkg */
 
 #define SHA1HANDSOFF		/* Copies data before messing with it. */
 

@@ -1,9 +1,11 @@
-/*	$NetBSD: md5hl.c,v 1.1.1.1 2001/03/06 11:21:05 agc Exp $	*/
+/*	$NetBSD: md5hl.c,v 1.2 2001/07/09 21:43:21 hubertf Exp $	*/
 
 /*
  * Written by Jason R. Thorpe <thorpej@netbsd.org>, April 29, 1997.
  * Public domain.
  */
+
+#include <sys/cdefs.h>		/* hfpkg */
 
 #define	MDALGORITHM	MD5
 
@@ -14,7 +16,7 @@
 #define _DIAGASSERT(cond)	assert(cond)
 #endif
 
-/*	$NetBSD: md5hl.c,v 1.1.1.1 2001/03/06 11:21:05 agc Exp $	*/
+/*	$NetBSD: md5hl.c,v 1.2 2001/07/09 21:43:21 hubertf Exp $	*/
 
 /*
  * ----------------------------------------------------------------------------
