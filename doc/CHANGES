@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3607 2003/10/01 22:07:56 itojun Exp $
+$NetBSD: CHANGES,v 1.3608 2003/10/01 22:43:59 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4042,3 +4042,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated abcde to 2.1.4nb5 [abs 2003-10-01]
 	Added riptime 1.3.0.4 [reed 2003-10-01]
 	Updated cue to 20030922 [itojun 2003-10-01]
+	Added py-psyco-1.1.1 [recht 2003-10-01]
