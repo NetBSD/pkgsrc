@@ -1,4 +1,4 @@
-# $NetBSD: ghostscript.mk,v 1.9 2002/09/18 23:06:03 jlam Exp $
+# $NetBSD: ghostscript.mk,v 1.10 2002/09/21 20:49:21 jlam Exp $
 #
 # This Makefile fragment is included by packages that require a run-time
 # dependency on a ghostscript Postscript interpreter.
@@ -34,7 +34,7 @@ _VALID_GS=	# empty
 _VALID_GS+=	ghostscript-esp>=${GHOSTSCRIPT_REQD}
 .    else
 _VALID_GS+=	ghostscript-esp>=${GHOSTSCRIPT_REQD}
-_VALID_GS+=	ghostscript-esp-no11>=${GHOSTSCRIPT_REQD}
+_VALID_GS+=	ghostscript-esp-nox11>=${GHOSTSCRIPT_REQD}
 .    endif
 .  endif
 .endfor
@@ -49,7 +49,7 @@ _VALID_GS+=	ghostscript-gnu-x11>=${GHOSTSCRIPT_REQD}
 .    else
 _VALID_GS+=	ghostscript-gnu>=${GHOSTSCRIPT_REQD}
 _VALID_GS+=	ghostscript-gnu-x11>=${GHOSTSCRIPT_REQD}
-_VALID_GS+=	ghostscript-gnu-no11>=${GHOSTSCRIPT_REQD}
+_VALID_GS+=	ghostscript-gnu-nox11>=${GHOSTSCRIPT_REQD}
 .    endif
 .  endif
 .endfor
@@ -62,7 +62,7 @@ _VALID_GS+=	ghostscript-gnu-no11>=${GHOSTSCRIPT_REQD}
 _VALID_GS+=	ghostscript>=${GHOSTSCRIPT_REQD}
 .    else
 _VALID_GS+=	ghostscript>=${GHOSTSCRIPT_REQD}
-_VALID_GS+=	ghostscript-no11>=${GHOSTSCRIPT_REQD}
+_VALID_GS+=	ghostscript-nox11>=${GHOSTSCRIPT_REQD}
 .    endif
 .  endif
 .endfor
