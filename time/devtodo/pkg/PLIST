@@ -1,7 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/20 21:45:55 mjl Exp $
-bin/todo
+@comment $NetBSD: PLIST,v 1.2 2001/04/16 08:00:44 zuntum Exp $
+bin/devtodo
 bin/tda
-bin/tdr
 bin/tdd
 bin/tde
+bin/tdr
+bin/todo
+etc/todorc
+man/man1/devtodo.1
+man/man1/tda.1
+man/man1/tdd.1
+man/man1/tde.1
+man/man1/tdr.1
 man/man1/todo.1
