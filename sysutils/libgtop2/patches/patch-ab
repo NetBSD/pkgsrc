@@ -1,58 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2004/04/12 15:53:42 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2005/03/22 16:03:37 jmmv Exp $
 
---- lib/lib.pl.orig	2004-03-04 15:16:46.000000000 +0100
-+++ lib/lib.pl
-@@ -106,6 +106,8 @@ sub output {
- 
-     if ($param_def eq 'string') {
- 	$call_param = ', ' . $line_fields[5];
-+	$param_buf = '';
-+	$buf_set = '';
- 	$param_decl = ",\n            " . $space . '    const char *' .
- 
- 	  $line_fields[5];
-@@ -127,6 +130,17 @@ sub output {
- 	    $list =~ s/^.*\(//;
- 	    $list =~ s/\)$//;
- 	    $count = (@fields = split(/,/, $list, 9999));
-+
-+	    if ($count > 0) {
-+		$param_buf = "\n\tstruct {\n";
-+		$buf_set = '';
-+		for ($field = 1; $field <= $count; $field++) {
-+		    $param_buf .= "\t\t$convert{$type} buf_$fields[$field];\n";
-+		    $buf_set .= "\tparam_buf.buf_$fields[$field] = $fields[$field];\n";
-+		}
-+		$param_buf .= "\t} param_buf;";
-+	    }
-+
- 	    for ($field = 1; $field <= $count; $field++) {
- 		if ($param_decl eq '') {
- 		    $param_decl = ",\n            " . $space . '    ';
-@@ -139,9 +153,7 @@ sub output {
- 		  $fields[$field];
- 		$call_param = $call_param . ', ' . $fields[$field];
- 		if ($send_ptr eq '') {
--		    $send_ptr = "\n\tconst void *send_ptr = &" .
+--- sysdeps/freebsd/proctime.c.orig	2005-02-23 09:20:45.000000000 +0100
++++ sysdeps/freebsd/proctime.c
+@@ -137,11 +137,6 @@ glibtop_get_proc_time_p (glibtop *server
+ #if (defined(__NetBSD__) && (__NetBSD_Version__ >= 104000000))
+ 	if (server->sysdeps.proc_time == 0)
+ 		return;
 -
--		      $fields[$field] . ';';
-+		    $send_ptr = "\n\tconst void *send_ptr = &param_buf;";
- 		}
- 		if ($send_size eq '') {
- 		    $send_size = "\n\tconst size_t send_size =\n\t\t";
-@@ -167,11 +179,13 @@ sub output {
+-#ifndef __bsdi__
+-	sprintf (filename, "/proc/%d/mem", (int) pid);
+-	if (stat (filename, &statb)) return;
+-#endif
+ #endif
  
-       $feature . ' *buf' . $param_decl . ')';
- 
--    print '{' . $send_ptr . '' . $send_size;
-+    print "{" . $param_buf;
-+
-+    print $send_ptr . '' . $send_size;
-     if ($retval !~ /^void$/) {
- 	print "\t" . $retval . ' retval = (' . $retval . ') 0;';
-     }
--    print '';
-+    print $buf_set;
- 
-     print "\tglibtop_init_r (&server, (1 << GLIBTOP_SYSDEPS_" .
- 
+ 	/* Get the process information */
