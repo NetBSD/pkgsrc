@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2136 2003/05/03 21:04:00 wiz Exp $
+$NetBSD: CHANGES,v 1.2137 2003/05/03 22:45:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1843,3 +1843,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated icewm-gnome to 1.2.0nb3 [jmmv 2003-05-03]
 	Added p5-HTTP-DAV [cyber 2003-05-03]
 	Updated gtkstep to 1.10nb2 [wiz 2003-05-03]
+	Updated denemo to 0.5.4nb3 [wiz 2003-05-03]
