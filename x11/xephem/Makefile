@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/05/20 15:53:59 cjep Exp $
+# $NetBSD: Makefile,v 1.14 2002/09/29 09:29:56 jlam Exp $
 
 DISTNAME=	xephem-3.5.2
 CATEGORIES=	x11
@@ -9,39 +9,36 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.clearskyinstitute.com/xephem/
 COMMENT=	Interactive astronomical ephemeris program
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
-LIBSRC1=		${WRKDIR}/${DISTNAME}/libastro
-LIBSRC2=	${WRKDIR}/${DISTNAME}/libip
-USE_PERL5=	yes
-
 LICENSE=	no-commercial-use
 
-.if (${MACHINE_ARCH} == "arm32")
-. include "../../lang/gcc/Makefile.gcc"
-MAKE_FLAGS+=	CC=${CC}
-.endif
-
+USE_BUILDLINK2=	yes
 USE_IMAKE=	yes
+PERL_SCRIPTS=	astorb2edb.pl mpcorb2edb.pl
 
-pre-build:
-	(cd ${LIBSRC1}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS})
-	(cd ${LIBSRC2}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS})
+WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
+LIBSRC1=	${WRKDIR}/${DISTNAME}/libastro
+LIBSRC2=	${WRKDIR}/${DISTNAME}/libip
+ALL_TARGET=	# empty
+BUILD_DIRS=	${LIBSRC1} ${LIBSRC2} ${WRKSRC}
+INSTALL_DIRS=	${WRKSRC}
 
-PERL_SCRIPTS= astorb2edb.pl mpcorb2edb.pl
+.if (${MACHINE_ARCH} == "arm32")
+.  include "../../lang/gcc/buildlink2.mk"
+.endif
 
 post-install:
 	${SED} s,@PREFIX@,${PREFIX}, ${FILESDIR}/XEphem.ad > ${WRKDIR}/XEphem
 	${INSTALL_DATA} ${WRKDIR}/XEphem ${PREFIX}/lib/X11/app-defaults
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xephem/tools
-	(cd ${WRKSRC}; ${CP} -R auxil catalogs fifos fits \
-	 ${PREFIX}/share/xephem)
-	(cd ${WRKSRC}/tools; for file in ${PERL_SCRIPTS}; do \
-		${SED} 1s,@LOCALBASE@,${LOCALBASE}, $$file \
-			> ${WRKDIR}/$$file; \
-		${INSTALL_SCRIPT} ${WRKDIR}/$$file \
-			${PREFIX}/share/xephem/tools; \
-	done)
+	cd ${WRKSRC}; ${CP} -R auxil catalogs fifos fits		\
+		${PREFIX}/share/xephem
+	for file in ${PERL_SCRIPTS}; do					\
+		${INSTALL_SCRIPT} ${WRKSRC}/tools/$${file}		\
+			${PREFIX}/share/xephem/tools;			\
+	done
 	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/xephem
 
-.include "../../mk/motif.buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
+.include "../../mk/motif.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
