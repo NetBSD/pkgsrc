@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.973.2.1 2002/05/08 08:39:22 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.973.2.2 2002/05/08 21:20:55 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -936,6 +936,8 @@ CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/inc
 .    endif
 .  endif
 .endif
+
+.include "../../mk/bsd.post-buildlink2.mk"
 
 # PKG_SYSCONFDIR is where the configuration files for a package may be found.
 # This value may be customized in various ways:
@@ -3980,5 +3982,3 @@ ${DESCR}: ${DESCR_SRC}
 .if defined(BATCH)
 .  include "../../mk/bulk/bsd.bulk-pkg.mk"
 .endif
-
-.include "../../mk/bsd.post-buildlink2.mk"
