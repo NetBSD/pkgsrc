@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1 2001/04/02 21:49:47 mjl Exp $
+
+--- Makefile.orig	Mon Apr  2 23:41:25 2001
++++ Makefile	Mon Apr  2 23:44:11 2001
+@@ -8,10 +8,10 @@
+ # from that window, either. Again, complain to the developers. This is out
+ # of my control.
+ # 
+-# EXTRA = -DI_HAVE_A_BROKEN_WM
++EXTRA = -DI_HAVE_A_BROKEN_WM
+ 
+ # where to install this program
+-PREFIX = /usr/local
++# PREFIX = /usr/local
+ 
+ # no user serviceable parts below this line
+ # optimization cflags
+@@ -22,11 +22,11 @@
+ # CFLAGS=-fprofile-arcs -ftest-coverage -Wall -ansi -pedantic -g `gtk-config --cflags` ${EXTRA} -DPRO
+ 
+ 
+-CC = gcc
+-SHELL = sh
++# CC = gcc
++# SHELL = sh
+ OBJS = fishmon.o
+ LIBS = `gtk-config --libs | sed "s/-lgtk//g"`
+-INSTALL = -m 755
++# INSTALL = -m 755
+ 
+ all: wmfishtime
+ 
+@@ -37,4 +37,4 @@
+ 	rm -rf wmfishtime *.o *.bb* *.gcov gmon.* *.da *~ .xvpics
+ 
+ install:
+-	install $(INSTALL) wmfishtime $(PREFIX)/bin
++	$(INSTALL) wmfishtime $(PREFIX)/bin
