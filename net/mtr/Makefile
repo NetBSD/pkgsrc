@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.14 2001/06/29 04:54:55 jlam Exp $
-# $FreeBSD: ports/net/mtr/Makefile,v 1.16 1999/10/28 08:06:00 mharo Exp $
+# $NetBSD: Makefile,v 1.15 2001/09/09 15:22:13 wiz Exp $
+#
 
 DISTNAME=	mtr-0.42
 CATEGORIES=	net
@@ -15,16 +15,10 @@ USE_GMAKE=		yes
 USE_BUILDLINK_ONLY=	yes
 
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mtr
 	${INSTALL} -c -s -m 4755 -o root -g wheel ${WRKSRC}/mtr ${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/mtr.8 ${PREFIX}/man/man8
-
-post-install:
-	@${ECHO} ""
-	@${ECHO} "${PREFIX}/sbin/mtr is setuid \"root\" "
-	@${ECHO} ""
-	@${ECHO} "Please read about potential security issues"
-	@${ECHO} "in file ${WRKSRC}/SECURITY (not installed)"
-	@${ECHO} ""
+	${INSTALL_DATA} ${WRKSRC}/SECURITY ${PREFIX}/share/doc/mtr
 
 .include "../../devel/ncurses/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
