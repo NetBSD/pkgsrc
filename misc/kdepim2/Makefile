@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/03 18:49:47 reed Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/12 09:46:04 cjep Exp $
 
 DISTNAME=	kdepim-2.2.2
 PKGREVISION=	5
@@ -19,7 +19,6 @@ CFLAGS+= -DSunOS
 BUILD_DEPENDS+= bison-[0-9]*:../../devel/bison
 YACC= bison -y
 .endif
-
 
 .include "../../comms/pilot-link-libs/buildlink2.mk"
 .include "../../x11/kde2/buildlink2.mk"
