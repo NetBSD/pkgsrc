@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1999/12/28 02:28:23 proff Exp $
+
 --- defs.h	Fri Jan  1 03:08:19 1999
 +++ /home/andy/tmp/wrk/defs.h	Fri May 14 20:51:11 1999
 @@ -45,7 +45,9 @@
@@ -14,7 +16,7 @@
  /* WDT: thank goodness for that lack of implementation. */
  
  #else
-+#ifdef __FreeBSD__
++#if defined(__NetBSD__) || defined (__FreeBSD__)
 +#include <ncurses.h>
 +#else
  #include <curses.h>

@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1999/12/28 02:28:23 proff Exp $
+
 --- Makefile.orig	Fri Jan  1 20:00:06 1999
 +++ Makefile	Mon Jul  5 19:51:50 1999
 @@ -1,14 +1,14 @@
@@ -23,7 +25,7 @@
  #CPP = cc -E
  #CPP = /lib/cpp
 -CPP = gcc -E
-+CPP = ${CC} -E
++CPP = ${CC} -E ${CFLAGS}
  
  # If you have gcc and don't intend to hack around with the game,
  # I recommend setting CC to gcc and using -O (as the CFLAGS).

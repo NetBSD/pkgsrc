@@ -1,26 +1,28 @@
-# New ports collection makefile for:	omega
-# Version required:			0.90.4
-# Date created:				14 May 1998
-# Whom:					Andrey Zakhvatov
-#
-# $FreeBSD: ports/games/omega/Makefile,v 1.3 1999/08/25 06:04:09 obrien Exp $
-#
+# $NetBSD: Makefile,v 1.2 1999/12/28 02:28:23 proff Exp $
+# FreeBSD Id: ports/games/omega/Makefile,v 1.3 1999/08/25 06:04:09 obrien Exp
 
 DISTNAME=	omega-0.90-pa4
 PKGNAME=	omega-0.90.4
 CATEGORIES=	games
-MASTER_SITES=	http://dolphin.openprojects.net/Omega/Downloads/Prealphas/
+#MASTER_SITES=	http://dolphin.openprojects.net/Omega/Downloads/Prealphas/
+MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/proff/
 
-MAINTAINER=	andy@icc.surw.chel.su
+DEPENDS+=	ncurses-4.2:../../devel/ncurses
+
+MAINTAINER=	packages@netbsd.org
+#HOMEPAGE=	http://dolphin.openprojects.net/Omega/
+HOMEPAGE=	http://www.win.tue.nl/games/roguelike/omega
 
 ALL_TARGET=
 WRKSRC=		${WRKDIR}/omega
-MAN6=		omega.6
+
+#ncurses
+CFLAGS+=	-I${PREFIX}/include
 
 do-install:
 	@ ${INSTALL_PROGRAM} ${WRKSRC}/omega ${PREFIX}/bin
 	@ ${INSTALL_MAN} ${WRKSRC}/docs/omega.6 ${PREFIX}/man/man6
-	@ ${CHOWN} games:games ${PREFIX}/bin/omega
+	@ ${CHOWN} games.games ${PREFIX}/bin/omega
 	@ ${CHMOD} 4711 ${PREFIX}/bin/omega
 	@ ${MKDIR} ${PREFIX}/share/omega
 	@ ${INSTALL_DATA} ${WRKSRC}/lib/* ${PREFIX}/share/omega
@@ -31,11 +33,9 @@ do-install:
 	@ ${CHOWN} -R games:games ${PREFIX}/share/omega
 
 post-install:
-.if !defined(NOPORTDOCS)
 	@ ${MKDIR} ${PREFIX}/share/doc/omega
 .for file in buglist.txt docs/compile.all docs/readme.1st docs/omega.txt docs/readme3 docs/readme4
 	@ ${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/omega
 .endfor
-.endif
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
