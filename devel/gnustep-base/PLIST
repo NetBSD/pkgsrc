@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/11/05 14:25:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/11/16 01:16:06 rh Exp $
 bin/openapp
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_5.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-0_6_6.dtd
@@ -6,9 +6,6 @@ share/GNUstep/System/Library/DTDs/gsdoc-0_6_7.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-1_0_0.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-1_0_1.rnc
 share/GNUstep/System/Library/DTDs/plist-0_9.dtd
-share/GNUstep/System/Library/Bundles/SSL.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Bundles/SSL.bundle/SSL
-share/GNUstep/System/Library/Bundles/SSL.bundle/stamp.make
 share/GNUstep/System/Library/DTDs/gsdoc-1_0_1.dtd
 share/GNUstep/System/Library/Documentation/man/man1/gdnc.1
 share/GNUstep/System/Library/Documentation/man/man1/autogsdoc.1
@@ -812,6 +809,4 @@ share/GNUstep/System/Tools/xmlparse
 @dirrm share/GNUstep/System/Library/Headers/Foundation
 @dirrm share/GNUstep/System/Library/Documentation/man/man8
 @dirrm share/GNUstep/System/Library/Documentation/man/man1
-@dirrm share/GNUstep/System/Library/Bundles/SSL.bundle/Resources
-@dirrm share/GNUstep/System/Library/Bundles/SSL.bundle
 @dirrm share/GNUstep/System/Library/DTDs
