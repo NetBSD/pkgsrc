@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/05/07 13:52:21 salo Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/07/26 21:41:12 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use SDLmm.
 #
@@ -9,7 +9,7 @@
 SDLMM_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			SDLmm
-BUILDLINK_DEPENDS.SDLmm?=		SDLmm>=0.1.8
+BUILDLINK_DEPENDS.SDLmm?=		SDLmm>=0.1.8nb1
 BUILDLINK_PKGSRCDIR.SDLmm?=		../../devel/SDLmm
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.SDLmm=SDLmm

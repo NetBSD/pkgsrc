@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/05/02 11:54:19 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/07/26 21:41:11 jmmv Exp $
 
 .if !defined(SDL_GFX_BUILDLINK2_MK)
 SDL_GFX_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		SDL_gfx
-BUILDLINK_DEPENDS.SDL_gfx?=	SDL_gfx>=2.0.3nb1
+BUILDLINK_DEPENDS.SDL_gfx?=	SDL_gfx>=2.0.3nb2
 BUILDLINK_PKGSRCDIR.SDL_gfx?=	../../devel/SDL_gfx
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.SDL_gfx=SDL_gfx

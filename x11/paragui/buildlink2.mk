@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/07/13 21:07:16 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/07/26 21:41:29 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use paragui.
 #
@@ -9,7 +9,7 @@
 PARAGUI_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			paragui
-BUILDLINK_DEPENDS.paragui?=		paragui>=1.0.4
+BUILDLINK_DEPENDS.paragui?=		paragui>=1.0.4nb1
 BUILDLINK_PKGSRCDIR.paragui?=		../../x11/paragui
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.paragui=paragui

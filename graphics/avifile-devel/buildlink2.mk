@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/05/02 11:55:11 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/07/26 21:41:25 jmmv Exp $
 
 .if !defined(AVIFILE_BUILDLINK2_MK)
 AVIFILE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		avifile
-BUILDLINK_DEPENDS.avifile?=	avifile>=0.6.20010814nb3
+BUILDLINK_DEPENDS.avifile?=	avifile>=0.6.20010814nb4
 BUILDLINK_PKGSRCDIR.avifile?=	../../graphics/avifile-devel
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.avifile=avifile

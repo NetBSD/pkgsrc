@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/07/13 13:51:27 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/07/26 21:41:13 jmmv Exp $
 
 .if !defined(SMPEG_BUILDLINK2_MK)
 SMPEG_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		smpeg
-BUILDLINK_DEPENDS.smpeg?=	smpeg>=0.4.4nb2
+BUILDLINK_DEPENDS.smpeg?=	smpeg>=0.4.4nb3
 BUILDLINK_PKGSRCDIR.smpeg?=	../../devel/smpeg
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.smpeg=smpeg

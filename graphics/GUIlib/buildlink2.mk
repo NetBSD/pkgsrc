@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/05/02 11:55:07 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/07/26 21:41:22 jmmv Exp $
 
 .if !defined(GUILIB_BUILDLINK2_MK)
 GUILIB_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		GUIlib
-BUILDLINK_DEPENDS.GUIlib?=	GUIlib>=1.1.0nb1
+BUILDLINK_DEPENDS.GUIlib?=	GUIlib>=1.1.0nb2
 BUILDLINK_PKGSRCDIR.GUIlib?=	../../graphics/GUIlib
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.GUIlib=GUIlib
