@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2001/06/07 09:58:08 abs Exp $
+# $NetBSD: Makefile,v 1.102 2001/07/01 13:56:34 taca Exp $
 #
 
 COMMENT=	System utilities
@@ -58,6 +58,7 @@ SUBDIR+=	psmisc
 SUBDIR+=	pstree
 SUBDIR+=	roller
 SUBDIR+=	rtty
+SUBDIR+=	ruby-syslog
 SUBDIR+=	safetynet
 SUBDIR+=	sarah
 SUBDIR+=	sh-utils
