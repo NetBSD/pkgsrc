@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/10/19 03:13:11 ben Exp $
+
+SHA1 (rip-1.07.tar.gz) = a7b60dbc5dbaf5ca0d24c9e554fa3e5885bbccb1
+Size (rip-1.07.tar.gz) = 110261 bytes
+SHA1 (patch-aa) = bb98665178ed40baebb08b087551d690a549b09b
