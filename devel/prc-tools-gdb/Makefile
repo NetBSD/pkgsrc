@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/27 05:07:35 jlam Exp $
 #
 
-PKGNAME=	prc-tools-gdb-${PRC_TOOLS_VERS}
+.include "../../devel/prc-tools/Makefile.common"
 
+PKGNAME=	prc-tools-gdb-${PRC_TOOLS_VERS}
 COMMENT=	gdb for GNU tool chain for Palm cross development
 
 BASE_DIST=	gdb
@@ -13,4 +14,4 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/gdb/gdb/gdb.1 \
 		${PREFIX}/man/man1/m68k-palmos-gdb.1
 
-.include "../../devel/prc-tools/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
