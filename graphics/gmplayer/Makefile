@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/03/22 03:13:37 salo Exp $
+# $NetBSD: Makefile,v 1.16 2003/04/21 18:07:32 tron Exp $
 #
 
 .include "../../graphics/mplayer-share/Makefile.common"
@@ -28,7 +28,6 @@ SKINS +=	default-1.7${EXTRACT_SUFX}			\
 		plastic-1.1.1${EXTRACT_SUFX}			\
 		proton-1.1${EXTRACT_SUFX}			\
 		slim-1.0${EXTRACT_SUFX}				\
-		trium-1.0${EXTRACT_SUFX}			\
 		xanim-1.5${EXTRACT_SUFX}			\
 		xine-lcd-1.0${EXTRACT_SUFX}
 
