@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/26 05:12:56 zuntum Exp $
+
+--- Makefile.orig	Tue Jun 13 20:45:06 2000
++++ Makefile
+@@ -3,20 +3,19 @@
+ # (c) <lcamtuf@tpi.pl>
+ #
+ 
+-CC      = gcc
+ CLIBS	= -lpcap
+ SUNLIBS	= -lsocket -lnsl -D_SUN_=1
+ STRIP	= strip
+-CFLAGS  = -O3 -Wall
+ FILE	= p0f
+ VERSION = 1.7
+ 
+ DISTRO  = p0f.c Makefile README COPYING tcp.h p0f.fp
+ 
+-all: $(FILE) strip	
++all: $(FILE)
+ 
+ $(FILE): p0f.c
+-	$(CC) $(CFLAGS) -DVER=\"$(VERSION)\" -o $@ $< $(CLIBS) \
++	$(CC) $(CFLAGS) -DVER=\"$(VERSION)\" -DPREFIX=\"${PREFIX}\" -o \
++	$@ $< $(CLIBS) \
+ 	`uname|egrep -i 'sunos|solar' >/dev/null && echo "$(SUNLIBS)"`  
+ 
+ strip:
