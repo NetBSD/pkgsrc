@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2002/03/15 11:04:29 wiz Exp $
+$NetBSD: distinfo,v 1.7 2002/03/20 12:42:11 wiz Exp $
 
 SHA1 (netpbm-9.25.tgz) = 9c7f6a98348a5f3d6e908b514f33498b2a9c359a
 Size (netpbm-9.25.tgz) = 2052922 bytes
-SHA1 (patch-aa) = b2102349b79b3575ae1f7f85e89b717ea169f8e3
-SHA1 (patch-ac) = c598c7c81d903ccfd0d95af6aa8b9ab72a16a56e
+SHA1 (patch-aa) = b8e3b12a2bc9f65c08b0836e8bc384db1ef66b9f
