@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/08/16 23:01:21 kim Exp $
+# $NetBSD: Makefile,v 1.18 1999/08/17 16:00:02 agc Exp $
 #
 
 DISTNAME=	tcsh-6.09
@@ -18,6 +18,12 @@ INSTALL_TARGET=	install install.man
 
 NLSDIR=		share/nls
 PLIST_SRC=	${WRKDIR}/PLIST-src
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+LOWER_OPSYS=	solaris2.6
+.endif
 
 post-install:
 	@${ECHO} "Installing message catalogues"
