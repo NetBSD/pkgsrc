@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 16:34:31 martti Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/22 07:24:25 grant Exp $
 #
 
 DISTNAME=	goofey-3.15
@@ -11,12 +11,7 @@ HOMEPAGE=	http://www.csse.monash.edu.au/~tym/goofey.html
 COMMENT=	Text-based client for goofey, a flexible short message system
 
 NO_CONFIGURE=	# defined
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-LDFLAGS+=	-lnsl -lsocket
-.endif
+LDFLAGS.SunOS=	-lnsl -lsocket
 
 do-build:
 	cd ${WRKSRC}; ${CC} ${CFLAGS} ${LDFLAGS} -o goofey goofey.c
