@@ -1,5 +1,5 @@
+# $NetBSD: Makefile,v 1.3 1997/10/03 08:58:23 agc Exp $
 # FreeBSD Id: Makefile,v 1.35 1997/08/19 07:10:01 fenner Exp
-# $NetBSD: Makefile,v 1.2 1997/10/03 08:10:58 agc Exp $
 #
 
 SUBDIR += archivers
