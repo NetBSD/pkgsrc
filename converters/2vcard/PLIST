@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2002/05/10 16:07:55 jschauma Exp $
+bin/2vcard
+man/man1/2vcard.1
+share/doc/2vcard/CHANGES
+share/doc/2vcard/COPYING
+share/doc/2vcard/README
+share/doc/html/2vcard/index-1.html
+share/doc/html/2vcard/index-2.html
+share/doc/html/2vcard/index-3.html
+share/doc/html/2vcard/index-4.html
+share/doc/html/2vcard/index-5.html
+share/doc/html/2vcard/index.html
+@dirrm share/doc/html/2vcard
+@dirrm share/doc/2vcard
