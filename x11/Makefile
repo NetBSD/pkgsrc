@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2000/12/14 01:01:32 wiz Exp $
+# $NetBSD: Makefile,v 1.194 2000/12/14 21:26:24 itojun Exp $
 #
 
     SUBDIR += 9term
@@ -101,6 +101,7 @@
     SUBDIR += xaniroc
     SUBDIR += xautolock
     SUBDIR += xbanner
+    SUBDIR += xbattbar
     SUBDIR += xbeats
     SUBDIR += xcal
     SUBDIR += xcb
