@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/28 15:37:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/21 12:43:17 wiz Exp $
 
 DISTNAME=	wmnet-1.2
 PKGNAME=	wminet-1.2
@@ -9,7 +9,8 @@ MAINTAINER=	coto@core.de
 HOMEPAGE=	http://www.enteract.com/~rneswold/
 COMMENT=	dockable network monitor
 
-USE_XPM=	YES
+USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
 
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

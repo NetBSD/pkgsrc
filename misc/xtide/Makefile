@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/03/13 17:37:27 fredb Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/21 12:40:53 wiz Exp $
 
 DISTNAME=	xtide-2.4
 PKGNAME=	${DISTNAME}
@@ -11,14 +11,12 @@ MAINTAINER=	paul@whooppee.com
 HOMEPAGE=	http://www.flaterco.com/
 COMMENT=	X11 tide predictor
 
-DEPENDS+=	png>=1.2.1:../../graphics/png
-
 EXTRACT_ONLY=	${XTIDE_SRC}
 XTIDE_SRC=	${DISTNAME}${EXTRACT_SUFX}
 
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 USE_X11=	yes
-USE_XPM=	yes
 
 post-patch:
 	@cd ${WRKSRC}/DOCUMENTATION;					\
@@ -35,4 +33,6 @@ post-install:
 	${CP} ${WRKDIR}/harmonics.txt ${PREFIX}/share/xtide
 	${CP} ${WRKDIR}/offsets.xml ${PREFIX}/share/xtide
 
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
