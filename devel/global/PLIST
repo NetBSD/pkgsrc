@@ -1,16 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2003/05/04 23:36:12 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/06/23 11:00:22 seb Exp $
 bin/btreeop
 bin/gctags
 bin/global
 bin/gozilla
 bin/gtags
 bin/htags
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/global.info
 info/global.info
 info/global.info-1
 info/global.info-2
 info/global.info-3
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/global.info
 man/man1/btreeop.1
 man/man1/gctags.1
 man/man1/global.1

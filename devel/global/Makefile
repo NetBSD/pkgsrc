@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/05/04 23:36:12 seb Exp $
+# $NetBSD: Makefile,v 1.13 2003/06/23 11:00:22 seb Exp $
 #
 
 DISTNAME=	global-4.5
@@ -11,7 +11,8 @@ COMMENT=	Source code tag system including web browser output
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-TEXINFO_OVERRIDE=	YES
+USE_NEW_TEXINFO=	YES
+INFO_FILES=		global.info
 
 LDFLAGS+=	-L../libutil
 MAKE_ENV+=      LIBDIR="${PREFIX}/lib"
@@ -23,5 +24,4 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libdata/lint
 
 .include "../../lang/perl5/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

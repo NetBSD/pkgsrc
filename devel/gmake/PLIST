@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/23 20:30:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/06/23 11:01:39 seb Exp $
 bin/${GNU_PROGRAM_PREFIX}make
 ${GMAKE_LINK}bin/gmake
-@unexec ${INSTALL_INFO} --delete %D/info/make.info %D/info/dir
 info/make.info
 info/make.info-1
 info/make.info-2
@@ -14,7 +13,6 @@ info/make.info-8
 info/make.info-9
 info/make.info-10
 info/make.info-11
-@exec ${INSTALL_INFO} %D/info/make.info %D/info/dir
 man/man1/${GNU_PROGRAM_PREFIX}make.1
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/make.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/make.mo
