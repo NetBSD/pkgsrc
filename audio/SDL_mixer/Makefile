@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2004/06/26 09:16:10 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/07/14 13:16:30 manu Exp $
 #
 
 DISTNAME=		SDL_mixer-1.2.5
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio
 MASTER_SITES=		http://www.libsdl.org/projects/SDL_mixer/release/
 
@@ -19,6 +19,8 @@ GNU_CONFIGURE=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
 
+CONFIGURE_ARGS+=        --enable-music-ogg
+
 CPPFLAGS=		-Dunix=1
 CFLAGS=			-DPREFIX=\"\\\"${PREFIX}\\\"\"
 
@@ -28,6 +30,7 @@ post-install:
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/playmus ${PREFIX}/bin
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/playwave ${PREFIX}/bin
 
+.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
