@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/05/23 22:41:21 tv Exp $
+$NetBSD: patch-ac,v 1.2 2001/09/14 15:03:11 wiz Exp $
 
---- keycvt/keycvt.c.orig	Fri Aug 13 16:06:28 1993
-+++ keycvt/keycvt.c	Sun May 23 17:36:39 1999
+--- keycvt/keycvt.c.orig	Fri Aug 13 22:06:28 1993
++++ keycvt/keycvt.c
+@@ -586,7 +586,7 @@
+ 	puts( "Warning: Password will be echoed to screen!" );
+ 	printf( "Password: " );
+ 	fflush( stdout );
+-	gets( password );
++	fgets( password, sizeof(password), stdin );
+ 	}
+ 
+ void initCrypt( void )
 @@ -1034,13 +1034,17 @@
  		tempFileName[ pathLen++ ] = '/';
  	strcat( tempFileName, "randseed.bin" );
