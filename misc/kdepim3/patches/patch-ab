@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.7 2004/10/13 12:29:05 markd Exp $
+
+--- kresources/slox/webdavhandler.cpp.orig	2004-10-03 20:44:46.000000000 +1300
++++ kresources/slox/webdavhandler.cpp
+@@ -20,7 +20,7 @@
+ 
+ #include "webdavhandler.h"
+ 
+-#include <values.h>
++#include <limits.h>
+ 
+ #include <libkdepim/kpimprefs.h>
+ 
+@@ -150,9 +150,9 @@ QDateTime WebdavHandler::sloxToQDateTime
+ 
+   if (preEpoch) {
+     dt.setTime_t( 0, Qt::UTC );
+-    if (ticks > MAXINT) {
+-      dt = dt.addSecs(-MAXINT);
+-      ticks -= MAXINT;
++    if (ticks > INT_MAX) {
++      dt = dt.addSecs(-INT_MAX);
++      ticks -= INT_MAX;
+     }
+     dt = dt.addSecs(-((long) ticks));
+   }
