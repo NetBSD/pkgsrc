@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2002/03/20 16:27:21 taca Exp $
+# $NetBSD: Makefile,v 1.63 2002/03/22 14:59:01 tron Exp $
 
 DISTNAME=	squid-2.4.STABLE6-src
 PKGNAME=	squid-2.4.6
@@ -25,6 +25,7 @@ MAKEFILE=	makefile
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" PKG_PREFIX="${PREFIX}"
 INSTALL_FILE=	${WRKDIR}/INSTALL
 PLIST_SRC=	${WRKDIR}/PLIST
+PLIST_SUBST+=	SQUID_SYSCONFDIR=${SQUID_SYSCONFDIR}
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
 # Configuration options which can be overwritten by the user.
@@ -49,7 +50,8 @@ post-build:
 	  >${WRKDIR}/INSTALL
 
 pre-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/etc/squid
+	@${INSTALL_DATA_DIR} ${SQUID_SYSCONFDIR}
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/squid
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/errors
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/icons
