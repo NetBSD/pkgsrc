@@ -1,0 +1,66 @@
+#!@BUILDLINK_SHELL@
+#
+# $NetBSD: fake-la,v 1.5.2.2 2003/06/19 17:20:43 jschauma Exp $
+
+AWK="@AWK@"
+BASENAME="@BASENAME@"
+CC="@CC@"
+CP="@CP@"
+DIRNAME="@DIRNAME@"
+ECHO="@ECHO@"
+LIBTOOL="@LIBTOOL@ --quiet"
+MKDIR="@MKDIR@"
+MV="@MV@"
+RM="@RM@"
+SED="@SED@"
+TEST="@TEST@"
+
+BUILDLINK_DIR="@BUILDLINK_DIR@"
+
+reallib="$1"
+realdir=`${DIRNAME} $reallib`
+libname=`${BASENAME} $reallib`
+tmpdir=${BUILDLINK_DIR}/.tmp
+
+case $libname in
+	*.so)
+		# no version in name which happens e.g. for libpthread.so on Linux
+		# Suse 8.1, Slackware 8.1 and others, but there, the library is a link
+		# to a library with a version in it
+		libbase=`${ECHO} $libname | ${SED} -e "s/\.so$//"`
+		if ${TEST} -h $reallib; then
+			liblinked=`ls -l $reallib | ${AWK} '{print $NF}'`
+			version=`${ECHO} $liblinked | ${SED} -e "s/.*\.so\.//;s/\./:/g"`
+		else
+			# bail out
+			${ECHO} "could not determine version of $reallib"
+			exit 1
+		fi
+		;;
+
+	*.so.[0-9]*)
+		libbase=`${ECHO} $libname | ${SED} -e "s/\.so\.[0-9.]*$//"`
+		version=`${ECHO} $libname | ${SED} -e "s/.*\.so\.//;s/\./:/g"`
+		;;
+
+	*[0-9].dylib)
+		libbase=`${ECHO} $libname | ${SED} -e "s/\.[0-9.]*\.dylib$//"`
+		version=`${ECHO} $libname | ${SED} -e "s/^[^.]*\.\([0-9]*\.[0-9]*\)\.dylib/\1/;s/\./:/g"`
+		;;
+esac
+
+if ${TEST} ! -f $tmpdir/inst/$libbase.la; then
+	${MKDIR} $tmpdir/inst
+	cd $tmpdir
+	${ECHO} "static int i;" > nonempty.c	# create a nonempty input file
+	${LIBTOOL} --mode=compile ${CC} -c nonempty.c
+	${LIBTOOL} ${CC} -o $libbase.la nonempty.lo -rpath $tmpdir/inst -version-info $version
+	${LIBTOOL} --mode=install ${CP} $libbase.la $tmpdir/inst >/dev/null
+
+	# Reset the ld.so cache as "libtool --mode=install" may have executed
+	# ldconfig to add "$tmpdir/inst" to the cache.
+	#
+	@RESET_LD_SO_CACHE@ >/dev/null 2>&1
+
+fi
+${SED} -e "s,$tmpdir/inst,$realdir,g" $tmpdir/inst/$libbase.la
