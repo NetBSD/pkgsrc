@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/08/25 16:03:42 mjl Exp $
+
+--- make/common.mak.orig	Wed Aug 23 22:49:37 2000
++++ make/common.mak	Wed Aug 23 23:05:10 2000
+@@ -213,7 +213,7 @@
+ endif
+ 
+ $(TARGET):	$(OBJS) $(TARGET_LIBS)
+-	$(CPLUS) $(CFLAGS) $(LDFLAGS) $(OBJS) -o $@ $(LDLIBS)
++	${LIBTOOL} --mode=link $(CPLUS) $(CFLAGS) $(LDFLAGS) $(OBJS) -o $@ $(LDLIBS)
+ 
+ ifdef DEBUG
+ 

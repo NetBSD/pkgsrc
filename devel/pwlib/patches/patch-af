@@ -1,0 +1,46 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/08/25 16:03:42 mjl Exp $
+
+--- include/ptlib/unix/ptlib/pmachdep.h.orig	Thu Aug 24 21:41:27 2000
++++ include/ptlib/unix/ptlib/pmachdep.h	Thu Aug 24 21:50:46 2000
+@@ -196,28 +196,33 @@
+ ///////////////////////////////////////////////////////////////////////////////
+ #elif defined(P_NETBSD)
+ 
+-#if defined(P_PTHREADS)
+-#define _THREAD_SAFE
+-#define P_THREAD_SAFE_CLIB
+-
+-#include <pthread.h>
+-#include <resolv.h> /* for pthread's h_errno */
+-#endif
+-
+ #include <stdlib.h>
+ #include <paths.h>
+ #include <errno.h>
+ #include <dlfcn.h>
+ #include <termios.h>
+ #include <unistd.h>
++#include <sys/endian.h>
+ #include <sys/fcntl.h>
+ #include <sys/filio.h>
+ #include <sys/socket.h>
+ #include <sys/sockio.h>
++#include <sys/types.h>
+ #include <sys/ioctl.h>
+ #include <sys/signal.h>
+ #include <net/if.h>
++#include <netinet/in.h>
+ #include <netinet/tcp.h>
++#include <arpa/nameser.h>
++ 
++#if defined(P_PTHREADS)
++#define _THREAD_SAFE
++#define P_THREAD_SAFE_CLIB
++
++#include <pthread.h>
++#include <resolv.h> /* for pthread's h_errno */
++#endif
++
+ 
+ #define HAS_IFREQ
+ 
