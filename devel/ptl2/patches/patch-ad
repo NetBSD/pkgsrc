@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 1999/05/02 16:53:00 tron Exp $
+
+--- include/arpa/inet.h.orig	Sat May  1 21:51:06 1999
++++ include/arpa/inet.h	Sat May  1 21:53:11 1999
+@@ -56,6 +56,11 @@
+ char * 			inet_ntoa 	__PTL_P((struct in_addr));
+ char *			inet_ntoa_r	__PTL_P((struct in_addr in, char *buf,
+ 						 int bufsize));
++#if defined(__NetBSD__)
++int			inet_pton	__PTL_P((int, const char *, void *));
++const char		*inet_ntop	__PTL_P((int, const void *,
++						 char *, size_t));
++#endif
+ 
+ __PTL_END_DECLS
