@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2001/06/25 17:41:00 wiz Exp $
+# $NetBSD: Makefile,v 1.144 2001/07/01 14:19:58 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -21,6 +21,7 @@ SUBDIR+=	ap-jserv
 SUBDIR+=	ap-perl
 SUBDIR+=	ap-php3
 SUBDIR+=	ap-php4
+SUBDIR+=	ap-ruby
 SUBDIR+=	ap-ssl
 SUBDIR+=	apache
 SUBDIR+=	apache-current
@@ -113,6 +114,8 @@ SUBDIR+=	php4-sablot
 SUBDIR+=	py-pcgi
 SUBDIR+=	py-zpublisher
 SUBDIR+=	quanta
+SUBDIR+=	ruby-htmlsplit
+SUBDIR+=	ruby-tag
 SUBDIR+=	sitecopy
 SUBDIR+=	spfc
 SUBDIR+=	squid
