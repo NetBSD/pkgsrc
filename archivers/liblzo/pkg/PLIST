@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/16 15:29:37 rh Exp $
-include/lzoconf.h
-include/lzoutil.h
-include/lzo16bit.h
+@comment $NetBSD: PLIST,v 1.2 2000/06/09 06:54:57 jlam Exp $
 include/lzo1.h
+include/lzo16bit.h
 include/lzo1a.h
 include/lzo1b.h
 include/lzo1c.h
@@ -11,5 +9,8 @@ include/lzo1x.h
 include/lzo1y.h
 include/lzo1z.h
 include/lzo2a.h
-lib/liblzo.so.1.0
+include/lzoconf.h
+include/lzoutil.h
 lib/liblzo.a
+lib/liblzo.la
+lib/liblzo.so.1.0
