@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.717 2003/07/13 17:53:08 dillo Exp $
+$NetBSD: TODO,v 1.718 2003/07/13 21:18:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -63,6 +63,7 @@ Suggested new packages
 Suggested package updates
 =========================
 
+	o Amaya-8.1a
 	o ImageViewer-0.6.2
 	o R-1.7.1
 	o TeXmacs-1.0.1.17
@@ -74,6 +75,7 @@ Suggested package updates
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
 	o balsa2-2.0.11
+	o bidwatcher-1.3.9
 	o biew-5.5.0
 	o bind-8.4.0
 	o binutils-2.14
@@ -228,7 +230,7 @@ Suggested package updates
 	o sun-jre14-1.4.2
 	o swig-1.3.17 [epg]
 	o sylpheed-0.9.3
-	o sylpheed-claws-0.9.0
+	o sylpheed-claws-0.9.3
 	o t1lib-5.0.0
 	o tcl/tk-8.4.3
 	o tcpreplay-1.4.4
