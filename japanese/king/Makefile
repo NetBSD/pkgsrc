@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/06/15 11:30:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/20 13:31:00 rh Exp $
 #
 
 DISTNAME=	king-1.00-tb40-1
@@ -10,9 +10,11 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.ibm.co.jp/software/internet/king/
 
-RESTRICTED=	"You should buy from IBM Corp"
-NO_PACKAGE=	${RESTRICTED}
-NO_CDROM=	${RESTRICTED}
+RESTRICTED=	"A commercial licence needs to be purchased from IBM Corp"
+NO_BIN_ON_CDROM=${RESTRICTED}
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
 MIRROR_DISTFILE=no
 
 KINGDISTDIR?=	/cdrom/linux
