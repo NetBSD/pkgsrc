@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8343 2004/12/16 07:31:44 minskim Exp $
+$NetBSD: CHANGES,v 1.8344 2004/12/16 11:54:23 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5925,3 +5925,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated exim to 4.43nb2 [grant 2004-12-16]
 	Updated exim-exiscan to 4.43_28nb2 [grant 2004-12-16]
 	Updated flyspell to 1.7fnb1 [minskim 2004-12-16]
+	Updated tin to 1.6.2nb1 [dillo 2004-12-16]
