@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2004/02/29 11:49:54 markd Exp $
+# $NetBSD: Makefile,v 1.54 2004/03/14 09:21:25 heinz Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -33,7 +33,7 @@ pre-configure:
 .for f in aclocal.m4 configure stamp-h.in
 	${TOUCH} ${WRKSRC}/$f
 .endfor
-	${TOUCH} `${FIND} ${WRKSRC} -name Makefile.in`
+	${TOUCH} `${FIND} ${WRKSRC} -name Makefile.in -print`
 
 .include "../../mk/bsd.prefs.mk"
 
