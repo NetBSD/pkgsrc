@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2623 2004/12/01 22:39:46 wiz Exp $
+$NetBSD: TODO,v 1.2624 2004/12/02 00:09:53 dmcmahill Exp $
 
 Suggested new packages
 ======================
@@ -734,7 +734,6 @@ Suggested package updates
 	o newmail-1.0.2
 	o newscache-1.1.92
 	o ng-1.4.4
-	o ng-spice-15c
 	o nhc98-1.17
 	o nn-6.6.5
 	o nosefart-2.1
